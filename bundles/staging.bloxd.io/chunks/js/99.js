@@ -1,415 +1,415 @@
 export const id = 99;
 export const ids = [99, 194];
 export const modules = {
-  34104: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      EverythingMenu: () => AN
+  34038: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      EverythingMenu: () => Rl
     });
-    var tS = gS(64),
-      bS = gS(1121),
-      XS = gS.n(bS),
-      xS = gS(1281),
-      NS = gS(1127),
-      qS = gS(2189),
-      uS = gS(1528),
-      IS = gS(1198),
-      fS = gS(1181);
+    var Xk = Ik(58),
+      Tk = Ik(1055),
+      ik = Ik.n(Tk),
+      yk = Ik(1179),
+      lk = Ik(1066),
+      ak = Ik(1997),
+      qk = Ik(1406),
+      Lk = Ik(1103),
+      tk = Ik(1096);
 
-    function kS(SS) {
+    function Zk(kk) {
       let {
-        items: HS,
-        link: gS,
-        onClick: tS,
-        selectedItemId: bS,
-        className: kS,
-        padStartsOnTab: aS = !0
-      } = SS;
+        items: Fk,
+        link: Ik,
+        onClick: Xk,
+        selectedItemId: Tk,
+        className: Zk,
+        padStartsOnTab: jk = !0
+      } = kk;
       const {
-        t: KS
-      } = (0, xS.F)(), jS = (0, IS.l)(), GS = [];
-      for (const XS of HS) {
-        var CS;
-        const SS = GS[GS.length - 1];
-        var nS;
-        if (SS && SS.title === (null !== (CS = XS.section) && void 0 !== CS ? CS : null)) SS.items.push(XS);
-        else GS.push({
-          title: null !== (nS = XS.section) && void 0 !== nS ? nS : null,
-          items: [XS]
+        t: ek
+      } = (0, yk.y)(), wk = (0, Lk.h)(), Hk = [];
+      for (const ik of Fk) {
+        var Jk;
+        const kk = Hk[Hk.length - 1];
+        var xk;
+        if (kk && kk.title === (null !== (Jk = ik.section) && void 0 !== Jk ? Jk : null)) kk.items.push(ik);
+        else Hk.push({
+          title: null !== (xk = ik.section) && void 0 !== xk ? xk : null,
+          items: [ik]
         })
       }
-      return (0, fS.jsxs)("div", {
-        className: XS()("MenuSideBarBody", kS),
+      return (0, tk.jsxs)("div", {
+        className: ik()("MenuSideBarBody", Zk),
         "data-pad-tabs": "2",
-        children: [GS.map(((SS, HS) => {
-          var gS;
-          return (0, fS.jsxs)("div", {
+        children: [Hk.map(((kk, Fk) => {
+          var Ik;
+          return (0, tk.jsxs)("div", {
             className: "MenuSideBarSection",
-            children: [SS.title && (0, fS.jsx)("div", {
+            children: [kk.title && (0, tk.jsx)("div", {
               className: "MenuSideBarSectionTitle",
-              children: KS(SS.title)
-            }), SS.items.map((SS => {
-              var HS;
-              const gS = !!SS.iconElement || !!SS.faIcon;
-              return (0, fS.jsxs)("div", {
+              children: ek(kk.title)
+            }), kk.items.map((kk => {
+              var Fk;
+              const Ik = !!kk.iconElement || !!kk.faIcon;
+              return (0, tk.jsxs)("div", {
                 "data-pad-tab": !0,
-                "data-pad-selected": bS === SS.id ? "true" : void 0,
-                "data-pad-default-focus": aS && bS === SS.id || void 0,
-                className: XS()("MenuSideBarBodyTab", {
-                  ActiveMenuSideBarBodyTab: bS === SS.id
+                "data-pad-selected": Tk === kk.id ? "true" : void 0,
+                "data-pad-default-focus": jk && Tk === kk.id || void 0,
+                className: ik()("MenuSideBarBodyTab", {
+                  ActiveMenuSideBarBodyTab: Tk === kk.id
                 }),
                 onClick: () => {
-                  tS(SS.id)
+                  Xk(kk.id)
                 },
-                children: [gS && (0, fS.jsx)("div", {
+                children: [Ik && (0, tk.jsx)("div", {
                   className: "MenuSideBarBodyTabIcon",
-                  children: null !== (HS = SS.iconElement) && void 0 !== HS ? HS : (0, fS.jsx)(NS.d, {
-                    name: SS.faIcon
+                  children: null !== (Fk = kk.iconElement) && void 0 !== Fk ? Fk : (0, tk.jsx)(lk.e, {
+                    name: kk.faIcon
                   })
-                }), (!jS || !gS) && (0, fS.jsx)("div", {
-                  children: KS(SS.title)
-                }), SS.redDot && (0, fS.jsx)(qS.e, {
+                }), (!wk || !Ik) && (0, tk.jsx)("div", {
+                  children: ek(kk.title)
+                }), kk.redDot && (0, tk.jsx)(ak.c, {
                   top: "-0.2rem",
                   right: "-1rem"
                 })]
-              }, SS.id)
+              }, kk.id)
             }))]
-          }, null !== (gS = SS.title) && void 0 !== gS ? gS : HS)
-        })), gS && (0, fS.jsxs)("div", {
-          ...(0, uS.X)(),
+          }, null !== (Ik = kk.title) && void 0 !== Ik ? Ik : Fk)
+        })), Ik && (0, tk.jsxs)("div", {
+          ...(0, qk.Y)(),
           "data-pad-destructive": !0,
           className: "MenuSideBarBodyTab MenuSideBarLink",
-          onClick: gS.onClick,
-          children: [(0, fS.jsx)("div", {
+          onClick: Ik.onClick,
+          children: [(0, tk.jsx)("div", {
             className: "MenuSideBarBodyTabIcon",
-            children: (0, fS.jsx)(NS.d, {
-              name: gS.faIcon
+            children: (0, tk.jsx)(lk.e, {
+              name: Ik.faIcon
             })
-          }), (0, fS.jsx)("div", {
-            children: KS(gS.title)
-          }), (0, fS.jsx)(NS.d, {
+          }), (0, tk.jsx)("div", {
+            children: ek(Ik.title)
+          }), (0, tk.jsx)(lk.e, {
             name: "arrow-right",
             className: "MenuSideBarLinkArrow"
           })]
         })]
       })
     }
-    var aS = gS(3161),
-      KS = gS(1211),
-      jS = gS(2537),
-      GS = gS(3283),
-      CS = gS(104),
-      nS = gS(2060),
-      PS = gS(2372),
-      QS = gS(2380),
-      DS = gS(1774),
-      wS = gS(1419),
-      hS = gS(5148),
-      ZS = gS(24),
-      JS = gS(34113);
+    var jk = Ik(2936),
+      ek = Ik(1118),
+      wk = Ik(2349),
+      Hk = Ik(3042),
+      Jk = Ik(95),
+      xk = Ik(1875),
+      Pk = Ik(2179),
+      Kk = Ik(2187),
+      Qk = Ik(1617),
+      sk = Ik(1318),
+      Vk = Ik(4983),
+      zk = Ik(25),
+      Sk = Ik(34044);
 
-    function OS(SS) {
+    function vk(kk) {
       let {
-        setApplySettingsCallback: HS
-      } = SS;
+        setApplySettingsCallback: Fk
+      } = kk;
       const {
-        clientEscMenuOptions: gS
-      } = (0, ZS.m)(["clientEscMenuOptions"]), [bS, XS] = (0, tS.useState)(!1), [xS, NS] = (0, tS.useState)(!1), [qS, IS] = (0, tS.useState)(6400), [kS, aS] = (0, tS.useState)(3600), [KS, jS] = (0, tS.useState)(!1), [GS, CS] = (0, tS.useState)(!1);
+        clientEscMenuOptions: Ik
+      } = (0, zk.j)(["clientEscMenuOptions"]), [Tk, ik] = (0, Xk.useState)(!1), [yk, lk] = (0, Xk.useState)(!1), [ak, Lk] = (0, Xk.useState)(6400), [Zk, jk] = (0, Xk.useState)(3600), [ek, wk] = (0, Xk.useState)(!1), [Hk, Jk] = (0, Xk.useState)(!1);
 
-      function nS(SS) {
-        const HS = "screenshot" === SS ? NS : XS;
-        HS(!0);
-        const gS = KS ? "normals" : GS ? "depth" : null;
-        JS.devTools.downloadScene(SS, {
-          width: qS,
-          height: kS,
-          colouring: gS
-        }).catch((SS => {
-          console.error("Couldn't download the scene", SS)
+      function xk(kk) {
+        const Fk = "screenshot" === kk ? lk : ik;
+        Fk(!0);
+        const Ik = ek ? "normals" : Hk ? "depth" : null;
+        Sk.devTools.downloadScene(kk, {
+          width: ak,
+          height: Zk,
+          colouring: Ik
+        }).catch((kk => {
+          console.error("Couldn't download the scene", kk)
         })).finally((() => {
-          HS(!1)
+          Fk(!1)
         }))
       }
-      return (0, fS.jsxs)("div", {
+      return (0, tk.jsxs)("div", {
         className: "DeveloperToolsCategory",
-        children: [(0, fS.jsx)(hS.d, {
+        children: [(0, tk.jsx)(Vk.e, {
           label: "Disable Ambient Occlusion",
-          checked: gS.disableAmbientOcclusion,
-          onClick: SS => {
-            ZS.b.setClientEscMenuOptions({
-              disableAmbientOcclusion: SS
-            }), HS((() => hS.o))
+          checked: Ik.disableAmbientOcclusion,
+          onClick: kk => {
+            zk.d.setClientEscMenuOptions({
+              disableAmbientOcclusion: kk
+            }), Fk((() => Vk.m))
           },
           circleInfoText: "Disables ambient occlusion which is the shadow effect that makes corners and crevices darker."
-        }), JS.devTools.supports("ambientLight") && (0, fS.jsx)(hS.k, {
+        }), Sk.devTools.supports("ambientLight") && (0, tk.jsx)(Vk.j, {
           name: "Ambient Lighting Intensity",
           min: 0,
           max: 1,
           step: .01,
-          initValue: gS.ambientLightIntensity,
-          onChange: SS => {
-            JS.devTools.setAmbientLightIntensity(SS).then((() => {
-              ZS.b.setClientEscMenuOptions({
-                ambientLightIntensity: SS
+          initValue: Ik.ambientLightIntensity,
+          onChange: kk => {
+            Sk.devTools.setAmbientLightIntensity(kk).then((() => {
+              zk.d.setClientEscMenuOptions({
+                ambientLightIntensity: kk
               })
-            })).catch((SS => {
-              console.error("Couldn't set the ambient light", SS)
+            })).catch((kk => {
+              console.error("Couldn't set the ambient light", kk)
             }))
           },
           circleInfoText: "Sets the intensity of the white ambient light in the scene. The default is 0.5."
-        }), JS.devTools.supports("weaponRaycasts") && (0, fS.jsx)(hS.d, {
+        }), Sk.devTools.supports("weaponRaycasts") && (0, tk.jsx)(Vk.e, {
           label: "Show Weapon Raycasts",
-          checked: gS.showWeaponRaycasts,
-          onClick: SS => {
-            ZS.b.setClientEscMenuOptions({
-              showWeaponRaycasts: SS
+          checked: Ik.showWeaponRaycasts,
+          onClick: kk => {
+            zk.d.setClientEscMenuOptions({
+              showWeaponRaycasts: kk
             })
           },
           circleInfoText: "Draws debug lines for the raw raycasts used by locally fired weapons."
-        }), JS.devTools.supports("sceneDownload") && (0, fS.jsxs)("div", {
+        }), Sk.devTools.supports("sceneDownload") && (0, tk.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, fS.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "SettingBox WarningBorder",
-            children: [(0, fS.jsx)(hS.d, {
+            children: [(0, tk.jsx)(Vk.e, {
               label: "Apply normal-based coloring",
-              checked: KS,
-              onClick: SS => {
-                jS(SS), SS && CS(!1)
+              checked: ek,
+              onClick: kk => {
+                wk(kk), kk && Jk(!1)
               },
               circleInfoText: "Colors faces based on their normal direction (red=X, green=Y, blue=Z)."
-            }), (0, fS.jsx)(hS.d, {
+            }), (0, tk.jsx)(Vk.e, {
               label: "Apply depth-based coloring",
-              checked: GS,
-              onClick: SS => {
-                CS(SS), SS && jS(!1)
+              checked: Hk,
+              onClick: kk => {
+                Jk(kk), kk && wk(!1)
               },
               circleInfoText: "Colors from white (near) to black (far) based on distance from camera. Only works for screenshot export."
-            }), (0, fS.jsxs)("div", {
+            }), (0, tk.jsxs)("div", {
               className: "SettingBox DeveloperToolsCategoryScreenshotSettings",
-              children: [(0, fS.jsx)("div", {
+              children: [(0, tk.jsx)("div", {
                 className: "SettingLabel",
                 children: "Screenshot size in pixels (width x height)"
-              }), (0, fS.jsx)(DS.e, {
+              }), (0, tk.jsx)(Qk.c, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (SS, HS) => {
-                  const gS = parseInt(SS) || 6400;
-                  IS(gS)
+                onValueChange: (kk, Fk) => {
+                  const Ik = parseInt(kk) || 6400;
+                  Lk(Ik)
                 },
                 placeholderText: "width",
                 maxLength: 10,
-                defaultValue: qS.toString()
-              }), (0, fS.jsx)("span", {
+                defaultValue: ak.toString()
+              }), (0, tk.jsx)("span", {
                 children: "X"
-              }), (0, fS.jsx)(DS.e, {
+              }), (0, tk.jsx)(Qk.c, {
                 className: "SettingsTextInput SmallTextLight",
-                onValueChange: (SS, HS) => {
-                  const gS = parseInt(SS) || 3600;
-                  aS(gS)
+                onValueChange: (kk, Fk) => {
+                  const Ik = parseInt(kk) || 3600;
+                  jk(Ik)
                 },
                 placeholderText: "height",
                 maxLength: 10,
-                defaultValue: kS.toString()
+                defaultValue: Zk.toString()
               })]
-            }), (0, fS.jsxs)("div", {
+            }), (0, tk.jsxs)("div", {
               className: "DeveloperToolsCategoryExportButtons",
-              children: [(0, fS.jsxs)(uS.g, {
+              children: [(0, tk.jsxs)(qk.d, {
                 onClick: () => {
-                  nS("screenshot")
+                  xk("screenshot")
                 },
-                disabled: xS,
-                children: [xS && (0, fS.jsx)(wS.c, {}), "Download Screenshot"]
-              }), (0, fS.jsxs)(uS.g, {
+                disabled: yk,
+                children: [yk && (0, tk.jsx)(sk.c, {}), "Download Screenshot"]
+              }), (0, tk.jsxs)(qk.d, {
                 onClick: () => {
-                  nS("glb")
+                  xk("glb")
                 },
-                disabled: bS,
-                children: [bS && (0, fS.jsx)(wS.c, {}), "Download GLB"]
+                disabled: Tk,
+                children: [Tk && (0, tk.jsx)(sk.c, {}), "Download GLB"]
               })]
             })]
-          }), (0, fS.jsx)("div", {
+          }), (0, tk.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
             children: 'To download GLB of scene with textures you need to "Disable Block Texture Atlas" in graphic settings first (you will need to reload the page to apply the setting).'
           })]
         })]
       })
     }
-    var dS = gS(138),
-      cS = gS(1216),
-      vS = gS(34124),
-      ES = gS(3166),
-      LS = gS(1608),
-      YS = gS(1348),
-      AS = gS(1318),
-      yS = gS(3258),
-      VS = gS(2157),
-      iS = gS(1588),
-      WS = gS(387),
-      zS = gS(2387),
-      US = gS(2398),
-      pS = gS(2833),
-      sS = gS(1736),
-      BS = gS(3226),
-      MS = gS(3202),
-      FS = gS(3265),
-      RS = gS(215);
+    var Ek = Ik(129),
+      Ok = Ik(1120),
+      nk = Ik(34051),
+      Gk = Ik(2941),
+      pk = Ik(1475),
+      uk = Ik(1253),
+      bk = Ik(1223),
+      Rk = Ik(3018),
+      Uk = Ik(1963),
+      Ck = Ik(1453),
+      Nk = Ik(337),
+      ck = Ik(2190),
+      Wk = Ik(2207),
+      fk = Ik(2624),
+      Bk = Ik(1585),
+      dk = Ik(2991),
+      Yk = Ik(2969),
+      Ak = Ik(3021),
+      gk = Ik(198);
 
-    function TS(SS) {
+    function mk(kk) {
       const {
-        t: HS,
-        selectedLanguage: gS
-      } = (0, xS.F)(), {
-        userContext: bS
-      } = (0, KS.b)(), {
-        superRankInfo: XS
-      } = bS, NS = SS && ((0, WS.uc)(XS) || bS.ranksMayChange) && (0, US.purchasesAllowed)(), {
-        accountId: qS,
-        data: uS
-      } = (0, pS.e)(BS.d, NS);
-      if ((0, tS.useEffect)((() => {
-          if (NS) return BS.d.watchAccount(), sS.d.addRefetchListener("billing", (SS => {
-            "reconnected" === SS ? BS.d.refreshAfterReconnect() : BS.d.refresh()
+        t: Fk,
+        selectedLanguage: Ik
+      } = (0, yk.y)(), {
+        userContext: Tk
+      } = (0, ek.d)(), {
+        superRankInfo: ik
+      } = Tk, lk = kk && ((0, Nk.Fc)(ik) || Tk.ranksMayChange) && (0, Wk.purchasesAllowed)(), {
+        accountId: ak,
+        data: qk
+      } = (0, fk.j)(dk.e, lk);
+      if ((0, Xk.useEffect)((() => {
+          if (lk) return dk.e.watchAccount(), Bk.c.addRefetchListener("billing", (kk => {
+            "reconnected" === kk ? dk.e.refreshAfterReconnect() : dk.e.refresh()
           }))
-        }), [NS]), !NS || !(0, WS.uc)(XS) || null === uS || qS !== bS.whamm) return null;
-      const IS = function(SS, HS, gS) {
-        const tS = FS.j[(0, FS.d)(FS.j, HS)],
-          bS = void 0 === tS ? void 0 : (0, RS.c)(SS.entitlements, tS.entitlementId);
-        return void 0 === bS || null === bS.expiresAt || (0, MS.f)(bS) <= gS ? null : bS.willRenew && null === bS.billingIssueDetectedAt ? {
+        }), [lk]), !lk || !(0, Nk.Fc)(ik) || null === qk || ak !== Tk.whamm) return null;
+      const Lk = function(kk, Fk, Ik) {
+        const Xk = Ak.e[(0, Ak.b)(Ak.e, Fk)],
+          Tk = void 0 === Xk ? void 0 : (0, gk.d)(kk.entitlements, Xk.entitlementId);
+        return void 0 === Tk || null === Tk.expiresAt || (0, Yk.f)(Tk) <= Ik ? null : Tk.willRenew && null === Tk.billingIssueDetectedAt ? {
           renews: !0,
-          at: Math.max(bS.expiresAt, gS)
+          at: Math.max(Tk.expiresAt, Ik)
         } : {
           renews: !1,
-          at: (0, MS.f)(bS)
+          at: (0, Yk.f)(Tk)
         }
-      }(uS, XS.tier, Date.now());
-      if (null === IS) return null;
-      const fS = IS.renews ? "store:renewsOn" : "store:endsOn";
-      return HS(fS, {
-        date: new Date(IS.at).toLocaleDateString((0, xS.q)(gS.code, fS), {
+      }(qk, ik.tier, Date.now());
+      if (null === Lk) return null;
+      const tk = Lk.renews ? "store:renewsOn" : "store:endsOn";
+      return Fk(tk, {
+        date: new Date(Lk.at).toLocaleDateString((0, yk.l)(Ik.code, tk), {
           year: "numeric",
           month: "short",
           day: "numeric"
         })
       })
     }
-    var oS = gS(1444),
-      lS = gS(1297),
-      mS = gS(5037),
-      eS = gS(1562),
-      rS = gS(3785),
-      SH = gS(2363);
+    var hk = Ik(1333),
+      rk = Ik(1207),
+      Dk = Ik(4884),
+      Mk = Ik(1432),
+      kF = Ik(3608),
+      FF = Ik(2170);
 
-    function HH(SS) {
+    function IF(kk) {
       let {
-        showing: HS
-      } = SS;
+        showing: Fk
+      } = kk;
       const {
-        t: gS
-      } = (0, xS.F)(), {
-        data: tS,
-        failed: bS
-      } = (0, pS.e)(rS.g, HS);
-      return 0 === (null === tS || void 0 === tS ? void 0 : tS.length) || null === tS && !bS ? null : (0, fS.jsxs)("div", {
+        t: Ik
+      } = (0, yk.y)(), {
+        data: Xk,
+        failed: Tk
+      } = (0, fk.j)(kF.c, Fk);
+      return 0 === (null === Xk || void 0 === Xk ? void 0 : Xk.length) || null === Xk && !Tk ? null : (0, tk.jsxs)("div", {
         className: "SettingBox AccountSettingsPaymentHistory",
-        children: [(0, fS.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: gS("paymentHistory:title")
-        }), null === tS && bS && (0, fS.jsx)("div", {
+          children: Ik("paymentHistory:title")
+        }), null === Xk && Tk && (0, tk.jsx)("div", {
           className: "AccountSettingsPaymentHistoryError",
-          children: gS("paymentHistory:loadFailed")
-        }), null !== tS && (0, fS.jsx)("ul", {
+          children: Ik("paymentHistory:loadFailed")
+        }), null !== Xk && (0, tk.jsx)("ul", {
           className: "PaymentHistoryList",
-          children: tS.map((SS => (0, fS.jsxs)("li", {
+          children: Xk.map((kk => (0, tk.jsxs)("li", {
             className: "PaymentHistoryEntry",
-            children: [(0, fS.jsx)(SH.b, {
-              entry: SS
-            }), (0, fS.jsxs)("div", {
+            children: [(0, tk.jsx)(FF.d, {
+              entry: kk
+            }), (0, tk.jsxs)("div", {
               className: "PaymentHistoryEntryText",
-              children: [(0, fS.jsx)("div", {
-                children: (0, SH.h)(gS, SS)
-              }), (0, fS.jsxs)("div", {
+              children: [(0, tk.jsx)("div", {
+                children: (0, FF.g)(Ik, kk)
+              }), (0, tk.jsxs)("div", {
                 className: "PaymentHistoryEntryDate",
-                children: [new Date(SS.at).toLocaleDateString(), "number" === typeof SS.orderId && ` \xb7 ${gS("paymentHistory:order",{orderId:SS.orderId})}`]
+                children: [new Date(kk.at).toLocaleDateString(), "number" === typeof kk.orderId && ` \xb7 ${Ik("paymentHistory:order",{orderId:kk.orderId})}`]
               })]
             })]
-          }, (0, rS.e)(SS))))
+          }, (0, kF.b)(kk))))
         })]
       })
     }
-    var gH = gS(2016),
-      tH = gS(1329),
-      bH = gS(1435),
-      XH = gS(1920),
-      xH = gS(1286),
-      NH = gS(1390),
-      qH = gS(3192);
-    async function uH() {
+    var XF = Ik(1840),
+      TF = Ik(1234),
+      iF = Ik(1324),
+      yF = Ik(1729),
+      lF = Ik(1194),
+      aF = Ik(1287),
+      qF = Ik(2960);
+    async function LF() {
       try {
-        return function(SS) {
-          const HS = new Map;
+        return function(kk) {
+          const Fk = new Map;
           for (const {
-              store: gS,
-              status: tS,
-              autoRenewStatus: bS,
-              managementUrl: XS
+              store: Ik,
+              status: Xk,
+              autoRenewStatus: Tk,
+              managementUrl: ik
             }
-            of Object.values(SS.subscriptions)) !(0, MS.h)(gS) || (0, MS.i)(tS) || "willNotRenew" === bS || HS.has(gS) || HS.set(gS, null !== XS && void 0 !== XS ? XS : MS.l[gS]);
-          return Array.from(HS, (SS => {
-            let [HS, gS] = SS;
+            of Object.values(kk.subscriptions)) !(0, Yk.g)(Ik) || (0, Yk.i)(Xk) || "willNotRenew" === Tk || Fk.has(Ik) || Fk.set(Ik, null !== ik && void 0 !== ik ? ik : Yk.j[Ik]);
+          return Array.from(Fk, (kk => {
+            let [Fk, Ik] = kk;
             return {
-              store: HS,
-              managementUrl: gS
+              store: Fk,
+              managementUrl: Ik
             }
           }))
-        }(await (0, XH.m)((0, qH.f)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
-      } catch (SS) {
-        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", SS), null
+        }(await (0, yF.l)((0, qF.h)().getCustomerInfo(), 5e3, "CustomerInfo got no answer in 5 s"))
+      } catch (kk) {
+        return console.error("Billing: loading CustomerInfo for the player's store subscriptions failed:", kk), null
       }
     }
-    var IH = gS(369),
-      fH = gS(2627);
-    const kH = {
+    var tF = Ik(318),
+      ZF = Ik(2418);
+    const jF = {
       appStore: {
         name: "App Store",
-        ...IH.Yb.appStore
+        ...tF.bc.appStore
       },
       googlePlay: {
         name: "Google Play",
-        ...IH.Yb.googlePlay
+        ...tF.bc.googlePlay
       },
       discord: {
         name: "Discord",
-        ...IH.Yb.discord
+        ...tF.bc.discord
       }
     };
 
-    function aH(SS) {
+    function eF(kk) {
       let {
-        warning: HS,
-        subscriptions: gS
-      } = SS;
+        warning: Fk,
+        subscriptions: Ik
+      } = kk;
       const {
-        t: tS
-      } = (0, xS.F)();
-      return null !== gS && 0 === gS.length ? (0, fS.jsx)(fS.Fragment, {
-        children: tS(HS)
-      }) : (0, fS.jsxs)("div", {
+        t: Xk
+      } = (0, yk.y)();
+      return null !== Ik && 0 === Ik.length ? (0, tk.jsx)(tk.Fragment, {
+        children: Xk(Fk)
+      }) : (0, tk.jsxs)("div", {
         className: "DeleteAccountSubtitle",
-        children: [tS(HS), null === gS && (0, fS.jsx)("div", {
+        children: [Xk(Fk), null === Ik && (0, tk.jsx)("div", {
           className: "DeleteAccountSubtitleNote",
-          children: tS("auth:deleteAccountSubscriptionsLoadFailed")
-        }), null !== gS && (0, fS.jsxs)(fS.Fragment, {
-          children: [(0, fS.jsx)("div", {
+          children: Xk("auth:deleteAccountSubscriptionsLoadFailed")
+        }), null !== Ik && (0, tk.jsxs)(tk.Fragment, {
+          children: [(0, tk.jsx)("div", {
             className: "DeleteAccountSubtitleNote",
-            children: tS("auth:deleteAccountStoreSubscriptions")
-          }), (0, fS.jsx)(fH.d, {
+            children: Xk("auth:deleteAccountStoreSubscriptions")
+          }), (0, tk.jsx)(ZF.e, {
             className: "DeleteAccountSubtitleLinks",
-            links: gS.map((SS => {
+            links: Ik.map((kk => {
               let {
-                store: HS,
-                managementUrl: gS
-              } = SS;
+                store: Fk,
+                managementUrl: Ik
+              } = kk;
               return {
-                ...kH[HS],
-                url: gS
+                ...jF[Fk],
+                url: Ik
               }
             }))
           })]
@@ -417,722 +417,722 @@ export const modules = {
       })
     }
 
-    function KH(SS) {
+    function wF(kk) {
       let {
-        showing: HS
-      } = SS;
+        showing: Fk
+      } = kk;
       const {
-        userContext: gS,
-        isUserContextUpdating: bS
-      } = (0, KS.b)(), {
-        t: XS
-      } = (0, xS.F)(), [NS, qS] = (0, tS.useState)(!1), [IS, kS] = (0, tS.useState)(null), aS = (0, tS.useRef)(HS);
-      (0, tS.useEffect)((() => (aS.current = HS, () => {
-        aS.current = !1
-      })), [HS]);
-      const jS = bS || NS;
-      return (0, fS.jsxs)("div", {
+        userContext: Ik,
+        isUserContextUpdating: Tk
+      } = (0, ek.d)(), {
+        t: ik
+      } = (0, yk.y)(), [lk, ak] = (0, Xk.useState)(!1), [Lk, Zk] = (0, Xk.useState)(null), jk = (0, Xk.useRef)(Fk);
+      (0, Xk.useEffect)((() => (jk.current = Fk, () => {
+        jk.current = !1
+      })), [Fk]);
+      const wk = Tk || lk;
+      return (0, tk.jsxs)("div", {
         className: "AccountSettingsDeleteAccountButtonContainer",
-        children: [(0, fS.jsxs)(uS.L, {
+        children: [(0, tk.jsxs)(qk.G, {
           onClick: async function() {
-            if (!NS) {
-              qS(!0);
+            if (!lk) {
+              ak(!0);
               try {
-                const SS = await async function() {
-                  const [SS, HS] = await Promise.all([(0, gH.c)(gS.availableUserContextTypes) ? uH() : [], GH(gS)]);
-                  if (!aS.current) return tH.d.ok();
-                  const tS = (0, YS.d)(gS.getPlayerName(), !CS.featureFlags.canSeeRealPlayerNames);
-                  if (!0 !== await bH.NotificationProvider.showPromptPopup({
+                const kk = await async function() {
+                  const [kk, Fk] = await Promise.all([(0, XF.d)(Ik.availableUserContextTypes) ? LF() : [], JF(Ik)]);
+                  if (!jk.current) return TF.b.ok();
+                  const Xk = (0, uk.e)(Ik.getPlayerName(), !Jk.featureFlags.canSeeRealPlayerNames);
+                  if (!0 !== await iF.NotificationProvider.showPromptPopup({
                       title: "auth:deleteAccountPopupTitleNamed",
                       textOpts: {
                         title: {
-                          playerName: tS
+                          playerName: Xk
                         }
                       },
-                      subtitle: (0, fS.jsx)(aH, {
-                        warning: jH(gS.isLoggedIn(), HS),
-                        subscriptions: SS
+                      subtitle: (0, tk.jsx)(eF, {
+                        warning: HF(Ik.isLoggedIn(), Fk),
+                        subscriptions: kk
                       }),
                       confirmText: "auth:deleteAccount",
                       destructive: !0,
-                      typedConfirm: HS ? XS("auth:deleteAccountTypedConfirm", {
-                        playerName: tS
+                      typedConfirm: Fk ? ik("auth:deleteAccountTypedConfirm", {
+                        playerName: Xk
                       }) : void 0,
                       confirmTooltip: "auth:deleteAccountPopupConfirmTooltip",
                       cancelText: "general:cancel",
                       cancelTooltip: "auth:deleteAccountPopupCancelTooltip"
-                    }).getResult()) return tH.d.ok();
-                  const bS = await (0, cS.postJsonWithMetricsCookiesAndJsonResponse)(`${xH.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
-                    gameState: ZS.b.get("gameState")
+                    }).getResult()) return TF.b.ok();
+                  const Tk = await (0, Ok.postJsonWithMetricsCookiesAndJsonResponse)(`${lF.clientSideServerUrls.indexUrl}/index/metrics/revoke-cookies`, {
+                    gameState: zk.d.get("gameState")
                   }, {
                     retries: 3
-                  }, gS.getMetricsCookies());
-                  if (bS.error) return tH.d.error(bS.error);
-                  (0, dS.b)() && (await NH.j.discordActivity()).exit("User deleted their account");
-                  return (0, cS.forgetStoredGuestAccount)(gS.whamm), (0, cS.forceGlobalSignOut)(!0), tH.d.ok()
-                }(), HS = SS.isError() ? SS.asError().message : null;
-                kS(HS)
-              } catch (SS) {
-                console.error("Failed to delete account:", SS), kS(XS("auth:genericDeleteAccountError"))
+                  }, Ik.getMetricsCookies());
+                  if (Tk.error) return TF.b.error(Tk.error);
+                  (0, Ek.e)() && (await aF.i.discordActivity()).exit("User deleted their account");
+                  return (0, Ok.forgetStoredGuestAccount)(Ik.whamm), (0, Ok.forceGlobalSignOut)(!0), TF.b.ok()
+                }(), Fk = kk.isError() ? kk.asError().message : null;
+                Zk(Fk)
+              } catch (kk) {
+                console.error("Failed to delete account:", kk), Zk(ik("auth:genericDeleteAccountError"))
               }
-              qS(!1)
+              ak(!1)
             }
           },
           className: "AccountSettingsDeleteAccountButton",
-          disabled: jS,
-          children: [jS && (0, fS.jsx)("div", {
+          disabled: wk,
+          children: [wk && (0, tk.jsx)("div", {
             className: "DeletingAccountLoader",
-            children: (0, fS.jsx)(wS.c, {})
-          }), XS("auth:deleteAccount")]
-        }), IS && (0, fS.jsx)("div", {
+            children: (0, tk.jsx)(sk.c, {})
+          }), ik("auth:deleteAccount")]
+        }), Lk && (0, tk.jsx)("div", {
           className: "DeleteAccountError",
-          children: IS
+          children: Lk
         })]
       })
     }
 
-    function jH(SS, HS) {
-      return (0, dS.b)() ? "auth:discordActivityDeleteAccountLossWarning" : SS ? "auth:deleteAccountLossWarning" : HS ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
+    function HF(kk, Fk) {
+      return (0, Ek.e)() ? "auth:discordActivityDeleteAccountLossWarning" : kk ? "auth:deleteAccountLossWarning" : Fk ? "auth:deleteGuestAccountLossWarning" : "auth:deleteGuestAccountWarning"
     }
-    async function GH(SS) {
+    async function JF(kk) {
       try {
         const {
-          accountCreatedAt: HS
-        } = await (0, XH.m)(iS.b.getPlayerProfile(SS, {
-          lowerCaseName: SS.getPlayerName().toLowerCase()
+          accountCreatedAt: Fk
+        } = await (0, yF.l)(Ck.e.getPlayerProfile(kk, {
+          lowerCaseName: kk.getPlayerName().toLowerCase()
         }), 5e3, "The player's profile got no answer in 5 s");
-        return null !== HS && Date.now() - HS >= 7 * WS.h
-      } catch (HS) {
-        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", HS), !0
+        return null !== Fk && Date.now() - Fk >= 7 * Nk.i
+      } catch (Fk) {
+        return console.error("Delete Account: loading the account's age failed, so the prompt asks for its name:", Fk), !0
       }
     }
-    var CH = gS(3716),
-      nH = gS(3729),
-      PH = gS(3726);
+    var xF = Ik(3533),
+      PF = Ik(3547),
+      KF = Ik(3541);
 
-    function QH(SS) {
+    function QF(kk) {
       let {
-        showing: HS
-      } = SS;
+        showing: Fk
+      } = kk;
       const {
-        t: gS
-      } = (0, xS.F)(), {
-        data: tS,
-        failed: bS
-      } = (0, pS.e)(CH.c, HS), XS = null === tS ? null : (0, CH.d)(tS);
-      return (0, fS.jsxs)("div", {
+        t: Ik
+      } = (0, yk.y)(), {
+        data: Xk,
+        failed: Tk
+      } = (0, fk.j)(xF.b, Fk), ik = null === Xk ? null : (0, xF.d)(Xk);
+      return (0, tk.jsxs)("div", {
         className: "SettingBox BlockedAndIgnoredPlayers",
-        children: [(0, fS.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "AccountSettingsLabel",
-          children: gS("settingsMenu:blockedAndIgnoredPlayers")
-        }), null === XS && !bS && (0, fS.jsx)(wS.c, {}), null === XS && bS && (0, fS.jsxs)("div", {
+          children: Ik("settingsMenu:blockedAndIgnoredPlayers")
+        }), null === ik && !Tk && (0, tk.jsx)(sk.c, {}), null === ik && Tk && (0, tk.jsxs)("div", {
           className: "BlockedAndIgnoredPlayersError",
-          children: [gS("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, fS.jsx)(uS.g, {
+          children: [Ik("settingsMenu:blockedAndIgnoredPlayersLoadFailed"), (0, tk.jsx)(qk.d, {
             className: "SmallTextLight",
             onClick: () => {
-              CH.c.refresh()
+              xF.b.refresh()
             },
-            children: gS("general:tryAgain")
+            children: Ik("general:tryAgain")
           })]
-        }), 0 === (null === XS || void 0 === XS ? void 0 : XS.length) && (0, fS.jsx)("div", {
+        }), 0 === (null === ik || void 0 === ik ? void 0 : ik.length) && (0, tk.jsx)("div", {
           className: "BlockedAndIgnoredPlayersEmpty",
-          children: gS("settingsMenu:noBlockedOrIgnoredPlayers")
-        }), null !== XS && XS.length > 0 && (0, fS.jsx)("ul", {
+          children: Ik("settingsMenu:noBlockedOrIgnoredPlayers")
+        }), null !== ik && ik.length > 0 && (0, tk.jsx)("ul", {
           className: "BlockedAndIgnoredPlayersList",
-          children: XS.map((SS => {
+          children: ik.map((kk => {
             let {
-              name: HS,
-              exclusion: tS
-            } = SS;
-            const bS = PH.g[tS];
-            return (0, fS.jsxs)("li", {
+              name: Fk,
+              exclusion: Xk
+            } = kk;
+            const Tk = KF.g[Xk];
+            return (0, tk.jsxs)("li", {
               className: "BlockedAndIgnoredPlayer",
-              children: [(0, fS.jsx)("div", {
+              children: [(0, tk.jsx)("div", {
                 className: "BlockedAndIgnoredPlayerName",
-                children: HS
-              }), (0, fS.jsx)(uS.j, {
+                children: Fk
+              }), (0, tk.jsx)(qk.g, {
                 className: "SmallTextLight",
                 onClick: () => {
-                  (0, nH.f)(bS, HS, {
+                  (0, PF.d)(Tk, Fk, {
                     chatMessage: null
                   })
                 },
-                children: gS(PH.k[bS].text)
+                children: Ik(KF.i[Tk].text)
               })]
-            }, HS)
+            }, Fk)
           }))
         })]
       })
     }
-    const DH = (0, tS.memo)((function(SS) {
-      var HS;
+    const sF = (0, Xk.memo)((function(kk) {
+      var Fk;
       let {
-        showing: gS,
-        inGame: bS
-      } = SS;
+        showing: Ik,
+        inGame: Tk
+      } = kk;
       const {
-        t: qS,
-        selectedLanguage: IS
-      } = (0, xS.F)(), {
-        hideSocialLocationFrom: kS
-      } = (0, ZS.m)(["hideSocialLocationFrom"]), jS = (0, aS.e)(), {
-        userContext: GS,
-        isUserContextUpdating: nS
-      } = (0, KS.b)(), [PS, QS] = (0, tS.useState)(null !== (HS = GS.getPlayerName()) && void 0 !== HS ? HS : ""), [JS, OS] = (0, tS.useState)(null), {
-        purchasing: pS,
-        outcome: sS,
-        purchase: BS
-      } = (0, ES.e)("/super-rank-welcome"), MS = (0, WS.$b)((0, xS.q)(IS.code, "general:timeLeft"), GS.superRankInfo), FS = TS(gS), RS = MS ? qS("general:timeLeft", {
-        time: MS
-      }) : FS, [rS, SH] = (0, tS.useState)(!1), [gH, tH] = (0, tS.useState)(!1), bH = (0, tS.useRef)(null), XH = (0, tS.useRef)(null), xH = (0, VS.i)({
+        t: ak,
+        selectedLanguage: Lk
+      } = (0, yk.y)(), {
+        hideSocialLocationFrom: Zk
+      } = (0, zk.j)(["hideSocialLocationFrom"]), wk = (0, jk.c)(), {
+        userContext: Hk,
+        isUserContextUpdating: xk
+      } = (0, ek.d)(), [Pk, Kk] = (0, Xk.useState)(null !== (Fk = Hk.getPlayerName()) && void 0 !== Fk ? Fk : ""), [Sk, vk] = (0, Xk.useState)(null), {
+        purchasing: fk,
+        outcome: Bk,
+        purchase: dk
+      } = (0, Gk.d)("/super-rank-welcome"), Yk = (0, Nk.sc)((0, yk.l)(Lk.code, "general:timeLeft"), Hk.superRankInfo), Ak = mk(Ik), gk = Yk ? ak("general:timeLeft", {
+        time: Yk
+      }) : Ak, [kF, FF] = (0, Xk.useState)(!1), [XF, TF] = (0, Xk.useState)(!1), iF = (0, Xk.useRef)(null), yF = (0, Xk.useRef)(null), lF = (0, Uk.g)({
         showProgressUpdateMessage: !0,
         enabled: !0
-      }), NH = null === xH, qH = null !== xH && void 0 !== xH ? xH : [], uH = GS !== cS.NULL_USER_CONTEXT && !GS.isLoggedIn(), IH = uH && 0 !== (null === xH || void 0 === xH ? void 0 : xH.length), [fH, kH] = (0, tS.useState)([]), [aH, jH] = (0, tS.useState)(!1), GH = GS.playerHasRank("youtuber"), CH = (0, tS.useCallback)((() => iS.b.getPlayerProfile(GS, {
-        lowerCaseName: GS.getPlayerName().toLowerCase()
-      }).then((SS => {
-        kH(SS.socialLinks)
-      })).catch((SS => {
-        console.error("Failed to refresh social links", SS)
-      }))), [GS]);
+      }), aF = null === lF, qF = null !== lF && void 0 !== lF ? lF : [], LF = Hk !== Ok.NULL_USER_CONTEXT && !Hk.isLoggedIn(), tF = LF && 0 !== (null === lF || void 0 === lF ? void 0 : lF.length), [ZF, jF] = (0, Xk.useState)([]), [eF, HF] = (0, Xk.useState)(!1), JF = Hk.playerHasRank("youtuber"), xF = (0, Xk.useCallback)((() => Ck.e.getPlayerProfile(Hk, {
+        lowerCaseName: Hk.getPlayerName().toLowerCase()
+      }).then((kk => {
+        jF(kk.socialLinks)
+      })).catch((kk => {
+        console.error("Failed to refresh social links", kk)
+      }))), [Hk]);
 
-      function nH(SS) {
-        SS !== PS && ((0, YS.k)(SS) ? (SS = (0, YS.l)(SS), OS(qS("homePage:nameCharacters"))) : OS(null), bH.current && (bH.current.value = SS), QS(SS))
+      function PF(kk) {
+        kk !== Pk && ((0, uk.o)(kk) ? (kk = (0, uk.r)(kk), vk(ak("homePage:nameCharacters"))) : vk(null), iF.current && (iF.current.value = kk), Kk(kk))
       }
-      return (0, tS.useEffect)((() => (!0 === gS ? (clearInterval(XH.current), XH.current = setInterval(jS, 1e3)) : clearInterval(XH.current), () => {
-        clearInterval(XH.current)
-      })), [gS, jS]), (0, tS.useEffect)((() => {
-        var SS;
-        QS(null !== (SS = GS.getPlayerName()) && void 0 !== SS ? SS : "")
-      }), [GS]), (0, tS.useEffect)((() => {
-        if (!gS || !GH || nS) return;
-        let SS = !1;
-        return jH(!0), kH([]), iS.b.getPlayerProfile(GS, {
-          lowerCaseName: GS.getPlayerName().toLowerCase()
-        }).then((HS => {
-          SS || kH(HS.socialLinks)
-        })).catch((SS => {
-          console.error("Failed to load social links", SS)
+      return (0, Xk.useEffect)((() => (!0 === Ik ? (clearInterval(yF.current), yF.current = setInterval(wk, 1e3)) : clearInterval(yF.current), () => {
+        clearInterval(yF.current)
+      })), [Ik, wk]), (0, Xk.useEffect)((() => {
+        var kk;
+        Kk(null !== (kk = Hk.getPlayerName()) && void 0 !== kk ? kk : "")
+      }), [Hk]), (0, Xk.useEffect)((() => {
+        if (!Ik || !JF || xk) return;
+        let kk = !1;
+        return HF(!0), jF([]), Ck.e.getPlayerProfile(Hk, {
+          lowerCaseName: Hk.getPlayerName().toLowerCase()
+        }).then((Fk => {
+          kk || jF(Fk.socialLinks)
+        })).catch((kk => {
+          console.error("Failed to load social links", kk)
         })).finally((() => {
-          SS || jH(!1)
+          kk || HF(!1)
         })), () => {
-          SS = !0
+          kk = !0
         }
-      }), [gS, GH, nS, GS]), (0, fS.jsxs)("div", {
-        className: XS()("SettingsMenuRightInner AccountSettings", {
-          AccountSettingsLocked: bS
+      }), [Ik, JF, xk, Hk]), (0, tk.jsxs)("div", {
+        className: ik()("SettingsMenuRightInner AccountSettings", {
+          AccountSettingsLocked: Tk
         }),
-        children: [bS && (0, fS.jsx)("div", {
+        children: [Tk && (0, tk.jsx)("div", {
           className: "AccountSettingsInGameWarning",
-          children: qS("settingsMenu:accountSettingsInGameWarning")
-        }), (0, fS.jsxs)("div", {
+          children: ak("settingsMenu:accountSettingsInGameWarning")
+        }), (0, tk.jsxs)("div", {
           className: "SettingBox SetAccountNameDiv SmallTextLight",
-          children: [(0, fS.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsNameLabel",
-            children: [qS("homePage:discordNamePopupTitle"), (0, fS.jsxs)(LS.LinkPreserveSearch, {
+            children: [ak("homePage:discordNamePopupTitle"), (0, tk.jsxs)(pk.LinkPreserveSearch, {
               className: "AccountSettingsViewProfile",
-              to: (0, AS.f)({
-                name: GS.getPlayerName()
+              to: (0, bk.i)({
+                name: Hk.getPlayerName()
               }),
               onClick: () => {
-                ZS.b.set({
+                zk.d.set({
                   openEverythingMenuName: null
                 })
               },
-              children: [(0, fS.jsx)(NS.d, {
+              children: [(0, tk.jsx)(lk.e, {
                 name: "arrow-up-right-from-square"
-              }), " ", qS("profileCard:viewProfile")]
+              }), " ", ak("profileCard:viewProfile")]
             })]
-          }), (0, fS.jsxs)("div", {
+          }), (0, tk.jsxs)("div", {
             className: "EnterAccNameDivWrapper",
             "data-pad-initial-area": !0,
-            children: [(0, fS.jsxs)("div", {
+            children: [(0, tk.jsxs)("div", {
               className: "EnterAccNameInputRow",
-              children: [CS.featureFlags.canChangeName && (0, fS.jsx)(DS.e, {
+              children: [Jk.featureFlags.canChangeName && (0, tk.jsx)(Qk.c, {
                 className: "EnterName",
-                placeholderText: qS("homePage:enterName"),
-                maxLength: YS.g,
-                defaultValue: PS,
-                onValueChange: SS => {
-                  nH(SS)
+                placeholderText: ak("homePage:enterName"),
+                maxLength: uk.j,
+                defaultValue: Pk,
+                onValueChange: kk => {
+                  PF(kk)
                 },
-                forcedText: rS || !CS.featureFlags.canChangeName ? PS : null,
+                forcedText: kF || !Jk.featureFlags.canChangeName ? Pk : null,
                 blurOnEnter: !0,
-                domRef: bH
-              }), (0, fS.jsx)(uS.g, {
+                domRef: iF
+              }), (0, tk.jsx)(qk.d, {
                 className: "ChooseRandomNameButton",
                 onClick: () => {
-                  nH((0, YS.f)())
+                  PF((0, uk.g)())
                 },
-                children: (0, fS.jsx)(NS.d, {
+                children: (0, tk.jsx)(lk.e, {
                   name: "dice",
                   className: "ChooseRandomNameIcon"
                 })
-              }), !CS.featureFlags.canChangeName && (0, fS.jsx)("div", {
+              }), !Jk.featureFlags.canChangeName && (0, tk.jsx)("div", {
                 className: "EnterName NoInput",
-                children: (0, YS.d)(PS, !CS.featureFlags.canSeeRealPlayerNames)
+                children: (0, uk.e)(Pk, !Jk.featureFlags.canSeeRealPlayerNames)
               })]
-            }), (0, fS.jsx)(uS.g, {
+            }), (0, tk.jsx)(qk.d, {
               className: "ChooseNameButton",
-              disabled: rS || PS === GS.getPlayerName(),
+              disabled: kF || Pk === Hk.getPlayerName(),
               onClick: () => {
-                PS.length < YS.i ? OS(qS("homePage:changeNameMinLengthError", {
-                  length: YS.i
-                })) : PS.length > YS.g ? OS(qS("homePage:changeNameMaxLengthError", {
-                  length: YS.g
-                })) : (SH(!0), OS(null), (0, vS.g)(GS, PS).then((SS => {
-                  SH(!1), "taken" === SS.outcome ? OS(qS("homePage:nameTaken")) : "refused" === SS.outcome ? OS(SS.message) : "failed" === SS.outcome && OS(qS((0, vS.c)(SS.failure)))
+                Pk.length < uk.m ? vk(ak("homePage:changeNameMinLengthError", {
+                  length: uk.m
+                })) : Pk.length > uk.j ? vk(ak("homePage:changeNameMaxLengthError", {
+                  length: uk.j
+                })) : (FF(!0), vk(null), (0, nk.h)(Hk, Pk).then((kk => {
+                  FF(!1), "taken" === kk.outcome ? vk(ak("homePage:nameTaken")) : "refused" === kk.outcome ? vk(kk.message) : "failed" === kk.outcome && vk(ak((0, nk.f)(kk.failure)))
                 })))
               },
-              children: qS("general:choose")
+              children: ak("general:choose")
             })]
-          }), JS && (0, fS.jsx)("div", {
+          }), Sk && (0, tk.jsx)("div", {
             className: "ChooseAccNameError",
-            children: JS
+            children: Sk
           })]
-        }), (0, fS.jsx)(hS.d, {
+        }), (0, tk.jsx)(Vk.e, {
           label: (() => {
-            if ((0, lS.p)(kS)) {
-              const SS = (0, xS.q)(IS.code, "general:timeLeft"),
-                HS = (0, WS.W)(SS, Date.now(), kS + lS.n);
-              return `${qS("settingsMenu:hideSocialLocation")} (${qS("general:timeLeft",{time:HS})})`
+            if ((0, rk.n)(Zk)) {
+              const kk = (0, yk.l)(Lk.code, "general:timeLeft"),
+                Fk = (0, Nk.gb)(kk, Date.now(), Zk + rk.j);
+              return `${ak("settingsMenu:hideSocialLocation")} (${ak("general:timeLeft",{time:Fk})})`
             }
-            return qS("settingsMenu:hideSocialLocation")
+            return ak("settingsMenu:hideSocialLocation")
           })(),
           onClick: () => {
-            const SS = !(0, lS.p)(kS);
-            (0, eS.reportAnalyticsClick)({
+            const kk = !(0, rk.n)(Zk);
+            (0, Mk.reportAnalyticsClick)({
               id: "social.hide_location",
-              value: SS ? "on" : "off"
-            }), tH(!0), iS.b.setHideSocialLocation(GS, SS).then((() => {
-              ZS.b.set({
-                hideSocialLocationFrom: SS ? Date.now() : null
+              value: kk ? "on" : "off"
+            }), TF(!0), Ck.e.setHideSocialLocation(Hk, kk).then((() => {
+              zk.d.set({
+                hideSocialLocationFrom: kk ? Date.now() : null
               })
             })).finally((() => {
-              tH(!1)
+              TF(!1)
             }))
           },
-          checked: (0, lS.p)(kS),
-          disabled: gH
-        }), GH && (0, fS.jsxs)("div", {
+          checked: (0, rk.n)(Zk),
+          disabled: XF
+        }), JF && (0, tk.jsxs)("div", {
           className: "SettingBox AccountSettingsSocialLinks",
-          children: [(0, fS.jsx)("div", {
+          children: [(0, tk.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: qS("settingsMenu:socialLinks")
-          }), aH && (0, fS.jsx)(wS.c, {}), !aH && (0, fS.jsx)(mS.c, {
-            socialLinks: fH,
+            children: ak("settingsMenu:socialLinks")
+          }), eF && (0, tk.jsx)(sk.c, {}), !eF && (0, tk.jsx)(Dk.e, {
+            socialLinks: ZF,
             editable: !0,
-            userContext: GS,
-            onLinksUpdated: CH
+            userContext: Hk,
+            onLinksUpdated: xF
           })]
-        }), (0, fS.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, fS.jsx)("div", {
+          children: [(0, tk.jsx)("div", {
             className: "AccountSettingsLabel",
-            children: qS(IH ? "auth:loginOrSwitchAccount" : "auth:login")
-          }), NH && (0, fS.jsx)(wS.c, {}), !NH && 0 === qH.length && (0, fS.jsx)("div", {
+            children: ak(tF ? "auth:loginOrSwitchAccount" : "auth:login")
+          }), aF && (0, tk.jsx)(sk.c, {}), !aF && 0 === qF.length && (0, tk.jsx)("div", {
             className: "NoLoginOptions",
-            children: qS("auth:noLoginOptions")
-          }), !NH && qH.length > 0 && "crazygames" !== dS.r && (0, fS.jsx)("div", {
+            children: ak("auth:noLoginOptions")
+          }), !aF && qF.length > 0 && "crazygames" !== Ek.v && (0, tk.jsx)("div", {
             className: "AccountSettingsLoginButtons",
-            children: qH
-          }), !NH && qH.length > 0 && "crazygames" === dS.r && (0, fS.jsxs)("div", {
+            children: qF
+          }), !aF && qF.length > 0 && "crazygames" === Ek.v && (0, tk.jsxs)("div", {
             className: "AccountSettingsLoginButtons",
-            children: [qH[0], qH.length > 1 && (0, fS.jsxs)(fS.Fragment, {
-              children: [(0, fS.jsxs)("div", {
+            children: [qF[0], qF.length > 1 && (0, tk.jsxs)(tk.Fragment, {
+              children: [(0, tk.jsxs)("div", {
                 className: "LegacyLoginOptionsHeader",
-                children: [(0, fS.jsx)("span", {
+                children: [(0, tk.jsx)("span", {
                   className: "LegacyLoginOptionsTitle",
-                  children: qS("auth:legacyLoginOptions")
-                }), (0, fS.jsx)(oS.e, {
+                  children: ak("auth:legacyLoginOptions")
+                }), (0, tk.jsx)(hk.c, {
                   className: "LegacyLoginOptionsInfoIcon",
-                  hoverInfo: qS("auth:legacyLoginOptionsInfo")
+                  hoverInfo: ak("auth:legacyLoginOptionsInfo")
                 })]
-              }), (0, fS.jsx)("div", {
+              }), (0, tk.jsx)("div", {
                 className: "LegacyAccountSettingsLoginButtons",
-                children: qH.slice(1)
+                children: qF.slice(1)
               })]
             })]
-          }), CS.featureFlags.useLogin && (null !== GS.loggedInInfo || GS.isLoggedIn()) && (0, fS.jsxs)(fS.Fragment, {
-            children: [(0, fS.jsx)("div", {
+          }), Jk.featureFlags.useLogin && (null !== Hk.loggedInInfo || Hk.isLoggedIn()) && (0, tk.jsxs)(tk.Fragment, {
+            children: [(0, tk.jsx)("div", {
               className: "AccountSettingsLoginDivider"
-            }), (0, fS.jsxs)(uS.L, {
+            }), (0, tk.jsxs)(qk.G, {
               onClick: () => {
-                (0, cS.forceGlobalSignOut)()
+                (0, Ok.forceGlobalSignOut)()
               },
               className: "AccountSettingsSignedInButton",
-              children: [(0, fS.jsx)(NS.d, {
+              children: [(0, tk.jsx)(lk.e, {
                 name: "right-from-bracket"
-              }), qS("auth:signOut")]
+              }), ak("auth:signOut")]
             })]
           })]
-        }), !GS.playerHasRank("super") && (0, US.purchasesAllowed)() && (0, fS.jsxs)("div", {
+        }), !Hk.playerHasRank("super") && (0, Wk.purchasesAllowed)() && (0, tk.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, fS.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, fS.jsx)(NS.d, {
+            children: [(0, tk.jsx)(lk.e, {
               name: "bolt"
-            }), qS("homePage:superRank")]
-          }), (0, fS.jsxs)("div", {
+            }), ak("homePage:superRank")]
+          }), (0, tk.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [(0, fS.jsxs)(uS.p, {
+            children: [(0, tk.jsxs)(qk.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, zS.r)({
+                (0, ck.m)({
                   mode: "self",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, fS.jsx)(NS.d, {
+              children: [(0, tk.jsx)(lk.e, {
                 name: "bolt"
-              }), qS("homePage:getSuperRank")]
-            }), (0, fS.jsxs)(uS.p, {
+              }), ak("homePage:getSuperRank")]
+            }), (0, tk.jsxs)(qk.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, zS.r)({
+                (0, ck.m)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, fS.jsx)(NS.d, {
+              children: [(0, tk.jsx)(lk.e, {
                 name: "bolt"
-              }), qS("homePage:giftSuperRank")]
+              }), ak("homePage:giftSuperRank")]
             })]
           })]
-        }), GS.playerHasRank("super") && (0, fS.jsxs)("div", {
+        }), Hk.playerHasRank("super") && (0, tk.jsxs)("div", {
           className: "SettingBox AccountSettingsSuperRank",
-          children: [(0, fS.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "AccountSettingsLabel AccountSettingsLabelSuperRank",
-            children: [(0, fS.jsx)(NS.d, {
+            children: [(0, tk.jsx)(lk.e, {
               name: "bolt"
-            }), qS("homePage:superRank"), RS && (0, fS.jsxs)("div", {
+            }), ak("homePage:superRank"), gk && (0, tk.jsxs)("div", {
               className: "AccountSettingsSuperRankTimeLeft",
-              children: ["(", RS, ")"]
+              children: ["(", gk, ")"]
             })]
-          }), (0, US.purchasesAllowed)() && (0, fS.jsxs)("div", {
+          }), (0, Wk.purchasesAllowed)() && (0, tk.jsxs)("div", {
             className: "AccountSettingsSuperRankProlongContainer",
-            children: [!(0, WS.uc)(GS.superRankInfo) && (0, fS.jsxs)(uS.p, {
+            children: [!(0, Nk.Fc)(Hk.superRankInfo) && (0, tk.jsxs)(qk.m, {
               className: "AccountSettingsSuperRankProlong",
-              loading: pS,
+              loading: fk,
               onClick: () => {
-                BS(yS.k.id, null)
+                dk(Rk.l.id, null)
               },
-              children: [(0, fS.jsx)(NS.d, {
+              children: [(0, tk.jsx)(lk.e, {
                 name: "bolt"
-              }), qS("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
-                days: yS.k.product.days,
-                price: yS.k.price
+              }), ak("settingsMenu:getSuperRankAdditionalDaysPremiumCurrency", {
+                days: Rk.l.product.days,
+                price: Rk.l.price
               })]
-            }), (0, fS.jsxs)(uS.p, {
+            }), (0, tk.jsxs)(qk.m, {
               className: "AccountSettingsSuperRankProlong",
               onClick: () => {
-                (0, zS.r)({
+                (0, ck.m)({
                   mode: "gift",
                   source: "accountSettings",
                   openItem: "superRank"
                 })
               },
-              children: [(0, fS.jsx)(NS.d, {
+              children: [(0, tk.jsx)(lk.e, {
                 name: "bolt"
-              }), qS("homePage:giftSuperRank")]
+              }), ak("homePage:giftSuperRank")]
             })]
-          }), sS && (0, fS.jsx)("div", {
+          }), Bk && (0, tk.jsx)("div", {
             className: "AccountSettingsSuperRankProlongError SmallTextBold",
-            children: qS(sS.translationKey)
+            children: ak(Bk.translationKey)
           })]
-        }), (0, fS.jsx)(HH, {
-          showing: gS
-        }), CS.featureFlags.useSocialFeatures && (0, fS.jsx)(QH, {
-          showing: gS
-        }), (0, fS.jsxs)("div", {
+        }), (0, tk.jsx)(IF, {
+          showing: Ik
+        }), Jk.featureFlags.useSocialFeatures && (0, tk.jsx)(QF, {
+          showing: Ik
+        }), (0, tk.jsxs)("div", {
           className: "SettingBoxGroup AccountSettingsDeleteAccountGroup",
-          children: [(0, fS.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "SettingBox AccountSettingsDeleteAccount SettingBoxWarning",
-            children: [(0, fS.jsx)("div", {
+            children: [(0, tk.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: qS(wH(uH, IH))
-            }), (0, dS.b)() && (0, fS.jsx)("div", {
+              children: ak(VF(LF, tF))
+            }), (0, Ek.e)() && (0, tk.jsx)("div", {
               className: "AccountSettingsDeleteAccountButtonTitle",
-              children: qS("auth:discordActivityKickWarning")
-            }), (0, fS.jsx)(KH, {
-              showing: gS
+              children: ak("auth:discordActivityKickWarning")
+            }), (0, tk.jsx)(wF, {
+              showing: Ik
             })]
-          }), (0, fS.jsx)("div", {
+          }), (0, tk.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: qS(uH ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
+            children: ak(LF ? "auth:deleteGuestAccountWarning" : "auth:deleteAccountLossWarning")
           })]
         })]
       })
     }));
 
-    function wH(SS, HS) {
-      return SS ? HS ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
+    function VF(kk, Fk) {
+      return kk ? Fk ? "auth:deleteGuestAccountButtonTitle" : "auth:deleteGuestAccountWarning" : "auth:deleteAccountButtonTitle"
     }
-    var hH = gS(34130),
-      ZH = gS(3300),
-      JH = gS(1334),
-      OH = gS(1510),
-      dH = gS(2100),
-      cH = gS(9082),
-      vH = gS(34135);
+    var zF = Ik(34058),
+      SF = Ik(3065),
+      oF = Ik(1241),
+      vF = Ik(1395),
+      EF = Ik(1907),
+      OF = Ik(8865),
+      nF = Ik(34062);
 
-    function EH() {
+    function GF() {
       const {
-        t: SS
-      } = (0, xS.F)();
-      return (0, dH.h)("localPlayerAlive") ? (0, fS.jsx)(cH.e, {
+        t: kk
+      } = (0, yk.y)();
+      return (0, EF.k)("localPlayerAlive") ? (0, tk.jsx)(OF.e, {
         icon: "camera",
-        title: SS("screenshotMode:title"),
-        sub: SS("screenshotMode:entrySub"),
-        onClick: vH.c
+        title: kk("screenshotMode:title"),
+        sub: kk("screenshotMode:entrySub"),
+        onClick: nF.b
       }) : null
     }
-    var LH = gS(34142);
-    const YH = (0, tS.memo)((function(SS) {
+    var pF = Ik(34073);
+    const uF = (0, Xk.memo)((function(kk) {
         let {
-          inGame: HS
-        } = SS;
+          inGame: Fk
+        } = kk;
         const {
-          t: gS,
-          selectedLanguage: tS
-        } = (0, xS.F)(), {
-          clientEscMenuOptions: bS,
-          showDebugOverlay: XS,
-          isTouchScreen: NS
-        } = (0, ZS.m)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), qS = (0, jS.i)("hideCoordinates");
-        let uS = "settingsMenu:showCoordinates",
-          IS = "settingsMenu:showChunkCoordinates";
+          t: Ik,
+          selectedLanguage: Xk
+        } = (0, yk.y)(), {
+          clientEscMenuOptions: Tk,
+          showDebugOverlay: ik,
+          isTouchScreen: lk
+        } = (0, zk.j)(["clientEscMenuOptions", "showDebugOverlay", "isTouchScreen"]), ak = (0, wk.j)("hideCoordinates");
+        let qk = "settingsMenu:showCoordinates",
+          Lk = "settingsMenu:showChunkCoordinates";
 
-        function kS(SS) {
-          const HS = new Intl.DisplayNames([SS], {
+        function Zk(kk) {
+          const Fk = new Intl.DisplayNames([kk], {
             type: "language"
-          }).of(SS);
-          return HS.charAt(0).toUpperCase() + HS.slice(1)
+          }).of(kk);
+          return Fk.charAt(0).toUpperCase() + Fk.slice(1)
         }
-        return qS && (uS = "settingsMenu:showCoordinatesHidden", IS = "settingsMenu:showChunkCoordinatesHidden"), (0, fS.jsxs)("div", {
+        return ak && (qk = "settingsMenu:showCoordinatesHidden", Lk = "settingsMenu:showChunkCoordinatesHidden"), (0, tk.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [HS && CS.featureFlags.canUseInviteLinks && (0, fS.jsxs)("div", {
+          children: [Fk && Jk.featureFlags.canUseInviteLinks && (0, tk.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, fS.jsx)("div", {
+            children: [(0, tk.jsx)("div", {
               className: "SettingsMenuInviteHeader",
-              children: gS("settingsMenu:inviteLink")
-            }), (0, fS.jsx)(hH.i, {})]
-          }), (0, fS.jsxs)("div", {
+              children: Ik("settingsMenu:inviteLink")
+            }), (0, tk.jsx)(zF.c, {})]
+          }), (0, tk.jsxs)("div", {
             className: "SettingBox",
-            children: [(0, fS.jsx)("div", {
+            children: [(0, tk.jsx)("div", {
               className: "SliderText",
               style: {
                 marginBottom: "10px"
               },
-              children: gS("settingsMenu:language")
-            }), (0, fS.jsx)(ZH.e, {
-              options: Object.entries(xS.j).map((SS => {
-                let [HS, gS] = SS;
+              children: Ik("settingsMenu:language")
+            }), (0, tk.jsx)(SF.e, {
+              options: Object.entries(yk.i).map((kk => {
+                let [Fk, Ik] = kk;
                 return {
-                  label: (0, fS.jsxs)("div", {
+                  label: (0, tk.jsxs)("div", {
                     className: "SettingsMenuLanguageOption",
-                    children: [(0, fS.jsx)("img", {
-                      src: gS.flagImg,
+                    children: [(0, tk.jsx)("img", {
+                      src: Ik.flagImg,
                       alt: "flag"
-                    }), (0, fS.jsxs)("span", {
-                      children: [kS(HS), " ", (0, fS.jsxs)("span", {
+                    }), (0, tk.jsxs)("span", {
+                      children: [Zk(Fk), " ", (0, tk.jsxs)("span", {
                         className: "SettingsMenuLanguageOptionCode",
-                        children: ["(", HS, ")"]
+                        children: ["(", Fk, ")"]
                       })]
                     })]
                   }),
-                  value: HS
+                  value: Fk
                 }
               })),
-              value: tS.code,
-              onChange: SS => {
-                JH.f.get().setCurrentLanguage(SS.value)
+              value: Xk.code,
+              onChange: kk => {
+                oF.d.get().setCurrentLanguage(kk.value)
               }
             })]
-          }), HS && NS && (0, LH.b)() && (0, fS.jsx)(EH, {}), !(0, CS.isMobileApp)() && (0, OH.i)() && CS.featureFlags.useForceRotateForceFullscreenOverlay && (0, fS.jsx)(hS.d, {
-            label: gS("settingsMenu:disableFullscreenMode"),
-            checked: bS.disableFullscreen,
-            onClick: SS => {
-              ZS.b.setClientEscMenuOptions({
-                disableFullscreen: SS
+          }), Fk && lk && (0, pF.d)() && (0, tk.jsx)(GF, {}), !(0, Jk.isMobileApp)() && (0, vF.g)() && Jk.featureFlags.useForceRotateForceFullscreenOverlay && (0, tk.jsx)(Vk.e, {
+            label: Ik("settingsMenu:disableFullscreenMode"),
+            checked: Tk.disableFullscreen,
+            onClick: kk => {
+              zk.d.setClientEscMenuOptions({
+                disableFullscreen: kk
               })
             }
-          }), (0, fS.jsx)(hS.d, {
-            label: gS(uS),
-            checked: bS.showCoordinates,
-            onClick: SS => {
-              ZS.b.setClientEscMenuOptions({
-                showCoordinates: SS
+          }), (0, tk.jsx)(Vk.e, {
+            label: Ik(qk),
+            checked: Tk.showCoordinates,
+            onClick: kk => {
+              zk.d.setClientEscMenuOptions({
+                showCoordinates: kk
               })
             },
-            disabled: qS
-          }), (0, fS.jsx)(hS.d, {
-            label: gS(IS),
-            checked: bS.showChunkCoordinates,
-            onClick: SS => {
-              ZS.b.setClientEscMenuOptions({
-                showChunkCoordinates: SS
+            disabled: ak
+          }), (0, tk.jsx)(Vk.e, {
+            label: Ik(Lk),
+            checked: Tk.showChunkCoordinates,
+            onClick: kk => {
+              zk.d.setClientEscMenuOptions({
+                showChunkCoordinates: kk
               })
             },
-            disabled: qS
-          }), (0, fS.jsx)(hS.d, {
-            label: gS("settingsMenu:showFps"),
-            checked: bS.showFPS,
-            onClick: SS => {
-              ZS.b.setClientEscMenuOptions({
-                showFPS: SS
+            disabled: ak
+          }), (0, tk.jsx)(Vk.e, {
+            label: Ik("settingsMenu:showFps"),
+            checked: Tk.showFPS,
+            onClick: kk => {
+              zk.d.setClientEscMenuOptions({
+                showFPS: kk
               })
             }
-          }), (0, fS.jsx)(hS.d, {
-            label: gS("settingsMenu:disableBunnyHopping"),
-            checked: bS.disableBunnyHopping,
-            onClick: SS => {
-              ZS.b.setClientEscMenuOptions({
-                disableBunnyHopping: SS
+          }), (0, tk.jsx)(Vk.e, {
+            label: Ik("settingsMenu:disableBunnyHopping"),
+            checked: Tk.disableBunnyHopping,
+            onClick: kk => {
+              zk.d.setClientEscMenuOptions({
+                disableBunnyHopping: kk
               })
             }
-          }), (0, NH.s)() && (0, fS.jsx)(hS.d, {
-            label: gS("settingsMenu:showChat"),
-            checked: bS.showChat,
-            onClick: SS => {
-              ZS.b.setClientEscMenuOptions({
-                showChat: SS
+          }), (0, aF.v)() && (0, tk.jsx)(Vk.e, {
+            label: Ik("settingsMenu:showChat"),
+            checked: Tk.showChat,
+            onClick: kk => {
+              zk.d.setClientEscMenuOptions({
+                showChat: kk
               })
             }
-          }), (0, fS.jsx)(hS.d, {
-            label: gS("settingsMenu:showDebugOverlay"),
-            checked: XS,
-            onClick: SS => {
-              ZS.b.set({
-                showDebugOverlay: SS
+          }), (0, tk.jsx)(Vk.e, {
+            label: Ik("settingsMenu:showDebugOverlay"),
+            checked: ik,
+            onClick: kk => {
+              zk.d.set({
+                showDebugOverlay: kk
               })
             }
-          }), CS.featureFlags.useSocialFeatures && (0, fS.jsx)(hS.d, {
-            label: gS("settingsMenu:showFriendOnlineToasts"),
-            checked: bS.showFriendOnlineToasts,
-            onClick: SS => {
-              ZS.b.setClientEscMenuOptions({
-                showFriendOnlineToasts: SS
+          }), Jk.featureFlags.useSocialFeatures && (0, tk.jsx)(Vk.e, {
+            label: Ik("settingsMenu:showFriendOnlineToasts"),
+            checked: Tk.showFriendOnlineToasts,
+            onClick: kk => {
+              zk.d.setClientEscMenuOptions({
+                showFriendOnlineToasts: kk
               })
             }
-          }), (0, fS.jsx)(hS.d, {
-            label: gS("settingsMenu:showNewItemIndicator"),
-            checked: bS.showNewItemIndicator,
-            onClick: SS => {
-              ZS.b.setClientEscMenuOptions({
-                showNewItemIndicator: SS
+          }), (0, tk.jsx)(Vk.e, {
+            label: Ik("settingsMenu:showNewItemIndicator"),
+            checked: Tk.showNewItemIndicator,
+            onClick: kk => {
+              zk.d.setClientEscMenuOptions({
+                showNewItemIndicator: kk
               })
             }
           })]
         })
       })),
-      AH = (0, tS.memo)((function() {
+      bF = (0, Xk.memo)((function() {
         const {
-          t: SS
-        } = (0, xS.F)(), {
-          soundVolume: HS,
-          musicVolume: gS
-        } = (0, ZS.m)(["soundVolume", "musicVolume"]);
-        return (0, fS.jsxs)("div", {
+          t: kk
+        } = (0, yk.y)(), {
+          soundVolume: Fk,
+          musicVolume: Ik
+        } = (0, zk.j)(["soundVolume", "musicVolume"]);
+        return (0, tk.jsxs)("div", {
           className: "SettingsMenuRightInner",
-          children: [(0, fS.jsx)(hS.k, {
-            name: SS("settingsMenu:musicVolume"),
+          children: [(0, tk.jsx)(Vk.j, {
+            name: kk("settingsMenu:musicVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: gS,
-            onChange: SS => {
-              ZS.b.set({
-                musicVolume: Math.round(100 * SS) / 100
+            initValue: Ik,
+            onChange: kk => {
+              zk.d.set({
+                musicVolume: Math.round(100 * kk) / 100
               })
             },
-            format: SS => SS.toFixed(2)
-          }), (0, fS.jsx)(hS.k, {
-            name: SS("settingsMenu:soundEffectsVolume"),
+            format: kk => kk.toFixed(2)
+          }), (0, tk.jsx)(Vk.j, {
+            name: kk("settingsMenu:soundEffectsVolume"),
             min: 0,
             max: 1,
             step: .01,
-            initValue: HS,
-            onChange: SS => {
-              ZS.b.set({
-                soundVolume: Math.round(100 * SS) / 100
+            initValue: Fk,
+            onChange: kk => {
+              zk.d.set({
+                soundVolume: Math.round(100 * kk) / 100
               })
             },
-            format: SS => SS.toFixed(2)
+            format: kk => kk.toFixed(2)
           })]
         })
       }));
-    var yH = gS(775),
-      VH = gS(1522),
-      iH = gS(3800),
-      WH = gS(34149),
-      zH = gS(3623);
-    const UH = {
+    var RF = Ik(729),
+      UF = Ik(1402),
+      CF = Ik(3620),
+      NF = Ik(34079),
+      cF = Ik(3428);
+    const WF = {
       app: "notificationSettings:pushTargetsApp",
       browser: "notificationSettings:pushTargetsBrowser",
       msnPlay: "notificationSettings:pushTargetsMsnPlay"
     };
 
-    function pH() {
+    function fF() {
       const {
-        t: SS
-      } = (0, xS.F)(), HS = (0, zH.b)(), {
-        mobilePushNotificationsCanAsk: gS
-      } = (0, ZS.m)(["mobilePushNotificationsCanAsk"]), [bS, XS] = (0, tS.useState)(null), [NS, qS] = (0, tS.useState)(!1), [IS, kS] = (0, tS.useState)(null), [aS, KS] = (0, tS.useState)(!1), jS = (0, tS.useCallback)((() => {
-        (0, iH.d)().then((SS => {
-          HS.current && (XS(SS), qS(!1))
-        })).catch((SS => {
-          console.error("Failed to load push notification targets:", SS), HS.current && qS(!0)
+        t: kk
+      } = (0, yk.y)(), Fk = (0, cF.d)(), {
+        mobilePushNotificationsCanAsk: Ik
+      } = (0, zk.j)(["mobilePushNotificationsCanAsk"]), [Tk, ik] = (0, Xk.useState)(null), [lk, ak] = (0, Xk.useState)(!1), [Lk, Zk] = (0, Xk.useState)(null), [jk, ek] = (0, Xk.useState)(!1), wk = (0, Xk.useCallback)((() => {
+        (0, CF.c)().then((kk => {
+          Fk.current && (ik(kk), ak(!1))
+        })).catch((kk => {
+          console.error("Failed to load push notification targets:", kk), Fk.current && ak(!0)
         }))
-      }), [HS]), GS = (0, tS.useCallback)((() => {
-        (0, WH.g)().then((SS => {
-          HS.current && kS((() => SS))
+      }), [Fk]), Hk = (0, Xk.useCallback)((() => {
+        (0, NF.f)().then((kk => {
+          Fk.current && Zk((() => kk))
         }))
-      }), [HS]);
-      (0, tS.useEffect)((() => {
-        jS()
-      }), [jS]), (0, tS.useEffect)((() => {
-        GS()
-      }), [GS, gS]), (0, VH.g)(iH.i, jS);
-      const CS = null === bS ? [] : Object.keys(UH).filter((SS => bS[SS] > 0));
-      return (0, fS.jsxs)("div", {
+      }), [Fk]);
+      (0, Xk.useEffect)((() => {
+        wk()
+      }), [wk]), (0, Xk.useEffect)((() => {
+        Hk()
+      }), [Hk, Ik]), (0, UF.d)(CF.h, wk);
+      const Jk = null === Tk ? [] : Object.keys(WF).filter((kk => Tk[kk] > 0));
+      return (0, tk.jsxs)("div", {
         className: "SettingBox PushNotificationSettings",
-        children: [(0, fS.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "SliderText",
-          children: SS("notificationSettings:pushNotifications")
-        }), null === bS && NS && (0, fS.jsx)("div", {
+          children: kk("notificationSettings:pushNotifications")
+        }), null === Tk && lk && (0, tk.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: SS("notificationSettings:pushTargetsLoadFailed")
-        }), null !== bS && 0 === CS.length && (0, fS.jsx)("div", {
+          children: kk("notificationSettings:pushTargetsLoadFailed")
+        }), null !== Tk && 0 === Jk.length && (0, tk.jsx)("div", {
           className: "PushNotificationSettingsText",
-          children: SS("notificationSettings:pushTargetsNone")
-        }), CS.length > 0 && (0, fS.jsx)("ul", {
+          children: kk("notificationSettings:pushTargetsNone")
+        }), Jk.length > 0 && (0, tk.jsx)("ul", {
           className: "PushNotificationSettingsTargets",
-          children: CS.map((HS => {
-            var gS;
-            return (0, fS.jsx)("li", {
-              children: SS(UH[HS], {
-                count: null !== (gS = null === bS || void 0 === bS ? void 0 : bS[HS]) && void 0 !== gS ? gS : 0
+          children: Jk.map((Fk => {
+            var Ik;
+            return (0, tk.jsx)("li", {
+              children: kk(WF[Fk], {
+                count: null !== (Ik = null === Tk || void 0 === Tk ? void 0 : Tk[Fk]) && void 0 !== Ik ? Ik : 0
               })
-            }, HS)
+            }, Fk)
           }))
-        }), null !== IS && (0, fS.jsx)(uS.g, {
+        }), null !== Lk && (0, tk.jsx)(qk.d, {
           className: "PushNotificationSettingsButton",
-          loading: aS,
+          loading: jk,
           onClick: () => {
-            KS(!0), IS().catch((SS => {
-              console.error("Failed to turn on push notifications:", SS)
+            ek(!0), Lk().catch((kk => {
+              console.error("Failed to turn on push notifications:", kk)
             })).finally((() => {
-              HS.current && (KS(!1), GS())
+              Fk.current && (ek(!1), Hk())
             }))
           },
-          children: SS("notificationSettings:pushTurnOn")
+          children: kk("notificationSettings:pushTurnOn")
         })]
       })
     }
-    var sH = gS(2680);
-    const BH = {
+    var BF = Ik(2478);
+    const dF = {
         toastAndTray: {
           label: "notificationSettings:friendRequestsAll",
           info: "notificationSettings:friendRequestsAllInfo"
@@ -1146,7 +1146,7 @@ export const modules = {
           info: "notificationSettings:friendRequestsOffInfo"
         }
       },
-      MH = {
+      YF = {
         remindersOn: {
           label: "dailyDrop:settingReminders",
           reportAs: "reminders"
@@ -1157,383 +1157,383 @@ export const modules = {
         }
       };
 
-    function FH(SS) {
+    function AF(kk) {
       let {
-        setting: HS,
-        value: gS
-      } = SS;
+        setting: Fk,
+        value: Ik
+      } = kk;
       const {
-        t: bS
-      } = (0, xS.F)(), NS = (0, zH.b)(), [qS, uS] = (0, tS.useState)(null), [IS, kS] = (0, tS.useState)(!1), [aS, KS] = (0, tS.useState)(null);
-      return (0, tS.useEffect)((() => {
-        "remindersOn" === HS && (0, WH.g)().then((SS => {
-          NS.current && KS((() => SS))
-        }), (SS => {
-          console.error("Couldn't tell whether this device can take push notifications:", SS)
+        t: Tk
+      } = (0, yk.y)(), lk = (0, cF.d)(), [ak, qk] = (0, Xk.useState)(null), [Lk, Zk] = (0, Xk.useState)(!1), [jk, ek] = (0, Xk.useState)(null);
+      return (0, Xk.useEffect)((() => {
+        "remindersOn" === Fk && (0, NF.f)().then((kk => {
+          lk.current && ek((() => kk))
+        }), (kk => {
+          console.error("Couldn't tell whether this device can take push notifications:", kk)
         }))
-      }), [HS, NS]), (0, fS.jsx)(hS.d, {
-        className: XS()({
-          DailyDropSettingFailed: IS
+      }), [Fk, lk]), (0, tk.jsx)(Vk.e, {
+        className: ik()({
+          DailyDropSettingFailed: Lk
         }),
-        label: bS(MH[HS].label),
-        checked: null !== qS && void 0 !== qS ? qS : gS,
-        note: IS ? bS("dailyDrop:settingFailed") : void 0,
-        onClick: SS => {
-          null === qS && (uS(SS), kS(!1), SS && null !== aS && aS().catch((SS => {
-            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", SS)
-          })), (0, sH.r)("daily_drop.setting", `${MH[HS].reportAs}_${SS?"on":"off"}`), (0, sH.t)("hidden" === HS ? {
-            hidden: SS
+        label: Tk(YF[Fk].label),
+        checked: null !== ak && void 0 !== ak ? ak : Ik,
+        note: Lk ? Tk("dailyDrop:settingFailed") : void 0,
+        onClick: kk => {
+          null === ak && (qk(kk), Zk(!1), kk && null !== jk && jk().catch((kk => {
+            console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", kk)
+          })), (0, BF.s)("daily_drop.setting", `${YF[Fk].reportAs}_${kk?"on":"off"}`), (0, BF.u)("hidden" === Fk ? {
+            hidden: kk
           } : {
-            remindersOn: SS
-          }).catch((SS => {
-            console.error(`Failed to save the Lucky Skin Block's ${HS} setting:`, SS), NS.current && kS(!0)
+            remindersOn: kk
+          }).catch((kk => {
+            console.error(`Failed to save the Lucky Skin Block's ${Fk} setting:`, kk), lk.current && Zk(!0)
           })).finally((() => {
-            NS.current && uS(null)
+            lk.current && qk(null)
           })))
         }
       })
     }
-    const RH = (0, tS.memo)((function() {
+    const gF = (0, Xk.memo)((function() {
       const {
-        t: SS
-      } = (0, xS.F)(), {
-        clientEscMenuOptions: HS
-      } = (0, ZS.m)(["clientEscMenuOptions"]), {
-        userContext: gS
-      } = (0, KS.b)(), tS = gS.dailyDrop;
-      return (0, fS.jsxs)("div", {
+        t: kk
+      } = (0, yk.y)(), {
+        clientEscMenuOptions: Fk
+      } = (0, zk.j)(["clientEscMenuOptions"]), {
+        userContext: Ik
+      } = (0, ek.d)(), Xk = Ik.dailyDrop;
+      return (0, tk.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [CS.featureFlags.useSocialFeatures && (0, fS.jsx)(hS.g, {
-          label: SS("notificationSettings:friendRequests"),
-          options: yH.c.map((HS => ({
-            value: HS,
-            label: SS(BH[HS].label)
+        children: [Jk.featureFlags.useSocialFeatures && (0, tk.jsx)(Vk.h, {
+          label: kk("notificationSettings:friendRequests"),
+          options: RF.e.map((Fk => ({
+            value: Fk,
+            label: kk(dF[Fk].label)
           }))),
-          value: HS.friendRequestNotifications,
-          onChange: SS => {
-            ZS.b.setClientEscMenuOptions({
-              friendRequestNotifications: SS
+          value: Fk.friendRequestNotifications,
+          onChange: kk => {
+            zk.d.setClientEscMenuOptions({
+              friendRequestNotifications: kk
             })
           },
-          circleInfoText: (0, fS.jsx)("div", {
+          circleInfoText: (0, tk.jsx)("div", {
             className: "NotificationSettingLevelsInfo",
-            children: yH.c.map((HS => (0, fS.jsxs)("div", {
-              children: [(0, fS.jsx)("b", {
-                children: SS(BH[HS].label)
-              }), ": ", SS(BH[HS].info)]
-            }, HS)))
+            children: RF.e.map((Fk => (0, tk.jsxs)("div", {
+              children: [(0, tk.jsx)("b", {
+                children: kk(dF[Fk].label)
+              }), ": ", kk(dF[Fk].info)]
+            }, Fk)))
           })
-        }), null !== tS && (0, fS.jsxs)(fS.Fragment, {
-          children: [(0, fS.jsx)(FH, {
+        }), null !== Xk && (0, tk.jsxs)(tk.Fragment, {
+          children: [(0, tk.jsx)(AF, {
             setting: "remindersOn",
-            value: tS.remindersOn
-          }), (0, fS.jsx)(FH, {
+            value: Xk.remindersOn
+          }), (0, tk.jsx)(AF, {
             setting: "hidden",
-            value: tS.hidden
+            value: Xk.hidden
           })]
-        }), (0, fS.jsx)(pH, {})]
+        }), (0, tk.jsx)(fF, {})]
       })
     }));
-    var TH = gS(4640),
-      oH = gS(198),
-      lH = gS(362),
-      mH = gS(6848),
-      eH = gS(3591),
-      rH = gS(34156),
-      Sg = gS(680),
-      Hg = gS(31);
-    var gg = gS(699),
-      tg = gS(45),
-      bg = gS(4498);
-    const Xg = new Map([
+    var mF = Ik(4495),
+      hF = Ik(187),
+      rF = Ik(309),
+      DF = Ik(6644),
+      MF = Ik(3396),
+      kI = Ik(34083),
+      FI = Ik(628),
+      II = Ik(34);
+    var XI = Ik(646),
+      TI = Ik(41),
+      iI = Ik(4343);
+    const yI = new Map([
       ["chunkHorizAddDist", "horizontal"],
       ["chunkVertAddDist", "vertical"]
     ]);
 
-    function xg(SS) {
-      return Xg.has(SS) ? nS.gameBridge.lookup("fn", null) : null
+    function lI(kk) {
+      return yI.has(kk) ? xk.gameBridge.lookup("dJ", null) : null
     }
 
-    function Ng(SS) {
-      if (!(0, Sg.K)(ZS.b.get("clientEscMenuOptions")[SS])) return ZS.b.get("clientEscMenuOptions")[SS];
-      const HS = xg(SS);
-      return null !== HS ? HS[Xg.get(SS)] : tg.g.getItem(SS)
+    function aI(kk) {
+      if (!(0, FI.Q)(zk.d.get("clientEscMenuOptions")[kk])) return zk.d.get("clientEscMenuOptions")[kk];
+      const Fk = lI(kk);
+      return null !== Fk ? Fk[yI.get(kk)] : TI.j.getItem(kk)
     }
 
-    function qg(SS, HS) {
-      if ("useTouchControls" === SS) return void(0, bg.d)(HS);
-      SS in ZS.b.get("clientEscMenuOptions") && ZS.b.setClientEscMenuOptions({
-        [SS]: HS
+    function qI(kk, Fk) {
+      if ("useTouchControls" === kk) return void(0, iI.c)(Fk);
+      kk in zk.d.get("clientEscMenuOptions") && zk.d.setClientEscMenuOptions({
+        [kk]: Fk
       });
-      const gS = xg(SS);
-      null !== gS && nS.gameBridge.send("setChunkAddDistance", {
-        ...gS,
-        [Xg.get(SS)]: HS
-      }), tg.g.setItem(SS, HS)
+      const Ik = lI(kk);
+      null !== Ik && xk.gameBridge.send("setChunkAddDistance", {
+        ...Ik,
+        [yI.get(kk)]: Fk
+      }), TI.j.setItem(kk, Fk)
     }
-    var ug = gS(4547),
-      Ig = gS(34158),
-      fg = gS(34166),
-      kg = gS(4634);
+    var LI = Ik(4402),
+      tI = Ik(34091),
+      ZI = Ik(34095),
+      jI = Ik(4491);
 
-    function ag(SS) {
-      var HS, bS, NS, qS;
+    function eI(kk) {
+      var Fk, Tk, lk, ak;
       let {
-        minChunkAddDist: uS,
-        getValue: IS,
-        onChange: kS,
-        setApplySettingsCallback: aS
-      } = SS;
+        minChunkAddDist: qk,
+        getValue: Lk,
+        onChange: Zk,
+        setApplySettingsCallback: jk
+      } = kk;
       const {
-        t: KS
-      } = (0, xS.F)(), {
-        clientEscMenuOptions: GS
-      } = (0, ZS.m)(["clientEscMenuOptions", "showDistantNametags"]), nS = (0, tS.useRef)(IS("showFog")), PS = (0, tS.useRef)(GS.antiAliasing), QS = (0, tS.useRef)(GS.useWebGpu), [DS, wS] = (0, tS.useState)(null), [OS, dS] = (0, tS.useState)((() => (0, eH.g)(CS.featureFlags.settings.canUseShaderPacks))), [cS] = (0, tS.useState)((() => ZS.b.isWebGpuDefaultOff())), [vS] = (0, tS.useState)(lH.m);
-      (0, tS.useEffect)((() => {
-        let SS = !1;
-        return (0, CS.hasUsableWebGpuAdapter)().then((HS => {
-          SS || wS(HS)
-        })), (0, eH.j)(CS.featureFlags.settings.canUseShaderPacks) && (0, mH.f)().then((async HS => {
-          const tS = null !== HS && await async function(SS) {
+        t: ek
+      } = (0, yk.y)(), {
+        clientEscMenuOptions: Hk
+      } = (0, zk.j)(["clientEscMenuOptions", "showDistantNametags"]), xk = (0, Xk.useRef)(Lk("showFog")), Pk = (0, Xk.useRef)(Hk.antiAliasing), Kk = (0, Xk.useRef)(Hk.useWebGpu), [Qk, sk] = (0, Xk.useState)(null), [vk, Ek] = (0, Xk.useState)((() => (0, MF.h)(Jk.featureFlags.settings.canUseShaderPacks))), [Ok] = (0, Xk.useState)((() => zk.d.isWebGpuDefaultOff())), [nk] = (0, Xk.useState)(rF.l);
+      (0, Xk.useEffect)((() => {
+        let kk = !1;
+        return (0, Jk.hasUsableWebGpuAdapter)().then((Fk => {
+          kk || sk(Fk)
+        })), (0, MF.m)(Jk.featureFlags.settings.canUseShaderPacks) && (0, DF.i)().then((async Fk => {
+          const Xk = null !== Fk && await async function(kk) {
             const [{
-              isShaderPackActive: HS
+              isShaderPackActive: Fk
             }, {
-              loadPageShaderPackCompiler: tS
-            }] = await Promise.all([gS.e(137).then((() => gS(6844))), Promise.all([gS.e(77), gS.e(133), gS.e(136)]).then((() => gS(6810)))]);
-            return HS(SS, await tS())
-          }(HS);
-          SS || dS(tS)
+              loadPageShaderPackCompiler: Xk
+            }] = await Promise.all([Ik.e(137).then((() => Ik(6639))), Promise.all([Ik.e(77), Ik.e(133), Ik.e(136)]).then((() => Ik(6596)))]);
+            return Fk(kk, await Xk())
+          }(Fk);
+          kk || Ek(Xk)
         })), () => {
-          SS = !0
+          kk = !0
         }
       }), []);
-      const ES = function(SS, HS, gS, tS, bS) {
-          return (0, rH.d)(gS, tS) && !0 === HS ? {
+      const Gk = function(kk, Fk, Ik, Xk, Tk) {
+          return (0, kI.c)(Ik, Xk) && !0 === Fk ? {
             translationKey: "settingsMenu:newWebGpuForcedOnByShaderPack",
             checked: !0,
             disabled: !0
           } : {
-            translationKey: !1 !== HS ? "settingsMenu:newWebGpu" : bS ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
-            checked: SS && !1 !== HS,
-            disabled: !0 !== HS
+            translationKey: !1 !== Fk ? "settingsMenu:newWebGpu" : Tk ? "settingsMenu:newWebGpuDisabledUntilRestart" : "settingsMenu:newWebGpuUnsupported",
+            checked: kk && !1 !== Fk,
+            disabled: !0 !== Fk
           }
-        }(GS.useWebGpu, DS, OS, cS, vS),
-        LS = (GS.useWebGpu || (0, rH.d)(OS, cS)) && OS && !0 === DS,
-        YS = (0, jS.i)("lightingOverride"),
-        AS = !(0, Sg.K)(YS);
-      let yS = "settingsMenu:enableLighting";
-      AS && (yS = YS ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
-      const VS = SS => {
-          var HS, gS, tS;
-          const bS = null !== (HS = SS.showFog) && void 0 !== HS ? HS : IS("showFog"),
-            XS = null !== (gS = SS.antiAliasing) && void 0 !== gS ? gS : GS.antiAliasing,
-            xS = null !== (tS = SS.useWebGpu) && void 0 !== tS ? tS : GS.useWebGpu,
-            NS = !gg.A && bS !== nS.current || XS !== PS.current || xS !== QS.current;
-          aS(NS ? () => hS.o : null)
+        }(Hk.useWebGpu, Qk, vk, Ok, nk),
+        pk = (Hk.useWebGpu || (0, kI.c)(vk, Ok)) && vk && !0 === Qk,
+        uk = (0, wk.j)("lightingOverride"),
+        bk = !(0, FI.Q)(uk);
+      let Rk = "settingsMenu:enableLighting";
+      bk && (Rk = uk ? "settingsMenu:enableLightingForcedOn" : "settingsMenu:enableLightingForcedOff");
+      const Uk = kk => {
+          var Fk, Ik, Xk;
+          const Tk = null !== (Fk = kk.showFog) && void 0 !== Fk ? Fk : Lk("showFog"),
+            ik = null !== (Ik = kk.antiAliasing) && void 0 !== Ik ? Ik : Hk.antiAliasing,
+            yk = null !== (Xk = kk.useWebGpu) && void 0 !== Xk ? Xk : Hk.useWebGpu,
+            lk = !XI.x && Tk !== xk.current || ik !== Pk.current || yk !== Kk.current;
+          jk(lk ? () => Vk.m : null)
         },
-        iS = (0, jS.i)("fogChunkDistanceOverride"),
-        WS = (0, jS.i)("fogBlockDistanceOverride"),
-        zS = !(0, Sg.K)(iS) || !(0, Sg.K)(WS),
-        US = zS ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
-        [pS, sS] = (0, TH.e)(uS),
-        [BS, MS] = (0, kg.h)(uS),
-        FS = KS("settingsMenu:chunkLoadDistanceDeviceLimit"),
-        RS = BS < pS,
-        TS = Math.min(null !== (HS = IS("chunkHorizAddDist")) && void 0 !== HS ? HS : uS[0], BS),
-        oS = !zS && function(SS, HS) {
-          return !0 === SS.showFog && SS.fogChunkDistance > HS
-        }(GS, TS);
-      return (0, fS.jsxs)("div", {
+        Ck = (0, wk.j)("fogChunkDistanceOverride"),
+        Nk = (0, wk.j)("fogBlockDistanceOverride"),
+        ck = !(0, FI.Q)(Ck) || !(0, FI.Q)(Nk),
+        Wk = ck ? "settingsMenu:showFogForcedOn" : "settingsMenu:showFog",
+        [fk, Bk] = (0, mF.c)(qk),
+        [dk, Yk] = (0, jI.k)(qk),
+        Ak = ek("settingsMenu:chunkLoadDistanceDeviceLimit"),
+        gk = dk < fk,
+        mk = Math.min(null !== (Fk = Lk("chunkHorizAddDist")) && void 0 !== Fk ? Fk : qk[0], dk),
+        hk = !ck && function(kk, Fk) {
+          return !0 === kk.showFog && kk.fogChunkDistance > Fk
+        }(Hk, mk);
+      return (0, tk.jsxs)("div", {
         className: "SettingsMenuRightInner",
-        children: [(0, fS.jsx)(hS.k, {
-          name: KS("settingsMenu:horizontalChunkLoadDistance"),
-          min: uS[0],
-          max: pS,
-          selectableMax: BS,
-          cappedNote: FS,
+        children: [(0, tk.jsx)(Vk.j, {
+          name: ek("settingsMenu:horizontalChunkLoadDistance"),
+          min: qk[0],
+          max: fk,
+          selectableMax: dk,
+          cappedNote: Ak,
           step: 1,
-          initValue: TS,
-          onChange: SS => {
-            !0 === IS("showFog") && SS < IS("fogChunkDistance") && kS("fogChunkDistance", SS), kS("chunkHorizAddDist", SS), Hg.k.cj("updatedChunkLoadDist")
+          initValue: mk,
+          onChange: kk => {
+            !0 === Lk("showFog") && kk < Lk("fogChunkDistance") && Zk("fogChunkDistance", kk), Zk("chunkHorizAddDist", kk), II.g.GL("updatedChunkLoadDist")
           },
-          circleInfoText: KS("settingsMenu:chunkLoadDistanceInfo")
-        }), (0, fS.jsx)(hS.k, {
-          name: KS("settingsMenu:verticalChunkLoadDistance"),
-          min: uS[1],
-          max: sS,
-          selectableMax: MS,
-          cappedNote: RS ? void 0 : FS,
+          circleInfoText: ek("settingsMenu:chunkLoadDistanceInfo")
+        }), (0, tk.jsx)(Vk.j, {
+          name: ek("settingsMenu:verticalChunkLoadDistance"),
+          min: qk[1],
+          max: Bk,
+          selectableMax: Yk,
+          cappedNote: gk ? void 0 : Ak,
           step: 1,
-          initValue: Math.min(null !== (bS = IS("chunkVertAddDist")) && void 0 !== bS ? bS : uS[1], MS),
-          onChange: SS => {
-            kS("chunkVertAddDist", SS), Hg.k.cj("updatedChunkLoadDist")
+          initValue: Math.min(null !== (Tk = Lk("chunkVertAddDist")) && void 0 !== Tk ? Tk : qk[1], Yk),
+          onChange: kk => {
+            Zk("chunkVertAddDist", kk), II.g.GL("updatedChunkLoadDist")
           },
-          circleInfoText: KS("settingsMenu:chunkLoadDistanceInfo"),
+          circleInfoText: ek("settingsMenu:chunkLoadDistanceInfo"),
           className: "VerticalChunkLoadSlider"
-        }), (0, fS.jsx)(hS.d, {
-          label: KS("settingsMenu:chunkFadeIn"),
-          checked: GS.chunkFadeIn,
-          onClick: SS => {
-            ZS.b.setClientEscMenuOptions({
-              chunkFadeIn: SS
+        }), (0, tk.jsx)(Vk.e, {
+          label: ek("settingsMenu:chunkFadeIn"),
+          checked: Hk.chunkFadeIn,
+          onClick: kk => {
+            zk.d.setClientEscMenuOptions({
+              chunkFadeIn: kk
             })
           },
-          circleInfoText: KS("settingsMenu:chunkFadeInInfo")
-        }), JS.devTools.supports("chunkBorders") && (0, fS.jsx)(hS.d, {
-          label: KS("settingsMenu:showChunkBorders"),
-          checked: GS.showChunkBorders,
-          onClick: SS => {
-            ZS.b.setClientEscMenuOptions({
-              showChunkBorders: SS
+          circleInfoText: ek("settingsMenu:chunkFadeInInfo")
+        }), Sk.devTools.supports("chunkBorders") && (0, tk.jsx)(Vk.e, {
+          label: ek("settingsMenu:showChunkBorders"),
+          checked: Hk.showChunkBorders,
+          onClick: kk => {
+            zk.d.setClientEscMenuOptions({
+              showChunkBorders: kk
             })
           },
-          circleInfoText: KS("settingsMenu:showChunkBordersInfo")
-        }), (0, fS.jsx)(hS.d, {
-          label: KS(yS),
-          checked: GS.enableLighting,
-          onClick: SS => {
-            ZS.b.setClientEscMenuOptions({
-              enableLighting: SS
+          circleInfoText: ek("settingsMenu:showChunkBordersInfo")
+        }), (0, tk.jsx)(Vk.e, {
+          label: ek(Rk),
+          checked: Hk.enableLighting,
+          onClick: kk => {
+            zk.d.setClientEscMenuOptions({
+              enableLighting: kk
             })
           },
-          disabled: AS
-        }), (0, fS.jsxs)("div", {
+          disabled: bk
+        }), (0, tk.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, fS.jsx)(hS.d, {
-            label: KS(US),
-            checked: GS.showFog,
-            onClick: SS => {
-              VS({
-                showFog: SS
-              }), ZS.b.setClientEscMenuOptions({
-                showFog: SS
+          children: [(0, tk.jsx)(Vk.e, {
+            label: ek(Wk),
+            checked: Hk.showFog,
+            onClick: kk => {
+              Uk({
+                showFog: kk
+              }), zk.d.setClientEscMenuOptions({
+                showFog: kk
               })
             },
-            disabled: zS,
-            className: XS()({
-              SettingBoxWarning: oS
+            disabled: ck,
+            className: ik()({
+              SettingBoxWarning: hk
             })
-          }), (0, fS.jsx)(hS.k, {
-            name: KS("settingsMenu:fogChunkDistance"),
-            min: uS[0],
-            max: oH.e.maxChunkHorizAddDistance,
+          }), (0, tk.jsx)(Vk.j, {
+            name: ek("settingsMenu:fogChunkDistance"),
+            min: qk[0],
+            max: hF.f.maxChunkHorizAddDistance,
             step: 1,
-            initValue: null !== (NS = GS.fogChunkDistance) && void 0 !== NS ? NS : uS[0],
-            onChange: SS => {
-              ZS.b.setClientEscMenuOptions({
-                fogChunkDistance: SS
-              }), Hg.k.cj("fogChunkDistanceChanged", SS)
+            initValue: null !== (lk = Hk.fogChunkDistance) && void 0 !== lk ? lk : qk[0],
+            onChange: kk => {
+              zk.d.setClientEscMenuOptions({
+                fogChunkDistance: kk
+              }), II.g.GL("fogChunkDistanceChanged", kk)
             },
-            circleInfoText: KS("settingsMenu:fogChunkDistanceInfo"),
-            disabled: zS || !1 === IS("showFog"),
-            className: XS()({
-              SettingBoxWarning: oS
+            circleInfoText: ek("settingsMenu:fogChunkDistanceInfo"),
+            disabled: ck || !1 === Lk("showFog"),
+            className: ik()({
+              SettingBoxWarning: hk
             })
-          }), oS && (0, fS.jsx)("div", {
+          }), hk && (0, tk.jsx)("div", {
             className: "SettingBox SettingsBoxWarning",
-            children: KS("settingsMenu:fogChunkDistanceInfo")
+            children: ek("settingsMenu:fogChunkDistanceInfo")
           })]
-        }), !gg.A && (0, fS.jsx)(hS.d, {
-          label: KS(LS ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
-          checked: !LS && GS.disableTexAtlas,
-          onClick: SS => {
-            ZS.b.setClientEscMenuOptions({
-              disableTexAtlas: SS
+        }), !XI.x && (0, tk.jsx)(Vk.e, {
+          label: ek(pk ? "settingsMenu:disableBlockTextureAtlasUnavailableWithShaderPack" : "settingsMenu:disableBlockTextureAtlas"),
+          checked: !pk && Hk.disableTexAtlas,
+          onClick: kk => {
+            zk.d.setClientEscMenuOptions({
+              disableTexAtlas: kk
             })
           },
-          circleInfoText: KS("settingsMenu:disableBlockTextureAtlasInfo"),
-          disabled: LS
-        }), (0, fS.jsx)(hS.k, {
-          name: KS("settingsMenu:fieldOfView"),
+          circleInfoText: ek("settingsMenu:disableBlockTextureAtlasInfo"),
+          disabled: pk
+        }), (0, tk.jsx)(Vk.j, {
+          name: ek("settingsMenu:fieldOfView"),
           min: 50,
           max: 160,
           step: 1,
-          initValue: GS.cameraFOV,
-          onChange: SS => {
-            ZS.b.setClientEscMenuOptions({
-              cameraFOV: SS
+          initValue: Hk.cameraFOV,
+          onChange: kk => {
+            zk.d.setClientEscMenuOptions({
+              cameraFOV: kk
             })
           }
-        }), (0, fS.jsx)(hS.d, {
-          label: KS("settingsMenu:disableViewBobbing"),
-          checked: GS.disableBobbing,
-          onClick: SS => {
-            ZS.b.setClientEscMenuOptions({
-              disableBobbing: SS
+        }), (0, tk.jsx)(Vk.e, {
+          label: ek("settingsMenu:disableViewBobbing"),
+          checked: Hk.disableBobbing,
+          onClick: kk => {
+            zk.d.setClientEscMenuOptions({
+              disableBobbing: kk
             })
           },
-          circleInfoText: KS("settingsMenu:disableViewBobbingInfo")
-        }), (0, fS.jsx)(hS.d, {
-          label: KS("settingsMenu:antiAliasing"),
-          checked: GS.antiAliasing,
-          onClick: SS => {
-            VS({
-              antiAliasing: SS
-            }), (0, ug.h)("antiAliasing"), ZS.b.setClientEscMenuOptions({
-              antiAliasing: SS
+          circleInfoText: ek("settingsMenu:disableViewBobbingInfo")
+        }), (0, tk.jsx)(Vk.e, {
+          label: ek("settingsMenu:antiAliasing"),
+          checked: Hk.antiAliasing,
+          onClick: kk => {
+            Uk({
+              antiAliasing: kk
+            }), (0, LI.i)("antiAliasing"), zk.d.setClientEscMenuOptions({
+              antiAliasing: kk
             })
           },
-          circleInfoText: KS("settingsMenu:antiAliasingInfo")
-        }), (0, fS.jsx)(hS.k, {
-          name: KS("settingsMenu:pixelScale"),
+          circleInfoText: ek("settingsMenu:antiAliasingInfo")
+        }), (0, tk.jsx)(Vk.j, {
+          name: ek("settingsMenu:pixelScale"),
           min: 1,
           max: 8,
           step: 1,
-          initValue: null !== (qS = GS.pixelScale) && void 0 !== qS ? qS : 1,
-          onChange: SS => {
-            (SS !== ZS.b.get("clientEscMenuOptions").pixelScale || (0, fg.n)()) && (0, ug.h)("pixelScale"), ZS.b.setClientEscMenuOptions({
-              pixelScale: SS
+          initValue: null !== (ak = Hk.pixelScale) && void 0 !== ak ? ak : 1,
+          onChange: kk => {
+            (kk !== zk.d.get("clientEscMenuOptions").pixelScale || (0, ZI.n)()) && (0, LI.i)("pixelScale"), zk.d.setClientEscMenuOptions({
+              pixelScale: kk
             })
           },
-          circleInfoText: KS("settingsMenu:pixelScaleInfo"),
-          format: SS => `${SS}x`
-        }), (0, fS.jsx)(hS.d, {
-          label: KS("settingsMenu:pixelSmoothing"),
-          checked: GS.pixelSmoothing,
-          onClick: SS => {
-            ZS.b.setClientEscMenuOptions({
-              pixelSmoothing: SS
+          circleInfoText: ek("settingsMenu:pixelScaleInfo"),
+          format: kk => `${kk}x`
+        }), (0, tk.jsx)(Vk.e, {
+          label: ek("settingsMenu:pixelSmoothing"),
+          checked: Hk.pixelSmoothing,
+          onClick: kk => {
+            zk.d.setClientEscMenuOptions({
+              pixelSmoothing: kk
             })
           },
-          circleInfoText: KS("settingsMenu:pixelSmoothingInfo")
-        }), gg.A && (0, fS.jsx)(hS.d, {
-          label: KS("settingsMenu:distantNametags"),
-          checked: (0, Ig.d)(),
-          onClick: SS => {
-            ZS.b.set({
-              showDistantNametags: SS
+          circleInfoText: ek("settingsMenu:pixelSmoothingInfo")
+        }), XI.x && (0, tk.jsx)(Vk.e, {
+          label: ek("settingsMenu:distantNametags"),
+          checked: (0, tI.b)(),
+          onClick: kk => {
+            zk.d.set({
+              showDistantNametags: kk
             })
           },
-          circleInfoText: KS("settingsMenu:distantNametagsInfo")
-        }), (0, fS.jsx)(hS.d, {
-          label: KS(ES.translationKey),
-          checked: ES.checked,
-          onClick: SS => {
-            VS({
-              useWebGpu: SS
-            }), ZS.b.setClientEscMenuOptions({
-              useWebGpu: SS
+          circleInfoText: ek("settingsMenu:distantNametagsInfo")
+        }), (0, tk.jsx)(Vk.e, {
+          label: ek(Gk.translationKey),
+          checked: Gk.checked,
+          onClick: kk => {
+            Uk({
+              useWebGpu: kk
+            }), zk.d.setClientEscMenuOptions({
+              useWebGpu: kk
             })
           },
-          circleInfoText: KS("settingsMenu:newWebGpuInfo"),
-          disabled: ES.disabled
+          circleInfoText: ek("settingsMenu:newWebGpuInfo"),
+          disabled: Gk.disabled
         })]
       })
     }
-    var Kg = gS(4540),
-      jg = gS(9063),
-      Gg = gS(34185),
-      Cg = gS(9076),
-      ng = gS(34189);
-    const Pg = {
+    var wI = Ik(4395),
+      HI = Ik(8846),
+      JI = Ik(34119),
+      xI = Ik(8860),
+      PI = Ik(34122);
+    const KI = {
         color: 16777215,
         name: "white"
       },
-      Qg = {
+      QI = {
         color: 0,
         name: "black"
       },
-      Dg = [Pg, {
+      sI = [KI, {
         color: 5046092,
         name: "green"
       }, {
@@ -1548,73 +1548,73 @@ export const modules = {
       }, {
         color: 16726843,
         name: "red"
-      }, Qg],
-      wg = [Qg, Pg];
+      }, QI],
+      VI = [QI, KI];
 
-    function hg(SS) {
-      return `${SS} px`
+    function zI(kk) {
+      return `${kk} px`
     }
 
-    function Zg(SS) {
-      return `${SS}%`
+    function SI(kk) {
+      return `${kk}%`
     }
 
-    function Jg(SS) {
+    function oI(kk) {
       let {
-        label: HS,
-        value: gS,
-        swatches: tS,
-        onChange: bS
-      } = SS;
+        label: Fk,
+        value: Ik,
+        swatches: Xk,
+        onChange: Tk
+      } = kk;
       const {
-        t: NS
-      } = (0, xS.F)(), qS = !tS.some((SS => SS.color === gS));
-      return (0, fS.jsxs)("div", {
+        t: lk
+      } = (0, yk.y)(), ak = !Xk.some((kk => kk.color === Ik));
+      return (0, tk.jsxs)("div", {
         className: "SettingBox CrosshairColorRow",
-        children: [(0, fS.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "SliderText",
-          children: HS
-        }), (0, fS.jsxs)("div", {
+          children: Fk
+        }), (0, tk.jsxs)("div", {
           className: "CrosshairSwatches",
           role: "radiogroup",
-          "aria-label": HS,
-          children: [tS.map((SS => {
+          "aria-label": Fk,
+          children: [Xk.map((kk => {
             let {
-              color: HS,
-              name: tS
-            } = SS;
-            return (0, fS.jsx)("button", {
+              color: Fk,
+              name: Xk
+            } = kk;
+            return (0, tk.jsx)("button", {
               type: "button",
               role: "radio",
-              "aria-checked": HS === gS,
-              "aria-label": NS(`crosshairSettings:color_${tS}`),
+              "aria-checked": Fk === Ik,
+              "aria-label": lk(`crosshairSettings:color_${Xk}`),
               "data-pad-focusable": !0,
-              className: XS()("CrosshairSwatch", {
-                Selected: HS === gS
+              className: ik()("CrosshairSwatch", {
+                Selected: Fk === Ik
               }),
               style: {
-                background: (0, ng.i)(HS)
+                background: (0, PI.k)(Fk)
               },
               onClick: () => {
-                bS(HS)
+                Tk(Fk)
               }
-            }, HS)
-          })), (0, fS.jsx)("label", {
-            className: XS()("CrosshairSwatch CrosshairSwatchCustom", {
-              Selected: qS
+            }, Fk)
+          })), (0, tk.jsx)("label", {
+            className: ik()("CrosshairSwatch CrosshairSwatchCustom", {
+              Selected: ak
             }),
-            style: qS ? {
-              background: (0, ng.i)(gS)
+            style: ak ? {
+              background: (0, PI.k)(Ik)
             } : void 0,
-            title: NS("crosshairSettings:customColor"),
+            title: lk("crosshairSettings:customColor"),
             "data-pad-focusable": !0,
-            children: (0, fS.jsx)("input", {
+            children: (0, tk.jsx)("input", {
               type: "color",
-              "aria-label": NS("crosshairSettings:customColor"),
-              value: (0, ng.i)(gS),
-              onChange: SS => {
-                const HS = (0, ng.n)(SS.target.value);
-                null !== HS && bS(HS)
+              "aria-label": lk("crosshairSettings:customColor"),
+              value: (0, PI.k)(Ik),
+              onChange: kk => {
+                const Fk = (0, PI.q)(kk.target.value);
+                null !== Fk && Tk(Fk)
               }
             })
           })]
@@ -1622,119 +1622,119 @@ export const modules = {
       })
     }
 
-    function Og(SS) {
+    function vI(kk) {
       let {
-        settings: HS,
-        onChange: gS
-      } = SS;
+        settings: Fk,
+        onChange: Ik
+      } = kk;
       const {
-        t: tS
-      } = (0, xS.F)(), bS = (SS, tS) => {
-        gS((0, ng.r)(HS, SS, tS))
-      }, XS = function(SS, gS) {
-        let tS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : hg;
+        t: Xk
+      } = (0, yk.y)(), Tk = (kk, Xk) => {
+        Ik((0, PI.u)(Fk, kk, Xk))
+      }, ik = function(kk, Ik) {
+        let Xk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : zI;
         const {
-          min: XS,
-          max: xS,
-          step: NS
-        } = ng.c[SS];
-        return (0, fS.jsx)(hS.k, {
-          name: gS,
-          min: XS,
-          max: xS,
-          step: NS,
-          initValue: HS[SS],
-          format: tS,
-          onChange: HS => {
-            bS(SS, HS)
+          min: ik,
+          max: yk,
+          step: lk
+        } = PI.d[kk];
+        return (0, tk.jsx)(Vk.j, {
+          name: Ik,
+          min: ik,
+          max: yk,
+          step: lk,
+          initValue: Fk[kk],
+          format: Xk,
+          onChange: Fk => {
+            Tk(kk, Fk)
           }
-        }, SS)
-      }, NS = ["lines", "dot", "circle"].filter((SS => HS[SS])), qS = (SS, gS, tS) => (0, fS.jsx)(hS.d, {
-        label: gS,
-        checked: HS[SS],
-        disabled: 1 === NS.length && NS[0] === SS,
-        circleInfoText: tS,
-        onClick: HS => {
-          bS(SS, HS)
+        }, kk)
+      }, lk = ["lines", "dot", "circle"].filter((kk => Fk[kk])), ak = (kk, Ik, Xk) => (0, tk.jsx)(Vk.e, {
+        label: Ik,
+        checked: Fk[kk],
+        disabled: 1 === lk.length && lk[0] === kk,
+        circleInfoText: Xk,
+        onClick: Fk => {
+          Tk(kk, Fk)
         }
-      }, SS), uS = "shapes" === HS.style;
-      return (0, fS.jsxs)(fS.Fragment, {
-        children: [(0, fS.jsx)(hS.g, {
-          label: tS("crosshairSettings:style"),
+      }, kk), qk = "shapes" === Fk.style;
+      return (0, tk.jsxs)(tk.Fragment, {
+        children: [(0, tk.jsx)(Vk.h, {
+          label: Xk("crosshairSettings:style"),
           options: [{
             value: "classic",
-            label: tS("crosshairSettings:styleClassic")
+            label: Xk("crosshairSettings:styleClassic")
           }, {
             value: "shapes",
-            label: tS("crosshairSettings:styleShapes")
+            label: Xk("crosshairSettings:styleShapes")
           }],
-          value: HS.style,
-          onChange: SS => {
-            bS("style", SS)
+          value: Fk.style,
+          onChange: kk => {
+            Tk("style", kk)
           }
-        }), (0, fS.jsx)(Jg, {
-          label: tS("crosshairSettings:color"),
-          value: HS.color,
-          swatches: Dg,
-          onChange: SS => {
-            bS("color", SS)
+        }), (0, tk.jsx)(oI, {
+          label: Xk("crosshairSettings:color"),
+          value: Fk.color,
+          swatches: sI,
+          onChange: kk => {
+            Tk("color", kk)
           }
-        }), XS("opacity", tS("crosshairSettings:opacity"), Zg), !uS && XS("size", tS("crosshairSettings:size"), Zg), uS && (0, fS.jsxs)("div", {
+        }), ik("opacity", Xk("crosshairSettings:opacity"), SI), !qk && ik("size", Xk("crosshairSettings:size"), SI), qk && (0, tk.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [qS("lines", tS("crosshairSettings:lines")), HS.lines && XS("lineLength", tS("crosshairSettings:lineLength")), HS.lines && XS("lineThickness", tS("crosshairSettings:lineThickness")), HS.lines && XS("gap", tS("crosshairSettings:gap")), HS.lines && qS("tStyle", tS("crosshairSettings:tStyle"))]
-        }), uS && (0, fS.jsxs)("div", {
+          children: [ak("lines", Xk("crosshairSettings:lines")), Fk.lines && ik("lineLength", Xk("crosshairSettings:lineLength")), Fk.lines && ik("lineThickness", Xk("crosshairSettings:lineThickness")), Fk.lines && ik("gap", Xk("crosshairSettings:gap")), Fk.lines && ak("tStyle", Xk("crosshairSettings:tStyle"))]
+        }), qk && (0, tk.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [qS("dot", tS("crosshairSettings:dot")), HS.dot && XS("dotSize", tS("crosshairSettings:dotSize"))]
-        }), uS && (0, fS.jsxs)("div", {
+          children: [ak("dot", Xk("crosshairSettings:dot")), Fk.dot && ik("dotSize", Xk("crosshairSettings:dotSize"))]
+        }), qk && (0, tk.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [qS("circle", tS("crosshairSettings:circle")), HS.circle && XS("circleRadius", tS("crosshairSettings:circleRadius")), HS.circle && XS("circleThickness", tS("crosshairSettings:circleThickness"))]
-        }), (0, fS.jsxs)("div", {
+          children: [ak("circle", Xk("crosshairSettings:circle")), Fk.circle && ik("circleRadius", Xk("crosshairSettings:circleRadius")), Fk.circle && ik("circleThickness", Xk("crosshairSettings:circleThickness"))]
+        }), (0, tk.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [XS("outline", tS("crosshairSettings:outline"), (SS => SS > 0 ? hg(SS) : tS("crosshairSettings:off"))), HS.outline > 0 && (0, fS.jsx)(Jg, {
-            label: tS("crosshairSettings:outlineColor"),
-            value: HS.outlineColor,
-            swatches: wg,
-            onChange: SS => {
-              bS("outlineColor", SS)
+          children: [ik("outline", Xk("crosshairSettings:outline"), (kk => kk > 0 ? zI(kk) : Xk("crosshairSettings:off"))), Fk.outline > 0 && (0, tk.jsx)(oI, {
+            label: Xk("crosshairSettings:outlineColor"),
+            value: Fk.outlineColor,
+            swatches: VI,
+            onChange: kk => {
+              Tk("outlineColor", kk)
             }
           })]
-        }), qS("growOnClick", tS("crosshairSettings:growOnClick")), uS && qS("forGuns", tS("crosshairSettings:forGuns"), tS("crosshairSettings:forGunsInfo"))]
+        }), ak("growOnClick", Xk("crosshairSettings:growOnClick")), qk && ak("forGuns", Xk("crosshairSettings:forGuns"), Xk("crosshairSettings:forGunsInfo"))]
       })
     }
-    var dg = gS(77),
-      cg = gS(1359),
-      vg = gS(12999),
-      Eg = gS(14162),
-      Lg = gS(15622),
-      Yg = gS(16166);
-    const Ag = ["sky", "grass", "stone", "sand", "snow", "night"],
-      yg = "4rem";
+    var EI = Ik(74),
+      OI = Ik(1263),
+      nI = Ik(12750),
+      GI = Ik(13880),
+      pI = Ik(15338),
+      uI = Ik(15861);
+    const bI = ["sky", "grass", "stone", "sand", "snow", "night"],
+      RI = "4rem";
 
-    function Vg(SS) {
+    function UI(kk) {
       return {
-        backgroundImage: `url(${SS})`,
-        backgroundSize: `${yg} ${yg}`,
+        backgroundImage: `url(${kk})`,
+        backgroundSize: `${RI} ${RI}`,
         backgroundRepeat: "repeat",
         imageRendering: "pixelated"
       }
     }
 
-    function ig(SS) {
+    function CI(kk) {
       return {
         ...(() => {
-          switch (SS) {
+          switch (kk) {
             case "sky":
               return {
                 backgroundImage: "linear-gradient(#3d8fe0 0%, #8cc8f5 45%, #d6eefc 58%, #6fae4a 58.01%, #4f8a33 100%)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
               };
             case "grass":
-              return Vg(vg);
+              return UI(nI);
             case "stone":
-              return Vg(Eg);
+              return UI(GI);
             case "sand":
-              return Vg(Lg);
+              return UI(pI);
             case "snow":
-              return Vg(Yg);
+              return UI(uI);
             case "night":
               return {
                 backgroundImage: "radial-gradient(circle at 50% 50%, #1e2a4a 0%, #070b16 100vmax)", backgroundSize: "100vw 100vh", backgroundRepeat: "no-repeat"
@@ -1745,21 +1745,21 @@ export const modules = {
       }
     }
 
-    function Wg(SS) {
+    function NI(kk) {
       return Object.freeze({
-        ...ng.d,
+        ...PI.f,
         style: "shapes",
         outline: 1,
         lines: !1,
-        ...SS
+        ...kk
       })
     }
-    const zg = [{
+    const cI = [{
         id: "default",
-        settings: ng.d
+        settings: PI.f
       }, {
         id: "cross",
-        settings: Wg({
+        settings: NI({
           color: 5046092,
           lines: !0,
           lineLength: 7,
@@ -1768,7 +1768,7 @@ export const modules = {
         })
       }, {
         id: "crossDot",
-        settings: Wg({
+        settings: NI({
           color: 65535,
           lines: !0,
           lineLength: 6,
@@ -1779,13 +1779,13 @@ export const modules = {
         })
       }, {
         id: "dot",
-        settings: Wg({
+        settings: NI({
           dot: !0,
           dotSize: 4
         })
       }, {
         id: "circle",
-        settings: Wg({
+        settings: NI({
           circle: !0,
           circleRadius: 12,
           circleThickness: 1.5,
@@ -1794,7 +1794,7 @@ export const modules = {
         })
       }, {
         id: "tShape",
-        settings: Wg({
+        settings: NI({
           color: 16731391,
           lines: !0,
           lineLength: 7,
@@ -1804,7 +1804,7 @@ export const modules = {
         })
       }, {
         id: "tiny",
-        settings: Wg({
+        settings: NI({
           color: 16776960,
           lines: !0,
           lineLength: 3,
@@ -1813,7 +1813,7 @@ export const modules = {
         })
       }, {
         id: "bold",
-        settings: Wg({
+        settings: NI({
           lines: !0,
           lineLength: 10,
           lineThickness: 3,
@@ -1821,570 +1821,570 @@ export const modules = {
           outline: 1.5
         })
       }],
-      Ug = ["growOnClick", "forGuns"];
-    var pg = gS(34196);
+      WI = ["growOnClick", "forGuns"];
+    var fI = Ik(34131);
 
-    function sg(SS) {
+    function BI(kk) {
       let {
-        label: HS,
-        selected: gS,
-        onClick: tS,
-        className: bS,
-        style: xS,
-        children: NS
-      } = SS;
-      return (0, fS.jsx)("button", {
+        label: Fk,
+        selected: Ik,
+        onClick: Xk,
+        className: Tk,
+        style: yk,
+        children: lk
+      } = kk;
+      return (0, tk.jsx)("button", {
         type: "button",
         role: "radio",
-        "aria-checked": gS,
-        title: HS,
-        "aria-label": HS,
+        "aria-checked": Ik,
+        title: Fk,
+        "aria-label": Fk,
         "data-pad-focusable": !0,
-        className: XS()("CrosshairBackdropSwatch", bS, {
-          Selected: gS
+        className: ik()("CrosshairBackdropSwatch", Tk, {
+          Selected: Ik
         }),
-        style: xS,
-        onClick: tS,
-        children: NS
+        style: yk,
+        onClick: Xk,
+        children: lk
       })
     }
 
-    function Bg(SS) {
+    function dI(kk) {
       let {
-        backdrop: HS,
-        onChange: gS,
-        game: tS
-      } = SS;
+        backdrop: Fk,
+        onChange: Ik,
+        game: Xk
+      } = kk;
       const {
-        t: bS
-      } = (0, xS.F)();
-      return (0, fS.jsxs)("div", {
+        t: Tk
+      } = (0, yk.y)();
+      return (0, tk.jsxs)("div", {
         className: "CrosshairBackdrops",
         role: "radiogroup",
-        "aria-label": bS("crosshairSettings:background"),
-        children: [tS && (0, fS.jsx)(sg, {
-          label: bS("crosshairSettings:bg_game"),
-          selected: tS.selected,
-          onClick: tS.onSelect,
+        "aria-label": Tk("crosshairSettings:background"),
+        children: [Xk && (0, tk.jsx)(BI, {
+          label: Tk("crosshairSettings:bg_game"),
+          selected: Xk.selected,
+          onClick: Xk.onSelect,
           className: "CrosshairGameSwatch",
-          children: (0, fS.jsx)(NS.d, {
+          children: (0, tk.jsx)(lk.e, {
             name: "cube"
           })
-        }), Ag.map((SS => (0, fS.jsx)(sg, {
-          label: bS(`crosshairSettings:bg_${SS}`),
-          selected: !(null !== tS && void 0 !== tS && tS.selected) && SS === HS,
-          style: ig(SS),
+        }), bI.map((kk => (0, tk.jsx)(BI, {
+          label: Tk(`crosshairSettings:bg_${kk}`),
+          selected: !(null !== Xk && void 0 !== Xk && Xk.selected) && kk === Fk,
+          style: CI(kk),
           onClick: () => {
-            gS(SS)
+            Ik(kk)
           }
-        }, SS)))]
+        }, kk)))]
       })
     }
 
-    function Mg(SS) {
+    function YI(kk) {
       let {
-        settings: HS,
-        touch: gS,
-        backdrop: tS,
-        onChange: bS
-      } = SS;
+        settings: Fk,
+        touch: Ik,
+        backdrop: Xk,
+        onChange: Tk
+      } = kk;
       const {
-        t: NS
-      } = (0, xS.F)(), qS = function(SS) {
-        var HS;
-        return null !== (HS = zg.find((HS => (0, ng.q)(HS.settings, SS, Ug)))) && void 0 !== HS ? HS : null
-      }(HS);
-      return (0, fS.jsx)("div", {
+        t: lk
+      } = (0, yk.y)(), ak = function(kk) {
+        var Fk;
+        return null !== (Fk = cI.find((Fk => (0, PI.t)(Fk.settings, kk, WI)))) && void 0 !== Fk ? Fk : null
+      }(Fk);
+      return (0, tk.jsx)("div", {
         className: "CrosshairPresets",
         role: "radiogroup",
-        "aria-label": NS("crosshairSettings:presets"),
-        children: zg.map((SS => {
-          const xS = (null === qS || void 0 === qS ? void 0 : qS.id) === SS.id;
-          return (0, fS.jsxs)("button", {
+        "aria-label": lk("crosshairSettings:presets"),
+        children: cI.map((kk => {
+          const yk = (null === ak || void 0 === ak ? void 0 : ak.id) === kk.id;
+          return (0, tk.jsxs)("button", {
             type: "button",
             role: "radio",
-            "aria-checked": xS,
+            "aria-checked": yk,
             "data-pad-focusable": !0,
-            className: XS()("CrosshairPreset", {
-              Selected: xS
+            className: ik()("CrosshairPreset", {
+              Selected: yk
             }),
             onClick: () => {
-              bS(function(SS, HS) {
+              Tk(function(kk, Fk) {
                 return {
-                  ...HS.settings,
-                  growOnClick: SS.growOnClick,
-                  forGuns: SS.forGuns
+                  ...Fk.settings,
+                  growOnClick: kk.growOnClick,
+                  forGuns: kk.forGuns
                 }
-              }(HS, SS))
+              }(Fk, kk))
             },
-            children: [(0, fS.jsx)("div", {
+            children: [(0, tk.jsx)("div", {
               className: "CrosshairPresetStage",
-              style: ig(tS),
-              children: (0, fS.jsx)(pg.e, {
-                settings: SS.settings,
-                touch: gS,
+              style: CI(Xk),
+              children: (0, tk.jsx)(fI.c, {
+                settings: kk.settings,
+                touch: Ik,
                 inPreview: !0
               })
-            }), (0, fS.jsx)("div", {
+            }), (0, tk.jsx)("div", {
               className: "CrosshairPresetName",
-              children: NS(`crosshairSettings:preset_${SS.id}`)
+              children: lk(`crosshairSettings:preset_${kk.id}`)
             })]
-          }, SS.id)
+          }, kk.id)
         }))
       })
     }
-    var Fg = gS(1765);
+    var AI = Ik(1611);
 
-    function Rg(SS, HS) {
-      const [gS, bS] = (0, tS.useState)(!1), XS = () => {
-        bS(!1)
-      }, [xS, NS] = (0, tS.useState)(!1), qS = (0, tS.useRef)({
-        growOnClick: SS.growOnClick,
-        forGuns: SS.forGuns
+    function gI(kk, Fk) {
+      const [Ik, Tk] = (0, Xk.useState)(!1), ik = () => {
+        Tk(!1)
+      }, [yk, lk] = (0, Xk.useState)(!1), ak = (0, Xk.useRef)({
+        growOnClick: kk.growOnClick,
+        forGuns: kk.forGuns
       });
-      (0, tS.useEffect)((() => {
-        const HS = qS.current;
-        qS.current = {
-          growOnClick: SS.growOnClick,
-          forGuns: SS.forGuns
-        }, (SS.growOnClick && !HS.growOnClick || SS.forGuns && !HS.forGuns) && NS(!0)
-      }), [SS.growOnClick, SS.forGuns]), (0, tS.useEffect)((() => {
-        if (!xS) return;
-        const SS = setTimeout((() => {
-          NS(!1)
+      (0, Xk.useEffect)((() => {
+        const Fk = ak.current;
+        ak.current = {
+          growOnClick: kk.growOnClick,
+          forGuns: kk.forGuns
+        }, (kk.growOnClick && !Fk.growOnClick || kk.forGuns && !Fk.forGuns) && lk(!0)
+      }), [kk.growOnClick, kk.forGuns]), (0, Xk.useEffect)((() => {
+        if (!yk) return;
+        const kk = setTimeout((() => {
+          lk(!1)
         }), 600);
         return () => {
-          clearTimeout(SS)
+          clearTimeout(kk)
         }
-      }), [xS]);
-      const uS = gS || xS;
+      }), [yk]);
+      const qk = Ik || yk;
       return {
         view: {
-          pressed: uS,
-          spread: uS && SS.forGuns && !SS.growOnClick ? 6 : 0
+          pressed: qk,
+          spread: qk && kk.forGuns && !kk.growOnClick ? 6 : 0
         },
         handlers: {
-          onPointerDown: SS => {
-            !SS.target.closest(HS) && (0, Fg.b)(SS.currentTarget, SS.pointerId) && bS(!0)
+          onPointerDown: kk => {
+            !kk.target.closest(Fk) && (0, AI.e)(kk.currentTarget, kk.pointerId) && Tk(!0)
           },
-          onPointerUp: XS,
-          onPointerCancel: XS,
-          onLostPointerCapture: XS
+          onPointerUp: ik,
+          onPointerCancel: ik,
+          onLostPointerCapture: ik
         }
       }
     }
 
-    function Tg(SS) {
+    function mI(kk) {
       let {
-        settings: HS,
-        touch: gS,
-        backdrop: tS,
-        className: bS,
-        children: xS,
-        label: NS
-      } = SS;
-      const qS = Rg(HS, ".CrosshairStageControls");
-      return (0, fS.jsxs)("div", {
-        className: XS()("CrosshairStage", bS),
-        style: ig(tS),
-        ...qS.handlers,
-        children: [(0, fS.jsx)("div", {
+        settings: Fk,
+        touch: Ik,
+        backdrop: Xk,
+        className: Tk,
+        children: yk,
+        label: lk
+      } = kk;
+      const ak = gI(Fk, ".CrosshairStageControls");
+      return (0, tk.jsxs)("div", {
+        className: ik()("CrosshairStage", Tk),
+        style: CI(Xk),
+        ...ak.handlers,
+        children: [(0, tk.jsx)("div", {
           className: "CrosshairStageHold",
           role: "img",
-          "aria-label": NS,
-          children: (0, fS.jsx)(pg.e, {
-            settings: HS,
-            touch: gS,
+          "aria-label": lk,
+          children: (0, tk.jsx)(fI.c, {
+            settings: Fk,
+            touch: Ik,
             inPreview: !0,
-            ...qS.view
+            ...ak.view
           })
-        }), xS]
+        }), yk]
       })
     }
-    const og = "crosshairFullScreen";
+    const hI = "crosshairFullScreen";
 
-    function lg(SS) {
+    function rI(kk) {
       let {
-        settings: HS,
-        touch: gS,
-        backdrop: bS,
-        onBackdrop: qS,
-        inGame: IS,
-        onChange: kS,
-        onClose: aS
-      } = SS;
+        settings: Fk,
+        touch: Ik,
+        backdrop: Tk,
+        onBackdrop: ak,
+        inGame: Lk,
+        onChange: Zk,
+        onClose: jk
+      } = kk;
       const {
-        t: KS
-      } = (0, xS.F)(), jS = (0, tS.useRef)(null);
-      (0, cg.s)("popup", jS, aS),
-      function(SS) {
-        const HS = (0, tS.useRef)(SS);
-        HS.current = SS, (0, tS.useEffect)((() => {
+        t: ek
+      } = (0, yk.y)(), wk = (0, Xk.useRef)(null);
+      (0, OI.t)("popup", wk, jk),
+      function(kk) {
+        const Fk = (0, Xk.useRef)(kk);
+        Fk.current = kk, (0, Xk.useEffect)((() => {
           window.history.pushState({
             ...window.history.state,
-            [og]: !0
+            [hI]: !0
           }, "");
-          let SS = !1;
-          const gS = () => {
-            SS = !0, HS.current()
+          let kk = !1;
+          const Ik = () => {
+            kk = !0, Fk.current()
           };
-          return window.addEventListener("popstate", gS), () => {
-            var HS;
-            window.removeEventListener("popstate", gS), !SS && null !== (HS = window.history.state) && void 0 !== HS && HS[og] && window.history.back()
+          return window.addEventListener("popstate", Ik), () => {
+            var Fk;
+            window.removeEventListener("popstate", Ik), !kk && null !== (Fk = window.history.state) && void 0 !== Fk && Fk[hI] && window.history.back()
           }
         }), [])
-      }(aS);
-      const GS = (0, tS.useRef)(aS);
-      GS.current = aS, (0, tS.useEffect)((() => {
-        function SS(SS) {
-          "Escape" === SS.key && (SS.stopPropagation(), GS.current())
+      }(jk);
+      const Hk = (0, Xk.useRef)(jk);
+      Hk.current = jk, (0, Xk.useEffect)((() => {
+        function kk(kk) {
+          "Escape" === kk.key && (kk.stopPropagation(), Hk.current())
         }
-        return window.addEventListener("keydown", SS, !0), () => {
-          window.removeEventListener("keydown", SS, !0)
+        return window.addEventListener("keydown", kk, !0), () => {
+          window.removeEventListener("keydown", kk, !0)
         }
       }), []);
-      const CS = Rg(HS, ".CrosshairFullScreenPanel"),
-        [nS, PS] = (0, tS.useState)(!0),
-        QS = nS && IS;
-      (0, tS.useEffect)((() => {
-        if (QS) return ZS.b.set({
+      const Jk = gI(Fk, ".CrosshairFullScreenPanel"),
+        [xk, Pk] = (0, Xk.useState)(!0),
+        Kk = xk && Lk;
+      (0, Xk.useEffect)((() => {
+        if (Kk) return zk.d.set({
           crosshairGameView: !0
         }), () => {
-          ZS.b.set({
+          zk.d.set({
             crosshairGameView: !1
           })
         }
-      }), [QS]);
-      const [DS, wS] = (0, tS.useState)(!0);
-      return (0, dg.createPortal)((0, fS.jsxs)("div", {
-        ref: jS,
+      }), [Kk]);
+      const [Qk, sk] = (0, Xk.useState)(!0);
+      return (0, EI.createPortal)((0, tk.jsxs)("div", {
+        ref: wk,
         className: "CrosshairFullScreen",
-        style: QS ? void 0 : ig(bS),
-        ...CS.handlers,
-        children: [(0, fS.jsx)(pg.e, {
-          settings: HS,
-          touch: gS,
+        style: Kk ? void 0 : CI(Tk),
+        ...Jk.handlers,
+        children: [(0, tk.jsx)(fI.c, {
+          settings: Fk,
+          touch: Ik,
           inEditor: !0,
-          ...CS.view
-        }), (0, fS.jsxs)("div", {
-          className: XS()("CrosshairFullScreenPanel", {
-            Collapsed: !DS
+          ...Jk.view
+        }), (0, tk.jsxs)("div", {
+          className: ik()("CrosshairFullScreenPanel", {
+            Collapsed: !Qk
           }),
-          children: [(0, fS.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "CrosshairFullScreenBar",
-            children: [(0, fS.jsx)(Bg, {
-              backdrop: bS,
-              onChange: SS => {
-                PS(!1), qS(SS)
+            children: [(0, tk.jsx)(dI, {
+              backdrop: Tk,
+              onChange: kk => {
+                Pk(!1), ak(kk)
               },
-              game: IS ? {
-                selected: QS,
+              game: Lk ? {
+                selected: Kk,
                 onSelect: () => {
-                  PS(!0)
+                  Pk(!0)
                 }
               } : void 0
-            }), (0, fS.jsx)(uS.P, {
+            }), (0, tk.jsx)(qk.Q, {
               className: "CrosshairPanelToggle",
-              ariaLabel: KS(DS ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
+              ariaLabel: ek(Qk ? "crosshairSettings:hideEditor" : "crosshairSettings:showEditor"),
               onClick: () => {
-                wS(!DS)
+                sk(!Qk)
               },
-              children: (0, fS.jsx)(NS.d, {
-                name: DS ? "caret-up" : "pen"
+              children: (0, tk.jsx)(lk.e, {
+                name: Qk ? "caret-up" : "pen"
               })
-            }), (0, fS.jsx)(uS.g, {
+            }), (0, tk.jsx)(qk.d, {
               className: "CrosshairFullScreenDone",
-              onClick: aS,
+              onClick: jk,
               padDefaultFocus: !0,
-              children: KS("crosshairSettings:done")
+              children: ek("crosshairSettings:done")
             })]
-          }), DS && (0, fS.jsxs)("div", {
+          }), Qk && (0, tk.jsxs)("div", {
             className: "CrosshairFullScreenFields",
-            children: [(0, fS.jsx)(Mg, {
-              settings: HS,
-              touch: gS,
-              backdrop: bS,
-              onChange: kS
-            }), (0, fS.jsx)(Og, {
-              settings: HS,
-              onChange: kS
+            children: [(0, tk.jsx)(YI, {
+              settings: Fk,
+              touch: Ik,
+              backdrop: Tk,
+              onChange: Zk
+            }), (0, tk.jsx)(vI, {
+              settings: Fk,
+              onChange: Zk
             })]
           })]
         })]
       }), document.body)
     }
-    var mg = gS(2813),
-      eg = gS(34212);
+    var DI = Ik(2602),
+      MI = Ik(34143);
 
-    function rg(SS) {
+    function kX(kk) {
       let {
-        settings: HS,
-        onChange: gS
-      } = SS;
+        settings: Fk,
+        onChange: Ik
+      } = kk;
       const {
-        t: bS
-      } = (0, xS.F)(), qS = (0, eg.i)(HS), [IS, kS] = (0, mg.h)(), [aS, KS] = (0, tS.useState)(!1), jS = (0, tS.useRef)(null), [GS, CS] = (0, mg.h)(), [nS, PS] = (0, tS.useState)(!1);
-      return (0, fS.jsxs)("div", {
+        t: Tk
+      } = (0, yk.y)(), ak = (0, MI.h)(Fk), [Lk, Zk] = (0, DI.g)(), [jk, ek] = (0, Xk.useState)(!1), wk = (0, Xk.useRef)(null), [Hk, Jk] = (0, DI.g)(), [xk, Pk] = (0, Xk.useState)(!1);
+      return (0, tk.jsxs)("div", {
         className: "SettingBox CrosshairShare",
-        children: [(0, fS.jsxs)("div", {
+        children: [(0, tk.jsxs)("div", {
           className: "CrosshairShareRow",
-          children: [(0, fS.jsxs)(uS.P, {
-            className: XS()("CrosshairCopy", {
-              ActiveSecondaryButton: IS
+          children: [(0, tk.jsxs)(qk.Q, {
+            className: ik()("CrosshairCopy", {
+              ActiveSecondaryButton: Lk
             }),
             onClick: () => {
-              (0, mg.d)(qS, {
+              (0, DI.e)(ak, {
                 useShareSheet: !1,
-                onOutcome: SS => {
-                  KS("failed" === SS), "copied" === SS && kS()
+                onOutcome: kk => {
+                  ek("failed" === kk), "copied" === kk && Zk()
                 }
               })
             },
-            children: [(0, fS.jsx)(NS.d, {
-              name: IS ? "check" : "copy"
-            }), " ", bS(IS ? "general:copied" : "crosshairSettings:copy")]
-          }), (0, fS.jsx)(DS.e, {
+            children: [(0, tk.jsx)(lk.e, {
+              name: Lk ? "check" : "copy"
+            }), " ", Tk(Lk ? "general:copied" : "crosshairSettings:copy")]
+          }), (0, tk.jsx)(Qk.c, {
             className: "CrosshairPaste",
-            domRef: jS,
-            ariaLabel: bS("crosshairSettings:paste"),
-            placeholderText: bS("crosshairSettings:paste"),
-            onValueChange: SS => {
-              const HS = (0, eg.g)(SS);
-              PS(!HS && SS.trim().length >= eg.c), HS && (gS(HS), jS.current.value = "", CS())
+            domRef: wk,
+            ariaLabel: Tk("crosshairSettings:paste"),
+            placeholderText: Tk("crosshairSettings:paste"),
+            onValueChange: kk => {
+              const Fk = (0, MI.f)(kk);
+              Pk(!Fk && kk.trim().length >= MI.e), Fk && (Ik(Fk), wk.current.value = "", Jk())
             }
           })]
-        }), aS && (0, fS.jsx)("input", {
+        }), jk && (0, tk.jsx)("input", {
           className: "CrosshairCode",
           readOnly: !0,
-          value: qS,
-          "aria-label": bS("crosshairSettings:copy"),
-          onFocus: SS => {
-            SS.currentTarget.select()
+          value: ak,
+          "aria-label": Tk("crosshairSettings:copy"),
+          onFocus: kk => {
+            kk.currentTarget.select()
           }
-        }), (0, fS.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           "aria-live": "polite",
-          children: [nS && (0, fS.jsx)("div", {
+          children: [xk && (0, tk.jsx)("div", {
             className: "CrosshairShareNote Error",
-            children: bS("crosshairSettings:pasteInvalid")
-          }), GS && !nS && (0, fS.jsx)("div", {
+            children: Tk("crosshairSettings:pasteInvalid")
+          }), Hk && !xk && (0, tk.jsx)("div", {
             className: "CrosshairShareNote",
-            children: bS("crosshairSettings:applied")
+            children: Tk("crosshairSettings:applied")
           })]
         })]
       })
     }
-    var St = gS(34217);
-    let Ht = "sky";
+    var FX = Ik(34148);
+    let IX = "sky";
 
-    function gt(SS) {
+    function XX(kk) {
       let {
-        showing: HS
-      } = SS;
+        showing: Fk
+      } = kk;
       const {
-        t: gS
-      } = (0, xS.F)(), {
-        isTouchScreen: bS,
-        gameState: XS,
-        clientEscMenuOptions: qS
-      } = (0, ZS.m)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), IS = (0, St.f)(), [kS, aS] = (0, tS.useState)(Ht), KS = SS => {
-        Ht = SS, aS(SS)
-      }, [jS, GS] = (0, tS.useState)(!1);
-      return (0, tS.useEffect)((() => {
-        HS || GS(!1)
-      }), [HS]), (0, fS.jsxs)("div", {
+        t: Ik
+      } = (0, yk.y)(), {
+        isTouchScreen: Tk,
+        gameState: ik,
+        clientEscMenuOptions: ak
+      } = (0, zk.j)(["isTouchScreen", "gameState", "clientEscMenuOptions"]), Lk = (0, FX.f)(), [Zk, jk] = (0, Xk.useState)(IX), ek = kk => {
+        IX = kk, jk(kk)
+      }, [wk, Hk] = (0, Xk.useState)(!1);
+      return (0, Xk.useEffect)((() => {
+        Fk || Hk(!1)
+      }), [Fk]), (0, tk.jsxs)("div", {
         className: "SettingsMenuRightInner CrosshairCategory",
-        children: [(0, fS.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "CrosshairPreviewSticky",
-          children: (0, fS.jsx)(Tg, {
+          children: (0, tk.jsx)(mI, {
             className: "CrosshairPreviewStage",
-            settings: IS,
-            touch: bS,
-            backdrop: kS,
-            label: gS("crosshairSettings:preview"),
-            children: (0, fS.jsxs)("div", {
+            settings: Lk,
+            touch: Tk,
+            backdrop: Zk,
+            label: Ik("crosshairSettings:preview"),
+            children: (0, tk.jsxs)("div", {
               className: "CrosshairPreviewBar CrosshairStageControls",
-              children: [(0, fS.jsx)(Bg, {
-                backdrop: kS,
-                onChange: KS
-              }), (0, fS.jsxs)(uS.P, {
+              children: [(0, tk.jsx)(dI, {
+                backdrop: Zk,
+                onChange: ek
+              }), (0, tk.jsxs)(qk.Q, {
                 className: "CrosshairFullScreenButton",
                 onClick: () => {
-                  GS(!0)
+                  Hk(!0)
                 },
-                children: [(0, fS.jsx)(NS.d, {
+                children: [(0, tk.jsx)(lk.e, {
                   name: "expand"
-                }), " ", gS("crosshairSettings:fullScreen")]
+                }), " ", Ik("crosshairSettings:fullScreen")]
               })]
             })
           })
-        }), (0, fS.jsx)("div", {
+        }), (0, tk.jsx)("div", {
           className: "SettingBox",
-          children: (0, fS.jsx)(Mg, {
-            settings: IS,
-            touch: bS,
-            backdrop: kS,
-            onChange: St.c
+          children: (0, tk.jsx)(YI, {
+            settings: Lk,
+            touch: Tk,
+            backdrop: Zk,
+            onChange: FX.e
           })
-        }), (0, fS.jsx)(rg, {
-          settings: IS,
-          onChange: St.c
-        }), bS && (0, fS.jsx)(Cg.b, {
-          note: (0, Gg.f)(bS, qS.touchActionButtons) ? gS("crosshairSettings:touchNote") : void 0
-        }), (0, fS.jsx)(Og, {
-          settings: IS,
-          onChange: St.c
-        }), jS && (0, fS.jsx)(lg, {
-          settings: IS,
-          touch: bS,
-          backdrop: kS,
-          onBackdrop: KS,
-          inGame: "inGame" === XS,
-          onChange: St.c,
+        }), (0, tk.jsx)(kX, {
+          settings: Lk,
+          onChange: FX.e
+        }), Tk && (0, tk.jsx)(xI.c, {
+          note: (0, JI.d)(Tk, ak.touchActionButtons) ? Ik("crosshairSettings:touchNote") : void 0
+        }), (0, tk.jsx)(vI, {
+          settings: Lk,
+          onChange: FX.e
+        }), wk && (0, tk.jsx)(rI, {
+          settings: Lk,
+          touch: Tk,
+          backdrop: Zk,
+          onBackdrop: ek,
+          inGame: "inGame" === ik,
+          onChange: FX.e,
           onClose: () => {
-            GS(!1)
+            Hk(!1)
           }
         })]
       })
     }
-    var tt = gS(9067),
-      bt = gS(1475),
-      Xt = gS(5142),
-      xt = gS(34219),
-      Nt = gS(4396),
-      qt = gS(2108),
-      ut = gS(783);
-    const It = (0, tS.memo)((function() {
+    var TX = Ik(8851),
+      iX = Ik(1368),
+      yX = Ik(4978),
+      lX = Ik(34155),
+      aX = Ik(4246),
+      qX = Ik(1913),
+      LX = Ik(734);
+    const tX = (0, Xk.memo)((function() {
       const {
-        clientEscMenuOptions: SS
-      } = (0, ZS.m)(["clientEscMenuOptions"]), {
-        recording: HS,
-        clipping: gS,
-        hasClipBuffer: bS
-      } = (0, dH.h)("replayRecorder"), xS = (0, dH.g)("connectedGame", (SS => SS.replay)), NS = (0, Nt.m)(), qS = !1 === (0, jS.i)("canRecordReplays");
-      (0, tS.useEffect)((() => {
-        nS.gameBridge.send("setRecorderPrefs", {
-          clipping: SS.enableClipping,
-          clipSeconds: SS.clipDurationSeconds
+        clientEscMenuOptions: kk
+      } = (0, zk.j)(["clientEscMenuOptions"]), {
+        recording: Fk,
+        clipping: Ik,
+        hasClipBuffer: Tk
+      } = (0, EF.k)("replayRecorder"), yk = (0, EF.i)("connectedGame", (kk => kk.replay)), lk = (0, aX.m)(), ak = !1 === (0, wk.j)("canRecordReplays");
+      (0, Xk.useEffect)((() => {
+        xk.gameBridge.send("setRecorderPrefs", {
+          clipping: kk.enableClipping,
+          clipSeconds: kk.clipDurationSeconds
         })
-      }), [SS.enableClipping, SS.clipDurationSeconds]);
-      const IS = NS || xS,
-        kS = !IS && !qS,
-        aS = HS || kS,
-        KS = kS,
-        GS = KS && gS && !HS;
+      }), [kk.enableClipping, kk.clipDurationSeconds]);
+      const Lk = lk || yk,
+        Zk = !Lk && !ak,
+        jk = Fk || Zk,
+        ek = Zk,
+        Hk = ek && Ik && !Fk;
 
-      function CS() {
-        aS && nS.gameBridge.send("toggleRecording", null)
+      function Jk() {
+        jk && xk.gameBridge.send("toggleRecording", null)
       }
-      return (0, fS.jsxs)("div", {
+      return (0, tk.jsxs)("div", {
         className: "SettingsMenuRightInner ReplayViewerCategory",
-        children: [(0, fS.jsxs)("div", {
+        children: [(0, tk.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, fS.jsx)("div", {
+          children: [(0, tk.jsx)("div", {
             className: "ReplayViewerCategoryRecordingRow",
-            children: HS ? (0, fS.jsxs)(fS.Fragment, {
-              children: [(0, fS.jsxs)(uS.L, {
+            children: Fk ? (0, tk.jsxs)(tk.Fragment, {
+              children: [(0, tk.jsxs)(qk.G, {
                 className: "ReplayViewerCategoryButton",
-                onClick: CS,
-                disabled: !aS,
-                children: [(0, fS.jsx)("span", {
+                onClick: Jk,
+                disabled: !jk,
+                children: [(0, tk.jsx)("span", {
                   children: "Stop Recording"
-                }), (0, fS.jsx)(qt.d, {
+                }), (0, tk.jsx)(qX.c, {
                   noaAction: "recordGame"
                 })]
-              }), (0, fS.jsx)(xt.d, {
+              }), (0, tk.jsx)(lX.b, {
                 className: "ReplayViewerCategoryRecordingIndicator"
               })]
-            }) : (0, fS.jsxs)(uS.g, {
+            }) : (0, tk.jsxs)(qk.d, {
               className: "ReplayViewerCategoryButton",
-              onClick: CS,
-              disabled: !aS,
-              children: [(0, fS.jsx)("span", {
+              onClick: Jk,
+              disabled: !jk,
+              children: [(0, tk.jsx)("span", {
                 children: "Start Recording"
-              }), (0, fS.jsx)(qt.d, {
+              }), (0, tk.jsx)(qX.c, {
                 noaAction: "recordGame"
               })]
             })
-          }), qS && (0, fS.jsx)("div", {
+          }), ak && (0, tk.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Recording is turned off in this game."
-          }), IS && !HS && (0, fS.jsx)("div", {
+          }), Lk && !Fk && (0, tk.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Close Replay Mode to start recording."
           })]
-        }), (0, fS.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "SettingBoxGroup",
-          children: [(0, fS.jsx)(hS.d, {
+          children: [(0, tk.jsx)(Vk.e, {
             label: "Enable clipping",
-            checked: SS.enableClipping,
-            disabled: !KS,
-            onClick: function(SS) {
-              KS && ZS.b.setClientEscMenuOptions({
-                enableClipping: SS
+            checked: kk.enableClipping,
+            disabled: !ek,
+            onClick: function(kk) {
+              ek && zk.d.setClientEscMenuOptions({
+                enableClipping: kk
               })
             },
-            className: XS()({
-              SettingBoxDisabled: !KS
+            className: ik()({
+              SettingBoxDisabled: !ek
             })
-          }), (0, fS.jsx)(hS.k, {
+          }), (0, tk.jsx)(Vk.j, {
             name: "Clip duration (seconds)",
-            min: ut.k,
-            max: ut.h,
-            step: ut.b,
-            initValue: SS.clipDurationSeconds,
-            onChange: function(SS) {
-              ZS.b.setClientEscMenuOptions({
-                clipDurationSeconds: SS
+            min: LX.j,
+            max: LX.f,
+            step: LX.b,
+            initValue: kk.clipDurationSeconds,
+            onChange: function(kk) {
+              zk.d.setClientEscMenuOptions({
+                clipDurationSeconds: kk
               })
             },
             circleInfoText: "Longer clip durations use more memory and may affect performance.",
-            disabled: !KS || !SS.enableClipping
+            disabled: !ek || !kk.enableClipping
           })]
-        }), (0, fS.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, fS.jsxs)(uS.g, {
+          children: [(0, tk.jsxs)(qk.d, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              GS && nS.gameBridge.send("saveClip", null)
+              Hk && xk.gameBridge.send("saveClip", null)
             },
-            disabled: !GS,
-            children: [(0, fS.jsx)("span", {
+            disabled: !Hk,
+            children: [(0, tk.jsx)("span", {
               children: "Record clip"
-            }), (0, fS.jsx)(qt.d, {
+            }), (0, tk.jsx)(qX.c, {
               noaAction: "recordClip"
             })]
-          }), SS.enableClipping && !bS && KS && !HS && (0, fS.jsx)("div", {
+          }), kk.enableClipping && !Tk && ek && !Fk && (0, tk.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clip buffer is filling \u2014 play for a moment, then save."
-          }), HS && (0, fS.jsx)("div", {
+          }), Fk && (0, tk.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Clipping pauses while a full recording is active."
           })]
-        }), (0, fS.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, fS.jsxs)(uS.g, {
+          children: [(0, tk.jsxs)(qk.d, {
             className: "ReplayViewerCategoryButton",
             onClick: function() {
-              (0, Nt.i)(!0), ZS.b.set({
+              (0, aX.j)(!0), zk.d.set({
                 openEverythingMenuName: null
               })
             },
-            disabled: NS,
-            children: [(0, fS.jsx)("span", {
+            disabled: lk,
+            children: [(0, tk.jsx)("span", {
               children: "Open Replay Mode"
-            }), (0, fS.jsx)(qt.d, {
+            }), (0, tk.jsx)(qX.c, {
               noaAction: "replayViewerOpen"
             })]
-          }), NS && (0, fS.jsx)("div", {
+          }), lk && (0, tk.jsx)("div", {
             className: "ReplayViewerCategoryHint",
             children: "Replay Mode is already open."
           })]
-        }), (0, fS.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "SettingBox",
-          children: [(0, fS.jsx)("div", {
+          children: [(0, tk.jsx)("div", {
             className: "ReplayViewerCategoryTutorialTitle",
             children: "How to use Replay Mode"
-          }), (0, fS.jsx)("iframe", {
+          }), (0, tk.jsx)("iframe", {
             className: "ReplayViewerCategoryTutorial",
             src: "https://www.youtube.com/embed/-FsT0rNSuYA?playsinline=1&rel=0",
             title: "How to use Replay Mode",
@@ -2395,8 +2395,8 @@ export const modules = {
         })]
       })
     }));
-    var ft = gS(2022);
-    const kt = {
+    var ZX = Ik(1844);
+    const jX = {
       account: {
         icon: "fa-solid fa-user",
         displayName: "homePage:account"
@@ -2418,11 +2418,11 @@ export const modules = {
         displayName: "settingsMenu:graphics"
       },
       controls: {
-        icon: () => (0, fS.jsx)("svg", {
+        icon: () => (0, tk.jsx)("svg", {
           className: "svg-inline--fa",
           viewBox: "0 0 640 512",
           "aria-hidden": "true",
-          children: (0, fS.jsx)("path", {
+          children: (0, tk.jsx)("path", {
             fill: "currentColor",
             d: "M256 20H384A36 36 0 0 1 420 56V208A36 36 0 0 1 384 244H256A36 36 0 0 1 220 208V56A36 36 0 0 1 256 20ZM262 166L378 166L320 90ZM36 268H164A36 36 0 0 1 200 304V456A36 36 0 0 1 164 492H36A36 36 0 0 1 0 456V304A36 36 0 0 1 36 268ZM134 438L134 322L58 380ZM256 268H384A36 36 0 0 1 420 304V456A36 36 0 0 1 384 492H256A36 36 0 0 1 220 456V304A36 36 0 0 1 256 268ZM378 346L262 346L320 422ZM476 268H604A36 36 0 0 1 640 304V456A36 36 0 0 1 604 492H476A36 36 0 0 1 440 456V304A36 36 0 0 1 476 268ZM506 322L506 438L582 380Z"
           })
@@ -2441,7 +2441,7 @@ export const modules = {
         icon: "fa-solid fa-folder-image",
         displayName: "settingsMenu:texturePack"
       },
-      bK: {
+      ke: {
         icon: "fa-solid fa-sparkle",
         displayName: "settingsMenu:shaderPack"
       },
@@ -2467,291 +2467,291 @@ export const modules = {
       }
     };
 
-    function Kt() {
-      return Promise.all([gS.e(77), gS.e(133), gS.e(132), gS.e(129)]).then((() => gS(41084))).then((SS => ({
-        default: SS.ShaderPackCategory
-      })), (SS => (console.error("Failed to load the shader pack settings", SS), {
-        default: jt
+    function eX() {
+      return Promise.all([Ik.e(77), Ik.e(133), Ik.e(132), Ik.e(129)]).then((() => Ik(41082))).then((kk => ({
+        default: kk.ShaderPackCategory
+      })), (kk => (console.error("Failed to load the shader pack settings", kk), {
+        default: wX
       })))
     }
 
-    function jt() {
+    function wX() {
       const {
-        t: SS
-      } = (0, xS.F)();
-      return (0, fS.jsx)("div", {
+        t: kk
+      } = (0, yk.y)();
+      return (0, tk.jsx)("div", {
         className: "SettingsMenuRightInner",
-        children: SS("shaderPack:tabLoadFailed")
+        children: kk("shaderPack:tabLoadFailed")
       })
     }
-    var Gt = gS(1471);
-    const Ct = (0, tS.lazy)((() => gS.e(273).then((() => gS(41079))).then((SS => ({
-        default: SS.BloxdInformation
+    var HX = Ik(1364);
+    const JX = (0, Xk.lazy)((() => Ik.e(273).then((() => Ik(41070))).then((kk => ({
+        default: kk.BloxdInformation
       }))))),
-      nt = (0, tS.lazy)(Kt);
+      xX = (0, Xk.lazy)(eX);
 
-    function Pt(SS) {
-      return SS ? "general" : "account"
+    function PX(kk) {
+      return kk ? "general" : "account"
     }
-    const Qt = new Map,
-      Dt = (0, tS.memo)((function(SS) {
+    const KX = new Map,
+      QX = (0, Xk.memo)((function(kk) {
         let {
-          show: HS,
-          setBeforeResumeCallback: gS
-        } = SS;
-        (0, GS.d)();
+          show: Fk,
+          setBeforeResumeCallback: Ik
+        } = kk;
+        (0, Hk.c)();
         const {
-          gameState: bS,
-          openSettingsCategory: XS
-        } = (0, ZS.m)(["gameState", "openSettingsCategory"]), {
-          userContext: qS
-        } = (0, KS.b)(), {
-          t: IS
-        } = (0, xS.F)(), DS = (0, aS.e)(), wS = (0, jS.i)("minChunkAddDist"), hS = "inGame" === bS, [JS, cS] = (0, tS.useState)(Pt(hS)), [vS, ES] = (0, tS.useState)(null), [LS, YS] = (0, tS.useState)([]), AS = (0, tS.useRef)(function() {
-          const SS = new Date,
-            HS = 6 * (SS.getMonth() + SS.getDate()) % IH.v.length;
-          return [...IH.v, ...IH.v].slice(HS, HS + 6)
-        }()), yS = (0, tS.useRef)(null), VS = (0, VH.i)(bt.i, (0, bt.c)()), iS = Object.keys(kt).filter((SS => {
-          switch (SS) {
+          gameState: Tk,
+          openSettingsCategory: ik
+        } = (0, zk.j)(["gameState", "openSettingsCategory"]), {
+          userContext: ak
+        } = (0, ek.d)(), {
+          t: Lk
+        } = (0, yk.y)(), Qk = (0, jk.c)(), sk = (0, wk.j)("minChunkAddDist"), Vk = "inGame" === Tk, [Sk, Ok] = (0, Xk.useState)(PX(Vk)), [nk, Gk] = (0, Xk.useState)(null), [pk, uk] = (0, Xk.useState)([]), bk = (0, Xk.useRef)(function() {
+          const kk = new Date,
+            Fk = 6 * (kk.getMonth() + kk.getDate()) % tF.y.length;
+          return [...tF.y, ...tF.y].slice(Fk, Fk + 6)
+        }()), Rk = (0, Xk.useRef)(null), Uk = (0, UF.f)(iX.i, (0, iX.c)()), Ck = Object.keys(jX).filter((kk => {
+          switch (kk) {
             case "replayViewer":
-              return hS;
+              return Vk;
             case "developerTools":
-              return qS.playerHasRank("developer") || !1;
+              return ak.playerHasRank("developer") || !1;
             case "texturePack":
-              return CS.featureFlags.settings.canChangeTexturePack;
-            case "bK":
-              return CS.featureFlags.settings.canUseShaderPacks;
+              return Jk.featureFlags.settings.canChangeTexturePack;
+            case "ke":
+              return Jk.featureFlags.settings.canUseShaderPacks;
             case "notifications":
-              return CS.featureFlags.useSocialFeatures || null !== qS.dailyDrop;
+              return Jk.featureFlags.useSocialFeatures || null !== ak.dailyDrop;
             case "alternativeDomains":
-              return "crazygames" !== dS.r;
+              return "crazygames" !== Ek.v;
             case "controller":
-              return CS.featureFlags.useControllerSupport && (VS || "controller" === JS);
+              return Jk.featureFlags.useControllerSupport && (Uk || "controller" === Sk);
             default:
               return !0
           }
         }));
-        (0, VH.g)("toggleFullCoordinateOverlay", (() => {
-          const SS = Ng("showCoordinates") && Ng("showChunkCoordinates") && Ng("showFPS");
-          qg("showCoordinates", !SS), qg("showChunkCoordinates", !SS), qg("showFPS", !SS), DS()
-        })), (0, VH.g)("updatedChunkLoadDist", (() => {
-          DS()
-        })), (0, tS.useEffect)((() => {
-          if (ES(null), null === ZS.b.get("openSettingsCategory")) {
-            const SS = (0, Gt.h)() ? Qt.get(hS) : void 0;
-            cS(SS && iS.includes(SS) ? SS : Pt(hS))
+        (0, UF.d)("toggleFullCoordinateOverlay", (() => {
+          const kk = aI("showCoordinates") && aI("showChunkCoordinates") && aI("showFPS");
+          qI("showCoordinates", !kk), qI("showChunkCoordinates", !kk), qI("showFPS", !kk), Qk()
+        })), (0, UF.d)("updatedChunkLoadDist", (() => {
+          Qk()
+        })), (0, Xk.useEffect)((() => {
+          if (Gk(null), null === zk.d.get("openSettingsCategory")) {
+            const kk = (0, HX.f)() ? KX.get(Vk) : void 0;
+            Ok(kk && Ck.includes(kk) ? kk : PX(Vk))
           }
-        }), [HS]), (0, tS.useEffect)((() => {
-          null !== XS && (cS(XS), Qt.set(hS, XS), ZS.b.set({
+        }), [Fk]), (0, Xk.useEffect)((() => {
+          null !== ik && (Ok(ik), KX.set(Vk, ik), zk.d.set({
             openSettingsCategory: null
           }))
-        }), [XS, hS]), (0, tS.useLayoutEffect)((() => {
-          yS.current && (yS.current.scrollTop = 0)
-        }), [JS, HS]), (0, tS.useEffect)((() => {
-          "updateLog" === JS && (0, QS.c)().then(YS)
-        }), [JS]), (0, tS.useEffect)((() => {
-          if ((0, Sg.K)(wS)) return;
-          const [SS, HS] = (0, Kg.g)(), [gS, tS] = (0, TH.e)(wS), bS = (0, ft.h)(wS[0], SS, gS), XS = (0, ft.h)(wS[1], HS, tS);
-          nS.gameBridge.send("setChunkAddDistance", {
-            horizontal: bS,
-            vertical: XS
+        }), [ik, Vk]), (0, Xk.useLayoutEffect)((() => {
+          Rk.current && (Rk.current.scrollTop = 0)
+        }), [Sk, Fk]), (0, Xk.useEffect)((() => {
+          "updateLog" === Sk && (0, Kk.d)().then(uk)
+        }), [Sk]), (0, Xk.useEffect)((() => {
+          if ((0, FI.Q)(sk)) return;
+          const [kk, Fk] = (0, wI.e)(), [Ik, Xk] = (0, mF.c)(sk), Tk = (0, ZX.e)(sk[0], kk, Ik), ik = (0, ZX.e)(sk[1], Fk, Xk);
+          xk.gameBridge.send("setChunkAddDistance", {
+            horizontal: Tk,
+            vertical: ik
           })
-        }), [wS]);
-        const WS = (0, tS.useCallback)((async () => {
-          vS && (await vS(), ES(null))
-        }), [vS]);
+        }), [sk]);
+        const Nk = (0, Xk.useCallback)((async () => {
+          nk && (await nk(), Gk(null))
+        }), [nk]);
 
-        function zS() {
-          ZS.b.set({
+        function ck() {
+          zk.d.set({
             openEverythingMenuName: null
           })
         }
-        return (0, tS.useEffect)((() => {
-          gS((() => WS))
-        }), [WS, gS]), (0, fS.jsxs)("div", {
+        return (0, Xk.useEffect)((() => {
+          Ik((() => Nk))
+        }), [Nk, Ik]), (0, tk.jsxs)("div", {
           className: "SettingsMenu Menu",
-          style: HS ? {} : {
+          style: Fk ? {} : {
             display: "none"
           },
-          children: [(0, fS.jsx)("div", {
+          children: [(0, tk.jsx)("div", {
             className: "MenuSideBar",
-            children: (0, fS.jsx)("div", {
+            children: (0, tk.jsx)("div", {
               className: "MenuSideBarBody",
-              children: (0, fS.jsx)(kS, {
-                items: iS.map((SS => {
-                  const HS = kt[SS].icon;
+              children: (0, tk.jsx)(Zk, {
+                items: Ck.map((kk => {
+                  const Fk = jX[kk].icon;
                   return {
-                    id: SS,
-                    faIcon: "string" === typeof HS ? HS : void 0,
-                    iconElement: "string" === typeof HS ? void 0 : (0, fS.jsx)(HS, {}),
-                    title: IS(kt[SS].displayName),
+                    id: kk,
+                    faIcon: "string" === typeof Fk ? Fk : void 0,
+                    iconElement: "string" === typeof Fk ? void 0 : (0, tk.jsx)(Fk, {}),
+                    title: Lk(jX[kk].displayName),
                     redDot: !1
                   }
                 })),
-                selectedItemId: JS,
-                onClick: SS => {
-                  !async function(SS) {
-                    await WS(), cS(SS), Qt.set(hS, SS)
-                  }(SS)
+                selectedItemId: Sk,
+                onClick: kk => {
+                  !async function(kk) {
+                    await Nk(), Ok(kk), KX.set(Vk, kk)
+                  }(kk)
                 }
               })
             })
-          }), (0, fS.jsxs)("div", {
-            ref: yS,
+          }), (0, tk.jsxs)("div", {
+            ref: Rk,
             className: "MenuBody SettingsMenuRight",
-            children: ["account" === JS && (0, fS.jsx)(DH, {
-              showing: HS,
-              inGame: hS
-            }), "general" === JS && (0, fS.jsx)(YH, {
-              inGame: hS
-            }), "audio" === JS && (0, fS.jsx)(AH, {}), "notifications" === JS && (0, fS.jsx)(RH, {}), "graphics" === JS && (0, fS.jsx)(ag, {
-              minChunkAddDist: null !== wS && void 0 !== wS ? wS : [2, 2],
-              getValue: Ng,
-              onChange: qg,
-              setApplySettingsCallback: ES
-            }), "controls" === JS && (0, fS.jsx)(jg.f, {}), "crosshair" === JS && (0, fS.jsx)(gt, {
-              showing: HS
-            }), "controller" === JS && CS.featureFlags.useControllerSupport && (0, fS.jsx)(tt.b, {}), CS.featureFlags.settings.canChangeTexturePack && "texturePack" === JS && (0, fS.jsx)(Xt.b, {
-              setApplySettingsCallback: ES
-            }), CS.featureFlags.settings.canUseShaderPacks && "bK" === JS && (0, fS.jsx)(tS.Suspense, {
+            children: ["account" === Sk && (0, tk.jsx)(sF, {
+              showing: Fk,
+              inGame: Vk
+            }), "general" === Sk && (0, tk.jsx)(uF, {
+              inGame: Vk
+            }), "audio" === Sk && (0, tk.jsx)(bF, {}), "notifications" === Sk && (0, tk.jsx)(gF, {}), "graphics" === Sk && (0, tk.jsx)(eI, {
+              minChunkAddDist: null !== sk && void 0 !== sk ? sk : [2, 2],
+              getValue: aI,
+              onChange: qI,
+              setApplySettingsCallback: Gk
+            }), "controls" === Sk && (0, tk.jsx)(HI.d, {}), "crosshair" === Sk && (0, tk.jsx)(XX, {
+              showing: Fk
+            }), "controller" === Sk && Jk.featureFlags.useControllerSupport && (0, tk.jsx)(TX.b, {}), Jk.featureFlags.settings.canChangeTexturePack && "texturePack" === Sk && (0, tk.jsx)(yX.d, {
+              setApplySettingsCallback: Gk
+            }), Jk.featureFlags.settings.canUseShaderPacks && "ke" === Sk && (0, tk.jsx)(Xk.Suspense, {
               fallback: null,
-              children: (0, fS.jsx)(nt, {
-                setApplySettingsCallback: ES
+              children: (0, tk.jsx)(xX, {
+                setApplySettingsCallback: Gk
               })
-            }), "updateLog" === JS && (0, fS.jsx)("div", {
+            }), "updateLog" === Sk && (0, tk.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, fS.jsx)("div", {
+              children: (0, tk.jsx)("div", {
                 className: "UpdateLogsContainer",
-                children: LS.map(((SS, HS) => (0, fS.jsx)(PS.c, {
-                  updateLog: SS,
-                  index: HS,
-                  close: zS
-                }, HS)))
+                children: pk.map(((kk, Fk) => (0, tk.jsx)(Pk.b, {
+                  updateLog: kk,
+                  index: Fk,
+                  close: ck
+                }, Fk)))
               })
-            }), "information" === JS && (0, fS.jsx)("div", {
+            }), "information" === Sk && (0, tk.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, fS.jsx)(tS.Suspense, {
+              children: (0, tk.jsx)(Xk.Suspense, {
                 fallback: null,
-                children: (0, fS.jsx)(Ct, {})
+                children: (0, tk.jsx)(JX, {})
               })
-            }), "alternativeDomains" === JS && (0, fS.jsxs)("div", {
+            }), "alternativeDomains" === Sk && (0, tk.jsxs)("div", {
               className: "SettingsMenuRightInner",
-              children: [(0, fS.jsx)("div", {
+              children: [(0, tk.jsx)("div", {
                 className: "AlternativeDomainsTitle",
-                children: IS("settingsMenu:unblockedDomainsDescription")
-              }), (0, fS.jsx)("div", {
+                children: Lk("settingsMenu:unblockedDomainsDescription")
+              }), (0, tk.jsx)("div", {
                 className: "AlternativeDomainsList",
-                children: AS.current.map((SS => (0, fS.jsxs)(uS.g, {
+                children: bk.current.map((kk => (0, tk.jsxs)(qk.d, {
                   onClick: () => {
-                    window.open(`https://${SS}`)
+                    window.open(`https://${kk}`)
                   },
-                  children: [(0, fS.jsx)(NS.d, {
+                  children: [(0, tk.jsx)(lk.e, {
                     name: "arrow-up-right-from-square"
-                  }), " ", SS]
-                }, SS)))
+                  }), " ", kk]
+                }, kk)))
               })]
-            }), "replayViewer" === JS && (0, fS.jsx)(It, {}), "developerTools" === JS && (0, fS.jsx)("div", {
+            }), "replayViewer" === Sk && (0, tk.jsx)(tX, {}), "developerTools" === Sk && (0, tk.jsx)("div", {
               className: "SettingsMenuRightInner",
-              children: (0, fS.jsx)(OS, {
-                setApplySettingsCallback: ES
+              children: (0, tk.jsx)(vk, {
+                setApplySettingsCallback: Gk
               })
-            }), null !== vS && (0, fS.jsx)("div", {
+            }), null !== nk && (0, tk.jsx)("div", {
               className: "SettingsMenuRightFooter",
-              children: (0, fS.jsx)(uS.g, {
+              children: (0, tk.jsx)(qk.d, {
                 className: "SettingsMenuRightFooterButton",
-                onClick: WS,
-                children: IS("general:apply")
+                onClick: Nk,
+                children: Lk("general:apply")
               })
             })]
           })]
         })
       }));
-    var wt = gS(2748);
-    const ht = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
-      Zt = (0, tS.lazy)((() => Promise.resolve().then((() => gS(4781))).then((SS => {
-        SS.needGameClientAfterPaint();
-        const HS = SS.matchmakingLibrariesPromise.then((SS => (0, wt.e)(SS.loadCharacterCustomisationUI(), (SS => SS.CharacterCustomisationUI))));
-        return Promise.all([SS.ensureGameSetup(), HS]).then((SS => {
-          let [, HS] = SS;
-          return HS
+    var sX = Ik(2546);
+    const VX = ["characters", "emote", "skin", "hat", "head", "eyebrows", "eyes", "back", "body", "legs", "shoes", "profileEffect", "cape", "nameColour"],
+      zX = (0, Xk.lazy)((() => Promise.resolve().then((() => Ik(4645))).then((kk => {
+        kk.needGameClientAfterPaint();
+        const Fk = kk.matchmakingLibrariesPromise.then((kk => (0, sX.e)(kk.loadCharacterCustomisationUI(), (kk => kk.CharacterCustomisationUI))));
+        return Promise.all([kk.ensureGameSetup(), Fk]).then((kk => {
+          let [, Fk] = kk;
+          return Fk
         }))
       })))),
-      Jt = "openCustomisationTab";
+      SX = "openCustomisationTab";
 
-    function Ot(SS) {
-      var HS, gS, bS;
+    function oX(kk) {
+      var Fk, Ik, Tk;
       let {
-        show: XS
-      } = SS;
+        show: ik
+      } = kk;
       const {
-        userContext: xS
-      } = (0, KS.b)(), NS = (0, tS.useRef)(null);
-      var qS, uS;
-      xS !== cS.NULL_USER_CONTEXT && (null === (HS = NS.current) || void 0 === HS ? void 0 : HS.whamm) !== xS.whamm && (NS.current = {
-        whamm: xS.whamm,
-        mountKey: (null !== (qS = null === (uS = NS.current) || void 0 === uS ? void 0 : uS.mountKey) && void 0 !== qS ? qS : -1) + 1
+        userContext: yk
+      } = (0, ek.d)(), lk = (0, Xk.useRef)(null);
+      var ak, qk;
+      yk !== Ok.NULL_USER_CONTEXT && (null === (Fk = lk.current) || void 0 === Fk ? void 0 : Fk.whamm) !== yk.whamm && (lk.current = {
+        whamm: yk.whamm,
+        mountKey: (null !== (ak = null === (qk = lk.current) || void 0 === qk ? void 0 : qk.mountKey) && void 0 !== ak ? ak : -1) + 1
       });
-      const [IS, aS] = (0, tS.useState)("characters");
-      if ((0, VH.g)(Jt, aS), !XS) return null;
-      const jS = ht.filter((SS => "cape" !== SS && "nameColour" !== SS || xS.getPlayerRanks().includes("super") || (0, US.purchasesAllowed)())).map((SS => ({
-        id: SS,
-        faIcon: IH.E[SS],
-        title: IH.I[SS],
+      const [Lk, jk] = (0, Xk.useState)("characters");
+      if ((0, UF.d)(SX, jk), !ik) return null;
+      const wk = VX.filter((kk => "cape" !== kk && "nameColour" !== kk || yk.getPlayerRanks().includes("super") || (0, Wk.purchasesAllowed)())).map((kk => ({
+        id: kk,
+        faIcon: tF.H[kk],
+        title: tF.K[kk],
         redDot: !1
       })));
-      return (0, fS.jsxs)("div", {
+      return (0, tk.jsxs)("div", {
         className: "Menu CharCustomisation",
-        children: [(0, fS.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "MenuSideBar",
-          children: (0, fS.jsx)(kS, {
-            items: jS,
-            selectedItemId: IS,
-            onClick: SS => {
-              aS(SS)
+          children: (0, tk.jsx)(Zk, {
+            items: wk,
+            selectedItemId: Lk,
+            onClick: kk => {
+              jk(kk)
             }
           })
-        }), (0, fS.jsx)("div", {
+        }), (0, tk.jsx)("div", {
           className: "MenuBody",
-          children: (0, fS.jsx)(tS.Suspense, {
-            fallback: (0, fS.jsx)("div", {
+          children: (0, tk.jsx)(Xk.Suspense, {
+            fallback: (0, tk.jsx)("div", {
               className: "CharacterCustomisationLoading",
-              children: (0, fS.jsx)(wS.c, {})
+              children: (0, tk.jsx)(sk.c, {})
             }),
-            children: (0, fS.jsx)(Zt, {
-              selectedTab: IS
-            }, null !== (gS = null === (bS = NS.current) || void 0 === bS ? void 0 : bS.mountKey) && void 0 !== gS ? gS : 0)
+            children: (0, tk.jsx)(zX, {
+              selectedTab: Lk
+            }, null !== (Ik = null === (Tk = lk.current) || void 0 === Tk ? void 0 : Tk.mountKey) && void 0 !== Ik ? Ik : 0)
           })
         })]
       })
     }
-    var dt = gS(1550),
-      ct = gS(1553),
-      vt = gS(34223),
-      Et = gS(4662),
-      Lt = gS(3553),
-      Yt = gS(3602),
-      At = gS(34256),
-      yt = gS(8975),
-      Vt = gS(34226),
-      it = gS(34239),
-      Wt = gS(2050),
-      zt = gS(2031),
-      Ut = gS(5065),
-      pt = gS(1344),
-      st = gS(1309),
-      Bt = gS(1758),
-      Mt = gS(9043),
-      Ft = gS(2552),
-      Rt = gS(2561);
+    var vX = Ik(1422),
+      EX = Ik(1426),
+      OX = Ik(34164),
+      nX = Ik(4516),
+      GX = Ik(3358),
+      pX = Ik(3407),
+      uX = Ik(34202),
+      bX = Ik(8752),
+      RX = Ik(34173),
+      UX = Ik(34188),
+      CX = Ik(1864),
+      NX = Ik(1849),
+      cX = Ik(4911),
+      WX = Ik(1248),
+      fX = Ik(1217),
+      BX = Ik(1604),
+      dX = Ik(8825),
+      YX = Ik(2360),
+      AX = Ik(2363);
 
-    function Tt(SS) {
-      return SS ? Object.keys(SS).sort(((HS, gS) => {
-        var tS, bS, XS, xS;
-        const NS = (null !== (tS = null === (bS = SS[gS]) || void 0 === bS ? void 0 : bS.sortPriority) && void 0 !== tS ? tS : 0) - (null !== (XS = null === (xS = SS[HS]) || void 0 === xS ? void 0 : xS.sortPriority) && void 0 !== XS ? XS : 0);
-        return 0 !== NS ? NS : HS.localeCompare(gS)
+    function gX(kk) {
+      return kk ? Object.keys(kk).sort(((Fk, Ik) => {
+        var Xk, Tk, ik, yk;
+        const lk = (null !== (Xk = null === (Tk = kk[Ik]) || void 0 === Tk ? void 0 : Tk.sortPriority) && void 0 !== Xk ? Xk : 0) - (null !== (ik = null === (yk = kk[Fk]) || void 0 === yk ? void 0 : yk.sortPriority) && void 0 !== ik ? ik : 0);
+        return 0 !== lk ? lk : Fk.localeCompare(Ik)
       })) : []
     }
-    const ot = [{
+    const mX = [{
       threshold: 1e12,
       suffix: "T"
     }, {
@@ -2765,241 +2765,241 @@ export const modules = {
       suffix: "K"
     }];
 
-    function lt(SS) {
+    function hX(kk) {
       for (const {
-          threshold: HS,
-          suffix: gS
+          threshold: Fk,
+          suffix: Ik
         }
-        of ot)
-        if (SS >= HS) {
-          const tS = SS / HS;
-          return tS >= 100 ? `${Math.floor(tS)}${gS}` : tS >= 10 ? `${tS.toFixed(1).replace(/\.0$/,"")}${gS}` : `${tS.toFixed(2).replace(/\.?0+$/,"")}${gS}`
-        } return String(SS)
+        of mX)
+        if (kk >= Fk) {
+          const Xk = kk / Fk;
+          return Xk >= 100 ? `${Math.floor(Xk)}${Ik}` : Xk >= 10 ? `${Xk.toFixed(1).replace(/\.0$/,"")}${Ik}` : `${Xk.toFixed(2).replace(/\.?0+$/,"")}${Ik}`
+        } return String(kk)
     }
-    var mt = gS(5182);
-    const et = {
+    var rX = Ik(5016);
+    const DX = {
         normal: "0.8em",
         big: "1em"
       },
-      rt = (0, tS.memo)((function(SS) {
+      MX = (0, Xk.memo)((function(kk) {
         let {
-          item: HS,
-          amount: gS = 0,
-          size: tS = "normal",
-          tier: bS = null
-        } = SS;
-        return (0, fS.jsx)("div", {
-          className: XS()("SmpSlot", `SmpSlot-${tS}`),
-          children: HS && (0, fS.jsx)(Wt.e, {
-            itemName: HS,
-            amount: gS > 1 ? gS : 0,
-            amountFontSize: et[tS],
-            enchantmentTier: bS
+          item: Fk,
+          amount: Ik = 0,
+          size: Xk = "normal",
+          tier: Tk = null
+        } = kk;
+        return (0, tk.jsx)("div", {
+          className: ik()("SmpSlot", `SmpSlot-${Xk}`),
+          children: Fk && (0, tk.jsx)(CX.d, {
+            itemName: Fk,
+            amount: Ik > 1 ? Ik : 0,
+            amountFontSize: DX[Xk],
+            enchantmentTier: Tk
           })
         })
       }));
 
-    function Sb(SS) {
+    function kT(kk) {
       let {
-        amount: HS,
-        exact: gS = !1,
-        className: tS
-      } = SS;
-      return (0, fS.jsxs)("span", {
-        className: XS()("SmpGold", tS),
-        children: [(0, fS.jsx)("span", {
+        amount: Fk,
+        exact: Ik = !1,
+        className: Xk
+      } = kk;
+      return (0, tk.jsxs)("span", {
+        className: ik()("SmpGold", Xk),
+        children: [(0, tk.jsx)("span", {
           className: "SmpCoin",
-          children: (0, fS.jsx)(Wt.e, {
+          children: (0, tk.jsx)(CX.d, {
             itemName: "Gold Coin",
             amount: 0
           })
-        }), gS ? HS.toLocaleString("en-US") : lt(HS)]
+        }), Ik ? Fk.toLocaleString("en-US") : hX(Fk)]
       })
     }
 
-    function Hb(SS) {
+    function FT(kk) {
       let {
-        count: HS = 5,
-        grid: gS = !1
-      } = SS;
-      return (0, fS.jsx)("div", {
-        className: gS ? "SmpCardGrid" : "SmpList",
+        count: Fk = 5,
+        grid: Ik = !1
+      } = kk;
+      return (0, tk.jsx)("div", {
+        className: Ik ? "SmpCardGrid" : "SmpList",
         "aria-hidden": "true",
         children: Array.from({
-          length: HS
-        }, ((SS, HS) => (0, fS.jsxs)("div", {
-          className: XS()(gS ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
-          children: [(0, fS.jsx)("div", {
-            className: XS()("SmpSlot", gS ? "SmpSlot-big" : "SmpSlot-normal")
-          }), (0, fS.jsxs)("div", {
+          length: Fk
+        }, ((kk, Fk) => (0, tk.jsxs)("div", {
+          className: ik()(Ik ? "SmpListingCard" : "SmpRow", "SmpSkeleton"),
+          children: [(0, tk.jsx)("div", {
+            className: ik()("SmpSlot", Ik ? "SmpSlot-big" : "SmpSlot-normal")
+          }), (0, tk.jsxs)("div", {
             className: "SmpRowText",
-            children: [(0, fS.jsx)("b", {}), (0, fS.jsx)("small", {})]
-          }), (0, fS.jsx)("div", {
+            children: [(0, tk.jsx)("b", {}), (0, tk.jsx)("small", {})]
+          }), (0, tk.jsx)("div", {
             className: "SmpSkeletonButton"
           })]
-        }, HS)))
+        }, Fk)))
       })
     }
 
-    function gb(SS) {
+    function IT(kk) {
       let {
-        title: HS,
-        children: gS
-      } = SS;
-      return (0, fS.jsxs)("div", {
+        title: Fk,
+        children: Ik
+      } = kk;
+      return (0, tk.jsxs)("div", {
         className: "SmpEmpty",
-        children: [(0, fS.jsx)("b", {
-          children: HS
-        }), gS && (0, fS.jsx)("small", {
-          children: gS
+        children: [(0, tk.jsx)("b", {
+          children: Fk
+        }), Ik && (0, tk.jsx)("small", {
+          children: Ik
         })]
       })
     }
 
-    function tb(SS) {
+    function XT(kk) {
       let {
-        entry: HS
-      } = SS;
-      return (0, fS.jsx)(gb, {
-        title: (0, fS.jsx)(zt.c, {
-          text: HS.item.customTitle
+        entry: Fk
+      } = kk;
+      return (0, tk.jsx)(IT, {
+        title: (0, tk.jsx)(NX.c, {
+          text: Fk.item.customTitle
         }),
-        children: (0, fS.jsx)(zt.c, {
-          text: HS.item.description
+        children: (0, tk.jsx)(NX.c, {
+          text: Fk.item.description
         })
       })
     }
 
-    function bb(SS) {
-      return (0, fS.jsx)(mt.d, {
-        ...SS,
-        className: XS()("SmpChoice", SS.className),
+    function TT(kk) {
+      return (0, tk.jsx)(rX.b, {
+        ...kk,
+        className: ik()("SmpChoice", kk.className),
         reselectable: !0
       })
     }
 
-    function Xb() {
-      return (0, fS.jsx)("span", {
+    function iT() {
+      return (0, tk.jsx)("span", {
         className: "SmpLoader",
-        children: (0, fS.jsx)(wS.c, {})
+        children: (0, tk.jsx)(sk.c, {})
       })
     }
 
-    function xb(SS) {
+    function yT(kk) {
       let {
-        value: HS,
-        onChange: gS,
-        min: bS = 1,
-        max: XS,
-        step: xS = 1,
-        label: NS
-      } = SS;
-      const qS = (0, tS.useRef)(null),
-        uS = (0, tS.useRef)(HS);
-      uS.current = HS;
-      const [IS, kS] = (0, tS.useState)(null), aS = SS => Math.max(bS, Math.min(XS, Math.floor(SS))), KS = SS => {
-        const HS = uS.current,
-          tS = "function" === typeof xS ? xS(HS, SS) : xS,
-          bS = aS(HS + tS * SS);
-        uS.current = bS, gS(bS)
+        value: Fk,
+        onChange: Ik,
+        min: Tk = 1,
+        max: ik,
+        step: yk = 1,
+        label: lk
+      } = kk;
+      const ak = (0, Xk.useRef)(null),
+        qk = (0, Xk.useRef)(Fk);
+      qk.current = Fk;
+      const [Lk, Zk] = (0, Xk.useState)(null), jk = kk => Math.max(Tk, Math.min(ik, Math.floor(kk))), ek = kk => {
+        const Fk = qk.current,
+          Xk = "function" === typeof yk ? yk(Fk, kk) : yk,
+          Tk = jk(Fk + Xk * kk);
+        qk.current = Tk, Ik(Tk)
       };
-      (0, tS.useEffect)((() => {
-        if (null === IS) return;
-        let SS;
-        const HS = () => {
-            kS(null)
+      (0, Xk.useEffect)((() => {
+        if (null === Lk) return;
+        let kk;
+        const Fk = () => {
+            Zk(null)
           },
-          gS = setTimeout((() => {
-            SS = setInterval((() => {
-              KS(IS);
-              const SS = uS.current;
-              (IS > 0 ? SS >= XS : SS <= bS) && HS()
+          Ik = setTimeout((() => {
+            kk = setInterval((() => {
+              ek(Lk);
+              const kk = qk.current;
+              (Lk > 0 ? kk >= ik : kk <= Tk) && Fk()
             }), 70)
           }), 380);
-        return window.addEventListener("pointerup", HS), window.addEventListener("pointercancel", HS), window.addEventListener("blur", HS), () => {
-          clearTimeout(gS), clearInterval(SS), window.removeEventListener("pointerup", HS), window.removeEventListener("pointercancel", HS), window.removeEventListener("blur", HS)
+        return window.addEventListener("pointerup", Fk), window.addEventListener("pointercancel", Fk), window.addEventListener("blur", Fk), () => {
+          clearTimeout(Ik), clearInterval(kk), window.removeEventListener("pointerup", Fk), window.removeEventListener("pointercancel", Fk), window.removeEventListener("blur", Fk)
         }
-      }), [IS]), (0, tS.useEffect)((() => {
-        const SS = qS.current;
-        SS && document.activeElement !== SS && SS.value !== String(HS) && (SS.value = String(HS))
-      }), [HS]), (0, tS.useEffect)((() => {
-        const SS = qS.current;
-        if (!SS) return;
-        const HS = () => {
-          SS.value = String(uS.current)
+      }), [Lk]), (0, Xk.useEffect)((() => {
+        const kk = ak.current;
+        kk && document.activeElement !== kk && kk.value !== String(Fk) && (kk.value = String(Fk))
+      }), [Fk]), (0, Xk.useEffect)((() => {
+        const kk = ak.current;
+        if (!kk) return;
+        const Fk = () => {
+          kk.value = String(qk.current)
         };
-        return SS.addEventListener("blur", HS), () => {
-          SS.removeEventListener("blur", HS)
+        return kk.addEventListener("blur", Fk), () => {
+          kk.removeEventListener("blur", Fk)
         }
       }), []);
-      const jS = SS => (0, fS.jsx)("button", {
+      const wk = kk => (0, tk.jsx)("button", {
         type: "button",
         className: "SmpStepButton",
-        "aria-label": `${SS>0?"More":"Less"} ${NS}`,
-        disabled: SS > 0 ? HS >= XS : HS <= bS,
-        onPointerDown: HS => {
-          0 === HS.button && (KS(SS), kS(SS))
+        "aria-label": `${kk>0?"More":"Less"} ${lk}`,
+        disabled: kk > 0 ? Fk >= ik : Fk <= Tk,
+        onPointerDown: Fk => {
+          0 === Fk.button && (ek(kk), Zk(kk))
         },
-        onKeyDown: HS => {
-          "Enter" !== HS.key && " " !== HS.key || KS(SS)
+        onKeyDown: Fk => {
+          "Enter" !== Fk.key && " " !== Fk.key || ek(kk)
         },
-        onContextMenu: SS => {
-          SS.preventDefault()
+        onContextMenu: kk => {
+          kk.preventDefault()
         },
-        children: SS > 0 ? "+" : "\u2212"
+        children: kk > 0 ? "+" : "\u2212"
       });
-      return (0, fS.jsxs)("div", {
+      return (0, tk.jsxs)("div", {
         className: "SmpStepper",
-        children: [jS(-1), (0, fS.jsx)(DS.e, {
+        children: [wk(-1), (0, tk.jsx)(Qk.c, {
           className: "SmpStepperInput",
-          domRef: qS,
-          defaultValue: String(HS),
-          ariaLabel: NS,
+          domRef: ak,
+          defaultValue: String(Fk),
+          ariaLabel: lk,
           type: "text",
           blurOnEnter: !0,
-          onValueChange: SS => {
-            const HS = SS.replace(/[^\d]/g, "");
-            qS.current && HS !== SS && (qS.current.value = HS), "" !== HS && gS(aS(Number(HS)))
+          onValueChange: kk => {
+            const Fk = kk.replace(/[^\d]/g, "");
+            ak.current && Fk !== kk && (ak.current.value = Fk), "" !== Fk && Ik(jk(Number(Fk)))
           }
-        }), jS(1)]
+        }), wk(1)]
       })
     }
 
-    function Nb(SS) {
-      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, SS))) - 1))
+    function lT(kk) {
+      return Math.max(1, 10 ** Math.max(0, Math.floor(Math.log10(Math.max(1, kk))) - 1))
     }
-    var qb = gS(34248),
-      ub = gS(1327);
-    const Ib = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
-    ub.v, WS.Cc.length;
+    var aT = Ik(34193),
+      qT = Ik(1231);
+    const LT = ["building", "colours", "nature", "decoration", "utility", "tools", "combat", "food", "mobs", "materials", "worldTools"];
+    qT.A, Nk.Mc.length;
     new Map;
-    var fb = gS(3437);
+    var tT = Ik(3229);
 
-    function kb(SS, HS) {
-      var gS;
-      return HS && (null === (gS = SS[HS]) || void 0 === gS ? void 0 : gS.smp) || null
+    function ZT(kk, Fk) {
+      var Ik;
+      return Fk && (null === (Ik = kk[Fk]) || void 0 === Ik ? void 0 : Ik.smp) || null
     }
 
-    function ab(SS, HS) {
-      const gS = [];
-      for (const bS of Tt(SS)) {
-        var tS;
-        const XS = SS[bS];
-        (null === (tS = XS.smp) || void 0 === tS ? void 0 : tS.kind) === HS && gS.push({
-          key: bS,
-          item: XS,
-          meta: XS.smp
+    function jT(kk, Fk) {
+      const Ik = [];
+      for (const Tk of gX(kk)) {
+        var Xk;
+        const ik = kk[Tk];
+        (null === (Xk = ik.smp) || void 0 === Xk ? void 0 : Xk.kind) === Fk && Ik.push({
+          key: Tk,
+          item: ik,
+          meta: ik.smp
         })
       }
-      return gS
+      return Ik
     }
 
-    function Kb(SS, HS) {
-      var gS;
-      return null !== (gS = ab(SS, HS)[0]) && void 0 !== gS ? gS : null
+    function eT(kk, Fk) {
+      var Ik;
+      return null !== (Ik = jT(kk, Fk)[0]) && void 0 !== Ik ? Ik : null
     }
-    const jb = "50% 0% 50% 0%",
-      Gb = [{
+    const wT = "50% 0% 50% 0%",
+      HT = [{
         divisor: 864e5,
         suffix: "d"
       }, {
@@ -3013,746 +3013,746 @@ export const modules = {
         suffix: "s"
       }];
 
-    function Cb(SS) {
-      const HS = SS - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
+    function JT(kk) {
+      const Fk = kk - (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now());
       for (const {
-          divisor: gS,
-          suffix: tS
+          divisor: Ik,
+          suffix: Xk
         }
-        of Gb)
-        if (HS >= gS) return `${Math.floor(HS/gS)}${tS}`;
+        of HT)
+        if (Fk >= Ik) return `${Math.floor(Fk/Ik)}${Xk}`;
       return "<1s"
     }
 
-    function nb(SS) {
-      const HS = SS.map(yt.c),
-        gS = [];
-      return HS.forEach(((SS, tS) => {
-        const bS = function(SS) {
-            const HS = SS.match(/\d+/);
-            return HS ? Number(HS[0]) : 0
-          }(SS),
-          XS = tS === HS.length - 1;
-        (XS || 1 === bS || 10 === bS || 100 === bS) && gS.push({
-          label: SS,
-          quantity: bS,
-          isAll: XS
+    function xT(kk) {
+      const Fk = kk.map(bX.e),
+        Ik = [];
+      return Fk.forEach(((kk, Xk) => {
+        const Tk = function(kk) {
+            const Fk = kk.match(/\d+/);
+            return Fk ? Number(Fk[0]) : 0
+          }(kk),
+          ik = Xk === Fk.length - 1;
+        (ik || 1 === Tk || 10 === Tk || 100 === Tk) && Ik.push({
+          label: kk,
+          quantity: Tk,
+          isAll: ik
         })
-      })), gS
+      })), Ik
     }
-    let Pb = null;
+    let PT = null;
 
-    function Qb(SS, HS) {
-      const gS = HS.trim().toLowerCase();
-      if (!gS) return [];
-      const tS = SS => {
-          if (SS === gS) return 0;
-          if (SS.startsWith(gS)) return 1;
-          const HS = SS.indexOf(gS);
-          return -1 === HS ? -1 : 2 + HS
+    function KT(kk, Fk) {
+      const Ik = Fk.trim().toLowerCase();
+      if (!Ik) return [];
+      const Xk = kk => {
+          if (kk === Ik) return 0;
+          if (kk.startsWith(Ik)) return 1;
+          const Fk = kk.indexOf(Ik);
+          return -1 === Fk ? -1 : 2 + Fk
         },
-        bS = [];
-      for (const NS of SS) {
-        const SS = [tS(NS.lowerLabel), tS(NS.lowerName)].filter((SS => -1 !== SS));
-        SS.length && bS.push({
-          item: NS,
-          rank: Math.min(...SS)
+        Tk = [];
+      for (const lk of kk) {
+        const kk = [Xk(lk.lowerLabel), Xk(lk.lowerName)].filter((kk => -1 !== kk));
+        kk.length && Tk.push({
+          item: lk,
+          rank: Math.min(...kk)
         })
       }
-      if (bS.length > 0) return bS.sort(((SS, HS) => SS.rank - HS.rank)).map((SS => SS.item));
-      const XS = [...gS],
-        xS = SS => {
-          let HS = 0;
-          for (const gS of XS) {
-            if (HS = SS.indexOf(gS, HS), -1 === HS) return !1;
-            HS++
+      if (Tk.length > 0) return Tk.sort(((kk, Fk) => kk.rank - Fk.rank)).map((kk => kk.item));
+      const ik = [...Ik],
+        yk = kk => {
+          let Fk = 0;
+          for (const Ik of ik) {
+            if (Fk = kk.indexOf(Ik, Fk), -1 === Fk) return !1;
+            Fk++
           }
           return !0
         };
-      return SS.filter((SS => xS(SS.lowerLabel) || xS(SS.lowerName)))
+      return kk.filter((kk => yk(kk.lowerLabel) || yk(kk.lowerName)))
     }
 
-    function Db(SS, HS) {
-      var gS;
-      return null !== (gS = null === SS || void 0 === SS ? void 0 : SS[HS]) && void 0 !== gS ? gS : HS
+    function QT(kk, Fk) {
+      var Ik;
+      return null !== (Ik = null === kk || void 0 === kk ? void 0 : kk[Fk]) && void 0 !== Ik ? Ik : Fk
     }
 
-    function wb(SS, HS) {
-      const gS = SS.userInput;
-      return void 0 !== HS && "dropdown" === (null === gS || void 0 === gS ? void 0 : gS.type) && gS.dropdownOptions.map(yt.c).includes(HS) ? HS : function(SS) {
-        const HS = SS.userInput;
-        if ("dropdown" !== (null === HS || void 0 === HS ? void 0 : HS.type) || 0 === HS.dropdownOptions.length) return null;
-        const gS = HS.dropdownOptions.map(yt.c);
-        return HS.initialValue && gS.includes(HS.initialValue) ? HS.initialValue : gS[gS.length - 1]
-      }(SS)
+    function sT(kk, Fk) {
+      const Ik = kk.userInput;
+      return void 0 !== Fk && "dropdown" === (null === Ik || void 0 === Ik ? void 0 : Ik.type) && Ik.dropdownOptions.map(bX.e).includes(Fk) ? Fk : function(kk) {
+        const Fk = kk.userInput;
+        if ("dropdown" !== (null === Fk || void 0 === Fk ? void 0 : Fk.type) || 0 === Fk.dropdownOptions.length) return null;
+        const Ik = Fk.dropdownOptions.map(bX.e);
+        return Fk.initialValue && Ik.includes(Fk.initialValue) ? Fk.initialValue : Ik[Ik.length - 1]
+      }(kk)
     }
 
-    function hb(SS) {
-      return void 0 === SS ? "" : JSON.stringify(SS)
+    function VT(kk) {
+      return void 0 === kk ? "" : JSON.stringify(kk)
     }
-    const Zb = (0, tS.createContext)(null);
+    const zT = (0, Xk.createContext)(null);
 
-    function Jb() {
-      return (0, tS.useContext)(Zb)
+    function ST() {
+      return (0, Xk.useContext)(zT)
     }
-    var Ob = gS(2845);
-    const db = (0, tS.memo)((function(SS) {
+    var oT = Ik(2637);
+    const vT = (0, Xk.memo)((function(kk) {
         let {
-          name: HS,
-          label: gS,
-          onPick: tS
-        } = SS;
-        return (0, fS.jsxs)("button", {
+          name: Fk,
+          label: Ik,
+          onPick: Xk
+        } = kk;
+        return (0, tk.jsxs)("button", {
           type: "button",
           className: "SmpCatalogueTile",
-          title: gS,
+          title: Ik,
           onClick: () => {
-            tS(HS)
+            Xk(Fk)
           },
-          children: [(0, fS.jsx)(rt, {
-            item: HS,
+          children: [(0, tk.jsx)(MX, {
+            item: Fk,
             size: "big"
-          }), (0, fS.jsx)("span", {
-            children: gS
+          }), (0, tk.jsx)("span", {
+            children: Ik
           })]
         })
       })),
-      cb = (0, tS.memo)((function(SS) {
+      ET = (0, Xk.memo)((function(kk) {
         let {
-          items: HS,
-          query: gS,
-          onPick: bS
-        } = SS;
+          items: Fk,
+          query: Ik,
+          onPick: Tk
+        } = kk;
         const {
-          t: XS
-        } = (0, xS.F)(), [NS, qS] = (0, tS.useState)(new Set), uS = (0, tS.useMemo)((() => function(SS) {
-          const HS = new Map;
-          for (const gS of SS) {
-            let SS = HS.get(gS.category);
-            SS || (SS = [], HS.set(gS.category, SS)), SS.push(gS)
+          t: ik
+        } = (0, yk.y)(), [lk, ak] = (0, Xk.useState)(new Set), qk = (0, Xk.useMemo)((() => function(kk) {
+          const Fk = new Map;
+          for (const Ik of kk) {
+            let kk = Fk.get(Ik.category);
+            kk || (kk = [], Fk.set(Ik.category, kk)), kk.push(Ik)
           }
-          return [...Ib, "other"].filter((SS => HS.has(SS))).map((SS => ({
-            category: SS,
-            items: HS.get(SS)
+          return [...LT, "other"].filter((kk => Fk.has(kk))).map((kk => ({
+            category: kk,
+            items: Fk.get(kk)
           })))
-        }(HS)), [HS]), IS = (0, tS.useMemo)((() => Qb(HS, gS).slice(0, 60)), [HS, gS]);
-        return gS.trim() ? 0 === IS.length ? (0, fS.jsx)(gb, {
-          title: XS("smpShop:noItemsFound", {
-            query: gS.trim()
+        }(Fk)), [Fk]), Lk = (0, Xk.useMemo)((() => KT(Fk, Ik).slice(0, 60)), [Fk, Ik]);
+        return Ik.trim() ? 0 === Lk.length ? (0, tk.jsx)(IT, {
+          title: ik("smpShop:noItemsFound", {
+            query: Ik.trim()
           }),
-          children: XS("smpShop:tryShorterName")
-        }) : (0, fS.jsx)(Ob.d, {
+          children: ik("smpShop:tryShorterName")
+        }) : (0, tk.jsx)(oT.b, {
           lazyLoadedClassName: "SmpCatalogueGrid",
           observerRoot: "SmpBody",
-          rootMargin: jb,
-          observerUpdateDeps: [gS],
-          children: IS.map((SS => (0, fS.jsx)(db, {
-            name: SS.name,
-            label: SS.label,
-            onPick: bS
-          }, SS.name)))
-        }) : (0, fS.jsx)(fS.Fragment, {
-          children: uS.map((SS => {
+          rootMargin: wT,
+          observerUpdateDeps: [Ik],
+          children: Lk.map((kk => (0, tk.jsx)(vT, {
+            name: kk.name,
+            label: kk.label,
+            onPick: Tk
+          }, kk.name)))
+        }) : (0, tk.jsx)(tk.Fragment, {
+          children: qk.map((kk => {
             let {
-              category: HS,
-              items: gS
-            } = SS;
-            const tS = NS.has(HS) || gS.length <= 48,
-              xS = tS ? gS : gS.slice(0, 48);
-            return (0, fS.jsxs)("section", {
+              category: Fk,
+              items: Ik
+            } = kk;
+            const Xk = lk.has(Fk) || Ik.length <= 48,
+              yk = Xk ? Ik : Ik.slice(0, 48);
+            return (0, tk.jsxs)("section", {
               className: "SmpCatalogueSection",
-              children: [(0, fS.jsxs)("h4", {
-                children: [XS("other" === HS ? "smpShop:otherItems" : `creativeInventory:${HS}`), !tS && (0, fS.jsx)("button", {
+              children: [(0, tk.jsxs)("h4", {
+                children: [ik("other" === Fk ? "smpShop:otherItems" : `creativeInventory:${Fk}`), !Xk && (0, tk.jsx)("button", {
                   type: "button",
                   className: "SmpLink",
                   onClick: () => {
-                    qS(new Set([...NS, HS]))
+                    ak(new Set([...lk, Fk]))
                   },
-                  children: XS("smpShop:showAll", {
-                    count: gS.length
+                  children: ik("smpShop:showAll", {
+                    count: Ik.length
                   })
                 })]
-              }), (0, fS.jsx)(Ob.d, {
+              }), (0, tk.jsx)(oT.b, {
                 lazyLoadedClassName: "SmpCatalogueGrid",
                 observerRoot: "SmpBody",
-                rootMargin: jb,
-                observerUpdateDeps: [tS],
-                children: xS.map((SS => (0, fS.jsx)(db, {
-                  name: SS.name,
-                  label: SS.label,
-                  onPick: bS
-                }, SS.name)))
+                rootMargin: wT,
+                observerUpdateDeps: [Xk],
+                children: yk.map((kk => (0, tk.jsx)(vT, {
+                  name: kk.name,
+                  label: kk.label,
+                  onPick: Tk
+                }, kk.name)))
               })]
-            }, HS)
+            }, Fk)
           }))
         })
       }));
 
-    function vb(SS, HS) {
+    function OT(kk, Fk) {
       const {
-        searched: gS,
-        shown: bS,
-        searchFor: XS,
-        loading: xS
-      } = function(SS, HS) {
-        var gS;
-        const bS = Jb(),
-          [XS, xS] = (0, tS.useState)(void 0),
-          NS = (0, tS.useRef)(void 0),
-          qS = (0, tS.useRef)(0),
-          uS = (0, tS.useRef)(void 0),
-          IS = null !== (gS = null === SS || void 0 === SS ? void 0 : SS.meta.item) && void 0 !== gS ? gS : null,
-          fS = !!SS && bS.isPending(SS.key);
-        (0, tS.useEffect)((() => {
-          if (!SS || fS || !HS || void 0 === XS || XS === IS) return;
-          const gS = XS === NS.current && bS.gaveUpAt(SS.key) > qS.current && uS.current !== XS;
-          (XS !== NS.current || gS) && bS.act(SS.key, null !== XS && void 0 !== XS ? XS : "*", gS) && (gS && (uS.current = XS), NS.current = XS, qS.current = Date.now())
-        }), [SS, fS, HS, XS, IS, bS]);
-        const kS = (0, tS.useCallback)((SS => {
-            NS.current = void 0, uS.current = void 0, xS(SS)
+        searched: Ik,
+        shown: Tk,
+        searchFor: ik,
+        loading: yk
+      } = function(kk, Fk) {
+        var Ik;
+        const Tk = ST(),
+          [ik, yk] = (0, Xk.useState)(void 0),
+          lk = (0, Xk.useRef)(void 0),
+          ak = (0, Xk.useRef)(0),
+          qk = (0, Xk.useRef)(void 0),
+          Lk = null !== (Ik = null === kk || void 0 === kk ? void 0 : kk.meta.item) && void 0 !== Ik ? Ik : null,
+          tk = !!kk && Tk.isPending(kk.key);
+        (0, Xk.useEffect)((() => {
+          if (!kk || tk || !Fk || void 0 === ik || ik === Lk) return;
+          const Ik = ik === lk.current && Tk.gaveUpAt(kk.key) > ak.current && qk.current !== ik;
+          (ik !== lk.current || Ik) && Tk.act(kk.key, null !== ik && void 0 !== ik ? ik : "*", Ik) && (Ik && (qk.current = ik), lk.current = ik, ak.current = Date.now())
+        }), [kk, tk, Fk, ik, Lk, Tk]);
+        const Zk = (0, Xk.useCallback)((kk => {
+            lk.current = void 0, qk.current = void 0, yk(kk)
           }), []),
-          aS = void 0 !== XS && XS !== IS && (fS || NS.current !== XS);
+          jk = void 0 !== ik && ik !== Lk && (tk || lk.current !== ik);
         return {
-          searched: IS,
-          shown: aS ? XS : IS,
-          searchFor: kS,
-          loading: aS || fS || null !== IS && !HS
+          searched: Lk,
+          shown: jk ? ik : Lk,
+          searchFor: Zk,
+          loading: jk || tk || null !== Lk && !Fk
         }
-      }(SS, HS), NS = (0, tS.useMemo)((() => function() {
-        var SS;
-        let HS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
-          gS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-          tS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const bS = `${(0,fb.g)()}\x1f${HS.join("\x1e")}\x1f${gS.join("\x1e")}\x1f${JSON.stringify(tS)}`;
-        if ((null === (SS = Pb) || void 0 === SS ? void 0 : SS.key) === bS) return Pb.items;
-        const XS = new Set(gS),
-          xS = new Set,
-          NS = [],
-          qS = (SS, HS) => {
-            var gS;
-            if (!SS || xS.has(SS) || XS.has(SS)) return;
-            xS.add(SS);
-            const bS = null !== (gS = tS[SS]) && void 0 !== gS ? gS : SS;
-            NS.push({
-              name: SS,
-              label: bS,
-              lowerLabel: bS.toLowerCase(),
-              lowerName: SS.toLowerCase(),
-              category: HS
+      }(kk, Fk), lk = (0, Xk.useMemo)((() => function() {
+        var kk;
+        let Fk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
+          Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+          Xk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        const Tk = `${(0,tT.k)()}\x1f${Fk.join("\x1e")}\x1f${Ik.join("\x1e")}\x1f${JSON.stringify(Xk)}`;
+        if ((null === (kk = PT) || void 0 === kk ? void 0 : kk.key) === Tk) return PT.items;
+        const ik = new Set(Ik),
+          yk = new Set,
+          lk = [],
+          ak = (kk, Fk) => {
+            var Ik;
+            if (!kk || yk.has(kk) || ik.has(kk)) return;
+            yk.add(kk);
+            const Tk = null !== (Ik = Xk[kk]) && void 0 !== Ik ? Ik : kk;
+            lk.push({
+              name: kk,
+              label: Tk,
+              lowerLabel: Tk.toLowerCase(),
+              lowerName: kk.toLowerCase(),
+              category: Fk
             })
           };
-        for (const IS of (0, qb.creativeItemIds)()) {
-          var uS;
-          (0, qb.itemIsDisabled)(IS, !0, !0, !1) || (0, qb.showOnlyInCreativeSearch)(IS) || qS((0, fb.e)(IS), null !== (uS = (0, qb.creativeCategoryOf)(IS)) && void 0 !== uS ? uS : "other")
+        for (const Lk of (0, aT.creativeItemIds)()) {
+          var qk;
+          (0, aT.itemIsDisabled)(Lk, !0, !0, !1) || (0, aT.showOnlyInCreativeSearch)(Lk) || ak((0, tT.i)(Lk), null !== (qk = (0, aT.creativeCategoryOf)(Lk)) && void 0 !== qk ? qk : "other")
         }
-        for (const IS of HS) qS(IS, "other");
-        return Pb = {
-          key: bS,
-          items: NS
-        }, NS
-      }(null === SS || void 0 === SS ? void 0 : SS.meta.extra, null === SS || void 0 === SS ? void 0 : SS.meta.excluded, null === SS || void 0 === SS ? void 0 : SS.meta.names)), [null === SS || void 0 === SS ? void 0 : SS.meta.extra, null === SS || void 0 === SS ? void 0 : SS.meta.excluded, null === SS || void 0 === SS ? void 0 : SS.meta.names]), [qS, uS] = (0, tS.useState)(""), [IS, fS] = (0, tS.useState)(0), [kS, aS] = (0, tS.useState)("recent"), KS = (0, tS.useCallback)((SS => {
-        uS(""), fS((SS => SS + 1)), XS(SS)
-      }), [XS]), jS = "browse" === kS || "" !== qS.trim();
+        for (const Lk of Fk) ak(Lk, "other");
+        return PT = {
+          key: Tk,
+          items: lk
+        }, lk
+      }(null === kk || void 0 === kk ? void 0 : kk.meta.extra, null === kk || void 0 === kk ? void 0 : kk.meta.excluded, null === kk || void 0 === kk ? void 0 : kk.meta.names)), [null === kk || void 0 === kk ? void 0 : kk.meta.extra, null === kk || void 0 === kk ? void 0 : kk.meta.excluded, null === kk || void 0 === kk ? void 0 : kk.meta.names]), [ak, qk] = (0, Xk.useState)(""), [Lk, tk] = (0, Xk.useState)(0), [Zk, jk] = (0, Xk.useState)("recent"), ek = (0, Xk.useCallback)((kk => {
+        qk(""), tk((kk => kk + 1)), ik(kk)
+      }), [ik]), wk = "browse" === Zk || "" !== ak.trim();
       return {
-        searched: gS,
-        shown: bS,
-        searchFor: XS,
-        loading: xS,
-        catalogue: NS,
-        names: null === SS || void 0 === SS ? void 0 : SS.meta.names,
-        query: qS,
-        setQuery: uS,
-        searchBoxKey: IS,
-        pickItem: KS,
-        setView: aS,
-        browsing: jS
+        searched: Ik,
+        shown: Tk,
+        searchFor: ik,
+        loading: yk,
+        catalogue: lk,
+        names: null === kk || void 0 === kk ? void 0 : kk.meta.names,
+        query: ak,
+        setQuery: qk,
+        searchBoxKey: Lk,
+        pickItem: ek,
+        setView: jk,
+        browsing: wk
       }
     }
 
-    function Eb(SS) {
+    function nT(kk) {
       let {
-        browser: HS,
-        children: gS
-      } = SS;
+        browser: Fk,
+        children: Ik
+      } = kk;
       const {
-        t: tS
-      } = (0, xS.F)(), bS = Jb();
-      return (0, fS.jsxs)("div", {
+        t: Xk
+      } = (0, yk.y)(), Tk = ST();
+      return (0, tk.jsxs)("div", {
         className: "SmpTopBar",
-        children: [(0, fS.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "SmpSearch",
-          children: (0, fS.jsx)(DS.e, {
+          children: (0, tk.jsx)(Qk.c, {
             className: "SmpSearchInput",
-            placeholderText: tS("smpShop:searchPlaceholder"),
-            defaultValue: HS.query,
-            onValueChange: SS => {
-              HS.setQuery(SS), HS.searched && SS.trim() && HS.searchFor(null)
+            placeholderText: Xk("smpShop:searchPlaceholder"),
+            defaultValue: Fk.query,
+            onValueChange: kk => {
+              Fk.setQuery(kk), Fk.searched && kk.trim() && Fk.searchFor(null)
             },
             blurOnEnter: !0,
             onEnter: () => {
-              const SS = Qb(HS.catalogue, HS.query)[0];
-              SS ? HS.pickItem(SS.name) : HS.query.trim() && bS.notify(tS("smpShop:noItemsFound", {
-                query: HS.query.trim()
+              const kk = KT(Fk.catalogue, Fk.query)[0];
+              kk ? Fk.pickItem(kk.name) : Fk.query.trim() && Tk.notify(Xk("smpShop:noItemsFound", {
+                query: Fk.query.trim()
               }))
             }
-          }, HS.searchBoxKey)
-        }), gS]
+          }, Fk.searchBoxKey)
+        }), Ik]
       })
     }
 
-    function Lb(SS) {
+    function GT(kk) {
       let {
-        browser: HS,
-        recentLabel: gS,
-        children: tS
-      } = SS;
+        browser: Fk,
+        recentLabel: Ik,
+        children: Xk
+      } = kk;
       const {
-        t: bS
-      } = (0, xS.F)();
-      return (0, fS.jsxs)("div", {
+        t: Tk
+      } = (0, yk.y)();
+      return (0, tk.jsxs)("div", {
         className: "SmpViewBar",
-        children: [(0, fS.jsx)(bb, {
+        children: [(0, tk.jsx)(TT, {
           options: [{
             value: "recent",
-            label: gS
+            label: Ik
           }, {
             value: "browse",
-            label: bS("smpShop:browseItems")
+            label: Tk("smpShop:browseItems")
           }],
-          value: HS.browsing ? "browse" : "recent",
-          onChange: HS.setView,
-          ariaLabel: bS("smpShop:show")
-        }), !HS.browsing && tS]
+          value: Fk.browsing ? "browse" : "recent",
+          onChange: Fk.setView,
+          ariaLabel: Tk("smpShop:show")
+        }), !Fk.browsing && Xk]
       })
     }
 
-    function Yb(SS) {
+    function pT(kk) {
       let {
-        item: HS,
-        names: gS,
-        summary: tS,
-        onBack: bS,
-        children: XS
-      } = SS;
+        item: Fk,
+        names: Ik,
+        summary: Xk,
+        onBack: Tk,
+        children: ik
+      } = kk;
       const {
-        t: NS
-      } = (0, xS.F)();
-      return (0, fS.jsxs)("div", {
+        t: lk
+      } = (0, yk.y)();
+      return (0, tk.jsxs)("div", {
         className: "SmpItemHeader",
-        children: [(0, fS.jsx)(uS.d, {
+        children: [(0, tk.jsx)(qk.c, {
           className: "SmpBackButton",
-          onClick: bS,
-          children: NS("general:back")
-        }), (0, fS.jsx)(rt, {
-          item: HS,
+          onClick: Tk,
+          children: lk("general:back")
+        }), (0, tk.jsx)(MX, {
+          item: Fk,
           size: "big"
-        }), (0, fS.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "SmpItemHeaderText",
-          children: [(0, fS.jsx)("b", {
-            children: Db(gS, HS)
-          }), tS && (0, fS.jsx)("small", {
-            children: tS
+          children: [(0, tk.jsx)("b", {
+            children: QT(Ik, Fk)
+          }), Xk && (0, tk.jsx)("small", {
+            children: Xk
           })]
-        }), XS]
+        }), ik]
       })
     }
 
-    function Ab(SS) {
+    function uT(kk) {
       let {
-        browser: HS,
-        className: gS,
-        action: tS,
-        above: bS,
-        list: xS,
-        summary: NS,
-        recentLabel: qS,
-        listControls: uS,
-        onBack: IS
-      } = SS;
-      return (0, fS.jsxs)("div", {
-        className: XS()("SmpScreen", gS),
-        children: [(0, fS.jsx)(Eb, {
-          browser: HS,
-          children: tS
-        }), HS.shown && (0, fS.jsx)(Yb, {
-          item: HS.shown,
-          names: HS.names,
-          summary: !HS.loading && NS,
+        browser: Fk,
+        className: Ik,
+        action: Xk,
+        above: Tk,
+        list: yk,
+        summary: lk,
+        recentLabel: ak,
+        listControls: qk,
+        onBack: Lk
+      } = kk;
+      return (0, tk.jsxs)("div", {
+        className: ik()("SmpScreen", Ik),
+        children: [(0, tk.jsx)(nT, {
+          browser: Fk,
+          children: Xk
+        }), Fk.shown && (0, tk.jsx)(pT, {
+          item: Fk.shown,
+          names: Fk.names,
+          summary: !Fk.loading && lk,
           onBack: () => {
-            null === IS || void 0 === IS || IS(), HS.searchFor(null)
+            null === Lk || void 0 === Lk || Lk(), Fk.searchFor(null)
           },
-          children: uS
-        }), bS, HS.shown ? xS : (0, fS.jsxs)(fS.Fragment, {
-          children: [(0, fS.jsx)(Lb, {
-            browser: HS,
-            recentLabel: qS,
-            children: uS
-          }), HS.browsing ? (0, fS.jsx)(cb, {
-            items: HS.catalogue,
-            query: HS.query,
-            onPick: HS.pickItem
-          }) : xS]
+          children: qk
+        }), Tk, Fk.shown ? yk : (0, tk.jsxs)(tk.Fragment, {
+          children: [(0, tk.jsx)(GT, {
+            browser: Fk,
+            recentLabel: ak,
+            children: qk
+          }), Fk.browsing ? (0, tk.jsx)(ET, {
+            items: Fk.catalogue,
+            query: Fk.query,
+            onPick: Fk.pickItem
+          }) : yk]
         })]
       })
     }
 
-    function yb(SS, HS) {
-      const gS = SS.map((SS => {
+    function bT(kk, Fk) {
+      const Ik = kk.map((kk => {
         let {
-          meta: HS
-        } = SS;
-        return HS.pricePerItem
+          meta: Fk
+        } = kk;
+        return Fk.pricePerItem
       }));
-      return "min" === HS ? Math.min(...gS) : Math.max(...gS)
+      return "min" === Fk ? Math.min(...Ik) : Math.max(...Ik)
     }
-    var Vb = gS(6780);
-    const ib = (0, tS.memo)((function(SS) {
-      var HS;
+    var RT = Ik(6566);
+    const UT = (0, Xk.memo)((function(kk) {
+      var Fk;
       const {
-        t: gS
-      } = (0, xS.F)(), tS = null === SS.seller, bS = SS.quantity * SS.pricePerItem;
-      return (0, fS.jsxs)("div", {
-        className: SS.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
-        children: [(0, fS.jsx)(rt, {
-          item: SS.item,
-          amount: SS.quantity,
-          size: SS.grid ? "big" : "normal",
-          tier: SS.tier
-        }), (0, fS.jsxs)("div", {
+        t: Ik
+      } = (0, yk.y)(), Xk = null === kk.seller, Tk = kk.quantity * kk.pricePerItem;
+      return (0, tk.jsxs)("div", {
+        className: kk.grid ? "SmpListingCard" : "SmpRow SmpListingRow",
+        children: [(0, tk.jsx)(MX, {
+          item: kk.item,
+          amount: kk.quantity,
+          size: kk.grid ? "big" : "normal",
+          tier: kk.tier
+        }), (0, tk.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, fS.jsx)("b", {
-            children: (0, fS.jsx)(zt.c, {
-              text: null !== (HS = SS.title) && void 0 !== HS ? HS : `${SS.quantity}x ${SS.item}`
+          children: [(0, tk.jsx)("b", {
+            children: (0, tk.jsx)(NX.c, {
+              text: null !== (Fk = kk.title) && void 0 !== Fk ? Fk : `${kk.quantity}x ${kk.item}`
             })
-          }), (0, fS.jsxs)("small", {
+          }), (0, tk.jsxs)("small", {
             className: "SmpListingFacts",
-            children: [(0, fS.jsx)("span", {
-              children: tS ? gS("smpShop:you") : (0, fS.jsx)(zt.c, {
+            children: [(0, tk.jsx)("span", {
+              children: Xk ? Ik("smpShop:you") : (0, tk.jsx)(NX.c, {
                 text: [{
-                  entityName: SS.seller
+                  entityName: kk.seller
                 }]
               })
-            }), (0, fS.jsx)("span", {
-              children: gS("smpShop:timeLeft", {
-                time: Cb(SS.expiresAt)
+            }), (0, tk.jsx)("span", {
+              children: Ik("smpShop:timeLeft", {
+                time: JT(kk.expiresAt)
               })
             })]
           })]
-        }), (0, fS.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "SmpRowPrice",
-          children: [(0, fS.jsx)(Sb, {
-            amount: SS.pricePerItem
-          }), (0, fS.jsx)("small", {
-            children: gS("smpShop:each")
+          children: [(0, tk.jsx)(kT, {
+            amount: kk.pricePerItem
+          }), (0, tk.jsx)("small", {
+            children: Ik("smpShop:each")
           })]
-        }), (0, fS.jsx)(uS.g, {
+        }), (0, tk.jsx)(qk.d, {
           className: "SmpBuyButton",
-          disabled: tS || !SS.canAfford && !SS.busy,
-          loading: SS.busy,
+          disabled: Xk || !kk.canAfford && !kk.busy,
+          loading: kk.busy,
           onClick: () => {
-            SS.onBuy(SS.itemKey)
+            kk.onBuy(kk.itemKey)
           },
-          children: tS ? gS("smpShop:yours") : (0, fS.jsx)(Sb, {
-            amount: bS
+          children: Xk ? Ik("smpShop:yours") : (0, tk.jsx)(kT, {
+            amount: Tk
           })
         })]
       })
     }));
 
-    function Wb(SS) {
+    function CT(kk) {
       let {
-        view: HS,
-        onChange: gS
-      } = SS;
+        view: Fk,
+        onChange: Ik
+      } = kk;
       const {
-        t: tS
-      } = (0, xS.F)();
-      return (0, fS.jsx)(mt.d, {
+        t: Xk
+      } = (0, yk.y)();
+      return (0, tk.jsx)(rX.b, {
         className: "SmpChoice SmpViewToggle",
-        ariaLabel: tS("smpShop:layout"),
+        ariaLabel: Xk("smpShop:layout"),
         options: [{
           value: "list",
-          label: (0, fS.jsx)(NS.d, {
+          label: (0, tk.jsx)(lk.e, {
             name: "list"
           }),
-          ariaLabel: tS("smpShop:listView")
+          ariaLabel: Xk("smpShop:listView")
         }, {
           value: "grid",
-          label: (0, fS.jsx)(NS.d, {
+          label: (0, tk.jsx)(lk.e, {
             name: "grid-2"
           }),
-          ariaLabel: tS("smpShop:gridView")
+          ariaLabel: Xk("smpShop:gridView")
         }],
-        value: HS,
-        onChange: gS
+        value: Fk,
+        onChange: Ik
       })
     }
 
-    function zb(SS) {
+    function NT(kk) {
       let {
-        entries: HS,
-        view: gS
-      } = SS;
+        entries: Fk,
+        view: Ik
+      } = kk;
       const {
-        t: tS
-      } = (0, xS.F)(), bS = Jb(), XS = "grid" === gS;
-      return (0, fS.jsxs)(fS.Fragment, {
-        children: [!XS && (0, fS.jsxs)("div", {
+        t: Xk
+      } = (0, yk.y)(), Tk = ST(), ik = "grid" === Ik;
+      return (0, tk.jsxs)(tk.Fragment, {
+        children: [!ik && (0, tk.jsxs)("div", {
           className: "SmpColumns",
           "aria-hidden": "true",
-          children: [(0, fS.jsx)("span", {}), (0, fS.jsx)("span", {
-            children: tS("smpShop:columnItem")
-          }), (0, fS.jsx)("span", {
-            children: tS("smpShop:columnPriceEach")
-          }), (0, fS.jsx)("span", {
-            children: tS("smpShop:columnTotal")
+          children: [(0, tk.jsx)("span", {}), (0, tk.jsx)("span", {
+            children: Xk("smpShop:columnItem")
+          }), (0, tk.jsx)("span", {
+            children: Xk("smpShop:columnPriceEach")
+          }), (0, tk.jsx)("span", {
+            children: Xk("smpShop:columnTotal")
           })]
-        }), (0, fS.jsx)(Ob.d, {
-          lazyLoadedClassName: XS ? "SmpCardGrid" : "SmpList",
+        }), (0, tk.jsx)(oT.b, {
+          lazyLoadedClassName: ik ? "SmpCardGrid" : "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: jb,
-          observerUpdateDeps: [HS.length],
-          children: HS.map((SS => {
-            var HS, gS;
+          rootMargin: wT,
+          observerUpdateDeps: [Fk.length],
+          children: Fk.map((kk => {
+            var Fk, Ik;
             let {
-              key: tS,
-              item: xS,
-              meta: NS
-            } = SS;
-            const qS = NS.quantity * NS.pricePerItem;
-            return (0, fS.jsx)(ib, {
-              itemKey: tS,
-              item: NS.item,
-              title: xS.customTitle,
-              quantity: NS.quantity,
-              pricePerItem: NS.pricePerItem,
-              seller: NS.seller,
-              expiresAt: NS.expiresAt,
-              tier: null !== (HS = null === (gS = xS.enchant) || void 0 === gS ? void 0 : gS.tier) && void 0 !== HS ? HS : null,
-              busy: bS.isPending(tS) || null !== NS.seller && !1 === xS.canBuy,
-              canAfford: bS.canAfford(xS, qS),
-              grid: XS,
-              onBuy: bS.act
-            }, tS)
+              key: Xk,
+              item: yk,
+              meta: lk
+            } = kk;
+            const ak = lk.quantity * lk.pricePerItem;
+            return (0, tk.jsx)(UT, {
+              itemKey: Xk,
+              item: lk.item,
+              title: yk.customTitle,
+              quantity: lk.quantity,
+              pricePerItem: lk.pricePerItem,
+              seller: lk.seller,
+              expiresAt: lk.expiresAt,
+              tier: null !== (Fk = null === (Ik = yk.enchant) || void 0 === Ik ? void 0 : Ik.tier) && void 0 !== Fk ? Fk : null,
+              busy: Tk.isPending(Xk) || null !== lk.seller && !1 === yk.canBuy,
+              canAfford: Tk.canAfford(yk, ak),
+              grid: ik,
+              onBuy: Tk.act
+            }, Xk)
           }))
-        }, gS)]
+        }, Ik)]
       })
     }
-    const Ub = [1, 10, 100],
-      pb = [1, 10, 100, 999];
+    const cT = [1, 10, 100],
+      WT = [1, 10, 100, 999];
 
-    function sb(SS) {
-      var HS, gS, bS, qS, IS, kS, aS, KS, jS, GS;
+    function fT(kk) {
+      var Fk, Ik, Tk, ak, Lk, Zk, jk, ek, wk, Hk;
       const {
-        t: CS
-      } = (0, xS.F)(), nS = Jb(), {
-        creator: PS,
-        mode: QS
-      } = SS, [wS, hS] = (0, tS.useState)(null !== (HS = null === PS || void 0 === PS ? void 0 : PS.meta.item) && void 0 !== HS ? HS : null), [ZS, JS] = (0, tS.useState)(1), [OS, dS] = (0, tS.useState)(0), [cS, vS] = (0, tS.useState)(""), [ES, LS] = (0, tS.useState)(0), YS = (0, tS.useRef)(wS), AS = (0, tS.useRef)(!1), [yS, VS] = (0, tS.useState)(!1), iS = null !== (gS = null === PS || void 0 === PS ? void 0 : PS.meta.item) && void 0 !== gS ? gS : null, WS = null !== (bS = null === PS || void 0 === PS ? void 0 : PS.meta.owned) && void 0 !== bS ? bS : 0;
-      (0, tS.useEffect)((() => {
-        SS.searching || null === iS || iS === YS.current || (YS.current = iS, AS.current = !1, hS(iS), dS(0), JS("list" === QS ? Math.max(1, WS) : 1))
-      }), [iS, SS.searching]);
-      const zS = !!PS && !!wS && PS.meta.item === wS,
-        US = zS ? PS.meta.owned : null !== (qS = null === (IS = SS.inventory) || void 0 === IS || null === (kS = IS.find((SS => SS.item === wS))) || void 0 === kS ? void 0 : kS.quantity) && void 0 !== qS ? qS : 0,
-        pS = "list" === QS ? Math.max(1, US) : 45954,
-        sS = null !== (aS = SS.prices[0]) && void 0 !== aS ? aS : null,
-        BS = SS.prices.length ? Math.round(SS.prices.reduce(((SS, HS) => SS + HS), 0) / SS.prices.length) : null,
-        MS = null === (KS = SS.inventory) || void 0 === KS || null === (jS = KS.find((SS => SS.item === wS))) || void 0 === jS ? void 0 : jS.sellPrice;
-      (0, tS.useEffect)((() => {
-        var SS;
-        zS && (JS((SS => "list" === QS ? Math.min(Math.max(1, SS), Math.max(1, US)) : SS)), AS.current || dS(null !== (SS = null !== sS && void 0 !== sS ? sS : BS) && void 0 !== SS ? SS : Math.max(1, null !== MS && void 0 !== MS ? MS : 1)))
-      }), [zS, US, wS, sS, BS]);
-      const FS = SS => {
-          AS.current = !0, dS(SS)
+        t: Jk
+      } = (0, yk.y)(), xk = ST(), {
+        creator: Pk,
+        mode: Kk
+      } = kk, [sk, Vk] = (0, Xk.useState)(null !== (Fk = null === Pk || void 0 === Pk ? void 0 : Pk.meta.item) && void 0 !== Fk ? Fk : null), [zk, Sk] = (0, Xk.useState)(1), [vk, Ek] = (0, Xk.useState)(0), [Ok, nk] = (0, Xk.useState)(""), [Gk, pk] = (0, Xk.useState)(0), uk = (0, Xk.useRef)(sk), bk = (0, Xk.useRef)(!1), [Rk, Uk] = (0, Xk.useState)(!1), Ck = null !== (Ik = null === Pk || void 0 === Pk ? void 0 : Pk.meta.item) && void 0 !== Ik ? Ik : null, Nk = null !== (Tk = null === Pk || void 0 === Pk ? void 0 : Pk.meta.owned) && void 0 !== Tk ? Tk : 0;
+      (0, Xk.useEffect)((() => {
+        kk.searching || null === Ck || Ck === uk.current || (uk.current = Ck, bk.current = !1, Vk(Ck), Ek(0), Sk("list" === Kk ? Math.max(1, Nk) : 1))
+      }), [Ck, kk.searching]);
+      const ck = !!Pk && !!sk && Pk.meta.item === sk,
+        Wk = ck ? Pk.meta.owned : null !== (ak = null === (Lk = kk.inventory) || void 0 === Lk || null === (Zk = Lk.find((kk => kk.item === sk))) || void 0 === Zk ? void 0 : Zk.quantity) && void 0 !== ak ? ak : 0,
+        fk = "list" === Kk ? Math.max(1, Wk) : 45954,
+        Bk = null !== (jk = kk.prices[0]) && void 0 !== jk ? jk : null,
+        dk = kk.prices.length ? Math.round(kk.prices.reduce(((kk, Fk) => kk + Fk), 0) / kk.prices.length) : null,
+        Yk = null === (ek = kk.inventory) || void 0 === ek || null === (wk = ek.find((kk => kk.item === sk))) || void 0 === wk ? void 0 : wk.sellPrice;
+      (0, Xk.useEffect)((() => {
+        var kk;
+        ck && (Sk((kk => "list" === Kk ? Math.min(Math.max(1, kk), Math.max(1, Wk)) : kk)), bk.current || Ek(null !== (kk = null !== Bk && void 0 !== Bk ? Bk : dk) && void 0 !== kk ? kk : Math.max(1, null !== Yk && void 0 !== Yk ? Yk : 1)))
+      }), [ck, Wk, sk, Bk, dk]);
+      const Ak = kk => {
+          bk.current = !0, Ek(kk)
         },
-        RS = HS => {
-          var gS, tS, bS;
-          YS.current = HS, AS.current = !1, VS(!1), vS(""), LS((SS => SS + 1)), hS(HS), dS(0), JS("list" === QS && null !== (gS = null === (tS = SS.inventory) || void 0 === tS || null === (bS = tS.find((SS => SS.item === HS))) || void 0 === bS ? void 0 : bS.quantity) && void 0 !== gS ? gS : 1), (null === PS || void 0 === PS ? void 0 : PS.meta.item) !== HS && SS.onPickItem(HS)
+        gk = Fk => {
+          var Ik, Xk, Tk;
+          uk.current = Fk, bk.current = !1, Uk(!1), nk(""), pk((kk => kk + 1)), Vk(Fk), Ek(0), Sk("list" === Kk && null !== (Ik = null === (Xk = kk.inventory) || void 0 === Xk || null === (Tk = Xk.find((kk => kk.item === Fk))) || void 0 === Tk ? void 0 : Tk.quantity) && void 0 !== Ik ? Ik : 1), (null === Pk || void 0 === Pk ? void 0 : Pk.meta.item) !== Fk && kk.onPickItem(Fk)
         },
-        TS = ZS * OS,
-        oS = "list" === QS && null !== PS && void 0 !== PS && PS.meta.fee ? function(SS, HS) {
-          const gS = Math.max(0, HS - SS.taxFreeAllowance);
-          return Math.ceil(Math.round(gS * SS.rate * 1e6) / 1e6)
-        }(PS.meta.fee, TS) : 0,
-        lS = !!PS && nS.isPending(PS.key),
-        mS = zS && !SS.searching && ZS >= 1 && OS >= 1 && ("order" === QS || US >= ZS) && !lS,
-        eS = !!wS && !zS && !SS.searching && ZS >= 1 && OS >= 1,
-        rS = () => {
-          mS ? nS.act(PS.key, `${ZS}|${OS}`) : eS && (SS.onPickItem(wS), VS(!0))
+        mk = zk * vk,
+        hk = "list" === Kk && null !== Pk && void 0 !== Pk && Pk.meta.fee ? function(kk, Fk) {
+          const Ik = Math.max(0, Fk - kk.taxFreeAllowance);
+          return Math.ceil(Math.round(Ik * kk.rate * 1e6) / 1e6)
+        }(Pk.meta.fee, mk) : 0,
+        rk = !!Pk && xk.isPending(Pk.key),
+        Dk = ck && !kk.searching && zk >= 1 && vk >= 1 && ("order" === Kk || Wk >= zk) && !rk,
+        Mk = !!sk && !ck && !kk.searching && zk >= 1 && vk >= 1,
+        kF = () => {
+          Dk ? xk.act(Pk.key, `${zk}|${vk}`) : Mk && (kk.onPickItem(sk), Uk(!0))
         };
-      (0, tS.useEffect)((() => {
-        yS && zS && !SS.searching && (VS(!1), rS())
-      }), [yS, zS, SS.searching]);
-      const SH = !!wS && !zS && (SS.searching || yS),
-        HH = wS ? Db(SS.names, wS) : "",
-        gH = (0, tS.useMemo)((() => Qb(SS.catalogue, cS).slice(0, 8)), [SS.catalogue, cS]),
-        tH = ("list" === QS ? Ub.filter((SS => SS < US)) : pb).map((SS => ({
-          value: SS,
-          label: String(SS)
+      (0, Xk.useEffect)((() => {
+        Rk && ck && !kk.searching && (Uk(!1), kF())
+      }), [Rk, ck, kk.searching]);
+      const FF = !!sk && !ck && (kk.searching || Rk),
+        IF = sk ? QT(kk.names, sk) : "",
+        XF = (0, Xk.useMemo)((() => KT(kk.catalogue, Ok).slice(0, 8)), [kk.catalogue, Ok]),
+        TF = ("list" === Kk ? cT.filter((kk => kk < Wk)) : WT).map((kk => ({
+          value: kk,
+          label: String(kk)
         })));
-      "list" === QS && US > 0 && tH.push({
-        value: US,
-        label: CS("smpShop:all", {
-          count: US
+      "list" === Kk && Wk > 0 && TF.push({
+        value: Wk,
+        label: Jk("smpShop:all", {
+          count: Wk
         })
       });
-      const bH = [];
-      return null !== sS && (sS > 1 && bH.push({
-        value: sS - 1,
-        label: CS("smpShop:undercut", {
-          price: lt(sS - 1)
+      const iF = [];
+      return null !== Bk && (Bk > 1 && iF.push({
+        value: Bk - 1,
+        label: Jk("smpShop:undercut", {
+          price: hX(Bk - 1)
         })
-      }), bH.push({
-        value: sS,
-        label: CS("smpShop:lowest", {
-          price: lt(sS)
+      }), iF.push({
+        value: Bk,
+        label: Jk("smpShop:lowest", {
+          price: hX(Bk)
         })
-      })), null !== BS && BS !== sS && bH.push({
-        value: BS,
-        label: CS("smpShop:average", {
-          price: lt(BS)
+      })), null !== dk && dk !== Bk && iF.push({
+        value: dk,
+        label: Jk("smpShop:average", {
+          price: hX(dk)
         })
-      }), (0, fS.jsxs)("div", {
+      }), (0, tk.jsxs)("div", {
         className: "SmpTradeForm",
-        children: [(0, fS.jsxs)("div", {
+        children: [(0, tk.jsxs)("div", {
           className: "SmpTradeFormHead",
-          children: [(0, fS.jsx)("b", {
-            children: CS("list" === QS ? "smpShop:sellOnMarket" : "smpShop:createOrder")
-          }), (0, fS.jsx)("button", {
+          children: [(0, tk.jsx)("b", {
+            children: Jk("list" === Kk ? "smpShop:sellOnMarket" : "smpShop:createOrder")
+          }), (0, tk.jsx)("button", {
             type: "button",
             className: "SmpIconButton",
-            "aria-label": CS("smpShop:close"),
-            onClick: SS.onClose,
-            children: (0, fS.jsx)(NS.d, {
+            "aria-label": Jk("smpShop:close"),
+            onClick: kk.onClose,
+            children: (0, tk.jsx)(lk.e, {
               name: "xmark"
             })
           })]
-        }), "list" === QS && (0, fS.jsx)("div", {
+        }), "list" === Kk && (0, tk.jsx)("div", {
           className: "SmpPicker",
           role: "listbox",
-          children: null !== (GS = SS.inventory) && void 0 !== GS && GS.length ? SS.inventory.map((SS => {
+          children: null !== (Hk = kk.inventory) && void 0 !== Hk && Hk.length ? kk.inventory.map((kk => {
             let {
-              item: HS,
-              quantity: gS
-            } = SS;
-            return (0, fS.jsx)("button", {
+              item: Fk,
+              quantity: Ik
+            } = kk;
+            return (0, tk.jsx)("button", {
               type: "button",
-              title: HS,
-              className: XS()("SmpPickerSlot", {
-                SmpPickerSlotOn: HS === wS
+              title: Fk,
+              className: ik()("SmpPickerSlot", {
+                SmpPickerSlotOn: Fk === sk
               }),
               onClick: () => {
-                RS(HS)
+                gk(Fk)
               },
-              children: (0, fS.jsx)(rt, {
-                item: HS,
-                amount: gS
+              children: (0, tk.jsx)(MX, {
+                item: Fk,
+                amount: Ik
               })
-            }, HS)
-          })) : (0, fS.jsx)("span", {
+            }, Fk)
+          })) : (0, tk.jsx)("span", {
             className: "SmpMuted",
-            children: CS("smpShop:nothingToList")
+            children: Jk("smpShop:nothingToList")
           })
-        }), ("list" === QS || !wS) && (0, fS.jsxs)("div", {
+        }), ("list" === Kk || !sk) && (0, tk.jsxs)("div", {
           className: "SmpItemSearch",
-          children: [(0, fS.jsx)(DS.e, {
+          children: [(0, tk.jsx)(Qk.c, {
             className: "SmpSearchInput",
-            placeholderText: CS("list" === QS ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
-            defaultValue: cS,
-            onValueChange: vS,
+            placeholderText: Jk("list" === Kk ? "smpShop:listSearchPlaceholder" : "smpShop:orderSearchPlaceholder"),
+            defaultValue: Ok,
+            onValueChange: nk,
             blurOnEnter: !0,
             onEnter: () => {
-              gH[0] && RS(gH[0].name)
+              XF[0] && gk(XF[0].name)
             }
-          }, ES), gH.length > 0 && (0, fS.jsx)("div", {
+          }, Gk), XF.length > 0 && (0, tk.jsx)("div", {
             className: "SmpPicker",
-            children: gH.map((SS => {
+            children: XF.map((kk => {
               let {
-                name: HS
-              } = SS;
-              return (0, fS.jsx)("button", {
+                name: Fk
+              } = kk;
+              return (0, tk.jsx)("button", {
                 type: "button",
-                title: HS,
-                className: XS()("SmpPickerSlot", {
-                  SmpPickerSlotOn: HS === wS
+                title: Fk,
+                className: ik()("SmpPickerSlot", {
+                  SmpPickerSlotOn: Fk === sk
                 }),
                 onClick: () => {
-                  RS(HS)
+                  gk(Fk)
                 },
-                children: (0, fS.jsx)(rt, {
-                  item: HS
+                children: (0, tk.jsx)(MX, {
+                  item: Fk
                 })
-              }, HS)
+              }, Fk)
             }))
           })]
-        }), wS && (0, fS.jsxs)(fS.Fragment, {
-          children: [(0, fS.jsxs)("div", {
+        }), sk && (0, tk.jsxs)(tk.Fragment, {
+          children: [(0, tk.jsxs)("div", {
             className: "SmpPickedName",
-            children: [HH, SH && (0, fS.jsx)(Xb, {})]
-          }), (0, fS.jsxs)("div", {
+            children: [IF, FF && (0, tk.jsx)(iT, {})]
+          }), (0, tk.jsxs)("div", {
             className: "SmpFormGrid",
-            children: [(0, fS.jsxs)("div", {
+            children: [(0, tk.jsxs)("div", {
               className: "SmpField",
-              children: [(0, fS.jsxs)("span", {
-                children: [CS("smpShop:quantity"), "list" === QS && zS && (0, fS.jsx)("small", {
-                  children: CS("smpShop:youHave", {
-                    count: US
+              children: [(0, tk.jsxs)("span", {
+                children: [Jk("smpShop:quantity"), "list" === Kk && ck && (0, tk.jsx)("small", {
+                  children: Jk("smpShop:youHave", {
+                    count: Wk
                   })
                 })]
-              }), (0, fS.jsx)(xb, {
-                value: ZS,
-                onChange: JS,
-                max: pS,
-                label: CS("smpShop:quantity")
-              }), (0, fS.jsx)(bb, {
-                options: tH,
-                value: ZS,
-                onChange: JS,
-                ariaLabel: CS("smpShop:quantity")
+              }), (0, tk.jsx)(yT, {
+                value: zk,
+                onChange: Sk,
+                max: fk,
+                label: Jk("smpShop:quantity")
+              }), (0, tk.jsx)(TT, {
+                options: TF,
+                value: zk,
+                onChange: Sk,
+                ariaLabel: Jk("smpShop:quantity")
               })]
-            }), (0, fS.jsxs)("div", {
+            }), (0, tk.jsxs)("div", {
               className: "SmpField",
-              children: [(0, fS.jsx)("span", {
-                children: CS("smpShop:pricePerItem")
-              }), (0, fS.jsx)(xb, {
-                value: Math.max(1, OS),
-                onChange: FS,
+              children: [(0, tk.jsx)("span", {
+                children: Jk("smpShop:pricePerItem")
+              }), (0, tk.jsx)(yT, {
+                value: Math.max(1, vk),
+                onChange: Ak,
                 max: 9999999,
-                step: Nb,
-                label: CS("smpShop:pricePerItem")
-              }), (0, fS.jsx)(bb, {
-                options: bH,
-                value: OS,
-                onChange: FS,
-                ariaLabel: CS("smpShop:pricePerItem")
+                step: lT,
+                label: Jk("smpShop:pricePerItem")
+              }), (0, tk.jsx)(TT, {
+                options: iF,
+                value: vk,
+                onChange: Ak,
+                ariaLabel: Jk("smpShop:pricePerItem")
               })]
             })]
-          }), "list" === QS && (0, fS.jsxs)("div", {
+          }), "list" === Kk && (0, tk.jsxs)("div", {
             className: "SmpTradeSummary",
-            children: [(0, fS.jsxs)("span", {
-              children: [CS("smpShop:youGet"), " ", (0, fS.jsx)(Sb, {
-                amount: Math.max(0, TS - oS),
+            children: [(0, tk.jsxs)("span", {
+              children: [Jk("smpShop:youGet"), " ", (0, tk.jsx)(kT, {
+                amount: Math.max(0, mk - hk),
                 exact: !0
               })]
-            }), (0, fS.jsx)("small", {
-              children: oS > 0 ? CS("smpShop:listingFee", {
-                fee: oS.toLocaleString("en-US")
-              }) : CS("smpShop:listingRules")
+            }), (0, tk.jsx)("small", {
+              children: hk > 0 ? Jk("smpShop:listingFee", {
+                fee: hk.toLocaleString("en-US")
+              }) : Jk("smpShop:listingRules")
             })]
-          }), (0, fS.jsx)(uS.u, {
+          }), (0, tk.jsx)(qk.q, {
             className: "SmpSubmit",
-            disabled: !mS && !eS && !lS,
-            loading: lS || SH || zS && SS.searching,
-            onClick: rS,
-            children: "list" === QS ? CS("smpShop:listButton", {
-              count: ZS,
-              item: HH
-            }) : (0, fS.jsxs)(fS.Fragment, {
-              children: [CS("smpShop:orderButton", {
-                count: ZS,
-                item: HH
-              }), " ", OS >= 1 && (0, fS.jsx)(Sb, {
-                amount: TS
+            disabled: !Dk && !Mk && !rk,
+            loading: rk || FF || ck && kk.searching,
+            onClick: kF,
+            children: "list" === Kk ? Jk("smpShop:listButton", {
+              count: zk,
+              item: IF
+            }) : (0, tk.jsxs)(tk.Fragment, {
+              children: [Jk("smpShop:orderButton", {
+                count: zk,
+                item: IF
+              }), " ", vk >= 1 && (0, tk.jsx)(kT, {
+                amount: mk
               })]
             })
           })]
@@ -3760,627 +3760,627 @@ export const modules = {
       })
     }
 
-    function Bb() {
-      var SS;
+    function BT() {
+      var kk;
       const {
-        t: HS
-      } = (0, xS.F)(), gS = Jb(), bS = null === (SS = gS.shopInfo[gS.categoryKey]) || void 0 === SS ? void 0 : SS.items, XS = Kb(bS, "search"), NS = Kb(bS, "creator"), qS = ab(bS, "enchantedCreator"), IS = ab(bS, "listing"), kS = Kb(bS, "empty"), aS = vb(XS, IS.length > 0 || null !== kS), {
-        searched: KS,
-        shown: jS,
-        loading: GS
-      } = aS, [CS, nS] = (0, tS.useState)(!1), [PS, QS] = function() {
-        const [SS, HS] = (0, Vb.b)("smpMarketView", "list");
-        return ["grid" === SS ? "grid" : "list", HS]
-      }(), DS = "grid" === PS, wS = (0, tS.useMemo)((() => IS.filter((SS => {
+        t: Fk
+      } = (0, yk.y)(), Ik = ST(), Tk = null === (kk = Ik.shopInfo[Ik.categoryKey]) || void 0 === kk ? void 0 : kk.items, ik = eT(Tk, "search"), lk = eT(Tk, "creator"), ak = jT(Tk, "enchantedCreator"), Lk = jT(Tk, "listing"), Zk = eT(Tk, "empty"), jk = OT(ik, Lk.length > 0 || null !== Zk), {
+        searched: ek,
+        shown: wk,
+        loading: Hk
+      } = jk, [Jk, xk] = (0, Xk.useState)(!1), [Pk, Kk] = function() {
+        const [kk, Fk] = (0, RT.b)("smpMarketView", "list");
+        return ["grid" === kk ? "grid" : "list", Fk]
+      }(), Qk = "grid" === Pk, sk = (0, Xk.useMemo)((() => Lk.filter((kk => {
         let {
-          meta: HS
-        } = SS;
-        return null !== HS.seller && HS.item === KS
-      })).map((SS => {
+          meta: Fk
+        } = kk;
+        return null !== Fk.seller && Fk.item === ek
+      })).map((kk => {
         let {
-          meta: HS
-        } = SS;
-        return HS.pricePerItem
-      })).sort(((SS, HS) => SS - HS))), [IS, KS]), hS = (0, tS.useMemo)((() => {
-        const SS = new Set(aS.catalogue.map((SS => {
+          meta: Fk
+        } = kk;
+        return Fk.pricePerItem
+      })).sort(((kk, Fk) => kk - Fk))), [Lk, ek]), Vk = (0, Xk.useMemo)((() => {
+        const kk = new Set(jk.catalogue.map((kk => {
           let {
-            name: HS
-          } = SS;
-          return HS
+            name: Fk
+          } = kk;
+          return Fk
         })));
-        return function(SS) {
-          for (const HS in SS)
-            if ("sell" === SS[HS].smp) return ab(SS[HS].items, "sell").filter((SS => {
+        return function(kk) {
+          for (const Fk in kk)
+            if ("sell" === kk[Fk].smp) return jT(kk[Fk].items, "sell").filter((kk => {
               let {
-                item: HS
-              } = SS;
-              return !HS.enchant
-            })).map((SS => {
+                item: Fk
+              } = kk;
+              return !Fk.enchant
+            })).map((kk => {
               let {
-                meta: HS
-              } = SS;
+                meta: Fk
+              } = kk;
               return {
-                item: HS.item,
-                quantity: HS.quantity,
-                sellPrice: HS.pricePerItem
+                item: Fk.item,
+                quantity: Fk.quantity,
+                sellPrice: Fk.pricePerItem
               }
             }));
           return []
-        }(gS.shopInfo).filter((HS => {
+        }(Ik.shopInfo).filter((Fk => {
           let {
-            item: gS
-          } = HS;
-          return SS.has(gS)
+            item: Ik
+          } = Fk;
+          return kk.has(Ik)
         }))
-      }), [gS.shopInfo, aS.catalogue]);
-      return (0, fS.jsx)(Ab, {
-        browser: aS,
+      }), [Ik.shopInfo, jk.catalogue]);
+      return (0, tk.jsx)(uT, {
+        browser: jk,
         className: "SmpMarketTab",
-        recentLabel: HS("smpShop:recentlyListed"),
-        action: (0, fS.jsx)(uS.u, {
+        recentLabel: Fk("smpShop:recentlyListed"),
+        action: (0, tk.jsx)(qk.q, {
           className: "SmpSellButton",
           onClick: () => {
-            nS((SS => !SS))
+            xk((kk => !kk))
           },
-          children: HS("smpShop:sell")
+          children: Fk("smpShop:sell")
         }),
-        above: CS && (0, fS.jsxs)(fS.Fragment, {
-          children: [(0, fS.jsx)(sb, {
+        above: Jk && (0, tk.jsxs)(tk.Fragment, {
+          children: [(0, tk.jsx)(fT, {
             mode: "list",
-            creator: NS,
-            inventory: hS,
-            catalogue: aS.catalogue,
-            names: aS.names,
-            searching: GS,
-            prices: wS,
-            onPickItem: aS.searchFor,
+            creator: lk,
+            inventory: Vk,
+            catalogue: jk.catalogue,
+            names: jk.names,
+            searching: Hk,
+            prices: sk,
+            onPickItem: jk.searchFor,
             onClose: () => {
-              nS(!1)
+              xk(!1)
             }
-          }), qS.length > 0 && (0, fS.jsx)(Mb, {
-            entries: qS
+          }), ak.length > 0 && (0, tk.jsx)(dT, {
+            entries: ak
           })]
         }),
-        listControls: (0, fS.jsx)(Wb, {
-          view: PS,
-          onChange: QS
+        listControls: (0, tk.jsx)(CT, {
+          view: Pk,
+          onChange: Kk
         }),
-        summary: jS && (IS.length > 0 ? HS(1 === IS.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
-          count: IS.length,
-          price: lt(yb(IS, "min"))
-        }) : HS("smpShop:noOneSelling", {
-          item: Db(aS.names, jS)
+        summary: wk && (Lk.length > 0 ? Fk(1 === Lk.length ? "smpShop:listingSummaryOne" : "smpShop:listingSummary", {
+          count: Lk.length,
+          price: hX(bT(Lk, "min"))
+        }) : Fk("smpShop:noOneSelling", {
+          item: QT(jk.names, wk)
         })),
-        list: GS ? (0, fS.jsx)(Hb, {
-          grid: DS
-        }) : IS.length > 0 ? (0, fS.jsx)(zb, {
-          entries: IS,
-          view: PS
-        }) : kS ? (0, fS.jsx)(tb, {
-          entry: kS
-        }) : (0, fS.jsx)(Hb, {
+        list: Hk ? (0, tk.jsx)(FT, {
+          grid: Qk
+        }) : Lk.length > 0 ? (0, tk.jsx)(NT, {
+          entries: Lk,
+          view: Pk
+        }) : Zk ? (0, tk.jsx)(XT, {
+          entry: Zk
+        }) : (0, tk.jsx)(FT, {
           count: 3,
-          grid: DS
+          grid: Qk
         })
       })
     }
 
-    function Mb(SS) {
+    function dT(kk) {
       let {
-        entries: HS
-      } = SS;
+        entries: Fk
+      } = kk;
       const {
-        t: gS
-      } = (0, xS.F)(), bS = Jb(), [XS, NS] = (0, tS.useState)({});
-      return (0, fS.jsx)("div", {
+        t: Ik
+      } = (0, yk.y)(), Tk = ST(), [ik, lk] = (0, Xk.useState)({});
+      return (0, tk.jsx)("div", {
         className: "SmpList",
-        children: HS.map((SS => {
-          var HS, tS, xS;
+        children: Fk.map((kk => {
+          var Fk, Xk, yk;
           let {
-            key: qS,
-            item: IS,
-            meta: kS
-          } = SS;
-          const aS = null !== (HS = XS[qS]) && void 0 !== HS ? HS : 1;
-          return (0, fS.jsxs)("div", {
+            key: ak,
+            item: Lk,
+            meta: Zk
+          } = kk;
+          const jk = null !== (Fk = ik[ak]) && void 0 !== Fk ? Fk : 1;
+          return (0, tk.jsxs)("div", {
             className: "SmpRow",
-            children: [(0, fS.jsx)(rt, {
-              item: kS.item,
-              amount: kS.quantity,
-              tier: null !== (tS = null === (xS = IS.enchant) || void 0 === xS ? void 0 : xS.tier) && void 0 !== tS ? tS : null
-            }), (0, fS.jsxs)("div", {
+            children: [(0, tk.jsx)(MX, {
+              item: Zk.item,
+              amount: Zk.quantity,
+              tier: null !== (Xk = null === (yk = Lk.enchant) || void 0 === yk ? void 0 : yk.tier) && void 0 !== Xk ? Xk : null
+            }), (0, tk.jsxs)("div", {
               className: "SmpRowText",
-              children: [(0, fS.jsx)("b", {
-                children: (0, fS.jsx)(zt.c, {
-                  text: IS.customTitle
+              children: [(0, tk.jsx)("b", {
+                children: (0, tk.jsx)(NX.c, {
+                  text: Lk.customTitle
                 })
-              }), (0, fS.jsx)("small", {
-                children: gS("smpShop:enchantedListing")
+              }), (0, tk.jsx)("small", {
+                children: Ik("smpShop:enchantedListing")
               })]
-            }), (0, fS.jsx)(xb, {
-              value: aS,
-              onChange: SS => {
-                NS({
-                  ...XS,
-                  [qS]: SS
+            }), (0, tk.jsx)(yT, {
+              value: jk,
+              onChange: kk => {
+                lk({
+                  ...ik,
+                  [ak]: kk
                 })
               },
               max: 9999999,
-              step: Nb,
-              label: gS("smpShop:pricePerItem")
-            }), (0, fS.jsxs)(uS.u, {
-              loading: bS.isPending(qS),
+              step: lT,
+              label: Ik("smpShop:pricePerItem")
+            }), (0, tk.jsxs)(qk.q, {
+              loading: Tk.isPending(ak),
               onClick: () => {
-                bS.act(qS, String(aS))
+                Tk.act(ak, String(jk))
               },
-              children: [gS("smpShop:list"), " ", (0, fS.jsx)(Sb, {
-                amount: aS
+              children: [Ik("smpShop:list"), " ", (0, tk.jsx)(kT, {
+                amount: jk
               })]
             })]
-          }, qS)
+          }, ak)
         }))
       })
     }
-    const Fb = (0, tS.memo)((function(SS) {
+    const YT = (0, Xk.memo)((function(kk) {
       let {
-        itemKey: HS,
-        item: gS,
-        quantity: tS,
-        pricePerItem: bS,
-        tier: xS,
-        selected: NS,
-        onSelect: qS
-      } = SS;
-      return (0, fS.jsxs)("button", {
+        itemKey: Fk,
+        item: Ik,
+        quantity: Xk,
+        pricePerItem: Tk,
+        tier: yk,
+        selected: lk,
+        onSelect: ak
+      } = kk;
+      return (0, tk.jsxs)("button", {
         type: "button",
-        className: XS()("SmpInventorySlot", {
-          SmpInventorySlotOn: NS
+        className: ik()("SmpInventorySlot", {
+          SmpInventorySlotOn: lk
         }),
-        title: gS,
+        title: Ik,
         onClick: () => {
-          qS(HS)
+          ak(Fk)
         },
-        children: [(0, fS.jsx)(rt, {
-          item: gS,
-          amount: tS,
-          tier: xS
-        }), (0, fS.jsx)(Sb, {
-          amount: bS
+        children: [(0, tk.jsx)(MX, {
+          item: Ik,
+          amount: Xk,
+          tier: yk
+        }), (0, tk.jsx)(kT, {
+          amount: Tk
         })]
       })
     }));
 
-    function Rb() {
-      var SS;
+    function AT() {
+      var kk;
       const {
-        t: HS
-      } = (0, xS.F)(), gS = Jb(), bS = null === (SS = gS.shopInfo[gS.categoryKey]) || void 0 === SS ? void 0 : SS.items, NS = ab(bS, "sell"), qS = Kb(bS, "empty"), [uS, IS] = (0, tS.useState)(null), [kS, aS] = (0, tS.useState)({}), KS = NS.find((SS => {
+        t: Fk
+      } = (0, yk.y)(), Ik = ST(), Tk = null === (kk = Ik.shopInfo[Ik.categoryKey]) || void 0 === kk ? void 0 : kk.items, lk = jT(Tk, "sell"), ak = eT(Tk, "empty"), [qk, Lk] = (0, Xk.useState)(null), [Zk, jk] = (0, Xk.useState)({}), ek = lk.find((kk => {
         let {
-          key: HS
-        } = SS;
-        return HS === uS
+          key: Fk
+        } = kk;
+        return Fk === qk
       }));
-      return 0 === NS.length ? (0, fS.jsx)("div", {
+      return 0 === lk.length ? (0, tk.jsx)("div", {
         className: "SmpScreen",
-        children: (0, fS.jsx)(gb, {
-          title: qS ? (0, fS.jsx)(zt.c, {
-            text: qS.item.customTitle
-          }) : HS("smpShop:nothingToSell"),
-          children: qS && (0, fS.jsx)(zt.c, {
-            text: qS.item.description
+        children: (0, tk.jsx)(IT, {
+          title: ak ? (0, tk.jsx)(NX.c, {
+            text: ak.item.customTitle
+          }) : Fk("smpShop:nothingToSell"),
+          children: ak && (0, tk.jsx)(NX.c, {
+            text: ak.item.description
           })
         })
-      }) : (0, fS.jsxs)("div", {
+      }) : (0, tk.jsxs)("div", {
         className: "SmpScreen SmpInstantSellTab",
-        children: [(0, fS.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "SmpInventoryGrid",
-          children: NS.map((SS => {
-            var HS, gS;
+          children: lk.map((kk => {
+            var Fk, Ik;
             let {
-              key: tS,
-              item: bS,
-              meta: XS
-            } = SS;
-            return (0, fS.jsx)(Fb, {
-              itemKey: tS,
-              item: XS.item,
-              quantity: XS.quantity,
-              pricePerItem: XS.pricePerItem,
-              tier: null !== (HS = null === (gS = bS.enchant) || void 0 === gS ? void 0 : gS.tier) && void 0 !== HS ? HS : null,
-              selected: tS === uS,
-              onSelect: IS
-            }, tS)
+              key: Xk,
+              item: Tk,
+              meta: ik
+            } = kk;
+            return (0, tk.jsx)(YT, {
+              itemKey: Xk,
+              item: ik.item,
+              quantity: ik.quantity,
+              pricePerItem: ik.pricePerItem,
+              tier: null !== (Fk = null === (Ik = Tk.enchant) || void 0 === Ik ? void 0 : Ik.tier) && void 0 !== Fk ? Fk : null,
+              selected: Xk === qk,
+              onSelect: Lk
+            }, Xk)
           }))
-        }), (0, fS.jsx)("div", {
-          className: XS()("SmpSellBar", {
-            SmpSellBarIdle: !KS
+        }), (0, tk.jsx)("div", {
+          className: ik()("SmpSellBar", {
+            SmpSellBarIdle: !ek
           }),
-          children: KS ? (0, fS.jsx)(Tb, {
-            entry: KS,
-            choice: wb(KS.item, kS[KS.key]),
-            onChoose: SS => {
-              aS({
-                ...kS,
-                [KS.key]: SS
+          children: ek ? (0, tk.jsx)(gT, {
+            entry: ek,
+            choice: sT(ek.item, Zk[ek.key]),
+            onChoose: kk => {
+              jk({
+                ...Zk,
+                [ek.key]: kk
               })
             }
-          }) : (0, fS.jsx)("span", {
+          }) : (0, tk.jsx)("span", {
             className: "SmpMuted",
-            children: HS("smpShop:tapToSell")
+            children: Fk("smpShop:tapToSell")
           })
         })]
       })
     }
 
-    function Tb(SS) {
-      var HS, gS, tS, bS;
+    function gT(kk) {
+      var Fk, Ik, Xk, Tk;
       let {
-        entry: XS,
-        choice: NS,
-        onChoose: qS
-      } = SS;
+        entry: ik,
+        choice: lk,
+        onChoose: ak
+      } = kk;
       const {
-        t: IS
-      } = (0, xS.F)(), kS = Jb(), {
-        key: aS,
-        item: KS,
-        meta: jS
-      } = XS, GS = nb("dropdown" === (null === (HS = KS.userInput) || void 0 === HS ? void 0 : HS.type) ? KS.userInput.dropdownOptions : []), CS = null === NS ? 0 : -(0, yt.b)(KS, NS);
-      return (0, fS.jsxs)(fS.Fragment, {
-        children: [(0, fS.jsx)(rt, {
-          item: jS.item,
-          amount: jS.quantity,
-          tier: null !== (gS = null === (tS = KS.enchant) || void 0 === tS ? void 0 : tS.tier) && void 0 !== gS ? gS : null
-        }), (0, fS.jsxs)("div", {
+        t: Lk
+      } = (0, yk.y)(), Zk = ST(), {
+        key: jk,
+        item: ek,
+        meta: wk
+      } = ik, Hk = xT("dropdown" === (null === (Fk = ek.userInput) || void 0 === Fk ? void 0 : Fk.type) ? ek.userInput.dropdownOptions : []), Jk = null === lk ? 0 : -(0, bX.b)(ek, lk);
+      return (0, tk.jsxs)(tk.Fragment, {
+        children: [(0, tk.jsx)(MX, {
+          item: wk.item,
+          amount: wk.quantity,
+          tier: null !== (Ik = null === (Xk = ek.enchant) || void 0 === Xk ? void 0 : Xk.tier) && void 0 !== Ik ? Ik : null
+        }), (0, tk.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, fS.jsx)("b", {
-            children: (0, fS.jsx)(zt.c, {
-              text: null !== (bS = KS.customTitle) && void 0 !== bS ? bS : jS.item
+          children: [(0, tk.jsx)("b", {
+            children: (0, tk.jsx)(NX.c, {
+              text: null !== (Tk = ek.customTitle) && void 0 !== Tk ? Tk : wk.item
             })
-          }), (0, fS.jsx)("small", {
-            children: IS("smpShop:sellEach", {
-              count: jS.quantity
+          }), (0, tk.jsx)("small", {
+            children: Lk("smpShop:sellEach", {
+              count: wk.quantity
             })
           })]
-        }), (0, fS.jsx)(bb, {
-          options: GS.map((SS => {
+        }), (0, tk.jsx)(TT, {
+          options: Hk.map((kk => {
             let {
-              label: HS,
-              quantity: gS,
-              isAll: tS
-            } = SS;
+              label: Fk,
+              quantity: Ik,
+              isAll: Xk
+            } = kk;
             return {
-              value: HS,
-              label: tS ? IS("smpShop:all", {
-                count: gS
-              }) : String(gS)
+              value: Fk,
+              label: Xk ? Lk("smpShop:all", {
+                count: Ik
+              }) : String(Ik)
             }
           })),
-          value: NS,
-          onChange: qS,
-          ariaLabel: IS("smpShop:quantity")
-        }), (0, fS.jsxs)(uS.u, {
-          loading: kS.isPending(aS),
-          disabled: null === NS,
+          value: lk,
+          onChange: ak,
+          ariaLabel: Lk("smpShop:quantity")
+        }), (0, tk.jsxs)(qk.q, {
+          loading: Zk.isPending(jk),
+          disabled: null === lk,
           onClick: () => {
-            kS.act(aS, NS)
+            Zk.act(jk, lk)
           },
-          children: [IS("smpShop:sellButton"), " ", (0, fS.jsx)(Sb, {
-            amount: CS
+          children: [Lk("smpShop:sellButton"), " ", (0, tk.jsx)(kT, {
+            amount: Jk
           })]
         })]
       })
     }
 
-    function ob() {
-      var SS;
+    function mT() {
+      var kk;
       const {
-        t: HS
-      } = (0, xS.F)(), gS = Jb(), tS = null === (SS = gS.shopInfo[gS.categoryKey]) || void 0 === SS ? void 0 : SS.items, bS = ab(tS, "collect"), XS = ab(tS, "myListing"), NS = (SS, HS) => gS.isPending(SS) || !1 === HS.canBuy;
-      return (0, fS.jsxs)("div", {
+        t: Fk
+      } = (0, yk.y)(), Ik = ST(), Xk = null === (kk = Ik.shopInfo[Ik.categoryKey]) || void 0 === kk ? void 0 : kk.items, Tk = jT(Xk, "collect"), ik = jT(Xk, "myListing"), lk = (kk, Fk) => Ik.isPending(kk) || !1 === Fk.canBuy;
+      return (0, tk.jsxs)("div", {
         className: "SmpScreen",
-        children: [(0, fS.jsx)("h3", {
+        children: [(0, tk.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: HS("smpShop:readyToCollect")
-        }), bS.length > 0 ? (0, fS.jsx)("div", {
+          children: Fk("smpShop:readyToCollect")
+        }), Tk.length > 0 ? (0, tk.jsx)("div", {
           className: "SmpList",
-          children: bS.map((SS => {
-            var tS, bS;
+          children: Tk.map((kk => {
+            var Xk, Tk;
             let {
-              key: XS,
-              item: xS,
-              meta: qS
-            } = SS;
-            return (0, fS.jsxs)("div", {
+              key: ik,
+              item: yk,
+              meta: ak
+            } = kk;
+            return (0, tk.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, fS.jsx)(rt, {
-                item: "sold" === qS.type ? "Gold Coin" : qS.item,
-                amount: "sold" === qS.type ? 0 : qS.quantity,
-                tier: null !== (tS = null === (bS = xS.enchant) || void 0 === bS ? void 0 : bS.tier) && void 0 !== tS ? tS : null
-              }), (0, fS.jsxs)("div", {
+              children: [(0, tk.jsx)(MX, {
+                item: "sold" === ak.type ? "Gold Coin" : ak.item,
+                amount: "sold" === ak.type ? 0 : ak.quantity,
+                tier: null !== (Xk = null === (Tk = yk.enchant) || void 0 === Tk ? void 0 : Tk.tier) && void 0 !== Xk ? Xk : null
+              }), (0, tk.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, fS.jsx)("b", {
-                  children: (0, fS.jsx)(zt.c, {
-                    text: xS.customTitle
+                children: [(0, tk.jsx)("b", {
+                  children: (0, tk.jsx)(NX.c, {
+                    text: yk.customTitle
                   })
-                }), (0, fS.jsx)("small", {
-                  children: (0, fS.jsx)(zt.c, {
-                    text: xS.description
+                }), (0, tk.jsx)("small", {
+                  children: (0, tk.jsx)(NX.c, {
+                    text: yk.description
                   })
                 })]
-              }), (0, fS.jsx)(uS.p, {
-                loading: NS(XS, xS),
+              }), (0, tk.jsx)(qk.m, {
+                loading: lk(ik, yk),
                 onClick: () => {
-                  gS.act(XS)
+                  Ik.act(ik)
                 },
-                children: HS("smpShop:collect")
+                children: Fk("smpShop:collect")
               })]
-            }, XS)
+            }, ik)
           }))
-        }) : (0, fS.jsx)(gb, {
-          title: HS("smpShop:nothingToCollect"),
-          children: HS("smpShop:nothingToCollectHint")
-        }), (0, fS.jsx)("h3", {
+        }) : (0, tk.jsx)(IT, {
+          title: Fk("smpShop:nothingToCollect"),
+          children: Fk("smpShop:nothingToCollectHint")
+        }), (0, tk.jsx)("h3", {
           className: "SmpSectionTitle",
-          children: HS("smpShop:activeListings", {
-            count: XS.length
+          children: Fk("smpShop:activeListings", {
+            count: ik.length
           })
-        }), XS.length > 0 ? (0, fS.jsx)("div", {
+        }), ik.length > 0 ? (0, tk.jsx)("div", {
           className: "SmpList",
-          children: XS.map((SS => {
-            var tS, bS;
+          children: ik.map((kk => {
+            var Xk, Tk;
             let {
-              key: XS,
-              item: xS,
-              meta: qS
-            } = SS;
-            return (0, fS.jsxs)("div", {
+              key: ik,
+              item: yk,
+              meta: ak
+            } = kk;
+            return (0, tk.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, fS.jsx)(rt, {
-                item: qS.item,
-                amount: qS.quantity,
-                tier: null !== (tS = null === (bS = xS.enchant) || void 0 === bS ? void 0 : bS.tier) && void 0 !== tS ? tS : null
-              }), (0, fS.jsxs)("div", {
+              children: [(0, tk.jsx)(MX, {
+                item: ak.item,
+                amount: ak.quantity,
+                tier: null !== (Xk = null === (Tk = yk.enchant) || void 0 === Tk ? void 0 : Tk.tier) && void 0 !== Xk ? Xk : null
+              }), (0, tk.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, fS.jsx)("b", {
-                  children: (0, fS.jsx)(zt.c, {
-                    text: xS.customTitle
+                children: [(0, tk.jsx)("b", {
+                  children: (0, tk.jsx)(NX.c, {
+                    text: yk.customTitle
                   })
-                }), (0, fS.jsx)("small", {
-                  children: HS("smpShop:timeLeft", {
-                    time: Cb(qS.expiresAt)
+                }), (0, tk.jsx)("small", {
+                  children: Fk("smpShop:timeLeft", {
+                    time: JT(ak.expiresAt)
                   })
                 })]
-              }), (0, fS.jsxs)("div", {
+              }), (0, tk.jsxs)("div", {
                 className: "SmpRowPrice",
-                children: [(0, fS.jsx)(Sb, {
-                  amount: qS.pricePerItem
-                }), (0, fS.jsx)("small", {
-                  children: HS("smpShop:each")
+                children: [(0, tk.jsx)(kT, {
+                  amount: ak.pricePerItem
+                }), (0, tk.jsx)("small", {
+                  children: Fk("smpShop:each")
                 })]
-              }), (0, fS.jsx)(uS.L, {
-                loading: NS(XS, xS),
+              }), (0, tk.jsx)(qk.G, {
+                loading: lk(ik, yk),
                 onClick: () => {
-                  gS.act(XS)
+                  Ik.act(ik)
                 },
-                children: HS("smpShop:cancel")
+                children: Fk("smpShop:cancel")
               })]
-            }, XS)
+            }, ik)
           }))
-        }) : (0, fS.jsx)(gb, {
-          title: HS("smpShop:noActiveListings"),
-          children: HS("smpShop:noActiveListingsHint")
+        }) : (0, tk.jsx)(IT, {
+          title: Fk("smpShop:noActiveListings"),
+          children: Fk("smpShop:noActiveListingsHint")
         })]
       })
     }
 
-    function lb(SS) {
+    function hT(kk) {
       let {
-        done: HS,
-        of: gS
-      } = SS;
-      return (0, fS.jsx)("span", {
+        done: Fk,
+        of: Ik
+      } = kk;
+      return (0, tk.jsx)("span", {
         className: "SmpProgress",
-        children: (0, fS.jsx)("i", {
+        children: (0, tk.jsx)("i", {
           style: {
-            width: `${Math.min(100,HS/Math.max(1,gS)*100)}%`
+            width: `${Math.min(100,Fk/Math.max(1,Ik)*100)}%`
           }
         })
       })
     }
 
-    function mb(SS) {
-      var HS, gS, tS;
+    function rT(kk) {
+      var Fk, Ik, Xk;
       let {
-        entry: bS,
-        choice: XS,
-        onChoose: NS
-      } = SS;
+        entry: Tk,
+        choice: ik,
+        onChoose: lk
+      } = kk;
       const {
-        t: qS
-      } = (0, xS.F)(), IS = Jb(), {
-        key: kS,
-        item: aS,
-        meta: KS
-      } = bS, jS = "dropdown" === (null === (HS = aS.userInput) || void 0 === HS ? void 0 : HS.type) ? aS.userInput.dropdownOptions : [], GS = !0 === KS.processing, CS = null !== KS.creator && (KS.owned > 0 || GS), nS = CS && KS.owned > 0 ? nb(jS) : [], PS = null === XS ? 0 : null !== (gS = null === (tS = nS.find((SS => SS.label === XS))) || void 0 === tS ? void 0 : tS.quantity) && void 0 !== gS ? gS : 0;
-      return (0, fS.jsxs)("div", {
+        t: ak
+      } = (0, yk.y)(), Lk = ST(), {
+        key: Zk,
+        item: jk,
+        meta: ek
+      } = Tk, wk = "dropdown" === (null === (Fk = jk.userInput) || void 0 === Fk ? void 0 : Fk.type) ? jk.userInput.dropdownOptions : [], Hk = !0 === ek.processing, Jk = null !== ek.creator && (ek.owned > 0 || Hk), xk = Jk && ek.owned > 0 ? xT(wk) : [], Pk = null === ik ? 0 : null !== (Ik = null === (Xk = xk.find((kk => kk.label === ik))) || void 0 === Xk ? void 0 : Xk.quantity) && void 0 !== Ik ? Ik : 0;
+      return (0, tk.jsxs)("div", {
         className: "SmpRow SmpOrderRow",
-        children: [(0, fS.jsx)(rt, {
-          item: KS.item
-        }), (0, fS.jsxs)("div", {
+        children: [(0, tk.jsx)(MX, {
+          item: ek.item
+        }), (0, tk.jsxs)("div", {
           className: "SmpRowText",
-          children: [(0, fS.jsx)("b", {
-            children: (0, fS.jsx)(zt.c, {
-              text: aS.customTitle
+          children: [(0, tk.jsx)("b", {
+            children: (0, tk.jsx)(NX.c, {
+              text: jk.customTitle
             })
-          }), (0, fS.jsxs)("small", {
-            children: [(0, fS.jsx)(Sb, {
-              amount: KS.pricePerItem
-            }), " ", qS("smpShop:each"), " \xb7", " ", null === KS.creator ? qS("smpShop:you") : (0, fS.jsx)(zt.c, {
+          }), (0, tk.jsxs)("small", {
+            children: [(0, tk.jsx)(kT, {
+              amount: ek.pricePerItem
+            }), " ", ak("smpShop:each"), " \xb7", " ", null === ek.creator ? ak("smpShop:you") : (0, tk.jsx)(NX.c, {
               text: [{
-                entityName: KS.creator
+                entityName: ek.creator
               }]
             })]
-          }), (0, fS.jsx)(lb, {
-            done: KS.delivered,
-            of: KS.wanted
+          }), (0, tk.jsx)(hT, {
+            done: ek.delivered,
+            of: ek.wanted
           })]
-        }), CS ? (0, fS.jsxs)(fS.Fragment, {
-          children: [(0, fS.jsx)(bb, {
-            options: nS.map((SS => {
+        }), Jk ? (0, tk.jsxs)(tk.Fragment, {
+          children: [(0, tk.jsx)(TT, {
+            options: xk.map((kk => {
               let {
-                label: HS,
-                quantity: gS,
-                isAll: tS
-              } = SS;
+                label: Fk,
+                quantity: Ik,
+                isAll: Xk
+              } = kk;
               return {
-                value: HS,
-                label: tS ? qS("smpShop:max", {
-                  count: gS
-                }) : String(gS)
+                value: Fk,
+                label: Xk ? ak("smpShop:max", {
+                  count: Ik
+                }) : String(Ik)
               }
             })),
-            value: XS,
-            onChange: NS,
-            ariaLabel: qS("smpShop:quantity")
-          }), (0, fS.jsxs)(uS.u, {
-            loading: IS.isPending(kS) || GS,
-            disabled: null === XS,
+            value: ik,
+            onChange: lk,
+            ariaLabel: ak("smpShop:quantity")
+          }), (0, tk.jsxs)(qk.q, {
+            loading: Lk.isPending(Zk) || Hk,
+            disabled: null === ik,
             onClick: () => {
-              IS.act(kS, XS)
+              Lk.act(Zk, ik)
             },
-            children: [qS("smpShop:deliver"), " ", (0, fS.jsx)(Sb, {
-              amount: PS * KS.pricePerItem
+            children: [ak("smpShop:deliver"), " ", (0, tk.jsx)(kT, {
+              amount: Pk * ek.pricePerItem
             })]
           })]
-        }) : (0, fS.jsx)("span", {
+        }) : (0, tk.jsx)("span", {
           className: "SmpMuted SmpRowNote",
-          children: null === KS.creator ? qS("smpShop:yourOrder") : qS("smpShop:youHave", {
+          children: null === ek.creator ? ak("smpShop:yourOrder") : ak("smpShop:youHave", {
             count: 0
           })
         })]
       })
     }
 
-    function eb() {
-      var SS;
+    function DT() {
+      var kk;
       const {
-        t: HS
-      } = (0, xS.F)(), gS = Jb(), bS = null === (SS = gS.shopInfo[gS.categoryKey]) || void 0 === SS ? void 0 : SS.items, XS = Kb(bS, "search"), NS = Kb(bS, "creator"), qS = ab(bS, "order"), IS = Kb(bS, "empty"), kS = vb(XS, qS.length > 0 || null !== IS), [aS, KS] = (0, tS.useState)(!1), [jS, GS] = (0, tS.useState)({});
-      return (0, fS.jsx)(Ab, {
-        browser: kS,
-        recentLabel: HS("smpShop:recentOrders"),
-        action: (0, fS.jsx)(uS.u, {
+        t: Fk
+      } = (0, yk.y)(), Ik = ST(), Tk = null === (kk = Ik.shopInfo[Ik.categoryKey]) || void 0 === kk ? void 0 : kk.items, ik = eT(Tk, "search"), lk = eT(Tk, "creator"), ak = jT(Tk, "order"), Lk = eT(Tk, "empty"), Zk = OT(ik, ak.length > 0 || null !== Lk), [jk, ek] = (0, Xk.useState)(!1), [wk, Hk] = (0, Xk.useState)({});
+      return (0, tk.jsx)(uT, {
+        browser: Zk,
+        recentLabel: Fk("smpShop:recentOrders"),
+        action: (0, tk.jsx)(qk.q, {
           onClick: () => {
-            KS((SS => !SS))
+            ek((kk => !kk))
           },
-          children: HS("smpShop:createOrder")
+          children: Fk("smpShop:createOrder")
         }),
-        above: aS && (0, fS.jsx)(sb, {
+        above: jk && (0, tk.jsx)(fT, {
           mode: "order",
-          creator: NS,
-          catalogue: kS.catalogue,
-          names: kS.names,
-          searching: kS.loading,
+          creator: lk,
+          catalogue: Zk.catalogue,
+          names: Zk.names,
+          searching: Zk.loading,
           prices: [],
-          onPickItem: kS.searchFor,
+          onPickItem: Zk.searchFor,
           onClose: () => {
-            KS(!1)
+            ek(!1)
           }
         }),
         onBack: () => {
-          KS(!1)
+          ek(!1)
         },
-        summary: qS.length > 0 && HS(1 === qS.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
-          count: qS.length,
-          price: lt(yb(qS, "max"))
+        summary: ak.length > 0 && Fk(1 === ak.length ? "smpShop:orderSummaryOne" : "smpShop:orderSummary", {
+          count: ak.length,
+          price: hX(bT(ak, "max"))
         }),
-        list: kS.loading ? (0, fS.jsx)(Hb, {}) : qS.length > 0 ? (0, fS.jsx)(Ob.d, {
+        list: Zk.loading ? (0, tk.jsx)(FT, {}) : ak.length > 0 ? (0, tk.jsx)(oT.b, {
           lazyLoadedClassName: "SmpList",
           observerRoot: "SmpBody",
-          rootMargin: jb,
-          observerUpdateDeps: [qS.length],
-          children: qS.map((SS => (0, fS.jsx)(mb, {
-            entry: SS,
-            choice: wb(SS.item, jS[SS.key]),
-            onChoose: HS => {
-              GS({
-                ...jS,
-                [SS.key]: HS
+          rootMargin: wT,
+          observerUpdateDeps: [ak.length],
+          children: ak.map((kk => (0, tk.jsx)(rT, {
+            entry: kk,
+            choice: sT(kk.item, wk[kk.key]),
+            onChoose: Fk => {
+              Hk({
+                ...wk,
+                [kk.key]: Fk
               })
             }
-          }, SS.key)))
-        }) : IS ? (0, fS.jsx)(tb, {
-          entry: IS
-        }) : (0, fS.jsx)(Hb, {
+          }, kk.key)))
+        }) : Lk ? (0, tk.jsx)(XT, {
+          entry: Lk
+        }) : (0, tk.jsx)(FT, {
           count: 3
         })
       })
     }
 
-    function rb() {
-      var SS;
+    function MT() {
+      var kk;
       const {
-        t: HS
-      } = (0, xS.F)(), gS = Jb(), tS = ab(null === (SS = gS.shopInfo[gS.categoryKey]) || void 0 === SS ? void 0 : SS.items, "myOrder");
-      return 0 === tS.length ? (0, fS.jsx)("div", {
+        t: Fk
+      } = (0, yk.y)(), Ik = ST(), Xk = jT(null === (kk = Ik.shopInfo[Ik.categoryKey]) || void 0 === kk ? void 0 : kk.items, "myOrder");
+      return 0 === Xk.length ? (0, tk.jsx)("div", {
         className: "SmpScreen",
-        children: (0, fS.jsx)(gb, {
-          title: HS("smpShop:noOrders"),
-          children: HS("smpShop:noOrdersHint")
+        children: (0, tk.jsx)(IT, {
+          title: Fk("smpShop:noOrders"),
+          children: Fk("smpShop:noOrdersHint")
         })
-      }) : (0, fS.jsx)("div", {
+      }) : (0, tk.jsx)("div", {
         className: "SmpScreen",
-        children: (0, fS.jsx)("div", {
+        children: (0, tk.jsx)("div", {
           className: "SmpList",
-          children: tS.map((SS => {
+          children: Xk.map((kk => {
             let {
-              key: tS,
-              item: bS,
-              meta: XS
-            } = SS;
-            const xS = gS.isPending(tS) || !1 === bS.canBuy;
-            return (0, fS.jsxs)("div", {
+              key: Xk,
+              item: Tk,
+              meta: ik
+            } = kk;
+            const yk = Ik.isPending(Xk) || !1 === Tk.canBuy;
+            return (0, tk.jsxs)("div", {
               className: "SmpRow",
-              children: [(0, fS.jsx)(rt, {
-                item: XS.item,
-                amount: XS.collectable
-              }), (0, fS.jsxs)("div", {
+              children: [(0, tk.jsx)(MX, {
+                item: ik.item,
+                amount: ik.collectable
+              }), (0, tk.jsxs)("div", {
                 className: "SmpRowText",
-                children: [(0, fS.jsx)("b", {
-                  children: (0, fS.jsx)(zt.c, {
-                    text: bS.customTitle
+                children: [(0, tk.jsx)("b", {
+                  children: (0, tk.jsx)(NX.c, {
+                    text: Tk.customTitle
                   })
-                }), (0, fS.jsxs)("small", {
-                  children: [(0, fS.jsx)(Sb, {
-                    amount: XS.pricePerItem
-                  }), " ", HS("smpShop:each"), XS.collectable > 0 && ` \xb7 ${HS("smpShop:readyCount",{count:XS.collectable})}`]
-                }), (0, fS.jsx)(lb, {
-                  done: XS.delivered,
-                  of: XS.wanted
+                }), (0, tk.jsxs)("small", {
+                  children: [(0, tk.jsx)(kT, {
+                    amount: ik.pricePerItem
+                  }), " ", Fk("smpShop:each"), ik.collectable > 0 && ` \xb7 ${Fk("smpShop:readyCount",{count:ik.collectable})}`]
+                }), (0, tk.jsx)(hT, {
+                  done: ik.delivered,
+                  of: ik.wanted
                 })]
-              }), XS.collectable > 0 ? (0, fS.jsx)(uS.p, {
-                loading: xS,
+              }), ik.collectable > 0 ? (0, tk.jsx)(qk.m, {
+                loading: yk,
                 onClick: () => {
-                  gS.act(tS)
+                  Ik.act(Xk)
                 },
-                children: HS("smpShop:collectCount", {
-                  count: XS.collectable
+                children: Fk("smpShop:collectCount", {
+                  count: ik.collectable
                 })
-              }) : (0, fS.jsx)(uS.L, {
-                loading: xS,
+              }) : (0, tk.jsx)(qk.G, {
+                loading: yk,
                 onClick: () => {
-                  gS.act(tS)
+                  Ik.act(Xk)
                 },
-                children: HS("smpShop:cancel")
+                children: Fk("smpShop:cancel")
               })]
-            }, tS)
+            }, Xk)
           }))
         })
       })
     }
-    const SX = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
-      HX = {
+    const ki = new Set(["search", "creator", "enchantedCreator", "collect", "myOrder", "order"]),
+      Fi = {
         sell: "coins",
         market: "store",
         collect: "backpack",
@@ -4388,775 +4388,775 @@ export const modules = {
         myOrders: "location-check"
       };
 
-    function gX(SS, HS) {
-      let gS = !1;
-      const tS = {};
-      for (const bS in SS) HS(bS, SS[bS]) ? tS[bS] = SS[bS] : gS = !0;
-      return gS ? tS : SS
+    function Ii(kk, Fk) {
+      let Ik = !1;
+      const Xk = {};
+      for (const Tk in kk) Fk(Tk, kk[Tk]) ? Xk[Tk] = kk[Tk] : Ik = !0;
+      return Ik ? Xk : kk
     }
 
-    function tX(SS) {
-      var HS, gS, bS, qS;
+    function Xi(kk) {
+      var Fk, Ik, Tk, ak;
       const {
-        show: uS,
-        shopInfo: IS,
-        selectedCategoryKey: kS
-      } = SS, {
-        t: aS
-      } = (0, xS.F)(), KS = null !== kS && void 0 !== kS ? kS : "", jS = kb(IS, KS), GS = null === (HS = IS[KS]) || void 0 === HS ? void 0 : HS.items, CS = null !== jS, [nS, PS] = (0, tS.useState)({}), [QS, DS] = (0, tS.useState)([]), [wS, hS] = (0, tS.useState)(!1), [ZS, JS] = (0, tS.useState)(null), [, OS] = (0, tS.useState)(0), dS = (0, tS.useRef)(0), cS = (0, tS.useRef)({}), vS = (0, tS.useRef)({
-        items: GS,
-        pending: nS,
-        shopInfo: IS,
-        active: CS,
-        canAfford: SS.canAfford,
-        buy: SS.buy
+        show: qk,
+        shopInfo: Lk,
+        selectedCategoryKey: Zk
+      } = kk, {
+        t: jk
+      } = (0, yk.y)(), ek = null !== Zk && void 0 !== Zk ? Zk : "", wk = ZT(Lk, ek), Hk = null === (Fk = Lk[ek]) || void 0 === Fk ? void 0 : Fk.items, Jk = null !== wk, [xk, Pk] = (0, Xk.useState)({}), [Kk, Qk] = (0, Xk.useState)([]), [sk, Vk] = (0, Xk.useState)(!1), [zk, Sk] = (0, Xk.useState)(null), [, vk] = (0, Xk.useState)(0), Ek = (0, Xk.useRef)(0), Ok = (0, Xk.useRef)({}), nk = (0, Xk.useRef)({
+        items: Hk,
+        pending: xk,
+        shopInfo: Lk,
+        active: Jk,
+        canAfford: kk.canAfford,
+        buy: kk.buy
       });
-      vS.current = {
-        items: GS,
-        pending: nS,
-        shopInfo: IS,
-        active: CS,
-        canAfford: SS.canAfford,
-        buy: SS.buy
+      nk.current = {
+        items: Hk,
+        pending: xk,
+        shopInfo: Lk,
+        active: Jk,
+        canAfford: kk.canAfford,
+        buy: kk.buy
       };
-      const ES = (0, tS.useCallback)((SS => {
-        dS.current++;
-        const HS = dS.current;
-        DS((gS => [{
-          id: HS,
-          text: SS
-        }, ...gS].slice(0, 8))), JS(HS)
+      const Gk = (0, Xk.useCallback)((kk => {
+        Ek.current++;
+        const Fk = Ek.current;
+        Qk((Ik => [{
+          id: Fk,
+          text: kk
+        }, ...Ik].slice(0, 8))), Sk(Fk)
       }), []);
-      (0, tS.useEffect)((() => {
-        if (null === ZS) return;
-        const SS = setTimeout((() => {
-          JS(null)
+      (0, Xk.useEffect)((() => {
+        if (null === zk) return;
+        const kk = setTimeout((() => {
+          Sk(null)
         }), 3e3);
         return () => {
-          clearTimeout(SS)
+          clearTimeout(kk)
         }
-      }), [ZS]), (0, tS.useEffect)((() => {
-        const HS = SS.message;
-        if (!HS) return;
+      }), [zk]), (0, Xk.useEffect)((() => {
+        const Fk = kk.message;
+        if (!Fk) return;
         const {
-          shopInfo: gS,
-          active: tS,
-          items: bS
-        } = vS.current, XS = null !== HS.categoryKey ? null !== kb(gS, HS.categoryKey) : tS;
-        (XS || tS) && ES(HS.text), XS && PS((SS => gX(SS, (SS => {
-          var HS, gS;
-          return !SX.has(null === bS || void 0 === bS || null === (HS = bS[SS]) || void 0 === HS || null === (gS = HS.smp) || void 0 === gS ? void 0 : gS.kind)
+          shopInfo: Ik,
+          active: Xk,
+          items: Tk
+        } = nk.current, ik = null !== Fk.categoryKey ? null !== ZT(Ik, Fk.categoryKey) : Xk;
+        (ik || Xk) && Gk(Fk.text), ik && Pk((kk => Ii(kk, (kk => {
+          var Fk, Ik;
+          return !ki.has(null === Tk || void 0 === Tk || null === (Fk = Tk[kk]) || void 0 === Fk || null === (Ik = Fk.smp) || void 0 === Ik ? void 0 : Ik.kind)
         }))))
-      }), [SS.message, ES]), (0, tS.useEffect)((() => {
-        PS((SS => gX(SS, ((SS, HS) => hb(null === GS || void 0 === GS ? void 0 : GS[SS]) === HS.snapshot))))
-      }), [IS, GS]);
-      const LS = Object.keys(nS).length > 0;
-      (0, tS.useEffect)((() => {
-        if (!LS) return;
-        const SS = setInterval((() => {
-          OS((SS => SS + 1));
-          const SS = Date.now(),
+      }), [kk.message, Gk]), (0, Xk.useEffect)((() => {
+        Pk((kk => Ii(kk, ((kk, Fk) => VT(null === Hk || void 0 === Hk ? void 0 : Hk[kk]) === Fk.snapshot))))
+      }), [Lk, Hk]);
+      const pk = Object.keys(xk).length > 0;
+      (0, Xk.useEffect)((() => {
+        if (!pk) return;
+        const kk = setInterval((() => {
+          vk((kk => kk + 1));
+          const kk = Date.now(),
             {
-              pending: HS,
-              items: gS
-            } = vS.current,
-            tS = Object.keys(HS).filter((gS => SS - HS[gS].at >= 12e3));
-          if (0 === tS.length) return;
-          const bS = tS.some((SS => {
-            var tS, bS;
-            return "search" !== (null === gS || void 0 === gS || null === (tS = gS[SS]) || void 0 === tS || null === (bS = tS.smp) || void 0 === bS ? void 0 : bS.kind) || HS[SS].resend
+              pending: Fk,
+              items: Ik
+            } = nk.current,
+            Xk = Object.keys(Fk).filter((Ik => kk - Fk[Ik].at >= 12e3));
+          if (0 === Xk.length) return;
+          const Tk = Xk.some((kk => {
+            var Xk, Tk;
+            return "search" !== (null === Ik || void 0 === Ik || null === (Xk = Ik[kk]) || void 0 === Xk || null === (Tk = Xk.smp) || void 0 === Tk ? void 0 : Tk.kind) || Fk[kk].resend
           }));
-          for (const XS of tS) cS.current[XS] = SS;
-          PS((SS => gX(SS, (SS => !tS.includes(SS))))), bS && ES(aS("smpShop:noAnswer"))
+          for (const ik of Xk) Ok.current[ik] = kk;
+          Pk((kk => Ii(kk, (kk => !Xk.includes(kk))))), Tk && Gk(jk("smpShop:noAnswer"))
         }), 500);
         return () => {
-          clearInterval(SS)
+          clearInterval(kk)
         }
-      }), [LS]), (0, tS.useEffect)((() => {
-        PS({})
-      }), [KS]), (0, tS.useEffect)((() => {
-        uS || hS(!1)
-      }), [uS]);
-      const YS = (0, tS.useCallback)((function(SS, HS) {
-          let gS = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      }), [pk]), (0, Xk.useEffect)((() => {
+        Pk({})
+      }), [ek]), (0, Xk.useEffect)((() => {
+        qk || Vk(!1)
+      }), [qk]);
+      const uk = (0, Xk.useCallback)((function(kk, Fk) {
+          let Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            items: tS,
-            pending: bS,
-            canAfford: XS,
-            buy: xS
-          } = vS.current, NS = null === tS || void 0 === tS ? void 0 : tS[SS];
-          if (!NS || SS in bS || !1 === NS.canBuy) return !1;
-          if (!XS(NS, (0, yt.b)(NS, HS))) return !1;
-          xS(SS, NS, HS);
-          const qS = {
-            snapshot: hb(NS),
+            items: Xk,
+            pending: Tk,
+            canAfford: ik,
+            buy: yk
+          } = nk.current, lk = null === Xk || void 0 === Xk ? void 0 : Xk[kk];
+          if (!lk || kk in Tk || !1 === lk.canBuy) return !1;
+          if (!ik(lk, (0, bX.b)(lk, Fk))) return !1;
+          yk(kk, lk, Fk);
+          const ak = {
+            snapshot: VT(lk),
             at: Date.now(),
-            resend: gS
+            resend: Ik
           };
-          return vS.current.pending = {
-            ...vS.current.pending,
-            [SS]: qS
-          }, PS((HS => ({
-            ...HS,
-            [SS]: qS
+          return nk.current.pending = {
+            ...nk.current.pending,
+            [kk]: ak
+          }, Pk((Fk => ({
+            ...Fk,
+            [kk]: ak
           }))), !0
         }), []),
-        AS = (0, tS.useMemo)((() => ({
-          shopInfo: IS,
-          categoryKey: KS,
-          canAfford: SS.canAfford,
-          isPending: SS => SS in nS,
-          gaveUpAt: SS => {
-            var HS;
-            return null !== (HS = cS.current[SS]) && void 0 !== HS ? HS : 0
+        bk = (0, Xk.useMemo)((() => ({
+          shopInfo: Lk,
+          categoryKey: ek,
+          canAfford: kk.canAfford,
+          isPending: kk => kk in xk,
+          gaveUpAt: kk => {
+            var Fk;
+            return null !== (Fk = Ok.current[kk]) && void 0 !== Fk ? Fk : 0
           },
-          act: YS,
-          notify: ES
-        })), [IS, KS, SS.canAfford, nS, YS, ES]),
-        yS = Math.min(...Object.values(nS).map((SS => SS.at))),
-        VS = LS && Date.now() - yS > 1500,
-        iS = QS.length > 1,
-        WS = null !== (gS = null === (bS = IS[KS]) || void 0 === bS ? void 0 : bS.customTitle) && void 0 !== gS ? gS : KS,
-        zS = null === (qS = IS[KS]) || void 0 === qS ? void 0 : qS.description;
-      let US = null;
-      return "market" === jS ? US = (0, fS.jsx)(Bb, {}) : "sell" === jS ? US = (0, fS.jsx)(Rb, {}) : "collect" === jS ? US = (0, fS.jsx)(ob, {}) : "orders" === jS ? US = (0, fS.jsx)(eb, {}) : "myOrders" === jS && (US = (0, fS.jsx)(rb, {})), (0, fS.jsx)(Zb.Provider, {
-        value: AS,
-        children: (0, fS.jsx)("div", {
+          act: uk,
+          notify: Gk
+        })), [Lk, ek, kk.canAfford, xk, uk, Gk]),
+        Rk = Math.min(...Object.values(xk).map((kk => kk.at))),
+        Uk = pk && Date.now() - Rk > 1500,
+        Ck = Kk.length > 1,
+        Nk = null !== (Ik = null === (Tk = Lk[ek]) || void 0 === Tk ? void 0 : Tk.customTitle) && void 0 !== Ik ? Ik : ek,
+        ck = null === (ak = Lk[ek]) || void 0 === ak ? void 0 : ak.description;
+      let Wk = null;
+      return "market" === wk ? Wk = (0, tk.jsx)(BT, {}) : "sell" === wk ? Wk = (0, tk.jsx)(AT, {}) : "collect" === wk ? Wk = (0, tk.jsx)(mT, {}) : "orders" === wk ? Wk = (0, tk.jsx)(DT, {}) : "myOrders" === wk && (Wk = (0, tk.jsx)(MT, {})), (0, tk.jsx)(zT.Provider, {
+        value: bk,
+        children: (0, tk.jsx)("div", {
           className: "SmpShopHost",
-          hidden: !CS,
-          children: (0, fS.jsxs)("div", {
+          hidden: !Jk,
+          children: (0, tk.jsxs)("div", {
             className: "SmpShop",
-            children: [(0, fS.jsx)("header", {
+            children: [(0, tk.jsx)("header", {
               className: "SmpHeader",
-              children: (0, fS.jsxs)("div", {
+              children: (0, tk.jsxs)("div", {
                 className: "SmpHeaderTitle",
-                children: [(0, fS.jsxs)("h2", {
-                  children: [jS && (0, fS.jsx)(NS.d, {
-                    name: HX[jS]
-                  }), aS(WS)]
-                }), zS && (0, fS.jsx)("p", {
-                  children: (0, fS.jsx)(zt.c, {
-                    text: zS
+                children: [(0, tk.jsxs)("h2", {
+                  children: [wk && (0, tk.jsx)(lk.e, {
+                    name: Fi[wk]
+                  }), jk(Nk)]
+                }), ck && (0, tk.jsx)("p", {
+                  children: (0, tk.jsx)(NX.c, {
+                    text: ck
                   })
                 })]
               })
-            }), (0, fS.jsx)("main", {
+            }), (0, tk.jsx)("main", {
               className: "SmpBody",
               "data-pad-initial-area": !0,
-              children: uS && US
-            }), (0, fS.jsxs)("button", {
+              children: qk && Wk
+            }), (0, tk.jsxs)("button", {
               type: "button",
-              className: XS()("SmpStatus", {
-                SmpStatusWaiting: LS,
-                SmpStatusFresh: !LS && null !== ZS,
-                SmpStatusHasHistory: iS
+              className: ik()("SmpStatus", {
+                SmpStatusWaiting: pk,
+                SmpStatusFresh: !pk && null !== zk,
+                SmpStatusHasHistory: Ck
               }),
               "aria-live": "polite",
-              "aria-expanded": iS ? wS : void 0,
+              "aria-expanded": Ck ? sk : void 0,
               onClick: () => {
-                iS && hS((SS => !SS))
+                Ck && Vk((kk => !kk))
               },
-              children: [LS ? (0, fS.jsxs)("span", {
+              children: [pk ? (0, tk.jsxs)("span", {
                 className: "SmpStatusText",
-                children: [(0, fS.jsx)(Xb, {}), aS(VS ? "smpShop:slowConnection" : "smpShop:waiting")]
-              }) : QS[0] ? (0, fS.jsx)("span", {
+                children: [(0, tk.jsx)(iT, {}), jk(Uk ? "smpShop:slowConnection" : "smpShop:waiting")]
+              }) : Kk[0] ? (0, tk.jsx)("span", {
                 className: "SmpStatusText",
-                children: (0, fS.jsx)(zt.c, {
-                  text: QS[0].text
+                children: (0, tk.jsx)(NX.c, {
+                  text: Kk[0].text
                 })
-              }, QS[0].id) : (0, fS.jsx)("span", {
+              }, Kk[0].id) : (0, tk.jsx)("span", {
                 className: "SmpStatusText SmpMuted",
-                children: aS("smpShop:ready")
-              }), iS && (0, fS.jsx)("small", {
-                children: aS("smpShop:recentMessages", {
-                  count: QS.length
+                children: jk("smpShop:ready")
+              }), Ck && (0, tk.jsx)("small", {
+                children: jk("smpShop:recentMessages", {
+                  count: Kk.length
                 })
               })]
-            }), wS && iS && (0, fS.jsx)("div", {
+            }), sk && Ck && (0, tk.jsx)("div", {
               className: "SmpStatusHistory",
-              children: QS.map((SS => (0, fS.jsx)("div", {
-                children: (0, fS.jsx)(zt.c, {
-                  text: SS.text
+              children: Kk.map((kk => (0, tk.jsx)("div", {
+                children: (0, tk.jsx)(NX.c, {
+                  text: kk.text
                 })
-              }, SS.id)))
+              }, kk.id)))
             })]
           })
         })
       })
     }
-    class bX {
-      constructor(SS) {
-        this.info = SS
+    class Ti {
+      constructor(kk) {
+        this.info = kk
       }
-      static fromShopInfo(SS) {
-        const HS = {};
-        for (const gS in SS) {
-          const tS = !0 === SS[gS].redDot && !0 !== SS[gS].forceRemoveRedDot;
-          HS[gS] = {
-            redDot: tS,
+      static fromShopInfo(kk) {
+        const Fk = {};
+        for (const Ik in kk) {
+          const Xk = !0 === kk[Ik].redDot && !0 !== kk[Ik].forceRemoveRedDot;
+          Fk[Ik] = {
+            redDot: Xk,
             items: {}
           };
-          for (const bS in SS[gS].items) {
-            const tS = SS[gS].items[bS],
-              XS = !0 === tS.redDot && !0 !== tS.forceRemoveRedDot;
-            HS[gS].items[bS] = {
-              redDot: XS
+          for (const Tk in kk[Ik].items) {
+            const Xk = kk[Ik].items[Tk],
+              ik = !0 === Xk.redDot && !0 !== Xk.forceRemoveRedDot;
+            Fk[Ik].items[Tk] = {
+              redDot: ik
             }
           }
         }
-        return new bX(HS)
+        return new Ti(Fk)
       }
       anyCategoryHasRedDots() {
-        for (const SS in this.info)
-          if (this.categoryHasRedDot(SS)) return !0;
+        for (const kk in this.info)
+          if (this.categoryHasRedDot(kk)) return !0;
         return !1
       }
-      doesCategoryExist(SS) {
-        return !(0, Sg.K)(this.info[SS])
+      doesCategoryExist(kk) {
+        return !(0, FI.Q)(this.info[kk])
       }
-      categoryHasRedDot(SS) {
-        return !0 === this.info[SS].redDot
+      categoryHasRedDot(kk) {
+        return !0 === this.info[kk].redDot
       }
-      updateCategoryRedDot(SS, HS) {
-        this.info[SS].redDot = HS
+      updateCategoryRedDot(kk, Fk) {
+        this.info[kk].redDot = Fk
       }
-      doesItemExist(SS, HS) {
-        return this.doesCategoryExist(SS) && !(0, Sg.K)(this.info[SS].items[HS])
+      doesItemExist(kk, Fk) {
+        return this.doesCategoryExist(kk) && !(0, FI.Q)(this.info[kk].items[Fk])
       }
-      itemHasRedDot(SS, HS) {
-        return !0 === this.info[SS].items[HS].redDot
+      itemHasRedDot(kk, Fk) {
+        return !0 === this.info[kk].items[Fk].redDot
       }
-      updateItemRedDot(SS, HS, gS) {
-        this.info[SS].items[HS].redDot = gS
+      updateItemRedDot(kk, Fk, Ik) {
+        this.info[kk].items[Fk].redDot = Ik
       }
       shallowCopy() {
-        return new bX(this.info)
+        return new Ti(this.info)
       }
     }
 
-    function XX(SS, HS) {
-      return `${SS}\x1f${HS}`
+    function ii(kk, Fk) {
+      return `${kk}\x1f${Fk}`
     }
 
-    function xX(SS, HS) {
-      return !(0, Sg.K)(HS) && !(0, Sg.K)(SS) && HS in SS
+    function yi(kk, Fk) {
+      return !(0, FI.Q)(Fk) && !(0, FI.Q)(kk) && Fk in kk
     }
-    const NX = (0, tS.memo)((function(SS) {
-      var HS, gS;
+    const li = (0, Xk.memo)((function(kk) {
+      var Fk, Ik;
       let {
-        show: bS
-      } = SS;
-      const xS = (0, dH.g)("players", aX),
-        NS = (0, dH.g)("players", KX),
-        IS = (0, Ft.e)(),
-        [aS, KS] = (0, tS.useState)({
+        show: Tk
+      } = kk;
+      const yk = (0, EF.i)("players", ji),
+        lk = (0, EF.i)("players", ei),
+        Lk = (0, YX.b)(),
+        [jk, ek] = (0, Xk.useState)({
           shopInfo: {},
           userInputsPerItem: {},
-          redDotInfo: bX.fromShopInfo({}),
+          redDotInfo: Ti.fromShopInfo({}),
           currencyAmounts: {},
           selectedCategoryKey: null,
           onBoughtInfo: null,
           awaitingPurchase: !1
         }),
-        GS = (0, tS.useRef)(""),
-        CS = (0, tS.useRef)(null),
-        PS = (0, tS.useRef)(null),
-        QS = (0, tS.useRef)(0),
-        DS = (0, tS.useRef)(void 0),
-        wS = (0, tS.useRef)(null),
-        hS = (0, tS.useRef)(aS),
-        JS = aS.redDotInfo.anyCategoryHasRedDots(),
-        [OS, cS] = (0, tS.useState)(null),
-        vS = (0, tS.useRef)(!1);
-      let ES = !1,
-        LS = 0,
-        YS = 0;
-      if (aS.currencyAmounts) {
-        for (const SS in aS.currencyAmounts) {
-          var AS;
-          const HS = aS.currencyAmounts[SS];
-          HS.hidden || (LS++, (null === (AS = HS.subtext) || void 0 === AS ? void 0 : AS.length) > 0 && YS++)
+        Hk = (0, Xk.useRef)(""),
+        Jk = (0, Xk.useRef)(null),
+        Pk = (0, Xk.useRef)(null),
+        Kk = (0, Xk.useRef)(0),
+        Qk = (0, Xk.useRef)(void 0),
+        sk = (0, Xk.useRef)(null),
+        Vk = (0, Xk.useRef)(jk),
+        Sk = jk.redDotInfo.anyCategoryHasRedDots(),
+        [vk, Ok] = (0, Xk.useState)(null),
+        nk = (0, Xk.useRef)(!1);
+      let Gk = !1,
+        pk = 0,
+        uk = 0;
+      if (jk.currencyAmounts) {
+        for (const kk in jk.currencyAmounts) {
+          var bk;
+          const Fk = jk.currencyAmounts[kk];
+          Fk.hidden || (pk++, (null === (bk = Fk.subtext) || void 0 === bk ? void 0 : bk.length) > 0 && uk++)
         }
-        ES = LS + YS > 4
-      }(0, tS.useEffect)((() => {
-        Hg.k.cj("showShopIconRedDot", JS, !0)
-      }), [JS]), (0, tS.useEffect)((() => {
-        nS.gameBridge.send("setShopOpen", bS), bS || (clearTimeout(DS.current), KS((SS => SS.awaitingPurchase ? {
-          ...SS,
+        Gk = pk + uk > 4
+      }(0, Xk.useEffect)((() => {
+        II.g.GL("showShopIconRedDot", Sk, !0)
+      }), [Sk]), (0, Xk.useEffect)((() => {
+        xk.gameBridge.send("setShopOpen", Tk), Tk || (clearTimeout(Qk.current), ek((kk => kk.awaitingPurchase ? {
+          ...kk,
           awaitingPurchase: !1
-        } : SS)))
-      }), [bS]), (0, tS.useEffect)((() => () => {
-        nS.gameBridge.send("setShopOpen", !1), clearTimeout(DS.current)
-      }), []), (0, tS.useEffect)((() => {
-        hS.current = aS
-      }), [aS]), (0, tS.useEffect)((() => {
-        if (null === OS) return;
-        return (0, Bt.d)("pointerdown", (SS => {
-          const HS = SS.target;
-          null !== HS && void 0 !== HS && HS.closest(".ShopItem") || cS(null)
+        } : kk)))
+      }), [Tk]), (0, Xk.useEffect)((() => () => {
+        xk.gameBridge.send("setShopOpen", !1), clearTimeout(Qk.current)
+      }), []), (0, Xk.useEffect)((() => {
+        Vk.current = jk
+      }), [jk]), (0, Xk.useEffect)((() => {
+        if (null === vk) return;
+        return (0, BX.d)("pointerdown", (kk => {
+          const Fk = kk.target;
+          null !== Fk && void 0 !== Fk && Fk.closest(".ShopItem") || Ok(null)
         }))
-      }), [OS]);
-      const yS = SS => {
-          KS((HS => ({
-            ...HS,
-            ...SS
+      }), [vk]);
+      const Rk = kk => {
+          ek((Fk => ({
+            ...Fk,
+            ...kk
           })))
         },
-        VS = SS => {
-          var HS;
-          clearTimeout(null === (HS = aS.onBoughtInfo) || void 0 === HS ? void 0 : HS.timeout);
-          const gS = setTimeout((() => {
-            yS({
+        Uk = kk => {
+          var Fk;
+          clearTimeout(null === (Fk = jk.onBoughtInfo) || void 0 === Fk ? void 0 : Fk.timeout);
+          const Ik = setTimeout((() => {
+            Rk({
               onBoughtInfo: null
             })
           }), 3e3);
-          GS.current = SS, yS({
+          Hk.current = kk, Rk({
             onBoughtInfo: {
-              text: SS,
-              timeout: gS,
-              categoryKey: CS.current
+              text: kk,
+              timeout: Ik,
+              categoryKey: Jk.current
             }
           })
         },
-        iS = SS => {
+        Ck = kk => {
           const {
-            shopInfo: HS,
-            userInputsPerItem: gS,
-            redDotInfo: tS,
-            autoSelectCategory: XS
-          } = function(SS, HS, gS, tS, bS, XS) {
-            if ((0, Sg.K)(SS) || 0 === Object.keys(SS).length) return {
+            shopInfo: Fk,
+            userInputsPerItem: Ik,
+            redDotInfo: Xk,
+            autoSelectCategory: ik
+          } = function(kk, Fk, Ik, Xk, Tk, ik) {
+            if ((0, FI.Q)(kk) || 0 === Object.keys(kk).length) return {
               shopInfo: {},
               userInputsPerItem: {},
-              redDotInfo: bX.fromShopInfo({}),
+              redDotInfo: Ti.fromShopInfo({}),
               autoSelectCategory: null
             };
-            const xS = dS.m[dS.r].adConfig.showRewardedAds,
-              NS = {};
-            let qS = null;
-            for (const GS in SS) {
-              const HS = SS[GS],
-                gS = {};
-              let tS = !1;
-              for (const SS in HS.items) {
-                const bS = HS.items[SS];
-                (0, yt.i)(bS, xS) && (gS[SS] = bS, tS = !0)
+            const yk = Ek.r[Ek.v].adConfig.showRewardedAds,
+              lk = {};
+            let ak = null;
+            for (const Hk in kk) {
+              const Fk = kk[Hk],
+                Ik = {};
+              let Xk = !1;
+              for (const kk in Fk.items) {
+                const Tk = Fk.items[kk];
+                (0, bX.j)(Tk, yk) && (Ik[kk] = Tk, Xk = !0)
               }
-              tS && (NS[GS] = {
-                ...HS,
-                items: gS
-              }, !0 === HS.autoSelectCategory && (qS = GS))
+              Xk && (lk[Hk] = {
+                ...Fk,
+                items: Ik
+              }, !0 === Fk.autoSelectCategory && (ak = Hk))
             }
-            const uS = {},
-              IS = (SS, HS, tS, xS) => {
-                var NS, qS;
-                const IS = XX(SS, HS),
-                  fS = null !== (NS = gS[IS]) && void 0 !== NS ? NS : gS[HS];
-                if (null !== (qS = xS.userInput) && void 0 !== qS && qS.type) switch (xS.userInput.type) {
+            const qk = {},
+              Lk = (kk, Fk, Xk, yk) => {
+                var lk, ak;
+                const Lk = ii(kk, Fk),
+                  tk = null !== (lk = Ik[Lk]) && void 0 !== lk ? lk : Ik[Fk];
+                if (null !== (ak = yk.userInput) && void 0 !== ak && ak.type) switch (yk.userInput.type) {
                   case "dropdown": {
-                    var kS;
-                    const SS = !fS || !xS.userInput.dropdownOptions.some((SS => (0, yt.c)(SS) === fS)),
-                      HS = xS.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === tS || void 0 === tS || null === (kS = tS.userInput) || void 0 === kS ? void 0 : kS.type) || JSON.stringify(tS.userInput.dropdownOptions) !== JSON.stringify(xS.userInput.dropdownOptions)),
-                      gS = xS.userInput,
-                      bS = !(0, Sg.K)(gS.initialValue) && gS.dropdownOptions.some((SS => (0, yt.c)(SS) === gS.initialValue));
-                    var aS;
-                    return void(SS || HS ? bS ? uS[IS] = null !== (aS = xS.userInput.initialValue) && void 0 !== aS ? aS : null : xS.userInput.dropdownOptions.length > 0 ? uS[IS] = (0, yt.c)(xS.userInput.dropdownOptions[0]) : uS[IS] = null : uS[IS] = fS)
+                    var Zk;
+                    const kk = !tk || !yk.userInput.dropdownOptions.some((kk => (0, bX.e)(kk) === tk)),
+                      Fk = yk.userInput.shouldResetSelectionOnOptionsChange && ("dropdown" !== (null === Xk || void 0 === Xk || null === (Zk = Xk.userInput) || void 0 === Zk ? void 0 : Zk.type) || JSON.stringify(Xk.userInput.dropdownOptions) !== JSON.stringify(yk.userInput.dropdownOptions)),
+                      Ik = yk.userInput,
+                      Tk = !(0, FI.Q)(Ik.initialValue) && Ik.dropdownOptions.some((kk => (0, bX.e)(kk) === Ik.initialValue));
+                    var jk;
+                    return void(kk || Fk ? Tk ? qk[Lk] = null !== (jk = yk.userInput.initialValue) && void 0 !== jk ? jk : null : yk.userInput.dropdownOptions.length > 0 ? qk[Lk] = (0, bX.e)(yk.userInput.dropdownOptions[0]) : qk[Lk] = null : qk[Lk] = tk)
                   }
                   case "text":
                   case "number":
-                    var KS, jS, GS;
-                    return void((null === tS || void 0 === tS ? void 0 : tS.userInput) !== xS.userInput ? uS[IS] = null !== (KS = null !== (jS = xS.userInput.initialValue) && void 0 !== jS ? jS : fS) && void 0 !== KS ? KS : "" : uS[IS] = null !== (GS = null !== fS && void 0 !== fS ? fS : xS.userInput.initialValue) && void 0 !== GS ? GS : "");
+                    var ek, wk, Hk;
+                    return void((null === Xk || void 0 === Xk ? void 0 : Xk.userInput) !== yk.userInput ? qk[Lk] = null !== (ek = null !== (wk = yk.userInput.initialValue) && void 0 !== wk ? wk : tk) && void 0 !== ek ? ek : "" : qk[Lk] = null !== (Hk = null !== tk && void 0 !== tk ? tk : yk.userInput.initialValue) && void 0 !== Hk ? Hk : "");
                   case "color":
-                    var CS, nS, PS;
-                    return void((null === tS || void 0 === tS ? void 0 : tS.userInput) !== xS.userInput ? uS[IS] = null !== (CS = null !== (nS = xS.userInput.initialValue) && void 0 !== nS ? nS : fS) && void 0 !== CS ? CS : "#000000" : uS[IS] = null !== (PS = null !== fS && void 0 !== fS ? fS : xS.userInput.initialValue) && void 0 !== PS ? PS : "#000000");
+                    var Jk, xk, Pk;
+                    return void((null === Xk || void 0 === Xk ? void 0 : Xk.userInput) !== yk.userInput ? qk[Lk] = null !== (Jk = null !== (xk = yk.userInput.initialValue) && void 0 !== xk ? xk : tk) && void 0 !== Jk ? Jk : "#000000" : qk[Lk] = null !== (Pk = null !== tk && void 0 !== tk ? tk : yk.userInput.initialValue) && void 0 !== Pk ? Pk : "#000000");
                   case "player": {
-                    const SS = (0, yt.e)(bS, XS, xS.userInput);
-                    return void(fS && SS.includes(fS) ? uS[IS] = fS : uS[IS] = SS.length > 0 ? SS[0] : null)
+                    const kk = (0, bX.f)(Tk, ik, yk.userInput);
+                    return void(tk && kk.includes(tk) ? qk[Lk] = tk : qk[Lk] = kk.length > 0 ? kk[0] : null)
                   }
                 }
               };
-            for (const GS in NS)
-              for (const SS in NS[GS].items) {
-                var fS;
-                const gS = NS[GS].items[SS];
-                IS(GS, SS, null === (fS = HS[GS]) || void 0 === fS ? void 0 : fS.items[SS], gS)
+            for (const Hk in lk)
+              for (const kk in lk[Hk].items) {
+                var tk;
+                const Ik = lk[Hk].items[kk];
+                Lk(Hk, kk, null === (tk = Fk[Hk]) || void 0 === tk ? void 0 : tk.items[kk], Ik)
               }
-            const kS = bX.fromShopInfo(NS);
-            for (const GS in NS) {
-              var aS;
-              if (tS.doesCategoryExist(GS)) {
-                (null === (aS = HS[GS]) || void 0 === aS ? void 0 : aS.redDot) === NS[GS].redDot && kS.updateCategoryRedDot(GS, tS.categoryHasRedDot(GS));
-                for (const SS in NS[GS].items) {
-                  var KS, jS;
-                  tS.doesItemExist(GS, SS) && (null === (KS = HS[GS]) || void 0 === KS || null === (jS = KS.items[SS]) || void 0 === jS ? void 0 : jS.redDot) === NS[GS].items[SS].redDot && kS.updateItemRedDot(GS, SS, tS.itemHasRedDot(GS, SS))
+            const Zk = Ti.fromShopInfo(lk);
+            for (const Hk in lk) {
+              var jk;
+              if (Xk.doesCategoryExist(Hk)) {
+                (null === (jk = Fk[Hk]) || void 0 === jk ? void 0 : jk.redDot) === lk[Hk].redDot && Zk.updateCategoryRedDot(Hk, Xk.categoryHasRedDot(Hk));
+                for (const kk in lk[Hk].items) {
+                  var ek, wk;
+                  Xk.doesItemExist(Hk, kk) && (null === (ek = Fk[Hk]) || void 0 === ek || null === (wk = ek.items[kk]) || void 0 === wk ? void 0 : wk.redDot) === lk[Hk].items[kk].redDot && Zk.updateItemRedDot(Hk, kk, Xk.itemHasRedDot(Hk, kk))
                 }
               }
             }
             return {
-              shopInfo: NS,
-              userInputsPerItem: uS,
-              redDotInfo: kS,
-              autoSelectCategory: qS
+              shopInfo: lk,
+              userInputsPerItem: qk,
+              redDotInfo: Zk,
+              autoSelectCategory: ak
             }
-          }(SS, aS.shopInfo, aS.userInputsPerItem, aS.redDotInfo, xS, NS), qS = {
-            shopInfo: HS,
-            userInputsPerItem: gS,
-            redDotInfo: tS
+          }(kk, jk.shopInfo, jk.userInputsPerItem, jk.redDotInfo, yk, lk), ak = {
+            shopInfo: Fk,
+            userInputsPerItem: Ik,
+            redDotInfo: Xk
           };
-          if (null === XS || bS)
-            if (HS[aS.selectedCategoryKey]) qS.selectedCategoryKey = aS.selectedCategoryKey;
+          if (null === ik || Tk)
+            if (Fk[jk.selectedCategoryKey]) ak.selectedCategoryKey = jk.selectedCategoryKey;
             else {
-              const SS = Tt(HS);
-              qS.selectedCategoryKey = SS.length > 0 ? SS[0] : null
+              const kk = gX(Fk);
+              ak.selectedCategoryKey = kk.length > 0 ? kk[0] : null
             }
-          else qS.selectedCategoryKey = XS;
-          return 0 === Object.keys(HS).length && bS && ZS.b.set({
+          else ak.selectedCategoryKey = ik;
+          return 0 === Object.keys(Fk).length && Tk && zk.d.set({
             openEverythingMenuName: null
-          }), qS
+          }), ak
         },
-        zS = (SS, HS, gS) => {
-          const tS = aS.selectedCategoryKey,
-            bS = XX(tS, SS),
-            XS = null !== gS && void 0 !== gS ? gS : aS.userInputsPerItem[bS],
-            xS = {
-              categoryKey: tS,
-              itemKey: SS,
-              userInput: XS
+        ck = (kk, Fk, Ik) => {
+          const Xk = jk.selectedCategoryKey,
+            Tk = ii(Xk, kk),
+            ik = null !== Ik && void 0 !== Ik ? Ik : jk.userInputsPerItem[Tk],
+            yk = {
+              categoryKey: Xk,
+              itemKey: kk,
+              userInput: ik
             };
-          if (CS.current = tS, HS.isRewardedAd) {
-            if (Date.now() - QS.current < 5e3) return;
-            (0, NH.db)((() => {
-              var gS, tS, XS;
+          if (Jk.current = Xk, Fk.isRewardedAd) {
+            if (Date.now() - Kk.current < 5e3) return;
+            (0, aF.$)((() => {
+              var Ik, Xk, ik;
               console.log("bought rewarded ad");
-              const NS = xS.categoryKey ? null === (gS = hS.current.shopInfo[xS.categoryKey]) || void 0 === gS ? void 0 : gS.items[SS] : null;
-              if (!NS || !NS.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
-              (null === (tS = HS.userInput) || void 0 === tS ? void 0 : tS.type) === (null === NS || void 0 === NS || null === (XS = NS.userInput) || void 0 === XS ? void 0 : XS.type) ? (xS.userInput = hS.current.userInputsPerItem[bS], nS.gameBridge.send("buyShopItem", xS), HS.onBoughtMessage && VS(HS.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
-            })), QS.current = Date.now()
+              const lk = yk.categoryKey ? null === (Ik = Vk.current.shopInfo[yk.categoryKey]) || void 0 === Ik ? void 0 : Ik.items[kk] : null;
+              if (!lk || !lk.isRewardedAd) return void console.warn("Shop item no longer valid or a rewarded ad, early out");
+              (null === (Xk = Fk.userInput) || void 0 === Xk ? void 0 : Xk.type) === (null === lk || void 0 === lk || null === (ik = lk.userInput) || void 0 === ik ? void 0 : ik.type) ? (yk.userInput = Vk.current.userInputsPerItem[Tk], xk.gameBridge.send("buyShopItem", yk), Fk.onBoughtMessage && Uk(Fk.onBoughtMessage)) : console.warn("Shop item input type changed, early out")
+            })), Kk.current = Date.now()
           } else {
-            nS.gameBridge.send("buyShopItem", xS), yS({
+            xk.gameBridge.send("buyShopItem", yk), Rk({
               awaitingPurchase: !0
-            }), clearTimeout(DS.current), DS.current = setTimeout((() => {
-              wS.current = null, yS({
+            }), clearTimeout(Qk.current), Qk.current = setTimeout((() => {
+              sk.current = null, Rk({
                 awaitingPurchase: !1
               })
             }), 1e3);
-            const SS = (0, yt.b)(HS, XS);
-            if (wS.current = null, !isNaN(SS) && xX(aS.currencyAmounts, HS.currency)) {
-              0 !== SS && (wS.current = {
-                currency: HS.currency,
-                amountBefore: aS.currencyAmounts[HS.currency].amount
+            const kk = (0, bX.b)(Fk, ik);
+            if (sk.current = null, !isNaN(kk) && yi(jk.currencyAmounts, Fk.currency)) {
+              0 !== kk && (sk.current = {
+                currency: Fk.currency,
+                amountBefore: jk.currencyAmounts[Fk.currency].amount
               });
-              const gS = {
-                ...aS.currencyAmounts
+              const Ik = {
+                ...jk.currencyAmounts
               };
-              gS[HS.currency].amount -= SS, yS({
-                currencyAmounts: gS
+              Ik[Fk.currency].amount -= kk, Rk({
+                currencyAmounts: Ik
               })
             }
-            HS.onBoughtMessage && VS(HS.onBoughtMessage)
+            Fk.onBoughtMessage && Uk(Fk.onBoughtMessage)
           }
         },
-        US = (SS, HS) => {
-          if (null === HS || !SS.shopInfo[HS]) return SS;
-          let gS = SS.redDotInfo;
-          return gS.categoryHasRedDot(HS) && (gS.updateCategoryRedDot(HS, !1), gS = gS.shallowCopy()), {
-            ...SS,
-            selectedCategoryKey: HS,
-            redDotInfo: gS
+        Wk = (kk, Fk) => {
+          if (null === Fk || !kk.shopInfo[Fk]) return kk;
+          let Ik = kk.redDotInfo;
+          return Ik.categoryHasRedDot(Fk) && (Ik.updateCategoryRedDot(Fk, !1), Ik = Ik.shallowCopy()), {
+            ...kk,
+            selectedCategoryKey: Fk,
+            redDotInfo: Ik
           }
         },
-        pS = SS => {
-          KS((HS => US(HS, SS)))
+        fk = kk => {
+          ek((Fk => Wk(Fk, kk)))
         };
-      (0, VH.g)(Mt.i, (() => {
-        KS((SS => {
-          const HS = (0, Mt.k)(Tt(SS.shopInfo), SS.selectedCategoryKey, (HS => (0, Mt.h)(SS.shopInfo[HS].items)));
-          return HS === SS.selectedCategoryKey ? SS : US(SS, HS)
+      (0, UF.d)(dX.h, (() => {
+        ek((kk => {
+          const Fk = (0, dX.l)(gX(kk.shopInfo), kk.selectedCategoryKey, (Fk => (0, dX.g)(kk.shopInfo[Fk].items)));
+          return Fk === kk.selectedCategoryKey ? kk : Wk(kk, Fk)
         }))
-      })), (0, VH.g)("showShopFromServer", (SS => {
+      })), (0, UF.d)("showShopFromServer", (kk => {
         let {
-          toggle: HS,
-          yb: gS
-        } = SS;
-        gS && pS(gS), 0 === Object.keys(aS.shopInfo).length || HS && bS ? ZS.b.set({
+          toggle: Fk,
+          ET: Ik
+        } = kk;
+        Ik && fk(Ik), 0 === Object.keys(jk.shopInfo).length || Fk && Tk ? zk.d.set({
           openEverythingMenuName: null
-        }) : ZS.b.set({
-          openEverythingMenuName: IH.q.SHOP
+        }) : zk.d.set({
+          openEverythingMenuName: tF.r.SHOP
         })
-      })), (0, VH.g)("closeShopOnDamaged", (() => {
-        bS && ZS.b.set({
+      })), (0, UF.d)("closeShopOnDamaged", (() => {
+        Tk && zk.d.set({
           openEverythingMenuName: null
         })
-      })), (0, VH.g)("overShopInfo", (SS => {
-        VS(SS)
-      })), (0, jS.e)("currencyAmounts", (SS => {
-        var HS;
-        const gS = wS.current;
-        gS && (null === SS || void 0 === SS || null === (HS = SS[gS.currency]) || void 0 === HS ? void 0 : HS.amount) === gS.amountBefore ? yS({
-          currencyAmounts: SS
-        }) : (wS.current = null, yS({
-          currencyAmounts: SS,
+      })), (0, UF.d)("overShopInfo", (kk => {
+        Uk(kk)
+      })), (0, wk.g)("currencyAmounts", (kk => {
+        var Fk;
+        const Ik = sk.current;
+        Ik && (null === kk || void 0 === kk || null === (Fk = kk[Ik.currency]) || void 0 === Fk ? void 0 : Fk.amount) === Ik.amountBefore ? Rk({
+          currencyAmounts: kk
+        }) : (sk.current = null, Rk({
+          currencyAmounts: kk,
           awaitingPurchase: !1
         }))
-      })), (0, jS.e)("shopInfo", (SS => {
-        yS({
-          ...iS(SS),
+      })), (0, wk.g)("shopInfo", (kk => {
+        Rk({
+          ...Ck(kk),
           awaitingPurchase: !1
         })
       }));
-      const sS = (0, tS.useRef)({
-        playerIds: xS,
-        localPlayerId: NS
+      const Bk = (0, Xk.useRef)({
+        playerIds: yk,
+        localPlayerId: lk
       });
-      (0, tS.useEffect)((() => {
-        sS.current.playerIds === xS && sS.current.localPlayerId === NS || (sS.current = {
-          playerIds: xS,
-          localPlayerId: NS
-        }, KS((SS => {
-          const HS = iS(SS.shopInfo);
+      (0, Xk.useEffect)((() => {
+        Bk.current.playerIds === yk && Bk.current.localPlayerId === lk || (Bk.current = {
+          playerIds: yk,
+          localPlayerId: lk
+        }, ek((kk => {
+          const Fk = Ck(kk.shopInfo);
           return {
-            ...SS,
-            ...HS
+            ...kk,
+            ...Fk
           }
         })))
-      }), [xS, NS]);
-      const BS = aS.selectedCategoryKey,
-        MS = (SS, HS) => {
-          var gS, tS;
-          return (isNaN(HS) || (0, Sg.K)(SS.currency) || xX(aS.currencyAmounts, SS.currency) && HS <= aS.currencyAmounts[SS.currency].amount) && (null === (gS = SS.canBuy) || void 0 === gS || gS) && !(null !== (tS = SS.hidden) && void 0 !== tS && tS)
+      }), [yk, lk]);
+      const dk = jk.selectedCategoryKey,
+        Yk = (kk, Fk) => {
+          var Ik, Xk;
+          return (isNaN(Fk) || (0, FI.Q)(kk.currency) || yi(jk.currencyAmounts, kk.currency) && Fk <= jk.currencyAmounts[kk.currency].amount) && (null === (Ik = kk.canBuy) || void 0 === Ik || Ik) && !(null !== (Xk = kk.hidden) && void 0 !== Xk && Xk)
         },
-        FS = (SS, HS) => {
-          var gS, tS, bS;
-          const xS = XX(BS, SS),
-            NS = aS.shopInfo[BS].items[SS],
-            IS = aS.userInputsPerItem[xS],
-            kS = (0, yt.b)(NS, IS),
-            KS = MS(NS, kS),
-            jS = NS.enchant,
-            GS = jS ? (0, WS.bb)(null !== (gS = NS.customTitle) && void 0 !== gS ? gS : SS, {
-              colour: WS.$[jS.tier]
-            }) : null !== (tS = NS.customTitle) && void 0 !== tS ? tS : SS,
-            CS = HS => {
-              const gS = null !== HS && void 0 !== HS ? HS : IS,
-                tS = void 0 !== HS ? (0, yt.b)(NS, HS) : kS;
-              MS(NS, tS) && null !== gS && zS(SS, NS, HS);
-              let bS = aS.redDotInfo;
-              bS.itemHasRedDot(BS, SS) && (bS.updateItemRedDot(BS, SS, !1), bS = bS.shallowCopy()), yS({
-                redDotInfo: bS
+        Ak = (kk, Fk) => {
+          var Ik, Xk, Tk;
+          const yk = ii(dk, kk),
+            lk = jk.shopInfo[dk].items[kk],
+            Lk = jk.userInputsPerItem[yk],
+            Zk = (0, bX.b)(lk, Lk),
+            ek = Yk(lk, Zk),
+            wk = lk.enchant,
+            Hk = wk ? (0, Nk.zb)(null !== (Ik = lk.customTitle) && void 0 !== Ik ? Ik : kk, {
+              colour: Nk.sb[wk.tier]
+            }) : null !== (Xk = lk.customTitle) && void 0 !== Xk ? Xk : kk,
+            Jk = Fk => {
+              const Ik = null !== Fk && void 0 !== Fk ? Fk : Lk,
+                Xk = void 0 !== Fk ? (0, bX.b)(lk, Fk) : Zk;
+              Yk(lk, Xk) && null !== Ik && ck(kk, lk, Fk);
+              let Tk = jk.redDotInfo;
+              Tk.itemHasRedDot(dk, kk) && (Tk.updateItemRedDot(dk, kk, !1), Tk = Tk.shallowCopy()), Rk({
+                redDotInfo: Tk
               })
             };
-          return (0, fS.jsxs)("div", {
-            className: XS()("ShopItem", {
-              ShopItemNoInput: !NS.userInput,
-              ShopItemNoInputCanBuy: !NS.userInput && KS,
-              ShopItemNoInputSelected: NS.isSelected,
-              ShopItemEnchant: !!jS
+          return (0, tk.jsxs)("div", {
+            className: ik()("ShopItem", {
+              ShopItemNoInput: !lk.userInput,
+              ShopItemNoInputCanBuy: !lk.userInput && ek,
+              ShopItemNoInputSelected: lk.isSelected,
+              ShopItemEnchant: !!wk
             }),
-            "data-pad-focusable": !NS.userInput || void 0,
-            "data-pad-unavailable": !NS.userInput && !KS || void 0,
-            "data-pad-repeat": null !== (bS = (0, Mt.e)(NS)) && void 0 !== bS ? bS : void 0,
-            "data-pad-repeat-wait": aS.awaitingPurchase || void 0,
+            "data-pad-focusable": !lk.userInput || void 0,
+            "data-pad-unavailable": !lk.userInput && !ek || void 0,
+            "data-pad-repeat": null !== (Tk = (0, dX.b)(lk)) && void 0 !== Tk ? Tk : void 0,
+            "data-pad-repeat-wait": jk.awaitingPurchase || void 0,
             onClick: () => {
-              if (jS && vS.current) {
-                if (OS !== xS) return void cS(xS);
-                cS(null)
+              if (wk && nk.current) {
+                if (vk !== yk) return void Ok(yk);
+                Ok(null)
               }
-              NS.userInput || CS()
+              lk.userInput || Jk()
             },
-            onPointerDown: SS => {
-              jS && (vS.current = (0, it.v)(SS))
+            onPointerDown: kk => {
+              wk && (nk.current = (0, UX.s)(kk))
             },
-            onPointerEnter: SS => {
-              jS && !(0, it.v)(SS) && cS(xS)
+            onPointerEnter: kk => {
+              wk && !(0, UX.s)(kk) && Ok(yk)
             },
-            onPointerLeave: SS => {
-              jS && !(0, it.v)(SS) && cS((SS => SS === xS ? null : SS))
+            onPointerLeave: kk => {
+              wk && !(0, UX.s)(kk) && Ok((kk => kk === yk ? null : kk))
             },
             style: {
-              zIndex: Object.keys(aS.shopInfo[BS].items).length - HS
+              zIndex: Object.keys(jk.shopInfo[dk].items).length - Fk
             },
-            children: [aS.redDotInfo.itemHasRedDot(BS, SS) && (0, fS.jsx)(qS.e, {
+            children: [jk.redDotInfo.itemHasRedDot(dk, kk) && (0, tk.jsx)(ak.c, {
               top: "-6px",
               right: "-6px"
-            }), NS.badge && (0, fS.jsx)("div", {
+            }), lk.badge && (0, tk.jsx)("div", {
               className: "ShopBadgeContainer",
-              children: (0, fS.jsx)("div", {
-                className: XS()("ShopBadgeMain", NS.badge.type),
-                children: (0, fS.jsx)(zt.c, {
-                  text: NS.badge.text
+              children: (0, tk.jsx)("div", {
+                className: ik()("ShopBadgeMain", lk.badge.type),
+                children: (0, tk.jsx)(NX.c, {
+                  text: lk.badge.text
                 })
               })
-            }), (0, fS.jsx)("div", {
+            }), (0, tk.jsx)("div", {
               className: "ShopItemLeft",
-              children: NS.image && (0, fS.jsx)(qX, {
-                item: NS,
+              children: lk.image && (0, tk.jsx)(ai, {
+                item: lk,
                 minWidth: 5,
                 minHeight: 4.8
               })
-            }), (0, fS.jsxs)("div", {
+            }), (0, tk.jsxs)("div", {
               className: "ShopItemRight",
-              children: [(0, fS.jsxs)("div", {
+              children: [(0, tk.jsxs)("div", {
                 className: "ShopItemHeader",
-                children: [(0, fS.jsx)("div", {
+                children: [(0, tk.jsx)("div", {
                   className: "ShopItemHeaderTitle",
-                  children: (0, fS.jsx)(zt.c, {
-                    text: GS
+                  children: (0, tk.jsx)(NX.c, {
+                    text: Hk
                   })
-                }), (0, fS.jsx)("div", {
+                }), (0, tk.jsx)("div", {
                   className: "ShopItemHeaderDescription",
-                  children: (0, fS.jsx)(zt.c, {
-                    text: NS.description
+                  children: (0, tk.jsx)(NX.c, {
+                    text: lk.description
                   })
                 })]
-              }), NS.userInput && (0, fS.jsxs)("div", {
+              }), lk.userInput && (0, tk.jsxs)("div", {
                 className: "ShopItemInputsContainer",
-                onClick: SS => {
-                  SS.stopPropagation()
+                onClick: kk => {
+                  kk.stopPropagation()
                 },
-                children: [(0, fS.jsx)(fX, {
-                  item: NS,
-                  currInput: IS,
-                  updateInput: HS => {
-                    ((SS, HS, gS) => {
-                      const tS = XX(SS, HS),
-                        bS = {
-                          ...aS.userInputsPerItem
+                children: [(0, tk.jsx)(ti, {
+                  item: lk,
+                  currInput: Lk,
+                  updateInput: Fk => {
+                    ((kk, Fk, Ik) => {
+                      const Xk = ii(kk, Fk),
+                        Tk = {
+                          ...jk.userInputsPerItem
                         };
-                      bS[tS] = gS, yS({
-                        userInputsPerItem: bS
+                      Tk[Xk] = Ik, Rk({
+                        userInputsPerItem: Tk
                       })
-                    })(BS, SS, HS)
+                    })(dk, kk, Fk)
                   },
-                  onSubmit: SS => {
-                    CS(SS)
+                  onSubmit: kk => {
+                    Jk(kk)
                   }
-                }), ("dropdown" !== NS.userInput.type || !NS.userInput.autoSubmit) && (0, fS.jsx)(uS.g, {
+                }), ("dropdown" !== lk.userInput.type || !lk.userInput.autoSubmit) && (0, tk.jsx)(qk.d, {
                   className: "ItemCostButton",
-                  disabled: !KS && null !== IS,
+                  disabled: !ek && null !== Lk,
                   onClick: () => {
-                    CS()
+                    Jk()
                   },
-                  children: (0, fS.jsx)(IX, {
-                    item: NS,
-                    cost: kS,
-                    currencyAmounts: aS.currencyAmounts
+                  children: (0, tk.jsx)(Li, {
+                    item: lk,
+                    cost: Zk,
+                    currencyAmounts: jk.currencyAmounts
                   })
                 })]
               })]
-            }), !NS.userInput && (0, fS.jsx)("div", {
+            }), !lk.userInput && (0, tk.jsx)("div", {
               className: "ShopItemNoInputCost",
-              children: (0, fS.jsx)(IX, {
-                item: NS,
-                cost: kS,
-                currencyAmounts: aS.currencyAmounts
+              children: (0, tk.jsx)(Li, {
+                item: lk,
+                cost: Zk,
+                currencyAmounts: jk.currencyAmounts
               })
-            }), jS && OS === xS && (0, fS.jsxs)("div", {
+            }), wk && vk === yk && (0, tk.jsxs)("div", {
               className: "ShopItemEnchantInfo SmallTextBold",
-              children: [(0, fS.jsx)(zt.c, {
-                text: GS
-              }), (0, fS.jsx)("div", {
+              children: [(0, tk.jsx)(NX.c, {
+                text: Hk
+              }), (0, tk.jsx)("div", {
                 className: "ShopItemEnchantInfoDescription",
-                children: (0, fS.jsx)(zt.c, {
-                  text: (0, Vt.e)("", jS.enchantments, jS.enchantmentData)
+                children: (0, tk.jsx)(NX.c, {
+                  text: (0, RX.d)("", wk.enchantments, wk.enchantmentData)
                 })
               })]
             })]
-          }, xS)
+          }, yk)
         },
-        RS = function(SS) {
-          for (const HS in SS)
-            if (SS[HS].smp) return !0;
+        gk = function(kk) {
+          for (const Fk in kk)
+            if (kk[Fk].smp) return !0;
           return !1
-        }(aS.shopInfo),
-        TS = kb(aS.shopInfo, BS);
-      return (0, fS.jsx)(Lt.b, {
+        }(jk.shopInfo),
+        mk = ZT(jk.shopInfo, dk);
+      return (0, tk.jsx)(GX.b, {
         className: "Menu ShopBody",
-        show: bS,
-        children: 0 !== Object.keys(aS.shopInfo).length && (0, fS.jsxs)(fS.Fragment, {
-          children: [(0, fS.jsxs)("div", {
+        show: Tk,
+        children: 0 !== Object.keys(jk.shopInfo).length && (0, tk.jsxs)(tk.Fragment, {
+          children: [(0, tk.jsxs)("div", {
             className: "MenuSideBar",
-            children: [(0, fS.jsx)(kS, {
-              items: Tt(aS.shopInfo).map((SS => {
-                var HS;
+            children: [(0, tk.jsx)(Zk, {
+              items: gX(jk.shopInfo).map((kk => {
+                var Fk;
                 return {
-                  id: SS,
-                  title: null !== (HS = aS.shopInfo[SS].customTitle) && void 0 !== HS ? HS : SS,
-                  redDot: aS.redDotInfo.categoryHasRedDot(SS)
+                  id: kk,
+                  title: null !== (Fk = jk.shopInfo[kk].customTitle) && void 0 !== Fk ? Fk : kk,
+                  redDot: jk.redDotInfo.categoryHasRedDot(kk)
                 }
               })),
-              link: IS ? {
+              link: Lk ? {
                 faIcon: "users-gear",
                 title: "lobbyManageEntry:manageLobby",
                 onClick: () => {
-                  (0, Rt.f)({
-                    page: (0, Rt.c)(),
+                  (0, AX.f)({
+                    page: (0, AX.e)(),
                     source: "shop"
                   })
                 }
               } : void 0,
-              selectedItemId: BS,
-              onClick: pS,
-              padStartsOnTab: (0, Mt.g)(BS)
-            }), (0, fS.jsx)("div", {
+              selectedItemId: dk,
+              onClick: fk,
+              padStartsOnTab: (0, dX.d)(dk)
+            }), (0, tk.jsx)("div", {
               className: "MenuSideBarFooter",
-              children: aS.currencyAmounts && Object.keys(aS.currencyAmounts).map((SS => {
-                var HS;
-                const gS = aS.currencyAmounts[SS];
-                return gS.hidden ? null : (0, fS.jsxs)("div", {
-                  className: "ShopCurrencyDiv " + (ES ? "SmallText" : ""),
-                  children: [(0, fS.jsxs)("div", {
+              children: jk.currencyAmounts && Object.keys(jk.currencyAmounts).map((kk => {
+                var Fk;
+                const Ik = jk.currencyAmounts[kk];
+                return Ik.hidden ? null : (0, tk.jsxs)("div", {
+                  className: "ShopCurrencyDiv " + (Gk ? "SmallText" : ""),
+                  children: [(0, tk.jsxs)("div", {
                     className: "ShopCurrencyDetails",
-                    children: [(0, fS.jsx)("div", {
+                    children: [(0, tk.jsx)("div", {
                       className: "ShopCurrencyAmtIcon",
                       style: {
-                        color: gS.iconColour
+                        color: Ik.iconColour
                       },
-                      children: (0, fS.jsx)(jX, {
-                        iconName: gS.icon
+                      children: (0, tk.jsx)(wi, {
+                        iconName: Ik.icon
                       })
-                    }), "\xa0", (0, At.e)(gS.amount, 6)]
-                  }), (null === (HS = gS.subtext) || void 0 === HS ? void 0 : HS.length) > 0 && (0, fS.jsx)("div", {
+                    }), "\xa0", (0, uX.c)(Ik.amount, 6)]
+                  }), (null === (Fk = Ik.subtext) || void 0 === Fk ? void 0 : Fk.length) > 0 && (0, tk.jsx)("div", {
                     className: "ShopCurrencySubtext",
-                    children: (0, fS.jsx)(zt.c, {
-                      text: gS.subtext
+                    children: (0, tk.jsx)(NX.c, {
+                      text: Ik.subtext
                     })
                   })]
-                }, SS)
+                }, kk)
               }))
             })]
-          }), (0, fS.jsxs)("div", {
+          }), (0, tk.jsxs)("div", {
             className: "MenuBody ShopMenuBody",
-            children: [RS && (0, fS.jsx)(tX, {
-              show: bS,
-              shopInfo: aS.shopInfo,
-              selectedCategoryKey: BS,
-              buy: (SS, HS, gS) => {
-                zS(SS, HS, gS)
+            children: [gk && (0, tk.jsx)(Xi, {
+              show: Tk,
+              shopInfo: jk.shopInfo,
+              selectedCategoryKey: dk,
+              buy: (kk, Fk, Ik) => {
+                ck(kk, Fk, Ik)
               },
-              canAfford: MS,
-              message: aS.onBoughtInfo
-            }), null === TS && (0, fS.jsxs)(fS.Fragment, {
-              children: [(0, fS.jsx)("div", {
-                className: XS()("ShopOnBoughtInfo", {
-                  ShopOnBoughtInfoShow: null !== aS.onBoughtInfo
+              canAfford: Yk,
+              message: jk.onBoughtInfo
+            }), null === mk && (0, tk.jsxs)(tk.Fragment, {
+              children: [(0, tk.jsx)("div", {
+                className: ik()("ShopOnBoughtInfo", {
+                  ShopOnBoughtInfoShow: null !== jk.onBoughtInfo
                 }),
-                children: (0, fS.jsx)(zt.c, {
-                  text: GS.current
+                children: (0, tk.jsx)(NX.c, {
+                  text: Hk.current
                 })
-              }), (0, fS.jsx)("div", {
+              }), (0, tk.jsx)("div", {
                 className: "ShopItemsWrapper",
-                children: (0, fS.jsxs)("div", {
+                children: (0, tk.jsxs)("div", {
                   className: "ShopItemsInner",
-                  children: [(null === (HS = aS.shopInfo[BS]) || void 0 === HS ? void 0 : HS.description) && (0, fS.jsx)("div", {
+                  children: [(null === (Fk = jk.shopInfo[dk]) || void 0 === Fk ? void 0 : Fk.description) && (0, tk.jsx)("div", {
                     className: "ShopCategoryDescription",
-                    children: (0, fS.jsx)(zt.c, {
-                      text: aS.shopInfo[BS].description
+                    children: (0, tk.jsx)(NX.c, {
+                      text: jk.shopInfo[dk].description
                     })
-                  }), bS && (0, fS.jsx)("div", {
+                  }), Tk && (0, tk.jsx)("div", {
                     className: "ShopItems",
-                    ref: PS,
+                    ref: Pk,
                     "data-pad-initial-area": !0,
-                    children: Tt(null === (gS = aS.shopInfo[BS]) || void 0 === gS ? void 0 : gS.items).map(((SS, HS) => FS(SS, HS)))
+                    children: gX(null === (Ik = jk.shopInfo[dk]) || void 0 === Ik ? void 0 : Ik.items).map(((kk, Fk) => Ak(kk, Fk)))
                   })]
                 })
               })]
@@ -5166,784 +5166,784 @@ export const modules = {
       })
     }));
 
-    function qX(SS) {
+    function ai(kk) {
       let {
-        item: HS,
-        minWidth: gS,
-        minHeight: tS
-      } = SS;
+        item: Fk,
+        minWidth: Ik,
+        minHeight: Xk
+      } = kk;
       const {
-        image: bS,
-        schematicId: XS,
-        imageColour: xS
-      } = HS;
-      if (XS) return (0, fS.jsx)("div", {
+        image: Tk,
+        schematicId: ik,
+        imageColour: yk
+      } = Fk;
+      if (ik) return (0, tk.jsx)("div", {
         className: "ShopSchematic",
         style: {
-          width: `${gS}rem`,
-          height: `${tS}rem`
+          width: `${Ik}rem`,
+          height: `${Xk}rem`
         },
-        children: (0, fS.jsx)(Ut.d, {
+        children: (0, tk.jsx)(cX.b, {
           game: {
-            schematicId: XS
+            schematicId: ik
           }
         })
       });
-      var qS, uS;
-      if ((0, Wt.g)(bS)) return (0, fS.jsx)("div", {
+      var ak, qk;
+      if ((0, CX.e)(Tk)) return (0, tk.jsx)("div", {
         className: "ShopBlock",
         style: {
-          minWidth: `${gS}rem`,
+          minWidth: `${Ik}rem`,
           height: "0",
-          minHeight: `${tS}rem`
+          minHeight: `${Xk}rem`
         },
-        children: (0, fS.jsx)(Wt.e, {
-          itemName: bS,
-          amount: null !== (qS = HS.amount) && void 0 !== qS ? qS : 0,
-          amountFontSize: tS / 4 + "rem",
-          enchantmentTier: null === (uS = HS.enchant) || void 0 === uS ? void 0 : uS.tier
+        children: (0, tk.jsx)(CX.d, {
+          itemName: Tk,
+          amount: null !== (ak = Fk.amount) && void 0 !== ak ? ak : 0,
+          amountFontSize: Xk / 4 + "rem",
+          enchantmentTier: null === (qk = Fk.enchant) || void 0 === qk ? void 0 : qk.tier
         })
       });
-      const IS = bS.slice(-4);
-      return ".jpg" === IS || ".png" === IS ? (0, fS.jsx)(uX, {
-        image: bS,
-        minWidth: gS
-      }) : (0, fS.jsx)(NS.d, {
-        name: bS,
+      const Lk = Tk.slice(-4);
+      return ".jpg" === Lk || ".png" === Lk ? (0, tk.jsx)(qi, {
+        image: Tk,
+        minWidth: Ik
+      }) : (0, tk.jsx)(lk.e, {
+        name: Tk,
         className: "SelectedItemImage",
         style: {
-          color: xS
+          color: yk
         }
       })
     }
 
-    function uX(SS) {
+    function qi(kk) {
       let {
-        image: HS,
-        minWidth: gS
-      } = SS;
+        image: Fk,
+        minWidth: Ik
+      } = kk;
       const {
-        gameNameWithVariation: tS
-      } = (0, dH.h)("connectedGame"), bS = HS.endsWith(".jpg");
-      return (0, fS.jsx)("img", {
-        className: XS()({
-          ShopPixelImage: !bS
+        gameNameWithVariation: Xk
+      } = (0, EF.k)("connectedGame"), Tk = Fk.endsWith(".jpg");
+      return (0, tk.jsx)("img", {
+        className: ik()({
+          ShopPixelImage: !Tk
         }),
         style: {
-          width: `${bS?1.6*gS:gS}rem`,
+          width: `${Tk?1.6*Ik:Ik}rem`,
           height: "auto",
           fontSize: "1.25rem"
         },
-        src: `/textures/games/${(0,WS.Kb)(tS)}/${HS}`,
-        alt: HS,
+        src: `/textures/games/${(0,Nk.dc)(Xk)}/${Fk}`,
+        alt: Fk,
         draggable: !1
       })
     }
 
-    function IX(SS) {
+    function Li(kk) {
       let {
-        item: HS,
-        cost: gS,
-        currencyAmounts: tS
-      } = SS;
-      const bS = !isNaN(gS) && 0 !== gS && xX(tS, HS.currency);
-      let XS = null;
-      return HS.buyButtonText ? XS = HS.buyButtonText : bS ? (XS = gS, HS.sell && (XS = -1 * gS), XS = XS.toString()) : 0 === gS ? XS = "Free" : HS.isRewardedAd && (XS = "Watch ad"), (0, Sg.K)(XS) || " " === XS ? null : (0, fS.jsxs)("div", {
+        item: Fk,
+        cost: Ik,
+        currencyAmounts: Xk
+      } = kk;
+      const Tk = !isNaN(Ik) && 0 !== Ik && yi(Xk, Fk.currency);
+      let ik = null;
+      return Fk.buyButtonText ? ik = Fk.buyButtonText : Tk ? (ik = Ik, Fk.sell && (ik = -1 * Ik), ik = ik.toString()) : 0 === Ik ? ik = "Free" : Fk.isRewardedAd && (ik = "Watch ad"), (0, FI.Q)(ik) || " " === ik ? null : (0, tk.jsxs)("div", {
         className: "BuyItemCostAndIcon",
-        children: [bS && (0, fS.jsx)("div", {
+        children: [Tk && (0, tk.jsx)("div", {
           style: {
-            color: tS[HS.currency].iconColour
+            color: Xk[Fk.currency].iconColour
           },
           className: "BuyItemIcon",
-          children: (0, fS.jsx)(jX, {
-            iconName: tS[HS.currency].icon
+          children: (0, tk.jsx)(wi, {
+            iconName: Xk[Fk.currency].icon
           })
-        }), (0, fS.jsx)("div", {
+        }), (0, tk.jsx)("div", {
           className: "BuyItemCost",
-          children: (0, fS.jsx)(zt.c, {
-            text: XS
+          children: (0, tk.jsx)(NX.c, {
+            text: ik
           })
         })]
       })
     }
 
-    function fX(SS) {
+    function ti(kk) {
       let {
-        item: HS,
-        currInput: gS,
-        updateInput: bS,
-        onSubmit: XS
-      } = SS;
+        item: Fk,
+        currInput: Ik,
+        updateInput: Tk,
+        onSubmit: ik
+      } = kk;
       const {
-        t: NS
-      } = (0, xS.F)(), qS = (0, tS.useRef)(null);
-      if ((0, tS.useEffect)((() => {
-          const SS = qS.current;
-          SS && SS.value !== gS && document.activeElement !== SS && (SS.value = null !== gS && void 0 !== gS ? gS : "")
-        }), [gS]), !HS.userInput) return null;
-      let uS = HS.userInput;
-      if (CS.featureFlags.sanitizeShopInput && "text" === HS.userInput.type && (uS = {
+        t: lk
+      } = (0, yk.y)(), ak = (0, Xk.useRef)(null);
+      if ((0, Xk.useEffect)((() => {
+          const kk = ak.current;
+          kk && kk.value !== Ik && document.activeElement !== kk && (kk.value = null !== Ik && void 0 !== Ik ? Ik : "")
+        }), [Ik]), !Fk.userInput) return null;
+      let qk = Fk.userInput;
+      if (Jk.featureFlags.sanitizeShopInput && "text" === Fk.userInput.type && (qk = {
           type: "number",
           placeholderText: "Numbers Only"
-        }), "text" === uS.type || "number" === uS.type) {
-        var IS, kS;
-        console.assert(void 0 !== gS, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(HS)}`);
-        const SS = "text" === uS.type && uS.wordCharsOnly;
-        return (0, fS.jsx)("div", {
+        }), "text" === qk.type || "number" === qk.type) {
+        var Lk, Zk;
+        console.assert(void 0 !== Ik, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Fk)}`);
+        const kk = "text" === qk.type && qk.wordCharsOnly;
+        return (0, tk.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputTextWrapper",
-          children: (0, fS.jsx)(DS.e, {
+          children: (0, tk.jsx)(Qk.c, {
             className: "ShopItemUserInputText",
-            placeholderText: NS(uS.placeholderText),
-            defaultValue: gS,
-            domRef: qS,
-            onValueChange: (HS, gS) => {
-              !0 === SS && (HS = (0, st.hb)(HS)), qS.current.value = HS, bS(HS)
+            placeholderText: lk(qk.placeholderText),
+            defaultValue: Ik,
+            domRef: ak,
+            onValueChange: (Fk, Ik) => {
+              !0 === kk && (Fk = (0, fX.ib)(Fk)), ak.current.value = Fk, Tk(Fk)
             },
-            onEnter: XS,
-            type: uS.type
-          }, (null !== (IS = uS.initialValue) && void 0 !== IS ? IS : "") + (null !== (kS = uS.placeholderText) && void 0 !== kS ? kS : ""))
+            onEnter: ik,
+            type: qk.type
+          }, (null !== (Lk = qk.initialValue) && void 0 !== Lk ? Lk : "") + (null !== (Zk = qk.placeholderText) && void 0 !== Zk ? Zk : ""))
         })
       }
-      if ("dropdown" === uS.type) {
-        console.assert(void 0 !== gS, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(HS)}`);
-        const SS = uS.autoSubmit;
-        return (0, fS.jsx)("div", {
+      if ("dropdown" === qk.type) {
+        console.assert(void 0 !== Ik, `Rendered ItemUserInput but currInput is undefined. Item: ${JSON.stringify(Fk)}`);
+        const kk = qk.autoSubmit;
+        return (0, tk.jsx)("div", {
           className: "ShopItemUserInput ShopItemUserInputDropdown",
-          children: (0, fS.jsx)(ZH.e, {
-            options: uS.dropdownOptions.map((SS => (0, yt.c)(SS))),
-            value: gS,
-            onChange: HS => {
+          children: (0, tk.jsx)(SF.e, {
+            options: qk.dropdownOptions.map((kk => (0, bX.e)(kk))),
+            value: Ik,
+            onChange: Fk => {
               let {
-                value: gS
-              } = HS;
-              bS(gS), SS && XS(gS)
+                value: Ik
+              } = Fk;
+              Tk(Ik), kk && ik(Ik)
             }
           })
         })
       }
-      return "player" === uS.type ? (0, fS.jsx)(kX, {
-        userInput: uS,
-        currInput: gS,
-        updateInput: bS
-      }) : "color" === uS.type ? (0, fS.jsx)("div", {
+      return "player" === qk.type ? (0, tk.jsx)(Zi, {
+        userInput: qk,
+        currInput: Ik,
+        updateInput: Tk
+      }) : "color" === qk.type ? (0, tk.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputColor",
-        children: (0, fS.jsx)("input", {
+        children: (0, tk.jsx)("input", {
           type: "color",
-          value: gS,
-          onChange: SS => {
-            bS(SS.target.value)
+          value: Ik,
+          onChange: kk => {
+            Tk(kk.target.value)
           }
         })
       }) : null
     }
 
-    function kX(SS) {
+    function Zi(kk) {
       let {
-        userInput: HS,
-        currInput: gS,
-        updateInput: tS
-      } = SS;
-      const bS = (0, dH.h)("players"),
-        XS = (0, dH.h)("hiddenPlayerNames"),
-        xS = (0, yt.e)(bS.ids, bS.localId, HS);
-      return (0, fS.jsx)("div", {
+        userInput: Fk,
+        currInput: Ik,
+        updateInput: Xk
+      } = kk;
+      const Tk = (0, EF.k)("players"),
+        ik = (0, EF.k)("hiddenPlayerNames"),
+        yk = (0, bX.f)(Tk.ids, Tk.localId, Fk);
+      return (0, tk.jsx)("div", {
         className: "ShopItemUserInput ShopItemUserInputDropdown",
-        children: (0, fS.jsx)(ZH.e, {
-          options: xS.map((SS => {
+        children: (0, tk.jsx)(SF.e, {
+          options: yk.map((kk => {
             const {
-              name: HS
-            } = bS.byId[SS];
+              name: Fk
+            } = Tk.byId[kk];
             return {
-              value: SS,
-              label: null === HS ? "" : (0, pt.g)(HS, XS)
+              value: kk,
+              label: null === Fk ? "" : (0, WX.d)(Fk, ik)
             }
           })),
-          value: gS,
-          onChange: SS => {
+          value: Ik,
+          onChange: kk => {
             let {
-              value: HS
-            } = SS;
-            tS(HS)
+              value: Fk
+            } = kk;
+            Xk(Fk)
           }
         })
       })
     }
 
-    function aX(SS) {
+    function ji(kk) {
       let {
-        ids: HS
-      } = SS;
-      return HS
+        ids: Fk
+      } = kk;
+      return Fk
     }
 
-    function KX(SS) {
+    function ei(kk) {
       let {
-        localId: HS
-      } = SS;
-      return HS
+        localId: Fk
+      } = kk;
+      return Fk
     }
 
-    function jX(SS) {
+    function wi(kk) {
       let {
-        iconName: HS
-      } = SS;
-      return nS.gameBridge.lookup("isItemName", HS) ? (0, fS.jsx)(Wt.e, {
-        itemName: HS,
+        iconName: Fk
+      } = kk;
+      return xk.gameBridge.lookup("isItemName", Fk) ? (0, tk.jsx)(CX.d, {
+        itemName: Fk,
         amount: 1
-      }) : (0, fS.jsx)(NS.d, {
-        name: HS,
+      }) : (0, tk.jsx)(lk.e, {
+        name: Fk,
         className: "2x"
       })
     }
-    var GX = gS(1733);
-    const CX = (0, gS(1477).e)((SS => SS.PadLobbyShortcuts)),
-      nX = (0, tS.lazy)((() => Promise.resolve().then((() => gS(4781))).then((SS => ({
-        default: SS.Lobbyleaderboard
+    var Hi = Ik(1580);
+    const Ji = (0, Ik(1375).j)((kk => kk.PadLobbyShortcuts)),
+      xi = (0, Xk.lazy)((() => Promise.resolve().then((() => Ik(4645))).then((kk => ({
+        default: kk.Lobbyleaderboard
       }))))),
-      PX = (0, tS.lazy)((() => gS.e(220).then((() => gS(41089))).then((SS => ({
-        default: SS.LobbyManageView
+      Pi = (0, Xk.lazy)((() => Ik.e(220).then((() => Ik(41084))).then((kk => ({
+        default: kk.LobbyManageView
       })))));
 
-    function QX(SS) {
+    function Ki(kk) {
       let {
-        show: HS
-      } = SS;
-      return HS ? (0, fS.jsx)(DX, {}) : null
+        show: Fk
+      } = kk;
+      return Fk ? (0, tk.jsx)(Qi, {}) : null
     }
 
-    function DX() {
-      const SS = (0, Ft.e)();
-      return (0, fS.jsxs)(fS.Fragment, {
-        children: [(0, fS.jsx)(CX, {}), (0, fS.jsxs)(tS.Suspense, {
-          fallback: (0, fS.jsx)("div", {
+    function Qi() {
+      const kk = (0, YX.b)();
+      return (0, tk.jsxs)(tk.Fragment, {
+        children: [(0, tk.jsx)(Ji, {}), (0, tk.jsxs)(Xk.Suspense, {
+          fallback: (0, tk.jsx)("div", {
             className: "CharacterCustomisationLoading",
-            children: (0, fS.jsx)(wS.c, {})
+            children: (0, tk.jsx)(sk.c, {})
           }),
-          children: [SS && (0, fS.jsx)(PX, {
-            leaderboard: (0, fS.jsx)(nX, {})
-          }), !SS && (0, fS.jsx)(nX, {})]
+          children: [kk && (0, tk.jsx)(Pi, {
+            leaderboard: (0, tk.jsx)(xi, {})
+          }), !kk && (0, tk.jsx)(xi, {})]
         })]
       })
     }
-    var wX = gS(1653),
-      hX = gS(3183),
-      ZX = gS(1844),
-      JX = gS(3239),
-      OX = gS(2825),
-      dX = gS(1581),
-      cX = gS(1534),
-      vX = gS(3154),
-      EX = gS(3175),
-      LX = gS(2453);
-    const YX = "storeRecentGiftRecipients",
-      AX = new Map;
+    var si = Ik(1515),
+      Vi = Ik(2955),
+      zi = Ik(1665),
+      Si = Ik(3001),
+      oi = Ik(2616),
+      vi = Ik(1451),
+      Ei = Ik(1415),
+      Oi = Ik(2929),
+      ni = Ik(2946),
+      Gi = Ik(2259);
+    const ui = "storeRecentGiftRecipients",
+      bi = new Map;
 
-    function yX() {
+    function Ri() {
       try {
-        const SS = tg.g.getItem(YX);
-        return Array.isArray(SS) ? SS.filter((SS => "string" === typeof(null === SS || void 0 === SS ? void 0 : SS.name) && SS.name.length > 0)).map((SS => ({
-          name: SS.name,
-          cosmetics: SS.cosmetics && "object" === typeof SS.cosmetics ? SS.cosmetics : null
+        const kk = TI.j.getItem(ui);
+        return Array.isArray(kk) ? kk.filter((kk => "string" === typeof(null === kk || void 0 === kk ? void 0 : kk.name) && kk.name.length > 0)).map((kk => ({
+          name: kk.name,
+          cosmetics: kk.cosmetics && "object" === typeof kk.cosmetics ? kk.cosmetics : null
         }))) : []
       } catch {
         return []
       }
     }
 
-    function VX(SS) {
-      var HS;
-      const [gS, bS] = (0, tS.useState)(""), [XS, xS] = (0, tS.useState)("search"), [NS, qS] = (0, tS.useState)(null), [uS, IS] = (0, tS.useState)(null), fS = (0, tS.useRef)(null), kS = (0, tS.useRef)(null);
-      (0, tS.useEffect)((() => () => {
-        fS.current && clearTimeout(fS.current)
+    function Ui(kk) {
+      var Fk;
+      const [Ik, Tk] = (0, Xk.useState)(""), [ik, yk] = (0, Xk.useState)("search"), [lk, ak] = (0, Xk.useState)(null), [qk, Lk] = (0, Xk.useState)(null), tk = (0, Xk.useRef)(null), Zk = (0, Xk.useRef)(null);
+      (0, Xk.useEffect)((() => () => {
+        tk.current && clearTimeout(tk.current)
       }), []);
-      const aS = null !== (HS = null === NS || void 0 === NS ? void 0 : NS.name) && void 0 !== HS ? HS : null;
+      const jk = null !== (Fk = null === lk || void 0 === lk ? void 0 : lk.name) && void 0 !== Fk ? Fk : null;
 
-      function KS() {
-        fS.current && (clearTimeout(fS.current), fS.current = null)
-      }(0, tS.useEffect)((() => {
-        if (null === aS || SS === cS.NULL_USER_CONTEXT) return;
-        const HS = aS.toLowerCase();
-        if (HS === SS.getPlayerName().toLowerCase()) return void IS({
-          name: aS,
+      function ek() {
+        tk.current && (clearTimeout(tk.current), tk.current = null)
+      }(0, Xk.useEffect)((() => {
+        if (null === jk || kk === Ok.NULL_USER_CONTEXT) return;
+        const Fk = jk.toLowerCase();
+        if (Fk === kk.getPlayerName().toLowerCase()) return void Lk({
+          name: jk,
           result: {
             giftRecipientFound: !1,
             giftRecipientError: "store:giftRecipientIsYou"
           }
         });
-        const gS = AX.get(HS);
-        if (gS) return void IS({
-          name: aS,
-          result: gS
+        const Ik = bi.get(Fk);
+        if (Ik) return void Lk({
+          name: jk,
+          result: Ik
         });
-        let tS = !1;
-        return async function(SS, HS) {
+        let Xk = !1;
+        return async function(kk, Fk) {
           try {
-            const gS = await (0, cS.postJsonWithMetricsCookiesAndJsonResponse)(`${xH.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
-              giftRecipientName: HS
+            const Ik = await (0, Ok.postJsonWithMetricsCookiesAndJsonResponse)(`${lF.clientSideServerUrls.indexUrl}/index/store/gift-recipient`, {
+              giftRecipientName: Fk
             }, {
               retries: 1
-            }, SS.getMetricsCookies());
-            if ("boolean" !== typeof(null === gS || void 0 === gS ? void 0 : gS.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(gS)}`);
-            return gS
-          } catch (gS) {
-            return console.error("Failed to look up gift recipient:", gS), {
+            }, kk.getMetricsCookies());
+            if ("boolean" !== typeof(null === Ik || void 0 === Ik ? void 0 : Ik.giftRecipientFound)) throw new Error(`Unexpected gift recipient lookup response: ${JSON.stringify(Ik)}`);
+            return Ik
+          } catch (Ik) {
+            return console.error("Failed to look up gift recipient:", Ik), {
               giftRecipientFound: !1,
               giftRecipientError: "store:giftRecipientLookupFailed"
             }
           }
-        }(SS, aS).catch((SS => (console.error("Gift recipient lookup failed:", SS), {
+        }(kk, jk).catch((kk => (console.error("Gift recipient lookup failed:", kk), {
           giftRecipientFound: !1,
           giftRecipientError: "store:giftRecipientLookupFailed"
-        }))).then((SS => {
-          !0 !== SS.giftRecipientFound && "store:giftRecipientLookupFailed" === SS.giftRecipientError || AX.set(HS, SS), tS || IS({
-            name: aS,
-            result: SS
+        }))).then((kk => {
+          !0 !== kk.giftRecipientFound && "store:giftRecipientLookupFailed" === kk.giftRecipientError || bi.set(Fk, kk), Xk || Lk({
+            name: jk,
+            result: kk
           })
         })), () => {
-          tS = !0
+          Xk = !0
         }
-      }), [aS, SS]);
-      const jS = (0, tS.useMemo)((() => {
-        const SS = gS.trim();
-        if (!SS) return {
+      }), [jk, kk]);
+      const wk = (0, Xk.useMemo)((() => {
+        const kk = Ik.trim();
+        if (!kk) return {
           status: "none"
         };
-        if (!NS || NS.name !== SS || (null === uS || void 0 === uS ? void 0 : uS.name) !== NS.name) return {
+        if (!lk || lk.name !== kk || (null === qk || void 0 === qk ? void 0 : qk.name) !== lk.name) return {
           status: "pending",
-          name: SS
+          name: kk
         };
-        const HS = uS.result;
-        return !1 === HS.giftRecipientFound ? {
+        const Fk = qk.result;
+        return !1 === Fk.giftRecipientFound ? {
           status: "error",
-          name: NS.name,
-          error: HS.giftRecipientError
+          name: lk.name,
+          error: Fk.giftRecipientError
         } : {
           status: "found",
-          name: HS.giftRecipientName,
-          ownedPacks: HS.giftRecipientOwnedPacks,
-          hasSuperRank: HS.giftRecipientHasSuperRank,
-          isSubscriber: HS.giftRecipientIsSubscriber
+          name: Fk.giftRecipientName,
+          ownedPacks: Fk.giftRecipientOwnedPacks,
+          hasSuperRank: Fk.giftRecipientHasSuperRank,
+          isSubscriber: Fk.giftRecipientIsSubscriber
         }
-      }), [gS, NS, uS]);
-      (0, tS.useEffect)((() => {
-        "found" === jS.status && "typed" === (null === NS || void 0 === NS ? void 0 : NS.source) && kS.current !== jS.name && (kS.current = jS.name, (0, eS.reportAnalyticsClick)({
+      }), [Ik, lk, qk]);
+      (0, Xk.useEffect)((() => {
+        "found" === wk.status && "typed" === (null === lk || void 0 === lk ? void 0 : lk.source) && Zk.current !== wk.name && (Zk.current = wk.name, (0, Mk.reportAnalyticsClick)({
           id: "store.gift_recipient",
           value: "typed"
         }))
-      }), [jS, NS]);
-      const GS = (null === uS || void 0 === uS ? void 0 : uS.name) === (null === NS || void 0 === NS ? void 0 : NS.name) ? null === uS || void 0 === uS ? void 0 : uS.result : null,
-        CS = !0 === (null === GS || void 0 === GS ? void 0 : GS.giftRecipientFound) ? GS.giftRecipientCosmetics : null;
+      }), [wk, lk]);
+      const Hk = (null === qk || void 0 === qk ? void 0 : qk.name) === (null === lk || void 0 === lk ? void 0 : lk.name) ? null === qk || void 0 === qk ? void 0 : qk.result : null,
+        Jk = !0 === (null === Hk || void 0 === Hk ? void 0 : Hk.giftRecipientFound) ? Hk.giftRecipientCosmetics : null;
       return {
-        query: gS,
-        via: XS,
-        recipient: jS,
-        recipientCosmetics: CS,
-        type: function(SS) {
-          bS(SS), xS("search"), KS();
-          const HS = SS.trim();
-          HS ? fS.current = setTimeout((() => {
-            qS({
-              name: HS,
+        query: Ik,
+        via: ik,
+        recipient: wk,
+        recipientCosmetics: Jk,
+        type: function(kk) {
+          Tk(kk), yk("search"), ek();
+          const Fk = kk.trim();
+          Fk ? tk.current = setTimeout((() => {
+            ak({
+              name: Fk,
               source: "typed"
             })
-          }), 400) : qS(null)
+          }), 400) : ak(null)
         },
-        choose: function(SS, HS) {
-          KS(), bS(SS), xS("typed" === HS ? "search" : "prefilled" === HS ? "prefilled" : "suggestion"), qS({
-            name: SS,
-            source: HS
-          }), "typed" !== HS && "prefilled" !== HS && (0, eS.reportAnalyticsClick)({
+        choose: function(kk, Fk) {
+          ek(), Tk(kk), yk("typed" === Fk ? "search" : "prefilled" === Fk ? "prefilled" : "suggestion"), ak({
+            name: kk,
+            source: Fk
+          }), "typed" !== Fk && "prefilled" !== Fk && (0, Mk.reportAnalyticsClick)({
             id: "store.gift_recipient",
-            value: HS
+            value: Fk
           })
         },
         clear: function() {
-          KS(), bS(""), xS("search"), qS(null)
+          ek(), Tk(""), yk("search"), ak(null)
         },
-        recordGift: function(SS, HS) {
-          ! function(SS) {
-            AX.delete(SS.toLowerCase())
-          }(SS), IS((gS => {
-            if (!gS || gS.name.toLowerCase() !== SS.toLowerCase() || !0 !== gS.result.giftRecipientFound || "superRank" === HS) return gS;
-            const tS = gS.result.giftRecipientOwnedPacks;
+        recordGift: function(kk, Fk) {
+          ! function(kk) {
+            bi.delete(kk.toLowerCase())
+          }(kk), Lk((Ik => {
+            if (!Ik || Ik.name.toLowerCase() !== kk.toLowerCase() || !0 !== Ik.result.giftRecipientFound || "superRank" === Fk) return Ik;
+            const Xk = Ik.result.giftRecipientOwnedPacks;
             return {
-              ...gS,
+              ...Ik,
               result: {
-                ...gS.result,
-                giftRecipientOwnedPacks: tS.includes(HS) ? tS : [...tS, HS]
+                ...Ik.result,
+                giftRecipientOwnedPacks: Xk.includes(Fk) ? Xk : [...Xk, Fk]
               }
             }
           }))
         }
       }
     }
-    var iX = gS(2448),
-      WX = gS(4784),
-      zX = gS(278),
-      UX = gS(3285);
-    const pX = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
-    var sX = gS(2394),
-      BX = gS(656),
-      MX = gS(2480),
-      FX = gS(2725);
+    var Ci = Ik(2255),
+      Ni = Ik(4649),
+      ci = Ik(243),
+      Wi = Ik(3047);
+    const fi = ["pointerdown", "pointermove", "keydown", "wheel", "touchstart", "scroll", "blur", "focus"];
+    var Bi = Ik(2199),
+      di = Ik(612),
+      Yi = Ik(2300),
+      Ai = Ik(2525);
 
-    function RX(SS) {
+    function gi(kk) {
       let {
-        cosmetics: HS
-      } = SS;
-      return (0, fS.jsx)("span", {
+        cosmetics: Fk
+      } = kk;
+      return (0, tk.jsx)("span", {
         className: "StoreRecipientAvatar",
-        children: (0, fS.jsx)(MX.e, {
-          cosmetics: HS
+        children: (0, tk.jsx)(Yi.e, {
+          cosmetics: Fk
         })
       })
     }
 
-    function TX(SS, HS) {
-      var gS, tS;
-      const bS = null !== (gS = SS.friend) && void 0 !== gS ? gS : {
+    function mi(kk, Fk) {
+      var Ik, Xk;
+      const Tk = null !== (Ik = kk.friend) && void 0 !== Ik ? Ik : {
         isError: !1,
-        name: SS.name,
+        name: kk.name,
         ranks: [],
-        cosmetics: null !== (tS = SS.cosmetics) && void 0 !== tS ? tS : {},
-        nameColour: BX.d,
+        cosmetics: null !== (Xk = kk.cosmetics) && void 0 !== Xk ? Xk : {},
+        nameColour: di.c,
         location: {
           status: "noGamePlayed"
         }
       };
-      return HS ? {
-        ...bS,
-        cosmetics: HS
-      } : bS
+      return Fk ? {
+        ...Tk,
+        cosmetics: Fk
+      } : Tk
     }
 
-    function oX(SS) {
+    function ri(kk) {
       let {
-        pending: HS
-      } = SS;
-      return (0, fS.jsx)("span", {
+        pending: Fk
+      } = kk;
+      return (0, tk.jsx)("span", {
         className: "StoreRecipientLoader",
-        children: HS && (0, fS.jsx)(wS.c, {})
+        children: Fk && (0, tk.jsx)(sk.c, {})
       })
     }
 
-    function lX(SS) {
-      var HS;
+    function Di(kk) {
+      var Fk;
       let {
-        selfName: gS,
-        giftRecipient: bS,
-        suggestionsVersion: qS,
-        pulseSignal: IS,
-        disabled: kS
-      } = SS;
+        selfName: Ik,
+        giftRecipient: Tk,
+        suggestionsVersion: ak,
+        pulseSignal: Lk,
+        disabled: Zk
+      } = kk;
       const {
-        t: aS
-      } = (0, xS.F)(), KS = (0, sS.n)(), jS = (0, tS.useRef)(null), GS = (0, tS.useRef)(null), {
-        query: nS,
-        via: PS,
-        recipient: QS,
-        recipientCosmetics: wS
-      } = bS, hS = (0, LX.o)(nS), ZS = (0, tS.useMemo)((() => {
-        const SS = CS.featureFlags.useSocialFeatures ? KS.friends.filter((SS => !SS.isError)) : [];
-        return (0, LX.h)({
-          onlineFriends: (0, sS.f)(SS),
-          recentRecipients: yX(),
-          friends: SS,
-          selfName: gS,
+        t: jk
+      } = (0, yk.y)(), ek = (0, Bk.j)(), wk = (0, Xk.useRef)(null), Hk = (0, Xk.useRef)(null), {
+        query: xk,
+        via: Pk,
+        recipient: Kk,
+        recipientCosmetics: sk
+      } = Tk, Vk = (0, Gi.q)(xk), zk = (0, Xk.useMemo)((() => {
+        const kk = Jk.featureFlags.useSocialFeatures ? ek.friends.filter((kk => !kk.isError)) : [];
+        return (0, Gi.l)({
+          onlineFriends: (0, Bk.e)(kk),
+          recentRecipients: Ri(),
+          friends: kk,
+          selfName: Ik,
           max: 8
         })
-      }), [KS.friends, gS, qS]), JS = nS.trim().toLowerCase(), OS = "search" !== PS && JS ? ZS.find((SS => SS.name.toLowerCase() === JS)) : void 0, dS = OS && "prefilled" === PS ? [OS, ...ZS.filter((SS => SS !== OS))] : ZS, cS = "" !== JS && !OS, vS = cS ? nS : "", ES = dS.length > 0;
-      (0, tS.useEffect)((() => {
-        jS.current && jS.current.value !== vS && (jS.current.value = vS)
-      }), [vS]), (0, tS.useEffect)((() => {
-        jS.current && (jS.current.disabled = kS)
-      }), [kS, IS]);
-      const LS = (0, tS.useRef)(0);
+      }), [ek.friends, Ik, ak]), Sk = xk.trim().toLowerCase(), vk = "search" !== Pk && Sk ? zk.find((kk => kk.name.toLowerCase() === Sk)) : void 0, Ek = vk && "prefilled" === Pk ? [vk, ...zk.filter((kk => kk !== vk))] : zk, Ok = "" !== Sk && !vk, nk = Ok ? xk : "", Gk = Ek.length > 0;
+      (0, Xk.useEffect)((() => {
+        wk.current && wk.current.value !== nk && (wk.current.value = nk)
+      }), [nk]), (0, Xk.useEffect)((() => {
+        wk.current && (wk.current.disabled = Zk)
+      }), [Zk, Lk]);
+      const pk = (0, Xk.useRef)(0);
 
-      function AS() {
-        "self" !== hS && (0, eS.reportAnalyticsClick)({
+      function bk() {
+        "self" !== Vk && (0, Mk.reportAnalyticsClick)({
           id: "store.mode",
           value: "self"
-        }), bS.clear()
+        }), Tk.clear()
       }
 
-      function yS(SS) {
-        var HS, gS;
-        if (kS) return;
-        if (" " === SS.key || "Enter" === SS.key) return SS.preventDefault(), void SS.currentTarget.click();
-        const tS = Array.from(null !== (HS = null === (gS = GS.current) || void 0 === gS ? void 0 : gS.querySelectorAll("[role=radio]")) && void 0 !== HS ? HS : []),
-          bS = tS.indexOf(SS.currentTarget);
-        let XS;
-        "ArrowRight" === SS.key || "ArrowDown" === SS.key ? XS = tS[(bS + 1) % tS.length] : "ArrowLeft" === SS.key || "ArrowUp" === SS.key ? XS = tS[(bS - 1 + tS.length) % tS.length] : "Home" === SS.key ? XS = tS[0] : "End" === SS.key && (XS = tS[tS.length - 1]), XS && (SS.preventDefault(), XS.focus(), XS.click())
-      }(0, tS.useEffect)((() => {
-        var SS;
-        IS > LS.current && !kS && (LS.current = IS, null === (SS = jS.current) || void 0 === SS || SS.focus())
-      }), [IS, kS]);
-      const VS = "self" === hS,
-        iS = null !== (HS = null === OS || void 0 === OS ? void 0 : OS.name) && void 0 !== HS ? HS : null,
-        WS = "error" === QS.status ? QS.error : null,
-        zS = "store:giftRecipientLookupFailed" === WS;
-      return (0, fS.jsxs)("div", {
-        className: XS()("StoreRecipientStrip", {
-          StoreRecipientStripDisabled: kS,
-          StoreRecipientStripNoChips: !ES
+      function Rk(kk) {
+        var Fk, Ik;
+        if (Zk) return;
+        if (" " === kk.key || "Enter" === kk.key) return kk.preventDefault(), void kk.currentTarget.click();
+        const Xk = Array.from(null !== (Fk = null === (Ik = Hk.current) || void 0 === Ik ? void 0 : Ik.querySelectorAll("[role=radio]")) && void 0 !== Fk ? Fk : []),
+          Tk = Xk.indexOf(kk.currentTarget);
+        let ik;
+        "ArrowRight" === kk.key || "ArrowDown" === kk.key ? ik = Xk[(Tk + 1) % Xk.length] : "ArrowLeft" === kk.key || "ArrowUp" === kk.key ? ik = Xk[(Tk - 1 + Xk.length) % Xk.length] : "Home" === kk.key ? ik = Xk[0] : "End" === kk.key && (ik = Xk[Xk.length - 1]), ik && (kk.preventDefault(), ik.focus(), ik.click())
+      }(0, Xk.useEffect)((() => {
+        var kk;
+        Lk > pk.current && !Zk && (pk.current = Lk, null === (kk = wk.current) || void 0 === kk || kk.focus())
+      }), [Lk, Zk]);
+      const Uk = "self" === Vk,
+        Ck = null !== (Fk = null === vk || void 0 === vk ? void 0 : vk.name) && void 0 !== Fk ? Fk : null,
+        Nk = "error" === Kk.status ? Kk.error : null,
+        ck = "store:giftRecipientLookupFailed" === Nk;
+      return (0, tk.jsxs)("div", {
+        className: ik()("StoreRecipientStrip", {
+          StoreRecipientStripDisabled: Zk,
+          StoreRecipientStripNoChips: !Gk
         }),
-        children: [(0, fS.jsx)("span", {
+        children: [(0, tk.jsx)("span", {
           className: "StoreRecipientLabel",
           "aria-hidden": !0,
-          children: aS("store:buyingFor")
-        }), (0, fS.jsxs)("div", {
-          ref: GS,
+          children: jk("store:buyingFor")
+        }), (0, tk.jsxs)("div", {
+          ref: Hk,
           className: "StoreRecipientRadios",
           role: "radiogroup",
-          "aria-label": aS("store:whoIsItFor"),
-          children: [(0, fS.jsxs)("div", {
+          "aria-label": jk("store:whoIsItFor"),
+          children: [(0, tk.jsxs)("div", {
             role: "radio",
             "data-pad-focusable": !0,
-            "aria-checked": VS,
-            tabIndex: kS || !VS && null !== iS ? -1 : 0,
-            className: XS()("StoreRecipientMe", {
-              StoreRecipientChecked: VS
+            "aria-checked": Uk,
+            tabIndex: Zk || !Uk && null !== Ck ? -1 : 0,
+            className: ik()("StoreRecipientMe", {
+              StoreRecipientChecked: Uk
             }),
             onClick: () => {
-              kS || AS()
+              Zk || bk()
             },
-            onKeyDown: yS,
-            children: [(0, fS.jsx)(NS.d, {
+            onKeyDown: Rk,
+            children: [(0, tk.jsx)(lk.e, {
               name: "user"
-            }), " ", aS("store:me")]
-          }), ES && (0, fS.jsx)("div", {
+            }), " ", jk("store:me")]
+          }), Gk && (0, tk.jsx)("div", {
             className: "StoreRecipientChips",
-            children: dS.map((SS => {
-              const HS = SS === OS;
-              return (0, fS.jsx)("div", {
+            children: Ek.map((kk => {
+              const Fk = kk === vk;
+              return (0, tk.jsx)("div", {
                 role: "radio",
                 "data-pad-focusable": !0,
-                "aria-checked": HS,
-                tabIndex: !kS && HS ? 0 : -1,
-                title: SS.name,
-                className: XS()("StoreRecipientChip", {
-                  StoreRecipientChecked: HS
+                "aria-checked": Fk,
+                tabIndex: !Zk && Fk ? 0 : -1,
+                title: kk.name,
+                className: ik()("StoreRecipientChip", {
+                  StoreRecipientChecked: Fk
                 }),
                 onClick: () => {
-                  kS || function(SS) {
-                    "gift" !== hS && (0, eS.reportAnalyticsClick)({
+                  Zk || function(kk) {
+                    "gift" !== Vk && (0, Mk.reportAnalyticsClick)({
                       id: "store.mode",
                       value: "gift"
-                    }), bS.choose(SS.name, SS.kind)
-                  }(SS)
+                    }), Tk.choose(kk.name, kk.kind)
+                  }(kk)
                 },
-                onKeyDown: yS,
-                children: (0, fS.jsx)(FX.g, {
-                  playerSocialPreview: TX(SS, HS ? wS : null),
+                onKeyDown: Rk,
+                children: (0, tk.jsx)(Ai.g, {
+                  playerSocialPreview: mi(kk, Fk ? sk : null),
                   opensProfileCard: !1,
-                  isFriend: null !== SS.friend,
+                  isFriend: null !== kk.friend,
                   hideFriendBadge: !0,
-                  showLocation: null !== SS.friend,
-                  status: null === SS.friend ? null : void 0,
-                  trailing: HS ? (0, fS.jsx)(oX, {
-                    pending: "pending" === QS.status
+                  showLocation: null !== kk.friend,
+                  status: null === kk.friend ? null : void 0,
+                  trailing: Fk ? (0, tk.jsx)(ri, {
+                    pending: "pending" === Kk.status
                   }) : void 0
                 })
-              }, SS.name)
+              }, kk.name)
             }))
           })]
-        }), (0, fS.jsxs)("div", {
-          className: XS()("StoreRecipientSearch", {
-            StoreRecipientChecked: cS,
-            StoreRecipientSearchPulse: IS > 0 && !cS,
-            StoreRecipientSearchError: null !== WS && !zS
+        }), (0, tk.jsxs)("div", {
+          className: ik()("StoreRecipientSearch", {
+            StoreRecipientChecked: Ok,
+            StoreRecipientSearchPulse: Lk > 0 && !Ok,
+            StoreRecipientSearchError: null !== Nk && !ck
           }),
           onClick: () => {
-            var SS;
-            null === (SS = jS.current) || void 0 === SS || SS.focus()
+            var kk;
+            null === (kk = wk.current) || void 0 === kk || kk.focus()
           },
-          children: [cS && "found" === QS.status && wS && (0, fS.jsx)(RX, {
-            cosmetics: wS
-          }), !(cS && "found" === QS.status && wS) && (0, fS.jsx)(NS.d, {
+          children: [Ok && "found" === Kk.status && sk && (0, tk.jsx)(gi, {
+            cosmetics: sk
+          }), !(Ok && "found" === Kk.status && sk) && (0, tk.jsx)(lk.e, {
             name: "magnifying-glass",
             className: "StoreRecipientSearchIcon"
-          }), (0, fS.jsx)(DS.e, {
+          }), (0, tk.jsx)(Qk.c, {
             className: "StoreRecipientSearchInput",
-            domRef: jS,
-            placeholderText: aS("store:searchName"),
-            defaultValue: vS,
-            maxLength: YS.g,
-            onValueChange: function(SS) {
-              "gift" !== hS && SS.trim() && (0, eS.reportAnalyticsClick)({
+            domRef: wk,
+            placeholderText: jk("store:searchName"),
+            defaultValue: nk,
+            maxLength: uk.j,
+            onValueChange: function(kk) {
+              "gift" !== Vk && kk.trim() && (0, Mk.reportAnalyticsClick)({
                 id: "store.mode",
                 value: "gift"
-              }), bS.type(SS)
+              }), Tk.type(kk)
             },
             onEnter: () => {
-              var SS;
-              const HS = null === (SS = jS.current) || void 0 === SS ? void 0 : SS.value.trim();
-              HS && bS.choose(HS, "typed")
+              var kk;
+              const Fk = null === (kk = wk.current) || void 0 === kk ? void 0 : kk.value.trim();
+              Fk && Tk.choose(Fk, "typed")
             },
             blurOnEnter: !0
-          }), cS && (0, fS.jsx)(oX, {
-            pending: "pending" === QS.status
-          }), cS && (0, fS.jsx)("div", {
-            ...(0, uS.X)({
-              disabled: kS
+          }), Ok && (0, tk.jsx)(ri, {
+            pending: "pending" === Kk.status
+          }), Ok && (0, tk.jsx)("div", {
+            ...(0, qk.Y)({
+              disabled: Zk
             }),
-            "aria-label": aS("store:clearRecipient"),
-            title: aS("store:clearRecipient"),
+            "aria-label": jk("store:clearRecipient"),
+            title: jk("store:clearRecipient"),
             className: "StoreRecipientClear",
-            onClick: SS => {
-              SS.stopPropagation(), kS || AS()
+            onClick: kk => {
+              kk.stopPropagation(), Zk || bk()
             },
-            children: (0, fS.jsx)(NS.d, {
+            children: (0, tk.jsx)(lk.e, {
               name: "xmark"
             })
           })]
-        }, IS), WS && (0, fS.jsx)("div", {
-          className: XS()("StoreRecipientPopover", {
-            StoreRecipientPopoverSoft: zS
+        }, Lk), Nk && (0, tk.jsx)("div", {
+          className: ik()("StoreRecipientPopover", {
+            StoreRecipientPopoverSoft: ck
           }),
           role: "status",
-          children: aS(WS)
+          children: jk(Nk)
         })]
       })
     }
-    var mX = gS(2439),
-      eX = gS(2370),
-      rX = gS(3708),
-      Sx = gS(3291),
-      Hx = gS(2403);
-    const gx = gS.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
+    var Mi = Ik(2253),
+      ky = Ik(2176),
+      Fy = Ik(3529),
+      Iy = Ik(3053),
+      Xy = Ik(2213);
+    const Ty = Ik.p + "static/media/superRankPreviewPoster.e64783181b692cc31e08.webp";
 
-    function tx() {
-      (0, Hx.i)(gx, {
+    function iy() {
+      (0, Xy.d)(Ty, {
         lowPriority: !1
       })
     }
 
-    function bx(SS) {
+    function yy(kk) {
       let {
-        onBack: HS,
-        cta: gS,
-        recipient: bS,
-        afterCta: XS
-      } = SS;
+        onBack: Fk,
+        cta: Ik,
+        recipient: Tk,
+        afterCta: ik
+      } = kk;
       const {
-        t: qS
-      } = (0, xS.F)(), [IS, kS] = (0, tS.useState)("starting"), aS = (0, tS.useRef)(null), KS = (0, zH.b)(), jS = (0, tS.useRef)(null), GS = (0, tS.useCallback)((() => {
-        const SS = aS.current;
-        null !== SS.error && SS.load();
-        const HS = SS.play();
-        jS.current = HS, HS.catch((SS => {
-          (0, rX.d)("Failed to play Super Rank video", SS), KS.current && jS.current === HS && kS("failed")
+        t: ak
+      } = (0, yk.y)(), [Lk, Zk] = (0, Xk.useState)("starting"), jk = (0, Xk.useRef)(null), ek = (0, cF.d)(), wk = (0, Xk.useRef)(null), Hk = (0, Xk.useCallback)((() => {
+        const kk = jk.current;
+        null !== kk.error && kk.load();
+        const Fk = kk.play();
+        wk.current = Fk, Fk.catch((kk => {
+          (0, Fy.d)("Failed to play Super Rank video", kk), ek.current && wk.current === Fk && Zk("failed")
         }))
-      }), [KS]);
-      return (0, tS.useEffect)((() => {
-        const SS = aS.current;
-        let HS;
+      }), [ek]);
+      return (0, Xk.useEffect)((() => {
+        const kk = jk.current;
+        let Fk;
 
-        function gS() {
-          clearTimeout(HS), HS = setTimeout(GS, 3e3)
+        function Ik() {
+          clearTimeout(Fk), Fk = setTimeout(Hk, 3e3)
         }
-        return GS(), SS.addEventListener("ended", gS), () => {
-          clearTimeout(HS), SS.removeEventListener("ended", gS)
+        return Hk(), kk.addEventListener("ended", Ik), () => {
+          clearTimeout(Fk), kk.removeEventListener("ended", Ik)
         }
-      }), [GS]), (0, fS.jsxs)("div", {
+      }), [Hk]), (0, tk.jsxs)("div", {
         className: "StoreSuperRankDetail",
-        children: [(0, fS.jsxs)("div", {
+        children: [(0, tk.jsxs)("div", {
           className: "StoreDetailHeader",
-          children: [(0, fS.jsx)(uS.d, {
+          children: [(0, tk.jsx)(qk.c, {
             className: "StoreDetailBackButton",
-            onClick: HS,
+            onClick: Fk,
             padBack: !0,
-            children: qS("general:back")
-          }), (0, fS.jsxs)("div", {
+            children: ak("general:back")
+          }), (0, tk.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, fS.jsx)(NS.d, {
+            children: [(0, tk.jsx)(lk.e, {
               name: "bolt"
-            }), " ", qS("homePage:superRank")]
-          }), bS]
-        }), (0, fS.jsxs)("div", {
+            }), " ", ak("homePage:superRank")]
+          }), Tk]
+        }), (0, tk.jsxs)("div", {
           className: "StoreSuperRankDetailBody",
-          children: [(0, fS.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "StoreSuperRankVideo",
-            children: [(0, fS.jsx)("video", {
-              ref: aS,
-              src: `${xH.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
-              poster: gx,
+            children: [(0, tk.jsx)("video", {
+              ref: jk,
+              src: `${lF.clientSideServerUrls.staticUrl}/videos/SuperRankPreview.mp4`,
+              poster: Ty,
               muted: !0,
               playsInline: !0,
-              controls: "playing" === IS,
+              controls: "playing" === Lk,
               onPlaying: () => {
-                kS("playing")
+                Zk("playing")
               },
               onError: () => {
-                kS("failed")
+                Zk("failed")
               }
-            }), ("failed" === IS || "loading" === IS) && (0, fS.jsx)("div", {
+            }), ("failed" === Lk || "loading" === Lk) && (0, tk.jsx)("div", {
               className: "StoreSuperRankPlay",
-              children: (0, fS.jsx)(uS.g, {
-                ariaLabel: qS("general:play"),
-                loading: "loading" === IS,
+              children: (0, tk.jsx)(qk.d, {
+                ariaLabel: ak("general:play"),
+                loading: "loading" === Lk,
                 onClick: () => {
-                  kS("loading"), GS()
+                  Zk("loading"), Hk()
                 },
                 touchPressOn: "pointerup",
-                children: (0, fS.jsx)(NS.d, {
+                children: (0, tk.jsx)(lk.e, {
                   name: "play"
                 })
               })
             })]
-          }), (0, fS.jsxs)("div", {
+          }), (0, tk.jsxs)("div", {
             className: "StoreSuperRankDetailSide",
-            children: [(0, fS.jsx)("div", {
+            children: [(0, tk.jsx)("div", {
               className: "StoreSuperRankDetailTable",
-              children: (0, fS.jsx)(Sx.e, {})
-            }), (0, fS.jsxs)("div", {
+              children: (0, tk.jsx)(Iy.e, {})
+            }), (0, tk.jsxs)("div", {
               className: "StoreTileActions",
-              children: [gS, XS]
+              children: [Ik, ik]
             })]
           })]
         })]
       })
     }
-    var Xx = gS(2742),
-      xx = gS(3671),
-      Nx = gS(3272),
-      qx = gS(3275);
-    const ux = [BX.t.yellow, BX.t.green, BX.t.aqua, BX.t.blue, BX.t.purple, BX.t.red];
+    var ly = Ik(2538),
+      ay = Ik(3482),
+      qy = Ik(3030),
+      Ly = Ik(3034);
+    const ty = [di.t.yellow, di.t.green, di.t.aqua, di.t.blue, di.t.purple, di.t.red];
 
-    function Ix(SS) {
-      return "needsRecipient" === SS || "lookingUp" === SS || "gift" === SS || "recipientOwns" === SS || "recipientSharesOwned" === SS || "recipientSubscribed" === SS
+    function Zy(kk) {
+      return "needsRecipient" === kk || "lookingUp" === kk || "gift" === kk || "recipientOwns" === kk || "recipientSharesOwned" === kk || "recipientSubscribed" === kk
     }
 
-    function fx(SS) {
+    function jy(kk) {
       const {
-        onKeyDown: HS,
-        ...gS
-      } = (0, uS.X)();
+        onKeyDown: Fk,
+        ...Ik
+      } = (0, qk.Y)();
       return {
-        ...gS,
-        "aria-label": SS,
-        onKeyDown: SS => {
-          SS.target === SS.currentTarget && (null === HS || void 0 === HS || HS(SS))
+        ...Ik,
+        "aria-label": kk,
+        onKeyDown: kk => {
+          kk.target === kk.currentTarget && (null === Fk || void 0 === Fk || Fk(kk))
         }
       }
     }
 
-    function kx(SS) {
+    function ey(kk) {
       let {
-        text: HS
-      } = SS;
-      return (0, fS.jsx)("span", {
+        text: Fk
+      } = kk;
+      return (0, tk.jsx)("span", {
         className: "StoreRainbowText",
-        children: Array.from(HS).map(((SS, HS) => (0, fS.jsx)("span", {
+        children: Array.from(Fk).map(((kk, Fk) => (0, tk.jsx)("span", {
           style: {
-            color: ux[HS % ux.length]
+            color: ty[Fk % ty.length]
           },
-          children: SS
-        }, HS)))
+          children: kk
+        }, Fk)))
       })
     }
-    const ax = {
+    const wy = {
       recipientOwns: "store:alreadyOwns",
       sharesOwned: "store:sharesOwned",
       recipientSharesOwned: "store:recipientSharesOwned",
@@ -5951,82 +5951,82 @@ export const modules = {
       recipientSubscribed: "store:recipientSubscribed"
     };
 
-    function Kx(SS) {
+    function Hy(kk) {
       let {
-        state: HS,
-        item: gS,
-        price: tS,
-        busy: bS,
-        highlight: qS = !1,
-        onAct: IS,
-        onNeedRecipient: kS,
-        onLogin: aS
-      } = SS;
+        state: Fk,
+        item: Ik,
+        price: Xk,
+        busy: Tk,
+        highlight: ak = !1,
+        onAct: Lk,
+        onNeedRecipient: Zk,
+        onLogin: jk
+      } = kk;
       const {
-        t: KS
-      } = (0, xS.F)(), jS = "superRank" === gS ? yS.k.product.days : null, GS = SS => null === jS ? KS(SS ? "general:gift" : "general:buy") : KS(SS ? "store:giftDays" : "store:buyDays", {
-        days: jS
-      }), CS = (SS, HS) => {
-        const gS = (0, fS.jsxs)(fS.Fragment, {
-          children: [null === SS && (0, fS.jsx)("span", {
+        t: ek
+      } = (0, yk.y)(), wk = "superRank" === Ik ? Rk.l.product.days : null, Hk = kk => null === wk ? ek(kk ? "general:gift" : "general:buy") : ek(kk ? "store:giftDays" : "store:buyDays", {
+        days: wk
+      }), Jk = (kk, Fk) => {
+        const Ik = (0, tk.jsxs)(tk.Fragment, {
+          children: [null === kk && (0, tk.jsx)("span", {
             className: "StoreCtaLabel StoreCtaLabelPending"
-          }), null !== SS && (0, fS.jsx)("span", {
+          }), null !== kk && (0, tk.jsx)("span", {
             className: "StoreCtaLabel",
-            title: SS,
-            children: SS
+            title: kk,
+            children: kk
           })]
         });
-        return null !== jS ? (0, fS.jsxs)(fS.Fragment, {
-          children: [HS && (0, fS.jsx)("span", {
+        return null !== wk ? (0, tk.jsxs)(tk.Fragment, {
+          children: [Fk && (0, tk.jsx)("span", {
             className: "StoreCtaIcon",
-            children: HS
-          }), gS, (0, fS.jsxs)("span", {
+            children: Fk
+          }), Ik, (0, tk.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: ["\xb7", (0, fS.jsx)(eX.c, {
-              amount: tS
+            children: ["\xb7", (0, tk.jsx)(ky.b, {
+              amount: Xk
             })]
           })]
-        }) : (0, fS.jsxs)(fS.Fragment, {
-          children: [(0, fS.jsxs)("span", {
+        }) : (0, tk.jsxs)(tk.Fragment, {
+          children: [(0, tk.jsxs)("span", {
             className: "StoreCtaLead",
-            children: [gS, "\xb7"]
-          }), (0, fS.jsxs)("span", {
+            children: [Ik, "\xb7"]
+          }), (0, tk.jsxs)("span", {
             className: "StoreCtaPrice",
-            children: [HS, (0, fS.jsx)(eX.c, {
-              amount: tS
+            children: [Fk, (0, tk.jsx)(ky.b, {
+              amount: Xk
             })]
           })]
         })
       };
-      let nS;
-      switch (HS) {
+      let xk;
+      switch (Fk) {
         case "pending":
-          nS = (0, fS.jsx)(uS.p, {
+          xk = (0, tk.jsx)(qk.m, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: CS(null)
+            children: Jk(null)
           });
           break;
         case "login":
-          nS = (0, fS.jsx)(uS.p, {
+          xk = (0, tk.jsx)(qk.m, {
             className: "StoreCtaButton",
-            onClick: aS,
-            children: CS(GS(!1))
+            onClick: jk,
+            children: Jk(Hk(!1))
           });
           break;
         case "owned":
-          nS = (0, fS.jsx)(uS.j, {
+          xk = (0, tk.jsx)(qk.g, {
             className: "StoreCtaButton",
             onClick: () => {
-              ZS.b.set({
-                openEverythingMenuName: IH.q.CUSTOMISATION
+              zk.d.set({
+                openEverythingMenuName: tF.r.CUSTOMISATION
               })
             },
-            children: (0, fS.jsxs)("span", {
+            children: (0, tk.jsxs)("span", {
               className: "StoreCtaLabel",
-              children: [(0, fS.jsx)(NS.d, {
+              children: [(0, tk.jsx)(lk.e, {
                 name: "shirt"
-              }), " ", KS("store:equip")]
+              }), " ", ek("store:equip")]
             })
           });
           break;
@@ -6035,206 +6035,206 @@ export const modules = {
         case "recipientSharesOwned":
         case "subscribed":
         case "recipientSubscribed":
-          nS = (0, fS.jsx)(uS.p, {
+          xk = (0, tk.jsx)(qk.m, {
             className: "StoreCtaButton",
             disabled: !0,
-            children: (0, fS.jsx)("span", {
+            children: (0, tk.jsx)("span", {
               className: "StoreCtaLabel",
-              children: KS(ax[HS])
+              children: ek(wy[Fk])
             })
           });
           break;
         case "needsRecipient":
         case "lookingUp":
         case "gift":
-          nS = (0, fS.jsx)(uS.p, {
+          xk = (0, tk.jsx)(qk.m, {
             className: "StoreCtaButton",
-            disabled: "needsRecipient" === HS || null === tS,
-            loading: "lookingUp" === HS || bS,
-            onClick: IS,
+            disabled: "needsRecipient" === Fk || null === Xk,
+            loading: "lookingUp" === Fk || Tk,
+            onClick: Lk,
             analyticsClick: {
               id: "store.gift",
-              value: gS
+              value: Ik
             },
-            children: CS(GS(!0), LX.b)
+            children: Jk(Hk(!0), Gi.e)
           });
           break;
         case "buy":
         case "recharge":
-          nS = (0, fS.jsx)(uS.p, {
+          xk = (0, tk.jsx)(qk.m, {
             className: "StoreCtaButton",
-            loading: bS,
-            disabled: null === tS,
-            onClick: IS,
+            loading: Tk,
+            disabled: null === Xk,
+            onClick: Lk,
             analyticsClick: {
               id: "store.buy",
-              value: gS
+              value: Ik
             },
-            children: CS(GS(!1))
+            children: Jk(Hk(!1))
           })
       }
-      return (0, fS.jsx)("div", {
-        className: XS()("StoreCta", {
-          StoreCtaHighlight: qS,
-          StoreCtaLabelFirst: null !== jS
+      return (0, tk.jsx)("div", {
+        className: ik()("StoreCta", {
+          StoreCtaHighlight: ak,
+          StoreCtaLabelFirst: null !== wk
         }),
-        onClick: SS => {
-          SS.stopPropagation(), "needsRecipient" === HS && kS()
+        onClick: kk => {
+          kk.stopPropagation(), "needsRecipient" === Fk && Zk()
         },
-        children: nS
+        children: xk
       })
     }
 
-    function jx() {
+    function Jy() {
       const {
-        t: SS
-      } = (0, xS.F)();
-      return (0, fS.jsxs)("ul", {
+        t: kk
+      } = (0, yk.y)();
+      return (0, tk.jsxs)("ul", {
         className: "StorePerks",
-        children: [(0, fS.jsxs)("li", {
-          children: [(0, fS.jsx)(NS.d, {
+        children: [(0, tk.jsxs)("li", {
+          children: [(0, tk.jsx)(lk.e, {
             name: "check"
-          }), (0, fS.jsx)(kx, {
-            text: SS("store:colourfulNames")
+          }), (0, tk.jsx)(ey, {
+            text: kk("store:colourfulNames")
           })]
-        }), (0, fS.jsxs)("li", {
-          children: [(0, fS.jsx)(NS.d, {
+        }), (0, tk.jsxs)("li", {
+          children: [(0, tk.jsx)(lk.e, {
             name: "check"
-          }), SS("store:perkCapes")]
-        }), (0, fS.jsxs)("li", {
-          children: [(0, fS.jsx)(NS.d, {
+          }), kk("store:perkCapes")]
+        }), (0, tk.jsxs)("li", {
+          children: [(0, tk.jsx)(lk.e, {
             name: "check"
-          }), SS("store:perkNoAdverts")]
-        }), (0, fS.jsxs)("li", {
-          children: [(0, fS.jsx)(NS.d, {
+          }), kk("store:perkNoAdverts")]
+        }), (0, tk.jsxs)("li", {
+          children: [(0, tk.jsx)(lk.e, {
             name: "check"
-          }), SS("store:perkFriends", {
-            count: (0, lS.e)(["super"])
+          }), kk("store:perkFriends", {
+            count: (0, rk.b)(["super"])
           })]
         })]
       })
     }
 
-    function Gx(SS) {
+    function xy(kk) {
       let {
-        daysLeft: HS,
-        totalDays: gS,
-        urgent: tS
-      } = SS;
+        daysLeft: Fk,
+        totalDays: Ik,
+        urgent: Xk
+      } = kk;
       const {
-        t: bS
-      } = (0, xS.F)(), NS = gS > 0 ? Math.min(1, Math.max(.03, HS / gS)) : 1;
-      return (0, fS.jsxs)("div", {
-        className: XS()("StoreSuperRankMeterArea", {
-          StoreSuperRankMeterUrgent: tS
+        t: Tk
+      } = (0, yk.y)(), lk = Ik > 0 ? Math.min(1, Math.max(.03, Fk / Ik)) : 1;
+      return (0, tk.jsxs)("div", {
+        className: ik()("StoreSuperRankMeterArea", {
+          StoreSuperRankMeterUrgent: Xk
         }),
-        children: [(0, fS.jsx)("span", {
+        children: [(0, tk.jsx)("span", {
           className: "StoreSuperRankDaysLeft",
-          children: 1 === HS ? bS("store:oneDayLeft") : bS("store:daysLeft", {
-            days: HS
+          children: 1 === Fk ? Tk("store:oneDayLeft") : Tk("store:daysLeft", {
+            days: Fk
           })
-        }), (0, fS.jsx)("div", {
+        }), (0, tk.jsx)("div", {
           className: "StoreSuperRankMeter",
-          children: (0, fS.jsx)("i", {
+          children: (0, tk.jsx)("i", {
             style: {
-              width: 100 * NS + "%"
+              width: 100 * lk + "%"
             }
           })
         })]
       })
     }
 
-    function Cx(SS) {
+    function Py(kk) {
       let {
-        state: HS,
-        urgent: gS,
-        daysLeft: tS,
-        totalDays: bS,
-        recipientHasSuperRank: qS,
-        busy: uS,
-        highlight: IS,
-        onOpen: kS,
-        onAct: aS,
-        onNeedRecipient: KS,
-        onLogin: jS
-      } = SS;
+        state: Fk,
+        urgent: Ik,
+        daysLeft: Xk,
+        totalDays: Tk,
+        recipientHasSuperRank: ak,
+        busy: qk,
+        highlight: Lk,
+        onOpen: Zk,
+        onAct: jk,
+        onNeedRecipient: ek,
+        onLogin: wk
+      } = kk;
       const {
-        t: GS
-      } = (0, xS.F)(), CS = Ix(HS), {
-        days: nS
-      } = yS.k.product, PS = GS("store:recipientHasSuperRank", {
-        giftDays: nS
-      }), QS = TS("subscribed" === HS);
-      return (0, fS.jsxs)("div", {
-        className: XS()("StoreTile StoreSuperRankTile", {
-          StoreTileGift: CS,
-          StoreSuperRankTileUrgent: "recharge" === HS && gS,
-          StoreSuperRankTileWithChip: qS,
-          StoreSuperRankTileGiftReady: "gift" === HS
+        t: Hk
+      } = (0, yk.y)(), Jk = Zy(Fk), {
+        days: xk
+      } = Rk.l.product, Pk = Hk("store:recipientHasSuperRank", {
+        giftDays: xk
+      }), Kk = mk("subscribed" === Fk);
+      return (0, tk.jsxs)("div", {
+        className: ik()("StoreTile StoreSuperRankTile", {
+          StoreTileGift: Jk,
+          StoreSuperRankTileUrgent: "recharge" === Fk && Ik,
+          StoreSuperRankTileWithChip: ak,
+          StoreSuperRankTileGiftReady: "gift" === Fk
         }),
-        ...fx(GS("homePage:superRank")),
+        ...jy(Hk("homePage:superRank")),
         "data-store-item": "superRank",
-        onPointerEnter: tx,
-        onFocus: tx,
-        onClick: kS,
-        children: [(0, fS.jsx)("div", {
+        onPointerEnter: iy,
+        onFocus: iy,
+        onClick: Zk,
+        children: [(0, tk.jsx)("div", {
           className: "StoreSuperRankArt",
           style: {
-            backgroundImage: `url(${sX.f})`
+            backgroundImage: `url(${Bi.e})`
           }
-        }), CS && (0, fS.jsx)("div", {
+        }), Jk && (0, tk.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, fS.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "StoreTileContent",
-          children: [qS && (0, fS.jsx)("span", {
+          children: [ak && (0, tk.jsx)("span", {
             className: "StoreChip StoreChipGift",
-            title: PS,
-            children: PS
-          }), (0, fS.jsxs)("div", {
+            title: Pk,
+            children: Pk
+          }), (0, tk.jsxs)("div", {
             className: "StoreTileTitle StoreSuperRankTitle",
-            children: [(0, fS.jsx)(NS.d, {
+            children: [(0, tk.jsx)(lk.e, {
               name: "bolt"
-            }), " ", GS("homePage:superRank")]
-          }), CS && (0, fS.jsx)("div", {
+            }), " ", Hk("homePage:superRank")]
+          }), Jk && (0, tk.jsx)("div", {
             className: "StoreTilePitch",
-            children: GS("store:giftPitch", {
-              days: nS
+            children: Hk("store:giftPitch", {
+              days: xk
             })
-          }), "recharge" === HS && (0, fS.jsx)(Gx, {
-            daysLeft: tS,
-            totalDays: bS,
-            urgent: gS
-          }), QS && (0, fS.jsx)("div", {
+          }), "recharge" === Fk && (0, tk.jsx)(xy, {
+            daysLeft: Xk,
+            totalDays: Tk,
+            urgent: Ik
+          }), Kk && (0, tk.jsx)("div", {
             className: "StoreSuperRankMeterArea",
-            children: (0, fS.jsx)("span", {
+            children: (0, tk.jsx)("span", {
               className: "StoreSuperRankDaysLeft",
-              children: QS
+              children: Kk
             })
-          }), (0, fS.jsx)(jx, {}), (0, fS.jsxs)("div", {
+          }), (0, tk.jsx)(Jy, {}), (0, tk.jsxs)("div", {
             className: "StoreTileActions",
-            children: [(0, fS.jsx)(Kx, {
-              state: HS,
+            children: [(0, tk.jsx)(Hy, {
+              state: Fk,
               item: "superRank",
-              price: yS.k.price,
-              busy: uS,
-              highlight: IS,
-              onAct: aS,
-              onNeedRecipient: KS,
-              onLogin: jS
-            }), "needsRecipient" === HS && (0, fS.jsx)("span", {
+              price: Rk.l.price,
+              busy: qk,
+              highlight: Lk,
+              onAct: jk,
+              onNeedRecipient: ek,
+              onLogin: wk
+            }), "needsRecipient" === Fk && (0, tk.jsx)("span", {
               className: "StoreTileNote StoreTileNoteGift",
-              children: GS("store:pickRecipientFirst")
-            }), "recharge" === HS && gS && (0, fS.jsx)("span", {
+              children: Hk("store:pickRecipientFirst")
+            }), "recharge" === Fk && Ik && (0, tk.jsx)("span", {
               className: "StoreTileNote StoreSuperRankEnding",
-              children: 1 === tS ? GS("store:endsInOneDay") : GS("store:endsInDays", {
-                days: tS
+              children: 1 === Xk ? Hk("store:endsInOneDay") : Hk("store:endsInDays", {
+                days: Xk
               })
             })]
           })]
         })]
       })
     }
-    const nx = {
+    const Ky = {
       common: "StorePackTileCommon",
       rare: "StorePackTileRare",
       epic: "StorePackTileEpic",
@@ -6242,405 +6242,405 @@ export const modules = {
       mythic: "StorePackTileMythic"
     };
 
-    function Px(SS) {
-      var HS;
+    function Qy(kk) {
+      var Fk;
       let {
-        pack: gS,
-        state: bS,
-        busy: qS,
-        onOpen: uS,
-        onAct: IS,
-        onNeedRecipient: kS,
-        onLogin: aS
-      } = SS;
+        pack: Ik,
+        state: Tk,
+        busy: ak,
+        onOpen: qk,
+        onAct: Lk,
+        onNeedRecipient: Zk,
+        onLogin: jk
+      } = kk;
       const {
-        t: KS
-      } = (0, xS.F)(), jS = wX.c[gS], GS = vX.i[gS], CS = (0, sX.l)(gS), nS = (0, tS.useRef)(null);
-      (0, Nx.h)(gS, nS);
-      const PS = Ix(bS),
-        QS = null !== (HS = jS.displayName) && void 0 !== HS ? HS : gS,
-        DS = (0, xx.d)((() => {
-          (0, Xx.h)();
-          const SS = (0, Nx.f)(gS);
-          void 0 !== SS && (0, Hx.i)((0, Nx.e)(SS))
+        t: ek
+      } = (0, yk.y)(), wk = si.d[Ik], Hk = Oi.l[Ik], Jk = (0, Bi.n)(Ik), xk = (0, Xk.useRef)(null);
+      (0, qy.p)(Ik, xk);
+      const Pk = Zy(Tk),
+        Kk = null !== (Fk = wk.displayName) && void 0 !== Fk ? Fk : Ik,
+        Qk = (0, ay.b)((() => {
+          (0, ly.e)();
+          const kk = (0, qy.i)(Ik);
+          void 0 !== kk && (0, Xy.d)((0, qy.e)(kk))
         })),
-        [wS] = (0, tS.useState)(UX.g);
-      return (0, fS.jsxs)("div", {
-        className: XS()("StoreTile StorePackTile", nx[jS.tier], {
-          StorePackTileOwned: "owned" === bS,
-          StorePackTileRecipientOwns: "recipientOwns" === bS,
-          StoreTileGift: PS
+        [sk] = (0, Xk.useState)(Wi.j);
+      return (0, tk.jsxs)("div", {
+        className: ik()("StoreTile StorePackTile", Ky[wk.tier], {
+          StorePackTileOwned: "owned" === Tk,
+          StorePackTileRecipientOwns: "recipientOwns" === Tk,
+          StoreTileGift: Pk
         }),
-        ...fx(QS),
-        ref: nS,
-        "data-store-item": gS,
-        onClick: uS,
-        onPointerMove: SS => {
-          "mouse" !== SS.pointerType || 0 === SS.movementX && 0 === SS.movementY || wS || DS.start()
+        ...jy(Kk),
+        ref: xk,
+        "data-store-item": Ik,
+        onClick: qk,
+        onPointerMove: kk => {
+          "mouse" !== kk.pointerType || 0 === kk.movementX && 0 === kk.movementY || sk || Qk.start()
         },
-        onPointerLeave: DS.cancel,
-        children: [GS && (0, fS.jsx)(GS, {}), (0, fS.jsx)("div", {
+        onPointerLeave: Qk.cancel,
+        children: [Hk && (0, tk.jsx)(Hk, {}), (0, tk.jsx)("div", {
           className: "StorePackCharacters",
-          children: CS.map((SS => (0, fS.jsx)("div", {
+          children: Jk.map((kk => (0, tk.jsx)("div", {
             className: "StorePackCharacter",
             style: {
-              backgroundImage: `url(${(0,sX.j)(SS)})`
+              backgroundImage: `url(${(0,Bi.i)(kk)})`
             }
-          }, SS)))
-        }), (0, fS.jsx)("div", {
+          }, kk)))
+        }), (0, tk.jsx)("div", {
           className: "StoreTileScrim"
-        }), PS && (0, fS.jsx)("div", {
+        }), Pk && (0, tk.jsx)("div", {
           className: "StoreGiftRibbon"
-        }), (0, fS.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "StoreTileContent",
-          children: [(0, fS.jsx)("div", {
+          children: [(0, tk.jsx)("div", {
             className: "StoreTileTitle",
-            children: QS
-          }), (0, fS.jsxs)("div", {
+            children: Kk
+          }), (0, tk.jsxs)("div", {
             className: "StoreTileMeta",
-            children: [(0, fS.jsx)(qx.d, {
-              tier: jS.tier
-            }), " \xb7 ", KS("store:itemCount", {
-              count: (0, mX.d)(gS)
-            }), "owned" === bS && (0, fS.jsxs)("span", {
+            children: [(0, tk.jsx)(Ly.b, {
+              tier: wk.tier
+            }), " \xb7 ", ek("store:itemCount", {
+              count: (0, Mi.f)(Ik)
+            }), "owned" === Tk && (0, tk.jsxs)("span", {
               className: "StoreTileOwned",
-              children: [" \xb7 ", (0, fS.jsx)(NS.d, {
+              children: [" \xb7 ", (0, tk.jsx)(lk.e, {
                 name: "check"
-              }), " ", KS("general:owned")]
+              }), " ", ek("general:owned")]
             })]
-          }), (0, fS.jsx)(Kx, {
-            state: bS,
-            item: gS,
-            price: (0, yS.e)(gS),
-            busy: qS,
-            onAct: IS,
-            onNeedRecipient: kS,
-            onLogin: aS
+          }), (0, tk.jsx)(Hy, {
+            state: Tk,
+            item: Ik,
+            price: (0, Rk.g)(Ik),
+            busy: ak,
+            onAct: Lk,
+            onNeedRecipient: Zk,
+            onLogin: jk
           })]
         })]
       })
     }
-    var Qx = gS(3247),
-      Dx = gS(1649),
-      wx = gS(1541),
-      hx = gS(3694);
+    var sy = Ik(3004),
+      Vy = Ik(1513),
+      zy = Ik(1420),
+      Sy = Ik(3511);
 
-    function Zx() {
-      return (0, fS.jsx)("span", {
+    function oy() {
+      return (0, tk.jsx)("span", {
         className: "NewBadge",
         children: "NEW"
       })
     }
-    var Jx = gS(1428),
-      Ox = gS(1657),
-      dx = gS(34267);
+    var vy = Ik(1320),
+      Ey = Ik(1518),
+      Oy = Ik(34218);
 
-    function cx(SS) {
+    function ny(kk) {
       let {
-        character: HS,
-        drawn: gS,
-        onDrawn: bS
-      } = SS;
-      const xS = (0, tS.useRef)(null),
-        NS = (0, dx.f)(HS);
-      return (0, fS.jsx)("div", {
-        className: XS()("StoreCharacterLive", {
-          StoreCharacterLiveDrawn: gS
+        character: Fk,
+        drawn: Ik,
+        onDrawn: Tk
+      } = kk;
+      const yk = (0, Xk.useRef)(null),
+        lk = (0, Oy.f)(Fk);
+      return (0, tk.jsx)("div", {
+        className: ik()("StoreCharacterLive", {
+          StoreCharacterLiveDrawn: Ik
         }),
-        children: (0, fS.jsx)(tS.Suspense, {
+        children: (0, tk.jsx)(Xk.Suspense, {
           fallback: null,
-          children: (0, fS.jsx)(Xx.d, {
-            ref: xS,
+          children: (0, tk.jsx)(ly.c, {
+            ref: yk,
             framing: "store",
-            turntableFromYaw: gS ? NS.yaw : null,
+            turntableFromYaw: Ik ? lk.yaw : null,
             onReady: () => {
-              var SS, gS;
-              null === (SS = xS.current) || void 0 === SS || SS.setOrbit(NS), null === (gS = xS.current) || void 0 === gS || gS.setAllCosmetics(Ox.c[HS].cosmetics)
+              var kk, Ik;
+              null === (kk = yk.current) || void 0 === kk || kk.setOrbit(lk), null === (Ik = yk.current) || void 0 === Ik || Ik.setAllCosmetics(Ey.c[Fk].cosmetics)
             },
-            onDrawn: bS
+            onDrawn: Tk
           })
         })
       })
     }
-    const vx = {
+    const Gy = {
         common: "StoreCharacterCardCommon",
         rare: "StoreCharacterCardRare",
         epic: "StoreCharacterCardEpic",
         legendary: "StoreCharacterCardLegendary",
         mythic: "StoreCharacterCardMythic"
       },
-      Ex = new Set(["wildSpirits"]);
+      py = new Set(["wildSpirits"]);
 
-    function Lx(SS) {
-      var HS;
+    function uy(kk) {
+      var Fk;
       let {
-        tile: gS,
-        design: bS,
-        canGoLive: qS,
-        live: uS,
-        busy: IS,
-        highlight: kS,
-        onLiveStart: aS,
-        onLiveEnd: KS,
-        onOpen: jS,
-        onAct: GS,
-        onNeedRecipient: CS,
-        onLogin: nS
-      } = SS;
+        tile: Ik,
+        design: Tk,
+        canGoLive: ak,
+        live: qk,
+        busy: Lk,
+        highlight: Zk,
+        onLiveStart: jk,
+        onLiveEnd: ek,
+        onOpen: wk,
+        onAct: Hk,
+        onNeedRecipient: Jk,
+        onLogin: xk
+      } = kk;
       const {
-        t: PS
-      } = (0, xS.F)(), {
-        pack: QS,
-        state: DS
-      } = gS, wS = wX.c[QS], hS = (0, wX.d)(QS), ZS = (0, sX.k)(QS), JS = vX.i[ZS], OS = Ex.has(ZS), {
-        tier: dS
-      } = wS, cS = "legendary" === dS || "mythic" === dS, vS = (0, tS.useRef)(null);
-      (0, Jx.b)(vS, "epic" === dS || cS || OS);
-      const [ES, YS] = (0, tS.useState)(!1);
-      return !uS && ES && YS(!1), (0, fS.jsxs)("div", {
-        ref: vS,
-        className: XS()("StoreCharacterCard", `StoreCharacterCard${bS}`, vx[dS], {
-          StoreCharacterCardOwned: "owned" === DS || "recipientOwns" === DS,
-          StoreCharacterCardGift: Ix(DS),
-          StoreCharacterCardItem: void 0 === hS
+        t: Pk
+      } = (0, yk.y)(), {
+        pack: Kk,
+        state: Qk
+      } = Ik, sk = si.d[Kk], Vk = (0, si.e)(Kk), zk = (0, Bi.l)(Kk), Sk = Oi.l[zk], vk = py.has(zk), {
+        tier: Ek
+      } = sk, Ok = "legendary" === Ek || "mythic" === Ek, nk = (0, Xk.useRef)(null);
+      (0, vy.c)(nk, "epic" === Ek || Ok || vk);
+      const [Gk, uk] = (0, Xk.useState)(!1);
+      return !qk && Gk && uk(!1), (0, tk.jsxs)("div", {
+        ref: nk,
+        className: ik()("StoreCharacterCard", `StoreCharacterCard${Tk}`, Gy[Ek], {
+          StoreCharacterCardOwned: "owned" === Qk || "recipientOwns" === Qk,
+          StoreCharacterCardGift: Zy(Qk),
+          StoreCharacterCardItem: void 0 === Vk
         }),
-        onPointerMove: SS => {
-          "mouse" !== SS.pointerType || 0 === SS.movementX && 0 === SS.movementY || !qS || uS || void 0 === hS || aS()
+        onPointerMove: kk => {
+          "mouse" !== kk.pointerType || 0 === kk.movementX && 0 === kk.movementY || !ak || qk || void 0 === Vk || jk()
         },
-        onPointerLeave: KS,
-        children: [(0, fS.jsx)("div", {
+        onPointerLeave: ek,
+        children: [(0, tk.jsx)("div", {
           className: "StoreCharacterBackdrop",
-          children: JS && (0, fS.jsx)(JS, {
+          children: Sk && (0, tk.jsx)(Sk, {
             simple: !0
           })
-        }), cS && (0, fS.jsx)("div", {
+        }), Ok && (0, tk.jsx)("div", {
           className: "StoreCharacterRays"
-        }), (0, fS.jsxs)(LS.LinkPreserveSearch, {
+        }), (0, tk.jsxs)(pk.LinkPreserveSearch, {
           className: "StoreCharacterLink",
-          to: (0, Dx.f)({
+          to: (0, Vy.f)({
             kind: "pack",
-            pack: QS
+            pack: Kk
           }),
-          "data-store-item": QS,
-          onClick: SS => {
-            (0, wx.b)(SS) && (SS.preventDefault(), jS())
+          "data-store-item": Kk,
+          onClick: kk => {
+            (0, zy.e)(kk) && (kk.preventDefault(), wk())
           },
-          children: [(0, fS.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "StoreCharacterStage",
-            children: [(0, fS.jsx)("div", {
+            children: [(0, tk.jsx)("div", {
               className: "StoreCharacterHalo"
-            }), (0, fS.jsx)("div", {
-              className: XS()("StoreCharacterFigure", {
-                StoreCharacterFigureCovered: ES
+            }), (0, tk.jsx)("div", {
+              className: ik()("StoreCharacterFigure", {
+                StoreCharacterFigureCovered: Gk
               }),
               style: {
-                backgroundImage: `url(${(0,sX.q)(QS)})`
+                backgroundImage: `url(${(0,Bi.t)(Kk)})`
               }
-            }), uS && void 0 !== hS && (0, fS.jsx)(cx, {
-              character: hS,
-              drawn: ES,
+            }), qk && void 0 !== Vk && (0, tk.jsx)(ny, {
+              character: Vk,
+              drawn: Gk,
               onDrawn: () => {
-                YS(!0)
+                uk(!0)
               }
             })]
-          }), (0, fS.jsx)("div", {
+          }), (0, tk.jsx)("div", {
             className: "StoreCharacterName",
-            children: null !== (HS = wS.displayName) && void 0 !== HS ? HS : QS
-          }), (0, fS.jsx)(qx.d, {
-            tier: dS,
+            children: null !== (Fk = sk.displayName) && void 0 !== Fk ? Fk : Kk
+          }), (0, tk.jsx)(Ly.b, {
+            tier: Ek,
             className: "StoreCharacterTier"
           })]
-        }), (0, fS.jsx)("div", {
+        }), (0, tk.jsx)("div", {
           className: "StoreCharacterScrim"
-        }), OS && (0, fS.jsx)("span", {
+        }), vk && (0, tk.jsx)("span", {
           className: "StoreCharacterNew",
-          children: (0, fS.jsx)(Zx, {})
-        }), "owned" === DS && (0, fS.jsx)("span", {
+          children: (0, tk.jsx)(oy, {})
+        }), "owned" === Qk && (0, tk.jsx)("span", {
           className: "StoreCharacterOwned",
-          title: PS("general:owned"),
-          "aria-label": PS("general:owned"),
-          children: (0, fS.jsx)(NS.d, {
+          title: Pk("general:owned"),
+          "aria-label": Pk("general:owned"),
+          children: (0, tk.jsx)(lk.e, {
             name: "check"
           })
-        }), (0, fS.jsx)("div", {
+        }), (0, tk.jsx)("div", {
           className: "StoreCharacterPlate",
-          children: (0, fS.jsx)(Kx, {
-            state: DS,
-            item: QS,
-            price: (0, yS.e)(QS),
-            busy: IS,
-            highlight: kS,
-            onAct: GS,
-            onNeedRecipient: CS,
-            onLogin: nS
+          children: (0, tk.jsx)(Hy, {
+            state: Qk,
+            item: Kk,
+            price: (0, Rk.g)(Kk),
+            busy: Lk,
+            highlight: Zk,
+            onAct: Hk,
+            onNeedRecipient: Jk,
+            onLogin: xk
           })
         })]
       })
     }
 
-    function Yx(SS) {
+    function by(kk) {
       let {
-        tiles: HS,
-        busy: gS,
-        highlightItem: bS,
-        onOpen: XS,
-        onAct: xS,
-        onNeedRecipient: NS,
-        onLogin: qS
-      } = SS;
-      const uS = (0, hx.w)("storeCharacterCardFoil"),
-        IS = (0, hx.w)("storeCharacterCardSpotlight"),
-        kS = uS ? "Foil" : IS ? "Spotlight" : "Showcase",
-        [aS] = (0, tS.useState)(UX.g),
-        [KS, jS] = (0, tS.useState)(null);
-      return (0, fS.jsx)("div", {
+        tiles: Fk,
+        busy: Ik,
+        highlightItem: Tk,
+        onOpen: ik,
+        onAct: yk,
+        onNeedRecipient: lk,
+        onLogin: ak
+      } = kk;
+      const qk = (0, Sy.t)("storeCharacterCardFoil"),
+        Lk = (0, Sy.t)("storeCharacterCardSpotlight"),
+        Zk = qk ? "Foil" : Lk ? "Spotlight" : "Showcase",
+        [jk] = (0, Xk.useState)(Wi.j),
+        [ek, wk] = (0, Xk.useState)(null);
+      return (0, tk.jsx)("div", {
         className: "StoreCharacterGrid",
-        children: HS.map((SS => (0, fS.jsx)(Lx, {
-          tile: SS,
-          design: kS,
-          canGoLive: !aS,
-          live: KS === SS.pack,
-          busy: gS,
-          highlight: bS === SS.pack,
+        children: Fk.map((kk => (0, tk.jsx)(uy, {
+          tile: kk,
+          design: Zk,
+          canGoLive: !jk,
+          live: ek === kk.pack,
+          busy: Ik,
+          highlight: Tk === kk.pack,
           onLiveStart: () => {
-            jS(SS.pack)
+            wk(kk.pack)
           },
           onLiveEnd: () => {
-            jS((HS => HS === SS.pack ? null : HS))
+            wk((Fk => Fk === kk.pack ? null : Fk))
           },
           onOpen: () => {
-            XS(SS.pack)
+            ik(kk.pack)
           },
           onAct: () => {
-            xS(SS.pack)
+            yk(kk.pack)
           },
-          onNeedRecipient: NS,
+          onNeedRecipient: lk,
           onLogin: () => {
-            qS(SS.pack)
+            ak(kk.pack)
           }
-        }, SS.pack)))
+        }, kk.pack)))
       })
     }
-    var Ax = gS(34280);
+    var Ry = Ik(34231);
 
-    function yx(SS) {
+    function Uy(kk) {
       let {
-        title: HS
-      } = SS;
-      return (0, fS.jsx)("h2", {
+        title: Fk
+      } = kk;
+      return (0, tk.jsx)("h2", {
         className: "StoreSectionDivider",
-        children: (0, fS.jsx)("span", {
+        children: (0, tk.jsx)("span", {
           className: "StoreSectionDividerTitle",
-          children: HS
+          children: Fk
         })
       })
     }
 
-    function Vx(SS) {
+    function Cy(kk) {
       let {
-        mountAtOnce: HS,
-        children: gS
-      } = SS;
-      const bS = (0, tS.useRef)(null),
-        [XS, xS] = (0, tS.useState)(HS),
-        NS = (0, Ax.e)();
-      return (0, tS.useLayoutEffect)((() => {
-        const SS = bS.current;
-        SS && SS.getBoundingClientRect().top < SS.parentElement.getBoundingClientRect().bottom && xS(!0)
-      }), []), XS || NS ? (0, fS.jsx)(fS.Fragment, {
-        children: gS
-      }) : (0, fS.jsx)("div", {
-        ref: bS
+        mountAtOnce: Fk,
+        children: Ik
+      } = kk;
+      const Tk = (0, Xk.useRef)(null),
+        [ik, yk] = (0, Xk.useState)(Fk),
+        lk = (0, Ry.c)();
+      return (0, Xk.useLayoutEffect)((() => {
+        const kk = Tk.current;
+        kk && kk.getBoundingClientRect().top < kk.parentElement.getBoundingClientRect().bottom && yk(!0)
+      }), []), ik || lk ? (0, tk.jsx)(tk.Fragment, {
+        children: Ik
+      }) : (0, tk.jsx)("div", {
+        ref: Tk
       })
     }
 
-    function ix(SS) {
+    function Ny(kk) {
       let {
-        layout: HS,
-        mountAtOnce: gS,
-        bundleGift: tS,
-        superRankTotalDays: bS,
-        busy: XS,
-        highlightItem: NS,
-        onOpen: qS,
-        onAct: uS,
-        onNeedRecipient: IS,
-        onLogin: kS,
-        dailyDropTile: aS
-      } = SS;
+        layout: Fk,
+        mountAtOnce: Ik,
+        bundleGift: Xk,
+        superRankTotalDays: Tk,
+        busy: ik,
+        highlightItem: lk,
+        onOpen: ak,
+        onAct: qk,
+        onNeedRecipient: Lk,
+        onLogin: Zk,
+        dailyDropTile: jk
+      } = kk;
       const {
-        t: KS
-      } = (0, xS.F)(), jS = HS.packs.filter((SS => void 0 === (0, wX.d)(SS.pack) && !(0, wX.h)(SS.pack))), GS = HS.packs.filter((SS => void 0 !== (0, wX.d)(SS.pack))), CS = HS.packs.filter((SS => (0, wX.h)(SS.pack)));
-      return (0, fS.jsxs)(fS.Fragment, {
-        children: [(0, fS.jsx)(Qx.c, {
+        t: ek
+      } = (0, yk.y)(), wk = Fk.packs.filter((kk => void 0 === (0, si.e)(kk.pack) && !(0, si.i)(kk.pack))), Hk = Fk.packs.filter((kk => void 0 !== (0, si.e)(kk.pack))), Jk = Fk.packs.filter((kk => (0, si.i)(kk.pack)));
+      return (0, tk.jsxs)(tk.Fragment, {
+        children: [(0, tk.jsx)(sy.b, {
           className: "StoreSuperGems",
-          gift: tS,
-          highlightSku: NS,
-          leadingTile: aS
-        }), (0, fS.jsx)(yx, {
-          title: KS("store:rank")
-        }), (0, fS.jsx)(Cx, {
-          state: HS.superRank.state,
-          urgent: HS.superRank.urgent,
-          daysLeft: HS.superRankDaysLeft,
-          totalDays: bS,
-          recipientHasSuperRank: HS.recipientHasSuperRank,
-          busy: XS,
-          highlight: "superRank" === NS,
+          gift: Xk,
+          highlightSku: lk,
+          leadingTile: jk
+        }), (0, tk.jsx)(Uy, {
+          title: ek("store:rank")
+        }), (0, tk.jsx)(Py, {
+          state: Fk.superRank.state,
+          urgent: Fk.superRank.urgent,
+          daysLeft: Fk.superRankDaysLeft,
+          totalDays: Tk,
+          recipientHasSuperRank: Fk.recipientHasSuperRank,
+          busy: ik,
+          highlight: "superRank" === lk,
           onOpen: () => {
-            qS("superRank")
+            ak("superRank")
           },
           onAct: () => {
-            uS("superRank")
+            qk("superRank")
           },
-          onNeedRecipient: IS,
+          onNeedRecipient: Lk,
           onLogin: () => {
-            kS("superRank")
+            Zk("superRank")
           }
-        }), (0, fS.jsxs)(Vx, {
-          mountAtOnce: gS,
-          children: [(0, fS.jsx)(yx, {
-            title: KS("store:bundles")
-          }), (0, fS.jsx)("div", {
+        }), (0, tk.jsxs)(Cy, {
+          mountAtOnce: Ik,
+          children: [(0, tk.jsx)(Uy, {
+            title: ek("store:bundles")
+          }), (0, tk.jsx)("div", {
             className: "StorePackGrid",
-            children: jS.map((SS => (0, fS.jsx)(Px, {
-              pack: SS.pack,
-              state: SS.state,
-              busy: XS,
+            children: wk.map((kk => (0, tk.jsx)(Qy, {
+              pack: kk.pack,
+              state: kk.state,
+              busy: ik,
               onOpen: () => {
-                qS(SS.pack)
+                ak(kk.pack)
               },
               onAct: () => {
-                uS(SS.pack)
+                qk(kk.pack)
               },
-              onNeedRecipient: IS,
+              onNeedRecipient: Lk,
               onLogin: () => {
-                kS(SS.pack)
+                Zk(kk.pack)
               }
-            }, SS.pack)))
-          }), (0, fS.jsxs)(Vx, {
-            mountAtOnce: gS,
-            children: [(0, fS.jsx)(yx, {
-              title: KS("store:characters")
-            }), (0, fS.jsx)(Yx, {
-              tiles: GS,
-              busy: XS,
-              highlightItem: NS,
-              onOpen: qS,
-              onAct: uS,
-              onNeedRecipient: IS,
-              onLogin: kS
-            }), CS.length > 0 && (0, fS.jsxs)(fS.Fragment, {
-              children: [(0, fS.jsx)(yx, {
-                title: KS("store:premiumItems")
-              }), (0, fS.jsx)(Yx, {
-                tiles: CS,
-                busy: XS,
-                highlightItem: NS,
-                onOpen: qS,
-                onAct: uS,
-                onNeedRecipient: IS,
-                onLogin: kS
+            }, kk.pack)))
+          }), (0, tk.jsxs)(Cy, {
+            mountAtOnce: Ik,
+            children: [(0, tk.jsx)(Uy, {
+              title: ek("store:characters")
+            }), (0, tk.jsx)(by, {
+              tiles: Hk,
+              busy: ik,
+              highlightItem: lk,
+              onOpen: ak,
+              onAct: qk,
+              onNeedRecipient: Lk,
+              onLogin: Zk
+            }), Jk.length > 0 && (0, tk.jsxs)(tk.Fragment, {
+              children: [(0, tk.jsx)(Uy, {
+                title: ek("store:premiumItems")
+              }), (0, tk.jsx)(by, {
+                tiles: Jk,
+                busy: ik,
+                highlightItem: lk,
+                onOpen: ak,
+                onAct: qk,
+                onNeedRecipient: Lk,
+                onLogin: Zk
               })]
             })]
           })]
@@ -6648,422 +6648,422 @@ export const modules = {
       })
     }
 
-    function Wx(SS) {
+    function cy(kk) {
       let {
-        state: HS,
-        mode: gS,
-        giftName: tS,
-        busy: bS,
-        highlight: XS,
-        purchaseError: NS,
-        onBack: qS,
-        onChooseRecipient: IS,
-        onAct: kS,
-        onLogin: aS
-      } = SS;
+        state: Fk,
+        mode: Ik,
+        giftName: Xk,
+        busy: Tk,
+        highlight: ik,
+        purchaseError: lk,
+        onBack: ak,
+        onChooseRecipient: Lk,
+        onAct: Zk,
+        onLogin: jk
+      } = kk;
       const {
-        t: KS
-      } = (0, xS.F)(), jS = TS("gift" !== gS);
-      return (0, fS.jsx)(bx, {
-        onBack: qS,
-        recipient: "gift" === gS && (0, fS.jsxs)(fS.Fragment, {
-          children: [tS && (0, fS.jsxs)("span", {
+        t: ek
+      } = (0, yk.y)(), wk = mk("gift" !== Ik);
+      return (0, tk.jsx)(yy, {
+        onBack: ak,
+        recipient: "gift" === Ik && (0, tk.jsxs)(tk.Fragment, {
+          children: [Xk && (0, tk.jsxs)("span", {
             className: "StoreDetailRecipient",
-            title: KS("store:giftFor", {
-              name: tS
+            title: ek("store:giftFor", {
+              name: Xk
             }),
-            children: [LX.b, " ", KS("store:giftFor", {
-              name: tS
+            children: [Gi.e, " ", ek("store:giftFor", {
+              name: Xk
             })]
-          }), !tS && (0, fS.jsxs)("div", {
-            ...(0, uS.X)(),
+          }), !Xk && (0, tk.jsxs)("div", {
+            ...(0, qk.Y)(),
             className: "StoreDetailRecipient StoreDetailRecipientChoose",
-            onClick: IS,
-            children: [LX.b, " ", KS("store:chooseRecipient")]
+            onClick: Lk,
+            children: [Gi.e, " ", ek("store:chooseRecipient")]
           })]
         }),
-        cta: (0, fS.jsx)(Kx, {
-          state: HS,
+        cta: (0, tk.jsx)(Hy, {
+          state: Fk,
           item: "superRank",
-          price: yS.k.price,
-          busy: bS,
-          highlight: XS,
-          onAct: kS,
-          onNeedRecipient: IS,
-          onLogin: aS
+          price: Rk.l.price,
+          busy: Tk,
+          highlight: ik,
+          onAct: Zk,
+          onNeedRecipient: Lk,
+          onLogin: jk
         }),
-        afterCta: (0, fS.jsxs)(fS.Fragment, {
-          children: [jS && (0, fS.jsx)("span", {
+        afterCta: (0, tk.jsxs)(tk.Fragment, {
+          children: [wk && (0, tk.jsx)("span", {
             className: "StoreTileNote",
-            children: jS
-          }), NS && (0, fS.jsx)("span", {
+            children: wk
+          }), lk && (0, tk.jsx)("span", {
             className: "StoreTileNote StoreTileNoteError",
-            children: KS(NS)
+            children: ek(lk)
           })]
         })
       })
     }
-    var zx = gS(148);
-    const Ux = zx.j("kind", [zx.A({
-      kind: zx.r("refused"),
-      heldTierId: zx.T(),
-      until: zx.y()
-    }), zx.A({
-      kind: zx.r("refund"),
-      tierId: zx.T(),
-      refundedMs: zx.y(),
-      forfeitedMs: zx.y(),
-      premiumCurrency: zx.y()
-    }), zx.A({
-      kind: zx.r("none")
+    var Wy = Ik(134);
+    const fy = Wy.n("kind", [Wy.C({
+      kind: Wy.w("refused"),
+      heldTierId: Wy.S(),
+      until: Wy.y()
+    }), Wy.C({
+      kind: Wy.w("refund"),
+      tierId: Wy.S(),
+      refundedMs: Wy.y(),
+      forfeitedMs: Wy.y(),
+      premiumCurrency: Wy.y()
+    }), Wy.C({
+      kind: Wy.w("none")
     })]);
-    async function px(SS) {
-      const HS = await (0, cS.postJsonWithMetricsCookiesAndJsonResponse)(`${xH.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
-        productId: SS
+    async function By(kk) {
+      const Fk = await (0, Ok.postJsonWithMetricsCookiesAndJsonResponse)(`${lF.clientSideServerUrls.indexUrl}/index/ranks/subscribe-preview`, {
+        productId: kk
       }, {
         retries: 1
       });
-      return Ux.parse(HS)
+      return fy.parse(Fk)
     }
-    var sx = gS(3214),
-      Bx = gS(3250);
+    var dy = Ik(2983),
+      Yy = Ik(3013);
 
-    function Mx(SS, HS) {
-      const gS = Math.max(1, Math.round(HS / WS.h));
-      return [1 === gS ? `${SS}OneDay` : SS, {
-        days: gS.toLocaleString()
+    function Ay(kk, Fk) {
+      const Ik = Math.max(1, Math.round(Fk / Nk.i));
+      return [1 === Ik ? `${kk}OneDay` : kk, {
+        days: Ik.toLocaleString()
       }]
     }
 
-    function Fx() {
-      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, US.purchasesAllowed)() ? (0, fS.jsx)(Rx, {}) : null
+    function gy() {
+      return "true" === new URLSearchParams(window.location.search).get("tempSubscription") && (0, Wk.purchasesAllowed)() ? (0, tk.jsx)(my, {}) : null
     }
 
-    function Rx() {
+    function my() {
       const {
-        t: SS
-      } = (0, xS.F)(), {
-        userContext: HS
-      } = (0, KS.b)(), {
-        purchaseUnderWay: gS,
-        notice: bS,
-        subscribe: XS
-      } = (0, sx.d)(), [NS, qS] = (0, tS.useState)(null), [IS, kS] = (0, tS.useState)(0), [aS, jS] = (0, tS.useState)(!1), GS = (0, tS.useRef)(!0), CS = HS !== cS.NULL_USER_CONTEXT, nS = null !== NS && NS.loadedFor === HS ? NS.offer : null, PS = null === bS || void 0 === bS ? void 0 : bS.pendingIntentId, QS = (0, tS.useRef)(PS);
+        t: kk
+      } = (0, yk.y)(), {
+        userContext: Fk
+      } = (0, ek.d)(), {
+        purchaseUnderWay: Ik,
+        notice: Tk,
+        subscribe: ik
+      } = (0, dy.e)(), [lk, ak] = (0, Xk.useState)(null), [Lk, Zk] = (0, Xk.useState)(0), [jk, wk] = (0, Xk.useState)(!1), Hk = (0, Xk.useRef)(!0), Jk = Fk !== Ok.NULL_USER_CONTEXT, xk = null !== lk && lk.loadedFor === Fk ? lk.offer : null, Pk = null === Tk || void 0 === Tk ? void 0 : Tk.pendingIntentId, Kk = (0, Xk.useRef)(Pk);
 
-      function DS() {
-        kS((SS => SS + 1))
+      function Qk() {
+        Zk((kk => kk + 1))
       }
-      async function wS(SS) {
-        jS(!1), await XS(SS), GS.current && DS()
+      async function sk(kk) {
+        wk(!1), await ik(kk), Hk.current && Qk()
       }
-      if ((0, tS.useEffect)((() => (GS.current = !0, () => {
-          GS.current = !1
-        })), []), (0, tS.useEffect)((() => {
-          void 0 !== QS.current && void 0 === PS && DS(), QS.current = PS
-        }), [PS]), (0, tS.useEffect)((() => {
-          if (!CS) return;
-          let SS = !1;
-          return jS(!1), async function() {
+      if ((0, Xk.useEffect)((() => (Hk.current = !0, () => {
+          Hk.current = !1
+        })), []), (0, Xk.useEffect)((() => {
+          void 0 !== Kk.current && void 0 === Pk && Qk(), Kk.current = Pk
+        }), [Pk]), (0, Xk.useEffect)((() => {
+          if (!Jk) return;
+          let kk = !1;
+          return wk(!1), async function() {
             const {
-              offering: SS
-            } = await (0, qH.f)().getOfferings("superRankPage"), HS = null === SS || void 0 === SS ? void 0 : SS.packages.find((SS => null !== SS.price));
-            return void 0 === HS ? {
+              offering: kk
+            } = await (0, qF.h)().getOfferings("superRankPage"), Fk = null === kk || void 0 === kk ? void 0 : kk.packages.find((kk => null !== kk.price));
+            return void 0 === Fk ? {
               kind: "unavailable"
             } : {
               kind: "loaded",
-              pkg: HS,
-              preview: await px(HS.productId)
+              pkg: Fk,
+              preview: await By(Fk.productId)
             }
-          }().catch((SS => (console.error("Billing: loading the Super Rank subscription or its preview failed:", SS), {
+          }().catch((kk => (console.error("Billing: loading the Super Rank subscription or its preview failed:", kk), {
             kind: "loadFailed"
-          }))).then((gS => {
-            SS || qS((SS => "loadFailed" === gS.kind && (null === SS || void 0 === SS ? void 0 : SS.loadedFor) === HS ? SS : {
-              loadedFor: HS,
-              offer: gS
+          }))).then((Ik => {
+            kk || ak((kk => "loadFailed" === Ik.kind && (null === kk || void 0 === kk ? void 0 : kk.loadedFor) === Fk ? kk : {
+              loadedFor: Fk,
+              offer: Ik
             }))
           })), () => {
-            SS = !0
+            kk = !0
           }
-        }), [HS, CS, IS]), null === nS) return null;
-      if ("loaded" !== nS.kind) return (0, fS.jsx)(Bx.g, {
+        }), [Fk, Jk, Lk]), null === xk) return null;
+      if ("loaded" !== xk.kind) return (0, tk.jsx)(Yy.g, {
         notice: {
           kind: "error",
-          key: "unavailable" === nS.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
+          key: "unavailable" === xk.kind ? "payments:subscriptionUnavailable" : "payments:subscriptionLoadFailed"
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
       const {
-        pkg: hS,
-        preview: ZS
-      } = nS;
-      if ("refused" === ZS.kind) return (0, fS.jsx)(Bx.g, {
+        pkg: Vk,
+        preview: zk
+      } = xk;
+      if ("refused" === zk.kind) return (0, tk.jsx)(Yy.g, {
         notice: {
           kind: "error",
           key: "payments:subscribeRefusedGemRank",
           values: {
-            date: new Date(ZS.until).toLocaleDateString()
+            date: new Date(zk.until).toLocaleDateString()
           }
         },
         className: "StoreTempSubscribe SmallTextBold"
       });
-      const JS = (0, Qx.g)(hS.price);
-      if (aS && "refund" === ZS.kind) {
+      const Sk = (0, sy.f)(Vk.price);
+      if (jk && "refund" === zk.kind) {
         const {
-          refundedMs: HS,
-          forfeitedMs: tS,
-          premiumCurrency: bS
-        } = ZS, XS = tS + (0 === bS ? HS : 0), [xS, NS] = Mx("payments:subscribeRefundsGemRank", HS), [qS, IS] = Mx("payments:subscribeForfeitsGemRank", XS);
-        return (0, fS.jsxs)("div", {
+          refundedMs: Fk,
+          forfeitedMs: Xk,
+          premiumCurrency: Tk
+        } = zk, ik = Xk + (0 === Tk ? Fk : 0), [yk, lk] = Ay("payments:subscribeRefundsGemRank", Fk), [ak, Lk] = Ay("payments:subscribeForfeitsGemRank", ik);
+        return (0, tk.jsxs)("div", {
           className: "StoreTempSubscribe SmallTextBold",
-          children: [(0, fS.jsx)("div", {
-            children: SS("payments:subscribeEndsGemRank")
-          }), bS > 0 && (0, fS.jsx)("div", {
-            children: SS(xS, {
-              ...NS,
-              amount: bS.toLocaleString()
+          children: [(0, tk.jsx)("div", {
+            children: kk("payments:subscribeEndsGemRank")
+          }), Tk > 0 && (0, tk.jsx)("div", {
+            children: kk(yk, {
+              ...lk,
+              amount: Tk.toLocaleString()
             })
-          }), XS > 0 && (0, fS.jsx)("div", {
-            children: SS(qS, IS)
-          }), (0, fS.jsxs)("div", {
+          }), ik > 0 && (0, tk.jsx)("div", {
+            children: kk(ak, Lk)
+          }), (0, tk.jsxs)("div", {
             className: "StoreTempSubscribeButtons",
-            children: [(0, fS.jsx)(uS.j, {
+            children: [(0, tk.jsx)(qk.g, {
               onClick: () => {
-                jS(!1)
+                wk(!1)
               },
-              children: SS("general:cancel")
-            }), (0, fS.jsx)(uS.p, {
+              children: kk("general:cancel")
+            }), (0, tk.jsx)(qk.m, {
               onClick: () => {
-                wS(hS)
+                sk(Vk)
               },
-              loading: gS,
-              children: SS("payments:subscribeContinue", {
-                price: JS
+              loading: Ik,
+              children: kk("payments:subscribeContinue", {
+                price: Sk
               })
             })]
           })]
         })
       }
-      return (0, fS.jsxs)("div", {
+      return (0, tk.jsxs)("div", {
         className: "StoreTempSubscribe",
-        children: [(0, fS.jsx)(Bx.g, {
-          notice: bS,
+        children: [(0, tk.jsx)(Yy.g, {
+          notice: Tk,
           className: "SmallTextBold"
-        }), (0, fS.jsx)(Bx.b, {
+        }), (0, tk.jsx)(Yy.b, {
           className: "SmallTextBold"
-        }), (0, fS.jsx)(uS.p, {
+        }), (0, tk.jsx)(qk.m, {
           onClick: () => {
-            "refund" === ZS.kind ? jS(!0) : wS(hS)
+            "refund" === zk.kind ? wk(!0) : sk(Vk)
           },
-          disabled: void 0 !== PS,
-          loading: gS,
-          children: SS("payments:subscribeToSuperRank", {
-            price: JS
+          disabled: void 0 !== Pk,
+          loading: Ik,
+          children: kk("payments:subscribeToSuperRank", {
+            price: Sk
           })
         })]
       })
     }
-    var Tx = gS(2698);
+    var hy = Ik(2494);
 
-    function ox(SS) {
+    function ry(kk) {
       let {
-        state: HS,
-        view: gS,
-        claiming: bS,
-        onOpen: NS
-      } = SS;
+        state: Fk,
+        view: Ik,
+        claiming: Tk,
+        onOpen: lk
+      } = kk;
       const {
-        t: IS
-      } = (0, xS.F)(), kS = (0, tS.useRef)(null), aS = "ready" === gS.kind;
-      (0, Jx.b)(kS, aS);
-      const KS = (0, sH.h)(HS);
-      return (0, fS.jsxs)("div", {
-        ref: kS,
-        className: XS()("DailyDropTile", {
-          DailyDropTileReady: aS
+        t: Lk
+      } = (0, yk.y)(), Zk = (0, Xk.useRef)(null), jk = "ready" === Ik.kind;
+      (0, vy.c)(Zk, jk);
+      const ek = (0, BF.i)(Fk);
+      return (0, tk.jsxs)("div", {
+        ref: Zk,
+        className: ik()("DailyDropTile", {
+          DailyDropTileReady: jk
         }),
-        children: [aS && (0, fS.jsx)(qS.e, {
+        children: [jk && (0, tk.jsx)(ak.c, {
           top: "0.25rem",
           right: "0.25rem"
-        }), (0, fS.jsx)("div", {
+        }), (0, tk.jsx)("div", {
           className: "DailyDropTileTitle",
-          children: IS("dailyDrop:name")
-        }), (0, fS.jsxs)("div", {
+          children: Lk("dailyDrop:name")
+        }), (0, tk.jsxs)("div", {
           className: "DailyDropTileArt",
-          children: [(0, fS.jsx)(Tx.d, {
+          children: [(0, tk.jsx)(hy.b, {
             className: "DailyDropTileBlock"
-          }), (0, fS.jsxs)("div", {
+          }), (0, tk.jsxs)("div", {
             className: "DailyDropTileInfo SmallTextLight",
-            children: [(0, fS.jsx)("span", {
-              children: IS("dailyDrop:collected", {
-                count: HS.collected.length,
-                total: HS.total
+            children: [(0, tk.jsx)("span", {
+              children: Lk("dailyDrop:collected", {
+                count: Fk.collected.length,
+                total: Fk.total
               })
-            }), null !== KS && (0, fS.jsx)("span", {
+            }), null !== ek && (0, tk.jsx)("span", {
               className: "DailyDropTileOdds",
-              children: IS("dailyDrop:odds", {
-                percent: KS.toLocaleString(void 0, {
+              children: Lk("dailyDrop:odds", {
+                percent: ek.toLocaleString(void 0, {
                   maximumFractionDigits: 1
                 })
               })
             })]
           })]
-        }), "ready" === gS.kind && (0, fS.jsx)(uS.p, {
+        }), "ready" === Ik.kind && (0, tk.jsx)(qk.m, {
           className: "DailyDropTileOpen",
-          onClick: NS,
-          loading: bS,
-          children: IS("dailyDrop:open")
-        }), "waiting" === gS.kind && (0, fS.jsx)("div", {
+          onClick: lk,
+          loading: Tk,
+          children: Lk("dailyDrop:open")
+        }), "waiting" === Ik.kind && (0, tk.jsx)("div", {
           className: "DailyDropTileWait SmallTextBold",
-          children: IS("dailyDrop:nextIn", {
-            count: gS.hours
+          children: Lk("dailyDrop:nextIn", {
+            count: Ik.hours
           })
         })]
       })
     }
-    var lx = gS(2340);
-    const mx = 32;
+    var Dy = Ik(2148);
+    const My = 32;
 
-    function ex(SS) {
+    function kl(kk) {
       let {
-        worn: HS,
-        wt: gS,
-        ht: bS,
-        className: qS
-      } = SS;
+        worn: Fk,
+        VX: Ik,
+        zX: Tk,
+        className: ak
+      } = kk;
       const {
-        t: uS
-      } = (0, xS.F)(), IS = (0, tS.useRef)(null), [kS, aS] = (0, tS.useState)(null), [KS, jS] = (0, tS.useState)(!1);
-      async function GS() {
-        var SS;
-        const HS = IS.current;
-        if (!HS) return;
-        const tS = null === (SS = HS.getDevTools()) || void 0 === SS ? void 0 : SS.canvas();
-        let XS = null;
+        t: qk
+      } = (0, yk.y)(), Lk = (0, Xk.useRef)(null), [Zk, jk] = (0, Xk.useState)(null), [ek, wk] = (0, Xk.useState)(!1);
+      async function Hk() {
+        var kk;
+        const Fk = Lk.current;
+        if (!Fk) return;
+        const Xk = null === (kk = Fk.getDevTools()) || void 0 === kk ? void 0 : kk.canvas();
+        let ik = null;
         try {
-          XS = tS ? function(SS) {
-            if (0 === SS.width || 0 === SS.height) return null;
-            const HS = document.createElement("canvas");
-            HS.width = mx, HS.height = mx;
-            const gS = HS.getContext("2d", {
+          ik = Xk ? function(kk) {
+            if (0 === kk.width || 0 === kk.height) return null;
+            const Fk = document.createElement("canvas");
+            Fk.width = My, Fk.height = My;
+            const Ik = Fk.getContext("2d", {
               willReadFrequently: !0
             });
-            if (!gS) return null;
-            gS.drawImage(SS, 0, 0, mx, mx);
+            if (!Ik) return null;
+            Ik.drawImage(kk, 0, 0, My, My);
             const {
-              data: tS
-            } = gS.getImageData(0, 0, mx, mx);
-            for (let bS = 3; bS < tS.length; bS += 4)
-              if (tS[bS] > 0) return SS.toDataURL("image/png");
+              data: Xk
+            } = Ik.getImageData(0, 0, My, My);
+            for (let Tk = 3; Tk < Xk.length; Tk += 4)
+              if (Xk[Tk] > 0) return kk.toDataURL("image/png");
             return null
-          }(tS) : null
-        } catch (NS) {
-          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", NS)
+          }(Xk) : null
+        } catch (lk) {
+          console.warn("Couldn't read the character preview for the Lucky Skin Block's Before", lk)
         }
-        null === XS && console.warn("The character preview read back blank: the Lucky Skin Block's Before shows the head"), aS(null === XS ? {
+        null === ik && console.warn("The character preview read back blank: the Lucky Skin Block's Before shows the head"), jk(null === ik ? {
           kind: "head"
         } : {
           kind: "still",
-          src: XS
-        }), HS.updateCosmetic(gS, bS);
-        const xS = new Promise((SS => {
-          setTimeout(SS, 1e4)
+          src: ik
+        }), Fk.updateCosmetic(Ik, Tk);
+        const yk = new Promise((kk => {
+          setTimeout(kk, 1e4)
         }));
-        await Promise.race([HS.ensureReadyForCapture(gS), xS]).catch((SS => {
-          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", SS)
-        })), IS.current === HS && jS(!0)
+        await Promise.race([Fk.ensureReadyForCapture(Ik), yk]).catch((kk => {
+          console.error("Failed to draw the Lucky Skin Block's piece on the character preview", kk)
+        })), Lk.current === Fk && wk(!0)
       }
-      return (0, fS.jsxs)("div", {
-        className: XS()("DailyDropRevealFigures", qS),
-        children: [(0, fS.jsxs)("div", {
+      return (0, tk.jsxs)("div", {
+        className: ik()("DailyDropRevealFigures", ak),
+        children: [(0, tk.jsxs)("div", {
           className: "DailyDropRevealFigure",
-          children: [(0, fS.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            children: ["still" === (null === kS || void 0 === kS ? void 0 : kS.kind) && (0, fS.jsx)("img", {
+            children: ["still" === (null === Zk || void 0 === Zk ? void 0 : Zk.kind) && (0, tk.jsx)("img", {
               className: "DailyDropRevealBeforeStill",
-              src: kS.src,
+              src: Zk.src,
               alt: "",
               draggable: !1
-            }), "head" === (null === kS || void 0 === kS ? void 0 : kS.kind) && (0, fS.jsx)("div", {
+            }), "head" === (null === Zk || void 0 === Zk ? void 0 : Zk.kind) && (0, tk.jsx)("div", {
               className: "DailyDropRevealBeforeHead",
-              children: (0, fS.jsx)(MX.e, {
-                cosmetics: HS
+              children: (0, tk.jsx)(Yi.e, {
+                cosmetics: Fk
               })
-            }), null === kS && (0, fS.jsx)(wS.c, {})]
-          }), (0, fS.jsx)("span", {
+            }), null === Zk && (0, tk.jsx)(sk.c, {})]
+          }), (0, tk.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: uS("dailyDrop:before")
+            children: qk("dailyDrop:before")
           })]
-        }), (0, fS.jsx)(NS.d, {
+        }), (0, tk.jsx)(lk.e, {
           name: "arrow-right",
           className: "DailyDropRevealArrow"
-        }), (0, fS.jsxs)("div", {
+        }), (0, tk.jsxs)("div", {
           className: "DailyDropRevealFigure DailyDropRevealAfter",
-          children: [(0, fS.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "DailyDropRevealFigureArt",
-            children: [(0, fS.jsx)("div", {
-              className: XS()("DailyDropRevealLive", {
-                DailyDropRevealLiveDrawn: KS
+            children: [(0, tk.jsx)("div", {
+              className: ik()("DailyDropRevealLive", {
+                DailyDropRevealLiveDrawn: ek
               }),
-              children: (0, fS.jsx)(tS.Suspense, {
+              children: (0, tk.jsx)(Xk.Suspense, {
                 fallback: null,
-                children: (0, fS.jsx)(Xx.d, {
-                  ref: IS,
+                children: (0, tk.jsx)(ly.c, {
+                  ref: Lk,
                   onReady: () => {
-                    var SS, gS;
-                    null === (SS = IS.current) || void 0 === SS || SS.resetCamera(), null === (gS = IS.current) || void 0 === gS || gS.setAllCosmetics(HS)
+                    var kk, Ik;
+                    null === (kk = Lk.current) || void 0 === kk || kk.resetCamera(), null === (Ik = Lk.current) || void 0 === Ik || Ik.setAllCosmetics(Fk)
                   },
                   onDrawn: () => {
                     requestAnimationFrame((() => {
-                      GS()
+                      Hk()
                     }))
                   }
                 })
               })
-            }), !KS && (0, fS.jsx)(wS.c, {})]
-          }), (0, fS.jsx)("span", {
+            }), !ek && (0, tk.jsx)(sk.c, {})]
+          }), (0, tk.jsx)("span", {
             className: "DailyDropRevealFigureLabel SmallTextBold",
-            children: uS("dailyDrop:after")
+            children: qk("dailyDrop:after")
           })]
         })]
       })
     }
-    var rx = gS(1975);
-    const SN = "dailyDropReminderAsked_";
+    var Fl = Ik(1800);
+    const Il = "dailyDropReminderAsked_";
 
-    function HN(SS) {
-      return async function(SS) {
-        if (SS.remindersOn || (0, ZS.c)(ZS.b.get("gameState"))) return null;
-        const HS = await cS.userContextManager.getCurrentUserContext(),
-          gS = SN + HS.whamm;
-        if (null !== tg.g.getItem(gS)) return null;
-        const [tS, bS] = await Promise.all([(0, WH.g)().catch((SS => (console.error("Couldn't tell whether this device can take push notifications:", SS), null))), tN()]);
-        if (null === tS && !bS) return null;
+    function Xl(kk) {
+      return async function(kk) {
+        if (kk.remindersOn || (0, zk.f)(zk.d.get("gameState"))) return null;
+        const Fk = await Ok.userContextManager.getCurrentUserContext(),
+          Ik = Il + Fk.whamm;
+        if (null !== TI.j.getItem(Ik)) return null;
+        const [Xk, Tk] = await Promise.all([(0, NF.f)().catch((kk => (console.error("Couldn't tell whether this device can take push notifications:", kk), null))), il()]);
+        if (null === Xk && !Tk) return null;
         return {
-          askedKey: gS,
-          requester: tS
+          askedKey: Ik,
+          requester: Xk
         }
-      }(SS).catch((SS => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", SS), null)))
+      }(kk).catch((kk => (console.error("Failed to tell whether to ask about Lucky Skin Block reminders:", kk), null)))
     }
 
-    function gN(SS, HS) {
-      tg.g.setItem(SS.askedKey, !0), (0, sH.r)("daily_drop.remind", HS ? "yes" : "no"), HS && async function(SS) {
-        const HS = (0, sH.t)({
+    function Tl(kk, Fk) {
+      TI.j.setItem(kk.askedKey, !0), (0, BF.s)("daily_drop.remind", Fk ? "yes" : "no"), Fk && async function(kk) {
+        const Fk = (0, BF.u)({
             remindersOn: !0
           }),
-          gS = null === SS ? Promise.resolve() : SS(),
-          [tS, bS] = await Promise.allSettled([HS, gS]);
-        "rejected" === tS.status && console.error("Failed to turn on Lucky Skin Block reminders:", tS.reason);
-        "rejected" === bS.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", bS.reason);
-        "rejected" !== tS.status && "rejected" !== bS.status || rx.d.showMessage({
+          Ik = null === kk ? Promise.resolve() : kk(),
+          [Xk, Tk] = await Promise.allSettled([Fk, Ik]);
+        "rejected" === Xk.status && console.error("Failed to turn on Lucky Skin Block reminders:", Xk.reason);
+        "rejected" === Tk.status && console.error("Failed to ask for push notifications for Lucky Skin Block reminders:", Tk.reason);
+        "rejected" !== Xk.status && "rejected" !== Tk.status || Fl.e.showMessage({
           translationKey: "dailyDrop:remindFailed"
         })
-      }(SS.requester)
+      }(kk.requester)
     }
 
-    function tN() {
-      return (0, iH.d)().then((SS => SS.app + SS.browser + SS.msnPlay > 0), (SS => (console.error("Couldn't tell where push notifications reach this account:", SS), !0)))
+    function il() {
+      return (0, CF.c)().then((kk => kk.app + kk.browser + kk.msnPlay > 0), (kk => (console.error("Couldn't tell where push notifications reach this account:", kk), !0)))
     }
-    const bN = {
+    const yl = {
         closed: "opening",
         opening: "revealed",
         revealed: "shrinking",
@@ -7071,187 +7071,187 @@ export const modules = {
         equip: "equip",
         remind: "remind"
       },
-      XN = {
+      ll = {
         opening: 900,
         shrinking: 700
       };
 
-    function xN(SS) {
+    function al(kk) {
       let {
-        drop: HS,
-        onClose: gS
-      } = SS;
+        drop: Fk,
+        onClose: Ik
+      } = kk;
       const {
-        t: bS
-      } = (0, xS.F)(), {
-        userContext: qS
-      } = (0, KS.b)(), {
-        state: IS,
-        view: kS
-      } = (0, sH.w)(), [aS, jS] = (0, tS.useState)("closed"), [GS] = (0, tS.useState)((() => ({
-        ...qS.getPlayerCosmetics()
-      }))), [CS] = (0, tS.useState)((() => (0, sH.j)(HS, GS))), [nS, PS] = (0, tS.useState)(!1), [QS, DS] = (0, tS.useState)(!1), [wS] = (0, tS.useState)((() => null === IS ? Promise.resolve(null) : HN(IS))), [hS, JS] = (0, tS.useState)(null), OS = (0, zH.b)(), {
-        gameState: dS
-      } = (0, ZS.m)(["gameState"]);
-      async function cS() {
-        const SS = await wS;
-        OS.current && (null === SS ? gS() : (JS(SS), jS("remind")))
+        t: Tk
+      } = (0, yk.y)(), {
+        userContext: ak
+      } = (0, ek.d)(), {
+        state: Lk,
+        view: Zk
+      } = (0, BF.w)(), [jk, wk] = (0, Xk.useState)("closed"), [Hk] = (0, Xk.useState)((() => ({
+        ...ak.getPlayerCosmetics()
+      }))), [Jk] = (0, Xk.useState)((() => (0, BF.l)(Fk, Hk))), [xk, Pk] = (0, Xk.useState)(!1), [Kk, Qk] = (0, Xk.useState)(!1), [sk] = (0, Xk.useState)((() => null === Lk ? Promise.resolve(null) : Xl(Lk))), [Vk, Sk] = (0, Xk.useState)(null), vk = (0, cF.d)(), {
+        gameState: Ek
+      } = (0, zk.j)(["gameState"]);
+      async function Ok() {
+        const kk = await sk;
+        vk.current && (null === kk ? Ik() : (Sk(kk), wk("remind")))
       }
 
-      function vS(SS) {
-        null !== hS && gN(hS, SS), gS()
-      }(0, tS.useEffect)((() => {
-        const SS = XN[aS];
-        if (void 0 === SS) return;
-        const HS = setTimeout((() => {
-          jS(bN[aS])
-        }), SS);
+      function nk(kk) {
+        null !== Vk && Tl(Vk, kk), Ik()
+      }(0, Xk.useEffect)((() => {
+        const kk = ll[jk];
+        if (void 0 === kk) return;
+        const Fk = setTimeout((() => {
+          wk(yl[jk])
+        }), kk);
         return () => {
-          clearTimeout(HS)
+          clearTimeout(Fk)
         }
-      }), [aS]);
-      const ES = bS(`dailyDrop:kind_${CS.wt}`),
-        LS = IS && bS("dailyDrop:collected", {
-          count: IS.collected.length,
-          total: IS.total
+      }), [jk]);
+      const Gk = Tk(`dailyDrop:kind_${Jk.VX}`),
+        pk = Lk && Tk("dailyDrop:collected", {
+          count: Lk.collected.length,
+          total: Lk.total
         }),
-        YS = "revealed" === aS || "shrinking" === aS,
-        AS = "equip" !== aS && "remind" !== aS;
-      return (0, fS.jsx)(Et.c, {
+        uk = "revealed" === jk || "shrinking" === jk,
+        bk = "equip" !== jk && "remind" !== jk;
+      return (0, tk.jsx)(nX.c, {
         className: "DailyDropRevealScreen",
-        close: "remind" === aS ? () => {
-          vS(!1)
-        } : gS,
+        close: "remind" === jk ? () => {
+          nk(!1)
+        } : Ik,
         togglePointerLock: !1,
         closeOnPressBackground: !1,
-        children: (0, fS.jsxs)("div", {
-          className: XS()("DailyDropReveal", {
-            DailyDropRevealOpening: "opening" === aS,
-            DailyDropRevealShrinking: "shrinking" === aS,
-            DailyDropRevealFiguresShown: "shrinking" === aS || "equip" === aS || "remind" === aS
+        children: (0, tk.jsxs)("div", {
+          className: ik()("DailyDropReveal", {
+            DailyDropRevealOpening: "opening" === jk,
+            DailyDropRevealShrinking: "shrinking" === jk,
+            DailyDropRevealFiguresShown: "shrinking" === jk || "equip" === jk || "remind" === jk
           }),
-          children: [(0, fS.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "DailyDropRevealStage",
-            children: [(0, fS.jsx)(ex, {
+            children: [(0, tk.jsx)(kl, {
               className: "DailyDropRevealStageFigures",
-              worn: GS,
-              wt: CS.wt,
-              ht: CS.ht
-            }), ("closed" === aS || "opening" === aS) && (0, fS.jsx)(Tx.d, {
+              worn: Hk,
+              VX: Jk.VX,
+              zX: Jk.zX
+            }), ("closed" === jk || "opening" === jk) && (0, tk.jsx)(hy.b, {
               className: "DailyDropRevealBlock",
-              open: "opening" === aS
-            }), YS && (0, fS.jsx)("div", {
+              open: "opening" === jk
+            }), uk && (0, tk.jsx)("div", {
               className: "DailyDropRevealPiece",
-              children: (0, fS.jsx)("img", {
-                src: `/textures/charSkins/previews/${(0,lx.j)(CS.wt,CS.ht).previewTex}.png`,
-                alt: ES,
+              children: (0, tk.jsx)("img", {
+                src: `/textures/charSkins/previews/${(0,Dy.k)(Jk.VX,Jk.zX).previewTex}.png`,
+                alt: Gk,
                 draggable: !1
               })
             })]
-          }), AS && (0, fS.jsxs)(fS.Fragment, {
-            children: [(0, fS.jsxs)("div", {
+          }), bk && (0, tk.jsxs)(tk.Fragment, {
+            children: [(0, tk.jsxs)("div", {
               className: "DailyDropRevealCaption",
-              children: [(0, fS.jsx)("div", {
+              children: [(0, tk.jsx)("div", {
                 className: "DailyDropRevealTitle SmallTextBold",
-                children: YS ? ES : bS("dailyDrop:name")
-              }), "closed" === aS && (0, fS.jsx)("div", {
+                children: uk ? Gk : Tk("dailyDrop:name")
+              }), "closed" === jk && (0, tk.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: bS("dailyDrop:tapToOpen")
-              }), "revealed" === aS && (0, fS.jsx)("div", {
+                children: Tk("dailyDrop:tapToOpen")
+              }), "revealed" === jk && (0, tk.jsx)("div", {
                 className: "DailyDropRevealHint SmallTextLight",
-                children: bS("dailyDrop:tapToContinue")
+                children: Tk("dailyDrop:tapToContinue")
               })]
-            }), (0, fS.jsx)("button", {
+            }), (0, tk.jsx)("button", {
               type: "button",
               className: "DailyDropRevealTap",
               "data-pad-default-focus": !0,
-              "aria-label": bS("closed" === aS ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
+              "aria-label": Tk("closed" === jk ? "dailyDrop:tapToOpen" : "dailyDrop:tapToContinue"),
               onClick: () => {
-                jS(bN[aS])
+                wk(yl[jk])
               }
             })]
-          }), "equip" === aS && (0, fS.jsxs)("div", {
+          }), "equip" === jk && (0, tk.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, fS.jsx)("div", {
+            children: [(0, tk.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: ES
-            }), (0, fS.jsx)("div", {
+              children: Gk
+            }), (0, tk.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: bS("dailyDrop:equipQuestion")
-            }), (0, fS.jsxs)("div", {
+              children: Tk("dailyDrop:equipQuestion")
+            }), (0, tk.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, fS.jsx)(uS.g, {
+              children: [(0, tk.jsx)(qk.d, {
                 className: "DailyDropRevealButton",
-                disabled: nS,
+                disabled: xk,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  (0, sH.r)("daily_drop.not_now", HS), cS()
+                  (0, BF.s)("daily_drop.not_now", Fk), Ok()
                 },
-                children: bS("dailyDrop:notNow")
-              }), (0, fS.jsx)(uS.g, {
+                children: Tk("dailyDrop:notNow")
+              }), (0, tk.jsx)(qk.d, {
                 className: "DailyDropRevealButton",
-                loading: nS,
+                loading: xk,
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
                   !async function() {
-                    (0, sH.r)("daily_drop.equip", HS), PS(!0), DS(!1);
+                    (0, BF.s)("daily_drop.equip", Fk), Pk(!0), Qk(!1);
                     try {
-                      await (0, sH.g)(qS, CS.wt, CS.ht)
-                    } catch (SS) {
-                      return console.error("Failed to equip the Lucky Skin Block's piece", SS), PS(!1), void DS(!0)
+                      await (0, BF.e)(ak, Jk.VX, Jk.zX)
+                    } catch (kk) {
+                      return console.error("Failed to equip the Lucky Skin Block's piece", kk), Pk(!1), void Qk(!0)
                     }
-                    await cS()
+                    await Ok()
                   }()
                 },
-                children: bS("dailyDrop:equip")
+                children: Tk("dailyDrop:equip")
               })]
-            }), QS && (0, fS.jsx)("div", {
+            }), Kk && (0, tk.jsx)("div", {
               className: "DailyDropRevealError SmallTextBold",
-              children: bS("dailyDrop:equipFailed")
-            }), !(0, ZS.c)(dS) && (0, fS.jsxs)("button", {
+              children: Tk("dailyDrop:equipFailed")
+            }), !(0, zk.f)(Ek) && (0, tk.jsxs)("button", {
               type: "button",
               className: "DailyDropRevealCustomise",
-              disabled: nS,
+              disabled: xk,
               onClick: () => {
-                var SS;
-                (0, sH.r)("daily_drop.customise", HS), SS = CS.wt, Hg.k.cj(Jt, SS), ZS.b.set({
-                  openEverythingMenuName: IH.q.CUSTOMISATION
-                }), gS()
+                var kk;
+                (0, BF.s)("daily_drop.customise", Fk), kk = Jk.VX, II.g.GL(SX, kk), zk.d.set({
+                  openEverythingMenuName: tF.r.CUSTOMISATION
+                }), Ik()
               },
-              children: [bS("dailyDrop:customise"), " ", (0, fS.jsx)(NS.d, {
+              children: [Tk("dailyDrop:customise"), " ", (0, tk.jsx)(lk.e, {
                 name: "arrow-right",
                 className: "DailyDropRevealCustomiseArrow"
               })]
-            }), LS && (0, fS.jsxs)("div", {
+            }), pk && (0, tk.jsxs)("div", {
               className: "DailyDropRevealProgress SmallTextLight",
-              children: [LS, "waiting" === (null === kS || void 0 === kS ? void 0 : kS.kind) && ` \xb7 ${bS("dailyDrop:nextInInline",{count:kS.hours})}`]
+              children: [pk, "waiting" === (null === Zk || void 0 === Zk ? void 0 : Zk.kind) && ` \xb7 ${Tk("dailyDrop:nextInInline",{count:Zk.hours})}`]
             })]
-          }), "remind" === aS && (0, fS.jsxs)("div", {
+          }), "remind" === jk && (0, tk.jsxs)("div", {
             className: "DailyDropRevealEquip",
-            children: [(0, fS.jsx)("div", {
+            children: [(0, tk.jsx)("div", {
               className: "DailyDropRevealQuestion SmallTextBold",
-              children: bS("dailyDrop:remindTitle")
-            }), (0, fS.jsx)("div", {
+              children: Tk("dailyDrop:remindTitle")
+            }), (0, tk.jsx)("div", {
               className: "DailyDropRevealKind SmallTextLight",
-              children: bS("dailyDrop:remindSubtitle")
-            }), (0, fS.jsxs)("div", {
+              children: Tk("dailyDrop:remindSubtitle")
+            }), (0, tk.jsxs)("div", {
               className: "DailyDropRevealButtons",
-              children: [(0, fS.jsx)(uS.g, {
+              children: [(0, tk.jsx)(qk.d, {
                 className: "DailyDropRevealButton",
                 padDefaultFocus: !0,
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  vS(!1)
+                  nk(!1)
                 },
-                children: bS("dailyDrop:remindNo")
-              }), (0, fS.jsx)(uS.g, {
+                children: Tk("dailyDrop:remindNo")
+              }), (0, tk.jsx)(qk.d, {
                 className: "DailyDropRevealButton",
                 touchPressOn: "pointerup",
                 onClick: () => {
-                  vS(!0)
+                  nk(!0)
                 },
-                children: bS("dailyDrop:remindYes")
+                children: Tk("dailyDrop:remindYes")
               })]
             })]
           })]
@@ -7259,669 +7259,669 @@ export const modules = {
       })
     }
 
-    function NN(SS, HS) {
+    function ql(kk, Fk) {
       const {
-        t: gS
-      } = (0, xS.F)(), bS = function(SS, HS) {
+        t: Ik
+      } = (0, yk.y)(), Tk = function(kk, Fk) {
         const {
-          state: gS,
-          view: bS
-        } = (0, sH.w)(), [XS, xS] = (0, tS.useState)(!1), [NS, qS] = (0, tS.useState)(!1), [uS, IS] = (0, tS.useState)(null), fS = (0, tS.useRef)(null), kS = (0, tS.useRef)(!1), aS = HS && "ready" === (null === bS || void 0 === bS ? void 0 : bS.kind);
-        (0, tS.useEffect)((() => {
-          SS ? aS && !kS.current && (kS.current = !0, (0, sH.r)("daily_drop.shown", "tile")) : kS.current = !1
-        }), [SS, aS]), (0, tS.useEffect)((() => {
-          SS || (CS(), qS(!1))
-        }), [SS]);
-        const KS = SS && null === uS && !(0, sH.o)(bS);
-        (0, tS.useEffect)((() => {
-          KS && ZS.b.set({
-            openEverythingMenuName: IH.q.CUSTOMISATION
+          state: Ik,
+          view: Tk
+        } = (0, BF.w)(), [ik, yk] = (0, Xk.useState)(!1), [lk, ak] = (0, Xk.useState)(!1), [qk, Lk] = (0, Xk.useState)(null), tk = (0, Xk.useRef)(null), Zk = (0, Xk.useRef)(!1), jk = Fk && "ready" === (null === Tk || void 0 === Tk ? void 0 : Tk.kind);
+        (0, Xk.useEffect)((() => {
+          kk ? jk && !Zk.current && (Zk.current = !0, (0, BF.s)("daily_drop.shown", "tile")) : Zk.current = !1
+        }), [kk, jk]), (0, Xk.useEffect)((() => {
+          kk || (Jk(), ak(!1))
+        }), [kk]);
+        const ek = kk && null === qk && !(0, BF.r)(Tk);
+        (0, Xk.useEffect)((() => {
+          ek && zk.d.set({
+            openEverythingMenuName: tF.r.CUSTOMISATION
           })
-        }), [KS]);
-        const jS = (0, tS.useRef)(!1),
-          GS = (0, tS.useRef)(SS);
+        }), [ek]);
+        const wk = (0, Xk.useRef)(!1),
+          Hk = (0, Xk.useRef)(kk);
 
-        function CS() {
-          null !== fS.current && (fS.current = null, IS(null))
+        function Jk() {
+          null !== tk.current && (tk.current = null, Lk(null))
         }
-        return GS.current = SS, {
-          state: gS,
-          view: bS,
-          claiming: XS,
-          claimFailed: NS,
-          reveal: uS,
+        return Hk.current = kk, {
+          state: Ik,
+          view: Tk,
+          claiming: ik,
+          claimFailed: lk,
+          reveal: qk,
           open: async function() {
-            if (!jS.current) {
-              jS.current = !0, xS(!0), qS(!1);
+            if (!wk.current) {
+              wk.current = !0, yk(!0), ak(!1);
               try {
                 const {
-                  state: SS,
-                  drop: HS
-                } = await (0, sH.d)();
-                if (null === SS || null === HS) return;
-                if (!GS.current) return;
-                (0, sH.r)("daily_drop.open", HS), fS.current = {
-                  state: SS,
-                  drop: HS
-                }, IS(fS.current)
-              } catch (SS) {
-                console.error("Failed to claim the Lucky Skin Block", SS), GS.current && qS(!0)
+                  state: kk,
+                  drop: Fk
+                } = await (0, BF.b)();
+                if (null === kk || null === Fk) return;
+                if (!Hk.current) return;
+                (0, BF.s)("daily_drop.open", Fk), tk.current = {
+                  state: kk,
+                  drop: Fk
+                }, Lk(tk.current)
+              } catch (kk) {
+                console.error("Failed to claim the Lucky Skin Block", kk), Hk.current && ak(!0)
               } finally {
-                jS.current = !1, xS(!1)
+                wk.current = !1, yk(!1)
               }
             }
           },
-          closeReveal: CS
+          closeReveal: Jk
         }
-      }(SS, HS);
+      }(kk, Fk);
       return {
-        shown: (0, sH.o)(bS.view) || null !== bS.reveal,
-        tile: bS.state && bS.view && (0, fS.jsx)(ox, {
-          state: bS.state,
-          view: bS.view,
-          claiming: bS.claiming,
-          onOpen: bS.open
+        shown: (0, BF.r)(Tk.view) || null !== Tk.reveal,
+        tile: Tk.state && Tk.view && (0, tk.jsx)(ry, {
+          state: Tk.state,
+          view: Tk.view,
+          claiming: Tk.claiming,
+          onOpen: Tk.open
         }),
-        claimFailed: bS.claimFailed && (0, fS.jsx)("div", {
+        claimFailed: Tk.claimFailed && (0, tk.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: gS("dailyDrop:claimFailed")
+          children: Ik("dailyDrop:claimFailed")
         }),
-        reveal: bS.reveal && (0, fS.jsx)(xN, {
-          drop: bS.reveal.drop,
-          onClose: bS.closeReveal
+        reveal: Tk.reveal && (0, tk.jsx)(al, {
+          drop: Tk.reveal.drop,
+          onClose: Tk.closeReveal
         })
       }
     }
 
-    function qN(SS) {
+    function Ll(kk) {
       let {
-        show: HS
-      } = SS;
-      const gS = NN(HS, HS);
-      return HS && gS.shown ? (0, fS.jsxs)("div", {
+        show: Fk
+      } = kk;
+      const Ik = ql(Fk, Fk);
+      return Fk && Ik.shown ? (0, tk.jsxs)("div", {
         className: "Store StoreDailyDropOnly",
-        children: [gS.claimFailed, gS.tile && (0, fS.jsx)("div", {
+        children: [Ik.claimFailed, Ik.tile && (0, tk.jsx)("div", {
           className: "StoreDailyDropOnlyTile",
-          children: gS.tile
-        }), gS.reveal]
+          children: Ik.tile
+        }), Ik.reveal]
       }) : null
     }
-    const uN = {
+    const tl = {
       kind: "board"
     };
-    let IN = !1;
+    let Zl = !1;
 
-    function fN(SS) {
-      return "found" === SS.status || "error" === SS.status && "store:giftRecipientLookupFailed" === SS.error ? SS.name : null
-    }(0, zS.y)(hX.prefetchBillingOfferings);
-    const kN = (0, tS.memo)((function(SS) {
-      var HS;
+    function jl(kk) {
+      return "found" === kk.status || "error" === kk.status && "store:giftRecipientLookupFailed" === kk.error ? kk.name : null
+    }(0, ck.s)(Vi.prefetchBillingOfferings);
+    const el = (0, Xk.memo)((function(kk) {
+      var Fk;
       let {
-        show: bS
-      } = SS;
+        show: Tk
+      } = kk;
       const {
-        t: NS
-      } = (0, xS.F)(), {
-        userContext: qS
-      } = (0, KS.b)(), uS = qS !== cS.NULL_USER_CONTEXT, IS = VX(qS), [kS, aS] = (0, GS.d)(), {
-        page: jS,
-        urlMode: CS,
-        goTo: nS
-      } = (0, iX.h)(), PS = function(SS) {
-        return "superRank" === SS.kind ? "superRank" : "pack" === SS.kind ? SS.pack : null
-      }(jS), {
-        openEverythingMenuName: QS,
-        gameState: DS
-      } = (0, ZS.m)(["openEverythingMenuName", "gameState"]), wS = null !== QS;
-      ! function(SS, HS) {
-        const [bS] = (0, tS.useState)(UX.g), [XS, xS] = (0, tS.useState)(!1);
-        bS && HS && !XS && xS(!0);
-        const NS = (0, Gt.o)(),
-          qS = bS && XS && SS && !NS;
-        (0, tS.useEffect)((() => {
-          if (!qS) return;
-          let SS = null,
-            HS = null,
-            tS = null;
-          const bS = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, qH.f)().purchaseUnderWay,
-            XS = () => {
-              var gS;
-              null === (gS = tS) || void 0 === gS || gS(), tS = null, null !== SS && (clearTimeout(SS), SS = null), null !== HS && (clearTimeout(HS), HS = null)
+        t: lk
+      } = (0, yk.y)(), {
+        userContext: ak
+      } = (0, ek.d)(), qk = ak !== Ok.NULL_USER_CONTEXT, Lk = Ui(ak), [Zk, jk] = (0, Hk.c)(), {
+        page: wk,
+        urlMode: Jk,
+        goTo: xk
+      } = (0, Ci.h)(), Pk = function(kk) {
+        return "superRank" === kk.kind ? "superRank" : "pack" === kk.kind ? kk.pack : null
+      }(wk), {
+        openEverythingMenuName: Kk,
+        gameState: Qk
+      } = (0, zk.j)(["openEverythingMenuName", "gameState"]), sk = null !== Kk;
+      ! function(kk, Fk) {
+        const [Tk] = (0, Xk.useState)(Wi.j), [ik, yk] = (0, Xk.useState)(!1);
+        Tk && Fk && !ik && yk(!0);
+        const lk = (0, HX.m)(),
+          ak = Tk && ik && kk && !lk;
+        (0, Xk.useEffect)((() => {
+          if (!ak) return;
+          let kk = null,
+            Fk = null,
+            Xk = null;
+          const Tk = () => !document.hasFocus() || document.activeElement instanceof HTMLIFrameElement || (0, qF.h)().purchaseUnderWay,
+            ik = () => {
+              var Ik;
+              null === (Ik = Xk) || void 0 === Ik || Ik(), Xk = null, null !== kk && (clearTimeout(kk), kk = null), null !== Fk && (clearTimeout(Fk), Fk = null)
             },
-            xS = () => {
-              (0, WX.s)(!1), (0, WX.q)(!1), XS(), SS = setTimeout((() => {
-                SS = null, tS = (0, zX.c)((() => {
-                  tS = null, bS() ? xS() : ((0, WX.s)(!0), HS = setTimeout((() => {
-                    HS = null, tS = (0, zX.c)((() => {
-                      tS = null, bS() ? xS() : (0, WX.q)(!0)
+            yk = () => {
+              (0, Ni.r)(!1), (0, Ni.o)(!1), ik(), kk = setTimeout((() => {
+                kk = null, Xk = (0, ci.b)((() => {
+                  Xk = null, Tk() ? yk() : ((0, Ni.r)(!0), Fk = setTimeout((() => {
+                    Fk = null, Xk = (0, ci.b)((() => {
+                      Xk = null, Tk() ? yk() : (0, Ni.o)(!0)
                     }))
-                  }), 3e3), Promise.resolve().then((() => gS(4781))).then((SS => {
-                    SS.startBackgroundGameSetup()
-                  }), (SS => {
-                    console.warn("Background game setup: its chunk failed to load", SS)
+                  }), 3e3), Promise.resolve().then((() => Ik(4645))).then((kk => {
+                    kk.startBackgroundGameSetup()
+                  }), (kk => {
+                    console.warn("Background game setup: its chunk failed to load", kk)
                   })))
                 }))
               }), 2e3)
             };
-          for (const gS of pX) window.addEventListener(gS, xS, {
+          for (const Ik of fi) window.addEventListener(Ik, yk, {
             capture: !0,
             passive: !0
           });
-          return xS(), () => {
-            for (const SS of pX) window.removeEventListener(SS, xS, {
+          return yk(), () => {
+            for (const kk of fi) window.removeEventListener(kk, yk, {
               capture: !0
             });
-            XS(), (0, WX.s)(!1), (0, WX.q)(!1)
+            ik(), (0, Ni.r)(!1), (0, Ni.o)(!1)
           }
-        }), [qS])
-      }(bS && wS, "pack" === jS.kind);
-      const hS = "landingPage" === DS;
-      (0, tS.useEffect)((() => {
-        wS && (0, hX.prefetchBillingOfferings)()
-      }), [wS]), (0, tS.useEffect)((() => {
-        wS && !bS && hS && (0, sX.r)()
-      }), [wS, bS, hS]);
-      const [JS, OS] = (0, tS.useState)(0), [dS, vS] = (0, tS.useState)(null), [ES, LS] = (0, tS.useState)(null), [YS, AS] = (0, tS.useState)(null), [VS, iS] = (0, tS.useState)(null), WS = (0, tS.useRef)(null), pS = (0, tS.useRef)(null), sS = (0, tS.useRef)(null), BS = (0, tS.useRef)(!1), MS = (0, zS.G)(), FS = (0, tS.useRef)(0), RS = (0, tS.useRef)(!1);
+        }), [ak])
+      }(Tk && sk, "pack" === wk.kind);
+      const Vk = "landingPage" === Qk;
+      (0, Xk.useEffect)((() => {
+        sk && (0, Vi.prefetchBillingOfferings)()
+      }), [sk]), (0, Xk.useEffect)((() => {
+        sk && !Tk && Vk && (0, Bi.w)()
+      }), [sk, Tk, Vk]);
+      const [Sk, vk] = (0, Xk.useState)(0), [Ek, nk] = (0, Xk.useState)(null), [Gk, pk] = (0, Xk.useState)(null), [uk, bk] = (0, Xk.useState)(null), [Uk, Ck] = (0, Xk.useState)(null), Nk = (0, Xk.useRef)(null), fk = (0, Xk.useRef)(null), Bk = (0, Xk.useRef)(null), dk = (0, Xk.useRef)(!1), Yk = (0, ck.A)(), Ak = (0, Xk.useRef)(0), gk = (0, Xk.useRef)(!1);
 
-      function TS() {
-        OS((SS => SS + 1))
-      }(0, tS.useEffect)((() => {
-        if (bS) {
-          if (IN = !0, (0, zS.n)(), MS && MS.seq !== FS.current) {
-            var SS;
-            FS.current = MS.seq, "loginResume" !== MS.source && (0, zS.D)();
-            const HS = (0, zS.e)(MS);
-            CS || nS(HS), iS(null !== (SS = MS.highlight) && void 0 !== SS ? SS : null), LS(null), "gift" === MS.mode && MS.giftRecipientName ? IS.choose(MS.giftRecipientName, "prefilled") : "current" !== MS.mode && IS.clear(), "gift" !== MS.mode || MS.giftRecipientName || TS(), (0, eS.reportAnalyticsClick)({
+      function mk() {
+        vk((kk => kk + 1))
+      }(0, Xk.useEffect)((() => {
+        if (Tk) {
+          if (Zl = !0, (0, ck.l)(), Yk && Yk.seq !== Ak.current) {
+            var kk;
+            Ak.current = Yk.seq, "loginResume" !== Yk.source && (0, ck.z)();
+            const Fk = (0, ck.d)(Yk);
+            Jk || xk(Fk), Ck(null !== (kk = Yk.highlight) && void 0 !== kk ? kk : null), pk(null), "gift" === Yk.mode && Yk.giftRecipientName ? Lk.choose(Yk.giftRecipientName, "prefilled") : "current" !== Yk.mode && Lk.clear(), "gift" !== Yk.mode || Yk.giftRecipientName || mk(), (0, Mk.reportAnalyticsClick)({
               id: "store.open",
-              value: MS.source
+              value: Yk.source
             })
-          } else RS.current || (0, eS.reportAnalyticsClick)({
+          } else gk.current || (0, Mk.reportAnalyticsClick)({
             id: "store.open",
             value: "menuTab"
           });
-          RS.current = !0
-        } else RS.current = !1
-      }), [bS, MS]), (0, tS.useEffect)((() => {
-        if (!VS) return;
-        const SS = setTimeout((() => {
-          iS(null)
+          gk.current = !0
+        } else gk.current = !1
+      }), [Tk, Yk]), (0, Xk.useEffect)((() => {
+        if (!Uk) return;
+        const kk = setTimeout((() => {
+          Ck(null)
         }), 4e3);
         return () => {
-          clearTimeout(SS)
+          clearTimeout(kk)
         }
-      }), [VS]), (0, tS.useLayoutEffect)((() => {
-        const SS = WS.current;
-        if (!bS || !SS) return pS.current = null, void(sS.current = null);
-        var HS;
-        if (PS) pS.current = PS, null === (HS = SS.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === HS || HS.focus();
-        else if (pS.current) {
-          const HS = sS.current;
-          null !== HS && (SS.scrollTop = HS);
-          const gS = SS.querySelector(`[data-store-item="${pS.current}"]`);
-          if (gS) {
-            const tS = gS.getBoundingClientRect(),
-              bS = SS.getBoundingClientRect();
-            gS.focus({
-              preventScroll: null !== HS && tS.bottom > bS.top && tS.top < bS.bottom
+      }), [Uk]), (0, Xk.useLayoutEffect)((() => {
+        const kk = Nk.current;
+        if (!Tk || !kk) return fk.current = null, void(Bk.current = null);
+        var Fk;
+        if (Pk) fk.current = Pk, null === (Fk = kk.querySelector(".StoreDetailBackButton, .CosmeticShopDetailBackButton")) || void 0 === Fk || Fk.focus();
+        else if (fk.current) {
+          const Fk = Bk.current;
+          null !== Fk && (kk.scrollTop = Fk);
+          const Ik = kk.querySelector(`[data-store-item="${fk.current}"]`);
+          if (Ik) {
+            const Xk = Ik.getBoundingClientRect(),
+              Tk = kk.getBoundingClientRect();
+            Ik.focus({
+              preventScroll: null !== Fk && Xk.bottom > Tk.top && Xk.top < Tk.bottom
             })
           }
-          pS.current = null
+          fk.current = null
         }
-      }), [PS, bS]), (0, tS.useEffect)((() => {
-        LS(null)
-      }), [IS.query]), (0, tS.useEffect)((() => {
-        if (!YS) return;
-        const SS = setTimeout((() => {
-          AS(null)
+      }), [Pk, Tk]), (0, Xk.useEffect)((() => {
+        pk(null)
+      }), [Lk.query]), (0, Xk.useEffect)((() => {
+        if (!uk) return;
+        const kk = setTimeout((() => {
+          bk(null)
         }), 8e3);
         return () => {
-          clearTimeout(SS)
+          clearTimeout(kk)
         }
-      }), [YS]);
-      const oS = qS.superRankInfo,
-        lS = qS.isLoggedIn() || (0, US.guestsMayBuy)(),
-        mS = qS.getOwnedCosmeticPacks(),
-        rS = (0, LX.o)(IS.query),
-        SH = (0, LX.d)({
-          mode: rS,
-          loggedIn: uS ? lS : null,
-          superRankInfo: oS,
+      }), [uk]);
+      const hk = ak.superRankInfo,
+        rk = ak.isLoggedIn() || (0, Wk.guestsMayBuy)(),
+        Dk = ak.getOwnedCosmeticPacks(),
+        kF = (0, Gi.q)(Lk.query),
+        FF = (0, Gi.h)({
+          mode: kF,
+          loggedIn: qk ? rk : null,
+          superRankInfo: hk,
           now: Date.now(),
-          ownedPacks: mS,
-          packs: wX.o,
-          recipient: IS.recipient
+          ownedPacks: Dk,
+          packs: si.s,
+          recipient: Lk.recipient
         });
-      (0, tS.useEffect)((() => {
-        if (!lS || !bS) return;
-        const SS = (0, zS.D)(),
-          HS = SS && (0, LX.l)(SS, wX.o);
-        SS && HS && ((0, eS.reportAnalyticsClick)({
+      (0, Xk.useEffect)((() => {
+        if (!rk || !Tk) return;
+        const kk = (0, ck.z)(),
+          Fk = kk && (0, Gi.o)(kk, si.s);
+        kk && Fk && ((0, Mk.reportAnalyticsClick)({
           id: "store.login_resume",
-          value: SS.item
-        }), (0, zS.r)(HS))
-      }), [lS, bS]);
-      const HH = (0, LX.q)({
-        superRankDaysLeft: SH.superRankDaysLeft,
-        openedThisSession: IN || bS,
-        seenNewItems: (0, zS.l)()
+          value: kk.item
+        }), (0, ck.m)(Fk))
+      }), [rk, Tk]);
+      const IF = (0, Gi.s)({
+        superRankDaysLeft: FF.superRankDaysLeft,
+        openedThisSession: Zl || Tk,
+        seenNewItems: (0, ck.h)()
       });
-      (0, tS.useEffect)((() => {
-        (0, zS.B)(HH)
-      }), [HH]);
-      const gH = "self" === rS,
-        tH = NN(bS, bS && gH && "board" === jS.kind);
-      if (!bS || !(0, US.purchasesAllowed)()) return null;
-      const bH = aS > kS && kS <= 700,
-        XH = !bH && aS <= 420,
-        xH = "gift" === rS ? fN(IS.recipient) : null,
-        NH = null !== dS;
+      (0, Xk.useEffect)((() => {
+        (0, ck.w)(IF)
+      }), [IF]);
+      const XF = "self" === kF,
+        TF = ql(Tk, Tk && XF && "board" === wk.kind);
+      if (!Tk || !(0, Wk.purchasesAllowed)()) return null;
+      const iF = jk > Zk && Zk <= 700,
+        yF = !iF && jk <= 420,
+        lF = "gift" === kF ? jl(Lk.recipient) : null,
+        aF = null !== Ek;
 
-      function uH(SS) {
-        (0, JX.c)(SS, "gift" === rS ? IS.query.trim() : null)
+      function LF(kk) {
+        (0, Si.e)(kk, "gift" === kF ? Lk.query.trim() : null)
       }
 
-      function IH(SS, HS) {
-        (0, eS.reportAnalyticsClick)({
+      function tF(kk, Fk) {
+        (0, Mk.reportAnalyticsClick)({
           id: "store.purchase_done",
-          value: `${HS?"gift":"self"}:${SS}`
-        }), HS && (IS.recordGift(HS.name, SS), fH(HS))
+          value: `${Fk?"gift":"self"}:${kk}`
+        }), Fk && (Lk.recordGift(Fk.name, kk), ZF(Fk))
       }
 
-      function fH(SS) {
-        ! function(SS) {
+      function ZF(kk) {
+        ! function(kk) {
           try {
-            tg.g.setItem(YX, (0, LX.w)(yX(), SS))
+            TI.j.setItem(ui, (0, Gi.z)(Ri(), kk))
           } catch {}
         }({
-          name: SS.name,
-          cosmetics: SS.cosmetics
-        }), nS(uN), AS((HS => {
-          var gS;
+          name: kk.name,
+          cosmetics: kk.cosmetics
+        }), xk(tl), bk((Fk => {
+          var Ik;
           return {
-            name: SS.name,
-            seq: (null !== (gS = null === HS || void 0 === HS ? void 0 : HS.seq) && void 0 !== gS ? gS : 0) + 1
+            name: kk.name,
+            seq: (null !== (Ik = null === Fk || void 0 === Fk ? void 0 : Fk.seq) && void 0 !== Ik ? Ik : 0) + 1
           }
         }))
       }
-      async function kH(SS) {
-        var HS, gS;
-        if (BS.current) return;
-        if (!lS) return void uH(SS);
-        LS(null), iS(null);
-        const tS = "gift" === rS ? {
-          name: fN(IS.recipient),
-          cosmetics: IS.recipientCosmetics
+      async function jF(kk) {
+        var Fk, Ik;
+        if (dk.current) return;
+        if (!rk) return void LF(kk);
+        pk(null), Ck(null);
+        const Xk = "gift" === kF ? {
+          name: jl(Lk.recipient),
+          cosmetics: Lk.recipientCosmetics
         } : null;
-        if (tS && !tS.name) return void TS();
-        const bS = "superRank" === SS ? yS.k.id : (0, yS.b)(SS);
-        BS.current = !0;
-        const XS = await (0, EX.c)(bS, null !== (HS = null === tS || void 0 === tS ? void 0 : tS.name) && void 0 !== HS ? HS : null);
-        if (BS.current = !1, !XS) return;
-        vS(SS);
-        const xS = await OX.c.purchase(bS, null !== (gS = null === tS || void 0 === tS ? void 0 : tS.name) && void 0 !== gS ? gS : null);
-        vS(null), xS ? LS(xS) : (IH(SS, tS), tS || (await (0, dX.flushClientAnalyticsEvents)(), (0, ZX.refreshWithoutConfirmation)("superRank" === SS ? "/super-rank-welcome" : `/pack-welcome/${SS}`)))
+        if (Xk && !Xk.name) return void mk();
+        const Tk = "superRank" === kk ? Rk.l.id : (0, Rk.e)(kk);
+        dk.current = !0;
+        const ik = await (0, ni.d)(Tk, null !== (Fk = null === Xk || void 0 === Xk ? void 0 : Xk.name) && void 0 !== Fk ? Fk : null);
+        if (dk.current = !1, !ik) return;
+        nk(kk);
+        const yk = await oi.c.purchase(Tk, null !== (Ik = null === Xk || void 0 === Xk ? void 0 : Xk.name) && void 0 !== Ik ? Ik : null);
+        nk(null), yk ? pk(yk) : (tF(kk, Xk), Xk || (await (0, vi.flushClientAnalyticsEvents)(), (0, zi.refreshWithoutConfirmation)("superRank" === kk ? "/super-rank-welcome" : `/pack-welcome/${kk}`)))
       }
-      const aH = XS()("Store", {
-        StoreGift: "gift" === rS,
-        StorePortrait: bH,
-        StoreCompact: XH
+      const eF = ik()("Store", {
+        StoreGift: "gift" === kF,
+        StorePortrait: iF,
+        StoreCompact: yF
       });
-      if ("pack" === jS.kind) {
-        const SS = jS.pack,
-          HS = SH.packs.find((HS => HS.pack === SS));
-        return (0, fS.jsx)("div", {
-          ref: WS,
+      if ("pack" === wk.kind) {
+        const kk = wk.pack,
+          Fk = FF.packs.find((Fk => Fk.pack === kk));
+        return (0, tk.jsx)("div", {
+          ref: Nk,
           className: "CosmeticShopContainer",
-          children: (0, fS.jsx)(vX.d, {
-            pack: SS,
+          children: (0, tk.jsx)(Oi.g, {
+            pack: kk,
             onBack: () => {
-              nS(uN)
+              xk(tl)
             },
-            onPurchased: HS => {
-              IH(SS, HS ? {
-                name: HS,
+            onPurchased: Fk => {
+              tF(kk, Fk ? {
+                name: Fk,
                 cosmetics: null
               } : null)
             },
-            giftCta: "gift" === rS && xH && HS && (0, fS.jsxs)(fS.Fragment, {
-              children: [(0, fS.jsx)(Kx, {
-                state: HS.state,
-                item: SS,
-                price: (KH = SS, "superRank" === KH ? yS.k.price : (0, yS.e)(KH)),
-                busy: NH,
+            giftCta: "gift" === kF && lF && Fk && (0, tk.jsxs)(tk.Fragment, {
+              children: [(0, tk.jsx)(Hy, {
+                state: Fk.state,
+                item: kk,
+                price: (wF = kk, "superRank" === wF ? Rk.l.price : (0, Rk.g)(wF)),
+                busy: aF,
                 onAct: () => {
-                  kH(SS)
+                  jF(kk)
                 },
                 onNeedRecipient: () => {
-                  nS(uN), TS()
+                  xk(tl), mk()
                 },
                 onLogin: () => {
-                  uH(SS)
+                  LF(kk)
                 },
-                highlight: VS === SS
-              }), ES && (0, fS.jsx)("span", {
+                highlight: Uk === kk
+              }), Gk && (0, tk.jsx)("span", {
                 className: "CosmeticShopGiftError SmallTextBold",
-                children: NS(ES)
+                children: lk(Gk)
               })]
             }),
-            ownedPacks: mS,
-            startAsGift: "gift" === rS,
-            initialGiftRecipient: "gift" === rS ? null !== xH && void 0 !== xH ? xH : IS.query.trim() : "",
-            highlightCta: VS === SS
-          }, SS)
+            ownedPacks: Dk,
+            startAsGift: "gift" === kF,
+            initialGiftRecipient: "gift" === kF ? null !== lF && void 0 !== lF ? lF : Lk.query.trim() : "",
+            highlightCta: Uk === kk
+          }, kk)
         })
       }
-      var KH;
-      return "superRank" === jS.kind ? (0, fS.jsx)("div", {
-        ref: WS,
-        className: XS()(aH, "StoreDetailView"),
-        children: (0, fS.jsx)(Wx, {
-          state: SH.superRank.state,
-          mode: rS,
-          giftName: xH,
-          busy: NH,
-          highlight: "superRank" === VS,
-          purchaseError: ES,
+      var wF;
+      return "superRank" === wk.kind ? (0, tk.jsx)("div", {
+        ref: Nk,
+        className: ik()(eF, "StoreDetailView"),
+        children: (0, tk.jsx)(cy, {
+          state: FF.superRank.state,
+          mode: kF,
+          giftName: lF,
+          busy: aF,
+          highlight: "superRank" === Uk,
+          purchaseError: Gk,
           onBack: () => {
-            nS(uN)
+            xk(tl)
           },
           onChooseRecipient: () => {
-            nS(uN), TS()
+            xk(tl), mk()
           },
           onAct: () => {
-            kH("superRank")
+            jF("superRank")
           },
           onLogin: () => {
-            uH("superRank")
+            LF("superRank")
           }
         })
-      }) : (0, fS.jsxs)("div", {
-        ref: WS,
-        className: aH,
-        onScroll: SS => {
-          sS.current = SS.currentTarget.scrollTop
+      }) : (0, tk.jsxs)("div", {
+        ref: Nk,
+        className: eF,
+        onScroll: kk => {
+          Bk.current = kk.currentTarget.scrollTop
         },
-        children: [(0, fS.jsx)("div", {
+        children: [(0, tk.jsx)("div", {
           className: "StoreTopRow",
-          children: (0, fS.jsx)(lX, {
-            selfName: uS ? qS.getPlayerName() : "",
-            giftRecipient: IS,
-            suggestionsVersion: null !== (HS = null === YS || void 0 === YS ? void 0 : YS.seq) && void 0 !== HS ? HS : 0,
-            pulseSignal: JS,
-            disabled: NH || !uS
+          children: (0, tk.jsx)(Di, {
+            selfName: qk ? ak.getPlayerName() : "",
+            giftRecipient: Lk,
+            suggestionsVersion: null !== (Fk = null === uk || void 0 === uk ? void 0 : uk.seq) && void 0 !== Fk ? Fk : 0,
+            pulseSignal: Sk,
+            disabled: aF || !qk
           })
-        }), YS && (0, fS.jsxs)("div", {
+        }), uk && (0, tk.jsxs)("div", {
           className: "StoreNotice StoreNoticeGiftSent",
           onClick: () => {
-            AS(null)
+            bk(null)
           },
-          children: [(0, fS.jsx)(cX.d, {
-            showSignal: YS.seq
-          }), LX.b, " ", NS("store:giftSent", {
-            name: YS.name
+          children: [(0, tk.jsx)(Ei.d, {
+            showSignal: uk.seq
+          }), Gi.e, " ", lk("store:giftSent", {
+            name: uk.name
           })]
-        }, YS.seq), !YS && ES && (0, fS.jsx)("div", {
+        }, uk.seq), !uk && Gk && (0, tk.jsx)("div", {
           className: "StoreNotice StoreNoticeError",
-          children: NS(ES)
-        }), gH && tH.claimFailed, (0, fS.jsx)(ix, {
-          layout: SH,
-          mountAtOnce: null !== pS.current,
-          bundleGift: "gift" === rS ? {
-            recipientName: xH,
-            lookingUp: "pending" === IS.recipient.status,
-            busy: NH,
-            onNeedRecipient: TS,
-            onSent: SS => {
-              (0, eS.reportAnalyticsClick)({
+          children: lk(Gk)
+        }), XF && TF.claimFailed, (0, tk.jsx)(Ny, {
+          layout: FF,
+          mountAtOnce: null !== fk.current,
+          bundleGift: "gift" === kF ? {
+            recipientName: lF,
+            lookingUp: "pending" === Lk.recipient.status,
+            busy: aF,
+            onNeedRecipient: mk,
+            onSent: kk => {
+              (0, Mk.reportAnalyticsClick)({
                 id: "store.purchase_done",
                 value: "gift:superGems"
-              }), fH({
-                name: SS,
-                cosmetics: IS.recipientCosmetics
+              }), ZF({
+                name: kk,
+                cosmetics: Lk.recipientCosmetics
               })
             }
           } : null,
-          superRankTotalDays: (0, LX.t)(oS),
-          busy: NH,
-          highlightItem: VS,
-          onOpen: function(SS) {
-            (0, eS.reportAnalyticsClick)({
+          superRankTotalDays: (0, Gi.u)(hk),
+          busy: aF,
+          highlightItem: Uk,
+          onOpen: function(kk) {
+            (0, Mk.reportAnalyticsClick)({
               id: "store.item_open",
-              value: SS
-            }), nS((0, zS.h)(SS))
+              value: kk
+            }), xk((0, ck.g)(kk))
           },
-          onAct: kH,
-          onNeedRecipient: TS,
-          onLogin: uH,
-          dailyDropTile: gH && tH.tile
-        }), "gift" !== rS && (0, fS.jsx)(Fx, {}), tH.reveal]
+          onAct: jF,
+          onNeedRecipient: mk,
+          onLogin: LF,
+          dailyDropTile: XF && TF.tile
+        }), "gift" !== kF && (0, tk.jsx)(gy, {}), TF.reveal]
       })
     }));
-    var aN = gS(2822),
-      KN = gS(9035),
-      jN = gS(8866),
-      GN = gS(2884),
-      CN = gS(2717),
-      nN = gS(2767),
-      PN = gS(2781),
-      QN = gS(2789),
-      DN = gS(2878),
-      wN = gS(2861),
-      hN = gS(2465),
-      ZN = gS(2498),
-      JN = gS(2487),
-      ON = gS(2149),
-      dN = gS(2798),
-      cN = gS(2505);
+    var wl = Ik(2609),
+      Hl = Ik(8822),
+      Jl = Ik(8637),
+      xl = Ik(2672),
+      Pl = Ik(2513),
+      Kl = Ik(2564),
+      Ql = Ik(2578),
+      sl = Ik(2582),
+      Vl = Ik(2659),
+      zl = Ik(2641),
+      Sl = Ik(2274),
+      ol = Ik(2316),
+      vl = Ik(2302),
+      El = Ik(1961),
+      Ol = Ik(2584),
+      nl = Ik(2324);
 
-    function vN(SS) {
+    function Gl(kk) {
       let {
-        show: HS
-      } = SS;
-      return HS ? (0, fS.jsx)(EN, {}) : null
+        show: Fk
+      } = kk;
+      return Fk ? (0, tk.jsx)(pl, {}) : null
     }
 
-    function EN() {
+    function pl() {
       const {
-        t: SS
-      } = (0, xS.F)(), {
-        followsLeader: HS
-      } = (0, CN.i)(), {
-        loading: gS,
-        friends: bS,
-        requests: qS,
-        invites: IS
-      } = (0, sS.n)(), {
-        userContext: kS
-      } = (0, KS.b)(), [aS, jS] = (0, tS.useState)(cN.i);
-      (0, tS.useEffect)((() => {
-        (0, cN.e)()
+        t: kk
+      } = (0, yk.y)(), {
+        followsLeader: Fk
+      } = (0, Pl.e)(), {
+        loading: Ik,
+        friends: Tk,
+        requests: ak,
+        invites: Lk
+      } = (0, Bk.j)(), {
+        userContext: Zk
+      } = (0, ek.d)(), [jk, wk] = (0, Xk.useState)(nl.j);
+      (0, Xk.useEffect)((() => {
+        (0, nl.b)()
       }), []);
-      const GS = qS.map((SS => SS.name)),
+      const Hk = ak.map((kk => kk.name)),
         {
-          state: CS,
-          recentRequesters: nS
-        } = (0, wN.m)(),
-        PS = new Map([...("loaded" === CS.status ? CS.recentPlayers : []).map((SS => [SS.preview.name, SS])), ...nS.map((SS => [SS.name, SS]))]),
-        QS = (0, tS.useRef)(null),
-        [hS, ZS] = (0, tS.useState)(""),
-        [JS, OS] = (0, tS.useState)("Enter"),
-        [dS, cS] = (0, tS.useState)(null);
+          state: Jk,
+          recentRequesters: xk
+        } = (0, zl.l)(),
+        Pk = new Map([...("loaded" === Jk.status ? Jk.recentPlayers : []).map((kk => [kk.preview.name, kk])), ...xk.map((kk => [kk.name, kk]))]),
+        Kk = (0, Xk.useRef)(null),
+        [Vk, zk] = (0, Xk.useState)(""),
+        [Sk, vk] = (0, Xk.useState)("Enter"),
+        [Ek, Ok] = (0, Xk.useState)(null);
 
-      function vS() {
-        hS && (OS("Loading"), (0, JN.j)(hS, "social_menu").then((SS => {
-          if (QS.current) switch (SS.kind) {
+      function nk() {
+        Vk && (vk("Loading"), (0, vl.g)(Vk, "social_menu").then((kk => {
+          if (Kk.current) switch (kk.kind) {
             case "sent":
-              OS("Success");
+              vk("Success");
               break;
             case "becameFriends":
-              OS("BecameFriends");
+              vk("BecameFriends");
               break;
             case "failed":
-              cS(SS.message), OS("Error")
+              Ok(kk.message), vk("Error")
           }
         })))
       }
-      return (0, tS.useEffect)((() => {
-        if ("Enter" === JS || "Loading" === JS) return;
-        const SS = setTimeout((() => {
-          QS.current.value = "", ZS(""), OS("Enter")
-        }), "Success" === JS ? 1e3 : 4e3);
+      return (0, Xk.useEffect)((() => {
+        if ("Enter" === Sk || "Loading" === Sk) return;
+        const kk = setTimeout((() => {
+          Kk.current.value = "", zk(""), vk("Enter")
+        }), "Success" === Sk ? 1e3 : 4e3);
         return () => {
-          clearTimeout(SS)
+          clearTimeout(kk)
         }
-      }), [JS]), (0, fS.jsx)("div", {
+      }), [Sk]), (0, tk.jsx)("div", {
         className: "SocialMenu",
-        children: (0, fS.jsxs)("div", {
+        children: (0, tk.jsxs)("div", {
           className: "SocialMenuInner",
-          children: [(0, fS.jsxs)("div", {
+          children: [(0, tk.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, fS.jsxs)("div", {
+            children: [(0, tk.jsxs)("div", {
               className: "SocialMenuBox SocialMenuAddFriend",
-              children: [(0, fS.jsx)(QN.c, {
-                label: SS("socialBar:addFriend")
-              }), (0, fS.jsxs)("div", {
+              children: [(0, tk.jsx)(sl.b, {
+                label: kk("socialBar:addFriend")
+              }), (0, tk.jsxs)("div", {
                 className: "AddFriendBody",
-                children: [(0, fS.jsxs)("div", {
-                  className: XS()("AddFriendBodyOverlay", {
-                    [`AddFriendBodyOverlay${JS}`]: !0
+                children: [(0, tk.jsxs)("div", {
+                  className: ik()("AddFriendBodyOverlay", {
+                    [`AddFriendBodyOverlay${Sk}`]: !0
                   }),
-                  children: ["Loading" === JS && (0, fS.jsx)(wS.c, {}), "Success" === JS && (0, fS.jsx)(NS.d, {
+                  children: ["Loading" === Sk && (0, tk.jsx)(sk.c, {}), "Success" === Sk && (0, tk.jsx)(lk.e, {
                     name: "check"
-                  }), "BecameFriends" === JS && (0, fS.jsx)(fS.Fragment, {
-                    children: SS("socialBar:nowFriends", {
-                      playerName: hS
+                  }), "BecameFriends" === Sk && (0, tk.jsx)(tk.Fragment, {
+                    children: kk("socialBar:nowFriends", {
+                      playerName: Vk
                     })
-                  }), "Error" === JS && dS && (0, fS.jsx)(fS.Fragment, {
-                    children: SS(dS.translationKey, dS.params)
+                  }), "Error" === Sk && Ek && (0, tk.jsx)(tk.Fragment, {
+                    children: kk(Ek.translationKey, Ek.params)
                   })]
-                }), (0, fS.jsxs)("div", {
+                }), (0, tk.jsxs)("div", {
                   className: "PlayerSearch",
-                  children: [(0, fS.jsx)(DS.e, {
+                  children: [(0, tk.jsx)(Qk.c, {
                     className: "PlayerSearchInput",
-                    placeholderText: SS("socialBar:enterPlayerName"),
-                    domRef: QS,
-                    onValueChange: SS => {
-                      ZS((0, YS.l)(SS)), QS.current.value = (0, YS.l)(SS)
+                    placeholderText: kk("socialBar:enterPlayerName"),
+                    domRef: Kk,
+                    onValueChange: kk => {
+                      zk((0, uk.r)(kk)), Kk.current.value = (0, uk.r)(kk)
                     },
                     onEnter: () => {
-                      hS && (0, eS.reportAnalyticsClick)({
+                      Vk && (0, Mk.reportAnalyticsClick)({
                         id: "social.add_friend",
                         value: "social_menu"
-                      }), vS()
+                      }), nk()
                     }
-                  }), (0, fS.jsxs)(uS.g, {
+                  }), (0, tk.jsxs)(qk.d, {
                     className: "PlayerSearchInputButton SmallTextLight",
                     onClick: () => {
-                      vS()
+                      nk()
                     },
                     analyticsClick: {
                       id: "social.add_friend",
                       value: "social_menu"
                     },
-                    children: [(0, fS.jsx)(NS.d, {
+                    children: [(0, tk.jsx)(lk.e, {
                       name: "user-plus"
-                    }), " ", SS("socialBar:sendRequest")]
+                    }), " ", kk("socialBar:sendRequest")]
                   })]
                 })]
-              }), (0, fS.jsx)(dN.d, {
+              }), (0, tk.jsx)(Ol.c, {
                 surface: "social_menu",
                 prefetchOnMount: !0
               })]
-            }), IS.length > 0 && (0, fS.jsxs)("div", {
+            }), Lk.length > 0 && (0, tk.jsxs)("div", {
               className: "SocialMenuBox SocialMenuInvites",
-              children: [(0, fS.jsx)(QN.c, {
-                label: SS("socialBar:invites"),
-                meta: IS.length
-              }), IS.map((HS => (0, fS.jsxs)("div", {
+              children: [(0, tk.jsx)(sl.b, {
+                label: kk("socialBar:invites"),
+                meta: Lk.length
+              }), Lk.map((Fk => (0, tk.jsxs)("div", {
                 className: "SocialMenuInvite",
-                children: [(0, fS.jsx)("div", {
+                children: [(0, tk.jsx)("div", {
                   className: "SocialMenuInviteIcon",
-                  children: (0, fS.jsx)(hN.b, {
-                    invite: HS
+                  children: (0, tk.jsx)(Sl.d, {
+                    invite: Fk
                   })
-                }), (0, fS.jsx)("div", {
+                }), (0, tk.jsx)("div", {
                   className: "SocialMenuInviteText",
-                  children: (0, fS.jsx)(hN.e, {
-                    invite: HS
+                  children: (0, tk.jsx)(Sl.f, {
+                    invite: Fk
                   })
-                }), (0, fS.jsx)(uS.p, {
+                }), (0, tk.jsx)(qk.m, {
                   className: "SocialMenuInviteJoin SmallTextLight",
                   onClick: () => {
-                    (0, ZN.f)(HS)
+                    (0, ol.h)(Fk)
                   },
                   analyticsClick: {
                     id: "social.accept_invite",
-                    value: `social_menu:${HS.destination.kind}`
+                    value: `social_menu:${Fk.destination.kind}`
                   },
-                  children: SS("general:join")
-                }), (0, fS.jsx)(oS.h, {
-                  tooltipInner: (0, fS.jsx)(fS.Fragment, {
-                    children: SS("general:decline")
+                  children: kk("general:join")
+                }), (0, tk.jsx)(hk.g, {
+                  tooltipInner: (0, tk.jsx)(tk.Fragment, {
+                    children: kk("general:decline")
                   }),
                   delayShow: 0,
-                  children: (0, fS.jsx)(uS.j, {
+                  children: (0, tk.jsx)(qk.g, {
                     className: "SocialMenuInviteDecline",
-                    padDefaultFocus: "invite" === (null === aS || void 0 === aS ? void 0 : aS.kind) && aS.inviteId === HS.id,
+                    padDefaultFocus: "invite" === (null === jk || void 0 === jk ? void 0 : jk.kind) && jk.inviteId === Fk.id,
                     onClick: () => {
-                      sS.d.declineInvite(HS.id)
+                      Bk.c.declineInvite(Fk.id)
                     },
                     analyticsClick: {
                       id: "social.decline_invite",
-                      value: `social_menu:${HS.destination.kind}`
+                      value: `social_menu:${Fk.destination.kind}`
                     },
-                    children: (0, fS.jsx)(NS.d, {
+                    children: (0, tk.jsx)(lk.e, {
                       name: "xmark"
                     })
                   })
                 })]
-              }, HS.id)))]
-            }), (0, fS.jsxs)("div", {
-              className: XS()("SocialMenuBox SocialMenuRequests", {
-                SocialMenuBoxEmpty: !gS && 0 === qS.length
+              }, Fk.id)))]
+            }), (0, tk.jsxs)("div", {
+              className: ik()("SocialMenuBox SocialMenuRequests", {
+                SocialMenuBoxEmpty: !Ik && 0 === ak.length
               }),
-              children: [(0, fS.jsx)(QN.c, {
-                label: (0, fS.jsxs)(fS.Fragment, {
-                  children: [(0, fS.jsx)(NS.d, {
-                    name: ON.e
-                  }), " ", SS("socialBar:requests")]
+              children: [(0, tk.jsx)(sl.b, {
+                label: (0, tk.jsxs)(tk.Fragment, {
+                  children: [(0, tk.jsx)(lk.e, {
+                    name: El.h
+                  }), " ", kk("socialBar:requests")]
                 }),
-                meta: (0, fS.jsxs)(fS.Fragment, {
-                  children: [qS.length, qS.length === lS.s && (0, fS.jsx)("span", {
+                meta: (0, tk.jsxs)(tk.Fragment, {
+                  children: [ak.length, ak.length === rk.o && (0, tk.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: SS("socialBar:limitReached")
+                    children: kk("socialBar:limitReached")
                   })]
                 })
-              }), gS && (0, fS.jsx)("div", {
+              }), Ik && (0, tk.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, fS.jsx)(wS.c, {})
-              }), !gS && 0 === qS.length && (0, fS.jsx)("div", {
+                children: (0, tk.jsx)(sk.c, {})
+              }), !Ik && 0 === ak.length && (0, tk.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: SS("socialBar:noFriendRequests")
-              }), !gS && qS.length > 0 && (0, fS.jsx)("div", {
+                children: kk("socialBar:noFriendRequests")
+              }), !Ik && ak.length > 0 && (0, tk.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, fS.jsx)(Ob.d, {
+                children: (0, tk.jsx)(oT.b, {
                   lazyLoadedClassName: "SocialMenuRequestsLazy",
-                  observerUpdateDeps: [qS],
-                  children: qS.map(((HS, gS) => {
-                    const tS = PS.get(HS.name);
-                    return (0, fS.jsxs)(PN.h, {
-                      playerSocialPreview: HS,
-                      zIndex: qS.length - gS,
-                      padDefaultFocus: (0, cN.h)(aS, HS.name, gS),
-                      status: tS && (0, fS.jsx)(DN.b, {
-                        gameNameWithVariation: tS.gameNameWithVariation,
-                        isPrivateLobby: tS.isPrivateLobby
+                  observerUpdateDeps: [ak],
+                  children: ak.map(((Fk, Ik) => {
+                    const Xk = Pk.get(Fk.name);
+                    return (0, tk.jsxs)(Ql.e, {
+                      playerSocialPreview: Fk,
+                      zIndex: ak.length - Ik,
+                      padDefaultFocus: (0, nl.g)(jk, Fk.name, Ik),
+                      status: Xk && (0, tk.jsx)(Vl.d, {
+                        gameNameWithVariation: Xk.gameNameWithVariation,
+                        isPrivateLobby: Xk.isPrivateLobby
                       }),
-                      children: [(0, fS.jsx)(oS.h, {
-                        tooltipInner: (0, fS.jsx)(fS.Fragment, {
-                          children: SS("general:accept")
+                      children: [(0, tk.jsx)(hk.g, {
+                        tooltipInner: (0, tk.jsx)(tk.Fragment, {
+                          children: kk("general:accept")
                         }),
                         delayShow: 0,
-                        children: (0, fS.jsx)(uS.g, {
+                        children: (0, tk.jsx)(qk.d, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            jS((0, cN.f)(GS, gS)), (0, JN.g)(HS.name, !0, {
+                            wk((0, nl.c)(Hk, Ik)), (0, vl.f)(Fk.name, !0, {
                               source: "social_menu",
                               announceFriend: !1
                             })
@@ -7930,19 +7930,19 @@ export const modules = {
                             id: "social.accept_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, fS.jsx)(NS.d, {
+                          children: (0, tk.jsx)(lk.e, {
                             name: "check"
                           })
                         })
-                      }), (0, fS.jsx)(oS.h, {
-                        tooltipInner: (0, fS.jsx)(fS.Fragment, {
-                          children: SS("general:decline")
+                      }), (0, tk.jsx)(hk.g, {
+                        tooltipInner: (0, tk.jsx)(tk.Fragment, {
+                          children: kk("general:decline")
                         }),
                         delayShow: 0,
-                        children: (0, fS.jsx)(uS.j, {
+                        children: (0, tk.jsx)(qk.g, {
                           className: "FriendRequestButton",
                           onClick: () => {
-                            jS((0, cN.f)(GS, gS)), (0, JN.g)(HS.name, !1, {
+                            wk((0, nl.c)(Hk, Ik)), (0, vl.f)(Fk.name, !1, {
                               source: "social_menu"
                             })
                           },
@@ -7950,62 +7950,62 @@ export const modules = {
                             id: "social.decline_friend_request",
                             value: "social_menu"
                           },
-                          children: (0, fS.jsx)(NS.d, {
+                          children: (0, tk.jsx)(lk.e, {
                             name: "xmark"
                           })
                         })
                       })]
-                    }, `${HS.name}_${HS.isError}`)
+                    }, `${Fk.name}_${Fk.isError}`)
                   }))
                 })
               })]
-            }), (0, fS.jsx)(DN.h, {})]
-          }), (0, fS.jsxs)("div", {
+            }), (0, tk.jsx)(Vl.h, {})]
+          }), (0, tk.jsxs)("div", {
             className: "SocialMenuColumn",
-            children: [(0, fS.jsxs)("div", {
+            children: [(0, tk.jsxs)("div", {
               className: "SocialMenuBox SocialMenuParty",
-              children: [(0, fS.jsx)(QN.c, {
-                label: SS("socialBar:party")
-              }), (0, fS.jsx)(nN.d, {})]
-            }), (0, fS.jsxs)("div", {
+              children: [(0, tk.jsx)(sl.b, {
+                label: kk("socialBar:party")
+              }), (0, tk.jsx)(Kl.b, {})]
+            }), (0, tk.jsxs)("div", {
               className: "SocialMenuBox SocialMenuFriends",
-              children: [(0, fS.jsx)(QN.c, {
-                label: (0, fS.jsxs)(fS.Fragment, {
-                  children: [(0, fS.jsx)(NS.d, {
-                    name: ON.c
-                  }), " ", SS("socialBar:friends")]
+              children: [(0, tk.jsx)(sl.b, {
+                label: (0, tk.jsxs)(tk.Fragment, {
+                  children: [(0, tk.jsx)(lk.e, {
+                    name: El.e
+                  }), " ", kk("socialBar:friends")]
                 }),
-                meta: (0, fS.jsxs)(fS.Fragment, {
-                  children: [bS.length, bS.length >= (0, lS.e)(kS.getPlayerRanks()) && (0, fS.jsx)("span", {
+                meta: (0, tk.jsxs)(tk.Fragment, {
+                  children: [Tk.length, Tk.length >= (0, rk.b)(Zk.getPlayerRanks()) && (0, tk.jsx)("span", {
                     className: "SocialSectionTitleLimit",
-                    children: SS("socialBar:limitReached")
+                    children: kk("socialBar:limitReached")
                   })]
                 })
-              }), gS && (0, fS.jsx)("div", {
+              }), Ik && (0, tk.jsx)("div", {
                 className: "SocialMenuLoading",
-                children: (0, fS.jsx)(wS.c, {})
-              }), !gS && 0 === bS.length && (0, fS.jsx)("div", {
+                children: (0, tk.jsx)(sk.c, {})
+              }), !Ik && 0 === Tk.length && (0, tk.jsx)("div", {
                 className: "SocialMenuEmpty",
-                children: SS("socialBar:noFriends")
-              }), !gS && bS.length > 0 && (0, fS.jsx)("div", {
+                children: kk("socialBar:noFriends")
+              }), !Ik && Tk.length > 0 && (0, tk.jsx)("div", {
                 className: "PlayerRows",
-                children: (0, fS.jsx)(Ob.d, {
+                children: (0, tk.jsx)(oT.b, {
                   lazyLoadedClassName: "SocialMenuFriendsLazy",
-                  observerUpdateDeps: [bS],
-                  children: bS.map(((SS, gS) => (0, fS.jsx)(PN.h, {
-                    playerSocialPreview: SS,
+                  observerUpdateDeps: [Tk],
+                  children: Tk.map(((kk, Ik) => (0, tk.jsx)(Ql.e, {
+                    playerSocialPreview: kk,
                     isFriend: !0,
                     hideFriendBadge: !0,
-                    onFriendRemoved: SS => {
-                      sS.d.removeFriendFromState(SS)
+                    onFriendRemoved: kk => {
+                      Bk.c.removeFriendFromState(kk)
                     },
-                    zIndex: bS.length - gS,
-                    children: (0, fS.jsx)(PN.e, {
-                      friend: SS,
-                      followsLeader: HS,
+                    zIndex: Tk.length - Ik,
+                    children: (0, tk.jsx)(Ql.d, {
+                      friend: kk,
+                      followsLeader: Fk,
                       analyticsSurface: "social_menu"
                     })
-                  }, `${SS.name}_${SS.isError}`)))
+                  }, `${kk.name}_${kk.isError}`)))
                 })
               })]
             })]
@@ -8013,229 +8013,229 @@ export const modules = {
         })
       })
     }
-    var LN = gS(2658);
-    const YN = SS => {
+    var ul = Ik(2460);
+    const bl = kk => {
         let {
-          action: HS,
-          padAction: gS
-        } = SS;
+          action: Fk,
+          padAction: Ik
+        } = kk;
         const {
-          isTouchScreen: tS
-        } = (0, ZS.m)(["isTouchScreen"]), bS = (0, Gt.o)();
-        return tS && !bS ? null : (0, fS.jsx)(qt.d, {
+          isTouchScreen: Xk
+        } = (0, zk.j)(["isTouchScreen"]), Tk = (0, HX.m)();
+        return Xk && !Tk ? null : (0, tk.jsx)(qX.c, {
           className: "EverythingMenuTabKey",
-          noaAction: HS,
+          noaAction: Fk,
           padHidesKey: !0,
-          padMenuShortcut: gS
+          padMenuShortcut: Ik
         })
       },
-      AN = (0, tS.memo)((function() {
+      Rl = (0, Xk.memo)((function() {
         const {
-          t: SS
-        } = (0, xS.F)(), {
-          gameState: HS,
-          openEverythingMenuName: gS,
-          initSdkSelectorFinished: bS,
-          crosshairGameView: NS
-        } = (0, ZS.m)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
-          userContext: qS
-        } = (0, KS.b)(), IS = (0, US.purchasesAllowed)(), kS = (0, zS.K)(), {
-          view: aS
-        } = (0, sH.w)(), jS = "dot" === kS || null === kS && "ready" === (null === aS || void 0 === aS ? void 0 : aS.kind), GS = (SS, HS) => (0, fS.jsx)(YN, {
-          action: SS,
-          padAction: HS
-        }), [nS, PS] = (0, tS.useState)(null), QS = (0, tS.useRef)(null), DS = {
-          ..."inGame" === HS ? {} : (0, uS.X)({
+          t: kk
+        } = (0, yk.y)(), {
+          gameState: Fk,
+          openEverythingMenuName: Ik,
+          initSdkSelectorFinished: Tk,
+          crosshairGameView: lk
+        } = (0, zk.j)(["gameState", "openEverythingMenuName", "initSdkSelectorFinished", "crosshairGameView"]), {
+          userContext: ak
+        } = (0, ek.d)(), Lk = (0, Wk.purchasesAllowed)(), Zk = (0, ck.D)(), {
+          view: jk
+        } = (0, BF.w)(), wk = "dot" === Zk || null === Zk && "ready" === (null === jk || void 0 === jk ? void 0 : jk.kind), Hk = (kk, Fk) => (0, tk.jsx)(bl, {
+          action: kk,
+          padAction: Fk
+        }), [xk, Pk] = (0, Xk.useState)(null), Kk = (0, Xk.useRef)(null), Qk = {
+          ..."inGame" === Fk ? {} : (0, qk.Y)({
             focusOnClick: !1
           }),
-          ...dt.f
-        }, wS = SS => {
-          const HS = (0, ct.g)((HS => {
-            (0, uS.U)(HS.currentTarget), ZS.b.set({
-              openEverythingMenuName: SS
+          ...vX.e
+        }, sk = kk => {
+          const Fk = (0, EX.d)((Fk => {
+            (0, qk.V)(Fk.currentTarget), zk.d.set({
+              openEverythingMenuName: kk
             })
           }), "pointerup");
           return {
-            ...DS,
-            onPointerDown: SS => {
-              DS.onPointerDown(SS), HS.onPointerDown(SS)
+            ...Qk,
+            onPointerDown: kk => {
+              Qk.onPointerDown(kk), Fk.onPointerDown(kk)
             },
-            onPointerUp: SS => {
-              DS.onPointerUp(SS), HS.onPointerUp(SS)
+            onPointerUp: kk => {
+              Qk.onPointerUp(kk), Fk.onPointerUp(kk)
             },
-            onClick: HS.onClick
+            onClick: Fk.onClick
           }
-        }, hS = null !== gS, JS = gS !== IH.q.COSMETIC_SHOP && !NS;
-        async function OS() {
+        }, Vk = null !== Ik, Sk = Ik !== tF.r.COSMETIC_SHOP && !lk;
+        async function vk() {
           await async function() {
-            if (!nS) return;
-            await nS(), PS(null)
-          }(), ZS.b.set({
+            if (!xk) return;
+            await xk(), Pk(null)
+          }(), zk.d.set({
             openEverythingMenuName: null
           })
         }
-        const cS = (0, tS.useRef)(null),
-          vS = (0, tS.useCallback)((() => null !== cS.current && (0, jN.d)(cS.current)), []);
+        const Ok = (0, Xk.useRef)(null),
+          nk = (0, Xk.useCallback)((() => null !== Ok.current && (0, Jl.g)(Ok.current)), []);
 
-        function ES() {
-          vS() || OS()
-        }(0, tS.useEffect)((() => (0, GX.n)(vS)), [vS]);
-        const LS = (0, tS.useMemo)((() => "inGame" === HS ? {
-          text: SS("settingsMenu:exitGame"),
+        function Gk() {
+          nk() || vk()
+        }(0, Xk.useEffect)((() => (0, Hi.v)(nk)), [nk]);
+        const pk = (0, Xk.useMemo)((() => "inGame" === Fk ? {
+          text: kk("settingsMenu:exitGame"),
           onClick: () => {
-            (0, KN.c)()
+            (0, Hl.b)()
           }
-        } : (0, dS.b)() ? {
-          text: SS("settingsMenu:exitGame"),
+        } : (0, Ek.e)() ? {
+          text: kk("settingsMenu:exitGame"),
           onClick: () => {
-            NH.j.discordActivity().then((SS => {
-              SS.exit("User exited the game")
+            aF.i.discordActivity().then((kk => {
+              kk.exit("User exited the game")
             }))
           }
-        } : null), [HS, SS]);
-        const YS = (0, fS.jsx)("div", {
+        } : null), [Fk, kk]);
+        const uk = (0, tk.jsx)("div", {
           className: "EverythingMenuCloseButtonClickZone",
-          onClick: ES,
-          children: (0, fS.jsx)(uS.l, {
+          onClick: Gk,
+          children: (0, tk.jsx)(qk.k, {
             className: "EverythingMenuCloseButton"
           })
         });
-        return (0, fS.jsx)(vt.b, {
-          showing: hS,
+        return (0, tk.jsx)(OX.e, {
+          showing: Vk,
           globallyUniqueKey: "EverythingMenu",
           alwaysMountChildren: !0,
-          keepsMovement: gS === IH.q.SHOP,
-          doGameplayStartStopOnShow: "inGame" === HS,
-          children: (0, fS.jsx)(Lt.b, {
+          keepsMovement: Ik === tF.r.SHOP,
+          doGameplayStartStopOnShow: "inGame" === Fk,
+          children: (0, tk.jsx)(GX.b, {
             className: "EverythingMenuContainer",
-            show: hS && !NS,
-            children: (0, fS.jsx)(Et.c, {
-              close: ES,
+            show: Vk && !lk,
+            children: (0, tk.jsx)(nX.c, {
+              close: Gk,
               togglePointerLock: !1,
-              children: (0, fS.jsxs)("div", {
+              children: (0, tk.jsxs)("div", {
                 className: "EverythingMenu",
-                children: [!(0, GX.j)(gS) && (0, fS.jsxs)("div", {
+                children: [!(0, Hi.l)(Ik) && (0, tk.jsxs)("div", {
                   className: "EverythingMenuTabList",
-                  children: [(0, fS.jsxs)("div", {
+                  children: [(0, tk.jsxs)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerStart",
-                    children: [LS && (0, fS.jsx)(uS.d, {
+                    children: [pk && (0, tk.jsx)(qk.c, {
                       className: "EverythingMenuBackButton",
                       padDestructive: !0,
                       onClick: () => {
-                        LS.onClick()
+                        pk.onClick()
                       },
-                      children: LS.text
-                    }), hS && IS && (0, fS.jsx)("div", {
-                      ...DS,
+                      children: pk.text
+                    }), Vk && Lk && (0, tk.jsx)("div", {
+                      ...Qk,
                       className: "EverythingMenuWallet",
-                      title: SS("homePage:getPremiumCurrency"),
+                      title: kk("homePage:getPremiumCurrency"),
                       onClick: () => {
-                        (0, zS.r)({
+                        (0, ck.m)({
                           mode: "current",
                           source: "menuWallet"
                         })
                       },
-                      children: (0, fS.jsx)(aN.e, {})
+                      children: (0, tk.jsx)(wl.f, {})
                     })]
-                  }), (0, fS.jsxs)("div", {
+                  }), (0, tk.jsxs)("div", {
                     className: "EverythingMenuTabListInner",
                     "data-pad-tabs": "1",
-                    children: [(0, fS.jsxs)("div", {
-                      ...wS(IH.q.SETTINGS),
+                    children: [(0, tk.jsxs)("div", {
+                      ...sk(tF.r.SETTINGS),
                       "data-pad-tab": !0,
-                      "data-pad-selected": gS === IH.q.SETTINGS ? "true" : void 0,
-                      className: XS()("EverythingMenuTab", {
-                        EverythingMenuTabActive: gS === IH.q.SETTINGS
+                      "data-pad-selected": Ik === tF.r.SETTINGS ? "true" : void 0,
+                      className: ik()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Ik === tF.r.SETTINGS
                       }),
-                      children: [SS("general:settings"), GS("OpenSettings", "pause")]
-                    }), (0, fS.jsxs)("div", {
-                      ...wS(IH.q.CUSTOMISATION),
+                      children: [kk("general:settings"), Hk("OpenSettings", "pause")]
+                    }), (0, tk.jsxs)("div", {
+                      ...sk(tF.r.CUSTOMISATION),
                       "data-pad-tab": !0,
-                      "data-pad-selected": gS === IH.q.CUSTOMISATION ? "true" : void 0,
-                      className: XS()("EverythingMenuTab", {
-                        EverythingMenuTabActive: gS === IH.q.CUSTOMISATION
+                      "data-pad-selected": Ik === tF.r.CUSTOMISATION ? "true" : void 0,
+                      className: ik()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Ik === tF.r.CUSTOMISATION
                       }),
-                      children: [SS("general:player"), GS("OpenCharacterCustomization")]
-                    }), CS.featureFlags.useSocialFeatures && (0, fS.jsxs)("div", {
-                      ...wS(IH.q.SOCIAL),
+                      children: [kk("general:player"), Hk("OpenCharacterCustomization")]
+                    }), Jk.featureFlags.useSocialFeatures && (0, tk.jsxs)("div", {
+                      ...sk(tF.r.SOCIAL),
                       "data-pad-tab": !0,
-                      "data-pad-selected": gS === IH.q.SOCIAL ? "true" : void 0,
-                      className: XS()("EverythingMenuTab", {
-                        EverythingMenuTabActive: gS === IH.q.SOCIAL
+                      "data-pad-selected": Ik === tF.r.SOCIAL ? "true" : void 0,
+                      className: ik()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Ik === tF.r.SOCIAL
                       }),
-                      ...(0, eS.e)({
+                      ...(0, Mk.c)({
                         id: "social.open_menu",
                         value: "menu_tab"
-                      }, gS === IH.q.SOCIAL),
-                      children: [SS("socialBar:social"), (0, fS.jsx)(LN.b, {})]
-                    }), (0, sH.o)(aS) && (0, fS.jsxs)("div", {
-                      ...wS(IH.q.COSMETIC_SHOP),
+                      }, Ik === tF.r.SOCIAL),
+                      children: [kk("socialBar:social"), (0, tk.jsx)(ul.b, {})]
+                    }), (0, BF.r)(jk) && (0, tk.jsxs)("div", {
+                      ...sk(tF.r.COSMETIC_SHOP),
                       "data-pad-tab": !0,
-                      "data-pad-selected": gS === IH.q.COSMETIC_SHOP ? "true" : void 0,
-                      className: XS()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
-                        EverythingMenuTabActive: gS === IH.q.COSMETIC_SHOP
+                      "data-pad-selected": Ik === tF.r.COSMETIC_SHOP ? "true" : void 0,
+                      className: ik()("EverythingMenuTab EverythingMenuTabCosmeticShop", {
+                        EverythingMenuTabActive: Ik === tF.r.COSMETIC_SHOP
                       }),
-                      children: [(0, fS.jsx)("span", {
+                      children: [(0, tk.jsx)("span", {
                         className: "EverythingMenuTabCosmeticShopText",
-                        children: SS("store:title")
-                      }), "new" === kS && (0, fS.jsx)(Zx, {}), jS && (0, fS.jsx)("span", {
+                        children: kk("store:title")
+                      }), "new" === Zk && (0, tk.jsx)(oy, {}), wk && (0, tk.jsx)("span", {
                         className: "EverythingMenuTabStoreBadge EverythingMenuTabStoreDot"
                       })]
-                    }), "inGame" === HS && (0, fS.jsxs)("div", {
-                      ...wS(IH.q.LOBBY_LEADERBOARD),
+                    }), "inGame" === Fk && (0, tk.jsxs)("div", {
+                      ...sk(tF.r.LOBBY_LEADERBOARD),
                       "data-pad-tab": !0,
-                      "data-pad-selected": gS === IH.q.LOBBY_LEADERBOARD ? "true" : void 0,
-                      className: XS()("EverythingMenuTab", {
-                        EverythingMenuTabActive: gS === IH.q.LOBBY_LEADERBOARD
+                      "data-pad-selected": Ik === tF.r.LOBBY_LEADERBOARD ? "true" : void 0,
+                      className: ik()("EverythingMenuTab", {
+                        EverythingMenuTabActive: Ik === tF.r.LOBBY_LEADERBOARD
                       }),
-                      children: [SS("general:lobby"), GS("OpenLobbyLeaderboard", "leaderboard")]
+                      children: [kk("general:lobby"), Hk("OpenLobbyLeaderboard", "leaderboard")]
                     })]
-                  }), (0, fS.jsx)("div", {
+                  }), (0, tk.jsx)("div", {
                     className: "EverythingMenuTabListButtonContainer EverythingMenuTabListButtonContainerEnd",
-                    children: YS
+                    children: uk
                   })]
-                }), (0, GX.j)(gS) && YS, (0, fS.jsxs)("div", {
-                  ref: cS,
+                }), (0, Hi.l)(Ik) && uk, (0, tk.jsxs)("div", {
+                  ref: Ok,
                   className: "EverythingMenuBody",
                   "data-pad-initial-area": !0,
                   style: {
-                    "--everythingMenuBodyBackgroundOpacity": "inGame" === HS ? "0.85" : "1"
+                    "--everythingMenuBodyBackgroundOpacity": "inGame" === Fk ? "0.85" : "1"
                   },
-                  children: [(0, fS.jsx)(Dt, {
-                    show: gS === IH.q.SETTINGS,
-                    setBeforeResumeCallback: PS
-                  }), (0, fS.jsx)(Ot, {
-                    show: gS === IH.q.CUSTOMISATION
-                  }), (0, fS.jsx)(tS.Suspense, {
+                  children: [(0, tk.jsx)(QX, {
+                    show: Ik === tF.r.SETTINGS,
+                    setBeforeResumeCallback: Pk
+                  }), (0, tk.jsx)(oX, {
+                    show: Ik === tF.r.CUSTOMISATION
+                  }), (0, tk.jsx)(Xk.Suspense, {
                     fallback: null,
-                    children: (0, fS.jsx)(NX, {
-                      show: gS === IH.q.SHOP
+                    children: (0, tk.jsx)(li, {
+                      show: Ik === tF.r.SHOP
                     })
-                  }), (0, fS.jsx)(QX, {
-                    show: gS === IH.q.LOBBY_LEADERBOARD
-                  }), IS && (0, fS.jsx)(kN, {
-                    show: gS === IH.q.COSMETIC_SHOP
-                  }), !IS && (0, fS.jsx)(qN, {
-                    show: gS === IH.q.COSMETIC_SHOP
-                  }), (0, fS.jsx)(vN, {
-                    show: gS === IH.q.SOCIAL
+                  }), (0, tk.jsx)(Ki, {
+                    show: Ik === tF.r.LOBBY_LEADERBOARD
+                  }), Lk && (0, tk.jsx)(el, {
+                    show: Ik === tF.r.COSMETIC_SHOP
+                  }), !Lk && (0, tk.jsx)(Ll, {
+                    show: Ik === tF.r.COSMETIC_SHOP
+                  }), (0, tk.jsx)(Gl, {
+                    show: Ik === tF.r.SOCIAL
                   })]
-                }), !(0, CS.isMobileApp)() && (0, Yt.f)(qS.getPlayerRanks()) && (0, fS.jsx)(Lt.b, {
-                  ref: QS,
+                }), !(0, Jk.isMobileApp)() && (0, pX.d)(ak.getPlayerRanks()) && (0, tk.jsx)(GX.b, {
+                  ref: Kk,
                   className: "EverythingMenuBannerDiv",
-                  show: JS,
+                  show: Sk,
                   "data-pad-hint-bar-avoid": !0,
                   "data-pad-no-step-in": !0,
-                  children: (0, fS.jsx)(GN.d, {
+                  children: (0, tk.jsx)(xl.e, {
                     info: {
                       adId: 2,
                       adType: "leaderboard",
                       adAlias: "banner_shop"
                     },
                     sizeInfo: {
-                      parentRef: QS
+                      parentRef: Kk
                     },
-                    showing: hS && JS,
+                    showing: Vk && Sk,
                     verticalAlign: "center",
                     horizontalAlign: "center",
                     noFillShowBloxdAdProbability: 1
@@ -8247,135 +8247,135 @@ export const modules = {
         })
       }))
   },
-  34226: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => XS
+  34173: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ik
     });
-    var tS = gS(387),
-      bS = gS(34235);
+    var Xk = Ik(337),
+      Tk = Ik(34180);
 
-    function XS(SS, HS, gS) {
-      const XS = Object.entries(HS).sort(((SS, HS) => HS[1] - SS[1])),
-        xS = (0, tS.bb)(SS);
-      xS.push(SS ? "\n\n" : "\n");
-      for (const [bS, KS] of XS) {
-        var NS, qS, uS;
-        const SS = null !== (NS = null === gS || void 0 === gS || null === (qS = gS[bS]) || void 0 === qS ? void 0 : qS.icon) && void 0 !== NS ? NS : `${bS} Enchantment`;
-        xS.push({
-          icon: SS,
+    function ik(kk, Fk, Ik) {
+      const ik = Object.entries(Fk).sort(((kk, Fk) => Fk[1] - kk[1])),
+        yk = (0, Xk.zb)(kk);
+      yk.push(kk ? "\n\n" : "\n");
+      for (const [Tk, ek] of ik) {
+        var lk, ak, qk;
+        const kk = null !== (lk = null === Ik || void 0 === Ik || null === (ak = Ik[Tk]) || void 0 === ak ? void 0 : ak.icon) && void 0 !== lk ? lk : `${Tk} Enchantment`;
+        yk.push({
+          icon: kk,
           style: {
             fontSize: "1.5rem"
           }
-        }), xS.push({
-          str: `${bS} ${null!==(uS=(0,tS.J)(KS))&&void 0!==uS?uS:KS}\n`
+        }), yk.push({
+          str: `${Tk} ${null!==(qk=(0,Xk.S)(ek))&&void 0!==qk?qk:ek}\n`
         })
       }
-      xS.push({
+      yk.push({
         str: "\n"
       });
-      for (const [tS, KS] of XS) {
-        var IS, fS, kS, aS;
-        const SS = null !== (IS = null === gS || void 0 === gS || null === (fS = gS[tS]) || void 0 === fS ? void 0 : fS.icon) && void 0 !== IS ? IS : `${tS} Enchantment`,
-          HS = null !== (kS = null === gS || void 0 === gS || null === (aS = gS[tS]) || void 0 === aS ? void 0 : aS.description) && void 0 !== kS ? kS : (0, bS.j)(tS);
-        xS.push({
-          icon: SS,
+      for (const [Xk, ek] of ik) {
+        var Lk, tk, Zk, jk;
+        const kk = null !== (Lk = null === Ik || void 0 === Ik || null === (tk = Ik[Xk]) || void 0 === tk ? void 0 : tk.icon) && void 0 !== Lk ? Lk : `${Xk} Enchantment`,
+          Fk = null !== (Zk = null === Ik || void 0 === Ik || null === (jk = Ik[Xk]) || void 0 === jk ? void 0 : jk.description) && void 0 !== Zk ? Zk : (0, Tk.j)(Xk);
+        yk.push({
+          icon: kk,
           style: {
             fontSize: "1.25rem",
             opacity: .75
           }
-        }), xS.push({
-          str: HS,
+        }), yk.push({
+          str: Fk,
           style: {
             fontSize: "0.8em",
             fontWeight: "normal",
             opacity: .75
           }
-        }), xS.push({
+        }), yk.push({
           str: "\n"
         })
       }
-      return xS
+      return yk
     }
   },
-  34239: (SS, HS, gS) => {
-    gS.d(HS, {
-      A: () => fS,
-      d: () => uS,
-      f: () => nS,
-      i: () => GS,
-      m: () => qS,
-      q: () => CS,
-      s: () => IS,
-      v: () => kS,
-      x: () => jS
+  34188: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => qk,
+      d: () => xk,
+      g: () => Hk,
+      j: () => ak,
+      m: () => Jk,
+      q: () => Lk,
+      s: () => Zk,
+      u: () => wk,
+      w: () => tk
     });
-    var tS = gS(369),
-      bS = gS(680),
-      XS = gS(387),
-      xS = gS(4348),
-      NS = gS(34226);
+    var Xk = Ik(318),
+      Tk = Ik(628),
+      ik = Ik(337),
+      yk = Ik(4199),
+      lk = Ik(34173);
 
-    function qS(SS, HS) {
-      var gS;
+    function ak(kk, Fk) {
+      var Ik;
       let {
-        player: tS,
-        chestOrCreative: bS
-      } = SS;
-      var XS;
-      return HS < tS.length ? null !== (XS = tS[HS]) && void 0 !== XS ? XS : null : null !== (gS = bS[HS - tS.length]) && void 0 !== gS ? gS : null
+        player: Xk,
+        chestOrCreative: Tk
+      } = kk;
+      var ik;
+      return Fk < Xk.length ? null !== (ik = Xk[Fk]) && void 0 !== ik ? ik : null : null !== (Ik = Tk[Fk - Xk.length]) && void 0 !== Ik ? Ik : null
     }
 
-    function uS(SS) {
-      var HS;
-      return null !== (HS = SS.amount) && void 0 !== HS ? HS : 0
+    function qk(kk) {
+      var Fk;
+      return null !== (Fk = kk.amount) && void 0 !== Fk ? Fk : 0
     }
 
-    function IS(SS) {
-      return 0 === SS.button || void 0 === SS.button
+    function Lk(kk) {
+      return 0 === kk.button || void 0 === kk.button
     }
 
-    function fS(SS) {
-      return !!SS.shiftKey
+    function tk(kk) {
+      return !!kk.shiftKey
     }
 
-    function kS(SS) {
-      return "touches" in SS || "touch" === SS.pointerType || "pen" === SS.pointerType
+    function Zk(kk) {
+      return "touches" in kk || "touch" === kk.pointerType || "pen" === kk.pointerType
     }
-    const aS = new Set,
-      KS = 50;
+    const jk = new Set,
+      ek = 50;
 
-    function jS(SS, HS) {
-      var gS;
-      const tS = null === (gS = SS[HS]) || void 0 === gS ? void 0 : gS.displayName;
-      return (0, bS.K)(tS) ? "string" !== typeof HS ? "" : (!aS.has(HS) && aS.size < KS && (aS.add(HS), console.warn(`No item called "${HS}", so its hover shows the name as given`)), HS) : tS
+    function wk(kk, Fk) {
+      var Ik;
+      const Xk = null === (Ik = kk[Fk]) || void 0 === Ik ? void 0 : Ik.displayName;
+      return (0, Tk.Q)(Xk) ? "string" !== typeof Fk ? "" : (!jk.has(Fk) && jk.size < ek && (jk.add(Fk), console.warn(`No item called "${Fk}", so its hover shows the name as given`)), Fk) : Xk
     }
 
-    function GS(SS, HS, gS) {
-      var qS, uS, IS, fS, kS, aS, KS, GS, CS, nS, PS, QS, DS, wS;
-      const hS = SS.attributes,
-        ZS = null !== (qS = null === (uS = HS[SS.name]) || void 0 === uS ? void 0 : uS.rootName) && void 0 !== qS ? qS : SS.name,
-        JS = null !== (IS = null !== (fS = hS.customDisplayName) && void 0 !== fS ? fS : null === (kS = HS[SS.name]) || void 0 === kS ? void 0 : kS.displayName) && void 0 !== IS ? IS : jS(HS, ZS);
-      let OS = JS;
-      const dS = null === (aS = hS.customAttributes) || void 0 === aS ? void 0 : aS.enchantmentTier;
-      dS && (OS = (0, XS.bb)(JS, {
-        colour: XS.$[dS]
+    function Hk(kk, Fk, Ik) {
+      var ak, qk, Lk, tk, Zk, jk, ek, Hk, Jk, xk, Pk, Kk, Qk, sk;
+      const Vk = kk.attributes,
+        zk = null !== (ak = null === (qk = Fk[kk.name]) || void 0 === qk ? void 0 : qk.rootName) && void 0 !== ak ? ak : kk.name,
+        Sk = null !== (Lk = null !== (tk = Vk.customDisplayName) && void 0 !== tk ? tk : null === (Zk = Fk[kk.name]) || void 0 === Zk ? void 0 : Zk.displayName) && void 0 !== Lk ? Lk : wk(Fk, zk);
+      let vk = Sk;
+      const Ek = null === (jk = Vk.customAttributes) || void 0 === jk ? void 0 : jk.enchantmentTier;
+      Ek && (vk = (0, ik.zb)(Sk, {
+        colour: ik.sb[Ek]
       }));
-      const cS = null !== (KS = null !== (GS = null !== (CS = function(SS, HS) {
-        var gS;
-        if (void 0 === SS || null !== (gS = HS.customAttributes) && void 0 !== gS && gS.author) return SS;
-        const bS = (0, tS.ec)(SS);
-        return bS.every((SS => "string" === typeof SS)) ? SS : bS.map((SS => "string" === typeof SS ? SS : {
-          icon: SS.icon,
+      const Ok = null !== (ek = null !== (Hk = null !== (Jk = function(kk, Fk) {
+        var Ik;
+        if (void 0 === kk || null !== (Ik = Fk.customAttributes) && void 0 !== Ik && Ik.author) return kk;
+        const Tk = (0, Xk.oc)(kk);
+        return Tk.every((kk => "string" === typeof kk)) ? kk : Tk.map((kk => "string" === typeof kk ? kk : {
+          icon: kk.icon,
           style: {
             fontSize: "1.5em"
           }
         }))
-      }(hS.customDescription, hS)) && void 0 !== CS ? CS : null === (nS = HS[SS.name]) || void 0 === nS ? void 0 : nS.description) && void 0 !== GS ? GS : null === (PS = HS[ZS]) || void 0 === PS ? void 0 : PS.description) && void 0 !== KS ? KS : "";
-      let vS = cS;
-      if (null !== (QS = hS.customAttributes) && void 0 !== QS && QS.enchantments) vS = (0, NS.e)(cS, hS.customAttributes.enchantments, hS.customAttributes.enchantmentData);
-      else if (gS[ZS]) vS = (0, XS.bb)(cS), vS.push({
+      }(Vk.customDescription, Vk)) && void 0 !== Jk ? Jk : null === (xk = Fk[kk.name]) || void 0 === xk ? void 0 : xk.description) && void 0 !== Hk ? Hk : null === (Pk = Fk[zk]) || void 0 === Pk ? void 0 : Pk.description) && void 0 !== ek ? ek : "";
+      let nk = Ok;
+      if (null !== (Kk = Vk.customAttributes) && void 0 !== Kk && Kk.enchantments) nk = (0, lk.d)(Ok, Vk.customAttributes.enchantments, Vk.customAttributes.enchantmentData);
+      else if (Ik[zk]) nk = (0, ik.zb)(Ok), nk.push({
         str: "\n"
-      }), vS.push({
+      }), nk.push({
         str: "Enchantable",
         style: {
           fontSize: "0.8em",
@@ -8383,373 +8383,373 @@ export const modules = {
           opacity: .4
         }
       });
-      else if (null !== (DS = hS.customAttributes) && void 0 !== DS && DS.mobSettings) {
-        var ES, LS;
-        const SS = hS.customAttributes.mobSettings;
-        var YS, AS;
-        if (vS = [], (0, bS.K)(hS.customAttributes.health) || (vS.push({
+      else if (null !== (Qk = Vk.customAttributes) && void 0 !== Qk && Qk.mobSettings) {
+        var Gk, pk;
+        const kk = Vk.customAttributes.mobSettings;
+        var uk, bk;
+        if (nk = [], (0, Tk.Q)(Vk.customAttributes.health) || (nk.push({
             str: "\n"
-          }), vS.push({
+          }), nk.push({
             icon: "Health",
             style: {
               fontSize: "1.5em"
             }
-          }), vS.push({
+          }), nk.push({
             str: " "
-          }), vS.push({
-            str: hS.customAttributes.health.toString()
-          }), (0, bS.K)(SS.maxHealth) || (vS.push({
+          }), nk.push({
+            str: Vk.customAttributes.health.toString()
+          }), (0, Tk.Q)(kk.maxHealth) || (nk.push({
             str: "/"
-          }), vS.push({
-            str: SS.maxHealth.toString()
-          }))), !(0, bS.K)(SS.attackDamage) && SS.attackDamage > 0 && (vS.push({
+          }), nk.push({
+            str: kk.maxHealth.toString()
+          }))), !(0, Tk.Q)(kk.attackDamage) && kk.attackDamage > 0 && (nk.push({
             str: "\n"
-          }), vS.push({
+          }), nk.push({
             icon: "Iron Sword",
             style: {
               fontSize: "1.5em"
             }
-          }), vS.push({
+          }), nk.push({
             str: " "
-          }), vS.push({
-            str: SS.attackDamage.toString()
-          })), !(0, bS.K)(SS.secondaryAttackDamage) && SS.secondaryAttackDamage > 0 && (vS.push({
+          }), nk.push({
+            str: kk.attackDamage.toString()
+          })), !(0, Tk.Q)(kk.secondaryAttackDamage) && kk.secondaryAttackDamage > 0 && (nk.push({
             str: "\n"
-          }), vS.push({
+          }), nk.push({
             icon: "Stone Crossbow",
             style: {
               fontSize: "1.5em"
             }
-          }), vS.push({
+          }), nk.push({
             str: " "
-          }), vS.push({
-            str: SS.secondaryAttackDamage.toString()
-          })), (0, bS.K)(SS.baseRunningSpeed) || (vS.push({
+          }), nk.push({
+            str: kk.secondaryAttackDamage.toString()
+          })), (0, Tk.Q)(kk.baseRunningSpeed) || (nk.push({
             str: "\n"
-          }), vS.push({
+          }), nk.push({
             icon: "Speed",
             style: {
               fontSize: "1.5em"
             }
-          }), vS.push({
+          }), nk.push({
             str: " "
-          }), vS.push({
-            str: SS.baseRunningSpeed.toFixed(2)
-          })), "Saddled" === SS.metaInfo) vS.push({
+          }), nk.push({
+            str: kk.baseRunningSpeed.toFixed(2)
+          })), "Saddled" === kk.metaInfo) nk.push({
           str: "\n"
-        }), vS.push({
+        }), nk.push({
           str: {
             translationKey: "general:has"
           }
-        }), vS.push({
+        }), nk.push({
           str: " "
-        }), vS.push({
-          icon: null !== (YS = null === (AS = SS.tameInfo) || void 0 === AS ? void 0 : AS.saddleItemName) && void 0 !== YS ? YS : "Saddle",
+        }), nk.push({
+          icon: null !== (uk = null === (bk = kk.tameInfo) || void 0 === bk ? void 0 : bk.saddleItemName) && void 0 !== uk ? uk : "Saddle",
           style: {
             fontSize: "1.5em"
           }
         });
-        if (vS.push({
+        if (nk.push({
             str: "\n"
-          }), vS.push({
+          }), nk.push({
             str: "\n"
-          }), SS.petInfo && null !== (ES = SS.tameInfo) && void 0 !== ES && ES.supportsFriendship) {
-          const HS = xS.b.getIconsFromFriendshipPoints(SS.petInfo.friendshipPoints);
-          for (const SS of HS) vS.push({
-            icon: SS,
+          }), kk.petInfo && null !== (Gk = kk.tameInfo) && void 0 !== Gk && Gk.supportsFriendship) {
+          const Fk = yk.e.getIconsFromFriendshipPoints(kk.petInfo.friendshipPoints);
+          for (const kk of Fk) nk.push({
+            icon: kk,
             style: {
               fontSize: "1.5em"
             }
           });
-          vS.push({
+          nk.push({
             str: "\n"
           });
-          const gS = xS.b.getMobHungerLevel(SS.petInfo.lastFedAt);
-          for (const SS of xS.b.hungerLevelIcons[gS]) vS.push({
-            icon: SS,
+          const Ik = yk.e.getMobHungerLevel(kk.petInfo.lastFedAt);
+          for (const kk of yk.e.hungerLevelIcons[Ik]) nk.push({
+            icon: kk,
             style: {
               fontSize: "1.5em"
             }
           });
-          vS.push({
+          nk.push({
             str: " "
-          }), vS.push({
-            str: xS.b.hungerLevelTranslations[gS],
+          }), nk.push({
+            str: yk.e.hungerLevelTranslations[Ik],
             style: {
               fontWeight: "bolder"
             }
           })
         }
-        if (SS.tameInfo && null !== (LS = SS.tameInfo) && void 0 !== LS && LS.supportsFriendship) {
-          var yS, VS;
-          let HS = null !== (yS = SS.tameInfo.likedFoods) && void 0 !== yS ? yS : [];
-          vS.push({
+        if (kk.tameInfo && null !== (pk = kk.tameInfo) && void 0 !== pk && pk.supportsFriendship) {
+          var Rk, Uk;
+          let Fk = null !== (Rk = kk.tameInfo.likedFoods) && void 0 !== Rk ? Rk : [];
+          nk.push({
             str: "\n"
-          }), vS.push({
+          }), nk.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: xS.b.feedTextColours[xS.b.MobFoodType.Superliked]
+              color: yk.e.feedTextColours[yk.e.MobFoodType.Superliked]
             }
-          }), vS.push({
+          }), nk.push({
             str: " "
-          }), null !== (VS = SS.petInfo) && void 0 !== VS && VS.superlikedFoodKnown ? (vS.push({
-            icon: SS.petInfo.superlikedFood,
+          }), null !== (Uk = kk.petInfo) && void 0 !== Uk && Uk.superlikedFoodKnown ? (nk.push({
+            icon: kk.petInfo.superlikedFood,
             style: {
               fontSize: "1.5em"
             }
-          }), HS = HS.filter((HS => HS !== SS.petInfo.superlikedFood))) : vS.push({
+          }), Fk = Fk.filter((Fk => Fk !== kk.petInfo.superlikedFood))) : nk.push({
             icon: "Question Mark",
             style: {
               fontSize: "1.5em"
             }
-          }), vS.push({
+          }), nk.push({
             str: "\n"
-          }), vS.push({
+          }), nk.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: xS.b.feedTextColours[xS.b.MobFoodType.Liked]
+              color: yk.e.feedTextColours[yk.e.MobFoodType.Liked]
             }
-          }), vS.push({
+          }), nk.push({
             str: " "
           });
-          for (const SS of HS) vS.push({
-            icon: SS,
+          for (const kk of Fk) nk.push({
+            icon: kk,
             style: {
               fontSize: "1.5em"
             }
           });
-          vS.push({
+          nk.push({
             str: "\n"
-          }), vS.push({
+          }), nk.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: xS.b.feedTextColours[xS.b.MobFoodType.Neutral]
+              color: yk.e.feedTextColours[yk.e.MobFoodType.Neutral]
             }
-          }), vS.push({
+          }), nk.push({
             str: " "
           });
-          for (const gS of null !== (iS = SS.tameInfo.neutralFoods) && void 0 !== iS ? iS : []) {
-            var iS;
-            vS.push({
-              icon: gS,
+          for (const Ik of null !== (Ck = kk.tameInfo.neutralFoods) && void 0 !== Ck ? Ck : []) {
+            var Ck;
+            nk.push({
+              icon: Ik,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
-          vS.push({
+          nk.push({
             str: "\n"
-          }), vS.push({
+          }), nk.push({
             icon: "Pixelated Heart",
             style: {
               fontSize: "1.5em",
-              color: xS.b.feedTextColours[xS.b.MobFoodType.Disliked]
+              color: yk.e.feedTextColours[yk.e.MobFoodType.Disliked]
             }
-          }), vS.push({
+          }), nk.push({
             str: " "
           });
-          for (const gS of null !== (WS = SS.tameInfo.dislikedFoods) && void 0 !== WS ? WS : []) {
-            var WS;
-            vS.push({
-              icon: gS,
+          for (const Ik of null !== (Nk = kk.tameInfo.dislikedFoods) && void 0 !== Nk ? Nk : []) {
+            var Nk;
+            nk.push({
+              icon: Ik,
               style: {
                 fontSize: "1.5em"
               }
             })
           }
         }
-        vS.length > 0 ? (vS.shift(), vS.unshift(...(0, XS.bb)(cS))) : vS = (0, XS.bb)(cS)
+        nk.length > 0 ? (nk.shift(), nk.unshift(...(0, ik.zb)(Ok))) : nk = (0, ik.zb)(Ok)
       }
       return {
-        name: OS,
-        desc: vS,
-        fontStyle: null !== (wS = hS.customAttributes) && void 0 !== wS && wS.author ? "italic" : "normal"
+        name: vk,
+        desc: nk,
+        fontStyle: null !== (sk = Vk.customAttributes) && void 0 !== sk && sk.author ? "italic" : "normal"
       }
     }
 
-    function CS(SS, HS, gS, tS) {
-      const bS = qS(SS, gS),
-        XS = qS(SS, tS);
-      if (!bS) return !1;
-      const xS = HS[bS.name].armourReduction,
-        NS = HS[XS.name].armourReduction;
-      if (NS === xS) {
-        var uS, IS, fS, kS;
-        const SS = null !== (uS = null === (IS = bS.attributes.customAttributes) || void 0 === IS ? void 0 : IS.enchantmentTier) && void 0 !== uS ? uS : "Tier 0",
-          HS = null !== (fS = null === (kS = XS.attributes.customAttributes) || void 0 === kS ? void 0 : kS.enchantmentTier) && void 0 !== fS ? fS : "Tier 0";
-        return parseInt(SS.replace("Tier ", "")) >= parseInt(HS.replace("Tier ", ""))
+    function Jk(kk, Fk, Ik, Xk) {
+      const Tk = ak(kk, Ik),
+        ik = ak(kk, Xk);
+      if (!Tk) return !1;
+      const yk = Fk[Tk.name].armourReduction,
+        lk = Fk[ik.name].armourReduction;
+      if (lk === yk) {
+        var qk, Lk, tk, Zk;
+        const kk = null !== (qk = null === (Lk = Tk.attributes.customAttributes) || void 0 === Lk ? void 0 : Lk.enchantmentTier) && void 0 !== qk ? qk : "Tier 0",
+          Fk = null !== (tk = null === (Zk = ik.attributes.customAttributes) || void 0 === Zk ? void 0 : Zk.enchantmentTier) && void 0 !== tk ? tk : "Tier 0";
+        return parseInt(kk.replace("Tier ", "")) >= parseInt(Fk.replace("Tier ", ""))
       }
-      return xS > NS
+      return yk > lk
     }
 
-    function nS(SS) {
-      let HS;
-      if ("number" === typeof SS) {
-        const gS = document.querySelector(`[data-inven-idx="${SS}"]`);
-        if (!gS) return null;
-        HS = gS.getBoundingClientRect()
-      } else HS = SS.getBoundingClientRect();
+    function xk(kk) {
+      let Fk;
+      if ("number" === typeof kk) {
+        const Ik = document.querySelector(`[data-inven-idx="${kk}"]`);
+        if (!Ik) return null;
+        Fk = Ik.getBoundingClientRect()
+      } else Fk = kk.getBoundingClientRect();
       return {
-        x: HS.left + HS.width / 2,
-        y: HS.top + HS.height / 2
+        x: Fk.left + Fk.width / 2,
+        y: Fk.top + Fk.height / 2
       }
     }
   },
-  34130: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => aS,
-      i: () => KS,
-      j: () => jS
+  34058: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => jk,
+      c: () => ek,
+      d: () => wk
     });
-    var tS = gS(1528),
-      bS = gS(64),
-      XS = gS(1390),
-      xS = gS(4662),
-      NS = gS(2468),
-      qS = gS(1281),
-      uS = gS(104),
-      IS = gS(2100),
-      fS = gS(1419),
-      kS = gS(1181);
+    var Xk = Ik(1406),
+      Tk = Ik(58),
+      ik = Ik(1287),
+      yk = Ik(4516),
+      lk = Ik(2283),
+      ak = Ik(1179),
+      qk = Ik(95),
+      Lk = Ik(1907),
+      tk = Ik(1318),
+      Zk = Ik(1096);
 
-    function aS(SS) {
+    function jk(kk) {
       let {
-        show: HS,
-        onClose: gS
-      } = SS;
+        show: Fk,
+        onClose: Ik
+      } = kk;
       const {
-        requestedGameNameWithVariation: tS,
-        lobbyName: bS,
-        shownLobbyName: XS
-      } = (0, IS.h)("connectedGame"), qS = (0, NS.b)(tS, bS, !1);
-      return uS.featureFlags.canUseInviteLinks && (0, kS.jsx)(xS.c, {
-        show: HS,
-        close: gS,
+        requestedGameNameWithVariation: Xk,
+        lobbyName: Tk,
+        shownLobbyName: ik
+      } = (0, Lk.k)("connectedGame"), ak = (0, lk.b)(Xk, Tk, !1);
+      return qk.featureFlags.canUseInviteLinks && (0, Zk.jsx)(yk.c, {
+        show: Fk,
+        close: Ik,
         padShowsHud: !0,
         togglePointerLock: !1,
         globallyUniqueKey: "InviteLinkBox",
         doGameplayStartStopOnShow: !0,
-        children: (0, kS.jsxs)("div", {
+        children: (0, Zk.jsxs)("div", {
           className: "InviteLinkBox AnimFadeInScaleUp",
-          children: [(0, kS.jsx)("div", {
+          children: [(0, Zk.jsx)("div", {
             className: "InviteLinkBoxHeader SmallTextBold",
             children: "Invite Friends"
-          }), (0, kS.jsxs)("div", {
+          }), (0, Zk.jsxs)("div", {
             className: "InviteLinkBoxDescription SmallTextLight",
-            children: [(0, kS.jsx)("div", {
+            children: [(0, Zk.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: '"Join Lobby Name" Button Info'
-            }), "Game: ", null === qS ? (0, kS.jsx)(fS.c, {}) : qS, (0, kS.jsx)("br", {}), "Lobby Name: ", XS, (0, kS.jsx)("br", {}), (0, kS.jsx)("br", {}), (0, kS.jsx)("br", {}), (0, kS.jsx)("div", {
+            }), "Game: ", null === ak ? (0, Zk.jsx)(tk.c, {}) : ak, (0, Zk.jsx)("br", {}), "Lobby Name: ", ik, (0, Zk.jsx)("br", {}), (0, Zk.jsx)("br", {}), (0, Zk.jsx)("br", {}), (0, Zk.jsx)("div", {
               className: "InviteLinkBoxSubheader SmallTextBold",
               children: "Link"
             })]
-          }), (0, kS.jsx)(KS, {})]
+          }), (0, Zk.jsx)(ek, {})]
         })
       })
     }
 
-    function KS() {
-      var SS;
+    function ek() {
+      var kk;
       const {
-        t: HS
-      } = (0, qS.F)(), gS = null !== (SS = jS(uS.featureFlags.canUseInviteLinks)) && void 0 !== SS ? SS : "Loading Link...", [XS, xS] = (0, bS.useState)(0), [NS, IS] = (0, bS.useReducer)((SS => SS + 1), 0);
-      return (0, bS.useEffect)((() => {
-        const SS = setTimeout((() => {
-          IS()
+        t: Fk
+      } = (0, ak.y)(), Ik = null !== (kk = wk(qk.featureFlags.canUseInviteLinks)) && void 0 !== kk ? kk : "Loading Link...", [ik, yk] = (0, Tk.useState)(0), [lk, Lk] = (0, Tk.useReducer)((kk => kk + 1), 0);
+      return (0, Tk.useEffect)((() => {
+        const kk = setTimeout((() => {
+          Lk()
         }), 1100);
         return () => {
-          clearTimeout(SS)
+          clearTimeout(kk)
         }
-      }), [XS]), uS.featureFlags.canUseInviteLinks && (0, kS.jsxs)("div", {
+      }), [ik]), qk.featureFlags.canUseInviteLinks && (0, Zk.jsxs)("div", {
         className: "InviteLinkInnerWrapper",
-        children: [(0, kS.jsx)("div", {
+        children: [(0, Zk.jsx)("div", {
           className: "InviteLinkInner",
-          children: gS
-        }), (0, kS.jsx)(tS.g, {
+          children: Ik
+        }), (0, Zk.jsx)(Xk.d, {
           className: "InviteLinkCopyButton",
           onClick: () => {
-            navigator.clipboard.writeText(gS).catch((SS => {
-              console.error("Failed to copy invite link:", SS)
-            })), xS(Date.now())
+            navigator.clipboard.writeText(Ik).catch((kk => {
+              console.error("Failed to copy invite link:", kk)
+            })), yk(Date.now())
           },
-          disabled: Date.now() - XS < 1e3,
-          children: Date.now() - XS < 1e3 ? HS("general:copied") : HS("general:copy")
+          disabled: Date.now() - ik < 1e3,
+          children: Date.now() - ik < 1e3 ? Fk("general:copied") : Fk("general:copy")
         })]
       })
     }
 
-    function jS(SS) {
-      const [HS, gS] = (0, bS.useState)(null);
-      return (0, bS.useEffect)((() => {
-        if (!SS) return;
-        let HS = !0;
-        return (0, XS.w)().then((SS => {
-          HS && gS(SS)
-        })).catch((SS => {
-          console.error("Failed to get invite link:", SS)
+    function wk(kk) {
+      const [Fk, Ik] = (0, Tk.useState)(null);
+      return (0, Tk.useEffect)((() => {
+        if (!kk) return;
+        let Fk = !0;
+        return (0, ik.x)().then((kk => {
+          Fk && Ik(kk)
+        })).catch((kk => {
+          console.error("Failed to get invite link:", kk)
         })), () => {
-          HS = !1
+          Fk = !1
         }
-      }), [SS]), HS
+      }), [kk]), Fk
     }
   },
-  34219: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => uS
+  34155: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => qk
     });
-    var tS = gS(64),
-      bS = gS(1121),
-      XS = gS.n(bS),
-      xS = gS(2100),
-      NS = gS(1181);
+    var Xk = Ik(58),
+      Tk = Ik(1055),
+      ik = Ik.n(Tk),
+      yk = Ik(1907),
+      lk = Ik(1096);
 
-    function qS(SS) {
-      const HS = Math.floor(SS / 3600),
-        gS = Math.floor(SS % 3600 / 60),
-        tS = Math.floor(SS % 60),
-        bS = `${gS.toString().padStart(2,"0")}:${tS.toString().padStart(2,"0")}`;
-      return HS > 0 ? `${HS}:${bS}` : bS
+    function ak(kk) {
+      const Fk = Math.floor(kk / 3600),
+        Ik = Math.floor(kk % 3600 / 60),
+        Xk = Math.floor(kk % 60),
+        Tk = `${Ik.toString().padStart(2,"0")}:${Xk.toString().padStart(2,"0")}`;
+      return Fk > 0 ? `${Fk}:${Tk}` : Tk
     }
-    const uS = (0, tS.memo)((function(SS) {
+    const qk = (0, Xk.memo)((function(kk) {
       let {
-        className: HS
-      } = SS;
+        className: Fk
+      } = kk;
       const {
-        recording: gS,
-        seconds: tS
-      } = (0, xS.h)("replayRecorder");
-      return gS ? (0, NS.jsxs)("div", {
-        className: XS()("RecordingIndicator", HS),
-        children: [(0, NS.jsx)("span", {
+        recording: Ik,
+        seconds: Xk
+      } = (0, yk.k)("replayRecorder");
+      return Ik ? (0, lk.jsxs)("div", {
+        className: ik()("RecordingIndicator", Fk),
+        children: [(0, lk.jsx)("span", {
           className: "RecordingIndicatorDot"
-        }), (0, NS.jsx)("span", {
+        }), (0, lk.jsx)("span", {
           className: "RecordingIndicatorLabel",
           children: "REC"
-        }), (0, NS.jsx)("span", {
+        }), (0, lk.jsx)("span", {
           className: "RecordingIndicatorTime",
-          children: qS(tS)
+          children: ak(Xk)
         })]
       }) : null
     }))
   },
-  5037: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => GS
+  4884: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Hk
     });
-    var tS = gS(1121),
-      bS = gS.n(tS),
-      XS = gS(4762),
-      xS = gS(1281),
-      NS = gS(1127),
-      qS = gS(1528),
-      uS = gS(1588),
-      IS = gS(1435),
-      fS = gS(2630),
-      kS = gS(1181);
-    const aS = {
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(4619),
+      yk = Ik(1179),
+      lk = Ik(1066),
+      ak = Ik(1406),
+      qk = Ik(1453),
+      Lk = Ik(1324),
+      tk = Ik(2424),
+      Zk = Ik(1096);
+    const jk = {
       youtube: {
         icon: "youtube",
         color: "#FF0033",
@@ -8777,440 +8777,440 @@ export const modules = {
       }
     };
 
-    function KS(SS) {
+    function ek(kk) {
       let {
-        platform: HS
-      } = SS;
-      const gS = "youtube" === HS;
-      return (0, kS.jsxs)("span", {
-        className: bS()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: gS
+        platform: Fk
+      } = kk;
+      const Ik = "youtube" === Fk;
+      return (0, Zk.jsxs)("span", {
+        className: Tk()("PlayerProfileSocialLinkIcon", {
+          PlayerProfileSocialLinkIconYoutube: Ik
         }),
-        children: [gS && (0, kS.jsx)(fS.e, {
+        children: [Ik && (0, Zk.jsx)(tk.b, {
           variant: "white"
-        }), !gS && (0, kS.jsx)(NS.d, {
-          name: aS[HS].icon,
+        }), !Ik && (0, Zk.jsx)(lk.e, {
+          name: jk[Fk].icon,
           kit: "brands"
         })]
       })
     }
 
-    function jS(SS) {
+    function wk(kk) {
       let {
-        platform: HS,
-        link: gS,
-        editable: tS,
-        userContext: bS,
-        onLinksUpdated: fS
-      } = SS;
+        platform: Fk,
+        link: Ik,
+        editable: Xk,
+        userContext: Tk,
+        onLinksUpdated: tk
+      } = kk;
       const {
-        t: jS
-      } = (0, xS.F)(), GS = aS[HS];
-      if (!gS && !tS) return null;
+        t: wk
+      } = (0, yk.y)(), Hk = jk[Fk];
+      if (!Ik && !Xk) return null;
 
-      function CS() {
-        var SS;
-        if (!bS || !fS) return;
-        IS.NotificationProvider.showInputPopup({
+      function Jk() {
+        var kk;
+        if (!Tk || !tk) return;
+        Lk.NotificationProvider.showInputPopup({
           title: "homePage:profileSocialLinkEditTitle",
           textOpts: {
             title: {
-              platform: GS.name
+              platform: Hk.name
             }
           },
-          prefixText: XS.r[HS],
+          prefixText: ik.u[Fk],
           placeholderText: "playBloxd",
-          initialValue: null !== (SS = null === gS || void 0 === gS ? void 0 : gS.handle) && void 0 !== SS ? SS : "",
+          initialValue: null !== (kk = null === Ik || void 0 === Ik ? void 0 : Ik.handle) && void 0 !== kk ? kk : "",
           maxLength: 30,
           submitText: "general:save",
-          secondaryButtonText: gS ? "general:remove" : void 0
-        }).getResult().then((async SS => {
-          if ("notificationTornDown" !== SS && null !== SS) try {
-            "submit" === SS.type ? await uS.b.setSocialLink(bS, HS, SS.value) : await uS.b.clearSocialLink(bS, HS), fS()
-          } catch (gS) {
-            console.error("Failed to update social link", gS), IS.NotificationProvider.showAlertPopup({
-              title: gS.errorMessageForUser,
+          secondaryButtonText: Ik ? "general:remove" : void 0
+        }).getResult().then((async kk => {
+          if ("notificationTornDown" !== kk && null !== kk) try {
+            "submit" === kk.type ? await qk.e.setSocialLink(Tk, Fk, kk.value) : await qk.e.clearSocialLink(Tk, Fk), tk()
+          } catch (Ik) {
+            console.error("Failed to update social link", Ik), Lk.NotificationProvider.showAlertPopup({
+              title: Ik.errorMessageForUser,
               confirmText: "general:ok"
             })
           }
         }))
       }
-      if (gS) {
-        const SS = `@${gS.handle}`;
-        return (0, kS.jsxs)("a", {
+      if (Ik) {
+        const kk = `@${Ik.handle}`;
+        return (0, Zk.jsxs)("a", {
           className: "PlayerProfileSocialLink",
           style: {
-            background: GS.color
+            background: Hk.color
           },
-          href: gS.profileUrl,
+          href: Ik.profileUrl,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: [(0, kS.jsxs)("div", {
+          children: [(0, Zk.jsxs)("div", {
             className: "PlayerProfileSocialLinkMain",
-            children: [(0, kS.jsx)(KS, {
-              platform: HS
-            }), (0, kS.jsx)("span", {
+            children: [(0, Zk.jsx)(ek, {
+              platform: Fk
+            }), (0, Zk.jsx)("span", {
               className: "PlayerProfileSocialLinkText",
-              children: (0, kS.jsx)("span", {
+              children: (0, Zk.jsx)("span", {
                 className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: SS
+                children: kk
               })
             })]
-          }), tS && (0, kS.jsx)("button", {
+          }), Xk && (0, Zk.jsx)("button", {
             type: "button",
             className: "PlayerProfileSocialLinkEditButton",
-            ...(0, qS.X)({
+            ...(0, ak.Y)({
               stopPropagation: !0
             }),
-            onClick: SS => {
-              SS.stopPropagation(), SS.preventDefault(), CS()
+            onClick: kk => {
+              kk.stopPropagation(), kk.preventDefault(), Jk()
             },
-            children: (0, kS.jsx)(NS.d, {
+            children: (0, Zk.jsx)(lk.e, {
               name: "pen-to-square"
             })
-          }), !tS && (0, kS.jsx)("span", {
+          }), !Xk && (0, Zk.jsx)("span", {
             className: "PlayerProfileSocialLinkArrow",
-            children: (0, kS.jsx)(NS.d, {
+            children: (0, Zk.jsx)(lk.e, {
               name: "arrow-up-right-from-square"
             })
           })]
         })
       }
-      return (0, kS.jsxs)("button", {
+      return (0, Zk.jsxs)("button", {
         type: "button",
         className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
         style: {
-          background: GS.color
+          background: Hk.color
         },
-        ...(0, qS.X)(),
+        ...(0, ak.Y)(),
         onClick: () => {
-          CS()
+          Jk()
         },
-        children: [(0, kS.jsx)(KS, {
-          platform: HS
-        }), (0, kS.jsxs)("span", {
+        children: [(0, Zk.jsx)(ek, {
+          platform: Fk
+        }), (0, Zk.jsxs)("span", {
           className: "PlayerProfileSocialLinkText",
-          children: [(0, kS.jsx)("span", {
+          children: [(0, Zk.jsx)("span", {
             className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: GS.name
-          }), (0, kS.jsx)("span", {
+            children: Hk.name
+          }), (0, Zk.jsx)("span", {
             className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: jS("homePage:profileSocialLinkAdd")
+            children: wk("homePage:profileSocialLinkAdd")
           })]
-        }), (0, kS.jsx)("span", {
+        }), (0, Zk.jsx)("span", {
           className: "PlayerProfileSocialLinkEditButton",
-          children: (0, kS.jsx)(NS.d, {
+          children: (0, Zk.jsx)(lk.e, {
             name: "pen-to-square"
           })
         })]
       })
     }
 
-    function GS(SS) {
+    function Hk(kk) {
       let {
-        socialLinks: HS,
-        editable: gS = !1,
-        userContext: tS,
-        onLinksUpdated: bS
-      } = SS;
-      if (!gS && 0 === HS.length) return null;
-      const xS = new Map(HS.map((SS => [SS.platform, SS]))),
-        NS = gS ? XS.n : HS.map((SS => SS.platform));
-      return (0, kS.jsx)("div", {
+        socialLinks: Fk,
+        editable: Ik = !1,
+        userContext: Xk,
+        onLinksUpdated: Tk
+      } = kk;
+      if (!Ik && 0 === Fk.length) return null;
+      const yk = new Map(Fk.map((kk => [kk.platform, kk]))),
+        lk = Ik ? ik.t : Fk.map((kk => kk.platform));
+      return (0, Zk.jsx)("div", {
         className: "PlayerProfileSocialLinks",
-        children: (0, kS.jsx)("div", {
+        children: (0, Zk.jsx)("div", {
           className: "PlayerProfileSocialLinksList",
-          children: NS.map((SS => (0, kS.jsx)(jS, {
-            platform: SS,
-            link: xS.get(SS),
-            editable: gS,
-            userContext: tS,
-            onLinksUpdated: bS
-          }, SS)))
+          children: lk.map((kk => (0, Zk.jsx)(wk, {
+            platform: kk,
+            link: yk.get(kk),
+            editable: Ik,
+            userContext: Xk,
+            onLinksUpdated: Tk
+          }, kk)))
         })
       })
     }
   },
-  34223: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => XS
+  34164: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => ik
     });
-    var tS = gS(4669),
-      bS = gS(4675);
+    var Xk = Ik(4525),
+      Tk = Ik(4529);
 
-    function XS(SS) {
+    function ik(kk) {
       let {
-        children: HS,
-        showing: gS,
-        globallyUniqueKey: XS,
-        alwaysMountChildren: xS = !1,
-        doGameplayStartStopOnShow: NS = !0,
-        keepsMovement: qS = !1
-      } = SS;
-      return (0, bS.c)(!0, gS, XS, qS), (0, tS.c)(NS, gS), gS || xS ? HS : null
+        children: Fk,
+        showing: Ik,
+        globallyUniqueKey: ik,
+        alwaysMountChildren: yk = !1,
+        doGameplayStartStopOnShow: lk = !0,
+        keepsMovement: ak = !1
+      } = kk;
+      return (0, Tk.e)(!0, Ik, ik, ak), (0, Xk.b)(lk, Ik), Ik || yk ? Fk : null
     }
   },
-  34280: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => XS
+  34231: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik
     });
-    var tS = gS(64),
-      bS = gS(3577);
+    var Xk = Ik(58),
+      Tk = Ik(3378);
 
-    function XS() {
-      const [SS, HS] = (0, tS.useState)(!1);
-      return (0, tS.useLayoutEffect)((() => {
-        let SS = !0;
-        return (0, bS.f)().then((() => {
-          SS && HS(!0)
+    function ik() {
+      const [kk, Fk] = (0, Xk.useState)(!1);
+      return (0, Xk.useLayoutEffect)((() => {
+        let kk = !0;
+        return (0, Tk.e)().then((() => {
+          kk && Fk(!0)
         })), () => {
-          SS = !1
+          kk = !1
         }
-      }), []), SS
+      }), []), kk
     }
   },
-  6780: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => XS
+  6566: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => ik
     });
-    var tS = gS(64),
-      bS = gS(45);
+    var Xk = Ik(58),
+      Tk = Ik(41);
 
-    function XS(SS, HS) {
-      var gS;
-      const [XS, xS] = (0, tS.useState)(null !== (gS = bS.g.getItem(SS)) && void 0 !== gS ? gS : HS);
-      return [XS, HS => {
-        bS.g.setItem(SS, HS), xS(HS)
+    function ik(kk, Fk) {
+      var Ik;
+      const [ik, yk] = (0, Xk.useState)(null !== (Ik = Tk.j.getItem(kk)) && void 0 !== Ik ? Ik : Fk);
+      return [ik, Fk => {
+        Tk.j.setItem(kk, Fk), yk(Fk)
       }]
     }
   },
-  34196: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => jS,
-      h: () => KS
+  34131: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => wk,
+      e: () => ek
     });
-    gS(34204);
-    var tS = gS(1121),
-      bS = gS.n(tS),
-      XS = gS(64),
-      xS = gS(34189);
+    Ik(34139);
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(58),
+      yk = Ik(34122);
 
-    function NS(SS, HS) {
-      return Math.max(1, Math.round(SS * HS))
+    function lk(kk, Fk) {
+      return Math.max(1, Math.round(kk * Fk))
     }
 
-    function qS(SS, HS) {
-      const gS = HS * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
-        tS = function(SS, HS) {
-          if (SS.lines) return NS(SS.lineThickness, HS) % 2;
-          if (SS.dot) return NS(SS.dotSize, HS) % 2;
-          return uS(SS, HS) % 2
-        }(SS, HS),
-        bS = IS(SS.lineThickness * gS, tS),
-        XS = NS(SS.lineLength, gS),
-        xS = Math.round(SS.gap * gS),
-        qS = SS.outline > 0 ? NS(SS.outline, gS) : 0,
-        kS = [];
-      if (SS.lines && (kS.push({
-          x: bS + xS,
+    function ak(kk, Fk) {
+      const Ik = Fk * (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1),
+        Xk = function(kk, Fk) {
+          if (kk.lines) return lk(kk.lineThickness, Fk) % 2;
+          if (kk.dot) return lk(kk.dotSize, Fk) % 2;
+          return qk(kk, Fk) % 2
+        }(kk, Fk),
+        Tk = Lk(kk.lineThickness * Ik, Xk),
+        ik = lk(kk.lineLength, Ik),
+        yk = Math.round(kk.gap * Ik),
+        ak = kk.outline > 0 ? lk(kk.outline, Ik) : 0,
+        Zk = [];
+      if (kk.lines && (Zk.push({
+          x: Tk + yk,
           y: 0,
-          w: XS,
-          h: bS,
+          w: ik,
+          h: Tk,
           arm: "right"
-        }), kS.push({
-          x: -xS - XS,
+        }), Zk.push({
+          x: -yk - ik,
           y: 0,
-          w: XS,
-          h: bS,
+          w: ik,
+          h: Tk,
           arm: "left"
-        }), kS.push({
+        }), Zk.push({
           x: 0,
-          y: bS + xS,
-          w: bS,
-          h: XS,
+          y: Tk + yk,
+          w: Tk,
+          h: ik,
           arm: "down"
-        }), SS.tStyle || kS.push({
+        }), kk.tStyle || Zk.push({
           x: 0,
-          y: -xS - XS,
-          w: bS,
-          h: XS,
+          y: -yk - ik,
+          w: Tk,
+          h: ik,
           arm: "up"
-        }), 0 === xS && kS.push({
+        }), 0 === yk && Zk.push({
           x: 0,
           y: 0,
-          w: bS,
-          h: bS
-        })), SS.dot) {
-        const HS = IS(SS.dotSize * gS, tS),
-          XS = SS.lines && 0 === xS && SS.dotSize > SS.lineThickness ? Math.max(HS, bS + 2) : HS,
-          NS = (bS - XS) / 2;
-        kS.push({
-          x: NS,
-          y: NS,
-          w: XS,
-          h: XS
+          w: Tk,
+          h: Tk
+        })), kk.dot) {
+        const Fk = Lk(kk.dotSize * Ik, Xk),
+          ik = kk.lines && 0 === yk && kk.dotSize > kk.lineThickness ? Math.max(Fk, Tk + 2) : Fk,
+          lk = (Tk - ik) / 2;
+        Zk.push({
+          x: lk,
+          y: lk,
+          w: ik,
+          h: ik
         })
       }
-      const aS = kS.map((SS => ({
-        ...SS,
-        x: SS.x - qS,
-        y: SS.y - qS,
-        w: SS.w + 2 * qS,
-        h: SS.h + 2 * qS
+      const jk = Zk.map((kk => ({
+        ...kk,
+        x: kk.x - ak,
+        y: kk.y - ak,
+        w: kk.w + 2 * ak,
+        h: kk.h + 2 * ak
       })));
-      let KS = null,
-        jS = null;
-      if (SS.circle) {
-        const HS = NS(SS.circleThickness, gS),
-          XS = function(SS, HS) {
-            return SS + (SS % 2 === HS ? 0 : 1)
-          }(uS(SS, gS), tS),
-          xS = (bS - XS) / 2;
-        KS = fS(xS, XS, HS), qS > 0 && (jS = fS(xS - qS, XS + 2 * qS, HS + 2 * qS))
+      let ek = null,
+        wk = null;
+      if (kk.circle) {
+        const Fk = lk(kk.circleThickness, Ik),
+          ik = function(kk, Fk) {
+            return kk + (kk % 2 === Fk ? 0 : 1)
+          }(qk(kk, Ik), Xk),
+          yk = (Tk - ik) / 2;
+        ek = tk(yk, ik, Fk), ak > 0 && (wk = tk(yk - ak, ik + 2 * ak, Fk + 2 * ak))
       }
       return {
-        cell: bS,
-        fills: kS,
-        outlines: qS > 0 ? aS : [],
-        ring: KS,
-        ringOutline: jS
+        cell: Tk,
+        fills: Zk,
+        outlines: ak > 0 ? jk : [],
+        ring: ek,
+        ringOutline: wk
       }
     }
 
-    function uS(SS, HS) {
-      return Math.round(SS.circleRadius * HS * 2 + NS(SS.circleThickness, HS))
+    function qk(kk, Fk) {
+      return Math.round(kk.circleRadius * Fk * 2 + lk(kk.circleThickness, Fk))
     }
 
-    function IS(SS, HS) {
-      return Math.max(2 - HS, 2 * Math.round((SS - HS) / 2) + HS)
+    function Lk(kk, Fk) {
+      return Math.max(2 - Fk, 2 * Math.round((kk - Fk) / 2) + Fk)
     }
 
-    function fS(SS, HS, gS) {
-      const tS = 2 * gS >= HS - 1;
+    function tk(kk, Fk, Ik) {
+      const Xk = 2 * Ik >= Fk - 1;
       return {
-        x: SS,
-        y: SS,
-        size: HS,
-        border: Math.min(gS, Math.floor(HS / 2)),
-        filled: tS
+        x: kk,
+        y: kk,
+        size: Fk,
+        border: Math.min(Ik, Math.floor(Fk / 2)),
+        filled: Xk
       }
     }
-    var kS = gS(1181);
-    const aS = 1.4;
+    var Zk = Ik(1096);
+    const jk = 1.4;
 
-    function KS(SS, HS) {
-      return SS && HS ? `scale(${aS})` : "scale(1)"
+    function ek(kk, Fk) {
+      return kk && Fk ? `scale(${jk})` : "scale(1)"
     }
 
-    function jS(SS) {
-      return "classic" === SS.settings.style ? (0, kS.jsx)(nS, {
-        ...SS
-      }) : (0, kS.jsx)(JS, {
-        ...SS
+    function wk(kk) {
+      return "classic" === kk.settings.style ? (0, Zk.jsx)(xk, {
+        ...kk
+      }) : (0, Zk.jsx)(Sk, {
+        ...kk
       })
     }
-    const GS = .125;
+    const Hk = .125;
 
-    function CS(SS, HS) {
-      const gS = {};
-      if (SS.color !== xS.d.color && (gS.color = (0, xS.i)(SS.color)), SS.opacity !== xS.d.opacity && (gS.opacity = SS.opacity / 100), SS.outline !== xS.d.outline || SS.outlineColor !== xS.d.outlineColor) {
-        const HS = SS.outline,
-          tS = (0, xS.i)(SS.outlineColor);
-        gS.textShadow = HS > 0 ? `-${HS}px 0 ${tS}, 0 ${HS}px ${tS}, ${HS}px 0 ${tS}, 0 -${HS}px ${tS}` : "none"
+    function Jk(kk, Fk) {
+      const Ik = {};
+      if (kk.color !== yk.f.color && (Ik.color = (0, yk.k)(kk.color)), kk.opacity !== yk.f.opacity && (Ik.opacity = kk.opacity / 100), kk.outline !== yk.f.outline || kk.outlineColor !== yk.f.outlineColor) {
+        const Fk = kk.outline,
+          Xk = (0, yk.k)(kk.outlineColor);
+        Ik.textShadow = Fk > 0 ? `-${Fk}px 0 ${Xk}, 0 ${Fk}px ${Xk}, ${Fk}px 0 ${Xk}, 0 -${Fk}px ${Xk}` : "none"
       }
-      if (SS.size !== xS.d.size) {
-        const tS = SS.size / 100;
-        gS.fontSize = HS ? `calc(max(1.3rem, 18px) * ${tS})` : `calc(1.3rem * ${tS})`, gS.marginTop = `-${GS}em`, gS.transformOrigin = `50% calc(50% + ${GS}em)`
+      if (kk.size !== yk.f.size) {
+        const Xk = kk.size / 100;
+        Ik.fontSize = Fk ? `calc(max(1.3rem, 18px) * ${Xk})` : `calc(1.3rem * ${Xk})`, Ik.marginTop = `-${Hk}em`, Ik.transformOrigin = `50% calc(50% + ${Hk}em)`
       }
-      return gS
+      return Ik
     }
 
-    function nS(SS) {
+    function xk(kk) {
       let {
-        settings: HS,
-        touch: gS,
-        inPreview: tS,
-        inEditor: XS,
-        pressed: xS = !1,
-        pressRef: NS
-      } = SS;
-      return (0, kS.jsx)("div", {
-        className: bS()("Crosshair", {
-          Touch: gS,
-          CrosshairInPreview: tS,
-          CrosshairInEditor: XS || tS
+        settings: Fk,
+        touch: Ik,
+        inPreview: Xk,
+        inEditor: ik,
+        pressed: yk = !1,
+        pressRef: lk
+      } = kk;
+      return (0, Zk.jsx)("div", {
+        className: Tk()("Crosshair", {
+          Touch: Ik,
+          CrosshairInPreview: Xk,
+          CrosshairInEditor: ik || Xk
         }),
-        ref: NS,
+        ref: lk,
         style: {
-          transform: KS(xS, HS.growOnClick),
-          ...CS(HS, gS)
+          transform: ek(yk, Fk.growOnClick),
+          ...Jk(Fk, Ik)
         },
         children: "+"
       })
     }
 
-    function PS(SS, HS) {
-      return SS / HS + "px"
+    function Pk(kk, Fk) {
+      return kk / Fk + "px"
     }
 
-    function QS(SS, HS, gS, tS) {
+    function Kk(kk, Fk, Ik, Xk) {
       return {
-        ...hS(SS, HS, gS),
-        width: PS(SS.w, gS),
-        height: PS(SS.h, gS),
-        background: tS
+        ...Vk(kk, Fk, Ik),
+        width: Pk(kk.w, Ik),
+        height: Pk(kk.h, Ik),
+        background: Xk
       }
     }
 
-    function DS(SS, HS, gS) {
+    function Qk(kk, Fk, Ik) {
       return {
-        left: PS(SS.x, HS),
-        top: PS(SS.y, HS),
-        width: PS(SS.size, HS),
-        height: PS(SS.size, HS),
-        borderWidth: PS(SS.border, HS),
-        borderColor: gS,
-        background: SS.filled ? gS : void 0
+        left: Pk(kk.x, Fk),
+        top: Pk(kk.y, Fk),
+        width: Pk(kk.size, Fk),
+        height: Pk(kk.size, Fk),
+        borderWidth: Pk(kk.border, Fk),
+        borderColor: Ik,
+        background: kk.filled ? Ik : void 0
       }
     }
-    const wS = {
+    const sk = {
       left: [-1, 0],
       right: [1, 0],
       up: [0, -1],
       down: [0, 1]
     };
 
-    function hS(SS, HS, gS) {
-      const [tS, bS] = SS.arm ? wS[SS.arm] : [0, 0], XS = Math.round(HS * gS);
+    function Vk(kk, Fk, Ik) {
+      const [Xk, Tk] = kk.arm ? sk[kk.arm] : [0, 0], ik = Math.round(Fk * Ik);
       return {
-        left: PS(SS.x + tS * XS, gS),
-        top: PS(SS.y + bS * XS, gS)
+        left: Pk(kk.x + Xk * ik, Ik),
+        top: Pk(kk.y + Tk * ik, Ik)
       }
     }
 
-    function ZS(SS) {
-      return SS.arm ? {
-        "data-arm": SS.arm,
-        "data-x": SS.x,
-        "data-y": SS.y
+    function zk(kk) {
+      return kk.arm ? {
+        "data-arm": kk.arm,
+        "data-x": kk.x,
+        "data-y": kk.y
       } : {}
     }
 
-    function JS(SS) {
+    function Sk(kk) {
       let {
-        settings: HS,
-        inPreview: gS,
-        inEditor: tS,
-        pressed: NS = !1,
-        spread: uS,
-        spreadRef: IS
-      } = SS;
-      const fS = (0, XS.useRef)(null),
+        settings: Fk,
+        inPreview: Ik,
+        inEditor: Xk,
+        pressed: lk = !1,
+        spread: qk,
+        spreadRef: Lk
+      } = kk;
+      const tk = (0, ik.useRef)(null),
         {
-          box: KS,
-          dpr: jS
-        } = function(SS) {
-          const [HS, gS] = (0, XS.useState)({
+          box: ek,
+          dpr: wk
+        } = function(kk) {
+          const [Fk, Ik] = (0, ik.useState)({
             box: {
               left: 0,
               top: 0,
@@ -9219,200 +9219,200 @@ export const modules = {
             },
             dpr: 1
           });
-          return (0, XS.useLayoutEffect)((() => {
-            const HS = SS.current;
-            if (!HS) return;
-            const tS = () => {
-              const SS = HS.getBoundingClientRect(),
-                tS = window.devicePixelRatio || 1;
-              gS((HS => HS.dpr === tS && HS.box.left === SS.left && HS.box.top === SS.top && HS.box.width === SS.width && HS.box.height === SS.height ? HS : {
+          return (0, ik.useLayoutEffect)((() => {
+            const Fk = kk.current;
+            if (!Fk) return;
+            const Xk = () => {
+              const kk = Fk.getBoundingClientRect(),
+                Xk = window.devicePixelRatio || 1;
+              Ik((Fk => Fk.dpr === Xk && Fk.box.left === kk.left && Fk.box.top === kk.top && Fk.box.width === kk.width && Fk.box.height === kk.height ? Fk : {
                 box: {
-                  left: SS.left,
-                  top: SS.top,
-                  width: SS.width,
-                  height: SS.height
+                  left: kk.left,
+                  top: kk.top,
+                  width: kk.width,
+                  height: kk.height
                 },
-                dpr: tS
+                dpr: Xk
               }))
             };
-            tS();
-            const bS = new ResizeObserver(tS);
-            return bS.observe(HS), window.addEventListener("resize", tS), window.addEventListener("scroll", tS, !0), () => {
-              bS.disconnect(), window.removeEventListener("resize", tS), window.removeEventListener("scroll", tS, !0)
+            Xk();
+            const Tk = new ResizeObserver(Xk);
+            return Tk.observe(Fk), window.addEventListener("resize", Xk), window.addEventListener("scroll", Xk, !0), () => {
+              Tk.disconnect(), window.removeEventListener("resize", Xk), window.removeEventListener("scroll", Xk, !0)
             }
-          }), [SS]), HS
-        }(fS),
-        GS = (0, XS.useRef)(jS);
-      GS.current = jS;
-      const CS = qS(HS, jS, NS && HS.growOnClick ? aS : 1),
-        nS = function(SS, HS, gS) {
-          const tS = Math.round((SS.left + SS.width / 2) * gS - HS / 2),
-            bS = Math.round((SS.top + SS.height / 2) * gS - HS / 2);
+          }), [kk]), Fk
+        }(tk),
+        Hk = (0, ik.useRef)(wk);
+      Hk.current = wk;
+      const Jk = ak(Fk, wk, lk && Fk.growOnClick ? jk : 1),
+        xk = function(kk, Fk, Ik) {
+          const Xk = Math.round((kk.left + kk.width / 2) * Ik - Fk / 2),
+            Tk = Math.round((kk.top + kk.height / 2) * Ik - Fk / 2);
           return {
-            x: tS / gS - SS.left,
-            y: bS / gS - SS.top
+            x: Xk / Ik - kk.left,
+            y: Tk / Ik - kk.top
           }
-        }(KS, CS.cell, jS),
-        PS = (0, xS.i)(HS.color),
-        wS = (0, xS.i)(HS.outlineColor),
-        JS = (0, XS.useRef)(0);
-      (0, XS.useLayoutEffect)((() => {
-        if (IS) return IS.current = SS => {
-          var HS;
-          JS.current = SS, null === (HS = fS.current) || void 0 === HS || HS.querySelectorAll("[data-arm]").forEach((HS => {
-            Object.assign(HS.style, hS(function(SS) {
+        }(ek, Jk.cell, wk),
+        Pk = (0, yk.k)(Fk.color),
+        sk = (0, yk.k)(Fk.outlineColor),
+        Sk = (0, ik.useRef)(0);
+      (0, ik.useLayoutEffect)((() => {
+        if (Lk) return Lk.current = kk => {
+          var Fk;
+          Sk.current = kk, null === (Fk = tk.current) || void 0 === Fk || Fk.querySelectorAll("[data-arm]").forEach((Fk => {
+            Object.assign(Fk.style, Vk(function(kk) {
               return {
-                x: Number(SS.dataset.x),
-                y: Number(SS.dataset.y),
-                arm: SS.dataset.arm
+                x: Number(kk.dataset.x),
+                y: Number(kk.dataset.y),
+                arm: kk.dataset.arm
               }
-            }(HS), SS, GS.current))
+            }(Fk), kk, Hk.current))
           }))
         }, () => {
-          IS.current = null
+          Lk.current = null
         }
-      }), [IS]);
-      const OS = null !== uS && void 0 !== uS ? uS : JS.current;
-      return (0, kS.jsx)("div", {
-        ref: fS,
-        className: bS()("CrosshairShapes", {
-          CrosshairInPreview: gS,
-          CrosshairInEditor: tS || gS,
-          CrosshairSpreads: void 0 !== IS
+      }), [Lk]);
+      const vk = null !== qk && void 0 !== qk ? qk : Sk.current;
+      return (0, Zk.jsx)("div", {
+        ref: tk,
+        className: Tk()("CrosshairShapes", {
+          CrosshairInPreview: Ik,
+          CrosshairInEditor: Xk || Ik,
+          CrosshairSpreads: void 0 !== Lk
         }),
-        children: (0, kS.jsx)("div", {
+        children: (0, Zk.jsx)("div", {
           className: "CrosshairShapesOrigin",
           style: {
-            left: nS.x,
-            top: nS.y,
-            opacity: HS.opacity / 100
+            left: xk.x,
+            top: xk.y,
+            opacity: Fk.opacity / 100
           },
-          children: (0, kS.jsxs)("div", {
+          children: (0, Zk.jsxs)("div", {
             className: "CrosshairShapesPress",
-            children: [CS.ringOutline && (0, kS.jsx)("div", {
+            children: [Jk.ringOutline && (0, Zk.jsx)("div", {
               className: "CrosshairRing",
-              style: DS(CS.ringOutline, jS, wS)
-            }), CS.outlines.map(((SS, HS) => (0, kS.jsx)("div", {
+              style: Qk(Jk.ringOutline, wk, sk)
+            }), Jk.outlines.map(((kk, Fk) => (0, Zk.jsx)("div", {
               className: "CrosshairPart",
-              ...ZS(SS),
-              style: QS(SS, OS, jS, wS)
-            }, `o${HS}`))), CS.ring && (0, kS.jsx)("div", {
+              ...zk(kk),
+              style: Kk(kk, vk, wk, sk)
+            }, `o${Fk}`))), Jk.ring && (0, Zk.jsx)("div", {
               className: "CrosshairRing",
-              style: DS(CS.ring, jS, PS)
-            }), CS.fills.map(((SS, HS) => (0, kS.jsx)("div", {
+              style: Qk(Jk.ring, wk, Pk)
+            }), Jk.fills.map(((kk, Fk) => (0, Zk.jsx)("div", {
               className: "CrosshairPart",
-              ...ZS(SS),
-              style: QS(SS, OS, jS, PS)
-            }, `f${HS}`)))]
+              ...zk(kk),
+              style: Kk(kk, vk, wk, Pk)
+            }, `f${Fk}`)))]
           })
         })
       })
     }
   },
-  34212: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => IS,
-      g: () => GS,
-      i: () => jS
+  34143: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Lk,
+      f: () => Hk,
+      h: () => wk
     });
-    var tS = gS(34189);
-    const bS = "XH1-",
-      XS = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
-      xS = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
-      NS = ["color", "outlineColor"],
-      qS = 1 + 3 * NS.length + xS.length + 1,
-      uS = Math.ceil(8 * qS / Math.log2(62)),
-      IS = bS.length + uS;
+    var Xk = Ik(34122);
+    const Tk = "XH1-",
+      ik = ["lines", "dot", "circle", "tStyle", "growOnClick", "forGuns"],
+      yk = ["opacity", "outline", "size", "lineLength", "lineThickness", "gap", "dotSize", "circleRadius", "circleThickness"],
+      lk = ["color", "outlineColor"],
+      ak = 1 + 3 * lk.length + yk.length + 1,
+      qk = Math.ceil(8 * ak / Math.log2(62)),
+      Lk = Tk.length + qk;
 
-    function fS(SS) {
-      let HS = 90;
-      for (const gS of SS) HS = 31 * HS + gS & 255;
-      return HS
+    function tk(kk) {
+      let Fk = 90;
+      for (const Ik of kk) Fk = 31 * Fk + Ik & 255;
+      return Fk
     }
-    const kS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
-      aS = BigInt(kS.length);
+    const Zk = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      jk = BigInt(Zk.length);
 
-    function KS(SS, HS) {
-      let gS = 0n;
-      for (const bS of SS) {
-        const SS = kS.indexOf(bS);
-        if (SS < 0) return null;
-        gS = gS * aS + BigInt(SS)
+    function ek(kk, Fk) {
+      let Ik = 0n;
+      for (const Tk of kk) {
+        const kk = Zk.indexOf(Tk);
+        if (kk < 0) return null;
+        Ik = Ik * jk + BigInt(kk)
       }
-      if (gS >> BigInt(8 * HS) !== 0n) return null;
-      const tS = [];
-      for (let bS = 0; bS < HS; bS++) tS.unshift(Number(0xffn & gS)), gS >>= 8n;
-      return tS
+      if (Ik >> BigInt(8 * Fk) !== 0n) return null;
+      const Xk = [];
+      for (let Tk = 0; Tk < Fk; Tk++) Xk.unshift(Number(0xffn & Ik)), Ik >>= 8n;
+      return Xk
     }
 
-    function jS(SS) {
-      let HS = "shapes" === SS.style ? 1 : 0;
-      XS.forEach(((gS, tS) => {
-        SS[gS] && (HS |= 1 << tS + 1)
+    function wk(kk) {
+      let Fk = "shapes" === kk.style ? 1 : 0;
+      ik.forEach(((Ik, Xk) => {
+        kk[Ik] && (Fk |= 1 << Xk + 1)
       }));
-      const gS = [HS];
-      for (const bS of NS) {
-        const HS = (0, tS.e)(bS, SS[bS]);
-        gS.push(HS >> 16 & 255, HS >> 8 & 255, 255 & HS)
+      const Ik = [Fk];
+      for (const Tk of lk) {
+        const Fk = (0, Xk.g)(Tk, kk[Tk]);
+        Ik.push(Fk >> 16 & 255, Fk >> 8 & 255, 255 & Fk)
       }
-      for (const bS of xS) {
+      for (const Tk of yk) {
         const {
-          min: HS,
-          step: XS
-        } = tS.c[bS];
-        gS.push(Math.round(((0, tS.e)(bS, SS[bS]) - HS) / XS))
+          min: Fk,
+          step: ik
+        } = Xk.d[Tk];
+        Ik.push(Math.round(((0, Xk.g)(Tk, kk[Tk]) - Fk) / ik))
       }
-      return gS.push(fS(gS)), bS + function(SS, HS) {
-        let gS = 0n;
-        for (const bS of SS) gS = gS << 8n | BigInt(bS);
-        let tS = "";
-        for (let bS = 0; bS < HS; bS++) tS = kS[Number(gS % aS)] + tS, gS /= aS;
-        return tS
-      }(gS, uS)
+      return Ik.push(tk(Ik)), Tk + function(kk, Fk) {
+        let Ik = 0n;
+        for (const Tk of kk) Ik = Ik << 8n | BigInt(Tk);
+        let Xk = "";
+        for (let Tk = 0; Tk < Fk; Tk++) Xk = Zk[Number(Ik % jk)] + Xk, Ik /= jk;
+        return Xk
+      }(Ik, qk)
     }
 
-    function GS(SS) {
-      for (const HS of SS.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${uS}})`, "gi"))) {
-        const SS = CS(KS(HS[1], qS));
-        if (SS) return SS
+    function Hk(kk) {
+      for (const Fk of kk.matchAll(new RegExp(`XH1-([0-9A-Za-z]{${qk}})`, "gi"))) {
+        const kk = Jk(ek(Fk[1], ak));
+        if (kk) return kk
       }
       return null
     }
 
-    function CS(SS) {
-      if (!SS || SS.length !== qS || fS(SS.slice(0, -1)) !== SS[SS.length - 1]) return null;
-      const HS = SS[0],
-        gS = {
-          ...tS.d,
-          style: 1 & HS ? "shapes" : "classic"
+    function Jk(kk) {
+      if (!kk || kk.length !== ak || tk(kk.slice(0, -1)) !== kk[kk.length - 1]) return null;
+      const Fk = kk[0],
+        Ik = {
+          ...Xk.f,
+          style: 1 & Fk ? "shapes" : "classic"
         };
-      XS.forEach(((SS, tS) => {
-        gS[SS] = 0 !== (HS & 1 << tS + 1)
+      ik.forEach(((kk, Xk) => {
+        Ik[kk] = 0 !== (Fk & 1 << Xk + 1)
       }));
-      let bS = 1;
-      for (const tS of NS) gS[tS] = SS[bS] << 16 | SS[bS + 1] << 8 | SS[bS + 2], bS += 3;
-      for (const XS of xS) {
+      let Tk = 1;
+      for (const Xk of lk) Ik[Xk] = kk[Tk] << 16 | kk[Tk + 1] << 8 | kk[Tk + 2], Tk += 3;
+      for (const ik of yk) {
         const {
-          min: HS,
-          step: xS
-        } = tS.c[XS];
-        gS[XS] = (0, tS.e)(XS, HS + SS[bS] * xS), bS++
+          min: Fk,
+          step: yk
+        } = Xk.d[ik];
+        Ik[ik] = (0, Xk.g)(ik, Fk + kk[Tk] * yk), Tk++
       }
-      return gS
+      return Ik
     }
   },
-  34189: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => tS,
-      d: () => bS,
-      e: () => XS,
-      i: () => uS,
-      l: () => qS,
-      n: () => IS,
-      q: () => NS,
-      r: () => xS
+  34122: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Xk,
+      f: () => Tk,
+      g: () => ik,
+      k: () => qk,
+      n: () => ak,
+      q: () => Lk,
+      t: () => lk,
+      u: () => yk
     });
-    const tS = {
+    const Xk = {
         opacity: {
           min: 5,
           max: 100,
@@ -9469,7 +9469,7 @@ export const modules = {
           step: 1
         }
       },
-      bS = Object.freeze({
+      Tk = Object.freeze({
         style: "classic",
         color: 16777215,
         opacity: 100,
@@ -9490,251 +9490,251 @@ export const modules = {
         forGuns: !1
       });
 
-    function XS(SS, HS) {
-      var gS;
+    function ik(kk, Fk) {
+      var Ik;
       const {
-        min: XS,
-        max: xS,
-        step: NS
-      } = tS[SS];
-      if (!Number.isFinite(HS)) return bS[SS];
-      const qS = (null !== (gS = String(NS).split(".")[1]) && void 0 !== gS ? gS : "").length,
-        uS = Number((Math.round(HS / NS) * NS).toFixed(qS));
-      return Math.min(xS, Math.max(XS, uS))
+        min: ik,
+        max: yk,
+        step: lk
+      } = Xk[kk];
+      if (!Number.isFinite(Fk)) return Tk[kk];
+      const ak = (null !== (Ik = String(lk).split(".")[1]) && void 0 !== Ik ? Ik : "").length,
+        qk = Number((Math.round(Fk / lk) * lk).toFixed(ak));
+      return Math.min(yk, Math.max(ik, qk))
     }
 
-    function xS(SS, HS, gS) {
-      const tS = "number" === typeof gS ? XS(HS, gS) : gS;
+    function yk(kk, Fk, Ik) {
+      const Xk = "number" === typeof Ik ? ik(Fk, Ik) : Ik;
       return {
-        ...SS,
-        [HS]: tS
+        ...kk,
+        [Fk]: Xk
       }
     }
 
-    function NS(SS, HS) {
-      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      return Object.keys(bS).every((tS => gS.includes(tS) || SS[tS] === HS[tS]))
+    function lk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      return Object.keys(Tk).every((Xk => Ik.includes(Xk) || kk[Xk] === Fk[Xk]))
     }
 
-    function qS(SS) {
-      return NS(SS, bS)
+    function ak(kk) {
+      return lk(kk, Tk)
     }
 
-    function uS(SS) {
-      return `#${SS.toString(16).padStart(6,"0")}`
+    function qk(kk) {
+      return `#${kk.toString(16).padStart(6,"0")}`
     }
 
-    function IS(SS) {
-      const HS = /^#?([0-9a-f]{6})$/i.exec(SS.trim());
-      return HS ? parseInt(HS[1], 16) : null
+    function Lk(kk) {
+      const Fk = /^#?([0-9a-f]{6})$/i.exec(kk.trim());
+      return Fk ? parseInt(Fk[1], 16) : null
     }
   },
-  34217: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => fS,
-      f: () => kS
+  34148: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => tk,
+      f: () => Zk
     });
-    var tS = gS(64),
-      bS = gS(45),
-      XS = gS(34212),
-      xS = gS(34189);
-    const NS = "crosshairCode";
-    let qS = null;
-    const uS = new Set;
+    var Xk = Ik(58),
+      Tk = Ik(41),
+      ik = Ik(34143),
+      yk = Ik(34122);
+    const lk = "crosshairCode";
+    let ak = null;
+    const qk = new Set;
 
-    function IS() {
-      if (null === qS) {
-        var SS;
-        const HS = bS.g.getItem(NS);
-        qS = null !== (SS = "string" === typeof HS ? (0, XS.g)(HS) : null) && void 0 !== SS ? SS : xS.d
+    function Lk() {
+      if (null === ak) {
+        var kk;
+        const Fk = Tk.j.getItem(lk);
+        ak = null !== (kk = "string" === typeof Fk ? (0, ik.f)(Fk) : null) && void 0 !== kk ? kk : yk.f
       }
-      return qS
+      return ak
     }
 
-    function fS(SS) {
-      qS = SS, (0, xS.l)(SS) ? bS.g.removeItem(NS) : bS.g.setItem(NS, (0, XS.i)(SS));
-      for (const HS of uS) HS()
+    function tk(kk) {
+      ak = kk, (0, yk.n)(kk) ? Tk.j.removeItem(lk) : Tk.j.setItem(lk, (0, ik.h)(kk));
+      for (const Fk of qk) Fk()
     }
 
-    function kS() {
-      const [SS, HS] = (0, tS.useState)(IS);
-      return (0, tS.useEffect)((() => {
-        const SS = () => {
-          HS(IS())
+    function Zk() {
+      const [kk, Fk] = (0, Xk.useState)(Lk);
+      return (0, Xk.useEffect)((() => {
+        const kk = () => {
+          Fk(Lk())
         };
-        return SS(), gS = SS, uS.add(gS), () => {
-          uS.delete(gS)
+        return kk(), Ik = kk, qk.add(Ik), () => {
+          qk.delete(Ik)
         };
-        var gS
-      }), []), SS
+        var Ik
+      }), []), kk
     }
   },
-  34138: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => bS,
-      f: () => tS
+  34071: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Tk,
+      h: () => Xk
     });
-    const tS = "image/jpeg",
-      bS = "jpg"
+    const Xk = "image/jpeg",
+      Tk = "jpg"
   },
-  34142: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => qS,
-      d: () => uS,
-      e: () => IS
+  34073: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ak,
+      e: () => qk,
+      f: () => Lk
     });
-    var tS = gS(1792),
-      bS = gS(3372),
-      XS = gS(104),
-      xS = gS(1860),
-      NS = gS(34138);
+    var Xk = Ik(1631),
+      Tk = Ik(3147),
+      ik = Ik(95),
+      yk = Ik(1682),
+      lk = Ik(34071);
 
-    function qS() {
-      return !(0, XS.isMobileApp)() || tS.d.supports("photos")
+    function ak() {
+      return !(0, ik.isMobileApp)() || Xk.b.supports("photos")
     }
-    async function uS(SS) {
-      var HS, gS;
-      if ((0, XS.isMobileApp)()) {
+    async function qk(kk) {
+      var Fk, Ik;
+      if ((0, ik.isMobileApp)()) {
         const {
-          saved: HS
-        } = await tS.d.request("photos.save", {
-          data: await (0, bS.g)(SS),
-          mimeType: NS.f
+          saved: Fk
+        } = await Xk.b.request("photos.save", {
+          data: await (0, Tk.f)(kk),
+          mimeType: lk.h
         });
-        return HS ? "saved" : "denied"
+        return Fk ? "saved" : "denied"
       }
-      return (0, XS.isIOS)() && null !== (HS = (gS = navigator).canShare) && void 0 !== HS && HS.call(gS, {
-        files: [SS]
-      }) ? IS(SS) : ((0, xS.c)(SS, SS.name), "saved")
+      return (0, ik.isIOS)() && null !== (Fk = (Ik = navigator).canShare) && void 0 !== Fk && Fk.call(Ik, {
+        files: [kk]
+      }) ? Lk(kk) : ((0, yk.c)(kk, kk.name), "saved")
     }
-    async function IS(SS) {
+    async function Lk(kk) {
       try {
         return await navigator.share({
-          files: [SS]
+          files: [kk]
         }), "shared"
-      } catch (HS) {
-        if (HS instanceof DOMException && "AbortError" === HS.name) return "Hg";
-        if (HS instanceof DOMException && "NotAllowedError" === HS.name) return "needsTap";
-        throw HS
+      } catch (Fk) {
+        if (Fk instanceof DOMException && "AbortError" === Fk.name) return "iI";
+        if (Fk instanceof DOMException && "NotAllowedError" === Fk.name) return "needsTap";
+        throw Fk
       }
     }
   },
-  34135: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => uS,
-      e: () => IS,
-      i: () => fS
+  34062: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => qk,
+      e: () => Lk,
+      h: () => tk
     });
-    var tS = gS(24),
-      bS = gS(34113),
-      XS = gS(1733),
-      xS = gS(34138);
-    const NS = 8294400,
-      qS = .92;
+    var Xk = Ik(25),
+      Tk = Ik(34044),
+      ik = Ik(1580),
+      yk = Ik(34071);
+    const lk = 8294400,
+      ak = .92;
 
-    function uS() {
-      (0, XS.g)(), tS.b.set({
+    function qk() {
+      (0, ik.g)(), Xk.d.set({
         screenshotMode: !0
       })
     }
 
-    function IS() {
-      tS.b.set({
+    function Lk() {
+      Xk.d.set({
         screenshotMode: !1
       })
     }
-    async function fS() {
+    async function tk() {
       const {
-        width: SS,
-        height: HS,
-        scale: gS
-      } = function(SS, HS, gS) {
-        const tS = Math.max(1, SS),
-          bS = Math.max(1, HS),
-          XS = Math.min(Math.max(1, gS), Math.sqrt(NS / (tS * bS)));
+        width: kk,
+        height: Fk,
+        scale: Ik
+      } = function(kk, Fk, Ik) {
+        const Xk = Math.max(1, kk),
+          Tk = Math.max(1, Fk),
+          ik = Math.min(Math.max(1, Ik), Math.sqrt(lk / (Xk * Tk)));
         return {
-          width: Math.round(tS * XS),
-          height: Math.round(bS * XS),
-          scale: XS
+          width: Math.round(Xk * ik),
+          height: Math.round(Tk * ik),
+          scale: ik
         }
       }(window.innerWidth, window.innerHeight, window.devicePixelRatio), {
-        blob: tS
-      } = await bS.devTools.capturePhoto(SS, HS, {
-        scale: gS,
-        type: xS.f,
-        quality: qS
+        blob: Xk
+      } = await Tk.devTools.capturePhoto(kk, Fk, {
+        scale: Ik,
+        type: yk.h,
+        quality: ak
       });
-      return new File([tS], function(SS) {
-        const HS = SS => String(SS).padStart(2, "0"),
-          gS = `${SS.getFullYear()}${HS(SS.getMonth()+1)}${HS(SS.getDate())}`,
-          tS = `${HS(SS.getHours())}${HS(SS.getMinutes())}${HS(SS.getSeconds())}`;
-        return `bloxd-${gS}-${tS}.${xS.e}`
+      return new File([Xk], function(kk) {
+        const Fk = kk => String(kk).padStart(2, "0"),
+          Ik = `${kk.getFullYear()}${Fk(kk.getMonth()+1)}${Fk(kk.getDate())}`,
+          Xk = `${Fk(kk.getHours())}${Fk(kk.getMinutes())}${Fk(kk.getSeconds())}`;
+        return `bloxd-${Ik}-${Xk}.${yk.d}`
       }(new Date), {
-        type: xS.f
+        type: yk.h
       })
     }
   },
-  34185: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => XS,
-      f: () => bS
+  34119: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => ik,
+      d: () => Tk
     });
-    var tS = gS(24);
+    var Xk = Ik(25);
 
-    function bS(SS, HS) {
-      return SS && !HS
+    function Tk(kk, Fk) {
+      return kk && !Fk
     }
 
-    function XS() {
-      return bS(tS.b.get("isTouchScreen"), tS.b.get("clientEscMenuOptions").touchActionButtons)
+    function ik() {
+      return Tk(Xk.d.get("isTouchScreen"), Xk.d.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  34117: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => tS
+  34048: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk
     });
-    const tS = new Set(["chunkBorders"])
+    const Xk = new Set(["chunkBorders"])
   },
-  34113: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      ALL_DEV_TOOLS: () => xS,
-      coreDevTools: () => uS,
-      devTools: () => qS
+  34044: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      ALL_DEV_TOOLS: () => yk,
+      coreDevTools: () => qk,
+      devTools: () => ak
     });
-    var tS = gS(699),
-      bS = gS(1378),
-      XS = gS(34117);
-    const xS = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
-    async function NS() {
+    var Xk = Ik(646),
+      Tk = Ik(1276),
+      ik = Ik(34048);
+    const yk = new Set(["sceneDownload", "ambientLight", "weaponRaycasts", "chunkBorders"]);
+    async function lk() {
       const {
-        noaDevTools: SS
-      } = await gS.e(236).then((() => gS(41082)));
-      return SS
+        noaDevTools: kk
+      } = await Ik.e(236).then((() => Ik(41079)));
+      return kk
     }
-    const qS = new class {
+    const ak = new class {
         constructor() {
-          this.loadHost = NS, this.tools = xS
+          this.loadHost = lk, this.tools = yk
         }
-        setHost(SS) {
-          this.tools = null === SS ? xS : SS.tools, this.loadHost = null === SS ? NS : async () => SS
+        setHost(kk) {
+          this.tools = null === kk ? yk : kk.tools, this.loadHost = null === kk ? lk : async () => kk
         }
-        supports(SS) {
-          return this.tools.has(SS)
+        supports(kk) {
+          return this.tools.has(kk)
         }
-        async downloadScene(SS, HS) {
-          const gS = await this.loadHost();
-          await gS.downloadScene(SS, HS)
+        async downloadScene(kk, Fk) {
+          const Ik = await this.loadHost();
+          await Ik.downloadScene(kk, Fk)
         }
-        async setAmbientLightIntensity(SS) {
-          const HS = await this.loadHost();
-          await HS.setAmbientLightIntensity(SS)
+        async setAmbientLightIntensity(kk) {
+          const Fk = await this.loadHost();
+          await Fk.setAmbientLightIntensity(kk)
         }
-        async capturePhoto(SS, HS, gS) {
-          return (await this.loadHost()).capturePhoto(SS, HS, gS)
+        async capturePhoto(kk, Fk, Ik) {
+          return (await this.loadHost()).capturePhoto(kk, Fk, Ik)
         }
       },
-      uS = {
-        tools: XS.b,
+      qk = {
+        tools: ik.c,
         downloadScene: async () => {
           throw new Error("This client can't download the scene")
         },
@@ -9745,121 +9745,121 @@ export const modules = {
           throw new Error("No game is drawing yet")
         }
       };
-    tS.A && qS.setHost(uS), (0, bS.w)((() => {
-      qS.setHost(uS)
+    Xk.x && ak.setHost(qk), (0, Tk.B)((() => {
+      ak.setHost(qk)
     }))
   },
-  34271: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => xS,
-      h: () => bS,
-      i: () => IS
+  34222: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk,
+      f: () => Tk,
+      h: () => Lk
     });
-    var tS = gS(1657);
+    var Xk = Ik(1518);
 
-    function bS(SS) {
-      var HS;
+    function Tk(kk) {
+      var Fk;
       return {
-        ...xS.store,
-        yaw: xS.store.yaw + (null !== (HS = tS.c[SS].previewYaw) && void 0 !== HS ? HS : 0)
+        ...yk.store,
+        yaw: yk.store.yaw + (null !== (Fk = Xk.c[kk].previewYaw) && void 0 !== Fk ? Fk : 0)
       }
     }
-    const XS = {
+    const ik = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      xS = {
-        player: XS,
+      yk = {
+        player: ik,
         store: {
-          ...XS,
+          ...ik,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function NS(SS, HS) {
-      SS instanceof Promise ? SS.then(HS).catch((SS => {
-        console.error("Couldn't open the preview", SS)
-      })) : HS(SS)
+    function lk(kk, Fk) {
+      kk instanceof Promise ? kk.then(Fk).catch((kk => {
+        console.error("Couldn't open the preview", kk)
+      })) : Fk(kk)
     }
-    class qS {
-      constructor(SS) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, NS(SS, (SS => {
-          this.closed ? SS.close() : (this.opened = SS, null !== this.size && SS.resize(this.size.width, this.size.height), null !== this.view && SS.show(this.view))
+    class ak {
+      constructor(kk) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, lk(kk, (kk => {
+          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height), null !== this.view && kk.show(this.view))
         }))
       }
-      show(SS) {
-        var HS;
-        this.view = SS, null === (HS = this.opened) || void 0 === HS || HS.show(SS)
+      show(kk) {
+        var Fk;
+        this.view = kk, null === (Fk = this.opened) || void 0 === Fk || Fk.show(kk)
       }
-      resize(SS, HS) {
-        var gS;
+      resize(kk, Fk) {
+        var Ik;
         this.size = {
-          width: SS,
-          height: HS
-        }, null === (gS = this.opened) || void 0 === gS || gS.resize(SS, HS)
+          width: kk,
+          height: Fk
+        }, null === (Ik = this.opened) || void 0 === Ik || Ik.resize(kk, Fk)
       }
       close() {
-        var SS;
-        this.closed = !0, null === (SS = this.opened) || void 0 === SS || SS.close(), this.opened = null
+        var kk;
+        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
       }
     }
-    class uS {
-      constructor(SS) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(SS).then((SS => SS.ready)), NS(SS, (SS => {
-          this.closed ? SS.close() : (this.opened = SS, null !== this.size && SS.resize(this.size.width, this.size.height))
+    class qk {
+      constructor(kk) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(kk).then((kk => kk.ready)), lk(kk, (kk => {
+          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var SS, HS;
-        return null !== (SS = null === (HS = this.opened) || void 0 === HS ? void 0 : HS.isReady()) && void 0 !== SS && SS
+        var kk, Fk;
+        return null !== (kk = null === (Fk = this.opened) || void 0 === Fk ? void 0 : Fk.isReady()) && void 0 !== kk && kk
       }
-      setCosmetic(SS, HS) {
-        var gS;
-        null === (gS = this.opened) || void 0 === gS || gS.setCosmetic(SS, HS)
+      setCosmetic(kk, Fk) {
+        var Ik;
+        null === (Ik = this.opened) || void 0 === Ik || Ik.setCosmetic(kk, Fk)
       }
-      playEmote(SS) {
-        var HS;
-        null === (HS = this.opened) || void 0 === HS || HS.playEmote(SS)
+      playEmote(kk) {
+        var Fk;
+        null === (Fk = this.opened) || void 0 === Fk || Fk.playEmote(kk)
       }
-      setOrbit(SS) {
-        var HS;
-        null === (HS = this.opened) || void 0 === HS || HS.setOrbit(SS)
+      setOrbit(kk) {
+        var Fk;
+        null === (Fk = this.opened) || void 0 === Fk || Fk.setOrbit(kk)
       }
       resetCamera() {
-        var SS;
-        null === (SS = this.opened) || void 0 === SS || SS.resetCamera()
+        var kk;
+        null === (kk = this.opened) || void 0 === kk || kk.resetCamera()
       }
-      async untilDrawn(SS) {
-        var HS;
-        await this.ready, await (null === (HS = this.opened) || void 0 === HS ? void 0 : HS.untilDrawn(SS))
+      async untilDrawn(kk) {
+        var Fk;
+        await this.ready, await (null === (Fk = this.opened) || void 0 === Fk ? void 0 : Fk.untilDrawn(kk))
       }
-      resize(SS, HS) {
-        var gS;
+      resize(kk, Fk) {
+        var Ik;
         this.size = {
-          width: SS,
-          height: HS
-        }, null === (gS = this.opened) || void 0 === gS || gS.resize(SS, HS)
+          width: kk,
+          height: Fk
+        }, null === (Ik = this.opened) || void 0 === Ik || Ik.resize(kk, Fk)
       }
       close() {
-        var SS;
-        this.closed = !0, null === (SS = this.opened) || void 0 === SS || SS.close(), this.opened = null
+        var kk;
+        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
       }
     }
-    const IS = new class {
+    const Lk = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(SS) {
-        this.host = SS
+      setHost(kk) {
+        this.host = kk
       }
-      setDefaultHost(SS) {
-        this.makeDefault = SS
+      setDefaultHost(kk) {
+        this.makeDefault = kk
       }
       current() {
         if (null === this.host) {
@@ -9868,99 +9868,99 @@ export const modules = {
         }
         return this.host
       }
-      openMob(SS) {
-        return new qS(this.current().openMob(SS))
+      openMob(kk) {
+        return new ak(this.current().openMob(kk))
       }
-      openPet(SS) {
-        return new qS(this.current().openPet(SS))
+      openPet(kk) {
+        return new ak(this.current().openPet(kk))
       }
-      openMobLineup(SS) {
-        return new qS(this.current().openMobLineup(SS))
+      openMobLineup(kk) {
+        return new ak(this.current().openMobLineup(kk))
       }
-      openCharacter(SS, HS) {
-        return new uS(this.current().openCharacter(SS, HS))
+      openCharacter(kk, Fk) {
+        return new qk(this.current().openCharacter(kk, Fk))
       }
     }
   },
-  34267: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => tS.e,
-      f: () => tS.h,
-      g: () => tS.i
+  34218: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk.c,
+      f: () => Xk.f,
+      h: () => Xk.h
     });
-    var tS = gS(34271);
-    class bS {
-      constructor(SS) {
-        this.load = SS, this.loaded = null, this.loading = null
+    var Xk = Ik(34222);
+    class Tk {
+      constructor(kk) {
+        this.load = kk, this.loaded = null, this.loading = null
       }
-      run(SS) {
-        return null !== this.loaded ? SS(this.loaded) : (this.loading ??= this.load().then((SS => (this.loaded = SS, SS)), (SS => {
-          throw this.loading = null, SS
-        })), this.loading.then(SS))
+      run(kk) {
+        return null !== this.loaded ? kk(this.loaded) : (this.loading ??= this.load().then((kk => (this.loaded = kk, kk)), (kk => {
+          throw this.loading = null, kk
+        })), this.loading.then(kk))
       }
     }
-    class XS {
+    class ik {
       constructor() {
-        this.mobScene = new bS((() => Promise.all([gS.e(72), gS.e(232), gS.e(231), gS.e(254), gS.e(96), gS.e(255), gS.e(75), gS.e(74), gS.e(252), gS.e(73), gS.e(262), gS.e(256), gS.e(261), gS.e(259), gS.e(251), gS.e(274), gS.e(228), gS.e(244), gS.e(257), gS.e(260), gS.e(77), gS.e(186), gS.e(222), gS.e(95), gS.e(225), gS.e(240), gS.e(120), gS.e(241), gS.e(76), gS.e(119), gS.e(246)]).then((() => gS(41093))))), this.characterScene = new bS((() => Promise.all([gS.e(72), gS.e(232), gS.e(231), gS.e(254), gS.e(96), gS.e(255), gS.e(75), gS.e(74), gS.e(252), gS.e(73), gS.e(262), gS.e(256), gS.e(261), gS.e(259), gS.e(251), gS.e(274), gS.e(228), gS.e(244), gS.e(257), gS.e(260), gS.e(77), gS.e(186), gS.e(222), gS.e(95), gS.e(225), gS.e(240), gS.e(120), gS.e(241), gS.e(76), gS.e(119), gS.e(245)]).then((() => gS(41184)))))
+        this.mobScene = new Tk((() => Promise.all([Ik.e(72), Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(96), Ik.e(255), Ik.e(75), Ik.e(74), Ik.e(252), Ik.e(73), Ik.e(262), Ik.e(256), Ik.e(261), Ik.e(259), Ik.e(251), Ik.e(274), Ik.e(228), Ik.e(244), Ik.e(257), Ik.e(260), Ik.e(77), Ik.e(186), Ik.e(222), Ik.e(95), Ik.e(225), Ik.e(240), Ik.e(120), Ik.e(241), Ik.e(76), Ik.e(119), Ik.e(246)]).then((() => Ik(41091))))), this.characterScene = new Tk((() => Promise.all([Ik.e(72), Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(96), Ik.e(255), Ik.e(75), Ik.e(74), Ik.e(252), Ik.e(73), Ik.e(262), Ik.e(256), Ik.e(261), Ik.e(259), Ik.e(251), Ik.e(274), Ik.e(228), Ik.e(244), Ik.e(257), Ik.e(260), Ik.e(77), Ik.e(186), Ik.e(222), Ik.e(95), Ik.e(225), Ik.e(240), Ik.e(120), Ik.e(241), Ik.e(76), Ik.e(119), Ik.e(245)]).then((() => Ik(41185)))))
       }
-      openMob(SS) {
-        return this.mobScene.run((HS => HS.openMobPreview(SS)))
+      openMob(kk) {
+        return this.mobScene.run((Fk => Fk.openMobPreview(kk)))
       }
-      openPet(SS) {
-        return this.mobScene.run((HS => HS.openPetPreview(SS)))
+      openPet(kk) {
+        return this.mobScene.run((Fk => Fk.openPetPreview(kk)))
       }
-      openMobLineup(SS) {
-        return this.mobScene.run((HS => HS.openMobLineupPreview(SS)))
+      openMobLineup(kk) {
+        return this.mobScene.run((Fk => Fk.openMobLineupPreview(kk)))
       }
-      openCharacter(SS, HS) {
-        return this.characterScene.run((gS => gS.openCharacterPreview(SS, HS)))
+      openCharacter(kk, Fk) {
+        return this.characterScene.run((Ik => Ik.openCharacterPreview(kk, Fk)))
       }
     }
-    tS.i.setDefaultHost((() => new XS))
+    Xk.h.setDefaultHost((() => new ik))
   },
-  6848: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => bS,
-      f: () => XS
+  6644: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Tk,
+      i: () => ik
     });
-    var tS = gS(45);
-    const bS = "shaderPack";
-    async function XS() {
-      var SS;
-      let HS = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (SS = await tS.e.getItem(bS, HS)) && void 0 !== SS ? SS : null
+    var Xk = Ik(41);
+    const Tk = "shaderPack";
+    async function ik() {
+      var kk;
+      let Fk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (kk = await Xk.g.getItem(Tk, Fk)) && void 0 !== kk ? kk : null
     }
   },
-  34156: (SS, HS, gS) => {
-    function tS(SS, HS) {
-      return SS && !HS
+  34083: (kk, Fk, Ik) => {
+    function Xk(kk, Fk) {
+      return kk && !Fk
     }
-    gS.d(HS, {
-      d: () => tS
+    Ik.d(Fk, {
+      c: () => Xk
     })
   },
-  34180: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => XS
+  34111: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik
     });
-    var tS = gS(1149);
+    var Xk = Ik(1076);
 
-    function bS() {
-      var SS, HS;
-      return null !== (SS = null === (HS = screen.orientation) || void 0 === HS ? void 0 : HS.type) && void 0 !== SS ? SS : innerWidth > innerHeight ? "landscape" : "portrait"
+    function Tk() {
+      var kk, Fk;
+      return null !== (kk = null === (Fk = screen.orientation) || void 0 === Fk ? void 0 : Fk.type) && void 0 !== kk ? kk : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const XS = new class {
+    const ik = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && bS() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && Tk() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = bS(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, tS.Zj)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = Tk(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, Xk.ow)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -9968,176 +9968,176 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const SS of this.resizers) SS()
+            for (const kk of this.resizers) kk()
           }
         }), 1e3)
       }
-      heldSizer(SS) {
-        let HS = !1;
+      heldSizer(kk) {
+        let Fk = !1;
         return () => {
-          if (HS && this.isHeld()) return null;
-          const gS = SS();
-          return HS ||= null !== gS, gS
+          if (Fk && this.isHeld()) return null;
+          const Ik = kk();
+          return Fk ||= null !== Ik, Ik
         }
       }
-      onRelease(SS) {
-        return this.resizers.add(SS), () => {
-          this.resizers.delete(SS)
+      onRelease(kk) {
+        return this.resizers.add(kk), () => {
+          this.resizers.delete(kk)
         }
       }
     }
   },
-  34149: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => uS,
-      g: () => fS,
-      h: () => IS
+  34079: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => qk,
+      f: () => tk,
+      i: () => Lk
     });
-    var tS = gS(24),
-      bS = gS(1792),
-      XS = gS(45),
-      xS = gS(3793);
-    const NS = 2592e5,
-      qS = "notificationOptInLastPromptedAt";
-    async function uS() {
-      var SS;
-      const HS = null !== (SS = XS.g.getItem(qS)) && void 0 !== SS ? SS : 0;
-      return Date.now() - HS < NS ? null : fS()
+    var Xk = Ik(25),
+      Tk = Ik(1631),
+      ik = Ik(41),
+      yk = Ik(3612);
+    const lk = 2592e5,
+      ak = "notificationOptInLastPromptedAt";
+    async function qk() {
+      var kk;
+      const Fk = null !== (kk = ik.j.getItem(ak)) && void 0 !== kk ? kk : 0;
+      return Date.now() - Fk < lk ? null : tk()
     }
 
-    function IS() {
-      XS.g.setItem(qS, Date.now())
+    function Lk() {
+      ik.j.setItem(ak, Date.now())
     }
-    async function fS() {
-      return await bS.d.ready, bS.d.supports("notifications") ? tS.b.get("mobilePushNotificationsCanAsk") ? async () => {
-        bS.d.request("notifications.requestPermission", {}).then((SS => {
+    async function tk() {
+      return await Tk.b.ready, Tk.b.supports("notifications") ? Xk.d.get("mobilePushNotificationsCanAsk") ? async () => {
+        Tk.b.request("notifications.requestPermission", {}).then((kk => {
           let {
-            canAsk: HS
-          } = SS;
-          tS.b.set({
-            mobilePushNotificationsCanAsk: HS
+            canAsk: Fk
+          } = kk;
+          Xk.d.set({
+            mobilePushNotificationsCanAsk: Fk
           })
-        }), (SS => {
-          console.error("The app couldn't ask for push notifications:", SS)
+        }), (kk => {
+          console.error("The app couldn't ask for push notifications:", kk)
         }))
-      }: null: await xS.d.canAsk() ? () => xS.d.requestPermission() : null
+      }: null: await yk.b.canAsk() ? () => yk.b.requestPermission() : null
     }
   },
-  34124: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => nS,
-      c: () => uS,
-      g: () => jS,
-      h: () => KS
+  34051: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => xk,
+      f: () => qk,
+      h: () => wk,
+      l: () => ek
     });
-    var tS = gS(160),
-      bS = gS(1348),
-      XS = gS(1286),
-      xS = gS(1216),
-      NS = gS(1835);
-    const qS = {
+    var Xk = Ik(149),
+      Tk = Ik(1253),
+      ik = Ik(1194),
+      yk = Ik(1120),
+      lk = Ik(1658);
+    const ak = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function uS(SS) {
-      return qS[SS]
+    function qk(kk) {
+      return ak[kk]
     }
 
-    function IS(SS) {
-      return (0, NS.b)(SS) ? "outdated" : SS instanceof tS.b ? 429 === SS.httpCode ? "busy" : "server" : "offline"
+    function Lk(kk) {
+      return (0, lk.d)(kk) ? "outdated" : kk instanceof Xk.b ? 429 === kk.httpCode ? "busy" : "server" : "offline"
     }
 
-    function fS(SS, HS, gS) {
-      return (0, xS.postJsonWithMetricsCookiesAndJsonResponse)(`${XS.clientSideServerUrls.indexUrl}${HS}`, gS, {
+    function tk(kk, Fk, Ik) {
+      return (0, yk.postJsonWithMetricsCookiesAndJsonResponse)(`${ik.clientSideServerUrls.indexUrl}${Fk}`, Ik, {
         retries: 3
-      }, SS.getMetricsCookies()).catch((SS => (console.error("Bad response from the server when trying to change name:", HS, SS), {
+      }, kk.getMetricsCookies()).catch((kk => (console.error("Bad response from the server when trying to change name:", Fk, kk), {
         outcome: "failed",
-        failure: IS(SS)
+        failure: Lk(kk)
       })))
     }
 
-    function kS(SS) {
-      return "outcome" in SS && "failed" === SS.outcome
+    function Zk(kk) {
+      return "outcome" in kk && "failed" === kk.outcome
     }
 
-    function aS(SS) {
-      return console.error("Error when trying to get with new name from DB", SS), {
+    function jk(kk) {
+      return console.error("Error when trying to get with new name from DB", kk), {
         outcome: "refused",
-        message: SS
+        message: kk
       }
     }
-    async function KS(SS) {
-      const HS = await fS(SS, "/index/name/random", {});
-      return kS(HS) ? HS : "err" in HS ? aS(HS.err) : (SS.setPlayerName(HS.name), {
+    async function ek(kk) {
+      const Fk = await tk(kk, "/index/name/random", {});
+      return Zk(Fk) ? Fk : "err" in Fk ? jk(Fk.err) : (kk.setPlayerName(Fk.name), {
         outcome: "changed",
-        name: HS.name
+        name: Fk.name
       })
     }
-    async function jS(SS, HS) {
-      const gS = await fS(SS, "/index/name/update", {
-        name: HS
+    async function wk(kk, Fk) {
+      const Ik = await tk(kk, "/index/name/update", {
+        name: Fk
       });
-      return kS(gS) ? gS : "err" in gS ? aS(gS.err) : gS.nameExists ? {
+      return Zk(Ik) ? Ik : "err" in Ik ? jk(Ik.err) : Ik.nameExists ? {
         outcome: "taken"
-      } : (SS.setPlayerName(HS), {
+      } : (kk.setPlayerName(Fk), {
         outcome: "changed",
-        name: HS
+        name: Fk
       })
     }
 
-    function GS(SS, HS) {
-      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const tS = 1 === HS ? 1 : 10 ** (HS - 1),
-        XS = String(tS + Math.floor(gS() * (10 ** HS - tS)));
-      return `${SS.slice(0,bS.g-HS)}${XS}`
+    function Hk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const Xk = 1 === Fk ? 1 : 10 ** (Fk - 1),
+        ik = String(Xk + Math.floor(Ik() * (10 ** Fk - Xk)));
+      return `${kk.slice(0,Tk.j-Fk)}${ik}`
     }
-    const CS = [1, 2, 3, 4];
-    async function nS(SS, HS) {
-      const gS = await jS(SS, HS);
-      if ("taken" !== gS.outcome) return gS;
-      for (const tS of CS) {
-        const gS = GS(HS, tS),
-          bS = await jS(SS, gS);
-        if ("taken" !== bS.outcome) return bS
+    const Jk = [1, 2, 3, 4];
+    async function xk(kk, Fk) {
+      const Ik = await wk(kk, Fk);
+      if ("taken" !== Ik.outcome) return Ik;
+      for (const Xk of Jk) {
+        const Ik = Hk(Fk, Xk),
+          Tk = await wk(kk, Ik);
+        if ("taken" !== Tk.outcome) return Tk
       }
       return {
         outcome: "taken"
       }
     }
   },
-  34158: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => NS,
-      e: () => qS
+  34091: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => lk,
+      f: () => ak
     });
-    var tS = gS(24);
-    const bS = 24,
-      XS = "farNametags",
-      xS = 1e5;
+    var Xk = Ik(25);
+    const Tk = 24,
+      ik = "farNametags",
+      yk = 1e5;
 
-    function NS() {
-      var SS;
-      return null === (SS = tS.b.get("showDistantNametags")) || void 0 === SS || SS
+    function lk() {
+      var kk;
+      return null === (kk = Xk.d.get("showDistantNametags")) || void 0 === kk || kk
     }
 
-    function qS() {
-      var SS;
-      return null !== (SS = function() {
-        const SS = new URLSearchParams(window.location.search).get(XS),
-          HS = null === SS || "" === SS ? NaN : Number(SS);
-        return Number.isFinite(HS) && HS >= 0 ? Math.min(HS, xS) : null
-      }()) && void 0 !== SS ? SS : NS() ? 0 : bS
+    function ak() {
+      var kk;
+      return null !== (kk = function() {
+        const kk = new URLSearchParams(window.location.search).get(ik),
+          Fk = null === kk || "" === kk ? NaN : Number(kk);
+        return Number.isFinite(Fk) && Fk >= 0 ? Math.min(Fk, yk) : null
+      }()) && void 0 !== kk ? kk : lk() ? 0 : Tk
     }
   },
-  34256: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => bS,
-      f: () => xS
+  34202: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Tk,
+      d: () => yk
     });
-    const tS = [{
+    const Xk = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -10319,79 +10319,79 @@ export const modules = {
       suffix: "K"
     }];
 
-    function bS(SS) {
-      let HS, gS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof SS) {
-        if (!Number.isFinite(SS)) return "0";
-        if (Math.abs(SS) < 100) {
-          const HS = SS < 0 ? "-" : "",
-            gS = Math.abs(SS);
-          return gS >= 10 ? `${HS}${gS.toFixed(1).replace(/\.0$/,"")}` : `${HS}${gS.toFixed(2).replace(/\.?0+$/,"")}`
+    function Tk(kk) {
+      let Fk, Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof kk) {
+        if (!Number.isFinite(kk)) return "0";
+        if (Math.abs(kk) < 100) {
+          const Fk = kk < 0 ? "-" : "",
+            Ik = Math.abs(kk);
+          return Ik >= 10 ? `${Fk}${Ik.toFixed(1).replace(/\.0$/,"")}` : `${Fk}${Ik.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        HS = BigInt(Math.floor(SS))
-      } else HS = SS;
-      const bS = HS < 0n ? -HS : HS,
-        XS = HS < 0n ? "-" : "",
-        xS = bS.toString();
-      if (xS.length <= gS) return `${XS}${xS}`;
-      const NS = 3 * Math.floor((xS.length - 1) / 3);
-      if (NS < 3) return `${XS}${xS}`;
-      if (NS > 3 * tS.length) {
-        const SS = xS[0],
-          HS = xS.slice(1, 3).replace(/0+$/, "");
-        return `${XS}${HS?`${SS}.${HS}`:SS}e${xS.length-1}`
+        Fk = BigInt(Math.floor(kk))
+      } else Fk = kk;
+      const Tk = Fk < 0n ? -Fk : Fk,
+        ik = Fk < 0n ? "-" : "",
+        yk = Tk.toString();
+      if (yk.length <= Ik) return `${ik}${yk}`;
+      const lk = 3 * Math.floor((yk.length - 1) / 3);
+      if (lk < 3) return `${ik}${yk}`;
+      if (lk > 3 * Xk.length) {
+        const kk = yk[0],
+          Fk = yk.slice(1, 3).replace(/0+$/, "");
+        return `${ik}${Fk?`${kk}.${Fk}`:kk}e${yk.length-1}`
       }
       const {
-        threshold: qS,
-        suffix: uS
-      } = tS[tS.length - NS / 3], IS = bS / qS, fS = Number(1000n * (bS % qS) / qS), kS = Number(IS) + fS / 1e3;
-      let aS;
-      return aS = kS >= 100 ? Math.floor(kS).toString() : kS >= 10 ? kS.toFixed(1).replace(/\.0$/, "") : kS.toFixed(2).replace(/\.?0+$/, ""), `${XS}${aS}${uS}`
+        threshold: ak,
+        suffix: qk
+      } = Xk[Xk.length - lk / 3], Lk = Tk / ak, tk = Number(1000n * (Tk % ak) / ak), Zk = Number(Lk) + tk / 1e3;
+      let jk;
+      return jk = Zk >= 100 ? Math.floor(Zk).toString() : Zk >= 10 ? Zk.toFixed(1).replace(/\.0$/, "") : Zk.toFixed(2).replace(/\.?0+$/, ""), `${ik}${jk}${qk}`
     }
-    const XS = tS.map((SS => {
+    const ik = Xk.map((kk => {
       let {
-        threshold: HS,
-        suffix: gS
-      } = SS;
+        threshold: Fk,
+        suffix: Ik
+      } = kk;
       return {
-        threshold: Number(HS),
-        suffix: gS
+        threshold: Number(Fk),
+        suffix: Ik
       }
-    })).filter((SS => {
+    })).filter((kk => {
       let {
-        threshold: HS
-      } = SS;
-      return Number.isFinite(HS)
+        threshold: Fk
+      } = kk;
+      return Number.isFinite(Fk)
     }));
 
-    function xS(SS) {
-      const HS = Math.abs(SS),
-        gS = SS < 0 ? "-" : "";
+    function yk(kk) {
+      const Fk = Math.abs(kk),
+        Ik = kk < 0 ? "-" : "";
       for (const {
-          threshold: tS,
-          suffix: bS
+          threshold: Xk,
+          suffix: Tk
         }
-        of XS)
-        if (HS >= tS) {
-          const SS = HS / tS;
-          if (SS >= 1e3) return `${gS}${HS.toExponential(2).replace("e+","e")}`;
-          let XS;
-          return XS = SS >= 100 ? Math.floor(SS).toString() : SS >= 10 ? SS.toFixed(1).replace(/\.0$/, "") : SS.toFixed(2).replace(/\.?0+$/, ""), `${gS}${XS}${bS}`
-        } return `${gS}${HS}`
+        of ik)
+        if (Fk >= Xk) {
+          const kk = Fk / Xk;
+          if (kk >= 1e3) return `${Ik}${Fk.toExponential(2).replace("e+","e")}`;
+          let ik;
+          return ik = kk >= 100 ? Math.floor(kk).toString() : kk >= 10 ? kk.toFixed(1).replace(/\.0$/, "") : kk.toFixed(2).replace(/\.?0+$/, ""), `${Ik}${ik}${Tk}`
+        } return `${Ik}${Fk}`
     }
   },
-  34235: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => IS,
-      f: () => kS,
-      i: () => fS,
-      j: () => xS,
-      m: () => uS,
-      q: () => qS
+  34180: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Lk,
+      h: () => Zk,
+      i: () => tk,
+      j: () => yk,
+      n: () => qk,
+      r: () => ak
     });
-    var tS = gS(387);
-    const bS = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
-      XS = {
+    var Xk = Ik(337);
+    const Tk = ["Wood Enchanting Table", "Stone Enchanting Table", "Iron Enchanting Table", "Gold Enchanting Table", "Diamond Enchanting Table"],
+      ik = {
         Damage: {
           translationKey: "enchantments:damageDescription"
         },
@@ -10466,13 +10466,13 @@ export const modules = {
         }
       };
 
-    function xS(SS) {
-      var HS;
-      return null !== (HS = XS[SS]) && void 0 !== HS ? HS : {
+    function yk(kk) {
+      var Fk;
+      return null !== (Fk = ik[kk]) && void 0 !== Fk ? Fk : {
         translationKey: ""
       }
     }
-    const NS = {
+    const lk = {
       "Wood Enchanting Table": [{
         min: 1,
         max: 2
@@ -10525,76 +10525,76 @@ export const modules = {
       }]
     };
 
-    function qS(SS) {
-      return bS.includes(SS)
+    function ak(kk) {
+      return Tk.includes(kk)
     }
 
-    function uS(SS) {
-      var HS;
-      return !0 === (null === SS || void 0 === SS || null === (HS = SS.customAttributes) || void 0 === HS ? void 0 : HS.cannotEnchant)
+    function qk(kk) {
+      var Fk;
+      return !0 === (null === kk || void 0 === kk || null === (Fk = kk.customAttributes) || void 0 === Fk ? void 0 : Fk.cannotEnchant)
     }
 
-    function IS(SS, HS) {
+    function Lk(kk, Fk) {
       const {
-        max: gS
-      } = NS[SS].at(-1);
-      return HS <= gS
+        max: Ik
+      } = lk[kk].at(-1);
+      return Fk <= Ik
     }
 
-    function fS(SS) {
-      const HS = Math.sin(SS / 80),
-        gS = SS => {
-          if (SS <= 0) return 0;
-          if (SS > 1) return 1;
-          let HS = 0;
-          const gS = [1, 7, 21, 35, 35, 21, 7, 1];
-          for (let tS = 0; tS < gS.length; tS++) {
-            HS += (tS % 2 === 0 ? 1 : -1) * gS[tS] * Math.pow(SS, 2 + tS) / (2 + tS)
+    function tk(kk) {
+      const Fk = Math.sin(kk / 80),
+        Ik = kk => {
+          if (kk <= 0) return 0;
+          if (kk > 1) return 1;
+          let Fk = 0;
+          const Ik = [1, 7, 21, 35, 35, 21, 7, 1];
+          for (let Xk = 0; Xk < Ik.length; Xk++) {
+            Fk += (Xk % 2 === 0 ? 1 : -1) * Ik[Xk] * Math.pow(kk, 2 + Xk) / (2 + Xk)
           }
-          return 72 * HS
+          return 72 * Fk
         },
-        tS = .3 - .78 * HS,
-        bS = .5 - .78 * HS,
-        XS = .6 - .7 * HS,
-        xS = .8 - .6 * HS;
-      let NS = gS(tS),
-        qS = gS(bS) - NS,
-        uS = gS(XS) - qS - NS,
-        IS = gS(xS) - uS - qS - NS;
-      tS < .041 && (qS /= 1 - NS, uS /= 1 - NS, IS /= 1 - NS, NS = 0), bS < .041 && (NS /= 1 - qS, uS /= 1 - qS, IS /= 1 - qS, qS = 0), XS < .041 && (NS /= 1 - uS, qS /= 1 - uS, IS /= 1 - uS, uS = 0), xS < .041 && (NS /= 1 - IS, qS /= 1 - IS, uS /= 1 - IS, IS = 0);
+        Xk = .3 - .78 * Fk,
+        Tk = .5 - .78 * Fk,
+        ik = .6 - .7 * Fk,
+        yk = .8 - .6 * Fk;
+      let lk = Ik(Xk),
+        ak = Ik(Tk) - lk,
+        qk = Ik(ik) - ak - lk,
+        Lk = Ik(yk) - qk - ak - lk;
+      Xk < .041 && (ak /= 1 - lk, qk /= 1 - lk, Lk /= 1 - lk, lk = 0), Tk < .041 && (lk /= 1 - ak, qk /= 1 - ak, Lk /= 1 - ak, ak = 0), ik < .041 && (lk /= 1 - qk, ak /= 1 - qk, Lk /= 1 - qk, qk = 0), yk < .041 && (lk /= 1 - Lk, ak /= 1 - Lk, qk /= 1 - Lk, Lk = 0);
       return {
-        commonProb: NS,
-        uncommonProb: qS,
-        rareProb: uS,
-        epicProb: IS,
-        legendaryProb: 1 - (IS + uS + qS + NS)
+        commonProb: lk,
+        uncommonProb: ak,
+        rareProb: qk,
+        epicProb: Lk,
+        legendaryProb: 1 - (Lk + qk + ak + lk)
       }
     }
 
-    function kS(SS, HS) {
+    function Zk(kk, Fk) {
       const {
-        min: gS,
-        max: bS
-      } = NS[SS][HS], XS = tS.b.sampleUniformIntDistribution(gS, bS, "includeMax");
+        min: Ik,
+        max: Tk
+      } = lk[kk][Fk], ik = Xk.e.sampleUniformIntDistribution(Ik, Tk, "includeMax");
       return {
-        ...fS(XS),
-        level: XS
+        ...tk(ik),
+        level: ik
       }
     }
   },
-  34204: () => {},
-  12999: SS => {
-    SS.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
+  34139: () => {},
+  12750: kk => {
+    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAaUlEQVR4AWyOQQ6AIAwECwGNr/HkYzz4Hy9+WEkq01BDDCRDy3ZbGo9rU2c/V+1Bj9JOeW7RokaTBO0zpDxJXmYJKXjdohlwOqbWi4YaJFIgcYEIaGAT+JvHCDNQ8El9ziQz/BdzE00vAAAA//+cTXaSAAAABklEQVQDAHI9N5g1NM74AAAAAElFTkSuQmCC"
   },
-  14162: SS => {
-    SS.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
+  13880: kk => {
+    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAGBJREFUGJVNjjEOxEAIA+dW22Rpk2+nSndPZFtMewU6FBdIjJHx536+ABARUl7XCbjvyV9mJqX7BtY6RkS0t9bRc0op5ZuaGTAqtPZCpfG+AqSs8FFlulh7s6j7rh9d9wclFjd0V4Z2HAAAAABJRU5ErkJggg=="
   },
-  15622: SS => {
-    SS.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
+  15338: kk => {
+    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAbUlEQVR4nESOSwqAMAxEow0pive/gIcTBBdSsZh+NG20DlnkM8MLhnXuzHSnAwBaI8LIV2RXOiIkaGfMKfXGyByZparbyQZpGNUV/KaHGrWowZKVgSx8Qr8vzdXgAkYFCIn9mZP7E8pQ1Q9fzAMAAP//PTNTFgAAAAZJREFUAwAk1D9dXrbJngAAAABJRU5ErkJggg=="
   },
-  16166: SS => {
-    SS.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
+  15861: kk => {
+    kk.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAAXNSR0IArs4c6QAAAE1JREFUGJVNjsEOwDAIQp/GZv3/j+xx5zVbsh0wZFxEImCsc88RRwHsB5OaI8SA636hjwosNXSUWuRTphxp5iahHX+pozQs+Yt0rU1SPg0CIfgDMgomAAAAAElFTkSuQmCC"
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

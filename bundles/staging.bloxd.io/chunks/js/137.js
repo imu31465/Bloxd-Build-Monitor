@@ -1,94 +1,94 @@
 export const id = 137;
 export const ids = [136, 137];
 export const modules = {
-  6844: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      forgetShaderPackActiveHint: () => cS,
-      isOtherApiVersion: () => ZS,
-      isShaderPackActive: () => QS,
-      isShaderPackChangePending: () => hS,
-      markShaderPackChangePending: () => wS,
-      pageShaderPackValidationVersion: () => JS,
-      reconcileStoredShaderPackHint: () => dS,
-      removeShaderPack: () => PS,
-      replaceShaderPack: () => GS,
-      saveShaderPack: () => jS,
-      shaderPackNeedsCheck: () => OS,
-      storedPackOutcome: () => DS,
-      storedShaderPackFiles: () => kS,
-      toStoredShaderPack: () => fS
+  6639: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      forgetShaderPackActiveHint: () => Ok,
+      isOtherApiVersion: () => zk,
+      isShaderPackActive: () => Kk,
+      isShaderPackChangePending: () => Vk,
+      markShaderPackChangePending: () => sk,
+      pageShaderPackValidationVersion: () => Sk,
+      reconcileStoredShaderPackHint: () => Ek,
+      removeShaderPack: () => Pk,
+      replaceShaderPack: () => Hk,
+      saveShaderPack: () => wk,
+      shaderPackNeedsCheck: () => vk,
+      storedPackOutcome: () => Qk,
+      storedShaderPackFiles: () => Zk,
+      toStoredShaderPack: () => tk
     });
-    var tS = gS(5221),
-      bS = gS(5212),
-      XS = gS(45),
-      xS = gS(3591),
-      NS = gS(6848),
-      qS = gS(6824);
-    const uS = "shaderPackChangePending";
-    let IS = null;
+    var Xk = Ik(5053),
+      Tk = Ik(5047),
+      ik = Ik(41),
+      yk = Ik(3396),
+      lk = Ik(6644),
+      ak = Ik(6611);
+    const qk = "shaderPackChangePending";
+    let Lk = null;
 
-    function fS(SS, HS, gS) {
+    function tk(kk, Fk, Ik) {
       return {
-        manifest: SS.manifest,
-        files: (0, tS.v)(SS.files),
-        validation: HS,
-        ...gS && {
-          listing: gS
+        manifest: kk.manifest,
+        files: (0, Xk.w)(kk.files),
+        validation: Fk,
+        ...Ik && {
+          listing: Ik
         }
       }
     }
 
-    function kS(SS) {
-      return Object.keys(SS.files).map((HS => ({
-        path: HS,
-        source: SS.files[HS]
+    function Zk(kk) {
+      return Object.keys(kk.files).map((Fk => ({
+        path: Fk,
+        source: kk.files[Fk]
       })))
     }
-    let aS = Promise.resolve();
+    let jk = Promise.resolve();
 
-    function KS(SS) {
-      const HS = aS.then(SS);
-      return aS = HS.catch((() => {})), HS
-    }
-
-    function jS(SS, HS) {
-      return KS((() => CS(SS, HS)))
+    function ek(kk) {
+      const Fk = jk.then(kk);
+      return jk = Fk.catch((() => {})), Fk
     }
 
-    function GS(SS, HS, gS) {
-      return KS((async () => JSON.stringify(await (0, NS.f)()) === JSON.stringify(SS) && (null === HS ? (await nS(), !0) : CS(HS, gS))))
-    }
-    async function CS(SS, HS) {
-      const gS = await XS.e.setItem(NS.d, SS);
-      return gS && vS(SS, HS), gS
-    }
-    async function nS() {
-      await XS.e.removeItem(NS.d), XS.g.removeItem(xS.d)
+    function wk(kk, Fk) {
+      return ek((() => Jk(kk, Fk)))
     }
 
-    function PS() {
-      return KS(nS)
+    function Hk(kk, Fk, Ik) {
+      return ek((async () => JSON.stringify(await (0, lk.i)()) === JSON.stringify(kk) && (null === Fk ? (await xk(), !0) : Jk(Fk, Ik))))
+    }
+    async function Jk(kk, Fk) {
+      const Ik = await ik.g.setItem(lk.e, kk);
+      return Ik && nk(kk, Fk), Ik
+    }
+    async function xk() {
+      await ik.g.removeItem(lk.e), ik.j.removeItem(yk.e)
     }
 
-    function QS(SS, HS) {
-      return "active" === DS(SS, HS).kind
+    function Pk() {
+      return ek(xk)
     }
 
-    function DS(SS, HS) {
-      var gS;
-      return null === SS ? {
+    function Kk(kk, Fk) {
+      return "active" === Qk(kk, Fk).kind
+    }
+
+    function Qk(kk, Fk) {
+      var Ik;
+      return null === kk ? {
         kind: "none",
         reason: "nothingStored"
-      } : ZS(SS) ? {
+      } : zk(kk) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (gS = SS.validation) || void 0 === gS ? void 0 : gS.ok) || SS.validation.fromRecheck ? null === HS ? {
+      } : !1 !== (null === (Ik = kk.validation) || void 0 === Ik ? void 0 : Ik.ok) || kk.validation.fromRecheck ? null === Fk ? {
         kind: "none",
         reason: "noCompiler"
-      } : OS(SS, HS) ? {
+      } : vk(kk, Fk) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : SS.validation.ok ? {
+      } : kk.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -99,68 +99,68 @@ export const modules = {
       }
     }
 
-    function wS() {
-      XS.h.setItem(uS, performance.timeOrigin)
+    function sk() {
+      ik.m.setItem(qk, performance.timeOrigin)
     }
 
-    function hS() {
-      return XS.h.getItem(uS) === performance.timeOrigin
+    function Vk() {
+      return ik.m.getItem(qk) === performance.timeOrigin
     }
 
-    function ZS(SS) {
-      return !(0, bS.j)(SS.manifest.apiVersion)
+    function zk(kk) {
+      return !(0, Tk.i)(kk.manifest.apiVersion)
     }
 
-    function JS(SS) {
-      return IS ??= SS.dL((0, qS.shaderPackTextures)()), IS
+    function Sk(kk) {
+      return Lk ??= kk.nG((0, ak.shaderPackTextures)()), Lk
     }
 
-    function OS(SS, HS) {
-      var gS;
-      return (null === (gS = SS.validation) || void 0 === gS ? void 0 : gS.headerVersion) !== JS(HS)
+    function vk(kk, Fk) {
+      var Ik;
+      return (null === (Ik = kk.validation) || void 0 === Ik ? void 0 : Ik.headerVersion) !== Sk(Fk)
     }
 
-    function dS(SS) {
-      return KS((async () => {
-        vS(await (0, NS.f)(!0), SS)
+    function Ek(kk) {
+      return ek((async () => {
+        nk(await (0, lk.i)(!0), kk)
       }))
     }
 
-    function cS() {
-      return KS((async () => {
-        XS.g.removeItem(xS.d)
+    function Ok() {
+      return ek((async () => {
+        ik.j.removeItem(yk.e)
       }))
     }
 
-    function vS(SS, HS) {
-      QS(SS, HS) ? XS.g.setItem(xS.d, !0) : XS.g.removeItem(xS.d)
+    function nk(kk, Fk) {
+      Kk(kk, Fk) ? ik.j.setItem(yk.e, !0) : ik.j.removeItem(yk.e)
     }
   },
-  6824: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      loadShaderPackTextures: () => xS,
-      shaderPackTextures: () => NS
+  6611: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      loadShaderPackTextures: () => yk,
+      shaderPackTextures: () => lk
     });
-    var tS = gS(5221);
-    let bS = null,
-      XS = null;
+    var Xk = Ik(5053);
+    let Tk = null,
+      ik = null;
 
-    function xS() {
-      return XS ??= Promise.all([gS.e(72), gS.e(188)]).then((() => gS(40526))).then((SS => {
+    function yk() {
+      return ik ??= Promise.all([Ik.e(72), Ik.e(188)]).then((() => Ik(40500))).then((kk => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: HS,
-          textureNameToIndex: gS,
-          textureAnimationData: XS
-        } = SS;
-        return bS ??= (0, tS.j)(gS, XS, HS), bS
-      })), XS
+          FORMER_BLOCK_IMAGE_NAMES: Fk,
+          textureNameToIndex: Ik,
+          textureAnimationData: ik
+        } = kk;
+        return Tk ??= (0, Xk.g)(Ik, ik, Fk), Tk
+      })), ik
     }
 
-    function NS() {
-      if (null === bS) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return bS
+    function lk() {
+      if (null === Tk) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return Tk
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -1,76 +1,76 @@
 export const id = 9;
 export const ids = [9];
 export const modules = {
-  39279: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      default: () => bS
+  39277: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      default: () => Tk
     });
-    var tS = gS(38055);
-    const bS = function(SS, HS, gS) {
-      let bS;
+    var Xk = Ik(38038);
+    const Tk = function(kk, Fk, Ik) {
+      let Tk;
       return {
         plugins: {
-          placeAgainstBeds: (0, tS.c)()
+          placeAgainstBeds: (0, Xk.c)()
         },
-        onCreate: SS => {
-          bS = SS
+        onCreate: kk => {
+          Tk = kk
         },
-        onPlayerAltAction: (SS, HS, gS, tS, XS, xS) => {
-          ((SS, HS) => {
-            if (!HS || "Mesh" !== bS.getEntityType(HS)) return;
-            const gS = bS.getEntityName(HS);
-            "Upgrades" === gS ? bS.openShop(SS, !1, "Upgrades") : "Items" === gS && bS.openShop(SS, !1, "Recommended")
-          })(SS, xS)
+        onPlayerAltAction: (kk, Fk, Ik, Xk, ik, yk) => {
+          ((kk, Fk) => {
+            if (!Fk || "Mesh" !== Tk.getEntityType(Fk)) return;
+            const Ik = Tk.getEntityName(Fk);
+            "Upgrades" === Ik ? Tk.openShop(kk, !1, "Upgrades") : "Items" === Ik && Tk.openShop(kk, !1, "Recommended")
+          })(kk, yk)
         }
       }
     }
   },
-  38055: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => NS
+  38038: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => lk
     });
-    var tS = gS(387),
-      bS = gS(36961),
-      XS = gS(4602);
-    const xS = ["Leaf Bed", "_Leaf Bed Head", ...tS.Cc.flatMap((SS => [`${SS} Bed`, `_${SS} Bed Head`, `${SS} Strongbed`, `_${SS} Strongbed Head`]))];
+    var Xk = Ik(337),
+      Tk = Ik(36976),
+      ik = Ik(4475);
+    const yk = ["Leaf Bed", "_Leaf Bed Head", ...Xk.Mc.flatMap((kk => [`${kk} Bed`, `_${kk} Bed Head`, `${kk} Strongbed`, `_${kk} Strongbed Head`]))];
 
-    function NS() {
-      let SS;
+    function lk() {
+      let kk;
       return {
-        onCreate(HS) {
-          SS = HS
+        onCreate(Fk) {
+          kk = Fk
         },
-        altVetoBlocks: xS,
-        onPlayerAttemptAltAction(HS, gS, tS, xS, NS, qS) {
-          var uS;
-          if ((0, bS.e)(SS.getMetaInfo(NS).rootName) && !SS.isEntityInteractable(qS) && (0, XS.e)(null === (uS = SS.AHS(HS)) || void 0 === uS ? void 0 : uS.typeObj.type)) return "preventAction"
+        altVetoBlocks: yk,
+        onPlayerAttemptAltAction(Fk, Ik, Xk, yk, lk, ak) {
+          var qk;
+          if ((0, Tk.e)(kk.getMetaInfo(lk).rootName) && !kk.isEntityInteractable(ak) && (0, ik.e)(null === (qk = kk.BFk(Fk)) || void 0 === qk ? void 0 : qk.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  36961: (SS, HS, gS) => {
-    function tS(SS) {
-      return SS.includes("Leaf Bed")
+  36976: (kk, Fk, Ik) => {
+    function Xk(kk) {
+      return kk.includes("Leaf Bed")
     }
 
-    function bS(SS) {
-      return / Bed(?: Head)?(?:\||$)/.test(SS) && !tS(SS)
+    function Tk(kk) {
+      return / Bed(?: Head)?(?:\||$)/.test(kk) && !Xk(kk)
     }
 
-    function XS(SS) {
-      return SS.includes(" Strongbed")
+    function ik(kk) {
+      return kk.includes(" Strongbed")
     }
 
-    function xS(SS) {
-      return tS(SS) || bS(SS) || XS(SS)
+    function yk(kk) {
+      return Xk(kk) || Tk(kk) || ik(kk)
     }
-    gS.d(HS, {
-      e: () => xS,
-      g: () => tS,
-      k: () => XS,
-      l: () => bS
+    Ik.d(Fk, {
+      e: () => yk,
+      h: () => Xk,
+      i: () => ik,
+      l: () => Tk
     })
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

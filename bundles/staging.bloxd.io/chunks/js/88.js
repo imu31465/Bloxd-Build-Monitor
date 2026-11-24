@@ -1,373 +1,373 @@
 export const id = 88;
 export const ids = [88];
 export const modules = {
-  40566: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      startWasmPadGameplay: () => WS
+  40542: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      startWasmPadGameplay: () => Nk
     });
-    gS(40573);
-    var tS = gS(40581),
-      bS = gS(40599),
-      XS = gS(2083),
-      xS = gS(40612),
-      NS = gS(4935),
-      qS = gS(4911),
-      uS = gS(40616),
-      IS = gS(40625),
-      fS = gS(4947),
-      kS = gS(40692),
-      aS = gS(2517),
-      KS = gS(9048),
-      jS = gS(40589),
-      GS = gS(9025),
-      CS = gS(39127);
-    const nS = SS => {
-        const HS = fS.b.indexOf(SS);
-        if (HS < 0) throw new Error(`No core action "${SS}"`);
-        return HS
+    Ik(40546);
+    var Xk = Ik(40554),
+      Tk = Ik(40570),
+      ik = Ik(1894),
+      yk = Ik(40583),
+      lk = Ik(4799),
+      ak = Ik(4792),
+      qk = Ik(40592),
+      Lk = Ik(40596),
+      tk = Ik(4810),
+      Zk = Ik(40670),
+      jk = Ik(2338),
+      ek = Ik(8833),
+      wk = Ik(40560),
+      Hk = Ik(8814),
+      Jk = Ik(39109);
+    const xk = kk => {
+        const Fk = tk.e.indexOf(kk);
+        if (Fk < 0) throw new Error(`No core action "${kk}"`);
+        return Fk
       },
-      PS = nS("primary-fire"),
-      QS = nS("alt-fire"),
-      DS = nS("mid-fire"),
-      wS = nS("jump"),
-      hS = nS("ReloadGun"),
-      ZS = nS("SwapCameraZoom"),
-      JS = nS("TouchAction1"),
-      OS = {
-        SpecialAction1: nS("SpecialAction1"),
-        SpecialAction2: nS("SpecialAction2")
+      Pk = xk("primary-fire"),
+      Kk = xk("alt-fire"),
+      Qk = xk("mid-fire"),
+      sk = xk("jump"),
+      Vk = xk("ReloadGun"),
+      zk = xk("SwapCameraZoom"),
+      Sk = xk("TouchAction1"),
+      vk = {
+        SpecialAction1: xk("SpecialAction1"),
+        SpecialAction2: xk("SpecialAction2")
       },
-      dS = (SS, HS) => {
-        (0, aS.v)(NS.K.PadAction, SS, 0, 0, (0, aS.r)(HS, performance.now()))
+      Ek = (kk, Fk) => {
+        (0, jk.o)(lk.I.PadAction, kk, 0, 0, (0, jk.l)(Fk, performance.now()))
       },
-      cS = SS => {
-        dS(SS, xS.md.Down)
+      Ok = kk => {
+        Ek(kk, yk.td.Down)
       },
-      vS = SS => {
-        dS(SS, 0)
+      nk = kk => {
+        Ek(kk, 0)
       },
-      ES = SS => {
-        cS(SS), vS(SS)
+      Gk = kk => {
+        Ok(kk), nk(kk)
       },
-      LS = () => {
-        const SS = (0, IS.h)();
-        return null !== SS && void 0 !== SS && SS.isCoreRunning ? SS : null
+      pk = () => {
+        const kk = (0, Lk.k)();
+        return null !== kk && void 0 !== kk && kk.isCoreRunning ? kk : null
       },
-      YS = SS => xS.t.playerFlags(SS.api.apiView, 0),
-      AS = SS => null !== SS && xS.t.targetBlockId(SS.api.apiView, 0) !== xS.Tc,
-      yS = () => {
-        const SS = (0, KS.d)(),
-          HS = new jS.b;
-        let gS = !1;
-        const tS = (SS, HS) => {
-            (0, aS.v)(NS.K.PadLook, xS.sd.Rate, SS, HS, 0)
+      uk = kk => yk.y.playerFlags(kk.api.apiView, 0),
+      bk = kk => null !== kk && yk.y.targetBlockId(kk.api.apiView, 0) !== yk._c,
+      Rk = () => {
+        const kk = (0, ek.c)(),
+          Fk = new wk.b;
+        let Ik = !1;
+        const Xk = (kk, Fk) => {
+            (0, jk.o)(lk.I.PadLook, yk.Ad.Rate, kk, Fk, 0)
           },
-          bS = () => {
-            gS = !1, HS.reset(), tS(0, 0)
+          Tk = () => {
+            Ik = !1, Fk.reset(), Xk(0, 0)
           };
         return {
-          update: (bS, XS, qS) => {
-            gS || (SS.discardPending(), gS = !0);
-            const uS = (0, jS.p)(HS, bS, XS, qS, performance.now());
-            tS(uS.yawRadPerSec, uS.pitchRadPerSec);
-            const IS = SS.drainLookDelta();
-            0 === IS.tL && 0 === IS.qL || (0, aS.v)(NS.K.PadLook, xS.sd.Gyro, IS.tL, IS.qL, 0)
+          update: (Tk, ik, ak) => {
+            Ik || (kk.discardPending(), Ik = !0);
+            const qk = (0, wk.s)(Fk, Tk, ik, ak, performance.now());
+            Xk(qk.yawRadPerSec, qk.pitchRadPerSec);
+            const Lk = kk.drainLookDelta();
+            0 === Lk.JG && 0 === Lk.xG || (0, jk.o)(lk.I.PadLook, yk.Ad.Gyro, Lk.JG, Lk.xG, 0)
           },
-          release: bS,
-          uninstall: bS
+          release: Tk,
+          uninstall: Tk
         }
       },
-      VS = () => {
-        const SS = LS();
-        return null !== SS && 0 !== (YS(SS) & xS.zd.PadSneakToggled)
+      Uk = () => {
+        const kk = pk();
+        return null !== kk && 0 !== (uk(kk) & yk.Ed.PadSneakToggled)
       },
-      iS = () => {
-        const SS = (SS => {
-          const HS = SS => function() {
-            return (0, kS.b)(), SS(...arguments)
+      Ck = () => {
+        const kk = (kk => {
+          const Fk = kk => function() {
+            return (0, Zk.b)(), kk(...arguments)
           };
           return {
-            primaryFireDown: HS((() => (cS(PS), 0))),
-            primaryFireUp: HS((() => {
-              vS(PS)
+            primaryFireDown: Fk((() => (Ok(Pk), 0))),
+            primaryFireUp: Fk((() => {
+              nk(Pk)
             })),
-            altFireDown: HS((() => (cS(QS), 0))),
-            altFireUp: HS((() => {
-              vS(QS)
+            altFireDown: Fk((() => (Ok(Kk), 0))),
+            altFireUp: Fk((() => {
+              nk(Kk)
             })),
-            jumpDown: HS((() => {
-              ES(wS)
+            jumpDown: Fk((() => {
+              Gk(sk)
             })),
-            specialActionDown: HS((SS => {
-              cS(OS[SS])
+            specialActionDown: Fk((kk => {
+              Ok(vk[kk])
             })),
-            specialActionUp: HS((SS => {
-              vS(OS[SS])
+            specialActionUp: Fk((kk => {
+              nk(vk[kk])
             })),
-            reloadGun: HS((() => {
-              ES(hS)
+            reloadGun: Fk((() => {
+              Gk(Vk)
             })),
-            dropItem: HS((SS => {
-              dS(xS.od.Drop, xS.md.Down | (SS ? xS.md.Stack : 0))
+            dropItem: Fk((kk => {
+              Ek(yk.vd.Drop, yk.td.Down | (kk ? yk.td.Stack : 0))
             })),
-            swapCameraZoom: HS((() => {
-              ES(ZS)
+            swapCameraZoom: Fk((() => {
+              Gk(zk)
             })),
-            pickBlock: HS((() => (ES(DS), AS(SS()))))
+            pickBlock: Fk((() => (Gk(Qk), bk(kk()))))
           }
-        })(LS);
-        let HS = !1,
-          gS = null;
-        const tS = () => {
-          var SS;
-          null === (SS = gS) || void 0 === SS || SS(), gS = null
+        })(pk);
+        let Fk = !1,
+          Ik = null;
+        const Xk = () => {
+          var kk;
+          null === (kk = Ik) || void 0 === kk || kk(), Ik = null
         };
         return {
-          bodies: () => SS,
-          look: yS(),
-          move: (SS, gS) => {
-            var bS;
-            tS();
+          bodies: () => kk,
+          look: Rk(),
+          move: (kk, Ik) => {
+            var Tk;
+            Xk();
             const {
-              bits: XS,
-              flips: NS
-            } = (SS => {
-              if (null === SS) return {
-                bits: xS.pd.Peek,
+              bits: ik,
+              flips: lk
+            } = (kk => {
+              if (null === kk) return {
+                bits: yk.xd.Peek,
                 flips: 0
               };
-              const HS = SS.sneakHeld ? xS.pd.SneakHeld : 0;
-              return "hold" === SS.mode ? {
-                bits: HS | xS.pd.SneakHoldMode,
-                flips: SS.sneakTogglePressed ? 1 : 0
+              const Fk = kk.sneakHeld ? yk.xd.SneakHeld : 0;
+              return "hold" === kk.mode ? {
+                bits: Fk | yk.xd.SneakHoldMode,
+                flips: kk.sneakTogglePressed ? 1 : 0
               } : {
-                bits: HS,
-                flips: SS.sneakPressed || SS.sneakTogglePressed ? 1 : 0
+                bits: Fk,
+                flips: kk.sneakPressed || kk.sneakTogglePressed ? 1 : 0
               }
-            })(gS);
-            null !== (bS = LS()) && void 0 !== bS && bS.padMove(SS.x, SS.y, SS.magnitude, SS.headingOffset, (SS => xS.pd.Active | (SS.jumpHeld ? xS.pd.JumpHeld : 0) | (SS.jumpPressed ? xS.pd.JumpPressed : 0) | (SS.running ? xS.pd.Running : 0) | (SS.sprintHeld ? xS.pd.SprintHeld : 0))(SS) | XS, NS) && (HS = !0), (0, GS.f)(VS())
+            })(Ik);
+            null !== (Tk = pk()) && void 0 !== Tk && Tk.padMove(kk.x, kk.y, kk.magnitude, kk.headingOffset, (kk => yk.xd.Active | (kk.jumpHeld ? yk.xd.JumpHeld : 0) | (kk.jumpPressed ? yk.xd.JumpPressed : 0) | (kk.running ? yk.xd.Running : 0) | (kk.sprintHeld ? yk.xd.SprintHeld : 0))(kk) | ik, lk) && (Fk = !0), (0, Hk.g)(Uk())
           },
           stopMoving: () => {
-            var SS;
-            HS && (HS = !(null !== (SS = LS()) && void 0 !== SS && SS.padMove(0, 0, 0, 0, 0, 0)), tS(), gS = (0, qS.w)((() => {
-              tS(), (0, GS.f)(VS())
+            var kk;
+            Fk && (Fk = !(null !== (kk = pk()) && void 0 !== kk && kk.padMove(0, 0, 0, 0, 0, 0)), Xk(), Ik = (0, ak.y)((() => {
+              Xk(), (0, Hk.g)(Uk())
             })))
           },
-          uninstall: tS,
-          deviceChanged: SS => {
-            var gS;
-            "touch" === SS ? ((0, GS.f)(!1), null !== (gS = LS()) && void 0 !== gS && gS.padMove(0, 0, 0, 0, xS.pd.EndToggle, 0) && (HS = !1)) : "gamepad" === SS && (0, GS.f)(VS())
+          uninstall: Xk,
+          deviceChanged: kk => {
+            var Ik;
+            "touch" === kk ? ((0, Hk.g)(!1), null !== (Ik = pk()) && void 0 !== Ik && Ik.padMove(0, 0, 0, 0, yk.xd.EndToggle, 0) && (Fk = !1)) : "gamepad" === kk && (0, Hk.g)(Uk())
           },
-          hasPlayer: () => null !== LS(),
+          hasPlayer: () => null !== pk(),
           isPlayerDead: () => {
-            var SS;
-            return !1 === (null === (SS = LS()) || void 0 === SS ? void 0 : SS.localPlayerAlive())
+            var kk;
+            return !1 === (null === (kk = pk()) || void 0 === kk ? void 0 : kk.localPlayerAlive())
           },
           isReplayMode: () => {
-            const SS = LS();
-            return null !== SS && 0 !== (YS(SS) & xS.zd.Replay)
+            const kk = pk();
+            return null !== kk && 0 !== (uk(kk) & yk.Ed.Replay)
           },
           isFreeCameraOn: () => {
-            const SS = LS();
-            return null !== SS && 0 !== (YS(SS) & xS.zd.FreeCam)
+            const kk = pk();
+            return null !== kk && 0 !== (uk(kk) & yk.Ed.FreeCam)
           },
-          targetsBlock: () => AS(LS()),
+          targetsBlock: () => bk(pk()),
           selectedSlotEmpty: () => {
-            var SS;
-            return !(null !== (SS = LS()) && void 0 !== SS && SS.items.Ku())
+            var kk;
+            return !(null !== (kk = pk()) && void 0 !== kk && kk.items.eq())
           },
-          pickBlockAllowed: () => !!XS.d.get("creative") && !!XS.d.get("canPickBlocks"),
-          scrollHotbar: SS => {
-            dS(xS.od.Hotbar, xS.md.Down | (SS > 0 ? xS.md.Next : 0))
+          pickBlockAllowed: () => !!ik.e.get("creative") && !!ik.e.get("canPickBlocks"),
+          scrollHotbar: kk => {
+            Ek(yk.vd.Hotbar, yk.td.Down | (kk > 0 ? yk.td.Next : 0))
           },
-          hasFullInventory: uS.o,
-          hasLobbyTab: () => (0, CS.e)({
-            lobbyLeaderboardInfo: XS.d.get("lobbyLeaderboardInfo"),
-            lobbyManage: XS.d.get("lobbyManage")
+          hasFullInventory: qk.n,
+          hasLobbyTab: () => (0, Jk.b)({
+            lobbyLeaderboardInfo: ik.e.get("lobbyLeaderboardInfo"),
+            lobbyManage: ik.e.get("lobbyManage")
           }),
           contextActionInputs: () => {
-            var SS, HS, gS, tS;
-            const bS = LS();
+            var kk, Fk, Ik, Xk;
+            const Tk = pk();
             return {
-              holdingGun: !1 !== (null === bS || void 0 === bS ? void 0 : bS.localPlayerAlive()) && "Gun" === (null === bS || void 0 === bS || null === (SS = bS.items.Ku()) || void 0 === SS || null === (HS = SS.typeObj) || void 0 === HS ? void 0 : HS.type),
-              customButtons: null !== (gS = XS.d.get("customButtons")) && void 0 !== gS ? gS : null,
-              touchscreenActionButton: null !== (tS = XS.d.get("touchscreenActionButton")) && void 0 !== tS ? tS : null
+              holdingGun: !1 !== (null === Tk || void 0 === Tk ? void 0 : Tk.localPlayerAlive()) && "Gun" === (null === Tk || void 0 === Tk || null === (kk = Tk.items.eq()) || void 0 === kk || null === (Fk = kk.typeObj) || void 0 === Fk ? void 0 : Fk.type),
+              customButtons: null !== (Ik = ik.e.get("customButtons")) && void 0 !== Ik ? Ik : null,
+              touchscreenActionButton: null !== (Xk = ik.e.get("touchscreenActionButton")) && void 0 !== Xk ? Xk : null
             }
           },
-          pressTouchButton: SS => {
-            SS ? cS(JS) : vS(JS)
+          pressTouchButton: kk => {
+            kk ? Ok(Sk) : nk(Sk)
           }
         }
       },
-      WS = () => {
-        const SS = (0, bS.b)(iS()),
-          HS = (0, tS.d)(),
-          gS = null;
+      Nk = () => {
+        const kk = (0, Tk.b)(Ck()),
+          Fk = (0, Xk.c)(),
+          Ik = null;
         return () => {
-          SS(), HS(), null === gS || void 0 === gS || gS()
+          kk(), Fk(), null === Ik || void 0 === Ik || Ik()
         }
       }
   },
-  4911: (SS, HS, gS) => {
-    gS.d(HS, {
-      A: () => dS,
-      B: () => cS,
-      D: () => nS,
-      H: () => xS,
-      J: () => NS,
-      M: () => JS,
-      e: () => ZS,
-      f: () => QS,
-      i: () => ES,
-      j: () => vS,
-      k: () => CS,
-      n: () => wS,
-      r: () => PS,
-      t: () => DS,
-      w: () => OS
+  4792: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      A: () => Ok,
+      D: () => xk,
+      F: () => yk,
+      I: () => lk,
+      L: () => Sk,
+      c: () => zk,
+      g: () => Kk,
+      k: () => Gk,
+      l: () => nk,
+      o: () => Jk,
+      s: () => sk,
+      t: () => Pk,
+      u: () => Qk,
+      y: () => vk,
+      z: () => Ek
     });
-    var tS = gS(4917);
-    const bS = {
+    var Xk = Ik(4794);
+    const Tk = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let XS = bS;
+    let ik = Tk;
 
-    function xS(SS) {
-      XS = null !== SS && void 0 !== SS ? SS : bS
+    function yk(kk) {
+      ik = null !== kk && void 0 !== kk ? kk : Tk
     }
 
-    function NS() {
-      return XS
+    function lk() {
+      return ik
     }
-    const qS = new Set,
-      uS = new Set;
-    let IS = -1;
-    const fS = new Set,
-      kS = new Set;
-    let aS = 0,
-      KS = 0;
-    const jS = new Set,
-      GS = new Set;
+    const ak = new Set,
+      qk = new Set;
+    let Lk = -1;
+    const tk = new Set,
+      Zk = new Set;
+    let jk = 0,
+      ek = 0;
+    const wk = new Set,
+      Hk = new Set;
 
-    function CS(SS) {
-      return qS.add(SS), () => {
-        qS.delete(SS)
+    function Jk(kk) {
+      return ak.add(kk), () => {
+        ak.delete(kk)
       }
     }
 
-    function nS(SS, HS) {
-      for (const tS of qS) try {
-        tS(SS)
-      } catch (gS) {
-        HS(gS)
+    function xk(kk, Fk) {
+      for (const Xk of ak) try {
+        Xk(kk)
+      } catch (Ik) {
+        Fk(Ik)
       }
     }
 
-    function PS(SS) {
-      return uS.add(SS), () => {
-        uS.delete(SS)
+    function Pk(kk) {
+      return qk.add(kk), () => {
+        qk.delete(kk)
       }
     }
 
-    function QS(SS, HS) {
-      const gS = IS < 0 ? 0 : SS - IS;
-      IS = SS;
-      for (const bS of uS) try {
-        bS(gS)
-      } catch (tS) {
-        HS(tS)
+    function Kk(kk, Fk) {
+      const Ik = Lk < 0 ? 0 : kk - Lk;
+      Lk = kk;
+      for (const Tk of qk) try {
+        Tk(Ik)
+      } catch (Xk) {
+        Fk(Xk)
       }
     }
 
-    function DS(SS) {
-      return fS.add(SS), () => {
-        fS.delete(SS)
+    function Qk(kk) {
+      return tk.add(kk), () => {
+        tk.delete(kk)
       }
     }
 
-    function wS(SS) {
-      return kS.add(SS), () => {
-        kS.delete(SS)
+    function sk(kk) {
+      return Zk.add(kk), () => {
+        Zk.delete(kk)
       }
     }
-    let hS = 0;
+    let Vk = 0;
 
-    function ZS(SS) {
-      hS += SS
+    function zk(kk) {
+      Vk += kk
     }
 
-    function JS() {
-      const SS = hS;
-      return hS = 0, SS
+    function Sk() {
+      const kk = Vk;
+      return Vk = 0, kk
     }
 
-    function OS(SS) {
-      return jS.add(SS), () => {
-        jS.delete(SS)
-      }
-    }
-
-    function dS(SS) {
-      return GS.add(SS), () => {
-        GS.delete(SS)
+    function vk(kk) {
+      return wk.add(kk), () => {
+        wk.delete(kk)
       }
     }
 
-    function cS() {
-      aS = 0, KS = 0, IS = -1
+    function Ek(kk) {
+      return Hk.add(kk), () => {
+        Hk.delete(kk)
+      }
     }
 
-    function vS(SS, HS) {
-      if ("paced" === SS) return KS += HS, null;
-      if ("drawn" !== SS && "skipped" !== SS) return null;
-      const gS = HS + KS;
-      return KS = 0, gS
+    function Ok() {
+      jk = 0, ek = 0, Lk = -1
     }
 
-    function ES(SS, HS, gS, bS) {
-      const XS = (0, tS.h)(HS),
-        xS = SS > 0 ? performance.now() : 0;
-      for (let tS = 0; tS < SS; tS++)
-        for (const SS of jS) try {
-          SS()
-        } catch (NS) {
-          bS(NS)
+    function nk(kk, Fk) {
+      if ("paced" === kk) return ek += Fk, null;
+      if ("drawn" !== kk && "skipped" !== kk) return null;
+      const Ik = Fk + ek;
+      return ek = 0, Ik
+    }
+
+    function Gk(kk, Fk, Ik, Tk) {
+      const ik = (0, Xk.f)(Fk),
+        yk = kk > 0 ? performance.now() : 0;
+      for (let Xk = 0; Xk < kk; Xk++)
+        for (const kk of wk) try {
+          kk()
+        } catch (lk) {
+          Tk(lk)
         }
-      if (SS > 0 && ZS(performance.now() - xS), null !== gS) {
-        for (const SS of fS) try {
-          SS(gS)
-        } catch (NS) {
-          bS(NS)
+      if (kk > 0 && zk(performance.now() - yk), null !== Ik) {
+        for (const kk of tk) try {
+          kk(Ik)
+        } catch (lk) {
+          Tk(lk)
         }
-        aS += gS
+        jk += Ik
       }
-      if ("drawn" === HS) {
-        const SS = aS;
-        aS = 0;
-        for (const HS of kS) try {
-          HS(SS)
-        } catch (NS) {
-          bS(NS)
+      if ("drawn" === Fk) {
+        const kk = jk;
+        jk = 0;
+        for (const Fk of Zk) try {
+          Fk(kk)
+        } catch (lk) {
+          Tk(lk)
         }
       }
-      for (const tS of GS) try {
-        tS(SS, XS)
-      } catch (NS) {
-        bS(NS)
+      for (const Xk of Hk) try {
+        Xk(kk, ik)
+      } catch (lk) {
+        Tk(lk)
       }
     }
   },
-  4947: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => bS,
-      f: () => XS,
-      g: () => xS,
-      i: () => tS,
-      j: () => NS
+  4810: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Tk,
+      g: () => ik,
+      k: () => yk,
+      o: () => Xk,
+      s: () => lk
     });
-    const tS = {
+    const Xk = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -564,8 +564,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      bS = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      XS = {
+      Tk = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      ik = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -628,160 +628,160 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      xS = {
+      yk = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      NS = [16]
+      lk = [16]
   },
-  40692: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => xS,
-      e: () => XS,
-      i: () => bS
+  40670: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => yk,
+      c: () => ik,
+      e: () => Tk
     });
-    let tS = null;
+    let Xk = null;
 
-    function bS(SS) {
-      tS = SS
+    function Tk(kk) {
+      Xk = kk
     }
 
-    function XS(SS) {
-      tS === SS && (tS = null)
+    function ik(kk) {
+      Xk === kk && (Xk = null)
     }
 
-    function xS() {
-      var SS;
-      null === (SS = tS) || void 0 === SS || SS()
+    function yk() {
+      var kk;
+      null === (kk = Xk) || void 0 === kk || kk()
     }
   },
-  4954: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => NS,
-      e: () => xS,
-      i: () => uS
+  4814: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => lk,
+      f: () => yk,
+      g: () => qk
     });
-    var tS = gS(2510),
-      bS = gS(2517);
-    const XS = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var Xk = Ik(2331),
+      Tk = Ik(2338);
+    const ik = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function xS(SS) {
-      return SS instanceof HTMLElement && (!!(SS.isContentEditable || SS instanceof HTMLTextAreaElement || SS instanceof HTMLSelectElement) || SS instanceof HTMLInputElement && !XS.has(SS.type))
+    function yk(kk) {
+      return kk instanceof HTMLElement && (!!(kk.isContentEditable || kk instanceof HTMLTextAreaElement || kk instanceof HTMLSelectElement) || kk instanceof HTMLInputElement && !ik.has(kk.type))
     }
 
-    function NS(SS) {
-      let HS = null;
-      const gS = gS => {
-          const bS = xS(gS);
-          bS !== HS && (HS = bS, SS(tS.g.UiCapture, tS.A.Keyboard, 0, 0, bS ? tS.A.Keyboard : 0))
+    function lk(kk) {
+      let Fk = null;
+      const Ik = Ik => {
+          const Tk = yk(Ik);
+          Tk !== Fk && (Fk = Tk, kk(Xk.m.UiCapture, Xk.A.Keyboard, 0, 0, Tk ? Xk.A.Keyboard : 0))
         },
-        bS = SS => {
-          gS(SS.target)
+        Tk = kk => {
+          Ik(kk.target)
         },
-        XS = SS => {
-          gS(SS.relatedTarget)
+        ik = kk => {
+          Ik(kk.relatedTarget)
         },
-        NS = () => {
-          gS(document.activeElement)
+        lk = () => {
+          Ik(document.activeElement)
         },
-        qS = {
+        ak = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", bS, qS), document.addEventListener("focusout", XS, qS), document.addEventListener("keydown", NS, qS), gS(document.activeElement), () => {
-        document.removeEventListener("focusin", bS, qS), document.removeEventListener("focusout", XS, qS), document.removeEventListener("keydown", NS, qS)
+      return document.addEventListener("focusin", Tk, ak), document.addEventListener("focusout", ik, ak), document.addEventListener("keydown", lk, ak), Ik(document.activeElement), () => {
+        document.removeEventListener("focusin", Tk, ak), document.removeEventListener("focusout", ik, ak), document.removeEventListener("keydown", lk, ak)
       }
     }
-    const qS = new Map;
+    const ak = new Map;
 
-    function uS(SS, HS) {
-      var gS;
-      let tS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      qS.set(tS, (null !== (gS = qS.get(tS)) && void 0 !== gS ? gS : 0) & ~SS | HS & SS);
-      let XS = 0;
-      for (const bS of qS.values()) XS |= bS;
-      return (0, bS.D)(SS, XS & SS)
+    function qk(kk, Fk) {
+      var Ik;
+      let Xk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      ak.set(Xk, (null !== (Ik = ak.get(Xk)) && void 0 !== Ik ? Ik : 0) & ~kk | Fk & kk);
+      let ik = 0;
+      for (const Tk of ak.values()) ik |= Tk;
+      return (0, Tk.x)(kk, ik & kk)
     }
   },
-  36961: (SS, HS, gS) => {
-    function tS(SS) {
-      return SS.includes("Leaf Bed")
+  36976: (kk, Fk, Ik) => {
+    function Xk(kk) {
+      return kk.includes("Leaf Bed")
     }
 
-    function bS(SS) {
-      return / Bed(?: Head)?(?:\||$)/.test(SS) && !tS(SS)
+    function Tk(kk) {
+      return / Bed(?: Head)?(?:\||$)/.test(kk) && !Xk(kk)
     }
 
-    function XS(SS) {
-      return SS.includes(" Strongbed")
+    function ik(kk) {
+      return kk.includes(" Strongbed")
     }
 
-    function xS(SS) {
-      return tS(SS) || bS(SS) || XS(SS)
+    function yk(kk) {
+      return Xk(kk) || Tk(kk) || ik(kk)
     }
-    gS.d(HS, {
-      e: () => xS,
-      g: () => tS,
-      k: () => XS,
-      l: () => bS
+    Ik.d(Fk, {
+      e: () => yk,
+      h: () => Xk,
+      i: () => ik,
+      l: () => Tk
     })
   },
-  36959: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => uS
+  36969: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => qk
     });
-    var tS = gS(36961),
-      bS = gS(9361);
-    const XS = [],
-      xS = [],
-      NS = [],
-      qS = [];
-    for (const IS of Object.keys(bS.o))(0, tS.g)(IS) ? XS.push(IS) : (0, tS.l)(IS) && xS.push(IS), (0, tS.k)(IS) && NS.push(IS), (IS.includes(" Bed Head") || IS.includes(" Strongbed Head")) && qS.push(IS);
-    const uS = {
-      leafBeds: XS,
-      woolBeds: xS,
-      strongBeds: NS,
-      beds: [...XS, ...xS, ...NS],
-      bedHeads: qS,
+    var Xk = Ik(36976),
+      Tk = Ik(9183);
+    const ik = [],
+      yk = [],
+      lk = [],
+      ak = [];
+    for (const Lk of Object.keys(Tk.n))(0, Xk.h)(Lk) ? ik.push(Lk) : (0, Xk.l)(Lk) && yk.push(Lk), (0, Xk.i)(Lk) && lk.push(Lk), (Lk.includes(" Bed Head") || Lk.includes(" Strongbed Head")) && ak.push(Lk);
+    const qk = {
+      leafBeds: ik,
+      woolBeds: yk,
+      strongBeds: lk,
+      beds: [...ik, ...yk, ...lk],
+      bedHeads: ak,
       blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
     }
   },
-  6672: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => xS,
-      c: () => bS,
-      g: () => qS,
-      i: () => XS,
-      l: () => uS,
-      o: () => tS,
-      r: () => NS
+  6475: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => yk,
+      f: () => Tk,
+      g: () => ak,
+      j: () => ik,
+      m: () => qk,
+      n: () => Xk,
+      o: () => lk
     });
-    let tS = function(SS) {
-        return SS[SS.DEFAULT = 0] = "DEFAULT", SS[SS.BOAT = 1] = "BOAT", SS[SS.GLIDER = 2] = "GLIDER", SS[SS.BALLOON = 3] = "BALLOON", SS[SS.SLEEPING = 4] = "SLEEPING", SS[SS.RIDING_MOB = 5] = "RIDING_MOB", SS[SS.CAR = 6] = "CAR", SS[SS.HOVERCRAFT = 7] = "HOVERCRAFT", SS
+    let Xk = function(kk) {
+        return kk[kk.DEFAULT = 0] = "DEFAULT", kk[kk.BOAT = 1] = "BOAT", kk[kk.GLIDER = 2] = "GLIDER", kk[kk.BALLOON = 3] = "BALLOON", kk[kk.SLEEPING = 4] = "SLEEPING", kk[kk.RIDING_MOB = 5] = "RIDING_MOB", kk[kk.CAR = 6] = "CAR", kk[kk.HOVERCRAFT = 7] = "HOVERCRAFT", kk
       }({}),
-      bS = function(SS) {
-        return SS[SS.WOOD = 0] = "WOOD", SS[SS.OBSIDIAN = 1] = "OBSIDIAN", SS[SS.SPEED = 2] = "SPEED", SS
+      Tk = function(kk) {
+        return kk[kk.WOOD = 0] = "WOOD", kk[kk.OBSIDIAN = 1] = "OBSIDIAN", kk[kk.SPEED = 2] = "SPEED", kk
       }({}),
-      XS = function(SS) {
-        return SS[SS.WOOD = 0] = "WOOD", SS[SS.IRON = 1] = "IRON", SS[SS.GOLD = 2] = "GOLD", SS[SS.DIAMOND = 3] = "DIAMOND", SS
+      ik = function(kk) {
+        return kk[kk.WOOD = 0] = "WOOD", kk[kk.IRON = 1] = "IRON", kk[kk.GOLD = 2] = "GOLD", kk[kk.DIAMOND = 3] = "DIAMOND", kk
       }({}),
-      xS = function(SS) {
-        return SS[SS.YELLOW = 0] = "YELLOW", SS[SS.WHITE = 1] = "WHITE", SS[SS.RED = 2] = "RED", SS[SS.PURPLE = 3] = "PURPLE", SS[SS.PINK = 4] = "PINK", SS[SS.ORANGE = 5] = "ORANGE", SS[SS.MAGENTA = 6] = "MAGENTA", SS[SS.LIME = 7] = "LIME", SS[SS.LIGHT_GRAY = 8] = "LIGHT_GRAY", SS[SS.LIGHT_BLUE = 9] = "LIGHT_BLUE", SS[SS.GREEN = 10] = "GREEN", SS[SS.GRAY = 11] = "GRAY", SS[SS.CYAN = 12] = "CYAN", SS[SS.BROWN = 13] = "BROWN", SS[SS.BLUE = 14] = "BLUE", SS[SS.BLACK = 15] = "BLACK", SS
+      yk = function(kk) {
+        return kk[kk.YELLOW = 0] = "YELLOW", kk[kk.WHITE = 1] = "WHITE", kk[kk.RED = 2] = "RED", kk[kk.PURPLE = 3] = "PURPLE", kk[kk.PINK = 4] = "PINK", kk[kk.ORANGE = 5] = "ORANGE", kk[kk.MAGENTA = 6] = "MAGENTA", kk[kk.LIME = 7] = "LIME", kk[kk.LIGHT_GRAY = 8] = "LIGHT_GRAY", kk[kk.LIGHT_BLUE = 9] = "LIGHT_BLUE", kk[kk.GREEN = 10] = "GREEN", kk[kk.GRAY = 11] = "GRAY", kk[kk.CYAN = 12] = "CYAN", kk[kk.BROWN = 13] = "BROWN", kk[kk.BLUE = 14] = "BLUE", kk[kk.BLACK = 15] = "BLACK", kk
       }({}),
-      NS = function(SS) {
-        return SS[SS.ROTATION_1 = 0] = "ROTATION_1", SS[SS.ROTATION_2 = 1] = "ROTATION_2", SS[SS.ROTATION_3 = 2] = "ROTATION_3", SS[SS.ROTATION_4 = 3] = "ROTATION_4", SS
+      lk = function(kk) {
+        return kk[kk.ROTATION_1 = 0] = "ROTATION_1", kk[kk.ROTATION_2 = 1] = "ROTATION_2", kk[kk.ROTATION_3 = 2] = "ROTATION_3", kk[kk.ROTATION_4 = 3] = "ROTATION_4", kk
       }({}),
-      qS = function(SS) {
-        return SS[SS.KART = 0] = "KART", SS[SS.OFF_ROADER = 1] = "OFF_ROADER", SS[SS.CAR = 2] = "CAR", SS[SS.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", SS[SS.ARMORED_CAR = 4] = "ARMORED_CAR", SS[SS.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", SS[SS.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", SS[SS.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", SS
+      ak = function(kk) {
+        return kk[kk.KART = 0] = "KART", kk[kk.OFF_ROADER = 1] = "OFF_ROADER", kk[kk.CAR = 2] = "CAR", kk[kk.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", kk[kk.ARMORED_CAR = 4] = "ARMORED_CAR", kk[kk.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", kk[kk.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", kk[kk.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", kk
       }({});
-    tS.DEFAULT, tS.BOAT, bS.SPEED, tS.GLIDER, XS.DIAMOND, tS.BALLOON, xS.BLACK, tS.SLEEPING, NS.ROTATION_4, tS.RIDING_MOB, tS.CAR, qS.MOONSTONE_MINING_DRILL, tS.HOVERCRAFT;
-    let uS = function(SS) {
-      return SS[SS.NORMAL = 0] = "NORMAL", SS[SS.GLIDING = 1] = "GLIDING", SS[SS.FLOATING = 2] = "FLOATING", SS
+    Xk.DEFAULT, Xk.BOAT, Tk.SPEED, Xk.GLIDER, ik.DIAMOND, Xk.BALLOON, yk.BLACK, Xk.SLEEPING, lk.ROTATION_4, Xk.RIDING_MOB, Xk.CAR, ak.MOONSTONE_MINING_DRILL, Xk.HOVERCRAFT;
+    let qk = function(kk) {
+      return kk[kk.NORMAL = 0] = "NORMAL", kk[kk.GLIDING = 1] = "GLIDING", kk[kk.FLOATING = 2] = "FLOATING", kk
     }({})
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

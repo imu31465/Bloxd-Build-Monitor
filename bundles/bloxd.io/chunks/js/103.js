@@ -1,462 +1,462 @@
 export const id = 103;
 export const ids = [103];
 export const modules = {
-  5065: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => kS
+  4911: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Zk
     });
-    var tS = gS(1121),
-      bS = gS.n(tS),
-      XS = gS(1127),
-      xS = gS(1419),
-      NS = gS(3639),
-      qS = gS(138),
-      uS = gS(3676),
-      IS = gS(3665),
-      fS = gS(1181);
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(1066),
+      yk = Ik(1318),
+      lk = Ik(3442),
+      ak = Ik(129),
+      qk = Ik(3488),
+      Lk = Ik(3475),
+      tk = Ik(1096);
 
-    function kS(SS) {
+    function Zk(kk) {
       let {
-        game: HS
-      } = SS;
-      const gS = (0, qS.j)() ? "large" : "small",
-        tS = (0, uS.c)(HS, gS),
-        kS = (0, NS.f)(tS),
-        aS = void 0 !== kS.blurhash;
-      return (0, fS.jsxs)("div", {
+        game: Fk
+      } = kk;
+      const Ik = (0, ak.p)() ? "large" : "small",
+        Xk = (0, qk.h)(Fk, Ik),
+        Zk = (0, lk.e)(Xk),
+        jk = void 0 !== Zk.blurhash;
+      return (0, tk.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [kS.isLoading && !aS && (0, fS.jsx)(xS.c, {
+        children: [Zk.isLoading && !jk && (0, tk.jsx)(yk.c, {
           loaderType: "Secondary"
-        }), !kS.failed && (null !== kS.src || aS) && (0, fS.jsx)("div", {
-          className: bS()("SchematicImage", IS.h, {
-            SchematicImageFadeIn: kS.fadeIn && !aS
+        }), !Zk.failed && (null !== Zk.src || jk) && (0, tk.jsx)("div", {
+          className: Tk()("SchematicImage", Lk.g, {
+            SchematicImageFadeIn: Zk.fadeIn && !jk
           }),
-          style: (0, IS.g)(kS),
-          children: (0, fS.jsx)(IS.c, {
-            image: kS
+          style: (0, Lk.f)(Zk),
+          children: (0, tk.jsx)(Lk.d, {
+            image: Zk
           })
-        }), kS.failed && (0, fS.jsx)("div", {
+        }), Zk.failed && (0, tk.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, fS.jsx)(XS.d, {
+          children: (0, tk.jsx)(ik.e, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  5195: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => GS
+  5030: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Hk
     });
-    var tS = gS(64),
-      bS = gS(1121),
-      XS = gS.n(bS),
-      xS = gS(5114),
-      NS = gS(1419),
-      qS = gS(1281),
-      uS = gS(3325),
-      IS = gS(3443),
-      fS = gS(1127),
-      kS = gS(3330),
-      aS = gS(5204),
-      KS = gS(5228),
-      jS = gS(1181);
+    var Xk = Ik(58),
+      Tk = Ik(1055),
+      ik = Ik.n(Tk),
+      yk = Ik(4944),
+      lk = Ik(1318),
+      ak = Ik(1179),
+      qk = Ik(3096),
+      Lk = Ik(3240),
+      tk = Ik(1066),
+      Zk = Ik(3103),
+      jk = Ik(5038),
+      ek = Ik(5060),
+      wk = Ik(1096);
 
-    function GS(SS) {
+    function Hk(kk) {
       let {
-        folderName: HS,
-        onTexturePackUpdated: bS,
-        disabled: GS = !1,
-        maxFileSizeMb: CS,
-        packOwner: nS
-      } = SS;
+        folderName: Fk,
+        onTexturePackUpdated: Tk,
+        disabled: Hk = !1,
+        maxFileSizeMb: Jk,
+        packOwner: xk
+      } = kk;
       const {
-        t: PS
-      } = (0, qS.F)(), [QS, DS] = (0, tS.useState)(!1), [wS, hS] = (0, tS.useState)(null), [ZS, JS] = (0, tS.useState)(null), OS = (0, tS.useRef)(null);
-      async function dS(SS) {
-        DS(!0);
+        t: Pk
+      } = (0, ak.y)(), [Kk, Qk] = (0, Xk.useState)(!1), [sk, Vk] = (0, Xk.useState)(null), [zk, Sk] = (0, Xk.useState)(null), vk = (0, Xk.useRef)(null);
+      async function Ek(kk) {
+        Qk(!0);
         try {
-          const HS = await (0, uS.k)(SS);
-          if ("customGame" === nS && (0, IS.j)(HS)) return void hS(PS(IS.c));
-          if (void 0 !== CS) {
-            const SS = JSON.stringify(HS).length / 1048576;
-            if (SS > CS) return void hS(PS("customTexturePack:packTooBig", {
-              size: SS.toFixed(1),
-              max: CS
+          const Fk = await (0, qk.s)(kk);
+          if ("customGame" === xk && (0, Lk.k)(Fk)) return void Vk(Pk(Lk.b));
+          if (void 0 !== Jk) {
+            const kk = JSON.stringify(Fk).length / 1048576;
+            if (kk > Jk) return void Vk(Pk("customTexturePack:packTooBig", {
+              size: kk.toFixed(1),
+              max: Jk
             }))
           }
-          hS(null), JS(null), bS(HS), OS.current = HS,
-            function(SS, HS) {
-              const tS = SS.modelOverrides;
-              tS && Promise.all([gS.e(203), gS.e(202)]).then((() => gS(34305))).then((gS => {
+          Vk(null), Sk(null), Tk(Fk), vk.current = Fk,
+            function(kk, Fk) {
+              const Xk = kk.modelOverrides;
+              Xk && Promise.all([Ik.e(203), Ik.e(202)]).then((() => Ik(34255))).then((Ik => {
                 let {
-                  packDisplayName: bS,
-                  refusedPackModels: XS,
-                  packModelSummary: xS
-                } = gS;
-                const NS = bS(SS.metaData);
-                HS(xS(NS, XS(NS, tS, !1)))
-              })).catch((SS => {
-                console.error("Checking the texture pack's models failed:", SS)
+                  packDisplayName: Tk,
+                  refusedPackModels: ik,
+                  packModelSummary: yk
+                } = Ik;
+                const lk = Tk(kk.metaData);
+                Fk(yk(lk, ik(lk, Xk, !1)))
+              })).catch((kk => {
+                console.error("Checking the texture pack's models failed:", kk)
               }))
-            }(HS, (SS => {
-              OS.current === HS && JS(SS)
+            }(Fk, (kk => {
+              vk.current === Fk && Sk(kk)
             }))
-        } catch (HS) {
-          if (HS instanceof kS.c) {
-            const SS = "customTexturePack:invalidPack" !== HS.translationKey || (0, KS.f)() ? HS.translationKey : "customTexturePack:invalidPackZip";
-            hS((0, aS.j)(PS, SS, HS.params))
-          } else console.error("Couldn't read the texture pack", HS), hS(PS("customTexturePack:errorTitle"))
+        } catch (Fk) {
+          if (Fk instanceof Zk.e) {
+            const kk = "customTexturePack:invalidPack" !== Fk.translationKey || (0, ek.d)() ? Fk.translationKey : "customTexturePack:invalidPackZip";
+            Vk((0, jk.k)(Pk, kk, Fk.params))
+          } else console.error("Couldn't read the texture pack", Fk), Vk(Pk("customTexturePack:errorTitle"))
         } finally {
-          DS(!1)
+          Qk(!1)
         }
       }
       const {
-        getRootProps: cS,
-        getInputProps: vS,
-        isDragActive: ES,
-        open: LS
-      } = (0, xS.b)({
-        onDrop: dS,
+        getRootProps: Ok,
+        getInputProps: nk,
+        isDragActive: Gk,
+        open: pk
+      } = (0, yk.c)({
+        onDrop: Ek,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: GS
+        disabled: Hk
       });
-      return (0, jS.jsxs)("div", {
+      return (0, wk.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, jS.jsxs)("div", {
+        children: [(0, wk.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [PS("settingsMenu:customTextureWarning"), ".", (0, jS.jsx)("br", {}), PS("settingsMenu:viewDocumentation"), ":", " ", (0, jS.jsx)("a", {
+          children: [Pk("settingsMenu:customTextureWarning"), ".", (0, wk.jsx)("br", {}), Pk("settingsMenu:viewDocumentation"), ":", " ", (0, wk.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), wS && (0, jS.jsxs)("div", {
+        }), sk && (0, wk.jsxs)("div", {
           className: "CustomTextureError",
-          children: [PS("general:error"), ": ", wS]
-        }), ZS && (0, jS.jsx)("div", {
+          children: [Pk("general:error"), ": ", sk]
+        }), zk && (0, wk.jsx)("div", {
           className: "CustomTextureError",
-          children: ZS
-        }), (0, jS.jsxs)("div", {
-          ...cS({
-            className: XS()("CustomTextureFolderUpload", {
-              ActiveDrag: ES,
-              Disabled: GS
+          children: zk
+        }), (0, wk.jsxs)("div", {
+          ...Ok({
+            className: ik()("CustomTextureFolderUpload", {
+              ActiveDrag: Gk,
+              Disabled: Hk
             })
           }),
-          children: [(0, jS.jsx)("input", {
-            ...vS({
+          children: [(0, wk.jsx)("input", {
+            ...nk({
               webkitdirectory: "true"
             })
-          }), QS && (0, jS.jsx)("div", {
+          }), Kk && (0, wk.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, jS.jsx)(NS.c, {})
-          }), !QS && !ES && HS && (0, jS.jsxs)(jS.Fragment, {
-            children: [(0, jS.jsx)("div", {
+            children: (0, wk.jsx)(lk.c, {})
+          }), !Kk && !Gk && Fk && (0, wk.jsxs)(wk.Fragment, {
+            children: [(0, wk.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, jS.jsx)(fS.d, {
+              children: (0, wk.jsx)(tk.e, {
                 name: "folder-image"
               })
-            }), (0, jS.jsx)("div", {
+            }), (0, wk.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: HS
+              children: Fk
             })]
-          }), !QS && (ES || !HS) && (0, jS.jsxs)(jS.Fragment, {
-            children: [(0, jS.jsx)("div", {
+          }), !Kk && (Gk || !Fk) && (0, wk.jsxs)(wk.Fragment, {
+            children: [(0, wk.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, jS.jsx)(fS.d, {
+              children: (0, wk.jsx)(tk.e, {
                 name: "up-from-bracket"
               })
-            }), (0, jS.jsx)("div", {
+            }), (0, wk.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
-              children: PS((0, KS.f)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
+              children: Pk((0, ek.d)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
             })]
-          }), !QS && (0, jS.jsx)(KS.d, {
-            disabled: GS,
-            openFolderPicker: LS,
-            onFiles: SS => {
-              dS(SS)
+          }), !Kk && (0, wk.jsx)(ek.c, {
+            disabled: Hk,
+            openFolderPicker: pk,
+            onFiles: kk => {
+              Ek(kk)
             }
           })]
         })]
       })
     }
   },
-  5228: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => IS,
-      f: () => uS
+  5060: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Lk,
+      d: () => qk
     });
-    var tS = gS(64),
-      bS = gS(1528),
-      XS = gS(1281),
-      xS = gS(104),
-      NS = gS(3308),
-      qS = gS(1181);
+    var Xk = Ik(58),
+      Tk = Ik(1406),
+      ik = Ik(1179),
+      yk = Ik(95),
+      lk = Ik(3078),
+      ak = Ik(1096);
 
-    function uS() {
-      return !(0, xS.isMobile)()
+    function qk() {
+      return !(0, yk.isMobile)()
     }
 
-    function IS(SS) {
+    function Lk(kk) {
       let {
-        disabled: HS,
-        openFolderPicker: gS,
-        onFiles: xS
-      } = SS;
+        disabled: Fk,
+        openFolderPicker: Ik,
+        onFiles: yk
+      } = kk;
       const {
-        t: IS
-      } = (0, XS.F)(), fS = (0, tS.useRef)(null);
-      return (0, qS.jsxs)("div", {
+        t: Lk
+      } = (0, ik.y)(), tk = (0, Xk.useRef)(null);
+      return (0, ak.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, qS.jsx)("input", {
-          ref: fS,
+        children: [(0, ak.jsx)("input", {
+          ref: tk,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(SS) {
-            const HS = Array.from(SS.target.files);
-            SS.target.value = "", xS(HS)
+          onChange: function(kk) {
+            const Fk = Array.from(kk.target.files);
+            kk.target.value = "", yk(Fk)
           }
-        }), uS() && (0, qS.jsx)(bS.g, {
-          disabled: HS,
-          onClick: gS,
-          children: IS("general:chooseFolder")
-        }), (0, qS.jsx)(bS.g, {
-          disabled: HS,
+        }), qk() && (0, ak.jsx)(Tk.d, {
+          disabled: Fk,
+          onClick: Ik,
+          children: Lk("general:chooseFolder")
+        }), (0, ak.jsx)(Tk.d, {
+          disabled: Fk,
           onClick: () => {
-            (0, NS.d)(fS.current)
+            (0, lk.e)(tk.current)
           },
-          children: IS("general:chooseZip")
+          children: Lk("general:chooseZip")
         })]
       })
     }
   },
-  5148: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => KS,
-      g: () => PS,
-      k: () => jS,
-      o: () => nS
+  4983: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => ek,
+      h: () => Pk,
+      j: () => wk,
+      m: () => xk
     });
-    var tS = gS(64),
-      bS = gS(5153),
-      XS = gS(4489),
-      xS = gS(1444),
-      NS = gS(5182),
-      qS = gS(1121),
-      uS = gS.n(qS),
-      IS = gS(1435),
-      fS = gS(1844),
-      kS = gS(5191),
-      aS = gS(1181);
+    var Xk = Ik(58),
+      Tk = Ik(4988),
+      ik = Ik(4338),
+      yk = Ik(1333),
+      lk = Ik(5016),
+      ak = Ik(1055),
+      qk = Ik.n(ak),
+      Lk = Ik(1324),
+      tk = Ik(1665),
+      Zk = Ik(5022),
+      jk = Ik(1096);
 
-    function KS(SS) {
+    function ek(kk) {
       let {
-        label: HS,
-        onClick: gS,
-        checked: tS,
-        circleInfoText: bS,
-        className: NS,
-        disabled: qS,
-        note: IS
-      } = SS;
-      return (0, aS.jsxs)("div", {
-        "aria-disabled": qS || void 0,
+        label: Fk,
+        onClick: Ik,
+        checked: Xk,
+        circleInfoText: Tk,
+        className: lk,
+        disabled: ak,
+        note: Lk
+      } = kk;
+      return (0, jk.jsxs)("div", {
+        "aria-disabled": ak || void 0,
         "data-pad-focusable": !0,
-        className: uS()("SettingBox CheckboxContainer", {
-          [NS]: NS,
-          SettingBoxDisabled: qS
+        className: qk()("SettingBox CheckboxContainer", {
+          [lk]: lk,
+          SettingBoxDisabled: ak
         }),
         onClick: () => {
-          qS || gS(!tS)
+          ak || Ik(!Xk)
         },
-        children: [(0, aS.jsxs)("div", {
+        children: [(0, jk.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, aS.jsx)("label", {
+          children: [(0, jk.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, aS.jsx)(XS.c, {
+            children: (0, jk.jsx)(ik.d, {
               className: "SettingsCheckbox",
-              checked: tS,
-              disabled: qS,
+              checked: Xk,
+              disabled: ak,
               onChange: () => {}
             })
-          }), (0, aS.jsxs)("div", {
+          }), (0, jk.jsxs)("div", {
             className: "CheckboxText",
-            children: [HS, bS && (0, aS.jsx)("span", {
-              onClick: SS => SS.stopPropagation(),
-              children: (0, aS.jsx)(xS.e, {
+            children: [Fk, Tk && (0, jk.jsx)("span", {
+              onClick: kk => kk.stopPropagation(),
+              children: (0, jk.jsx)(yk.c, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: bS
+                hoverInfo: Tk
               })
             })]
           })]
-        }), IS && (0, aS.jsx)("div", {
+        }), Lk && (0, jk.jsx)("div", {
           className: "SettingNote",
-          children: IS
+          children: Lk
         })]
       })
     }
 
-    function jS(SS) {
+    function wk(kk) {
       let {
-        name: HS,
-        onChange: gS,
-        min: bS,
-        max: XS,
-        step: NS,
-        initValue: qS,
-        circleInfoText: IS,
-        format: fS,
-        className: kS,
-        padStep: KS,
-        disabled: jS = !1,
-        selectableMax: GS,
-        cappedNote: nS,
-        onChangeComplete: PS
-      } = SS;
-      const [QS, DS] = (0, tS.useState)(qS), wS = (0, tS.useRef)(qS);
-      (0, tS.useEffect)((() => {
-        wS.current = qS, DS(qS)
-      }), [qS]);
-      const hS = void 0 !== GS && GS < XS,
-        ZS = hS ? {
-          "--slider-selectable": (GS - bS) / (XS - bS)
+        name: Fk,
+        onChange: Ik,
+        min: Tk,
+        max: ik,
+        step: lk,
+        initValue: ak,
+        circleInfoText: Lk,
+        format: tk,
+        className: Zk,
+        padStep: ek,
+        disabled: wk = !1,
+        selectableMax: Hk,
+        cappedNote: xk,
+        onChangeComplete: Pk
+      } = kk;
+      const [Kk, Qk] = (0, Xk.useState)(ak), sk = (0, Xk.useRef)(ak);
+      (0, Xk.useEffect)((() => {
+        sk.current = ak, Qk(ak)
+      }), [ak]);
+      const Vk = void 0 !== Hk && Hk < ik,
+        zk = Vk ? {
+          "--slider-selectable": (Hk - Tk) / (ik - Tk)
         } : void 0;
-      return (0, aS.jsxs)("div", {
-        className: uS()("SettingBox SettingsSliderDiv", {
-          [kS]: kS,
-          SettingBoxDisabled: jS,
-          SliderCapped: hS
+      return (0, jk.jsxs)("div", {
+        className: qk()("SettingBox SettingsSliderDiv", {
+          [Zk]: Zk,
+          SettingBoxDisabled: wk,
+          SliderCapped: Vk
         }),
-        style: ZS,
-        children: [(0, aS.jsxs)("div", {
+        style: zk,
+        children: [(0, jk.jsxs)("div", {
           className: "SliderText",
-          children: [`${HS}: ${fS?fS(QS):QS}`, IS && (0, aS.jsx)(xS.e, {
+          children: [`${Fk}: ${tk?tk(Kk):Kk}`, Lk && (0, jk.jsx)(yk.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: IS
+            hoverInfo: Lk
           })]
-        }), (0, aS.jsx)("div", {
+        }), (0, jk.jsx)("div", {
           className: "SliderDiv",
-          children: (0, aS.jsx)(CS, {
-            value: QS,
-            min: bS,
-            max: XS,
-            step: NS,
-            onChange: SS => {
-              if (hS && SS >= GS && QS === GS) return;
-              const HS = hS ? Math.min(SS, GS) : SS;
-              wS.current = HS, DS(HS), gS(HS)
+          children: (0, jk.jsx)(Jk, {
+            value: Kk,
+            min: Tk,
+            max: ik,
+            step: lk,
+            onChange: kk => {
+              if (Vk && kk >= Hk && Kk === Hk) return;
+              const Fk = Vk ? Math.min(kk, Hk) : kk;
+              sk.current = Fk, Qk(Fk), Ik(Fk)
             },
-            onChangeComplete: PS && (() => {
-              PS(wS.current)
+            onChangeComplete: Pk && (() => {
+              Pk(sk.current)
             }),
-            format: fS,
-            padStep: KS,
-            disabled: jS
+            format: tk,
+            padStep: ek,
+            disabled: wk
           })
-        }), hS && nS && (0, aS.jsx)("div", {
+        }), Vk && xk && (0, jk.jsx)("div", {
           className: "SettingNote",
-          children: nS
+          children: xk
         })]
       })
     }
-    const GS = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const Hk = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function CS(SS) {
-      var HS;
+    function Jk(kk) {
+      var Fk;
       let {
-        value: gS,
-        min: XS,
-        max: xS,
-        step: NS,
-        onChange: qS,
-        orientation: uS,
-        reverse: IS,
-        setIsChanging: fS,
-        tooltip: KS,
-        labels: jS,
-        handleLabel: CS,
-        format: nS,
-        onChangeStart: PS,
-        onChangeComplete: QS,
-        padStep: DS,
-        disabled: wS = !1
-      } = SS;
-      const hS = (0, tS.useRef)(null),
-        ZS = (0, tS.useRef)(null);
-      (0, tS.useLayoutEffect)((() => {
-        var SS, HS, gS;
-        const tS = null !== (SS = null === (HS = hS.current) || void 0 === HS ? void 0 : HS.querySelector(".rangeslider")) && void 0 !== SS ? SS : null;
-        null === tS || void 0 === tS || tS.setAttribute("data-pad-slider", ""), null === tS || void 0 === tS || tS.setAttribute("data-pad-focusable", ""), null === tS || void 0 === tS || null === (gS = tS.querySelector(".rangeslider__handle")) || void 0 === gS || gS.setAttribute("data-pad-slider-handle", ""), ZS.current = tS
-      }), []), (0, tS.useLayoutEffect)((() => {
-        var SS, HS;
-        wS ? null === (SS = ZS.current) || void 0 === SS || SS.setAttribute("aria-disabled", "true") : null === (HS = ZS.current) || void 0 === HS || HS.removeAttribute("aria-disabled")
-      }), [wS]);
-      const JS = (null !== (HS = String(NS).split(".")[1]) && void 0 !== HS ? HS : "").length,
-        OS = SS => {
-          const HS = Number((Math.round((SS - XS) / NS) * NS + XS).toFixed(JS));
-          return Math.min(xS, Math.max(XS, HS))
+        value: Ik,
+        min: ik,
+        max: yk,
+        step: lk,
+        onChange: ak,
+        orientation: qk,
+        reverse: Lk,
+        setIsChanging: tk,
+        tooltip: ek,
+        labels: wk,
+        handleLabel: Jk,
+        format: xk,
+        onChangeStart: Pk,
+        onChangeComplete: Kk,
+        padStep: Qk,
+        disabled: sk = !1
+      } = kk;
+      const Vk = (0, Xk.useRef)(null),
+        zk = (0, Xk.useRef)(null);
+      (0, Xk.useLayoutEffect)((() => {
+        var kk, Fk, Ik;
+        const Xk = null !== (kk = null === (Fk = Vk.current) || void 0 === Fk ? void 0 : Fk.querySelector(".rangeslider")) && void 0 !== kk ? kk : null;
+        null === Xk || void 0 === Xk || Xk.setAttribute("data-pad-slider", ""), null === Xk || void 0 === Xk || Xk.setAttribute("data-pad-focusable", ""), null === Xk || void 0 === Xk || null === (Ik = Xk.querySelector(".rangeslider__handle")) || void 0 === Ik || Ik.setAttribute("data-pad-slider-handle", ""), zk.current = Xk
+      }), []), (0, Xk.useLayoutEffect)((() => {
+        var kk, Fk;
+        sk ? null === (kk = zk.current) || void 0 === kk || kk.setAttribute("aria-disabled", "true") : null === (Fk = zk.current) || void 0 === Fk || Fk.removeAttribute("aria-disabled")
+      }), [sk]);
+      const Sk = (null !== (Fk = String(lk).split(".")[1]) && void 0 !== Fk ? Fk : "").length,
+        vk = kk => {
+          const Fk = Number((Math.round((kk - ik) / lk) * lk + ik).toFixed(Sk));
+          return Math.min(yk, Math.max(ik, Fk))
         },
-        dS = (0, tS.useRef)(QS);
-      dS.current = QS, (0, tS.useEffect)((() => {
-        const SS = hS.current;
-        if (!SS) return;
-        const HS = SS => {
-          var HS;
-          GS.has(SS.key) && (null === (HS = dS.current) || void 0 === HS || HS.call(dS))
+        Ek = (0, Xk.useRef)(Kk);
+      Ek.current = Kk, (0, Xk.useEffect)((() => {
+        const kk = Vk.current;
+        if (!kk) return;
+        const Fk = kk => {
+          var Fk;
+          Hk.has(kk.key) && (null === (Fk = Ek.current) || void 0 === Fk || Fk.call(Ek))
         };
-        return SS.addEventListener("keyup", HS), () => {
-          SS.removeEventListener("keyup", HS)
+        return kk.addEventListener("keyup", Fk), () => {
+          kk.removeEventListener("keyup", Fk)
         }
       }), []);
-      const cS = (0, tS.useRef)(!1);
-      return (0, kS.f)(ZS, {
-        adjust: SS => {
-          if (wS) return;
-          const HS = null !== DS && void 0 !== DS ? DS : Math.max(NS, Math.round((xS - XS) / 20 / NS) * NS),
-            tS = OS(gS + SS * HS * (IS ? -1 : 1));
-          tS !== gS && (null === PS || void 0 === PS || PS(), qS(tS), null === QS || void 0 === QS || QS())
+      const Ok = (0, Xk.useRef)(!1);
+      return (0, Zk.g)(zk, {
+        adjust: kk => {
+          if (sk) return;
+          const Fk = null !== Qk && void 0 !== Qk ? Qk : Math.max(lk, Math.round((yk - ik) / 20 / lk) * lk),
+            Xk = vk(Ik + kk * Fk * (Lk ? -1 : 1));
+          Xk !== Ik && (null === Pk || void 0 === Pk || Pk(), ak(Xk), null === Kk || void 0 === Kk || Kk())
         },
-        setFraction: SS => {
-          if (wS) return;
-          const HS = OS(XS + (IS ? 1 - SS : SS) * (xS - XS));
-          HS !== gS && (cS.current || (cS.current = !0, null === PS || void 0 === PS || PS()), qS(HS))
+        setFraction: kk => {
+          if (sk) return;
+          const Fk = vk(ik + (Lk ? 1 - kk : kk) * (yk - ik));
+          Fk !== Ik && (Ok.current || (Ok.current = !0, null === Pk || void 0 === Pk || Pk()), ak(Fk))
         },
         endDrag: () => {
-          cS.current && (cS.current = !1, null === QS || void 0 === QS || QS())
+          Ok.current && (Ok.current = !1, null === Kk || void 0 === Kk || Kk())
         }
-      }), (0, aS.jsx)("div", {
-        ref: hS,
+      }), (0, jk.jsx)("div", {
+        ref: Vk,
         style: {
           display: "contents"
         },
-        children: (0, aS.jsx)(bS.c, {
-          value: gS,
-          min: XS,
-          max: xS,
-          step: NS,
-          onChange: qS,
-          orientation: uS,
-          reverse: IS,
-          tooltip: KS,
-          labels: jS,
-          handleLabel: CS,
-          format: nS,
+        children: (0, jk.jsx)(Tk.c, {
+          value: Ik,
+          min: ik,
+          max: yk,
+          step: lk,
+          onChange: ak,
+          orientation: qk,
+          reverse: Lk,
+          tooltip: ek,
+          labels: wk,
+          handleLabel: Jk,
+          format: xk,
           onChangeStart: () => {
-            null === PS || void 0 === PS || PS(), null === fS || void 0 === fS || fS(!0)
+            null === Pk || void 0 === Pk || Pk(), null === tk || void 0 === tk || tk(!0)
           },
           onChangeComplete: () => {
-            null === fS || void 0 === fS || fS(!1), null === QS || void 0 === QS || QS()
+            null === tk || void 0 === tk || tk(!1), null === Kk || void 0 === Kk || Kk()
           }
         })
       })
     }
-    async function nS() {
-      const SS = IS.NotificationProvider.showPromptPopup({
+    async function xk() {
+      const kk = Lk.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -464,75 +464,75 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await SS.getResult() && (0, fS.reloadBloxd)()
+      !0 === await kk.getResult() && (0, tk.reloadBloxd)()
     }
 
-    function PS(SS) {
+    function Pk(kk) {
       let {
-        label: HS,
-        options: gS,
-        value: tS,
-        onChange: bS,
-        circleInfoText: XS
-      } = SS;
-      return (0, aS.jsxs)("div", {
+        label: Fk,
+        options: Ik,
+        value: Xk,
+        onChange: Tk,
+        circleInfoText: ik
+      } = kk;
+      return (0, jk.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, aS.jsxs)("div", {
+        children: [(0, jk.jsxs)("div", {
           className: "SliderText",
-          children: [HS, XS && (0, aS.jsx)(xS.e, {
+          children: [Fk, ik && (0, jk.jsx)(yk.c, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: XS
+            hoverInfo: ik
           })]
-        }), (0, aS.jsx)(NS.d, {
-          ariaLabel: HS,
-          options: gS,
-          value: tS,
-          onChange: bS
+        }), (0, jk.jsx)(lk.b, {
+          ariaLabel: Fk,
+          options: Ik,
+          value: Xk,
+          onChange: Tk
         })]
       })
     }
   },
-  5142: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => GS,
-      c: () => CS
+  4978: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Hk,
+      g: () => Jk
     });
-    var tS = gS(3325),
-      bS = gS(2256),
-      XS = gS(64),
-      xS = gS(1121),
-      NS = gS.n(xS),
-      qS = gS(1419),
-      uS = gS(3320),
-      IS = gS(1435),
-      fS = gS(5148),
-      kS = gS(5195),
-      aS = gS(699),
-      KS = gS(5234),
-      jS = gS(1181);
+    var Xk = Ik(3096),
+      Tk = Ik(2071),
+      ik = Ik(58),
+      yk = Ik(1055),
+      lk = Ik.n(yk),
+      ak = Ik(1318),
+      qk = Ik(3089),
+      Lk = Ik(1324),
+      tk = Ik(4983),
+      Zk = Ik(5030),
+      jk = Ik(646),
+      ek = Ik(5063),
+      wk = Ik(1096);
 
-    function GS(SS) {
-      var HS;
+    function Hk(kk) {
+      var Fk;
       let {
-        setApplySettingsCallback: gS
-      } = SS;
-      const [, xS] = (0, XS.useReducer)((SS => SS + 1), 0), NS = (0, XS.useRef)(!1), qS = (0, XS.useRef)(null);
+        setApplySettingsCallback: Ik
+      } = kk;
+      const [, yk] = (0, ik.useReducer)((kk => kk + 1), 0), lk = (0, ik.useRef)(!1), ak = (0, ik.useRef)(null);
 
-      function GS(SS, HS) {
-        uS.d.setFromJson(SS, "player");
-        const tS = uS.d.saveTexturePack();
-        if (aS.A) {
-          const SS = uS.d.toJson();
-          tS.then((HS => {
-            HS && (0, KS.e)(SS)
+      function Hk(kk, Fk) {
+        qk.b.setFromJson(kk, "player");
+        const Xk = qk.b.saveTexturePack();
+        if (jk.x) {
+          const kk = qk.b.toJson();
+          Xk.then((Fk => {
+            Fk && (0, ek.e)(kk)
           }))
-        } else NS.current ||= HS, qS.current !== uS.d.getId() || uS.d.getId() === bS.q.CUSTOM && NS.current ? gS((() => fS.o)) : gS(null);
-        xS()
+        } else lk.current ||= Fk, ak.current !== qk.b.getId() || qk.b.getId() === Tk.l.CUSTOM && lk.current ? Ik((() => tk.m)) : Ik(null);
+        yk()
       }
-      async function nS(SS) {
-        if (uS.d.getId() !== SS.metaData.id) {
-          if (uS.d.getId() === bS.q.CUSTOM && uS.d.getFromFolderName()) {
-            const SS = IS.NotificationProvider.showPromptPopup({
+      async function xk(kk) {
+        if (qk.b.getId() !== kk.metaData.id) {
+          if (qk.b.getId() === Tk.l.CUSTOM && qk.b.getFromFolderName()) {
+            const kk = Lk.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -541,29 +541,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await SS.getResult()) return
+            if (!0 !== await kk.getResult()) return
           }
-          GS(SS, !1)
+          Hk(kk, !1)
         }
-      }(0, XS.useEffect)((() => {
-        qS.current = uS.d.getId()
+      }(0, ik.useEffect)((() => {
+        ak.current = qk.b.getId()
       }), []);
-      const PS = tS.b,
-        QS = [PS, ...Object.values(bS.q).filter((SS => SS !== PS))];
-      return (0, jS.jsx)(jS.Fragment, {
-        children: (0, jS.jsxs)("div", {
+      const Pk = Xk.e,
+        Kk = [Pk, ...Object.values(Tk.l).filter((kk => kk !== Pk))];
+      return (0, wk.jsx)(wk.Fragment, {
+        children: (0, wk.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, jS.jsx)("div", {
+          children: [(0, wk.jsx)("div", {
             className: "TexturePackList",
-            children: QS.map((SS => (0, jS.jsx)(CS, {
-              id: SS,
-              isSelected: SS === uS.d.getId(),
-              setSelected: nS
-            }, SS)))
-          }), uS.d.getId() === bS.q.CUSTOM && (0, jS.jsx)(kS.d, {
-            folderName: null !== (HS = uS.d.getFromFolderName()) && void 0 !== HS ? HS : null,
-            onTexturePackUpdated: function(SS) {
-              GS(SS, !0)
+            children: Kk.map((kk => (0, wk.jsx)(Jk, {
+              id: kk,
+              isSelected: kk === qk.b.getId(),
+              setSelected: xk
+            }, kk)))
+          }), qk.b.getId() === Tk.l.CUSTOM && (0, wk.jsx)(Zk.d, {
+            folderName: null !== (Fk = qk.b.getFromFolderName()) && void 0 !== Fk ? Fk : null,
+            onTexturePackUpdated: function(kk) {
+              Hk(kk, !0)
             },
             packOwner: "player"
           })]
@@ -571,417 +571,417 @@ export const modules = {
       })
     }
 
-    function CS(SS) {
+    function Jk(kk) {
       let {
-        id: HS,
-        isSelected: gS,
-        setSelected: xS,
-        disabled: uS = !1
-      } = SS;
-      const [IS, fS] = (0, XS.useState)(!0), [kS, aS] = (0, XS.useState)(""), [KS, GS] = (0, XS.useState)(""), [CS, nS] = (0, XS.useState)(""), PS = (0, XS.useRef)({});
-      return (0, XS.useEffect)((() => {
-        (0, tS.j)(HS).then((SS => {
-          var HS;
-          SS && (PS.current = SS, fS(!1), aS(PS.current.metaData.name), GS(PS.current.metaData.author), nS(null !== (HS = PS.current.metaData.previewImage) && void 0 !== HS ? HS : ""))
-        })).catch((SS => {
-          console.warn(`Failed to fetch texture pack ${HS}`, SS)
+        id: Fk,
+        isSelected: Ik,
+        setSelected: yk,
+        disabled: qk = !1
+      } = kk;
+      const [Lk, tk] = (0, ik.useState)(!0), [Zk, jk] = (0, ik.useState)(""), [ek, Hk] = (0, ik.useState)(""), [Jk, xk] = (0, ik.useState)(""), Pk = (0, ik.useRef)({});
+      return (0, ik.useEffect)((() => {
+        (0, Xk.o)(Fk).then((kk => {
+          var Fk;
+          kk && (Pk.current = kk, tk(!1), jk(Pk.current.metaData.name), Hk(Pk.current.metaData.author), xk(null !== (Fk = Pk.current.metaData.previewImage) && void 0 !== Fk ? Fk : ""))
+        })).catch((kk => {
+          console.warn(`Failed to fetch texture pack ${Fk}`, kk)
         }))
-      }), [HS]), (0, jS.jsxs)("div", {
+      }), [Fk]), (0, wk.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": uS || void 0,
-        className: NS()("TexturePack", {
-          Selected: gS,
-          Custom: HS === bS.q.CUSTOM,
-          Disabled: uS
+        "aria-disabled": qk || void 0,
+        className: lk()("TexturePack", {
+          Selected: Ik,
+          Custom: Fk === Tk.l.CUSTOM,
+          Disabled: qk
         }),
         onClick: () => {
-          IS || uS || xS(PS.current)
+          Lk || qk || yk(Pk.current)
         },
-        children: [(0, jS.jsx)("div", {
+        children: [(0, wk.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: CS ? `url(${CS})` : void 0
+            backgroundImage: Jk ? `url(${Jk})` : void 0
           }
-        }), IS && (0, jS.jsx)("div", {
+        }), Lk && (0, wk.jsx)("div", {
           className: "TexturePackName",
-          children: (0, jS.jsx)(qS.c, {})
-        }), !IS && kS && (0, jS.jsx)("div", {
+          children: (0, wk.jsx)(ak.c, {})
+        }), !Lk && Zk && (0, wk.jsx)("div", {
           className: "TexturePackName",
-          children: kS
-        }), !IS && KS && (0, jS.jsx)("div", {
+          children: Zk
+        }), !Lk && ek && (0, wk.jsx)("div", {
           className: "TexturePackAuthor",
-          children: KS
+          children: ek
         })]
       })
     }
   },
-  5204: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => NS,
-      f: () => xS,
-      j: () => XS
+  5038: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => lk,
+      h: () => yk,
+      k: () => ik
     });
-    var tS = gS(5212);
-    const bS = [SS => SS.strict ? "strict" : "nonStrict", SS => SS.program];
+    var Xk = Ik(5047);
+    const Tk = [kk => kk.strict ? "strict" : "nonStrict", kk => kk.program];
 
-    function XS(SS, HS) {
-      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const tS = {};
-      for (const bS in gS) tS[bS] = `\0${bS}\0`;
-      return SS(HS, tS).replace(/\0(\w+)\0/g, ((SS, HS) => gS[HS]))
+    function ik(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const Xk = {};
+      for (const Tk in Ik) Xk[Tk] = `\0${Tk}\0`;
+      return kk(Fk, Xk).replace(/\0(\w+)\0/g, ((kk, Fk) => Ik[Fk]))
     }
 
-    function xS(SS) {
-      return null === SS.file ? null : SS.line > 0 ? `${SS.file}:${SS.line}` : SS.file
+    function yk(kk) {
+      return null === kk.file ? null : kk.line > 0 ? `${kk.file}:${kk.line}` : kk.file
     }
 
-    function NS(SS) {
-      const HS = new Map(SS.map((SS => [qS(SS).join("."), SS])));
-      if (0 === HS.size) return [];
-      const gS = IS([...HS.values()]);
-      return 0 === gS[0].length ? [] : gS
+    function lk(kk) {
+      const Fk = new Map(kk.map((kk => [ak(kk).join("."), kk])));
+      if (0 === Fk.size) return [];
+      const Ik = Lk([...Fk.values()]);
+      return 0 === Ik[0].length ? [] : Ik
     }
 
-    function qS(SS) {
-      return bS.map((HS => HS(SS)))
+    function ak(kk) {
+      return Tk.map((Fk => Fk(kk)))
     }
-    const uS = bS.map((SS => new Set(tS.i.map(SS)).size));
+    const qk = Tk.map((kk => new Set(Xk.e.map(kk)).size));
 
-    function IS(SS) {
-      const HS = bS.map((HS => new Set(SS.map(HS)))),
-        gS = HS.reduce(((SS, HS) => SS * HS.size), 1),
-        tS = HS.every(((SS, HS) => 1 === SS.size || SS.size === uS[HS]));
-      if (gS === SS.length && tS) return [bS.filter(((SS, gS) => 1 === HS[gS].size)).map((HS => HS(SS[0])))];
-      let XS = null;
-      for (let xS = 0; xS < bS.length; xS++) {
-        if (1 === HS[xS].size) continue;
-        const gS = fS(SS, bS[xS]).flatMap(IS);
-        (null === XS || gS.length < XS.length) && (XS = gS)
+    function Lk(kk) {
+      const Fk = Tk.map((Fk => new Set(kk.map(Fk)))),
+        Ik = Fk.reduce(((kk, Fk) => kk * Fk.size), 1),
+        Xk = Fk.every(((kk, Fk) => 1 === kk.size || kk.size === qk[Fk]));
+      if (Ik === kk.length && Xk) return [Tk.filter(((kk, Ik) => 1 === Fk[Ik].size)).map((Fk => Fk(kk[0])))];
+      let ik = null;
+      for (let yk = 0; yk < Tk.length; yk++) {
+        if (1 === Fk[yk].size) continue;
+        const Ik = tk(kk, Tk[yk]).flatMap(Lk);
+        (null === ik || Ik.length < ik.length) && (ik = Ik)
       }
-      return XS
+      return ik
     }
 
-    function fS(SS, HS) {
-      const gS = new Map;
-      for (const bS of SS) {
-        var tS;
-        const SS = HS(bS);
-        gS.set(SS, [...null !== (tS = gS.get(SS)) && void 0 !== tS ? tS : [], bS])
+    function tk(kk, Fk) {
+      const Ik = new Map;
+      for (const Tk of kk) {
+        var Xk;
+        const kk = Fk(Tk);
+        Ik.set(kk, [...null !== (Xk = Ik.get(kk)) && void 0 !== Xk ? Xk : [], Tk])
       }
-      return [...gS.values()]
+      return [...Ik.values()]
     }
   },
-  5182: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => xS
+  5016: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => yk
     });
-    var tS = gS(1121),
-      bS = gS.n(tS),
-      XS = gS(1181);
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(1096);
 
-    function xS(SS) {
+    function yk(kk) {
       let {
-        options: HS,
-        value: gS,
-        onChange: tS,
-        ariaLabel: xS,
-        className: NS,
-        reselectable: qS = !1,
-        keepsFocus: uS = !1,
-        padTabs: IS
-      } = SS;
-      const fS = void 0 !== IS;
-      return (0, XS.jsx)("div", {
-        className: bS()("SegmentedToggle", NS),
+        options: Fk,
+        value: Ik,
+        onChange: Xk,
+        ariaLabel: yk,
+        className: lk,
+        reselectable: ak = !1,
+        keepsFocus: qk = !1,
+        padTabs: Lk
+      } = kk;
+      const tk = void 0 !== Lk;
+      return (0, ik.jsx)("div", {
+        className: Tk()("SegmentedToggle", lk),
         role: "group",
-        "aria-label": xS,
-        "data-pad-tabs": IS,
-        children: HS.map((SS => {
-          const HS = SS.value === gS;
-          return (0, XS.jsx)("button", {
+        "aria-label": yk,
+        "data-pad-tabs": Lk,
+        children: Fk.map((kk => {
+          const Fk = kk.value === Ik;
+          return (0, ik.jsx)("button", {
             type: "button",
-            "aria-pressed": HS,
-            "data-pad-tab": fS || void 0,
-            "data-pad-selected": fS && HS ? "true" : void 0,
-            "data-pad-default-focus": fS && HS || void 0,
-            "aria-label": SS.ariaLabel,
-            title: SS.ariaLabel,
-            className: bS()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: HS
+            "aria-pressed": Fk,
+            "data-pad-tab": tk || void 0,
+            "data-pad-selected": tk && Fk ? "true" : void 0,
+            "data-pad-default-focus": tk && Fk || void 0,
+            "aria-label": kk.ariaLabel,
+            title: kk.ariaLabel,
+            className: Tk()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: Fk
             }),
-            onMouseDown: uS ? SS => {
-              SS.preventDefault()
+            onMouseDown: qk ? kk => {
+              kk.preventDefault()
             } : void 0,
             onClick: () => {
-              HS && !qS || tS(SS.value)
+              Fk && !ak || Xk(kk.value)
             },
-            children: SS.label
-          }, SS.value)
+            children: kk.label
+          }, kk.value)
         }))
       })
     }
   },
-  5191: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => XS,
-      f: () => xS
+  5022: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ik,
+      g: () => yk
     });
-    var tS = gS(64);
-    const bS = new WeakMap,
-      XS = SS => {
-        var HS;
-        const gS = SS.closest("[data-pad-slider]");
-        return gS && null !== (HS = bS.get(gS)) && void 0 !== HS ? HS : null
+    var Xk = Ik(58);
+    const Tk = new WeakMap,
+      ik = kk => {
+        var Fk;
+        const Ik = kk.closest("[data-pad-slider]");
+        return Ik && null !== (Fk = Tk.get(Ik)) && void 0 !== Fk ? Fk : null
       },
-      xS = (SS, HS) => {
-        const gS = (0, tS.useRef)(HS);
-        gS.current = HS, (0, tS.useEffect)((() => {
-          if (SS.current) return ((SS, HS) => (bS.set(SS, HS), () => {
-            bS.get(SS) === HS && bS.delete(SS)
-          }))(SS.current, {
-            adjust: SS => {
-              gS.current.adjust(SS)
+      yk = (kk, Fk) => {
+        const Ik = (0, Xk.useRef)(Fk);
+        Ik.current = Fk, (0, Xk.useEffect)((() => {
+          if (kk.current) return ((kk, Fk) => (Tk.set(kk, Fk), () => {
+            Tk.get(kk) === Fk && Tk.delete(kk)
+          }))(kk.current, {
+            adjust: kk => {
+              Ik.current.adjust(kk)
             },
-            setFraction: SS => {
-              gS.current.setFraction(SS)
+            setFraction: kk => {
+              Ik.current.setFraction(kk)
             },
             endDrag: () => {
-              gS.current.endDrag()
+              Ik.current.endDrag()
             }
           })
-        }), [SS])
+        }), [kk])
       }
   },
-  5212: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => tS.h,
-      i: () => bS,
-      j: () => tS.n
+  5047: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Xk.d,
+      e: () => Tk,
+      i: () => Xk.m
     });
-    var tS = gS(5221);
-    const bS = [!1, !0].flatMap((SS => ["terrain", "liquid", "model"].map((HS => ({
-      strict: SS,
-      program: HS
+    var Xk = Ik(5053);
+    const Tk = [!1, !0].flatMap((kk => ["terrain", "liquid", "model"].map((Fk => ({
+      strict: kk,
+      program: Fk
     })))))
   },
-  5242: (SS, HS, gS) => {
-    function tS(SS, HS) {
-      return bS(SS, HS)
+  5071: (kk, Fk, Ik) => {
+    function Xk(kk, Fk) {
+      return Tk(kk, Fk)
     }
 
-    function bS(SS, HS) {
-      if (SS === HS) return !0;
-      if ("object" !== typeof SS || "object" !== typeof HS || null === SS || null === HS || Array.isArray(SS) !== Array.isArray(HS)) return !1;
-      const gS = SS,
-        tS = HS,
-        XS = Object.keys(gS);
-      return XS.length === Object.keys(tS).length && XS.every((SS => Object.prototype.hasOwnProperty.call(tS, SS) && bS(gS[SS], tS[SS])))
+    function Tk(kk, Fk) {
+      if (kk === Fk) return !0;
+      if ("object" !== typeof kk || "object" !== typeof Fk || null === kk || null === Fk || Array.isArray(kk) !== Array.isArray(Fk)) return !1;
+      const Ik = kk,
+        Xk = Fk,
+        ik = Object.keys(Ik);
+      return ik.length === Object.keys(Xk).length && ik.every((kk => Object.prototype.hasOwnProperty.call(Xk, kk) && Tk(Ik[kk], Xk[kk])))
     }
-    gS.d(HS, {
-      d: () => tS
+    Ik.d(Fk, {
+      e: () => Xk
     })
   },
-  5234: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => xS,
-      g: () => NS
+  5063: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => yk,
+      i: () => lk
     });
-    var tS = gS(2256),
-      bS = gS(5242);
-    let XS = null;
+    var Xk = Ik(2071),
+      Tk = Ik(5071);
+    let ik = null;
 
-    function xS(SS) {
-      XS = {
-        pack: SS.metaData.id === tS.d ? null : SS
+    function yk(kk) {
+      ik = {
+        pack: kk.metaData.id === Xk.b ? null : kk
       }
     }
 
-    function NS(SS) {
-      return !(null === XS || !(0, bS.d)(XS.pack, SS)) && (XS = null, !0)
+    function lk(kk) {
+      return !(null === ik || !(0, Tk.e)(ik.pack, kk)) && (ik = null, !0)
     }
   },
-  5221: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => NS,
-      e: () => xS,
-      h: () => tS,
-      j: () => jS,
-      m: () => fS,
-      n: () => bS,
-      r: () => XS,
-      u: () => uS,
-      v: () => IS,
-      y: () => kS
+  5053: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => lk,
+      c: () => yk,
+      d: () => Xk,
+      g: () => wk,
+      k: () => tk,
+      m: () => Tk,
+      p: () => ik,
+      t: () => qk,
+      w: () => Lk,
+      x: () => Zk
     });
-    const tS = 5;
+    const Xk = 5;
 
-    function bS(SS) {
-      return SS === tS
+    function Tk(kk) {
+      return kk === Xk
     }
 
-    function XS(SS) {
-      return [...SS.features]
+    function ik(kk) {
+      return [...kk.features]
     }
-    const xS = 262144,
-      NS = 256,
-      qS = 256;
+    const yk = 262144,
+      lk = 256,
+      ak = 256;
 
-    function uS(SS) {
-      if ("object" !== typeof SS || null === SS || Array.isArray(SS)) return "The pack has no files.";
-      const HS = [];
-      for (const [gS, tS] of Object.entries(SS)) {
-        if ("string" !== typeof tS) return `${gS} isn't text.`;
-        HS.push({
-          path: gS,
-          source: tS
+    function qk(kk) {
+      if ("object" !== typeof kk || null === kk || Array.isArray(kk)) return "The pack has no files.";
+      const Fk = [];
+      for (const [Ik, Xk] of Object.entries(kk)) {
+        if ("string" !== typeof Xk) return `${Ik} isn't text.`;
+        Fk.push({
+          path: Ik,
+          source: Xk
         })
       }
-      return HS.sort(((SS, HS) => fS(SS.path, HS.path))),
-        function(SS) {
-          if (0 === SS.length) return "The pack has no .wgsl files.";
-          if (SS.length > NS) return `The pack has more than ${NS} .wgsl files.`;
-          const HS = new Set;
+      return Fk.sort(((kk, Fk) => tk(kk.path, Fk.path))),
+        function(kk) {
+          if (0 === kk.length) return "The pack has no .wgsl files.";
+          if (kk.length > lk) return `The pack has more than ${lk} .wgsl files.`;
+          const Fk = new Set;
           for (const {
-              path: gS
+              path: Ik
             }
-            of SS) {
-            const SS = aS(gS);
-            if (null !== SS) return SS;
-            if (HS.has(gS)) return `The pack has two files at ${gS}.`;
-            HS.add(gS)
+            of kk) {
+            const kk = jk(Ik);
+            if (null !== kk) return kk;
+            if (Fk.has(Ik)) return `The pack has two files at ${Ik}.`;
+            Fk.add(Ik)
           }
-          return kS(SS) > xS ? `The pack's .wgsl files are over ${xS/1024} KB in total.` : null
-        }(HS) ?? HS
+          return Zk(kk) > yk ? `The pack's .wgsl files are over ${yk/1024} KB in total.` : null
+        }(Fk) ?? Fk
     }
 
-    function IS(SS) {
-      const HS = {};
-      for (const gS of SS) HS[gS.path] = gS.source;
-      return HS
+    function Lk(kk) {
+      const Fk = {};
+      for (const Ik of kk) Fk[Ik.path] = Ik.source;
+      return Fk
     }
 
-    function fS(SS, HS) {
-      return SS < HS ? -1 : SS > HS ? 1 : 0
+    function tk(kk, Fk) {
+      return kk < Fk ? -1 : kk > Fk ? 1 : 0
     }
 
-    function kS(SS) {
-      const HS = new TextEncoder;
-      let gS = 0;
+    function Zk(kk) {
+      const Fk = new TextEncoder;
+      let Ik = 0;
       for (const {
-          source: tS
+          source: Xk
         }
-        of SS) gS += HS.encode(tS).byteLength;
-      return gS
+        of kk) Ik += Fk.encode(Xk).byteLength;
+      return Ik
     }
 
-    function aS(SS) {
-      if (!SS.toLowerCase().endsWith(".wgsl")) return `${SS} isn't a .wgsl file.`;
-      if (SS.length > qS) return `A file path is over ${qS} characters.`;
-      if (SS.includes("\\") || /[\u0000-\u001f]/.test(SS)) return `${SS} isn't a valid file path.`;
-      return SS.split("/").some((SS => "" === SS || "." === SS || ".." === SS)) ? `${SS} isn't a valid file path.` : null
+    function jk(kk) {
+      if (!kk.toLowerCase().endsWith(".wgsl")) return `${kk} isn't a .wgsl file.`;
+      if (kk.length > ak) return `A file path is over ${ak} characters.`;
+      if (kk.includes("\\") || /[\u0000-\u001f]/.test(kk)) return `${kk} isn't a valid file path.`;
+      return kk.split("/").some((kk => "" === kk || "." === kk || ".." === kk)) ? `${kk} isn't a valid file path.` : null
     }
-    const KS = /^(.*)\[rot\[([1-4])$/;
+    const ek = /^(.*)\[rot\[([1-4])$/;
 
-    function jS(SS, HS) {
-      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const tS = new Map;
-      HS.forEach(((SS, HS) => {
+    function wk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const Xk = new Map;
+      Fk.forEach(((kk, Fk) => {
         let {
-          numAnimStates: gS,
-          animStartIdx: bS
-        } = SS;
-        for (let XS = 1; XS < gS; XS++) tS.set(bS + XS - 1, HS)
+          numAnimStates: Ik,
+          animStartIdx: Tk
+        } = kk;
+        for (let ik = 1; ik < Ik; ik++) Xk.set(Tk + ik - 1, Fk)
       }));
-      const bS = Object.entries(SS),
-        XS = new Map;
-      for (const [jS, GS] of bS) {
-        const SS = KS.exec(jS);
-        "1" === SS?.[2] && XS.set(SS[1], GS + 1)
+      const Tk = Object.entries(kk),
+        ik = new Map;
+      for (const [wk, Hk] of Tk) {
+        const kk = ek.exec(wk);
+        "1" === kk?.[2] && ik.set(kk[1], Hk + 1)
       }
-      const xS = SS => {
-          const HS = KS.exec(SS);
-          return HS && XS.has(HS[1]) ? {
-            root: HS[1],
-            rotation: Number(HS[2]) - 1
+      const yk = kk => {
+          const Fk = ek.exec(kk);
+          return Fk && ik.has(Fk[1]) ? {
+            root: Fk[1],
+            rotation: Number(Fk[2]) - 1
           } : null
         },
-        NS = new Set(bS.map((SS => {
-          let [HS] = SS;
-          return xS(HS)?.root ?? HS
+        lk = new Set(Tk.map((kk => {
+          let [Fk] = kk;
+          return yk(Fk)?.root ?? Fk
         }))),
-        qS = (SS, gS) => {
-          const tS = SS.replace(/_?0$/, "");
-          return (HS[gS]?.numAnimStates ?? 0) > 1 && !NS.has(tS) ? tS : SS
+        ak = (kk, Ik) => {
+          const Xk = kk.replace(/_?0$/, "");
+          return (Fk[Ik]?.numAnimStates ?? 0) > 1 && !lk.has(Xk) ? Xk : kk
         },
-        uS = new Map;
-      for (const [KS, jS] of bS) uS.set(jS, qS(xS(KS)?.root ?? KS, jS));
-      const IS = bS.reduce(((SS, HS) => {
-          let [, gS] = HS;
-          return Math.max(SS, gS + 1)
+        qk = new Map;
+      for (const [ek, wk] of Tk) qk.set(wk, ak(yk(ek)?.root ?? ek, wk));
+      const Lk = Tk.reduce(((kk, Fk) => {
+          let [, Ik] = Fk;
+          return Math.max(kk, Ik + 1)
         }), 0),
-        fS = Array.from({
-          length: IS
-        }, ((SS, HS) => ({
-          id: HS + 1,
+        tk = Array.from({
+          length: Lk
+        }, ((kk, Fk) => ({
+          id: Fk + 1,
           rotation: 0
         }))),
-        kS = new Map,
-        aS = new Map;
-      for (const [KS, jS] of bS) {
-        const SS = xS(KS),
-          HS = tS.get(jS);
-        if (void 0 !== HS) {
-          const gS = uS.get(HS);
-          aS.set(KS, {
-            name: KS,
-            texture: gS,
+        Zk = new Map,
+        jk = new Map;
+      for (const [ek, wk] of Tk) {
+        const kk = yk(ek),
+          Fk = Xk.get(wk);
+        if (void 0 !== Fk) {
+          const Ik = qk.get(Fk);
+          jk.set(ek, {
+            name: ek,
+            texture: Ik,
             kind: "frame"
-          }), SS && !aS.has(SS.root) && aS.set(SS.root, {
-            name: SS.root,
-            texture: gS,
+          }), kk && !jk.has(kk.root) && jk.set(kk.root, {
+            name: kk.root,
+            texture: Ik,
             kind: "frame"
           });
           continue
         }
-        const gS = uS.get(jS),
-          bS = SS?.root ?? KS;
-        if (gS !== bS && aS.set(bS, {
-            name: bS,
-            texture: gS,
+        const Ik = qk.get(wk),
+          Tk = kk?.root ?? ek;
+        if (Ik !== Tk && jk.set(Tk, {
+            name: Tk,
+            texture: Ik,
             kind: "frame"
-          }), SS) {
-          const HS = XS.get(SS.root);
-          fS[jS] = {
-            id: HS,
-            rotation: SS.rotation
-          }, kS.set(gS, HS), aS.set(KS, {
-            name: KS,
-            texture: gS,
+          }), kk) {
+          const Fk = ik.get(kk.root);
+          tk[wk] = {
+            id: Fk,
+            rotation: kk.rotation
+          }, Zk.set(Ik, Fk), jk.set(ek, {
+            name: ek,
+            texture: Ik,
             kind: "rotation"
           })
-        } else kS.set(gS, jS + 1)
+        } else Zk.set(Ik, wk + 1)
       }
-      for (const KS of kS.keys()) aS.delete(KS);
-      for (const [KS, jS] of gS) {
-        const SS = kS.get(jS);
-        void 0 === SS || kS.has(KS) || (kS.set(KS, SS), aS.delete(KS))
+      for (const ek of Zk.keys()) jk.delete(ek);
+      for (const [ek, wk] of Ik) {
+        const kk = Zk.get(wk);
+        void 0 === kk || Zk.has(ek) || (Zk.set(ek, kk), jk.delete(ek))
       }
       return {
-        named: [...kS].sort(((SS, HS) => {
-          let [gS] = SS, [tS] = HS;
-          return gS < tS ? -1 : gS > tS ? 1 : 0
-        })).map((SS => {
-          let [HS, gS] = SS;
+        named: [...Zk].sort(((kk, Fk) => {
+          let [Ik] = kk, [Xk] = Fk;
+          return Ik < Xk ? -1 : Ik > Xk ? 1 : 0
+        })).map((kk => {
+          let [Fk, Ik] = kk;
           return {
-            name: HS,
-            id: gS
+            name: Fk,
+            id: Ik
           }
         })),
-        aliases: [...aS.values()],
-        layers: fS
+        aliases: [...jk.values()],
+        layers: tk
       }
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

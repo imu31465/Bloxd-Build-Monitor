@@ -1,757 +1,757 @@
 export const id = 133;
 export const ids = [133];
 export const modules = {
-  6810: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      loadPageShaderPackCompiler: () => kH
+  6596: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      loadPageShaderPackCompiler: () => jF
     });
-    var tS = {};
-    gS.r(tS), gS.d(tS, {
-      otS: () => bS,
-      f6: () => XS,
-      default: () => MS,
-      ltS: () => xS,
-      mtS: () => NS,
-      initSync: () => BS,
-      Xf: () => qS,
-      VgS: () => uS,
-      etS: () => IS,
-      rtS: () => fS,
-      cL: () => kS,
-      SbS: () => aS,
-      dL: () => KS,
-      HbS: () => jS
+    var Xk = {};
+    Ik.r(Xk), Ik.d(Xk, {
+      ITk: () => Tk,
+      N7: () => ik,
+      default: () => Yk,
+      XTk: () => yk,
+      TTk: () => lk,
+      initSync: () => dk,
+      lt: () => ak,
+      YIk: () => qk,
+      iTk: () => Lk,
+      yTk: () => tk,
+      pG: () => Zk,
+      lTk: () => jk,
+      nG: () => ek,
+      aTk: () => wk
     });
-    class bS {
-      static __wrap(SS) {
-        const HS = Object.create(bS.prototype);
-        return HS.__wbg_ptr = SS, CS.register(HS, HS.__wbg_ptr, HS), HS
+    class Tk {
+      static __wrap(kk) {
+        const Fk = Object.create(Tk.prototype);
+        return Fk.__wbg_ptr = kk, Jk.register(Fk, Fk.__wbg_ptr, Fk), Fk
       }
       __destroy_into_raw() {
-        const SS = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, CS.unregister(this), SS
+        const kk = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, Jk.unregister(this), kk
       }
       free() {
-        const SS = this.__destroy_into_raw();
-        US.rUSc(SS, 0)
+        const kk = this.__destroy_into_raw();
+        Wk.kbFs(kk, 0)
       }
-      get gbS() {
-        let SS, HS;
+      get LTk() {
+        let kk, Fk;
         try {
-          const gS = US.iIYl(this.__wbg_ptr);
-          return SS = gS[0], HS = gS[1], hS(gS[0], gS[1])
+          const Ik = Wk.nWrC(this.__wbg_ptr);
+          return kk = Ik[0], Fk = Ik[1], Vk(Ik[0], Ik[1])
         } finally {
-          US.mI0Y(SS, HS, 1)
+          Wk.jNWg(kk, Fk, 1)
         }
       }
       get features() {
-        const SS = US.WSya(this.__wbg_ptr);
-        var HS = PS(SS[0], SS[1]);
-        return US.mI0Y(SS[0], 4 * SS[1], 4), HS
+        const kk = Wk.iZ18(this.__wbg_ptr);
+        var Fk = Pk(kk[0], kk[1]);
+        return Wk.jNWg(kk[0], 4 * kk[1], 4), Fk
       }
       get hooks() {
-        const SS = US.y0x5(this.__wbg_ptr);
-        var HS = QS(SS[0], SS[1]).slice();
-        return US.mI0Y(SS[0], 1 * SS[1], 1), HS
+        const kk = Wk.oaBU(this.__wbg_ptr);
+        var Fk = Kk(kk[0], kk[1]).slice();
+        return Wk.jNWg(kk[0], 1 * kk[1], 1), Fk
       }
-      mapValidationMessage(SS, HS, gS, tS, bS) {
-        let XS, xS;
+      mapValidationMessage(kk, Fk, Ik, Xk, Tk) {
+        let ik, yk;
         try {
-          const uS = US.txcM(this.__wbg_ptr, SS, HS, gS, nS(tS), nS(bS));
-          var NS = uS[0],
-            qS = uS[1];
-          if (uS[3]) throw NS = 0, qS = 0, YS(uS[2]);
-          return XS = NS, xS = qS, hS(NS, qS)
+          const qk = Wk.i8LE(this.__wbg_ptr, kk, Fk, Ik, xk(Xk), xk(Tk));
+          var lk = qk[0],
+            ak = qk[1];
+          if (qk[3]) throw lk = 0, ak = 0, uk(qk[2]);
+          return ik = lk, yk = ak, Vk(lk, ak)
         } finally {
-          US.mI0Y(XS, xS, 1)
+          Wk.jNWg(ik, yk, 1)
         }
       }
       get moduleCodes() {
-        const SS = US.Ypzg(this.__wbg_ptr);
-        var HS = PS(SS[0], SS[1]);
-        return US.mI0Y(SS[0], 4 * SS[1], 4), HS
+        const kk = Wk.PdEZ(this.__wbg_ptr);
+        var Fk = Pk(kk[0], kk[1]);
+        return Wk.jNWg(kk[0], 4 * kk[1], 4), Fk
       }
-      get tbS() {
-        let SS, HS;
+      get tTk() {
+        let kk, Fk;
         try {
-          const gS = US.xt7j(this.__wbg_ptr);
-          return SS = gS[0], HS = gS[1], hS(gS[0], gS[1])
+          const Ik = Wk.mO1A(this.__wbg_ptr);
+          return kk = Ik[0], Fk = Ik[1], Vk(Ik[0], Ik[1])
         } finally {
-          US.mI0Y(SS, HS, 1)
+          Wk.jNWg(kk, Fk, 1)
         }
       }
       get reads() {
-        const SS = US.DBuH(this.__wbg_ptr);
-        var HS = PS(SS[0], SS[1]);
-        return US.mI0Y(SS[0], 4 * SS[1], 4), HS
+        const kk = Wk.a7WS(this.__wbg_ptr);
+        var Fk = Pk(kk[0], kk[1]);
+        return Wk.jNWg(kk[0], 4 * kk[1], 4), Fk
       }
       get validationModuleCodes() {
-        const SS = US.bUwY(this.__wbg_ptr);
-        var HS = PS(SS[0], SS[1]);
-        return US.mI0Y(SS[0], 4 * SS[1], 4), HS
+        const kk = Wk.ovkz(this.__wbg_ptr);
+        var Fk = Pk(kk[0], kk[1]);
+        return Wk.jNWg(kk[0], 4 * kk[1], 4), Fk
       }
       get validationModuleKeys() {
-        const SS = US.Ruf1(this.__wbg_ptr);
-        var HS = QS(SS[0], SS[1]).slice();
-        return US.mI0Y(SS[0], 1 * SS[1], 1), HS
+        const kk = Wk.mlFj(this.__wbg_ptr);
+        var Fk = Kk(kk[0], kk[1]).slice();
+        return Wk.jNWg(kk[0], 1 * kk[1], 1), Fk
       }
       get variantFlags() {
-        const SS = US.c7PH(this.__wbg_ptr);
-        var HS = QS(SS[0], SS[1]).slice();
-        return US.mI0Y(SS[0], 1 * SS[1], 1), HS
+        const kk = Wk.Ldc6(this.__wbg_ptr);
+        var Fk = Kk(kk[0], kk[1]).slice();
+        return Wk.jNWg(kk[0], 1 * kk[1], 1), Fk
       }
     }
 
-    function XS(SS, HS, gS, tS, XS, xS, NS) {
-      const qS = LS(SS, US.K0xj),
-        uS = pS,
-        IS = LS(HS, US.K0xj),
-        fS = pS,
-        kS = LS(gS, US.K0xj),
-        aS = pS,
-        KS = ES(tS, US.K0xj),
-        jS = pS,
-        GS = LS(XS, US.K0xj),
-        CS = pS,
-        nS = LS(xS, US.K0xj),
-        PS = pS,
-        QS = LS(NS, US.K0xj),
-        DS = pS,
-        wS = US.yBg9(qS, uS, IS, fS, kS, aS, KS, jS, GS, CS, nS, PS, QS, DS);
-      if (wS[2]) throw YS(wS[1]);
-      return bS.__wrap(wS[0])
+    function ik(kk, Fk, Ik, Xk, ik, yk, lk) {
+      const ak = pk(kk, Wk.gnXU),
+        qk = fk,
+        Lk = pk(Fk, Wk.gnXU),
+        tk = fk,
+        Zk = pk(Ik, Wk.gnXU),
+        jk = fk,
+        ek = Gk(Xk, Wk.gnXU),
+        wk = fk,
+        Hk = pk(ik, Wk.gnXU),
+        Jk = fk,
+        xk = pk(yk, Wk.gnXU),
+        Pk = fk,
+        Kk = pk(lk, Wk.gnXU),
+        Qk = fk,
+        sk = Wk.eC8A(ak, qk, Lk, tk, Zk, jk, ek, wk, Hk, Jk, xk, Pk, Kk, Qk);
+      if (sk[2]) throw uk(sk[1]);
+      return Tk.__wrap(sk[0])
     }
 
-    function xS() {
-      const SS = US.Ml0H();
-      var HS = PS(SS[0], SS[1]);
-      return US.mI0Y(SS[0], 4 * SS[1], 4), HS
+    function yk() {
+      const kk = Wk.C1kt();
+      var Fk = Pk(kk[0], kk[1]);
+      return Wk.jNWg(kk[0], 4 * kk[1], 4), Fk
     }
 
-    function NS() {
-      const SS = US.YNEB();
-      var HS = PS(SS[0], SS[1]);
-      return US.mI0Y(SS[0], 4 * SS[1], 4), HS
+    function lk() {
+      const kk = Wk.BnAr();
+      var Fk = Pk(kk[0], kk[1]);
+      return Wk.jNWg(kk[0], 4 * kk[1], 4), Fk
     }
 
-    function qS() {
-      US.dHFm()
+    function ak() {
+      Wk.PAf4()
     }
 
-    function uS(SS, HS, gS, tS, bS) {
-      let XS, xS;
+    function qk(kk, Fk, Ik, Xk, Tk) {
+      let ik, yk;
       try {
-        const uS = LS(SS, US.K0xj),
-          IS = pS,
-          fS = ES(HS, US.K0xj),
-          kS = pS,
-          aS = LS(gS, US.K0xj),
-          KS = pS,
-          jS = ES(tS, US.K0xj),
-          GS = pS,
-          CS = function(SS, HS) {
-            const gS = HS(1 * SS.length, 1) >>> 0;
-            return OS().set(SS, gS / 1), pS = SS.length, gS
-          }(bS, US.K0xj),
-          nS = pS,
-          PS = US.AS0z(uS, IS, fS, kS, aS, KS, jS, GS, CS, nS);
-        var NS = PS[0],
-          qS = PS[1];
-        if (PS[3]) throw NS = 0, qS = 0, YS(PS[2]);
-        return XS = NS, xS = qS, hS(NS, qS)
+        const qk = pk(kk, Wk.gnXU),
+          Lk = fk,
+          tk = Gk(Fk, Wk.gnXU),
+          Zk = fk,
+          jk = pk(Ik, Wk.gnXU),
+          ek = fk,
+          wk = Gk(Xk, Wk.gnXU),
+          Hk = fk,
+          Jk = function(kk, Fk) {
+            const Ik = Fk(1 * kk.length, 1) >>> 0;
+            return vk().set(kk, Ik / 1), fk = kk.length, Ik
+          }(Tk, Wk.gnXU),
+          xk = fk,
+          Pk = Wk.wLQH(qk, Lk, tk, Zk, jk, ek, wk, Hk, Jk, xk);
+        var lk = Pk[0],
+          ak = Pk[1];
+        if (Pk[3]) throw lk = 0, ak = 0, uk(Pk[2]);
+        return ik = lk, yk = ak, Vk(lk, ak)
       } finally {
-        US.mI0Y(XS, xS, 1)
+        Wk.jNWg(ik, yk, 1)
       }
     }
 
-    function IS() {
-      let SS, HS;
+    function Lk() {
+      let kk, Fk;
       try {
-        const gS = US.x6tW();
-        return SS = gS[0], HS = gS[1], hS(gS[0], gS[1])
+        const Ik = Wk.Sent();
+        return kk = Ik[0], Fk = Ik[1], Vk(Ik[0], Ik[1])
       } finally {
-        US.mI0Y(SS, HS, 1)
+        Wk.jNWg(kk, Fk, 1)
       }
     }
 
-    function fS(SS) {
-      let HS, gS;
+    function tk(kk) {
+      let Fk, Ik;
       try {
-        const XS = US.DwSR(SS);
-        var tS = XS[0],
-          bS = XS[1];
-        if (XS[3]) throw tS = 0, bS = 0, YS(XS[2]);
-        return HS = tS, gS = bS, hS(tS, bS)
+        const ik = Wk.Th4b(kk);
+        var Xk = ik[0],
+          Tk = ik[1];
+        if (ik[3]) throw Xk = 0, Tk = 0, uk(ik[2]);
+        return Fk = Xk, Ik = Tk, Vk(Xk, Tk)
       } finally {
-        US.mI0Y(HS, gS, 1)
+        Wk.jNWg(Fk, Ik, 1)
       }
     }
 
-    function kS() {
-      return US.DzlC() >>> 0
+    function Zk() {
+      return Wk.JIr9() >>> 0
     }
 
-    function aS() {
-      let SS, HS;
+    function jk() {
+      let kk, Fk;
       try {
-        const gS = US.E51e();
-        return SS = gS[0], HS = gS[1], hS(gS[0], gS[1])
+        const Ik = Wk.vSS1();
+        return kk = Ik[0], Fk = Ik[1], Vk(Ik[0], Ik[1])
       } finally {
-        US.mI0Y(SS, HS, 1)
+        Wk.jNWg(kk, Fk, 1)
       }
     }
 
-    function KS(SS, HS) {
-      let gS, tS;
+    function ek(kk, Fk) {
+      let Ik, Xk;
       try {
-        const xS = LS(SS, US.K0xj),
-          NS = pS,
-          qS = ES(HS, US.K0xj),
-          uS = pS,
-          IS = US.jtIK(xS, NS, qS, uS);
-        var bS = IS[0],
-          XS = IS[1];
-        if (IS[3]) throw bS = 0, XS = 0, YS(IS[2]);
-        return gS = bS, tS = XS, hS(bS, XS)
+        const yk = pk(kk, Wk.gnXU),
+          lk = fk,
+          ak = Gk(Fk, Wk.gnXU),
+          qk = fk,
+          Lk = Wk.GX0g(yk, lk, ak, qk);
+        var Tk = Lk[0],
+          ik = Lk[1];
+        if (Lk[3]) throw Tk = 0, ik = 0, uk(Lk[2]);
+        return Ik = Tk, Xk = ik, Vk(Tk, ik)
       } finally {
-        US.mI0Y(gS, tS, 1)
+        Wk.jNWg(Ik, Xk, 1)
       }
     }
 
-    function jS(SS) {
-      let HS, gS;
+    function wk(kk) {
+      let Fk, Ik;
       try {
-        const XS = US.M73S(nS(SS));
-        var tS = XS[0],
-          bS = XS[1];
-        if (XS[3]) throw tS = 0, bS = 0, YS(XS[2]);
-        return HS = tS, gS = bS, hS(tS, bS)
+        const ik = Wk.r2A2(xk(kk));
+        var Xk = ik[0],
+          Tk = ik[1];
+        if (ik[3]) throw Xk = 0, Tk = 0, uk(ik[2]);
+        return Fk = Xk, Ik = Tk, Vk(Xk, Tk)
       } finally {
-        US.mI0Y(HS, gS, 1)
+        Wk.jNWg(Fk, Ik, 1)
       }
     }
 
-    function GS() {
+    function Hk() {
       return {
         __proto__: null,
-        lRry: {
+        KZsF: {
           __proto__: null,
-          jpZc: function(SS, HS) {
-            return nS(Error(hS(SS, HS)))
+          lSZO: function(kk, Fk) {
+            return xk(Error(Vk(kk, Fk)))
           },
-          uIx2: function(SS) {
-            return null === dS(SS)
+          VFwr: function(kk) {
+            return null === Ek(kk)
           },
-          HUsH: function(SS) {
-            return "string" === typeof dS(SS)
+          XWz4: function(kk) {
+            return "string" === typeof Ek(kk)
           },
-          o3HP: function(SS, HS) {
-            const gS = dS(HS),
-              tS = "string" === typeof gS ? gS : void 0;
-            var bS, XS = void 0 === (bS = tS) || null === bS ? 0 : function(SS, HS, gS) {
-                if (void 0 === gS) {
-                  const gS = iS.encode(SS),
-                    tS = HS(gS.length, 1) >>> 0;
-                  return OS().subarray(tS, tS + gS.length).set(gS), pS = gS.length, tS
+          j82v: function(kk, Fk) {
+            const Ik = Ek(Fk),
+              Xk = "string" === typeof Ik ? Ik : void 0;
+            var Tk, ik = void 0 === (Tk = Xk) || null === Tk ? 0 : function(kk, Fk, Ik) {
+                if (void 0 === Ik) {
+                  const Ik = Ck.encode(kk),
+                    Xk = Fk(Ik.length, 1) >>> 0;
+                  return vk().subarray(Xk, Xk + Ik.length).set(Ik), fk = Ik.length, Xk
                 }
-                let tS = SS.length,
-                  bS = HS(tS, 1) >>> 0;
-                const XS = OS();
-                let xS = 0;
-                for (; xS < tS; xS++) {
-                  const HS = SS.charCodeAt(xS);
-                  if (HS > 127) break;
-                  XS[bS + xS] = HS
+                let Xk = kk.length,
+                  Tk = Fk(Xk, 1) >>> 0;
+                const ik = vk();
+                let yk = 0;
+                for (; yk < Xk; yk++) {
+                  const Fk = kk.charCodeAt(yk);
+                  if (Fk > 127) break;
+                  ik[Tk + yk] = Fk
                 }
-                if (xS !== tS) {
-                  0 !== xS && (SS = SS.slice(xS)), bS = gS(bS, tS, tS = xS + 3 * SS.length, 1) >>> 0;
-                  const HS = OS().subarray(bS + xS, bS + tS);
-                  xS += iS.encodeInto(SS, HS).written, bS = gS(bS, tS, xS, 1) >>> 0
+                if (yk !== Xk) {
+                  0 !== yk && (kk = kk.slice(yk)), Tk = Ik(Tk, Xk, Xk = yk + 3 * kk.length, 1) >>> 0;
+                  const Fk = vk().subarray(Tk + yk, Tk + Xk);
+                  yk += Ck.encodeInto(kk, Fk).written, Tk = Ik(Tk, Xk, yk, 1) >>> 0
                 }
-                return pS = xS, bS
-              }(tS, US.K0xj, US.ILsk),
-              xS = pS;
-            wS().setInt32(SS + 4, xS, !0), wS().setInt32(SS + 0, XS, !0)
+                return fk = yk, Tk
+              }(Xk, Wk.gnXU, Wk.frC5),
+              yk = fk;
+            sk().setInt32(kk + 4, yk, !0), sk().setInt32(kk + 0, ik, !0)
           },
-          U4tr: function(SS, HS) {
-            throw new Error(hS(SS, HS))
+          MLW6: function(kk, Fk) {
+            throw new Error(Vk(kk, Fk))
           },
-          ddlE: function(SS, HS) {
-            return dS(SS).charCodeAt(HS >>> 0)
+          tqgp: function(kk, Fk) {
+            return Ek(kk).charCodeAt(Fk >>> 0)
           },
-          L3s8: function(SS, HS) {
-            console.error(hS(SS, HS))
+          FDIc: function(kk, Fk) {
+            console.error(Vk(kk, Fk))
           },
-          xytq: function(SS) {
-            return dS(SS).length
+          ILkq: function(kk) {
+            return Ek(kk).length
           },
-          bYnR: function(SS, HS) {
-            return nS(hS(SS, HS))
+          qtMZ: function(kk, Fk) {
+            return xk(Vk(kk, Fk))
           },
-          YCTC: function(SS) {
-            YS(SS)
+          ZvFS: function(kk) {
+            uk(kk)
           }
         }
       }
     }
-    Symbol.dispose && (bS.prototype[Symbol.dispose] = bS.prototype.free);
-    const CS = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (Tk.prototype[Symbol.dispose] = Tk.prototype.free);
+    const Jk = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((SS => US.rUSc(SS, 1)));
+    } : new FinalizationRegistry((kk => Wk.kbFs(kk, 1)));
 
-    function nS(SS) {
-      vS === cS.length && cS.push(cS.length + 1);
-      const HS = vS;
-      return vS = cS[HS], cS[HS] = SS, HS
+    function xk(kk) {
+      nk === Ok.length && Ok.push(Ok.length + 1);
+      const Fk = nk;
+      return nk = Ok[Fk], Ok[Fk] = kk, Fk
     }
 
-    function PS(SS, HS) {
-      SS >>>= 0;
-      const gS = wS(),
-        tS = [];
-      for (let bS = SS; bS < SS + 4 * HS; bS += 4) tS.push(YS(gS.getUint32(bS, !0)));
-      return tS
+    function Pk(kk, Fk) {
+      kk >>>= 0;
+      const Ik = sk(),
+        Xk = [];
+      for (let Tk = kk; Tk < kk + 4 * Fk; Tk += 4) Xk.push(uk(Ik.getUint32(Tk, !0)));
+      return Xk
     }
 
-    function QS(SS, HS) {
-      return SS >>>= 0, OS().subarray(SS / 1, SS / 1 + HS)
+    function Kk(kk, Fk) {
+      return kk >>>= 0, vk().subarray(kk / 1, kk / 1 + Fk)
     }
-    let DS = null;
+    let Qk = null;
 
-    function wS() {
-      return null !== DS && DS.buffer === US.memory.buffer || (DS = new DataView(US.memory.buffer)), DS
+    function sk() {
+      return null !== Qk && Qk.buffer === Wk.memory.buffer || (Qk = new DataView(Wk.memory.buffer)), Qk
     }
 
-    function hS(SS, HS) {
-      return function(SS, HS) {
-        VS += HS, VS >= yS && (AS = new TextDecoder("utf-8", {
+    function Vk(kk, Fk) {
+      return function(kk, Fk) {
+        Uk += Fk, Uk >= Rk && (bk = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), AS.decode(), VS = HS);
-        return AS.decode(OS().subarray(SS, SS + HS))
-      }(SS >>> 0, HS)
+        }), bk.decode(), Uk = Fk);
+        return bk.decode(vk().subarray(kk, kk + Fk))
+      }(kk >>> 0, Fk)
     }
-    let ZS = null;
-    let JS = null;
+    let zk = null;
+    let Sk = null;
 
-    function OS() {
-      return null !== JS && 0 !== JS.byteLength || (JS = new Uint8Array(US.memory.buffer)), JS
-    }
-
-    function dS(SS) {
-      return cS[SS]
-    }
-    let cS = new Array(1024).fill(void 0);
-    cS.push(void 0, null, !0, !1);
-    let vS = cS.length;
-
-    function ES(SS, HS) {
-      const gS = HS(4 * SS.length, 4) >>> 0;
-      return (null !== ZS && 0 !== ZS.byteLength || (ZS = new Uint32Array(US.memory.buffer)), ZS).set(SS, gS / 4), pS = SS.length, gS
+    function vk() {
+      return null !== Sk && 0 !== Sk.byteLength || (Sk = new Uint8Array(Wk.memory.buffer)), Sk
     }
 
-    function LS(SS, HS) {
-      const gS = HS(4 * SS.length, 4) >>> 0,
-        tS = wS();
-      for (let bS = 0; bS < SS.length; bS++) tS.setUint32(gS + 4 * bS, nS(SS[bS]), !0);
-      return pS = SS.length, gS
+    function Ek(kk) {
+      return Ok[kk]
+    }
+    let Ok = new Array(1024).fill(void 0);
+    Ok.push(void 0, null, !0, !1);
+    let nk = Ok.length;
+
+    function Gk(kk, Fk) {
+      const Ik = Fk(4 * kk.length, 4) >>> 0;
+      return (null !== zk && 0 !== zk.byteLength || (zk = new Uint32Array(Wk.memory.buffer)), zk).set(kk, Ik / 4), fk = kk.length, Ik
     }
 
-    function YS(SS) {
-      const HS = dS(SS);
-      return function(SS) {
-        SS < 1028 || (cS[SS] = vS, vS = SS)
-      }(SS), HS
+    function pk(kk, Fk) {
+      const Ik = Fk(4 * kk.length, 4) >>> 0,
+        Xk = sk();
+      for (let Tk = 0; Tk < kk.length; Tk++) Xk.setUint32(Ik + 4 * Tk, xk(kk[Tk]), !0);
+      return fk = kk.length, Ik
     }
-    let AS = new TextDecoder("utf-8", {
+
+    function uk(kk) {
+      const Fk = Ek(kk);
+      return function(kk) {
+        kk < 1028 || (Ok[kk] = nk, nk = kk)
+      }(kk), Fk
+    }
+    let bk = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    AS.decode();
-    const yS = 2146435072;
-    let VS = 0;
-    const iS = new TextEncoder;
-    "encodeInto" in iS || (iS.encodeInto = function(SS, HS) {
-      const gS = iS.encode(SS);
-      return HS.set(gS), {
-        read: SS.length,
-        written: gS.length
+    bk.decode();
+    const Rk = 2146435072;
+    let Uk = 0;
+    const Ck = new TextEncoder;
+    "encodeInto" in Ck || (Ck.encodeInto = function(kk, Fk) {
+      const Ik = Ck.encode(kk);
+      return Fk.set(Ik), {
+        read: kk.length,
+        written: Ik.length
       }
     });
-    let WS, zS, US, pS = 0;
+    let Nk, ck, Wk, fk = 0;
 
-    function sS(SS, HS) {
-      return zS = SS, US = SS.exports, WS = HS, DS = null, ZS = null, JS = null, US.ApYb(), US
+    function Bk(kk, Fk) {
+      return ck = kk, Wk = kk.exports, Nk = Fk, Qk = null, zk = null, Sk = null, Wk.v3dY(), Wk
     }
 
-    function BS(SS) {
-      if (void 0 !== US) return US;
-      void 0 !== SS && (Object.getPrototypeOf(SS) === Object.prototype ? ({
-        module: SS
-      } = SS) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const HS = GS();
-      SS instanceof WebAssembly.Module || (SS = new WebAssembly.Module(SS));
-      return sS(new WebAssembly.Instance(SS, HS), SS)
+    function dk(kk) {
+      if (void 0 !== Wk) return Wk;
+      void 0 !== kk && (Object.getPrototypeOf(kk) === Object.prototype ? ({
+        module: kk
+      } = kk) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const Fk = Hk();
+      kk instanceof WebAssembly.Module || (kk = new WebAssembly.Module(kk));
+      return Bk(new WebAssembly.Instance(kk, Fk), kk)
     }
-    async function MS(SS) {
-      if (void 0 !== US) return US;
-      void 0 !== SS && (Object.getPrototypeOf(SS) === Object.prototype ? ({
-        module_or_path: SS
-      } = SS) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const HS = GS();
-      ("string" === typeof SS || "function" === typeof Request && SS instanceof Request || "function" === typeof URL && SS instanceof URL) && (SS = fetch(SS));
+    async function Yk(kk) {
+      if (void 0 !== Wk) return Wk;
+      void 0 !== kk && (Object.getPrototypeOf(kk) === Object.prototype ? ({
+        module_or_path: kk
+      } = kk) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const Fk = Hk();
+      ("string" === typeof kk || "function" === typeof Request && kk instanceof Request || "function" === typeof URL && kk instanceof URL) && (kk = fetch(kk));
       const {
-        instance: gS,
-        module: tS
-      } = await async function(SS, HS) {
-        if ("function" === typeof Response && SS instanceof Response) {
-          if (!SS.ok) throw new Error(`failed to fetch Wasm: ${SS.status} ${SS.statusText} fetching '${SS.url}'`);
+        instance: Ik,
+        module: Xk
+      } = await async function(kk, Fk) {
+        if ("function" === typeof Response && kk instanceof Response) {
+          if (!kk.ok) throw new Error(`failed to fetch Wasm: ${kk.status} ${kk.statusText} fetching '${kk.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(SS, HS)
-          } catch (gS) {
-            if (! function(SS) {
-                switch (SS) {
+            return await WebAssembly.instantiateStreaming(kk, Fk)
+          } catch (Ik) {
+            if (! function(kk) {
+                switch (kk) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(SS.type) || "application/wasm" === SS.headers.get("Content-Type")) throw gS;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", gS)
+              }(kk.type) || "application/wasm" === kk.headers.get("Content-Type")) throw Ik;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", Ik)
           }
-          const tS = await SS.arrayBuffer();
-          return await WebAssembly.instantiate(tS, HS)
+          const Xk = await kk.arrayBuffer();
+          return await WebAssembly.instantiate(Xk, Fk)
         } {
-          const gS = await WebAssembly.instantiate(SS, HS);
-          return gS instanceof WebAssembly.Instance ? {
-            instance: gS,
-            module: SS
-          } : gS
+          const Ik = await WebAssembly.instantiate(kk, Fk);
+          return Ik instanceof WebAssembly.Instance ? {
+            instance: Ik,
+            module: kk
+          } : Ik
         }
-      }(await SS, HS);
-      return sS(gS, tS)
+      }(await kk, Fk);
+      return Bk(Ik, Xk)
     }
-    var FS = gS(3030),
-      RS = gS(6819);
-    class TS extends Error {
+    var Ak = Ik(2803),
+      gk = Ik(6599);
+    class mk extends Error {
       stage;
-      constructor(SS, HS) {
-        super((0, FS.E)(SS, HS), {
-          cause: HS
-        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = SS
+      constructor(kk, Fk) {
+        super((0, Ak.C)(kk, Fk), {
+          cause: Fk
+        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = kk
       }
     }
-    let oS = null,
-      lS = null;
+    let hk = null,
+      rk = null;
 
-    function mS() {
-      return oS ? Promise.resolve(oS) : (lS || (lS = async function() {
-        let SS;
+    function Dk() {
+      return hk ? Promise.resolve(hk) : (rk || (rk = async function() {
+        let kk;
         try {
-          SS = await (0, FS.F)(new gS.U(gS(6821)), (0, RS.c)("bloxd_wasm_shader_pack"))
-        } catch (HS) {
-          throw new TS((0, FS.L)(HS), HS)
+          kk = await (0, Ak.G)(new Ik.U(Ik(6607)), (0, gk.c)("bloxd_wasm_shader_pack"))
+        } catch (Fk) {
+          throw new mk((0, Ak.M)(Fk), Fk)
         }
         try {
-          await MS({
-            module_or_path: SS
+          await Yk({
+            module_or_path: kk
           })
-        } catch (HS) {
-          throw new TS("instantiate", HS)
+        } catch (Fk) {
+          throw new mk("instantiate", Fk)
         }
-        return oS = tS, oS
-      }(), lS.then(void 0, (() => {
-        lS = null
-      }))), lS)
+        return hk = Xk, hk
+      }(), rk.then(void 0, (() => {
+        rk = null
+      }))), rk)
     }
-    var eS = gS(6826);
+    var Mk = Ik(6614);
 
-    function rS(SS) {
-      let [HS, gS, tS, bS] = SS;
-      const XS = {
-        file: HS,
-        line: gS,
-        message: tS
+    function kF(kk) {
+      let [Fk, Ik, Xk, Tk] = kk;
+      const ik = {
+        file: Fk,
+        line: Ik,
+        message: Xk
       };
-      return bS && (XS.variants = bS.map(eS.p)), XS
+      return Tk && (ik.variants = Tk.map(Mk.k)), ik
     }
 
-    function SH(SS) {
-      return JSON.parse(SS).map(rS)
+    function FF(kk) {
+      return JSON.parse(kk).map(kF)
     }
 
-    function HH(SS, HS) {
-      if (!Number.isInteger(SS) || SS < 0 || SS > 4294967295) throw new Error(`${HS} ${SS} is not a whole number from 0 to 4294967295`);
-      return SS
+    function IF(kk, Fk) {
+      if (!Number.isInteger(kk) || kk < 0 || kk > 4294967295) throw new Error(`${Fk} ${kk} is not a whole number from 0 to 4294967295`);
+      return kk
     }
 
-    function gH(SS) {
-      return [SS.named.map((SS => SS.name)), Uint32Array.from(SS.named, (SS => HH(SS.id, "Texture ID")))]
+    function XF(kk) {
+      return [kk.named.map((kk => kk.name)), Uint32Array.from(kk.named, (kk => IF(kk.id, "Texture ID")))]
     }
-    const tH = new WeakMap;
-    const bH = new WeakMap,
-      XH = new WeakSet;
+    const TF = new WeakMap;
+    const iF = new WeakMap,
+      yF = new WeakSet;
 
-    function xH(SS, HS) {
-      if (XH.has(SS)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
+    function lF(kk, Fk) {
+      if (yF.has(kk)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
       try {
-        return HS()
-      } catch (gS) {
-        throw gS instanceof WebAssembly.RuntimeError && XH.add(SS), gS
+        return Fk()
+      } catch (Ik) {
+        throw Ik instanceof WebAssembly.RuntimeError && yF.add(kk), Ik
       }
     }
 
-    function NH(SS) {
-      let HS = bH.get(SS);
-      if (!HS) {
-        let gS, tS;
-        HS = {
-          f6: (HS, gS) => xH(SS, (() => function(SS, HS, gS) {
-            const tS = SS.f6(HS.map((SS => SS.path)), HS.map((SS => SS.source)), ...gH(gS), gS.aliases.map((SS => SS.name)), gS.aliases.map((SS => SS.texture)), gS.aliases.map((SS => SS.kind)));
-            let bS = !1;
+    function aF(kk) {
+      let Fk = iF.get(kk);
+      if (!Fk) {
+        let Ik, Xk;
+        Fk = {
+          N7: (Fk, Ik) => lF(kk, (() => function(kk, Fk, Ik) {
+            const Xk = kk.N7(Fk.map((kk => kk.path)), Fk.map((kk => kk.source)), ...XF(Ik), Ik.aliases.map((kk => kk.name)), Ik.aliases.map((kk => kk.texture)), Ik.aliases.map((kk => kk.kind)));
+            let Tk = !1;
             try {
-              const SS = tS.validationModuleCodes,
-                HS = Array.from(tS.validationModuleKeys, ((HS, gS) => ({
-                  key: (0, eS.p)(HS),
-                  code: SS[gS]
+              const kk = Xk.validationModuleCodes,
+                Fk = Array.from(Xk.validationModuleKeys, ((Fk, Ik) => ({
+                  key: (0, Mk.k)(Fk),
+                  code: kk[Ik]
                 }))),
-                gS = {
-                  errors: SH(tS.gbS),
-                  offInStrict: SH(tS.tbS),
-                  variants: (0, eS.i)(tS),
-                  validationModules: HS,
-                  features: tS.features
+                Ik = {
+                  errors: FF(Xk.LTk),
+                  offInStrict: FF(Xk.tTk),
+                  variants: (0, Mk.d)(Xk),
+                  validationModules: Fk,
+                  features: Xk.features
                 };
-              return HS.forEach(((SS, HS) => {
-                tH.set(SS, {
-                  pack: tS,
-                  index: HS
+              return Fk.forEach(((kk, Fk) => {
+                TF.set(kk, {
+                  pack: Xk,
+                  index: Fk
                 })
-              })), bS = HS.length > 0, gS
+              })), Tk = Fk.length > 0, Ik
             } finally {
-              bS || tS.free()
+              Tk || Xk.free()
             }
-          }(SS, HS, gS))),
-          mapValidationMessage: (HS, gS) => {
-            const tS = tH.get(HS);
-            if (!tS) throw new Error("mapValidationMessage takes a validation module this compiler made");
-            return rS(JSON.parse(xH(SS, (() => tS.pack.mapValidationMessage(tS.index, gS.lineNum, gS.linePos, gS.message, gS.type)))))
+          }(kk, Fk, Ik))),
+          mapValidationMessage: (Fk, Ik) => {
+            const Xk = TF.get(Fk);
+            if (!Xk) throw new Error("mapValidationMessage takes a validation module this compiler made");
+            return kF(JSON.parse(lF(kk, (() => Xk.pack.mapValidationMessage(Xk.index, Ik.lineNum, Ik.linePos, Ik.message, Ik.type)))))
           },
-          VgS: HS => xH(SS, (() => function(SS, HS) {
-            const gS = new Int32Array(HS.length),
-              tS = [];
-            return HS.forEach(((SS, HS) => {
-              gS[HS] = SS.variants ? SS.variants.length : -1;
-              for (const gS of SS.variants ?? []) tS.push((0, eS.m)(gS))
-            })), SH(SS.VgS(HS.map((SS => SS.file)), Uint32Array.from(HS, (SS => HH(SS.line, "Diagnostic line"))), HS.map((SS => SS.message)), gS, Uint8Array.from(tS)))
-          }(SS, HS))),
-          dL: HS => xH(SS, (() => SS.dL(...gH(HS)))),
+          YIk: Fk => lF(kk, (() => function(kk, Fk) {
+            const Ik = new Int32Array(Fk.length),
+              Xk = [];
+            return Fk.forEach(((kk, Fk) => {
+              Ik[Fk] = kk.variants ? kk.variants.length : -1;
+              for (const Ik of kk.variants ?? []) Xk.push((0, Mk.g)(Ik))
+            })), FF(kk.YIk(Fk.map((kk => kk.file)), Uint32Array.from(Fk, (kk => IF(kk.line, "Diagnostic line"))), Fk.map((kk => kk.message)), Ik, Uint8Array.from(Xk)))
+          }(kk, Fk))),
+          nG: Fk => lF(kk, (() => kk.nG(...XF(Fk)))),
           get SHADER_PACK_HEADER_VERSION() {
-            return gS ??= xH(SS, (() => SS.SbS())), gS
+            return Ik ??= lF(kk, (() => kk.lTk())), Ik
           },
           get DEFAULT_SHADER_PACK_FILES() {
-            return tS ??= xH(SS, (() => {
-              const HS = SS.mtS();
-              return SS.ltS().map(((SS, gS) => ({
-                path: SS,
-                source: HS[gS]
+            return Xk ??= lF(kk, (() => {
+              const Fk = kk.TTk();
+              return kk.XTk().map(((kk, Ik) => ({
+                path: kk,
+                source: Fk[Ik]
               })))
-            })), tS
+            })), Xk
           },
-          HbS: HS => xH(SS, (() => SS.HbS(HS))),
-          resolveHeader: HS => xH(SS, (() => SS.rtS((0, eS.m)(HS)))),
-          etS: () => xH(SS, (() => SS.etS()))
-        }, bH.set(SS, HS)
+          aTk: Fk => lF(kk, (() => kk.aTk(Fk))),
+          resolveHeader: Fk => lF(kk, (() => kk.yTk((0, Mk.g)(Fk)))),
+          iTk: () => lF(kk, (() => kk.iTk()))
+        }, iF.set(kk, Fk)
       }
-      return HS
+      return Fk
     }
-    var qH = gS(3385),
-      uH = gS(6824);
-    const IH = "bloxdShaderPackWasmFailureReported";
-    let fH = null;
+    var qF = Ik(3157),
+      LF = Ik(6611);
+    const tF = "bloxdShaderPackWasmFailureReported";
+    let ZF = null;
 
-    function kH() {
-      return fH ??= async function() {
-        if ("undefined" === typeof WebAssembly) return aH("unsupported", "This browser has no WebAssembly"), null;
-        const SS = (0, uH.loadShaderPackTextures)().then((() => !0), (SS => (console.error("Could not load the shader pack textures, so shader packs can't run", SS), !1)));
+    function jF() {
+      return ZF ??= async function() {
+        if ("undefined" === typeof WebAssembly) return eF("unsupported", "This browser has no WebAssembly"), null;
+        const kk = (0, LF.loadShaderPackTextures)().then((() => !0), (kk => (console.error("Could not load the shader pack textures, so shader packs can't run", kk), !1)));
         try {
-          const HS = await async function() {
-            let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mS;
-            return NH(await SS())
+          const Fk = await async function() {
+            let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Dk;
+            return aF(await kk())
           }();
-          return await SS ? HS : null
-        } catch (HS) {
-          const SS = HS instanceof Error ? HS.message : String(HS);
-          return aH(qH.d[HS instanceof TS ? HS.stage : "instantiate"], SS), null
+          return await kk ? Fk : null
+        } catch (Fk) {
+          const kk = Fk instanceof Error ? Fk.message : String(Fk);
+          return eF(qF.c[Fk instanceof mk ? Fk.stage : "instantiate"], kk), null
         }
-      }(), fH
+      }(), ZF
     }
 
-    function aH(SS, HS) {
-      (0, qH.h)(IH, `Shader pack wasm ${SS}, so shader packs can't run: ${HS}`, HS, `shader_pack_${SS}`)
+    function eF(kk, Fk) {
+      (0, qF.j)(tF, `Shader pack wasm ${kk}, so shader packs can't run: ${Fk}`, Fk, `shader_pack_${kk}`)
     }
   },
-  6821: (SS, HS, gS) => {
-    SS.exports = gS.p + "static/media/bloxd_wasm_shader_pack_bg.f252dd14451a6ea86cc6.wasm"
+  6607: (kk, Fk, Ik) => {
+    kk.exports = Ik.p + "static/media/bloxd_wasm_shader_pack_bg.0b035301e43007771c4d.wasm"
   },
-  6819: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => xS
+  6599: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk
     });
-    var tS = gS(3030);
-    const bS = {
-      bloxd_wasm: () => "ca276a159dbc87fa5fb24bce01c600e017686becb2aec4d2d8c3ce9d9be10286",
-      bloxd_wasm_client: () => "78d650a75a894f26dfff12d13178b3b18625b3ca51d6ff43ca76c7c6a545160e",
-      bloxd_wasm_workers: () => "141545174c96a6a56bdd55b96874db592d9aa0421d29d01fc5f13e010772908e",
-      bloxd_wasm_models: () => "f9978bc5a15af3d00b08cdd71f12902b1d7af465ab38552c337a8dbca894f2ad",
-      bloxd_wasm_webgpu: () => "b036ba0a8b10236966685420835363e85775cab4add8bde3fee2aab6dab3eedc",
-      bloxd_wasm_webgl: () => "f94a6bd176e034f73eb9d8633ef96f3a4c2ba3c58f8f946158bfc25489809a0e",
-      bloxd_wasm_webgl1: () => "e1bef365f7d6b4c1345c3d7a59fb7d8e9059890b44c25962f6eefa2875a0d8ba",
-      bloxd_wasm_replay: () => "1cd9ae019549ed07be1080a40e72119ca1530d917a5e7c4bff7919777b0d7cc7",
-      bloxd_wasm_recorder: () => "9bf6273ff6c7cd97e192adea241330701cc74623c7e79a51cf18981bf754ac45",
-      bloxd_wasm_anim: () => "e9f60e55d6a938bae2c0cab139b5bc6a9a4c4b1abe3489fe2eaff4a7709eea4a",
-      bloxd_wasm_textures: () => "b1d909a0a1a9dae74a5159a0e981ac598963b92321ef4cc808ac39c91a481383",
-      bloxd_wasm_shader_pack: () => "2cc8a962c1c16c3304b235a366c2decc6556fba05a1b6ce886e0064dd54faac6"
+    var Xk = Ik(2803);
+    const Tk = {
+      bloxd_wasm: () => "e2f9e22926b42992a62e6da973b3cd1227290abc3e4b086f16ef7a6e7451e01c",
+      bloxd_wasm_client: () => "197b3a58630dd256c73f6be56077b03aba52688d49b256cfcb5b4297a602be6f",
+      bloxd_wasm_workers: () => "c531aa2c5eb2277940017568a817b82729d5bd8e37ed09fdb9542eeedecfabb2",
+      bloxd_wasm_models: () => "82813a7dd849808b1d07d41cb80b2035277c675f83cdbe5540a809aa86e18dae",
+      bloxd_wasm_webgpu: () => "2066e38e37e17624dae8b4b9c559f5daf047cb3ceb4eb8056d5135d5b3d9eb24",
+      bloxd_wasm_webgl: () => "3d1d580992195f6369c2533ce100ae6e8452da7398faf88e49b339f937ec6192",
+      bloxd_wasm_webgl1: () => "8032d9766cccf3c8343274c4d612b6bb3252bd4e5129a88b0ce812c44371db80",
+      bloxd_wasm_replay: () => "8d3f5aa602437d8a622249e4b26ef375d3132f03479495456878d8869447f290",
+      bloxd_wasm_recorder: () => "4e4293beaac6f6862394c42133a435a6ade3bf181e4ae4bc1a5a3c0c8e0c9dd2",
+      bloxd_wasm_anim: () => "125adb66f5cee367958854d2a9364d34f8d55bf2c7b62e20f2a9dcc7b9af5035",
+      bloxd_wasm_textures: () => "b45159af64c2cb22c8ac7c32ed16b3591e0026feb57c6ebfb95e710677904764",
+      bloxd_wasm_shader_pack: () => "b4044fc49c30628f5ddaad152e8054fb78f46958556f35beebe36f24a022d42c"
     };
-    var XS = gS(4812);
+    var ik = Ik(4692);
 
-    function xS(SS) {
-      const HS = Object.prototype.hasOwnProperty.call(bS, SS) ? bS[SS]() : void 0;
-      if (void 0 !== HS) return {
-        sha256: HS,
-        onMismatch: XS.D
+    function yk(kk) {
+      const Fk = Object.prototype.hasOwnProperty.call(Tk, kk) ? Tk[kk]() : void 0;
+      if (void 0 !== Fk) return {
+        sha256: Fk,
+        onMismatch: ik.C
       };
-      throw new tS.h(`${SS} has no release digest, so this build refuses it`)
+      throw new Xk.g(`${kk} has no release digest, so this build refuses it`)
     }
   },
-  6826: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => QS,
-      i: () => DS,
-      m: () => nS,
-      p: () => CS
+  6614: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Kk,
+      d: () => Qk,
+      g: () => xk,
+      k: () => Jk
     });
-    var tS = gS(6832);
-    const bS = 6,
-      XS = 3,
-      xS = 1,
-      NS = 2,
-      qS = 4,
-      uS = 8,
-      IS = 16,
-      fS = 32,
-      kS = 64,
-      aS = 128,
-      KS = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var Xk = Ik(6622);
+    const Tk = 6,
+      ik = 3,
+      yk = 1,
+      lk = 2,
+      ak = 4,
+      qk = 8,
+      Lk = 16,
+      tk = 32,
+      Zk = 64,
+      jk = 128,
+      ek = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function jS(SS) {
-      if (!SS) return 0;
-      const HS = KS.indexOf(SS);
-      if (HS <= 0) throw new Error(`"${SS}" is not a shader pack hook function`);
-      return HS
+    function wk(kk) {
+      if (!kk) return 0;
+      const Fk = ek.indexOf(kk);
+      if (Fk <= 0) throw new Error(`"${kk}" is not a shader pack hook function`);
+      return Fk
     }
 
-    function GS(SS) {
-      if (0 === SS) return null;
-      const HS = KS[SS];
-      if (void 0 === HS) throw new Error(`${SS} is not a shader pack hook function id`);
-      return HS
+    function Hk(kk) {
+      if (0 === kk) return null;
+      const Fk = ek[kk];
+      if (void 0 === Fk) throw new Error(`${kk} is not a shader pack hook function id`);
+      return Fk
     }
 
-    function CS(SS) {
-      const HS = tS.c.length;
+    function Jk(kk) {
+      const Fk = Xk.b.length;
       return {
-        strict: SS >= HS,
-        program: tS.c[SS % HS]
+        strict: kk >= Fk,
+        program: Xk.b[kk % Fk]
       }
     }
 
-    function nS(SS) {
-      return Number(SS.strict) * tS.c.length + tS.c.indexOf(SS.program)
+    function xk(kk) {
+      return Number(kk.strict) * Xk.b.length + Xk.b.indexOf(kk.program)
     }
 
-    function PS(SS) {
-      return "" === SS ? [] : SS.split(" ")
+    function Pk(kk) {
+      return "" === kk ? [] : kk.split(" ")
     }
 
-    function QS(SS) {
-      const HS = {
-        variantFlags: new Uint8Array(bS),
-        hooks: new Uint8Array(bS * XS),
-        moduleCodes: Array(bS).fill(""),
-        reads: Array(2 * bS).fill("")
+    function Kk(kk) {
+      const Fk = {
+        variantFlags: new Uint8Array(Tk),
+        hooks: new Uint8Array(Tk * ik),
+        moduleCodes: Array(Tk).fill(""),
+        reads: Array(2 * Tk).fill("")
       };
-      for (const gS of SS) {
-        const SS = nS(gS.key),
-          tS = (SS, HS) => null === gS.hooks.surface || gS.reads.fragment.includes(SS) ? 0 : HS;
-        HS.variantFlags[SS] = (gS.sceneDepth ? xS : 0) | (gS.movesVertices ? NS : 0) | (gS.sunShadow ? qS : 0) | (gS.airShadow ? uS : 0) | (gS.discards ? IS : 0) | tS("localPosition", fS) | tS("enchantSpeed", kS) | tS("enchantTier", aS), HS.hooks[SS * XS] = jS(gS.hooks.vertex), HS.hooks[SS * XS + 1] = jS(gS.hooks.surface), HS.hooks[SS * XS + 2] = jS(gS.hooks.light), HS.moduleCodes[SS] = gS.moduleCode, HS.reads[2 * SS] = gS.reads.vertex.join(" "), HS.reads[2 * SS + 1] = gS.reads.fragment.join(" ")
+      for (const Ik of kk) {
+        const kk = xk(Ik.key),
+          Xk = (kk, Fk) => null === Ik.hooks.surface || Ik.reads.fragment.includes(kk) ? 0 : Fk;
+        Fk.variantFlags[kk] = (Ik.sceneDepth ? yk : 0) | (Ik.movesVertices ? lk : 0) | (Ik.sunShadow ? ak : 0) | (Ik.airShadow ? qk : 0) | (Ik.discards ? Lk : 0) | Xk("localPosition", tk) | Xk("enchantSpeed", Zk) | Xk("enchantTier", jk), Fk.hooks[kk * ik] = wk(Ik.hooks.vertex), Fk.hooks[kk * ik + 1] = wk(Ik.hooks.surface), Fk.hooks[kk * ik + 2] = wk(Ik.hooks.light), Fk.moduleCodes[kk] = Ik.moduleCode, Fk.reads[2 * kk] = Ik.reads.vertex.join(" "), Fk.reads[2 * kk + 1] = Ik.reads.fragment.join(" ")
       }
-      return HS
+      return Fk
     }
 
-    function DS(SS) {
+    function Qk(kk) {
       const {
-        hooks: HS,
-        moduleCodes: gS,
-        reads: tS
-      } = SS;
-      return Array.from(SS.variantFlags, ((SS, bS) => {
-        const fS = bS * XS;
+        hooks: Fk,
+        moduleCodes: Ik,
+        reads: Xk
+      } = kk;
+      return Array.from(kk.variantFlags, ((kk, Tk) => {
+        const tk = Tk * ik;
         return {
-          key: CS(bS),
+          key: Jk(Tk),
           hooks: {
-            vertex: GS(HS[fS]),
-            surface: GS(HS[fS + 1]),
-            light: GS(HS[fS + 2])
+            vertex: Hk(Fk[tk]),
+            surface: Hk(Fk[tk + 1]),
+            light: Hk(Fk[tk + 2])
           },
-          moduleCode: gS[bS],
-          sceneDepth: 0 !== (SS & xS),
-          sunShadow: 0 !== (SS & qS),
-          airShadow: 0 !== (SS & uS),
-          movesVertices: 0 !== (SS & NS),
-          discards: 0 !== (SS & IS),
+          moduleCode: Ik[Tk],
+          sceneDepth: 0 !== (kk & yk),
+          sunShadow: 0 !== (kk & ak),
+          airShadow: 0 !== (kk & qk),
+          movesVertices: 0 !== (kk & lk),
+          discards: 0 !== (kk & Lk),
           reads: {
-            vertex: PS(tS[2 * bS]),
-            fragment: PS(tS[2 * bS + 1])
+            vertex: Pk(Xk[2 * Tk]),
+            fragment: Pk(Xk[2 * Tk + 1])
           }
         }
       }))
     }
   },
-  6832: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => tS,
-      d: () => xS,
-      e: () => NS,
-      f: () => bS,
-      h: () => XS
+  6622: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Xk,
+      e: () => yk,
+      f: () => lk,
+      h: () => Tk,
+      i: () => ik
     });
-    const tS = ["terrain", "liquid", "model"];
+    const Xk = ["terrain", "liquid", "model"];
 
-    function bS() {
-      const SS = [];
-      for (const HS of [!1, !0])
-        for (const gS of tS) SS.push({
-          strict: HS,
-          program: gS
+    function Tk() {
+      const kk = [];
+      for (const Fk of [!1, !0])
+        for (const Ik of Xk) kk.push({
+          strict: Fk,
+          program: Ik
         });
-      return SS
+      return kk
     }
 
-    function XS(SS) {
-      return `${SS.strict?"strict":"allow"}.${SS.program}`
+    function ik(kk) {
+      return `${kk.strict?"strict":"allow"}.${kk.program}`
     }
 
-    function xS(SS) {
-      return !SS.hooks.vertex && !SS.hooks.surface && !SS.hooks.light
+    function yk(kk) {
+      return !kk.hooks.vertex && !kk.hooks.surface && !kk.hooks.light
     }
 
-    function NS(SS, HS) {
-      return "off" !== HS && (null === SS || SS.some((SS => SS.key.strict === ("strict" === HS) && !xS(SS))))
+    function lk(kk, Fk) {
+      return "off" !== Fk && (null === kk || kk.some((kk => kk.key.strict === ("strict" === Fk) && !yk(kk))))
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

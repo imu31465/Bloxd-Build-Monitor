@@ -1,2445 +1,2445 @@
 export const id = 185;
 export const ids = [185];
 export const modules = {
-  9346: (SS, HS) => {
-    HS.discordURLBuilder = function(SS) {
-      var HS;
-      const gS = (null === (HS = null === window || void 0 === window ? void 0 : window.location) || void 0 === HS ? void 0 : HS.hostname) || "localhost",
-        tS = SS.hostname.split("."),
-        bS = !SS.hostname.includes("trycloudflare.com") && !SS.hostname.includes("discordsays.com") && tS.length > 2 ? `/${tS[0]}` : "";
-      return SS.pathname.startsWith("/.proxy") ? `${SS.protocol}//${gS}${bS}${SS.pathname}${SS.search}` : `${SS.protocol}//${gS}/.proxy/colyseus${bS}${SS.pathname}${SS.search}`
+  9163: (kk, Fk) => {
+    Fk.discordURLBuilder = function(kk) {
+      var Fk;
+      const Ik = (null === (Fk = null === window || void 0 === window ? void 0 : window.location) || void 0 === Fk ? void 0 : Fk.hostname) || "localhost",
+        Xk = kk.hostname.split("."),
+        Tk = !kk.hostname.includes("trycloudflare.com") && !kk.hostname.includes("discordsays.com") && Xk.length > 2 ? `/${Xk[0]}` : "";
+      return kk.pathname.startsWith("/.proxy") ? `${kk.protocol}//${Ik}${Tk}${kk.pathname}${kk.search}` : `${kk.protocol}//${Ik}/.proxy/colyseus${Tk}${kk.pathname}${kk.search}`
     }
   },
-  9328: (SS, HS, gS) => {
-    var tS, bS, XS, xS, NS = gS(9249),
-      qS = gS(9337),
-      uS = gS(9300);
-    tS = new WeakMap, bS = new WeakMap, XS = new WeakMap, xS = new WeakMap, HS.Auth = class {
-      constructor(SS) {
-        this.http = SS, this.settings = {
+  9155: (kk, Fk, Ik) => {
+    var Xk, Tk, ik, yk, lk = Ik(9070),
+      ak = Ik(9158),
+      qk = Ik(9130);
+    Xk = new WeakMap, Tk = new WeakMap, ik = new WeakMap, yk = new WeakMap, Fk.Auth = class {
+      constructor(kk) {
+        this.http = kk, this.settings = {
           path: "/auth",
           key: "colyseus-auth-token"
-        }, tS.set(this, !1), bS.set(this, void 0), XS.set(this, void 0), xS.set(this, uS.createNanoEvents()), qS.getItem(this.settings.key, (SS => this.token = SS))
+        }, Xk.set(this, !1), Tk.set(this, void 0), ik.set(this, void 0), yk.set(this, qk.createNanoEvents()), ak.getItem(this.settings.key, (kk => this.token = kk))
       }
-      set token(SS) {
-        this.http.authToken = SS
+      set token(kk) {
+        this.http.authToken = kk
       }
       get token() {
         return this.http.authToken
       }
-      onChange(SS) {
-        const HS = NS.__classPrivateFieldGet(this, xS, "f").on("change", SS);
-        return NS.__classPrivateFieldGet(this, tS, "f") || NS.__classPrivateFieldSet(this, bS, new Promise(((SS, HS) => {
-          this.getUserData().then((SS => {
-            this.emitChange(Object.assign(Object.assign({}, SS), {
+      onChange(kk) {
+        const Fk = lk.__classPrivateFieldGet(this, yk, "f").on("change", kk);
+        return lk.__classPrivateFieldGet(this, Xk, "f") || lk.__classPrivateFieldSet(this, Tk, new Promise(((kk, Fk) => {
+          this.getUserData().then((kk => {
+            this.emitChange(Object.assign(Object.assign({}, kk), {
               token: this.token
             }))
-          })).catch((SS => {
+          })).catch((kk => {
             this.emitChange({
               user: null,
               token: void 0
             })
           })).finally((() => {
-            SS()
+            kk()
           }))
-        })), "f"), NS.__classPrivateFieldSet(this, tS, !0, "f"), HS
+        })), "f"), lk.__classPrivateFieldSet(this, Xk, !0, "f"), Fk
       }
       getUserData() {
-        return NS.__awaiter(this, void 0, void 0, (function*() {
+        return lk.__awaiter(this, void 0, void 0, (function*() {
           if (this.token) return (yield this.http.get(`${this.settings.path}/userdata`)).data;
           throw new Error("missing auth.token")
         }))
       }
-      registerWithEmailAndPassword(SS, HS, gS) {
-        return NS.__awaiter(this, void 0, void 0, (function*() {
-          const tS = (yield this.http.post(`${this.settings.path}/register`, {
+      registerWithEmailAndPassword(kk, Fk, Ik) {
+        return lk.__awaiter(this, void 0, void 0, (function*() {
+          const Xk = (yield this.http.post(`${this.settings.path}/register`, {
             body: {
-              email: SS,
-              password: HS,
-              options: gS
+              email: kk,
+              password: Fk,
+              options: Ik
             }
           })).data;
-          return this.emitChange(tS), tS
+          return this.emitChange(Xk), Xk
         }))
       }
-      signInWithEmailAndPassword(SS, HS) {
-        return NS.__awaiter(this, void 0, void 0, (function*() {
-          const gS = (yield this.http.post(`${this.settings.path}/login`, {
+      signInWithEmailAndPassword(kk, Fk) {
+        return lk.__awaiter(this, void 0, void 0, (function*() {
+          const Ik = (yield this.http.post(`${this.settings.path}/login`, {
             body: {
-              email: SS,
-              password: HS
+              email: kk,
+              password: Fk
             }
           })).data;
-          return this.emitChange(gS), gS
+          return this.emitChange(Ik), Ik
         }))
       }
-      signInAnonymously(SS) {
-        return NS.__awaiter(this, void 0, void 0, (function*() {
-          const HS = (yield this.http.post(`${this.settings.path}/anonymous`, {
+      signInAnonymously(kk) {
+        return lk.__awaiter(this, void 0, void 0, (function*() {
+          const Fk = (yield this.http.post(`${this.settings.path}/anonymous`, {
             body: {
-              options: SS
+              options: kk
             }
           })).data;
-          return this.emitChange(HS), HS
+          return this.emitChange(Fk), Fk
         }))
       }
-      sendPasswordResetEmail(SS) {
-        return NS.__awaiter(this, void 0, void 0, (function*() {
+      sendPasswordResetEmail(kk) {
+        return lk.__awaiter(this, void 0, void 0, (function*() {
           return (yield this.http.post(`${this.settings.path}/forgot-password`, {
             body: {
-              email: SS
+              email: kk
             }
           })).data
         }))
       }
-      signInWithProvider(SS) {
-        return NS.__awaiter(this, arguments, void 0, (function*(SS) {
-          let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          return new Promise(((gS, tS) => {
-            const bS = HS.width || 480,
-              xS = HS.height || 768,
-              qS = this.token ? `?token=${this.token}` : "",
-              uS = `Login with ${SS[0].toUpperCase()+SS.substring(1)}`,
-              IS = this.http.client.getHttpEndpoint(`${HS.prefix||`${this.settings.path}/provider`}/${SS}${qS}`),
-              fS = screen.width / 2 - bS / 2,
-              kS = screen.height / 2 - xS / 2;
-            NS.__classPrivateFieldSet(this, XS, window.open(IS, uS, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + bS + ", height=" + xS + ", top=" + kS + ", left=" + fS), "f");
-            const aS = SS => {
-                void 0 === SS.data.user && void 0 === SS.data.token || (clearInterval(KS), NS.__classPrivateFieldGet(this, XS, "f").close(), NS.__classPrivateFieldSet(this, XS, void 0, "f"), window.removeEventListener("message", aS), void 0 !== SS.data.error ? tS(SS.data.error) : (gS(SS.data), this.emitChange(SS.data)))
+      signInWithProvider(kk) {
+        return lk.__awaiter(this, arguments, void 0, (function*(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+          return new Promise(((Ik, Xk) => {
+            const Tk = Fk.width || 480,
+              yk = Fk.height || 768,
+              ak = this.token ? `?token=${this.token}` : "",
+              qk = `Login with ${kk[0].toUpperCase()+kk.substring(1)}`,
+              Lk = this.http.client.getHttpEndpoint(`${Fk.prefix||`${this.settings.path}/provider`}/${kk}${ak}`),
+              tk = screen.width / 2 - Tk / 2,
+              Zk = screen.height / 2 - yk / 2;
+            lk.__classPrivateFieldSet(this, ik, window.open(Lk, qk, "toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no, resizable=no, copyhistory=no, width=" + Tk + ", height=" + yk + ", top=" + Zk + ", left=" + tk), "f");
+            const jk = kk => {
+                void 0 === kk.data.user && void 0 === kk.data.token || (clearInterval(ek), lk.__classPrivateFieldGet(this, ik, "f").close(), lk.__classPrivateFieldSet(this, ik, void 0, "f"), window.removeEventListener("message", jk), void 0 !== kk.data.error ? Xk(kk.data.error) : (Ik(kk.data), this.emitChange(kk.data)))
               },
-              KS = setInterval((() => {
-                NS.__classPrivateFieldGet(this, XS, "f") && !NS.__classPrivateFieldGet(this, XS, "f").closed || (NS.__classPrivateFieldSet(this, XS, void 0, "f"), tS("Hg"), window.removeEventListener("message", aS))
+              ek = setInterval((() => {
+                lk.__classPrivateFieldGet(this, ik, "f") && !lk.__classPrivateFieldGet(this, ik, "f").closed || (lk.__classPrivateFieldSet(this, ik, void 0, "f"), Xk("iI"), window.removeEventListener("message", jk))
               }), 200);
-            window.addEventListener("message", aS)
+            window.addEventListener("message", jk)
           }))
         }))
       }
       signOut() {
-        return NS.__awaiter(this, void 0, void 0, (function*() {
+        return lk.__awaiter(this, void 0, void 0, (function*() {
           this.emitChange({
             user: null,
             token: null
           })
         }))
       }
-      emitChange(SS) {
-        void 0 !== SS.token && (this.token = SS.token, null === SS.token ? qS.removeItem(this.settings.key) : qS.setItem(this.settings.key, SS.token)), NS.__classPrivateFieldGet(this, xS, "f").emit("change", SS)
+      emitChange(kk) {
+        void 0 !== kk.token && (this.token = kk.token, null === kk.token ? ak.removeItem(this.settings.key) : ak.setItem(this.settings.key, kk.token)), lk.__classPrivateFieldGet(this, yk, "f").emit("change", kk)
       }
     }
   },
-  9244: (SS, HS, gS) => {
-    var tS, bS = gS(9249),
-      XS = gS(9252),
-      xS = gS(9255),
-      NS = gS(9323),
-      qS = gS(9328),
-      uS = gS(9346);
-    class IS extends Error {
-      constructor(SS, HS) {
-        super(SS), this.code = HS, this.name = "MatchMakeError", Object.setPrototypeOf(this, IS.prototype)
+  9066: (kk, Fk, Ik) => {
+    var Xk, Tk = Ik(9070),
+      ik = Ik(9077),
+      yk = Ik(9080),
+      lk = Ik(9148),
+      ak = Ik(9155),
+      qk = Ik(9163);
+    class Lk extends Error {
+      constructor(kk, Fk) {
+        super(kk), this.code = Fk, this.name = "MatchMakeError", Object.setPrototypeOf(this, Lk.prototype)
       }
     }
-    const fS = "undefined" !== typeof window && "undefined" !== typeof(null === (tS = null === window || void 0 === window ? void 0 : window.location) || void 0 === tS ? void 0 : tS.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
-    class kS {
+    const tk = "undefined" !== typeof window && "undefined" !== typeof(null === (Xk = null === window || void 0 === window ? void 0 : window.location) || void 0 === Xk ? void 0 : Xk.hostname) ? `${window.location.protocol.replace("http","ws")}//${window.location.hostname}${window.location.port&&`:${window.location.port}`}` : "ws://127.0.0.1:2567";
+    class Zk {
       constructor() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : fS,
-          HS = arguments.length > 1 ? arguments[1] : void 0;
-        var gS, tS;
-        if ("string" === typeof SS) {
-          const HS = SS.startsWith("/") ? new URL(SS, fS) : new URL(SS),
-            gS = "https:" === HS.protocol || "wss:" === HS.protocol,
-            tS = Number(HS.port || (gS ? 443 : 80));
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : tk,
+          Fk = arguments.length > 1 ? arguments[1] : void 0;
+        var Ik, Xk;
+        if ("string" === typeof kk) {
+          const Fk = kk.startsWith("/") ? new URL(kk, tk) : new URL(kk),
+            Ik = "https:" === Fk.protocol || "wss:" === Fk.protocol,
+            Xk = Number(Fk.port || (Ik ? 443 : 80));
           this.settings = {
-            hostname: HS.hostname,
-            pathname: HS.pathname,
-            port: tS,
-            secure: gS,
-            searchParams: HS.searchParams.toString() || void 0
+            hostname: Fk.hostname,
+            pathname: Fk.pathname,
+            port: Xk,
+            secure: Ik,
+            searchParams: Fk.searchParams.toString() || void 0
           }
-        } else void 0 === SS.port && (SS.port = SS.secure ? 443 : 80), void 0 === SS.pathname && (SS.pathname = ""), this.settings = SS;
-        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new NS.HTTP(this, (null === HS || void 0 === HS ? void 0 : HS.headers) || {}), this.auth = new qS.Auth(this.http), this.urlBuilder = null === HS || void 0 === HS ? void 0 : HS.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (tS = null === (gS = null === window || void 0 === window ? void 0 : window.location) || void 0 === gS ? void 0 : gS.hostname) || void 0 === tS ? void 0 : tS.includes("discordsays.com")) && (this.urlBuilder = uS.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
+        } else void 0 === kk.port && (kk.port = kk.secure ? 443 : 80), void 0 === kk.pathname && (kk.pathname = ""), this.settings = kk;
+        this.settings.pathname.endsWith("/") && (this.settings.pathname = this.settings.pathname.slice(0, -1)), this.http = new lk.HTTP(this, (null === Fk || void 0 === Fk ? void 0 : Fk.headers) || {}), this.auth = new ak.Auth(this.http), this.urlBuilder = null === Fk || void 0 === Fk ? void 0 : Fk.urlBuilder, !this.urlBuilder && "undefined" !== typeof window && (null === (Xk = null === (Ik = null === window || void 0 === window ? void 0 : window.location) || void 0 === Ik ? void 0 : Ik.hostname) || void 0 === Xk ? void 0 : Xk.includes("discordsays.com")) && (this.urlBuilder = qk.discordURLBuilder, console.log("Colyseus SDK: Discord Embedded SDK detected. Using custom URL builder."))
       }
-      joinOrCreate(SS) {
-        return bS.__awaiter(this, arguments, void 0, (function*(SS) {
-          let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            gS = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinOrCreate", SS, HS, gS)
+      joinOrCreate(kk) {
+        return Tk.__awaiter(this, arguments, void 0, (function*(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Ik = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinOrCreate", kk, Fk, Ik)
         }))
       }
-      create(SS) {
-        return bS.__awaiter(this, arguments, void 0, (function*(SS) {
-          let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            gS = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("create", SS, HS, gS)
+      create(kk) {
+        return Tk.__awaiter(this, arguments, void 0, (function*(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Ik = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("create", kk, Fk, Ik)
         }))
       }
-      join(SS) {
-        return bS.__awaiter(this, arguments, void 0, (function*(SS) {
-          let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            gS = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("join", SS, HS, gS)
+      join(kk) {
+        return Tk.__awaiter(this, arguments, void 0, (function*(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Ik = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("join", kk, Fk, Ik)
         }))
       }
-      joinById(SS) {
-        return bS.__awaiter(this, arguments, void 0, (function*(SS) {
-          let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            gS = arguments.length > 2 ? arguments[2] : void 0;
-          return yield this.createMatchMakeRequest("joinById", SS, HS, gS)
+      joinById(kk) {
+        return Tk.__awaiter(this, arguments, void 0, (function*(kk) {
+          let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            Ik = arguments.length > 2 ? arguments[2] : void 0;
+          return yield this.createMatchMakeRequest("joinById", kk, Fk, Ik)
         }))
       }
-      reconnect(SS, HS) {
-        return bS.__awaiter(this, void 0, void 0, (function*() {
-          if ("string" === typeof SS && "string" === typeof HS) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
-          const [gS, tS] = SS.split(":");
-          if (!gS || !tS) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
-          return yield this.createMatchMakeRequest("reconnect", gS, {
-            reconnectionToken: tS
-          }, HS)
+      reconnect(kk, Fk) {
+        return Tk.__awaiter(this, void 0, void 0, (function*() {
+          if ("string" === typeof kk && "string" === typeof Fk) throw new Error("DEPRECATED: .reconnect() now only accepts 'reconnectionToken' as argument.\nYou can get this token from previously connected `room.reconnectionToken`");
+          const [Ik, Xk] = kk.split(":");
+          if (!Ik || !Xk) throw new Error("Invalid reconnection token format.\nThe format should be roomId:reconnectionToken");
+          return yield this.createMatchMakeRequest("reconnect", Ik, {
+            reconnectionToken: Xk
+          }, Fk)
         }))
       }
-      consumeSeatReservation(SS, HS, gS) {
-        return bS.__awaiter(this, void 0, void 0, (function*() {
-          const tS = this.createRoom(SS.room.name, HS);
-          tS.roomId = SS.room.roomId, tS.sessionId = SS.sessionId;
-          const xS = {
-            sessionId: tS.sessionId
+      consumeSeatReservation(kk, Fk, Ik) {
+        return Tk.__awaiter(this, void 0, void 0, (function*() {
+          const Xk = this.createRoom(kk.room.name, Fk);
+          Xk.roomId = kk.room.roomId, Xk.sessionId = kk.sessionId;
+          const yk = {
+            sessionId: Xk.sessionId
           };
-          SS.reconnectionToken && (xS.reconnectionToken = SS.reconnectionToken);
-          const NS = gS || tS;
-          return tS.connect(this.buildEndpoint(SS.room, xS, SS.protocol), SS.devMode && (() => bS.__awaiter(this, void 0, void 0, (function*() {
-            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${tS.roomId}'...`);
-            let gS = 0;
-            const XS = () => bS.__awaiter(this, void 0, void 0, (function*() {
-              gS++;
+          kk.reconnectionToken && (yk.reconnectionToken = kk.reconnectionToken);
+          const lk = Ik || Xk;
+          return Xk.connect(this.buildEndpoint(kk.room, yk, kk.protocol), kk.devMode && (() => Tk.__awaiter(this, void 0, void 0, (function*() {
+            console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} Re-establishing connection with room id '${Xk.roomId}'...`);
+            let Ik = 0;
+            const ik = () => Tk.__awaiter(this, void 0, void 0, (function*() {
+              Ik++;
               try {
-                yield this.consumeSeatReservation(SS, HS, NS), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${tS.roomId}'`)
-              } catch (bS) {
-                gS < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${gS} out of 8)`), setTimeout(XS, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
+                yield this.consumeSeatReservation(kk, Fk, lk), console.info(`[Colyseus devMode]: ${String.fromCodePoint(9989)} Successfully re-established connection with room '${Xk.roomId}'`)
+              } catch (Tk) {
+                Ik < 8 ? (console.info(`[Colyseus devMode]: ${String.fromCodePoint(128260)} retrying... (${Ik} out of 8)`), setTimeout(ik, 2e3)) : console.info(`[Colyseus devMode]: ${String.fromCodePoint(10060)} Failed to reconnect. Is your server running? Please check server logs.`)
               }
             }));
-            setTimeout(XS, 2e3)
-          }))), NS, SS, this.http.headers), new Promise(((SS, HS) => {
-            const gS = (SS, gS) => HS(new XS.ServerError(SS, gS));
-            NS.onError.once(gS), NS.onJoin.once((() => {
-              NS.onError.remove(gS), setTimeout((() => {
+            setTimeout(ik, 2e3)
+          }))), lk, kk, this.http.headers), new Promise(((kk, Fk) => {
+            const Ik = (kk, Ik) => Fk(new ik.ServerError(kk, Ik));
+            lk.onError.once(Ik), lk.onJoin.once((() => {
+              lk.onError.remove(Ik), setTimeout((() => {
                 try {
-                  const SS = [96, 98, 63, 61, 198, 165, 255, 148, 109, 255, 166, 172, 119, 97, 118, 161, 237, 220, 8, 144];
-                  SS && NS.Av(128, new Uint8Array(SS))
+                  const kk = [96, 98, 63, 61, 198, 165, 255, 148, 109, 255, 166, 172, 119, 97, 118, 161, 237, 220, 8, 144];
+                  kk && lk.aE(128, new Uint8Array(kk))
                 } catch {}
-              }), 3e3), SS(NS)
+              }), 3e3), kk(lk)
             }))
           }))
         }))
       }
-      createMatchMakeRequest(SS, HS) {
-        return bS.__awaiter(this, arguments, void 0, (function*(SS, HS) {
-          let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            tS = arguments.length > 3 ? arguments[3] : void 0,
-            bS = arguments.length > 4 ? arguments[4] : void 0;
-          const XS = (yield this.http.post(`matchmake/${SS}/${HS}`, {
+      createMatchMakeRequest(kk, Fk) {
+        return Tk.__awaiter(this, arguments, void 0, (function*(kk, Fk) {
+          let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+            Xk = arguments.length > 3 ? arguments[3] : void 0,
+            Tk = arguments.length > 4 ? arguments[4] : void 0;
+          const ik = (yield this.http.post(`matchmake/${kk}/${Fk}`, {
             headers: {
               "X-Requested-With": "XMLHtttpRequest",
               Accept: "application/json",
               "Content-Type": "application/json"
             },
-            body: JSON.stringify(gS)
+            body: JSON.stringify(Ik)
           })).data;
-          if (XS.error) throw new IS(XS.error, XS.code);
-          return "reconnect" === SS && (XS.reconnectionToken = gS.reconnectionToken), yield this.consumeSeatReservation(XS, tS, bS)
+          if (ik.error) throw new Lk(ik.error, ik.code);
+          return "reconnect" === kk && (ik.reconnectionToken = Ik.reconnectionToken), yield this.consumeSeatReservation(ik, Xk, Tk)
         }))
       }
-      createRoom(SS, HS) {
-        return new xS.Mf(SS, HS)
+      createRoom(kk, Fk) {
+        return new yk.dt(kk, Fk)
       }
-      buildEndpoint(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
-          tS = this.settings.searchParams || "";
-        this.http.authToken && (HS._authToken = this.http.authToken);
-        for (const xS in HS) HS.hasOwnProperty(xS) && (tS += (tS ? "&" : "") + `${xS}=${HS[xS]}`);
-        "h3" === gS && (gS = "http");
-        let bS = this.settings.secure ? `${gS}s://` : `${gS}://`;
-        SS.publicAddress ? bS += `${SS.publicAddress}` : bS += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
-        const XS = `${bS}/${SS.processId}/${SS.roomId}?${tS}`;
-        return this.urlBuilder ? this.urlBuilder(new URL(XS)) : XS
+      buildEndpoint(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ws",
+          Xk = this.settings.searchParams || "";
+        this.http.authToken && (Fk._authToken = this.http.authToken);
+        for (const yk in Fk) Fk.hasOwnProperty(yk) && (Xk += (Xk ? "&" : "") + `${yk}=${Fk[yk]}`);
+        "h3" === Ik && (Ik = "http");
+        let Tk = this.settings.secure ? `${Ik}s://` : `${Ik}://`;
+        kk.publicAddress ? Tk += `${kk.publicAddress}` : Tk += `${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}`;
+        const ik = `${Tk}/${kk.processId}/${kk.roomId}?${Xk}`;
+        return this.urlBuilder ? this.urlBuilder(new URL(ik)) : ik
       }
       getHttpEndpoint() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-        const HS = SS.startsWith("/") ? SS : `/${SS}`;
-        let gS = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${HS}`;
-        return this.settings.searchParams && (gS += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(gS)) : gS
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+        const Fk = kk.startsWith("/") ? kk : `/${kk}`;
+        let Ik = `${this.settings.secure?"https":"http"}://${this.settings.hostname}${this.getEndpointPort()}${this.settings.pathname}${Fk}`;
+        return this.settings.searchParams && (Ik += `?${this.settings.searchParams}`), this.urlBuilder ? this.urlBuilder(new URL(Ik)) : Ik
       }
       getEndpointPort() {
         return 80 !== this.settings.port && 443 !== this.settings.port ? `:${this.settings.port}` : ""
       }
     }
-    kS.VERSION = "0.16.22", HS.Client = kS, HS.MatchMakeError = IS
+    Zk.VERSION = "0.16.22", Fk.Client = Zk, Fk.MatchMakeError = Lk
   },
-  9261: (SS, HS, gS) => {
-    var tS = gS(9268),
-      bS = gS(9280);
-    HS.Connection = class {
-      constructor(SS) {
-        if (this.events = {}, "h3" === SS) this.transport = new tS.H3TransportTransport(this.events);
-        else this.transport = new bS.WebSocketTransport(this.events)
+  9083: (kk, Fk, Ik) => {
+    var Xk = Ik(9092),
+      Tk = Ik(9105);
+    Fk.Connection = class {
+      constructor(kk) {
+        if (this.events = {}, "h3" === kk) this.transport = new Xk.H3TransportTransport(this.events);
+        else this.transport = new Tk.WebSocketTransport(this.events)
       }
-      connect(SS, HS) {
-        this.transport.connect.call(this.transport, SS, HS)
+      connect(kk, Fk) {
+        this.transport.connect.call(this.transport, kk, Fk)
       }
-      send(SS) {
-        this.transport.send(SS)
+      send(kk) {
+        this.transport.send(kk)
       }
-      sendUnreliable(SS) {
-        this.transport.sendUnreliable(SS)
+      sendUnreliable(kk) {
+        this.transport.sendUnreliable(kk)
       }
-      close(SS, HS) {
-        this.transport.close(SS, HS)
+      close(kk, Fk) {
+        this.transport.close(kk, Fk)
       }
       get isOpen() {
         return this.transport.isOpen
       }
     }
   },
-  9323: (SS, HS, gS) => {
-    var tS = gS(9252);
+  9148: (kk, Fk, Ik) => {
+    var Xk = Ik(9077);
 
-    function bS(SS) {
-      var HS = Object.create(null);
-      return SS && Object.keys(SS).forEach((function(gS) {
-        if ("default" !== gS) {
-          var tS = Object.getOwnPropertyDescriptor(SS, gS);
-          Object.defineProperty(HS, gS, tS.get ? tS : {
+    function Tk(kk) {
+      var Fk = Object.create(null);
+      return kk && Object.keys(kk).forEach((function(Ik) {
+        if ("default" !== Ik) {
+          var Xk = Object.getOwnPropertyDescriptor(kk, Ik);
+          Object.defineProperty(Fk, Ik, Xk.get ? Xk : {
             enumerable: !0,
             get: function() {
-              return SS[gS]
+              return kk[Ik]
             }
           })
         }
-      })), HS.default = SS, Object.freeze(HS)
+      })), Fk.default = kk, Object.freeze(Fk)
     }
-    var XS = bS(gS(9326));
-    HS.HTTP = class {
-      constructor(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.client = SS, this.headers = HS
+    var ik = Tk(Ik(9150));
+    Fk.HTTP = class {
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.client = kk, this.headers = Fk
       }
-      get(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("get", SS, HS)
+      get(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("get", kk, Fk)
       }
-      post(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("post", SS, HS)
+      post(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("post", kk, Fk)
       }
-      del(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("del", SS, HS)
+      del(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("del", kk, Fk)
       }
-      put(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        return this.request("put", SS, HS)
+      put(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        return this.request("put", kk, Fk)
       }
-      request(SS, HS) {
-        let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        return XS[SS](this.client.getHttpEndpoint(HS), this.getOptions(gS)).catch((SS => {
-          var HS;
-          if (SS.aborted) throw new tS.AbortError("Request aborted");
-          const gS = SS.statusCode,
-            bS = (null === (HS = SS.data) || void 0 === HS ? void 0 : HS.error) || SS.statusMessage || SS.message;
-          if (!gS && !bS) throw SS;
-          throw new tS.ServerError(gS, bS)
+      request(kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        return ik[kk](this.client.getHttpEndpoint(Fk), this.getOptions(Ik)).catch((kk => {
+          var Fk;
+          if (kk.aborted) throw new Xk.AbortError("Request aborted");
+          const Ik = kk.statusCode,
+            Tk = (null === (Fk = kk.data) || void 0 === Fk ? void 0 : Fk.error) || kk.statusMessage || kk.message;
+          if (!Ik && !Tk) throw kk;
+          throw new Xk.ServerError(Ik, Tk)
         }))
       }
-      getOptions(SS) {
-        return SS.headers = Object.assign({}, this.headers, SS.headers), this.authToken && (SS.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (SS.withCredentials = !0), SS
+      getOptions(kk) {
+        return kk.headers = Object.assign({}, this.headers, kk.headers), this.authToken && (kk.headers.Authorization = `Bearer ${this.authToken}`), "undefined" !== typeof cc && cc.sys && cc.sys.isNative || (kk.withCredentials = !0), kk
       }
     }
   },
-  9290: (SS, HS) => {
-    var gS, tS;
-    HS.Protocol = void 0, (gS = HS.Protocol || (HS.Protocol = {}))[gS.HANDSHAKE = 9] = "HANDSHAKE", gS[gS.JOIN_ROOM = 10] = "JOIN_ROOM", gS[gS.ERROR = 11] = "ERROR", gS[gS.LEAVE_ROOM = 12] = "LEAVE_ROOM", gS[gS.ROOM_DATA = 13] = "ROOM_DATA", gS[gS.ROOM_STATE = 14] = "ROOM_STATE", gS[gS.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", gS[gS.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", gS[gS.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", HS.ErrorCode = void 0, (tS = HS.ErrorCode || (HS.ErrorCode = {}))[tS.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", tS[tS.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", tS[tS.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", tS[tS.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", tS[tS.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", tS[tS.AUTH_FAILED = 4215] = "AUTH_FAILED", tS[tS.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
+  9118: (kk, Fk) => {
+    var Ik, Xk;
+    Fk.Protocol = void 0, (Ik = Fk.Protocol || (Fk.Protocol = {}))[Ik.HANDSHAKE = 9] = "HANDSHAKE", Ik[Ik.JOIN_ROOM = 10] = "JOIN_ROOM", Ik[Ik.ERROR = 11] = "ERROR", Ik[Ik.LEAVE_ROOM = 12] = "LEAVE_ROOM", Ik[Ik.ROOM_DATA = 13] = "ROOM_DATA", Ik[Ik.ROOM_STATE = 14] = "ROOM_STATE", Ik[Ik.ROOM_STATE_PATCH = 15] = "ROOM_STATE_PATCH", Ik[Ik.ROOM_DATA_SCHEMA = 16] = "ROOM_DATA_SCHEMA", Ik[Ik.ROOM_DATA_BYTES = 17] = "ROOM_DATA_BYTES", Fk.ErrorCode = void 0, (Xk = Fk.ErrorCode || (Fk.ErrorCode = {}))[Xk.MATCHMAKE_NO_HANDLER = 4210] = "MATCHMAKE_NO_HANDLER", Xk[Xk.MATCHMAKE_INVALID_CRITERIA = 4211] = "MATCHMAKE_INVALID_CRITERIA", Xk[Xk.MATCHMAKE_INVALID_ROOM_ID = 4212] = "MATCHMAKE_INVALID_ROOM_ID", Xk[Xk.MATCHMAKE_UNHANDLED = 4213] = "MATCHMAKE_UNHANDLED", Xk[Xk.MATCHMAKE_EXPIRED = 4214] = "MATCHMAKE_EXPIRED", Xk[Xk.AUTH_FAILED = 4215] = "AUTH_FAILED", Xk[Xk.APPLICATION_ERROR = 4216] = "APPLICATION_ERROR"
   },
-  9255: (SS, HS, gS) => {
-    var tS = gS(9261),
-      bS = gS(9290),
-      XS = gS(9294),
-      xS = gS(9300),
-      NS = gS(9302),
-      qS = gS(9273),
-      uS = gS(9311),
-      IS = gS(9252),
-      fS = gS(9318);
-    class kS {
-      constructor(SS, HS) {
-        this.onStateChange = NS.createSignal(), this.onError = NS.createSignal(), this.rC = NS.createSignal(), this.onJoin = NS.createSignal(), this.hasJoined = !1, this.onMessageHandlers = xS.createNanoEvents(), this.roomId = null, this.name = SS, this.packr = new fS.Packr, this.packr.encode(void 0), HS && (this.nC = new(XS.getSerializer("schema")), this.rootSchema = HS, this.nC.state = new HS), this.onError(((SS, HS) => {
-          var gS;
-          return null === (gS = console.warn) || void 0 === gS ? void 0 : gS.call(console, `colyseus.js - onError => (${SS}) ${HS}`)
-        })), this.rC((() => this.fC()))
+  9080: (kk, Fk, Ik) => {
+    var Xk = Ik(9083),
+      Tk = Ik(9118),
+      ik = Ik(9121),
+      yk = Ik(9130),
+      lk = Ik(9135),
+      ak = Ik(9098),
+      qk = Ik(9137),
+      Lk = Ik(9077),
+      tk = Ik(9144);
+    class Zk {
+      constructor(kk, Fk) {
+        this.onStateChange = lk.createSignal(), this.onError = lk.createSignal(), this.NJ = lk.createSignal(), this.onJoin = lk.createSignal(), this.hasJoined = !1, this.onMessageHandlers = yk.createNanoEvents(), this.roomId = null, this.name = kk, this.packr = new tk.Packr, this.packr.encode(void 0), Fk && (this.LJ = new(ik.getSerializer("schema")), this.rootSchema = Fk, this.LJ.state = new Fk), this.onError(((kk, Fk) => {
+          var Ik;
+          return null === (Ik = console.warn) || void 0 === Ik ? void 0 : Ik.call(console, `colyseus.js - onError => (${kk}) ${Fk}`)
+        })), this.NJ((() => this.qJ()))
       }
-      connect(SS, HS) {
-        let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
-          bS = arguments.length > 3 ? arguments[3] : void 0,
-          XS = arguments.length > 4 ? arguments[4] : void 0;
-        const xS = new tS.Connection(bS.protocol);
-        if (gS.connection = xS, xS.events.onmessage = kS.prototype.onMessageCallback.bind(gS), xS.events.onclose = function(SS) {
-            var tS;
-            if (!gS.hasJoined) return null === (tS = console.warn) || void 0 === tS || tS.call(console, `Room connection was closed unexpectedly (${SS.code}): ${SS.reason}`), void gS.onError.invoke(SS.code, SS.reason);
-            SS.code === IS.CloseCode.DEVMODE_RESTART && HS ? HS() : (gS.rC.invoke(SS.code, SS.reason), gS.destroy())
-          }, xS.events.onerror = function(SS) {
-            var HS;
-            null === (HS = console.warn) || void 0 === HS || HS.call(console, `Room, onError (${SS.code}): ${SS.reason}`), gS.onError.invoke(SS.code, SS.reason)
-          }, "h3" === bS.protocol) {
-          const HS = new URL(SS);
-          xS.connect(HS.origin, bS)
-        } else xS.connect(SS, XS)
+      connect(kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this,
+          Tk = arguments.length > 3 ? arguments[3] : void 0,
+          ik = arguments.length > 4 ? arguments[4] : void 0;
+        const yk = new Xk.Connection(Tk.protocol);
+        if (Ik.connection = yk, yk.events.onmessage = Zk.prototype.onMessageCallback.bind(Ik), yk.events.onclose = function(kk) {
+            var Xk;
+            if (!Ik.hasJoined) return null === (Xk = console.warn) || void 0 === Xk || Xk.call(console, `Room connection was closed unexpectedly (${kk.code}): ${kk.reason}`), void Ik.onError.invoke(kk.code, kk.reason);
+            kk.code === Lk.CloseCode.DEVMODE_RESTART && Fk ? Fk() : (Ik.NJ.invoke(kk.code, kk.reason), Ik.destroy())
+          }, yk.events.onerror = function(kk) {
+            var Fk;
+            null === (Fk = console.warn) || void 0 === Fk || Fk.call(console, `Room, onError (${kk.code}): ${kk.reason}`), Ik.onError.invoke(kk.code, kk.reason)
+          }, "h3" === Tk.protocol) {
+          const Fk = new URL(kk);
+          yk.connect(Fk.origin, Tk)
+        } else yk.connect(kk, ik)
       }
       leave() {
-        let SS = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return new Promise((HS => {
-          this.rC((SS => HS(SS))), this.connection ? SS ? (this.packr.buffer[0] = bS.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.rC.invoke(IS.CloseCode.CONSENTED)
+        let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return new Promise((Fk => {
+          this.NJ((kk => Fk(kk))), this.connection ? kk ? (this.packr.buffer[0] = Tk.Protocol.LEAVE_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))) : this.connection.close() : this.NJ.invoke(Lk.CloseCode.CONSENTED)
         }))
       }
-      eC(SS, HS) {
-        return this.onMessageHandlers.on(this.getMessageHandlerKey(SS), HS)
+      bJ(kk, Fk) {
+        return this.onMessageHandlers.on(this.getMessageHandlerKey(kk), Fk)
       }
-      send(SS, HS) {
-        const gS = {
+      send(kk, Fk) {
+        const Ik = {
           offset: 1
         };
-        this.packr.buffer[0] = bS.Protocol.ROOM_DATA, "string" === typeof SS ? qS.encode.string(this.packr.buffer, SS, gS) : qS.encode.number(this.packr.buffer, SS, gS), this.packr.position = 0;
-        const tS = void 0 !== HS ? this.packr.pack(HS, 2048 + gS.offset) : this.packr.buffer.subarray(0, gS.offset);
-        this.connection.send(tS)
+        this.packr.buffer[0] = Tk.Protocol.ROOM_DATA, "string" === typeof kk ? ak.encode.string(this.packr.buffer, kk, Ik) : ak.encode.number(this.packr.buffer, kk, Ik), this.packr.position = 0;
+        const Xk = void 0 !== Fk ? this.packr.pack(Fk, 2048 + Ik.offset) : this.packr.buffer.subarray(0, Ik.offset);
+        this.connection.send(Xk)
       }
-      sendUnreliable(SS, HS) {
-        const gS = {
+      sendUnreliable(kk, Fk) {
+        const Ik = {
           offset: 1
         };
-        this.packr.buffer[0] = bS.Protocol.ROOM_DATA, "string" === typeof SS ? qS.encode.string(this.packr.buffer, SS, gS) : qS.encode.number(this.packr.buffer, SS, gS), this.packr.position = 0;
-        const tS = void 0 !== HS ? this.packr.pack(HS, 2048 + gS.offset) : this.packr.buffer.subarray(0, gS.offset);
-        this.connection.sendUnreliable(tS)
+        this.packr.buffer[0] = Tk.Protocol.ROOM_DATA, "string" === typeof kk ? ak.encode.string(this.packr.buffer, kk, Ik) : ak.encode.number(this.packr.buffer, kk, Ik), this.packr.position = 0;
+        const Xk = void 0 !== Fk ? this.packr.pack(Fk, 2048 + Ik.offset) : this.packr.buffer.subarray(0, Ik.offset);
+        this.connection.sendUnreliable(Xk)
       }
-      Av(SS, HS) {
-        const gS = {
+      aE(kk, Fk) {
+        const Ik = {
           offset: 1
         };
-        if (this.packr.buffer[0] = bS.Protocol.ROOM_DATA_BYTES, "string" === typeof SS ? qS.encode.string(this.packr.buffer, SS, gS) : qS.encode.number(this.packr.buffer, SS, gS), HS.byteLength + gS.offset > this.packr.buffer.byteLength) {
-          const SS = new Uint8Array(gS.offset + HS.byteLength);
-          SS.set(this.packr.buffer), this.packr.useBuffer(SS)
+        if (this.packr.buffer[0] = Tk.Protocol.ROOM_DATA_BYTES, "string" === typeof kk ? ak.encode.string(this.packr.buffer, kk, Ik) : ak.encode.number(this.packr.buffer, kk, Ik), Fk.byteLength + Ik.offset > this.packr.buffer.byteLength) {
+          const kk = new Uint8Array(Ik.offset + Fk.byteLength);
+          kk.set(this.packr.buffer), this.packr.useBuffer(kk)
         }
-        this.packr.buffer.set(HS, gS.offset), this.connection.send(this.packr.buffer.subarray(0, gS.offset + HS.byteLength))
+        this.packr.buffer.set(Fk, Ik.offset), this.connection.send(this.packr.buffer.subarray(0, Ik.offset + Fk.byteLength))
       }
       get state() {
-        return this.nC.getState()
+        return this.LJ.getState()
       }
-      fC() {
-        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.rC.clear(), this.onMessageHandlers.events = {}, this.nC instanceof uS.uL && (this.nC.NK.root.callbacks = {})
+      qJ() {
+        this.onJoin.clear(), this.onStateChange.clear(), this.onError.clear(), this.NJ.clear(), this.onMessageHandlers.events = {}, this.LJ instanceof qk.QG && (this.LJ.Xe.root.callbacks = {})
       }
-      onMessageCallback(SS) {
-        const HS = new Uint8Array(SS.data),
-          gS = {
+      onMessageCallback(kk) {
+        const Fk = new Uint8Array(kk.data),
+          Ik = {
             offset: 1
           },
-          tS = HS[0];
-        if (tS === bS.Protocol.JOIN_ROOM) {
-          const SS = qS.decode.utf8Read(HS, gS, HS[gS.offset++]);
-          if (this.serializerId = qS.decode.utf8Read(HS, gS, HS[gS.offset++]), !this.nC) {
-            const SS = XS.getSerializer(this.serializerId);
-            this.nC = new SS
+          Xk = Fk[0];
+        if (Xk === Tk.Protocol.JOIN_ROOM) {
+          const kk = ak.decode.utf8Read(Fk, Ik, Fk[Ik.offset++]);
+          if (this.serializerId = ak.decode.utf8Read(Fk, Ik, Fk[Ik.offset++]), !this.LJ) {
+            const kk = ik.getSerializer(this.serializerId);
+            this.LJ = new kk
           }
-          HS.byteLength > gS.offset && this.nC.handshake && this.nC.handshake(HS, gS), this.reconnectionToken = `${this.roomId}:${SS}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = bS.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
-        } else if (tS === bS.Protocol.ERROR) {
-          const SS = qS.decode.number(HS, gS),
-            tS = qS.decode.string(HS, gS);
-          this.onError.invoke(SS, tS)
-        } else if (tS === bS.Protocol.LEAVE_ROOM) this.leave();
-        else if (tS === bS.Protocol.ROOM_STATE) this.nC.setState(HS, gS), this.onStateChange.invoke(this.nC.getState());
-        else if (tS === bS.Protocol.ROOM_STATE_PATCH) this.nC.patch(HS, gS), this.onStateChange.invoke(this.nC.getState());
-        else if (tS === bS.Protocol.ROOM_DATA) {
-          const SS = qS.decode.stringCheck(HS, gS) ? qS.decode.string(HS, gS) : qS.decode.number(HS, gS),
-            tS = HS.byteLength > gS.offset ? fS.unpack(HS, {
-              start: gS.offset
+          Fk.byteLength > Ik.offset && this.LJ.handshake && this.LJ.handshake(Fk, Ik), this.reconnectionToken = `${this.roomId}:${kk}`, this.hasJoined = !0, this.onJoin.invoke(), this.packr.buffer[0] = Tk.Protocol.JOIN_ROOM, this.connection.send(this.packr.buffer.subarray(0, 1))
+        } else if (Xk === Tk.Protocol.ERROR) {
+          const kk = ak.decode.number(Fk, Ik),
+            Xk = ak.decode.string(Fk, Ik);
+          this.onError.invoke(kk, Xk)
+        } else if (Xk === Tk.Protocol.LEAVE_ROOM) this.leave();
+        else if (Xk === Tk.Protocol.ROOM_STATE) this.LJ.setState(Fk, Ik), this.onStateChange.invoke(this.LJ.getState());
+        else if (Xk === Tk.Protocol.ROOM_STATE_PATCH) this.LJ.patch(Fk, Ik), this.onStateChange.invoke(this.LJ.getState());
+        else if (Xk === Tk.Protocol.ROOM_DATA) {
+          const kk = ak.decode.stringCheck(Fk, Ik) ? ak.decode.string(Fk, Ik) : ak.decode.number(Fk, Ik),
+            Xk = Fk.byteLength > Ik.offset ? tk.unpack(Fk, {
+              start: Ik.offset
             }) : void 0;
-          this.dispatchMessage(SS, tS)
-        } else if (tS === bS.Protocol.ROOM_DATA_BYTES) {
-          const SS = qS.decode.stringCheck(HS, gS) ? qS.decode.string(HS, gS) : qS.decode.number(HS, gS);
-          this.dispatchMessage(SS, HS.subarray(gS.offset))
+          this.dispatchMessage(kk, Xk)
+        } else if (Xk === Tk.Protocol.ROOM_DATA_BYTES) {
+          const kk = ak.decode.stringCheck(Fk, Ik) ? ak.decode.string(Fk, Ik) : ak.decode.number(Fk, Ik);
+          this.dispatchMessage(kk, Fk.subarray(Ik.offset))
         }
       }
-      dispatchMessage(SS, HS) {
-        var gS;
-        const tS = this.getMessageHandlerKey(SS);
-        this.onMessageHandlers.events[tS] ? this.onMessageHandlers.emit(tS, HS) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", SS, HS) : null === (gS = console.warn) || void 0 === gS || gS.call(console, `colyseus.js: onMessage() not registered for type '${SS}'.`)
+      dispatchMessage(kk, Fk) {
+        var Ik;
+        const Xk = this.getMessageHandlerKey(kk);
+        this.onMessageHandlers.events[Xk] ? this.onMessageHandlers.emit(Xk, Fk) : this.onMessageHandlers.events["*"] ? this.onMessageHandlers.emit("*", kk, Fk) : null === (Ik = console.warn) || void 0 === Ik || Ik.call(console, `colyseus.js: onMessage() not registered for type '${kk}'.`)
       }
       destroy() {
-        this.nC && this.nC.teardown()
+        this.LJ && this.LJ.teardown()
       }
-      getMessageHandlerKey(SS) {
-        switch (typeof SS) {
+      getMessageHandlerKey(kk) {
+        switch (typeof kk) {
           case "string":
-            return SS;
+            return kk;
           case "number":
-            return `i${SS}`;
+            return `i${kk}`;
           default:
             throw new Error("invalid message type.")
         }
       }
     }
-    HS.Mf = kS
+    Fk.dt = Zk
   },
-  9337: (SS, HS, gS) => {
-    var tS = gS(9249);
-    let bS;
+  9158: (kk, Fk, Ik) => {
+    var Xk = Ik(9070);
+    let Tk;
 
-    function XS() {
-      if (!bS) try {
-        bS = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
-      } catch (SS) {}
-      return bS || "undefined" === typeof globalThis.indexedDB || (bS = new xS), bS || (bS = {
+    function ik() {
+      if (!Tk) try {
+        Tk = "undefined" !== typeof cc && cc.sys && cc.sys.localStorage ? cc.sys.localStorage : window.localStorage
+      } catch (kk) {}
+      return Tk || "undefined" === typeof globalThis.indexedDB || (Tk = new yk), Tk || (Tk = {
         cache: {},
-        setItem: function(SS, HS) {
-          this.cache[SS] = HS
+        setItem: function(kk, Fk) {
+          this.cache[kk] = Fk
         },
-        getItem: function(SS) {
-          this.cache[SS]
+        getItem: function(kk) {
+          this.cache[kk]
         },
-        removeItem: function(SS) {
-          delete this.cache[SS]
+        removeItem: function(kk) {
+          delete this.cache[kk]
         }
-      }), bS
+      }), Tk
     }
-    class xS {
+    class yk {
       constructor() {
-        this.dbPromise = new Promise((SS => {
-          const HS = indexedDB.open("_colyseus_storage", 1);
-          HS.onupgradeneeded = () => HS.result.createObjectStore("store"), HS.onsuccess = () => SS(HS.result)
+        this.dbPromise = new Promise((kk => {
+          const Fk = indexedDB.open("_colyseus_storage", 1);
+          Fk.onupgradeneeded = () => Fk.result.createObjectStore("store"), Fk.onsuccess = () => kk(Fk.result)
         }))
       }
-      tx(SS, HS) {
-        return tS.__awaiter(this, void 0, void 0, (function*() {
-          const gS = (yield this.dbPromise).transaction("store", SS).objectStore("store");
-          return HS(gS)
+      tx(kk, Fk) {
+        return Xk.__awaiter(this, void 0, void 0, (function*() {
+          const Ik = (yield this.dbPromise).transaction("store", kk).objectStore("store");
+          return Fk(Ik)
         }))
       }
-      setItem(SS, HS) {
-        return this.tx("readwrite", (gS => gS.put(HS, SS))).then()
+      setItem(kk, Fk) {
+        return this.tx("readwrite", (Ik => Ik.put(Fk, kk))).then()
       }
-      getItem(SS) {
-        return tS.__awaiter(this, void 0, void 0, (function*() {
-          const HS = yield this.tx("readonly", (HS => HS.get(SS)));
-          return new Promise((SS => {
-            HS.onsuccess = () => SS(HS.result)
+      getItem(kk) {
+        return Xk.__awaiter(this, void 0, void 0, (function*() {
+          const Fk = yield this.tx("readonly", (Fk => Fk.get(kk)));
+          return new Promise((kk => {
+            Fk.onsuccess = () => kk(Fk.result)
           }))
         }))
       }
-      removeItem(SS) {
-        return this.tx("readwrite", (HS => HS.delete(SS))).then()
+      removeItem(kk) {
+        return this.tx("readwrite", (Fk => Fk.delete(kk))).then()
       }
     }
-    HS.getItem = function(SS, HS) {
-      const gS = XS().getItem(SS);
-      "undefined" !== typeof Promise && gS instanceof Promise ? gS.then((SS => HS(SS))) : HS(gS)
-    }, HS.removeItem = function(SS) {
-      XS().removeItem(SS)
-    }, HS.setItem = function(SS, HS) {
-      XS().setItem(SS, HS)
+    Fk.getItem = function(kk, Fk) {
+      const Ik = ik().getItem(kk);
+      "undefined" !== typeof Promise && Ik instanceof Promise ? Ik.then((kk => Fk(kk))) : Fk(Ik)
+    }, Fk.removeItem = function(kk) {
+      ik().removeItem(kk)
+    }, Fk.setItem = function(kk, Fk) {
+      ik().setItem(kk, Fk)
     }
   },
-  9300: (SS, HS) => {
-    HS.createNanoEvents = () => ({
-      emit(SS) {
-        let HS = this.events[SS] || [];
-        for (var gS = arguments.length, tS = new Array(gS > 1 ? gS - 1 : 0), bS = 1; bS < gS; bS++) tS[bS - 1] = arguments[bS];
-        for (let XS = 0, xS = HS.length; XS < xS; XS++) HS[XS](...tS)
+  9130: (kk, Fk) => {
+    Fk.createNanoEvents = () => ({
+      emit(kk) {
+        let Fk = this.events[kk] || [];
+        for (var Ik = arguments.length, Xk = new Array(Ik > 1 ? Ik - 1 : 0), Tk = 1; Tk < Ik; Tk++) Xk[Tk - 1] = arguments[Tk];
+        for (let ik = 0, yk = Fk.length; ik < yk; ik++) Fk[ik](...Xk)
       },
       events: {},
-      on(SS, HS) {
-        var gS;
-        return (null === (gS = this.events[SS]) || void 0 === gS ? void 0 : gS.push(HS)) || (this.events[SS] = [HS]), () => {
-          var gS;
-          this.events[SS] = null === (gS = this.events[SS]) || void 0 === gS ? void 0 : gS.filter((SS => HS !== SS))
+      on(kk, Fk) {
+        var Ik;
+        return (null === (Ik = this.events[kk]) || void 0 === Ik ? void 0 : Ik.push(Fk)) || (this.events[kk] = [Fk]), () => {
+          var Ik;
+          this.events[kk] = null === (Ik = this.events[kk]) || void 0 === Ik ? void 0 : Ik.filter((kk => Fk !== kk))
         }
       }
     })
   },
-  9302: (SS, HS) => {
-    class gS {
+  9135: (kk, Fk) => {
+    class Ik {
       constructor() {
         this.handlers = []
       }
-      register(SS) {
-        return this.handlers.push(SS), this
+      register(kk) {
+        return this.handlers.push(kk), this
       }
       invoke() {
-        for (var SS = arguments.length, HS = new Array(SS), gS = 0; gS < SS; gS++) HS[gS] = arguments[gS];
-        this.handlers.forEach((SS => SS.apply(this, HS)))
+        for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
+        this.handlers.forEach((kk => kk.apply(this, Fk)))
       }
       invokeAsync() {
-        for (var SS = arguments.length, HS = new Array(SS), gS = 0; gS < SS; gS++) HS[gS] = arguments[gS];
-        return Promise.all(this.handlers.map((SS => SS.apply(this, HS))))
+        for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
+        return Promise.all(this.handlers.map((kk => kk.apply(this, Fk))))
       }
-      remove(SS) {
-        const HS = this.handlers.indexOf(SS);
-        this.handlers[HS] = this.handlers[this.handlers.length - 1], this.handlers.pop()
+      remove(kk) {
+        const Fk = this.handlers.indexOf(kk);
+        this.handlers[Fk] = this.handlers[this.handlers.length - 1], this.handlers.pop()
       }
       clear() {
         this.handlers = []
       }
     }
-    HS.EventEmitter = gS, HS.createSignal = function() {
-      const SS = new gS;
+    Fk.EventEmitter = Ik, Fk.createSignal = function() {
+      const kk = new Ik;
 
-      function HS(HS) {
-        return SS.register(HS, null === this)
+      function Fk(Fk) {
+        return kk.register(Fk, null === this)
       }
-      return HS.once = HS => {
-        const gS = function() {
-          for (var tS = arguments.length, bS = new Array(tS), XS = 0; XS < tS; XS++) bS[XS] = arguments[XS];
-          HS.apply(this, bS), SS.remove(gS)
+      return Fk.once = Fk => {
+        const Ik = function() {
+          for (var Xk = arguments.length, Tk = new Array(Xk), ik = 0; ik < Xk; ik++) Tk[ik] = arguments[ik];
+          Fk.apply(this, Tk), kk.remove(Ik)
         };
-        SS.register(gS)
-      }, HS.remove = HS => SS.remove(HS), HS.invoke = function() {
-        return SS.invoke(...arguments)
-      }, HS.invokeAsync = function() {
-        return SS.invokeAsync(...arguments)
-      }, HS.clear = () => SS.clear(), HS
+        kk.register(Ik)
+      }, Fk.remove = Fk => kk.remove(Fk), Fk.invoke = function() {
+        return kk.invoke(...arguments)
+      }, Fk.invokeAsync = function() {
+        return kk.invokeAsync(...arguments)
+      }, Fk.clear = () => kk.clear(), Fk
     }
   },
-  9252: (SS, HS) => {
-    var gS;
-    HS.CloseCode = void 0, (gS = HS.CloseCode || (HS.CloseCode = {}))[gS.CONSENTED = 4e3] = "CONSENTED", gS[gS.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
-    class tS extends Error {
-      constructor(SS, HS) {
-        super(HS), this.name = "ServerError", this.code = SS
+  9077: (kk, Fk) => {
+    var Ik;
+    Fk.CloseCode = void 0, (Ik = Fk.CloseCode || (Fk.CloseCode = {}))[Ik.CONSENTED = 4e3] = "CONSENTED", Ik[Ik.DEVMODE_RESTART = 4010] = "DEVMODE_RESTART";
+    class Xk extends Error {
+      constructor(kk, Fk) {
+        super(Fk), this.name = "ServerError", this.code = kk
       }
     }
-    class bS extends Error {
-      constructor(SS) {
-        super(SS), this.name = "AbortError"
+    class Tk extends Error {
+      constructor(kk) {
+        super(kk), this.name = "AbortError"
       }
     }
-    HS.AbortError = bS, HS.ServerError = tS
+    Fk.AbortError = Tk, Fk.ServerError = Xk
   },
-  9233: (SS, HS, gS) => {
-    gS(9242);
-    var tS = gS(9244),
-      bS = gS(9290),
-      XS = gS(9255),
-      xS = gS(9328),
-      NS = gS(9252),
-      qS = gS(9311),
-      uS = gS(9353),
-      IS = gS(9294);
-    IS.registerSerializer("schema", qS.uL), IS.registerSerializer("none", uS.NoneSerializer), HS.Client = tS.Client, HS.MatchMakeError = tS.MatchMakeError, Object.defineProperty(HS, "ErrorCode", {
+  9054: (kk, Fk, Ik) => {
+    Ik(9061);
+    var Xk = Ik(9066),
+      Tk = Ik(9118),
+      ik = Ik(9080),
+      yk = Ik(9155),
+      lk = Ik(9077),
+      ak = Ik(9137),
+      qk = Ik(9172),
+      Lk = Ik(9121);
+    Lk.registerSerializer("schema", ak.QG), Lk.registerSerializer("none", qk.NoneSerializer), Fk.Client = Xk.Client, Fk.MatchMakeError = Xk.MatchMakeError, Object.defineProperty(Fk, "ErrorCode", {
       enumerable: !0,
       get: function() {
-        return bS.ErrorCode
+        return Tk.ErrorCode
       }
-    }), Object.defineProperty(HS, "Protocol", {
+    }), Object.defineProperty(Fk, "Protocol", {
       enumerable: !0,
       get: function() {
-        return bS.Protocol
+        return Tk.Protocol
       }
-    }), HS.Mf = XS.Mf, HS.Auth = xS.Auth, HS.ServerError = NS.ServerError, HS.uL = qS.uL, HS.getStateCallbacks = qS.getStateCallbacks, HS.registerSerializer = IS.registerSerializer
+    }), Fk.dt = ik.dt, Fk.Auth = yk.Auth, Fk.ServerError = lk.ServerError, Fk.QG = ak.QG, Fk.getStateCallbacks = ak.getStateCallbacks, Fk.registerSerializer = Lk.registerSerializer
   },
-  9242: () => {
-    ArrayBuffer.isView || (ArrayBuffer.isView = SS => null !== SS && "object" === typeof SS && SS.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
+  9061: () => {
+    ArrayBuffer.isView || (ArrayBuffer.isView = kk => null !== kk && "object" === typeof kk && kk.buffer instanceof ArrayBuffer), "undefined" === typeof globalThis && "undefined" !== typeof window && (window.globalThis = window), "undefined" === typeof FormData && (globalThis.FormData = class {})
   },
-  9353: (SS, HS) => {
-    HS.NoneSerializer = class {
-      setState(SS) {}
+  9172: (kk, Fk) => {
+    Fk.NoneSerializer = class {
+      setState(kk) {}
       getState() {
         return null
       }
-      patch(SS) {}
+      patch(kk) {}
       teardown() {}
-      handshake(SS) {}
+      handshake(kk) {}
     }
   },
-  9311: (SS, HS, gS) => {
-    var tS = gS(9273);
-    HS.uL = class {
-      setState(SS, HS) {
-        this.NK.decode(SS, HS)
+  9137: (kk, Fk, Ik) => {
+    var Xk = Ik(9098);
+    Fk.QG = class {
+      setState(kk, Fk) {
+        this.Xe.decode(kk, Fk)
       }
       getState() {
         return this.state
       }
-      patch(SS, HS) {
-        return this.NK.decode(SS, HS)
+      patch(kk, Fk) {
+        return this.Xe.decode(kk, Fk)
       }
       teardown() {
-        this.NK.root.clearRefs()
+        this.Xe.root.clearRefs()
       }
-      handshake(SS, HS) {
-        this.state ? (tS.Reflection.decode(SS, HS), this.NK = new tS.Decoder(this.state)) : (this.NK = tS.Reflection.decode(SS, HS), this.state = this.NK.state)
+      handshake(kk, Fk) {
+        this.state ? (Xk.Reflection.decode(kk, Fk), this.Xe = new Xk.Decoder(this.state)) : (this.Xe = Xk.Reflection.decode(kk, Fk), this.state = this.Xe.state)
       }
-    }, HS.getStateCallbacks = function(SS) {
+    }, Fk.getStateCallbacks = function(kk) {
       try {
-        return tS.getDecoderStateCallbacks(SS.nC.NK)
-      } catch (HS) {
+        return Xk.getDecoderStateCallbacks(kk.LJ.Xe)
+      } catch (Fk) {
         return
       }
     }
   },
-  9294: (SS, HS) => {
-    const gS = {};
-    HS.getSerializer = function(SS) {
-      const HS = gS[SS];
-      if (!HS) throw new Error("missing serializer: " + SS);
-      return HS
-    }, HS.registerSerializer = function(SS, HS) {
-      gS[SS] = HS
+  9121: (kk, Fk) => {
+    const Ik = {};
+    Fk.getSerializer = function(kk) {
+      const Fk = Ik[kk];
+      if (!Fk) throw new Error("missing serializer: " + kk);
+      return Fk
+    }, Fk.registerSerializer = function(kk, Fk) {
+      Ik[kk] = Fk
     }
   },
-  9268: (SS, HS, gS) => {
-    var tS = gS(9249),
-      bS = gS(9273);
-    HS.H3TransportTransport = class {
-      constructor(SS) {
-        this.events = SS, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
+  9092: (kk, Fk, Ik) => {
+    var Xk = Ik(9070),
+      Tk = Ik(9098);
+    Fk.H3TransportTransport = class {
+      constructor(kk) {
+        this.events = kk, this.isOpen = !1, this.lengthPrefixBuffer = new Uint8Array(9)
       }
-      connect(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const gS = HS.fingerprint && {
+      connect(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const Ik = Fk.fingerprint && {
           serverCertificateHashes: [{
             algorithm: "sha-256",
-            value: new Uint8Array(HS.fingerprint).buffer
+            value: new Uint8Array(Fk.fingerprint).buffer
           }]
         } || void 0;
-        this.wt = new WebTransport(SS, gS), this.wt.ready.then((SS => {
-          console.log("WebTransport ready!", SS), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
-          this.wt.incomingBidirectionalStreams.getReader().read().then((SS => {
-            this.reader = SS.value.readable.getReader(), this.writer = SS.value.writable.getWriter(), this.sendSeatReservation(HS.room.roomId, HS.sessionId, HS.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
-          })).catch((SS => {
-            console.error("failed to read incoming stream", SS), console.error("TODO: close the connection")
+        this.wt = new WebTransport(kk, Ik), this.wt.ready.then((kk => {
+          console.log("WebTransport ready!", kk), this.isOpen = !0, this.unreliableReader = this.wt.datagrams.readable.getReader(), this.unreliableWriter = this.wt.datagrams.writable.getWriter();
+          this.wt.incomingBidirectionalStreams.getReader().read().then((kk => {
+            this.reader = kk.value.readable.getReader(), this.writer = kk.value.writable.getWriter(), this.sendSeatReservation(Fk.room.roomId, Fk.sessionId, Fk.reconnectionToken), this.readIncomingData(), this.readIncomingUnreliableData()
+          })).catch((kk => {
+            console.error("failed to read incoming stream", kk), console.error("TODO: close the connection")
           }))
-        })).catch((SS => {
-          console.log("WebTransport not ready!", SS), this._close()
-        })), this.wt.closed.then((SS => {
-          console.log("WebTransport closed w/ success", SS), this.events.onclose({
-            code: SS.closeCode,
-            reason: SS.reason
+        })).catch((kk => {
+          console.log("WebTransport not ready!", kk), this._close()
+        })), this.wt.closed.then((kk => {
+          console.log("WebTransport closed w/ success", kk), this.events.onclose({
+            code: kk.closeCode,
+            reason: kk.reason
           })
-        })).catch((SS => {
-          console.log("WebTransport closed w/ error", SS), this.events.onerror(SS), this.events.onclose({
-            code: SS.closeCode,
-            reason: SS.reason
+        })).catch((kk => {
+          console.log("WebTransport closed w/ error", kk), this.events.onerror(kk), this.events.onclose({
+            code: kk.closeCode,
+            reason: kk.reason
           })
         })).finally((() => {
           this._close()
         }))
       }
-      send(SS) {
-        const HS = bS.encode.number(this.lengthPrefixBuffer, SS.length, {
+      send(kk) {
+        const Fk = Tk.encode.number(this.lengthPrefixBuffer, kk.length, {
             offset: 0
           }),
-          gS = new Uint8Array(HS + SS.length);
-        gS.set(this.lengthPrefixBuffer.subarray(0, HS), 0), gS.set(SS, HS), this.writer.write(gS)
+          Ik = new Uint8Array(Fk + kk.length);
+        Ik.set(this.lengthPrefixBuffer.subarray(0, Fk), 0), Ik.set(kk, Fk), this.writer.write(Ik)
       }
-      sendUnreliable(SS) {
-        const HS = bS.encode.number(this.lengthPrefixBuffer, SS.length, {
+      sendUnreliable(kk) {
+        const Fk = Tk.encode.number(this.lengthPrefixBuffer, kk.length, {
             offset: 0
           }),
-          gS = new Uint8Array(HS + SS.length);
-        gS.set(this.lengthPrefixBuffer.subarray(0, HS), 0), gS.set(SS, HS), this.unreliableWriter.write(gS)
+          Ik = new Uint8Array(Fk + kk.length);
+        Ik.set(this.lengthPrefixBuffer.subarray(0, Fk), 0), Ik.set(kk, Fk), this.unreliableWriter.write(Ik)
       }
-      close(SS, HS) {
+      close(kk, Fk) {
         try {
           this.wt.close({
-            closeCode: SS,
-            reason: HS
+            closeCode: kk,
+            reason: Fk
           })
-        } catch (gS) {
-          console.error(gS)
+        } catch (Ik) {
+          console.error(Ik)
         }
       }
       readIncomingData() {
-        return tS.__awaiter(this, void 0, void 0, (function*() {
-          let SS;
+        return Xk.__awaiter(this, void 0, void 0, (function*() {
+          let kk;
           for (; this.isOpen;) {
             try {
-              SS = yield this.reader.read();
-              const HS = SS.value,
-                gS = {
+              kk = yield this.reader.read();
+              const Fk = kk.value,
+                Ik = {
                   offset: 0
                 };
               do {
-                const SS = bS.decode.number(HS, gS);
+                const kk = Tk.decode.number(Fk, Ik);
                 this.events.onmessage({
-                  data: HS.subarray(gS.offset, gS.offset + SS)
-                }), gS.offset += SS
-              } while (gS.offset < HS.length)
-            } catch (HS) {
-              -1 === HS.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", HS);
+                  data: Fk.subarray(Ik.offset, Ik.offset + kk)
+                }), Ik.offset += kk
+              } while (Ik.offset < Fk.length)
+            } catch (Fk) {
+              -1 === Fk.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Fk);
               break
             }
-            if (SS.done) break
+            if (kk.done) break
           }
         }))
       }
       readIncomingUnreliableData() {
-        return tS.__awaiter(this, void 0, void 0, (function*() {
-          let SS;
+        return Xk.__awaiter(this, void 0, void 0, (function*() {
+          let kk;
           for (; this.isOpen;) {
             try {
-              SS = yield this.unreliableReader.read();
-              const HS = SS.value,
-                gS = {
+              kk = yield this.unreliableReader.read();
+              const Fk = kk.value,
+                Ik = {
                   offset: 0
                 };
               do {
-                const SS = bS.decode.number(HS, gS);
+                const kk = Tk.decode.number(Fk, Ik);
                 this.events.onmessage({
-                  data: HS.subarray(gS.offset, gS.offset + SS)
-                }), gS.offset += SS
-              } while (gS.offset < HS.length)
-            } catch (HS) {
-              -1 === HS.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", HS);
+                  data: Fk.subarray(Ik.offset, Ik.offset + kk)
+                }), Ik.offset += kk
+              } while (Ik.offset < Fk.length)
+            } catch (Fk) {
+              -1 === Fk.message.indexOf("session is closed") && console.error("H3Transport: failed to read incoming data", Fk);
               break
             }
-            if (SS.done) break
+            if (kk.done) break
           }
         }))
       }
-      sendSeatReservation(SS, HS, gS) {
-        const tS = {
+      sendSeatReservation(kk, Fk, Ik) {
+        const Xk = {
             offset: 0
           },
-          XS = [];
-        bS.encode.string(XS, SS, tS), bS.encode.string(XS, HS, tS), gS && bS.encode.string(XS, gS, tS), this.writer.write(new Uint8Array(XS).buffer)
+          ik = [];
+        Tk.encode.string(ik, kk, Xk), Tk.encode.string(ik, Fk, Xk), Ik && Tk.encode.string(ik, Ik, Xk), this.writer.write(new Uint8Array(ik).buffer)
       }
       _close() {
         this.isOpen = !1
       }
     }
   },
-  9280: (SS, HS, gS) => {
-    var tS = gS(9285);
-    const bS = globalThis.WebSocket || tS;
-    HS.WebSocketTransport = class {
-      constructor(SS) {
-        this.events = SS
+  9105: (kk, Fk, Ik) => {
+    var Xk = Ik(9111);
+    const Tk = globalThis.WebSocket || Xk;
+    Fk.WebSocketTransport = class {
+      constructor(kk) {
+        this.events = kk
       }
-      send(SS) {
-        this.ws.send(SS)
+      send(kk) {
+        this.ws.send(kk)
       }
-      sendUnreliable(SS) {
+      sendUnreliable(kk) {
         console.warn("colyseus.js: The WebSocket transport does not support unreliable messages")
       }
-      connect(SS, HS) {
+      connect(kk, Fk) {
         try {
-          this.ws = new bS(SS, {
-            headers: HS,
+          this.ws = new Tk(kk, {
+            headers: Fk,
             protocols: this.protocols
           })
-        } catch (gS) {
-          this.ws = new bS(SS, this.protocols)
+        } catch (Ik) {
+          this.ws = new Tk(kk, this.protocols)
         }
         this.ws.binaryType = "arraybuffer", this.ws.onopen = this.events.onopen, this.ws.onmessage = this.events.onmessage, this.ws.onclose = this.events.onclose, this.ws.onerror = this.events.onerror
       }
-      close(SS, HS) {
-        this.ws.close(SS, HS)
+      close(kk, Fk) {
+        this.ws.close(kk, Fk)
       }
       get isOpen() {
-        return this.ws.readyState === bS.OPEN
+        return this.ws.readyState === Tk.OPEN
       }
     }
   },
-  9285: SS => {
-    SS.exports = function() {
+  9111: kk => {
+    kk.exports = function() {
       throw new Error("ws does not work in the browser. Browser clients must use the native WebSocket object")
     }
   },
-  9326: (SS, HS, gS) => {
-    function tS(SS, HS) {
-      HS.headers = SS.headers || {}, HS.statusMessage = SS.statusText, HS.statusCode = SS.status, HS.data = SS.response
+  9150: (kk, Fk, Ik) => {
+    function Xk(kk, Fk) {
+      Fk.headers = kk.headers || {}, Fk.statusMessage = kk.statusText, Fk.statusCode = kk.status, Fk.data = kk.response
     }
 
-    function bS(SS, HS, gS) {
-      return new Promise((function(bS, XS) {
-        gS = gS || {};
-        var xS, NS, qS, uS = new XMLHttpRequest,
-          IS = gS.body,
-          fS = gS.headers || {};
-        for (xS in gS.timeout && (uS.timeout = gS.timeout), uS.ontimeout = uS.onerror = function(SS) {
-            SS.timeout = "timeout" == SS.type, XS(SS)
-          }, uS.onabort = function(SS) {
-            SS.aborted = !0, XS(SS)
-          }, uS.open(SS, HS.href || HS), uS.onload = function() {
-            for (qS = uS.getAllResponseHeaders().trim().split(/[\r\n]+/), tS(uS, uS); NS = qS.shift();) NS = NS.split(": "), uS.headers[NS.shift().toLowerCase()] = NS.join(": ");
-            if ((NS = uS.headers["content-type"]) && ~NS.indexOf("application/json")) try {
-              uS.data = JSON.parse(uS.data, gS.reviver)
-            } catch (SS) {
-              return tS(uS, SS), XS(SS)
-            }(uS.status >= 400 ? XS : bS)(uS)
-          }, typeof FormData < "u" && IS instanceof FormData || IS && "object" == typeof IS && (fS["content-type"] = "application/json", IS = JSON.stringify(IS)), uS.withCredentials = !!gS.withCredentials, fS) uS.setRequestHeader(xS, fS[xS]);
-        uS.send(IS), gS.signal && gS.signal.addEventListener("abort", (function() {
-          uS.abort()
+    function Tk(kk, Fk, Ik) {
+      return new Promise((function(Tk, ik) {
+        Ik = Ik || {};
+        var yk, lk, ak, qk = new XMLHttpRequest,
+          Lk = Ik.body,
+          tk = Ik.headers || {};
+        for (yk in Ik.timeout && (qk.timeout = Ik.timeout), qk.ontimeout = qk.onerror = function(kk) {
+            kk.timeout = "timeout" == kk.type, ik(kk)
+          }, qk.onabort = function(kk) {
+            kk.aborted = !0, ik(kk)
+          }, qk.open(kk, Fk.href || Fk), qk.onload = function() {
+            for (ak = qk.getAllResponseHeaders().trim().split(/[\r\n]+/), Xk(qk, qk); lk = ak.shift();) lk = lk.split(": "), qk.headers[lk.shift().toLowerCase()] = lk.join(": ");
+            if ((lk = qk.headers["content-type"]) && ~lk.indexOf("application/json")) try {
+              qk.data = JSON.parse(qk.data, Ik.reviver)
+            } catch (kk) {
+              return Xk(qk, kk), ik(kk)
+            }(qk.status >= 400 ? ik : Tk)(qk)
+          }, typeof FormData < "u" && Lk instanceof FormData || Lk && "object" == typeof Lk && (tk["content-type"] = "application/json", Lk = JSON.stringify(Lk)), qk.withCredentials = !!Ik.withCredentials, tk) qk.setRequestHeader(yk, tk[yk]);
+        qk.send(Lk), Ik.signal && Ik.signal.addEventListener("abort", (function() {
+          qk.abort()
         }))
       }))
     }
-    gS.r(HS), gS.d(HS, {
-      del: () => qS,
-      get: () => XS,
-      patch: () => NS,
-      post: () => xS,
-      put: () => uS,
-      send: () => bS
+    Ik.r(Fk), Ik.d(Fk, {
+      del: () => ak,
+      get: () => ik,
+      patch: () => lk,
+      post: () => yk,
+      put: () => qk,
+      send: () => Tk
     });
-    var XS = bS.bind(bS, "GET"),
-      xS = bS.bind(bS, "POST"),
-      NS = bS.bind(bS, "PATCH"),
-      qS = bS.bind(bS, "DELETE"),
-      uS = bS.bind(bS, "PUT")
+    var ik = Tk.bind(Tk, "GET"),
+      yk = Tk.bind(Tk, "POST"),
+      lk = Tk.bind(Tk, "PATCH"),
+      ak = Tk.bind(Tk, "DELETE"),
+      qk = Tk.bind(Tk, "PUT")
   },
-  9318: (SS, HS, gS) => {
-    var tS, bS, XS;
-    gS.r(HS), gS.d(HS, {
-      ALWAYS: () => RH,
-      C1: () => DS,
-      DECIMAL_FIT: () => oH,
-      DECIMAL_ROUND: () => TH,
-      Decoder: () => qH,
-      Encoder: () => MH,
-      FLOAT32_OPTIONS: () => aH,
-      NEVER: () => FH,
-      Packr: () => AH,
-      RESERVE_START_SPACE: () => eH,
-      RESET_BUFFER_MODE: () => mH,
-      REUSE_BUFFER_MODE: () => lH,
-      Unpackr: () => dS,
-      addExtension: () => zH,
-      clearSource: () => xH,
-      decode: () => kH,
-      decodeIter: () => rH,
-      encode: () => BH,
-      encodeIter: () => Sg,
-      isNativeAccelerationEnabled: () => US,
-      mapsAsObjects: () => gg,
-      pack: () => sH,
-      roundFloat32: () => PH,
-      unpack: () => IH,
-      unpackMultiple: () => fH,
-      useRecords: () => Hg
+  9144: (kk, Fk, Ik) => {
+    var Xk, Tk, ik;
+    Ik.r(Fk), Ik.d(Fk, {
+      ALWAYS: () => gF,
+      C1: () => Qk,
+      DECIMAL_FIT: () => hF,
+      DECIMAL_ROUND: () => mF,
+      Decoder: () => qF,
+      Encoder: () => YF,
+      FLOAT32_OPTIONS: () => eF,
+      NEVER: () => AF,
+      Packr: () => bF,
+      RESERVE_START_SPACE: () => MF,
+      RESET_BUFFER_MODE: () => DF,
+      REUSE_BUFFER_MODE: () => rF,
+      Unpackr: () => Ek,
+      addExtension: () => cF,
+      clearSource: () => lF,
+      decode: () => jF,
+      decodeIter: () => kI,
+      encode: () => dF,
+      encodeIter: () => FI,
+      isNativeAccelerationEnabled: () => Wk,
+      mapsAsObjects: () => XI,
+      pack: () => BF,
+      roundFloat32: () => KF,
+      unpack: () => tF,
+      unpackMultiple: () => ZF,
+      useRecords: () => II
     });
     try {
-      tS = new TextDecoder
-    } catch (tg) {}
-    var xS = 0;
-    const NS = [];
-    var qS, uS, IS, fS, kS, aS = NS,
-      KS = 0,
-      jS = {},
-      GS = 0,
-      CS = 0,
-      nS = [],
-      PS = {
+      Xk = new TextDecoder
+    } catch (TI) {}
+    var yk = 0;
+    const lk = [];
+    var ak, qk, Lk, tk, Zk, jk = lk,
+      ek = 0,
+      wk = {},
+      Hk = 0,
+      Jk = 0,
+      xk = [],
+      Pk = {
         useRecords: !1,
         mapsAsObjects: !0
       };
-    class QS {}
-    const DS = new QS;
-    DS.name = "MessagePack 0xC1";
-    var wS, hS, ZS, JS = !1,
-      OS = 2;
+    class Kk {}
+    const Qk = new Kk;
+    Qk.name = "MessagePack 0xC1";
+    var sk, Vk, zk, Sk = !1,
+      vk = 2;
     try {
       new Function("")
-    } catch (tg) {
-      OS = 1 / 0
+    } catch (TI) {
+      vk = 1 / 0
     }
-    class dS {
-      constructor(SS) {
-        SS && (!1 === SS.useRecords && void 0 === SS.mapsAsObjects && (SS.mapsAsObjects = !0), SS.sequential && !1 !== SS.trusted && (SS.trusted = !0, SS.structures || 0 == SS.useRecords || (SS.structures = [], SS.maxSharedStructures || (SS.maxSharedStructures = 0))), SS.structures ? SS.structures.sharedLength = SS.structures.length : SS.getStructures && ((SS.structures = []).uninitialized = !0, SS.structures.sharedLength = 0), SS.int64AsNumber && (SS.int64AsType = "number")), Object.assign(this, SS)
+    class Ek {
+      constructor(kk) {
+        kk && (!1 === kk.useRecords && void 0 === kk.mapsAsObjects && (kk.mapsAsObjects = !0), kk.sequential && !1 !== kk.trusted && (kk.trusted = !0, kk.structures || 0 == kk.useRecords || (kk.structures = [], kk.maxSharedStructures || (kk.maxSharedStructures = 0))), kk.structures ? kk.structures.sharedLength = kk.structures.length : kk.getStructures && ((kk.structures = []).uninitialized = !0, kk.structures.sharedLength = 0), kk.int64AsNumber && (kk.int64AsType = "number")), Object.assign(this, kk)
       }
-      unpack(SS, HS) {
-        if (bS) return XH((() => (xH(), this ? this.unpack(SS, HS) : dS.prototype.unpack.call(PS, SS, HS))));
-        SS.buffer || SS.constructor !== ArrayBuffer || (SS = "undefined" !== typeof Buffer ? Buffer.from(SS) : new Uint8Array(SS)), "object" === typeof HS ? (XS = HS.end || SS.length, xS = HS.start || 0) : (xS = 0, XS = HS > -1 ? HS : SS.length), KS = 0, CS = 0, uS = null, aS = NS, IS = null, bS = SS;
+      unpack(kk, Fk) {
+        if (Tk) return yF((() => (lF(), this ? this.unpack(kk, Fk) : Ek.prototype.unpack.call(Pk, kk, Fk))));
+        kk.buffer || kk.constructor !== ArrayBuffer || (kk = "undefined" !== typeof Buffer ? Buffer.from(kk) : new Uint8Array(kk)), "object" === typeof Fk ? (ik = Fk.end || kk.length, yk = Fk.start || 0) : (yk = 0, ik = Fk > -1 ? Fk : kk.length), ek = 0, Jk = 0, qk = null, jk = lk, Lk = null, Tk = kk;
         try {
-          kS = SS.dataView || (SS.dataView = new DataView(SS.buffer, SS.byteOffset, SS.byteLength))
-        } catch (tg) {
-          if (bS = null, SS instanceof Uint8Array) throw tg;
-          throw new Error("Source must be a Uint8Array or Buffer but was a " + (SS && "object" == typeof SS ? SS.constructor.name : typeof SS))
+          Zk = kk.dataView || (kk.dataView = new DataView(kk.buffer, kk.byteOffset, kk.byteLength))
+        } catch (TI) {
+          if (Tk = null, kk instanceof Uint8Array) throw TI;
+          throw new Error("Source must be a Uint8Array or Buffer but was a " + (kk && "object" == typeof kk ? kk.constructor.name : typeof kk))
         }
-        if (this instanceof dS) {
-          if (jS = this, this.structures) return qS = this.structures, cS(HS);
-          (!qS || qS.length > 0) && (qS = [])
-        } else jS = PS, (!qS || qS.length > 0) && (qS = []);
-        return cS(HS)
+        if (this instanceof Ek) {
+          if (wk = this, this.structures) return ak = this.structures, Ok(Fk);
+          (!ak || ak.length > 0) && (ak = [])
+        } else wk = Pk, (!ak || ak.length > 0) && (ak = []);
+        return Ok(Fk)
       }
-      unpackMultiple(SS, HS) {
-        let gS, tS = 0;
+      unpackMultiple(kk, Fk) {
+        let Ik, Xk = 0;
         try {
-          JS = !0;
-          let bS = SS.length,
-            XS = this ? this.unpack(SS, bS) : uH.unpack(SS, bS);
-          if (!HS) {
-            for (gS = [XS]; xS < bS;) tS = xS, gS.push(cS());
-            return gS
+          Sk = !0;
+          let Tk = kk.length,
+            ik = this ? this.unpack(kk, Tk) : LF.unpack(kk, Tk);
+          if (!Fk) {
+            for (Ik = [ik]; yk < Tk;) Xk = yk, Ik.push(Ok());
+            return Ik
           }
-          if (!1 === HS(XS, tS, xS)) return;
-          for (; xS < bS;)
-            if (tS = xS, !1 === HS(cS(), tS, xS)) return
-        } catch (tg) {
-          throw tg.lastPosition = tS, tg.values = gS, tg
+          if (!1 === Fk(ik, Xk, yk)) return;
+          for (; yk < Tk;)
+            if (Xk = yk, !1 === Fk(Ok(), Xk, yk)) return
+        } catch (TI) {
+          throw TI.lastPosition = Xk, TI.values = Ik, TI
         } finally {
-          JS = !1, xH()
+          Sk = !1, lF()
         }
       }
-      _mergeStructures(SS, HS) {
-        hS && (SS = hS.call(this, SS)), SS = SS || [], Object.isFrozen(SS) && (SS = SS.map((SS => SS.slice(0))));
-        for (let gS = 0, tS = SS.length; gS < tS; gS++) {
-          let HS = SS[gS];
-          HS && (HS.isShared = !0, gS >= 32 && (HS.highByte = gS - 32 >> 5))
+      _mergeStructures(kk, Fk) {
+        Vk && (kk = Vk.call(this, kk)), kk = kk || [], Object.isFrozen(kk) && (kk = kk.map((kk => kk.slice(0))));
+        for (let Ik = 0, Xk = kk.length; Ik < Xk; Ik++) {
+          let Fk = kk[Ik];
+          Fk && (Fk.isShared = !0, Ik >= 32 && (Fk.highByte = Ik - 32 >> 5))
         }
-        SS.sharedLength = SS.length;
-        for (let gS in HS || [])
-          if (gS >= 0) {
-            let tS = SS[gS],
-              bS = HS[gS];
-            bS && (tS && ((SS.restoreStructures || (SS.restoreStructures = []))[gS] = tS), SS[gS] = bS)
-          } return this.structures = SS
+        kk.sharedLength = kk.length;
+        for (let Ik in Fk || [])
+          if (Ik >= 0) {
+            let Xk = kk[Ik],
+              Tk = Fk[Ik];
+            Tk && (Xk && ((kk.restoreStructures || (kk.restoreStructures = []))[Ik] = Xk), kk[Ik] = Tk)
+          } return this.structures = kk
       }
-      decode(SS, HS) {
-        return this.unpack(SS, HS)
+      decode(kk, Fk) {
+        return this.unpack(kk, Fk)
       }
     }
 
-    function cS(SS) {
+    function Ok(kk) {
       try {
-        if (!jS.trusted && !JS) {
-          let SS = qS.sharedLength || 0;
-          SS < qS.length && (qS.length = SS)
+        if (!wk.trusted && !Sk) {
+          let kk = ak.sharedLength || 0;
+          kk < ak.length && (ak.length = kk)
         }
-        let HS;
-        if (jS.randomAccessStructure && bS[xS] < 64 && bS[xS] >= 32 && wS ? (HS = wS(bS, xS, XS, jS), bS = null, SS && SS.lazy || !HS || (HS = HS.toJSON()), xS = XS) : HS = ES(), IS && (xS = IS.postBundlePosition, IS = null), JS && (qS.restoreStructures = null), xS == XS) qS && qS.restoreStructures && vS(), qS = null, bS = null, fS && (fS = null);
+        let Fk;
+        if (wk.randomAccessStructure && Tk[yk] < 64 && Tk[yk] >= 32 && sk ? (Fk = sk(Tk, yk, ik, wk), Tk = null, kk && kk.lazy || !Fk || (Fk = Fk.toJSON()), yk = ik) : Fk = Gk(), Lk && (yk = Lk.postBundlePosition, Lk = null), Sk && (ak.restoreStructures = null), yk == ik) ak && ak.restoreStructures && nk(), ak = null, Tk = null, tk && (tk = null);
         else {
-          if (xS > XS) throw new Error("Unexpected end of MessagePack data");
-          if (!JS) {
-            let SS;
+          if (yk > ik) throw new Error("Unexpected end of MessagePack data");
+          if (!Sk) {
+            let kk;
             try {
-              SS = JSON.stringify(HS, ((SS, HS) => "bigint" === typeof HS ? `${HS}n` : HS)).slice(0, 100)
-            } catch (tg) {
-              SS = "(JSON view not available " + tg + ")"
+              kk = JSON.stringify(Fk, ((kk, Fk) => "bigint" === typeof Fk ? `${Fk}n` : Fk)).slice(0, 100)
+            } catch (TI) {
+              kk = "(JSON view not available " + TI + ")"
             }
-            throw new Error("Data read, but end of buffer not reached " + SS)
+            throw new Error("Data read, but end of buffer not reached " + kk)
           }
         }
-        return HS
-      } catch (tg) {
-        throw qS && qS.restoreStructures && vS(), xH(), (tg instanceof RangeError || tg.message.startsWith("Unexpected end of buffer") || xS > XS) && (tg.incomplete = !0), tg
+        return Fk
+      } catch (TI) {
+        throw ak && ak.restoreStructures && nk(), lF(), (TI instanceof RangeError || TI.message.startsWith("Unexpected end of buffer") || yk > ik) && (TI.incomplete = !0), TI
       }
     }
 
-    function vS() {
-      for (let SS in qS.restoreStructures) qS[SS] = qS.restoreStructures[SS];
-      qS.restoreStructures = null
+    function nk() {
+      for (let kk in ak.restoreStructures) ak[kk] = ak.restoreStructures[kk];
+      ak.restoreStructures = null
     }
 
-    function ES() {
-      let SS = bS[xS++];
-      if (SS < 160) {
-        if (SS < 128) {
-          if (SS < 64) return SS;
+    function Gk() {
+      let kk = Tk[yk++];
+      if (kk < 160) {
+        if (kk < 128) {
+          if (kk < 64) return kk;
           {
-            let HS = qS[63 & SS] || jS.getStructures && yS()[63 & SS];
-            return HS ? (HS.read || (HS.read = YS(HS, 63 & SS)), HS.read()) : SS
+            let Fk = ak[63 & kk] || wk.getStructures && Rk()[63 & kk];
+            return Fk ? (Fk.read || (Fk.read = uk(Fk, 63 & kk)), Fk.read()) : kk
           }
         }
-        if (SS < 144) {
-          if (SS -= 128, jS.mapsAsObjects) {
-            let HS = {};
-            for (let gS = 0; gS < SS; gS++) {
-              let SS = eS();
-              "__proto__" === SS && (SS = "__proto_"), HS[SS] = ES()
+        if (kk < 144) {
+          if (kk -= 128, wk.mapsAsObjects) {
+            let Fk = {};
+            for (let Ik = 0; Ik < kk; Ik++) {
+              let kk = Mk();
+              "__proto__" === kk && (kk = "__proto_"), Fk[kk] = Gk()
             }
-            return HS
+            return Fk
           } {
-            let HS = new Map;
-            for (let gS = 0; gS < SS; gS++) HS.set(ES(), ES());
-            return HS
+            let Fk = new Map;
+            for (let Ik = 0; Ik < kk; Ik++) Fk.set(Gk(), Gk());
+            return Fk
           }
         } {
-          SS -= 144;
-          let HS = new Array(SS);
-          for (let gS = 0; gS < SS; gS++) HS[gS] = ES();
-          return jS.freezeData ? Object.freeze(HS) : HS
+          kk -= 144;
+          let Fk = new Array(kk);
+          for (let Ik = 0; Ik < kk; Ik++) Fk[Ik] = Gk();
+          return wk.freezeData ? Object.freeze(Fk) : Fk
         }
       }
-      if (SS < 192) {
-        let HS = SS - 160;
-        if (CS >= xS) return uS.slice(xS - GS, (xS += HS) - GS);
-        if (0 == CS && XS < 140) {
-          let SS = HS < 16 ? RS(HS) : FS(HS);
-          if (null != SS) return SS
+      if (kk < 192) {
+        let Fk = kk - 160;
+        if (Jk >= yk) return qk.slice(yk - Hk, (yk += Fk) - Hk);
+        if (0 == Jk && ik < 140) {
+          let kk = Fk < 16 ? gk(Fk) : Ak(Fk);
+          if (null != kk) return kk
         }
-        return VS(HS)
+        return Uk(Fk)
       } {
-        let HS;
-        switch (SS) {
+        let Fk;
+        switch (kk) {
           case 192:
             return null;
           case 193:
-            return IS ? (HS = ES(), HS > 0 ? IS[1].slice(IS.position1, IS.position1 += HS) : IS[0].slice(IS.position0, IS.position0 -= HS)) : DS;
+            return Lk ? (Fk = Gk(), Fk > 0 ? Lk[1].slice(Lk.position1, Lk.position1 += Fk) : Lk[0].slice(Lk.position0, Lk.position0 -= Fk)) : Qk;
           case 194:
             return !1;
           case 195:
             return !0;
           case 196:
-            if (HS = bS[xS++], void 0 === HS) throw new Error("Unexpected end of buffer");
-            return oS(HS);
+            if (Fk = Tk[yk++], void 0 === Fk) throw new Error("Unexpected end of buffer");
+            return hk(Fk);
           case 197:
-            return HS = kS.getUint16(xS), xS += 2, oS(HS);
+            return Fk = Zk.getUint16(yk), yk += 2, hk(Fk);
           case 198:
-            return HS = kS.getUint32(xS), xS += 4, oS(HS);
+            return Fk = Zk.getUint32(yk), yk += 4, hk(Fk);
           case 199:
-            return lS(bS[xS++]);
+            return rk(Tk[yk++]);
           case 200:
-            return HS = kS.getUint16(xS), xS += 2, lS(HS);
+            return Fk = Zk.getUint16(yk), yk += 2, rk(Fk);
           case 201:
-            return HS = kS.getUint32(xS), xS += 4, lS(HS);
+            return Fk = Zk.getUint32(yk), yk += 4, rk(Fk);
           case 202:
-            if (HS = kS.getFloat32(xS), jS.useFloat32 > 2) {
-              let SS = NH[(127 & bS[xS]) << 1 | bS[xS + 1] >> 7];
-              return xS += 4, (SS * HS + (HS > 0 ? .5 : -.5) | 0) / SS
+            if (Fk = Zk.getFloat32(yk), wk.useFloat32 > 2) {
+              let kk = aF[(127 & Tk[yk]) << 1 | Tk[yk + 1] >> 7];
+              return yk += 4, (kk * Fk + (Fk > 0 ? .5 : -.5) | 0) / kk
             }
-            return xS += 4, HS;
+            return yk += 4, Fk;
           case 203:
-            return HS = kS.getFloat64(xS), xS += 8, HS;
+            return Fk = Zk.getFloat64(yk), yk += 8, Fk;
           case 204:
-            return bS[xS++];
+            return Tk[yk++];
           case 205:
-            return HS = kS.getUint16(xS), xS += 2, HS;
+            return Fk = Zk.getUint16(yk), yk += 2, Fk;
           case 206:
-            return HS = kS.getUint32(xS), xS += 4, HS;
+            return Fk = Zk.getUint32(yk), yk += 4, Fk;
           case 207:
-            return "number" === jS.int64AsType ? (HS = 4294967296 * kS.getUint32(xS), HS += kS.getUint32(xS + 4)) : "string" === jS.int64AsType ? HS = kS.getBigUint64(xS).toString() : "auto" === jS.int64AsType ? (HS = kS.getBigUint64(xS), HS <= BigInt(2) << BigInt(52) && (HS = Number(HS))) : HS = kS.getBigUint64(xS), xS += 8, HS;
+            return "number" === wk.int64AsType ? (Fk = 4294967296 * Zk.getUint32(yk), Fk += Zk.getUint32(yk + 4)) : "string" === wk.int64AsType ? Fk = Zk.getBigUint64(yk).toString() : "auto" === wk.int64AsType ? (Fk = Zk.getBigUint64(yk), Fk <= BigInt(2) << BigInt(52) && (Fk = Number(Fk))) : Fk = Zk.getBigUint64(yk), yk += 8, Fk;
           case 208:
-            return kS.getInt8(xS++);
+            return Zk.getInt8(yk++);
           case 209:
-            return HS = kS.getInt16(xS), xS += 2, HS;
+            return Fk = Zk.getInt16(yk), yk += 2, Fk;
           case 210:
-            return HS = kS.getInt32(xS), xS += 4, HS;
+            return Fk = Zk.getInt32(yk), yk += 4, Fk;
           case 211:
-            return "number" === jS.int64AsType ? (HS = 4294967296 * kS.getInt32(xS), HS += kS.getUint32(xS + 4)) : "string" === jS.int64AsType ? HS = kS.getBigInt64(xS).toString() : "auto" === jS.int64AsType ? (HS = kS.getBigInt64(xS), HS >= BigInt(-2) << BigInt(52) && HS <= BigInt(2) << BigInt(52) && (HS = Number(HS))) : HS = kS.getBigInt64(xS), xS += 8, HS;
+            return "number" === wk.int64AsType ? (Fk = 4294967296 * Zk.getInt32(yk), Fk += Zk.getUint32(yk + 4)) : "string" === wk.int64AsType ? Fk = Zk.getBigInt64(yk).toString() : "auto" === wk.int64AsType ? (Fk = Zk.getBigInt64(yk), Fk >= BigInt(-2) << BigInt(52) && Fk <= BigInt(2) << BigInt(52) && (Fk = Number(Fk))) : Fk = Zk.getBigInt64(yk), yk += 8, Fk;
           case 212:
-            if (HS = bS[xS++], 114 == HS) return SH(63 & bS[xS++]);
+            if (Fk = Tk[yk++], 114 == Fk) return FF(63 & Tk[yk++]);
             {
-              let SS = nS[HS];
-              if (SS) return SS.read ? (xS++, SS.read(ES())) : SS.noBuffer ? (xS++, SS()) : SS(bS.subarray(xS, ++xS));
-              throw new Error("Unknown extension " + HS)
+              let kk = xk[Fk];
+              if (kk) return kk.read ? (yk++, kk.read(Gk())) : kk.noBuffer ? (yk++, kk()) : kk(Tk.subarray(yk, ++yk));
+              throw new Error("Unknown extension " + Fk)
             }
           case 213:
-            return HS = bS[xS], 114 == HS ? (xS++, SH(63 & bS[xS++], bS[xS++])) : lS(2);
+            return Fk = Tk[yk], 114 == Fk ? (yk++, FF(63 & Tk[yk++], Tk[yk++])) : rk(2);
           case 214:
-            return lS(4);
+            return rk(4);
           case 215:
-            return lS(8);
+            return rk(8);
           case 216:
-            return lS(16);
+            return rk(16);
           case 217:
-            return HS = bS[xS++], CS >= xS ? uS.slice(xS - GS, (xS += HS) - GS) : iS(HS);
+            return Fk = Tk[yk++], Jk >= yk ? qk.slice(yk - Hk, (yk += Fk) - Hk) : Ck(Fk);
           case 218:
-            return HS = kS.getUint16(xS), CS >= (xS += 2) ? uS.slice(xS - GS, (xS += HS) - GS) : WS(HS);
+            return Fk = Zk.getUint16(yk), Jk >= (yk += 2) ? qk.slice(yk - Hk, (yk += Fk) - Hk) : Nk(Fk);
           case 219:
-            return HS = kS.getUint32(xS), CS >= (xS += 4) ? uS.slice(xS - GS, (xS += HS) - GS) : zS(HS);
+            return Fk = Zk.getUint32(yk), Jk >= (yk += 4) ? qk.slice(yk - Hk, (yk += Fk) - Hk) : ck(Fk);
           case 220:
-            return HS = kS.getUint16(xS), xS += 2, sS(HS);
+            return Fk = Zk.getUint16(yk), yk += 2, Bk(Fk);
           case 221:
-            return HS = kS.getUint32(xS), xS += 4, sS(HS);
+            return Fk = Zk.getUint32(yk), yk += 4, Bk(Fk);
           case 222:
-            return HS = kS.getUint16(xS), xS += 2, BS(HS);
+            return Fk = Zk.getUint16(yk), yk += 2, dk(Fk);
           case 223:
-            return HS = kS.getUint32(xS), xS += 4, BS(HS);
+            return Fk = Zk.getUint32(yk), yk += 4, dk(Fk);
           default:
-            if (SS >= 224) return SS - 256;
-            if (void 0 === SS) {
-              let SS = new Error("Unexpected end of MessagePack data");
-              throw SS.incomplete = !0, SS
+            if (kk >= 224) return kk - 256;
+            if (void 0 === kk) {
+              let kk = new Error("Unexpected end of MessagePack data");
+              throw kk.incomplete = !0, kk
             }
-            throw new Error("Unknown MessagePack token " + SS)
+            throw new Error("Unknown MessagePack token " + kk)
         }
       }
     }
-    const LS = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
+    const pk = /^[a-zA-Z_$][a-zA-Z\d_$]*$/;
 
-    function YS(SS, HS) {
-      function gS() {
-        if (gS.count++ > OS) {
-          let gS = SS.read = new Function("r", "return function(){return " + (jS.freezeData ? "Object.freeze" : "") + "({" + SS.map((SS => "__proto__" === SS ? "__proto_:r()" : LS.test(SS) ? SS + ":r()" : "[" + JSON.stringify(SS) + "]:r()")).join(",") + "})}")(ES);
-          return 0 === SS.highByte && (SS.read = AS(HS, SS.read)), gS()
+    function uk(kk, Fk) {
+      function Ik() {
+        if (Ik.count++ > vk) {
+          let Ik = kk.read = new Function("r", "return function(){return " + (wk.freezeData ? "Object.freeze" : "") + "({" + kk.map((kk => "__proto__" === kk ? "__proto_:r()" : pk.test(kk) ? kk + ":r()" : "[" + JSON.stringify(kk) + "]:r()")).join(",") + "})}")(Gk);
+          return 0 === kk.highByte && (kk.read = bk(Fk, kk.read)), Ik()
         }
-        let tS = {};
-        for (let HS = 0, gS = SS.length; HS < gS; HS++) {
-          let gS = SS[HS];
-          "__proto__" === gS && (gS = "__proto_"), tS[gS] = ES()
+        let Xk = {};
+        for (let Fk = 0, Ik = kk.length; Fk < Ik; Fk++) {
+          let Ik = kk[Fk];
+          "__proto__" === Ik && (Ik = "__proto_"), Xk[Ik] = Gk()
         }
-        return jS.freezeData ? Object.freeze(tS) : tS
+        return wk.freezeData ? Object.freeze(Xk) : Xk
       }
-      return gS.count = 0, 0 === SS.highByte ? AS(HS, gS) : gS
+      return Ik.count = 0, 0 === kk.highByte ? bk(Fk, Ik) : Ik
     }
-    const AS = (SS, HS) => function() {
-      let gS = bS[xS++];
-      if (0 === gS) return HS();
-      let tS = SS < 32 ? -(SS + (gS << 5)) : SS + (gS << 5),
-        XS = qS[tS] || yS()[tS];
-      if (!XS) throw new Error("Record id is not defined for " + tS);
-      return XS.read || (XS.read = YS(XS, SS)), XS.read()
+    const bk = (kk, Fk) => function() {
+      let Ik = Tk[yk++];
+      if (0 === Ik) return Fk();
+      let Xk = kk < 32 ? -(kk + (Ik << 5)) : kk + (Ik << 5),
+        ik = ak[Xk] || Rk()[Xk];
+      if (!ik) throw new Error("Record id is not defined for " + Xk);
+      return ik.read || (ik.read = uk(ik, kk)), ik.read()
     };
 
-    function yS() {
-      let SS = XH((() => (bS = null, jS.getStructures())));
-      return qS = jS._mergeStructures(SS, qS)
+    function Rk() {
+      let kk = yF((() => (Tk = null, wk.getStructures())));
+      return ak = wk._mergeStructures(kk, ak)
     }
-    var VS = pS,
-      iS = pS,
-      WS = pS,
-      zS = pS;
-    let US = !1;
+    var Uk = fk,
+      Ck = fk,
+      Nk = fk,
+      ck = fk;
+    let Wk = !1;
 
-    function pS(SS) {
-      let HS;
-      if (SS < 16 && (HS = RS(SS))) return HS;
-      if (SS > 64 && tS) return tS.decode(bS.subarray(xS, xS += SS));
-      const gS = xS + SS,
-        XS = [];
-      for (HS = ""; xS < gS;) {
-        const SS = bS[xS++];
-        if (0 === (128 & SS)) XS.push(SS);
-        else if (192 === (224 & SS)) {
-          const HS = 63 & bS[xS++];
-          XS.push((31 & SS) << 6 | HS)
-        } else if (224 === (240 & SS)) {
-          const HS = 63 & bS[xS++],
-            gS = 63 & bS[xS++];
-          XS.push((31 & SS) << 12 | HS << 6 | gS)
-        } else if (240 === (248 & SS)) {
-          let HS = (7 & SS) << 18 | (63 & bS[xS++]) << 12 | (63 & bS[xS++]) << 6 | 63 & bS[xS++];
-          HS > 65535 && (HS -= 65536, XS.push(HS >>> 10 & 1023 | 55296), HS = 56320 | 1023 & HS), XS.push(HS)
-        } else XS.push(SS);
-        XS.length >= 4096 && (HS += MS.apply(String, XS), XS.length = 0)
+    function fk(kk) {
+      let Fk;
+      if (kk < 16 && (Fk = gk(kk))) return Fk;
+      if (kk > 64 && Xk) return Xk.decode(Tk.subarray(yk, yk += kk));
+      const Ik = yk + kk,
+        ik = [];
+      for (Fk = ""; yk < Ik;) {
+        const kk = Tk[yk++];
+        if (0 === (128 & kk)) ik.push(kk);
+        else if (192 === (224 & kk)) {
+          const Fk = 63 & Tk[yk++];
+          ik.push((31 & kk) << 6 | Fk)
+        } else if (224 === (240 & kk)) {
+          const Fk = 63 & Tk[yk++],
+            Ik = 63 & Tk[yk++];
+          ik.push((31 & kk) << 12 | Fk << 6 | Ik)
+        } else if (240 === (248 & kk)) {
+          let Fk = (7 & kk) << 18 | (63 & Tk[yk++]) << 12 | (63 & Tk[yk++]) << 6 | 63 & Tk[yk++];
+          Fk > 65535 && (Fk -= 65536, ik.push(Fk >>> 10 & 1023 | 55296), Fk = 56320 | 1023 & Fk), ik.push(Fk)
+        } else ik.push(kk);
+        ik.length >= 4096 && (Fk += Yk.apply(String, ik), ik.length = 0)
       }
-      return XS.length > 0 && (HS += MS.apply(String, XS)), HS
+      return ik.length > 0 && (Fk += Yk.apply(String, ik)), Fk
     }
 
-    function sS(SS) {
-      let HS = new Array(SS);
-      for (let gS = 0; gS < SS; gS++) HS[gS] = ES();
-      return jS.freezeData ? Object.freeze(HS) : HS
+    function Bk(kk) {
+      let Fk = new Array(kk);
+      for (let Ik = 0; Ik < kk; Ik++) Fk[Ik] = Gk();
+      return wk.freezeData ? Object.freeze(Fk) : Fk
     }
 
-    function BS(SS) {
-      if (jS.mapsAsObjects) {
-        let HS = {};
-        for (let gS = 0; gS < SS; gS++) {
-          let SS = eS();
-          "__proto__" === SS && (SS = "__proto_"), HS[SS] = ES()
+    function dk(kk) {
+      if (wk.mapsAsObjects) {
+        let Fk = {};
+        for (let Ik = 0; Ik < kk; Ik++) {
+          let kk = Mk();
+          "__proto__" === kk && (kk = "__proto_"), Fk[kk] = Gk()
         }
-        return HS
+        return Fk
       } {
-        let HS = new Map;
-        for (let gS = 0; gS < SS; gS++) HS.set(ES(), ES());
-        return HS
+        let Fk = new Map;
+        for (let Ik = 0; Ik < kk; Ik++) Fk.set(Gk(), Gk());
+        return Fk
       }
     }
-    var MS = String.fromCharCode;
+    var Yk = String.fromCharCode;
 
-    function FS(SS) {
-      let HS = xS,
-        gS = new Array(SS);
-      for (let tS = 0; tS < SS; tS++) {
-        const SS = bS[xS++];
-        if ((128 & SS) > 0) return void(xS = HS);
-        gS[tS] = SS
+    function Ak(kk) {
+      let Fk = yk,
+        Ik = new Array(kk);
+      for (let Xk = 0; Xk < kk; Xk++) {
+        const kk = Tk[yk++];
+        if ((128 & kk) > 0) return void(yk = Fk);
+        Ik[Xk] = kk
       }
-      return MS.apply(String, gS)
+      return Yk.apply(String, Ik)
     }
 
-    function RS(SS) {
-      if (SS < 4) {
-        if (SS < 2) {
-          if (0 === SS) return "";
+    function gk(kk) {
+      if (kk < 4) {
+        if (kk < 2) {
+          if (0 === kk) return "";
           {
-            let SS = bS[xS++];
-            return (128 & SS) > 1 ? void(xS -= 1) : MS(SS)
+            let kk = Tk[yk++];
+            return (128 & kk) > 1 ? void(yk -= 1) : Yk(kk)
           }
         } {
-          let HS = bS[xS++],
-            gS = bS[xS++];
-          if ((128 & HS) > 0 || (128 & gS) > 0) return void(xS -= 2);
-          if (SS < 3) return MS(HS, gS);
-          let tS = bS[xS++];
-          return (128 & tS) > 0 ? void(xS -= 3) : MS(HS, gS, tS)
+          let Fk = Tk[yk++],
+            Ik = Tk[yk++];
+          if ((128 & Fk) > 0 || (128 & Ik) > 0) return void(yk -= 2);
+          if (kk < 3) return Yk(Fk, Ik);
+          let Xk = Tk[yk++];
+          return (128 & Xk) > 0 ? void(yk -= 3) : Yk(Fk, Ik, Xk)
         }
       } {
-        let HS = bS[xS++],
-          gS = bS[xS++],
-          tS = bS[xS++],
-          XS = bS[xS++];
-        if ((128 & HS) > 0 || (128 & gS) > 0 || (128 & tS) > 0 || (128 & XS) > 0) return void(xS -= 4);
-        if (SS < 6) {
-          if (4 === SS) return MS(HS, gS, tS, XS);
+        let Fk = Tk[yk++],
+          Ik = Tk[yk++],
+          Xk = Tk[yk++],
+          ik = Tk[yk++];
+        if ((128 & Fk) > 0 || (128 & Ik) > 0 || (128 & Xk) > 0 || (128 & ik) > 0) return void(yk -= 4);
+        if (kk < 6) {
+          if (4 === kk) return Yk(Fk, Ik, Xk, ik);
           {
-            let SS = bS[xS++];
-            return (128 & SS) > 0 ? void(xS -= 5) : MS(HS, gS, tS, XS, SS)
+            let kk = Tk[yk++];
+            return (128 & kk) > 0 ? void(yk -= 5) : Yk(Fk, Ik, Xk, ik, kk)
           }
         }
-        if (SS < 8) {
-          let NS = bS[xS++],
-            qS = bS[xS++];
-          if ((128 & NS) > 0 || (128 & qS) > 0) return void(xS -= 6);
-          if (SS < 7) return MS(HS, gS, tS, XS, NS, qS);
-          let uS = bS[xS++];
-          return (128 & uS) > 0 ? void(xS -= 7) : MS(HS, gS, tS, XS, NS, qS, uS)
+        if (kk < 8) {
+          let lk = Tk[yk++],
+            ak = Tk[yk++];
+          if ((128 & lk) > 0 || (128 & ak) > 0) return void(yk -= 6);
+          if (kk < 7) return Yk(Fk, Ik, Xk, ik, lk, ak);
+          let qk = Tk[yk++];
+          return (128 & qk) > 0 ? void(yk -= 7) : Yk(Fk, Ik, Xk, ik, lk, ak, qk)
         } {
-          let NS = bS[xS++],
-            qS = bS[xS++],
-            uS = bS[xS++],
-            IS = bS[xS++];
-          if ((128 & NS) > 0 || (128 & qS) > 0 || (128 & uS) > 0 || (128 & IS) > 0) return void(xS -= 8);
-          if (SS < 10) {
-            if (8 === SS) return MS(HS, gS, tS, XS, NS, qS, uS, IS);
+          let lk = Tk[yk++],
+            ak = Tk[yk++],
+            qk = Tk[yk++],
+            Lk = Tk[yk++];
+          if ((128 & lk) > 0 || (128 & ak) > 0 || (128 & qk) > 0 || (128 & Lk) > 0) return void(yk -= 8);
+          if (kk < 10) {
+            if (8 === kk) return Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk);
             {
-              let SS = bS[xS++];
-              return (128 & SS) > 0 ? void(xS -= 9) : MS(HS, gS, tS, XS, NS, qS, uS, IS, SS)
+              let kk = Tk[yk++];
+              return (128 & kk) > 0 ? void(yk -= 9) : Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, kk)
             }
           }
-          if (SS < 12) {
-            let fS = bS[xS++],
-              kS = bS[xS++];
-            if ((128 & fS) > 0 || (128 & kS) > 0) return void(xS -= 10);
-            if (SS < 11) return MS(HS, gS, tS, XS, NS, qS, uS, IS, fS, kS);
-            let aS = bS[xS++];
-            return (128 & aS) > 0 ? void(xS -= 11) : MS(HS, gS, tS, XS, NS, qS, uS, IS, fS, kS, aS)
+          if (kk < 12) {
+            let tk = Tk[yk++],
+              Zk = Tk[yk++];
+            if ((128 & tk) > 0 || (128 & Zk) > 0) return void(yk -= 10);
+            if (kk < 11) return Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk);
+            let jk = Tk[yk++];
+            return (128 & jk) > 0 ? void(yk -= 11) : Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk, jk)
           } {
-            let fS = bS[xS++],
-              kS = bS[xS++],
-              aS = bS[xS++],
-              KS = bS[xS++];
-            if ((128 & fS) > 0 || (128 & kS) > 0 || (128 & aS) > 0 || (128 & KS) > 0) return void(xS -= 12);
-            if (SS < 14) {
-              if (12 === SS) return MS(HS, gS, tS, XS, NS, qS, uS, IS, fS, kS, aS, KS);
+            let tk = Tk[yk++],
+              Zk = Tk[yk++],
+              jk = Tk[yk++],
+              ek = Tk[yk++];
+            if ((128 & tk) > 0 || (128 & Zk) > 0 || (128 & jk) > 0 || (128 & ek) > 0) return void(yk -= 12);
+            if (kk < 14) {
+              if (12 === kk) return Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk, jk, ek);
               {
-                let SS = bS[xS++];
-                return (128 & SS) > 0 ? void(xS -= 13) : MS(HS, gS, tS, XS, NS, qS, uS, IS, fS, kS, aS, KS, SS)
+                let kk = Tk[yk++];
+                return (128 & kk) > 0 ? void(yk -= 13) : Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk, jk, ek, kk)
               }
             } {
-              let jS = bS[xS++],
-                GS = bS[xS++];
-              if ((128 & jS) > 0 || (128 & GS) > 0) return void(xS -= 14);
-              if (SS < 15) return MS(HS, gS, tS, XS, NS, qS, uS, IS, fS, kS, aS, KS, jS, GS);
-              let CS = bS[xS++];
-              return (128 & CS) > 0 ? void(xS -= 15) : MS(HS, gS, tS, XS, NS, qS, uS, IS, fS, kS, aS, KS, jS, GS, CS)
+              let wk = Tk[yk++],
+                Hk = Tk[yk++];
+              if ((128 & wk) > 0 || (128 & Hk) > 0) return void(yk -= 14);
+              if (kk < 15) return Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk, jk, ek, wk, Hk);
+              let Jk = Tk[yk++];
+              return (128 & Jk) > 0 ? void(yk -= 15) : Yk(Fk, Ik, Xk, ik, lk, ak, qk, Lk, tk, Zk, jk, ek, wk, Hk, Jk)
             }
           }
         }
       }
     }
 
-    function TS() {
-      let SS, HS = bS[xS++];
-      if (HS < 192) SS = HS - 160;
-      else switch (HS) {
+    function mk() {
+      let kk, Fk = Tk[yk++];
+      if (Fk < 192) kk = Fk - 160;
+      else switch (Fk) {
         case 217:
-          SS = bS[xS++];
+          kk = Tk[yk++];
           break;
         case 218:
-          SS = kS.getUint16(xS), xS += 2;
+          kk = Zk.getUint16(yk), yk += 2;
           break;
         case 219:
-          SS = kS.getUint32(xS), xS += 4;
+          kk = Zk.getUint32(yk), yk += 4;
           break;
         default:
           throw new Error("Expected string")
       }
-      return pS(SS)
+      return fk(kk)
     }
 
-    function oS(SS) {
-      return jS.copyBuffers ? Uint8Array.prototype.slice.call(bS, xS, xS += SS) : bS.subarray(xS, xS += SS)
+    function hk(kk) {
+      return wk.copyBuffers ? Uint8Array.prototype.slice.call(Tk, yk, yk += kk) : Tk.subarray(yk, yk += kk)
     }
 
-    function lS(SS) {
-      let HS = bS[xS++];
-      if (nS[HS]) {
-        let gS;
-        return nS[HS](bS.subarray(xS, gS = xS += SS), (SS => {
-          xS = SS;
+    function rk(kk) {
+      let Fk = Tk[yk++];
+      if (xk[Fk]) {
+        let Ik;
+        return xk[Fk](Tk.subarray(yk, Ik = yk += kk), (kk => {
+          yk = kk;
           try {
-            return ES()
+            return Gk()
           } finally {
-            xS = gS
+            yk = Ik
           }
         }))
       }
-      throw new Error("Unknown extension type " + HS)
+      throw new Error("Unknown extension type " + Fk)
     }
-    var mS = new Array(4096);
+    var Dk = new Array(4096);
 
-    function eS() {
-      let SS = bS[xS++];
-      if (!(SS >= 160 && SS < 192)) return xS--, rS(ES());
-      if (SS -= 160, CS >= xS) return uS.slice(xS - GS, (xS += SS) - GS);
-      if (!(0 == CS && XS < 180)) return VS(SS);
-      let HS, gS = 4095 & (SS << 5 ^ (SS > 1 ? kS.getUint16(xS) : SS > 0 ? bS[xS] : 0)),
-        tS = mS[gS],
-        NS = xS,
-        qS = xS + SS - 3,
-        IS = 0;
-      if (tS && tS.bytes == SS) {
-        for (; NS < qS;) {
-          if (HS = kS.getUint32(NS), HS != tS[IS++]) {
-            NS = 1879048192;
+    function Mk() {
+      let kk = Tk[yk++];
+      if (!(kk >= 160 && kk < 192)) return yk--, kF(Gk());
+      if (kk -= 160, Jk >= yk) return qk.slice(yk - Hk, (yk += kk) - Hk);
+      if (!(0 == Jk && ik < 180)) return Uk(kk);
+      let Fk, Ik = 4095 & (kk << 5 ^ (kk > 1 ? Zk.getUint16(yk) : kk > 0 ? Tk[yk] : 0)),
+        Xk = Dk[Ik],
+        lk = yk,
+        ak = yk + kk - 3,
+        Lk = 0;
+      if (Xk && Xk.bytes == kk) {
+        for (; lk < ak;) {
+          if (Fk = Zk.getUint32(lk), Fk != Xk[Lk++]) {
+            lk = 1879048192;
             break
           }
-          NS += 4
+          lk += 4
         }
-        for (qS += 3; NS < qS;)
-          if (HS = bS[NS++], HS != tS[IS++]) {
-            NS = 1879048192;
+        for (ak += 3; lk < ak;)
+          if (Fk = Tk[lk++], Fk != Xk[Lk++]) {
+            lk = 1879048192;
             break
-          } if (NS === qS) return xS = NS, tS.string;
-        qS -= 3, NS = xS
+          } if (lk === ak) return yk = lk, Xk.string;
+        ak -= 3, lk = yk
       }
-      for (tS = [], mS[gS] = tS, tS.bytes = SS; NS < qS;) HS = kS.getUint32(NS), tS.push(HS), NS += 4;
-      for (qS += 3; NS < qS;) HS = bS[NS++], tS.push(HS);
-      let fS = SS < 16 ? RS(SS) : FS(SS);
-      return tS.string = null != fS ? fS : VS(SS)
+      for (Xk = [], Dk[Ik] = Xk, Xk.bytes = kk; lk < ak;) Fk = Zk.getUint32(lk), Xk.push(Fk), lk += 4;
+      for (ak += 3; lk < ak;) Fk = Tk[lk++], Xk.push(Fk);
+      let tk = kk < 16 ? gk(kk) : Ak(kk);
+      return Xk.string = null != tk ? tk : Uk(kk)
     }
 
-    function rS(SS) {
-      if ("string" === typeof SS) return SS;
-      if ("number" === typeof SS || "boolean" === typeof SS || "bigint" === typeof SS) return SS.toString();
-      if (null == SS) return SS + "";
-      if (jS.allowArraysInMapKeys && Array.isArray(SS) && SS.flat().every((SS => ["string", "number", "boolean", "bigint"].includes(typeof SS)))) return SS.flat().toString();
-      throw new Error("Invalid property type for record: " + typeof SS)
+    function kF(kk) {
+      if ("string" === typeof kk) return kk;
+      if ("number" === typeof kk || "boolean" === typeof kk || "bigint" === typeof kk) return kk.toString();
+      if (null == kk) return kk + "";
+      if (wk.allowArraysInMapKeys && Array.isArray(kk) && kk.flat().every((kk => ["string", "number", "boolean", "bigint"].includes(typeof kk)))) return kk.flat().toString();
+      throw new Error("Invalid property type for record: " + typeof kk)
     }
-    const SH = (SS, HS) => {
-      let gS = ES().map(rS),
-        tS = SS;
-      void 0 !== HS && (SS = SS < 32 ? -((HS << 5) + SS) : (HS << 5) + SS, gS.highByte = HS);
-      let bS = qS[SS];
-      return bS && (bS.isShared || JS) && ((qS.restoreStructures || (qS.restoreStructures = []))[SS] = bS), qS[SS] = gS, gS.read = YS(gS, tS), gS.read()
+    const FF = (kk, Fk) => {
+      let Ik = Gk().map(kF),
+        Xk = kk;
+      void 0 !== Fk && (kk = kk < 32 ? -((Fk << 5) + kk) : (Fk << 5) + kk, Ik.highByte = Fk);
+      let Tk = ak[kk];
+      return Tk && (Tk.isShared || Sk) && ((ak.restoreStructures || (ak.restoreStructures = []))[kk] = Tk), ak[kk] = Ik, Ik.read = uk(Ik, Xk), Ik.read()
     };
-    nS[0] = () => {}, nS[0].noBuffer = !0, nS[66] = SS => {
-      let HS = SS.length,
-        gS = BigInt(128 & SS[0] ? SS[0] - 256 : SS[0]);
-      for (let tS = 1; tS < HS; tS++) gS <<= BigInt(8), gS += BigInt(SS[tS]);
-      return gS
+    xk[0] = () => {}, xk[0].noBuffer = !0, xk[66] = kk => {
+      let Fk = kk.length,
+        Ik = BigInt(128 & kk[0] ? kk[0] - 256 : kk[0]);
+      for (let Xk = 1; Xk < Fk; Xk++) Ik <<= BigInt(8), Ik += BigInt(kk[Xk]);
+      return Ik
     };
-    let HH = {
+    let IF = {
       Error: Error,
       TypeError: TypeError,
       ReferenceError: ReferenceError
     };
-    nS[101] = () => {
-      let SS = ES();
-      return (HH[SS[0]] || Error)(SS[1], {
-        cause: SS[2]
+    xk[101] = () => {
+      let kk = Gk();
+      return (IF[kk[0]] || Error)(kk[1], {
+        cause: kk[2]
       })
-    }, nS[105] = SS => {
-      if (!1 === jS.structuredClone) throw new Error("Structured clone extension is disabled");
-      let HS = kS.getUint32(xS - 4);
-      fS || (fS = new Map);
-      let gS, tS = bS[xS];
-      gS = tS >= 144 && tS < 160 || 220 == tS || 221 == tS ? [] : {};
-      let XS = {
-        target: gS
+    }, xk[105] = kk => {
+      if (!1 === wk.structuredClone) throw new Error("Structured clone extension is disabled");
+      let Fk = Zk.getUint32(yk - 4);
+      tk || (tk = new Map);
+      let Ik, Xk = Tk[yk];
+      Ik = Xk >= 144 && Xk < 160 || 220 == Xk || 221 == Xk ? [] : {};
+      let ik = {
+        target: Ik
       };
-      fS.set(HS, XS);
-      let NS = ES();
-      return XS.used ? Object.assign(gS, NS) : (XS.target = NS, NS)
-    }, nS[112] = SS => {
-      if (!1 === jS.structuredClone) throw new Error("Structured clone extension is disabled");
-      let HS = kS.getUint32(xS - 4),
-        gS = fS.get(HS);
-      return gS.used = !0, gS.target
-    }, nS[115] = () => new Set(ES());
-    const gH = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((SS => SS + "Array"));
-    let tH = "object" === typeof globalThis ? globalThis : window;
-    nS[116] = SS => {
-      let HS = SS[0],
-        gS = gH[HS];
-      if (!gS) {
-        if (16 === HS) {
-          let HS = new ArrayBuffer(SS.length - 1);
-          return new Uint8Array(HS).set(SS.subarray(1)), HS
+      tk.set(Fk, ik);
+      let lk = Gk();
+      return ik.used ? Object.assign(Ik, lk) : (ik.target = lk, lk)
+    }, xk[112] = kk => {
+      if (!1 === wk.structuredClone) throw new Error("Structured clone extension is disabled");
+      let Fk = Zk.getUint32(yk - 4),
+        Ik = tk.get(Fk);
+      return Ik.used = !0, Ik.target
+    }, xk[115] = () => new Set(Gk());
+    const XF = ["Int8", "Uint8", "Uint8Clamped", "Int16", "Uint16", "Int32", "Uint32", "Float32", "Float64", "BigInt64", "BigUint64"].map((kk => kk + "Array"));
+    let TF = "object" === typeof globalThis ? globalThis : window;
+    xk[116] = kk => {
+      let Fk = kk[0],
+        Ik = XF[Fk];
+      if (!Ik) {
+        if (16 === Fk) {
+          let Fk = new ArrayBuffer(kk.length - 1);
+          return new Uint8Array(Fk).set(kk.subarray(1)), Fk
         }
-        throw new Error("Could not find typed array for code " + HS)
+        throw new Error("Could not find typed array for code " + Fk)
       }
-      return new tH[gS](Uint8Array.prototype.slice.call(SS, 1).buffer)
-    }, nS[120] = () => {
-      let SS = ES();
-      return new RegExp(SS[0], SS[1])
+      return new TF[Ik](Uint8Array.prototype.slice.call(kk, 1).buffer)
+    }, xk[120] = () => {
+      let kk = Gk();
+      return new RegExp(kk[0], kk[1])
     };
-    const bH = [];
+    const iF = [];
 
-    function XH(SS) {
-      ZS && ZS();
-      let HS = XS,
-        gS = xS,
-        tS = KS,
-        NS = GS,
-        nS = CS,
-        PS = uS,
-        QS = aS,
-        DS = fS,
-        wS = IS,
-        hS = new Uint8Array(bS.slice(0, XS)),
-        OS = qS,
-        dS = qS.slice(0, qS.length),
-        cS = jS,
-        vS = JS,
-        ES = SS();
-      return XS = HS, xS = gS, KS = tS, GS = NS, CS = nS, uS = PS, aS = QS, fS = DS, IS = wS, bS = hS, JS = vS, (qS = OS).splice(0, qS.length, ...dS), jS = cS, kS = new DataView(bS.buffer, bS.byteOffset, bS.byteLength), ES
+    function yF(kk) {
+      zk && zk();
+      let Fk = ik,
+        Ik = yk,
+        Xk = ek,
+        lk = Hk,
+        xk = Jk,
+        Pk = qk,
+        Kk = jk,
+        Qk = tk,
+        sk = Lk,
+        Vk = new Uint8Array(Tk.slice(0, ik)),
+        vk = ak,
+        Ek = ak.slice(0, ak.length),
+        Ok = wk,
+        nk = Sk,
+        Gk = kk();
+      return ik = Fk, yk = Ik, ek = Xk, Hk = lk, Jk = xk, qk = Pk, jk = Kk, tk = Qk, Lk = sk, Tk = Vk, Sk = nk, (ak = vk).splice(0, ak.length, ...Ek), wk = Ok, Zk = new DataView(Tk.buffer, Tk.byteOffset, Tk.byteLength), Gk
     }
 
-    function xH() {
-      bS = null, fS = null, qS = null
+    function lF() {
+      Tk = null, tk = null, ak = null
     }
-    nS[98] = SS => {
-      let HS = (SS[0] << 24) + (SS[1] << 16) + (SS[2] << 8) + SS[3],
-        gS = xS;
-      return xS += HS - SS.length, IS = bH, (IS = [TS(), TS()]).position0 = 0, IS.position1 = 0, IS.postBundlePosition = xS, xS = gS, ES()
-    }, nS[255] = SS => 4 == SS.length ? new Date(1e3 * (16777216 * SS[0] + (SS[1] << 16) + (SS[2] << 8) + SS[3])) : 8 == SS.length ? new Date(((SS[0] << 22) + (SS[1] << 14) + (SS[2] << 6) + (SS[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & SS[3]) + 16777216 * SS[4] + (SS[5] << 16) + (SS[6] << 8) + SS[7])) : 12 == SS.length ? new Date(((SS[0] << 24) + (SS[1] << 16) + (SS[2] << 8) + SS[3]) / 1e6 + 1e3 * ((128 & SS[4] ? -281474976710656 : 0) + 1099511627776 * SS[6] + 4294967296 * SS[7] + 16777216 * SS[8] + (SS[9] << 16) + (SS[10] << 8) + SS[11])) : new Date("invalid");
-    const NH = new Array(147);
-    for (let bg = 0; bg < 256; bg++) NH[bg] = +("1e" + Math.floor(45.15 - .30103 * bg));
-    const qH = dS;
-    var uH = new dS({
+    xk[98] = kk => {
+      let Fk = (kk[0] << 24) + (kk[1] << 16) + (kk[2] << 8) + kk[3],
+        Ik = yk;
+      return yk += Fk - kk.length, Lk = iF, (Lk = [mk(), mk()]).position0 = 0, Lk.position1 = 0, Lk.postBundlePosition = yk, yk = Ik, Gk()
+    }, xk[255] = kk => 4 == kk.length ? new Date(1e3 * (16777216 * kk[0] + (kk[1] << 16) + (kk[2] << 8) + kk[3])) : 8 == kk.length ? new Date(((kk[0] << 22) + (kk[1] << 14) + (kk[2] << 6) + (kk[3] >> 2)) / 1e6 + 1e3 * (4294967296 * (3 & kk[3]) + 16777216 * kk[4] + (kk[5] << 16) + (kk[6] << 8) + kk[7])) : 12 == kk.length ? new Date(((kk[0] << 24) + (kk[1] << 16) + (kk[2] << 8) + kk[3]) / 1e6 + 1e3 * ((128 & kk[4] ? -281474976710656 : 0) + 1099511627776 * kk[6] + 4294967296 * kk[7] + 16777216 * kk[8] + (kk[9] << 16) + (kk[10] << 8) + kk[11])) : new Date("invalid");
+    const aF = new Array(147);
+    for (let iI = 0; iI < 256; iI++) aF[iI] = +("1e" + Math.floor(45.15 - .30103 * iI));
+    const qF = Ek;
+    var LF = new Ek({
       useRecords: !1
     });
-    const IH = uH.unpack,
-      fH = uH.unpackMultiple,
-      kH = uH.unpack,
-      aH = {
+    const tF = LF.unpack,
+      ZF = LF.unpackMultiple,
+      jF = LF.unpack,
+      eF = {
         NEVER: 0,
         ALWAYS: 1,
         DECIMAL_ROUND: 3,
         DECIMAL_FIT: 4
       };
-    let KH, jH, GH, CH = new Float32Array(1),
-      nH = new Uint8Array(CH.buffer, 0, 4);
+    let wF, HF, JF, xF = new Float32Array(1),
+      PF = new Uint8Array(xF.buffer, 0, 4);
 
-    function PH(SS) {
-      CH[0] = SS;
-      let HS = NH[(127 & nH[3]) << 1 | nH[2] >> 7];
-      return (HS * SS + (SS > 0 ? .5 : -.5) | 0) / HS
+    function KF(kk) {
+      xF[0] = kk;
+      let Fk = aF[(127 & PF[3]) << 1 | PF[2] >> 7];
+      return (Fk * kk + (kk > 0 ? .5 : -.5) | 0) / Fk
     }
     try {
-      KH = new TextEncoder
-    } catch (tg) {}
-    const QH = "undefined" !== typeof Buffer,
-      DH = QH ? function(SS) {
-        return Buffer.allocUnsafeSlow(SS)
+      wF = new TextEncoder
+    } catch (TI) {}
+    const QF = "undefined" !== typeof Buffer,
+      sF = QF ? function(kk) {
+        return Buffer.allocUnsafeSlow(kk)
       } : Uint8Array,
-      wH = QH ? Buffer : Uint8Array,
-      hH = QH ? 4294967296 : 2144337920;
-    let ZH, JH, OH, dH, cH, vH = 0,
-      EH = null;
-    const LH = /[\u0080-\uFFFF]/,
-      YH = Symbol("record-id");
-    class AH extends dS {
-      constructor(SS) {
-        let HS, gS, tS, bS;
-        super(SS), this.offset = 0;
-        let XS = wH.prototype.utf8Write ? function(SS, HS) {
-            return ZH.utf8Write(SS, HS, ZH.byteLength - HS)
-          } : !(!KH || !KH.encodeInto) && function(SS, HS) {
-            return KH.encodeInto(SS, ZH.subarray(HS)).written
+      VF = QF ? Buffer : Uint8Array,
+      zF = QF ? 4294967296 : 2144337920;
+    let SF, oF, vF, EF, OF, nF = 0,
+      GF = null;
+    const pF = /[\u0080-\uFFFF]/,
+      uF = Symbol("record-id");
+    class bF extends Ek {
+      constructor(kk) {
+        let Fk, Ik, Xk, Tk;
+        super(kk), this.offset = 0;
+        let ik = VF.prototype.utf8Write ? function(kk, Fk) {
+            return SF.utf8Write(kk, Fk, SF.byteLength - Fk)
+          } : !(!wF || !wF.encodeInto) && function(kk, Fk) {
+            return wF.encodeInto(kk, SF.subarray(Fk)).written
           },
-          xS = this;
-        SS || (SS = {});
-        let NS = SS && SS.sequential,
-          qS = SS.structures || SS.saveStructures,
-          uS = SS.maxSharedStructures;
-        if (null == uS && (uS = qS ? 32 : 0), uS > 8160) throw new Error("Maximum maxSharedStructure is 8160");
-        SS.structuredClone && void 0 == SS.moreTypes && (this.moreTypes = !0);
-        let IS = SS.maxOwnStructures;
-        null == IS && (IS = qS ? 32 : 64), this.structures || 0 == SS.useRecords || (this.structures = []);
-        let fS = uS > 32 || IS + uS > 64,
-          kS = uS + 64,
-          aS = uS + IS + 64;
-        if (aS > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
-        let KS = [],
-          jS = 0,
-          GS = 0;
-        this.pack = this.encode = function(SS, XS) {
-          if (ZH || (ZH = new DH(8192), OH = ZH.dataView || (ZH.dataView = new DataView(ZH.buffer, 0, 8192)), vH = 0), dH = ZH.length - 10, dH - vH < 2048 ? (ZH = new DH(ZH.length), OH = ZH.dataView || (ZH.dataView = new DataView(ZH.buffer, 0, ZH.length)), dH = ZH.length - 10, vH = 0) : vH = vH + 7 & 2147483640, HS = vH, XS & eH && (vH += 255 & XS), bS = xS.structuredClone ? new Map : null, xS.bundleStrings && "string" !== typeof SS ? (EH = [], EH.size = 1 / 0) : EH = null, tS = xS.structures, tS) {
-            tS.uninitialized && (tS = xS._mergeStructures(xS.getStructures()));
-            let SS = tS.sharedLength || 0;
-            if (SS > uS) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + tS.sharedLength);
-            if (!tS.transitions) {
-              tS.transitions = Object.create(null);
-              for (let HS = 0; HS < SS; HS++) {
-                let SS = tS[HS];
-                if (!SS) continue;
-                let gS, bS = tS.transitions;
-                for (let HS = 0, tS = SS.length; HS < tS; HS++) {
-                  let tS = SS[HS];
-                  gS = bS[tS], gS || (gS = bS[tS] = Object.create(null)), bS = gS
+          yk = this;
+        kk || (kk = {});
+        let lk = kk && kk.sequential,
+          ak = kk.structures || kk.saveStructures,
+          qk = kk.maxSharedStructures;
+        if (null == qk && (qk = ak ? 32 : 0), qk > 8160) throw new Error("Maximum maxSharedStructure is 8160");
+        kk.structuredClone && void 0 == kk.moreTypes && (this.moreTypes = !0);
+        let Lk = kk.maxOwnStructures;
+        null == Lk && (Lk = ak ? 32 : 64), this.structures || 0 == kk.useRecords || (this.structures = []);
+        let tk = qk > 32 || Lk + qk > 64,
+          Zk = qk + 64,
+          jk = qk + Lk + 64;
+        if (jk > 8256) throw new Error("Maximum maxSharedStructure + maxOwnStructure is 8192");
+        let ek = [],
+          wk = 0,
+          Hk = 0;
+        this.pack = this.encode = function(kk, ik) {
+          if (SF || (SF = new sF(8192), vF = SF.dataView || (SF.dataView = new DataView(SF.buffer, 0, 8192)), nF = 0), EF = SF.length - 10, EF - nF < 2048 ? (SF = new sF(SF.length), vF = SF.dataView || (SF.dataView = new DataView(SF.buffer, 0, SF.length)), EF = SF.length - 10, nF = 0) : nF = nF + 7 & 2147483640, Fk = nF, ik & MF && (nF += 255 & ik), Tk = yk.structuredClone ? new Map : null, yk.bundleStrings && "string" !== typeof kk ? (GF = [], GF.size = 1 / 0) : GF = null, Xk = yk.structures, Xk) {
+            Xk.uninitialized && (Xk = yk._mergeStructures(yk.getStructures()));
+            let kk = Xk.sharedLength || 0;
+            if (kk > qk) throw new Error("Shared structures is larger than maximum shared structures, try increasing maxSharedStructures to " + Xk.sharedLength);
+            if (!Xk.transitions) {
+              Xk.transitions = Object.create(null);
+              for (let Fk = 0; Fk < kk; Fk++) {
+                let kk = Xk[Fk];
+                if (!kk) continue;
+                let Ik, Tk = Xk.transitions;
+                for (let Fk = 0, Xk = kk.length; Fk < Xk; Fk++) {
+                  let Xk = kk[Fk];
+                  Ik = Tk[Xk], Ik || (Ik = Tk[Xk] = Object.create(null)), Tk = Ik
                 }
-                bS[YH] = HS + 64
+                Tk[uF] = Fk + 64
               }
-              this.lastNamedStructuresLength = SS
+              this.lastNamedStructuresLength = kk
             }
-            NS || (tS.nextId = SS + 64)
+            lk || (Xk.nextId = kk + 64)
           }
-          let qS;
-          gS && (gS = !1);
+          let ak;
+          Ik && (Ik = !1);
           try {
-            xS.randomAccessStructure && SS && SS.constructor && SS.constructor === Object ? dS(SS) : PS(SS);
-            let gS = EH;
-            if (EH && WH(HS, PS, 0), bS && bS.idsToInsert) {
-              let SS = bS.idsToInsert.sort(((SS, HS) => SS.offset > HS.offset ? 1 : -1)),
-                tS = SS.length,
-                XS = -1;
-              for (; gS && tS > 0;) {
-                let bS = SS[--tS].offset + HS;
-                bS < gS.stringsPosition + HS && -1 === XS && (XS = 0), bS > gS.position + HS ? XS >= 0 && (XS += 6) : (XS >= 0 && (OH.setUint32(gS.position + HS, OH.getUint32(gS.position + HS) + XS), XS = -1), gS = gS.previous, tS++)
+            yk.randomAccessStructure && kk && kk.constructor && kk.constructor === Object ? Ek(kk) : Pk(kk);
+            let Ik = GF;
+            if (GF && NF(Fk, Pk, 0), Tk && Tk.idsToInsert) {
+              let kk = Tk.idsToInsert.sort(((kk, Fk) => kk.offset > Fk.offset ? 1 : -1)),
+                Xk = kk.length,
+                ik = -1;
+              for (; Ik && Xk > 0;) {
+                let Tk = kk[--Xk].offset + Fk;
+                Tk < Ik.stringsPosition + Fk && -1 === ik && (ik = 0), Tk > Ik.position + Fk ? ik >= 0 && (ik += 6) : (ik >= 0 && (vF.setUint32(Ik.position + Fk, vF.getUint32(Ik.position + Fk) + ik), ik = -1), Ik = Ik.previous, Xk++)
               }
-              XS >= 0 && gS && OH.setUint32(gS.position + HS, OH.getUint32(gS.position + HS) + XS), vH += 6 * SS.length, vH > dH && ZS(vH), xS.offset = vH;
-              let NS = function(SS, HS) {
-                let gS, tS = 6 * HS.length,
-                  bS = SS.length - tS;
-                for (; gS = HS.pop();) {
-                  let HS = gS.offset,
-                    XS = gS.id;
-                  SS.copyWithin(HS + tS, HS, bS), tS -= 6;
-                  let xS = HS + tS;
-                  SS[xS++] = 214, SS[xS++] = 105, SS[xS++] = XS >> 24, SS[xS++] = XS >> 16 & 255, SS[xS++] = XS >> 8 & 255, SS[xS++] = 255 & XS, bS = HS
+              ik >= 0 && Ik && vF.setUint32(Ik.position + Fk, vF.getUint32(Ik.position + Fk) + ik), nF += 6 * kk.length, nF > EF && zk(nF), yk.offset = nF;
+              let lk = function(kk, Fk) {
+                let Ik, Xk = 6 * Fk.length,
+                  Tk = kk.length - Xk;
+                for (; Ik = Fk.pop();) {
+                  let Fk = Ik.offset,
+                    ik = Ik.id;
+                  kk.copyWithin(Fk + Xk, Fk, Tk), Xk -= 6;
+                  let yk = Fk + Xk;
+                  kk[yk++] = 214, kk[yk++] = 105, kk[yk++] = ik >> 24, kk[yk++] = ik >> 16 & 255, kk[yk++] = ik >> 8 & 255, kk[yk++] = 255 & ik, Tk = Fk
                 }
-                return SS
-              }(ZH.subarray(HS, vH), SS);
-              return bS = null, NS
+                return kk
+              }(SF.subarray(Fk, nF), kk);
+              return Tk = null, lk
             }
-            return xS.offset = vH, XS & lH ? (ZH.start = HS, ZH.end = vH, ZH) : ZH.subarray(HS, vH)
-          } catch (tg) {
-            throw qS = tg, tg
+            return yk.offset = nF, ik & rF ? (SF.start = Fk, SF.end = nF, SF) : SF.subarray(Fk, nF)
+          } catch (TI) {
+            throw ak = TI, TI
           } finally {
-            if (tS && (CS(), gS && xS.saveStructures)) {
-              let gS = tS.sharedLength || 0,
-                bS = ZH.subarray(HS, vH),
-                NS = UH(tS, xS);
-              if (!qS) return !1 === xS.saveStructures(NS, NS.isCompatible) ? xS.pack(SS, XS) : (xS.lastNamedStructuresLength = gS, ZH.length > 1073741824 && (ZH = null), bS)
+            if (Xk && (Jk(), Ik && yk.saveStructures)) {
+              let Ik = Xk.sharedLength || 0,
+                Tk = SF.subarray(Fk, nF),
+                lk = WF(Xk, yk);
+              if (!ak) return !1 === yk.saveStructures(lk, lk.isCompatible) ? yk.pack(kk, ik) : (yk.lastNamedStructuresLength = Ik, SF.length > 1073741824 && (SF = null), Tk)
             }
-            ZH.length > 1073741824 && (ZH = null), XS & mH && (vH = HS)
+            SF.length > 1073741824 && (SF = null), ik & DF && (nF = Fk)
           }
         };
-        const CS = () => {
-            GS < 10 && GS++;
-            let SS = tS.sharedLength || 0;
-            if (tS.length > SS && !NS && (tS.length = SS), jS > 1e4) tS.transitions = null, GS = 0, jS = 0, KS.length > 0 && (KS = []);
-            else if (KS.length > 0 && !NS) {
-              for (let SS = 0, HS = KS.length; SS < HS; SS++) KS[SS][YH] = 0;
-              KS = []
+        const Jk = () => {
+            Hk < 10 && Hk++;
+            let kk = Xk.sharedLength || 0;
+            if (Xk.length > kk && !lk && (Xk.length = kk), wk > 1e4) Xk.transitions = null, Hk = 0, wk = 0, ek.length > 0 && (ek = []);
+            else if (ek.length > 0 && !lk) {
+              for (let kk = 0, Fk = ek.length; kk < Fk; kk++) ek[kk][uF] = 0;
+              ek = []
             }
           },
-          nS = SS => {
-            var HS = SS.length;
-            HS < 16 ? ZH[vH++] = 144 | HS : HS < 65536 ? (ZH[vH++] = 220, ZH[vH++] = HS >> 8, ZH[vH++] = 255 & HS) : (ZH[vH++] = 221, OH.setUint32(vH, HS), vH += 4);
-            for (let gS = 0; gS < HS; gS++) PS(SS[gS])
+          xk = kk => {
+            var Fk = kk.length;
+            Fk < 16 ? SF[nF++] = 144 | Fk : Fk < 65536 ? (SF[nF++] = 220, SF[nF++] = Fk >> 8, SF[nF++] = 255 & Fk) : (SF[nF++] = 221, vF.setUint32(nF, Fk), nF += 4);
+            for (let Ik = 0; Ik < Fk; Ik++) Pk(kk[Ik])
           },
-          PS = SS => {
-            vH > dH && (ZH = ZS(vH));
-            var gS, tS = typeof SS;
-            if ("string" === tS) {
-              let tS, bS = SS.length;
-              if (EH && bS >= 4 && bS < 4096) {
-                if ((EH.size += bS) > 21760) {
-                  let SS, gS, tS = (EH[0] ? 3 * EH[0].length + EH[1].length : 0) + 10;
-                  vH + tS > dH && (ZH = ZS(vH + tS)), EH.position ? (gS = EH, ZH[vH] = 200, vH += 3, ZH[vH++] = 98, SS = vH - HS, vH += 4, WH(HS, PS, 0), OH.setUint16(SS + HS - 3, vH - HS - SS)) : (ZH[vH++] = 214, ZH[vH++] = 98, SS = vH - HS, vH += 4), EH = ["", ""], EH.previous = gS, EH.size = 0, EH.position = SS
+          Pk = kk => {
+            nF > EF && (SF = zk(nF));
+            var Ik, Xk = typeof kk;
+            if ("string" === Xk) {
+              let Xk, Tk = kk.length;
+              if (GF && Tk >= 4 && Tk < 4096) {
+                if ((GF.size += Tk) > 21760) {
+                  let kk, Ik, Xk = (GF[0] ? 3 * GF[0].length + GF[1].length : 0) + 10;
+                  nF + Xk > EF && (SF = zk(nF + Xk)), GF.position ? (Ik = GF, SF[nF] = 200, nF += 3, SF[nF++] = 98, kk = nF - Fk, nF += 4, NF(Fk, Pk, 0), vF.setUint16(kk + Fk - 3, nF - Fk - kk)) : (SF[nF++] = 214, SF[nF++] = 98, kk = nF - Fk, nF += 4), GF = ["", ""], GF.previous = Ik, GF.size = 0, GF.position = kk
                 }
-                let gS = LH.test(SS);
-                return EH[gS ? 0 : 1] += SS, ZH[vH++] = 193, void PS(gS ? -bS : bS)
+                let Ik = pF.test(kk);
+                return GF[Ik ? 0 : 1] += kk, SF[nF++] = 193, void Pk(Ik ? -Tk : Tk)
               }
-              tS = bS < 32 ? 1 : bS < 256 ? 2 : bS < 65536 ? 3 : 5;
-              let xS = 3 * bS;
-              if (vH + xS > dH && (ZH = ZS(vH + xS)), bS < 64 || !XS) {
-                let HS, XS, xS, NS = vH + tS;
-                for (HS = 0; HS < bS; HS++) XS = SS.charCodeAt(HS), XS < 128 ? ZH[NS++] = XS : XS < 2048 ? (ZH[NS++] = XS >> 6 | 192, ZH[NS++] = 63 & XS | 128) : 55296 === (64512 & XS) && 56320 === (64512 & (xS = SS.charCodeAt(HS + 1))) ? (XS = 65536 + ((1023 & XS) << 10) + (1023 & xS), HS++, ZH[NS++] = XS >> 18 | 240, ZH[NS++] = XS >> 12 & 63 | 128, ZH[NS++] = XS >> 6 & 63 | 128, ZH[NS++] = 63 & XS | 128) : (ZH[NS++] = XS >> 12 | 224, ZH[NS++] = XS >> 6 & 63 | 128, ZH[NS++] = 63 & XS | 128);
-                gS = NS - vH - tS
-              } else gS = XS(SS, vH + tS);
-              gS < 32 ? ZH[vH++] = 160 | gS : gS < 256 ? (tS < 2 && ZH.copyWithin(vH + 2, vH + 1, vH + 1 + gS), ZH[vH++] = 217, ZH[vH++] = gS) : gS < 65536 ? (tS < 3 && ZH.copyWithin(vH + 3, vH + 2, vH + 2 + gS), ZH[vH++] = 218, ZH[vH++] = gS >> 8, ZH[vH++] = 255 & gS) : (tS < 5 && ZH.copyWithin(vH + 5, vH + 3, vH + 3 + gS), ZH[vH++] = 219, OH.setUint32(vH, gS), vH += 4), vH += gS
-            } else if ("number" === tS)
-              if (SS >>> 0 === SS) SS < 32 || SS < 128 && !1 === this.useRecords || SS < 64 && !this.randomAccessStructure ? ZH[vH++] = SS : SS < 256 ? (ZH[vH++] = 204, ZH[vH++] = SS) : SS < 65536 ? (ZH[vH++] = 205, ZH[vH++] = SS >> 8, ZH[vH++] = 255 & SS) : (ZH[vH++] = 206, OH.setUint32(vH, SS), vH += 4);
-              else if ((SS | 0) === SS) SS >= -32 ? ZH[vH++] = 256 + SS : SS >= -128 ? (ZH[vH++] = 208, ZH[vH++] = SS + 256) : SS >= -32768 ? (ZH[vH++] = 209, OH.setInt16(vH, SS), vH += 2) : (ZH[vH++] = 210, OH.setInt32(vH, SS), vH += 4);
+              Xk = Tk < 32 ? 1 : Tk < 256 ? 2 : Tk < 65536 ? 3 : 5;
+              let yk = 3 * Tk;
+              if (nF + yk > EF && (SF = zk(nF + yk)), Tk < 64 || !ik) {
+                let Fk, ik, yk, lk = nF + Xk;
+                for (Fk = 0; Fk < Tk; Fk++) ik = kk.charCodeAt(Fk), ik < 128 ? SF[lk++] = ik : ik < 2048 ? (SF[lk++] = ik >> 6 | 192, SF[lk++] = 63 & ik | 128) : 55296 === (64512 & ik) && 56320 === (64512 & (yk = kk.charCodeAt(Fk + 1))) ? (ik = 65536 + ((1023 & ik) << 10) + (1023 & yk), Fk++, SF[lk++] = ik >> 18 | 240, SF[lk++] = ik >> 12 & 63 | 128, SF[lk++] = ik >> 6 & 63 | 128, SF[lk++] = 63 & ik | 128) : (SF[lk++] = ik >> 12 | 224, SF[lk++] = ik >> 6 & 63 | 128, SF[lk++] = 63 & ik | 128);
+                Ik = lk - nF - Xk
+              } else Ik = ik(kk, nF + Xk);
+              Ik < 32 ? SF[nF++] = 160 | Ik : Ik < 256 ? (Xk < 2 && SF.copyWithin(nF + 2, nF + 1, nF + 1 + Ik), SF[nF++] = 217, SF[nF++] = Ik) : Ik < 65536 ? (Xk < 3 && SF.copyWithin(nF + 3, nF + 2, nF + 2 + Ik), SF[nF++] = 218, SF[nF++] = Ik >> 8, SF[nF++] = 255 & Ik) : (Xk < 5 && SF.copyWithin(nF + 5, nF + 3, nF + 3 + Ik), SF[nF++] = 219, vF.setUint32(nF, Ik), nF += 4), nF += Ik
+            } else if ("number" === Xk)
+              if (kk >>> 0 === kk) kk < 32 || kk < 128 && !1 === this.useRecords || kk < 64 && !this.randomAccessStructure ? SF[nF++] = kk : kk < 256 ? (SF[nF++] = 204, SF[nF++] = kk) : kk < 65536 ? (SF[nF++] = 205, SF[nF++] = kk >> 8, SF[nF++] = 255 & kk) : (SF[nF++] = 206, vF.setUint32(nF, kk), nF += 4);
+              else if ((kk | 0) === kk) kk >= -32 ? SF[nF++] = 256 + kk : kk >= -128 ? (SF[nF++] = 208, SF[nF++] = kk + 256) : kk >= -32768 ? (SF[nF++] = 209, vF.setInt16(nF, kk), nF += 2) : (SF[nF++] = 210, vF.setInt32(nF, kk), nF += 4);
             else {
-              let HS;
-              if ((HS = this.useFloat32) > 0 && SS < 4294967296 && SS >= -2147483648) {
-                let gS;
-                if (ZH[vH++] = 202, OH.setFloat32(vH, SS), HS < 4 || ((gS = SS * NH[(127 & ZH[vH]) << 1 | ZH[vH + 1] >> 7]) | 0) === gS) return void(vH += 4);
-                vH--
+              let Fk;
+              if ((Fk = this.useFloat32) > 0 && kk < 4294967296 && kk >= -2147483648) {
+                let Ik;
+                if (SF[nF++] = 202, vF.setFloat32(nF, kk), Fk < 4 || ((Ik = kk * aF[(127 & SF[nF]) << 1 | SF[nF + 1] >> 7]) | 0) === Ik) return void(nF += 4);
+                nF--
               }
-              ZH[vH++] = 203, OH.setFloat64(vH, SS), vH += 8
-            } else if ("object" === tS || "function" === tS)
-              if (SS) {
-                if (bS) {
-                  let gS = bS.get(SS);
-                  if (gS) {
-                    if (!gS.id) {
-                      let SS = bS.idsToInsert || (bS.idsToInsert = []);
-                      gS.id = SS.push(gS)
+              SF[nF++] = 203, vF.setFloat64(nF, kk), nF += 8
+            } else if ("object" === Xk || "function" === Xk)
+              if (kk) {
+                if (Tk) {
+                  let Ik = Tk.get(kk);
+                  if (Ik) {
+                    if (!Ik.id) {
+                      let kk = Tk.idsToInsert || (Tk.idsToInsert = []);
+                      Ik.id = kk.push(Ik)
                     }
-                    return ZH[vH++] = 214, ZH[vH++] = 112, OH.setUint32(vH, gS.id), void(vH += 4)
+                    return SF[nF++] = 214, SF[nF++] = 112, vF.setUint32(nF, Ik.id), void(nF += 4)
                   }
-                  bS.set(SS, {
-                    offset: vH - HS
+                  Tk.set(kk, {
+                    offset: nF - Fk
                   })
                 }
-                let XS = SS.constructor;
-                if (XS === Object) hS(SS);
-                else if (XS === Array) nS(SS);
-                else if (XS === Map)
-                  if (this.mapAsEmptyObject) ZH[vH++] = 128;
+                let ik = kk.constructor;
+                if (ik === Object) Vk(kk);
+                else if (ik === Array) xk(kk);
+                else if (ik === Map)
+                  if (this.mapAsEmptyObject) SF[nF++] = 128;
                   else {
-                    (gS = SS.size) < 16 ? ZH[vH++] = 128 | gS : gS < 65536 ? (ZH[vH++] = 222, ZH[vH++] = gS >> 8, ZH[vH++] = 255 & gS) : (ZH[vH++] = 223, OH.setUint32(vH, gS), vH += 4);
-                    for (let [HS, gS] of SS) PS(HS), PS(gS)
+                    (Ik = kk.size) < 16 ? SF[nF++] = 128 | Ik : Ik < 65536 ? (SF[nF++] = 222, SF[nF++] = Ik >> 8, SF[nF++] = 255 & Ik) : (SF[nF++] = 223, vF.setUint32(nF, Ik), nF += 4);
+                    for (let [Fk, Ik] of kk) Pk(Fk), Pk(Ik)
                   }
                 else {
-                  for (let HS = 0, gS = jH.length; HS < gS; HS++) {
-                    if (SS instanceof GH[HS]) {
-                      let gS = jH[HS];
-                      if (gS.write) {
-                        gS.type && (ZH[vH++] = 212, ZH[vH++] = gS.type, ZH[vH++] = 0);
-                        let HS = gS.write.call(this, SS);
-                        return void(HS === SS ? Array.isArray(SS) ? nS(SS) : hS(SS) : PS(HS))
+                  for (let Fk = 0, Ik = HF.length; Fk < Ik; Fk++) {
+                    if (kk instanceof JF[Fk]) {
+                      let Ik = HF[Fk];
+                      if (Ik.write) {
+                        Ik.type && (SF[nF++] = 212, SF[nF++] = Ik.type, SF[nF++] = 0);
+                        let Fk = Ik.write.call(this, kk);
+                        return void(Fk === kk ? Array.isArray(kk) ? xk(kk) : Vk(kk) : Pk(Fk))
                       }
-                      let tS, bS = ZH,
-                        XS = OH,
-                        xS = vH;
-                      ZH = null;
+                      let Xk, Tk = SF,
+                        ik = vF,
+                        yk = nF;
+                      SF = null;
                       try {
-                        tS = gS.pack.call(this, SS, (SS => (ZH = bS, bS = null, vH += SS, vH > dH && ZS(vH), {
-                          target: ZH,
-                          targetView: OH,
-                          position: vH - SS
-                        })), PS)
+                        Xk = Ik.pack.call(this, kk, (kk => (SF = Tk, Tk = null, nF += kk, nF > EF && zk(nF), {
+                          target: SF,
+                          targetView: vF,
+                          position: nF - kk
+                        })), Pk)
                       } finally {
-                        bS && (ZH = bS, OH = XS, vH = xS, dH = ZH.length - 10)
+                        Tk && (SF = Tk, vF = ik, nF = yk, EF = SF.length - 10)
                       }
-                      return void(tS && (tS.length + vH > dH && ZS(tS.length + vH), vH = iH(tS, ZH, vH, gS.type)))
+                      return void(Xk && (Xk.length + nF > EF && zk(Xk.length + nF), nF = CF(Xk, SF, nF, Ik.type)))
                     }
                   }
-                  if (Array.isArray(SS)) nS(SS);
+                  if (Array.isArray(kk)) xk(kk);
                   else {
-                    if (SS.toJSON) {
-                      const HS = SS.toJSON();
-                      if (HS !== SS) return PS(HS)
+                    if (kk.toJSON) {
+                      const Fk = kk.toJSON();
+                      if (Fk !== kk) return Pk(Fk)
                     }
-                    if ("function" === tS) return PS(this.writeFunction && this.writeFunction(SS));
-                    hS(SS)
+                    if ("function" === Xk) return Pk(this.writeFunction && this.writeFunction(kk));
+                    Vk(kk)
                   }
                 }
-              } else ZH[vH++] = 192;
-            else if ("boolean" === tS) ZH[vH++] = SS ? 195 : 194;
-            else if ("bigint" === tS) {
-              if (SS < BigInt(1) << BigInt(63) && SS >= -(BigInt(1) << BigInt(63))) ZH[vH++] = 211, OH.setBigInt64(vH, SS);
-              else if (SS < BigInt(1) << BigInt(64) && SS > 0) ZH[vH++] = 207, OH.setBigUint64(vH, SS);
+              } else SF[nF++] = 192;
+            else if ("boolean" === Xk) SF[nF++] = kk ? 195 : 194;
+            else if ("bigint" === Xk) {
+              if (kk < BigInt(1) << BigInt(63) && kk >= -(BigInt(1) << BigInt(63))) SF[nF++] = 211, vF.setBigInt64(nF, kk);
+              else if (kk < BigInt(1) << BigInt(64) && kk > 0) SF[nF++] = 207, vF.setBigUint64(nF, kk);
               else {
                 if (!this.largeBigIntToFloat) {
-                  if (this.largeBigIntToString) return PS(SS.toString());
-                  if (this.useBigIntExtension && SS < BigInt(2) ** BigInt(1023) && SS > -(BigInt(2) ** BigInt(1023))) {
-                    ZH[vH++] = 199, vH++, ZH[vH++] = 66;
-                    let HS, gS = [];
+                  if (this.largeBigIntToString) return Pk(kk.toString());
+                  if (this.useBigIntExtension && kk < BigInt(2) ** BigInt(1023) && kk > -(BigInt(2) ** BigInt(1023))) {
+                    SF[nF++] = 199, nF++, SF[nF++] = 66;
+                    let Fk, Ik = [];
                     do {
-                      let tS = SS & BigInt(255);
-                      HS = (tS & BigInt(128)) === (SS < BigInt(0) ? BigInt(128) : BigInt(0)), gS.push(tS), SS >>= BigInt(8)
-                    } while (SS !== BigInt(0) && SS !== BigInt(-1) || !HS);
-                    ZH[vH - 2] = gS.length;
-                    for (let SS = gS.length; SS > 0;) ZH[vH++] = Number(gS[--SS]);
+                      let Xk = kk & BigInt(255);
+                      Fk = (Xk & BigInt(128)) === (kk < BigInt(0) ? BigInt(128) : BigInt(0)), Ik.push(Xk), kk >>= BigInt(8)
+                    } while (kk !== BigInt(0) && kk !== BigInt(-1) || !Fk);
+                    SF[nF - 2] = Ik.length;
+                    for (let kk = Ik.length; kk > 0;) SF[nF++] = Number(Ik[--kk]);
                     return
                   }
-                  throw new RangeError(SS + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
+                  throw new RangeError(kk + " was too large to fit in MessagePack 64-bit integer format, use useBigIntExtension, or set largeBigIntToFloat to convert to float-64, or set largeBigIntToString to convert to string")
                 }
-                ZH[vH++] = 203, OH.setFloat64(vH, Number(SS))
+                SF[nF++] = 203, vF.setFloat64(nF, Number(kk))
               }
-              vH += 8
+              nF += 8
             } else {
-              if ("undefined" !== tS) throw new Error("Unknown type: " + tS);
-              this.encodeUndefinedAsNil ? ZH[vH++] = 192 : (ZH[vH++] = 212, ZH[vH++] = 0, ZH[vH++] = 0)
+              if ("undefined" !== Xk) throw new Error("Unknown type: " + Xk);
+              this.encodeUndefinedAsNil ? SF[nF++] = 192 : (SF[nF++] = 212, SF[nF++] = 0, SF[nF++] = 0)
             }
           },
-          QS = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? SS => {
-            let HS;
+          Kk = this.variableMapSize || this.coercibleKeyAsNumber || this.skipValues ? kk => {
+            let Fk;
             if (this.skipValues) {
-              HS = [];
-              for (let gS in SS) "function" === typeof SS.hasOwnProperty && !SS.hasOwnProperty(gS) || this.skipValues.includes(SS[gS]) || HS.push(gS)
-            } else HS = Object.keys(SS);
-            let gS, tS = HS.length;
-            if (tS < 16 ? ZH[vH++] = 128 | tS : tS < 65536 ? (ZH[vH++] = 222, ZH[vH++] = tS >> 8, ZH[vH++] = 255 & tS) : (ZH[vH++] = 223, OH.setUint32(vH, tS), vH += 4), this.coercibleKeyAsNumber)
-              for (let bS = 0; bS < tS; bS++) {
-                gS = HS[bS];
-                let tS = Number(gS);
-                PS(isNaN(tS) ? gS : tS), PS(SS[gS])
+              Fk = [];
+              for (let Ik in kk) "function" === typeof kk.hasOwnProperty && !kk.hasOwnProperty(Ik) || this.skipValues.includes(kk[Ik]) || Fk.push(Ik)
+            } else Fk = Object.keys(kk);
+            let Ik, Xk = Fk.length;
+            if (Xk < 16 ? SF[nF++] = 128 | Xk : Xk < 65536 ? (SF[nF++] = 222, SF[nF++] = Xk >> 8, SF[nF++] = 255 & Xk) : (SF[nF++] = 223, vF.setUint32(nF, Xk), nF += 4), this.coercibleKeyAsNumber)
+              for (let Tk = 0; Tk < Xk; Tk++) {
+                Ik = Fk[Tk];
+                let Xk = Number(Ik);
+                Pk(isNaN(Xk) ? Ik : Xk), Pk(kk[Ik])
               } else
-                for (let bS = 0; bS < tS; bS++) PS(gS = HS[bS]), PS(SS[gS])
-          } : SS => {
-            ZH[vH++] = 222;
-            let gS = vH - HS;
-            vH += 2;
-            let tS = 0;
-            for (let HS in SS)("function" !== typeof SS.hasOwnProperty || SS.hasOwnProperty(HS)) && (PS(HS), PS(SS[HS]), tS++);
-            if (tS > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
-            ZH[gS++ + HS] = tS >> 8, ZH[gS + HS] = 255 & tS
+                for (let Tk = 0; Tk < Xk; Tk++) Pk(Ik = Fk[Tk]), Pk(kk[Ik])
+          } : kk => {
+            SF[nF++] = 222;
+            let Ik = nF - Fk;
+            nF += 2;
+            let Xk = 0;
+            for (let Fk in kk)("function" !== typeof kk.hasOwnProperty || kk.hasOwnProperty(Fk)) && (Pk(Fk), Pk(kk[Fk]), Xk++);
+            if (Xk > 65535) throw new Error('Object is too large to serialize with fast 16-bit map size, use the "variableMapSize" option to serialize this object');
+            SF[Ik++ + Fk] = Xk >> 8, SF[Ik + Fk] = 255 & Xk
           },
-          DS = !1 === this.useRecords ? QS : SS.progressiveRecords && !fS ? SS => {
-            let gS, bS, XS = tS.transitions || (tS.transitions = Object.create(null)),
-              xS = vH++ - HS;
-            for (let NS in SS)
-              if ("function" !== typeof SS.hasOwnProperty || SS.hasOwnProperty(NS)) {
-                if (gS = XS[NS], gS) XS = gS;
+          Qk = !1 === this.useRecords ? Kk : kk.progressiveRecords && !tk ? kk => {
+            let Ik, Tk, ik = Xk.transitions || (Xk.transitions = Object.create(null)),
+              yk = nF++ - Fk;
+            for (let lk in kk)
+              if ("function" !== typeof kk.hasOwnProperty || kk.hasOwnProperty(lk)) {
+                if (Ik = ik[lk], Ik) ik = Ik;
                 else {
-                  let qS = Object.keys(SS),
-                    uS = XS;
-                  XS = tS.transitions;
-                  let IS = 0;
-                  for (let SS = 0, HS = qS.length; SS < HS; SS++) {
-                    let HS = qS[SS];
-                    gS = XS[HS], gS || (gS = XS[HS] = Object.create(null), IS++), XS = gS
+                  let ak = Object.keys(kk),
+                    qk = ik;
+                  ik = Xk.transitions;
+                  let Lk = 0;
+                  for (let kk = 0, Fk = ak.length; kk < Fk; kk++) {
+                    let Fk = ak[kk];
+                    Ik = ik[Fk], Ik || (Ik = ik[Fk] = Object.create(null), Lk++), ik = Ik
                   }
-                  xS + HS + 1 == vH ? (vH--, JS(XS, qS, IS)) : OS(XS, qS, xS, IS), bS = !0, XS = uS[NS]
+                  yk + Fk + 1 == nF ? (nF--, Sk(ik, ak, Lk)) : vk(ik, ak, yk, Lk), Tk = !0, ik = qk[lk]
                 }
-                PS(SS[NS])
-              } if (!bS) {
-              let gS = XS[YH];
-              gS ? ZH[xS + HS] = gS : OS(XS, Object.keys(SS), xS, 0)
+                Pk(kk[lk])
+              } if (!Tk) {
+              let Ik = ik[uF];
+              Ik ? SF[yk + Fk] = Ik : vk(ik, Object.keys(kk), yk, 0)
             }
-          } : SS => {
-            let HS, gS = tS.transitions || (tS.transitions = Object.create(null)),
-              bS = 0;
-            for (let tS in SS)("function" !== typeof SS.hasOwnProperty || SS.hasOwnProperty(tS)) && (HS = gS[tS], HS || (HS = gS[tS] = Object.create(null), bS++), gS = HS);
-            let XS = gS[YH];
-            XS ? XS >= 96 && fS ? (ZH[vH++] = 96 + (31 & (XS -= 96)), ZH[vH++] = XS >> 5) : ZH[vH++] = XS : JS(gS, gS.__keys__ || Object.keys(SS), bS);
-            for (let tS in SS)("function" !== typeof SS.hasOwnProperty || SS.hasOwnProperty(tS)) && PS(SS[tS])
+          } : kk => {
+            let Fk, Ik = Xk.transitions || (Xk.transitions = Object.create(null)),
+              Tk = 0;
+            for (let Xk in kk)("function" !== typeof kk.hasOwnProperty || kk.hasOwnProperty(Xk)) && (Fk = Ik[Xk], Fk || (Fk = Ik[Xk] = Object.create(null), Tk++), Ik = Fk);
+            let ik = Ik[uF];
+            ik ? ik >= 96 && tk ? (SF[nF++] = 96 + (31 & (ik -= 96)), SF[nF++] = ik >> 5) : SF[nF++] = ik : Sk(Ik, Ik.__keys__ || Object.keys(kk), Tk);
+            for (let Xk in kk)("function" !== typeof kk.hasOwnProperty || kk.hasOwnProperty(Xk)) && Pk(kk[Xk])
           },
-          wS = "function" == typeof this.useRecords && this.useRecords,
-          hS = wS ? SS => {
-            wS(SS) ? DS(SS) : QS(SS)
-          } : DS,
-          ZS = SS => {
-            let gS;
-            if (SS > 16777216) {
-              if (SS - HS > hH) throw new Error("Packed buffer would be larger than maximum buffer size");
-              gS = Math.min(hH, 4096 * Math.round(Math.max((SS - HS) * (SS > 67108864 ? 1.25 : 2), 4194304) / 4096))
-            } else gS = 1 + (Math.max(SS - HS << 2, ZH.length - 1) >> 12) << 12;
-            let tS = new DH(gS);
-            return OH = tS.dataView || (tS.dataView = new DataView(tS.buffer, 0, gS)), SS = Math.min(SS, ZH.length), ZH.copy ? ZH.copy(tS, 0, HS, SS) : tS.set(ZH.slice(HS, SS)), vH -= HS, HS = 0, dH = tS.length - 10, ZH = tS
+          sk = "function" == typeof this.useRecords && this.useRecords,
+          Vk = sk ? kk => {
+            sk(kk) ? Qk(kk) : Kk(kk)
+          } : Qk,
+          zk = kk => {
+            let Ik;
+            if (kk > 16777216) {
+              if (kk - Fk > zF) throw new Error("Packed buffer would be larger than maximum buffer size");
+              Ik = Math.min(zF, 4096 * Math.round(Math.max((kk - Fk) * (kk > 67108864 ? 1.25 : 2), 4194304) / 4096))
+            } else Ik = 1 + (Math.max(kk - Fk << 2, SF.length - 1) >> 12) << 12;
+            let Xk = new sF(Ik);
+            return vF = Xk.dataView || (Xk.dataView = new DataView(Xk.buffer, 0, Ik)), kk = Math.min(kk, SF.length), SF.copy ? SF.copy(Xk, 0, Fk, kk) : Xk.set(SF.slice(Fk, kk)), nF -= Fk, Fk = 0, EF = Xk.length - 10, SF = Xk
           },
-          JS = (SS, HS, bS) => {
-            let XS = tS.nextId;
-            XS || (XS = 64), XS < kS && this.shouldShareStructure && !this.shouldShareStructure(HS) ? (XS = tS.nextOwnId, XS < aS || (XS = kS), tS.nextOwnId = XS + 1) : (XS >= aS && (XS = kS), tS.nextId = XS + 1);
-            let xS = HS.highByte = XS >= 96 && fS ? XS - 96 >> 5 : -1;
-            SS[YH] = XS, SS.__keys__ = HS, tS[XS - 64] = HS, XS < kS ? (HS.isShared = !0, tS.sharedLength = XS - 63, gS = !0, xS >= 0 ? (ZH[vH++] = 96 + (31 & XS), ZH[vH++] = xS) : ZH[vH++] = XS) : (xS >= 0 ? (ZH[vH++] = 213, ZH[vH++] = 114, ZH[vH++] = 96 + (31 & XS), ZH[vH++] = xS) : (ZH[vH++] = 212, ZH[vH++] = 114, ZH[vH++] = XS), bS && (jS += GS * bS), KS.length >= IS && (KS.shift()[YH] = 0), KS.push(SS), PS(HS))
+          Sk = (kk, Fk, Tk) => {
+            let ik = Xk.nextId;
+            ik || (ik = 64), ik < Zk && this.shouldShareStructure && !this.shouldShareStructure(Fk) ? (ik = Xk.nextOwnId, ik < jk || (ik = Zk), Xk.nextOwnId = ik + 1) : (ik >= jk && (ik = Zk), Xk.nextId = ik + 1);
+            let yk = Fk.highByte = ik >= 96 && tk ? ik - 96 >> 5 : -1;
+            kk[uF] = ik, kk.__keys__ = Fk, Xk[ik - 64] = Fk, ik < Zk ? (Fk.isShared = !0, Xk.sharedLength = ik - 63, Ik = !0, yk >= 0 ? (SF[nF++] = 96 + (31 & ik), SF[nF++] = yk) : SF[nF++] = ik) : (yk >= 0 ? (SF[nF++] = 213, SF[nF++] = 114, SF[nF++] = 96 + (31 & ik), SF[nF++] = yk) : (SF[nF++] = 212, SF[nF++] = 114, SF[nF++] = ik), Tk && (wk += Hk * Tk), ek.length >= Lk && (ek.shift()[uF] = 0), ek.push(kk), Pk(Fk))
           },
-          OS = (SS, gS, tS, bS) => {
-            let XS = ZH,
-              xS = vH,
-              NS = dH,
-              qS = HS;
-            ZH = JH, vH = 0, HS = 0, ZH || (JH = ZH = new DH(8192)), dH = ZH.length - 10, JS(SS, gS, bS), JH = ZH;
-            let uS = vH;
-            if (ZH = XS, vH = xS, dH = NS, HS = qS, uS > 1) {
-              let SS = vH + uS - 1;
-              SS > dH && ZS(SS);
-              let gS = tS + HS;
-              ZH.copyWithin(gS + uS, gS + 1, vH), ZH.set(JH.slice(0, uS), gS), vH = SS
-            } else ZH[tS + HS] = JH[0]
+          vk = (kk, Ik, Xk, Tk) => {
+            let ik = SF,
+              yk = nF,
+              lk = EF,
+              ak = Fk;
+            SF = oF, nF = 0, Fk = 0, SF || (oF = SF = new sF(8192)), EF = SF.length - 10, Sk(kk, Ik, Tk), oF = SF;
+            let qk = nF;
+            if (SF = ik, nF = yk, EF = lk, Fk = ak, qk > 1) {
+              let kk = nF + qk - 1;
+              kk > EF && zk(kk);
+              let Ik = Xk + Fk;
+              SF.copyWithin(Ik + qk, Ik + 1, nF), SF.set(oF.slice(0, qk), Ik), nF = kk
+            } else SF[Xk + Fk] = oF[0]
           },
-          dS = SS => {
-            let bS = cH(SS, ZH, HS, vH, tS, ZS, ((SS, HS, tS) => {
-              if (tS) return gS = !0;
-              vH = HS;
-              let bS = ZH;
-              return PS(SS), CS(), bS !== ZH ? {
-                position: vH,
-                targetView: OH,
-                target: ZH
-              } : vH
+          Ek = kk => {
+            let Tk = OF(kk, SF, Fk, nF, Xk, zk, ((kk, Fk, Xk) => {
+              if (Xk) return Ik = !0;
+              nF = Fk;
+              let Tk = SF;
+              return Pk(kk), Jk(), Tk !== SF ? {
+                position: nF,
+                targetView: vF,
+                target: SF
+              } : nF
             }), this);
-            if (0 === bS) return hS(SS);
-            vH = bS
+            if (0 === Tk) return Vk(kk);
+            nF = Tk
           }
       }
-      useBuffer(SS) {
-        ZH = SS, OH = ZH.dataView || (ZH.dataView = new DataView(ZH.buffer, ZH.byteOffset, ZH.byteLength)), vH = 0
+      useBuffer(kk) {
+        SF = kk, vF = SF.dataView || (SF.dataView = new DataView(SF.buffer, SF.byteOffset, SF.byteLength)), nF = 0
       }
-      set position(SS) {
-        vH = SS
+      set position(kk) {
+        nF = kk
       }
       get position() {
-        return vH
+        return nF
       }
-      set buffer(SS) {
-        ZH = SS
+      set buffer(kk) {
+        SF = kk
       }
       get buffer() {
-        return ZH
+        return SF
       }
       clearSharedData() {
         this.structures && (this.structures = []), this.typedStructs && (this.typedStructs = [])
       }
     }
 
-    function yH(SS, HS, gS, tS) {
-      let bS = SS.byteLength;
-      if (bS + 1 < 256) {
+    function RF(kk, Fk, Ik, Xk) {
+      let Tk = kk.byteLength;
+      if (Tk + 1 < 256) {
         var {
-          target: XS,
-          position: xS
-        } = gS(4 + bS);
-        XS[xS++] = 199, XS[xS++] = bS + 1
-      } else if (bS + 1 < 65536) {
+          target: ik,
+          position: yk
+        } = Ik(4 + Tk);
+        ik[yk++] = 199, ik[yk++] = Tk + 1
+      } else if (Tk + 1 < 65536) {
         var {
-          target: XS,
-          position: xS
-        } = gS(5 + bS);
-        XS[xS++] = 200, XS[xS++] = bS + 1 >> 8, XS[xS++] = bS + 1 & 255
+          target: ik,
+          position: yk
+        } = Ik(5 + Tk);
+        ik[yk++] = 200, ik[yk++] = Tk + 1 >> 8, ik[yk++] = Tk + 1 & 255
       } else {
         var {
-          target: XS,
-          position: xS,
-          targetView: NS
-        } = gS(7 + bS);
-        XS[xS++] = 201, NS.setUint32(xS, bS + 1), xS += 4
+          target: ik,
+          position: yk,
+          targetView: lk
+        } = Ik(7 + Tk);
+        ik[yk++] = 201, lk.setUint32(yk, Tk + 1), yk += 4
       }
-      XS[xS++] = 116, XS[xS++] = HS, SS.buffer || (SS = new Uint8Array(SS)), XS.set(new Uint8Array(SS.buffer, SS.byteOffset, SS.byteLength), xS)
+      ik[yk++] = 116, ik[yk++] = Fk, kk.buffer || (kk = new Uint8Array(kk)), ik.set(new Uint8Array(kk.buffer, kk.byteOffset, kk.byteLength), yk)
     }
 
-    function VH(SS, HS) {
-      let gS = SS.byteLength;
-      var tS, bS;
-      if (gS < 256) {
+    function UF(kk, Fk) {
+      let Ik = kk.byteLength;
+      var Xk, Tk;
+      if (Ik < 256) {
         var {
-          target: tS,
-          position: bS
-        } = HS(gS + 2);
-        tS[bS++] = 196, tS[bS++] = gS
-      } else if (gS < 65536) {
+          target: Xk,
+          position: Tk
+        } = Fk(Ik + 2);
+        Xk[Tk++] = 196, Xk[Tk++] = Ik
+      } else if (Ik < 65536) {
         var {
-          target: tS,
-          position: bS
-        } = HS(gS + 3);
-        tS[bS++] = 197, tS[bS++] = gS >> 8, tS[bS++] = 255 & gS
+          target: Xk,
+          position: Tk
+        } = Fk(Ik + 3);
+        Xk[Tk++] = 197, Xk[Tk++] = Ik >> 8, Xk[Tk++] = 255 & Ik
       } else {
         var {
-          target: tS,
-          position: bS,
-          targetView: XS
-        } = HS(gS + 5);
-        tS[bS++] = 198, XS.setUint32(bS, gS), bS += 4
+          target: Xk,
+          position: Tk,
+          targetView: ik
+        } = Fk(Ik + 5);
+        Xk[Tk++] = 198, ik.setUint32(Tk, Ik), Tk += 4
       }
-      tS.set(SS, bS)
+      Xk.set(kk, Tk)
     }
 
-    function iH(SS, HS, gS, tS) {
-      let bS = SS.length;
-      switch (bS) {
+    function CF(kk, Fk, Ik, Xk) {
+      let Tk = kk.length;
+      switch (Tk) {
         case 1:
-          HS[gS++] = 212;
+          Fk[Ik++] = 212;
           break;
         case 2:
-          HS[gS++] = 213;
+          Fk[Ik++] = 213;
           break;
         case 4:
-          HS[gS++] = 214;
+          Fk[Ik++] = 214;
           break;
         case 8:
-          HS[gS++] = 215;
+          Fk[Ik++] = 215;
           break;
         case 16:
-          HS[gS++] = 216;
+          Fk[Ik++] = 216;
           break;
         default:
-          bS < 256 ? (HS[gS++] = 199, HS[gS++] = bS) : bS < 65536 ? (HS[gS++] = 200, HS[gS++] = bS >> 8, HS[gS++] = 255 & bS) : (HS[gS++] = 201, HS[gS++] = bS >> 24, HS[gS++] = bS >> 16 & 255, HS[gS++] = bS >> 8 & 255, HS[gS++] = 255 & bS)
+          Tk < 256 ? (Fk[Ik++] = 199, Fk[Ik++] = Tk) : Tk < 65536 ? (Fk[Ik++] = 200, Fk[Ik++] = Tk >> 8, Fk[Ik++] = 255 & Tk) : (Fk[Ik++] = 201, Fk[Ik++] = Tk >> 24, Fk[Ik++] = Tk >> 16 & 255, Fk[Ik++] = Tk >> 8 & 255, Fk[Ik++] = 255 & Tk)
       }
-      return HS[gS++] = tS, HS.set(SS, gS), gS += bS
+      return Fk[Ik++] = Xk, Fk.set(kk, Ik), Ik += Tk
     }
 
-    function WH(SS, HS, gS) {
-      if (EH.length > 0) {
-        OH.setUint32(EH.position + SS, vH + gS - EH.position - SS), EH.stringsPosition = vH - SS;
-        let tS = EH;
-        EH = null, HS(tS[0]), HS(tS[1])
+    function NF(kk, Fk, Ik) {
+      if (GF.length > 0) {
+        vF.setUint32(GF.position + kk, nF + Ik - GF.position - kk), GF.stringsPosition = nF - kk;
+        let Xk = GF;
+        GF = null, Fk(Xk[0]), Fk(Xk[1])
       }
     }
 
-    function zH(SS) {
-      if (SS.Class) {
-        if (!SS.pack && !SS.write) throw new Error("Extension has no pack or write function");
-        if (SS.pack && !SS.type) throw new Error("Extension has no type (numeric code to identify the extension)");
-        GH.unshift(SS.Class), jH.unshift(SS)
-      }! function(SS) {
-        SS.unpack ? nS[SS.type] = SS.unpack : nS[SS.type] = SS
-      }(SS)
+    function cF(kk) {
+      if (kk.Class) {
+        if (!kk.pack && !kk.write) throw new Error("Extension has no pack or write function");
+        if (kk.pack && !kk.type) throw new Error("Extension has no type (numeric code to identify the extension)");
+        JF.unshift(kk.Class), HF.unshift(kk)
+      }! function(kk) {
+        kk.unpack ? xk[kk.type] = kk.unpack : xk[kk.type] = kk
+      }(kk)
     }
 
-    function UH(SS, HS) {
-      return SS.isCompatible = SS => {
-        let gS = !SS || (HS.lastNamedStructuresLength || 0) === SS.length;
-        return gS || HS._mergeStructures(SS), gS
-      }, SS
+    function WF(kk, Fk) {
+      return kk.isCompatible = kk => {
+        let Ik = !kk || (Fk.lastNamedStructuresLength || 0) === kk.length;
+        return Ik || Fk._mergeStructures(kk), Ik
+      }, kk
     }
-    GH = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, QS], jH = [{
-      pack(SS, HS, gS) {
-        let tS = SS.getTime() / 1e3;
-        if ((this.useTimestamp32 || 0 === SS.getMilliseconds()) && tS >= 0 && tS < 4294967296) {
+    JF = [Date, Set, Error, RegExp, ArrayBuffer, Object.getPrototypeOf(Uint8Array.prototype).constructor, Kk], HF = [{
+      pack(kk, Fk, Ik) {
+        let Xk = kk.getTime() / 1e3;
+        if ((this.useTimestamp32 || 0 === kk.getMilliseconds()) && Xk >= 0 && Xk < 4294967296) {
           let {
-            target: SS,
-            targetView: gS,
-            position: bS
-          } = HS(6);
-          SS[bS++] = 214, SS[bS++] = 255, gS.setUint32(bS, tS)
-        } else if (tS > 0 && tS < 4294967296) {
+            target: kk,
+            targetView: Ik,
+            position: Tk
+          } = Fk(6);
+          kk[Tk++] = 214, kk[Tk++] = 255, Ik.setUint32(Tk, Xk)
+        } else if (Xk > 0 && Xk < 4294967296) {
           let {
-            target: gS,
-            targetView: bS,
-            position: XS
-          } = HS(10);
-          gS[XS++] = 215, gS[XS++] = 255, bS.setUint32(XS, 4e6 * SS.getMilliseconds() + (tS / 1e3 / 4294967296 | 0)), bS.setUint32(XS + 4, tS)
-        } else if (isNaN(tS)) {
-          if (this.onInvalidDate) return HS(0), gS(this.onInvalidDate());
+            target: Ik,
+            targetView: Tk,
+            position: ik
+          } = Fk(10);
+          Ik[ik++] = 215, Ik[ik++] = 255, Tk.setUint32(ik, 4e6 * kk.getMilliseconds() + (Xk / 1e3 / 4294967296 | 0)), Tk.setUint32(ik + 4, Xk)
+        } else if (isNaN(Xk)) {
+          if (this.onInvalidDate) return Fk(0), Ik(this.onInvalidDate());
           let {
-            target: SS,
-            targetView: tS,
-            position: bS
-          } = HS(3);
-          SS[bS++] = 212, SS[bS++] = 255, SS[bS++] = 255
+            target: kk,
+            targetView: Xk,
+            position: Tk
+          } = Fk(3);
+          kk[Tk++] = 212, kk[Tk++] = 255, kk[Tk++] = 255
         } else {
           let {
-            target: gS,
-            targetView: bS,
-            position: XS
-          } = HS(15);
-          gS[XS++] = 199, gS[XS++] = 12, gS[XS++] = 255, bS.setUint32(XS, 1e6 * SS.getMilliseconds()), bS.setBigInt64(XS + 4, BigInt(Math.floor(tS)))
+            target: Ik,
+            targetView: Tk,
+            position: ik
+          } = Fk(15);
+          Ik[ik++] = 199, Ik[ik++] = 12, Ik[ik++] = 255, Tk.setUint32(ik, 1e6 * kk.getMilliseconds()), Tk.setBigInt64(ik + 4, BigInt(Math.floor(Xk)))
         }
       }
     }, {
-      pack(SS, HS, gS) {
-        if (this.setAsEmptyObject) return HS(0), gS({});
-        let tS = Array.from(SS),
+      pack(kk, Fk, Ik) {
+        if (this.setAsEmptyObject) return Fk(0), Ik({});
+        let Xk = Array.from(kk),
           {
-            target: bS,
-            position: XS
-          } = HS(this.moreTypes ? 3 : 0);
-        this.moreTypes && (bS[XS++] = 212, bS[XS++] = 115, bS[XS++] = 0), gS(tS)
+            target: Tk,
+            position: ik
+          } = Fk(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Tk[ik++] = 212, Tk[ik++] = 115, Tk[ik++] = 0), Ik(Xk)
       }
     }, {
-      pack(SS, HS, gS) {
+      pack(kk, Fk, Ik) {
         let {
-          target: tS,
-          position: bS
-        } = HS(this.moreTypes ? 3 : 0);
-        this.moreTypes && (tS[bS++] = 212, tS[bS++] = 101, tS[bS++] = 0), gS([SS.name, SS.message, SS.cause])
+          target: Xk,
+          position: Tk
+        } = Fk(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Xk[Tk++] = 212, Xk[Tk++] = 101, Xk[Tk++] = 0), Ik([kk.name, kk.message, kk.cause])
       }
     }, {
-      pack(SS, HS, gS) {
+      pack(kk, Fk, Ik) {
         let {
-          target: tS,
-          position: bS
-        } = HS(this.moreTypes ? 3 : 0);
-        this.moreTypes && (tS[bS++] = 212, tS[bS++] = 120, tS[bS++] = 0), gS([SS.source, SS.flags])
+          target: Xk,
+          position: Tk
+        } = Fk(this.moreTypes ? 3 : 0);
+        this.moreTypes && (Xk[Tk++] = 212, Xk[Tk++] = 120, Xk[Tk++] = 0), Ik([kk.source, kk.flags])
       }
     }, {
-      pack(SS, HS) {
-        this.moreTypes ? yH(SS, 16, HS) : VH(QH ? Buffer.from(SS) : new Uint8Array(SS), HS)
+      pack(kk, Fk) {
+        this.moreTypes ? RF(kk, 16, Fk) : UF(QF ? Buffer.from(kk) : new Uint8Array(kk), Fk)
       }
     }, {
-      pack(SS, HS) {
-        let gS = SS.constructor;
-        gS !== wH && this.moreTypes ? yH(SS, gH.indexOf(gS.name), HS) : VH(SS, HS)
+      pack(kk, Fk) {
+        let Ik = kk.constructor;
+        Ik !== VF && this.moreTypes ? RF(kk, XF.indexOf(Ik.name), Fk) : UF(kk, Fk)
       }
     }, {
-      pack(SS, HS) {
+      pack(kk, Fk) {
         let {
-          target: gS,
-          position: tS
-        } = HS(1);
-        gS[tS] = 193
+          target: Ik,
+          position: Xk
+        } = Fk(1);
+        Ik[Xk] = 193
       }
     }];
-    let pH = new AH({
+    let fF = new bF({
       useRecords: !1
     });
-    const sH = pH.pack,
-      BH = pH.pack,
-      MH = AH,
+    const BF = fF.pack,
+      dF = fF.pack,
+      YF = bF,
       {
-        NEVER: FH,
-        ALWAYS: RH,
-        DECIMAL_ROUND: TH,
-        DECIMAL_FIT: oH
-      } = aH,
-      lH = 512,
-      mH = 1024,
-      eH = 2048;
-    const rH = function(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (!SS || "object" !== typeof SS) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
-        const gS = new dS(HS);
-        let tS;
-        const bS = SS => {
-          let HS;
-          tS && (SS = Buffer.concat([tS, SS]), tS = void 0);
+        NEVER: AF,
+        ALWAYS: gF,
+        DECIMAL_ROUND: mF,
+        DECIMAL_FIT: hF
+      } = eF,
+      rF = 512,
+      DF = 1024,
+      MF = 2048;
+    const kI = function(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (!kk || "object" !== typeof kk) throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a promise");
+        const Ik = new Ek(Fk);
+        let Xk;
+        const Tk = kk => {
+          let Fk;
+          Xk && (kk = Buffer.concat([Xk, kk]), Xk = void 0);
           try {
-            HS = gS.unpackMultiple(SS)
-          } catch (bS) {
-            if (!bS.incomplete) throw bS;
-            tS = SS.slice(bS.lastPosition), HS = bS.values
+            Fk = Ik.unpackMultiple(kk)
+          } catch (Tk) {
+            if (!Tk.incomplete) throw Tk;
+            Xk = kk.slice(Tk.lastPosition), Fk = Tk.values
           }
-          return HS
+          return Fk
         };
-        return "function" === typeof SS[Symbol.iterator] ? function*() {
-          for (const HS of SS) yield* bS(HS)
-        }() : "function" === typeof SS[Symbol.asyncIterator] ? async function*() {
-          for await (const HS of SS) yield* bS(HS)
+        return "function" === typeof kk[Symbol.iterator] ? function*() {
+          for (const Fk of kk) yield* Tk(Fk)
+        }() : "function" === typeof kk[Symbol.asyncIterator] ? async function*() {
+          for await (const Fk of kk) yield* Tk(Fk)
         }(): void 0
       },
-      Sg = function(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (SS && "object" === typeof SS) {
-          if ("function" === typeof SS[Symbol.iterator]) return function*(SS, HS) {
-            const gS = new AH(HS);
-            for (const tS of SS) yield gS.pack(tS)
-          }(SS, HS);
-          if ("function" === typeof SS.then || "function" === typeof SS[Symbol.asyncIterator]) return async function*(SS, HS) {
-            const gS = new AH(HS);
-            for await (const tS of SS) yield gS.pack(tS)
-          }(SS, HS);
+      FI = function(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (kk && "object" === typeof kk) {
+          if ("function" === typeof kk[Symbol.iterator]) return function*(kk, Fk) {
+            const Ik = new bF(Fk);
+            for (const Xk of kk) yield Ik.pack(Xk)
+          }(kk, Fk);
+          if ("function" === typeof kk.then || "function" === typeof kk[Symbol.asyncIterator]) return async function*(kk, Fk) {
+            const Ik = new bF(Fk);
+            for await (const Xk of kk) yield Ik.pack(Xk)
+          }(kk, Fk);
           throw new Error("first argument must be an Iterable, Async Iterable, Iterator, Async Iterator, or a Promise")
         }
         throw new Error("first argument must be an Iterable, Async Iterable, or a Promise for an Async Iterable")
       },
-      Hg = !1,
-      gg = !0
+      II = !1,
+      XI = !0
   },
-  9273: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      $changes: () => jS,
-      $childType: () => GS,
-      $decoder: () => IS,
-      $deleteByIndex: () => aS,
-      $encoder: () => uS,
-      $filter: () => fS,
-      $getByIndex: () => kS,
-      $numFields: () => OS,
-      $refId: () => NS,
-      $track: () => qS,
-      $values: () => DS,
-      ArraySchema: () => gt,
-      Callbacks: () => tb,
-      ChangeTree: () => vg,
-      CollectionSchema: () => Xt,
-      Decoder: () => ot,
-      Encoder: () => Mt,
-      FieldBuilder: () => qt,
-      MapSchema: () => bt,
-      Metadata: () => TH,
-      OPERATION: () => bS,
-      Reflection: () => rt,
-      ReflectionField: () => mt,
-      ReflectionType: () => et,
-      Root: () => Lt,
-      Schema: () => vt,
-      SetSchema: () => xt,
-      StateCallbackStrategy: () => gb,
-      StateView: () => it,
-      StreamSchema: () => Nt,
-      TypeContext: () => UH,
-      createPool: () => Xb,
-      decode: () => PH,
-      decodeKeyValueOperation: () => lg,
-      decodeSchemaOperation: () => og,
-      defineCustomTypes: () => hH,
-      defineTypes: () => Ot,
-      deprecated: () => Zt,
-      dumpChanges: () => ct,
-      encode: () => HH,
-      encodeArray: () => Wg,
-      encodeIndexedEntry: () => Vg,
-      encodeKeyValueOperation: () => ig,
-      encodeMapEntry: () => yg,
-      encodeSchemaOperation: () => Ag,
-      fK: () => Gt,
-      fullStateOnly: () => Qt,
-      getDecoderStateCallbacks: () => Sb,
-      getEncodeDescriptor: () => Sg,
-      getRawChangesCallback: () => Hb,
-      isBuilder: () => ut,
-      patchOnly: () => Pt,
-      registerType: () => wH,
-      schema: () => dt,
-      t: () => Kt,
-      type: () => Dt,
-      unreliable: () => nt,
-      view: () => Ct
+  9098: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      $changes: () => wk,
+      $childType: () => Hk,
+      $decoder: () => Lk,
+      $deleteByIndex: () => jk,
+      $encoder: () => qk,
+      $filter: () => tk,
+      $getByIndex: () => Zk,
+      $numFields: () => vk,
+      $refId: () => lk,
+      $track: () => ak,
+      $values: () => Qk,
+      ArraySchema: () => XX,
+      Callbacks: () => XT,
+      ChangeTree: () => nI,
+      CollectionSchema: () => yX,
+      Decoder: () => mX,
+      Encoder: () => dX,
+      FieldBuilder: () => qX,
+      MapSchema: () => iX,
+      Metadata: () => mF,
+      OPERATION: () => Tk,
+      Reflection: () => MX,
+      ReflectionField: () => rX,
+      ReflectionType: () => DX,
+      Root: () => GX,
+      Schema: () => OX,
+      SetSchema: () => lX,
+      StateCallbackStrategy: () => IT,
+      StateView: () => UX,
+      StreamSchema: () => aX,
+      TypeContext: () => WF,
+      createPool: () => iT,
+      decode: () => KF,
+      decodeKeyValueOperation: () => rI,
+      decodeSchemaOperation: () => hI,
+      defineCustomTypes: () => zF,
+      defineTypes: () => oX,
+      deprecated: () => zX,
+      dumpChanges: () => EX,
+      encode: () => IF,
+      encodeArray: () => NI,
+      encodeIndexedEntry: () => UI,
+      encodeKeyValueOperation: () => CI,
+      encodeMapEntry: () => RI,
+      encodeSchemaOperation: () => bI,
+      le: () => HX,
+      fullStateOnly: () => KX,
+      getDecoderStateCallbacks: () => kT,
+      getEncodeDescriptor: () => FI,
+      getRawChangesCallback: () => FT,
+      isBuilder: () => LX,
+      patchOnly: () => PX,
+      registerType: () => VF,
+      schema: () => vX,
+      t: () => eX,
+      type: () => QX,
+      unreliable: () => xX,
+      view: () => JX
     });
-    const tS = 255;
-    var bS;
+    const Xk = 255;
+    var Tk;
 
-    function XS(SS) {
-      Object.defineProperty(SS, Symbol.metadata, {
+    function ik(kk) {
+      Object.defineProperty(kk, Symbol.metadata, {
         value: void 0,
         writable: !0,
         configurable: !0,
         enumerable: !1
       })
-    }! function(SS) {
-      SS[SS.ADD = 128] = "ADD", SS[SS.REPLACE = 0] = "REPLACE", SS[SS.DELETE = 64] = "DELETE", SS[SS.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", SS[SS.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", SS[SS.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", SS[SS.CLEAR = 10] = "CLEAR", SS[SS.REVERSE = 15] = "REVERSE", SS[SS.MOVE = 32] = "MOVE", SS[SS.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", SS[SS.ADD_BY_REFID = 129] = "ADD_BY_REFID"
-    }(bS || (bS = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
-    const xS = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
+    }! function(kk) {
+      kk[kk.ADD = 128] = "ADD", kk[kk.REPLACE = 0] = "REPLACE", kk[kk.DELETE = 64] = "DELETE", kk[kk.DELETE_AND_MOVE = 96] = "DELETE_AND_MOVE", kk[kk.MOVE_AND_ADD = 160] = "MOVE_AND_ADD", kk[kk.DELETE_AND_ADD = 192] = "DELETE_AND_ADD", kk[kk.CLEAR = 10] = "CLEAR", kk[kk.REVERSE = 15] = "REVERSE", kk[kk.MOVE = 32] = "MOVE", kk[kk.DELETE_BY_REFID = 33] = "DELETE_BY_REFID", kk[kk.ADD_BY_REFID = 129] = "ADD_BY_REFID"
+    }(Tk || (Tk = {})), Symbol.metadata ??= Symbol.for("Symbol.metadata");
+    const yk = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof global ? global : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : {};
     if ("function" === typeof Symbol && "function" !== typeof Symbol.for) {
-      const SS = "colyseus.symbolRegistry",
-        HS = xS[SS] || (xS[SS] = Object.create(null));
-      Symbol.for = function(SS) {
-        return HS[SS] || (HS[SS] = Symbol(SS))
-      }, Symbol.keyFor = function(SS) {
-        for (const gS in HS)
-          if (HS[gS] === SS) return gS
+      const kk = "colyseus.symbolRegistry",
+        Fk = yk[kk] || (yk[kk] = Object.create(null));
+      Symbol.for = function(kk) {
+        return Fk[kk] || (Fk[kk] = Symbol(kk))
+      }, Symbol.keyFor = function(kk) {
+        for (const Ik in Fk)
+          if (Fk[Ik] === kk) return Ik
       }
     }
-    const NS = Symbol.for("$refId"),
-      qS = "~track",
-      uS = "~encoder",
-      IS = "~decoder",
-      fS = "~filter",
-      kS = "~getByIndex",
-      aS = "~deleteByIndex",
-      KS = "~resyncPrune",
-      jS = Symbol.for("$changes"),
-      GS = Symbol.for("$childType"),
-      CS = Symbol.for("$proxyTarget"),
-      nS = "~onEncodeEnd",
-      PS = "~reset",
-      QS = "~onDecodeEnd",
-      DS = Symbol.for("$values"),
-      wS = "~builder",
-      hS = "~descriptors",
-      ZS = "~__encodeDescriptor",
-      JS = "~encoders",
-      OS = "~__numFields",
-      dS = "~__refTypeFieldIndexes",
-      cS = "~__viewFieldIndexes",
-      vS = "$__fieldIndexesByViewTag",
-      ES = "~__unreliableFieldIndexes",
-      LS = "~__patchOnlyFieldIndexes",
-      YS = "~__fullSyncSkipIndexes",
-      AS = "~__fullStateOnlyFieldIndexes",
-      yS = "~__streamFieldIndexes",
-      VS = "~__streamPriorities";
-    let iS;
+    const lk = Symbol.for("$refId"),
+      ak = "~track",
+      qk = "~encoder",
+      Lk = "~decoder",
+      tk = "~filter",
+      Zk = "~getByIndex",
+      jk = "~deleteByIndex",
+      ek = "~resyncPrune",
+      wk = Symbol.for("$changes"),
+      Hk = Symbol.for("$childType"),
+      Jk = Symbol.for("$proxyTarget"),
+      xk = "~onEncodeEnd",
+      Pk = "~reset",
+      Kk = "~onDecodeEnd",
+      Qk = Symbol.for("$values"),
+      sk = "~builder",
+      Vk = "~descriptors",
+      zk = "~__encodeDescriptor",
+      Sk = "~encoders",
+      vk = "~__numFields",
+      Ek = "~__refTypeFieldIndexes",
+      Ok = "~__viewFieldIndexes",
+      nk = "$__fieldIndexesByViewTag",
+      Gk = "~__unreliableFieldIndexes",
+      pk = "~__patchOnlyFieldIndexes",
+      uk = "~__fullSyncSkipIndexes",
+      bk = "~__fullStateOnlyFieldIndexes",
+      Rk = "~__streamFieldIndexes",
+      Uk = "~__streamPriorities";
+    let Ck;
     try {
-      iS = new TextEncoder
-    } catch (xb) {}
-    const WS = new ArrayBuffer(8),
-      zS = new Int32Array(WS),
-      US = new Float32Array(WS),
-      pS = new Float64Array(WS),
-      sS = new BigInt64Array(WS),
-      BS = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(SS, HS) {
-        for (var gS = 0, tS = 0, bS = 0, XS = SS.length; bS < XS; bS++)(gS = SS.charCodeAt(bS)) < 128 ? tS += 1 : gS < 2048 ? tS += 2 : gS < 55296 || gS >= 57344 ? tS += 3 : (bS++, tS += 4);
-        return tS
+      Ck = new TextEncoder
+    } catch (yT) {}
+    const Nk = new ArrayBuffer(8),
+      ck = new Int32Array(Nk),
+      Wk = new Float32Array(Nk),
+      fk = new Float64Array(Nk),
+      Bk = new BigInt64Array(Nk),
+      dk = "undefined" !== typeof Buffer && Buffer.byteLength ? Buffer.byteLength : function(kk, Fk) {
+        for (var Ik = 0, Xk = 0, Tk = 0, ik = kk.length; Tk < ik; Tk++)(Ik = kk.charCodeAt(Tk)) < 128 ? Xk += 1 : Ik < 2048 ? Xk += 2 : Ik < 55296 || Ik >= 57344 ? Xk += 3 : (Tk++, Xk += 4);
+        return Xk
       };
 
-    function MS(SS, HS, gS) {
-      for (var tS = 0, bS = 0, XS = HS.length; bS < XS; bS++)(tS = HS.charCodeAt(bS)) < 128 ? SS[gS.offset++] = tS : tS < 2048 ? (SS[gS.offset] = 192 | tS >> 6, SS[gS.offset + 1] = 128 | 63 & tS, gS.offset += 2) : tS < 55296 || tS >= 57344 ? (SS[gS.offset] = 224 | tS >> 12, SS[gS.offset + 1] = 128 | tS >> 6 & 63, SS[gS.offset + 2] = 128 | 63 & tS, gS.offset += 3) : (bS++, tS = 65536 + ((1023 & tS) << 10 | 1023 & HS.charCodeAt(bS)), SS[gS.offset] = 240 | tS >> 18, SS[gS.offset + 1] = 128 | tS >> 12 & 63, SS[gS.offset + 2] = 128 | tS >> 6 & 63, SS[gS.offset + 3] = 128 | 63 & tS, gS.offset += 4)
+    function Yk(kk, Fk, Ik) {
+      for (var Xk = 0, Tk = 0, ik = Fk.length; Tk < ik; Tk++)(Xk = Fk.charCodeAt(Tk)) < 128 ? kk[Ik.offset++] = Xk : Xk < 2048 ? (kk[Ik.offset] = 192 | Xk >> 6, kk[Ik.offset + 1] = 128 | 63 & Xk, Ik.offset += 2) : Xk < 55296 || Xk >= 57344 ? (kk[Ik.offset] = 224 | Xk >> 12, kk[Ik.offset + 1] = 128 | Xk >> 6 & 63, kk[Ik.offset + 2] = 128 | 63 & Xk, Ik.offset += 3) : (Tk++, Xk = 65536 + ((1023 & Xk) << 10 | 1023 & Fk.charCodeAt(Tk)), kk[Ik.offset] = 240 | Xk >> 18, kk[Ik.offset + 1] = 128 | Xk >> 12 & 63, kk[Ik.offset + 2] = 128 | Xk >> 6 & 63, kk[Ik.offset + 3] = 128 | 63 & Xk, Ik.offset += 4)
     }
 
-    function FS(SS, HS, gS) {
-      SS[gS.offset++] = 255 & HS
+    function Ak(kk, Fk, Ik) {
+      kk[Ik.offset++] = 255 & Fk
     }
 
-    function RS(SS, HS, gS) {
-      SS[gS.offset++] = 255 & HS, SS[gS.offset++] = HS >> 8 & 255
+    function gk(kk, Fk, Ik) {
+      kk[Ik.offset++] = 255 & Fk, kk[Ik.offset++] = Fk >> 8 & 255
     }
 
-    function TS(SS, HS, gS) {
-      SS[gS.offset++] = 255 & HS, SS[gS.offset++] = HS >> 8 & 255
+    function mk(kk, Fk, Ik) {
+      kk[Ik.offset++] = 255 & Fk, kk[Ik.offset++] = Fk >> 8 & 255
     }
 
-    function oS(SS, HS, gS) {
-      SS[gS.offset++] = 255 & HS, SS[gS.offset++] = HS >> 8 & 255, SS[gS.offset++] = HS >> 16 & 255, SS[gS.offset++] = HS >> 24 & 255
+    function hk(kk, Fk, Ik) {
+      kk[Ik.offset++] = 255 & Fk, kk[Ik.offset++] = Fk >> 8 & 255, kk[Ik.offset++] = Fk >> 16 & 255, kk[Ik.offset++] = Fk >> 24 & 255
     }
 
-    function lS(SS, HS, gS) {
-      const tS = HS >> 24,
-        bS = HS >> 16,
-        XS = HS >> 8,
-        xS = HS;
-      SS[gS.offset++] = 255 & xS, SS[gS.offset++] = 255 & XS, SS[gS.offset++] = 255 & bS, SS[gS.offset++] = 255 & tS
+    function rk(kk, Fk, Ik) {
+      const Xk = Fk >> 24,
+        Tk = Fk >> 16,
+        ik = Fk >> 8,
+        yk = Fk;
+      kk[Ik.offset++] = 255 & yk, kk[Ik.offset++] = 255 & ik, kk[Ik.offset++] = 255 & Tk, kk[Ik.offset++] = 255 & Xk
     }
 
-    function mS(SS, HS, gS) {
-      const tS = Math.floor(HS / Math.pow(2, 32));
-      lS(SS, HS >>> 0, gS), lS(SS, tS, gS)
+    function Dk(kk, Fk, Ik) {
+      const Xk = Math.floor(Fk / Math.pow(2, 32));
+      rk(kk, Fk >>> 0, Ik), rk(kk, Xk, Ik)
     }
 
-    function eS(SS, HS, gS) {
-      const tS = HS / Math.pow(2, 32) | 0;
-      lS(SS, HS >>> 0, gS), lS(SS, tS, gS)
+    function Mk(kk, Fk, Ik) {
+      const Xk = Fk / Math.pow(2, 32) | 0;
+      rk(kk, Fk >>> 0, Ik), rk(kk, Xk, Ik)
     }
 
-    function rS(SS, HS, gS) {
-      US[0] = HS, oS(SS, zS[0], gS)
+    function kF(kk, Fk, Ik) {
+      Wk[0] = Fk, hk(kk, ck[0], Ik)
     }
 
-    function SH(SS, HS, gS) {
-      pS[0] = HS, oS(SS, zS[0], gS), oS(SS, zS[1], gS)
+    function FF(kk, Fk, Ik) {
+      fk[0] = Fk, hk(kk, ck[0], Ik), hk(kk, ck[1], Ik)
     }
-    const HH = {
-        int8: FS,
-        uint8: function(SS, HS, gS) {
-          SS[gS.offset++] = 255 & HS
+    const IF = {
+        int8: Ak,
+        uint8: function(kk, Fk, Ik) {
+          kk[Ik.offset++] = 255 & Fk
         },
-        int16: RS,
-        uint16: TS,
-        int32: oS,
-        uint32: lS,
-        int64: mS,
-        uint64: eS,
-        bigint64: function(SS, HS, gS) {
-          sS[0] = BigInt.asIntN(64, HS), oS(SS, zS[0], gS), oS(SS, zS[1], gS)
+        int16: gk,
+        uint16: mk,
+        int32: hk,
+        uint32: rk,
+        int64: Dk,
+        uint64: Mk,
+        bigint64: function(kk, Fk, Ik) {
+          Bk[0] = BigInt.asIntN(64, Fk), hk(kk, ck[0], Ik), hk(kk, ck[1], Ik)
         },
-        biguint64: function(SS, HS, gS) {
-          sS[0] = BigInt.asIntN(64, HS), oS(SS, zS[0], gS), oS(SS, zS[1], gS)
+        biguint64: function(kk, Fk, Ik) {
+          Bk[0] = BigInt.asIntN(64, Fk), hk(kk, ck[0], Ik), hk(kk, ck[1], Ik)
         },
-        float32: rS,
-        float64: SH,
-        boolean: function(SS, HS, gS) {
-          SS[gS.offset++] = HS ? 1 : 0
+        float32: kF,
+        float64: FF,
+        boolean: function(kk, Fk, Ik) {
+          kk[Ik.offset++] = Fk ? 1 : 0
         },
-        string: function(SS, HS, gS) {
-          HS || (HS = "");
-          let tS = BS(HS, "utf8"),
-            bS = 0;
-          if (tS < 32) SS[gS.offset++] = 160 | tS, bS = 1;
-          else if (tS < 256) SS[gS.offset++] = 217, SS[gS.offset++] = tS, bS = 2;
-          else if (tS < 65536) SS[gS.offset++] = 218, TS(SS, tS, gS), bS = 3;
+        string: function(kk, Fk, Ik) {
+          Fk || (Fk = "");
+          let Xk = dk(Fk, "utf8"),
+            Tk = 0;
+          if (Xk < 32) kk[Ik.offset++] = 160 | Xk, Tk = 1;
+          else if (Xk < 256) kk[Ik.offset++] = 217, kk[Ik.offset++] = Xk, Tk = 2;
+          else if (Xk < 65536) kk[Ik.offset++] = 218, mk(kk, Xk, Ik), Tk = 3;
           else {
-            if (!(tS < 4294967296)) throw new Error("String too long");
-            SS[gS.offset++] = 219, lS(SS, tS, gS), bS = 5
+            if (!(Xk < 4294967296)) throw new Error("String too long");
+            kk[Ik.offset++] = 219, rk(kk, Xk, Ik), Tk = 5
           }
-          return MS(SS, HS, gS), bS + tS
+          return Yk(kk, Fk, Ik), Tk + Xk
         },
-        number: function SS(HS, gS, tS) {
-          return isNaN(gS) ? SS(HS, 0, tS) : isFinite(gS) ? gS !== (0 | gS) ? Math.abs(gS) <= 34028235e31 && (US[0] = gS, Math.abs(Math.abs(US[0]) - Math.abs(gS)) < 1e-4) ? (HS[tS.offset++] = 202, rS(HS, gS, tS), 5) : (HS[tS.offset++] = 203, SH(HS, gS, tS), 9) : gS >= 0 ? gS < 128 ? (HS[tS.offset++] = 255 & gS, 1) : gS < 256 ? (HS[tS.offset++] = 204, HS[tS.offset++] = 255 & gS, 2) : gS < 65536 ? (HS[tS.offset++] = 205, TS(HS, gS, tS), 3) : gS < 4294967296 ? (HS[tS.offset++] = 206, lS(HS, gS, tS), 5) : (HS[tS.offset++] = 207, eS(HS, gS, tS), 9) : gS >= -32 ? (HS[tS.offset++] = 224 | gS + 32, 1) : gS >= -128 ? (HS[tS.offset++] = 208, FS(HS, gS, tS), 2) : gS >= -32768 ? (HS[tS.offset++] = 209, RS(HS, gS, tS), 3) : gS >= -2147483648 ? (HS[tS.offset++] = 210, oS(HS, gS, tS), 5) : (HS[tS.offset++] = 211, mS(HS, gS, tS), 9) : SS(HS, gS > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, tS)
+        number: function kk(Fk, Ik, Xk) {
+          return isNaN(Ik) ? kk(Fk, 0, Xk) : isFinite(Ik) ? Ik !== (0 | Ik) ? Math.abs(Ik) <= 34028235e31 && (Wk[0] = Ik, Math.abs(Math.abs(Wk[0]) - Math.abs(Ik)) < 1e-4) ? (Fk[Xk.offset++] = 202, kF(Fk, Ik, Xk), 5) : (Fk[Xk.offset++] = 203, FF(Fk, Ik, Xk), 9) : Ik >= 0 ? Ik < 128 ? (Fk[Xk.offset++] = 255 & Ik, 1) : Ik < 256 ? (Fk[Xk.offset++] = 204, Fk[Xk.offset++] = 255 & Ik, 2) : Ik < 65536 ? (Fk[Xk.offset++] = 205, mk(Fk, Ik, Xk), 3) : Ik < 4294967296 ? (Fk[Xk.offset++] = 206, rk(Fk, Ik, Xk), 5) : (Fk[Xk.offset++] = 207, Mk(Fk, Ik, Xk), 9) : Ik >= -32 ? (Fk[Xk.offset++] = 224 | Ik + 32, 1) : Ik >= -128 ? (Fk[Xk.offset++] = 208, Ak(Fk, Ik, Xk), 2) : Ik >= -32768 ? (Fk[Xk.offset++] = 209, gk(Fk, Ik, Xk), 3) : Ik >= -2147483648 ? (Fk[Xk.offset++] = 210, hk(Fk, Ik, Xk), 5) : (Fk[Xk.offset++] = 211, Dk(Fk, Ik, Xk), 9) : kk(Fk, Ik > 0 ? Number.MAX_SAFE_INTEGER : -Number.MAX_SAFE_INTEGER, Xk)
         },
-        utf8Write: MS,
-        utf8Length: BS
+        utf8Write: Yk,
+        utf8Length: dk
       },
-      gH = new ArrayBuffer(8),
-      tH = new Int32Array(gH),
-      bH = new Float32Array(gH),
-      XH = new Float64Array(gH),
-      xH = new BigUint64Array(gH),
-      NH = new BigInt64Array(gH);
+      XF = new ArrayBuffer(8),
+      TF = new Int32Array(XF),
+      iF = new Float32Array(XF),
+      yF = new Float64Array(XF),
+      lF = new BigUint64Array(XF),
+      aF = new BigInt64Array(XF);
 
-    function qH(SS, HS, gS) {
-      gS > SS.length - HS.offset && (gS = SS.length - HS.offset);
-      for (var tS = "", bS = 0, XS = HS.offset, xS = HS.offset + gS; XS < xS; XS++) {
-        var NS = SS[XS];
-        if (0 !== (128 & NS))
-          if (192 !== (224 & NS))
-            if (224 !== (240 & NS)) {
-              if (240 !== (248 & NS)) {
-                console.error("decode.utf8Read(): Invalid byte " + NS + " at offset " + XS + ". Skip to end of string: " + (HS.offset + gS));
+    function qF(kk, Fk, Ik) {
+      Ik > kk.length - Fk.offset && (Ik = kk.length - Fk.offset);
+      for (var Xk = "", Tk = 0, ik = Fk.offset, yk = Fk.offset + Ik; ik < yk; ik++) {
+        var lk = kk[ik];
+        if (0 !== (128 & lk))
+          if (192 !== (224 & lk))
+            if (224 !== (240 & lk)) {
+              if (240 !== (248 & lk)) {
+                console.error("decode.utf8Read(): Invalid byte " + lk + " at offset " + ik + ". Skip to end of string: " + (Fk.offset + Ik));
                 break
-              }(bS = (7 & NS) << 18 | (63 & SS[++XS]) << 12 | (63 & SS[++XS]) << 6 | 63 & SS[++XS]) >= 65536 ? (bS -= 65536, tS += String.fromCharCode(55296 + (bS >>> 10), 56320 + (1023 & bS))) : tS += String.fromCharCode(bS)
-            } else tS += String.fromCharCode((15 & NS) << 12 | (63 & SS[++XS]) << 6 | 63 & SS[++XS]);
-        else tS += String.fromCharCode((31 & NS) << 6 | 63 & SS[++XS]);
-        else tS += String.fromCharCode(NS)
+              }(Tk = (7 & lk) << 18 | (63 & kk[++ik]) << 12 | (63 & kk[++ik]) << 6 | 63 & kk[++ik]) >= 65536 ? (Tk -= 65536, Xk += String.fromCharCode(55296 + (Tk >>> 10), 56320 + (1023 & Tk))) : Xk += String.fromCharCode(Tk)
+            } else Xk += String.fromCharCode((15 & lk) << 12 | (63 & kk[++ik]) << 6 | 63 & kk[++ik]);
+        else Xk += String.fromCharCode((31 & lk) << 6 | 63 & kk[++ik]);
+        else Xk += String.fromCharCode(lk)
       }
-      return HS.offset += gS, tS
+      return Fk.offset += Ik, Xk
     }
 
-    function uH(SS, HS) {
-      return IH(SS, HS) << 24 >> 24
+    function LF(kk, Fk) {
+      return tF(kk, Fk) << 24 >> 24
     }
 
-    function IH(SS, HS) {
-      return SS[HS.offset++]
+    function tF(kk, Fk) {
+      return kk[Fk.offset++]
     }
 
-    function fH(SS, HS) {
-      return kH(SS, HS) << 16 >> 16
+    function ZF(kk, Fk) {
+      return jF(kk, Fk) << 16 >> 16
     }
 
-    function kH(SS, HS) {
-      return SS[HS.offset++] | SS[HS.offset++] << 8
+    function jF(kk, Fk) {
+      return kk[Fk.offset++] | kk[Fk.offset++] << 8
     }
 
-    function aH(SS, HS) {
-      return SS[HS.offset++] | SS[HS.offset++] << 8 | SS[HS.offset++] << 16 | SS[HS.offset++] << 24
+    function eF(kk, Fk) {
+      return kk[Fk.offset++] | kk[Fk.offset++] << 8 | kk[Fk.offset++] << 16 | kk[Fk.offset++] << 24
     }
 
-    function KH(SS, HS) {
-      return aH(SS, HS) >>> 0
+    function wF(kk, Fk) {
+      return eF(kk, Fk) >>> 0
     }
 
-    function jH(SS, HS) {
-      return tH[0] = aH(SS, HS), bH[0]
+    function HF(kk, Fk) {
+      return TF[0] = eF(kk, Fk), iF[0]
     }
 
-    function GH(SS, HS) {
-      return tH[0] = aH(SS, HS), tH[1] = aH(SS, HS), XH[0]
+    function JF(kk, Fk) {
+      return TF[0] = eF(kk, Fk), TF[1] = eF(kk, Fk), yF[0]
     }
 
-    function CH(SS, HS) {
-      const gS = KH(SS, HS);
-      return aH(SS, HS) * Math.pow(2, 32) + gS
+    function xF(kk, Fk) {
+      const Ik = wF(kk, Fk);
+      return eF(kk, Fk) * Math.pow(2, 32) + Ik
     }
 
-    function nH(SS, HS) {
-      const gS = KH(SS, HS);
-      return KH(SS, HS) * Math.pow(2, 32) + gS
+    function PF(kk, Fk) {
+      const Ik = wF(kk, Fk);
+      return wF(kk, Fk) * Math.pow(2, 32) + Ik
     }
-    const PH = {
-        utf8Read: qH,
-        int8: uH,
-        uint8: IH,
-        int16: fH,
-        uint16: kH,
-        int32: aH,
-        uint32: KH,
-        float32: jH,
-        float64: GH,
-        int64: CH,
-        uint64: nH,
-        bigint64: function(SS, HS) {
-          return tH[0] = aH(SS, HS), tH[1] = aH(SS, HS), NH[0]
+    const KF = {
+        utf8Read: qF,
+        int8: LF,
+        uint8: tF,
+        int16: ZF,
+        uint16: jF,
+        int32: eF,
+        uint32: wF,
+        float32: HF,
+        float64: JF,
+        int64: xF,
+        uint64: PF,
+        bigint64: function(kk, Fk) {
+          return TF[0] = eF(kk, Fk), TF[1] = eF(kk, Fk), aF[0]
         },
-        biguint64: function(SS, HS) {
-          return tH[0] = aH(SS, HS), tH[1] = aH(SS, HS), xH[0]
+        biguint64: function(kk, Fk) {
+          return TF[0] = eF(kk, Fk), TF[1] = eF(kk, Fk), lF[0]
         },
-        boolean: function(SS, HS) {
-          return IH(SS, HS) > 0
+        boolean: function(kk, Fk) {
+          return tF(kk, Fk) > 0
         },
-        string: function(SS, HS) {
-          const gS = SS[HS.offset++];
-          let tS;
-          return gS < 192 ? tS = 31 & gS : 217 === gS ? tS = IH(SS, HS) : 218 === gS ? tS = kH(SS, HS) : 219 === gS && (tS = KH(SS, HS)), qH(SS, HS, tS)
+        string: function(kk, Fk) {
+          const Ik = kk[Fk.offset++];
+          let Xk;
+          return Ik < 192 ? Xk = 31 & Ik : 217 === Ik ? Xk = tF(kk, Fk) : 218 === Ik ? Xk = jF(kk, Fk) : 219 === Ik && (Xk = wF(kk, Fk)), qF(kk, Fk, Xk)
         },
-        number: function(SS, HS) {
-          const gS = SS[HS.offset++];
-          return gS < 128 ? gS : 202 === gS ? jH(SS, HS) : 203 === gS ? GH(SS, HS) : 204 === gS ? IH(SS, HS) : 205 === gS ? kH(SS, HS) : 206 === gS ? KH(SS, HS) : 207 === gS ? nH(SS, HS) : 208 === gS ? uH(SS, HS) : 209 === gS ? fH(SS, HS) : 210 === gS ? aH(SS, HS) : 211 === gS ? CH(SS, HS) : gS > 223 ? -1 * (255 - gS + 1) : void 0
+        number: function(kk, Fk) {
+          const Ik = kk[Fk.offset++];
+          return Ik < 128 ? Ik : 202 === Ik ? HF(kk, Fk) : 203 === Ik ? JF(kk, Fk) : 204 === Ik ? tF(kk, Fk) : 205 === Ik ? jF(kk, Fk) : 206 === Ik ? wF(kk, Fk) : 207 === Ik ? PF(kk, Fk) : 208 === Ik ? LF(kk, Fk) : 209 === Ik ? ZF(kk, Fk) : 210 === Ik ? eF(kk, Fk) : 211 === Ik ? xF(kk, Fk) : Ik > 223 ? -1 * (255 - Ik + 1) : void 0
         },
-        stringCheck: function(SS, HS) {
-          const gS = SS[HS.offset];
-          return gS < 192 && gS > 160 || 217 === gS || 218 === gS || 219 === gS
+        stringCheck: function(kk, Fk) {
+          const Ik = kk[Fk.offset];
+          return Ik < 192 && Ik > 160 || 217 === Ik || 218 === Ik || 219 === Ik
         }
       },
-      QH = {},
-      DH = new Map;
+      QF = {},
+      sF = new Map;
 
-    function wH(SS, HS) {
-      HS.constructor && (Object.prototype.hasOwnProperty.call(HS, "constructor") && null == HS.constructor[Symbol.metadata] && XS(HS.constructor), DH.set(HS.constructor, SS), QH[SS] = HS), HS.encode && (HH[SS] = HS.encode), HS.decode && (PH[SS] = HS.decode)
+    function VF(kk, Fk) {
+      Fk.constructor && (Object.prototype.hasOwnProperty.call(Fk, "constructor") && null == Fk.constructor[Symbol.metadata] && ik(Fk.constructor), sF.set(Fk.constructor, kk), QF[kk] = Fk), Fk.encode && (IF[kk] = Fk.encode), Fk.decode && (KF[kk] = Fk.decode)
     }
 
-    function hH(SS) {
-      for (const HS in SS) wH(HS, SS[HS]);
-      return SS => Dt(SS)
+    function zF(kk) {
+      for (const Fk in kk) VF(Fk, kk[Fk]);
+      return kk => QX(kk)
     }
-    const ZH = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
+    const SF = "ArraySchema does not support streaming \u2014 positional ops (splice / unshift / reverse) shift subsequent indexes, so holding ADDs back for a later tick under `maxPerTick` would desync the decoder. Use `t.stream(X)` (stable monotonic positions) or `t.map(X).stream()` (stable keys) instead.";
 
-    function JH() {
+    function oF() {
       return {
         pendingByView: new Map,
         sentByView: new Map,
@@ -2450,160 +2450,160 @@ export const modules = {
       }
     }
 
-    function OH(SS) {
-      return SS._stream ??= JH()
+    function vF(kk) {
+      return kk._stream ??= oF()
     }
 
-    function dH(SS, HS, gS) {
-      0 === HS.activeViews.size && OH(SS).broadcastPending.add(gS)
+    function EF(kk, Fk, Ik) {
+      0 === Fk.activeViews.size && vF(kk).broadcastPending.add(Ik)
     }
 
-    function cH(SS, HS, gS, tS) {
-      const XS = SS._stream;
-      if (void 0 === XS) return !0;
-      let xS = !1;
-      return XS.broadcastPending.delete(tS) ? xS = !0 : XS.sentBroadcast.delete(tS) && XS.broadcastDeletes.add(tS), HS.forEachActiveView((SS => {
-        const HS = XS.pendingByView.get(SS.id);
-        if (HS?.has(tS)) return HS.delete(tS), void(xS = !0);
-        const NS = XS.sentByView.get(SS.id);
-        if (NS?.has(tS)) {
-          NS.delete(tS);
-          let HS = SS.changes.get(gS);
-          void 0 === HS && (HS = new Map, SS.changes.set(gS, HS)), HS.set(tS, bS.DELETE)
+    function OF(kk, Fk, Ik, Xk) {
+      const ik = kk._stream;
+      if (void 0 === ik) return !0;
+      let yk = !1;
+      return ik.broadcastPending.delete(Xk) ? yk = !0 : ik.sentBroadcast.delete(Xk) && ik.broadcastDeletes.add(Xk), Fk.forEachActiveView((kk => {
+        const Fk = ik.pendingByView.get(kk.id);
+        if (Fk?.has(Xk)) return Fk.delete(Xk), void(yk = !0);
+        const lk = ik.sentByView.get(kk.id);
+        if (lk?.has(Xk)) {
+          lk.delete(Xk);
+          let Fk = kk.changes.get(Ik);
+          void 0 === Fk && (Fk = new Map, kk.changes.set(Ik, Fk)), Fk.set(Xk, Tk.DELETE)
         }
-      })), xS
+      })), yk
     }
 
-    function vH(SS, HS) {
-      const gS = SS._stream?.pendingByView;
-      if (void 0 === gS) return !1;
-      for (const [tS, bS] of gS)
-        if (bS.size > 0 && void 0 !== HS.activeViews.get(tS)?.deref()) return !0;
+    function nF(kk, Fk) {
+      const Ik = kk._stream?.pendingByView;
+      if (void 0 === Ik) return !1;
+      for (const [Xk, Tk] of Ik)
+        if (Tk.size > 0 && void 0 !== Fk.activeViews.get(Xk)?.deref()) return !0;
       return !1
     }
 
-    function EH(SS) {
-      const HS = SS._stream;
-      return void 0 !== HS && (HS.broadcastPending.size > 0 || HS.broadcastDeletes.size > 0)
+    function GF(kk) {
+      const Fk = kk._stream;
+      return void 0 !== Fk && (Fk.broadcastPending.size > 0 || Fk.broadcastDeletes.size > 0)
     }
 
-    function LH(SS, HS, gS) {
-      const tS = OH(SS);
-      let bS = tS.pendingByView.get(HS);
-      void 0 === bS && (bS = new Set, tS.pendingByView.set(HS, bS)), bS.add(gS)
+    function pF(kk, Fk, Ik) {
+      const Xk = vF(kk);
+      let Tk = Xk.pendingByView.get(Fk);
+      void 0 === Tk && (Tk = new Set, Xk.pendingByView.set(Fk, Tk)), Tk.add(Ik)
     }
 
-    function YH(SS, HS) {
-      const gS = SS._stream;
-      void 0 !== gS && (gS.pendingByView.delete(HS), gS.sentByView.delete(HS), gS.priorityByView?.delete(HS))
+    function uF(kk, Fk) {
+      const Ik = kk._stream;
+      void 0 !== Ik && (Ik.pendingByView.delete(Fk), Ik.sentByView.delete(Fk), Ik.priorityByView?.delete(Fk))
     }
-    const AH = {
+    const bF = {
       8: "uint8",
       16: "uint16",
       32: "uint32"
     };
 
-    function yH(SS) {
-      if (null == SS || "object" !== typeof SS) throw new Error("t.quantized(): options object with { min, max } is required.");
+    function RF(kk) {
+      if (null == kk || "object" !== typeof kk) throw new Error("t.quantized(): options object with { min, max } is required.");
       const {
-        min: HS,
-        max: gS
-      } = SS;
-      if ("number" !== typeof HS || "number" !== typeof gS || !(gS > HS) || !Number.isFinite(HS) || !Number.isFinite(gS)) throw new Error(`t.quantized(): require finite min < max (got min=${HS}, max=${gS}).`);
-      const tS = SS.bits ?? 16;
-      if (8 !== tS && 16 !== tS && 32 !== tS) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${tS}).`);
-      const bS = SS.mode ?? "clamp";
-      if ("clamp" !== bS && "wrap" !== bS) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(bS)}).`);
-      const XS = "wrap" === bS,
-        xS = Math.pow(2, tS);
+        min: Fk,
+        max: Ik
+      } = kk;
+      if ("number" !== typeof Fk || "number" !== typeof Ik || !(Ik > Fk) || !Number.isFinite(Fk) || !Number.isFinite(Ik)) throw new Error(`t.quantized(): require finite min < max (got min=${Fk}, max=${Ik}).`);
+      const Xk = kk.bits ?? 16;
+      if (8 !== Xk && 16 !== Xk && 32 !== Xk) throw new Error(`t.quantized(): bits must be 8, 16 or 32 (got ${Xk}).`);
+      const Tk = kk.mode ?? "clamp";
+      if ("clamp" !== Tk && "wrap" !== Tk) throw new Error(`t.quantized(): mode must be "clamp" or "wrap" (got ${JSON.stringify(Tk)}).`);
+      const ik = "wrap" === Tk,
+        yk = Math.pow(2, Xk);
       return {
-        min: HS,
-        max: gS,
-        bits: tS,
-        wrap: XS,
-        wire: AH[tS],
-        range: gS - HS,
-        span: XS ? xS : HS === -gS ? xS - 2 : xS - 1
+        min: Fk,
+        max: Ik,
+        bits: Xk,
+        wrap: ik,
+        wire: bF[Xk],
+        range: Ik - Fk,
+        span: ik ? yk : Fk === -Ik ? yk - 2 : yk - 1
       }
     }
 
-    function VH(SS) {
-      return null !== SS && "object" === typeof SS && void 0 !== SS.quantized
+    function UF(kk) {
+      return null !== kk && "object" === typeof kk && void 0 !== kk.quantized
     }
 
-    function iH(SS, HS) {
-      if (SS.wrap) {
-        if (!Number.isFinite(HS)) return 0;
-        const gS = SS.range;
-        let tS = (HS - SS.min) % gS;
-        tS < 0 && (tS += gS);
-        const bS = SS.span;
-        return Math.floor(tS / gS * bS + .5) % bS
+    function CF(kk, Fk) {
+      if (kk.wrap) {
+        if (!Number.isFinite(Fk)) return 0;
+        const Ik = kk.range;
+        let Xk = (Fk - kk.min) % Ik;
+        Xk < 0 && (Xk += Ik);
+        const Tk = kk.span;
+        return Math.floor(Xk / Ik * Tk + .5) % Tk
       }
-      if (HS !== HS) return 0;
-      const gS = HS < SS.min ? SS.min : HS > SS.max ? SS.max : HS;
-      return Math.floor((gS - SS.min) / SS.range * SS.span + .5)
+      if (Fk !== Fk) return 0;
+      const Ik = Fk < kk.min ? kk.min : Fk > kk.max ? kk.max : Fk;
+      return Math.floor((Ik - kk.min) / kk.range * kk.span + .5)
     }
 
-    function WH(SS, HS) {
-      return SS.min + HS / SS.span * SS.range
+    function NF(kk, Fk) {
+      return kk.min + Fk / kk.span * kk.range
     }
 
-    function zH(SS) {
-      const HS = HH[SS.wire];
-      return (gS, tS, bS) => HS(gS, iH(SS, tS), bS)
+    function cF(kk) {
+      const Fk = IF[kk.wire];
+      return (Ik, Xk, Tk) => Fk(Ik, CF(kk, Xk), Tk)
     }
-    class UH {
+    class WF {
       types = {};
       schemas = new Map;
       hasFilters = !1;
       static inheritedTypes = new WeakMap;
       static cachedContexts = new WeakMap;
-      static register(SS) {
-        const HS = Object.getPrototypeOf(SS);
-        if (HS !== vt) {
-          let gS = UH.inheritedTypes.get(HS);
-          gS || (gS = new Set, UH.inheritedTypes.set(HS, gS)), gS.add(SS)
+      static register(kk) {
+        const Fk = Object.getPrototypeOf(kk);
+        if (Fk !== OX) {
+          let Ik = WF.inheritedTypes.get(Fk);
+          Ik || (Ik = new Set, WF.inheritedTypes.set(Fk, Ik)), Ik.add(kk)
         }
       }
-      static cache(SS) {
-        let HS = UH.cachedContexts.get(SS);
-        return HS || (HS = new UH(SS), UH.cachedContexts.set(SS, HS)), HS
+      static cache(kk) {
+        let Fk = WF.cachedContexts.get(kk);
+        return Fk || (Fk = new WF(kk), WF.cachedContexts.set(kk, Fk)), Fk
       }
-      constructor(SS) {
-        SS && this.discoverTypes(SS)
+      constructor(kk) {
+        kk && this.discoverTypes(kk)
       }
-      has(SS) {
-        return this.schemas.has(SS)
+      has(kk) {
+        return this.schemas.has(kk)
       }
-      get(SS) {
-        return this.types[SS]
+      get(kk) {
+        return this.types[kk]
       }
-      add(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
-        return !this.schemas.has(SS) && (this.types[HS] = SS, null == SS[Symbol.metadata] && TH.initialize(SS), this.schemas.set(SS, HS), !0)
+      add(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.schemas.size;
+        return !this.schemas.has(kk) && (this.types[Fk] = kk, null == kk[Symbol.metadata] && mF.initialize(kk), this.schemas.set(kk, Fk), !0)
       }
-      getTypeId(SS) {
-        return this.schemas.get(SS)
+      getTypeId(kk) {
+        return this.schemas.get(kk)
       }
-      discoverTypes(SS) {
-        if (!this.add(SS)) return;
-        UH.inheritedTypes.get(SS)?.forEach((SS => {
-          this.discoverTypes(SS)
+      discoverTypes(kk) {
+        if (!this.add(kk)) return;
+        WF.inheritedTypes.get(kk)?.forEach((kk => {
+          this.discoverTypes(kk)
         }));
-        let HS = SS;
+        let Fk = kk;
         for (;
-          (HS = Object.getPrototypeOf(HS)) && HS !== vt && HS !== Function.prototype;) this.discoverTypes(HS);
-        const gS = SS[Symbol.metadata];
-        (gS[cS] || gS[yS]) && (this.hasFilters = !0);
-        for (const tS in gS) {
-          const SS = gS[tS].type;
-          if ("string" !== typeof SS && !VH(SS))
-            if ("function" === typeof SS) this.discoverTypes(SS);
+          (Fk = Object.getPrototypeOf(Fk)) && Fk !== OX && Fk !== Function.prototype;) this.discoverTypes(Fk);
+        const Ik = kk[Symbol.metadata];
+        (Ik[Ok] || Ik[Rk]) && (this.hasFilters = !0);
+        for (const Xk in Ik) {
+          const kk = Ik[Xk].type;
+          if ("string" !== typeof kk && !UF(kk))
+            if ("function" === typeof kk) this.discoverTypes(kk);
             else {
-              const HS = Object.values(SS)[0];
-              if ("string" === typeof HS) continue;
-              this.discoverTypes(HS)
+              const Fk = Object.values(kk)[0];
+              if ("string" === typeof Fk) continue;
+              this.discoverTypes(Fk)
             }
         }
       }
@@ -2612,303 +2612,303 @@ export const modules = {
       }
     }
 
-    function pH(SS) {
-      const HS = BH(SS);
-      return HS ? {
-        complexTypeKlass: QH[HS],
-        childType: SS[HS]
+    function fF(kk) {
+      const Fk = dF(kk);
+      return Fk ? {
+        complexTypeKlass: QF[Fk],
+        childType: kk[Fk]
       } : {
         complexTypeKlass: !1,
-        childType: SS
+        childType: kk
       }
     }
 
-    function sH(SS, HS) {
-      const gS = MH(SS),
-        tS = BH(gS),
-        bS = tS && BH(gS[tS]);
-      if (bS) throw new Error(`${HS?`${HS}: `:""}@colyseus/schema: nested collections are not supported ("${tS}" of "${bS}"). Collections can only hold primitive types or Schema classes, wrap the inner ${bS} in a Schema class.`);
-      return gS
+    function BF(kk, Fk) {
+      const Ik = YF(kk),
+        Xk = dF(Ik),
+        Tk = Xk && dF(Ik[Xk]);
+      if (Tk) throw new Error(`${Fk?`${Fk}: `:""}@colyseus/schema: nested collections are not supported ("${Xk}" of "${Tk}"). Collections can only hold primitive types or Schema classes, wrap the inner ${Tk} in a Schema class.`);
+      return Ik
     }
 
-    function BH(SS) {
-      return "object" === typeof SS && null !== SS ? Object.keys(SS).find((SS => void 0 !== QH[SS])) : void 0
+    function dF(kk) {
+      return "object" === typeof kk && null !== kk ? Object.keys(kk).find((kk => void 0 !== QF[kk])) : void 0
     }
 
-    function MH(SS) {
-      if ("object" !== typeof SS || null === SS) return SS;
-      if (Array.isArray(SS)) return {
-        array: MH(SS[0])
+    function YF(kk) {
+      if ("object" !== typeof kk || null === kk) return kk;
+      if (Array.isArray(kk)) return {
+        array: YF(kk[0])
       };
-      const HS = function(SS) {
-        const HS = Object.keys(SS),
-          gS = HS.filter((SS => /\d+/.test(SS)));
-        if (gS.length > 0 && gS.length === HS.length / 2 && SS[SS[gS[0]]] == gS[0]) return "number";
-        if (HS.length > 0 && HS.every((HS => SS[HS] === HS))) return "string"
-      }(SS);
-      if (HS) return HS;
-      if (VH(SS)) return "string" === typeof SS.quantized.wire ? SS : {
-        quantized: yH(SS.quantized)
+      const Fk = function(kk) {
+        const Fk = Object.keys(kk),
+          Ik = Fk.filter((kk => /\d+/.test(kk)));
+        if (Ik.length > 0 && Ik.length === Fk.length / 2 && kk[kk[Ik[0]]] == Ik[0]) return "number";
+        if (Fk.length > 0 && Fk.every((Fk => kk[Fk] === Fk))) return "string"
+      }(kk);
+      if (Fk) return Fk;
+      if (UF(kk)) return "string" === typeof kk.quantized.wire ? kk : {
+        quantized: RF(kk.quantized)
       };
-      if (void 0 !== SS.type) return MH(SS.type);
-      const gS = BH(SS);
-      return gS && (SS[gS] = MH(SS[gS])), SS
+      if (void 0 !== kk.type) return YF(kk.type);
+      const Ik = dF(kk);
+      return Ik && (kk[Ik] = YF(kk[Ik])), kk
     }
-    const FH = [dS, ES, LS, YS, AS, yS, JS];
+    const AF = [Ek, Gk, pk, uk, bk, Rk, Sk];
 
-    function RH(SS, HS, gS) {
-      SS[HS] || Object.defineProperty(SS, HS, {
+    function gF(kk, Fk, Ik) {
+      kk[Fk] || Object.defineProperty(kk, Fk, {
         value: [],
         enumerable: !1,
         configurable: !0,
         writable: !0
-      }), SS[HS].push(gS)
+      }), kk[Fk].push(Ik)
     }
-    const TH = {
-        addField(SS, HS, gS, tS, bS) {
-          if (HS >= 63) throw new Error(`Can't define field '${gS}'.\nSchema instances may only have up to 63 fields.`);
-          SS[HS] = Object.assign(SS[HS] || {}, {
-            type: tS,
-            index: HS,
-            name: gS
-          }), Object.defineProperty(SS, hS, {
-            value: SS[hS] || {},
+    const mF = {
+        addField(kk, Fk, Ik, Xk, Tk) {
+          if (Fk >= 63) throw new Error(`Can't define field '${Ik}'.\nSchema instances may only have up to 63 fields.`);
+          kk[Fk] = Object.assign(kk[Fk] || {}, {
+            type: Xk,
+            index: Fk,
+            name: Ik
+          }), Object.defineProperty(kk, Vk, {
+            value: kk[Vk] || {},
             enumerable: !1,
             configurable: !0
-          }), SS[hS][gS] = bS || {
+          }), kk[Vk][Ik] = Tk || {
             value: void 0,
             writable: !0,
             enumerable: !0,
             configurable: !0
-          }, Object.defineProperty(SS, OS, {
-            value: HS,
+          }, Object.defineProperty(kk, vk, {
+            value: Fk,
             enumerable: !1,
             configurable: !0
-          }), Object.defineProperty(SS, gS, {
-            value: HS,
+          }), Object.defineProperty(kk, Ik, {
+            value: Fk,
             enumerable: !1,
             configurable: !0
-          }), "string" === typeof SS[HS].type || VH(SS[HS].type) || (void 0 === SS[dS] && Object.defineProperty(SS, dS, {
+          }), "string" === typeof kk[Fk].type || UF(kk[Fk].type) || (void 0 === kk[Ek] && Object.defineProperty(kk, Ek, {
             value: [],
             enumerable: !1,
             configurable: !0
-          }), SS[dS].push(HS));
-          const XS = SS[HS].type;
-          if (XS && "object" === typeof XS && void 0 !== XS.stream) {
-            if (void 0 !== XS.array) throw new Error(ZH);
-            SS[HS].stream = !0, SS[yS] || Object.defineProperty(SS, yS, {
+          }), kk[Ek].push(Fk));
+          const ik = kk[Fk].type;
+          if (ik && "object" === typeof ik && void 0 !== ik.stream) {
+            if (void 0 !== ik.array) throw new Error(SF);
+            kk[Fk].stream = !0, kk[Rk] || Object.defineProperty(kk, Rk, {
               value: [],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), SS[yS].includes(HS) || SS[yS].push(HS);
-            const bS = tS?.priority;
-            "function" === typeof bS && TH.setStreamPriority(SS, gS, bS)
+            }), kk[Rk].includes(Fk) || kk[Rk].push(Fk);
+            const Tk = Xk?.priority;
+            "function" === typeof Tk && mF.setStreamPriority(kk, Ik, Tk)
           }
         },
-        setTag(SS, HS, gS) {
-          const tS = SS[HS];
-          if (SS[tS].tag = gS, SS[cS] || (Object.defineProperty(SS, cS, {
+        setTag(kk, Fk, Ik) {
+          const Xk = kk[Fk];
+          if (kk[Xk].tag = Ik, kk[Ok] || (Object.defineProperty(kk, Ok, {
               value: [],
               enumerable: !1,
               configurable: !0
-            }), Object.defineProperty(SS, vS, {
+            }), Object.defineProperty(kk, nk, {
               value: {},
               enumerable: !1,
               configurable: !0
-            })), SS[cS].push(tS), gS < 0) SS[vS][gS] || (SS[vS][gS] = []), SS[vS][gS].push(tS);
+            })), kk[Ok].push(Xk), Ik < 0) kk[nk][Ik] || (kk[nk][Ik] = []), kk[nk][Ik].push(Xk);
           else
-            for (let bS = gS; bS > 0; bS &= bS - 1) {
-              const HS = bS & -bS;
-              SS[vS][HS] || (SS[vS][HS] = []), SS[vS][HS].push(tS)
+            for (let Tk = Ik; Tk > 0; Tk &= Tk - 1) {
+              const Fk = Tk & -Tk;
+              kk[nk][Fk] || (kk[nk][Fk] = []), kk[nk][Fk].push(Xk)
             }
         },
-        setUnreliable(SS, HS) {
-          const gS = SS[HS];
-          if ("string" !== typeof SS[gS].type) throw new Error(`@unreliable cannot be applied to ref-type field "${HS}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
-          SS[gS].unreliable = !0, SS[ES] || Object.defineProperty(SS, ES, {
+        setUnreliable(kk, Fk) {
+          const Ik = kk[Fk];
+          if ("string" !== typeof kk[Ik].type) throw new Error(`@unreliable cannot be applied to ref-type field "${Fk}". For ref-type fields, mark each primitive sub-field with @unreliable instead. See README "Limitations and best practices".`);
+          kk[Ik].unreliable = !0, kk[Gk] || Object.defineProperty(kk, Gk, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), SS[ES].push(gS)
+          }), kk[Gk].push(Ik)
         },
-        setPatchOnly(SS, HS) {
-          const gS = SS[HS];
-          if (SS[gS].fullStateOnly) throw new Error(`field "${HS}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          SS[gS].patchOnly = !0, RH(SS, LS, gS), RH(SS, YS, gS)
+        setPatchOnly(kk, Fk) {
+          const Ik = kk[Fk];
+          if (kk[Ik].fullStateOnly) throw new Error(`field "${Fk}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          kk[Ik].patchOnly = !0, gF(kk, pk, Ik), gF(kk, uk, Ik)
         },
-        setDeprecated(SS, HS) {
-          const gS = SS[HS];
-          SS[gS].deprecated = !0, RH(SS, YS, gS), Object.defineProperty(SS, gS, {
-            value: SS[gS],
+        setDeprecated(kk, Fk) {
+          const Ik = kk[Fk];
+          kk[Ik].deprecated = !0, gF(kk, uk, Ik), Object.defineProperty(kk, Ik, {
+            value: kk[Ik],
             enumerable: !1,
             configurable: !0
           })
         },
-        setFullStateOnly(SS, HS) {
-          const gS = SS[HS];
-          if (SS[gS].patchOnly) throw new Error(`field "${HS}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
-          SS[gS].fullStateOnly = !0, RH(SS, AS, gS)
+        setFullStateOnly(kk, Fk) {
+          const Ik = kk[Fk];
+          if (kk[Ik].patchOnly) throw new Error(`field "${Fk}" cannot be both patchOnly and fullStateOnly \u2014 those are the only two delivery channels, so the field would never reach a client.`);
+          kk[Ik].fullStateOnly = !0, gF(kk, bk, Ik)
         },
-        setStream(SS, HS) {
-          const gS = SS[HS];
-          SS[gS].stream = !0, SS[yS] || Object.defineProperty(SS, yS, {
+        setStream(kk, Fk) {
+          const Ik = kk[Fk];
+          kk[Ik].stream = !0, kk[Rk] || Object.defineProperty(kk, Rk, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), SS[yS].push(gS)
+          }), kk[Rk].push(Ik)
         },
-        setStreamPriority(SS, HS, gS) {
-          const tS = SS[HS];
-          SS[VS] || Object.defineProperty(SS, VS, {
+        setStreamPriority(kk, Fk, Ik) {
+          const Xk = kk[Fk];
+          kk[Uk] || Object.defineProperty(kk, Uk, {
             value: {},
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), SS[VS][tS] = gS
+          }), kk[Uk][Xk] = Ik
         },
-        getStreamPriority: (SS, HS) => SS?.[VS]?.[HS],
-        defineField(SS, HS, gS, tS, bS) {
-          const XS = sH(bS, `${SS.name}.${tS}`),
+        getStreamPriority: (kk, Fk) => kk?.[Uk]?.[Fk],
+        defineField(kk, Fk, Ik, Xk, Tk) {
+          const ik = BF(Tk, `${kk.name}.${Xk}`),
             {
-              complexTypeKlass: xS,
-              childType: NS
-            } = pH(XS);
-          TH.addField(HS, gS, tS, XS, ht(tS, gS, NS, xS)), HS[hS][tS] && Object.defineProperty(SS.prototype, tS, HS[hS][tS]), ("string" === typeof XS || VH(XS)) && (HS[JS] || Object.defineProperty(HS, JS, {
+              complexTypeKlass: yk,
+              childType: lk
+            } = fF(ik);
+          mF.addField(Fk, Ik, Xk, ik, VX(Xk, Ik, lk, yk)), Fk[Vk][Xk] && Object.defineProperty(kk.prototype, Xk, Fk[Vk][Xk]), ("string" === typeof ik || UF(ik)) && (Fk[Sk] || Object.defineProperty(Fk, Sk, {
             value: [],
             enumerable: !1,
             configurable: !0,
             writable: !0
-          }), HS[JS][gS] = "string" === typeof XS ? HH[XS] : zH(XS.quantized))
+          }), Fk[Sk][Ik] = "string" === typeof ik ? IF[ik] : cF(ik.quantized))
         },
-        setFields(SS, HS) {
-          const gS = SS.prototype.constructor;
-          UH.register(gS);
-          const tS = Object.getPrototypeOf(gS),
-            bS = tS && tS[Symbol.metadata],
-            XS = TH.initialize(gS);
-          gS[qS] || (gS[qS] = vt[qS]), gS[uS] || (gS[uS] = vt[uS]), gS[IS] || (gS[IS] = vt[IS]), gS.prototype.toJSON || (gS.prototype.toJSON = vt.prototype.toJSON);
-          let xS = XS[OS] ?? (bS && bS[OS]) ?? -1;
-          xS++, XS[JS] || Object.defineProperty(XS, JS, {
-            value: bS?.[JS] ? [...bS[JS]] : [],
+        setFields(kk, Fk) {
+          const Ik = kk.prototype.constructor;
+          WF.register(Ik);
+          const Xk = Object.getPrototypeOf(Ik),
+            Tk = Xk && Xk[Symbol.metadata],
+            ik = mF.initialize(Ik);
+          Ik[ak] || (Ik[ak] = OX[ak]), Ik[qk] || (Ik[qk] = OX[qk]), Ik[Lk] || (Ik[Lk] = OX[Lk]), Ik.prototype.toJSON || (Ik.prototype.toJSON = OX.prototype.toJSON);
+          let yk = ik[vk] ?? (Tk && Tk[vk]) ?? -1;
+          yk++, ik[Sk] || Object.defineProperty(ik, Sk, {
+            value: Tk?.[Sk] ? [...Tk[Sk]] : [],
             enumerable: !1,
             configurable: !0,
             writable: !0
           });
-          for (const NS in HS) {
-            if (void 0 !== XS[NS]) throw new Error(`@colyseus/schema: Duplicate '${NS}' definition on '${gS.name||"(anonymous)"}'.`);
-            TH.defineField(gS, XS, xS, NS, HS[NS]), xS++
+          for (const lk in Fk) {
+            if (void 0 !== ik[lk]) throw new Error(`@colyseus/schema: Duplicate '${lk}' definition on '${Ik.name||"(anonymous)"}'.`);
+            mF.defineField(Ik, ik, yk, lk, Fk[lk]), yk++
           }
-          return SS
+          return kk
         },
-        isDeprecated: (SS, HS) => !0 === SS[HS].deprecated,
-        initialize(SS) {
-          const HS = Object.getPrototypeOf(SS),
-            gS = HS[Symbol.metadata];
-          let tS = SS[Symbol.metadata] ?? Object.create(null);
-          if (HS !== vt && tS === gS && (tS = Object.create(null), gS)) {
-            Object.setPrototypeOf(tS, gS), Object.defineProperty(tS, OS, {
-              value: gS[OS],
+        isDeprecated: (kk, Fk) => !0 === kk[Fk].deprecated,
+        initialize(kk) {
+          const Fk = Object.getPrototypeOf(kk),
+            Ik = Fk[Symbol.metadata];
+          let Xk = kk[Symbol.metadata] ?? Object.create(null);
+          if (Fk !== OX && Xk === Ik && (Xk = Object.create(null), Ik)) {
+            Object.setPrototypeOf(Xk, Ik), Object.defineProperty(Xk, vk, {
+              value: Ik[vk],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), void 0 !== gS[cS] && (Object.defineProperty(tS, cS, {
-              value: [...gS[cS]],
+            }), void 0 !== Ik[Ok] && (Object.defineProperty(Xk, Ok, {
+              value: [...Ik[Ok]],
               enumerable: !1,
               configurable: !0,
               writable: !0
-            }), Object.defineProperty(tS, vS, {
+            }), Object.defineProperty(Xk, nk, {
               value: {
-                ...gS[vS]
+                ...Ik[nk]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             }));
-            for (const SS of FH) {
-              const HS = gS[SS];
-              void 0 !== HS && Object.defineProperty(tS, SS, {
-                value: [...HS],
+            for (const kk of AF) {
+              const Fk = Ik[kk];
+              void 0 !== Fk && Object.defineProperty(Xk, kk, {
+                value: [...Fk],
                 enumerable: !1,
                 configurable: !0,
                 writable: !0
               })
             }
-            Object.defineProperty(tS, hS, {
+            Object.defineProperty(Xk, Vk, {
               value: {
-                ...gS[hS]
+                ...Ik[Vk]
               },
               enumerable: !1,
               configurable: !0,
               writable: !0
             })
           }
-          return Object.defineProperty(SS, Symbol.metadata, {
-            value: tS,
+          return Object.defineProperty(kk, Symbol.metadata, {
+            value: Xk,
             writable: !1,
             configurable: !0
-          }), tS
+          }), Xk
         },
-        isValidInstance: SS => SS.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(SS.constructor[Symbol.metadata], OS),
-        getFields(SS) {
-          const HS = SS[Symbol.metadata],
-            gS = {};
-          for (let tS = 0; tS <= HS[OS]; tS++) gS[HS[tS].name] = HS[tS].type;
-          return gS
+        isValidInstance: kk => kk.constructor[Symbol.metadata] && Object.prototype.hasOwnProperty.call(kk.constructor[Symbol.metadata], vk),
+        getFields(kk) {
+          const Fk = kk[Symbol.metadata],
+            Ik = {};
+          for (let Xk = 0; Xk <= Fk[vk]; Xk++) Ik[Fk[Xk].name] = Fk[Xk].type;
+          return Ik
         },
-        hasViewTagAtIndex: (SS, HS) => SS?.[cS]?.includes(HS),
-        hasUnreliableAtIndex: (SS, HS) => SS?.[ES]?.includes(HS),
-        hasPatchOnlyAtIndex: (SS, HS) => SS?.[LS]?.includes(HS),
-        hasFullStateOnlyAtIndex: (SS, HS) => SS?.[AS]?.includes(HS),
-        hasStreamAtIndex: (SS, HS) => SS?.[yS]?.includes(HS)
+        hasViewTagAtIndex: (kk, Fk) => kk?.[Ok]?.includes(Fk),
+        hasUnreliableAtIndex: (kk, Fk) => kk?.[Gk]?.includes(Fk),
+        hasPatchOnlyAtIndex: (kk, Fk) => kk?.[pk]?.includes(Fk),
+        hasFullStateOnlyAtIndex: (kk, Fk) => kk?.[bk]?.includes(Fk),
+        hasStreamAtIndex: (kk, Fk) => kk?.[Rk]?.includes(Fk)
       },
-      oH = (SS, HS, gS) => SS(HS, gS);
-    class lH {
+      hF = (kk, Fk, Ik) => kk(Fk, Ik);
+    class rF {
       dirtyLow = 0;
       dirtyHigh = 0;
       ops;
-      constructor(SS) {
-        this.ops = new Uint8Array(Math.max(SS + 1, 1))
+      constructor(kk) {
+        this.ops = new Uint8Array(Math.max(kk + 1, 1))
       }
-      record(SS, HS) {
-        const gS = this.ops[SS];
-        0 === gS ? this.ops[SS] = HS : (gS === bS.DELETE || gS === bS.ADD && HS === bS.DELETE_AND_ADD) && (this.ops[SS] = bS.DELETE_AND_ADD), SS < 32 ? this.dirtyLow |= 1 << SS : this.dirtyHigh |= 1 << SS - 32
+      record(kk, Fk) {
+        const Ik = this.ops[kk];
+        0 === Ik ? this.ops[kk] = Fk : (Ik === Tk.DELETE || Ik === Tk.ADD && Fk === Tk.DELETE_AND_ADD) && (this.ops[kk] = Tk.DELETE_AND_ADD), kk < 32 ? this.dirtyLow |= 1 << kk : this.dirtyHigh |= 1 << kk - 32
       }
-      recordDelete(SS, HS) {
-        this.ops[SS] = HS, SS < 32 ? this.dirtyLow |= 1 << SS : this.dirtyHigh |= 1 << SS - 32
+      recordDelete(kk, Fk) {
+        this.ops[kk] = Fk, kk < 32 ? this.dirtyLow |= 1 << kk : this.dirtyHigh |= 1 << kk - 32
       }
-      recordRaw(SS, HS) {
-        this.record(SS, HS)
+      recordRaw(kk, Fk) {
+        this.record(kk, Fk)
       }
-      operationAt(SS) {
-        const HS = this.ops[SS];
-        return 0 === HS ? void 0 : HS
+      operationAt(kk) {
+        const Fk = this.ops[kk];
+        return 0 === Fk ? void 0 : Fk
       }
-      setOperationAt(SS, HS) {
-        this.ops[SS] = HS
+      setOperationAt(kk, Fk) {
+        this.ops[kk] = Fk
       }
-      forEach(SS) {
-        this.forEachWithCtx(SS, oH)
+      forEach(kk) {
+        this.forEachWithCtx(kk, hF)
       }
-      forEachWithCtx(SS, HS) {
-        let gS = this.dirtyLow,
-          tS = this.dirtyHigh;
-        const bS = this.ops;
-        for (; 0 !== gS;) {
-          const tS = gS & -gS,
-            XS = 31 - Math.clz32(tS);
-          gS ^= tS, HS(SS, XS, bS[XS])
+      forEachWithCtx(kk, Fk) {
+        let Ik = this.dirtyLow,
+          Xk = this.dirtyHigh;
+        const Tk = this.ops;
+        for (; 0 !== Ik;) {
+          const Xk = Ik & -Ik,
+            ik = 31 - Math.clz32(Xk);
+          Ik ^= Xk, Fk(kk, ik, Tk[ik])
         }
-        for (; 0 !== tS;) {
-          const gS = tS & -tS,
-            XS = 31 - Math.clz32(gS) + 32;
-          tS ^= gS, HS(SS, XS, bS[XS])
+        for (; 0 !== Xk;) {
+          const Ik = Xk & -Xk,
+            ik = 31 - Math.clz32(Ik) + 32;
+          Xk ^= Ik, Fk(kk, ik, Tk[ik])
         }
       }
       size() {
-        return eH(this.dirtyLow) + eH(this.dirtyHigh)
+        return MF(this.dirtyLow) + MF(this.dirtyHigh)
       }
       has() {
         return 0 !== (this.dirtyLow | this.dirtyHigh)
@@ -2917,359 +2917,359 @@ export const modules = {
         this.dirtyLow = 0, this.dirtyHigh = 0, this.ops.fill(0)
       }
     }
-    class mH {
-      pK = new Map;
+    class DF {
+      Ne = new Map;
       pureOps = [];
-      record(SS, HS) {
-        const gS = this.pK.get(SS);
-        void 0 === gS ? this.pK.set(SS, HS) : (gS === bS.DELETE || gS === bS.ADD && HS === bS.DELETE_AND_ADD) && this.pK.set(SS, bS.DELETE_AND_ADD)
+      record(kk, Fk) {
+        const Ik = this.Ne.get(kk);
+        void 0 === Ik ? this.Ne.set(kk, Fk) : (Ik === Tk.DELETE || Ik === Tk.ADD && Fk === Tk.DELETE_AND_ADD) && this.Ne.set(kk, Tk.DELETE_AND_ADD)
       }
-      recordDelete(SS, HS) {
-        this.pK.set(SS, HS)
+      recordDelete(kk, Fk) {
+        this.Ne.set(kk, Fk)
       }
-      recordRaw(SS, HS) {
-        this.pK.set(SS, HS)
+      recordRaw(kk, Fk) {
+        this.Ne.set(kk, Fk)
       }
-      recordPure(SS) {
-        this.pureOps.push([this.pK.size, SS])
+      recordPure(kk) {
+        this.pureOps.push([this.Ne.size, kk])
       }
-      operationAt(SS) {
-        return this.pK.get(SS)
+      operationAt(kk) {
+        return this.Ne.get(kk)
       }
-      setOperationAt(SS, HS) {
-        this.pK.has(SS) && this.pK.set(SS, HS)
+      setOperationAt(kk, Fk) {
+        this.Ne.has(kk) && this.Ne.set(kk, Fk)
       }
-      forEach(SS) {
-        this.forEachWithCtx(SS, oH)
+      forEach(kk) {
+        this.forEachWithCtx(kk, hF)
       }
-      forEachWithCtx(SS, HS) {
-        const gS = this.pureOps;
-        if (gS.length > 0) {
-          let tS = 0,
-            bS = 0;
-          for (const [XS, xS] of this.pK) {
-            for (; tS < gS.length && gS[tS][0] <= bS;) {
-              const bS = gS[tS++][1];
-              HS(SS, -bS, bS)
+      forEachWithCtx(kk, Fk) {
+        const Ik = this.pureOps;
+        if (Ik.length > 0) {
+          let Xk = 0,
+            Tk = 0;
+          for (const [ik, yk] of this.Ne) {
+            for (; Xk < Ik.length && Ik[Xk][0] <= Tk;) {
+              const Tk = Ik[Xk++][1];
+              Fk(kk, -Tk, Tk)
             }
-            HS(SS, XS, xS), bS++
+            Fk(kk, ik, yk), Tk++
           }
-          for (; tS < gS.length;) {
-            const bS = gS[tS++][1];
-            HS(SS, -bS, bS)
+          for (; Xk < Ik.length;) {
+            const Tk = Ik[Xk++][1];
+            Fk(kk, -Tk, Tk)
           }
         } else
-          for (const [tS, bS] of this.pK) HS(SS, tS, bS)
+          for (const [Xk, Tk] of this.Ne) Fk(kk, Xk, Tk)
       }
       size() {
-        return this.pK.size + this.pureOps.length
+        return this.Ne.size + this.pureOps.length
       }
       has() {
-        return this.pK.size > 0 || this.pureOps.length > 0
+        return this.Ne.size > 0 || this.pureOps.length > 0
       }
       reset() {
-        this.pK.clear(), this.pureOps.length = 0
+        this.Ne.clear(), this.pureOps.length = 0
       }
-      shift(SS) {
-        const HS = new Map;
-        for (const [gS, tS] of this.pK) HS.set(gS + SS, tS);
-        this.pK = HS
+      shift(kk) {
+        const Fk = new Map;
+        for (const [Ik, Xk] of this.Ne) Fk.set(Ik + kk, Xk);
+        this.Ne = Fk
       }
     }
 
-    function eH(SS) {
-      return 16843009 * ((SS = (858993459 & (SS -= SS >>> 1 & 1431655765)) + (SS >>> 2 & 858993459)) + (SS >>> 4) & 252645135) >>> 24
+    function MF(kk) {
+      return 16843009 * ((kk = (858993459 & (kk -= kk >>> 1 & 1431655765)) + (kk >>> 2 & 858993459)) + (kk >>> 4) & 252645135) >>> 24
     }
 
-    function rH(SS) {
-      if (void 0 === SS) return 0;
-      let HS = 0;
-      for (let gS = 0, tS = SS.length; gS < tS; gS++) {
-        const tS = SS[gS];
-        tS < 32 && (HS |= 1 << tS)
+    function kI(kk) {
+      if (void 0 === kk) return 0;
+      let Fk = 0;
+      for (let Ik = 0, Xk = kk.length; Ik < Xk; Ik++) {
+        const Xk = kk[Ik];
+        Xk < 32 && (Fk |= 1 << Xk)
       }
-      return HS
+      return Fk
     }
 
-    function Sg(SS) {
-      const HS = SS.constructor;
-      if (Object.prototype.hasOwnProperty.call(HS, ZS)) return HS[ZS];
-      const gS = HS[Symbol.metadata],
-        tS = TH.isValidInstance(SS),
-        bS = (gS?.[cS]?.length ?? 0) > 0,
-        XS = function(SS) {
-          const HS = [],
-            gS = [],
-            tS = [],
-            bS = [],
-            XS = SS?.[OS];
-          if (void 0 === XS) return {
-            names: HS,
-            types: gS,
-            tags: tS,
-            encoders: bS
+    function FI(kk) {
+      const Fk = kk.constructor;
+      if (Object.prototype.hasOwnProperty.call(Fk, zk)) return Fk[zk];
+      const Ik = Fk[Symbol.metadata],
+        Xk = mF.isValidInstance(kk),
+        Tk = (Ik?.[Ok]?.length ?? 0) > 0,
+        ik = function(kk) {
+          const Fk = [],
+            Ik = [],
+            Xk = [],
+            Tk = [],
+            ik = kk?.[vk];
+          if (void 0 === ik) return {
+            names: Fk,
+            types: Ik,
+            tags: Xk,
+            encoders: Tk
           };
-          const xS = SS[JS];
-          for (let NS = 0; NS <= XS; NS++) {
-            const XS = SS[NS];
-            void 0 !== XS ? (HS[NS] = XS.name, gS[NS] = XS.type, tS[NS] = XS.tag, bS[NS] = xS?.[NS]) : (HS[NS] = void 0, gS[NS] = void 0, tS[NS] = void 0, bS[NS] = void 0)
+          const yk = kk[Sk];
+          for (let lk = 0; lk <= ik; lk++) {
+            const ik = kk[lk];
+            void 0 !== ik ? (Fk[lk] = ik.name, Ik[lk] = ik.type, Xk[lk] = ik.tag, Tk[lk] = yk?.[lk]) : (Fk[lk] = void 0, Ik[lk] = void 0, Xk[lk] = void 0, Tk[lk] = void 0)
           }
           return {
-            names: HS,
-            types: gS,
-            tags: tS,
-            encoders: bS
+            names: Fk,
+            types: Ik,
+            tags: Xk,
+            encoders: Tk
           }
-        }(gS),
-        xS = tS && !bS ? void 0 : HS[fS],
-        NS = {
-          encoder: HS[uS],
-          filter: xS,
-          metadata: gS,
-          isSchema: tS,
-          filterBitmask: tS ? rH(gS?.[cS]) : 0,
-          hasAnyFullStateOnly: (gS?.[AS]?.length ?? 0) > 0,
-          hasAnyUnreliable: (gS?.[ES]?.length ?? 0) > 0,
-          hasAnyStream: (gS?.[yS]?.length ?? 0) > 0,
-          hasAnyView: bS,
-          fullStateOnlyBitmask: rH(gS?.[AS]),
-          unreliableBitmask: rH(gS?.[ES]),
-          streamBitmask: rH(gS?.[yS]),
-          names: XS.names,
-          types: XS.types,
-          tags: XS.tags,
-          encoders: XS.encoders
+        }(Ik),
+        yk = Xk && !Tk ? void 0 : Fk[tk],
+        lk = {
+          encoder: Fk[qk],
+          filter: yk,
+          metadata: Ik,
+          isSchema: Xk,
+          filterBitmask: Xk ? kI(Ik?.[Ok]) : 0,
+          hasAnyFullStateOnly: (Ik?.[bk]?.length ?? 0) > 0,
+          hasAnyUnreliable: (Ik?.[Gk]?.length ?? 0) > 0,
+          hasAnyStream: (Ik?.[Rk]?.length ?? 0) > 0,
+          hasAnyView: Tk,
+          fullStateOnlyBitmask: kI(Ik?.[bk]),
+          unreliableBitmask: kI(Ik?.[Gk]),
+          streamBitmask: kI(Ik?.[Rk]),
+          names: ik.names,
+          types: ik.types,
+          tags: ik.tags,
+          encoders: ik.encoders
         };
-      return Object.defineProperty(HS, ZS, {
-        value: NS,
+      return Object.defineProperty(Fk, zk, {
+        value: lk,
         enumerable: !1,
         writable: !0,
         configurable: !0
-      }), NS
+      }), lk
     }
 
-    function Hg(SS, HS) {
-      if (void 0 !== SS.parentRef && HS(SS.parentRef, SS._parentIndex)) return !0;
-      for (let gS = SS.extraParents; void 0 !== gS; gS = gS.next)
-        if (HS(gS.ref, gS.index)) return !0;
+    function II(kk, Fk) {
+      if (void 0 !== kk.parentRef && Fk(kk.parentRef, kk._parentIndex)) return !0;
+      for (let Ik = kk.extraParents; void 0 !== Ik; Ik = Ik.next)
+        if (Fk(Ik.ref, Ik.index)) return !0;
       return !1
     }
-    const gg = (SS, HS) => {
-        SS.isFieldUnreliable(HS) ? SS.ensureUnreliableRecorder().record(HS, bS.ADD) : SS.record(HS, bS.ADD)
+    const XI = (kk, Fk) => {
+        kk.isFieldUnreliable(Fk) ? kk.ensureUnreliableRecorder().record(Fk, Tk.ADD) : kk.record(Fk, Tk.ADD)
       },
-      tg = (SS, HS) => SS(HS);
+      TI = (kk, Fk) => kk(Fk);
 
-    function bg(SS, HS, gS) {
-      const tS = SS.refTarget;
-      if (void 0 !== tS[GS]) {
-        if (SS.isPatchOnly) return;
-        if (Array.isArray(tS.items)) {
-          const SS = tS.items;
-          for (let tS = 0, bS = SS.length; tS < bS; tS++) void 0 !== SS[tS] && gS(HS, tS)
-        } else if (void 0 !== tS.journal)
-          for (const [SS, bS] of tS.journal.keyByIndex) tS.$items.has(bS) && gS(HS, SS);
-        else if (void 0 !== tS.$items)
-          for (const SS of tS.$items.keys()) gS(HS, SS)
+    function iI(kk, Fk, Ik) {
+      const Xk = kk.refTarget;
+      if (void 0 !== Xk[Hk]) {
+        if (kk.isPatchOnly) return;
+        if (Array.isArray(Xk.items)) {
+          const kk = Xk.items;
+          for (let Xk = 0, Tk = kk.length; Xk < Tk; Xk++) void 0 !== kk[Xk] && Ik(Fk, Xk)
+        } else if (void 0 !== Xk.journal)
+          for (const [kk, Tk] of Xk.journal.keyByIndex) Xk.$items.has(Tk) && Ik(Fk, kk);
+        else if (void 0 !== Xk.$items)
+          for (const kk of Xk.$items.keys()) Ik(Fk, kk)
       } else {
-        const bS = SS.metadata;
-        if (!bS) return;
-        const XS = bS[OS] ?? -1,
-          xS = bS[YS],
-          NS = SS.encDescriptor.names;
-        for (let SS = 0; SS <= XS; SS++) {
-          const bS = NS[SS];
-          if (void 0 === bS) continue;
-          if (xS && xS.includes(SS)) continue;
-          const XS = tS[bS];
-          void 0 !== XS && null !== XS && gS(HS, SS)
+        const Tk = kk.metadata;
+        if (!Tk) return;
+        const ik = Tk[vk] ?? -1,
+          yk = Tk[uk],
+          lk = kk.encDescriptor.names;
+        for (let kk = 0; kk <= ik; kk++) {
+          const Tk = lk[kk];
+          if (void 0 === Tk) continue;
+          if (yk && yk.includes(kk)) continue;
+          const ik = Xk[Tk];
+          void 0 !== ik && null !== ik && Ik(Fk, kk)
         }
       }
     }
 
-    function Xg(SS, HS, gS, tS) {
-      ! function(SS, HS, gS) {
-        if (!HS) return;
-        const tS = HS[jS],
-          bS = !tS._isSchema;
-        let XS;
-        bS ? (HS = tS.parent, gS = tS.parentIndex, XS = HS?.[jS].metadata) : XS = tS.metadata;
-        const xS = (XS?.[LS]?.includes(gS) ? Zg : 0) | (XS?.[AS]?.includes(gS) ? Jg : 0),
-          NS = tS.flags & cg | xS,
-          qS = SS.flags;
-        SS.flags = qS | NS;
-        NS & ~qS & Jg && (SS.reset(), SS.unreliableRecorder?.reset());
-        const uS = SS.root?.types;
-        if (!uS?.hasFilters) return;
-        const IS = XS?.[cS]?.includes(gS) ?? !1,
-          fS = XS?.[yS]?.includes(gS) ?? !1,
-          kS = tS.isFiltered || IS || fS;
-        if (SS.isFiltered = kS, fS && !bS) {
-          SS.isStreamCollection = !0;
-          const HS = OH(SS.ref);
-          if (void 0 === HS.priority) {
-            const SS = TH.getStreamPriority(XS, gS);
-            void 0 !== SS && (HS.priority = SS)
+    function yI(kk, Fk, Ik, Xk) {
+      ! function(kk, Fk, Ik) {
+        if (!Fk) return;
+        const Xk = Fk[wk],
+          Tk = !Xk._isSchema;
+        let ik;
+        Tk ? (Fk = Xk.parent, Ik = Xk.parentIndex, ik = Fk?.[wk].metadata) : ik = Xk.metadata;
+        const yk = (ik?.[pk]?.includes(Ik) ? SI : 0) | (ik?.[bk]?.includes(Ik) ? oI : 0),
+          lk = Xk.flags & OI | yk,
+          ak = kk.flags;
+        kk.flags = ak | lk;
+        lk & ~ak & oI && (kk.reset(), kk.unreliableRecorder?.reset());
+        const qk = kk.root?.types;
+        if (!qk?.hasFilters) return;
+        const Lk = ik?.[Ok]?.includes(Ik) ?? !1,
+          tk = ik?.[Rk]?.includes(Ik) ?? !1,
+          Zk = Xk.isFiltered || Lk || tk;
+        if (kk.isFiltered = Zk, tk && !Tk) {
+          kk.isStreamCollection = !0;
+          const Fk = vF(kk.ref);
+          if (void 0 === Fk.priority) {
+            const kk = mF.getStreamPriority(ik, Ik);
+            void 0 !== kk && (Fk.priority = kk)
           }
-          SS.root?.registerStream(SS.ref)
+          kk.root?.registerStream(kk.ref)
         }
-        if (kS) {
-          const HS = Ng(SS);
-          SS.isVisibilitySharedWithParent = tS.isFiltered && HS && !fS && (!IS || bS && XS[gS].tag !== jt)
+        if (Zk) {
+          const Fk = aI(kk);
+          kk.isVisibilitySharedWithParent = Xk.isFiltered && Fk && !tk && (!Lk || Tk && ik[Ik].tag !== wX)
         }
-      }(SS, HS, gS), SS.isFullStateOnly || (SS.has() && SS.root?.enqueueChangeTree(SS), SS.unreliableRecorder?.has() && SS.root?.enqueueUnreliable(SS), SS.has() || SS.unreliableRecorder?.has() || SS.root?.enqueueChangeTree(SS))
+      }(kk, Fk, Ik), kk.isFullStateOnly || (kk.has() && kk.root?.enqueueChangeTree(kk), kk.unreliableRecorder?.has() && kk.root?.enqueueUnreliable(kk), kk.has() || kk.unreliableRecorder?.has() || kk.root?.enqueueChangeTree(kk))
     }
 
-    function xg(SS) {
-      const HS = SS.pendingFilterRefresh;
-      for (let gS = 0; gS < HS.length; gS++) {
-        const SS = HS[gS];
-        0 !== (SS.flags & dg) && qg(SS)
+    function lI(kk) {
+      const Fk = kk.pendingFilterRefresh;
+      for (let Ik = 0; Ik < Fk.length; Ik++) {
+        const kk = Fk[Ik];
+        0 !== (kk.flags & EI) && qI(kk)
       }
-      HS.length = 0
+      Fk.length = 0
     }
 
-    function Ng(SS) {
-      return SS._isSchema || "string" !== typeof SS.refTarget[GS]
+    function aI(kk) {
+      return kk._isSchema || "string" !== typeof kk.refTarget[Hk]
     }
 
-    function qg(SS) {
-      SS.flags &= ~dg;
-      const HS = SS.root;
-      if (void 0 === HS || void 0 === SS.parentRef) return;
-      const gS = Ng(SS);
-      let tS = ag(SS, SS.parentRef, SS._parentIndex, gS);
-      for (let XS = SS.extraParents; void 0 !== XS && tS !== kg; XS = XS.next) tS |= ag(SS, XS.ref, XS.index, gS);
-      if (0 === tS) return;
-      SS.isVisibilitySharedWithParent = 0 !== (tS & fg);
-      const bS = 0 === (tS & Ig);
-      bS !== SS.isFiltered && (SS.isFiltered = bS, bS || SS.isFullStateOnly || (SS.forEachLiveWithCtx(SS, gg), SS.has() && HS.enqueueChangeTree(SS), SS.unreliableRecorder?.has() && HS.enqueueUnreliable(SS)), SS.forEachChildWithCtx(SS, Kg))
+    function qI(kk) {
+      kk.flags &= ~EI;
+      const Fk = kk.root;
+      if (void 0 === Fk || void 0 === kk.parentRef) return;
+      const Ik = aI(kk);
+      let Xk = eI(kk, kk.parentRef, kk._parentIndex, Ik);
+      for (let ik = kk.extraParents; void 0 !== ik && Xk !== jI; ik = ik.next) Xk |= eI(kk, ik.ref, ik.index, Ik);
+      if (0 === Xk) return;
+      kk.isVisibilitySharedWithParent = 0 !== (Xk & ZI);
+      const Tk = 0 === (Xk & tI);
+      Tk !== kk.isFiltered && (kk.isFiltered = Tk, Tk || kk.isFullStateOnly || (kk.forEachLiveWithCtx(kk, XI), kk.has() && Fk.enqueueChangeTree(kk), kk.unreliableRecorder?.has() && Fk.enqueueUnreliable(kk)), kk.forEachChildWithCtx(kk, wI))
     }
-    const ug = 1,
-      Ig = 2,
-      fg = 4,
-      kg = ug | Ig | fg;
+    const LI = 1,
+      tI = 2,
+      ZI = 4,
+      jI = LI | tI | ZI;
 
-    function ag(SS, HS, gS, tS) {
-      const bS = HS[jS];
-      if (bS.root !== SS.root || ! function(SS, HS, gS) {
-          const tS = HS.refTarget;
-          if (HS.isArray) {
-            const HS = tS.items,
-              bS = HS[gS];
-            if (void 0 !== bS && bS[jS] === SS) return !0;
-            for (let gS = 0, tS = HS.length; gS < tS; gS++) {
-              const tS = HS[gS];
-              if (void 0 !== tS && tS[jS] === SS) return !0
+    function eI(kk, Fk, Ik, Xk) {
+      const Tk = Fk[wk];
+      if (Tk.root !== kk.root || ! function(kk, Fk, Ik) {
+          const Xk = Fk.refTarget;
+          if (Fk.isArray) {
+            const Fk = Xk.items,
+              Tk = Fk[Ik];
+            if (void 0 !== Tk && Tk[wk] === kk) return !0;
+            for (let Ik = 0, Xk = Fk.length; Ik < Xk; Ik++) {
+              const Xk = Fk[Ik];
+              if (void 0 !== Xk && Xk[wk] === kk) return !0
             }
             return !1
           }
-          const bS = HS.getValue(gS);
-          return void 0 !== bS && bS[jS] === SS
-        }(SS, bS, gS)) return 0;
-      bS.flags & dg && qg(bS);
-      let XS = ug;
-      if (bS._isSchema) {
-        void 0 !== bS.encDescriptor.tags[gS] || bS.isFieldStream(gS) || (bS.isFiltered ? tS && (XS |= fg) : XS |= Ig)
-      } else if (bS.isFiltered) {
-        if (tS && !bS.isStreamCollection) {
-          const SS = bS.parent?.[jS];
-          (SS?._isSchema ? SS.encDescriptor.tags[bS.parentIndex] : void 0) !== jt && (XS |= fg)
+          const Tk = Fk.getValue(Ik);
+          return void 0 !== Tk && Tk[wk] === kk
+        }(kk, Tk, Ik)) return 0;
+      Tk.flags & EI && qI(Tk);
+      let ik = LI;
+      if (Tk._isSchema) {
+        void 0 !== Tk.encDescriptor.tags[Ik] || Tk.isFieldStream(Ik) || (Tk.isFiltered ? Xk && (ik |= ZI) : ik |= tI)
+      } else if (Tk.isFiltered) {
+        if (Xk && !Tk.isStreamCollection) {
+          const kk = Tk.parent?.[wk];
+          (kk?._isSchema ? kk.encDescriptor.tags[Tk.parentIndex] : void 0) !== wX && (ik |= ZI)
         }
-      } else XS |= Ig;
-      return XS
+      } else ik |= tI;
+      return ik
     }
-    const Kg = (SS, HS, gS) => {
-      qg(HS)
+    const wI = (kk, Fk, Ik) => {
+      qI(Fk)
     };
 
-    function jg(SS, HS, gS, tS) {
-      if (SS.addParent(HS, tS), !gS) return;
-      const bS = gS.add(SS);
-      gS !== SS.root && (SS.root = gS, Xg(SS, HS, tS));
-      const XS = HS?.[jS];
-      if (void 0 !== XS && void 0 !== XS.subscribedViews && void 0 !== HS[GS] && function(SS, HS, gS, tS) {
-          const bS = SS.subscribedViews;
-          if (void 0 === bS) return;
-          const XS = SS.isStreamCollection,
-            xS = XS ? SS.ref : void 0,
-            NS = XS ? void 0 : gS[jS];
-          for (let qS = 0, uS = bS.length; qS < uS; qS++) {
-            let SS = bS[qS];
-            for (; 0 !== SS;) {
-              const gS = SS & -SS;
-              SS ^= gS;
-              const uS = 32 * qS + (31 - Math.clz32(gS)),
-                IS = tS.activeViews.get(uS),
-                fS = IS?.deref();
-              void 0 !== fS ? XS ? LH(xS, uS, HS) : void 0 !== NS && fS.markVisible(NS) : bS[qS] &= ~gS
+    function HI(kk, Fk, Ik, Xk) {
+      if (kk.addParent(Fk, Xk), !Ik) return;
+      const Tk = Ik.add(kk);
+      Ik !== kk.root && (kk.root = Ik, yI(kk, Fk, Xk));
+      const ik = Fk?.[wk];
+      if (void 0 !== ik && void 0 !== ik.subscribedViews && void 0 !== Fk[Hk] && function(kk, Fk, Ik, Xk) {
+          const Tk = kk.subscribedViews;
+          if (void 0 === Tk) return;
+          const ik = kk.isStreamCollection,
+            yk = ik ? kk.ref : void 0,
+            lk = ik ? void 0 : Ik[wk];
+          for (let ak = 0, qk = Tk.length; ak < qk; ak++) {
+            let kk = Tk[ak];
+            for (; 0 !== kk;) {
+              const Ik = kk & -kk;
+              kk ^= Ik;
+              const qk = 32 * ak + (31 - Math.clz32(Ik)),
+                Lk = Xk.activeViews.get(qk),
+                tk = Lk?.deref();
+              void 0 !== tk ? ik ? pF(yk, qk, Fk) : void 0 !== lk && tk.markVisible(lk) : Tk[ak] &= ~Ik
             }
           }
-        }(XS, tS, SS.ref, gS), bS) {
-        let HS = Pg[Qg];
-        void 0 === HS && (HS = {
+        }(ik, Xk, kk.ref, Ik), Tk) {
+        let Fk = KI[QI];
+        void 0 === Fk && (Fk = {
           parentRef: void 0,
           root: void 0
-        }, Pg[Qg] = HS), HS.parentRef = SS.ref, HS.root = gS, Qg++, Cg(SS, HS, Dg), Qg--
+        }, KI[QI] = Fk), Fk.parentRef = kk.ref, Fk.root = Ik, QI++, xI(kk, Fk, sI), QI--
       }
     }
 
-    function Gg(SS, HS, gS) {
-      SS(HS, gS)
+    function JI(kk, Fk, Ik) {
+      kk(Fk, Ik)
     }
 
-    function Cg(SS, HS, gS) {
-      const tS = SS.refTarget;
-      if (tS[GS]) {
-        if ("string" !== typeof tS[GS]) {
-          const SS = tS.items;
-          if (void 0 !== SS)
-            for (let tS = 0, bS = SS.length; tS < bS; tS++) {
-              const bS = SS[tS];
-              bS && gS(HS, bS[jS], tS)
+    function xI(kk, Fk, Ik) {
+      const Xk = kk.refTarget;
+      if (Xk[Hk]) {
+        if ("string" !== typeof Xk[Hk]) {
+          const kk = Xk.items;
+          if (void 0 !== kk)
+            for (let Xk = 0, Tk = kk.length; Xk < Tk; Xk++) {
+              const Tk = kk[Xk];
+              Tk && Ik(Fk, Tk[wk], Xk)
             } else {
-              const SS = tS.$items,
-                bS = tS._collectionIndexes;
-              for (const tS of SS.keys()) {
-                const XS = SS.get(tS);
-                XS && gS(HS, XS[jS], bS?.[tS] ?? tS)
+              const kk = Xk.$items,
+                Tk = Xk._collectionIndexes;
+              for (const Xk of kk.keys()) {
+                const ik = kk.get(Xk);
+                ik && Ik(Fk, ik[wk], Tk?.[Xk] ?? Xk)
               }
             }
         }
       } else {
-        const bS = SS.metadata,
-          XS = bS?.[dS];
-        if (!XS) return;
-        const xS = SS.encDescriptor.names;
-        for (let SS = 0, NS = XS.length; SS < NS; SS++) {
-          const bS = XS[SS],
-            NS = tS[xS[bS]];
-          NS && gS(HS, NS[jS], bS)
+        const Tk = kk.metadata,
+          ik = Tk?.[Ek];
+        if (!ik) return;
+        const yk = kk.encDescriptor.names;
+        for (let kk = 0, lk = ik.length; kk < lk; kk++) {
+          const Tk = ik[kk],
+            lk = Xk[yk[Tk]];
+          lk && Ik(Fk, lk[wk], Tk)
         }
       }
     }
 
-    function ng(SS, HS, gS) {
-      HS.root !== SS ? HS.setRoot(SS) : SS.add(HS)
+    function PI(kk, Fk, Ik) {
+      Fk.root !== kk ? Fk.setRoot(kk) : kk.add(Fk)
     }
-    const Pg = [];
-    let Qg = 0;
+    const KI = [];
+    let QI = 0;
 
-    function Dg(SS, HS, gS) {
-      if (HS.root === SS.root) return SS.root.add(HS), void SS.root.moveNextToParent(HS);
-      HS.setParent(SS.parentRef, SS.root, gS)
+    function sI(kk, Fk, Ik) {
+      if (Fk.root === kk.root) return kk.root.add(Fk), void kk.root.moveNextToParent(Fk);
+      Fk.setParent(kk.parentRef, kk.root, Ik)
     }
 
-    function wg(SS, HS, gS) {
-      const tS = (3 & gS) << 3;
-      return gS < 4 ? SS >>> tS & 255 : HS >>> tS & 255
+    function VI(kk, Fk, Ik) {
+      const Xk = (3 & Ik) << 3;
+      return Ik < 4 ? kk >>> Xk & 255 : Fk >>> Xk & 255
     }
-    const hg = (SS, HS, gS) => SS(HS, gS);
-    const Zg = 16,
-      Jg = 32,
-      Og = 128,
-      dg = 256,
-      cg = Zg | Jg;
-    class vg {
+    const zI = (kk, Fk, Ik) => kk(Fk, Ik);
+    const SI = 16,
+      oI = 32,
+      vI = 128,
+      EI = 256,
+      OI = SI | oI;
+    class nI {
       ref;
       refTarget;
       get isArray() {
@@ -3302,183 +3302,183 @@ export const modules = {
       get isFiltered() {
         return 0 !== (1 & this.flags)
       }
-      set isFiltered(SS) {
-        this.flags = SS ? 1 | this.flags : -2 & this.flags
+      set isFiltered(kk) {
+        this.flags = kk ? 1 | this.flags : -2 & this.flags
       }
       get isVisibilitySharedWithParent() {
         return 0 !== (2 & this.flags)
       }
-      set isVisibilitySharedWithParent(SS) {
-        this.flags = SS ? 2 | this.flags : -3 & this.flags
+      set isVisibilitySharedWithParent(kk) {
+        this.flags = kk ? 2 | this.flags : -3 & this.flags
       }
       get isNew() {
         return 0 !== (4 & this.flags)
       }
-      set isNew(SS) {
-        this.flags = SS ? 4 | this.flags : -5 & this.flags
+      set isNew(kk) {
+        this.flags = kk ? 4 | this.flags : -5 & this.flags
       }
       get isUnreliable() {
         return 0 !== (8 & this.flags)
       }
-      set isUnreliable(SS) {
-        this.flags = SS ? 8 | this.flags : -9 & this.flags
+      set isUnreliable(kk) {
+        this.flags = kk ? 8 | this.flags : -9 & this.flags
       }
       get isPatchOnly() {
-        return 0 !== (this.flags & Zg)
+        return 0 !== (this.flags & SI)
       }
-      set isPatchOnly(SS) {
-        this.flags = SS ? this.flags | Zg : this.flags & ~Zg
+      set isPatchOnly(kk) {
+        this.flags = kk ? this.flags | SI : this.flags & ~SI
       }
       get isFullStateOnly() {
-        return 0 !== (this.flags & Jg)
+        return 0 !== (this.flags & oI)
       }
-      set isFullStateOnly(SS) {
-        this.flags = SS ? this.flags | Jg : this.flags & ~Jg
+      set isFullStateOnly(kk) {
+        this.flags = kk ? this.flags | oI : this.flags & ~oI
       }
       get isStreamCollection() {
         return 0 !== (64 & this.flags)
       }
-      set isStreamCollection(SS) {
-        this.flags = SS ? 64 | this.flags : -65 & this.flags
+      set isStreamCollection(kk) {
+        this.flags = kk ? 64 | this.flags : -65 & this.flags
       }
       get needsRestage() {
-        return 0 !== (this.flags & Og)
+        return 0 !== (this.flags & vI)
       }
-      set needsRestage(SS) {
-        this.flags = SS ? this.flags | Og : -129 & this.flags
+      set needsRestage(kk) {
+        this.flags = kk ? this.flags | vI : -129 & this.flags
       }
       get hasFilteredFields() {
         return this.isFiltered || this.encDescriptor.hasAnyView
       }
       ensureUnreliableRecorder() {
-        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new lH(this.metadata?.[OS] ?? 0) : new mH), this.unreliableRecorder
+        return void 0 === this.unreliableRecorder && (this.unreliableRecorder = this._isSchema ? new rF(this.metadata?.[vk] ?? 0) : new DF), this.unreliableRecorder
       }
-      isFieldUnreliable(SS) {
-        const HS = this.encDescriptor;
-        return !!HS.hasAnyUnreliable && (SS < 32 ? 0 !== (HS.unreliableBitmask & 1 << SS) : TH.hasUnreliableAtIndex(this.metadata, SS))
+      isFieldUnreliable(kk) {
+        const Fk = this.encDescriptor;
+        return !!Fk.hasAnyUnreliable && (kk < 32 ? 0 !== (Fk.unreliableBitmask & 1 << kk) : mF.hasUnreliableAtIndex(this.metadata, kk))
       }
-      isFieldFullStateOnly(SS) {
+      isFieldFullStateOnly(kk) {
         if (this.isFullStateOnly) return !0;
-        const HS = this.encDescriptor;
-        return !!HS.hasAnyFullStateOnly && (SS < 32 ? 0 !== (HS.fullStateOnlyBitmask & 1 << SS) : TH.hasFullStateOnlyAtIndex(this.metadata, SS))
+        const Fk = this.encDescriptor;
+        return !!Fk.hasAnyFullStateOnly && (kk < 32 ? 0 !== (Fk.fullStateOnlyBitmask & 1 << kk) : mF.hasFullStateOnlyAtIndex(this.metadata, kk))
       }
-      isFieldStream(SS) {
-        const HS = this.encDescriptor;
-        return !!HS.hasAnyStream && (SS < 32 ? 0 !== (HS.streamBitmask & 1 << SS) : TH.hasStreamAtIndex(this.metadata, SS))
+      isFieldStream(kk) {
+        const Fk = this.encDescriptor;
+        return !!Fk.hasAnyStream && (kk < 32 ? 0 !== (Fk.streamBitmask & 1 << kk) : mF.hasStreamAtIndex(this.metadata, kk))
       }
-      constructor(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SS;
-        this.ref = SS, this.refTarget = HS;
-        const gS = Sg(SS);
-        this.encDescriptor = gS, this.metadata = gS.metadata;
-        const tS = gS.isSchema;
-        if (this._isSchema = tS, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, tS) {
-          const SS = this.metadata?.[OS] ?? 0;
-          SS > 7 && (this.ops = new Uint8Array(SS + 1))
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk;
+        this.ref = kk, this.refTarget = Fk;
+        const Ik = FI(kk);
+        this.encDescriptor = Ik, this.metadata = Ik.metadata;
+        const Xk = Ik.isSchema;
+        if (this._isSchema = Xk, this.ops = void 0, this.collDirty = void 0, this.collPureOps = void 0, Xk) {
+          const kk = this.metadata?.[vk] ?? 0;
+          kk > 7 && (this.ops = new Uint8Array(kk + 1))
         } else this.collDirty = new Map
       }
-      _opAt(SS) {
-        const HS = this.ops;
-        if (void 0 !== HS) return HS[SS];
-        const gS = (3 & SS) << 3;
-        return SS < 4 ? this.opsLow >>> gS & 255 : this.opsHigh >>> gS & 255
+      _opAt(kk) {
+        const Fk = this.ops;
+        if (void 0 !== Fk) return Fk[kk];
+        const Ik = (3 & kk) << 3;
+        return kk < 4 ? this.opsLow >>> Ik & 255 : this.opsHigh >>> Ik & 255
       }
-      _opPut(SS, HS) {
-        const gS = this.ops;
-        if (void 0 !== gS) return void(gS[SS] = HS);
-        const tS = (3 & SS) << 3,
-          bS = ~(255 << tS);
-        SS < 4 ? this.opsLow = this.opsLow & bS | HS << tS : this.opsHigh = this.opsHigh & bS | HS << tS
+      _opPut(kk, Fk) {
+        const Ik = this.ops;
+        if (void 0 !== Ik) return void(Ik[kk] = Fk);
+        const Xk = (3 & kk) << 3,
+          Tk = ~(255 << Xk);
+        kk < 4 ? this.opsLow = this.opsLow & Tk | Fk << Xk : this.opsHigh = this.opsHigh & Tk | Fk << Xk
       }
-      _markDirty(SS) {
-        SS < 32 ? this.dirtyLow |= 1 << SS : this.dirtyHigh |= 1 << SS - 32
+      _markDirty(kk) {
+        kk < 32 ? this.dirtyLow |= 1 << kk : this.dirtyHigh |= 1 << kk - 32
       }
-      record(SS, HS) {
+      record(kk, Fk) {
         if (this._isSchema) {
-          const gS = this._opAt(SS);
-          0 === gS ? this._opPut(SS, HS) : (gS === bS.DELETE || gS === bS.ADD && HS === bS.DELETE_AND_ADD) && this._opPut(SS, bS.DELETE_AND_ADD), this._markDirty(SS)
+          const Ik = this._opAt(kk);
+          0 === Ik ? this._opPut(kk, Fk) : (Ik === Tk.DELETE || Ik === Tk.ADD && Fk === Tk.DELETE_AND_ADD) && this._opPut(kk, Tk.DELETE_AND_ADD), this._markDirty(kk)
         } else {
-          const gS = this.collDirty,
-            tS = gS.get(SS);
-          let XS;
-          XS = void 0 === tS ? HS : tS === bS.DELETE || tS === bS.ADD && HS === bS.DELETE_AND_ADD ? bS.DELETE_AND_ADD : tS, gS.set(SS, XS)
+          const Ik = this.collDirty,
+            Xk = Ik.get(kk);
+          let ik;
+          ik = void 0 === Xk ? Fk : Xk === Tk.DELETE || Xk === Tk.ADD && Fk === Tk.DELETE_AND_ADD ? Tk.DELETE_AND_ADD : Xk, Ik.set(kk, ik)
         }
       }
-      recordDelete(SS, HS) {
-        this._isSchema ? (this._opPut(SS, HS), this._markDirty(SS)) : this.collDirty.set(SS, HS)
+      recordDelete(kk, Fk) {
+        this._isSchema ? (this._opPut(kk, Fk), this._markDirty(kk)) : this.collDirty.set(kk, Fk)
       }
-      recordRaw(SS, HS) {
-        this._isSchema ? (this._opPut(SS, HS), this._markDirty(SS)) : this.collDirty.set(SS, HS)
+      recordRaw(kk, Fk) {
+        this._isSchema ? (this._opPut(kk, Fk), this._markDirty(kk)) : this.collDirty.set(kk, Fk)
       }
-      recordPure(SS) {
+      recordPure(kk) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): pure operations are not supported");
-        (this.collPureOps ??= []).push([this.collDirty.size, SS])
+        (this.collPureOps ??= []).push([this.collDirty.size, kk])
       }
-      operationAt(SS) {
+      operationAt(kk) {
         if (this._isSchema) {
-          const HS = this._opAt(SS);
-          return 0 === HS ? void 0 : HS
+          const Fk = this._opAt(kk);
+          return 0 === Fk ? void 0 : Fk
         }
-        return this.collDirty.get(SS)
+        return this.collDirty.get(kk)
       }
-      setOperationAt(SS, HS) {
-        if (this._isSchema) this._opPut(SS, HS);
+      setOperationAt(kk, Fk) {
+        if (this._isSchema) this._opPut(kk, Fk);
         else {
-          const gS = this.collDirty;
-          gS.has(SS) && gS.set(SS, HS)
+          const Ik = this.collDirty;
+          Ik.has(kk) && Ik.set(kk, Fk)
         }
       }
-      forEach(SS) {
-        this.forEachWithCtx(SS, hg)
+      forEach(kk) {
+        this.forEachWithCtx(kk, zI)
       }
-      forEachWithCtx(SS, HS) {
+      forEachWithCtx(kk, Fk) {
         if (this._isSchema) {
-          let gS = this.dirtyLow,
-            tS = this.dirtyHigh;
-          const bS = this.ops;
-          if (void 0 !== bS) {
-            for (; 0 !== gS;) {
-              const tS = gS & -gS,
-                XS = 31 - Math.clz32(tS);
-              gS ^= tS, HS(SS, XS, bS[XS])
+          let Ik = this.dirtyLow,
+            Xk = this.dirtyHigh;
+          const Tk = this.ops;
+          if (void 0 !== Tk) {
+            for (; 0 !== Ik;) {
+              const Xk = Ik & -Ik,
+                ik = 31 - Math.clz32(Xk);
+              Ik ^= Xk, Fk(kk, ik, Tk[ik])
             }
-            for (; 0 !== tS;) {
-              const gS = tS & -tS,
-                XS = 31 - Math.clz32(gS) + 32;
-              tS ^= gS, HS(SS, XS, bS[XS])
+            for (; 0 !== Xk;) {
+              const Ik = Xk & -Xk,
+                ik = 31 - Math.clz32(Ik) + 32;
+              Xk ^= Ik, Fk(kk, ik, Tk[ik])
             }
           } else {
-            const tS = this.opsLow,
-              bS = this.opsHigh;
-            for (; 0 !== gS;) {
-              const XS = gS & -gS,
-                xS = 31 - Math.clz32(XS);
-              gS ^= XS, HS(SS, xS, wg(tS, bS, xS))
+            const Xk = this.opsLow,
+              Tk = this.opsHigh;
+            for (; 0 !== Ik;) {
+              const ik = Ik & -Ik,
+                yk = 31 - Math.clz32(ik);
+              Ik ^= ik, Fk(kk, yk, VI(Xk, Tk, yk))
             }
           }
           return
         }
-        const gS = this.collDirty,
-          tS = this.collPureOps;
-        if (void 0 !== tS && tS.length > 0) {
-          let bS = 0,
-            XS = 0;
-          for (const [xS, NS] of gS) {
-            for (; bS < tS.length && tS[bS][0] <= XS;) {
-              const gS = tS[bS++][1];
-              HS(SS, -gS, gS)
+        const Ik = this.collDirty,
+          Xk = this.collPureOps;
+        if (void 0 !== Xk && Xk.length > 0) {
+          let Tk = 0,
+            ik = 0;
+          for (const [yk, lk] of Ik) {
+            for (; Tk < Xk.length && Xk[Tk][0] <= ik;) {
+              const Ik = Xk[Tk++][1];
+              Fk(kk, -Ik, Ik)
             }
-            HS(SS, xS, NS), XS++
+            Fk(kk, yk, lk), ik++
           }
-          for (; bS < tS.length;) {
-            const gS = tS[bS++][1];
-            HS(SS, -gS, gS)
+          for (; Tk < Xk.length;) {
+            const Ik = Xk[Tk++][1];
+            Fk(kk, -Ik, Ik)
           }
         } else
-          for (const [bS, XS] of gS) HS(SS, bS, XS)
+          for (const [Tk, ik] of Ik) Fk(kk, Tk, ik)
       }
       size() {
-        return this._isSchema ? eH(this.dirtyLow) + eH(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
+        return this._isSchema ? MF(this.dirtyLow) + MF(this.dirtyHigh) : this.collDirty.size + (this.collPureOps?.length ?? 0)
       }
       has() {
         return this._isSchema ? 0 !== (this.dirtyLow | this.dirtyHigh) : this.collDirty.size > 0 || void 0 !== this.collPureOps && this.collPureOps.length > 0
@@ -3491,81 +3491,81 @@ export const modules = {
         if (void 0 !== this.root) throw new Error(`@colyseus/schema: cannot recycle an attached ChangeTree (${this.ref?.constructor?.name}). Remove the instance from its parent collection before releasing it to a pool.`);
         this.reset(), this.unreliableRecorder?.reset(), this.flags = 132, this._fullSyncGen = 0, this.parentRef = void 0, this._parentIndex = void 0, this.extraParents = void 0, this.changesNode = void 0, this.unreliableChangesNode = void 0, this.paused = !1, this.visibleViews = void 0, this.tagViews = void 0, this.subscribedViews = void 0
       }
-      insertAt(SS, HS) {
+      insertAt(kk, Fk) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): insertAt is not supported");
-        const gS = this.collDirty,
-          tS = new Map,
-          XS = !this.paused && !this.isFullStateOnly;
-        if (SS > 0)
-          for (const [bS, xS] of gS) bS < SS && tS.set(bS, xS);
-        if (XS)
-          for (let xS = 0; xS < HS; xS++) tS.set(SS + xS, bS.ADD);
-        for (const [bS, xS] of gS) bS >= SS && tS.set(bS + HS, xS);
-        this.collDirty = tS, XS && this.root?.enqueueChangeTree(this)
+        const Ik = this.collDirty,
+          Xk = new Map,
+          ik = !this.paused && !this.isFullStateOnly;
+        if (kk > 0)
+          for (const [Tk, yk] of Ik) Tk < kk && Xk.set(Tk, yk);
+        if (ik)
+          for (let yk = 0; yk < Fk; yk++) Xk.set(kk + yk, Tk.ADD);
+        for (const [Tk, yk] of Ik) Tk >= kk && Xk.set(Tk + Fk, yk);
+        this.collDirty = Xk, ik && this.root?.enqueueChangeTree(this)
       }
-      removeAt(SS, HS) {
+      removeAt(kk, Fk) {
         if (this._isSchema) throw new Error("ChangeTree (Schema): removeAt is not supported");
-        const gS = this.collDirty,
-          tS = SS + HS;
-        let bS = !1;
-        for (const xS of gS.keys())
-          if (xS >= tS) {
-            bS = !0;
+        const Ik = this.collDirty,
+          Xk = kk + Fk;
+        let Tk = !1;
+        for (const yk of Ik.keys())
+          if (yk >= Xk) {
+            Tk = !0;
             break
-          } if (!bS) {
-          for (let HS = SS; HS < tS; HS++) gS.delete(HS);
+          } if (!Tk) {
+          for (let Fk = kk; Fk < Xk; Fk++) Ik.delete(Fk);
           return
         }
-        const XS = new Map;
-        for (const [xS, NS] of gS) xS < SS ? XS.set(xS, NS) : xS >= tS && XS.set(xS - HS, NS);
-        this.collDirty = XS
+        const ik = new Map;
+        for (const [yk, lk] of Ik) yk < kk ? ik.set(yk, lk) : yk >= Xk && ik.set(yk - Fk, lk);
+        this.collDirty = ik
       }
-      unshift(SS) {
-        this.insertAt(0, SS)
+      unshift(kk) {
+        this.insertAt(0, kk)
       }
-      setRoot(SS) {
-        ! function(SS, HS) {
-          SS.root = HS;
-          const gS = HS.add(SS);
-          Xg(SS, SS.parent, SS.parentIndex), gS && Cg(SS, HS, ng)
-        }(this, SS)
+      setRoot(kk) {
+        ! function(kk, Fk) {
+          kk.root = Fk;
+          const Ik = Fk.add(kk);
+          yI(kk, kk.parent, kk.parentIndex), Ik && xI(kk, Fk, PI)
+        }(this, kk)
       }
-      setParent(SS, HS, gS) {
-        jg(this, SS, HS, gS)
+      setParent(kk, Fk, Ik) {
+        HI(this, kk, Fk, Ik)
       }
-      forEachChild(SS) {
-        Cg(this, SS, Gg)
+      forEachChild(kk) {
+        xI(this, kk, JI)
       }
-      forEachChildWithCtx(SS, HS) {
-        Cg(this, SS, HS)
+      forEachChildWithCtx(kk, Fk) {
+        xI(this, kk, Fk)
       }
-      forEachLive(SS) {
-        bg(this, SS, tg)
+      forEachLive(kk) {
+        iI(this, kk, TI)
       }
-      forEachLiveWithCtx(SS, HS) {
-        bg(this, SS, HS)
+      forEachLiveWithCtx(kk, Fk) {
+        iI(this, kk, Fk)
       }
-      operation(SS) {
-        this.paused || this.isFullStateOnly || (this.recordPure(SS), this.root?.enqueueChangeTree(this))
+      operation(kk) {
+        this.paused || this.isFullStateOnly || (this.recordPure(kk), this.root?.enqueueChangeTree(this))
       }
-      _routeAndRecord(SS, HS, gS) {
-        if (!this.paused && !this.isFieldFullStateOnly(SS)) {
-          if (this.isFieldUnreliable(SS) && !this.isNew) {
-            const tS = this.ensureUnreliableRecorder();
-            return gS ? tS.recordRaw(SS, HS) : tS.record(SS, HS), void this.root?.enqueueUnreliable(this)
+      _routeAndRecord(kk, Fk, Ik) {
+        if (!this.paused && !this.isFieldFullStateOnly(kk)) {
+          if (this.isFieldUnreliable(kk) && !this.isNew) {
+            const Xk = this.ensureUnreliableRecorder();
+            return Ik ? Xk.recordRaw(kk, Fk) : Xk.record(kk, Fk), void this.root?.enqueueUnreliable(this)
           }
-          gS ? this.recordRaw(SS, HS) : this.record(SS, HS), this.root?.enqueueChangeTree(this)
+          Ik ? this.recordRaw(kk, Fk) : this.record(kk, Fk), this.root?.enqueueChangeTree(this)
         }
       }
-      change(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bS.ADD;
-        this._routeAndRecord(SS, HS, !1)
+      change(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Tk.ADD;
+        this._routeAndRecord(kk, Fk, !1)
       }
-      indexedOperation(SS, HS) {
-        this._routeAndRecord(SS, HS, !0)
+      indexedOperation(kk, Fk) {
+        this._routeAndRecord(kk, Fk, !0)
       }
-      getChange(SS) {
-        return this.operationAt(SS)
+      getChange(kk) {
+        return this.operationAt(kk)
       }
       pause() {
         this.paused = !0
@@ -3573,60 +3573,60 @@ export const modules = {
       resume() {
         this.paused = !1
       }
-      untracked(SS) {
-        const HS = this.paused;
+      untracked(kk) {
+        const Fk = this.paused;
         this.paused = !0;
         try {
-          return SS()
+          return kk()
         } finally {
-          this.paused = HS
+          this.paused = Fk
         }
       }
-      markDirty(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bS.ADD;
-        const gS = this.paused;
+      markDirty(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Tk.ADD;
+        const Ik = this.paused;
         this.paused = !1;
         try {
-          this.change(SS, HS)
+          this.change(kk, Fk)
         } finally {
-          this.paused = gS
+          this.paused = Ik
         }
       }
-      getValue(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.refTarget[kS](SS, HS)
+      getValue(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.refTarget[Zk](kk, Fk)
       }
-      delete(SS, HS) {
-        if (void 0 === SS) {
+      delete(kk, Fk) {
+        if (void 0 === kk) {
           try {
-            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${SS}'`)
-          } catch (xb) {
-            console.warn(xb)
+            throw new Error(`@colyseus/schema ${this.ref.constructor.name}: trying to delete non-existing index '${kk}'`)
+          } catch (yT) {
+            console.warn(yT)
           }
           return
         }
-        if (this.paused || this.isFieldFullStateOnly(SS)) return this.getValue(SS);
-        const gS = this.isFieldUnreliable(SS) && !this.isNew;
-        gS ? this.ensureUnreliableRecorder().recordDelete(SS, HS ?? bS.DELETE) : this.recordDelete(SS, HS ?? bS.DELETE);
-        const tS = this.getValue(SS);
-        return tS && tS[jS] && this.root?.remove(tS[jS]), gS ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), tS
+        if (this.paused || this.isFieldFullStateOnly(kk)) return this.getValue(kk);
+        const Ik = this.isFieldUnreliable(kk) && !this.isNew;
+        Ik ? this.ensureUnreliableRecorder().recordDelete(kk, Fk ?? Tk.DELETE) : this.recordDelete(kk, Fk ?? Tk.DELETE);
+        const Xk = this.getValue(kk);
+        return Xk && Xk[wk] && this.root?.remove(Xk[wk]), Ik ? this.root?.enqueueUnreliable(this) : this.root?.enqueueChangeTree(this), Xk
       }
       endEncode() {
-        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[nS]?.(), this.isNew = !1
+        this.reset(), this.changesNode = void 0, this._isSchema || this.refTarget[xk]?.(), this.isNew = !1
       }
       endEncodeUnreliable() {
-        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[nS]?.()
+        this.unreliableRecorder?.reset(), this.unreliableChangesNode = void 0, this._isSchema || this.refTarget[xk]?.()
       }
       discard() {
-        this._isSchema || this.refTarget[nS]?.(), this.reset(), this.unreliableRecorder?.reset()
+        this._isSchema || this.refTarget[xk]?.(), this.reset(), this.unreliableRecorder?.reset()
       }
       discardAll() {
-        const SS = SS => {
-          if (SS < 0) return;
-          const HS = this.getValue(SS);
-          HS && HS[jS] && HS[jS].discardAll()
+        const kk = kk => {
+          if (kk < 0) return;
+          const Fk = this.getValue(kk);
+          Fk && Fk[wk] && Fk[wk].discardAll()
         };
-        this.forEach(SS), this.unreliableRecorder?.forEach(SS), this.discard()
+        this.forEach(kk), this.unreliableRecorder?.forEach(kk), this.discard()
       }
       get changed() {
         return this.has() || (this.unreliableRecorder?.has() ?? !1)
@@ -3637,89 +3637,89 @@ export const modules = {
       get parentIndex() {
         return this._parentIndex
       }
-      addParent(SS, HS) {
-        ! function(SS, HS, gS) {
-          if (SS.parentRef) {
-            if (SS.parentRef[jS] === HS[jS]) return void(SS._parentIndex = gS);
-            if (Hg(SS, ((SS, gS) => SS[jS] === HS[jS]))) return void(SS._parentIndex = gS)
+      addParent(kk, Fk) {
+        ! function(kk, Fk, Ik) {
+          if (kk.parentRef) {
+            if (kk.parentRef[wk] === Fk[wk]) return void(kk._parentIndex = Ik);
+            if (II(kk, ((kk, Ik) => kk[wk] === Fk[wk]))) return void(kk._parentIndex = Ik)
           }
-          void 0 === SS.parentRef ? (SS.parentRef = HS, SS._parentIndex = gS) : (SS.extraParents = {
-            ref: SS.parentRef,
-            index: SS._parentIndex,
-            next: SS.extraParents
-          }, SS.parentRef = HS, SS._parentIndex = gS)
-        }(this, SS, HS)
+          void 0 === kk.parentRef ? (kk.parentRef = Fk, kk._parentIndex = Ik) : (kk.extraParents = {
+            ref: kk.parentRef,
+            index: kk._parentIndex,
+            next: kk.extraParents
+          }, kk.parentRef = Fk, kk._parentIndex = Ik)
+        }(this, kk, Fk)
       }
-      setParentIndex(SS, HS) {
-        ! function(SS, HS, gS) {
-          if (void 0 !== SS.extraParents)
-            if (SS.parentRef[jS] !== HS[jS]) {
-              for (let tS = SS.extraParents; void 0 !== tS; tS = tS.next)
-                if (tS.ref[jS] === HS[jS]) return void(tS.index = gS)
-            } else SS._parentIndex = gS;
-          else SS._parentIndex = gS
-        }(this, SS, HS)
+      setParentIndex(kk, Fk) {
+        ! function(kk, Fk, Ik) {
+          if (void 0 !== kk.extraParents)
+            if (kk.parentRef[wk] !== Fk[wk]) {
+              for (let Xk = kk.extraParents; void 0 !== Xk; Xk = Xk.next)
+                if (Xk.ref[wk] === Fk[wk]) return void(Xk.index = Ik)
+            } else kk._parentIndex = Ik;
+          else kk._parentIndex = Ik
+        }(this, kk, Fk)
       }
       removeParent() {
-        return function(SS, HS) {
-          if (SS.parentRef && SS.parentRef[jS] === HS[jS]) return SS.extraParents ? (SS.parentRef = SS.extraParents.ref, SS._parentIndex = SS.extraParents.index, SS.extraParents = SS.extraParents.next) : (SS.parentRef = void 0, SS._parentIndex = void 0), !0;
-          let gS = SS.extraParents,
-            tS = null;
-          for (; gS;) {
-            if (gS.ref[jS] === HS[jS]) return tS ? tS.next = gS.next : SS.extraParents = gS.next, !0;
-            tS = gS, gS = gS.next
+        return function(kk, Fk) {
+          if (kk.parentRef && kk.parentRef[wk] === Fk[wk]) return kk.extraParents ? (kk.parentRef = kk.extraParents.ref, kk._parentIndex = kk.extraParents.index, kk.extraParents = kk.extraParents.next) : (kk.parentRef = void 0, kk._parentIndex = void 0), !0;
+          let Ik = kk.extraParents,
+            Xk = null;
+          for (; Ik;) {
+            if (Ik.ref[wk] === Fk[wk]) return Xk ? Xk.next = Ik.next : kk.extraParents = Ik.next, !0;
+            Xk = Ik, Ik = Ik.next
           }
-          return void 0 === SS.parentRef
+          return void 0 === kk.parentRef
         }(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.parent)
       }
-      findParent(SS) {
-        return function(SS, HS) {
-          if (void 0 !== SS.parentRef && HS(SS.parentRef, SS._parentIndex)) return {
-            ref: SS.parentRef,
-            index: SS._parentIndex
+      findParent(kk) {
+        return function(kk, Fk) {
+          if (void 0 !== kk.parentRef && Fk(kk.parentRef, kk._parentIndex)) return {
+            ref: kk.parentRef,
+            index: kk._parentIndex
           };
-          for (let gS = SS.extraParents; void 0 !== gS; gS = gS.next)
-            if (HS(gS.ref, gS.index)) return {
-              ref: gS.ref,
-              index: gS.index
+          for (let Ik = kk.extraParents; void 0 !== Ik; Ik = Ik.next)
+            if (Fk(Ik.ref, Ik.index)) return {
+              ref: Ik.ref,
+              index: Ik.index
             }
-        }(this, SS)
+        }(this, kk)
       }
-      hasParent(SS) {
-        return Hg(this, SS)
+      hasParent(kk) {
+        return II(this, kk)
       }
-      indexInParent(SS) {
-        return function(SS, HS) {
-          if (SS.parentRef && SS.parentRef[jS] === HS[jS]) return SS._parentIndex;
-          for (let gS = SS.extraParents; void 0 !== gS; gS = gS.next)
-            if (gS.ref[jS] === HS[jS]) return gS.index
-        }(this, SS)
+      indexInParent(kk) {
+        return function(kk, Fk) {
+          if (kk.parentRef && kk.parentRef[wk] === Fk[wk]) return kk._parentIndex;
+          for (let Ik = kk.extraParents; void 0 !== Ik; Ik = Ik.next)
+            if (Ik.ref[wk] === Fk[wk]) return Ik.index
+        }(this, kk)
       }
       getAllParents() {
-        return function(SS) {
-          const HS = [];
-          SS.parentRef && HS.push({
-            ref: SS.parentRef,
-            index: SS._parentIndex
+        return function(kk) {
+          const Fk = [];
+          kk.parentRef && Fk.push({
+            ref: kk.parentRef,
+            index: kk._parentIndex
           });
-          let gS = SS.extraParents;
-          for (; gS;) HS.push({
-            ref: gS.ref,
-            index: gS.index
-          }), gS = gS.next;
-          return HS
+          let Ik = kk.extraParents;
+          for (; Ik;) Fk.push({
+            ref: Ik.ref,
+            index: Ik.index
+          }), Ik = Ik.next;
+          return Fk
         }(this)
       }
     }
-    class Eg {
+    class GI {
       ref;
       root = void 0;
       parentRef = void 0;
       paused = !1;
       isNew = !1;
       flags = 0;
-      constructor(SS) {
-        this.ref = SS
+      constructor(kk) {
+        this.ref = kk
       }
       change() {}
       delete() {}
@@ -3738,606 +3738,606 @@ export const modules = {
       discardAll() {}
       pause() {}
       resume() {}
-      untracked(SS) {
-        return SS()
+      untracked(kk) {
+        return kk()
       }
       markDirty() {}
-      forEachChild(SS) {
-        const HS = this.ref;
-        if (HS[GS]) {
-          if ("string" !== typeof HS[GS])
-            for (const [gS, tS] of HS.entries()) tS && SS(tS[jS], HS._collectionIndexes?.[gS] ?? gS);
+      forEachChild(kk) {
+        const Fk = this.ref;
+        if (Fk[Hk]) {
+          if ("string" !== typeof Fk[Hk])
+            for (const [Ik, Xk] of Fk.entries()) Xk && kk(Xk[wk], Fk._collectionIndexes?.[Ik] ?? Ik);
           return
         }
-        const gS = HS.constructor,
-          tS = gS?.[Symbol.metadata];
-        if (!tS) return;
-        const bS = tS[dS] ?? [];
-        for (let XS = 0; XS < bS.length; XS++) {
-          const gS = bS[XS],
-            xS = HS[tS[gS].name];
-          xS && SS(xS[jS], gS)
+        const Ik = Fk.constructor,
+          Xk = Ik?.[Symbol.metadata];
+        if (!Xk) return;
+        const Tk = Xk[Ek] ?? [];
+        for (let ik = 0; ik < Tk.length; ik++) {
+          const Ik = Tk[ik],
+            yk = Fk[Xk[Ik].name];
+          yk && kk(yk[wk], Ik)
         }
       }
-      forEachChildWithCtx(SS, HS) {
-        this.forEachChild(((gS, tS) => HS(SS, gS, tS)))
+      forEachChildWithCtx(kk, Fk) {
+        this.forEachChild(((Ik, Xk) => Fk(kk, Ik, Xk)))
       }
       forEachLive() {}
       forEachLiveWithCtx() {}
       forEach() {}
     }
 
-    function Lg(SS) {
-      let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SS;
-      var gS;
-      Object.defineProperty(SS, jS, {
-        value: (gS = HS, new Eg(gS)),
+    function pI(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk;
+      var Ik;
+      Object.defineProperty(kk, wk, {
+        value: (Ik = Fk, new GI(Ik)),
         enumerable: !1,
         writable: !0
       })
     }
 
-    function Yg(SS, HS, gS, tS, XS, xS, qS) {
-      void 0 !== qS ? qS(HS, tS, xS) : "string" === typeof gS ? HH[gS]?.(HS, tS, xS) : null != gS[Symbol.metadata] ? (HH.number(HS, tS[NS], xS), (XS & bS.ADD) === bS.ADD && SS.tryEncodeTypeId(HS, gS, tS.constructor, xS)) : HH.number(HS, tS[NS], xS)
+    function uI(kk, Fk, Ik, Xk, ik, yk, ak) {
+      void 0 !== ak ? ak(Fk, Xk, yk) : "string" === typeof Ik ? IF[Ik]?.(Fk, Xk, yk) : null != Ik[Symbol.metadata] ? (IF.number(Fk, Xk[lk], yk), (ik & Tk.ADD) === Tk.ADD && kk.tryEncodeTypeId(Fk, Ik, Xk.constructor, yk)) : IF.number(Fk, Xk[lk], yk)
     }
-    const Ag = function(SS, HS, gS, tS, XS, xS, NS, qS) {
-        if (HS[xS.offset++] = 255 & (tS | XS), XS === bS.DELETE) return;
-        const uS = gS.encDescriptor,
-          IS = gS.ref,
-          fS = IS[DS][tS] ?? IS[uS.names[tS]];
-        Yg(SS, HS, uS.types[tS], fS, XS, xS, uS.encoders[tS])
+    const bI = function(kk, Fk, Ik, Xk, ik, yk, lk, ak) {
+        if (Fk[yk.offset++] = 255 & (Xk | ik), ik === Tk.DELETE) return;
+        const qk = Ik.encDescriptor,
+          Lk = Ik.ref,
+          tk = Lk[Qk][Xk] ?? Lk[qk.names[Xk]];
+        uI(kk, Fk, qk.types[Xk], tk, ik, yk, qk.encoders[Xk])
       },
-      yg = function(SS, HS, gS, tS, XS, xS) {
-        if (HS[xS.offset++] = 255 & XS, HH.number(HS, tS, xS), XS === bS.DELETE) return;
-        const NS = gS.ref;
-        if ((XS & bS.ADD) === bS.ADD) {
-          const SS = NS.$indexes.get(tS);
-          HH.string(HS, SS, xS)
+      RI = function(kk, Fk, Ik, Xk, ik, yk) {
+        if (Fk[yk.offset++] = 255 & ik, IF.number(Fk, Xk, yk), ik === Tk.DELETE) return;
+        const lk = Ik.ref;
+        if ((ik & Tk.ADD) === Tk.ADD) {
+          const kk = lk.$indexes.get(Xk);
+          IF.string(Fk, kk, yk)
         }
-        Yg(SS, HS, NS[GS], NS[kS](tS), XS, xS)
+        uI(kk, Fk, lk[Hk], lk[Zk](Xk), ik, yk)
       },
-      Vg = function(SS, HS, gS, tS, XS, xS) {
-        if (HS[xS.offset++] = 255 & XS, HH.number(HS, tS, xS), XS === bS.DELETE) return;
-        const NS = gS.ref;
-        Yg(SS, HS, NS[GS], NS[kS](tS), XS, xS)
+      UI = function(kk, Fk, Ik, Xk, ik, yk) {
+        if (Fk[yk.offset++] = 255 & ik, IF.number(Fk, Xk, yk), ik === Tk.DELETE) return;
+        const lk = Ik.ref;
+        uI(kk, Fk, lk[Hk], lk[Zk](Xk), ik, yk)
       },
-      ig = function(SS, HS, gS, tS, XS, xS) {
-        const NS = gS.ref;
-        (XS & bS.ADD) === bS.ADD && "function" === typeof NS.set ? yg(SS, HS, gS, tS, XS, xS) : Vg(SS, HS, gS, tS, XS, xS)
+      CI = function(kk, Fk, Ik, Xk, ik, yk) {
+        const lk = Ik.ref;
+        (ik & Tk.ADD) === Tk.ADD && "function" === typeof lk.set ? RI(kk, Fk, Ik, Xk, ik, yk) : UI(kk, Fk, Ik, Xk, ik, yk)
       },
-      Wg = function(SS, HS, gS, tS, XS, xS, qS, uS) {
-        const IS = gS.refTarget,
-          fS = IS[GS],
-          aS = "string" !== typeof fS;
-        let KS;
-        if (uS && gS.isFiltered && aS) {
-          const SS = IS.tmpItems[tS];
-          if (!SS) return;
-          if (KS = SS[NS], XS === bS.DELETE) XS = bS.DELETE_BY_REFID;
-          else if ((XS & bS.ADD) === bS.ADD) XS = bS.ADD_BY_REFID;
-          else if ((XS & bS.MOVE) === bS.MOVE) return
-        } else if (XS === bS.DELETE && aS) {
-          const SS = IS.tmpItems[tS];
-          if (!SS) return;
-          KS = SS[NS], XS = bS.DELETE_BY_REFID
-        } else KS = tS;
-        if (HS[xS.offset++] = 255 & XS, HH.number(HS, KS, xS), XS === bS.DELETE || XS === bS.DELETE_BY_REFID) return;
-        Yg(SS, HS, fS, IS[kS](tS, qS), XS, xS)
+      NI = function(kk, Fk, Ik, Xk, ik, yk, ak, qk) {
+        const Lk = Ik.refTarget,
+          tk = Lk[Hk],
+          jk = "string" !== typeof tk;
+        let ek;
+        if (qk && Ik.isFiltered && jk) {
+          const kk = Lk.tmpItems[Xk];
+          if (!kk) return;
+          if (ek = kk[lk], ik === Tk.DELETE) ik = Tk.DELETE_BY_REFID;
+          else if ((ik & Tk.ADD) === Tk.ADD) ik = Tk.ADD_BY_REFID;
+          else if ((ik & Tk.MOVE) === Tk.MOVE) return
+        } else if (ik === Tk.DELETE && jk) {
+          const kk = Lk.tmpItems[Xk];
+          if (!kk) return;
+          ek = kk[lk], ik = Tk.DELETE_BY_REFID
+        } else ek = Xk;
+        if (Fk[yk.offset++] = 255 & ik, IF.number(Fk, ek, yk), ik === Tk.DELETE || ik === Tk.DELETE_BY_REFID) return;
+        uI(kk, Fk, tk, Lk[Zk](Xk, ak), ik, yk)
       };
 
-    function zg(SS, HS, gS, tS, XS, xS, qS) {
-      const uS = SS.resyncVisited;
-      let IS = uS.get(SS.currentRefId);
-      if (void 0 === IS && uS.set(SS.currentRefId, IS = new Set), IS.add(tS), void 0 !== XS && gS === bS.ADD && XS !== xS) {
-        const gS = XS[NS];
-        void 0 !== gS && (SS.root.removeRef(gS), qS?.push({
-          ref: HS,
-          refId: SS.currentRefId,
-          op: bS.DELETE,
-          dynamicIndex: tS,
+    function cI(kk, Fk, Ik, Xk, ik, yk, ak) {
+      const qk = kk.resyncVisited;
+      let Lk = qk.get(kk.currentRefId);
+      if (void 0 === Lk && qk.set(kk.currentRefId, Lk = new Set), Lk.add(Xk), void 0 !== ik && Ik === Tk.ADD && ik !== yk) {
+        const Ik = ik[lk];
+        void 0 !== Ik && (kk.root.removeRef(Ik), ak?.push({
+          ref: Fk,
+          refId: kk.currentRefId,
+          op: Tk.DELETE,
+          dynamicIndex: Xk,
           value: void 0,
-          previousValue: XS
+          previousValue: ik
         }))
       }
     }
 
-    function Ug(SS, HS, gS, tS) {
-      const bS = HS[NS];
-      if (void 0 === bS || gS.has(bS)) return;
-      gS.add(bS);
-      const XS = HS.constructor[Symbol.metadata],
-        xS = XS?.[dS];
-      if (void 0 === xS) return;
-      const qS = XS[LS];
-      for (let NS = 0; NS < xS.length; NS++) {
-        const bS = xS[NS];
-        if (void 0 !== qS && qS.includes(bS)) continue;
-        const uS = XS[bS],
-          IS = HS[uS.name];
-        IS && (vt.is(uS.type) ? Ug(SS, IS, gS, tS) : pg(SS, IS, gS, tS))
+    function WI(kk, Fk, Ik, Xk) {
+      const Tk = Fk[lk];
+      if (void 0 === Tk || Ik.has(Tk)) return;
+      Ik.add(Tk);
+      const ik = Fk.constructor[Symbol.metadata],
+        yk = ik?.[Ek];
+      if (void 0 === yk) return;
+      const ak = ik[pk];
+      for (let lk = 0; lk < yk.length; lk++) {
+        const Tk = yk[lk];
+        if (void 0 !== ak && ak.includes(Tk)) continue;
+        const qk = ik[Tk],
+          Lk = Fk[qk.name];
+        Lk && (OX.is(qk.type) ? WI(kk, Lk, Ik, Xk) : fI(kk, Lk, Ik, Xk))
       }
     }
 
-    function pg(SS, HS, gS, tS) {
-      const XS = HS[CS] ?? HS,
-        xS = XS[NS];
-      if (void 0 === xS || gS.has(xS)) return;
-      gS.add(xS);
-      const qS = SS.resyncVisited.get(xS);
-      if (void 0 === qS) return;
-      const uS = SS.root;
-      XS[KS](qS, ((SS, gS) => {
-        tS?.push({
-          ref: HS,
-          refId: xS,
-          op: bS.DELETE,
-          dynamicIndex: gS,
+    function fI(kk, Fk, Ik, Xk) {
+      const ik = Fk[Jk] ?? Fk,
+        yk = ik[lk];
+      if (void 0 === yk || Ik.has(yk)) return;
+      Ik.add(yk);
+      const ak = kk.resyncVisited.get(yk);
+      if (void 0 === ak) return;
+      const qk = kk.root;
+      ik[ek](ak, ((kk, Ik) => {
+        Xk?.push({
+          ref: Fk,
+          refId: yk,
+          op: Tk.DELETE,
+          dynamicIndex: Ik,
           value: void 0,
-          previousValue: SS
+          previousValue: kk
         });
-        const XS = SS?.[NS];
-        void 0 !== XS && uS.removeRef(XS)
-      }), (HS => {
-        vt.isSchema(HS) && Ug(SS, HS, gS, tS)
+        const ik = kk?.[lk];
+        void 0 !== ik && qk.removeRef(ik)
+      }), (Fk => {
+        OX.isSchema(Fk) && WI(kk, Fk, Ik, Xk)
       }))
     }
-    const sg = 1,
-      Bg = 2,
-      Mg = 3,
-      Fg = 4,
-      Rg = 5;
+    const BI = 1,
+      dI = 2,
+      YI = 3,
+      AI = 4,
+      gI = 5;
 
-    function Tg(SS, HS, gS, tS, XS, xS, qS, uS, IS) {
-      const fS = SS.root;
-      let kS;
-      if ((HS & bS.DELETE) === bS.DELETE) {
-        const SS = XS?.[NS];
-        void 0 !== SS && fS.removeRef(SS), HS !== bS.DELETE_AND_ADD && gS[aS](tS), kS = void 0
+    function mI(kk, Fk, Ik, Xk, ik, yk, ak, qk, Lk) {
+      const tk = kk.root;
+      let Zk;
+      if ((Fk & Tk.DELETE) === Tk.DELETE) {
+        const kk = ik?.[lk];
+        void 0 !== kk && tk.removeRef(kk), Fk !== Tk.DELETE_AND_ADD && Ik[jk](Xk), Zk = void 0
       }
-      if (HS === bS.DELETE);
-      else if ("string" === typeof xS) kS = PH[xS](qS, uS);
-      else if (VH(xS)) kS = function(SS, HS, gS) {
-        return WH(SS, (0, PH[SS.wire])(HS, gS))
-      }(xS.quantized, qS, uS);
-      else if (vt.is(xS)) {
-        const gS = PH.number(qS, uS);
-        if (kS = fS.refs.get(gS), (HS & bS.ADD) === bS.ADD) {
-          const tS = SS.getInstanceType(qS, uS, xS);
-          kS || (kS = SS.createInstanceOfType(tS)), fS.addRef(gS, kS, kS !== XS || HS === bS.DELETE_AND_ADD && kS === XS)
+      if (Fk === Tk.DELETE);
+      else if ("string" === typeof yk) Zk = KF[yk](ak, qk);
+      else if (UF(yk)) Zk = function(kk, Fk, Ik) {
+        return NF(kk, (0, KF[kk.wire])(Fk, Ik))
+      }(yk.quantized, ak, qk);
+      else if (OX.is(yk)) {
+        const Ik = KF.number(ak, qk);
+        if (Zk = tk.refs.get(Ik), (Fk & Tk.ADD) === Tk.ADD) {
+          const Xk = kk.getInstanceType(ak, qk, yk);
+          Zk || (Zk = kk.createInstanceOfType(Xk)), tk.addRef(Ik, Zk, Zk !== ik || Fk === Tk.DELETE_AND_ADD && Zk === ik)
         }
       } else {
-        const gS = (KS = Object.keys(xS)[0], QH[KS]),
-          tS = PH.number(qS, uS);
-        null !== SS.resyncVisited && function(SS, HS) {
-          const gS = SS.resyncVisited;
-          gS.has(HS) || gS.set(HS, new Set)
-        }(SS, tS);
-        const aS = fS.refs.has(tS) ? XS || fS.refs.get(tS) : gS.constructor.initializeForDecoder();
-        if (kS = aS.clone(!0), kS[GS] = Object.values(xS)[0], XS) {
-          let SS = XS[NS];
-          if (void 0 !== SS && tS !== SS) {
-            (HS & bS.DELETE) !== bS.DELETE && fS.removeRef(SS);
-            const gS = XS.entries();
-            let tS;
+        const Ik = (ek = Object.keys(yk)[0], QF[ek]),
+          Xk = KF.number(ak, qk);
+        null !== kk.resyncVisited && function(kk, Fk) {
+          const Ik = kk.resyncVisited;
+          Ik.has(Fk) || Ik.set(Fk, new Set)
+        }(kk, Xk);
+        const jk = tk.refs.has(Xk) ? ik || tk.refs.get(Xk) : Ik.constructor.initializeForDecoder();
+        if (Zk = jk.clone(!0), Zk[Hk] = Object.values(yk)[0], ik) {
+          let kk = ik[lk];
+          if (void 0 !== kk && Xk !== kk) {
+            (Fk & Tk.DELETE) !== Tk.DELETE && tk.removeRef(kk);
+            const Ik = ik.entries();
+            let Xk;
             for (;
-              (tS = gS.next()) && !tS.done;) {
-              const [HS, gS] = tS.value;
-              "object" === typeof gS && (SS = gS[NS]), IS?.push({
-                ref: XS,
-                refId: SS,
-                op: bS.DELETE,
-                field: HS,
+              (Xk = Ik.next()) && !Xk.done;) {
+              const [Fk, Ik] = Xk.value;
+              "object" === typeof Ik && (kk = Ik[lk]), Lk?.push({
+                ref: ik,
+                refId: kk,
+                op: Tk.DELETE,
+                field: Fk,
                 value: void 0,
-                previousValue: gS
+                previousValue: Ik
               })
             }
           }
         }
-        fS.addRef(tS, kS, aS !== XS || HS === bS.DELETE_AND_ADD && aS === XS)
+        tk.addRef(Xk, Zk, jk !== ik || Fk === Tk.DELETE_AND_ADD && jk === ik)
       }
-      var KS;
-      return kS
+      var ek;
+      return Zk
     }
-    const og = function(SS, HS, gS, tS, bS) {
-        const XS = HS[gS.offset++],
-          xS = tS.constructor[Symbol.metadata],
-          NS = XS >> 6 << 6,
-          qS = XS % (NS || 255),
-          uS = xS[qS];
-        if (void 0 === uS) return console.warn("@colyseus/schema: field not defined at", {
-          index: qS,
-          ref: tS.constructor.name,
-          metadata: xS
+    const hI = function(kk, Fk, Ik, Xk, Tk) {
+        const ik = Fk[Ik.offset++],
+          yk = Xk.constructor[Symbol.metadata],
+          lk = ik >> 6 << 6,
+          ak = ik % (lk || 255),
+          qk = yk[ak];
+        if (void 0 === qk) return console.warn("@colyseus/schema: field not defined at", {
+          index: ak,
+          ref: Xk.constructor.name,
+          metadata: yk
         }), -1;
-        const IS = !0 === uS.deprecated,
-          fS = IS ? void 0 : tS[kS](qS),
-          aS = Tg(SS, NS, tS, qS, fS, uS.type, HS, gS, bS);
-        IS || (null !== aS && void 0 !== aS && (tS[uS.name] = aS), fS !== aS && bS?.push({
-          ref: tS,
-          refId: SS.currentRefId,
-          op: NS,
-          field: uS.name,
-          value: aS,
-          previousValue: fS
+        const Lk = !0 === qk.deprecated,
+          tk = Lk ? void 0 : Xk[Zk](ak),
+          jk = mI(kk, lk, Xk, ak, tk, qk.type, Fk, Ik, Tk);
+        Lk || (null !== jk && void 0 !== jk && (Xk[qk.name] = jk), tk !== jk && Tk?.push({
+          ref: Xk,
+          refId: kk.currentRefId,
+          op: lk,
+          field: qk.name,
+          value: jk,
+          previousValue: tk
         }))
       },
-      lg = function(SS, HS, gS, tS, XS) {
-        const xS = tS[CS] ?? tS,
-          NS = HS[gS.offset++];
-        if (NS === bS.CLEAR) return SS.removeChildRefs(xS, XS), void xS.clear();
-        const qS = PH.number(HS, gS),
-          uS = xS[GS],
-          IS = xS.constructor.COLLECTION_KIND;
-        let fS;
-        (NS & bS.ADD) === bS.ADD ? IS === sg ? (fS = PH.string(HS, gS), xS.setIndex(qS, fS)) : fS = qS : fS = xS.getIndex(qS);
-        const aS = xS[kS](qS),
-          KS = Tg(SS, NS, tS, qS, aS, uS, HS, gS, XS);
-        if (null !== SS.resyncVisited && zg(SS, tS, NS, fS, aS, KS, XS), null !== KS && void 0 !== KS) switch (IS) {
-          case sg:
-            xS.$items.set(fS, KS);
+      rI = function(kk, Fk, Ik, Xk, ik) {
+        const yk = Xk[Jk] ?? Xk,
+          lk = Fk[Ik.offset++];
+        if (lk === Tk.CLEAR) return kk.removeChildRefs(yk, ik), void yk.clear();
+        const ak = KF.number(Fk, Ik),
+          qk = yk[Hk],
+          Lk = yk.constructor.COLLECTION_KIND;
+        let tk;
+        (lk & Tk.ADD) === Tk.ADD ? Lk === BI ? (tk = KF.string(Fk, Ik), yk.setIndex(ak, tk)) : tk = ak : tk = yk.getIndex(ak);
+        const jk = yk[Zk](ak),
+          ek = mI(kk, lk, Xk, ak, jk, qk, Fk, Ik, ik);
+        if (null !== kk.resyncVisited && cI(kk, Xk, lk, tk, jk, ek, ik), null !== ek && void 0 !== ek) switch (Lk) {
+          case BI:
+            yk.$items.set(tk, ek);
             break;
-          case Bg:
-            xS.$setAt(qS, KS, null !== SS.resyncVisited && NS === bS.ADD ? bS.REPLACE : NS);
+          case dI:
+            yk.$setAt(ak, ek, null !== kk.resyncVisited && lk === Tk.ADD ? Tk.REPLACE : lk);
             break;
-          case Mg:
-          case Fg:
-          case Rg:
-            xS.$items.has(qS) || (xS.$items.set(qS, KS), "number" === typeof xS.$refId && qS >= xS.$refId && (xS.$refId = qS + 1));
+          case YI:
+          case AI:
+          case gI:
+            yk.$items.has(ak) || (yk.$items.set(ak, ek), "number" === typeof yk.$refId && ak >= yk.$refId && (yk.$refId = ak + 1));
             break;
           default:
-            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${xS.constructor?.name} \u2014 item at index ${qS} was not stored.`)
+            console.warn(`@colyseus/schema: missing COLLECTION_KIND on ${yk.constructor?.name} \u2014 item at index ${ak} was not stored.`)
         }
-        aS !== KS && XS?.push({
-          ref: tS,
-          refId: SS.currentRefId,
-          op: NS,
-          dynamicIndex: fS,
-          value: KS,
-          previousValue: aS
+        jk !== ek && ik?.push({
+          ref: Xk,
+          refId: kk.currentRefId,
+          op: lk,
+          dynamicIndex: tk,
+          value: ek,
+          previousValue: jk
         })
       },
-      mg = function(SS, HS, gS, tS, XS) {
-        const xS = tS[CS] ?? tS;
-        let NS, qS = HS[gS.offset++];
-        if (qS === bS.CLEAR) return SS.removeChildRefs(xS, XS), void xS.clear();
-        if (qS === bS.REVERSE) return void xS.items.reverse();
-        if (qS === bS.DELETE_BY_REFID) {
-          const qS = PH.number(HS, gS),
-            uS = SS.root.refs.get(qS);
-          if (void 0 === uS) return;
-          if (SS.root.removeRef(qS), NS = xS.findIndex((SS => SS === uS)), -1 === NS) return;
-          return xS[aS](NS), void XS?.push({
-            ref: tS,
-            refId: SS.currentRefId,
-            op: bS.DELETE,
-            dynamicIndex: NS,
+      DI = function(kk, Fk, Ik, Xk, ik) {
+        const yk = Xk[Jk] ?? Xk;
+        let lk, ak = Fk[Ik.offset++];
+        if (ak === Tk.CLEAR) return kk.removeChildRefs(yk, ik), void yk.clear();
+        if (ak === Tk.REVERSE) return void yk.items.reverse();
+        if (ak === Tk.DELETE_BY_REFID) {
+          const ak = KF.number(Fk, Ik),
+            qk = kk.root.refs.get(ak);
+          if (void 0 === qk) return;
+          if (kk.root.removeRef(ak), lk = yk.findIndex((kk => kk === qk)), -1 === lk) return;
+          return yk[jk](lk), void ik?.push({
+            ref: Xk,
+            refId: kk.currentRefId,
+            op: Tk.DELETE,
+            dynamicIndex: lk,
             value: void 0,
-            previousValue: uS
+            previousValue: qk
           })
         }
-        if (qS === bS.ADD_BY_REFID) {
-          const tS = PH.number(HS, gS),
-            bS = SS.root.refs.get(tS);
-          bS && (NS = xS.findIndex((SS => SS === bS))), -1 !== NS && void 0 !== NS || (NS = xS.length)
-        } else NS = PH.number(HS, gS);
-        const uS = xS[GS];
-        let IS = NS;
-        const fS = xS.items[NS],
-          kS = Tg(SS, qS, tS, NS, fS, uS, HS, gS, XS);
-        null !== SS.resyncVisited && zg(SS, tS, qS, NS, fS, kS, XS), null !== kS && void 0 !== kS && kS !== fS && xS.$setAt(NS, kS, null !== SS.resyncVisited && qS === bS.ADD ? bS.REPLACE : qS), fS !== kS && XS?.push({
-          ref: tS,
-          refId: SS.currentRefId,
-          op: qS,
-          dynamicIndex: IS,
-          value: kS,
-          previousValue: fS
+        if (ak === Tk.ADD_BY_REFID) {
+          const Xk = KF.number(Fk, Ik),
+            Tk = kk.root.refs.get(Xk);
+          Tk && (lk = yk.findIndex((kk => kk === Tk))), -1 !== lk && void 0 !== lk || (lk = yk.length)
+        } else lk = KF.number(Fk, Ik);
+        const qk = yk[Hk];
+        let Lk = lk;
+        const tk = yk.items[lk],
+          Zk = mI(kk, ak, Xk, lk, tk, qk, Fk, Ik, ik);
+        null !== kk.resyncVisited && cI(kk, Xk, ak, lk, tk, Zk, ik), null !== Zk && void 0 !== Zk && Zk !== tk && yk.$setAt(lk, Zk, null !== kk.resyncVisited && ak === Tk.ADD ? Tk.REPLACE : ak), tk !== Zk && ik?.push({
+          ref: Xk,
+          refId: kk.currentRefId,
+          op: ak,
+          dynamicIndex: Lk,
+          value: Zk,
+          previousValue: tk
         })
       };
-    class eg extends Error {}
+    class MI extends Error {}
 
-    function rg(SS, HS, gS, tS) {
-      if (!(SS instanceof HS)) throw new eg(`a '${HS.name}' was expected, but '${SS&&SS.constructor.name}' was provided in ${gS.constructor.name}#${tS}`)
+    function kX(kk, Fk, Ik, Xk) {
+      if (!(kk instanceof Fk)) throw new MI(`a '${Fk.name}' was expected, but '${kk&&kk.constructor.name}' was provided in ${Ik.constructor.name}#${Xk}`)
     }
-    const St = (SS, HS) => {
-        const gS = SS.toString(),
-          tS = HS.toString();
-        return gS < tS ? -1 : gS > tS ? 1 : 0
+    const FX = (kk, Fk) => {
+        const Ik = kk.toString(),
+          Xk = Fk.toString();
+        return Ik < Xk ? -1 : Ik > Xk ? 1 : 0
       },
-      Ht = {
-        get: (SS, HS) => "symbol" === typeof HS || isNaN(HS) ? Reflect.get(SS, HS) : SS.items[HS],
-        set: (SS, HS, gS) => {
-          if ("symbol" !== typeof HS && !isNaN(HS)) {
-            if (void 0 === gS || null === gS) SS.$deleteAt(HS);
+      IX = {
+        get: (kk, Fk) => "symbol" === typeof Fk || isNaN(Fk) ? Reflect.get(kk, Fk) : kk.items[Fk],
+        set: (kk, Fk, Ik) => {
+          if ("symbol" !== typeof Fk && !isNaN(Fk)) {
+            if (void 0 === Ik || null === Ik) kk.$deleteAt(Fk);
             else {
-              let tS;
-              if (gS[jS]) {
-                rg(gS, SS[GS], SS, HS);
-                const XS = SS.items[HS];
-                SS.isMovingItems ? (tS = SS.$wireIndex(Number(HS)), void 0 !== XS ? gS[jS].isNew ? SS[jS].indexedOperation(tS, bS.MOVE_AND_ADD) : (SS[jS].getChange(tS) & bS.DELETE) === bS.DELETE ? SS[jS].indexedOperation(tS, bS.DELETE_AND_MOVE) : SS[jS].indexedOperation(tS, bS.MOVE) : gS[jS].isNew && SS[jS].indexedOperation(tS, bS.ADD), gS[jS].setParent(SS, SS[jS].root, tS)) : tS = SS.$changeAt(Number(HS), gS), void 0 !== XS && XS[jS].root?.remove(XS[jS])
-              } else tS = SS.$changeAt(Number(HS), gS);
-              SS.items[HS] = gS, void 0 !== tS && (SS.tmpItems[tS] = gS)
+              let Xk;
+              if (Ik[wk]) {
+                kX(Ik, kk[Hk], kk, Fk);
+                const ik = kk.items[Fk];
+                kk.isMovingItems ? (Xk = kk.$wireIndex(Number(Fk)), void 0 !== ik ? Ik[wk].isNew ? kk[wk].indexedOperation(Xk, Tk.MOVE_AND_ADD) : (kk[wk].getChange(Xk) & Tk.DELETE) === Tk.DELETE ? kk[wk].indexedOperation(Xk, Tk.DELETE_AND_MOVE) : kk[wk].indexedOperation(Xk, Tk.MOVE) : Ik[wk].isNew && kk[wk].indexedOperation(Xk, Tk.ADD), Ik[wk].setParent(kk, kk[wk].root, Xk)) : Xk = kk.$changeAt(Number(Fk), Ik), void 0 !== ik && ik[wk].root?.remove(ik[wk])
+              } else Xk = kk.$changeAt(Number(Fk), Ik);
+              kk.items[Fk] = Ik, void 0 !== Xk && (kk.tmpItems[Xk] = Ik)
             }
             return !0
           }
-          return Reflect.set(SS, HS, gS)
+          return Reflect.set(kk, Fk, Ik)
         },
-        deleteProperty: (SS, HS) => ("number" === typeof HS ? SS.$deleteAt(HS) : delete SS[HS], !0),
-        has: (SS, HS) => "symbol" === typeof HS || isNaN(Number(HS)) ? Reflect.has(SS, HS) : Reflect.has(SS.items, HS)
+        deleteProperty: (kk, Fk) => ("number" === typeof Fk ? kk.$deleteAt(Fk) : delete kk[Fk], !0),
+        has: (kk, Fk) => "symbol" === typeof Fk || isNaN(Number(Fk)) ? Reflect.has(kk, Fk) : Reflect.has(kk.items, Fk)
       };
-    class gt {
-      [jS];
-      [NS];
-      [CS];
-      [GS];
+    class XX {
+      [wk];
+      [lk];
+      [Jk];
+      [Hk];
       items = [];
       tmpItems = [];
       deletedIndexes = [];
       isMovingItems = !1;
       _needsCompaction = !1;
-      static[uS] = Wg;
-      static[IS] = mg;
-      static COLLECTION_KIND = Bg;
-      static[fS](SS, HS, gS) {
-        if (!gS) return !0;
-        const tS = SS[CS] ?? SS;
-        return "string" === typeof tS[GS] || gS.isChangeTreeVisible(tS.tmpItems[HS]?.[jS])
+      static[qk] = NI;
+      static[Lk] = DI;
+      static COLLECTION_KIND = dI;
+      static[tk](kk, Fk, Ik) {
+        if (!Ik) return !0;
+        const Xk = kk[Jk] ?? kk;
+        return "string" === typeof Xk[Hk] || Ik.isChangeTreeVisible(Xk.tmpItems[Fk]?.[wk])
       }
-      static is(SS) {
-        return Array.isArray(SS) || void 0 !== SS.array
+      static is(kk) {
+        return Array.isArray(kk) || void 0 !== kk.array
       }
-      static from(SS) {
-        return new gt(...Array.from(SS))
+      static from(kk) {
+        return new XX(...Array.from(kk))
       }
       constructor() {
-        this[GS] = void 0, this[CS] = this;
-        const SS = new Proxy(this, Ht);
-        return Object.defineProperty(this, jS, {
-          value: new vg(SS, this),
+        this[Hk] = void 0, this[Jk] = this;
+        const kk = new Proxy(this, IX);
+        return Object.defineProperty(this, wk, {
+          value: new nI(kk, this),
           enumerable: !1,
           writable: !0
-        }), arguments.length > 0 && this.push(...arguments), SS
+        }), arguments.length > 0 && this.push(...arguments), kk
       }
       static initializeForDecoder() {
-        const SS = Object.create(gt.prototype);
-        SS.items = [], SS.isMovingItems = !1, SS._needsCompaction = !1, SS[GS] = void 0, SS[CS] = SS;
-        const HS = new Proxy(SS, Ht);
-        return Lg(SS, HS), HS
+        const kk = Object.create(XX.prototype);
+        kk.items = [], kk.isMovingItems = !1, kk._needsCompaction = !1, kk[Hk] = void 0, kk[Jk] = kk;
+        const Fk = new Proxy(kk, IX);
+        return pI(kk, Fk), Fk
       }
-      set length(SS) {
-        0 === SS ? this.clear() : SS < this.items.length ? this.splice(SS, this.length - SS) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
+      set length(kk) {
+        0 === kk ? this.clear() : kk < this.items.length ? this.splice(kk, this.length - kk) : console.warn("ArraySchema: can't set .length to a higher value than its length.")
       }
       get length() {
         return this.items.length
       }
       pauseTracking() {
-        this[jS].pause()
+        this[wk].pause()
       }
       resumeTracking() {
-        this[jS].resume()
+        this[wk].resume()
       }
-      untracked(SS) {
-        return this[jS].untracked(SS)
+      untracked(kk) {
+        return this[wk].untracked(kk)
       }
       get isTrackingPaused() {
-        return this[jS].paused
+        return this[wk].paused
       }
       push() {
-        const SS = this[CS],
-          HS = SS.items,
-          gS = SS.tmpItems,
-          tS = SS[jS],
-          XS = SS[GS];
-        let xS = gS.length;
-        for (let NS = 0, qS = arguments.length; NS < qS; NS++, xS++) {
-          const qS = NS < 0 || arguments.length <= NS ? void 0 : arguments[NS];
-          if (void 0 === qS || null === qS) return;
-          "object" === typeof qS && XS && rg(qS, XS, SS, NS), tS.indexedOperation(xS, bS.ADD), HS.push(qS), gS.push(qS), qS[jS]?.setParent(this, tS.root, xS)
+        const kk = this[Jk],
+          Fk = kk.items,
+          Ik = kk.tmpItems,
+          Xk = kk[wk],
+          ik = kk[Hk];
+        let yk = Ik.length;
+        for (let lk = 0, ak = arguments.length; lk < ak; lk++, yk++) {
+          const ak = lk < 0 || arguments.length <= lk ? void 0 : arguments[lk];
+          if (void 0 === ak || null === ak) return;
+          "object" === typeof ak && ik && kX(ak, ik, kk, lk), Xk.indexedOperation(yk, Tk.ADD), Fk.push(ak), Ik.push(ak), ak[wk]?.setParent(this, Xk.root, yk)
         }
-        return xS
+        return yk
       }
       pop() {
-        const SS = this[CS],
-          HS = SS.tmpItems,
-          gS = SS.deletedIndexes;
-        let tS = -1;
-        for (let XS = HS.length - 1; XS >= 0; XS--)
-          if (!0 !== gS[XS]) {
-            tS = XS;
+        const kk = this[Jk],
+          Fk = kk.tmpItems,
+          Ik = kk.deletedIndexes;
+        let Xk = -1;
+        for (let ik = Fk.length - 1; ik >= 0; ik--)
+          if (!0 !== Ik[ik]) {
+            Xk = ik;
             break
-          } if (tS < 0) return;
-        const bS = SS.$isUnsentAdd(tS);
-        return SS[jS].delete(tS), bS ? SS.$cancelAdd(tS) : gS[tS] = !0, SS.items.pop()
+          } if (Xk < 0) return;
+        const Tk = kk.$isUnsentAdd(Xk);
+        return kk[wk].delete(Xk), Tk ? kk.$cancelAdd(Xk) : Ik[Xk] = !0, kk.items.pop()
       }
-      at(SS) {
-        return SS < 0 && (SS += this.length), this.items[SS]
+      at(kk) {
+        return kk < 0 && (kk += this.length), this.items[kk]
       }
-      $wireIndex(SS) {
-        const HS = this.deletedIndexes;
-        if (0 === HS.length) return SS;
-        const gS = this.tmpItems;
-        let tS = 0;
-        for (let bS = 0; bS < gS.length; bS++)
-          if (!0 !== HS[bS]) {
-            if (tS === SS) return bS;
-            tS++
-          } return gS.length + (SS - tS)
+      $wireIndex(kk) {
+        const Fk = this.deletedIndexes;
+        if (0 === Fk.length) return kk;
+        const Ik = this.tmpItems;
+        let Xk = 0;
+        for (let Tk = 0; Tk < Ik.length; Tk++)
+          if (!0 !== Fk[Tk]) {
+            if (Xk === kk) return Tk;
+            Xk++
+          } return Ik.length + (kk - Xk)
       }
-      $isUnsentAdd(SS) {
-        const HS = this[jS];
-        return 0 === (576 & HS.flags) && !HS.paused && "string" !== typeof this[GS] && HS.operationAt(SS) === bS.ADD
+      $isUnsentAdd(kk) {
+        const Fk = this[wk];
+        return 0 === (576 & Fk.flags) && !Fk.paused && "string" !== typeof this[Hk] && Fk.operationAt(kk) === Tk.ADD
       }
-      $cancelAdd(SS) {
-        let HS = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        const gS = this[jS],
-          tS = this.tmpItems[SS];
-        this.tmpItems.splice(SS, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(SS, 1), gS.removeAt(SS, 1);
-        const bS = tS?.[jS];
-        void 0 !== bS && void 0 === bS.root && bS.removeParent(this), HS && this.$reindexChildren(SS)
+      $cancelAdd(kk) {
+        let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        const Ik = this[wk],
+          Xk = this.tmpItems[kk];
+        this.tmpItems.splice(kk, 1), this.deletedIndexes.length > 0 && this.deletedIndexes.splice(kk, 1), Ik.removeAt(kk, 1);
+        const Tk = Xk?.[wk];
+        void 0 !== Tk && void 0 === Tk.root && Tk.removeParent(this), Fk && this.$reindexChildren(kk)
       }
-      $reindexChildren(SS, HS) {
-        if (!this[jS].hasFilteredFields) return;
-        if ("string" === typeof this[GS]) return;
-        const gS = this.tmpItems,
-          tS = gS.length;
-        if (void 0 !== HS)
-          for (; SS < tS && gS[SS] === HS[SS];) SS++;
-        for (let bS = SS; bS < tS; bS++) gS[bS]?.[jS]?.setParentIndex(this, bS)
+      $reindexChildren(kk, Fk) {
+        if (!this[wk].hasFilteredFields) return;
+        if ("string" === typeof this[Hk]) return;
+        const Ik = this.tmpItems,
+          Xk = Ik.length;
+        if (void 0 !== Fk)
+          for (; kk < Xk && Ik[kk] === Fk[kk];) kk++;
+        for (let Tk = kk; Tk < Xk; Tk++) Ik[Tk]?.[wk]?.setParentIndex(this, Tk)
       }
-      $changeAt(SS, HS) {
-        if (void 0 === HS || null === HS) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
-        if (this.items[SS] === HS) return;
-        const gS = void 0 !== this.items[SS] ? "object" === typeof HS ? bS.DELETE_AND_ADD : bS.REPLACE : bS.ADD,
-          tS = this.$wireIndex(SS),
-          XS = this[jS];
-        return XS.change(tS, gS), HS[jS]?.setParent(this, XS.root, tS), tS
+      $changeAt(kk, Fk) {
+        if (void 0 === Fk || null === Fk) return void console.error("ArraySchema items cannot be null nor undefined; Use `splice(index, 1)` instead.");
+        if (this.items[kk] === Fk) return;
+        const Ik = void 0 !== this.items[kk] ? "object" === typeof Fk ? Tk.DELETE_AND_ADD : Tk.REPLACE : Tk.ADD,
+          Xk = this.$wireIndex(kk),
+          ik = this[wk];
+        return ik.change(Xk, Ik), Fk[wk]?.setParent(this, ik.root, Xk), Xk
       }
-      $deleteAt(SS, HS) {
-        this[jS].delete(this.$wireIndex(SS), HS)
+      $deleteAt(kk, Fk) {
+        this[wk].delete(this.$wireIndex(kk), Fk)
       }
-      $setAt(SS, HS, gS) {
-        gS === bS.ADD && void 0 !== this.items[SS] ? this.items.splice(SS, 0, HS) : gS === bS.DELETE_AND_MOVE ? (this.items.splice(SS, 1), this.items[SS] = HS) : (SS > this.items.length && (this._needsCompaction = !0), this.items[SS] = HS)
+      $setAt(kk, Fk, Ik) {
+        Ik === Tk.ADD && void 0 !== this.items[kk] ? this.items.splice(kk, 0, Fk) : Ik === Tk.DELETE_AND_MOVE ? (this.items.splice(kk, 1), this.items[kk] = Fk) : (kk > this.items.length && (this._needsCompaction = !0), this.items[kk] = Fk)
       }
       clear() {
-        const SS = this[CS];
-        if (0 === SS.items.length) return;
-        const HS = SS[jS];
-        HS.forEachChild(((SS, gS) => {
-          HS.root?.remove(SS)
-        })), HS.discard(), HS.operation(bS.CLEAR), SS.items.length = 0, SS.tmpItems.length = 0
-      } [PS]() {
-        const SS = this[CS] ?? this,
-          HS = SS[jS];
-        if (HS.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
-        const gS = SS.items;
-        for (let tS = 0; tS < gS.length; tS++) gS[tS]?.[PS]?.();
-        SS.items.length = 0, SS.tmpItems.length = 0, SS.deletedIndexes.length = 0, HS.recycle(), SS[NS] = void 0
+        const kk = this[Jk];
+        if (0 === kk.items.length) return;
+        const Fk = kk[wk];
+        Fk.forEachChild(((kk, Ik) => {
+          Fk.root?.remove(kk)
+        })), Fk.discard(), Fk.operation(Tk.CLEAR), kk.items.length = 0, kk.tmpItems.length = 0
+      } [Pk]() {
+        const kk = this[Jk] ?? this,
+          Fk = kk[wk];
+        if (Fk.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed ArraySchema (pooling not supported).");
+        const Ik = kk.items;
+        for (let Xk = 0; Xk < Ik.length; Xk++) Ik[Xk]?.[Pk]?.();
+        kk.items.length = 0, kk.tmpItems.length = 0, kk.deletedIndexes.length = 0, Fk.recycle(), kk[lk] = void 0
       }
       concat() {
-        return new gt(...this.items.concat(...arguments))
+        return new XX(...this.items.concat(...arguments))
       }
-      join(SS) {
-        return this.items.join(SS)
+      join(kk) {
+        return this.items.join(kk)
       }
       reverse() {
-        const SS = this[CS],
-          HS = SS[jS];
-        if (HS.has() || SS.deletedIndexes.length > 0) {
-          const HS = SS.items.slice().reverse();
-          return this.clear(), this.push(...HS), this
+        const kk = this[Jk],
+          Fk = kk[wk];
+        if (Fk.has() || kk.deletedIndexes.length > 0) {
+          const Fk = kk.items.slice().reverse();
+          return this.clear(), this.push(...Fk), this
         }
-        return HS.operation(bS.REVERSE), SS.items.reverse(), SS.tmpItems.reverse(), SS.$reindexChildren(0), this
+        return Fk.operation(Tk.REVERSE), kk.items.reverse(), kk.tmpItems.reverse(), kk.$reindexChildren(0), this
       }
       shift() {
-        const SS = this[CS],
-          HS = SS.items;
-        if (0 === HS.length) return;
-        const gS = SS[jS],
-          tS = SS.deletedIndexes;
-        let XS = 0;
-        for (; !0 === tS[XS];) XS++;
-        const xS = SS.$isUnsentAdd(XS);
-        return gS.delete(XS, bS.DELETE), xS ? SS.$cancelAdd(XS) : tS[XS] = !0, HS.shift()
+        const kk = this[Jk],
+          Fk = kk.items;
+        if (0 === Fk.length) return;
+        const Ik = kk[wk],
+          Xk = kk.deletedIndexes;
+        let ik = 0;
+        for (; !0 === Xk[ik];) ik++;
+        const yk = kk.$isUnsentAdd(ik);
+        return Ik.delete(ik, Tk.DELETE), yk ? kk.$cancelAdd(ik) : Xk[ik] = !0, Fk.shift()
       }
-      slice(SS, HS) {
-        const gS = new gt;
-        return gS.push(...this.items.slice(SS, HS)), gS
+      slice(kk, Fk) {
+        const Ik = new XX;
+        return Ik.push(...this.items.slice(kk, Fk)), Ik
       }
       sort() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : St;
-        const HS = this[CS];
-        HS.isMovingItems = !0;
-        const gS = HS[jS];
-        return HS.items.sort(SS).forEach(((SS, HS) => gS.change(HS, bS.REPLACE))), HS.tmpItems.sort(SS), HS.$reindexChildren(0), HS.isMovingItems = !1, this
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : FX;
+        const Fk = this[Jk];
+        Fk.isMovingItems = !0;
+        const Ik = Fk[wk];
+        return Fk.items.sort(kk).forEach(((kk, Fk) => Ik.change(Fk, Tk.REPLACE))), Fk.tmpItems.sort(kk), Fk.$reindexChildren(0), Fk.isMovingItems = !1, this
       }
-      splice(SS, HS) {
-        const gS = this[CS],
-          tS = gS[jS],
-          XS = gS.items,
-          xS = gS.tmpItems,
-          NS = gS.deletedIndexes,
-          qS = XS.length,
-          uS = xS.length;
-        for (var IS = arguments.length, fS = new Array(IS > 2 ? IS - 2 : 0), kS = 2; kS < IS; kS++) fS[kS - 2] = arguments[kS];
-        const aS = fS.length,
-          KS = [];
-        for (let bS = 0; bS < uS; bS++) !0 !== NS[bS] && KS.push(bS);
-        let GS;
-        if (qS > SS) {
-          void 0 === HS && (HS = qS - SS);
-          for (let XS = SS; XS < SS + HS; XS++) {
-            const SS = KS[XS],
-              HS = gS.$isUnsentAdd(SS);
-            tS.delete(SS, bS.DELETE), HS ? (GS ??= []).push(SS) : NS[SS] = !0
+      splice(kk, Fk) {
+        const Ik = this[Jk],
+          Xk = Ik[wk],
+          ik = Ik.items,
+          yk = Ik.tmpItems,
+          lk = Ik.deletedIndexes,
+          ak = ik.length,
+          qk = yk.length;
+        for (var Lk = arguments.length, tk = new Array(Lk > 2 ? Lk - 2 : 0), Zk = 2; Zk < Lk; Zk++) tk[Zk - 2] = arguments[Zk];
+        const jk = tk.length,
+          ek = [];
+        for (let Tk = 0; Tk < qk; Tk++) !0 !== lk[Tk] && ek.push(Tk);
+        let Hk;
+        if (ak > kk) {
+          void 0 === Fk && (Fk = ak - kk);
+          for (let ik = kk; ik < kk + Fk; ik++) {
+            const kk = ek[ik],
+              Fk = Ik.$isUnsentAdd(kk);
+            Xk.delete(kk, Tk.DELETE), Fk ? (Hk ??= []).push(kk) : lk[kk] = !0
           }
-        } else HS = 0;
-        if (aS > 0) {
-          const XS = KS[SS] ?? qS,
-            uS = Math.min(aS, HS);
-          for (let SS = 0; SS < uS; SS++) {
-            const HS = XS + SS;
-            let gS;
-            const qS = void 0 !== GS ? GS.indexOf(HS) : -1; - 1 !== qS ? (GS.splice(qS, 1), gS = bS.ADD) : gS = NS[HS] ? bS.DELETE_AND_ADD : bS.ADD, tS.indexedOperation(HS, gS), xS[HS] = fS[SS], NS[HS] = !1, fS[SS][jS]?.setParent(this, tS.root, HS)
+        } else Fk = 0;
+        if (jk > 0) {
+          const ik = ek[kk] ?? ak,
+            qk = Math.min(jk, Fk);
+          for (let kk = 0; kk < qk; kk++) {
+            const Fk = ik + kk;
+            let Ik;
+            const ak = void 0 !== Hk ? Hk.indexOf(Fk) : -1; - 1 !== ak ? (Hk.splice(ak, 1), Ik = Tk.ADD) : Ik = lk[Fk] ? Tk.DELETE_AND_ADD : Tk.ADD, Xk.indexedOperation(Fk, Ik), yk[Fk] = tk[kk], lk[Fk] = !1, tk[kk][wk]?.setParent(this, Xk.root, Fk)
           }
-          const IS = aS - uS;
-          if (IS > 0) {
-            const SS = XS + uS;
-            tS.insertAt(SS, IS);
-            for (let HS = 0; HS < IS; HS++) fS[uS + HS][jS]?.setParent(this, tS.root, SS + HS);
-            NS.length > 0 && NS.splice(SS, 0, ...new Array(IS).fill(!1)), xS.splice(SS, 0, ...fS.slice(uS)), gS.$reindexChildren(SS + IS)
+          const Lk = jk - qk;
+          if (Lk > 0) {
+            const kk = ik + qk;
+            Xk.insertAt(kk, Lk);
+            for (let Fk = 0; Fk < Lk; Fk++) tk[qk + Fk][wk]?.setParent(this, Xk.root, kk + Fk);
+            lk.length > 0 && lk.splice(kk, 0, ...new Array(Lk).fill(!1)), yk.splice(kk, 0, ...tk.slice(qk)), Ik.$reindexChildren(kk + Lk)
           }
         }
-        if (void 0 !== GS && GS.length > 0) {
-          for (let SS = GS.length - 1; SS >= 0; SS--) gS.$cancelAdd(GS[SS], !1);
-          gS.$reindexChildren(GS[0])
+        if (void 0 !== Hk && Hk.length > 0) {
+          for (let kk = Hk.length - 1; kk >= 0; kk--) Ik.$cancelAdd(Hk[kk], !1);
+          Ik.$reindexChildren(Hk[0])
         }
-        return tS.root?.enqueueChangeTree(tS), XS.splice(SS, HS, ...fS)
+        return Xk.root?.enqueueChangeTree(Xk), ik.splice(kk, Fk, ...tk)
       }
       unshift() {
-        const SS = this[CS],
-          HS = SS[jS];
-        HS.unshift(arguments.length);
-        for (let tS = 0; tS < arguments.length; tS++)(tS < 0 || arguments.length <= tS ? void 0 : arguments[tS])?.[jS]?.setParent(this, HS.root, tS);
-        const gS = SS.deletedIndexes;
-        return gS.length > 0 && gS.unshift(...new Array(arguments.length).fill(!1)), SS.tmpItems.unshift(...arguments), SS.$reindexChildren(arguments.length), SS.items.unshift(...arguments)
+        const kk = this[Jk],
+          Fk = kk[wk];
+        Fk.unshift(arguments.length);
+        for (let Xk = 0; Xk < arguments.length; Xk++)(Xk < 0 || arguments.length <= Xk ? void 0 : arguments[Xk])?.[wk]?.setParent(this, Fk.root, Xk);
+        const Ik = kk.deletedIndexes;
+        return Ik.length > 0 && Ik.unshift(...new Array(arguments.length).fill(!1)), kk.tmpItems.unshift(...arguments), kk.$reindexChildren(arguments.length), kk.items.unshift(...arguments)
       }
-      indexOf(SS, HS) {
-        return this.items.indexOf(SS, HS)
+      indexOf(kk, Fk) {
+        return this.items.indexOf(kk, Fk)
       }
-      lastIndexOf(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
-        return this.items.lastIndexOf(SS, HS)
+      lastIndexOf(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length - 1;
+        return this.items.lastIndexOf(kk, Fk)
       }
-      every(SS, HS) {
-        return this.items.every(SS, HS)
+      every(kk, Fk) {
+        return this.items.every(kk, Fk)
       }
-      some(SS, HS) {
-        return this.items.some(SS, HS)
+      some(kk, Fk) {
+        return this.items.some(kk, Fk)
       }
-      forEach(SS, HS) {
-        return this.items.forEach(SS, HS)
+      forEach(kk, Fk) {
+        return this.items.forEach(kk, Fk)
       }
-      map(SS, HS) {
-        return this.items.map(SS, HS)
+      map(kk, Fk) {
+        return this.items.map(kk, Fk)
       }
-      filter(SS, HS) {
-        return this.items.filter(SS, HS)
+      filter(kk, Fk) {
+        return this.items.filter(kk, Fk)
       }
-      reduce(SS, HS) {
+      reduce(kk, Fk) {
         return this.items.reduce.apply(this.items, arguments)
       }
-      reduceRight(SS, HS) {
+      reduceRight(kk, Fk) {
         return this.items.reduceRight.apply(this.items, arguments)
       }
-      find(SS, HS) {
-        return this.items.find(SS, HS)
+      find(kk, Fk) {
+        return this.items.find(kk, Fk)
       }
-      findIndex(SS, HS) {
-        return this.items.findIndex(SS, HS)
+      findIndex(kk, Fk) {
+        return this.items.findIndex(kk, Fk)
       }
-      fill(SS, HS, gS) {
+      fill(kk, Fk, Ik) {
         throw new Error("ArraySchema#fill() not implemented")
       }
-      copyWithin(SS, HS, gS) {
+      copyWithin(kk, Fk, Ik) {
         throw new Error("ArraySchema#copyWithin() not implemented")
       }
       toString() {
@@ -4349,7 +4349,7 @@ export const modules = {
         return this.items[Symbol.iterator]()
       }
       static get[Symbol.species]() {
-        return gt
+        return XX
       } [Symbol.unscopables];
       entries() {
         return this.items.entries()
@@ -4360,118 +4360,118 @@ export const modules = {
       values() {
         return this.items.values()
       }
-      includes(SS, HS) {
-        return this.items.includes(SS, HS)
+      includes(kk, Fk) {
+        return this.items.includes(kk, Fk)
       }
-      flatMap(SS, HS) {
+      flatMap(kk, Fk) {
         throw new Error("ArraySchema#flatMap() is not supported.")
       }
-      flat(SS) {
+      flat(kk) {
         throw new Error("ArraySchema#flat() is not supported.")
       }
       findLast() {
         return this.items.findLast.apply(this.items, arguments)
       }
       findLastIndex() {
-        for (var SS = arguments.length, HS = new Array(SS), gS = 0; gS < SS; gS++) HS[gS] = arguments[gS];
+        for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
         return this.items.findLastIndex.apply(this.items, arguments)
       }
-      with(SS, HS) {
-        const gS = this.items.slice();
-        return SS < 0 && (SS += this.length), gS[SS] = HS, new gt(...gS)
+      with(kk, Fk) {
+        const Ik = this.items.slice();
+        return kk < 0 && (kk += this.length), Ik[kk] = Fk, new XX(...Ik)
       }
       toReversed() {
         return this.items.slice().reverse()
       }
-      toSorted(SS) {
-        return this.items.slice().sort(SS)
+      toSorted(kk) {
+        return this.items.slice().sort(kk)
       }
-      toSpliced(SS, HS) {
-        for (var gS = arguments.length, tS = new Array(gS > 2 ? gS - 2 : 0), bS = 2; bS < gS; bS++) tS[bS - 2] = arguments[bS];
-        const XS = this.items.slice();
-        return XS.splice.apply(XS, arguments), XS
+      toSpliced(kk, Fk) {
+        for (var Ik = arguments.length, Xk = new Array(Ik > 2 ? Ik - 2 : 0), Tk = 2; Tk < Ik; Tk++) Xk[Tk - 2] = arguments[Tk];
+        const ik = this.items.slice();
+        return ik.splice.apply(ik, arguments), ik
       }
       shuffle() {
-        return this.move((SS => {
-          let HS = this.items.length;
-          for (; 0 != HS;) {
-            let SS = Math.floor(Math.random() * HS);
-            HS--, [this[HS], this[SS]] = [this[SS], this[HS]]
+        return this.move((kk => {
+          let Fk = this.items.length;
+          for (; 0 != Fk;) {
+            let kk = Math.floor(Math.random() * Fk);
+            Fk--, [this[Fk], this[kk]] = [this[kk], this[Fk]]
           }
         }))
       }
-      move(SS) {
-        return this.isMovingItems = !0, SS(this), this.isMovingItems = !1, this
-      } [kS](SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const gS = this[CS] ?? this;
-        return HS || gS.deletedIndexes[SS] ? gS.items[SS] : gS.tmpItems[SS] || gS.items[SS]
-      } [aS](SS) {
-        const HS = this[CS] ?? this;
-        HS.items[SS] = void 0, HS._needsCompaction = !0
-      } [nS]() {
-        const SS = this.tmpItems;
-        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, SS), this.deletedIndexes.length = 0)
-      } [QS]() {
-        const SS = this[CS] ?? this;
-        SS._needsCompaction && (SS._needsCompaction = !1, SS.items = SS.items.filter((SS => void 0 !== SS)))
-      } [KS](SS, HS, gS) {
-        const tS = this[CS] ?? this,
-          bS = tS.items;
-        let XS = !1;
-        for (let xS = 0; xS < bS.length; xS++) {
-          const NS = bS[xS];
-          SS.has(xS) ? gS(NS) : (XS = !0, HS(NS, xS), tS[aS](xS))
+      move(kk) {
+        return this.isMovingItems = !0, kk(this), this.isMovingItems = !1, this
+      } [Zk](kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Ik = this[Jk] ?? this;
+        return Fk || Ik.deletedIndexes[kk] ? Ik.items[kk] : Ik.tmpItems[kk] || Ik.items[kk]
+      } [jk](kk) {
+        const Fk = this[Jk] ?? this;
+        Fk.items[kk] = void 0, Fk._needsCompaction = !0
+      } [xk]() {
+        const kk = this.tmpItems;
+        this.tmpItems = this.items.slice(), this.deletedIndexes.length > 0 && (this.$reindexChildren(0, kk), this.deletedIndexes.length = 0)
+      } [Kk]() {
+        const kk = this[Jk] ?? this;
+        kk._needsCompaction && (kk._needsCompaction = !1, kk.items = kk.items.filter((kk => void 0 !== kk)))
+      } [ek](kk, Fk, Ik) {
+        const Xk = this[Jk] ?? this,
+          Tk = Xk.items;
+        let ik = !1;
+        for (let yk = 0; yk < Tk.length; yk++) {
+          const lk = Tk[yk];
+          kk.has(yk) ? Ik(lk) : (ik = !0, Fk(lk, yk), Xk[jk](yk))
         }
-        XS && tS[QS]()
+        ik && Xk[Kk]()
       }
       toArray() {
         return this.items.slice(0)
       }
       toJSON() {
-        return this.toArray().map((SS => "function" === typeof SS.toJSON ? SS.toJSON() : SS))
+        return this.toArray().map((kk => "function" === typeof kk.toJSON ? kk.toJSON() : kk))
       }
-      clone(SS) {
-        let HS;
-        return SS ? (HS = new gt, HS.push(...this.items)) : HS = new gt(...this.map((SS => SS[jS] ? SS.clone() : SS))), HS
+      clone(kk) {
+        let Fk;
+        return kk ? (Fk = new XX, Fk.push(...this.items)) : Fk = new XX(...this.map((kk => kk[wk] ? kk.clone() : kk))), Fk
       }
     }
-    wH("array", {
-      constructor: gt
+    VF("array", {
+      constructor: XX
     });
-    class tt {
+    class TX {
       keyByIndex = new Map;
       indexByKey = Object.create(null);
       nextIndex = 0;
       snapshots;
-      indexOf(SS) {
-        const HS = this.indexByKey[SS];
-        return void 0 === HS ? void 0 : HS
+      indexOf(kk) {
+        const Fk = this.indexByKey[kk];
+        return void 0 === Fk ? void 0 : Fk
       }
-      assign(SS) {
-        const HS = this.nextIndex++;
-        return this.indexByKey[SS] = HS, this.keyByIndex.set(HS, SS), HS
+      assign(kk) {
+        const Fk = this.nextIndex++;
+        return this.indexByKey[kk] = Fk, this.keyByIndex.set(Fk, kk), Fk
       }
-      snapshot(SS, HS) {
-        (this.snapshots ??= new Map).set(SS, HS)
+      snapshot(kk, Fk) {
+        (this.snapshots ??= new Map).set(kk, Fk)
       }
-      forgetSnapshot(SS) {
-        this.snapshots?.delete(SS)
+      forgetSnapshot(kk) {
+        this.snapshots?.delete(kk)
       }
-      snapshotAt(SS) {
-        return this.snapshots?.get(SS)
+      snapshotAt(kk) {
+        return this.snapshots?.get(kk)
       }
-      setIndex(SS, HS) {
-        this.keyByIndex.set(SS, HS), this.indexByKey[HS] = SS
+      setIndex(kk, Fk) {
+        this.keyByIndex.set(kk, Fk), this.indexByKey[Fk] = kk
       }
-      keyOf(SS) {
-        return this.keyByIndex.get(SS)
+      keyOf(kk) {
+        return this.keyByIndex.get(kk)
       }
       cleanupAfterEncode() {
         if (void 0 !== this.snapshots) {
-          for (const [SS] of this.snapshots) {
-            const HS = this.keyByIndex.get(SS);
-            void 0 !== HS && (delete this.indexByKey[HS], this.keyByIndex.delete(SS))
+          for (const [kk] of this.snapshots) {
+            const Fk = this.keyByIndex.get(kk);
+            void 0 !== Fk && (delete this.indexByKey[Fk], this.keyByIndex.delete(kk))
           }
           this.snapshots.clear()
         }
@@ -4480,25 +4480,25 @@ export const modules = {
         this.indexByKey = Object.create(null), this.keyByIndex.clear(), this.snapshots?.clear(), this.nextIndex = 0
       }
     }
-    class bt {
-      [jS];
-      [NS];
+    class iX {
+      [wk];
+      [lk];
       childType;
-      [GS];
+      [Hk];
       $items = new Map;
-      journal = new tt;
+      journal = new TX;
       _stream;
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(SS) {
-        (this._stream ??= JH()).maxPerTick = SS
+      set maxPerTick(kk) {
+        (this._stream ??= oF()).maxPerTick = kk
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(SS) {
-        (this._stream ??= JH()).priority = SS
+      set priority(kk) {
+        (this._stream ??= oF()).priority = kk
       }
       get $indexes() {
         return this.journal.keyByIndex
@@ -4506,30 +4506,30 @@ export const modules = {
       get _collectionIndexes() {
         return this.journal.indexByKey
       }
-      static[uS] = yg;
-      static[IS] = lg;
-      static COLLECTION_KIND = sg;
-      static[fS](SS, HS, gS) {
-        if (!gS || "string" === typeof SS[GS]) return !0;
-        const tS = SS[kS](HS) ?? SS.journal.snapshotAt(HS);
-        return gS.isChangeTreeVisible(tS[jS])
+      static[qk] = RI;
+      static[Lk] = rI;
+      static COLLECTION_KIND = BI;
+      static[tk](kk, Fk, Ik) {
+        if (!Ik || "string" === typeof kk[Hk]) return !0;
+        const Xk = kk[Zk](Fk) ?? kk.journal.snapshotAt(Fk);
+        return Ik.isChangeTreeVisible(Xk[wk])
       }
-      static is(SS) {
-        return void 0 !== SS.map
+      static is(kk) {
+        return void 0 !== kk.map
       }
-      constructor(SS) {
-        if (Object.defineProperty(this, jS, {
-            value: new vg(this),
+      constructor(kk) {
+        if (Object.defineProperty(this, wk, {
+            value: new nI(this),
             enumerable: !1,
             writable: !0
-          }), this[GS] = void 0, SS)
-          if (SS instanceof Map || SS instanceof bt) SS.forEach(((SS, HS) => this.set(HS, SS)));
+          }), this[Hk] = void 0, kk)
+          if (kk instanceof Map || kk instanceof iX) kk.forEach(((kk, Fk) => this.set(Fk, kk)));
           else
-            for (const HS in SS) this.set(HS, SS[HS])
+            for (const Fk in kk) this.set(Fk, kk[Fk])
       }
       static initializeForDecoder() {
-        const SS = Object.create(bt.prototype);
-        return SS.$items = new Map, SS.journal = new tt, SS[GS] = void 0, Lg(SS), SS
+        const kk = Object.create(iX.prototype);
+        return kk.$items = new Map, kk.journal = new TX, kk[Hk] = void 0, pI(kk), kk
       } [Symbol.iterator]() {
         return this.$items[Symbol.iterator]()
       }
@@ -4537,61 +4537,61 @@ export const modules = {
         return this.$items[Symbol.toStringTag]
       }
       static get[Symbol.species]() {
-        return bt
+        return iX
       }
-      set(SS, HS) {
-        if (void 0 === HS || null === HS) throw new Error(`MapSchema#set('${SS}', ${HS}): trying to set ${HS} value on '${SS}'.`);
-        "object" === typeof HS && this[GS] && rg(HS, this[GS], this, SS), SS = SS.toString();
-        const gS = this[jS],
-          tS = void 0 !== HS[jS],
-          XS = this.journal;
-        let xS, NS = XS.indexOf(SS);
-        if (void 0 !== NS) {
-          xS = bS.REPLACE;
-          const gS = this.$items.get(SS);
-          if (gS === HS) return;
-          tS && (xS = bS.DELETE_AND_ADD, void 0 !== gS && gS[jS].root?.remove(gS[jS])), void 0 !== XS.snapshotAt(NS) && XS.forgetSnapshot(NS)
-        } else NS = XS.assign(SS), xS = bS.ADD;
-        return this.$items.set(SS, HS), xS === bS.ADD && gS.isStreamCollection ? void 0 !== gS.root && dH(this, gS.root, NS) : gS.change(NS, xS), tS && HS[jS].setParent(this, gS.root, NS), this
+      set(kk, Fk) {
+        if (void 0 === Fk || null === Fk) throw new Error(`MapSchema#set('${kk}', ${Fk}): trying to set ${Fk} value on '${kk}'.`);
+        "object" === typeof Fk && this[Hk] && kX(Fk, this[Hk], this, kk), kk = kk.toString();
+        const Ik = this[wk],
+          Xk = void 0 !== Fk[wk],
+          ik = this.journal;
+        let yk, lk = ik.indexOf(kk);
+        if (void 0 !== lk) {
+          yk = Tk.REPLACE;
+          const Ik = this.$items.get(kk);
+          if (Ik === Fk) return;
+          Xk && (yk = Tk.DELETE_AND_ADD, void 0 !== Ik && Ik[wk].root?.remove(Ik[wk])), void 0 !== ik.snapshotAt(lk) && ik.forgetSnapshot(lk)
+        } else lk = ik.assign(kk), yk = Tk.ADD;
+        return this.$items.set(kk, Fk), yk === Tk.ADD && Ik.isStreamCollection ? void 0 !== Ik.root && EF(this, Ik.root, lk) : Ik.change(lk, yk), Xk && Fk[wk].setParent(this, Ik.root, lk), this
       }
-      get(SS) {
-        return this.$items.get(SS)
+      get(kk) {
+        return this.$items.get(kk)
       }
-      getOrInsert(SS, HS) {
-        return this.$items.has(SS) ? this.$items.get(SS) : (this.set(SS, HS), HS)
+      getOrInsert(kk, Fk) {
+        return this.$items.has(kk) ? this.$items.get(kk) : (this.set(kk, Fk), Fk)
       }
-      getOrInsertComputed(SS, HS) {
-        if (this.$items.has(SS)) return this.$items.get(SS);
-        const gS = HS(SS);
-        return this.set(SS, gS), gS
+      getOrInsertComputed(kk, Fk) {
+        if (this.$items.has(kk)) return this.$items.get(kk);
+        const Ik = Fk(kk);
+        return this.set(kk, Ik), Ik
       }
-      delete(SS) {
-        if (!this.$items.has(SS)) return !1;
-        const HS = this.journal.indexOf(SS),
-          gS = this.$items.get(SS),
-          tS = this[jS];
-        if (tS.isStreamCollection) {
-          const bS = tS.root;
-          let XS = !1;
-          return void 0 !== bS && (XS = cH(this, bS, this[NS], HS)), void 0 !== gS?.[jS] && bS?.remove(gS[jS]), this.$items.delete(SS), XS || this.journal.snapshot(HS, gS), !0
+      delete(kk) {
+        if (!this.$items.has(kk)) return !1;
+        const Fk = this.journal.indexOf(kk),
+          Ik = this.$items.get(kk),
+          Xk = this[wk];
+        if (Xk.isStreamCollection) {
+          const Tk = Xk.root;
+          let ik = !1;
+          return void 0 !== Tk && (ik = OF(this, Tk, this[lk], Fk)), void 0 !== Ik?.[wk] && Tk?.remove(Ik[wk]), this.$items.delete(kk), ik || this.journal.snapshot(Fk, Ik), !0
         }
-        return this.journal.snapshot(HS, gS), tS.delete(HS), this.$items.delete(SS)
+        return this.journal.snapshot(Fk, Ik), Xk.delete(Fk), this.$items.delete(kk)
       }
       clear() {
-        const SS = this[jS];
-        SS.discard(), SS.forEachChild(((HS, gS) => {
-          SS.root?.remove(HS)
-        })), this.journal.reset(), this.$items.clear(), SS.operation(bS.CLEAR)
-      } [PS]() {
-        const SS = this[jS];
-        if (SS.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
-        this.$items.forEach((SS => SS?.[PS]?.())), this.$items.clear(), this.journal.reset(), SS.recycle(), this[NS] = void 0
+        const kk = this[wk];
+        kk.discard(), kk.forEachChild(((Fk, Ik) => {
+          kk.root?.remove(Fk)
+        })), this.journal.reset(), this.$items.clear(), kk.operation(Tk.CLEAR)
+      } [Pk]() {
+        const kk = this[wk];
+        if (kk.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed MapSchema (pooling not supported).");
+        this.$items.forEach((kk => kk?.[Pk]?.())), this.$items.clear(), this.journal.reset(), kk.recycle(), this[lk] = void 0
       }
-      has(SS) {
-        return this.$items.has(SS)
+      has(kk) {
+        return this.$items.has(kk)
       }
-      forEach(SS) {
-        this.$items.forEach(SS)
+      forEach(kk) {
+        this.$items.forEach(kk)
       }
       entries() {
         return this.$items.entries()
@@ -4606,69 +4606,69 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[jS].pause()
+        this[wk].pause()
       }
       resumeTracking() {
-        this[jS].resume()
+        this[wk].resume()
       }
-      untracked(SS) {
-        return this[jS].untracked(SS)
+      untracked(kk) {
+        return this[wk].untracked(kk)
       }
       get isTrackingPaused() {
-        return this[jS].paused
+        return this[wk].paused
       }
-      setIndex(SS, HS) {
-        this.journal.setIndex(SS, HS)
+      setIndex(kk, Fk) {
+        this.journal.setIndex(kk, Fk)
       }
-      getIndex(SS) {
-        return this.journal.keyOf(SS)
-      } [kS](SS) {
-        const HS = this.journal.keyOf(SS);
-        return void 0 !== HS ? this.$items.get(HS) : void 0
-      } [aS](SS) {
-        const HS = this.journal.keyOf(SS);
-        void 0 !== HS && (this.$items.delete(HS), this.journal.keyByIndex.delete(SS))
-      } [KS](SS, HS, gS) {
-        let tS = null;
-        if (this.$items.forEach(((bS, XS) => {
-            SS.has(XS) ? gS(bS) : ((tS ??= new Set).add(XS), HS(bS, XS))
-          })), null !== tS) {
-          tS.forEach((SS => {
-            this.$items.delete(SS), delete this.journal.indexByKey[SS]
+      getIndex(kk) {
+        return this.journal.keyOf(kk)
+      } [Zk](kk) {
+        const Fk = this.journal.keyOf(kk);
+        return void 0 !== Fk ? this.$items.get(Fk) : void 0
+      } [jk](kk) {
+        const Fk = this.journal.keyOf(kk);
+        void 0 !== Fk && (this.$items.delete(Fk), this.journal.keyByIndex.delete(kk))
+      } [ek](kk, Fk, Ik) {
+        let Xk = null;
+        if (this.$items.forEach(((Tk, ik) => {
+            kk.has(ik) ? Ik(Tk) : ((Xk ??= new Set).add(ik), Fk(Tk, ik))
+          })), null !== Xk) {
+          Xk.forEach((kk => {
+            this.$items.delete(kk), delete this.journal.indexByKey[kk]
           }));
-          const SS = [];
-          this.journal.keyByIndex.forEach(((HS, gS) => {
-            tS.has(HS) && SS.push(gS)
+          const kk = [];
+          this.journal.keyByIndex.forEach(((Fk, Ik) => {
+            Xk.has(Fk) && kk.push(Ik)
           }));
-          for (let HS = 0; HS < SS.length; HS++) this.journal.keyByIndex.delete(SS[HS])
+          for (let Fk = 0; Fk < kk.length; Fk++) this.journal.keyByIndex.delete(kk[Fk])
         }
-      } [nS]() {
+      } [xk]() {
         this.journal.cleanupAfterEncode()
       }
-      _dropView(SS) {
-        YH(this, SS)
+      _dropView(kk) {
+        uF(this, kk)
       }
       _unregister() {}
       toJSON() {
-        return Object.fromEntries(Array.from(this, (SS => {
-          let [HS, gS] = SS;
-          return [HS, "function" === typeof gS.toJSON ? gS.toJSON() : gS]
+        return Object.fromEntries(Array.from(this, (kk => {
+          let [Fk, Ik] = kk;
+          return [Fk, "function" === typeof Ik.toJSON ? Ik.toJSON() : Ik]
         })))
       }
-      clone(SS) {
-        let HS;
-        return SS ? HS = Object.assign(new bt, this) : (HS = new bt, this.forEach(((SS, gS) => {
-          SS[jS] ? HS.set(gS, SS.clone()) : HS.set(gS, SS)
-        }))), HS
+      clone(kk) {
+        let Fk;
+        return kk ? Fk = Object.assign(new iX, this) : (Fk = new iX, this.forEach(((kk, Ik) => {
+          kk[wk] ? Fk.set(Ik, kk.clone()) : Fk.set(Ik, kk)
+        }))), Fk
       }
     }
-    wH("map", {
-      constructor: bt
+    VF("map", {
+      constructor: iX
     });
-    class Xt {
-      [jS];
-      [NS];
-      [GS];
+    class yX {
+      [wk];
+      [lk];
+      [Hk];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4676,79 +4676,79 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(SS) {
-        (this._stream ??= JH()).maxPerTick = SS
+      set maxPerTick(kk) {
+        (this._stream ??= oF()).maxPerTick = kk
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(SS) {
-        (this._stream ??= JH()).priority = SS
+      set priority(kk) {
+        (this._stream ??= oF()).priority = kk
       }
-      static[uS] = Vg;
-      static[IS] = lg;
-      static COLLECTION_KIND = Fg;
-      static[fS](SS, HS, gS) {
-        return !gS || "string" === typeof SS[GS] || gS.isChangeTreeVisible((SS[kS](HS) ?? SS.deletedItems[HS])[jS])
+      static[qk] = UI;
+      static[Lk] = rI;
+      static COLLECTION_KIND = AI;
+      static[tk](kk, Fk, Ik) {
+        return !Ik || "string" === typeof kk[Hk] || Ik.isChangeTreeVisible((kk[Zk](Fk) ?? kk.deletedItems[Fk])[wk])
       }
-      static is(SS) {
-        return void 0 !== SS.collection
+      static is(kk) {
+        return void 0 !== kk.collection
       }
-      constructor(SS) {
-        Object.defineProperty(this, jS, {
-          value: new vg(this),
+      constructor(kk) {
+        Object.defineProperty(this, wk, {
+          value: new nI(this),
           enumerable: !1,
           writable: !0
-        }), this[GS] = void 0, SS && SS.forEach((SS => this.add(SS)))
+        }), this[Hk] = void 0, kk && kk.forEach((kk => this.add(kk)))
       }
       static initializeForDecoder() {
-        const SS = Object.create(Xt.prototype);
-        return SS.$items = new Map, SS.deletedItems = {}, SS.$refId = 0, SS[GS] = void 0, Lg(SS), SS
+        const kk = Object.create(yX.prototype);
+        return kk.$items = new Map, kk.deletedItems = {}, kk.$refId = 0, kk[Hk] = void 0, pI(kk), kk
       }
-      add(SS) {
-        const HS = this.$refId++,
-          gS = this[jS];
-        return this.$items.set(HS, SS), gS.isStreamCollection ? void 0 !== gS.root && dH(this, gS.root, HS) : gS.change(HS), void 0 !== SS[jS] && SS[jS].setParent(this, gS.root, HS), HS
+      add(kk) {
+        const Fk = this.$refId++,
+          Ik = this[wk];
+        return this.$items.set(Fk, kk), Ik.isStreamCollection ? void 0 !== Ik.root && EF(this, Ik.root, Fk) : Ik.change(Fk), void 0 !== kk[wk] && kk[wk].setParent(this, Ik.root, Fk), Fk
       }
-      at(SS) {
-        const HS = Array.from(this.$items.keys())[SS];
-        return this.$items.get(HS)
+      at(kk) {
+        const Fk = Array.from(this.$items.keys())[kk];
+        return this.$items.get(Fk)
       }
       entries() {
         return this.$items.entries()
       }
-      delete(SS) {
-        const HS = this.$items.entries();
-        let gS, tS;
+      delete(kk) {
+        const Fk = this.$items.entries();
+        let Ik, Xk;
         for (;
-          (tS = HS.next()) && !tS.done;)
-          if (SS === tS.value[1]) {
-            gS = tS.value[0];
+          (Xk = Fk.next()) && !Xk.done;)
+          if (kk === Xk.value[1]) {
+            Ik = Xk.value[0];
             break
-          } if (void 0 === gS) return !1;
-        const bS = this[jS];
-        if (bS.isStreamCollection) {
-          const SS = bS.root,
-            HS = this.$items.get(gS);
-          return void 0 !== SS && cH(this, SS, this[NS], gS), void 0 !== HS?.[jS] && SS?.remove(HS[jS]), this.deletedItems[gS] = HS, this.$items.delete(gS)
+          } if (void 0 === Ik) return !1;
+        const Tk = this[wk];
+        if (Tk.isStreamCollection) {
+          const kk = Tk.root,
+            Fk = this.$items.get(Ik);
+          return void 0 !== kk && OF(this, kk, this[lk], Ik), void 0 !== Fk?.[wk] && kk?.remove(Fk[wk]), this.deletedItems[Ik] = Fk, this.$items.delete(Ik)
         }
-        return this.deletedItems[gS] = bS.delete(gS), this.$items.delete(gS)
+        return this.deletedItems[Ik] = Tk.delete(Ik), this.$items.delete(Ik)
       }
       clear() {
-        const SS = this[jS];
-        SS.discard(), SS.forEachChild(((HS, gS) => {
-          SS.root?.remove(HS)
-        })), this.$items.clear(), SS.operation(bS.CLEAR)
-      } [PS]() {
-        const SS = this[jS];
-        if (SS.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
-        this.$items.forEach((SS => SS?.[PS]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, SS.recycle(), this[NS] = void 0
+        const kk = this[wk];
+        kk.discard(), kk.forEachChild(((Fk, Ik) => {
+          kk.root?.remove(Fk)
+        })), this.$items.clear(), kk.operation(Tk.CLEAR)
+      } [Pk]() {
+        const kk = this[wk];
+        if (kk.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed CollectionSchema (pooling not supported).");
+        this.$items.forEach((kk => kk?.[Pk]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, kk.recycle(), this[lk] = void 0
       }
-      has(SS) {
-        return Array.from(this.$items.values()).some((HS => HS === SS))
+      has(kk) {
+        return Array.from(this.$items.values()).some((Fk => Fk === kk))
       }
-      forEach(SS) {
-        this.$items.forEach(((HS, gS, tS) => SS(HS, gS, this)))
+      forEach(kk) {
+        this.$items.forEach(((Fk, Ik, Xk) => kk(Fk, Ik, this)))
       }
       values() {
         return this.$items.values()
@@ -4757,62 +4757,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[jS].pause()
+        this[wk].pause()
       }
       resumeTracking() {
-        this[jS].resume()
+        this[wk].resume()
       }
-      untracked(SS) {
-        return this[jS].untracked(SS)
+      untracked(kk) {
+        return this[wk].untracked(kk)
       }
       get isTrackingPaused() {
-        return this[jS].paused
+        return this[wk].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(SS, HS) {}
-      getIndex(SS) {
-        return SS
-      } [kS](SS) {
-        return this.$items.get(SS)
-      } [aS](SS) {
-        this.$items.delete(SS)
-      } [KS](SS, HS, gS) {
-        let tS = null;
-        if (this.$items.forEach(((bS, XS) => {
-            SS.has(XS) ? gS(bS) : ((tS ??= []).push(XS), HS(bS, XS))
-          })), null !== tS)
-          for (let bS = 0; bS < tS.length; bS++) this[aS](tS[bS])
-      } [nS]() {
-        for (const SS in this.deletedItems) delete this.deletedItems[SS]
+      setIndex(kk, Fk) {}
+      getIndex(kk) {
+        return kk
+      } [Zk](kk) {
+        return this.$items.get(kk)
+      } [jk](kk) {
+        this.$items.delete(kk)
+      } [ek](kk, Fk, Ik) {
+        let Xk = null;
+        if (this.$items.forEach(((Tk, ik) => {
+            kk.has(ik) ? Ik(Tk) : ((Xk ??= []).push(ik), Fk(Tk, ik))
+          })), null !== Xk)
+          for (let Tk = 0; Tk < Xk.length; Tk++) this[jk](Xk[Tk])
+      } [xk]() {
+        for (const kk in this.deletedItems) delete this.deletedItems[kk]
       }
-      _dropView(SS) {
-        YH(this, SS)
+      _dropView(kk) {
+        uF(this, kk)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const SS = [];
-        return this.forEach(((HS, gS) => {
-          SS.push("function" === typeof HS.toJSON ? HS.toJSON() : HS)
-        })), SS
+        const kk = [];
+        return this.forEach(((Fk, Ik) => {
+          kk.push("function" === typeof Fk.toJSON ? Fk.toJSON() : Fk)
+        })), kk
       }
-      clone(SS) {
-        let HS;
-        return SS ? HS = Object.assign(new Xt, this) : (HS = new Xt, this.forEach((SS => {
-          SS[jS] ? HS.add(SS.clone()) : HS.add(SS)
-        }))), HS
+      clone(kk) {
+        let Fk;
+        return kk ? Fk = Object.assign(new yX, this) : (Fk = new yX, this.forEach((kk => {
+          kk[wk] ? Fk.add(kk.clone()) : Fk.add(kk)
+        }))), Fk
       }
     }
-    wH("collection", {
-      constructor: Xt
+    VF("collection", {
+      constructor: yX
     });
-    class xt {
-      [jS];
-      [NS];
-      [GS];
+    class lX {
+      [wk];
+      [lk];
+      [Hk];
       $items = new Map;
       deletedItems = {};
       $refId = 0;
@@ -4820,81 +4820,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(SS) {
-        (this._stream ??= JH()).maxPerTick = SS
+      set maxPerTick(kk) {
+        (this._stream ??= oF()).maxPerTick = kk
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(SS) {
-        (this._stream ??= JH()).priority = SS
+      set priority(kk) {
+        (this._stream ??= oF()).priority = kk
       }
-      static[uS] = Vg;
-      static[IS] = lg;
-      static COLLECTION_KIND = Mg;
-      static[fS](SS, HS, gS) {
-        return !gS || "string" === typeof SS[GS] || gS.isVisible((SS[kS](HS) ?? SS.deletedItems[HS])[jS])
+      static[qk] = UI;
+      static[Lk] = rI;
+      static COLLECTION_KIND = YI;
+      static[tk](kk, Fk, Ik) {
+        return !Ik || "string" === typeof kk[Hk] || Ik.isVisible((kk[Zk](Fk) ?? kk.deletedItems[Fk])[wk])
       }
-      static is(SS) {
-        return void 0 !== SS.set
+      static is(kk) {
+        return void 0 !== kk.set
       }
-      constructor(SS) {
-        Object.defineProperty(this, jS, {
-          value: new vg(this),
+      constructor(kk) {
+        Object.defineProperty(this, wk, {
+          value: new nI(this),
           enumerable: !1,
           writable: !0
-        }), this[GS] = void 0, SS && SS.forEach((SS => this.add(SS)))
+        }), this[Hk] = void 0, kk && kk.forEach((kk => this.add(kk)))
       }
       static initializeForDecoder() {
-        const SS = Object.create(xt.prototype);
-        return SS.$items = new Map, SS.deletedItems = {}, SS.$refId = 0, SS[GS] = void 0, Lg(SS), SS
+        const kk = Object.create(lX.prototype);
+        return kk.$items = new Map, kk.deletedItems = {}, kk.$refId = 0, kk[Hk] = void 0, pI(kk), kk
       }
-      add(SS) {
-        if (this.has(SS)) return !1;
-        const HS = this.$refId++,
-          gS = this[jS];
-        return this.$items.set(HS, SS), gS.isStreamCollection ? void 0 !== gS.root && dH(this, gS.root, HS) : gS.change(HS, bS.ADD), void 0 !== SS[jS] && SS[jS].setParent(this, gS.root, HS), HS
+      add(kk) {
+        if (this.has(kk)) return !1;
+        const Fk = this.$refId++,
+          Ik = this[wk];
+        return this.$items.set(Fk, kk), Ik.isStreamCollection ? void 0 !== Ik.root && EF(this, Ik.root, Fk) : Ik.change(Fk, Tk.ADD), void 0 !== kk[wk] && kk[wk].setParent(this, Ik.root, Fk), Fk
       }
       entries() {
         return this.$items.entries()
       }
-      delete(SS) {
-        const HS = this.$items.entries();
-        let gS, tS;
+      delete(kk) {
+        const Fk = this.$items.entries();
+        let Ik, Xk;
         for (;
-          (tS = HS.next()) && !tS.done;)
-          if (SS === tS.value[1]) {
-            gS = tS.value[0];
+          (Xk = Fk.next()) && !Xk.done;)
+          if (kk === Xk.value[1]) {
+            Ik = Xk.value[0];
             break
-          } if (void 0 === gS) return !1;
-        const bS = this[jS];
-        if (bS.isStreamCollection) {
-          const SS = bS.root,
-            HS = this.$items.get(gS);
-          return void 0 !== SS && cH(this, SS, this[NS], gS), void 0 !== HS?.[jS] && SS?.remove(HS[jS]), this.deletedItems[gS] = HS, this.$items.delete(gS)
+          } if (void 0 === Ik) return !1;
+        const Tk = this[wk];
+        if (Tk.isStreamCollection) {
+          const kk = Tk.root,
+            Fk = this.$items.get(Ik);
+          return void 0 !== kk && OF(this, kk, this[lk], Ik), void 0 !== Fk?.[wk] && kk?.remove(Fk[wk]), this.deletedItems[Ik] = Fk, this.$items.delete(Ik)
         }
-        return this.deletedItems[gS] = bS.delete(gS), this.$items.delete(gS)
+        return this.deletedItems[Ik] = Tk.delete(Ik), this.$items.delete(Ik)
       }
       clear() {
-        const SS = this[jS];
-        SS.discard(), this.$items.clear(), SS.operation(bS.CLEAR)
-      } [PS]() {
-        const SS = this[jS];
-        if (SS.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
-        this.$items.forEach((SS => SS?.[PS]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, SS.recycle(), this[NS] = void 0
+        const kk = this[wk];
+        kk.discard(), this.$items.clear(), kk.operation(Tk.CLEAR)
+      } [Pk]() {
+        const kk = this[wk];
+        if (kk.isStreamCollection) throw new Error("@colyseus/schema: cannot reset a streamed SetSchema (pooling not supported).");
+        this.$items.forEach((kk => kk?.[Pk]?.())), this.$items.clear(), this.deletedItems = {}, this.$refId = 0, kk.recycle(), this[lk] = void 0
       }
-      has(SS) {
-        const HS = this.$items.values();
-        let gS, tS = !1;
+      has(kk) {
+        const Fk = this.$items.values();
+        let Ik, Xk = !1;
         for (;
-          (gS = HS.next()) && !gS.done;)
-          if (SS === gS.value) {
-            tS = !0;
+          (Ik = Fk.next()) && !Ik.done;)
+          if (kk === Ik.value) {
+            Xk = !0;
             break
-          } return tS
+          } return Xk
       }
-      forEach(SS) {
-        this.$items.forEach(((HS, gS, tS) => SS(HS, gS, this)))
+      forEach(kk) {
+        this.$items.forEach(((Fk, Ik, Xk) => kk(Fk, Ik, this)))
       }
       values() {
         return this.$items.values()
@@ -4903,62 +4903,62 @@ export const modules = {
         return this.$items.size
       }
       pauseTracking() {
-        this[jS].pause()
+        this[wk].pause()
       }
       resumeTracking() {
-        this[jS].resume()
+        this[wk].resume()
       }
-      untracked(SS) {
-        return this[jS].untracked(SS)
+      untracked(kk) {
+        return this[wk].untracked(kk)
       }
       get isTrackingPaused() {
-        return this[jS].paused
+        return this[wk].paused
       } [Symbol.iterator]() {
         return this.$items.values()
       }
-      setIndex(SS, HS) {}
-      getIndex(SS) {
-        return SS
-      } [kS](SS) {
-        return this.$items.get(SS)
-      } [aS](SS) {
-        this.$items.delete(SS)
-      } [KS](SS, HS, gS) {
-        let tS = null;
-        if (this.$items.forEach(((bS, XS) => {
-            SS.has(XS) ? gS(bS) : ((tS ??= []).push(XS), HS(bS, XS))
-          })), null !== tS)
-          for (let bS = 0; bS < tS.length; bS++) this[aS](tS[bS])
-      } [nS]() {
-        for (const SS in this.deletedItems) delete this.deletedItems[SS]
+      setIndex(kk, Fk) {}
+      getIndex(kk) {
+        return kk
+      } [Zk](kk) {
+        return this.$items.get(kk)
+      } [jk](kk) {
+        this.$items.delete(kk)
+      } [ek](kk, Fk, Ik) {
+        let Xk = null;
+        if (this.$items.forEach(((Tk, ik) => {
+            kk.has(ik) ? Ik(Tk) : ((Xk ??= []).push(ik), Fk(Tk, ik))
+          })), null !== Xk)
+          for (let Tk = 0; Tk < Xk.length; Tk++) this[jk](Xk[Tk])
+      } [xk]() {
+        for (const kk in this.deletedItems) delete this.deletedItems[kk]
       }
-      _dropView(SS) {
-        YH(this, SS)
+      _dropView(kk) {
+        uF(this, kk)
       }
       _unregister() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const SS = [];
-        return this.forEach(((HS, gS) => {
-          SS.push("function" === typeof HS.toJSON ? HS.toJSON() : HS)
-        })), SS
+        const kk = [];
+        return this.forEach(((Fk, Ik) => {
+          kk.push("function" === typeof Fk.toJSON ? Fk.toJSON() : Fk)
+        })), kk
       }
-      clone(SS) {
-        let HS;
-        return SS ? HS = Object.assign(new xt, this) : (HS = new xt, this.forEach((SS => {
-          SS[jS] ? HS.add(SS.clone()) : HS.add(SS)
-        }))), HS
+      clone(kk) {
+        let Fk;
+        return kk ? Fk = Object.assign(new lX, this) : (Fk = new lX, this.forEach((kk => {
+          kk[wk] ? Fk.add(kk.clone()) : Fk.add(kk)
+        }))), Fk
       }
     }
-    wH("set", {
-      constructor: xt
+    VF("set", {
+      constructor: lX
     });
-    class Nt {
-      [jS];
-      [NS];
-      [GS];
+    class aX {
+      [wk];
+      [lk];
+      [Hk];
       $items = new Map;
       $nextPosition = 0;
       _itemIndex = new Map;
@@ -4966,81 +4966,81 @@ export const modules = {
       get maxPerTick() {
         return this._stream?.maxPerTick ?? 32
       }
-      set maxPerTick(SS) {
-        (this._stream ??= JH()).maxPerTick = SS
+      set maxPerTick(kk) {
+        (this._stream ??= oF()).maxPerTick = kk
       }
       get priority() {
         return this._stream?.priority
       }
-      set priority(SS) {
-        (this._stream ??= JH()).priority = SS
+      set priority(kk) {
+        (this._stream ??= oF()).priority = kk
       }
       static $isStream = !0;
-      static[uS] = Vg;
-      static[IS] = lg;
-      static COLLECTION_KIND = Rg;
-      static[fS](SS, HS, gS) {
-        if (!gS) return !0;
-        const tS = SS[kS](HS);
-        return void 0 !== tS && gS.isVisible(tS[jS])
+      static[qk] = UI;
+      static[Lk] = rI;
+      static COLLECTION_KIND = gI;
+      static[tk](kk, Fk, Ik) {
+        if (!Ik) return !0;
+        const Xk = kk[Zk](Fk);
+        return void 0 !== Xk && Ik.isVisible(Xk[wk])
       }
-      static is(SS) {
-        return SS && void 0 !== SS.stream
+      static is(kk) {
+        return kk && void 0 !== kk.stream
       }
       constructor() {
-        Object.defineProperty(this, jS, {
-          value: new vg(this),
+        Object.defineProperty(this, wk, {
+          value: new nI(this),
           enumerable: !1,
           writable: !0
-        }), this[GS] = void 0
+        }), this[Hk] = void 0
       }
       static initializeForDecoder() {
-        const SS = Object.create(Nt.prototype);
-        return SS.$items = new Map, SS.$nextPosition = 0, SS._itemIndex = new Map, SS[GS] = void 0, Lg(SS), SS
+        const kk = Object.create(aX.prototype);
+        return kk.$items = new Map, kk.$nextPosition = 0, kk._itemIndex = new Map, kk[Hk] = void 0, pI(kk), kk
       }
-      add(SS) {
-        if (this._itemIndex.has(SS)) return -1;
-        const HS = this.$nextPosition++;
-        this.$items.set(HS, SS), this._itemIndex.set(SS, HS);
-        const gS = this[jS].root;
-        return void 0 !== SS[jS] && SS[jS].setParent(this, gS, HS), void 0 !== gS && dH(this, gS, HS), HS
+      add(kk) {
+        if (this._itemIndex.has(kk)) return -1;
+        const Fk = this.$nextPosition++;
+        this.$items.set(Fk, kk), this._itemIndex.set(kk, Fk);
+        const Ik = this[wk].root;
+        return void 0 !== kk[wk] && kk[wk].setParent(this, Ik, Fk), void 0 !== Ik && EF(this, Ik, Fk), Fk
       }
-      remove(SS) {
-        const HS = this._itemIndex.get(SS);
-        if (void 0 === HS) return !1;
-        this._itemIndex.delete(SS), this.$items.delete(HS);
-        const gS = this[jS].root;
-        return void 0 !== gS && (cH(this, gS, this[NS], HS), void 0 !== SS[jS] && gS.remove(SS[jS])), !0
+      remove(kk) {
+        const Fk = this._itemIndex.get(kk);
+        if (void 0 === Fk) return !1;
+        this._itemIndex.delete(kk), this.$items.delete(Fk);
+        const Ik = this[wk].root;
+        return void 0 !== Ik && (OF(this, Ik, this[lk], Fk), void 0 !== kk[wk] && Ik.remove(kk[wk])), !0
       }
-      has(SS) {
-        return this._itemIndex.has(SS)
+      has(kk) {
+        return this._itemIndex.has(kk)
       }
       clear() {
-        const SS = this[jS].root;
-        if (void 0 !== SS) {
-          ! function(SS, HS, gS) {
-            const tS = SS._stream;
-            if (void 0 !== tS) {
-              tS.broadcastPending.clear();
-              for (const SS of tS.sentBroadcast) tS.broadcastDeletes.add(SS);
-              tS.sentBroadcast.clear(), HS.forEachActiveView((SS => {
-                tS.pendingByView.get(SS.id)?.clear();
-                const HS = tS.sentByView.get(SS.id);
-                if (void 0 !== HS && HS.size > 0) {
-                  let tS = SS.changes.get(gS);
-                  void 0 === tS && (tS = new Map, SS.changes.set(gS, tS));
-                  for (const SS of HS) tS.set(SS, bS.DELETE);
-                  HS.clear()
+        const kk = this[wk].root;
+        if (void 0 !== kk) {
+          ! function(kk, Fk, Ik) {
+            const Xk = kk._stream;
+            if (void 0 !== Xk) {
+              Xk.broadcastPending.clear();
+              for (const kk of Xk.sentBroadcast) Xk.broadcastDeletes.add(kk);
+              Xk.sentBroadcast.clear(), Fk.forEachActiveView((kk => {
+                Xk.pendingByView.get(kk.id)?.clear();
+                const Fk = Xk.sentByView.get(kk.id);
+                if (void 0 !== Fk && Fk.size > 0) {
+                  let Xk = kk.changes.get(Ik);
+                  void 0 === Xk && (Xk = new Map, kk.changes.set(Ik, Xk));
+                  for (const kk of Fk) Xk.set(kk, Tk.DELETE);
+                  Fk.clear()
                 }
               }))
             }
-          }(this, SS, this[NS]);
-          for (const HS of this.$items.values()) void 0 !== HS[jS] && SS.remove(HS[jS])
+          }(this, kk, this[lk]);
+          for (const Fk of this.$items.values()) void 0 !== Fk[wk] && kk.remove(Fk[wk])
         }
         this.$items.clear(), this._itemIndex.clear()
       }
-      forEach(SS) {
-        for (const [HS, gS] of this.$items) SS(gS, HS, this)
+      forEach(kk) {
+        for (const [Fk, Ik] of this.$items) kk(Ik, Fk, this)
       }
       values() {
         return this.$items.values()
@@ -5056,43 +5056,43 @@ export const modules = {
       get length() {
         return this.$items.size
       }
-      setIndex(SS, HS) {}
-      getIndex(SS) {
-        return SS
-      } [kS](SS) {
-        return this.$items.get(SS)
-      } [aS](SS) {
-        const HS = this.$items.get(SS);
-        void 0 !== HS && (this._itemIndex.delete(HS), this.$items.delete(SS))
-      } [KS]() {} [nS]() {}
+      setIndex(kk, Fk) {}
+      getIndex(kk) {
+        return kk
+      } [Zk](kk) {
+        return this.$items.get(kk)
+      } [jk](kk) {
+        const Fk = this.$items.get(kk);
+        void 0 !== Fk && (this._itemIndex.delete(Fk), this.$items.delete(kk))
+      } [ek]() {} [xk]() {}
       toArray() {
         return Array.from(this.$items.values())
       }
       toJSON() {
-        const SS = [];
-        return this.forEach((HS => {
-          SS.push("function" === typeof HS?.toJSON ? HS.toJSON() : HS)
-        })), SS
+        const kk = [];
+        return this.forEach((Fk => {
+          kk.push("function" === typeof Fk?.toJSON ? Fk.toJSON() : Fk)
+        })), kk
       }
-      clone(SS) {
-        if (SS) {
-          return Object.assign(new Nt, this)
+      clone(kk) {
+        if (kk) {
+          return Object.assign(new aX, this)
         }
-        const HS = new Nt;
-        return HS.maxPerTick = this.maxPerTick, this.forEach((SS => {
-          HS.add("function" === typeof SS?.clone ? SS.clone() : SS)
-        })), HS
+        const Fk = new aX;
+        return Fk.maxPerTick = this.maxPerTick, this.forEach((kk => {
+          Fk.add("function" === typeof kk?.clone ? kk.clone() : kk)
+        })), Fk
       }
-      _dropView(SS) {
-        YH(this, SS)
+      _dropView(kk) {
+        uF(this, kk)
       }
       _unregister() {}
     }
-    wH("stream", {
-      constructor: Nt
+    VF("stream", {
+      constructor: aX
     });
-    class qt {
-      [wS] = !0;
+    class qX {
+      [sk] = !0;
       _type;
       _default = void 0;
       _hasDefault = !1;
@@ -5106,14 +5106,14 @@ export const modules = {
       _optional = !1;
       _noSync = !1;
       _streamPriority = void 0;
-      constructor(SS) {
-        this._type = SS
+      constructor(kk) {
+        this._type = kk
       }
-      default (SS) {
-        return this._default = SS, this._hasDefault = !0, this
+      default (kk) {
+        return this._default = kk, this._hasDefault = !0, this
       }
-      view(SS) {
-        return this._view = SS ?? -1, this
+      view(kk) {
+        return this._view = kk ?? -1, this
       }
       unreliable() {
         return this._unreliable = !0, this
@@ -5128,16 +5128,16 @@ export const modules = {
         return this._noSync = !0, this
       }
       stream() {
-        const SS = this._type;
-        if (SS && "object" === typeof SS && void 0 !== SS.array) throw new Error(ZH);
+        const kk = this._type;
+        if (kk && "object" === typeof kk && void 0 !== kk.array) throw new Error(SF);
         return this._stream = !0, this
       }
-      priority(SS) {
-        return this._streamPriority = SS, this
+      priority(kk) {
+        return this._streamPriority = kk, this
       }
       deprecated() {
-        let SS = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._deprecated = !0, this._deprecatedThrows = SS, this
+        let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        return this._deprecated = !0, this._deprecatedThrows = kk, this
       }
       optional() {
         return this._optional = !0, this
@@ -5161,135 +5161,135 @@ export const modules = {
       }
     }
 
-    function ut(SS) {
-      return null != SS && !0 === SS[wS]
+    function LX(kk) {
+      return null != kk && !0 === kk[sk]
     }
 
-    function It(SS) {
-      return () => new qt(SS)
+    function tX(kk) {
+      return () => new qX(kk)
     }
 
-    function ft(SS) {
-      if (ut(SS)) {
-        const HS = SS._type;
-        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof HS?`use the type name instead: t.array("${HS}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
+    function ZX(kk) {
+      if (LX(kk)) {
+        const Fk = kk._type;
+        throw new Error(`t.array/map/set/collection(): a t.* builder is not a valid element type \u2014 ${"string"===typeof Fk?`use the type name instead: t.array("${Fk}")`:'collections accept a Schema class or a primitive type name ("string", "number", \u2026)'}.`)
       }
-      return SS
+      return kk
     }
 
-    function kt(SS) {
-      return new qt({
-        quantized: yH(SS)
+    function jX(kk) {
+      return new qX({
+        quantized: RF(kk)
       })
     }
-    const Kt = Object.freeze({
-        string: It("string"),
-        number: It("number"),
-        boolean: It("boolean"),
-        int8: It("int8"),
-        uint8: It("uint8"),
-        int16: It("int16"),
-        uint16: It("uint16"),
-        int32: It("int32"),
-        uint32: It("uint32"),
-        int64: It("int64"),
-        uint64: It("uint64"),
-        float32: It("float32"),
-        float64: It("float64"),
-        bigint64: It("bigint64"),
-        biguint64: It("biguint64"),
-        ref: SS => new qt(SS),
-        array: SS => new qt({
-          array: ft(SS)
+    const eX = Object.freeze({
+        string: tX("string"),
+        number: tX("number"),
+        boolean: tX("boolean"),
+        int8: tX("int8"),
+        uint8: tX("uint8"),
+        int16: tX("int16"),
+        uint16: tX("uint16"),
+        int32: tX("int32"),
+        uint32: tX("uint32"),
+        int64: tX("int64"),
+        uint64: tX("uint64"),
+        float32: tX("float32"),
+        float64: tX("float64"),
+        bigint64: tX("bigint64"),
+        biguint64: tX("biguint64"),
+        ref: kk => new qX(kk),
+        array: kk => new qX({
+          array: ZX(kk)
         }),
-        map: SS => new qt({
-          map: ft(SS)
+        map: kk => new qX({
+          map: ZX(kk)
         }),
-        set: SS => new qt({
-          set: ft(SS)
+        set: kk => new qX({
+          set: ZX(kk)
         }),
-        collection: SS => new qt({
-          collection: ft(SS)
+        collection: kk => new qX({
+          collection: ZX(kk)
         }),
-        stream: SS => {
-          const HS = new qt({
-            stream: ft(SS)
+        stream: kk => {
+          const Fk = new qX({
+            stream: ZX(kk)
           });
-          return HS._stream = !0, HS
+          return Fk._stream = !0, Fk
         },
-        quantized: kt,
-        angle: SS => kt({
+        quantized: jX,
+        angle: kk => jX({
           min: 0,
           max: 2 * Math.PI,
           mode: "wrap",
-          bits: SS?.bits ?? 16
+          bits: kk?.bits ?? 16
         })
       }),
-      jt = -1;
+      wX = -1;
 
-    function Gt(SS) {
-      return UH.register(SS), SS
+    function HX(kk) {
+      return WF.register(kk), kk
     }
 
-    function Ct() {
-      let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : jt;
-      return function(HS, gS) {
-        const tS = TH.initialize(HS.constructor);
-        TH.setTag(tS, gS, SS)
+    function JX() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : wX;
+      return function(Fk, Ik) {
+        const Xk = mF.initialize(Fk.constructor);
+        mF.setTag(Xk, Ik, kk)
       }
     }
 
-    function nt(SS, HS) {
-      const gS = TH.initialize(SS.constructor);
-      TH.setUnreliable(gS, HS)
+    function xX(kk, Fk) {
+      const Ik = mF.initialize(kk.constructor);
+      mF.setUnreliable(Ik, Fk)
     }
 
-    function Pt(SS, HS) {
-      const gS = TH.initialize(SS.constructor);
-      TH.setPatchOnly(gS, HS)
+    function PX(kk, Fk) {
+      const Ik = mF.initialize(kk.constructor);
+      mF.setPatchOnly(Ik, Fk)
     }
 
-    function Qt(SS, HS) {
-      const gS = TH.initialize(SS.constructor);
-      TH.setFullStateOnly(gS, HS)
+    function KX(kk, Fk) {
+      const Ik = mF.initialize(kk.constructor);
+      mF.setFullStateOnly(Ik, Fk)
     }
 
-    function Dt(SS, HS) {
-      return function(gS, tS) {
-        const bS = gS.constructor;
-        if (!SS) throw new Error(`${bS.name}: @type() reference provided for "${tS}" is undefined. Make sure you don't have any circular dependencies.`);
-        SS = sH(SS, `${bS.name}.${tS}`), UH.register(bS);
-        const XS = Object.getPrototypeOf(bS)[Symbol.metadata],
-          xS = TH.initialize(bS);
-        let NS = xS[tS];
-        if (void 0 !== xS[NS]) {
-          if (xS[NS].deprecated) return;
-          if (void 0 !== xS[NS].type) {
-            const SS = new Error(`@colyseus/schema: Duplicate '${tS}' definition on '${bS.name}'.\nCheck @type() annotation`);
-            throw new Error(`${SS.message} ${SS.stack.split("\n")[4].trim()}`)
+    function QX(kk, Fk) {
+      return function(Ik, Xk) {
+        const Tk = Ik.constructor;
+        if (!kk) throw new Error(`${Tk.name}: @type() reference provided for "${Xk}" is undefined. Make sure you don't have any circular dependencies.`);
+        kk = BF(kk, `${Tk.name}.${Xk}`), WF.register(Tk);
+        const ik = Object.getPrototypeOf(Tk)[Symbol.metadata],
+          yk = mF.initialize(Tk);
+        let lk = yk[Xk];
+        if (void 0 !== yk[lk]) {
+          if (yk[lk].deprecated) return;
+          if (void 0 !== yk[lk].type) {
+            const kk = new Error(`@colyseus/schema: Duplicate '${Xk}' definition on '${Tk.name}'.\nCheck @type() annotation`);
+            throw new Error(`${kk.message} ${kk.stack.split("\n")[4].trim()}`)
           }
-        } else NS = xS[OS] ?? (XS && XS[OS]) ?? -1, NS++;
-        if (HS && HS.manual) TH.addField(xS, NS, tS, SS, {
+        } else lk = yk[vk] ?? (ik && ik[vk]) ?? -1, lk++;
+        if (Fk && Fk.manual) mF.addField(yk, lk, Xk, kk, {
           enumerable: !0,
           configurable: !0,
           writable: !0
         });
         else {
           const {
-            complexTypeKlass: HS,
-            childType: gS
-          } = pH(SS);
-          TH.addField(xS, NS, tS, SS, ht(tS, NS, gS, HS))
+            complexTypeKlass: Fk,
+            childType: Ik
+          } = fF(kk);
+          mF.addField(yk, lk, Xk, kk, VX(Xk, lk, Ik, Fk))
         }
-        xS[hS][tS] && Object.defineProperty(gS, tS, xS[hS][tS]), ("string" === typeof SS || VH(SS)) && (xS[JS] || Object.defineProperty(xS, JS, {
+        yk[Vk][Xk] && Object.defineProperty(Ik, Xk, yk[Vk][Xk]), ("string" === typeof kk || UF(kk)) && (yk[Sk] || Object.defineProperty(yk, Sk, {
           value: [],
           enumerable: !1,
           configurable: !0,
           writable: !0
-        }), xS[JS][NS] = "string" === typeof SS ? HH[SS] : zH(SS.quantized))
+        }), yk[Sk][lk] = "string" === typeof kk ? IF[kk] : cF(kk.quantized))
       }
     }
-    const wt = {
+    const sX = {
       number: "number",
       int8: "number",
       uint8: "number",
@@ -5307,432 +5307,432 @@ export const modules = {
       boolean: "boolean"
     };
 
-    function ht(SS, HS, gS, tS) {
-      let XS;
-      return XS = tS ? function(SS, HS, gS, tS) {
-        const XS = tS.constructor === gt,
-          xS = tS.constructor === bt;
-        return function(SS) {
-          const tS = this[DS],
-            NS = tS[HS];
-          if (SS !== NS) {
-            if (void 0 !== SS && null !== SS) {
-              if (!XS || SS instanceof gt)
-                if (!xS || SS instanceof bt) SS[GS] = gS;
+    function VX(kk, Fk, Ik, Xk) {
+      let ik;
+      return ik = Xk ? function(kk, Fk, Ik, Xk) {
+        const ik = Xk.constructor === XX,
+          yk = Xk.constructor === iX;
+        return function(kk) {
+          const Xk = this[Qk],
+            lk = Xk[Fk];
+          if (kk !== lk) {
+            if (void 0 !== kk && null !== kk) {
+              if (!ik || kk instanceof XX)
+                if (!yk || kk instanceof iX) kk[Hk] = Ik;
                 else {
-                  const HS = new bt;
-                  if (HS[GS] = gS, SS instanceof Map) SS.forEach(((SS, gS) => HS.set(gS, SS)));
+                  const Fk = new iX;
+                  if (Fk[Hk] = Ik, kk instanceof Map) kk.forEach(((kk, Ik) => Fk.set(Ik, kk)));
                   else
-                    for (const gS in SS) HS.set(gS, SS[gS]);
-                  SS = HS
+                    for (const Ik in kk) Fk.set(Ik, kk[Ik]);
+                  kk = Fk
                 }
               else {
-                const HS = new gt;
-                HS[GS] = gS, HS.push(...SS), SS = HS
+                const Fk = new XX;
+                Fk[Hk] = Ik, Fk.push(...kk), kk = Fk
               }
-              const tS = this[jS],
-                uS = this.constructor;
-              void 0 !== NS && null !== NS && NS[jS] ? (tS.root?.remove(NS[jS]), uS[qS](tS, HS, bS.DELETE_AND_ADD)) : uS[qS](tS, HS, bS.ADD), SS[jS]?.setParent(this, tS.root, HS)
-            } else void 0 !== NS && null !== NS && this[jS].delete(HS);
-            tS[HS] = SS
+              const Xk = this[wk],
+                qk = this.constructor;
+              void 0 !== lk && null !== lk && lk[wk] ? (Xk.root?.remove(lk[wk]), qk[ak](Xk, Fk, Tk.DELETE_AND_ADD)) : qk[ak](Xk, Fk, Tk.ADD), kk[wk]?.setParent(this, Xk.root, Fk)
+            } else void 0 !== lk && null !== lk && this[wk].delete(Fk);
+            Xk[Fk] = kk
           }
         }
-      }(0, HS, gS, tS) : "string" === typeof gS ? function(SS, HS, gS) {
-        const tS = wt[gS],
-          XS = "string" === gS,
-          xS = "boolean" === gS;
-        return function(gS) {
-          const NS = this[DS],
-            uS = NS[HS];
-          if (gS !== uS) {
-            if (void 0 !== gS && null !== gS) {
-              if (!xS && void 0 !== tS && typeof gS !== tS && (!XS || null !== gS)) {
-                const HS = gS && gS.constructor ? ` (${gS.constructor.name})` : "";
-                throw new eg(`a '${tS}' was expected, but '${JSON.stringify(gS)}'${HS} was provided in ${this.constructor.name}#${SS}`)
+      }(0, Fk, Ik, Xk) : "string" === typeof Ik ? function(kk, Fk, Ik) {
+        const Xk = sX[Ik],
+          ik = "string" === Ik,
+          yk = "boolean" === Ik;
+        return function(Ik) {
+          const lk = this[Qk],
+            qk = lk[Fk];
+          if (Ik !== qk) {
+            if (void 0 !== Ik && null !== Ik) {
+              if (!yk && void 0 !== Xk && typeof Ik !== Xk && (!ik || null !== Ik)) {
+                const Fk = Ik && Ik.constructor ? ` (${Ik.constructor.name})` : "";
+                throw new MI(`a '${Xk}' was expected, but '${JSON.stringify(Ik)}'${Fk} was provided in ${this.constructor.name}#${kk}`)
               }
-              this.constructor[qS](this[jS], HS, bS.ADD)
-            } else void 0 !== uS && null !== uS && this[jS].delete(HS);
-            NS[HS] = gS
+              this.constructor[ak](this[wk], Fk, Tk.ADD)
+            } else void 0 !== qk && null !== qk && this[wk].delete(Fk);
+            lk[Fk] = Ik
           }
         }
-      }(SS, HS, gS) : VH(gS) ? function(SS, HS, gS) {
-        return function(tS) {
-          const XS = this[DS],
-            xS = XS[HS];
-          if (void 0 !== tS && null !== tS) {
-            if ("number" !== typeof tS) throw new eg(`a 'number' was expected, but '${JSON.stringify(tS)}' was provided in ${this.constructor.name}#${SS}`);
-            if ((tS = WH(gS, iH(gS, tS))) === xS) return;
-            this.constructor[qS](this[jS], HS, bS.ADD)
+      }(kk, Fk, Ik) : UF(Ik) ? function(kk, Fk, Ik) {
+        return function(Xk) {
+          const ik = this[Qk],
+            yk = ik[Fk];
+          if (void 0 !== Xk && null !== Xk) {
+            if ("number" !== typeof Xk) throw new MI(`a 'number' was expected, but '${JSON.stringify(Xk)}' was provided in ${this.constructor.name}#${kk}`);
+            if ((Xk = NF(Ik, CF(Ik, Xk))) === yk) return;
+            this.constructor[ak](this[wk], Fk, Tk.ADD)
           } else {
-            if (tS === xS) return;
-            void 0 !== xS && null !== xS && this[jS].delete(HS)
+            if (Xk === yk) return;
+            void 0 !== yk && null !== yk && this[wk].delete(Fk)
           }
-          XS[HS] = tS
+          ik[Fk] = Xk
         }
-      }(SS, HS, gS.quantized) : function(SS, HS, gS) {
-        return function(tS) {
-          const XS = this[DS],
-            xS = XS[HS];
-          if (tS !== xS) {
-            if (void 0 !== tS && null !== tS) {
-              rg(tS, gS, this, SS);
-              const XS = this[jS],
-                NS = this.constructor;
-              void 0 !== xS && null !== xS && xS[jS] ? (XS.root?.remove(xS[jS]), NS[qS](XS, HS, bS.DELETE_AND_ADD)) : NS[qS](XS, HS, bS.ADD), tS[jS]?.setParent(this, XS.root, HS)
-            } else void 0 !== xS && null !== xS && this[jS].delete(HS);
-            XS[HS] = tS
+      }(kk, Fk, Ik.quantized) : function(kk, Fk, Ik) {
+        return function(Xk) {
+          const ik = this[Qk],
+            yk = ik[Fk];
+          if (Xk !== yk) {
+            if (void 0 !== Xk && null !== Xk) {
+              kX(Xk, Ik, this, kk);
+              const ik = this[wk],
+                lk = this.constructor;
+              void 0 !== yk && null !== yk && yk[wk] ? (ik.root?.remove(yk[wk]), lk[ak](ik, Fk, Tk.DELETE_AND_ADD)) : lk[ak](ik, Fk, Tk.ADD), Xk[wk]?.setParent(this, ik.root, Fk)
+            } else void 0 !== yk && null !== yk && this[wk].delete(Fk);
+            ik[Fk] = Xk
           }
         }
-      }(SS, HS, gS), {
+      }(kk, Fk, Ik), {
         get: function() {
-          return this[DS][HS]
+          return this[Qk][Fk]
         },
-        set: XS,
+        set: ik,
         enumerable: !0,
         configurable: !0
       }
     }
 
-    function Zt() {
-      let SS = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-      return function(HS, gS) {
-        const tS = TH.initialize(HS.constructor);
-        TH.setDeprecated(tS, gS), SS && (tS[hS] ??= {}, tS[hS][gS] = {
+    function zX() {
+      let kk = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+      return function(Fk, Ik) {
+        const Xk = mF.initialize(Fk.constructor);
+        mF.setDeprecated(Xk, Ik), kk && (Xk[Vk] ??= {}, Xk[Vk][Ik] = {
           get: function() {
-            throw new Error(`${gS} is deprecated.`)
+            throw new Error(`${Ik} is deprecated.`)
           },
-          set: function(SS) {},
+          set: function(kk) {},
           enumerable: !1,
           configurable: !0
-        }, Object.defineProperty(HS, gS, tS[hS][gS]))
+        }, Object.defineProperty(Fk, Ik, Xk[Vk][Ik]))
       }
     }
-    let Jt = !1;
+    let SX = !1;
 
-    function Ot(SS, HS, gS) {
-      Jt || (Jt = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
-      for (let tS in HS) Dt(HS[tS], gS)(SS.prototype, tS);
-      return SS
+    function oX(kk, Fk, Ik) {
+      SX || (SX = !0, console.warn("@colyseus/schema: defineTypes() is deprecated and will be removed in a future release. Use schema() with t.* field builders instead \u2192 https://docs.colyseus.io/state/schema"));
+      for (let Xk in Fk) QX(Fk[Xk], Ik)(kk.prototype, Xk);
+      return kk
     }
 
-    function dt(SS, HS) {
-      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : vt;
-      if (null == SS || "object" !== typeof SS) throw new Error(`schema(): first argument must be a fields object (got ${typeof SS}).`);
-      const tS = {},
-        bS = {},
-        XS = {},
-        xS = {},
-        NS = (SS, HS) => {
-          if (HS.hasDefault)((SS, HS) => {
-            "function" === typeof HS ? xS[SS] = HS : HS && "function" === typeof HS.clone ? xS[SS] = () => HS.clone() : XS[SS] = HS
-          })(SS, HS.default);
-          else if (!HS.optional) {
-            const gS = function(SS) {
-              if (SS && "object" === typeof SS) {
-                if (void 0 !== SS.array) return () => new gt;
-                if (void 0 !== SS.map) return () => new bt;
-                if (void 0 !== SS.set) return () => new xt;
-                if (void 0 !== SS.collection) return () => new Xt;
-                if (void 0 !== SS.stream) return () => new Nt
-              } else if ("function" === typeof SS && vt.is(SS) && (!SS.prototype.initialize || 0 === SS.prototype.initialize.length)) return () => new SS
-            }(HS.type);
-            gS && (xS[SS] = gS)
+    function vX(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : OX;
+      if (null == kk || "object" !== typeof kk) throw new Error(`schema(): first argument must be a fields object (got ${typeof kk}).`);
+      const Xk = {},
+        Tk = {},
+        ik = {},
+        yk = {},
+        lk = (kk, Fk) => {
+          if (Fk.hasDefault)((kk, Fk) => {
+            "function" === typeof Fk ? yk[kk] = Fk : Fk && "function" === typeof Fk.clone ? yk[kk] = () => Fk.clone() : ik[kk] = Fk
+          })(kk, Fk.default);
+          else if (!Fk.optional) {
+            const Ik = function(kk) {
+              if (kk && "object" === typeof kk) {
+                if (void 0 !== kk.array) return () => new XX;
+                if (void 0 !== kk.map) return () => new iX;
+                if (void 0 !== kk.set) return () => new lX;
+                if (void 0 !== kk.collection) return () => new yX;
+                if (void 0 !== kk.stream) return () => new aX
+              } else if ("function" === typeof kk && OX.is(kk) && (!kk.prototype.initialize || 0 === kk.prototype.initialize.length)) return () => new kk
+            }(Fk.type);
+            Ik && (yk[kk] = Ik)
           }
         },
-        qS = {},
-        uS = [],
-        IS = [],
-        fS = {},
-        kS = [],
-        aS = [],
-        KS = {},
-        jS = [];
-      for (const DS in SS) {
-        const gS = SS[DS],
-          XS = `schema(${HS?`'${HS}'`:""}): field '${DS}'`;
-        if (ut(gS)) {
-          const SS = gS.toDefinition();
-          if (SS.noSync) {
-            if (void 0 !== SS.view || SS.unreliable || SS.patchOnly || SS.fullStateOnly || SS.stream) throw new Error(`${XS} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
-            NS(DS, SS);
+        ak = {},
+        qk = [],
+        Lk = [],
+        tk = {},
+        Zk = [],
+        jk = [],
+        ek = {},
+        wk = [];
+      for (const Qk in kk) {
+        const Ik = kk[Qk],
+          ik = `schema(${Fk?`'${Fk}'`:""}): field '${Qk}'`;
+        if (LX(Ik)) {
+          const kk = Ik.toDefinition();
+          if (kk.noSync) {
+            if (void 0 !== kk.view || kk.unreliable || kk.patchOnly || kk.fullStateOnly || kk.stream) throw new Error(`${ik} uses .noSync() together with a sync-only modifier (.view/.unreliable/.patchOnly/.fullStateOnly/.stream). A local-only field cannot be synchronized.`);
+            lk(Qk, kk);
             continue
           }
-          if (SS.patchOnly && SS.fullStateOnly) throw new Error(`${XS} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
-          const HS = sH(SS.type, XS);
-          if ("function" === typeof HS && !vt.is(HS)) throw new Error(`${XS} is a synced ref to non-Schema class '${HS.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
-          tS[DS] = HS, void 0 !== SS.view && (qS[DS] = SS.view), SS.unreliable && uS.push(DS), SS.patchOnly && IS.push(DS), SS.deprecated && (fS[DS] = SS.deprecatedThrows), SS.fullStateOnly && kS.push(DS), SS.stream && aS.push(DS), void 0 !== SS.streamPriority && (KS[DS] = SS.streamPriority), SS.optional && jS.push(DS), NS(DS, SS)
+          if (kk.patchOnly && kk.fullStateOnly) throw new Error(`${ik} uses .patchOnly() together with .fullStateOnly(). Those are the only two delivery channels, so the field would never reach a client \u2014 use .noSync() if that is intended.`);
+          const Fk = BF(kk.type, ik);
+          if ("function" === typeof Fk && !OX.is(Fk)) throw new Error(`${ik} is a synced ref to non-Schema class '${Fk.name||"(anonymous)"}' \u2014 use .noSync(), or Metadata.setFields().`);
+          Xk[Qk] = Fk, void 0 !== kk.view && (ak[Qk] = kk.view), kk.unreliable && qk.push(Qk), kk.patchOnly && Lk.push(Qk), kk.deprecated && (tk[Qk] = kk.deprecatedThrows), kk.fullStateOnly && Zk.push(Qk), kk.stream && jk.push(Qk), void 0 !== kk.streamPriority && (ek[Qk] = kk.streamPriority), kk.optional && wk.push(Qk), lk(Qk, kk)
         } else {
-          if ("function" !== typeof gS) throw new Error(`${XS} must be a t.* builder, Schema subclass, or method (got ${typeof gS}).`);
-          vt.is(gS) ? (tS[DS] = gS, gS.prototype.initialize && 0 !== gS.prototype.initialize.length || (xS[DS] = () => new gS)) : bS[DS] = gS
+          if ("function" !== typeof Ik) throw new Error(`${ik} must be a t.* builder, Schema subclass, or method (got ${typeof Ik}).`);
+          OX.is(Ik) ? (Xk[Qk] = Ik, Ik.prototype.initialize && 0 !== Ik.prototype.initialize.length || (yk[Qk] = () => new Ik)) : Tk[Qk] = Ik
         }
       }
-      const GS = SS => {
-          for (const HS in XS) SS[HS] = XS[HS];
-          for (const HS in xS) SS[HS] = xS[HS]()
+      const Hk = kk => {
+          for (const Fk in ik) kk[Fk] = ik[Fk];
+          for (const Fk in yk) kk[Fk] = yk[Fk]()
         },
-        CS = () => {
-          const SS = {};
-          return GS(SS), SS
+        Jk = () => {
+          const kk = {};
+          return Hk(kk), kk
         },
-        nS = "function" === typeof bS.initialize,
-        PS = bS.initialize ?? gS._initialize,
-        QS = class extends gS {
+        xk = "function" === typeof Tk.initialize,
+        Pk = Tk.initialize ?? Ik._initialize,
+        Kk = class extends Ik {
           constructor() {
-            for (var SS = arguments.length, HS = new Array(SS), gS = 0; gS < SS; gS++) HS[gS] = arguments[gS];
-            const bS = HS[0];
-            void 0 === bS ? (super(), GS(this)) : super(Object.assign(CS(), nS ? (SS => {
-              const HS = Object.keys(tS),
-                gS = {};
-              for (const tS in SS) HS.includes(tS) || (gS[tS] = SS[tS]);
-              return gS
-            })(bS) : bS)), PS && new.target === QS && PS.apply(this, HS)
+            for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
+            const Tk = Fk[0];
+            void 0 === Tk ? (super(), Hk(this)) : super(Object.assign(Jk(), xk ? (kk => {
+              const Fk = Object.keys(Xk),
+                Ik = {};
+              for (const Xk in kk) Fk.includes(Xk) || (Ik[Xk] = kk[Xk]);
+              return Ik
+            })(Tk) : Tk)), Pk && new.target === Kk && Pk.apply(this, Fk)
           }
         };
-      HS && Object.defineProperty(QS, "name", {
-        value: HS
-      }), TH.setFields(QS, tS), QS._getDefaultValues = CS, QS._initialize = PS, Object.assign(QS.prototype, bS);
-      for (const DS in qS) Ct(qS[DS])(QS.prototype, DS);
-      for (const DS of uS) nt(QS.prototype, DS);
-      for (const DS of IS) Pt(QS.prototype, DS);
-      for (const DS in fS) Zt(fS[DS])(QS.prototype, DS);
-      if (kS.length > 0 || aS.length > 0) {
-        const SS = QS[Symbol.metadata];
-        for (const HS of kS) TH.setFullStateOnly(SS, HS);
-        for (const HS of aS) TH.setStream(SS, HS);
-        for (const HS in KS) TH.setStreamPriority(SS, HS, KS[HS])
+      Fk && Object.defineProperty(Kk, "name", {
+        value: Fk
+      }), mF.setFields(Kk, Xk), Kk._getDefaultValues = Jk, Kk._initialize = Pk, Object.assign(Kk.prototype, Tk);
+      for (const Qk in ak) JX(ak[Qk])(Kk.prototype, Qk);
+      for (const Qk of qk) xX(Kk.prototype, Qk);
+      for (const Qk of Lk) PX(Kk.prototype, Qk);
+      for (const Qk in tk) zX(tk[Qk])(Kk.prototype, Qk);
+      if (Zk.length > 0 || jk.length > 0) {
+        const kk = Kk[Symbol.metadata];
+        for (const Fk of Zk) mF.setFullStateOnly(kk, Fk);
+        for (const Fk of jk) mF.setStream(kk, Fk);
+        for (const Fk in ek) mF.setStreamPriority(kk, Fk, ek[Fk])
       }
-      if (jS.length > 0) {
-        const SS = QS[Symbol.metadata];
-        for (const HS of jS) SS[SS[HS]].optional = !0
+      if (wk.length > 0) {
+        const kk = Kk[Symbol.metadata];
+        for (const Fk of wk) kk[kk[Fk]].optional = !0
       }
-      return QS.extend = (SS, HS) => dt(SS, HS, QS), QS
+      return Kk.extend = (kk, Fk) => vX(kk, Fk, Kk), Kk
     }
 
-    function ct(SS) {
-      const HS = SS[jS].root,
-        gS = {
+    function EX(kk) {
+      const Fk = kk[wk].root,
+        Ik = {
           ops: {},
           refs: []
         };
-      let tS = HS.changes.next;
-      for (; tS;) {
-        const SS = tS.changeTree;
-        void 0 !== SS ? (gS.refs.push(`refId#${SS.ref[NS]}`), SS.forEach(((SS, HS) => {
-          if (SS < 0 || !HS) return;
-          const tS = bS[HS];
-          gS.ops[tS] || (gS.ops[tS] = 0), gS.ops[tS]++
-        })), tS = tS.next) : tS = tS.next
+      let Xk = Fk.changes.next;
+      for (; Xk;) {
+        const kk = Xk.changeTree;
+        void 0 !== kk ? (Ik.refs.push(`refId#${kk.ref[lk]}`), kk.forEach(((kk, Fk) => {
+          if (kk < 0 || !Fk) return;
+          const Xk = Tk[Fk];
+          Ik.ops[Xk] || (Ik.ops[Xk] = 0), Ik.ops[Xk]++
+        })), Xk = Xk.next) : Xk = Xk.next
       }
-      return gS
+      return Ik
     }
-    class vt {
-      static[uS] = Ag;
-      static[IS] = og;
-      [NS];
-      [DS];
-      static initialize(SS) {
-        Object.defineProperty(SS, jS, {
-          value: new vg(SS),
+    class OX {
+      static[qk] = bI;
+      static[Lk] = hI;
+      [lk];
+      [Qk];
+      static initialize(kk) {
+        Object.defineProperty(kk, wk, {
+          value: new nI(kk),
           enumerable: !1,
           writable: !0
-        }), SS[DS] = []
+        }), kk[Qk] = []
       }
       static initializeForDecoder() {
-        const SS = Object.create(this.prototype);
-        return Lg(SS), SS[DS] = [], SS
+        const kk = Object.create(this.prototype);
+        return pI(kk), kk[Qk] = [], kk
       }
-      static reset(SS) {
-        const HS = SS?.[jS];
-        if (void 0 === HS || "function" !== typeof HS.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
-        if (void 0 !== HS.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${SS.constructor.name}) with multiple parents.`);
-        SS[PS]()
-      } [PS]() {
-        const SS = this.constructor[Symbol.metadata],
-          HS = SS?.[dS] ?? [],
-          gS = this[DS];
-        for (let tS = 0; tS < HS.length; tS++) {
-          const SS = gS[HS[tS]];
-          SS?.[PS]?.()
+      static reset(kk) {
+        const Fk = kk?.[wk];
+        if (void 0 === Fk || "function" !== typeof Fk.recycle) throw new Error("@colyseus/schema: Schema.reset() requires a tracked (encoder-side) instance.");
+        if (void 0 !== Fk.extraParents) throw new Error(`@colyseus/schema: cannot reset a shared instance (${kk.constructor.name}) with multiple parents.`);
+        kk[Pk]()
+      } [Pk]() {
+        const kk = this.constructor[Symbol.metadata],
+          Fk = kk?.[Ek] ?? [],
+          Ik = this[Qk];
+        for (let Xk = 0; Xk < Fk.length; Xk++) {
+          const kk = Ik[Fk[Xk]];
+          kk?.[Pk]?.()
         }
-        this[jS].recycle(), this[NS] = void 0
+        this[wk].recycle(), this[lk] = void 0
       }
-      static is(SS) {
-        const HS = SS[Symbol.metadata];
-        return "object" === typeof HS && null !== HS
+      static is(kk) {
+        const Fk = kk[Symbol.metadata];
+        return "object" === typeof Fk && null !== Fk
       }
-      static isSchema(SS) {
-        return "function" === typeof SS?.assign
+      static isSchema(kk) {
+        return "function" === typeof kk?.assign
       }
-      static[qS](SS, HS) {
-        let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bS.ADD;
-        SS.change(HS, gS)
+      static[ak](kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Tk.ADD;
+        kk.change(Fk, Ik)
       }
-      static[fS](SS, HS, gS) {
-        const tS = SS.constructor[Symbol.metadata],
-          bS = tS[HS]?.tag;
-        return void 0 === gS ? void 0 === bS : void 0 === bS || (bS === jt ? gS.isChangeTreeVisible(SS[jS]) : gS.hasTagOnTree(SS[jS], bS))
+      static[tk](kk, Fk, Ik) {
+        const Xk = kk.constructor[Symbol.metadata],
+          Tk = Xk[Fk]?.tag;
+        return void 0 === Ik ? void 0 === Tk : void 0 === Tk || (Tk === wX ? Ik.isChangeTreeVisible(kk[wk]) : Ik.hasTagOnTree(kk[wk], Tk))
       }
-      constructor(SS) {
-        vt.initialize(this), SS && vt.assignProps(this, SS)
+      constructor(kk) {
+        OX.initialize(this), kk && OX.assignProps(this, kk)
       }
-      assign(SS) {
-        return vt.assignProps(this, SS), this
+      assign(kk) {
+        return OX.assignProps(this, kk), this
       }
-      static assignProps(SS, HS) {
-        const gS = SS.constructor[Symbol.metadata];
-        if (gS && void 0 !== gS[OS])
-          for (let bS = 0; bS <= gS[OS]; bS++) {
-            const tS = gS[bS];
-            if (!tS) continue;
-            const XS = HS[tS.name];
-            void 0 !== XS && (SS[tS.name] = XS)
+      static assignProps(kk, Fk) {
+        const Ik = kk.constructor[Symbol.metadata];
+        if (Ik && void 0 !== Ik[vk])
+          for (let Tk = 0; Tk <= Ik[vk]; Tk++) {
+            const Xk = Ik[Tk];
+            if (!Xk) continue;
+            const ik = Fk[Xk.name];
+            void 0 !== ik && (kk[Xk.name] = ik)
           }
-        const tS = Object.keys(HS);
-        for (let bS = 0; bS < tS.length; bS++) {
-          const XS = tS[bS];
-          gS && void 0 !== gS[XS] || (SS[XS] = HS[XS])
+        const Xk = Object.keys(Fk);
+        for (let Tk = 0; Tk < Xk.length; Tk++) {
+          const ik = Xk[Tk];
+          Ik && void 0 !== Ik[ik] || (kk[ik] = Fk[ik])
         }
       }
-      restore(SS) {
-        const HS = this.constructor[Symbol.metadata];
-        for (const gS in HS) {
-          const tS = HS[gS],
-            bS = tS.name,
-            XS = tS.type,
-            xS = SS[bS];
-          if (void 0 !== xS && null !== xS)
-            if ("string" === typeof XS) this[bS] = xS;
-            else if (vt.is(XS)) {
-            const SS = new XS;
-            SS.restore(xS), this[bS] = SS
-          } else if ("object" === typeof XS) {
-            const SS = Object.keys(XS)[0],
-              HS = XS[SS];
-            if ("map" === SS) {
-              const SS = this[bS];
-              for (const gS in xS)
-                if (vt.is(HS)) {
-                  const tS = new HS;
-                  tS.restore(xS[gS]), SS.set(gS, tS)
-                } else SS.set(gS, xS[gS])
-            } else if ("array" === SS) {
-              const SS = this[bS];
-              for (let gS = 0; gS < xS.length; gS++)
-                if (vt.is(HS)) {
-                  const tS = new HS;
-                  tS.restore(xS[gS]), SS.push(tS)
-                } else SS.push(xS[gS])
+      restore(kk) {
+        const Fk = this.constructor[Symbol.metadata];
+        for (const Ik in Fk) {
+          const Xk = Fk[Ik],
+            Tk = Xk.name,
+            ik = Xk.type,
+            yk = kk[Tk];
+          if (void 0 !== yk && null !== yk)
+            if ("string" === typeof ik) this[Tk] = yk;
+            else if (OX.is(ik)) {
+            const kk = new ik;
+            kk.restore(yk), this[Tk] = kk
+          } else if ("object" === typeof ik) {
+            const kk = Object.keys(ik)[0],
+              Fk = ik[kk];
+            if ("map" === kk) {
+              const kk = this[Tk];
+              for (const Ik in yk)
+                if (OX.is(Fk)) {
+                  const Xk = new Fk;
+                  Xk.restore(yk[Ik]), kk.set(Ik, Xk)
+                } else kk.set(Ik, yk[Ik])
+            } else if ("array" === kk) {
+              const kk = this[Tk];
+              for (let Ik = 0; Ik < yk.length; Ik++)
+                if (OX.is(Fk)) {
+                  const Xk = new Fk;
+                  Xk.restore(yk[Ik]), kk.push(Xk)
+                } else kk.push(yk[Ik])
             }
           }
         }
         return this
       }
-      setDirty(SS, HS) {
-        const gS = this.constructor[Symbol.metadata];
-        this[jS].change(gS[gS[SS]].index, HS)
+      setDirty(kk, Fk) {
+        const Ik = this.constructor[Symbol.metadata];
+        this[wk].change(Ik[Ik[kk]].index, Fk)
       }
       pauseTracking() {
-        this[jS].pause()
+        this[wk].pause()
       }
       resumeTracking() {
-        this[jS].resume()
+        this[wk].resume()
       }
-      untracked(SS) {
-        return this[jS].untracked(SS)
+      untracked(kk) {
+        return this[wk].untracked(kk)
       }
       get isTrackingPaused() {
-        return this[jS].paused
+        return this[wk].paused
       }
       clone() {
-        const SS = Object.create(this.constructor.prototype);
-        vt.initialize(SS);
-        const HS = this.constructor[Symbol.metadata];
-        for (const gS in HS) {
-          const tS = HS[gS].name;
-          "object" === typeof this[tS] && "function" === typeof this[tS]?.clone ? SS[tS] = this[tS].clone() : SS[tS] = this[tS]
+        const kk = Object.create(this.constructor.prototype);
+        OX.initialize(kk);
+        const Fk = this.constructor[Symbol.metadata];
+        for (const Ik in Fk) {
+          const Xk = Fk[Ik].name;
+          "object" === typeof this[Xk] && "function" === typeof this[Xk]?.clone ? kk[Xk] = this[Xk].clone() : kk[Xk] = this[Xk]
         }
-        return SS
+        return kk
       }
       toJSON() {
-        const SS = {},
-          HS = this.constructor[Symbol.metadata];
-        for (const gS in HS) {
-          const tS = HS[gS],
-            bS = tS.name;
-          tS.deprecated || null === this[bS] || "undefined" === typeof this[bS] || (SS[bS] = "function" === typeof this[bS].toJSON ? this[bS].toJSON() : this[bS])
+        const kk = {},
+          Fk = this.constructor[Symbol.metadata];
+        for (const Ik in Fk) {
+          const Xk = Fk[Ik],
+            Tk = Xk.name;
+          Xk.deprecated || null === this[Tk] || "undefined" === typeof this[Tk] || (kk[Tk] = "function" === typeof this[Tk].toJSON ? this[Tk].toJSON() : this[Tk])
         }
-        return SS
+        return kk
       }
       discardAllChanges() {
-        this[jS].discardAll()
-      } [kS](SS) {
-        return this[this.constructor[Symbol.metadata][SS].name]
-      } [aS](SS) {
-        this[this.constructor[Symbol.metadata][SS].name] = void 0
+        this[wk].discardAll()
+      } [Zk](kk) {
+        return this[this.constructor[Symbol.metadata][kk].name]
+      } [jk](kk) {
+        this[this.constructor[Symbol.metadata][kk].name] = void 0
       }
-      static debugRefIds(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          tS = arguments.length > 3 ? arguments[3] : void 0,
-          bS = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
-        const XS = HS ? ` - ${JSON.stringify(SS.toJSON())}` : "",
-          xS = SS[jS],
-          qS = SS[NS],
-          uS = tS ? tS.root.refCount[qS] : xS.refCount,
-          IS = uS > 1 ? ` [\xd7${uS}]` : "";
-        let fS = `${function(SS){return new Array(SS).fill(0).map(((HS,gS)=>gS===SS-1?"\u2514\u2500 ":"   ")).join("")}(gS)}${bS}${SS.constructor.name} (refId: ${qS})${IS}${XS}\n`;
-        return xS.forEachChild(((bS, XS) => {
-          let xS = XS;
-          "number" === typeof XS && SS.$indexes && (xS = SS.$indexes.get(XS) ?? XS);
-          const NS = void 0 !== SS.forEach && void 0 !== xS ? `["${xS}"]: ` : "";
-          fS += this.debugRefIds(bS.ref, HS, gS + 1, tS, NS)
-        })), fS
+      static debugRefIds(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          Xk = arguments.length > 3 ? arguments[3] : void 0,
+          Tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "";
+        const ik = Fk ? ` - ${JSON.stringify(kk.toJSON())}` : "",
+          yk = kk[wk],
+          ak = kk[lk],
+          qk = Xk ? Xk.root.refCount[ak] : yk.refCount,
+          Lk = qk > 1 ? ` [\xd7${qk}]` : "";
+        let tk = `${function(kk){return new Array(kk).fill(0).map(((Fk,Ik)=>Ik===kk-1?"\u2514\u2500 ":"   ")).join("")}(Ik)}${Tk}${kk.constructor.name} (refId: ${ak})${Lk}${ik}\n`;
+        return yk.forEachChild(((Tk, ik) => {
+          let yk = ik;
+          "number" === typeof ik && kk.$indexes && (yk = kk.$indexes.get(ik) ?? ik);
+          const lk = void 0 !== kk.forEach && void 0 !== yk ? `["${yk}"]: ` : "";
+          tk += this.debugRefIds(Tk.ref, Fk, Ik + 1, Xk, lk)
+        })), tk
       }
-      static debugRefIdEncodingOrder(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
-        const gS = [],
-          tS = SS[jS];
-        if ("changes" === HS) {
-          let SS = tS.root.changes?.next;
-          for (; SS;) SS.changeTree && gS.push(SS.changeTree.ref[NS]), SS = SS.next;
-          return gS
+      static debugRefIdEncodingOrder(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "allChanges";
+        const Ik = [],
+          Xk = kk[wk];
+        if ("changes" === Fk) {
+          let kk = Xk.root.changes?.next;
+          for (; kk;) kk.changeTree && Ik.push(kk.changeTree.ref[lk]), kk = kk.next;
+          return Ik
         }
-        const bS = "allFilteredChanges" === HS,
-          XS = new Set,
-          xS = SS => {
-            XS.has(SS) || (XS.add(SS), SS.isFiltered === bS && gS.push(SS.ref[NS]), SS.forEachChild(((SS, HS) => xS(SS))))
+        const Tk = "allFilteredChanges" === Fk,
+          ik = new Set,
+          yk = kk => {
+            ik.has(kk) || (ik.add(kk), kk.isFiltered === Tk && Ik.push(kk.ref[lk]), kk.forEachChild(((kk, Fk) => yk(kk))))
           };
-        return xS(tS), gS
+        return yk(Xk), Ik
       }
-      static debugRefIdsFromDecoder(SS) {
-        return this.debugRefIds(SS.state, !1, 0, SS)
+      static debugRefIdsFromDecoder(kk) {
+        return this.debugRefIds(kk.state, !1, 0, kk)
       }
-      static debugChanges(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        const gS = SS[jS],
-          tS = HS ? "allChanges" : "changes";
-        let XS = `${SS.constructor.name} (${SS[NS]}) -> .${tS}:\n`;
-        return HS ? gS.forEachLive((SS => {
-          XS += `- [${SS}]: ADD (${JSON.stringify(gS.getValue(Number(SS),!0))})\n`
-        })) : gS.forEach(((SS, HS) => {
-          SS < 0 || !HS || (XS += `- [${SS}]: ${bS[HS]} (${JSON.stringify(gS.getValue(Number(SS),!1))})\n`)
-        })), XS
+      static debugChanges(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        const Ik = kk[wk],
+          Xk = Fk ? "allChanges" : "changes";
+        let ik = `${kk.constructor.name} (${kk[lk]}) -> .${Xk}:\n`;
+        return Fk ? Ik.forEachLive((kk => {
+          ik += `- [${kk}]: ADD (${JSON.stringify(Ik.getValue(Number(kk),!0))})\n`
+        })) : Ik.forEach(((kk, Fk) => {
+          kk < 0 || !Fk || (ik += `- [${kk}]: ${Tk[Fk]} (${JSON.stringify(Ik.getValue(Number(kk),!1))})\n`)
+        })), ik
       }
     }
-    XS(vt);
-    const Et = {
+    ik(OX);
+    const nX = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class Lt {
+    class GX {
       types;
       nextUniqueId = 0;
       changeTrees = {};
       get refCount() {
-        const SS = {};
-        for (const HS in this.changeTrees) SS[HS] = this.changeTrees[HS].refCount;
-        return SS
+        const kk = {};
+        for (const Fk in this.changeTrees) kk[Fk] = this.changeTrees[Fk].refCount;
+        return kk
       }
       changes = {
         next: void 0,
@@ -5745,8 +5745,8 @@ export const modules = {
         nextPosition: 0
       };
       pendingFilterRefresh = [];
-      enqueueFilterRefresh(SS) {
-        this.types.hasFilters && (SS.flags & dg || (SS.flags |= dg, this.pendingFilterRefresh.push(SS)))
+      enqueueFilterRefresh(kk) {
+        this.types.hasFilters && (kk.flags & EI || (kk.flags |= EI, this.pendingFilterRefresh.push(kk)))
       }
       _nodePool = [];
       _nextViewId = 0;
@@ -5754,144 +5754,144 @@ export const modules = {
       acquireViewId() {
         return this._freeViewIds.length > 0 ? this._freeViewIds.pop() : this._nextViewId++
       }
-      releaseViewId(SS) {
-        this._freeViewIds.push(SS)
+      releaseViewId(kk) {
+        this._freeViewIds.push(kk)
       }
       activeViews = new Map;
       streamTrees = new Set;
-      registerView(SS) {
-        this.activeViews.set(SS.id, new WeakRef(SS))
+      registerView(kk) {
+        this.activeViews.set(kk.id, new WeakRef(kk))
       }
-      unregisterView(SS) {
-        this.activeViews.delete(SS.id);
-        const HS = SS.id;
-        for (const gS of this.streamTrees) gS._dropView(HS)
+      unregisterView(kk) {
+        this.activeViews.delete(kk.id);
+        const Fk = kk.id;
+        for (const Ik of this.streamTrees) Ik._dropView(Fk)
       }
-      forEachActiveView(SS) {
-        for (const [HS, gS] of this.activeViews) {
-          const tS = gS.deref();
-          if (void 0 !== tS) SS(tS);
+      forEachActiveView(kk) {
+        for (const [Fk, Ik] of this.activeViews) {
+          const Xk = Ik.deref();
+          if (void 0 !== Xk) kk(Xk);
           else {
-            this.activeViews.delete(HS);
-            for (const SS of this.streamTrees) SS._dropView(HS)
+            this.activeViews.delete(Fk);
+            for (const kk of this.streamTrees) kk._dropView(Fk)
           }
         }
       }
-      registerStream(SS) {
-        this.streamTrees.add(SS)
+      registerStream(kk) {
+        this.streamTrees.add(kk)
       }
-      unregisterStream(SS) {
-        this.streamTrees.delete(SS)
+      unregisterStream(kk) {
+        this.streamTrees.delete(kk)
       }
-      constructor(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        this.types = SS, this.nextUniqueId = HS
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        this.types = kk, this.nextUniqueId = Fk
       }
-      add(SS) {
-        const HS = SS.ref;
-        void 0 === HS[NS] && (Et.value = this.nextUniqueId++, Object.defineProperty(HS, NS, Et));
-        const gS = HS[NS],
-          tS = void 0 === this.changeTrees[gS];
-        tS && (this.changeTrees[gS] = SS), SS.needsRestage && (SS.needsRestage = !1, SS.forEachLiveWithCtx(SS, gg));
-        const bS = tS ? 0 : SS.refCount;
-        return SS.refCount = bS + 1, bS > 0 && this.enqueueFilterRefresh(SS), tS
+      add(kk) {
+        const Fk = kk.ref;
+        void 0 === Fk[lk] && (nX.value = this.nextUniqueId++, Object.defineProperty(Fk, lk, nX));
+        const Ik = Fk[lk],
+          Xk = void 0 === this.changeTrees[Ik];
+        Xk && (this.changeTrees[Ik] = kk), kk.needsRestage && (kk.needsRestage = !1, kk.forEachLiveWithCtx(kk, XI));
+        const Tk = Xk ? 0 : kk.refCount;
+        return kk.refCount = Tk + 1, Tk > 0 && this.enqueueFilterRefresh(kk), Xk
       }
-      remove(SS) {
-        const HS = SS.refCount - 1;
-        if (HS <= 0) {
-          if (SS.root = void 0, delete this.changeTrees[SS.ref[NS]], SS.isStreamCollection) {
-            const HS = SS.ref;
-            HS._unregister?.(), this.unregisterStream(HS)
+      remove(kk) {
+        const Fk = kk.refCount - 1;
+        if (Fk <= 0) {
+          if (kk.root = void 0, delete this.changeTrees[kk.ref[lk]], kk.isStreamCollection) {
+            const Fk = kk.ref;
+            Fk._unregister?.(), this.unregisterStream(Fk)
           }
-          this.removeFromQueue(SS), this.removeFromUnreliableQueue(SS), SS.refCount = 0, SS.needsRestage = !0, SS.forEachChild(((HS, gS) => {
-            HS.removeParent(SS.ref) && (void 0 === HS.parentRef || HS.refCount > 0 ? this.remove(HS) : this.moveNextToParent(HS))
+          this.removeFromQueue(kk), this.removeFromUnreliableQueue(kk), kk.refCount = 0, kk.needsRestage = !0, kk.forEachChild(((Fk, Ik) => {
+            Fk.removeParent(kk.ref) && (void 0 === Fk.parentRef || Fk.refCount > 0 ? this.remove(Fk) : this.moveNextToParent(Fk))
           }))
-        } else SS.refCount = HS, this.enqueueFilterRefresh(SS), this.recursivelyMoveNextToParent(SS);
-        return HS
+        } else kk.refCount = Fk, this.enqueueFilterRefresh(kk), this.recursivelyMoveNextToParent(kk);
+        return Fk
       }
-      recursivelyMoveNextToParent(SS) {
-        this.moveNextToParent(SS), SS.forEachChild(((SS, HS) => this.recursivelyMoveNextToParent(SS)))
+      recursivelyMoveNextToParent(kk) {
+        this.moveNextToParent(kk), kk.forEachChild(((kk, Fk) => this.recursivelyMoveNextToParent(kk)))
       }
-      moveNextToParent(SS) {
-        SS.changesNode && this._moveNextToParentInList(this.changes, SS, SS.changesNode, "changesNode"), SS.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, SS, SS.unreliableChangesNode, "unreliableChangesNode")
+      moveNextToParent(kk) {
+        kk.changesNode && this._moveNextToParentInList(this.changes, kk, kk.changesNode, "changesNode"), kk.unreliableChangesNode && this._moveNextToParentInList(this.unreliableChanges, kk, kk.unreliableChangesNode, "unreliableChangesNode")
       }
-      _moveNextToParentInList(SS, HS, gS, tS) {
-        const bS = HS.parent;
-        if (!bS || !bS[jS]) return;
-        const XS = bS[jS][tS];
-        XS && XS !== gS && (gS.position > XS.position || (gS.prev ? gS.prev.next = gS.next : SS.next = gS.next, gS.next ? gS.next.prev = gS.prev : SS.tail = gS.prev, gS.prev = SS.tail, gS.next = void 0, SS.tail.next = gS, SS.tail = gS, gS.position = SS.nextPosition++))
+      _moveNextToParentInList(kk, Fk, Ik, Xk) {
+        const Tk = Fk.parent;
+        if (!Tk || !Tk[wk]) return;
+        const ik = Tk[wk][Xk];
+        ik && ik !== Ik && (Ik.position > ik.position || (Ik.prev ? Ik.prev.next = Ik.next : kk.next = Ik.next, Ik.next ? Ik.next.prev = Ik.prev : kk.tail = Ik.prev, Ik.prev = kk.tail, Ik.next = void 0, kk.tail.next = Ik, kk.tail = Ik, Ik.position = kk.nextPosition++))
       }
-      enqueueChangeTree(SS) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SS.changesNode) || (SS.changesNode = this._appendToList(this.changes, SS))
+      enqueueChangeTree(kk) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk.changesNode) || (kk.changesNode = this._appendToList(this.changes, kk))
       }
-      enqueueUnreliable(SS) {
-        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : SS.unreliableChangesNode) || (SS.unreliableChangesNode = this._appendToList(this.unreliableChanges, SS))
+      enqueueUnreliable(kk) {
+        (arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : kk.unreliableChangesNode) || (kk.unreliableChangesNode = this._appendToList(this.unreliableChanges, kk))
       }
-      _appendToList(SS, HS) {
-        const gS = this._nodePool;
-        let tS;
-        return gS.length > 0 ? (tS = gS.pop(), tS.changeTree = HS, tS.next = void 0, tS.prev = void 0) : tS = {
-          changeTree: HS,
+      _appendToList(kk, Fk) {
+        const Ik = this._nodePool;
+        let Xk;
+        return Ik.length > 0 ? (Xk = Ik.pop(), Xk.changeTree = Fk, Xk.next = void 0, Xk.prev = void 0) : Xk = {
+          changeTree: Fk,
           next: void 0,
           prev: void 0,
           position: 0
-        }, SS.next ? (tS.prev = SS.tail, SS.tail.next = tS, SS.tail = tS) : (SS.nextPosition = 0, SS.next = tS, SS.tail = tS), tS.position = SS.nextPosition++, tS
+        }, kk.next ? (Xk.prev = kk.tail, kk.tail.next = Xk, kk.tail = Xk) : (kk.nextPosition = 0, kk.next = Xk, kk.tail = Xk), Xk.position = kk.nextPosition++, Xk
       }
-      releaseNode(SS) {
-        SS.changeTree = void 0, SS.prev = void 0, SS.next = void 0, this._nodePool.push(SS)
+      releaseNode(kk) {
+        kk.changeTree = void 0, kk.prev = void 0, kk.next = void 0, this._nodePool.push(kk)
       }
-      removeFromQueue(SS) {
-        return this._removeNode(this.changes, SS, SS.changesNode, "changesNode")
+      removeFromQueue(kk) {
+        return this._removeNode(this.changes, kk, kk.changesNode, "changesNode")
       }
-      removeFromUnreliableQueue(SS) {
-        return this._removeNode(this.unreliableChanges, SS, SS.unreliableChangesNode, "unreliableChangesNode")
+      removeFromUnreliableQueue(kk) {
+        return this._removeNode(this.unreliableChanges, kk, kk.unreliableChangesNode, "unreliableChangesNode")
       }
-      _removeNode(SS, HS, gS, tS) {
-        return !(!gS || gS.changeTree !== HS) && (gS.prev ? gS.prev.next = gS.next : SS.next = gS.next, gS.next ? gS.next.prev = gS.prev : SS.tail = gS.prev, HS[tS] = void 0, this.releaseNode(gS), !0)
+      _removeNode(kk, Fk, Ik, Xk) {
+        return !(!Ik || Ik.changeTree !== Fk) && (Ik.prev ? Ik.prev.next = Ik.next : kk.next = Ik.next, Ik.next ? Ik.next.prev = Ik.prev : kk.tail = Ik.prev, Fk[Xk] = void 0, this.releaseNode(Ik), !0)
       }
     }
 
-    function Yt(SS, HS) {
-      if (-1 === HS || HS >= SS.length) return !1;
-      const gS = SS.length - 1;
-      for (let tS = HS; tS < gS; tS++) SS[tS] = SS[tS + 1];
-      return SS.length = gS, !0
+    function pX(kk, Fk) {
+      if (-1 === Fk || Fk >= kk.length) return !1;
+      const Ik = kk.length - 1;
+      for (let Xk = Fk; Xk < Ik; Xk++) kk[Xk] = kk[Xk + 1];
+      return kk.length = Ik, !0
     }
 
-    function At(SS, HS, gS) {
-      const tS = ~gS,
-        bS = SS.changeTrees;
-      for (const XS in bS) {
-        const SS = bS[XS],
-          gS = SS.visibleViews;
-        void 0 !== gS && HS < gS.length && (gS[HS] &= tS);
-        const xS = SS.subscribedViews;
-        void 0 !== xS && HS < xS.length && (xS[HS] &= tS);
-        const NS = SS.tagViews;
-        void 0 !== NS && NS.forEach((SS => {
-          HS < SS.length && (SS[HS] &= tS)
+    function uX(kk, Fk, Ik) {
+      const Xk = ~Ik,
+        Tk = kk.changeTrees;
+      for (const ik in Tk) {
+        const kk = Tk[ik],
+          Ik = kk.visibleViews;
+        void 0 !== Ik && Fk < Ik.length && (Ik[Fk] &= Xk);
+        const yk = kk.subscribedViews;
+        void 0 !== yk && Fk < yk.length && (yk[Fk] &= Xk);
+        const lk = kk.tagViews;
+        void 0 !== lk && lk.forEach((kk => {
+          Fk < kk.length && (kk[Fk] &= Xk)
         }))
       }
     }
-    const yt = new FinalizationRegistry((SS => {
+    const bX = new FinalizationRegistry((kk => {
       let {
-        root: HS,
-        id: gS,
-        slot: tS,
-        bit: bS
-      } = SS;
-      At(HS, tS, bS), HS.activeViews.delete(gS);
-      for (const XS of HS.streamTrees) XS._dropView(gS);
-      HS.releaseViewId(gS)
+        root: Fk,
+        id: Ik,
+        slot: Xk,
+        bit: Tk
+      } = kk;
+      uX(Fk, Xk, Tk), Fk.activeViews.delete(Ik);
+      for (const ik of Fk.streamTrees) ik._dropView(Ik);
+      Fk.releaseViewId(Ik)
     }));
 
-    function Vt(SS) {
-      if (void 0 === SS) return "undefined";
-      if (null === SS) return "null";
-      const HS = typeof SS;
-      return "string" === HS ? JSON.stringify(SS.length > 30 ? `${SS.slice(0,30)}\u2026` : SS) : "object" !== HS && "function" !== HS ? `${HS} ${String(SS)}` : Array.isArray(SS) ? `Array(${SS.length})` : SS.constructor?.name ?? "Object"
+    function RX(kk) {
+      if (void 0 === kk) return "undefined";
+      if (null === kk) return "null";
+      const Fk = typeof kk;
+      return "string" === Fk ? JSON.stringify(kk.length > 30 ? `${kk.slice(0,30)}\u2026` : kk) : "object" !== Fk && "function" !== Fk ? `${Fk} ${String(kk)}` : Array.isArray(kk) ? `Array(${kk.length})` : kk.constructor?.name ?? "Object"
     }
-    class it {
+    class UX {
       iterable;
       items;
       id = -1;
@@ -5900,385 +5900,385 @@ export const modules = {
       _bit = 0;
       changes = new Map;
       constructor() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        this.iterable = SS, SS && (this.items = [])
+        let kk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this.iterable = kk, kk && (this.items = [])
       }
-      _bindRoot(SS) {
-        void 0 === this._root && (this._root = SS, this.id = SS.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), SS.registerView(this), yt.register(this, {
-          root: SS,
+      _bindRoot(kk) {
+        void 0 === this._root && (this._root = kk, this.id = kk.acquireViewId(), this._slot = this.id >> 5, this._bit = 1 << (31 & this.id), kk.registerView(this), bX.register(this, {
+          root: kk,
           id: this.id,
           slot: this._slot,
           bit: this._bit
         }, this))
       }
       dispose() {
-        void 0 !== this._root && (this._root.unregisterView(this), At(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), yt.unregister(this), this._root = void 0, this.id = -1)
+        void 0 !== this._root && (this._root.unregisterView(this), uX(this._root, this._slot, this._bit), this._root.releaseViewId(this.id), bX.unregister(this), this._root = void 0, this.id = -1)
       }
-      isVisible(SS) {
-        const HS = SS.visibleViews,
-          gS = this._slot;
-        return void 0 !== HS && gS < HS.length && 0 !== (HS[gS] & this._bit)
+      isVisible(kk) {
+        const Fk = kk.visibleViews,
+          Ik = this._slot;
+        return void 0 !== Fk && Ik < Fk.length && 0 !== (Fk[Ik] & this._bit)
       }
-      markVisible(SS) {
-        const HS = this._slot;
-        let gS = SS.visibleViews;
-        for (void 0 === gS && (gS = SS.visibleViews = []); gS.length <= HS;) gS.push(0);
-        gS[HS] |= this._bit
+      markVisible(kk) {
+        const Fk = this._slot;
+        let Ik = kk.visibleViews;
+        for (void 0 === Ik && (Ik = kk.visibleViews = []); Ik.length <= Fk;) Ik.push(0);
+        Ik[Fk] |= this._bit
       }
-      unmarkVisible(SS) {
-        const HS = SS.visibleViews;
-        if (void 0 === HS) return;
-        const gS = this._slot;
-        gS < HS.length && (HS[gS] &= ~this._bit)
+      unmarkVisible(kk) {
+        const Fk = kk.visibleViews;
+        if (void 0 === Fk) return;
+        const Ik = this._slot;
+        Ik < Fk.length && (Fk[Ik] &= ~this._bit)
       }
-      isSubscribed(SS) {
-        const HS = SS.subscribedViews,
-          gS = this._slot;
-        return void 0 !== HS && gS < HS.length && 0 !== (HS[gS] & this._bit)
+      isSubscribed(kk) {
+        const Fk = kk.subscribedViews,
+          Ik = this._slot;
+        return void 0 !== Fk && Ik < Fk.length && 0 !== (Fk[Ik] & this._bit)
       }
-      _setSubscribed(SS) {
-        const HS = this._slot;
-        let gS = SS.subscribedViews;
-        for (void 0 === gS && (gS = SS.subscribedViews = []); gS.length <= HS;) gS.push(0);
-        gS[HS] |= this._bit
+      _setSubscribed(kk) {
+        const Fk = this._slot;
+        let Ik = kk.subscribedViews;
+        for (void 0 === Ik && (Ik = kk.subscribedViews = []); Ik.length <= Fk;) Ik.push(0);
+        Ik[Fk] |= this._bit
       }
-      _clearSubscribed(SS) {
-        const HS = SS.subscribedViews;
-        if (void 0 === HS) return;
-        const gS = this._slot;
-        gS < HS.length && (HS[gS] &= ~this._bit)
+      _clearSubscribed(kk) {
+        const Fk = kk.subscribedViews;
+        if (void 0 === Fk) return;
+        const Ik = this._slot;
+        Ik < Fk.length && (Fk[Ik] &= ~this._bit)
       }
-      hasTagOnTree(SS, HS) {
-        const gS = SS.tagViews;
-        if (void 0 === gS) return !1;
-        const tS = this._slot,
-          bS = this._bit;
-        for (let XS = HS; 0 !== XS; XS &= XS - 1) {
-          const SS = gS.get(XS & -XS);
-          if (void 0 !== SS && tS < SS.length && 0 !== (SS[tS] & bS)) return !0
+      hasTagOnTree(kk, Fk) {
+        const Ik = kk.tagViews;
+        if (void 0 === Ik) return !1;
+        const Xk = this._slot,
+          Tk = this._bit;
+        for (let ik = Fk; 0 !== ik; ik &= ik - 1) {
+          const kk = Ik.get(ik & -ik);
+          if (void 0 !== kk && Xk < kk.length && 0 !== (kk[Xk] & Tk)) return !0
         }
         return !1
       }
-      addTag(SS, HS) {
-        if (HS === jt) return;
-        let gS = SS.tagViews;
-        void 0 === gS && (gS = SS.tagViews = new Map);
-        const tS = this._slot,
-          bS = this._bit;
-        for (let XS = HS; XS > 0; XS &= XS - 1) {
-          const SS = XS & -XS;
-          let HS = gS.get(SS);
-          for (void 0 === HS && (HS = [], gS.set(SS, HS)); HS.length <= tS;) HS.push(0);
-          HS[tS] |= bS
+      addTag(kk, Fk) {
+        if (Fk === wX) return;
+        let Ik = kk.tagViews;
+        void 0 === Ik && (Ik = kk.tagViews = new Map);
+        const Xk = this._slot,
+          Tk = this._bit;
+        for (let ik = Fk; ik > 0; ik &= ik - 1) {
+          const kk = ik & -ik;
+          let Fk = Ik.get(kk);
+          for (void 0 === Fk && (Fk = [], Ik.set(kk, Fk)); Fk.length <= Xk;) Fk.push(0);
+          Fk[Xk] |= Tk
         }
       }
-      removeTag(SS, HS) {
-        if (HS === jt) return;
-        const gS = SS.tagViews;
-        if (void 0 === gS) return;
-        const tS = this._slot,
-          bS = ~this._bit;
-        for (let XS = HS; XS > 0; XS &= XS - 1) {
-          const SS = gS.get(XS & -XS);
-          void 0 !== SS && tS < SS.length && (SS[tS] &= bS)
+      removeTag(kk, Fk) {
+        if (Fk === wX) return;
+        const Ik = kk.tagViews;
+        if (void 0 === Ik) return;
+        const Xk = this._slot,
+          Tk = ~this._bit;
+        for (let ik = Fk; ik > 0; ik &= ik - 1) {
+          const kk = Ik.get(ik & -ik);
+          void 0 !== kk && Xk < kk.length && (kk[Xk] &= Tk)
         }
       }
-      removeAllTagsOnTree(SS) {
-        const HS = SS.tagViews;
-        if (void 0 === HS) return;
-        const gS = this._slot,
-          tS = ~this._bit;
-        HS.forEach((SS => {
-          gS < SS.length && (SS[gS] &= tS)
+      removeAllTagsOnTree(kk) {
+        const Fk = kk.tagViews;
+        if (void 0 === Fk) return;
+        const Ik = this._slot,
+          Xk = ~this._bit;
+        Fk.forEach((kk => {
+          Ik < kk.length && (kk[Ik] &= Xk)
         }))
       }
-      add(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jt,
-          gS = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        return this._add(SS, HS, gS, !1)
+      add(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wX,
+          Ik = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        return this._add(kk, Fk, Ik, !1)
       }
-      _addImmediate(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jt;
-        this._add(SS, HS, !0, !0)
+      _addImmediate(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wX;
+        this._add(kk, Fk, !0, !0)
       }
-      _add(SS, HS, gS, tS) {
-        const XS = SS?.[jS];
-        if (!XS) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${Vt(SS)}`), !1;
-        const xS = XS.parent;
-        if (!xS && 0 !== SS[NS]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${XS.ref.constructor.name}" instance to the state before calling view.add()`);
-        void 0 === this._root && void 0 !== XS.root && this._bindRoot(XS.root);
-        const qS = xS?.[jS];
-        if (!tS && qS?.isStreamCollection) return LH(xS, this.id, XS.parentIndex), !0;
-        const uS = SS.constructor[Symbol.metadata],
-          IS = this.isVisible(XS);
-        if (!this.iterable || !gS || IS && -1 !== this.items.indexOf(SS) || this.items.push(SS), this.markVisible(XS), gS && xS && this.addParentOf(XS, HS), !tS && XS.isStreamCollection) return !0;
-        if (HS === jt && XS.isNew) return this._markSubtreeVisible(XS, HS), !1;
-        let fS = this.changes.get(SS[NS]);
-        void 0 === fS && (fS = new Map, this.changes.set(SS[NS], fS));
-        let kS = !1;
-        const aS = XS.encDescriptor.tags;
-        if (XS.forEachChild(((SS, gS) => {
-            const tS = aS[gS];
-            if (void 0 !== tS) {
-              if (!(tS === jt || HS !== jt && 0 !== (tS & HS))) return
+      _add(kk, Fk, Ik, Xk) {
+        const ik = kk?.[wk];
+        if (!ik) return console.warn(`StateView#add(): expected a Schema instance or collection, received ${RX(kk)}`), !1;
+        const yk = ik.parent;
+        if (!yk && 0 !== kk[lk]) throw new Error(`Cannot add a detached instance to the StateView. Make sure to assign the "${ik.ref.constructor.name}" instance to the state before calling view.add()`);
+        void 0 === this._root && void 0 !== ik.root && this._bindRoot(ik.root);
+        const ak = yk?.[wk];
+        if (!Xk && ak?.isStreamCollection) return pF(yk, this.id, ik.parentIndex), !0;
+        const qk = kk.constructor[Symbol.metadata],
+          Lk = this.isVisible(ik);
+        if (!this.iterable || !Ik || Lk && -1 !== this.items.indexOf(kk) || this.items.push(kk), this.markVisible(ik), Ik && yk && this.addParentOf(ik, Fk), !Xk && ik.isStreamCollection) return !0;
+        if (Fk === wX && ik.isNew) return this._markSubtreeVisible(ik, Fk), !1;
+        let tk = this.changes.get(kk[lk]);
+        void 0 === tk && (tk = new Map, this.changes.set(kk[lk], tk));
+        let Zk = !1;
+        const jk = ik.encDescriptor.tags;
+        if (ik.forEachChild(((kk, Ik) => {
+            const Xk = jk[Ik];
+            if (void 0 !== Xk) {
+              if (!(Xk === wX || Fk !== wX && 0 !== (Xk & Fk))) return
             }
-            this.add(SS.ref, HS, !1) && (kS = !0)
-          })), HS !== jt) {
-          this.addTag(XS, HS);
-          const SS = uS?.[vS];
-          if (void 0 !== SS)
-            for (let gS = HS; gS > 0; gS &= gS - 1) SS[gS & -gS]?.forEach((SS => {
-              XS.getChange(SS) !== bS.DELETE && fS.set(SS, bS.ADD)
+            this.add(kk.ref, Fk, !1) && (Zk = !0)
+          })), Fk !== wX) {
+          this.addTag(ik, Fk);
+          const kk = qk?.[nk];
+          if (void 0 !== kk)
+            for (let Ik = Fk; Ik > 0; Ik &= Ik - 1) kk[Ik & -Ik]?.forEach((kk => {
+              ik.getChange(kk) !== Tk.DELETE && tk.set(kk, Tk.ADD)
             }))
         }
-        if ((HS === jt || !IS) && (!XS.isNew || kS))
-          if (XS.isArray && "string" !== typeof XS.refTarget[GS]) XS.refTarget.items.length > 0 && (fS.set(-1, bS.ADD), kS = !0);
+        if ((Fk === wX || !Lk) && (!ik.isNew || Zk))
+          if (ik.isArray && "string" !== typeof ik.refTarget[Hk]) ik.refTarget.items.length > 0 && (tk.set(-1, Tk.ADD), Zk = !0);
           else {
-            const SS = XS.encDescriptor.tags;
-            XS.forEachLive((gS => {
-              const tS = SS[gS];
-              (void 0 === tS || tS === jt || HS !== jt && 0 !== (tS & HS)) && (fS.set(gS, bS.ADD), kS = !0)
+            const kk = ik.encDescriptor.tags;
+            ik.forEachLive((Ik => {
+              const Xk = kk[Ik];
+              (void 0 === Xk || Xk === wX || Fk !== wX && 0 !== (Xk & Fk)) && (tk.set(Ik, Tk.ADD), Zk = !0)
             }))
-          } return kS
+          } return Zk
       }
-      _markSubtreeVisible(SS, HS) {
-        const gS = SS.encDescriptor.tags;
-        SS.forEachChild(((SS, tS) => {
-          const bS = gS[tS];
-          if (void 0 !== bS) {
-            if (!(bS === jt || HS !== jt && 0 !== (bS & HS))) return
+      _markSubtreeVisible(kk, Fk) {
+        const Ik = kk.encDescriptor.tags;
+        kk.forEachChild(((kk, Xk) => {
+          const Tk = Ik[Xk];
+          if (void 0 !== Tk) {
+            if (!(Tk === wX || Fk !== wX && 0 !== (Tk & Fk))) return
           }
-          SS.isNew ? (this.markVisible(SS), this._markSubtreeVisible(SS, HS)) : this._add(SS.ref, HS, !1, !1)
+          kk.isNew ? (this.markVisible(kk), this._markSubtreeVisible(kk, Fk)) : this._add(kk.ref, Fk, !1, !1)
         }))
       }
-      addParentOf(SS, HS) {
-        const gS = SS.parent[jS],
-          tS = SS.parentIndex;
-        this.isVisible(gS) || this.markVisible(gS);
-        const XS = gS.parent?.[jS];
-        if (XS && this.addParentOf(gS, HS), gS.hasFilteredFields && gS.getChange(tS) !== bS.DELETE) {
-          let XS = this.changes.get(gS.ref[NS]);
-          void 0 === XS && (XS = new Map, this.changes.set(gS.ref[NS], XS));
-          const xS = gS.encDescriptor.tags[tS];
-          void 0 !== xS && xS !== jt && 0 !== (xS & HS) && this.addTag(gS, HS), XS.set(gS.isArray ? SS : tS, bS.ADD)
+      addParentOf(kk, Fk) {
+        const Ik = kk.parent[wk],
+          Xk = kk.parentIndex;
+        this.isVisible(Ik) || this.markVisible(Ik);
+        const ik = Ik.parent?.[wk];
+        if (ik && this.addParentOf(Ik, Fk), Ik.hasFilteredFields && Ik.getChange(Xk) !== Tk.DELETE) {
+          let ik = this.changes.get(Ik.ref[lk]);
+          void 0 === ik && (ik = new Map, this.changes.set(Ik.ref[lk], ik));
+          const yk = Ik.encDescriptor.tags[Xk];
+          void 0 !== yk && yk !== wX && 0 !== (yk & Fk) && this.addTag(Ik, Fk), ik.set(Ik.isArray ? kk : Xk, Tk.ADD)
         }
       }
-      _touchAncestorsOf(SS) {
-        let HS = SS.parent?.[jS];
-        if (void 0 === HS) return;
-        const gS = [];
-        for (; void 0 !== HS;) {
-          if (HS.hasFilteredFields) {
-            const SS = HS.ref[NS];
-            if (this.changes.has(SS)) break;
-            gS.push(HS)
+      _touchAncestorsOf(kk) {
+        let Fk = kk.parent?.[wk];
+        if (void 0 === Fk) return;
+        const Ik = [];
+        for (; void 0 !== Fk;) {
+          if (Fk.hasFilteredFields) {
+            const kk = Fk.ref[lk];
+            if (this.changes.has(kk)) break;
+            Ik.push(Fk)
           }
-          HS = HS.parent?.[jS]
+          Fk = Fk.parent?.[wk]
         }
-        for (let tS = gS.length - 1; tS >= 0; tS--) this.changes.set(gS[tS].ref[NS], new Map)
+        for (let Xk = Ik.length - 1; Xk >= 0; Xk--) this.changes.set(Ik[Xk].ref[lk], new Map)
       }
-      remove(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jt,
-          gS = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const tS = SS?.[jS];
-        if (!tS) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${Vt(SS)}`), this;
-        const XS = tS.parent?.[jS];
-        if (XS?.isStreamCollection) return this.unmarkVisible(tS), this.iterable && !gS && Yt(this.items, this.items.indexOf(SS)),
-          function(SS, HS, gS, tS, XS) {
-            const xS = SS._stream;
-            if (void 0 === xS) return !1;
-            const NS = xS.pendingByView.get(HS);
-            if (NS?.has(tS)) return NS.delete(tS), !1;
-            const qS = xS.sentByView.get(HS);
-            if (qS?.has(tS)) {
-              qS.delete(tS);
-              let SS = XS.get(gS);
-              return void 0 === SS && (SS = new Map, XS.set(gS, SS)), SS.set(tS, bS.DELETE), !0
+      remove(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wX,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const Xk = kk?.[wk];
+        if (!Xk) return console.warn(`StateView#remove(): expected a Schema instance or collection, received ${RX(kk)}`), this;
+        const ik = Xk.parent?.[wk];
+        if (ik?.isStreamCollection) return this.unmarkVisible(Xk), this.iterable && !Ik && pX(this.items, this.items.indexOf(kk)),
+          function(kk, Fk, Ik, Xk, ik) {
+            const yk = kk._stream;
+            if (void 0 === yk) return !1;
+            const lk = yk.pendingByView.get(Fk);
+            if (lk?.has(Xk)) return lk.delete(Xk), !1;
+            const ak = yk.sentByView.get(Fk);
+            if (ak?.has(Xk)) {
+              ak.delete(Xk);
+              let kk = ik.get(Ik);
+              return void 0 === kk && (kk = new Map, ik.set(Ik, kk)), kk.set(Xk, Tk.DELETE), !0
             }
-          }(tS.parent, this.id, tS.parent[NS], tS.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(tS), this;
-        if (tS.isStreamCollection) {
-          this.unmarkVisible(tS), this.iterable && !gS && Yt(this.items, this.items.indexOf(SS));
-          const HS = tS.ref,
-            XS = HS._stream;
-          if (void 0 !== XS) {
-            XS.pendingByView.get(this.id)?.clear();
-            const SS = XS.sentByView.get(this.id);
-            if (void 0 !== SS && SS.size > 0) {
-              const gS = HS[NS];
-              let tS = this.changes.get(gS);
-              void 0 === tS && (tS = new Map, this.changes.set(gS, tS));
-              for (const HS of SS) tS.set(HS, bS.DELETE);
-              SS.clear()
+          }(Xk.parent, this.id, Xk.parent[lk], Xk.parentIndex, this.changes), this._recursiveDeleteVisibleChangeTree(Xk), this;
+        if (Xk.isStreamCollection) {
+          this.unmarkVisible(Xk), this.iterable && !Ik && pX(this.items, this.items.indexOf(kk));
+          const Fk = Xk.ref,
+            ik = Fk._stream;
+          if (void 0 !== ik) {
+            ik.pendingByView.get(this.id)?.clear();
+            const kk = ik.sentByView.get(this.id);
+            if (void 0 !== kk && kk.size > 0) {
+              const Ik = Fk[lk];
+              let Xk = this.changes.get(Ik);
+              void 0 === Xk && (Xk = new Map, this.changes.set(Ik, Xk));
+              for (const Fk of kk) Xk.set(Fk, Tk.DELETE);
+              kk.clear()
             }
           }
           return this
         }
-        this.unmarkVisible(tS), this.iterable && !gS && Yt(this.items, this.items.indexOf(SS));
-        const xS = tS.ref,
-          qS = xS.constructor[Symbol.metadata],
-          uS = xS[NS];
-        this._touchAncestorsOf(tS);
-        let IS = this.changes.get(uS);
-        if (void 0 === IS && (IS = new Map, this.changes.set(uS, IS)), HS === jt) {
-          const SS = tS.parent;
-          if (SS && !TH.isValidInstance(SS) && tS.isFiltered) {
-            const HS = XS.isArray ? tS : tS.parentIndex,
-              gS = SS[NS];
-            let xS = this.changes.get(gS);
-            void 0 === xS ? (xS = new Map, this.changes.set(gS, xS)) : xS.get(HS) === bS.ADD && this._dropPendingEntries(tS), xS.set(HS, bS.DELETE), this._recursiveDeleteVisibleChangeTree(tS)
-          } else qS?.[cS]?.forEach((SS => this._removeViewField(tS, IS, SS)))
+        this.unmarkVisible(Xk), this.iterable && !Ik && pX(this.items, this.items.indexOf(kk));
+        const yk = Xk.ref,
+          ak = yk.constructor[Symbol.metadata],
+          qk = yk[lk];
+        this._touchAncestorsOf(Xk);
+        let Lk = this.changes.get(qk);
+        if (void 0 === Lk && (Lk = new Map, this.changes.set(qk, Lk)), Fk === wX) {
+          const kk = Xk.parent;
+          if (kk && !mF.isValidInstance(kk) && Xk.isFiltered) {
+            const Fk = ik.isArray ? Xk : Xk.parentIndex,
+              Ik = kk[lk];
+            let yk = this.changes.get(Ik);
+            void 0 === yk ? (yk = new Map, this.changes.set(Ik, yk)) : yk.get(Fk) === Tk.ADD && this._dropPendingEntries(Xk), yk.set(Fk, Tk.DELETE), this._recursiveDeleteVisibleChangeTree(Xk)
+          } else ak?.[Ok]?.forEach((kk => this._removeViewField(Xk, Lk, kk)))
         } else {
-          const SS = qS?.[vS];
-          if (void 0 !== SS)
-            for (let gS = HS; gS > 0; gS &= gS - 1) SS[gS & -gS]?.forEach((SS => this._removeViewField(tS, IS, SS)))
+          const kk = ak?.[nk];
+          if (void 0 !== kk)
+            for (let Ik = Fk; Ik > 0; Ik &= Ik - 1) kk[Ik & -Ik]?.forEach((kk => this._removeViewField(Xk, Lk, kk)))
         }
-        return void 0 === HS ? this.removeAllTagsOnTree(tS) : this.removeTag(tS, HS), this
+        return void 0 === Fk ? this.removeAllTagsOnTree(Xk) : this.removeTag(Xk, Fk), this
       }
-      has(SS) {
-        return this.isVisible(SS[jS])
+      has(kk) {
+        return this.isVisible(kk[wk])
       }
-      hasTag(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : jt;
-        return this.hasTagOnTree(SS[jS], HS)
+      hasTag(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wX;
+        return this.hasTagOnTree(kk[wk], Fk)
       }
-      subscribe(SS, HS) {
-        const gS = SS?.[jS];
-        if (!gS) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${Vt(SS)}`), this;
-        if (void 0 === this._root && void 0 !== gS.root && this._bindRoot(gS.root), void 0 !== HS)
-          if (gS.isStreamCollection) {
-            const gS = OH(SS);
-            null === HS ? gS.priorityByView?.delete(this.id) : (gS.priorityByView ??= new Map).set(this.id, HS)
+      subscribe(kk, Fk) {
+        const Ik = kk?.[wk];
+        if (!Ik) return console.warn(`StateView#subscribe(): expected a Schema collection, received ${RX(kk)}`), this;
+        if (void 0 === this._root && void 0 !== Ik.root && this._bindRoot(Ik.root), void 0 !== Fk)
+          if (Ik.isStreamCollection) {
+            const Ik = vF(kk);
+            null === Fk ? Ik.priorityByView?.delete(this.id) : (Ik.priorityByView ??= new Map).set(this.id, Fk)
           } else {
-            const HS = SS?.constructor?.name ?? "collection",
-              tS = gS.parent;
-            if (void 0 === tS) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${HS} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
+            const Fk = kk?.constructor?.name ?? "collection",
+              Xk = Ik.parent;
+            if (void 0 === Xk) console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 this ${Fk} is not attached to a state yet, so it cannot be identified as a stream. Subscribe after assigning it to the state.`);
             else {
-              const SS = tS?.constructor?.[Symbol.metadata]?.[gS.parentIndex]?.name,
-                bS = SS ? `${tS.constructor.name}#${SS}` : HS;
-              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${bS} is a ${HS}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
+              const kk = Xk?.constructor?.[Symbol.metadata]?.[Ik.parentIndex]?.name,
+                Tk = kk ? `${Xk.constructor.name}#${kk}` : Fk;
+              console.warn(`StateView#subscribe(): \`priority\` ignored \u2014 ${Tk} is a ${Fk}, not a streaming collection. Declare the field with .stream() (e.g. t.map(X).stream()) or use t.stream(X) to enable priority batching.`)
             }
-          } if (this.isSubscribed(gS)) return this;
-        const tS = void 0 !== gS.parent && !this.isVisible(gS);
-        if (tS ? (this.addParentOf(gS, jt), this._add(SS, jt, !1, !1)) : this.markVisible(gS), this._setSubscribed(gS), gS.isStreamCollection) {
-          const HS = SS;
-          gS.forEachChild(((SS, gS) => {
-            LH(HS, this.id, gS)
+          } if (this.isSubscribed(Ik)) return this;
+        const Xk = void 0 !== Ik.parent && !this.isVisible(Ik);
+        if (Xk ? (this.addParentOf(Ik, wX), this._add(kk, wX, !1, !1)) : this.markVisible(Ik), this._setSubscribed(Ik), Ik.isStreamCollection) {
+          const Fk = kk;
+          Ik.forEachChild(((kk, Ik) => {
+            pF(Fk, this.id, Ik)
           }))
-        } else tS || gS.forEachChild((SS => {
-          this.markVisible(SS)
+        } else Xk || Ik.forEachChild((kk => {
+          this.markVisible(kk)
         }));
         return this
       }
-      unsubscribe(SS) {
-        const HS = SS?.[jS];
-        if (!HS) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${Vt(SS)}`), this;
-        if (!this.isSubscribed(HS)) return this;
-        this._clearSubscribed(HS);
-        const gS = HS.ref[NS];
-        if (HS.isStreamCollection) {
-          const HS = SS._stream;
-          if (void 0 !== HS) {
-            HS.pendingByView.get(this.id)?.clear();
-            const SS = HS.sentByView.get(this.id);
-            if (void 0 !== SS && SS.size > 0) {
-              let HS = this.changes.get(gS);
-              void 0 === HS && (HS = new Map, this.changes.set(gS, HS));
-              for (const gS of SS) HS.set(gS, bS.DELETE);
-              SS.clear()
+      unsubscribe(kk) {
+        const Fk = kk?.[wk];
+        if (!Fk) return console.warn(`StateView#unsubscribe(): expected a Schema collection, received ${RX(kk)}`), this;
+        if (!this.isSubscribed(Fk)) return this;
+        this._clearSubscribed(Fk);
+        const Ik = Fk.ref[lk];
+        if (Fk.isStreamCollection) {
+          const Fk = kk._stream;
+          if (void 0 !== Fk) {
+            Fk.pendingByView.get(this.id)?.clear();
+            const kk = Fk.sentByView.get(this.id);
+            if (void 0 !== kk && kk.size > 0) {
+              let Fk = this.changes.get(Ik);
+              void 0 === Fk && (Fk = new Map, this.changes.set(Ik, Fk));
+              for (const Ik of kk) Fk.set(Ik, Tk.DELETE);
+              kk.clear()
             }
           }
         } else {
-          const SS = HS.isArray;
-          let tS = this.changes.get(gS);
-          HS.forEachChild(((HS, XS) => {
-            void 0 === tS && (tS = new Map, this.changes.set(gS, tS)), tS.set(SS ? HS : XS, bS.DELETE), this.unmarkVisible(HS)
+          const kk = Fk.isArray;
+          let Xk = this.changes.get(Ik);
+          Fk.forEachChild(((Fk, ik) => {
+            void 0 === Xk && (Xk = new Map, this.changes.set(Ik, Xk)), Xk.set(kk ? Fk : ik, Tk.DELETE), this.unmarkVisible(Fk)
           }))
         }
-        return this.unmarkVisible(HS), this
+        return this.unmarkVisible(Fk), this
       }
       clear() {
         if (!this.iterable) throw new Error("StateView#clear() is only available for iterable StateView's. Use StateView(iterable: true) constructor.");
-        for (let SS = 0, HS = this.items.length; SS < HS; SS++) this.remove(this.items[SS], jt, !0);
+        for (let kk = 0, Fk = this.items.length; kk < Fk; kk++) this.remove(this.items[kk], wX, !0);
         this.items.length = 0
       }
-      isChangeTreeVisible(SS) {
-        let HS = this.isVisible(SS);
-        if (!HS && SS.isVisibilitySharedWithParent)
-          if (this.isVisible(SS.parent[jS])) this.markVisible(SS), HS = !0;
+      isChangeTreeVisible(kk) {
+        let Fk = this.isVisible(kk);
+        if (!Fk && kk.isVisibilitySharedWithParent)
+          if (this.isVisible(kk.parent[wk])) this.markVisible(kk), Fk = !0;
           else
-            for (let gS = SS.extraParents; void 0 !== gS; gS = gS.next) {
-              const tS = gS.ref[jS];
-              if (tS.isFiltered && this.isVisible(tS)) {
-                this.markVisible(SS), HS = !0;
+            for (let Ik = kk.extraParents; void 0 !== Ik; Ik = Ik.next) {
+              const Xk = Ik.ref[wk];
+              if (Xk.isFiltered && this.isVisible(Xk)) {
+                this.markVisible(kk), Fk = !0;
                 break
               }
             }
-        return HS
+        return Fk
       }
-      _recursiveDeleteVisibleChangeTree(SS) {
-        SS.forEachChild((SS => {
-          this.unmarkVisible(SS), this._recursiveDeleteVisibleChangeTree(SS)
+      _recursiveDeleteVisibleChangeTree(kk) {
+        kk.forEachChild((kk => {
+          this.unmarkVisible(kk), this._recursiveDeleteVisibleChangeTree(kk)
         }))
       }
-      _dropPendingEntries(SS) {
-        this.changes.delete(SS.ref[NS]), SS.forEachChild((SS => this._dropPendingEntries(SS)))
+      _dropPendingEntries(kk) {
+        this.changes.delete(kk.ref[lk]), kk.forEachChild((kk => this._dropPendingEntries(kk)))
       }
-      _removeViewField(SS, HS, gS) {
-        const tS = HS.get(gS) === bS.ADD;
-        HS.set(gS, bS.DELETE);
-        const XS = SS.ref[SS.encDescriptor.names[gS]],
-          xS = XS?.[jS];
-        xS && (this.unmarkVisible(xS), this._recursiveDeleteVisibleChangeTree(xS), tS && this._dropPendingEntries(xS))
+      _removeViewField(kk, Fk, Ik) {
+        const Xk = Fk.get(Ik) === Tk.ADD;
+        Fk.set(Ik, Tk.DELETE);
+        const ik = kk.ref[kk.encDescriptor.names[Ik]],
+          yk = ik?.[wk];
+        yk && (this.unmarkVisible(yk), this._recursiveDeleteVisibleChangeTree(yk), Xk && this._dropPendingEntries(yk))
       }
     }
 
-    function Wt(SS) {
-      SS.structSwitchEmitted || (SS.shouldEmitSwitch && (SS.buffer[SS.it.offset++] = 255, HH.number(SS.buffer, SS.ref[NS], SS.it)), SS.structSwitchEmitted = !0)
+    function CX(kk) {
+      kk.structSwitchEmitted || (kk.shouldEmitSwitch && (kk.buffer[kk.it.offset++] = 255, IF.number(kk.buffer, kk.ref[lk], kk.it)), kk.structSwitchEmitted = !0)
     }
 
-    function zt(SS, HS) {
-      st(SS, HS, bS.ADD)
+    function NX(kk, Fk) {
+      fX(kk, Fk, Tk.ADD)
     }
 
-    function Ut(SS, HS) {
-      if (HS._fullSyncGen === SS.gen) return;
-      HS._fullSyncGen = SS.gen;
-      if (!SS.hasView || SS.view.isChangeTreeVisible(HS)) {
-        const gS = HS.encDescriptor;
-        SS.changeTree = HS, SS.ref = HS.ref, SS.encoder = gS.encoder, SS.filter = gS.filter, SS.metadata = gS.metadata, SS.treeIsFiltered = HS.isFiltered, SS.isSchema = gS.isSchema, SS.filterBitmask = gS.filterBitmask, SS.tags = gS.tags, SS.structSwitchEmitted = !1, SS.shouldEmitSwitch = SS.hasView || SS.it.offset > SS.initialOffset || HS !== SS.rootChangeTree, HS.isArray && HS.collDirty.size > 0 && (HS.flags |= 512), bg(HS, SS, zt)
+    function cX(kk, Fk) {
+      if (Fk._fullSyncGen === kk.gen) return;
+      Fk._fullSyncGen = kk.gen;
+      if (!kk.hasView || kk.view.isChangeTreeVisible(Fk)) {
+        const Ik = Fk.encDescriptor;
+        kk.changeTree = Fk, kk.ref = Fk.ref, kk.encoder = Ik.encoder, kk.filter = Ik.filter, kk.metadata = Ik.metadata, kk.treeIsFiltered = Fk.isFiltered, kk.isSchema = Ik.isSchema, kk.filterBitmask = Ik.filterBitmask, kk.tags = Ik.tags, kk.structSwitchEmitted = !1, kk.shouldEmitSwitch = kk.hasView || kk.it.offset > kk.initialOffset || Fk !== kk.rootChangeTree, Fk.isArray && Fk.collDirty.size > 0 && (Fk.flags |= 512), iI(Fk, kk, NX)
       }
-      Cg(HS, SS, pt)
+      xI(Fk, kk, WX)
     }
 
-    function pt(SS, HS, gS) {
-      Ut(SS, HS)
+    function WX(kk, Fk, Ik) {
+      cX(kk, Fk)
     }
 
-    function st(SS, HS, gS) {
-      if (HS < 0) {
-        if (SS.treeIsFiltered !== SS.emitFiltered) return;
-        return Wt(SS), void(SS.buffer[SS.it.offset++] = 255 & Math.abs(HS))
+    function fX(kk, Fk, Ik) {
+      if (Fk < 0) {
+        if (kk.treeIsFiltered !== kk.emitFiltered) return;
+        return CX(kk), void(kk.buffer[kk.it.offset++] = 255 & Math.abs(Fk))
       }
-      if ((SS.isSchema ? SS.treeIsFiltered || (HS < 32 ? 0 !== (SS.filterBitmask & 1 << HS) : void 0 !== SS.tags[HS]) : SS.treeIsFiltered) !== SS.emitFiltered) return;
-      const tS = SS.isEncodeAll ? bS.ADD : gS;
-      void 0 !== tS && (void 0 === SS.filter || SS.filter(SS.ref, HS, SS.view)) && (Wt(SS), SS.encoder(SS.self, SS.buffer, SS.changeTree, HS, tS, SS.it, SS.isEncodeAll, SS.hasView, SS.metadata))
+      if ((kk.isSchema ? kk.treeIsFiltered || (Fk < 32 ? 0 !== (kk.filterBitmask & 1 << Fk) : void 0 !== kk.tags[Fk]) : kk.treeIsFiltered) !== kk.emitFiltered) return;
+      const Xk = kk.isEncodeAll ? Tk.ADD : Ik;
+      void 0 !== Xk && (void 0 === kk.filter || kk.filter(kk.ref, Fk, kk.view)) && (CX(kk), kk.encoder(kk.self, kk.buffer, kk.changeTree, Fk, Xk, kk.it, kk.isEncodeAll, kk.hasView, kk.metadata))
     }
 
-    function Bt(SS, HS) {
-      const gS = new Uint8Array(SS.length + HS.length);
-      return gS.set(SS, 0), gS.set(HS, SS.length), gS
+    function BX(kk, Fk) {
+      const Ik = new Uint8Array(kk.length + Fk.length);
+      return Ik.set(kk, 0), Ik.set(Fk, kk.length), Ik
     }
-    class Mt {
+    class dX {
       static BUFFER_SIZE = 16384;
-      sharedBuffer = new Uint8Array(Mt.BUFFER_SIZE);
+      sharedBuffer = new Uint8Array(dX.BUFFER_SIZE);
       context;
       state;
       root;
-      constructor(SS, HS) {
-        this.context = UH.cache(SS.constructor), this.root = HS ?? new Lt(this.context), this.setState(SS)
+      constructor(kk, Fk) {
+        this.context = WF.cache(kk.constructor), this.root = Fk ?? new GX(this.context), this.setState(kk)
       }
-      setState(SS) {
-        this.state = SS, this.state[jS].setRoot(this.root)
+      setState(kk) {
+        this.state = kk, this.state[wk].setRoot(this.root)
       }
       _encodeCtx = {
         self: void 0,
@@ -6306,271 +6306,271 @@ export const modules = {
       };
       _fullSyncGen = 0;
       encode() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          HS = arguments.length > 1 ? arguments[1] : void 0,
-          gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : SS.offset;
-        return this._encodeChannel(SS, HS, gS, tS, !1)
+          Fk = arguments.length > 1 ? arguments[1] : void 0,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : kk.offset;
+        return this._encodeChannel(kk, Fk, Ik, Xk, !1)
       }
       encodeUnreliable() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          HS = arguments.length > 1 ? arguments[1] : void 0,
-          gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
-          tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : SS.offset;
-        return this._encodeChannel(SS, HS, gS, tS, !0)
+          Fk = arguments.length > 1 ? arguments[1] : void 0,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.sharedBuffer,
+          Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : kk.offset;
+        return this._encodeChannel(kk, Fk, Ik, Xk, !0)
       }
-      _encodeChannel(SS, HS, gS, tS, bS) {
-        this.root.pendingFilterRefresh.length > 0 && xg(this.root);
-        const XS = void 0 !== HS,
-          xS = this.state[jS],
-          NS = this._encodeCtx;
-        NS.self = this, NS.buffer = gS, NS.it = SS, NS.view = HS, NS.isEncodeAll = !1, NS.hasView = XS, NS.emitFiltered = XS;
-        let qS = bS ? this.root.unreliableChanges : this.root.changes;
-        for (; qS = qS.next;) {
-          const gS = qS.changeTree;
-          if (XS && !HS.isChangeTreeVisible(gS)) continue;
-          const uS = bS ? gS.unreliableRecorder : gS;
-          if (!uS || !uS.has()) continue;
-          const IS = gS.encDescriptor;
-          NS.changeTree = gS, NS.ref = gS.ref, NS.encoder = IS.encoder, NS.filter = IS.filter, NS.metadata = IS.metadata, NS.treeIsFiltered = gS.isFiltered, NS.isSchema = IS.isSchema, NS.filterBitmask = IS.filterBitmask, NS.tags = IS.tags, NS.structSwitchEmitted = !1, NS.isRootTree = gS === xS, NS.shouldEmitSwitch = XS || SS.offset > tS || !NS.isRootTree, uS.forEachWithCtx(NS, st)
+      _encodeChannel(kk, Fk, Ik, Xk, Tk) {
+        this.root.pendingFilterRefresh.length > 0 && lI(this.root);
+        const ik = void 0 !== Fk,
+          yk = this.state[wk],
+          lk = this._encodeCtx;
+        lk.self = this, lk.buffer = Ik, lk.it = kk, lk.view = Fk, lk.isEncodeAll = !1, lk.hasView = ik, lk.emitFiltered = ik;
+        let ak = Tk ? this.root.unreliableChanges : this.root.changes;
+        for (; ak = ak.next;) {
+          const Ik = ak.changeTree;
+          if (ik && !Fk.isChangeTreeVisible(Ik)) continue;
+          const qk = Tk ? Ik.unreliableRecorder : Ik;
+          if (!qk || !qk.has()) continue;
+          const Lk = Ik.encDescriptor;
+          lk.changeTree = Ik, lk.ref = Ik.ref, lk.encoder = Lk.encoder, lk.filter = Lk.filter, lk.metadata = Lk.metadata, lk.treeIsFiltered = Ik.isFiltered, lk.isSchema = Lk.isSchema, lk.filterBitmask = Lk.filterBitmask, lk.tags = Lk.tags, lk.structSwitchEmitted = !1, lk.isRootTree = Ik === yk, lk.shouldEmitSwitch = ik || kk.offset > Xk || !lk.isRootTree, qk.forEachWithCtx(lk, fX)
         }
-        return bS || XS || !this._isStreamBroadcastMode || this._emitStreamBroadcast(gS, SS), SS.offset > gS.byteLength ? (gS = this._resizeBuffer(gS, SS.offset), SS.offset = tS, this._encodeChannel(SS, HS, gS, tS, bS)) : gS.subarray(0, SS.offset)
+        return Tk || ik || !this._isStreamBroadcastMode || this._emitStreamBroadcast(Ik, kk), kk.offset > Ik.byteLength ? (Ik = this._resizeBuffer(Ik, kk.offset), kk.offset = Xk, this._encodeChannel(kk, Fk, Ik, Xk, Tk)) : Ik.subarray(0, kk.offset)
       }
-      encodeFullSync(SS, HS, gS, tS) {
-        let bS = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : SS.offset;
-        this.root.pendingFilterRefresh.length > 0 && xg(this.root);
-        const XS = void 0 !== tS,
-          xS = this.state[jS],
-          NS = this._encodeCtx;
-        return NS.self = this, NS.buffer = HS, NS.it = SS, NS.view = tS, NS.isEncodeAll = !0, NS.hasView = XS, NS.emitFiltered = gS, NS.gen = ++this._fullSyncGen, NS.initialOffset = bS, NS.rootChangeTree = xS, Ut(NS, xS), SS.offset > HS.byteLength ? (HS = this._resizeBuffer(HS, SS.offset), SS.offset = bS, this.encodeFullSync(SS, HS, gS, tS, bS)) : HS.subarray(0, SS.offset)
+      encodeFullSync(kk, Fk, Ik, Xk) {
+        let Tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : kk.offset;
+        this.root.pendingFilterRefresh.length > 0 && lI(this.root);
+        const ik = void 0 !== Xk,
+          yk = this.state[wk],
+          lk = this._encodeCtx;
+        return lk.self = this, lk.buffer = Fk, lk.it = kk, lk.view = Xk, lk.isEncodeAll = !0, lk.hasView = ik, lk.emitFiltered = Ik, lk.gen = ++this._fullSyncGen, lk.initialOffset = Tk, lk.rootChangeTree = yk, cX(lk, yk), kk.offset > Fk.byteLength ? (Fk = this._resizeBuffer(Fk, kk.offset), kk.offset = Tk, this.encodeFullSync(kk, Fk, Ik, Xk, Tk)) : Fk.subarray(0, kk.offset)
       }
-      _resizeBuffer(SS, HS) {
-        const gS = Math.ceil(HS / Mt.BUFFER_SIZE) * Mt.BUFFER_SIZE,
-          tS = new Uint8Array(gS);
-        return tS.set(SS), SS === this.sharedBuffer && (this.sharedBuffer = tS), tS
+      _resizeBuffer(kk, Fk) {
+        const Ik = Math.ceil(Fk / dX.BUFFER_SIZE) * dX.BUFFER_SIZE,
+          Xk = new Uint8Array(Ik);
+        return Xk.set(kk), kk === this.sharedBuffer && (this.sharedBuffer = Xk), Xk
       }
       encodeAll() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
             offset: 0
           },
-          HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
-        return this.encodeFullSync(SS, HS, !1)
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.sharedBuffer;
+        return this.encodeFullSync(kk, Fk, !1)
       }
-      encodeAllView(SS, HS, gS) {
-        let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const bS = gS.offset;
-        return tS = this.encodeFullSync(gS, tS, !0, SS, bS), Bt(tS.subarray(0, HS), tS.subarray(bS, gS.offset))
+      encodeAllView(kk, Fk, Ik) {
+        let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Tk = Ik.offset;
+        return Xk = this.encodeFullSync(Ik, Xk, !0, kk, Tk), BX(Xk.subarray(0, Fk), Xk.subarray(Tk, Ik.offset))
       }
-      ensureCapacity(SS, HS) {
-        if (HS + Mt.BUFFER_SIZE <= SS.byteLength) return SS;
-        const gS = Math.ceil((HS + Mt.BUFFER_SIZE) / Mt.BUFFER_SIZE) * Mt.BUFFER_SIZE,
-          tS = new Uint8Array(gS);
-        return tS.set(SS.subarray(0, HS)), SS === this.sharedBuffer && (this.sharedBuffer = tS), tS
+      ensureCapacity(kk, Fk) {
+        if (Fk + dX.BUFFER_SIZE <= kk.byteLength) return kk;
+        const Ik = Math.ceil((Fk + dX.BUFFER_SIZE) / dX.BUFFER_SIZE) * dX.BUFFER_SIZE,
+          Xk = new Uint8Array(Ik);
+        return Xk.set(kk.subarray(0, Fk)), kk === this.sharedBuffer && (this.sharedBuffer = Xk), Xk
       }
-      encodeView(SS, HS, gS) {
-        let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
-          XS = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
-        const xS = gS.offset;
-        this._emitStreamPriority(SS);
-        for (const qS of SS.changes.keys()) {
-          const HS = SS.changes.get(qS),
-            XS = this.root.changeTrees[qS];
-          if (void 0 === XS) {
-            SS.changes.delete(qS);
+      encodeView(kk, Fk, Ik) {
+        let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer,
+          ik = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+        const yk = Ik.offset;
+        this._emitStreamPriority(kk);
+        for (const ak of kk.changes.keys()) {
+          const Fk = kk.changes.get(ak),
+            ik = this.root.changeTrees[ak];
+          if (void 0 === ik) {
+            kk.changes.delete(ak);
             continue
           }
-          if (0 === HS.size) continue;
-          const xS = XS.encDescriptor,
-            uS = xS.encoder,
-            IS = xS.metadata,
-            fS = XS.ref,
-            aS = XS.refTarget;
-          tS = this.ensureCapacity(tS, gS.offset), tS[gS.offset++] = 255, HH.number(tS, fS[NS], gS);
-          for (const [qS, KS] of HS) {
-            let HS;
-            if (-1 === qS) {
-              const SS = aS.tmpItems,
-                HS = aS.deletedIndexes;
-              for (let xS = 0; xS < SS.length; xS++) void 0 !== SS[xS] && !0 !== HS[xS] && uS(this, tS, XS, xS, bS.ADD, gS, !1, !0, IS);
+          if (0 === Fk.size) continue;
+          const yk = ik.encDescriptor,
+            qk = yk.encoder,
+            Lk = yk.metadata,
+            tk = ik.ref,
+            jk = ik.refTarget;
+          Xk = this.ensureCapacity(Xk, Ik.offset), Xk[Ik.offset++] = 255, IF.number(Xk, tk[lk], Ik);
+          for (const [ak, ek] of Fk) {
+            let Fk;
+            if (-1 === ak) {
+              const kk = jk.tmpItems,
+                Fk = jk.deletedIndexes;
+              for (let yk = 0; yk < kk.length; yk++) void 0 !== kk[yk] && !0 !== Fk[yk] && qk(this, Xk, ik, yk, Tk.ADD, Ik, !1, !0, Lk);
               continue
             }
-            if ("number" === typeof qS) HS = qS;
+            if ("number" === typeof ak) Fk = ak;
             else {
-              const gS = qS.indexInParent(fS);
-              if (void 0 === gS) continue;
-              if (HS = gS, KS === bS.ADD && XS.getChange(HS) === bS.DELETE) {
-                SS.changes.delete(qS.ref[NS]);
+              const Ik = ak.indexInParent(tk);
+              if (void 0 === Ik) continue;
+              if (Fk = Ik, ek === Tk.ADD && ik.getChange(Fk) === Tk.DELETE) {
+                kk.changes.delete(ak.ref[lk]);
                 continue
               }
             }
-            uS(this, tS, XS, HS, void 0 !== aS[kS](HS) && KS || bS.DELETE, gS, !1, !0, IS)
+            qk(this, Xk, ik, Fk, void 0 !== jk[Zk](Fk) && ek || Tk.DELETE, Ik, !1, !0, Lk)
           }
         }
-        return SS.changes.clear(), tS = this.encode(gS, SS, tS), XS ? Bt(tS.subarray(0, HS), tS.subarray(xS, gS.offset)) : tS.subarray(xS, gS.offset)
+        return kk.changes.clear(), Xk = this.encode(Ik, kk, Xk), ik ? BX(Xk.subarray(0, Fk), Xk.subarray(yk, Ik.offset)) : Xk.subarray(yk, Ik.offset)
       }
-      encodeUnreliableView(SS, HS, gS) {
-        let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
-        const bS = gS.offset;
-        return tS = this.encodeUnreliable(gS, SS, tS, bS), Bt(tS.subarray(0, HS), tS.subarray(bS, gS.offset))
+      encodeUnreliableView(kk, Fk, Ik) {
+        let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.sharedBuffer;
+        const Tk = Ik.offset;
+        return Xk = this.encodeUnreliable(Ik, kk, Xk, Tk), BX(Xk.subarray(0, Fk), Xk.subarray(Tk, Ik.offset))
       }
-      _emitStreamBroadcast(SS, HS) {
-        const gS = this.root.streamTrees;
-        for (const tS of gS) {
-          const gS = tS,
-            XS = gS[jS],
-            xS = gS[NS];
-          if (void 0 === xS) continue;
-          const qS = gS._stream,
-            uS = qS.broadcastDeletes,
-            IS = qS.broadcastPending,
-            fS = qS.sentBroadcast,
-            aS = uS.size > 0,
-            KS = IS.size > 0,
-            GS = XS.encDescriptor,
-            CS = GS.encoder,
-            nS = GS.metadata;
-          if (aS || KS) {
-            if (SS[HS.offset++] = 255, HH.number(SS, xS, HS), aS) {
-              for (const gS of uS) CS(this, SS, XS, gS, bS.DELETE, HS, !1, !1, nS);
-              uS.clear()
+      _emitStreamBroadcast(kk, Fk) {
+        const Ik = this.root.streamTrees;
+        for (const Xk of Ik) {
+          const Ik = Xk,
+            ik = Ik[wk],
+            yk = Ik[lk];
+          if (void 0 === yk) continue;
+          const ak = Ik._stream,
+            qk = ak.broadcastDeletes,
+            Lk = ak.broadcastPending,
+            tk = ak.sentBroadcast,
+            jk = qk.size > 0,
+            ek = Lk.size > 0,
+            Hk = ik.encDescriptor,
+            Jk = Hk.encoder,
+            xk = Hk.metadata;
+          if (jk || ek) {
+            if (kk[Fk.offset++] = 255, IF.number(kk, yk, Fk), jk) {
+              for (const Ik of qk) Jk(this, kk, ik, Ik, Tk.DELETE, Fk, !1, !1, xk);
+              qk.clear()
             }
-            const tS = qS.maxPerTick,
-              KS = [];
-            let GS = 0;
-            const PS = [];
-            for (const xS of IS) {
-              if (GS >= tS) break;
-              const NS = gS[kS](xS);
-              void 0 !== NS ? (CS(this, SS, XS, xS, bS.ADD, HS, !1, !1, nS), fS.add(xS), KS.push(NS), PS.push(xS), GS++) : PS.push(xS)
+            const Xk = ak.maxPerTick,
+              ek = [];
+            let Hk = 0;
+            const Pk = [];
+            for (const yk of Lk) {
+              if (Hk >= Xk) break;
+              const lk = Ik[Zk](yk);
+              void 0 !== lk ? (Jk(this, kk, ik, yk, Tk.ADD, Fk, !1, !1, xk), tk.add(yk), ek.push(lk), Pk.push(yk), Hk++) : Pk.push(yk)
             }
-            for (const SS of PS) IS.delete(SS);
-            for (const gS of KS) {
-              const tS = gS[jS];
-              if (void 0 === tS) continue;
-              const XS = gS[NS];
-              if (void 0 === XS) continue;
-              SS[HS.offset++] = 255, HH.number(SS, XS, HS);
-              const xS = tS.encDescriptor,
-                qS = xS.encoder,
-                uS = xS.metadata;
-              tS.forEachLive((gS => {
-                TH.hasUnreliableAtIndex(uS, gS) || qS(this, SS, tS, gS, bS.ADD, HS, !1, !1, uS)
+            for (const kk of Pk) Lk.delete(kk);
+            for (const Ik of ek) {
+              const Xk = Ik[wk];
+              if (void 0 === Xk) continue;
+              const ik = Ik[lk];
+              if (void 0 === ik) continue;
+              kk[Fk.offset++] = 255, IF.number(kk, ik, Fk);
+              const yk = Xk.encDescriptor,
+                ak = yk.encoder,
+                qk = yk.metadata;
+              Xk.forEachLive((Ik => {
+                mF.hasUnreliableAtIndex(qk, Ik) || ak(this, kk, Xk, Ik, Tk.ADD, Fk, !1, !1, qk)
               }))
             }
           }
-          for (const tS of fS) {
-            const bS = gS[kS](tS);
-            if (void 0 === bS) continue;
-            const XS = bS[jS];
-            if (void 0 === XS || !XS.has()) continue;
-            const xS = bS[NS];
-            if (void 0 === xS) continue;
-            SS[HS.offset++] = 255, HH.number(SS, xS, HS);
-            const qS = XS.encDescriptor,
-              uS = qS.encoder,
-              IS = qS.metadata;
-            XS.forEach(((gS, tS) => {
-              gS < 0 || TH.hasUnreliableAtIndex(IS, gS) || uS(this, SS, XS, gS, tS, HS, !1, !1, IS)
+          for (const Xk of tk) {
+            const Tk = Ik[Zk](Xk);
+            if (void 0 === Tk) continue;
+            const ik = Tk[wk];
+            if (void 0 === ik || !ik.has()) continue;
+            const yk = Tk[lk];
+            if (void 0 === yk) continue;
+            kk[Fk.offset++] = 255, IF.number(kk, yk, Fk);
+            const ak = ik.encDescriptor,
+              qk = ak.encoder,
+              Lk = ak.metadata;
+            ik.forEach(((Ik, Xk) => {
+              Ik < 0 || mF.hasUnreliableAtIndex(Lk, Ik) || qk(this, kk, ik, Ik, Xk, Fk, !1, !1, Lk)
             }))
           }
         }
       }
-      _emitStreamPriority(SS) {
-        const HS = this.root.streamTrees;
-        if (0 === HS.size) return;
-        const gS = SS.id;
-        for (const tS of HS) {
-          const HS = tS,
-            XS = HS._stream,
-            xS = XS.pendingByView.get(gS);
-          if (void 0 === xS || 0 === xS.size) continue;
-          const qS = XS.priorityByView?.get(gS),
-            uS = void 0 !== qS,
-            IS = XS.priority,
-            fS = XS.maxPerTick,
-            aS = [],
-            KS = [];
-          if (uS || void 0 !== IS) {
-            const gS = [],
-              tS = [];
-            let bS = 0;
-            for (const XS of xS) {
-              const xS = HS[kS](XS);
-              if (void 0 === xS) {
-                KS.push(XS);
+      _emitStreamPriority(kk) {
+        const Fk = this.root.streamTrees;
+        if (0 === Fk.size) return;
+        const Ik = kk.id;
+        for (const Xk of Fk) {
+          const Fk = Xk,
+            ik = Fk._stream,
+            yk = ik.pendingByView.get(Ik);
+          if (void 0 === yk || 0 === yk.size) continue;
+          const ak = ik.priorityByView?.get(Ik),
+            qk = void 0 !== ak,
+            Lk = ik.priority,
+            tk = ik.maxPerTick,
+            jk = [],
+            ek = [];
+          if (qk || void 0 !== Lk) {
+            const Ik = [],
+              Xk = [];
+            let Tk = 0;
+            for (const ik of yk) {
+              const yk = Fk[Zk](ik);
+              if (void 0 === yk) {
+                ek.push(ik);
                 continue
               }
-              const NS = uS ? qS(xS) : IS(SS, xS);
-              if (bS < fS) {
-                let SS = bS++;
-                for (; SS > 0 && tS[SS - 1] < NS;) tS[SS] = tS[SS - 1], gS[SS] = gS[SS - 1], SS--;
-                tS[SS] = NS, gS[SS] = XS
-              } else if (NS > tS[fS - 1]) {
-                let SS = fS - 1;
-                for (; SS > 0 && tS[SS - 1] < NS;) tS[SS] = tS[SS - 1], gS[SS] = gS[SS - 1], SS--;
-                tS[SS] = NS, gS[SS] = XS
+              const lk = qk ? ak(yk) : Lk(kk, yk);
+              if (Tk < tk) {
+                let kk = Tk++;
+                for (; kk > 0 && Xk[kk - 1] < lk;) Xk[kk] = Xk[kk - 1], Ik[kk] = Ik[kk - 1], kk--;
+                Xk[kk] = lk, Ik[kk] = ik
+              } else if (lk > Xk[tk - 1]) {
+                let kk = tk - 1;
+                for (; kk > 0 && Xk[kk - 1] < lk;) Xk[kk] = Xk[kk - 1], Ik[kk] = Ik[kk - 1], kk--;
+                Xk[kk] = lk, Ik[kk] = ik
               }
             }
-            for (let SS = 0; SS < bS; SS++) aS.push(gS[SS])
+            for (let kk = 0; kk < Tk; kk++) jk.push(Ik[kk])
           } else
-            for (const SS of xS) {
-              if (aS.length >= fS) break;
-              aS.push(SS)
+            for (const kk of yk) {
+              if (jk.length >= tk) break;
+              jk.push(kk)
             }
-          for (const SS of KS) xS.delete(SS);
-          const GS = aS.length;
-          let CS = XS.sentByView.get(gS);
-          void 0 === CS && (CS = new Set, XS.sentByView.set(gS, CS));
-          for (let gS = 0; gS < GS; gS++) {
-            const tS = aS[gS],
-              XS = HS[kS](tS);
-            if (void 0 === XS) {
-              xS.delete(tS);
+          for (const kk of ek) yk.delete(kk);
+          const Hk = jk.length;
+          let Jk = ik.sentByView.get(Ik);
+          void 0 === Jk && (Jk = new Set, ik.sentByView.set(Ik, Jk));
+          for (let Ik = 0; Ik < Hk; Ik++) {
+            const Xk = jk[Ik],
+              ik = Fk[Zk](Xk);
+            if (void 0 === ik) {
+              yk.delete(Xk);
               continue
             }
-            SS._addImmediate(XS);
-            const qS = XS[jS];
-            if (void 0 !== qS) {
-              const HS = XS[NS];
-              let gS = SS.changes.get(HS);
-              void 0 === gS && (gS = new Map, SS.changes.set(HS, gS));
-              const tS = qS.metadata;
-              qS.forEachLive((SS => {
-                TH.hasUnreliableAtIndex(tS, SS) || gS.set(SS, bS.ADD)
+            kk._addImmediate(ik);
+            const ak = ik[wk];
+            if (void 0 !== ak) {
+              const Fk = ik[lk];
+              let Ik = kk.changes.get(Fk);
+              void 0 === Ik && (Ik = new Map, kk.changes.set(Fk, Ik));
+              const Xk = ak.metadata;
+              ak.forEachLive((kk => {
+                mF.hasUnreliableAtIndex(Xk, kk) || Ik.set(kk, Tk.ADD)
               }))
             }
-            xS.delete(tS), CS.add(tS)
+            yk.delete(Xk), Jk.add(Xk)
           }
         }
       }
       discardChanges() {
-        const SS = this.root.changes;
-        let HS = SS.next;
-        const gS = this.root;
-        for (; HS;) {
-          const SS = HS.next;
-          HS.changeTree.endEncode(), gS.releaseNode(HS), HS = SS
+        const kk = this.root.changes;
+        let Fk = kk.next;
+        const Ik = this.root;
+        for (; Fk;) {
+          const kk = Fk.next;
+          Fk.changeTree.endEncode(), Ik.releaseNode(Fk), Fk = kk
         }
-        SS.next = void 0, SS.tail = void 0
+        kk.next = void 0, kk.tail = void 0
       }
       discardUnreliableChanges() {
-        const SS = this.root.unreliableChanges;
-        let HS = SS.next;
-        const gS = this.root;
-        for (; HS;) {
-          const SS = HS.next;
-          HS.changeTree.endEncodeUnreliable(), gS.releaseNode(HS), HS = SS
+        const kk = this.root.unreliableChanges;
+        let Fk = kk.next;
+        const Ik = this.root;
+        for (; Fk;) {
+          const kk = Fk.next;
+          Fk.changeTree.endEncodeUnreliable(), Ik.releaseNode(Fk), Fk = kk
         }
-        SS.next = void 0, SS.tail = void 0
+        kk.next = void 0, kk.tail = void 0
       }
-      tryEncodeTypeId(SS, HS, gS, tS) {
-        const bS = this.context.getTypeId(HS),
-          XS = this.context.getTypeId(gS);
-        void 0 !== XS ? bS !== XS && (SS[tS.offset++] = 213, HH.number(SS, XS, tS)) : console.warn(`@colyseus/schema WARNING: Class "${gS.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
+      tryEncodeTypeId(kk, Fk, Ik, Xk) {
+        const Tk = this.context.getTypeId(Fk),
+          ik = this.context.getTypeId(Ik);
+        void 0 !== ik ? Tk !== ik && (kk[Xk.offset++] = 213, IF.number(kk, ik, Xk)) : console.warn(`@colyseus/schema WARNING: Class "${Ik.name}" is not registered on TypeRegistry - Please either tag the class with @entity or define a @type() field.`)
       }
       get hasChanges() {
         return void 0 !== this.root.changes.next || this._hasStreamBacklog()
@@ -6579,28 +6579,28 @@ export const modules = {
         return 0 === this.root.activeViews.size && this.root.streamTrees.size > 0
       }
       _hasStreamBacklog() {
-        const SS = this.root;
-        if (0 === SS.streamTrees.size) return !1;
-        const HS = 0 === SS.activeViews.size;
-        for (const gS of SS.streamTrees)
-          if (HS ? EH(gS) : vH(gS, SS)) return !0;
+        const kk = this.root;
+        if (0 === kk.streamTrees.size) return !1;
+        const Fk = 0 === kk.activeViews.size;
+        for (const Ik of kk.streamTrees)
+          if (Fk ? GF(Ik) : nF(Ik, kk)) return !0;
         return !1
       }
       get hasUnreliableChanges() {
         return void 0 !== this.root.unreliableChanges.next
       }
     }
-    class Ft extends Error {
-      constructor(SS) {
-        super(SS), this.name = "DecodingWarning"
+    class YX extends Error {
+      constructor(kk) {
+        super(kk), this.name = "DecodingWarning"
       }
     }
-    const Rt = {
+    const AX = {
       value: 0,
       enumerable: !1,
       writable: !0
     };
-    class Tt {
+    class gX {
       refs = new Map;
       refCount = {};
       deletedRefs = new Set;
@@ -6609,1181 +6609,1181 @@ export const modules = {
       getNextUniqueId() {
         return this.nextUniqueId++
       }
-      addRef(SS, HS) {
-        let gS = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-        this.refs.set(SS, HS), void 0 === HS[NS] ? (Rt.value = SS, Object.defineProperty(HS, NS, Rt)) : HS[NS] !== SS && (HS[NS] = SS), gS && (this.refCount[SS] = (this.refCount[SS] || 0) + 1), this.deletedRefs.has(SS) && this.deletedRefs.delete(SS)
+      addRef(kk, Fk) {
+        let Ik = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+        this.refs.set(kk, Fk), void 0 === Fk[lk] ? (AX.value = kk, Object.defineProperty(Fk, lk, AX)) : Fk[lk] !== kk && (Fk[lk] = kk), Ik && (this.refCount[kk] = (this.refCount[kk] || 0) + 1), this.deletedRefs.has(kk) && this.deletedRefs.delete(kk)
       }
-      removeRef(SS) {
-        const HS = this.refCount[SS];
-        if (void 0 !== HS)
-          if (0 !== HS)(this.refCount[SS] = HS - 1) <= 0 && this.deletedRefs.add(SS);
+      removeRef(kk) {
+        const Fk = this.refCount[kk];
+        if (void 0 !== Fk)
+          if (0 !== Fk)(this.refCount[kk] = Fk - 1) <= 0 && this.deletedRefs.add(kk);
           else try {
-            const HS = this.refs.get(SS);
-            throw new Ft(`trying to remove refId '${SS}' with 0 refCount (${HS.constructor.name}: ${JSON.stringify(HS)})`)
-          } catch (xb) {
-            console.warn(xb)
+            const Fk = this.refs.get(kk);
+            throw new YX(`trying to remove refId '${kk}' with 0 refCount (${Fk.constructor.name}: ${JSON.stringify(Fk)})`)
+          } catch (yT) {
+            console.warn(yT)
           } else try {
-            throw new Ft("trying to remove refId that doesn't exist: " + SS)
-          } catch (xb) {
-            console.warn(xb)
+            throw new YX("trying to remove refId that doesn't exist: " + kk)
+          } catch (yT) {
+            console.warn(yT)
           }
       }
       clearRefs() {
         this.refs.clear(), this.deletedRefs.clear(), this.callbacks = {}, this.refCount = {}
       }
       garbageCollectDeletedRefs() {
-        this.deletedRefs.forEach((SS => {
-          if (this.refCount[SS] > 0) return;
-          const HS = this.refs.get(SS),
-            gS = HS.constructor[Symbol.metadata];
-          if (null != gS)
-            for (const tS in gS) {
-              const SS = HS[gS[tS].name];
-              if ("object" === typeof SS && SS) {
-                const HS = SS[NS];
-                void 0 === HS || this.deletedRefs.has(HS) || this.removeRef(HS)
+        this.deletedRefs.forEach((kk => {
+          if (this.refCount[kk] > 0) return;
+          const Fk = this.refs.get(kk),
+            Ik = Fk.constructor[Symbol.metadata];
+          if (null != Ik)
+            for (const Xk in Ik) {
+              const kk = Fk[Ik[Xk].name];
+              if ("object" === typeof kk && kk) {
+                const Fk = kk[lk];
+                void 0 === Fk || this.deletedRefs.has(Fk) || this.removeRef(Fk)
               }
-            } else "function" === typeof HS[GS] && Array.from(HS.values()).forEach((SS => {
-              const HS = SS[NS];
-              void 0 === HS || this.deletedRefs.has(HS) || this.removeRef(HS)
+            } else "function" === typeof Fk[Hk] && Array.from(Fk.values()).forEach((kk => {
+              const Fk = kk[lk];
+              void 0 === Fk || this.deletedRefs.has(Fk) || this.removeRef(Fk)
             }));
-          this.refs.delete(SS), delete this.refCount[SS], delete this.callbacks[SS]
+          this.refs.delete(kk), delete this.refCount[kk], delete this.callbacks[kk]
         })), this.deletedRefs.clear()
       }
-      addCallback(SS, HS, gS) {
-        if (void 0 === SS) {
-          const SS = "number" === typeof HS ? bS[HS] : HS;
-          throw new Error(`Can't addCallback on '${SS}' (refId is undefined)`)
+      addCallback(kk, Fk, Ik) {
+        if (void 0 === kk) {
+          const kk = "number" === typeof Fk ? Tk[Fk] : Fk;
+          throw new Error(`Can't addCallback on '${kk}' (refId is undefined)`)
         }
-        return this.callbacks[SS] || (this.callbacks[SS] = {}), this.callbacks[SS][HS] || (this.callbacks[SS][HS] = []), this.callbacks[SS][HS].push(gS), () => this.removeCallback(SS, HS, gS)
+        return this.callbacks[kk] || (this.callbacks[kk] = {}), this.callbacks[kk][Fk] || (this.callbacks[kk][Fk] = []), this.callbacks[kk][Fk].push(Ik), () => this.removeCallback(kk, Fk, Ik)
       }
-      removeCallback(SS, HS, gS) {
-        const tS = this.callbacks?.[SS]?.[HS]?.indexOf(gS);
-        void 0 !== tS && -1 !== tS && Yt(this.callbacks[SS][HS], tS)
+      removeCallback(kk, Fk, Ik) {
+        const Xk = this.callbacks?.[kk]?.[Fk]?.indexOf(Ik);
+        void 0 !== Xk && -1 !== Xk && pX(this.callbacks[kk][Fk], Xk)
       }
     }
-    class ot {
+    class mX {
       context;
       state;
       root;
       currentRefId = 0;
-      fL;
+      sG;
       resyncVisited = null;
       resyncDamaged = !1;
-      constructor(SS, HS) {
-        this.setState(SS), this.context = HS || new UH(SS.constructor)
+      constructor(kk, Fk) {
+        this.setState(kk), this.context = Fk || new WF(kk.constructor)
       }
-      setState(SS) {
-        this.state = SS, this.root = new Tt, this.root.addRef(0, SS)
+      setState(kk) {
+        this.state = kk, this.root = new gX, this.root.addRef(0, kk)
       }
-      decode(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decode(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
             offset: 0
           },
-          gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
-        const bS = void 0 !== this.fL ? [] : null,
-          XS = this.root,
-          xS = SS.byteLength;
-        let NS = gS.constructor[IS];
-        for (this.currentRefId = 0; HS.offset < xS;) {
-          if (SS[HS.offset] == tS) {
-            HS.offset++, gS[QS]?.();
-            const tS = PH.number(SS, HS),
-              bS = XS.refs.get(tS);
-            bS ? (gS = bS, NS = gS.constructor[IS], this.currentRefId = tS) : (console.error(`"refId" not found: ${tS}`, {
-              previousRef: gS,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.state;
+        const Tk = void 0 !== this.sG ? [] : null,
+          ik = this.root,
+          yk = kk.byteLength;
+        let lk = Ik.constructor[Lk];
+        for (this.currentRefId = 0; Fk.offset < yk;) {
+          if (kk[Fk.offset] == Xk) {
+            Fk.offset++, Ik[Kk]?.();
+            const Xk = KF.number(kk, Fk),
+              Tk = ik.refs.get(Xk);
+            Tk ? (Ik = Tk, lk = Ik.constructor[Lk], this.currentRefId = Xk) : (console.error(`"refId" not found: ${Xk}`, {
+              previousRef: Ik,
               previousRefId: this.currentRefId
-            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(SS, HS, xS));
+            }), console.warn("Please report this issue to the developers."), this.skipCurrentStructure(kk, Fk, yk));
             continue
-          } - 1 !== NS(this, SS, HS, gS, bS) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(SS, HS, xS))
+          } - 1 !== lk(this, kk, Fk, Ik, Tk) || (console.warn("@colyseus/schema: definition mismatch"), this.skipCurrentStructure(kk, Fk, yk))
         }
-        return gS[QS]?.(), null !== this.resyncVisited && function(SS, HS) {
-          SS.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : Ug(SS, SS.state, new Set, HS)
-        }(this, bS), null !== bS && this.fL?.(bS), XS.garbageCollectDeletedRefs(), bS
+        return Ik[Kk]?.(), null !== this.resyncVisited && function(kk, Fk) {
+          kk.resyncDamaged ? console.warn("@colyseus/schema: resync sweep skipped \u2014 parts of the payload could not be decoded. Stale entries may persist until the next resync.") : WI(kk, kk.state, new Set, Fk)
+        }(this, Tk), null !== Tk && this.sG?.(Tk), ik.garbageCollectDeletedRefs(), Tk
       }
-      decodeResync(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+      decodeResync(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
           offset: 0
         };
         this.resyncVisited = new Map, this.resyncDamaged = !1;
         try {
-          return this.decode(SS, HS)
+          return this.decode(kk, Fk)
         } finally {
           this.resyncVisited = null
         }
       }
-      skipCurrentStructure(SS, HS, gS) {
+      skipCurrentStructure(kk, Fk, Ik) {
         null !== this.resyncVisited && (this.resyncDamaged = !0);
-        const bS = {
-          offset: HS.offset
+        const Tk = {
+          offset: Fk.offset
         };
-        for (; HS.offset < gS && (SS[HS.offset] !== tS || (bS.offset = HS.offset + 1, !this.root.refs.has(PH.number(SS, bS))));) HS.offset++
+        for (; Fk.offset < Ik && (kk[Fk.offset] !== Xk || (Tk.offset = Fk.offset + 1, !this.root.refs.has(KF.number(kk, Tk))));) Fk.offset++
       }
-      getInstanceType(SS, HS, gS) {
-        let tS;
-        if (213 === SS[HS.offset]) {
-          HS.offset++;
-          const gS = PH.number(SS, HS);
-          tS = this.context.get(gS)
+      getInstanceType(kk, Fk, Ik) {
+        let Xk;
+        if (213 === kk[Fk.offset]) {
+          Fk.offset++;
+          const Ik = KF.number(kk, Fk);
+          Xk = this.context.get(Ik)
         }
-        return tS || gS
+        return Xk || Ik
       }
-      createInstanceOfType(SS) {
-        return SS.initializeForDecoder()
+      createInstanceOfType(kk) {
+        return kk.initializeForDecoder()
       }
-      removeChildRefs(SS, HS) {
-        const gS = "string" !== typeof SS[GS],
-          tS = SS[NS];
-        SS.forEach(((XS, xS) => {
-          HS?.push({
-            ref: SS,
-            refId: tS,
-            op: bS.DELETE,
-            field: xS,
+      removeChildRefs(kk, Fk) {
+        const Ik = "string" !== typeof kk[Hk],
+          Xk = kk[lk];
+        kk.forEach(((ik, yk) => {
+          Fk?.push({
+            ref: kk,
+            refId: Xk,
+            op: Tk.DELETE,
+            field: yk,
             value: void 0,
-            previousValue: XS
-          }), gS && this.root.removeRef(XS[NS])
+            previousValue: ik
+          }), Ik && this.root.removeRef(ik[lk])
         }))
       }
     }
-    const lt = dt({
-        min: Kt.float64(),
-        max: Kt.float64(),
-        bits: Kt.uint8(),
-        mode: Kt.uint8()
+    const hX = vX({
+        min: eX.float64(),
+        max: eX.float64(),
+        bits: eX.uint8(),
+        mode: eX.uint8()
       }, "QuantizedDescriptor"),
-      mt = dt({
-        name: Kt.string(),
-        type: Kt.string(),
-        referencedType: Kt.number(),
-        childPrimitive: Kt.string(),
-        quantized: Kt.ref(lt).optional()
+      rX = vX({
+        name: eX.string(),
+        type: eX.string(),
+        referencedType: eX.number(),
+        childPrimitive: eX.string(),
+        quantized: eX.ref(hX).optional()
       }, "ReflectionField"),
-      et = dt({
-        id: Kt.number(),
-        extendsId: Kt.number(),
-        fields: Kt.array(mt)
+      DX = vX({
+        id: eX.number(),
+        extendsId: eX.number(),
+        fields: eX.array(rX)
       }, "ReflectionType"),
-      rt = dt({
-        types: Kt.array(et),
-        rootType: Kt.number()
+      MX = vX({
+        types: eX.array(DX),
+        rootType: eX.number()
       }, "Reflection");
 
-    function Sb(SS) {
-      const HS = SS.root,
-        gS = HS.callbacks,
-        tS = new WeakMap;
-      let XS;
+    function kT(kk) {
+      const Fk = kk.root,
+        Ik = Fk.callbacks,
+        Xk = new WeakMap;
+      let ik;
 
-      function xS(SS, gS) {
-        let uS = gS.instance?.constructor[Symbol.metadata] || SS,
-          IS = gS.instance && "function" === typeof gS.instance.forEach || SS && !vt.is(SS);
-        if (uS && !IS) {
-          const SS = function(SS, bS, xS, qS) {
-            return qS && void 0 !== gS.instance[bS] && !tS.has(XS) && xS(gS.instance[bS], void 0), HS.addCallback(SS[NS], bS, xS)
+      function yk(kk, Ik) {
+        let qk = Ik.instance?.constructor[Symbol.metadata] || kk,
+          Lk = Ik.instance && "function" === typeof Ik.instance.forEach || kk && !OX.is(kk);
+        if (qk && !Lk) {
+          const kk = function(kk, Tk, yk, ak) {
+            return ak && void 0 !== Ik.instance[Tk] && !Xk.has(ik) && yk(Ik.instance[Tk], void 0), Fk.addCallback(kk[lk], Tk, yk)
           };
           return new Proxy({
-            listen: function(HS, bS) {
-              let xS = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-              if (gS.instance) return SS(gS.instance, HS, bS, xS);
+            listen: function(Fk, Tk) {
+              let yk = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+              if (Ik.instance) return kk(Ik.instance, Fk, Tk, yk);
               {
-                let NS = () => {};
-                return gS.onInstanceAvailable(((gS, qS) => {
-                  NS = SS(gS, HS, bS, xS && qS && !tS.has(XS))
-                })), () => NS()
+                let lk = () => {};
+                return Ik.onInstanceAvailable(((Ik, ak) => {
+                  lk = kk(Ik, Fk, Tk, yk && ak && !Xk.has(ik))
+                })), () => lk()
               }
             },
-            onChange: function(SS) {
-              return HS.addCallback(gS.instance[NS], bS.REPLACE, SS)
+            onChange: function(kk) {
+              return Fk.addCallback(Ik.instance[lk], Tk.REPLACE, kk)
             },
-            bindTo: function(SS, tS) {
-              return tS || (tS = Object.keys(uS).map((SS => uS[SS].name))), HS.addCallback(gS.instance[NS], bS.REPLACE, (() => {
-                tS.forEach((HS => SS[HS] = gS.instance[HS]))
+            bindTo: function(kk, Xk) {
+              return Xk || (Xk = Object.keys(qk).map((kk => qk[kk].name))), Fk.addCallback(Ik.instance[lk], Tk.REPLACE, (() => {
+                Xk.forEach((Fk => kk[Fk] = Ik.instance[Fk]))
               }))
             }
           }, {
-            get(SS, HS) {
-              const tS = uS[uS[HS]];
-              if (tS) {
-                const SS = gS.instance?.[HS],
-                  bS = tS => {
-                    const bS = qS(gS.instance).listen(HS, ((SS, HS) => {
-                      tS(SS, !1), bS?.()
+            get(kk, Fk) {
+              const Xk = qk[qk[Fk]];
+              if (Xk) {
+                const kk = Ik.instance?.[Fk],
+                  Tk = Xk => {
+                    const Tk = ak(Ik.instance).listen(Fk, ((kk, Fk) => {
+                      Xk(kk, !1), Tk?.()
                     }), !1);
-                    void 0 !== SS?.[NS] && tS(SS, !0)
+                    void 0 !== kk?.[lk] && Xk(kk, !0)
                   };
-                return xS(tS.type, {
-                  instance: void 0 !== SS?.[NS] && SS,
-                  parentInstance: gS.instance,
-                  onInstanceAvailable: bS
+                return yk(Xk.type, {
+                  instance: void 0 !== kk?.[lk] && kk,
+                  parentInstance: Ik.instance,
+                  onInstanceAvailable: Tk
                 })
               }
-              return SS[HS]
+              return kk[Fk]
             },
-            has: (SS, HS) => void 0 !== uS[HS],
-            set(SS, HS, gS) {
+            has: (kk, Fk) => void 0 !== qk[Fk],
+            set(kk, Fk, Ik) {
               throw new Error("not allowed")
             },
-            deleteProperty(SS, HS) {
+            deleteProperty(kk, Fk) {
               throw new Error("not allowed")
             }
           })
         } {
-          const SS = function(SS, gS, xS) {
-              return xS && SS.forEach(((SS, HS) => gS(SS, HS))), HS.addCallback(SS[NS], bS.ADD, ((SS, HS) => {
-                tS.set(gS, !0), XS = gS, gS(SS, HS), tS.delete(gS), XS = void 0
+          const kk = function(kk, Ik, yk) {
+              return yk && kk.forEach(((kk, Fk) => Ik(kk, Fk))), Fk.addCallback(kk[lk], Tk.ADD, ((kk, Fk) => {
+                Xk.set(Ik, !0), ik = Ik, Ik(kk, Fk), Xk.delete(Ik), ik = void 0
               }))
             },
-            xS = function(SS, gS) {
-              return HS.addCallback(SS[NS], bS.DELETE, gS)
+            yk = function(kk, Ik) {
+              return Fk.addCallback(kk[lk], Tk.DELETE, Ik)
             },
-            qS = function(SS, gS) {
-              return HS.addCallback(SS[NS], bS.REPLACE, gS)
+            ak = function(kk, Ik) {
+              return Fk.addCallback(kk[lk], Tk.REPLACE, Ik)
             };
           return new Proxy({
-            EQ: function(HS) {
-              let bS = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-              if (gS.instance) return SS(gS.instance, HS, bS && !tS.has(XS));
-              if (gS.onInstanceAvailable) {
-                let xS = () => {};
-                return gS.onInstanceAvailable(((gS, NS) => {
-                  xS = SS(gS, HS, bS && NS && !tS.has(XS))
-                })), () => xS()
+            mJ: function(Fk) {
+              let Tk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+              if (Ik.instance) return kk(Ik.instance, Fk, Tk && !Xk.has(ik));
+              if (Ik.onInstanceAvailable) {
+                let yk = () => {};
+                return Ik.onInstanceAvailable(((Ik, lk) => {
+                  yk = kk(Ik, Fk, Tk && lk && !Xk.has(ik))
+                })), () => yk()
               }
             },
-            pE: function(SS) {
-              if (gS.instance) return xS(gS.instance, SS);
-              if (gS.onInstanceAvailable) {
-                let HS = () => {};
-                return gS.onInstanceAvailable((gS => {
-                  HS = xS(gS, SS)
-                })), () => HS()
+            iG: function(kk) {
+              if (Ik.instance) return yk(Ik.instance, kk);
+              if (Ik.onInstanceAvailable) {
+                let Fk = () => {};
+                return Ik.onInstanceAvailable((Ik => {
+                  Fk = yk(Ik, kk)
+                })), () => Fk()
               }
             },
-            onChange: function(SS) {
-              if (gS.instance) return qS(gS.instance, SS);
-              if (gS.onInstanceAvailable) {
-                let HS = () => {};
-                return gS.onInstanceAvailable((gS => {
-                  HS = qS(gS, SS)
-                })), () => HS()
+            onChange: function(kk) {
+              if (Ik.instance) return ak(Ik.instance, kk);
+              if (Ik.onInstanceAvailable) {
+                let Fk = () => {};
+                return Ik.onInstanceAvailable((Ik => {
+                  Fk = ak(Ik, kk)
+                })), () => Fk()
               }
             }
           }, {
-            get(SS, HS) {
-              if (!SS[HS]) throw new Error(`Can't access '${HS}' through callback proxy. access the instance directly.`);
-              return SS[HS]
+            get(kk, Fk) {
+              if (!kk[Fk]) throw new Error(`Can't access '${Fk}' through callback proxy. access the instance directly.`);
+              return kk[Fk]
             },
-            has: (SS, HS) => void 0 !== SS[HS],
-            set(SS, HS, gS) {
+            has: (kk, Fk) => void 0 !== kk[Fk],
+            set(kk, Fk, Ik) {
               throw new Error("not allowed")
             },
-            deleteProperty(SS, HS) {
+            deleteProperty(kk, Fk) {
               throw new Error("not allowed")
             }
           })
         }
       }
 
-      function qS(SS) {
-        return xS(void 0, {
-          instance: SS
+      function ak(kk) {
+        return yk(void 0, {
+          instance: kk
         })
       }
-      return SS.fL = function(SS) {
-        const HS = new Set;
-        for (let tS = 0, XS = SS.length; tS < XS; tS++) {
-          const XS = SS[tS],
-            xS = XS.refId,
-            qS = XS.ref,
-            uS = gS[xS];
-          if (uS) {
-            if ((XS.op & bS.DELETE) === bS.DELETE && vt.isSchema(XS.previousValue)) {
-              const SS = gS[XS.previousValue[NS]]?.[bS.DELETE];
-              for (let HS = SS?.length - 1; HS >= 0; HS--) SS[HS]()
+      return kk.sG = function(kk) {
+        const Fk = new Set;
+        for (let Xk = 0, ik = kk.length; Xk < ik; Xk++) {
+          const ik = kk[Xk],
+            yk = ik.refId,
+            ak = ik.ref,
+            qk = Ik[yk];
+          if (qk) {
+            if ((ik.op & Tk.DELETE) === Tk.DELETE && OX.isSchema(ik.previousValue)) {
+              const kk = Ik[ik.previousValue[lk]]?.[Tk.DELETE];
+              for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk]()
             }
-            if (vt.isSchema(qS)) {
-              if (!HS.has(xS)) {
-                const SS = uS?.[bS.REPLACE];
-                for (let HS = SS?.length - 1; HS >= 0; HS--) SS[HS]()
+            if (OX.isSchema(ak)) {
+              if (!Fk.has(yk)) {
+                const kk = qk?.[Tk.REPLACE];
+                for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk]()
               }
-              if (uS.hasOwnProperty(XS.field)) {
-                const SS = uS[XS.field];
-                for (let HS = SS?.length - 1; HS >= 0; HS--) SS[HS](XS.value, XS.previousValue)
+              if (qk.hasOwnProperty(ik.field)) {
+                const kk = qk[ik.field];
+                for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ik.value, ik.previousValue)
               }
             } else {
-              if ((XS.op & bS.DELETE) === bS.DELETE) {
-                if (void 0 !== XS.previousValue) {
-                  const SS = uS[bS.DELETE];
-                  for (let HS = SS?.length - 1; HS >= 0; HS--) SS[HS](XS.previousValue, XS.dynamicIndex ?? XS.field)
+              if ((ik.op & Tk.DELETE) === Tk.DELETE) {
+                if (void 0 !== ik.previousValue) {
+                  const kk = qk[Tk.DELETE];
+                  for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ik.previousValue, ik.dynamicIndex ?? ik.field)
                 }
-                if ((XS.op & bS.ADD) === bS.ADD) {
-                  const SS = uS[bS.ADD];
-                  for (let HS = SS?.length - 1; HS >= 0; HS--) SS[HS](XS.value, XS.dynamicIndex ?? XS.field)
+                if ((ik.op & Tk.ADD) === Tk.ADD) {
+                  const kk = qk[Tk.ADD];
+                  for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ik.value, ik.dynamicIndex ?? ik.field)
                 }
-              } else if ((XS.op & bS.ADD) === bS.ADD && XS.previousValue !== XS.value) {
-                const SS = uS[bS.ADD];
-                for (let HS = SS?.length - 1; HS >= 0; HS--) SS[HS](XS.value, XS.dynamicIndex ?? XS.field)
+              } else if ((ik.op & Tk.ADD) === Tk.ADD && ik.previousValue !== ik.value) {
+                const kk = qk[Tk.ADD];
+                for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ik.value, ik.dynamicIndex ?? ik.field)
               }
-              if (XS.value !== XS.previousValue && (void 0 !== XS.value || void 0 !== XS.previousValue)) {
-                const SS = uS[bS.REPLACE];
-                for (let HS = SS?.length - 1; HS >= 0; HS--) SS[HS](XS.value, XS.dynamicIndex ?? XS.field)
+              if (ik.value !== ik.previousValue && (void 0 !== ik.value || void 0 !== ik.previousValue)) {
+                const kk = qk[Tk.REPLACE];
+                for (let Fk = kk?.length - 1; Fk >= 0; Fk--) kk[Fk](ik.value, ik.dynamicIndex ?? ik.field)
               }
             }
-            HS.add(xS)
+            Fk.add(yk)
           }
         }
-      }, qS
+      }, ak
     }
 
-    function Hb(SS, HS) {
-      SS.fL = HS
+    function FT(kk, Fk) {
+      kk.sG = Fk
     }
-    rt.encode = function(SS) {
-      let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    MX.encode = function(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         offset: 0
       };
-      const gS = SS.context,
-        tS = new rt,
-        bS = new Mt(tS),
-        XS = gS.schemas.get(SS.state.constructor);
-      XS > 0 && (tS.rootType = XS);
-      const xS = new Set,
-        NS = {},
-        qS = SS => {
-          if (void 0 === SS.extendsId || xS.has(SS.extendsId)) {
-            xS.add(SS.id), tS.types.push(SS);
-            const HS = NS[SS.id];
-            void 0 !== HS && (delete NS[SS.id], HS.forEach((SS => qS(SS))))
-          } else void 0 === NS[SS.extendsId] && (NS[SS.extendsId] = []), NS[SS.extendsId].push(SS)
+      const Ik = kk.context,
+        Xk = new MX,
+        Tk = new dX(Xk),
+        ik = Ik.schemas.get(kk.state.constructor);
+      ik > 0 && (Xk.rootType = ik);
+      const yk = new Set,
+        lk = {},
+        ak = kk => {
+          if (void 0 === kk.extendsId || yk.has(kk.extendsId)) {
+            yk.add(kk.id), Xk.types.push(kk);
+            const Fk = lk[kk.id];
+            void 0 !== Fk && (delete lk[kk.id], Fk.forEach((kk => ak(kk))))
+          } else void 0 === lk[kk.extendsId] && (lk[kk.extendsId] = []), lk[kk.extendsId].push(kk)
         };
-      gS.schemas.forEach(((SS, HS) => {
-        const tS = new et;
-        tS.id = Number(SS);
-        const bS = Object.getPrototypeOf(HS);
-        bS !== vt && (tS.extendsId = gS.schemas.get(bS));
-        const XS = HS[Symbol.metadata];
-        if (XS !== bS[Symbol.metadata]) {
-          const SS = XS[OS] ?? -1;
-          for (let HS = 0; HS <= SS; HS++) {
-            const SS = XS[HS];
-            if (void 0 === SS) continue;
-            const bS = SS.name;
-            if (!Object.prototype.hasOwnProperty.call(XS, bS)) continue;
-            const xS = new mt;
-            let NS;
-            if (xS.name = bS, "string" === typeof SS.type) NS = SS.type;
-            else if (VH(SS.type)) {
-              const HS = SS.type.quantized;
-              NS = "quantized";
-              const gS = new lt;
-              gS.min = HS.min, gS.max = HS.max, gS.bits = HS.bits, gS.mode = HS.wrap ? 1 : 0, xS.quantized = gS
+      Ik.schemas.forEach(((kk, Fk) => {
+        const Xk = new DX;
+        Xk.id = Number(kk);
+        const Tk = Object.getPrototypeOf(Fk);
+        Tk !== OX && (Xk.extendsId = Ik.schemas.get(Tk));
+        const ik = Fk[Symbol.metadata];
+        if (ik !== Tk[Symbol.metadata]) {
+          const kk = ik[vk] ?? -1;
+          for (let Fk = 0; Fk <= kk; Fk++) {
+            const kk = ik[Fk];
+            if (void 0 === kk) continue;
+            const Tk = kk.name;
+            if (!Object.prototype.hasOwnProperty.call(ik, Tk)) continue;
+            const yk = new rX;
+            let lk;
+            if (yk.name = Tk, "string" === typeof kk.type) lk = kk.type;
+            else if (UF(kk.type)) {
+              const Fk = kk.type.quantized;
+              lk = "quantized";
+              const Ik = new hX;
+              Ik.min = Fk.min, Ik.max = Fk.max, Ik.bits = Fk.bits, Ik.mode = Fk.wrap ? 1 : 0, yk.quantized = Ik
             } else {
-              let HS;
-              vt.is(SS.type) ? (NS = "ref", HS = SS.type) : (NS = Object.keys(SS.type)[0], "string" === typeof SS.type[NS] ? xS.childPrimitive = SS.type[NS] : HS = SS.type[NS]), xS.referencedType = HS ? gS.getTypeId(HS) : -1
+              let Fk;
+              OX.is(kk.type) ? (lk = "ref", Fk = kk.type) : (lk = Object.keys(kk.type)[0], "string" === typeof kk.type[lk] ? yk.childPrimitive = kk.type[lk] : Fk = kk.type[lk]), yk.referencedType = Fk ? Ik.getTypeId(Fk) : -1
             }
-            xS.type = NS, tS.fields.push(xS)
+            yk.type = lk, Xk.fields.push(yk)
           }
         }
-        qS(tS)
+        ak(Xk)
       }));
-      for (const uS in NS) NS[uS].forEach((SS => tS.types.push(SS)));
-      return bS.encodeAll(HS).slice(0, HS.offset)
-    }, rt.decode = function(SS, HS) {
-      const gS = new rt;
-      new ot(gS).decode(SS, HS);
-      const tS = new UH;
-      gS.types.forEach((SS => {
-        const HS = tS.get(SS.extendsId) ?? vt,
-          gS = class extends HS {};
-        UH.register(gS), tS.add(gS, SS.id)
+      for (const qk in lk) lk[qk].forEach((kk => Xk.types.push(kk)));
+      return Tk.encodeAll(Fk).slice(0, Fk.offset)
+    }, MX.decode = function(kk, Fk) {
+      const Ik = new MX;
+      new mX(Ik).decode(kk, Fk);
+      const Xk = new WF;
+      Ik.types.forEach((kk => {
+        const Fk = Xk.get(kk.extendsId) ?? OX,
+          Ik = class extends Fk {};
+        WF.register(Ik), Xk.add(Ik, kk.id)
       }), {});
-      gS.types.forEach((SS => {
-        const HS = tS.get(SS.id),
-          bS = TH.initialize(HS),
-          XS = [];
-        let xS = SS;
+      Ik.types.forEach((kk => {
+        const Fk = Xk.get(kk.id),
+          Tk = mF.initialize(Fk),
+          ik = [];
+        let yk = kk;
         do {
-          XS.push(xS), xS = gS.types.find((SS => SS.id === xS.extendsId))
-        } while (xS);
-        let NS = 0;
-        XS.reverse().forEach((SS => {
-          ((SS, HS, gS) => {
-            HS.fields.forEach(((HS, bS) => {
-              const XS = gS + bS;
-              if (void 0 !== HS.quantized) {
-                const gS = HS.quantized;
-                TH.addField(SS, XS, HS.name, {
-                  quantized: yH({
-                    min: gS.min,
-                    max: gS.max,
-                    bits: gS.bits,
-                    mode: 1 === gS.mode ? "wrap" : "clamp"
+          ik.push(yk), yk = Ik.types.find((kk => kk.id === yk.extendsId))
+        } while (yk);
+        let lk = 0;
+        ik.reverse().forEach((kk => {
+          ((kk, Fk, Ik) => {
+            Fk.fields.forEach(((Fk, Tk) => {
+              const ik = Ik + Tk;
+              if (void 0 !== Fk.quantized) {
+                const Ik = Fk.quantized;
+                mF.addField(kk, ik, Fk.name, {
+                  quantized: RF({
+                    min: Ik.min,
+                    max: Ik.max,
+                    bits: Ik.bits,
+                    mode: 1 === Ik.mode ? "wrap" : "clamp"
                   })
                 })
-              } else if (void 0 !== HS.referencedType) {
-                const gS = HS.type,
-                  bS = tS.get(HS.referencedType) ?? HS.childPrimitive;
-                "ref" === gS ? TH.addField(SS, XS, HS.name, bS) : TH.addField(SS, XS, HS.name, {
-                  [gS]: bS
+              } else if (void 0 !== Fk.referencedType) {
+                const Ik = Fk.type,
+                  Tk = Xk.get(Fk.referencedType) ?? Fk.childPrimitive;
+                "ref" === Ik ? mF.addField(kk, ik, Fk.name, Tk) : mF.addField(kk, ik, Fk.name, {
+                  [Ik]: Tk
                 })
-              } else TH.addField(SS, XS, HS.name, HS.type)
+              } else mF.addField(kk, ik, Fk.name, Fk.type)
             }))
-          })(bS, SS, NS), NS += SS.fields.length
+          })(Tk, kk, lk), lk += kk.fields.length
         }))
       }));
-      const bS = new(tS.get(gS.rootType || 0));
-      return new ot(bS, tS)
-    }, rt.makeEncodable = function(SS) {
-      const HS = SS[Symbol.metadata];
-      if (!HS) return SS;
-      const gS = HS[OS];
-      if (void 0 === gS) return SS;
-      for (let tS = 0; tS <= gS; tS++) {
-        const gS = HS[tS];
-        gS && TH.defineField(SS, HS, tS, gS.name, gS.type)
+      const Tk = new(Xk.get(Ik.rootType || 0));
+      return new mX(Tk, Xk)
+    }, MX.makeEncodable = function(kk) {
+      const Fk = kk[Symbol.metadata];
+      if (!Fk) return kk;
+      const Ik = Fk[vk];
+      if (void 0 === Ik) return kk;
+      for (let Xk = 0; Xk <= Ik; Xk++) {
+        const Ik = Fk[Xk];
+        Ik && mF.defineField(kk, Fk, Xk, Ik.name, Ik.type)
       }
-      return Object.prototype.hasOwnProperty.call(SS, ZS) && delete SS[ZS], SS
+      return Object.prototype.hasOwnProperty.call(kk, zk) && delete kk[zk], kk
     };
-    class gb {
-      NK;
+    class IT {
+      Xe;
       uniqueRefIds = new Set;
       isTriggering = !1;
-      constructor(SS) {
-        this.NK = SS, this.NK.fL = this.fL.bind(this)
+      constructor(kk) {
+        this.Xe = kk, this.Xe.sG = this.sG.bind(this)
       }
       get callbacks() {
-        return this.NK.root.callbacks
+        return this.Xe.root.callbacks
       }
       get state() {
-        return this.NK.state
+        return this.Xe.state
       }
-      addCallback(SS, HS, gS) {
-        return this.NK.root.addCallback(SS, HS, gS)
+      addCallback(kk, Fk, Ik) {
+        return this.Xe.root.addCallback(kk, Fk, Ik)
       }
-      addCallbackOrWaitCollectionAvailable(SS, HS, gS, tS) {
-        let XS = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          xS = () => {};
-        const qS = () => xS(),
-          uS = SS[HS];
-        if (uS && void 0 !== uS[NS]) return XS = XS && !1 === this.isTriggering, gS === bS.ADD && XS && uS.forEach(((SS, HS) => {
-          tS(SS, HS)
-        })), this.addCallback(uS[NS], gS, tS);
+      addCallbackOrWaitCollectionAvailable(kk, Fk, Ik, Xk) {
+        let ik = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          yk = () => {};
+        const ak = () => yk(),
+          qk = kk[Fk];
+        if (qk && void 0 !== qk[lk]) return ik = ik && !1 === this.isTriggering, Ik === Tk.ADD && ik && qk.forEach(((kk, Fk) => {
+          Xk(kk, Fk)
+        })), this.addCallback(qk[lk], Ik, Xk);
         {
-          let bS;
-          return bS = this.addCallback(SS[NS], HS, ((SS, HS) => {
-            null !== SS && void 0 !== SS && (bS(), xS = this.addCallback(SS[NS], gS, tS))
-          })), xS = bS, qS
+          let Tk;
+          return Tk = this.addCallback(kk[lk], Fk, ((kk, Fk) => {
+            null !== kk && void 0 !== kk && (Tk(), yk = this.addCallback(kk[lk], Ik, Xk))
+          })), yk = Tk, ak
         }
       }
       listen() {
         return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.listenInstance(this.state, arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2]) : this.listenInstance(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], arguments.length <= 2 ? void 0 : arguments[2], arguments.length <= 3 ? void 0 : arguments[3])
       }
-      listenInstance(SS, HS, gS) {
-        let tS = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        tS = tS && !1 === this.isTriggering;
-        const bS = SS[HS];
-        return tS && null !== bS && void 0 !== bS && gS(bS, void 0), this.addCallback(SS[NS], HS, gS)
+      listenInstance(kk, Fk, Ik) {
+        let Xk = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        Xk = Xk && !1 === this.isTriggering;
+        const Tk = kk[Fk];
+        return Xk && null !== Tk && void 0 !== Tk && Ik(Tk, void 0), this.addCallback(kk[lk], Fk, Ik)
       }
       onChange() {
         if (2 === arguments.length && "string" !== typeof(arguments.length <= 0 ? void 0 : arguments[0])) {
-          const SS = arguments.length <= 0 ? void 0 : arguments[0],
-            HS = arguments.length <= 1 ? void 0 : arguments[1];
-          return this.addCallback(SS[NS], bS.REPLACE, HS)
+          const kk = arguments.length <= 0 ? void 0 : arguments[0],
+            Fk = arguments.length <= 1 ? void 0 : arguments[1];
+          return this.addCallback(kk[lk], Tk.REPLACE, Fk)
         }
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], bS.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], bS.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Tk.REPLACE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Tk.REPLACE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      EQ() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], bS.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], bS.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
+      mJ() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Tk.ADD, arguments.length <= 1 ? void 0 : arguments[1], !1 !== (arguments.length <= 2 ? void 0 : arguments[2])) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Tk.ADD, arguments.length <= 2 ? void 0 : arguments[2], !1 !== (arguments.length <= 3 ? void 0 : arguments[3]))
       }
-      pE() {
-        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], bS.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], bS.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
+      iG() {
+        return "string" === typeof(arguments.length <= 0 ? void 0 : arguments[0]) ? this.addCallbackOrWaitCollectionAvailable(this.state, arguments.length <= 0 ? void 0 : arguments[0], Tk.DELETE, arguments.length <= 1 ? void 0 : arguments[1]) : this.addCallbackOrWaitCollectionAvailable(arguments.length <= 0 ? void 0 : arguments[0], arguments.length <= 1 ? void 0 : arguments[1], Tk.DELETE, arguments.length <= 2 ? void 0 : arguments[2])
       }
-      bindTo(SS, HS, gS) {
-        let tS = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const XS = SS.constructor[Symbol.metadata];
-        gS || (gS = Object.keys(XS).filter((SS => !isNaN(Number(SS)))).map((SS => XS[SS].name)));
-        const xS = () => {
-          for (const tS of gS) {
-            const gS = SS[tS];
-            void 0 !== gS && (HS[tS] = gS)
+      bindTo(kk, Fk, Ik) {
+        let Xk = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const ik = kk.constructor[Symbol.metadata];
+        Ik || (Ik = Object.keys(ik).filter((kk => !isNaN(Number(kk)))).map((kk => ik[kk].name)));
+        const yk = () => {
+          for (const Xk of Ik) {
+            const Ik = kk[Xk];
+            void 0 !== Ik && (Fk[Xk] = Ik)
           }
         };
-        return tS && xS(), this.addCallback(SS[NS], bS.REPLACE, xS)
+        return Xk && yk(), this.addCallback(kk[lk], Tk.REPLACE, yk)
       }
-      fL(SS) {
+      sG(kk) {
         this.uniqueRefIds.clear(), this.isTriggering = !0;
-        for (let HS = 0, gS = SS.length; HS < gS; HS++) {
-          const gS = SS[HS],
-            tS = gS.refId,
-            XS = gS.ref,
-            xS = this.callbacks[tS];
-          if (xS) {
-            if ((gS.op & bS.DELETE) === bS.DELETE && vt.isSchema(gS.previousValue)) {
-              const SS = gS.previousValue[NS],
-                HS = this.callbacks[SS]?.[bS.DELETE];
-              if (HS)
-                for (let gS = HS.length - 1; gS >= 0; gS--) try {
-                  HS[gS]()
-                } catch (xb) {
-                  console.error(xb)
+        for (let Fk = 0, Ik = kk.length; Fk < Ik; Fk++) {
+          const Ik = kk[Fk],
+            Xk = Ik.refId,
+            ik = Ik.ref,
+            yk = this.callbacks[Xk];
+          if (yk) {
+            if ((Ik.op & Tk.DELETE) === Tk.DELETE && OX.isSchema(Ik.previousValue)) {
+              const kk = Ik.previousValue[lk],
+                Fk = this.callbacks[kk]?.[Tk.DELETE];
+              if (Fk)
+                for (let Ik = Fk.length - 1; Ik >= 0; Ik--) try {
+                  Fk[Ik]()
+                } catch (yT) {
+                  console.error(yT)
                 }
             }
-            if (vt.isSchema(XS)) {
-              if (!this.uniqueRefIds.has(tS)) {
-                const SS = xS[bS.REPLACE];
-                if (SS)
-                  for (let HS = SS.length - 1; HS >= 0; HS--) try {
-                    SS[HS]()
-                  } catch (xb) {
-                    console.error(xb)
+            if (OX.isSchema(ik)) {
+              if (!this.uniqueRefIds.has(Xk)) {
+                const kk = yk[Tk.REPLACE];
+                if (kk)
+                  for (let Fk = kk.length - 1; Fk >= 0; Fk--) try {
+                    kk[Fk]()
+                  } catch (yT) {
+                    console.error(yT)
                   }
               }
-              const SS = xS[gS.field];
-              if (SS)
-                for (let HS = SS.length - 1; HS >= 0; HS--) try {
-                  SS[HS](gS.value, gS.previousValue)
-                } catch (xb) {
-                  console.error(xb)
+              const kk = yk[Ik.field];
+              if (kk)
+                for (let Fk = kk.length - 1; Fk >= 0; Fk--) try {
+                  kk[Fk](Ik.value, Ik.previousValue)
+                } catch (yT) {
+                  console.error(yT)
                 }
             } else {
-              const SS = gS.dynamicIndex ?? gS.field;
-              if ((gS.op & bS.DELETE) === bS.DELETE) {
-                if (void 0 !== gS.previousValue) {
-                  const HS = xS[bS.DELETE];
-                  if (HS)
-                    for (let tS = HS.length - 1; tS >= 0; tS--) try {
-                      HS[tS](gS.previousValue, SS)
-                    } catch (xb) {
-                      console.error(xb)
+              const kk = Ik.dynamicIndex ?? Ik.field;
+              if ((Ik.op & Tk.DELETE) === Tk.DELETE) {
+                if (void 0 !== Ik.previousValue) {
+                  const Fk = yk[Tk.DELETE];
+                  if (Fk)
+                    for (let Xk = Fk.length - 1; Xk >= 0; Xk--) try {
+                      Fk[Xk](Ik.previousValue, kk)
+                    } catch (yT) {
+                      console.error(yT)
                     }
                 }
-                if ((gS.op & bS.ADD) === bS.ADD) {
-                  const HS = xS[bS.ADD];
-                  if (HS)
-                    for (let tS = HS.length - 1; tS >= 0; tS--) try {
-                      HS[tS](gS.value, SS)
-                    } catch (xb) {
-                      console.error(xb)
+                if ((Ik.op & Tk.ADD) === Tk.ADD) {
+                  const Fk = yk[Tk.ADD];
+                  if (Fk)
+                    for (let Xk = Fk.length - 1; Xk >= 0; Xk--) try {
+                      Fk[Xk](Ik.value, kk)
+                    } catch (yT) {
+                      console.error(yT)
                     }
                 }
-              } else if ((gS.op & bS.ADD) === bS.ADD && gS.previousValue !== gS.value) {
-                const HS = xS[bS.ADD];
-                if (HS)
-                  for (let tS = HS.length - 1; tS >= 0; tS--) try {
-                    HS[tS](gS.value, SS)
-                  } catch (xb) {
-                    console.error(xb)
+              } else if ((Ik.op & Tk.ADD) === Tk.ADD && Ik.previousValue !== Ik.value) {
+                const Fk = yk[Tk.ADD];
+                if (Fk)
+                  for (let Xk = Fk.length - 1; Xk >= 0; Xk--) try {
+                    Fk[Xk](Ik.value, kk)
+                  } catch (yT) {
+                    console.error(yT)
                   }
               }
-              if (gS.value !== gS.previousValue) {
-                const HS = xS[bS.REPLACE];
-                if (HS)
-                  for (let tS = HS.length - 1; tS >= 0; tS--) try {
-                    HS[tS](SS, gS.value)
-                  } catch (xb) {
-                    console.error(xb)
+              if (Ik.value !== Ik.previousValue) {
+                const Fk = yk[Tk.REPLACE];
+                if (Fk)
+                  for (let Xk = Fk.length - 1; Xk >= 0; Xk--) try {
+                    Fk[Xk](kk, Ik.value)
+                  } catch (yT) {
+                    console.error(yT)
                   }
               }
             }
-            this.uniqueRefIds.add(tS)
+            this.uniqueRefIds.add(Xk)
           }
         }
         this.isTriggering = !1
       }
     }
-    const tb = {
-      get(SS) {
-        if (SS instanceof ot) return new gb(SS);
-        if ("NK" in SS.nC) return new gb(SS.nC.NK);
+    const XT = {
+      get(kk) {
+        if (kk instanceof mX) return new IT(kk);
+        if ("Xe" in kk.LJ) return new IT(kk.LJ.Xe);
         throw new Error("Invalid room or decoder")
       },
-      getLegacy(SS) {
-        if (SS instanceof ot) return Sb(SS);
-        if ("NK" in SS.nC) return Sb(SS.nC.NK);
+      getLegacy(kk) {
+        if (kk instanceof mX) return kT(kk);
+        if ("Xe" in kk.LJ) return kT(kk.LJ.Xe);
         throw new Error("Invalid room or decoder")
       },
-      getRawChanges: (SS, HS) => Hb(SS, HS)
+      getRawChanges: (kk, Fk) => FT(kk, Fk)
     };
-    class bb {
+    class TT {
       _free = [];
       _factory;
       _maxSize;
-      constructor(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this._factory = SS, this._maxSize = HS.maxSize ?? 1 / 0;
-        const gS = HS.preallocate ?? 0;
-        for (let tS = 0; tS < gS; tS++) this._free.push(SS())
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this._factory = kk, this._maxSize = Fk.maxSize ?? 1 / 0;
+        const Ik = Fk.preallocate ?? 0;
+        for (let Xk = 0; Xk < Ik; Xk++) this._free.push(kk())
       }
       acquire() {
         return this._free.length > 0 ? this._free.pop() : this._factory()
       }
-      release(SS) {
-        vt.reset(SS), this._free.length < this._maxSize && this._free.push(SS)
+      release(kk) {
+        OX.reset(kk), this._free.length < this._maxSize && this._free.push(kk)
       }
       get size() {
         return this._free.length
       }
     }
 
-    function Xb(SS) {
-      return new bb((() => new SS), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+    function iT(kk) {
+      return new TT((() => new kk), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
     }
-    wH("map", {
-      constructor: bt
-    }), wH("array", {
-      constructor: gt
-    }), wH("set", {
-      constructor: xt
-    }), wH("collection", {
-      constructor: Xt
+    VF("map", {
+      constructor: iX
+    }), VF("array", {
+      constructor: XX
+    }), VF("set", {
+      constructor: lX
+    }), VF("collection", {
+      constructor: yX
     })
   },
-  9249: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      __addDisposableResource: () => VS,
-      __assign: () => XS,
-      __asyncDelegator: () => JS,
-      __asyncGenerator: () => ZS,
-      __asyncValues: () => OS,
-      __await: () => hS,
-      __awaiter: () => KS,
-      __classPrivateFieldGet: () => YS,
-      __classPrivateFieldIn: () => yS,
-      __classPrivateFieldSet: () => AS,
-      __createBinding: () => GS,
-      __decorate: () => NS,
-      __disposeResources: () => WS,
-      __esDecorate: () => uS,
-      __exportStar: () => CS,
-      __extends: () => bS,
-      __generator: () => jS,
-      __importDefault: () => LS,
-      __importStar: () => ES,
-      __makeTemplateObject: () => dS,
-      __metadata: () => aS,
-      __param: () => qS,
-      __propKey: () => fS,
-      __read: () => PS,
-      __rest: () => xS,
-      __rewriteRelativeImportExtension: () => zS,
-      __runInitializers: () => IS,
-      __setFunctionName: () => kS,
-      __spread: () => QS,
-      __spreadArray: () => wS,
-      __spreadArrays: () => DS,
-      __values: () => nS,
-      default: () => US
+  9070: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      __addDisposableResource: () => Uk,
+      __assign: () => ik,
+      __asyncDelegator: () => Sk,
+      __asyncGenerator: () => zk,
+      __asyncValues: () => vk,
+      __await: () => Vk,
+      __awaiter: () => ek,
+      __classPrivateFieldGet: () => uk,
+      __classPrivateFieldIn: () => Rk,
+      __classPrivateFieldSet: () => bk,
+      __createBinding: () => Hk,
+      __decorate: () => lk,
+      __disposeResources: () => Nk,
+      __esDecorate: () => qk,
+      __exportStar: () => Jk,
+      __extends: () => Tk,
+      __generator: () => wk,
+      __importDefault: () => pk,
+      __importStar: () => Gk,
+      __makeTemplateObject: () => Ek,
+      __metadata: () => jk,
+      __param: () => ak,
+      __propKey: () => tk,
+      __read: () => Pk,
+      __rest: () => yk,
+      __rewriteRelativeImportExtension: () => ck,
+      __runInitializers: () => Lk,
+      __setFunctionName: () => Zk,
+      __spread: () => Kk,
+      __spreadArray: () => sk,
+      __spreadArrays: () => Qk,
+      __values: () => xk,
+      default: () => Wk
     });
-    var tS = function(SS, HS) {
-      return tS = Object.setPrototypeOf || {
+    var Xk = function(kk, Fk) {
+      return Xk = Object.setPrototypeOf || {
         __proto__: []
       }
-      instanceof Array && function(SS, HS) {
-        SS.__proto__ = HS
-      } || function(SS, HS) {
-        for (var gS in HS) Object.prototype.hasOwnProperty.call(HS, gS) && (SS[gS] = HS[gS])
-      }, tS(SS, HS)
+      instanceof Array && function(kk, Fk) {
+        kk.__proto__ = Fk
+      } || function(kk, Fk) {
+        for (var Ik in Fk) Object.prototype.hasOwnProperty.call(Fk, Ik) && (kk[Ik] = Fk[Ik])
+      }, Xk(kk, Fk)
     };
 
-    function bS(SS, HS) {
-      if ("function" !== typeof HS && null !== HS) throw new TypeError("Class extends value " + String(HS) + " is not a constructor or null");
+    function Tk(kk, Fk) {
+      if ("function" !== typeof Fk && null !== Fk) throw new TypeError("Class extends value " + String(Fk) + " is not a constructor or null");
 
-      function gS() {
-        this.constructor = SS
+      function Ik() {
+        this.constructor = kk
       }
-      tS(SS, HS), SS.prototype = null === HS ? Object.create(HS) : (gS.prototype = HS.prototype, new gS)
+      Xk(kk, Fk), kk.prototype = null === Fk ? Object.create(Fk) : (Ik.prototype = Fk.prototype, new Ik)
     }
-    var XS = function() {
-      return XS = Object.assign || function(SS) {
-        for (var HS, gS = 1, tS = arguments.length; gS < tS; gS++)
-          for (var bS in HS = arguments[gS]) Object.prototype.hasOwnProperty.call(HS, bS) && (SS[bS] = HS[bS]);
-        return SS
-      }, XS.apply(this, arguments)
+    var ik = function() {
+      return ik = Object.assign || function(kk) {
+        for (var Fk, Ik = 1, Xk = arguments.length; Ik < Xk; Ik++)
+          for (var Tk in Fk = arguments[Ik]) Object.prototype.hasOwnProperty.call(Fk, Tk) && (kk[Tk] = Fk[Tk]);
+        return kk
+      }, ik.apply(this, arguments)
     };
 
-    function xS(SS, HS) {
-      var gS = {};
-      for (var tS in SS) Object.prototype.hasOwnProperty.call(SS, tS) && HS.indexOf(tS) < 0 && (gS[tS] = SS[tS]);
-      if (null != SS && "function" === typeof Object.getOwnPropertySymbols) {
-        var bS = 0;
-        for (tS = Object.getOwnPropertySymbols(SS); bS < tS.length; bS++) HS.indexOf(tS[bS]) < 0 && Object.prototype.propertyIsEnumerable.call(SS, tS[bS]) && (gS[tS[bS]] = SS[tS[bS]])
+    function yk(kk, Fk) {
+      var Ik = {};
+      for (var Xk in kk) Object.prototype.hasOwnProperty.call(kk, Xk) && Fk.indexOf(Xk) < 0 && (Ik[Xk] = kk[Xk]);
+      if (null != kk && "function" === typeof Object.getOwnPropertySymbols) {
+        var Tk = 0;
+        for (Xk = Object.getOwnPropertySymbols(kk); Tk < Xk.length; Tk++) Fk.indexOf(Xk[Tk]) < 0 && Object.prototype.propertyIsEnumerable.call(kk, Xk[Tk]) && (Ik[Xk[Tk]] = kk[Xk[Tk]])
       }
-      return gS
+      return Ik
     }
 
-    function NS(SS, HS, gS, tS) {
-      var bS, XS = arguments.length,
-        xS = XS < 3 ? HS : null === tS ? tS = Object.getOwnPropertyDescriptor(HS, gS) : tS;
-      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) xS = Reflect.decorate(SS, HS, gS, tS);
+    function lk(kk, Fk, Ik, Xk) {
+      var Tk, ik = arguments.length,
+        yk = ik < 3 ? Fk : null === Xk ? Xk = Object.getOwnPropertyDescriptor(Fk, Ik) : Xk;
+      if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) yk = Reflect.decorate(kk, Fk, Ik, Xk);
       else
-        for (var NS = SS.length - 1; NS >= 0; NS--)(bS = SS[NS]) && (xS = (XS < 3 ? bS(xS) : XS > 3 ? bS(HS, gS, xS) : bS(HS, gS)) || xS);
-      return XS > 3 && xS && Object.defineProperty(HS, gS, xS), xS
+        for (var lk = kk.length - 1; lk >= 0; lk--)(Tk = kk[lk]) && (yk = (ik < 3 ? Tk(yk) : ik > 3 ? Tk(Fk, Ik, yk) : Tk(Fk, Ik)) || yk);
+      return ik > 3 && yk && Object.defineProperty(Fk, Ik, yk), yk
     }
 
-    function qS(SS, HS) {
-      return function(gS, tS) {
-        HS(gS, tS, SS)
+    function ak(kk, Fk) {
+      return function(Ik, Xk) {
+        Fk(Ik, Xk, kk)
       }
     }
 
-    function uS(SS, HS, gS, tS, bS, XS) {
-      function xS(SS) {
-        if (void 0 !== SS && "function" !== typeof SS) throw new TypeError("Function expected");
-        return SS
+    function qk(kk, Fk, Ik, Xk, Tk, ik) {
+      function yk(kk) {
+        if (void 0 !== kk && "function" !== typeof kk) throw new TypeError("Function expected");
+        return kk
       }
-      for (var NS, qS = tS.kind, uS = "getter" === qS ? "get" : "setter" === qS ? "set" : "value", IS = !HS && SS ? tS.static ? SS : SS.prototype : null, fS = HS || (IS ? Object.getOwnPropertyDescriptor(IS, tS.name) : {}), kS = !1, aS = gS.length - 1; aS >= 0; aS--) {
-        var KS = {};
-        for (var jS in tS) KS[jS] = "access" === jS ? {} : tS[jS];
-        for (var jS in tS.access) KS.access[jS] = tS.access[jS];
-        KS.addInitializer = function(SS) {
-          if (kS) throw new TypeError("Cannot add initializers after decoration has completed");
-          XS.push(xS(SS || null))
+      for (var lk, ak = Xk.kind, qk = "getter" === ak ? "get" : "setter" === ak ? "set" : "value", Lk = !Fk && kk ? Xk.static ? kk : kk.prototype : null, tk = Fk || (Lk ? Object.getOwnPropertyDescriptor(Lk, Xk.name) : {}), Zk = !1, jk = Ik.length - 1; jk >= 0; jk--) {
+        var ek = {};
+        for (var wk in Xk) ek[wk] = "access" === wk ? {} : Xk[wk];
+        for (var wk in Xk.access) ek.access[wk] = Xk.access[wk];
+        ek.addInitializer = function(kk) {
+          if (Zk) throw new TypeError("Cannot add initializers after decoration has completed");
+          ik.push(yk(kk || null))
         };
-        var GS = (0, gS[aS])("accessor" === qS ? {
-          get: fS.get,
-          set: fS.set
-        } : fS[uS], KS);
-        if ("accessor" === qS) {
-          if (void 0 === GS) continue;
-          if (null === GS || "object" !== typeof GS) throw new TypeError("Object expected");
-          (NS = xS(GS.get)) && (fS.get = NS), (NS = xS(GS.set)) && (fS.set = NS), (NS = xS(GS.init)) && bS.unshift(NS)
-        } else(NS = xS(GS)) && ("field" === qS ? bS.unshift(NS) : fS[uS] = NS)
+        var Hk = (0, Ik[jk])("accessor" === ak ? {
+          get: tk.get,
+          set: tk.set
+        } : tk[qk], ek);
+        if ("accessor" === ak) {
+          if (void 0 === Hk) continue;
+          if (null === Hk || "object" !== typeof Hk) throw new TypeError("Object expected");
+          (lk = yk(Hk.get)) && (tk.get = lk), (lk = yk(Hk.set)) && (tk.set = lk), (lk = yk(Hk.init)) && Tk.unshift(lk)
+        } else(lk = yk(Hk)) && ("field" === ak ? Tk.unshift(lk) : tk[qk] = lk)
       }
-      IS && Object.defineProperty(IS, tS.name, fS), kS = !0
+      Lk && Object.defineProperty(Lk, Xk.name, tk), Zk = !0
     }
 
-    function IS(SS, HS, gS) {
-      for (var tS = arguments.length > 2, bS = 0; bS < HS.length; bS++) gS = tS ? HS[bS].call(SS, gS) : HS[bS].call(SS);
-      return tS ? gS : void 0
+    function Lk(kk, Fk, Ik) {
+      for (var Xk = arguments.length > 2, Tk = 0; Tk < Fk.length; Tk++) Ik = Xk ? Fk[Tk].call(kk, Ik) : Fk[Tk].call(kk);
+      return Xk ? Ik : void 0
     }
 
-    function fS(SS) {
-      return "symbol" === typeof SS ? SS : "".concat(SS)
+    function tk(kk) {
+      return "symbol" === typeof kk ? kk : "".concat(kk)
     }
 
-    function kS(SS, HS, gS) {
-      return "symbol" === typeof HS && (HS = HS.description ? "[".concat(HS.description, "]") : ""), Object.defineProperty(SS, "name", {
+    function Zk(kk, Fk, Ik) {
+      return "symbol" === typeof Fk && (Fk = Fk.description ? "[".concat(Fk.description, "]") : ""), Object.defineProperty(kk, "name", {
         configurable: !0,
-        value: gS ? "".concat(gS, " ", HS) : HS
+        value: Ik ? "".concat(Ik, " ", Fk) : Fk
       })
     }
 
-    function aS(SS, HS) {
-      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(SS, HS)
+    function jk(kk, Fk) {
+      if ("object" === typeof Reflect && "function" === typeof Reflect.metadata) return Reflect.metadata(kk, Fk)
     }
 
-    function KS(SS, HS, gS, tS) {
-      return new(gS || (gS = Promise))((function(bS, XS) {
-        function xS(SS) {
+    function ek(kk, Fk, Ik, Xk) {
+      return new(Ik || (Ik = Promise))((function(Tk, ik) {
+        function yk(kk) {
           try {
-            qS(tS.next(SS))
-          } catch (HS) {
-            XS(HS)
+            ak(Xk.next(kk))
+          } catch (Fk) {
+            ik(Fk)
           }
         }
 
-        function NS(SS) {
+        function lk(kk) {
           try {
-            qS(tS.throw(SS))
-          } catch (HS) {
-            XS(HS)
+            ak(Xk.throw(kk))
+          } catch (Fk) {
+            ik(Fk)
           }
         }
 
-        function qS(SS) {
-          var HS;
-          SS.done ? bS(SS.value) : (HS = SS.value, HS instanceof gS ? HS : new gS((function(SS) {
-            SS(HS)
-          }))).then(xS, NS)
+        function ak(kk) {
+          var Fk;
+          kk.done ? Tk(kk.value) : (Fk = kk.value, Fk instanceof Ik ? Fk : new Ik((function(kk) {
+            kk(Fk)
+          }))).then(yk, lk)
         }
-        qS((tS = tS.apply(SS, HS || [])).next())
+        ak((Xk = Xk.apply(kk, Fk || [])).next())
       }))
     }
 
-    function jS(SS, HS) {
-      var gS, tS, bS, XS = {
+    function wk(kk, Fk) {
+      var Ik, Xk, Tk, ik = {
           label: 0,
           sent: function() {
-            if (1 & bS[0]) throw bS[1];
-            return bS[1]
+            if (1 & Tk[0]) throw Tk[1];
+            return Tk[1]
           },
           trys: [],
           ops: []
         },
-        xS = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
-      return xS.next = NS(0), xS.throw = NS(1), xS.return = NS(2), "function" === typeof Symbol && (xS[Symbol.iterator] = function() {
+        yk = Object.create(("function" === typeof Iterator ? Iterator : Object).prototype);
+      return yk.next = lk(0), yk.throw = lk(1), yk.return = lk(2), "function" === typeof Symbol && (yk[Symbol.iterator] = function() {
         return this
-      }), xS;
+      }), yk;
 
-      function NS(NS) {
-        return function(qS) {
-          return function(NS) {
-            if (gS) throw new TypeError("Generator is already executing.");
-            for (; xS && (xS = 0, NS[0] && (XS = 0)), XS;) try {
-              if (gS = 1, tS && (bS = 2 & NS[0] ? tS.return : NS[0] ? tS.throw || ((bS = tS.return) && bS.call(tS), 0) : tS.next) && !(bS = bS.call(tS, NS[1])).done) return bS;
-              switch (tS = 0, bS && (NS = [2 & NS[0], bS.value]), NS[0]) {
+      function lk(lk) {
+        return function(ak) {
+          return function(lk) {
+            if (Ik) throw new TypeError("Generator is already executing.");
+            for (; yk && (yk = 0, lk[0] && (ik = 0)), ik;) try {
+              if (Ik = 1, Xk && (Tk = 2 & lk[0] ? Xk.return : lk[0] ? Xk.throw || ((Tk = Xk.return) && Tk.call(Xk), 0) : Xk.next) && !(Tk = Tk.call(Xk, lk[1])).done) return Tk;
+              switch (Xk = 0, Tk && (lk = [2 & lk[0], Tk.value]), lk[0]) {
                 case 0:
                 case 1:
-                  bS = NS;
+                  Tk = lk;
                   break;
                 case 4:
-                  return XS.label++, {
-                    value: NS[1],
+                  return ik.label++, {
+                    value: lk[1],
                     done: !1
                   };
                 case 5:
-                  XS.label++, tS = NS[1], NS = [0];
+                  ik.label++, Xk = lk[1], lk = [0];
                   continue;
                 case 7:
-                  NS = XS.ops.pop(), XS.trys.pop();
+                  lk = ik.ops.pop(), ik.trys.pop();
                   continue;
                 default:
-                  if (!(bS = (bS = XS.trys).length > 0 && bS[bS.length - 1]) && (6 === NS[0] || 2 === NS[0])) {
-                    XS = 0;
+                  if (!(Tk = (Tk = ik.trys).length > 0 && Tk[Tk.length - 1]) && (6 === lk[0] || 2 === lk[0])) {
+                    ik = 0;
                     continue
                   }
-                  if (3 === NS[0] && (!bS || NS[1] > bS[0] && NS[1] < bS[3])) {
-                    XS.label = NS[1];
+                  if (3 === lk[0] && (!Tk || lk[1] > Tk[0] && lk[1] < Tk[3])) {
+                    ik.label = lk[1];
                     break
                   }
-                  if (6 === NS[0] && XS.label < bS[1]) {
-                    XS.label = bS[1], bS = NS;
+                  if (6 === lk[0] && ik.label < Tk[1]) {
+                    ik.label = Tk[1], Tk = lk;
                     break
                   }
-                  if (bS && XS.label < bS[2]) {
-                    XS.label = bS[2], XS.ops.push(NS);
+                  if (Tk && ik.label < Tk[2]) {
+                    ik.label = Tk[2], ik.ops.push(lk);
                     break
                   }
-                  bS[2] && XS.ops.pop(), XS.trys.pop();
+                  Tk[2] && ik.ops.pop(), ik.trys.pop();
                   continue
               }
-              NS = HS.call(SS, XS)
-            } catch (qS) {
-              NS = [6, qS], tS = 0
+              lk = Fk.call(kk, ik)
+            } catch (ak) {
+              lk = [6, ak], Xk = 0
             } finally {
-              gS = bS = 0
+              Ik = Tk = 0
             }
-            if (5 & NS[0]) throw NS[1];
+            if (5 & lk[0]) throw lk[1];
             return {
-              value: NS[0] ? NS[1] : void 0,
+              value: lk[0] ? lk[1] : void 0,
               done: !0
             }
-          }([NS, qS])
+          }([lk, ak])
         }
       }
     }
-    var GS = Object.create ? function(SS, HS, gS, tS) {
-      void 0 === tS && (tS = gS);
-      var bS = Object.getOwnPropertyDescriptor(HS, gS);
-      bS && !("get" in bS ? !HS.__esModule : bS.writable || bS.configurable) || (bS = {
+    var Hk = Object.create ? function(kk, Fk, Ik, Xk) {
+      void 0 === Xk && (Xk = Ik);
+      var Tk = Object.getOwnPropertyDescriptor(Fk, Ik);
+      Tk && !("get" in Tk ? !Fk.__esModule : Tk.writable || Tk.configurable) || (Tk = {
         enumerable: !0,
         get: function() {
-          return HS[gS]
+          return Fk[Ik]
         }
-      }), Object.defineProperty(SS, tS, bS)
-    } : function(SS, HS, gS, tS) {
-      void 0 === tS && (tS = gS), SS[tS] = HS[gS]
+      }), Object.defineProperty(kk, Xk, Tk)
+    } : function(kk, Fk, Ik, Xk) {
+      void 0 === Xk && (Xk = Ik), kk[Xk] = Fk[Ik]
     };
 
-    function CS(SS, HS) {
-      for (var gS in SS) "default" === gS || Object.prototype.hasOwnProperty.call(HS, gS) || GS(HS, SS, gS)
+    function Jk(kk, Fk) {
+      for (var Ik in kk) "default" === Ik || Object.prototype.hasOwnProperty.call(Fk, Ik) || Hk(Fk, kk, Ik)
     }
 
-    function nS(SS) {
-      var HS = "function" === typeof Symbol && Symbol.iterator,
-        gS = HS && SS[HS],
-        tS = 0;
-      if (gS) return gS.call(SS);
-      if (SS && "number" === typeof SS.length) return {
+    function xk(kk) {
+      var Fk = "function" === typeof Symbol && Symbol.iterator,
+        Ik = Fk && kk[Fk],
+        Xk = 0;
+      if (Ik) return Ik.call(kk);
+      if (kk && "number" === typeof kk.length) return {
         next: function() {
-          return SS && tS >= SS.length && (SS = void 0), {
-            value: SS && SS[tS++],
-            done: !SS
+          return kk && Xk >= kk.length && (kk = void 0), {
+            value: kk && kk[Xk++],
+            done: !kk
           }
         }
       };
-      throw new TypeError(HS ? "Object is not iterable." : "Symbol.iterator is not defined.")
+      throw new TypeError(Fk ? "Object is not iterable." : "Symbol.iterator is not defined.")
     }
 
-    function PS(SS, HS) {
-      var gS = "function" === typeof Symbol && SS[Symbol.iterator];
-      if (!gS) return SS;
-      var tS, bS, XS = gS.call(SS),
-        xS = [];
+    function Pk(kk, Fk) {
+      var Ik = "function" === typeof Symbol && kk[Symbol.iterator];
+      if (!Ik) return kk;
+      var Xk, Tk, ik = Ik.call(kk),
+        yk = [];
       try {
         for (;
-          (void 0 === HS || HS-- > 0) && !(tS = XS.next()).done;) xS.push(tS.value)
-      } catch (NS) {
-        bS = {
-          error: NS
+          (void 0 === Fk || Fk-- > 0) && !(Xk = ik.next()).done;) yk.push(Xk.value)
+      } catch (lk) {
+        Tk = {
+          error: lk
         }
       } finally {
         try {
-          tS && !tS.done && (gS = XS.return) && gS.call(XS)
+          Xk && !Xk.done && (Ik = ik.return) && Ik.call(ik)
         } finally {
-          if (bS) throw bS.error
+          if (Tk) throw Tk.error
         }
       }
-      return xS
+      return yk
     }
 
-    function QS() {
-      for (var SS = [], HS = 0; HS < arguments.length; HS++) SS = SS.concat(PS(arguments[HS]));
-      return SS
+    function Kk() {
+      for (var kk = [], Fk = 0; Fk < arguments.length; Fk++) kk = kk.concat(Pk(arguments[Fk]));
+      return kk
     }
 
-    function DS() {
-      for (var SS = 0, HS = 0, gS = arguments.length; HS < gS; HS++) SS += arguments[HS].length;
-      var tS = Array(SS),
-        bS = 0;
-      for (HS = 0; HS < gS; HS++)
-        for (var XS = arguments[HS], xS = 0, NS = XS.length; xS < NS; xS++, bS++) tS[bS] = XS[xS];
-      return tS
+    function Qk() {
+      for (var kk = 0, Fk = 0, Ik = arguments.length; Fk < Ik; Fk++) kk += arguments[Fk].length;
+      var Xk = Array(kk),
+        Tk = 0;
+      for (Fk = 0; Fk < Ik; Fk++)
+        for (var ik = arguments[Fk], yk = 0, lk = ik.length; yk < lk; yk++, Tk++) Xk[Tk] = ik[yk];
+      return Xk
     }
 
-    function wS(SS, HS, gS) {
-      if (gS || 2 === arguments.length)
-        for (var tS, bS = 0, XS = HS.length; bS < XS; bS++) !tS && bS in HS || (tS || (tS = Array.prototype.slice.call(HS, 0, bS)), tS[bS] = HS[bS]);
-      return SS.concat(tS || Array.prototype.slice.call(HS))
+    function sk(kk, Fk, Ik) {
+      if (Ik || 2 === arguments.length)
+        for (var Xk, Tk = 0, ik = Fk.length; Tk < ik; Tk++) !Xk && Tk in Fk || (Xk || (Xk = Array.prototype.slice.call(Fk, 0, Tk)), Xk[Tk] = Fk[Tk]);
+      return kk.concat(Xk || Array.prototype.slice.call(Fk))
     }
 
-    function hS(SS) {
-      return this instanceof hS ? (this.v = SS, this) : new hS(SS)
+    function Vk(kk) {
+      return this instanceof Vk ? (this.v = kk, this) : new Vk(kk)
     }
 
-    function ZS(SS, HS, gS) {
+    function zk(kk, Fk, Ik) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var tS, bS = gS.apply(SS, HS || []),
-        XS = [];
-      return tS = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), xS("next"), xS("throw"), xS("return", (function(SS) {
-        return function(HS) {
-          return Promise.resolve(HS).then(SS, uS)
+      var Xk, Tk = Ik.apply(kk, Fk || []),
+        ik = [];
+      return Xk = Object.create(("function" === typeof AsyncIterator ? AsyncIterator : Object).prototype), yk("next"), yk("throw"), yk("return", (function(kk) {
+        return function(Fk) {
+          return Promise.resolve(Fk).then(kk, qk)
         }
-      })), tS[Symbol.asyncIterator] = function() {
+      })), Xk[Symbol.asyncIterator] = function() {
         return this
-      }, tS;
+      }, Xk;
 
-      function xS(SS, HS) {
-        bS[SS] && (tS[SS] = function(HS) {
-          return new Promise((function(gS, tS) {
-            XS.push([SS, HS, gS, tS]) > 1 || NS(SS, HS)
+      function yk(kk, Fk) {
+        Tk[kk] && (Xk[kk] = function(Fk) {
+          return new Promise((function(Ik, Xk) {
+            ik.push([kk, Fk, Ik, Xk]) > 1 || lk(kk, Fk)
           }))
-        }, HS && (tS[SS] = HS(tS[SS])))
+        }, Fk && (Xk[kk] = Fk(Xk[kk])))
       }
 
-      function NS(SS, HS) {
+      function lk(kk, Fk) {
         try {
-          (gS = bS[SS](HS)).value instanceof hS ? Promise.resolve(gS.value.v).then(qS, uS) : IS(XS[0][2], gS)
-        } catch (tS) {
-          IS(XS[0][3], tS)
+          (Ik = Tk[kk](Fk)).value instanceof Vk ? Promise.resolve(Ik.value.v).then(ak, qk) : Lk(ik[0][2], Ik)
+        } catch (Xk) {
+          Lk(ik[0][3], Xk)
         }
-        var gS
+        var Ik
       }
 
-      function qS(SS) {
-        NS("next", SS)
+      function ak(kk) {
+        lk("next", kk)
       }
 
-      function uS(SS) {
-        NS("throw", SS)
+      function qk(kk) {
+        lk("throw", kk)
       }
 
-      function IS(SS, HS) {
-        SS(HS), XS.shift(), XS.length && NS(XS[0][0], XS[0][1])
+      function Lk(kk, Fk) {
+        kk(Fk), ik.shift(), ik.length && lk(ik[0][0], ik[0][1])
       }
     }
 
-    function JS(SS) {
-      var HS, gS;
-      return HS = {}, tS("next"), tS("throw", (function(SS) {
-        throw SS
-      })), tS("return"), HS[Symbol.iterator] = function() {
+    function Sk(kk) {
+      var Fk, Ik;
+      return Fk = {}, Xk("next"), Xk("throw", (function(kk) {
+        throw kk
+      })), Xk("return"), Fk[Symbol.iterator] = function() {
         return this
-      }, HS;
+      }, Fk;
 
-      function tS(tS, bS) {
-        HS[tS] = SS[tS] ? function(HS) {
-          return (gS = !gS) ? {
-            value: hS(SS[tS](HS)),
+      function Xk(Xk, Tk) {
+        Fk[Xk] = kk[Xk] ? function(Fk) {
+          return (Ik = !Ik) ? {
+            value: Vk(kk[Xk](Fk)),
             done: !1
-          } : bS ? bS(HS) : HS
-        } : bS
+          } : Tk ? Tk(Fk) : Fk
+        } : Tk
       }
     }
 
-    function OS(SS) {
+    function vk(kk) {
       if (!Symbol.asyncIterator) throw new TypeError("Symbol.asyncIterator is not defined.");
-      var HS, gS = SS[Symbol.asyncIterator];
-      return gS ? gS.call(SS) : (SS = nS(SS), HS = {}, tS("next"), tS("throw"), tS("return"), HS[Symbol.asyncIterator] = function() {
+      var Fk, Ik = kk[Symbol.asyncIterator];
+      return Ik ? Ik.call(kk) : (kk = xk(kk), Fk = {}, Xk("next"), Xk("throw"), Xk("return"), Fk[Symbol.asyncIterator] = function() {
         return this
-      }, HS);
+      }, Fk);
 
-      function tS(gS) {
-        HS[gS] = SS[gS] && function(HS) {
-          return new Promise((function(tS, bS) {
-            (function(SS, HS, gS, tS) {
-              Promise.resolve(tS).then((function(HS) {
-                SS({
-                  value: HS,
-                  done: gS
+      function Xk(Ik) {
+        Fk[Ik] = kk[Ik] && function(Fk) {
+          return new Promise((function(Xk, Tk) {
+            (function(kk, Fk, Ik, Xk) {
+              Promise.resolve(Xk).then((function(Fk) {
+                kk({
+                  value: Fk,
+                  done: Ik
                 })
-              }), HS)
-            })(tS, bS, (HS = SS[gS](HS)).done, HS.value)
+              }), Fk)
+            })(Xk, Tk, (Fk = kk[Ik](Fk)).done, Fk.value)
           }))
         }
       }
     }
 
-    function dS(SS, HS) {
-      return Object.defineProperty ? Object.defineProperty(SS, "raw", {
-        value: HS
-      }) : SS.raw = HS, SS
+    function Ek(kk, Fk) {
+      return Object.defineProperty ? Object.defineProperty(kk, "raw", {
+        value: Fk
+      }) : kk.raw = Fk, kk
     }
-    var cS = Object.create ? function(SS, HS) {
-        Object.defineProperty(SS, "default", {
+    var Ok = Object.create ? function(kk, Fk) {
+        Object.defineProperty(kk, "default", {
           enumerable: !0,
-          value: HS
+          value: Fk
         })
-      } : function(SS, HS) {
-        SS.default = HS
+      } : function(kk, Fk) {
+        kk.default = Fk
       },
-      vS = function(SS) {
-        return vS = Object.getOwnPropertyNames || function(SS) {
-          var HS = [];
-          for (var gS in SS) Object.prototype.hasOwnProperty.call(SS, gS) && (HS[HS.length] = gS);
-          return HS
-        }, vS(SS)
+      nk = function(kk) {
+        return nk = Object.getOwnPropertyNames || function(kk) {
+          var Fk = [];
+          for (var Ik in kk) Object.prototype.hasOwnProperty.call(kk, Ik) && (Fk[Fk.length] = Ik);
+          return Fk
+        }, nk(kk)
       };
 
-    function ES(SS) {
-      if (SS && SS.__esModule) return SS;
-      var HS = {};
-      if (null != SS)
-        for (var gS = vS(SS), tS = 0; tS < gS.length; tS++) "default" !== gS[tS] && GS(HS, SS, gS[tS]);
-      return cS(HS, SS), HS
+    function Gk(kk) {
+      if (kk && kk.__esModule) return kk;
+      var Fk = {};
+      if (null != kk)
+        for (var Ik = nk(kk), Xk = 0; Xk < Ik.length; Xk++) "default" !== Ik[Xk] && Hk(Fk, kk, Ik[Xk]);
+      return Ok(Fk, kk), Fk
     }
 
-    function LS(SS) {
-      return SS && SS.__esModule ? SS : {
-        default: SS
+    function pk(kk) {
+      return kk && kk.__esModule ? kk : {
+        default: kk
       }
     }
 
-    function YS(SS, HS, gS, tS) {
-      if ("a" === gS && !tS) throw new TypeError("Private accessor was defined without a getter");
-      if ("function" === typeof HS ? SS !== HS || !tS : !HS.has(SS)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
-      return "m" === gS ? tS : "a" === gS ? tS.call(SS) : tS ? tS.value : HS.get(SS)
+    function uk(kk, Fk, Ik, Xk) {
+      if ("a" === Ik && !Xk) throw new TypeError("Private accessor was defined without a getter");
+      if ("function" === typeof Fk ? kk !== Fk || !Xk : !Fk.has(kk)) throw new TypeError("Cannot read private member from an object whose class did not declare it");
+      return "m" === Ik ? Xk : "a" === Ik ? Xk.call(kk) : Xk ? Xk.value : Fk.get(kk)
     }
 
-    function AS(SS, HS, gS, tS, bS) {
-      if ("m" === tS) throw new TypeError("Private method is not writable");
-      if ("a" === tS && !bS) throw new TypeError("Private accessor was defined without a setter");
-      if ("function" === typeof HS ? SS !== HS || !bS : !HS.has(SS)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
-      return "a" === tS ? bS.call(SS, gS) : bS ? bS.value = gS : HS.set(SS, gS), gS
+    function bk(kk, Fk, Ik, Xk, Tk) {
+      if ("m" === Xk) throw new TypeError("Private method is not writable");
+      if ("a" === Xk && !Tk) throw new TypeError("Private accessor was defined without a setter");
+      if ("function" === typeof Fk ? kk !== Fk || !Tk : !Fk.has(kk)) throw new TypeError("Cannot write private member to an object whose class did not declare it");
+      return "a" === Xk ? Tk.call(kk, Ik) : Tk ? Tk.value = Ik : Fk.set(kk, Ik), Ik
     }
 
-    function yS(SS, HS) {
-      if (null === HS || "object" !== typeof HS && "function" !== typeof HS) throw new TypeError("Cannot use 'in' operator on non-object");
-      return "function" === typeof SS ? HS === SS : SS.has(HS)
+    function Rk(kk, Fk) {
+      if (null === Fk || "object" !== typeof Fk && "function" !== typeof Fk) throw new TypeError("Cannot use 'in' operator on non-object");
+      return "function" === typeof kk ? Fk === kk : kk.has(Fk)
     }
 
-    function VS(SS, HS, gS) {
-      if (null !== HS && void 0 !== HS) {
-        if ("object" !== typeof HS && "function" !== typeof HS) throw new TypeError("Object expected.");
-        var tS, bS;
-        if (gS) {
+    function Uk(kk, Fk, Ik) {
+      if (null !== Fk && void 0 !== Fk) {
+        if ("object" !== typeof Fk && "function" !== typeof Fk) throw new TypeError("Object expected.");
+        var Xk, Tk;
+        if (Ik) {
           if (!Symbol.asyncDispose) throw new TypeError("Symbol.asyncDispose is not defined.");
-          tS = HS[Symbol.asyncDispose]
+          Xk = Fk[Symbol.asyncDispose]
         }
-        if (void 0 === tS) {
+        if (void 0 === Xk) {
           if (!Symbol.dispose) throw new TypeError("Symbol.dispose is not defined.");
-          tS = HS[Symbol.dispose], gS && (bS = tS)
+          Xk = Fk[Symbol.dispose], Ik && (Tk = Xk)
         }
-        if ("function" !== typeof tS) throw new TypeError("Object not disposable.");
-        bS && (tS = function() {
+        if ("function" !== typeof Xk) throw new TypeError("Object not disposable.");
+        Tk && (Xk = function() {
           try {
-            bS.call(this)
-          } catch (SS) {
-            return Promise.reject(SS)
+            Tk.call(this)
+          } catch (kk) {
+            return Promise.reject(kk)
           }
-        }), SS.stack.push({
-          value: HS,
-          dispose: tS,
-          async: gS
+        }), kk.stack.push({
+          value: Fk,
+          dispose: Xk,
+          async: Ik
         })
-      } else gS && SS.stack.push({
+      } else Ik && kk.stack.push({
         async: !0
       });
-      return HS
+      return Fk
     }
-    var iS = "function" === typeof SuppressedError ? SuppressedError : function(SS, HS, gS) {
-      var tS = new Error(gS);
-      return tS.name = "SuppressedError", tS.error = SS, tS.suppressed = HS, tS
+    var Ck = "function" === typeof SuppressedError ? SuppressedError : function(kk, Fk, Ik) {
+      var Xk = new Error(Ik);
+      return Xk.name = "SuppressedError", Xk.error = kk, Xk.suppressed = Fk, Xk
     };
 
-    function WS(SS) {
-      function HS(HS) {
-        SS.error = SS.hasError ? new iS(HS, SS.error, "An error was suppressed during disposal.") : HS, SS.hasError = !0
+    function Nk(kk) {
+      function Fk(Fk) {
+        kk.error = kk.hasError ? new Ck(Fk, kk.error, "An error was suppressed during disposal.") : Fk, kk.hasError = !0
       }
-      var gS, tS = 0;
-      return function bS() {
-        for (; gS = SS.stack.pop();) try {
-          if (!gS.async && 1 === tS) return tS = 0, SS.stack.push(gS), Promise.resolve().then(bS);
-          if (gS.dispose) {
-            var XS = gS.dispose.call(gS.value);
-            if (gS.async) return tS |= 2, Promise.resolve(XS).then(bS, (function(SS) {
-              return HS(SS), bS()
+      var Ik, Xk = 0;
+      return function Tk() {
+        for (; Ik = kk.stack.pop();) try {
+          if (!Ik.async && 1 === Xk) return Xk = 0, kk.stack.push(Ik), Promise.resolve().then(Tk);
+          if (Ik.dispose) {
+            var ik = Ik.dispose.call(Ik.value);
+            if (Ik.async) return Xk |= 2, Promise.resolve(ik).then(Tk, (function(kk) {
+              return Fk(kk), Tk()
             }))
-          } else tS |= 1
-        } catch (xS) {
-          HS(xS)
+          } else Xk |= 1
+        } catch (yk) {
+          Fk(yk)
         }
-        if (1 === tS) return SS.hasError ? Promise.reject(SS.error) : Promise.resolve();
-        if (SS.hasError) throw SS.error
+        if (1 === Xk) return kk.hasError ? Promise.reject(kk.error) : Promise.resolve();
+        if (kk.hasError) throw kk.error
       }()
     }
 
-    function zS(SS, HS) {
-      return "string" === typeof SS && /^\.\.?\//.test(SS) ? SS.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(SS, gS, tS, bS, XS) {
-        return gS ? HS ? ".jsx" : ".js" : !tS || bS && XS ? tS + bS + "." + XS.toLowerCase() + "js" : SS
-      })) : SS
+    function ck(kk, Fk) {
+      return "string" === typeof kk && /^\.\.?\//.test(kk) ? kk.replace(/\.(tsx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i, (function(kk, Ik, Xk, Tk, ik) {
+        return Ik ? Fk ? ".jsx" : ".js" : !Xk || Tk && ik ? Xk + Tk + "." + ik.toLowerCase() + "js" : kk
+      })) : kk
     }
-    const US = {
-      __extends: bS,
-      __assign: XS,
-      __rest: xS,
-      __decorate: NS,
-      __param: qS,
-      __esDecorate: uS,
-      __runInitializers: IS,
-      __propKey: fS,
-      __setFunctionName: kS,
-      __metadata: aS,
-      __awaiter: KS,
-      __generator: jS,
-      __createBinding: GS,
-      __exportStar: CS,
-      __values: nS,
-      __read: PS,
-      __spread: QS,
-      __spreadArrays: DS,
-      __spreadArray: wS,
-      __await: hS,
-      __asyncGenerator: ZS,
-      __asyncDelegator: JS,
-      __asyncValues: OS,
-      __makeTemplateObject: dS,
-      __importStar: ES,
-      __importDefault: LS,
-      __classPrivateFieldGet: YS,
-      __classPrivateFieldSet: AS,
-      __classPrivateFieldIn: yS,
-      __addDisposableResource: VS,
-      __disposeResources: WS,
-      __rewriteRelativeImportExtension: zS
+    const Wk = {
+      __extends: Tk,
+      __assign: ik,
+      __rest: yk,
+      __decorate: lk,
+      __param: ak,
+      __esDecorate: qk,
+      __runInitializers: Lk,
+      __propKey: tk,
+      __setFunctionName: Zk,
+      __metadata: jk,
+      __awaiter: ek,
+      __generator: wk,
+      __createBinding: Hk,
+      __exportStar: Jk,
+      __values: xk,
+      __read: Pk,
+      __spread: Kk,
+      __spreadArrays: Qk,
+      __spreadArray: sk,
+      __await: Vk,
+      __asyncGenerator: zk,
+      __asyncDelegator: Sk,
+      __asyncValues: vk,
+      __makeTemplateObject: Ek,
+      __importStar: Gk,
+      __importDefault: pk,
+      __classPrivateFieldGet: uk,
+      __classPrivateFieldSet: bk,
+      __classPrivateFieldIn: Rk,
+      __addDisposableResource: Uk,
+      __disposeResources: Nk,
+      __rewriteRelativeImportExtension: ck
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

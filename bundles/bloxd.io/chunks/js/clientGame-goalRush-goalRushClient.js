@@ -1,73 +1,73 @@
 export const id = 18;
 export const ids = [18];
 export const modules = {
-  39458: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      default: () => bS
+  39450: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      default: () => Tk
     });
-    const tS = .4,
-      bS = function(SS, HS, gS, bS) {
-        let XS, {
-            localPlayerId: xS
-          } = bS,
-          NS = !1,
-          qS = null,
-          uS = null,
-          IS = null,
-          fS = 1,
-          kS = null,
-          aS = 0,
-          KS = 0;
+    const Xk = .4,
+      Tk = function(kk, Fk, Ik, Tk) {
+        let ik, {
+            localPlayerId: yk
+          } = Tk,
+          lk = !1,
+          ak = null,
+          qk = null,
+          Lk = null,
+          tk = 1,
+          Zk = null,
+          jk = 0,
+          ek = 0;
 
-        function jS() {
-          if (kS) {
-            const SS = kS;
-            SS.fade(SS.getVolume(), 0, 500), setTimeout((() => {
-              SS.stop()
-            }), 500), kS = null
+        function wk() {
+          if (Zk) {
+            const kk = Zk;
+            kk.fade(kk.getVolume(), 0, 500), setTimeout((() => {
+              kk.stop()
+            }), 500), Zk = null
           }
-          KS = 0
+          ek = 0
         }
 
-        function GS(SS) {
-          var HS;
-          if (!qS || NS || null === uS) return void(kS && jS());
-          const gS = Date.now();
-          if (!kS || gS - aS > 54e3) {
-            if (kS) {
-              const SS = kS;
-              SS.fade(SS.getVolume(), 0, 2e3), setTimeout((() => {
-                SS.stop()
+        function Hk(kk) {
+          var Fk;
+          if (!ak || lk || null === qk) return void(Zk && wk());
+          const Ik = Date.now();
+          if (!Zk || Ik - jk > 54e3) {
+            if (Zk) {
+              const kk = Zk;
+              kk.fade(kk.getVolume(), 0, 2e3), setTimeout((() => {
+                kk.stop()
               }), 2e3)
             }
-            kS = XS.playSound(xS, "crowdAmbience", tS, 1), aS = gS, KS = tS
+            Zk = ik.playSound(yk, "crowdAmbience", Xk, 1), jk = Ik, ek = Xk
           }
-          const bS = function() {
-              if (null === uS || null === IS || !qS) return 0;
-              const SS = XS.getPositionView(qS);
-              if (!SS) return 0;
-              const HS = Math.abs(SS[2] - uS),
-                gS = Math.abs(SS[2] - IS),
-                tS = Math.min(HS, gS);
-              return Math.max(0, 1 - tS / fS)
+          const Tk = function() {
+              if (null === qk || null === Lk || !ak) return 0;
+              const kk = ik.getPositionView(ak);
+              if (!kk) return 0;
+              const Fk = Math.abs(kk[2] - qk),
+                Ik = Math.abs(kk[2] - Lk),
+                Xk = Math.min(Fk, Ik);
+              return Math.max(0, 1 - Xk / tk)
             }(),
-            GS = SS / 1e3;
-          KS += (tS + .6 * bS - KS) * Math.min(1, 2 * GS), null === (HS = kS) || void 0 === HS || HS.setRelativeVolume(KS)
+            Hk = kk / 1e3;
+          ek += (Xk + .6 * Tk - ek) * Math.min(1, 2 * Hk), null === (Fk = Zk) || void 0 === Fk || Fk.setRelativeVolume(ek)
         }
         return {
-          onCreate: SS => {
-            XS = SS
+          onCreate: kk => {
+            ik = kk
           },
-          onReceivedMessageFromServer: (SS, HS) => {
-            var gS;
-            "ballState" === SS ? (qS = null !== (gS = HS.eId) && void 0 !== gS ? gS : null, qS || jS()) : "frozen" === SS ? NS = HS.frozen : "pitchInfo" === SS && (uS = HS.goalZRed, IS = HS.goalZBlue, fS = Math.abs(IS - uS) / 2)
+          onReceivedMessageFromServer: (kk, Fk) => {
+            var Ik;
+            "ballState" === kk ? (ak = null !== (Ik = Fk.eId) && void 0 !== Ik ? Ik : null, ak || wk()) : "frozen" === kk ? lk = Fk.frozen : "pitchInfo" === kk && (qk = Fk.goalZRed, Lk = Fk.goalZBlue, tk = Math.abs(Lk - qk) / 2)
           },
-          mf: SS => {
-            GS(SS)
+          Dt: kk => {
+            Hk(kk)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

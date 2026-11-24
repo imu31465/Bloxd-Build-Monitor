@@ -1,571 +1,571 @@
 export const id = 236;
 export const ids = [236];
 export const modules = {
-  41082: (SS, HS, gS) => {
-    gS.d(HS, {
-      noaDevTools: () => fS
+  41079: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      noaDevTools: () => tk
     });
-    var tS = gS(37578),
-      bS = gS(37559),
-      XS = gS(2910),
-      xS = gS(1844),
-      NS = gS(40997);
+    var Xk = Ik(37592),
+      Tk = Ik(37578),
+      ik = Ik(2700),
+      yk = Ik(1665),
+      lk = Ik(40986);
 
-    function qS(SS) {
+    function ak(kk) {
       const {
-        Hj: HS
-      } = SS, gS = HS.engine, tS = {
-        width: gS.getRenderWidth(),
-        height: gS.getRenderHeight()
+        Xw: Fk
+      } = kk, Ik = Fk.engine, Xk = {
+        width: Ik.getRenderWidth(),
+        height: Ik.getRenderHeight()
       };
       return {
-        canvas: gS.getRenderingCanvas(),
-        maxTextureSize: gS.getCaps().maxTextureSize,
-        drawing: () => !SS.KD,
-        resize: (SS, HS) => {
-          gS.setSize(SS, HS)
+        canvas: Ik.getRenderingCanvas(),
+        maxTextureSize: Ik.getCaps().maxTextureSize,
+        drawing: () => !kk.vx,
+        resize: (kk, Fk) => {
+          Ik.setSize(kk, Fk)
         },
         restoreSize: () => {
-          gS.setSize(tS.width, tS.height), HS.resize()
+          Ik.setSize(Xk.width, Xk.height), Fk.resize()
         },
-        onFrameDrawn: HS => (SS.on("afterRender", HS), () => {
-          SS.off("afterRender", HS)
+        onFrameDrawn: Fk => (kk.on("afterRender", Fk), () => {
+          kk.off("afterRender", Fk)
         })
       }
     }
-    var uS = gS(34113);
+    var qk = Ik(34044);
 
-    function IS(SS, HS) {
+    function Lk(kk, Fk) {
       let {
-        width: uS,
-        height: IS,
-        colouring: fS
-      } = HS;
-      const kS = "normals" === fS,
-        aS = "depth" === fS;
-      return new Promise((HS => {
+        width: qk,
+        height: Lk,
+        colouring: tk
+      } = Fk;
+      const Zk = "normals" === tk,
+        jk = "depth" === tk;
+      return new Promise((Fk => {
         try {
-          const KS = (0, XS.e)();
-          if (KS.Hj.gj) return "screenshot" !== SS || null !== fS ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void HS()) : void(0, NS.g)(qS(KS), uS, IS).finally(HS);
-          const jS = KS.Hj.engine,
-            GS = KS.Hj.lL(),
-            CS = uS,
-            nS = IS;
-          Promise.all([Promise.all([gS.e(254), gS.e(255), gS.e(233)]).then((() => gS(61307))), Promise.all([gS.e(232), gS.e(231), gS.e(254), gS.e(255), gS.e(252), gS.e(256), gS.e(259), gS.e(311), gS.e(237)]).then((() => gS(61309))), Promise.all([gS.e(232), gS.e(231), gS.e(254), gS.e(255), gS.e(252), gS.e(262), gS.e(256), gS.e(264), gS.e(239)]).then((() => gS(61311))), gS.e(352).then((() => gS(61320))), Promise.all([gS.e(231), gS.e(227)]).then((() => gS(37113))), gS.e(253).then((() => gS(61329))), gS.e(234).then((() => gS(61336)))]).then((XS => {
+          const ek = (0, ik.e)();
+          if (ek.Xw.Tw) return "screenshot" !== kk || null !== tk ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void Fk()) : void(0, lk.f)(ak(ek), qk, Lk).finally(Fk);
+          const wk = ek.Xw.engine,
+            Hk = ek.Xw.mG(),
+            Jk = qk,
+            xk = Lk;
+          Promise.all([Promise.all([Ik.e(254), Ik.e(255), Ik.e(233)]).then((() => Ik(61268))), Promise.all([Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(255), Ik.e(252), Ik.e(256), Ik.e(259), Ik.e(311), Ik.e(237)]).then((() => Ik(61276))), Promise.all([Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(255), Ik.e(252), Ik.e(262), Ik.e(256), Ik.e(264), Ik.e(239)]).then((() => Ik(61279))), Ik.e(352).then((() => Ik(61282))), Promise.all([Ik.e(231), Ik.e(227)]).then((() => Ik(37144))), Ik.e(253).then((() => Ik(61285))), Ik.e(234).then((() => Ik(61288)))]).then((ik => {
             const {
-              CreateScreenshotUsingRenderTarget: NS
-            } = XS[1], {
-              ShaderMaterial: qS
-            } = XS[2], {
-              ShaderLanguage: uS
-            } = XS[3], {
-              VK: IS
-            } = XS[4], {
-              registerDevtoolsShader: fS
-            } = XS[6], KS = uS.GLSL, PS = new Map, QS = GS.meshes.filter((SS => SS.material));
-            let DS = !1,
-              wS = null;
+              CreateScreenshotUsingRenderTarget: lk
+            } = ik[1], {
+              ShaderMaterial: ak
+            } = ik[2], {
+              ShaderLanguage: qk
+            } = ik[3], {
+              Ge: Lk
+            } = ik[4], {
+              registerDevtoolsShader: tk
+            } = ik[6], ek = qk.GLSL, Pk = new Map, Kk = Hk.meshes.filter((kk => kk.material));
+            let Qk = !1,
+              sk = null;
 
-            function hS() {
-              var SS;
-              DS && (DS = !1, (0, tS.e)(GS.meshes, !1)), null === (SS = wS) || void 0 === SS || SS(), wS = null, QS.forEach((SS => {
-                const HS = PS.get(SS);
-                HS && (SS.material = HS)
+            function Vk() {
+              var kk;
+              Qk && (Qk = !1, (0, Xk.f)(Hk.meshes, !1)), null === (kk = sk) || void 0 === kk || kk(), sk = null, Kk.forEach((kk => {
+                const Fk = Pk.get(kk);
+                Fk && (kk.material = Fk)
               }))
             }
-            if (kS) {
-              const SS = [],
-                HS = [];
-              QS.forEach((gS => {
-                const tS = gS.name.toLowerCase(),
-                  bS = gS.hA().boundingBox.center,
-                  XS = GS.activeCamera.position.subtract(bS).length();
-                tS.includes("sky") || tS.includes("background") || tS.includes("environment") || XS > 1e3 ? HS.push(gS) : SS.push(gS)
-              })), fS("devtoolsNormal", KS);
-              const gS = new qS("normalMaterial", GS, "devtoolsNormal", {
+            if (Zk) {
+              const kk = [],
+                Fk = [];
+              Kk.forEach((Ik => {
+                const Xk = Ik.name.toLowerCase(),
+                  Tk = Ik.vR().boundingBox.center,
+                  ik = Hk.activeCamera.position.subtract(Tk).length();
+                Xk.includes("sky") || Xk.includes("background") || Xk.includes("environment") || ik > 1e3 ? Fk.push(Ik) : kk.push(Ik)
+              })), tk("devtoolsNormal", ek);
+              const Ik = new ak("normalMaterial", Hk, "devtoolsNormal", {
                 attributes: ["position", "normal"],
                 uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: KS
+                shaderLanguage: ek
               });
-              fS("devtoolsWhite", KS);
-              const tS = new qS("whiteMaterial", GS, "devtoolsWhite", {
+              tk("devtoolsWhite", ek);
+              const Xk = new ak("whiteMaterial", Hk, "devtoolsWhite", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection"],
-                shaderLanguage: KS
+                shaderLanguage: ek
               });
-              SS.forEach((SS => {
-                PS.set(SS, SS.material), SS.material = gS
-              })), HS.forEach((SS => {
-                PS.set(SS, SS.material), SS.material = tS
+              kk.forEach((kk => {
+                Pk.set(kk, kk.material), kk.material = Ik
+              })), Fk.forEach((kk => {
+                Pk.set(kk, kk.material), kk.material = Xk
               }))
-            } else if (aS) {
-              fS("devtoolsDepth", KS);
-              const SS = GS.activeCamera.position;
-              let HS = 0,
-                gS = 1 / 0;
-              QS.forEach((tS => {
-                const bS = tS.name.toLowerCase();
-                if (bS.includes("sky") || bS.includes("background") || bS.includes("environment")) return;
-                const XS = tS.hA().boundingBox.center,
-                  xS = IS.TransformCoordinates(XS, tS.getWorldMatrix()),
-                  NS = SS.subtract(xS).length();
-                NS > 1e3 || (HS = Math.max(HS, NS), gS = Math.min(gS, NS))
+            } else if (jk) {
+              tk("devtoolsDepth", ek);
+              const kk = Hk.activeCamera.position;
+              let Fk = 0,
+                Ik = 1 / 0;
+              Kk.forEach((Xk => {
+                const Tk = Xk.name.toLowerCase();
+                if (Tk.includes("sky") || Tk.includes("background") || Tk.includes("environment")) return;
+                const ik = Xk.vR().boundingBox.center,
+                  yk = Lk.TransformCoordinates(ik, Xk.getWorldMatrix()),
+                  lk = kk.subtract(yk).length();
+                lk > 1e3 || (Fk = Math.max(Fk, lk), Ik = Math.min(Ik, lk))
               }));
-              const tS = HS - gS;
-              HS += .1 * tS, gS = Math.max(0, gS - .1 * tS), console.log(`Depth range: min=${gS.toFixed(2)}, max=${HS.toFixed(2)}, range=${tS.toFixed(2)}`), tS < 1 && (HS = gS + 10);
-              const bS = new qS("depthMaterial", GS, "devtoolsDepth", {
+              const Xk = Fk - Ik;
+              Fk += .1 * Xk, Ik = Math.max(0, Ik - .1 * Xk), console.log(`Depth range: min=${Ik.toFixed(2)}, max=${Fk.toFixed(2)}, range=${Xk.toFixed(2)}`), Xk < 1 && (Fk = Ik + 10);
+              const Tk = new ak("depthMaterial", Hk, "devtoolsDepth", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: KS
+                shaderLanguage: ek
               });
-              bS.setVector3("cameraPosition", SS), bS.setFloat("maxDepth", HS), bS.setFloat("minDepth", gS), QS.forEach((SS => {
-                PS.set(SS, SS.material), SS.material = bS
+              Tk.setVector3("cameraPosition", kk), Tk.setFloat("maxDepth", Fk), Tk.setFloat("minDepth", Ik), Kk.forEach((kk => {
+                Pk.set(kk, kk.material), kk.material = Tk
               }))
             }
-            if ((0, tS.e)(GS.meshes, !0), DS = !0, "glb" === SS && (wS = (0, bS.e)(GS.meshes)), "screenshot" === SS) {
-              let SS = `bloxd-screenshot-${CS}x${nS}-${Date.now()}.png`;
-              kS ? SS = `bloxd-screenshot-normals-${CS}x${nS}-${Date.now()}.png` : aS && (SS = `bloxd-screenshot-depth-${CS}x${nS}-${Date.now()}.png`), NS(jS, GS.activeCamera, {
-                width: CS,
-                height: nS
-              }, (function(gS) {
-                hS(), fetch(gS).then((function(SS) {
-                  return SS.blob()
-                })).then((function(gS) {
-                  (0, xS.downloadBlob)(gS, SS), HS()
-                })).catch((function(SS) {
-                  console.error("Error processing screenshot:", SS), HS()
+            if ((0, Xk.f)(Hk.meshes, !0), Qk = !0, "glb" === kk && (sk = (0, Tk.e)(Hk.meshes)), "screenshot" === kk) {
+              let kk = `bloxd-screenshot-${Jk}x${xk}-${Date.now()}.png`;
+              Zk ? kk = `bloxd-screenshot-normals-${Jk}x${xk}-${Date.now()}.png` : jk && (kk = `bloxd-screenshot-depth-${Jk}x${xk}-${Date.now()}.png`), lk(wk, Hk.activeCamera, {
+                width: Jk,
+                height: xk
+              }, (function(Ik) {
+                Vk(), fetch(Ik).then((function(kk) {
+                  return kk.blob()
+                })).then((function(Ik) {
+                  (0, yk.downloadBlob)(Ik, kk), Fk()
+                })).catch((function(kk) {
+                  console.error("Error processing screenshot:", kk), Fk()
                 }))
               }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), hS(), HS()
+                console.error("Screenshot timed out"), Vk(), Fk()
               }))
             } else {
-              let SS = "Bj";
-              kS ? SS = "scene-normals" : aS && (SS = "scene-depth"), kS || aS ? setTimeout((() => {
+              let kk = "Yw";
+              Zk ? kk = "scene-normals" : jk && (kk = "scene-depth"), Zk || jk ? setTimeout((() => {
                 (async function() {
                   const {
-                    StandardMaterial: SS
-                  } = await Promise.all([gS.e(232), gS.e(231), gS.e(254), gS.e(255), gS.e(252), gS.e(262), gS.e(261), gS.e(238)]).then((() => gS(40306))), {
-                    Color3: HS
-                  } = await Promise.all([gS.e(232), gS.e(235)]).then((() => gS(37294))), tS = [], bS = [];
-                  if (QS.forEach((SS => {
-                      const HS = SS.name.toLowerCase(),
-                        gS = SS.hA().boundingBox.center,
-                        XS = GS.activeCamera.position.subtract(gS).length();
-                      HS.includes("sky") || HS.includes("background") || HS.includes("environment") || XS > 1e3 ? bS.push(SS) : tS.push(SS)
-                    })), kS) tS.forEach(((gS, tS) => {
-                    const bS = gS.getVerticesData("normal");
-                    if (bS) {
-                      const XS = [];
-                      for (let SS = 0; SS < bS.length; SS += 3) {
-                        const HS = Math.abs(bS[SS]),
-                          gS = Math.abs(bS[SS + 1]),
-                          tS = Math.abs(bS[SS + 2]);
-                        XS.push(HS, gS, tS, 1)
+                    StandardMaterial: kk
+                  } = await Promise.all([Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(255), Ik.e(252), Ik.e(262), Ik.e(261), Ik.e(238)]).then((() => Ik(40269))), {
+                    Color3: Fk
+                  } = await Promise.all([Ik.e(232), Ik.e(235)]).then((() => Ik(37327))), Xk = [], Tk = [];
+                  if (Kk.forEach((kk => {
+                      const Fk = kk.name.toLowerCase(),
+                        Ik = kk.vR().boundingBox.center,
+                        ik = Hk.activeCamera.position.subtract(Ik).length();
+                      Fk.includes("sky") || Fk.includes("background") || Fk.includes("environment") || ik > 1e3 ? Tk.push(kk) : Xk.push(kk)
+                    })), Zk) Xk.forEach(((Ik, Xk) => {
+                    const Tk = Ik.getVerticesData("normal");
+                    if (Tk) {
+                      const ik = [];
+                      for (let kk = 0; kk < Tk.length; kk += 3) {
+                        const Fk = Math.abs(Tk[kk]),
+                          Ik = Math.abs(Tk[kk + 1]),
+                          Xk = Math.abs(Tk[kk + 2]);
+                        ik.push(Fk, Ik, Xk, 1)
                       }
-                      gS.setVerticesData("color", XS);
-                      const xS = new SS(`vertexColorMat_${tS}`, GS);
-                      xS.disableLighting = !0, xS.emissiveColor = new HS(1, 1, 1), xS.specularColor = new HS(0, 0, 0), gS.material = xS
+                      Ik.setVerticesData("color", ik);
+                      const yk = new kk(`vertexColorMat_${Xk}`, Hk);
+                      yk.disableLighting = !0, yk.emissiveColor = new Fk(1, 1, 1), yk.specularColor = new Fk(0, 0, 0), Ik.material = yk
                     }
-                  })), bS.forEach(((gS, tS) => {
-                    const bS = gS.getVerticesData("position");
-                    if (bS) {
-                      const XS = [],
-                        xS = bS.length / 3;
-                      for (let SS = 0; SS < xS; SS++) XS.push(1, 1, 1, 1);
-                      gS.setVerticesData("color", XS);
-                      const NS = new SS(`whiteMat_${tS}`, GS);
-                      NS.disableLighting = !0, NS.emissiveColor = new HS(1, 1, 1), NS.specularColor = new HS(0, 0, 0), gS.material = NS
+                  })), Tk.forEach(((Ik, Xk) => {
+                    const Tk = Ik.getVerticesData("position");
+                    if (Tk) {
+                      const ik = [],
+                        yk = Tk.length / 3;
+                      for (let kk = 0; kk < yk; kk++) ik.push(1, 1, 1, 1);
+                      Ik.setVerticesData("color", ik);
+                      const lk = new kk(`whiteMat_${Xk}`, Hk);
+                      lk.disableLighting = !0, lk.emissiveColor = new Fk(1, 1, 1), lk.specularColor = new Fk(0, 0, 0), Ik.material = lk
                     }
                   }));
-                  else if (aS) {
-                    const gS = GS.activeCamera.position;
-                    let bS = 0,
-                      XS = 1 / 0;
-                    tS.forEach((SS => {
-                      const HS = SS.hA().boundingBox.center,
-                        tS = IS.TransformCoordinates(HS, SS.getWorldMatrix()),
-                        xS = gS.subtract(tS).length();
-                      bS = Math.max(bS, xS), XS = Math.min(XS, xS)
+                  else if (jk) {
+                    const Ik = Hk.activeCamera.position;
+                    let Tk = 0,
+                      ik = 1 / 0;
+                    Xk.forEach((kk => {
+                      const Fk = kk.vR().boundingBox.center,
+                        Xk = Lk.TransformCoordinates(Fk, kk.getWorldMatrix()),
+                        yk = Ik.subtract(Xk).length();
+                      Tk = Math.max(Tk, yk), ik = Math.min(ik, yk)
                     }));
-                    const xS = bS - XS;
-                    bS += .1 * xS, XS = Math.max(0, XS - .1 * xS), xS < 1 && (bS = XS + 10), QS.forEach(((tS, xS) => {
-                      const NS = tS.name.toLowerCase(),
-                        qS = tS.hA().boundingBox.center,
-                        uS = IS.TransformCoordinates(qS, tS.getWorldMatrix()),
-                        fS = gS.subtract(uS).length();
-                      if (!(NS.includes("sky") || NS.includes("background") || NS.includes("environment") || fS > 1e3)) {
-                        const gS = 1 - Math.min(Math.max((fS - XS) / (bS - XS), 0), 1),
-                          NS = new SS(`depthMat_${xS}`, GS);
-                        NS.diffuseColor = new HS(gS, gS, gS), NS.specularColor = new HS(0, 0, 0), tS.material = NS
+                    const yk = Tk - ik;
+                    Tk += .1 * yk, ik = Math.max(0, ik - .1 * yk), yk < 1 && (Tk = ik + 10), Kk.forEach(((Xk, yk) => {
+                      const lk = Xk.name.toLowerCase(),
+                        ak = Xk.vR().boundingBox.center,
+                        qk = Lk.TransformCoordinates(ak, Xk.getWorldMatrix()),
+                        tk = Ik.subtract(qk).length();
+                      if (!(lk.includes("sky") || lk.includes("background") || lk.includes("environment") || tk > 1e3)) {
+                        const Ik = 1 - Math.min(Math.max((tk - ik) / (Tk - ik), 0), 1),
+                          lk = new kk(`depthMat_${yk}`, Hk);
+                        lk.diffuseColor = new Fk(Ik, Ik, Ik), lk.specularColor = new Fk(0, 0, 0), Xk.material = lk
                       }
                     }))
                   }
-                })().then((() => Promise.all([gS.e(232), gS.e(231), gS.e(254), gS.e(255), gS.e(252), gS.e(262), gS.e(256), gS.e(261), gS.e(259), gS.e(251), gS.e(264), gS.e(274), gS.e(311), gS.e(244), gS.e(263), gS.e(230)]).then((() => gS(61338))))).then((HS => HS.GLTF2Export.GLBAsync(GS, SS))).then((SS => {
-                  hS(), SS.downloadFiles(), HS()
-                })).catch((SS => {
-                  console.error("Error exporting GLB:", SS), hS(), HS()
+                })().then((() => Promise.all([Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(255), Ik.e(252), Ik.e(262), Ik.e(256), Ik.e(261), Ik.e(259), Ik.e(251), Ik.e(264), Ik.e(274), Ik.e(311), Ik.e(244), Ik.e(263), Ik.e(230)]).then((() => Ik(61293))))).then((Fk => Fk.GLTF2Export.GLBAsync(Hk, kk))).then((kk => {
+                  Vk(), kk.downloadFiles(), Fk()
+                })).catch((kk => {
+                  console.error("Error exporting GLB:", kk), Vk(), Fk()
                 }))
-              }), 100) : Promise.all([gS.e(232), gS.e(231), gS.e(254), gS.e(255), gS.e(252), gS.e(262), gS.e(256), gS.e(261), gS.e(259), gS.e(251), gS.e(264), gS.e(274), gS.e(311), gS.e(244), gS.e(263), gS.e(230)]).then((() => gS(61338))).then((gS => {
-                gS.GLTF2Export.GLBAsync(GS, SS).then((SS => {
-                  hS(), SS.downloadFiles(), HS()
-                })).catch((SS => {
-                  console.error("Error exporting GLB:", SS), hS(), HS()
+              }), 100) : Promise.all([Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(255), Ik.e(252), Ik.e(262), Ik.e(256), Ik.e(261), Ik.e(259), Ik.e(251), Ik.e(264), Ik.e(274), Ik.e(311), Ik.e(244), Ik.e(263), Ik.e(230)]).then((() => Ik(61293))).then((Ik => {
+                Ik.GLTF2Export.GLBAsync(Hk, kk).then((kk => {
+                  Vk(), kk.downloadFiles(), Fk()
+                })).catch((kk => {
+                  console.error("Error exporting GLB:", kk), Vk(), Fk()
                 }))
-              })).catch((SS => {
-                console.error("Error importing serializers:", SS), hS(), HS()
+              })).catch((kk => {
+                console.error("Error importing serializers:", kk), Vk(), Fk()
               }))
             }
-          })).catch((SS => {
-            console.error("Error downloading the scene:", SS), HS()
+          })).catch((kk => {
+            console.error("Error downloading the scene:", kk), Fk()
           }))
-        } catch (KS) {
-          console.error("Error taking screenshot:", KS), HS()
+        } catch (ek) {
+          console.error("Error taking screenshot:", ek), Fk()
         }
       }))
     }
-    const fS = new class {
+    const tk = new class {
       constructor() {
-        this.tools = uS.ALL_DEV_TOOLS
+        this.tools = qk.ALL_DEV_TOOLS
       }
-      downloadScene(SS, HS) {
-        return IS(SS, HS)
+      downloadScene(kk, Fk) {
+        return Lk(kk, Fk)
       }
-      async setAmbientLightIntensity(SS) {
+      async setAmbientLightIntensity(kk) {
         const {
-          Color3: HS
-        } = await Promise.all([gS.e(232), gS.e(235)]).then((() => gS(37294)));
-        (0, XS.e)().Hj.lL().ambientColor = HS.FromArray([SS, SS, SS])
+          Color3: Fk
+        } = await Promise.all([Ik.e(232), Ik.e(235)]).then((() => Ik(37327)));
+        (0, ik.e)().Xw.mG().ambientColor = Fk.FromArray([kk, kk, kk])
       }
-      capturePhoto(SS, HS, gS) {
-        return function(SS, HS, gS, tS) {
-          return (0, NS.d)(qS(SS), HS, gS, tS)
-        }((0, XS.e)(), SS, HS, gS)
+      capturePhoto(kk, Fk, Ik) {
+        return function(kk, Fk, Ik, Xk) {
+          return (0, lk.c)(ak(kk), Fk, Ik, Xk)
+        }((0, ik.e)(), kk, Fk, Ik)
       }
     }
   },
-  40997: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => NS,
-      g: () => qS
+  40986: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => lk,
+      f: () => ak
     });
-    var tS = gS(1860);
-    const bS = 33177600,
-      XS = 3e4;
-    let xS = !1;
+    var Xk = Ik(1682);
+    const Tk = 33177600,
+      ik = 3e4;
+    let yk = !1;
 
-    function NS(SS, HS, gS) {
-      let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    function lk(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        scale: NS = 1,
-        type: qS = "image/png",
-        quality: uS
-      } = tS;
-      if (!SS.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (xS) return Promise.reject(new Error("A screenshot is already being taken"));
-      xS = !0;
-      const IS = function(SS, HS, gS) {
-        const tS = Math.max(1, SS),
-          XS = Math.max(1, HS),
-          xS = Math.min(1, gS / Math.max(tS, XS), Math.sqrt(bS / (tS * XS)));
+        scale: lk = 1,
+        type: ak = "image/png",
+        quality: qk
+      } = Xk;
+      if (!kk.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (yk) return Promise.reject(new Error("A screenshot is already being taken"));
+      yk = !0;
+      const Lk = function(kk, Fk, Ik) {
+        const Xk = Math.max(1, kk),
+          ik = Math.max(1, Fk),
+          yk = Math.min(1, Ik / Math.max(Xk, ik), Math.sqrt(Tk / (Xk * ik)));
         return {
-          width: Math.max(1, Math.floor(tS * xS)),
-          height: Math.max(1, Math.floor(XS * xS))
+          width: Math.max(1, Math.floor(Xk * yk)),
+          height: Math.max(1, Math.floor(ik * yk))
         }
-      }(HS, gS, SS.maxTextureSize);
-      return SS.resize(IS.width, IS.height, NS * IS.width / Math.max(1, HS)), new Promise(((HS, gS) => {
-        let tS, bS = 2,
-          NS = null;
-        const IS = () => {
-          var HS;
-          xS = !1, null === (HS = NS) || void 0 === HS || HS(), clearTimeout(tS), SS.restoreSize()
+      }(Fk, Ik, kk.maxTextureSize);
+      return kk.resize(Lk.width, Lk.height, lk * Lk.width / Math.max(1, Fk)), new Promise(((Fk, Ik) => {
+        let Xk, Tk = 2,
+          lk = null;
+        const Lk = () => {
+          var Fk;
+          yk = !1, null === (Fk = lk) || void 0 === Fk || Fk(), clearTimeout(Xk), kk.restoreSize()
         };
-        tS = setTimeout((() => {
-          IS(), gS(new Error("No frame was drawn to capture"))
-        }), XS), NS = SS.onFrameDrawn((() => {
-          if (bS--, bS > 0) return;
+        Xk = setTimeout((() => {
+          Lk(), Ik(new Error("No frame was drawn to capture"))
+        }), ik), lk = kk.onFrameDrawn((() => {
+          if (Tk--, Tk > 0) return;
           const {
-            canvas: tS
-          } = SS, XS = {
-            width: tS.width,
-            height: tS.height
+            canvas: Xk
+          } = kk, ik = {
+            width: Xk.width,
+            height: Xk.height
           };
           try {
-            tS.toBlob((SS => {
-              SS ? HS({
-                blob: SS,
-                ...XS
-              }) : gS(new Error("The canvas gave no image"))
-            }), qS, uS)
-          } catch (xS) {
-            gS(xS)
+            Xk.toBlob((kk => {
+              kk ? Fk({
+                blob: kk,
+                ...ik
+              }) : Ik(new Error("The canvas gave no image"))
+            }), ak, qk)
+          } catch (yk) {
+            Ik(yk)
           } finally {
-            IS()
+            Lk()
           }
         }))
       }))
     }
-    async function qS(SS, HS, gS) {
+    async function ak(kk, Fk, Ik) {
       try {
-        const bS = await NS(SS, HS, gS);
-        (0, tS.c)(bS.blob, `bloxd-screenshot-${bS.width}x${bS.height}-${Date.now()}.png`)
-      } catch (bS) {
-        console.error("Error taking screenshot:", bS)
+        const Tk = await lk(kk, Fk, Ik);
+        (0, Xk.c)(Tk.blob, `bloxd-screenshot-${Tk.width}x${Tk.height}-${Date.now()}.png`)
+      } catch (Tk) {
+        console.error("Error taking screenshot:", Tk)
       }
     }
   },
-  37578: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => uS,
-      e: () => NS,
-      g: () => xS
+  37592: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => qk,
+      f: () => lk,
+      j: () => yk
     });
-    var tS = gS(37573),
-      bS = gS(37586);
-    let XS = 0;
+    var Xk = Ik(37586),
+      Tk = Ik(37600);
+    let ik = 0;
 
-    function xS(SS, HS) {
-      const gS = SS;
-      gS._noaFaceGroups = null !== HS && void 0 !== HS ? HS : null, gS._noaFaceEpoch = -1, gS._noaFaceMask = -1, gS._noaFaceCount = -1, gS._noaFaceMaterial = null;
-      const tS = SS.dD;
-      tS && 1 === tS.length && (tS[0].indexStart = 0, tS[0].indexCount = SS.getTotalIndices())
+    function yk(kk, Fk) {
+      const Ik = kk;
+      Ik._noaFaceGroups = null !== Fk && void 0 !== Fk ? Fk : null, Ik._noaFaceEpoch = -1, Ik._noaFaceMask = -1, Ik._noaFaceCount = -1, Ik._noaFaceMaterial = null;
+      const Xk = kk.lK;
+      Xk && 1 === Xk.length && (Xk[0].indexStart = 0, Xk[0].indexCount = kk.getTotalIndices())
     }
 
-    function NS(SS, HS) {
-      if (HS) {
-        XS++;
-        for (const HS of SS) {
-          const SS = HS._noaFaceGroups;
-          SS && xS(HS, SS)
+    function lk(kk, Fk) {
+      if (Fk) {
+        ik++;
+        for (const Fk of kk) {
+          const kk = Fk._noaFaceGroups;
+          kk && yk(Fk, kk)
         }
-      } else XS = Math.max(0, XS - 1)
+      } else ik = Math.max(0, ik - 1)
     }
 
-    function qS(SS, HS, gS) {
-      let bS = -1,
-        XS = 0;
-      for (let xS = 0; xS < tS.h; xS++) {
-        const gS = SS[xS],
-          NS = SS[xS + 1];
-        NS > gS && HS & 1 << tS.e[xS] && (bS < 0 && (bS = gS), XS = NS)
+    function ak(kk, Fk, Ik) {
+      let Tk = -1,
+        ik = 0;
+      for (let yk = 0; yk < Xk.g; yk++) {
+        const Ik = kk[yk],
+          lk = kk[yk + 1];
+        lk > Ik && Fk & 1 << Xk.e[yk] && (Tk < 0 && (Tk = Ik), ik = lk)
       }
-      return bS < 0 ? (gS[0] = 0, gS[1] = 0, 0) : (gS[0] = bS, gS[1] = XS - bS, XS - bS)
+      return Tk < 0 ? (Ik[0] = 0, Ik[1] = 0, 0) : (Ik[0] = Tk, Ik[1] = ik - Tk, ik - Tk)
     }
-    class uS {
-      constructor(SS, HS) {
-        this.JK = SS, this.engine = HS, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+    class qk {
+      constructor(kk, Fk) {
+        this.se = kk, this.engine = Fk, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
       }
-      apply(SS, HS) {
-        if (!HS) return;
-        const gS = HS.getProjectionMatrix().m,
-          xS = 0 === XS && 0 === gS[15],
-          NS = HS.globalPosition,
+      apply(kk, Fk) {
+        if (!Fk) return;
+        const Ik = Fk.getProjectionMatrix().m,
+          yk = 0 === ik && 0 === Ik[15],
+          lk = Fk.globalPosition,
           {
-            engine: uS
+            engine: qk
           } = this,
-          IS = xS ? (0, bS.b)(gS, uS.getRenderWidth(), uS.getRenderHeight()) : 0;
-        NS.x === this.eyeX && NS.y === this.eyeY && NS.z === this.eyeZ && IS === this.focalPx && xS === this.culling || (this.epoch++, this.eyeX = NS.x, this.eyeY = NS.y, this.eyeZ = NS.z, this.focalPx = IS, this.culling = xS);
+          Lk = yk ? (0, Tk.d)(Ik, qk.getRenderWidth(), qk.getRenderHeight()) : 0;
+        lk.x === this.eyeX && lk.y === this.eyeY && lk.z === this.eyeZ && Lk === this.focalPx && yk === this.culling || (this.epoch++, this.eyeX = lk.x, this.eyeY = lk.y, this.eyeZ = lk.z, this.focalPx = Lk, this.culling = yk);
         const {
-          epoch: fS,
-          range: kS
-        } = this, aS = this.JK / 2, KS = aS * Math.sqrt(3), jS = SS.data, GS = SS.length;
-        let CS = 0;
-        for (let XS = 0; XS < GS; XS++) {
-          const SS = jS[XS],
-            HS = SS._noaFaceGroups;
-          if (HS && (SS._noaFaceEpoch !== fS || SS._noaFaceMaterial !== SS.material)) {
-            SS._noaFaceEpoch = fS, SS._noaFaceMaterial = SS.material;
-            const gS = SS.dD,
-              XS = gS && 1 === gS.length ? gS[0] : null;
-            let uS = -1;
-            if (xS && XS && (0, tS.y)(SS.material)) {
-              const gS = SS.position,
-                tS = NS.x - gS.x,
-                XS = NS.y - gS.y,
-                xS = NS.z - gS.z,
-                qS = tS - aS,
-                fS = XS - aS,
-                kS = xS - aS,
-                jS = Math.sqrt(qS * qS + fS * fS + kS * kS) + KS;
-              uS = (0, bS.i)(HS, tS, XS, xS, (0, bS.f)(jS, IS))
+          epoch: tk,
+          range: Zk
+        } = this, jk = this.se / 2, ek = jk * Math.sqrt(3), wk = kk.data, Hk = kk.length;
+        let Jk = 0;
+        for (let ik = 0; ik < Hk; ik++) {
+          const kk = wk[ik],
+            Fk = kk._noaFaceGroups;
+          if (Fk && (kk._noaFaceEpoch !== tk || kk._noaFaceMaterial !== kk.material)) {
+            kk._noaFaceEpoch = tk, kk._noaFaceMaterial = kk.material;
+            const Ik = kk.lK,
+              ik = Ik && 1 === Ik.length ? Ik[0] : null;
+            let qk = -1;
+            if (yk && ik && (0, Xk.t)(kk.material)) {
+              const Ik = kk.position,
+                Xk = lk.x - Ik.x,
+                ik = lk.y - Ik.y,
+                yk = lk.z - Ik.z,
+                ak = Xk - jk,
+                tk = ik - jk,
+                Zk = yk - jk,
+                wk = Math.sqrt(ak * ak + tk * tk + Zk * Zk) + ek;
+              qk = (0, Tk.m)(Fk, Xk, ik, yk, (0, Tk.h)(wk, Lk))
             }
-            if (XS && uS !== SS._noaFaceMask) {
-              SS._noaFaceMask = uS;
-              let gS = 0,
-                bS = HS[tS.h]; - 1 !== uS && (bS = qS(HS, uS, kS), gS = kS[0]), SS._noaFaceCount = bS, XS.indexStart = 6 * gS, XS.indexCount = 6 * bS, XS.setBoundingInfo(SS.hA())
+            if (ik && qk !== kk._noaFaceMask) {
+              kk._noaFaceMask = qk;
+              let Ik = 0,
+                Tk = Fk[Xk.g]; - 1 !== qk && (Tk = ak(Fk, qk, Zk), Ik = Zk[0]), kk._noaFaceCount = Tk, ik.indexStart = 6 * Ik, ik.indexCount = 6 * Tk, ik.setBoundingInfo(kk.vR())
             }
           }
-          HS && 0 === SS._noaFaceCount || (jS[CS++] = SS)
+          Fk && 0 === kk._noaFaceCount || (wk[Jk++] = kk)
         }
-        SS.length = CS
+        kk.length = Jk
       }
     }
   },
-  37559: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => qS,
-      g: () => NS
+  37578: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => ak,
+      g: () => lk
     });
-    const tS = new WeakSet;
-    let bS = 0;
-    const XS = new Set;
+    const Xk = new WeakSet;
+    let Tk = 0;
+    const ik = new Set;
 
-    function xS(SS, HS) {
-      SS._data = HS
+    function yk(kk, Fk) {
+      kk._data = Fk
     }
 
-    function NS(SS) {
-      var HS, gS;
-      (null !== (HS = null === (gS = SS.getBuffer()) || void 0 === gS ? void 0 : gS.hf) && void 0 !== HS ? HS : 0) > 0 && (tS.add(SS), 0 === bS ? xS(SS, null) : XS.add(SS))
+    function lk(kk) {
+      var Fk, Ik;
+      (null !== (Fk = null === (Ik = kk.getBuffer()) || void 0 === Ik ? void 0 : Ik.St) && void 0 !== Fk ? Fk : 0) > 0 && (Xk.add(kk), 0 === Tk ? yk(kk, null) : ik.add(kk))
     }
 
-    function qS(SS) {
-      bS++;
-      for (const gS of function(SS) {
-          const HS = new Set;
-          for (const bS of SS) {
-            const SS = bS.geometry;
-            for (const bS of Object.values(null !== (gS = null === SS || void 0 === SS ? void 0 : SS.getVertexBuffers()) && void 0 !== gS ? gS : {})) {
-              var gS;
-              const SS = bS.getWrapperBuffer();
-              tS.has(SS) && HS.add(SS)
+    function ak(kk) {
+      Tk++;
+      for (const Ik of function(kk) {
+          const Fk = new Set;
+          for (const Tk of kk) {
+            const kk = Tk.geometry;
+            for (const Tk of Object.values(null !== (Ik = null === kk || void 0 === kk ? void 0 : kk.getVertexBuffers()) && void 0 !== Ik ? Ik : {})) {
+              var Ik;
+              const kk = Tk.getWrapperBuffer();
+              Xk.has(kk) && Fk.add(kk)
             }
           }
-          return HS
-        }(SS)) gS.getData() || uS(gS), XS.add(gS);
-      let HS = !0;
+          return Fk
+        }(kk)) Ik.getData() || qk(Ik), ik.add(Ik);
+      let Fk = !0;
       return () => {
-        if (HS && (HS = !1, bS--, 0 === bS)) {
-          for (const SS of XS) xS(SS, null);
-          XS.clear()
+        if (Fk && (Fk = !1, Tk--, 0 === Tk)) {
+          for (const kk of ik) yk(kk, null);
+          ik.clear()
         }
       }
     }
 
-    function uS(SS) {
-      const HS = SS.getBuffer();
-      if (!HS || !(HS.hf > 0)) return;
-      const gS = SS._engine,
-        tS = new Uint8Array(HS.hf);
-      gS.bindArrayBuffer(HS), gS._gl.getBufferSubData(gS._gl.ARRAY_BUFFER, 0, tS), gS._resetVertexBufferBinding(), xS(SS, tS)
+    function qk(kk) {
+      const Fk = kk.getBuffer();
+      if (!Fk || !(Fk.St > 0)) return;
+      const Ik = kk._engine,
+        Xk = new Uint8Array(Fk.St);
+      Ik.bindArrayBuffer(Fk), Ik._gl.getBufferSubData(Ik._gl.ARRAY_BUFFER, 0, Xk), Ik._resetVertexBufferBinding(), yk(kk, Xk)
     }
   },
-  37573: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => xS,
-      h: () => XS,
-      l: () => qS,
-      o: () => tS,
-      s: () => NS,
-      u: () => bS,
-      y: () => uS
+  37586: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => yk,
+      g: () => ik,
+      i: () => ak,
+      l: () => Xk,
+      o: () => lk,
+      p: () => Tk,
+      t: () => qk
     });
-    const tS = 6,
-      bS = [0, 2, 4, 1, 3, 5, 0, 2],
-      XS = 6,
-      xS = [1, 0, 3, 2, 5, 4];
-    for (let IS = XS; IS < bS.length; IS++)
-      if (bS[IS] !== bS[IS - XS]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const NS = bS.length + 1,
-      qS = (() => {
-        const SS = [];
-        for (let HS = 0; HS < XS; HS++) SS[bS[HS]] = HS;
-        return SS
+    const Xk = 6,
+      Tk = [0, 2, 4, 1, 3, 5, 0, 2],
+      ik = 6,
+      yk = [1, 0, 3, 2, 5, 4];
+    for (let Lk = ik; Lk < Tk.length; Lk++)
+      if (Tk[Lk] !== Tk[Lk - ik]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const lk = Tk.length + 1,
+      ak = (() => {
+        const kk = [];
+        for (let Fk = 0; Fk < ik; Fk++) kk[Tk[Fk]] = Fk;
+        return kk
       })();
 
-    function uS(SS) {
-      return !!SS && SS.backFaceCulling && (0 === SS.transparencyMode || 1 === SS.transparencyMode)
+    function qk(kk) {
+      return !!kk && kk.backFaceCulling && (0 === kk.transparencyMode || 1 === kk.transparencyMode)
     }
   },
-  37586: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => NS,
-      f: () => qS,
-      g: () => IS,
-      i: () => uS,
-      j: () => KS
+  37600: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => lk,
+      h: () => ak,
+      l: () => Lk,
+      m: () => qk,
+      n: () => ek
     });
-    var tS = gS(37573);
-    const bS = 1 / 16,
-      XS = 1 / 64,
-      xS = 2048;
-    tS.o;
+    var Xk = Ik(37586);
+    const Tk = 1 / 16,
+      ik = 1 / 64,
+      yk = 2048;
+    Xk.l;
 
-    function NS(SS, HS, gS) {
-      return Math.min(Math.abs(SS[0] * HS), Math.abs(SS[5] * gS)) / 2
+    function lk(kk, Fk, Ik) {
+      return Math.min(Math.abs(kk[0] * Fk), Math.abs(kk[5] * Ik)) / 2
     }
 
-    function qS(SS, HS) {
-      return bS + XS * SS * SS / HS
+    function ak(kk, Fk) {
+      return Tk + ik * kk * kk / Fk
     }
 
-    function uS(SS, HS, gS, bS, XS) {
-      const xS = tS.s;
-      return IS(SS[xS], SS[xS + 1], SS[xS + 2], SS[xS + 3], SS[xS + 4], SS[xS + 5], HS, gS, bS, XS)
+    function qk(kk, Fk, Ik, Tk, ik) {
+      const yk = Xk.o;
+      return Lk(kk[yk], kk[yk + 1], kk[yk + 2], kk[yk + 3], kk[yk + 4], kk[yk + 5], Fk, Ik, Tk, ik)
     }
 
-    function IS(SS, HS, gS, tS, bS, XS, xS, NS, qS, uS) {
-      return (xS <= SS - uS ? 0 : 1) | (xS >= HS + uS ? 0 : 2) | (NS <= gS - uS ? 0 : 4) | (NS >= tS + uS ? 0 : 8) | (qS <= bS - uS ? 0 : 16) | (qS >= XS + uS ? 0 : 32)
+    function Lk(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak, qk) {
+      return (yk <= kk - qk ? 0 : 1) | (yk >= Fk + qk ? 0 : 2) | (lk <= Ik - qk ? 0 : 4) | (lk >= Xk + qk ? 0 : 8) | (ak <= Tk - qk ? 0 : 16) | (ak >= ik + qk ? 0 : 32)
     }
-    const fS = (() => {
-        const SS = [];
-        for (let HS = 0; HS < tS.u.length; HS++) {
-          let gS = 0;
-          for (let bS = HS + 1; bS <= tS.u.length; bS++) {
-            const XS = 1 << tS.u[bS - 1];
-            if (gS & XS) break;
-            gS |= XS, SS.push({
-              start: HS,
-              end: bS,
-              Tt: gS
+    const tk = (() => {
+        const kk = [];
+        for (let Fk = 0; Fk < Xk.p.length; Fk++) {
+          let Ik = 0;
+          for (let Tk = Fk + 1; Tk <= Xk.p.length; Tk++) {
+            const ik = 1 << Xk.p[Tk - 1];
+            if (Ik & ik) break;
+            Ik |= ik, kk.push({
+              start: Fk,
+              end: Tk,
+              YX: Ik
             })
           }
         }
-        return SS
+        return kk
       })(),
-      kS = [];
+      Zk = [];
 
-    function aS(SS, HS) {
-      const gS = tS.l[HS];
-      return SS[gS + 1] - SS[gS]
+    function jk(kk, Fk) {
+      const Ik = Xk.i[Fk];
+      return kk[Ik + 1] - kk[Ik]
     }
 
-    function KS(SS, HS, gS) {
-      let bS = 0;
-      for (let xS = 0; xS < tS.o; xS++) aS(SS, xS) > 0 && (bS |= 1 << xS);
-      if (0 === (HS &= bS)) return 0;
-      if (HS === bS) return gS[0] = 0, gS[1] = SS[tS.h], 1;
-      let XS = null,
-        NS = 1 / 0;
-      for (const uS of function(SS) {
-          let HS = kS[SS];
-          if (HS) return HS;
-          const gS = new Map,
-            tS = (SS, HS) => {
-              const tS = 4 * SS + HS.length / 2;
-              gS.has(tS) || gS.set(tS, {
-                Tt: SS,
-                windows: HS
+    function ek(kk, Fk, Ik) {
+      let Tk = 0;
+      for (let yk = 0; yk < Xk.l; yk++) jk(kk, yk) > 0 && (Tk |= 1 << yk);
+      if (0 === (Fk &= Tk)) return 0;
+      if (Fk === Tk) return Ik[0] = 0, Ik[1] = kk[Xk.g], 1;
+      let ik = null,
+        lk = 1 / 0;
+      for (const qk of function(kk) {
+          let Fk = Zk[kk];
+          if (Fk) return Fk;
+          const Ik = new Map,
+            Xk = (kk, Fk) => {
+              const Xk = 4 * kk + Fk.length / 2;
+              Ik.has(Xk) || Ik.set(Xk, {
+                YX: kk,
+                windows: Fk
               })
             };
-          for (const XS of fS)
-            if ((XS.Tt & SS) === SS && tS(XS.Tt, [XS.start, XS.end]), 0 !== (XS.Tt & SS))
-              for (const HS of fS) HS.start < XS.end || 0 !== (XS.Tt & HS.Tt) || 0 === (HS.Tt & SS) || ((XS.Tt | HS.Tt) & SS) !== SS || tS(XS.Tt | HS.Tt, [XS.start, XS.end, HS.start, HS.end]);
-          const bS = [...gS.values()];
-          return HS = bS.filter((SS => !bS.some((HS => HS !== SS && (HS.Tt & SS.Tt) === HS.Tt && HS.windows.length <= SS.windows.length)))), kS[SS] = HS, HS
-        }(HS)) {
-        let gS = (uS.windows.length / 2 - 1) * xS;
-        const qS = uS.Tt & ~HS & bS;
-        for (let HS = 0; HS < tS.o; HS++) qS & 1 << HS && (gS += aS(SS, HS));
-        gS < NS && (XS = uS, NS = gS)
+          for (const ik of tk)
+            if ((ik.YX & kk) === kk && Xk(ik.YX, [ik.start, ik.end]), 0 !== (ik.YX & kk))
+              for (const Fk of tk) Fk.start < ik.end || 0 !== (ik.YX & Fk.YX) || 0 === (Fk.YX & kk) || ((ik.YX | Fk.YX) & kk) !== kk || Xk(ik.YX | Fk.YX, [ik.start, ik.end, Fk.start, Fk.end]);
+          const Tk = [...Ik.values()];
+          return Fk = Tk.filter((kk => !Tk.some((Fk => Fk !== kk && (Fk.YX & kk.YX) === Fk.YX && Fk.windows.length <= kk.windows.length)))), Zk[kk] = Fk, Fk
+        }(Fk)) {
+        let Ik = (qk.windows.length / 2 - 1) * yk;
+        const ak = qk.YX & ~Fk & Tk;
+        for (let Fk = 0; Fk < Xk.l; Fk++) ak & 1 << Fk && (Ik += jk(kk, Fk));
+        Ik < lk && (ik = qk, lk = Ik)
       }
-      const qS = XS.windows;
-      for (let tS = 0; tS < qS.length; tS += 2) {
-        const HS = SS[qS[tS]];
-        gS[tS] = HS, gS[tS + 1] = SS[qS[tS + 1]] - HS
+      const ak = ik.windows;
+      for (let Xk = 0; Xk < ak.length; Xk += 2) {
+        const Fk = kk[ak[Xk]];
+        Ik[Xk] = Fk, Ik[Xk + 1] = kk[ak[Xk + 1]] - Fk
       }
-      return qS.length / 2
+      return ak.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

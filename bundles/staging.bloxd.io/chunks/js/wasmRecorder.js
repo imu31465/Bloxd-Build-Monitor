@@ -1,380 +1,380 @@
 export const id = 64;
 export const ids = [64];
 export const modules = {
-  61535: (SS, HS, gS) => {
-    SS.exports = gS.p + "static/media/bloxd_wasm_recorder_bg.4315c68e1a3c83441b7f.wasm"
+  61462: (kk, Fk, Ik) => {
+    kk.exports = Ik.p + "static/media/bloxd_wasm_recorder_bg.118ede992f99db643cd2.wasm"
   },
-  61532: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      BloxdRecorderWasmError: () => AS,
-      RECORDER_MODULE_ID: () => YS,
-      loadRecorderModule: () => iS,
-      markRecorderTrapped: () => zS,
-      prefetchRecorderModule: () => WS,
-      recorderMemoryBytes: () => pS,
-      unloadRecorderModule: () => US
+  61456: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      BloxdRecorderWasmError: () => bk,
+      RECORDER_MODULE_ID: () => uk,
+      loadRecorderModule: () => Ck,
+      markRecorderTrapped: () => ck,
+      prefetchRecorderModule: () => Nk,
+      recorderMemoryBytes: () => fk,
+      unloadRecorderModule: () => Wk
     });
-    var tS = {};
-    gS.r(tS), gS.d(tS, {
-      VbS: () => bS,
-      JxS: () => vS,
-      bf: () => XS,
-      default: () => cS,
-      initSync: () => dS,
-      Xf: () => xS,
-      AbS: () => NS,
-      ObS: () => qS
+    var Xk = {};
+    Ik.r(Xk), Ik.d(Xk, {
+      BTk: () => Tk,
+      Uyk: () => nk,
+      yt: () => ik,
+      default: () => Ok,
+      initSync: () => Ek,
+      lt: () => yk,
+      WTk: () => lk,
+      uTk: () => ak
     });
-    class bS {
+    class Tk {
       __destroy_into_raw() {
-        const SS = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, IS.unregister(this), SS
+        const kk = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, Lk.unregister(this), kk
       }
       free() {
-        const SS = this.__destroy_into_raw();
-        ZS.WLS8(SS, 0)
+        const kk = this.__destroy_into_raw();
+        zk.fgsy(kk, 0)
       }
       busy() {
-        return 0 !== ZS.Ph5s(this.__wbg_ptr)
+        return 0 !== zk.qQ4m(this.__wbg_ptr)
       }
-      command(SS, HS) {
-        return 0 !== ZS.L8dN(this.__wbg_ptr, SS, HS)
+      command(kk, Fk) {
+        return 0 !== zk.U0fg(this.__wbg_ptr, kk, Fk)
       }
-      dbS(SS) {
-        return ZS.jK8p(this.__wbg_ptr, SS) >>> 0
+      bTk(kk) {
+        return zk.NI5y(this.__wbg_ptr, kk) >>> 0
       }
-      JbS() {
-        ZS.fcX5(this.__wbg_ptr)
+      pTk() {
+        zk.deJz(this.__wbg_ptr)
       }
-      ZbS() {
-        return ZS.UeO3(this.__wbg_ptr) >>> 0
+      GTk() {
+        return zk.hS4Q(this.__wbg_ptr) >>> 0
       }
-      hbS() {
-        return ZS.wusG(this.__wbg_ptr)
+      nTk() {
+        return zk.KEUx(this.__wbg_ptr)
       }
-      EbS() {
-        return ZS.LSai(this.__wbg_ptr) >>> 0
+      CTk() {
+        return zk.ZqSH(this.__wbg_ptr) >>> 0
       }
-      LbS() {
-        return ZS.DnDa(this.__wbg_ptr) >>> 0
+      NTk() {
+        return zk.CpX0(this.__wbg_ptr) >>> 0
       }
-      feed(SS) {
-        return ZS.G07e(this.__wbg_ptr, SS) >>> 0
+      feed(kk) {
+        return zk.qUAt(this.__wbg_ptr, kk) >>> 0
       }
       constructor() {
-        const SS = ZS.ZYpE();
-        return this.__wbg_ptr = SS, IS.register(this, this.__wbg_ptr, this), this
+        const kk = zk.YJ0r();
+        return this.__wbg_ptr = kk, Lk.register(this, this.__wbg_ptr, this), this
       }
-      vbS() {
-        return ZS.NXyw(this.__wbg_ptr) >>> 0
+      UTk() {
+        return zk.Qk1Y(this.__wbg_ptr) >>> 0
       }
-      OxS() {
-        return ZS.pA9F(this.__wbg_ptr) >>> 0
+      Cyk() {
+        return zk.VdKM(this.__wbg_ptr) >>> 0
       }
-      wbS(SS, HS, gS) {
-        return 0 !== ZS.Ub3Q(this.__wbg_ptr, SS, HS, gS)
+      OTk(kk, Fk, Ik) {
+        return 0 !== zk.h8cV(this.__wbg_ptr, kk, Fk, Ik)
       }
-      stage(SS) {
-        return ZS.AjQb(this.__wbg_ptr, SS) >>> 0
+      stage(kk) {
+        return zk.vB1F(this.__wbg_ptr, kk) >>> 0
       }
       step() {
-        return ZS.rWBP(this.__wbg_ptr) >>> 0
+        return zk.YVQB(this.__wbg_ptr) >>> 0
       }
     }
 
-    function XS(SS, HS) {
-      const gS = function(SS, HS, gS) {
-          if (void 0 === gS) {
-            const gS = DS.encode(SS),
-              tS = HS(gS.length, 1) >>> 0;
-            return KS().subarray(tS, tS + gS.length).set(gS), JS = gS.length, tS
+    function ik(kk, Fk) {
+      const Ik = function(kk, Fk, Ik) {
+          if (void 0 === Ik) {
+            const Ik = Qk.encode(kk),
+              Xk = Fk(Ik.length, 1) >>> 0;
+            return ek().subarray(Xk, Xk + Ik.length).set(Ik), Sk = Ik.length, Xk
           }
-          let tS = SS.length,
-            bS = HS(tS, 1) >>> 0;
-          const XS = KS();
-          let xS = 0;
-          for (; xS < tS; xS++) {
-            const HS = SS.charCodeAt(xS);
-            if (HS > 127) break;
-            XS[bS + xS] = HS
+          let Xk = kk.length,
+            Tk = Fk(Xk, 1) >>> 0;
+          const ik = ek();
+          let yk = 0;
+          for (; yk < Xk; yk++) {
+            const Fk = kk.charCodeAt(yk);
+            if (Fk > 127) break;
+            ik[Tk + yk] = Fk
           }
-          if (xS !== tS) {
-            0 !== xS && (SS = SS.slice(xS)), bS = gS(bS, tS, tS = xS + 3 * SS.length, 1) >>> 0;
-            const HS = KS().subarray(bS + xS, bS + tS);
-            xS += DS.encodeInto(SS, HS).written, bS = gS(bS, tS, xS, 1) >>> 0
+          if (yk !== Xk) {
+            0 !== yk && (kk = kk.slice(yk)), Tk = Ik(Tk, Xk, Xk = yk + 3 * kk.length, 1) >>> 0;
+            const Fk = ek().subarray(Tk + yk, Tk + Xk);
+            yk += Qk.encodeInto(kk, Fk).written, Tk = Ik(Tk, Xk, yk, 1) >>> 0
           }
-          return JS = xS, bS
-        }(SS, ZS.W93h, ZS.GpfK),
-        tS = JS,
-        bS = ZS.dukg(gS, tS, HS);
-      if (bS[1]) throw CS(bS[0])
+          return Sk = yk, Tk
+        }(kk, zk.EOOZ, zk.jFoY),
+        Xk = Sk,
+        Tk = zk.kHfM(Ik, Xk, Fk);
+      if (Tk[1]) throw Jk(Tk[0])
     }
 
-    function xS() {
-      ZS.hZ8b()
+    function yk() {
+      zk.BY5A()
     }
 
-    function NS() {
-      return ZS.pCQD() >>> 0
+    function lk() {
+      return zk.PzaC() >>> 0
     }
 
-    function qS() {
-      return CS(ZS.orjq())
+    function ak() {
+      return Jk(zk.KsAP())
     }
 
-    function uS() {
+    function qk() {
       return {
         __proto__: null,
-        LVXy: {
+        g1Rq: {
           __proto__: null,
-          Qv9K: function(SS, HS) {
-            return fS(Error(kS(SS, HS)))
+          YWRk: function(kk, Fk) {
+            return tk(Error(Zk(kk, Fk)))
           },
-          rxNN: function() {
-            return fS(ZS.memory)
+          oQc0: function() {
+            return tk(zk.memory)
           },
-          bif2: function(SS, HS) {
-            throw new Error(kS(SS, HS))
+          CC7N: function(kk, Fk) {
+            throw new Error(Zk(kk, Fk))
           },
-          FmXG: function(SS, HS) {
-            console.error(kS(SS, HS))
+          OeOt: function(kk, Fk) {
+            console.error(Zk(kk, Fk))
           },
-          San1: function() {
+          wkYC: function() {
             return performance.now()
           }
         }
       }
     }
-    Symbol.dispose && (bS.prototype[Symbol.dispose] = bS.prototype.free);
-    const IS = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (Tk.prototype[Symbol.dispose] = Tk.prototype.free);
+    const Lk = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((SS => ZS?.__wbg_recordermodule_free(SS, 1)));
+    } : new FinalizationRegistry((kk => zk?.__wbg_recordermodule_free(kk, 1)));
 
-    function fS(SS) {
-      GS === jS.length && jS.push(jS.length + 1);
-      const HS = GS;
-      return GS = jS[HS], jS[HS] = SS, HS
+    function tk(kk) {
+      Hk === wk.length && wk.push(wk.length + 1);
+      const Fk = Hk;
+      return Hk = wk[Fk], wk[Fk] = kk, Fk
     }
 
-    function kS(SS, HS) {
-      return function(SS, HS) {
-        QS += HS, QS >= PS && (nS = new TextDecoder("utf-8", {
+    function Zk(kk, Fk) {
+      return function(kk, Fk) {
+        Kk += Fk, Kk >= Pk && (xk = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), nS.decode(), QS = HS);
-        return nS.decode(KS().subarray(SS, SS + HS))
-      }(SS >>> 0, HS)
+        }), xk.decode(), Kk = Fk);
+        return xk.decode(ek().subarray(kk, kk + Fk))
+      }(kk >>> 0, Fk)
     }
-    let aS = null;
+    let jk = null;
 
-    function KS() {
-      return null !== aS && 0 !== aS.byteLength || (aS = new Uint8Array(ZS.memory.buffer)), aS
+    function ek() {
+      return null !== jk && 0 !== jk.byteLength || (jk = new Uint8Array(zk.memory.buffer)), jk
     }
-    let jS = new Array(1024).fill(void 0);
-    jS.push(void 0, null, !0, !1);
-    let GS = jS.length;
+    let wk = new Array(1024).fill(void 0);
+    wk.push(void 0, null, !0, !1);
+    let Hk = wk.length;
 
-    function CS(SS) {
-      const HS = function(SS) {
-        return jS[SS]
-      }(SS);
-      return function(SS) {
-        SS < 1028 || (jS[SS] = GS, GS = SS)
-      }(SS), HS
+    function Jk(kk) {
+      const Fk = function(kk) {
+        return wk[kk]
+      }(kk);
+      return function(kk) {
+        kk < 1028 || (wk[kk] = Hk, Hk = kk)
+      }(kk), Fk
     }
-    let nS = new TextDecoder("utf-8", {
+    let xk = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    nS.decode();
-    const PS = 2146435072;
-    let QS = 0;
-    const DS = new TextEncoder;
-    "encodeInto" in DS || (DS.encodeInto = function(SS, HS) {
-      const gS = DS.encode(SS);
-      return HS.set(gS), {
-        read: SS.length,
-        written: gS.length
+    xk.decode();
+    const Pk = 2146435072;
+    let Kk = 0;
+    const Qk = new TextEncoder;
+    "encodeInto" in Qk || (Qk.encodeInto = function(kk, Fk) {
+      const Ik = Qk.encode(kk);
+      return Fk.set(Ik), {
+        read: kk.length,
+        written: Ik.length
       }
     });
-    let wS, hS, ZS, JS = 0;
+    let sk, Vk, zk, Sk = 0;
 
-    function OS(SS, HS) {
-      return hS = SS, ZS = SS.exports, wS = HS, aS = null, ZS.cEHb(), ZS
+    function vk(kk, Fk) {
+      return Vk = kk, zk = kk.exports, sk = Fk, jk = null, zk.jWvk(), zk
     }
 
-    function dS(SS) {
-      if (void 0 !== ZS) return ZS;
-      void 0 !== SS && (Object.getPrototypeOf(SS) === Object.prototype ? ({
-        module: SS
-      } = SS) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const HS = uS();
-      SS instanceof WebAssembly.Module || (SS = new WebAssembly.Module(SS));
-      return OS(new WebAssembly.Instance(SS, HS), SS)
+    function Ek(kk) {
+      if (void 0 !== zk) return zk;
+      void 0 !== kk && (Object.getPrototypeOf(kk) === Object.prototype ? ({
+        module: kk
+      } = kk) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const Fk = qk();
+      kk instanceof WebAssembly.Module || (kk = new WebAssembly.Module(kk));
+      return vk(new WebAssembly.Instance(kk, Fk), kk)
     }
-    async function cS(SS) {
-      if (void 0 !== ZS) return ZS;
-      void 0 !== SS && (Object.getPrototypeOf(SS) === Object.prototype ? ({
-        module_or_path: SS
-      } = SS) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const HS = uS();
-      ("string" === typeof SS || "function" === typeof Request && SS instanceof Request || "function" === typeof URL && SS instanceof URL) && (SS = fetch(SS));
+    async function Ok(kk) {
+      if (void 0 !== zk) return zk;
+      void 0 !== kk && (Object.getPrototypeOf(kk) === Object.prototype ? ({
+        module_or_path: kk
+      } = kk) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const Fk = qk();
+      ("string" === typeof kk || "function" === typeof Request && kk instanceof Request || "function" === typeof URL && kk instanceof URL) && (kk = fetch(kk));
       const {
-        instance: gS,
-        module: tS
-      } = await async function(SS, HS) {
-        if ("function" === typeof Response && SS instanceof Response) {
-          if (!SS.ok) throw new Error(`failed to fetch Wasm: ${SS.status} ${SS.statusText} fetching '${SS.url}'`);
+        instance: Ik,
+        module: Xk
+      } = await async function(kk, Fk) {
+        if ("function" === typeof Response && kk instanceof Response) {
+          if (!kk.ok) throw new Error(`failed to fetch Wasm: ${kk.status} ${kk.statusText} fetching '${kk.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(SS, HS)
-          } catch (gS) {
-            if (! function(SS) {
-                switch (SS) {
+            return await WebAssembly.instantiateStreaming(kk, Fk)
+          } catch (Ik) {
+            if (! function(kk) {
+                switch (kk) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(SS.type) || "application/wasm" === SS.headers.get("Content-Type")) throw gS;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", gS)
+              }(kk.type) || "application/wasm" === kk.headers.get("Content-Type")) throw Ik;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", Ik)
           }
-          const tS = await SS.arrayBuffer();
-          return await WebAssembly.instantiate(tS, HS)
+          const Xk = await kk.arrayBuffer();
+          return await WebAssembly.instantiate(Xk, Fk)
         } {
-          const gS = await WebAssembly.instantiate(SS, HS);
-          return gS instanceof WebAssembly.Instance ? {
-            instance: gS,
-            module: SS
-          } : gS
+          const Ik = await WebAssembly.instantiate(kk, Fk);
+          return Ik instanceof WebAssembly.Instance ? {
+            instance: Ik,
+            module: kk
+          } : Ik
         }
-      }(await SS, HS);
-      return OS(gS, tS)
+      }(await kk, Fk);
+      return vk(Ik, Xk)
     }
 
-    function vS() {
-      ZS = void 0, hS = void 0, aS = null, jS = new Array(1024).fill(void 0), jS.push(void 0, null, !0, !1), GS = jS.length
+    function nk() {
+      zk = void 0, Vk = void 0, jk = null, wk = new Array(1024).fill(void 0), wk.push(void 0, null, !0, !1), Hk = wk.length
     }
-    var ES = gS(3030),
-      LS = gS(6819);
-    const YS = 2;
-    class AS extends Error {
+    var Gk = Ik(2803),
+      pk = Ik(6599);
+    const uk = 2;
+    class bk extends Error {
       stage;
-      constructor(SS, HS) {
-        super((0, ES.E)(SS, HS), {
-          cause: HS
-        }), this.name = "BloxdRecorderWasmError", this.stage = SS
+      constructor(kk, Fk) {
+        super((0, Gk.C)(kk, Fk), {
+          cause: Fk
+        }), this.name = "BloxdRecorderWasmError", this.stage = kk
       }
     }
-    let yS = null;
-    const VS = function(SS) {
-      let HS = null,
-        gS = null,
-        tS = null,
-        bS = null;
-      const XS = async () => {
-        let gS = null;
+    let Rk = null;
+    const Uk = function(kk) {
+      let Fk = null,
+        Ik = null,
+        Xk = null,
+        Tk = null;
+      const ik = async () => {
+        let Ik = null;
         try {
-          return gS = HS ??= (0, ES.F)(SS.url(), (0, LS.c)(SS.name)), await gS
-        } catch (tS) {
-          throw HS === gS && (HS = null), SS.error((0, ES.L)(tS), tS)
+          return Ik = Fk ??= (0, Gk.G)(kk.url(), (0, pk.c)(kk.name)), await Ik
+        } catch (Xk) {
+          throw Fk === Ik && (Fk = null), kk.error((0, Gk.M)(Xk), Xk)
         }
       };
       return {
         load: () => {
-          if (bS) return Promise.reject(bS);
-          if (gS) return gS;
-          const HS = (async () => {
-            const HS = await XS();
+          if (Tk) return Promise.reject(Tk);
+          if (Ik) return Ik;
+          const Fk = (async () => {
+            const Fk = await ik();
             try {
-              await SS.init(HS)
-            } catch (gS) {
-              throw SS.error("instantiate", gS)
+              await kk.init(Fk)
+            } catch (Ik) {
+              throw kk.error("instantiate", Ik)
             }
-            return SS.bindings
+            return kk.bindings
           })();
-          gS = HS, tS = HS;
-          const xS = () => {
-            tS === HS && (tS = null)
+          Ik = Fk, Xk = Fk;
+          const yk = () => {
+            Xk === Fk && (Xk = null)
           };
-          return HS.then(xS, (() => {
-            xS(), gS === HS && (gS = null)
-          })), HS
+          return Fk.then(yk, (() => {
+            yk(), Ik === Fk && (Ik = null)
+          })), Fk
         },
         prefetch: async () => {
-          bS || gS || await XS()
+          Tk || Ik || await ik()
         },
-        markTrapped: HS => (bS ??= SS.error("call", HS), bS),
+        markTrapped: Fk => (Tk ??= kk.error("call", Fk), Tk),
         unload: () => {
-          bS || !SS.reset || tS || (SS.reset(), gS = null)
+          Tk || !kk.reset || Xk || (kk.reset(), Ik = null)
         }
       }
     }({
       name: "bloxd_wasm_recorder",
-      url: () => new gS.U(gS(61535)),
-      init: async SS => {
-        await cS({
-          module_or_path: SS
-        }), yS = qS()
+      url: () => new Ik.U(Ik(61462)),
+      init: async kk => {
+        await Ok({
+          module_or_path: kk
+        }), Rk = ak()
       },
-      bindings: tS,
-      error: (SS, HS) => new AS(SS, HS),
+      bindings: Xk,
+      error: (kk, Fk) => new bk(kk, Fk),
       reset: () => {
-        vS(), yS = null
+        nk(), Rk = null
       }
     });
 
-    function iS() {
-      return VS.load()
+    function Ck() {
+      return Uk.load()
     }
 
-    function WS() {
-      return VS.prefetch()
+    function Nk() {
+      return Uk.prefetch()
     }
 
-    function zS(SS) {
-      return VS.markTrapped(SS)
+    function ck(kk) {
+      return Uk.markTrapped(kk)
     }
 
-    function US() {
-      VS.unload()
+    function Wk() {
+      Uk.unload()
     }
 
-    function pS() {
-      return yS?.buffer.byteLength ?? 0
+    function fk() {
+      return Rk?.buffer.byteLength ?? 0
     }
   },
-  6819: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => xS
+  6599: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk
     });
-    var tS = gS(3030);
-    const bS = {
-      bloxd_wasm: () => "ca276a159dbc87fa5fb24bce01c600e017686becb2aec4d2d8c3ce9d9be10286",
-      bloxd_wasm_client: () => "78d650a75a894f26dfff12d13178b3b18625b3ca51d6ff43ca76c7c6a545160e",
-      bloxd_wasm_workers: () => "141545174c96a6a56bdd55b96874db592d9aa0421d29d01fc5f13e010772908e",
-      bloxd_wasm_models: () => "f9978bc5a15af3d00b08cdd71f12902b1d7af465ab38552c337a8dbca894f2ad",
-      bloxd_wasm_webgpu: () => "b036ba0a8b10236966685420835363e85775cab4add8bde3fee2aab6dab3eedc",
-      bloxd_wasm_webgl: () => "f94a6bd176e034f73eb9d8633ef96f3a4c2ba3c58f8f946158bfc25489809a0e",
-      bloxd_wasm_webgl1: () => "e1bef365f7d6b4c1345c3d7a59fb7d8e9059890b44c25962f6eefa2875a0d8ba",
-      bloxd_wasm_replay: () => "1cd9ae019549ed07be1080a40e72119ca1530d917a5e7c4bff7919777b0d7cc7",
-      bloxd_wasm_recorder: () => "9bf6273ff6c7cd97e192adea241330701cc74623c7e79a51cf18981bf754ac45",
-      bloxd_wasm_anim: () => "e9f60e55d6a938bae2c0cab139b5bc6a9a4c4b1abe3489fe2eaff4a7709eea4a",
-      bloxd_wasm_textures: () => "b1d909a0a1a9dae74a5159a0e981ac598963b92321ef4cc808ac39c91a481383",
-      bloxd_wasm_shader_pack: () => "2cc8a962c1c16c3304b235a366c2decc6556fba05a1b6ce886e0064dd54faac6"
+    var Xk = Ik(2803);
+    const Tk = {
+      bloxd_wasm: () => "e2f9e22926b42992a62e6da973b3cd1227290abc3e4b086f16ef7a6e7451e01c",
+      bloxd_wasm_client: () => "197b3a58630dd256c73f6be56077b03aba52688d49b256cfcb5b4297a602be6f",
+      bloxd_wasm_workers: () => "c531aa2c5eb2277940017568a817b82729d5bd8e37ed09fdb9542eeedecfabb2",
+      bloxd_wasm_models: () => "82813a7dd849808b1d07d41cb80b2035277c675f83cdbe5540a809aa86e18dae",
+      bloxd_wasm_webgpu: () => "2066e38e37e17624dae8b4b9c559f5daf047cb3ceb4eb8056d5135d5b3d9eb24",
+      bloxd_wasm_webgl: () => "3d1d580992195f6369c2533ce100ae6e8452da7398faf88e49b339f937ec6192",
+      bloxd_wasm_webgl1: () => "8032d9766cccf3c8343274c4d612b6bb3252bd4e5129a88b0ce812c44371db80",
+      bloxd_wasm_replay: () => "8d3f5aa602437d8a622249e4b26ef375d3132f03479495456878d8869447f290",
+      bloxd_wasm_recorder: () => "4e4293beaac6f6862394c42133a435a6ade3bf181e4ae4bc1a5a3c0c8e0c9dd2",
+      bloxd_wasm_anim: () => "125adb66f5cee367958854d2a9364d34f8d55bf2c7b62e20f2a9dcc7b9af5035",
+      bloxd_wasm_textures: () => "b45159af64c2cb22c8ac7c32ed16b3591e0026feb57c6ebfb95e710677904764",
+      bloxd_wasm_shader_pack: () => "b4044fc49c30628f5ddaad152e8054fb78f46958556f35beebe36f24a022d42c"
     };
-    var XS = gS(4812);
+    var ik = Ik(4692);
 
-    function xS(SS) {
-      const HS = Object.prototype.hasOwnProperty.call(bS, SS) ? bS[SS]() : void 0;
-      if (void 0 !== HS) return {
-        sha256: HS,
-        onMismatch: XS.D
+    function yk(kk) {
+      const Fk = Object.prototype.hasOwnProperty.call(Tk, kk) ? Tk[kk]() : void 0;
+      if (void 0 !== Fk) return {
+        sha256: Fk,
+        onMismatch: ik.C
       };
-      throw new tS.h(`${SS} has no release digest, so this build refuses it`)
+      throw new Xk.g(`${kk} has no release digest, so this build refuses it`)
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

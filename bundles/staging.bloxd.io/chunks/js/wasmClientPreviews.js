@@ -1,38 +1,38 @@
 export const id = 59;
 export const ids = [59];
 export const modules = {
-  38644: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => bS,
-      f: () => XS
+  38621: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Tk,
+      f: () => ik
     });
-    const tS = new WeakMap;
+    const Xk = new WeakMap;
 
-    function bS(SS, HS) {
-      return tS.set(SS, HS), SS
+    function Tk(kk, Fk) {
+      return Xk.set(kk, Fk), kk
     }
 
-    function XS(SS) {
-      var HS;
-      return null !== (HS = tS.get(SS)) && void 0 !== HS ? HS : null
+    function ik(kk) {
+      var Fk;
+      return null !== (Fk = Xk.get(kk)) && void 0 !== Fk ? Fk : null
     }
   },
-  38672: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => NS
+  38649: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => lk
     });
-    var tS = gS(1309);
+    var Xk = Ik(1217);
 
-    function bS(SS) {
-      const HS = /(\d*\.?\d+)px/.exec(SS);
-      return HS ? Number(HS[1]) : null
+    function Tk(kk) {
+      const Fk = /(\d*\.?\d+)px/.exec(kk);
+      return Fk ? Number(Fk[1]) : null
     }
 
-    function XS(SS) {
-      return SS.split(/[\s,]+/).pop()
+    function ik(kk) {
+      return kk.split(/[\s,]+/).pop()
     }
-    let xS = !1;
-    const NS = {
+    let yk = !1;
+    const lk = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -43,603 +43,603 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(SS, HS, tS, NS, qS, uS) {
-        if (qS <= 0 || uS <= 0 || this.fontSize <= 0) return {
+      drawText: function(kk, Fk, Xk, lk, ak, qk) {
+        if (ak <= 0 || qk <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: IS,
-          fontVariant: fS,
-          fontWeight: kS,
-          fontSize: aS,
-          font: KS
-        } = this, jS = [IS, fS, kS, `${aS}px`, KS].filter(Boolean).join(" "), GS = [
-          [kS, `${aS}px`, XS(KS)].filter(Boolean).join(" "), `${aS}px sans-serif`
-        ], CS = SS.font, nS = function(SS, HS, gS) {
-          for (const tS of HS) {
-            SS.font = tS;
-            const HS = bS(SS.font),
-              xS = XS(tS);
-            if (null !== HS && Math.abs(HS - gS) <= .5 && SS.font.toLowerCase().includes(xS.toLowerCase())) return tS
+          fontStyle: Lk,
+          fontVariant: tk,
+          fontWeight: Zk,
+          fontSize: jk,
+          font: ek
+        } = this, wk = [Lk, tk, Zk, `${jk}px`, ek].filter(Boolean).join(" "), Hk = [
+          [Zk, `${jk}px`, ik(ek)].filter(Boolean).join(" "), `${jk}px sans-serif`
+        ], Jk = kk.font, xk = function(kk, Fk, Ik) {
+          for (const Xk of Fk) {
+            kk.font = Xk;
+            const Fk = Tk(kk.font),
+              yk = ik(Xk);
+            if (null !== Fk && Math.abs(Fk - Ik) <= .5 && kk.font.toLowerCase().includes(yk.toLowerCase())) return Xk
           }
           return null
-        }(SS, [jS, ...GS], aS);
-        nS !== jS && function(SS, HS, tS) {
-          xS || (xS = !0, Promise.resolve().then((() => gS(1149))).then((gS => {
+        }(kk, [wk, ...Hk], jk);
+        xk !== wk && function(kk, Fk, Xk) {
+          yk || (yk = !0, Promise.resolve().then((() => Ik(1076))).then((Ik => {
             let {
-              Zj: bS
-            } = gS;
-            bS(new Error("A canvas didn't take canvasTxt's font"), {
-              font: SS,
-              ia: HS,
-              drawnWith: null !== tS && void 0 !== tS ? tS : "the kept font, scaled"
+              ow: Tk
+            } = Ik;
+            Tk(new Error("A canvas didn't take canvasTxt's font"), {
+              font: kk,
+              Gj: Fk,
+              drawnWith: null !== Xk && void 0 !== Xk ? Xk : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(jS, CS, nS);
-        const PS = bS(SS.font);
-        if (null === nS && null !== PS && PS > 0) {
-          const gS = aS / PS;
-          SS.save();
+        }(wk, Jk, xk);
+        const Pk = Tk(kk.font);
+        if (null === xk && null !== Pk && Pk > 0) {
+          const Ik = jk / Pk;
+          kk.save();
           try {
-            return SS.scale(gS, gS), {
-              height: this.drawLines(SS, HS, tS / gS, NS / gS, qS / gS, uS / gS, PS).height * gS
+            return kk.scale(Ik, Ik), {
+              height: this.drawLines(kk, Fk, Xk / Ik, lk / Ik, ak / Ik, qk / Ik, Pk).height * Ik
             }
           } finally {
-            SS.restore()
+            kk.restore()
           }
         }
-        return this.drawLines(SS, HS, tS, NS, qS, uS, aS)
+        return this.drawLines(kk, Fk, Xk, lk, ak, qk, jk)
       },
-      drawLines: function(SS, HS, gS, bS, XS, xS, NS) {
-        const qS = gS + XS,
-          uS = bS + xS;
-        let IS, fS = bS + xS / 2 + NS / 2;
-        "right" === this.align ? (IS = qS, SS.textAlign = "right") : "left" === this.align ? (IS = gS, SS.textAlign = "left") : (IS = gS + XS / 2, SS.textAlign = "center");
-        for (const tS of HS) {
-          SS.measureText(tS).width >= XS && (HS = HS.replace(tS, ""))
+      drawLines: function(kk, Fk, Ik, Tk, ik, yk, lk) {
+        const ak = Ik + ik,
+          qk = Tk + yk;
+        let Lk, tk = Tk + yk / 2 + lk / 2;
+        "right" === this.align ? (Lk = ak, kk.textAlign = "right") : "left" === this.align ? (Lk = Ik, kk.textAlign = "left") : (Lk = Ik + ik / 2, kk.textAlign = "center");
+        for (const Xk of Fk) {
+          kk.measureText(Xk).width >= ik && (Fk = Fk.replace(Xk, ""))
         }
-        HS = (0, tS.U)(HS);
-        const kS = [],
-          aS = HS.split("\n"),
-          KS = this.justify ? SS.measureText("\u200a").width : 0;
-        aS.forEach((HS => {
-          let gS = SS.measureText(HS).width;
-          if (gS <= XS) kS.push(HS);
+        Fk = (0, Xk.S)(Fk);
+        const Zk = [],
+          jk = Fk.split("\n"),
+          ek = this.justify ? kk.measureText("\u200a").width : 0;
+        jk.forEach((Fk => {
+          let Ik = kk.measureText(Fk).width;
+          if (Ik <= ik) Zk.push(Fk);
           else {
-            let tS = HS;
-            const bS = XS;
-            let xS, NS, qS;
-            for (gS = SS.measureText(tS).width; gS > bS;) {
-              for (xS = 0, NS = 0, qS = ""; NS < bS;) xS++, qS = tS.substr(0, xS), NS = SS.measureText(qS).width;
-              xS--, qS = qS.substr(0, xS);
-              const HS = xS;
-              if (" " !== tS.substr(xS, 1)) {
+            let Xk = Fk;
+            const Tk = ik;
+            let yk, lk, ak;
+            for (Ik = kk.measureText(Xk).width; Ik > Tk;) {
+              for (yk = 0, lk = 0, ak = ""; lk < Tk;) yk++, ak = Xk.substr(0, yk), lk = kk.measureText(ak).width;
+              yk--, ak = ak.substr(0, yk);
+              const Fk = yk;
+              if (" " !== Xk.substr(yk, 1)) {
                 for (;
-                  " " !== tS.substr(xS, 1) && 0 !== xS;) xS--;
-                0 === xS && (xS = HS), qS = tS.substr(0, xS)
+                  " " !== Xk.substr(yk, 1) && 0 !== yk;) yk--;
+                0 === yk && (yk = Fk), ak = Xk.substr(0, yk)
               }
-              qS = this.justify ? this.justifyLine(SS, qS, KS, "\u200a", XS) : qS, tS = tS.substr(xS), gS = SS.measureText(tS).width, kS.push(qS)
+              ak = this.justify ? this.justifyLine(kk, ak, ek, "\u200a", ik) : ak, Xk = Xk.substr(yk), Ik = kk.measureText(Xk).width, Zk.push(ak)
             }
-            gS > 0 && kS.push(tS)
+            Ik > 0 && Zk.push(Xk)
           }
         }));
-        const jS = this.lineHeight ? this.lineHeight : this.getTextHeight(SS, HS),
-          GS = jS * (kS.length - 1),
-          CS = GS / 2;
-        let nS = bS;
-        "top" === this.vAlign ? fS = bS + NS : "bottom" === this.vAlign ? (fS = uS - GS, nS = uS) : (nS = bS + xS / 2, fS -= CS), kS.forEach((HS => {
-          HS = HS.trim(), SS.fillText(HS, IS, fS), fS += jS
-        })), this.debug && (SS.lineWidth = 3, SS.strokeStyle = "#00909e", SS.strokeRect(gS, bS, XS, xS), SS.lineWidth = 2, SS.strokeStyle = "#f6d743", SS.beginPath(), SS.moveTo(IS, bS), SS.lineTo(IS, uS), SS.stroke(), SS.strokeStyle = "#ff6363", SS.beginPath(), SS.moveTo(gS, nS), SS.lineTo(qS, nS), SS.stroke());
+        const wk = this.lineHeight ? this.lineHeight : this.getTextHeight(kk, Fk),
+          Hk = wk * (Zk.length - 1),
+          Jk = Hk / 2;
+        let xk = Tk;
+        "top" === this.vAlign ? tk = Tk + lk : "bottom" === this.vAlign ? (tk = qk - Hk, xk = qk) : (xk = Tk + yk / 2, tk -= Jk), Zk.forEach((Fk => {
+          Fk = Fk.trim(), kk.fillText(Fk, Lk, tk), tk += wk
+        })), this.debug && (kk.lineWidth = 3, kk.strokeStyle = "#00909e", kk.strokeRect(Ik, Tk, ik, yk), kk.lineWidth = 2, kk.strokeStyle = "#f6d743", kk.beginPath(), kk.moveTo(Lk, Tk), kk.lineTo(Lk, qk), kk.stroke(), kk.strokeStyle = "#ff6363", kk.beginPath(), kk.moveTo(Ik, xk), kk.lineTo(ak, xk), kk.stroke());
         return {
-          height: GS + jS
+          height: Hk + wk
         }
       },
-      getTextHeight: function(SS, HS) {
-        const gS = SS.textBaseline;
-        SS.textBaseline = "bottom";
+      getTextHeight: function(kk, Fk) {
+        const Ik = kk.textBaseline;
+        kk.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: tS
-        } = SS.measureText(HS);
-        return SS.textBaseline = gS, tS
+          actualBoundingBoxAscent: Xk
+        } = kk.measureText(Fk);
+        return kk.textBaseline = Ik, Xk
       },
-      justifyLine: function(SS, HS, gS, tS, bS) {
-        const XS = HS.trim(),
-          xS = SS.measureText(XS).width,
-          NS = XS.split(/\s+/).length - 1,
-          qS = Math.floor((bS - xS) / gS);
-        if (NS <= 0 || qS <= 0) return XS;
-        const uS = Math.floor(qS / NS);
-        let IS = qS - NS * uS,
-          fS = [];
-        for (let kS = 0; kS < uS; kS++) fS.push(tS);
-        fS = fS.join("");
-        return XS.replace(/\s+/g, (SS => {
-          const HS = IS > 0 ? fS + tS : fS;
-          return IS--, SS + HS
+      justifyLine: function(kk, Fk, Ik, Xk, Tk) {
+        const ik = Fk.trim(),
+          yk = kk.measureText(ik).width,
+          lk = ik.split(/\s+/).length - 1,
+          ak = Math.floor((Tk - yk) / Ik);
+        if (lk <= 0 || ak <= 0) return ik;
+        const qk = Math.floor(ak / lk);
+        let Lk = ak - lk * qk,
+          tk = [];
+        for (let Zk = 0; Zk < qk; Zk++) tk.push(Xk);
+        tk = tk.join("");
+        return ik.replace(/\s+/g, (kk => {
+          const Fk = Lk > 0 ? tk + Xk : tk;
+          return Lk--, kk + Fk
         }))
       }
     }
   },
-  38676: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => jS,
-      f: () => KS,
-      i: () => kS,
-      m: () => IS,
-      o: () => fS
+  38656: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => wk,
+      d: () => ek,
+      h: () => Zk,
+      k: () => Lk,
+      n: () => tk
     });
-    var tS = gS(4356),
-      bS = gS(387);
-    const XS = 1024,
-      xS = 1536,
-      NS = 2 * tS.l + 1,
-      qS = new Intl.NumberFormat("en", {
+    var Xk = Ik(4210),
+      Tk = Ik(337);
+    const ik = 1024,
+      yk = 1536,
+      lk = 2 * Xk.i + 1,
+      ak = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      uS = 1.5;
+      qk = 1.5;
 
-    function IS(SS, HS, gS) {
-      if ("string" !== typeof SS) return HS;
+    function Lk(kk, Fk, Ik) {
+      if ("string" !== typeof kk) return Fk;
       try {
-        const gS = JSON.parse(SS);
-        return gS && "object" === typeof gS ? gS : HS
-      } catch (tS) {
-        return void 0 !== gS && console.error(`Couldn't parse ${gS}`, tS), HS
+        const Ik = JSON.parse(kk);
+        return Ik && "object" === typeof Ik ? Ik : Fk
+      } catch (Xk) {
+        return void 0 !== Ik && console.error(`Couldn't parse ${Ik}`, Xk), Fk
       }
     }
 
-    function fS(SS) {
-      return IS(SS, null, "a leaderboard's rows")
+    function tk(kk) {
+      return Lk(kk, null, "a leaderboard's rows")
     }
 
-    function kS(SS, HS) {
-      var gS, tS;
-      return null !== HS && void 0 !== HS ? HS : {
-        status: null !== (gS = SS.status) && void 0 !== gS ? gS : "loading",
-        entries: null !== (tS = SS.entries) && void 0 !== tS ? tS : []
+    function Zk(kk, Fk) {
+      var Ik, Xk;
+      return null !== Fk && void 0 !== Fk ? Fk : {
+        status: null !== (Ik = kk.status) && void 0 !== Ik ? Ik : "loading",
+        entries: null !== (Xk = kk.entries) && void 0 !== Xk ? Xk : []
       }
     }
 
-    function aS(SS, HS) {
-      return "number" === typeof SS && Number.isFinite(SS) && SS > 0 ? SS : HS
+    function jk(kk, Fk) {
+      return "number" === typeof kk && Number.isFinite(kk) && kk > 0 ? kk : Fk
     }
 
-    function KS(SS, HS) {
-      const gS = aS(SS.size, 1);
-      let tS = aS(SS.width, aS(2.5 * gS, 2.5)),
-        bS = aS(SS.height, aS(3.75 * gS, 3.75));
-      Number.isFinite(XS * bS / tS) && Number.isFinite(xS * tS / bS) || (tS = 2.5, bS = 3.75);
-      const NS = bS / tS,
-        qS = Math.max(1, Math.min(XS, HS / NS));
+    function ek(kk, Fk) {
+      const Ik = jk(kk.size, 1);
+      let Xk = jk(kk.width, jk(2.5 * Ik, 2.5)),
+        Tk = jk(kk.height, jk(3.75 * Ik, 3.75));
+      Number.isFinite(ik * Tk / Xk) && Number.isFinite(yk * Xk / Tk) || (Xk = 2.5, Tk = 3.75);
+      const lk = Tk / Xk,
+        ak = Math.max(1, Math.min(ik, Fk / lk));
       return {
-        width: tS,
-        height: bS,
-        layoutWidth: Math.max(XS, xS / NS),
-        layoutHeight: Math.max(xS, XS * NS),
-        pixelWidth: Math.round(qS),
-        pixelHeight: Math.round(Math.max(1, Math.min(HS, qS * NS)))
+        width: Xk,
+        height: Tk,
+        layoutWidth: Math.max(ik, yk / lk),
+        layoutHeight: Math.max(yk, ik * lk),
+        pixelWidth: Math.round(ak),
+        pixelHeight: Math.round(Math.max(1, Math.min(Fk, ak * lk)))
       }
     }
 
-    function jS(SS, HS, gS, xS, IS, fS) {
-      SS.setTransform(1, 0, 0, 1, 0, 0), SS.fillStyle = bS.B.defaultNameTagBackground, SS.fillRect(0, 0, HS, gS), SS.scale(HS / xS.layoutWidth, gS / xS.layoutHeight), SS.translate((xS.layoutWidth - XS) / 2, 0),
-        function(SS, HS, gS, XS) {
-          var xS, IS, fS, kS;
+    function wk(kk, Fk, Ik, yk, Lk, tk) {
+      kk.setTransform(1, 0, 0, 1, 0, 0), kk.fillStyle = Tk.J.defaultNameTagBackground, kk.fillRect(0, 0, Fk, Ik), kk.scale(Fk / yk.layoutWidth, Ik / yk.layoutHeight), kk.translate((yk.layoutWidth - ik) / 2, 0),
+        function(kk, Fk, Ik, ik) {
+          var yk, Lk, tk, Zk;
           const {
-            top: aS,
-            around: KS,
-            showPlayerText: jS,
-            localPlayerDbId: nS
-          } = gS, {
-            whiteUiText: PS,
-            grayUiText: QS,
-            yellowUiText: DS
-          } = bS.B;
-          SS.textBaseline = "middle";
-          const wS = function(HS, gS, tS, bS, XS, xS) {
-              let NS = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              SS.font = `bold ${bS}px 'Jetbrains Mono', monospace`, SS.fillStyle = XS, SS.textAlign = NS;
-              let qS = HS.replace(/[\r\n\t]/g, " ");
-              if (SS.measureText(qS).width > xS) {
-                for (; qS.length > 0 && SS.measureText(`${qS}\u2026`).width > xS;) qS = qS.slice(0, -1);
-                qS += "\u2026"
+            top: jk,
+            around: ek,
+            showPlayerText: wk,
+            localPlayerDbId: xk
+          } = Ik, {
+            whiteUiText: Pk,
+            grayUiText: Kk,
+            yellowUiText: Qk
+          } = Tk.J;
+          kk.textBaseline = "middle";
+          const sk = function(Fk, Ik, Xk, Tk, ik, yk) {
+              let lk = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              kk.font = `bold ${Tk}px 'Jetbrains Mono', monospace`, kk.fillStyle = ik, kk.textAlign = lk;
+              let ak = Fk.replace(/[\r\n\t]/g, " ");
+              if (kk.measureText(ak).width > yk) {
+                for (; ak.length > 0 && kk.measureText(`${ak}\u2026`).width > yk;) ak = ak.slice(0, -1);
+                ak += "\u2026"
               }
-              SS.fillText(qS, gS, tS)
+              kk.fillText(ak, Ik, Xk)
             },
-            hS = HS => {
-              SS.fillStyle = PS, SS.globalAlpha = .15, SS.fillRect(24, HS, 976, 2), SS.globalAlpha = 1
+            Vk = Fk => {
+              kk.fillStyle = Pk, kk.globalAlpha = .15, kk.fillRect(24, Fk, 976, 2), kk.globalAlpha = 1
             },
-            ZS = null === nS ? null : (0, bS.ic)(nS),
-            JS = SS => null !== ZS && SS.playerHash === ZS,
-            OS = GS(aS.entries, tS.p),
-            dS = "ready" === aS.status && OS.length > 0,
-            cS = null === KS ? [] : GS(KS.entries, NS),
-            vS = OS.some(JS),
-            ES = null === KS ? null : function(SS) {
-              const HS = SS;
-              if (!HS || !Number.isFinite(HS.rank) || !Number.isFinite(HS.tied) || !Number.isFinite(HS.total)) return null;
-              return HS
-            }(KS.standing),
-            LS = cS.find(JS),
-            YS = OS.find(JS),
-            AS = null === ES || void 0 === LS ? null : {
-              value: LS.value,
-              rank: ES.rank
+            zk = null === xk ? null : (0, Tk.yc)(xk),
+            Sk = kk => null !== zk && kk.playerHash === zk,
+            vk = Hk(jk.entries, Xk.k),
+            Ek = "ready" === jk.status && vk.length > 0,
+            Ok = null === ek ? [] : Hk(ek.entries, lk),
+            nk = vk.some(Sk),
+            Gk = null === ek ? null : function(kk) {
+              const Fk = kk;
+              if (!Fk || !Number.isFinite(Fk.rank) || !Number.isFinite(Fk.tied) || !Number.isFinite(Fk.total)) return null;
+              return Fk
+            }(ek.standing),
+            pk = Ok.find(Sk),
+            uk = vk.find(Sk),
+            bk = null === Gk || void 0 === pk ? null : {
+              value: pk.value,
+              rank: Gk.rank
             },
-            yS = CS(OS, void 0 === YS || YS.value === (null === AS || void 0 === AS ? void 0 : AS.value) ? AS : null),
-            VS = CS(cS, AS),
-            iS = (SS, HS) => {
-              const gS = SS.findIndex(JS);
-              return gS >= 0 ? HS[gS] : null
+            Rk = Jk(vk, void 0 === uk || uk.value === (null === bk || void 0 === bk ? void 0 : bk.value) ? bk : null),
+            Uk = Jk(Ok, bk),
+            Ck = (kk, Fk) => {
+              const Ik = kk.findIndex(Sk);
+              return Ik >= 0 ? Fk[Ik] : null
             },
-            WS = null !== (xS = null !== (IS = null === ES || void 0 === ES ? void 0 : ES.rank) && void 0 !== IS ? IS : iS(cS, VS)) && void 0 !== xS ? xS : iS(OS, yS);
-          SS.font = "bold 34px 'Jetbrains Mono', monospace";
-          const zS = [...dS ? yS : [], ...vS ? [] : VS],
-            US = Math.min(280, Math.max(0, ...zS.map((HS => SS.measureText(qS.format(HS)).width)))),
-            pS = US <= 80,
-            sS = pS ? 80 : 32 + US,
-            BS = pS ? 148 : sS + 28,
-            MS = 660 - BS;
-          wS(`TOP ${tS.p}  /  ALL TIME`, 24, 52, 28, QS, 976), wS(jS ? String(null !== (fS = HS.title) && void 0 !== fS ? fS : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, PS, 976), wS("RANK", 32, 174, 28, QS, BS - 40), wS("PLAYER", BS, 174, 28, QS, MS), wS(jS ? String(null !== (kS = HS.scoreLabel) && void 0 !== kS ? kS : "Score").slice(0, 24) : "Score", 992, 174, 28, QS, 304, "right"), hS(202);
-          const FS = (XS - 232) / (tS.p + uS + NS),
-            RS = 208 + tS.p * FS,
-            TS = RS + uS * FS,
-            oS = (HS, gS, tS, bS) => {
-              const XS = JS(HS);
-              SS.fillStyle = XS ? DS : PS, SS.globalAlpha = XS ? .15 : bS ? .035 : 0, SS.fillRect(24, tS - FS / 2 + 1, 976, FS - 2), SS.globalAlpha = 1;
-              const xS = XS ? DS : PS;
-              wS(qS.format(gS), sS, tS, 34, xS, pS ? 80 : US, pS ? "center" : "right"), wS(jS ? String(HS.name).slice(0, 64) : "Player", BS, tS, 34, xS, MS);
-              const NS = qS.format(HS.value);
-              wS(SS.measureText(NS).width > 304 ? HS.value.toExponential(6) : NS, 992, tS, 34, xS, 304, "right")
+            Nk = null !== (yk = null !== (Lk = null === Gk || void 0 === Gk ? void 0 : Gk.rank) && void 0 !== Lk ? Lk : Ck(Ok, Uk)) && void 0 !== yk ? yk : Ck(vk, Rk);
+          kk.font = "bold 34px 'Jetbrains Mono', monospace";
+          const ck = [...Ek ? Rk : [], ...nk ? [] : Uk],
+            Wk = Math.min(280, Math.max(0, ...ck.map((Fk => kk.measureText(ak.format(Fk)).width)))),
+            fk = Wk <= 80,
+            Bk = fk ? 80 : 32 + Wk,
+            dk = fk ? 148 : Bk + 28,
+            Yk = 660 - dk;
+          sk(`TOP ${Xk.k}  /  ALL TIME`, 24, 52, 28, Kk, 976), sk(wk ? String(null !== (tk = Fk.title) && void 0 !== tk ? tk : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Pk, 976), sk("RANK", 32, 174, 28, Kk, dk - 40), sk("PLAYER", dk, 174, 28, Kk, Yk), sk(wk ? String(null !== (Zk = Fk.scoreLabel) && void 0 !== Zk ? Zk : "Score").slice(0, 24) : "Score", 992, 174, 28, Kk, 304, "right"), Vk(202);
+          const Ak = (ik - 232) / (Xk.k + qk + lk),
+            gk = 208 + Xk.k * Ak,
+            mk = gk + qk * Ak,
+            hk = (Fk, Ik, Xk, Tk) => {
+              const ik = Sk(Fk);
+              kk.fillStyle = ik ? Qk : Pk, kk.globalAlpha = ik ? .15 : Tk ? .035 : 0, kk.fillRect(24, Xk - Ak / 2 + 1, 976, Ak - 2), kk.globalAlpha = 1;
+              const yk = ik ? Qk : Pk;
+              sk(ak.format(Ik), Bk, Xk, 34, yk, fk ? 80 : Wk, fk ? "center" : "right"), sk(wk ? String(Fk.name).slice(0, 64) : "Player", dk, Xk, 34, yk, Yk);
+              const lk = ak.format(Fk.value);
+              sk(kk.measureText(lk).width > 304 ? Fk.value.toExponential(6) : lk, 992, Xk, 34, yk, 304, "right")
             };
-          if (dS)
-            for (const [tS, bS] of OS.entries()) oS(bS, yS[tS], 208 + (tS + .5) * FS, tS % 2 === 0);
+          if (Ek)
+            for (const [Xk, Tk] of vk.entries()) hk(Tk, Rk[Xk], 208 + (Xk + .5) * Ak, Xk % 2 === 0);
           else {
-            const SS = "error" === aS.status,
-              HS = SS ? "Couldn't load leaderboard" : "ready" === aS.status ? "No scores yet" : "Loading leaderboard\u2026",
-              gS = SS ? "Trying again shortly" : "ready" === aS.status ? "Be the first on the board!" : "Fetching the top players",
-              tS = (208 + RS) / 2;
-            wS(HS, 512, tS - 28, 40, SS ? bS.B.redUiText : PS, 960, "center"), wS(gS, 512, tS + 27, 30, QS, 960, "center")
+            const kk = "error" === jk.status,
+              Fk = kk ? "Couldn't load leaderboard" : "ready" === jk.status ? "No scores yet" : "Loading leaderboard\u2026",
+              Ik = kk ? "Trying again shortly" : "ready" === jk.status ? "Be the first on the board!" : "Fetching the top players",
+              Xk = (208 + gk) / 2;
+            sk(Fk, 512, Xk - 28, 40, kk ? Tk.J.redUiText : Pk, 960, "center"), sk(Ik, 512, Xk + 27, 30, Kk, 960, "center")
           }
-          const lS = RS + uS * FS / 2;
-          if (null === WS) hS(lS);
+          const rk = gk + qk * Ak / 2;
+          if (null === Nk) Vk(rk);
           else {
-            const HS = null === ES ? 0 : ES.tied - 1,
-              gS = `YOUR RANK #${qS.format(WS)}${null===ES?"":` of ${qS.format(ES.total)}`}`;
-            SS.font = "bold 36px 'Jetbrains Mono', monospace";
-            const tS = Math.max(20, Math.min(36, Math.floor(34560 / SS.measureText(gS).width)));
-            wS(gS, 512, lS - (HS > 0 ? 15 : 0), tS, DS, 960, "center"), HS > 0 && wS(`Tied with ${qS.format(HS)} other${1===HS?"":"s"}`, 512, lS + 24, 24, QS, 960, "center")
+            const Fk = null === Gk ? 0 : Gk.tied - 1,
+              Ik = `YOUR RANK #${ak.format(Nk)}${null===Gk?"":` of ${ak.format(Gk.total)}`}`;
+            kk.font = "bold 36px 'Jetbrains Mono', monospace";
+            const Xk = Math.max(20, Math.min(36, Math.floor(34560 / kk.measureText(Ik).width)));
+            sk(Ik, 512, rk - (Fk > 0 ? 15 : 0), Xk, Qk, 960, "center"), Fk > 0 && sk(`Tied with ${ak.format(Fk)} other${1===Fk?"":"s"}`, 512, rk + 24, 24, Kk, 960, "center")
           }
-          if (null === KS) return;
-          const mS = TS + NS * FS / 2;
-          if (vS) wS(`You're in the top ${tS.p}!`, 512, mS, 40, DS, 960, "center");
-          else if (0 === cS.length) wS("You're not on this board yet", 512, mS, 34, QS, 960, "center");
+          if (null === ek) return;
+          const Dk = mk + lk * Ak / 2;
+          if (nk) sk(`You're in the top ${Xk.k}!`, 512, Dk, 40, Qk, 960, "center");
+          else if (0 === Ok.length) sk("You're not on this board yet", 512, Dk, 34, Kk, 960, "center");
           else
-            for (const [tS, bS] of cS.entries()) oS(bS, VS[tS], TS + (tS + .5) * FS, tS % 2 === 0)
-        }(SS, IS, fS, xS.layoutHeight)
+            for (const [Xk, Tk] of Ok.entries()) hk(Tk, Uk[Xk], mk + (Xk + .5) * Ak, Xk % 2 === 0)
+        }(kk, Lk, tk, yk.layoutHeight)
     }
 
-    function GS(SS, HS) {
-      return Array.isArray(SS) ? SS.slice(0, HS).filter((SS => SS && Number.isFinite(SS.rank) && Number.isFinite(SS.value))) : []
+    function Hk(kk, Fk) {
+      return Array.isArray(kk) ? kk.slice(0, Fk).filter((kk => kk && Number.isFinite(kk.rank) && Number.isFinite(kk.value))) : []
     }
 
-    function CS(SS, HS) {
-      const gS = [];
-      let tS = !1;
-      return SS.forEach(((bS, XS) => {
-        if (null !== HS && bS.value === HS.value) return void gS.push(HS.rank);
-        const xS = XS > 0 && bS.value === SS[XS - 1].value;
-        xS || (tS = 0 === XS && 1 !== bS.rank), gS.push(xS && !tS ? gS[XS - 1] : bS.rank)
-      })), gS
+    function Jk(kk, Fk) {
+      const Ik = [];
+      let Xk = !1;
+      return kk.forEach(((Tk, ik) => {
+        if (null !== Fk && Tk.value === Fk.value) return void Ik.push(Fk.rank);
+        const yk = ik > 0 && Tk.value === kk[ik - 1].value;
+        yk || (Xk = 0 === ik && 1 !== Tk.rank), Ik.push(yk && !Xk ? Ik[ik - 1] : Tk.rank)
+      })), Ik
     }
   },
-  38885: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => bS,
-      i: () => XS
+  38868: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Tk,
+      g: () => ik
     });
-    const tS = 32;
+    const Xk = 32;
 
-    function bS(SS) {
-      return Array.from(SS).length
+    function Tk(kk) {
+      return Array.from(kk).length
     }
 
-    function XS(SS) {
-      const HS = [""];
-      let gS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        bS = "";
-      const XS = () => {
-        HS.push(""), gS = 0, bS = ""
+    function ik(kk) {
+      const Fk = [""];
+      let Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        Tk = "";
+      const ik = () => {
+        Fk.push(""), Ik = 0, Tk = ""
       };
-      for (const xS of SS.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(xS)) XS();
-        else if (/^\s+$/.test(xS)) bS += xS;
-      else if (xS.length > 0) {
-        const SS = Array.from(xS);
-        gS > 0 && gS + bS.length + SS.length > tS && XS(), HS[HS.length - 1] += bS, gS += bS.length, bS = "";
-        for (const bS of SS) gS >= tS && XS(), HS[HS.length - 1] += bS, gS++
+      for (const yk of kk.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(yk)) ik();
+        else if (/^\s+$/.test(yk)) Tk += yk;
+      else if (yk.length > 0) {
+        const kk = Array.from(yk);
+        Ik > 0 && Ik + Tk.length + kk.length > Xk && ik(), Fk[Fk.length - 1] += Tk, Ik += Tk.length, Tk = "";
+        for (const Tk of kk) Ik >= Xk && ik(), Fk[Fk.length - 1] += Tk, Ik++
       }
-      return HS[HS.length - 1] += bS, HS
+      return Fk[Fk.length - 1] += Tk, Fk
     }
   },
-  50984: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      WasmPreviewHost: () => OH,
-      pageBuiltInAnimationPack: () => kS,
-      pagePreviews: () => XH,
-      previewModule: () => lS
+  50939: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      WasmPreviewHost: () => vF,
+      pageBuiltInAnimationPack: () => Zk,
+      pagePreviews: () => yF,
+      previewModule: () => rk
     });
-    var tS = gS(3030),
-      bS = gS(687);
-    const XS = "[bloxd-wasm-client]";
+    var Xk = Ik(2803),
+      Tk = Ik(633);
+    const ik = "[bloxd-wasm-client]";
 
-    function xS(SS) {
-      const HS = {
+    function yk(kk) {
+      const Fk = {
         wasm: "unknown",
-        client: String(bS.b)
+        client: String(Tk.b)
       };
       try {
-        var gS;
-        HS.wasm = null !== (gS = null === SS || void 0 === SS ? void 0 : SS.Qf()) && void 0 !== gS ? gS : HS.wasm
+        var Ik;
+        Fk.wasm = null !== (Ik = null === kk || void 0 === kk ? void 0 : kk.Qt()) && void 0 !== Ik ? Ik : Fk.wasm
       } catch {}
-      return HS
+      return Fk
     }
-    async function NS(SS) {
-      if (SS.length < 2 || 31 !== SS[0] || 139 !== SS[1]) return SS;
+    async function lk(kk) {
+      if (kk.length < 2 || 31 !== kk[0] || 139 !== kk[1]) return kk;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: HS
-        } = await Promise.resolve().then((() => gS(2967)));
-        return HS(SS)
+          ungzip: Fk
+        } = await Promise.resolve().then((() => Ik(2758)));
+        return Fk(kk)
       }
-      const HS = new Blob([SS]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(HS).arrayBuffer())
+      const Fk = new Blob([kk]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(Fk).arrayBuffer())
     }
 
-    function qS(SS, HS, tS, bS) {
-      Promise.resolve().then((() => gS(40782))).then((gS => {
+    function ak(kk, Fk, Xk, Tk) {
+      Promise.resolve().then((() => Ik(40757))).then((Ik => {
         let {
-          reportDataLoadFailure: XS
-        } = gS;
-        XS(SS, HS, tS, bS)
-      }), (HS => {
-        console.warn(`${XS} ${SS} didn't load, and the report couldn't be sent`, tS.error, HS)
+          reportDataLoadFailure: ik
+        } = Ik;
+        ik(kk, Fk, Xk, Tk)
+      }), (Fk => {
+        console.warn(`${ik} ${kk} didn't load, and the report couldn't be sent`, Xk.error, Fk)
       }))
     }
-    const uS = [3e4, 12e4, 3e5];
-    class IS {
-      constructor(SS) {
-        this.deps = SS, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((SS => {
-          this.resolveSet = SS
+    const qk = [3e4, 12e4, 3e5];
+    class Lk {
+      constructor(kk) {
+        this.deps = kk, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((kk => {
+          this.resolveSet = kk
         }))
       }
-      provide(SS) {
-        return this.loading ??= this.load(SS), this.loading
+      provide(kk) {
+        return this.loading ??= this.load(kk), this.loading
       }
       whenSet() {
         return this.set
       }
-      async load(SS) {
-        const HS = xS(SS),
-          gS = await async function(SS, HS) {
-            let gS;
+      async load(kk) {
+        const Fk = yk(kk),
+          Ik = await async function(kk, Fk) {
+            let Ik;
             try {
-              gS = await SS()
-            } catch (tS) {
+              Ik = await kk()
+            } catch (Xk) {
               return {
                 stage: "fetch",
-                error: tS
+                error: Xk
               }
             }
             try {
-              return HS(gS) ? null : {
+              return Fk(Ik) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (tS) {
+            } catch (Xk) {
               return {
                 stage: "decode",
-                error: tS
+                error: Xk
               }
             }
-          }((() => this.deps.fetch()), (HS => {
-            const gS = SS.XXS(HS);
-            return gS && this.resolveSet(HS), gS
+          }((() => this.deps.fetch()), (Fk => {
+            const Ik = kk.Zik(Fk);
+            return Ik && this.resolveSet(Fk), Ik
           }));
-        if (null !== gS) {
-          if ("fetch" === gS.stage) {
+        if (null !== Ik) {
+          if ("fetch" === Ik.stage) {
             this.loading = null;
-            const HS = uS[this.retries++];
-            void 0 !== HS && this.deps.later((() => {
-              this.provide(SS)
-            }), HS)
+            const Fk = qk[this.retries++];
+            void 0 !== Fk && this.deps.later((() => {
+              this.provide(kk)
+            }), Fk)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(gS, HS))
+          this.reported || (this.reported = !0, this.deps.onFailed(Ik, Fk))
         }
       }
     }
-    let fS = null;
+    let tk = null;
 
-    function kS() {
-      return fS ??= new IS({
-        fetch: async () => NS(await (0, tS.J)(aS(), {
+    function Zk() {
+      return tk ??= new Lk({
+        fetch: async () => lk(await (0, Xk.K)(jk(), {
           priority: "low"
         })),
-        onFailed: (SS, HS) => {
-          qS("builtInAnimations", aS(), SS, HS)
+        onFailed: (kk, Fk) => {
+          ak("builtInAnimations", jk(), kk, Fk)
         },
-        later: (SS, HS) => {
-          setTimeout(SS, HS)
+        later: (kk, Fk) => {
+          setTimeout(kk, Fk)
         }
-      }), fS
+      }), tk
     }
 
-    function aS() {
-      return gS(50991)
+    function jk() {
+      return Ik(50946)
     }
-    var KS = gS(3021),
-      jS = gS(1286),
-      GS = gS(364),
-      CS = gS(362),
-      nS = gS(699),
-      PS = gS(4926),
-      QS = gS(40755),
-      DS = gS(40954),
-      wS = (gS(40805), gS(40818)),
-      hS = gS(40824),
-      ZS = gS(40832),
-      JS = gS(40767),
-      OS = gS(40979),
-      dS = gS(40986),
-      cS = gS(40748),
-      vS = gS(41005),
-      ES = gS(40871),
-      LS = gS(40860),
-      YS = gS(40914),
-      AS = gS(40972),
-      yS = gS(42600),
-      VS = gS(36287),
-      iS = gS(3829);
-    const WS = "[bloxd-previews]",
-      zS = 4e5,
-      US = 0,
-      pS = 1,
-      sS = 2,
-      BS = 1,
-      MS = 2,
-      FS = 3,
-      RS = 0,
-      TS = 1,
-      oS = 2;
+    var ek = Ik(2801),
+      wk = Ik(1194),
+      Hk = Ik(314),
+      Jk = Ik(309),
+      xk = Ik(646),
+      Pk = Ik(4797),
+      Kk = Ik(40726),
+      Qk = Ik(40946),
+      sk = (Ik(40779), Ik(40796)),
+      Vk = Ik(40799),
+      zk = Ik(40808),
+      Sk = Ik(40738),
+      vk = Ik(40966),
+      Ek = Ik(40971),
+      Ok = Ik(40721),
+      nk = Ik(40991),
+      Gk = Ik(40845),
+      pk = Ik(40834),
+      uk = Ik(40896),
+      bk = Ik(40957),
+      Rk = Ik(42590),
+      Uk = Ik(36249),
+      Ck = Ik(3652);
+    const Nk = "[bloxd-previews]",
+      ck = 4e5,
+      Wk = 0,
+      fk = 1,
+      Bk = 2,
+      dk = 1,
+      Yk = 2,
+      Ak = 3,
+      gk = 0,
+      mk = 1,
+      hk = 2;
 
-    function lS(SS) {
-      const HS = SS,
-        gS = (0, QS.M)(SS),
-        tS = (0, QS.l)(SS);
-      return null !== gS && null !== tS && "function" === typeof HS.HXS && "function" === typeof HS.gXS && "function" === typeof HS.bXS ? HS : null
-    }
-
-    function mS(SS, HS, gS) {
-      let [tS, bS] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [SS, HS], XS = Math.min(Number.isFinite(gS) && gS > 0 ? gS : 1, 2);
-      const xS = Math.max(0, tS, SS) * Math.max(0, bS, HS) * XS * XS;
-      return xS > zS && (XS *= Math.sqrt(zS / xS)), [Math.max(1, Math.floor(Math.max(0, SS) * XS)), Math.max(1, Math.floor(Math.max(0, HS) * XS))]
+    function rk(kk) {
+      const Fk = kk,
+        Ik = (0, Kk.B)(kk),
+        Xk = (0, Kk.g)(kk);
+      return null !== Ik && null !== Xk && "function" === typeof Fk.aik && "function" === typeof Fk.qik && "function" === typeof Fk.Lik ? Fk : null
     }
 
-    function eS() {
-      return gS(50994)
+    function Dk(kk, Fk, Ik) {
+      let [Xk, Tk] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [kk, Fk], ik = Math.min(Number.isFinite(Ik) && Ik > 0 ? Ik : 1, 2);
+      const yk = Math.max(0, Xk, kk) * Math.max(0, Tk, Fk) * ik * ik;
+      return yk > ck && (ik *= Math.sqrt(ck / yk)), [Math.max(1, Math.floor(Math.max(0, kk) * ik)), Math.max(1, Math.floor(Math.max(0, Fk) * ik))]
     }
-    async function rS(SS, HS, tS) {
-      let bS = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      "lost" === SS && (0, cS.y)();
-      const XS = await (0, cS.P)();
-      if (null === XS || (0, QS.m)(XS) || (0, cS.c)()) return;
-      const NS = "webgpu" === XS.backend;
-      if (!NS && "lost" !== SS) return;
-      const qS = NS && (0, CS.t)(XS.adapter, null !== tS && void 0 !== tS ? tS : null, "lost" === SS, bS),
-        uS = NS ? (0, QS.S)(SS) : null;
-      if (null === uS) {
-        NS || (0, nS.s)(), (0, cS.t)();
+
+    function Mk() {
+      return Ik(50955)
+    }
+    async function kF(kk, Fk, Xk) {
+      let Tk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      "lost" === kk && (0, Ok.z)();
+      const ik = await (0, Ok.Q)();
+      if (null === ik || (0, Kk.h)(ik) || (0, Ok.e)()) return;
+      const lk = "webgpu" === ik.backend;
+      if (!lk && "lost" !== kk) return;
+      const ak = lk && (0, Jk.p)(ik.adapter, null !== Xk && void 0 !== Xk ? Xk : null, "lost" === kk, Tk),
+        qk = lk ? (0, Kk.M)(kk) : null;
+      if (null === qk) {
+        lk || (0, xk.s)(), (0, Ok.r)();
         try {
-          await async function(SS, HS, tS, bS, XS) {
+          await async function(kk, Fk, Xk, Tk, ik) {
             let {
-              restoreLost: NS,
-              adapterRemembered: qS
-            } = XS;
-            const uS = (0, KS.U)(),
+              restoreLost: lk,
+              adapterRemembered: ak
+            } = ik;
+            const qk = (0, ek.K)(),
               {
-                flushCrashReports: IS,
-                reportRenderReload: fS
-              } = await Promise.resolve().then((() => gS(40782)));
-            fS(SS.backend, bS, xS(uS ? (0, KS.G)() : null), {
-              cause: HS,
-              restoreLost: NS,
-              adapterRemembered: qS,
-              ...SH(SS, HS, tS)
-            }), await IS(ES.d)
-          }(XS, SS, HS, null !== tS && void 0 !== tS ? tS : "start_failed" === SS ? 0 : 1, {
-            restoreLost: bS,
-            adapterRemembered: qS
+                flushCrashReports: Lk,
+                reportRenderReload: tk
+              } = await Promise.resolve().then((() => Ik(40757)));
+            tk(kk.backend, Tk, yk(qk ? (0, ek.y)() : null), {
+              cause: Fk,
+              restoreLost: lk,
+              adapterRemembered: ak,
+              ...FF(kk, Fk, Xk)
+            }), await Lk(Gk.c)
+          }(ik, kk, Fk, null !== Xk && void 0 !== Xk ? Xk : "start_failed" === kk ? 0 : 1, {
+            restoreLost: Tk,
+            adapterRemembered: ak
           })
-        } catch (fS) {
-          console.warn(`${WS} ${XS.backend} failed at home (${SS}), and its report couldn't be sent`, fS)
-        }(0, ES.k)()
+        } catch (tk) {
+          console.warn(`${Nk} ${ik.backend} failed at home (${kk}), and its report couldn't be sent`, tk)
+        }(0, Gk.i)()
       } else {
-        var IS;
-        const tS = SH(XS, SS, HS),
-          bS = `WebGPU failed at home (${SS}${void 0===tS.error?"":`: ${tS.error instanceof Error?tS.error.message:(0,VS.g)(tS.error)}`}) and ${uS}`;
-        console.warn(`${WS} ${bS}: the previews stop`, null !== (IS = tS.error) && void 0 !== IS ? IS : ""), (0, cS.v)(bS);
+        var Lk;
+        const Xk = FF(ik, kk, Fk),
+          Tk = `WebGPU failed at home (${kk}${void 0===Xk.error?"":`: ${Xk.error instanceof Error?Xk.error.message:(0,Uk.j)(Xk.error)}`}) and ${qk}`;
+        console.warn(`${Nk} ${Tk}: the previews stop`, null !== (Lk = Xk.error) && void 0 !== Lk ? Lk : ""), (0, Ok.v)(Tk);
         try {
           const {
-            countRenderLost: HS
-          } = await Promise.resolve().then((() => gS(40782)));
-          HS(SS, tS.error, tS.context)
-        } catch (kS) {
-          console.warn(`${WS} WebGPU failed at home (${SS}), and its count couldn't be sent`, kS)
+            countRenderLost: Fk
+          } = await Promise.resolve().then((() => Ik(40757)));
+          Fk(kk, Xk.error, Xk.context)
+        } catch (Zk) {
+          console.warn(`${Nk} WebGPU failed at home (${kk}), and its count couldn't be sent`, Zk)
         }
       }
     }
 
-    function SH(SS, HS, gS) {
-      var tS;
+    function FF(kk, Fk, Ik) {
+      var Xk;
       let {
-        adapter: bS
-      } = SS;
-      const XS = (0, KS.U)();
+        adapter: Tk
+      } = kk;
+      const ik = (0, ek.K)();
       return {
-        error: "lost" === HS && null !== (tS = (0, QS.W)(XS ? (0, QS.M)((0, KS.G)()) : null)) && void 0 !== tS ? tS : gS,
+        error: "lost" === Fk && null !== (Xk = (0, Kk.N)(ik ? (0, Kk.B)((0, ek.y)()) : null)) && void 0 !== Xk ? Xk : Ik,
         context: {
-          adapter: bS,
-          boundAtMs: "start_failed" === HS ? null : (0, cS.M)(),
-          indirectHangs: (0, cS.A)(),
-          restoresSkipped: (0, cS.N)()
+          adapter: Tk,
+          boundAtMs: "start_failed" === Fk ? null : (0, Ok.O)(),
+          indirectHangs: (0, Ok.C)(),
+          restoresSkipped: (0, Ok.P)()
         }
       }
     }
-    async function HH() {
-      if (!(0, KS.U)()) {
-        const SS = await (0, cS.P)();
-        if (null === SS || (0, QS.m)(SS)) return null;
-        if (await (0, vS.e)(await SS.load()), !(0, KS.U)()) return null
+    async function IF() {
+      if (!(0, ek.K)()) {
+        const kk = await (0, Ok.Q)();
+        if (null === kk || (0, Kk.h)(kk)) return null;
+        if (await (0, nk.b)(await kk.load()), !(0, ek.K)()) return null
       }
-      return lS((0, KS.G)())
+      return rk((0, ek.y)())
     }
-    class gH {
-      constructor(SS, HS, gS, tS, bS, XS) {
-        this.page = SS, this.host = HS, this.id = gS, this.canvas = tS, this.size = bS, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const xS = {
-            ...XS.images,
-            glbUrl: SS => {
-              var HS;
-              return null !== (HS = this.models.drawnUrl(SS)) && void 0 !== HS ? HS : XS.images.glbUrl(SS)
+    class XF {
+      constructor(kk, Fk, Ik, Xk, Tk, ik) {
+        this.page = kk, this.host = Fk, this.id = Ik, this.canvas = Xk, this.size = Tk, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const yk = {
+            ...ik.images,
+            glbUrl: kk => {
+              var Fk;
+              return null !== (Fk = this.models.drawnUrl(kk)) && void 0 !== Fk ? Fk : ik.images.glbUrl(kk)
             }
           },
-          NS = HS => SS.modelFile(HS);
-        this.images = new DS.g(xS, (SS => {
-          console.warn(`${WS} image ${SS.key.kind}:${SS.key.index}:${SS.key.word} failed`, SS.error)
+          lk = Fk => kk.modelFile(Fk);
+        this.images = new Qk.g(yk, (kk => {
+          console.warn(`${Nk} image ${kk.key.kind}:${kk.key.index}:${kk.key.word} failed`, kk.error)
         }), {
-          fetchFile: NS,
-          fetchImage: HS => SS.imageFile(HS)
-        }), SS.startModels(), this.models = new wS.k(XS.files, ((HS, gS) => SS.buildModel(HS, gS)), (SS => {
-          console.warn(`${WS} model file ${SS.file} (${SS.url}) failed`, SS.error)
+          fetchFile: lk,
+          fetchImage: Fk => kk.imageFile(Fk)
+        }), kk.startModels(), this.models = new sk.h(ik.files, ((Fk, Ik) => kk.buildModel(Fk, Ik)), (kk => {
+          console.warn(`${Nk} model file ${kk.file} (${kk.url}) failed`, kk.error)
         }), {
-          fetchFile: NS,
-          onWritten: (SS, HS) => {
-            this.images.glbWritten(SS, HS)
+          fetchFile: lk,
+          onWritten: (kk, Fk) => {
+            this.images.glbWritten(kk, Fk)
           },
-          onTaken: (SS, HS) => {
-            this.images.glbTaken(SS, HS)
+          onTaken: (kk, Fk) => {
+            this.images.glbTaken(kk, Fk)
           }
-        }), this.write = (SS, HS, gS) => {
+        }), this.write = (kk, Fk, Ik) => {
           if (this.closed) return !0;
-          if (SS === wS.d) {
-            const SS = new DataView(gS.buffer, gS.byteOffset, ZS.c),
-              tS = SS.getUint32(0, !0),
-              bS = SS.getUint32(ZS.d, !0),
-              XS = this.page.hostCall(oS, (() => this.host.qxS(this.id, tS, HS, gS.subarray(ZS.c))));
-            return this.outcomes.push([bS, XS]), !0
+          if (kk === sk.d) {
+            const kk = new DataView(Ik.buffer, Ik.byteOffset, zk.b),
+              Xk = kk.getUint32(0, !0),
+              Tk = kk.getUint32(zk.f, !0),
+              ik = this.page.hostCall(hk, (() => this.host.xyk(this.id, Xk, Fk, Ik.subarray(zk.b))));
+            return this.outcomes.push([Tk, ik]), !0
           }
-          return SS === DS.c && (this.page.hostCall(void 0, (() => {
-            this.host.IxS(this.id, gS)
+          return kk === Qk.c && (this.page.hostCall(void 0, (() => {
+            this.host.Kyk(this.id, Ik)
           })), !0)
         }
       }
@@ -649,74 +649,74 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(SS, HS, gS) {
+      resize(kk, Fk, Ik) {
         if (this.closed) return;
-        const [tS, bS] = mS(SS, HS, this.page.dpr(), gS);
-        tS === this.size[0] && bS === this.size[1] || (this.size = [tS, bS], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, tS, bS)
+        const [Xk, Tk] = Dk(kk, Fk, this.page.dpr(), Ik);
+        Xk === this.size[0] && Tk === this.size[1] || (this.size = [Xk, Tk], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, Xk, Tk)
         })))
       }
-      setMob(SS, HS, gS, tS) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.jxS(this.id, SS, HS, gS, tS))))
+      setMob(kk, Fk, Ik, Xk) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Syk(this.id, kk, Fk, Ik, Xk))))
       }
-      setPet(SS, HS, gS, tS) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.CxS(this.id, SS, HS, gS, tS))))
+      setPet(kk, Fk, Ik, Xk) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.vyk(this.id, kk, Fk, Ik, Xk))))
       }
-      setPlayer(SS, HS, gS) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.kxS(this.id, SS, HS, gS))))
+      setPlayer(kk, Fk, Ik) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.syk(this.id, kk, Fk, Ik))))
       }
-      setFigure(SS, HS, gS, tS) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.axS(this.id, SS, HS, gS, tS))))
+      setFigure(kk, Fk, Ik, Xk) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Vyk(this.id, kk, Fk, Ik, Xk))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
       }
       get orbit() {
         if (this.closed) return null;
-        const SS = this.page.hostCall(null, (() => this.host.orbit(this.id)));
-        return null === SS || SS.length < 3 ? null : {
-          alpha: SS[0],
-          beta: SS[1],
-          radius: SS[2]
+        const kk = this.page.hostCall(null, (() => this.host.orbit(this.id)));
+        return null === kk || kk.length < 3 ? null : {
+          alpha: kk[0],
+          beta: kk[1],
+          radius: kk[2]
         }
       }
-      setOrbit(SS) {
+      setOrbit(kk) {
         let {
-          alpha: HS,
-          beta: gS,
-          radius: tS
-        } = SS;
+          alpha: Fk,
+          beta: Ik,
+          radius: Xk
+        } = kk;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.GxS(this.id, HS, gS, tS)
+          this.host.oyk(this.id, Fk, Ik, Xk)
         }))
       }
       untilSettled() {
-        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((SS => {
-          this.settled.push(SS)
+        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((kk => {
+          this.settled.push(kk)
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, OS.f)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, vk.i)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [SS, HS] of this.outcomes) {
-          const gS = HS === RS ? [] : [HS === TS ? SS : (SS | wS.h) >>> 0];
-          this.models.taken(SS, gS)
+        for (const [kk, Fk] of this.outcomes) {
+          const Ik = Fk === gk ? [] : [Fk === mk ? kk : (kk | sk.g) >>> 0];
+          this.models.taken(kk, Ik)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
-      collect(SS) {
-        let HS = !1;
-        if (SS) {
-          const SS = this.host.QxS(this.id);
-          for (const HS of SS) this.models.request(HS);
-          const gS = this.host.PxS(this.id);
-          gS.length > 0 && this.images.onEvent(gS), HS = SS.length > 0 || gS.length > 0
+      collect(kk) {
+        let Fk = !1;
+        if (kk) {
+          const kk = this.host.Gyk(this.id);
+          for (const Fk of kk) this.models.request(Fk);
+          const Ik = this.host.nyk(this.id);
+          Ik.length > 0 && this.images.onEvent(Ik), Fk = kk.length > 0 || Ik.length > 0
         }
-        const gS = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          tS = HS || gS > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = tS ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const Ik = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          Xk = Fk || Ik > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = Xk ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -724,314 +724,314 @@ export const modules = {
       abandon() {
         this.resolveSettled()
       }
-      dispose(SS) {
+      dispose(kk) {
         this.page.hostCall(void 0, (() => {
-          const HS = this.host.close(this.id);
-          HS.length > 0 && this.images.onEvent(HS), this.page.isTrapped || SS.bXS(this.id)
+          const Fk = this.host.close(this.id);
+          Fk.length > 0 && this.images.onEvent(Fk), this.page.isTrapped || kk.Lik(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
-        const SS = this.settled;
+        const kk = this.settled;
         this.settled = [];
-        for (const HS of SS) HS()
+        for (const Fk of kk) Fk()
       }
     }
-    class tH {
-      constructor(SS) {
-        this.deps = SS, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
-          onUnavailable: SS => {
-            this.modelsFailed(SS)
+    class TF {
+      constructor(kk) {
+        this.deps = kk, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
+          onUnavailable: kk => {
+            this.modelsFailed(kk)
           },
-          onDecoderFailed: SS => {
-            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${WS} the Draco decoder didn't load: models waiting on it won't draw`, SS))
+          onDecoderFailed: kk => {
+            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${Nk} the Draco decoder didn't load: models waiting on it won't draw`, kk))
           },
-          onWorkerLost: SS => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${WS} a model worker was lost: ${SS}`))
+          onWorkerLost: kk => {
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${Nk} a model worker was lost: ${kk}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.bK = {
-          setShaderPack: (SS, HS, gS, tS, bS) => (this.shaderPackArgs = [SS, HS, gS, tS, bS], this.handOverShaderPack(), !0)
-        }, this.frame = SS => {
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.ke = {
+          setShaderPack: (kk, Fk, Ik, Xk, Tk) => (this.shaderPackArgs = [kk, Fk, Ik, Xk, Tk], this.handOverShaderPack(), !0)
+        }, this.frame = kk => {
           this.frameId = null;
-          const HS = this.host;
-          if (null !== HS && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
-            this.drawFrame(HS, SS)
-          } catch (gS) {
-            if (!this.stopIfTrapped(gS) && (this.stop(), (0, QS.p)(gS))) return void this.deps.onRenderFailed("frames_refused", gS);
-            console.warn(`${WS} the previews stopped: their frame threw`, gS)
+          const Fk = this.host;
+          if (null !== Fk && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
+            this.drawFrame(Fk, kk)
+          } catch (Ik) {
+            if (!this.stopIfTrapped(Ik) && (this.stop(), (0, Kk.j)(Ik))) return void this.deps.onRenderFailed("frames_refused", Ik);
+            console.warn(`${Nk} the previews stopped: their frame threw`, Ik)
           }
-        }, SS.pack.onChange((() => {
+        }, kk.pack.onChange((() => {
           this.packChanged()
-        })), SS.game.onGameChange((() => {
+        })), kk.game.onGameChange((() => {
           this.tellInGame()
         }))
       }
       packChanged() {
         if (!this.stopped)
-          for (const SS of this.previews.values()) SS.packChanged()
+          for (const kk of this.previews.values()) kk.packChanged()
       }
       dpr() {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var SS, HS;
-        return null !== (SS = null === (HS = this.host) || void 0 === HS ? void 0 : HS.attached()) && void 0 !== SS && SS
+        var kk, Fk;
+        return null !== (kk = null === (Fk = this.host) || void 0 === Fk ? void 0 : Fk.attached()) && void 0 !== kk && kk
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((SS, HS) => SS + HS), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((kk, Fk) => kk + Fk), 0) / this.costs.length
       }
-      async bindSession(SS, HS, gS) {
-        const tS = this.binding,
-          bS = this.sessionEnds;
+      async bindSession(kk, Fk, Ik) {
+        const Xk = this.binding,
+          Tk = this.sessionEnds;
         try {
-          const XS = this.hostOf(SS);
-          if (!XS.uxS()) {
-            const HS = (0, YS.e)().sampleCount,
-              xS = await gS(HS);
-            if (this.sessionEnds !== bS) return this.keepRendererOfEndedSession(SS, XS, xS, HS, tS), HS;
-            if (!XS.RXS(xS)) throw new Error("the page has a renderer already");
-            (0, cS.x)(performance.now()), this.samples = HS, (0, AS.h)((0, QS.l)(SS))
+          const ik = this.hostOf(kk);
+          if (!ik.Pyk()) {
+            const Fk = (0, uk.d)().sampleCount,
+              yk = await Ik(Fk);
+            if (this.sessionEnds !== Tk) return this.keepRendererOfEndedSession(kk, ik, yk, Fk, Xk), Fk;
+            if (!ik.Iyk(yk)) throw new Error("the page has a renderer already");
+            (0, Ok.y)(performance.now()), this.samples = Fk, (0, bk.f)((0, Kk.g)(kk))
           }
-          if (!XS.attach(HS)) throw new Error("the page's renderer is lent to another session");
+          if (!ik.attach(Fk)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === tS && this.endBinding()
+          this.binding === Xk && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(SS, HS, gS, tS, bS) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== bS) try {
-          gS.free()
-        } catch (XS) {
-          console.warn(`${WS} an ended session's renderer didn't free`, XS)
-        } else HS.RXS(gS) && ((0, cS.x)(performance.now()), this.samples = tS, (0, AS.h)(this.registryOf(SS)))
+      keepRendererOfEndedSession(kk, Fk, Ik, Xk, Tk) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== Tk) try {
+          Ik.free()
+        } catch (ik) {
+          console.warn(`${Nk} an ended session's renderer didn't free`, ik)
+        } else Fk.Iyk(Ik) && ((0, Ok.y)(performance.now()), this.samples = Xk, (0, bk.f)(this.registryOf(kk)))
       }
       async beginSession() {
-        var SS;
-        let HS = () => {};
-        const gS = new Promise((SS => {
-          HS = SS
+        var kk;
+        let Fk = () => {};
+        const Ik = new Promise((kk => {
+          Fk = kk
         }));
         this.binding = {
-          done: gS,
-          release: HS
-        }, await (null === (SS = this.opening) || void 0 === SS ? void 0 : SS.catch((() => null)));
-        const tS = this.pageCanvas;
-        return this.pageCanvas = null, tS
+          done: Ik,
+          release: Fk
+        }, await (null === (kk = this.opening) || void 0 === kk ? void 0 : kk.catch((() => null)));
+        const Xk = this.pageCanvas;
+        return this.pageCanvas = null, Xk
       }
-      endSession(SS) {
-        var HS, gS;
-        if (this.sessionEnds++, this.lastEndReturned = SS, this.endBinding(), SS) {
+      endSession(kk) {
+        var Fk, Ik;
+        if (this.sessionEnds++, this.lastEndReturned = kk, this.endBinding(), kk) {
           try {
-            var tS;
-            null === (tS = this.host) || void 0 === tS || tS.detach()
-          } catch (bS) {
-            return void console.warn(`${WS} the session's core kept the page's renderer`, bS)
-          }!0 === (null === (HS = this.host) || void 0 === HS ? void 0 : HS.attached()) && console.warn(`${WS} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (gS = this.host) || void 0 === gS ? void 0 : gS.uxS()) && (0, AS.h)(this.registryOf(this.module))
+            var Xk;
+            null === (Xk = this.host) || void 0 === Xk || Xk.detach()
+          } catch (Tk) {
+            return void console.warn(`${Nk} the session's core kept the page's renderer`, Tk)
+          }!0 === (null === (Fk = this.host) || void 0 === Fk ? void 0 : Fk.attached()) && console.warn(`${Nk} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (Ik = this.host) || void 0 === Ik ? void 0 : Ik.Pyk()) && (0, bk.f)(this.registryOf(this.module))
         }
       }
       endBinding() {
-        var SS;
-        null === (SS = this.binding) || void 0 === SS || SS.release(), this.binding = null
+        var kk;
+        null === (kk = this.binding) || void 0 === kk || kk.release(), this.binding = null
       }
-      async openPreview(SS, HS, gS, tS) {
-        const bS = await this.renderingHost(),
-          XS = this.module;
-        if (null === bS || null === XS) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(bS), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(kk, Fk, Ik, Xk) {
+        const Tk = await this.renderingHost(),
+          ik = this.module;
+        if (null === Tk || null === ik) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(Tk), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(XS)
+          this.deps.provideBuiltInAnimationPack(ik)
         }));
-        const xS = this.nextId++,
-          NS = this.deps.createCanvas(),
-          [qS, uS] = mS(HS, gS, this.deps.dpr(), tS);
-        NS.width = qS, NS.height = uS;
-        if (!this.guarded((() => (XS.gXS(xS, NS), bS.open(xS, qS, uS, SS))))) throw this.hostCall(void 0, (() => {
-          XS.bXS(xS)
+        const yk = this.nextId++,
+          lk = this.deps.createCanvas(),
+          [ak, qk] = Dk(Fk, Ik, this.deps.dpr(), Xk);
+        lk.width = ak, lk.height = qk;
+        if (!this.guarded((() => (ik.qik(yk, lk), Tk.open(yk, ak, qk, kk))))) throw this.hostCall(void 0, (() => {
+          ik.Lik(yk)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const IS = new gH(this, bS, xS, NS, [qS, uS], this.deps);
-        return this.previews.set(xS, IS), this.startFrames(), IS
+        const Lk = new XF(this, Tk, yk, lk, [ak, qk], this.deps);
+        return this.previews.set(yk, Lk), this.startFrames(), Lk
       }
       prefetch() {
-        if (this.prefetched || this.isStopped || (0, cS.c)() || null !== (0, cS.J)()) return;
+        if (this.prefetched || this.isStopped || (0, Ok.e)() || null !== (0, Ok.N)()) return;
         this.prefetched = !0;
-        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((SS => {
-          null === SS || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
+        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((kk => {
+          null === kk || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
         }), (() => {}))
       }
-      modelFile(SS) {
-        return this.prefetchedOr(SS, this.deps.fetchModel)
+      modelFile(kk) {
+        return this.prefetchedOr(kk, this.deps.fetchModel)
       }
-      imageFile(SS) {
-        return this.prefetchedOr(SS, tS.J)
+      imageFile(kk) {
+        return this.prefetchedOr(kk, Xk.K)
       }
-      prefetchedOr(SS, HS) {
-        const gS = this.prefetchedFiles.get(SS);
-        return void 0 === gS ? HS(SS) : gS.catch((() => HS(SS)))
+      prefetchedOr(kk, Fk) {
+        const Ik = this.prefetchedFiles.get(kk);
+        return void 0 === Ik ? Fk(kk) : Ik.catch((() => Fk(kk)))
       }
       async prefetchPlayerFiles() {
-        const SS = this.deps.playerFile().then((SS => this.deps.files.url(SS))),
-          HS = await Promise.all([SS, this.deps.images.lifeformAtlasUrl(OS.c)]).catch((() => null));
-        if (null === HS) return;
-        const [gS, tS] = HS, bS = (SS, HS) => {
-          if (null === SS) return;
-          const gS = HS(SS);
-          this.prefetchedFiles.set(SS, gS), gS.catch((() => {
-            this.prefetchedFiles.delete(SS)
+        const kk = this.deps.playerFile().then((kk => this.deps.files.url(kk))),
+          Fk = await Promise.all([kk, this.deps.images.lifeformAtlasUrl(vk.c)]).catch((() => null));
+        if (null === Fk) return;
+        const [Ik, Xk] = Fk, Tk = (kk, Fk) => {
+          if (null === kk) return;
+          const Ik = Fk(kk);
+          this.prefetchedFiles.set(kk, Ik), Ik.catch((() => {
+            this.prefetchedFiles.delete(kk)
           }))
         };
-        bS(gS, (SS => this.modelFile(SS))), bS(tS, (SS => this.imageFile(SS)))
+        Tk(Ik, (kk => this.modelFile(kk))), Tk(Xk, (kk => this.imageFile(kk)))
       }
       loadModule() {
-        return this.moduleLoad ??= this.deps.loadModule().then((SS => (null === SS && (this.moduleLoad = null), SS)), (SS => {
-          throw this.moduleLoad = null, SS
+        return this.moduleLoad ??= this.deps.loadModule().then((kk => (null === kk && (this.moduleLoad = null), kk)), (kk => {
+          throw this.moduleLoad = null, kk
         })), this.moduleLoad
       }
       fetchAnimationTable() {
-        return this.animationTable ??= this.deps.fetchAnimations().catch((SS => {
-          throw this.animationTable = null, SS
+        return this.animationTable ??= this.deps.fetchAnimations().catch((kk => {
+          throw this.animationTable = null, kk
         })), this.animationTable
       }
       get modelsUnavailable() {
         return this.unavailable
       }
       startModels() {
-        this.models ??= this.deps.startModels(this.modelsListener).catch((SS => (this.modelsFailed(SS), () => new Promise((() => {})))))
+        this.models ??= this.deps.startModels(this.modelsListener).catch((kk => (this.modelsFailed(kk), () => new Promise((() => {})))))
       }
-      buildModel(SS, HS) {
-        return this.startModels(), this.models.then((gS => gS(SS, HS))).then((SS => this.unavailable ? new Promise((() => {})) : SS))
+      buildModel(kk, Fk) {
+        return this.startModels(), this.models.then((Ik => Ik(kk, Fk))).then((kk => this.unavailable ? new Promise((() => {})) : kk))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
-      modelsFailed(SS) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${WS} the model workers didn't start: models won't draw in the previews`, SS))
+      modelsFailed(kk) {
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${Nk} the model workers didn't start: models won't draw in the previews`, kk))
       }
-      called(SS) {
-        return 0 !== SS && this.logError(SS, 0), SS
+      called(kk) {
+        return 0 !== kk && this.logError(kk, 0), kk
       }
-      closePreview(SS) {
-        this.previews.delete(SS.id), null !== this.module && SS.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
+      closePreview(kk) {
+        this.previews.delete(kk.id), null !== this.module && kk.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
       }
-      hostOf(SS) {
-        if (null !== this.module && this.module !== SS) throw new Error("a second renderer module on one page");
-        return this.module = SS, null === this.host && (this.host = this.guarded((() => new SS.HXS)), this.tellInGame(), this.handOverShaderPack()), this.host
+      hostOf(kk) {
+        if (null !== this.module && this.module !== kk) throw new Error("a second renderer module on one page");
+        return this.module = kk, null === this.host && (this.host = this.guarded((() => new kk.aik)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
-          host: SS
+          host: kk
         } = this;
-        null !== SS && this.outsideCall("the game's start or end", (() => {
-          SS.KxS(this.deps.game.inGame())
+        null !== kk && this.outsideCall("the game's start or end", (() => {
+          kk.zyk(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
-          host: SS,
-          shaderPackArgs: HS
+          host: kk,
+          shaderPackArgs: Fk
         } = this;
-        null !== SS && null !== HS && this.outsideCall("the shader pack's hand-over", (() => {
-          SS.rgS(...HS) || console.warn(`${WS} the host refused the shader pack: previews draw without it at home`)
+        null !== kk && null !== Fk && this.outsideCall("the shader pack's hand-over", (() => {
+          kk.aXk(...Fk) || console.warn(`${Nk} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(SS, HS) {
+      outsideCall(kk, Fk) {
         try {
-          this.hostCall(void 0, HS)
-        } catch (gS) {
-          this.stop(), console.warn(`${WS} the previews stopped: ${SS} threw`, gS)
+          this.hostCall(void 0, Fk)
+        } catch (Ik) {
+          this.stop(), console.warn(`${Nk} the previews stopped: ${kk} threw`, Ik)
         }
       }
-      async loadAnimations(SS) {
-        const HS = xS(null),
-          gS = this.module;
+      async loadAnimations(kk) {
+        const Fk = yk(null),
+          Ik = this.module;
         try {
-          HS.wasm = null === gS ? HS.wasm : this.hostCall(HS.wasm, (() => gS.Qf()))
+          Fk.wasm = null === Ik ? Fk.wasm : this.hostCall(Fk.wasm, (() => Ik.Qt()))
         } catch {}
-        let tS, bS;
+        let Xk, Tk;
         try {
-          tS = await this.fetchAnimationTable()
-        } catch (XS) {
+          Xk = await this.fetchAnimationTable()
+        } catch (ik) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: XS
-          }, HS)
+            error: ik
+          }, Fk)
         }
         if (!this.settleIfTrapped()) {
           try {
-            bS = SS.fxS(tS)
-          } catch (XS) {
-            if (this.stopIfTrapped(XS)) return;
+            Tk = kk.Qyk(Xk)
+          } catch (ik) {
+            if (this.stopIfTrapped(ik)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: XS
-            }, HS)
+              error: ik
+            }, Fk)
           }
-          bS || this.deps.onAnimationsFailed({
+          Tk || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, HS)
+          }, Fk)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
-        const SS = this.host;
-        return null !== SS && this.guarded((() => SS.uxS())) ? SS : (this.opening ??= this.openAtHome().finally((() => {
+        const kk = this.host;
+        return null !== kk && this.guarded((() => kk.Pyk())) ? kk : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
-        var SS;
-        const HS = null !== (SS = this.module) && void 0 !== SS ? SS : await this.loadModule();
-        if (null === HS) return null;
-        const gS = this.hostOf(HS),
-          tS = () => this.guarded((() => gS.uxS()));
-        if (tS()) return gS;
-        if (null !== (0, cS.J)() || (0, cS.c)()) return null;
-        const bS = this.deps.createCanvas();
-        bS.width = 1, bS.height = 1;
-        const XS = await this.deps.openExtras();
+        var kk;
+        const Fk = null !== (kk = this.module) && void 0 !== kk ? kk : await this.loadModule();
+        if (null === Fk) return null;
+        const Ik = this.hostOf(Fk),
+          Xk = () => this.guarded((() => Ik.Pyk()));
+        if (Xk()) return Ik;
+        if (null !== (0, Ok.N)() || (0, Ok.e)()) return null;
+        const Tk = this.deps.createCanvas();
+        Tk.width = 1, Tk.height = 1;
+        const ik = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const xS = (0, YS.e)().sampleCount;
-        let NS;
+        const yk = (0, uk.d)().sampleCount;
+        let lk;
         try {
-          NS = await (0, QS.w)(HS, "previewRenderer", bS, xS, yS.c, XS)
-        } catch (qS) {
-          throw qS instanceof JS.c ? this.stopForTrap(qS) : (0, QS.t)(qS) && await this.deps.onRenderFailed("start_failed", qS), qS
+          lk = await (0, Kk.n)(Fk, "previewRenderer", Tk, yk, Rk.e, ik)
+        } catch (ak) {
+          throw ak instanceof Sk.c ? this.stopForTrap(ak) : (0, Kk.l)(ak) && await this.deps.onRenderFailed("start_failed", ak), ak
         }
-        return this.guarded((() => gS.RXS(NS))) ? ((0, cS.x)(performance.now()), this.samples = xS, this.pageCanvas = bS, (0, AS.h)(this.registryOf(HS)), gS) : tS() ? gS : null
+        return this.guarded((() => Ik.Iyk(lk))) ? ((0, Ok.y)(performance.now()), this.samples = yk, this.pageCanvas = Tk, (0, bk.f)(this.registryOf(Fk)), Ik) : Xk() ? Ik : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(SS, HS) {
-        for (const xS of this.previews.values()) xS.feed();
+      drawFrame(kk, Fk) {
+        for (const yk of this.previews.values()) yk.feed();
         if (this.stopped) return;
-        const gS = this.deps.now(),
-          tS = SS.frame(HS);
-        this.costs.push(this.deps.now() - gS), this.costs.length > 120 && this.costs.shift();
-        const bS = 0 !== (256 & tS),
-          XS = 255 & tS;
-        for (const xS of this.previews.values()) {
+        const Ik = this.deps.now(),
+          Xk = kk.frame(Fk);
+        this.costs.push(this.deps.now() - Ik), this.costs.length > 120 && this.costs.shift();
+        const Tk = 0 !== (256 & Xk),
+          ik = 255 & Xk;
+        for (const yk of this.previews.values()) {
           if (this.stopped) return;
-          xS.collect(bS)
+          yk.collect(Tk)
         }
         if (!this.stopped) {
-          if (0 !== (512 & tS) && this.deps.onDrew(), bS) {
-            const HS = SS.nxS();
-            for (let SS = 0; SS + 1 < HS.length; SS += 2) HS[SS] === PS.K.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(HS[SS], HS[SS + 1])
+          if (0 !== (512 & Xk) && this.deps.onDrew(), Tk) {
+            const Fk = kk.Oyk();
+            for (let kk = 0; kk + 1 < Fk.length; kk += 2) Fk[kk] === Pk.N.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(Fk[kk], Fk[kk + 1])
           }
-          if (XS !== BS) {
-            if (XS === MS) return this.stop(), void this.deps.onFatal(SS.XxS(), SS.xxS());
-            if (XS === FS) return this.stop(), void console.warn(`${WS} the previews stopped: the page's renderer went with its session`);
-            (0, GS.b)(HS), this.startFrames()
+          if (ik !== dk) {
+            if (ik === Yk) return this.stop(), void this.deps.onFatal(kk.wyk(), kk.Hyk());
+            if (ik === Ak) return this.stop(), void console.warn(`${Nk} the previews stopped: the page's renderer went with its session`);
+            (0, Hk.b)(Fk), this.startFrames()
           } else {
-            const HS = SS.NxS();
+            const Fk = kk.Jyk();
             this.stop();
-            const gS = HS[2] === PS.id.PIPELINE_FAILED ? "pipeline_failed" : "lost";
-            this.deps.onRenderFailed(gS, void 0, HS[1], HS[2] === PS.id.RESTORE_LOST)
+            const Ik = Fk[2] === Pk.Xc.PIPELINE_FAILED ? "pipeline_failed" : "lost";
+            this.deps.onRenderFailed(Ik, void 0, Fk[1], Fk[2] === Pk.Xc.RESTORE_LOST)
           }
         }
       }
@@ -1039,115 +1039,115 @@ export const modules = {
         return this.stopped || this.isTrapped
       }
       get isTrapped() {
-        return null !== this.module && ((0, JS.i)(this.module) || "failed" === (0, KS.F)())
+        return null !== this.module && ((0, Sk.f)(this.module) || "failed" === (0, ek.w)())
       }
-      hostCall(SS, HS) {
-        if (this.settleIfTrapped()) return SS;
+      hostCall(kk, Fk) {
+        if (this.settleIfTrapped()) return kk;
         try {
-          return HS()
-        } catch (gS) {
-          if (this.stopIfTrapped(gS)) return SS;
-          throw gS
+          return Fk()
+        } catch (Ik) {
+          if (this.stopIfTrapped(Ik)) return kk;
+          throw Ik
         }
       }
-      guarded(SS) {
+      guarded(kk) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
-          return SS()
-        } catch (HS) {
-          throw this.stopIfTrapped(HS), HS
+          return kk()
+        } catch (Fk) {
+          throw this.stopIfTrapped(Fk), Fk
         }
       }
-      registryOf(SS) {
+      registryOf(kk) {
         return {
-          WgS: (HS, gS) => {
+          gIk: (Fk, Ik) => {
             this.hostCall(void 0, (() => {
-              SS.WgS(HS, gS)
+              kk.gIk(Fk, Ik)
             }))
           },
-          zgS: HS => {
+          mIk: Fk => {
             this.hostCall(void 0, (() => {
-              SS.zgS(HS)
+              kk.mIk(Fk)
             }))
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, AS.h)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, bk.f)(null)), !0)
       }
-      stopIfTrapped(SS) {
-        return !(null === this.module || !(0, JS.k)(this.module, SS)) && (this.stopForTrap(SS), !0)
+      stopIfTrapped(kk) {
+        return !(null === this.module || !(0, Sk.g)(this.module, kk)) && (this.stopForTrap(kk), !0)
       }
-      stopForTrap(SS) {
-        this.stop(), (0, AS.h)(null), (0, iS.g)("previews", SS)
+      stopForTrap(kk) {
+        this.stop(), (0, bk.f)(null), (0, Ck.g)("previews", kk)
       }
       stop() {
         this.stopped = !0;
-        for (const SS of this.previews.values()) SS.abandon()
+        for (const kk of this.previews.values()) kk.abandon()
       }
-      logError(SS, HS) {
-        const gS = `${SS}:${HS}`;
-        this.loggedErrors.has(gS) || (this.loggedErrors.add(gS), console.warn(`${WS} error ${SS} (detail ${HS})`))
+      logError(kk, Fk) {
+        const Ik = `${kk}:${Fk}`;
+        this.loggedErrors.has(Ik) || (this.loggedErrors.add(Ik), console.warn(`${Nk} error ${kk} (detail ${Fk})`))
       }
     }
-    let bH = null;
+    let iF = null;
 
-    function XH() {
-      return bH ??= new tH(function() {
-        const SS = (0, hS.m)(jS.clientSideServerUrls.staticUrl, {
-          packUrl: SS => {
-            var HS, gS;
-            return null !== (HS = null === (gS = OS.d.current) || void 0 === gS ? void 0 : gS.modelUrl(SS)) && void 0 !== HS ? HS : null
+    function yF() {
+      return iF ??= new TF(function() {
+        const kk = (0, Vk.j)(wk.clientSideServerUrls.staticUrl, {
+          packUrl: kk => {
+            var Fk, Ik;
+            return null !== (Fk = null === (Ik = vk.f.current) || void 0 === Ik ? void 0 : Ik.modelUrl(kk)) && void 0 !== Fk ? Fk : null
           }
         });
         return {
-          loadModule: HH,
-          startModels: async SS => {
+          loadModule: IF,
+          startModels: async kk => {
             const {
-              pageModelPool: HS
-            } = await gS.e(42).then((() => gS(51070))), {
-              pool: tS
-            } = HS(SS);
-            return (SS, HS) => tS.build(SS, HS)
+              pageModelPool: Fk
+            } = await Ik.e(42).then((() => Ik(51022))), {
+              pool: Xk
+            } = Fk(kk);
+            return (kk, Fk) => Xk.build(kk, Fk)
           },
-          fetchAnimations: async () => NS(await (0, tS.J)(eS())),
-          playerFile: async () => (await (0, hS.l)()).PLAYER_FILE,
-          onAnimationsFailed: (SS, HS) => {
-            qS("previewAnimations", eS(), SS, HS)
+          fetchAnimations: async () => lk(await (0, Xk.K)(Mk())),
+          playerFile: async () => (await (0, Vk.i)()).PLAYER_FILE,
+          onAnimationsFailed: (kk, Fk) => {
+            ak("previewAnimations", Mk(), kk, Fk)
           },
-          provideBuiltInAnimationPack: SS => {
-            kS().provide(SS)
+          provideBuiltInAnimationPack: kk => {
+            Zk().provide(kk)
           },
-          openExtras: cS.B,
-          files: SS,
-          images: (0, OS.h)((0, DS.m)(SS.url), (() => OS.d.current)),
-          pack: OS.d,
-          game: dS.b,
-          fetchModel: SS => (0, hS.g)(SS),
+          openExtras: Ok.F,
+          files: kk,
+          images: (0, vk.m)((0, Qk.o)(kk.url), (() => vk.f.current)),
+          pack: vk.f,
+          game: Ek.b,
+          fetchModel: kk => (0, Vk.f)(kk),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
-          requestFrame: SS => requestAnimationFrame(SS),
-          cancelFrame: SS => {
-            cancelAnimationFrame(SS)
+          requestFrame: kk => requestAnimationFrame(kk),
+          cancelFrame: kk => {
+            cancelAnimationFrame(kk)
           },
-          onRenderFailed: rS,
-          onFatal: (SS, HS) => {
-            console.error(`${WS} the previews stopped: renderer error ${SS} (detail ${HS})`)
+          onRenderFailed: kF,
+          onFatal: (kk, Fk) => {
+            console.error(`${Nk} the previews stopped: renderer error ${kk} (detail ${Fk})`)
           },
           onDeviceLost: () => {
-            (0, cS.F)() === LS.b.webgpu && CS.F.lost()
+            (0, Ok.J)() === pk.e.webgpu && Jk.F.lost()
           },
           onDrew: () => {
-            CS.F.drew()
+            Jk.F.drew()
           }
         }
-      }()), bH
+      }()), iF
     }
-    var xH = gS(665),
-      NH = gS(38644),
-      qH = gS(3437);
-    const uH = {
+    var lF = Ik(614),
+      aF = Ik(38621),
+      qF = Ik(3229);
+    const LF = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1165,320 +1165,320 @@ export const modules = {
       gunReady: 14,
       gunAimed: 15
     };
-    const IH = "[bloxd-previews]",
-      fH = new Uint32Array(5);
+    const tF = "[bloxd-previews]",
+      ZF = new Uint32Array(5);
 
-    function kH(SS) {
-      return xH.j.indexOf(SS)
+    function jF(kk) {
+      return lF.m.indexOf(kk)
     }
-    const aH = new WeakSet;
+    const eF = new WeakSet;
 
-    function KH(SS) {
-      const HS = (0, NH.f)(SS),
-        gS = null === HS ? -1 : jH(HS);
-      return -1 !== gS ? gS : (aH.has(SS) || (aH.add(SS), console.warn(`${IH} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function jH(SS) {
-      var HS;
-      return null !== (HS = uH[SS]) && void 0 !== HS ? HS : -1
+    function wF(kk) {
+      const Fk = (0, aF.f)(kk),
+        Ik = null === Fk ? -1 : HF(Fk);
+      return -1 !== Ik ? Ik : (eF.has(kk) || (eF.add(kk), console.warn(`${tF} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function GH(SS, HS) {
+    function HF(kk) {
+      var Fk;
+      return null !== (Fk = LF[kk]) && void 0 !== Fk ? Fk : -1
+    }
+
+    function JF(kk, Fk) {
       const {
-        canvas: gS
-      } = HS;
-      gS.style.width = "100%", gS.style.height = "100%", gS.style.display = "block", SS.appendChild(gS)
+        canvas: Ik
+      } = Fk;
+      Ik.style.width = "100%", Ik.style.height = "100%", Ik.style.display = "block", kk.appendChild(Ik)
     }
 
-    function CH(SS) {
-      const HS = SS.getBoundingClientRect();
-      return [HS.width, HS.height]
+    function xF(kk) {
+      const Fk = kk.getBoundingClientRect();
+      return [Fk.width, Fk.height]
     }
-    class nH {
-      constructor(SS, HS) {
-        this.preview = SS, this.showView = HS
+    class PF {
+      constructor(kk, Fk) {
+        this.preview = kk, this.showView = Fk
       }
-      show(SS) {
-        this.showView(this.preview, SS)
+      show(kk) {
+        this.showView(this.preview, kk)
       }
-      resize(SS, HS) {
-        this.preview.resize(SS, HS)
+      resize(kk, Fk) {
+        this.preview.resize(kk, Fk)
       }
       close() {
         this.preview.close()
       }
     }
-    class PH {
-      constructor(SS) {
-        this.preview = SS, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(SS) {
+    class KF {
+      constructor(kk) {
+        this.preview = kk, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(kk) {
           const {
-            canvas: HS
-          } = SS;
-          let gS = null;
-          const tS = SS => {
-              var tS;
-              gS = {
-                pointer: SS.pointerId,
-                x: SS.clientX,
-                y: SS.clientY
-              }, null === (tS = HS.setPointerCapture) || void 0 === tS || tS.call(HS, SS.pointerId)
+            canvas: Fk
+          } = kk;
+          let Ik = null;
+          const Xk = kk => {
+              var Xk;
+              Ik = {
+                pointer: kk.pointerId,
+                x: kk.clientX,
+                y: kk.clientY
+              }, null === (Xk = Fk.setPointerCapture) || void 0 === Xk || Xk.call(Fk, kk.pointerId)
             },
-            bS = HS => {
-              var tS;
-              const bS = SS.orbit;
-              if ((null === (tS = gS) || void 0 === tS ? void 0 : tS.pointer) !== HS.pointerId || null === bS) return;
-              const XS = HS.clientX - gS.x,
-                xS = HS.clientY - gS.y;
-              gS = {
-                ...gS,
-                x: HS.clientX,
-                y: HS.clientY
-              }, SS.setOrbit({
-                alpha: bS.alpha - .01 * XS,
-                beta: Math.min(Math.PI - .01, Math.max(.01, bS.beta - .01 * xS)),
-                radius: bS.radius
+            Tk = Fk => {
+              var Xk;
+              const Tk = kk.orbit;
+              if ((null === (Xk = Ik) || void 0 === Xk ? void 0 : Xk.pointer) !== Fk.pointerId || null === Tk) return;
+              const ik = Fk.clientX - Ik.x,
+                yk = Fk.clientY - Ik.y;
+              Ik = {
+                ...Ik,
+                x: Fk.clientX,
+                y: Fk.clientY
+              }, kk.setOrbit({
+                alpha: Tk.alpha - .01 * ik,
+                beta: Math.min(Math.PI - .01, Math.max(.01, Tk.beta - .01 * yk)),
+                radius: Tk.radius
               })
             },
-            XS = SS => {
-              var HS;
-              (null === (HS = gS) || void 0 === HS ? void 0 : HS.pointer) === SS.pointerId && (gS = null)
+            ik = kk => {
+              var Fk;
+              (null === (Fk = Ik) || void 0 === Fk ? void 0 : Fk.pointer) === kk.pointerId && (Ik = null)
             },
-            xS = HS => {
-              const gS = SS.orbit;
-              if (null === gS) return;
-              HS.preventDefault();
-              const tS = HS.deltaY * (HS.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : HS.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
-                bS = Math.min(100, Math.max(5, gS.radius + .08 * tS));
-              SS.setOrbit({
-                ...gS,
-                radius: bS
+            yk = Fk => {
+              const Ik = kk.orbit;
+              if (null === Ik) return;
+              Fk.preventDefault();
+              const Xk = Fk.deltaY * (Fk.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : Fk.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
+                Tk = Math.min(100, Math.max(5, Ik.radius + .08 * Xk));
+              kk.setOrbit({
+                ...Ik,
+                radius: Tk
               })
             };
-          return HS.style.touchAction = "none", HS.addEventListener("pointerdown", tS), HS.addEventListener("pointermove", bS), HS.addEventListener("pointerup", XS), HS.addEventListener("pointercancel", XS), HS.addEventListener("wheel", xS, {
+          return Fk.style.touchAction = "none", Fk.addEventListener("pointerdown", Xk), Fk.addEventListener("pointermove", Tk), Fk.addEventListener("pointerup", ik), Fk.addEventListener("pointercancel", ik), Fk.addEventListener("wheel", yk, {
             passive: !1
           }), () => {
-            HS.removeEventListener("pointerdown", tS), HS.removeEventListener("pointermove", bS), HS.removeEventListener("pointerup", XS), HS.removeEventListener("pointercancel", XS), HS.removeEventListener("wheel", xS)
+            Fk.removeEventListener("pointerdown", Xk), Fk.removeEventListener("pointermove", Tk), Fk.removeEventListener("pointerup", ik), Fk.removeEventListener("pointercancel", ik), Fk.removeEventListener("wheel", yk)
           }
-        }(SS), this.dev = {
-          canvas: () => SS.canvas,
+        }(kk), this.dev = {
+          canvas: () => kk.canvas,
           isolateHead: () => {
-            console.warn(`${IH} isolateHead: noa's character preview only`)
+            console.warn(`${tF} isolateHead: noa's character preview only`)
           }
-        }, this.apply(), this.ready = SS.untilSettled().then((() => {
-          if (SS.isStopped) throw new Error(`${IH} the previews stopped before the character drew`);
+        }, this.apply(), this.ready = kk.untilSettled().then((() => {
+          if (kk.isStopped) throw new Error(`${tF} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(SS, HS) {
-        this.cosmetics[SS] = HS, this.apply()
+      setCosmetic(kk, Fk) {
+        this.cosmetics[kk] = Fk, this.apply()
       }
-      playEmote(SS) {
-        null === SS || SS !== this.emote ? (this.emote = SS, this.apply()) : this.preview.replay()
+      playEmote(kk) {
+        null === kk || kk !== this.emote ? (this.emote = kk, this.apply()) : this.preview.replay()
       }
-      untilDrawn(SS) {
+      untilDrawn(kk) {
         return this.preview.untilSettled()
       }
-      setOrbit(SS) {
+      setOrbit(kk) {
         let {
-          yaw: HS,
-          pitch: gS,
-          radius: tS
-        } = SS;
-        const bS = this.preview.orbit;
-        null !== bS && this.preview.setOrbit({
-          alpha: HS,
-          beta: gS,
-          radius: null !== tS && void 0 !== tS ? tS : bS.radius
+          yaw: Fk,
+          pitch: Ik,
+          radius: Xk
+        } = kk;
+        const Tk = this.preview.orbit;
+        null !== Tk && this.preview.setOrbit({
+          alpha: Fk,
+          beta: Ik,
+          radius: null !== Xk && void 0 !== Xk ? Xk : Tk.radius
         })
       }
       resetCamera() {}
-      resize(SS, HS) {
-        this.preview.resize(SS, HS)
+      resize(kk, Fk) {
+        this.preview.resize(kk, Fk)
       }
       close() {
         this.detachControls(), this.preview.close()
       }
       apply() {
-        var SS;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), fH, null === (SS = this.emote) ? -1 : jH(SS))
+        var kk;
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), ZF, null === (kk = this.emote) ? -1 : HF(kk))
       }
     }
 
-    function QH(SS, HS) {
+    function QF(kk, Fk) {
       let {
-        mobType: gS,
-        variation: tS,
-        animation: bS
-      } = HS;
-      SS.setMob(kH(gS), null !== tS && void 0 !== tS ? tS : "", 1, KH(bS))
+        mobType: Ik,
+        variation: Xk,
+        animation: Tk
+      } = Fk;
+      kk.setMob(jF(Ik), null !== Xk && void 0 !== Xk ? Xk : "", 1, wF(Tk))
     }
 
-    function DH(SS, HS) {
+    function sF(kk, Fk) {
       let {
-        mobType: gS,
-        variation: tS,
-        metaInfo: bS,
-        tamed: XS
-      } = HS;
-      SS.setPet(kH(gS), tS, bS, XS)
+        mobType: Ik,
+        variation: Xk,
+        metaInfo: Tk,
+        tamed: ik
+      } = Fk;
+      kk.setPet(jF(Ik), Xk, Tk, ik)
     }
-    const wH = {
+    const VF = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class hH {
-      constructor(SS, HS, gS, tS) {
+    class zF {
+      constructor(kk, Fk, Ik, Xk) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, SS(gS.width, tS[1], tS).then((SS => {
-          if (this.closed) return void SS.close();
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, kk(Ik.width, Xk[1], Xk).then((kk => {
+          if (this.closed) return void kk.close();
           const {
-            style: gS
-          } = SS.canvas;
-          gS.position = "absolute", gS.top = "0", gS.visibility = "hidden", GH(HS, SS), this.preview = SS, this.apply()
-        })).catch((SS => {
-          console.error(`${IH} couldn't open a lineup figure`, SS)
+            style: Ik
+          } = kk.canvas;
+          Ik.position = "absolute", Ik.top = "0", Ik.visibility = "hidden", JF(Fk, kk), this.preview = kk, this.apply()
+        })).catch((kk => {
+          console.error(`${tF} couldn't open a lineup figure`, kk)
         }))
       }
-      update(SS, HS, gS, tS, bS) {
-        this.figure = SS, this.shown = HS, this.order = gS, this.span = tS, this.lineup = bS, this.apply()
+      update(kk, Fk, Ik, Xk, Tk) {
+        this.figure = kk, this.shown = Fk, this.order = Ik, this.span = Xk, this.lineup = Tk, this.apply()
       }
       close() {
-        var SS;
-        this.closed = !0, null === (SS = this.preview) || void 0 === SS || SS.close(), this.preview = null
+        var kk;
+        this.closed = !0, null === (kk = this.preview) || void 0 === kk || kk.close(), this.preview = null
       }
       apply() {
         const {
-          preview: SS,
-          figure: HS,
-          lineup: gS
+          preview: kk,
+          figure: Fk,
+          lineup: Ik
         } = this;
-        if (null === SS || null === HS) return;
-        if (this.given !== HS) {
-          var tS;
-          this.given = HS, this.loaded = !1;
-          const gS = null === HS.RD ? 0 : null !== (tS = (0, qH.d)(HS.RD)) && void 0 !== tS ? tS : 0;
-          SS.setFigure(function(SS) {
-            return JSON.stringify(Object.fromEntries(SS.cosmetics))
-          }(HS), gS, KH(HS.animation), HS.size), SS.untilSettled().then((() => {
-            this.given === HS && (this.loaded = !0, this.apply())
+        if (null === kk || null === Fk) return;
+        if (this.given !== Fk) {
+          var Xk;
+          this.given = Fk, this.loaded = !1;
+          const Ik = null === Fk.VK ? 0 : null !== (Xk = (0, qF.e)(Fk.VK)) && void 0 !== Xk ? Xk : 0;
+          kk.setFigure(function(kk) {
+            return JSON.stringify(Object.fromEntries(kk.cosmetics))
+          }(Fk), Ik, wF(Fk.animation), Fk.size), kk.untilSettled().then((() => {
+            this.given === Fk && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: bS,
-          width: XS
+          left: Tk,
+          width: ik
         } = this.span;
-        SS.resize(XS, gS[1], gS);
+        kk.resize(ik, Ik[1], Ik);
         const {
-          style: xS
-        } = SS.canvas;
-        xS.left = `${bS}px`, xS.width = `${XS}px`, xS.zIndex = this.order, xS.visibility = this.shown && this.loaded ? "visible" : "hidden"
+          style: yk
+        } = kk.canvas;
+        yk.left = `${Tk}px`, yk.width = `${ik}px`, yk.zIndex = this.order, yk.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class ZH {
-      constructor(SS, HS) {
-        this.open = HS, this.layer = void 0, this.figures = [], this.view = {
+    class SF {
+      constructor(kk, Fk) {
+        this.open = Fk, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = CH(SS), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = xF(kk), this.layer = document.createElement("div");
         const {
-          style: gS
+          style: Ik
         } = this.layer;
-        gS.position = "relative", gS.isolation = "isolate", gS.overflow = "hidden", gS.width = "100%", gS.height = "100%", gS.pointerEvents = "none", SS.appendChild(this.layer)
+        Ik.position = "relative", Ik.isolation = "isolate", Ik.overflow = "hidden", Ik.width = "100%", Ik.height = "100%", Ik.pointerEvents = "none", kk.appendChild(this.layer)
       }
-      show(SS) {
-        this.view = SS, this.place()
+      show(kk) {
+        this.view = kk, this.place()
       }
-      resize(SS, HS) {
-        this.size = [SS, HS], this.place()
+      resize(kk, Fk) {
+        this.size = [kk, Fk], this.place()
       }
       close() {
-        for (const SS of this.figures) SS.close();
+        for (const kk of this.figures) kk.close();
         this.figures = [], this.layer.remove()
       }
       place() {
         const {
-          figures: SS,
-          shown: HS
+          figures: kk,
+          shown: Fk
         } = this.view;
-        for (const tS of this.figures.splice(SS.length)) tS.close();
+        for (const Xk of this.figures.splice(kk.length)) Xk.close();
         const {
-          size: gS
+          size: Ik
         } = this;
-        SS.forEach(((tS, bS) => {
-          var XS;
-          const xS = function(SS, HS, gS, tS) {
-            let [bS, XS] = tS;
-            const xS = (SS + .5) * bS / HS,
-              NS = Math.min(Math.max(bS / HS, 2 * gS * XS), 2 * Math.max(xS, bS - xS));
+        kk.forEach(((Xk, Tk) => {
+          var ik;
+          const yk = function(kk, Fk, Ik, Xk) {
+            let [Tk, ik] = Xk;
+            const yk = (kk + .5) * Tk / Fk,
+              lk = Math.min(Math.max(Tk / Fk, 2 * Ik * ik), 2 * Math.max(yk, Tk - yk));
             return {
-              left: xS - NS / 2,
-              width: NS
+              left: yk - lk / 2,
+              width: lk
             }
-          }(bS, SS.length, function(SS) {
+          }(Tk, kk.length, function(kk) {
             let {
-              animation: HS,
-              size: gS
-            } = SS;
+              animation: Fk,
+              size: Ik
+            } = kk;
             const {
-              aimed: tS,
-              ready: bS
-            } = wH;
-            return (KH(HS) === uH.gunAimed ? tS : bS) * gS
-          }(tS), gS);
-          this.figures[bS] ??= new hH(this.open, this.layer, xS, gS), this.figures[bS].update(tS, null !== (XS = HS[bS]) && void 0 !== XS && XS, function(SS, HS) {
-            return String(Math.round(1e3 * SS) + HS)
-          }(tS.size, bS), xS, gS)
+              aimed: Xk,
+              ready: Tk
+            } = VF;
+            return (wF(Fk) === LF.gunAimed ? Xk : Tk) * Ik
+          }(Xk), Ik);
+          this.figures[Tk] ??= new zF(this.open, this.layer, yk, Ik), this.figures[Tk].update(Xk, null !== (ik = Fk[Tk]) && void 0 !== ik && ik, function(kk, Fk) {
+            return String(Math.round(1e3 * kk) + Fk)
+          }(Xk.size, Tk), yk, Ik)
         }))
       }
     }
-    const JH = {
-      player: pS,
-      store: sS
+    const oF = {
+      player: fk,
+      store: Bk
     };
-    class OH {
-      constructor(SS) {
-        this.page = SS
+    class vF {
+      constructor(kk) {
+        this.page = kk
       }
-      async openMob(SS) {
-        return new nH(await this.open(SS, US), QH)
+      async openMob(kk) {
+        return new PF(await this.open(kk, Wk), QF)
       }
-      async openPet(SS) {
-        return new nH(await this.open(SS, US), DH)
+      async openPet(kk) {
+        return new PF(await this.open(kk, Wk), sF)
       }
-      openMobLineup(SS) {
-        return new ZH(SS, ((SS, HS, gS) => this.page.openPreview(US, SS, HS, gS)))
+      openMobLineup(kk) {
+        return new SF(kk, ((kk, Fk, Ik) => this.page.openPreview(Wk, kk, Fk, Ik)))
       }
-      async openCharacter(SS, HS) {
-        return new PH(await this.open(SS, JH[HS]))
+      async openCharacter(kk, Fk) {
+        return new KF(await this.open(kk, oF[Fk]))
       }
-      async open(SS, HS) {
-        const [gS, tS] = CH(SS), bS = await this.page.openPreview(HS, gS, tS);
-        return GH(SS, bS), bS
+      async open(kk, Fk) {
+        const [Ik, Xk] = xF(kk), Tk = await this.page.openPreview(Fk, Ik, Xk);
+        return JF(kk, Tk), Tk
       }
     }
   },
-  36764: (SS, HS, gS) => {
-    gS.d(HS, {
-      C: () => aS,
-      E: () => KS,
-      H: () => jS,
-      K: () => CS,
-      e: () => tS,
-      h: () => bS,
-      k: () => kS,
-      n: () => GS,
-      p: () => IS,
-      t: () => nS,
-      x: () => qS,
-      y: () => uS
+  36759: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      B: () => ek,
+      D: () => wk,
+      F: () => Jk,
+      e: () => Xk,
+      i: () => Tk,
+      k: () => Zk,
+      n: () => Hk,
+      p: () => Lk,
+      r: () => xk,
+      v: () => ak,
+      w: () => qk,
+      z: () => jk
     });
-    const tS = [{
+    const Xk = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -1495,64 +1495,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function bS(SS, HS) {
+    function Tk(kk, Fk) {
       const {
-        numLines: gS,
-        charsPerLine: bS
-      } = tS[HS];
-      return PS(SS, gS, bS, !1)
+        numLines: Ik,
+        charsPerLine: Tk
+      } = Xk[Fk];
+      return Pk(kk, Ik, Tk, !1)
     }
-    const XS = 7 / 8,
-      xS = .25,
-      NS = 8;
+    const ik = 7 / 8,
+      yk = .25,
+      lk = 8;
 
-    function qS(SS, HS) {
+    function ak(kk, Fk) {
       return {
-        width: Math.min(SS, NS) - 2 * xS,
-        height: Math.min(HS, NS) - 2 * xS
+        width: Math.min(kk, lk) - 2 * yk,
+        height: Math.min(Fk, lk) - 2 * yk
       }
     }
 
-    function uS(SS, HS, gS) {
-      const bS = qS(SS, HS),
+    function qk(kk, Fk, Ik) {
+      const Tk = ak(kk, Fk),
         {
-          numLines: xS,
-          charsPerLine: NS
-        } = tS[gS];
+          numLines: yk,
+          charsPerLine: lk
+        } = Xk[Ik];
       return {
-        numLines: Math.max(1, Math.floor(xS / XS * bS.height)),
-        charsPerLine: Math.max(1, Math.floor(NS * bS.width))
+        numLines: Math.max(1, Math.floor(yk / ik * Tk.height)),
+        charsPerLine: Math.max(1, Math.floor(lk * Tk.width))
       }
     }
 
-    function IS(SS, HS, gS, tS) {
+    function Lk(kk, Fk, Ik, Xk) {
       const {
-        numLines: bS,
-        charsPerLine: XS
-      } = uS(gS, tS, HS);
-      return PS(SS, bS, XS, !1)
+        numLines: Tk,
+        charsPerLine: ik
+      } = qk(Ik, Xk, Fk);
+      return Pk(kk, Tk, ik, !1)
     }
-    const fS = 32e3;
+    const tk = 32e3;
 
-    function kS(SS) {
-      return SS.slice(0, fS)
+    function Zk(kk) {
+      return kk.slice(0, tk)
     }
-    const aS = 512e3,
-      KS = 64,
-      jS = aS;
+    const jk = 512e3,
+      ek = 64,
+      wk = jk;
 
-    function GS(SS, HS) {
-      const gS = Math.max(0, jS - HS),
-        tS = Math.min(aS, gS);
-      return SS.slice(0, tS)
+    function Hk(kk, Fk) {
+      const Ik = Math.max(0, wk - Fk),
+        Xk = Math.min(jk, Ik);
+      return kk.slice(0, Xk)
     }
-    const CS = {
+    const Jk = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      Gu: {
+      Hq: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -1564,31 +1564,31 @@ export const modules = {
       }
     };
 
-    function nS(SS, HS) {
+    function xk(kk, Fk) {
       const {
-        numLines: gS,
-        charsPerLine: tS
-      } = CS[HS];
-      return PS(SS, gS, tS, !1)
+        numLines: Ik,
+        charsPerLine: Xk
+      } = Jk[Fk];
+      return Pk(kk, Ik, Xk, !1)
     }
 
-    function PS(SS, HS, gS, tS, bS) {
-      (bS || tS) && (SS = SS.slice(0, null !== bS && void 0 !== bS ? bS : HS * gS));
-      const XS = SS.split("\n");
-      if (XS.length > HS && XS.splice(HS, XS.length - HS), !tS)
-        for (let xS = 0; xS < XS.length; xS++) {
-          const SS = XS[xS];
-          SS.length > gS && (XS[xS] = SS.substring(0, gS), XS.length < HS && XS.splice(xS + 1, 0, SS.substring(gS)))
+    function Pk(kk, Fk, Ik, Xk, Tk) {
+      (Tk || Xk) && (kk = kk.slice(0, null !== Tk && void 0 !== Tk ? Tk : Fk * Ik));
+      const ik = kk.split("\n");
+      if (ik.length > Fk && ik.splice(Fk, ik.length - Fk), !Xk)
+        for (let yk = 0; yk < ik.length; yk++) {
+          const kk = ik[yk];
+          kk.length > Ik && (ik[yk] = kk.substring(0, Ik), ik.length < Fk && ik.splice(yk + 1, 0, kk.substring(Ik)))
         }
-      return XS.join("\n")
+      return ik.join("\n")
     }
   },
-  50991: (SS, HS, gS) => {
-    SS.exports = gS.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
+  50946: (kk, Fk, Ik) => {
+    kk.exports = Ik.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
   },
-  50994: (SS, HS, gS) => {
-    SS.exports = gS.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
+  50955: (kk, Fk, Ik) => {
+    kk.exports = Ik.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

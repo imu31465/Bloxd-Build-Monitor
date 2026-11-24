@@ -1,62 +1,62 @@
 export const id = 358;
 export const ids = [358];
 export const modules = {
-  61405: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      applyLightFoOffset: () => xS,
-      getFloatingOriginOffset: () => bS,
-      lightFoVersion: () => XS,
-      wrapRenderableForFO: () => NS
+  61356: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      applyLightFoOffset: () => yk,
+      getFloatingOriginOffset: () => Tk,
+      lightFoVersion: () => ik,
+      wrapRenderableForFO: () => lk
     });
-    var tS = gS(41745);
+    var Xk = Ik(41729);
 
-    function bS(SS) {
-      const HS = SS.camera;
-      if (!HS) return {
+    function Tk(kk) {
+      const Fk = kk.camera;
+      if (!Fk) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const gS = HS.worldMatrix;
+      const Ik = Fk.worldMatrix;
       return {
-        x: gS[12],
-        y: gS[13],
-        z: gS[14]
+        x: Ik[12],
+        y: Ik[13],
+        z: Ik[14]
       }
     }
 
-    function XS(SS) {
-      return SS.camera ? SS.camera.worldMatrixVersion : 0
+    function ik(kk) {
+      return kk.camera ? kk.camera.worldMatrixVersion : 0
     }
 
-    function xS(SS, HS) {
-      const gS = HS.camera?.worldMatrix;
-      if (!gS) return;
-      const bS = gS[12],
-        XS = gS[13],
-        xS = gS[14];
-      let NS = 0;
-      for (const qS of HS.lights) {
-        if (NS >= tS.c) break;
-        if (!qS._writeLightUbo) continue;
-        const HS = 4 + 16 * NS,
-          gS = SS[HS + 3];
-        if (0 === gS || 2 === gS) {
-          const gS = qS.worldMatrix;
-          SS[HS] = gS[12] - bS, SS[HS + 1] = gS[13] - XS, SS[HS + 2] = gS[14] - xS
+    function yk(kk, Fk) {
+      const Ik = Fk.camera?.worldMatrix;
+      if (!Ik) return;
+      const Tk = Ik[12],
+        ik = Ik[13],
+        yk = Ik[14];
+      let lk = 0;
+      for (const ak of Fk.lights) {
+        if (lk >= Xk.b) break;
+        if (!ak._writeLightUbo) continue;
+        const Fk = 4 + 16 * lk,
+          Ik = kk[Fk + 3];
+        if (0 === Ik || 2 === Ik) {
+          const Ik = ak.worldMatrix;
+          kk[Fk] = Ik[12] - Tk, kk[Fk + 1] = Ik[13] - ik, kk[Fk + 2] = Ik[14] - yk
         }
-        NS++
+        lk++
       }
     }
 
-    function NS(SS, HS, gS) {
-      let tS = -1;
+    function lk(kk, Fk, Ik) {
+      let Xk = -1;
       return () => {
-        const bS = HS.camera ? HS.camera.worldMatrixVersion : -1;
-        bS !== tS && (gS(), tS = bS), SS()
+        const Tk = Fk.camera ? Fk.camera.worldMatrixVersion : -1;
+        Tk !== Xk && (Ik(), Xk = Tk), kk()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

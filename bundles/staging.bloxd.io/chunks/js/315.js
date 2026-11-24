@@ -1,582 +1,582 @@
 export const id = 315;
 export const ids = [315];
 export const modules = {
-  41898: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      ReadExrDataAsync: () => fH,
-      _ExrTextureLoader: () => IH
+  41859: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      ReadExrDataAsync: () => ZF,
+      _ExrTextureLoader: () => tF
     });
-    var tS = gS(38687),
-      bS = gS(37149),
-      XS = gS(40115);
-    const xS = 4,
-      NS = 4,
-      qS = 1,
-      uS = 2,
-      IS = 8,
-      fS = 65536,
-      kS = fS >> 3,
-      aS = 14,
-      KS = 65537,
-      jS = 1 << aS,
-      GS = jS - 1,
-      CS = 59,
-      nS = 63,
-      PS = 2 + nS - CS;
-    var QS, DS;
+    var Xk = Ik(38674),
+      Tk = Ik(37189),
+      ik = Ik(40064);
+    const yk = 4,
+      lk = 4,
+      ak = 1,
+      qk = 2,
+      Lk = 8,
+      tk = 65536,
+      Zk = tk >> 3,
+      jk = 14,
+      ek = 65537,
+      wk = 1 << jk,
+      Hk = wk - 1,
+      Jk = 59,
+      xk = 63,
+      Pk = 2 + xk - Jk;
+    var Kk, Qk;
 
-    function wS(SS, HS) {
-      const gS = new Uint8Array(SS);
-      let tS = 0;
-      for (; 0 != gS[HS.value + tS];) tS += 1;
-      const bS = (new TextDecoder).decode(gS.slice(HS.value, HS.value + tS));
-      return HS.value = HS.value + tS + 1, bS
+    function sk(kk, Fk) {
+      const Ik = new Uint8Array(kk);
+      let Xk = 0;
+      for (; 0 != Ik[Fk.value + Xk];) Xk += 1;
+      const Tk = (new TextDecoder).decode(Ik.slice(Fk.value, Fk.value + Xk));
+      return Fk.value = Fk.value + Xk + 1, Tk
     }
 
-    function hS(SS, HS) {
-      const gS = SS.getInt32(HS.value, !0);
-      return HS.value += xS, gS
+    function Vk(kk, Fk) {
+      const Ik = kk.getInt32(Fk.value, !0);
+      return Fk.value += yk, Ik
     }
 
-    function ZS(SS, HS) {
-      const gS = SS.getUint32(HS.value, !0);
-      return HS.value += xS, gS
+    function zk(kk, Fk) {
+      const Ik = kk.getUint32(Fk.value, !0);
+      return Fk.value += yk, Ik
     }
 
-    function JS(SS, HS) {
-      const gS = SS.getUint8(HS.value);
-      return HS.value += qS, gS
+    function Sk(kk, Fk) {
+      const Ik = kk.getUint8(Fk.value);
+      return Fk.value += ak, Ik
     }
 
-    function OS(SS, HS) {
-      const gS = SS.getUint16(HS.value, !0);
-      return HS.value += uS, gS
+    function vk(kk, Fk) {
+      const Ik = kk.getUint16(Fk.value, !0);
+      return Fk.value += qk, Ik
     }
 
-    function dS(SS, HS) {
-      const gS = SS[HS.value];
-      return HS.value += qS, gS
+    function Ek(kk, Fk) {
+      const Ik = kk[Fk.value];
+      return Fk.value += ak, Ik
     }
 
-    function cS(SS, HS) {
-      let gS;
-      return gS = "getBigInt64" in DataView.prototype ? Number(SS.getBigInt64(HS.value, !0)) : SS.getUint32(HS.value + 4, !0) + Number(SS.getUint32(HS.value, !0) << 32), HS.value += IS, gS
+    function Ok(kk, Fk) {
+      let Ik;
+      return Ik = "getBigInt64" in DataView.prototype ? Number(kk.getBigInt64(Fk.value, !0)) : kk.getUint32(Fk.value + 4, !0) + Number(kk.getUint32(Fk.value, !0) << 32), Fk.value += Lk, Ik
     }
 
-    function vS(SS, HS) {
-      const gS = SS.getFloat32(HS.value, !0);
-      return HS.value += NS, gS
+    function nk(kk, Fk) {
+      const Ik = kk.getFloat32(Fk.value, !0);
+      return Fk.value += lk, Ik
     }
 
-    function ES(SS, HS) {
-      return (0, XS.b)(OS(SS, HS))
+    function Gk(kk, Fk) {
+      return (0, ik.c)(vk(kk, Fk))
     }
 
-    function LS(SS, HS) {
-      return (0, XS.f)((0, bS.Clamp)(vS(SS, HS), -XS.d, XS.d))
+    function pk(kk, Fk) {
+      return (0, ik.i)((0, Tk.Clamp)(nk(kk, Fk), -ik.f, ik.f))
     }
 
-    function YS(SS, HS, gS, tS) {
-      switch (gS) {
+    function uk(kk, Fk, Ik, Xk) {
+      switch (Ik) {
         case "string":
         case "stringvector":
         case "iccProfile":
-          return function(SS, HS, gS) {
-            const tS = (new TextDecoder).decode(new Uint8Array(SS).slice(HS.value, HS.value + gS));
-            return HS.value = HS.value + gS, tS
-          }(SS.buffer, HS, tS);
+          return function(kk, Fk, Ik) {
+            const Xk = (new TextDecoder).decode(new Uint8Array(kk).slice(Fk.value, Fk.value + Ik));
+            return Fk.value = Fk.value + Ik, Xk
+          }(kk.buffer, Fk, Xk);
         case "chlist":
-          return function(SS, HS, gS) {
-            const tS = HS.value,
-              bS = [];
-            for (; HS.value < tS + gS - 1;) {
-              const gS = wS(SS.buffer, HS),
-                tS = hS(SS, HS),
-                XS = JS(SS, HS);
-              HS.value += 3;
-              const xS = hS(SS, HS),
-                NS = hS(SS, HS);
-              bS.push({
-                name: gS,
-                pixelType: tS,
-                pLinear: XS,
-                xSampling: xS,
-                ySampling: NS
+          return function(kk, Fk, Ik) {
+            const Xk = Fk.value,
+              Tk = [];
+            for (; Fk.value < Xk + Ik - 1;) {
+              const Ik = sk(kk.buffer, Fk),
+                Xk = Vk(kk, Fk),
+                ik = Sk(kk, Fk);
+              Fk.value += 3;
+              const yk = Vk(kk, Fk),
+                lk = Vk(kk, Fk);
+              Tk.push({
+                name: Ik,
+                pixelType: Xk,
+                pLinear: ik,
+                xSampling: yk,
+                ySampling: lk
               })
             }
-            return HS.value += 1, bS
-          }(SS, HS, tS);
+            return Fk.value += 1, Tk
+          }(kk, Fk, Xk);
         case "chromaticities":
-          return function(SS, HS) {
+          return function(kk, Fk) {
             return {
-              redX: vS(SS, HS),
-              redY: vS(SS, HS),
-              greenX: vS(SS, HS),
-              greenY: vS(SS, HS),
-              blueX: vS(SS, HS),
-              blueY: vS(SS, HS),
-              whiteX: vS(SS, HS),
-              whiteY: vS(SS, HS)
+              redX: nk(kk, Fk),
+              redY: nk(kk, Fk),
+              greenX: nk(kk, Fk),
+              greenY: nk(kk, Fk),
+              blueX: nk(kk, Fk),
+              blueY: nk(kk, Fk),
+              whiteX: nk(kk, Fk),
+              whiteY: nk(kk, Fk)
             }
-          }(SS, HS);
+          }(kk, Fk);
         case "compression":
-          return function(SS, HS) {
-            return JS(SS, HS)
-          }(SS, HS);
+          return function(kk, Fk) {
+            return Sk(kk, Fk)
+          }(kk, Fk);
         case "box2i":
-          return function(SS, HS) {
+          return function(kk, Fk) {
             return {
-              xMin: hS(SS, HS),
-              yMin: hS(SS, HS),
-              xMax: hS(SS, HS),
-              yMax: hS(SS, HS)
+              xMin: Vk(kk, Fk),
+              yMin: Vk(kk, Fk),
+              xMax: Vk(kk, Fk),
+              yMax: Vk(kk, Fk)
             }
-          }(SS, HS);
+          }(kk, Fk);
         case "lineOrder":
-          return function(SS, HS) {
-            const gS = JS(SS, HS);
-            return DS[gS]
-          }(SS, HS);
+          return function(kk, Fk) {
+            const Ik = Sk(kk, Fk);
+            return Qk[Ik]
+          }(kk, Fk);
         case "float":
-          return vS(SS, HS);
+          return nk(kk, Fk);
         case "v2f":
-          return function(SS, HS) {
-            return [vS(SS, HS), vS(SS, HS)]
-          }(SS, HS);
+          return function(kk, Fk) {
+            return [nk(kk, Fk), nk(kk, Fk)]
+          }(kk, Fk);
         case "v3f":
-          return function(SS, HS) {
-            return [vS(SS, HS), vS(SS, HS), vS(SS, HS)]
-          }(SS, HS);
+          return function(kk, Fk) {
+            return [nk(kk, Fk), nk(kk, Fk), nk(kk, Fk)]
+          }(kk, Fk);
         case "int":
-          return hS(SS, HS);
+          return Vk(kk, Fk);
         case "rational":
-          return function(SS, HS) {
-            return [hS(SS, HS), ZS(SS, HS)]
-          }(SS, HS);
+          return function(kk, Fk) {
+            return [Vk(kk, Fk), zk(kk, Fk)]
+          }(kk, Fk);
         case "timecode":
-          return function(SS, HS) {
-            return [ZS(SS, HS), ZS(SS, HS)]
-          }(SS, HS);
+          return function(kk, Fk) {
+            return [zk(kk, Fk), zk(kk, Fk)]
+          }(kk, Fk);
         case "preview":
-          return HS.value += tS, "skipped";
+          return Fk.value += Xk, "skipped";
         default:
-          return void(HS.value += tS)
+          return void(Fk.value += Xk)
       }
     }
 
-    function AS(SS) {
-      for (let HS = 1; HS < SS.length; HS++) {
-        const gS = SS[HS - 1] + SS[HS] - 128;
-        SS[HS] = gS
+    function bk(kk) {
+      for (let Fk = 1; Fk < kk.length; Fk++) {
+        const Ik = kk[Fk - 1] + kk[Fk] - 128;
+        kk[Fk] = Ik
       }
     }
 
-    function yS(SS, HS) {
-      let gS = 0,
-        tS = Math.floor((SS.length + 1) / 2),
-        bS = 0;
-      const XS = SS.length - 1;
-      for (; !(bS > XS) && (HS[bS++] = SS[gS++], !(bS > XS));) HS[bS++] = SS[tS++]
-    }! function(SS) {
-      SS[SS.NO_COMPRESSION = 0] = "NO_COMPRESSION", SS[SS.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", SS[SS.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", SS[SS.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", SS[SS.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", SS[SS.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
-    }(QS || (QS = {})),
-    function(SS) {
-      SS[SS.INCREASING_Y = 0] = "INCREASING_Y", SS[SS.DECREASING_Y = 1] = "DECREASING_Y"
-    }(DS || (DS = {}));
-    const VS = 20000630;
+    function Rk(kk, Fk) {
+      let Ik = 0,
+        Xk = Math.floor((kk.length + 1) / 2),
+        Tk = 0;
+      const ik = kk.length - 1;
+      for (; !(Tk > ik) && (Fk[Tk++] = kk[Ik++], !(Tk > ik));) Fk[Tk++] = kk[Xk++]
+    }! function(kk) {
+      kk[kk.NO_COMPRESSION = 0] = "NO_COMPRESSION", kk[kk.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", kk[kk.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", kk[kk.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", kk[kk.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", kk[kk.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
+    }(Kk || (Kk = {})),
+    function(kk) {
+      kk[kk.INCREASING_Y = 0] = "INCREASING_Y", kk[kk.DECREASING_Y = 1] = "DECREASING_Y"
+    }(Qk || (Qk = {}));
+    const Uk = 20000630;
 
-    function iS(SS, HS) {
-      if (SS.getUint32(0, !0) != VS) throw new Error("Incorrect OpenEXR format");
-      const gS = SS.getUint8(4),
-        bS = SS.getUint8(5),
-        XS = {
-          singleTile: !!(2 & bS),
-          longName: !!(4 & bS),
-          deepFormat: !!(8 & bS),
-          multiPart: !!(16 & bS)
+    function Ck(kk, Fk) {
+      if (kk.getUint32(0, !0) != Uk) throw new Error("Incorrect OpenEXR format");
+      const Ik = kk.getUint8(4),
+        Tk = kk.getUint8(5),
+        ik = {
+          singleTile: !!(2 & Tk),
+          longName: !!(4 & Tk),
+          deepFormat: !!(8 & Tk),
+          multiPart: !!(16 & Tk)
         };
-      HS.value = 8;
-      const xS = {};
-      let NS = !0;
-      for (; NS;) {
-        const gS = wS(SS.buffer, HS);
-        if (gS) {
-          const bS = wS(SS.buffer, HS),
-            XS = YS(SS, HS, bS, ZS(SS, HS));
-          void 0 === XS ? tS.b.Warn(`Unknown header attribute type ${bS}'.`) : xS[gS] = XS
-        } else NS = !1
+      Fk.value = 8;
+      const yk = {};
+      let lk = !0;
+      for (; lk;) {
+        const Ik = sk(kk.buffer, Fk);
+        if (Ik) {
+          const Tk = sk(kk.buffer, Fk),
+            ik = uk(kk, Fk, Tk, zk(kk, Fk));
+          void 0 === ik ? Xk.e.Warn(`Unknown header attribute type ${Tk}'.`) : yk[Ik] = ik
+        } else lk = !1
       }
-      if (0 != (-5 & bS)) throw new Error("Unsupported file format");
+      if (0 != (-5 & Tk)) throw new Error("Unsupported file format");
       return {
-        version: gS,
-        spec: XS,
-        ...xS
-      }
-    }
-    const WS = 32768,
-      zS = 65535;
-
-    function US(SS, HS, gS, tS, bS) {
-      for (; gS < SS;) HS = HS << 8 | dS(tS, bS), gS += 8;
-      return {
-        l: HS >> (gS -= SS) & (1 << SS) - 1,
-        c: HS,
-        lc: gS
+        version: Ik,
+        spec: ik,
+        ...yk
       }
     }
+    const Nk = 32768,
+      ck = 65535;
 
-    function pS(SS, HS, gS, tS) {
+    function Wk(kk, Fk, Ik, Xk, Tk) {
+      for (; Ik < kk;) Fk = Fk << 8 | Ek(Xk, Tk), Ik += 8;
       return {
-        c: SS = SS << 8 | dS(gS, tS),
-        lc: HS += 8
+        l: Fk >> (Ik -= kk) & (1 << kk) - 1,
+        c: Fk,
+        lc: Ik
       }
     }
 
-    function sS(SS, HS, gS, tS, bS, XS, xS, NS, qS) {
-      if (SS == HS) {
-        if (tS < 8) {
-          const SS = pS(gS, tS, bS, XS);
-          gS = SS.c, tS = SS.lc
+    function fk(kk, Fk, Ik, Xk) {
+      return {
+        c: kk = kk << 8 | Ek(Ik, Xk),
+        lc: Fk += 8
+      }
+    }
+
+    function Bk(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak) {
+      if (kk == Fk) {
+        if (Xk < 8) {
+          const kk = fk(Ik, Xk, Tk, ik);
+          Ik = kk.c, Xk = kk.lc
         }
-        let SS = gS >> (tS -= 8);
-        if (SS = new Uint8Array([SS])[0], NS.value + SS > qS) return null;
-        const HS = xS[NS.value - 1];
-        for (; SS-- > 0;) xS[NS.value++] = HS
+        let kk = Ik >> (Xk -= 8);
+        if (kk = new Uint8Array([kk])[0], lk.value + kk > ak) return null;
+        const Fk = yk[lk.value - 1];
+        for (; kk-- > 0;) yk[lk.value++] = Fk
       } else {
-        if (!(NS.value < qS)) return null;
-        xS[NS.value++] = SS
+        if (!(lk.value < ak)) return null;
+        yk[lk.value++] = kk
       }
       return {
-        c: gS,
-        lc: tS
+        c: Ik,
+        lc: Xk
       }
     }
-    const BS = new Array(59);
+    const dk = new Array(59);
 
-    function MS(SS, HS, gS, tS, bS, XS) {
-      const xS = HS;
-      let NS = 0,
-        qS = 0;
-      for (; tS <= bS; tS++) {
-        if (xS.value - HS.value > gS) return;
-        let uS = US(6, NS, qS, SS, xS);
-        const IS = uS.l;
-        if (NS = uS.c, qS = uS.lc, XS[tS] = IS, IS == nS) {
-          if (xS.value - HS.value > gS) throw new Error("Error in HufUnpackEncTable");
-          uS = US(8, NS, qS, SS, xS);
-          let IS = uS.l + PS;
-          if (NS = uS.c, qS = uS.lc, tS + IS > bS + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; IS--;) XS[tS++] = 0;
-          tS--
-        } else if (IS >= CS) {
-          let SS = IS - CS + 2;
-          if (tS + SS > bS + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; SS--;) XS[tS++] = 0;
-          tS--
+    function Yk(kk, Fk, Ik, Xk, Tk, ik) {
+      const yk = Fk;
+      let lk = 0,
+        ak = 0;
+      for (; Xk <= Tk; Xk++) {
+        if (yk.value - Fk.value > Ik) return;
+        let qk = Wk(6, lk, ak, kk, yk);
+        const Lk = qk.l;
+        if (lk = qk.c, ak = qk.lc, ik[Xk] = Lk, Lk == xk) {
+          if (yk.value - Fk.value > Ik) throw new Error("Error in HufUnpackEncTable");
+          qk = Wk(8, lk, ak, kk, yk);
+          let Lk = qk.l + Pk;
+          if (lk = qk.c, ak = qk.lc, Xk + Lk > Tk + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; Lk--;) ik[Xk++] = 0;
+          Xk--
+        } else if (Lk >= Jk) {
+          let kk = Lk - Jk + 2;
+          if (Xk + kk > Tk + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; kk--;) ik[Xk++] = 0;
+          Xk--
         }
-      }! function(SS) {
-        for (let gS = 0; gS <= 58; ++gS) BS[gS] = 0;
-        for (let gS = 0; gS < KS; ++gS) BS[SS[gS]] += 1;
-        let HS = 0;
-        for (let gS = 58; gS > 0; --gS) {
-          const SS = HS + BS[gS] >> 1;
-          BS[gS] = HS, HS = SS
+      }! function(kk) {
+        for (let Ik = 0; Ik <= 58; ++Ik) dk[Ik] = 0;
+        for (let Ik = 0; Ik < ek; ++Ik) dk[kk[Ik]] += 1;
+        let Fk = 0;
+        for (let Ik = 58; Ik > 0; --Ik) {
+          const kk = Fk + dk[Ik] >> 1;
+          dk[Ik] = Fk, Fk = kk
         }
-        for (let gS = 0; gS < KS; ++gS) {
-          const HS = SS[gS];
-          HS > 0 && (SS[gS] = HS | BS[HS]++ << 6)
+        for (let Ik = 0; Ik < ek; ++Ik) {
+          const Fk = kk[Ik];
+          Fk > 0 && (kk[Ik] = Fk | dk[Fk]++ << 6)
         }
-      }(XS)
+      }(ik)
     }
 
-    function FS(SS) {
-      return 63 & SS
+    function Ak(kk) {
+      return 63 & kk
     }
 
-    function RS(SS) {
-      return SS >> 6
+    function gk(kk) {
+      return kk >> 6
     }
 
-    function TS(SS, HS, gS, tS, bS, XS) {
-      const xS = gS.value,
-        NS = ZS(HS, gS),
-        qS = ZS(HS, gS);
-      gS.value += 4;
-      const uS = ZS(HS, gS);
-      if (gS.value += 4, NS < 0 || NS >= KS || qS < 0 || qS >= KS) throw new Error("Wrong HUF_ENCSIZE");
-      const IS = new Array(KS),
-        fS = new Array(jS);
-      ! function(SS) {
-        for (let HS = 0; HS < jS; HS++) SS[HS] = {}, SS[HS].len = 0, SS[HS].lit = 0, SS[HS].p = null
-      }(fS);
-      if (MS(SS, gS, tS - (gS.value - xS), NS, qS, IS), uS > 8 * (tS - (gS.value - xS))) throw new Error("Wrong hufUncompress");
-      ! function(SS, HS, gS, tS) {
-        for (; HS <= gS; HS++) {
-          const gS = RS(SS[HS]),
-            bS = FS(SS[HS]);
-          if (gS >> bS) throw new Error("Invalid table entry");
-          if (bS > aS) {
-            const SS = tS[gS >> bS - aS];
-            if (SS.len) throw new Error("Invalid table entry");
-            if (SS.lit++, SS.p) {
-              const HS = SS.p;
-              SS.p = new Array(SS.lit);
-              for (let gS = 0; gS < SS.lit - 1; ++gS) SS.p[gS] = HS[gS]
-            } else SS.p = new Array(1);
-            SS.p[SS.lit - 1] = HS
-          } else if (bS) {
-            let SS = 0;
-            for (let XS = 1 << aS - bS; XS > 0; XS--) {
-              const XS = tS[(gS << aS - bS) + SS];
-              if (XS.len || XS.p) throw new Error("Invalid table entry");
-              XS.len = bS, XS.lit = HS, SS++
+    function mk(kk, Fk, Ik, Xk, Tk, ik) {
+      const yk = Ik.value,
+        lk = zk(Fk, Ik),
+        ak = zk(Fk, Ik);
+      Ik.value += 4;
+      const qk = zk(Fk, Ik);
+      if (Ik.value += 4, lk < 0 || lk >= ek || ak < 0 || ak >= ek) throw new Error("Wrong HUF_ENCSIZE");
+      const Lk = new Array(ek),
+        tk = new Array(wk);
+      ! function(kk) {
+        for (let Fk = 0; Fk < wk; Fk++) kk[Fk] = {}, kk[Fk].len = 0, kk[Fk].lit = 0, kk[Fk].p = null
+      }(tk);
+      if (Yk(kk, Ik, Xk - (Ik.value - yk), lk, ak, Lk), qk > 8 * (Xk - (Ik.value - yk))) throw new Error("Wrong hufUncompress");
+      ! function(kk, Fk, Ik, Xk) {
+        for (; Fk <= Ik; Fk++) {
+          const Ik = gk(kk[Fk]),
+            Tk = Ak(kk[Fk]);
+          if (Ik >> Tk) throw new Error("Invalid table entry");
+          if (Tk > jk) {
+            const kk = Xk[Ik >> Tk - jk];
+            if (kk.len) throw new Error("Invalid table entry");
+            if (kk.lit++, kk.p) {
+              const Fk = kk.p;
+              kk.p = new Array(kk.lit);
+              for (let Ik = 0; Ik < kk.lit - 1; ++Ik) kk.p[Ik] = Fk[Ik]
+            } else kk.p = new Array(1);
+            kk.p[kk.lit - 1] = Fk
+          } else if (Tk) {
+            let kk = 0;
+            for (let ik = 1 << jk - Tk; ik > 0; ik--) {
+              const ik = Xk[(Ik << jk - Tk) + kk];
+              if (ik.len || ik.p) throw new Error("Invalid table entry");
+              ik.len = Tk, ik.lit = Fk, kk++
             }
           }
         }
-      }(IS, NS, qS, fS),
-      function(SS, HS, gS, tS, bS, XS, xS, NS, qS) {
-        let uS = 0,
-          IS = 0;
-        const fS = xS,
-          kS = Math.trunc(tS.value + (bS + 7) / 8);
-        for (; tS.value < kS;) {
-          let bS = pS(uS, IS, gS, tS);
-          for (uS = bS.c, IS = bS.lc; IS >= aS;) {
-            const xS = HS[uS >> IS - aS & GS];
-            if (xS.len) {
-              IS -= xS.len;
-              const SS = sS(xS.lit, XS, uS, IS, gS, tS, NS, qS, fS);
-              SS && (uS = SS.c, IS = SS.lc)
+      }(Lk, lk, ak, tk),
+      function(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak) {
+        let qk = 0,
+          Lk = 0;
+        const tk = yk,
+          Zk = Math.trunc(Xk.value + (Tk + 7) / 8);
+        for (; Xk.value < Zk;) {
+          let Tk = fk(qk, Lk, Ik, Xk);
+          for (qk = Tk.c, Lk = Tk.lc; Lk >= jk;) {
+            const yk = Fk[qk >> Lk - jk & Hk];
+            if (yk.len) {
+              Lk -= yk.len;
+              const kk = Bk(yk.lit, ik, qk, Lk, Ik, Xk, lk, ak, tk);
+              kk && (qk = kk.c, Lk = kk.lc)
             } else {
-              if (!xS.p) throw new Error("hufDecode issues");
-              let HS;
-              for (HS = 0; HS < xS.lit; HS++) {
-                const aS = FS(SS[xS.p[HS]]);
-                for (; IS < aS && tS.value < kS;) bS = pS(uS, IS, gS, tS), uS = bS.c, IS = bS.lc;
-                if (IS >= aS && RS(SS[xS.p[HS]]) == (uS >> IS - aS & (1 << aS) - 1)) {
-                  IS -= aS;
-                  const SS = sS(xS.p[HS], XS, uS, IS, gS, tS, NS, qS, fS);
-                  SS && (uS = SS.c, IS = SS.lc);
+              if (!yk.p) throw new Error("hufDecode issues");
+              let Fk;
+              for (Fk = 0; Fk < yk.lit; Fk++) {
+                const jk = Ak(kk[yk.p[Fk]]);
+                for (; Lk < jk && Xk.value < Zk;) Tk = fk(qk, Lk, Ik, Xk), qk = Tk.c, Lk = Tk.lc;
+                if (Lk >= jk && gk(kk[yk.p[Fk]]) == (qk >> Lk - jk & (1 << jk) - 1)) {
+                  Lk -= jk;
+                  const kk = Bk(yk.p[Fk], ik, qk, Lk, Ik, Xk, lk, ak, tk);
+                  kk && (qk = kk.c, Lk = kk.lc);
                   break
                 }
               }
-              if (HS == xS.lit) throw new Error("HufDecode issues")
+              if (Fk == yk.lit) throw new Error("HufDecode issues")
             }
           }
         }
-        const KS = 8 - bS & 7;
-        for (uS >>= KS, IS -= KS; IS > 0;) {
-          const SS = HS[uS << aS - IS & GS];
-          if (!SS.len) throw new Error("HufDecode issues");
+        const ek = 8 - Tk & 7;
+        for (qk >>= ek, Lk -= ek; Lk > 0;) {
+          const kk = Fk[qk << jk - Lk & Hk];
+          if (!kk.len) throw new Error("HufDecode issues");
           {
-            IS -= SS.len;
-            const HS = sS(SS.lit, XS, uS, IS, gS, tS, NS, qS, fS);
-            HS && (uS = HS.c, IS = HS.lc)
+            Lk -= kk.len;
+            const Fk = Bk(kk.lit, ik, qk, Lk, Ik, Xk, lk, ak, tk);
+            Fk && (qk = Fk.c, Lk = Fk.lc)
           }
         }
-      }(IS, fS, SS, gS, uS, qS, XS, bS, {
+      }(Lk, tk, kk, Ik, qk, ak, ik, Tk, {
         value: 0
       })
     }
 
-    function oS(SS) {
-      return 65535 & SS
+    function hk(kk) {
+      return 65535 & kk
     }
 
-    function lS(SS) {
-      const HS = oS(SS);
-      return HS > 32767 ? HS - 65536 : HS
+    function rk(kk) {
+      const Fk = hk(kk);
+      return Fk > 32767 ? Fk - 65536 : Fk
     }
 
-    function mS(SS, HS) {
-      const gS = lS(SS),
-        tS = lS(HS),
-        bS = gS + (1 & tS) + (tS >> 1);
+    function Dk(kk, Fk) {
+      const Ik = rk(kk),
+        Xk = rk(Fk),
+        Tk = Ik + (1 & Xk) + (Xk >> 1);
       return {
-        a: bS,
-        b: bS - tS
+        a: Tk,
+        b: Tk - Xk
       }
     }
 
-    function eS(SS, HS) {
-      const gS = oS(SS),
-        tS = oS(HS),
-        bS = gS - (tS >> 1) & zS;
+    function Mk(kk, Fk) {
+      const Ik = hk(kk),
+        Xk = hk(Fk),
+        Tk = Ik - (Xk >> 1) & ck;
       return {
-        a: tS + bS - WS & zS,
-        b: bS
+        a: Xk + Tk - Nk & ck,
+        b: Tk
       }
     }
 
-    function rS(SS, HS, gS, tS, bS, XS, xS) {
-      const NS = xS < 16384,
-        qS = gS > bS ? bS : gS;
-      let uS, IS, fS = 1;
-      for (; fS <= qS;) fS <<= 1;
-      for (fS >>= 1, uS = fS, fS >>= 1; fS >= 1;) {
-        IS = 0;
-        const xS = IS + XS * (bS - uS),
-          qS = XS * fS,
-          kS = XS * uS,
-          aS = tS * fS,
-          KS = tS * uS;
-        let jS, GS, CS, nS;
-        for (; IS <= xS; IS += kS) {
-          let bS = IS;
-          const XS = IS + tS * (gS - uS);
-          for (; bS <= XS; bS += KS) {
-            const gS = bS + aS,
-              tS = bS + qS,
-              XS = tS + aS;
-            if (NS) {
-              let xS = mS(SS[bS + HS], SS[tS + HS]);
-              jS = xS.a, CS = xS.b, xS = mS(SS[gS + HS], SS[XS + HS]), GS = xS.a, nS = xS.b, xS = mS(jS, GS), SS[bS + HS] = xS.a, SS[gS + HS] = xS.b, xS = mS(CS, nS), SS[tS + HS] = xS.a, SS[XS + HS] = xS.b
+    function kF(kk, Fk, Ik, Xk, Tk, ik, yk) {
+      const lk = yk < 16384,
+        ak = Ik > Tk ? Tk : Ik;
+      let qk, Lk, tk = 1;
+      for (; tk <= ak;) tk <<= 1;
+      for (tk >>= 1, qk = tk, tk >>= 1; tk >= 1;) {
+        Lk = 0;
+        const yk = Lk + ik * (Tk - qk),
+          ak = ik * tk,
+          Zk = ik * qk,
+          jk = Xk * tk,
+          ek = Xk * qk;
+        let wk, Hk, Jk, xk;
+        for (; Lk <= yk; Lk += Zk) {
+          let Tk = Lk;
+          const ik = Lk + Xk * (Ik - qk);
+          for (; Tk <= ik; Tk += ek) {
+            const Ik = Tk + jk,
+              Xk = Tk + ak,
+              ik = Xk + jk;
+            if (lk) {
+              let yk = Dk(kk[Tk + Fk], kk[Xk + Fk]);
+              wk = yk.a, Jk = yk.b, yk = Dk(kk[Ik + Fk], kk[ik + Fk]), Hk = yk.a, xk = yk.b, yk = Dk(wk, Hk), kk[Tk + Fk] = yk.a, kk[Ik + Fk] = yk.b, yk = Dk(Jk, xk), kk[Xk + Fk] = yk.a, kk[ik + Fk] = yk.b
             } else {
-              let xS = eS(SS[bS + HS], SS[tS + HS]);
-              jS = xS.a, CS = xS.b, xS = eS(SS[gS + HS], SS[XS + HS]), GS = xS.a, nS = xS.b, xS = eS(jS, GS), SS[bS + HS] = xS.a, SS[gS + HS] = xS.b, xS = eS(CS, nS), SS[tS + HS] = xS.a, SS[XS + HS] = xS.b
+              let yk = Mk(kk[Tk + Fk], kk[Xk + Fk]);
+              wk = yk.a, Jk = yk.b, yk = Mk(kk[Ik + Fk], kk[ik + Fk]), Hk = yk.a, xk = yk.b, yk = Mk(wk, Hk), kk[Tk + Fk] = yk.a, kk[Ik + Fk] = yk.b, yk = Mk(Jk, xk), kk[Xk + Fk] = yk.a, kk[ik + Fk] = yk.b
             }
           }
-          if (gS & fS) {
-            const gS = bS + qS;
-            let tS;
-            tS = NS ? mS(SS[bS + HS], SS[gS + HS]) : eS(SS[bS + HS], SS[gS + HS]), jS = tS.a, SS[gS + HS] = tS.b, SS[bS + HS] = jS
+          if (Ik & tk) {
+            const Ik = Tk + ak;
+            let Xk;
+            Xk = lk ? Dk(kk[Tk + Fk], kk[Ik + Fk]) : Mk(kk[Tk + Fk], kk[Ik + Fk]), wk = Xk.a, kk[Ik + Fk] = Xk.b, kk[Tk + Fk] = wk
           }
         }
-        if (bS & fS) {
-          let bS = IS;
-          const XS = IS + tS * (gS - uS);
-          for (; bS <= XS; bS += KS) {
-            const gS = bS + aS;
-            let tS;
-            tS = NS ? mS(SS[bS + HS], SS[gS + HS]) : eS(SS[bS + HS], SS[gS + HS]), jS = tS.a, SS[gS + HS] = tS.b, SS[bS + HS] = jS
+        if (Tk & tk) {
+          let Tk = Lk;
+          const ik = Lk + Xk * (Ik - qk);
+          for (; Tk <= ik; Tk += ek) {
+            const Ik = Tk + jk;
+            let Xk;
+            Xk = lk ? Dk(kk[Tk + Fk], kk[Ik + Fk]) : Mk(kk[Tk + Fk], kk[Ik + Fk]), wk = Xk.a, kk[Ik + Fk] = Xk.b, kk[Tk + Fk] = wk
           }
         }
-        uS = fS, fS >>= 1
+        qk = tk, tk >>= 1
       }
-      return IS
+      return Lk
     }
 
-    function SH(SS) {
-      return new DataView(SS.array.buffer, SS.offset.value, SS.size)
+    function FF(kk) {
+      return new DataView(kk.array.buffer, kk.offset.value, kk.size)
     }
 
-    function HH(SS) {
-      const HS = SS.viewer.buffer.slice(SS.offset.value, SS.offset.value + SS.size),
-        gS = new Uint8Array(function(SS) {
-          let HS = SS.byteLength;
-          const gS = [];
-          let tS = 0;
-          const bS = new DataView(SS);
-          for (; HS > 0;) {
-            const SS = bS.getInt8(tS++);
-            if (SS < 0) {
-              const XS = -SS;
-              HS -= XS + 1;
-              for (let SS = 0; SS < XS; SS++) gS.push(bS.getUint8(tS++))
+    function IF(kk) {
+      const Fk = kk.viewer.buffer.slice(kk.offset.value, kk.offset.value + kk.size),
+        Ik = new Uint8Array(function(kk) {
+          let Fk = kk.byteLength;
+          const Ik = [];
+          let Xk = 0;
+          const Tk = new DataView(kk);
+          for (; Fk > 0;) {
+            const kk = Tk.getInt8(Xk++);
+            if (kk < 0) {
+              const ik = -kk;
+              Fk -= ik + 1;
+              for (let kk = 0; kk < ik; kk++) Ik.push(Tk.getUint8(Xk++))
             } else {
-              const XS = SS;
-              HS -= 2;
-              const xS = bS.getUint8(tS++);
-              for (let SS = 0; SS < XS + 1; SS++) gS.push(xS)
+              const ik = kk;
+              Fk -= 2;
+              const yk = Tk.getUint8(Xk++);
+              for (let kk = 0; kk < ik + 1; kk++) Ik.push(yk)
             }
           }
-          return gS
-        }(HS)),
-        tS = new Uint8Array(gS.length);
-      return AS(gS), yS(gS, tS), new DataView(tS.buffer)
+          return Ik
+        }(Fk)),
+        Xk = new Uint8Array(Ik.length);
+      return bk(Ik), Rk(Ik, Xk), new DataView(Xk.buffer)
     }
 
-    function gH(SS) {
-      const HS = SS.array.slice(SS.offset.value, SS.offset.value + SS.size),
-        gS = fflate.unzlibSync(HS),
-        tS = new Uint8Array(gS.length);
-      return AS(gS), yS(gS, tS), new DataView(tS.buffer)
+    function XF(kk) {
+      const Fk = kk.array.slice(kk.offset.value, kk.offset.value + kk.size),
+        Ik = fflate.unzlibSync(Fk),
+        Xk = new Uint8Array(Ik.length);
+      return bk(Ik), Rk(Ik, Xk), new DataView(Xk.buffer)
     }
 
-    function tH(SS) {
-      const HS = SS.array.slice(SS.offset.value, SS.offset.value + SS.size),
-        gS = fflate.unzlibSync(HS),
-        tS = SS.lines * SS.channels * SS.width,
-        bS = 1 == SS.type ? new Uint16Array(tS) : new Uint32Array(tS);
-      let XS = 0,
-        xS = 0;
-      const NS = new Array(4);
-      for (let qS = 0; qS < SS.lines; qS++)
-        for (let HS = 0; HS < SS.channels; HS++) {
-          let HS = 0;
-          switch (SS.type) {
+    function TF(kk) {
+      const Fk = kk.array.slice(kk.offset.value, kk.offset.value + kk.size),
+        Ik = fflate.unzlibSync(Fk),
+        Xk = kk.lines * kk.channels * kk.width,
+        Tk = 1 == kk.type ? new Uint16Array(Xk) : new Uint32Array(Xk);
+      let ik = 0,
+        yk = 0;
+      const lk = new Array(4);
+      for (let ak = 0; ak < kk.lines; ak++)
+        for (let Fk = 0; Fk < kk.channels; Fk++) {
+          let Fk = 0;
+          switch (kk.type) {
             case 1:
-              NS[0] = XS, NS[1] = NS[0] + SS.width, XS = NS[1] + SS.width;
-              for (let tS = 0; tS < SS.width; ++tS) {
-                HS += gS[NS[0]++] << 8 | gS[NS[1]++], bS[xS] = HS, xS++
+              lk[0] = ik, lk[1] = lk[0] + kk.width, ik = lk[1] + kk.width;
+              for (let Xk = 0; Xk < kk.width; ++Xk) {
+                Fk += Ik[lk[0]++] << 8 | Ik[lk[1]++], Tk[yk] = Fk, yk++
               }
               break;
             case 2:
-              NS[0] = XS, NS[1] = NS[0] + SS.width, NS[2] = NS[1] + SS.width, XS = NS[2] + SS.width;
-              for (let tS = 0; tS < SS.width; ++tS) {
-                HS += gS[NS[0]++] << 24 | gS[NS[1]++] << 16 | gS[NS[2]++] << 8, bS[xS] = HS, xS++
+              lk[0] = ik, lk[1] = lk[0] + kk.width, lk[2] = lk[1] + kk.width, ik = lk[2] + kk.width;
+              for (let Xk = 0; Xk < kk.width; ++Xk) {
+                Fk += Ik[lk[0]++] << 24 | Ik[lk[1]++] << 16 | Ik[lk[2]++] << 8, Tk[yk] = Fk, yk++
               }
           }
         }
-      return new DataView(bS.buffer)
+      return new DataView(Tk.buffer)
     }
 
-    function bH(SS) {
-      const HS = SS.viewer,
-        gS = {
-          value: SS.offset.value
+    function iF(kk) {
+      const Fk = kk.viewer,
+        Ik = {
+          value: kk.offset.value
         },
-        tS = new Uint16Array(SS.width * SS.scanlineBlockSize * (SS.channels * SS.type)),
-        bS = new Uint8Array(kS);
-      let XS = 0;
-      const xS = new Array(SS.channels);
-      for (let uS = 0; uS < SS.channels; uS++) xS[uS] = {}, xS[uS].start = XS, xS[uS].end = xS[uS].start, xS[uS].nx = SS.width, xS[uS].ny = SS.lines, xS[uS].size = SS.type, XS += xS[uS].nx * xS[uS].ny * xS[uS].size;
-      const NS = OS(HS, gS),
-        qS = OS(HS, gS);
-      if (qS >= kS) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
-      if (NS <= qS)
-        for (let uS = 0; uS < qS - NS + 1; uS++) bS[uS + NS] = JS(HS, gS);
-      const IS = new Uint16Array(fS),
-        aS = function(SS, HS) {
-          let gS = 0;
-          for (let bS = 0; bS < fS; ++bS)(0 == bS || SS[bS >> 3] & 1 << (7 & bS)) && (HS[gS++] = bS);
-          const tS = gS - 1;
-          for (; gS < fS;) HS[gS++] = 0;
-          return tS
-        }(bS, IS),
-        KS = ZS(HS, gS);
-      TS(SS.array, HS, gS, KS, tS, XS);
-      for (let uS = 0; uS < SS.channels; ++uS) {
-        const SS = xS[uS];
-        for (let HS = 0; HS < xS[uS].size; ++HS) rS(tS, SS.start + HS, SS.nx, SS.size, SS.ny, SS.nx * SS.size, aS)
-      }! function(SS, HS, gS) {
-        for (let tS = 0; tS < gS; ++tS) HS[tS] = SS[HS[tS]]
-      }(IS, tS, XS);
-      let jS = 0;
-      const GS = new Uint8Array(tS.buffer.byteLength);
-      for (let fS = 0; fS < SS.lines; fS++)
-        for (let HS = 0; HS < SS.channels; HS++) {
-          const SS = xS[HS],
-            gS = SS.nx * SS.size,
-            bS = new Uint8Array(tS.buffer, SS.end * uS, gS * uS);
-          GS.set(bS, jS), jS += gS * uS, SS.end += gS
+        Xk = new Uint16Array(kk.width * kk.scanlineBlockSize * (kk.channels * kk.type)),
+        Tk = new Uint8Array(Zk);
+      let ik = 0;
+      const yk = new Array(kk.channels);
+      for (let qk = 0; qk < kk.channels; qk++) yk[qk] = {}, yk[qk].start = ik, yk[qk].end = yk[qk].start, yk[qk].nx = kk.width, yk[qk].ny = kk.lines, yk[qk].size = kk.type, ik += yk[qk].nx * yk[qk].ny * yk[qk].size;
+      const lk = vk(Fk, Ik),
+        ak = vk(Fk, Ik);
+      if (ak >= Zk) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
+      if (lk <= ak)
+        for (let qk = 0; qk < ak - lk + 1; qk++) Tk[qk + lk] = Sk(Fk, Ik);
+      const Lk = new Uint16Array(tk),
+        jk = function(kk, Fk) {
+          let Ik = 0;
+          for (let Tk = 0; Tk < tk; ++Tk)(0 == Tk || kk[Tk >> 3] & 1 << (7 & Tk)) && (Fk[Ik++] = Tk);
+          const Xk = Ik - 1;
+          for (; Ik < tk;) Fk[Ik++] = 0;
+          return Xk
+        }(Tk, Lk),
+        ek = zk(Fk, Ik);
+      mk(kk.array, Fk, Ik, ek, Xk, ik);
+      for (let qk = 0; qk < kk.channels; ++qk) {
+        const kk = yk[qk];
+        for (let Fk = 0; Fk < yk[qk].size; ++Fk) kF(Xk, kk.start + Fk, kk.nx, kk.size, kk.ny, kk.nx * kk.size, jk)
+      }! function(kk, Fk, Ik) {
+        for (let Xk = 0; Xk < Ik; ++Xk) Fk[Xk] = kk[Fk[Xk]]
+      }(Lk, Xk, ik);
+      let wk = 0;
+      const Hk = new Uint8Array(Xk.buffer.byteLength);
+      for (let tk = 0; tk < kk.lines; tk++)
+        for (let Fk = 0; Fk < kk.channels; Fk++) {
+          const kk = yk[Fk],
+            Ik = kk.nx * kk.size,
+            Tk = new Uint8Array(Xk.buffer, kk.end * qk, Ik * qk);
+          Hk.set(Tk, wk), wk += Ik * qk, kk.end += Ik
         }
-      return new DataView(GS.buffer)
+      return new DataView(Hk.buffer)
     }
-    var XH, xH = gS(40133);
-    ! function(SS) {
-      SS[SS.Float = 0] = "Float", SS[SS.HalfFloat = 1] = "HalfFloat"
-    }(XH || (XH = {}));
-    class NH {}
-    async function qH(SS, HS, gS, tS) {
-      const bS = {
+    var yF, lF = Ik(40097);
+    ! function(kk) {
+      kk[kk.Float = 0] = "Float", kk[kk.HalfFloat = 1] = "HalfFloat"
+    }(yF || (yF = {}));
+    class aF {}
+    async function qF(kk, Fk, Ik, Xk) {
+      const Tk = {
         size: 0,
-        viewer: HS,
-        array: new Uint8Array(HS.buffer),
-        offset: gS,
-        width: SS.dataWindow.xMax - SS.dataWindow.xMin + 1,
-        height: SS.dataWindow.yMax - SS.dataWindow.yMin + 1,
-        channels: SS.channels.length,
+        viewer: Fk,
+        array: new Uint8Array(Fk.buffer),
+        offset: Ik,
+        width: kk.dataWindow.xMax - kk.dataWindow.xMin + 1,
+        height: kk.dataWindow.yMax - kk.dataWindow.yMin + 1,
+        channels: kk.channels.length,
         channelLineOffsets: {},
         scanOrder: () => 0,
         bytesPerLine: 0,
@@ -595,174 +595,174 @@ export const modules = {
         linearSpace: !1,
         textureType: 0
       };
-      switch (SS.compression) {
-        case QS.NO_COMPRESSION:
-          bS.lines = 1, bS.uncompress = SH;
+      switch (kk.compression) {
+        case Kk.NO_COMPRESSION:
+          Tk.lines = 1, Tk.uncompress = FF;
           break;
-        case QS.RLE_COMPRESSION:
-          bS.lines = 1, bS.uncompress = HH;
+        case Kk.RLE_COMPRESSION:
+          Tk.lines = 1, Tk.uncompress = IF;
           break;
-        case QS.ZIPS_COMPRESSION:
-          bS.lines = 1, bS.uncompress = gH, await xH.k.LoadScriptAsync(NH.FFLATEUrl);
+        case Kk.ZIPS_COMPRESSION:
+          Tk.lines = 1, Tk.uncompress = XF, await lF.h.LoadScriptAsync(aF.FFLATEUrl);
           break;
-        case QS.ZIP_COMPRESSION:
-          bS.lines = 16, bS.uncompress = gH, await xH.k.LoadScriptAsync(NH.FFLATEUrl);
+        case Kk.ZIP_COMPRESSION:
+          Tk.lines = 16, Tk.uncompress = XF, await lF.h.LoadScriptAsync(aF.FFLATEUrl);
           break;
-        case QS.PIZ_COMPRESSION:
-          bS.lines = 32, bS.uncompress = bH;
+        case Kk.PIZ_COMPRESSION:
+          Tk.lines = 32, Tk.uncompress = iF;
           break;
-        case QS.PXR24_COMPRESSION:
-          bS.lines = 16, bS.uncompress = tH, await xH.k.LoadScriptAsync(NH.FFLATEUrl);
+        case Kk.PXR24_COMPRESSION:
+          Tk.lines = 16, Tk.uncompress = TF, await lF.h.LoadScriptAsync(aF.FFLATEUrl);
           break;
         default:
-          throw new Error(QS[SS.compression] + " is unsupported")
+          throw new Error(Kk[kk.compression] + " is unsupported")
       }
-      bS.scanlineBlockSize = bS.lines;
-      const XS = {};
-      for (const NS of SS.channels) switch (NS.name) {
+      Tk.scanlineBlockSize = Tk.lines;
+      const ik = {};
+      for (const lk of kk.channels) switch (lk.name) {
         case "R":
         case "G":
         case "B":
         case "A":
         case "Y":
-          XS[NS.name] = !0, bS.type = NS.pixelType
+          ik[lk.name] = !0, Tk.type = lk.pixelType
       }
-      let xS = !1;
-      if (XS.R && XS.G && XS.B && XS.A) bS.outputChannels = 4, bS.decodeChannels = {
+      let yk = !1;
+      if (ik.R && ik.G && ik.B && ik.A) Tk.outputChannels = 4, Tk.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (XS.R && XS.G && XS.B) xS = !0, bS.outputChannels = 4, bS.decodeChannels = {
+      else if (ik.R && ik.G && ik.B) yk = !0, Tk.outputChannels = 4, Tk.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (XS.R && XS.G) bS.outputChannels = 2, bS.decodeChannels = {
+      else if (ik.R && ik.G) Tk.outputChannels = 2, Tk.decodeChannels = {
         R: 0,
         G: 1
       };
-      else if (XS.R) bS.outputChannels = 1, bS.decodeChannels = {
+      else if (ik.R) Tk.outputChannels = 1, Tk.decodeChannels = {
         R: 0
       };
       else {
-        if (!XS.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
-        bS.outputChannels = 1, bS.decodeChannels = {
+        if (!ik.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
+        Tk.outputChannels = 1, Tk.decodeChannels = {
           Y: 0
         }
       }
-      if (1 === bS.type) switch (tS) {
-        case XH.Float:
-          bS.getter = ES, bS.inputSize = uS;
+      if (1 === Tk.type) switch (Xk) {
+        case yF.Float:
+          Tk.getter = Gk, Tk.inputSize = qk;
           break;
-        case XH.HalfFloat:
-          bS.getter = OS, bS.inputSize = uS
+        case yF.HalfFloat:
+          Tk.getter = vk, Tk.inputSize = qk
       } else {
-        if (2 !== bS.type) throw new Error("Unsupported pixelType " + bS.type + " for " + SS.compression);
-        switch (tS) {
-          case XH.Float:
-            bS.getter = vS, bS.inputSize = NS;
+        if (2 !== Tk.type) throw new Error("Unsupported pixelType " + Tk.type + " for " + kk.compression);
+        switch (Xk) {
+          case yF.Float:
+            Tk.getter = nk, Tk.inputSize = lk;
             break;
-          case XH.HalfFloat:
-            bS.getter = LS, bS.inputSize = NS
+          case yF.HalfFloat:
+            Tk.getter = pk, Tk.inputSize = lk
         }
       }
-      bS.blockCount = bS.height / bS.scanlineBlockSize;
-      for (let NS = 0; NS < bS.blockCount; NS++) cS(HS, gS);
-      const qS = bS.width * bS.height * bS.outputChannels;
-      switch (tS) {
-        case XH.Float:
-          bS.byteArray = new Float32Array(qS), bS.textureType = 1, xS && bS.byteArray.fill(1, 0, qS);
+      Tk.blockCount = Tk.height / Tk.scanlineBlockSize;
+      for (let lk = 0; lk < Tk.blockCount; lk++) Ok(Fk, Ik);
+      const ak = Tk.width * Tk.height * Tk.outputChannels;
+      switch (Xk) {
+        case yF.Float:
+          Tk.byteArray = new Float32Array(ak), Tk.textureType = 1, yk && Tk.byteArray.fill(1, 0, ak);
           break;
-        case XH.HalfFloat:
-          bS.byteArray = new Uint16Array(qS), bS.textureType = 2, xS && bS.byteArray.fill(15360, 0, qS);
+        case yF.HalfFloat:
+          Tk.byteArray = new Uint16Array(ak), Tk.textureType = 2, yk && Tk.byteArray.fill(15360, 0, ak);
           break;
         default:
-          throw new Error("Unsupported type: " + tS)
+          throw new Error("Unsupported type: " + Xk)
       }
-      let IS = 0;
-      for (const NS of SS.channels) void 0 !== bS.decodeChannels[NS.name] && (bS.channelLineOffsets[NS.name] = IS * bS.width), IS += 2 * NS.pixelType;
-      return bS.bytesPerLine = bS.width * IS, bS.outLineWidth = bS.width * bS.outputChannels, "INCREASING_Y" === SS.lineOrder ? bS.scanOrder = SS => SS : bS.scanOrder = SS => bS.height - 1 - SS, 4 == bS.outputChannels ? (bS.format = 5, bS.linearSpace = !0) : (bS.format = 6, bS.linearSpace = !1), bS
+      let Lk = 0;
+      for (const lk of kk.channels) void 0 !== Tk.decodeChannels[lk.name] && (Tk.channelLineOffsets[lk.name] = Lk * Tk.width), Lk += 2 * lk.pixelType;
+      return Tk.bytesPerLine = Tk.width * Lk, Tk.outLineWidth = Tk.width * Tk.outputChannels, "INCREASING_Y" === kk.lineOrder ? Tk.scanOrder = kk => kk : Tk.scanOrder = kk => Tk.height - 1 - kk, 4 == Tk.outputChannels ? (Tk.format = 5, Tk.linearSpace = !0) : (Tk.format = 6, Tk.linearSpace = !1), Tk
     }
 
-    function uH(SS, HS, gS, tS) {
-      const bS = {
+    function LF(kk, Fk, Ik, Xk) {
+      const Tk = {
         value: 0
       };
-      for (let XS = 0; XS < SS.height / SS.scanlineBlockSize; XS++) {
-        const xS = hS(gS, tS) - HS.dataWindow.yMin;
-        SS.size = ZS(gS, tS), SS.lines = xS + SS.scanlineBlockSize > SS.height ? SS.height - xS : SS.scanlineBlockSize;
-        const NS = SS.size < SS.lines * SS.bytesPerLine && SS.uncompress ? SS.uncompress(SS) : SH(SS);
-        tS.value += SS.size;
-        for (let gS = 0; gS < SS.scanlineBlockSize; gS++) {
-          const tS = XS * SS.scanlineBlockSize,
-            xS = gS + SS.scanOrder(tS);
-          if (xS >= SS.height) continue;
-          const qS = gS * SS.bytesPerLine,
-            uS = (SS.height - 1 - xS) * SS.outLineWidth;
-          for (let gS = 0; gS < SS.channels; gS++) {
-            const tS = HS.channels[gS].name,
-              XS = SS.channelLineOffsets[tS],
-              xS = SS.decodeChannels[tS];
-            if (void 0 !== xS) {
-              bS.value = qS + XS;
-              for (let HS = 0; HS < SS.width; HS++) {
-                const gS = uS + HS * SS.outputChannels + xS;
-                SS.byteArray && (SS.byteArray[gS] = SS.getter(NS, bS))
+      for (let ik = 0; ik < kk.height / kk.scanlineBlockSize; ik++) {
+        const yk = Vk(Ik, Xk) - Fk.dataWindow.yMin;
+        kk.size = zk(Ik, Xk), kk.lines = yk + kk.scanlineBlockSize > kk.height ? kk.height - yk : kk.scanlineBlockSize;
+        const lk = kk.size < kk.lines * kk.bytesPerLine && kk.uncompress ? kk.uncompress(kk) : FF(kk);
+        Xk.value += kk.size;
+        for (let Ik = 0; Ik < kk.scanlineBlockSize; Ik++) {
+          const Xk = ik * kk.scanlineBlockSize,
+            yk = Ik + kk.scanOrder(Xk);
+          if (yk >= kk.height) continue;
+          const ak = Ik * kk.bytesPerLine,
+            qk = (kk.height - 1 - yk) * kk.outLineWidth;
+          for (let Ik = 0; Ik < kk.channels; Ik++) {
+            const Xk = Fk.channels[Ik].name,
+              ik = kk.channelLineOffsets[Xk],
+              yk = kk.decodeChannels[Xk];
+            if (void 0 !== yk) {
+              Tk.value = ak + ik;
+              for (let Fk = 0; Fk < kk.width; Fk++) {
+                const Ik = qk + Fk * kk.outputChannels + yk;
+                kk.byteArray && (kk.byteArray[Ik] = kk.getter(lk, Tk))
               }
             }
           }
         }
       }
     }
-    NH.DefaultOutputType = XH.HalfFloat, NH.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
-    class IH {
+    aF.DefaultOutputType = yF.HalfFloat, aF.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
+    class tF {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(SS, HS, gS, tS, bS) {
+      loadCubeData(kk, Fk, Ik, Xk, Tk) {
         throw ".exr not supported in Cube."
       }
-      loadData(SS, HS, gS) {
-        const bS = new DataView(SS.buffer),
-          XS = {
+      loadData(kk, Fk, Ik) {
+        const Tk = new DataView(kk.buffer),
+          ik = {
             value: 0
           },
-          xS = iS(bS, XS);
-        qH(xS, bS, XS, NH.DefaultOutputType).then((SS => {
-          uH(SS, xS, bS, XS);
-          const tS = xS.dataWindow.xMax - xS.dataWindow.xMin + 1,
-            NS = xS.dataWindow.yMax - xS.dataWindow.yMin + 1;
-          gS(tS, NS, HS.generateMipMaps, !1, (() => {
-            const gS = HS.AK();
-            HS.format = xS.format, HS.type = SS.textureType, HS.invertY = !1, HS._gammaSpace = !xS.linearSpace, SS.byteArray && gS._uploadDataToTextureDirectly(HS, SS.byteArray, 0, 0, void 0, !0)
+          yk = Ck(Tk, ik);
+        qF(yk, Tk, ik, aF.DefaultOutputType).then((kk => {
+          LF(kk, yk, Tk, ik);
+          const Xk = yk.dataWindow.xMax - yk.dataWindow.xMin + 1,
+            lk = yk.dataWindow.yMax - yk.dataWindow.yMin + 1;
+          Ik(Xk, lk, Fk.generateMipMaps, !1, (() => {
+            const Ik = Fk.Oe();
+            Fk.format = yk.format, Fk.type = kk.textureType, Fk.invertY = !1, Fk._gammaSpace = !yk.linearSpace, kk.byteArray && Ik._uploadDataToTextureDirectly(Fk, kk.byteArray, 0, 0, void 0, !0)
           }))
-        })).catch((SS => {
-          tS.b.Error("Failed to load EXR texture: ", SS)
+        })).catch((kk => {
+          Xk.e.Error("Failed to load EXR texture: ", kk)
         }))
       }
     }
-    async function fH(SS) {
-      const HS = new DataView(SS),
-        gS = {
+    async function ZF(kk) {
+      const Fk = new DataView(kk),
+        Ik = {
           value: 0
         },
-        bS = iS(HS, gS);
+        Tk = Ck(Fk, Ik);
       try {
-        const SS = await qH(bS, HS, gS, XH.Float);
-        return uH(SS, bS, HS, gS), SS.byteArray ? {
-          width: bS.dataWindow.xMax - bS.dataWindow.xMin + 1,
-          height: bS.dataWindow.yMax - bS.dataWindow.yMin + 1,
-          data: new Float32Array(SS.byteArray)
-        } : (tS.b.Error("Failed to decode EXR data: No byte array available."), {
+        const kk = await qF(Tk, Fk, Ik, yF.Float);
+        return LF(kk, Tk, Fk, Ik), kk.byteArray ? {
+          width: Tk.dataWindow.xMax - Tk.dataWindow.xMin + 1,
+          height: Tk.dataWindow.yMax - Tk.dataWindow.yMin + 1,
+          data: new Float32Array(kk.byteArray)
+        } : (Xk.e.Error("Failed to decode EXR data: No byte array available."), {
           width: 0,
           height: 0,
           data: null
         })
-      } catch (XS) {
-        tS.b.Error("Failed to load EXR data: ", XS)
+      } catch (ik) {
+        Xk.e.Error("Failed to load EXR data: ", ik)
       }
       return {
         width: 0,
@@ -773,4 +773,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

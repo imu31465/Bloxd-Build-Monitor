@@ -1,203 +1,203 @@
 export const id = 128;
 export const ids = [128];
 export const modules = {
-  6768: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => NS
+  6551: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => lk
     });
-    var tS = gS(1121),
-      bS = gS.n(tS),
-      XS = gS(1281),
-      xS = gS(1181);
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(1179),
+      yk = Ik(1096);
 
-    function NS(SS) {
+    function lk(kk) {
       let {
-        item: HS,
-        className: gS
-      } = SS;
+        item: Fk,
+        className: Ik
+      } = kk;
       const {
-        t: tS
-      } = (0, XS.F)();
-      return null === HS.renderId || HS.previewsOutdated ? (0, xS.jsx)("div", {
-        className: bS()("ShaderPackPreviewsNotice", gS),
-        children: (0, xS.jsx)("span", {
-          children: tS(null === HS.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
+        t: Xk
+      } = (0, ik.y)();
+      return null === Fk.renderId || Fk.previewsOutdated ? (0, yk.jsx)("div", {
+        className: Tk()("ShaderPackPreviewsNotice", Ik),
+        children: (0, yk.jsx)("span", {
+          children: Xk(null === Fk.renderId ? "shaderPackListing:screenshotsNotGenerated" : "shaderPackListing:screenshotsNotRegenerated")
         })
       }) : null
     }
   },
-  6783: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => uS
+  6569: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => qk
     });
-    var tS = gS(1121),
-      bS = gS.n(tS),
-      XS = gS(6760),
-      xS = gS(1281),
-      NS = gS(6754),
-      qS = gS(1181);
+    var Xk = Ik(1055),
+      Tk = Ik.n(Xk),
+      ik = Ik(6544),
+      yk = Ik(1179),
+      lk = Ik(6541),
+      ak = Ik(1096);
 
-    function uS(SS) {
+    function qk(kk) {
       let {
-        selected: HS,
-        onSelect: gS,
-        imageUrl: tS
-      } = SS;
+        selected: Fk,
+        onSelect: Ik,
+        imageUrl: Xk
+      } = kk;
       const {
-        t: uS
-      } = (0, xS.F)();
-      return (0, qS.jsx)("div", {
+        t: qk
+      } = (0, yk.y)();
+      return (0, ak.jsx)("div", {
         className: "ShaderPackViewPicker",
-        children: XS.K.map((SS => {
-          const XS = tS(SS);
-          return (0, qS.jsxs)("button", {
+        children: ik.I.map((kk => {
+          const ik = Xk(kk);
+          return (0, ak.jsxs)("button", {
             type: "button",
-            "aria-pressed": SS === HS,
-            className: bS()("ShaderPackViewOption", {
-              Selected: SS === HS
+            "aria-pressed": kk === Fk,
+            className: Tk()("ShaderPackViewOption", {
+              Selected: kk === Fk
             }),
             onClick: () => {
-              gS(SS)
+              Ik(kk)
             },
-            children: [null !== XS && (0, qS.jsx)("img", {
-              src: XS,
+            children: [null !== ik && (0, ak.jsx)("img", {
+              src: ik,
               alt: "",
               loading: "lazy",
               draggable: !1
-            }), (0, qS.jsx)("span", {
+            }), (0, ak.jsx)("span", {
               className: "SmallTextBold",
-              children: uS(NS.db[SS])
+              children: qk(lk.ib[kk])
             })]
-          }, SS)
+          }, kk)
         }))
       })
     }
   },
-  6775: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => kS,
-      g: () => aS,
-      h: () => fS,
-      j: () => KS
+  6560: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Zk,
+      e: () => jk,
+      h: () => tk,
+      i: () => ek
     });
-    var tS = gS(64),
-      bS = gS(6760),
-      XS = gS(1588),
-      xS = gS(6754),
-      NS = gS(6780),
-      qS = gS(1211);
-    const uS = "shaderPackListingView",
-      IS = "shaderPackListingFilterOpen";
+    var Xk = Ik(58),
+      Tk = Ik(6544),
+      ik = Ik(1453),
+      yk = Ik(6541),
+      lk = Ik(6566),
+      ak = Ik(1118);
+    const qk = "shaderPackListingView",
+      Lk = "shaderPackListingFilterOpen";
 
-    function fS() {
-      var SS;
-      const [HS, gS] = (0, NS.b)(uS, bS.K[0]);
-      return [null !== (SS = bS.K.find((SS => SS === HS))) && void 0 !== SS ? SS : bS.K[0], gS]
+    function tk() {
+      var kk;
+      const [Fk, Ik] = (0, lk.b)(qk, Tk.I[0]);
+      return [null !== (kk = Tk.I.find((kk => kk === Fk))) && void 0 !== kk ? kk : Tk.I[0], Ik]
     }
 
-    function kS() {
-      (0, tS.useEffect)((() => () => {
-        window.location.pathname.startsWith(xS.P) || (0, xS.k)()
+    function Zk() {
+      (0, Xk.useEffect)((() => () => {
+        window.location.pathname.startsWith(yk.X) || (0, yk.n)()
       }), [])
     }
 
-    function aS() {
-      return (0, NS.b)(IS, !1)
+    function jk() {
+      return (0, lk.b)(Lk, !1)
     }
 
-    function KS() {
+    function ek() {
       const {
-        userContext: SS,
-        isUserContextUpdating: HS
-      } = (0, qS.b)(), [gS, bS] = (0, tS.useState)(null), xS = (0, tS.useRef)(new Set);
+        userContext: kk,
+        isUserContextUpdating: Fk
+      } = (0, ak.d)(), [Ik, Tk] = (0, Xk.useState)(null), yk = (0, Xk.useRef)(new Set);
 
-      function NS(SS, HS) {
-        bS((gS => {
-          const tS = new Set(gS);
-          return HS ? tS.add(SS) : tS.delete(SS), tS
+      function lk(kk, Fk) {
+        Tk((Ik => {
+          const Xk = new Set(Ik);
+          return Fk ? Xk.add(kk) : Xk.delete(kk), Xk
         }))
       }
-      return (0, tS.useEffect)((() => {
-        if (HS) return;
-        let gS = !1;
-        return XS.b.getFavouriteShaderPacks(SS).then((SS => {
-          gS || bS(new Set(SS))
-        })).catch((SS => {
-          console.error("Failed to get favourite shader packs", SS), gS || bS(new Set)
+      return (0, Xk.useEffect)((() => {
+        if (Fk) return;
+        let Ik = !1;
+        return ik.e.getFavouriteShaderPacks(kk).then((kk => {
+          Ik || Tk(new Set(kk))
+        })).catch((kk => {
+          console.error("Failed to get favourite shader packs", kk), Ik || Tk(new Set)
         })), () => {
-          gS = !0
+          Ik = !0
         }
-      }), [SS, HS]), {
-        isFavourite: SS => null === gS ? null : gS.has(SS),
-        toggle: function(HS) {
-          if (null === gS || xS.current.has(HS)) return;
-          xS.current.add(HS);
-          const tS = !gS.has(HS);
-          NS(HS, tS), (tS ? XS.b.favouriteShaderPack(SS, HS) : XS.b.unfavouriteShaderPack(SS, HS)).catch((SS => {
-            console.error("Failed to change a favourite shader pack", SS), NS(HS, !tS)
+      }), [kk, Fk]), {
+        isFavourite: kk => null === Ik ? null : Ik.has(kk),
+        toggle: function(Fk) {
+          if (null === Ik || yk.current.has(Fk)) return;
+          yk.current.add(Fk);
+          const Xk = !Ik.has(Fk);
+          lk(Fk, Xk), (Xk ? ik.e.favouriteShaderPack(kk, Fk) : ik.e.unfavouriteShaderPack(kk, Fk)).catch((kk => {
+            console.error("Failed to change a favourite shader pack", kk), lk(Fk, !Xk)
           })).finally((() => {
-            xS.current.delete(HS)
+            yk.current.delete(Fk)
           }))
         }
       }
     }
   },
-  6754: (SS, HS, gS) => {
-    gS.d(HS, {
-      A: () => dS,
-      D: () => IS,
-      H: () => vS,
-      J: () => jS,
-      K: () => WS,
-      O: () => VS,
-      P: () => xS,
-      S: () => iS,
-      W: () => qS,
-      _: () => NS,
-      ab: () => AS,
-      db: () => yS,
-      e: () => nS,
-      eb: () => PS,
-      gb: () => cS,
-      h: () => JS,
-      j: () => GS,
-      k: () => kS,
-      l: () => fS,
-      n: () => ES,
-      o: () => aS,
-      p: () => LS,
-      s: () => zS,
-      w: () => KS,
-      y: () => CS
+  6541: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      C: () => ck,
+      E: () => ek,
+      G: () => Jk,
+      J: () => Ek,
+      K: () => Lk,
+      O: () => nk,
+      R: () => wk,
+      V: () => Nk,
+      W: () => Uk,
+      X: () => yk,
+      Z: () => Ck,
+      ab: () => ak,
+      db: () => lk,
+      e: () => xk,
+      gb: () => bk,
+      i: () => Sk,
+      ib: () => Rk,
+      k: () => Hk,
+      kb: () => Pk,
+      n: () => Zk,
+      ob: () => Ok,
+      p: () => tk,
+      r: () => Gk,
+      u: () => jk,
+      y: () => pk
     });
-    var tS = gS(6760),
-      bS = gS(160),
-      XS = gS(4693);
-    const xS = "/shader-packs",
-      NS = `${xS}/publish`;
+    var Xk = Ik(6544),
+      Tk = Ik(149),
+      ik = Ik(4550);
+    const yk = "/shader-packs",
+      lk = `${yk}/publish`;
 
-    function qS(SS) {
-      return `${xS}/${encodeURIComponent(SS)}`
+    function ak(kk) {
+      return `${yk}/${encodeURIComponent(kk)}`
     }
-    let uS = null;
+    let qk = null;
 
-    function IS(SS) {
-      uS = SS
-    }
-
-    function fS() {
-      return uS
+    function Lk(kk) {
+      qk = kk
     }
 
-    function kS() {
-      uS = null
+    function tk() {
+      return qk
     }
 
-    function aS(SS) {
-      return SS.playerHasRank("developer") || SS.playerHasRank("admin")
+    function Zk() {
+      qk = null
     }
-    const KS = ["terrain", "water", "models", "sunShadows", "strict"],
-      jS = {
+
+    function jk(kk) {
+      return kk.playerHasRank("developer") || kk.playerHasRank("admin")
+    }
+    const ek = ["terrain", "water", "models", "sunShadows", "strict"],
+      wk = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -205,89 +205,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function GS(SS, HS) {
-      return SS.withFeatures.includes(HS) ? "with" : SS.withoutFeatures.includes(HS) ? "without" : null
+    function Hk(kk, Fk) {
+      return kk.withFeatures.includes(Fk) ? "with" : kk.withoutFeatures.includes(Fk) ? "without" : null
     }
 
-    function CS(SS) {
-      return null === SS ? "with" : "with" === SS ? "without" : null
+    function Jk(kk) {
+      return null === kk ? "with" : "with" === kk ? "without" : null
     }
 
-    function nS(SS) {
-      return "with" === SS ? "only" : null === SS ? "include" : void 0
+    function xk(kk) {
+      return "with" === kk ? "only" : null === kk ? "include" : void 0
     }
 
-    function PS(SS, HS) {
-      const gS = GS(SS, HS),
-        tS = SS => SS.filter((SS => SS !== HS));
+    function Pk(kk, Fk) {
+      const Ik = Hk(kk, Fk),
+        Xk = kk => kk.filter((kk => kk !== Fk));
       return {
-        withFeatures: null === gS ? [...SS.withFeatures, HS] : tS(SS.withFeatures),
-        withoutFeatures: "with" === gS ? [...SS.withoutFeatures, HS] : tS(SS.withoutFeatures)
+        withFeatures: null === Ik ? [...kk.withFeatures, Fk] : Xk(kk.withFeatures),
+        withoutFeatures: "with" === Ik ? [...kk.withoutFeatures, Fk] : Xk(kk.withoutFeatures)
       }
     }
-    const QS = "section",
-      DS = "sort",
-      wS = "filters",
-      hS = "q",
-      ZS = "banned",
-      JS = "popular",
-      OS = "strict";
+    const Kk = "section",
+      Qk = "sort",
+      sk = "filters",
+      Vk = "q",
+      zk = "banned",
+      Sk = "popular",
+      vk = "strict";
 
-    function dS(SS) {
-      var HS, gS, bS;
-      const xS = SS.get(QS),
-        NS = (null !== (HS = SS.get(wS)) && void 0 !== HS ? HS : OS).split(","),
-        qS = SS.get(ZS);
+    function Ek(kk) {
+      var Fk, Ik, Tk;
+      const yk = kk.get(Kk),
+        lk = (null !== (Fk = kk.get(sk)) && void 0 !== Fk ? Fk : vk).split(","),
+        ak = kk.get(zk);
       return {
-        section: "favourites" === xS || "mine" === xS ? xS : "explore",
-        sort: null !== (gS = tS.C.find((HS => HS === SS.get(DS)))) && void 0 !== gS ? gS : JS,
-        withFeatures: KS.filter((SS => NS.includes(SS) && !NS.includes(`-${SS}`))),
-        withoutFeatures: KS.filter((SS => NS.includes(`-${SS}`))),
-        searchQuery: (null === (bS = SS.get(hS)) || void 0 === bS ? void 0 : bS.slice(0, tS.Q)) || null,
-        pageNumber: (0, XS.e)(SS.get(XS.c)),
-        banned: "only" === qS ? "with" : "include" === qS ? null : "without"
+        section: "favourites" === yk || "mine" === yk ? yk : "explore",
+        sort: null !== (Ik = Xk.z.find((Fk => Fk === kk.get(Qk)))) && void 0 !== Ik ? Ik : Sk,
+        withFeatures: ek.filter((kk => lk.includes(kk) && !lk.includes(`-${kk}`))),
+        withoutFeatures: ek.filter((kk => lk.includes(`-${kk}`))),
+        searchQuery: (null === (Tk = kk.get(Vk)) || void 0 === Tk ? void 0 : Tk.slice(0, Xk.N)) || null,
+        pageNumber: (0, ik.f)(kk.get(ik.b)),
+        banned: "only" === ak ? "with" : "include" === ak ? null : "without"
       }
     }
 
-    function cS(SS, HS) {
-      var gS;
-      const tS = YS(HS);
-      (0, XS.f)(SS, QS, "explore" === HS.section ? null : HS.section), (0, XS.f)(SS, DS, HS.sort === JS ? null : HS.sort), (0, XS.f)(SS, wS, tS === OS ? null : tS), (0, XS.f)(SS, hS, HS.searchQuery), (0, XS.f)(SS, ZS, null !== (gS = nS(HS.banned)) && void 0 !== gS ? gS : null), (0, XS.i)(SS, HS.pageNumber)
+    function Ok(kk, Fk) {
+      var Ik;
+      const Xk = uk(Fk);
+      (0, ik.g)(kk, Kk, "explore" === Fk.section ? null : Fk.section), (0, ik.g)(kk, Qk, Fk.sort === Sk ? null : Fk.sort), (0, ik.g)(kk, sk, Xk === vk ? null : Xk), (0, ik.g)(kk, Vk, Fk.searchQuery), (0, ik.g)(kk, zk, null !== (Ik = xk(Fk.banned)) && void 0 !== Ik ? Ik : null), (0, ik.i)(kk, Fk.pageNumber)
     }
 
-    function vS(SS) {
-      const HS = new URLSearchParams;
-      return cS(HS, {
+    function nk(kk) {
+      const Fk = new URLSearchParams;
+      return Ok(Fk, {
         section: "explore",
-        sort: JS,
-        withFeatures: "strict" === SS ? [SS] : [SS, "strict"],
+        sort: Sk,
+        withFeatures: "strict" === kk ? [kk] : [kk, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${xS}?${HS.toString()}`
+      }), `${yk}?${Fk.toString()}`
     }
 
-    function ES(SS) {
-      return YS(SS) === OS
+    function Gk(kk) {
+      return uk(kk) === vk
     }
 
-    function LS(SS) {
-      return null !== SS.searchQuery || "with" === SS.banned || YS(SS) !== OS
+    function pk(kk) {
+      return null !== kk.searchQuery || "with" === kk.banned || uk(kk) !== vk
     }
 
-    function YS(SS) {
-      return KS.flatMap((HS => {
-        const gS = GS(SS, HS);
-        return "with" === gS ? [HS] : "without" === gS ? [`-${HS}`] : []
+    function uk(kk) {
+      return ek.flatMap((Fk => {
+        const Ik = Hk(kk, Fk);
+        return "with" === Ik ? [Fk] : "without" === Ik ? [`-${Fk}`] : []
       })).join(",")
     }
-    const AS = {
+    const bk = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      yS = {
+      Rk = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -295,94 +295,94 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function VS(SS) {
-      return Math.round(100 * Math.max(0, 1 - 1 / SS))
+    function Uk(kk) {
+      return Math.round(100 * Math.max(0, 1 - 1 / kk))
     }
 
-    function iS(SS, HS, gS, bS) {
-      const XS = [];
-      SS.isBanned && XS.push({
+    function Ck(kk, Fk, Ik, Tk) {
+      const ik = [];
+      kk.isBanned && ik.push({
         tone: "warning",
-        text: bS("shaderPackListing:ownerBanned"),
+        text: Tk("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: xS
-      } = SS;
-      if (null === SS.brokenError || xS && !xS.error || XS.push({
+        pending: yk
+      } = kk;
+      if (null === kk.brokenError || yk && !yk.error || ik.push({
           tone: "warning",
-          text: bS("shaderPackListing:ownerBroken"),
-          detail: SS.brokenError
-        }), null !== xS && void 0 !== xS && xS.error) XS.push({
+          text: Tk("shaderPackListing:ownerBroken"),
+          detail: kk.brokenError
+        }), null !== yk && void 0 !== yk && yk.error) ik.push({
         tone: "warning",
-        text: bS(HS ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, tS.q)(xS.error) ? null : xS.error
+        text: Tk(Fk ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, Xk.l)(yk.error) ? null : yk.error
       });
-      else if (xS) {
-        const SS = null === xS.renderNotBefore ? 0 : xS.renderNotBefore - gS,
-          tS = String(Math.ceil(SS / 6e4)),
-          NS = bS(HS ? SS > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : SS > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: tS
+      else if (yk) {
+        const kk = null === yk.renderNotBefore ? 0 : yk.renderNotBefore - Ik,
+          Xk = String(Math.ceil(kk / 6e4)),
+          lk = Tk(Fk ? kk > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : kk > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: Xk
           });
-        XS.push({
+        ik.push({
           tone: "info",
-          text: NS,
+          text: lk,
           detail: null
         })
       }
-      return SS.listed || XS.push({
+      return kk.listed || ik.push({
         tone: "info",
-        text: bS("shaderPackListing:ownerUnlisted"),
+        text: Tk("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), XS
+      }), ik
     }
 
-    function WS(SS) {
-      return Math.max(1, Math.round(SS / 1024))
+    function Nk(kk) {
+      return Math.max(1, Math.round(kk / 1024))
     }
 
-    function zS(SS, HS, gS) {
-      return SS instanceof bS.b && SS.errorMessageForUser ? SS.errorMessageForUser : HS(gS)
+    function ck(kk, Fk, Ik) {
+      return kk instanceof Tk.b && kk.errorMessageForUser ? kk.errorMessageForUser : Fk(Ik)
     }
   },
-  6780: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => XS
+  6566: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => ik
     });
-    var tS = gS(64),
-      bS = gS(45);
+    var Xk = Ik(58),
+      Tk = Ik(41);
 
-    function XS(SS, HS) {
-      var gS;
-      const [XS, xS] = (0, tS.useState)(null !== (gS = bS.g.getItem(SS)) && void 0 !== gS ? gS : HS);
-      return [XS, HS => {
-        bS.g.setItem(SS, HS), xS(HS)
+    function ik(kk, Fk) {
+      var Ik;
+      const [ik, yk] = (0, Xk.useState)(null !== (Ik = Tk.j.getItem(kk)) && void 0 !== Ik ? Ik : Fk);
+      return [ik, Fk => {
+        Tk.j.setItem(kk, Fk), yk(Fk)
       }]
     }
   },
-  6760: (SS, HS, gS) => {
-    gS.d(HS, {
-      C: () => XS,
-      E: () => NS,
-      I: () => xS,
-      K: () => tS,
-      M: () => kS,
-      Q: () => IS,
-      R: () => QS,
-      T: () => fS,
-      V: () => uS,
-      e: () => KS,
-      h: () => GS,
-      i: () => jS,
-      m: () => aS,
-      q: () => PS,
-      u: () => wS,
-      v: () => qS,
-      w: () => bS,
-      z: () => DS
+  6544: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      C: () => lk,
+      E: () => yk,
+      I: () => Xk,
+      K: () => Zk,
+      N: () => Lk,
+      P: () => Kk,
+      Q: () => tk,
+      U: () => qk,
+      d: () => ek,
+      e: () => Hk,
+      g: () => wk,
+      j: () => jk,
+      l: () => Pk,
+      p: () => sk,
+      q: () => ak,
+      u: () => Tk,
+      y: () => Qk,
+      z: () => ik
     });
-    const tS = ["forest", "desert", "water", "night", "cave"];
-    const bS = {
+    const Xk = ["forest", "desert", "water", "night", "cave"];
+    const Tk = {
         full: {
           width: 3840,
           height: 2160
@@ -396,49 +396,49 @@ export const modules = {
           height: 360
         }
       },
-      XS = ["popular", "updated", "newest"],
-      xS = 3,
-      NS = 32,
-      qS = 300;
+      ik = ["popular", "updated", "newest"],
+      yk = 3,
+      lk = 32,
+      ak = 300;
 
-    function uS(SS, HS) {
-      return SS.slice(0, HS).replace(/[\uD800-\uDBFF]$/, "")
+    function qk(kk, Fk) {
+      return kk.slice(0, Fk).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const IS = 64,
-      fS = 512,
-      kS = 18e5;
+    const Lk = 64,
+      tk = 512,
+      Zk = 18e5;
 
-    function aS(SS) {
-      const HS = SS,
-        gS = null === HS || void 0 === HS ? void 0 : HS.files;
-      return "number" === typeof(null === HS || void 0 === HS ? void 0 : HS.apiVersion) && "string" === typeof HS.name && (null === HS.author || "string" === typeof HS.author) && (void 0 === HS.keepCircleShadows || "boolean" === typeof HS.keepCircleShadows) && "object" === typeof gS && null !== gS && Object.values(gS).every((SS => "string" === typeof SS))
+    function jk(kk) {
+      const Fk = kk,
+        Ik = null === Fk || void 0 === Fk ? void 0 : Fk.files;
+      return "number" === typeof(null === Fk || void 0 === Fk ? void 0 : Fk.apiVersion) && "string" === typeof Fk.name && (null === Fk.author || "string" === typeof Fk.author) && (void 0 === Fk.keepCircleShadows || "boolean" === typeof Fk.keepCircleShadows) && "object" === typeof Ik && null !== Ik && Object.values(Ik).every((kk => "string" === typeof kk))
     }
-    const KS = "Bloxdhub",
-      jS = "https://bloxdhub.com/shaders";
+    const ek = "Bloxdhub",
+      wk = "https://bloxdhub.com/shaders";
 
-    function GS(SS) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(SS)}`
+    function Hk(kk) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(kk)}`
     }
-    const CS = "Screenshot generation failed.",
-      nS = "Its screenshots couldn't be generated:";
+    const Jk = "Screenshot generation failed.",
+      xk = "Its screenshots couldn't be generated:";
 
-    function PS(SS) {
-      var HS;
-      return SS === CS || null !== (HS = null === SS || void 0 === SS ? void 0 : SS.startsWith(nS)) && void 0 !== HS && HS
-    }
-
-    function QS(SS, HS) {
-      return `shaderPacks/${SS}/${HS}.json`
+    function Pk(kk) {
+      var Fk;
+      return kk === Jk || null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.startsWith(xk)) && void 0 !== Fk && Fk
     }
 
-    function DS(SS, HS, gS, tS) {
-      return null === HS.renderId ? wS(SS, HS.baselineVersion, gS, tS) : `${SS}/${function(SS,HS,gS,tS){return`shaderPacks/${SS}/${HS}/${gS}-${tS}.webp`}(HS.packId,HS.renderId,gS,tS)}`
+    function Kk(kk, Fk) {
+      return `shaderPacks/${kk}/${Fk}.json`
     }
 
-    function wS(SS, HS, gS, tS) {
-      return `${SS}/${function(SS,HS,gS){return`shaderPacks/baseline/${SS}/${HS}-${gS}.webp`}(HS,gS,tS)}`
+    function Qk(kk, Fk, Ik, Xk) {
+      return null === Fk.renderId ? sk(kk, Fk.baselineVersion, Ik, Xk) : `${kk}/${function(kk,Fk,Ik,Xk){return`shaderPacks/${kk}/${Fk}/${Ik}-${Xk}.webp`}(Fk.packId,Fk.renderId,Ik,Xk)}`
+    }
+
+    function sk(kk, Fk, Ik, Xk) {
+      return `${kk}/${function(kk,Fk,Ik){return`shaderPacks/baseline/${kk}/${Fk}-${Ik}.webp`}(Fk,Ik,Xk)}`
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

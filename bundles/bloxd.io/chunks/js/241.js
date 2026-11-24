@@ -1,78 +1,78 @@
 export const id = 241;
 export const ids = [241];
 export const modules = {
-  38084: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => uS,
-      c: () => tS,
-      g: () => NS,
-      h: () => bS,
-      j: () => xS,
-      l: () => XS
+  38073: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => qk,
+      c: () => Xk,
+      g: () => lk,
+      k: () => Tk,
+      o: () => yk,
+      s: () => ik
     });
-    const tS = 1.001,
-      bS = .501,
-      XS = .025,
-      xS = .75,
-      NS = .08,
-      qS = 4;
+    const Xk = 1.001,
+      Tk = .501,
+      ik = .025,
+      yk = .75,
+      lk = .08,
+      ak = 4;
 
-    function uS() {
-      const SS = bS,
-        HS = XS,
-        gS = SS - HS / 2,
-        tS = (2 * SS - 2 * HS) / (2 * qS - 1),
-        xS = [];
-      for (const bS of [-gS, gS])
-        for (const XS of [-gS, gS])
-          for (let gS = 0; gS < qS; gS++) {
-            const NS = -SS + HS + tS * (2 * gS + .5);
-            xS.push([tS, HS, HS, NS, bS, XS]), xS.push([HS, tS, HS, bS, NS, XS]), xS.push([HS, HS, tS, bS, XS, NS])
+    function qk() {
+      const kk = Tk,
+        Fk = ik,
+        Ik = kk - Fk / 2,
+        Xk = (2 * kk - 2 * Fk) / (2 * ak - 1),
+        yk = [];
+      for (const Tk of [-Ik, Ik])
+        for (const ik of [-Ik, Ik])
+          for (let Ik = 0; Ik < ak; Ik++) {
+            const lk = -kk + Fk + Xk * (2 * Ik + .5);
+            yk.push([Xk, Fk, Fk, lk, Tk, ik]), yk.push([Fk, Xk, Fk, Tk, lk, ik]), yk.push([Fk, Fk, Xk, Tk, ik, lk])
           }
-      for (const bS of [-gS, gS])
-        for (const SS of [-gS, gS])
-          for (const tS of [-gS, gS]) xS.push([HS, HS, HS, bS, SS, tS]);
-      return xS
+      for (const Tk of [-Ik, Ik])
+        for (const kk of [-Ik, Ik])
+          for (const Xk of [-Ik, Ik]) yk.push([Fk, Fk, Fk, Tk, kk, Xk]);
+      return yk
     }
   },
-  38462: (SS, HS, gS) => {
-    gS.d(HS, {
-      A: () => aS,
-      C: () => wS,
-      D: () => ZS,
-      H: () => DS,
-      L: () => QS,
-      M: () => kS,
-      Q: () => jS,
-      T: () => CS,
-      U: () => bS,
-      e: () => IS,
-      i: () => qS,
-      l: () => PS,
-      m: () => uS,
-      n: () => NS,
-      q: () => xS,
-      u: () => XS,
-      x: () => hS
+  38414: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      D: () => sk,
+      G: () => zk,
+      K: () => Qk,
+      O: () => Kk,
+      Q: () => Zk,
+      T: () => wk,
+      V: () => Jk,
+      Y: () => Tk,
+      c: () => Lk,
+      e: () => ak,
+      h: () => Pk,
+      j: () => qk,
+      n: () => lk,
+      p: () => yk,
+      t: () => ik,
+      x: () => Vk,
+      z: () => jk
     });
-    var tS = gS(9453);
+    var Xk = Ik(9267);
 
-    function bS(SS) {
-      return Math.floor(SS).toLocaleString("en-US")
+    function Tk(kk) {
+      return Math.floor(kk).toLocaleString("en-US")
     }
-    const XS = 2e3,
-      xS = .005,
-      NS = .001,
-      qS = 2,
-      uS = "Fluid Tank",
-      IS = "Coolant Mixer",
-      fS = 144;
+    const ik = 2e3,
+      yk = .005,
+      lk = .001,
+      ak = 2,
+      qk = "Fluid Tank",
+      Lk = "Coolant Mixer",
+      tk = 144;
 
-    function kS(SS) {
-      const HS = SS.split("|")[0];
-      return (0, tS.m)(HS) ? HS === tS.e ? "cryo" : "water" : null
+    function Zk(kk) {
+      const Fk = kk.split("|")[0];
+      return (0, Xk.i)(Fk) ? Fk === Xk.d ? "cryo" : "water" : null
     }
-    const aS = [
+    const jk = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 1, 0],
@@ -80,43 +80,43 @@ export const modules = {
         [0, 0, 1],
         [0, 0, -1]
       ],
-      KS = 63;
+      ek = 63;
 
-    function jS(SS) {
-      let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const gS = HS ? function(SS, HS, gS) {
-        const tS = aS.findIndex((tS => {
-          let [bS, XS, xS] = tS;
-          return bS === SS && XS === HS && xS === gS
+    function wk(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const Ik = Fk ? function(kk, Fk, Ik) {
+        const Xk = jk.findIndex((Xk => {
+          let [Tk, ik, yk] = Xk;
+          return Tk === kk && ik === Fk && yk === Ik
         }));
-        return tS < 0 ? 0 : 1 << tS
-      }(HS[0], HS[1], HS[2]) : 0;
-      return "maker" === SS ? {
-        kind: SS,
-        faces: gS
-      } : "user" === SS ? {
-        kind: SS,
-        faces: KS & ~gS
+        return Xk < 0 ? 0 : 1 << Xk
+      }(Fk[0], Fk[1], Fk[2]) : 0;
+      return "maker" === kk ? {
+        kind: kk,
+        faces: Ik
+      } : "user" === kk ? {
+        kind: kk,
+        faces: ek & ~Ik
       } : {
-        kind: SS,
-        faces: KS
+        kind: kk,
+        faces: ek
       }
     }
 
-    function GS(SS) {
-      return "pipe" === SS || "tank" === SS || "maker" === SS
+    function Hk(kk) {
+      return "pipe" === kk || "tank" === kk || "maker" === kk
     }
 
-    function CS(SS, HS, gS) {
-      return 0 !== (SS.faces & 1 << gS) && 0 !== (HS.faces & 1 << (1 ^ gS)) && (GS(SS.kind) || GS(HS.kind))
+    function Jk(kk, Fk, Ik) {
+      return 0 !== (kk.faces & 1 << Ik) && 0 !== (Fk.faces & 1 << (1 ^ Ik)) && (Hk(kk.kind) || Hk(Fk.kind))
     }
-    const nS = (SS, HS, gS, tS) => ({
-        input: SS,
-        inputAmount: tS,
-        output: HS,
-        outputAmount: gS
+    const xk = (kk, Fk, Ik, Xk) => ({
+        input: kk,
+        inputAmount: Xk,
+        output: Fk,
+        outputAmount: Ik
       }),
-      PS = {
+      Pk = {
         Condenser: {
           kind: "Condenser",
           opMs: 2e3,
@@ -135,7 +135,7 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [1, 2, 3],
-          recipes: [nS("Uranium Grit", "Uranium Pellet", 1, 12), nS("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          recipes: [xk("Uranium Grit", "Uranium Pellet", 1, 12), xk("Spent Pellet", "Plutonium Pellet", 1, 4)],
           powerPerOp: 600,
           waterPerOp: 24
         },
@@ -156,36 +156,36 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [],
-          recipes: [nS("Biomass", "", 0, 1)],
+          recipes: [xk("Biomass", "", 0, 1)],
           powerPerOp: 720,
           waterPerOp: 144,
-          cryoMade: fS,
+          cryoMade: tk,
           couplable: !0,
           couplerSlot: 1
         }
       };
 
-    function QS(SS, HS) {
-      return 1e3 * (null !== HS && void 0 !== HS ? HS : 0) / SS.opMs
+    function Kk(kk, Fk) {
+      return 1e3 * (null !== Fk && void 0 !== Fk ? Fk : 0) / kk.opMs
     }
 
-    function DS(SS) {
-      let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const gS = QS(PS["Coolant Mixer"], fS) * HS;
-      return SS <= 0 ? 0 : Math.ceil(SS / gS - 1e-9)
+    function Qk(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const Ik = Kk(Pk["Coolant Mixer"], tk) * Fk;
+      return kk <= 0 ? 0 : Math.ceil(kk / Ik - 1e-9)
     }
-    const wS = "baf2Water",
-      hS = "baf2waterclose",
-      ZS = "baf2wateropen"
+    const sk = "baf2Water",
+      Vk = "baf2waterclose",
+      zk = "baf2wateropen"
   },
-  38455: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => YS,
-      d: () => AS
+  38399: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => uk,
+      g: () => bk
     });
-    var tS = gS(9361),
-      bS = gS(9395);
-    const XS = [
+    var Xk = Ik(9183),
+      Tk = Ik(9223);
+    const ik = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
@@ -193,45 +193,45 @@ export const modules = {
       [0, 1, 0],
       [0, -1, 0]
     ];
-    var xS = gS(9416),
-      NS = gS(38251),
-      qS = gS(9411);
-    const uS = {
+    var yk = Ik(9241),
+      lk = Ik(38209),
+      ak = Ik(9237);
+    const qk = {
       1: [0, -1],
       2: [-1, 0],
       3: [0, 1],
       4: [1, 0]
     };
 
-    function IS(SS) {
-      let [HS, gS] = SS;
-      return [-gS, HS]
+    function Lk(kk) {
+      let [Fk, Ik] = kk;
+      return [-Ik, Fk]
     }
 
-    function fS(SS, HS) {
-      return SS[0] === HS[0] && SS[1] === HS[1]
+    function tk(kk, Fk) {
+      return kk[0] === Fk[0] && kk[1] === Fk[1]
     }
 
-    function kS(SS, HS) {
-      return SS[0] * HS[0] + SS[1] * HS[1] === 0
+    function Zk(kk, Fk) {
+      return kk[0] * Fk[0] + kk[1] * Fk[1] === 0
     }
-    const aS = [
+    const jk = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
-    var KS = gS(9447);
+    var ek = Ik(9264);
 
-    function jS(SS, HS, gS, tS, bS) {
-      return HS < KS.p || HS >= KS.p + KS.r || Math.floor(SS / KS.w) === Math.floor(tS / KS.w) && Math.floor(gS / KS.w) === Math.floor(bS / KS.w)
+    function wk(kk, Fk, Ik, Xk, Tk) {
+      return Fk < ek.n || Fk >= ek.n + ek.r || Math.floor(kk / ek.w) === Math.floor(Xk / ek.w) && Math.floor(Ik / ek.w) === Math.floor(Tk / ek.w)
     }
-    const GS = "Splitter",
-      CS = "Sorting Gate",
-      nS = new Set(KS.F),
-      PS = new Set([...KS.F, "Belt Loader", "Fast Loader", CS]),
-      QS = new Set(KS.u),
-      DS = [
+    const Hk = "Splitter",
+      Jk = "Sorting Gate",
+      xk = new Set(ek.I),
+      Pk = new Set([...ek.I, "Belt Loader", "Fast Loader", Jk]),
+      Kk = new Set(ek.t),
+      Qk = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 0, 1],
@@ -240,259 +240,259 @@ export const modules = {
         [0, -1, 0]
       ];
 
-    function wS(SS) {
-      var HS, gS;
-      return null !== (HS = null === (gS = tS.j[SS]) || void 0 === gS ? void 0 : gS.meta.rootName) && void 0 !== HS ? HS : ""
+    function sk(kk) {
+      var Fk, Ik;
+      return null !== (Fk = null === (Ik = Xk.g[kk]) || void 0 === Ik ? void 0 : Ik.meta.rootName) && void 0 !== Fk ? Fk : ""
     }
 
-    function hS(SS) {
-      return wS(SS) === KS.j && (0, KS.M)(tS.j[SS].name)
+    function Vk(kk) {
+      return sk(kk) === ek.e && (0, ek.O)(Xk.g[kk].name)
     }
-    var ZS = gS(9403),
-      JS = gS(9425);
-    const OS = [
+    var zk = Ik(9230),
+      Sk = Ik(9250);
+    const vk = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
 
-    function dS(SS) {
-      var HS, gS;
-      const bS = null === (HS = tS.j[SS]) || void 0 === HS ? void 0 : HS.meta;
-      return (null === bS || void 0 === bS ? void 0 : bS.rootName) !== JS.l ? null : {
-        rot: null !== (gS = bS.rot) && void 0 !== gS ? gS : 1,
-        half: (0, JS.f)(bS.rootName, bS.metaStr)
+    function Ek(kk) {
+      var Fk, Ik;
+      const Tk = null === (Fk = Xk.g[kk]) || void 0 === Fk ? void 0 : Fk.meta;
+      return (null === Tk || void 0 === Tk ? void 0 : Tk.rootName) !== Sk.l ? null : {
+        rot: null !== (Ik = Tk.rot) && void 0 !== Ik ? Ik : 1,
+        half: (0, Sk.e)(Tk.rootName, Tk.metaStr)
       }
     }
 
-    function cS(SS, HS, gS, tS) {
-      return dS(SS(HS, gS, tS))
+    function Ok(kk, Fk, Ik, Xk) {
+      return Ek(kk(Fk, Ik, Xk))
     }
 
-    function vS(SS, HS, gS, tS, bS) {
+    function nk(kk, Fk, Ik, Xk, Tk) {
       let {
-        rot: XS,
-        half: xS
-      } = bS;
-      const [NS, qS] = (0, JS.k)(XS, xS), uS = cS(SS, HS + NS, gS, tS + qS);
-      return null !== uS && uS.rot === XS && uS.half === JS.n[xS]
+        rot: ik,
+        half: yk
+      } = Tk;
+      const [lk, ak] = (0, Sk.j)(ik, yk), qk = Ok(kk, Fk + lk, Ik, Xk + ak);
+      return null !== qk && qk.rot === ik && qk.half === Sk.p[yk]
     }
-    var ES = gS(38460);
-    const LS = [new class {
+    var Gk = Ik(38405);
+    const pk = [new class {
       constructor() {
-        this.reshapeOffsets = aS
+        this.reshapeOffsets = jk
       }
-      handles(SS) {
-        var HS;
-        return "Stairs" === (null === (HS = tS.j[SS]) || void 0 === HS ? void 0 : HS.model)
+      handles(kk) {
+        var Fk;
+        return "Stairs" === (null === (Fk = Xk.g[kk]) || void 0 === Fk ? void 0 : Fk.model)
       }
-      affects(SS) {
-        return this.handles(SS)
+      affects(kk) {
+        return this.handles(kk)
       }
-      shape(SS, HS, gS, bS, XS) {
-        const xS = this.stairsOf(XS),
-          NS = this.cornerAt(SS, HS, gS, bS, xS),
-          uS = xS.half === qS.b.top ? "top" : "bot";
-        return (0, tS.n)(`${tS.j[XS].meta.rootName}|meta|rot${xS.rot}|${uS}${null===NS?"":`|${NS}`}`)
+      shape(kk, Fk, Ik, Tk, ik) {
+        const yk = this.stairsOf(ik),
+          lk = this.cornerAt(kk, Fk, Ik, Tk, yk),
+          qk = yk.half === ak.d.top ? "top" : "bot";
+        return (0, Xk.j)(`${Xk.g[ik].meta.rootName}|meta|rot${yk.rot}|${qk}${null===lk?"":`|${lk}`}`)
       }
-      stairsOf(SS) {
+      stairsOf(kk) {
         const {
-          rot: HS,
-          halfblockPlacement: gS
-        } = tS.j[SS].meta;
+          rot: Fk,
+          halfblockPlacement: Ik
+        } = Xk.g[kk].meta;
         return {
-          rot: HS,
-          half: gS
+          rot: Fk,
+          half: Ik
         }
       }
-      stairsAt(SS, HS, gS, tS) {
-        const bS = SS(HS, gS, tS);
-        return this.handles(bS) ? this.stairsOf(bS) : null
+      stairsAt(kk, Fk, Ik, Xk) {
+        const Tk = kk(Fk, Ik, Xk);
+        return this.handles(Tk) ? this.stairsOf(Tk) : null
       }
-      cornerAt(SS, HS, gS, tS, bS) {
+      cornerAt(kk, Fk, Ik, Xk, Tk) {
         let {
-          rot: XS,
-          half: xS
-        } = bS;
-        const NS = uS[XS],
-          qS = bS => {
-            let [NS, qS] = bS;
-            const uS = this.stairsAt(SS, HS + NS, gS, tS + qS);
-            return null !== uS && uS.rot === XS && uS.half === xS
+          rot: ik,
+          half: yk
+        } = Tk;
+        const lk = qk[ik],
+          ak = Tk => {
+            let [lk, ak] = Tk;
+            const qk = this.stairsAt(kk, Fk + lk, Ik, Xk + ak);
+            return null !== qk && qk.rot === ik && qk.half === yk
           },
-          aS = this.stairsAt(SS, HS + NS[0], gS, tS + NS[1]);
-        if (null !== aS && aS.half === xS) {
-          const SS = uS[aS.rot];
-          if (kS(NS, SS) && !qS([-SS[0], -SS[1]])) return fS(SS, IS(NS)) ? "outerLeft" : "outerRight"
+          jk = this.stairsAt(kk, Fk + lk[0], Ik, Xk + lk[1]);
+        if (null !== jk && jk.half === yk) {
+          const kk = qk[jk.rot];
+          if (Zk(lk, kk) && !ak([-kk[0], -kk[1]])) return tk(kk, Lk(lk)) ? "outerLeft" : "outerRight"
         }
-        const KS = this.stairsAt(SS, HS - NS[0], gS, tS - NS[1]);
-        if (null !== KS && KS.half === xS) {
-          const SS = uS[KS.rot];
-          if (kS(NS, SS) && !qS(SS)) return fS(SS, IS(NS)) ? "innerLeft" : "innerRight"
+        const ek = this.stairsAt(kk, Fk - lk[0], Ik, Xk - lk[1]);
+        if (null !== ek && ek.half === yk) {
+          const kk = qk[ek.rot];
+          if (Zk(lk, kk) && !ak(kk)) return tk(kk, Lk(lk)) ? "innerLeft" : "innerRight"
         }
         return null
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = XS, this.rootIds = new Set(bS.l.map((SS => (0, tS.n)(SS))))
+        this.reshapeOffsets = ik, this.rootIds = new Set(Tk.h.map((kk => (0, Xk.j)(kk))))
       }
-      handles(SS) {
-        var HS;
-        const gS = null === (HS = tS.j[SS]) || void 0 === HS ? void 0 : HS.meta;
-        return void 0 !== gS && this.rootIds.has(gS.rootId)
+      handles(kk) {
+        var Fk;
+        const Ik = null === (Fk = Xk.g[kk]) || void 0 === Fk ? void 0 : Fk.meta;
+        return void 0 !== Ik && this.rootIds.has(Ik.rootId)
       }
-      affects(SS) {
-        return this.handles(SS)
+      affects(kk) {
+        return this.handles(kk)
       }
-      placedBy(SS) {
-        return tS.j[SS].meta.rootName === bS.t ? null : bS.t
+      placedBy(kk) {
+        return Xk.g[kk].meta.rootName === Tk.q ? null : Tk.q
       }
-      shape(SS, HS, gS, XS, xS) {
+      shape(kk, Fk, Ik, ik, yk) {
         const {
-          rootId: NS,
-          rootName: qS,
-          rot: uS
-        } = tS.j[xS].meta;
-        let IS = 0;
-        return bS.B[uS].forEach(((bS, xS) => {
-          var qS;
-          let [fS, kS, aS] = bS;
-          const KS = null === (qS = tS.j[SS(HS + fS, gS + kS, XS + aS)]) || void 0 === qS ? void 0 : qS.meta;
-          (null === KS || void 0 === KS ? void 0 : KS.rootId) === NS && KS.rot === uS && (IS |= 1 << xS)
-        })), (0, tS.n)((0, bS.h)(qS, uS, IS))
+          rootId: lk,
+          rootName: ak,
+          rot: qk
+        } = Xk.g[yk].meta;
+        let Lk = 0;
+        return Tk.z[qk].forEach(((Tk, yk) => {
+          var ak;
+          let [tk, Zk, jk] = Tk;
+          const ek = null === (ak = Xk.g[kk(Fk + tk, Ik + Zk, ik + jk)]) || void 0 === ak ? void 0 : ak.meta;
+          (null === ek || void 0 === ek ? void 0 : ek.rootId) === lk && ek.rot === qk && (Lk |= 1 << yk)
+        })), (0, Xk.j)((0, Tk.d)(ak, qk, Lk))
       }
-    }, ...xS.c.map((SS => new NS.b(SS))), new class {
+    }, ...yk.c.map((kk => new lk.e(kk))), new class {
       constructor() {
-        this.reshapeOffsets = DS
+        this.reshapeOffsets = Qk
       }
-      handles(SS) {
-        const HS = wS(SS);
-        return nS.has(HS) || HS === KS.j
+      handles(kk) {
+        const Fk = sk(kk);
+        return xk.has(Fk) || Fk === ek.e
       }
-      affects(SS) {
-        const HS = wS(SS);
-        return PS.has(HS) || QS.has(HS) || HS === GS || HS === KS.j || void 0 !== KS.c[HS]
+      affects(kk) {
+        const Fk = sk(kk);
+        return Pk.has(Fk) || Kk.has(Fk) || Fk === Hk || Fk === ek.e || void 0 !== ek.b[Fk]
       }
-      shape(SS, HS, gS, bS, XS, xS) {
+      shape(kk, Fk, Ik, Tk, ik, yk) {
         const {
-          rootName: NS,
-          rot: qS
-        } = tS.j[XS].meta;
-        return NS === KS.j ? xS ? XS : function(SS, HS, gS, bS, XS) {
-          const [xS, NS] = KS.f[XS - 1];
-          for (let qS = 1; qS <= KS.E; qS++) {
-            const [uS, IS] = [HS - xS * qS, bS - NS * qS], fS = SS(uS, gS, IS);
-            if (wS(fS) === KS.j && tS.j[fS].meta.rot === XS && jS(HS, gS, bS, uS, IS)) return (0, tS.n)((0, KS.R)(XS, !hS(fS)))
+          rootName: lk,
+          rot: ak
+        } = Xk.g[ik].meta;
+        return lk === ek.e ? yk ? ik : function(kk, Fk, Ik, Tk, ik) {
+          const [yk, lk] = ek.d[ik - 1];
+          for (let ak = 1; ak <= ek.G; ak++) {
+            const [qk, Lk] = [Fk - yk * ak, Tk - lk * ak], tk = kk(qk, Ik, Lk);
+            if (sk(tk) === ek.e && Xk.g[tk].meta.rot === ik && wk(Fk, Ik, Tk, qk, Lk)) return (0, Xk.j)((0, ek.V)(ik, !Vk(tk)))
           }
-          return (0, tS.n)((0, KS.R)(XS, !1))
-        }(SS, HS, gS, bS, qS) : (0, tS.n)((0, KS.G)(NS, qS, function(SS, HS, gS, bS, XS) {
-          const [xS, NS] = KS.f[XS - 1], qS = (XS, xS) => function(SS, HS, gS) {
-            var bS;
-            const XS = null === (bS = tS.j[SS]) || void 0 === bS ? void 0 : bS.meta;
-            if (!XS) return !1;
-            const xS = XS.rootName,
-              NS = PS.has(xS) || hS(SS);
-            if (!NS && !QS.has(xS) && xS !== GS) return !1;
-            const [qS, uS] = KS.f[XS.rot - 1];
-            if (NS && qS === -HS && uS === -gS) return !0;
-            if (QS.has(xS)) return qS === HS && uS === gS;
-            const IS = tS.j[SS].name;
-            return (xS === GS ? (0, KS.Q)(IS, qS, uS) : xS === CS ? [(0, KS.K)(IS, qS, uS)] : []).some((SS => {
-              let [tS, bS] = SS;
-              return tS === -HS && bS === -gS
+          return (0, Xk.j)((0, ek.V)(ik, !1))
+        }(kk, Fk, Ik, Tk, ak) : (0, Xk.j)((0, ek.K)(lk, ak, function(kk, Fk, Ik, Tk, ik) {
+          const [yk, lk] = ek.d[ik - 1], ak = (ik, yk) => function(kk, Fk, Ik) {
+            var Tk;
+            const ik = null === (Tk = Xk.g[kk]) || void 0 === Tk ? void 0 : Tk.meta;
+            if (!ik) return !1;
+            const yk = ik.rootName,
+              lk = Pk.has(yk) || Vk(kk);
+            if (!lk && !Kk.has(yk) && yk !== Hk) return !1;
+            const [ak, qk] = ek.d[ik.rot - 1];
+            if (lk && ak === -Fk && qk === -Ik) return !0;
+            if (Kk.has(yk)) return ak === Fk && qk === Ik;
+            const Lk = Xk.g[kk].name;
+            return (yk === Hk ? (0, ek.U)(Lk, ak, qk) : yk === Jk ? [(0, ek.L)(Lk, ak, qk)] : []).some((kk => {
+              let [Xk, Tk] = kk;
+              return Xk === -Fk && Tk === -Ik
             }))
-          }(SS(HS + XS, gS, bS + xS), XS, xS), uS = SS(HS - xS, gS, bS - NS), IS = wS(uS) === GS && tS.j[uS].meta.rot === XS, fS = 1 === KS.c[wS(SS(HS, gS - 1, bS))] || -1 === KS.c[wS(SS(HS, gS + 1, bS))];
-          if (fS || IS || qS(-xS, -NS)) return null;
-          const kS = qS(-NS, xS),
-            aS = qS(NS, -xS);
-          if (kS === aS) return null;
-          return kS ? "turnLeft" : "turnRight"
-        }(SS, HS, gS, bS, qS)))
+          }(kk(Fk + ik, Ik, Tk + yk), ik, yk), qk = kk(Fk - yk, Ik, Tk - lk), Lk = sk(qk) === Hk && Xk.g[qk].meta.rot === ik, tk = 1 === ek.b[sk(kk(Fk, Ik - 1, Tk))] || -1 === ek.b[sk(kk(Fk, Ik + 1, Tk))];
+          if (tk || Lk || ak(-yk, -lk)) return null;
+          const Zk = ak(-lk, yk),
+            jk = ak(lk, -yk);
+          if (Zk === jk) return null;
+          return Zk ? "turnLeft" : "turnRight"
+        }(kk, Fk, Ik, Tk, ak)))
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = OS, this.rootId = (0, tS.n)(JS.l)
+        this.reshapeOffsets = vk, this.rootId = (0, Xk.j)(Sk.l)
       }
-      handles(SS) {
-        var HS;
-        return (null === (HS = tS.j[SS]) || void 0 === HS ? void 0 : HS.meta.rootId) === this.rootId
+      handles(kk) {
+        var Fk;
+        return (null === (Fk = Xk.g[kk]) || void 0 === Fk ? void 0 : Fk.meta.rootId) === this.rootId
       }
-      affects(SS) {
-        return this.handles(SS)
+      affects(kk) {
+        return this.handles(kk)
       }
-      shape(SS, HS, gS, bS, XS, xS) {
-        const NS = dS(XS);
-        return (0, tS.n)((qS = NS.rot, null !== (uS = xS ? this.reshapedHalf(SS, HS, gS, bS, NS) : this.placedHalf(SS, HS, gS, bS, NS.rot)) ? (0, JS.e)(JS.l, qS, uS) : 1 === qS ? JS.l : `${JS.l}|meta|rot${qS}`));
-        var qS, uS
+      shape(kk, Fk, Ik, Tk, ik, yk) {
+        const lk = Ek(ik);
+        return (0, Xk.j)((ak = lk.rot, null !== (qk = yk ? this.reshapedHalf(kk, Fk, Ik, Tk, lk) : this.placedHalf(kk, Fk, Ik, Tk, lk.rot)) ? (0, Sk.c)(Sk.l, ak, qk) : 1 === ak ? Sk.l : `${Sk.l}|meta|rot${ak}`));
+        var ak, qk
       }
-      placedHalf(SS, HS, gS, tS, bS) {
-        const [XS, xS] = ZS.b[bS];
-        for (const [NS, qS] of [
+      placedHalf(kk, Fk, Ik, Xk, Tk) {
+        const [ik, yk] = zk.c[Tk];
+        for (const [lk, ak] of [
             ["right", 1],
             ["left", -1]
           ]) {
-          const uS = HS + qS * XS,
-            IS = tS + qS * xS,
-            fS = cS(SS, uS, gS, IS);
-          if (null !== fS && fS.rot === bS && (null === fS.half || !vS(SS, uS, gS, IS, fS))) return NS
+          const qk = Fk + ak * ik,
+            Lk = Xk + ak * yk,
+            tk = Ok(kk, qk, Ik, Lk);
+          if (null !== tk && tk.rot === Tk && (null === tk.half || !nk(kk, qk, Ik, Lk, tk))) return lk
         }
         return null
       }
-      reshapedHalf(SS, HS, gS, tS, bS) {
-        if (null !== bS.half && vS(SS, HS, gS, tS, bS)) return bS.half;
-        for (const XS of ["right", "left"]) {
-          const [xS, NS] = (0, JS.k)(bS.rot, XS), qS = cS(SS, HS + xS, gS, tS + NS);
-          if (null !== qS && qS.rot === bS.rot && qS.half === JS.n[XS]) return XS
+      reshapedHalf(kk, Fk, Ik, Xk, Tk) {
+        if (null !== Tk.half && nk(kk, Fk, Ik, Xk, Tk)) return Tk.half;
+        for (const ik of ["right", "left"]) {
+          const [yk, lk] = (0, Sk.j)(Tk.rot, ik), ak = Ok(kk, Fk + yk, Ik, Xk + lk);
+          if (null !== ak && ak.rot === Tk.rot && ak.half === Sk.p[ik]) return ik
         }
         return null
       }
-    }, new ES.e];
+    }, new Gk.c];
 
-    function YS(SS, HS, gS, tS, bS) {
-      let XS = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      for (const xS of LS)
-        if (xS.handles(bS)) return xS.shape(SS, HS, gS, tS, bS, XS);
-      return bS
+    function uk(kk, Fk, Ik, Xk, Tk) {
+      let ik = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      for (const yk of pk)
+        if (yk.handles(Tk)) return yk.shape(kk, Fk, Ik, Xk, Tk, ik);
+      return Tk
     }
 
-    function AS(SS) {
-      for (const tS of LS) {
-        var HS, gS;
-        if (tS.handles(SS)) return null !== (HS = null === (gS = tS.placedBy) || void 0 === gS ? void 0 : gS.call(tS, SS)) && void 0 !== HS ? HS : null
+    function bk(kk) {
+      for (const Xk of pk) {
+        var Fk, Ik;
+        if (Xk.handles(kk)) return null !== (Fk = null === (Ik = Xk.placedBy) || void 0 === Ik ? void 0 : Ik.call(Xk, kk)) && void 0 !== Fk ? Fk : null
       }
       return null
     }
   },
-  38460: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => JS,
-      h: () => QS,
-      i: () => PS
+  38405: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Sk,
+      g: () => Kk,
+      h: () => Pk
     });
-    var tS = gS(9361),
-      bS = gS(9379),
-      XS = gS(9453),
-      xS = gS(38462),
-      NS = gS(9447);
-    const qS = (0, xS.Q)("pipe"),
-      uS = (0, xS.Q)("tank"),
-      IS = (0, xS.Q)("port"),
-      fS = "Reactor Port";
+    var Xk = Ik(9183),
+      Tk = Ik(9210),
+      ik = Ik(9267),
+      yk = Ik(38414),
+      lk = Ik(9264);
+    const ak = (0, yk.T)("pipe"),
+      qk = (0, yk.T)("tank"),
+      Lk = (0, yk.T)("port"),
+      tk = "Reactor Port";
 
-    function kS(SS, HS, gS) {
-      const tS = new Set([XS.f, XS.e, fS, ...HS, ...gS, ...SS ? [xS.m] : []]);
+    function Zk(kk, Fk, Ik) {
+      const Xk = new Set([ik.f, ik.d, tk, ...Fk, ...Ik, ...kk ? [yk.j] : []]);
       return {
-        makers: new Set(HS),
-        roots: tS
+        makers: new Set(Fk),
+        roots: Xk
       }
     }
-    const aS = {
-        water: kS(!0, ["Condenser"], ["Centrifuge", "Synthesizer", xS.e]),
-        cryo: kS(!1, [xS.e], [])
+    const jk = {
+        water: Zk(!0, ["Condenser"], ["Centrifuge", "Synthesizer", yk.c]),
+        cryo: Zk(!1, [yk.c], [])
       },
-      KS = new Set([...aS.water.roots, ...aS.cryo.roots]),
-      jS = {
+      ek = new Set([...jk.water.roots, ...jk.cryo.roots]),
+      wk = {
         nx: [-1, 0, 0],
         ny: [0, -1, 0],
         nz: [0, 0, -1],
@@ -500,127 +500,127 @@ export const modules = {
         py: [0, 1, 0],
         pz: [0, 0, 1]
       },
-      GS = bS.d.map((SS => jS[SS])),
-      CS = GS.map((SS => {
-        let [HS, gS, tS] = SS;
-        return xS.A.findIndex((SS => {
-          let [bS, XS, xS] = SS;
-          return bS === HS && XS === gS && xS === tS
+      Hk = Tk.d.map((kk => wk[kk])),
+      Jk = Hk.map((kk => {
+        let [Fk, Ik, Xk] = kk;
+        return yk.z.findIndex((kk => {
+          let [Tk, ik, yk] = kk;
+          return Tk === Fk && ik === Ik && yk === Xk
         }))
       }));
 
-    function nS(SS) {
-      let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const gS = tS.j[SS],
-        bS = null === gS || void 0 === gS ? void 0 : gS.meta.rootName,
-        kS = aS[HS];
-      if (!bS || !kS.roots.has(bS)) return null;
-      if ((0, XS.m)(bS)) return (0, xS.M)(gS.name) === HS ? qS : null;
-      if (bS === xS.m) return uS;
-      if (bS === fS) return gS.name.endsWith("|Water") ? IS : null;
-      const [KS, jS] = NS.f[(gS.meta.rot || 1) - 1];
-      return (0, xS.Q)(kS.makers.has(bS) ? "maker" : "user", [-KS, 0, -jS])
+    function xk(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const Ik = Xk.g[kk],
+        Tk = null === Ik || void 0 === Ik ? void 0 : Ik.meta.rootName,
+        Zk = jk[Fk];
+      if (!Tk || !Zk.roots.has(Tk)) return null;
+      if ((0, ik.i)(Tk)) return (0, yk.Q)(Ik.name) === Fk ? ak : null;
+      if (Tk === yk.j) return qk;
+      if (Tk === tk) return Ik.name.endsWith("|Water") ? Lk : null;
+      const [ek, wk] = lk.d[(Ik.meta.rot || 1) - 1];
+      return (0, yk.T)(Zk.makers.has(Tk) ? "maker" : "user", [-ek, 0, -wk])
     }
 
-    function PS(SS, HS, gS, bS) {
-      let XS = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+    function Pk(kk, Fk, Ik, Tk) {
+      let ik = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
       const {
-        makers: NS
-      } = aS[XS];
-      return GS.some(((uS, IS) => {
-        var fS, kS;
-        let [aS, KS, jS] = uS;
-        const GS = SS(HS + aS, gS + KS, bS + jS),
-          PS = nS(GS, XS);
-        return null !== PS && NS.has(null !== (fS = null === (kS = tS.j[GS]) || void 0 === kS ? void 0 : kS.meta.rootName) && void 0 !== fS ? fS : "") && !(0, xS.T)(qS, PS, CS[IS])
+        makers: lk
+      } = jk[ik];
+      return Hk.some(((qk, Lk) => {
+        var tk, Zk;
+        let [jk, ek, wk] = qk;
+        const Hk = kk(Fk + jk, Ik + ek, Tk + wk),
+          Pk = xk(Hk, ik);
+        return null !== Pk && lk.has(null !== (tk = null === (Zk = Xk.g[Hk]) || void 0 === Zk ? void 0 : Zk.meta.rootName) && void 0 !== tk ? tk : "") && !(0, yk.V)(ak, Pk, Jk[Lk])
       }))
     }
 
-    function QS(SS) {
-      const HS = tS.j[SS];
-      return HS ? (0, xS.M)(HS.name) : null
+    function Kk(kk) {
+      const Fk = Xk.g[kk];
+      return Fk ? (0, yk.Q)(Fk.name) : null
     }
-    let DS = null;
+    let Qk = null;
 
-    function wS(SS) {
-      if (!DS) {
-        DS = new Map;
-        for (const SS of ["water", "cryo"])
-          for (let HS = 0; HS < 64; HS++)
-            for (const gS of [!1, !0]) DS.set((0, XS.q)(SS, HS, gS), {
-              aa: SS,
-              mask: HS,
-              full: gS
+    function sk(kk) {
+      if (!Qk) {
+        Qk = new Map;
+        for (const kk of ["water", "cryo"])
+          for (let Fk = 0; Fk < 64; Fk++)
+            for (const Ik of [!1, !0]) Qk.set((0, ik.j)(kk, Fk, Ik), {
+              qj: kk,
+              mask: Fk,
+              full: Ik
             })
       }
-      return DS.get(SS)
+      return Qk.get(kk)
     }
-    const hS = new Map(Array.from({
-      length: XS.j + 1
-    }, ((SS, HS) => [(0, XS.t)(HS), HS])));
+    const Vk = new Map(Array.from({
+      length: ik.g + 1
+    }, ((kk, Fk) => [(0, ik.m)(Fk), Fk])));
 
-    function ZS(SS, HS, gS, bS, XS, xS) {
-      return GS.some(((NS, qS) => {
-        var uS, IS, fS;
-        let [kS, aS, KS] = NS;
-        if (0 === (xS >> qS & 1)) return !1;
-        const jS = null !== (uS = null === (IS = tS.j[SS(HS + kS, gS + aS, bS + KS)]) || void 0 === IS ? void 0 : IS.name) && void 0 !== uS ? uS : "",
-          GS = wS(jS);
-        return GS ? GS.aa === XS && GS.full : (null !== (fS = function(SS) {
-          var HS;
-          return null !== (HS = hS.get(SS)) && void 0 !== HS ? HS : null
-        }(jS)) && void 0 !== fS ? fS : 0) > 0
+    function zk(kk, Fk, Ik, Tk, ik, yk) {
+      return Hk.some(((lk, ak) => {
+        var qk, Lk, tk;
+        let [Zk, jk, ek] = lk;
+        if (0 === (yk >> ak & 1)) return !1;
+        const wk = null !== (qk = null === (Lk = Xk.g[kk(Fk + Zk, Ik + jk, Tk + ek)]) || void 0 === Lk ? void 0 : Lk.name) && void 0 !== qk ? qk : "",
+          Hk = sk(wk);
+        return Hk ? Hk.qj === ik && Hk.full : (null !== (tk = function(kk) {
+          var Fk;
+          return null !== (Fk = Vk.get(kk)) && void 0 !== Fk ? Fk : null
+        }(wk)) && void 0 !== tk ? tk : 0) > 0
       }))
     }
-    class JS {
+    class Sk {
       constructor() {
-        this.reshapeOffsets = GS
+        this.reshapeOffsets = Hk
       }
-      handles(SS) {
-        return null !== QS(SS)
+      handles(kk) {
+        return null !== Kk(kk)
       }
-      affects(SS) {
-        var HS, gS;
-        return KS.has(null !== (HS = null === (gS = tS.j[SS]) || void 0 === gS ? void 0 : gS.meta.rootName) && void 0 !== HS ? HS : "")
+      affects(kk) {
+        var Fk, Ik;
+        return ek.has(null !== (Fk = null === (Ik = Xk.g[kk]) || void 0 === Ik ? void 0 : Ik.meta.rootName) && void 0 !== Fk ? Fk : "")
       }
-      placedBy(SS) {
-        var HS;
-        return (null === (HS = tS.j[SS]) || void 0 === HS ? void 0 : HS.meta.rootName) === XS.e ? XS.f : null
+      placedBy(kk) {
+        var Fk;
+        return (null === (Fk = Xk.g[kk]) || void 0 === Fk ? void 0 : Fk.meta.rootName) === ik.d ? ik.f : null
       }
-      shape(SS, HS, gS, bS, NS, uS) {
-        var IS, fS, kS;
-        const aS = null !== (IS = null === (fS = tS.j[NS]) || void 0 === fS ? void 0 : fS.name) && void 0 !== IS ? IS : "",
-          KS = uS || aS !== XS.f ? null !== (kS = (0, xS.M)(aS)) && void 0 !== kS ? kS : "water" : function(SS, HS, gS, tS) {
-            return GS.some(((bS, XS) => {
-              let [NS, uS, IS] = bS;
-              const fS = nS(SS(HS + NS, gS + uS, tS + IS), "cryo");
-              return null !== fS && "port" !== fS.kind && (0, xS.T)(qS, fS, CS[XS])
+      shape(kk, Fk, Ik, Tk, lk, qk) {
+        var Lk, tk, Zk;
+        const jk = null !== (Lk = null === (tk = Xk.g[lk]) || void 0 === tk ? void 0 : tk.name) && void 0 !== Lk ? Lk : "",
+          ek = qk || jk !== ik.f ? null !== (Zk = (0, yk.Q)(jk)) && void 0 !== Zk ? Zk : "water" : function(kk, Fk, Ik, Xk) {
+            return Hk.some(((Tk, ik) => {
+              let [lk, qk, Lk] = Tk;
+              const tk = xk(kk(Fk + lk, Ik + qk, Xk + Lk), "cryo");
+              return null !== tk && "port" !== tk.kind && (0, yk.V)(ak, tk, Jk[ik])
             })) ? "cryo" : "water"
-          }(SS, HS, gS, bS),
-          jS = function(SS, HS, gS, tS) {
-            let bS = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              XS = 0;
-            return GS.forEach(((NS, uS) => {
-              let [IS, fS, kS] = NS;
-              const aS = nS(SS(HS + IS, gS + fS, tS + kS), bS);
-              aS && (0, xS.T)(qS, aS, CS[uS]) && (XS |= 1 << uS)
-            })), XS
-          }(SS, HS, gS, bS, KS),
-          PS = uS ? function(SS) {
-            var HS;
-            return !0 === (null === (HS = wS(SS)) || void 0 === HS ? void 0 : HS.full)
-          }(aS) : ZS(SS, HS, gS, bS, KS, jS);
-        return (0, tS.n)((0, XS.q)(KS, jS, PS))
+          }(kk, Fk, Ik, Tk),
+          wk = function(kk, Fk, Ik, Xk) {
+            let Tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              ik = 0;
+            return Hk.forEach(((lk, qk) => {
+              let [Lk, tk, Zk] = lk;
+              const jk = xk(kk(Fk + Lk, Ik + tk, Xk + Zk), Tk);
+              jk && (0, yk.V)(ak, jk, Jk[qk]) && (ik |= 1 << qk)
+            })), ik
+          }(kk, Fk, Ik, Tk, ek),
+          Pk = qk ? function(kk) {
+            var Fk;
+            return !0 === (null === (Fk = sk(kk)) || void 0 === Fk ? void 0 : Fk.full)
+          }(jk) : zk(kk, Fk, Ik, Tk, ek, wk);
+        return (0, Xk.j)((0, ik.j)(ek, wk, Pk))
       }
     }
   },
-  38205: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => tS,
-      g: () => XS
+  38169: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk,
+      f: () => ik
     });
-    const tS = ["Chest", "Loot Chest", "Moonstone Chest"],
-      bS = [{
+    const Xk = ["Chest", "Loot Chest", "Moonstone Chest"],
+      Tk = [{
         name: "Workbench",
         exactMatch: !0
       }, {
@@ -640,10 +640,10 @@ export const modules = {
         exactMatch: !1
       }];
 
-    function XS(SS) {
-      return bS.find((HS => HS.exactMatch ? SS === HS.name : SS.includes(HS.name)))
+    function ik(kk) {
+      return Tk.find((Fk => Fk.exactMatch ? kk === Fk.name : kk.includes(Fk.name)))
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

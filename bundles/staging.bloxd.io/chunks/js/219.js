@@ -1,240 +1,240 @@
-/*! For license information please see fqwnlq.219.7f7ef722.chunk.js.LICENSE.txt */
+/*! For license information please see 31kiid.219.4bba5e46.chunk.js.LICENSE.txt */
 export const id = 219;
 export const ids = [219];
 export const modules = {
-  39608: (SS, HS, gS) => {
-    SS.exports = bS;
-    var tS = gS(402);
+  39572: (kk, Fk, Ik) => {
+    kk.exports = Tk;
+    var Xk = Ik(354);
 
-    function bS(SS, HS) {
-      if (!(this instanceof bS)) return new bS(SS, HS);
-      var gS = tS.create();
-      tS.add(gS, SS, HS), this.base = tS.min(tS.create(), SS, gS), this.vec = tS.clone(HS), this.max = tS.max(tS.create(), SS, gS), this.mag = tS.length(this.vec)
+    function Tk(kk, Fk) {
+      if (!(this instanceof Tk)) return new Tk(kk, Fk);
+      var Ik = Xk.create();
+      Xk.add(Ik, kk, Fk), this.base = Xk.min(Xk.create(), kk, Ik), this.vec = Xk.clone(Fk), this.max = Xk.max(Xk.create(), kk, Ik), this.mag = Xk.length(this.vec)
     }
-    var XS = bS.prototype;
-    XS.width = function() {
+    var ik = Tk.prototype;
+    ik.width = function() {
       return this.vec[0]
-    }, XS.height = function() {
+    }, ik.height = function() {
       return this.vec[1]
-    }, XS.depth = function() {
+    }, ik.depth = function() {
       return this.vec[2]
-    }, XS.x0 = function() {
+    }, ik.x0 = function() {
       return this.base[0]
-    }, XS.y0 = function() {
+    }, ik.y0 = function() {
       return this.base[1]
-    }, XS.z0 = function() {
+    }, ik.z0 = function() {
       return this.base[2]
-    }, XS.x1 = function() {
+    }, ik.x1 = function() {
       return this.max[0]
-    }, XS.y1 = function() {
+    }, ik.y1 = function() {
       return this.max[1]
-    }, XS.z1 = function() {
+    }, ik.z1 = function() {
       return this.max[2]
-    }, XS.translate = function(SS) {
-      return tS.add(this.max, this.max, SS), tS.add(this.base, this.base, SS), this
-    }, XS.setPosition = function(SS) {
-      return tS.add(this.max, SS, this.vec), tS.copy(this.base, SS), this
-    }, XS.expand = function(SS) {
-      var HS = tS.create(),
-        gS = tS.create();
-      return tS.max(HS, SS.max, this.max), tS.min(gS, SS.base, this.base), tS.subtract(HS, HS, gS), new bS(gS, HS)
-    }, XS.intersects = function(SS) {
-      return !(SS.base[0] > this.max[0]) && (!(SS.base[1] > this.max[1]) && (!(SS.base[2] > this.max[2]) && (!(SS.max[0] < this.base[0]) && (!(SS.max[1] < this.base[1]) && !(SS.max[2] < this.base[2])))))
-    }, XS.touches = function(SS) {
-      var HS = this.union(SS);
-      return null !== HS && (0 == HS.width() || 0 == HS.height() || 0 == HS.depth())
-    }, XS.union = function(SS) {
-      if (!this.intersects(SS)) return null;
-      var HS = Math.max(SS.base[0], this.base[0]),
-        gS = Math.max(SS.base[1], this.base[1]),
-        tS = Math.max(SS.base[2], this.base[2]);
-      return new bS([HS, gS, tS], [Math.min(SS.max[0], this.max[0]) - HS, Math.min(SS.max[1], this.max[1]) - gS, Math.min(SS.max[2], this.max[2]) - tS])
+    }, ik.translate = function(kk) {
+      return Xk.add(this.max, this.max, kk), Xk.add(this.base, this.base, kk), this
+    }, ik.setPosition = function(kk) {
+      return Xk.add(this.max, kk, this.vec), Xk.copy(this.base, kk), this
+    }, ik.expand = function(kk) {
+      var Fk = Xk.create(),
+        Ik = Xk.create();
+      return Xk.max(Fk, kk.max, this.max), Xk.min(Ik, kk.base, this.base), Xk.subtract(Fk, Fk, Ik), new Tk(Ik, Fk)
+    }, ik.intersects = function(kk) {
+      return !(kk.base[0] > this.max[0]) && (!(kk.base[1] > this.max[1]) && (!(kk.base[2] > this.max[2]) && (!(kk.max[0] < this.base[0]) && (!(kk.max[1] < this.base[1]) && !(kk.max[2] < this.base[2])))))
+    }, ik.touches = function(kk) {
+      var Fk = this.union(kk);
+      return null !== Fk && (0 == Fk.width() || 0 == Fk.height() || 0 == Fk.depth())
+    }, ik.union = function(kk) {
+      if (!this.intersects(kk)) return null;
+      var Fk = Math.max(kk.base[0], this.base[0]),
+        Ik = Math.max(kk.base[1], this.base[1]),
+        Xk = Math.max(kk.base[2], this.base[2]);
+      return new Tk([Fk, Ik, Xk], [Math.min(kk.max[0], this.max[0]) - Fk, Math.min(kk.max[1], this.max[1]) - Ik, Math.min(kk.max[2], this.max[2]) - Xk])
     }
   },
-  39605: SS => {
-    SS.exports = function(SS, HS, gS, tS, bS, XS) {
-      var xS = +HS[0],
-        NS = +HS[1],
-        qS = +HS[2],
-        uS = +gS[0],
-        IS = +gS[1],
-        fS = +gS[2],
-        kS = Math.sqrt(uS * uS + IS * IS + fS * fS);
-      if (0 === kS) throw new Error("Can't raycast along a zero vector");
-      return function(SS, HS, gS, tS, bS, XS, xS, NS, qS, uS) {
-        for (var IS = 0, fS = Math.floor, kS = 0 | fS(HS), aS = 0 | fS(gS), KS = 0 | fS(tS), jS = bS > 0 ? 1 : -1, GS = XS > 0 ? 1 : -1, CS = xS > 0 ? 1 : -1, nS = Math.abs(1 / bS), PS = Math.abs(1 / XS), QS = Math.abs(1 / xS), DS = nS < 1 / 0 ? nS * (jS > 0 ? kS + 1 - HS : HS - kS) : 1 / 0, wS = PS < 1 / 0 ? PS * (GS > 0 ? aS + 1 - gS : gS - aS) : 1 / 0, hS = QS < 1 / 0 ? QS * (CS > 0 ? KS + 1 - tS : tS - KS) : 1 / 0, ZS = -1; IS <= NS;) {
-          var JS = SS(kS, aS, KS);
-          if (JS) return qS && (qS[0] = HS + IS * bS, qS[1] = gS + IS * XS, qS[2] = tS + IS * xS), uS && (uS[0] = uS[1] = uS[2] = 0, 0 === ZS && (uS[0] = -jS), 1 === ZS && (uS[1] = -GS), 2 === ZS && (uS[2] = -CS)), JS;
-          DS < wS ? DS < hS ? (kS += jS, IS = DS, DS += nS, ZS = 0) : (KS += CS, IS = hS, hS += QS, ZS = 2) : wS < hS ? (aS += GS, IS = wS, wS += PS, ZS = 1) : (KS += CS, IS = hS, hS += QS, ZS = 2)
+  39565: kk => {
+    kk.exports = function(kk, Fk, Ik, Xk, Tk, ik) {
+      var yk = +Fk[0],
+        lk = +Fk[1],
+        ak = +Fk[2],
+        qk = +Ik[0],
+        Lk = +Ik[1],
+        tk = +Ik[2],
+        Zk = Math.sqrt(qk * qk + Lk * Lk + tk * tk);
+      if (0 === Zk) throw new Error("Can't raycast along a zero vector");
+      return function(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak, qk) {
+        for (var Lk = 0, tk = Math.floor, Zk = 0 | tk(Fk), jk = 0 | tk(Ik), ek = 0 | tk(Xk), wk = Tk > 0 ? 1 : -1, Hk = ik > 0 ? 1 : -1, Jk = yk > 0 ? 1 : -1, xk = Math.abs(1 / Tk), Pk = Math.abs(1 / ik), Kk = Math.abs(1 / yk), Qk = xk < 1 / 0 ? xk * (wk > 0 ? Zk + 1 - Fk : Fk - Zk) : 1 / 0, sk = Pk < 1 / 0 ? Pk * (Hk > 0 ? jk + 1 - Ik : Ik - jk) : 1 / 0, Vk = Kk < 1 / 0 ? Kk * (Jk > 0 ? ek + 1 - Xk : Xk - ek) : 1 / 0, zk = -1; Lk <= lk;) {
+          var Sk = kk(Zk, jk, ek);
+          if (Sk) return ak && (ak[0] = Fk + Lk * Tk, ak[1] = Ik + Lk * ik, ak[2] = Xk + Lk * yk), qk && (qk[0] = qk[1] = qk[2] = 0, 0 === zk && (qk[0] = -wk), 1 === zk && (qk[1] = -Hk), 2 === zk && (qk[2] = -Jk)), Sk;
+          Qk < sk ? Qk < Vk ? (Zk += wk, Lk = Qk, Qk += xk, zk = 0) : (ek += Jk, Lk = Vk, Vk += Kk, zk = 2) : sk < Vk ? (jk += Hk, Lk = sk, sk += Pk, zk = 1) : (ek += Jk, Lk = Vk, Vk += Kk, zk = 2)
         }
-        return qS && (qS[0] = HS + IS * bS, qS[1] = gS + IS * XS, qS[2] = tS + IS * xS), uS && (uS[0] = uS[1] = uS[2] = 0), 0
-      }(SS, xS, NS, qS, uS /= kS, IS /= kS, fS /= kS, tS = "undefined" === typeof tS ? 64 : +tS, bS, XS)
+        return ak && (ak[0] = Fk + Lk * Tk, ak[1] = Ik + Lk * ik, ak[2] = Xk + Lk * yk), qk && (qk[0] = qk[1] = qk[2] = 0), 0
+      }(kk, yk, lk, ak, qk /= Zk, Lk /= Zk, tk /= Zk, Xk = "undefined" === typeof Xk ? 64 : +Xk, Tk, ik)
     }
   },
-  39134: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => NS,
-      d: () => XS
+  39113: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => lk,
+      c: () => ik
     });
-    var tS = gS(4216);
-    let bS = null;
+    var Xk = Ik(4062);
+    let Tk = null;
 
-    function XS(SS) {
-      return null !== bS && SS === bS
+    function ik(kk) {
+      return null !== Tk && kk === Tk
     }
 
-    function xS() {
-      this.Xp = !1, this.stopPropagation = !1, this.Ip = !1, this.disabled = !1
+    function yk() {
+      this.dW = !1, this.stopPropagation = !1, this.rW = !1, this.disabled = !1
     }
-    class NS {
-      constructor(SS, HS) {
+    class lk {
+      constructor(kk, Fk) {
         this.version = "0.7.0";
-        var gS = Object.assign({}, new xS, HS || {});
-        this.element = SS || document, this.Xp = !!gS.Xp, this.stopPropagation = !!gS.stopPropagation, this.Ip = !!gS.Ip, this.disabled = !!gS.disabled, this.filterEvents = (SS, HS) => !0, this.ignoreEvent = SS => !1, this.down = new tS.EventEmitter, this.up = new tS.EventEmitter, this.state = {}, this.Qp = {
+        var Ik = Object.assign({}, new yk, Fk || {});
+        this.element = kk || document, this.dW = !!Ik.dW, this.stopPropagation = !!Ik.stopPropagation, this.rW = !!Ik.rW, this.disabled = !!Ik.disabled, this.filterEvents = (kk, Fk) => !0, this.ignoreEvent = kk => !1, this.down = new Xk.EventEmitter, this.up = new Xk.EventEmitter, this.state = {}, this.XB = {
           dx: 0,
           dy: 0,
-          TSS: 0,
-          oSS: 0,
-          lSS: 0
+          iFk: 0,
+          yFk: 0,
+          lFk: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? uS(this) : document.addEventListener("DOMContentLoaded", (SS => {
-          uS(this)
+        }, "loading" !== document.readyState ? qk(this) : document.addEventListener("DOMContentLoaded", (kk => {
+          qk(this)
         }), {
           once: !0
         })
       }
-      bind(SS) {
-        for (var HS = arguments.length, gS = new Array(HS > 1 ? HS - 1 : 0), tS = 1; tS < HS; tS++) gS[tS - 1] = arguments[tS];
-        gS.forEach((HS => {
-          var gS = this._keyBindmap[HS] || [];
-          gS.includes(SS) || (gS.push(SS), this._keyBindmap[HS] = gS)
-        })), this.state[SS] = !!this.state[SS], this.pressCount[SS] = this.pressCount[SS] || 0, this.releaseCount[SS] = this.releaseCount[SS] || 0
+      bind(kk) {
+        for (var Fk = arguments.length, Ik = new Array(Fk > 1 ? Fk - 1 : 0), Xk = 1; Xk < Fk; Xk++) Ik[Xk - 1] = arguments[Xk];
+        Ik.forEach((Fk => {
+          var Ik = this._keyBindmap[Fk] || [];
+          Ik.includes(kk) || (Ik.push(kk), this._keyBindmap[Fk] = Ik)
+        })), this.state[kk] = !!this.state[kk], this.pressCount[kk] = this.pressCount[kk] || 0, this.releaseCount[kk] = this.releaseCount[kk] || 0
       }
-      unbind(SS) {
-        for (var HS in this._keyBindmap) {
-          var gS = this._keyBindmap[HS],
-            tS = gS.indexOf(SS);
-          tS > -1 && gS.splice(tS, 1)
+      unbind(kk) {
+        for (var Fk in this._keyBindmap) {
+          var Ik = this._keyBindmap[Fk],
+            Xk = Ik.indexOf(kk);
+          Xk > -1 && Ik.splice(Xk, 1)
         }
       }
       getBindings() {
-        var SS = {};
-        for (var HS in this._keyBindmap) {
-          this._keyBindmap[HS].forEach((gS => {
-            SS[gS] = SS[gS] || [], SS[gS].push(HS)
+        var kk = {};
+        for (var Fk in this._keyBindmap) {
+          this._keyBindmap[Fk].forEach((Ik => {
+            kk[Ik] = kk[Ik] || [], kk[Ik].push(Fk)
           }))
         }
-        return SS
+        return kk
       }
-      mf() {
-        qS(this.Qp), qS(this.pressCount), qS(this.releaseCount)
+      Dt() {
+        ak(this.XB), ak(this.pressCount), ak(this.releaseCount)
       }
     }
 
-    function qS(SS) {
-      for (var HS in SS) SS[HS] = 0
+    function ak(kk) {
+      for (var Fk in kk) kk[Fk] = 0
     }
 
-    function uS(SS) {
-      window.addEventListener("keydown", GS.bind(null, SS, !0), !1), window.addEventListener("keyup", GS.bind(null, SS, !1), !1);
-      var HS = {
+    function qk(kk) {
+      window.addEventListener("keydown", Hk.bind(null, kk, !0), !1), window.addEventListener("keyup", Hk.bind(null, kk, !1), !1);
+      var Fk = {
         passive: !0
       };
-      SS.element.addEventListener("touchstart", aS.bind(void 0, SS), {
+      kk.element.addEventListener("touchstart", jk.bind(void 0, kk), {
         passive: !1
-      }), SS.element.addEventListener("touchend", jS.bind(void 0, SS), HS), SS.element.addEventListener("mousedown", CS.bind(null, SS, !0), HS), window.document.addEventListener("mouseup", CS.bind(null, SS, !1), HS), SS.element.addEventListener("touchmove", nS.bind(null, SS), HS), SS.element.addEventListener("mousemove", nS.bind(null, SS), HS), window.PointerEvent, SS.element.addEventListener("wheel", PS.bind(null, SS), HS), SS.element.addEventListener("contextmenu", QS.bind(null, SS), !1), window.addEventListener("blur", hS.bind(null, SS), !1)
+      }), kk.element.addEventListener("touchend", wk.bind(void 0, kk), Fk), kk.element.addEventListener("mousedown", Jk.bind(null, kk, !0), Fk), window.document.addEventListener("mouseup", Jk.bind(null, kk, !1), Fk), kk.element.addEventListener("touchmove", xk.bind(null, kk), Fk), kk.element.addEventListener("mousemove", xk.bind(null, kk), Fk), window.PointerEvent, kk.element.addEventListener("wheel", Pk.bind(null, kk), Fk), kk.element.addEventListener("contextmenu", Kk.bind(null, kk), !1), window.addEventListener("blur", Vk.bind(null, kk), !1)
     }
-    var IS = 0,
-      fS = 0,
-      kS = null;
+    var Lk = 0,
+      tk = 0,
+      Zk = null;
 
-    function aS(SS, HS) {
-      HS.preventDefault(), KS(HS)
+    function jk(kk, Fk) {
+      Fk.preventDefault(), ek(Fk)
     }
 
-    function KS(SS) {
-      let HS = !1;
-      for (let gS = 0; gS < SS.touches.length; ++gS)
-        if (SS.touches[gS].identifier === kS) {
-          HS = !0;
+    function ek(kk) {
+      let Fk = !1;
+      for (let Ik = 0; Ik < kk.touches.length; ++Ik)
+        if (kk.touches[Ik].identifier === Zk) {
+          Fk = !0;
           break
-        } if (!HS) {
-        const HS = SS.changedTouches[0];
-        IS = HS.clientX, fS = HS.clientY, kS = HS.identifier
+        } if (!Fk) {
+        const Fk = kk.changedTouches[0];
+        Lk = Fk.clientX, tk = Fk.clientY, Zk = Fk.identifier
       }
     }
 
-    function jS(SS, HS) {
-      for (var gS = HS.changedTouches, tS = 0; tS < gS.length; ++tS) gS[tS].identifier === kS && (kS = null)
+    function wk(kk, Fk) {
+      for (var Ik = Fk.changedTouches, Xk = 0; Xk < Ik.length; ++Xk) Ik[Xk].identifier === Zk && (Zk = null)
     }
 
-    function GS(SS, HS, gS) {
-      if (!SS.ignoreEvent(gS)) try {
-        ZS(SS, gS), HS && gS.isTrusted && !gS.repeat && SS._keyStates[gS.code] && JS(SS, gS.code)
+    function Hk(kk, Fk, Ik) {
+      if (!kk.ignoreEvent(Ik)) try {
+        zk(kk, Ik), Fk && Ik.isTrusted && !Ik.repeat && kk._keyStates[Ik.code] && Sk(kk, Ik.code)
       } finally {
-        OS(gS.code, HS, SS, gS)
+        vk(Ik.code, Fk, kk, Ik)
       }
     }
 
-    function CS(SS, HS, gS) {
-      if (!SS.ignoreEvent(gS)) try {
-        ZS(SS, gS)
+    function Jk(kk, Fk, Ik) {
+      if (!kk.ignoreEvent(Ik)) try {
+        zk(kk, Ik)
       } finally {
-        ! function(SS, HS, gS) {
-          if ("pointerId" in gS)
-            if (HS) {
-              if (null !== SS._touches.currID) return;
-              SS._touches.currID = gS.pointerId
+        ! function(kk, Fk, Ik) {
+          if ("pointerId" in Ik)
+            if (Fk) {
+              if (null !== kk._touches.currID) return;
+              kk._touches.currID = Ik.pointerId
             } else {
-              if (SS._touches.currID !== gS.pointerId) return;
-              SS._touches.currID = null
-            } var tS = "button" in gS ? gS.button + 1 : 1;
-          OS("Mouse" + tS, HS, SS, gS)
-        }(SS, HS, gS)
+              if (kk._touches.currID !== Ik.pointerId) return;
+              kk._touches.currID = null
+            } var Xk = "button" in Ik ? Ik.button + 1 : 1;
+          vk("Mouse" + Xk, Fk, kk, Ik)
+        }(kk, Fk, Ik)
       }
     }
 
-    function nS(SS, HS) {
-      var gS = HS.movementX || HS.mozMovementX || 0,
-        tS = HS.movementY || HS.mozMovementY || 0;
-      if (HS.touches && 0 === (gS | tS)) {
-        var bS = function(SS) {
-          KS(SS);
-          for (let HS = 0; HS < SS.changedTouches.length; ++HS)
-            if (SS.changedTouches[HS].identifier == kS) {
-              const gS = SS.changedTouches[HS],
-                tS = [gS.clientX - IS, gS.clientY - fS];
-              return IS = gS.clientX, fS = gS.clientY, tS
-            } return console.error(`Did not find touch id ${kS}`), [0, 0]
-        }(HS);
-        gS = bS[0], tS = bS[1]
+    function xk(kk, Fk) {
+      var Ik = Fk.movementX || Fk.mozMovementX || 0,
+        Xk = Fk.movementY || Fk.mozMovementY || 0;
+      if (Fk.touches && 0 === (Ik | Xk)) {
+        var Tk = function(kk) {
+          ek(kk);
+          for (let Fk = 0; Fk < kk.changedTouches.length; ++Fk)
+            if (kk.changedTouches[Fk].identifier == Zk) {
+              const Ik = kk.changedTouches[Fk],
+                Xk = [Ik.clientX - Lk, Ik.clientY - tk];
+              return Lk = Ik.clientX, tk = Ik.clientY, Xk
+            } return console.error(`Did not find touch id ${Zk}`), [0, 0]
+        }(Fk);
+        Ik = Tk[0], Xk = Tk[1]
       }
-      SS.Qp.dx += gS, SS.Qp.dy += tS
+      kk.XB.dx += Ik, kk.XB.dy += Xk
     }
 
-    function PS(SS, HS) {
-      ZS(SS, HS);
-      var gS = 1;
-      switch (HS.deltaMode) {
+    function Pk(kk, Fk) {
+      zk(kk, Fk);
+      var Ik = 1;
+      switch (Fk.deltaMode) {
         case 0:
-          gS = 1;
+          Ik = 1;
           break;
         case 1:
-          gS = 12;
+          Ik = 12;
           break;
         case 2:
-          gS = SS.element.clientHeight || window.innerHeight
+          Ik = kk.element.clientHeight || window.innerHeight
       }
-      SS.Qp.TSS += (HS.deltaX || 0) * gS, SS.Qp.oSS += (HS.deltaY || 0) * gS, SS.Qp.lSS += (HS.deltaZ || 0) * gS
+      kk.XB.iFk += (Fk.deltaX || 0) * Ik, kk.XB.yFk += (Fk.deltaY || 0) * Ik, kk.XB.lFk += (Fk.deltaZ || 0) * Ik
     }
 
-    function QS(SS, HS) {
-      if (!SS.Ip) return HS.preventDefault(), !1
+    function Kk(kk, Fk) {
+      if (!kk.rW) return Fk.preventDefault(), !1
     }
-    var DS = {
+    var Qk = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -245,91 +245,91 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function wS(SS, HS) {
-      return !!SS[DS[HS]] || ("AltRight" === HS || "ControlLeft" === HS) && "function" === typeof SS.getModifierState && !0 === SS.getModifierState("AltGraph")
+    function sk(kk, Fk) {
+      return !!kk[Qk[Fk]] || ("AltRight" === Fk || "ControlLeft" === Fk) && "function" === typeof kk.getModifierState && !0 === kk.getModifierState("AltGraph")
     }
 
-    function hS(SS, HS) {
-      for (var gS in SS._modifiersHeldThroughBlur = {}, DS) SS._keyStates[gS] && (SS._modifiersHeldThroughBlur[gS] = !0);
-      HS && HS.isTrusted && function() {
+    function Vk(kk, Fk) {
+      for (var Ik in kk._modifiersHeldThroughBlur = {}, Qk) kk._keyStates[Ik] && (kk._modifiersHeldThroughBlur[Ik] = !0);
+      Fk && Fk.isTrusted && function() {
         try {
           return window.self !== window.top
-        } catch (SS) {
+        } catch (kk) {
           return !0
         }
-      }() && (clearTimeout(SS._blurRelease), SS._blurRelease = setTimeout((function() {
+      }() && (clearTimeout(kk._blurRelease), kk._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var HS in SS._modifiersHeldThroughBlur = {}, SS._keyStates) SS._keyStates[HS] && !/^Mouse\d/.test(HS) && JS(SS, HS)
+          for (var Fk in kk._modifiersHeldThroughBlur = {}, kk._keyStates) kk._keyStates[Fk] && !/^Mouse\d/.test(Fk) && Sk(kk, Fk)
       }), 0))
     }
 
-    function ZS(SS, HS) {
-      var gS = SS._modifiersHeldThroughBlur;
-      if (gS && HS.isTrusted && document.hasFocus())
-        for (var tS in gS) delete gS[tS], SS._keyStates[tS] && tS !== HS.code && (wS(HS, tS) || JS(SS, tS))
+    function zk(kk, Fk) {
+      var Ik = kk._modifiersHeldThroughBlur;
+      if (Ik && Fk.isTrusted && document.hasFocus())
+        for (var Xk in Ik) delete Ik[Xk], kk._keyStates[Xk] && Xk !== Fk.code && (sk(Fk, Xk) || Sk(kk, Xk))
     }
 
-    function JS(SS, HS) {
-      const gS = {
-          code: HS,
+    function Sk(kk, Fk) {
+      const Ik = {
+          code: Fk,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        tS = bS;
-      bS = gS;
+        Xk = Tk;
+      Tk = Ik;
       try {
-        OS(HS, !1, SS, gS)
+        vk(Fk, !1, kk, Ik)
       } finally {
-        bS = tS
+        Tk = Xk
       }
     }
 
-    function OS(SS, HS, gS, tS) {
-      var bS = gS._keyBindmap[SS];
-      bS && (dS(gS._keyStates[SS], HS) && (gS._keyStates[SS] = HS, bS.forEach((SS => {
-        (!gS.filterEvents || gS.filterEvents(tS, SS)) && function(SS, HS, gS, tS) {
-          var bS = HS ? gS.pressCount : gS.releaseCount;
-          bS[SS] = (bS[SS] || 0) + 1;
-          var XS = gS._bindPressCount[SS] || 0;
-          (XS += HS ? 1 : -1) < 0 && (XS = 0);
-          gS._bindPressCount[SS] = XS;
-          var xS = gS.state[SS];
-          if (dS(xS, XS)) {
-            gS.state[SS] = XS > 0;
-            var NS = HS ? gS.down : gS.up;
-            gS.disabled || NS.emit(SS, tS)
+    function vk(kk, Fk, Ik, Xk) {
+      var Tk = Ik._keyBindmap[kk];
+      Tk && (Ek(Ik._keyStates[kk], Fk) && (Ik._keyStates[kk] = Fk, Tk.forEach((kk => {
+        (!Ik.filterEvents || Ik.filterEvents(Xk, kk)) && function(kk, Fk, Ik, Xk) {
+          var Tk = Fk ? Ik.pressCount : Ik.releaseCount;
+          Tk[kk] = (Tk[kk] || 0) + 1;
+          var ik = Ik._bindPressCount[kk] || 0;
+          (ik += Fk ? 1 : -1) < 0 && (ik = 0);
+          Ik._bindPressCount[kk] = ik;
+          var yk = Ik.state[kk];
+          if (Ek(yk, ik)) {
+            Ik.state[kk] = ik > 0;
+            var lk = Fk ? Ik.down : Ik.up;
+            Ik.disabled || lk.emit(kk, Xk)
           }
-        }(SS, HS, gS, tS)
-      }))), "button" in tS || (gS.Xp && !tS.defaultPrevented && tS.preventDefault(), gS.stopPropagation && tS.stopPropagation()))
+        }(kk, Fk, Ik, Xk)
+      }))), "button" in Xk || (Ik.dW && !Xk.defaultPrevented && Xk.preventDefault(), Ik.stopPropagation && Xk.stopPropagation()))
     }
 
-    function dS(SS, HS) {
-      return SS ? !HS : HS
+    function Ek(kk, Fk) {
+      return kk ? !Fk : Fk
     }
   },
-  36547: (SS, HS) => {
-    function gS(SS) {
-      if (SS && "object" === typeof SS) {
-        var HS = SS.which || SS.keyCode || SS.charCode;
-        HS && (SS = HS)
+  36537: (kk, Fk) => {
+    function Ik(kk) {
+      if (kk && "object" === typeof kk) {
+        var Fk = kk.which || kk.keyCode || kk.charCode;
+        Fk && (kk = Fk)
       }
-      if ("number" === typeof SS) return xS[SS];
-      var gS, XS = String(SS);
-      return (gS = tS[XS.toLowerCase()]) ? gS : (gS = bS[XS.toLowerCase()]) || (1 === XS.length ? XS.charCodeAt(0) : void 0)
+      if ("number" === typeof kk) return yk[kk];
+      var Ik, ik = String(kk);
+      return (Ik = Xk[ik.toLowerCase()]) ? Ik : (Ik = Tk[ik.toLowerCase()]) || (1 === ik.length ? ik.charCodeAt(0) : void 0)
     }
-    gS.isEventKey = function(SS, HS) {
-      if (SS && "object" === typeof SS) {
-        var gS = SS.which || SS.keyCode || SS.charCode;
-        if (null === gS || void 0 === gS) return !1;
-        if ("string" === typeof HS) {
-          var XS;
-          if (XS = tS[HS.toLowerCase()]) return XS === gS;
-          if (XS = bS[HS.toLowerCase()]) return XS === gS
-        } else if ("number" === typeof HS) return HS === gS;
+    Ik.isEventKey = function(kk, Fk) {
+      if (kk && "object" === typeof kk) {
+        var Ik = kk.which || kk.keyCode || kk.charCode;
+        if (null === Ik || void 0 === Ik) return !1;
+        if ("string" === typeof Fk) {
+          var ik;
+          if (ik = Xk[Fk.toLowerCase()]) return ik === Ik;
+          if (ik = Tk[Fk.toLowerCase()]) return ik === Ik
+        } else if ("number" === typeof Fk) return Fk === Ik;
         return !1
       }
     };
-    var tS = (HS = SS.exports = gS).code = HS.codes = {
+    var Xk = (Fk = kk.exports = Ik).code = Fk.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -374,7 +374,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      bS = HS.aliases = {
+      Tk = Fk.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -396,139 +396,139 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (XS = 97; XS < 123; XS++) tS[String.fromCharCode(XS)] = XS - 32;
-    for (var XS = 48; XS < 58; XS++) tS[XS - 48] = XS;
-    for (XS = 1; XS < 13; XS++) tS["f" + XS] = XS + 111;
-    for (XS = 0; XS < 10; XS++) tS["numpad " + XS] = XS + 96;
-    var xS = HS.names = HS.title = {};
-    for (XS in tS) xS[tS[XS]] = XS;
-    for (var NS in bS) tS[NS] = bS[NS]
+    for (ik = 97; ik < 123; ik++) Xk[String.fromCharCode(ik)] = ik - 32;
+    for (var ik = 48; ik < 58; ik++) Xk[ik - 48] = ik;
+    for (ik = 1; ik < 13; ik++) Xk["f" + ik] = ik + 111;
+    for (ik = 0; ik < 10; ik++) Xk["numpad " + ik] = ik + 96;
+    var yk = Fk.names = Fk.title = {};
+    for (ik in Xk) yk[Xk[ik]] = ik;
+    for (var lk in Tk) Xk[lk] = Tk[lk]
   },
-  39596: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => tS
+  39551: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Xk
     });
-    class tS {
+    class Xk {
       constructor() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-        this.Uy = !1, this.Fy = !1, this.YL = 30, this.Qy = 0, this.HV = 100, this.VG = !1, this.fullscreen = !1, this.sC = function(SS) {}, this.tV = function(SS, HS, gS) {}, this.xV = function() {}, this.WC = function() {}, this.bV = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(SS) {}, this._data = new bS(HS),
-          function(SS) {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+        this.pU = !1, this.WU = !1, this.WG = 30, this.aU = 0, this.dU = 100, this.uH = !1, this.fullscreen = !1, this.VJ = function(kk) {}, this.hU = function(kk, Fk, Ik) {}, this.lC = function() {}, this.PJ = function() {}, this.rU = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(kk) {}, this._data = new Tk(Fk),
+          function(kk) {
             if ("loading" === document.readyState) {
-              var HS = () => {
-                document.removeEventListener("readystatechange", HS), SS()
+              var Fk = () => {
+                document.removeEventListener("readystatechange", Fk), kk()
               };
-              document.addEventListener("readystatechange", HS)
-            } else setTimeout(SS, 0)
+              document.addEventListener("readystatechange", Fk)
+            } else setTimeout(kk, 0)
           }((() => {
-            ! function(SS) {
-              var HS = SS._data,
-                gS = HS.nowObject.now();
-              HS.lastTickStarted = gS, HS.lastFrameStarted = gS, HS.lastRenderStarted = gS, HS.frameCB = () => function(SS) {
-                var HS = SS._data;
-                requestAnimationFrame(HS.frameCB), NS(SS);
-                var gS = HS.nowObject.now(),
-                  tS = gS - HS.lastFrameStarted;
-                if (HS.lastFrameStarted = gS, SS.Qy > 0) {
-                  HS.renderAccum += tS;
-                  var bS = 1e3 / SS.Qy;
-                  if (HS.renderAccum < bS) return;
-                  HS.renderAccum -= bS, HS.renderAccum > bS && (HS.renderAccum = bS)
+            ! function(kk) {
+              var Fk = kk._data,
+                Ik = Fk.nowObject.now();
+              Fk.lastTickStarted = Ik, Fk.lastFrameStarted = Ik, Fk.lastRenderStarted = Ik, Fk.frameCB = () => function(kk) {
+                var Fk = kk._data;
+                requestAnimationFrame(Fk.frameCB), lk(kk);
+                var Ik = Fk.nowObject.now(),
+                  Xk = Ik - Fk.lastFrameStarted;
+                if (Fk.lastFrameStarted = Ik, kk.aU > 0) {
+                  Fk.renderAccum += Xk;
+                  var Tk = 1e3 / kk.aU;
+                  if (Fk.renderAccum < Tk) return;
+                  Fk.renderAccum -= Tk, Fk.renderAccum > Tk && (Fk.renderAccum = Tk)
                 }
-                var XS = gS - HS.lastRenderStarted;
-                HS.lastRenderStarted = gS;
-                var xS = 1e3 / SS.YL,
-                  qS = (gS - HS.lastTickStarted) / xS;
-                qS < 0 && (qS = 0);
-                SS.tV(XS, qS, xS), setTimeout(NS, 0, SS, !0)
-              }(SS), HS.intervalCB = () => NS(SS), requestAnimationFrame(HS.frameCB), HS.pollTime > 0 && (HS.intervalID = setInterval(HS.intervalCB, Math.max(HS.pollTime, 1e3 / SS.YL / 2)))
+                var ik = Ik - Fk.lastRenderStarted;
+                Fk.lastRenderStarted = Ik;
+                var yk = 1e3 / kk.WG,
+                  ak = (Ik - Fk.lastTickStarted) / yk;
+                ak < 0 && (ak = 0);
+                kk.hU(ik, ak, yk), setTimeout(lk, 0, kk, !0)
+              }(kk), Fk.intervalCB = () => lk(kk), requestAnimationFrame(Fk.frameCB), Fk.pollTime > 0 && (Fk.intervalID = setInterval(Fk.intervalCB, Math.max(Fk.pollTime, 1e3 / kk.WG / 2)))
             }(this),
-            function(SS, HS) {
-              if (!HS) return;
-              var gS = !1,
-                tS = !1,
-                bS = SS => {
-                  if (!!SS !== (gS = HS === document.pointerLockElement))
-                    if (SS) {
-                      var tS = HS.requestPointerLock();
-                      tS && tS.catch && tS.catch((SS => {}))
+            function(kk, Fk) {
+              if (!Fk) return;
+              var Ik = !1,
+                Xk = !1,
+                Tk = kk => {
+                  if (!!kk !== (Ik = Fk === document.pointerLockElement))
+                    if (kk) {
+                      var Xk = Fk.requestPointerLock();
+                      Xk && Xk.catch && Xk.catch((kk => {}))
                     } else document.exitPointerLock()
                 },
-                XS = SS => {
-                  !!SS !== (tS = HS === document.fullscreenElement) && (SS ? HS.requestFullscreen ? HS.requestFullscreen() : HS.webkitRequestFullscreen && HS.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
+                ik = kk => {
+                  !!kk !== (Xk = Fk === document.fullscreenElement) && (kk ? Fk.requestFullscreen ? Fk.requestFullscreen() : Fk.webkitRequestFullscreen && Fk.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
                 };
-              document.addEventListener("pointerlockchange", (tS => {
-                gS = HS === document.pointerLockElement, SS.bV(gS)
-              })), document.addEventListener("fullscreenchange", (gS => {
-                tS = HS === document.fullscreenElement, SS.onFullscreenChanged(tS)
-              })), document.addEventListener("pointerlockerror", (tS => {
-                gS = HS === document.pointerLockElement, SS.onPointerLockError(tS)
-              })), Object.defineProperty(SS, "VG", {
-                get: () => gS,
-                set: bS
-              }), Object.defineProperty(SS, "fullscreen", {
-                get: () => tS,
-                set: XS
-              }), HS.addEventListener("click", (HS => {
-                SS.Uy && bS(!0), SS.Fy && XS(!0)
+              document.addEventListener("pointerlockchange", (Xk => {
+                Ik = Fk === document.pointerLockElement, kk.rU(Ik)
+              })), document.addEventListener("fullscreenchange", (Ik => {
+                Xk = Fk === document.fullscreenElement, kk.onFullscreenChanged(Xk)
+              })), document.addEventListener("pointerlockerror", (Xk => {
+                Ik = Fk === document.pointerLockElement, kk.onPointerLockError(Xk)
+              })), Object.defineProperty(kk, "uH", {
+                get: () => Ik,
+                set: Tk
+              }), Object.defineProperty(kk, "fullscreen", {
+                get: () => Xk,
+                set: ik
+              }), Fk.addEventListener("click", (Fk => {
+                kk.pU && Tk(!0), kk.WU && ik(!0)
               }));
-              var xS = () => SS.WC();
+              var yk = () => kk.PJ();
               if (window.ResizeObserver) {
-                new ResizeObserver(xS).observe(HS)
-              } else window.addEventListener("resize", xS)
-            }(this, SS), this.xV()
+                new ResizeObserver(yk).observe(Fk)
+              } else window.addEventListener("resize", yk)
+            }(this, kk), this.lC()
           }))
       }
     }
 
-    function bS() {
-      let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      this.nowObject = performance || Date, this.pollTime = SS, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
+    function Tk() {
+      let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      this.nowObject = performance || Date, this.pollTime = kk, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
     }
-    var XS = 3,
-      xS = 20;
+    var ik = 3,
+      yk = 20;
 
-    function NS(SS) {
-      for (var HS = SS._data, gS = 1e3 / SS.YL, tS = HS.nowObject.now() + xS, bS = 0; HS.nowObject.now() >= HS.lastTickStarted + gS && HS.nowObject.now() < tS && ++bS <= XS;) SS.sC(gS), HS.lastTickStarted += gS;
-      var NS = 5 * (gS + 5),
-        qS = HS.nowObject.now();
-      if (qS - HS.lastTickStarted > NS)
-        for (; qS >= HS.lastTickStarted + gS;) HS.lastTickStarted += gS
+    function lk(kk) {
+      for (var Fk = kk._data, Ik = 1e3 / kk.WG, Xk = Fk.nowObject.now() + yk, Tk = 0; Fk.nowObject.now() >= Fk.lastTickStarted + Ik && Fk.nowObject.now() < Xk && ++Tk <= ik;) kk.VJ(Ik), Fk.lastTickStarted += Ik;
+      var lk = 5 * (Ik + 5),
+        ak = Fk.nowObject.now();
+      if (ak - Fk.lastTickStarted > lk)
+        for (; ak >= Fk.lastTickStarted + Ik;) Fk.lastTickStarted += Ik
     }
   },
-  36721: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => xS
+  36699: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk
     });
-    var tS = gS(64);
-    const bS = tS.useLayoutEffect;
-    const XS = function(SS) {
-      var HS = (0, tS.useRef)(SS);
-      return bS((function() {
-        HS.current = SS
-      })), HS
+    var Xk = Ik(58);
+    const Tk = Xk.useLayoutEffect;
+    const ik = function(kk) {
+      var Fk = (0, Xk.useRef)(kk);
+      return Tk((function() {
+        Fk.current = kk
+      })), Fk
     };
-    var xS = function(SS) {
-      var HS = XS(SS);
-      (0, tS.useEffect)((function() {
-        var SS = function(SS) {
-          var gS;
-          if (null != HS.current && (gS = HS.current(SS)), SS.defaultPrevented && (SS.returnValue = ""), "string" === typeof gS) return SS.returnValue = gS, gS
+    var yk = function(kk) {
+      var Fk = ik(kk);
+      (0, Xk.useEffect)((function() {
+        var kk = function(kk) {
+          var Ik;
+          if (null != Fk.current && (Ik = Fk.current(kk)), kk.defaultPrevented && (kk.returnValue = ""), "string" === typeof Ik) return kk.returnValue = Ik, Ik
         };
-        return window.addEventListener("beforeunload", SS),
+        return window.addEventListener("beforeunload", kk),
           function() {
-            window.removeEventListener("beforeunload", SS)
+            window.removeEventListener("beforeunload", kk)
           }
       }), [])
     }
   },
-  36601: SS => {
-    var HS, gS = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      tS = /OS X/.test(gS),
-      bS = /Opera/.test(gS),
-      XS = !/like Gecko/.test(gS) && !bS,
-      xS = SS.exports = {
-        0: tS ? "<menu>" : "<UNK>",
+  36580: kk => {
+    var Fk, Ik = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      Xk = /OS X/.test(Ik),
+      Tk = /Opera/.test(Ik),
+      ik = !/like Gecko/.test(Ik) && !Tk,
+      yk = kk.exports = {
+        0: Xk ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -571,7 +571,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: tS ? "<meta>" : "<menu>",
+        93: Xk ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -594,7 +594,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: tS && XS ? "-" : "<volume-mute>",
+        173: Xk && ik ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -620,7 +620,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: bS ? "`" : "<unicode>",
+        231: Tk ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -631,183 +631,183 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (HS = 58; HS < 65; ++HS) xS[HS] = String.fromCharCode(HS);
-    for (HS = 48; HS < 58; ++HS) xS[HS] = HS - 48 + "";
-    for (HS = 65; HS < 91; ++HS) xS[HS] = String.fromCharCode(HS);
-    for (HS = 96; HS < 106; ++HS) xS[HS] = "<num-" + (HS - 96) + ">";
-    for (HS = 112; HS < 136; ++HS) xS[HS] = "F" + (HS - 111)
+    for (Fk = 58; Fk < 65; ++Fk) yk[Fk] = String.fromCharCode(Fk);
+    for (Fk = 48; Fk < 58; ++Fk) yk[Fk] = Fk - 48 + "";
+    for (Fk = 65; Fk < 91; ++Fk) yk[Fk] = String.fromCharCode(Fk);
+    for (Fk = 96; Fk < 106; ++Fk) yk[Fk] = "<num-" + (Fk - 96) + ">";
+    for (Fk = 112; Fk < 136; ++Fk) yk[Fk] = "F" + (Fk - 111)
   },
-  39009: (SS, HS, gS) => {
-    function tS(SS, HS, gS, tS, bS) {
-      var XS = {};
-      return Object.keys(tS).forEach((function(SS) {
-        XS[SS] = tS[SS]
-      })), XS.enumerable = !!XS.enumerable, XS.configurable = !!XS.configurable, ("value" in XS || XS.initializer) && (XS.writable = !0), XS = gS.slice().reverse().reduce((function(gS, tS) {
-        return tS(SS, HS, gS) || gS
-      }), XS), bS && void 0 !== XS.initializer && (XS.value = XS.initializer ? XS.initializer.call(bS) : void 0, XS.initializer = void 0), void 0 === XS.initializer && (Object.defineProperty(SS, HS, XS), XS = null), XS
+  38967: (kk, Fk, Ik) => {
+    function Xk(kk, Fk, Ik, Xk, Tk) {
+      var ik = {};
+      return Object.keys(Xk).forEach((function(kk) {
+        ik[kk] = Xk[kk]
+      })), ik.enumerable = !!ik.enumerable, ik.configurable = !!ik.configurable, ("value" in ik || ik.initializer) && (ik.writable = !0), ik = Ik.slice().reverse().reduce((function(Ik, Xk) {
+        return Xk(kk, Fk, Ik) || Ik
+      }), ik), Tk && void 0 !== ik.initializer && (ik.value = ik.initializer ? ik.initializer.call(Tk) : void 0, ik.initializer = void 0), void 0 === ik.initializer && (Object.defineProperty(kk, Fk, ik), ik = null), ik
     }
-    gS.d(HS, {
-      c: () => tS
+    Ik.d(Fk, {
+      b: () => Xk
     })
   },
-  39006: (SS, HS, gS) => {
-    function tS(SS, HS, gS, tS) {
-      gS && Object.defineProperty(SS, HS, {
-        enumerable: gS.enumerable,
-        configurable: gS.configurable,
-        writable: gS.writable,
-        value: gS.initializer ? gS.initializer.call(tS) : void 0
+  38960: (kk, Fk, Ik) => {
+    function Xk(kk, Fk, Ik, Xk) {
+      Ik && Object.defineProperty(kk, Fk, {
+        enumerable: Ik.enumerable,
+        configurable: Ik.configurable,
+        writable: Ik.writable,
+        value: Ik.initializer ? Ik.initializer.call(Xk) : void 0
       })
     }
-    gS.d(HS, {
-      b: () => tS
+    Ik.d(Fk, {
+      e: () => Xk
     })
   },
-  38683: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => XS
+  38666: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik
     });
-    var tS = gS(38687);
-    const bS = (SS, HS, gS) => SS ? SS.getClassName && "Mesh" === SS.getClassName() ? null : !SS.getClassName || "SubMesh" !== SS.getClassName() && "PhysicsBody" !== SS.getClassName() ? SS.clone ? SS.clone() : Array.isArray(SS) ? SS.slice() : gS && "object" === typeof SS ? {
-      ...SS
-    } : null : SS.clone(HS) : null;
-    class XS {
-      static DeepCopy(SS, HS, gS, XS) {
-        let xS = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const NS = function(SS) {
-          const HS = [];
+    var Xk = Ik(38674);
+    const Tk = (kk, Fk, Ik) => kk ? kk.getClassName && "Mesh" === kk.getClassName() ? null : !kk.getClassName || "SubMesh" !== kk.getClassName() && "PhysicsBody" !== kk.getClassName() ? kk.clone ? kk.clone() : Array.isArray(kk) ? kk.slice() : Ik && "object" === typeof kk ? {
+      ...kk
+    } : null : kk.clone(Fk) : null;
+    class ik {
+      static DeepCopy(kk, Fk, Ik, ik) {
+        let yk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const lk = function(kk) {
+          const Fk = [];
           do {
-            const gS = Object.getOwnPropertyNames(SS);
-            for (const SS of gS) - 1 === HS.indexOf(SS) && HS.push(SS)
-          } while (SS = Object.getPrototypeOf(SS));
-          return HS
-        }(SS);
-        for (const uS of NS) {
-          if ("_" === uS[0] && (!XS || -1 === XS.indexOf(uS))) continue;
-          if (uS.endsWith("Observable")) continue;
-          if (gS && -1 !== gS.indexOf(uS)) continue;
-          const NS = SS[uS],
-            IS = typeof NS;
-          if ("function" !== IS) try {
-            if ("object" === IS)
-              if (NS instanceof Uint8Array) HS[uS] = Uint8Array.from(NS);
-              else if (NS instanceof Array) {
-              if (HS[uS] = [], NS.length > 0)
-                if ("object" == typeof NS[0])
-                  for (let SS = 0; SS < NS.length; SS++) {
-                    const gS = bS(NS[SS], HS, xS); - 1 === HS[uS].indexOf(gS) && HS[uS].push(gS)
-                  } else HS[uS] = NS.slice(0)
-            } else HS[uS] = bS(NS, HS, xS);
-            else HS[uS] = NS
-          } catch (qS) {
-            tS.b.Warn(qS.message)
+            const Ik = Object.getOwnPropertyNames(kk);
+            for (const kk of Ik) - 1 === Fk.indexOf(kk) && Fk.push(kk)
+          } while (kk = Object.getPrototypeOf(kk));
+          return Fk
+        }(kk);
+        for (const qk of lk) {
+          if ("_" === qk[0] && (!ik || -1 === ik.indexOf(qk))) continue;
+          if (qk.endsWith("Observable")) continue;
+          if (Ik && -1 !== Ik.indexOf(qk)) continue;
+          const lk = kk[qk],
+            Lk = typeof lk;
+          if ("function" !== Lk) try {
+            if ("object" === Lk)
+              if (lk instanceof Uint8Array) Fk[qk] = Uint8Array.from(lk);
+              else if (lk instanceof Array) {
+              if (Fk[qk] = [], lk.length > 0)
+                if ("object" == typeof lk[0])
+                  for (let kk = 0; kk < lk.length; kk++) {
+                    const Ik = Tk(lk[kk], Fk, yk); - 1 === Fk[qk].indexOf(Ik) && Fk[qk].push(Ik)
+                  } else Fk[qk] = lk.slice(0)
+            } else Fk[qk] = Tk(lk, Fk, yk);
+            else Fk[qk] = lk
+          } catch (ak) {
+            Xk.e.Warn(ak.message)
           }
         }
       }
     }
   },
-  38715: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => bS,
-      f: () => XS,
-      j: () => xS,
-      n: () => NS
+  38706: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Tk,
+      c: () => ik,
+      d: () => yk,
+      e: () => lk
     });
-    var tS = gS(37300);
-    class bS {
-      constructor(SS, HS, gS) {
-        this.gradient = SS, this.color1 = HS, this.color2 = gS
+    var Xk = Ik(37331);
+    class Tk {
+      constructor(kk, Fk, Ik) {
+        this.gradient = kk, this.color1 = Fk, this.color2 = Ik
       }
-      getColorToRef(SS) {
-        this.color2 ? tS.c.LerpToRef(this.color1, this.color2, Math.random(), SS) : SS.dJ(this.color1)
-      }
-    }
-    class XS {
-      constructor(SS, HS) {
-        this.gradient = SS, this.color = HS
+      getColorToRef(kk) {
+        this.color2 ? Xk.h.LerpToRef(this.color1, this.color2, Math.random(), kk) : kk.kS(this.color1)
       }
     }
-    class xS {
-      constructor(SS, HS, gS) {
-        this.gradient = SS, this.factor1 = HS, this.factor2 = gS
+    class ik {
+      constructor(kk, Fk) {
+        this.gradient = kk, this.color = Fk
+      }
+    }
+    class yk {
+      constructor(kk, Fk, Ik) {
+        this.gradient = kk, this.factor1 = Fk, this.factor2 = Ik
       }
       getFactor() {
         return void 0 === this.factor2 || this.factor2 === this.factor1 ? this.factor1 : this.factor1 + (this.factor2 - this.factor1) * Math.random()
       }
     }
-    class NS {
-      static GetCurrentGradient(SS, HS, gS) {
-        if (HS[0].gradient > SS) return void gS(HS[0], HS[0], 1);
-        for (let bS = 0; bS < HS.length - 1; bS++) {
-          const tS = HS[bS],
-            XS = HS[bS + 1];
-          if (SS >= tS.gradient && SS <= XS.gradient) {
-            return void gS(tS, XS, (SS - tS.gradient) / (XS.gradient - tS.gradient))
+    class lk {
+      static GetCurrentGradient(kk, Fk, Ik) {
+        if (Fk[0].gradient > kk) return void Ik(Fk[0], Fk[0], 1);
+        for (let Tk = 0; Tk < Fk.length - 1; Tk++) {
+          const Xk = Fk[Tk],
+            ik = Fk[Tk + 1];
+          if (kk >= Xk.gradient && kk <= ik.gradient) {
+            return void Ik(Xk, ik, (kk - Xk.gradient) / (ik.gradient - Xk.gradient))
           }
         }
-        const tS = HS.length - 1;
-        gS(HS[tS], HS[tS], 1)
+        const Xk = Fk.length - 1;
+        Ik(Fk[Xk], Fk[Xk], 1)
       }
     }
   },
-  38687: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => tS
+  38674: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Xk
     });
-    class tS {
-      static _CheckLimit(SS, HS) {
-        let gS = tS._LogLimitOutputs[SS];
-        return gS ? gS.current++ : (gS = {
-          limit: HS,
+    class Xk {
+      static _CheckLimit(kk, Fk) {
+        let Ik = Xk._LogLimitOutputs[kk];
+        return Ik ? Ik.current++ : (Ik = {
+          limit: Fk,
           current: 1
-        }, tS._LogLimitOutputs[SS] = gS), gS.current <= gS.limit
+        }, Xk._LogLimitOutputs[kk] = Ik), Ik.current <= Ik.limit
       }
-      static _GenerateLimitMessage(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const gS = tS._LogLimitOutputs[SS];
-        if (!gS || !tS.MessageLimitReached) return;
-        const bS = this._Levels[HS];
-        gS.current === gS.limit && tS[bS.name](tS.MessageLimitReached.replace(/%LIMIT%/g, "" + gS.limit).replace(/%TYPE%/g, bS.name ?? ""))
+      static _GenerateLimitMessage(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const Ik = Xk._LogLimitOutputs[kk];
+        if (!Ik || !Xk.MessageLimitReached) return;
+        const Tk = this._Levels[Fk];
+        Ik.current === Ik.limit && Xk[Tk.name](Xk.MessageLimitReached.replace(/%LIMIT%/g, "" + Ik.limit).replace(/%TYPE%/g, Tk.name ?? ""))
       }
-      static _AddLogEntry(SS) {
-        tS._LogCache = SS + tS._LogCache, tS.OnNewCacheEntry && tS.OnNewCacheEntry(SS)
+      static _AddLogEntry(kk) {
+        Xk._LogCache = kk + Xk._LogCache, Xk.OnNewCacheEntry && Xk.OnNewCacheEntry(kk)
       }
-      static _FormatMessage(SS) {
-        const HS = SS => SS < 10 ? "0" + SS : "" + SS,
-          gS = new Date;
-        return "[" + HS(gS.getHours()) + ":" + HS(gS.getMinutes()) + ":" + HS(gS.getSeconds()) + "]: " + SS
+      static _FormatMessage(kk) {
+        const Fk = kk => kk < 10 ? "0" + kk : "" + kk,
+          Ik = new Date;
+        return "[" + Fk(Ik.getHours()) + ":" + Fk(Ik.getMinutes()) + ":" + Fk(Ik.getSeconds()) + "]: " + kk
       }
-      static _LogDisabled(SS, HS) {}
+      static _LogDisabled(kk, Fk) {}
       static _LogEnabled() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          HS = arguments.length > 1 ? arguments[1] : void 0,
-          gS = arguments.length > 2 ? arguments[2] : void 0;
-        const bS = Array.isArray(HS) ? HS[0] : HS;
-        if (void 0 !== gS && !tS._CheckLimit(bS, gS)) return;
-        const XS = tS._FormatMessage(bS),
-          xS = this._Levels[SS],
-          NS = Array.isArray(HS) ? HS.slice(1) : [];
-        xS.logFunc && xS.logFunc("BJS - " + XS, ...NS);
-        const qS = `<div style='color:${xS.color}'>${XS}</div><br>`;
-        tS._AddLogEntry(qS), tS._GenerateLimitMessage(bS, SS)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Fk = arguments.length > 1 ? arguments[1] : void 0,
+          Ik = arguments.length > 2 ? arguments[2] : void 0;
+        const Tk = Array.isArray(Fk) ? Fk[0] : Fk;
+        if (void 0 !== Ik && !Xk._CheckLimit(Tk, Ik)) return;
+        const ik = Xk._FormatMessage(Tk),
+          yk = this._Levels[kk],
+          lk = Array.isArray(Fk) ? Fk.slice(1) : [];
+        yk.logFunc && yk.logFunc("BJS - " + ik, ...lk);
+        const ak = `<div style='color:${yk.color}'>${ik}</div><br>`;
+        Xk._AddLogEntry(ak), Xk._GenerateLimitMessage(Tk, kk)
       }
       static get LogCache() {
-        return tS._LogCache
+        return Xk._LogCache
       }
       static ClearLogCache() {
-        tS._LogCache = "", tS._LogLimitOutputs = {}, tS.errorsCount = 0
+        Xk._LogCache = "", Xk._LogLimitOutputs = {}, Xk.errorsCount = 0
       }
-      static set LogLevels(SS) {
-        tS.Log = tS._LogDisabled, tS.Warn = tS._LogDisabled, tS.Error = tS._LogDisabled;
-        const HS = [tS.MessageLogLevel, tS.WarningLogLevel, tS.ErrorLogLevel];
-        for (const gS of HS)
-          if ((SS & gS) === gS) {
-            const SS = this._Levels[gS];
-            tS[SS.name] = tS._LogEnabled.bind(tS, gS)
+      static set LogLevels(kk) {
+        Xk.Log = Xk._LogDisabled, Xk.Warn = Xk._LogDisabled, Xk.Error = Xk._LogDisabled;
+        const Fk = [Xk.MessageLogLevel, Xk.WarningLogLevel, Xk.ErrorLogLevel];
+        for (const Ik of Fk)
+          if ((kk & Ik) === Ik) {
+            const kk = this._Levels[Ik];
+            Xk[kk.name] = Xk._LogEnabled.bind(Xk, Ik)
           }
       }
     }
-    tS.NoneLogLevel = 0, tS.MessageLogLevel = 1, tS.WarningLogLevel = 2, tS.ErrorLogLevel = 4, tS.AllLogLevel = 7, tS.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", tS._LogCache = "", tS._LogLimitOutputs = {}, tS._Levels = [{}, {
+    Xk.NoneLogLevel = 0, Xk.MessageLogLevel = 1, Xk.WarningLogLevel = 2, Xk.ErrorLogLevel = 4, Xk.AllLogLevel = 7, Xk.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Xk._LogCache = "", Xk._LogLimitOutputs = {}, Xk._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -819,42 +819,42 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], tS.errorsCount = 0, tS.Log = tS._LogEnabled.bind(tS, tS.MessageLogLevel), tS.Warn = tS._LogEnabled.bind(tS, tS.WarningLogLevel), tS.Error = tS._LogEnabled.bind(tS, tS.ErrorLogLevel)
+    }], Xk.errorsCount = 0, Xk.Log = Xk._LogEnabled.bind(Xk, Xk.MessageLogLevel), Xk.Warn = Xk._LogEnabled.bind(Xk, Xk.WarningLogLevel), Xk.Error = Xk._LogEnabled.bind(Xk, Xk.ErrorLogLevel)
   },
-  38721: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => xS
+  38708: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk
     });
-    var tS = gS(37117),
-      bS = gS(37149),
-      XS = gS(38683);
-    class xS {
+    var Xk = Ik(37153),
+      Tk = Ik(37189),
+      ik = Ik(38666);
+    class yk {
       constructor() {
-        this.direction1 = new tS.n(0, 1, 0), this.direction2 = new tS.n(0, 1, 0), this.minEmitBox = new tS.n(-.5, -.5, -.5), this.maxEmitBox = new tS.n(.5, .5, .5)
+        this.direction1 = new Xk.t(0, 1, 0), this.direction2 = new Xk.t(0, 1, 0), this.minEmitBox = new Xk.t(-.5, -.5, -.5), this.maxEmitBox = new Xk.t(.5, .5, .5)
       }
-      startDirectionFunction(SS, HS, gS, XS) {
-        const xS = (0, bS.RandomRange)(this.direction1.x, this.direction2.x),
-          NS = (0, bS.RandomRange)(this.direction1.y, this.direction2.y),
-          qS = (0, bS.RandomRange)(this.direction1.z, this.direction2.z);
-        if (XS) return HS.x = xS, HS.y = NS, void(HS.z = qS);
-        tS.n.TransformNormalFromFloatsToRef(xS, NS, qS, SS, HS)
+      startDirectionFunction(kk, Fk, Ik, ik) {
+        const yk = (0, Tk.RandomRange)(this.direction1.x, this.direction2.x),
+          lk = (0, Tk.RandomRange)(this.direction1.y, this.direction2.y),
+          ak = (0, Tk.RandomRange)(this.direction1.z, this.direction2.z);
+        if (ik) return Fk.x = yk, Fk.y = lk, void(Fk.z = ak);
+        Xk.t.TransformNormalFromFloatsToRef(yk, lk, ak, kk, Fk)
       }
-      startPositionFunction(SS, HS, gS, XS) {
-        const xS = (0, bS.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
-          NS = (0, bS.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
-          qS = (0, bS.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
-        if (XS) return HS.x = xS, HS.y = NS, void(HS.z = qS);
-        tS.n.TransformCoordinatesFromFloatsToRef(xS, NS, qS, SS, HS)
+      startPositionFunction(kk, Fk, Ik, ik) {
+        const yk = (0, Tk.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
+          lk = (0, Tk.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
+          ak = (0, Tk.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
+        if (ik) return Fk.x = yk, Fk.y = lk, void(Fk.z = ak);
+        Xk.t.TransformCoordinatesFromFloatsToRef(yk, lk, ak, kk, Fk)
       }
       clone() {
-        const SS = new xS;
-        return XS.d.DeepCopy(this, SS), SS
+        const kk = new yk;
+        return ik.c.DeepCopy(this, kk), kk
       }
-      applyToShader(SS) {
-        SS.setVector3("direction1", this.direction1), SS.setVector3("direction2", this.direction2), SS.setVector3("minEmitBox", this.minEmitBox), SS.setVector3("maxEmitBox", this.maxEmitBox)
+      applyToShader(kk) {
+        kk.setVector3("direction1", this.direction1), kk.setVector3("direction2", this.direction2), kk.setVector3("minEmitBox", this.minEmitBox), kk.setVector3("maxEmitBox", this.maxEmitBox)
       }
-      buildUniformLayout(SS) {
-        SS.addUniform("direction1", 3), SS.addUniform("direction2", 3), SS.addUniform("minEmitBox", 3), SS.addUniform("maxEmitBox", 3)
+      buildUniformLayout(kk) {
+        kk.addUniform("direction1", 3), kk.addUniform("direction2", 3), kk.addUniform("minEmitBox", 3), kk.addUniform("maxEmitBox", 3)
       }
       getEffectDefines() {
         return "#define BOXEMITTER"
@@ -863,54 +863,54 @@ export const modules = {
         return "BoxParticleEmitter"
       }
       serialize() {
-        const SS = {};
-        return SS.type = this.getClassName(), SS.direction1 = this.direction1.lgS(), SS.direction2 = this.direction2.lgS(), SS.minEmitBox = this.minEmitBox.lgS(), SS.maxEmitBox = this.maxEmitBox.lgS(), SS
+        const kk = {};
+        return kk.type = this.getClassName(), kk.direction1 = this.direction1.iXk(), kk.direction2 = this.direction2.iXk(), kk.minEmitBox = this.minEmitBox.iXk(), kk.maxEmitBox = this.maxEmitBox.iXk(), kk
       }
-      parse(SS) {
-        tS.n.FromArrayToRef(SS.direction1, 0, this.direction1), tS.n.FromArrayToRef(SS.direction2, 0, this.direction2), tS.n.FromArrayToRef(SS.minEmitBox, 0, this.minEmitBox), tS.n.FromArrayToRef(SS.maxEmitBox, 0, this.maxEmitBox)
+      parse(kk) {
+        Xk.t.FromArrayToRef(kk.direction1, 0, this.direction1), Xk.t.FromArrayToRef(kk.direction2, 0, this.direction2), Xk.t.FromArrayToRef(kk.minEmitBox, 0, this.minEmitBox), Xk.t.FromArrayToRef(kk.maxEmitBox, 0, this.maxEmitBox)
       }
     }
   },
-  38678: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => NS,
-      e: () => xS
+  38661: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => lk,
+      e: () => yk
     });
-    var tS = gS(37117),
-      bS = gS(37149),
-      XS = gS(38683);
-    class xS {
+    var Xk = Ik(37153),
+      Tk = Ik(37189),
+      ik = Ik(38666);
+    class yk {
       constructor() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          bS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.radius = SS, this.height = HS, this.radiusRange = gS, this.directionRandomizer = bS, this._tempVector = tS.n.Zero()
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          Tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.radius = kk, this.height = Fk, this.radiusRange = Ik, this.directionRandomizer = Tk, this._tempVector = Xk.t.Zero()
       }
-      startDirectionFunction(SS, HS, gS, XS, xS) {
-        gS.position.subtractToRef(SS.getTranslation(), this._tempVector), this._tempVector.normalize(), tS.n.TransformNormalToRef(this._tempVector, xS, this._tempVector);
-        const NS = (0, bS.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
-        let qS = Math.atan2(this._tempVector.x, this._tempVector.z);
-        qS += (0, bS.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = NS, this._tempVector.x = Math.sin(qS), this._tempVector.z = Math.cos(qS), this._tempVector.normalize(), XS ? HS.dJ(this._tempVector) : tS.n.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, SS, HS)
+      startDirectionFunction(kk, Fk, Ik, ik, yk) {
+        Ik.position.subtractToRef(kk.getTranslation(), this._tempVector), this._tempVector.normalize(), Xk.t.TransformNormalToRef(this._tempVector, yk, this._tempVector);
+        const lk = (0, Tk.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
+        let ak = Math.atan2(this._tempVector.x, this._tempVector.z);
+        ak += (0, Tk.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = lk, this._tempVector.x = Math.sin(ak), this._tempVector.z = Math.cos(ak), this._tempVector.normalize(), ik ? Fk.kS(this._tempVector) : Xk.t.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, kk, Fk)
       }
-      startPositionFunction(SS, HS, gS, XS) {
-        const xS = (0, bS.RandomRange)(-this.height / 2, this.height / 2),
-          NS = (0, bS.RandomRange)(0, 2 * Math.PI),
-          qS = (0, bS.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
-          uS = Math.sqrt(qS) * this.radius,
-          IS = uS * Math.cos(NS),
-          fS = uS * Math.sin(NS);
-        XS ? HS.I5(IS, xS, fS) : tS.n.TransformCoordinatesFromFloatsToRef(IS, xS, fS, SS, HS)
+      startPositionFunction(kk, Fk, Ik, ik) {
+        const yk = (0, Tk.RandomRange)(-this.height / 2, this.height / 2),
+          lk = (0, Tk.RandomRange)(0, 2 * Math.PI),
+          ak = (0, Tk.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
+          qk = Math.sqrt(ak) * this.radius,
+          Lk = qk * Math.cos(lk),
+          tk = qk * Math.sin(lk);
+        ik ? Fk.t5(Lk, yk, tk) : Xk.t.TransformCoordinatesFromFloatsToRef(Lk, yk, tk, kk, Fk)
       }
       clone() {
-        const SS = new xS(this.radius, this.directionRandomizer);
-        return XS.d.DeepCopy(this, SS), SS
+        const kk = new yk(this.radius, this.directionRandomizer);
+        return ik.c.DeepCopy(this, kk), kk
       }
-      applyToShader(SS) {
-        SS.setFloat("radius", this.radius), SS.setFloat("height", this.height), SS.setFloat("radiusRange", this.radiusRange), SS.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(kk) {
+        kk.setFloat("radius", this.radius), kk.setFloat("height", this.height), kk.setFloat("radiusRange", this.radiusRange), kk.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(SS) {
-        SS.addUniform("radius", 1), SS.addUniform("height", 1), SS.addUniform("radiusRange", 1), SS.addUniform("directionRandomizer", 1)
+      buildUniformLayout(kk) {
+        kk.addUniform("radius", 1), kk.addUniform("height", 1), kk.addUniform("radiusRange", 1), kk.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER"
@@ -919,37 +919,37 @@ export const modules = {
         return "CylinderParticleEmitter"
       }
       serialize() {
-        const SS = {};
-        return SS.type = this.getClassName(), SS.radius = this.radius, SS.height = this.height, SS.radiusRange = this.radiusRange, SS.directionRandomizer = this.directionRandomizer, SS
+        const kk = {};
+        return kk.type = this.getClassName(), kk.radius = this.radius, kk.height = this.height, kk.radiusRange = this.radiusRange, kk.directionRandomizer = this.directionRandomizer, kk
       }
-      parse(SS) {
-        this.radius = SS.radius, this.height = SS.height, this.radiusRange = SS.radiusRange, this.directionRandomizer = SS.directionRandomizer
+      parse(kk) {
+        this.radius = kk.radius, this.height = kk.height, this.radiusRange = kk.radiusRange, this.directionRandomizer = kk.directionRandomizer
       }
     }
-    class NS extends xS {
+    class lk extends yk {
       constructor() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          bS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new tS.n(0, 1, 0),
-          XS = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new tS.n(0, 1, 0);
-        super(SS, HS, gS), this.direction1 = bS, this.direction2 = XS
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          Tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Xk.t(0, 1, 0),
+          ik = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new Xk.t(0, 1, 0);
+        super(kk, Fk, Ik), this.direction1 = Tk, this.direction2 = ik
       }
-      startDirectionFunction(SS, HS, gS, XS) {
-        const xS = (0, bS.RandomRange)(this.direction1.x, this.direction2.x),
-          NS = (0, bS.RandomRange)(this.direction1.y, this.direction2.y),
-          qS = (0, bS.RandomRange)(this.direction1.z, this.direction2.z);
-        XS ? HS.I5(xS, NS, qS) : tS.n.TransformNormalFromFloatsToRef(xS, NS, qS, SS, HS)
+      startDirectionFunction(kk, Fk, Ik, ik) {
+        const yk = (0, Tk.RandomRange)(this.direction1.x, this.direction2.x),
+          lk = (0, Tk.RandomRange)(this.direction1.y, this.direction2.y),
+          ak = (0, Tk.RandomRange)(this.direction1.z, this.direction2.z);
+        ik ? Fk.t5(yk, lk, ak) : Xk.t.TransformNormalFromFloatsToRef(yk, lk, ak, kk, Fk)
       }
       clone() {
-        const SS = new NS(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
-        return XS.d.DeepCopy(this, SS), SS
+        const kk = new lk(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
+        return ik.c.DeepCopy(this, kk), kk
       }
-      applyToShader(SS) {
-        SS.setFloat("radius", this.radius), SS.setFloat("height", this.height), SS.setFloat("radiusRange", this.radiusRange), SS.setVector3("direction1", this.direction1), SS.setVector3("direction2", this.direction2)
+      applyToShader(kk) {
+        kk.setFloat("radius", this.radius), kk.setFloat("height", this.height), kk.setFloat("radiusRange", this.radiusRange), kk.setVector3("direction1", this.direction1), kk.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(SS) {
-        SS.addUniform("radius", 1), SS.addUniform("height", 1), SS.addUniform("radiusRange", 1), SS.addUniform("direction1", 3), SS.addUniform("direction2", 3)
+      buildUniformLayout(kk) {
+        kk.addUniform("radius", 1), kk.addUniform("height", 1), kk.addUniform("radiusRange", 1), kk.addUniform("direction1", 3), kk.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER\n#define DIRECTEDCYLINDEREMITTER"
@@ -958,239 +958,239 @@ export const modules = {
         return "CylinderDirectedParticleEmitter"
       }
       serialize() {
-        const SS = super.serialize();
-        return SS.direction1 = this.direction1.lgS(), SS.direction2 = this.direction2.lgS(), SS
+        const kk = super.serialize();
+        return kk.direction1 = this.direction1.iXk(), kk.direction2 = this.direction2.iXk(), kk
       }
-      parse(SS) {
-        super.parse(SS), tS.n.FromArrayToRef(SS.direction1, 0, this.direction1), tS.n.FromArrayToRef(SS.direction2, 0, this.direction2)
+      parse(kk) {
+        super.parse(kk), Xk.t.FromArrayToRef(kk.direction1, 0, this.direction1), Xk.t.FromArrayToRef(kk.direction2, 0, this.direction2)
       }
     }
   },
-  38809: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => fS
+  38789: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => tk
     });
-    const tS = .5 * (Math.sqrt(3) - 1),
-      bS = (3 - Math.sqrt(3)) / 6,
-      XS = 1 / 3,
-      xS = 1 / 6,
-      NS = (Math.sqrt(5) - 1) / 4,
-      qS = (5 - Math.sqrt(5)) / 20,
-      uS = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
-      IS = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
-    const fS = class {
+    const Xk = .5 * (Math.sqrt(3) - 1),
+      Tk = (3 - Math.sqrt(3)) / 6,
+      ik = 1 / 3,
+      yk = 1 / 6,
+      lk = (Math.sqrt(5) - 1) / 4,
+      ak = (5 - Math.sqrt(5)) / 20,
+      qk = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
+      Lk = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
+    const tk = class {
       constructor() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
-        const HS = "function" == typeof SS ? SS : function(SS) {
-          let HS = 0,
-            gS = 0,
-            tS = 0,
-            bS = 1;
-          const XS = function() {
-            let SS = 4022871197;
-            return function(HS) {
-              HS = HS.toString();
-              for (let gS = 0; gS < HS.length; gS++) {
-                SS += HS.charCodeAt(gS);
-                let tS = .02519603282416938 * SS;
-                SS = tS >>> 0, tS -= SS, tS *= SS, SS = tS >>> 0, tS -= SS, SS += 4294967296 * tS
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
+        const Fk = "function" == typeof kk ? kk : function(kk) {
+          let Fk = 0,
+            Ik = 0,
+            Xk = 0,
+            Tk = 1;
+          const ik = function() {
+            let kk = 4022871197;
+            return function(Fk) {
+              Fk = Fk.toString();
+              for (let Ik = 0; Ik < Fk.length; Ik++) {
+                kk += Fk.charCodeAt(Ik);
+                let Xk = .02519603282416938 * kk;
+                kk = Xk >>> 0, Xk -= kk, Xk *= kk, kk = Xk >>> 0, Xk -= kk, kk += 4294967296 * Xk
               }
-              return 2.3283064365386963e-10 * (SS >>> 0)
+              return 2.3283064365386963e-10 * (kk >>> 0)
             }
           }();
-          HS = XS(" "), gS = XS(" "), tS = XS(" "), HS -= XS(SS), HS < 0 && (HS += 1);
-          gS -= XS(SS), gS < 0 && (gS += 1);
-          tS -= XS(SS), tS < 0 && (tS += 1);
+          Fk = ik(" "), Ik = ik(" "), Xk = ik(" "), Fk -= ik(kk), Fk < 0 && (Fk += 1);
+          Ik -= ik(kk), Ik < 0 && (Ik += 1);
+          Xk -= ik(kk), Xk < 0 && (Xk += 1);
           return function() {
-            const SS = 2091639 * HS + 2.3283064365386963e-10 * bS;
-            return HS = gS, gS = tS, tS = SS - (bS = 0 | SS)
+            const kk = 2091639 * Fk + 2.3283064365386963e-10 * Tk;
+            return Fk = Ik, Ik = Xk, Xk = kk - (Tk = 0 | kk)
           }
-        }(SS);
-        this.p = function(SS) {
-          const HS = new Uint8Array(256);
-          for (let gS = 0; gS < 256; gS++) HS[gS] = gS;
-          for (let gS = 0; gS < 255; gS++) {
-            const tS = gS + ~~(SS() * (256 - gS)),
-              bS = HS[gS];
-            HS[gS] = HS[tS], HS[tS] = bS
+        }(kk);
+        this.p = function(kk) {
+          const Fk = new Uint8Array(256);
+          for (let Ik = 0; Ik < 256; Ik++) Fk[Ik] = Ik;
+          for (let Ik = 0; Ik < 255; Ik++) {
+            const Xk = Ik + ~~(kk() * (256 - Ik)),
+              Tk = Fk[Ik];
+            Fk[Ik] = Fk[Xk], Fk[Xk] = Tk
           }
-          return HS
-        }(HS), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
-        for (let gS = 0; gS < 512; gS++) this.perm[gS] = this.p[255 & gS], this.permMod12[gS] = this.perm[gS] % 12
+          return Fk
+        }(Fk), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
+        for (let Ik = 0; Ik < 512; Ik++) this.perm[Ik] = this.p[255 & Ik], this.permMod12[Ik] = this.perm[Ik] % 12
       }
-      noise2D(SS, HS) {
-        const gS = this.permMod12,
-          XS = this.perm;
-        let xS = 0,
-          NS = 0,
-          qS = 0;
-        const IS = (SS + HS) * tS,
-          fS = Math.floor(SS + IS),
-          kS = Math.floor(HS + IS),
-          aS = (fS + kS) * bS,
-          KS = SS - (fS - aS),
-          jS = HS - (kS - aS);
-        let GS, CS;
-        KS > jS ? (GS = 1, CS = 0) : (GS = 0, CS = 1);
-        const nS = KS - GS + bS,
-          PS = jS - CS + bS,
-          QS = KS - 1 + 2 * bS,
-          DS = jS - 1 + 2 * bS,
-          wS = 255 & fS,
-          hS = 255 & kS;
-        let ZS = .5 - KS * KS - jS * jS;
-        if (ZS >= 0) {
-          const SS = 3 * gS[wS + XS[hS]];
-          ZS *= ZS, xS = ZS * ZS * (uS[SS] * KS + uS[SS + 1] * jS)
+      noise2D(kk, Fk) {
+        const Ik = this.permMod12,
+          ik = this.perm;
+        let yk = 0,
+          lk = 0,
+          ak = 0;
+        const Lk = (kk + Fk) * Xk,
+          tk = Math.floor(kk + Lk),
+          Zk = Math.floor(Fk + Lk),
+          jk = (tk + Zk) * Tk,
+          ek = kk - (tk - jk),
+          wk = Fk - (Zk - jk);
+        let Hk, Jk;
+        ek > wk ? (Hk = 1, Jk = 0) : (Hk = 0, Jk = 1);
+        const xk = ek - Hk + Tk,
+          Pk = wk - Jk + Tk,
+          Kk = ek - 1 + 2 * Tk,
+          Qk = wk - 1 + 2 * Tk,
+          sk = 255 & tk,
+          Vk = 255 & Zk;
+        let zk = .5 - ek * ek - wk * wk;
+        if (zk >= 0) {
+          const kk = 3 * Ik[sk + ik[Vk]];
+          zk *= zk, yk = zk * zk * (qk[kk] * ek + qk[kk + 1] * wk)
         }
-        let JS = .5 - nS * nS - PS * PS;
-        if (JS >= 0) {
-          const SS = 3 * gS[wS + GS + XS[hS + CS]];
-          JS *= JS, NS = JS * JS * (uS[SS] * nS + uS[SS + 1] * PS)
+        let Sk = .5 - xk * xk - Pk * Pk;
+        if (Sk >= 0) {
+          const kk = 3 * Ik[sk + Hk + ik[Vk + Jk]];
+          Sk *= Sk, lk = Sk * Sk * (qk[kk] * xk + qk[kk + 1] * Pk)
         }
-        let OS = .5 - QS * QS - DS * DS;
-        if (OS >= 0) {
-          const SS = 3 * gS[wS + 1 + XS[hS + 1]];
-          OS *= OS, qS = OS * OS * (uS[SS] * QS + uS[SS + 1] * DS)
+        let vk = .5 - Kk * Kk - Qk * Qk;
+        if (vk >= 0) {
+          const kk = 3 * Ik[sk + 1 + ik[Vk + 1]];
+          vk *= vk, ak = vk * vk * (qk[kk] * Kk + qk[kk + 1] * Qk)
         }
-        return 70 * (xS + NS + qS)
+        return 70 * (yk + lk + ak)
       }
-      noise3D(SS, HS, gS) {
-        const tS = this.permMod12,
-          bS = this.perm;
-        let NS, qS, IS, fS;
-        const kS = (SS + HS + gS) * XS,
-          aS = Math.floor(SS + kS),
-          KS = Math.floor(HS + kS),
-          jS = Math.floor(gS + kS),
-          GS = (aS + KS + jS) * xS,
-          CS = SS - (aS - GS),
-          nS = HS - (KS - GS),
-          PS = gS - (jS - GS);
-        let QS, DS, wS, hS, ZS, JS;
-        CS >= nS ? nS >= PS ? (QS = 1, DS = 0, wS = 0, hS = 1, ZS = 1, JS = 0) : CS >= PS ? (QS = 1, DS = 0, wS = 0, hS = 1, ZS = 0, JS = 1) : (QS = 0, DS = 0, wS = 1, hS = 1, ZS = 0, JS = 1) : nS < PS ? (QS = 0, DS = 0, wS = 1, hS = 0, ZS = 1, JS = 1) : CS < PS ? (QS = 0, DS = 1, wS = 0, hS = 0, ZS = 1, JS = 1) : (QS = 0, DS = 1, wS = 0, hS = 1, ZS = 1, JS = 0);
-        const OS = CS - QS + xS,
-          dS = nS - DS + xS,
-          cS = PS - wS + xS,
-          vS = CS - hS + 2 * xS,
-          ES = nS - ZS + 2 * xS,
-          LS = PS - JS + 2 * xS,
-          YS = CS - 1 + .5,
-          AS = nS - 1 + .5,
-          yS = PS - 1 + .5,
-          VS = 255 & aS,
-          iS = 255 & KS,
-          WS = 255 & jS;
-        let zS = .6 - CS * CS - nS * nS - PS * PS;
-        if (zS < 0) NS = 0;
+      noise3D(kk, Fk, Ik) {
+        const Xk = this.permMod12,
+          Tk = this.perm;
+        let lk, ak, Lk, tk;
+        const Zk = (kk + Fk + Ik) * ik,
+          jk = Math.floor(kk + Zk),
+          ek = Math.floor(Fk + Zk),
+          wk = Math.floor(Ik + Zk),
+          Hk = (jk + ek + wk) * yk,
+          Jk = kk - (jk - Hk),
+          xk = Fk - (ek - Hk),
+          Pk = Ik - (wk - Hk);
+        let Kk, Qk, sk, Vk, zk, Sk;
+        Jk >= xk ? xk >= Pk ? (Kk = 1, Qk = 0, sk = 0, Vk = 1, zk = 1, Sk = 0) : Jk >= Pk ? (Kk = 1, Qk = 0, sk = 0, Vk = 1, zk = 0, Sk = 1) : (Kk = 0, Qk = 0, sk = 1, Vk = 1, zk = 0, Sk = 1) : xk < Pk ? (Kk = 0, Qk = 0, sk = 1, Vk = 0, zk = 1, Sk = 1) : Jk < Pk ? (Kk = 0, Qk = 1, sk = 0, Vk = 0, zk = 1, Sk = 1) : (Kk = 0, Qk = 1, sk = 0, Vk = 1, zk = 1, Sk = 0);
+        const vk = Jk - Kk + yk,
+          Ek = xk - Qk + yk,
+          Ok = Pk - sk + yk,
+          nk = Jk - Vk + 2 * yk,
+          Gk = xk - zk + 2 * yk,
+          pk = Pk - Sk + 2 * yk,
+          uk = Jk - 1 + .5,
+          bk = xk - 1 + .5,
+          Rk = Pk - 1 + .5,
+          Uk = 255 & jk,
+          Ck = 255 & ek,
+          Nk = 255 & wk;
+        let ck = .6 - Jk * Jk - xk * xk - Pk * Pk;
+        if (ck < 0) lk = 0;
         else {
-          const SS = 3 * tS[VS + bS[iS + bS[WS]]];
-          zS *= zS, NS = zS * zS * (uS[SS] * CS + uS[SS + 1] * nS + uS[SS + 2] * PS)
+          const kk = 3 * Xk[Uk + Tk[Ck + Tk[Nk]]];
+          ck *= ck, lk = ck * ck * (qk[kk] * Jk + qk[kk + 1] * xk + qk[kk + 2] * Pk)
         }
-        let US = .6 - OS * OS - dS * dS - cS * cS;
-        if (US < 0) qS = 0;
+        let Wk = .6 - vk * vk - Ek * Ek - Ok * Ok;
+        if (Wk < 0) ak = 0;
         else {
-          const SS = 3 * tS[VS + QS + bS[iS + DS + bS[WS + wS]]];
-          US *= US, qS = US * US * (uS[SS] * OS + uS[SS + 1] * dS + uS[SS + 2] * cS)
+          const kk = 3 * Xk[Uk + Kk + Tk[Ck + Qk + Tk[Nk + sk]]];
+          Wk *= Wk, ak = Wk * Wk * (qk[kk] * vk + qk[kk + 1] * Ek + qk[kk + 2] * Ok)
         }
-        let pS = .6 - vS * vS - ES * ES - LS * LS;
-        if (pS < 0) IS = 0;
+        let fk = .6 - nk * nk - Gk * Gk - pk * pk;
+        if (fk < 0) Lk = 0;
         else {
-          const SS = 3 * tS[VS + hS + bS[iS + ZS + bS[WS + JS]]];
-          pS *= pS, IS = pS * pS * (uS[SS] * vS + uS[SS + 1] * ES + uS[SS + 2] * LS)
+          const kk = 3 * Xk[Uk + Vk + Tk[Ck + zk + Tk[Nk + Sk]]];
+          fk *= fk, Lk = fk * fk * (qk[kk] * nk + qk[kk + 1] * Gk + qk[kk + 2] * pk)
         }
-        let sS = .6 - YS * YS - AS * AS - yS * yS;
-        if (sS < 0) fS = 0;
+        let Bk = .6 - uk * uk - bk * bk - Rk * Rk;
+        if (Bk < 0) tk = 0;
         else {
-          const SS = 3 * tS[VS + 1 + bS[iS + 1 + bS[WS + 1]]];
-          sS *= sS, fS = sS * sS * (uS[SS] * YS + uS[SS + 1] * AS + uS[SS + 2] * yS)
+          const kk = 3 * Xk[Uk + 1 + Tk[Ck + 1 + Tk[Nk + 1]]];
+          Bk *= Bk, tk = Bk * Bk * (qk[kk] * uk + qk[kk + 1] * bk + qk[kk + 2] * Rk)
         }
-        return 32 * (NS + qS + IS + fS)
+        return 32 * (lk + ak + Lk + tk)
       }
-      noise4D(SS, HS, gS, tS) {
-        const bS = this.perm;
-        let XS, xS, uS, fS, kS;
-        const aS = (SS + HS + gS + tS) * NS,
-          KS = Math.floor(SS + aS),
-          jS = Math.floor(HS + aS),
-          GS = Math.floor(gS + aS),
-          CS = Math.floor(tS + aS),
-          nS = (KS + jS + GS + CS) * qS,
-          PS = SS - (KS - nS),
-          QS = HS - (jS - nS),
-          DS = gS - (GS - nS),
-          wS = tS - (CS - nS);
-        let hS = 0,
-          ZS = 0,
-          JS = 0,
-          OS = 0;
-        PS > QS ? hS++ : ZS++, PS > DS ? hS++ : JS++, PS > wS ? hS++ : OS++, QS > DS ? ZS++ : JS++, QS > wS ? ZS++ : OS++, DS > wS ? JS++ : OS++;
-        const dS = hS >= 3 ? 1 : 0,
-          cS = ZS >= 3 ? 1 : 0,
-          vS = JS >= 3 ? 1 : 0,
-          ES = OS >= 3 ? 1 : 0,
-          LS = hS >= 2 ? 1 : 0,
-          YS = ZS >= 2 ? 1 : 0,
-          AS = JS >= 2 ? 1 : 0,
-          yS = OS >= 2 ? 1 : 0,
-          VS = hS >= 1 ? 1 : 0,
-          iS = ZS >= 1 ? 1 : 0,
-          WS = JS >= 1 ? 1 : 0,
-          zS = OS >= 1 ? 1 : 0,
-          US = PS - dS + qS,
-          pS = QS - cS + qS,
-          sS = DS - vS + qS,
-          BS = wS - ES + qS,
-          MS = PS - LS + 2 * qS,
-          FS = QS - YS + 2 * qS,
-          RS = DS - AS + 2 * qS,
-          TS = wS - yS + 2 * qS,
-          oS = PS - VS + 3 * qS,
-          lS = QS - iS + 3 * qS,
-          mS = DS - WS + 3 * qS,
-          eS = wS - zS + 3 * qS,
-          rS = PS - 1 + 4 * qS,
-          SH = QS - 1 + 4 * qS,
-          HH = DS - 1 + 4 * qS,
-          gH = wS - 1 + 4 * qS,
-          tH = 255 & KS,
-          bH = 255 & jS,
-          XH = 255 & GS,
-          xH = 255 & CS;
-        let NH = .6 - PS * PS - QS * QS - DS * DS - wS * wS;
-        if (NH < 0) XS = 0;
+      noise4D(kk, Fk, Ik, Xk) {
+        const Tk = this.perm;
+        let ik, yk, qk, tk, Zk;
+        const jk = (kk + Fk + Ik + Xk) * lk,
+          ek = Math.floor(kk + jk),
+          wk = Math.floor(Fk + jk),
+          Hk = Math.floor(Ik + jk),
+          Jk = Math.floor(Xk + jk),
+          xk = (ek + wk + Hk + Jk) * ak,
+          Pk = kk - (ek - xk),
+          Kk = Fk - (wk - xk),
+          Qk = Ik - (Hk - xk),
+          sk = Xk - (Jk - xk);
+        let Vk = 0,
+          zk = 0,
+          Sk = 0,
+          vk = 0;
+        Pk > Kk ? Vk++ : zk++, Pk > Qk ? Vk++ : Sk++, Pk > sk ? Vk++ : vk++, Kk > Qk ? zk++ : Sk++, Kk > sk ? zk++ : vk++, Qk > sk ? Sk++ : vk++;
+        const Ek = Vk >= 3 ? 1 : 0,
+          Ok = zk >= 3 ? 1 : 0,
+          nk = Sk >= 3 ? 1 : 0,
+          Gk = vk >= 3 ? 1 : 0,
+          pk = Vk >= 2 ? 1 : 0,
+          uk = zk >= 2 ? 1 : 0,
+          bk = Sk >= 2 ? 1 : 0,
+          Rk = vk >= 2 ? 1 : 0,
+          Uk = Vk >= 1 ? 1 : 0,
+          Ck = zk >= 1 ? 1 : 0,
+          Nk = Sk >= 1 ? 1 : 0,
+          ck = vk >= 1 ? 1 : 0,
+          Wk = Pk - Ek + ak,
+          fk = Kk - Ok + ak,
+          Bk = Qk - nk + ak,
+          dk = sk - Gk + ak,
+          Yk = Pk - pk + 2 * ak,
+          Ak = Kk - uk + 2 * ak,
+          gk = Qk - bk + 2 * ak,
+          mk = sk - Rk + 2 * ak,
+          hk = Pk - Uk + 3 * ak,
+          rk = Kk - Ck + 3 * ak,
+          Dk = Qk - Nk + 3 * ak,
+          Mk = sk - ck + 3 * ak,
+          kF = Pk - 1 + 4 * ak,
+          FF = Kk - 1 + 4 * ak,
+          IF = Qk - 1 + 4 * ak,
+          XF = sk - 1 + 4 * ak,
+          TF = 255 & ek,
+          iF = 255 & wk,
+          yF = 255 & Hk,
+          lF = 255 & Jk;
+        let aF = .6 - Pk * Pk - Kk * Kk - Qk * Qk - sk * sk;
+        if (aF < 0) ik = 0;
         else {
-          const SS = bS[tH + bS[bH + bS[XH + bS[xH]]]] % 32 * 4;
-          NH *= NH, XS = NH * NH * (IS[SS] * PS + IS[SS + 1] * QS + IS[SS + 2] * DS + IS[SS + 3] * wS)
+          const kk = Tk[TF + Tk[iF + Tk[yF + Tk[lF]]]] % 32 * 4;
+          aF *= aF, ik = aF * aF * (Lk[kk] * Pk + Lk[kk + 1] * Kk + Lk[kk + 2] * Qk + Lk[kk + 3] * sk)
         }
-        let qH = .6 - US * US - pS * pS - sS * sS - BS * BS;
-        if (qH < 0) xS = 0;
+        let qF = .6 - Wk * Wk - fk * fk - Bk * Bk - dk * dk;
+        if (qF < 0) yk = 0;
         else {
-          const SS = bS[tH + dS + bS[bH + cS + bS[XH + vS + bS[xH + ES]]]] % 32 * 4;
-          qH *= qH, xS = qH * qH * (IS[SS] * US + IS[SS + 1] * pS + IS[SS + 2] * sS + IS[SS + 3] * BS)
+          const kk = Tk[TF + Ek + Tk[iF + Ok + Tk[yF + nk + Tk[lF + Gk]]]] % 32 * 4;
+          qF *= qF, yk = qF * qF * (Lk[kk] * Wk + Lk[kk + 1] * fk + Lk[kk + 2] * Bk + Lk[kk + 3] * dk)
         }
-        let uH = .6 - MS * MS - FS * FS - RS * RS - TS * TS;
-        if (uH < 0) uS = 0;
+        let LF = .6 - Yk * Yk - Ak * Ak - gk * gk - mk * mk;
+        if (LF < 0) qk = 0;
         else {
-          const SS = bS[tH + LS + bS[bH + YS + bS[XH + AS + bS[xH + yS]]]] % 32 * 4;
-          uH *= uH, uS = uH * uH * (IS[SS] * MS + IS[SS + 1] * FS + IS[SS + 2] * RS + IS[SS + 3] * TS)
+          const kk = Tk[TF + pk + Tk[iF + uk + Tk[yF + bk + Tk[lF + Rk]]]] % 32 * 4;
+          LF *= LF, qk = LF * LF * (Lk[kk] * Yk + Lk[kk + 1] * Ak + Lk[kk + 2] * gk + Lk[kk + 3] * mk)
         }
-        let IH = .6 - oS * oS - lS * lS - mS * mS - eS * eS;
-        if (IH < 0) fS = 0;
+        let tF = .6 - hk * hk - rk * rk - Dk * Dk - Mk * Mk;
+        if (tF < 0) tk = 0;
         else {
-          const SS = bS[tH + VS + bS[bH + iS + bS[XH + WS + bS[xH + zS]]]] % 32 * 4;
-          IH *= IH, fS = IH * IH * (IS[SS] * oS + IS[SS + 1] * lS + IS[SS + 2] * mS + IS[SS + 3] * eS)
+          const kk = Tk[TF + Uk + Tk[iF + Ck + Tk[yF + Nk + Tk[lF + ck]]]] % 32 * 4;
+          tF *= tF, tk = tF * tF * (Lk[kk] * hk + Lk[kk + 1] * rk + Lk[kk + 2] * Dk + Lk[kk + 3] * Mk)
         }
-        let fH = .6 - rS * rS - SH * SH - HH * HH - gH * gH;
-        if (fH < 0) kS = 0;
+        let ZF = .6 - kF * kF - FF * FF - IF * IF - XF * XF;
+        if (ZF < 0) Zk = 0;
         else {
-          const SS = bS[tH + 1 + bS[bH + 1 + bS[XH + 1 + bS[xH + 1]]]] % 32 * 4;
-          fH *= fH, kS = fH * fH * (IS[SS] * rS + IS[SS + 1] * SH + IS[SS + 2] * HH + IS[SS + 3] * gH)
+          const kk = Tk[TF + 1 + Tk[iF + 1 + Tk[yF + 1 + Tk[lF + 1]]]] % 32 * 4;
+          ZF *= ZF, Zk = ZF * ZF * (Lk[kk] * kF + Lk[kk + 1] * FF + Lk[kk + 2] * IF + Lk[kk + 3] * XF)
         }
-        return 27 * (XS + xS + uS + fS + kS)
+        return 27 * (ik + yk + qk + tk + Zk)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

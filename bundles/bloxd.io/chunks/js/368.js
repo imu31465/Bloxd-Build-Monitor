@@ -1,19 +1,19 @@
 export const id = 368;
 export const ids = [368];
 export const modules = {
-  61492: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      lod3DPixelShaderWGSL: () => xS
+  61423: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      lod3DPixelShaderWGSL: () => yk
     });
-    var tS = gS(39899);
-    const bS = "lod3DPixelShader",
-      XS = "const GammaEncodePowerApprox=1.0/2.2;varying vUV: vec2f;var textureSampler: texture_3d<f32>;uniform lod: f32;uniform slice: f32;uniform gamma: i32;@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {let textureSize=textureDimensions(textureSampler,0);let textureCoordinates=vec3i(vec2i(fragmentInputs.vUV*vec2f(textureSize.xy)),i32(uniforms.slice));fragmentOutputs.color=textureLoad(textureSampler,textureCoordinates,i32(uniforms.lod));if (uniforms.gamma==0) {fragmentOutputs.color=vec4f(pow(fragmentOutputs.color.rgb,vec3f(GammaEncodePowerApprox)),fragmentOutputs.color.a);}}\n";
-    tS.c.ShadersStoreWGSL[bS] || (tS.c.ShadersStoreWGSL[bS] = XS);
-    const xS = {
-      name: bS,
-      shader: XS
+    var Xk = Ik(39837);
+    const Tk = "lod3DPixelShader",
+      ik = "const GammaEncodePowerApprox=1.0/2.2;varying vUV: vec2f;var textureSampler: texture_3d<f32>;uniform lod: f32;uniform slice: f32;uniform gamma: i32;@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {let textureSize=textureDimensions(textureSampler,0);let textureCoordinates=vec3i(vec2i(fragmentInputs.vUV*vec2f(textureSize.xy)),i32(uniforms.slice));fragmentOutputs.color=textureLoad(textureSampler,textureCoordinates,i32(uniforms.lod));if (uniforms.gamma==0) {fragmentOutputs.color=vec4f(pow(fragmentOutputs.color.rgb,vec3f(GammaEncodePowerApprox)),fragmentOutputs.color.a);}}\n";
+    Xk.b.ShadersStoreWGSL[Tk] || (Xk.b.ShadersStoreWGSL[Tk] = ik);
+    const yk = {
+      name: Tk,
+      shader: ik
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

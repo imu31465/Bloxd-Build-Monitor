@@ -1,156 +1,156 @@
 export const id = 189;
 export const ids = [189];
 export const modules = {
-  40655: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => qS,
-      e: () => NS,
-      g: () => xS
+  40614: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ak,
+      e: () => lk,
+      g: () => yk
     });
-    var tS = gS(40658),
-      bS = gS(4926),
-      XS = gS(40664);
+    var Xk = Ik(40623),
+      Tk = Ik(4797),
+      ik = Ik(40629);
 
-    function xS(SS) {
-      return SS.payloadKind === bS.xc.Msgpack ? (0, tS.c)(SS.payload) : void 0
+    function yk(kk) {
+      return kk.payloadKind === Tk.fc.Msgpack ? (0, Xk.b)(kk.payload) : void 0
     }
 
-    function NS(SS, HS) {
-      if (HS.payloadKind === bS.xc.Bytes || HS.payloadKind === bS.xc.MsgpackBin) return (0, XS.d)(SS, HS.payload)
+    function lk(kk, Fk) {
+      if (Fk.payloadKind === Tk.fc.Bytes || Fk.payloadKind === Tk.fc.MsgpackBin) return (0, ik.d)(kk, Fk.payload)
     }
 
-    function qS(SS) {
-      return null !== SS && "object" === typeof SS
+    function ak(kk) {
+      return null !== kk && "object" === typeof kk
     }
   },
-  40666: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => fS,
-      f: () => kS,
-      h: () => aS,
-      l: () => IS,
-      m: () => GS
+  40636: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => tk,
+      f: () => Zk,
+      j: () => jk,
+      l: () => Lk,
+      p: () => Hk
     });
-    var tS = gS(4926),
-      bS = gS(40672);
-    const XS = new Map,
-      xS = new Set,
-      NS = new Set;
-    let qS = 0,
-      uS = 0;
+    var Xk = Ik(4797),
+      Tk = Ik(40641);
+    const ik = new Map,
+      yk = new Set,
+      lk = new Set;
+    let ak = 0,
+      qk = 0;
 
-    function IS(SS, HS) {
-      let gS = XS.get(SS);
-      return gS || (gS = new Set, XS.set(SS, gS)), gS.add(HS), () => {
-        gS.delete(HS)
+    function Lk(kk, Fk) {
+      let Ik = ik.get(kk);
+      return Ik || (Ik = new Set, ik.set(kk, Ik)), Ik.add(Fk), () => {
+        Ik.delete(Fk)
       }
     }
 
-    function fS() {
-      return 0 !== qS
+    function tk() {
+      return 0 !== ak
     }
 
-    function kS(SS) {
-      return xS.add(SS), () => {
-        xS.delete(SS)
+    function Zk(kk) {
+      return yk.add(kk), () => {
+        yk.delete(kk)
       }
     }
 
-    function aS(SS) {
-      return NS.add(SS), () => {
-        NS.delete(SS)
+    function jk(kk) {
+      return lk.add(kk), () => {
+        lk.delete(kk)
       }
     }
-    const KS = "A raw message listener threw";
+    const ek = "A raw message listener threw";
 
-    function jS(SS) {
-      let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : xS;
-      for (const tS of HS) try {
-        tS()
-      } catch (gS) {
-        SS ? (0, bS.j)(gS, KS) : console.error(KS, gS)
+    function wk(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : yk;
+      for (const Xk of Fk) try {
+        Xk()
+      } catch (Ik) {
+        kk ? (0, Tk.i)(Ik, ek) : console.error(ek, Ik)
       }
     }
-    const GS = {
-      fire: function(SS) {
-        if ("connection" === SS.type) {
-          const HS = SS.phase === tS.E.Activated && SS.conn !== qS && SS.conn > uS,
-            gS = (SS.phase === tS.E.Left || SS.phase === tS.E.Closed) && SS.conn === qS;
-          return void(HS || gS ? (qS = HS ? SS.conn : 0, jS(!0)) : SS.phase === tS.E.Resumed && 0 !== qS && SS.conn > uS && (qS = SS.conn, jS(!0, NS)))
+    const Hk = {
+      fire: function(kk) {
+        if ("connection" === kk.type) {
+          const Fk = kk.phase === Xk.I.Activated && kk.conn !== ak && kk.conn > qk,
+            Ik = (kk.phase === Xk.I.Left || kk.phase === Xk.I.Closed) && kk.conn === ak;
+          return void(Fk || Ik ? (ak = Fk ? kk.conn : 0, wk(!0)) : kk.phase === Xk.I.Resumed && 0 !== ak && kk.conn > qk && (ak = kk.conn, wk(!0, lk)))
         }
-        const HS = XS.get(SS.Ju);
-        if (HS && SS.conn === qS && 0 !== qS)
-          for (const tS of HS) try {
-            tS(SS)
-          } catch (gS) {
-            (0, bS.j)(gS, KS)
+        const Fk = ik.get(kk.oq);
+        if (Fk && kk.conn === ak && 0 !== ak)
+          for (const Xk of Fk) try {
+            Xk(kk)
+          } catch (Ik) {
+            (0, Tk.i)(Ik, ek)
           }
       },
-      close: function(SS) {
-        uS = Math.max(uS, SS, qS), 0 !== qS && (qS = 0, jS(!1))
+      close: function(kk) {
+        qk = Math.max(qk, kk, ak), 0 !== ak && (ak = 0, wk(!1))
       }
     }
   },
-  40643: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => uS,
-      e: () => qS,
-      h: () => NS
+  40604: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => qk,
+      i: () => ak,
+      l: () => lk
     });
-    var tS = gS(1348),
-      bS = gS(40612);
-    const XS = new TextDecoder,
-      xS = new TextEncoder;
+    var Xk = Ik(1253),
+      Tk = Ik(40583);
+    const ik = new TextDecoder,
+      yk = new TextEncoder;
 
-    function NS(SS, HS) {
-      const gS = SS.queries.entityName(HS);
-      if (gS === bS.Fc) return;
-      const xS = SS.memoryData(SS.scratch(), 4 + gS, 4, "entity_name's answer");
-      if (!xS) return;
-      const NS = xS.getUint32(0, !0),
-        qS = XS.decode(new Uint8Array(xS.buffer, xS.byteOffset + 4, gS));
-      return (0, tS.d)(qS, !1, NS === bS.Nd ? null : NS)
+    function lk(kk, Fk) {
+      const Ik = kk.queries.entityName(Fk);
+      if (Ik === Tk.Dc) return;
+      const yk = kk.memoryData(kk.scratch(), 4 + Ik, 4, "entity_name's answer");
+      if (!yk) return;
+      const lk = yk.getUint32(0, !0),
+        ak = ik.decode(new Uint8Array(yk.buffer, yk.byteOffset + 4, Ik));
+      return (0, Xk.e)(ak, !1, lk === Tk.Rd ? null : lk)
     }
 
-    function qS(SS, HS, gS) {
-      const tS = xS.encode(gS);
-      if (tS.length > bS.ob) return !1;
-      const XS = SS.memoryView(Uint8Array, SS.scratch(), tS.length, "has_effect's name");
-      return !!XS && (XS.set(tS), 1 === SS.queries.hasEffect(HS, tS.length))
+    function ak(kk, Fk, Ik) {
+      const Xk = yk.encode(Ik);
+      if (Xk.length > Tk.Bb) return !1;
+      const ik = kk.memoryView(Uint8Array, kk.scratch(), Xk.length, "has_effect's name");
+      return !!ik && (ik.set(Xk), 1 === kk.queries.hasEffect(Fk, Xk.length))
     }
 
-    function uS(SS, HS, gS, tS) {
-      const xS = SS.queries.blockData(HS, gS, tS);
-      if (xS === bS.Fc) return;
-      const NS = SS.memoryView(Uint8Array, SS.scratch(), xS, "block_data's answer");
-      return NS ? JSON.parse(XS.decode(NS)) : void 0
+    function qk(kk, Fk, Ik, Xk) {
+      const yk = kk.queries.blockData(Fk, Ik, Xk);
+      if (yk === Tk.Dc) return;
+      const lk = kk.memoryView(Uint8Array, kk.scratch(), yk, "block_data's answer");
+      return lk ? JSON.parse(ik.decode(lk)) : void 0
     }
   },
-  40658: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => bS,
-      f: () => IS
+  40623: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Tk,
+      c: () => Lk
     });
-    const tS = new TextDecoder;
+    const Xk = new TextDecoder;
 
-    function bS(SS) {
-      const HS = new XS(SS),
-        gS = HS.value();
-      if (HS.at !== SS.length) throw new Error(`msgpack: ${SS.length-HS.at} bytes after the value`);
-      return gS
+    function Tk(kk) {
+      const Fk = new ik(kk),
+        Ik = Fk.value();
+      if (Fk.at !== kk.length) throw new Error(`msgpack: ${kk.length-Fk.at} bytes after the value`);
+      return Ik
     }
-    class XS {
-      constructor(SS) {
-        this.bytes = SS, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(SS.buffer, SS.byteOffset, SS.byteLength)
+    class ik {
+      constructor(kk) {
+        this.bytes = kk, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(kk.buffer, kk.byteOffset, kk.byteLength)
       }
       value() {
-        const SS = this.u8();
-        if (SS <= 127) return SS;
-        if (SS >= 224) return SS - 256;
-        if (SS >= 128 && SS <= 143) return this.map(15 & SS);
-        if (SS >= 144 && SS <= 159) return this.array(15 & SS);
-        if (SS >= 160 && SS <= 191) return this.str(31 & SS);
-        switch (SS) {
+        const kk = this.u8();
+        if (kk <= 127) return kk;
+        if (kk >= 224) return kk - 256;
+        if (kk >= 128 && kk <= 143) return this.map(15 & kk);
+        if (kk >= 144 && kk <= 159) return this.array(15 & kk);
+        if (kk >= 160 && kk <= 191) return this.str(31 & kk);
+        switch (kk) {
           case 192:
             return null;
           case 194:
@@ -214,13 +214,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${SS.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${kk.toString(16)} at ${this.at-1}`)
         }
       }
-      take(SS) {
-        const HS = this.at;
-        if (HS + SS > this.bytes.length) throw new Error(`msgpack: ${SS} bytes past the end at ${HS}`);
-        return this.at = HS + SS, HS
+      take(kk) {
+        const Fk = this.at;
+        if (Fk + kk > this.bytes.length) throw new Error(`msgpack: ${kk} bytes past the end at ${Fk}`);
+        return this.at = Fk + kk, Fk
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -231,958 +231,958 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(SS) {
-        const HS = this.take(8);
-        return SS ? this.view.getBigInt64(HS, !1) : this.view.getBigUint64(HS, !1)
+      int64(kk) {
+        const Fk = this.take(8);
+        return kk ? this.view.getBigInt64(Fk, !1) : this.view.getBigUint64(Fk, !1)
       }
-      str(SS) {
-        const HS = this.take(SS),
-          gS = this.bytes;
-        if (SS < 16) {
-          let bS = "";
-          for (let XS = HS; XS < HS + SS; XS++) {
-            const xS = gS[XS];
-            if (xS >= 128) return tS.decode(gS.subarray(HS, HS + SS));
-            bS += String.fromCharCode(xS)
+      str(kk) {
+        const Fk = this.take(kk),
+          Ik = this.bytes;
+        if (kk < 16) {
+          let Tk = "";
+          for (let ik = Fk; ik < Fk + kk; ik++) {
+            const yk = Ik[ik];
+            if (yk >= 128) return Xk.decode(Ik.subarray(Fk, Fk + kk));
+            Tk += String.fromCharCode(yk)
           }
-          return bS
+          return Tk
         }
-        return tS.decode(gS.subarray(HS, HS + SS))
+        return Xk.decode(Ik.subarray(Fk, Fk + kk))
       }
-      bin(SS) {
-        const HS = this.take(SS);
-        return this.bytes.subarray(HS, HS + SS)
+      bin(kk) {
+        const Fk = this.take(kk);
+        return this.bytes.subarray(Fk, Fk + kk)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(SS) {
+      array(kk) {
         this.enter();
-        const HS = [];
-        for (let gS = 0; gS < SS; gS++) HS.push(this.value());
-        return this.depth--, HS
+        const Fk = [];
+        for (let Ik = 0; Ik < kk; Ik++) Fk.push(this.value());
+        return this.depth--, Fk
       }
-      map(SS) {
+      map(kk) {
         this.enter();
-        const HS = {};
-        for (let gS = 0; gS < SS; gS++) {
-          const SS = this.value(),
-            gS = this.value();
-          HS["__proto__" === SS ? "__proto_" : String(SS)] = gS
+        const Fk = {};
+        for (let Ik = 0; Ik < kk; Ik++) {
+          const kk = this.value(),
+            Ik = this.value();
+          Fk["__proto__" === kk ? "__proto_" : String(kk)] = Ik
         }
-        return this.depth--, HS
+        return this.depth--, Fk
       }
-      ext(SS) {
-        const HS = this.view.getInt8(this.take(1)),
-          gS = this.take(SS);
-        if (0 !== HS) {
-          if (-1 === HS) {
-            if (1 === SS) return new Date(NaN);
-            if (4 === SS) return new Date(1e3 * this.view.getUint32(gS, !1));
-            if (8 === SS) {
-              const SS = this.view.getUint32(gS, !1),
-                HS = SS >>> 2,
-                tS = 4294967296 * (3 & SS) + this.view.getUint32(gS + 4, !1);
-              return new Date(1e3 * tS + HS / 1e6)
+      ext(kk) {
+        const Fk = this.view.getInt8(this.take(1)),
+          Ik = this.take(kk);
+        if (0 !== Fk) {
+          if (-1 === Fk) {
+            if (1 === kk) return new Date(NaN);
+            if (4 === kk) return new Date(1e3 * this.view.getUint32(Ik, !1));
+            if (8 === kk) {
+              const kk = this.view.getUint32(Ik, !1),
+                Fk = kk >>> 2,
+                Xk = 4294967296 * (3 & kk) + this.view.getUint32(Ik + 4, !1);
+              return new Date(1e3 * Xk + Fk / 1e6)
             }
-            if (12 === SS) {
-              const SS = this.view.getUint32(gS, !1),
-                HS = 4294967296 * this.view.getInt32(gS + 4, !1) + this.view.getUint32(gS + 8, !1);
-              return new Date(1e3 * HS + SS / 1e6)
+            if (12 === kk) {
+              const kk = this.view.getUint32(Ik, !1),
+                Fk = 4294967296 * this.view.getInt32(Ik + 4, !1) + this.view.getUint32(Ik + 8, !1);
+              return new Date(1e3 * Fk + kk / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${HS} of ${SS} bytes`)
+          throw new Error(`msgpack: ext type ${Fk} of ${kk} bytes`)
         }
       }
     }
-    const xS = new TextEncoder,
-      NS = -(2n ** 63n),
-      qS = 2n ** 63n - 1n,
-      uS = 2n ** 64n - 1n;
+    const yk = new TextEncoder,
+      lk = -(2n ** 63n),
+      ak = 2n ** 63n - 1n,
+      qk = 2n ** 64n - 1n;
 
-    function IS(SS) {
-      const HS = new fS;
-      return HS.value(SS, 0), HS.bytes()
+    function Lk(kk) {
+      const Fk = new tk;
+      return Fk.value(kk, 0), Fk.bytes()
     }
-    class fS {
+    class tk {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(SS, HS) {
-        if (HS > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof SS) {
+      value(kk, Fk) {
+        if (Fk > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof kk) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(SS ? 195 : 194);
+            return void this.u8(kk ? 195 : 194);
           case "number":
-            return void this.number(SS);
+            return void this.number(kk);
           case "bigint":
-            return void this.bigint(SS);
+            return void this.bigint(kk);
           case "string":
-            return void this.string(SS);
+            return void this.string(kk);
           case "object":
-            if (null === SS) this.u8(192);
-            else if (SS instanceof Uint8Array) this.head(SS.length, 196, -1, 197, 198), this.room(SS.length), this.buf.set(SS, this.at), this.at += SS.length;
-            else if (Array.isArray(SS)) {
-              this.head(SS.length, 220, 144, 220, 221);
-              for (const gS of SS) this.value(gS, HS + 1)
+            if (null === kk) this.u8(192);
+            else if (kk instanceof Uint8Array) this.head(kk.length, 196, -1, 197, 198), this.room(kk.length), this.buf.set(kk, this.at), this.at += kk.length;
+            else if (Array.isArray(kk)) {
+              this.head(kk.length, 220, 144, 220, 221);
+              for (const Ik of kk) this.value(Ik, Fk + 1)
             } else {
-              var gS, tS;
-              if (Object.getPrototypeOf(SS) !== Object.prototype && null !== Object.getPrototypeOf(SS)) throw new Error(`msgpack: can't encode a ${null!==(gS=null===(tS=SS.constructor)||void 0===tS?void 0:tS.name)&&void 0!==gS?gS:"object"}`);
+              var Ik, Xk;
+              if (Object.getPrototypeOf(kk) !== Object.prototype && null !== Object.getPrototypeOf(kk)) throw new Error(`msgpack: can't encode a ${null!==(Ik=null===(Xk=kk.constructor)||void 0===Xk?void 0:Xk.name)&&void 0!==Ik?Ik:"object"}`);
               {
-                const gS = Object.keys(SS);
-                this.head(gS.length, 222, 128, 222, 223);
-                for (const tS of gS) this.string(tS), this.value(SS[tS], HS + 1)
+                const Ik = Object.keys(kk);
+                this.head(Ik.length, 222, 128, 222, 223);
+                for (const Xk of Ik) this.string(Xk), this.value(kk[Xk], Fk + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof SS)
+            throw new Error("msgpack: can't encode a " + typeof kk)
         }
       }
-      number(SS) {
-        Number.isInteger(SS) && SS >= -2147483648 && SS <= 4294967295 ? SS >= 0 ? SS < 128 ? this.u8(SS) : SS < 256 ? (this.u8(204), this.u8(SS)) : SS < 65536 ? (this.u8(205), this.u16(SS)) : (this.u8(206), this.u32(SS)) : SS >= -32 ? this.u8(SS + 256) : SS >= -128 ? (this.u8(208), this.u8(SS + 256)) : SS >= -32768 ? (this.u8(209), this.u16(SS + 65536)) : (this.u8(210), this.u32(SS >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, SS, !1), this.at += 8)
+      number(kk) {
+        Number.isInteger(kk) && kk >= -2147483648 && kk <= 4294967295 ? kk >= 0 ? kk < 128 ? this.u8(kk) : kk < 256 ? (this.u8(204), this.u8(kk)) : kk < 65536 ? (this.u8(205), this.u16(kk)) : (this.u8(206), this.u32(kk)) : kk >= -32 ? this.u8(kk + 256) : kk >= -128 ? (this.u8(208), this.u8(kk + 256)) : kk >= -32768 ? (this.u8(209), this.u16(kk + 65536)) : (this.u8(210), this.u32(kk >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, kk, !1), this.at += 8)
       }
-      bigint(SS) {
-        const HS = SS >= NS && SS <= qS;
-        if (!HS && (SS < 0n || SS > uS)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(HS ? 211 : 207), this.room(8), HS ? this.view.setBigInt64(this.at, SS, !1) : this.view.setBigUint64(this.at, SS, !1), this.at += 8
+      bigint(kk) {
+        const Fk = kk >= lk && kk <= ak;
+        if (!Fk && (kk < 0n || kk > qk)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(Fk ? 211 : 207), this.room(8), Fk ? this.view.setBigInt64(this.at, kk, !1) : this.view.setBigUint64(this.at, kk, !1), this.at += 8
       }
-      string(SS) {
-        const HS = xS.encode(SS);
-        this.head(HS.length, 217, 160, 218, 219), this.room(HS.length), this.buf.set(HS, this.at), this.at += HS.length
+      string(kk) {
+        const Fk = yk.encode(kk);
+        this.head(Fk.length, 217, 160, 218, 219), this.room(Fk.length), this.buf.set(Fk, this.at), this.at += Fk.length
       }
-      head(SS, HS, gS, tS, bS) {
-        gS >= 0 && SS < (160 === gS ? 32 : 16) ? this.u8(gS | SS) : HS !== tS && SS < 256 ? (this.u8(HS), this.u8(SS)) : SS < 65536 ? (this.u8(tS), this.u16(SS)) : (this.u8(bS), this.u32(SS))
+      head(kk, Fk, Ik, Xk, Tk) {
+        Ik >= 0 && kk < (160 === Ik ? 32 : 16) ? this.u8(Ik | kk) : Fk !== Xk && kk < 256 ? (this.u8(Fk), this.u8(kk)) : kk < 65536 ? (this.u8(Xk), this.u16(kk)) : (this.u8(Tk), this.u32(kk))
       }
-      room(SS) {
-        if (this.at + SS <= this.buf.length) return;
-        let HS = 2 * this.buf.length;
-        for (; HS < this.at + SS;) HS *= 2;
-        const gS = new Uint8Array(HS);
-        gS.set(this.buf.subarray(0, this.at)), this.buf = gS, this.view = new DataView(gS.buffer)
+      room(kk) {
+        if (this.at + kk <= this.buf.length) return;
+        let Fk = 2 * this.buf.length;
+        for (; Fk < this.at + kk;) Fk *= 2;
+        const Ik = new Uint8Array(Fk);
+        Ik.set(this.buf.subarray(0, this.at)), this.buf = Ik, this.view = new DataView(Ik.buffer)
       }
-      u8(SS) {
-        this.room(1), this.buf[this.at++] = SS
+      u8(kk) {
+        this.room(1), this.buf[this.at++] = kk
       }
-      u16(SS) {
-        this.room(2), this.view.setUint16(this.at, SS, !1), this.at += 2
+      u16(kk) {
+        this.room(2), this.view.setUint16(this.at, kk, !1), this.at += 2
       }
-      u32(SS) {
-        this.room(4), this.view.setUint32(this.at, SS, !1), this.at += 4
+      u32(kk) {
+        this.room(4), this.view.setUint32(this.at, kk, !1), this.at += 4
       }
     }
   },
-  40664: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => xS
+  40629: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => yk
     });
-    var tS = gS(40649);
-    const bS = new TextDecoder("utf-8", {
+    var Xk = Ik(40609);
+    const Tk = new TextDecoder("utf-8", {
       ignoreBOM: !0
     });
-    class XS {
-      constructor(SS) {
-        this.buf = SS, this.at = 0, this.view = null
+    class ik {
+      constructor(kk) {
+        this.buf = kk, this.at = 0, this.view = null
       }
       bool() {
         return 0 !== this.u8()
       }
       long() {
-        let SS = this.u8(),
-          HS = 127 & SS,
-          gS = 128;
-        for (; 128 & SS;) {
-          if (gS > 2 ** 63) throw new RangeError("avro: varint too long");
-          SS = this.u8(), HS += (127 & SS) * gS, gS *= 128
+        let kk = this.u8(),
+          Fk = 127 & kk,
+          Ik = 128;
+        for (; 128 & kk;) {
+          if (Ik > 2 ** 63) throw new RangeError("avro: varint too long");
+          kk = this.u8(), Fk += (127 & kk) * Ik, Ik *= 128
         }
-        return HS % 2 === 1 ? -(HS + 1) / 2 : HS / 2
+        return Fk % 2 === 1 ? -(Fk + 1) / 2 : Fk / 2
       }
       float() {
-        const SS = this.take(4);
-        return this.floats().getFloat32(SS, !0)
+        const kk = this.take(4);
+        return this.floats().getFloat32(kk, !0)
       }
       double() {
-        const SS = this.take(8);
-        return this.floats().getFloat64(SS, !0)
+        const kk = this.take(8);
+        return this.floats().getFloat64(kk, !0)
       }
       str() {
-        const SS = this.size(),
-          HS = this.take(SS),
-          gS = HS + SS;
-        if (SS <= 32) {
-          let SS = "";
-          for (let tS = HS; tS < gS; tS++) {
-            const XS = this.buf[tS];
-            if (XS >= 128) return bS.decode(this.buf.subarray(HS, gS));
-            SS += String.fromCharCode(XS)
+        const kk = this.size(),
+          Fk = this.take(kk),
+          Ik = Fk + kk;
+        if (kk <= 32) {
+          let kk = "";
+          for (let Xk = Fk; Xk < Ik; Xk++) {
+            const ik = this.buf[Xk];
+            if (ik >= 128) return Tk.decode(this.buf.subarray(Fk, Ik));
+            kk += String.fromCharCode(ik)
           }
-          return SS
+          return kk
         }
-        return bS.decode(this.buf.subarray(HS, gS))
+        return Tk.decode(this.buf.subarray(Fk, Ik))
       }
       bytes() {
         return this.fixed(this.size())
       }
-      fixed(SS) {
-        const HS = this.take(SS);
-        return this.buf.slice(HS, HS + SS)
+      fixed(kk) {
+        const Fk = this.take(kk);
+        return this.buf.slice(Fk, Fk + kk)
       }
-      index(SS) {
-        const HS = this.long();
-        if (!(HS >= 0 && HS < SS)) throw new RangeError(`avro: index ${HS} of ${SS}`);
-        return HS
+      index(kk) {
+        const Fk = this.long();
+        if (!(Fk >= 0 && Fk < kk)) throw new RangeError(`avro: index ${Fk} of ${kk}`);
+        return Fk
       }
-      PK(SS) {
-        const HS = [];
-        for (let gS = this.long(); 0 !== gS; gS = this.long()) {
-          gS = this.block(gS);
-          for (let tS = 0; tS < gS; tS++) HS.push(SS(this))
+      He(kk) {
+        const Fk = [];
+        for (let Ik = this.long(); 0 !== Ik; Ik = this.long()) {
+          Ik = this.block(Ik);
+          for (let Xk = 0; Xk < Ik; Xk++) Fk.push(kk(this))
         }
-        return HS
+        return Fk
       }
-      map(SS) {
-        const HS = {};
-        for (let gS = this.long(); 0 !== gS; gS = this.long()) {
-          gS = this.block(gS);
-          for (let tS = 0; tS < gS; tS++) {
-            HS[this.str()] = SS(this)
+      map(kk) {
+        const Fk = {};
+        for (let Ik = this.long(); 0 !== Ik; Ik = this.long()) {
+          Ik = this.block(Ik);
+          for (let Xk = 0; Xk < Ik; Xk++) {
+            Fk[this.str()] = kk(this)
           }
         }
-        return HS
+        return Fk
       }
       end() {
         if (this.at !== this.buf.length) throw new RangeError(`avro: ${this.buf.length-this.at} bytes after the value`)
       }
-      block(SS) {
-        let HS = SS;
-        if (HS < 0 && (HS = -HS, this.long()), HS > this.buf.length - this.at) throw new RangeError(`avro: block of ${HS} items in ${this.buf.length-this.at} bytes`);
-        return HS
+      block(kk) {
+        let Fk = kk;
+        if (Fk < 0 && (Fk = -Fk, this.long()), Fk > this.buf.length - this.at) throw new RangeError(`avro: block of ${Fk} items in ${this.buf.length-this.at} bytes`);
+        return Fk
       }
       floats() {
         return this.view ??= new DataView(this.buf.buffer, this.buf.byteOffset, this.buf.byteLength), this.view
       }
       size() {
-        const SS = this.long();
-        if (SS < 0) throw new RangeError(`avro: length ${SS}`);
-        return SS
+        const kk = this.long();
+        if (kk < 0) throw new RangeError(`avro: length ${kk}`);
+        return kk
       }
       u8() {
-        const SS = this.buf[this.at];
-        if (void 0 === SS) throw new RangeError("avro: truncated");
-        return this.at++, SS
+        const kk = this.buf[this.at];
+        if (void 0 === kk) throw new RangeError("avro: truncated");
+        return this.at++, kk
       }
-      take(SS) {
-        const HS = this.at;
-        if (SS > this.buf.length - HS) throw new RangeError("avro: truncated");
-        return this.at = HS + SS, HS
+      take(kk) {
+        const Fk = this.at;
+        if (kk > this.buf.length - Fk) throw new RangeError("avro: truncated");
+        return this.at = Fk + kk, Fk
       }
     }
 
-    function xS(SS, HS) {
-      const gS = new XS(HS),
-        bS = (0, tS.rb)(SS, gS);
-      return gS.end(), bS
+    function yk(kk, Fk) {
+      const Ik = new ik(Fk),
+        Tk = (0, Xk.gb)(kk, Ik);
+      return Ik.end(), Tk
     }
   },
-  40649: (SS, HS, gS) => {
-    gS.d(HS, {
-      A: () => kS,
-      D: () => uS,
-      G: () => xS,
-      H: () => dS,
-      K: () => bS,
-      O: () => NS,
-      S: () => aS,
-      W: () => JS,
-      X: () => ZS,
-      Z: () => wS,
-      _: () => IS,
-      bb: () => fS,
-      cb: () => OS,
-      d: () => DS,
-      fb: () => KS,
-      g: () => GS,
-      gb: () => PS,
-      jb: () => jS,
-      k: () => CS,
-      nb: () => qS,
-      o: () => nS,
-      rb: () => cS,
-      s: () => hS,
-      v: () => tS,
-      w: () => XS,
-      z: () => QS
+  40609: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      $: () => wk,
+      B: () => Ek,
+      C: () => Tk,
+      G: () => lk,
+      H: () => jk,
+      I: () => Sk,
+      J: () => zk,
+      N: () => sk,
+      P: () => Lk,
+      Q: () => tk,
+      T: () => vk,
+      W: () => ek,
+      _: () => Pk,
+      d: () => Qk,
+      db: () => ak,
+      f: () => Hk,
+      gb: () => Ok,
+      h: () => Jk,
+      k: () => xk,
+      m: () => Vk,
+      p: () => Xk,
+      q: () => ik,
+      s: () => Kk,
+      t: () => Zk,
+      w: () => qk,
+      x: () => yk
     });
-    const tS = 2,
-      bS = 12,
-      XS = 27,
-      xS = 40,
-      NS = 52,
-      qS = 59,
-      uS = 63,
-      IS = 83,
-      fS = 84,
-      kS = 89,
-      aS = 91,
-      KS = 93,
-      jS = 94,
-      GS = 95,
-      CS = 97,
-      nS = 101,
-      PS = 102,
-      QS = 73,
-      DS = 16,
-      wS = 86,
-      hS = 60,
-      ZS = 17,
-      JS = 56,
-      OS = 100,
-      dS = 81;
+    const Xk = 2,
+      Tk = 12,
+      ik = 27,
+      yk = 40,
+      lk = 52,
+      ak = 59,
+      qk = 63,
+      Lk = 83,
+      tk = 84,
+      Zk = 89,
+      jk = 91,
+      ek = 93,
+      wk = 94,
+      Hk = 95,
+      Jk = 97,
+      xk = 101,
+      Pk = 102,
+      Kk = 73,
+      Qk = 16,
+      sk = 86,
+      Vk = 60,
+      zk = 17,
+      Sk = 56,
+      vk = 100,
+      Ek = 81;
 
-    function cS(SS, HS) {
-      switch (SS) {
-        case tS:
-          return function(SS) {
+    function Ok(kk, Fk) {
+      switch (kk) {
+        case Xk:
+          return function(kk) {
             return {
-              cX: oS(SS),
-              vX: SS.float(),
-              EX: SS.long()
+              Vi: hk(kk),
+              zi: kk.float(),
+              Si: kk.long()
             }
-          }(HS);
-        case bS:
-          return function(SS) {
+          }(Fk);
+        case Tk:
+          return function(kk) {
             return {
-              Vb: AS(SS),
-              ib: AS(SS)
+              OT: bk(kk),
+              nT: bk(kk)
             }
-          }(HS);
-        case XS:
-          return function(SS) {
+          }(Fk);
+        case ik:
+          return function(kk) {
             return {
-              Ab: SS.bool(),
-              yb: AS(SS)
+              vT: kk.bool(),
+              ET: bk(kk)
             }
-          }(HS);
-        case xS:
-          return HS.str();
-        case NS:
-          return function(SS) {
+          }(Fk);
+        case yk:
+          return Fk.str();
+        case lk:
+          return function(kk) {
             return {
-              id: SS.long(),
-              Gg: xH(SS)
+              id: kk.long(),
+              QI: lF(kk)
             }
-          }(HS);
-        case qS:
-          return function(SS) {
+          }(Fk);
+        case ak:
+          return function(kk) {
             return {
-              tb: AS(SS),
-              bb: qH(SS)
+              kT: bk(kk),
+              FT: qF(kk)
             }
-          }(HS);
-        case uS:
-          return HS.str();
-        case IS:
-        case fS:
-          return HS.long();
-        case kS:
-          return function(SS) {
+          }(Fk);
+        case qk:
+          return Fk.str();
+        case Lk:
+        case tk:
+          return Fk.long();
+        case Zk:
+          return function(kk) {
             return {
-              Bt: SS.long(),
-              Mt: SS.bool(),
-              Ft: SS.float()
+              WX: kk.long(),
+              fX: kk.bool(),
+              BX: kk.float()
             }
-          }(HS);
-        case aS:
-          return HS.long();
-        case KS:
-          return function(SS) {
+          }(Fk);
+        case jk:
+          return Fk.long();
+        case ek:
+          return function(kk) {
             return {
-              Pt: SS.bool(),
-              Qt: fH(SS)
+              KX: kk.bool(),
+              QX: ZF(kk)
             }
-          }(HS);
-        case jS:
-          return function(SS) {
+          }(Fk);
+        case wk:
+          return function(kk) {
             return {
-              id: SS.str(),
-              position: IH(SS),
-              ut: kH(SS),
-              style: US(SS),
-              kt: SS.bool()
+              id: kk.str(),
+              position: tF(kk),
+              ZX: jF(kk),
+              style: Wk(kk),
+              eX: kk.bool()
             }
-          }(HS);
-        case GS:
-          return function(SS) {
+          }(Fk);
+        case Hk:
+          return function(kk) {
             return {
-              id: AS(SS)
+              id: bk(kk)
             }
-          }(HS);
-        case CS:
-          return function(SS) {
+          }(Fk);
+        case Jk:
+          return function(kk) {
             return {
-              BX: SS.long(),
-              MX: SS.str(),
-              FX: bH(SS),
-              RX: bH(SS),
-              TX: AS(SS),
-              oX: AS(SS),
-              lX: AS(SS),
-              mX: AS(SS),
-              eX: AS(SS),
-              rX: bH(SS),
-              Sx: bH(SS),
-              Hx: AS(SS),
-              gx: AS(SS),
-              tx: AS(SS)
+              Wi: kk.long(),
+              Bi: kk.str(),
+              Yi: iF(kk),
+              Ai: iF(kk),
+              gi: bk(kk),
+              mi: bk(kk),
+              ri: bk(kk),
+              Di: bk(kk),
+              Mi: bk(kk),
+              ky: iF(kk),
+              Fy: iF(kk),
+              Iy: bk(kk),
+              Xy: bk(kk),
+              Ty: bk(kk)
             }
-          }(HS);
-        case nS:
-          return HS.str();
-        case PS:
-          return HS.long();
-        case QS:
-          return function(SS) {
+          }(Fk);
+        case xk:
+          return Fk.str();
+        case Pk:
+          return Fk.long();
+        case Kk:
+          return function(kk) {
             return {
-              oS: SS.long(),
-              lS: SS.str(),
-              mS: SS.float()
+              Dk: kk.long(),
+              Mk: kk.str(),
+              kF: kk.float()
             }
-          }(HS);
-        case DS:
-          return function(SS) {
+          }(Fk);
+        case Qk:
+          return function(kk) {
             return {
-              Zt: SS.bool(),
-              Jt: AS(SS),
-              Ot: SS.str(),
-              dt: KH(SS),
-              ct: KH(SS),
-              vt: SS.bool(),
-              Et: SS.long(),
-              Lt: jH(SS)
+              SX: kk.bool(),
+              oX: bk(kk),
+              vX: kk.str(),
+              EX: wF(kk),
+              OX: wF(kk),
+              GX: kk.bool(),
+              pX: kk.long(),
+              uX: HF(kk)
             }
-          }(HS);
-        case wS:
-          return function(SS) {
+          }(Fk);
+        case sk:
+          return function(kk) {
             return {
-              JX: AS(SS)
+              Ki: bk(kk)
             }
-          }(HS);
-        case hS:
-          return function(SS) {
+          }(Fk);
+        case Vk:
+          return function(kk) {
             return {
-              Kt: SS.str(),
-              jt: SS.str(),
-              Gt: GH(SS),
-              Ob: SS.str(),
-              cb: eS(SS),
-              Eb: SS.float()
+              wX: kk.str(),
+              HX: kk.str(),
+              JX: JF(kk),
+              sT: kk.str(),
+              VT: Mk(kk),
+              zT: kk.float()
             }
-          }(HS);
-        case ZS:
-          return function(SS) {
+          }(Fk);
+        case zk:
+          return function(kk) {
             return {
-              Kt: SS.str(),
-              jt: SS.str(),
-              Gt: GH(SS)
+              wX: kk.str(),
+              HX: kk.str(),
+              JX: JF(kk)
             }
-          }(HS);
-        case JS:
-          return function(SS) {
-            return SS.PK(CH)
-          }(HS);
-        case OS:
-          return function(SS) {
+          }(Fk);
+        case Sk:
+          return function(kk) {
+            return kk.He(xF)
+          }(Fk);
+        case vk:
+          return function(kk) {
             return {
-              og: PH(SS),
-              St: BS(SS)
+              DI: KF(kk),
+              XX: dk(kk)
             }
-          }(HS);
-        case dS:
-          return function(SS) {
+          }(Fk);
+        case Ek:
+          return function(kk) {
             return {
-              SS: SS.bool(),
-              HS: AS(SS),
-              gS: DH(SS),
-              bS: iH(SS)
+              kk: kk.bool(),
+              Fk: bk(kk),
+              Ik: sF(kk),
+              Tk: CF(kk)
             }
-          }(HS);
+          }(Fk);
         default:
-          throw new Error(`no reader for to-client message ${SS}`)
+          throw new Error(`no reader for to-client message ${kk}`)
       }
     }
 
-    function vS(SS) {
+    function nk(kk) {
       return {
-        entityName: SS.str()
+        entityName: kk.str()
       }
     }
 
-    function ES(SS) {
-      const HS = SS.index(4);
-      return 0 === HS ? SS.str() : 1 === HS ? SS.long() : 2 === HS ? SS.bool() : vS(SS)
+    function Gk(kk) {
+      const Fk = kk.index(4);
+      return 0 === Fk ? kk.str() : 1 === Fk ? kk.long() : 2 === Fk ? kk.bool() : nk(kk)
     }
 
-    function LS(SS) {
-      return 0 === SS.index(2) ? null : function(SS) {
-        return SS.map(ES)
-      }(SS)
+    function pk(kk) {
+      return 0 === kk.index(2) ? null : function(kk) {
+        return kk.map(Gk)
+      }(kk)
     }
 
-    function YS(SS) {
+    function uk(kk) {
       return {
-        translationKey: SS.str(),
-        params: LS(SS)
+        translationKey: kk.str(),
+        params: pk(kk)
       }
     }
 
-    function AS(SS) {
-      return 0 === SS.index(2) ? null : SS.str()
+    function bk(kk) {
+      return 0 === kk.index(2) ? null : kk.str()
     }
 
-    function yS(SS) {
-      return 0 === SS.index(2) ? null : function(SS) {
+    function Rk(kk) {
+      return 0 === kk.index(2) ? null : function(kk) {
         return {
-          color: AS(SS),
-          colour: AS(SS),
-          fontSize: AS(SS)
+          color: bk(kk),
+          colour: bk(kk),
+          fontSize: bk(kk)
         }
-      }(SS)
+      }(kk)
     }
 
-    function VS(SS) {
+    function Uk(kk) {
       return {
-        icon: SS.str(),
-        style: yS(SS)
+        icon: kk.str(),
+        style: Rk(kk)
       }
     }
 
-    function iS(SS) {
-      const HS = SS.index(3);
-      return 0 === HS ? {
-        string: SS.str()
-      } : 1 === HS ? {
-        styledEntityName: vS(SS)
+    function Ck(kk) {
+      const Fk = kk.index(3);
+      return 0 === Fk ? {
+        string: kk.str()
+      } : 1 === Fk ? {
+        styledEntityName: nk(kk)
       } : {
-        styledTranslatedText: YS(SS)
+        styledTranslatedText: uk(kk)
       }
     }
 
-    function WS(SS) {
-      const HS = SS.index(3);
-      return 0 === HS ? null : 1 === HS ? SS.str() : SS.long()
+    function Nk(kk) {
+      const Fk = kk.index(3);
+      return 0 === Fk ? null : 1 === Fk ? kk.str() : kk.long()
     }
 
-    function zS(SS) {
-      return 0 === SS.index(2) ? null : SS.float()
+    function ck(kk) {
+      return 0 === kk.index(2) ? null : kk.float()
     }
 
-    function US(SS) {
-      return 0 === SS.index(2) ? null : function(SS) {
+    function Wk(kk) {
+      return 0 === kk.index(2) ? null : function(kk) {
         return {
-          color: AS(SS),
-          colour: AS(SS),
-          fontWeight: WS(SS),
-          fontStyle: AS(SS),
-          fontSize: AS(SS),
-          opacity: zS(SS)
+          color: bk(kk),
+          colour: bk(kk),
+          fontWeight: Nk(kk),
+          fontStyle: bk(kk),
+          fontSize: bk(kk),
+          opacity: ck(kk)
         }
-      }(SS)
+      }(kk)
     }
 
-    function pS(SS) {
+    function fk(kk) {
       return {
-        str: iS(SS),
-        style: US(SS),
-        clickableUrl: AS(SS)
+        str: Ck(kk),
+        style: Wk(kk),
+        clickableUrl: bk(kk)
       }
     }
 
-    function sS(SS) {
-      return SS.str()
+    function Bk(kk) {
+      return kk.str()
     }
 
-    function BS(SS) {
-      return SS.PK(sS)
+    function dk(kk) {
+      return kk.He(Bk)
     }
 
-    function MS(SS) {
-      return 0 === SS.index(2) ? null : BS(SS)
+    function Yk(kk) {
+      return 0 === kk.index(2) ? null : dk(kk)
     }
 
-    function FS(SS) {
+    function Ak(kk) {
       return {
-        type: SS.str(),
-        progress: SS.float(),
-        width: AS(SS),
-        height: AS(SS),
-        colours: MS(SS),
-        backgroundColour: AS(SS)
+        type: kk.str(),
+        progress: kk.float(),
+        width: bk(kk),
+        height: bk(kk),
+        colours: Yk(kk),
+        backgroundColour: bk(kk)
       }
     }
 
-    function RS(SS) {
+    function gk(kk) {
       return {
-        type: SS.str(),
-        action: SS.str(),
-        style: US(SS)
+        type: kk.str(),
+        action: kk.str(),
+        style: Wk(kk)
       }
     }
 
-    function TS(SS) {
-      const HS = SS.index(7);
-      return 0 === HS ? {
-        string: SS.str()
-      } : 1 === HS ? {
-        entityName: vS(SS)
-      } : 2 === HS ? {
-        translatedText: YS(SS)
-      } : 3 === HS ? {
-        styledIcon: VS(SS)
-      } : 4 === HS ? {
-        Zg: pS(SS)
-      } : 5 === HS ? {
-        styledProgressBar: FS(SS)
+    function mk(kk) {
+      const Fk = kk.index(7);
+      return 0 === Fk ? {
+        string: kk.str()
+      } : 1 === Fk ? {
+        entityName: nk(kk)
+      } : 2 === Fk ? {
+        translatedText: uk(kk)
+      } : 3 === Fk ? {
+        styledIcon: Uk(kk)
+      } : 4 === Fk ? {
+        OI: fk(kk)
+      } : 5 === Fk ? {
+        styledProgressBar: Ak(kk)
       } : {
-        styledKeyBinding: RS(SS)
+        styledKeyBinding: gk(kk)
       }
     }
 
-    function oS(SS) {
-      return SS.PK(TS)
+    function hk(kk) {
+      return kk.He(mk)
     }
-    const lS = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
+    const rk = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
 
-    function mS(SS) {
-      return lS[SS.index(5)]
-    }
-
-    function eS(SS) {
-      return 0 === SS.index(2) ? null : SS.double()
+    function Dk(kk) {
+      return rk[kk.index(5)]
     }
 
-    function rS(SS) {
-      return 0 === SS.index(2) ? null : function(SS) {
+    function Mk(kk) {
+      return 0 === kk.index(2) ? null : kk.double()
+    }
+
+    function kF(kk) {
+      return 0 === kk.index(2) ? null : function(kk) {
         return {
-          Qg: eS(SS),
-          Dg: SS.double(),
-          wg: SS.double(),
-          hg: SS.bool(),
-          description: oS(SS),
-          Og: SS.str(),
-          scale: eS(SS),
-          rotation: eS(SS)
+          SI: Mk(kk),
+          oI: kk.double(),
+          vI: kk.double(),
+          EI: kk.bool(),
+          description: hk(kk),
+          GI: kk.str(),
+          scale: Mk(kk),
+          rotation: Mk(kk)
         }
-      }(SS)
+      }(kk)
     }
 
-    function SH(SS) {
-      return 0 === SS.index(2) ? null : SS.bool()
+    function FF(kk) {
+      return 0 === kk.index(2) ? null : kk.bool()
     }
 
-    function HH(SS) {
-      return 0 === SS.index(2) ? null : function(SS) {
+    function IF(kk) {
+      return 0 === kk.index(2) ? null : function(kk) {
         return {
-          vg: SS.double(),
-          icon: SS.str(),
-          label: oS(SS),
-          Eg: SS.bool(),
-          scale: eS(SS),
-          rotation: eS(SS),
-          Lg: SH(SS)
+          uI: kk.double(),
+          icon: kk.str(),
+          label: hk(kk),
+          bI: kk.bool(),
+          scale: Mk(kk),
+          rotation: Mk(kk),
+          RI: FF(kk)
         }
-      }(SS)
+      }(kk)
     }
 
-    function gH(SS) {
-      return 0 === SS.index(2) ? null : function(SS) {
+    function XF(kk) {
+      return 0 === kk.index(2) ? null : function(kk) {
         return {
-          Qg: eS(SS),
-          Ag: SS.double(),
-          yg: SS.double(),
-          Vg: SS.double(),
-          gravity: SS.double(),
-          ig: SS.double(),
-          Wg: SS.double(),
-          zg: SS.double(),
-          hg: SS.bool(),
-          description: oS(SS),
-          icon: AS(SS)
+          SI: Mk(kk),
+          CI: kk.double(),
+          NI: kk.double(),
+          cI: kk.double(),
+          gravity: kk.double(),
+          WI: kk.double(),
+          fI: kk.double(),
+          BI: kk.double(),
+          EI: kk.bool(),
+          description: hk(kk),
+          icon: bk(kk)
         }
-      }(SS)
+      }(kk)
     }
 
-    function tH(SS) {
-      return 0 === SS.index(2) ? null : function(SS) {
+    function TF(kk) {
+      return 0 === kk.index(2) ? null : function(kk) {
         return {
-          speed: SS.double(),
-          sg: SS.double(),
-          label: oS(SS),
-          icon: AS(SS),
-          scale: eS(SS),
-          rotation: eS(SS)
+          speed: kk.double(),
+          YI: kk.double(),
+          label: hk(kk),
+          icon: bk(kk),
+          scale: Mk(kk),
+          rotation: Mk(kk)
         }
-      }(SS)
+      }(kk)
     }
 
-    function bH(SS) {
-      return 0 === SS.index(2) ? null : SS.long()
+    function iF(kk) {
+      return 0 === kk.index(2) ? null : kk.long()
     }
 
-    function XH(SS) {
-      return 0 === SS.index(2) ? null : function(SS) {
+    function yF(kk) {
+      return 0 === kk.index(2) ? null : function(kk) {
         return {
-          Mg: SS.long(),
-          Fg: SS.double(),
-          Rg: SS.double(),
-          Tg: bH(SS),
-          label: oS(SS),
-          icon: AS(SS)
+          gI: kk.long(),
+          mI: kk.double(),
+          hI: kk.double(),
+          rI: iF(kk),
+          label: hk(kk),
+          icon: bk(kk)
         }
-      }(SS)
+      }(kk)
     }
 
-    function xH(SS) {
+    function lF(kk) {
       return {
-        type: mS(SS),
-        progressBar: rS(SS),
-        timedClick: HH(SS),
-        gravityBar: gH(SS),
-        precisionBar: tH(SS),
-        rhythmClick: XH(SS)
+        type: Dk(kk),
+        progressBar: kF(kk),
+        timedClick: IF(kk),
+        gravityBar: XF(kk),
+        precisionBar: TF(kk),
+        rhythmClick: yF(kk)
       }
     }
-    const NH = ["playerGone", "rateLimited"];
+    const aF = ["playerGone", "rateLimited"];
 
-    function qH(SS) {
-      return 0 === SS.index(2) ? null : function(SS) {
-        return NH[SS.index(2)]
-      }(SS)
+    function qF(kk) {
+      return 0 === kk.index(2) ? null : function(kk) {
+        return aF[kk.index(2)]
+      }(kk)
     }
 
-    function uH(SS) {
-      return SS.float()
+    function LF(kk) {
+      return kk.float()
     }
 
-    function IH(SS) {
-      return SS.PK(uH)
+    function tF(kk) {
+      return kk.He(LF)
     }
 
-    function fH(SS) {
-      return 0 === SS.index(2) ? null : IH(SS)
+    function ZF(kk) {
+      return 0 === kk.index(2) ? null : tF(kk)
     }
 
-    function kH(SS) {
-      return 0 === SS.index(2) ? null : oS(SS)
+    function jF(kk) {
+      return 0 === kk.index(2) ? null : hk(kk)
     }
 
-    function aH(SS) {
-      return SS.long()
+    function eF(kk) {
+      return kk.long()
     }
 
-    function KH(SS) {
-      return 0 === SS.index(2) ? null : function(SS) {
-        return SS.PK(aH)
-      }(SS)
+    function wF(kk) {
+      return 0 === kk.index(2) ? null : function(kk) {
+        return kk.He(eF)
+      }(kk)
     }
 
-    function jH(SS) {
-      return 0 === SS.index(2) ? null : function(SS) {
+    function HF(kk) {
+      return 0 === kk.index(2) ? null : function(kk) {
         return {
-          gt: SS.str(),
-          qt: SS.long()
+          iX: kk.str(),
+          tX: kk.long()
         }
-      }(SS)
+      }(kk)
     }
 
-    function GH(SS) {
-      const HS = SS.index(3);
-      return 0 === HS ? null : 1 === HS ? SS.str() : YS(SS)
+    function JF(kk) {
+      const Fk = kk.index(3);
+      return 0 === Fk ? null : 1 === Fk ? kk.str() : uk(kk)
     }
 
-    function CH(SS) {
+    function xF(kk) {
       return {
-        Dt: SS.str(),
-        wt: SS.str(),
-        ht: SS.str()
+        sX: kk.str(),
+        VX: kk.str(),
+        zX: kk.str()
       }
     }
 
-    function nH(SS) {
+    function PF(kk) {
       return {
-        lg: SS.str(),
-        mg: AS(SS),
-        eg: AS(SS),
-        rg: BS(SS)
+        MI: kk.str(),
+        kX: bk(kk),
+        FX: bk(kk),
+        IX: dk(kk)
       }
     }
 
-    function PH(SS) {
-      return SS.PK(nH)
+    function KF(kk) {
+      return kk.He(PF)
     }
 
-    function QH(SS) {
+    function QF(kk) {
       return {
-        tS: SS.str(),
-        x: SS.long(),
-        y: SS.long(),
-        z: SS.long()
+        Xk: kk.str(),
+        x: kk.long(),
+        y: kk.long(),
+        z: kk.long()
       }
     }
 
-    function DH(SS) {
-      return SS.PK(QH)
+    function sF(kk) {
+      return kk.He(QF)
     }
 
-    function wH(SS) {
-      return 0 === SS.index(2) ? null : function(SS) {
+    function VF(kk) {
+      return 0 === kk.index(2) ? null : function(kk) {
         return {
-          ZS: SS.float(),
-          OS: SS.long(),
-          dS: SS.long()
+          Sk: kk.float(),
+          vk: kk.long(),
+          Ek: kk.long()
         }
-      }(SS)
+      }(kk)
     }
 
-    function hH(SS) {
+    function zF(kk) {
       return {
-        blockName: SS.str(),
-        GS: SS.bool(),
-        CS: SS.bool(),
-        nS: SS.bool(),
-        PS: SS.float(),
-        QS: SS.float(),
-        DS: SS.long(),
-        wS: wH(SS)
+        blockName: kk.str(),
+        Jk: kk.bool(),
+        xk: kk.bool(),
+        Pk: kk.bool(),
+        Kk: kk.float(),
+        Qk: kk.float(),
+        sk: kk.long(),
+        Vk: VF(kk)
       }
     }
 
-    function ZH(SS) {
-      return 0 === SS.index(2) ? null : function(SS) {
-        return SS.PK(hH)
-      }(SS)
+    function SF(kk) {
+      return 0 === kk.index(2) ? null : function(kk) {
+        return kk.He(zF)
+      }(kk)
     }
 
-    function JH(SS) {
+    function oF(kk) {
       return {
-        aS: SS.str(),
-        KS: ZH(SS)
+        jk: kk.str(),
+        wk: SF(kk)
       }
     }
 
-    function OH(SS) {
+    function vF(kk) {
       return {
-        blockName: SS.str(),
-        frequency: SS.float()
+        blockName: kk.str(),
+        frequency: kk.float()
       }
     }
 
-    function dH(SS) {
-      return SS.PK(OH)
+    function EF(kk) {
+      return kk.He(vF)
     }
 
-    function cH(SS) {
+    function OF(kk) {
       return {
-        ES: SS.str(),
-        LS: SS.str(),
-        frequency: SS.float(),
-        YS: dH(SS)
+        Gk: kk.str(),
+        uk: kk.str(),
+        frequency: kk.float(),
+        bk: EF(kk)
       }
     }
 
-    function vH(SS) {
-      return SS.PK(cH)
+    function nF(kk) {
+      return kk.He(OF)
     }
 
-    function EH(SS) {
+    function GF(kk) {
       return {
-        blockName: SS.str(),
-        radius: SS.long(),
-        iS: SS.long(),
-        NS: SS.long(),
-        qS: SS.long(),
-        WS: SS.float()
+        blockName: kk.str(),
+        radius: kk.long(),
+        Nk: kk.long(),
+        lk: kk.long(),
+        ak: kk.long(),
+        Wk: kk.float()
       }
     }
 
-    function LH(SS) {
-      return SS.PK(EH)
+    function pF(kk) {
+      return kk.He(GF)
     }
 
-    function YH(SS) {
+    function uF(kk) {
       return {
-        NS: SS.long(),
-        qS: SS.long(),
-        uS: SS.long(),
-        IS: SS.bool(),
-        fS: JH(SS),
-        cS: vH(SS),
-        yS: LH(SS)
+        lk: kk.long(),
+        ak: kk.long(),
+        qk: kk.long(),
+        Lk: kk.bool(),
+        tk: oF(kk),
+        Ok: nF(kk),
+        Uk: pF(kk)
       }
     }
 
-    function AH(SS) {
-      return SS.PK(YH)
+    function bF(kk) {
+      return kk.He(uF)
     }
 
-    function yH(SS) {
-      return 0 === SS.index(2) ? null : function(SS) {
+    function RF(kk) {
+      return 0 === kk.index(2) ? null : function(kk) {
         return {
-          name: SS.str(),
-          sS: AS(SS)
+          name: kk.str(),
+          Ak: bk(kk)
         }
-      }(SS)
+      }(kk)
     }
 
-    function VH(SS) {
-      return 0 === SS.index(2) ? null : function(SS) {
+    function UF(kk) {
+      return 0 === kk.index(2) ? null : function(kk) {
         return {
-          terrain: yH(SS),
-          BS: LH(SS)
+          terrain: RF(kk),
+          gk: pF(kk)
         }
-      }(SS)
+      }(kk)
     }
 
-    function iH(SS) {
-      return 0 === SS.index(2) ? null : function(SS) {
+    function CF(kk) {
+      return 0 === kk.index(2) ? null : function(kk) {
         return {
-          layers: AH(SS),
-          zS: VH(SS)
+          layers: bF(kk),
+          fk: UF(kk)
         }
-      }(SS)
+      }(kk)
     }
   },
-  40632: (SS, HS, gS) => {
-    gS.d(HS, {
-      $: () => PS,
-      A: () => hS,
-      B: () => vS,
-      F: () => QS,
-      G: () => DS,
-      K: () => GS,
-      M: () => OS,
-      P: () => LS,
-      Q: () => KS,
-      U: () => AS,
-      W: () => nS,
-      _: () => CS,
-      b: () => bS,
-      db: () => wS,
-      e: () => YS,
-      i: () => ES,
-      l: () => aS,
-      m: () => jS,
-      o: () => cS,
-      r: () => ZS,
-      t: () => dS,
-      x: () => JS
+  40598: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      B: () => Vk,
+      F: () => nk,
+      H: () => Kk,
+      L: () => Qk,
+      O: () => Hk,
+      R: () => vk,
+      T: () => pk,
+      X: () => ek,
+      Z: () => bk,
+      ab: () => xk,
+      db: () => Jk,
+      e: () => Tk,
+      hb: () => Pk,
+      i: () => uk,
+      j: () => Gk,
+      lb: () => sk,
+      m: () => jk,
+      q: () => wk,
+      s: () => Ok,
+      t: () => zk,
+      x: () => Ek,
+      z: () => Sk
     });
-    var tS = gS(3140);
-    const bS = {
+    var Xk = Ik(2913);
+    const Tk = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -1211,160 +1211,160 @@ export const modules = {
       LobbyManage: 96
     };
 
-    function XS(SS, HS) {
-      return !ArrayBuffer.isView(SS) || SS instanceof DataView ? Array.isArray(SS) ? SS.map((SS => HS(SS))) : SS : Array.from(SS, (SS => HS(SS)))
+    function ik(kk, Fk) {
+      return !ArrayBuffer.isView(kk) || kk instanceof DataView ? Array.isArray(kk) ? kk.map((kk => Fk(kk))) : kk : Array.from(kk, (kk => Fk(kk)))
     }
 
-    function xS(SS) {
-      if ("string" !== typeof SS) return SS;
-      for (let HS = 0; HS < SS.length; HS++) {
-        const gS = SS.charCodeAt(HS);
-        if (gS >= 55296 && gS <= 57343) return qS.decode(NS.encode(SS))
+    function yk(kk) {
+      if ("string" !== typeof kk) return kk;
+      for (let Fk = 0; Fk < kk.length; Fk++) {
+        const Ik = kk.charCodeAt(Fk);
+        if (Ik >= 55296 && Ik <= 57343) return ak.decode(lk.encode(kk))
       }
-      return SS
+      return kk
     }
-    const NS = new TextEncoder,
-      qS = new TextDecoder;
+    const lk = new TextEncoder,
+      ak = new TextDecoder;
 
-    function uS(SS) {
-      return SS
+    function qk(kk) {
+      return kk
     }
-    let IS;
+    let Lk;
 
-    function fS(SS) {
-      return null === SS || "object" !== typeof SS ? SS : [xS(SS.Mq), xS(SS.Fq)]
-    }
-
-    function kS(SS) {
-      return null === SS || "object" !== typeof SS ? SS : [XS(SS.dt, uS), XS(SS.Xx, uS)]
+    function tk(kk) {
+      return null === kk || "object" !== typeof kk ? kk : [yk(kk.Ya), yk(kk.Aa)]
     }
 
-    function aS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [xS(HS.Ju), xS(HS.Ou)];
-      var HS
+    function Zk(kk) {
+      return null === kk || "object" !== typeof kk ? kk : [ik(kk.EX, qk), ik(kk.yy, qk)]
     }
 
-    function KS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [HS.id, HS.GI];
-      var HS
+    function jk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [yk(Fk.oq), yk(Fk.vq)];
+      var Fk
     }
 
-    function jS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [HS.BX, xS(HS.MX), HS.FX, xS(HS.oX), HS.rX, HS.Sx, HS.Fx, xS(HS.Rx), xS(HS.Tx)];
-      var HS
+    function ek(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [Fk.id, Fk.HL];
+      var Fk
     }
 
-    function GS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [XS(HS.bI, uS), HS.XI];
-      var HS
+    function wk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [Fk.Wi, yk(Fk.Bi), Fk.Yi, yk(Fk.mi), Fk.ky, Fk.Fy, Fk.gy, yk(Fk.my), yk(Fk.hy)];
+      var Fk
     }
 
-    function CS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [XS(HS.ju, (SS => xS(SS))), xS(HS.Gu), HS.Cu];
-      var HS
+    function Hk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [ik(Fk.TL, qk), Fk.iL];
+      var Fk
     }
 
-    function nS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [XS(HS.sx, uS), xS(HS.Bx), HS.Mx];
-      var HS
+    function Jk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [ik(Fk.wq, (kk => yk(kk))), yk(Fk.Hq), Fk.Jq];
+      var Fk
     }
 
-    function PS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [xS(HS.wt), xS(HS.ht)];
-      var HS
+    function xk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [ik(Fk.Wy, qk), yk(Fk.Yy), Fk.Ay];
+      var Fk
     }
 
-    function QS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [xS(HS.gN)];
-      var HS
+    function Pk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [yk(Fk.VX), yk(Fk.zX)];
+      var Fk
     }
 
-    function DS(SS) {
-      return xS(SS)
+    function Kk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [yk(Fk.Il)];
+      var Fk
     }
 
-    function wS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [xS(HS.Fu), xS(HS.Ru), xS(HS.Mq), xS(HS.Fq)];
-      var HS
+    function Qk(kk) {
+      return yk(kk)
     }
 
-    function hS(SS) {
-      return fS(SS)
+    function sk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [yk(Fk.dq), yk(Fk.Yq), yk(Fk.Ya), yk(Fk.Aa)];
+      var Fk
     }
 
-    function ZS(SS) {
-      return fS(SS)
+    function Vk(kk) {
+      return tk(kk)
     }
 
-    function JS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [xS(HS.bx)];
-      var HS
+    function zk(kk) {
+      return tk(kk)
     }
 
-    function OS(SS) {
-      return SS
+    function Sk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [yk(Fk.iy)];
+      var Fk
     }
 
-    function dS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [xS(HS.Ex), xS(HS.Lx)];
-      var HS
+    function vk(kk) {
+      return kk
     }
 
-    function cS(SS) {
-      return xS(SS)
+    function Ek(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [yk(Fk.vy), yk(Fk.Ey)];
+      var Fk
     }
 
-    function vS(SS) {
-      return kS(SS)
+    function Ok(kk) {
+      return yk(kk)
     }
 
-    function ES(SS) {
-      return kS(SS)
+    function nk(kk) {
+      return Zk(kk)
     }
 
-    function LS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [xS(HS.Tu)];
-      var HS
+    function Gk(kk) {
+      return Zk(kk)
     }
 
-    function YS(SS) {
-      return (IS ??= (0, tS.e)().map((SS => SS.name)), IS).map((HS => {
-        return "string" === typeof(gS = SS[HS]) ? xS(gS) : XS(gS, uS);
-        var gS
+    function pk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [yk(Fk.Aq)];
+      var Fk
+    }
+
+    function uk(kk) {
+      return (Lk ??= (0, Xk.g)().map((kk => kk.name)), Lk).map((Fk => {
+        return "string" === typeof(Ik = kk[Fk]) ? yk(Ik) : ik(Ik, qk);
+        var Ik
       }))
     }
 
-    function AS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [HS.Vu, HS.iu, HS.Wu];
-      var HS
+    function bk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [Fk.Rq, Fk.Uq, Fk.Cq];
+      var Fk
     }
   },
-  9465: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => bS,
-      g: () => XS
+  9278: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Tk,
+      g: () => ik
     });
-    var tS = gS(9411);
-    const bS = "Air",
-      XS = Object.freeze(new tS.e(bS, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var Xk = Ik(9237);
+    const Tk = "Air",
+      ik = Object.freeze(new Xk.g(Tk, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  39248: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => XS,
-      e: () => NS
+  39243: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => ik,
+      g: () => lk
     });
-    var tS = gS(387),
-      bS = gS(4586);
-    const XS = new Set(bS.m),
-      xS = new Map;
+    var Xk = Ik(337),
+      Tk = Ik(4449);
+    const ik = new Set(Tk.l),
+      yk = new Map;
 
-    function NS(SS, HS) {
-      let gS = xS.get(HS);
-      void 0 === gS && (gS = new Map, xS.set(HS, gS));
-      let bS = gS.get(SS);
-      return void 0 === bS && (bS = `${SS}${(0,tS.u)(HS)}`, gS.set(SS, bS)), bS
+    function lk(kk, Fk) {
+      let Ik = yk.get(Fk);
+      void 0 === Ik && (Ik = new Map, yk.set(Fk, Ik));
+      let Tk = Ik.get(kk);
+      return void 0 === Tk && (Tk = `${kk}${(0,Xk.y)(Fk)}`, Ik.set(kk, Tk)), Tk
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

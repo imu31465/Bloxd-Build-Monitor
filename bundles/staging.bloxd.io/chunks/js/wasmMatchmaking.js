@@ -1,30 +1,30 @@
-/*! For license information please see fqwnlq.wasmMatchmaking.d47eb830.chunk.js.LICENSE.txt */
+/*! For license information please see 31kiid.wasmMatchmaking.297adf1d.chunk.js.LICENSE.txt */
 export const id = 62;
 export const ids = [62];
 export const modules = {
-  36547: (SS, HS) => {
-    function gS(SS) {
-      if (SS && "object" === typeof SS) {
-        var HS = SS.which || SS.keyCode || SS.charCode;
-        HS && (SS = HS)
+  36537: (kk, Fk) => {
+    function Ik(kk) {
+      if (kk && "object" === typeof kk) {
+        var Fk = kk.which || kk.keyCode || kk.charCode;
+        Fk && (kk = Fk)
       }
-      if ("number" === typeof SS) return xS[SS];
-      var gS, XS = String(SS);
-      return (gS = tS[XS.toLowerCase()]) ? gS : (gS = bS[XS.toLowerCase()]) || (1 === XS.length ? XS.charCodeAt(0) : void 0)
+      if ("number" === typeof kk) return yk[kk];
+      var Ik, ik = String(kk);
+      return (Ik = Xk[ik.toLowerCase()]) ? Ik : (Ik = Tk[ik.toLowerCase()]) || (1 === ik.length ? ik.charCodeAt(0) : void 0)
     }
-    gS.isEventKey = function(SS, HS) {
-      if (SS && "object" === typeof SS) {
-        var gS = SS.which || SS.keyCode || SS.charCode;
-        if (null === gS || void 0 === gS) return !1;
-        if ("string" === typeof HS) {
-          var XS;
-          if (XS = tS[HS.toLowerCase()]) return XS === gS;
-          if (XS = bS[HS.toLowerCase()]) return XS === gS
-        } else if ("number" === typeof HS) return HS === gS;
+    Ik.isEventKey = function(kk, Fk) {
+      if (kk && "object" === typeof kk) {
+        var Ik = kk.which || kk.keyCode || kk.charCode;
+        if (null === Ik || void 0 === Ik) return !1;
+        if ("string" === typeof Fk) {
+          var ik;
+          if (ik = Xk[Fk.toLowerCase()]) return ik === Ik;
+          if (ik = Tk[Fk.toLowerCase()]) return ik === Ik
+        } else if ("number" === typeof Fk) return Fk === Ik;
         return !1
       }
     };
-    var tS = (HS = SS.exports = gS).code = HS.codes = {
+    var Xk = (Fk = kk.exports = Ik).code = Fk.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      bS = HS.aliases = {
+      Tk = Fk.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (XS = 97; XS < 123; XS++) tS[String.fromCharCode(XS)] = XS - 32;
-    for (var XS = 48; XS < 58; XS++) tS[XS - 48] = XS;
-    for (XS = 1; XS < 13; XS++) tS["f" + XS] = XS + 111;
-    for (XS = 0; XS < 10; XS++) tS["numpad " + XS] = XS + 96;
-    var xS = HS.names = HS.title = {};
-    for (XS in tS) xS[tS[XS]] = XS;
-    for (var NS in bS) tS[NS] = bS[NS]
+    for (ik = 97; ik < 123; ik++) Xk[String.fromCharCode(ik)] = ik - 32;
+    for (var ik = 48; ik < 58; ik++) Xk[ik - 48] = ik;
+    for (ik = 1; ik < 13; ik++) Xk["f" + ik] = ik + 111;
+    for (ik = 0; ik < 10; ik++) Xk["numpad " + ik] = ik + 96;
+    var yk = Fk.names = Fk.title = {};
+    for (ik in Xk) yk[Xk[ik]] = ik;
+    for (var lk in Tk) Xk[lk] = Tk[lk]
   },
-  36721: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => xS
+  36699: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk
     });
-    var tS = gS(64);
-    const bS = tS.useLayoutEffect;
-    const XS = function(SS) {
-      var HS = (0, tS.useRef)(SS);
-      return bS((function() {
-        HS.current = SS
-      })), HS
+    var Xk = Ik(58);
+    const Tk = Xk.useLayoutEffect;
+    const ik = function(kk) {
+      var Fk = (0, Xk.useRef)(kk);
+      return Tk((function() {
+        Fk.current = kk
+      })), Fk
     };
-    var xS = function(SS) {
-      var HS = XS(SS);
-      (0, tS.useEffect)((function() {
-        var SS = function(SS) {
-          var gS;
-          if (null != HS.current && (gS = HS.current(SS)), SS.defaultPrevented && (SS.returnValue = ""), "string" === typeof gS) return SS.returnValue = gS, gS
+    var yk = function(kk) {
+      var Fk = ik(kk);
+      (0, Xk.useEffect)((function() {
+        var kk = function(kk) {
+          var Ik;
+          if (null != Fk.current && (Ik = Fk.current(kk)), kk.defaultPrevented && (kk.returnValue = ""), "string" === typeof Ik) return kk.returnValue = Ik, Ik
         };
-        return window.addEventListener("beforeunload", SS),
+        return window.addEventListener("beforeunload", kk),
           function() {
-            window.removeEventListener("beforeunload", SS)
+            window.removeEventListener("beforeunload", kk)
           }
       }), [])
     }
   },
-  36601: SS => {
-    var HS, gS = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      tS = /OS X/.test(gS),
-      bS = /Opera/.test(gS),
-      XS = !/like Gecko/.test(gS) && !bS,
-      xS = SS.exports = {
-        0: tS ? "<menu>" : "<UNK>",
+  36580: kk => {
+    var Fk, Ik = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      Xk = /OS X/.test(Ik),
+      Tk = /Opera/.test(Ik),
+      ik = !/like Gecko/.test(Ik) && !Tk,
+      yk = kk.exports = {
+        0: Xk ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: tS ? "<meta>" : "<menu>",
+        93: Xk ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: tS && XS ? "-" : "<volume-mute>",
+        173: Xk && ik ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: bS ? "`" : "<unicode>",
+        231: Tk ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,194 +234,194 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (HS = 58; HS < 65; ++HS) xS[HS] = String.fromCharCode(HS);
-    for (HS = 48; HS < 58; ++HS) xS[HS] = HS - 48 + "";
-    for (HS = 65; HS < 91; ++HS) xS[HS] = String.fromCharCode(HS);
-    for (HS = 96; HS < 106; ++HS) xS[HS] = "<num-" + (HS - 96) + ">";
-    for (HS = 112; HS < 136; ++HS) xS[HS] = "F" + (HS - 111)
+    for (Fk = 58; Fk < 65; ++Fk) yk[Fk] = String.fromCharCode(Fk);
+    for (Fk = 48; Fk < 58; ++Fk) yk[Fk] = Fk - 48 + "";
+    for (Fk = 65; Fk < 91; ++Fk) yk[Fk] = String.fromCharCode(Fk);
+    for (Fk = 96; Fk < 106; ++Fk) yk[Fk] = "<num-" + (Fk - 96) + ">";
+    for (Fk = 112; Fk < 136; ++Fk) yk[Fk] = "F" + (Fk - 111)
   },
-  9099: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => XS,
-      f: () => bS
+  8895: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik,
+      e: () => Tk
     });
-    let tS = !1;
+    let Xk = !1;
 
-    function bS() {
-      tS = !0
+    function Tk() {
+      Xk = !0
     }
 
-    function XS() {
-      return tS
+    function ik() {
+      return Xk
     }
   },
-  36452: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      InGameUi: () => DS.e,
-      LobbyLeaderboard: () => wS.d,
-      loadCharacterCustomisationUI: () => hS,
-      loadCharacterPreview: () => ZS,
-      matchmakeAndPlay: () => cS,
-      setUpGame: () => JS
+  36441: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      InGameUi: () => Qk.e,
+      LobbyLeaderboard: () => sk.b,
+      loadCharacterCustomisationUI: () => Vk,
+      loadCharacterPreview: () => zk,
+      matchmakeAndPlay: () => Ok,
+      setUpGame: () => Sk
     });
-    var tS = gS(1329),
-      bS = gS(160),
-      XS = gS(24),
-      xS = gS(36460),
-      NS = gS(36463),
-      qS = gS(2083),
-      uS = gS(36505);
+    var Xk = Ik(1234),
+      Tk = Ik(149),
+      ik = Ik(25),
+      yk = Ik(36444),
+      lk = Ik(36446),
+      ak = Ik(1894),
+      qk = Ik(36491);
 
-    function IS() {
-      return !1 !== qS.d.get("canCustomiseChar")
+    function Lk() {
+      return !1 !== ak.e.get("canCustomiseChar")
     }
-    let fS = !1;
-    var kS = gS(1400),
-      aS = gS(1334),
-      KS = gS(278),
-      jS = gS(754),
-      GS = gS(9099),
-      CS = gS(9096);
+    let tk = !1;
+    var Zk = Ik(1301),
+      jk = Ik(1241),
+      ek = Ik(243),
+      wk = Ik(718),
+      Hk = Ik(8895),
+      Jk = Ik(8888);
 
-    function nS() {
-      (0, GS.b)() || (0, CS.d)().catch((SS => {
-        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", SS)
+    function xk() {
+      (0, Hk.c)() || (0, Jk.d)().catch((kk => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", kk)
       }))
     }
-    var PS = gS(3577),
-      QS = gS(1869);
-    var DS = gS(36512),
-      wS = gS(37038);
+    var Pk = Ik(3378),
+      Kk = Ik(1690);
+    var Qk = Ik(36500),
+      sk = Ik(37047);
 
-    function hS() {
-      return gS.e(216).then((() => gS(41286)))
+    function Vk() {
+      return Ik.e(216).then((() => Ik(41281)))
     }
 
-    function ZS() {
-      return gS.e(291).then((() => gS(41290)))
+    function zk() {
+      return Ik.e(291).then((() => Ik(41287)))
     }
 
-    function JS() {
-      return (0, CS.i)()
+    function Sk() {
+      return (0, Jk.h)()
     }
-    fS || (fS = !0, document.addEventListener("keydown", (SS => {
-        (0, uS.d)(SS, IS)
+    tk || (tk = !0, document.addEventListener("keydown", (kk => {
+        (0, qk.e)(kk, Lk)
       }))),
-      function(SS) {
-        var HS;
-        return !0 !== (null === SS || void 0 === SS ? void 0 : SS.saveData) && !/2g$/.test(null !== (HS = null === SS || void 0 === SS ? void 0 : SS.effectiveType) && void 0 !== HS ? HS : "")
-      }(navigator.connection) && (0, jS.b)((() => {
-        (0, GS.b)() || Promise.all([gS.e(77), gS.e(89), gS.e(211), gS.e(210), gS.e(134), gS.e(139), gS.e(58)]).then((() => gS(41066))).then((async SS => {
-          (0, GS.b)() || (await SS.startLoadAheadOfJoin({
-            joinStarted: GS.b,
-            language: aS.f.get().getCurrentLanguageCode()
-          }), (0, KS.c)(nS))
-        }), (SS => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", SS)
+      function(kk) {
+        var Fk;
+        return !0 !== (null === kk || void 0 === kk ? void 0 : kk.saveData) && !/2g$/.test(null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.effectiveType) && void 0 !== Fk ? Fk : "")
+      }(navigator.connection) && (0, wk.b)((() => {
+        (0, Hk.c)() || Promise.all([Ik.e(77), Ik.e(89), Ik.e(211), Ik.e(210), Ik.e(134), Ik.e(139), Ik.e(58)]).then((() => Ik(41063))).then((async kk => {
+          (0, Hk.c)() || (await kk.startLoadAheadOfJoin({
+            joinStarted: Hk.c,
+            language: jk.d.get().getCurrentLanguageCode()
+          }), (0, ek.b)(xk))
+        }), (kk => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", kk)
         }))
       }));
-    const OS = XS.b.get("router");
-    null === OS ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function SS(HS) {
-      if ((0, QS.d)(HS.state.location.pathname)) return void(0, CS.f)().catch((() => {}));
-      const gS = HS.subscribe((tS => {
-        (0, QS.d)(tS.location.pathname) && (gS(), (0, PS.f)().then((() => {
-          SS(HS)
+    const vk = ik.d.get("router");
+    null === vk ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function kk(Fk) {
+      if ((0, Kk.e)(Fk.state.location.pathname)) return void(0, Jk.f)().catch((() => {}));
+      const Ik = Fk.subscribe((Xk => {
+        (0, Kk.e)(Xk.location.pathname) && (Ik(), (0, Pk.e)().then((() => {
+          kk(Fk)
         })))
       }))
-    }(OS), (0, xS.e)();
-    const dS = (0, NS.e)((async function(SS, HS) {
+    }(vk), (0, yk.d)();
+    const Ek = (0, lk.c)((async function(kk, Fk) {
       let {
-        place: gS,
-        userContext: XS,
-        direct: xS,
-        rematch: NS
-      } = SS;
-      const qS = xS ? 1 / 0 : performance.now();
-      let uS;
+        place: Ik,
+        userContext: ik,
+        direct: yk,
+        rematch: lk
+      } = kk;
+      const ak = yk ? 1 / 0 : performance.now();
+      let qk;
       try {
-        uS = await (0, CS.f)()
-      } catch (IS) {
-        return console.error("The wasm client did not load:", IS), (0, kS.r)({
+        qk = await (0, Jk.f)()
+      } catch (Lk) {
+        return console.error("The wasm client did not load:", Lk), (0, Zk.s)({
           websocketUrl: null
-        }), tS.d.errorWithCode(String(IS), bS.g.CONNECT_TO_GAME_SERVER, {
-          error: IS,
-          severity: HS.aborted ? "low" : "medium",
-          Hg: HS.aborted
+        }), Xk.b.errorWithCode(String(Lk), Tk.j.CONNECT_TO_GAME_SERVER, {
+          error: Lk,
+          severity: Fk.aborted ? "low" : "medium",
+          iI: Fk.aborted
         })
       }
-      return uS.playWasmGame({
-        userContext: XS,
-        place: gS,
-        matchedAt: qS,
-        rematch: NS
-      }, HS)
+      return qk.playWasmGame({
+        userContext: ik,
+        place: Ik,
+        matchedAt: ak,
+        rematch: lk
+      }, Fk)
     }));
 
-    function cS() {
-      return (0, CS.f)().catch((() => {})), dS(...arguments)
+    function Ok() {
+      return (0, Jk.f)().catch((() => {})), Ek(...arguments)
     }
   },
-  9096: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => aS,
-      f: () => kS,
-      i: () => KS
+  8888: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => jk,
+      f: () => Zk,
+      h: () => ek
     });
-    var tS = gS(3320),
-      bS = gS(2403),
-      XS = gS(2242),
-      xS = gS(4768),
-      NS = gS(3639),
-      qS = gS(9099);
-    let uS = null;
+    var Xk = Ik(3089),
+      Tk = Ik(2213),
+      ik = Ik(2059),
+      yk = Ik(4628),
+      lk = Ik(3442),
+      ak = Ik(8895);
+    let qk = null;
 
-    function IS() {
-      return Promise.all([gS.e(74), gS.e(77), gS.e(89), gS.e(211), gS.e(76), gS.e(210), gS.e(134), gS.e(196), gS.e(139), gS.e(87), gS.e(218), gS.e(63)]).then((() => gS(40704)))
+    function Lk() {
+      return Promise.all([Ik.e(74), Ik.e(77), Ik.e(89), Ik.e(211), Ik.e(76), Ik.e(210), Ik.e(134), Ik.e(196), Ik.e(139), Ik.e(87), Ik.e(218), Ik.e(63)]).then((() => Ik(40682)))
     }
 
-    function fS() {
-      Promise.all([gS.e(72), gS.e(75), gS.e(74), gS.e(73), gS.e(89), gS.e(86), gS.e(269), gS.e(189), gS.e(223), gS.e(247), gS.e(218), gS.e(46)]).then((() => gS(41033))).catch((() => {}))
+    function tk() {
+      Promise.all([Ik.e(72), Ik.e(75), Ik.e(74), Ik.e(73), Ik.e(89), Ik.e(86), Ik.e(269), Ik.e(189), Ik.e(223), Ik.e(247), Ik.e(218), Ik.e(46)]).then((() => Ik(41011))).catch((() => {}))
     }
 
-    function kS() {
-      return xS.c.cancelDownloadForJoin(), (0, NS.d)(), (0, bS.h)(), (0, qS.f)(), (0, XS.h)(), fS(), Promise.all([gS.e(77), gS.e(89), gS.e(211), gS.e(210), gS.e(134), gS.e(139), gS.e(58)]).then((() => gS(41066))).then((SS => {
+    function Zk() {
+      return yk.d.cancelDownloadForJoin(), (0, lk.d)(), (0, Tk.c)(), (0, ak.e)(), (0, ik.k)(), tk(), Promise.all([Ik.e(77), Ik.e(89), Ik.e(211), Ik.e(210), Ik.e(134), Ik.e(139), Ik.e(58)]).then((() => Ik(41063))).then((kk => {
         let {
-          startJoinLoad: HS
-        } = SS;
-        HS()
-      }), (() => {})), uS ??= IS().then((SS => (SS.startWasmPlay(), SS.followPageUiPack((SS => {
-        tS.d.showGamePack(SS)
-      })), SS)), (SS => {
-        throw uS = null, SS
-      })), uS
+          startJoinLoad: Fk
+        } = kk;
+        Fk()
+      }), (() => {})), qk ??= Lk().then((kk => (kk.startWasmPlay(), kk.followPageUiPack((kk => {
+        Xk.b.showGamePack(kk)
+      })), kk)), (kk => {
+        throw qk = null, kk
+      })), qk
     }
 
-    function aS() {
-      return fS(), gS.e(271).then((() => gS(41075))).catch((() => {})), IS().then((() => {}))
+    function jk() {
+      return tk(), Ik.e(271).then((() => Ik(41067))).catch((() => {})), Lk().then((() => {}))
     }
 
-    function KS() {
-      return IS().then((SS => {
-        SS.startWasmPreviews(), SS.prefetchWasmPreviews()
+    function ek() {
+      return Lk().then((kk => {
+        kk.startWasmPreviews(), kk.prefetchWasmPreviews()
       }))
     }
   },
-  36877: (SS, HS, gS) => {
-    function tS(SS) {
-      return "fetch" === SS || "timeout" === SS || "integrity" === SS ? "download" : "browser"
+  36879: (kk, Fk, Ik) => {
+    function Xk(kk) {
+      return "fetch" === kk || "timeout" === kk || "integrity" === kk ? "download" : "browser"
     }
-    gS.d(HS, {
-      b: () => bS,
-      e: () => xS,
-      i: () => qS,
-      m: () => NS,
-      n: () => tS,
-      p: () => XS
+    Ik.d(Fk, {
+      d: () => Tk,
+      f: () => yk,
+      i: () => ak,
+      j: () => lk,
+      l: () => Xk,
+      p: () => ik
     });
-    const bS = "https://discord.gg/playbloxd";
+    const Tk = "https://discord.gg/playbloxd";
 
-    function XS(SS) {
-      return "download" === SS ? {
+    function ik(kk) {
+      return "download" === kk ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -440,21 +440,21 @@ export const modules = {
       }
     }
 
-    function xS(SS, HS) {
+    function yk(kk, Fk) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: HS ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: Fk ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: SS.code
+          code: kk.code
         },
-        discordLink: HS,
+        discordLink: Fk,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function NS() {
+    function lk() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -466,29 +466,29 @@ export const modules = {
       }
     }
 
-    function qS(SS, HS, gS) {
+    function ak(kk, Fk, Ik) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: gS ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: Ik ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: SS.reason
+          reason: kk.reason
         },
-        discordLink: null === SS.name,
-        confirm: HS ? "general:reconnect" : SS.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === kk.name,
+        confirm: Fk ? "general:reconnect" : kk.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   },
-  9465: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => bS,
-      g: () => XS
+  9278: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Tk,
+      g: () => ik
     });
-    var tS = gS(9411);
-    const bS = "Air",
-      XS = Object.freeze(new tS.e(bS, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var Xk = Ik(9237);
+    const Tk = "Air",
+      ik = Object.freeze(new Xk.g(Tk, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

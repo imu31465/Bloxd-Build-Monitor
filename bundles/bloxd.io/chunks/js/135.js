@@ -1,384 +1,384 @@
 export const id = 135;
 export const ids = [135];
 export const modules = {
-  36258: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      WasmTextureWorker: () => nS
+  36214: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      WasmTextureWorker: () => xk
     });
-    var tS = gS(665),
-      bS = gS(3366),
-      XS = gS(36265),
-      xS = gS.n(XS);
+    var Xk = Ik(614),
+      Tk = Ik(3134),
+      ik = Ik(36217),
+      yk = Ik.n(ik);
 
-    function NS() {
-      return xS()('(()=>{var SS={d:(HS,gS)=>{for(var tS in gS)SS.o(gS,tS)&&!SS.o(HS,tS)&&Object.defineProperty(HS,tS,{enumerable:!0,get:gS[tS]})},o:(SS,HS)=>Object.prototype.hasOwnProperty.call(SS,HS),r:SS=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(SS,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(SS,"__esModule",{value:!0})}},HS={};SS.r(HS),SS.d(HS,{TS:()=>gS,bf:()=>tS,default:()=>ES,initSync:()=>vS,Xf:()=>bS});class gS{__destroy_into_raw(){const SS=this.__wbg_ptr;return this.__wbg_ptr=0,xS.unregister(this),SS}free(){const SS=this.__destroy_into_raw();OS.aRmE(SS,0)}dg(SS){const HS=function(SS,HS){const gS=HS(1*SS.length,1)>>>0;return KS().set(SS,gS/1),dS=SS.length,gS}(SS,OS.FqU2),gS=dS;return OS.ppnE(this.__wbg_ptr,HS,gS)>>>0}It(){const SS=OS.UB4N(this.__wbg_ptr);var HS=NS(SS[0],SS[1]).slice();return OS.h9AE(SS[0],4*SS[1],4),HS}At(){let SS,HS;try{const gS=OS.T7lL(this.__wbg_ptr);return SS=gS[0],HS=gS[1],IS(gS[0],gS[1])}finally{OS.h9AE(SS,HS,1)}}st(){return OS.RDtz(this.__wbg_ptr)>>>0}mb(){return OS.IOOB(this.__wbg_ptr)>>>0}xx(){let SS,HS;try{const gS=OS.hbgE(this.__wbg_ptr);return SS=gS[0],HS=gS[1],IS(gS[0],gS[1])}finally{OS.h9AE(SS,HS,1)}}ux(){const SS=OS.xvb3(this.__wbg_ptr);var HS=NS(SS[0],SS[1]).slice();return OS.h9AE(SS[0],4*SS[1],4),HS}ox(){const SS=OS.fR94(this.__wbg_ptr);var HS,gS,tS=(HS=SS[0],gS=SS[1],HS>>>=0,uS().subarray(HS/8,HS/8+gS)).slice();return OS.h9AE(SS[0],8*SS[1],8),tS}su(){return OS.kuDg(this.__wbg_ptr)>>>0}qG(SS){const HS=OS.j9gT(this.__wbg_ptr,SS);if(HS[1])throw PS(HS[0])}uG(){OS.RKRU(this.__wbg_ptr)}fG(){OS.MjJP(this.__wbg_ptr)}dj(){const SS=OS.UF5Z(this.__wbg_ptr);if(SS[1])throw PS(SS[0])}aG(){return OS.RFdB(this.__wbg_ptr)>>>0}IG(){const SS=OS.HIhw(this.__wbg_ptr);if(SS[1])throw PS(SS[0])}KG(SS,HS){const gS=OS.hg4c(this.__wbg_ptr,SS,HS);if(gS[1])throw PS(gS[0])}jG(SS){let HS,gS;try{const XS=OS.GyFn(this.__wbg_ptr,SS);var tS=XS[0],bS=XS[1];if(XS[3])throw tS=0,bS=0,PS(XS[2]);return HS=tS,gS=bS,IS(tS,bS)}finally{OS.h9AE(HS,gS,1)}}GG(SS){return OS.Rt1R(this.__wbg_ptr,SS)>>>0}CG(SS){return OS.sZ9M(this.__wbg_ptr,SS)>>>0}If(){const SS=OS.chh9(this.__wbg_ptr);var HS=NS(SS[0],SS[1]).slice();return OS.h9AE(SS[0],4*SS[1],4),HS}nG(){return 0!==OS.zy5G(this.__wbg_ptr)}constructor(SS,HS,gS,tS,bS,XS){const NS=nS(SS,OS.FqU2,OS.Za7D),qS=dS,IS=CS(HS,OS.FqU2),fS=dS,kS=function(SS,HS){const gS=HS(8*SS.length,8)>>>0;return uS().set(SS,gS/8),dS=SS.length,gS}(gS,OS.FqU2),aS=dS,KS=CS(tS,OS.FqU2),jS=dS,GS=CS(bS,OS.FqU2),QS=dS,DS=OS.hunF(NS,qS,IS,fS,kS,aS,KS,jS,GS,QS,XS);if(DS[2])throw PS(DS[1]);return this.__wbg_ptr=DS[0],xS.register(this,this.__wbg_ptr,this),this}PG(){let SS,HS;try{const gS=OS.Te9S(this.__wbg_ptr);return SS=gS[0],HS=gS[1],IS(gS[0],gS[1])}finally{OS.h9AE(SS,HS,1)}}QG(SS,HS){const gS=nS(SS,OS.FqU2,OS.Za7D),tS=dS,bS=CS(HS,OS.FqU2),XS=dS,xS=OS.lrOd(this.__wbg_ptr,gS,tS,bS,XS);if(xS[1])throw PS(xS[0])}DG(){return OS.daGq(this.__wbg_ptr)>>>0}wG(){return OS.rNo8(this.__wbg_ptr)>>>0}kG(){return OS.zJn0(this.__wbg_ptr)>>>0}dk(){return OS.KuWO(this.__wbg_ptr)>>>0}warnings(){let SS,HS;try{const gS=OS.kUSf(this.__wbg_ptr);return SS=gS[0],HS=gS[1],IS(gS[0],gS[1])}finally{OS.h9AE(SS,HS,1)}}}function tS(SS,HS){const gS=nS(SS,OS.FqU2,OS.Za7D),tS=dS,bS=OS.TJmm(gS,tS,HS);if(bS[1])throw PS(bS[0])}function bS(){OS.gd08()}function XS(){return{__proto__:null,dT3n:{__proto__:null,jA2q:function(SS,HS){return function(SS){GS===jS.length&&jS.push(jS.length+1);const HS=GS;return GS=jS[HS],jS[HS]=SS,HS}(Error(IS(SS,HS)))},bsdC:function(SS,HS){throw new Error(IS(SS,HS))},fwfk:function(SS,HS){console.error(IS(SS,HS))}}}}Symbol.dispose&&(gS.prototype[Symbol.dispose]=gS.prototype.free);const xS="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((SS=>OS.aRmE(SS,1)));function NS(SS,HS){return SS>>>=0,kS().subarray(SS/4,SS/4+HS)}let qS=null;function uS(){return null!==qS&&0!==qS.byteLength||(qS=new Float64Array(OS.memory.buffer)),qS}function IS(SS,HS){return function(SS,HS){wS+=HS,wS>=DS&&(QS=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),QS.decode(),wS=HS);return QS.decode(KS().subarray(SS,SS+HS))}(SS>>>0,HS)}let fS=null;function kS(){return null!==fS&&0!==fS.byteLength||(fS=new Uint32Array(OS.memory.buffer)),fS}let aS=null;function KS(){return null!==aS&&0!==aS.byteLength||(aS=new Uint8Array(OS.memory.buffer)),aS}let jS=new Array(1024).fill(void 0);jS.push(void 0,null,!0,!1);let GS=jS.length;function CS(SS,HS){const gS=HS(4*SS.length,4)>>>0;return kS().set(SS,gS/4),dS=SS.length,gS}function nS(SS,HS,gS){if(void 0===gS){const gS=hS.encode(SS),tS=HS(gS.length,1)>>>0;return KS().subarray(tS,tS+gS.length).set(gS),dS=gS.length,tS}let tS=SS.length,bS=HS(tS,1)>>>0;const XS=KS();let xS=0;for(;xS<tS;xS++){const HS=SS.charCodeAt(xS);if(HS>127)break;XS[bS+xS]=HS}if(xS!==tS){0!==xS&&(SS=SS.slice(xS)),bS=gS(bS,tS,tS=xS+3*SS.length,1)>>>0;const HS=KS().subarray(bS+xS,bS+tS);xS+=hS.encodeInto(SS,HS).written,bS=gS(bS,tS,xS,1)>>>0}return dS=xS,bS}function PS(SS){const HS=function(SS){return jS[SS]}(SS);return function(SS){SS<1028||(jS[SS]=GS,GS=SS)}(SS),HS}let QS=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});QS.decode();const DS=2146435072;let wS=0;const hS=new TextEncoder;"encodeInto"in hS||(hS.encodeInto=function(SS,HS){const gS=hS.encode(SS);return HS.set(gS),{read:SS.length,written:gS.length}});let ZS,JS,OS,dS=0;function cS(SS,HS){return JS=SS,OS=SS.exports,ZS=HS,qS=null,fS=null,aS=null,OS.FiQU(),OS}function vS(SS){if(void 0!==OS)return OS;void 0!==SS&&(Object.getPrototypeOf(SS)===Object.prototype?({module:SS}=SS):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const HS=XS();SS instanceof WebAssembly.Module||(SS=new WebAssembly.Module(SS));return cS(new WebAssembly.Instance(SS,HS),SS)}async function ES(SS){if(void 0!==OS)return OS;void 0!==SS&&(Object.getPrototypeOf(SS)===Object.prototype?({module_or_path:SS}=SS):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const HS=XS();("string"===typeof SS||"function"===typeof Request&&SS instanceof Request||"function"===typeof URL&&SS instanceof URL)&&(SS=fetch(SS));const{instance:gS,module:tS}=await async function(SS,HS){if("function"===typeof Response&&SS instanceof Response){if(!SS.ok)throw new Error(`failed to fetch Wasm: ${SS.status} ${SS.statusText} fetching \'${SS.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(SS,HS)}catch(gS){if(!function(SS){switch(SS){case"basic":case"cors":case"default":return!0}return!1}(SS.type)||"application/wasm"===SS.headers.get("Content-Type"))throw gS;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",gS)}const tS=await SS.arrayBuffer();return await WebAssembly.instantiate(tS,HS)}{const gS=await WebAssembly.instantiate(SS,HS);return gS instanceof WebAssembly.Instance?{instance:gS,module:SS}:gS}}(await SS,HS);return cS(gS,tS)}let LS=null,YS=null;function AS(SS){if(null!==YS)throw YS;if(null===LS)try{const{memory:gS}=vS({module:SS});LS={wasm:HS,memory:gS}}catch(gS){throw YS=function(SS,HS){return new Error(`${SS}: ${HS instanceof Error?`${HS.name}: ${HS.message}`:String(HS)}`,{cause:HS})}("instantiate",gS),YS}return LS}function yS(SS){return SS instanceof Error?SS.message:String(SS)}const VS=0,iS=1,WS=2,zS=3,US=4;Error;function pS(SS){return`the texture module didn\'t load (${yS(SS)})`}function sS(SS){return""===SS?[]:SS.split("\\0")}const BS=self;let MS=null,FS=null,RS=VS,TS=0;function oS(SS){const HS=performance.now();var gS,tS;(SS!==RS||HS-TS>=1e3)&&(RS=SS,TS=HS,BS.postMessage({type:"progress",stage:SS,wasmBytes:null!==(gS=null===(tS=FS)||void 0===tS?void 0:tS.buffer.byteLength)&&void 0!==gS?gS:0}))}const{FileReaderSync:lS}=self;function mS(SS){return(new lS).readAsDataURL(new Blob([SS],{type:"image/png"}))}function eS(SS,HS){BS.postMessage({type:"sheet",sheet:SS,pixels:HS},[HS.buffer])}function rS(SS){let HS;oS(iS);try{HS=AS(SS.module)}catch(xS){return void BS.postMessage({type:"failed",reason:pS(xS),moduleLoad:!0})}FS=HS.memory,oS(WS);const{assets:gS,layerCap:tS,warnings:bS,generator:XS}=function(SS,HS,gS,tS,bS,XS,xS){var NS;const{wasm:qS,memory:uS}=SS,{strings:IS,blocks:fS,numbers:kS,index:aS,armour:KS}=HS,jS=new qS.TS(IS,fS,kS,aS,KS,gS),GS=tS.sources.map((SS=>(null===XS||void 0===XS||XS(WS),jS.dg(SS)))),CS=new Uint32Array(2*tS.sourceOfName.length);for(const[dS,cS]of tS.sourceOfName.entries())CS[2*dS]=dS,CS[2*dS+1]=GS[cS];jS.QG(tS.names,CS),null===XS||void 0===XS||XS(zS),jS.KG(bS,null!==(NS=null===xS||void 0===xS?void 0:xS.layers)&&void 0!==NS?NS:0),null===XS||void 0===XS||XS(US);const nS={};for(const[dS,cS]of sS(jS.PG()).entries())null===XS||void 0===XS||XS(US),nS[cS]=jS.jG(dS);const PS={},QS=jS.It(),DS=new Map;for(const[dS,cS]of sS(jS.At()).entries()){const SS=QS[dS];DS.has(SS)||(null===XS||void 0===XS||XS(US),DS.set(SS,jS.jG(SS))),PS[cS]=DS.get(SS)}jS.uG();const wS=Array.from(jS.If()),hS=[],ZS=[],JS=(SS,HS)=>new Uint8ClampedArray(uS.buffer,SS,HS).slice();if(xS){for(let SS=0;SS<wS.length;SS++)null===XS||void 0===XS||XS(US),jS.qG(SS),jS.dj(),hS.push(xS.dataUrl(new Uint8Array(uS.buffer,jS.kG(),jS.wG()))),xS.onSheet(SS,JS(jS.dk(),jS.DG()));jS.fG()}const OS=jS.aG();for(let dS=OS;dS<OS+jS.mb();dS++)null===XS||void 0===XS||XS(US),hS.push(jS.jG(dS)),ZS.push(JS(jS.CG(dS),jS.GG(dS)));return{assets:{rotatedBlockTextures:nS,animatedBlockTextures:PS,blockAtlasArr:hS,blockAtlasPixels:ZS,armourAtlas:jS.jG(jS.st()),imagesPerAtlas:wS,blockAtlasWidth:jS.su()},layerCap:jS.nG()?bS:0,warnings:jS.warnings(),generator:jS}}(HS,SS.inputs,SS.isDefaultPack,{sources:SS.sources,names:SS.names,sourceOfName:SS.sourceOfName},SS.maxLayerWidth,oS,SS.sheetLayers>0?{layers:SS.sheetLayers,onSheet:eS,dataUrl:mS}:void 0);MS=XS,BS.postMessage({type:"required",assets:gS,layerCap:tS,warnings:bS},gS.blockAtlasPixels.map((SS=>SS.buffer)))}self.onmessageerror=()=>{BS.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=SS=>{let{data:HS}=SS;try{"required"===HS.type?rS(HS):function(){if(!MS)throw new Error("No required assets to follow");const{colours:SS,warnings:HS}=function(SS){return SS.IG(),{colours:{blocks:SS.xx(),counts:SS.ux(),values:SS.ox()},warnings:SS.warnings()}}(MS);BS.postMessage({type:"optional",...SS,warnings:HS},[SS.counts.buffer,SS.values.buffer])}()}catch(gS){const SS=yS(gS),HS=gS instanceof WebAssembly.RuntimeError?`wasm trapped (${SS})`:SS;BS.postMessage({type:"failed",reason:HS,stack:gS instanceof Error?gS.stack:void 0})}}})();', "Worker", void 0, gS.p + "generation.worker.0c024405.worker.js")
+    function lk() {
+      return yk()('(()=>{var kk={d:(Fk,Ik)=>{for(var Xk in Ik)kk.o(Ik,Xk)&&!kk.o(Fk,Xk)&&Object.defineProperty(Fk,Xk,{enumerable:!0,get:Ik[Xk]})},o:(kk,Fk)=>Object.prototype.hasOwnProperty.call(kk,Fk),r:kk=>{"undefined"!==typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(kk,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(kk,"__esModule",{value:!0})}},Fk={};kk.r(Fk),kk.d(Fk,{dk:()=>Ik,yt:()=>Xk,default:()=>Gk,initSync:()=>nk,lt:()=>Tk});class Ik{__destroy_into_raw(){const kk=this.__wbg_ptr;return this.__wbg_ptr=0,yk.unregister(this),kk}free(){const kk=this.__destroy_into_raw();vk.tdI1(kk,0)}xF(kk){const Fk=function(kk,Fk){const Ik=Fk(1*kk.length,1)>>>0;return ek().set(kk,Ik/1),Ek=kk.length,Ik}(kk,vk.x0nA),Ik=Ek;return vk.Y76S(this.__wbg_ptr,Fk,Ik)>>>0}di(){const kk=vk.uYJO(this.__wbg_ptr);var Fk=lk(kk[0],kk[1]).slice();return vk.NNON(kk[0],4*kk[1],4),Fk}oy(){let kk,Fk;try{const Ik=vk.Zy6W(this.__wbg_ptr);return kk=Ik[0],Fk=Ik[1],Lk(Ik[0],Ik[1])}finally{vk.NNON(kk,Fk,1)}}uy(){return vk.Ef1E(this.__wbg_ptr)>>>0}It(){return vk.bVKW(this.__wbg_ptr)>>>0}st(){let kk,Fk;try{const Ik=vk.PXHW(this.__wbg_ptr);return kk=Ik[0],Fk=Ik[1],Lk(Ik[0],Ik[1])}finally{vk.NNON(kk,Fk,1)}}At(){const kk=vk.MAxe(this.__wbg_ptr);var Fk=lk(kk[0],kk[1]).slice();return vk.NNON(kk[0],4*kk[1],4),Fk}dj(){const kk=vk.RWzA(this.__wbg_ptr);var Fk,Ik,Xk=(Fk=kk[0],Ik=kk[1],Fk>>>=0,qk().subarray(Fk/8,Fk/8+Ik)).slice();return vk.NNON(kk[0],8*kk[1],8),Xk}we(){return vk.Mpww(this.__wbg_ptr)>>>0}yH(kk){const Fk=vk.N94w(this.__wbg_ptr,kk);if(Fk[1])throw Pk(Fk[0])}lH(){vk.U4iM(this.__wbg_ptr)}qH(){vk.oJCH(this.__wbg_ptr)}re(){const kk=vk.aWQB(this.__wbg_ptr);if(kk[1])throw Pk(kk[0])}tH(){return vk.UMhV(this.__wbg_ptr)>>>0}aH(){const kk=vk.z6bn(this.__wbg_ptr);if(kk[1])throw Pk(kk[0])}ZH(kk,Fk){const Ik=vk.EbVU(this.__wbg_ptr,kk,Fk);if(Ik[1])throw Pk(Ik[0])}jH(kk){let Fk,Ik;try{const ik=vk.SLvc(this.__wbg_ptr,kk);var Xk=ik[0],Tk=ik[1];if(ik[3])throw Xk=0,Tk=0,Pk(ik[2]);return Fk=Xk,Ik=Tk,Lk(Xk,Tk)}finally{vk.NNON(Fk,Ik,1)}}eH(kk){return vk.ZhlW(this.__wbg_ptr,kk)>>>0}wH(kk){return vk.agDz(this.__wbg_ptr,kk)>>>0}We(){const kk=vk.FZPc(this.__wbg_ptr);var Fk=lk(kk[0],kk[1]).slice();return vk.NNON(kk[0],4*kk[1],4),Fk}HH(){return 0!==vk.r1Lv(this.__wbg_ptr)}constructor(kk,Fk,Ik,Xk,Tk,ik){const lk=xk(kk,vk.x0nA,vk.lBAa),ak=Ek,Lk=Jk(Fk,vk.x0nA),tk=Ek,Zk=function(kk,Fk){const Ik=Fk(8*kk.length,8)>>>0;return qk().set(kk,Ik/8),Ek=kk.length,Ik}(Ik,vk.x0nA),jk=Ek,ek=Jk(Xk,vk.x0nA),wk=Ek,Hk=Jk(Tk,vk.x0nA),Kk=Ek,Qk=vk.rloh(lk,ak,Lk,tk,Zk,jk,ek,wk,Hk,Kk,ik);if(Qk[2])throw Pk(Qk[1]);return this.__wbg_ptr=Qk[0],yk.register(this,this.__wbg_ptr,this),this}JH(){let kk,Fk;try{const Ik=vk.hQF1(this.__wbg_ptr);return kk=Ik[0],Fk=Ik[1],Lk(Ik[0],Ik[1])}finally{vk.NNON(kk,Fk,1)}}xH(kk,Fk){const Ik=xk(kk,vk.x0nA,vk.lBAa),Xk=Ek,Tk=Jk(Fk,vk.x0nA),ik=Ek,yk=vk.V9Xo(this.__wbg_ptr,Ik,Xk,Tk,ik);if(yk[1])throw Pk(yk[0])}PH(){return vk.Ielh(this.__wbg_ptr)>>>0}KH(){return vk.XFqX(this.__wbg_ptr)>>>0}LH(){return vk.DTPr(this.__wbg_ptr)>>>0}me(){return vk.g00v(this.__wbg_ptr)>>>0}warnings(){let kk,Fk;try{const Ik=vk.Gk6h(this.__wbg_ptr);return kk=Ik[0],Fk=Ik[1],Lk(Ik[0],Ik[1])}finally{vk.NNON(kk,Fk,1)}}}function Xk(kk,Fk){const Ik=xk(kk,vk.x0nA,vk.lBAa),Xk=Ek,Tk=vk.gpXG(Ik,Xk,Fk);if(Tk[1])throw Pk(Tk[0])}function Tk(){vk.t2Sc()}function ik(){return{__proto__:null,XvqX:{__proto__:null,i7oc:function(kk,Fk){return function(kk){Hk===wk.length&&wk.push(wk.length+1);const Fk=Hk;return Hk=wk[Fk],wk[Fk]=kk,Fk}(Error(Lk(kk,Fk)))},KUjY:function(kk,Fk){throw new Error(Lk(kk,Fk))},AsMs:function(kk,Fk){console.error(Lk(kk,Fk))}}}}Symbol.dispose&&(Ik.prototype[Symbol.dispose]=Ik.prototype.free);const yk="undefined"===typeof FinalizationRegistry?{register:()=>{},unregister:()=>{}}:new FinalizationRegistry((kk=>vk.tdI1(kk,1)));function lk(kk,Fk){return kk>>>=0,Zk().subarray(kk/4,kk/4+Fk)}let ak=null;function qk(){return null!==ak&&0!==ak.byteLength||(ak=new Float64Array(vk.memory.buffer)),ak}function Lk(kk,Fk){return function(kk,Fk){sk+=Fk,sk>=Qk&&(Kk=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0}),Kk.decode(),sk=Fk);return Kk.decode(ek().subarray(kk,kk+Fk))}(kk>>>0,Fk)}let tk=null;function Zk(){return null!==tk&&0!==tk.byteLength||(tk=new Uint32Array(vk.memory.buffer)),tk}let jk=null;function ek(){return null!==jk&&0!==jk.byteLength||(jk=new Uint8Array(vk.memory.buffer)),jk}let wk=new Array(1024).fill(void 0);wk.push(void 0,null,!0,!1);let Hk=wk.length;function Jk(kk,Fk){const Ik=Fk(4*kk.length,4)>>>0;return Zk().set(kk,Ik/4),Ek=kk.length,Ik}function xk(kk,Fk,Ik){if(void 0===Ik){const Ik=Vk.encode(kk),Xk=Fk(Ik.length,1)>>>0;return ek().subarray(Xk,Xk+Ik.length).set(Ik),Ek=Ik.length,Xk}let Xk=kk.length,Tk=Fk(Xk,1)>>>0;const ik=ek();let yk=0;for(;yk<Xk;yk++){const Fk=kk.charCodeAt(yk);if(Fk>127)break;ik[Tk+yk]=Fk}if(yk!==Xk){0!==yk&&(kk=kk.slice(yk)),Tk=Ik(Tk,Xk,Xk=yk+3*kk.length,1)>>>0;const Fk=ek().subarray(Tk+yk,Tk+Xk);yk+=Vk.encodeInto(kk,Fk).written,Tk=Ik(Tk,Xk,yk,1)>>>0}return Ek=yk,Tk}function Pk(kk){const Fk=function(kk){return wk[kk]}(kk);return function(kk){kk<1028||(wk[kk]=Hk,Hk=kk)}(kk),Fk}let Kk=new TextDecoder("utf-8",{ignoreBOM:!0,fatal:!0});Kk.decode();const Qk=2146435072;let sk=0;const Vk=new TextEncoder;"encodeInto"in Vk||(Vk.encodeInto=function(kk,Fk){const Ik=Vk.encode(kk);return Fk.set(Ik),{read:kk.length,written:Ik.length}});let zk,Sk,vk,Ek=0;function Ok(kk,Fk){return Sk=kk,vk=kk.exports,zk=Fk,ak=null,tk=null,jk=null,vk.Hqds(),vk}function nk(kk){if(void 0!==vk)return vk;void 0!==kk&&(Object.getPrototypeOf(kk)===Object.prototype?({module:kk}=kk):console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));const Fk=ik();kk instanceof WebAssembly.Module||(kk=new WebAssembly.Module(kk));return Ok(new WebAssembly.Instance(kk,Fk),kk)}async function Gk(kk){if(void 0!==vk)return vk;void 0!==kk&&(Object.getPrototypeOf(kk)===Object.prototype?({module_or_path:kk}=kk):console.warn("using deprecated parameters for the initialization function; pass a single object instead"));const Fk=ik();("string"===typeof kk||"function"===typeof Request&&kk instanceof Request||"function"===typeof URL&&kk instanceof URL)&&(kk=fetch(kk));const{instance:Ik,module:Xk}=await async function(kk,Fk){if("function"===typeof Response&&kk instanceof Response){if(!kk.ok)throw new Error(`failed to fetch Wasm: ${kk.status} ${kk.statusText} fetching \'${kk.url}\'`);if("function"===typeof WebAssembly.instantiateStreaming)try{return await WebAssembly.instantiateStreaming(kk,Fk)}catch(Ik){if(!function(kk){switch(kk){case"basic":case"cors":case"default":return!0}return!1}(kk.type)||"application/wasm"===kk.headers.get("Content-Type"))throw Ik;console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\\n",Ik)}const Xk=await kk.arrayBuffer();return await WebAssembly.instantiate(Xk,Fk)}{const Ik=await WebAssembly.instantiate(kk,Fk);return Ik instanceof WebAssembly.Instance?{instance:Ik,module:kk}:Ik}}(await kk,Fk);return Ok(Ik,Xk)}let pk=null,uk=null;function bk(kk){if(null!==uk)throw uk;if(null===pk)try{const{memory:Ik}=nk({module:kk});pk={wasm:Fk,memory:Ik}}catch(Ik){throw uk=function(kk,Fk){return new Error(`${kk}: ${Fk instanceof Error?`${Fk.name}: ${Fk.message}`:String(Fk)}`,{cause:Fk})}("instantiate",Ik),uk}return pk}function Rk(kk){return kk instanceof Error?kk.message:String(kk)}const Uk=0,Ck=1,Nk=2,ck=3,Wk=4;Error;function fk(kk){return`the texture module didn\'t load (${Rk(kk)})`}function Bk(kk){return""===kk?[]:kk.split("\\0")}const dk=self;let Yk=null,Ak=null,gk=Uk,mk=0;function hk(kk){const Fk=performance.now();var Ik,Xk;(kk!==gk||Fk-mk>=1e3)&&(gk=kk,mk=Fk,dk.postMessage({type:"progress",stage:kk,wasmBytes:null!==(Ik=null===(Xk=Ak)||void 0===Xk?void 0:Xk.buffer.byteLength)&&void 0!==Ik?Ik:0}))}const{FileReaderSync:rk}=self;function Dk(kk){return(new rk).readAsDataURL(new Blob([kk],{type:"image/png"}))}function Mk(kk,Fk){dk.postMessage({type:"sheet",sheet:kk,pixels:Fk},[Fk.buffer])}function kF(kk){let Fk;hk(Ck);try{Fk=bk(kk.module)}catch(yk){return void dk.postMessage({type:"failed",reason:fk(yk),moduleLoad:!0})}Ak=Fk.memory,hk(Nk);const{assets:Ik,layerCap:Xk,warnings:Tk,generator:ik}=function(kk,Fk,Ik,Xk,Tk,ik,yk){var lk;const{wasm:ak,memory:qk}=kk,{strings:Lk,blocks:tk,numbers:Zk,index:jk,armour:ek}=Fk,wk=new ak.dk(Lk,tk,Zk,jk,ek,Ik),Hk=Xk.sources.map((kk=>(null===ik||void 0===ik||ik(Nk),wk.xF(kk)))),Jk=new Uint32Array(2*Xk.sourceOfName.length);for(const[Ek,Ok]of Xk.sourceOfName.entries())Jk[2*Ek]=Ek,Jk[2*Ek+1]=Hk[Ok];wk.xH(Xk.names,Jk),null===ik||void 0===ik||ik(ck),wk.ZH(Tk,null!==(lk=null===yk||void 0===yk?void 0:yk.layers)&&void 0!==lk?lk:0),null===ik||void 0===ik||ik(Wk);const xk={};for(const[Ek,Ok]of Bk(wk.JH()).entries())null===ik||void 0===ik||ik(Wk),xk[Ok]=wk.jH(Ek);const Pk={},Kk=wk.di(),Qk=new Map;for(const[Ek,Ok]of Bk(wk.oy()).entries()){const kk=Kk[Ek];Qk.has(kk)||(null===ik||void 0===ik||ik(Wk),Qk.set(kk,wk.jH(kk))),Pk[Ok]=Qk.get(kk)}wk.lH();const sk=Array.from(wk.We()),Vk=[],zk=[],Sk=(kk,Fk)=>new Uint8ClampedArray(qk.buffer,kk,Fk).slice();if(yk){for(let kk=0;kk<sk.length;kk++)null===ik||void 0===ik||ik(Wk),wk.yH(kk),wk.re(),Vk.push(yk.dataUrl(new Uint8Array(qk.buffer,wk.LH(),wk.KH()))),yk.onSheet(kk,Sk(wk.me(),wk.PH()));wk.qH()}const vk=wk.tH();for(let Ek=vk;Ek<vk+wk.It();Ek++)null===ik||void 0===ik||ik(Wk),Vk.push(wk.jH(Ek)),zk.push(Sk(wk.wH(Ek),wk.eH(Ek)));return{assets:{rotatedBlockTextures:xk,animatedBlockTextures:Pk,blockAtlasArr:Vk,blockAtlasPixels:zk,armourAtlas:wk.jH(wk.uy()),imagesPerAtlas:sk,blockAtlasWidth:wk.we()},layerCap:wk.HH()?Tk:0,warnings:wk.warnings(),generator:wk}}(Fk,kk.inputs,kk.isDefaultPack,{sources:kk.sources,names:kk.names,sourceOfName:kk.sourceOfName},kk.maxLayerWidth,hk,kk.sheetLayers>0?{layers:kk.sheetLayers,onSheet:Mk,dataUrl:Dk}:void 0);Yk=ik,dk.postMessage({type:"required",assets:Ik,layerCap:Xk,warnings:Tk},Ik.blockAtlasPixels.map((kk=>kk.buffer)))}self.onmessageerror=()=>{dk.postMessage({type:"failed",reason:"the request couldn\'t be deserialised"})},self.onmessage=kk=>{let{data:Fk}=kk;try{"required"===Fk.type?kF(Fk):function(){if(!Yk)throw new Error("No required assets to follow");const{colours:kk,warnings:Fk}=function(kk){return kk.aH(),{colours:{blocks:kk.st(),counts:kk.At(),values:kk.dj()},warnings:kk.warnings()}}(Yk);dk.postMessage({type:"optional",...kk,warnings:Fk},[kk.counts.buffer,kk.values.buffer])}()}catch(Ik){const kk=Rk(Ik),Fk=Ik instanceof WebAssembly.RuntimeError?`wasm trapped (${kk})`:kk;dk.postMessage({type:"failed",reason:Fk,stack:Ik instanceof Error?Ik.stack:void 0})}}})();', "Worker", void 0, Ik.p + "generation.worker.c6182b6c.worker.js")
     }
-    var qS = gS(36271),
-      uS = gS(3385),
-      IS = gS(3395),
-      fS = gS(3391),
-      kS = gS(3370);
+    var ak = Ik(36224),
+      qk = Ik(3157),
+      Lk = Ik(3170),
+      tk = Ik(3164),
+      Zk = Ik(3139);
 
-    function aS(SS) {
-      return "" === SS ? [] : SS.split("\0")
-    }
-
-    function KS(SS) {
-      if ("" !== SS)
-        for (const HS of SS.split("\n")) console.error(HS)
+    function jk(kk) {
+      return "" === kk ? [] : kk.split("\0")
     }
 
-    function jS(SS, HS) {
-      return async function(SS, HS) {
-        const gS = Object.keys(SS),
-          tS = [],
-          bS = new Map,
-          XS = new Uint32Array(gS.length);
-        for (const [xS, NS] of gS.entries()) {
+    function ek(kk) {
+      if ("" !== kk)
+        for (const Fk of kk.split("\n")) console.error(Fk)
+    }
+
+    function wk(kk, Fk) {
+      return async function(kk, Fk) {
+        const Ik = Object.keys(kk),
+          Xk = [],
+          Tk = new Map,
+          ik = new Uint32Array(Ik.length);
+        for (const [yk, lk] of Ik.entries()) {
           const {
-            url: HS
-          } = SS[NS];
-          bS.has(HS) || (bS.set(HS, tS.length), tS.push(HS)), XS[xS] = bS.get(HS)
+            url: Fk
+          } = kk[lk];
+          Tk.has(Fk) || (Tk.set(Fk, Xk.length), Xk.push(Fk)), ik[yk] = Tk.get(Fk)
         }
         return {
-          sources: await HS(tS),
-          names: gS.join("\0"),
-          sourceOfName: XS
+          sources: await Fk(Xk),
+          names: Ik.join("\0"),
+          sourceOfName: ik
         }
-      }(SS, (async SS => {
-        const gS = await async function(SS, HS) {
-          const gS = new AbortController,
-            tS = () => {
-              gS.abort()
+      }(kk, (async kk => {
+        const Ik = await async function(kk, Fk) {
+          const Ik = new AbortController,
+            Xk = () => {
+              Ik.abort()
             };
-          HS.addEventListener("abort", tS);
+          Fk.addEventListener("abort", Xk);
           try {
-            const HS = await Promise.all(SS.map((async SS => {
+            const Fk = await Promise.all(kk.map((async kk => {
               try {
-                const HS = await fetch(SS, {
-                  signal: gS.signal
+                const Fk = await fetch(kk, {
+                  signal: Ik.signal
                 });
-                if (!HS.ok) throw new Error(`HTTP ${HS.status}`);
-                return [SS, await HS.blob()]
-              } catch (HS) {
-                throw gS.abort(), new IS.q(IS.m.Fetch, `fetching ${SS} failed: ${(0,fS.h)(HS)}`)
+                if (!Fk.ok) throw new Error(`HTTP ${Fk.status}`);
+                return [kk, await Fk.blob()]
+              } catch (Fk) {
+                throw Ik.abort(), new Lk.o(Lk.m.Fetch, `fetching ${kk} failed: ${(0,tk.c)(Fk)}`)
               }
             })));
-            return new Map(HS)
+            return new Map(Fk)
           } finally {
-            HS.removeEventListener("abort", tS)
+            Fk.removeEventListener("abort", Xk)
           }
-        }(SS.filter((SS => !SS.startsWith("data:"))), HS);
-        return Promise.all(SS.map((SS => {
-          var HS;
-          return (0, kS.f)(null !== (HS = gS.get(SS)) && void 0 !== HS ? HS : SS)
+        }(kk.filter((kk => !kk.startsWith("data:"))), Fk);
+        return Promise.all(kk.map((kk => {
+          var Fk;
+          return (0, Zk.c)(null !== (Fk = Ik.get(kk)) && void 0 !== Fk ? Fk : kk)
         })))
       }))
     }
 
-    function GS(SS, HS) {
-      let gS;
-      return SS instanceof IS.q ? gS = SS : (gS = new IS.q(HS ? IS.m.Optional : IS.m.Error, (0, fS.h)(SS)), SS instanceof Error && (gS.stack = `${gS.name}: ${gS.message}\n${SS.stack}`)), gS.code !== IS.m.Fetch && gS.code !== IS.m.Error && (0, uS.f)(gS.message), gS
+    function Hk(kk, Fk) {
+      let Ik;
+      return kk instanceof Lk.o ? Ik = kk : (Ik = new Lk.o(Fk ? Lk.m.Optional : Lk.m.Error, (0, tk.c)(kk)), kk instanceof Error && (Ik.stack = `${Ik.name}: ${Ik.message}\n${kk.stack}`)), Ik.code !== Lk.m.Fetch && Ik.code !== Lk.m.Error && (0, qk.g)(Ik.message), Ik
     }
 
-    function CS(SS) {
-      return SS.message ? new Error(`the texture worker failed: ${SS.message}`) : new IS.q(IS.m.Load, "the texture worker failed to start")
+    function Jk(kk) {
+      return kk.message ? new Error(`the texture worker failed: ${kk.message}`) : new Lk.o(Lk.m.Load, "the texture worker failed to start")
     }
-    class nS {
-      constructor(SS) {
-        this.worker = SS, this.failure = void 0, this.abandonStep = null, SS.addEventListener("error", (SS => {
-          SS.preventDefault(), this.failure ??= CS(SS)
+    class xk {
+      constructor(kk) {
+        this.worker = kk, this.failure = void 0, this.abandonStep = null, kk.addEventListener("error", (kk => {
+          kk.preventDefault(), this.failure ??= Jk(kk)
         }))
       }
-      static async generateRequired(SS, HS, gS, XS) {
-        let xS = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : IS.b,
-          uS = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
-        const kS = (0, qS.e)();
-        if (null !== kS) throw GS(new IS.q(IS.m.Load, kS), !1);
-        let aS;
-        const CS = new AbortController;
+      static async generateRequired(kk, Fk, Ik, ik) {
+        let yk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Lk.d,
+          qk = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0;
+        const Zk = (0, ak.l)();
+        if (null !== Zk) throw Hk(new Lk.o(Lk.m.Load, Zk), !1);
+        let jk;
+        const Jk = new AbortController;
         try {
-          aS = new nS(function() {
+          jk = new xk(function() {
             try {
-              return new NS
-            } catch (SS) {
-              throw new IS.q(IS.m.Load, `the texture worker failed to start: ${(0,fS.h)(SS)}`)
+              return new lk
+            } catch (kk) {
+              throw new Lk.o(Lk.m.Load, `the texture worker failed to start: ${(0,tk.c)(kk)}`)
             }
           }());
-          const kS = (0, qS.b)().catch((SS => {
-              throw new IS.q(IS.m.Load, function(SS) {
-                return `the texture module didn't load (${(0,fS.h)(SS)})`
-              }(SS))
+          const Zk = (0, ak.d)().catch((kk => {
+              throw new Lk.o(Lk.m.Load, function(kk) {
+                return `the texture module didn't load (${(0,tk.c)(kk)})`
+              }(kk))
             })),
-            GS = (async () => {
-              const XS = function(SS, HS, gS) {
-                const tS = [],
-                  bS = new Map,
-                  XS = SS => {
-                    let HS = bS.get(SS);
-                    return void 0 === HS && (HS = tS.length, tS.push(SS), bS.set(SS, HS)), HS
+            Hk = (async () => {
+              const ik = function(kk, Fk, Ik) {
+                const Xk = [],
+                  Tk = new Map,
+                  ik = kk => {
+                    let Fk = Tk.get(kk);
+                    return void 0 === Fk && (Fk = Xk.length, Xk.push(kk), Tk.set(kk, Fk)), Fk
                   },
-                  xS = [],
-                  NS = [],
-                  qS = new Map,
-                  uS = (SS, HS) => {
-                    const gS = "object" === typeof SS && null !== SS && "animTextures" in SS ? SS.animTextures : void 0;
-                    if (!Array.isArray(gS) || !gS.every((SS => "string" === typeof SS))) throw new Error(`Block ${HS} has textureInfo the encoding doesn't cover`);
-                    xS.push(gS.length, ...gS.map(XS))
+                  yk = [],
+                  lk = [],
+                  ak = new Map,
+                  qk = (kk, Fk) => {
+                    const Ik = "object" === typeof kk && null !== kk && "animTextures" in kk ? kk.animTextures : void 0;
+                    if (!Array.isArray(Ik) || !Ik.every((kk => "string" === typeof kk))) throw new Error(`Block ${Fk} has textureInfo the encoding doesn't cover`);
+                    yk.push(Ik.length, ...Ik.map(ik))
                   };
-                let IS = 0;
-                for (const aS in SS) {
-                  const HS = SS[aS];
-                  xS.push(XS(aS));
-                  const gS = (HS.transTex ? 1 : 0) | (HS.aa ? 2 : 0) | (HS.particlesIgnoreBlack ? 4 : 0),
-                    tS = "string" === typeof HS.itemTexture ? XS(HS.itemTexture) : 4294967295,
-                    bS = `${gS},${tS}`,
-                    fS = HS.textureInfo,
-                    kS = qS.get(fS);
-                  if ((null === kS || void 0 === kS ? void 0 : kS.fields) !== bS)
-                    if (qS.set(fS, {
-                        entry: IS++,
-                        fields: bS
-                      }), xS.push(1, gS, tS), "string" === typeof fS) xS.push(1, XS(fS));
-                    else if (Array.isArray(fS)) {
-                    xS.push(3, fS.length);
-                    for (const SS of fS) "string" === typeof SS ? xS.push(0, XS(SS)) : "number" === typeof SS ? (xS.push(2, NS.length), NS.push(SS)) : (xS.push(1), uS(SS, aS))
-                  } else fS ? (xS.push(2), uS(fS, aS)) : xS.push(0);
-                  else xS.push(0, kS.entry), IS++
+                let Lk = 0;
+                for (const jk in kk) {
+                  const Fk = kk[jk];
+                  yk.push(ik(jk));
+                  const Ik = (Fk.transTex ? 1 : 0) | (Fk.qj ? 2 : 0) | (Fk.particlesIgnoreBlack ? 4 : 0),
+                    Xk = "string" === typeof Fk.itemTexture ? ik(Fk.itemTexture) : 4294967295,
+                    Tk = `${Ik},${Xk}`,
+                    tk = Fk.textureInfo,
+                    Zk = ak.get(tk);
+                  if ((null === Zk || void 0 === Zk ? void 0 : Zk.fields) !== Tk)
+                    if (ak.set(tk, {
+                        entry: Lk++,
+                        fields: Tk
+                      }), yk.push(1, Ik, Xk), "string" === typeof tk) yk.push(1, ik(tk));
+                    else if (Array.isArray(tk)) {
+                    yk.push(3, tk.length);
+                    for (const kk of tk) "string" === typeof kk ? yk.push(0, ik(kk)) : "number" === typeof kk ? (yk.push(2, lk.length), lk.push(kk)) : (yk.push(1), qk(kk, jk))
+                  } else tk ? (yk.push(2), qk(tk, jk)) : yk.push(0);
+                  else yk.push(0, Zk.entry), Lk++
                 }
-                const fS = [];
-                for (const aS in HS) fS.push(XS(aS), HS[aS]);
-                const kS = new Uint32Array(gS.map(XS));
+                const tk = [];
+                for (const jk in Fk) tk.push(ik(jk), Fk[jk]);
+                const Zk = new Uint32Array(Ik.map(ik));
                 return {
-                  strings: tS.join("\0"),
-                  blocks: new Uint32Array(xS),
-                  numbers: new Float64Array(NS),
-                  index: new Uint32Array(fS),
-                  armour: kS
+                  strings: Xk.join("\0"),
+                  blocks: new Uint32Array(yk),
+                  numbers: new Float64Array(lk),
+                  index: new Uint32Array(tk),
+                  armour: Zk
                 }
-              }(SS, HS, tS.f.map(bS.h));
+              }(kk, Fk, Xk.g.map(Tk.g));
               return {
-                inputs: XS,
-                sources: await jS(gS, CS.signal)
+                inputs: ik,
+                sources: await wk(Ik, Jk.signal)
               }
             })(),
-            [PS, {
-              inputs: QS,
-              sources: DS
-            }] = await Promise.all([kS, GS]),
-            wS = [QS.blocks.buffer, QS.numbers.buffer, QS.index.buffer, QS.armour.buffer, DS.sourceOfName.buffer];
-          for (const SS of DS.sources) wS.push(SS.buffer);
-          const hS = [],
+            [Pk, {
+              inputs: Kk,
+              sources: Qk
+            }] = await Promise.all([Zk, Hk]),
+            sk = [Kk.blocks.buffer, Kk.numbers.buffer, Kk.index.buffer, Kk.armour.buffer, Qk.sourceOfName.buffer];
+          for (const kk of Qk.sources) sk.push(kk.buffer);
+          const Vk = [],
             {
-              assets: ZS,
-              layerCap: JS,
-              warnings: OS
-            } = await aS.request({
+              assets: zk,
+              layerCap: Sk,
+              warnings: vk
+            } = await jk.request({
               type: "required",
-              module: PS,
-              inputs: QS,
-              isDefaultPack: XS,
-              maxLayerWidth: xS,
-              sheetLayers: uS,
-              ...DS
-            }, wS, ((SS, HS) => {
-              hS[SS] = HS
+              module: Pk,
+              inputs: Kk,
+              isDefaultPack: ik,
+              maxLayerWidth: yk,
+              sheetLayers: qk,
+              ...Qk
+            }, sk, ((kk, Fk) => {
+              Vk[kk] = Fk
             }));
-          return uS > 0 && (ZS.blockAtlasPixels = function(SS, HS) {
-            const gS = [];
-            for (let tS = 0; tS < HS; tS++) {
-              const bS = SS[tS];
-              if (void 0 === bS) throw new Error(`the texture worker's sheet ${tS} of ${HS} didn't arrive`);
-              gS.push(bS)
+          return qk > 0 && (zk.blockAtlasPixels = function(kk, Fk) {
+            const Ik = [];
+            for (let Xk = 0; Xk < Fk; Xk++) {
+              const Tk = kk[Xk];
+              if (void 0 === Tk) throw new Error(`the texture worker's sheet ${Xk} of ${Fk} didn't arrive`);
+              Ik.push(Tk)
             }
-            return gS
-          }(hS, ZS.imagesPerAtlas.length)), KS(OS), {
-            assets: ZS,
-            layerCap: JS,
-            worker: aS
+            return Ik
+          }(Vk, zk.imagesPerAtlas.length)), ek(vk), {
+            assets: zk,
+            layerCap: Sk,
+            worker: jk
           }
-        } catch (QS) {
-          var PS;
-          throw CS.abort(), null === (PS = aS) || void 0 === PS || PS.terminate(), GS(QS, !1)
+        } catch (Kk) {
+          var Pk;
+          throw Jk.abort(), null === (Pk = jk) || void 0 === Pk || Pk.terminate(), Hk(Kk, !1)
         }
       }
       async generateOptional() {
-        let SS;
+        let kk;
         try {
-          SS = await this.request({
+          kk = await this.request({
             type: "optional"
           }, [])
-        } catch (HS) {
-          throw GS(HS, !0)
+        } catch (Fk) {
+          throw Hk(Fk, !0)
         } finally {
           this.terminate()
         }
-        return KS(SS.warnings),
-          function(SS) {
+        return ek(kk.warnings),
+          function(kk) {
             let {
-              blocks: HS,
-              counts: gS,
-              values: tS
-            } = SS;
-            const bS = {};
-            let XS = 0;
-            for (const [xS, NS] of aS(HS).entries()) {
-              const SS = [];
-              for (let HS = 0; HS < gS[xS]; HS++, XS += 3) SS.push([tS[XS], tS[XS + 1], tS[XS + 2]]);
-              bS[NS] = SS
+              blocks: Fk,
+              counts: Ik,
+              values: Xk
+            } = kk;
+            const Tk = {};
+            let ik = 0;
+            for (const [yk, lk] of jk(Fk).entries()) {
+              const kk = [];
+              for (let Fk = 0; Fk < Ik[yk]; Fk++, ik += 3) kk.push([Xk[ik], Xk[ik + 1], Xk[ik + 2]]);
+              Tk[lk] = kk
             }
-            return bS
-          }(SS)
+            return Tk
+          }(kk)
       }
       terminate() {
-        var SS;
-        this.worker.terminate(), null === (SS = this.abandonStep) || void 0 === SS || SS.call(this)
+        var kk;
+        this.worker.terminate(), null === (kk = this.abandonStep) || void 0 === kk || kk.call(this)
       }
-      request(SS, HS, gS) {
-        return new Promise(((tS, bS) => {
-          if (void 0 !== this.failure) return void bS(this.failure);
-          let XS = IS.r.None,
-            xS = 0,
-            NS = null;
-          const qS = () => {
-            var SS;
-            null === (SS = NS) || void 0 === SS || SS.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
+      request(kk, Fk, Ik) {
+        return new Promise(((Xk, Tk) => {
+          if (void 0 !== this.failure) return void Tk(this.failure);
+          let ik = Lk.q.None,
+            yk = 0,
+            lk = null;
+          const ak = () => {
+            var kk;
+            null === (kk = lk) || void 0 === kk || kk.stop(), this.abandonStep = null, this.worker.onmessage = null, this.worker.onerror = null, this.worker.onmessageerror = null
           };
           this.abandonStep = () => {
-            qS(), bS(new Error("the texture worker was terminated"))
-          }, this.worker.onmessage = HS => {
+            ak(), Tk(new Error("the texture worker was terminated"))
+          }, this.worker.onmessage = Fk => {
             let {
-              data: uS
-            } = HS;
-            var fS;
-            if ("progress" === uS.type) return XS = uS.stage, xS = uS.wasmBytes, void(null === (fS = NS) || void 0 === fS || fS.restart(XS === IS.r.Generating ? IS.f : IS.i));
-            "sheet" === uS.type && gS ? gS(uS.sheet, uS.pixels) : (qS(), "failed" === uS.type ? bS(uS.moduleLoad ? new IS.q(IS.m.Load, uS.reason) : function(SS, HS) {
+              data: qk
+            } = Fk;
+            var tk;
+            if ("progress" === qk.type) return ik = qk.stage, yk = qk.wasmBytes, void(null === (tk = lk) || void 0 === tk || tk.restart(ik === Lk.q.Generating ? Lk.f : Lk.i));
+            "sheet" === qk.type && Ik ? Ik(qk.sheet, qk.pixels) : (ak(), "failed" === qk.type ? Tk(qk.moduleLoad ? new Lk.o(Lk.m.Load, qk.reason) : function(kk, Fk) {
               let {
-                reason: gS,
-                stack: tS
-              } = SS;
-              const bS = new Error(PS(gS, HS));
-              void 0 !== tS && (bS.stack = tS);
-              return bS
-            }(uS, xS)) : uS.type !== SS.type ? bS(new Error(`the texture worker answered ${uS.type} to ${SS.type}`)) : tS(uS))
-          }, this.worker.onerror = SS => {
-            qS(), bS(CS(SS))
+                reason: Ik,
+                stack: Xk
+              } = kk;
+              const Tk = new Error(Pk(Ik, Fk));
+              void 0 !== Xk && (Tk.stack = Xk);
+              return Tk
+            }(qk, yk)) : qk.type !== kk.type ? Tk(new Error(`the texture worker answered ${qk.type} to ${kk.type}`)) : Xk(qk))
+          }, this.worker.onerror = kk => {
+            ak(), Tk(Jk(kk))
           }, this.worker.onmessageerror = () => {
-            qS(), bS(new Error("the texture worker's answer couldn't be read"))
+            ak(), Tk(new Error("the texture worker's answer couldn't be read"))
           };
           try {
-            this.worker.postMessage(SS, HS), NS = (0, IS.u)((() => {
-              qS();
-              const HS = new IS.q("required" === SS.type ? `${IS.m.Stalled}${XS}` : IS.m.Optional, PS("the texture worker stopped responding", xS));
-              bS(HS)
+            this.worker.postMessage(kk, Fk), lk = (0, Lk.r)((() => {
+              ak();
+              const Fk = new Lk.o("required" === kk.type ? `${Lk.m.Stalled}${ik}` : Lk.m.Optional, Pk("the texture worker stopped responding", yk));
+              Tk(Fk)
             }))
-          } catch (uS) {
-            qS(), bS(uS)
+          } catch (qk) {
+            ak(), Tk(qk)
           }
         }))
       }
     }
 
-    function PS(SS, HS) {
-      return HS > 0 ? `${SS}, its module's memory ${Math.round(HS/2**20)} MiB` : SS
+    function Pk(kk, Fk) {
+      return Fk > 0 ? `${kk}, its module's memory ${Math.round(Fk/2**20)} MiB` : kk
     }
   },
-  36282: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => tS,
-      d: () => bS,
-      h: () => XS,
-      j: () => xS
+  36245: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Xk,
+      h: () => Tk,
+      k: () => ik,
+      m: () => yk
     });
-    const tS = 1024,
-      bS = 1024 * tS;
+    const Xk = 1024,
+      Tk = 1024 * Xk;
 
-    function XS(SS) {
-      return 2 ** Math.floor(Math.log2(Math.max(1, SS / bS)))
+    function ik(kk) {
+      return 2 ** Math.floor(Math.log2(Math.max(1, kk / Tk)))
     }
 
-    function xS(SS) {
-      return (SS / bS).toFixed(1)
+    function yk(kk) {
+      return (kk / Tk).toFixed(1)
     }
   },
-  36265: SS => {
-    SS.exports = function(SS, HS, gS, tS) {
-      var bS = self || window;
+  36217: kk => {
+    kk.exports = function(kk, Fk, Ik, Xk) {
+      var Tk = self || window;
       try {
         try {
-          var XS;
+          var ik;
           try {
-            XS = new bS.Blob([SS])
-          } catch (uS) {
-            (XS = new(bS.BlobBuilder || bS.WebKitBlobBuilder || bS.MozBlobBuilder || bS.MSBlobBuilder)).append(SS), XS = XS.getBlob()
+            ik = new Tk.Blob([kk])
+          } catch (qk) {
+            (ik = new(Tk.BlobBuilder || Tk.WebKitBlobBuilder || Tk.MozBlobBuilder || Tk.MSBlobBuilder)).append(kk), ik = ik.getBlob()
           }
-          var xS = bS.URL || bS.webkitURL,
-            NS = xS.createObjectURL(XS),
-            qS = new bS[HS](NS, gS);
-          return xS.revokeObjectURL(NS), qS
-        } catch (uS) {
-          return new bS[HS]("data:application/javascript,".concat(encodeURIComponent(SS)), gS)
+          var yk = Tk.URL || Tk.webkitURL,
+            lk = yk.createObjectURL(ik),
+            ak = new Tk[Fk](lk, Ik);
+          return yk.revokeObjectURL(lk), ak
+        } catch (qk) {
+          return new Tk[Fk]("data:application/javascript,".concat(encodeURIComponent(kk)), Ik)
         }
-      } catch (uS) {
-        if (!tS) throw Error("Inline worker is not supported");
-        return new bS[HS](tS, gS)
+      } catch (qk) {
+        if (!Xk) throw Error("Inline worker is not supported");
+        return new Tk[Fk](Xk, Ik)
       }
     }
   },
-  36322: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => oS,
-      e: () => rS,
-      g: () => mS,
-      i: () => TS
+  36297: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => hk,
+      c: () => kF,
+      e: () => Dk,
+      h: () => mk
     });
-    var tS = gS(3021),
-      bS = gS(3035),
-      XS = gS(6819),
-      xS = gS(4812),
-      NS = gS(3033),
-      qS = gS(3030);
-    const uS = "bloxd-wasmDownloaded",
-      IS = 12;
+    var Xk = Ik(2801),
+      Tk = Ik(2809),
+      ik = Ik(6599),
+      yk = Ik(4692),
+      lk = Ik(2806),
+      ak = Ik(2803);
+    const qk = "bloxd-wasmDownloaded",
+      Lk = 12;
 
-    function fS(SS) {
-      return SS.pathname.slice(SS.pathname.lastIndexOf("/") + 1)
+    function tk(kk) {
+      return kk.pathname.slice(kk.pathname.lastIndexOf("/") + 1)
     }
 
-    function kS() {
+    function Zk() {
       try {
         if ("undefined" === typeof localStorage) return null;
-        const SS = JSON.parse(localStorage.getItem(uS) ?? "[]");
-        return Array.isArray(SS) ? SS.filter((SS => "string" === typeof SS)) : []
-      } catch (SS) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", SS), null
+        const kk = JSON.parse(localStorage.getItem(qk) ?? "[]");
+        return Array.isArray(kk) ? kk.filter((kk => "string" === typeof kk)) : []
+      } catch (kk) {
+        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", kk), null
       }
     }
-    const aS = Reflect.apply,
-      KS = "undefined" === typeof Worker ? void 0 : Worker,
-      jS = KS?.prototype.postMessage,
-      GS = KS?.prototype.terminate,
-      CS = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      nS = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      PS = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      QS = function() {
+    const jk = Reflect.apply,
+      ek = "undefined" === typeof Worker ? void 0 : Worker,
+      wk = ek?.prototype.postMessage,
+      Hk = ek?.prototype.terminate,
+      Jk = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
+      xk = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
+      Pk = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
+      Kk = function() {
         try {
-          return (0, xS.m)(KS, "Worker", !0) && (0, xS.m)(jS, "postMessage") && (0, xS.m)(GS, "terminate") && (0, xS.m)(PS, "buffer") && void 0 !== CS && void 0 !== nS
+          return (0, yk.m)(ek, "Worker", !0) && (0, yk.m)(wk, "postMessage") && (0, yk.m)(Hk, "terminate") && (0, yk.m)(Pk, "buffer") && void 0 !== Jk && void 0 !== xk
         } catch {
           return !1
         }
       }();
-    let DS = !1;
+    let Qk = !1;
 
-    function wS() {
-      return QS && !DS
+    function sk() {
+      return Kk && !Qk
     }
-    class hS {
+    class Vk {
       worker = null;
       failed = !1;
       constructor() {
-        if (wS()) try {
-          this.worker = JS(), aS(CS, this.worker, ["error", () => {
+        if (sk()) try {
+          this.worker = Sk(), jk(Jk, this.worker, ["error", () => {
             this.failed = !0
           }])
         } catch {
@@ -386,125 +386,125 @@ export const modules = {
         }
       }
       take() {
-        const SS = this.worker;
-        if (this.worker = null, null !== SS && this.failed) throw aS(GS, SS, []), new Error("it did not run");
-        return SS
+        const kk = this.worker;
+        if (this.worker = null, null !== kk && this.failed) throw jk(Hk, kk, []), new Error("it did not run");
+        return kk
       }
       stop() {
-        const SS = this.worker;
-        this.worker = null, null !== SS && aS(GS, SS, [])
+        const kk = this.worker;
+        this.worker = null, null !== kk && jk(Hk, kk, [])
       }
     }
-    class ZS {
+    class zk {
       decoded;
       worker;
       reject;
-      constructor(SS, HS, gS, tS, XS) {
+      constructor(kk, Fk, Ik, Xk, ik) {
         try {
-          this.worker = XS?.take() ?? JS()
-        } catch (uS) {
-          throw DS = !0, new Error(`The zstd decoder's worker did not start: ${(0,NS.f)(uS)}`)
+          this.worker = ik?.take() ?? Sk()
+        } catch (qk) {
+          throw Qk = !0, new Error(`The zstd decoder's worker did not start: ${(0,lk.d)(qk)}`)
         }
-        const xS = this.worker;
-        this.decoded = (0, bS.i)(((HS, bS) => {
-          this.reject = bS;
-          const XS = (SS, HS) => {
-            aS(CS, xS, [SS, HS])
+        const yk = this.worker;
+        this.decoded = (0, Tk.i)(((Fk, Tk) => {
+          this.reject = Tk;
+          const ik = (kk, Fk) => {
+            jk(Jk, yk, [kk, Fk])
           };
-          XS("message", (SS => {
-            tS();
+          ik("message", (kk => {
+            Xk();
             try {
-              const tS = aS(nS, SS, []);
-              if (!0 === tS) HS();
+              const Xk = jk(xk, kk, []);
+              if (!0 === Xk) Fk();
               else {
-                if ("string" === typeof tS) throw tS.startsWith(NS.d) && (DS = !0), new Error(tS);
-                gS(tS, aS(qS.A, tS, []))
+                if ("string" === typeof Xk) throw Xk.startsWith(lk.c) && (Qk = !0), new Error(Xk);
+                Ik(Xk, jk(ak.z, Xk, []))
               }
-            } catch (uS) {
-              bS(uS)
+            } catch (qk) {
+              Tk(qk)
             }
-          })), XS("error", (() => {
-            DS = !0, bS(new Error("The zstd decoder's worker did not run"))
-          })), XS("messageerror", (() => {
-            bS(new Error(`${SS}'s decoder sent a piece that could not be read`))
+          })), ik("error", (() => {
+            Qk = !0, Tk(new Error("The zstd decoder's worker did not run"))
+          })), ik("messageerror", (() => {
+            Tk(new Error(`${kk}'s decoder sent a piece that could not be read`))
           }))
-        })), (0, qS.U)(this.decoded), aS(jS, xS, [
-          [SS, HS]
+        })), (0, ak.Y)(this.decoded), jk(wk, yk, [
+          [kk, Fk]
         ])
       }
-      push(SS) {
-        aS(jS, this.worker, [SS, [aS(PS, SS, [])]])
+      push(kk) {
+        jk(wk, this.worker, [kk, [jk(Pk, kk, [])]])
       }
       end() {
-        aS(jS, this.worker, [null])
+        jk(wk, this.worker, [null])
       }
       markWorkerFailed() {
-        DS = !0
+        Qk = !0
       }
-      fail(SS) {
-        this.reject(SS), this.terminate()
+      fail(kk) {
+        this.reject(kk), this.terminate()
       }
       terminate() {
-        aS(GS, this.worker, [])
+        jk(Hk, this.worker, [])
       }
     }
 
-    function JS() {
-      if (globalThis.Worker !== KS) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(gS.p + gS.u(67), gS.b), {
+    function Sk() {
+      if (globalThis.Worker !== ek) throw new Error("Worker is not the one the page loaded with");
+      return new Worker(new URL(Ik.p + Ik.u(67), Ik.b), {
         name: "wasmZstdDecoder",
         type: "module"
       })
     }
-    const OS = Reflect.apply,
-      dS = ArrayBuffer,
-      cS = "undefined" === typeof Response ? void 0 : Response,
-      vS = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      ES = function() {
-        let SS;
-        void 0 !== vS && new vS({
+    const vk = Reflect.apply,
+      Ek = ArrayBuffer,
+      Ok = "undefined" === typeof Response ? void 0 : Response,
+      nk = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      Gk = function() {
+        let kk;
+        void 0 !== nk && new nk({
           __proto__: null,
-          start(HS) {
+          start(Fk) {
             const {
-              enqueue: gS,
-              close: tS,
-              error: bS
-            } = Object.getPrototypeOf(HS);
-            SS = {
-              enqueue: gS,
-              close: tS,
-              error: bS
+              enqueue: Ik,
+              close: Xk,
+              error: Tk
+            } = Object.getPrototypeOf(Fk);
+            kk = {
+              enqueue: Ik,
+              close: Xk,
+              error: Tk
             }
           }
         }, {
           __proto__: null
         });
-        return SS
+        return kk
       }(),
-      LS = function() {
+      pk = function() {
         try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== ES && (0, xS.m)(cS, "Response", !0) && (0, xS.m)(vS, "ReadableStream", !0) && (0, xS.m)(ES.enqueue, "enqueue") && (0, xS.m)(ES.close, "close") && (0, xS.m)(ES.error, "error") && (0, xS.m)(qS.Z, "body") && (0, xS.m)(qS.O, "getReader") && (0, xS.m)(qS.W, "read")
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== Gk && (0, yk.m)(Ok, "Response", !0) && (0, yk.m)(nk, "ReadableStream", !0) && (0, yk.m)(Gk.enqueue, "enqueue") && (0, yk.m)(Gk.close, "close") && (0, yk.m)(Gk.error, "error") && (0, yk.m)(ak.cb, "body") && (0, yk.m)(ak.Q, "getReader") && (0, yk.m)(ak.$, "read")
         } catch {
           return !1
         }
       }();
-    async function YS(SS, HS, gS, tS, XS, xS, uS) {
-      const IS = new dS(HS),
+    async function uk(kk, Fk, Ik, Xk, ik, yk, qk) {
+      const Lk = new Ek(Fk),
         {
-          controller: fS,
-          compiled: kS
-        } = function(SS) {
+          controller: tk,
+          compiled: Zk
+        } = function(kk) {
           try {
-            let SS;
-            const HS = new vS({
+            let kk;
+            const Fk = new nk({
                 __proto__: null,
-                start(HS) {
-                  SS = HS
+                start(Fk) {
+                  kk = Fk
                 }
               }, {
                 __proto__: null
               }),
-              gS = new cS(HS, {
+              Ik = new Ok(Fk, {
                 __proto__: null,
                 headers: {
                   __proto__: null,
@@ -512,355 +512,355 @@ export const modules = {
                 }
               });
             return {
-              controller: SS,
-              compiled: (0, qS.U)((0, qS.D)((0, qS.gb)(gS)))
+              controller: kk,
+              compiled: (0, ak.Y)((0, ak.B)((0, ak.ib)(Ik)))
             }
-          } catch (HS) {
-            throw new Error(`${SS} could not be streamed into a compile: ${(0,NS.f)(HS)}`)
+          } catch (Fk) {
+            throw new Error(`${kk} could not be streamed into a compile: ${(0,lk.d)(Fk)}`)
           }
-        }(SS),
+        }(kk),
         {
-          enqueue: aS,
-          close: KS,
-          error: jS
-        } = ES,
-        GS = SS => {
+          enqueue: jk,
+          close: ek,
+          error: wk
+        } = Gk,
+        Hk = kk => {
           try {
-            OS(jS, fS, [SS])
+            vk(wk, tk, [kk])
           } catch {}
         };
-      let CS = 0;
-      const nS = (gS, tS) => {
-        if (CS + tS > HS) throw new Error(`${SS} decoded past its module's ${HS} bytes`);
-        OS(qS.$, new qS.p(IS), [new qS.p(gS), CS]);
+      let Jk = 0;
+      const xk = (Ik, Xk) => {
+        if (Jk + Xk > Fk) throw new Error(`${kk} decoded past its module's ${Fk} bytes`);
+        vk(ak.fb, new ak.n(Lk), [new ak.n(Ik), Jk]);
         try {
-          OS(aS, fS, [new qS.p(IS, CS, tS)])
+          vk(jk, tk, [new ak.n(Lk, Jk, Xk)])
         } catch {}
-        CS += tS
+        Jk += Xk
       };
-      let PS, QS;
+      let Pk, Kk;
       try {
-        PS = new ZS(SS, HS, nS, tS, uS)
-      } catch (JS) {
-        throw GS(JS), JS
+        Pk = new zk(kk, Fk, xk, Xk, qk)
+      } catch (Sk) {
+        throw Hk(Sk), Sk
       }
-      const DS = SS => {
-        PS.fail(SS), void 0 !== QS && AS(QS)
+      const Qk = kk => {
+        Pk.fail(kk), void 0 !== Kk && bk(Kk)
       };
-      let wS = !1;
-      gS.addEventListener("abort", (() => {
-        wS && PS.markWorkerFailed(), DS(new Error(`${SS} stalled`))
+      let sk = !1;
+      Ik.addEventListener("abort", (() => {
+        sk && Pk.markWorkerFailed(), Qk(new Error(`${kk} stalled`))
       }), {
         once: !0
-      }), (0, bS.s)(kS, (() => {}), DS);
+      }), (0, Tk.t)(Zk, (() => {}), Qk);
       try {
-        let xS;
+        let yk;
         try {
-          xS = await fetch(SS, {
-            signal: gS
+          yk = await fetch(kk, {
+            signal: Ik
           })
-        } catch (JS) {
-          throw new Error(`Fetching ${SS} failed: ${(0,NS.f)(JS)}`)
+        } catch (Sk) {
+          throw new Error(`Fetching ${kk} failed: ${(0,lk.d)(Sk)}`)
         }
         const {
-          ok: uS,
-          status: IS,
-          body: fS
-        } = function(SS, HS) {
+          ok: qk,
+          status: Lk,
+          body: tk
+        } = function(kk, Fk) {
           try {
             const {
-              ok: SS,
-              status: gS
-            } = HS;
+              ok: kk,
+              status: Ik
+            } = Fk;
             return {
-              ok: SS,
-              status: gS,
-              body: OS(qS.Z, HS, [])
+              ok: kk,
+              status: Ik,
+              body: vk(ak.cb, Fk, [])
             }
           } catch {
-            throw new Error(`${SS} came in a response a page script made`)
+            throw new Error(`${kk} came in a response a page script made`)
           }
-        }(SS, xS);
-        if (!uS) throw new Error(`Fetching ${SS} failed: HTTP ${IS}`);
-        tS();
-        const kS = OS(qS.O, fS, []);
-        QS = kS;
-        const aS = () => {
-          AS(kS)
+        }(kk, yk);
+        if (!qk) throw new Error(`Fetching ${kk} failed: HTTP ${Lk}`);
+        Xk();
+        const Zk = vk(ak.Q, tk, []);
+        Kk = Zk;
+        const jk = () => {
+          bk(Zk)
         };
-        for ((0, bS.s)(PS.decoded, aS, aS);;) {
-          let HS;
+        for ((0, Tk.t)(Pk.decoded, jk, jk);;) {
+          let Fk;
           try {
-            HS = await OS(qS.W, kS, [])
-          } catch (JS) {
-            throw new Error(`Downloading ${SS} failed: ${(0,NS.f)(JS)}`)
+            Fk = await vk(ak.$, Zk, [])
+          } catch (Sk) {
+            throw new Error(`Downloading ${kk} failed: ${(0,lk.d)(Sk)}`)
           }
-          if (HS.done) break;
-          tS(), PS.push(HS.value)
+          if (Fk.done) break;
+          Xk(), Pk.push(Fk.value)
         }
-        if (wS = !0, PS.end(), await PS.decoded, XS(), CS !== HS) throw new Error(`${SS} ended before its module did`)
-      } catch (JS) {
-        throw GS(JS), DS(JS), JS
+        if (sk = !0, Pk.end(), await Pk.decoded, ik(), Jk !== Fk) throw new Error(`${kk} ended before its module did`)
+      } catch (Sk) {
+        throw Hk(Sk), Qk(Sk), Sk
       }
-      PS.terminate();
+      Pk.terminate();
       try {
-        OS(KS, fS, [])
+        vk(ek, tk, [])
       } catch {}
-      const hS = await kS;
-      return void 0 !== xS && await (0, qS.C)(SS, new qS.p(IS), {
-        sha256: xS.sha256,
+      const Vk = await Zk;
+      return void 0 !== yk && await (0, ak.A)(kk, new ak.n(Lk), {
+        sha256: yk.sha256,
         onMismatch: () => {}
-      }), hS
+      }), Vk
     }
 
-    function AS(SS) {
+    function bk(kk) {
       try {
-        (0, qS.U)(SS.cancel())
+        (0, ak.Y)(kk.cancel())
       } catch {}
     }
-    const yS = ".zst.bin",
-      VS = 1e3;
-    let iS = null;
+    const Rk = ".zst.bin",
+      Uk = 1e3;
+    let Ck = null;
 
-    function WS(SS) {
-      return iS ??= function() {
-        const SS = new Map,
-          HS = "bloxd_wasm_webgpu:5121239,bloxd_wasm_webgl:5500736,bloxd_wasm_webgl1:4836275,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3704228";
-        for (const gS of HS?.split(",") ?? []) {
-          const [HS = "", tS] = gS.split(":"), bS = Number(tS);
-          Number.isInteger(bS) && bS > 0 && SS.set(HS, bS)
+    function Nk(kk) {
+      return Ck ??= function() {
+        const kk = new Map,
+          Fk = "bloxd_wasm_webgpu:5121311,bloxd_wasm_webgl:5500808,bloxd_wasm_webgl1:4836347,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3704284";
+        for (const Ik of Fk?.split(",") ?? []) {
+          const [Fk = "", Xk] = Ik.split(":"), Tk = Number(Xk);
+          Number.isInteger(Tk) && Tk > 0 && kk.set(Fk, Tk)
         }
-        return SS
-      }(), iS.get(SS)
+        return kk
+      }(), Ck.get(kk)
     }
-    async function zS(SS, HS) {
-      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const tS = WS(SS.name);
-      if (void 0 === tS) return US(await pS(SS, HS, gS), "cold-wasm");
-      const XS = LS ? new hS : null;
-      let xS;
+    async function ck(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const Xk = Nk(kk.name);
+      if (void 0 === Xk) return Wk(await fk(kk, Fk, Ik), "cold-wasm");
+      const ik = pk ? new Vk : null;
+      let yk;
       try {
-        if (uS = SS.url(), kS()?.includes(fS(uS)) && await async function(SS) {
-            const HS = new AbortController;
-            let gS;
-            const tS = (0, bS.i)((SS => {
-              gS = setTimeout((() => {
-                HS.abort(), SS(null)
-              }), VS)
+        if (qk = kk.url(), Zk()?.includes(tk(qk)) && await async function(kk) {
+            const Fk = new AbortController;
+            let Ik;
+            const Xk = (0, Tk.i)((kk => {
+              Ik = setTimeout((() => {
+                Fk.abort(), kk(null)
+              }), Uk)
             }));
             try {
-              const gS = fetch(SS.href, {
+              const Ik = fetch(kk.href, {
                   cache: "only-if-cached",
                   mode: "same-origin",
-                  signal: HS.signal
+                  signal: Fk.signal
                 }),
-                XS = await (0, bS.r)([gS, tS]);
-              return !!XS?.ok && ((0, qS.U)(XS.body.cancel()), !0)
+                ik = await (0, Tk.s)([Ik, Xk]);
+              return !!ik?.ok && ((0, ak.Y)(ik.body.cancel()), !0)
             } catch {
               return !1
             } finally {
-              clearTimeout(gS)
+              clearTimeout(Ik)
             }
-          }(SS.url())) return XS?.stop(), await async function(SS, HS, gS, tS) {
-          let bS = !1;
-          const XS = gS && {
-            sha256: gS.sha256,
+          }(kk.url())) return ik?.stop(), await async function(kk, Fk, Ik, Xk) {
+          let Tk = !1;
+          const ik = Ik && {
+            sha256: Ik.sha256,
             onMismatch: () => {
-              bS = !0
+              Tk = !0
             }
           };
           try {
-            return US(await pS(SS, XS, tS), "warm")
-          } catch (xS) {
-            const tS = await sS(SS, HS, gS, null);
-            if (null === tS) throw bS && gS.onMismatch(), xS;
-            return console.warn(`${SS.url().href} from the HTTP cache failed: ${(0,NS.f)(xS)}: loaded its copy instead`), US(tS, bS ? "warm-refused" : "warm-broken")
+            return Wk(await fk(kk, ik, Xk), "warm")
+          } catch (yk) {
+            const Xk = await Bk(kk, Fk, Ik, null);
+            if (null === Xk) throw Tk && Ik.onMismatch(), yk;
+            return console.warn(`${kk.url().href} from the HTTP cache failed: ${(0,lk.d)(yk)}: loaded its copy instead`), Wk(Xk, Tk ? "warm-refused" : "warm-broken")
           }
-        }(SS, tS, HS, gS);
-        xS = await sS(SS, tS, HS, XS)
+        }(kk, Xk, Fk, Ik);
+        yk = await Bk(kk, Xk, Fk, ik)
       } finally {
-        XS?.stop()
+        ik?.stop()
       }
-      var uS;
-      return null !== xS ? US(xS, "cold-worker") : US(await pS(SS, HS, gS), "cold-wasm")
+      var qk;
+      return null !== yk ? Wk(yk, "cold-worker") : Wk(await fk(kk, Fk, Ik), "cold-wasm")
     }
 
-    function US(SS, HS) {
+    function Wk(kk, Fk) {
       return {
         __proto__: null,
-        module: SS,
-        path: HS
+        module: kk,
+        path: Fk
       }
     }
 
-    function pS(SS, HS, gS) {
-      return void 0 === WS(SS.name) ? (0, qS.F)(SS.url(), HS, gS) : (0, qS.F)(SS.url(), HS, {
-        ...gS,
+    function fk(kk, Fk, Ik) {
+      return void 0 === Nk(kk.name) ? (0, ak.G)(kk.url(), Fk, Ik) : (0, ak.G)(kk.url(), Fk, {
+        ...Ik,
         hideThen: !0,
         onDownloaded: () => {
-          ! function(SS) {
-            const HS = kS();
-            if (null === HS) return;
-            const gS = fS(SS),
-              tS = HS.filter((SS => SS !== gS));
-            tS.push(gS);
+          ! function(kk) {
+            const Fk = Zk();
+            if (null === Fk) return;
+            const Ik = tk(kk),
+              Xk = Fk.filter((kk => kk !== Ik));
+            Xk.push(Ik);
             try {
-              localStorage.setItem(uS, JSON.stringify(tS.slice(-IS)))
-            } catch (bS) {
-              console.warn(`Bloxd wasm: ${gS} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, bS)
+              localStorage.setItem(qk, JSON.stringify(Xk.slice(-Lk)))
+            } catch (Tk) {
+              console.warn(`Bloxd wasm: ${Ik} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, Tk)
             }
-          }(SS.url()), gS.onDownloaded?.()
+          }(kk.url()), Ik.onDownloaded?.()
         }
       })
     }
-    async function sS(SS, HS, gS, tS) {
-      if (!LS || !wS()) return null;
-      const bS = SS.url(),
-        XS = `${bS.href}${yS}`;
+    async function Bk(kk, Fk, Ik, Xk) {
+      if (!pk || !sk()) return null;
+      const Tk = kk.url(),
+        ik = `${Tk.href}${Rk}`;
       try {
-        return await (0, qS.cb)(XS, ((SS, bS, xS) => YS(XS, HS, SS, bS, xS, gS, tS)))
-      } catch (xS) {
-        return console.warn(`${(0,NS.f)(xS)}: loading ${bS.href} instead`), null
+        return await (0, ak.hb)(ik, ((kk, Tk, yk) => uk(ik, Fk, kk, Tk, yk, Ik, Xk)))
+      } catch (yk) {
+        return console.warn(`${(0,lk.d)(yk)}: loading ${Tk.href} instead`), null
       }
     }
-    let BS = null,
-      MS = !1;
-    const FS = new Map,
-      RS = new Map;
+    let dk = null,
+      Yk = !1;
+    const Ak = new Map,
+      gk = new Map;
 
-    function TS(SS, HS, gS) {
-      return null === BS ? BS = lS(SS, HS, gS?.memoryMaximumBytes) : SS !== BS.build ? console.warn(`Bloxd wasm: ${SS.name} was asked for after ${BS.build.name} started loading, which this thread keeps`) : HS.name !== BS.workers.name && console.warn(`Bloxd wasm: ${HS.name} was asked for workers after ${BS.workers.name}, which this thread keeps`), gS?.reloadFailedDownload && !MS && (0, tS.$)() && (MS = !0, BS = lS(BS.build, BS.workers, BS.memoryMaximumBytes)), BS.loaded
+    function mk(kk, Fk, Ik) {
+      return null === dk ? dk = rk(kk, Fk, Ik?.memoryMaximumBytes) : kk !== dk.build ? console.warn(`Bloxd wasm: ${kk.name} was asked for after ${dk.build.name} started loading, which this thread keeps`) : Fk.name !== dk.workers.name && console.warn(`Bloxd wasm: ${Fk.name} was asked for workers after ${dk.workers.name}, which this thread keeps`), Ik?.reloadFailedDownload && !Yk && (0, Xk.R)() && (Yk = !0, dk = rk(dk.build, dk.workers, dk.memoryMaximumBytes)), dk.loaded
     }
 
-    function oS(SS, HS) {
-      if (null !== BS) return (0, bS.g)([]);
-      const gS = SS.filter((SS => !FS.has(SS.name))).map((SS => {
-        const gS = new AbortController,
-          tS = {
-            compiled: pS(SS, (0, XS.c)(SS.name), {
-              priority: HS,
-              Hg: gS.signal,
+    function hk(kk, Fk) {
+      if (null !== dk) return (0, Tk.f)([]);
+      const Ik = kk.filter((kk => !Ak.has(kk.name))).map((kk => {
+        const Ik = new AbortController,
+          Xk = {
+            compiled: fk(kk, (0, ik.c)(kk.name), {
+              priority: Fk,
+              iI: Ik.signal,
               onDownloaded: () => {
-                tS.downloaded = !0
+                Xk.downloaded = !0
               },
               retries: {
                 onRetry: () => {
-                  tS.downloaded = !1, null !== BS && gS.abort()
+                  Xk.downloaded = !1, null !== dk && Ik.abort()
                 }
               }
             }),
-            cancel: gS,
+            cancel: Ik,
             downloaded: !1
           };
-        return FS.set(SS.name, tS), (0, bS.i)((HS => {
-          (0, bS.s)(tS.compiled, (() => {
-            tS.downloaded = !0, HS()
-          }), (tS => {
-            gS.signal.aborted || console.warn(`Bloxd wasm: ${SS.name}'s compile ahead of the load failed: the load compiles it afresh`, tS), HS()
+        return Ak.set(kk.name, Xk), (0, Tk.i)((Fk => {
+          (0, Tk.t)(Xk.compiled, (() => {
+            Xk.downloaded = !0, Fk()
+          }), (Xk => {
+            Ik.signal.aborted || console.warn(`Bloxd wasm: ${kk.name}'s compile ahead of the load failed: the load compiles it afresh`, Xk), Fk()
           }))
         }))
       }));
-      return (0, bS.g)(gS)
+      return (0, Tk.f)(Ik)
     }
 
-    function lS(SS, HS, gS) {
-      const XS = (0, tS.M)((async () => {
-        (0, xS.H)(), RS.clear();
-        const gS = eS(SS),
-          tS = HS.name === SS.name ? gS : eS(HS);
+    function rk(kk, Fk, Ik) {
+      const ik = (0, Xk.D)((async () => {
+        (0, yk.F)(), gk.clear();
+        const Ik = Mk(kk),
+          Xk = Fk.name === kk.name ? Ik : Mk(Fk);
         for (const {
-            cancel: SS
+            cancel: kk
           }
-          of FS.values()) SS.abort();
-        FS.clear(), await (0, bS.g)([gS, tS]);
-        const XS = await gS,
-          NS = await tS;
-        return (0, xS.H)(), {
-          module: XS,
-          workerModule: NS
+          of Ak.values()) kk.abort();
+        Ak.clear(), await (0, Tk.f)([Ik, Xk]);
+        const ik = await Ik,
+          lk = await Xk;
+        return (0, yk.F)(), {
+          module: ik,
+          workerModule: lk
         }
-      }), SS, gS);
+      }), kk, Ik);
       return {
-        build: SS,
-        workers: HS,
-        memoryMaximumBytes: gS,
-        loaded: XS
+        build: kk,
+        workers: Fk,
+        memoryMaximumBytes: Ik,
+        loaded: ik
       }
     }
 
-    function mS(SS) {
-      return RS.get(SS)
+    function Dk(kk) {
+      return gk.get(kk)
     }
 
-    function eS(SS) {
-      const HS = performance.now(),
-        gS = FS.get(SS.name);
-      FS.delete(SS.name);
-      const tS = !0 === gS?.downloaded ? gS : void 0;
-      return void 0 !== gS && void 0 === tS && gS.cancel.abort(), (0, bS.i)(((gS, XS) => {
-        const xS = (tS, bS) => {
-            RS.set(SS.name, {
-              path: bS,
-              ms: performance.now() - HS
-            }), gS(tS)
+    function Mk(kk) {
+      const Fk = performance.now(),
+        Ik = Ak.get(kk.name);
+      Ak.delete(kk.name);
+      const Xk = !0 === Ik?.downloaded ? Ik : void 0;
+      return void 0 !== Ik && void 0 === Xk && Ik.cancel.abort(), (0, Tk.i)(((Ik, ik) => {
+        const yk = (Xk, Tk) => {
+            gk.set(kk.name, {
+              path: Tk,
+              ms: performance.now() - Fk
+            }), Ik(Xk)
           },
-          NS = () => {
-            (0, bS.s)(SH(SS), (SS => {
+          lk = () => {
+            (0, Tk.t)(FF(kk), (kk => {
               let {
-                module: HS,
-                path: gS
-              } = SS;
-              xS(HS, gS)
-            }), XS)
+                module: Fk,
+                path: Ik
+              } = kk;
+              yk(Fk, Ik)
+            }), ik)
           };
-        void 0 === tS ? NS() : (0, bS.s)(tS.compiled, (SS => {
-          xS(SS, "ahead")
-        }), NS)
+        void 0 === Xk ? lk() : (0, Tk.t)(Xk.compiled, (kk => {
+          yk(kk, "ahead")
+        }), lk)
       }))
     }
-    async function rS(SS, HS) {
+    async function kF(kk, Fk) {
       const {
-        module: gS
-      } = await SH(SS, {
-        retries: HS
+        module: Ik
+      } = await FF(kk, {
+        retries: Fk
       });
-      return gS
+      return Ik
     }
-    async function SH(SS) {
-      let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await zS(SS, (0, XS.c)(SS.name), HS)
+    async function FF(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return await ck(kk, (0, ik.c)(kk.name), Fk)
     }
   },
-  6819: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => xS
+  6599: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk
     });
-    var tS = gS(3030);
-    const bS = {
-      bloxd_wasm: () => "ca276a159dbc87fa5fb24bce01c600e017686becb2aec4d2d8c3ce9d9be10286",
-      bloxd_wasm_client: () => "78d650a75a894f26dfff12d13178b3b18625b3ca51d6ff43ca76c7c6a545160e",
-      bloxd_wasm_workers: () => "141545174c96a6a56bdd55b96874db592d9aa0421d29d01fc5f13e010772908e",
-      bloxd_wasm_models: () => "f9978bc5a15af3d00b08cdd71f12902b1d7af465ab38552c337a8dbca894f2ad",
-      bloxd_wasm_webgpu: () => "b036ba0a8b10236966685420835363e85775cab4add8bde3fee2aab6dab3eedc",
-      bloxd_wasm_webgl: () => "f94a6bd176e034f73eb9d8633ef96f3a4c2ba3c58f8f946158bfc25489809a0e",
-      bloxd_wasm_webgl1: () => "e1bef365f7d6b4c1345c3d7a59fb7d8e9059890b44c25962f6eefa2875a0d8ba",
-      bloxd_wasm_replay: () => "1cd9ae019549ed07be1080a40e72119ca1530d917a5e7c4bff7919777b0d7cc7",
-      bloxd_wasm_recorder: () => "9bf6273ff6c7cd97e192adea241330701cc74623c7e79a51cf18981bf754ac45",
-      bloxd_wasm_anim: () => "e9f60e55d6a938bae2c0cab139b5bc6a9a4c4b1abe3489fe2eaff4a7709eea4a",
-      bloxd_wasm_textures: () => "b1d909a0a1a9dae74a5159a0e981ac598963b92321ef4cc808ac39c91a481383",
-      bloxd_wasm_shader_pack: () => "2cc8a962c1c16c3304b235a366c2decc6556fba05a1b6ce886e0064dd54faac6"
+    var Xk = Ik(2803);
+    const Tk = {
+      bloxd_wasm: () => "e2f9e22926b42992a62e6da973b3cd1227290abc3e4b086f16ef7a6e7451e01c",
+      bloxd_wasm_client: () => "197b3a58630dd256c73f6be56077b03aba52688d49b256cfcb5b4297a602be6f",
+      bloxd_wasm_workers: () => "c531aa2c5eb2277940017568a817b82729d5bd8e37ed09fdb9542eeedecfabb2",
+      bloxd_wasm_models: () => "82813a7dd849808b1d07d41cb80b2035277c675f83cdbe5540a809aa86e18dae",
+      bloxd_wasm_webgpu: () => "2066e38e37e17624dae8b4b9c559f5daf047cb3ceb4eb8056d5135d5b3d9eb24",
+      bloxd_wasm_webgl: () => "3d1d580992195f6369c2533ce100ae6e8452da7398faf88e49b339f937ec6192",
+      bloxd_wasm_webgl1: () => "8032d9766cccf3c8343274c4d612b6bb3252bd4e5129a88b0ce812c44371db80",
+      bloxd_wasm_replay: () => "8d3f5aa602437d8a622249e4b26ef375d3132f03479495456878d8869447f290",
+      bloxd_wasm_recorder: () => "4e4293beaac6f6862394c42133a435a6ade3bf181e4ae4bc1a5a3c0c8e0c9dd2",
+      bloxd_wasm_anim: () => "125adb66f5cee367958854d2a9364d34f8d55bf2c7b62e20f2a9dcc7b9af5035",
+      bloxd_wasm_textures: () => "b45159af64c2cb22c8ac7c32ed16b3591e0026feb57c6ebfb95e710677904764",
+      bloxd_wasm_shader_pack: () => "b4044fc49c30628f5ddaad152e8054fb78f46958556f35beebe36f24a022d42c"
     };
-    var XS = gS(4812);
+    var ik = Ik(4692);
 
-    function xS(SS) {
-      const HS = Object.prototype.hasOwnProperty.call(bS, SS) ? bS[SS]() : void 0;
-      if (void 0 !== HS) return {
-        sha256: HS,
-        onMismatch: XS.D
+    function yk(kk) {
+      const Fk = Object.prototype.hasOwnProperty.call(Tk, kk) ? Tk[kk]() : void 0;
+      if (void 0 !== Fk) return {
+        sha256: Fk,
+        onMismatch: ik.C
       };
-      throw new tS.h(`${SS} has no release digest, so this build refuses it`)
+      throw new Xk.g(`${kk} has no release digest, so this build refuses it`)
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

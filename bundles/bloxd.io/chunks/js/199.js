@@ -1,217 +1,217 @@
 export const id = 199;
 export const ids = [199];
 export const modules = {
-  41545: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => XS
+  41529: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ik
     });
-    var tS = gS(64),
-      bS = gS(2890);
+    var Xk = Ik(58),
+      Tk = Ik(2679);
 
-    function XS(SS, HS, gS) {
-      const XS = (0, tS.useRef)(null),
+    function ik(kk, Fk, Ik) {
+      const ik = (0, Xk.useRef)(null),
         {
-          width: xS,
-          height: NS
-        } = (0, bS.d)(SS);
-      (0, tS.useEffect)((() => {
-        const gS = HS(SS.current);
-        return XS.current = gS, () => {
-          gS.close(), XS.current = null
+          width: yk,
+          height: lk
+        } = (0, Tk.b)(kk);
+      (0, Xk.useEffect)((() => {
+        const Ik = Fk(kk.current);
+        return ik.current = Ik, () => {
+          Ik.close(), ik.current = null
         }
-      }), [SS, HS]), (0, tS.useEffect)((() => {
-        xS <= 0 || NS <= 0 || XS.current.resize(xS, NS)
-      }), [xS, NS]), (0, tS.useEffect)((() => {
-        XS.current.show(gS)
-      }), [gS])
+      }), [kk, Fk]), (0, Xk.useEffect)((() => {
+        yk <= 0 || lk <= 0 || ik.current.resize(yk, lk)
+      }), [yk, lk]), (0, Xk.useEffect)((() => {
+        ik.current.show(Ik)
+      }), [Ik])
     }
   },
-  41549: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => kS,
-      e: () => fS,
-      f: () => qS
+  41534: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Zk,
+      e: () => tk,
+      g: () => ak
     });
-    var tS = gS(37181),
-      bS = gS(38644);
+    var Xk = Ik(37224),
+      Tk = Ik(38621);
 
-    function XS(SS, HS) {
-      let [gS, tS, bS] = SS;
-      return [0, .5, 1].map((SS => ({
-        timeFraction: SS,
+    function ik(kk, Fk) {
+      let [Ik, Xk, Tk] = kk;
+      return [0, .5, 1].map((kk => ({
+        timeFraction: kk,
         rotation: {
-          kX: "catmull-rom-spline",
-          point: [gS, tS, bS + (.5 === SS ? HS : 0)]
+          ii: "catmull-rom-spline",
+          point: [Ik, Xk, Tk + (.5 === kk ? Fk : 0)]
         }
       })))
     }
 
-    function xS(SS, HS, gS) {
+    function yk(kk, Fk, Ik) {
       return {
-        NX: 3200,
+        ki: 3200,
         loop: !0,
-        uX: {
+        Ii: {
           Root: {
-            timeline: [0, .5, 1].map((SS => ({
-              timeFraction: SS,
+            timeline: [0, .5, 1].map((kk => ({
+              timeFraction: kk,
               position: {
-                kX: "catmull-rom-spline",
-                point: [0, .5 === SS ? .18 : 0, 0]
+                ii: "catmull-rom-spline",
+                point: [0, .5 === kk ? .18 : 0, 0]
               }
             })))
           },
           HeadMesh: {
-            timeline: [0, .25, .75, 1].map((SS => ({
-              timeFraction: SS,
+            timeline: [0, .25, .75, 1].map((kk => ({
+              timeFraction: kk,
               rotation: {
-                kX: "catmull-rom-spline",
-                point: [0, .25 === SS ? .12 : .75 === SS ? -.12 : 0, 0]
+                ii: "catmull-rom-spline",
+                point: [0, .25 === kk ? .12 : .75 === kk ? -.12 : 0, 0]
               }
             })))
           },
           ArmLeftMesh: {
-            timeline: XS(SS, gS)
+            timeline: ik(kk, Ik)
           },
           ArmRightMesh: {
-            timeline: XS(HS, -gS)
+            timeline: ik(Fk, -Ik)
           }
         }
       }
     }
-    const NS = xS([0, 0, 0], [0, 0, 0], .07),
-      qS = (0, bS.b)((0, tS.d)(NS), "mobIdle"),
-      uS = xS([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
-      IS = xS([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
-      fS = (0, bS.b)((0, tS.d)(uS), "gunReady"),
-      kS = (0, bS.b)((0, tS.d)(IS), "gunAimed")
+    const lk = yk([0, 0, 0], [0, 0, 0], .07),
+      ak = (0, Tk.d)((0, Xk.i)(lk), "mobIdle"),
+      qk = yk([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
+      Lk = yk([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
+      tk = (0, Tk.d)((0, Xk.i)(qk), "gunReady"),
+      Zk = (0, Tk.d)((0, Xk.i)(Lk), "gunAimed")
   },
-  38644: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => bS,
-      f: () => XS
+  38621: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Tk,
+      f: () => ik
     });
-    const tS = new WeakMap;
+    const Xk = new WeakMap;
 
-    function bS(SS, HS) {
-      return tS.set(SS, HS), SS
+    function Tk(kk, Fk) {
+      return Xk.set(kk, Fk), kk
     }
 
-    function XS(SS) {
-      var HS;
-      return null !== (HS = tS.get(SS)) && void 0 !== HS ? HS : null
+    function ik(kk) {
+      var Fk;
+      return null !== (Fk = Xk.get(kk)) && void 0 !== Fk ? Fk : null
     }
   },
-  34271: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => xS,
-      h: () => bS,
-      i: () => IS
+  34222: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk,
+      f: () => Tk,
+      h: () => Lk
     });
-    var tS = gS(1657);
+    var Xk = Ik(1518);
 
-    function bS(SS) {
-      var HS;
+    function Tk(kk) {
+      var Fk;
       return {
-        ...xS.store,
-        yaw: xS.store.yaw + (null !== (HS = tS.c[SS].previewYaw) && void 0 !== HS ? HS : 0)
+        ...yk.store,
+        yaw: yk.store.yaw + (null !== (Fk = Xk.c[kk].previewYaw) && void 0 !== Fk ? Fk : 0)
       }
     }
-    const XS = {
+    const ik = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      xS = {
-        player: XS,
+      yk = {
+        player: ik,
         store: {
-          ...XS,
+          ...ik,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function NS(SS, HS) {
-      SS instanceof Promise ? SS.then(HS).catch((SS => {
-        console.error("Couldn't open the preview", SS)
-      })) : HS(SS)
+    function lk(kk, Fk) {
+      kk instanceof Promise ? kk.then(Fk).catch((kk => {
+        console.error("Couldn't open the preview", kk)
+      })) : Fk(kk)
     }
-    class qS {
-      constructor(SS) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, NS(SS, (SS => {
-          this.closed ? SS.close() : (this.opened = SS, null !== this.size && SS.resize(this.size.width, this.size.height), null !== this.view && SS.show(this.view))
+    class ak {
+      constructor(kk) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, lk(kk, (kk => {
+          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height), null !== this.view && kk.show(this.view))
         }))
       }
-      show(SS) {
-        var HS;
-        this.view = SS, null === (HS = this.opened) || void 0 === HS || HS.show(SS)
+      show(kk) {
+        var Fk;
+        this.view = kk, null === (Fk = this.opened) || void 0 === Fk || Fk.show(kk)
       }
-      resize(SS, HS) {
-        var gS;
+      resize(kk, Fk) {
+        var Ik;
         this.size = {
-          width: SS,
-          height: HS
-        }, null === (gS = this.opened) || void 0 === gS || gS.resize(SS, HS)
+          width: kk,
+          height: Fk
+        }, null === (Ik = this.opened) || void 0 === Ik || Ik.resize(kk, Fk)
       }
       close() {
-        var SS;
-        this.closed = !0, null === (SS = this.opened) || void 0 === SS || SS.close(), this.opened = null
+        var kk;
+        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
       }
     }
-    class uS {
-      constructor(SS) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(SS).then((SS => SS.ready)), NS(SS, (SS => {
-          this.closed ? SS.close() : (this.opened = SS, null !== this.size && SS.resize(this.size.width, this.size.height))
+    class qk {
+      constructor(kk) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(kk).then((kk => kk.ready)), lk(kk, (kk => {
+          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var SS, HS;
-        return null !== (SS = null === (HS = this.opened) || void 0 === HS ? void 0 : HS.isReady()) && void 0 !== SS && SS
+        var kk, Fk;
+        return null !== (kk = null === (Fk = this.opened) || void 0 === Fk ? void 0 : Fk.isReady()) && void 0 !== kk && kk
       }
-      setCosmetic(SS, HS) {
-        var gS;
-        null === (gS = this.opened) || void 0 === gS || gS.setCosmetic(SS, HS)
+      setCosmetic(kk, Fk) {
+        var Ik;
+        null === (Ik = this.opened) || void 0 === Ik || Ik.setCosmetic(kk, Fk)
       }
-      playEmote(SS) {
-        var HS;
-        null === (HS = this.opened) || void 0 === HS || HS.playEmote(SS)
+      playEmote(kk) {
+        var Fk;
+        null === (Fk = this.opened) || void 0 === Fk || Fk.playEmote(kk)
       }
-      setOrbit(SS) {
-        var HS;
-        null === (HS = this.opened) || void 0 === HS || HS.setOrbit(SS)
+      setOrbit(kk) {
+        var Fk;
+        null === (Fk = this.opened) || void 0 === Fk || Fk.setOrbit(kk)
       }
       resetCamera() {
-        var SS;
-        null === (SS = this.opened) || void 0 === SS || SS.resetCamera()
+        var kk;
+        null === (kk = this.opened) || void 0 === kk || kk.resetCamera()
       }
-      async untilDrawn(SS) {
-        var HS;
-        await this.ready, await (null === (HS = this.opened) || void 0 === HS ? void 0 : HS.untilDrawn(SS))
+      async untilDrawn(kk) {
+        var Fk;
+        await this.ready, await (null === (Fk = this.opened) || void 0 === Fk ? void 0 : Fk.untilDrawn(kk))
       }
-      resize(SS, HS) {
-        var gS;
+      resize(kk, Fk) {
+        var Ik;
         this.size = {
-          width: SS,
-          height: HS
-        }, null === (gS = this.opened) || void 0 === gS || gS.resize(SS, HS)
+          width: kk,
+          height: Fk
+        }, null === (Ik = this.opened) || void 0 === Ik || Ik.resize(kk, Fk)
       }
       close() {
-        var SS;
-        this.closed = !0, null === (SS = this.opened) || void 0 === SS || SS.close(), this.opened = null
+        var kk;
+        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
       }
     }
-    const IS = new class {
+    const Lk = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(SS) {
-        this.host = SS
+      setHost(kk) {
+        this.host = kk
       }
-      setDefaultHost(SS) {
-        this.makeDefault = SS
+      setDefaultHost(kk) {
+        this.makeDefault = kk
       }
       current() {
         if (null === this.host) {
@@ -220,426 +220,426 @@ export const modules = {
         }
         return this.host
       }
-      openMob(SS) {
-        return new qS(this.current().openMob(SS))
+      openMob(kk) {
+        return new ak(this.current().openMob(kk))
       }
-      openPet(SS) {
-        return new qS(this.current().openPet(SS))
+      openPet(kk) {
+        return new ak(this.current().openPet(kk))
       }
-      openMobLineup(SS) {
-        return new qS(this.current().openMobLineup(SS))
+      openMobLineup(kk) {
+        return new ak(this.current().openMobLineup(kk))
       }
-      openCharacter(SS, HS) {
-        return new uS(this.current().openCharacter(SS, HS))
+      openCharacter(kk, Fk) {
+        return new qk(this.current().openCharacter(kk, Fk))
       }
     }
   },
-  34267: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => tS.e,
-      f: () => tS.h,
-      g: () => tS.i
+  34218: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk.c,
+      f: () => Xk.f,
+      h: () => Xk.h
     });
-    var tS = gS(34271);
-    class bS {
-      constructor(SS) {
-        this.load = SS, this.loaded = null, this.loading = null
+    var Xk = Ik(34222);
+    class Tk {
+      constructor(kk) {
+        this.load = kk, this.loaded = null, this.loading = null
       }
-      run(SS) {
-        return null !== this.loaded ? SS(this.loaded) : (this.loading ??= this.load().then((SS => (this.loaded = SS, SS)), (SS => {
-          throw this.loading = null, SS
-        })), this.loading.then(SS))
+      run(kk) {
+        return null !== this.loaded ? kk(this.loaded) : (this.loading ??= this.load().then((kk => (this.loaded = kk, kk)), (kk => {
+          throw this.loading = null, kk
+        })), this.loading.then(kk))
       }
     }
-    class XS {
+    class ik {
       constructor() {
-        this.mobScene = new bS((() => Promise.all([gS.e(72), gS.e(232), gS.e(231), gS.e(254), gS.e(96), gS.e(255), gS.e(75), gS.e(74), gS.e(252), gS.e(73), gS.e(262), gS.e(256), gS.e(261), gS.e(259), gS.e(251), gS.e(274), gS.e(228), gS.e(244), gS.e(257), gS.e(260), gS.e(77), gS.e(186), gS.e(222), gS.e(95), gS.e(225), gS.e(240), gS.e(120), gS.e(241), gS.e(76), gS.e(119), gS.e(246)]).then((() => gS(41093))))), this.characterScene = new bS((() => Promise.all([gS.e(72), gS.e(232), gS.e(231), gS.e(254), gS.e(96), gS.e(255), gS.e(75), gS.e(74), gS.e(252), gS.e(73), gS.e(262), gS.e(256), gS.e(261), gS.e(259), gS.e(251), gS.e(274), gS.e(228), gS.e(244), gS.e(257), gS.e(260), gS.e(77), gS.e(186), gS.e(222), gS.e(95), gS.e(225), gS.e(240), gS.e(120), gS.e(241), gS.e(76), gS.e(119), gS.e(245)]).then((() => gS(41184)))))
+        this.mobScene = new Tk((() => Promise.all([Ik.e(72), Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(96), Ik.e(255), Ik.e(75), Ik.e(74), Ik.e(252), Ik.e(73), Ik.e(262), Ik.e(256), Ik.e(261), Ik.e(259), Ik.e(251), Ik.e(274), Ik.e(228), Ik.e(244), Ik.e(257), Ik.e(260), Ik.e(77), Ik.e(186), Ik.e(222), Ik.e(95), Ik.e(225), Ik.e(240), Ik.e(120), Ik.e(241), Ik.e(76), Ik.e(119), Ik.e(246)]).then((() => Ik(41091))))), this.characterScene = new Tk((() => Promise.all([Ik.e(72), Ik.e(232), Ik.e(231), Ik.e(254), Ik.e(96), Ik.e(255), Ik.e(75), Ik.e(74), Ik.e(252), Ik.e(73), Ik.e(262), Ik.e(256), Ik.e(261), Ik.e(259), Ik.e(251), Ik.e(274), Ik.e(228), Ik.e(244), Ik.e(257), Ik.e(260), Ik.e(77), Ik.e(186), Ik.e(222), Ik.e(95), Ik.e(225), Ik.e(240), Ik.e(120), Ik.e(241), Ik.e(76), Ik.e(119), Ik.e(245)]).then((() => Ik(41185)))))
       }
-      openMob(SS) {
-        return this.mobScene.run((HS => HS.openMobPreview(SS)))
+      openMob(kk) {
+        return this.mobScene.run((Fk => Fk.openMobPreview(kk)))
       }
-      openPet(SS) {
-        return this.mobScene.run((HS => HS.openPetPreview(SS)))
+      openPet(kk) {
+        return this.mobScene.run((Fk => Fk.openPetPreview(kk)))
       }
-      openMobLineup(SS) {
-        return this.mobScene.run((HS => HS.openMobLineupPreview(SS)))
+      openMobLineup(kk) {
+        return this.mobScene.run((Fk => Fk.openMobLineupPreview(kk)))
       }
-      openCharacter(SS, HS) {
-        return this.characterScene.run((gS => gS.openCharacterPreview(SS, HS)))
+      openCharacter(kk, Fk) {
+        return this.characterScene.run((Ik => Ik.openCharacterPreview(kk, Fk)))
       }
     }
-    tS.i.setDefaultHost((() => new XS))
+    Xk.h.setDefaultHost((() => new ik))
   },
-  41775: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      FrontlineMvpLineup: () => fS
+  41748: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      FrontlineMvpLineup: () => tk
     });
-    var tS = gS(64),
-      bS = gS(1121),
-      XS = gS.n(bS),
-      xS = gS(34267),
-      NS = gS(41549),
-      qS = gS(41545),
-      uS = gS(1181);
+    var Xk = Ik(58),
+      Tk = Ik(1055),
+      ik = Ik.n(Tk),
+      yk = Ik(34218),
+      lk = Ik(41534),
+      ak = Ik(41529),
+      qk = Ik(1096);
 
-    function IS(SS) {
-      return xS.g.openMobLineup(SS)
+    function Lk(kk) {
+      return yk.h.openMobLineup(kk)
     }
-    const fS = (0, tS.memo)((function(SS) {
+    const tk = (0, Xk.memo)((function(kk) {
       let {
-        players: HS,
-        className: gS
-      } = SS;
-      const bS = (0, tS.useRef)(null),
-        xS = (0, tS.useMemo)((() => HS.map((SS => {
+        players: Fk,
+        className: Ik
+      } = kk;
+      const Tk = (0, Xk.useRef)(null),
+        yk = (0, Xk.useMemo)((() => Fk.map((kk => {
           let {
-            cosmetics: HS,
-            size: gS,
-            heldGun: tS
-          } = SS;
+            cosmetics: Fk,
+            size: Ik,
+            heldGun: Xk
+          } = kk;
           return {
-            cosmetics: HS,
-            size: gS,
-            RD: tS.name,
-            animation: tS.aimed ? NS.c : NS.e
+            cosmetics: Fk,
+            size: Ik,
+            VK: Xk.name,
+            animation: Xk.aimed ? lk.d : lk.e
           }
-        }))), [HS]),
-        fS = function(SS) {
-          const [HS, gS] = (0, tS.useState)([]);
-          return (0, tS.useEffect)((() => {
-            gS(SS.map((() => !1)));
-            const HS = SS.map(((SS, HS) => {
+        }))), [Fk]),
+        tk = function(kk) {
+          const [Fk, Ik] = (0, Xk.useState)([]);
+          return (0, Xk.useEffect)((() => {
+            Ik(kk.map((() => !1)));
+            const Fk = kk.map(((kk, Fk) => {
               let {
-                showAfterMs: tS
-              } = SS;
+                showAfterMs: Xk
+              } = kk;
               return window.setTimeout((() => {
-                gS((SS => SS.map(((SS, gS) => SS || gS === HS))))
-              }), tS)
+                Ik((kk => kk.map(((kk, Ik) => kk || Ik === Fk))))
+              }), Xk)
             }));
             return () => {
-              for (const SS of HS) window.clearTimeout(SS)
+              for (const kk of Fk) window.clearTimeout(kk)
             }
-          }), [SS]), HS
-        }(HS),
-        kS = (0, tS.useMemo)((() => ({
-          figures: xS,
-          shown: fS
-        })), [xS, fS]);
-      return (0, qS.b)(bS, IS, kS), (0, uS.jsx)("div", {
-        className: XS()("MobPreview", gS),
-        ref: bS
+          }), [kk]), Fk
+        }(Fk),
+        Zk = (0, Xk.useMemo)((() => ({
+          figures: yk,
+          shown: tk
+        })), [yk, tk]);
+      return (0, ak.d)(Tk, Lk, Zk), (0, qk.jsx)("div", {
+        className: ik()("MobPreview", Ik),
+        ref: Tk
       })
     }))
   },
-  37181: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => NS,
-      d: () => xS
+  37224: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => lk,
+      i: () => yk
     });
-    var tS = gS(37171),
-      bS = gS(387),
-      XS = gS(2022);
+    var Xk = Ik(37215),
+      Tk = Ik(337),
+      ik = Ik(1844);
 
-    function xS(SS) {
-      if ("NX" in SS) return wS.createAnimationScript(SS);
-      return new uS(SS).createAnimationScript()
+    function yk(kk) {
+      if ("ki" in kk) return sk.createAnimationScript(kk);
+      return new qk(kk).createAnimationScript()
     }
 
-    function NS(SS, HS, gS, bS) {
-      const XS = SS.NX <= 0 ? 1 : HS + gS * Math.max(0, bS) / SS.NX;
-      return SS.qX === tS.m.LoopOnLastFrame ? XS % 1 : SS.qX === tS.m.NoLoop && XS >= 1 ? null : Math.min(1, XS)
+    function lk(kk, Fk, Ik, Tk) {
+      const ik = kk.ki <= 0 ? 1 : Fk + Ik * Math.max(0, Tk) / kk.ki;
+      return kk.Fi === Xk.k.LoopOnLastFrame ? ik % 1 : kk.Fi === Xk.k.NoLoop && ik >= 1 ? null : Math.min(1, ik)
     }
-    class qS {
-      createAnimationScript(SS) {
+    class ak {
+      createAnimationScript(kk) {
         const {
-          NX: HS,
-          loop: gS,
-          uX: tS
-        } = SS;
+          ki: Fk,
+          loop: Ik,
+          Ii: Xk
+        } = kk;
         return {
-          NX: Math.round(HS),
-          qX: this.createLoopMode(null !== gS && void 0 !== gS && gS),
-          uX: this.createNodeSkeletonAnimationScript(null !== tS && void 0 !== tS ? tS : null)
+          ki: Math.round(Fk),
+          Fi: this.createLoopMode(null !== Ik && void 0 !== Ik && Ik),
+          Ii: this.createNodeSkeletonAnimationScript(null !== Xk && void 0 !== Xk ? Xk : null)
         }
       }
-      createLoopMode(SS) {
-        switch (SS) {
+      createLoopMode(kk) {
+        switch (kk) {
           case !1:
-            return tS.m.NoLoop;
+            return Xk.k.NoLoop;
           case !0:
-            return tS.m.LoopOnLastFrame;
+            return Xk.k.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return tS.m.HoldOnLastFrame
+            return Xk.k.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${SS}`)
+        throw new Error(`Invalid loop mode schema: ${kk}`)
       }
-      createNodeSkeletonAnimationScript(SS) {
-        if (null === SS) return null;
-        const HS = {};
-        for (const gS in SS) {
-          const tS = SS[gS];
-          HS[gS] = this.createNodeAnimationScript(tS)
+      createNodeSkeletonAnimationScript(kk) {
+        if (null === kk) return null;
+        const Fk = {};
+        for (const Ik in kk) {
+          const Xk = kk[Ik];
+          Fk[Ik] = this.createNodeAnimationScript(Xk)
         }
-        return HS
+        return Fk
       }
-      createNodeAnimationScript(SS) {
+      createNodeAnimationScript(kk) {
         const {
-          timeline: HS
-        } = SS, gS = HS.filter((SS => Number.isFinite(SS.timeFraction)));
-        return gS.sort(((SS, HS) => SS.timeFraction - HS.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(gS, "rotation", kS),
-          position: this.createTimelineFromKeyframes(gS, "position", KS)
+          timeline: Fk
+        } = kk, Ik = Fk.filter((kk => Number.isFinite(kk.timeFraction)));
+        return Ik.sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(Ik, "rotation", Zk),
+          position: this.createTimelineFromKeyframes(Ik, "position", ek)
         }
       }
-      createTimelineFromKeyframes(SS, HS, gS) {
-        const tS = [];
-        for (const qS of SS) {
-          const SS = qS[HS];
-          if (SS) {
-            const HS = this.createAnimationFrameWithoutPrecomputes(qS.timeFraction, SS);
-            IS(HS) && tS.push(HS)
+      createTimelineFromKeyframes(kk, Fk, Ik) {
+        const Xk = [];
+        for (const ak of kk) {
+          const kk = ak[Fk];
+          if (kk) {
+            const Fk = this.createAnimationFrameWithoutPrecomputes(ak.timeFraction, kk);
+            Lk(Fk) && Xk.push(Fk)
           }
         }
-        const bS = [];
-        for (let qS = 0; qS < tS.length; qS++) {
-          var XS, xS, NS;
-          const SS = tS[qS],
-            HS = null !== (XS = tS[qS - 1]) && void 0 !== XS ? XS : SS,
-            uS = null !== (xS = tS[qS + 1]) && void 0 !== xS ? xS : SS,
-            IS = null !== (NS = tS[qS + 2]) && void 0 !== NS ? NS : uS;
-          bS.push({
-            ...SS,
-            ...gS(HS.post, HS.timeFraction, SS.post, SS.timeFraction, uS.pre, uS.timeFraction, IS.pre, IS.timeFraction)
+        const Tk = [];
+        for (let ak = 0; ak < Xk.length; ak++) {
+          var ik, yk, lk;
+          const kk = Xk[ak],
+            Fk = null !== (ik = Xk[ak - 1]) && void 0 !== ik ? ik : kk,
+            qk = null !== (yk = Xk[ak + 1]) && void 0 !== yk ? yk : kk,
+            Lk = null !== (lk = Xk[ak + 2]) && void 0 !== lk ? lk : qk;
+          Tk.push({
+            ...kk,
+            ...Ik(Fk.post, Fk.timeFraction, kk.post, kk.timeFraction, qk.pre, qk.timeFraction, Lk.pre, Lk.timeFraction)
           })
         }
-        return bS
+        return Tk
       }
-      createAnimationFrameWithoutPrecomputes(SS, HS) {
-        let gS, tS, bS = null;
-        var XS;
-        if ("object" === typeof HS && "point" in HS) bS = null !== (XS = HS.kX) && void 0 !== XS ? XS : null, gS = HS.point, tS = HS.point;
-        else if ("object" === typeof HS && "pre" in HS) {
-          var xS;
-          bS = null !== (xS = HS.kX) && void 0 !== xS ? xS : null, gS = HS.pre, tS = HS.post
-        } else gS = HS, tS = HS;
+      createAnimationFrameWithoutPrecomputes(kk, Fk) {
+        let Ik, Xk, Tk = null;
+        var ik;
+        if ("object" === typeof Fk && "point" in Fk) Tk = null !== (ik = Fk.ii) && void 0 !== ik ? ik : null, Ik = Fk.point, Xk = Fk.point;
+        else if ("object" === typeof Fk && "pre" in Fk) {
+          var yk;
+          Tk = null !== (yk = Fk.ii) && void 0 !== yk ? yk : null, Ik = Fk.pre, Xk = Fk.post
+        } else Ik = Fk, Xk = Fk;
         return {
-          timeFraction: SS,
-          kX: this.createLerpMode(bS),
-          pre: gS,
-          post: tS
+          timeFraction: kk,
+          ii: this.createLerpMode(Tk),
+          pre: Ik,
+          post: Xk
         }
       }
-      createLerpMode(SS) {
-        return null === SS ? tS.k.Linear : qS.LERP_MODE_SCHEMA_MAPPING[SS]
+      createLerpMode(kk) {
+        return null === kk ? Xk.g.Linear : ak.LERP_MODE_SCHEMA_MAPPING[kk]
       }
     }
-    qS.LERP_MODE_SCHEMA_MAPPING = {
-      linear: tS.k.Linear,
-      "catmull-rom-spline": tS.k.CatmullRomSpline
+    ak.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Xk.g.Linear,
+      "catmull-rom-spline": Xk.g.CatmullRomSpline
     };
-    class uS {
-      constructor(SS) {
-        this.animationSchema = SS
+    class qk {
+      constructor(kk) {
+        this.animationSchema = kk
       }
       createAnimationScript() {
         const {
-          animation_length: SS,
-          loop: HS,
-          bones: gS
+          animation_length: kk,
+          loop: Fk,
+          bones: Ik
         } = this.animationSchema;
         return {
-          NX: Math.round(1e3 * SS),
-          qX: this.createLoopMode(null !== HS && void 0 !== HS && HS),
-          uX: this.createNodeSkeletonAnimationScript(null !== gS && void 0 !== gS ? gS : null)
+          ki: Math.round(1e3 * kk),
+          Fi: this.createLoopMode(null !== Fk && void 0 !== Fk && Fk),
+          Ii: this.createNodeSkeletonAnimationScript(null !== Ik && void 0 !== Ik ? Ik : null)
         }
       }
-      createLoopMode(SS) {
-        switch (SS) {
+      createLoopMode(kk) {
+        switch (kk) {
           case !1:
-            return tS.m.NoLoop;
+            return Xk.k.NoLoop;
           case !0:
-            return tS.m.LoopOnLastFrame;
+            return Xk.k.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return tS.m.HoldOnLastFrame
+            return Xk.k.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${SS}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${kk}`)
       }
-      createNodeSkeletonAnimationScript(SS) {
-        if (null === SS) return null;
-        const HS = {};
-        for (const gS in SS) {
-          const tS = SS[gS];
-          HS[gS] = this.createNodeAnimationScript(tS)
+      createNodeSkeletonAnimationScript(kk) {
+        if (null === kk) return null;
+        const Fk = {};
+        for (const Ik in kk) {
+          const Xk = kk[Ik];
+          Fk[Ik] = this.createNodeAnimationScript(Xk)
         }
-        return HS
+        return Fk
       }
-      createNodeAnimationScript(SS) {
+      createNodeAnimationScript(kk) {
         const {
-          rotation: HS,
-          position: gS
-        } = SS;
+          rotation: Fk,
+          position: Ik
+        } = kk;
         return {
-          rotation: this.createAnimationTimeline(null !== HS && void 0 !== HS ? HS : null, GS, kS, !0),
-          position: this.createAnimationTimeline(null !== gS && void 0 !== gS ? gS : null, nS, KS, !1)
+          rotation: this.createAnimationTimeline(null !== Fk && void 0 !== Fk ? Fk : null, Hk, Zk, !0),
+          position: this.createAnimationTimeline(null !== Ik && void 0 !== Ik ? Ik : null, xk, ek, !1)
         }
       }
-      createAnimationTimeline(SS, HS, gS, tS) {
-        if (null === SS) return [];
-        if (Array.isArray(SS)) {
-          SS = {
-            "0.0": SS
+      createAnimationTimeline(kk, Fk, Ik, Xk) {
+        if (null === kk) return [];
+        if (Array.isArray(kk)) {
+          kk = {
+            "0.0": kk
           }
         }
-        const bS = Object.entries(SS).map((SS => {
-          let [gS, tS] = SS;
-          const bS = Number(gS) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(bS, tS, HS)
-        })).filter(IS);
-        bS.sort(((SS, HS) => SS.timeFraction - HS.timeFraction)), tS && function(SS) {
-          for (let HS = 1; HS < SS.length; HS++) {
-            const gS = SS[HS - 1].post,
-              tS = SS[HS],
-              bS = PS(tS.pre),
-              XS = PS(tS.post),
-              xS = DS(gS, tS.pre);
-            DS(gS, bS) < xS && (SS[HS] = {
-              ...tS,
-              pre: bS,
-              post: XS
+        const Tk = Object.entries(kk).map((kk => {
+          let [Ik, Xk] = kk;
+          const Tk = Number(Ik) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(Tk, Xk, Fk)
+        })).filter(Lk);
+        Tk.sort(((kk, Fk) => kk.timeFraction - Fk.timeFraction)), Xk && function(kk) {
+          for (let Fk = 1; Fk < kk.length; Fk++) {
+            const Ik = kk[Fk - 1].post,
+              Xk = kk[Fk],
+              Tk = Pk(Xk.pre),
+              ik = Pk(Xk.post),
+              yk = Qk(Ik, Xk.pre);
+            Qk(Ik, Tk) < yk && (kk[Fk] = {
+              ...Xk,
+              pre: Tk,
+              post: ik
             })
           }
-        }(bS);
-        const XS = [];
-        for (let uS = 0; uS < bS.length; uS++) {
-          var xS, NS, qS;
-          const SS = bS[uS],
-            HS = null !== (xS = bS[uS - 1]) && void 0 !== xS ? xS : SS,
-            tS = null !== (NS = bS[uS + 1]) && void 0 !== NS ? NS : SS,
-            IS = null !== (qS = bS[uS + 2]) && void 0 !== qS ? qS : tS;
-          XS.push({
-            ...SS,
-            ...gS(HS.post, HS.timeFraction, SS.post, SS.timeFraction, tS.pre, tS.timeFraction, IS.pre, IS.timeFraction)
+        }(Tk);
+        const ik = [];
+        for (let qk = 0; qk < Tk.length; qk++) {
+          var yk, lk, ak;
+          const kk = Tk[qk],
+            Fk = null !== (yk = Tk[qk - 1]) && void 0 !== yk ? yk : kk,
+            Xk = null !== (lk = Tk[qk + 1]) && void 0 !== lk ? lk : kk,
+            Lk = null !== (ak = Tk[qk + 2]) && void 0 !== ak ? ak : Xk;
+          ik.push({
+            ...kk,
+            ...Ik(Fk.post, Fk.timeFraction, kk.post, kk.timeFraction, Xk.pre, Xk.timeFraction, Lk.pre, Lk.timeFraction)
           })
         }
-        return XS
+        return ik
       }
-      createAnimationFrameWithoutPrecomputes(SS, HS, gS) {
-        let tS, bS, XS = null;
-        if ("object" === typeof HS && "post" in HS) {
-          var xS;
-          XS = null !== (xS = HS.lerp_mode) && void 0 !== xS ? xS : null, bS = jS(HS.post, gS), tS = HS.pre ? jS(HS.pre, gS) : bS
+      createAnimationFrameWithoutPrecomputes(kk, Fk, Ik) {
+        let Xk, Tk, ik = null;
+        if ("object" === typeof Fk && "post" in Fk) {
+          var yk;
+          ik = null !== (yk = Fk.lerp_mode) && void 0 !== yk ? yk : null, Tk = wk(Fk.post, Ik), Xk = Fk.pre ? wk(Fk.pre, Ik) : Tk
         } else {
-          const SS = jS(HS, gS);
-          bS = SS, tS = SS
+          const kk = wk(Fk, Ik);
+          Tk = kk, Xk = kk
         }
         return {
-          timeFraction: SS,
-          kX: this.createLerpMode(XS),
-          pre: tS,
-          post: bS
+          timeFraction: kk,
+          ii: this.createLerpMode(ik),
+          pre: Xk,
+          post: Tk
         }
       }
-      createLerpMode(SS) {
-        return null === SS ? tS.k.Linear : uS.LERP_MODE_SCHEMA_MAPPING[SS]
+      createLerpMode(kk) {
+        return null === kk ? Xk.g.Linear : qk.LERP_MODE_SCHEMA_MAPPING[kk]
       }
     }
 
-    function IS(SS) {
-      return Number.isFinite(SS.timeFraction) && fS(SS.pre) && fS(SS.post)
+    function Lk(kk) {
+      return Number.isFinite(kk.timeFraction) && tk(kk.pre) && tk(kk.post)
     }
 
-    function fS(SS) {
-      return Number.isFinite(SS[0]) && Number.isFinite(SS[1]) && Number.isFinite(SS[2])
+    function tk(kk) {
+      return Number.isFinite(kk[0]) && Number.isFinite(kk[1]) && Number.isFinite(kk[2])
     }
 
-    function kS(SS, HS, gS, tS, bS, XS, xS, NS) {
-      const qS = XS - HS,
-        uS = XS - tS,
-        IS = NS - tS,
-        fS = [null, null, null];
-      for (let kS = 0; kS < fS.length; kS++) fS[kS] = aS(SS[kS], gS[kS], bS[kS], xS[kS], qS, IS);
+    function Zk(kk, Fk, Ik, Xk, Tk, ik, yk, lk) {
+      const ak = ik - Fk,
+        qk = ik - Xk,
+        Lk = lk - Xk,
+        tk = [null, null, null];
+      for (let Zk = 0; Zk < tk.length; Zk++) tk[Zk] = jk(kk[Zk], Ik[Zk], Tk[Zk], yk[Zk], ak, Lk);
       return {
-        aX: uS,
-        KX: fS
+        yi: qk,
+        li: tk
       }
     }
 
-    function aS(SS, HS, gS, tS, XS, xS) {
+    function jk(kk, Fk, Ik, Xk, ik, yk) {
       return {
-        GX: bS.b.computeShortestRotation(SS, gS) / XS,
-        CX: bS.b.computeShortestRotation(HS, tS) / xS,
-        delta: bS.b.computeShortestRotation(HS, gS)
+        qi: Tk.e.computeShortestRotation(kk, Ik) / ik,
+        Li: Tk.e.computeShortestRotation(Fk, Xk) / yk,
+        delta: Tk.e.computeShortestRotation(Fk, Ik)
       }
     }
 
-    function KS(SS, HS, gS, tS, bS, XS, xS, NS) {
-      const qS = XS - HS,
-        uS = XS - tS,
-        IS = NS - tS,
-        fS = [null, null, null];
-      for (let kS = 0; kS < fS.length; kS++) fS[kS] = {
-        GX: (bS[kS] - SS[kS]) / qS,
-        CX: (xS[kS] - gS[kS]) / IS,
-        delta: bS[kS] - gS[kS]
+    function ek(kk, Fk, Ik, Xk, Tk, ik, yk, lk) {
+      const ak = ik - Fk,
+        qk = ik - Xk,
+        Lk = lk - Xk,
+        tk = [null, null, null];
+      for (let Zk = 0; Zk < tk.length; Zk++) tk[Zk] = {
+        qi: (Tk[Zk] - kk[Zk]) / ak,
+        Li: (yk[Zk] - Ik[Zk]) / Lk,
+        delta: Tk[Zk] - Ik[Zk]
       };
       return {
-        aX: uS,
-        KX: fS
+        yi: qk,
+        li: tk
       }
     }
 
-    function jS(SS, HS) {
-      return null === HS ? SS : HS(SS)
+    function wk(kk, Fk) {
+      return null === Fk ? kk : Fk(kk)
     }
 
-    function GS(SS) {
-      const [HS, gS, tS] = SS, xS = -(0, XS.m)(HS), NS = -(0, XS.m)(gS), qS = (0, XS.m)(tS), uS = bS.b.quaternionFromEulerZYX(xS, NS, qS);
-      return bS.b.eulerYXZFromQuaternion(uS)
+    function Hk(kk) {
+      const [Fk, Ik, Xk] = kk, yk = -(0, ik.k)(Fk), lk = -(0, ik.k)(Ik), ak = (0, ik.k)(Xk), qk = Tk.e.quaternionFromEulerZYX(yk, lk, ak);
+      return Tk.e.eulerYXZFromQuaternion(qk)
     }
-    uS.LERP_MODE_SCHEMA_MAPPING = {
-      linear: tS.k.Linear,
-      catmullrom: tS.k.CatmullRomSpline
+    qk.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Xk.g.Linear,
+      catmullrom: Xk.g.CatmullRomSpline
     };
-    const CS = 1 / 16;
+    const Jk = 1 / 16;
 
-    function nS(SS) {
-      return [-SS[0] * CS, SS[1] * CS, SS[2] * CS]
+    function xk(kk) {
+      return [-kk[0] * Jk, kk[1] * Jk, kk[2] * Jk]
     }
 
-    function PS(SS) {
-      const [HS, gS, tS] = SS;
-      return [HS >= 0 ? Math.PI - HS : -Math.PI - HS, QS(gS + Math.PI), QS(tS + Math.PI)]
+    function Pk(kk) {
+      const [Fk, Ik, Xk] = kk;
+      return [Fk >= 0 ? Math.PI - Fk : -Math.PI - Fk, Kk(Ik + Math.PI), Kk(Xk + Math.PI)]
     }
 
-    function QS(SS) {
-      return bS.b.mod(SS + Math.PI, 2 * Math.PI) - Math.PI
+    function Kk(kk) {
+      return Tk.e.mod(kk + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function DS(SS, HS) {
-      return Math.abs(bS.b.computeShortestRotation(SS[0], HS[0])) + Math.abs(bS.b.computeShortestRotation(SS[1], HS[1])) + Math.abs(bS.b.computeShortestRotation(SS[2], HS[2]))
+    function Qk(kk, Fk) {
+      return Math.abs(Tk.e.computeShortestRotation(kk[0], Fk[0])) + Math.abs(Tk.e.computeShortestRotation(kk[1], Fk[1])) + Math.abs(Tk.e.computeShortestRotation(kk[2], Fk[2]))
     }
-    const wS = new qS
+    const sk = new ak
   },
-  37171: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => xS,
-      g: () => XS,
-      k: () => tS,
-      m: () => bS
+  37215: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => yk,
+      c: () => ik,
+      g: () => Xk,
+      k: () => Tk
     });
-    let tS = function(SS) {
-        return SS[SS.Linear = 0] = "Linear", SS[SS.CatmullRomSpline = 1] = "CatmullRomSpline", SS
+    let Xk = function(kk) {
+        return kk[kk.Linear = 0] = "Linear", kk[kk.CatmullRomSpline = 1] = "CatmullRomSpline", kk
       }({}),
-      bS = function(SS) {
-        return SS[SS.NoLoop = 0] = "NoLoop", SS[SS.LoopOnLastFrame = 1] = "LoopOnLastFrame", SS[SS.HoldOnLastFrame = 2] = "HoldOnLastFrame", SS
+      Tk = function(kk) {
+        return kk[kk.NoLoop = 0] = "NoLoop", kk[kk.LoopOnLastFrame = 1] = "LoopOnLastFrame", kk[kk.HoldOnLastFrame = 2] = "HoldOnLastFrame", kk
       }({}),
-      XS = function(SS) {
-        return SS[SS.Movement = 0] = "Movement", SS[SS.Action = 1] = "Action", SS[SS.Emote = 2] = "Emote", SS[SS.Custom = 3] = "Custom", SS
+      ik = function(kk) {
+        return kk[kk.Movement = 0] = "Movement", kk[kk.Action = 1] = "Action", kk[kk.Emote = 2] = "Emote", kk[kk.Custom = 3] = "Custom", kk
       }({}),
-      xS = function(SS) {
-        return SS[SS.Start = 0] = "Start", SS[SS.Stop = 1] = "Stop", SS
+      yk = function(kk) {
+        return kk[kk.Start = 0] = "Start", kk[kk.Stop = 1] = "Stop", kk
       }({})
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

@@ -2,10 +2,10 @@
  "context": {
   "module": "bloxd_wasm_models_bg",
   "environment": "bloxd.io",
-  "build": "fqwnlq.985c8f39",
-  "url": "https://bloxd.io/static/media/bloxd_wasm_models_bg.4e2a3cdd5086f13dd5bf.wasm",
-  "sha256": "f9978bc5a15af3d00b08cdd71f12902b1d7af465ab38552c337a8dbca894f2ad",
-  "analyzed_at": "2026-11-24T11:40:10+09:00",
+  "build": "31kiid.1299b0d6",
+  "url": "https://bloxd.io/static/media/bloxd_wasm_models_bg.48f1457bc8fb4903ee57.wasm",
+  "sha256": "82813a7dd849808b1d07d41cb80b2035277c675f83cdbe5540a809aa86e18dae",
+  "analyzed_at": "2026-11-24T12:43:08+09:00",
   "referenced_by": "139.js"
  },
  "facts": {
@@ -140,190 +140,190 @@
   },
   "imports": [
    {
-    "module": "vd9Q",
-    "name": "EZut",
+    "module": "zNil",
+    "name": "Iv3F",
     "kind": "func",
     "index": 0,
     "type": "(i32) -> ()"
    },
    {
-    "module": "vd9Q",
-    "name": "vrMN",
+    "module": "zNil",
+    "name": "UgvW",
     "kind": "func",
     "index": 1,
     "type": "(i32) -> ()"
    },
    {
-    "module": "vd9Q",
-    "name": "PJ6K",
+    "module": "zNil",
+    "name": "rBJ3",
     "kind": "func",
     "index": 2,
     "type": "(i32 i32) -> ()"
    },
    {
-    "module": "vd9Q",
-    "name": "WZUK",
+    "module": "zNil",
+    "name": "Pmu7",
     "kind": "func",
     "index": 3,
     "type": "(i32 i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "okmX",
+    "module": "zNil",
+    "name": "x0F9",
     "kind": "func",
     "index": 4,
     "type": "(i32 i32 i32 i32 i32 i32 i32 i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "flEU",
+    "module": "zNil",
+    "name": "ZQbR",
     "kind": "func",
     "index": 5,
     "type": "(i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "h5B5",
+    "module": "zNil",
+    "name": "HICZ",
     "kind": "func",
     "index": 6,
     "type": "(i32 i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "Q7Pa",
+    "module": "zNil",
+    "name": "sSom",
     "kind": "func",
     "index": 7,
     "type": "(i32 i32) -> ()"
    },
    {
-    "module": "vd9Q",
-    "name": "KDKu",
+    "module": "zNil",
+    "name": "TQci",
     "kind": "func",
     "index": 8,
     "type": "(i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "zzmF",
+    "module": "zNil",
+    "name": "dPG2",
     "kind": "func",
     "index": 9,
     "type": "(i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "ONIj",
+    "module": "zNil",
+    "name": "OCXm",
     "kind": "func",
     "index": 10,
     "type": "(i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "zOFO",
+    "module": "zNil",
+    "name": "CLgt",
     "kind": "func",
     "index": 11,
     "type": "(i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "uX5g",
+    "module": "zNil",
+    "name": "uujU",
     "kind": "func",
     "index": 12,
     "type": "(i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "UezF",
+    "module": "zNil",
+    "name": "GxA7",
     "kind": "func",
     "index": 13,
     "type": "(i32) -> ()"
    },
    {
-    "module": "vd9Q",
-    "name": "ly4f",
+    "module": "zNil",
+    "name": "bOXc",
     "kind": "func",
     "index": 14,
     "type": "(i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "E0PJ",
+    "module": "zNil",
+    "name": "fjs6",
     "kind": "func",
     "index": 15,
     "type": "(i32 i32 i32) -> ()"
    },
    {
-    "module": "vd9Q",
-    "name": "ggUM",
+    "module": "zNil",
+    "name": "cYNL",
     "kind": "func",
     "index": 16,
     "type": "(i32 i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "vhG6",
+    "module": "zNil",
+    "name": "D955",
     "kind": "func",
     "index": 17,
     "type": "(i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "w1oU",
+    "module": "zNil",
+    "name": "h8Nt",
     "kind": "func",
     "index": 18,
     "type": "(i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "RLK9",
+    "module": "zNil",
+    "name": "PeQm",
     "kind": "func",
     "index": 19,
     "type": "(i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "oGCU",
+    "module": "zNil",
+    "name": "xa2x",
     "kind": "func",
     "index": 20,
     "type": "(i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "vnBD",
+    "module": "zNil",
+    "name": "bK7m",
     "kind": "func",
     "index": 21,
     "type": "(i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "hVJc",
+    "module": "zNil",
+    "name": "aEK9",
     "kind": "func",
     "index": 22,
     "type": "(i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "bknu",
+    "module": "zNil",
+    "name": "bzkB",
     "kind": "func",
     "index": 23,
     "type": "(i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "zSqP",
+    "module": "zNil",
+    "name": "nKSo",
     "kind": "func",
     "index": 24,
     "type": "(i32) -> (i32)"
    },
    {
-    "module": "vd9Q",
-    "name": "oWZu",
+    "module": "zNil",
+    "name": "QBjd",
     "kind": "func",
     "index": 25,
     "type": "(i32 i32) -> ()"
    },
    {
-    "module": "vd9Q",
-    "name": "XWxI",
+    "module": "zNil",
+    "name": "FSs9",
     "kind": "func",
     "index": 26,
     "type": "(i32 i32) -> (i32)"
@@ -331,10 +331,88 @@
   ],
   "exports": [
    {
-    "name": "n5fR",
+    "name": "APXj",
+    "kind": "func",
+    "index": 245,
+    "type": "() -> (i32)"
+   },
+   {
+    "name": "lg1d",
+    "kind": "func",
+    "index": 202,
+    "type": "(i32 i32 i32 i32) -> (i32)"
+   },
+   {
+    "name": "Y3HQ",
+    "kind": "func",
+    "index": 242,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "NalX",
+    "kind": "func",
+    "index": 208,
+    "type": "(i32 i32 i32) -> (i32 i32)"
+   },
+   {
+    "name": "YaHE",
     "kind": "func",
     "index": 200,
     "type": "() -> ()"
+   },
+   {
+    "name": "qGWL",
+    "kind": "func",
+    "index": 177,
+    "type": "(i32) -> ()"
+   },
+   {
+    "name": "Yrgu",
+    "kind": "func",
+    "index": 128,
+    "type": "(i32 i32) -> ()"
+   },
+   {
+    "name": "MWeP",
+    "kind": "func",
+    "index": 226,
+    "type": "(i32 i32 i32) -> ()"
+   },
+   {
+    "name": "mIlk",
+    "kind": "func",
+    "index": 83,
+    "type": "() -> (i32)"
+   },
+   {
+    "name": "PsWw",
+    "kind": "func",
+    "index": 173,
+    "type": "(i32) -> (i32)"
+   },
+   {
+    "name": "Gf8j",
+    "kind": "global",
+    "index": 1,
+    "type": ""
+   },
+   {
+    "name": "kFks",
+    "kind": "func",
+    "index": 62,
+    "type": "() -> (i32)"
+   },
+   {
+    "name": "aGN3",
+    "kind": "func",
+    "index": 206,
+    "type": "(i32 i32 i32 i32) -> (i32 i32)"
+   },
+   {
+    "name": "H4ym",
+    "kind": "func",
+    "index": 210,
+    "type": "() -> (i32 i32)"
    },
    {
     "name": "memory",
@@ -343,130 +421,52 @@
     "type": ""
    },
    {
-    "name": "pa0e",
-    "kind": "func",
-    "index": 128,
-    "type": "(i32 i32) -> ()"
-   },
-   {
-    "name": "vOFW",
-    "kind": "func",
-    "index": 242,
-    "type": "(i32) -> (i32)"
-   },
-   {
-    "name": "gX0D",
+    "name": "k4Cu",
     "kind": "func",
     "index": 243,
     "type": "(i32) -> ()"
    },
    {
-    "name": "dnhk",
-    "kind": "func",
-    "index": 230,
-    "type": "(i32) -> ()"
-   },
-   {
-    "name": "oQjw",
-    "kind": "func",
-    "index": 97,
-    "type": "() -> (i32)"
-   },
-   {
-    "name": "WuV8",
-    "kind": "func",
-    "index": 226,
-    "type": "(i32 i32 i32) -> ()"
-   },
-   {
-    "name": "LztJ",
-    "kind": "func",
-    "index": 208,
-    "type": "(i32 i32 i32) -> (i32 i32)"
-   },
-   {
-    "name": "WBko",
-    "kind": "func",
-    "index": 62,
-    "type": "() -> (i32)"
-   },
-   {
-    "name": "M3rk",
-    "kind": "func",
-    "index": 202,
-    "type": "(i32 i32 i32 i32) -> (i32)"
-   },
-   {
-    "name": "Xih4",
-    "kind": "func",
-    "index": 220,
-    "type": "() -> (i32)"
-   },
-   {
-    "name": "C8FZ",
-    "kind": "func",
-    "index": 173,
-    "type": "(i32) -> (i32)"
-   },
-   {
-    "name": "HEZa",
-    "kind": "func",
-    "index": 201,
-    "type": "(i32 i32) -> (i32)"
-   },
-   {
-    "name": "LOKW",
-    "kind": "func",
-    "index": 206,
-    "type": "(i32 i32 i32 i32) -> (i32 i32)"
-   },
-   {
-    "name": "VVQo",
-    "kind": "func",
-    "index": 245,
-    "type": "() -> (i32)"
-   },
-   {
-    "name": "Ti3e",
-    "kind": "func",
-    "index": 177,
-    "type": "(i32) -> ()"
-   },
-   {
-    "name": "osBe",
+    "name": "LDe2",
     "kind": "global",
     "index": 2,
     "type": ""
    },
    {
-    "name": "t90L",
+    "name": "VNsj",
     "kind": "func",
-    "index": 210,
-    "type": "() -> (i32 i32)"
+    "index": 201,
+    "type": "(i32 i32) -> (i32)"
    },
    {
-    "name": "tGs3",
+    "name": "Wltn",
+    "kind": "func",
+    "index": 230,
+    "type": "(i32) -> ()"
+   },
+   {
+    "name": "ZRCM",
     "kind": "func",
     "index": 138,
     "type": "() -> (i32)"
    },
    {
-    "name": "p9C2",
+    "name": "Y8fP",
+    "kind": "func",
+    "index": 97,
+    "type": "() -> (i32)"
+   },
+   {
+    "name": "dzF9",
+    "kind": "func",
+    "index": 220,
+    "type": "() -> (i32)"
+   },
+   {
+    "name": "Ahe4",
     "kind": "func",
     "index": 200,
     "type": "() -> ()"
-   },
-   {
-    "name": "C71z",
-    "kind": "global",
-    "index": 1,
-    "type": ""
-   },
-   {
-    "name": "sh9j",
-    "kind": "func",
-    "index": 83,
-    "type": "() -> (i32)"
    }
   ],
   "globals": [
@@ -1365,7 +1365,7 @@
      "bytes": 24
     }
    ],
-   "module_name": "38175aa024f10277.1165",
+   "module_name": "292e415459aa9636.1165",
    "producers": {}
   },
   "strings": [
@@ -1655,6 +1655,15 @@
    "at": "2026-11-24T11:40:10+09:00",
    "size": 311531,
    "sha256": "f9978bc5a15af3d0",
+   "functions": 220,
+   "exports": 23,
+   "imports": 27
+  },
+  {
+   "build": "31kiid.1299b0d6",
+   "at": "2026-11-24T12:43:08+09:00",
+   "size": 311531,
+   "sha256": "82813a7dd849808b",
    "functions": 220,
    "exports": 23,
    "imports": 27

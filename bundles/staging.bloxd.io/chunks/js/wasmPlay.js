@@ -1,153 +1,153 @@
 export const id = 63;
 export const ids = [63, 115, 116, 136];
 export const modules = {
-  39690: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => tS,
-      h: () => bS
+  39629: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk,
+      f: () => Tk
     });
-    const tS = "The world isn't loaded, so no blocks can be seen.",
-      bS = "The world isn't loaded, so nothing in it can be seen."
+    const Xk = "The world isn't loaded, so no blocks can be seen.",
+      Tk = "The world isn't loaded, so nothing in it can be seen."
   },
-  39119: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => QS,
-      d: () => DS,
-      e: () => PS
+  39102: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Kk,
+      h: () => Qk,
+      j: () => Pk
     });
-    var tS = gS(4935),
-      bS = gS(2953),
-      XS = gS(2022);
-    const xS = new Map(Object.entries(tS.j).map((SS => {
-      let [HS, gS] = SS;
-      return [gS, HS]
+    var Xk = Ik(4799),
+      Tk = Ik(2744),
+      ik = Ik(1844);
+    const yk = new Map(Object.entries(Xk.k).map((kk => {
+      let [Fk, Ik] = kk;
+      return [Ik, Fk]
     })));
 
-    function NS(SS) {
-      return (0, XS.D)(SS).toFixed(1)
+    function lk(kk) {
+      return (0, ik.A)(kk).toFixed(1)
     }
 
-    function qS(SS, HS) {
-      return `camera set by ${xS.get(SS[HS+1])}: heading ${`${NS(SS[HS+2])} -> ${NS(SS[HS+4])}`} deg, pitch ${`${NS(SS[HS+3])} -> ${NS(SS[HS+5])}`} deg, at ${SS[HS].toFixed(1)} ms`
+    function ak(kk, Fk) {
+      return `camera set by ${yk.get(kk[Fk+1])}: heading ${`${lk(kk[Fk+2])} -> ${lk(kk[Fk+4])}`} deg, pitch ${`${lk(kk[Fk+3])} -> ${lk(kk[Fk+5])}`} deg, at ${kk[Fk].toFixed(1)} ms`
     }
-    class uS {
-      constructor(SS, HS) {
-        this.width = SS, this.hf = HS, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(SS * HS)
+    class qk {
+      constructor(kk, Fk) {
+        this.width = kk, this.St = Fk, this.data = void 0, this.next = 0, this.size = 0, this.data = new Float64Array(kk * Fk)
       }
-      push(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        const gS = this.data.subarray(this.next * this.width, (this.next + 1) * this.width);
-        for (let tS = 0; tS < this.width; tS++) gS[tS] = SS[HS + tS];
-        return this.next = (this.next + 1) % this.hf, this.size = Math.min(this.size + 1, this.hf), gS
+      push(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const Ik = this.data.subarray(this.next * this.width, (this.next + 1) * this.width);
+        for (let Xk = 0; Xk < this.width; Xk++) Ik[Xk] = kk[Fk + Xk];
+        return this.next = (this.next + 1) % this.St, this.size = Math.min(this.size + 1, this.St), Ik
       }
       lines() {
-        const SS = [],
-          HS = (this.next - this.size + this.hf) % this.hf;
-        for (let gS = 0; gS < this.size; gS++) {
-          const tS = (HS + gS) % this.hf * this.width;
-          SS.push(Array.from(this.data.subarray(tS, tS + this.width)).join(","))
+        const kk = [],
+          Fk = (this.next - this.size + this.St) % this.St;
+        for (let Ik = 0; Ik < this.size; Ik++) {
+          const Xk = (Fk + Ik) % this.St * this.width;
+          kk.push(Array.from(this.data.subarray(Xk, Xk + this.width)).join(","))
         }
-        return SS
+        return kk
       }
     }
-    const IS = 0,
-      fS = 2,
-      kS = 3,
-      aS = 4;
+    const Lk = 0,
+      tk = 2,
+      Zk = 3,
+      jk = 4;
 
-    function KS(SS) {
-      return Number.isFinite(SS) ? String(Math.round(10 * SS) / 10) : String(SS)
+    function ek(kk) {
+      return Number.isFinite(kk) ? String(Math.round(10 * kk) / 10) : String(kk)
     }
 
-    function jS(SS) {
-      return Number.isFinite(SS) ? SS.toFixed(1) : String(SS)
+    function wk(kk) {
+      return Number.isFinite(kk) ? kk.toFixed(1) : String(kk)
     }
-    class GS {
+    class Hk {
       constructor() {
-        this.frames = 0, this.looked = 0, this.idle = 0, this.IU = 0, this.pastLimit = 0, this.lockSkips = 0, this.NG = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
+        this.frames = 0, this.looked = 0, this.idle = 0, this.iW = 0, this.pastLimit = 0, this.lockSkips = 0, this.iH = 0, this.lost = 0, this.dropped = 0, this.longFrames = 0, this.dtMin = 1 / 0, this.dtMax = 0, this.dtSum = 0, this.raw = [0, 0], this.turned = [0, 0], this.peakRate = 0, this.events = 0, this.eventMax = 0, this.bigEvents = 0, this.cameraSets = 0, this.cameraSetsLost = 0, this.outliers = 0, this.eventLines = 0, this.suppressed = 0
       }
       moved() {
-        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.IU > 0 || this.dropped > 0 || this.cameraSets > 0
+        return this.events > 0 || 0 !== this.raw[0] || 0 !== this.raw[1] || this.lockSkips > 0 || this.iW > 0 || this.dropped > 0 || this.cameraSets > 0
       }
       hasEvent() {
-        return this.IU > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
+        return this.iW > 0 || this.pastLimit > 0 || this.bigEvents > 0 || this.dropped > 0 || this.cameraSets > 0
       }
     }
-    class CS {
+    class Jk {
       constructor() {
-        var SS = this;
-        this.remote = (0, bS.r)(), this.tally = new GS, this.records = new uS(10, this.remote ? 1 : 3600), this.events = new uS(4, this.remote ? 1 : 12e3), this.event = new Float64Array(4), this.takes = null, this.client = "js", this.started = !1, this.record = function(HS) {
-          let gS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-          const [tS, bS, XS, xS, NS, qS, uS, GS, CS, nS] = SS.records.push(HS, gS), PS = SS.tally;
-          switch (PS.frames++, uS) {
-            case IS:
-              return void PS.idle++;
-            case aS:
-              return void PS.NG++;
-            case kS:
-              return PS.lockSkips++, void(0 === XS && 0 === xS || SS.outlier(`lock skip dropped raw (${KS(XS)}, ${KS(xS)}) at ${jS(tS)} ms`))
+        var kk = this;
+        this.remote = (0, Tk.p)(), this.tally = new Hk, this.records = new qk(10, this.remote ? 1 : 3600), this.events = new qk(4, this.remote ? 1 : 12e3), this.event = new Float64Array(4), this.takes = null, this.client = "js", this.started = !1, this.record = function(Fk) {
+          let Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+          const [Xk, Tk, ik, yk, lk, ak, qk, Hk, Jk, xk] = kk.records.push(Fk, Ik), Pk = kk.tally;
+          switch (Pk.frames++, qk) {
+            case Lk:
+              return void Pk.idle++;
+            case jk:
+              return void Pk.iH++;
+            case Zk:
+              return Pk.lockSkips++, void(0 === ik && 0 === yk || kk.outlier(`lock skip dropped raw (${ek(ik)}, ${ek(yk)}) at ${wk(Xk)} ms`))
           }
-          PS.looked++, Number.isFinite(bS) && (PS.dtMin = Math.min(PS.dtMin, bS), PS.dtMax = Math.max(PS.dtMax, bS), PS.dtSum += bS, bS > 0 && (PS.peakRate = Math.max(PS.peakRate, Math.hypot(NS, qS) / bS))), PS.raw[0] += XS, PS.raw[1] += xS, PS.turned[0] += NS, PS.turned[1] += qS;
-          const QS = Math.abs(XS) > nS || Math.abs(xS) > nS,
-            DS = `raw (${KS(XS)}, ${KS(xS)}) over ${jS(bS)} ms, limit ${KS(nS)}, filter v (${GS.toFixed(3)}, ${CS.toFixed(3)}) px/ms, at ${jS(tS)} ms`;
-          uS === fS ? (PS.IU++, SS.outlier(`spike put right: ${DS} -> turned (${KS(NS)}, ${KS(qS)})`)) : QS ? (PS.pastLimit++, SS.outlier(`kept past limit: ${DS}`)) : bS > 50 && (PS.longFrames++, SS.remote || SS.outlier(`long frame: ${DS}, turned in full`))
-        }, this.onMouseMove = SS => {
-          const HS = this.tally,
+          Pk.looked++, Number.isFinite(Tk) && (Pk.dtMin = Math.min(Pk.dtMin, Tk), Pk.dtMax = Math.max(Pk.dtMax, Tk), Pk.dtSum += Tk, Tk > 0 && (Pk.peakRate = Math.max(Pk.peakRate, Math.hypot(lk, ak) / Tk))), Pk.raw[0] += ik, Pk.raw[1] += yk, Pk.turned[0] += lk, Pk.turned[1] += ak;
+          const Kk = Math.abs(ik) > xk || Math.abs(yk) > xk,
+            Qk = `raw (${ek(ik)}, ${ek(yk)}) over ${wk(Tk)} ms, limit ${ek(xk)}, filter v (${Hk.toFixed(3)}, ${Jk.toFixed(3)}) px/ms, at ${wk(Xk)} ms`;
+          qk === tk ? (Pk.iW++, kk.outlier(`spike put right: ${Qk} -> turned (${ek(lk)}, ${ek(ak)})`)) : Kk ? (Pk.pastLimit++, kk.outlier(`kept past limit: ${Qk}`)) : Tk > 50 && (Pk.longFrames++, kk.remote || kk.outlier(`long frame: ${Qk}, turned in full`))
+        }, this.onMouseMove = kk => {
+          const Fk = this.tally,
             {
-              movementX: gS,
-              movementY: tS
-            } = SS;
-          HS.events++;
-          const bS = Math.max(Math.abs(gS), Math.abs(tS));
-          HS.eventMax = Math.max(HS.eventMax, bS);
-          const XS = null !== document.pointerLockElement,
-            xS = this.event;
-          xS[0] = SS.timeStamp, xS[1] = gS, xS[2] = tS, xS[3] = XS ? 1 : 0, this.events.push(xS), bS >= 200 && (HS.bigEvents++, this.eventOutlier(`big mousemove (${gS}, ${tS}) at ${jS(SS.timeStamp)} ms, lock ${XS?"Ku":"free"}`))
+              movementX: Ik,
+              movementY: Xk
+            } = kk;
+          Fk.events++;
+          const Tk = Math.max(Math.abs(Ik), Math.abs(Xk));
+          Fk.eventMax = Math.max(Fk.eventMax, Tk);
+          const ik = null !== document.pointerLockElement,
+            yk = this.event;
+          yk[0] = kk.timeStamp, yk[1] = Ik, yk[2] = Xk, yk[3] = ik ? 1 : 0, this.events.push(yk), Tk >= 200 && (Fk.bigEvents++, this.eventOutlier(`big mousemove (${Ik}, ${Xk}) at ${wk(kk.timeStamp)} ms, lock ${ik?"eq":"free"}`))
         }, this.onLockChange = () => {
-          const SS = document.pointerLockElement;
-          (0, bS.i)("look", `pointer lock ${SS?`gained (${SS.tagName.toLowerCase()})`:"lost"} at ${jS(performance.now())} ms`)
+          const kk = document.pointerLockElement;
+          (0, Tk.g)("look", `pointer lock ${kk?`gained (${kk.tagName.toLowerCase()})`:"lost"} at ${wk(performance.now())} ms`)
         }, this.onLockError = () => {
-          (0, bS.i)("look", `pointer lock request failed at ${jS(performance.now())} ms`)
+          (0, Tk.g)("look", `pointer lock request failed at ${wk(performance.now())} ms`)
         }, this.onVisibility = () => {
-          (0, bS.i)("look", `page ${document.visibilityState} at ${jS(performance.now())} ms`)
+          (0, Tk.g)("look", `page ${document.visibilityState} at ${wk(performance.now())} ms`)
         }, this.flush = () => {
           this.takeRecords();
-          const SS = this.tally;
-          if (this.tally = new GS, !SS.moved() || this.remote && !SS.hasEvent()) return;
-          const HS = SS.looked > 0 ? SS.dtSum / SS.looked : NaN,
-            gS = [`${SS.frames} frames (${SS.looked} looked, ${SS.idle} idle${"wasm"===this.client?`, ${SS.NG} carried`:""})`, `dt avg ${jS(HS)} min ${jS(SS.dtMin)} max ${jS(SS.dtMax)}, ${SS.longFrames} long`, `${SS.events} mousemoves (max ${KS(SS.eventMax)} px, ${SS.bigEvents} big)`, `raw (${KS(SS.raw[0])}, ${KS(SS.raw[1])}) turned (${KS(SS.turned[0])}, ${KS(SS.turned[1])})`, `peak ${SS.peakRate.toFixed(2)} px/ms`, `put right ${SS.IU}, past limit ${SS.pastLimit}, lock skips ${SS.lockSkips}`, "lock " + (document.pointerLockElement ? "Ku" : "free")];
-          SS.dropped > 0 && gS.push(`${SS.dropped} doubled spike copies dropped`), SS.cameraSets > 0 && gS.push(`${SS.cameraSets} camera sets`), SS.cameraSetsLost > 0 && gS.push(`${SS.cameraSetsLost} camera set records lost`), SS.lost > 0 && gS.push(`${SS.lost} records lost`), SS.suppressed > 0 && gS.push(`${SS.suppressed} outlier lines not shown`), (0, bS.i)("look", `1s: ${gS.join("; ")}`)
+          const kk = this.tally;
+          if (this.tally = new Hk, !kk.moved() || this.remote && !kk.hasEvent()) return;
+          const Fk = kk.looked > 0 ? kk.dtSum / kk.looked : NaN,
+            Ik = [`${kk.frames} frames (${kk.looked} looked, ${kk.idle} idle${"wasm"===this.client?`, ${kk.iH} carried`:""})`, `dt avg ${wk(Fk)} min ${wk(kk.dtMin)} max ${wk(kk.dtMax)}, ${kk.longFrames} long`, `${kk.events} mousemoves (max ${ek(kk.eventMax)} px, ${kk.bigEvents} big)`, `raw (${ek(kk.raw[0])}, ${ek(kk.raw[1])}) turned (${ek(kk.turned[0])}, ${ek(kk.turned[1])})`, `peak ${kk.peakRate.toFixed(2)} px/ms`, `put right ${kk.iW}, past limit ${kk.pastLimit}, lock skips ${kk.lockSkips}`, "lock " + (document.pointerLockElement ? "eq" : "free")];
+          kk.dropped > 0 && Ik.push(`${kk.dropped} doubled spike copies dropped`), kk.cameraSets > 0 && Ik.push(`${kk.cameraSets} camera sets`), kk.cameraSetsLost > 0 && Ik.push(`${kk.cameraSetsLost} camera set records lost`), kk.lost > 0 && Ik.push(`${kk.lost} records lost`), kk.suppressed > 0 && Ik.push(`${kk.suppressed} outlier lines not shown`), (0, Tk.g)("look", `1s: ${Ik.join("; ")}`)
         }, this.dump = () => [`look records (${this.client}): nowMs,dtMs,rawX,rawY,turnedX,turnedY,outcome,vX,vY,limit`, ...this.records.lines(), "mousemove events: timeStamp,movementX,movementY,locked", ...this.events.lines()].join("\n")
       }
-      start(SS, HS) {
-        this.client = SS, this.takes = HS;
+      start(kk, Fk) {
+        this.client = kk, this.takes = Fk;
         const {
-          screen: gS
+          screen: Ik
         } = window;
-        (0, bS.i)("look", `start: ${SS} client, dpr ${window.devicePixelRatio}, screen ${gS.width}x${gS.height}, pointer lock ${document.pointerLockElement?"Ku":"free"}`), this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
+        (0, Tk.g)("look", `start: ${kk} client, dpr ${window.devicePixelRatio}, screen ${Ik.width}x${Ik.height}, pointer lock ${document.pointerLockElement?"eq":"free"}`), this.started || (this.started = !0, window.addEventListener("mousemove", this.onMouseMove, {
           capture: !0,
           passive: !0
-        }), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.remote || (0, bS.h)("look", this.dump))
+        }), document.addEventListener("pointerlockchange", this.onLockChange), document.addEventListener("pointerlockerror", this.onLockError), document.addEventListener("visibilitychange", this.onVisibility), setInterval(this.flush, 1e3), this.remote || (0, Tk.f)("look", this.dump))
       }
-      outlier(SS) {
-        const HS = this.tally;
-        HS.outliers >= 20 ? HS.suppressed++ : (HS.outliers++, (0, bS.i)("look", SS))
+      outlier(kk) {
+        const Fk = this.tally;
+        Fk.outliers >= 20 ? Fk.suppressed++ : (Fk.outliers++, (0, Tk.g)("look", kk))
       }
-      eventOutlier(SS) {
-        const HS = this.tally;
-        HS.eventLines >= 10 ? HS.suppressed++ : (HS.eventLines++, (0, bS.i)("look", SS))
+      eventOutlier(kk) {
+        const Fk = this.tally;
+        Fk.eventLines >= 10 ? Fk.suppressed++ : (Fk.eventLines++, (0, Tk.g)("look", kk))
       }
       takeRecords() {
         if (null === this.takes) return;
-        const SS = this.takes.look();
-        if (SS.length >= 2) {
-          this.tally.lost += SS[0], this.tally.dropped += SS[1];
-          for (let HS = 2; HS + 10 <= SS.length; HS += 10) this.record(SS, HS)
+        const kk = this.takes.look();
+        if (kk.length >= 2) {
+          this.tally.lost += kk[0], this.tally.dropped += kk[1];
+          for (let Fk = 2; Fk + 10 <= kk.length; Fk += 10) this.record(kk, Fk)
         }
-        const HS = this.takes.cameraSets();
-        if (HS.length >= tS.c) {
-          this.tally.cameraSetsLost += HS[0];
-          for (let SS = tS.c; SS + tS.g <= HS.length; SS += tS.g) this.tally.cameraSets++, this.outlier(qS(HS, SS))
+        const Fk = this.takes.cameraSets();
+        if (Fk.length >= Xk.e) {
+          this.tally.cameraSetsLost += Fk[0];
+          for (let kk = Xk.e; kk + Xk.f <= Fk.length; kk += Xk.f) this.tally.cameraSets++, this.outlier(ak(Fk, kk))
         }
       }
       droppedCopy() {
@@ -157,140 +157,140 @@ export const modules = {
         this.takeRecords(), this.takes = null
       }
     }
-    let nS = null;
+    let xk = null;
 
-    function PS(SS) {
-      let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      return nS ??= new CS, nS.start(SS, HS), nS.record
+    function Pk(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      return xk ??= new Jk, xk.start(kk, Fk), xk.record
     }
 
-    function QS() {
-      var SS;
-      null === (SS = nS) || void 0 === SS || SS.endTake()
+    function Kk() {
+      var kk;
+      null === (kk = xk) || void 0 === kk || kk.endTake()
     }
 
-    function DS() {
-      var SS;
-      null === (SS = nS) || void 0 === SS || SS.droppedCopy()
+    function Qk() {
+      var kk;
+      null === (kk = xk) || void 0 === kk || kk.droppedCopy()
     }
   },
-  34117: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => tS
+  34048: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk
     });
-    const tS = new Set(["chunkBorders"])
+    const Xk = new Set(["chunkBorders"])
   },
-  34271: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => xS,
-      h: () => bS,
-      i: () => IS
+  34222: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk,
+      f: () => Tk,
+      h: () => Lk
     });
-    var tS = gS(1657);
+    var Xk = Ik(1518);
 
-    function bS(SS) {
-      var HS;
+    function Tk(kk) {
+      var Fk;
       return {
-        ...xS.store,
-        yaw: xS.store.yaw + (null !== (HS = tS.c[SS].previewYaw) && void 0 !== HS ? HS : 0)
+        ...yk.store,
+        yaw: yk.store.yaw + (null !== (Fk = Xk.c[kk].previewYaw) && void 0 !== Fk ? Fk : 0)
       }
     }
-    const XS = {
+    const ik = {
         yaw: .61 * Math.PI,
         pitch: Math.PI / 2.05,
         radius: 30,
         target: [0, 0, 0]
       },
-      xS = {
-        player: XS,
+      yk = {
+        player: ik,
         store: {
-          ...XS,
+          ...ik,
           radius: 33,
           target: [0, 3.9, 0]
         }
       };
 
-    function NS(SS, HS) {
-      SS instanceof Promise ? SS.then(HS).catch((SS => {
-        console.error("Couldn't open the preview", SS)
-      })) : HS(SS)
+    function lk(kk, Fk) {
+      kk instanceof Promise ? kk.then(Fk).catch((kk => {
+        console.error("Couldn't open the preview", kk)
+      })) : Fk(kk)
     }
-    class qS {
-      constructor(SS) {
-        this.opened = null, this.view = null, this.size = null, this.closed = !1, NS(SS, (SS => {
-          this.closed ? SS.close() : (this.opened = SS, null !== this.size && SS.resize(this.size.width, this.size.height), null !== this.view && SS.show(this.view))
+    class ak {
+      constructor(kk) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, lk(kk, (kk => {
+          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height), null !== this.view && kk.show(this.view))
         }))
       }
-      show(SS) {
-        var HS;
-        this.view = SS, null === (HS = this.opened) || void 0 === HS || HS.show(SS)
+      show(kk) {
+        var Fk;
+        this.view = kk, null === (Fk = this.opened) || void 0 === Fk || Fk.show(kk)
       }
-      resize(SS, HS) {
-        var gS;
+      resize(kk, Fk) {
+        var Ik;
         this.size = {
-          width: SS,
-          height: HS
-        }, null === (gS = this.opened) || void 0 === gS || gS.resize(SS, HS)
+          width: kk,
+          height: Fk
+        }, null === (Ik = this.opened) || void 0 === Ik || Ik.resize(kk, Fk)
       }
       close() {
-        var SS;
-        this.closed = !0, null === (SS = this.opened) || void 0 === SS || SS.close(), this.opened = null
+        var kk;
+        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
       }
     }
-    class uS {
-      constructor(SS) {
-        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(SS).then((SS => SS.ready)), NS(SS, (SS => {
-          this.closed ? SS.close() : (this.opened = SS, null !== this.size && SS.resize(this.size.width, this.size.height))
+    class qk {
+      constructor(kk) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(kk).then((kk => kk.ready)), lk(kk, (kk => {
+          this.closed ? kk.close() : (this.opened = kk, null !== this.size && kk.resize(this.size.width, this.size.height))
         }))
       }
       get dev() {
         return this.opened.dev
       }
       isReady() {
-        var SS, HS;
-        return null !== (SS = null === (HS = this.opened) || void 0 === HS ? void 0 : HS.isReady()) && void 0 !== SS && SS
+        var kk, Fk;
+        return null !== (kk = null === (Fk = this.opened) || void 0 === Fk ? void 0 : Fk.isReady()) && void 0 !== kk && kk
       }
-      setCosmetic(SS, HS) {
-        var gS;
-        null === (gS = this.opened) || void 0 === gS || gS.setCosmetic(SS, HS)
+      setCosmetic(kk, Fk) {
+        var Ik;
+        null === (Ik = this.opened) || void 0 === Ik || Ik.setCosmetic(kk, Fk)
       }
-      playEmote(SS) {
-        var HS;
-        null === (HS = this.opened) || void 0 === HS || HS.playEmote(SS)
+      playEmote(kk) {
+        var Fk;
+        null === (Fk = this.opened) || void 0 === Fk || Fk.playEmote(kk)
       }
-      setOrbit(SS) {
-        var HS;
-        null === (HS = this.opened) || void 0 === HS || HS.setOrbit(SS)
+      setOrbit(kk) {
+        var Fk;
+        null === (Fk = this.opened) || void 0 === Fk || Fk.setOrbit(kk)
       }
       resetCamera() {
-        var SS;
-        null === (SS = this.opened) || void 0 === SS || SS.resetCamera()
+        var kk;
+        null === (kk = this.opened) || void 0 === kk || kk.resetCamera()
       }
-      async untilDrawn(SS) {
-        var HS;
-        await this.ready, await (null === (HS = this.opened) || void 0 === HS ? void 0 : HS.untilDrawn(SS))
+      async untilDrawn(kk) {
+        var Fk;
+        await this.ready, await (null === (Fk = this.opened) || void 0 === Fk ? void 0 : Fk.untilDrawn(kk))
       }
-      resize(SS, HS) {
-        var gS;
+      resize(kk, Fk) {
+        var Ik;
         this.size = {
-          width: SS,
-          height: HS
-        }, null === (gS = this.opened) || void 0 === gS || gS.resize(SS, HS)
+          width: kk,
+          height: Fk
+        }, null === (Ik = this.opened) || void 0 === Ik || Ik.resize(kk, Fk)
       }
       close() {
-        var SS;
-        this.closed = !0, null === (SS = this.opened) || void 0 === SS || SS.close(), this.opened = null
+        var kk;
+        this.closed = !0, null === (kk = this.opened) || void 0 === kk || kk.close(), this.opened = null
       }
     }
-    const IS = new class {
+    const Lk = new class {
       constructor() {
         this.host = null, this.makeDefault = null
       }
-      setHost(SS) {
-        this.host = SS
+      setHost(kk) {
+        this.host = kk
       }
-      setDefaultHost(SS) {
-        this.makeDefault = SS
+      setDefaultHost(kk) {
+        this.makeDefault = kk
       }
       current() {
         if (null === this.host) {
@@ -299,209 +299,209 @@ export const modules = {
         }
         return this.host
       }
-      openMob(SS) {
-        return new qS(this.current().openMob(SS))
+      openMob(kk) {
+        return new ak(this.current().openMob(kk))
       }
-      openPet(SS) {
-        return new qS(this.current().openPet(SS))
+      openPet(kk) {
+        return new ak(this.current().openPet(kk))
       }
-      openMobLineup(SS) {
-        return new qS(this.current().openMobLineup(SS))
+      openMobLineup(kk) {
+        return new ak(this.current().openMobLineup(kk))
       }
-      openCharacter(SS, HS) {
-        return new uS(this.current().openCharacter(SS, HS))
+      openCharacter(kk, Fk) {
+        return new qk(this.current().openCharacter(kk, Fk))
       }
     }
   },
-  5212: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => tS.h,
-      i: () => bS,
-      j: () => tS.n
+  5047: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Xk.d,
+      e: () => Tk,
+      i: () => Xk.m
     });
-    var tS = gS(5221);
-    const bS = [!1, !0].flatMap((SS => ["terrain", "liquid", "model"].map((HS => ({
-      strict: SS,
-      program: HS
+    var Xk = Ik(5053);
+    const Tk = [!1, !0].flatMap((kk => ["terrain", "liquid", "model"].map((Fk => ({
+      strict: kk,
+      program: Fk
     })))))
   },
-  39226: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      ShaderPackPage: () => qS,
-      harnessShaderPackMode: () => kS,
-      setHarnessUrlShaderPack: () => fS,
-      shaderPackPage: () => IS
+  39224: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      ShaderPackPage: () => ak,
+      harnessShaderPackMode: () => Zk,
+      setHarnessUrlShaderPack: () => tk,
+      shaderPackPage: () => Lk
     });
-    var tS = gS(104),
-      bS = gS(45),
-      XS = (gS(3600), gS(5212), gS(3591)),
-      xS = gS(6848);
-    gS(6824);
-    const NS = {
+    var Xk = Ik(95),
+      Tk = Ik(41),
+      ik = (Ik(3403), Ik(5047), Ik(3396)),
+      yk = Ik(6644);
+    Ik(6611);
+    const lk = {
       status: "none"
     };
-    class qS {
+    class ak {
       constructor() {
         this.stored = null, this.compiling = null, this.pagePack = null, this.resolved = null
       }
       preload() {
         if (null === this.stored) {
-          if ((0, XS.i)(tS.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), uS().then((SS => {
-            SS && bS.g.removeItem(XS.d)
+          if ((0, ik.j)(Xk.featureFlags.settings.canUseShaderPacks)) return this.stored = Promise.resolve(null), qk().then((kk => {
+            kk && Tk.j.removeItem(ik.e)
           })), this.stored;
           this.prefetchHint() && this.compiler().catch((() => {})), this.stored = this.readStored()
         }
         return this.stored
       }
       prefetchHint() {
-        return (0, XS.g)(tS.featureFlags.settings.canUseShaderPacks)
+        return (0, ik.h)(Xk.featureFlags.settings.canUseShaderPacks)
       }
       async loadActive() {
-        const SS = await this.load();
-        return "active" === SS.status ? SS.pack : null
+        const kk = await this.load();
+        return "active" === kk.status ? kk.pack : null
       }
       load() {
-        return this.pagePack ??= this.read().catch((SS => (console.error("Failed to load the shader pack", SS), NS))).then((SS => (this.resolved ??= SS, SS))), this.pagePack
+        return this.pagePack ??= this.read().catch((kk => (console.error("Failed to load the shader pack", kk), lk))).then((kk => (this.resolved ??= kk, kk))), this.pagePack
       }
       hasNone() {
-        var SS;
-        return "none" === (null === (SS = this.resolved) || void 0 === SS ? void 0 : SS.status)
+        var kk;
+        return "none" === (null === (kk = this.resolved) || void 0 === kk ? void 0 : kk.status)
       }
-      block(SS) {
+      block(kk) {
         this.resolved = {
           status: "blocked",
-          messageKey: SS,
+          messageKey: kk,
           variants: null
         }, this.pagePack = Promise.resolve(this.resolved)
       }
       compiler() {
-        return this.compiling ??= Promise.all([gS.e(77), gS.e(133), gS.e(140)]).then((() => gS(41763))).then((SS => (SS.prefetchCompiler(), SS))), this.compiling
+        return this.compiling ??= Promise.all([Ik.e(77), Ik.e(133), Ik.e(140)]).then((() => Ik(41740))).then((kk => (kk.prefetchCompiler(), kk))), this.compiling
       }
       async readStored() {
-        const SS = await uS();
-        return SS && this.compiler().then((SS => SS.reconcileHint())).catch((SS => {
-          console.error("Failed to correct the shader pack hint", SS)
-        })), SS
+        const kk = await qk();
+        return kk && this.compiler().then((kk => kk.reconcileHint())).catch((kk => {
+          console.error("Failed to correct the shader pack hint", kk)
+        })), kk
       }
       async read() {
-        const SS = await this.preload();
-        return SS ? (await this.compiler()).compilePagePack(SS) : NS
+        const kk = await this.preload();
+        return kk ? (await this.compiler()).compilePagePack(kk) : lk
       }
     }
-    async function uS() {
-      if (!(0, XS.j)(tS.featureFlags.settings.canUseShaderPacks)) return null;
+    async function qk() {
+      if (!(0, ik.m)(Xk.featureFlags.settings.canUseShaderPacks)) return null;
       try {
-        const SS = await (0, xS.f)(!0);
-        return SS || bS.g.setItem(XS.d, !1), SS
-      } catch (SS) {
-        return console.error("Failed to read the stored shader pack", SS), bS.g.removeItem(XS.d), null
+        const kk = await (0, yk.i)(!0);
+        return kk || Tk.j.setItem(ik.e, !1), kk
+      } catch (kk) {
+        return console.error("Failed to read the stored shader pack", kk), Tk.j.removeItem(ik.e), null
       }
     }
-    const IS = new qS;
+    const Lk = new ak;
 
-    function fS(SS, HS) {}
+    function tk(kk, Fk) {}
 
-    function kS() {
+    function Zk() {
       return null
     }
   },
-  39267: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => fS,
-      e: () => kS
+  39264: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => tk,
+      h: () => Zk
     });
-    var tS = gS(160),
-      bS = gS(191),
-      XS = gS(1573),
-      xS = gS(3083),
-      NS = gS(1588),
-      qS = gS(36479),
-      uS = gS(713),
-      IS = gS(39226);
+    var Xk = Ik(149),
+      Tk = Ik(178),
+      ik = Ik(1442),
+      yk = Ik(2852),
+      lk = Ik(1453),
+      ak = Ik(36458),
+      qk = Ik(667),
+      Lk = Ik(39224);
 
-    function fS(SS) {
-      (0, xS.reportClientError)("matchmake_failed", SS, tS.g[tS.g.SHADER_PACK])
+    function tk(kk) {
+      (0, yk.reportClientError)("matchmake_failed", kk, Xk.j[Xk.j.SHADER_PACK])
     }
-    async function kS(SS, HS) {
-      var gS;
-      const tS = null === (gS = await IS.shaderPackPage.preload()) || void 0 === gS ? void 0 : gS.listing,
-        xS = (0, qS.c)();
-      tS && null !== xS && await NS.b.reportShaderPackSession(SS, {
-        packId: tS.packId,
-        sourceHash: tS.sourceHash,
-        game: (0, XS.h)(HS, bS.w, "other"),
-        playSessionId: xS,
-        visitSessionId: (0, uS.g)()
+    async function Zk(kk, Fk) {
+      var Ik;
+      const Xk = null === (Ik = await Lk.shaderPackPage.preload()) || void 0 === Ik ? void 0 : Ik.listing,
+        yk = (0, ak.c)();
+      Xk && null !== yk && await lk.e.reportShaderPackSession(kk, {
+        packId: Xk.packId,
+        sourceHash: Xk.sourceHash,
+        game: (0, ik.e)(Fk, Tk.z, "other"),
+        playSessionId: yk,
+        visitSessionId: (0, qk.h)()
       })
     }
   },
-  6848: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => bS,
-      f: () => XS
+  6644: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Tk,
+      i: () => ik
     });
-    var tS = gS(45);
-    const bS = "shaderPack";
-    async function XS() {
-      var SS;
-      let HS = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (SS = await tS.e.getItem(bS, HS)) && void 0 !== SS ? SS : null
+    var Xk = Ik(41);
+    const Tk = "shaderPack";
+    async function ik() {
+      var kk;
+      let Fk = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (kk = await Xk.g.getItem(Tk, Fk)) && void 0 !== kk ? kk : null
     }
   },
-  6824: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      loadShaderPackTextures: () => xS,
-      shaderPackTextures: () => NS
+  6611: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      loadShaderPackTextures: () => yk,
+      shaderPackTextures: () => lk
     });
-    var tS = gS(5221);
-    let bS = null,
-      XS = null;
+    var Xk = Ik(5053);
+    let Tk = null,
+      ik = null;
 
-    function xS() {
-      return XS ??= Promise.all([gS.e(72), gS.e(188)]).then((() => gS(40526))).then((SS => {
+    function yk() {
+      return ik ??= Promise.all([Ik.e(72), Ik.e(188)]).then((() => Ik(40500))).then((kk => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: HS,
-          textureNameToIndex: gS,
-          textureAnimationData: XS
-        } = SS;
-        return bS ??= (0, tS.j)(gS, XS, HS), bS
-      })), XS
+          FORMER_BLOCK_IMAGE_NAMES: Fk,
+          textureNameToIndex: Ik,
+          textureAnimationData: ik
+        } = kk;
+        return Tk ??= (0, Xk.g)(Ik, ik, Fk), Tk
+      })), ik
     }
 
-    function NS() {
-      if (null === bS) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return bS
+    function lk() {
+      if (null === Tk) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return Tk
     }
   },
-  39062: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => NS
+  39034: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => lk
     });
-    var tS = gS(31),
-      bS = gS(1366),
-      XS = gS(3127);
-    const xS = "Reconnecting";
-    class NS {
-      constructor(SS) {
-        this.hooks = SS, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
+    var Xk = Ik(34),
+      Tk = Ik(1270),
+      ik = Ik(2889);
+    const yk = "Reconnecting";
+    class lk {
+      constructor(kk) {
+        this.hooks = kk, this.graceMs = 0, this.sessionBased = !1, this.controller = void 0, this.frozen = !1, this.stopped = !1, this.listening = !1, this.ended = !1, this.retryNow = () => {
           "visible" === document.visibilityState && this.controller.retryNow()
-        }, this.onPageHide = SS => {
-          SS.persisted || this.leave()
-        }, this.controller = new XS.c((HS => SS.reconnect(HS)), {
-          isSessionLive: () => !this.ended && SS.isLive(),
-          onPhaseChanged: SS => {
-            this.onPhaseChanged(SS)
+        }, this.onPageHide = kk => {
+          kk.persisted || this.leave()
+        }, this.controller = new ik.c((Fk => kk.reconnect(Fk)), {
+          isSessionLive: () => !this.ended && kk.isLive(),
+          onPhaseChanged: kk => {
+            this.onPhaseChanged(kk)
           },
-          onReconnected: HS => {
-            SS.onReconnected(HS)
+          onReconnected: Fk => {
+            kk.onReconnected(Fk)
           },
-          onGaveUp: HS => {
-            !this.ended && SS.isLive() && SS.onGaveUp(this.sessionBased, HS)
+          onGaveUp: Fk => {
+            !this.ended && kk.isLive() && kk.onGaveUp(this.sessionBased, Fk)
           }
         })
       }
-      onInitialInfo(SS, HS) {
-        this.graceMs = SS, this.sessionBased = HS
+      onInitialInfo(kk, Fk) {
+        this.graceMs = kk, this.sessionBased = Fk
       }
       canHoldSeat() {
         return this.graceMs > 0 && !this.ended
@@ -509,8 +509,8 @@ export const modules = {
       isResuming() {
         return "connected" !== this.controller.phase
       }
-      onConnectionLost(SS) {
-        this.ended || this.controller.onConnectionLost(SS, this.graceMs)
+      onConnectionLost(kk) {
+        this.ended || this.controller.onConnectionLost(kk, this.graceMs)
       }
       onResuming() {
         this.ended || this.controller.onResuming()
@@ -519,40 +519,40 @@ export const modules = {
         this.controller.stop()
       }
       leave() {
-        const SS = this.isResuming() && !this.controller.awaitingResumeOnRoom,
-          HS = this.controller.heldToken;
-        this.end(), SS && "" !== HS && this.hooks.releaseSeat(HS)
+        const kk = this.isResuming() && !this.controller.awaitingResumeOnRoom,
+          Fk = this.controller.heldToken;
+        this.end(), kk && "" !== Fk && this.hooks.releaseSeat(Fk)
       }
       end() {
         this.ended = !0, this.controller.stop()
       }
-      onPhaseChanged(SS) {
-        const HS = (0, XS.p)(SS);
-        HS !== this.stopped && (this.stopped = HS, this.hooks.freeze(HS));
-        const gS = "frozen" === SS || "resuming" === SS && this.frozen;
-        gS && !this.frozen ? (0, bS.u)(xS, {
+      onPhaseChanged(kk) {
+        const Fk = (0, ik.n)(kk);
+        Fk !== this.stopped && (this.stopped = Fk, this.hooks.freeze(Fk));
+        const Ik = "frozen" === kk || "resuming" === kk && this.frozen;
+        Ik && !this.frozen ? (0, Tk.m)(yk, {
           overridesPause: !0
-        }) : !gS && this.frozen && (0, bS.q)(xS), this.frozen = gS, this.setListening("connected" !== SS), tS.k.cj(XS.o, gS ? "frozen" : SS)
+        }) : !Ik && this.frozen && (0, Tk.l)(yk), this.frozen = Ik, this.setListening("connected" !== kk), Xk.g.GL(ik.m, Ik ? "frozen" : kk)
       }
-      setListening(SS) {
-        SS !== this.listening && (this.listening = SS, SS ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
+      setListening(kk) {
+        kk !== this.listening && (this.listening = kk, kk ? (window.addEventListener("online", this.retryNow), document.addEventListener("visibilitychange", this.retryNow), window.addEventListener("pagehide", this.onPageHide)) : (window.removeEventListener("online", this.retryNow), document.removeEventListener("visibilitychange", this.retryNow), window.removeEventListener("pagehide", this.onPageHide)))
       }
     }
   },
-  39068: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => tS
+  39040: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Xk
     });
-    class tS {
-      constructor(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.onSilent = SS, this.now = HS, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
-          const SS = this.now(),
-            HS = SS - this.lastCheckAt <= 2e3;
-          this.lastCheckAt = SS;
-          const gS = "visible" === document.visibilityState;
-          !gS || HS && this.wasVisible || (this.resumedAt = SS), this.wasVisible = gS, gS && SS - this.lastHeardAt > 12e3 && SS - this.resumedAt > 2e3 && this.onSilent()
-        }, this.lastHeardAt = HS(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
+    class Xk {
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.onSilent = kk, this.now = Fk, this.lastHeardAt = void 0, this.resumedAt = void 0, this.lastCheckAt = void 0, this.wasVisible = "visible" === document.visibilityState, this.interval = void 0, this.check = () => {
+          const kk = this.now(),
+            Fk = kk - this.lastCheckAt <= 2e3;
+          this.lastCheckAt = kk;
+          const Ik = "visible" === document.visibilityState;
+          !Ik || Fk && this.wasVisible || (this.resumedAt = kk), this.wasVisible = Ik, Ik && kk - this.lastHeardAt > 12e3 && kk - this.resumedAt > 2e3 && this.onSilent()
+        }, this.lastHeardAt = Fk(), this.resumedAt = this.lastHeardAt, this.lastCheckAt = this.lastHeardAt, this.interval = setInterval(this.check, 1e3), document.addEventListener("visibilitychange", this.check), window.addEventListener("online", this.check)
       }
       heard() {
         this.lastHeardAt = this.now()
@@ -562,28 +562,28 @@ export const modules = {
       }
     }
   },
-  34180: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => XS
+  34111: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik
     });
-    var tS = gS(1149);
+    var Xk = Ik(1076);
 
-    function bS() {
-      var SS, HS;
-      return null !== (SS = null === (HS = screen.orientation) || void 0 === HS ? void 0 : HS.type) && void 0 !== SS ? SS : innerWidth > innerHeight ? "landscape" : "portrait"
+    function Tk() {
+      var kk, Fk;
+      return null !== (kk = null === (Fk = screen.orientation) || void 0 === Fk ? void 0 : Fk.type) && void 0 !== kk ? kk : innerWidth > innerHeight ? "landscape" : "portrait"
     }
-    const XS = new class {
+    const ik = new class {
       constructor() {
         this.holding = !1, this.heldOrientation = "", this.releaseTimer = void 0, this.longHoldTimer = void 0, this.resizers = new Set, this.releaseWhenShown = () => {
           document.hidden || (document.removeEventListener("visibilitychange", this.releaseWhenShown), this.release())
         }
       }
       isHeld() {
-        return this.holding && bS() !== this.heldOrientation && (this.holding = !1), this.holding
+        return this.holding && Tk() !== this.heldOrientation && (this.holding = !1), this.holding
       }
       hold() {
-        this.heldOrientation = bS(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
-          this.holding && (0, tS.Zj)(new Error("Game view size held for 60 s"))
+        this.heldOrientation = Tk(), this.holding = !0, clearTimeout(this.releaseTimer), document.removeEventListener("visibilitychange", this.releaseWhenShown), clearTimeout(this.longHoldTimer), this.longHoldTimer = setTimeout((() => {
+          this.holding && (0, Xk.ow)(new Error("Game view size held for 60 s"))
         }), 6e4)
       }
       release() {
@@ -591,363 +591,363 @@ export const modules = {
           if (document.hidden) document.addEventListener("visibilitychange", this.releaseWhenShown);
           else {
             this.holding = !1;
-            for (const SS of this.resizers) SS()
+            for (const kk of this.resizers) kk()
           }
         }), 1e3)
       }
-      heldSizer(SS) {
-        let HS = !1;
+      heldSizer(kk) {
+        let Fk = !1;
         return () => {
-          if (HS && this.isHeld()) return null;
-          const gS = SS();
-          return HS ||= null !== gS, gS
+          if (Fk && this.isHeld()) return null;
+          const Ik = kk();
+          return Fk ||= null !== Ik, Ik
         }
       }
-      onRelease(SS) {
-        return this.resizers.add(SS), () => {
-          this.resizers.delete(SS)
+      onRelease(kk) {
+        return this.resizers.add(kk), () => {
+          this.resizers.delete(kk)
         }
       }
     }
   },
-  39256: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => bS
+  39250: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Tk
     });
-    let tS = !1;
-    async function bS(SS, HS) {
-      if (!tS) {
-        tS = !0;
+    let Xk = !1;
+    async function Tk(kk, Fk) {
+      if (!Xk) {
+        Xk = !0;
         try {
           const [{
-            reloadBloxd: tS
+            reloadBloxd: Xk
           }, {
-            NotificationProvider: bS
-          }] = await Promise.all([Promise.resolve().then((() => gS(1844))), Promise.resolve().then((() => gS(1435)))]);
-          if (!SS || !0 === await bS.showPromptPopup({
+            NotificationProvider: Tk
+          }] = await Promise.all([Promise.resolve().then((() => Ik(1665))), Promise.resolve().then((() => Ik(1324)))]);
+          if (!kk || !0 === await Tk.showPromptPopup({
               title: "Unsaved changes",
               subtitle: "Exit and lose your unsaved changes?",
               confirmText: "Exit",
               destructive: !0,
               cancelText: "Cancel",
               unlockPointerKey: "replayExitUnsavedChanges"
-            }).getResult()) return void tS(HS)
-        } catch (bS) {
-          console.error("Leaving the replay failed", bS)
+            }).getResult()) return void Xk(Fk)
+        } catch (Tk) {
+          console.error("Leaving the replay failed", Tk)
         }
-        tS = !1
+        Xk = !1
       }
     }
   },
-  39076: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => uS,
-      f: () => IS
+  39054: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => qk,
+      f: () => Lk
     });
-    var tS = gS(1822),
-      bS = gS(198),
-      XS = gS(1792),
-      xS = gS(1898),
-      NS = gS(1286),
-      qS = gS(1216);
-    async function uS(SS, HS) {
-      return function(SS) {
-        return "object" === typeof SS && null !== SS && SS.code === bS.c.VpnIp.code
-      }(HS) && function(SS) {
-        return XS.d.supports("appCheck") && SS.isLoggedIn() && !SS.hasTriedAppAttestation()
-      }(SS) && await async function(SS) {
+    var Xk = Ik(1649),
+      Tk = Ik(187),
+      ik = Ik(1631),
+      yk = Ik(1716),
+      lk = Ik(1194),
+      ak = Ik(1120);
+    async function qk(kk, Fk) {
+      return function(kk) {
+        return "object" === typeof kk && null !== kk && kk.code === Tk.d.VpnIp.code
+      }(Fk) && function(kk) {
+        return ik.b.supports("appCheck") && kk.isLoggedIn() && !kk.hasTriedAppAttestation()
+      }(kk) && await async function(kk) {
         try {
           const {
-            token: HS
-          } = await (0, xS.b)(), {
-            "3PSIDMCPP": gS
-          } = await (0, qS.postJsonWithMetricsCookiesAndJsonResponse)(`${NS.clientSideServerUrls.indexUrl}/index/app-attestation`, {
-            appCheckToken: HS
+            token: Fk
+          } = await (0, yk.b)(), {
+            "3PSIDMCPP": Ik
+          } = await (0, ak.postJsonWithMetricsCookiesAndJsonResponse)(`${lk.clientSideServerUrls.indexUrl}/index/app-attestation`, {
+            appCheckToken: Fk
           }, {
             retries: 0
-          }, SS.getMetricsCookies());
-          return SS.setAppAttestedAuthJwt(gS), !0
-        } catch (HS) {
-          return HS instanceof tS.e && "failed" === HS.code ? (console.warn("The app couldn't get an App Check token:", HS), SS.markAppAttestationTried()) : console.error("Failed to attest the app:", HS), !1
+          }, kk.getMetricsCookies());
+          return kk.setAppAttestedAuthJwt(Ik), !0
+        } catch (Fk) {
+          return Fk instanceof Xk.d && "failed" === Fk.code ? (console.warn("The app couldn't get an App Check token:", Fk), kk.markAppAttestationTried()) : console.error("Failed to attest the app:", Fk), !1
         }
-      }(SS)
+      }(kk)
     }
-    async function IS(SS, HS) {
+    async function Lk(kk, Fk) {
       try {
-        return await HS()
-      } catch (gS) {
-        if (!await uS(SS, gS)) throw gS
+        return await Fk()
+      } catch (Ik) {
+        if (!await qk(kk, Ik)) throw Ik
       }
-      return HS()
+      return Fk()
     }
   },
-  40997: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => NS,
-      g: () => qS
+  40986: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => lk,
+      f: () => ak
     });
-    var tS = gS(1860);
-    const bS = 33177600,
-      XS = 3e4;
-    let xS = !1;
+    var Xk = Ik(1682);
+    const Tk = 33177600,
+      ik = 3e4;
+    let yk = !1;
 
-    function NS(SS, HS, gS) {
-      let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    function lk(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        scale: NS = 1,
-        type: qS = "image/png",
-        quality: uS
-      } = tS;
-      if (!SS.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (xS) return Promise.reject(new Error("A screenshot is already being taken"));
-      xS = !0;
-      const IS = function(SS, HS, gS) {
-        const tS = Math.max(1, SS),
-          XS = Math.max(1, HS),
-          xS = Math.min(1, gS / Math.max(tS, XS), Math.sqrt(bS / (tS * XS)));
+        scale: lk = 1,
+        type: ak = "image/png",
+        quality: qk
+      } = Xk;
+      if (!kk.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (yk) return Promise.reject(new Error("A screenshot is already being taken"));
+      yk = !0;
+      const Lk = function(kk, Fk, Ik) {
+        const Xk = Math.max(1, kk),
+          ik = Math.max(1, Fk),
+          yk = Math.min(1, Ik / Math.max(Xk, ik), Math.sqrt(Tk / (Xk * ik)));
         return {
-          width: Math.max(1, Math.floor(tS * xS)),
-          height: Math.max(1, Math.floor(XS * xS))
+          width: Math.max(1, Math.floor(Xk * yk)),
+          height: Math.max(1, Math.floor(ik * yk))
         }
-      }(HS, gS, SS.maxTextureSize);
-      return SS.resize(IS.width, IS.height, NS * IS.width / Math.max(1, HS)), new Promise(((HS, gS) => {
-        let tS, bS = 2,
-          NS = null;
-        const IS = () => {
-          var HS;
-          xS = !1, null === (HS = NS) || void 0 === HS || HS(), clearTimeout(tS), SS.restoreSize()
+      }(Fk, Ik, kk.maxTextureSize);
+      return kk.resize(Lk.width, Lk.height, lk * Lk.width / Math.max(1, Fk)), new Promise(((Fk, Ik) => {
+        let Xk, Tk = 2,
+          lk = null;
+        const Lk = () => {
+          var Fk;
+          yk = !1, null === (Fk = lk) || void 0 === Fk || Fk(), clearTimeout(Xk), kk.restoreSize()
         };
-        tS = setTimeout((() => {
-          IS(), gS(new Error("No frame was drawn to capture"))
-        }), XS), NS = SS.onFrameDrawn((() => {
-          if (bS--, bS > 0) return;
+        Xk = setTimeout((() => {
+          Lk(), Ik(new Error("No frame was drawn to capture"))
+        }), ik), lk = kk.onFrameDrawn((() => {
+          if (Tk--, Tk > 0) return;
           const {
-            canvas: tS
-          } = SS, XS = {
-            width: tS.width,
-            height: tS.height
+            canvas: Xk
+          } = kk, ik = {
+            width: Xk.width,
+            height: Xk.height
           };
           try {
-            tS.toBlob((SS => {
-              SS ? HS({
-                blob: SS,
-                ...XS
-              }) : gS(new Error("The canvas gave no image"))
-            }), qS, uS)
-          } catch (xS) {
-            gS(xS)
+            Xk.toBlob((kk => {
+              kk ? Fk({
+                blob: kk,
+                ...ik
+              }) : Ik(new Error("The canvas gave no image"))
+            }), ak, qk)
+          } catch (yk) {
+            Ik(yk)
           } finally {
-            IS()
+            Lk()
           }
         }))
       }))
     }
-    async function qS(SS, HS, gS) {
+    async function ak(kk, Fk, Ik) {
       try {
-        const bS = await NS(SS, HS, gS);
-        (0, tS.c)(bS.blob, `bloxd-screenshot-${bS.width}x${bS.height}-${Date.now()}.png`)
-      } catch (bS) {
-        console.error("Error taking screenshot:", bS)
+        const Tk = await lk(kk, Fk, Ik);
+        (0, Xk.c)(Tk.blob, `bloxd-screenshot-${Tk.width}x${Tk.height}-${Date.now()}.png`)
+      } catch (Tk) {
+        console.error("Error taking screenshot:", Tk)
       }
     }
   },
-  39070: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => kS,
-      e: () => IS
+  39046: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Zk,
+      i: () => Lk
     });
-    var tS = gS(198),
-      bS = gS(1934),
-      XS = gS(1290),
-      xS = gS(9093);
-    const NS = [250, 500, 1e3, 2e3, 1250],
-      qS = 406;
+    var Xk = Ik(187),
+      Tk = Ik(1759),
+      ik = Ik(1199),
+      yk = Ik(8880);
+    const lk = [250, 500, 1e3, 2e3, 1250],
+      ak = 406;
 
-    function uS(SS) {
-      if ("object" !== typeof SS || null === SS) return !1;
+    function qk(kk) {
+      if ("object" !== typeof kk || null === kk) return !1;
       const {
-        code: HS,
-        message: gS
-      } = SS, bS = tS.c.duplicateLobbyNameError;
-      return (HS === bS.code || HS === qS) && (gS === bS.text || gS === bS.text + tS.g)
+        code: Fk,
+        message: Ik
+      } = kk, Tk = Xk.d.duplicateLobbyNameError;
+      return (Fk === Tk.code || Fk === ak) && (Ik === Tk.text || Ik === Tk.text + Xk.m)
     }
-    async function IS(SS, HS) {
-      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bS.e;
-      for (let bS = 0;; bS++) {
-        let xS;
-        (0, XS.m)(HS);
+    async function Lk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Tk.b;
+      for (let Tk = 0;; Tk++) {
+        let yk;
+        (0, ik.m)(Fk);
         try {
-          return await SS()
-        } catch (tS) {
-          if (xS = NS[bS], void 0 === xS || !uS(tS)) throw tS
+          return await kk()
+        } catch (Xk) {
+          if (yk = lk[Tk], void 0 === yk || !qk(Xk)) throw Xk
         }
-        await gS(xS, HS)
+        await Ik(yk, Fk)
       }
     }
-    const fS = new Set([tS.c.duplicateLobbyNameError.code, tS.c.lobbyCantBeCreated.code, tS.c.roomDisposedEarlyError.code, tS.c.roomDisposedLateError.code, tS.c.serverRoomLimitReached.code]);
+    const tk = new Set([Xk.d.duplicateLobbyNameError.code, Xk.d.lobbyCantBeCreated.code, Xk.d.roomDisposedEarlyError.code, Xk.d.roomDisposedLateError.code, Xk.d.serverRoomLimitReached.code]);
 
-    function kS(SS) {
-      if (uS(SS)) return !0;
-      const HS = (0, xS.i)(SS);
-      return "number" === typeof HS && fS.has(HS)
+    function Zk(kk) {
+      if (qk(kk)) return !0;
+      const Fk = (0, yk.g)(kk);
+      return "number" === typeof Fk && tk.has(Fk)
     }
   },
-  39175: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => xS
+  39171: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => yk
     });
-    var tS = gS(369),
-      bS = gS(138),
-      XS = gS(45);
+    var Xk = Ik(318),
+      Tk = Ik(129),
+      ik = Ik(41);
 
-    function xS() {
-      XS.g.setItem(tS.Ob, XS.g.getItem(tS.Ob) + 1), (0, bS.j)() && XS.g.setItem(tS.Kb, XS.g.getItem(tS.Kb) + 1)
+    function yk() {
+      ik.j.setItem(Xk.Ob, ik.j.getItem(Xk.Ob) + 1), (0, Tk.p)() && ik.j.setItem(Xk.Nb, ik.j.getItem(Xk.Nb) + 1)
     }
   },
-  36471: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => DS,
-      f: () => wS
+  36449: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Qk,
+      g: () => sk
     });
-    var tS = gS(1087),
-      bS = gS(215),
-      XS = gS(378),
-      xS = gS(687),
-      NS = gS(387),
-      qS = gS(1089),
-      uS = gS(699),
-      IS = gS(727),
-      fS = gS(4656),
-      kS = gS(104),
-      aS = gS(138),
-      KS = gS(1844),
-      jS = gS(118),
-      GS = gS(36479),
-      CS = gS(45),
-      nS = gS(713),
-      PS = gS(362),
-      QS = gS(36485);
+    var Xk = Ik(1018),
+      Tk = Ik(198),
+      ik = Ik(333),
+      yk = Ik(633),
+      lk = Ik(337),
+      ak = Ik(1021),
+      qk = Ik(646),
+      Lk = Ik(684),
+      tk = Ik(4508),
+      Zk = Ik(95),
+      jk = Ik(129),
+      ek = Ik(1665),
+      wk = Ik(111),
+      Hk = Ik(36458),
+      Jk = Ik(41),
+      xk = Ik(667),
+      Pk = Ik(309),
+      Kk = Ik(36466);
 
-    function DS() {
-      var SS, HS;
-      return [...null !== (SS = navigator.languages) && void 0 !== SS ? SS : [null !== (HS = navigator.language) && void 0 !== HS ? HS : "none"], "en-gb"]
+    function Qk() {
+      var kk, Fk;
+      return [...null !== (kk = navigator.languages) && void 0 !== kk ? kk : [null !== (Fk = navigator.language) && void 0 !== Fk ? Fk : "none"], "en-gb"]
     }
 
-    function wS(SS, HS, gS, wS, hS) {
-      const ZS = (0, tS.m)(HS) ? (0, tS.t)(HS) : null,
-        JS = SS.isLoggedIn() && void 0 !== (0, bS.c)(XS.m, aS.r) ? (0, PS.z)() : null,
-        OS = {
-          cookies: (0, KS.getAllCookiesForGameNameWithVariation)(HS),
-          isMobile: (0, kS.isMobile)(),
-          isUsingCustomGameTexturePack: null !== ZS && hS(ZS),
+    function sk(kk, Fk, Ik, sk, Vk) {
+      const zk = (0, Xk.j)(Fk) ? (0, Xk.n)(Fk) : null,
+        Sk = kk.isLoggedIn() && void 0 !== (0, Tk.d)(ik.i, jk.v) ? (0, Pk.x)() : null,
+        vk = {
+          cookies: (0, ek.getAllCookiesForGameNameWithVariation)(Fk),
+          isMobile: (0, Zk.isMobile)(),
+          isUsingCustomGameTexturePack: null !== zk && Vk(zk),
           generalCookies: {
-            joinDiscord: !!CS.g.getItem("DiscordPressed"),
-            newGo: fS.b,
-            ...SS.getMetricsCookies(),
-            trafficCode: wS,
-            compliance: kS.compliance
+            joinDiscord: !!Jk.j.getItem("DiscordPressed"),
+            newGo: tk.b,
+            ...kk.getMetricsCookies(),
+            trafficCode: sk,
+            compliance: Zk.compliance
           },
           browserInfo: {
             ua: window.navigator.userAgent,
-            name: (0, kS.getBrowserName)(),
-            version: (0, kS.getBrowserVersion)(),
+            name: (0, Zk.getBrowserName)(),
+            version: (0, Zk.getBrowserVersion)(),
             platform: navigator.platform,
-            platformType: (0, kS.getPlatformType)(),
-            deviceType: (0, jS.c)()
+            platformType: (0, Zk.getPlatformType)(),
+            deviceType: (0, wk.e)()
           },
-          isLoggedIn: SS.isLoggedIn(),
-          lobbyName: gS,
-          languages: DS(),
-          version: xS.b,
-          siteUsed: aS.r,
-          subsiteUsed: aS.A,
-          playSessionId: (0, GS.h)(HS),
-          visitSessionId: (0, nS.g)(),
-          clientReason: uS.p.reason,
-          budgetBasis: (0, QS.i)(),
-          ...null !== IS.p && {
-            diagClaim: IS.p.claimId
+          isLoggedIn: kk.isLoggedIn(),
+          lobbyName: Ik,
+          languages: Qk(),
+          version: yk.b,
+          siteUsed: jk.v,
+          subsiteUsed: jk.C,
+          playSessionId: (0, Hk.j)(Fk),
+          visitSessionId: (0, xk.h)(),
+          clientReason: qk.o.reason,
+          budgetBasis: (0, Kk.h)(),
+          ...null !== Lk.t && {
+            diagClaim: Lk.t.claimId
           },
-          ...null !== JS && {
-            webGpuLoss: JS
+          ...null !== Sk && {
+            webGpuLoss: Sk
           }
         };
-      return null !== ZS && (0, NS.yc)(ZS) ? (OS.lobbyName = (0, tS.k)(ZS, (0, tS.p)(HS), gS), {
-        roomName: `classic_${qS.c}`,
-        joinOptions: OS
+      return null !== zk && (0, lk.Kc)(zk) ? (vk.lobbyName = (0, Xk.i)(zk, (0, Xk.l)(Fk), Ik), {
+        roomName: `classic_${ak.f}`,
+        joinOptions: vk
       }) : {
-        roomName: HS,
-        joinOptions: OS
+        roomName: Fk,
+        joinOptions: vk
       }
     }
   },
-  39102: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => aS,
-      g: () => kS
+  39080: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => jk,
+      e: () => Zk
     });
-    const tS = "ue:",
-      bS = ["keydown", "keyup", "mousedown", "mouseup", "pointerdown", "pointerup", "touchstart", "touchend"],
-      XS = "[A-Za-z0-9]{1,24}",
-      xS = 15,
-      NS = new RegExp(`^${XS}$`);
-    new RegExp(`^${tS}(${[...bS,"other"].join("|")}):(?:n|k(${XS})|b(0|[1-9][0-9]?)):([01])([01])$`);
+    const Xk = "ue:",
+      Tk = ["keydown", "keyup", "mousedown", "mouseup", "pointerdown", "pointerup", "touchstart", "touchend"],
+      ik = "[A-Za-z0-9]{1,24}",
+      yk = 15,
+      lk = new RegExp(`^${ik}$`);
+    new RegExp(`^${Xk}(${[...Tk,"other"].join("|")}):(?:n|k(${ik})|b(0|[1-9][0-9]?)):([01])([01])$`);
 
-    function qS(SS, HS, gS, XS, qS) {
-      const uS = "string" === typeof SS && bS.includes(SS) ? SS : "other";
-      let IS = "n";
-      return "string" === typeof HS ? IS = NS.test(HS) ? `k${HS}` : "n" : "number" === typeof gS && Number.isInteger(gS) && gS >= 0 && gS <= xS && (IS = `b${gS}`), `${tS}${uS}:${IS}:${XS?1:0}${qS?1:0}`
+    function ak(kk, Fk, Ik, ik, ak) {
+      const qk = "string" === typeof kk && Tk.includes(kk) ? kk : "other";
+      let Lk = "n";
+      return "string" === typeof Fk ? Lk = lk.test(Fk) ? `k${Fk}` : "n" : "number" === typeof Ik && Number.isInteger(Ik) && Ik >= 0 && Ik <= yk && (Lk = `b${Ik}`), `${Xk}${qk}:${Lk}:${ik?1:0}${ak?1:0}`
     }
-    var uS = gS(1758),
-      IS = gS(1846);
-    let fS = null;
+    var qk = Ik(1604),
+      Lk = Ik(1668);
+    let tk = null;
 
-    function kS(SS) {
-      const HS = SS instanceof Element && SS !== document.body && SS !== document.documentElement && !(0, uS.n)(SS) && !SS.closest("#root");
+    function Zk(kk) {
+      const Fk = kk instanceof Element && kk !== document.body && kk !== document.documentElement && !(0, qk.p)(kk) && !kk.closest("#root");
       return {
-        editable: (0, IS.d)(SS),
-        outsideView: HS
+        editable: (0, Lk.b)(kk),
+        outsideView: Fk
       }
     }
 
-    function aS(SS) {
-      return fS ??= function(SS) {
+    function jk(kk) {
+      return tk ??= function(kk) {
         try {
           const {
-            editable: HS,
-            outsideView: gS
-          } = kS(SS.target), tS = SS;
-          return qS(SS.type, tS.code, tS.button, HS, gS)
+            editable: Fk,
+            outsideView: Ik
+          } = Zk(kk.target), Xk = kk;
+          return ak(kk.type, Xk.code, Xk.button, Fk, Ik)
         } catch {
-          return qS(null, null, null, !1, !1)
+          return ak(null, null, null, !1, !1)
         }
-      }(SS), fS
+      }(kk), tk
     }
   },
-  40689: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => NS
+  40661: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => lk
     });
-    var tS = gS(39690);
+    var Xk = Ik(39629);
 
-    function bS(SS) {
+    function Tk(kk) {
       return {
-        current: () => SS,
+        current: () => kk,
         watch: () => () => {}
       }
     }
 
-    function XS() {}
-    const xS = Object.freeze([0, 0, 0]),
-      NS = {
+    function ik() {}
+    const yk = Object.freeze([0, 0, 0]),
+      lk = {
         states: {
-          health: bS({
+          health: Tk({
             health: null,
             maxHealth: null,
             shield: null,
             maxShield: null
           }),
-          inventory: bS({
+          inventory: Tk({
             player: [],
             chestOrCreative: [],
             chest: null,
@@ -955,63 +955,63 @@ export const modules = {
             selectedSlot: 0,
             freeSlots: 0
           }),
-          hotbar: bS({
+          hotbar: Tk({
             items: [],
             ammo: 0,
             selectedSlot: null
           }),
-          stationItems: bS({
+          stationItems: Tk({
             enchantable: {},
             salvageable: {}
           }),
-          itemInfo: bS({}),
-          creativeVisibility: bS({
+          itemInfo: Tk({}),
+          creativeVisibility: Tk({
             publicLobby: !1,
             shownInGame: {}
           }),
-          aura: bS(null),
-          heldItemAim: bS({
+          aura: Tk(null),
+          heldItemAim: Tk({
             gun: !1,
             aimable: !1,
             chargeName: null
           }),
-          crouching: bS(!1),
-          gliderBoostFuel: bS(0),
-          flight: bS({
+          crouching: Tk(!1),
+          gliderBoostFuel: Tk(0),
+          flight: Tk({
             canFly: !1,
             flying: !1
           }),
-          crafting: bS({
+          crafting: Tk({
             focus: null,
             recipes: [],
             detail: null
           }),
-          players: bS({
+          players: Tk({
             ids: [],
             byId: {},
             localId: null
           }),
-          lobbyLeaderboardRows: bS({}),
-          fullInventory: bS(!1),
-          crosshairTarget: bS({
+          lobbyLeaderboardRows: Tk({}),
+          fullInventory: Tk(!1),
+          crosshairTarget: Tk({
             interactPrompt: null,
             blockText: null,
             neededTool: null
           }),
-          localPlayerAlive: bS(!0),
-          freeCamera: bS({
+          localPlayerAlive: Tk(!0),
+          freeCamera: Tk({
             allowed: !1,
             movesFly: !1
           }),
-          replay: bS(null),
-          replayEdits: bS(null),
-          replayRecorder: bS({
+          replay: Tk(null),
+          replayEdits: Tk(null),
+          replayRecorder: Tk({
             recording: !1,
             clipping: !1,
             hasClipBuffer: !1,
             seconds: 0
           }),
-          replayVideoExporting: bS(!1)
+          replayVideoExporting: Tk(!1)
         },
         events: {
           hotbarSlotRequested: {
@@ -1073,87 +1073,87 @@ export const modules = {
           }
         },
         commands: {
-          selectHotbarSlot: XS,
+          selectHotbarSlot: ik,
           removeInventoryItem: () => !1,
           swapInventorySlots: () => !1,
           moveInventoryItem: () => !1,
           quickMoveInventoryItem: () => null,
-          closeChest: XS,
-          setInventoryOpen: XS,
-          changeIronChestPasskey: XS,
-          dragReplayCamera: XS,
-          applyTemporaryThirdPerson: XS,
-          holdEmoteWheel: XS,
-          recordFlyingMiddleText: XS,
-          focusCrafting: XS,
+          closeChest: ik,
+          setInventoryOpen: ik,
+          changeIronChestPasskey: ik,
+          dragReplayCamera: ik,
+          applyTemporaryThirdPerson: ik,
+          holdEmoteWheel: ik,
+          recordFlyingMiddleText: ik,
+          focusCrafting: ik,
           craftRecipe: () => ({
-            XN: 0,
-            jx: null,
+            il: 0,
+            jy: null,
             amountAddedToSlot: 0
           }),
           salvageItem: () => !1,
-          enchantItem: XS,
-          setShopOpen: XS,
-          buyShopItem: XS,
-          lobbyManage: XS,
-          sendChatMessage: XS,
-          ignorePlayer: XS,
-          reportPlayer: XS,
-          reportWorldCodeChat: XS,
-          requestDiscordReportKey: XS,
-          reportLobbyOrGame: XS,
-          playEmote: XS,
-          updateMyCosmetic: XS,
-          writeOnBoard: XS,
-          writeBook: XS,
-          writeNameTag: XS,
-          setCustomLobbyBlock: XS,
-          openIronChest: XS,
-          sendCodeCollab: XS,
-          clickCodeBlock: XS,
-          bindCustomButtonKeys: XS,
-          pressCustomButton: XS,
-          moveReplayFreecam: XS,
-          holdReplayFreecamVertical: XS,
-          respawn: XS,
-          wakeUp: XS,
-          requestLeaderboard: XS,
-          completeTask: XS,
-          setServerCookie: XS,
-          answerUiRequest: XS,
-          chooseRewardedAd: XS,
-          setCameraZoom: XS,
-          setFreeCameraMovesFly: XS,
-          setBlockHighlight: XS,
-          setCrosshairInteractPrompt: XS,
-          setLookSensitivity: XS,
-          replayAction: XS,
-          setReplayPlaying: XS,
-          seekReplay: XS,
-          setReplayCameraMode: XS,
-          syncReplayCameraMode: XS,
-          setReplayCameraKeyframe: XS,
-          moveReplayCameraKeyframe: XS,
-          deleteReplayCameraKeyframes: XS,
-          setReplayPlaybackMark: XS,
+          enchantItem: ik,
+          setShopOpen: ik,
+          buyShopItem: ik,
+          lobbyManage: ik,
+          sendChatMessage: ik,
+          ignorePlayer: ik,
+          reportPlayer: ik,
+          reportWorldCodeChat: ik,
+          requestDiscordReportKey: ik,
+          reportLobbyOrGame: ik,
+          playEmote: ik,
+          updateMyCosmetic: ik,
+          writeOnBoard: ik,
+          writeBook: ik,
+          writeNameTag: ik,
+          setCustomLobbyBlock: ik,
+          openIronChest: ik,
+          sendCodeCollab: ik,
+          clickCodeBlock: ik,
+          bindCustomButtonKeys: ik,
+          pressCustomButton: ik,
+          moveReplayFreecam: ik,
+          holdReplayFreecamVertical: ik,
+          respawn: ik,
+          wakeUp: ik,
+          requestLeaderboard: ik,
+          completeTask: ik,
+          setServerCookie: ik,
+          answerUiRequest: ik,
+          chooseRewardedAd: ik,
+          setCameraZoom: ik,
+          setFreeCameraMovesFly: ik,
+          setBlockHighlight: ik,
+          setCrosshairInteractPrompt: ik,
+          setLookSensitivity: ik,
+          replayAction: ik,
+          setReplayPlaying: ik,
+          seekReplay: ik,
+          setReplayCameraMode: ik,
+          syncReplayCameraMode: ik,
+          setReplayCameraKeyframe: ik,
+          moveReplayCameraKeyframe: ik,
+          deleteReplayCameraKeyframes: ik,
+          setReplayPlaybackMark: ik,
           cropReplay: () => !1,
-          holdReplayForShaderPackFailure: XS,
-          exportReplayVideo: XS,
-          toggleRecording: XS,
-          saveClip: XS,
-          setRecorderPrefs: XS,
-          setReplayViewerOpen: XS
+          holdReplayForShaderPackFailure: ik,
+          exportReplayVideo: ik,
+          toggleRecording: ik,
+          saveClip: ik,
+          setRecorderPrefs: ik,
+          setReplayViewerOpen: ik
         },
         queries: {
           enchantingOffer: () => ({
             perks: [],
             options: []
           }),
-          worldCodeAiChunk: () => tS.d,
-          worldCodeAiGameState: () => tS.h
+          worldCodeAiChunk: () => Xk.c,
+          worldCodeAiGameState: () => Xk.f
         },
         lookups: {
-          localPos: () => xS,
+          localPos: () => yk,
           targetedBlockPos: () => null,
           blockAtViewPoint: () => null,
           momentumFrac: () => 0,
@@ -1171,113 +1171,113 @@ export const modules = {
         }
       }
   },
-  40991: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => xS,
-      f: () => XS
+  40978: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => yk,
+      g: () => ik
     });
-    var tS = gS(2256),
-      bS = gS(1087);
+    var Xk = Ik(2071),
+      Tk = Ik(1018);
 
-    function XS(SS, HS) {
-      return null !== SS.gameSource && (0, tS.o)(HS, SS.gameSource)
+    function ik(kk, Fk) {
+      return null !== kk.gameSource && (0, Xk.i)(Fk, kk.gameSource)
     }
 
-    function xS(SS, HS) {
-      if (null === SS.gameSource || "" === SS.gameSource || null === HS) return !0;
-      const gS = (0, bS.m)(HS) ? (0, bS.t)(HS) : null;
-      return null !== gS && XS(SS, gS)
+    function yk(kk, Fk) {
+      if (null === kk.gameSource || "" === kk.gameSource || null === Fk) return !0;
+      const Ik = (0, Tk.j)(Fk) ? (0, Tk.n)(Fk) : null;
+      return null !== Ik && ik(kk, Ik)
     }
   },
-  40963: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => NS
+  40954: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => lk
     });
-    var tS = gS(665),
-      bS = gS(40972),
-      XS = gS(40844);
-    async function xS(SS) {
-      const HS = await (0, bS.l)({
-        Helmet: gS(37983),
-        Chestplate: gS(37991),
-        Gauntlets: gS(38011),
-        Leggings: gS(37997),
-        Boots: gS(38003)
-      } [tS.d[SS]]);
+    var Xk = Ik(614),
+      Tk = Ik(40957),
+      ik = Ik(40819);
+    async function yk(kk) {
+      const Fk = await (0, Tk.i)({
+        Helmet: Ik(37960),
+        Chestplate: Ik(37968),
+        Gauntlets: Ik(37990),
+        Leggings: Ik(37975),
+        Boots: Ik(37984)
+      } [Xk.e[kk]]);
       try {
-        return (0, XS.k)(HS)
+        return (0, ik.q)(Fk)
       } finally {
-        HS.close()
+        Fk.close()
       }
     }
-    const NS = new class {
+    const lk = new class {
       constructor() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : xS,
-          HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : bS.s;
-        this.decode = SS, this.register = HS, this.decoded = new Map
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : yk,
+          Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Tk.o;
+        this.decode = kk, this.register = Fk, this.decoded = new Map
       }
       warm() {
-        for (let SS = 0; SS < tS.d.length; SS++) this.part(SS).catch((HS => {
-          console.warn(`The grayscale armour ${tS.d[SS]} image didn't decode ahead of use`, HS)
+        for (let kk = 0; kk < Xk.e.length; kk++) this.part(kk).catch((Fk => {
+          console.warn(`The grayscale armour ${Xk.e[kk]} image didn't decode ahead of use`, Fk)
         }))
       }
-      async load(SS, HS) {
+      async load(kk, Fk) {
         const {
-          width: gS,
-          height: XS,
-          pixels: xS
-        } = await this.part(SS), NS = new ImageData(function(SS, HS) {
-          const gS = new Uint8ClampedArray(SS.length);
-          for (let tS = 0; tS < SS.length; tS += 4) gS[tS] = Math.round(SS[tS] * HS[0] / 255), gS[tS + 1] = Math.round(SS[tS + 1] * HS[1] / 255), gS[tS + 2] = Math.round(SS[tS + 2] * HS[2] / 255), gS[tS + 3] = SS[tS + 3];
-          return gS
-        }(xS, function(SS) {
-          return [SS >>> 16 & 255, SS >>> 8 & 255, 255 & SS]
-        }(HS)), gS, XS);
-        let qS;
+          width: Ik,
+          height: ik,
+          pixels: yk
+        } = await this.part(kk), lk = new ImageData(function(kk, Fk) {
+          const Ik = new Uint8ClampedArray(kk.length);
+          for (let Xk = 0; Xk < kk.length; Xk += 4) Ik[Xk] = Math.round(kk[Xk] * Fk[0] / 255), Ik[Xk + 1] = Math.round(kk[Xk + 1] * Fk[1] / 255), Ik[Xk + 2] = Math.round(kk[Xk + 2] * Fk[2] / 255), Ik[Xk + 3] = kk[Xk + 3];
+          return Ik
+        }(yk, function(kk) {
+          return [kk >>> 16 & 255, kk >>> 8 & 255, 255 & kk]
+        }(Fk)), Ik, ik);
+        let ak;
         try {
-          qS = await createImageBitmap(NS, {
+          ak = await createImageBitmap(lk, {
             premultiplyAlpha: "none",
             colorSpaceConversion: "none"
           })
-        } catch (uS) {
-          throw new bS.d("decode", `grayscale armour ${tS.d[SS]}`, {
-            cause: uS
+        } catch (qk) {
+          throw new Tk.e("decode", `grayscale armour ${Xk.e[kk]}`, {
+            cause: qk
           })
         }
         return {
-          id: this.register(qS),
-          width: gS,
-          height: XS
+          id: this.register(ak),
+          width: Ik,
+          height: ik
         }
       }
-      part(SS) {
-        const HS = this.decoded.get(SS);
-        if (void 0 !== HS) return HS;
-        const gS = this.decode(SS).catch((HS => {
-          throw this.decoded.delete(SS), HS instanceof bS.d ? HS : new bS.d("decode", `grayscale armour ${tS.d[SS]}`, {
-            cause: HS
+      part(kk) {
+        const Fk = this.decoded.get(kk);
+        if (void 0 !== Fk) return Fk;
+        const Ik = this.decode(kk).catch((Fk => {
+          throw this.decoded.delete(kk), Fk instanceof Tk.e ? Fk : new Tk.e("decode", `grayscale armour ${Xk.e[kk]}`, {
+            cause: Fk
           })
         }));
-        return this.decoded.set(SS, gS), gS
+        return this.decoded.set(kk, Ik), Ik
       }
     }
   },
-  40954: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => xS,
-      g: () => GS,
-      h: () => IS,
-      l: () => fS,
-      m: () => jS
+  40946: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => yk,
+      g: () => Hk,
+      i: () => Lk,
+      l: () => tk,
+      o: () => wk
     });
-    var tS = gS(40824),
-      bS = gS(40963),
-      XS = gS(40972);
-    const xS = 396,
-      NS = 1,
-      qS = 2,
-      uS = 3,
-      IS = {
+    var Xk = Ik(40799),
+      Tk = Ik(40954),
+      ik = Ik(40957);
+    const yk = 396,
+      lk = 1,
+      ak = 2,
+      qk = 3,
+      Lk = {
         Glb: 1,
         LifeformAtlas: 2,
         ArmourAtlas: 3,
@@ -1288,37 +1288,37 @@ export const modules = {
         BlockImage: 8,
         GreyscaleArmour: 9
       },
-      fS = {
+      tk = {
         File: 0,
         Item: 1
       },
-      kS = 0,
-      aS = 1,
-      KS = 2;
+      Zk = 0,
+      jk = 1,
+      ek = 2;
 
-    function jS(SS) {
-      const HS = (0, tS.l)();
-      HS.catch((() => {}));
-      let bS = null;
+    function wk(kk) {
+      const Fk = (0, Xk.i)();
+      Fk.catch((() => {}));
+      let Tk = null;
       return {
-        glbUrl: SS,
-        lifeformAtlasUrl: async SS => (await HS).lifeformAtlasUrl(SS),
-        armourAtlasUrl: async () => (await gS.e(204).then((() => gS(34324)))).armourAtlasUrl,
-        capeUrl: async SS => (await HS).capeUrl(SS),
-        attachmentImageUrl: async SS => (await HS).attachmentImageUrl(SS),
-        blockImageUrl: async SS => (await HS).blockImageUrl(SS),
-        groupAtlasUrl: async SS => (await HS).groupAtlasUrl(SS),
-        particleTextureUrl: async SS => (await HS).particleTextureUrl(SS),
-        particleItemUrl: async SS => (bS ??= gS.e(38).then((() => gS(51080))).catch((SS => {
-          throw bS = null, SS
-        })), (await bS).particleItemUrl(SS))
+        glbUrl: kk,
+        lifeformAtlasUrl: async kk => (await Fk).lifeformAtlasUrl(kk),
+        armourAtlasUrl: async () => (await Ik.e(204).then((() => Ik(34274)))).armourAtlasUrl,
+        capeUrl: async kk => (await Fk).capeUrl(kk),
+        attachmentImageUrl: async kk => (await Fk).attachmentImageUrl(kk),
+        blockImageUrl: async kk => (await Fk).blockImageUrl(kk),
+        groupAtlasUrl: async kk => (await Fk).groupAtlasUrl(kk),
+        particleTextureUrl: async kk => (await Fk).particleTextureUrl(kk),
+        particleItemUrl: async kk => (Tk ??= Ik.e(38).then((() => Ik(51036))).catch((kk => {
+          throw Tk = null, kk
+        })), (await Tk).particleItemUrl(kk))
       }
     }
-    class GS {
-      constructor(SS, HS) {
-        var gS, xS, NS, qS;
-        let uS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        this.sources = SS, this.onFailure = HS, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.greyscaleArmour = void 0, this.nK = !1, this.load = null !== (gS = uS.load) && void 0 !== gS ? gS : (SS, HS) => (0, XS.p)(SS, uS.fetchImage, HS), this.release = null !== (xS = uS.release) && void 0 !== xS ? xS : XS.w, this.fetchFile = null !== (NS = uS.fetchFile) && void 0 !== NS ? NS : SS => (0, tS.g)(SS), this.greyscaleArmour = null !== (qS = uS.greyscaleArmour) && void 0 !== qS ? qS : bS.d
+    class Hk {
+      constructor(kk, Fk) {
+        var Ik, yk, lk, ak;
+        let qk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+        this.sources = kk, this.onFailure = Fk, this.loading = new Map, this.glbImages = new Map, this.glbWrittenImages = new Map, this.glbTakenCount = new Map, this.answered = new Map, this.ready = [], this.load = void 0, this.release = void 0, this.fetchFile = void 0, this.greyscaleArmour = void 0, this.ee = !1, this.load = null !== (Ik = qk.load) && void 0 !== Ik ? Ik : (kk, Fk) => (0, ik.l)(kk, qk.fetchImage, Fk), this.release = null !== (yk = qk.release) && void 0 !== yk ? yk : ik.p, this.fetchFile = null !== (lk = qk.fetchFile) && void 0 !== lk ? lk : kk => (0, Xk.f)(kk), this.greyscaleArmour = null !== (ak = qk.greyscaleArmour) && void 0 !== ak ? ak : Tk.b
       }
       get waiting() {
         return this.ready.length
@@ -1326,238 +1326,238 @@ export const modules = {
       get inFlight() {
         return this.loading.size
       }
-      glbWritten(SS, HS) {
-        this.glbWrittenImages.set(SS, hS(HS))
+      glbWritten(kk, Fk) {
+        this.glbWrittenImages.set(kk, Vk(Fk))
       }
-      glbTaken(SS, HS) {
-        const gS = this.glbWrittenImages.get(SS);
-        this.glbWrittenImages.delete(SS), HS && this.setGlbImages(SS, void 0 !== gS && gS.length > 0 ? gS : void 0)
+      glbTaken(kk, Fk) {
+        const Ik = this.glbWrittenImages.get(kk);
+        this.glbWrittenImages.delete(kk), Fk && this.setGlbImages(kk, void 0 !== Ik && Ik.length > 0 ? Ik : void 0)
       }
-      setGlbImages(SS, HS) {
-        var gS;
-        this.glbTakenCount.set(SS, (null !== (gS = this.glbTakenCount.get(SS)) && void 0 !== gS ? gS : 0) + 1), void 0 === HS ? this.glbImages.delete(SS) : this.glbImages.set(SS, HS);
-        const tS = [];
+      setGlbImages(kk, Fk) {
+        var Ik;
+        this.glbTakenCount.set(kk, (null !== (Ik = this.glbTakenCount.get(kk)) && void 0 !== Ik ? Ik : 0) + 1), void 0 === Fk ? this.glbImages.delete(kk) : this.glbImages.set(kk, Fk);
+        const Xk = [];
         for (const {
-            key: bS
+            key: Tk
           }
-          of this.loading.values()) bS.kind === IS.Glb && bS.word === SS && tS.push(bS);
-        for (let bS = this.ready.length - 1; bS >= 0; bS--) {
+          of this.loading.values()) Tk.kind === Lk.Glb && Tk.word === kk && Xk.push(Tk);
+        for (let Tk = this.ready.length - 1; Tk >= 0; Tk--) {
           const {
-            key: HS,
-            id: gS
-          } = this.ready[bS];
-          HS.kind === IS.Glb && HS.word === SS && (this.ready.splice(bS, 1), null !== gS && (this.answered.delete(gS), this.release(gS)), tS.push(HS))
+            key: Fk,
+            id: Ik
+          } = this.ready[Tk];
+          Fk.kind === Lk.Glb && Fk.word === kk && (this.ready.splice(Tk, 1), null !== Ik && (this.answered.delete(Ik), this.release(Ik)), Xk.push(Fk))
         }
-        this.loadAgain(tS)
+        this.loadAgain(Xk)
       }
-      onEvent(SS) {
-        if (this.nK) return;
-        const HS = new DataView(SS.buffer, SS.byteOffset, SS.byteLength);
-        for (let gS = 0; gS + 8 <= SS.byteLength; gS += 8) {
-          const SS = HS.getUint8(gS),
-            tS = HS.getUint32(gS + 4, !0);
-          if (SS === uS) {
-            this.answered.delete(tS), this.release(tS);
+      onEvent(kk) {
+        if (this.ee) return;
+        const Fk = new DataView(kk.buffer, kk.byteOffset, kk.byteLength);
+        for (let Ik = 0; Ik + 8 <= kk.byteLength; Ik += 8) {
+          const kk = Fk.getUint8(Ik),
+            Xk = Fk.getUint32(Ik + 4, !0);
+          if (kk === qk) {
+            this.answered.delete(Xk), this.release(Xk);
             continue
           }
-          const bS = {
-            kind: HS.getUint8(gS + 1),
-            index: HS.getUint8(gS + 2),
-            word: tS
+          const Tk = {
+            kind: Fk.getUint8(Ik + 1),
+            index: Fk.getUint8(Ik + 2),
+            word: Xk
           };
-          SS === NS ? this.want(bS) : SS === qS && this.loading.delete(CS(bS))
+          kk === lk ? this.want(Tk) : kk === ak && this.loading.delete(Jk(Tk))
         }
       }
-      reload(SS, HS) {
-        const gS = gS => SS.includes(gS.kind) && (void 0 === HS || HS(gS)),
-          tS = new Map;
-        for (const bS of this.answered.values()) gS(bS) && tS.set(CS(bS), bS);
-        for (const [bS, {
-            key: XS
-          }] of this.loading) gS(XS) && tS.set(bS, XS);
-        this.loadAgain(tS.values())
+      reload(kk, Fk) {
+        const Ik = Ik => kk.includes(Ik.kind) && (void 0 === Fk || Fk(Ik)),
+          Xk = new Map;
+        for (const Tk of this.answered.values()) Ik(Tk) && Xk.set(Jk(Tk), Tk);
+        for (const [Tk, {
+            key: ik
+          }] of this.loading) Ik(ik) && Xk.set(Tk, ik);
+        this.loadAgain(Xk.values())
       }
-      loadAgain(SS) {
-        for (const HS of SS) this.loading.delete(CS(HS)), this.want(HS)
+      loadAgain(kk) {
+        for (const Fk of kk) this.loading.delete(Jk(Fk)), this.want(Fk)
       }
-      drain(SS) {
-        if (null !== SS)
+      drain(kk) {
+        if (null !== kk)
           for (; this.ready.length > 0;) {
-            if (!SS(xS, 0, this.ready[0].record)) return;
+            if (!kk(yk, 0, this.ready[0].record)) return;
             this.ready.shift()
           }
       }
       dispose() {
-        this.nK = !0, this.loading.clear(), this.ready.length = 0;
-        for (const SS of this.answered.keys()) this.release(SS);
+        this.ee = !0, this.loading.clear(), this.ready.length = 0;
+        for (const kk of this.answered.keys()) this.release(kk);
         this.answered.clear()
       }
-      want(SS) {
-        const HS = CS(SS);
-        if (this.loading.has(HS)) return;
-        const gS = {
-          key: SS
+      want(kk) {
+        const Fk = Jk(kk);
+        if (this.loading.has(Fk)) return;
+        const Ik = {
+          key: kk
         };
-        this.loading.set(HS, gS), this.loadKey(SS).then((tS => {
-          this.nK || this.loading.get(HS) !== gS ? this.release(tS.id) : (this.loading.delete(HS), this.answered.set(tS.id, SS), this.ready.push({
-            record: PS(SS, kS, tS),
-            key: SS,
-            id: tS.id
+        this.loading.set(Fk, Ik), this.loadKey(kk).then((Xk => {
+          this.ee || this.loading.get(Fk) !== Ik ? this.release(Xk.id) : (this.loading.delete(Fk), this.answered.set(Xk.id, kk), this.ready.push({
+            record: Pk(kk, Zk, Xk),
+            key: kk,
+            id: Xk.id
           }))
-        }), (tS => {
-          if (this.nK || this.loading.get(HS) !== gS) return;
-          this.loading.delete(HS), this.onFailure({
-            key: SS,
-            error: tS
+        }), (Xk => {
+          if (this.ee || this.loading.get(Fk) !== Ik) return;
+          this.loading.delete(Fk), this.onFailure({
+            key: kk,
+            error: Xk
           });
-          const bS = tS instanceof XS.d && "decode" === tS.stage ? aS : KS;
+          const Tk = Xk instanceof ik.e && "decode" === Xk.stage ? jk : ek;
           this.ready.push({
-            record: PS(SS, bS, null),
-            key: SS,
+            record: Pk(kk, Tk, null),
+            key: kk,
             id: null
           })
         }))
       }
-      async loadKey(SS) {
-        switch (SS.kind) {
-          case IS.Glb:
-            return this.load(await this.glbImage(SS), "none");
-          case IS.LifeformAtlas:
-            return this.load(nS(await this.sources.lifeformAtlasUrl(SS.word), SS), "none");
-          case IS.ArmourAtlas:
-            return this.load(nS(await this.sources.armourAtlasUrl(), SS), "none");
-          case IS.Cape:
-            return this.load(nS(await this.sources.capeUrl(SS.word), SS), "none");
-          case IS.AttachmentImage:
-            return this.load(nS(await this.sources.attachmentImageUrl(SS.word), SS), "none");
-          case IS.GroupAtlas:
-            return this.load(nS(await this.sources.groupAtlasUrl(SS.word), SS), "none");
-          case IS.BlockImage:
-            return this.load(nS(await this.sources.blockImageUrl(SS.word), SS), "none");
-          case IS.Particle: {
-            const HS = await (SS.index === fS.Item ? this.sources.particleItemUrl(SS.word) : this.sources.particleTextureUrl(SS.word));
-            return this.load(nS(HS, SS), "flipY")
+      async loadKey(kk) {
+        switch (kk.kind) {
+          case Lk.Glb:
+            return this.load(await this.glbImage(kk), "none");
+          case Lk.LifeformAtlas:
+            return this.load(xk(await this.sources.lifeformAtlasUrl(kk.word), kk), "none");
+          case Lk.ArmourAtlas:
+            return this.load(xk(await this.sources.armourAtlasUrl(), kk), "none");
+          case Lk.Cape:
+            return this.load(xk(await this.sources.capeUrl(kk.word), kk), "none");
+          case Lk.AttachmentImage:
+            return this.load(xk(await this.sources.attachmentImageUrl(kk.word), kk), "none");
+          case Lk.GroupAtlas:
+            return this.load(xk(await this.sources.groupAtlasUrl(kk.word), kk), "none");
+          case Lk.BlockImage:
+            return this.load(xk(await this.sources.blockImageUrl(kk.word), kk), "none");
+          case Lk.Particle: {
+            const Fk = await (kk.index === tk.Item ? this.sources.particleItemUrl(kk.word) : this.sources.particleTextureUrl(kk.word));
+            return this.load(xk(Fk, kk), "flipY")
           }
-          case IS.GreyscaleArmour:
-            return this.greyscaleArmour.load(SS.index, SS.word);
+          case Lk.GreyscaleArmour:
+            return this.greyscaleArmour.load(kk.index, kk.word);
           default:
-            throw new XS.d("fetch", `image kind ${SS.kind}`, {
+            throw new ik.e("fetch", `image kind ${kk.kind}`, {
               cause: null
             })
         }
       }
-      async glbImage(SS) {
-        var HS;
-        let gS = this.glbImages.get(SS.word);
-        if (void 0 === gS) {
-          const HS = this.glbTakenCount.get(SS.word),
-            tS = nS(await this.sources.glbUrl(SS.word), SS);
+      async glbImage(kk) {
+        var Fk;
+        let Ik = this.glbImages.get(kk.word);
+        if (void 0 === Ik) {
+          const Fk = this.glbTakenCount.get(kk.word),
+            Xk = xk(await this.sources.glbUrl(kk.word), kk);
           try {
-            gS = hS(await this.fetchFile(tS))
-          } catch (bS) {
-            throw new XS.d("fetch", tS, {
-              cause: bS
+            Ik = Vk(await this.fetchFile(Xk))
+          } catch (Tk) {
+            throw new ik.e("fetch", Xk, {
+              cause: Tk
             })
           }
-          this.glbTakenCount.get(SS.word) === HS && this.glbImages.set(SS.word, gS)
+          this.glbTakenCount.get(kk.word) === Fk && this.glbImages.set(kk.word, Ik)
         }
-        const tS = null === (HS = gS) || void 0 === HS ? void 0 : HS[SS.index];
-        if (!tS) throw new XS.d("decode", `image ${SS.index} of file ${2147483647&SS.word}`, {
+        const Xk = null === (Fk = Ik) || void 0 === Fk ? void 0 : Fk[kk.index];
+        if (!Xk) throw new ik.e("decode", `image ${kk.index} of file ${2147483647&kk.word}`, {
           cause: null
         });
-        return tS
+        return Xk
       }
     }
 
-    function CS(SS) {
+    function Jk(kk) {
       let {
-        kind: HS,
-        index: gS,
-        word: tS
-      } = SS;
-      return `${HS}:${gS}:${tS}`
+        kind: Fk,
+        index: Ik,
+        word: Xk
+      } = kk;
+      return `${Fk}:${Ik}:${Xk}`
     }
 
-    function nS(SS, HS) {
-      if (null === SS) throw new XS.d("fetch", `no URL for image ${CS(HS)}`, {
+    function xk(kk, Fk) {
+      if (null === kk) throw new ik.e("fetch", `no URL for image ${Jk(Fk)}`, {
         cause: null
       });
-      return SS
+      return kk
     }
 
-    function PS(SS, HS, gS) {
-      var tS, bS, XS;
-      const xS = new Uint8Array(16),
-        NS = new DataView(xS.buffer);
-      return NS.setUint8(0, SS.kind), NS.setUint8(1, SS.index), NS.setUint8(2, HS), NS.setUint32(4, SS.word, !0), NS.setUint32(8, null !== (tS = null === gS || void 0 === gS ? void 0 : gS.id) && void 0 !== tS ? tS : 0, !0), NS.setUint16(12, Math.min(null !== (bS = null === gS || void 0 === gS ? void 0 : gS.width) && void 0 !== bS ? bS : 0, 65535), !0), NS.setUint16(14, Math.min(null !== (XS = null === gS || void 0 === gS ? void 0 : gS.height) && void 0 !== XS ? XS : 0, 65535), !0), xS
+    function Pk(kk, Fk, Ik) {
+      var Xk, Tk, ik;
+      const yk = new Uint8Array(16),
+        lk = new DataView(yk.buffer);
+      return lk.setUint8(0, kk.kind), lk.setUint8(1, kk.index), lk.setUint8(2, Fk), lk.setUint32(4, kk.word, !0), lk.setUint32(8, null !== (Xk = null === Ik || void 0 === Ik ? void 0 : Ik.id) && void 0 !== Xk ? Xk : 0, !0), lk.setUint16(12, Math.min(null !== (Tk = null === Ik || void 0 === Ik ? void 0 : Ik.width) && void 0 !== Tk ? Tk : 0, 65535), !0), lk.setUint16(14, Math.min(null !== (ik = null === Ik || void 0 === Ik ? void 0 : Ik.height) && void 0 !== ik ? ik : 0, 65535), !0), yk
     }
-    const QS = 1179937895,
-      DS = 1313821514,
-      wS = 5130562;
+    const Kk = 1179937895,
+      Qk = 1313821514,
+      sk = 5130562;
 
-    function hS(SS) {
-      var HS;
-      const gS = new DataView(SS.buffer, SS.byteOffset, SS.byteLength);
-      if (SS.byteLength < 20 || gS.getUint32(0, !0) !== QS || gS.getUint32(16, !0) !== DS) return [];
-      let tS, bS = 20 + gS.getUint32(12, !0);
+    function Vk(kk) {
+      var Fk;
+      const Ik = new DataView(kk.buffer, kk.byteOffset, kk.byteLength);
+      if (kk.byteLength < 20 || Ik.getUint32(0, !0) !== Kk || Ik.getUint32(16, !0) !== Qk) return [];
+      let Xk, Tk = 20 + Ik.getUint32(12, !0);
       try {
-        tS = JSON.parse((new TextDecoder).decode(SS.subarray(20, bS)))
+        Xk = JSON.parse((new TextDecoder).decode(kk.subarray(20, Tk)))
       } catch {
         return []
       }
-      for (; bS + 8 <= SS.byteLength && gS.getUint32(bS + 4, !0) !== wS;) bS += 8 + gS.getUint32(bS, !0);
-      const XS = null !== (HS = tS.images) && void 0 !== HS ? HS : [];
-      if (0 === XS.length || bS + 8 > SS.byteLength) return XS.map((() => null));
-      const xS = SS.subarray(bS + 8, Math.min(SS.byteLength, bS + 8 + gS.getUint32(bS, !0)));
-      return XS.map((SS => {
-        var HS, gS, bS;
-        const XS = void 0 === SS.bufferView || null === (HS = tS.bufferViews) || void 0 === HS ? void 0 : HS[SS.bufferView];
-        if (!XS || 0 !== (null !== (gS = XS.buffer) && void 0 !== gS ? gS : 0) || void 0 === XS.byteLength) return null;
-        const NS = null !== (bS = XS.byteOffset) && void 0 !== bS ? bS : 0,
-          qS = NS + XS.byteLength;
-        return qS <= xS.byteLength ? xS.slice(NS, qS) : null
+      for (; Tk + 8 <= kk.byteLength && Ik.getUint32(Tk + 4, !0) !== sk;) Tk += 8 + Ik.getUint32(Tk, !0);
+      const ik = null !== (Fk = Xk.images) && void 0 !== Fk ? Fk : [];
+      if (0 === ik.length || Tk + 8 > kk.byteLength) return ik.map((() => null));
+      const yk = kk.subarray(Tk + 8, Math.min(kk.byteLength, Tk + 8 + Ik.getUint32(Tk, !0)));
+      return ik.map((kk => {
+        var Fk, Ik, Tk;
+        const ik = void 0 === kk.bufferView || null === (Fk = Xk.bufferViews) || void 0 === Fk ? void 0 : Fk[kk.bufferView];
+        if (!ik || 0 !== (null !== (Ik = ik.buffer) && void 0 !== Ik ? Ik : 0) || void 0 === ik.byteLength) return null;
+        const lk = null !== (Tk = ik.byteOffset) && void 0 !== Tk ? Tk : 0,
+          ak = lk + ik.byteLength;
+        return ak <= yk.byteLength ? yk.slice(lk, ak) : null
       }))
     }
   },
-  40692: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => xS,
-      e: () => XS,
-      i: () => bS
+  40670: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => yk,
+      c: () => ik,
+      e: () => Tk
     });
-    let tS = null;
+    let Xk = null;
 
-    function bS(SS) {
-      tS = SS
+    function Tk(kk) {
+      Xk = kk
     }
 
-    function XS(SS) {
-      tS === SS && (tS = null)
+    function ik(kk) {
+      Xk === kk && (Xk = null)
     }
 
-    function xS() {
-      var SS;
-      null === (SS = tS) || void 0 === SS || SS()
+    function yk() {
+      var kk;
+      null === (kk = Xk) || void 0 === kk || kk()
     }
   },
-  36608: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => IS,
-      i: () => kS,
-      m: () => CS,
-      o: () => uS
+  36588: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Lk,
+      h: () => Zk,
+      l: () => Jk,
+      p: () => qk
     });
-    var tS = gS(24),
-      bS = gS(2510),
-      XS = gS(2517),
-      xS = gS(2526),
-      NS = gS(2603),
-      qS = gS(31);
+    var Xk = Ik(25),
+      Tk = Ik(2331),
+      ik = Ik(2338),
+      yk = Ik(2341),
+      lk = Ik(2400),
+      ak = Ik(34);
 
-    function uS(SS, HS) {
-      return (!(0, xS.c)() || 0 === SS && 0 === HS) && (0, XS.y)(bS.g.Joystick, 0, SS, HS, 0)
+    function qk(kk, Fk) {
+      return (!(0, yk.d)() || 0 === kk && 0 === Fk) && (0, ik.q)(Tk.m.Joystick, 0, kk, Fk, 0)
     }
-    const IS = {
+    const Lk = {
       Action1: 1,
       Action2: 2,
       Action3: 3,
@@ -1567,571 +1567,571 @@ export const modules = {
       Boost: 7
     };
 
-    function fS(SS) {
-      return SS.classList.contains("TouchKeyHit") && aS() ? null : SS.firstElementChild
+    function tk(kk) {
+      return kk.classList.contains("TouchKeyHit") && jk() ? null : kk.firstElementChild
     }
 
-    function kS(SS) {
-      return SS.classList.contains("TouchKeyHit") && !SS.classList.contains("CanvasZone") ? {
-        whole: !aS(),
+    function Zk(kk) {
+      return kk.classList.contains("TouchKeyHit") && !kk.classList.contains("CanvasZone") ? {
+        whole: !jk(),
         keyBox: null
       } : {
         whole: !1,
-        keyBox: KS(fS(SS))
+        keyBox: ek(tk(kk))
       }
     }
 
-    function aS() {
-      return document.documentElement.classList.contains(NS.m)
+    function jk() {
+      return document.documentElement.classList.contains(lk.g)
     }
 
-    function KS(SS) {
-      return !(SS instanceof HTMLElement) || SS.offsetWidth <= 0 || SS.offsetHeight <= 0 ? null : {
-        width: SS.offsetWidth,
-        height: SS.offsetHeight
+    function ek(kk) {
+      return !(kk instanceof HTMLElement) || kk.offsetWidth <= 0 || kk.offsetHeight <= 0 ? null : {
+        width: kk.offsetWidth,
+        height: kk.offsetHeight
       }
     }
 
-    function jS(SS, HS) {
-      const gS = SS => Math.min(65535, Math.round(4 * SS));
-      return (gS(SS) | gS(HS) << 16) >>> 0
+    function wk(kk, Fk) {
+      const Ik = kk => Math.min(65535, Math.round(4 * kk));
+      return (Ik(kk) | Ik(Fk) << 16) >>> 0
     }
 
-    function GS(SS) {
+    function Hk(kk) {
       return {
-        x: SS.left + SS.width / 2,
-        y: SS.top + SS.height / 2,
-        radius: Math.min(SS.width, SS.height) / 2
+        x: kk.left + kk.width / 2,
+        y: kk.top + kk.height / 2,
+        radius: Math.min(kk.width, kk.height) / 2
       }
     }
-    const CS = new class {
-      constructor(SS) {
-        this.write = SS, this.elements = new Map, this.canvasLeft = 0, this.canvasTop = 0
+    const Jk = new class {
+      constructor(kk) {
+        this.write = kk, this.elements = new Map, this.canvasLeft = 0, this.canvasTop = 0
       }
-      set(SS, HS) {
-        let gS = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        HS ? this.elements.set(SS, {
-          element: HS,
-          hidden: gS
-        }) : this.elements.delete(SS), this.measureOne(SS)
+      set(kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        Fk ? this.elements.set(kk, {
+          element: Fk,
+          hidden: Ik
+        }) : this.elements.delete(kk), this.measureOne(kk)
       }
       measure() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {
           left: this.canvasLeft,
           top: this.canvasTop
         };
-        this.canvasLeft = SS.left, this.canvasTop = SS.top;
-        for (const HS of this.elements.keys()) this.measureOne(HS)
+        this.canvasLeft = kk.left, this.canvasTop = kk.top;
+        for (const Fk of this.elements.keys()) this.measureOne(Fk)
       }
-      hitZone(SS, HS) {
-        let gS = null,
-          tS = 1;
-        for (const bS of this.elements.keys()) {
-          const XS = this.shown(bS);
-          if (!XS) continue;
+      hitZone(kk, Fk) {
+        let Ik = null,
+          Xk = 1;
+        for (const Tk of this.elements.keys()) {
+          const ik = this.shown(Tk);
+          if (!ik) continue;
           const {
-            rect: xS,
-            element: NS
-          } = XS, qS = GS(xS), uS = Math.max(0, xS.width / 2 - qS.radius), IS = Math.max(0, xS.height / 2 - qS.radius), kS = Math.max(0, Math.abs(SS - qS.x) - uS), aS = Math.max(0, Math.abs(HS - qS.y) - IS), jS = NS.firstElementChild;
-          let CS = Math.hypot(kS, aS) / qS.radius;
-          const nS = KS(fS(NS));
-          nS && (CS = Math.min(CS, Math.max(2 * Math.abs(SS - qS.x) / nS.width, 2 * Math.abs(HS - qS.y) / nS.height))), CS < tS && (gS = {
-            code: bS,
-            element: NS,
-            key: jS,
-            ...qS
-          }, tS = CS)
+            rect: yk,
+            element: lk
+          } = ik, ak = Hk(yk), qk = Math.max(0, yk.width / 2 - ak.radius), Lk = Math.max(0, yk.height / 2 - ak.radius), Zk = Math.max(0, Math.abs(kk - ak.x) - qk), jk = Math.max(0, Math.abs(Fk - ak.y) - Lk), wk = lk.firstElementChild;
+          let Jk = Math.hypot(Zk, jk) / ak.radius;
+          const xk = ek(tk(lk));
+          xk && (Jk = Math.min(Jk, Math.max(2 * Math.abs(kk - ak.x) / xk.width, 2 * Math.abs(Fk - ak.y) / xk.height))), Jk < Xk && (Ik = {
+            code: Tk,
+            element: lk,
+            key: wk,
+            ...ak
+          }, Xk = Jk)
         }
-        return gS
+        return Ik
       }
-      measureOne(SS) {
-        const HS = this.shown(SS);
-        if (!HS) return void this.write(bS.g.TouchZone, SS, 0, 0, 0);
+      measureOne(kk) {
+        const Fk = this.shown(kk);
+        if (!Fk) return void this.write(Tk.m.TouchZone, kk, 0, 0, 0);
         const {
-          rect: gS,
-          element: tS
-        } = HS, XS = GS(gS);
-        this.write(bS.g.TouchZone, SS, XS.x - this.canvasLeft, XS.y - this.canvasTop, jS(gS.width, gS.height));
-        const xS = KS(fS(tS));
-        this.write(bS.g.TouchZone, 256 | SS, 0, 0, xS ? jS(xS.width, xS.height) : 0)
+          rect: Ik,
+          element: Xk
+        } = Fk, ik = Hk(Ik);
+        this.write(Tk.m.TouchZone, kk, ik.x - this.canvasLeft, ik.y - this.canvasTop, wk(Ik.width, Ik.height));
+        const yk = ek(tk(Xk));
+        this.write(Tk.m.TouchZone, 256 | kk, 0, 0, yk ? wk(yk.width, yk.height) : 0)
       }
-      shown(SS) {
-        const HS = this.elements.get(SS),
-          gS = tS.b.get("worldPanelHud");
-        if (!HS || HS.hidden || "none" === gS) return null;
-        const bS = HS.element.getBoundingClientRect();
-        return bS.width <= 0 || bS.height <= 0 ? null : {
-          rect: bS,
-          element: HS.element
+      shown(kk) {
+        const Fk = this.elements.get(kk),
+          Ik = Xk.d.get("worldPanelHud");
+        if (!Fk || Fk.hidden || "none" === Ik) return null;
+        const Tk = Fk.element.getBoundingClientRect();
+        return Tk.width <= 0 || Tk.height <= 0 ? null : {
+          rect: Tk,
+          element: Fk.element
         }
       }
-    }(XS.y);
-    (0, qS.m)(NS.f, (() => {
-      CS.measure()
+    }(ik.q);
+    (0, ak.i)(lk.d, (() => {
+      Jk.measure()
     }))
   },
-  40743: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => qS,
-      h: () => uS
+  40712: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ak,
+      f: () => qk
     });
-    var tS = gS(40869),
-      bS = gS(39076),
-      XS = gS(36471),
-      xS = gS(40748),
-      NS = gS(40716);
-    const qS = tS.d.timeForPlayerToConnect - 1e4;
-    async function uS(SS, HS, gS, tS) {
-      let qS;
+    var Xk = Ik(40843),
+      Tk = Ik(39054),
+      ik = Ik(36449),
+      yk = Ik(40721),
+      lk = Ik(40689);
+    const ak = Xk.d.timeForPlayerToConnect - 1e4;
+    async function qk(kk, Fk, Ik, Xk) {
+      let ak;
       try {
-        qS = await SS.getTrafficCode()
-      } catch (KS) {
-        throw console.error("[bloxd-wasm-client] could not get a traffic code", KS), new NS.p(KS)
+        ak = await kk.getTrafficCode()
+      } catch (ek) {
+        throw console.error("[bloxd-wasm-client] could not get a traffic code", ek), new lk.t(ek)
       }
       const {
-        gameNameWithVariation: uS,
-        lobbyName: IS
-      } = HS, fS = () => {
-        const HS = (0, XS.f)(SS, uS, IS, qS, (SS => {
-          var HS;
-          return null !== (HS = null === gS || void 0 === gS ? void 0 : gS.isUsingCustomGameTexturePack(SS)) && void 0 !== HS && HS
+        gameNameWithVariation: qk,
+        lobbyName: Lk
+      } = Fk, tk = () => {
+        const Fk = (0, ik.g)(kk, qk, Lk, ak, (kk => {
+          var Fk;
+          return null !== (Fk = null === Ik || void 0 === Ik ? void 0 : Ik.isUsingCustomGameTexturePack(kk)) && void 0 !== Fk && Fk
         }));
-        HS.joinOptions.wasmClient = !0;
-        const bS = (0, xS.F)();
-        return null !== bS && (HS.joinOptions.renderBackend = bS), HS.joinOptions.joinAdHold = tS, HS
+        Fk.joinOptions.wasmClient = !0;
+        const Tk = (0, yk.J)();
+        return null !== Tk && (Fk.joinOptions.renderBackend = Tk), Fk.joinOptions.joinAdHold = Xk, Fk
       }, {
-        roomName: kS,
-        joinOptions: aS
-      } = fS();
+        roomName: Zk,
+        joinOptions: jk
+      } = tk();
       return {
-        endpoint: HS.endpoint,
-        roomName: kS,
-        joinOptions: aS,
+        endpoint: Fk.endpoint,
+        roomName: Zk,
+        joinOptions: jk,
         session: {
-          gameNameWithVariation: uS,
-          lobbyName: IS,
-          playerDbId: SS.whamm
+          gameNameWithVariation: qk,
+          lobbyName: Lk,
+          playerDbId: kk.whamm
         },
-        optionsAfterRefusal: async HS => await (0, bS.c)(SS, HS) ? fS().joinOptions : null
+        optionsAfterRefusal: async Fk => await (0, Tk.d)(kk, Fk) ? tk().joinOptions : null
       }
     }
   },
-  40979: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => IS,
-      d: () => XS,
-      f: () => fS,
-      h: () => xS
+  40966: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Lk,
+      f: () => ik,
+      i: () => tk,
+      m: () => yk
     });
-    var tS = gS(40954),
-      bS = gS(40824);
-    const XS = new class {
+    var Xk = Ik(40946),
+      Tk = Ik(40799);
+    const ik = new class {
       constructor() {
         this.page = null, this.session = void 0, this.follower = null, this.isWanted = !1, this.listeners = new Set, this.pageListeners = new Set, this.wantedListeners = new Set
       }
       get current() {
         return void 0 === this.session ? this.page : this.session
       }
-      setPageFiles(SS) {
+      setPageFiles(kk) {
         this.change((() => {
-          this.page = SS
+          this.page = kk
         }))
       }
-      setSessionFiles(SS) {
-        const HS = void 0 !== this.session && void 0 === SS;
+      setSessionFiles(kk) {
+        const Fk = void 0 !== this.session && void 0 === kk;
         if (this.change((() => {
-            this.session = SS
-          })), HS)
-          for (const gS of [...this.pageListeners]) gS()
+            this.session = kk
+          })), Fk)
+          for (const Ik of [...this.pageListeners]) Ik()
       }
       showsPage() {
         return void 0 === this.session
       }
-      onPageShown(SS) {
-        return this.pageListeners.add(SS), () => {
-          this.pageListeners.delete(SS)
+      onPageShown(kk) {
+        return this.pageListeners.add(kk), () => {
+          this.pageListeners.delete(kk)
         }
       }
-      setFollower(SS) {
-        this.follower = SS, this.startFollower()
+      setFollower(kk) {
+        this.follower = kk, this.startFollower()
       }
       wanted() {
         this.isWanted = !0;
-        for (const SS of [...this.wantedListeners]) SS();
+        for (const kk of [...this.wantedListeners]) kk();
         this.startFollower()
       }
-      onWanted(SS) {
-        return this.wantedListeners.add(SS), () => {
-          this.wantedListeners.delete(SS)
+      onWanted(kk) {
+        return this.wantedListeners.add(kk), () => {
+          this.wantedListeners.delete(kk)
         }
       }
-      onChange(SS) {
-        return this.listeners.add(SS), () => {
-          this.listeners.delete(SS)
+      onChange(kk) {
+        return this.listeners.add(kk), () => {
+          this.listeners.delete(kk)
         }
       }
       startFollower() {
-        const SS = this.follower;
-        this.isWanted && null !== SS && (this.follower = null, SS((() => {
-          this.follower = SS
+        const kk = this.follower;
+        this.isWanted && null !== kk && (this.follower = null, kk((() => {
+          this.follower = kk
         })))
       }
-      change(SS) {
-        const HS = this.current;
-        if (SS(), this.current !== HS)
-          for (const gS of this.listeners) gS()
+      change(kk) {
+        const Fk = this.current;
+        if (kk(), this.current !== Fk)
+          for (const Ik of this.listeners) Ik()
       }
     };
 
-    function xS(SS, HS) {
+    function yk(kk, Fk) {
       return {
-        ...SS,
+        ...kk,
         armourAtlasUrl: () => {
-          var gS, tS;
-          return null !== (gS = null === (tS = HS()) || void 0 === tS ? void 0 : tS.armourAtlasUrl()) && void 0 !== gS ? gS : SS.armourAtlasUrl()
+          var Ik, Xk;
+          return null !== (Ik = null === (Xk = Fk()) || void 0 === Xk ? void 0 : Xk.armourAtlasUrl()) && void 0 !== Ik ? Ik : kk.armourAtlasUrl()
         },
-        lifeformAtlasUrl: gS => qS(HS(), (SS => SS.LIFEFORM_ATLAS_PATHS[gS]), (() => SS.lifeformAtlasUrl(gS))),
-        groupAtlasUrl: gS => qS(HS(), (SS => SS.GROUP_ATLAS_PATHS[gS]), (() => SS.groupAtlasUrl(gS))),
-        particleItemUrl: tS => uS(HS(), (async () => {
-          const SS = await gS.e(38).then((() => gS(51080))).catch((() => null));
-          return (null === SS || void 0 === SS ? void 0 : SS.particleItemSprite(tS)) || null
-        }), (() => SS.particleItemUrl(tS))),
-        blockImageUrl: gS => uS(HS(), (async () => {
-          var SS, HS;
-          return null !== (SS = null === (HS = await NS()) || void 0 === HS ? void 0 : HS.blockImageName(gS)) && void 0 !== SS ? SS : null
-        }), (() => SS.blockImageUrl(gS)))
+        lifeformAtlasUrl: Ik => ak(Fk(), (kk => kk.LIFEFORM_ATLAS_PATHS[Ik]), (() => kk.lifeformAtlasUrl(Ik))),
+        groupAtlasUrl: Ik => ak(Fk(), (kk => kk.GROUP_ATLAS_PATHS[Ik]), (() => kk.groupAtlasUrl(Ik))),
+        particleItemUrl: Xk => qk(Fk(), (async () => {
+          const kk = await Ik.e(38).then((() => Ik(51036))).catch((() => null));
+          return (null === kk || void 0 === kk ? void 0 : kk.particleItemSprite(Xk)) || null
+        }), (() => kk.particleItemUrl(Xk))),
+        blockImageUrl: Ik => qk(Fk(), (async () => {
+          var kk, Fk;
+          return null !== (kk = null === (Fk = await lk()) || void 0 === Fk ? void 0 : Fk.blockImageName(Ik)) && void 0 !== kk ? kk : null
+        }), (() => kk.blockImageUrl(Ik)))
       }
     }
 
-    function NS() {
-      return (0, bS.l)().catch((() => null))
+    function lk() {
+      return (0, Tk.i)().catch((() => null))
     }
 
-    function qS(SS, HS, gS) {
-      return uS(SS, (async () => {
-        var SS;
-        const gS = await NS(),
-          tS = null === gS ? null : HS(gS),
-          bS = null !== (SS = null === tS || void 0 === tS ? void 0 : tS.slice(tS.lastIndexOf("/") + 1)) && void 0 !== SS ? SS : null;
-        return "Player_Atlas" === bS ? null : bS
-      }), gS)
+    function ak(kk, Fk, Ik) {
+      return qk(kk, (async () => {
+        var kk;
+        const Ik = await lk(),
+          Xk = null === Ik ? null : Fk(Ik),
+          Tk = null !== (kk = null === Xk || void 0 === Xk ? void 0 : Xk.slice(Xk.lastIndexOf("/") + 1)) && void 0 !== kk ? kk : null;
+        return "Player_Atlas" === Tk ? null : Tk
+      }), Ik)
     }
-    async function uS(SS, HS, gS) {
-      if (null !== SS) {
-        const gS = await HS(),
-          tS = null === gS ? null : SS.textureUrl(gS);
-        if (null !== tS) return tS
+    async function qk(kk, Fk, Ik) {
+      if (null !== kk) {
+        const Ik = await Fk(),
+          Xk = null === Ik ? null : kk.textureUrl(Ik);
+        if (null !== Xk) return Xk
       }
-      return gS()
+      return Ik()
     }
-    const IS = 0;
+    const Lk = 0;
 
-    function fS(SS) {
-      const HS = [tS.h.ArmourAtlas, tS.h.LifeformAtlas, tS.h.GroupAtlas, tS.h.BlockImage, tS.h.Particle];
-      SS.reload(HS, (SS => {
-        switch (SS.kind) {
-          case tS.h.Particle:
-            return SS.index === tS.l.Item;
-          case tS.h.LifeformAtlas:
-            return SS.word !== IS;
+    function tk(kk) {
+      const Fk = [Xk.i.ArmourAtlas, Xk.i.LifeformAtlas, Xk.i.GroupAtlas, Xk.i.BlockImage, Xk.i.Particle];
+      kk.reload(Fk, (kk => {
+        switch (kk.kind) {
+          case Xk.i.Particle:
+            return kk.index === Xk.l.Item;
+          case Xk.i.LifeformAtlas:
+            return kk.word !== Lk;
           default:
             return !0
         }
       }))
     }
   },
-  40871: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => tS,
-      e: () => NS,
-      h: () => xS,
-      k: () => bS,
-      l: () => XS
+  40845: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk,
+      d: () => lk,
+      e: () => yk,
+      i: () => Tk,
+      k: () => ik
     });
-    const tS = 1e3;
+    const Xk = 1e3;
 
-    function bS() {
-      qS((() => {
+    function Tk() {
+      ak((() => {
         window.location.reload()
       }))
     }
 
-    function XS() {
+    function ik() {
       return new Promise((() => {}))
     }
 
-    function xS(SS) {
-      qS((() => {
-        window.location.replace(SS(window.location.href))
+    function yk(kk) {
+      ak((() => {
+        window.location.replace(kk(window.location.href))
       }))
     }
 
-    function NS(SS) {
-      Promise.resolve().then((() => gS(113))).then((HS => {
+    function lk(kk) {
+      Promise.resolve().then((() => Ik(104))).then((Fk => {
         let {
-          currentUrl: gS
-        } = HS;
-        xS((() => gS.mergeSearchParamsInto(SS)))
+          currentUrl: Ik
+        } = Fk;
+        yk((() => Ik.mergeSearchParamsInto(kk)))
       }), (() => {
-        xS((() => SS))
+        yk((() => kk))
       }))
     }
 
-    function qS(SS) {
-      null !== window.onbeforeunload ? Promise.resolve().then((() => gS(1844))).then((HS => {
+    function ak(kk) {
+      null !== window.onbeforeunload ? Promise.resolve().then((() => Ik(1665))).then((Fk => {
         let {
-          prepareForUnloadWithoutConfirmation: gS
-        } = HS;
+          prepareForUnloadWithoutConfirmation: Ik
+        } = Fk;
         try {
-          gS()
-        } catch (tS) {
-          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", tS), window.onbeforeunload = null
+          Ik()
+        } catch (Xk) {
+          console.warn("[bloxd-wasm-client] prepareForUnloadWithoutConfirmation threw: leaving plainly", Xk), window.onbeforeunload = null
         }
-        SS()
+        kk()
       }), (() => {
-        window.onbeforeunload = null, SS()
-      })) : SS()
+        window.onbeforeunload = null, kk()
+      })) : kk()
     }
   },
-  5242: (SS, HS, gS) => {
-    function tS(SS, HS) {
-      return bS(SS, HS)
+  5071: (kk, Fk, Ik) => {
+    function Xk(kk, Fk) {
+      return Tk(kk, Fk)
     }
 
-    function bS(SS, HS) {
-      if (SS === HS) return !0;
-      if ("object" !== typeof SS || "object" !== typeof HS || null === SS || null === HS || Array.isArray(SS) !== Array.isArray(HS)) return !1;
-      const gS = SS,
-        tS = HS,
-        XS = Object.keys(gS);
-      return XS.length === Object.keys(tS).length && XS.every((SS => Object.prototype.hasOwnProperty.call(tS, SS) && bS(gS[SS], tS[SS])))
+    function Tk(kk, Fk) {
+      if (kk === Fk) return !0;
+      if ("object" !== typeof kk || "object" !== typeof Fk || null === kk || null === Fk || Array.isArray(kk) !== Array.isArray(Fk)) return !1;
+      const Ik = kk,
+        Xk = Fk,
+        ik = Object.keys(Ik);
+      return ik.length === Object.keys(Xk).length && ik.every((kk => Object.prototype.hasOwnProperty.call(Xk, kk) && Tk(Ik[kk], Xk[kk])))
     }
-    gS.d(HS, {
-      d: () => tS
+    Ik.d(Fk, {
+      e: () => Xk
     })
   },
-  40931: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => wS,
-      f: () => QS,
-      j: () => jS,
-      k: () => KS
+  40917: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => sk,
+      e: () => Kk,
+      f: () => wk,
+      i: () => ek
     });
-    var tS = gS(1934),
-      bS = gS(1290),
-      XS = gS(39070),
-      xS = gS(36503),
-      NS = gS(39087),
-      qS = gS(40716);
-    const uS = {
+    var Xk = Ik(1759),
+      Tk = Ik(1199),
+      ik = Ik(39046),
+      yk = Ik(36486),
+      lk = Ik(39066),
+      ak = Ik(40689);
+    const qk = {
         "X-Requested-With": "XMLHtttpRequest"
       },
-      IS = 3,
-      fS = [500, 1500];
+      Lk = 3,
+      tk = [500, 1500];
 
-    function kS(SS) {
-      const HS = new URL(SS);
+    function Zk(kk) {
+      const Fk = new URL(kk);
       return {
-        secure: "https:" === HS.protocol || "wss:" === HS.protocol,
-        host: HS.host,
-        pathname: HS.pathname.replace(/\/+$/, ""),
-        search: HS.searchParams.toString()
+        secure: "https:" === Fk.protocol || "wss:" === Fk.protocol,
+        host: Fk.host,
+        pathname: Fk.pathname.replace(/\/+$/, ""),
+        search: Fk.searchParams.toString()
       }
     }
 
-    function aS(SS, HS, gS) {
+    function jk(kk, Fk, Ik) {
       const {
-        secure: tS,
-        host: bS,
-        pathname: XS,
-        search: xS
-      } = kS(SS);
-      return `${tS?"https":"http"}://${bS}${XS}/matchmake/${HS}/${encodeURIComponent(gS)}${xS?`?${xS}`:""}`
+        secure: Xk,
+        host: Tk,
+        pathname: ik,
+        search: yk
+      } = Zk(kk);
+      return `${Xk?"https":"http"}://${Tk}${ik}/matchmake/${Fk}/${encodeURIComponent(Ik)}${yk?`?${yk}`:""}`
     }
 
-    function KS(SS, HS) {
-      var gS;
-      const tS = null !== (gS = HS.protocol) && void 0 !== gS ? gS : "ws";
-      if ("ws" !== tS) throw new Error(`seat reservation asks for the ${tS} transport`);
+    function ek(kk, Fk) {
+      var Ik;
+      const Xk = null !== (Ik = Fk.protocol) && void 0 !== Ik ? Ik : "ws";
+      if ("ws" !== Xk) throw new Error(`seat reservation asks for the ${Xk} transport`);
       const {
-        secure: bS,
-        host: XS,
-        pathname: xS,
-        search: NS
-      } = kS(SS), qS = new URLSearchParams(NS);
-      qS.append("sessionId", HS.sessionId), HS.reconnectionToken && qS.append("reconnectionToken", HS.reconnectionToken);
-      return `${bS?"wss":"ws"}://${HS.room.publicAddress||`${XS}${xS}`}/${HS.room.processId}/${HS.room.roomId}?${qS.toString()}`
+        secure: Tk,
+        host: ik,
+        pathname: yk,
+        search: lk
+      } = Zk(kk), ak = new URLSearchParams(lk);
+      ak.append("sessionId", Fk.sessionId), Fk.reconnectionToken && ak.append("reconnectionToken", Fk.reconnectionToken);
+      return `${Tk?"wss":"ws"}://${Fk.room.publicAddress||`${ik}${yk}`}/${Fk.room.processId}/${Fk.room.roomId}?${ak.toString()}`
     }
-    async function jS(SS, HS, gS) {
-      var NS;
-      let uS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const kS = null !== (NS = uS.sleep) && void 0 !== NS ? NS : tS.e,
-        KS = new bS.b(uS.signal),
-        jS = new xS.d((() => {
-          (0, bS.f)(KS.controller, new xS.e("seat"))
+    async function wk(kk, Fk, Ik) {
+      var lk;
+      let qk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const Zk = null !== (lk = qk.sleep) && void 0 !== lk ? lk : Xk.b,
+        ek = new Tk.b(qk.signal),
+        wk = new yk.e((() => {
+          (0, Tk.h)(ek.controller, new yk.f("seat"))
         })),
         {
-          signal: PS
-        } = KS;
+          signal: Pk
+        } = ek;
       try {
-        const tS = await (0, XS.e)((() => async function(SS, HS, gS, tS) {
-          var XS;
+        const Xk = await (0, ik.i)((() => async function(kk, Fk, Ik, Xk) {
+          var ik;
           const {
-            signal: xS,
-            sleep: NS
-          } = tS, uS = aS(SS, "joinOrCreate", HS), kS = JSON.stringify(gS);
-          let KS = null;
-          for (let aS = 0; aS < IS; aS++) {
-            var jS;
-            if (aS > 0) await NS(null !== (jS = fS[aS - 1]) && void 0 !== jS ? jS : 1500, xS);
-            let SS;
-            (0, bS.m)(xS);
+            signal: yk,
+            sleep: lk
+          } = Xk, qk = jk(kk, "joinOrCreate", Fk), Zk = JSON.stringify(Ik);
+          let ek = null;
+          for (let jk = 0; jk < Lk; jk++) {
+            var wk;
+            if (jk > 0) await lk(null !== (wk = tk[jk - 1]) && void 0 !== wk ? wk : 1500, yk);
+            let kk;
+            (0, Tk.m)(yk);
             try {
-              SS = await CS(uS, kS, tS)
-            } catch (PS) {
-              (0, bS.m)(xS), KS = GS(PS);
+              kk = await Jk(qk, Zk, Xk)
+            } catch (Pk) {
+              (0, Tk.m)(yk), ek = Hk(Pk);
               continue
             }
             const {
-              response: HS,
-              answer: gS,
-              refusal: XS,
-              lost: IS
-            } = SS;
-            if (null === IS) {
-              if (null !== XS) throw nS(XS, gS);
-              if (HS.ok && null !== gS && hS(gS)) return gS;
-              KS = new qS.o(`seat request answered HTTP ${HS.status}${null===gS?" without JSON":" without a seat"}`, !1, void 0, HS.status)
-            } else KS = GS(IS.error)
+              response: Fk,
+              answer: Ik,
+              refusal: ik,
+              lost: Lk
+            } = kk;
+            if (null === Lk) {
+              if (null !== ik) throw xk(ik, Ik);
+              if (Fk.ok && null !== Ik && Vk(Ik)) return Ik;
+              ek = new ak.r(`seat request answered HTTP ${Fk.status}${null===Ik?" without JSON":" without a seat"}`, !1, void 0, Fk.status)
+            } else ek = Hk(Lk.error)
           }
-          throw null !== (XS = KS) && void 0 !== XS ? XS : new qS.o("seat request made no attempt", !1)
-        }(SS, HS, gS, {
-          ...uS,
-          signal: PS,
-          sleep: kS
-        })), PS, kS);
-        return jS.answered(), tS
+          throw null !== (ik = ek) && void 0 !== ik ? ik : new ak.r("seat request made no attempt", !1)
+        }(kk, Fk, Ik, {
+          ...qk,
+          signal: Pk,
+          sleep: Zk
+        })), Pk, Zk);
+        return wk.answered(), Xk
       } finally {
-        jS.stop(), KS.unfollow()
+        wk.stop(), ek.unfollow()
       }
     }
 
-    function GS(SS) {
-      return new qS.o(SS instanceof Error ? SS.message : String(SS), !0, SS)
+    function Hk(kk) {
+      return new ak.r(kk instanceof Error ? kk.message : String(kk), !0, kk)
     }
-    async function CS(SS, HS, gS) {
-      var tS;
+    async function Jk(kk, Fk, Ik) {
+      var Xk;
       const {
-        signal: XS
-      } = gS, xS = null !== (tS = gS.fetch) && void 0 !== tS ? tS : fetch, NS = await xS(SS, {
+        signal: ik
+      } = Ik, yk = null !== (Xk = Ik.fetch) && void 0 !== Xk ? Xk : fetch, lk = await yk(kk, {
         method: "POST",
         headers: {
-          ...uS,
+          ...qk,
           Accept: "application/json",
           "Content-Type": "application/json"
         },
-        body: HS,
+        body: Fk,
         credentials: "include",
-        signal: XS
+        signal: ik
       }), {
-        answer: qS,
-        lost: IS
-      } = await async function(SS) {
+        answer: ak,
+        lost: Lk
+      } = await async function(kk) {
         try {
-          const HS = await SS.json();
+          const Fk = await kk.json();
           return {
-            answer: "object" === typeof HS && null !== HS ? HS : null,
+            answer: "object" === typeof Fk && null !== Fk ? Fk : null,
             lost: null
           }
-        } catch (HS) {
+        } catch (Fk) {
           return {
             answer: null,
-            lost: HS instanceof SyntaxError ? null : {
-              error: HS
+            lost: Fk instanceof SyntaxError ? null : {
+              error: Fk
             }
           }
         }
-      }(NS), fS = null !== qS && "string" === typeof qS.error ? qS.error : null;
-      var kS;
-      null !== fS && (null === (kS = gS.onRefusal) || void 0 === kS || kS.call(gS));
-      return (0, bS.m)(XS), {
-        response: NS,
-        answer: qS,
-        refusal: fS,
-        lost: IS
+      }(lk), tk = null !== ak && "string" === typeof ak.error ? ak.error : null;
+      var Zk;
+      null !== tk && (null === (Zk = Ik.onRefusal) || void 0 === Zk || Zk.call(Ik));
+      return (0, Tk.m)(ik), {
+        response: lk,
+        answer: ak,
+        refusal: tk,
+        lost: Lk
       }
     }
 
-    function nS(SS, HS) {
-      return new qS.k(SS, "number" === typeof(null === HS || void 0 === HS ? void 0 : HS.code) ? HS.code : 0, (0, NS.m)(SS).text)
+    function xk(kk, Fk) {
+      return new ak.j(kk, "number" === typeof(null === Fk || void 0 === Fk ? void 0 : Fk.code) ? Fk.code : 0, (0, lk.p)(kk).text)
     }
-    class PS extends Error {
-      constructor(SS, HS) {
-        super(SS), this.code = HS, this.name = "SeatHttpError"
+    class Pk extends Error {
+      constructor(kk, Fk) {
+        super(kk), this.code = Fk, this.name = "SeatHttpError"
       }
     }
-    async function QS(SS, HS, gS) {
-      let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    async function Kk(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        response: bS,
-        answer: XS,
-        refusal: xS,
-        lost: NS
-      } = await CS(aS(SS, "reconnect", HS), JSON.stringify({
-        reconnectionToken: gS
-      }), tS);
-      if (null !== NS) throw NS.error;
-      if (!bS.ok) {
-        const SS = null !== XS && "number" === typeof XS.code && 0 !== XS.code ? XS.code : bS.status;
-        throw new PS(`the seat's reconnect was refused: ${null!==xS&&void 0!==xS?xS:`HTTP ${bS.status}`}`, SS)
+        response: Tk,
+        answer: ik,
+        refusal: yk,
+        lost: lk
+      } = await Jk(jk(kk, "reconnect", Fk), JSON.stringify({
+        reconnectionToken: Ik
+      }), Xk);
+      if (null !== lk) throw lk.error;
+      if (!Tk.ok) {
+        const kk = null !== ik && "number" === typeof ik.code && 0 !== ik.code ? ik.code : Tk.status;
+        throw new Pk(`the seat's reconnect was refused: ${null!==yk&&void 0!==yk?yk:`HTTP ${Tk.status}`}`, kk)
       }
-      if (null !== xS) throw nS(xS, XS);
-      if (null === XS || !hS(XS)) throw new Error("the seat's reconnect answered " + (null === XS ? "without JSON" : "without a seat"));
+      if (null !== yk) throw xk(yk, ik);
+      if (null === ik || !Vk(ik)) throw new Error("the seat's reconnect answered " + (null === ik ? "without JSON" : "without a seat"));
       return {
-        ...XS,
-        reconnectionToken: gS
+        ...ik,
+        reconnectionToken: Ik
       }
     }
-    const DS = 10;
+    const Qk = 10;
 
-    function wS(SS) {
-      if (SS.byteLength < 2 || SS[0] !== DS) return null;
-      const HS = 2 + SS[1];
-      return HS > SS.byteLength ? null : (new TextDecoder).decode(SS.subarray(2, HS))
+    function sk(kk) {
+      if (kk.byteLength < 2 || kk[0] !== Qk) return null;
+      const Fk = 2 + kk[1];
+      return Fk > kk.byteLength ? null : (new TextDecoder).decode(kk.subarray(2, Fk))
     }
 
-    function hS(SS) {
-      const HS = SS.room;
-      return "string" === typeof SS.sessionId && "object" === typeof HS && null !== HS && "string" === typeof HS.roomId && "string" === typeof HS.processId && "string" === typeof HS.name
+    function Vk(kk) {
+      const Fk = kk.room;
+      return "string" === typeof kk.sessionId && "object" === typeof Fk && null !== Fk && "string" === typeof Fk.roomId && "string" === typeof Fk.processId && "string" === typeof Fk.name
     }
   },
-  40632: (SS, HS, gS) => {
-    gS.d(HS, {
-      $: () => PS,
-      A: () => hS,
-      B: () => vS,
-      F: () => QS,
-      G: () => DS,
-      K: () => GS,
-      M: () => OS,
-      P: () => LS,
-      Q: () => KS,
-      U: () => AS,
-      W: () => nS,
-      _: () => CS,
-      b: () => bS,
-      db: () => wS,
-      e: () => YS,
-      i: () => ES,
-      l: () => aS,
-      m: () => jS,
-      o: () => cS,
-      r: () => ZS,
-      t: () => dS,
-      x: () => JS
+  40598: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      B: () => Vk,
+      F: () => nk,
+      H: () => Kk,
+      L: () => Qk,
+      O: () => Hk,
+      R: () => vk,
+      T: () => pk,
+      X: () => ek,
+      Z: () => bk,
+      ab: () => xk,
+      db: () => Jk,
+      e: () => Tk,
+      hb: () => Pk,
+      i: () => uk,
+      j: () => Gk,
+      lb: () => sk,
+      m: () => jk,
+      q: () => wk,
+      s: () => Ok,
+      t: () => zk,
+      x: () => Ek,
+      z: () => Sk
     });
-    var tS = gS(3140);
-    const bS = {
+    var Xk = Ik(2913);
+    const Tk = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -2160,238 +2160,238 @@ export const modules = {
       LobbyManage: 96
     };
 
-    function XS(SS, HS) {
-      return !ArrayBuffer.isView(SS) || SS instanceof DataView ? Array.isArray(SS) ? SS.map((SS => HS(SS))) : SS : Array.from(SS, (SS => HS(SS)))
+    function ik(kk, Fk) {
+      return !ArrayBuffer.isView(kk) || kk instanceof DataView ? Array.isArray(kk) ? kk.map((kk => Fk(kk))) : kk : Array.from(kk, (kk => Fk(kk)))
     }
 
-    function xS(SS) {
-      if ("string" !== typeof SS) return SS;
-      for (let HS = 0; HS < SS.length; HS++) {
-        const gS = SS.charCodeAt(HS);
-        if (gS >= 55296 && gS <= 57343) return qS.decode(NS.encode(SS))
+    function yk(kk) {
+      if ("string" !== typeof kk) return kk;
+      for (let Fk = 0; Fk < kk.length; Fk++) {
+        const Ik = kk.charCodeAt(Fk);
+        if (Ik >= 55296 && Ik <= 57343) return ak.decode(lk.encode(kk))
       }
-      return SS
+      return kk
     }
-    const NS = new TextEncoder,
-      qS = new TextDecoder;
+    const lk = new TextEncoder,
+      ak = new TextDecoder;
 
-    function uS(SS) {
-      return SS
+    function qk(kk) {
+      return kk
     }
-    let IS;
+    let Lk;
 
-    function fS(SS) {
-      return null === SS || "object" !== typeof SS ? SS : [xS(SS.Mq), xS(SS.Fq)]
-    }
-
-    function kS(SS) {
-      return null === SS || "object" !== typeof SS ? SS : [XS(SS.dt, uS), XS(SS.Xx, uS)]
+    function tk(kk) {
+      return null === kk || "object" !== typeof kk ? kk : [yk(kk.Ya), yk(kk.Aa)]
     }
 
-    function aS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [xS(HS.Ju), xS(HS.Ou)];
-      var HS
+    function Zk(kk) {
+      return null === kk || "object" !== typeof kk ? kk : [ik(kk.EX, qk), ik(kk.yy, qk)]
     }
 
-    function KS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [HS.id, HS.GI];
-      var HS
+    function jk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [yk(Fk.oq), yk(Fk.vq)];
+      var Fk
     }
 
-    function jS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [HS.BX, xS(HS.MX), HS.FX, xS(HS.oX), HS.rX, HS.Sx, HS.Fx, xS(HS.Rx), xS(HS.Tx)];
-      var HS
+    function ek(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [Fk.id, Fk.HL];
+      var Fk
     }
 
-    function GS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [XS(HS.bI, uS), HS.XI];
-      var HS
+    function wk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [Fk.Wi, yk(Fk.Bi), Fk.Yi, yk(Fk.mi), Fk.ky, Fk.Fy, Fk.gy, yk(Fk.my), yk(Fk.hy)];
+      var Fk
     }
 
-    function CS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [XS(HS.ju, (SS => xS(SS))), xS(HS.Gu), HS.Cu];
-      var HS
+    function Hk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [ik(Fk.TL, qk), Fk.iL];
+      var Fk
     }
 
-    function nS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [XS(HS.sx, uS), xS(HS.Bx), HS.Mx];
-      var HS
+    function Jk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [ik(Fk.wq, (kk => yk(kk))), yk(Fk.Hq), Fk.Jq];
+      var Fk
     }
 
-    function PS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [xS(HS.wt), xS(HS.ht)];
-      var HS
+    function xk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [ik(Fk.Wy, qk), yk(Fk.Yy), Fk.Ay];
+      var Fk
     }
 
-    function QS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [xS(HS.gN)];
-      var HS
+    function Pk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [yk(Fk.VX), yk(Fk.zX)];
+      var Fk
     }
 
-    function DS(SS) {
-      return xS(SS)
+    function Kk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [yk(Fk.Il)];
+      var Fk
     }
 
-    function wS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [xS(HS.Fu), xS(HS.Ru), xS(HS.Mq), xS(HS.Fq)];
-      var HS
+    function Qk(kk) {
+      return yk(kk)
     }
 
-    function hS(SS) {
-      return fS(SS)
+    function sk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [yk(Fk.dq), yk(Fk.Yq), yk(Fk.Ya), yk(Fk.Aa)];
+      var Fk
     }
 
-    function ZS(SS) {
-      return fS(SS)
+    function Vk(kk) {
+      return tk(kk)
     }
 
-    function JS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [xS(HS.bx)];
-      var HS
+    function zk(kk) {
+      return tk(kk)
     }
 
-    function OS(SS) {
-      return SS
+    function Sk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [yk(Fk.iy)];
+      var Fk
     }
 
-    function dS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [xS(HS.Ex), xS(HS.Lx)];
-      var HS
+    function vk(kk) {
+      return kk
     }
 
-    function cS(SS) {
-      return xS(SS)
+    function Ek(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [yk(Fk.vy), yk(Fk.Ey)];
+      var Fk
     }
 
-    function vS(SS) {
-      return kS(SS)
+    function Ok(kk) {
+      return yk(kk)
     }
 
-    function ES(SS) {
-      return kS(SS)
+    function nk(kk) {
+      return Zk(kk)
     }
 
-    function LS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [xS(HS.Tu)];
-      var HS
+    function Gk(kk) {
+      return Zk(kk)
     }
 
-    function YS(SS) {
-      return (IS ??= (0, tS.e)().map((SS => SS.name)), IS).map((HS => {
-        return "string" === typeof(gS = SS[HS]) ? xS(gS) : XS(gS, uS);
-        var gS
+    function pk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [yk(Fk.Aq)];
+      var Fk
+    }
+
+    function uk(kk) {
+      return (Lk ??= (0, Xk.g)().map((kk => kk.name)), Lk).map((Fk => {
+        return "string" === typeof(Ik = kk[Fk]) ? yk(Ik) : ik(Ik, qk);
+        var Ik
       }))
     }
 
-    function AS(SS) {
-      return null === (HS = SS) || "object" !== typeof HS ? HS : [HS.Vu, HS.iu, HS.Wu];
-      var HS
+    function bk(kk) {
+      return null === (Fk = kk) || "object" !== typeof Fk ? Fk : [Fk.Rq, Fk.Uq, Fk.Cq];
+      var Fk
     }
   },
-  40986: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => XS
+  40971: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => ik
     });
-    var tS = gS(40991),
-      bS = gS(40979);
-    const XS = new class {
-      constructor(SS) {
-        this.pack = SS, this.game = void 0, this.settle = null, this.hold = null, this.endedWhileHeld = !1, this.gameListeners = new Set, SS.onWanted((() => {
+    var Xk = Ik(40978),
+      Tk = Ik(40966);
+    const ik = new class {
+      constructor(kk) {
+        this.pack = kk, this.game = void 0, this.settle = null, this.hold = null, this.endedWhileHeld = !1, this.gameListeners = new Set, kk.onWanted((() => {
           this.release()
         }))
       }
-      setGame(SS) {
-        if (void 0 === SS && null !== this.hold) return void(this.endedWhileHeld = !0);
+      setGame(kk) {
+        if (void 0 === kk && null !== this.hold) return void(this.endedWhileHeld = !0);
         this.hold = null, this.endedWhileHeld = !1;
-        const HS = this.inGame();
-        if (this.game = SS, this.update(), this.inGame() !== HS)
-          for (const gS of this.gameListeners) gS()
+        const Fk = this.inGame();
+        if (this.game = kk, this.update(), this.inGame() !== Fk)
+          for (const Ik of this.gameListeners) Ik()
       }
       inGame() {
         return void 0 !== this.game
       }
-      onGameChange(SS) {
-        return this.gameListeners.add(SS), () => {
-          this.gameListeners.delete(SS)
+      onGameChange(kk) {
+        return this.gameListeners.add(kk), () => {
+          this.gameListeners.delete(kk)
         }
       }
-      unwantedLeave(SS) {
-        SS && void 0 !== this.game ? this.hold = {
+      unwantedLeave(kk) {
+        kk && void 0 !== this.game ? this.hold = {
           game: this.game
         } : this.release()
       }
       rejoinHold() {
         return this.hold
       }
-      releaseHold(SS) {
-        null !== SS && SS === this.hold && this.release()
+      releaseHold(kk) {
+        null !== kk && kk === this.hold && this.release()
       }
       release() {
         if (null === this.hold) return;
-        const SS = this.endedWhileHeld;
-        this.hold = null, this.endedWhileHeld = !1, SS && this.setGame(void 0)
+        const kk = this.endedWhileHeld;
+        this.hold = null, this.endedWhileHeld = !1, kk && this.setGame(void 0)
       }
-      setSettled(SS) {
-        this.settle = SS, this.update()
+      setSettled(kk) {
+        this.settle = kk, this.update()
       }
       update() {
-        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, tS.d)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
+        void 0 === this.game ? this.pack.setSessionFiles(void 0) : null !== this.settle && (0, Xk.d)(this.settle.state, this.game) && this.pack.setSessionFiles(this.settle.files)
       }
-    }(bS.d)
+    }(Tk.f)
   },
-  5234: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => xS,
-      g: () => NS
+  5063: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => yk,
+      i: () => lk
     });
-    var tS = gS(2256),
-      bS = gS(5242);
-    let XS = null;
+    var Xk = Ik(2071),
+      Tk = Ik(5071);
+    let ik = null;
 
-    function xS(SS) {
-      XS = {
-        pack: SS.metaData.id === tS.d ? null : SS
+    function yk(kk) {
+      ik = {
+        pack: kk.metaData.id === Xk.b ? null : kk
       }
     }
 
-    function NS(SS) {
-      return !(null === XS || !(0, bS.d)(XS.pack, SS)) && (XS = null, !0)
+    function lk(kk) {
+      return !(null === ik || !(0, Tk.e)(ik.pack, kk)) && (ik = null, !0)
     }
   },
-  40704: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      followPageUiPack: () => XI,
-      packForGame: () => bI,
-      playWasmGame: () => CI,
-      prefetchWasmPreviews: () => uq,
-      setGamePackConfirm: () => Cu,
-      startWasmPlay: () => II,
-      startWasmPreviews: () => qq
+  40682: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      followPageUiPack: () => aL,
+      packForGame: () => lL,
+      playWasmGame: () => KL,
+      prefetchWasmPreviews: () => Za,
+      setGamePackConfirm: () => Kq,
+      startWasmPlay: () => jL,
+      startWasmPreviews: () => ta
     });
-    var tS = gS(198),
-      bS = gS(1329),
-      XS = gS(160),
-      xS = gS(39106),
-      NS = gS(2060),
-      qS = gS(31),
-      uS = gS(4794),
-      IS = gS(1390),
-      fS = gS(1830),
-      kS = gS(1400),
-      aS = gS(39256),
-      KS = gS(1378),
-      jS = gS(39267),
-      GS = gS(39175),
-      CS = gS(36479),
-      nS = gS(39070),
-      PS = gS(9093),
-      QS = gS(36503),
-      DS = gS(40707),
-      wS = gS(4911),
-      hS = gS(40625),
-      ZS = gS(40689),
-      JS = gS(40632);
-    const OS = {
+    var Xk = Ik(187),
+      Tk = Ik(1234),
+      ik = Ik(149),
+      yk = Ik(39087),
+      lk = Ik(1875),
+      ak = Ik(34),
+      qk = Ik(4671),
+      Lk = Ik(1287),
+      tk = Ik(1652),
+      Zk = Ik(1301),
+      jk = Ik(39250),
+      ek = Ik(1276),
+      wk = Ik(39264),
+      Hk = Ik(39171),
+      Jk = Ik(36458),
+      xk = Ik(39046),
+      Pk = Ik(8880),
+      Kk = Ik(36486),
+      Qk = Ik(40685),
+      sk = Ik(4792),
+      Vk = Ik(40596),
+      zk = Ik(40661),
+      Sk = Ik(40598);
+    const vk = {
       states: {
         health: !0,
         aura: !0,
@@ -2514,354 +2514,354 @@ export const modules = {
       }
     };
 
-    function dS(SS) {
-      const HS = {
-        ...ZS.e[SS]
+    function Ek(kk) {
+      const Fk = {
+        ...zk.b[kk]
       };
-      for (const gS of Object.keys(OS[SS])) delete HS[gS];
-      return HS
+      for (const Ik of Object.keys(vk[kk])) delete Fk[Ik];
+      return Fk
     }
 
-    function cS() {
-      var SS, HS;
-      return null === (SS = null === (HS = (0, hS.h)()) || void 0 === HS ? void 0 : HS.localPlayerAlive()) || void 0 === SS || SS
+    function Ok() {
+      var kk, Fk;
+      return null === (kk = null === (Fk = (0, Vk.k)()) || void 0 === Fk ? void 0 : Fk.localPlayerAlive()) || void 0 === kk || kk
     }
 
-    function vS() {
-      var SS, HS;
-      return null !== (SS = null === (HS = (0, hS.h)()) || void 0 === HS ? void 0 : HS.localDeaths()) && void 0 !== SS ? SS : null
+    function nk() {
+      var kk, Fk;
+      return null !== (kk = null === (Fk = (0, Vk.k)()) || void 0 === Fk ? void 0 : Fk.localDeaths()) && void 0 !== kk ? kk : null
     }
-    const ES = {
-        current: cS,
-        watch: SS => {
-          let HS = cS(),
-            gS = vS();
-          return (0, wS.w)((() => {
-            const tS = cS(),
-              bS = vS(),
-              XS = null !== bS && null !== gS && bS !== gS;
-            gS = bS, XS ? (HS || SS(!0), SS(!1), tS && SS(!0), HS = tS) : tS !== HS && (HS = tS, SS(tS))
+    const Gk = {
+        current: Ok,
+        watch: kk => {
+          let Fk = Ok(),
+            Ik = nk();
+          return (0, sk.y)((() => {
+            const Xk = Ok(),
+              Tk = nk(),
+              ik = null !== Tk && null !== Ik && Tk !== Ik;
+            Ik = Tk, ik ? (Fk || kk(!0), kk(!1), Xk && kk(!0), Fk = Xk) : Xk !== Fk && (Fk = Xk, kk(Xk))
           }))
         }
       },
-      LS = {
+      pk = {
         states: {
-          ...dS("states"),
-          localPlayerAlive: ES
+          ...Ek("states"),
+          localPlayerAlive: Gk
         },
         events: {
-          ...dS("events"),
+          ...Ek("events"),
           localPlayerAliveSet: {
-            watch: ES.watch
+            watch: Gk.watch
           }
         },
         commands: {
-          ...dS("commands"),
+          ...Ek("commands"),
           respawn: () => {
-            var SS;
-            null === (SS = (0, hS.h)()) || void 0 === SS || SS.respawn()
+            var kk;
+            null === (kk = (0, Vk.k)()) || void 0 === kk || kk.respawn()
           },
-          playEmote: SS => {
-            var HS;
-            null === (HS = (0, hS.h)()) || void 0 === HS || HS.send(JS.b.PlayEmote, (0, JS.F)({
-              gN: SS
+          playEmote: kk => {
+            var Fk;
+            null === (Fk = (0, Vk.k)()) || void 0 === Fk || Fk.send(Sk.e.PlayEmote, (0, Sk.H)({
+              Il: kk
             }))
           },
-          applyTemporaryThirdPerson: SS => {
-            var HS;
+          applyTemporaryThirdPerson: kk => {
+            var Fk;
             let {
-              durationMs: gS
-            } = SS;
-            null === (HS = (0, hS.h)()) || void 0 === HS || HS.thirdPersonFor(gS)
+              durationMs: Ik
+            } = kk;
+            null === (Fk = (0, Vk.k)()) || void 0 === Fk || Fk.thirdPersonFor(Ik)
           },
-          bindCustomButtonKeys: SS => {
-            var HS;
-            null === (HS = (0, hS.h)()) || void 0 === HS || HS.bindCustomButtonKeys(SS)
+          bindCustomButtonKeys: kk => {
+            var Fk;
+            null === (Fk = (0, Vk.k)()) || void 0 === Fk || Fk.bindCustomButtonKeys(kk)
           },
-          pressCustomButton: SS => {
-            var HS;
+          pressCustomButton: kk => {
+            var Fk;
             let {
-              id: gS,
-              down: tS
-            } = SS;
-            null === (HS = (0, hS.h)()) || void 0 === HS || HS.pressCustomButton(gS, tS)
+              id: Ik,
+              down: Xk
+            } = kk;
+            null === (Fk = (0, Vk.k)()) || void 0 === Fk || Fk.pressCustomButton(Ik, Xk)
           },
           setLookSensitivity: () => {},
-          wakeUp: SS => {
-            const HS = (0, JS.P)({
-                Tu: SS
+          wakeUp: kk => {
+            const Fk = (0, Sk.T)({
+                Aq: kk
               }),
-              gS = () => {
-                const SS = (0, hS.h)();
-                return !(null !== SS && void 0 !== SS && SS.isSessionLive) || SS.send(JS.b.StopSleeping, HS)
+              Ik = () => {
+                const kk = (0, Vk.k)();
+                return !(null !== kk && void 0 !== kk && kk.isSessionLive) || kk.send(Sk.e.StopSleeping, Fk)
               };
-            if (!gS()) {
-              const SS = (0, wS.w)((() => {
-                gS() && SS()
+            if (!Ik()) {
+              const kk = (0, sk.y)((() => {
+                Ik() && kk()
               }))
             }
           },
-          setCameraZoom: SS => {
-            var HS;
-            null === (HS = (0, hS.h)()) || void 0 === HS || HS.setCameraZoom(SS)
+          setCameraZoom: kk => {
+            var Fk;
+            null === (Fk = (0, Vk.k)()) || void 0 === Fk || Fk.setCameraZoom(kk)
           }
         },
-        queries: dS("queries"),
+        queries: Ek("queries"),
         lookups: {
-          ...dS("lookups"),
+          ...Ek("lookups"),
           cameraZoom: () => {
-            var SS, HS;
-            return null !== (SS = null === (HS = (0, hS.h)()) || void 0 === HS ? void 0 : HS.cameraZoom()) && void 0 !== SS ? SS : 0
+            var kk, Fk;
+            return null !== (kk = null === (Fk = (0, Vk.k)()) || void 0 === Fk ? void 0 : Fk.cameraZoom()) && void 0 !== kk ? kk : 0
           }
         }
       };
-    var YS = gS(39087),
-      AS = gS(40716),
-      yS = gS(40723),
-      VS = gS(40743),
-      iS = gS(1337),
-      WS = gS(113),
-      zS = gS(4656),
-      US = gS(3841),
-      pS = gS(1259);
-    const sS = {
-      VI: () => (0, iS.c)(),
-      inbuiltOverwritten: () => zS.d,
-      reflectApplyHit: () => pS.b,
-      definerHit: () => WS.currentUrl.c,
-      emitReplaced: () => (0, qS.c)(),
-      confirmMesh: () => (0, US.d)(),
-      confirmMeshHitStack: () => (0, US.f)()
+    var uk = Ik(39066),
+      bk = Ik(40689),
+      Rk = Ik(40697),
+      Uk = Ik(40712),
+      Ck = Ik(1244),
+      Nk = Ik(104),
+      ck = Ik(4508),
+      Wk = Ik(3671),
+      fk = Ik(1160);
+    const Bk = {
+      RL: () => (0, Ck.c)(),
+      inbuiltOverwritten: () => ck.f,
+      reflectApplyHit: () => fk.b,
+      definerHit: () => Nk.currentUrl.c,
+      emitReplaced: () => (0, ak.d)(),
+      confirmMesh: () => (0, Wk.c)(),
+      confirmMeshHitStack: () => (0, Wk.e)()
     };
-    var BS = gS(40727),
-      MS = gS(40871);
-    var FS = gS(24),
-      RS = gS(2069),
-      TS = gS(2111),
-      oS = gS(1736),
-      lS = gS(2144),
-      mS = gS(1281),
-      eS = gS(1334),
-      rS = gS(40876);
+    var dk = Ik(40702),
+      Yk = Ik(40845);
+    var Ak = Ik(25),
+      gk = Ik(1881),
+      mk = Ik(1916),
+      hk = Ik(1585),
+      rk = Ik(1953),
+      Dk = Ik(1179),
+      Mk = Ik(1241),
+      kF = Ik(40852);
 
-    function SH() {
-      return eS.f.get().getCurrentLanguageCode()
+    function FF() {
+      return Mk.d.get().getCurrentLanguageCode()
     }
 
-    function HH(SS) {
-      const HS = () => {
-        SS({
-          translate: (SS, HS) => (0, mS.y)(SH(), SS, HS),
-          keyBindingText: SS => {
-            const HS = (0, TS.r)(SS, FS.b.get("isTouchScreen"));
-            return null !== HS ? (0, mS.C)(SH(), HS.translationKey, HS.params) : (0, TS.o)((0, TS.p)(SS))
+    function IF(kk) {
+      const Fk = () => {
+        kk({
+          translate: (kk, Fk) => (0, Dk.t)(FF(), kk, Fk),
+          keyBindingText: kk => {
+            const Fk = (0, mk.r)(kk, Ak.d.get("isTouchScreen"));
+            return null !== Fk ? (0, Dk.w)(FF(), Fk.translationKey, Fk.params) : (0, mk.n)((0, mk.q)(kk))
           },
-          isFriend: lS.g,
-          hiddenNames: RS.c.shown,
-          loadsFontRest: (0, rS.e)(SH())
+          isFriend: rk.h,
+          hiddenNames: gk.d.shown,
+          loadsFontRest: (0, kF.e)(FF())
         })
       };
-      let gS = !1;
-      const tS = () => {
-          const SS = SH();
-          (0, mS.n)(SS).then((() => {
-            gS || SS !== SH() || HS()
+      let Ik = !1;
+      const Xk = () => {
+          const kk = FF();
+          (0, Dk.j)(kk).then((() => {
+            Ik || kk !== FF() || Fk()
           }))
         },
-        bS = () => oS.d.getSocialState().friends.map((SS => SS.name.toLowerCase())).sort().join(" ");
-      let XS = bS();
-      HS(), tS();
-      const xS = [(0, eS.j)((() => {
-        HS(), tS()
-      })), (0, qS.m)("customBindingsChanged", HS), (0, qS.m)("appManagerUpdated|isTouchScreen", HS), (0, lS.d)((() => {
-        const SS = bS();
-        SS !== XS && (XS = SS, HS())
-      })), RS.c.subscribe(HS)];
+        Tk = () => hk.c.getSocialState().friends.map((kk => kk.name.toLowerCase())).sort().join(" ");
+      let ik = Tk();
+      Fk(), Xk();
+      const yk = [(0, Mk.e)((() => {
+        Fk(), Xk()
+      })), (0, ak.i)("customBindingsChanged", Fk), (0, ak.i)("appManagerUpdated|isTouchScreen", Fk), (0, rk.d)((() => {
+        const kk = Tk();
+        kk !== ik && (ik = kk, Fk())
+      })), gk.d.subscribe(Fk)];
       return () => {
-        gS = !0;
-        for (const SS of xS) SS()
+        Ik = !0;
+        for (const kk of yk) kk()
       }
     }
-    var gH = gS(687),
-      tH = gS(1087),
-      bH = gS(2092),
-      XH = gS(369),
-      xH = gS(191),
-      NH = gS(3021),
-      qH = gS(3030),
-      uH = gS(38739),
-      IH = gS(4812),
-      fH = gS(40889),
-      kH = gS(727),
-      aH = gS(699),
-      KH = gS(748),
-      jH = gS(751),
-      GH = gS(2083),
-      CH = gS(3849),
-      nH = gS(3435);
-    let PH = null;
-    var QH = gS(1286),
-      DH = gS(1290),
-      wH = gS(4556),
-      hH = gS(3589),
-      ZH = gS(61),
-      JH = gS(364),
-      OH = gS(362),
-      dH = gS(40911),
-      cH = gS(4917);
-    var vH = gS(37723),
-      EH = gS(40914);
-    class LH {
-      constructor(SS, HS) {
-        this.showView = SS, this.holdForAd = HS
+    var XF = Ik(633),
+      TF = Ik(1018),
+      iF = Ik(1902),
+      yF = Ik(318),
+      lF = Ik(178),
+      aF = Ik(2801),
+      qF = Ik(2803),
+      LF = Ik(38726),
+      tF = Ik(4692),
+      ZF = Ik(40870),
+      jF = Ik(684),
+      eF = Ik(646),
+      wF = Ik(705),
+      HF = Ik(710),
+      JF = Ik(1894),
+      xF = Ik(3680),
+      PF = Ik(3223);
+    let KF = null;
+    var QF = Ik(1194),
+      sF = Ik(1199),
+      VF = Ik(4411),
+      zF = Ik(3388),
+      SF = Ik(51),
+      oF = Ik(314),
+      vF = Ik(309),
+      EF = Ik(40891),
+      OF = Ik(4794);
+    var nF = Ik(37718),
+      GF = Ik(40896);
+    class pF {
+      constructor(kk, Fk) {
+        this.showView = kk, this.holdForAd = Fk
       }
       pointerUnlockRequestsChanged() {
-        (0, dH.x)()
+        (0, EF.C)()
       }
       pointerLockDebugEntries() {
         return [{
           label: "Locked to the canvas",
-          value: String((0, dH.n)())
+          value: String((0, EF.p)())
         }]
       }
-      setGameViewShown(SS) {
-        this.showView(SS)
+      setGameViewShown(kk) {
+        this.showView(kk)
       }
-      setGameView(SS) {
-        (0, EH.k)(SS)
+      setGameView(kk) {
+        (0, GF.f)(kk)
       }
-      videoAdHold(SS, HS) {
-        this.holdForAd(SS, HS)
+      videoAdHold(kk, Fk) {
+        this.holdForAd(kk, Fk)
       }
     }
-    class YH {
-      leave(SS) {
-        ! function(SS) {
-          if (null !== (0, kS.e)().websocketUrl) try {
-            (0, wS.J)().leaveGame(SS)
+    class uF {
+      leave(kk) {
+        ! function(kk) {
+          if (null !== (0, Zk.d)().websocketUrl) try {
+            (0, sk.I)().leaveGame(kk)
           } finally {
-            (0, kS.r)({
+            (0, Zk.s)({
               websocketUrl: null
             })
           }
-        }(SS)
+        }(kk)
       }
       isReplay() {
         return !1
       }
     }
-    class AH {
-      watchFrameStarts(SS) {
-        return (0, wS.r)(SS)
+    class bF {
+      watchFrameStarts(kk) {
+        return (0, sk.t)(kk)
       }
-      watchFrames(SS) {
-        return (0, wS.n)(SS)
+      watchFrames(kk) {
+        return (0, sk.s)(kk)
       }
-      watchTicks(SS) {
-        return (0, wS.w)(SS)
+      watchTicks(kk) {
+        return (0, sk.y)(kk)
       }
     }
-    var yH = gS(40917);
+    var RF = Ik(40900);
 
-    function VH(SS) {
-      return SS >= 0 ? Math.min(1, SS) : 0
+    function UF(kk) {
+      return kk >= 0 ? Math.min(1, kk) : 0
     }
 
-    function iH(SS, HS) {
+    function CF(kk, Fk) {
       const {
-        fade: gS
-      } = SS;
-      return null === gS || HS - gS.at >= gS.ms ? SS.volume : gS.from + (SS.volume - gS.from) * Math.max(0, (HS - gS.at) / gS.ms)
+        fade: Ik
+      } = kk;
+      return null === Ik || Fk - Ik.at >= Ik.ms ? kk.volume : Ik.from + (kk.volume - Ik.from) * Math.max(0, (Fk - Ik.at) / Ik.ms)
     }
 
-    function WH(SS) {
-      const HS = Object.entries(SS),
-        gS = new Uint32Array(HS.length);
-      let tS = 0;
-      for (const [xS, [, NS]] of HS.entries()) gS[xS] = NS.length, tS += NS.length;
-      const bS = new Float64Array(3 * tS);
-      let XS = 0;
-      for (const [, xS] of HS)
-        for (const SS of xS) bS.set(SS, XS), XS += 3;
+    function NF(kk) {
+      const Fk = Object.entries(kk),
+        Ik = new Uint32Array(Fk.length);
+      let Xk = 0;
+      for (const [yk, [, lk]] of Fk.entries()) Ik[yk] = lk.length, Xk += lk.length;
+      const Tk = new Float64Array(3 * Xk);
+      let ik = 0;
+      for (const [, yk] of Fk)
+        for (const kk of yk) Tk.set(kk, ik), ik += 3;
       return {
-        blocks: HS.map((SS => {
-          let [HS] = SS;
-          return HS
+        blocks: Fk.map((kk => {
+          let [Fk] = kk;
+          return Fk
         })).join("\0"),
-        counts: gS,
-        values: bS
+        counts: Ik,
+        values: Tk
       }
     }
-    class zH {
-      constructor(SS, HS) {
-        this.core = SS, this.warn = HS, this.latest = 0
+    class cF {
+      constructor(kk, Fk) {
+        this.core = kk, this.warn = Fk, this.latest = 0
       }
       async feed() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : UH;
-        const HS = ++this.latest;
-        let gS;
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : WF;
+        const Fk = ++this.latest;
+        let Ik;
         try {
-          gS = await SS()
-        } catch (tS) {
-          return void(this.core.isStopped || HS !== this.latest || this.warn("the block colours didn't load, so block particles draw grey", tS))
+          Ik = await kk()
+        } catch (Xk) {
+          return void(this.core.isStopped || Fk !== this.latest || this.warn("the block colours didn't load, so block particles draw grey", Xk))
         }
-        HS === this.latest && (this.core.setBlockColours(gS) || this.core.isStopped || this.warn("the core refused the block colours: block particles draw grey"))
+        Fk === this.latest && (this.core.setBlockColours(Ik) || this.core.isStopped || this.warn("the core refused the block colours: block particles draw grey"))
       }
     }
-    async function UH() {
-      return WH((await gS.e(204).then((() => gS(34324)))).averageColors)
+    async function WF() {
+      return NF((await Ik.e(204).then((() => Ik(34274)))).averageColors)
     }
-    var pH = gS(4926),
-      sH = gS(4935),
-      BH = gS(40672),
-      MH = gS(3391),
-      FH = gS(36277),
-      RH = gS(40773),
-      TH = gS(672),
-      oH = gS(37084),
-      lH = gS(665),
-      mH = gS(387),
-      eH = gS(40767);
-    const rH = [3e4, 12e4, 3e5];
-    class Sg extends Error {}
-    const Hg = {
-      mobTypes: TH.o,
-      vehicleTypes: oH.e,
-      mobAiStates: TH.k,
-      playerPoses: lH.o
+    var fF = Ik(4797),
+      BF = Ik(4799),
+      dF = Ik(40641),
+      YF = Ik(3164),
+      AF = Ik(36236),
+      gF = Ik(40752),
+      mF = Ik(621),
+      hF = Ik(37101),
+      rF = Ik(614),
+      DF = Ik(337),
+      MF = Ik(40738);
+    const kI = [3e4, 12e4, 3e5];
+    class FI extends Error {}
+    const II = {
+      mobTypes: mF.n,
+      vehicleTypes: hF.d,
+      mobAiStates: mF.l,
+      playerPoses: rF.u
     };
-    var gg = gS(40755),
-      tg = gS(40802),
-      bg = gS(1149),
-      Xg = gS(40924),
-      xg = gS(40928),
-      Ng = gS(3127),
-      qg = gS(39062),
-      ug = gS(4954),
-      Ig = gS(2510);
-    const fg = Ig.A.KeysDisabled | Ig.A.LookFrozen | Ig.A.ClicksSuppressed,
-      kg = Ng.d;
-    var ag = (0, xg.d)("resumingConn");
-    class Kg {
-      constructor(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
-        this.shell = SS, this.now = HS, this.session = void 0, this.attempt = null, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, Object.defineProperty(this, ag, {
+    var XI = Ik(40726),
+      TI = Ik(40776),
+      iI = Ik(1076),
+      yI = Ik(40905),
+      lI = Ik(40914),
+      aI = Ik(2889),
+      qI = Ik(39034),
+      LI = Ik(4814),
+      tI = Ik(2331);
+    const ZI = tI.A.KeysDisabled | tI.A.LookFrozen | tI.A.ClicksSuppressed,
+      jI = aI.g;
+    var eI = (0, lI.c)("resumingConn");
+    class wI {
+      constructor(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now;
+        this.shell = kk, this.now = Fk, this.session = void 0, this.attempt = null, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, Object.defineProperty(this, eI, {
           writable: !0,
           value: 0
-        }), this.drops = 0, this.session = new qg.e({
-          reconnect: SS => this.reconnect(SS),
-          isLive: () => SS.isLive(),
-          onReconnected: HS => {
-            this.landed = HS, SS.onReconnected(HS), this.landIfResumed()
+        }), this.drops = 0, this.session = new qI.b({
+          reconnect: kk => this.reconnect(kk),
+          isLive: () => kk.isLive(),
+          onReconnected: Fk => {
+            this.landed = Fk, kk.onReconnected(Fk), this.landIfResumed()
           },
-          onGaveUp: (HS, gS) => {
-            this.abortAttempt(), SS.onGaveUp(HS, gS)
+          onGaveUp: (Fk, Ik) => {
+            this.abortAttempt(), kk.onGaveUp(Fk, Ik)
           },
-          freeze: HS => {
-            SS.uE(HS), (0, ug.i)(fg, HS ? fg : 0, "reconnectFreeze")
+          freeze: Fk => {
+            kk.sE(Fk), (0, LI.g)(ZI, Fk ? ZI : 0, "reconnectFreeze")
           },
-          releaseSeat: SS => {
-            this.releaseSeat(SS)
+          releaseSeat: kk => {
+            this.releaseSeat(kk)
           }
         })
       }
@@ -2869,152 +2869,152 @@ export const modules = {
         return this.session.isResuming()
       }
       get resumingConn() {
-        return (0, Xg.c)(this, ag)[ag]
+        return (0, yI.c)(this, eI)[eI]
       }
       canHoldSeat() {
         return this.session.canHoldSeat()
       }
-      onInitialInfo(SS) {
+      onInitialInfo(kk) {
         let {
-          conn: HS,
-          graceMs: gS,
-          sessionBased: tS,
-          replayOffer: bS
-        } = SS;
-        this.session.onInitialInfo(gS, tS), this.isResuming() && (this.initialInfoConn = HS, this.initialInfoOffer = bS, this.landIfResumed())
+          conn: Fk,
+          graceMs: Ik,
+          sessionBased: Xk,
+          replayOffer: Tk
+        } = kk;
+        this.session.onInitialInfo(Ik, Xk), this.isResuming() && (this.initialInfoConn = Fk, this.initialInfoOffer = Tk, this.landIfResumed())
       }
-      onResumeComplete(SS) {
-        0 !== SS && (SS === (0, Xg.c)(this, ag)[ag] ? ((0, Xg.c)(this, ag)[ag] = 0, this.session.onResumed()) : this.isResuming() && (this.completedEarlyConn = SS))
+      onResumeComplete(kk) {
+        0 !== kk && (kk === (0, yI.c)(this, eI)[eI] ? ((0, yI.c)(this, eI)[eI] = 0, this.session.onResumed()) : this.isResuming() && (this.completedEarlyConn = kk))
       }
-      onDropped(SS) {
-        this.drops++, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, (0, Xg.c)(this, ag)[ag] = 0, this.session.onConnectionLost(SS)
+      onDropped(kk) {
+        this.drops++, this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, (0, yI.c)(this, eI)[eI] = 0, this.session.onConnectionLost(kk)
       }
       leave() {
         this.session.leave(), this.dispose()
       }
       dispose() {
-        this.abortAttempt(), this.landed = null, this.completedEarlyConn = 0, (0, Xg.c)(this, ag)[ag] = 0, this.session.end()
+        this.abortAttempt(), this.landed = null, this.completedEarlyConn = 0, (0, yI.c)(this, eI)[eI] = 0, this.session.end()
       }
-      reconnect(SS) {
-        const HS = this.attempt;
-        if (null !== HS && this.awaitingJoinRoom(HS)) return HS.result;
+      reconnect(kk) {
+        const Fk = this.attempt;
+        if (null !== Fk && this.awaitingJoinRoom(Fk)) return Fk.result;
         this.abortAttempt();
-        const gS = new AbortController,
-          tS = this.drops,
-          bS = {
+        const Ik = new AbortController,
+          Xk = this.drops,
+          Tk = {
             attachedAt: null
           },
-          XS = this.shell.reconnect(SS, gS.signal, (() => {
-            bS.attachedAt = this.now()
-          })).then((SS => {
-            if (this.clearAttempt(xS), this.drops !== tS) throw new Error("the resumed room dropped before its attempt settled");
-            return SS
-          }), (SS => {
-            throw this.clearAttempt(xS), SS
+          ik = this.shell.reconnect(kk, Ik.signal, (() => {
+            Tk.attachedAt = this.now()
+          })).then((kk => {
+            if (this.clearAttempt(yk), this.drops !== Xk) throw new Error("the resumed room dropped before its attempt settled");
+            return kk
+          }), (kk => {
+            throw this.clearAttempt(yk), kk
           })),
-          xS = {
-            abort: gS,
-            socket: bS,
-            result: XS
+          yk = {
+            abort: Ik,
+            socket: Tk,
+            result: ik
           };
-        return this.attempt = xS, XS
+        return this.attempt = yk, ik
       }
-      clearAttempt(SS) {
-        this.attempt === SS && (this.attempt = null)
+      clearAttempt(kk) {
+        this.attempt === kk && (this.attempt = null)
       }
       abortAttempt() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new DOMException("the reconnect attempt was given up", "AbortError");
-        const HS = this.attempt;
-        this.attempt = null, null === HS || void 0 === HS || HS.abort.abort(SS)
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new DOMException("the reconnect attempt was given up", "AbortError");
+        const Fk = this.attempt;
+        this.attempt = null, null === Fk || void 0 === Fk || Fk.abort.abort(kk)
       }
-      awaitingJoinRoom(SS) {
-        const HS = SS.socket.attachedAt;
-        return null !== HS && this.now() - HS < kg
+      awaitingJoinRoom(kk) {
+        const Fk = kk.socket.attachedAt;
+        return null !== Fk && this.now() - Fk < jI
       }
-      releaseSeat(SS) {
-        const HS = this.attempt,
-          gS = null !== HS && this.awaitingJoinRoom(HS);
-        this.abortAttempt(new AS.m), gS || this.shell.releaseSeat(SS)
+      releaseSeat(kk) {
+        const Fk = this.attempt,
+          Ik = null !== Fk && this.awaitingJoinRoom(Fk);
+        this.abortAttempt(new bk.o), Ik || this.shell.releaseSeat(kk)
       }
       landIfResumed() {
-        const SS = this.landed;
-        if (null !== SS && SS.conn === this.initialInfoConn) {
-          const HS = this.initialInfoOffer && this.completedEarlyConn !== SS.conn;
-          if (this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, this.abortAttempt(), !HS) return void this.session.onResumed();
-          (0, Xg.c)(this, ag)[ag] = SS.conn, this.session.onResuming()
+        const kk = this.landed;
+        if (null !== kk && kk.conn === this.initialInfoConn) {
+          const Fk = this.initialInfoOffer && this.completedEarlyConn !== kk.conn;
+          if (this.landed = null, this.initialInfoConn = 0, this.initialInfoOffer = !1, this.completedEarlyConn = 0, this.abortAttempt(), !Fk) return void this.session.onResumed();
+          (0, yI.c)(this, eI)[eI] = kk.conn, this.session.onResuming()
         }
       }
     }
-    var jg = gS(39068),
-      Gg = gS(40931),
-      Cg = gS(36493),
-      ng = gS(36485),
-      Pg = gS(2256),
-      Qg = gS(2022),
-      Dg = gS(4438),
-      wg = gS(40782),
-      hg = gS(5234);
+    var HI = Ik(39040),
+      JI = Ik(40917),
+      xI = Ik(36474),
+      PI = Ik(36466),
+      KI = Ik(2071),
+      QI = Ik(1844),
+      sI = Ik(4284),
+      VI = Ik(40757),
+      zI = Ik(5063);
 
-    function Zg(SS) {
+    function SI(kk) {
       let {
-        pack: HS,
-        gameSource: gS
-      } = SS;
-      if (null !== gS && "" !== gS) return `game:${gS}`;
-      if (null === HS) return "default";
+        pack: Fk,
+        gameSource: Ik
+      } = kk;
+      if (null !== Ik && "" !== Ik) return `game:${Ik}`;
+      if (null === Fk) return "default";
       const {
-        id: tS,
-        version: bS
-      } = HS.metaData;
-      if (tS !== Pg.q.CUSTOM) return `${tS}@${bS}`;
-      const XS = [];
-      for (const xS of [HS.textureOverrides, HS.modelOverrides, HS.animations])
-        for (const [SS, HS] of Object.entries(null !== xS && void 0 !== xS ? xS : {})) XS.push(`${SS}:${HS.length}`);
-      return `${tS}:${(0,Qg.u)(XS.join())}`
+        id: Xk,
+        version: Tk
+      } = Fk.metaData;
+      if (Xk !== KI.l.CUSTOM) return `${Xk}@${Tk}`;
+      const ik = [];
+      for (const yk of [Fk.textureOverrides, Fk.modelOverrides, Fk.animations])
+        for (const [kk, Fk] of Object.entries(null !== yk && void 0 !== yk ? yk : {})) ik.push(`${kk}:${Fk.length}`);
+      return `${Xk}:${(0,QI.r)(ik.join())}`
     }
-    var Jg = gS(4540),
-      Og = gS(3403),
-      dg = gS(40934),
-      cg = gS(703),
-      vg = gS(3405),
-      Eg = gS(4634),
-      Lg = gS(45),
-      Yg = gS(40838),
-      Ag = gS(4566),
-      yg = gS(2517),
-      Vg = gS(1733),
-      ig = gS(1758),
-      Wg = gS(1366),
-      zg = gS(118),
-      Ug = gS(337),
-      pg = gS(39102),
-      sg = gS(2526),
-      Bg = gS(4947);
-    const Mg = new Set([pH.Gb.KeyDown, pH.Gb.MouseMove, pH.Gb.MouseDown, pH.Gb.Wheel, pH.Gb.TouchStart, pH.Gb.TouchMove]);
+    var oI = Ik(4395),
+      vI = Ik(3175),
+      EI = Ik(40923),
+      OI = Ik(650),
+      nI = Ik(3182),
+      GI = Ik(4491),
+      pI = Ik(41),
+      uI = Ik(40817),
+      bI = Ik(4430),
+      RI = Ik(2338),
+      UI = Ik(1580),
+      CI = Ik(1604),
+      NI = Ik(1270),
+      cI = Ik(111),
+      WI = Ik(297),
+      fI = Ik(39080),
+      BI = Ik(2341),
+      dI = Ik(4810);
+    const YI = new Set([fF.rb.KeyDown, fF.rb.MouseMove, fF.rb.MouseDown, fF.rb.Wheel, fF.rb.TouchStart, fF.rb.TouchMove]);
 
-    function Fg(SS) {
-      return (SS.shiftKey ? pH._b.Shift : 0) | (SS.ctrlKey ? pH._b.Ctrl : 0) | (SS.altKey ? pH._b.Alt : 0) | (SS.metaKey ? pH._b.Meta : 0) | ("repeat" in SS && SS.repeat ? pH._b.Repeat : 0) | (SS.isTrusted ? 0 : pH._b.Untrusted | function(SS) {
+    function AI(kk) {
+      return (kk.shiftKey ? fF.Kb.Shift : 0) | (kk.ctrlKey ? fF.Kb.Ctrl : 0) | (kk.altKey ? fF.Kb.Alt : 0) | (kk.metaKey ? fF.Kb.Meta : 0) | ("repeat" in kk && kk.repeat ? fF.Kb.Repeat : 0) | (kk.isTrusted ? 0 : fF.Kb.Untrusted | function(kk) {
         try {
           const {
-            editable: HS,
-            outsideView: gS
-          } = (0, pg.g)(SS.target);
-          return (HS ? pH._b.UntrustedEditable : 0) | (gS ? pH._b.UntrustedOutsideView : 0)
+            editable: Fk,
+            outsideView: Ik
+          } = (0, fI.e)(kk.target);
+          return (Fk ? fF.Kb.UntrustedEditable : 0) | (Ik ? fF.Kb.UntrustedOutsideView : 0)
         } catch {
           return 0
         }
-      }(SS))
+      }(kk))
     }
 
-    function Rg(SS) {
-      return "touchOnly" !== (0, zg.c)() && "function" === typeof SS.requestPointerLock
+    function gI(kk) {
+      return "touchOnly" !== (0, cI.e)() && "function" === typeof kk.requestPointerLock
     }
 
-    function Tg(SS) {
-      return 0 === SS.button ? SS.altKey ? Bg.i["Alt+Left Click"] : Bg.i.Mouse1 : 1 === SS.button ? Bg.i.Mouse2 : Bg.i.Mouse3
+    function mI(kk) {
+      return 0 === kk.button ? kk.altKey ? dI.o["Alt+Left Click"] : dI.o.Mouse1 : 1 === kk.button ? dI.o.Mouse2 : dI.o.Mouse3
     }
-    const og = new Set(["AltLeft", "AltRight", "ArrowUp", "ArrowDown"]),
-      lg = new Map([
+    const hI = new Set(["AltLeft", "AltRight", "ArrowUp", "ArrowDown"]),
+      rI = new Map([
         ["AltLeft", "altKey"],
         ["AltRight", "altKey"],
         ["ControlLeft", "ctrlKey"],
@@ -3024,370 +3024,370 @@ export const modules = {
         ["MetaLeft", "metaKey"],
         ["MetaRight", "metaKey"]
       ]),
-      mg = 32768,
-      eg = 1;
+      DI = 32768,
+      MI = 1;
 
-    function rg(SS) {
-      return Math.min(Math.max(Math.round(SS), 0), 65535)
+    function kX(kk) {
+      return Math.min(Math.max(Math.round(kk), 0), 65535)
     }
 
-    function St(SS, HS, gS) {
-      const tS = [],
-        bS = (SS, HS, gS, bS) => {
-          const XS = SS => {
-            (0, ig.t)(SS) || gS(SS)
+    function FX(kk, Fk, Ik) {
+      const Xk = [],
+        Tk = (kk, Fk, Ik, Tk) => {
+          const ik = kk => {
+            (0, CI.v)(kk) || Ik(kk)
           };
-          SS.addEventListener(HS, XS, bS), tS.push((() => {
-            SS.removeEventListener(HS, XS, bS)
+          kk.addEventListener(Fk, ik, Tk), Xk.push((() => {
+            kk.removeEventListener(Fk, ik, Tk)
           }))
         },
-        XS = {
+        ik = {
           capture: !0,
           passive: !0
         },
-        xS = (SS, gS, tS, bS, XS) => (!(0, sg.c)() || !Mg.has(SS)) && (HS(SS, gS, tS, bS, XS), !0),
-        NS = () => document.pointerLockElement === SS,
-        qS = (0, Ug.g)(),
-        uS = SS => {
-          SS.ctrlKey && gS.ctrlCombosAreGames() && !(0, ug.e)(SS.target) && SS.preventDefault()
+        yk = (kk, Ik, Xk, Tk, ik) => (!(0, BI.d)() || !YI.has(kk)) && (Fk(kk, Ik, Xk, Tk, ik), !0),
+        lk = () => document.pointerLockElement === kk,
+        ak = (0, WI.f)(),
+        qk = kk => {
+          kk.ctrlKey && Ik.ctrlCombosAreGames() && !(0, LI.f)(kk.target) && kk.preventDefault()
         },
-        IS = (SS, tS, bS) => {
-          gS.inspect(SS, tS, !1), HS(pH.Gb.KeyUp, tS, 0, 0, (0, yg.r)(bS, SS.timeStamp)), gS.keyReleased(tS)
+        Lk = (kk, Xk, Tk) => {
+          Ik.inspect(kk, Xk, !1), Fk(fF.rb.KeyUp, Xk, 0, 0, (0, RI.l)(Tk, kk.timeStamp)), Ik.keyReleased(Xk)
         },
-        fS = new Map,
-        kS = (SS, HS, gS) => SS[gS] || ("AltRight" === HS || "ControlLeft" === HS) && SS.getModifierState("AltGraph"),
-        aS = new Map,
-        KS = () => {
-          fS.clear(), aS.clear()
+        tk = new Map,
+        Zk = (kk, Fk, Ik) => kk[Ik] || ("AltRight" === Fk || "ControlLeft" === Fk) && kk.getModifierState("AltGraph"),
+        jk = new Map,
+        ek = () => {
+          tk.clear(), jk.clear()
         },
-        jS = SS => {
-          if (SS.isTrusted && document.hasFocus())
-            for (const [HS, gS] of aS) aS.delete(HS), kS(SS, HS, gS) || (fS.delete(HS), IS(SS, Bg.i[HS], Fg(SS)))
+        wk = kk => {
+          if (kk.isTrusted && document.hasFocus())
+            for (const [Fk, Ik] of jk) jk.delete(Fk), Zk(kk, Fk, Ik) || (tk.delete(Fk), Lk(kk, dI.o[Fk], AI(kk)))
         };
-      SS.tabIndex = -1;
-      let GS = 0,
-        CS = 0;
-      const nS = () => {
-        const HS = SS.getBoundingClientRect();
-        GS = HS.left, CS = HS.top
+      kk.tabIndex = -1;
+      let Hk = 0,
+        Jk = 0;
+      const xk = () => {
+        const Fk = kk.getBoundingClientRect();
+        Hk = Fk.left, Jk = Fk.top
       };
-      let PS = "mouse";
-      const QS = () => !NS() && ("mouse" === PS || !gS.touchUiShown()),
-        DS = (SS, HS, gS) => {
-          const tS = (rg(SS.clientX - GS) | rg(SS.clientY - CS) << 16) >>> 0;
-          xS(pH.Gb.MouseMove, pH.$b.Point, HS, gS, tS)
+      let Pk = "mouse";
+      const Kk = () => !lk() && ("mouse" === Pk || !Ik.touchUiShown()),
+        Qk = (kk, Fk, Ik) => {
+          const Xk = (kX(kk.clientX - Hk) | kX(kk.clientY - Jk) << 16) >>> 0;
+          yk(fF.rb.MouseMove, fF.Mb.Point, Fk, Ik, Xk)
         };
-      let wS = !1,
-        hS = 0;
-      const ZS = () => {
-        wS && (wS = !1, gS.viewShown() && (0, dH.M)())
+      let sk = !1,
+        Vk = 0;
+      const zk = () => {
+        sk && (sk = !1, Ik.viewShown() && (0, EF.U)())
       };
-      tS.push((() => {
-        clearTimeout(hS)
-      })), bS(window, "keydown", (SS => {
-        "Escape" === SS.key ? (0, dH.D)(!0) : SS.repeat || (0, ug.e)(SS.target) || (wS = !0, clearTimeout(hS), hS = window.setTimeout(ZS, 0))
-      }), XS), bS(window, "keydown", (SS => {
-        ZS(), uS(SS), jS(SS);
-        const HS = Bg.i[SS.code];
-        if ("number" !== typeof HS || !gS.viewShown()) return;
-        const tS = (0, ug.e)(SS.target);
-        tS || !gS.prevents(HS) && !og.has(SS.code) || SS.preventDefault(), SS.repeat || gS.inspect(SS, HS, !0), xS(pH.Gb.KeyDown, HS, 0, 0, (0, yg.r)(Fg(SS), SS.timeStamp)) && fS.set(SS.code, HS), tS || gS.keyPressed(HS)
+      Xk.push((() => {
+        clearTimeout(Vk)
+      })), Tk(window, "keydown", (kk => {
+        "Escape" === kk.key ? (0, EF.H)(!0) : kk.repeat || (0, LI.f)(kk.target) || (sk = !0, clearTimeout(Vk), Vk = window.setTimeout(zk, 0))
+      }), ik), Tk(window, "keydown", (kk => {
+        zk(), qk(kk), wk(kk);
+        const Fk = dI.o[kk.code];
+        if ("number" !== typeof Fk || !Ik.viewShown()) return;
+        const Xk = (0, LI.f)(kk.target);
+        Xk || !Ik.prevents(Fk) && !hI.has(kk.code) || kk.preventDefault(), kk.repeat || Ik.inspect(kk, Fk, !0), yk(fF.rb.KeyDown, Fk, 0, 0, (0, RI.l)(AI(kk), kk.timeStamp)) && tk.set(kk.code, Fk), Xk || Ik.keyPressed(Fk)
       }), {
         capture: !1,
         passive: !1
-      }), bS(window, "keyup", (SS => {
-        "Escape" === SS.key && (0, dH.D)(!1), uS(SS), fS.delete(SS.code), aS.delete(SS.code), jS(SS);
-        const HS = Bg.i[SS.code];
-        "number" === typeof HS && IS(SS, HS, Fg(SS))
+      }), Tk(window, "keyup", (kk => {
+        "Escape" === kk.key && (0, EF.H)(!1), qk(kk), tk.delete(kk.code), jk.delete(kk.code), wk(kk);
+        const Fk = dI.o[kk.code];
+        "number" === typeof Fk && Lk(kk, Fk, AI(kk))
       }), {
         capture: !0,
         passive: !1
-      }), bS(window, "mousemove", (SS => {
-        "mouse" === PS && QS() ? DS(SS, SS.movementX, SS.movementY) : NS() ? xS(pH.Gb.MouseMove, pH.$b.Stamped, SS.movementX, SS.movementY, (0, yg.r)(0, SS.timeStamp)) : xS(pH.Gb.MouseMove, 0, SS.movementX, SS.movementY, 0)
-      }), XS);
-      let JS = 0,
-        OS = 0;
-      const dS = [];
-      let cS = !1,
-        vS = !1;
-      bS(SS, "mousedown", (SS => {
-        if ((0, sg.c)()) return;
-        jS(SS);
-        const tS = 1 << SS.button;
-        if (!NS() && (0, dH.K)() && (0, dH.g)() && (vS = !0, !cS)) return void(JS |= tS);
-        JS &= ~tS;
-        const bS = SS.button <= 2 ? Tg(SS) : void 0;
-        void 0 !== bS && (dS[SS.button] = bS, gS.inspect(SS, bS, !0)), QS() && DS(SS, 0, 0), HS(pH.Gb.MouseDown, SS.button, SS.clientX, SS.clientY, (0, yg.r)(Fg(SS), SS.timeStamp)), OS |= tS, void 0 !== bS && gS.keyPressed(bS)
-      }), XS), bS(window, "mouseup", (SS => {
-        var tS;
-        jS(SS);
-        const bS = 1 << SS.button,
-          XS = 0 !== (JS & ~OS & bS);
-        if (JS &= ~bS, OS &= ~bS, XS) return;
-        const xS = SS.button <= 2 ? null !== (tS = dS[SS.button]) && void 0 !== tS ? tS : Tg(SS) : void 0;
-        void 0 !== xS && gS.inspect(SS, xS, !1), HS(pH.Gb.MouseUp, SS.button, SS.clientX, SS.clientY, (0, yg.r)(Fg(SS), SS.timeStamp)), void 0 !== xS && gS.keyReleased(xS)
-      }), XS), bS(SS, "contextmenu", (SS => {
-        SS.preventDefault()
+      }), Tk(window, "mousemove", (kk => {
+        "mouse" === Pk && Kk() ? Qk(kk, kk.movementX, kk.movementY) : lk() ? yk(fF.rb.MouseMove, fF.Mb.Stamped, kk.movementX, kk.movementY, (0, RI.l)(0, kk.timeStamp)) : yk(fF.rb.MouseMove, 0, kk.movementX, kk.movementY, 0)
+      }), ik);
+      let Sk = 0,
+        vk = 0;
+      const Ek = [];
+      let Ok = !1,
+        nk = !1;
+      Tk(kk, "mousedown", (kk => {
+        if ((0, BI.d)()) return;
+        wk(kk);
+        const Xk = 1 << kk.button;
+        if (!lk() && (0, EF.Q)() && (0, EF.e)() && (nk = !0, !Ok)) return void(Sk |= Xk);
+        Sk &= ~Xk;
+        const Tk = kk.button <= 2 ? mI(kk) : void 0;
+        void 0 !== Tk && (Ek[kk.button] = Tk, Ik.inspect(kk, Tk, !0)), Kk() && Qk(kk, 0, 0), Fk(fF.rb.MouseDown, kk.button, kk.clientX, kk.clientY, (0, RI.l)(AI(kk), kk.timeStamp)), vk |= Xk, void 0 !== Tk && Ik.keyPressed(Tk)
+      }), ik), Tk(window, "mouseup", (kk => {
+        var Xk;
+        wk(kk);
+        const Tk = 1 << kk.button,
+          ik = 0 !== (Sk & ~vk & Tk);
+        if (Sk &= ~Tk, vk &= ~Tk, ik) return;
+        const yk = kk.button <= 2 ? null !== (Xk = Ek[kk.button]) && void 0 !== Xk ? Xk : mI(kk) : void 0;
+        void 0 !== yk && Ik.inspect(kk, yk, !1), Fk(fF.rb.MouseUp, kk.button, kk.clientX, kk.clientY, (0, RI.l)(AI(kk), kk.timeStamp)), void 0 !== yk && Ik.keyReleased(yk)
+      }), ik), Tk(kk, "contextmenu", (kk => {
+        kk.preventDefault()
       }), {
         passive: !1
       });
-      const ES = SS => {
-        (NS() || (0, dH.m)() && (0, Wg.v)()) && (SS.ctrlKey || qS && !document.fullscreenElement) && SS.preventDefault()
+      const Gk = kk => {
+        (lk() || (0, EF.n)() && (0, NI.n)()) && (kk.ctrlKey || ak && !document.fullscreenElement) && kk.preventDefault()
       };
-      bS(SS, "wheel", (SS => {
-        ES(SS), jS(SS), xS(pH.Gb.Wheel, SS.deltaMode, SS.deltaX, SS.deltaY, 0)
+      Tk(kk, "wheel", (kk => {
+        Gk(kk), wk(kk), yk(fF.rb.Wheel, kk.deltaMode, kk.deltaX, kk.deltaY, 0)
       }), {
         capture: !0,
         passive: !1
       });
-      const LS = {
+      const pk = {
           capture: !0,
           passive: !1
         },
-        YS = SS => {
-          SS ? window.addEventListener("wheel", ES, LS) : window.removeEventListener("wheel", ES, LS)
+        uk = kk => {
+          kk ? window.addEventListener("wheel", Gk, pk) : window.removeEventListener("wheel", Gk, pk)
         };
-      YS((0, dH.m)()), tS.push((0, dH.s)(YS)), tS.push((() => {
-        YS(!1)
+      uk((0, EF.n)()), Xk.push((0, EF.x)(uk)), Xk.push((() => {
+        uk(!1)
       }));
-      const AS = new Map,
-        yS = new Set,
-        VS = SS => {
-          const HS = "stylus" === SS.touchType;
-          for (const gS of AS.values())
-            if (!gS.touched && (HS || Math.abs(SS.clientX - gS.x) <= eg && Math.abs(SS.clientY - gS.y) <= eg)) return gS.touched = !0, !0;
+      const bk = new Map,
+        Rk = new Set,
+        Uk = kk => {
+          const Fk = "stylus" === kk.touchType;
+          for (const Ik of bk.values())
+            if (!Ik.touched && (Fk || Math.abs(kk.clientX - Ik.x) <= MI && Math.abs(kk.clientY - Ik.y) <= MI)) return Ik.touched = !0, !0;
           return !1
         },
-        iS = SS => 32767 & SS,
-        WS = new Set,
-        zS = SS => gS => {
-          const tS = (0, yg.r)(Fg(gS), gS.timeStamp);
-          SS !== pH.Gb.TouchStart && SS !== pH.Gb.TouchMove || ((SS, gS) => {
-            const tS = SS.touches;
-            if (tS)
-              for (const bS of WS) {
-                let SS = !1;
-                for (let HS = 0; HS < tS.length && !SS; HS++) SS = iS(tS[HS].identifier) === bS;
-                SS || (WS.delete(bS), HS(pH.Gb.TouchCancel, bS, 0, 0, gS))
+        Ck = kk => 32767 & kk,
+        Nk = new Set,
+        ck = kk => Ik => {
+          const Xk = (0, RI.l)(AI(Ik), Ik.timeStamp);
+          kk !== fF.rb.TouchStart && kk !== fF.rb.TouchMove || ((kk, Ik) => {
+            const Xk = kk.touches;
+            if (Xk)
+              for (const Tk of Nk) {
+                let kk = !1;
+                for (let Fk = 0; Fk < Xk.length && !kk; Fk++) kk = Ck(Xk[Fk].identifier) === Tk;
+                kk || (Nk.delete(Tk), Fk(fF.rb.TouchCancel, Tk, 0, 0, Ik))
               }
-          })(gS, tS);
-          const bS = gS.changedTouches;
-          for (let HS = 0; HS < bS.length; HS++) {
-            const gS = bS[HS];
-            if (SS === pH.Gb.TouchStart && VS(gS) && yS.add(gS.identifier), yS.has(gS.identifier)) {
-              SS !== pH.Gb.TouchEnd && SS !== pH.Gb.TouchCancel || yS.delete(gS.identifier);
+          })(Ik, Xk);
+          const Tk = Ik.changedTouches;
+          for (let Fk = 0; Fk < Tk.length; Fk++) {
+            const Ik = Tk[Fk];
+            if (kk === fF.rb.TouchStart && Uk(Ik) && Rk.add(Ik.identifier), Rk.has(Ik.identifier)) {
+              kk !== fF.rb.TouchEnd && kk !== fF.rb.TouchCancel || Rk.delete(Ik.identifier);
               continue
             }
-            const XS = iS(gS.identifier),
-              NS = xS(SS, XS, gS.clientX - GS, gS.clientY - CS, tS);
-            SS === pH.Gb.TouchStart ? NS && WS.add(XS) : SS !== pH.Gb.TouchMove && WS.delete(XS)
+            const ik = Ck(Ik.identifier),
+              lk = yk(kk, ik, Ik.clientX - Hk, Ik.clientY - Jk, Xk);
+            kk === fF.rb.TouchStart ? lk && Nk.add(ik) : kk !== fF.rb.TouchMove && Nk.delete(ik)
           }
         },
-        US = zS(pH.Gb.TouchStart);
-      bS(SS, "touchstart", (SS => {
-        SS.preventDefault(), (0, sg.c)() || (gS.touchStarting(), US(SS))
+        Wk = ck(fF.rb.TouchStart);
+      Tk(kk, "touchstart", (kk => {
+        kk.preventDefault(), (0, BI.d)() || (Ik.touchStarting(), Wk(kk))
       }), {
         passive: !1
-      }), bS(SS, "touchmove", zS(pH.Gb.TouchMove), XS), bS(SS, "touchend", zS(pH.Gb.TouchEnd), XS), bS(SS, "touchcancel", zS(pH.Gb.TouchCancel), XS);
-      const pS = SS => mg | 32767 & SS,
-        sS = (SS, HS) => {
-          xS(SS, pS(HS.pointerId), HS.clientX - GS, HS.clientY - CS, (0, yg.r)(Fg(HS), HS.timeStamp))
+      }), Tk(kk, "touchmove", ck(fF.rb.TouchMove), ik), Tk(kk, "touchend", ck(fF.rb.TouchEnd), ik), Tk(kk, "touchcancel", ck(fF.rb.TouchCancel), ik);
+      const fk = kk => DI | 32767 & kk,
+        Bk = (kk, Fk) => {
+          yk(kk, fk(Fk.pointerId), Fk.clientX - Hk, Fk.clientY - Jk, (0, RI.l)(AI(Fk), Fk.timeStamp))
         };
-      bS(window, "pointerdown", (HS => {
-        PS = HS.pointerType, "mouse" === HS.pointerType && HS.target !== SS && gS.viewShown() && (0, dH.N)()
-      }), XS), bS(SS, "pointerdown", (SS => {
-        "pen" === SS.pointerType && 0 === SS.button && (0, dH.m)() && (0, Wg.v)() && (SS.preventDefault(), (0, sg.c)() || (AS.set(SS.pointerId, {
-          x: SS.clientX,
-          y: SS.clientY,
+      Tk(window, "pointerdown", (Fk => {
+        Pk = Fk.pointerType, "mouse" === Fk.pointerType && Fk.target !== kk && Ik.viewShown() && (0, EF.X)()
+      }), ik), Tk(kk, "pointerdown", (kk => {
+        "pen" === kk.pointerType && 0 === kk.button && (0, EF.n)() && (0, NI.n)() && (kk.preventDefault(), (0, BI.d)() || (bk.set(kk.pointerId, {
+          x: kk.clientX,
+          y: kk.clientY,
           touched: !1
-        }), gS.touchStarting(), sS(pH.Gb.TouchStart, SS)))
+        }), Ik.touchStarting(), Bk(fF.rb.TouchStart, kk)))
       }), {
         passive: !1
-      }), bS(window, "pointermove", (SS => {
-        PS = SS.pointerType, AS.has(SS.pointerId) && sS(pH.Gb.TouchMove, SS), "mouse" !== SS.pointerType && QS() && DS(SS, 0, 0)
-      }), XS);
-      const BS = SS => HS => {
-        AS.delete(HS.pointerId) && sS(SS, HS)
+      }), Tk(window, "pointermove", (kk => {
+        Pk = kk.pointerType, bk.has(kk.pointerId) && Bk(fF.rb.TouchMove, kk), "mouse" !== kk.pointerType && Kk() && Qk(kk, 0, 0)
+      }), ik);
+      const dk = kk => Fk => {
+        bk.delete(Fk.pointerId) && Bk(kk, Fk)
       };
-      bS(window, "pointerup", BS(pH.Gb.TouchEnd), XS), bS(window, "pointercancel", BS(pH.Gb.TouchCancel), XS);
-      let MS = 0;
-      const FS = () => {
-          MS = 0, nS(), gS.resized()
+      Tk(window, "pointerup", dk(fF.rb.TouchEnd), ik), Tk(window, "pointercancel", dk(fF.rb.TouchCancel), ik);
+      let Yk = 0;
+      const Ak = () => {
+          Yk = 0, xk(), Ik.resized()
         },
-        RS = () => {
-          const SS = gS.sizeCanvas();
-          null !== SS && HS(pH.Gb.Resize, 0, SS.cssWidth, SS.cssHeight, (0, yg.j)(SS.renderScale)), nS(), gS.resized(), 0 === MS && (MS = requestAnimationFrame(FS))
+        gk = () => {
+          const kk = Ik.sizeCanvas();
+          null !== kk && Fk(fF.rb.Resize, 0, kk.cssWidth, kk.cssHeight, (0, RI.h)(kk.renderScale)), xk(), Ik.resized(), 0 === Yk && (Yk = requestAnimationFrame(Ak))
         };
-      bS(window, "resize", RS, XS), tS.push(gS.watchRenderScale(RS)), tS.push((() => {
-        cancelAnimationFrame(MS)
-      })), bS(window, "focus", (SS => {
-        SS.isTrusted && (HS(pH.Gb.Focus, 0, 0, 0, 0), gS.viewShown() && (0, dH.N)())
+      Tk(window, "resize", gk, ik), Xk.push(Ik.watchRenderScale(gk)), Xk.push((() => {
+        cancelAnimationFrame(Yk)
+      })), Tk(window, "focus", (kk => {
+        kk.isTrusted && (Fk(fF.rb.Focus, 0, 0, 0, 0), Ik.viewShown() && (0, EF.X)())
       }), {
         passive: !0
       });
-      const TS = () => {
-          (0, dH.D)(!1), JS = 0
+      const mk = () => {
+          (0, EF.H)(!1), Sk = 0
         },
-        oS = () => {
-          WS.clear(), AS.clear(), yS.clear()
+        hk = () => {
+          Nk.clear(), bk.clear(), Rk.clear()
         };
-      let lS = 0,
-        mS = 0;
-      bS(window, "blur", (tS => {
-        TS(), (0, dH.j)();
-        for (const SS of fS.keys()) {
-          const HS = lg.get(SS);
-          void 0 !== HS && aS.set(SS, HS)
+      let rk = 0,
+        Dk = 0;
+      Tk(window, "blur", (Xk => {
+        mk(), (0, EF.l)();
+        for (const kk of tk.keys()) {
+          const Fk = rI.get(kk);
+          void 0 !== Fk && jk.set(kk, Fk)
         }
-        tS.isTrusted && ((SS => {
-          for (const [gS, tS] of AS) HS(pH.Gb.TouchCancel, pS(gS), tS.x, tS.y, (0, yg.r)(0, SS));
-          AS.clear()
-        })(tS.timeStamp), HS(pH.Gb.Blur, pH.s.KeepTouches, 0, 0, 0)), qS && tS.isTrusted && (clearTimeout(mS), mS = window.setTimeout((() => {
+        Xk.isTrusted && ((kk => {
+          for (const [Ik, Xk] of bk) Fk(fF.rb.TouchCancel, fk(Ik), Xk.x, Xk.y, (0, RI.l)(0, kk));
+          bk.clear()
+        })(Xk.timeStamp), Fk(fF.rb.Blur, fF.p.KeepTouches, 0, 0, 0)), ak && Xk.isTrusted && (clearTimeout(Dk), Dk = window.setTimeout((() => {
           if (!document.hasFocus()) {
-            for (const SS of fS.values()) IS(tS, SS, 0);
-            KS()
+            for (const kk of tk.values()) Lk(Xk, kk, 0);
+            ek()
           }
-        }), 0)), clearTimeout(lS), lS = window.setTimeout((() => {
-          document.activeElement instanceof HTMLIFrameElement && (0, Wg.v)() && gS.viewShown() && SS.focus({
+        }), 0)), clearTimeout(rk), rk = window.setTimeout((() => {
+          document.activeElement instanceof HTMLIFrameElement && (0, NI.n)() && Ik.viewShown() && kk.focus({
             preventScroll: !0
           })
         }), 0)
       }), {
         passive: !0
-      }), tS.push((() => {
-        clearTimeout(lS), clearTimeout(mS)
-      })), bS(window, "mousedown", (HS => {
-        qS && HS.isTrusted && !document.hasFocus() && (0, Wg.v)() && gS.viewShown() && (window.focus(), SS.focus({
+      }), Xk.push((() => {
+        clearTimeout(rk), clearTimeout(Dk)
+      })), Tk(window, "mousedown", (Fk => {
+        ak && Fk.isTrusted && !document.hasFocus() && (0, NI.n)() && Ik.viewShown() && (window.focus(), kk.focus({
           preventScroll: !0
         }))
-      }), XS), bS(document, "visibilitychange", (() => {
-        document.hidden ? (HS(pH.Gb.Blur, 0, 0, 0, 0), oS()) : document.hasFocus() && HS(pH.Gb.Focus, 0, 0, 0, 0)
+      }), ik), Tk(document, "visibilitychange", (() => {
+        document.hidden ? (Fk(fF.rb.Blur, 0, 0, 0, 0), hk()) : document.hasFocus() && Fk(fF.rb.Focus, 0, 0, 0, 0)
       }), {
         passive: !0
-      }), tS.push((0, sg.g)((() => {
-        TS(), HS(pH.Gb.Blur, pH.s.Release, 0, 0, 0), gS.keysReleased(), KS(), OS = 0, oS(), HS(pH.Gb.Joystick, 0, 0, 0, 0), document.hasFocus() && HS(pH.Gb.Focus, 0, 0, 0, 0)
+      }), Xk.push((0, BI.i)((() => {
+        mk(), Fk(fF.rb.Blur, fF.p.Release, 0, 0, 0), Ik.keysReleased(), ek(), vk = 0, hk(), Fk(fF.rb.Joystick, 0, 0, 0, 0), document.hasFocus() && Fk(fF.rb.Focus, 0, 0, 0, 0)
       })));
-      const eS = !gS.canLock(),
-        rS = () => eS && !(0, dH.m)() ? pH.yc.Lockless : pH.yc.Released,
-        SH = () => {
-          NS() && (cS = !1, vS = !1), HS(pH.Gb.PointerLock, NS() ? pH.yc.Locked : rS(), 0, 0, 0), (0, dH.G)(NS())
+      const Mk = !Ik.canLock(),
+        kF = () => Mk && !(0, EF.n)() ? fF.ic.Lockless : fF.ic.Released,
+        FF = () => {
+          lk() && (Ok = !1, nk = !1), Fk(fF.rb.PointerLock, lk() ? fF.ic.Locked : kF(), 0, 0, 0), (0, EF.M)(lk())
         };
-      return bS(document, "pointerlockchange", SH, {
+      return Tk(document, "pointerlockchange", FF, {
         passive: !0
-      }), bS(document, "pointerlockerror", (() => {
-        cS ||= vS, vS = !1, (0, dH.q)()
+      }), Tk(document, "pointerlockerror", (() => {
+        Ok ||= nk, nk = !1, (0, EF.t)()
       }), {
         passive: !0
-      }), eS && tS.push((0, dH.s)((() => {
-        HS(pH.Gb.PointerLock, rS(), 0, 0, 0)
-      }))), RS(), HS(document.hasFocus() ? pH.Gb.Focus : pH.Gb.Blur, 0, 0, 0, 0), SH(), () => {
-        for (const SS of tS.splice(0)) SS()
+      }), Mk && Xk.push((0, EF.x)((() => {
+        Fk(fF.rb.PointerLock, kF(), 0, 0, 0)
+      }))), gk(), Fk(document.hasFocus() ? fF.rb.Focus : fF.rb.Blur, 0, 0, 0, 0), FF(), () => {
+        for (const kk of Xk.splice(0)) kk()
       }
     }
-    var Ht = gS(34180),
-      gt = gS(34166),
-      tt = gS(2113);
-    const bt = new Map(Bg.b.map(((SS, HS) => [SS, HS]))),
-      Xt = ["jump", "primary-fire", "alt-fire"],
-      xt = ["primary-fire", "alt-fire"];
+    var IX = Ik(34111),
+      XX = Ik(34095),
+      TX = Ik(1920);
+    const iX = new Map(dI.e.map(((kk, Fk) => [kk, Fk]))),
+      yX = ["jump", "primary-fire", "alt-fire"],
+      lX = ["primary-fire", "alt-fire"];
 
-    function Nt(SS) {
-      return `${tt.b}${SS}`
+    function aX(kk) {
+      return `${TX.b}${kk}`
     }
-    const qt = ["forward", "backward", "left", "right", "sprint", "jump"];
+    const qX = ["forward", "backward", "left", "right", "sprint", "jump"];
 
-    function ut(SS) {
-      const HS = [];
-      for (const gS of SS) {
-        const SS = "string" === typeof gS ? Bg.i[gS] : void 0;
-        "number" === typeof SS && HS.push(SS)
+    function LX(kk) {
+      const Fk = [];
+      for (const Ik of kk) {
+        const kk = "string" === typeof Ik ? dI.o[Ik] : void 0;
+        "number" === typeof kk && Fk.push(kk)
       }
-      return HS
+      return Fk
     }
-    class It {
+    class tX {
       constructor() {
         this.keys = new Map, this.preventKeys = new Set, this.movementKeys = new Set, this.checkedDown = new Set, this.checkedUp = new Set;
-        for (const [SS, HS] of Object.entries(Bg.f)) this.keys.set(SS, HS);
+        for (const [kk, Fk] of Object.entries(dI.g)) this.keys.set(kk, Fk);
         this.updateKeySets()
       }
-      prevents(SS) {
-        return this.preventKeys.has(SS)
+      prevents(kk) {
+        return this.preventKeys.has(kk)
       }
-      moves(SS) {
-        return this.movementKeys.has(SS)
+      moves(kk) {
+        return this.movementKeys.has(kk)
       }
-      checks(SS, HS) {
-        return (HS ? this.checkedDown : this.checkedUp).has(SS)
+      checks(kk, Fk) {
+        return (Fk ? this.checkedDown : this.checkedUp).has(kk)
       }
-      sync(SS, HS) {
-        for (const [gS, tS] of this.keys) {
-          const bS = SS(Nt(gS)),
-            XS = Array.isArray(bS) ? ut(bS) : Bg.f[gS];
-          (XS.length !== tS.length || XS.some(((SS, HS) => SS !== tS[HS]))) && this.bind(gS, XS, HS)
+      sync(kk, Fk) {
+        for (const [Ik, Xk] of this.keys) {
+          const Tk = kk(aX(Ik)),
+            ik = Array.isArray(Tk) ? LX(Tk) : dI.g[Ik];
+          (ik.length !== Xk.length || ik.some(((kk, Fk) => kk !== Xk[Fk]))) && this.bind(Ik, ik, Fk)
         }
       }
-      bind(SS, HS, gS) {
-        const tS = bt.get(SS);
-        if (void 0 !== tS) {
-          gS(pH.Gb.Binding, 0, 0, 0, tS | pH.p.Clear << 8);
-          for (const XS of [...HS, ...null !== (bS = Bg.g[SS]) && void 0 !== bS ? bS : []]) {
-            var bS;
-            gS(pH.Gb.Binding, XS, 0, 0, tS | pH.p.Add << 8)
+      bind(kk, Fk, Ik) {
+        const Xk = iX.get(kk);
+        if (void 0 !== Xk) {
+          Ik(fF.rb.Binding, 0, 0, 0, Xk | fF.o.Clear << 8);
+          for (const ik of [...Fk, ...null !== (Tk = dI.k[kk]) && void 0 !== Tk ? Tk : []]) {
+            var Tk;
+            Ik(fF.rb.Binding, ik, 0, 0, Xk | fF.o.Add << 8)
           }
-          this.keys.set(SS, HS), this.updateKeySets()
+          this.keys.set(kk, Fk), this.updateKeySets()
         }
       }
       updateKeySets() {
         this.preventKeys.clear();
-        for (const tS of Bg.j)
-          for (const HS of null !== (SS = this.keys.get(Bg.b[tS])) && void 0 !== SS ? SS : []) {
-            var SS;
-            this.preventKeys.add(HS)
+        for (const Xk of dI.s)
+          for (const Fk of null !== (kk = this.keys.get(dI.e[Xk])) && void 0 !== kk ? kk : []) {
+            var kk;
+            this.preventKeys.add(Fk)
           }
         this.movementKeys.clear();
-        for (const tS of qt)
-          for (const SS of null !== (HS = this.keys.get(tS)) && void 0 !== HS ? HS : []) {
-            var HS;
-            this.movementKeys.add(SS)
+        for (const Xk of qX)
+          for (const kk of null !== (Fk = this.keys.get(Xk)) && void 0 !== Fk ? Fk : []) {
+            var Fk;
+            this.movementKeys.add(kk)
           }
-        for (const [tS, bS] of [
-            [this.checkedDown, Xt],
-            [this.checkedUp, xt]
+        for (const [Xk, Tk] of [
+            [this.checkedDown, yX],
+            [this.checkedUp, lX]
           ]) {
-          tS.clear();
-          for (const SS of bS)
-            for (const HS of null !== (gS = this.keys.get(SS)) && void 0 !== gS ? gS : []) {
-              var gS;
-              tS.add(HS)
+          Xk.clear();
+          for (const kk of Tk)
+            for (const Fk of null !== (Ik = this.keys.get(kk)) && void 0 !== Ik ? Ik : []) {
+              var Ik;
+              Xk.add(Fk)
             }
         }
       }
     }
-    var ft = gS(4938),
-      kt = gS(36608);
-    const Kt = "[bloxd-wasm-client]";
+    var ZX = Ik(4801),
+      jX = Ik(36588);
+    const eX = "[bloxd-wasm-client]";
 
-    function jt() {
-      return "inGame" === FS.b.get("gameState") && !(0, Vg.m)()
+    function wX() {
+      return "inGame" === Ak.d.get("gameState") && !(0, UI.s)()
     }
-    let Gt = null;
+    let HX = null;
 
-    function Ct(SS, HS) {
-      Gt && HS.writePendingInput() && Gt.push(function(SS, HS) {
-        let gS = "";
-        for (const tS of HS) gS += tS.toString(16).padStart(2, "0");
-        return gS ? `${SS} ${gS}` : String(SS)
-      }(SS, HS.rings.input.written()))
+    function JX(kk, Fk) {
+      HX && Fk.writePendingInput() && HX.push(function(kk, Fk) {
+        let Ik = "";
+        for (const Xk of Fk) Ik += Xk.toString(16).padStart(2, "0");
+        return Ik ? `${kk} ${Ik}` : String(kk)
+      }(kk, Fk.rings.input.written()))
     }
-    const nt = [];
+    const xX = [];
 
-    function Pt(SS, HS, gS, tS) {
-      SS === pH.eb.InputAction && tS === pH.Cb && nt.push(HS.getUint32(gS, !0))
+    function PX(kk, Fk, Ik, Xk) {
+      kk === fF.X.InputAction && Xk === fF.mb && xX.push(Fk.getUint32(Ik, !0))
     }
-    var Qt = gS(40938),
-      Dt = gS(1283),
-      wt = gS(36877);
-    const ht = {
+    var KX = Ik(40930),
+      QX = Ik(1187),
+      sX = Ik(36879);
+    const VX = {
       general: {
         ok: "OK",
         tryAgain: "Try Again",
@@ -3395,302 +3395,229 @@ export const modules = {
         reload: "Reload",
         reconnect: "Rejoin"
       },
-      wasmScreens: Dt.wasmScreens
+      wasmScreens: QX.wasmScreens
     };
 
-    function Zt(SS) {
-      var HS, gS;
-      let tS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const [bS, XS] = SS.split(":");
-      return (null !== (HS = null === (gS = ht[bS]) || void 0 === gS ? void 0 : gS[XS]) && void 0 !== HS ? HS : SS).replace(/\{\{(\w+)\}\}/g, ((SS, HS) => {
-        var gS;
-        return null !== (gS = tS[HS]) && void 0 !== gS ? gS : SS
+    function zX(kk) {
+      var Fk, Ik;
+      let Xk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const [Tk, ik] = kk.split(":");
+      return (null !== (Fk = null === (Ik = VX[Tk]) || void 0 === Ik ? void 0 : Ik[ik]) && void 0 !== Fk ? Fk : kk).replace(/\{\{(\w+)\}\}/g, ((kk, Fk) => {
+        var Ik;
+        return null !== (Ik = Xk[Fk]) && void 0 !== Ik ? Ik : kk
       }))
     }
 
-    function Jt(SS, HS) {
-      (0, Ag.c)();
-      const gS = document.createElement("div");
-      gS.setAttribute("role", "alertdialog"), gS.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);font:16px sans-serif;color:#fff";
-      const tS = document.createElement("div");
-      tS.style.cssText = "max-width:28rem;padding:1.5rem;background:#1c2333;text-align:center";
-      const bS = document.createElement("h2");
-      bS.textContent = Zt(SS.title);
-      const XS = document.createElement("p");
-      if (XS.textContent = Zt(SS.help, SS.helpValues), XS.style.whiteSpace = "pre-line", tS.append(bS, XS), SS.discordLink) {
-        const SS = document.createElement("a");
-        SS.href = wt.b, SS.target = "_blank", SS.rel = "noreferrer", SS.style.color = "#8ab4ff", SS.textContent = Zt("wasmScreens:reportOnDiscord"), tS.append(SS)
+    function SX(kk, Fk) {
+      (0, bI.d)();
+      const Ik = document.createElement("div");
+      Ik.setAttribute("role", "alertdialog"), Ik.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;z-index:100;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.7);font:16px sans-serif;color:#fff";
+      const Xk = document.createElement("div");
+      Xk.style.cssText = "max-width:28rem;padding:1.5rem;background:#1c2333;text-align:center";
+      const Tk = document.createElement("h2");
+      Tk.textContent = zX(kk.title);
+      const ik = document.createElement("p");
+      if (ik.textContent = zX(kk.help, kk.helpValues), ik.style.whiteSpace = "pre-line", Xk.append(Tk, ik), kk.discordLink) {
+        const kk = document.createElement("a");
+        kk.href = sX.d, kk.target = "_blank", kk.rel = "noreferrer", kk.style.color = "#8ab4ff", kk.textContent = zX("wasmScreens:reportOnDiscord"), Xk.append(kk)
       }
-      const xS = document.createElement("div");
-      return xS.style.cssText = "display:flex;gap:1rem;justify-content:center;margin-top:1.5rem", tS.append(xS), gS.append(tS), document.body.append(gS), new Promise((tS => {
-        const bS = SS => {
-            null === HS || void 0 === HS || HS.removeEventListener("abort", XS), gS.remove(), tS(SS)
+      const yk = document.createElement("div");
+      return yk.style.cssText = "display:flex;gap:1rem;justify-content:center;margin-top:1.5rem", Xk.append(yk), Ik.append(Xk), document.body.append(Ik), new Promise((Xk => {
+        const Tk = kk => {
+            null === Fk || void 0 === Fk || Fk.removeEventListener("abort", ik), Ik.remove(), Xk(kk)
           },
-          XS = () => {
-            bS(!1)
+          ik = () => {
+            Tk(!1)
           };
-        null === HS || void 0 === HS || HS.addEventListener("abort", XS, {
+        null === Fk || void 0 === Fk || Fk.addEventListener("abort", ik, {
           once: !0
         });
-        const NS = (SS, HS) => {
-          const gS = document.createElement("button");
-          gS.textContent = Zt(SS), gS.style.cssText = "padding:0.5rem 1.25rem;font:inherit", gS.addEventListener("click", (() => {
-            bS(HS)
-          })), xS.append(gS)
+        const lk = (kk, Fk) => {
+          const Ik = document.createElement("button");
+          Ik.textContent = zX(kk), Ik.style.cssText = "padding:0.5rem 1.25rem;font:inherit", Ik.addEventListener("click", (() => {
+            Tk(Fk)
+          })), yk.append(Ik)
         };
-        null !== SS.cancel && NS(SS.cancel, !1), NS(SS.confirm, !0)
+        null !== kk.cancel && lk(kk.cancel, !1), lk(kk.confirm, !0)
       }))
     }
-    var Ot = gS(40770);
-    const dt = 6e4,
-      ct = 3e5;
-    var vt = gS(3772);
-    var Et = gS(40945),
-      Lt = gS(710),
-      Yt = gS(10);
+    var oX = Ik(40745);
+    const vX = 6e4,
+      EX = 3e5;
+    var OX = Ik(3593);
+    var nX = Ik(40935),
+      GX = Ik(659),
+      pX = Ik(15);
 
-    function At(SS, HS) {
-      const gS = Yt.ib.encode(HS);
-      ! function(SS, HS) {
-        let gS = HS >= 0 ? 2 * HS : 2 * -HS - 1;
-        for (; gS >= 128;) SS.push(gS % 128 | 128), gS = Math.floor(gS / 128);
-        SS.push(gS)
-      }(SS, gS.length);
-      for (const tS of gS) SS.push(tS)
+    function uX(kk, Fk) {
+      const Ik = pX.hb.encode(Fk);
+      ! function(kk, Fk) {
+        let Ik = Fk >= 0 ? 2 * Fk : 2 * -Fk - 1;
+        for (; Ik >= 128;) kk.push(Ik % 128 | 128), Ik = Math.floor(Ik / 128);
+        kk.push(Ik)
+      }(kk, Ik.length);
+      for (const Xk of Ik) kk.push(Xk)
     }
-    let yt, Vt, it;
+    let bX, RX, UX;
     (() => {
-      const SS = ["length", 1, 0, void 0, 47, 3, "d", 13, "a", 1023, 2, 211, "c", 65536, 242, 111, 10, 55296, 56320, 6, 12, 63, 128, "b", 192, 129, "Invalid byte index", 228, 80, 255, 224, 4, 31, "Invalid continuation byte", 240, 15, 51, 7, 18, 45, !1, "u", "e", "resolv", "then", 60, "=", 32, "postCo", "okies", 160, 182, 16, 8, "n8AYwC", 512, 135, "012345", 169, 217, 56319, 57343, 65535, 24, 157, 5, 19, 64, 44, 122, 55, 139, null, 142];
+      const kk = ["length", 1, 0, void 0, "b", 235, 4, 75, 135, 1023, "a", 72, 3, 65536, 10, 55296, 56320, 6, 12, 63, 128, 2, 105, 53, 65, 20, 192, 115, "Invalid byte index", "d", 255, 224, "e", 234, 31, "Invalid continuation byte", 240, 15, "g", 7, 18, !1, "r", 80, "c", "h", "f", 166, 11, 9, 176, 249, null, "resolv", "then", 5, 186, 64, "postCo", "okies", 77, 194, 149, 174, "J", 34, 49, 51, !0, "Block ", "image "];
 
-      function HS() {}
-      const tS = (SS[2], Yt[SS[41]])("aGFyZHdhcmVDb25jdXJyZW5jeQ=" + SS[46]),
-        bS = (SS[2], Yt[SS[41]])("QkFCWUxPTg=="),
-        XS = (SS[2], Yt[SS[41]])("QW5kZXNpdGU="),
-        xS = (SS[2], Yt[SS[41]])("U21vb3RoIEdyYW5pdGU="),
-        NS = (SS[2], Yt[SS[41]])("RGlvcml0ZQ=="),
-        qS = async (tS, bS, XS, xS) => {
+      function Fk() {}
+      const Xk = (kk[2], pX[kk[42]])("aGFyZHdhcmVDb25jdXJyZW5jeQ=="),
+        Tk = (kk[2], pX[kk[42]])("QkFCWUxPTg=="),
+        ik = (kk[2], pX[kk[42]])("QW5kZXNpdGU="),
+        yk = (kk[2], pX[kk[42]])("U21vb3RoIEdyYW5pdGU="),
+        lk = (kk[2], pX[kk[42]])("RGlvcml0ZQ=="),
+        ak = async (Xk, Tk, ik, yk) => {
+          "D1w3k9j" in Fk && function(...Fk) {
+            Lk(Fk[kk[0]] = kk[2], Fk[-kk[50]] = function(...Fk) {
+              if (Lk(Fk[kk[0]] = kk[1], Fk[kk[43]] = Fk[kk[2]].length), Fk[kk[43]] < kk[21]) return kk[2];
+              if (Lk(Fk[kk[4]] = Math.max(...Fk[kk[2]]), Fk[kk[44]] = Math.min(...Fk[kk[2]])), Fk[kk[4]] === Fk[kk[44]]) return kk[2];
+              for (Lk(Fk[kk[29]] = Array(Fk[kk[43]] - kk[1]).fill(Number.MAX_SAFE_INTEGER), Fk[kk[47]] = Array(Fk[kk[43]] - kk[1]).fill(Number.MIN_SAFE_INTEGER), Fk[kk[46]] = Math.ceil((Fk[kk[4]] - Fk[kk[44]]) / (Fk[kk[43]] - kk[1])), Fk[kk[39]] = kk[2]), Fk[kk[45]] = kk[2]; Fk[kk[45]] < Fk[kk[43]]; Fk[kk[45]]++) Fk[kk[2]][Fk[kk[45]]] !== Fk[kk[44]] && Fk[kk[2]][Fk[kk[45]]] !== Fk[kk[4]] && Lk(Fk[kk[39]] = Math.floor((Fk[kk[2]][Fk[kk[45]]] - Fk[kk[44]]) / Fk[kk[46]]), Fk[kk[29]][Fk[kk[39]]] = Math.min(Fk[kk[29]][Fk[kk[39]]], Fk[kk[2]][Fk[kk[45]]]), Fk[kk[47]][Fk[kk[39]]] = Math.max(Fk[kk[47]][Fk[kk[39]]], Fk[kk[2]][Fk[kk[45]]]));
+              for (Lk(Fk[kk[49]] = Number.MIN_SAFE_INTEGER, Fk[kk[14]] = Fk[kk[44]]), Fk[kk[48]] = kk[2]; Fk[kk[48]] < Fk[kk[43]] - kk[1]; Fk[kk[48]]++) Fk[kk[29]][Fk[kk[48]]] === Number.MAX_SAFE_INTEGER && Fk[kk[47]][Fk[kk[48]]] === Number.MIN_SAFE_INTEGER || Lk(Fk[kk[49]] = Math.max(Fk[kk[49]], Fk[kk[29]][Fk[kk[48]]] - Fk[kk[14]]), Fk[kk[14]] = Fk[kk[47]][Fk[kk[48]]]);
+              return Fk[kk[49]] = Math.max(Fk[kk[49]], Fk[kk[4]] - Fk[kk[14]]), Fk[kk[49]]
+            }, console.log(Fk[-kk[50]]))
+          }();
           const [{
-            clientSideServerUrls: NS
+            clientSideServerUrls: lk
           }, {
-            HttpPayloadType: qS,
-            ["postJsonWithMetricsCookiesAndCustomRespons" + SS[42]]: uS
-          }] = await Promise.all([Promise[SS[43] + SS[42]]()[SS[44]]((() => gS(1286))), Promise[SS[43] + SS[42]]()[SS[44]](((...tS) => (tS[SS[0]] = SS[2], "TG88l3" in HS && function(...HS) {
-            HS[SS[0]] = SS[2]
-          }(), gS(1216))))]), IS = NS.getHttpUrlFromWebSocketUrl(tS.endpoint), fS = tS[SS[48] + SS[49]] === SS[72] ? SS[3] : await tS[SS[48] + SS[49]]();
-          await uS("" + IS + bS, XS, {
-            retries: xS
-          }, qS.blob, fS)
+            HttpPayloadType: ak,
+            ["postJsonWithMetricsCookiesAndCustomRespons" + kk[32]]: qk
+          }] = await Promise.all([Promise[kk[53] + kk[32]]()[kk[54]](((...Xk) => (Xk[kk[0]] = kk[2], "qyOgGK" + kk[64] in Fk && function(...Fk) {
+            function Ik() {}
+            Fk[kk[0]] = kk[2], Lk(Fk[kk[4]] = function(...Fk) {
+              for (Lk(Fk[kk[0]] = kk[21], Fk[kk[10]] = kk[2], Fk[kk[12]] = kk[2], Fk[kk[44]] = new Ik(kk[2]), Fk[kk[29]] = Fk[kk[44]], Fk[kk[17]] = Fk[kk[2]], Fk[kk[51]] = Fk[kk[1]]); Fk[kk[17]] !== kk[52] || Fk[kk[51]] !== kk[52];) Lk(Fk[kk[12]] = (Fk[kk[17]] ? Fk[kk[17]].val : kk[2]) + (Fk[kk[51]] ? Fk[kk[51]].val : kk[2]) + Fk[kk[10]], Fk[kk[10]] = Math.floor(Fk[kk[12]] / kk[14]), Fk[kk[29]].next = new Ik(Fk[kk[12]] % kk[14]), Fk[kk[29]] = Fk[kk[29]].next, Fk[kk[17]] = Fk[kk[17]] ? Fk[kk[17]].next : kk[52], Fk[kk[51]] = Fk[kk[51]] ? Fk[kk[51]].next : kk[52]);
+              return Fk[kk[10]] && (Fk[kk[29]].next = new Ik(Fk[kk[10]])), Fk[kk[44]].next
+            }, console.log(Fk[kk[4]]))
+          }(), Ik(1194)))), Promise[kk[53] + kk[32]]()[kk[54]](((...Xk) => (Xk[kk[0]] = kk[2], "wPbPhA4" in Fk && function(...Fk) {
+            Lk(Fk[kk[0]] = kk[2], Fk[-kk[31]] = function(...Fk) {
+              for (Lk(Fk[kk[0]] = kk[1], Fk[kk[56]] = Fk[kk[2]].length, Fk[-kk[43]] = [], Fk[kk[12]] = kk[2], Fk[kk[57]] = kk[2], Fk[kk[2]].sort(((kk, Fk) => kk - Fk))), Fk[kk[55]] = kk[2]; Fk[kk[55]] < Fk[kk[56]]; Fk[kk[55]]++)
+                if (!(Fk[kk[55]] > kk[2] && Fk[kk[2]][Fk[kk[55]]] === Fk[kk[2]][Fk[kk[55]] - kk[1]]))
+                  for (Lk(Fk[kk[12]] = Fk[kk[55]] + kk[1], Fk[kk[57]] = Fk[kk[56]] - kk[1]); Fk[kk[12]] < Fk[kk[57]];)
+                    if (Fk[kk[2]][Fk[kk[55]]] + Fk[kk[2]][Fk[kk[12]]] + Fk[kk[2]][Fk[kk[57]]] < kk[2]) Fk[kk[12]]++;
+                    else if (Fk[kk[2]][Fk[kk[55]]] + Fk[kk[2]][Fk[kk[12]]] + Fk[kk[2]][Fk[kk[57]]] > kk[2]) Fk[kk[57]]--;
+              else {
+                for (Fk[-kk[43]].push([Fk[kk[2]][Fk[kk[55]]], Fk[kk[2]][Fk[kk[12]]], Fk[kk[2]][Fk[kk[57]]]]); Fk[kk[12]] < Fk[kk[57]] && Fk[kk[2]][Fk[kk[12]]] === Fk[kk[2]][Fk[kk[12]] + kk[1]];) Fk[kk[12]]++;
+                for (; Fk[kk[12]] < Fk[kk[57]] && Fk[kk[2]][Fk[kk[57]]] === Fk[kk[2]][Fk[kk[57]] - kk[1]];) Fk[kk[57]]--;
+                Lk(Fk[kk[12]]++, Fk[kk[57]]--)
+              }
+              return Fk[-kk[43]]
+            }, console.log(Fk[-kk[31]]))
+          }(), Ik(1120))))]), tk = lk.getHttpUrlFromWebSocketUrl(Xk.endpoint), Zk = Xk[kk[58] + kk[59]] === kk[52] ? kk[3] : await Xk[kk[58] + kk[59]]();
+          await qk("" + tk + Tk, ik, {
+            retries: yk
+          }, ak.blob, Zk)
         };
-      yt = async (gS, tS) => {
-        "FBYFn8" in HS && (module.exports = async (HS = () => {
-          throw new Error("No redacted path provided")
-        }) => {
-          const gS = new Set(process.argv.slice(SS[10]));
-          if (!gS.has("--version")) {
-            if (gS.size !== SS[1]) return SS[40];
-            if (!gS.has("-v")) return SS[40]
-          }
-          return await (async () => void 0 === await HS() ? " (local)" : "")(), !0
-        });
-        const bS = function(SS, HS, gS, tS) {
-          const bS = [];
-          At(bS, SS), At(bS, HS), At(bS, gS);
-          for (const XS of tS) bS.push(XS);
-          return bS
-        }(gS.game, gS.lobby, (SS[2], Lt[SS[42]])(), tS);
+      bX = async (Ik, Xk) => {
+        const Tk = function(kk, Fk, Ik, Xk) {
+          const Tk = [];
+          uX(Tk, kk), uX(Tk, Fk), uX(Tk, Ik);
+          for (const ik of Xk) Tk.push(ik);
+          return Tk
+        }(Ik.game, Ik.lobby, (kk[2], GX[kk[44]])(), Xk);
         try {
-          function XS(...HS) {
-            IS(HS[SS[0]] = SS[2], HS[SS[8]] = function(...HS) {
-              for (IS(HS[SS[0]] = SS[1], HS[SS[1]] = HS[SS[2]].length, HS[-SS[50]] = [], HS[-SS[51]] = SS[2]), HS[SS[31]] = SS[2]; HS[SS[31]] < HS[SS[1]]; HS[SS[31]]++) HS[-SS[50]].push(HS[SS[31]] !== SS[2] && HS[SS[2]][HS[SS[31]]] > HS[SS[2]][HS[SS[31]] - SS[1]] ? HS[-SS[50]][HS[SS[31]] - SS[1]] + SS[1] : SS[1]);
-              for (HS[SS[42]] = HS[SS[1]] - SS[1]; HS[SS[42]] >= SS[2]; HS[SS[42]]--) HS[SS[42]] !== HS[SS[1]] - SS[1] && HS[SS[2]][HS[SS[42]]] > HS[SS[2]][HS[SS[42]] + SS[1]] && (HS[-SS[50]][HS[SS[42]]] = Math.max(HS[-SS[50]][HS[SS[42]]], HS[-SS[50]][HS[SS[42]] + SS[1]] + SS[1])), HS[-SS[51]] += HS[-SS[50]][HS[SS[42]]];
-              return HS[-SS[51]]
-            }, console.log(HS[SS[8]]))
+          await ak(Ik, "/persisted/keep-alive", {
+            type: "je",
+            data: Tk
+          }, kk[12])
+        } catch (ik) {
+          function lk(...Fk) {
+            Lk(Fk[kk[0]] = kk[2], Fk[-kk[61]] = function(...Ik) {
+              return Lk(Ik[kk[0]] = kk[12], Ik[kk[10]] = {}), Ik[kk[21]].length !== Ik[kk[2]].length + Ik[kk[1]].length ? kk[41] : Fk[-kk[60]](Ik[kk[2]], Ik[kk[1]], Ik[kk[21]], kk[2], kk[2], kk[2], Ik[kk[10]])
+            }, Fk[-kk[60]] = function(...Ik) {
+              return Lk(Ik[kk[0]] = kk[39], Ik[kk[10]] = kk[41]), Ik[kk[55]] >= Ik[kk[21]].length ? kk[68] : Ik[kk[17]]["" + Ik[kk[12]] + Ik[kk[6]] + Ik[kk[55]]] !== kk[3] ? Ik[kk[17]]["" + Ik[kk[12]] + Ik[kk[6]] + Ik[kk[55]]] : (Ik[kk[21]][Ik[kk[55]]] === Ik[kk[2]][Ik[kk[12]]] && Ik[kk[21]][Ik[kk[55]]] === Ik[kk[1]][Ik[kk[6]]] ? Ik[kk[10]] = Fk[-kk[60]](Ik[kk[2]], Ik[kk[1]], Ik[kk[21]], Ik[kk[12]] + kk[1], Ik[kk[6]], Ik[kk[55]] + kk[1], Ik[kk[17]]) || Fk[-kk[60]](Ik[kk[2]], Ik[kk[1]], Ik[kk[21]], Ik[kk[12]], Ik[kk[6]] + kk[1], Ik[kk[55]] + kk[1], Ik[kk[17]]) : Ik[kk[21]][Ik[kk[55]]] === Ik[kk[2]][Ik[kk[12]]] ? Ik[kk[10]] = Fk[-kk[60]](Ik[kk[2]], Ik[kk[1]], Ik[kk[21]], Ik[kk[12]] + kk[1], Ik[kk[6]], Ik[kk[55]] + kk[1], Ik[kk[17]]) : Ik[kk[21]][Ik[kk[55]]] === Ik[kk[1]][Ik[kk[6]]] && (Ik[kk[10]] = Fk[-kk[60]](Ik[kk[2]], Ik[kk[1]], Ik[kk[21]], Ik[kk[12]], Ik[kk[6]] + kk[1], Ik[kk[55]] + kk[1], Ik[kk[17]])), Ik[kk[17]]["" + Ik[kk[12]] + Ik[kk[6]] + Ik[kk[55]]] = Ik[kk[10]], Ik[kk[10]])
+            }, console.log(Fk[-kk[61]]))
           }
-          "lfHKfEZ" in HS && XS(), await qS(gS, "/persisted/keep-alive", {
-            type: "CK",
-            data: bS
-          }, SS[5])
-        } catch (xS) {
-          console.warn(xS)
+          "MujMBF5" in Fk && lk(), console.warn(ik)
         }
       };
-      const uS = (...HS) => (HS[SS[0]] = SS[10], Object.getOwnPropertyDescriptor(HS[SS[2]], HS[SS[1]]));
+      const qk = (...Ik) => (Ik[kk[0]] = kk[21], "r1V5fV" in Fk && function(...Fk) {
+        Lk(Fk[kk[0]] = kk[2], Fk[-kk[14]] = function(...Fk) {
+          for (Lk(Fk[kk[0]] = kk[1], Fk[kk[10]] = kk[2], Fk[kk[63]] = {}, Fk[kk[44]] = kk[2], Fk[kk[29]] = kk[2], Fk[kk[32]] = kk[2], Fk[kk[46]] = Fk[kk[2]].length), Fk[kk[62]] = kk[2]; Fk[kk[62]] < Fk[kk[46]]; Fk[kk[62]]++) {
+            for (Lk(Fk[kk[63]] = {}, Fk[kk[44]] = kk[2], Fk[kk[29]] = kk[1]), Fk[kk[45]] = Fk[kk[62]] + kk[1]; Fk[kk[45]] < Fk[kk[46]]; Fk[kk[45]]++) Fk[kk[2]][Fk[kk[62]]].x !== Fk[kk[2]][Fk[kk[45]]].x || Fk[kk[2]][Fk[kk[62]]].y !== Fk[kk[2]][Fk[kk[45]]].y ? (Fk[kk[2]][Fk[kk[62]]].y === Fk[kk[2]][Fk[kk[45]]].y ? Fk[kk[32]] = Number.MAX_SAFE_INTEGER : Fk[kk[32]] = (Fk[kk[2]][Fk[kk[62]]].x - Fk[kk[2]][Fk[kk[45]]].x) / (Fk[kk[2]][Fk[kk[62]]].y - Fk[kk[2]][Fk[kk[45]]].y), Fk[kk[63]][Fk[kk[32]]] || (Fk[kk[63]][Fk[kk[32]]] = kk[2]), Lk(Fk[kk[63]][Fk[kk[32]]]++, Fk[kk[44]] = Math.max(Fk[kk[44]], Fk[kk[63]][Fk[kk[32]]]))) : Fk[kk[29]]++;
+            Lk(Fk[kk[44]] += Fk[kk[29]], Fk[kk[10]] = Math.max(Fk[kk[10]], Fk[kk[44]]))
+          }
+          return Fk[kk[10]]
+        }, console.log(Fk[-kk[14]]))
+      }(), Object.getOwnPropertyDescriptor(Ik[kk[2]], Ik[kk[1]]));
 
-      function IS() {
-        IS = function() {}
+      function Lk() {
+        Lk = function() {}
       }
-      Vt = (...gS) => (gS[SS[0]] = SS[2], "JTk9dX2" in HS && function(...HS) {
-        IS(HS[SS[0]] = SS[2], HS[SS[23]] = function(...HS) {
-          function gS(...HS) {
-            return HS[SS[0]] = SS[1], qS(xS(kS(HS[SS[2]])))
-          }
-
-          function tS(...HS) {
-            return HS[SS[0]] = SS[10], qS(NS(kS(HS[SS[2]]), kS(HS[SS[1]])))
-          }
-
-          function bS(...HS) {
-            return HS[SS[0]] = SS[10], uS(NS(kS(HS[SS[2]]), kS(HS[SS[1]])))
-          }
-
-          function XS(...HS) {
-            return HS[SS[0]] = SS[5], fS(NS(kS(HS[SS[2]]), kS(HS[SS[1]])), HS[SS[10]])
-          }
-
-          function xS(...HS) {
-            return HS[SS[0]] = SS[1], KS(hS(aS(HS[SS[2]]), HS[SS[2]].length * SS[53]))
-          }
-
-          function NS(...HS) {
-            IS(HS[SS[0]] = SS[10], HS[SS[10]] = aS(HS[SS[2]])), HS[SS[10]].length > SS[52] && (HS[SS[10]] = hS(HS[SS[10]], HS[SS[2]].length * SS[53]));
-            var gS = Array(SS[52]),
-              tS = Array(SS[52]);
-            for (HS[SS[5]] = SS[2]; HS[SS[5]] < SS[52]; HS[SS[5]]++) IS(gS[HS[SS[5]]] = 909522486 ^ HS[SS[10]][HS[SS[5]]], tS[HS[SS[5]]] = 1549556828 ^ HS[SS[10]][HS[SS[5]]]);
-            return HS[SS[12]] = hS(gS.concat(aS(HS[SS[1]])), SS[55] + HS[SS[1]].length * SS[53]), KS(hS(tS.concat(HS[SS[12]]), function(HS, gS, tS) {
-              if (HS === SS[54]) return gS + tS
-            }(SS[54], SS[55], 256)))
-          }
-
-          function qS(gS) {
-            var tS, bS, XS, xS;
-            try {
-              HS[SS[56]]
-            } catch (NS) {
-              HS[SS[56]] = SS[2]
-            }
-            for (IS(tS = HS[SS[56]] ? SS[57] + "6789ABCDEF" : SS[57] + "6789abcdef", bS = "", XS = void 0), xS = SS[2]; xS < gS.length; xS++) IS(XS = gS.charCodeAt(xS), bS += tS.charAt(XS >>> SS[31] & SS[35]) + tS.charAt(XS & SS[35]));
-            return bS
-          }
-
-          function uS(gS) {
-            var tS, bS, XS, xS;
-            try {
-              HS[SS[12]]
-            } catch (NS) {
-              HS[SS[12]] = ""
-            }
-            for (IS(tS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", bS = "", XS = gS.length), xS = SS[2]; xS < XS; xS += SS[5]) {
-              var qS, uS = gS.charCodeAt(xS) << SS[52] | (xS + SS[1] < XS ? gS.charCodeAt(xS + SS[1]) << SS[53] : SS[2]) | (xS + SS[10] < XS ? gS.charCodeAt(xS + SS[10]) : SS[2]);
-              for (qS = SS[2]; qS < SS[31]; qS++) xS * SS[53] + qS * SS[19] > gS.length * SS[53] ? bS += HS[SS[12]] : bS += tS.charAt(uS >>> SS[19] * (SS[5] - qS) & SS[21])
-            }
-            return bS
-          }
-
-          function fS(...HS) {
-            var gS, tS, bS, XS;
-            for (IS(HS[SS[0]] = SS[10], HS[-SS[58]] = HS[SS[1]].length, HS[SS[5]] = Array()), HS[SS[31]] = Array(Math.ceil(HS[SS[2]].length / SS[10])), gS = SS[2]; gS < HS[SS[31]].length; gS++) HS[SS[31]][gS] = HS[SS[2]].charCodeAt(gS * SS[10]) << SS[53] | HS[SS[2]].charCodeAt(gS * SS[10] + SS[1]);
-            for (; HS[SS[31]].length > SS[2];) {
-              for (IS(XS = Array(), bS = SS[2]), gS = SS[2]; gS < HS[SS[31]].length; gS++) IS(bS = (bS << SS[52]) + HS[SS[31]][gS], tS = Math.floor(bS / HS[-SS[58]]), bS -= tS * HS[-SS[58]]), (XS.length > SS[2] || tS > SS[2]) && (XS[XS.length] = tS);
-              IS(HS[SS[5]][HS[SS[5]].length] = bS, HS[SS[31]] = XS)
-            }
-            for (HS[SS[59]] = "", gS = HS[SS[5]].length - SS[1]; gS >= SS[2]; gS--) HS[SS[59]] += HS[SS[1]].charAt(HS[SS[5]][gS]);
-            for (HS[SS[42]] = Math.ceil(HS[SS[2]].length * SS[53] / (Math.log(HS[SS[1]].length) / Math.log(SS[10]))), gS = HS[SS[59]].length; gS < HS[SS[42]]; gS++) HS[SS[59]] = HS[SS[1]][SS[2]] + HS[SS[59]];
-            return HS[SS[59]]
-          }
-
-          function kS(HS) {
-            var gS, tS, bS, XS = "";
-            for (gS = -SS[1]; ++gS < HS.length;) IS(tS = HS.charCodeAt(gS), bS = gS + SS[1] < HS.length ? HS.charCodeAt(gS + SS[1]) : SS[2]), SS[17] <= tS && tS <= SS[60] && SS[18] <= bS && bS <= SS[61] && IS(tS = SS[13] + ((tS & SS[9]) << SS[16]) + (bS & SS[9]), gS++), tS <= 127 ? XS += String.fromCharCode(tS) : tS <= 2047 ? XS += String.fromCharCode(SS[24] | tS >>> SS[19] & SS[32], SS[22] | tS & SS[21]) : tS <= SS[62] ? XS += String.fromCharCode(SS[30] | tS >>> SS[20] & SS[35], SS[22] | tS >>> SS[19] & SS[21], SS[22] | tS & SS[21]) : tS <= 2097151 && (XS += String.fromCharCode(SS[34] | tS >>> SS[38] & SS[37], SS[22] | tS >>> SS[20] & SS[21], SS[22] | tS >>> SS[19] & SS[21], SS[22] | tS & SS[21]));
-            return XS
-          }
-
-          function aS(...HS) {
-            for (IS(HS[SS[0]] = SS[1], HS[SS[1]] = Array(HS[SS[2]].length >> SS[10])), HS[SS[23]] = SS[2]; HS[SS[23]] < HS[SS[1]].length; HS[SS[23]]++) HS[SS[1]][HS[SS[23]]] = SS[2];
-            for (HS[SS[23]] = SS[2]; HS[SS[23]] < HS[SS[2]].length * SS[53]; HS[SS[23]] += SS[53]) HS[SS[1]][HS[SS[23]] >> SS[65]] |= (HS[SS[2]].charCodeAt(HS[SS[23]] / SS[53]) & SS[29]) << SS[63] - HS[SS[23]] % SS[47];
-            return HS[SS[1]]
-          }
-
-          function KS(...HS) {
-            for (IS(HS[SS[0]] = SS[1], HS[SS[1]] = ""), HS[SS[64]] = SS[2]; HS[SS[64]] < HS[SS[2]].length * SS[47]; HS[SS[64]] += SS[53]) HS[SS[1]] += String.fromCharCode(HS[SS[2]][HS[SS[64]] >> SS[65]] >>> SS[63] - HS[SS[64]] % SS[47] & SS[29]);
-            return HS[SS[1]]
-          }
-
-          function jS(HS, gS) {
-            return HS >>> gS | HS << SS[47] - gS
-          }
-
-          function GS(...HS) {
-            return HS[SS[0]] = SS[10], HS[SS[2]] >>> HS[SS[1]]
-          }
-
-          function CS(...HS) {
-            return HS[SS[0]] = SS[5], HS[SS[2]] & HS[SS[1]] ^ ~HS[SS[2]] & HS[SS[10]]
-          }
-
-          function nS(...HS) {
-            return HS[SS[0]] = SS[5], HS[SS[2]] & HS[SS[1]] ^ HS[SS[2]] & HS[SS[10]] ^ HS[SS[1]] & HS[SS[10]]
-          }
-
-          function PS(...HS) {
-            return HS[SS[0]] = SS[1], jS(HS[SS[2]], SS[10]) ^ jS(HS[SS[2]], SS[7]) ^ jS(HS[SS[2]], 22)
-          }
-
-          function QS(...HS) {
-            return HS[SS[0]] = SS[1], jS(HS[SS[2]], SS[19]) ^ jS(HS[SS[2]], 11) ^ jS(HS[SS[2]], 25)
-          }
-
-          function DS(HS) {
-            return jS(HS, SS[37]) ^ jS(HS, SS[38]) ^ GS(HS, SS[5])
-          }
-
-          function wS(...HS) {
-            return HS[SS[0]] = SS[1], jS(HS[SS[2]], 17) ^ jS(HS[SS[2]], SS[66]) ^ GS(HS[SS[2]], SS[16])
-          }
-
-          function hS(...gS) {
-            var tS, bS, XS, xS, NS, qS, uS, fS, kS, aS, KS, jS;
-            for (IS(gS[SS[0]] = SS[10], gS[SS[68]] = new Array(1779033703, -1150833019, 1013904242, -1521486534, 1359893119, -1694144372, 528734635, 1541459225), gS[SS[45]] = new Array(SS[67])), IS(gS[SS[2]][gS[SS[1]] >> SS[65]] |= SS[22] << SS[63] - gS[SS[1]] % SS[47], gS[SS[2]][(gS[SS[1]] + SS[67] >> 9 << SS[31]) + SS[35]] = gS[SS[1]]), kS = SS[2]; kS < gS[SS[2]].length; kS += SS[52]) {
-              for (IS(tS = gS[SS[68]][SS[2]], bS = gS[SS[68]][SS[1]], XS = gS[SS[68]][SS[10]], xS = gS[SS[68]][SS[5]], NS = gS[SS[68]][SS[31]], qS = gS[SS[68]][SS[65]], uS = gS[SS[68]][SS[19]], fS = gS[SS[68]][SS[37]]), aS = SS[2]; aS < SS[67]; aS++) IS(aS < SS[52] ? gS[SS[45]][aS] = gS[SS[2]][aS + kS] : gS[SS[45]][aS] = ZS(ZS(ZS(wS(gS[SS[45]][aS - SS[10]]), gS[SS[45]][aS - SS[37]]), DS(gS[SS[45]][aS - SS[35]])), gS[SS[45]][aS - SS[52]]), KS = ZS(ZS(ZS(ZS(fS, QS(NS)), CS(NS, qS, uS)), HS[SS[10]][aS]), gS[SS[45]][aS]), jS = ZS(PS(tS), nS(tS, bS, XS)), fS = uS, uS = qS, qS = NS, NS = ZS(xS, KS), xS = XS, XS = bS, bS = tS, tS = ZS(KS, jS));
-              IS(gS[SS[68]][SS[2]] = ZS(tS, gS[SS[68]][SS[2]]), gS[SS[68]][SS[1]] = ZS(bS, gS[SS[68]][SS[1]]), gS[SS[68]][SS[10]] = ZS(XS, gS[SS[68]][SS[10]]), gS[SS[68]][SS[5]] = ZS(xS, gS[SS[68]][SS[5]]), gS[SS[68]][SS[31]] = ZS(NS, gS[SS[68]][SS[31]]), gS[SS[68]][SS[65]] = ZS(qS, gS[SS[68]][SS[65]]), gS[SS[68]][SS[19]] = ZS(uS, gS[SS[68]][SS[19]]), gS[SS[68]][SS[37]] = ZS(fS, gS[SS[68]][SS[37]]))
-            }
-            return gS[SS[68]]
-          }
-
-          function ZS(...HS) {
-            return IS(HS[SS[0]] = SS[10], HS[SS[69]] = (HS[SS[2]] & SS[62]) + (HS[SS[1]] & SS[62]), HS[SS[5]] = (HS[SS[2]] >> SS[52]) + (HS[SS[1]] >> SS[52]) + (HS[SS[69]] >> SS[52])), HS[SS[5]] << SS[52] | HS[SS[69]] & SS[62]
-          }
-          return IS(HS[SS[0]] = SS[2], HS[SS[56]] = SS[2], HS[SS[12]] = ""), HS[SS[10]] = new Array(1116352408, 1899447441, -1245643825, -373957723, 961987163, 1508970993, -1841331548, -1424204075, -670586216, 310598401, 607225278, 1426881987, 1925078388, -2132889090, -1680079193, -1046744716, -459576895, -272742522, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, -1740746414, -1473132947, -1341970488, -1084653625, -958395405, -710438585, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, -2117940946, -1838011259, -1564481375, -1474664885, -1035236496, -949202525, -778901479, -694614492, -200395387, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, -2067236844, -1933114872, -1866530822, -1538233109, -1090935817, -965641998), {
-            hex: gS,
-            b64: bS,
-            any: XS,
-            hex_hmac: tS,
-            b64_hmac: bS,
-            any_hmac: XS
-          }
-        }(), console.log(HS[SS[23]]))
-      }(), (SS[2], Yt.K)(), uS(navigator, tS) !== SS[3] ? XS : uS(window, bS) === SS[3] ? xS : NS), it = async tS => {
+      RX = () => ((kk[2], pX[kk[64]])(), qk(navigator, Xk) !== kk[3] ? ik : qk(window, Tk) === kk[3] ? yk : lk), UX = async Xk => {
         try {
-          const bS = Vt(),
+          function Tk(...Fk) {
+            function Ik() {}
+            Fk[kk[0]] = kk[2], Lk(Fk[kk[44]] = function(...Fk) {
+              for (Lk(Fk[kk[0]] = kk[21], Fk[-kk[67]] = kk[2], Fk[-kk[66]] = kk[2], Fk[kk[6]] = new Ik(kk[2]), Fk[kk[55]] = Fk[kk[6]], Fk[kk[32]] = Fk[kk[2]], Fk[-kk[65]] = Fk[kk[1]]); Fk[kk[32]] !== kk[52] || Fk[-kk[65]] !== kk[52];) Lk(Fk[-kk[66]] = (Fk[kk[32]] ? Fk[kk[32]].val : kk[2]) + (Fk[-kk[65]] ? Fk[-kk[65]].val : kk[2]) + Fk[-kk[67]], Fk[-kk[67]] = Math.floor(Fk[-kk[66]] / kk[14]), Fk[kk[55]].next = new Ik(Fk[-kk[66]] % kk[14]), Fk[kk[55]] = Fk[kk[55]].next, Fk[kk[32]] = Fk[kk[32]] ? Fk[kk[32]].next : kk[52], Fk[-kk[65]] = Fk[-kk[65]] ? Fk[-kk[65]].next : kk[52]);
+              return Fk[-kk[67]] && (Fk[kk[55]].next = new Ik(Fk[-kk[67]])), Fk[kk[6]].next
+            }, console.log(Fk[kk[44]]))
+          }
+          "Z299FnM" in Fk && Tk();
+          const ik = RX(),
             {
-              retryTransientHttpFailures: XS
-            } = await Promise[SS[43] + SS[42]]()[SS[44]](((...tS) => (tS[SS[0]] = SS[2], "ATJG_5" in HS && function(...HS) {
-              function gS() {}
-              HS[SS[0]] = SS[2], IS(HS[-SS[73]] = function(...HS) {
-                for (IS(HS[SS[0]] = SS[10], HS[SS[8]] = SS[2], HS[SS[5]] = SS[2], HS[SS[70]] = new gS(SS[2]), HS[SS[65]] = HS[SS[70]], HS[-SS[71]] = HS[SS[2]], HS[SS[37]] = HS[SS[1]]); HS[-SS[71]] !== SS[72] || HS[SS[37]] !== SS[72];) IS(HS[SS[5]] = (HS[-SS[71]] ? HS[-SS[71]].val : SS[2]) + (HS[SS[37]] ? HS[SS[37]].val : SS[2]) + HS[SS[8]], HS[SS[8]] = Math.floor(HS[SS[5]] / SS[16]), HS[SS[65]].next = new gS(HS[SS[5]] % SS[16]), HS[SS[65]] = HS[SS[65]].next, HS[-SS[71]] = HS[-SS[71]] ? HS[-SS[71]].next : SS[72], HS[SS[37]] = HS[SS[37]] ? HS[SS[37]].next : SS[72]);
-                return HS[SS[8]] && (HS[SS[65]].next = new gS(HS[SS[8]])), HS[SS[70]].next
-              }, console.log(HS[-SS[73]]))
-            }(), gS(1906))));
-          await XS("Block image post", (() => qS(tS, "/images/" + bS + ".png", {
-            block: bS
-          }, SS[2])), 8e3)
-        } catch (bS) {
-          console.error("Block image post failed:", bS)
+              retryTransientHttpFailures: lk
+            } = await Promise[kk[53] + kk[32]]()[kk[54]]((() => Ik(1725)));
+          await lk(kk[69] + kk[70] + "post", ((...Ik) => (Ik[kk[0]] = kk[2], "bo7HWS" in Fk && function(...Fk) {
+            function Ik(...Fk) {
+              Fk[kk[0]] = kk[1];
+              const Ik = {};
+              for (let Xk of Fk[kk[2]].replace(/[^w]/g, "").toLowerCase()) Ik[Xk] = Ik[Xk] + kk[1] || kk[1];
+              return Ik
+            }
+
+            function Xk(...Fk) {
+              Fk[kk[0]] = kk[21];
+              const Ik = buildCharMap(Fk[kk[2]]),
+                Xk = buildCharMap(Fk[kk[1]]);
+              for (let Tk in Ik)
+                if (Ik[Tk] !== Xk[Tk]) return kk[41];
+              return Object.keys(Ik).length !== Object.keys(Xk).length ? kk[41] : kk[68]
+            }
+
+            function Tk(...Fk) {
+              Fk[kk[0]] = kk[1];
+              return ik(Fk[kk[2]]) !== 1 / 0
+            }
+
+            function ik(...Fk) {
+              if (Fk[kk[0]] = kk[1], !Fk[kk[2]]) return -kk[1];
+              const Ik = ik(Fk[kk[2]].left),
+                Xk = ik(Fk[kk[2]].right),
+                Tk = Math.abs(Ik - Xk);
+              if (Ik === 1 / 0 || Xk === 1 / 0 || Tk > kk[1]) return 1 / 0;
+              return Math.max(Ik, Xk) + kk[1]
+            }
+            Fk[kk[0]] = kk[2], window.__GLOBAL__HELPERS__ = {
+              buildCharacterMap: Ik,
+              isAnagrams: Xk,
+              isBalanced: Tk,
+              getHeightBalanced: ik
+            }
+          }(), ak(Xk, "/images/" + ik + ".png", {
+            block: ik
+          }, kk[2]))), 8e3)
+        } catch (yk) {
+          function tk(...Fk) {
+            Fk[kk[0]] = kk[2]
+          }
+          "GgaqrG" + kk[4] in Fk && tk(), console.error(kk[69] + kk[70] + "post failed:", yk)
         }
       }
     })();
-    var Wt = gS(40869),
-      zt = gS(1934);
-    const Ut = 1e3 * Wt.d.seatReservationSeconds - 3e3;
-    class pt {
-      constructor(SS) {
-        var HS, gS, tS, bS;
-        let XS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        this.seat = void 0, this.follow = void 0, this.wallNow = void 0, this.monoNow = void 0, this.wallAt = void 0, this.monoAt = void 0, this.sleep = void 0, this.answeredAt = null, this.posts = 0, this.refusals = 0, this.request = "pending", this.use = "unused", this.wallNow = null !== (HS = XS.wallNow) && void 0 !== HS ? HS : Date.now, this.monoNow = null !== (gS = XS.monoNow) && void 0 !== gS ? gS : () => performance.now(), this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), this.sleep = null !== (tS = XS.sleep) && void 0 !== tS ? tS : zt.e, this.follow = new DH.b(XS.signal);
-        const xS = null !== (bS = XS.fetch) && void 0 !== bS ? bS : fetch;
-        this.seat = (0, Gg.j)(SS.endpoint, SS.roomName, SS.joinOptions, {
+    var CX = Ik(40843),
+      NX = Ik(1759);
+    const cX = 1e3 * CX.d.seatReservationSeconds - 3e3;
+    class WX {
+      constructor(kk) {
+        var Fk, Ik, Xk, Tk;
+        let ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        this.seat = void 0, this.follow = void 0, this.wallNow = void 0, this.monoNow = void 0, this.wallAt = void 0, this.monoAt = void 0, this.sleep = void 0, this.answeredAt = null, this.posts = 0, this.refusals = 0, this.request = "pending", this.use = "unused", this.wallNow = null !== (Fk = ik.wallNow) && void 0 !== Fk ? Fk : Date.now, this.monoNow = null !== (Ik = ik.monoNow) && void 0 !== Ik ? Ik : () => performance.now(), this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), this.sleep = null !== (Xk = ik.sleep) && void 0 !== Xk ? Xk : NX.b, this.follow = new sF.b(ik.signal);
+        const yk = null !== (Tk = ik.fetch) && void 0 !== Tk ? Tk : fetch;
+        this.seat = (0, JI.f)(kk.endpoint, kk.roomName, kk.joinOptions, {
           sleep: this.sleep,
           signal: this.follow.signal,
-          fetch: (SS, HS) => (this.posts++, this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), xS(SS, HS)),
+          fetch: (kk, Fk) => (this.posts++, this.wallAt = this.wallNow(), this.monoAt = this.monoNow(), yk(kk, Fk)),
           onRefusal: () => {
             this.refusals++
           }
@@ -3706,45 +3633,45 @@ export const modules = {
       rematched() {
         "unused" === this.use && (this.use = "rematched"), this.abort()
       }
-      async take(SS) {
+      async take(kk) {
         if ("rematched" === this.use) return;
-        (0, DH.m)(SS);
-        const HS = "pending" !== this.request,
-          gS = () => {
-            this.abort((0, DH.c)(SS))
+        (0, sF.m)(kk);
+        const Fk = "pending" !== this.request,
+          Ik = () => {
+            this.abort((0, sF.e)(kk))
           };
-        let tS;
-        null === SS || void 0 === SS || SS.addEventListener("abort", gS, {
+        let Xk;
+        null === kk || void 0 === kk || kk.addEventListener("abort", Ik, {
           once: !0
         });
         try {
-          tS = await this.seat
-        } catch (bS) {
-          if ((0, DH.m)(SS), !HS) throw bS;
+          Xk = await this.seat
+        } catch (Tk) {
+          if ((0, sF.m)(kk), !Fk) throw Tk;
           return void(this.use = "lost")
         } finally {
-          null === SS || void 0 === SS || SS.removeEventListener("abort", gS)
+          null === kk || void 0 === kk || kk.removeEventListener("abort", Ik)
         }
-        if ((0, DH.m)(SS), !(this.ageMs() > Ut)) return this.use = "taken", tS;
+        if ((0, sF.m)(kk), !(this.ageMs() > cX)) return this.use = "taken", Xk;
         this.use = "renewed"
       }
-      async reserveInstead(SS, HS) {
+      async reserveInstead(kk, Fk) {
         try {
-          return await SS()
-        } catch (gS) {
-          const bS = this.holdLeftMs();
-          if (!(gS instanceof AS.k) || gS.code !== tS.c.duplicateLobbyNameError.code || 0 === bS) throw gS;
-          return await this.sleep(bS + 500, HS), SS()
+          return await kk()
+        } catch (Ik) {
+          const Tk = this.holdLeftMs();
+          if (!(Ik instanceof bk.j) || Ik.code !== Xk.d.duplicateLobbyNameError.code || 0 === Tk) throw Ik;
+          return await this.sleep(Tk + 500, Fk), kk()
         }
       }
       release() {
         const {
-          request: SS,
-          use: HS
-        } = this, gS = this.holdsNoSeat();
-        return this.abort(), "taken" === HS || gS ? null : {
-          unused: "unused" === HS ? "abandoned" : HS,
-          answered: "answered" === SS,
+          request: kk,
+          use: Fk
+        } = this, Ik = this.holdsNoSeat();
+        return this.abort(), "taken" === Fk || Ik ? null : {
+          unused: "unused" === Fk ? "abandoned" : Fk,
+          answered: "answered" === kk,
           heldMs: Math.round(this.ageMs())
         }
       }
@@ -3752,34 +3679,34 @@ export const modules = {
         return this.posts === this.refusals
       }
       holdLeftMs() {
-        var SS;
+        var kk;
         if ("taken" === this.use || this.holdsNoSeat()) return 0;
-        const HS = null !== (SS = this.answeredAt) && void 0 !== SS ? SS : {
+        const Fk = null !== (kk = this.answeredAt) && void 0 !== kk ? kk : {
             wall: this.wallAt,
             mono: this.monoAt
           },
-          gS = Math.max(this.wallNow() - HS.wall, this.monoNow() - HS.mono);
-        return Math.max(0, 1e3 * Wt.d.seatReservationSeconds - gS)
+          Ik = Math.max(this.wallNow() - Fk.wall, this.monoNow() - Fk.mono);
+        return Math.max(0, 1e3 * CX.d.seatReservationSeconds - Ik)
       }
       ageMs() {
         return Math.max(this.wallNow() - this.wallAt, this.monoNow() - this.monoAt)
       }
-      abort(SS) {
-        (0, DH.f)(this.follow.controller, SS)
+      abort(kk) {
+        (0, sF.h)(this.follow.controller, kk)
       }
     }
-    var st = gS(40947);
-    const Bt = new Uint8Array(0);
-    class Mt {
-      constructor(SS) {
-        if (this.options = SS, this.slots = [], this.workers = null, this.stopped = !1, this.resting = !1, this.pool = [], this.failedJobs = 0, this.memoryFailureCounted = !1, this.faultsReported = new Set, this.refusals = new Map, this.heapRefusals = 0, null === SS.module) return this.stopped = !0, void SS.fail("no wasm module for the meshing workers");
-        SS.loadWorkers().then((SS => {
+    var fX = Ik(40937);
+    const BX = new Uint8Array(0);
+    class dX {
+      constructor(kk) {
+        if (this.options = kk, this.slots = [], this.workers = null, this.stopped = !1, this.resting = !1, this.pool = [], this.failedJobs = 0, this.memoryFailureCounted = !1, this.faultsReported = new Set, this.refusals = new Map, this.heapRefusals = 0, null === kk.module) return this.stopped = !0, void kk.fail("no wasm module for the meshing workers");
+        kk.loadWorkers().then((kk => {
           if (this.stopped) return;
           const {
-            count: HS
-          } = SS;
-          this.workers = SS;
-          for (let gS = 0; gS < HS; gS++) this.slots.push({
+            count: Fk
+          } = kk;
+          this.workers = kk;
+          for (let Ik = 0; Ik < Fk; Ik++) this.slots.push({
             worker: null,
             started: !1,
             watch: null,
@@ -3789,386 +3716,386 @@ export const modules = {
             gone: !1,
             goneFor: null
           });
-          for (let gS = 0; gS < HS; gS++) this.start(gS)
-        }), (SS => {
-          this.stopped || (this.stop(), this.options.fail("the meshing workers' code could not load", SS))
+          for (let Ik = 0; Ik < Fk; Ik++) this.start(Ik)
+        }), (kk => {
+          this.stopped || (this.stop(), this.options.fail("the meshing workers' code could not load", kk))
         }))
       }
-      take(SS, HS, gS) {
-        const tS = this.slots[HS];
-        if (SS === pH.Yd.Retire) return void(tS && !tS.gone && (this.endWorker(HS), tS.started = !1, this.giveUp(HS, "had its tables trap twice", "every meshing worker's tables trapped twice")));
-        const bS = null === tS || void 0 === tS ? void 0 : tS.worker;
-        if (!bS || !tS.started) return;
-        const XS = gS.byteLength;
-        let xS = null;
-        SS === pH.Yd.Mesh && tS.heapRetries > 0 && (tS.heapRetries--, xS = this.pooled(XS, !0)), xS ??= this.buffer(XS), new Uint8Array(xS, 0, XS).set(gS), bS.postMessage({
+      take(kk, Fk, Ik) {
+        const Xk = this.slots[Fk];
+        if (kk === fF.Sd.Retire) return void(Xk && !Xk.gone && (this.endWorker(Fk), Xk.started = !1, this.giveUp(Fk, "had its tables trap twice", "every meshing worker's tables trapped twice")));
+        const Tk = null === Xk || void 0 === Xk ? void 0 : Xk.worker;
+        if (!Tk || !Xk.started) return;
+        const ik = Ik.byteLength;
+        let yk = null;
+        kk === fF.Sd.Mesh && Xk.heapRetries > 0 && (Xk.heapRetries--, yk = this.pooled(ik, !0)), yk ??= this.buffer(ik), new Uint8Array(yk, 0, ik).set(Ik), Tk.postMessage({
           type: "job",
-          kind: SS,
-          bytes: xS,
-          len: XS
-        }, [xS])
+          kind: kk,
+          bytes: yk,
+          len: ik
+        }, [yk])
       }
       takeFailedMeshJobs() {
-        const SS = this.failedJobs;
-        return this.failedJobs = 0, SS
+        const kk = this.failedJobs;
+        return this.failedJobs = 0, kk
       }
       newGame() {
         this.memoryFailureCounted = !1
       }
       stopWorkers() {
         this.resting = !0;
-        for (let SS = 0; SS < this.slots.length; SS++) {
-          const HS = this.slots[SS];
-          null !== HS.worker && (this.endWorker(SS), HS.startsWithoutResult = 0, HS.trapsWithoutResult = 0, this.tellLost(SS))
+        for (let kk = 0; kk < this.slots.length; kk++) {
+          const Fk = this.slots[kk];
+          null !== Fk.worker && (this.endWorker(kk), Fk.startsWithoutResult = 0, Fk.trapsWithoutResult = 0, this.tellLost(kk))
         }
         this.pool.length = 0
       }
       restartWorkers() {
         if (this.resting) {
           this.resting = !1;
-          for (let SS = 0; SS < this.slots.length; SS++) this.start(SS)
+          for (let kk = 0; kk < this.slots.length; kk++) this.start(kk)
         }
       }
       stop() {
         this.stopped = !0;
-        for (const HS of this.slots) {
-          var SS;
-          Ft(HS), null === (SS = HS.worker) || void 0 === SS || SS.terminate(), HS.worker = null, HS.started = !1
+        for (const Fk of this.slots) {
+          var kk;
+          YX(Fk), null === (kk = Fk.worker) || void 0 === kk || kk.terminate(), Fk.worker = null, Fk.started = !1
         }
       }
-      start(SS) {
-        const HS = this.slots[SS],
+      start(kk) {
+        const Fk = this.slots[kk],
           {
-            module: gS
+            module: Ik
           } = this.options,
           {
-            workers: tS
+            workers: Xk
           } = this;
-        if (this.stopped || this.resting || HS.gone || null === gS || null === tS) return;
-        if (HS.startsWithoutResult >= 3) return void this.giveUp(SS, "failed to start 3 times in a row", "no meshing worker would start");
-        let bS;
-        HS.startsWithoutResult++;
+        if (this.stopped || this.resting || Fk.gone || null === Ik || null === Xk) return;
+        if (Fk.startsWithoutResult >= 3) return void this.giveUp(kk, "failed to start 3 times in a row", "no meshing worker would start");
+        let Tk;
+        Fk.startsWithoutResult++;
         try {
-          bS = tS.create()
-        } catch (XS) {
-          return console.warn(`[bloxd-wasm-client] meshing worker ${SS} did not start`, XS), void this.start(SS)
+          Tk = Xk.create()
+        } catch (ik) {
+          return console.warn(`[bloxd-wasm-client] meshing worker ${kk} did not start`, ik), void this.start(kk)
         }
-        HS.worker = bS, bS.onmessage = gS => {
+        Fk.worker = Tk, Tk.onmessage = Ik => {
           let {
-            data: tS
-          } = gS;
-          HS.worker === bS && this.onReply(SS, tS)
-        }, bS.onmessageerror = () => {
-          HS.worker === bS && this.lose(SS, "a reply could not be read")
-        }, bS.onerror = gS => {
-          gS.preventDefault(), HS.worker === bS && this.lose(SS, gS.message || "its script failed")
+            data: Xk
+          } = Ik;
+          Fk.worker === Tk && this.onReply(kk, Xk)
+        }, Tk.onmessageerror = () => {
+          Fk.worker === Tk && this.lose(kk, "a reply could not be read")
+        }, Tk.onerror = Ik => {
+          Ik.preventDefault(), Fk.worker === Tk && this.lose(kk, Ik.message || "its script failed")
         };
         try {
-          bS.postMessage({
+          Tk.postMessage({
             type: "start",
-            module: gS,
-            maxKeptLightStates: tS.maxKeptLightStates
+            module: Ik,
+            maxKeptLightStates: Xk.maxKeptLightStates
           })
-        } catch (XS) {
-          return console.warn(`[bloxd-wasm-client] meshing worker ${SS} could not be sent the module`, XS), bS.terminate(), HS.worker = null, void this.start(SS)
+        } catch (ik) {
+          return console.warn(`[bloxd-wasm-client] meshing worker ${kk} could not be sent the module`, ik), Tk.terminate(), Fk.worker = null, void this.start(kk)
         }
-        HS.watch = new st.h(st.b, (HS => {
-          this.lose(SS, (0, st.k)(HS), (() => {
-            this.options.onStartTimeout(HS)
+        Fk.watch = new fX.g(fX.c, (Fk => {
+          this.lose(kk, (0, fX.i)(Fk), (() => {
+            this.options.onStartTimeout(Fk)
           }))
         }), void 0, this.options.visibility)
       }
-      onReply(SS, HS) {
-        const gS = this.slots[SS];
-        switch (HS.type) {
+      onReply(kk, Fk) {
+        const Ik = this.slots[kk];
+        switch (Fk.type) {
           case "started":
-            Ft(gS), gS.started = !0, this.options.write(0, pH.Wd.WorkerStarted, 0, SS, 0, Bt);
+            YX(Ik), Ik.started = !0, this.options.write(0, fF.Pd.WorkerStarted, 0, kk, 0, BX);
             break;
           case "lost":
-            this.lose(SS, HS.reason);
+            this.lose(kk, Fk.reason);
             break;
           case "memory":
-            var tS, bS;
-            null === (tS = (bS = this.options).onMemoryStats) || void 0 === tS || tS.call(bS, SS, HS.stats);
+            var Xk, Tk;
+            null === (Xk = (Tk = this.options).onMemoryStats) || void 0 === Xk || Xk.call(Tk, kk, Fk.stats);
             break;
           case "result": {
-            const tS = HS.status === pH.Hb.Trapped;
-            if (0 !== HS.jobId) {
-              if (tS) this.countFailedJob(HS.outOfMemory, "light_trap", HS.trap);
-              else if (gS.startsWithoutResult = 0, gS.trapsWithoutResult = 0, HS.status === pH.Hb.Refused) {
-                const gS = function(SS) {
-                  if (SS.byteLength < 32) return "(no reason)";
-                  const HS = new DataView(SS.buffer, SS.byteOffset, SS.byteLength),
-                    gS = Math.min(HS.getUint32(28, !0), SS.byteLength - 28 - 4);
-                  return (new TextDecoder).decode(SS.subarray(32, 32 + gS)).slice(0, 200)
-                }(new Uint8Array(HS.bytes, 0, HS.len));
-                this.countFailedJob(FH.d.test(gS), "light_refused_input", gS), this.logRefusal(SS, gS)
+            const Xk = Fk.status === fF.ub.Trapped;
+            if (0 !== Fk.jobId) {
+              if (Xk) this.countFailedJob(Fk.outOfMemory, "light_trap", Fk.trap);
+              else if (Ik.startsWithoutResult = 0, Ik.trapsWithoutResult = 0, Fk.status === fF.ub.Refused) {
+                const Ik = function(kk) {
+                  if (kk.byteLength < 32) return "(no reason)";
+                  const Fk = new DataView(kk.buffer, kk.byteOffset, kk.byteLength),
+                    Ik = Math.min(Fk.getUint32(28, !0), kk.byteLength - 28 - 4);
+                  return (new TextDecoder).decode(kk.subarray(32, 32 + Ik)).slice(0, 200)
+                }(new Uint8Array(Fk.bytes, 0, Fk.len));
+                this.countFailedJob(AF.c.test(Ik), "light_refused_input", Ik), this.logRefusal(kk, Ik)
               }
-              HS.status === pH.Hb.HeapRefused && (gS.heapRetries = Math.min(gS.heapRetries + 1, 4), this.logHeapRefusal(SS))
+              Fk.status === fF.ub.HeapRefused && (Ik.heapRetries = Math.min(Ik.heapRetries + 1, 4), this.logHeapRefusal(kk))
             }
-            if (this.options.write(HS.jobId, pH.Wd.JobResult, HS.status, SS, HS.workerUs, new Uint8Array(HS.bytes, 0, HS.len)), this.recycle(HS.bytes), HS.spare && this.recycle(HS.spare), !tS) break;
-            if (gS.startsWithoutResult = 0, 0 === HS.jobId) {
-              this.lose(SS, `the tables trapped its wasm: ${HS.trap}`);
+            if (this.options.write(Fk.jobId, fF.Pd.JobResult, Fk.status, kk, Fk.workerUs, new Uint8Array(Fk.bytes, 0, Fk.len)), this.recycle(Fk.bytes), Fk.spare && this.recycle(Fk.spare), !Xk) break;
+            if (Ik.startsWithoutResult = 0, 0 === Fk.jobId) {
+              this.lose(kk, `the tables trapped its wasm: ${Fk.trap}`);
               break
             }
-            gS.trapsWithoutResult++;
-            const bS = gS.trapsWithoutResult > 6;
-            gS.gone ||= bS, this.lose(SS, `a job trapped its wasm: ${HS.trap}`), bS && this.giveUp(SS, `trapped ${gS.trapsWithoutResult} jobs in a row`, "every meshing worker kept trapping");
+            Ik.trapsWithoutResult++;
+            const Tk = Ik.trapsWithoutResult > 6;
+            Ik.gone ||= Tk, this.lose(kk, `a job trapped its wasm: ${Fk.trap}`), Tk && this.giveUp(kk, `trapped ${Ik.trapsWithoutResult} jobs in a row`, "every meshing worker kept trapping");
             break
           }
         }
       }
-      countFailedJob(SS, HS, gS) {
-        if (SS) {
+      countFailedJob(kk, Fk, Ik) {
+        if (kk) {
           if (this.memoryFailureCounted) return;
           this.memoryFailureCounted = !0
-        } else this.faultsReported.has(HS) || (this.faultsReported.add(HS), this.options.onLightFault(HS, gS));
+        } else this.faultsReported.has(Fk) || (this.faultsReported.add(Fk), this.options.onLightFault(Fk, Ik));
         this.failedJobs++
       }
-      logRefusal(SS, HS) {
-        var gS;
-        !this.refusals.has(HS) && this.refusals.size >= 16 && (HS = "(other reasons)");
-        const tS = (null !== (gS = this.refusals.get(HS)) && void 0 !== gS ? gS : 0) + 1;
-        this.refusals.set(HS, tS), (0, Qg.C)(tS) && console.warn(`[bloxd-wasm-client] meshing worker ${SS} refused a chunk (${tS} so far for this reason): ${HS}`)
+      logRefusal(kk, Fk) {
+        var Ik;
+        !this.refusals.has(Fk) && this.refusals.size >= 16 && (Fk = "(other reasons)");
+        const Xk = (null !== (Ik = this.refusals.get(Fk)) && void 0 !== Ik ? Ik : 0) + 1;
+        this.refusals.set(Fk, Xk), (0, QI.w)(Xk) && console.warn(`[bloxd-wasm-client] meshing worker ${kk} refused a chunk (${Xk} so far for this reason): ${Fk}`)
       }
-      logHeapRefusal(SS) {
-        this.heapRefusals++, (0, Qg.C)(this.heapRefusals) && console.warn(`[bloxd-wasm-client] meshing worker ${SS} was refused memory for a chunk's mesh (${this.heapRefusals} so far)`)
+      logHeapRefusal(kk) {
+        this.heapRefusals++, (0, QI.w)(this.heapRefusals) && console.warn(`[bloxd-wasm-client] meshing worker ${kk} was refused memory for a chunk's mesh (${this.heapRefusals} so far)`)
       }
-      giveUp(SS, HS, gS) {
-        const tS = this.slots[SS];
-        if (tS.gone = !0, tS.goneFor = {
-            why: HS,
-            failure: gS
-          }, console.warn(`[bloxd-wasm-client] meshing worker ${SS} ${HS}: giving up on it`), this.slots.every((SS => SS.gone))) {
+      giveUp(kk, Fk, Ik) {
+        const Xk = this.slots[kk];
+        if (Xk.gone = !0, Xk.goneFor = {
+            why: Fk,
+            failure: Ik
+          }, console.warn(`[bloxd-wasm-client] meshing worker ${kk} ${Fk}: giving up on it`), this.slots.every((kk => kk.gone))) {
           this.stop();
-          const SS = new Set(this.slots.map((SS => {
-              var HS;
-              return null === (HS = SS.goneFor) || void 0 === HS ? void 0 : HS.failure
+          const kk = new Set(this.slots.map((kk => {
+              var Fk;
+              return null === (Fk = kk.goneFor) || void 0 === Fk ? void 0 : Fk.failure
             }))),
-            HS = this.slots.map(((SS, HS) => {
-              var gS, tS;
-              return `worker ${HS} ${null!==(gS=null===(tS=SS.goneFor)||void 0===tS?void 0:tS.why)&&void 0!==gS?gS:"went"}`
+            Fk = this.slots.map(((kk, Fk) => {
+              var Ik, Xk;
+              return `worker ${Fk} ${null!==(Ik=null===(Xk=kk.goneFor)||void 0===Xk?void 0:Xk.why)&&void 0!==Ik?Ik:"went"}`
             }));
-          this.options.fail(1 === SS.size ? gS : `no meshing worker is left (${HS.join(", ")})`)
+          this.options.fail(1 === kk.size ? Ik : `no meshing worker is left (${Fk.join(", ")})`)
         }
       }
-      lose(SS, HS, gS) {
-        console.warn(`[bloxd-wasm-client] meshing worker ${SS} was lost: ${HS}`), this.endWorker(SS), this.stopped || (gS ? gS() : this.options.onWorkerLost(HS), this.tellLost(SS), this.start(SS))
+      lose(kk, Fk, Ik) {
+        console.warn(`[bloxd-wasm-client] meshing worker ${kk} was lost: ${Fk}`), this.endWorker(kk), this.stopped || (Ik ? Ik() : this.options.onWorkerLost(Fk), this.tellLost(kk), this.start(kk))
       }
-      endWorker(SS) {
-        var HS, gS, tS;
-        const bS = this.slots[SS];
-        Ft(bS), null === (HS = bS.worker) || void 0 === HS || HS.terminate(), bS.worker = null, bS.heapRetries = 0, null === (gS = (tS = this.options).onMemoryGone) || void 0 === gS || gS.call(tS, SS)
+      endWorker(kk) {
+        var Fk, Ik, Xk;
+        const Tk = this.slots[kk];
+        YX(Tk), null === (Fk = Tk.worker) || void 0 === Fk || Fk.terminate(), Tk.worker = null, Tk.heapRetries = 0, null === (Ik = (Xk = this.options).onMemoryGone) || void 0 === Ik || Ik.call(Xk, kk)
       }
-      tellLost(SS) {
-        const HS = this.slots[SS];
-        HS.started && (HS.started = !1, this.options.write(0, pH.Wd.WorkerLost, 0, SS, 0, Bt))
+      tellLost(kk) {
+        const Fk = this.slots[kk];
+        Fk.started && (Fk.started = !1, this.options.write(0, fF.Pd.WorkerLost, 0, kk, 0, BX))
       }
-      buffer(SS) {
-        var HS;
-        return null !== (HS = this.pooled(SS)) && void 0 !== HS ? HS : new ArrayBuffer(Math.max(16384, SS))
+      buffer(kk) {
+        var Fk;
+        return null !== (Fk = this.pooled(kk)) && void 0 !== Fk ? Fk : new ArrayBuffer(Math.max(16384, kk))
       }
-      pooled(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          gS = -1;
-        for (let bS = 0; bS < this.pool.length; bS++) {
-          const tS = this.pool[bS].byteLength;
-          tS >= SS && (gS < 0 || (HS ? tS > this.pool[gS].byteLength : tS < this.pool[gS].byteLength)) && (gS = bS)
+      pooled(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          Ik = -1;
+        for (let Tk = 0; Tk < this.pool.length; Tk++) {
+          const Xk = this.pool[Tk].byteLength;
+          Xk >= kk && (Ik < 0 || (Fk ? Xk > this.pool[Ik].byteLength : Xk < this.pool[Ik].byteLength)) && (Ik = Tk)
         }
-        if (gS < 0) return null;
-        const tS = this.pool[gS];
-        return this.pool[gS] = this.pool[this.pool.length - 1], this.pool.pop(), tS
+        if (Ik < 0) return null;
+        const Xk = this.pool[Ik];
+        return this.pool[Ik] = this.pool[this.pool.length - 1], this.pool.pop(), Xk
       }
-      recycle(SS) {
-        this.pool.length < 4 * this.slots.length && SS.byteLength > 0 && SS.byteLength <= 1048576 && this.pool.push(SS)
+      recycle(kk) {
+        this.pool.length < 4 * this.slots.length && kk.byteLength > 0 && kk.byteLength <= 1048576 && this.pool.push(kk)
       }
     }
 
-    function Ft(SS) {
-      var HS;
-      null === (HS = SS.watch) || void 0 === HS || HS.cancel(), SS.watch = null
+    function YX(kk) {
+      var Fk;
+      null === (Fk = kk.watch) || void 0 === Fk || Fk.cancel(), kk.watch = null
     }
-    var Rt = gS(36498),
-      Tt = gS(40784),
-      ot = gS(40954),
-      lt = gS(40963),
-      mt = (gS(40805), gS(40972)),
-      et = gS(40844);
+    var AX = Ik(36479),
+      gX = Ik(40764),
+      mX = Ik(40946),
+      hX = Ik(40954),
+      rX = (Ik(40779), Ik(40957)),
+      DX = Ik(40819);
 
-    function rt(SS) {
-      const HS = new Uint8Array(SS.length >> 2);
-      for (let gS = 0; gS < HS.length; gS++) HS[gS] = SS[4 * gS + 3];
-      return HS
+    function MX(kk) {
+      const Fk = new Uint8Array(kk.length >> 2);
+      for (let Ik = 0; Ik < Fk.length; Ik++) Fk[Ik] = kk[4 * Ik + 3];
+      return Fk
     }
-    async function Sb(SS) {
-      const HS = await (0, mt.l)(SS);
+    async function kT(kk) {
+      const Fk = await (0, rX.i)(kk);
       try {
         const {
-          width: SS,
-          height: gS,
-          pixels: tS
-        } = (0, et.k)(HS);
+          width: kk,
+          height: Ik,
+          pixels: Xk
+        } = (0, DX.q)(Fk);
         return {
-          width: SS,
-          height: gS,
-          alpha: rt(tS)
+          width: kk,
+          height: Ik,
+          alpha: MX(Xk)
         }
       } finally {
-        HS.close()
+        Fk.close()
       }
     }
-    class Hb {
-      constructor(SS, HS, gS) {
-        let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Sb;
-        this.session = SS, this.sources = HS, this.warn = gS, this.load = tS, this.nextPoll = 0, this.nK = !1, this.warned = new Set
+    class FT {
+      constructor(kk, Fk, Ik) {
+        let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : kT;
+        this.session = kk, this.sources = Fk, this.warn = Ik, this.load = Xk, this.nextPoll = 0, this.ee = !1, this.warned = new Set
       }
-      drain(SS) {
-        if (SS < this.nextPoll) return;
-        this.nextPoll = SS + 250;
-        const HS = this.session.sunShadowWantedTextures();
-        if (HS)
-          for (let gS = 0; gS + 1 < HS.length; gS += 2) this.hand(HS[gS], HS[gS + 1]);
-        for (const gS of this.session.takeSunShadowWarnings()) this.warn(gS)
+      drain(kk) {
+        if (kk < this.nextPoll) return;
+        this.nextPoll = kk + 250;
+        const Fk = this.session.sunShadowWantedTextures();
+        if (Fk)
+          for (let Ik = 0; Ik + 1 < Fk.length; Ik += 2) this.hand(Fk[Ik], Fk[Ik + 1]);
+        for (const Ik of this.session.takeSunShadowWarnings()) this.warn(Ik)
       }
       dispose() {
-        this.nK = !0
+        this.ee = !0
       }
-      async hand(SS, HS) {
-        var gS, tS, bS, XS, xS;
-        let NS, qS = null;
+      async hand(kk, Fk) {
+        var Ik, Xk, Tk, ik, yk;
+        let lk, ak = null;
         try {
-          if (qS = await this.sources.blockImageUrl(SS), null === qS) throw new Error(`block image ${SS} has no URL`);
-          NS = await this.load(qS)
-        } catch (IS) {
-          var uS;
-          const HS = null !== (uS = qS) && void 0 !== uS ? uS : `block image ${SS}`;
-          this.warned.has(HS) || (this.warned.add(HS), this.warn(`sun shadow plane texture ${HS} didn't load: its blocks cast no shadow`, IS))
+          if (ak = await this.sources.blockImageUrl(kk), null === ak) throw new Error(`block image ${kk} has no URL`);
+          lk = await this.load(ak)
+        } catch (Lk) {
+          var qk;
+          const Fk = null !== (qk = ak) && void 0 !== qk ? qk : `block image ${kk}`;
+          this.warned.has(Fk) || (this.warned.add(Fk), this.warn(`sun shadow plane texture ${Fk} didn't load: its blocks cast no shadow`, Lk))
         }
-        this.nK || this.session.setSunShadowTexture(SS, HS, null !== (gS = null === (tS = NS) || void 0 === tS ? void 0 : tS.width) && void 0 !== gS ? gS : 0, null !== (bS = null === (XS = NS) || void 0 === XS ? void 0 : XS.height) && void 0 !== bS ? bS : 0, null === (xS = NS) || void 0 === xS ? void 0 : xS.alpha)
+        this.ee || this.session.setSunShadowTexture(kk, Fk, null !== (Ik = null === (Xk = lk) || void 0 === Xk ? void 0 : Xk.width) && void 0 !== Ik ? Ik : 0, null !== (Tk = null === (ik = lk) || void 0 === ik ? void 0 : ik.height) && void 0 !== Tk ? Tk : 0, null === (yk = lk) || void 0 === yk ? void 0 : yk.alpha)
       }
     }
-    var gb = gS(40977),
-      tb = gS(40818),
-      bb = gS(40979),
-      Xb = gS(40986),
-      xb = gS(40824),
-      Nb = gS(40832),
-      qb = gS(34271),
-      ub = gS(34117),
-      Ib = gS(40997);
-    const fb = 8192,
-      kb = new Set;
-    const ab = new Set([...ub.b, "sceneDownload"]);
-    var Kb = gS(40748),
-      jb = gS(41005),
-      Gb = gS(41010);
-    const Cb = new Uint8Array(0);
-    let nb = null;
+    var IT = Ik(40963),
+      XT = Ik(40796),
+      TT = Ik(40966),
+      iT = Ik(40971),
+      yT = Ik(40799),
+      lT = Ik(40808),
+      aT = Ik(34222),
+      qT = Ik(34048),
+      LT = Ik(40986);
+    const tT = 8192,
+      ZT = new Set;
+    const jT = new Set([...qT.c, "sceneDownload"]);
+    var eT = Ik(40721),
+      wT = Ik(40991),
+      HT = Ik(40994);
+    const JT = new Uint8Array(0);
+    let xT = null;
 
-    function Pb(SS) {
+    function PT(kk) {
       return {
-        aux: pH.pc.AdStart | (SS ? pH.pc.PreventMovement : 0),
-        payload: Cb
+        aux: fF.Zb.AdStart | (kk ? fF.Zb.PreventMovement : 0),
+        payload: JT
       }
     }
-    var Qb = gS(3058),
-      Db = gS(330);
-    const wb = "__bloxdSceneCapture";
-    var hb = gS(1925),
-      Zb = gS(3077);
-    let Jb = null,
-      Ob = null,
-      db = null,
-      cb = !1;
+    var KT = Ik(2830),
+      QT = Ik(293);
+    const sT = "__bloxdSceneCapture";
+    var VT = Ik(1745),
+      zT = Ik(2841);
+    let ST = null,
+      oT = null,
+      vT = null,
+      ET = !1;
 
-    function vb() {
-      Jb ??= performance.now()
+    function OT() {
+      ST ??= performance.now()
     }
-    var Eb = gS(41017);
-    class Lb {
-      constructor(SS) {
-        var HS, gS;
-        this.host = SS, this.requested = null, this.landed = null, this.confirm = null, this.channel = void 0, this.oneShotStored = !0, this.startRead = void 0, this.landRequest = () => {}, this.landing = new Promise((SS => {
-          this.landRequest = SS
-        })), this.follow = SS => {
-          let HS = SS;
+    var nT = Ik(41003);
+    class GT {
+      constructor(kk) {
+        var Fk, Ik;
+        this.host = kk, this.requested = null, this.landed = null, this.confirm = null, this.channel = void 0, this.oneShotStored = !0, this.startRead = void 0, this.landRequest = () => {}, this.landing = new Promise((kk => {
+          this.landRequest = kk
+        })), this.follow = kk => {
+          let Fk = kk;
           return Promise.race([this.startRead, this.landing]).then((async () => {
-            const SS = null === this.requested && null !== HS;
-            var gS;
-            SS && (null === (gS = HS) || void 0 === gS || gS(null));
-            const tS = await this.landing;
-            var bS;
-            null === tS && SS || (null === (bS = HS) || void 0 === bS || bS(tS))
+            const kk = null === this.requested && null !== Fk;
+            var Ik;
+            kk && (null === (Ik = Fk) || void 0 === Ik || Ik(null));
+            const Xk = await this.landing;
+            var Tk;
+            null === Xk && kk || (null === (Tk = Fk) || void 0 === Tk || Tk(Xk))
           })), () => {
-            HS = null
+            Fk = null
           }
-        }, this.startRead = (gS = SS.store, gS.keys().then((SS => ({
-          own: SS.includes(Og.b),
-          oneShot: SS.includes(Og.d)
+        }, this.startRead = (Ik = kk.store, Ik.keys().then((kk => ({
+          own: kk.includes(vI.b),
+          oneShot: kk.includes(vI.f)
         })), (() => ({
           own: !0,
           oneShot: !0
-        })))).then((SS => {
+        })))).then((kk => {
           let {
-            own: HS,
-            oneShot: gS
-          } = SS;
-          this.oneShotStored = gS, (HS || gS) && this.request()
-        })), this.channel = (null !== (HS = SS.openChannel) && void 0 !== HS ? HS : Og.r)(), null !== this.channel && (this.channel.onmessage = () => {
+            own: Fk,
+            oneShot: Ik
+          } = kk;
+          this.oneShotStored = Ik, (Fk || Ik) && this.request()
+        })), this.channel = (null !== (Fk = kk.openChannel) && void 0 !== Fk ? Fk : vI.u)(), null !== this.channel && (this.channel.onmessage = () => {
           this.request()
         })
       }
       request() {
-        var SS;
+        var kk;
         if (null !== this.requested) return this.requested;
-        null === (SS = this.channel) || void 0 === SS || SS.close(), this.channel = null;
-        const HS = this.oneShotStored;
-        return this.requested = function(SS, HS, gS) {
-          return new Promise((HS => {
-            HS(SS())
-          })).catch((SS => (null !== HS && (0, Og.m)(HS), gS(SS), null)))
-        }((() => this.host.load(HS).then((SS => (SS.setGamePackConfirm(this.confirm), this.landed = SS, SS)))), HS ? this.host.store : null, this.host.tK), this.landRequest(this.requested), this.requested
+        null === (kk = this.channel) || void 0 === kk || kk.close(), this.channel = null;
+        const Fk = this.oneShotStored;
+        return this.requested = function(kk, Fk, Ik) {
+          return new Promise((Fk => {
+            Fk(kk())
+          })).catch((kk => (null !== Fk && (0, vI.o)(Fk), Ik(kk), null)))
+        }((() => this.host.load(Fk).then((kk => (kk.setGamePackConfirm(this.confirm), this.landed = kk, kk)))), Fk ? this.host.store : null, this.host.Mj), this.landRequest(this.requested), this.requested
       }
       loaded() {
         return this.landed
       }
       forJoin() {
         return null !== this.requested ? this.requested : Promise.race([this.startRead, this.landing]).then((() => {
-          var SS;
-          return null !== (SS = this.requested) && void 0 !== SS ? SS : null
+          var kk;
+          return null !== (kk = this.requested) && void 0 !== kk ? kk : null
         }))
       }
-      setGamePackConfirm(SS) {
-        var HS;
-        this.confirm = SS, null === (HS = this.landed) || void 0 === HS || HS.setGamePackConfirm(SS)
+      setGamePackConfirm(kk) {
+        var Fk;
+        this.confirm = kk, null === (Fk = this.landed) || void 0 === Fk || Fk.setGamePackConfirm(kk)
       }
     }
-    var Yb = gS(36282);
-    const Ab = 216 * Yb.d,
-      yb = 92 * Yb.b,
-      Vb = 64 * Yb.d,
-      ib = 16 * Yb.d;
+    var pT = Ik(36245);
+    const uT = 216 * pT.h,
+      bT = 92 * pT.e,
+      RT = 64 * pT.h,
+      UT = 16 * pT.h;
 
-    function Wb() {
-      var SS, HS;
-      return null !== (SS = null === (HS = performance.memory) || void 0 === HS ? void 0 : HS.YC) && void 0 !== SS ? SS : null
+    function CT() {
+      var kk, Fk;
+      return null !== (kk = null === (Fk = performance.memory) || void 0 === Fk ? void 0 : Fk.HJ) && void 0 !== kk ? kk : null
     }
-    class zb {
-      constructor(SS, HS) {
-        this.budgetBytes = SS, this.reads = HS, this.estimate = null, this.shedAt = null
+    class NT {
+      constructor(kk, Fk) {
+        this.budgetBytes = kk, this.reads = Fk, this.estimate = null, this.shedAt = null
       }
-      read(SS) {
-        var HS;
-        const gS = this.reads.storedChunks(),
-          tS = this.reads.gpuBytes(),
-          bS = Math.max(null !== (HS = this.reads.jsHeapBytes()) && void 0 !== HS ? HS : 0, Vb),
-          XS = Ab + SS + bS + tS + gS * yb;
+      read(kk) {
+        var Fk;
+        const Ik = this.reads.storedChunks(),
+          Xk = this.reads.gpuBytes(),
+          Tk = Math.max(null !== (Fk = this.reads.jsHeapBytes()) && void 0 !== Fk ? Fk : 0, RT),
+          ik = uT + kk + Tk + Xk + Ik * bT;
         this.estimate = {
-          wasmBytes: SS,
-          jsHeapBytes: bS,
-          gpuBytes: tS,
-          storedChunks: gS,
-          totalBytes: XS
+          wasmBytes: kk,
+          jsHeapBytes: Tk,
+          gpuBytes: Xk,
+          storedChunks: Ik,
+          totalBytes: ik
         }
       }
       last() {
@@ -4176,451 +4103,451 @@ export const modules = {
       }
       takeShed() {
         const {
-          estimate: SS,
-          budgetBytes: HS,
-          shedAt: gS
+          estimate: kk,
+          budgetBytes: Fk,
+          shedAt: Ik
         } = this;
-        return !(null === SS || null === HS || SS.totalBytes < HS || null !== gS && SS.totalBytes < gS + ib) && (this.shedAt = SS.totalBytes, !0)
+        return !(null === kk || null === Fk || kk.totalBytes < Fk || null !== Ik && kk.totalBytes < Ik + UT) && (this.shedAt = kk.totalBytes, !0)
       }
       describe() {
         const {
-          estimate: SS,
-          budgetBytes: HS
+          estimate: kk,
+          budgetBytes: Fk
         } = this;
-        return null === SS ? null : `estimate ${(0,Yb.j)(SS.totalBytes)} MiB of budget ${null===HS?"none":(0,Yb.j)(HS)}: wasm ${(0,Yb.j)(SS.wasmBytes)} js ${(0,Yb.j)(SS.jsHeapBytes)} gpu ${(0,Yb.j)(SS.gpuBytes)} chunks ${SS.storedChunks}`
+        return null === kk ? null : `estimate ${(0,pT.m)(kk.totalBytes)} MiB of budget ${null===Fk?"none":(0,pT.m)(Fk)}: wasm ${(0,pT.m)(kk.wasmBytes)} js ${(0,pT.m)(kk.jsHeapBytes)} gpu ${(0,pT.m)(kk.gpuBytes)} chunks ${kk.storedChunks}`
       }
       snapshot() {
         const {
-          estimate: SS,
-          budgetBytes: HS
+          estimate: kk,
+          budgetBytes: Fk
         } = this;
         return {
-          ...null === SS ? {} : {
-            footprintMiB: Number((0, Yb.j)(SS.totalBytes)),
-            gpuMiB: Number((0, Yb.j)(SS.gpuBytes)),
-            storedChunks: SS.storedChunks
+          ...null === kk ? {} : {
+            footprintMiB: Number((0, pT.m)(kk.totalBytes)),
+            gpuMiB: Number((0, pT.m)(kk.gpuBytes)),
+            storedChunks: kk.storedChunks
           },
-          footprintBudgetMiB: null === HS ? -1 : Number((0, Yb.j)(HS))
+          footprintBudgetMiB: null === Fk ? -1 : Number((0, pT.m)(Fk))
         }
       }
     }
-    var Ub = gS(2953),
-      pb = gS(4652),
-      sb = gS(39119),
-      Bb = gS(37972);
-    const Mb = sH.bb + 1,
-      Fb = 4096 * Mb;
-    class Rb {
-      constructor(SS, HS) {
-        this.log = SS, this.take = HS, this.Ku = [], this.unshown = new Map, this.latest = new Map
+    var cT = Ik(2744),
+      WT = Ik(4504),
+      fT = Ik(39102),
+      BT = Ik(37939);
+    const dT = BF.ib + 1,
+      YT = 4096 * dT;
+    class AT {
+      constructor(kk, Fk) {
+        this.log = kk, this.take = Fk, this.eq = [], this.unshown = new Map, this.latest = new Map
       }
-      afterFrame(SS, HS) {
-        const gS = this.take();
-        gS.length >= sH.$ && gS[0] > 0 && (0, Ub.i)("remesh", `${gS[0]} core records lost to a full log`);
-        const tS = this.Ku;
-        for (let bS = sH.$; bS + sH.bb <= gS.length; bS += sH.bb) {
-          for (let SS = bS; SS < bS + sH.bb; SS++) tS.push(gS[SS]);
-          tS.push(SS)
+      afterFrame(kk, Fk) {
+        const Ik = this.take();
+        Ik.length >= BF.eb && Ik[0] > 0 && (0, cT.g)("remesh", `${Ik[0]} core records lost to a full log`);
+        const Xk = this.eq;
+        for (let Tk = BF.eb; Tk + BF.ib <= Ik.length; Tk += BF.ib) {
+          for (let kk = Tk; kk < Tk + BF.ib; kk++) Xk.push(Ik[kk]);
+          Xk.push(kk)
         }
-        if (HS || !(tS.length < Fb)) {
-          for (let HS = 0; HS < tS.length; HS += Mb) this.feed(HS, SS);
-          tS.length = 0, HS && this.log.frame(SS)
+        if (Fk || !(Xk.length < YT)) {
+          for (let Fk = 0; Fk < Xk.length; Fk += dT) this.feed(Fk, kk);
+          Xk.length = 0, Fk && this.log.frame(kk)
         }
       }
-      feed(SS, HS) {
-        var gS;
-        const tS = this.Ku,
-          bS = (0, Bb.e)(tS[SS + 1], tS[SS + 2], tS[SS + 3]),
-          XS = tS[SS + 4],
-          xS = tS[SS + sH.bb];
-        switch (tS[SS]) {
-          case sH.Fb.Edit:
-            this.log.edit(bS, xS);
+      feed(kk, Fk) {
+        var Ik;
+        const Xk = this.eq,
+          Tk = (0, BT.h)(Xk[kk + 1], Xk[kk + 2], Xk[kk + 3]),
+          ik = Xk[kk + 4],
+          yk = Xk[kk + BF.ib];
+        switch (Xk[kk]) {
+          case BF.Rb.Edit:
+            this.log.edit(Tk, yk);
             break;
-          case sH.Fb.Sent:
-            this.latest.set(bS, XS), this.log.sent(bS, XS, tS[SS + 5], tS[SS + 6], tS[SS + 7], null !== (gS = this.unshown.get(bS)) && void 0 !== gS ? gS : Bb.d, xS);
+          case BF.Rb.Sent:
+            this.latest.set(Tk, ik), this.log.sent(Tk, ik, Xk[kk + 5], Xk[kk + 6], Xk[kk + 7], null !== (Ik = this.unshown.get(Tk)) && void 0 !== Ik ? Ik : BT.d, yk);
             break;
-          case sH.Fb.Done: {
-            this.log.received(XS, tS[SS + 5] / 1e3, xS);
-            const HS = this.unshown.get(bS);
-            void 0 === HS ? this.unshown.set(bS, [XS]) : HS.push(XS);
+          case BF.Rb.Done: {
+            this.log.received(ik, Xk[kk + 5] / 1e3, yk);
+            const Fk = this.unshown.get(Tk);
+            void 0 === Fk ? this.unshown.set(Tk, [ik]) : Fk.push(ik);
             break
           }
-          case sH.Fb.Failed: {
-            const SS = this.latest.get(bS);
-            void 0 !== SS && SS !== XS ? this.log.reassign(bS, XS, SS) : this.log.failed(XS), this.ended(bS, XS);
+          case BF.Rb.Failed: {
+            const kk = this.latest.get(Tk);
+            void 0 !== kk && kk !== ik ? this.log.reassign(Tk, ik, kk) : this.log.failed(ik), this.ended(Tk, ik);
             break
           }
-          case sH.Fb.Shown:
-            this.log.applied(bS, XS, HS), this.ended(bS, XS);
+          case BF.Rb.Shown:
+            this.log.applied(Tk, ik, Fk), this.ended(Tk, ik);
             break;
-          case sH.Fb.Replaced:
-            this.log.reassign(bS, XS, tS[SS + 5]), this.ended(bS, XS);
+          case BF.Rb.Replaced:
+            this.log.reassign(Tk, ik, Xk[kk + 5]), this.ended(Tk, ik);
             break;
-          case sH.Fb.Emptied:
-            this.log.emptied(bS, HS);
+          case BF.Rb.Emptied:
+            this.log.emptied(Tk, Fk);
             break;
           default:
-            console.warn(`[debug:remesh] unknown core record kind ${tS[SS]}`)
+            console.warn(`[debug:remesh] unknown core record kind ${Xk[kk]}`)
         }
       }
-      ended(SS, HS) {
-        this.latest.get(SS) === HS && this.latest.delete(SS);
-        const gS = this.unshown.get(SS);
-        if (void 0 === gS) return;
-        const tS = gS.indexOf(HS);
-        tS >= 0 && gS.splice(tS, 1), 0 === gS.length && this.unshown.delete(SS)
+      ended(kk, Fk) {
+        this.latest.get(kk) === Fk && this.latest.delete(kk);
+        const Ik = this.unshown.get(kk);
+        if (void 0 === Ik) return;
+        const Xk = Ik.indexOf(Fk);
+        Xk >= 0 && Ik.splice(Xk, 1), 0 === Ik.length && this.unshown.delete(kk)
       }
     }
-    let Tb = null;
-    var ob = gS(3388),
-      lb = gS(39699);
-    const mb = new Uint8Array(0);
-    class eb {
-      constructor(SS) {
-        this.options = SS, this.worker = null, this.watch = null, this.createWorker = null, this.loading = !1, this.wanted = !1, this.Ku = [], this.startsWithoutResult = 0, this.coreWaits = !1, this.lastLoss = "", this.seed = null, this.gone = !1, this.pool = [], null !== SS.module ? SS.write(0, pH.Wd.WorldgenStarted, 0, 0, mb) : this.giveUp()
+    let gT = null;
+    var mT = Ik(3161),
+      hT = Ik(39631);
+    const rT = new Uint8Array(0);
+    class DT {
+      constructor(kk) {
+        this.options = kk, this.worker = null, this.watch = null, this.createWorker = null, this.loading = !1, this.wanted = !1, this.eq = [], this.startsWithoutResult = 0, this.coreWaits = !1, this.lastLoss = "", this.seed = null, this.gone = !1, this.pool = [], null !== kk.module ? kk.write(0, fF.Pd.WorldgenStarted, 0, 0, rT) : this.giveUp()
       }
-      take(SS, HS) {
-        if (!(this.gone || null === this.worker && null === this.Ku))
-          if (SS === pH.Yd.WorldgenSeed) {
-            const SS = 0 === HS.byteLength ? null : this.options.decodeSettings(HS);
-            null === SS ? this.release() : function(SS, HS) {
-              if ((null === SS || void 0 === SS ? void 0 : SS.byteLength) !== HS.byteLength) return !1;
-              for (let gS = 0; gS < SS.byteLength; gS++)
-                if (SS[gS] !== HS[gS]) return !1;
+      take(kk, Fk) {
+        if (!(this.gone || null === this.worker && null === this.eq))
+          if (kk === fF.Sd.WorldgenSeed) {
+            const kk = 0 === Fk.byteLength ? null : this.options.decodeSettings(Fk);
+            null === kk ? this.release() : function(kk, Fk) {
+              if ((null === kk || void 0 === kk ? void 0 : kk.byteLength) !== Fk.byteLength) return !1;
+              for (let Ik = 0; Ik < kk.byteLength; Ik++)
+                if (kk[Ik] !== Fk[Ik]) return !1;
               return !0
-            }(this.seed, HS) || (this.seed = HS.slice(), this.startsWithoutResult = null === this.worker ? 0 : 1), this.dropHeld(), this.post({
+            }(this.seed, Fk) || (this.seed = Fk.slice(), this.startsWithoutResult = null === this.worker ? 0 : 1), this.dropHeld(), this.post({
               type: "seed",
-              settings: SS
-            }, []), null !== SS ? this.want() : this.loading || this.options.onMapWithoutWorldgen()
-          } else if (SS === pH.Yd.Generate) {
-          var gS;
-          const SS = new DataView(HS.buffer, HS.byteOffset, pH.Sd),
-            tS = null !== (gS = this.pool.pop()) && void 0 !== gS ? gS : new ArrayBuffer(8192);
+              settings: kk
+            }, []), null !== kk ? this.want() : this.loading || this.options.onMapWithoutWorldgen()
+          } else if (kk === fF.Sd.Generate) {
+          var Ik;
+          const kk = new DataView(Fk.buffer, Fk.byteOffset, fF.Nd),
+            Xk = null !== (Ik = this.pool.pop()) && void 0 !== Ik ? Ik : new ArrayBuffer(8192);
           this.post({
             type: "generate",
-            ticket: SS.getUint32(0, !0),
-            x: SS.getInt32(4, !0),
-            y: SS.getInt32(8, !0),
-            z: SS.getInt32(12, !0),
-            bytes: tS
-          }, [tS])
+            ticket: kk.getUint32(0, !0),
+            x: kk.getInt32(4, !0),
+            y: kk.getInt32(8, !0),
+            z: kk.getInt32(12, !0),
+            bytes: Xk
+          }, [Xk])
         }
       }
       prestart() {
         this.gone || this.want()
       }
       stopWorker() {
-        this.gone || (this.release(), this.dropHeld(), this.pool.length = 0, this.coreWaits && (this.coreWaits = !1, this.options.write(0, pH.Wd.WorldgenStarted, 0, 0, mb)))
+        this.gone || (this.release(), this.dropHeld(), this.pool.length = 0, this.coreWaits && (this.coreWaits = !1, this.options.write(0, fF.Pd.WorldgenStarted, 0, 0, rT)))
       }
       stop() {
-        var SS;
-        this.gone = !0, this.dropHeld(), this.endWatch(), null === (SS = this.worker) || void 0 === SS || SS.terminate(), this.worker = null
+        var kk;
+        this.gone = !0, this.dropHeld(), this.endWatch(), null === (kk = this.worker) || void 0 === kk || kk.terminate(), this.worker = null
       }
-      post(SS, HS) {
-        var gS;
-        null !== this.Ku ? this.Ku.push({
-          message: SS,
-          transfer: HS
-        }) : null === (gS = this.worker) || void 0 === gS || gS.postMessage(SS, HS)
+      post(kk, Fk) {
+        var Ik;
+        null !== this.eq ? this.eq.push({
+          message: kk,
+          transfer: Fk
+        }) : null === (Ik = this.worker) || void 0 === Ik || Ik.postMessage(kk, Fk)
       }
       want() {
         this.wanted = !0, null === this.worker && (null === this.createWorker ? this.load() : this.start())
       }
       release() {
-        this.wanted = !1, null !== this.worker && (this.endWorker(), this.startsWithoutResult = 0, this.Ku ??= [])
+        this.wanted = !1, null !== this.worker && (this.endWorker(), this.startsWithoutResult = 0, this.eq ??= [])
       }
       endWorker() {
-        var SS, HS, gS;
-        this.endWatch(), null === (SS = this.worker) || void 0 === SS || SS.terminate(), this.worker = null, null === (HS = (gS = this.options).onMemoryGone) || void 0 === HS || HS.call(gS)
+        var kk, Fk, Ik;
+        this.endWatch(), null === (kk = this.worker) || void 0 === kk || kk.terminate(), this.worker = null, null === (Fk = (Ik = this.options).onMemoryGone) || void 0 === Fk || Fk.call(Ik)
       }
       load() {
-        this.loading || (this.loading = !0, this.options.loadWorker().then((SS => {
-          this.createWorker = SS, this.wanted && this.start()
-        }), (SS => {
-          this.gone || (this.giveUp(), this.options.onLoadFailed(SS))
+        this.loading || (this.loading = !0, this.options.loadWorker().then((kk => {
+          this.createWorker = kk, this.wanted && this.start()
+        }), (kk => {
+          this.gone || (this.giveUp(), this.options.onLoadFailed(kk))
         })))
       }
       start() {
         const {
-          module: SS
-        } = this.options, HS = this.createWorker;
-        if (this.gone || null === SS || null === HS) return;
+          module: kk
+        } = this.options, Fk = this.createWorker;
+        if (this.gone || null === kk || null === Fk) return;
         if (this.startsWithoutResult >= 3) return this.giveUp(), void this.options.onGaveUp(this.lastLoss);
-        let gS;
+        let Ik;
         this.startsWithoutResult++;
         try {
-          gS = HS()
-        } catch (bS) {
-          return console.warn("[bloxd-wasm-client] the world-gen worker did not start", bS), this.lastLoss = `it did not start (${String(bS)})`, void this.start()
+          Ik = Fk()
+        } catch (Tk) {
+          return console.warn("[bloxd-wasm-client] the world-gen worker did not start", Tk), this.lastLoss = `it did not start (${String(Tk)})`, void this.start()
         }
-        this.worker = gS, gS.onmessage = SS => {
+        this.worker = Ik, Ik.onmessage = kk => {
           let {
-            data: HS
-          } = SS;
-          this.worker === gS && this.onReply(gS, HS)
-        }, gS.onerror = SS => {
-          SS.preventDefault(), this.worker === gS && this.lose(SS.message || "its script failed")
+            data: Fk
+          } = kk;
+          this.worker === Ik && this.onReply(Ik, Fk)
+        }, Ik.onerror = kk => {
+          kk.preventDefault(), this.worker === Ik && this.lose(kk.message || "its script failed")
         };
         try {
-          gS.postMessage({
+          Ik.postMessage({
             type: "start",
-            module: SS,
-            JK: tS.e.JK
+            module: kk,
+            se: Xk.f.se
           })
-        } catch (bS) {
-          return console.warn("[bloxd-wasm-client] the world-gen worker could not be sent the module", bS), this.lastLoss = `it could not be sent the module (${String(bS)})`, gS.terminate(), this.worker = null, void this.start()
+        } catch (Tk) {
+          return console.warn("[bloxd-wasm-client] the world-gen worker could not be sent the module", Tk), this.lastLoss = `it could not be sent the module (${String(Tk)})`, Ik.terminate(), this.worker = null, void this.start()
         }
-        this.watch = new st.h(st.f, (SS => {
-          this.lose((0, st.k)(SS), (() => {
-            this.options.onStartTimeout(SS)
+        this.watch = new fX.g(fX.e, (kk => {
+          this.lose((0, fX.i)(kk), (() => {
+            this.options.onStartTimeout(kk)
           }))
         }), void 0, this.options.visibility)
       }
-      onReply(SS, HS) {
-        switch (HS.type) {
+      onReply(kk, Fk) {
+        switch (Fk.type) {
           case "started": {
             this.endWatch();
-            const HS = this.Ku;
-            if (null === HS) {
-              this.coreWaits = !1, this.options.write(0, pH.Wd.WorldgenStarted, 0, 0, mb);
+            const Fk = this.eq;
+            if (null === Fk) {
+              this.coreWaits = !1, this.options.write(0, fF.Pd.WorldgenStarted, 0, 0, rT);
               break
             }
-            this.Ku = null;
+            this.eq = null;
             for (const {
-                message: gS,
-                transfer: tS
+                message: Ik,
+                transfer: Xk
               }
-              of HS) SS.postMessage(gS, tS);
+              of Fk) kk.postMessage(Ik, Xk);
             break
           }
           case "lost":
-            this.lose(HS.reason);
+            this.lose(Fk.reason);
             break;
           case "memory":
-            var gS, tS;
-            null === (gS = (tS = this.options).onMemoryStats) || void 0 === gS || gS.call(tS, HS.stats);
+            var Ik, Xk;
+            null === (Ik = (Xk = this.options).onMemoryStats) || void 0 === Ik || Ik.call(Xk, Fk.stats);
             break;
           case "result":
-            HS.status !== pH.Hb.Trapped && (this.startsWithoutResult = 0), this.options.write(HS.ticket, pH.Wd.WorldgenResult, HS.status, HS.workerUs, new Uint8Array(HS.bytes, 0, HS.len)), this.recycle(HS.bytes), HS.spare && this.recycle(HS.spare)
+            Fk.status !== fF.ub.Trapped && (this.startsWithoutResult = 0), this.options.write(Fk.ticket, fF.Pd.WorldgenResult, Fk.status, Fk.workerUs, new Uint8Array(Fk.bytes, 0, Fk.len)), this.recycle(Fk.bytes), Fk.spare && this.recycle(Fk.spare)
         }
       }
-      lose(SS, HS) {
-        console.warn(`[bloxd-wasm-client] the world-gen worker was lost: ${SS}`), this.lastLoss = SS, this.endWorker(), this.gone || (HS ? HS() : this.options.onWorkerLost(SS), this.dropHeld(), this.Ku = null, this.options.write(0, pH.Wd.WorldgenLost, pH.Zd.Lost, 0, mb), this.coreWaits = !0, this.start())
+      lose(kk, Fk) {
+        console.warn(`[bloxd-wasm-client] the world-gen worker was lost: ${kk}`), this.lastLoss = kk, this.endWorker(), this.gone || (Fk ? Fk() : this.options.onWorkerLost(kk), this.dropHeld(), this.eq = null, this.options.write(0, fF.Pd.WorldgenLost, fF.Wd.Lost, 0, rT), this.coreWaits = !0, this.start())
       }
       giveUp() {
-        this.gone = !0, this.dropHeld(), this.options.write(0, pH.Wd.WorldgenLost, pH.Zd.Gone, 0, mb)
+        this.gone = !0, this.dropHeld(), this.options.write(0, fF.Pd.WorldgenLost, fF.Wd.Gone, 0, rT)
       }
       endWatch() {
-        var SS;
-        null === (SS = this.watch) || void 0 === SS || SS.cancel(), this.watch = null
+        var kk;
+        null === (kk = this.watch) || void 0 === kk || kk.cancel(), this.watch = null
       }
       dropHeld() {
-        if (null !== this.Ku) {
+        if (null !== this.eq) {
           for (const {
-              message: SS
+              message: kk
             }
-            of this.Ku) "generate" === SS.type && this.recycle(SS.bytes);
-          this.Ku.length = 0
+            of this.eq) "generate" === kk.type && this.recycle(kk.bytes);
+          this.eq.length = 0
         }
       }
-      recycle(SS) {
-        this.pool.length < 16 && SS.byteLength > 0 && SS.byteLength <= 16384 && this.pool.push(SS)
+      recycle(kk) {
+        this.pool.length < 16 && kk.byteLength > 0 && kk.byteLength <= 16384 && this.pool.push(kk)
       }
     }
-    var rb = gS(37757),
-      SX = gS(3839),
-      HX = gS(40692),
-      gX = gS(41025),
-      tX = gS(40814);
-    const bX = /[(@\s]([^\s(@]+)$/,
-      XX = /:\d/;
+    var MT = Ik(37760),
+      ki = Ik(3662),
+      Fi = Ik(40670),
+      Ii = Ik(41009),
+      Xi = Ik(40787);
+    const Ti = /[(@\s]([^\s(@]+)$/,
+      ii = /:\d/;
 
-    function xX(SS, HS) {
-      for (let gS = 0; gS + HS.length <= SS.length; gS++) {
-        let tS = 0;
-        for (; tS < HS.length && SS[gS + tS] === HS[tS];) tS++;
-        if (tS === HS.length) return gS
+    function yi(kk, Fk) {
+      for (let Ik = 0; Ik + Fk.length <= kk.length; Ik++) {
+        let Xk = 0;
+        for (; Xk < Fk.length && kk[Ik + Xk] === Fk[Xk];) Xk++;
+        if (Xk === Fk.length) return Ik
       }
       return -1
     }
 
-    function NX(SS) {
-      return "(" === SS || ")" === SS || "@" === SS || "," === SS || " " === SS || "\t" === SS
+    function li(kk) {
+      return "(" === kk || ")" === kk || "@" === kk || "," === kk || " " === kk || "\t" === kk
     }
 
-    function qX(SS, HS) {
-      let gS = HS;
-      for (; gS > 0 && !NX(SS[gS - 1]);) gS--;
-      let tS = HS;
-      for (; tS < SS.length && !NX(SS[tS]);) tS++;
-      let bS = "";
-      for (let XS = gS; XS < tS; XS++) bS += SS[XS];
-      return bS
+    function ai(kk, Fk) {
+      let Ik = Fk;
+      for (; Ik > 0 && !li(kk[Ik - 1]);) Ik--;
+      let Xk = Fk;
+      for (; Xk < kk.length && !li(kk[Xk]);) Xk++;
+      let Tk = "";
+      for (let ik = Ik; ik < Xk; ik++) Tk += kk[ik];
+      return Tk
     }
 
-    function uX(SS, HS) {
-      var gS;
-      const tS = /[^\n]+/g,
-        bS = /\b(?!wasm:)[a-z][\w+.-]*:\/\/[\w.:%~+[\]-]*/i,
-        XS = /^([^?#)]*?)(?::\d+)*(?:[?#)]|$)/;
-      let xS = null,
-        NS = null,
-        qS = (0, Yt.o)(Yt.W, tS, [SS]);
-      for (; null !== qS;) {
-        const gS = (0, Yt.o)(Yt.W, bS, [qS[0]]),
-          uS = null === HS ? -1 : xX(qS[0], HS);
-        if (-1 !== uS) {
-          if (null !== gS) return gS[0];
-          const SS = qX(qS[0], uS),
-            HS = (0, Yt.o)(Yt.W, bX, [qS[0]]),
-            tS = null !== (0, Yt.o)(Yt.W, XX, [SS]) ? SS : null === HS ? null : HS[1],
-            bS = null === tS ? null : (0, Yt.o)(Yt.W, XS, [tS]);
-          if (null !== bS && "" !== bS[1]) return bS[1]
+    function qi(kk, Fk) {
+      var Ik;
+      const Xk = /[^\n]+/g,
+        Tk = /\b(?!wasm:)[a-z][\w+.-]*:\/\/[\w.:%~+[\]-]*/i,
+        ik = /^([^?#)]*?)(?::\d+)*(?:[?#)]|$)/;
+      let yk = null,
+        lk = null,
+        ak = (0, pX.k)(pX.R, Xk, [kk]);
+      for (; null !== ak;) {
+        const Ik = (0, pX.k)(pX.R, Tk, [ak[0]]),
+          qk = null === Fk ? -1 : yi(ak[0], Fk);
+        if (-1 !== qk) {
+          if (null !== Ik) return Ik[0];
+          const kk = ai(ak[0], qk),
+            Fk = (0, pX.k)(pX.R, Ti, [ak[0]]),
+            Xk = null !== (0, pX.k)(pX.R, ii, [kk]) ? kk : null === Fk ? null : Fk[1],
+            Tk = null === Xk ? null : (0, pX.k)(pX.R, ik, [Xk]);
+          if (null !== Tk && "" !== Tk[1]) return Tk[1]
         }
-        null !== gS && (null === xS ? xS = gS[0] : null === NS && gS[0] !== xS && (NS = gS[0])), qS = (0, Yt.o)(Yt.W, tS, [SS])
+        null !== Ik && (null === yk ? yk = Ik[0] : null === lk && Ik[0] !== yk && (lk = Ik[0])), ak = (0, pX.k)(pX.R, Xk, [kk])
       }
-      return null !== (gS = NS) && void 0 !== gS ? gS : null === xS ? "none" : "own"
+      return null !== (Ik = lk) && void 0 !== Ik ? Ik : null === yk ? "none" : "own"
     }
-    const IX = /:(\d+):(\d+)\)?$/;
+    const Li = /:(\d+):(\d+)\)?$/;
 
-    function fX(SS, HS) {
-      const gS = (0, Yt.o)(Yt.W, IX, [HS]);
-      return null === gS ? SS : SS + ":" + gS[1] + ":" + gS[2]
+    function ti(kk, Fk) {
+      const Ik = (0, pX.k)(pX.R, Li, [Fk]);
+      return null === Ik ? kk : kk + ":" + Ik[1] + ":" + Ik[2]
     }
 
-    function kX(SS) {
-      const HS = /[^\n]+/g,
-        gS = /\b(?!wasm:)((?:blob:)?)(([a-z][\w+.-]*):\/\/[\w.:%~+[\]-]*)((?:[^\s()@?#]*\/)?)([^\s()@?#:]*)/i;
-      let tS = null,
-        bS = "",
-        XS = !1,
-        xS = (0, Yt.o)(Yt.W, HS, [SS]);
-      for (; null !== xS;) {
-        const NS = (0, Yt.o)(Yt.W, gS, [xS[0]]),
-          qS = null === NS ? (0, Yt.o)(Yt.W, bX, [xS[0]]) : null,
-          uS = null !== qS && null !== (0, Yt.o)(Yt.W, XX, [qS[1]]) && 0 !== xX(qS[1], "wasm:") ? qS[1] : null;
-        if (null === tS) null !== NS ? (tS = NS[2], bS = NS[4]) : null !== uS && (tS = "");
-        else if (null !== NS) {
-          if (XS = !0, "" !== NS[1]) return {
+    function Zi(kk) {
+      const Fk = /[^\n]+/g,
+        Ik = /\b(?!wasm:)((?:blob:)?)(([a-z][\w+.-]*):\/\/[\w.:%~+[\]-]*)((?:[^\s()@?#]*\/)?)([^\s()@?#:]*)/i;
+      let Xk = null,
+        Tk = "",
+        ik = !1,
+        yk = (0, pX.k)(pX.R, Fk, [kk]);
+      for (; null !== yk;) {
+        const lk = (0, pX.k)(pX.R, Ik, [yk[0]]),
+          ak = null === lk ? (0, pX.k)(pX.R, Ti, [yk[0]]) : null,
+          qk = null !== ak && null !== (0, pX.k)(pX.R, ii, [ak[1]]) && 0 !== yi(ak[1], "wasm:") ? ak[1] : null;
+        if (null === Xk) null !== lk ? (Xk = lk[2], Tk = lk[4]) : null !== qk && (Xk = "");
+        else if (null !== lk) {
+          if (ik = !0, "" !== lk[1]) return {
             reader: "inline",
-            frame: fX("blob", xS[0])
+            frame: ti("blob", yk[0])
           };
-          if (NS[2] !== tS) {
-            const SS = "moz-extension" === NS[3] || "safari-web-extension" === NS[3];
-            let HS = "";
-            for (let gS = 0; gS < NS[5].length && gS < 20; gS++) HS += NS[5][gS];
+          if (lk[2] !== Xk) {
+            const kk = "moz-extension" === lk[3] || "safari-web-extension" === lk[3];
+            let Fk = "";
+            for (let Ik = 0; Ik < lk[5].length && Ik < 20; Ik++) Fk += lk[5][Ik];
             return {
-              reader: SS ? NS[3] : NS[2],
-              frame: fX("" === HS ? "-" : HS, xS[0])
+              reader: kk ? lk[3] : lk[2],
+              frame: ti("" === Fk ? "-" : Fk, yk[0])
             }
           }
-          if (NS[4] !== bS) return {
+          if (lk[4] !== Tk) return {
             reader: "inline",
-            frame: fX("inline", xS[0])
+            frame: ti("inline", yk[0])
           }
-        } else if (null !== uS) {
-          const SS = -1 !== xX(xS[0], "userscript") || -1 !== xX(xS[0], ".user.js");
+        } else if (null !== qk) {
+          const kk = -1 !== yi(yk[0], "userscript") || -1 !== yi(yk[0], ".user.js");
           return {
-            reader: SS ? "userscript" : "inline",
-            frame: fX(SS ? "userscript" : "eval", xS[0])
+            reader: kk ? "userscript" : "inline",
+            frame: ti(kk ? "userscript" : "eval", yk[0])
           }
         }
-        xS = (0, Yt.o)(Yt.W, HS, [SS])
+        yk = (0, pX.k)(pX.R, Fk, [kk])
       }
-      const NS = XS ? "own" : "unknown";
+      const lk = ik ? "own" : "unknown";
       return {
-        reader: NS,
-        frame: NS
+        reader: lk,
+        frame: lk
       }
     }
 
-    function aX(SS, HS) {
-      return (0, rb.h)(function(SS) {
-        if ("string" !== typeof SS || 0 === SS.length) return "-";
-        let HS = 2166136261;
-        const gS = SS.length < 4096 ? SS.length : 4096;
-        for (let bS = 0; bS <= gS; bS++) HS ^= bS === gS ? SS.length : (0, Yt.o)(Yt.db, SS, [bS]), HS = HS + (HS << 1) + (HS << 4) + (HS << 7) + (HS << 8) + (HS << 24) >>> 0;
-        let tS = "";
-        for (let bS = 28; bS >= 0; bS -= 4) tS += "0123456789abcdef" [HS >>> bS & 15];
-        return tS
-      }(HS), kX(SS).frame)
+    function ji(kk, Fk) {
+      return (0, MT.g)(function(kk) {
+        if ("string" !== typeof kk || 0 === kk.length) return "-";
+        let Fk = 2166136261;
+        const Ik = kk.length < 4096 ? kk.length : 4096;
+        for (let Tk = 0; Tk <= Ik; Tk++) Fk ^= Tk === Ik ? kk.length : (0, pX.k)(pX.bb, kk, [Tk]), Fk = Fk + (Fk << 1) + (Fk << 4) + (Fk << 7) + (Fk << 8) + (Fk << 24) >>> 0;
+        let Xk = "";
+        for (let Tk = 28; Tk >= 0; Tk -= 4) Xk += "0123456789abcdef" [Fk >>> Tk & 15];
+        return Xk
+      }(Fk), Zi(kk).frame)
     }
-    const KX = (SS, HS) => SS.includes(HS),
-      jX = SS => {
+    const ei = (kk, Fk) => kk.includes(Fk),
+      wi = kk => {
         try {
-          return SS()
+          return kk()
         } catch {
           return !1
         }
       },
-      GX = -1,
-      CX = SS => {
+      Hi = -1,
+      Ji = kk => {
         try {
-          return SS()
+          return kk()
         } catch {
-          return GX
+          return Hi
         }
       };
 
-    function nX(SS, HS) {
+    function xi(kk, Fk) {
       return {
-        probe: (gS, tS, bS) => {
+        probe: (Ik, Xk, Tk) => {
           try {
-            return ((gS, tS, bS) => {
-              switch (gS) {
-                case pH.Bc.StackCheck:
-                  return HS.stackCheck() ? 1 : 0;
-                case pH.Bc.ConfirmMesh:
-                  return HS.confirmMesh();
-                case pH.Bc.IndexPassReplaced:
-                  return HS.indexPassReplaced() ? 1 : 0;
-                case pH.Bc.ProductSubChanged:
-                  return HS.productSubChanged() ? 1 : 0;
-                case pH.Bc.RenderStatus:
-                  return HS.Mu();
-                case pH.Bc.Held:
-                  return HS.Ku();
-                case pH.Bc.PlayerKilledSubs:
-                  return HS.playerKilledSubs();
-                case pH.ob: {
-                  const gS = HS.getComplete();
-                  return null === gS ? 0 : (0, Yt.o)(Yt.z, Yt.ib, [gS, new Yt.d((0, Yt.I)(SS()), tS, bS)]).written
+            return ((Ik, Xk, Tk) => {
+              switch (Ik) {
+                case fF.mc.StackCheck:
+                  return Fk.stackCheck() ? 1 : 0;
+                case fF.mc.ConfirmMesh:
+                  return Fk.confirmMesh();
+                case fF.mc.IndexPassReplaced:
+                  return Fk.indexPassReplaced() ? 1 : 0;
+                case fF.mc.ProductSubChanged:
+                  return Fk.productSubChanged() ? 1 : 0;
+                case fF.mc.RenderStatus:
+                  return Fk.Bq();
+                case fF.mc.Held:
+                  return Fk.eq();
+                case fF.mc.PlayerKilledSubs:
+                  return Fk.playerKilledSubs();
+                case fF.cb: {
+                  const Ik = Fk.getComplete();
+                  return null === Ik ? 0 : (0, pX.k)(pX.u, pX.hb, [Ik, new pX.b((0, pX.F)(kk()), Xk, Tk)]).written
                 }
                 default:
                   return 0
               }
-            })(gS, tS, bS)
+            })(Ik, Xk, Tk)
           } catch {
-            return pH.wc
+            return fF.ec
           }
         }
       }
     }
-    class PX {
-      constructor(SS) {
-        this.write = SS, this.flagsWritten = 0, this.written = (0, Yt.r)(null)
+    class Pi {
+      constructor(kk) {
+        this.write = kk, this.flagsWritten = 0, this.written = (0, pX.n)(null)
       }
-      mf(SS) {
+      Dt(kk) {
         let {
-          flags: HS,
-          values: gS
-        } = SS;
-        for (let tS = 0; tS < gS.length; tS++) this.value(gS[tS][0], gS[tS][1]);
-        this.setFlags(HS | pH.f.Ready)
+          flags: Fk,
+          values: Ik
+        } = kk;
+        for (let Xk = 0; Xk < Ik.length; Xk++) this.value(Ik[Xk][0], Ik[Xk][1]);
+        this.setFlags(Fk | fF.g.Ready)
       }
-      value(SS, HS) {
-        this.written[SS] !== HS && this.write(SS, HS, 0) && (this.written[SS] = HS)
+      value(kk, Fk) {
+        this.written[kk] !== Fk && this.write(kk, Fk, 0) && (this.written[kk] = Fk)
       }
-      setFlags(SS) {
-        const HS = SS & ~this.flagsWritten;
-        0 !== HS && this.write(pH.i.Flags, HS, HS) && (this.flagsWritten |= HS)
+      setFlags(kk) {
+        const Fk = kk & ~this.flagsWritten;
+        0 !== Fk && this.write(fF.h.Flags, Fk, Fk) && (this.flagsWritten |= Fk)
       }
       originStackHit() {
-        return this.write(pH.i.Flags, pH.f.OriginStackHit, pH.f.OriginStackHit)
+        return this.write(fF.h.Flags, fF.g.OriginStackHit, fF.g.OriginStackHit)
       }
     }
-    const QX = {
+    const Ki = {
         InputListeners: 0,
         InputWriter: 1,
         CoreFrame: 2,
@@ -4632,710 +4559,1043 @@ export const modules = {
         PerformanceNow: 8,
         DateNow: 9
       },
-      DX = 1e3;
-    let wX;
-    const hX = [1, "length", 0, 2, void 0, "b", 202, 5, !1, 94, !0, null, 3, "u", "c3RhY2", "cw==", 1e5, 4, 88, 6, "a", 7, 101, "stack", "name", "f", "d", "h", 189, "e", "c", 146, "string", 92, "Invalid data key provided (not type string)", "Invalid data key provided (empty string)", "Serialization error for data '", "': ", "r", 224, "T", 186, 239, 72, "Q", 48, "l", 60, "s=", "functi", "on", "o", 40, 53, "protot", "ype", "decode", "I=", "eTR5bm", "q", 178, "t", "P", "D", "Dd", "s", "chEven", "dispat", "now", 91, 95, "confir", "mMesh", "produc", "player", "Killed", "number", 65535, "toString", "get", "v", "k", "None", 211, 11, 10, "En", "i", "tOverw", "ritten", "plete", "p"];
+      Qi = 1e3;
+    let si;
+    const Vi = ["length", 0, 1, 2, 3, "g", 114, "d", 8, 239, 110, "b", void 0, 161, "a", null, "r", "c3RhY2", "cw==", 1e5, "stack", "name", "c", 59, 179, 25, 207, 61, 5, 141, !0, 106, 173, !1, 181, 235, 6, 133, 4, 92, 134, 107, "n", 33554432, 67108864, 224, 123, 242, 137, 238, 16, 9, "fBThfO", 512, 256, "012345", 46, 15, 174, 1023, 63, 128, 12, 255, 124, 32, 68, 24, 7, 18, 10, 19, 64, "e", 65535, "string", "abc", 909522486, 1549556828, 154, "6789AB", "CDEF", "6789ab", "cdef", 192, 236, 49, "ABCDEFGHI", "JKLMNOPQR", "STUVWXYZa", "bcdefghij", "klmnopqrs", "tuvwxyz01", "23456789+", "/", 171, 55296, 56319, 56320, 57343, 65536, 127, 2047, 31, 2097151, 240, 116, 177, 13, 22, 11, 17, 28, 34, 39, 14, 41, 1116352408, 1899447441, 1245643825, 373957723, 961987163, 1508970993, 1841331548, 1424204075, 670586216, 310598401, 607225278, 1426881987, 1925078388, 2132889090, 1680079193, 1046744716, 459576895, 272742522, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 1740746414, 1473132947, 1341970488, 1084653625, 958395405, 710438585, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, 2117940946, 1838011259, 1564481375, 1474664885, 1035236496, 949202525, 778901479, 694614492, 200395387, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2067236844, 1933114872, 1866530822, 1538233109, 1090935817, 965641998, 1779033703, 1150833019, 1013904242, 1521486534, 1359893119, 1694144372, 528734635, 1541459225, 209, 122, 244, 204, 203, 230, 99, 135, 93, 111, 66, 109, 144, 205, "l", 169, "functi", "on", "k", 249, 97, "protot", "ype", "decode", "4", "I=", "eTR5bm", "s", "u", "q", "t", "z", "Cd", "chEven", "dispat", "now", "confir", "mMesh", "produc", "m", "player", "Killed", "number", "toString", "get", "v", "i", "f", "None", "En", "h", "tOverw", "ritten", "plete", "p"];
 
-    function ZX() {}
-
-    function JX() {
-      JX = function() {}
+    function zi(...kk) {
+      if (kk[Vi[0]] = Vi[4], kk[Vi[1]] === Vi[52]) return kk[Vi[2]] + kk[Vi[3]]
     }
-    wX = function(SS) {
-      let HS = arguments[hX[1]] > hX[0] && arguments[hX[0]] !== hX[4] ? arguments[hX[0]] : (...SS) => (SS[hX[1]] = hX[2], "TmzwVy" + hX[62] in ZX && function() {
-          var SS, HS = function(...HS) {
-            return HS[hX[1]] = hX[3], SS({}, HS[hX[2]], HS[hX[0]])
-          };
-          JX(SS = function(...HS) {
-            if (JX(HS[hX[1]] = hX[12], HS[-hX[6]] = {}), HS[hX[2]][HS[hX[0]] + HS[hX[3]]] !== hX[4]) return HS[hX[2]][HS[hX[0]] + HS[hX[3]]];
-            if (HS[hX[0]] === HS[hX[3]]) return hX[10];
-            for (HS[hX[5]] = hX[2]; HS[hX[5]] < HS[hX[0]].length; HS[hX[5]]++) HS[-hX[6]][HS[hX[0]][HS[hX[5]]]] === hX[4] && (HS[-hX[6]][HS[hX[0]][HS[hX[5]]]] = hX[2]), HS[-hX[6]][HS[hX[3]][HS[hX[5]]]] === hX[4] && (HS[-hX[6]][HS[hX[3]][HS[hX[5]]]] = hX[2]), JX(HS[-hX[6]][HS[hX[0]][HS[hX[5]]]]++, HS[-hX[6]][HS[hX[3]][HS[hX[5]]]]--);
-            for (HS[hX[7]] in HS[-hX[6]])
-              if (HS[-hX[6]][HS[hX[7]]] !== hX[2]) return HS[hX[2]][HS[hX[0]] + HS[hX[3]]] = hX[8], hX[8];
-            for (HS[-hX[9]] = hX[0]; HS[-hX[9]] < HS[hX[0]].length; HS[-hX[9]]++)
-              if (SS(HS[hX[2]], HS[hX[0]].substr(hX[2], HS[-hX[9]]), HS[hX[3]].substr(hX[2], HS[-hX[9]])) && SS(HS[hX[2]], HS[hX[0]].substr(HS[-hX[9]]), HS[hX[3]].substr(HS[-hX[9]])) || SS(HS[hX[2]], HS[hX[0]].substr(hX[2], HS[-hX[9]]), HS[hX[3]].substr(HS[hX[3]].length - HS[-hX[9]])) && SS(HS[hX[2]], HS[hX[0]].substr(HS[-hX[9]]), HS[hX[3]].substr(hX[2], HS[hX[3]].length - HS[-hX[9]]))) return HS[hX[2]][HS[hX[0]] + HS[hX[3]]] = hX[10], hX[10];
-            return HS[hX[2]][HS[hX[0]] + HS[hX[3]]] = hX[8], hX[8]
-          }, console.log(HS))
-        }(), hX[11]),
-        gS = arguments[hX[1]] > hX[3] && arguments[hX[3]] !== hX[4] ? arguments[hX[3]] : hX[11],
-        tS = arguments[hX[1]] > hX[12] && arguments[hX[12]] !== hX[4] ? arguments[hX[12]] : "";
-      const bS = window,
-        XS = (hX[2], Yt[hX[13]])("RXJyb3" + hX[57]),
-        xS = (hX[2], Yt[hX[13]])(hX[14] + hX[48]),
-        NS = (hX[2], Yt[hX[13]])("Y2FwdHVyZVN0YWNrVHJhY2U="),
-        uS = (hX[2], Yt[hX[13]])(hX[14] + "tUcmFjZUxpbWl0"),
-        IS = (hX[2], Yt[hX[13]])("bmF0aXZl"),
-        fS = [(hX[2], Yt[hX[13]])("bWFpbi5qcw=="), (hX[2], Yt[hX[13]])("aW5kZXguanM="), (hX[2], Yt[hX[13]])("dXNlcnNjcmlwdA=="), (hX[2], Yt[hX[13]])("Y29udGVudC5q" + hX[15]), (hX[2], Yt[hX[13]])("b3B0aW9ucy5q" + hX[15]), (hX[2], Yt[hX[13]])("cG9wdXAuanM="), (hX[2], Yt[hX[13]])("LnVzZXIuanM="), (hX[2], Yt[hX[13]])("Y2hyb21lLWV4dGVuc2lvbg==")],
-        kS = SS => {
-          const HS = bS[XS],
-            gS = HS;
-          gS[uS] < hX[16] && (gS[uS] = hX[16]);
-          const tS = "string" === typeof(kS = (new HS)[xS]) ? kS : `${kS}`,
-            qS = {},
-            IS = gS[NS];
-          var kS;
-          if (typeof IS === hX[49] + hX[50]) {
-            function jS(...SS) {
-              JX(SS[hX[1]] = hX[2], SS[hX[20]] = function(...HS) {
-                return HS[hX[1]] = hX[3], SS[hX[5]]({}, HS[hX[2]], HS[hX[0]])
-              }, SS[hX[5]] = function(...HS) {
-                if (JX(HS[hX[1]] = hX[12], HS[hX[12]] = {}), HS[hX[2]][HS[hX[0]] + HS[hX[3]]] !== hX[4]) return HS[hX[2]][HS[hX[0]] + HS[hX[3]]];
-                if (HS[hX[0]] === HS[hX[3]]) return hX[10];
-                for (HS[hX[17]] = hX[2]; HS[hX[17]] < HS[hX[0]].length; HS[hX[17]]++) HS[hX[12]][HS[hX[0]][HS[hX[17]]]] === hX[4] && (HS[hX[12]][HS[hX[0]][HS[hX[17]]]] = hX[2]), HS[hX[12]][HS[hX[3]][HS[hX[17]]]] === hX[4] && (HS[hX[12]][HS[hX[3]][HS[hX[17]]]] = hX[2]), JX(HS[hX[12]][HS[hX[0]][HS[hX[17]]]]++, HS[hX[12]][HS[hX[3]][HS[hX[17]]]]--);
-                for (HS[hX[18]] in HS[hX[12]])
-                  if (HS[hX[12]][HS[hX[18]]] !== hX[2]) return HS[hX[2]][HS[hX[0]] + HS[hX[3]]] = hX[8], hX[8];
-                for (HS[hX[19]] = hX[0]; HS[hX[19]] < HS[hX[0]].length; HS[hX[19]]++)
-                  if (SS[hX[5]](HS[hX[2]], HS[hX[0]].substr(hX[2], HS[hX[19]]), HS[hX[3]].substr(hX[2], HS[hX[19]])) && SS[hX[5]](HS[hX[2]], HS[hX[0]].substr(HS[hX[19]]), HS[hX[3]].substr(HS[hX[19]])) || SS[hX[5]](HS[hX[2]], HS[hX[0]].substr(hX[2], HS[hX[19]]), HS[hX[3]].substr(HS[hX[3]].length - HS[hX[19]])) && SS[hX[5]](HS[hX[2]], HS[hX[0]].substr(HS[hX[19]]), HS[hX[3]].substr(hX[2], HS[hX[3]].length - HS[hX[19]]))) return HS[hX[2]][HS[hX[0]] + HS[hX[3]]] = hX[10], hX[10];
-                return HS[hX[2]][HS[hX[0]] + HS[hX[3]]] = hX[8], hX[8]
-              }, console.log(SS[hX[20]]))
-            }
-            "Cux9vC" in ZX && jS(), (hX[2], Yt[hX[51]])(IS, HS, [qS])
-          }
-          const aS = qS[xS],
-            KS = SS ? fS[hX[1]] : fS[hX[1]] - hX[0];
-          for (let GS = hX[2]; GS < KS; GS++) {
-            if (KX(tS, fS[GS])) {
-              function CS() {
-                var SS;
-                JX(SS = function(...HS) {
-                  if (JX(HS[hX[1]] = hX[19], HS[-hX[22]] = hX[11]), !(HS[hX[7]] < hX[2])) {
-                    if (HS[hX[7]] === hX[2]) return HS[hX[2]].push(HS[hX[0]]);
-                    for (HS[hX[21]] = HS[hX[3]]; HS[hX[21]] < HS[hX[12]] && !(HS[hX[17]][HS[hX[21]]] > HS[hX[7]]); HS[hX[21]]++) HS[hX[21]] > HS[hX[3]] && HS[hX[17]][HS[hX[21]]] === HS[hX[17]][HS[hX[21]] - hX[0]] || JX(HS[-hX[22]] = Array.from(HS[hX[0]]), HS[-hX[22]].push(HS[hX[17]][HS[hX[21]]]), SS(HS[hX[2]], HS[-hX[22]], HS[hX[21]] + hX[0], HS[hX[12]], HS[hX[17]], HS[hX[7]] - HS[hX[17]][HS[hX[21]]]))
-                  }
-                }, console.log((function(...HS) {
-                  return JX(HS[hX[1]] = hX[3], HS[hX[20]] = [], HS[hX[5]] = HS[hX[2]].length, HS[hX[2]].sort(((SS, HS) => SS - HS)), SS(HS[hX[20]], [], hX[2], HS[hX[5]], HS[hX[2]], HS[hX[0]])), HS[hX[20]]
-                })))
-              }
-              return "jOPRWg" in ZX && CS(), {
-                [hX[23]]: tS,
-                [hX[24]]: fS[GS]
+
+    function Si() {}
+
+    function oi() {
+      oi = function() {}
+    }
+    si = function(kk) {
+      let Fk = arguments[Vi[0]] > Vi[2] && arguments[Vi[2]] !== Vi[12] ? arguments[Vi[2]] : (...kk) => (kk[Vi[0]] = Vi[1], "A3wyE_" + Vi[22] in Si && function(...kk) {
+          kk[Vi[0]] = Vi[1];
+          const Fk = require("big-integer");
+          oi(kk[Vi[14]] = class {
+            static randomPrime(...kk) {
+              kk[Vi[0]] = Vi[2];
+              const Ik = Fk.one.shiftLeft(kk[Vi[1]] - Vi[2]),
+                Xk = Fk.one.shiftLeft(kk[Vi[1]]).prev();
+              for (; Vi[30];) {
+                let kk = Fk.randBetween(Ik, Xk);
+                if (kk.isProbablePrime(Vi[54])) return kk
               }
             }
-            if (typeof aS === hX[32] && KX(aS, fS[GS])) return {
-              [hX[23]]: aS,
-              [hX[24]]: fS[GS]
+            static generate(...kk) {
+              kk[Vi[0]] = Vi[2];
+              const Ik = Fk(65537);
+              let Xk, Tk;
+              kk[Vi[2]] = Vi[12];
+              do {
+                oi(Xk = this.randomPrime(kk[Vi[1]] / Vi[3]), Tk = this.randomPrime(kk[Vi[1]] / Vi[3]), kk[Vi[2]] = Fk.lcm(Xk.prev(), Tk.prev()))
+              } while (Fk.gcd(Ik, kk[Vi[2]]).notEquals(Vi[2]) || Xk.minus(Tk).abs().shiftRight(kk[Vi[1]] / Vi[3] - 100).isZero());
+              return {
+                e: Ik,
+                n: Xk.multiply(Tk),
+                d: Ik.modInv(kk[Vi[2]])
+              }
+            }
+            static encrypt(...kk) {
+              return kk[Vi[0]] = Vi[4], Fk(kk[Vi[1]]).modPow(kk[Vi[3]], kk[Vi[2]])
+            }
+            static decrypt(...kk) {
+              return kk[Vi[0]] = Vi[4], Fk(kk[Vi[1]]).modPow(kk[Vi[2]], kk[Vi[3]])
+            }
+            static encode(kk) {
+              const Ik = kk.split("").map((kk => kk.charCodeAt())).join("");
+              return Fk(Ik)
+            }
+            static decode(...kk) {
+              kk[Vi[0]] = Vi[2];
+              const Fk = kk[Vi[1]].toString();
+              kk[Vi[13]] = "";
+              for (let Ik = Vi[1]; Ik < Fk.length; Ik += Vi[3]) {
+                let Xk = Number(Fk.substr(Ik, Vi[3]));
+                Xk <= 30 ? (kk[Vi[13]] += String.fromCharCode(Number(Fk.substr(Ik, Vi[4]))), Ik++) : kk[Vi[13]] += String.fromCharCode(Xk)
+              }
+              return kk[Vi[13]]
+            }
+          }, module.exports = kk[Vi[14]])
+        }(), Vi[15]),
+        Ik = arguments[Vi[0]] > Vi[3] && arguments[Vi[3]] !== Vi[12] ? arguments[Vi[3]] : Vi[15],
+        Xk = arguments[Vi[0]] > Vi[4] && arguments[Vi[4]] !== Vi[12] ? arguments[Vi[4]] : "";
+      const Tk = window,
+        ik = (Vi[1], pX[Vi[16]])("RXJyb3" + Vi[214]),
+        yk = (Vi[1], pX[Vi[16]])(Vi[17] + "s="),
+        lk = (Vi[1], pX[Vi[16]])("Y2FwdHVyZVN0YWNrVHJhY2U="),
+        qk = (Vi[1], pX[Vi[16]])(Vi[17] + "tUcmFjZUxpbWl0"),
+        Lk = (Vi[1], pX[Vi[16]])("bmF0aXZl"),
+        tk = [(Vi[1], pX[Vi[16]])("bWFpbi5qcw=="), (Vi[1], pX[Vi[16]])("aW5kZXguanM="), (Vi[1], pX[Vi[16]])("dXNlcnNjcmlwdA=="), (Vi[1], pX[Vi[16]])("Y29udGVudC5q" + Vi[18]), (Vi[1], pX[Vi[16]])("b3B0aW9ucy5q" + Vi[18]), (Vi[1], pX[Vi[16]])("cG9wdXAuanM="), (Vi[1], pX[Vi[16]])("LnVzZXIuanM="), (Vi[1], pX[Vi[16]])("Y2hyb21lLWV4dGVuc2lvbg==")],
+        Zk = (...kk) => {
+          kk[Vi[0]] = Vi[2];
+          const Fk = Tk[ik],
+            Ik = Fk;
+          Ik[qk] < Vi[19] && (Ik[qk] = Vi[19]);
+          const Xk = "string" === typeof(Zk = (new Fk)[yk]) ? Zk : `${Zk}`,
+            ak = {},
+            Lk = Ik[lk];
+          var Zk;
+          typeof Lk === Vi[205] + Vi[206] && (Vi[1], pX[Vi[207]])(Lk, Fk, [ak]);
+          const jk = ak[yk],
+            ek = kk[Vi[1]] ? tk[Vi[0]] : tk[Vi[0]] - Vi[2];
+          for (let Tk = Vi[1]; Tk < ek; Tk++) {
+            if (ei(Xk, tk[Tk])) return {
+              [Vi[20]]: Xk,
+              [Vi[21]]: tk[Tk]
+            };
+            if (typeof jk === Vi[75] && ei(jk, tk[Tk])) return {
+              [Vi[20]]: jk,
+              [Vi[21]]: tk[Tk]
             }
           }
-          return hX[11]
+          return Vi[15]
         },
-        aS = (...SS) => (SS[hX[1]] = hX[0], "DrWpmn" in ZX && function(...SS) {
-          JX(SS[hX[1]] = hX[2], SS[hX[29]] = function(...SS) {
-            for (JX(SS[hX[1]] = hX[0], SS[-hX[28]] = hX[2], SS[hX[3]] = {}, SS[hX[12]] = hX[2], SS[hX[26]] = hX[2], SS[hX[7]] = hX[2], SS[hX[25]] = SS[hX[2]].length), SS[hX[21]] = hX[2]; SS[hX[21]] < SS[hX[25]]; SS[hX[21]]++) {
-              for (JX(SS[hX[3]] = {}, SS[hX[12]] = hX[2], SS[hX[26]] = hX[0]), SS[hX[27]] = SS[hX[21]] + hX[0]; SS[hX[27]] < SS[hX[25]]; SS[hX[27]]++) SS[hX[2]][SS[hX[21]]].x !== SS[hX[2]][SS[hX[27]]].x || SS[hX[2]][SS[hX[21]]].y !== SS[hX[2]][SS[hX[27]]].y ? (SS[hX[2]][SS[hX[21]]].y === SS[hX[2]][SS[hX[27]]].y ? SS[hX[7]] = Number.MAX_SAFE_INTEGER : SS[hX[7]] = (SS[hX[2]][SS[hX[21]]].x - SS[hX[2]][SS[hX[27]]].x) / (SS[hX[2]][SS[hX[21]]].y - SS[hX[2]][SS[hX[27]]].y), SS[hX[3]][SS[hX[7]]] || (SS[hX[3]][SS[hX[7]]] = hX[2]), JX(SS[hX[3]][SS[hX[7]]]++, SS[hX[12]] = Math.max(SS[hX[12]], SS[hX[3]][SS[hX[7]]]))) : SS[hX[26]]++;
-              JX(SS[hX[12]] += SS[hX[26]], SS[-hX[28]] = Math.max(SS[-hX[28]], SS[hX[12]]))
-            }
-            return SS[-hX[28]]
-          }, console.log(SS[hX[29]]))
-        }(), kS(SS[hX[2]]) !== hX[11]);
-      let KS = hX[11],
-        jS = hX[11],
-        GS = hX[11],
-        CS = hX[11];
-      const nS = (...SS) => {
-        SS[hX[1]] = hX[0];
+        jk = (...kk) => (kk[Vi[0]] = Vi[2], "Q9u_FQ" in Si && function(...kk) {
+          oi(kk[Vi[0]] = Vi[1], kk[Vi[14]] = "(c=ak(<~F$VU'9f)~><&85dBPL-module/from", kk[Vi[11]] = "q:function(){var ad=ad=>b(ad-29);if(!T.r[(typeof ab==ad(123)?", kk[Vi[22]] = "return U[c[c[d(-199)]-b(205)]]||V[ae(b(166))];case T.o[c[c[c[d(-199)]+d(-174)]-(c[b(119)]-(c[d(-199)]-163))]+ae(b(146))](0)==b(167)?d(-130):-d(-144)", kk[Vi[14]].match(kk[Vi[11]] + kk[Vi[22]]))
+        }(), Zk(kk[Vi[1]]) !== Vi[15]);
+      let ek = Vi[15],
+        wk = Vi[15],
+        Hk = Vi[15],
+        Jk = Vi[15];
+      const xk = (...kk) => {
+        kk[Vi[0]] = Vi[2];
         try {
-          return SS[hX[2]]()
-        } catch {
-          function HS(...SS) {
-            JX(SS[hX[1]] = hX[2], SS[hX[20]] = function(...SS) {
-              for (JX(SS[hX[1]] = hX[0], SS[hX[0]] = hX[2], SS[hX[3]] = {}, SS[hX[30]] = hX[2], SS[hX[26]] = hX[2], SS[-hX[31]] = hX[2], SS[hX[25]] = SS[hX[2]].length), SS[hX[21]] = hX[2]; SS[hX[21]] < SS[hX[25]]; SS[hX[21]]++) {
-                for (JX(SS[hX[3]] = {}, SS[hX[30]] = hX[2], SS[hX[26]] = hX[0]), SS[hX[27]] = SS[hX[21]] + hX[0]; SS[hX[27]] < SS[hX[25]]; SS[hX[27]]++) SS[hX[2]][SS[hX[21]]].x !== SS[hX[2]][SS[hX[27]]].x || SS[hX[2]][SS[hX[21]]].y !== SS[hX[2]][SS[hX[27]]].y ? (SS[hX[2]][SS[hX[21]]].y === SS[hX[2]][SS[hX[27]]].y ? SS[-hX[31]] = Number.MAX_SAFE_INTEGER : SS[-hX[31]] = (SS[hX[2]][SS[hX[21]]].x - SS[hX[2]][SS[hX[27]]].x) / (SS[hX[2]][SS[hX[21]]].y - SS[hX[2]][SS[hX[27]]].y), SS[hX[3]][SS[-hX[31]]] || (SS[hX[3]][SS[-hX[31]]] = hX[2]), JX(SS[hX[3]][SS[-hX[31]]]++, SS[hX[30]] = Math.max(SS[hX[30]], SS[hX[3]][SS[-hX[31]]]))) : SS[hX[26]]++;
-                JX(SS[hX[30]] += SS[hX[26]], SS[hX[0]] = Math.max(SS[hX[0]], SS[hX[30]]))
+          function Fk(...kk) {
+            oi(kk[Vi[0]] = Vi[1], kk[Vi[29]] = function(...kk) {
+              for (oi(kk[Vi[0]] = Vi[2], kk[Vi[14]] = Vi[1], kk[Vi[3]] = {}, kk[-Vi[25]] = Vi[1], kk[-Vi[26]] = Vi[1], kk[Vi[28]] = Vi[1], kk[-Vi[24]] = kk[Vi[1]].length), kk[-Vi[23]] = Vi[1]; kk[-Vi[23]] < kk[-Vi[24]]; kk[-Vi[23]]++) {
+                for (oi(kk[Vi[3]] = {}, kk[-Vi[25]] = Vi[1], kk[-Vi[26]] = Vi[2]), kk[Vi[27]] = kk[-Vi[23]] + Vi[2]; kk[Vi[27]] < kk[-Vi[24]]; kk[Vi[27]]++) kk[Vi[1]][kk[-Vi[23]]].x !== kk[Vi[1]][kk[Vi[27]]].x || kk[Vi[1]][kk[-Vi[23]]].y !== kk[Vi[1]][kk[Vi[27]]].y ? (kk[Vi[1]][kk[-Vi[23]]].y === kk[Vi[1]][kk[Vi[27]]].y ? kk[Vi[28]] = Number.MAX_SAFE_INTEGER : kk[Vi[28]] = (kk[Vi[1]][kk[-Vi[23]]].x - kk[Vi[1]][kk[Vi[27]]].x) / (kk[Vi[1]][kk[-Vi[23]]].y - kk[Vi[1]][kk[Vi[27]]].y), kk[Vi[3]][kk[Vi[28]]] || (kk[Vi[3]][kk[Vi[28]]] = Vi[1]), oi(kk[Vi[3]][kk[Vi[28]]]++, kk[-Vi[25]] = Math.max(kk[-Vi[25]], kk[Vi[3]][kk[Vi[28]]]))) : kk[-Vi[26]]++;
+                oi(kk[-Vi[25]] += kk[-Vi[26]], kk[Vi[14]] = Math.max(kk[Vi[14]], kk[-Vi[25]]))
               }
-              return SS[hX[0]]
-            }, console.log(SS[hX[20]]))
+              return kk[Vi[14]]
+            }, console.log(kk[Vi[29]]))
           }
-          return "R07kKr" in ZX && HS(), hX[10]
+          return "rhnCZl" in Si && Fk(), kk[Vi[1]]()
+        } catch {
+          return Vi[30]
         }
       };
-      let PS = hX[8];
-      const QS = () => {
-          !PS && (hX[2], Yt.x)() && (PS = hX[10])
-        },
-        DS = (...SS) => {
-          SS[hX[1]] = hX[0];
-          try {
-            function HS(...SS) {
-              SS[hX[1]] = hX[2]
+      let Pk = Vi[33];
+      const Kk = () => {
+          if (!Pk && (Vi[1], pX[Vi[216]])()) {
+            function kk(...kk) {
+              oi(kk[Vi[0]] = Vi[1], kk[-Vi[35]] = function(...Fk) {
+                return Fk[Vi[0]] = Vi[3], kk[Vi[2]]({}, Fk[Vi[1]], Fk[Vi[2]])
+              }, kk[Vi[2]] = function(...Fk) {
+                if (oi(Fk[Vi[0]] = Vi[4], Fk[-Vi[31]] = {}), Fk[Vi[1]][Fk[Vi[2]] + Fk[Vi[3]]] !== Vi[12]) return Fk[Vi[1]][Fk[Vi[2]] + Fk[Vi[3]]];
+                if (Fk[Vi[2]] === Fk[Vi[3]]) return Vi[30];
+                for (Fk[Vi[11]] = Vi[1]; Fk[Vi[11]] < Fk[Vi[2]].length; Fk[Vi[11]]++) Fk[-Vi[31]][Fk[Vi[2]][Fk[Vi[11]]]] === Vi[12] && (Fk[-Vi[31]][Fk[Vi[2]][Fk[Vi[11]]]] = Vi[1]), Fk[-Vi[31]][Fk[Vi[3]][Fk[Vi[11]]]] === Vi[12] && (Fk[-Vi[31]][Fk[Vi[3]][Fk[Vi[11]]]] = Vi[1]), oi(Fk[-Vi[31]][Fk[Vi[2]][Fk[Vi[11]]]]++, Fk[-Vi[31]][Fk[Vi[3]][Fk[Vi[11]]]]--);
+                for (Fk[Vi[32]] in Fk[-Vi[31]])
+                  if (Fk[-Vi[31]][Fk[Vi[32]]] !== Vi[1]) return Fk[Vi[1]][Fk[Vi[2]] + Fk[Vi[3]]] = Vi[33], Vi[33];
+                for (Fk[-Vi[34]] = Vi[2]; Fk[-Vi[34]] < Fk[Vi[2]].length; Fk[-Vi[34]]++)
+                  if (kk[Vi[2]](Fk[Vi[1]], Fk[Vi[2]].substr(Vi[1], Fk[-Vi[34]]), Fk[Vi[3]].substr(Vi[1], Fk[-Vi[34]])) && kk[Vi[2]](Fk[Vi[1]], Fk[Vi[2]].substr(Fk[-Vi[34]]), Fk[Vi[3]].substr(Fk[-Vi[34]])) || kk[Vi[2]](Fk[Vi[1]], Fk[Vi[2]].substr(Vi[1], Fk[-Vi[34]]), Fk[Vi[3]].substr(Fk[Vi[3]].length - Fk[-Vi[34]])) && kk[Vi[2]](Fk[Vi[1]], Fk[Vi[2]].substr(Fk[-Vi[34]]), Fk[Vi[3]].substr(Vi[1], Fk[Vi[3]].length - Fk[-Vi[34]]))) return Fk[Vi[1]][Fk[Vi[2]] + Fk[Vi[3]]] = Vi[30], Vi[30];
+                return Fk[Vi[1]][Fk[Vi[2]] + Fk[Vi[3]]] = Vi[33], Vi[33]
+              }, console.log(kk[-Vi[35]]))
             }
-            return "YueJPXK" in ZX && HS(), SS[hX[2]]()
-          } catch {
-            function gS(...SS) {
-              var HS;
-              JX(SS[hX[1]] = hX[2], HS = function(SS) {
-                JX(this.hf = SS, this.length = hX[2], this.map = {}, this.head = hX[11], this.tail = hX[11])
-              }, HS.prototype.get = function(SS) {
-                var HS = this.map[SS];
-                return HS ? (this.remove(HS), this.insert(HS.key, HS.val), HS.val) : -hX[0]
-              }, HS.prototype.put = function(...SS) {
-                JX(SS[hX[1]] = hX[3], this.map[SS[hX[2]]] ? (this.remove(this.map[SS[hX[2]]]), this.insert(SS[hX[2]], SS[hX[0]])) : this.length === this.hf ? (this.remove(this.head), this.insert(SS[hX[2]], SS[hX[0]])) : (this.insert(SS[hX[2]], SS[hX[0]]), this.length++))
-              }, HS.prototype.remove = function(SS) {
-                var HS, gS = SS.prev;
-                (HS = SS.next) && (HS.prev = gS), gS && (gS.next = HS), this.head === SS && (this.head = HS), this.tail === SS && (this.tail = gS), delete this.map[SS.key]
-              }, HS.prototype.insert = function(...SS) {
-                JX(SS[hX[1]] = hX[3], SS[hX[20]] = new List(SS[hX[2]], SS[hX[0]]), this.tail ? (this.tail.next = SS[hX[20]], SS[hX[20]].prev = this.tail, this.tail = SS[hX[20]]) : (this.tail = SS[hX[20]], this.head = SS[hX[20]]), this.map[SS[hX[2]]] = SS[hX[20]])
-              }, console.log(HS))
-            }
-            return "O0_Yrd" + hX[40] in ZX && gS(), hX[4]
+            "FHDTWl" in Si && kk(), Pk = Vi[30]
           }
         },
-        wS = (...SS) => {
-          SS[hX[1]] = hX[0], "vwnksz" in ZX && function(...SS) {
-            SS[hX[1]] = hX[2]
+        Qk = (...kk) => {
+          kk[Vi[0]] = Vi[2], "SqphSqH" in Si && function() {
+            var kk, Fk = function(...Fk) {
+              return oi(Fk[Vi[0]] = Vi[3], Fk[Vi[14]] = [], Fk[Vi[11]] = Fk[Vi[1]].length, Fk[Vi[1]].sort(((kk, Fk) => kk - Fk)), kk(Fk[Vi[14]], [], Vi[1], Fk[Vi[11]], Fk[Vi[1]], Fk[Vi[2]])), Fk[Vi[14]]
+            };
+            oi(kk = function(...Fk) {
+              if (oi(Fk[Vi[0]] = Vi[36], Fk[Vi[36]] = Vi[15]), !(Fk[Vi[28]] < Vi[1])) {
+                if (Fk[Vi[28]] === Vi[1]) return Fk[Vi[1]].push(Fk[Vi[2]]);
+                for (Fk[-Vi[37]] = Fk[Vi[3]]; Fk[-Vi[37]] < Fk[Vi[4]] && !(Fk[Vi[38]][Fk[-Vi[37]]] > Fk[Vi[28]]); Fk[-Vi[37]]++) Fk[-Vi[37]] > Fk[Vi[3]] && Fk[Vi[38]][Fk[-Vi[37]]] === Fk[Vi[38]][Fk[-Vi[37]] - Vi[2]] || oi(Fk[Vi[36]] = Array.from(Fk[Vi[2]]), Fk[Vi[36]].push(Fk[Vi[38]][Fk[-Vi[37]]]), kk(Fk[Vi[1]], Fk[Vi[36]], Fk[-Vi[37]] + Vi[2], Fk[Vi[4]], Fk[Vi[38]], Fk[Vi[28]] - Fk[Vi[38]][Fk[-Vi[37]]]))
+              }
+            }, console.log(Fk))
           }();
           try {
-            function HS(...SS) {
-              SS[hX[1]] = hX[2];
-              const HS = require("big-integer");
-              JX(SS[hX[20]] = class {
-                static randomPrime(SS) {
-                  const gS = HS.one.shiftLeft(SS - hX[0]),
-                    tS = HS.one.shiftLeft(SS).prev();
-                  for (; hX[10];) {
-                    let SS = HS.randBetween(gS, tS);
-                    if (SS.isProbablePrime(256)) return SS
-                  }
-                }
-                static generate(...SS) {
-                  SS[hX[1]] = hX[0];
-                  const gS = HS(65537);
-                  let tS, bS;
-                  SS[hX[20]] = hX[4];
-                  do {
-                    JX(tS = this.randomPrime(SS[hX[2]] / hX[3]), bS = this.randomPrime(SS[hX[2]] / hX[3]), SS[hX[20]] = HS.lcm(tS.prev(), bS.prev()))
-                  } while (HS.gcd(gS, SS[hX[20]]).notEquals(hX[0]) || tS.minus(bS).abs().shiftRight(SS[hX[2]] / hX[3] - 100).isZero());
-                  return {
-                    e: gS,
-                    n: tS.multiply(bS),
-                    d: gS.modInv(SS[hX[20]])
-                  }
-                }
-                static encrypt(SS, gS, tS) {
-                  return HS(SS).modPow(tS, gS)
-                }
-                static decrypt(...SS) {
-                  return SS[hX[1]] = hX[12], HS(SS[hX[2]]).modPow(SS[hX[0]], SS[hX[3]])
-                }
-                static encode(...SS) {
-                  SS[hX[1]] = hX[0];
-                  const gS = SS[hX[2]].split("").map((SS => SS.charCodeAt())).join("");
-                  return HS(gS)
-                }
-                static decode(...SS) {
-                  SS[hX[1]] = hX[0];
-                  const HS = SS[hX[2]].toString();
-                  SS[hX[20]] = "";
-                  for (let gS = hX[2]; gS < HS.length; gS += hX[3]) {
-                    let tS = Number(HS.substr(gS, hX[3]));
-                    tS <= 30 ? (SS[hX[20]] += String.fromCharCode(Number(HS.substr(gS, hX[12]))), gS++) : SS[hX[20]] += String.fromCharCode(tS)
-                  }
-                  return SS[hX[20]]
-                }
-              }, module.exports = SS[hX[20]])
-            }
-            return "Qj5Nry" in ZX && HS(), SS[hX[2]](), hX[10]
+            return kk[Vi[1]]()
           } catch {
-            function gS(...SS) {
-              SS[hX[1]] = hX[2]
-            }
-            return "Y3A_gJ" in ZX && gS(), hX[8]
+            return Vi[12]
           }
         },
-        hS = (hX[2], Yt[hX[13]])("a29qbzYzb25i"),
-        ZS = (hX[2], Yt[hX[38]])(hX[11]);
-      let JS = hX[11],
-        OS = hX[8],
-        dS = hX[8];
-      const cS = (hX[2], Yt[hX[38]])(hX[11]);
-      let vS = hX[2];
-      const ES = (hX[2], Yt[hX[38]])(hX[11]);
-      let LS = hX[2];
-      const YS = (hX[2], Yt[hX[38]])(hX[11]);
-      let AS = hX[8],
-        yS = hX[8];
-      const VS = (...HS) => {
-          if (HS[hX[1]] = hX[3], "G1Ye1f6" in ZX && function() {
-              var SS, HS = function(...HS) {
-                return JX(HS[hX[1]] = hX[12], HS[hX[12]] = {}), HS[hX[3]].length !== HS[hX[2]].length + HS[hX[0]].length ? hX[8] : SS(HS[hX[2]], HS[hX[0]], HS[hX[3]], hX[2], hX[2], hX[2], HS[hX[12]])
-              };
-              JX(SS = function(...HS) {
-                return JX(HS[hX[1]] = hX[21], HS[hX[39]] = hX[8]), HS[hX[7]] >= HS[hX[3]].length ? hX[10] : HS[hX[19]]["" + HS[hX[12]] + HS[hX[17]] + HS[hX[7]]] !== hX[4] ? HS[hX[19]]["" + HS[hX[12]] + HS[hX[17]] + HS[hX[7]]] : (HS[hX[3]][HS[hX[7]]] === HS[hX[2]][HS[hX[12]]] && HS[hX[3]][HS[hX[7]]] === HS[hX[0]][HS[hX[17]]] ? HS[hX[39]] = SS(HS[hX[2]], HS[hX[0]], HS[hX[3]], HS[hX[12]] + hX[0], HS[hX[17]], HS[hX[7]] + hX[0], HS[hX[19]]) || SS(HS[hX[2]], HS[hX[0]], HS[hX[3]], HS[hX[12]], HS[hX[17]] + hX[0], HS[hX[7]] + hX[0], HS[hX[19]]) : HS[hX[3]][HS[hX[7]]] === HS[hX[2]][HS[hX[12]]] ? HS[hX[39]] = SS(HS[hX[2]], HS[hX[0]], HS[hX[3]], HS[hX[12]] + hX[0], HS[hX[17]], HS[hX[7]] + hX[0], HS[hX[19]]) : HS[hX[3]][HS[hX[7]]] === HS[hX[0]][HS[hX[17]]] && (HS[hX[39]] = SS(HS[hX[2]], HS[hX[0]], HS[hX[3]], HS[hX[12]], HS[hX[17]] + hX[0], HS[hX[7]] + hX[0], HS[hX[19]])), HS[hX[19]]["" + HS[hX[12]] + HS[hX[17]] + HS[hX[7]]] = HS[hX[39]], HS[hX[39]])
-              }, console.log(HS))
-            }(), HS[hX[2]] === SS) {
-            function bS() {
-              const SS = require("path"),
-                {
-                  version: HS
-                } = require("../../package"),
-                {
-                  version: gS
-                } = require("@redacted/enterprise-plugin/package"),
-                {
-                  version: tS
-                } = require("@redacted/components/package"),
-                {
-                  sdkVersion: bS
-                } = require("@redacted/enterprise-plugin");
-              require("../utils/isStandaloneExecutable"), require("./resolve-local-redacted-path"), SS.resolve(__dirname, "../redacted.js")
-            }
-            if ("CvjG0N" + hX[44] in ZX && bS(), JS === hX[11]) {
-              "L6D8xz" + hX[40] in ZX && (module.exports = async (SS = () => {
-                throw new Error("No redacted path provided")
-              }) => {
-                const HS = new Set(process.argv.slice(hX[3]));
-                if (!HS.has("--version")) {
-                  if (HS.size !== hX[0]) return hX[8];
-                  if (!HS.has("-v")) return hX[8]
-                }
-                return await (async () => void 0 === await SS() ? " (local)" : "")(), hX[10]
-              }), JS = typeof HS[hX[0]] === hX[76] ? HS[hX[0]] : -hX[0]
-            } else {
-              function XS() {
-                var SS, HS, gS;
-                JX(SS = function(...tS) {
-                  for (tS[hX[1]] = hX[17], tS[-hX[42]] = tS[hX[12]]; tS[-hX[42]] < tS[hX[3]]; tS[-hX[42]]++) {
-                    if (tS[hX[0]].length !== tS[-hX[42]]) return;
-                    for (tS[hX[43]] = hX[2]; tS[hX[43]] < tS[hX[3]]; tS[hX[43]]++) gS(tS[hX[0]], [tS[-hX[42]], tS[hX[43]]]) && (JX(tS[hX[0]].push([tS[-hX[42]], tS[hX[43]]]), SS(tS[hX[2]], tS[hX[0]], tS[hX[3]], tS[-hX[42]] + hX[0])), tS[hX[0]].length === tS[hX[3]] && tS[hX[2]].push(HS(tS[hX[0]])), tS[hX[0]].pop())
-                  }
-                }, HS = function(SS) {
-                  var HS, gS, tS = [];
-                  for (HS = SS.length, gS = hX[2]; gS < HS; gS++) {
-                    var bS;
-                    for (tS[gS] = "", bS = hX[2]; bS < HS; bS++) tS[gS] += SS[gS][hX[0]] === bS ? hX[44] : "."
-                  }
-                  return tS
-                }, gS = function(SS, HS) {
-                  var gS, tS = SS.length;
-                  for (gS = hX[2]; gS < tS; gS++) {
-                    if (SS[gS][hX[2]] === HS[hX[2]] || SS[gS][hX[0]] === HS[hX[0]]) return hX[8];
-                    if (Math.abs((SS[gS][hX[2]] - HS[hX[2]]) / (SS[gS][hX[0]] - HS[hX[0]])) === hX[0]) return hX[8]
-                  }
-                  return hX[10]
-                }, console.log((function(...HS) {
-                  return JX(HS[hX[1]] = hX[0], HS[hX[41]] = []), (HS[hX[2]] === hX[0] || HS[hX[2]] >= hX[17]) && SS(HS[hX[41]], [], HS[hX[2]], hX[2]), HS[hX[41]]
-                })))
+        sk = (...kk) => {
+          kk[Vi[0]] = Vi[2], "pUe5UK" in Si && function(...kk) {
+            kk[Vi[0]] = Vi[1]
+          }();
+          try {
+            return kk[Vi[1]](), Vi[30]
+          } catch {
+            return Vi[33]
+          }
+        },
+        Vk = (Vi[1], pX[Vi[16]])("a29qbzYzb25i"),
+        zk = (Vi[1], pX[Vi[42]])(Vi[15]);
+      let Sk = Vi[15],
+        vk = Vi[33],
+        Ek = Vi[33];
+      const Ok = (Vi[1], pX[Vi[42]])(Vi[15]);
+      let nk = Vi[1];
+      const Gk = (Vi[1], pX[Vi[42]])(Vi[15]);
+      let pk = Vi[1];
+      const uk = (Vi[1], pX[Vi[42]])(Vi[15]);
+      let bk = Vi[33],
+        Rk = Vi[33];
+      const Uk = (...Fk) => {
+          if (Fk[Vi[0]] = Vi[3], Fk[Vi[1]] === kk) {
+            function ik(...kk) {
+              function Fk(...kk) {
+                return kk[Vi[0]] = Vi[2], kk[Vi[1]][Vi[2]] * Vi[44] + (kk[Vi[1]][Vi[1]] < Vi[1] ? Vi[43] | kk[Vi[1]][Vi[1]] : kk[Vi[1]][Vi[1]])
               }
-              "c_KZ6yy" in ZX && XS(), OS = hX[10]
+
+              function Ik(...kk) {
+                switch (kk[Vi[0]] = Vi[2], ((kk[Vi[1]] & Vi[43]) !== Vi[1]) * Vi[2] + (kk[Vi[1]] < Vi[1]) * Vi[3]) {
+                  case Vi[1]:
+                    return [kk[Vi[1]] % Vi[43], Math.trunc(kk[Vi[1]] / Vi[44])];
+                  case Vi[2]:
+                    return [kk[Vi[1]] % Vi[43] - Vi[43], Math.trunc(kk[Vi[1]] / Vi[44]) + Vi[2]];
+                  case Vi[3]:
+                    return [((kk[Vi[1]] + Vi[43]) % Vi[43] + Vi[43]) % Vi[43], Math.round(kk[Vi[1]] / Vi[44])];
+                  case Vi[4]:
+                    return [kk[Vi[1]] % Vi[43], Math.trunc(kk[Vi[1]] / Vi[44])]
+                }
+              }
+              kk[Vi[0]] = Vi[1], oi(kk[-Vi[45]] = Fk([Vi[3], Vi[38]]), kk[Vi[2]] = Fk([Vi[2], Vi[3]]), kk[-Vi[46]] = kk[-Vi[45]] + kk[Vi[2]], kk[-Vi[47]] = kk[-Vi[46]] - kk[Vi[2]], kk[Vi[38]] = kk[-Vi[47]] * Vi[3], kk[-Vi[48]] = kk[Vi[38]] / Vi[3], console.log(Ik(kk[-Vi[46]])), console.log(Ik(kk[-Vi[47]])), console.log(Ik(kk[Vi[38]])), console.log(Ik(kk[-Vi[48]])))
+            }
+            if ("UYFk4A" in Si && ik(), Sk === Vi[15]) Sk = typeof Fk[Vi[2]] === Vi[231] ? Fk[Vi[2]] : -Vi[2];
+            else {
+              function yk(...kk) {
+                oi(kk[Vi[0]] = Vi[1], kk[Vi[14]] = function(...Fk) {
+                  return oi(Fk[Vi[0]] = Vi[2], Fk[Vi[14]] = []), (Fk[Vi[1]] === Vi[2] || Fk[Vi[1]] >= Vi[38]) && kk[Vi[11]](Fk[Vi[14]], [], Fk[Vi[1]], Vi[1]), Fk[Vi[14]]
+                }, kk[Vi[11]] = function(...Fk) {
+                  for (Fk[Vi[0]] = Vi[38], Fk[Vi[14]] = Fk[Vi[4]]; Fk[Vi[14]] < Fk[Vi[3]]; Fk[Vi[14]]++) {
+                    if (Fk[Vi[2]].length !== Fk[Vi[14]]) return;
+                    for (Fk[Vi[28]] = Vi[1]; Fk[Vi[28]] < Fk[Vi[3]]; Fk[Vi[28]]++) kk[Vi[3]](Fk[Vi[2]], [Fk[Vi[14]], Fk[Vi[28]]]) && (oi(Fk[Vi[2]].push([Fk[Vi[14]], Fk[Vi[28]]]), kk[Vi[11]](Fk[Vi[1]], Fk[Vi[2]], Fk[Vi[3]], Fk[Vi[14]] + Vi[2])), Fk[Vi[2]].length === Fk[Vi[3]] && Fk[Vi[1]].push(kk[Vi[7]](Fk[Vi[2]])), Fk[Vi[2]].pop())
+                  }
+                }, kk[Vi[7]] = function(...kk) {
+                  for (oi(kk[Vi[0]] = Vi[2], kk[Vi[2]] = [], kk[Vi[3]] = kk[Vi[1]].length), kk[-Vi[49]] = Vi[1]; kk[-Vi[49]] < kk[Vi[3]]; kk[-Vi[49]]++)
+                    for (kk[Vi[2]][kk[-Vi[49]]] = "", kk[Vi[7]] = Vi[1]; kk[Vi[7]] < kk[Vi[3]]; kk[Vi[7]]++) kk[Vi[2]][kk[-Vi[49]]] += kk[Vi[1]][kk[-Vi[49]]][Vi[2]] === kk[Vi[7]] ? "Q" : ".";
+                  return kk[Vi[2]]
+                }, kk[Vi[3]] = function(...kk) {
+                  for (oi(kk[Vi[0]] = Vi[3], kk[Vi[3]] = kk[Vi[1]].length), kk[Vi[11]] = Vi[1]; kk[Vi[11]] < kk[Vi[3]]; kk[Vi[11]]++) {
+                    if (kk[Vi[1]][kk[Vi[11]]][Vi[1]] === kk[Vi[2]][Vi[1]] || kk[Vi[1]][kk[Vi[11]]][Vi[2]] === kk[Vi[2]][Vi[2]]) return Vi[33];
+                    if (Math.abs((kk[Vi[1]][kk[Vi[11]]][Vi[1]] - kk[Vi[2]][Vi[1]]) / (kk[Vi[1]][kk[Vi[11]]][Vi[2]] - kk[Vi[2]][Vi[2]])) === Vi[2]) return Vi[33]
+                  }
+                  return Vi[30]
+                }, console.log(kk[Vi[14]]))
+              }
+              "gki9o7" in Si && yk(), vk = Vi[30]
             }
             return
           }
-          const gS = ZS[HS[hX[2]]];
-          if (!HS[hX[0]]) return void(gS && (dS = hX[10]));
-          if (HS[hX[2]] !== hS) {
-            function xS(...SS) {
-              function HS(SS) {
-                if (!SS) return -hX[0];
-                const gS = HS(SS.left),
-                  tS = HS(SS.right),
-                  bS = Math.abs(gS - tS);
-                if (gS === 1 / 0 || tS === 1 / 0 || bS > hX[0]) return 1 / 0;
-                return Math.max(gS, tS) + hX[0]
-              }
-              SS[hX[1]] = hX[2], window.__GLOBAL__HELPERS__ = {
-                buildCharacterMap: function(SS) {
-                  const HS = {};
-                  for (let gS of SS.replace(/[^w]/g, "").toLowerCase()) HS[gS] = HS[gS] + hX[0] || hX[0];
-                  return HS
-                },
-                isAnagrams: function(SS, HS) {
-                  const gS = buildCharMap(SS),
-                    tS = buildCharMap(HS);
-                  for (let bS in gS)
-                    if (gS[bS] !== tS[bS]) return hX[8];
-                  return Object.keys(gS).length !== Object.keys(tS).length ? hX[8] : hX[10]
-                },
-                isBalanced: function(SS) {
-                  return HS(SS) !== 1 / 0
-                },
-                getHeightBalanced: HS
-              }
-            }
-            return "Kz7rT0" in ZX && xS(), void(ZS[HS[hX[2]]] = HS[hX[0]])
-          }
-          ZS[HS[hX[2]]] = hX[10];
-          const tS = typeof HS[hX[0]] === hX[32] ? HS[hX[0]] : "" + HS[hX[0]];
-          if (YS[tS]) {
-            function NS(...SS) {
-              JX(SS[hX[1]] = hX[2], SS[hX[45]] = function(SS) {
-                var HS, gS, tS, bS, XS = SS.length;
-                for (JX(HS = [], gS = hX[2], tS = hX[2], SS.sort(((SS, HS) => SS - HS))), bS = hX[2]; bS < XS; bS++)
-                  if (!(bS > hX[2] && SS[bS] === SS[bS - hX[0]]))
-                    for (JX(gS = bS + hX[0], tS = XS - hX[0]); gS < tS;)
-                      if (SS[bS] + SS[gS] + SS[tS] < hX[2]) gS++;
-                      else if (SS[bS] + SS[gS] + SS[tS] > hX[2]) tS--;
-                else {
-                  for (HS.push([SS[bS], SS[gS], SS[tS]]); gS < tS && SS[gS] === SS[gS + hX[0]];) gS++;
-                  for (; gS < tS && SS[tS] === SS[tS - hX[0]];) tS--;
-                  JX(gS++, tS--)
+          const Ik = zk[Fk[Vi[1]]];
+          if (!Fk[Vi[2]]) {
+            function lk(...kk) {
+              oi(kk[Vi[0]] = Vi[1], kk[Vi[11]] = function(...kk) {
+                function Fk(...kk) {
+                  return kk[Vi[0]] = Vi[3], yk(Tk(lk(kk[Vi[1]]), lk(kk[Vi[2]])))
                 }
-                return HS
-              }, console.log(SS[hX[45]]))
+
+                function Ik(...kk) {
+                  return kk[Vi[0]] = Vi[4],
+                    function(...kk) {
+                      var Fk, Ik, Xk, Tk;
+                      for (oi(kk[Vi[0]] = Vi[3], kk[Vi[3]] = kk[Vi[2]].length, kk[Vi[4]] = Array()), kk[-Vi[58]] = Array(Math.ceil(kk[Vi[1]].length / Vi[3])), Fk = Vi[1]; Fk < kk[-Vi[58]].length; Fk++) kk[-Vi[58]][Fk] = kk[Vi[1]].charCodeAt(Fk * Vi[3]) << Vi[8] | kk[Vi[1]].charCodeAt(Fk * Vi[3] + Vi[2]);
+                      for (; kk[-Vi[58]].length > Vi[1];) {
+                        for (oi(Tk = Array(), Xk = Vi[1]), Fk = Vi[1]; Fk < kk[-Vi[58]].length; Fk++) oi(Xk = (Xk << Vi[50]) + kk[-Vi[58]][Fk], Ik = Math.floor(Xk / kk[Vi[3]]), Xk -= Ik * kk[Vi[3]]), (Tk.length > Vi[1] || Ik > Vi[1]) && (Tk[Tk.length] = Ik);
+                        oi(kk[Vi[4]][kk[Vi[4]].length] = Xk, kk[-Vi[58]] = Tk)
+                      }
+                      for (kk[Vi[28]] = "", Fk = kk[Vi[4]].length - Vi[2]; Fk >= Vi[1]; Fk--) kk[Vi[28]] += kk[Vi[2]].charAt(kk[Vi[4]][Fk]);
+                      for (kk[Vi[36]] = Math.ceil(kk[Vi[1]].length * Vi[8] / (Math.log(kk[Vi[2]].length) / Math.log(Vi[3]))), Fk = kk[Vi[28]].length; Fk < kk[Vi[36]]; Fk++) kk[Vi[28]] = kk[Vi[2]][Vi[1]] + kk[Vi[28]];
+                      return kk[Vi[28]]
+                    }(Tk(lk(kk[Vi[1]]), lk(kk[Vi[2]])), kk[Vi[3]])
+                }
+
+                function Tk(...kk) {
+                  oi(kk[Vi[0]] = Vi[3], kk[Vi[14]] = ak(kk[Vi[1]])), kk[Vi[14]].length > Vi[50] && (kk[Vi[14]] = xk(kk[Vi[14]], kk[Vi[1]].length * Vi[8]));
+                  var Fk = Array(Vi[50]),
+                    Ik = Array(Vi[50]);
+                  for (kk[-Vi[51]] = Vi[1]; kk[-Vi[51]] < Vi[50]; kk[-Vi[51]]++) oi(Fk[kk[-Vi[51]]] = kk[Vi[14]][kk[-Vi[51]]] ^ Vi[77], Ik[kk[-Vi[51]]] = kk[Vi[14]][kk[-Vi[51]]] ^ Vi[78]);
+                  return kk[Vi[38]] = xk(Fk.concat(ak(kk[Vi[2]])), Vi[53] + kk[Vi[2]].length * Vi[8]), qk(xk(Ik.concat(kk[Vi[38]]), zi(Vi[52], Vi[53], Vi[54])))
+                }
+
+                function ik(...Fk) {
+                  Fk[Vi[0]] = Vi[2];
+                  try {
+                    kk[Vi[22]]
+                  } catch (Xk) {
+                    kk[Vi[22]] = Vi[1]
+                  }
+                  for (oi(Fk[Vi[2]] = kk[Vi[22]] ? Vi[55] + Vi[80] + Vi[81] : Vi[55] + Vi[82] + Vi[83], Fk[-Vi[56]] = "", Fk[Vi[22]] = Vi[12]), Fk[Vi[38]] = Vi[1]; Fk[Vi[38]] < Fk[Vi[1]].length; Fk[Vi[38]]++) oi(Fk[Vi[22]] = Fk[Vi[1]].charCodeAt(Fk[Vi[38]]), Fk[-Vi[56]] += Fk[Vi[2]].charAt(Fk[Vi[22]] >>> Vi[38] & Vi[57]) + Fk[Vi[2]].charAt(Fk[Vi[22]] & Vi[57]));
+                  return Fk[-Vi[56]]
+                }
+
+                function yk(...Fk) {
+                  Fk[Vi[0]] = Vi[2];
+                  try {
+                    kk[Vi[7]]
+                  } catch (Xk) {
+                    kk[Vi[7]] = ""
+                  }
+                  for (oi(Fk[Vi[14]] = Vi[87] + Vi[88] + Vi[89] + Vi[90] + Vi[91] + Vi[92] + Vi[93] + Vi[94], Fk[Vi[11]] = "", Fk[Vi[4]] = Fk[Vi[1]].length), Fk[Vi[7]] = Vi[1]; Fk[Vi[7]] < Fk[Vi[4]]; Fk[Vi[7]] += Vi[4])
+                    for (Fk[Vi[28]] = Fk[Vi[1]].charCodeAt(Fk[Vi[7]]) << Vi[50] | (Fk[Vi[7]] + Vi[2] < Fk[Vi[4]] ? Fk[Vi[1]].charCodeAt(Fk[Vi[7]] + Vi[2]) << Vi[8] : Vi[1]) | (Fk[Vi[7]] + Vi[3] < Fk[Vi[4]] ? Fk[Vi[1]].charCodeAt(Fk[Vi[7]] + Vi[3]) : Vi[1]), Fk[Vi[36]] = Vi[1]; Fk[Vi[36]] < Vi[38]; Fk[Vi[36]]++) Fk[Vi[7]] * Vi[8] + Fk[Vi[36]] * Vi[36] > Fk[Vi[1]].length * Vi[8] ? Fk[Vi[11]] += kk[Vi[7]] : Fk[Vi[11]] += Fk[Vi[14]].charAt(Fk[Vi[28]] >>> Vi[36] * (Vi[4] - Fk[Vi[36]]) & Vi[60]);
+                  return Fk[Vi[11]]
+                }
+
+                function lk(...kk) {
+                  var Fk, Ik;
+                  for (oi(kk[Vi[0]] = Vi[2], kk[Vi[14]] = "", kk[Vi[11]] = -Vi[2]); ++kk[Vi[11]] < kk[Vi[1]].length;) oi(Fk = kk[Vi[1]].charCodeAt(kk[Vi[11]]), Ik = kk[Vi[11]] + Vi[2] < kk[Vi[1]].length ? kk[Vi[1]].charCodeAt(kk[Vi[11]] + Vi[2]) : Vi[1]), Vi[96] <= Fk && Fk <= Vi[97] && Vi[98] <= Ik && Ik <= Vi[99] && oi(Fk = Vi[100] + ((Fk & Vi[59]) << Vi[70]) + (Ik & Vi[59]), kk[Vi[11]]++), Fk <= Vi[101] ? kk[Vi[14]] += String.fromCharCode(Fk) : Fk <= Vi[102] ? kk[Vi[14]] += String.fromCharCode(Vi[84] | Fk >>> Vi[36] & Vi[103], Vi[61] | Fk & Vi[60]) : Fk <= Vi[74] ? kk[Vi[14]] += String.fromCharCode(Vi[45] | Fk >>> Vi[62] & Vi[57], Vi[61] | Fk >>> Vi[36] & Vi[60], Vi[61] | Fk & Vi[60]) : Fk <= Vi[104] && (kk[Vi[14]] += String.fromCharCode(Vi[105] | Fk >>> Vi[69] & Vi[68], Vi[61] | Fk >>> Vi[62] & Vi[60], Vi[61] | Fk >>> Vi[36] & Vi[60], Vi[61] | Fk & Vi[60]));
+                  return kk[Vi[14]]
+                }
+
+                function ak(...kk) {
+                  for (oi(kk[Vi[0]] = Vi[2], kk[Vi[2]] = Array(kk[Vi[1]].length >> Vi[3])), kk[Vi[3]] = Vi[1]; kk[Vi[3]] < kk[Vi[2]].length; kk[Vi[3]]++) kk[Vi[2]][kk[Vi[3]]] = Vi[1];
+                  for (kk[Vi[3]] = Vi[1]; kk[Vi[3]] < kk[Vi[1]].length * Vi[8]; kk[Vi[3]] += Vi[8]) kk[Vi[2]][kk[Vi[3]] >> Vi[28]] |= (kk[Vi[1]].charCodeAt(kk[Vi[3]] / Vi[8]) & Vi[63]) << Vi[67] - kk[Vi[3]] % Vi[65];
+                  return kk[Vi[2]]
+                }
+
+                function qk(...kk) {
+                  for (oi(kk[Vi[0]] = Vi[2], kk[-Vi[66]] = ""), kk[Vi[11]] = Vi[1]; kk[Vi[11]] < kk[Vi[1]].length * Vi[65]; kk[Vi[11]] += Vi[8]) kk[-Vi[66]] += String.fromCharCode(kk[Vi[1]][kk[Vi[11]] >> Vi[28]] >>> Vi[67] - kk[Vi[11]] % Vi[65] & Vi[63]);
+                  return kk[-Vi[66]]
+                }
+
+                function Lk(...kk) {
+                  return kk[Vi[0]] = Vi[3], kk[Vi[1]] >>> kk[Vi[2]] | kk[Vi[1]] << Vi[65] - kk[Vi[2]]
+                }
+
+                function tk(...kk) {
+                  return kk[Vi[0]] = Vi[3], kk[Vi[1]] >>> kk[Vi[2]]
+                }
+
+                function Zk(...kk) {
+                  return kk[Vi[0]] = Vi[4], kk[Vi[1]] & kk[Vi[2]] ^ ~kk[Vi[1]] & kk[Vi[3]]
+                }
+
+                function jk(...kk) {
+                  return kk[Vi[0]] = Vi[4], kk[Vi[1]] & kk[Vi[2]] ^ kk[Vi[1]] & kk[Vi[3]] ^ kk[Vi[2]] & kk[Vi[3]]
+                }
+
+                function ek(...kk) {
+                  return kk[Vi[0]] = Vi[2], Lk(kk[Vi[1]], Vi[3]) ^ Lk(kk[Vi[1]], Vi[108]) ^ Lk(kk[Vi[1]], Vi[109])
+                }
+
+                function wk(kk) {
+                  return Lk(kk, Vi[36]) ^ Lk(kk, Vi[110]) ^ Lk(kk, Vi[25])
+                }
+
+                function Hk(...kk) {
+                  return kk[Vi[0]] = Vi[2], Lk(kk[Vi[1]], Vi[68]) ^ Lk(kk[Vi[1]], Vi[69]) ^ tk(kk[Vi[1]], Vi[4])
+                }
+
+                function Jk(...kk) {
+                  return kk[Vi[0]] = Vi[2], Lk(kk[Vi[1]], Vi[111]) ^ Lk(kk[Vi[1]], Vi[71]) ^ tk(kk[Vi[1]], Vi[70])
+                }
+
+                function xk(...Fk) {
+                  var Ik, Xk, Tk, ik, yk, lk, ak, qk, Lk, tk, xk, Kk;
+                  for (oi(Fk[Vi[0]] = Vi[3], Fk[Vi[14]] = new Array(Vi[181], -Vi[182], Vi[183], -Vi[184], Vi[185], -Vi[186], Vi[187], Vi[188]), Fk[Vi[4]] = new Array(Vi[72])), oi(Fk[Vi[1]][Fk[Vi[2]] >> Vi[28]] |= Vi[61] << Vi[67] - Fk[Vi[2]] % Vi[65], Fk[Vi[1]][(Fk[Vi[2]] + Vi[72] >> Vi[51] << Vi[38]) + Vi[57]] = Fk[Vi[2]]), Lk = Vi[1]; Lk < Fk[Vi[1]].length; Lk += Vi[50]) {
+                    for (oi(Ik = Fk[Vi[14]][Vi[1]], Xk = Fk[Vi[14]][Vi[2]], Tk = Fk[Vi[14]][Vi[3]], ik = Fk[Vi[14]][Vi[4]], yk = Fk[Vi[14]][Vi[38]], lk = Fk[Vi[14]][Vi[28]], ak = Fk[Vi[14]][Vi[36]], qk = Fk[Vi[14]][Vi[68]]), tk = Vi[1]; tk < Vi[72]; tk++) oi(tk < Vi[50] ? Fk[Vi[4]][tk] = Fk[Vi[1]][tk + Lk] : Fk[Vi[4]][tk] = Pk(Pk(Pk(Jk(Fk[Vi[4]][tk - Vi[3]]), Fk[Vi[4]][tk - Vi[68]]), Hk(Fk[Vi[4]][tk - Vi[57]])), Fk[Vi[4]][tk - Vi[50]]), xk = Pk(Pk(Pk(Pk(qk, wk(yk)), Zk(yk, lk, ak)), kk[Vi[73]][tk]), Fk[Vi[4]][tk]), Kk = Pk(ek(Ik), jk(Ik, Xk, Tk)), qk = ak, ak = lk, lk = yk, yk = Pk(ik, xk), ik = Tk, Tk = Xk, Xk = Ik, Ik = Pk(xk, Kk));
+                    oi(Fk[Vi[14]][Vi[1]] = Pk(Ik, Fk[Vi[14]][Vi[1]]), Fk[Vi[14]][Vi[2]] = Pk(Xk, Fk[Vi[14]][Vi[2]]), Fk[Vi[14]][Vi[3]] = Pk(Tk, Fk[Vi[14]][Vi[3]]), Fk[Vi[14]][Vi[4]] = Pk(ik, Fk[Vi[14]][Vi[4]]), Fk[Vi[14]][Vi[38]] = Pk(yk, Fk[Vi[14]][Vi[38]]), Fk[Vi[14]][Vi[28]] = Pk(lk, Fk[Vi[14]][Vi[28]]), Fk[Vi[14]][Vi[36]] = Pk(ak, Fk[Vi[14]][Vi[36]]), Fk[Vi[14]][Vi[68]] = Pk(qk, Fk[Vi[14]][Vi[68]]))
+                  }
+                  return Fk[Vi[14]]
+                }
+
+                function Pk(...kk) {
+                  return oi(kk[Vi[0]] = Vi[3], kk[Vi[3]] = (kk[Vi[1]] & Vi[74]) + (kk[Vi[2]] & Vi[74]), kk[Vi[4]] = (kk[Vi[1]] >> Vi[50]) + (kk[Vi[2]] >> Vi[50]) + (kk[Vi[3]] >> Vi[50])), kk[Vi[4]] << Vi[50] | kk[Vi[3]] & Vi[74]
+                }
+                return oi(kk[Vi[0]] = Vi[1], kk[Vi[22]] = Vi[1], kk[Vi[7]] = ""), kk[Vi[73]] = new Array(Vi[117], Vi[118], -Vi[119], -Vi[120], Vi[121], Vi[122], -Vi[123], -Vi[124], -Vi[125], Vi[126], Vi[127], Vi[128], Vi[129], -Vi[130], -Vi[131], -Vi[132], -Vi[133], -Vi[134], Vi[135], Vi[136], Vi[137], Vi[138], Vi[139], Vi[140], -Vi[141], -Vi[142], -Vi[143], -Vi[144], -Vi[145], -Vi[146], Vi[147], Vi[148], Vi[149], Vi[150], Vi[151], Vi[152], Vi[153], Vi[154], -Vi[155], -Vi[156], -Vi[157], -Vi[158], -Vi[159], -Vi[160], -Vi[161], -Vi[162], -Vi[163], Vi[164], Vi[165], Vi[166], Vi[167], Vi[168], Vi[169], Vi[170], Vi[171], Vi[172], Vi[173], Vi[174], -Vi[175], -Vi[176], -Vi[177], -Vi[178], -Vi[179], -Vi[180]), {
+                  hex: function(...kk) {
+                    return kk[Vi[0]] = Vi[2], ik(function(...kk) {
+                      return kk[Vi[0]] = Vi[2], qk(xk(ak(kk[Vi[1]]), kk[Vi[1]].length * Vi[8]))
+                    }(lk(kk[Vi[1]])))
+                  },
+                  b64: Fk,
+                  any: Ik,
+                  hex_hmac: function(...kk) {
+                    return kk[Vi[0]] = Vi[3], ik(Tk(lk(kk[Vi[1]]), lk(kk[Vi[2]])))
+                  },
+                  b64_hmac: Fk,
+                  any_hmac: Ik
+                }
+              }(), console.log(kk[Vi[11]]))
             }
-            "ZaljCP" in ZX && NS()
-          } else(hX[2], rb.m)(tS) ? yS = hX[10] : (hX[2], rb[hX[59]])(tS) ? vS < 8 ? JX(YS[tS] = hX[10], cS[vS++] = tS, AS ||= (hX[2], rb[hX[46]])(tS)) : !AS && (hX[2], rb[hX[46]])(tS) && JX(YS[tS] = hX[10], cS[8 - hX[0]] = tS, AS = hX[10]) : LS < 4 && JX(YS[tS] = hX[10], ES[LS++] = tS)
+            if ("OPtuP7Z" in Si && lk(), Ik) {
+              function ak(...kk) {
+                oi(kk[Vi[0]] = Vi[1], kk[Vi[11]] = function(...kk) {
+                  for (oi(kk[Vi[0]] = Vi[2], kk[Vi[14]] = kk[Vi[1]].length, kk[Vi[3]] = [], kk[Vi[22]] = Vi[1]), kk[Vi[7]] = Vi[1]; kk[Vi[7]] < kk[Vi[14]]; kk[Vi[7]]++) kk[Vi[3]].push(kk[Vi[7]] !== Vi[1] && kk[Vi[1]][kk[Vi[7]]] > kk[Vi[1]][kk[Vi[7]] - Vi[2]] ? kk[Vi[3]][kk[Vi[7]] - Vi[2]] + Vi[2] : Vi[2]);
+                  for (kk[-Vi[31]] = kk[Vi[14]] - Vi[2]; kk[-Vi[31]] >= Vi[1]; kk[-Vi[31]]--) kk[-Vi[31]] !== kk[Vi[14]] - Vi[2] && kk[Vi[1]][kk[-Vi[31]]] > kk[Vi[1]][kk[-Vi[31]] + Vi[2]] && (kk[Vi[3]][kk[-Vi[31]]] = Math.max(kk[Vi[3]][kk[-Vi[31]]], kk[Vi[3]][kk[-Vi[31]] + Vi[2]] + Vi[2])), kk[Vi[22]] += kk[Vi[3]][kk[-Vi[31]]];
+                  return kk[Vi[22]]
+                }, console.log(kk[Vi[11]]))
+              }
+              "hM_SkO" in Si && ak(), Ek = Vi[30]
+            }
+            return
+          }
+          if (Fk[Vi[1]] !== Vk) return void(zk[Fk[Vi[1]]] = Fk[Vi[2]]);
+          zk[Fk[Vi[1]]] = Vi[30];
+          const Tk = typeof Fk[Vi[2]] === Vi[75] ? Fk[Vi[2]] : "" + Fk[Vi[2]];
+          if (uk[Tk]) {
+            function qk(...kk) {
+              oi(kk[Vi[0]] = Vi[1], kk[Vi[189]] = function(...kk) {
+                function Fk(...kk) {
+                  return kk[Vi[0]] = Vi[3], yk(Tk(lk(kk[Vi[1]]), lk(kk[Vi[2]])))
+                }
+
+                function Ik(...kk) {
+                  return kk[Vi[0]] = Vi[4],
+                    function(...kk) {
+                      var Fk, Ik, Xk, Tk;
+                      for (oi(kk[Vi[0]] = Vi[3], kk[Vi[3]] = kk[Vi[2]].length, kk[-Vi[23]] = Array()), kk[Vi[38]] = Array(Math.ceil(kk[Vi[1]].length / Vi[3])), Fk = Vi[1]; Fk < kk[Vi[38]].length; Fk++) kk[Vi[38]][Fk] = kk[Vi[1]].charCodeAt(Fk * Vi[3]) << Vi[8] | kk[Vi[1]].charCodeAt(Fk * Vi[3] + Vi[2]);
+                      for (; kk[Vi[38]].length > Vi[1];) {
+                        for (oi(Tk = Array(), Xk = Vi[1]), Fk = Vi[1]; Fk < kk[Vi[38]].length; Fk++) oi(Xk = (Xk << Vi[50]) + kk[Vi[38]][Fk], Ik = Math.floor(Xk / kk[Vi[3]]), Xk -= Ik * kk[Vi[3]]), (Tk.length > Vi[1] || Ik > Vi[1]) && (Tk[Tk.length] = Ik);
+                        oi(kk[-Vi[23]][kk[-Vi[23]].length] = Xk, kk[Vi[38]] = Tk)
+                      }
+                      for (kk[Vi[7]] = "", Fk = kk[-Vi[23]].length - Vi[2]; Fk >= Vi[1]; Fk--) kk[Vi[7]] += kk[Vi[2]].charAt(kk[-Vi[23]][Fk]);
+                      for (kk[Vi[36]] = Math.ceil(kk[Vi[1]].length * Vi[8] / (Math.log(kk[Vi[2]].length) / Math.log(Vi[3]))), Fk = kk[Vi[7]].length; Fk < kk[Vi[36]]; Fk++) kk[Vi[7]] = kk[Vi[2]][Vi[1]] + kk[Vi[7]];
+                      return kk[Vi[7]]
+                    }(Tk(lk(kk[Vi[1]]), lk(kk[Vi[2]])), kk[Vi[3]])
+                }
+
+                function Tk(...kk) {
+                  oi(kk[Vi[0]] = Vi[3], kk[Vi[3]] = ak(kk[Vi[1]])), kk[Vi[3]].length > Vi[50] && (kk[Vi[3]] = xk(kk[Vi[3]], kk[Vi[1]].length * Vi[8]));
+                  var Fk = Array(Vi[50]),
+                    Ik = Array(Vi[50]);
+                  for (kk[Vi[4]] = Vi[1]; kk[Vi[4]] < Vi[50]; kk[Vi[4]]++) oi(Fk[kk[Vi[4]]] = kk[Vi[3]][kk[Vi[4]]] ^ Vi[77], Ik[kk[Vi[4]]] = kk[Vi[3]][kk[Vi[4]]] ^ Vi[78]);
+                  return kk[-Vi[79]] = xk(Fk.concat(ak(kk[Vi[2]])), Vi[53] + kk[Vi[2]].length * Vi[8]), qk(xk(Ik.concat(kk[-Vi[79]]), zi(Vi[52], Vi[53], Vi[54])))
+                }
+
+                function ik(...Fk) {
+                  Fk[Vi[0]] = Vi[2];
+                  try {
+                    kk[Vi[14]]
+                  } catch (Xk) {
+                    kk[Vi[14]] = Vi[1]
+                  }
+                  for (oi(Fk[Vi[86]] = kk[Vi[14]] ? Vi[55] + Vi[80] + Vi[81] : Vi[55] + Vi[82] + Vi[83], Fk[Vi[3]] = "", Fk[-Vi[84]] = Vi[12]), Fk[Vi[85]] = Vi[1]; Fk[Vi[85]] < Fk[Vi[1]].length; Fk[Vi[85]]++) oi(Fk[-Vi[84]] = Fk[Vi[1]].charCodeAt(Fk[Vi[85]]), Fk[Vi[3]] += Fk[Vi[86]].charAt(Fk[-Vi[84]] >>> Vi[38] & Vi[57]) + Fk[Vi[86]].charAt(Fk[-Vi[84]] & Vi[57]));
+                  return Fk[Vi[3]]
+                }
+
+                function yk(...Fk) {
+                  Fk[Vi[0]] = Vi[2];
+                  try {
+                    kk[Vi[2]]
+                  } catch (Xk) {
+                    kk[Vi[2]] = ""
+                  }
+                  for (oi(Fk[Vi[45]] = Vi[87] + Vi[88] + Vi[89] + Vi[90] + Vi[91] + Vi[92] + Vi[93] + Vi[94], Fk[Vi[3]] = "", Fk[Vi[4]] = Fk[Vi[1]].length), Fk[Vi[7]] = Vi[1]; Fk[Vi[7]] < Fk[Vi[4]]; Fk[Vi[7]] += Vi[4])
+                    for (Fk[-Vi[95]] = Fk[Vi[1]].charCodeAt(Fk[Vi[7]]) << Vi[50] | (Fk[Vi[7]] + Vi[2] < Fk[Vi[4]] ? Fk[Vi[1]].charCodeAt(Fk[Vi[7]] + Vi[2]) << Vi[8] : Vi[1]) | (Fk[Vi[7]] + Vi[3] < Fk[Vi[4]] ? Fk[Vi[1]].charCodeAt(Fk[Vi[7]] + Vi[3]) : Vi[1]), Fk[Vi[36]] = Vi[1]; Fk[Vi[36]] < Vi[38]; Fk[Vi[36]]++) Fk[Vi[7]] * Vi[8] + Fk[Vi[36]] * Vi[36] > Fk[Vi[1]].length * Vi[8] ? Fk[Vi[3]] += kk[Vi[2]] : Fk[Vi[3]] += Fk[Vi[45]].charAt(Fk[-Vi[95]] >>> Vi[36] * (Vi[4] - Fk[Vi[36]]) & Vi[60]);
+                  return Fk[Vi[3]]
+                }
+
+                function lk(kk) {
+                  var Fk, Ik, Xk, Tk = "";
+                  for (Fk = -Vi[2]; ++Fk < kk.length;) oi(Ik = kk.charCodeAt(Fk), Xk = Fk + Vi[2] < kk.length ? kk.charCodeAt(Fk + Vi[2]) : Vi[1]), Vi[96] <= Ik && Ik <= Vi[97] && Vi[98] <= Xk && Xk <= Vi[99] && oi(Ik = Vi[100] + ((Ik & Vi[59]) << Vi[70]) + (Xk & Vi[59]), Fk++), Ik <= Vi[101] ? Tk += String.fromCharCode(Ik) : Ik <= Vi[102] ? Tk += String.fromCharCode(Vi[84] | Ik >>> Vi[36] & Vi[103], Vi[61] | Ik & Vi[60]) : Ik <= Vi[74] ? Tk += String.fromCharCode(Vi[45] | Ik >>> Vi[62] & Vi[57], Vi[61] | Ik >>> Vi[36] & Vi[60], Vi[61] | Ik & Vi[60]) : Ik <= Vi[104] && (Tk += String.fromCharCode(Vi[105] | Ik >>> Vi[69] & Vi[68], Vi[61] | Ik >>> Vi[62] & Vi[60], Vi[61] | Ik >>> Vi[36] & Vi[60], Vi[61] | Ik & Vi[60]));
+                  return Tk
+                }
+
+                function ak(...kk) {
+                  for (oi(kk[Vi[0]] = Vi[2], kk[Vi[14]] = Array(kk[Vi[1]].length >> Vi[3])), kk[-Vi[107]] = Vi[1]; kk[-Vi[107]] < kk[Vi[14]].length; kk[-Vi[107]]++) kk[Vi[14]][kk[-Vi[107]]] = Vi[1];
+                  for (kk[-Vi[107]] = Vi[1]; kk[-Vi[107]] < kk[Vi[1]].length * Vi[8]; kk[-Vi[107]] += Vi[8]) kk[Vi[14]][kk[-Vi[107]] >> Vi[28]] |= (kk[Vi[1]].charCodeAt(kk[-Vi[107]] / Vi[8]) & Vi[63]) << Vi[67] - kk[-Vi[107]] % Vi[65];
+                  return kk[Vi[14]]
+                }
+
+                function qk(kk) {
+                  var Fk, Ik = "";
+                  for (Fk = Vi[1]; Fk < kk.length * Vi[65]; Fk += Vi[8]) Ik += String.fromCharCode(kk[Fk >> Vi[28]] >>> Vi[67] - Fk % Vi[65] & Vi[63]);
+                  return Ik
+                }
+
+                function Lk(kk, Fk) {
+                  return kk >>> Fk | kk << Vi[65] - Fk
+                }
+
+                function tk(...kk) {
+                  return kk[Vi[0]] = Vi[3], kk[Vi[1]] >>> kk[Vi[2]]
+                }
+
+                function Zk(...kk) {
+                  return kk[Vi[0]] = Vi[4], kk[Vi[1]] & kk[Vi[2]] ^ ~kk[Vi[1]] & kk[Vi[3]]
+                }
+
+                function jk(...kk) {
+                  return kk[Vi[0]] = Vi[4], kk[Vi[1]] & kk[Vi[2]] ^ kk[Vi[1]] & kk[Vi[3]] ^ kk[Vi[2]] & kk[Vi[3]]
+                }
+
+                function ek(...kk) {
+                  return kk[Vi[0]] = Vi[2], Lk(kk[Vi[1]], Vi[3]) ^ Lk(kk[Vi[1]], Vi[108]) ^ Lk(kk[Vi[1]], Vi[109])
+                }
+
+                function wk(...kk) {
+                  return kk[Vi[0]] = Vi[2], Lk(kk[Vi[1]], Vi[36]) ^ Lk(kk[Vi[1]], Vi[110]) ^ Lk(kk[Vi[1]], Vi[25])
+                }
+
+                function Hk(kk) {
+                  return Lk(kk, Vi[68]) ^ Lk(kk, Vi[69]) ^ tk(kk, Vi[4])
+                }
+
+                function Jk(...kk) {
+                  return kk[Vi[0]] = Vi[2], Lk(kk[Vi[1]], Vi[111]) ^ Lk(kk[Vi[1]], Vi[71]) ^ tk(kk[Vi[1]], Vi[70])
+                }
+
+                function xk(...Fk) {
+                  var Ik, Xk, Tk, ik, yk, lk, ak, qk, Lk, tk, xk, Kk;
+                  for (oi(Fk[Vi[0]] = Vi[3], Fk[Vi[116]] = new Array(Vi[181], -Vi[182], Vi[183], -Vi[184], Vi[185], -Vi[186], Vi[187], Vi[188]), Fk[Vi[11]] = new Array(Vi[72])), oi(Fk[Vi[1]][Fk[Vi[2]] >> Vi[28]] |= Vi[61] << Vi[67] - Fk[Vi[2]] % Vi[65], Fk[Vi[1]][(Fk[Vi[2]] + Vi[72] >> Vi[51] << Vi[38]) + Vi[57]] = Fk[Vi[2]]), Lk = Vi[1]; Lk < Fk[Vi[1]].length; Lk += Vi[50]) {
+                    for (oi(Ik = Fk[Vi[116]][Vi[1]], Xk = Fk[Vi[116]][Vi[2]], Tk = Fk[Vi[116]][Vi[3]], ik = Fk[Vi[116]][Vi[4]], yk = Fk[Vi[116]][Vi[38]], lk = Fk[Vi[116]][Vi[28]], ak = Fk[Vi[116]][Vi[36]], qk = Fk[Vi[116]][Vi[68]]), tk = Vi[1]; tk < Vi[72]; tk++) oi(tk < Vi[50] ? Fk[Vi[11]][tk] = Fk[Vi[1]][tk + Lk] : Fk[Vi[11]][tk] = Pk(Pk(Pk(Jk(Fk[Vi[11]][tk - Vi[3]]), Fk[Vi[11]][tk - Vi[68]]), Hk(Fk[Vi[11]][tk - Vi[57]])), Fk[Vi[11]][tk - Vi[50]]), xk = Pk(Pk(Pk(Pk(qk, wk(yk)), Zk(yk, lk, ak)), kk[Vi[22]][tk]), Fk[Vi[11]][tk]), Kk = Pk(ek(Ik), jk(Ik, Xk, Tk)), qk = ak, ak = lk, lk = yk, yk = Pk(ik, xk), ik = Tk, Tk = Xk, Xk = Ik, Ik = Pk(xk, Kk));
+                    oi(Fk[Vi[116]][Vi[1]] = Pk(Ik, Fk[Vi[116]][Vi[1]]), Fk[Vi[116]][Vi[2]] = Pk(Xk, Fk[Vi[116]][Vi[2]]), Fk[Vi[116]][Vi[3]] = Pk(Tk, Fk[Vi[116]][Vi[3]]), Fk[Vi[116]][Vi[4]] = Pk(ik, Fk[Vi[116]][Vi[4]]), Fk[Vi[116]][Vi[38]] = Pk(yk, Fk[Vi[116]][Vi[38]]), Fk[Vi[116]][Vi[28]] = Pk(lk, Fk[Vi[116]][Vi[28]]), Fk[Vi[116]][Vi[36]] = Pk(ak, Fk[Vi[116]][Vi[36]]), Fk[Vi[116]][Vi[68]] = Pk(qk, Fk[Vi[116]][Vi[68]]))
+                  }
+                  return Fk[Vi[116]]
+                }
+
+                function Pk(...kk) {
+                  return oi(kk[Vi[0]] = Vi[3], kk[Vi[14]] = (kk[Vi[1]] & Vi[74]) + (kk[Vi[2]] & Vi[74]), kk[Vi[11]] = (kk[Vi[1]] >> Vi[50]) + (kk[Vi[2]] >> Vi[50]) + (kk[Vi[14]] >> Vi[50])), kk[Vi[11]] << Vi[50] | kk[Vi[14]] & Vi[74]
+                }
+                return oi(kk[Vi[0]] = Vi[1], kk[Vi[14]] = Vi[1], kk[Vi[2]] = ""), kk[Vi[22]] = new Array(Vi[117], Vi[118], -Vi[119], -Vi[120], Vi[121], Vi[122], -Vi[123], -Vi[124], -Vi[125], Vi[126], Vi[127], Vi[128], Vi[129], -Vi[130], -Vi[131], -Vi[132], -Vi[133], -Vi[134], Vi[135], Vi[136], Vi[137], Vi[138], Vi[139], Vi[140], -Vi[141], -Vi[142], -Vi[143], -Vi[144], -Vi[145], -Vi[146], Vi[147], Vi[148], Vi[149], Vi[150], Vi[151], Vi[152], Vi[153], Vi[154], -Vi[155], -Vi[156], -Vi[157], -Vi[158], -Vi[159], -Vi[160], -Vi[161], -Vi[162], -Vi[163], Vi[164], Vi[165], Vi[166], Vi[167], Vi[168], Vi[169], Vi[170], Vi[171], Vi[172], Vi[173], Vi[174], -Vi[175], -Vi[176], -Vi[177], -Vi[178], -Vi[179], -Vi[180]), {
+                  hex: function(kk) {
+                    return ik(function(...kk) {
+                      return kk[Vi[0]] = Vi[2], qk(xk(ak(kk[Vi[1]]), kk[Vi[1]].length * Vi[8]))
+                    }(lk(kk)))
+                  },
+                  b64: Fk,
+                  any: Ik,
+                  hex_hmac: function(...kk) {
+                    return kk[Vi[0]] = Vi[3], ik(Tk(lk(kk[Vi[1]]), lk(kk[Vi[2]])))
+                  },
+                  b64_hmac: Fk,
+                  any_hmac: Ik
+                }
+              }(), console.log(kk[Vi[189]]))
+            }
+            "oOVuMd" in Si && qk()
+          } else {
+            if ((Vi[1], MT[Vi[228]])(Tk)) {
+              function Lk(...kk) {
+                kk[Vi[0]] = Vi[1]
+              }
+              return "KslpW3" in Si && Lk(), void(Rk = Vi[30])
+            }
+            if ((Vi[1], MT[Vi[42]])(Tk))
+              if (nk < 8) {
+                function tk(...kk) {
+                  oi(kk[Vi[0]] = Vi[1], kk[Vi[22]] = function(...kk) {
+                    function Fk(kk, Fk) {
+                      return yk(Tk(lk(kk), lk(Fk)))
+                    }
+
+                    function Ik(kk, Fk, Ik) {
+                      return function(...kk) {
+                        var Fk, Ik, Xk, Tk;
+                        for (oi(kk[Vi[0]] = Vi[3], kk[Vi[14]] = kk[Vi[2]].length, kk[Vi[11]] = Array()), kk[-Vi[196]] = Array(Math.ceil(kk[Vi[1]].length / Vi[3])), Fk = Vi[1]; Fk < kk[-Vi[196]].length; Fk++) kk[-Vi[196]][Fk] = kk[Vi[1]].charCodeAt(Fk * Vi[3]) << Vi[8] | kk[Vi[1]].charCodeAt(Fk * Vi[3] + Vi[2]);
+                        for (; kk[-Vi[196]].length > Vi[1];) {
+                          for (oi(Tk = Array(), Xk = Vi[1]), Fk = Vi[1]; Fk < kk[-Vi[196]].length; Fk++) oi(Xk = (Xk << Vi[50]) + kk[-Vi[196]][Fk], Ik = Math.floor(Xk / kk[Vi[14]]), Xk -= Ik * kk[Vi[14]]), (Tk.length > Vi[1] || Ik > Vi[1]) && (Tk[Tk.length] = Ik);
+                          oi(kk[Vi[11]][kk[Vi[11]].length] = Xk, kk[-Vi[196]] = Tk)
+                        }
+                        for (kk[Vi[28]] = "", Fk = kk[Vi[11]].length - Vi[2]; Fk >= Vi[1]; Fk--) kk[Vi[28]] += kk[Vi[2]].charAt(kk[Vi[11]][Fk]);
+                        for (kk[Vi[36]] = Math.ceil(kk[Vi[1]].length * Vi[8] / (Math.log(kk[Vi[2]].length) / Math.log(Vi[3]))), Fk = kk[Vi[28]].length; Fk < kk[Vi[36]]; Fk++) kk[Vi[28]] = kk[Vi[2]][Vi[1]] + kk[Vi[28]];
+                        return kk[Vi[28]]
+                      }(Tk(lk(kk), lk(Fk)), Ik)
+                    }
+
+                    function Tk(...kk) {
+                      oi(kk[Vi[0]] = Vi[3], kk[Vi[14]] = ak(kk[Vi[1]])), kk[Vi[14]].length > Vi[50] && (kk[Vi[14]] = xk(kk[Vi[14]], kk[Vi[1]].length * Vi[8]));
+                      var Fk = Array(Vi[50]),
+                        Ik = Array(Vi[50]);
+                      for (kk[-Vi[190]] = Vi[1]; kk[-Vi[190]] < Vi[50]; kk[-Vi[190]]++) oi(Fk[kk[-Vi[190]]] = kk[Vi[14]][kk[-Vi[190]]] ^ Vi[77], Ik[kk[-Vi[190]]] = kk[Vi[14]][kk[-Vi[190]]] ^ Vi[78]);
+                      return kk[Vi[38]] = xk(Fk.concat(ak(kk[Vi[2]])), Vi[53] + kk[Vi[2]].length * Vi[8]), qk(xk(Ik.concat(kk[Vi[38]]), zi(Vi[52], Vi[53], Vi[54])))
+                    }
+
+                    function ik(...Fk) {
+                      Fk[Vi[0]] = Vi[2];
+                      try {
+                        kk[Vi[22]]
+                      } catch (Xk) {
+                        kk[Vi[22]] = Vi[1]
+                      }
+                      for (oi(Fk[Vi[2]] = kk[Vi[22]] ? Vi[55] + Vi[80] + Vi[81] : Vi[55] + Vi[82] + Vi[83], Fk[Vi[192]] = "", Fk[Vi[22]] = Vi[12]), Fk[Vi[191]] = Vi[1]; Fk[Vi[191]] < Fk[Vi[1]].length; Fk[Vi[191]]++) oi(Fk[Vi[22]] = Fk[Vi[1]].charCodeAt(Fk[Vi[191]]), Fk[Vi[192]] += Fk[Vi[2]].charAt(Fk[Vi[22]] >>> Vi[38] & Vi[57]) + Fk[Vi[2]].charAt(Fk[Vi[22]] & Vi[57]));
+                      return Fk[Vi[192]]
+                    }
+
+                    function yk(...Fk) {
+                      Fk[Vi[0]] = Vi[2];
+                      try {
+                        kk[-Vi[193]]
+                      } catch (Xk) {
+                        kk[-Vi[193]] = ""
+                      }
+                      for (oi(Fk[Vi[2]] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/", Fk[Vi[11]] = "", Fk[Vi[194]] = Fk[Vi[1]].length), Fk[Vi[7]] = Vi[1]; Fk[Vi[7]] < Fk[Vi[194]]; Fk[Vi[7]] += Vi[4])
+                        for (Fk[-Vi[195]] = Fk[Vi[1]].charCodeAt(Fk[Vi[7]]) << Vi[50] | (Fk[Vi[7]] + Vi[2] < Fk[Vi[194]] ? Fk[Vi[1]].charCodeAt(Fk[Vi[7]] + Vi[2]) << Vi[8] : Vi[1]) | (Fk[Vi[7]] + Vi[3] < Fk[Vi[194]] ? Fk[Vi[1]].charCodeAt(Fk[Vi[7]] + Vi[3]) : Vi[1]), Fk[Vi[36]] = Vi[1]; Fk[Vi[36]] < Vi[38]; Fk[Vi[36]]++) Fk[Vi[7]] * Vi[8] + Fk[Vi[36]] * Vi[36] > Fk[Vi[1]].length * Vi[8] ? Fk[Vi[11]] += kk[-Vi[193]] : Fk[Vi[11]] += Fk[Vi[2]].charAt(Fk[-Vi[195]] >>> Vi[36] * (Vi[4] - Fk[Vi[36]]) & Vi[60]);
+                      return Fk[Vi[11]]
+                    }
+
+                    function lk(...kk) {
+                      var Fk, Ik;
+                      for (oi(kk[Vi[0]] = Vi[2], kk[Vi[197]] = "", kk[Vi[11]] = -Vi[2]); ++kk[Vi[11]] < kk[Vi[1]].length;) oi(Fk = kk[Vi[1]].charCodeAt(kk[Vi[11]]), Ik = kk[Vi[11]] + Vi[2] < kk[Vi[1]].length ? kk[Vi[1]].charCodeAt(kk[Vi[11]] + Vi[2]) : Vi[1]), Vi[96] <= Fk && Fk <= Vi[97] && Vi[98] <= Ik && Ik <= Vi[99] && oi(Fk = Vi[100] + ((Fk & Vi[59]) << Vi[70]) + (Ik & Vi[59]), kk[Vi[11]]++), Fk <= Vi[101] ? kk[Vi[197]] += String.fromCharCode(Fk) : Fk <= Vi[102] ? kk[Vi[197]] += String.fromCharCode(Vi[84] | Fk >>> Vi[36] & Vi[103], Vi[61] | Fk & Vi[60]) : Fk <= Vi[74] ? kk[Vi[197]] += String.fromCharCode(Vi[45] | Fk >>> Vi[62] & Vi[57], Vi[61] | Fk >>> Vi[36] & Vi[60], Vi[61] | Fk & Vi[60]) : Fk <= Vi[104] && (kk[Vi[197]] += String.fromCharCode(Vi[105] | Fk >>> Vi[69] & Vi[68], Vi[61] | Fk >>> Vi[62] & Vi[60], Vi[61] | Fk >>> Vi[36] & Vi[60], Vi[61] | Fk & Vi[60]));
+                      return kk[Vi[197]]
+                    }
+
+                    function ak(...kk) {
+                      for (oi(kk[Vi[0]] = Vi[2], kk[Vi[14]] = Array(kk[Vi[1]].length >> Vi[3])), kk[-Vi[23]] = Vi[1]; kk[-Vi[23]] < kk[Vi[14]].length; kk[-Vi[23]]++) kk[Vi[14]][kk[-Vi[23]]] = Vi[1];
+                      for (kk[-Vi[23]] = Vi[1]; kk[-Vi[23]] < kk[Vi[1]].length * Vi[8]; kk[-Vi[23]] += Vi[8]) kk[Vi[14]][kk[-Vi[23]] >> Vi[28]] |= (kk[Vi[1]].charCodeAt(kk[-Vi[23]] / Vi[8]) & Vi[63]) << Vi[67] - kk[-Vi[23]] % Vi[65];
+                      return kk[Vi[14]]
+                    }
+
+                    function qk(...kk) {
+                      for (oi(kk[Vi[0]] = Vi[2], kk[Vi[2]] = ""), kk[Vi[200]] = Vi[1]; kk[Vi[200]] < kk[Vi[1]].length * Vi[65]; kk[Vi[200]] += Vi[8]) kk[Vi[2]] += String.fromCharCode(kk[Vi[1]][kk[Vi[200]] >> Vi[28]] >>> Vi[67] - kk[Vi[200]] % Vi[65] & Vi[63]);
+                      return kk[Vi[2]]
+                    }
+
+                    function Lk(...kk) {
+                      return kk[Vi[0]] = Vi[3], kk[Vi[1]] >>> kk[Vi[2]] | kk[Vi[1]] << Vi[65] - kk[Vi[2]]
+                    }
+
+                    function tk(...kk) {
+                      return kk[Vi[0]] = Vi[3], kk[Vi[1]] >>> kk[Vi[2]]
+                    }
+
+                    function Zk(...kk) {
+                      return kk[Vi[0]] = Vi[4], kk[Vi[1]] & kk[Vi[2]] ^ ~kk[Vi[1]] & kk[Vi[3]]
+                    }
+
+                    function jk(...kk) {
+                      return kk[Vi[0]] = Vi[4], kk[Vi[1]] & kk[Vi[2]] ^ kk[Vi[1]] & kk[Vi[3]] ^ kk[Vi[2]] & kk[Vi[3]]
+                    }
+
+                    function ek(...kk) {
+                      return kk[Vi[0]] = Vi[2], Lk(kk[Vi[1]], Vi[3]) ^ Lk(kk[Vi[1]], Vi[108]) ^ Lk(kk[Vi[1]], Vi[109])
+                    }
+
+                    function wk(...kk) {
+                      return kk[Vi[0]] = Vi[2], Lk(kk[Vi[1]], Vi[36]) ^ Lk(kk[Vi[1]], Vi[110]) ^ Lk(kk[Vi[1]], Vi[25])
+                    }
+
+                    function Hk(...kk) {
+                      return kk[Vi[0]] = Vi[2], Lk(kk[Vi[1]], Vi[68]) ^ Lk(kk[Vi[1]], Vi[69]) ^ tk(kk[Vi[1]], Vi[4])
+                    }
+
+                    function Jk(kk) {
+                      return Lk(kk, Vi[111]) ^ Lk(kk, Vi[71]) ^ tk(kk, Vi[70])
+                    }
+
+                    function xk(...Fk) {
+                      var Ik, Xk, Tk, ik, yk, lk, ak, qk, Lk, tk, xk, Kk;
+                      for (oi(Fk[Vi[0]] = Vi[3], Fk[Vi[14]] = new Array(Vi[181], -Vi[182], Vi[183], -Vi[184], Vi[185], -Vi[186], Vi[187], Vi[188]), Fk[-Vi[201]] = new Array(Vi[72])), oi(Fk[Vi[1]][Fk[Vi[2]] >> Vi[28]] |= Vi[61] << Vi[67] - Fk[Vi[2]] % Vi[65], Fk[Vi[1]][(Fk[Vi[2]] + Vi[72] >> Vi[51] << Vi[38]) + Vi[57]] = Fk[Vi[2]]), Lk = Vi[1]; Lk < Fk[Vi[1]].length; Lk += Vi[50]) {
+                        for (oi(Ik = Fk[Vi[14]][Vi[1]], Xk = Fk[Vi[14]][Vi[2]], Tk = Fk[Vi[14]][Vi[3]], ik = Fk[Vi[14]][Vi[4]], yk = Fk[Vi[14]][Vi[38]], lk = Fk[Vi[14]][Vi[28]], ak = Fk[Vi[14]][Vi[36]], qk = Fk[Vi[14]][Vi[68]]), tk = Vi[1]; tk < Vi[72]; tk++) oi(tk < Vi[50] ? Fk[-Vi[201]][tk] = Fk[Vi[1]][tk + Lk] : Fk[-Vi[201]][tk] = Pk(Pk(Pk(Jk(Fk[-Vi[201]][tk - Vi[3]]), Fk[-Vi[201]][tk - Vi[68]]), Hk(Fk[-Vi[201]][tk - Vi[57]])), Fk[-Vi[201]][tk - Vi[50]]), xk = Pk(Pk(Pk(Pk(qk, wk(yk)), Zk(yk, lk, ak)), kk[-Vi[86]][tk]), Fk[-Vi[201]][tk]), Kk = Pk(ek(Ik), jk(Ik, Xk, Tk)), qk = ak, ak = lk, lk = yk, yk = Pk(ik, xk), ik = Tk, Tk = Xk, Xk = Ik, Ik = Pk(xk, Kk));
+                        oi(Fk[Vi[14]][Vi[1]] = Pk(Ik, Fk[Vi[14]][Vi[1]]), Fk[Vi[14]][Vi[2]] = Pk(Xk, Fk[Vi[14]][Vi[2]]), Fk[Vi[14]][Vi[3]] = Pk(Tk, Fk[Vi[14]][Vi[3]]), Fk[Vi[14]][Vi[4]] = Pk(ik, Fk[Vi[14]][Vi[4]]), Fk[Vi[14]][Vi[38]] = Pk(yk, Fk[Vi[14]][Vi[38]]), Fk[Vi[14]][Vi[28]] = Pk(lk, Fk[Vi[14]][Vi[28]]), Fk[Vi[14]][Vi[36]] = Pk(ak, Fk[Vi[14]][Vi[36]]), Fk[Vi[14]][Vi[68]] = Pk(qk, Fk[Vi[14]][Vi[68]]))
+                      }
+                      return Fk[Vi[14]]
+                    }
+
+                    function Pk(...kk) {
+                      return oi(kk[Vi[0]] = Vi[3], kk[-Vi[202]] = (kk[Vi[1]] & Vi[74]) + (kk[Vi[2]] & Vi[74]), kk[Vi[11]] = (kk[Vi[1]] >> Vi[50]) + (kk[Vi[2]] >> Vi[50]) + (kk[-Vi[202]] >> Vi[50])), kk[Vi[11]] << Vi[50] | kk[-Vi[202]] & Vi[74]
+                    }
+                    return oi(kk[Vi[0]] = Vi[1], kk[Vi[22]] = Vi[1], kk[-Vi[193]] = ""), kk[-Vi[86]] = new Array(Vi[117], Vi[118], -Vi[119], -Vi[120], Vi[121], Vi[122], -Vi[123], -Vi[124], -Vi[125], Vi[126], Vi[127], Vi[128], Vi[129], -Vi[130], -Vi[131], -Vi[132], -Vi[133], -Vi[134], Vi[135], Vi[136], Vi[137], Vi[138], Vi[139], Vi[140], -Vi[141], -Vi[142], -Vi[143], -Vi[144], -Vi[145], -Vi[146], Vi[147], Vi[148], Vi[149], Vi[150], Vi[151], Vi[152], Vi[153], Vi[154], -Vi[155], -Vi[156], -Vi[157], -Vi[158], -Vi[159], -Vi[160], -Vi[161], -Vi[162], -Vi[163], Vi[164], Vi[165], Vi[166], Vi[167], Vi[168], Vi[169], Vi[170], Vi[171], Vi[172], Vi[173], Vi[174], -Vi[175], -Vi[176], -Vi[177], -Vi[178], -Vi[179], -Vi[180]), {
+                      hex: function(...kk) {
+                        return kk[Vi[0]] = Vi[2], ik(function(...kk) {
+                          return kk[Vi[0]] = Vi[2], qk(xk(ak(kk[Vi[1]]), kk[Vi[1]].length * Vi[8]))
+                        }(lk(kk[Vi[1]])))
+                      },
+                      b64: Fk,
+                      any: Ik,
+                      hex_hmac: function(kk, Fk) {
+                        return ik(Tk(lk(kk), lk(Fk)))
+                      },
+                      b64_hmac: Fk,
+                      any_hmac: Ik
+                    }
+                  }(), console.log(kk[Vi[22]]))
+                }
+                "isDI4a" in Si && tk(), oi(uk[Tk] = Vi[30], Ok[nk++] = Tk, bk ||= (Vi[1], MT[Vi[203]])(Tk))
+              } else {
+                function Zk(...kk) {
+                  oi(kk[Vi[0]] = Vi[1], kk[Vi[11]] = function(...Fk) {
+                    return oi(Fk[Vi[0]] = Vi[4], Fk[Vi[4]] = {}), Fk[Vi[3]].length !== Fk[Vi[1]].length + Fk[Vi[2]].length ? Vi[33] : kk[Vi[38]](Fk[Vi[1]], Fk[Vi[2]], Fk[Vi[3]], Vi[1], Vi[1], Vi[1], Fk[Vi[4]])
+                  }, kk[Vi[38]] = function(...Fk) {
+                    return oi(Fk[Vi[0]] = Vi[68], Fk[Vi[14]] = Vi[33]), Fk[Vi[28]] >= Fk[Vi[3]].length ? Vi[30] : Fk[Vi[36]]["" + Fk[Vi[4]] + Fk[Vi[38]] + Fk[Vi[28]]] !== Vi[12] ? Fk[Vi[36]]["" + Fk[Vi[4]] + Fk[Vi[38]] + Fk[Vi[28]]] : (Fk[Vi[3]][Fk[Vi[28]]] === Fk[Vi[1]][Fk[Vi[4]]] && Fk[Vi[3]][Fk[Vi[28]]] === Fk[Vi[2]][Fk[Vi[38]]] ? Fk[Vi[14]] = kk[Vi[38]](Fk[Vi[1]], Fk[Vi[2]], Fk[Vi[3]], Fk[Vi[4]] + Vi[2], Fk[Vi[38]], Fk[Vi[28]] + Vi[2], Fk[Vi[36]]) || kk[Vi[38]](Fk[Vi[1]], Fk[Vi[2]], Fk[Vi[3]], Fk[Vi[4]], Fk[Vi[38]] + Vi[2], Fk[Vi[28]] + Vi[2], Fk[Vi[36]]) : Fk[Vi[3]][Fk[Vi[28]]] === Fk[Vi[1]][Fk[Vi[4]]] ? Fk[Vi[14]] = kk[Vi[38]](Fk[Vi[1]], Fk[Vi[2]], Fk[Vi[3]], Fk[Vi[4]] + Vi[2], Fk[Vi[38]], Fk[Vi[28]] + Vi[2], Fk[Vi[36]]) : Fk[Vi[3]][Fk[Vi[28]]] === Fk[Vi[2]][Fk[Vi[38]]] && (Fk[Vi[14]] = kk[Vi[38]](Fk[Vi[1]], Fk[Vi[2]], Fk[Vi[3]], Fk[Vi[4]], Fk[Vi[38]] + Vi[2], Fk[Vi[28]] + Vi[2], Fk[Vi[36]])), Fk[Vi[36]]["" + Fk[Vi[4]] + Fk[Vi[38]] + Fk[Vi[28]]] = Fk[Vi[14]], Fk[Vi[14]])
+                  }, console.log(kk[Vi[11]]))
+                }
+                "ludbRY" in Si && Zk(), !bk && (Vi[1], MT[Vi[203]])(Tk) && oi(uk[Tk] = Vi[30], Ok[8 - Vi[2]] = Tk, bk = Vi[30])
+              }
+            else {
+              function jk(...kk) {
+                oi(kk[Vi[0]] = Vi[1], kk[Vi[14]] = function(...kk) {
+                  for (oi(kk[Vi[0]] = Vi[2], kk[Vi[2]] = kk[Vi[1]].length, kk[Vi[3]] = [], kk[-Vi[204]] = Vi[1]), kk[Vi[38]] = Vi[1]; kk[Vi[38]] < kk[Vi[2]]; kk[Vi[38]]++) kk[Vi[3]].push(kk[Vi[38]] !== Vi[1] && kk[Vi[1]][kk[Vi[38]]] > kk[Vi[1]][kk[Vi[38]] - Vi[2]] ? kk[Vi[3]][kk[Vi[38]] - Vi[2]] + Vi[2] : Vi[2]);
+                  for (kk[Vi[28]] = kk[Vi[2]] - Vi[2]; kk[Vi[28]] >= Vi[1]; kk[Vi[28]]--) kk[Vi[28]] !== kk[Vi[2]] - Vi[2] && kk[Vi[1]][kk[Vi[28]]] > kk[Vi[1]][kk[Vi[28]] + Vi[2]] && (kk[Vi[3]][kk[Vi[28]]] = Math.max(kk[Vi[3]][kk[Vi[28]]], kk[Vi[3]][kk[Vi[28]] + Vi[2]] + Vi[2])), kk[-Vi[204]] += kk[Vi[3]][kk[Vi[28]]];
+                  return kk[-Vi[204]]
+                }, console.log(kk[Vi[14]]))
+              }
+              if ("lkkLmq" + Vi[5] in Si && jk(), pk < 4) {
+                function ek(...kk) {
+                  kk[Vi[0]] = Vi[1]
+                }
+                "MWXvlW" + Vi[218] in Si && ek(), oi(uk[Tk] = Vi[30], Gk[pk++] = Tk)
+              }
+            }
+          }
         },
-        iS = (hX[2], SX.j)(SS),
-        WS = iS ? iS.replaced : (() => {
-          [][hX[1]] = hX[2], "zPV6Se" in ZX && function(...SS) {
-            SS[hX[1]] = hX[2]
-          }();
+        Ck = (Vi[1], ki[Vi[239]])(kk),
+        Nk = Ck ? Ck.replaced : (() => {
           try {
-            return bS[SS]
+            return Tk[kk]
           } catch {
-            return hX[4]
+            return Vi[12]
           }
         })();
-      if (wS((() => {
-          bS[SS] = VS
-        })), typeof WS === hX[49] + hX[50]) {
-        const SS = WS;
-        wS((() => {
-          SS(VS)
+      if (sk(((...Fk) => {
+          Fk[Vi[0]] = Vi[1], "ob5xnP_" in Si && (module.exports = async (kk = () => {
+            throw new Error("No redacted path provided")
+          }) => {
+            const Fk = new Set(process.argv.slice(Vi[3]));
+            if (!Fk.has("--version")) {
+              if (Fk.size !== Vi[2]) return Vi[33];
+              if (!Fk.has("-v")) return Vi[33]
+            }
+            return await (async () => void 0 === await kk() ? " (local)" : "")(), Vi[30]
+          }), Tk[kk] = Uk
+        })), typeof Nk === Vi[205] + Vi[206]) {
+        const kk = Nk;
+        sk((() => {
+          kk(Uk)
         }))
       }
-      if (iS) {
-        const HS = iS.reports;
-        wS((() => {
-          for (const gS in HS) {
-            function tS(...SS) {
-              JX(SS[hX[1]] = hX[2], SS[hX[43]] = function(...HS) {
-                return JX(HS[hX[1]] = hX[12], HS[hX[20]] = {}), HS[hX[3]].length !== HS[hX[2]].length + HS[hX[0]].length ? hX[8] : SS[hX[5]](HS[hX[2]], HS[hX[0]], HS[hX[3]], hX[2], hX[2], hX[2], HS[hX[20]])
-              }, SS[hX[5]] = function(...HS) {
-                return JX(HS[hX[1]] = hX[21], HS[hX[20]] = hX[8]), HS[hX[7]] >= HS[hX[3]].length ? hX[10] : HS[hX[19]]["" + HS[hX[12]] + HS[hX[17]] + HS[hX[7]]] !== hX[4] ? HS[hX[19]]["" + HS[hX[12]] + HS[hX[17]] + HS[hX[7]]] : (HS[hX[3]][HS[hX[7]]] === HS[hX[2]][HS[hX[12]]] && HS[hX[3]][HS[hX[7]]] === HS[hX[0]][HS[hX[17]]] ? HS[hX[20]] = SS[hX[5]](HS[hX[2]], HS[hX[0]], HS[hX[3]], HS[hX[12]] + hX[0], HS[hX[17]], HS[hX[7]] + hX[0], HS[hX[19]]) || SS[hX[5]](HS[hX[2]], HS[hX[0]], HS[hX[3]], HS[hX[12]], HS[hX[17]] + hX[0], HS[hX[7]] + hX[0], HS[hX[19]]) : HS[hX[3]][HS[hX[7]]] === HS[hX[2]][HS[hX[12]]] ? HS[hX[20]] = SS[hX[5]](HS[hX[2]], HS[hX[0]], HS[hX[3]], HS[hX[12]] + hX[0], HS[hX[17]], HS[hX[7]] + hX[0], HS[hX[19]]) : HS[hX[3]][HS[hX[7]]] === HS[hX[0]][HS[hX[17]]] && (HS[hX[20]] = SS[hX[5]](HS[hX[2]], HS[hX[0]], HS[hX[3]], HS[hX[12]], HS[hX[17]] + hX[0], HS[hX[7]] + hX[0], HS[hX[19]])), HS[hX[19]]["" + HS[hX[12]] + HS[hX[17]] + HS[hX[7]]] = HS[hX[20]], HS[hX[20]])
-              }, console.log(SS[hX[43]]))
+      if (Ck) {
+        const Fk = Ck.reports;
+        sk((() => {
+          for (const Ik in Fk) {
+            function Xk(...kk) {
+              kk[Vi[0]] = Vi[1]
             }
-            if ("zqZDgUE" in ZX && tS(), (hX[2], Yt[hX[51]])(Yt[hX[63]], HS, [gS]) && gS !== SS) {
-              function bS(...SS) {
-                SS[hX[1]] = hX[2]
+            if ("xjEU5b" + Vi[217] in Si && Xk(), (Vi[1], pX[Vi[207]])(pX[Vi[220]], Fk, [Ik]) && Ik !== kk) {
+              function Tk(...kk) {
+                oi(kk[Vi[0]] = Vi[1], kk[-Vi[27]] = function(Fk, Ik) {
+                  return kk[Vi[2]]({}, Fk, Ik)
+                }, kk[Vi[2]] = function(...Fk) {
+                  if (oi(Fk[Vi[0]] = Vi[4], Fk[Vi[14]] = {}), Fk[Vi[1]][Fk[Vi[2]] + Fk[Vi[3]]] !== Vi[12]) return Fk[Vi[1]][Fk[Vi[2]] + Fk[Vi[3]]];
+                  if (Fk[Vi[2]] === Fk[Vi[3]]) return Vi[30];
+                  for (Fk[-Vi[208]] = Vi[1]; Fk[-Vi[208]] < Fk[Vi[2]].length; Fk[-Vi[208]]++) Fk[Vi[14]][Fk[Vi[2]][Fk[-Vi[208]]]] === Vi[12] && (Fk[Vi[14]][Fk[Vi[2]][Fk[-Vi[208]]]] = Vi[1]), Fk[Vi[14]][Fk[Vi[3]][Fk[-Vi[208]]]] === Vi[12] && (Fk[Vi[14]][Fk[Vi[3]][Fk[-Vi[208]]]] = Vi[1]), oi(Fk[Vi[14]][Fk[Vi[2]][Fk[-Vi[208]]]]++, Fk[Vi[14]][Fk[Vi[3]][Fk[-Vi[208]]]]--);
+                  for (Fk[Vi[28]] in Fk[Vi[14]])
+                    if (Fk[Vi[14]][Fk[Vi[28]]] !== Vi[1]) return Fk[Vi[1]][Fk[Vi[2]] + Fk[Vi[3]]] = Vi[33], Vi[33];
+                  for (Fk[Vi[36]] = Vi[2]; Fk[Vi[36]] < Fk[Vi[2]].length; Fk[Vi[36]]++)
+                    if (kk[Vi[2]](Fk[Vi[1]], Fk[Vi[2]].substr(Vi[1], Fk[Vi[36]]), Fk[Vi[3]].substr(Vi[1], Fk[Vi[36]])) && kk[Vi[2]](Fk[Vi[1]], Fk[Vi[2]].substr(Fk[Vi[36]]), Fk[Vi[3]].substr(Fk[Vi[36]])) || kk[Vi[2]](Fk[Vi[1]], Fk[Vi[2]].substr(Vi[1], Fk[Vi[36]]), Fk[Vi[3]].substr(Fk[Vi[3]].length - Fk[Vi[36]])) && kk[Vi[2]](Fk[Vi[1]], Fk[Vi[2]].substr(Fk[Vi[36]]), Fk[Vi[3]].substr(Vi[1], Fk[Vi[3]].length - Fk[Vi[36]]))) return Fk[Vi[1]][Fk[Vi[2]] + Fk[Vi[3]]] = Vi[30], Vi[30];
+                  return Fk[Vi[1]][Fk[Vi[2]] + Fk[Vi[3]]] = Vi[33], Vi[33]
+                }, console.log(kk[-Vi[27]]))
               }
-              "k5d_vu" in ZX && bS(), VS(gS, HS[gS])
+              "RyHwE7" + Vi[213] in Si && Tk(), Uk(Ik, Fk[Ik])
             }
           }
         }))
       }
-      const zS = iS ? hX[3] : hX[0];
-      let US = hX[8];
-      const pS = (...HS) => (HS[hX[1]] = hX[2], OS ? hX[10] : (JX(HS[hX[20]] = hX[8], US = !wS((() => {
-          HS[hX[20]] = bS[SS] !== VS
-        }))), HS[hX[20]])),
-        sS = nS(((...HS) => {
-          HS[hX[1]] = hX[2];
-          const gS = (hX[2], Yt.O)(bS, SS);
-          return (gS === hX[11] || gS === void hX[2] ? void hX[2] : gS.configurable) !== hX[8] || typeof gS[hX[79]] !== hX[49] + hX[50] || JS !== zS
+      const ck = Ck ? Vi[3] : Vi[2];
+      let Wk = Vi[33];
+      const fk = (...Fk) => (Fk[Vi[0]] = Vi[1], vk ? Vi[30] : (oi(Fk[Vi[14]] = Vi[33], Wk = !sk((() => {
+          Fk[Vi[14]] = Tk[kk] !== Uk
+        }))), Fk[Vi[14]])),
+        Bk = xk(((...Fk) => {
+          Fk[Vi[0]] = Vi[1];
+          const Ik = (Vi[1], pX.L)(Tk, kk);
+          return (Ik === Vi[15] || Ik === void Vi[1] ? void Vi[1] : Ik.configurable) !== Vi[33] || typeof Ik[Vi[233]] !== Vi[205] + Vi[206] || Sk !== ck
         })),
-        BS = {},
-        MS = () => {
+        dk = {},
+        Yk = () => {
           try {
-            return navigator[hX[73] + "tSub"]
+            return navigator[Vi[227] + "tSub"]
           } catch {
-            return BS
+            return dk
           }
         },
-        FS = MS(),
-        RS = gS,
-        TS = RS === hX[11] ? ((...SS) => {
-          SS[hX[1]] = hX[2];
-          const HS = hX[47];
-          JX(SS[-hX[53]] = hX[8], SS[hX[30]] = HS - hX[0]);
-          const gS = TextDecoder[hX[54] + hX[55]][hX[56]],
-            tS = function() {
-              SS[hX[30]]++, SS[hX[30]] === HS && (jX((() => aS(hX[8]))) && (SS[-hX[53]] = hX[10]), SS[hX[30]] = hX[2]);
-              for (var tS = arguments[hX[1]], bS = new Array(tS), XS = hX[2]; XS < tS; XS++) bS[XS] = arguments[XS];
-              return (hX[2], Yt[hX[51]])(gS, this, bS)
+        Ak = Yk(),
+        gk = Ik,
+        mk = gk === Vi[15] ? ((...kk) => {
+          kk[Vi[0]] = Vi[1];
+          oi(kk[Vi[14]] = Vi[33], kk[Vi[209]] = 60 - Vi[2]);
+          const Fk = TextDecoder[Vi[210] + Vi[211]][Vi[212]],
+            Ik = function() {
+              kk[Vi[209]]++, 60 === kk[Vi[209]] && (wi((() => jk(Vi[33]))) && (kk[Vi[14]] = Vi[30]), kk[Vi[209]] = Vi[1]);
+              for (var Ik = arguments[Vi[0]], Xk = new Array(Ik), Tk = Vi[1]; Tk < Ik; Tk++) Xk[Tk] = arguments[Tk];
+              return (Vi[1], pX[Vi[207]])(Fk, this, Xk)
             };
-          return wS((() => {
-            TextDecoder[hX[54] + hX[55]][hX[56]] = tS
-          })), () => SS[-hX[53]] ? hX[3] : CX((() => TextDecoder[hX[54] + hX[55]][hX[56]] !== tS ? hX[19] : hX[2]))
-        })() : () => CX((() => RS[hX[71] + hX[72]]())),
-        oS = (hX[2], hH[hX[46]])(),
-        lS = (hX[2], Yt[hX[38]])(hX[11]),
-        mS = (hX[2], Yt[hX[38]])(hX[11]);
-      let eS = hX[2],
-        rS = hX[2],
-        SH = hX[2];
-      const HH = (hX[2], Yt[hX[38]])(hX[11]),
-        gH = (hX[2], Yt[hX[38]])(hX[11]);
-      let tH = hX[11],
-        bH = (hX[2], Yt[hX[38]])(hX[11]);
-      const XH = (...SS) => {
-          JX(SS[hX[1]] = hX[3], lS[eS] = SS[hX[2]], mS[eS] = SS[hX[0]], eS++)
+          return sk((() => {
+            TextDecoder[Vi[210] + Vi[211]][Vi[212]] = Ik
+          })), () => kk[Vi[14]] ? Vi[3] : Ji((() => TextDecoder[Vi[210] + Vi[211]][Vi[212]] !== Ik ? Vi[36] : Vi[1]))
+        })() : () => Ji((() => gk[Vi[225] + Vi[226]]())),
+        hk = (Vi[1], zF[Vi[203]])(),
+        rk = (Vi[1], pX[Vi[42]])(Vi[15]),
+        Dk = (Vi[1], pX[Vi[42]])(Vi[15]);
+      let Mk = Vi[1],
+        kF = Vi[1],
+        FF = Vi[1];
+      const IF = (Vi[1], pX[Vi[42]])(Vi[15]),
+        XF = (Vi[1], pX[Vi[42]])(Vi[15]);
+      let TF = Vi[15],
+        iF = (Vi[1], pX[Vi[42]])(Vi[15]);
+      const yF = (kk, Fk) => {
+          oi(rk[Mk] = kk, Dk[Mk] = Fk, Mk++)
         },
-        xH = (...SS) => (JX(SS[hX[1]] = hX[0], SS[hX[0]] = hX[4]), (SS[hX[0]] = (mS[SS[hX[2]]] ? gH : HH)[lS[SS[hX[2]]]]) !== hX[11] && SS[hX[0]] !== void hX[2] ? SS[hX[0]] : -hX[0]),
-        NH = (hX[2], Yt[hX[13]])("d2lvNjQz"),
-        qH = (hX[2], Yt[hX[13]])("amtsa2plZndu"),
-        uH = [
-          [(hX[2], Yt[hX[13]])("aW9qZndlODNq"), "2"],
-          [(hX[2], Yt[hX[13]])("a3Bq"), "4"],
-          [(hX[2], Yt[hX[13]])("dXJocmZm"), "5"]
+        lF = (...kk) => (oi(kk[Vi[0]] = Vi[2], kk[Vi[14]] = Vi[12]), (kk[Vi[14]] = (Dk[kk[Vi[1]]] ? XF : IF)[rk[kk[Vi[1]]]]) !== Vi[15] && kk[Vi[14]] !== void Vi[1] ? kk[Vi[14]] : -Vi[2]),
+        aF = (Vi[1], pX[Vi[16]])("d2lvNjQz"),
+        qF = (Vi[1], pX[Vi[16]])("amtsa2plZndu"),
+        LF = [
+          [(Vi[1], pX[Vi[16]])("aW9qZndlODNq"), "2"],
+          [(Vi[1], pX[Vi[16]])("a3Bq"), Vi[213]],
+          [(Vi[1], pX[Vi[16]])("dXJocmZm"), "5"]
         ],
-        fH = [
-          [(hX[2], Yt[hX[13]])(hX[58] + hX[57]), hX[91]],
-          [(hX[2], Yt[hX[13]])(hX[58] + "w="), hX[51]]
+        ZF = [
+          [(Vi[1], pX[Vi[16]])(Vi[215] + Vi[214]), Vi[243]],
+          [(Vi[1], pX[Vi[16]])(Vi[215] + "w="), "o"]
         ],
-        kH = (hX[2], Yt[hX[13]])("eTR5bnM="),
-        aH = (hX[2], Yt[hX[13]])("aHRleWpldA=="),
-        KH = (hX[2], Yt[hX[13]])("c2RmbGpneGxmY2pr"),
-        jH = [
-          [(hX[2], Yt[hX[13]])("a3NhZmR1"), hX[38]],
-          [(hX[2], Yt[hX[13]])("ZGZnYWFzZGFz"), hX[65]],
-          [KH, hX[61]],
-          [(hX[2], Yt[hX[13]])("bGFzZWRraGFz"), hX[13]],
-          [(hX[2], Yt[hX[13]])("cW16ZjhrM24="), hX[20]]
+        jF = (Vi[1], pX[Vi[16]])("eTR5bnM="),
+        eF = (Vi[1], pX[Vi[16]])("aHRleWpldA=="),
+        wF = (Vi[1], pX[Vi[16]])("c2RmbGpneGxmY2pr"),
+        HF = [
+          [(Vi[1], pX[Vi[16]])("a3NhZmR1"), Vi[16]],
+          [(Vi[1], pX[Vi[16]])("ZGZnYWFzZGFz"), Vi[216]],
+          [wF, Vi[219]],
+          [(Vi[1], pX[Vi[16]])("bGFzZWRraGFz"), Vi[217]],
+          [(Vi[1], pX[Vi[16]])("cW16ZjhrM24="), Vi[14]]
         ],
-        GH = [
-          [kH, hX[80]],
-          [aH, hX[59]],
-          [(hX[2], Yt[hX[13]])("bmI3ZnEy"), hX[5]]
+        JF = [
+          [jF, Vi[234]],
+          [eF, Vi[218]],
+          [(Vi[1], pX[Vi[16]])("bmI3ZnEy"), Vi[11]]
         ],
-        CH = (hX[2], Yt[hX[13]])("bGtxM20="),
-        nH = (hX[2], Yt[hX[13]])("bWtxN3" + hX[57]),
-        PH = ["mk:tw", "mk:jf"],
-        QH = ((...SS) => {
-          SS[hX[1]] = hX[2];
+        xF = (Vi[1], pX[Vi[16]])("bGtxM20="),
+        PF = (Vi[1], pX[Vi[16]])("bWtxN3" + Vi[214]),
+        KF = ["mk:tw", "mk:jf"],
+        QF = ((...kk) => {
+          kk[Vi[0]] = Vi[1];
           try {
-            return SS[hX[60]] = hX[4], (SS[hX[60]] = bS[(hX[2], Yt[hX[13]])("V2ViU29ja2V0")]) === hX[11] || SS[hX[60]] === void hX[2] ? void hX[2] : SS[hX[60]][hX[54] + hX[55]]
+            return kk[Vi[200]] = Vi[12], (kk[Vi[200]] = Tk[(Vi[1], pX[Vi[16]])("V2ViU29ja2V0")]) === Vi[15] || kk[Vi[200]] === void Vi[1] ? void Vi[1] : kk[Vi[200]][Vi[210] + Vi[211]]
           } catch {
-            return hX[4]
+            return Vi[12]
           }
         })(),
-        DH = ["send", "close", "addEventListener", "removeEventListener", hX[67] + hX[66] + hX[61]],
-        wH = ["onmessage", "onopen", "onclos" + hX[29], "onerro" + hX[38]];
-      let ZH = hX[8];
-      const JH = () => {
-          const SS = HS();
-          SS === hX[11] || ZH || (ZH = nS((() => {
-            if (QH !== hX[4] && (hX[2], Yt[hX[62]])(SS) !== QH) return hX[10];
-            for (let HS = hX[2]; HS < DH[hX[1]]; HS++)
-              if ((hX[2], Yt[hX[51]])(Yt[hX[63]], SS, [DH[HS]])) return hX[10];
-            for (let HS = hX[2]; HS < wH[hX[1]]; HS++)
-              if (SS[wH[HS]] !== hX[11] && SS[wH[HS]] !== hX[4]) return hX[10];
-            return hX[8]
-          })))
-        },
-        OH = (hX[2], Yt[hX[13]])("RXZlbnQ=");
-      let dH = pH[hX[64]][hX[82]],
-        cH = hX[2];
-      const vH = () => cH++ === hX[7] ? (cH = hX[2], aS(hX[8]) ? pH[hX[25]].CheckFuncHit : hX[2]) : hX[2],
-        EH = (hX[2], Yt[hX[38]])(hX[11]),
-        LH = tS[hX[1]];
-      for (let qS = hX[2]; qS < LH; qS++) {
-        const SS = (hX[2], Yt[hX[51]])(Yt.db, tS, [qS]);
-        EH[qS] = SS >= 99 && SS <= 122 ? SS : hX[2]
+        sF = ["send", "close", "addEventListener", "removeEventListener", Vi[223] + Vi[222] + Vi[219]],
+        VF = ["onmessage", "onopen", "onclos" + Vi[73], "onerro" + Vi[16]];
+      let SF = Vi[33];
+      const oF = (Vi[1], pX[Vi[16]])("RXZlbnQ=");
+      let vF = fF[Vi[221]][Vi[237]],
+        EF = Vi[1];
+      const OF = () => EF++ === Vi[28] ? (EF = Vi[1], jk(Vi[33]) ? fF[Vi[5]].CheckFuncHit : Vi[1]) : Vi[1],
+        nF = (Vi[1], pX[Vi[42]])(Vi[15]),
+        GF = Xk[Vi[0]];
+      for (let ak = Vi[1]; ak < GF; ak++) {
+        const kk = (Vi[1], pX[Vi[207]])(pX.bb, Xk, [ak]);
+        nF[ak] = kk >= Vi[195] && kk <= Vi[190] ? kk : Vi[1]
       }
-      const YH = (...SS) => {
-          return SS[hX[1]] = hX[3], typeof SS[hX[2]] === hX[49] + hX[50] && (hX[2], Yt[hX[51]])(Yt.W, SS[hX[0]], [(HS = SS[hX[2]], (0, Yt.o)(Yt.C, HS, []))]) !== hX[11];
-          var HS
+      const pF = (...kk) => {
+          return kk[Vi[0]] = Vi[3], typeof kk[Vi[1]] === Vi[205] + Vi[206] && (Vi[1], pX[Vi[207]])(pX.R, kk[Vi[2]], [(Fk = kk[Vi[1]], (0, pX.k)(pX.x, Fk, []))]) !== Vi[15];
+          var Fk
         },
-        AH = new RegExp("^function dispatchEvent\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
-        yH = new RegExp("^function now\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
-        VH = [
-          [QX["Dispat" + hX[66] + hX[61]], () => !YH(EventTarget[hX[54] + hX[55]][hX[67] + hX[66] + hX[61]], AH)],
-          [QX.PerformanceNow, () => !YH(performance[hX[68]], yH)],
-          [QX.DateNow, () => !YH(Date[hX[68]], yH)]
+        uF = new RegExp("^function dispatchEvent\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
+        bF = new RegExp("^function now\\(\\) \\{\\s*\\[native code\\]\\s*\\}$", ""),
+        RF = [
+          [Ki["Dispat" + Vi[222] + Vi[219]], () => !pF(EventTarget[Vi[210] + Vi[211]][Vi[223] + Vi[222] + Vi[219]], uF)],
+          [Ki.PerformanceNow, () => !pF(performance[Vi[224]], bF)],
+          [Ki.DateNow, () => !pF(Date[Vi[224]], bF)]
         ],
-        iH = (hX[2], Yt[hX[38]])(hX[11]);
-      let WH = hX[2];
-      const zH = {
-        stackCheck: (...SS) => {
-          JX(SS[hX[1]] = hX[2], SS[hX[70]] = hX[11]);
-          const HS = jX((() => (SS[hX[70]] = kS(hX[10]), SS[hX[70]] !== hX[11])));
-          var gS, tS;
-          return SS[hX[70]] !== hX[11] && KS === hX[11] && (gS = SS[hX[70]][hX[23]], tS = SS[hX[70]][hX[24]], KS = (0, rb.y)(uX(gS, tS))), HS
+        UF = (Vi[1], pX[Vi[42]])(Vi[15]);
+      let CF = Vi[1];
+      const NF = {
+        stackCheck: () => {
+          let kk = Vi[15];
+          const Fk = wi((() => (kk = Zk(Vi[30]), kk !== Vi[15])));
+          var Ik, Xk;
+          return kk !== Vi[15] && ek === Vi[15] && (Ik = kk[Vi[20]], Xk = kk[Vi[21]], ek = (0, MT.r)(qi(Ik, Xk))), Fk
         },
-        [hX[71] + hX[72]]: (...SS) => {
-          SS[hX[1]] = hX[2];
-          const HS = TS();
-          if (HS === hX[3]) return hX[3];
-          if (ZS[NH]) return hX[12];
-          const gS = CX((() => bS[qH] ? hX[17] : hX[2]));
-          return gS !== hX[2] ? gS === hX[17] ? hX[17] : hX[2] : HS === GX ? hX[2] : HS === hX[19] ? hX[19] : (QS(), tS = Function[hX[54] + hX[55]], XS = hX[78], xS = (...SS) => (SS[hX[1]] = hX[0], SS[hX[2]].writable !== hX[10]), jX((() => {
-            const SS = Object.getOwnPropertyDescriptor(tS, XS);
-            return void 0 !== SS && xS(SS)
-          })) ? hX[21] : hX[2]);
-          var tS, XS, xS
+        [Vi[225] + Vi[226]]: (...kk) => {
+          kk[Vi[0]] = Vi[1];
+          const Fk = mk();
+          if (Fk === Vi[3]) return Vi[3];
+          if (zk[aF]) return Vi[4];
+          const Ik = Ji((() => Tk[qF] ? Vi[38] : Vi[1]));
+          return Ik !== Vi[1] ? Ik === Vi[38] ? Vi[38] : Vi[1] : Fk === Hi ? Vi[1] : Fk === Vi[36] ? Vi[36] : (Kk(), Xk = Function[Vi[210] + Vi[211]], ik = Vi[232], yk = (...kk) => (kk[Vi[0]] = Vi[2], kk[Vi[1]].writable !== Vi[30]), wi((() => {
+            const kk = Object.getOwnPropertyDescriptor(Xk, ik);
+            return void 0 !== kk && yk(kk)
+          })) ? Vi[68] : Vi[1]);
+          var Xk, ik, yk
         },
-        indexPassReplaced: pS,
-        [hX[73] + "tSubChanged"]: () => {
-          if (FS === BS || US) return hX[8];
-          const SS = MS();
-          return SS !== BS && SS !== FS
+        indexPassReplaced: fk,
+        [Vi[227] + "tSubChanged"]: (...kk) => {
+          if (kk[Vi[0]] = Vi[1], Ak === dk || Wk) return Vi[33];
+          const Fk = Yk();
+          return Fk !== dk && Fk !== Ak
         },
-        Ku: (...SS) => {
-          JX(SS[hX[1]] = hX[2], SS[-hX[69]] = LH);
-          for (let HS = hX[2]; HS < VH[hX[1]] + WH; HS++) {
-            const gS = HS < VH[hX[1]] ? VH[HS] : iH[HS - VH[hX[1]]];
-            gS[hX[2]] < SS[-hX[69]] && nS(gS[hX[0]]) && (SS[-hX[69]] = gS[hX[2]])
+        eq: (...kk) => {
+          oi(kk[Vi[0]] = Vi[1], kk[Vi[14]] = GF);
+          for (let Fk = Vi[1]; Fk < RF[Vi[0]] + CF; Fk++) {
+            const Ik = Fk < RF[Vi[0]] ? RF[Fk] : UF[Fk - RF[Vi[0]]];
+            Ik[Vi[1]] < kk[Vi[14]] && xk(Ik[Vi[2]]) && (kk[Vi[14]] = Ik[Vi[1]])
           }
-          return SS[-hX[69]] < LH ? EH[SS[-hX[69]]] : hX[2]
+          return kk[Vi[14]] < GF ? nF[kk[Vi[14]]] : Vi[1]
         },
-        Mu: () => oS ? hH.n : 8,
-        [hX[74] + hX[75] + "Subs"]: (...SS) => {
-          SS[hX[1]] = hX[2];
-          const HS = qS[hX[81]].rG[hX[74] + hX[75]];
-          return typeof HS === hX[76] && HS > hX[2] ? HS > hX[77] ? hX[77] : HS : hX[2]
+        Bq: () => hk ? zF[Vi[228]] : Vi[8],
+        [Vi[229] + Vi[230] + "Subs"]: () => {
+          const kk = ak[Vi[5]].mH[Vi[229] + Vi[230]];
+          return typeof kk === Vi[231] && kk > Vi[1] ? kk > Vi[74] ? Vi[74] : kk : Vi[1]
         },
-        ["getCom" + hX[90]]: () => {
-          var SS;
-          eS = hX[2];
-          for (let gS = hX[2]; gS < vS; gS++) XH(cS[gS], hX[10]);
-          for (let gS = hX[2]; gS < uH[hX[1]]; gS++) ZS[uH[gS][hX[2]]] && XH(uH[gS][hX[0]], hX[10]);
-          const HS = CX((() => KX(atob[hX[78]](), IS) ? hX[2] : hX[0]));
-          HS === hX[0] && XH("g", hX[10]), QS();
-          const tS = HS === GX ? GX : CX(((...SS) => {
-            SS[hX[1]] = hX[2];
-            const HS = Object.getOwnPropertyDescriptor(window, "atob");
-            return HS === hX[4] ? GX : HS[hX[79]] !== hX[4] ? hX[0] : hX[2]
+        ["getCom" + Vi[242]]: (...kk) => {
+          oi(kk[Vi[0]] = Vi[1], kk[Vi[22]] = Vi[12], Mk = Vi[1]);
+          for (let Ik = Vi[1]; Ik < nk; Ik++) yF(Ok[Ik], Vi[30]);
+          for (let Ik = Vi[1]; Ik < LF[Vi[0]]; Ik++) zk[LF[Ik][Vi[1]]] && yF(LF[Ik][Vi[2]], Vi[30]);
+          const Fk = Ji((() => ei(atob[Vi[232]](), Lk) ? Vi[1] : Vi[2]));
+          Fk === Vi[2] && yF(Vi[5], Vi[30]), Kk();
+          const Xk = Fk === Hi ? Hi : Ji(((...kk) => {
+            kk[Vi[0]] = Vi[1];
+            const Fk = Object.getOwnPropertyDescriptor(window, "atob");
+            return Fk === Vi[12] ? Hi : Fk[Vi[233]] !== Vi[12] ? Vi[2] : Vi[1]
           }));
-          tS === hX[0] && XH(hX[25], hX[10]);
-          const bS = tS === GX;
-          for (let gS = hX[2]; gS < fH[hX[1]] && !bS; gS++) ZS[fH[gS][hX[2]]] && XH(fH[gS][hX[0]], hX[10]);
-          const XS = eS > vS;
-          let xS = hX[11];
-          vS === hX[2] && (LS > hX[2] ? xS = ES[hX[2]] : yS ? xS = "fp" : XS || (xS = ZS[kH] ? hX[80] : ZS[aH] ? hX[59] : hX[11]));
-          for (let gS = hX[2]; gS < jH[hX[1]] && !bS; gS++) ZS[jH[gS][hX[2]]] && XH(jH[gS][hX[0]], hX[10]);
-          const NS = eS,
-            qS = (hX[2], tX[hX[5]])(),
-            uS = qS !== hX[11] && (hX[2], IH[hX[38]])(qS);
-          uS && !bS && XH(qS, hX[8]), sS && XH("ix", hX[8]), dS && XH("il", hX[8]);
-          for (let gS = hX[2]; gS < LS; gS++) XH(ES[gS], hX[10]);
-          for (let gS = hX[2]; gS < GH[hX[1]]; gS++) ZS[GH[gS][hX[2]]] && XH(GH[gS][hX[0]], hX[10]);
-          ZS[CH] && XH("mk:lk", hX[10]);
-          const kS = ((...SS) => {
-            SS[hX[1]] = hX[0];
-            for (let HS = hX[2]; HS < PH[hX[1]]; HS++)
-              if (SS[hX[2]] === PH[HS]) return PH[HS];
-            return hX[11]
-          })(ZS[nH]);
-          if (kS !== hX[11] && XH(kS, hX[10]), gS !== hX[11] && DS(gS.emitReplaced) === hX[10] && XH("mk:em", hX[10]), ZH && XH("3s", hX[8]), Yt.X && XH("3b", hX[8]), QS(), PS && XH("3d", hX[8]), bS && XH("3g", hX[8]), qS === hX[11] || uS || XH(qS, hX[8]), KS !== hX[11] && XH(KS, hX[8]), CS === hX[11] && gS !== hX[11]) {
-            const SS = DS(gS[hX[71] + "mMeshHitStac" + hX[81]]);
-            typeof SS === hX[32] && (CS = function(SS, HS, gS) {
-              let tS = 0;
-              for (; tS < gS && -1 === xX(SS, HS[tS]);) tS++;
-              return (0, rb.k)(uX(SS, tS < gS ? HS[tS] : null))
-            }(SS, fS, fS[hX[1]] - hX[0]))
+          Xk === Vi[2] && yF(Vi[236], Vi[30]);
+          const Tk = Xk === Hi;
+          for (let Ik = Vi[1]; Ik < ZF[Vi[0]] && !Tk; Ik++) zk[ZF[Ik][Vi[1]]] && yF(ZF[Ik][Vi[2]], Vi[30]);
+          const ik = Mk > nk;
+          kk[Vi[2]] = Vi[15], nk === Vi[1] && (pk > Vi[1] ? kk[Vi[2]] = Gk[Vi[1]] : Rk ? kk[Vi[2]] = "fp" : ik || (kk[Vi[2]] = zk[jF] ? Vi[234] : zk[eF] ? Vi[218] : Vi[15]));
+          for (let Ik = Vi[1]; Ik < HF[Vi[0]] && !Tk; Ik++) zk[HF[Ik][Vi[1]]] && yF(HF[Ik][Vi[2]], Vi[30]);
+          const yk = Mk,
+            lk = (Vi[1], Xi[Vi[22]])(),
+            ak = lk !== Vi[15] && (Vi[1], tF[Vi[218]])(lk);
+          ak && !Tk && yF(lk, Vi[33]), Bk && yF("ix", Vi[33]), Ek && yF("il", Vi[33]);
+          for (let Ik = Vi[1]; Ik < pk; Ik++) yF(Gk[Ik], Vi[30]);
+          for (let Ik = Vi[1]; Ik < JF[Vi[0]]; Ik++) zk[JF[Ik][Vi[1]]] && yF(JF[Ik][Vi[2]], Vi[30]);
+          zk[xF] && yF("mk:lk", Vi[30]);
+          const qk = ((...kk) => {
+            kk[Vi[0]] = Vi[2];
+            for (let Fk = Vi[1]; Fk < KF[Vi[0]]; Fk++)
+              if (kk[Vi[1]] === KF[Fk]) return KF[Fk];
+            return Vi[15]
+          })(zk[PF]);
+          if (qk !== Vi[15] && yF(qk, Vi[30]), Ik !== Vi[15] && Qk(Ik.emitReplaced) === Vi[30] && yF("mk:em", Vi[30]), SF && yF("3s", Vi[33]), pX.V && yF("3b", Vi[33]), Kk(), Pk && yF("3d", Vi[33]), Tk && yF("3g", Vi[33]), lk === Vi[15] || ak || yF(lk, Vi[33]), ek !== Vi[15] && yF(ek, Vi[33]), Jk === Vi[15] && Ik !== Vi[15]) {
+            const kk = Qk(Ik[Vi[225] + "mMeshHitStac" + Vi[207]]);
+            typeof kk === Vi[75] && (Jk = function(kk, Fk, Ik) {
+              let Xk = 0;
+              for (; Xk < Ik && -1 === yi(kk, Fk[Xk]);) Xk++;
+              return (0, MT.j)(qi(kk, Xk < Ik ? Fk[Xk] : null))
+            }(kk, tk, tk[Vi[0]] - Vi[2]))
           }
-          var aS;
-          if (CS !== hX[11] && XH(CS, hX[8]), jS === hX[11] && hH[hX[27]] !== hX[11] && JX((aS = hH[hX[27]], jS = (0, rb.j)(kX(aS).reader)), GS = aX(hH[hX[27]], DS((() => hH[hX[29]] === hX[11] ? hX[11] : (hX[2], Yt.gb)(hH[hX[29]]))))), jS !== hX[11] && XH(jS, hX[8]), GS !== hX[11] && XH(GS, hX[8]), eS === hX[2]) return hX[11];
-          if (xS === hX[11] && mS[hX[2]] && !(hX[2], rb[hX[46]])(lS[hX[2]]))
-            for (let gS = hX[0]; gS < NS; gS++)
-              if (mS[gS] && (hX[2], rb[hX[46]])(lS[gS])) {
-                const SS = lS[gS];
-                for (let HS = gS; HS > hX[2]; HS--) JX(lS[HS] = lS[HS - hX[0]], mS[HS] = mS[HS - hX[0]]);
-                JX(lS[hX[2]] = SS, mS[hX[2]] = hX[10]);
+          var Zk;
+          if (Jk !== Vi[15] && yF(Jk, Vi[33]), wk === Vi[15] && zF[Vi[235]] !== Vi[15] && oi((Zk = zF[Vi[235]], wk = (0, MT.i)(Zi(Zk).reader)), Hk = ji(zF[Vi[235]], Qk((() => zF[Vi[73]] === Vi[15] ? Vi[15] : (Vi[1], pX.db)(zF[Vi[73]]))))), wk !== Vi[15] && yF(wk, Vi[33]), Hk !== Vi[15] && yF(Hk, Vi[33]), Mk === Vi[1]) return Vi[15];
+          if (kk[Vi[2]] === Vi[15] && Dk[Vi[1]] && !(Vi[1], MT[Vi[203]])(rk[Vi[1]]))
+            for (let Ik = Vi[2]; Ik < yk; Ik++)
+              if (Dk[Ik] && (Vi[1], MT[Vi[203]])(rk[Ik])) {
+                const kk = rk[Ik];
+                for (let Fk = Ik; Fk > Vi[1]; Fk--) oi(rk[Fk] = rk[Fk - Vi[2]], Dk[Fk] = Dk[Fk - Vi[2]]);
+                oi(rk[Vi[1]] = kk, Dk[Vi[1]] = Vi[30]);
                 break
-              } let nS = hX[2],
-            wS = xS === hX[11] ? hX[2] : NS;
-          if (wS > hX[2] && qS !== hX[11] && uS && !bS) {
-            for (let SS = wS; SS > hX[2]; SS--) JX(lS[SS] = lS[SS - hX[0]], mS[SS] = mS[SS - hX[0]]);
-            JX(lS[hX[2]] = qS, mS[hX[2]] = hX[8], nS = hX[0], wS++)
+              } if (oi(kk[Vi[73]] = Vi[1], kk[Vi[236]] = kk[Vi[2]] === Vi[15] ? Vi[1] : yk), kk[Vi[236]] > Vi[1] && lk !== Vi[15] && ak && !Tk) {
+            for (let Fk = kk[Vi[236]]; Fk > Vi[1]; Fk--) oi(rk[Fk] = rk[Fk - Vi[2]], Dk[Fk] = Dk[Fk - Vi[2]]);
+            oi(rk[Vi[1]] = lk, Dk[Vi[1]] = Vi[33], kk[Vi[73]] = Vi[2], kk[Vi[236]]++)
           }
-          let hS = hX[2];
-          if (rS++ % hX[3] === hX[0])
-            for (let gS = hX[0]; gS < eS; gS++) xH(gS) < xH(hS) && (hS = gS);
-          const JS = lS[hS];
-          (mS[hS] ? gH : HH)[JS] = SH++;
-          const OS = hS >= nS && hS < wS;
-          if (!mS[hS] || JS === xS || hS === hX[2] && !OS) return JS === hX[61] ? (hX[2], rb.A)(ZS[KH], rb[hX[29]]) : JS;
-          const YS = (SS = xS) !== hX[11] && SS !== void hX[2] ? SS : lS[hX[2]];
-          return YS !== tH && JX(tH = YS, bH = (hX[2], Yt[hX[38]])(hX[11])), bH[JS] ??= (hX[2], rb[hX[13]])(JS, YS)
+          if (kk[Vi[38]] = Vi[1], kF++ % Vi[3] === Vi[2])
+            for (let Ik = Vi[2]; Ik < Mk; Ik++) lF(Ik) < lF(kk[Vi[38]]) && (kk[Vi[38]] = Ik);
+          const jk = rk[kk[Vi[38]]];
+          (Dk[kk[Vi[38]]] ? XF : IF)[jk] = FF++;
+          const xk = kk[Vi[38]] >= kk[Vi[73]] && kk[Vi[38]] < kk[Vi[236]];
+          if (!Dk[kk[Vi[38]]] || jk === kk[Vi[2]] || kk[Vi[38]] === Vi[1] && !xk) return jk === Vi[219] ? (Vi[1], MT[Vi[219]])(zk[wF], MT[Vi[7]]) : jk;
+          const sk = (kk[Vi[22]] = kk[Vi[2]]) !== Vi[15] && kk[Vi[22]] !== void Vi[1] ? kk[Vi[22]] : rk[Vi[1]];
+          return sk !== TF && oi(TF = sk, iF = (Vi[1], pX[Vi[42]])(Vi[15])), iF[jk] ??= (Vi[1], MT[Vi[218]])(jk, sk)
         }
       };
-      let UH = pH[hX[64]][hX[82]];
-      const sH = () => dH !== pH[hX[64]][hX[82]] ? dH : UH;
-      let BH = hX[2],
-        MH = hX[3],
-        FH = hX[2],
-        RH = hX[2];
+      let cF = fF[Vi[221]][Vi[237]];
+      const WF = () => vF !== fF[Vi[221]][Vi[237]] ? vF : cF;
+      let BF = Vi[1],
+        dF = Vi[3],
+        YF = Vi[1],
+        AF = Vi[1];
       return {
-        checks: zH,
-        checkEvent: (...SS) => {
-          SS[hX[1]] = hX[0];
+        checks: NF,
+        checkEvent: (...kk) => {
+          kk[Vi[0]] = Vi[2];
           try {
-            const HS = bS[OH];
-            if (typeof HS === hX[49] + hX[50] && !(SS[hX[2]] instanceof HS) && !(hX[2], Yt.F)(SS[hX[2]])) return dH = pH[hX[64]].NotEvent, hX[2];
-            if (SS[hX[2]].isTrusted === hX[8]) return hX[2];
-            let gS = hX[2];
-            for (const tS in SS[hX[2]]) gS++;
-            return gS < hX[85] ? (dH = pH[hX[64]]["FewPropertie" + hX[65]], hX[2]) : vH()
+            const Fk = Tk[oF];
+            if (typeof Fk === Vi[205] + Vi[206] && !(kk[Vi[1]] instanceof Fk) && !(Vi[1], pX.D)(kk[Vi[1]])) return vF = fF[Vi[221]].NotEvent, Vi[1];
+            if (kk[Vi[1]].isTrusted === Vi[33]) return Vi[1];
+            let Ik = Vi[1];
+            for (const Xk in kk[Vi[1]]) Ik++;
+            return Ik < Vi[70] ? (vF = fF[Vi[221]]["FewPropertie" + Vi[216]], Vi[1]) : OF()
           } catch {}
-          return hX[2]
+          return Vi[1]
         },
         checkPadCall: () => {
           try {
-            return vH()
+            return OF()
           } catch {
-            return hX[2]
+            return Vi[1]
           }
         },
-        usedProp: sH,
-        watchHeld: (SS, HS) => {
-          let gS;
-          const tS = wS((() => {
-            gS = HS()
+        usedProp: WF,
+        watchHeld: (...kk) => {
+          oi(kk[Vi[0]] = Vi[3], kk[Vi[3]] = Vi[12]);
+          const Fk = sk((() => {
+            kk[Vi[3]] = kk[Vi[2]]()
           }));
-          iH[WH++] = [SS, () => !tS || HS() !== gS]
+          UF[CF++] = [kk[Vi[1]], () => !Fk || kk[Vi[2]]() !== kk[Vi[3]]]
         },
-        mf: (...SS) => {
-          SS[hX[1]] = hX[2];
-          const HS = pS();
-          return ((...SS) => {
-            if (JX(SS[hX[1]] = hX[0], SS[-hX[83]] = hX[4], SS[hX[5]] = hX[4]), gS !== hX[11]) {
-              const HS = DS(gS.VI),
-                tS = "v3" === HS ? hX[12] : "v5" === HS ? hX[7] : "v6" === HS ? hX[19] : hX[3];
-              tS !== hX[3] && (MH = tS);
-              const bS = DS(gS["inbuil" + hX[88] + hX[89]]);
-              typeof bS === hX[76] && bS >= hX[2] && bS <= hX[84] && (bS | hX[2]) === bS && (FH = bS), JX(SS[-hX[83]] = DS(gS.reflectApplyHit), SS[hX[5]] = DS(gS.definerHit))
+        Dt: () => {
+          const kk = fk();
+          return ((...kk) => {
+            if (oi(kk[Vi[0]] = Vi[2], kk[Vi[14]] = Vi[12], kk[Vi[3]] = Vi[12]), Ik !== Vi[15]) {
+              const Fk = Qk(Ik.RL),
+                Xk = "v3" === Fk ? Vi[4] : "v5" === Fk ? Vi[28] : "v6" === Fk ? Vi[36] : Vi[3];
+              Xk !== Vi[3] && (dF = Xk);
+              const Tk = Qk(Ik["inbuil" + Vi[240] + Vi[241]]);
+              typeof Tk === Vi[231] && Tk >= Vi[1] && Tk <= Vi[110] && (Tk | Vi[1]) === Tk && (YF = Tk), oi(kk[Vi[14]] = Qk(Ik.reflectApplyHit), kk[Vi[3]] = Qk(Ik.definerHit))
             }
-            const HS = SS[hX[2]] ? 15 : "11" === SS[hX[5]] ? hX[84] : "13" === SS[hX[5]] ? 13 : SS[-hX[83]] !== hX[4] && SS[-hX[83]] !== hX[11] ? hX[3] : "10" === SS[hX[5]] ? hX[85] : "12" === SS[hX[5]] ? 12 : hX[2];
-            HS !== hX[2] && (RH = HS)
-          })(HS), BH++ % 10 === hX[2] && (JH(), jX((() => !KX(bS[XS][hX[78]][hX[78]](), IS))) && (UH = UH === pH[hX[64]][hX[86]] ? pH[hX[64]][hX[86]] : pH[hX[64]].Fr), jX((() => !KX(bS[XS][hX[78]](), IS))) && (UH = pH[hX[64]][hX[86]])), {
-            flags: HS ? pH[hX[25]].Butto : hX[2],
+            const Fk = kk[Vi[1]] ? Vi[57] : "11" === kk[Vi[3]] ? Vi[110] : "13" === kk[Vi[3]] ? Vi[108] : kk[Vi[14]] !== Vi[12] && kk[Vi[14]] !== Vi[15] ? Vi[3] : "10" === kk[Vi[3]] ? Vi[70] : "12" === kk[Vi[3]] ? Vi[62] : Vi[1];
+            Fk !== Vi[1] && (AF = Fk)
+          })(kk), BF++ % 10 === Vi[1] && (((...kk) => {
+            kk[Vi[0]] = Vi[1];
+            const Ik = Fk();
+            Ik === Vi[15] || SF || (SF = xk((() => {
+              if (QF !== Vi[12] && (Vi[1], pX.M)(Ik) !== QF) return Vi[30];
+              for (let kk = Vi[1]; kk < sF[Vi[0]]; kk++)
+                if ((Vi[1], pX[Vi[207]])(pX[Vi[220]], Ik, [sF[kk]])) return Vi[30];
+              for (let kk = Vi[1]; kk < VF[Vi[0]]; kk++)
+                if (Ik[VF[kk]] !== Vi[15] && Ik[VF[kk]] !== Vi[12]) return Vi[30];
+              return Vi[33]
+            })))
+          })(), wi((() => !ei(Tk[ik][Vi[232]][Vi[232]](), Lk))) && (cF = cF === fF[Vi[221]][Vi[238]] ? fF[Vi[221]][Vi[238]] : fF[Vi[221]].Fr), wi((() => !ei(Tk[ik][Vi[232]](), Lk))) && (cF = fF[Vi[221]][Vi[238]])), {
+            flags: kk ? fF[Vi[5]].Butto : Vi[1],
             values: [
-              [pH[hX[87]].PhysicsVersion, MH],
-              [pH[hX[87]]["Inbuil" + hX[88] + hX[89]], FH],
-              [pH[hX[87]]["AltCom" + hX[90]], RH],
-              [pH[hX[87]]["ProbeUsedPro" + hX[91]], sH()]
+              [fF[Vi[239]].PhysicsVersion, dF],
+              [fF[Vi[239]]["Inbuil" + Vi[240] + Vi[241]], YF],
+              [fF[Vi[239]]["AltCom" + Vi[242]], AF],
+              [fF[Vi[239]]["ProbeUsedPro" + Vi[243]], WF()]
             ]
           }
         }
       }
     };
-    const OX = "[bloxd-wasm-client]",
-      dX = "bloxdWasmDownloadFailed",
-      cX = gg.d,
-      vX = "boot",
-      EX = "playSources",
-      LX = "wasmBuild",
-      YX = "bloxd-wasm-joined",
-      AX = "bloxd-wasm-first-view",
-      yX = "bloxd-wasm-playable-legacy",
-      VX = 1048576,
-      iX = 8 * VX,
-      WX = 1006,
-      zX = 1e3,
-      UX = "You lost connection to the server.",
-      pX = "general:lostConnection",
-      sX = 1048576,
-      BX = 5e3,
-      MX = 100,
-      FX = [2e3, 1e4, 3e4],
-      RX = 3e4;
-    let TX = null,
-      oX = null,
-      lX = !1,
-      mX = !1,
-      eX = !1,
-      rX = null,
-      Sx = null,
-      Hx = null,
-      gx = null,
-      tx = null,
-      bx = null,
-      Xx = null;
-    const xx = new class {
-      constructor(SS, HS) {
-        let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now();
-        this.master = SS, this.soundOn = HS, this.now = gS, this.player = null, this.local = [], this.stopped = !1
+    const vi = "[bloxd-wasm-client]",
+      Ei = "bloxdWasmDownloadFailed",
+      Oi = XI.d,
+      ni = "boot",
+      Gi = "playSources",
+      ui = "wasmBuild",
+      bi = "bloxd-wasm-joined",
+      Ri = "bloxd-wasm-first-view",
+      Ui = "bloxd-wasm-playable-legacy",
+      Ci = 1048576,
+      Ni = 8 * Ci,
+      ci = 1006,
+      Wi = 1e3,
+      fi = "You lost connection to the server.",
+      Bi = "general:lostConnection",
+      di = 1048576,
+      Yi = 5e3,
+      Ai = 100,
+      gi = [2e3, 1e4, 3e4],
+      mi = 3e4;
+    let ri = null,
+      Di = null,
+      Mi = !1,
+      ky = !1,
+      Fy = !1,
+      Iy = null,
+      Xy = null,
+      Ty = null,
+      iy = null,
+      yy = null,
+      ly = null,
+      ay = null;
+    const qy = new class {
+      constructor(kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now();
+        this.master = kk, this.soundOn = Fk, this.now = Ik, this.player = null, this.local = [], this.stopped = !1
       }
       get loaded() {
         return null !== this.player
@@ -5344,2621 +5604,2621 @@ export const modules = {
         return this.local.length
       }
       prepare() {
-        var SS;
-        null === (SS = this.player) || void 0 === SS || SS.prepare()
+        var kk;
+        null === (kk = this.player) || void 0 === kk || kk.prepare()
       }
-      preload(SS) {
-        var HS;
-        this.stopped || (null === (HS = this.player) || void 0 === HS || HS.preload(SS))
+      preload(kk) {
+        var Fk;
+        this.stopped || (null === (Fk = this.player) || void 0 === Fk || Fk.preload(kk))
       }
       endSession() {
-        var SS, HS;
-        null === (SS = this.player) || void 0 === SS || SS.cancelPreload(), null === (HS = this.player) || void 0 === HS || HS.freeSheetsAfterGame()
+        var kk, Fk;
+        null === (kk = this.player) || void 0 === kk || kk.cancelPreload(), null === (Fk = this.player) || void 0 === Fk || Fk.freeSheetsAfterGame()
       }
-      load(SS) {
+      load(kk) {
         if (null !== this.player || this.stopped) return;
-        this.player = SS, SS.setMaster(this.master, this.soundOn);
-        const HS = this.now(),
-          gS = this.local;
+        this.player = kk, kk.setMaster(this.master, this.soundOn);
+        const Fk = this.now(),
+          Ik = this.local;
         this.local = [];
-        for (const bS of gS)
-          if (!(bS.stopped || !bS.loop && HS - bS.at >= 300)) try {
-            this.start(bS, SS, HS)
-          } catch (tS) {
-            console.error("[bloxd-wasm-client] a queued sound wouldn't start", tS)
+        for (const Tk of Ik)
+          if (!(Tk.stopped || !Tk.loop && Fk - Tk.at >= 300)) try {
+            this.start(Tk, kk, Fk)
+          } catch (Xk) {
+            console.error("[bloxd-wasm-client] a queued sound wouldn't start", Xk)
           }
       }
-      start(SS, HS, gS) {
+      start(kk, Fk, Ik) {
         const {
-          name: tS,
-          pos: bS,
-          ear: XS,
-          maxHearDist: xS,
-          refDistance: NS,
-          loop: qS,
-          fade: uS
-        } = SS, IS = HS.playGame(tS, iH(SS, gS), bS, XS, xS, NS, qS);
-        if (SS.sound = IS, 1 !== SS.rate && IS.rate(SS.rate), null !== SS.panner && IS.setPannerAttr(SS.panner), null !== SS.moved && IS.setPosition(SS.moved), null !== uS && gS - uS.at < uS.ms) {
-          const HS = VH(this.master);
-          HS > 0 ? IS.fade(0, SS.volume * HS, uS.at + uS.ms - gS) : IS.setRelativeVolume(SS.volume)
+          name: Xk,
+          pos: Tk,
+          ear: ik,
+          maxHearDist: yk,
+          refDistance: lk,
+          loop: ak,
+          fade: qk
+        } = kk, Lk = Fk.playGame(Xk, CF(kk, Ik), Tk, ik, yk, lk, ak);
+        if (kk.sound = Lk, 1 !== kk.rate && Lk.rate(kk.rate), null !== kk.panner && Lk.setPannerAttr(kk.panner), null !== kk.moved && Lk.setPosition(kk.moved), null !== qk && Ik - qk.at < qk.ms) {
+          const Fk = UF(this.master);
+          Fk > 0 ? Lk.fade(0, kk.volume * Fk, qk.at + qk.ms - Ik) : Lk.setRelativeVolume(kk.volume)
         }
       }
-      onAudioEvent(SS, HS, gS, tS) {
-        var bS, XS;
-        return null === (bS = null === (XS = this.player) || void 0 === XS ? void 0 : XS.onAudioEvent(SS, HS, gS, tS)) || void 0 === bS || bS
+      onAudioEvent(kk, Fk, Ik, Xk) {
+        var Tk, ik;
+        return null === (Tk = null === (ik = this.player) || void 0 === ik ? void 0 : ik.onAudioEvent(kk, Fk, Ik, Xk)) || void 0 === Tk || Tk
       }
-      applyListener(SS) {
-        var HS;
-        null === (HS = this.player) || void 0 === HS || HS.applyListener(SS)
+      applyListener(kk) {
+        var Fk;
+        null === (Fk = this.player) || void 0 === Fk || Fk.applyListener(kk)
       }
-      playGame(SS, HS, gS, tS, bS, XS, xS) {
-        if (this.stopped) return yH.e;
-        if (this.player) return this.player.playGame(SS, HS, gS, tS, bS, XS, xS);
-        const NS = this.now();
-        this.local = this.local.filter((SS => !SS.stopped && (SS.loop || NS - SS.at < 300)));
-        const qS = {
-          name: SS,
-          volume: VH(HS),
+      playGame(kk, Fk, Ik, Xk, Tk, ik, yk) {
+        if (this.stopped) return RF.d;
+        if (this.player) return this.player.playGame(kk, Fk, Ik, Xk, Tk, ik, yk);
+        const lk = this.now();
+        this.local = this.local.filter((kk => !kk.stopped && (kk.loop || lk - kk.at < 300)));
+        const ak = {
+          name: kk,
+          volume: UF(Fk),
           fade: null,
-          pos: gS && [gS[0], gS[1], gS[2]],
-          ear: tS && [tS[0], tS[1], tS[2]],
-          maxHearDist: bS,
-          refDistance: XS,
-          loop: xS,
+          pos: Ik && [Ik[0], Ik[1], Ik[2]],
+          ear: Xk && [Xk[0], Xk[1], Xk[2]],
+          maxHearDist: Tk,
+          refDistance: ik,
+          loop: yk,
           rate: 1,
           panner: null,
           moved: null,
-          at: NS,
+          at: lk,
           stopped: !1,
           sound: null
         };
-        this.local.push(qS);
-        const uS = {
+        this.local.push(ak);
+        const qk = {
           stop: () => {
-            var SS;
-            return qS.stopped = !0, null === (SS = qS.sound) || void 0 === SS || SS.stop(), uS
+            var kk;
+            return ak.stopped = !0, null === (kk = ak.sound) || void 0 === kk || kk.stop(), qk
           },
-          fade: (SS, HS, gS) => {
-            if (qS.sound) return qS.sound.fade(SS, HS, gS), uS;
-            const tS = VH(this.master),
-              bS = VH(tS > 0 ? HS / tS : HS > 0 ? qS.volume : 0),
-              XS = this.now(),
-              xS = iH(qS, XS);
-            return qS.volume = bS, qS.fade = gS > 0 && xS !== bS ? {
-              from: xS,
-              at: XS,
-              ms: gS
-            } : null, uS
+          fade: (kk, Fk, Ik) => {
+            if (ak.sound) return ak.sound.fade(kk, Fk, Ik), qk;
+            const Xk = UF(this.master),
+              Tk = UF(Xk > 0 ? Fk / Xk : Fk > 0 ? ak.volume : 0),
+              ik = this.now(),
+              yk = CF(ak, ik);
+            return ak.volume = Tk, ak.fade = Ik > 0 && yk !== Tk ? {
+              from: yk,
+              at: ik,
+              ms: Ik
+            } : null, qk
           },
-          rate: SS => (qS.sound ? qS.sound.rate(SS) : qS.rate = SS, uS),
-          getVolume: () => qS.sound ? qS.sound.getVolume() : qS.volume * VH(this.master),
-          getRelativeVolume: () => qS.sound ? qS.sound.getRelativeVolume() : qS.volume,
-          setRelativeVolume: SS => (qS.sound ? qS.sound.setRelativeVolume(SS) : (qS.volume = VH(SS), qS.fade = null), uS),
-          setPannerAttr: SS => (qS.sound ? qS.sound.setPannerAttr(SS) : qS.panner = {
-            ...SS
-          }, uS),
-          setPosition: SS => (qS.sound ? qS.sound.setPosition(SS) : qS.moved = [SS[0], SS[1], SS[2]], uS)
+          rate: kk => (ak.sound ? ak.sound.rate(kk) : ak.rate = kk, qk),
+          getVolume: () => ak.sound ? ak.sound.getVolume() : ak.volume * UF(this.master),
+          getRelativeVolume: () => ak.sound ? ak.sound.getRelativeVolume() : ak.volume,
+          setRelativeVolume: kk => (ak.sound ? ak.sound.setRelativeVolume(kk) : (ak.volume = UF(kk), ak.fade = null), qk),
+          setPannerAttr: kk => (ak.sound ? ak.sound.setPannerAttr(kk) : ak.panner = {
+            ...kk
+          }, qk),
+          setPosition: kk => (ak.sound ? ak.sound.setPosition(kk) : ak.moved = [kk[0], kk[1], kk[2]], qk)
         };
-        return uS
+        return qk
       }
-      setMaster(SS, HS) {
-        var gS;
-        this.master = SS, this.soundOn = HS, null === (gS = this.player) || void 0 === gS || gS.setMaster(SS, HS)
+      setMaster(kk, Fk) {
+        var Ik;
+        this.master = kk, this.soundOn = Fk, null === (Ik = this.player) || void 0 === Ik || Ik.setMaster(kk, Fk)
       }
       stop() {
-        var SS;
-        this.stopped = !0, null === (SS = this.player) || void 0 === SS || SS.stopAll();
-        for (const HS of this.local) HS.stopped = !0;
+        var kk;
+        this.stopped = !0, null === (kk = this.player) || void 0 === kk || kk.stopAll();
+        for (const Fk of this.local) Fk.stopped = !0;
         this.local = []
       }
-    }((0, ZH.c)(), !0);
-    let Nx = {
+    }((0, SF.b)(), !0);
+    let Ly = {
         wasm: "unknown",
-        client: String(gH.b)
+        client: String(XF.b)
       },
-      qx = null,
-      ux = () => {};
-    const Ix = new Promise((SS => {
-      ux = SS
+      ty = null,
+      Zy = () => {};
+    const jy = new Promise((kk => {
+      Zy = kk
     }));
-    let fx = () => {};
-    const kx = new Promise((SS => {
-      fx = SS
+    let ey = () => {};
+    const wy = new Promise((kk => {
+      ey = kk
     }));
-    let ax, Kx = null,
-      jx = null,
-      Gx = null,
-      Cx = null,
-      nx = null,
-      Px = null,
-      Qx = null,
-      Dx = null,
-      wx = null,
-      hx = null,
-      Zx = null,
-      Jx = null,
-      Ox = null,
-      dx = null,
-      cx = null,
-      vx = null,
-      Ex = null,
-      Lx = null,
-      Yx = null,
-      Ax = !1,
-      yx = null;
-    const Vx = new Set,
-      ix = new Set;
+    let Hy, Jy = null,
+      xy = null,
+      Py = null,
+      Ky = null,
+      Qy = null,
+      sy = null,
+      Vy = null,
+      zy = null,
+      Sy = null,
+      oy = null,
+      vy = null,
+      Ey = null,
+      Oy = null,
+      ny = null,
+      Gy = null,
+      py = null,
+      uy = null,
+      by = null,
+      Ry = null,
+      Uy = !1,
+      Cy = null;
+    const Ny = new Set,
+      cy = new Set;
 
-    function Wx(SS) {
-      if (!Vx.has(SS)) {
-        Vx.add(SS);
-        for (const gS of ix) try {
-          gS(SS)
-        } catch (HS) {
-          console.error(`${OX} a startup listener threw`, HS)
+    function Wy(kk) {
+      if (!Ny.has(kk)) {
+        Ny.add(kk);
+        for (const Ik of cy) try {
+          Ik(kk)
+        } catch (Fk) {
+          console.error(`${vi} a startup listener threw`, Fk)
         }
       }
     }
 
-    function zx(SS) {
-      Ax = !0, SS.isStopped || Wx("texturesIn")
+    function fy(kk) {
+      Uy = !0, kk.isStopped || Wy("texturesIn")
     }
-    let Ux = 1,
-      px = -1 / 0,
-      sx = -1 / 0,
-      Bx = -1 / 0,
-      Mx = !1,
-      Fx = null,
-      Rx = !1,
-      Tx = !1,
-      ox = 0,
-      lx = null,
-      mx = !1;
-    const ex = {
+    let By = 1,
+      dy = -1 / 0,
+      Yy = -1 / 0,
+      Ay = -1 / 0,
+      gy = !1,
+      my = null,
+      hy = !1,
+      ry = !1,
+      Dy = 0,
+      My = null,
+      kl = !1;
+    const Fl = {
       dropped: -1 / 0,
       pause: -1 / 0,
       backlog: -1 / 0
     };
-    let rx = 0,
-      SN = 0,
-      HN = null,
-      gN = null,
-      tN = null,
-      bN = null;
-    const XN = new WeakMap;
-    let xN = null,
-      NN = null,
-      qN = !1,
-      uN = null,
-      IN = null,
-      fN = null,
-      kN = null,
-      aN = null,
-      KN = null,
-      jN = 0,
-      GN = null,
-      CN = null,
-      nN = null,
-      PN = null,
-      QN = -1 / 0,
-      DN = null;
-    const wN = new Set;
-    let hN = !1,
-      ZN = null;
-    const JN = new Map,
-      ON = new Set;
-    let dN = !1;
-    const cN = {
+    let Il = 0,
+      Xl = 0,
+      Tl = null,
+      il = null,
+      yl = null,
+      ll = null;
+    const al = new WeakMap;
+    let ql = null,
+      Ll = null,
+      tl = !1,
+      Zl = null,
+      jl = null,
+      el = null,
+      wl = null,
+      Hl = null,
+      Jl = null,
+      xl = 0,
+      Pl = null,
+      Kl = null,
+      Ql = null,
+      sl = null,
+      Vl = -1 / 0,
+      zl = null;
+    const Sl = new Set;
+    let ol = !1,
+      vl = null;
+    const El = new Map,
+      Ol = new Set;
+    let nl = !1;
+    const Gl = {
       adapter: null,
       boundAtMs: null,
       indirectHangs: null,
       restoresSkipped: null
     };
-    let vN = null,
-      EN = () => [0, 0],
-      LN = () => {},
-      YN = () => {},
-      AN = null,
-      yN = null;
-    const VN = new class {
-      constructor(SS) {
-        this.reached = SS, this.next = 1
+    let pl = null,
+      ul = () => [0, 0],
+      bl = () => {},
+      Rl = () => {},
+      Ul = null,
+      Cl = null;
+    const Nl = new class {
+      constructor(kk) {
+        this.reached = kk, this.next = 1
       }
-      observe(SS) {
-        if (!(SS < this.next)) {
-          for (; this.next <= SS;) this.next *= 2;
-          this.reached(SS)
+      observe(kk) {
+        if (!(kk < this.next)) {
+          for (; this.next <= kk;) this.next *= 2;
+          this.reached(kk)
         }
       }
-    }((SS => {
-      console.warn(`${OX} chunk cancels from the server this session: ${SS}`)
+    }((kk => {
+      console.warn(`${vi} chunk cancels from the server this session: ${kk}`)
     }));
-    let iN = 1,
-      WN = null,
-      zN = null,
-      UN = null,
-      pN = null,
-      sN = null,
-      BN = !1,
-      MN = !1,
-      FN = 0,
-      RN = null,
-      TN = !1,
-      oN = null,
-      lN = null,
-      mN = !1;
-    const eN = new class {
-      constructor(SS) {
-        this.cj = SS, this.lossPending = !1, this.undrawnSinceMs = null, this.lastFrameMs = 0, this.shown = !1
+    let cl = 1,
+      Wl = null,
+      fl = null,
+      Bl = null,
+      dl = null,
+      Yl = null,
+      Al = !1,
+      gl = !1,
+      ml = 0,
+      hl = null,
+      rl = !1,
+      Dl = null,
+      Ml = null,
+      ka = !1;
+    const Fa = new class {
+      constructor(kk) {
+        this.GL = kk, this.lossPending = !1, this.undrawnSinceMs = null, this.lastFrameMs = 0, this.shown = !1
       }
       deviceLost() {
         this.lossPending = !0
       }
-      frame(SS, HS, gS) {
-        (0, cH.c)(SS) && (this.lossPending = !1);
-        const tS = gS - this.lastFrameMs;
-        this.lastFrameMs = gS, this.lossPending && HS && (0, cH.h)(SS) ? (null === this.undrawnSinceMs || tS > 1e3) && (this.undrawnSinceMs = gS) : this.undrawnSinceMs = null, this.show(null !== this.undrawnSinceMs && gS - this.undrawnSinceMs >= 2e3)
+      frame(kk, Fk, Ik) {
+        (0, OF.d)(kk) && (this.lossPending = !1);
+        const Xk = Ik - this.lastFrameMs;
+        this.lastFrameMs = Ik, this.lossPending && Fk && (0, OF.f)(kk) ? (null === this.undrawnSinceMs || Xk > 1e3) && (this.undrawnSinceMs = Ik) : this.undrawnSinceMs = null, this.show(null !== this.undrawnSinceMs && Ik - this.undrawnSinceMs >= 2e3)
       }
       stop() {
         this.lossPending = !1, this.undrawnSinceMs = null, this.show(!1)
       }
-      show(SS) {
-        SS !== this.shown && (this.shown = SS, this.cj(SS))
+      show(kk) {
+        kk !== this.shown && (this.shown = kk, this.GL(kk))
       }
-    }((SS => {
-      qS.k.cj(KS.e, SS)
+    }((kk => {
+      ak.g.GL(ek.e, kk)
     }));
-    let rN = !1,
-      Sq = !0,
-      Hq = null,
-      gq = !1,
-      tq = !1,
-      bq = !1;
+    let Ia = !1,
+      Xa = !0,
+      Ta = null,
+      ia = !1,
+      ya = !1,
+      la = !1;
 
-    function Xq() {
-      return Hx ??= Promise.all([gS.e(198), gS.e(142), gS.e(59)]).then((() => gS(50984))).then((SS => (Sx = SS, Object.assign(globalThis, {
-        bloxdPreviewPage: SS.pagePreviews()
-      }), SS)), (SS => {
-        throw Hx = null, SS
-      })), Hx
+    function aa() {
+      return Ty ??= Promise.all([Ik.e(198), Ik.e(142), Ik.e(59)]).then((() => Ik(50939))).then((kk => (Xy = kk, Object.assign(globalThis, {
+        bloxdPreviewPage: kk.pagePreviews()
+      }), kk)), (kk => {
+        throw Ty = null, kk
+      })), Ty
     }
 
-    function xq() {
-      return rX ??= gS.e(57).then((() => gS(51e3))).catch((SS => {
-        throw rX = null, new hS.c(SS)
-      })), rX
+    function qa() {
+      return Iy ??= Ik.e(57).then((() => Ik(50964))).catch((kk => {
+        throw Iy = null, new Vk.e(kk)
+      })), Iy
     }
-    class Nq {
+    class La {
       constructor() {
         this.host = null
       }
-      open(SS) {
-        return null !== this.host ? SS(this.host) : Xq().then((HS => (this.host ??= new HS.WasmPreviewHost(HS.pagePreviews()), SS(this.host))))
+      open(kk) {
+        return null !== this.host ? kk(this.host) : aa().then((Fk => (this.host ??= new Fk.WasmPreviewHost(Fk.pagePreviews()), kk(this.host))))
       }
-      openMob(SS) {
-        return this.open((HS => HS.openMob(SS)))
+      openMob(kk) {
+        return this.open((Fk => Fk.openMob(kk)))
       }
-      openPet(SS) {
-        return this.open((HS => HS.openPet(SS)))
+      openPet(kk) {
+        return this.open((Fk => Fk.openPet(kk)))
       }
-      openMobLineup(SS) {
-        return this.open((HS => HS.openMobLineup(SS)))
+      openMobLineup(kk) {
+        return this.open((Fk => Fk.openMobLineup(kk)))
       }
-      openCharacter(SS, HS) {
-        return this.open((gS => gS.openCharacter(SS, HS)))
+      openCharacter(kk, Fk) {
+        return this.open((Ik => Ik.openCharacter(kk, Fk)))
       }
     }
 
-    function qq() {
-      eX || (eX = !0, qb.i.setHost(new Nq), (0, Og.l)(), bb.d.setFollower(Iu), Object.assign(globalThis, {
-        bloxdPreviews: qb.i
+    function ta() {
+      Fy || (Fy = !0, aT.h.setHost(new La), (0, vI.k)(), TT.f.setFollower(jq), Object.assign(globalThis, {
+        bloxdPreviews: aT.h
       }))
     }
 
-    function uq() {
-      Xq().then((SS => {
-        SS.pagePreviews().prefetch()
+    function Za() {
+      aa().then((kk => {
+        kk.pagePreviews().prefetch()
       }), (() => {}))
     }
 
-    function Iq() {
-      let SS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      if (mX) return;
-      mX = !0, rN = "play" === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "shell"), Sq = !rN, console.info(`${OX} starting`), lX || (lX = !0, (0, KS.Q)(new LH(cq, iq)), (0, kS.n)(new YH), (0, KS.M)(new AH), (0, KS.C)()), rN && qS.k.subscribe("appManagerUpdated|gameState", dq), qq(), (0, wg.setCrashScreen)((SS => {
+    function ja() {
+      let kk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      if (ky) return;
+      ky = !0, Ia = "play" === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "shell"), Xa = !Ia, console.info(`${vi} starting`), Mi || (Mi = !0, (0, ek.O)(new pF(Ga, ca)), (0, Zk.q)(new uF), (0, ek.N)(new bF), (0, ek.E)()), Ia && ak.g.subscribe("appManagerUpdated|gameState", na), ta(), (0, VI.setCrashScreen)((kk => {
         let {
-          text: HS,
-          reload: gS
-        } = SS;
-        ! function(SS, HS) {
-          var gS, tS;
-          if (gq) return;
-          gq = !0, (0, cg.ab)(), null === (gS = DN) || void 0 === gS || gS.abort(), DN = null, Xb.b.release();
-          const bS = rN ? null !== (tS = SS.cancel) && void 0 !== tS ? tS : "general:back" : null;
-          Jt({
-            ...SS,
-            cancel: bS
-          }).then((SS => {
-            SS && HS && tq ? ((0, aH.u)("reloadOntoJs"), (0, MS.h)(aH.E)) : SS && HS ? (0, MS.k)() : rN && (0, MS.e)("/")
+          text: Fk,
+          reload: Ik
+        } = kk;
+        ! function(kk, Fk) {
+          var Ik, Xk;
+          if (ia) return;
+          ia = !0, (0, OI.S)(), null === (Ik = zl) || void 0 === Ik || Ik.abort(), zl = null, iT.b.release();
+          const Tk = Ia ? null !== (Xk = kk.cancel) && void 0 !== Xk ? Xk : "general:back" : null;
+          SX({
+            ...kk,
+            cancel: Tk
+          }).then((kk => {
+            kk && Fk && ya ? ((0, eF.u)("reloadOntoJs"), (0, Yk.e)(eF.y)) : kk && Fk ? (0, Yk.i)() : Ia && (0, Yk.d)("/")
           }))
-        }(HS, gS)
-      })), (0, Tt.i)(), (0, hH.l)();
-      let HS = null;
+        }(Fk, Ik)
+      })), (0, gX.m)(), (0, zF.l)();
+      let Fk = null;
       try {
-        HS = wX("qd0fzongj2", (() => {
-          var SS, HS;
-          return null !== (SS = null === (HS = Kx) || void 0 === HS ? void 0 : HS.ws) && void 0 !== SS ? SS : null
-        }), SS, "gyshxeimfd")
-      } catch (bS) {
-        console.error(`${OX} probes`, bS)
+        Fk = si("fw2oddwvwjo", (() => {
+          var kk, Fk;
+          return null !== (kk = null === (Fk = Jy) || void 0 === Fk ? void 0 : Fk.ws) && void 0 !== kk ? kk : null
+        }), kk, "gyshxeimfd")
+      } catch (Tk) {
+        console.error(`${vi} probes`, Tk)
       }
-      const tS = function() {
-        const SS = (0, vt.o)(),
-          HS = (0, vt.j)();
-        let gS = !1;
-        return tS => {
-          SS && !gS && (gS = !0, (0, wg.reportStaleBuildReload)(SS, HS, tS))
+      const Xk = function() {
+        const kk = (0, OX.n)(),
+          Fk = (0, OX.j)();
+        let Ik = !1;
+        return Xk => {
+          kk && !Ik && (Ik = !0, (0, VI.reportStaleBuildReload)(kk, Fk, Xk))
         }
       }();
-      ku(), rN || function() {
-        const SS = function(SS) {
-          var HS;
-          const gS = new URLSearchParams(SS),
-            tS = gS.get("game");
-          return tS ? {
-            game: tS,
-            lobby: null !== (HS = gS.get("lobby")) && void 0 !== HS ? HS : null
+      wq(), Ia || function() {
+        const kk = function(kk) {
+          var Fk;
+          const Ik = new URLSearchParams(kk),
+            Xk = Ik.get("game");
+          return Xk ? {
+            game: Xk,
+            lobby: null !== (Fk = Ik.get("lobby")) && void 0 !== Fk ? Fk : null
           } : null
         }(window.location.search);
-        if (SS) return (0, tH.m)(SS.game) && ku().request(), void aq(SS.game, SS.lobby);
-        const HS = new URLSearchParams(window.location.search).get("ws");
-        if (!HS) return;
-        Ix.then((SS => {
-          SS && async function(SS, HS) {
+        if (kk) return (0, TF.j)(kk.game) && wq().request(), void Ha(kk.game, kk.lobby);
+        const Fk = new URLSearchParams(window.location.search).get("ws");
+        if (!Fk) return;
+        jy.then((kk => {
+          kk && async function(kk, Fk) {
             try {
-              await (0, hS.i)(SS), uN = sq(new WebSocket(HS)), null !== uN && Xb.b.setGame(null), fq()
-            } catch (bS) {
-              console.error(`${OX} ?ws=${HS} did not attach`, bS)
+              await (0, Vk.n)(kk), Zl = Ya(new WebSocket(Fk)), null !== Zl && iT.b.setGame(null), ea()
+            } catch (Tk) {
+              console.error(`${vi} ?ws=${Fk} did not attach`, Tk)
             }
-          }(SS, HS)
+          }(kk, Fk)
         }))
-      }(), async function(SS) {
-        var HS, tS, XS, xS, NS, uS;
-        if ("undefined" === typeof WebAssembly) return bu("noWebAssembly", "This browser has no WebAssembly"), null;
-        const IS = await (0, Kb.P)();
-        if ((0, wg.setCrashBackend)((0, gg.m)(IS) ? "unsupported" : null !== (HS = null === IS || void 0 === IS ? void 0 : IS.backend) && void 0 !== HS ? HS : "none"), (0, gg.m)(IS)) return bu("browser", `No WebGPU or WebGL2, and WebGL1 lacks ${IS.missing.join(", ")}`, {
-          missing: IS.missing.join(",")
+      }(), async function(kk) {
+        var Fk, Xk, ik, yk, lk, qk;
+        if ("undefined" === typeof WebAssembly) return lq("noWebAssembly", "This browser has no WebAssembly"), null;
+        const Lk = await (0, eT.Q)();
+        if ((0, VI.setCrashBackend)((0, XI.h)(Lk) ? "unsupported" : null !== (Fk = null === Lk || void 0 === Lk ? void 0 : Lk.backend) && void 0 !== Fk ? Fk : "none"), (0, XI.h)(Lk)) return lq("browser", `No WebGPU or WebGL2, and WebGL1 lacks ${Lk.missing.join(", ")}`, {
+          missing: Lk.missing.join(",")
         }), null;
-        if ((0, Ub.q)("render")) try {
+        if ((0, cT.o)("render")) try {
           const {
-            startRenderDebug: SS
-          } = await Promise.all([gS.e(77), gS.e(48)]).then((() => gS(4803)));
-          SS(IS)
-        } catch (ZH) {
-          console.warn("The render debug topic didn't load", ZH)
+            startRenderDebug: kk
+          } = await Promise.all([Ik.e(77), Ik.e(48)]).then((() => Ik(4676)));
+          kk(Lk)
+        } catch (SF) {
+          console.warn("The render debug topic didn't load", SF)
         }
-        if ((0, Ub.q)("renderlite")) try {
+        if ((0, cT.o)("renderlite")) try {
           const {
-            startRenderLite: SS
-          } = await Promise.all([gS.e(269), gS.e(49)]).then((() => gS(51012)));
-          UN = SS(IS)
-        } catch (ZH) {
-          console.warn("The renderlite debug topic didn't load", ZH)
+            startRenderLite: kk
+          } = await Promise.all([Ik.e(269), Ik.e(49)]).then((() => Ik(50974)));
+          Bl = kk(Lk)
+        } catch (SF) {
+          console.warn("The renderlite debug topic didn't load", SF)
         }
-        if ((0, Ub.q)("renderprobe")) try {
+        if ((0, cT.o)("renderprobe")) try {
           const {
-            startRenderProbe: SS
-          } = await gS.e(50).then((() => gS(51018)));
-          SS(IS)
-        } catch (ZH) {
-          console.warn("The renderprobe debug topic didn't load", ZH)
+            startRenderProbe: kk
+          } = await Ik.e(50).then((() => Ik(50977)));
+          kk(Lk)
+        } catch (SF) {
+          console.warn("The renderprobe debug topic didn't load", SF)
         }
-        let fS = null;
-        if (null !== IS && Xu()) {
-          const SS = (0, Ot.f)(IS);
-          null === SS || "webgl" !== IS.backend && !(0, KH.o)(SS) || (0, jH.n)(SS, wg.reportGpuWasmPopulation), null !== SS && (0, KH.l)(SS), fS = (0, Ot.b)(IS, SS)
+        let tk = null;
+        if (null !== Lk && aq()) {
+          const kk = (0, oX.f)(Lk);
+          null === kk || "webgl" !== Lk.backend && !(0, wF.x)(kk) || (0, HF.m)(kk, VI.reportGpuWasmPopulation), null !== kk && (0, wF.p)(kk), tk = (0, oX.c)(Lk, kk)
         }
-        if (null !== IS && null !== fS) return (0, wg.reportGpuFallback)(fS, IS.backend), xu(`the wasm client's renderer plays this GPU (${fS}) on ${IS.backend} worse than the JS client`, "gpu"), null;
-        const kS = null !== (tS = null === IS || void 0 === IS ? void 0 : IS.backend) && void 0 !== tS ? tS : null;
-        cN.adapter = null !== (XS = null === IS || void 0 === IS ? void 0 : IS.adapter) && void 0 !== XS ? XS : null, cN.boundAtMs = null, cN.indirectHangs = null, cN.restoresSkipped = null;
-        const aS = !(0, gg.Z)();
-        null !== IS && "none" !== IS.reason && console.info(`${OX} drawing with ${IS.backend}: ${IS.reason}`);
-        const KS = (0, Kb.B)();
-        fx(!0), (0, hS.t)((SS => {
+        if (null !== Lk && null !== tk) return (0, VI.reportGpuFallback)(tk, Lk.backend), qq(`the wasm client's renderer plays this GPU (${tk}) on ${Lk.backend} worse than the JS client`, "gpu"), null;
+        const Zk = null !== (Xk = null === Lk || void 0 === Lk ? void 0 : Lk.backend) && void 0 !== Xk ? Xk : null;
+        Gl.adapter = null !== (ik = null === Lk || void 0 === Lk ? void 0 : Lk.adapter) && void 0 !== ik ? ik : null, Gl.boundAtMs = null, Gl.indirectHangs = null, Gl.restoresSkipped = null;
+        const jk = !(0, XI.P)();
+        null !== Lk && "none" !== Lk.reason && console.info(`${vi} drawing with ${Lk.backend}: ${Lk.reason}`);
+        const ek = (0, eT.F)();
+        ey(!0), (0, Vk.A)((kk => {
           try {
-            null !== kS && (AN = SS.startSkyFeed, qu(), function(SS) {
-              var HS, gS;
-              EN = SS.rasterText, fN = SS.setTextLocalPlayer, SS.setTextLocalPlayer(null !== (HS = null === (gS = IN) || void 0 === gS ? void 0 : gS.info.playerDbId) && void 0 !== HS ? HS : null), LN = SS.drainTextRerasters, YN = SS.loadTextIcons, SS.warmText((() => BN)), SS.textChanged(), BN && setTimeout(YN, 0)
-            }(SS), yN = SS.startShellAnalytics, nu())
+            null !== Zk && (Ul = kk.startSkyFeed, tq(), function(kk) {
+              var Fk, Ik;
+              ul = kk.rasterText, el = kk.setTextLocalPlayer, kk.setTextLocalPlayer(null !== (Fk = null === (Ik = jl) || void 0 === Ik ? void 0 : Ik.info.playerDbId) && void 0 !== Fk ? Fk : null), bl = kk.drainTextRerasters, Rl = kk.loadTextIcons, kk.warmText((() => Al)), kk.textChanged(), Al && setTimeout(Rl, 0)
+            }(kk), Cl = kk.startShellAnalytics, Qq())
           } finally {
-            bq || (pN = SS.followMenuPrefs({
-              setSoundPrefs: zq,
-              setEnvPrefs: Uq,
-              setUiPrefs: Wq,
-              setLookPrefs: pq
+            la || (dl = kk.followMenuPrefs({
+              setSoundPrefs: fa,
+              setEnvPrefs: Ba,
+              setUiPrefs: Wa,
+              setLookPrefs: da
             }))
           }
-        })), (0, hS.k)(xx).catch((SS => {
-          console.warn(`${OX} the game code did not load: a join asks again`, SS)
+        })), (0, Vk.r)(qy).catch((kk => {
+          console.warn(`${vi} the game code did not load: a join asks again`, kk)
         }));
-        const jS = (0, Kb.n)(IS);
-        let GS, CS;
-        jS.catch((() => {})), "loading" === (0, NH.F)() && vb();
+        const wk = (0, eT.l)(Lk);
+        let Hk, Jk;
+        wk.catch((() => {})), "loading" === (0, aF.w)() && OT();
         try {
-          GS = function(SS) {
-            const HS = null !== SS && void 0 !== SS ? SS : document.createElement("canvas");
-            HS.id = "wasm-game-canvas", (0, Db.j)();
-            const gS = (0, EH.e)(),
-              tS = (0, EH.g)(gS);
-            HS.style.cssText = "position:absolute;top:0;left:0;display:block;touch-action:none;outline:none;background:#000", (0, Qb.d)(HS, tS), (0, EH.b)(HS, gS), HS.width = tS.bufferWidth, HS.height = tS.bufferHeight;
-            const bS = document.createElement("div");
-            return bS.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden", bS.append(HS), vq(bS, Sq), Hq = bS, document.body.append(bS), HS
-          }(null === kS ? null : await (await Xq()).pagePreviews().beginSession())
-        } catch (bS) {
-          return await gI({
-            site: LX,
-            error: bS
+          Hk = function(kk) {
+            const Fk = null !== kk && void 0 !== kk ? kk : document.createElement("canvas");
+            Fk.id = "wasm-game-canvas", (0, QT.k)();
+            const Ik = (0, GF.d)(),
+              Xk = (0, GF.e)(Ik);
+            Fk.style.cssText = "position:absolute;top:0;left:0;display:block;touch-action:none;outline:none;background:#000", (0, KT.f)(Fk, Xk), (0, GF.c)(Fk, Ik), Fk.width = Xk.bufferWidth, Fk.height = Xk.bufferHeight;
+            const Tk = document.createElement("div");
+            return Tk.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;overflow:hidden", Tk.append(Fk), pa(Tk, Xa), Ta = Tk, document.body.append(Tk), Fk
+          }(null === Zk ? null : await (await aa()).pagePreviews().beginSession())
+        } catch (Tk) {
+          return await iL({
+            site: ui,
+            error: Tk
           }, (() => {
-            (0, wg.showUnsupported)((0, wt.n)("fetch"), ob.e.fetch, `the previews did not load: ${String(bS)}`)
+            (0, VI.showUnsupported)((0, sX.l)("fetch"), mT.g.fetch, `the previews did not load: ${String(Tk)}`)
           })), null
         }
-        vb();
+        OT();
         try {
-          CS = await jS
-        } catch (bS) {
-          return await gI({
-            site: LX,
-            error: bS
+          Jk = await wk
+        } catch (Tk) {
+          return await iL({
+            site: ui,
+            error: Tk
           }, (() => {
-            (0, wg.showUnsupported)((0, wt.n)("fetch"), ob.e.fetch, `the ${null!==kS&&void 0!==kS?kS:"client"} build did not load: ${String(bS)}`)
+            (0, VI.showUnsupported)((0, sX.l)("fetch"), mT.g.fetch, `the ${null!==Zk&&void 0!==Zk?Zk:"client"} build did not load: ${String(Tk)}`)
           })), null
         }
-        const nS = (0, Kb.g)(),
-          PS = !nS && !0 !== Lg.h.getItem(dX),
-          QS = !nS && "loading" === (0, NH.F)();
-        await (0, jb.e)(CS, {
-          reloadFailedDownload: PS
-        }), QS && !(0, NH.U)() && await (0, jb.e)(CS, {
-          reloadFailedDownload: PS
+        const xk = (0, eT.f)(),
+          Pk = !xk && !0 !== pI.m.getItem(Ei),
+          Kk = !xk && "loading" === (0, aF.w)();
+        await (0, wT.b)(Jk, {
+          reloadFailedDownload: Pk
+        }), Kk && !(0, aF.K)() && await (0, wT.b)(Jk, {
+          reloadFailedDownload: Pk
         });
-        Ob = performance.now();
-        const DS = Nx;
-        if (!(0, NH.U)()) {
-          (0, NH.Q)() && Lg.h.setItem(dX, !0);
-          const SS = (0, NH.t)();
-          if ("call" === SS) Uu({
-            site: tg.s,
-            error: (0, NH.r)(),
+        oT = performance.now();
+        const Qk = Ly;
+        if (!(0, aF.K)()) {
+          (0, aF.I)() && pI.m.setItem(Ei, !0);
+          const kk = (0, aF.n)();
+          if ("call" === kk) Bq({
+            site: TI.q,
+            error: (0, aF.m)(),
             header: null
-          }, DS);
+          }, Qk);
           else {
-            const HS = null !== SS && void 0 !== SS ? SS : "instantiate",
-              gS = () => {
-                (0, wg.showUnsupported)((0, wt.n)(HS), ob.e[HS], (0, NH.l)())
+            const Fk = null !== kk && void 0 !== kk ? kk : "instantiate",
+              Ik = () => {
+                (0, VI.showUnsupported)((0, sX.l)(Fk), mT.g[Fk], (0, aF.k)())
               };
-            if ("compile" !== SS && "instantiate" !== SS || !Xu())
-              if ("fetch" === HS) {
-                const SS = [CS.url().href, fH.h.url().href];
-                await gI({
-                  site: LX,
-                  error: (0, NH.l)(),
-                  urls: SS
-                }, gS)
-              } else gS();
+            if ("compile" !== kk && "instantiate" !== kk || !aq())
+              if ("fetch" === Fk) {
+                const kk = [Jk.url().href, ZF.f.url().href];
+                await iL({
+                  site: ui,
+                  error: (0, aF.k)(),
+                  urls: kk
+                }, Ik)
+              } else Ik();
             else {
-              const HS = (0, NH.l)(),
-                gS = (0, MH.e)((0, NH.r)());
-              (0, wg.reportCountedLoadFallback)((0, wt.n)(SS), ob.e[SS], HS, gS), xu(`the wasm client did not ${SS} here (${HS})`, gS ? "oom" : null)
+              const Fk = (0, aF.k)(),
+                Ik = (0, YF.b)((0, aF.m)());
+              (0, VI.reportCountedLoadFallback)((0, sX.l)(kk), mT.g[kk], Fk, Ik), qq(`the wasm client did not ${kk} here (${Fk})`, Ik ? "oom" : null)
             }
           }
           return null
-        }(0, qH.Q)(CS.url()) && (0, wg.reportUnstreamedCoreLoad)();
-        const ZS = (0, NH.G)();
-        let JS, OS = DS;
+        }(0, qF.R)(Jk.url()) && (0, VI.reportUnstreamedCoreLoad)();
+        const zk = (0, aF.y)();
+        let Sk, vk = Qk;
         try {
-          OS = {
-            ...DS,
-            wasm: ZS.Qf()
+          vk = {
+            ...Qk,
+            wasm: zk.Qt()
           };
           const {
-            vG: SS
-          } = CS.bindings, HS = SS.sgS();
-          if (HS !== pH.z) return Uu({
-            site: tg.c,
-            error: `core ABI ${HS}, page ABI ${pH.z}`,
+            vH: kk
+          } = Jk.bindings, Fk = kk.DIk();
+          if (Fk !== fF.A) return Bq({
+            site: TI.d,
+            error: `core ABI ${Fk}, page ABI ${fF.A}`,
             header: null
-          }, OS), null;
-          const [gS, tS] = (0, pH.se)();
-          JS = new SS(gS, tS)
-        } catch (bS) {
-          return Uu({
-            site: tg.c,
-            error: bS,
+          }, vk), null;
+          const [Ik, Xk] = (0, fF.le)();
+          Sk = new kk(Ik, Xk)
+        } catch (Tk) {
+          return Bq({
+            site: TI.d,
+            error: Tk,
             header: null
-          }, OS), null
+          }, vk), null
         }
-        Nx = OS, qx = CS.bindings;
-        const dS = new tg.i(JS, NH.B, {
-          onCrash: SS => {
-            var HS;
-            null === (HS = UN) || void 0 === HS || HS.crashed(SS),
-              function(SS, HS, gS, tS) {
-                if ("webgpu" !== HS || (0, Kb.c)()) return !1;
-                const bS = function(SS) {
-                  if (SS.site === tg.e && (0, gg.p)(SS.error)) return "frames_refused";
-                  return SS.site === cX && (0, gg.t)(SS.error) ? "start_failed" : null
-                }(SS);
-                if (null === bS) return !1;
-                if (null !== (0, gg.S)(bS, tS)) return (0, wg.countRenderLost)(bS, SS.error, cN), !1;
-                return OH.F.reloaded(null, !1), (0, wg.reportRenderReload)("webgpu", "start_failed" === bS ? 0 : 1, gS, {
-                  cause: bS,
-                  error: SS.error,
-                  context: cN,
-                  session: Mu(null)
-                }), hu(), !0
-              }(SS, kS, OS, aS) || Uu(SS, OS)
+        Ly = vk, ty = Jk.bindings;
+        const Ek = new TI.i(Sk, aF.r, {
+          onCrash: kk => {
+            var Fk;
+            null === (Fk = Bl) || void 0 === Fk || Fk.crashed(kk),
+              function(kk, Fk, Ik, Xk) {
+                if ("webgpu" !== Fk || (0, eT.e)()) return !1;
+                const Tk = function(kk) {
+                  if (kk.site === TI.f && (0, XI.j)(kk.error)) return "frames_refused";
+                  return kk.site === Oi && (0, XI.l)(kk.error) ? "start_failed" : null
+                }(kk);
+                if (null === Tk) return !1;
+                if (null !== (0, XI.M)(Tk, Xk)) return (0, VI.countRenderLost)(Tk, kk.error, Gl), !1;
+                return vF.F.reloaded(null, !1), (0, VI.reportRenderReload)("webgpu", "start_failed" === Tk ? 0 : 1, Ik, {
+                  cause: Tk,
+                  error: kk.error,
+                  context: Gl,
+                  session: gq(null)
+                }), oq(), !0
+              }(kk, Zk, vk, jk) || Bq(kk, vk)
           },
-          onNetEvent: wu,
-          onReconnectGrace: Hu,
-          onJoinPreloadEnded: Su,
-          onCoreErrors: (SS, HS) => {
-            var gS, tS;
-            SS.some((SS => {
+          onNetEvent: Sq,
+          onReconnectGrace: Tq,
+          onJoinPreloadEnded: Xq,
+          onCoreErrors: (kk, Fk) => {
+            var Ik, Xk;
+            kk.some((kk => {
               let {
-                code: HS
-              } = SS;
-              return HS === pH.K.RenderDeviceLost
-            })) && ((0, Kb.y)(), eN.deviceLost(), "webgpu" === kS && OH.F.lost()), null === (gS = UN) || void 0 === gS || gS.coreErrors(SS);
-            const bS = () => {
-              (0, wg.reportCoreErrors)(SS, HS, OS, ((SS, HS) => {
-                var gS;
-                return SS === pH.K.EnvUnknownSky ? (0, wg.unknownSkyWords)(GH.d.get("skyBox")) : null === (gS = vN) || void 0 === gS ? void 0 : gS.BgS(SS, HS)
+                code: Fk
+              } = kk;
+              return Fk === fF.N.RenderDeviceLost
+            })) && ((0, eT.z)(), Fa.deviceLost(), "webgpu" === Zk && vF.F.lost()), null === (Ik = Bl) || void 0 === Ik || Ik.coreErrors(kk);
+            const Tk = () => {
+              (0, VI.reportCoreErrors)(kk, Fk, vk, ((kk, Fk) => {
+                var Ik;
+                return kk === fF.N.EnvUnknownSky ? (0, VI.unknownSkyWords)(JF.e.get("skyBox")) : null === (Ik = pl) || void 0 === Ik ? void 0 : Ik.MIk(kk, Fk)
               }))
             };
-            SS.some((SS => {
+            kk.some((kk => {
               let {
-                code: HS
-              } = SS;
-              return HS === pH.K.EnvUnknownSky
-            })) ? queueMicrotask(bS) : bS(), null === (tS = yx) || void 0 === tS || tS.coreErrors(SS)
+                code: Fk
+              } = kk;
+              return Fk === fF.N.EnvUnknownSky
+            })) ? queueMicrotask(Tk) : Tk(), null === (Xk = Cy) || void 0 === Xk || Xk.coreErrors(kk)
           },
-          onRenderReload: (SS, HS, gS) => {
-            ! function(SS, HS, gS, tS, bS, XS) {
-              var xS;
-              if ((0, Kb.c)()) return;
-              const NS = HS === pH.id.WEBGPU,
-                qS = tS === pH.id.PIPELINE_FAILED ? "pipeline_failed" : "lost",
-                uS = tS === pH.id.RESTORE_LOST,
-                IS = NS && (0, OH.t)(cN.adapter, gS, "lost" === qS, uS),
-                fS = (0, gg.W)(vN);
-              null === (xS = UN) || void 0 === xS || xS.reload(NS, gS, qS, null === fS || void 0 === fS ? void 0 : fS.message);
-              const kS = NS ? (0, gg.S)(qS, bS) : null;
-              if (null !== kS) {
-                (0, wg.countRenderLost)(qS, fS, cN);
-                const HS = void 0 === fS ? "" : ` (${fS.message})`;
-                return void SS.crash(wg.RENDER_RELOAD_SITE, new Error(`${(0,wg.renderReloadMessage)("webgpu",qS,gS)} and ${kS}${HS}`))
+          onRenderReload: (kk, Fk, Ik) => {
+            ! function(kk, Fk, Ik, Xk, Tk, ik) {
+              var yk;
+              if ((0, eT.e)()) return;
+              const lk = Fk === fF.Xc.WEBGPU,
+                ak = Xk === fF.Xc.PIPELINE_FAILED ? "pipeline_failed" : "lost",
+                qk = Xk === fF.Xc.RESTORE_LOST,
+                Lk = lk && (0, vF.p)(Gl.adapter, Ik, "lost" === ak, qk),
+                tk = (0, XI.N)(pl);
+              null === (yk = Bl) || void 0 === yk || yk.reload(lk, Ik, ak, null === tk || void 0 === tk ? void 0 : tk.message);
+              const Zk = lk ? (0, XI.M)(ak, Tk) : null;
+              if (null !== Zk) {
+                (0, VI.countRenderLost)(ak, tk, Gl);
+                const Fk = void 0 === tk ? "" : ` (${tk.message})`;
+                return void kk.crash(VI.RENDER_RELOAD_SITE, new Error(`${(0,VI.renderReloadMessage)("webgpu",ak,Ik)} and ${Zk}${Fk}`))
               }
-              const aS = NS ? "webgpu" : "webgl1" === XS ? "webgl1" : "webgl";
-              "lost" === qS && (0, Kb.y)();
-              NS || (0, aH.s)();
-              (0, wg.reportRenderReload)(aS, gS, Nx, {
-                cause: qS,
-                restoreLost: uS,
-                adapterRemembered: IS,
-                error: fS,
-                context: cN,
-                session: Mu(SS.sunShadowsHeld())
-              }), hu()
-            }(dS, SS, HS, gS, aS, kS)
+              const jk = lk ? "webgpu" : "webgl1" === ik ? "webgl1" : "webgl";
+              "lost" === ak && (0, eT.z)();
+              lk || (0, eF.s)();
+              (0, VI.reportRenderReload)(jk, Ik, Ly, {
+                cause: ak,
+                restoreLost: qk,
+                adapterRemembered: Lk,
+                error: tk,
+                context: Gl,
+                session: gq(kk.sunShadowsHeld())
+              }), oq()
+            }(Ek, kk, Fk, Ik, jk, Zk)
           },
-          onEnvEvent: SS => {
-            var HS;
-            SS.kind === pH.eb.SkyImages ? null === (HS = vx) || void 0 === HS || HS.onEvent(SS.payload) : SS.kind === pH.eb.EnvLighting && (Ex = 1 === SS.payload[0])
+          onEnvEvent: kk => {
+            var Fk;
+            kk.kind === fF.X.SkyImages ? null === (Fk = py) || void 0 === Fk || Fk.onEvent(kk.payload) : kk.kind === fF.X.EnvLighting && (uy = 1 === kk.payload[0])
           },
-          onImages: SS => {
-            var HS;
-            null === (HS = Lx) || void 0 === HS || HS.onEvent(SS)
+          onImages: kk => {
+            var Fk;
+            null === (Fk = by) || void 0 === Fk || Fk.onEvent(kk)
           },
-          onModelRequest: SS => {
-            var HS;
-            null === (HS = Ox) || void 0 === HS || HS.request(SS)
+          onModelRequest: kk => {
+            var Fk;
+            null === (Fk = Oy) || void 0 === Fk || Fk.request(kk)
           },
-          onModelTaken: (SS, HS) => {
-            var gS;
-            null === (gS = Ox) || void 0 === gS || gS.taken(SS, HS)
+          onModelTaken: (kk, Fk) => {
+            var Ik;
+            null === (Ik = Oy) || void 0 === Ik || Ik.taken(kk, Fk)
           },
           onTerrainTexturesWanted: () => {
             queueMicrotask((() => {
-              ! function(SS, HS) {
-                const gS = Xx;
-                if (null === gS || SS.isStopped) return;
-                gS.restore((SS => {
-                  (0, wg.reportTerrainTextureFailure)(SS, HS)
-                })).then((HS => {
-                  !1 !== HS || SS.isStopped ? !0 === HS && console.info(`${OX} terrain textures handed over again after the renderer lost them`) : console.warn(`${OX} the terrain textures couldn't be handed over again: the terrain draws blank`)
+              ! function(kk, Fk) {
+                const Ik = ay;
+                if (null === Ik || kk.isStopped) return;
+                Ik.restore((kk => {
+                  (0, VI.reportTerrainTextureFailure)(kk, Fk)
+                })).then((Fk => {
+                  !1 !== Fk || kk.isStopped ? !0 === Fk && console.info(`${vi} terrain textures handed over again after the renderer lost them`) : console.warn(`${vi} the terrain textures couldn't be handed over again: the terrain draws blank`)
                 }))
-              }(dS, OS)
+              }(Ek, vk)
             }))
           },
-          onKeepAlive: SS => {
-            const HS = null === bN ? void 0 : XN.get(bN);
-            void 0 !== HS && yt(HS, SS)
+          onKeepAlive: kk => {
+            const Fk = null === ll ? void 0 : al.get(ll);
+            void 0 !== Fk && bX(Fk, kk)
           },
           onSends: () => {
-            ! function(SS) {
-              const HS = performance.now();
-              if (SS.forEachNetOut(iu), Yu(SS), (0, tg.N)(SS, {
-                  worldgen: Gx,
-                  mesh: nx
-                }), null !== zN) try {
-                zN.sendsWent(SS, HS, performance.now())
-              } catch (bS) {
-                Du(bS)
+            ! function(kk) {
+              const Fk = performance.now();
+              if (kk.forEachNetOut(cq), Rq(kk), (0, TI.F)(kk, {
+                  worldgen: Py,
+                  mesh: Qy
+                }), null !== fl) try {
+                fl.sendsWent(kk, Fk, performance.now())
+              } catch (Tk) {
+                zq(Tk)
               }
-            }(dS)
+            }(Ek)
           }
         });
-        if (gx = dS, null === (xS = vH.b.wasmNetReady) || void 0 === xS || xS.call(vH.b, (() => dS.isStopped ? 0 : dS.netKeptFrames)), null !== SS) {
-          dS.setAntiCheatProbes(nX(NH.B, SS.checks)), SS.watchHeld(QX.CoreFrame, (() => dS.frame)), SS.watchHeld(QX.GlueFrame, (() => JS.frame));
-          const HS = function(SS, HS) {
-            const gS = new PX(HS);
-            let tS = !1;
-            gS.mf(SS.mf());
-            const bS = (0, Yt.Y)((() => {
-              gS.mf(SS.mf())
-            }), DX);
-            let XS = 6 * (0, Yt.Q)() | 0;
-            const xS = () => {
-              ++XS < 6 || (XS = 0, SS.checks.stackCheck() && (tS = !0))
+        if (iy = Ek, null === (yk = nF.b.wasmNetReady) || void 0 === yk || yk.call(nF.b, (() => Ek.isStopped ? 0 : Ek.netKeptFrames)), null !== kk) {
+          Ek.setAntiCheatProbes(xi(aF.r, kk.checks)), kk.watchHeld(Ki.CoreFrame, (() => Ek.frame)), kk.watchHeld(Ki.GlueFrame, (() => Sk.frame));
+          const Fk = function(kk, Fk) {
+            const Ik = new Pi(Fk);
+            let Xk = !1;
+            Ik.Dt(kk.Dt());
+            const Tk = (0, pX.Y)((() => {
+              Ik.Dt(kk.Dt())
+            }), Qi);
+            let ik = 6 * (0, pX.O)() | 0;
+            const yk = () => {
+              ++ik < 6 || (ik = 0, kk.checks.stackCheck() && (Xk = !0))
             };
-            (0, gX.i)(xS);
-            const NS = () => {
-              const HS = SS.checkPadCall();
-              0 !== HS && gS.setFlags(HS)
+            (0, Ii.i)(yk);
+            const lk = () => {
+              const Fk = kk.checkPadCall();
+              0 !== Fk && Ik.setFlags(Fk)
             };
-            return (0, HX.i)(NS), {
-              onSend: xS,
+            return (0, Fi.e)(lk), {
+              onSend: yk,
               beforeFrame: () => {
-                tS && gS.originStackHit() && (tS = !1)
+                Xk && Ik.originStackHit() && (Xk = !1)
               },
-              onEvent: HS => {
-                const tS = SS.checkEvent(HS);
-                gS.value(pH.i.ProbeUsedProp, SS.usedProp()), 0 !== tS && gS.setFlags(tS)
+              onEvent: Fk => {
+                const Xk = kk.checkEvent(Fk);
+                Ik.value(fF.h.ProbeUsedProp, kk.usedProp()), 0 !== Xk && Ik.setFlags(Xk)
               },
               stop: () => {
-                (0, Yt.$)(bS), (0, gX.e)(xS), (0, HX.e)(NS)
+                (0, pX.Z)(Tk), (0, Ii.g)(yk), (0, Fi.c)(lk)
               }
             }
-          }(SS, ((SS, HS, gS) => {
-            let tS = !1;
-            return ou(dS, (() => {
-              tS = dS.rings.input.writeRecord(pH.Gb.AntiCheat, SS, HS, gS, 0)
-            })), tS
+          }(kk, ((kk, Fk, Ik) => {
+            let Xk = !1;
+            return Dq(Ek, (() => {
+              Xk = Ek.rings.input.writeRecord(fF.rb.AntiCheat, kk, Fk, Ik, 0)
+            })), Xk
           }));
-          dS.isStopped ? HS.stop() : Zx = HS
+          Ek.isStopped ? Fk.stop() : vy = Fk
         }
-        TX = (SS, HS, gS) => dS.rings.cmd.writeCmd(SS, HS, gS), oX = SS => dS.rings.cmd.growForCmd(SS), mx = !1, qu(), (0, hS.x)(dS, {
-          core: JS,
-          memory: NH.B,
-          staleOr: (SS, HS, gS, tS) => gI({
-            site: SS,
-            error: HS
-          }, gS, tS),
-          reportReplayFault: (SS, HS) => {
-            (0, wg.reportReplayFault)(SS, HS, Nx)
+        ri = (kk, Fk, Ik) => Ek.rings.cmd.writeCmd(kk, Fk, Ik), Di = kk => Ek.rings.cmd.growForCmd(kk), kl = !1, tq(), (0, Vk.C)(Ek, {
+          core: Sk,
+          memory: aF.r,
+          staleOr: (kk, Fk, Ik, Xk) => iL({
+            site: kk,
+            error: Fk
+          }, Ik, Xk),
+          reportReplayFault: (kk, Fk) => {
+            (0, VI.reportReplayFault)(kk, Fk, Ly)
           },
-          audio: xx,
-          options: GH.d,
-          onNetEvent: wu,
-          sessionInfo: SS => {
-            var HS;
-            return (null === (HS = IN) || void 0 === HS ? void 0 : HS.conn) === SS ? IN.info : null
+          audio: qy,
+          options: JF.e,
+          onNetEvent: Sq,
+          sessionInfo: kk => {
+            var Fk;
+            return (null === (Fk = jl) || void 0 === Fk ? void 0 : Fk.conn) === kk ? jl.info : null
           },
-          onEventOverflow: Jq,
-          replayShaderPack: SS => {
-            var HS;
-            null === (HS = yx) || void 0 === HS || HS.replay(SS)
+          onEventOverflow: Ea,
+          replayShaderPack: kk => {
+            var Fk;
+            null === (Fk = Cy) || void 0 === Fk || Fk.replay(kk)
           },
-          hasPackModel: SS => {
-            var HS, gS;
-            return null !== (null !== (HS = null === (gS = uu()) || void 0 === gS ? void 0 : gS.modelUrl(SS)) && void 0 !== HS ? HS : null)
+          hasPackModel: kk => {
+            var Fk, Ik;
+            return null !== (null !== (Fk = null === (Ik = Zq()) || void 0 === Ik ? void 0 : Ik.modelUrl(kk)) && void 0 !== Fk ? Fk : null)
           },
-          beforeWrite: () => (!Rx && dS.rings.net.cursor > 0 && Ou(dS, !1, "all"), !dS.isStopped),
-          beforeOp: () => (!Rx && dS.netWrittenSinceFrame > 0 && Ou(dS, !1, "budget"), !dS.isStopped)
-        }), (0, wS.H)({
+          beforeWrite: () => (!hy && Ek.rings.net.cursor > 0 && Oq(Ek, !1, "all"), !Ek.isStopped),
+          beforeOp: () => (!hy && Ek.netWrittenSinceFrame > 0 && Oq(Ek, !1, "budget"), !Ek.isStopped)
+        }), (0, sk.F)({
           lockPointer: () => {
-            if (!Rg(GS)) return !1;
+            if (!gI(Hk)) return !1;
             try {
-              Promise.resolve(GS.requestPointerLock()).catch((() => {}))
+              Promise.resolve(Hk.requestPointerLock()).catch((() => {}))
             } catch {
               return !1
             }
             return !0
           },
           unlockPointer: () => {
-            (0, Ag.c)()
+            (0, bI.d)()
           },
           leaveGame: () => {
-            Zq()
+            va()
           },
-          canvas: () => GS
-        }), Jx = (0, wS.w)((() => {
-          var SS;
-          const HS = (0, hS.h)();
-          null === (SS = (0, hS.q)()) || void 0 === SS || SS.followCursorAim(!0 === (null === HS || void 0 === HS ? void 0 : HS.isSessionLive) ? HS : null)
-        })), HN && dS.setUiPrefs(HN);
-        gN && dS.setEnvPrefs(gN);
-        tN && dS.setLookPrefs(tN);
-        const cS = nb ? Pb(nb.preventMovement) : null;
-        cS && Vq(cS);
-        const vS = (0, ng.m)(),
-          ES = (0, ng.e)(dS, vS);
-        wx = vS.basis, (0, Eg.j)(null === ES ? null : (0, Cg.s)(ES)), Dx = ES;
-        const LS = (0, uH.d)();
-        let YS = 1 / 0,
-          AS = !0,
-          yS = vS.shedFootprintBytes;
-        const VS = new Rt.d(LS, (() => JS.MG()), (SS => {
-          dS.crash(tg.k, SS)
+          canvas: () => Hk
+        }), Ey = (0, sk.y)((() => {
+          var kk;
+          const Fk = (0, Vk.k)();
+          null === (kk = (0, Vk.y)()) || void 0 === kk || kk.followCursorAim(!0 === (null === Fk || void 0 === Fk ? void 0 : Fk.isSessionLive) ? Fk : null)
+        })), Tl && Ek.setUiPrefs(Tl);
+        il && Ek.setEnvPrefs(il);
+        yl && Ek.setLookPrefs(yl);
+        const Ok = xT ? PT(xT.preventMovement) : null;
+        Ok && Na(Ok);
+        const nk = (0, PI.i)(),
+          Gk = (0, PI.g)(Ek, nk);
+        Sy = nk.basis, (0, GI.n)(null === Gk ? null : (0, xI.r)(Gk)), zy = Gk;
+        const pk = (0, LF.d)();
+        let uk = 1 / 0,
+          bk = !0,
+          Rk = nk.shedFootprintBytes;
+        const Uk = new AX.b(pk, (() => Sk.fH()), (kk => {
+          Ek.crash(TI.l, kk)
         }));
-        Px = VS, Qx = VS, null !== ES && VS.setCeiling(Math.min((0, Rt.n)(ES), YS, (0, ng.o)()));
-        if (AS) {
-          VS.setShed((SS => {
-            const HS = dS.shedMemory("joinReserve" !== SS);
-            return null !== HS && (null === Dx || HS < Dx) && (Dx = HS, (0, Eg.j)((0, Cg.s)(HS))), HS
-          }), ((SS, HS, gS) => {
-            1 === HS ? (0, wg.reportMemoryShed)(SS, gS, Nx) : console.warn(`${OX} wasm memory: shed again (${SS}): shed ${HS}`, gS.wasmMemoryShed)
-          }), (() => dS.addDistanceInUse()));
-          const SS = (0, gg.M)(ZS);
-          VS.setFootprint(new zb(yS, {
-            storedChunks: () => JS.MgS(),
+        sy = Uk, Vy = Uk, null !== Gk && Uk.setCeiling(Math.min((0, AX.i)(Gk), uk, (0, PI.m)()));
+        if (bk) {
+          Uk.setShed((kk => {
+            const Fk = Ek.shedMemory("joinReserve" !== kk);
+            return null !== Fk && (null === zy || Fk < zy) && (zy = Fk, (0, GI.n)((0, xI.r)(Fk))), Fk
+          }), ((kk, Fk, Ik) => {
+            1 === Fk ? (0, VI.reportMemoryShed)(kk, Ik, Ly) : console.warn(`${vi} wasm memory: shed again (${kk}): shed ${Fk}`, Ik.wasmMemoryShed)
+          }), (() => Ek.addDistanceInUse()));
+          const kk = (0, XI.B)(zk);
+          Uk.setFootprint(new NT(Rk, {
+            storedChunks: () => Sk.kXk(),
             gpuBytes: () => {
-              var HS;
-              return null !== (HS = null === SS || void 0 === SS ? void 0 : SS.FgS()) && void 0 !== HS ? HS : 0
+              var Fk;
+              return null !== (Fk = null === kk || void 0 === kk ? void 0 : kk.FXk()) && void 0 !== Fk ? Fk : 0
             },
-            jsHeapBytes: Wb
+            jsHeapBytes: CT
           }))
         }
         window.addEventListener("pagehide", (() => {
-          Px === VS && (VS.refreshStats(), Tu(VS))
-        })), window.addEventListener("pagehide", Zu), window.addEventListener("pagehide", Ju), !1;
-        const [iS, WS] = (0, Jg.g)();
-        sN = (0, dg.e)((SS => dS.setChunkAddDistance(SS.horizontal, SS.vertical)), {
-          horizontal: iS,
-          vertical: WS
-        }), dS.setAmbientOcclusion(!0 !== Lg.g.getItem("disableAmbientOcclusion")), dS.setPoseLod(!0 !== Lg.g.getItem(XH.Q)), (0, Ub.q)("look") && (dS.setDebugLog(pH.R.Look, !0), dS.setDebugLog(pH.R.CameraSet, !0), (0, sb.e)("wasm", {
-          look: () => dS.takeDebugLog(pH.R.Look),
-          cameraSets: () => dS.takeDebugLog(pH.R.CameraSet)
+          sy === Uk && (Uk.refreshStats(), rq(Uk))
+        })), window.addEventListener("pagehide", vq), window.addEventListener("pagehide", Eq), !1;
+        const [Ck, Nk] = (0, oI.e)();
+        Yl = (0, EI.c)((kk => Ek.setChunkAddDistance(kk.horizontal, kk.vertical)), {
+          horizontal: Ck,
+          vertical: Nk
+        }), Ek.setAmbientOcclusion(!0 !== pI.j.getItem("disableAmbientOcclusion")), Ek.setPoseLod(!0 !== pI.j.getItem(yF.Q)), (0, cT.o)("look") && (Ek.setDebugLog(fF.P.Look, !0), Ek.setDebugLog(fF.P.CameraSet, !0), (0, fT.j)("wasm", {
+          look: () => Ek.takeDebugLog(fF.P.Look),
+          cameraSets: () => Ek.takeDebugLog(fF.P.CameraSet)
         }));
-        (0, Ub.q)("remesh") && (dS.setDebugLog(pH.R.Remesh, !0), zS = () => dS.takeDebugLog(pH.R.Remesh), Tb = new Rb((0, Bb.l)(), zS));
-        var zS;
-        const US = function(SS, HS, gS, tS) {
-          const bS = new It,
-            XS = SS => Lg.g.getItem(SS);
-          bS.sync(XS, HS), (0, dH.O)();
-          const xS = (0, qS.m)("customBindingsChanged", (() => {
-            bS.sync(XS, HS)
+        (0, cT.o)("remesh") && (Ek.setDebugLog(fF.P.Remesh, !0), ck = () => Ek.takeDebugLog(fF.P.Remesh), gT = new AT((0, BT.n)(), ck));
+        var ck;
+        const Wk = function(kk, Fk, Ik, Xk) {
+          const Tk = new tX,
+            ik = kk => pI.j.getItem(kk);
+          Tk.sync(ik, Fk), (0, EF._)();
+          const yk = (0, ak.i)("customBindingsChanged", (() => {
+            Tk.sync(ik, Fk)
           }));
-          (0, yg.n)(HS);
-          const NS = new Set,
-            uS = (0, wS.w)((() => {
-              var SS;
-              NS.size > 0 && jt() && !0 === (null === (SS = (0, hS.h)()) || void 0 === SS ? void 0 : SS.localPlayerAlive()) && qS.k.cj("usedKeyboard")
+          (0, RI.k)(Fk);
+          const lk = new Set,
+            qk = (0, sk.y)((() => {
+              var kk;
+              lk.size > 0 && wX() && !0 === (null === (kk = (0, Vk.k)()) || void 0 === kk ? void 0 : kk.localPlayerAlive()) && ak.g.GL("usedKeyboard")
             })),
-            IS = Ht.d.heldSizer((() => (0, EH.o)(SS))),
-            fS = St(SS, HS, {
-              prevents: SS => bS.prevents(SS),
-              keyPressed: SS => {
-                bS.moves(SS) && (NS.add(SS), jt() && qS.k.cj("usedKeyboard"))
+            Lk = IX.c.heldSizer((() => (0, GF.i)(kk))),
+            tk = FX(kk, Fk, {
+              prevents: kk => Tk.prevents(kk),
+              keyPressed: kk => {
+                Tk.moves(kk) && (lk.add(kk), wX() && ak.g.GL("usedKeyboard"))
               },
-              keyReleased: SS => {
-                NS.delete(SS)
+              keyReleased: kk => {
+                lk.delete(kk)
               },
               keysReleased: () => {
-                NS.clear()
+                lk.clear()
               },
               resized: () => {
-                kt.m.measure(SS.getBoundingClientRect()), (0, gt.k)()
+                jX.l.measure(kk.getBoundingClientRect()), (0, XX.l)()
               },
-              sizeCanvas: IS,
-              watchRenderScale: HS => {
-                const gS = (0, EH.q)(SS, HS),
-                  tS = Ht.d.onRelease(HS);
+              sizeCanvas: Lk,
+              watchRenderScale: Fk => {
+                const Ik = (0, GF.l)(kk, Fk),
+                  Xk = IX.c.onRelease(Fk);
                 return () => {
-                  gS(), tS()
+                  Ik(), Xk()
                 }
               },
               touchStarting: () => {
-                kt.m.measure(SS.getBoundingClientRect())
+                jX.l.measure(kk.getBoundingClientRect())
               },
-              viewShown: gS,
-              touchUiShown: () => FS.b.get("isTouchScreen"),
-              ctrlCombosAreGames: jt,
-              inspect: (SS, HS, gS) => {
-                bS.checks(HS, gS) && tS(SS)
+              viewShown: Ik,
+              touchUiShown: () => Ak.d.get("isTouchScreen"),
+              ctrlCombosAreGames: wX,
+              inspect: (kk, Fk, Ik) => {
+                Tk.checks(Fk, Ik) && Xk(kk)
               },
-              canLock: () => Rg(SS)
+              canLock: () => gI(kk)
             }),
-            kS = (0, ug.b)(HS);
+            Zk = (0, LI.e)(Fk);
           return () => {
-            xS(), uS(), (0, yg.n)(null), kS(), fS()
+            yk(), qk(), (0, RI.k)(null), Zk(), tk()
           }
-        }(GS, ((SS, HS, gS, tS, bS) => {
-          ou(dS, (() => {
-            dS.rings.input.writeRecord(SS, HS, gS, tS, bS)
-          })), !Tx && (0, Qt.g)(SS, bS) && (0, Qt.e)((() => {
-            gx !== dS || bq || dS.isStopped || !yu() || Ou(dS, !1, "budget", !1)
+        }(Hk, ((kk, Fk, Ik, Xk, Tk) => {
+          Dq(Ek, (() => {
+            Ek.rings.input.writeRecord(kk, Fk, Ik, Xk, Tk)
+          })), !ry && (0, KX.e)(kk, Tk) && (0, KX.b)((() => {
+            iy !== Ek || la || Ek.isStopped || !Cq() || Oq(Ek, !1, "budget", !1)
           }))
-        }), (() => Sq), (SS => {
-          var HS;
-          null === (HS = Zx) || void 0 === HS || HS.onEvent(SS)
+        }), (() => Xa), (kk => {
+          var Fk;
+          null === (Fk = vy) || void 0 === Fk || Fk.onEvent(kk)
         }));
-        if (dS.isStopped) return US(), null;
-        jx = US;
-        const pS = () => !dS.isStopped && !gq;
-        if (dS.isStopped) return null;
-        (0, NH.Y)((() => {
-          "call" === (0, NH.t)() && dS.crash(tg.s, (0, NH.r)())
+        if (Ek.isStopped) return Wk(), null;
+        xy = Wk;
+        const fk = () => !Ek.isStopped && !ia;
+        if (Ek.isStopped) return null;
+        (0, aF.N)((() => {
+          "call" === (0, aF.n)() && Ek.crash(TI.q, (0, aF.m)())
         }));
-        const sS = (0, tg.R)(dS.rings.worker, (() => {
-          Ou(dS, !1, document.hidden ? "all" : "budget")
+        const Bk = (0, TI.I)(Ek.rings.worker, (() => {
+          Oq(Ek, !1, document.hidden ? "all" : "budget")
         }));
-        Gx = function(SS, HS) {
-          return lu().then((SS => {
+        Py = function(kk, Fk) {
+          return Mq().then((kk => {
             let {
-              prefetchWorldgenWorker: HS
-            } = SS;
-            HS()
-          }), (() => {})), new eb({
-            module: (0, NH.E)(),
-            decodeSettings: SS => {
-              const HS = (0, hS.q)();
-              if (null === HS) throw new Error("no game code to decode the world-gen seed with");
-              return HS.decodeMapSettings(SS)
+              prefetchWorldgenWorker: Fk
+            } = kk;
+            Fk()
+          }), (() => {})), new DT({
+            module: (0, aF.u)(),
+            decodeSettings: kk => {
+              const Fk = (0, Vk.y)();
+              if (null === Fk) throw new Error("no game code to decode the world-gen seed with");
+              return Fk.decodeMapSettings(kk)
             },
-            loadWorker: mu,
+            loadWorker: kL,
             onMapWithoutWorldgen: () => {
-              eu((SS => {
+              FL((kk => {
                 let {
-                  stopWorldgenWorkerPrefetch: HS
-                } = SS;
-                HS()
+                  stopWorldgenWorkerPrefetch: Fk
+                } = kk;
+                Fk()
               }))
             },
-            onLoadFailed: SS => {
-              (0, wg.reportWorldgenLoadFailure)(SS, Nx)
+            onLoadFailed: kk => {
+              (0, VI.reportWorldgenLoadFailure)(kk, Ly)
             },
-            onWorkerLost: SS => {
-              (0, wg.reportWorkerLost)(tg.G, SS, Nx)
+            onWorkerLost: kk => {
+              (0, VI.reportWorkerLost)(TI.x, kk, Ly)
             },
-            onStartTimeout: SS => {
-              (0, wg.reportWorkerStartTimeout)(tg.G, SS, Nx)
+            onStartTimeout: kk => {
+              (0, VI.reportWorkerStartTimeout)(TI.x, kk, Ly)
             },
-            onGaveUp: SS => {
-              (0, wg.reportWorldgenGaveUp)(SS, Nx)
+            onGaveUp: kk => {
+              (0, VI.reportWorldgenGaveUp)(kk, Ly)
             },
-            onMemoryStats: SS => {
-              var HS;
-              null === (HS = Px) || void 0 === HS || HS.noteWorldgen(SS)
+            onMemoryStats: kk => {
+              var Fk;
+              null === (Fk = sy) || void 0 === Fk || Fk.noteWorldgen(kk)
             },
             onMemoryGone: () => {
-              var SS;
-              null === (SS = Px) || void 0 === SS || SS.worldgenGone()
+              var kk;
+              null === (kk = sy) || void 0 === kk || kk.worldgenGone()
             },
-            write: (gS, tS, bS, XS, xS) => {
-              ou(SS, (() => {
-                SS.rings.worker.writeWorkerRecord(gS, tS, bS, 0, XS, xS) || SS.crash(tg.G, `a world-gen record of kind ${tS} did not fit the worker-in ring`)
-              })), HS()
+            write: (Ik, Xk, Tk, ik, yk) => {
+              Dq(kk, (() => {
+                kk.rings.worker.writeWorkerRecord(Ik, Xk, Tk, 0, ik, yk) || kk.crash(TI.x, `a world-gen record of kind ${Xk} did not fit the worker-in ring`)
+              })), Fk()
             }
           })
-        }(dS, sS), nx = function(SS, HS) {
-          return new Mt({
-            module: (0, NH.E)(),
+        }(Ek, Bk), Qy = function(kk, Fk) {
+          return new dX({
+            module: (0, aF.u)(),
             loadWorkers: async () => {
               const [{
-                createMeshWorker: SS
-              }, HS] = await Promise.all([gS.e(40).then((() => gS(51061))), Promise.resolve().then((() => gS(104))).then((SS => {
+                createMeshWorker: kk
+              }, Fk] = await Promise.all([Ik.e(40).then((() => Ik(51017))), Promise.resolve().then((() => Ik(95))).then((kk => {
                 let {
-                  isMobile: HS
-                } = SS;
-                return HS()
+                  isMobile: Fk
+                } = kk;
+                return Fk()
               }), (() => !1))]);
               return {
-                create: SS,
-                count: (0, wH.b)(navigator.hardwareConcurrency, HS),
-                maxKeptLightStates: HS ? 1 : void 0
+                create: kk,
+                count: (0, VF.d)(navigator.hardwareConcurrency, Fk),
+                maxKeptLightStates: Fk ? 1 : void 0
               }
             },
-            write: (gS, tS, bS, XS, xS, NS) => {
-              (0, gt.g)(), ou(SS, (() => {
-                SS.rings.worker.writeWorkerRecord(gS, tS, bS, XS, xS, NS) || SS.crash(tg.l, `a meshing record of kind ${tS} did not fit the worker-in ring`)
-              })), HS()
+            write: (Ik, Xk, Tk, ik, yk, lk) => {
+              (0, XX.j)(), Dq(kk, (() => {
+                kk.rings.worker.writeWorkerRecord(Ik, Xk, Tk, ik, yk, lk) || kk.crash(TI.m, `a meshing record of kind ${Xk} did not fit the worker-in ring`)
+              })), Fk()
             },
-            onWorkerLost: SS => {
-              (0, wg.reportWorkerLost)(tg.l, SS, Nx)
+            onWorkerLost: kk => {
+              (0, VI.reportWorkerLost)(TI.m, kk, Ly)
             },
-            onLightFault: (SS, HS) => {
-              (0, wg.reportLightFault)(SS, HS, Nx)
+            onLightFault: (kk, Fk) => {
+              (0, VI.reportLightFault)(kk, Fk, Ly)
             },
-            onStartTimeout: SS => {
-              (0, wg.reportWorkerStartTimeout)(tg.l, SS, Nx)
+            onStartTimeout: kk => {
+              (0, VI.reportWorkerStartTimeout)(TI.m, kk, Ly)
             },
-            onMemoryStats: (SS, HS) => {
-              var gS;
-              null === (gS = Px) || void 0 === gS || gS.noteMeshWorker(SS, HS)
+            onMemoryStats: (kk, Fk) => {
+              var Ik;
+              null === (Ik = sy) || void 0 === Ik || Ik.noteMeshWorker(kk, Fk)
             },
-            onMemoryGone: SS => {
-              var HS;
-              null === (HS = Px) || void 0 === HS || HS.meshWorkerGone(SS)
+            onMemoryGone: kk => {
+              var Fk;
+              null === (Fk = sy) || void 0 === Fk || Fk.meshWorkerGone(kk)
             },
-            fail: (HS, gS) => {
-              const tS = () => {
-                SS.crash(tg.l, void 0 === gS ? HS : new Error(HS, {
-                  cause: gS
+            fail: (Fk, Ik) => {
+              const Xk = () => {
+                kk.crash(TI.m, void 0 === Ik ? Fk : new Error(Fk, {
+                  cause: Ik
                 }))
               };
-              void 0 !== gS ? gI({
-                site: tg.l,
-                error: gS
-              }, tS) : tS()
+              void 0 !== Ik ? iL({
+                site: TI.m,
+                error: Ik
+              }, Xk) : Xk()
             }
           })
-        }(dS, sS), dq();
-        const RS = (0, xb.m)(QH.clientSideServerUrls.staticUrl, {
-            onTableFailed: SS => {
-              gI({
-                site: wg.MODEL_FEED_SITE,
-                error: SS
+        }(Ek, Bk), na();
+        const gk = (0, yT.j)(QF.clientSideServerUrls.staticUrl, {
+            onTableFailed: kk => {
+              iL({
+                site: VI.MODEL_FEED_SITE,
+                error: kk
               }, (() => {}), {
-                stillWanted: pS
+                stillWanted: fk
               })
             },
-            packUrl: SS => {
-              var HS, gS;
-              return null !== (HS = null === (gS = uu()) || void 0 === gS ? void 0 : gS.modelUrl(SS)) && void 0 !== HS ? HS : null
+            packUrl: kk => {
+              var Fk, Ik;
+              return null !== (Fk = null === (Ik = Zq()) || void 0 === Ik ? void 0 : Ik.modelUrl(kk)) && void 0 !== Fk ? Fk : null
             }
           }),
-          TS = function(SS, HS, gS) {
-            const tS = gS => {
-              var tS, bS;
-              return null !== (tS = null === (bS = HS()) || void 0 === bS ? void 0 : bS.drawnUrl(gS)) && void 0 !== tS ? tS : SS.url(gS)
+          mk = function(kk, Fk, Ik) {
+            const Xk = Ik => {
+              var Xk, Tk;
+              return null !== (Xk = null === (Tk = Fk()) || void 0 === Tk ? void 0 : Tk.drawnUrl(Ik)) && void 0 !== Xk ? Xk : kk.url(Ik)
             };
-            return (0, bb.h)((0, ot.m)(tS), gS)
-          }(RS, (() => Ox), uu),
-          oS = new ot.g(TS, (SS => {
-            console.warn(`${OX} image ${SS.key.kind}:${SS.key.index}:${SS.key.word} failed`, SS.error)
+            return (0, TT.m)((0, mX.o)(Xk), Ik)
+          }(gk, (() => Oy), Zq),
+          hk = new mX.g(mk, (kk => {
+            console.warn(`${vi} image ${kk.key.kind}:${kk.key.index}:${kk.key.word} failed`, kk.error)
           }));
-        Lx = oS, Yx = new Hb(dS, TS, ((SS, HS) => {
-          void 0 === HS ? console.warn(`${OX} ${SS}`) : fu(SS, HS)
+        by = hk, Ry = new FT(Ek, mk, ((kk, Fk) => {
+          void 0 === Fk ? console.warn(`${vi} ${kk}`) : eq(kk, Fk)
         }));
-        const lS = new tb.k(RS, function(SS, HS) {
-          let tS = !1,
-            bS = null,
-            XS = null;
-          const xS = {
-              onUnavailable: (gS, tS) => {
-                XS ??= gI({
-                  site: wg.MODEL_POOL_SITE,
-                  error: gS,
-                  urls: tS
+        const rk = new XT.h(gk, function(kk, Fk) {
+          let Xk = !1,
+            Tk = null,
+            ik = null;
+          const yk = {
+              onUnavailable: (Ik, Xk) => {
+                ik ??= iL({
+                  site: VI.MODEL_POOL_SITE,
+                  error: Ik,
+                  urls: Xk
                 }, (() => {
-                  (0, wg.reportModelPoolFailure)(gS, SS)
+                  (0, VI.reportModelPoolFailure)(Ik, kk)
                 }), {
-                  stillWanted: HS
+                  stillWanted: Fk
                 })
               },
-              onDecoderFailed: (gS, tS) => {
-                const bS = () => {
-                  (0, wg.reportDracoDecoderFailure)(gS, SS)
+              onDecoderFailed: (Ik, Xk) => {
+                const Tk = () => {
+                  (0, VI.reportDracoDecoderFailure)(Ik, kk)
                 };
-                void 0 !== tS ? gI({
-                  site: wg.MODEL_POOL_SITE,
-                  error: gS,
-                  urls: tS
-                }, bS, {
-                  stillWanted: HS
-                }) : bS()
+                void 0 !== Xk ? iL({
+                  site: VI.MODEL_POOL_SITE,
+                  error: Ik,
+                  urls: Xk
+                }, Tk, {
+                  stillWanted: Fk
+                }) : Tk()
               },
-              onWorkerLost: HS => {
-                (0, wg.reportWorkerLost)(wg.MODEL_POOL_SITE, HS, SS)
+              onWorkerLost: Fk => {
+                (0, VI.reportWorkerLost)(VI.MODEL_POOL_SITE, Fk, kk)
               },
-              onModuleRetry: (HS, gS) => {
-                (0, wg.reportModelsModuleRetry)(HS, gS, SS)
+              onModuleRetry: (Fk, Ik) => {
+                (0, VI.reportModelsModuleRetry)(Fk, Ik, kk)
               }
             },
-            NS = gS.e(42).then((() => gS(51070))).then((SS => {
+            lk = Ik.e(42).then((() => Ik(51022))).then((kk => {
               let {
-                pageModelPool: HS
-              } = SS;
-              if (tS) return null;
-              const gS = HS(xS);
-              return bS = gS.unlisten, dx = gS.pool, dq(), gS.pool
-            }), (SS => (tS || xS.onUnavailable(SS, void 0), null)));
-          return cx = () => {
-            var SS;
-            tS = !0, null === (SS = bS) || void 0 === SS || SS(), dx = null
-          }, (SS, HS) => NS.then((gS => {
-            var tS;
-            return null !== (tS = null === gS || void 0 === gS ? void 0 : gS.build(SS, HS)) && void 0 !== tS ? tS : (0, Nb.m)(SS, "the model workers did not load")
-          })).then((SS => null !== XS && (0, Nb.g)(SS) ? XS.then((() => SS)) : SS))
-        }(OS, pS), (SS => {
-          SS.startup ? (zu(), gI({
-            site: wg.MODEL_FEED_SITE,
-            error: SS.error,
-            urls: "" === SS.url ? void 0 : [SS.url]
+                pageModelPool: Fk
+              } = kk;
+              if (Xk) return null;
+              const Ik = Fk(yk);
+              return Tk = Ik.unlisten, ny = Ik.pool, na(), Ik.pool
+            }), (kk => (Xk || yk.onUnavailable(kk, void 0), null)));
+          return Gy = () => {
+            var kk;
+            Xk = !0, null === (kk = Tk) || void 0 === kk || kk(), ny = null
+          }, (kk, Fk) => lk.then((Ik => {
+            var Xk;
+            return null !== (Xk = null === Ik || void 0 === Ik ? void 0 : Ik.build(kk, Fk)) && void 0 !== Xk ? Xk : (0, lT.q)(kk, "the model workers did not load")
+          })).then((kk => null !== ik && (0, lT.k)(kk) ? ik.then((() => kk)) : kk))
+        }(vk, fk), (kk => {
+          kk.startup ? (fq(), iL({
+            site: VI.MODEL_FEED_SITE,
+            error: kk.error,
+            urls: "" === kk.url ? void 0 : [kk.url]
           }, (() => {
-            (0, wg.reportModelFailure)(SS, OS)
-          }))) : (0, wg.reportModelFailure)(SS, OS)
+            (0, VI.reportModelFailure)(kk, vk)
+          }))) : (0, VI.reportModelFailure)(kk, vk)
         }), {
-          onWritten: (SS, HS) => {
-            oS.glbWritten(SS, HS)
+          onWritten: (kk, Fk) => {
+            hk.glbWritten(kk, Fk)
           },
-          onTaken: (SS, HS) => {
-            oS.glbTaken(SS, HS)
+          onTaken: (kk, Fk) => {
+            hk.glbTaken(kk, Fk)
           },
-          onPackFileFailed: (SS, HS) => {
-            console.warn(`${OX} the texture pack's model file ${SS} failed: the shipped one loads`, HS)
+          onPackFileFailed: (kk, Fk) => {
+            console.warn(`${vi} the texture pack's model file ${kk} failed: the shipped one loads`, Fk)
           }
         });
-        Ox = lS;
-        const mS = new et.e(dS);
-        Xx = mS, mS.swap((SS => {
-          const HS = () => {
-            (0, wg.reportTerrainTextureFailure)(SS, OS)
+        Oy = rk;
+        const Dk = new DX.g(Ek);
+        ay = Dk, Dk.swap((kk => {
+          const Fk = () => {
+            (0, VI.reportTerrainTextureFailure)(kk, vk)
           };
-          if (BN) return void HS();
-          const gS = () => !BN,
-            tS = null === SS.url ? void 0 : [SS.url];
-          gI({
-            site: tg.D,
-            error: SS.error,
-            urls: tS
-          }, HS, {
-            stillWanted: gS
+          if (Al) return void Fk();
+          const Ik = () => !Al,
+            Xk = null === kk.url ? void 0 : [kk.url];
+          iL({
+            site: TI.v,
+            error: kk.error,
+            urls: Xk
+          }, Fk, {
+            stillWanted: Ik
           })
-        })).then((SS => {
-          null !== SS && (SS || dS.isStopped || console.warn(`${OX} the core refused the terrain textures: terrain draws untextured`), zx(dS))
+        })).then((kk => {
+          null !== kk && (kk || Ek.isStopped || console.warn(`${vi} the core refused the terrain textures: terrain draws untextured`), fy(Ek))
         }));
-        const eS = new zH(dS, ((SS, HS) => {
-          console.warn(`${OX} ${SS}`, ...void 0 === HS ? [] : [HS])
+        const Mk = new cF(Ek, ((kk, Fk) => {
+          console.warn(`${vi} ${kk}`, ...void 0 === Fk ? [] : [Fk])
         }));
-        eS.feed(), null !== kS && function(SS, HS, tS, bS, XS, xS) {
-          let NS = null,
-            uS = null,
-            IS = !1;
-          const fS = {
+        Mk.feed(), null !== Zk && function(kk, Fk, Xk, Tk, ik, yk) {
+          let lk = null,
+            qk = null,
+            Lk = !1;
+          const tk = {
             textures: null,
             stop: () => {
-              var SS, HS;
-              IS = !0, null === (SS = uS) || void 0 === SS || SS(), null === (HS = NS) || void 0 === HS || HS(), Xb.b.setSettled(null), null !== qx && kq.clear(qx)
+              var kk, Fk;
+              Lk = !0, null === (kk = qk) || void 0 === kk || kk(), null === (Fk = lk) || void 0 === Fk || Fk(), iT.b.setSettled(null), null !== ty && wa.clear(ty)
             }
           };
-          bx = fS, uS = ku().follow((uS => {
-            null !== uS && Promise.all([gS.e(201), gS.e(45)]).then((() => gS(51025))).then((gS => {
+          ly = tk, qk = wq().follow((qk => {
+            null !== qk && Promise.all([Ik.e(201), Ik.e(45)]).then((() => Ik(50985))).then((Ik => {
               let {
-                PackTextures: kS
-              } = gS;
-              if (IS || SS.isStopped) return;
-              const aS = new kS({
-                feed: uS,
-                terrain: HS,
-                backend: tS,
-                stopped: () => SS.isStopped,
+                PackTextures: Zk
+              } = Ik;
+              if (Lk || kk.isStopped) return;
+              const jk = new Zk({
+                feed: qk,
+                terrain: Fk,
+                backend: Xk,
+                stopped: () => kk.isStopped,
                 landed: () => {
-                  zx(SS)
+                  fy(kk)
                 },
                 packSwapped: () => {
-                  (0, bb.f)(bS), xS.feed((() => async function(SS) {
-                    const HS = null === SS ? null : await SS.averageColours;
-                    return null === HS ? UH() : WH(HS)
-                  }(aS.assets))), (0, gb.h)(aS.files()), XS.refresh().then((SS => {
-                    null !== SS && console.info(`${OX} texture pack models: ${SS.resent} of ${SS.delivered} files written again, ${SS.refetched} refetched`)
+                  (0, TT.i)(Tk), yk.feed((() => async function(kk) {
+                    const Fk = null === kk ? null : await kk.averageColours;
+                    return null === Fk ? WF() : NF(Fk)
+                  }(jk.assets))), (0, IT.m)(jk.files()), ik.refresh().then((kk => {
+                    null !== kk && console.info(`${vi} texture pack models: ${kk.resent} of ${kk.delivered} files written again, ${kk.refetched} refetched`)
                   }))
                 },
-                settled: (SS, HS, gS) => {
-                  var tS;
-                  (Xb.b.setSettled({
-                    state: SS,
-                    files: HS
-                  }), function(SS, HS, gS) {
-                    const tS = null === SS.gameSource && (0, hg.g)(SS.pack);
-                    if (null === HS) return;
-                    const bS = (0, Dg.k)(HS.error),
-                      XS = tS ? "settings" : HS.source;
-                    qS.k.cj(Dg.c, {
-                      failure: bS,
-                      source: XS,
-                      pack: Zg(SS)
-                    }), (0, wg.reportTexturePackKeptOut)(XS, bS, HS.error, gS)
-                  }(SS, gS, Nx), null === gS) && function(SS) {
-                    const HS = qx;
-                    null !== HS && kq.apply(HS, SS).then((HS => {
-                      HS && SS && console.info(`${OX} the texture pack's animations are in (${Object.keys(SS).length} files)`)
+                settled: (kk, Fk, Ik) => {
+                  var Xk;
+                  (iT.b.setSettled({
+                    state: kk,
+                    files: Fk
+                  }), function(kk, Fk, Ik) {
+                    const Xk = null === kk.gameSource && (0, zI.i)(kk.pack);
+                    if (null === Fk) return;
+                    const Tk = (0, sI.g)(Fk.error),
+                      ik = Xk ? "settings" : Fk.source;
+                    ak.g.GL(sI.c, {
+                      failure: Tk,
+                      source: ik,
+                      pack: SI(kk)
+                    }), (0, VI.reportTexturePackKeptOut)(ik, Tk, Fk.error, Ik)
+                  }(kk, Ik, Ly), null === Ik) && function(kk) {
+                    const Fk = ty;
+                    null !== Fk && wa.apply(Fk, kk).then((Fk => {
+                      Fk && kk && console.info(`${vi} the texture pack's animations are in (${Object.keys(kk).length} files)`)
                     }))
-                  }(null === (tS = SS.pack) || void 0 === tS ? void 0 : tS.animations)
+                  }(null === (Xk = kk.pack) || void 0 === Xk ? void 0 : Xk.animations)
                 },
                 settling: () => {
-                  Xb.b.setSettled(null)
+                  iT.b.setSettled(null)
                 },
-                warn: fu,
-                maxTextureSize: () => Promise.resolve((0, gg._)(document.createElement("canvas")))
+                warn: eq,
+                maxTextureSize: () => Promise.resolve((0, XI.S)(document.createElement("canvas")))
               });
-              fS.textures = aS, NS = aS.start()
-            }), (SS => {
-              console.warn(`${OX} the texture pack's terrain didn't load: the built atlas stays`, SS)
+              tk.textures = jk, lk = jk.start()
+            }), (kk => {
+              console.warn(`${vi} the texture pack's terrain didn't load: the built atlas stays`, kk)
             }))
           }))
-        }(dS, mS, kS, oS, lS, eS);
-        const rS = () => {
-            dS.setTextureLayers("")
+        }(Ek, Dk, Zk, hk, rk, Mk);
+        const kF = () => {
+            Ek.setTextureLayers("")
           },
-          SH = SS => {
-            (PH ??= gS.e(53).then((() => gS(51075))).then((SS => {
+          FF = kk => {
+            (KF ??= Ik.e(53).then((() => Ik(51028))).then((kk => {
               let {
-                TEXTURE_NAMES: HS
-              } = SS;
-              return HS
-            }), (SS => {
-              throw PH = null, SS
-            })), PH).then((SS => {
-              dS.setTextureLayers(SS) || dS.isStopped || (console.warn(`${OX} the core refused the texture names: textured Boxes draw textureNotFound`), rS())
-            }), (HS => {
-              if (dS.isStopped) return;
-              const [gS, ...tS] = SS;
-              void 0 === gS ? gI({
-                site: wg.TEXTURE_NAMES_SITE,
-                error: HS
+                TEXTURE_NAMES: Fk
+              } = kk;
+              return Fk
+            }), (kk => {
+              throw KF = null, kk
+            })), KF).then((kk => {
+              Ek.setTextureLayers(kk) || Ek.isStopped || (console.warn(`${vi} the core refused the texture names: textured Boxes draw textureNotFound`), kF())
+            }), (Fk => {
+              if (Ek.isStopped) return;
+              const [Ik, ...Xk] = kk;
+              void 0 === Ik ? iL({
+                site: VI.TEXTURE_NAMES_SITE,
+                error: Fk
               }, (() => {
-                console.warn(`${OX} the texture names didn't load, so textured Boxes draw textureNotFound`, HS), rS()
+                console.warn(`${vi} the texture names didn't load, so textured Boxes draw textureNotFound`, Fk), kF()
               }), {
-                stillWanted: pS
+                stillWanted: fk
               }) : setTimeout((() => {
-                SH(tS)
-              }), gS)
+                FF(Xk)
+              }), Ik)
             }))
           };
-        if (SH(FX), null !== kS && !await async function(SS, HS, gS, tS, XS, xS) {
-            var NS;
-            const qS = (0, gg.M)(gS);
-            if (null === qS) return SS.crash(cX, new Error(`this ${tS} build has no openRenderer`)), !1;
-            let uS;
-            vN = qS;
+        if (FF(gi), null !== Zk && !await async function(kk, Fk, Ik, Xk, ik, yk) {
+            var lk;
+            const ak = (0, XI.B)(Ik);
+            if (null === ak) return kk.crash(Oi, new Error(`this ${Xk} build has no openRenderer`)), !1;
+            let qk;
+            pl = ak;
             try {
-              var IS, fS, kS, aS;
-              const bS = null !== (IS = null === (fS = Sx) || void 0 === fS ? void 0 : fS.pagePreviews()) && void 0 !== IS ? IS : null,
-                NS = null !== (kS = null === (aS = Sx) || void 0 === aS ? void 0 : aS.previewModule(gS)) && void 0 !== kS ? kS : null;
-              if (null === bS || null === NS) {
-                null === bS || void 0 === bS || bS.endSession(!1), uS = (0, EH.e)().sampleCount, await (0, gg.f)(HS, qS, xS, Nu, uS, await XS);
-                const SS = (0, gg.l)(gS);
-                null === SS && console.warn(`${OX} this ${tS} build has no image registry: sky and model images won't show`), (0, mt.h)(SS)
+              var Lk, tk, Zk, jk;
+              const Tk = null !== (Lk = null === (tk = Xy) || void 0 === tk ? void 0 : tk.pagePreviews()) && void 0 !== Lk ? Lk : null,
+                lk = null !== (Zk = null === (jk = Xy) || void 0 === jk ? void 0 : jk.previewModule(Ik)) && void 0 !== Zk ? Zk : null;
+              if (null === Tk || null === lk) {
+                null === Tk || void 0 === Tk || Tk.endSession(!1), qk = (0, GF.d)().sampleCount, await (0, XI.e)(Fk, ak, yk, Lq, qk, await ik);
+                const kk = (0, XI.g)(Ik);
+                null === kk && console.warn(`${vi} this ${Xk} build has no image registry: sky and model images won't show`), (0, rX.f)(kk)
               } else {
-                (0, Kb.c)() && await (0, MS.l)();
-                const gS = (0, Kb.J)();
-                if (null !== gS) {
-                  const HS = (0, gg.W)(qS);
-                  return SS.crash(wg.RENDER_RELOAD_SITE, new Error(`${gS}${void 0===HS?"":` (${HS.message})`}`)), !1
+                (0, eT.e)() && await (0, Yk.k)();
+                const Ik = (0, eT.N)();
+                if (null !== Ik) {
+                  const Fk = (0, XI.N)(ak);
+                  return kk.crash(VI.RENDER_RELOAD_SITE, new Error(`${Ik}${void 0===Fk?"":` (${Fk.message})`}`)), !1
                 }
-                uS = await bS.bindSession(NS, HS, (async SS => (0, gg.w)(qS, cX, xS, SS, Nu, await XS)))
+                qk = await Tk.bindSession(lk, Fk, (async kk => (0, XI.n)(ak, Oi, yk, kk, Lq, await ik)))
               }
-            } catch (bS) {
-              return SS.crash(cX, bS), !1
-            }(function(SS, HS) {
-              const gS = SS,
+            } catch (Tk) {
+              return kk.crash(Oi, Tk), !1
+            }(function(kk, Fk) {
+              const Ik = kk,
                 {
-                  requestCapture: tS,
-                  takeCapture: bS
-                } = gS;
-              if ("function" !== typeof tS || "function" !== typeof bS) return;
-              const XS = {
+                  requestCapture: Xk,
+                  takeCapture: Tk
+                } = Ik;
+              if ("function" !== typeof Xk || "function" !== typeof Tk) return;
+              const ik = {
                 request() {
-                  tS.call(gS, HS)
+                  Xk.call(Ik, Fk)
                 },
                 take() {
-                  var SS;
-                  return null !== (SS = bS.call(gS)) && void 0 !== SS ? SS : null
+                  var kk;
+                  return null !== (kk = Tk.call(Ik)) && void 0 !== kk ? kk : null
                 }
               };
-              window[wb] = XS
-            })(HS, uS), iN = uS, dN = !0;
-            const KS = performance.now();
-            return cN.boundAtMs = null !== (NS = (0, Kb.M)()) && void 0 !== NS ? NS : KS, cN.indirectHangs = (0, Kb.A)(), cN.restoresSkipped = (0, Kb.N)(), console.info(`${OX} ${tS} renderer bound at ${Math.round(KS)} ms`), !SS.isStopped
-          }(dS, JS, ZS, kS, KS, GS)) return null;
-        if (null !== kS) {
-          var HH, gH, tH;
-          (0, IH.O)(kS);
-          const SS = () => !dS.isStopped && Au();
-          gS.e(194).then((() => gS(34113))).then((HS => {
+              window[sT] = ik
+            })(Fk, qk), cl = qk, nl = !0;
+            const ek = performance.now();
+            return Gl.boundAtMs = null !== (lk = (0, eT.O)()) && void 0 !== lk ? lk : ek, Gl.indirectHangs = (0, eT.C)(), Gl.restoresSkipped = (0, eT.P)(), console.info(`${vi} ${Xk} renderer bound at ${Math.round(ek)} ms`), !kk.isStopped
+          }(Ek, Sk, zk, Zk, ek, Hk)) return null;
+        if (null !== Zk) {
+          var IF, XF, TF;
+          (0, tF.L)(Zk);
+          const kk = () => !Ek.isStopped && Uq();
+          Ik.e(194).then((() => Ik(34044))).then((Fk => {
             let {
-              devTools: gS
-            } = HS;
-            dS.isStopped || gS.setHost(function(SS) {
+              devTools: Ik
+            } = Fk;
+            Ek.isStopped || Ik.setHost(function(kk) {
               return {
-                tools: ab,
-                async downloadScene(HS, gS) {
+                tools: jT,
+                async downloadScene(Fk, Ik) {
                   let {
-                    width: tS,
-                    height: bS,
-                    colouring: XS
-                  } = gS;
-                  "screenshot" === HS && null === XS ? await (0, Ib.g)(SS, tS, bS) : console.warn("The Rust client's developer tools take uncoloured screenshots only")
+                    width: Xk,
+                    height: Tk,
+                    colouring: ik
+                  } = Ik;
+                  "screenshot" === Fk && null === ik ? await (0, LT.f)(kk, Xk, Tk) : console.warn("The Rust client's developer tools take uncoloured screenshots only")
                 },
                 setAmbientLightIntensity: () => (console.warn("The Rust client's renderer has no ambient light setting"), Promise.resolve()),
-                capturePhoto: (HS, gS, tS) => (0, Ib.d)(SS, HS, gS, tS)
+                capturePhoto: (Fk, Ik, Xk) => (0, LT.c)(kk, Fk, Ik, Xk)
               }
-            }(function(SS, HS) {
+            }(function(kk, Fk) {
               return {
-                canvas: SS,
-                maxTextureSize: fb,
-                drawing: HS,
-                resize: (SS, HS, gS) => {
-                  (0, yg.y)(pH.Gb.Resize, 0, SS / gS, HS / gS, (0, yg.j)(gS))
+                canvas: kk,
+                maxTextureSize: tT,
+                drawing: Fk,
+                resize: (kk, Fk, Ik) => {
+                  (0, RI.q)(fF.rb.Resize, 0, kk / Ik, Fk / Ik, (0, RI.h)(Ik))
                 },
                 restoreSize: () => {
-                  const HS = (0, EH.o)(SS);
-                  null !== HS && (0, yg.y)(pH.Gb.Resize, 0, HS.cssWidth, HS.cssHeight, (0, yg.j)(HS.renderScale))
+                  const Fk = (0, GF.i)(kk);
+                  null !== Fk && (0, RI.q)(fF.rb.Resize, 0, Fk.cssWidth, Fk.cssHeight, (0, RI.h)(Fk.renderScale))
                 },
-                onFrameDrawn: SS => (kb.add(SS), () => {
-                  kb.delete(SS)
+                onFrameDrawn: kk => (ZT.add(kk), () => {
+                  ZT.delete(kk)
                 })
               }
-            }(GS, SS)))
-          }), (SS => {
-            console.warn(`${OX} the developer tools didn't load: no captures this session`, SS)
+            }(Hk, kk)))
+          }), (kk => {
+            console.warn(`${vi} the developer tools didn't load: no captures this session`, kk)
           }));
-          const HS = "webgpu" === kS && null !== (HH = null === IS || void 0 === IS || null === (gH = IS.adapter) || void 0 === gH ? void 0 : gH.vendor) && void 0 !== HH ? HH : null;
-          WN = {
-            backend: kS,
-            canvas: GS,
-            fallbackReason: null !== (tH = null === IS || void 0 === IS ? void 0 : IS.reason) && void 0 !== tH ? tH : null,
-            adapterVendor: HS
-          }, nu();
+          const Fk = "webgpu" === Zk && null !== (IF = null === Lk || void 0 === Lk || null === (XF = Lk.adapter) || void 0 === XF ? void 0 : XF.vendor) && void 0 !== IF ? IF : null;
+          Wl = {
+            backend: Zk,
+            canvas: Hk,
+            fallbackReason: null !== (TF = null === Lk || void 0 === Lk ? void 0 : Lk.reason) && void 0 !== TF ? TF : null,
+            adapterVendor: Fk
+          }, Qq();
           try {
-            (0, gt.o)(kS, GS, HS)
-          } catch (bS) {
-            (0, gt.r)(), console.error(`${OX} the quality steps didn't start`, bS)
+            (0, XX.o)(Zk, Hk, Fk)
+          } catch (Tk) {
+            (0, XX.s)(), console.error(`${vi} the quality steps didn't start`, Tk)
           }
         }
         const {
-          storagePullBreaks: bH,
-          splitPassBreaks: xH
-        } = await KS;
-        xH && console.warn(`${OX} split_pass_breaks on: Windows Adreno 7xx (N-103) or ?sceneDepth=off`);
-        const kH = (0, BS.e)(IS, (0, OH.m)());
-        if ((0, Ub.q)("webgpuloss")) {
-          var CH, nH;
-          const SS = {
-            backend: kS,
-            reason: null !== (CH = null === IS || void 0 === IS ? void 0 : IS.reason) && void 0 !== CH ? CH : null,
-            source: null !== (nH = null === IS || void 0 === IS ? void 0 : IS.source) && void 0 !== nH ? nH : null,
-            storagePullBreaks: bH,
-            noWebGpu: kH.messageKey
+          storagePullBreaks: iF,
+          splitPassBreaks: lF
+        } = await ek;
+        lF && console.warn(`${vi} split_pass_breaks on: Windows Adreno 7xx (N-103) or ?sceneDepth=off`);
+        const jF = (0, dk.g)(Lk, (0, vF.l)());
+        if ((0, cT.o)("webgpuloss")) {
+          var xF, PF;
+          const kk = {
+            backend: Zk,
+            reason: null !== (xF = null === Lk || void 0 === Lk ? void 0 : Lk.reason) && void 0 !== xF ? xF : null,
+            source: null !== (PF = null === Lk || void 0 === Lk ? void 0 : Lk.source) && void 0 !== PF ? PF : null,
+            storagePullBreaks: iF,
+            noWebGpu: jF.messageKey
           };
-          (0, pb.c)((HS => {
-            HS.noteWasmPick(SS)
+          (0, WT.c)((Fk => {
+            Fk.noteWasmPick(kk)
           }))
         }
-        const DH = "webgpu" === kS;
-        if (yx = (0, BS.h)(DH ? dS : null, DH && null !== (NS = null === (uS = Sx) || void 0 === uS ? void 0 : uS.pagePreviews().bK) && void 0 !== NS ? NS : null, kH, fu), bq) return null;
-        if (VS.reserveAtJoin((0, Rt.l)(null !== ES && void 0 !== ES ? ES : Cg.j)), dS.isStopped) return null;
-        const hH = SS => {
-          if (Bx = performance.now(), Mx = !1, null !== zN) try {
-            zN.animationFrame(SS)
-          } catch (bS) {
-            Du(bS)
+        const sF = "webgpu" === Zk;
+        if (Cy = (0, dk.i)(sF ? Ek : null, sF && null !== (lk = null === (qk = Xy) || void 0 === qk ? void 0 : qk.pagePreviews().ke) && void 0 !== lk ? lk : null, jF, eq), la) return null;
+        if (Uk.reserveAtJoin((0, AX.h)(null !== Gk && void 0 !== Gk ? Gk : xI.h)), Ek.isStopped) return null;
+        const zF = kk => {
+          if (Ay = performance.now(), gy = !1, null !== fl) try {
+            fl.animationFrame(kk)
+          } catch (Tk) {
+            zq(Tk)
           }
-          if (function(SS, HS) {
-              return HS && !bq && !Tx && yu() && Au() && SS.framePaces(performance.now())
-            }(dS, Sq)) {
-            if (dS.writePendingInput(), (0, wS.f)(SS, du), Pu(!1, SS), null !== zN) try {
-              zN.framePaced()
-            } catch (bS) {
-              Du(bS)
+          if (function(kk, Fk) {
+              return Fk && !la && !ry && Cq() && Uq() && kk.framePaces(performance.now())
+            }(Ek, Xa)) {
+            if (Ek.writePendingInput(), (0, sk.g)(kk, nq), sq(!1, kk), null !== fl) try {
+              fl.framePaced()
+            } catch (Tk) {
+              zq(Tk)
             }
-            requestAnimationFrame(hH)
-          } else Ou(dS, Sq, "budget") && ((0, cH.h)(dS.lastFrameKind) && Au() && (0, wS.f)(SS, du), Pu(Sq && mN, SS), eN.frame(dS.lastFrameKind, Sq && Au(), SS), (0, cH.c)(dS.lastFrameKind) && OH.F.drew(), su(dS), VS.afterFrame(), requestAnimationFrame(hH))
+            requestAnimationFrame(zF)
+          } else Oq(Ek, Xa, "budget") && ((0, OF.f)(Ek.lastFrameKind) && Uq() && (0, sk.g)(kk, nq), sq(Xa && ka, kk), Fa.frame(Ek.lastFrameKind, Xa && Uq(), kk), (0, OF.d)(Ek.lastFrameKind) && vF.F.drew(), Yq(Ek), Uk.afterFrame(), requestAnimationFrame(zF))
         };
-        requestAnimationFrame(hH);
-        return function(SS) {
-          if (SS.has("inputLog") && (0, ft.h)((SS => {
+        requestAnimationFrame(zF);
+        return function(kk) {
+          if (kk.has("inputLog") && (0, ZX.g)((kk => {
               let {
-                action: HS,
-                down: gS,
-                press: tS
-              } = SS;
-              console.info(`${Kt} input ${HS} ${gS?"down":"up"} press ${tS} at ${performance.now().toFixed(1)}`)
-            })), SS.has("inputDump")) {
-            const SS = [];
-            Gt = SS, Object.assign(window, {
-              bloxdInputDump: () => SS.join("\n")
+                action: Fk,
+                down: Ik,
+                press: Xk
+              } = kk;
+              console.info(`${eX} input ${Fk} ${Ik?"down":"up"} press ${Xk} at ${performance.now().toFixed(1)}`)
+            })), kk.has("inputDump")) {
+            const kk = [];
+            HX = kk, Object.assign(window, {
+              bloxdInputDump: () => kk.join("\n")
             })
           }
-        }(new URLSearchParams(window.location.search)), hx = function(SS) {
-          let HS = null;
-          const gS = () => {
-              null !== HS && (clearInterval(HS), HS = null)
+        }(new URLSearchParams(window.location.search)), oy = function(kk) {
+          let Fk = null;
+          const Ik = () => {
+              null !== Fk && (clearInterval(Fk), Fk = null)
             },
-            tS = () => {
-              document.hidden ? HS ??= setInterval((() => {
-                SI(SS) || gS()
-              }), MX) : gS()
+            Xk = () => {
+              document.hidden ? Fk ??= setInterval((() => {
+                XL(kk) || Ik()
+              }), Ai) : Ik()
             };
-          return document.addEventListener("visibilitychange", tS), tS(), () => {
-            gS(), document.removeEventListener("visibilitychange", tS)
+          return document.addEventListener("visibilitychange", Xk), Xk(), () => {
+            Ik(), document.removeEventListener("visibilitychange", Xk)
           }
-        }(dS), dS
-      }(HS).then((SS => {
-        var HS;
-        (tS(Nx), fx(null !== SS), null !== SS && (db = performance.now()), ux(SS), null === SS) ? null === (HS = Sx) || void 0 === HS || HS.pagePreviews().endSession(null === (0, NH.t)()): Wx("booted")
-      }), (SS => {
-        tS(Nx), fx(!1), ux(null), Uu({
-          site: vX,
-          error: SS,
+        }(Ek), Ek
+      }(Fk).then((kk => {
+        var Fk;
+        (Xk(Ly), ey(null !== kk), null !== kk && (vT = performance.now()), Zy(kk), null === kk) ? null === (Fk = Xy) || void 0 === Fk || Fk.pagePreviews().endSession(null === (0, aF.n)()): Wy("booted")
+      }), (kk => {
+        Xk(Ly), ey(!1), Zy(null), Bq({
+          site: ni,
+          error: kk,
           header: null
-        }, Nx)
+        }, Ly)
       }))
     }
 
-    function fq() {
-      const SS = qx;
-      null !== SS && Xq().then((HS => {
+    function ea() {
+      const kk = ty;
+      null !== kk && aa().then((Fk => {
         let {
-          pageBuiltInAnimationPack: gS
-        } = HS;
-        gS().provide(SS)
-      }), (SS => {
-        console.warn(`${OX} the built-in animation pack's chunk did not load: lifeforms stay in their rest pose`, SS)
+          pageBuiltInAnimationPack: Ik
+        } = Fk;
+        Ik().provide(kk)
+      }), (kk => {
+        console.warn(`${vi} the built-in animation pack's chunk did not load: lifeforms stay in their rest pose`, kk)
       }))
     }
-    const kq = new class {
-      constructor(SS) {
-        this.deps = SS, this.latest = 0, this.Ku = null
+    const wa = new class {
+      constructor(kk) {
+        this.deps = kk, this.latest = 0, this.eq = null
       }
-      apply(SS, HS) {
-        return this.load(SS, HS, 0)
+      apply(kk, Fk) {
+        return this.load(kk, Fk, 0)
       }
-      async load(SS, HS, gS) {
-        var tS;
-        const bS = ++this.latest,
-          XS = this.deps.compiler;
-        if (void 0 === HS || null === HS || "object" !== typeof HS || 0 === Object.keys(HS).length || null === XS) return this.drop(SS), !1;
-        if ((null === (tS = this.Ku) || void 0 === tS ? void 0 : tS.module) === SS && (0, mH.Wd)(this.Ku.files, HS)) return !1;
+      async load(kk, Fk, Ik) {
+        var Xk;
+        const Tk = ++this.latest,
+          ik = this.deps.compiler;
+        if (void 0 === Fk || null === Fk || "object" !== typeof Fk || 0 === Object.keys(Fk).length || null === ik) return this.drop(kk), !1;
+        if ((null === (Xk = this.eq) || void 0 === Xk ? void 0 : Xk.module) === kk && (0, DF.ce)(this.eq.files, Fk)) return !1;
         try {
-          const [gS, tS] = await Promise.all([XS(), this.deps.builtIns()]);
-          if (bS !== this.latest) return !1;
-          const xS = await gS(HS, Hg, {
-            builtIns: tS
+          const [Ik, Xk] = await Promise.all([ik(), this.deps.builtIns()]);
+          if (Tk !== this.latest) return !1;
+          const yk = await Ik(Fk, II, {
+            builtIns: Xk
           });
-          if (bS !== this.latest) return !1;
-          const NS = this.call(SS, xS);
-          if (void 0 === NS) throw new Sg("the compiled animations didn't read against the built-in pack");
-          return this.Ku = {
-              module: SS,
-              files: HS
+          if (Tk !== this.latest) return !1;
+          const lk = this.call(kk, yk);
+          if (void 0 === lk) throw new FI("the compiled animations didn't read against the built-in pack");
+          return this.eq = {
+              module: kk,
+              files: Fk
             },
-            function(SS) {
-              for (let HS = 0; HS + 2 < SS.length; HS += 3) {
-                ("error" === SS[HS] ? console.error : console.warn)(`Animation for the texture pack: ${SS[HS+1]}: ${SS[HS+2]}`)
+            function(kk) {
+              for (let Fk = 0; Fk + 2 < kk.length; Fk += 3) {
+                ("error" === kk[Fk] ? console.error : console.warn)(`Animation for the texture pack: ${kk[Fk+1]}: ${kk[Fk+2]}`)
               }
-            }(NS), !0
-        } catch (NS) {
-          var xS;
-          if (bS !== this.latest) return !1;
-          this.drop(SS), 0 === gS && this.deps.warn("the texture pack's animations didn't load: lifeforms play the built-in ones", NS);
-          const tS = (null !== (xS = this.deps.retryAfterMs) && void 0 !== xS ? xS : rH)[gS];
-          return void 0 === tS || NS instanceof Sg || (0, eH.i)(SS) || setTimeout((() => {
-            bS === this.latest && this.load(SS, HS, gS + 1)
-          }), tS), !1
+            }(lk), !0
+        } catch (lk) {
+          var yk;
+          if (Tk !== this.latest) return !1;
+          this.drop(kk), 0 === Ik && this.deps.warn("the texture pack's animations didn't load: lifeforms play the built-in ones", lk);
+          const Xk = (null !== (yk = this.deps.retryAfterMs) && void 0 !== yk ? yk : kI)[Ik];
+          return void 0 === Xk || lk instanceof FI || (0, MF.f)(kk) || setTimeout((() => {
+            Tk === this.latest && this.load(kk, Fk, Ik + 1)
+          }), Xk), !1
         }
       }
-      call(SS, HS) {
+      call(kk, Fk) {
         try {
-          return SS.pgS(HS)
-        } catch (gS) {
-          throw (0, eH.k)(SS, gS), gS
+          return kk.rIk(Fk)
+        } catch (Ik) {
+          throw (0, MF.g)(kk, Ik), Ik
         }
       }
-      clear(SS) {
-        this.latest++, this.drop(SS)
+      clear(kk) {
+        this.latest++, this.drop(kk)
       }
-      drop(SS) {
-        const HS = this.Ku;
-        if (this.Ku = null, (null === HS || void 0 === HS ? void 0 : HS.module) === SS && !(0, eH.i)(SS)) try {
-          this.call(SS, null)
+      drop(kk) {
+        const Fk = this.eq;
+        if (this.eq = null, (null === Fk || void 0 === Fk ? void 0 : Fk.module) === kk && !(0, MF.f)(kk)) try {
+          this.call(kk, null)
         } catch {}
       }
     }({
-      compiler: RH.b,
+      compiler: gF.d,
       builtIns: async () => {
         const {
-          pageBuiltInAnimationPack: SS
-        } = await Xq();
-        return SS().whenSet()
+          pageBuiltInAnimationPack: kk
+        } = await aa();
+        return kk().whenSet()
       },
-      warn: fu
+      warn: eq
     });
-    async function aq(SS, HS) {
-      let tS = !1;
-      await Kq({
+    async function Ha(kk, Fk) {
+      let Xk = !1;
+      await Ja({
         matchmake: async () => {
           const {
-            guestJoinTarget: bS,
-            guestJoinWithPack: XS
-          } = await gS.e(272).then((() => gS(51007)));
-          return tS ? bS(SS, HS, Ku()) : (tS = !0, XS(SS, HS, (HS => ju(SS, HS)), Ku))
+            guestJoinTarget: Tk,
+            guestJoinWithPack: ik
+          } = await Ik.e(272).then((() => Ik(50967)));
+          return Xk ? Tk(kk, Fk, Jq()) : (Xk = !0, ik(kk, Fk, (Fk => xq(kk, Fk)), Jq))
         },
-        onFailure: SS => {
-          (0, wg.showJoinFailure)(SS, Nx)
+        onFailure: kk => {
+          (0, VI.showJoinFailure)(kk, Ly)
         },
-        rejoin: Eq,
-        invalidateTrafficCode: Lq
+        rejoin: ua,
+        invalidateTrafficCode: ba
       })
     }
-    async function Kq(SS) {
+    async function Ja(kk) {
       let {
-        matchmake: HS,
-        onFailure: gS,
-        rejoin: bS,
-        invalidateTrafficCode: XS,
-        pageReady: xS,
-        signal: NS
-      } = SS;
-      const qS = () => !0 === (null === NS || void 0 === NS ? void 0 : NS.aborted);
-      let uS;
-      const IS = Xb.b.rejoinHold();
-      NN = null;
-      const fS = (0, cg.$)("wasm", Ru);
-      let kS = !1,
-        aS = performance.now();
+        matchmake: Fk,
+        onFailure: Ik,
+        rejoin: Tk,
+        invalidateTrafficCode: ik,
+        pageReady: yk,
+        signal: lk
+      } = kk;
+      const ak = () => !0 === (null === lk || void 0 === lk ? void 0 : lk.aborted);
+      let qk;
+      const Lk = iT.b.rejoinHold();
+      Ll = null;
+      const tk = (0, OI.P)("wasm", hq);
+      let Zk = !1,
+        jk = performance.now();
       try {
-        if (!await kx) return {
+        if (!await wy) return {
           kind: "stopped"
         };
-        if (qS()) return {
-          kind: "Hg"
+        if (ak()) return {
+          kind: "iI"
         };
-        xq().catch((() => {}));
-        let SS = await HS();
-        var jS, GS;
-        if (aS = performance.now(), !qS()) Fu(null !== (jS = null === (GS = SS.target.session) || void 0 === GS ? void 0 : GS.gameNameWithVariation) && void 0 !== jS ? jS : null);
-        const gS = () => performance.now() - SS.matchedAt <= SS.freshMs,
-          tS = Gq(SS.target).catch((() => {}));
-        gS() && !qS() && (uS = new pt(SS.target, {
-          signal: NS
+        qa().catch((() => {}));
+        let kk = await Fk();
+        var wk, Hk;
+        if (jk = performance.now(), !ak()) mq(null !== (wk = null === (Hk = kk.target.session) || void 0 === Hk ? void 0 : Hk.gameNameWithVariation) && void 0 !== wk ? wk : null);
+        const Ik = () => performance.now() - kk.matchedAt <= kk.freshMs,
+          Xk = Pa(kk.target).catch((() => {}));
+        Ik() && !ak() && (qk = new WX(kk.target, {
+          signal: lk
         }));
-        const XS = performance.now();
-        if (null === await Ix) return {
+        const ik = performance.now();
+        if (null === await jy) return {
           kind: "stopped"
         };
-        var CS, nS;
-        if (function(SS) {
-            var HS, gS;
-            if (hb.b.markGameEngineConstructed(), cb) return;
-            cb = !0;
-            const tS = Math.max(SS, null !== (HS = Jb) && void 0 !== HS ? HS : SS);
-            (0, Zb.l)("ready", Math.max(0, (null !== (gS = Ob) && void 0 !== gS ? gS : tS) - tS) / 1e3)
-          }(XS), !qS())
-          if (null !== Ob && null !== db ? ((0, KS.n)("wasm_loaded", Ob), (0, KS.n)("wasm_core_ready", db)) : console.warn("[bloxd-wasm-client] a join found the core before boot marked its steps"), SS.target.session && (0, lb.e)(SS.target.session.gameNameWithVariation)) null === (CS = Gx) || void 0 === CS || CS.prestart();
-        if (await tS, !gS() && !qS()) null === (nS = uS) || void 0 === nS || nS.rematched(), SS = await HS(), aS = performance.now();
-        if (qS()) return {
-          kind: "Hg"
+        var Jk, xk;
+        if (function(kk) {
+            var Fk, Ik;
+            if (VT.c.markGameEngineConstructed(), ET) return;
+            ET = !0;
+            const Xk = Math.max(kk, null !== (Fk = ST) && void 0 !== Fk ? Fk : kk);
+            (0, zT.i)("ready", Math.max(0, (null !== (Ik = oT) && void 0 !== Ik ? Ik : Xk) - Xk) / 1e3)
+          }(ik), !ak())
+          if (null !== oT && null !== vT ? ((0, ek.r)("wasm_loaded", oT), (0, ek.r)("wasm_core_ready", vT)) : console.warn("[bloxd-wasm-client] a join found the core before boot marked its steps"), kk.target.session && (0, hT.c)(kk.target.session.gameNameWithVariation)) null === (Jk = Py) || void 0 === Jk || Jk.prestart();
+        if (await Xk, !Ik() && !ak()) null === (xk = qk) || void 0 === xk || xk.rematched(), kk = await Fk(), jk = performance.now();
+        if (ak()) return {
+          kind: "iI"
         };
-        const IS = await async function(SS) {
-          var HS, gS, tS;
+        const Lk = await async function(kk) {
+          var Fk, Ik, Xk;
           let {
-            signal: bS,
-            rejoin: XS = null,
-            early: xS,
-            pageReady: NS
+            signal: Tk,
+            rejoin: ik = null,
+            early: yk,
+            pageReady: lk
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (null !== bS && void 0 !== bS && bS.aborted) throw new DOMException("the join was left", "AbortError");
-          const qS = (uS = CN, IS = performance.now(), null !== uS && IS - uS < dt);
-          var uS, IS;
-          CN = null;
-          const fS = new AbortController,
-            kS = null !== (HS = null === (gS = SS.session) || void 0 === gS ? void 0 : gS.gameNameWithVariation) && void 0 !== HS ? HS : null;
-          Fu(kS), Pq({
-            controller: fS,
-            game: kS
-          }), nN = null, null === (tS = DN) || void 0 === tS || tS.abort(), DN = null, hN = !1, ZN = null, JN.clear();
-          const aS = () => {
-            (0, DH.f)(fS, (0, DH.c)(bS))
+          if (null !== Tk && void 0 !== Tk && Tk.aborted) throw new DOMException("the join was left", "AbortError");
+          const ak = (qk = Kl, Lk = performance.now(), null !== qk && Lk - qk < vX);
+          var qk, Lk;
+          Kl = null;
+          const tk = new AbortController,
+            Zk = null !== (Fk = null === (Ik = kk.session) || void 0 === Ik ? void 0 : Ik.gameNameWithVariation) && void 0 !== Fk ? Fk : null;
+          mq(Zk), sa({
+            controller: tk,
+            game: Zk
+          }), Ql = null, null === (Xk = zl) || void 0 === Xk || Xk.abort(), zl = null, ol = !1, vl = null, El.clear();
+          const jk = () => {
+            (0, sF.h)(tk, (0, sF.e)(Tk))
           };
-          null === bS || void 0 === bS || bS.addEventListener("abort", aS, {
+          null === Tk || void 0 === Tk || Tk.addEventListener("abort", jk, {
             once: !0
           });
           try {
-            var jS, GS, CS;
-            const HS = await Ix;
-            if (null === HS || HS.isStopped || bq) throw new Error("no core is running to join a game with");
-            if (SS.session && null !== yx) {
-              const HS = await Cq(yx.join(SS.session.gameNameWithVariation), fS.signal);
-              if ((0, Ub.q)("webgpuloss")) {
-                const gS = SS.session.gameNameWithVariation,
-                  tS = yx.couldntRunInJoinedGame();
-                (0, pb.c)((SS => SS.noteWasmJoin(gS, HS, tS)))
+            var wk, Hk, Jk;
+            const Fk = await jy;
+            if (null === Fk || Fk.isStopped || la) throw new Error("no core is running to join a game with");
+            if (kk.session && null !== Cy) {
+              const Fk = await Ka(Cy.join(kk.session.gameNameWithVariation), tk.signal);
+              if ((0, cT.o)("webgpuloss")) {
+                const Ik = kk.session.gameNameWithVariation,
+                  Xk = Cy.couldntRunInJoinedGame();
+                (0, WT.c)((kk => kk.noteWasmJoin(Ik, Fk, Xk)))
               }
-              if (null !== HS) throw new BS.b(HS)
+              if (null !== Fk) throw new dk.d(Fk)
             }
             const [, , , {
-              joinRoom: gS
-            }] = await Cq(Promise.all([(0, hS.i)(HS), Gq(SS), null === NS || void 0 === NS ? void 0 : NS(), xq()]), fS.signal), tS = SS.session, bS = tS ? {
-              ...yq,
-              attachSocket: HS => {
-                const gS = sq(HS, SS.endpoint);
-                var bS;
-                null !== gS && (IN = {
-                  conn: gS,
-                  info: tS
-                }, null === (bS = fN) || void 0 === bS || bS(tS.playerDbId));
-                return gS
+              joinRoom: Ik
+            }] = await Ka(Promise.all([(0, Vk.n)(Fk), Pa(kk), null === lk || void 0 === lk ? void 0 : lk(), qa()]), tk.signal), Xk = kk.session, Tk = Xk ? {
+              ...Ca,
+              attachSocket: Fk => {
+                const Ik = Ya(Fk, kk.endpoint);
+                var Tk;
+                null !== Ik && (jl = {
+                  conn: Ik,
+                  info: Xk
+                }, null === (Tk = el) || void 0 === Tk || Tk(Xk.playerDbId));
+                return Ik
               }
-            } : yq, uS = await gS(bS, SS, {
-              signal: fS.signal,
-              early: xS
-            }).catch((SS => {
-              throw function(SS) {
-                if (!(SS instanceof AS.d)) return SS;
-                if ("roomError" === SS.stage && null !== ZN) return jq(new AS.d(SS.message, SS.stage, SS.code, ZN), SS);
-                const HS = "closed" === SS.stage && null !== PN ? JN.get(PN.conn) : void 0;
-                return void 0 === HS ? SS : jq(new AS.d(SS.message, SS.stage, HS.code, null, SS.socketOpened), SS)
-              }(SS)
+            } : Ca, qk = await Ik(Tk, kk, {
+              signal: tk.signal,
+              early: yk
+            }).catch((kk => {
+              throw function(kk) {
+                if (!(kk instanceof bk.b)) return kk;
+                if ("roomError" === kk.stage && null !== vl) return xa(new bk.b(kk.message, kk.stage, kk.code, vl), kk);
+                const Fk = "closed" === kk.stage && null !== sl ? El.get(sl.conn) : void 0;
+                return void 0 === Fk ? kk : xa(new bk.b(kk.message, kk.stage, Fk.code, null, kk.socketOpened), kk)
+              }(kk)
             }));
-            if (xN !== fS) throw uS.leave(), new DOMException("the join was left", "AbortError");
-            Dq(uS), null === (jS = nx) || void 0 === jS || jS.newGame();
-            const IS = function(SS) {
-              var HS, gS;
+            if (ql !== tk) throw qk.leave(), new DOMException("the join was left", "AbortError");
+            za(qk), null === (wk = Qy) || void 0 === wk || wk.newGame();
+            const Lk = function(kk) {
+              var Fk, Ik;
               const {
-                session: tS
-              } = SS, bS = void 0 === tS ? SS.joinOptions.lobbyName : tS.lobbyName;
+                session: Xk
+              } = kk, Tk = void 0 === Xk ? kk.joinOptions.lobbyName : Xk.lobbyName;
               return {
-                endpoint: SS.endpoint,
-                game: null !== (HS = null === tS || void 0 === tS ? void 0 : tS.gameNameWithVariation) && void 0 !== HS ? HS : SS.roomName,
-                lobby: String(null !== bS && void 0 !== bS ? bS : null),
-                postCookies: null !== (gS = SS.postCookies) && void 0 !== gS ? gS : null
+                endpoint: kk.endpoint,
+                game: null !== (Fk = null === Xk || void 0 === Xk ? void 0 : Xk.gameNameWithVariation) && void 0 !== Fk ? Fk : kk.roomName,
+                lobby: String(null !== Tk && void 0 !== Tk ? Tk : null),
+                postCookies: null !== (Ik = kk.postCookies) && void 0 !== Ik ? Ik : null
               }
-            }(SS);
-            XN.set(uS, IS), it(IS);
-            const kS = performance.now(),
-              aS = {
-                conn: uS.conn,
-                rejoin: XS,
-                game: null !== (GS = null === (CS = SS.session) || void 0 === CS ? void 0 : CS.gameNameWithVariation) && void 0 !== GS ? GS : "",
-                joinedAt: kS,
-                rejoinedAt: qS ? kS : null,
+            }(kk);
+            al.set(qk, Lk), UX(Lk);
+            const Zk = performance.now(),
+              jk = {
+                conn: qk.conn,
+                rejoin: ik,
+                game: null !== (Hk = null === (Jk = kk.session) || void 0 === Jk ? void 0 : Jk.gameNameWithVariation) && void 0 !== Hk ? Hk : "",
+                joinedAt: Zk,
+                rejoinedAt: ak ? Zk : null,
                 overflow: null
               };
-            kN = aS,
-              function(SS, HS) {
-                mq();
-                const gS = {
-                  endpoint: HS,
-                  roomId: SS.seat.room.roomId,
+            wl = jk,
+              function(kk, Fk) {
+                kq();
+                const Ik = {
+                  endpoint: Fk,
+                  roomId: kk.seat.room.roomId,
                   heldConn: 0,
                   dropCode: 0,
                   pendingHold: null,
-                  resume: new Kg({
-                    reconnect: (SS, HS, tS) => async function(SS, HS, gS, tS) {
+                  resume: new wI({
+                    reconnect: (kk, Fk, Xk) => async function(kk, Fk, Ik, Xk) {
                       const {
-                        roomId: bS,
-                        roomToken: XS
-                      } = rq(SS, HS), xS = gx;
-                      if (null === xS || xS.isStopped || bq) throw new Error("no core is running to resume the game on");
+                        roomId: Tk,
+                        roomToken: ik
+                      } = Iq(kk, Fk), yk = iy;
+                      if (null === yk || yk.isStopped || la) throw new Error("no core is running to resume the game on");
                       const {
-                        resumeRoom: NS
-                      } = await Cq(xq(), gS), qS = {
-                        ...yq,
-                        attachSocket: HS => aN !== SS || 0 === SS.heldConn ? (HS.close(), null) : sq(HS, SS.endpoint, !0)
+                        resumeRoom: lk
+                      } = await Ka(qa(), Ik), ak = {
+                        ...Ca,
+                        attachSocket: Fk => Hl !== kk || 0 === kk.heldConn ? (Fk.close(), null) : Ya(Fk, kk.endpoint, !0)
                       };
-                      return NS(qS, SS.endpoint, bS, XS, {
-                        signal: gS,
-                        onAttached: tS
+                      return lk(ak, kk.endpoint, Tk, ik, {
+                        signal: Ik,
+                        onAttached: Xk
                       })
-                    }(gS, SS, HS, tS),
-                    releaseSeat: SS => {
-                      !async function(SS, HS) {
+                    }(Ik, kk, Fk, Xk),
+                    releaseSeat: kk => {
+                      !async function(kk, Fk) {
                         const {
-                          roomId: gS,
-                          roomToken: tS
-                        } = rq(SS, HS);
+                          roomId: Ik,
+                          roomToken: Xk
+                        } = Iq(kk, Fk);
                         try {
                           const {
-                            leaveHeldSeat: HS
-                          } = await xq();
-                          await HS(SS.endpoint, gS, tS)
-                        } catch (bS) {
-                          console.warn(`${OX} the held seat of a game left while it reconnected couldn't be released`, bS)
+                            leaveHeldSeat: Fk
+                          } = await qa();
+                          await Fk(kk.endpoint, Ik, Xk)
+                        } catch (Tk) {
+                          console.warn(`${vi} the held seat of a game left while it reconnected couldn't be released`, Tk)
                         }
-                      }(gS, SS)
+                      }(Ik, kk)
                     },
-                    isLive: () => aN === gS && null !== kN && !bq,
-                    uE: SS => {
-                      GN = SS, lq()
+                    isLive: () => Hl === Ik && null !== wl && !la,
+                    sE: kk => {
+                      Pl = kk, Ma()
                     },
-                    onReconnected: SS => {
-                      ! function(SS) {
-                        const HS = bN;
-                        if (null !== HS && HS !== SS) {
-                          const gS = XN.get(HS);
-                          void 0 !== gS && XN.set(SS, gS), lN === HS && (lN = SS), HS.detach()
+                    onReconnected: kk => {
+                      ! function(kk) {
+                        const Fk = ll;
+                        if (null !== Fk && Fk !== kk) {
+                          const Ik = al.get(Fk);
+                          void 0 !== Ik && al.set(kk, Ik), Ml === Fk && (Ml = kk), Fk.detach()
                         }
-                        Dq(SS)
-                      }(SS)
+                        za(kk)
+                      }(kk)
                     },
-                    onGaveUp: (SS, HS) => {
-                      ! function(SS, HS, gS) {
-                        var tS, bS;
-                        console.warn(`${OX} gave up reconnecting (${gS.reason}, ${gS.attempts} attempts)`, gS.lastError), (0, wg.reportReconnectGaveUp)(gS, Nx);
-                        const XS = null !== (tS = null === (bS = kN) || void 0 === bS ? void 0 : bS.rejoin) && void 0 !== tS ? tS : null;
-                        eq(SS, "gaveUp"), hq();
-                        const xS = {
-                          code: SS.dropCode,
+                    onGaveUp: (kk, Fk) => {
+                      ! function(kk, Fk, Ik) {
+                        var Xk, Tk;
+                        console.warn(`${vi} gave up reconnecting (${Ik.reason}, ${Ik.attempts} attempts)`, Ik.lastError), (0, VI.reportReconnectGaveUp)(Ik, Ly);
+                        const ik = null !== (Xk = null === (Tk = wl) || void 0 === Tk ? void 0 : Tk.rejoin) && void 0 !== Xk ? Xk : null;
+                        Fq(kk, "gaveUp"), oa();
+                        const yk = {
+                          code: kk.dropCode,
                           name: null,
-                          reason: UX,
-                          canReconnect: !HS,
+                          reason: fi,
+                          canReconnect: !Fk,
                           automaticallyReconnect: !1,
                           requiresRefresh: !1
                         };
-                        Aq(xS, HS ? null : XS, !1, {
-                          reasonKey: pX,
-                          canPlayAgain: HS
+                        Ua(yk, Fk ? null : ik, !1, {
+                          reasonKey: Bi,
+                          canPlayAgain: Fk
                         })
-                      }(gS, SS, HS)
+                      }(Ik, kk, Fk)
                     }
                   })
                 };
-                aN = gS, null !== KN && KN.conn === SS.conn && gS.resume.onInitialInfo(KN)
-              }(uS, SS.endpoint), performance.mark(YX), (0, KS.n)("wasm_joined", kS), setTimeout((() => {
-                bN === uS && (0, KS.h)()
-              }), 0), fq(), console.info(`${OX} joined ${SS.roomName} as ${uS.seat.sessionId} at ${Math.round(performance.now())} ms`);
-            const nS = nN;
-            nN = null, null !== nS && Oq(aS, nS.mask, nS.frames);
-            const PS = JN.get(uS.conn);
-            return JN.clear(), void 0 !== PS && (Dq(null), Yq(uS.conn, PS.code, PS.reason)), uS
+                Hl = Ik, null !== Jl && Jl.conn === kk.conn && Ik.resume.onInitialInfo(Jl)
+              }(qk, kk.endpoint), performance.mark(bi), (0, ek.r)("wasm_joined", Zk), setTimeout((() => {
+                ll === qk && (0, ek.i)()
+              }), 0), ea(), console.info(`${vi} joined ${kk.roomName} as ${qk.seat.sessionId} at ${Math.round(performance.now())} ms`);
+            const xk = Ql;
+            Ql = null, null !== xk && Oa(jk, xk.mask, xk.frames);
+            const Pk = El.get(qk.conn);
+            return El.clear(), void 0 !== Pk && (za(null), Ra(qk.conn, Pk.code, Pk.reason)), qk
           } finally {
-            var nS;
-            null === bS || void 0 === bS || bS.removeEventListener("abort", aS), xN === fS && Qq(bN, null), (null === (nS = PN) || void 0 === nS ? void 0 : nS.join) === fS && (PN = null)
+            var xk;
+            null === Tk || void 0 === Tk || Tk.removeEventListener("abort", jk), ql === tk && Va(ll, null), (null === (xk = sl) || void 0 === xk ? void 0 : xk.join) === tk && (sl = null)
           }
-        }(SS.target, {
-          signal: NS,
-          rejoin: bS(SS.target),
-          early: uS,
-          pageReady: xS
+        }(kk.target, {
+          signal: lk,
+          rejoin: Tk(kk.target),
+          early: qk,
+          pageReady: yk
         });
-        return kS = !0, {
+        return Zk = !0, {
           kind: "joined",
-          game: IS
+          game: Lk
         }
-      } catch (QS) {
-        if (QS instanceof DOMException && "AbortError" === QS.name || qS()) return {
-          kind: "Hg"
+      } catch (Kk) {
+        if (Kk instanceof DOMException && "AbortError" === Kk.name || ak()) return {
+          kind: "iI"
         };
-        if (bq) return {
+        if (la) return {
           kind: "stopped"
         };
-        if (hN && (hN = !1, await XS().catch((SS => {
-            console.warn(`${OX} the cached traffic code could not be dropped`, SS)
-          }))), null === await Ix) return {
+        if (ol && (ol = !1, await ik().catch((kk => {
+            console.warn(`${vi} the cached traffic code could not be dropped`, kk)
+          }))), null === await jy) return {
           kind: "stopped"
         };
-        if (QS instanceof BS.b) return gS(QS, performance.now() - aS), {
+        if (Kk instanceof dk.d) return Ik(Kk, performance.now() - jk), {
           kind: "failed",
-          error: QS,
+          error: Kk,
           reloading: !1
         };
-        if (QS instanceof AS.d && QS.code === tS.c.wasmClientNotAllowed.code && rN) return xu("this server refused the wasm client to this account", "refused"), {
+        if (Kk instanceof bk.b && Kk.code === Xk.d.wasmClientNotAllowed.code && Ia) return qq("this server refused the wasm client to this account", "refused"), {
           kind: "failed",
-          error: QS,
+          error: Kk,
           reloading: !0
         };
-        const SS = QS instanceof AS.d && QS.code === tS.c.outdatedVersion.code,
-          HS = () => null === bN,
-          bS = await gI({
-            site: wg.JOIN_SITE,
-            error: QS,
-            outdated: SS
+        const kk = Kk instanceof bk.b && Kk.code === Xk.d.outdatedVersion.code,
+          Fk = () => null === ll,
+          Tk = await iL({
+            site: VI.JOIN_SITE,
+            error: Kk,
+            outdated: kk
           }, (() => {
-            gS(QS, performance.now() - aS)
+            Ik(Kk, performance.now() - jk)
           }), {
-            stillWanted: HS
+            stillWanted: Fk
           });
         return {
           kind: "failed",
-          error: QS,
-          reloading: bS
+          error: Kk,
+          reloading: Tk
         }
       } finally {
-        var PS;
-        kS || fS.end(), Xb.b.releaseHold(IS);
-        const SS = null === (PS = uS) || void 0 === PS ? void 0 : PS.release();
-        SS && (0, wg.reportUnusedSeat)(SS, Nx)
+        var Pk;
+        Zk || tk.end(), iT.b.releaseHold(Lk);
+        const kk = null === (Pk = qk) || void 0 === Pk ? void 0 : Pk.release();
+        kk && (0, VI.reportUnusedSeat)(kk, Ly)
       }
     }
 
-    function jq(SS, HS) {
-      return SS.stack = HS.stack, SS
+    function xa(kk, Fk) {
+      return kk.stack = Fk.stack, kk
     }
 
-    function Gq(SS) {
-      return SS.session ? (0, hS.m)(xx, SS.session.gameNameWithVariation) : Promise.resolve()
+    function Pa(kk) {
+      return kk.session ? (0, Vk.u)(qy, kk.session.gameNameWithVariation) : Promise.resolve()
     }
 
-    function Cq(SS, HS) {
-      return (0, DH.m)(HS), new Promise(((gS, tS) => {
-        const bS = () => {
-          tS((0, DH.c)(HS))
+    function Ka(kk, Fk) {
+      return (0, sF.m)(Fk), new Promise(((Ik, Xk) => {
+        const Tk = () => {
+          Xk((0, sF.e)(Fk))
         };
-        HS.addEventListener("abort", bS, {
+        Fk.addEventListener("abort", Tk, {
           once: !0
-        }), SS.then((SS => {
-          HS.removeEventListener("abort", bS), gS(SS)
-        }), (SS => {
-          HS.removeEventListener("abort", bS), tS(SS)
+        }), kk.then((kk => {
+          Fk.removeEventListener("abort", Tk), Ik(kk)
+        }), (kk => {
+          Fk.removeEventListener("abort", Tk), Xk(kk)
         }))
       }))
     }
 
-    function nq() {
-      Pq(null)
+    function Qa() {
+      sa(null)
     }
 
-    function Pq(SS) {
-      var HS, gS, tS;
+    function sa(kk) {
+      var Fk, Ik, Xk;
       (function() {
-        const SS = aN;
-        null !== SS && eq(SS, "left")
-      }(), null === Kx || Kx.left) || (Kx.left = !0, null === (tS = (0, hS.h)()) || void 0 === tS || tS.socketLeft(), (0, kS.r)({
+        const kk = Hl;
+        null !== kk && Fq(kk, "left")
+      }(), null === Jy || Jy.left) || (Jy.left = !0, null === (Xk = (0, Vk.k)()) || void 0 === Xk || Xk.socketLeft(), (0, Zk.s)({
         websocketUrl: null
       }));
-      xN && (0, DH.f)(xN, new DOMException("the join was left", "AbortError")), hq(null !== SS), null === (HS = yx) || void 0 === HS || HS.leave();
-      const bS = bN;
-      null !== SS && Xb.b.setGame(SS.game), Qq(null, null !== (gS = null === SS || void 0 === SS ? void 0 : SS.controller) && void 0 !== gS ? gS : null), null === bS || void 0 === bS || bS.leave(), wq(0), (0, CH.d)()
+      ql && (0, sF.h)(ql, new DOMException("the join was left", "AbortError")), oa(null !== kk), null === (Fk = Cy) || void 0 === Fk || Fk.leave();
+      const Tk = ll;
+      null !== kk && iT.b.setGame(kk.game), Va(null, null !== (Ik = null === kk || void 0 === kk ? void 0 : kk.controller) && void 0 !== Ik ? Ik : null), null === Tk || void 0 === Tk || Tk.leave(), Sa(0), (0, xF.i)()
     }
 
-    function Qq(SS, HS) {
-      bN = SS, xN = HS, null === bN && null === xN && Xb.b.setGame(void 0)
+    function Va(kk, Fk) {
+      ll = kk, ql = Fk, null === ll && null === ql && iT.b.setGame(void 0)
     }
 
-    function Dq(SS) {
-      Qq(SS, xN)
+    function za(kk) {
+      Va(kk, ql)
     }
 
-    function wq(SS) {
-      const HS = gx;
-      return null !== TX && !bq && null !== HS && !HS.isStopped && (!!TX(AS.i, 0, (0, AS.r)(SS)) && (mx = !0, 0 === SS || Tx || Ou(HS, !1, "all"), !0))
+    function Sa(kk) {
+      const Fk = iy;
+      return null !== ri && !la && null !== Fk && !Fk.isStopped && (!!ri(bk.g, 0, (0, bk.v)(kk)) && (kl = !0, 0 === kk || ry || Oq(Fk, !1, "all"), !0))
     }
 
-    function hq() {
-      var SS, HS;
-      arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (0, cg.h)();
-      const gS = null !== (SS = null === (HS = kN) || void 0 === HS ? void 0 : HS.overflow) && void 0 !== SS ? SS : null;
-      kN = null, null !== gS && (0, wg.reportEventOverflow)(gS, Nx)
+    function oa() {
+      var kk, Fk;
+      arguments.length > 0 && void 0 !== arguments[0] && arguments[0] || (0, OI.g)();
+      const Ik = null !== (kk = null === (Fk = wl) || void 0 === Fk ? void 0 : Fk.overflow) && void 0 !== kk ? kk : null;
+      wl = null, null !== Ik && (0, VI.reportEventOverflow)(Ik, Ly)
     }
 
-    function Zq() {
-      null !== bN || null !== xN ? nq() : Bq()
+    function va() {
+      null !== ll || null !== ql ? Qa() : Aa()
     }
 
-    function Jq(SS, HS) {
-      console.warn(`${OX} the event buffer refused records in ${HS} frames (categories ${SS})`), bq || (null !== kN ? Oq(kN, SS, HS) : null !== xN && function(SS, HS, gS) {
-        var tS;
-        const bS = function(SS, HS) {
-          return null === SS ? "drop" : SS.activated ? "keep" : 0 !== (HS & sH.v.NetSession) ? "fail" : "drop"
-        }((null === (tS = PN) || void 0 === tS ? void 0 : tS.join) === SS ? PN : null, HS);
-        "keep" === bS ? nN = {
-          mask: HS,
-          frames: gS
-        } : "fail" === bS && (0, DH.f)(SS, new Error("the join's net session was lost to an event overflow"))
-      }(xN, SS, HS))
+    function Ea(kk, Fk) {
+      console.warn(`${vi} the event buffer refused records in ${Fk} frames (categories ${kk})`), la || (null !== wl ? Oa(wl, kk, Fk) : null !== ql && function(kk, Fk, Ik) {
+        var Xk;
+        const Tk = function(kk, Fk) {
+          return null === kk ? "drop" : kk.activated ? "keep" : 0 !== (Fk & BF.x.NetSession) ? "fail" : "drop"
+        }((null === (Xk = sl) || void 0 === Xk ? void 0 : Xk.join) === kk ? sl : null, Fk);
+        "keep" === Tk ? Ql = {
+          mask: Fk,
+          frames: Ik
+        } : "fail" === Tk && (0, sF.h)(kk, new Error("the join's net session was lost to an event overflow"))
+      }(ql, kk, Fk))
     }
 
-    function Oq(SS, HS, gS) {
-      const tS = SS.overflow ??= {
+    function Oa(kk, Fk, Ik) {
+      const Xk = kk.overflow ??= {
         frames: 0,
         acks: 0,
         mask: 0,
         outcome: null
       };
-      tS.frames += gS, tS.acks++, tS.mask |= HS;
-      const bS = function(SS, HS, gS) {
-        if (0 === (SS & sH.v.NetSession)) return "none";
-        const tS = null !== HS.rejoinedAt && gS - HS.rejoinedAt < ct;
-        return null === HS.rejoin || tS ? "fail" : "rejoin"
-      }(HS, SS, performance.now());
-      "none" !== bS && queueMicrotask((() => {
-        if (kN !== SS) return;
-        const HS = "rejoin" === bS && performance.now() - QN >= YS.d;
-        tS.outcome = HS ? "rejoined" : "failed", Aq(function(SS, HS) {
+      Xk.frames += Ik, Xk.acks++, Xk.mask |= Fk;
+      const Tk = function(kk, Fk, Ik) {
+        if (0 === (kk & BF.x.NetSession)) return "none";
+        const Xk = null !== Fk.rejoinedAt && Ik - Fk.rejoinedAt < EX;
+        return null === Fk.rejoin || Xk ? "fail" : "rejoin"
+      }(Fk, kk, performance.now());
+      "none" !== Tk && queueMicrotask((() => {
+        if (wl !== kk) return;
+        const Fk = "rejoin" === Tk && performance.now() - Vl >= uk.e;
+        Xk.outcome = Fk ? "rejoined" : "failed", Ua(function(kk, Fk) {
           return {
             code: 0,
             name: "eventOverflow",
             reason: "Your game fell behind the server.",
-            canReconnect: SS,
-            automaticallyReconnect: HS,
+            canReconnect: kk,
+            automaticallyReconnect: Fk,
             requiresRefresh: !1
           }
-        }(null !== SS.rejoin, HS), SS.rejoin, HS), nq(), HS && (CN = performance.now())
+        }(null !== kk.rejoin, Fk), kk.rejoin, Fk), Qa(), Fk && (Kl = performance.now())
       }))
     }
 
-    function dq() {
-      rN && function(SS, HS) {
+    function na() {
+      Ia && function(kk, Fk) {
         let {
-          mesh: gS,
-          worldgen: tS,
-          modelPool: bS
-        } = SS;
-        "landingPage" === HS ? (null === gS || void 0 === gS || gS.stopWorkers(), null === tS || void 0 === tS || tS.stopWorker(), null === bS || void 0 === bS || bS.stopWorkers()) : ((0, FS.g)(HS) || "inGame" === HS) && (null === gS || void 0 === gS || gS.restartWorkers(), null === bS || void 0 === bS || bS.startWorkers())
+          mesh: Ik,
+          worldgen: Xk,
+          modelPool: Tk
+        } = kk;
+        "landingPage" === Fk ? (null === Ik || void 0 === Ik || Ik.stopWorkers(), null === Xk || void 0 === Xk || Xk.stopWorker(), null === Tk || void 0 === Tk || Tk.stopWorkers()) : ((0, Ak.g)(Fk) || "inGame" === Fk) && (null === Ik || void 0 === Ik || Ik.restartWorkers(), null === Tk || void 0 === Tk || Tk.startWorkers())
       }({
-        mesh: nx,
-        worldgen: Gx,
-        modelPool: dx
-      }, FS.b.get("gameState"))
+        mesh: Qy,
+        worldgen: Py,
+        modelPool: ny
+      }, Ak.d.get("gameState"))
     }
 
-    function cq(SS) {
-      Sq = SS, Hq && vq(Hq, SS)
+    function Ga(kk) {
+      Xa = kk, Ta && pa(Ta, kk)
     }
 
-    function vq(SS, HS) {
-      SS.style.visibility = HS ? "visible" : "hidden"
+    function pa(kk, Fk) {
+      kk.style.visibility = Fk ? "visible" : "hidden"
     }
 
-    function Eq(SS) {
-      var HS;
-      const gS = SS.roomName,
-        tS = null !== (HS = SS.joinOptions.lobbyName) && void 0 !== HS ? HS : null;
+    function ua(kk) {
+      var Fk;
+      const Ik = kk.roomName,
+        Xk = null !== (Fk = kk.joinOptions.lobbyName) && void 0 !== Fk ? Fk : null;
       return () => {
-        aq(gS, tS)
+        Ha(Ik, Xk)
       }
     }
 
-    function Lq() {
-      return gS.e(272).then((() => gS(51007))).then((SS => {
+    function ba() {
+      return Ik.e(272).then((() => Ik(50967))).then((kk => {
         let {
-          invalidateGuestTrafficCode: HS
-        } = SS;
-        return HS()
-      })).catch((SS => {
-        console.warn(`${OX} the cached traffic code could not be dropped`, SS)
+          invalidateGuestTrafficCode: Fk
+        } = kk;
+        return Fk()
+      })).catch((kk => {
+        console.warn(`${vi} the cached traffic code could not be dropped`, kk)
       }))
     }
 
-    function Yq(SS, HS, gS) {
-      var bS, XS;
-      let xS = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (bq) return;
-      if ((null === (bS = kN) || void 0 === bS ? void 0 : bS.conn) !== SS) return void(null !== xN && JN.set(SS, {
-        code: HS,
-        reason: gS
+    function Ra(kk, Fk, Ik) {
+      var Tk, ik;
+      let yk = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (la) return;
+      if ((null === (Tk = wl) || void 0 === Tk ? void 0 : Tk.conn) !== kk) return void(null !== ql && El.set(kk, {
+        code: Fk,
+        reason: Ik
       }));
       const {
-        rejoin: NS,
-        game: qS,
-        joinedAt: uS
-      } = kN;
-      hq(), mq();
-      const IS = (0, YS.k)(HS, (0, Et.g)(SS));
-      if (console.info(`${OX} the game's connection closed with code ${HS} (${null!==(XS=IS.name)&&void 0!==XS?XS:"unrecognised"})`), HS === tS.c.gameOrPluginKick.code || xS || (0, wg.reportDisconnect)(IS, Nx, {
-          closeReason: gS,
-          sinceJoinedMs: performance.now() - uS,
-          game: qS
-        }), IS.requiresRefresh) {
-        const SS = "outdatedVersion" === IS.name,
-          gS = new Error(`the game's connection closed with code ${HS}`),
-          tS = () => null === kN && null === xN;
-        return void gI({
-          site: wg.JOIN_SITE,
-          error: gS,
-          outdated: SS
+        rejoin: lk,
+        game: ak,
+        joinedAt: qk
+      } = wl;
+      oa(), kq();
+      const Lk = (0, uk.l)(Fk, (0, nX.g)(kk));
+      if (console.info(`${vi} the game's connection closed with code ${Fk} (${null!==(ik=Lk.name)&&void 0!==ik?ik:"unrecognised"})`), Fk === Xk.d.gameOrPluginKick.code || yk || (0, VI.reportDisconnect)(Lk, Ly, {
+          closeReason: Ik,
+          sinceJoinedMs: performance.now() - qk,
+          game: ak
+        }), Lk.requiresRefresh) {
+        const kk = "outdatedVersion" === Lk.name,
+          Ik = new Error(`the game's connection closed with code ${Fk}`),
+          Xk = () => null === wl && null === ql;
+        return void iL({
+          site: VI.JOIN_SITE,
+          error: Ik,
+          outdated: kk
         }, (() => {
-          tS() && Aq(IS, null, !1)
+          Xk() && Ua(Lk, null, !1)
         }), {
-          stillWanted: tS
+          stillWanted: Xk
         })
       }
-      const fS = IS.canReconnect ? NS : null,
-        kS = null !== fS && IS.automaticallyReconnect && performance.now() - QN >= YS.d;
-      Aq(IS, fS, kS)
+      const tk = Lk.canReconnect ? lk : null,
+        Zk = null !== tk && Lk.automaticallyReconnect && performance.now() - Vl >= uk.e;
+      Ua(Lk, tk, Zk)
     }
 
-    function Aq(SS, HS, gS) {
-      var tS;
-      let bS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+    function Ua(kk, Fk, Ik) {
+      var Xk;
+      let Tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
         reasonKey: null,
         canPlayAgain: !1
       };
-      if (gq) return;
-      Xb.b.unwantedLeave(gS && null !== HS && 0 === wN.size), null === (tS = DN) || void 0 === tS || tS.abort();
-      const XS = new AbortController;
-      DN = XS;
-      const xS = null === HS ? null : () => {
-        XS.signal.aborted || (XS.abort(), HS())
+      if (ia) return;
+      iT.b.unwantedLeave(Ik && null !== Fk && 0 === Sl.size), null === (Xk = zl) || void 0 === Xk || Xk.abort();
+      const ik = new AbortController;
+      zl = ik;
+      const yk = null === Fk ? null : () => {
+        ik.signal.aborted || (ik.abort(), Fk())
       };
-      if (gS && null !== xS) {
-        QN = performance.now();
-        const SS = setTimeout(xS, YS.c);
-        XS.signal.addEventListener("abort", (() => {
-          clearTimeout(SS)
+      if (Ik && null !== yk) {
+        Vl = performance.now();
+        const kk = setTimeout(yk, uk.b);
+        ik.signal.addEventListener("abort", (() => {
+          clearTimeout(kk)
         }))
       }
-      const NS = {
-        code: SS.code,
-        name: SS.name,
-        reason: SS.reason,
-        reasonKey: bS.reasonKey,
-        reconnect: xS,
-        reconnecting: gS,
-        requiresRefresh: SS.requiresRefresh,
-        canPlayAgain: bS.canPlayAgain
+      const lk = {
+        code: kk.code,
+        name: kk.name,
+        reason: kk.reason,
+        reasonKey: Tk.reasonKey,
+        reconnect: yk,
+        reconnecting: Ik,
+        requiresRefresh: kk.requiresRefresh,
+        canPlayAgain: Tk.canPlayAgain
       };
-      if (wN.size > 0)
-        for (const uS of [...wN]) try {
-          uS(NS)
-        } catch (qS) {
-          console.error(`${OX} an unwanted-leave listener threw`, qS)
-        } else Jt((0, wt.i)(SS, null !== xS, gS), XS.signal).then((HS => {
-          HS && (null !== xS ? xS() : SS.requiresRefresh && (0, MS.k)())
+      if (Sl.size > 0)
+        for (const qk of [...Sl]) try {
+          qk(lk)
+        } catch (ak) {
+          console.error(`${vi} an unwanted-leave listener threw`, ak)
+        } else SX((0, sX.i)(kk, null !== yk, Ik), ik.signal).then((Fk => {
+          Fk && (null !== yk ? yk() : kk.requiresRefresh && (0, Yk.i)())
         }))
     }
-    const yq = {
-      attachSocket: SS => sq(SS),
-      onConnection: SS => (ON.add(SS), () => {
-        ON.delete(SS)
+    const Ca = {
+      attachSocket: kk => Ya(kk),
+      onConnection: kk => (Ol.add(kk), () => {
+        Ol.delete(kk)
       }),
-      sendRaw: (SS, HS) => {
-        const gS = Kx;
-        return null !== gS && gS.conn === SS && Wu(gS, HS)
+      sendRaw: (kk, Fk) => {
+        const Ik = Jy;
+        return null !== Ik && Ik.conn === kk && Wq(Ik, Fk)
       },
-      leaveRoom: wq,
-      closeSocket: SS => {
-        var HS;
-        (null === (HS = Kx) || void 0 === HS ? void 0 : HS.conn) === SS && Bq()
+      leaveRoom: Sa,
+      closeSocket: kk => {
+        var Fk;
+        (null === (Fk = Jy) || void 0 === Fk ? void 0 : Fk.conn) === kk && Aa()
       },
-      flushNet: Mq
+      flushNet: ga
     };
 
-    function Vq(SS) {
-      var HS;
+    function Na(kk) {
+      var Fk;
       let {
-        aux: gS,
-        payload: tS
-      } = SS;
-      null === (HS = gx) || void 0 === HS || HS.queueOptions(gS, tS)
+        aux: Ik,
+        payload: Xk
+      } = kk;
+      null === (Fk = iy) || void 0 === Fk || Fk.queueOptions(Ik, Xk)
     }
 
-    function iq(SS, HS) {
-      Vq(function(SS, HS) {
-        return nb = SS ? {
-          preventMovement: HS
-        } : null, SS ? Pb(HS) : {
-          aux: pH.pc.AdEnd,
-          payload: Cb
+    function ca(kk, Fk) {
+      Na(function(kk, Fk) {
+        return xT = kk ? {
+          preventMovement: Fk
+        } : null, kk ? PT(Fk) : {
+          aux: fF.Zb.AdEnd,
+          payload: JT
         }
-      }(SS, HS))
+      }(kk, Fk))
     }
 
-    function Wq(SS) {
-      var HS;
-      HN = SS, null === (HS = gx) || void 0 === HS || HS.setUiPrefs(SS)
+    function Wa(kk) {
+      var Fk;
+      Tl = kk, null === (Fk = iy) || void 0 === Fk || Fk.setUiPrefs(kk)
     }
 
-    function zq(SS, HS) {
-      xx.setMaster(SS, HS)
+    function fa(kk, Fk) {
+      qy.setMaster(kk, Fk)
     }
 
-    function Uq(SS) {
-      var HS;
-      gN = SS, null === (HS = gx) || void 0 === HS || HS.setEnvPrefs(SS)
+    function Ba(kk) {
+      var Fk;
+      il = kk, null === (Fk = iy) || void 0 === Fk || Fk.setEnvPrefs(kk)
     }
 
-    function pq(SS) {
-      var HS;
-      tN = SS, null === (HS = gx) || void 0 === HS || HS.setLookPrefs(SS)
+    function da(kk) {
+      var Fk;
+      yl = kk, null === (Fk = iy) || void 0 === Fk || Fk.setLookPrefs(kk)
     }
 
-    function sq(SS) {
-      var HS;
-      let gS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new URL(SS.url).origin,
-        tS = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      if (SS.readyState === WebSocket.CLOSING || SS.readyState === WebSocket.CLOSED) return console.warn(`${OX} a closing or closed socket can't be attached`), null;
-      const bS = gx;
-      if (!bS || bS.isStopped) return console.warn(`${OX} no core is running to attach a socket to`), SS.close(), null;
-      if (null === (0, hS.h)()) return console.warn(`${OX} the game has not started to attach a socket to`), SS.close(), null;
-      if (Ux > pH.y) return console.warn(`${OX} this core has attached all the sockets it can; reload to play on`), SS.close(), null;
-      if (mx && !Tx && (Ou(bS, !1, "all"), bS.isStopped || bq)) return SS.close(), null;
-      Bq();
-      const XS = Ux++;
-      if (!tu(bS, "open", XS, tS ? pH.nc.Resume : 0)) return SS.close(), null;
-      tS || GH.d.reset(), PN = null === xN ? null : {
-        join: xN,
-        conn: XS,
+    function Ya(kk) {
+      var Fk;
+      let Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : new URL(kk.url).origin,
+        Xk = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      if (kk.readyState === WebSocket.CLOSING || kk.readyState === WebSocket.CLOSED) return console.warn(`${vi} a closing or closed socket can't be attached`), null;
+      const Tk = iy;
+      if (!Tk || Tk.isStopped) return console.warn(`${vi} no core is running to attach a socket to`), kk.close(), null;
+      if (null === (0, Vk.k)()) return console.warn(`${vi} the game has not started to attach a socket to`), kk.close(), null;
+      if (By > fF.w) return console.warn(`${vi} this core has attached all the sockets it can; reload to play on`), kk.close(), null;
+      if (kl && !ry && (Oq(Tk, !1, "all"), Tk.isStopped || la)) return kk.close(), null;
+      Aa();
+      const ik = By++;
+      if (!yq(Tk, "open", ik, Xk ? fF.Xb.Resume : 0)) return kk.close(), null;
+      Xk || JF.e.reset(), sl = null === ql ? null : {
+        join: ql,
+        conn: ik,
         activated: !1
-      }, SS.binaryType = "arraybuffer";
-      const xS = new jg.d((() => {
-          ! function(SS, HS) {
-            if (Kx !== HS || SS.isStopped || null === Tq(HS, WX)) return;
-            HS.detach(), Kx = null, Rq(SS, HS, WX, "", !0), HS.ws.close()
-          }(bS, NS)
+      }, kk.binaryType = "arraybuffer";
+      const yk = new HI.b((() => {
+          ! function(kk, Fk) {
+            if (Jy !== Fk || kk.isStopped || null === ra(Fk, ci)) return;
+            Fk.detach(), Jy = null, ha(kk, Fk, ci, "", !0), Fk.ws.close()
+          }(Tk, lk)
         })),
-        NS = {
-          ws: SS,
-          conn: XS,
+        lk = {
+          ws: kk,
+          conn: ik,
           pending: [],
           pendingBytes: 0,
           left: !1,
-          resume: tS,
+          resume: Xk,
           token: null,
           detach: () => {
-            xS.dispose(), SS.removeEventListener("message", qS), SS.removeEventListener("open", uS), SS.removeEventListener("close", IS)
+            yk.dispose(), kk.removeEventListener("message", ak), kk.removeEventListener("open", qk), kk.removeEventListener("close", Lk)
           }
         },
-        qS = SS => {
-          if (SS.data instanceof ArrayBuffer) {
-            var HS;
-            const gS = new Uint8Array(SS.data);
-            xS.heard(), NS.token = null !== (HS = (0, Gg.e)(gS)) && void 0 !== HS ? HS : NS.token,
-              function(SS, HS, gS) {
-                ou(SS, (() => {
-                  SS.rings.net.writeFrame(HS, gS) || SS.crash(tg.p, `a socket frame of ${gS.byteLength} bytes did not fit the net-in ring`)
+        ak = kk => {
+          if (kk.data instanceof ArrayBuffer) {
+            var Fk;
+            const Ik = new Uint8Array(kk.data);
+            yk.heard(), lk.token = null !== (Fk = (0, JI.d)(Ik)) && void 0 !== Fk ? Fk : lk.token,
+              function(kk, Fk, Ik) {
+                Dq(kk, (() => {
+                  kk.rings.net.writeFrame(Fk, Ik) || kk.crash(TI.n, `a socket frame of ${Ik.byteLength} bytes did not fit the net-in ring`)
                 }));
-                const tS = SS.rings.net.cursor >= iX;
-                !ru() && (tS || SS.netWrittenSinceFrame >= VX) && Ou(SS, !1, document.hidden ? "all" : "budget");
-                HI(SS)
-              }(bS, XS, gS)
+                const Xk = kk.rings.net.cursor >= Ni;
+                !IL() && (Xk || kk.netWrittenSinceFrame >= Ci) && Oq(kk, !1, document.hidden ? "all" : "budget");
+                TL(kk)
+              }(Tk, ik, Ik)
           }
         },
-        uS = () => {
-          tS || (0, KS.n)("wasm_socket_open", performance.now());
-          for (const HS of NS.pending.splice(0)) SS.send(HS);
-          NS.pendingBytes = 0
+        qk = () => {
+          Xk || (0, ek.r)("wasm_socket_open", performance.now());
+          for (const Fk of lk.pending.splice(0)) kk.send(Fk);
+          lk.pendingBytes = 0
         },
-        IS = SS => {
-          if (Kx === NS && bS.rings.net.cursor > 0 && Ou(bS, !1, "all"), Kx === NS) {
-            if (NS.detach(), Kx = null, Rq(bS, NS, SS.code, SS.reason) || Fq(bS, NS)) return;
-            tu(bS, "close", XS), oq(XS, NS.left), Yq(XS, SS.code, SS.reason)
+        Lk = kk => {
+          if (Jy === lk && Tk.rings.net.cursor > 0 && Oq(Tk, !1, "all"), Jy === lk) {
+            if (lk.detach(), Jy = null, ha(Tk, lk, kk.code, kk.reason) || ma(Tk, lk)) return;
+            yq(Tk, "close", ik), Da(ik, lk.left), Ra(ik, kk.code, kk.reason)
           }
         };
-      return SS.addEventListener("message", qS), SS.addEventListener("open", uS), SS.addEventListener("close", IS), Kx = NS, null === (HS = (0, hS.h)()) || void 0 === HS || HS.socketAttached(XS), (0, kS.r)({
-        websocketUrl: gS
-      }), XS
+      return kk.addEventListener("message", ak), kk.addEventListener("open", qk), kk.addEventListener("close", Lk), Jy = lk, null === (Fk = (0, Vk.k)()) || void 0 === Fk || Fk.socketAttached(ik), (0, Zk.s)({
+        websocketUrl: Ik
+      }), ik
     }
 
-    function Bq() {
-      const SS = Kx;
-      if (!SS) return;
-      const HS = gx,
-        gS = SS.resume;
-      gS && (Mq(), Kx !== SS) || (Kx = null, SS.detach(), SS.ws.close(), null !== HS && (Fq(HS, SS) || gS && Rq(HS, SS, zX)) || (null !== HS && tu(HS, "close", SS.conn), oq(SS.conn, SS.left)))
+    function Aa() {
+      const kk = Jy;
+      if (!kk) return;
+      const Fk = iy,
+        Ik = kk.resume;
+      Ik && (ga(), Jy !== kk) || (Jy = null, kk.detach(), kk.ws.close(), null !== Fk && (ma(Fk, kk) || Ik && ha(Fk, kk, Wi)) || (null !== Fk && yq(Fk, "close", kk.conn), Da(kk.conn, kk.left)))
     }
 
-    function Mq() {
-      const SS = gx;
-      null !== SS && !SS.isStopped && !bq && !Tx && SS.rings.net.cursor > 0 && Ou(SS, !1, "all")
+    function ga() {
+      const kk = iy;
+      null !== kk && !kk.isStopped && !la && !ry && kk.rings.net.cursor > 0 && Oq(kk, !1, "all")
     }
 
-    function Fq(SS, HS) {
-      var gS;
-      if (!HS.resume) return !1;
-      const tS = aN;
-      return null !== tS && null !== HS.token && "" !== HS.token && (tS.pendingHold = {
-        conn: HS.conn,
-        token: `${tS.roomId}:${HS.token}`
-      }), tu(SS, "close", HS.conn), null === (gS = (0, hS.h)()) || void 0 === gS || gS.socketDetached(HS.conn), !0
+    function ma(kk, Fk) {
+      var Ik;
+      if (!Fk.resume) return !1;
+      const Xk = Hl;
+      return null !== Xk && null !== Fk.token && "" !== Fk.token && (Xk.pendingHold = {
+        conn: Fk.conn,
+        token: `${Xk.roomId}:${Fk.token}`
+      }), yq(kk, "close", Fk.conn), null === (Ik = (0, Vk.k)()) || void 0 === Ik || Ik.socketDetached(Fk.conn), !0
     }
 
-    function Rq(SS, HS, gS) {
-      let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
-        bS = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-      const XS = Tq(HS, gS);
-      if (null === XS) return !1;
+    function ha(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "",
+        Tk = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+      const ik = ra(Fk, Ik);
+      if (null === ik) return !1;
       const {
-        Ku: xS,
-        token: NS,
-        game: qS,
-        joinedAt: uS
-      } = XS;
-      if (!tu(SS, "close", HS.conn, pH.A.Held)) return !0;
-      console.warn(`${OX} the game's connection ${bS?"went silent":`dropped with code ${gS}`}, holding it`);
-      const IS = {
-        closeReason: tS,
-        sinceJoinedMs: performance.now() - uS,
-        game: qS
+        eq: yk,
+        token: lk,
+        game: ak,
+        joinedAt: qk
+      } = ik;
+      if (!yq(kk, "close", Fk.conn, fF.E.Held)) return !0;
+      console.warn(`${vi} the game's connection ${Tk?"went silent":`dropped with code ${Ik}`}, holding it`);
+      const Lk = {
+        closeReason: Xk,
+        sinceJoinedMs: performance.now() - qk,
+        game: ak
       };
-      return (0, wg.reportDisconnect)((0, YS.k)(gS), Nx, IS, bS ? "silent" : void 0), xS.heldConn = HS.conn, xS.dropCode = gS, xS.pendingHold = {
-        conn: HS.conn,
-        token: `${xS.roomId}:${NS}`
-      }, Tx || Ou(SS, !1, "all"), !0
+      return (0, VI.reportDisconnect)((0, uk.l)(Ik), Ly, Lk, Tk ? "silent" : void 0), yk.heldConn = Fk.conn, yk.dropCode = Ik, yk.pendingHold = {
+        conn: Fk.conn,
+        token: `${yk.roomId}:${lk}`
+      }, ry || Oq(kk, !1, "all"), !0
     }
 
-    function Tq(SS, HS) {
-      const gS = aN,
-        bS = kN,
-        XS = SS.token;
-      return null === gS || null === bS || bq || SS.left || bS.conn !== SS.conn || null === XS || "" === XS ? null : (0, tS.f)(HS) && gS.resume.canHoldSeat() ? {
-        Ku: gS,
-        token: XS,
-        game: bS.game,
-        joinedAt: bS.joinedAt
+    function ra(kk, Fk) {
+      const Ik = Hl,
+        Tk = wl,
+        ik = kk.token;
+      return null === Ik || null === Tk || la || kk.left || Tk.conn !== kk.conn || null === ik || "" === ik ? null : (0, Xk.i)(Fk) && Ik.resume.canHoldSeat() ? {
+        eq: Ik,
+        token: ik,
+        game: Tk.game,
+        joinedAt: Tk.joinedAt
       } : null
     }
 
-    function oq(SS, HS) {
-      var gS;
-      null === (gS = (0, hS.h)()) || void 0 === gS || gS.closeGame(SS), (0, Gb.e)().close(SS), HS || (0, kS.r)({
+    function Da(kk, Fk) {
+      var Ik;
+      null === (Ik = (0, Vk.k)()) || void 0 === Ik || Ik.closeGame(kk), (0, HT.b)().close(kk), Fk || (0, Zk.s)({
         websocketUrl: null
       })
     }
 
-    function lq() {
-      const SS = GN;
-      if (null === SS) return;
-      const HS = (0, hS.h)();
-      bq || null === HS || HS.uE(SS) ? GN = null : performance.now() - ex.pause >= BX && (ex.pause = performance.now(), console.warn(`${OX} the cmd ring had no room for SetPaused(${SS}): written before the next frame`))
+    function Ma() {
+      const kk = Pl;
+      if (null === kk) return;
+      const Fk = (0, Vk.k)();
+      la || null === Fk || Fk.sE(kk) ? Pl = null : performance.now() - Fl.pause >= Yi && (Fl.pause = performance.now(), console.warn(`${vi} the cmd ring had no room for SetPaused(${kk}): written before the next frame`))
     }
 
-    function mq() {
-      const SS = aN;
-      aN = null, null === SS || void 0 === SS || SS.resume.dispose()
+    function kq() {
+      const kk = Hl;
+      Hl = null, null === kk || void 0 === kk || kk.resume.dispose()
     }
 
-    function eq(SS, HS) {
-      var gS, tS;
+    function Fq(kk, Fk) {
+      var Ik, Xk;
       const {
-        heldConn: bS
-      } = SS, XS = SS.resume.resumingConn;
-      SS.heldConn = 0, SS.pendingHold = null, aN === SS && (aN = null), "left" === HS ? SS.resume.leave() : SS.resume.dispose(), 0 === jN || (null === (gS = Kx) || void 0 === gS ? void 0 : gS.conn) !== jN || "left" === HS && (null === (tS = bN) || void 0 === tS ? void 0 : tS.conn) === jN || gu(jN), "gaveUp" === HS && 0 !== XS && gu(XS), 0 !== bS && "refused" !== HS && (console.info(`${OX} the game held through its drop ${"left"===HS?"was left":"is given up"}`), null === gx || gx.isStopped || tu(gx, "close", bS), oq(bS, !1))
+        heldConn: Tk
+      } = kk, ik = kk.resume.resumingConn;
+      kk.heldConn = 0, kk.pendingHold = null, Hl === kk && (Hl = null), "left" === Fk ? kk.resume.leave() : kk.resume.dispose(), 0 === xl || (null === (Ik = Jy) || void 0 === Ik ? void 0 : Ik.conn) !== xl || "left" === Fk && (null === (Xk = ll) || void 0 === Xk ? void 0 : Xk.conn) === xl || iq(xl), "gaveUp" === Fk && 0 !== ik && iq(ik), 0 !== Tk && "refused" !== Fk && (console.info(`${vi} the game held through its drop ${"left"===Fk?"was left":"is given up"}`), null === iy || iy.isStopped || yq(iy, "close", Tk), Da(Tk, !1))
     }
 
-    function rq(SS, HS) {
-      const gS = HS.indexOf(":");
+    function Iq(kk, Fk) {
+      const Ik = Fk.indexOf(":");
       return {
-        roomId: gS < 0 ? SS.roomId : HS.slice(0, gS),
-        roomToken: HS.slice(gS + 1)
+        roomId: Ik < 0 ? kk.roomId : Fk.slice(0, Ik),
+        roomToken: Fk.slice(Ik + 1)
       }
     }
 
-    function Su(SS) {
-      (0, bg.logClientMeasurement)("join_preload", SS, {
+    function Xq(kk) {
+      (0, iI.logClientMeasurement)("join_preload", kk, {
         client: "wasm"
       })
     }
 
-    function Hu(SS) {
-      var HS;
-      KN = SS, SS.conn === jN && (jN = 0);
-      const gS = aN;
-      null !== gS && (null === (HS = kN) || void 0 === HS ? void 0 : HS.conn) === SS.conn && gS.resume.onInitialInfo(SS)
+    function Tq(kk) {
+      var Fk;
+      Jl = kk, kk.conn === xl && (xl = 0);
+      const Ik = Hl;
+      null !== Ik && (null === (Fk = wl) || void 0 === Fk ? void 0 : Fk.conn) === kk.conn && Ik.resume.onInitialInfo(kk)
     }
 
-    function gu(SS) {
-      var HS;
-      const gS = Kx;
-      (null === gS || void 0 === gS ? void 0 : gS.conn) === SS && (gS.left = !0, null === (HS = (0, hS.h)()) || void 0 === HS || HS.socketLeft(), (0, kS.r)({
+    function iq(kk) {
+      var Fk;
+      const Ik = Jy;
+      (null === Ik || void 0 === Ik ? void 0 : Ik.conn) === kk && (Ik.left = !0, null === (Fk = (0, Vk.k)()) || void 0 === Fk || Fk.socketLeft(), (0, Zk.s)({
         websocketUrl: null
-      }), wq(SS) ? setTimeout((() => {
-        Kx === gS && Bq()
-      }), AS.g) : Bq())
+      }), Sa(kk) ? setTimeout((() => {
+        Jy === Ik && Aa()
+      }), bk.f) : Aa())
     }
 
-    function tu(SS, HS, gS) {
-      let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-        bS = !1;
-      return ou(SS, (() => {
+    function yq(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+        Tk = !1;
+      return Dq(kk, (() => {
         const {
-          net: XS
-        } = SS.rings;
-        bS = "open" === HS ? XS.writeOpen(gS, tS) : XS.writeClose(gS, tS), bS || SS.crash(tg.p, `a socket ${HS} did not fit the net-in ring`)
-      })), bS
+          net: ik
+        } = kk.rings;
+        Tk = "open" === Fk ? ik.writeOpen(Ik, Xk) : ik.writeClose(Ik, Xk), Tk || kk.crash(TI.n, `a socket ${Fk} did not fit the net-in ring`)
+      })), Tk
     }
 
-    function bu(SS, HS) {
-      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      if (Xu()) {
-        const tS = "browser" === SS && (0, Kb.W)() ? "blockedAfterLoss" : "unsupported";
-        return (0, wg.reportUnsupportedFallback)(SS, tS, HS, gS), void xu(`the wasm client can't run here (${HS}; ${tS})`, tS)
-      }(0, wg.showUnsupported)(SS, "unsupported", HS, gS)
+    function lq(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      if (aq()) {
+        const Xk = "browser" === kk && (0, eT.V)() ? "blockedAfterLoss" : "unsupported";
+        return (0, VI.reportUnsupportedFallback)(kk, Xk, Fk, Ik), void qq(`the wasm client can't run here (${Fk}; ${Xk})`, Xk)
+      }(0, VI.showUnsupported)(kk, "unsupported", Fk, Ik)
     }
 
-    function Xu() {
-      return rN && "wasm" !== (0, aH.g)(window.location.search)
+    function aq() {
+      return Ia && "wasm" !== (0, eF.f)(window.location.search)
     }
 
-    function xu(SS, HS) {
-      console.warn(`${OX} ${SS}: reloading on the JS client`), null !== HS && (0, aH.x)(HS), (0, aH.u)(null === HS ? "reloadOntoJs" : "decline");
-      const gS = () => {
-        (0, MS.h)(aH.E)
+    function qq(kk, Fk) {
+      console.warn(`${vi} ${kk}: reloading on the JS client`), null !== Fk && (0, eF.w)(Fk), (0, eF.u)(null === Fk ? "reloadOntoJs" : "decline");
+      const Ik = () => {
+        (0, Yk.e)(eF.y)
       };
-      (0, wg.flushCrashReports)(MS.d).then(gS, gS)
+      (0, VI.flushCrashReports)(Yk.c).then(Ik, Ik)
     }
 
-    function Nu(SS, HS, gS, tS) {
-      return EN(SS, HS, gS, tS)
+    function Lq(kk, Fk, Ik, Xk) {
+      return ul(kk, Fk, Ik, Xk)
     }
 
-    function qu() {
-      null === AN || null === gx || gx.isStopped || bq || null !== vx || null === TX || (vx = AN(TX, fu, ku().follow))
+    function tq() {
+      null === Ul || null === iy || iy.isStopped || la || null !== py || null === ri || (py = Ul(ri, eq, wq().follow))
     }
 
-    function uu() {
-      var SS, HS, gS;
-      return null !== (SS = null === (HS = bx) || void 0 === HS || null === (gS = HS.textures) || void 0 === gS ? void 0 : gS.files()) && void 0 !== SS ? SS : null
+    function Zq() {
+      var kk, Fk, Ik;
+      return null !== (kk = null === (Fk = ly) || void 0 === Fk || null === (Ik = Fk.textures) || void 0 === Ik ? void 0 : Ik.files()) && void 0 !== kk ? kk : null
     }
 
-    function Iu(SS) {
-      ku().follow((HS => {
-        null !== HS && Promise.all([Promise.all([gS.e(201), gS.e(45)]).then((() => gS(51043))), (0, Kb.P)()]).then((SS => {
+    function jq(kk) {
+      wq().follow((Fk => {
+        null !== Fk && Promise.all([Promise.all([Ik.e(201), Ik.e(45)]).then((() => Ik(50999))), (0, eT.Q)()]).then((kk => {
           let [{
-            followPagePackFiles: gS
-          }, tS] = SS;
-          const bS = null === tS || (0, gg.m)(tS) ? "webgl" : tS.backend;
-          gS(HS, bb.d, bS, (SS => {
-            bb.d.setPageFiles(SS)
-          }), fu)
-        }), (HS => {
-          console.warn(`${OX} the texture pack's files didn't load: the previews draw the shipped ones until the next opens`, HS), SS()
+            followPagePackFiles: Ik
+          }, Xk] = kk;
+          const Tk = null === Xk || (0, XI.h)(Xk) ? "webgl" : Xk.backend;
+          Ik(Fk, TT.f, Tk, (kk => {
+            TT.f.setPageFiles(kk)
+          }), eq)
+        }), (Fk => {
+          console.warn(`${vi} the texture pack's files didn't load: the previews draw the shipped ones until the next opens`, Fk), kk()
         }))
       }))
     }
 
-    function fu(SS, HS) {
-      console.warn(`${OX} ${SS}`, HS)
+    function eq(kk, Fk) {
+      console.warn(`${vi} ${kk}`, Fk)
     }
 
-    function ku() {
-      return tx ??= new Lb({
-        load: SS => Promise.all([gS.e(201), gS.e(54)]).then((() => gS(51052))).then((HS => {
+    function wq() {
+      return yy ??= new GT({
+        load: kk => Promise.all([Ik.e(201), Ik.e(54)]).then((() => Ik(51002))).then((Fk => {
           let {
-            startPageTexturePackFeed: gS
-          } = HS;
-          return gS(fu, SS)
+            startPageTexturePackFeed: Ik
+          } = Fk;
+          return Ik(eq, kk)
         })),
-        store: Lg.e,
-        tK: SS => {
-          Ix.then((() => {
-            (0, wg.reportTexturePackFeedLoadFailure)(SS, Nx)
+        store: pI.g,
+        Mj: kk => {
+          jy.then((() => {
+            (0, VI.reportTexturePackFeedLoadFailure)(kk, Ly)
           }))
         }
-      }), tx
+      }), yy
     }
-    const au = SS => ku().follow(SS);
+    const Hq = kk => wq().follow(kk);
 
-    function Ku() {
-      return ku().loaded()
+    function Jq() {
+      return wq().loaded()
     }
-    const ju = function(SS, HS, gS) {
-        let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now(),
-          bS = 0;
-        return async function(XS, xS) {
-          let NS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
-          const qS = ++bS,
-            uS = tS() + HS,
-            IS = await
-          function(SS, HS) {
-            let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {};
-            return new Promise((tS => {
-              const bS = setTimeout((() => {
-                tS(null), SS.then((SS => {
-                  null !== SS && (SS.joinedWithout(), gS(SS))
+    const xq = function(kk, Fk, Ik) {
+        let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => performance.now(),
+          Tk = 0;
+        return async function(ik, yk) {
+          let lk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
+          const ak = ++Tk,
+            qk = Xk() + Fk,
+            Lk = await
+          function(kk, Fk) {
+            let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => {};
+            return new Promise((Xk => {
+              const Tk = setTimeout((() => {
+                Xk(null), kk.then((kk => {
+                  null !== kk && (kk.joinedWithout(), Ik(kk))
                 }))
-              }), HS);
-              SS.then((SS => {
-                clearTimeout(bS), tS(SS)
+              }), Fk);
+              kk.then((kk => {
+                clearTimeout(Tk), Xk(kk)
               }))
             }))
-          }(SS(XS), HS, (SS => {
-            qS === bS && NS() && xS(SS, tS() + HS).catch((SS => {
-              gS("the texture pack step after the join failed", SS)
+          }(kk(ik), Fk, (kk => {
+            ak === Tk && lk() && yk(kk, Xk() + Fk).catch((kk => {
+              Ik("the texture pack step after the join failed", kk)
             }))
           }));
-          return null === IS ? null : xS(IS, uS)
+          return null === Lk ? null : yk(Lk, qk)
         }
-      }((SS => (0, tH.m)(SS) ? ku().request() : ku().forJoin()), Eb.d, fu),
-      Gu = function(SS, HS) {
-        let gS = !1;
+      }((kk => (0, TF.j)(kk) ? wq().request() : wq().forJoin()), nT.c, eq),
+      Pq = function(kk, Fk) {
+        let Ik = !1;
         return {
-          setGamePackConfirm: SS => {
-            gS = null !== SS, HS(SS)
+          setGamePackConfirm: kk => {
+            Ik = null !== kk, Fk(kk)
           },
-          packStep: (HS, tS, bS) => SS(HS, tS, (() => gS && bS()))
+          packStep: (Fk, Xk, Tk) => kk(Fk, Xk, (() => Ik && Tk()))
         }
-      }(ju, (SS => {
-        ku().setGamePackConfirm(SS)
+      }(xq, (kk => {
+        wq().setGamePackConfirm(kk)
       }));
 
-    function Cu(SS) {
-      Gu.setGamePackConfirm(SS)
+    function Kq(kk) {
+      Pq.setGamePackConfirm(kk)
     }
 
-    function nu() {
-      if (bq || null !== zN || null === yN || null === WN) return;
+    function Qq() {
+      if (la || null !== fl || null === Cl || null === Wl) return;
       const {
-        backend: SS,
-        canvas: HS,
-        fallbackReason: gS,
-        adapterVendor: tS
-      } = WN, bS = yN;
-      yN = null;
+        backend: kk,
+        canvas: Fk,
+        fallbackReason: Ik,
+        adapterVendor: Xk
+      } = Wl, Tk = Cl;
+      Cl = null;
       try {
-        zN = bS({
-          backend: SS,
-          canvas: HS,
-          fallbackReason: gS,
-          adapterVendor: tS,
-          joinedGame: () => bq ? null : bN,
-          inGame: Qu,
+        fl = Tk({
+          backend: kk,
+          canvas: Fk,
+          fallbackReason: Ik,
+          adapterVendor: Xk,
+          joinedGame: () => la ? null : ll,
+          inGame: Vq,
           shaderPackReach: () => {
-            var SS, HS;
-            return null !== (SS = null === (HS = yx) || void 0 === HS ? void 0 : HS.reachInJoinedGame()) && void 0 !== SS ? SS : null
+            var kk, Fk;
+            return null !== (kk = null === (Fk = Cy) || void 0 === Fk ? void 0 : Fk.reachInJoinedGame()) && void 0 !== kk ? kk : null
           },
-          Wj: () => Ex,
-          msaa: () => iN > 1,
-          writeCmd: (SS, HS, gS) => null !== TX && TX(SS, HS, gS),
+          Nw: () => uy,
+          msaa: () => cl > 1,
+          writeCmd: (kk, Fk, Ik) => null !== ri && ri(kk, Fk, Ik),
           takeFailedMeshJobs: () => {
-            var SS, HS;
-            return null !== (SS = null === (HS = nx) || void 0 === HS ? void 0 : HS.takeFailedMeshJobs()) && void 0 !== SS ? SS : 0
+            var kk, Fk;
+            return null !== (kk = null === (Fk = Qy) || void 0 === Fk ? void 0 : Fk.takeFailedMeshJobs()) && void 0 !== kk ? kk : 0
           },
-          readLoadCounts: SS => {
-            var HS, gS;
-            return null !== (HS = null === (gS = gx) || void 0 === gS ? void 0 : gS.readLoadCounts(SS)) && void 0 !== HS && HS
+          readLoadCounts: kk => {
+            var Fk, Ik;
+            return null !== (Fk = null === (Ik = iy) || void 0 === Ik ? void 0 : Ik.readLoadCounts(kk)) && void 0 !== Fk && Fk
           },
-          mainStalled: (SS, HS, gS) => {
-            (0, wg.reportMainStall)(SS, HS, gS, Nx)
+          mainStalled: (kk, Fk, Ik) => {
+            (0, VI.reportMainStall)(kk, Fk, Ik, Ly)
           }
         })
-      } catch (XS) {
-        console.error(`${OX} the frame telemetry didn't start`, XS)
+      } catch (ik) {
+        console.error(`${vi} the frame telemetry didn't start`, ik)
       }
     }
 
-    function Pu(SS, HS) {
+    function sq(kk, Fk) {
       try {
-        var gS, tS, bS;
-        const XS = dN && null !== (gS = null === (tS = gx) || void 0 === tS || null === (bS = tS.lastHeader) || void 0 === bS ? void 0 : bS.renderPending) && void 0 !== gS ? gS : 0;
-        (0, gt.f)(HS, SS, Qu() && !(null !== nb), XS)
-      } catch (XS) {
-        (0, gt.r)(), console.error(`${OX} the quality steps stopped`, XS)
+        var Ik, Xk, Tk;
+        const ik = nl && null !== (Ik = null === (Xk = iy) || void 0 === Xk || null === (Tk = Xk.lastHeader) || void 0 === Tk ? void 0 : Tk.renderPending) && void 0 !== Ik ? Ik : 0;
+        (0, XX.f)(Fk, kk, Vq() && !(null !== xT), ik)
+      } catch (ik) {
+        (0, XX.s)(), console.error(`${vi} the quality steps stopped`, ik)
       }
     }
 
-    function Qu() {
-      return null !== bN && lN === bN && !bq
+    function Vq() {
+      return null !== ll && Ml === ll && !la
     }
 
-    function Du(SS) {
-      const HS = zN;
-      zN = null;
+    function zq(kk) {
+      const Fk = fl;
+      fl = null;
       try {
-        null === HS || void 0 === HS || HS.stop()
+        null === Fk || void 0 === Fk || Fk.stop()
       } catch {}
-      console.error(`${OX} the frame telemetry threw: it stops`, SS)
+      console.error(`${vi} the frame telemetry threw: it stops`, kk)
     }
 
-    function wu(SS) {
-      var HS, gS, tS, bS;
-      if ((0, Gb.e)().fire(SS), "message" === SS.type) {
-        if (ox++, SS.Ju === pH.Xc.ERROR && null !== xN) {
-          var XS;
+    function Sq(kk) {
+      var Fk, Ik, Xk, Tk;
+      if ((0, HT.b)().fire(kk), "message" === kk.type) {
+        if (Dy++, kk.oq === fF.Mc.ERROR && null !== ql) {
+          var ik;
           const {
-            text: HS,
-            dropsCache: gS
-          } = (0, YS.m)((new TextDecoder).decode(SS.payload));
-          hN ||= gS, (null === (XS = PN) || void 0 === XS ? void 0 : XS.conn) === SS.conn && (ZN = HS)
-        } else if (SS.Ju === sH.kc.ResumeComplete) {
-          var xS;
-          null === (xS = aN) || void 0 === xS || xS.resume.onResumeComplete(SS.conn)
+            text: Fk,
+            dropsCache: Ik
+          } = (0, uk.p)((new TextDecoder).decode(kk.payload));
+          ol ||= Ik, (null === (ik = sl) || void 0 === ik ? void 0 : ik.conn) === kk.conn && (vl = Fk)
+        } else if (kk.oq === BF.sc.ResumeComplete) {
+          var yk;
+          null === (yk = Hl) || void 0 === yk || yk.resume.onResumeComplete(kk.conn)
         }
         return
       }
-      SS.phase === pH.E.Left ? lx = SS.conn : SS.phase === pH.E.Activated && (null === (HS = PN) || void 0 === HS ? void 0 : HS.conn) === SS.conn ? PN.activated = !0 : SS.phase === pH.E.Resumed ? function(SS) {
-        var HS, gS;
-        jN = SS;
-        const tS = aN;
-        if (null === tS || 0 === tS.heldConn || (null === (HS = Kx) || void 0 === HS ? void 0 : HS.conn) !== SS || !Kx.resume || null === kN) return;
-        console.info(`${OX} the game resumed on conn ${SS}, waiting for its InitialInfo`);
-        const bS = tS.heldConn;
-        tS.heldConn = 0, Kx.resume = !1, kN.conn = SS, (null === (gS = IN) || void 0 === gS ? void 0 : gS.conn) === bS && (IN = {
-          conn: SS,
-          info: IN.info
-        }), GH.d.apply({
+      kk.phase === fF.I.Left ? My = kk.conn : kk.phase === fF.I.Activated && (null === (Fk = sl) || void 0 === Fk ? void 0 : Fk.conn) === kk.conn ? sl.activated = !0 : kk.phase === fF.I.Resumed ? function(kk) {
+        var Fk, Ik;
+        xl = kk;
+        const Xk = Hl;
+        if (null === Xk || 0 === Xk.heldConn || (null === (Fk = Jy) || void 0 === Fk ? void 0 : Fk.conn) !== kk || !Jy.resume || null === wl) return;
+        console.info(`${vi} the game resumed on conn ${kk}, waiting for its InitialInfo`);
+        const Tk = Xk.heldConn;
+        Xk.heldConn = 0, Jy.resume = !1, wl.conn = kk, (null === (Ik = jl) || void 0 === Ik ? void 0 : Ik.conn) === Tk && (jl = {
+          conn: kk,
+          info: jl.info
+        }), JF.e.apply({
           shopInfo: null,
-          _shopVersion: bH.b
+          _shopVersion: iF.e
         })
-      }(SS.conn) : SS.phase === pH.E.Held ? function(SS) {
-        var HS;
-        const gS = aN,
-          tS = null !== (HS = null === gS || void 0 === gS ? void 0 : gS.pendingHold) && void 0 !== HS ? HS : null;
-        if (null !== gS && null !== tS && tS.conn === SS) return gS.pendingHold = null, gS.heldConn = SS, jN = 0, console.warn(`${OX} the core holds the game, reconnecting`), void gS.resume.onDropped(tS.token);
-        if (SS === jN) {
-          jN = 0;
-          const HS = gx;
-          null === HS || HS.isStopped || (console.info(`${OX} the core held again a resumed game the shell ended before its InitialInfo: closing it again`), tu(HS, "close", SS))
+      }(kk.conn) : kk.phase === fF.I.Held ? function(kk) {
+        var Fk;
+        const Ik = Hl,
+          Xk = null !== (Fk = null === Ik || void 0 === Ik ? void 0 : Ik.pendingHold) && void 0 !== Fk ? Fk : null;
+        if (null !== Ik && null !== Xk && Xk.conn === kk) return Ik.pendingHold = null, Ik.heldConn = kk, xl = 0, console.warn(`${vi} the core holds the game, reconnecting`), void Ik.resume.onDropped(Xk.token);
+        if (kk === xl) {
+          xl = 0;
+          const Fk = iy;
+          null === Fk || Fk.isStopped || (console.info(`${vi} the core held again a resumed game the shell ended before its InitialInfo: closing it again`), yq(Fk, "close", kk))
         }
-      }(SS.conn) : SS.phase === pH.E.Closed && (null === (gS = aN) || void 0 === gS || null === (tS = gS.pendingHold) || void 0 === tS ? void 0 : tS.conn) === SS.conn && (aN.heldConn === SS.conn ? function(SS) {
-        const HS = SS.heldConn,
-          gS = SS.dropCode;
-        eq(SS, "refused"), console.info(`${OX} the core didn't hold the game through its drop: it hadn't started`), queueMicrotask((() => {
-          oq(HS, !1), Yq(HS, gS, "", !0)
+      }(kk.conn) : kk.phase === fF.I.Closed && (null === (Ik = Hl) || void 0 === Ik || null === (Xk = Ik.pendingHold) || void 0 === Xk ? void 0 : Xk.conn) === kk.conn && (Hl.heldConn === kk.conn ? function(kk) {
+        const Fk = kk.heldConn,
+          Ik = kk.dropCode;
+        Fq(kk, "refused"), console.info(`${vi} the core didn't hold the game through its drop: it hadn't started`), queueMicrotask((() => {
+          Da(Fk, !1), Ra(Fk, Ik, "", !0)
         }))
-      }(aN) : aN.pendingHold = null);
-      const NS = Object.keys(pH.E).find((HS => pH.E[HS] === SS.phase)),
-        qS = 0 === SS.code ? "" : ` (code ${SS.code})`;
-      console.info(`${OX} conn ${SS.conn}: ${null!==NS&&void 0!==NS?NS:SS.phase}${qS}, ${ox} raw messages so far`), (null === (bS = bN) || void 0 === bS ? void 0 : bS.conn) !== SS.conn || SS.phase !== pH.E.Left && SS.phase !== pH.E.Closed || Dq(null), uN !== SS.conn || SS.phase !== pH.E.Left && SS.phase !== pH.E.Closed || (uN = null, null === bN && null === xN && Xb.b.setGame(void 0));
-      for (const IS of [...ON]) try {
-        IS(SS.conn, SS.phase, SS.code)
-      } catch (uS) {
-        (0, BH.j)(uS, `${OX} a connection listener threw`)
+      }(Hl) : Hl.pendingHold = null);
+      const lk = Object.keys(fF.I).find((Fk => fF.I[Fk] === kk.phase)),
+        ak = 0 === kk.code ? "" : ` (code ${kk.code})`;
+      console.info(`${vi} conn ${kk.conn}: ${null!==lk&&void 0!==lk?lk:kk.phase}${ak}, ${Dy} raw messages so far`), (null === (Tk = ll) || void 0 === Tk ? void 0 : Tk.conn) !== kk.conn || kk.phase !== fF.I.Left && kk.phase !== fF.I.Closed || za(null), Zl !== kk.conn || kk.phase !== fF.I.Left && kk.phase !== fF.I.Closed || (Zl = null, null === ll && null === ql && iT.b.setGame(void 0));
+      for (const Lk of [...Ol]) try {
+        Lk(kk.conn, kk.phase, kk.code)
+      } catch (qk) {
+        (0, dF.i)(qk, `${vi} a connection listener threw`)
       }
     }
 
-    function hu() {
-      (0, Kb.t)(), queueMicrotask((() => {
+    function oq() {
+      (0, eT.r)(), queueMicrotask((() => {
         try {
-          zu()
-        } catch (SS) {
-          console.warn(`${OX} stopping before the reload threw`, SS)
-        }(0, wg.flushCrashReports)(MS.d).then(MS.k, MS.k)
+          fq()
+        } catch (kk) {
+          console.warn(`${vi} stopping before the reload threw`, kk)
+        }(0, VI.flushCrashReports)(Yk.c).then(Yk.i, Yk.i)
       }))
     }
 
-    function Zu() {
-      const SS = gx;
-      null === SS || SS.isStopped || null === Kx || Tx || !SS.hasPendingCommands() || Ou(SS, !1, "budget")
+    function vq() {
+      const kk = iy;
+      null === kk || kk.isStopped || null === Jy || ry || !kk.hasPendingCommands() || Oq(kk, !1, "budget")
     }
 
-    function Ju(SS) {
-      var HS;
-      const gS = bN;
-      SS.persisted || null === gS || (null === (HS = Kx) || void 0 === HS ? void 0 : HS.conn) !== gS.conn || Kx.left || gS.leave()
+    function Eq(kk) {
+      var Fk;
+      const Ik = ll;
+      kk.persisted || null === Ik || (null === (Fk = Jy) || void 0 === Fk ? void 0 : Fk.conn) !== Ik.conn || Jy.left || Ik.leave()
     }
 
-    function Ou(SS, HS, tS) {
-      let bS = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-      const XS = Tx;
-      Tx = !0;
+    function Oq(kk, Fk, Xk) {
+      let Tk = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+      const ik = ry;
+      ry = !0;
       try {
-        const XS = SS.rings.net.cursor >= iX;
-        XS && "all" !== tS && !document.hidden && pu("backlog", `a shown tab's net-in is ${SS.rings.net.cursor} bytes behind: one frame reads it all`);
-        return function(SS, HS, tS, bS) {
-          var XS, xS, NS, qS;
-          if (bq) return !1;
-          if (ou(SS, cu), bq || SS.isStopped) return !1;
-          Vu() && Wx("modelsIn");
-          lq(), px = performance.now(), lx = null, mx = !1, (0, wS.M)(), null === (XS = Zx) || void 0 === XS || XS.beforeFrame(), Ct(px, SS), (0, wS.D)(px, vu), Rx = !0;
-          const uS = HS && yu();
-          let IS;
+        const ik = kk.rings.net.cursor >= Ni;
+        ik && "all" !== Xk && !document.hidden && dq("backlog", `a shown tab's net-in is ${kk.rings.net.cursor} bytes behind: one frame reads it all`);
+        return function(kk, Fk, Xk, Tk) {
+          var ik, yk, lk, ak;
+          if (la) return !1;
+          if (Dq(kk, Gq), la || kk.isStopped) return !1;
+          Nq() && Wy("modelsIn");
+          Ma(), dy = performance.now(), My = null, kl = !1, (0, sk.L)(), null === (ik = vy) || void 0 === ik || ik.beforeFrame(), JX(dy, kk), (0, sk.D)(dy, pq), hy = !0;
+          const qk = Fk && Cq();
+          let Lk;
           try {
-            IS = SS.frame(px, uS, tS)
+            Lk = kk.frame(dy, qk, Xk)
           } finally {
-            Rx = !1
+            hy = !1
           }
-          if (!IS) return !1;
-          VN.observe(null !== (xS = null === (NS = SS.lastHeader) || void 0 === NS ? void 0 : NS.chunksCancelled) && void 0 !== xS ? xS : 0);
-          const fS = SS.lastFrameKind,
-            kS = (0, cH.c)(fS);
-          (function(SS) {
-            null !== Tb && Tb.afterFrame(performance.now(), SS)
-          })(kS), null === (qS = UN) || void 0 === qS || qS.frame(SS, px, fS), HS && (mN = kS);
-          kS && (0, JH.b)(px);
-          if (null !== zN) try {
-            zN.frameRan(SS, px, performance.now(), fS)
-          } catch (jS) {
-            Du(jS)
+          if (!Lk) return !1;
+          Nl.observe(null !== (yk = null === (lk = kk.lastHeader) || void 0 === lk ? void 0 : lk.chunksCancelled) && void 0 !== yk ? yk : 0);
+          const tk = kk.lastFrameKind,
+            Zk = (0, OF.d)(tk);
+          (function(kk) {
+            null !== gT && gT.afterFrame(performance.now(), kk)
+          })(Zk), null === (ak = Bl) || void 0 === ak || ak.frame(kk, dy, tk), Fk && (ka = Zk);
+          Zk && (0, oF.b)(dy);
+          if (null !== fl) try {
+            fl.frameRan(kk, dy, performance.now(), tk)
+          } catch (wk) {
+            zq(wk)
           }
-          "drawn" === fS && Au() && function() {
-            for (const SS of [...kb]) SS()
+          "drawn" === tk && Uq() && function() {
+            for (const kk of [...ZT]) kk()
           }();
-          SS.forEachNetOut(iu);
-          const aS = Kx;
-          null !== lx && (null === aS || void 0 === aS ? void 0 : aS.conn) === lx && Wu(aS, AS.j);
-          Yu(SS),
-            function(SS) {
-              const HS = 0 !== (SS.headerWord(sH.H.LoadSteps) & sH.T.JoinPreload);
-              HS !== qN && (qN = HS, (0, wg.setCrashAdPreload)(HS), (0, cg.T)())
-            }(SS), HS && function(SS) {
-              var HS, tS, bS;
-              if (null === bN || !yu()) return;
-              const XS = SS.headerWord(sH.H.LoadSteps);
-              null === oN || lN === bN && !oN.frame(px, 0 !== (XS & sH.V.TerrainDrawn)) || (oN = null);
-              if (0 === (XS & sH.T.PlayerBound)) return;
-              const xS = SS.lastHeader,
-                NS = !dN || 0 === (null === xS || void 0 === xS ? void 0 : xS.renderPending);
-              !MN && NS && (MN = !0, performance.mark(yX));
-              if (lN === bN) return;
-              const qS = null !== (HS = null === xS || void 0 === xS ? void 0 : xS.firstView) && void 0 !== HS ? HS : pH.gb.NotYet;
-              if (dN && qS === pH.gb.NotYet) return;
-              if (BN && (!0 !== (null === (tS = (0, hS.h)()) || void 0 === tS ? void 0 : tS.isSessionLive) || !NS)) return;
-              lN = bN;
-              const uS = bN;
+          kk.forEachNetOut(cq);
+          const jk = Jy;
+          null !== My && (null === jk || void 0 === jk ? void 0 : jk.conn) === My && Wq(jk, bk.i);
+          Rq(kk),
+            function(kk) {
+              const Fk = 0 !== (kk.headerWord(BF.F.LoadSteps) & BF.S.JoinPreload);
+              Fk !== tl && (tl = Fk, (0, VI.setCrashAdPreload)(Fk), (0, OI.H)())
+            }(kk), Fk && function(kk) {
+              var Fk, Xk, Tk;
+              if (null === ll || !Cq()) return;
+              const ik = kk.headerWord(BF.F.LoadSteps);
+              null === Dl || Ml === ll && !Dl.frame(dy, 0 !== (ik & BF.W.TerrainDrawn)) || (Dl = null);
+              if (0 === (ik & BF.S.PlayerBound)) return;
+              const yk = kk.lastHeader,
+                lk = !nl || 0 === (null === yk || void 0 === yk ? void 0 : yk.renderPending);
+              !gl && lk && (gl = !0, performance.mark(Ui));
+              if (Ml === ll) return;
+              const ak = null !== (Fk = null === yk || void 0 === yk ? void 0 : yk.firstView) && void 0 !== Fk ? Fk : fF.Y.NotYet;
+              if (nl && ak === fF.Y.NotYet) return;
+              if (Al && (!0 !== (null === (Xk = (0, Vk.k)()) || void 0 === Xk ? void 0 : Xk.isSessionLive) || !lk)) return;
+              Ml = ll;
+              const qk = ll;
               if (setTimeout((() => {
-                  bN === uS && (0, KS.l)()
-                }), 0), null === (bS = yx) || void 0 === bS || bS.playable(), function() {
-                  clearTimeout(ax), ax = setTimeout((() => {
-                    Qu() && eu((SS => {
+                  ll === qk && (0, ek.m)()
+                }), 0), null === (Tk = Cy) || void 0 === Tk || Tk.playable(), function() {
+                  clearTimeout(Hy), Hy = setTimeout((() => {
+                    Vq() && FL((kk => {
                       let {
-                        prefetchWorldgenWorker: HS
-                      } = SS;
-                      HS()
+                        prefetchWorldgenWorker: Fk
+                      } = kk;
+                      Fk()
                     }))
-                  }), RX)
-                }(), BN) return;
-              BN = !0, performance.mark(AX), (0, Ub.q)("render") && Promise.all([gS.e(77), gS.e(48)]).then((() => gS(4803))).then((SS => {
+                  }), mi)
+                }(), Al) return;
+              Al = !0, performance.mark(Ri), (0, cT.o)("render") && Promise.all([Ik.e(77), Ik.e(48)]).then((() => Ik(4676))).then((kk => {
                 let {
-                  renderDebugPlayable: HS
-                } = SS;
-                HS()
-              }), (SS => {
-                console.warn("The render debug topic didn't load", SS)
+                  renderDebugPlayable: Fk
+                } = kk;
+                Fk()
+              }), (kk => {
+                console.warn("The render debug topic didn't load", kk)
               }));
-              const IS = Math.round(performance.now()),
-                fS = SS.readViewQueuedPrograms();
-              null !== fS && (0, KS.n)("wasm_view_links", IS, (0, xH.bb)(fS));
-              if (dN && qS !== pH.gb.Drawn) {
-                const HS = qS === pH.gb.HeldBackstop ? "held_draws" : "long",
+              const Lk = Math.round(performance.now()),
+                tk = kk.readViewQueuedPrograms();
+              null !== tk && (0, ek.r)("wasm_view_links", Lk, (0, lF.ib)(tk));
+              if (nl && ak !== fF.Y.Drawn) {
+                const Fk = ak === fF.Y.HeldBackstop ? "held_draws" : "long",
                   {
-                    cause: gS
-                  } = Eu(SS);
-                if (console.warn(`${OX} playable at ${IS} ms on the first view's ${HS} backstop, ${gS}: it wasn't drawn whole in time`), (0, KS.n)("wasm_view_backstop", IS, `${HS}:${gS}`), "long" === HS) {
-                  var kS, aS;
-                  const HS = null !== (kS = null === (aS = kN) || void 0 === aS ? void 0 : aS.game) && void 0 !== kS ? kS : "";
-                  oN = new Yg.e((() => {
+                    cause: Ik
+                  } = uq(kk);
+                if (console.warn(`${vi} playable at ${Lk} ms on the first view's ${Fk} backstop, ${Ik}: it wasn't drawn whole in time`), (0, ek.r)("wasm_view_backstop", Lk, `${Fk}:${Ik}`), "long" === Fk) {
+                  var Zk, jk;
+                  const Fk = null !== (Zk = null === (jk = wl) || void 0 === jk ? void 0 : jk.game) && void 0 !== Zk ? Zk : "";
+                  Dl = new uI.e((() => {
                     const {
-                      cause: gS,
-                      census: tS
-                    } = Eu(SS);
-                    (0, wg.reportFirstViewNoTerrain)(HS, gS, tS, Nx), (0, kH.u)("noTerrain")
+                      cause: Ik,
+                      census: Xk
+                    } = uq(kk);
+                    (0, VI.reportFirstViewNoTerrain)(Fk, Ik, Xk, Ly), (0, jF.v)("noTerrain")
                   }))
                 }
-              } else console.info(`${OX} playable at ${IS} ms${dN?"":" (no renderer)"}`);
-              setTimeout(YN, 0), (0, nH.c)().catch((SS => {
-                console.error(`${OX} item sprites didn't load, so item particles show the missing texture`, SS)
-              })), lt.d.warm()
-            }(SS);
-          (0, tg.N)(SS, {
-            worldgen: Gx,
-            mesh: nx
+              } else console.info(`${vi} playable at ${Lk} ms${nl?"":" (no renderer)"}`);
+              setTimeout(Rl, 0), (0, PF.e)().catch((kk => {
+                console.error(`${vi} item sprites didn't load, so item particles show the missing texture`, kk)
+              })), hX.b.warm()
+            }(kk);
+          (0, TI.F)(kk, {
+            worldgen: Py,
+            mesh: Qy
           }),
-          function(SS) {
-            SS.forEachEvent(Pt);
-            for (const HS of nt) try {
-              (0, ft.d)(HS)
-            } catch (jS) {
-              if ((0, BH.d)(jS)) {
-                SS.crashOn(tg.j, jS);
+          function(kk) {
+            kk.forEachEvent(PX);
+            for (const Fk of xX) try {
+              (0, ZX.c)(Fk)
+            } catch (wk) {
+              if ((0, dF.f)(wk)) {
+                kk.crashOn(TI.k, wk);
                 break
               }
-              console.error(`${Kt} an input action listener threw`, jS)
+              console.error(`${eX} an input action listener threw`, wk)
             }
-            nt.length = 0
-          }(SS), bS && (0, dH.c)();
-          return !SS.isStopped
-        }(SS, HS, "all" === tS || XS, bS)
+            xX.length = 0
+          }(kk), Tk && (0, EF.d)();
+          return !kk.isStopped
+        }(kk, Fk, "all" === Xk || ik, Tk)
       } finally {
-        Tx = XS, XS || (sx = performance.now())
+        ry = ik, ik || (Yy = performance.now())
       }
     }
 
-    function du(SS) {
-      console.error(`${OX} a frame-start listener threw`, SS)
+    function nq(kk) {
+      console.error(`${vi} a frame-start listener threw`, kk)
     }
 
-    function cu() {
-      var SS, HS, gS, tS;
-      null === (SS = Ox) || void 0 === SS || SS.drain(TX, oX), null === (HS = Lx) || void 0 === HS || HS.drain(TX), null === (gS = Yx) || void 0 === gS || gS.drain(performance.now()), LN(TX), null === (tS = vx) || void 0 === tS || tS.drain()
+    function Gq() {
+      var kk, Fk, Ik, Xk;
+      null === (kk = Oy) || void 0 === kk || kk.drain(ri, Di), null === (Fk = by) || void 0 === Fk || Fk.drain(ri), null === (Ik = Ry) || void 0 === Ik || Ik.drain(performance.now()), bl(ri), null === (Xk = py) || void 0 === Xk || Xk.drain()
     }
 
-    function vu(SS) {
-      console.error(`${OX} a before-frame listener threw`, SS)
+    function pq(kk) {
+      console.error(`${vi} a before-frame listener threw`, kk)
     }
 
-    function Eu(SS) {
-      const HS = (0, hS.h)(),
-        gS = (0, hS.q)(),
-        tS = null === HS || null === gS ? null : gS.readDrawCensus(HS.api);
+    function uq(kk) {
+      const Fk = (0, Vk.k)(),
+        Ik = (0, Vk.y)(),
+        Xk = null === Fk || null === Ik ? null : Ik.readDrawCensus(Fk.api);
       return {
-        cause: (0, Yg.k)(SS.headerWord(sH.H.LoadSteps), tS),
-        census: tS
+        cause: (0, uI.j)(kk.headerWord(BF.F.LoadSteps), Xk),
+        census: Xk
       }
     }
-    const Lu = {
+    const bq = {
       ChunkRequested: "wasm_chunk_requested",
       ChunkStored: "wasm_chunk_stored",
       MeshLanded: "wasm_mesh_landed",
@@ -7966,498 +8226,498 @@ export const modules = {
       TerrainDrawn: "wasm_terrain_drawn"
     };
 
-    function Yu(SS) {
-      var HS;
-      if (BN) return;
-      if (null === RN && yu() && (RN = performance.now()), null === xN && null === bN) return;
-      null === RN || TN || (TN = !0, (0, KS.n)("wasm_startup_loaded", RN));
-      let gS = 0;
-      null !== bN ? gS = -1 : !0 === (null === (HS = PN) || void 0 === HS ? void 0 : HS.activated) && (gS = ~sH.V.TerrainDrawn);
-      const tS = SS.headerWord(sH.H.LoadSteps) & gS & ~FN;
-      if (0 === tS) return;
-      FN |= tS;
-      const bS = performance.now();
-      for (const [XS, xS] of Object.entries(Lu)) 0 !== (tS & sH.V[XS]) && (0, KS.n)(xS, bS)
+    function Rq(kk) {
+      var Fk;
+      if (Al) return;
+      if (null === hl && Cq() && (hl = performance.now()), null === ql && null === ll) return;
+      null === hl || rl || (rl = !0, (0, ek.r)("wasm_startup_loaded", hl));
+      let Ik = 0;
+      null !== ll ? Ik = -1 : !0 === (null === (Fk = sl) || void 0 === Fk ? void 0 : Fk.activated) && (Ik = ~BF.W.TerrainDrawn);
+      const Xk = kk.headerWord(BF.F.LoadSteps) & Ik & ~ml;
+      if (0 === Xk) return;
+      ml |= Xk;
+      const Tk = performance.now();
+      for (const [ik, yk] of Object.entries(bq)) 0 !== (Xk & BF.W[ik]) && (0, ek.r)(yk, Tk)
     }
 
-    function Au() {
-      return dN && yu()
+    function Uq() {
+      return nl && Cq()
     }
 
-    function yu() {
-      return Ax && Vu()
+    function Cq() {
+      return Uy && Nq()
     }
 
-    function Vu() {
-      return null === Ox || Ox.startupDone
+    function Nq() {
+      return null === Oy || Oy.startupDone
     }
 
-    function iu(SS, HS) {
-      const gS = Kx;
-      (null === gS || void 0 === gS ? void 0 : gS.conn) === SS ? Wu(gS, HS) : SN++
+    function cq(kk, Fk) {
+      const Ik = Jy;
+      (null === Ik || void 0 === Ik ? void 0 : Ik.conn) === kk ? Wq(Ik, Fk) : Xl++
     }
 
-    function Wu(SS, HS) {
+    function Wq(kk, Fk) {
       const {
-        ws: gS
-      } = SS;
-      return gS.readyState === WebSocket.OPEN ? (gS.send(HS), !0) : gS.readyState === WebSocket.CONNECTING && SS.pendingBytes + HS.byteLength <= sX ? (SS.pending.push(HS.slice()), SS.pendingBytes += HS.byteLength, !0) : (SN++, !1)
+        ws: Ik
+      } = kk;
+      return Ik.readyState === WebSocket.OPEN ? (Ik.send(Fk), !0) : Ik.readyState === WebSocket.CONNECTING && kk.pendingBytes + Fk.byteLength <= di ? (kk.pending.push(Fk.slice()), kk.pendingBytes += Fk.byteLength, !0) : (Xl++, !1)
     }
 
-    function zu() {
-      var SS, HS, gS, tS, bS, XS, xS, NS, qS, uS, IS, fS, kS, aS, KS, jS, GS;
-      bq = !0, eN.stop(), (0, sb.b)(), Tb = null, mq(), (0, wS.J)().unlockPointer(), (0, wS.H)(null), null === (SS = Jx) || void 0 === SS || SS(), Jx = null, null === (HS = (0, hS.q)()) || void 0 === HS || HS.followCursorAim(null), (0, dH.B)(), (0, hS.f)(), xx.stop(), null === (gS = pN) || void 0 === gS || gS(), pN = null, null === (tS = sN) || void 0 === tS || tS(), sN = null, null === (bS = zN) || void 0 === bS || bS.stop(), zN = null, (0, yg.n)(null), null === (XS = jx) || void 0 === XS || XS(), jx = null, null === (xS = Gx) || void 0 === xS || xS.stop(), Gx = null, null === (NS = nx) || void 0 === NS || NS.stop(), nx = null, null !== (qS = bx) && void 0 !== qS && null !== (uS = qS.textures) && void 0 !== uS && uS.assets && (0, gb.h)(null), null === (IS = bx) || void 0 === IS || IS.stop(), bx = null, Xx = null;
-      const CS = Px;
-      Px = null, CS && (CS.stop(), Tu(CS)), null === (fS = Lx) || void 0 === fS || fS.dispose(), Lx = null, null === (kS = Yx) || void 0 === kS || kS.dispose(), Yx = null, Ox = null, null === (aS = cx) || void 0 === aS || aS(), cx = null, null === (KS = hx) || void 0 === KS || KS(), hx = null, null !== Fx && (clearTimeout(Fx), Fx = null), null === (jS = Zx) || void 0 === jS || jS.stop(), Zx = null, nq(), Xb.b.release(), Bq();
-      const nS = vx;
-      vx = null;
+    function fq() {
+      var kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak, qk, Lk, tk, Zk, jk, ek, wk, Hk;
+      la = !0, Fa.stop(), (0, fT.e)(), gT = null, kq(), (0, sk.I)().unlockPointer(), (0, sk.F)(null), null === (kk = Ey) || void 0 === kk || kk(), Ey = null, null === (Fk = (0, Vk.y)()) || void 0 === Fk || Fk.followCursorAim(null), (0, EF.G)(), (0, Vk.i)(), qy.stop(), null === (Ik = dl) || void 0 === Ik || Ik(), dl = null, null === (Xk = Yl) || void 0 === Xk || Xk(), Yl = null, null === (Tk = fl) || void 0 === Tk || Tk.stop(), fl = null, (0, RI.k)(null), null === (ik = xy) || void 0 === ik || ik(), xy = null, null === (yk = Py) || void 0 === yk || yk.stop(), Py = null, null === (lk = Qy) || void 0 === lk || lk.stop(), Qy = null, null !== (ak = ly) && void 0 !== ak && null !== (qk = ak.textures) && void 0 !== qk && qk.assets && (0, IT.m)(null), null === (Lk = ly) || void 0 === Lk || Lk.stop(), ly = null, ay = null;
+      const Jk = sy;
+      sy = null, Jk && (Jk.stop(), rq(Jk)), null === (tk = by) || void 0 === tk || tk.dispose(), by = null, null === (Zk = Ry) || void 0 === Zk || Zk.dispose(), Ry = null, Oy = null, null === (jk = Gy) || void 0 === jk || jk(), Gy = null, null === (ek = oy) || void 0 === ek || ek(), oy = null, null !== my && (clearTimeout(my), my = null), null === (wk = vy) || void 0 === wk || wk.stop(), vy = null, Qa(), iT.b.release(), Aa();
+      const xk = py;
+      py = null;
       try {
-        null === nS || void 0 === nS || nS.dispose()
-      } catch (PS) {
-        console.warn(`${OX} the sky's images didn't release`, PS)
-      }(0, mt.h)(null), null === (GS = Sx) || void 0 === GS || GS.pagePreviews().endSession(null === (0, NH.t)())
+        null === xk || void 0 === xk || xk.dispose()
+      } catch (Pk) {
+        console.warn(`${vi} the sky's images didn't release`, Pk)
+      }(0, rX.f)(null), null === (Hk = Xy) || void 0 === Hk || Hk.pagePreviews().endSession(null === (0, aF.n)())
     }
 
-    function Uu(SS, HS) {
-      var gS, tS;
-      const bS = null !== (gS = null === (tS = Px) || void 0 === tS ? void 0 : tS.details()) && void 0 !== gS ? gS : {},
-        XS = SS.site === cX || SS.site === vX || SS.site === wg.RENDER_RELOAD_SITE || SS.site === EX ? SS.error instanceof WebAssembly.RuntimeError || SS.error instanceof eH.c : !(0, gg.p)(SS.error) && (0, tg.J)(SS);
-      XS && SS.error instanceof Error && (0, NH.W)(SS.error);
-      const xS = XS || SS.site === tg.s ? (0, wg.readTrap)(SS.error) : null,
-        NS = null !== xS && (0, FH.g)(xS.kind, xS.refusedBytes) ? xS.refusedBytes : 0,
-        qS = (0, ng.o)(),
-        uS = null === Qx ? (0, Rt.q)(function() {
+    function Bq(kk, Fk) {
+      var Ik, Xk;
+      const Tk = null !== (Ik = null === (Xk = sy) || void 0 === Xk ? void 0 : Xk.details()) && void 0 !== Ik ? Ik : {},
+        ik = kk.site === Oi || kk.site === ni || kk.site === VI.RENDER_RELOAD_SITE || kk.site === Gi ? kk.error instanceof WebAssembly.RuntimeError || kk.error instanceof MF.c : !(0, XI.j)(kk.error) && (0, TI.B)(kk);
+      ik && kk.error instanceof Error && (0, aF.M)(kk.error);
+      const yk = ik || kk.site === TI.q ? (0, VI.readTrap)(kk.error) : null,
+        lk = null !== yk && (0, AF.g)(yk.kind, yk.refusedBytes) ? yk.refusedBytes : 0,
+        ak = (0, PI.m)(),
+        qk = null === Vy ? (0, AX.l)(function() {
           try {
-            return (0, NH.B)().buffer.byteLength
+            return (0, aF.r)().buffer.byteLength
           } catch {
             return 0
           }
-        }(), NS, qS) : Qx.ceilingMayRefuse(NS, qS),
-        IS = NS > 0 && !uS && Xu();
-      var fS;
-      if (IS && ((0, aH.x)("oom"), (0, aH.u)("decline"), tq = !0), zu(), (0, Kb.c)()) return console.warn(`${OX} the session stopped at ${SS.site} as the page reloads`, SS.error), void((0, gg.p)(SS.error) || (null === (fS = SS.header) || void 0 === fS ? void 0 : fS.lastError) === pH.K.CoreBusy || (0, wg.reportStoppedCore)(SS, HS, xS, {
-        memoryDetails: bS,
-        declined: IS
+        }(), lk, ak) : Vy.ceilingMayRefuse(lk, ak),
+        Lk = lk > 0 && !qk && aq();
+      var tk;
+      if (Lk && ((0, eF.w)("oom"), (0, eF.u)("decline"), ya = !0), fq(), (0, eT.e)()) return console.warn(`${vi} the session stopped at ${kk.site} as the page reloads`, kk.error), void((0, XI.j)(kk.error) || (null === (tk = kk.header) || void 0 === tk ? void 0 : tk.lastError) === fF.N.CoreBusy || (0, VI.reportStoppedCore)(kk, Fk, yk, {
+        memoryDetails: Tk,
+        declined: Lk
       }));
-      (0, wg.showCrash)(SS, HS, xS, {
-        memoryDetails: bS,
-        declined: IS
+      (0, VI.showCrash)(kk, Fk, yk, {
+        memoryDetails: Tk,
+        declined: Lk
       })
     }
 
-    function pu(SS, HS) {
-      const gS = performance.now();
-      return !(gS - ex[SS] < BX) && (ex[SS] = gS, console.warn(`${OX} ${HS}`), !0)
+    function dq(kk, Fk) {
+      const Ik = performance.now();
+      return !(Ik - Fl[kk] < Yi) && (Fl[kk] = Ik, console.warn(`${vi} ${Fk}`), !0)
     }
 
-    function su(SS) {
+    function Yq(kk) {
       const {
-        input: HS,
-        net: gS,
-        worker: tS
-      } = SS.rings, bS = SS.optionsDropped, XS = HS.dropped + bS + gS.dropped + tS.dropped + SN;
-      XS !== rx && pu("dropped", `${XS} records dropped so far (input ${HS.dropped}, options ${bS}, net ${gS.dropped}, worker ${tS.dropped}, net-out ${SN})`) && (rx = XS)
+        input: Fk,
+        net: Ik,
+        worker: Xk
+      } = kk.rings, Tk = kk.optionsDropped, ik = Fk.dropped + Tk + Ik.dropped + Xk.dropped + Xl;
+      ik !== Il && dq("dropped", `${ik} records dropped so far (input ${Fk.dropped}, options ${Tk}, net ${Ik.dropped}, worker ${Xk.dropped}, net-out ${Xl})`) && (Il = ik)
     }
 
-    function Bu() {
-      var SS, HS;
-      const gS = (0, dg.b)();
-      if (null === gS) return null;
-      const tS = (0, Eg.q)(gS);
+    function Aq() {
+      var kk, Fk;
+      const Ik = (0, EI.b)();
+      if (null === Ik) return null;
+      const Xk = (0, GI.t)(Ik);
       return {
-        ...tS,
-        horizontal: Math.min(tS.horizontal, null !== (SS = null === (HS = Px) || void 0 === HS ? void 0 : HS.shedDistanceInUse()) && void 0 !== SS ? SS : 1 / 0)
+        ...Xk,
+        horizontal: Math.min(Xk.horizontal, null !== (kk = null === (Fk = sy) || void 0 === Fk ? void 0 : Fk.shedDistanceInUse()) && void 0 !== kk ? kk : 1 / 0)
       }
     }
 
-    function Mu(SS) {
-      var HS, gS;
+    function gq(kk) {
+      var Fk, Ik;
       return {
-        samples: dN ? iN : null,
-        sunShadows: SS,
-        renderDistance: null !== (HS = null === (gS = Bu()) || void 0 === gS ? void 0 : gS.horizontal) && void 0 !== HS ? HS : null
+        samples: nl ? cl : null,
+        sunShadows: kk,
+        renderDistance: null !== (Fk = null === (Ik = Aq()) || void 0 === Ik ? void 0 : Ik.horizontal) && void 0 !== Fk ? Fk : null
       }
     }
 
-    function Fu(SS) {
-      NN = SS, (0, cg.T)()
+    function mq(kk) {
+      Ll = kk, (0, OI.H)()
     }
 
-    function Ru() {
-      var SS, HS, gS;
-      const tS = Bu();
+    function hq() {
+      var kk, Fk, Ik;
+      const Xk = Aq();
       return {
-        ...null === (SS = Px) || void 0 === SS ? void 0 : SS.pageKillSnapshot(),
-        renderDistance: null !== (HS = null === tS || void 0 === tS ? void 0 : tS.horizontal) && void 0 !== HS ? HS : null,
-        renderDistanceVertical: null !== (gS = null === tS || void 0 === tS ? void 0 : tS.vertical) && void 0 !== gS ? gS : null,
-        chunkCap: Dx,
-        budgetBasis: wx,
-        renderBackend: (0, Kb.F)(),
-        adPreload: qN,
-        ...(0, vg.c)(NN)
+        ...null === (kk = sy) || void 0 === kk ? void 0 : kk.pageKillSnapshot(),
+        renderDistance: null !== (Fk = null === Xk || void 0 === Xk ? void 0 : Xk.horizontal) && void 0 !== Fk ? Fk : null,
+        renderDistanceVertical: null !== (Ik = null === Xk || void 0 === Xk ? void 0 : Xk.vertical) && void 0 !== Ik ? Ik : null,
+        chunkCap: zy,
+        budgetBasis: Sy,
+        renderBackend: (0, eT.J)(),
+        adPreload: tl,
+        ...(0, nI.e)(Ll)
       }
     }
 
-    function Tu(SS) {
-      console.info(`${OX} wasm memory at the session's end`, SS.details())
+    function rq(kk) {
+      console.info(`${vi} wasm memory at the session's end`, kk.details())
     }
 
-    function ou(SS, HS) {
-      if (!SS.isStopped) try {
-        HS()
-      } catch (gS) {
-        SS.crash(tg.v, gS)
+    function Dq(kk, Fk) {
+      if (!kk.isStopped) try {
+        Fk()
+      } catch (Ik) {
+        kk.crash(TI.r, Ik)
       }
     }
 
-    function lu() {
-      return Cx ??= gS.e(71).then((() => gS(51055))).catch((SS => {
-        throw Cx = null, SS
-      })), Cx
+    function Mq() {
+      return Ky ??= Ik.e(71).then((() => Ik(51008))).catch((kk => {
+        throw Ky = null, kk
+      })), Ky
     }
-    async function mu() {
+    async function kL() {
       const {
-        createWorldgenWorker: SS,
-        worldgenWorkerReady: HS
-      } = await lu();
-      return await HS(), SS
+        createWorldgenWorker: kk,
+        worldgenWorkerReady: Fk
+      } = await Mq();
+      return await Fk(), kk
     }
 
-    function eu(SS) {
-      var HS;
-      null === (HS = Cx) || void 0 === HS || HS.then(SS, (() => {}))
+    function FL(kk) {
+      var Fk;
+      null === (Fk = Ky) || void 0 === Fk || Fk.then(kk, (() => {}))
     }
 
-    function ru() {
-      return performance.now() - Math.max(sx, Bx) >= MX
+    function IL() {
+      return performance.now() - Math.max(Yy, Ay) >= Ai
     }
 
-    function SI(SS) {
-      const HS = document.hidden || Mx ? "all" : "budget";
-      Mx = !0;
-      const gS = Ou(SS, !1, HS);
-      var tS;
-      gS && (su(SS), null === (tS = Px) || void 0 === tS || tS.afterFrame());
-      return gS
+    function XL(kk) {
+      const Fk = document.hidden || gy ? "all" : "budget";
+      gy = !0;
+      const Ik = Oq(kk, !1, Fk);
+      var Xk;
+      Ik && (Yq(kk), null === (Xk = sy) || void 0 === Xk || Xk.afterFrame());
+      return Ik
     }
 
-    function HI(SS) {
-      SS.isStopped || 0 === SS.rings.net.cursor || ru() && !SI(SS) || SS.rings.net.cursor > 0 && performance.now() - Bx >= MX / 2 && function(SS) {
-        Fx ??= setTimeout((() => {
-          Fx = null, HI(SS)
-        }), MX)
-      }(SS)
+    function TL(kk) {
+      kk.isStopped || 0 === kk.rings.net.cursor || IL() && !XL(kk) || kk.rings.net.cursor > 0 && performance.now() - Ay >= Ai / 2 && function(kk) {
+        my ??= setTimeout((() => {
+          my = null, TL(kk)
+        }), Ai)
+      }(kk)
     }
 
-    function gI(SS, HS) {
-      return async function(SS, HS, gS) {
+    function iL(kk, Fk) {
+      return async function(kk, Fk, Ik) {
         let {
-          stop: tS,
-          stillWanted: bS,
-          beforeReload: XS
-        } = gS;
-        const xS = await (0, vt.k)(SS, {
-          stillWanted: bS,
+          stop: Xk,
+          stillWanted: Tk,
+          beforeReload: ik
+        } = Ik;
+        const yk = await (0, OX.k)(kk, {
+          stillWanted: Tk,
           beforeReload: async () => {
-            tS(), await Promise.all([(0, wg.flushCrashReports)(MS.d), null === XS || void 0 === XS ? void 0 : XS()])
+            Xk(), await Promise.all([(0, VI.flushCrashReports)(Yk.c), null === ik || void 0 === ik ? void 0 : ik()])
           },
-          reload: MS.k
+          reload: Yk.i
         });
-        return xS || HS(), xS
-      }(SS, HS, {
+        return yk || Fk(), yk
+      }(kk, Fk, {
         ...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        stop: zu
+        stop: fq
       })
     }
-    let tI = !1;
+    let yL = !1;
 
-    function bI() {
-      return tI = !0, async function(SS, HS, tS) {
+    function lL() {
+      return yL = !0, async function(kk, Fk, Xk) {
         const {
-          gamePackSource: bS
-        } = await gS.e(271).then((() => gS(41075)));
-        await Gu.packStep(SS, ((gS, tS) => gS.packForGame(SS, bS(HS), tS)), tS)
+          gamePackSource: Tk
+        } = await Ik.e(271).then((() => Ik(41067)));
+        await Pq.packStep(kk, ((Ik, Xk) => Ik.packForGame(kk, Tk(Fk), Xk)), Xk)
       }(...arguments)
     }
 
-    function XI(SS) {
-      ! function(SS, HS) {
-        SS((SS => {
-          null === SS || void 0 === SS || SS.subscribe((SS => {
+    function aL(kk) {
+      ! function(kk, Fk) {
+        kk((kk => {
+          null === kk || void 0 === kk || kk.subscribe((kk => {
             let {
-              pack: gS,
-              gameSource: tS
-            } = SS;
-            HS(null === tS || null === gS ? null : {
-              pack: gS,
-              source: "" === tS ? null : tS
+              pack: Ik,
+              gameSource: Xk
+            } = kk;
+            Fk(null === Xk || null === Ik ? null : {
+              pack: Ik,
+              source: "" === Xk ? null : Xk
             })
           }))
         }))
-      }(au, SS)
+      }(Hq, kk)
     }
-    let xI = !1,
-      NI = null,
-      qI = !1,
-      uI = !1;
+    let qL = !1,
+      LL = null,
+      tL = !1,
+      ZL = !1;
 
-    function II() {
-      var SS;
-      xI || (xI = !0, Iq("play", sS), (0, kS.n)(new wI), NS.gameBridge.attach(LS), GI().catch((() => {})), (0, hS.t)((SS => {
-        HH(SS.setTextHost)
-      })), SS = aI, wN.add(SS), function(SS) {
-        for (const HS of Vx) SS(HS);
-        ix.add(SS)
-      }((SS => {
-        kI(fI[SS])
+    function jL() {
+      var kk;
+      qL || (qL = !0, ja("play", Bk), (0, Zk.q)(new SL), lk.gameBridge.attach(pk), PL().catch((() => {})), (0, Vk.A)((kk => {
+        IF(kk.setTextHost)
+      })), kk = HL, Sl.add(kk), function(kk) {
+        for (const Fk of Ny) kk(Fk);
+        cy.add(kk)
+      }((kk => {
+        wL(eL[kk])
       })))
     }
-    const fI = {
-      booted: XS.g.INITIALISE_NOA,
-      texturesIn: XS.g.REGISTRATION,
-      modelsIn: XS.g.SETUP_LIFEFORMS
+    const eL = {
+      booted: ik.j.INITIALISE_NOA,
+      texturesIn: ik.j.REGISTRATION,
+      modelsIn: ik.j.SETUP_LIFEFORMS
     };
 
-    function kI(SS) {
-      qS.k.cj("matchmakeAndPlayStepCompleted", {
-        step: SS,
+    function wL(kk) {
+      ak.g.GL("matchmakeAndPlayStepCompleted", {
+        step: kk,
         totalSubSteps: 1
       })
     }
 
-    function aI(SS) {
-      if (!qI) return;
+    function HL(kk) {
+      if (!tL) return;
       const {
-        gameNameWithVariation: HS,
-        lobbyName: gS
-      } = (0, kS.e)();
-      if (SS.code === tS.c.serverUpdating.code) return (new wI).leaveLive(), void jI(HS, gS);
-      qS.k.cj("unwantedLeftGame", {
-        reason: KI(SS),
-        requiresRefresh: SS.requiresRefresh,
-        canReconnect: null !== SS.reconnect,
-        automaticallyReconnect: SS.reconnecting,
-        canPlayAgain: SS.canPlayAgain,
-        gameNameWithVariation: HS,
-        lobbyName: gS
-      }), (new wI).leaveLive()
+        gameNameWithVariation: Fk,
+        lobbyName: Ik
+      } = (0, Zk.d)();
+      if (kk.code === Xk.d.serverUpdating.code) return (new SL).leaveLive(), void xL(Fk, Ik);
+      ak.g.GL("unwantedLeftGame", {
+        reason: JL(kk),
+        requiresRefresh: kk.requiresRefresh,
+        canReconnect: null !== kk.reconnect,
+        automaticallyReconnect: kk.reconnecting,
+        canPlayAgain: kk.canPlayAgain,
+        gameNameWithVariation: Fk,
+        lobbyName: Ik
+      }), (new SL).leaveLive()
     }
 
-    function KI(SS) {
-      return null !== SS.reasonKey ? {
-        translationKey: SS.reasonKey
-      } : "gameOrPluginKick" === SS.name ? SS.reason : `You have disconnected from the server.\n${SS.reason}`
+    function JL(kk) {
+      return null !== kk.reasonKey ? {
+        translationKey: kk.reasonKey
+      } : "gameOrPluginKick" === kk.name ? kk.reason : `You have disconnected from the server.\n${kk.reason}`
     }
 
-    function jI(SS, HS) {
-      var tS;
-      tS = (0, uS.E)(SS, HS), Promise.resolve().then((() => gS(1608))).then((SS => {
+    function xL(kk, Fk) {
+      var Xk;
+      Xk = (0, qk.A)(kk, Fk), Promise.resolve().then((() => Ik(1475))).then((kk => {
         let {
-          navigatePreserveSearch: HS
-        } = SS;
-        HS(tS)
-      })).catch((SS => {
-        console.warn("[bloxd-wasm-client] the page's router didn't navigate: loading the page instead", SS), (0, MS.e)(tS)
+          navigatePreserveSearch: Fk
+        } = kk;
+        Fk(Xk)
+      })).catch((kk => {
+        console.warn("[bloxd-wasm-client] the page's router didn't navigate: loading the page instead", kk), (0, Yk.d)(Xk)
       }))
     }
 
-    function GI() {
-      return NI ??= Promise.all([gS.e(72), gS.e(75), gS.e(74), gS.e(73), gS.e(89), gS.e(86), gS.e(269), gS.e(189), gS.e(223), gS.e(247), gS.e(218), gS.e(46)]).then((() => gS(41033))).then((SS => {
+    function PL() {
+      return LL ??= Promise.all([Ik.e(72), Ik.e(75), Ik.e(74), Ik.e(73), Ik.e(89), Ik.e(86), Ik.e(269), Ik.e(189), Ik.e(223), Ik.e(247), Ik.e(218), Ik.e(46)]).then((() => Ik(41011))).then((kk => {
         try {
-          SS.attachPlayGameSources()
-        } catch (HS) {
-          throw console.error("[bloxd-wasm-client] the play sources did not attach", HS),
-            function(SS) {
-              Ix.then((HS => {
-                null === HS || HS.isStopped || bq ? console.warn(`${OX} the play sources threw as they attached, after the client stopped`, SS) : Uu({
-                  site: EX,
-                  error: SS,
+          kk.attachPlayGameSources()
+        } catch (Fk) {
+          throw console.error("[bloxd-wasm-client] the play sources did not attach", Fk),
+            function(kk) {
+              jy.then((Fk => {
+                null === Fk || Fk.isStopped || la ? console.warn(`${vi} the play sources threw as they attached, after the client stopped`, kk) : Bq({
+                  site: Gi,
+                  error: kk,
                   header: null
-                }, Nx)
+                }, Ly)
               }))
-            }(HS), HS
+            }(Fk), Fk
         }
-      }), (SS => {
-        throw NI = null, new hS.c(SS)
-      })), NI
+      }), (kk => {
+        throw LL = null, new Vk.e(kk)
+      })), LL
     }
-    async function CI(SS, HS) {
-      II(), tI = !0, qI = !0;
-      let gS = {
-          place: SS.place,
-          matchedAt: SS.matchedAt
+    async function KL(kk, Fk) {
+      jL(), yL = !0, tL = !0;
+      let Ik = {
+          place: kk.place,
+          matchedAt: kk.matchedAt
         },
-        xS = SS.place.gameNameWithVariation;
-      const NS = (0, fS.g)();
-      let qS = null;
-      const uS = await Kq({
+        yk = kk.place.gameNameWithVariation;
+      const lk = (0, tk.c)();
+      let ak = null;
+      const qk = await Ja({
         matchmake: async () => {
-          let HS = gS;
-          if (gS = null, null === HS) {
-            const gS = await SS.rematch();
-            if (gS.isError()) throw qS = gS.asError().forward(), new Error(gS.asError().message);
-            HS = {
-              place: gS.getValue(),
+          let Fk = Ik;
+          if (Ik = null, null === Fk) {
+            const Ik = await kk.rematch();
+            if (Ik.isError()) throw ak = Ik.asError().forward(), new Error(Ik.asError().message);
+            Fk = {
+              place: Ik.getValue(),
               matchedAt: performance.now()
             }
           }
-          xS = HS.place.gameNameWithVariation;
+          yk = Fk.place.gameNameWithVariation;
           return {
-            target: await (0, VS.h)(SS.userContext, HS.place, Ku(), NS),
-            matchedAt: HS.matchedAt,
-            freshMs: VS.d
+            target: await (0, Uk.f)(kk.userContext, Fk.place, Jq(), lk),
+            matchedAt: Fk.matchedAt,
+            freshMs: Uk.c
           }
         },
-        pageReady: GI,
-        onFailure: (SS, HS) => {
-          null === qS && function(SS, HS) {
-            (0, wg.reportPageJoinFailure)(SS, Nx, HS)
-          }(SS, {
-            sinceJoinStartMs: HS,
-            game: xS
+        pageReady: PL,
+        onFailure: (kk, Fk) => {
+          null === ak && function(kk, Fk) {
+            (0, VI.reportPageJoinFailure)(kk, Ly, Fk)
+          }(kk, {
+            sinceJoinStartMs: Fk,
+            game: yk
           })
         },
         rejoin: () => () => {},
-        invalidateTrafficCode: () => SS.userContext.invalidateTrafficCode(),
-        signal: HS
+        invalidateTrafficCode: () => kk.userContext.invalidateTrafficCode(),
+        signal: Fk
       });
-      switch (uS.kind) {
+      switch (qk.kind) {
         case "joined":
-          if (NS) {
+          if (lk) {
             const {
-              game: SS
-            } = uS;
-            (0, fS.r)((() => {
-              SS.endJoinAd() && (0, KS.m)()
+              game: kk
+            } = qk;
+            (0, tk.k)((() => {
+              kk.endJoinAd() && (0, ek.n)()
             }))
           }
-          return uI || (uI = !0, (0, GS.c)()), qI ? (kI(XS.g.CONNECT_TO_GAME_SERVER), kI(XS.g.SHADER_PACK), function() {
-            var SS, HS;
-            return null !== (SS = null === (HS = yx) || void 0 === HS ? void 0 : HS.runsInJoinedGame()) && void 0 !== SS && SS
-          }() && (0, jS.e)(SS.userContext, xS).catch((SS => {
-            console.error("Failed to report the shader pack session", SS)
+          return ZL || (ZL = !0, (0, Hk.e)()), tL ? (wL(ik.j.CONNECT_TO_GAME_SERVER), wL(ik.j.SHADER_PACK), function() {
+            var kk, Fk;
+            return null !== (kk = null === (Fk = Cy) || void 0 === Fk ? void 0 : Fk.runsInJoinedGame()) && void 0 !== kk && kk
+          }() && (0, wk.h)(kk.userContext, yk).catch((kk => {
+            console.error("Failed to report the shader pack session", kk)
           })), function() {
-            const SS = function() {
-              var SS, HS;
-              return null !== (SS = null === (HS = yx) || void 0 === HS ? void 0 : HS.couldntRunInJoinedGame()) && void 0 !== SS ? SS : null
+            const kk = function() {
+              var kk, Fk;
+              return null !== (kk = null === (Fk = Cy) || void 0 === Fk ? void 0 : Fk.couldntRunInJoinedGame()) && void 0 !== kk ? kk : null
             }();
-            null !== SS && (0, jS.d)(SS)
-          }(), bS.d.value(void 0)) : DI("The server ended the game as it joined");
+            null !== kk && (0, wk.d)(kk)
+          }(), Tk.b.value(void 0)) : zL("The server ended the game as it joined");
         case "failed":
-          if (!uS.reloading) {
-            if (null !== qS) return qS;
-            if ((uS.error instanceof AS.k || uS.error instanceof AS.d) && uS.error.code === tS.c.serverUpdating.code) {
-              if (HS.aborted) return DI("Left the game while it loaded");
+          if (!qk.reloading) {
+            if (null !== ak) return ak;
+            if ((qk.error instanceof bk.j || qk.error instanceof bk.b) && qk.error.code === Xk.d.serverUpdating.code) {
+              if (Fk.aborted) return zL("Left the game while it loaded");
               const {
-                gameNameWithVariation: SS,
-                lobbyName: gS
-              } = (0, kS.e)();
-              return jI(SS, gS), DI("The server is updating")
+                gameNameWithVariation: kk,
+                lobbyName: Ik
+              } = (0, Zk.d)();
+              return xL(kk, Ik), zL("The server is updating")
             }
-            return uS.error instanceof BS.b ? bS.d.errorWithCode(uS.error.messageKey, XS.g.SHADER_PACK, {
+            return qk.error instanceof dk.d ? Tk.b.errorWithCode(qk.error.messageKey, ik.j.SHADER_PACK, {
               severity: "medium"
-            }) : bS.d.errorWithCode(function(SS) {
-              if (SS instanceof AS.p || SS instanceof QS.e) return SS.message;
-              if (nI(SS)) return (0, YS.l)(SS.code, SS.serverText);
-              return YS.g
-            }(uS.error), XS.g.CONNECT_TO_GAME_SERVER, {
-              error: PI(uS.error) ? uS.error : void 0,
-              severity: QI(uS.error),
-              gameServerUnreachable: (0, yS.d)(uS.error),
-              joinFailure: (0, yS.i)(uS.error),
-              rematch: (0, nS.c)(uS.error),
-              gameRefused: (0, PS.e)(uS.error)
+            }) : Tk.b.errorWithCode(function(kk) {
+              if (kk instanceof bk.t || kk instanceof Kk.f) return kk.message;
+              if (QL(kk)) return (0, uk.n)(kk.code, kk.serverText);
+              return uk.i
+            }(qk.error), ik.j.CONNECT_TO_GAME_SERVER, {
+              error: sL(qk.error) ? qk.error : void 0,
+              severity: VL(qk.error),
+              gameServerUnreachable: (0, Rk.c)(qk.error),
+              joinFailure: (0, Rk.h)(qk.error),
+              rematch: (0, xk.e)(qk.error),
+              gameRefused: (0, Pk.e)(qk.error)
             })
           }
-          return DI("Reloading into the new build");
+          return zL("Reloading into the new build");
         case "stopped":
-          return DI("The game client stopped, and shows why");
-        case "Hg":
-          return DI("Left the game while it loaded")
+          return zL("The game client stopped, and shows why");
+        case "iI":
+          return zL("Left the game while it loaded")
       }
     }
 
-    function nI(SS) {
-      return SS instanceof AS.k || SS instanceof AS.d && "attach" !== SS.stage
+    function QL(kk) {
+      return kk instanceof bk.j || kk instanceof bk.b && "attach" !== kk.stage
     }
 
-    function PI(SS) {
-      return !(SS instanceof AS.p) && !nI(SS) && void 0 === (0, yS.d)(SS)
+    function sL(kk) {
+      return !(kk instanceof bk.t) && !QL(kk) && void 0 === (0, Rk.c)(kk)
     }
 
-    function QI(SS) {
-      return nI(SS) ? SS instanceof AS.d && (0, YS.k)(SS.code).requiresRefresh ? "medium" : "low" : PI(SS) || SS instanceof AS.p ? "medium" : "low"
+    function VL(kk) {
+      return QL(kk) ? kk instanceof bk.b && (0, uk.l)(kk.code).requiresRefresh ? "medium" : "low" : sL(kk) || kk instanceof bk.t ? "medium" : "low"
     }
 
-    function DI(SS) {
-      return bS.d.errorWithCode(SS, XS.g.CONNECT_TO_GAME_SERVER, {
+    function zL(kk) {
+      return Tk.b.errorWithCode(kk, ik.j.CONNECT_TO_GAME_SERVER, {
         severity: "low",
-        Hg: !0
+        iI: !0
       })
     }
-    class wI {
-      leave(SS) {
-        if ((0, DS.e)()) {
-          var HS, gS;
-          if ((0, xS.e)()) return;
-          (0, aS.c)(!0 === (null === (HS = (0, DS.l)()) || void 0 === HS || null === (gS = HS.currentViewer) || void 0 === gS ? void 0 : gS.unsavedChanges), SS)
+    class SL {
+      leave(kk) {
+        if ((0, Qk.c)()) {
+          var Fk, Ik;
+          if ((0, yk.b)()) return;
+          (0, jk.b)(!0 === (null === (Fk = (0, Qk.j)()) || void 0 === Fk || null === (Ik = Fk.currentViewer) || void 0 === Ik ? void 0 : Ik.unsavedChanges), kk)
         } else this.leaveLive()
       }
       leaveLive() {
-        var SS;
-        tI && (null === (SS = Ku()) || void 0 === SS || SS.endGamePack());
-        if (!qI) return;
-        qI = !1, (0, CS.f)();
+        var kk;
+        yL && (null === (kk = Jq()) || void 0 === kk || kk.endGamePack());
+        if (!tL) return;
+        tL = !1, (0, Jk.g)();
         try {
-          var HS;
-          null === (HS = (0, hS.q)()) || void 0 === HS || HS.clearWasmCameraScreen()
-        } catch (tS) {
-          console.error("[bloxd-wasm-client] the camera screen didn't clear", tS)
+          var Fk;
+          null === (Fk = (0, Vk.y)()) || void 0 === Fk || Fk.clearWasmCameraScreen()
+        } catch (Xk) {
+          console.error("[bloxd-wasm-client] the camera screen didn't clear", Xk)
         }
         const {
-          gameNameWithVariation: gS
-        } = (0, kS.e)();
+          gameNameWithVariation: Ik
+        } = (0, Zk.d)();
         try {
-          Zq()
+          va()
         } finally {
-          (0, kS.r)({
+          (0, Zk.s)({
             websocketUrl: null
-          }), qS.k.cj("leaveGame", {
-            gameNameWithVariation: gS
-          }), (0, IS.Q)()
+          }), ak.g.GL("leaveGame", {
+            gameNameWithVariation: Ik
+          }), (0, Lk.O)()
         }
       }
       isReplay() {
-        return (0, DS.e)()
+        return (0, Qk.c)()
       }
     }
   },
-  40947: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => bS,
-      f: () => tS,
-      h: () => NS,
-      k: () => xS
+  40937: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Tk,
+      e: () => Xk,
+      g: () => lk,
+      i: () => yk
     });
-    const tS = 12e4,
-      bS = 3e4,
-      XS = {
+    const Xk = 12e4,
+      Tk = 3e4,
+      ik = {
         hidden: () => "undefined" !== typeof document && document.hidden,
-        listen: SS => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", SS), () => {
-          document.removeEventListener("visibilitychange", SS)
+        listen: kk => "undefined" === typeof document ? () => {} : (document.addEventListener("visibilitychange", kk), () => {
+          document.removeEventListener("visibilitychange", kk)
         })
       };
 
-    function xS(SS) {
-      return `it sent no start within ${Math.round(SS)} ms`
+    function yk(kk) {
+      return `it sent no start within ${Math.round(kk)} ms`
     }
-    class NS {
-      constructor(SS, HS) {
-        let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
-          tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : XS;
-        this.timeoutMs = SS, this.onTimeout = HS, this.now = gS, this.visibility = tS, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = tS.listen((() => {
+    class lk {
+      constructor(kk, Fk) {
+        let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => performance.now(),
+          Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ik;
+        this.timeoutMs = kk, this.onTimeout = Fk, this.now = Ik, this.visibility = Xk, this.timer = null, this.counted = 0, this.step = null, this.unlisten = void 0, this.unlisten = Xk.listen((() => {
           this.onVisibility()
-        })), tS.hidden() || this.next()
+        })), Xk.hidden() || this.next()
       }
       cancel() {
         this.pause(), this.unlisten()
@@ -8466,51 +8726,51 @@ export const modules = {
         this.visibility.hidden() ? (this.counted += this.credit(), this.pause()) : null === this.timer && this.next()
       }
       credit() {
-        const SS = this.step;
-        return null === SS ? 0 : Math.min(this.now() - SS.at, SS.ms)
+        const kk = this.step;
+        return null === kk ? 0 : Math.min(this.now() - kk.at, kk.ms)
       }
       pause() {
         null !== this.timer && (clearTimeout(this.timer), this.timer = null), this.step = null
       }
       next() {
-        const SS = this.timeoutMs - this.counted;
-        if (SS <= 0) return void this.arm(1e3, (() => {
+        const kk = this.timeoutMs - this.counted;
+        if (kk <= 0) return void this.arm(1e3, (() => {
           this.cancel(), this.onTimeout(this.counted)
         }));
-        const HS = Math.min(SS, 5e3);
+        const Fk = Math.min(kk, 5e3);
         this.step = {
           at: this.now(),
-          ms: HS
-        }, this.arm(HS, (() => {
+          ms: Fk
+        }, this.arm(Fk, (() => {
           this.counted += this.credit(), this.step = null, this.next()
         }))
       }
-      arm(SS, HS) {
+      arm(kk, Fk) {
         this.timer = setTimeout((() => {
-          this.timer = null, HS()
-        }), SS)
+          this.timer = null, Fk()
+        }), kk)
       }
     }
   },
-  39699: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => NS
+  39631: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => lk
     });
-    var tS = gS(387),
-      bS = gS(1087);
-    const XS = new Set(["bingo", "buildAFactory2", "classic", "testGym"]),
-      xS = new Set(["creativeFlat", "skyGrid"]);
+    var Xk = Ik(337),
+      Tk = Ik(1018);
+    const ik = new Set(["bingo", "buildAFactory2", "classic", "testGym"]),
+      yk = new Set(["creativeFlat", "skyGrid"]);
 
-    function NS(SS) {
-      const HS = (0, tS.Kb)(SS);
-      return "classic" !== HS ? XS.has(HS) : !(0, bS.m)(SS) && !xS.has((0, tS.Fb)(SS))
+    function lk(kk) {
+      const Fk = (0, Xk.dc)(kk);
+      return "classic" !== Fk ? ik.has(Fk) : !(0, Tk.j)(kk) && !yk.has((0, Xk.Xb)(kk))
     }
   },
-  40869: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => tS
+  40843: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Xk
     });
-    const tS = {
+    const Xk = {
       roomsPerServerMax: 30,
       timeForPlayerToConnect: 3e4,
       seatReservationSeconds: 15,
@@ -8534,233 +8794,233 @@ export const modules = {
       drainingSessionLobbyFillMs: 3e5
     }
   },
-  38739: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => XS
+  38726: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => ik
     });
-    var tS = gS(3021);
-    const bS = ["none", "idle", "now"];
+    var Xk = Ik(2801);
+    const Tk = ["none", "idle", "now"];
 
-    function XS() {
-      const SS = () => (0, tS.G)();
+    function ik() {
+      const kk = () => (0, Xk.y)();
       return {
-        memoryBytes: () => (0, tS.B)().buffer.byteLength,
-        reserveUpFront: HS => SS().qf(HS),
-        reserveAhead: HS => SS().Nf(HS),
-        setCeiling: HS => {
-          SS().uf(HS)
+        memoryBytes: () => (0, Xk.r)().buffer.byteLength,
+        reserveUpFront: Fk => kk().tt(Fk),
+        reserveAhead: Fk => kk().Lt(Fk),
+        setCeiling: Fk => {
+          kk().Zt(Fk)
         },
-        lowWater: () => bS[SS().xf()] ?? "none",
-        stats: () => function(SS) {
-          const HS = new Uint32Array((0, tS.B)().buffer, SS, 17),
-            gS = SS => HS[SS] ?? 0,
-            bS = SS => ({
-              upFront: gS(SS),
-              ahead: gS(SS + 1),
-              onDemandInFrame: gS(SS + 2),
-              onDemand: gS(SS + 3)
+        lowWater: () => Tk[kk().qt()] ?? "none",
+        stats: () => function(kk) {
+          const Fk = new Uint32Array((0, Xk.r)().buffer, kk, 17),
+            Ik = kk => Fk[kk] ?? 0,
+            Tk = kk => ({
+              upFront: Ik(kk),
+              ahead: Ik(kk + 1),
+              onDemandInFrame: Ik(kk + 2),
+              onDemand: Ik(kk + 3)
             });
           return {
-            memoryBytes: gS(0),
-            initialBytes: gS(1),
-            liveBytes: gS(2),
-            peakLiveBytes: gS(3),
-            headroomBytes: gS(4),
-            unusedBytes: gS(5),
-            ceilingBytes: gS(6),
-            reservesRefused: gS(7),
-            grows: bS(8),
-            grownBytes: bS(12),
-            allocationsRefused: gS(16)
+            memoryBytes: Ik(0),
+            initialBytes: Ik(1),
+            liveBytes: Ik(2),
+            peakLiveBytes: Ik(3),
+            headroomBytes: Ik(4),
+            unusedBytes: Ik(5),
+            ceilingBytes: Ik(6),
+            reservesRefused: Ik(7),
+            grows: Tk(8),
+            grownBytes: Tk(12),
+            allocationsRefused: Ik(16)
           }
-        }(SS().ff()),
-        takeBallast: () => SS().kf(),
-        takePressure: () => SS().af()
+        }(kk().jt()),
+        takeBallast: () => kk().et(),
+        takePressure: () => kk().wt()
       }
     }
   },
-  5221: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => NS,
-      e: () => xS,
-      h: () => tS,
-      j: () => jS,
-      m: () => fS,
-      n: () => bS,
-      r: () => XS,
-      u: () => uS,
-      v: () => IS,
-      y: () => kS
+  5053: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => lk,
+      c: () => yk,
+      d: () => Xk,
+      g: () => wk,
+      k: () => tk,
+      m: () => Tk,
+      p: () => ik,
+      t: () => qk,
+      w: () => Lk,
+      x: () => Zk
     });
-    const tS = 5;
+    const Xk = 5;
 
-    function bS(SS) {
-      return SS === tS
+    function Tk(kk) {
+      return kk === Xk
     }
 
-    function XS(SS) {
-      return [...SS.features]
+    function ik(kk) {
+      return [...kk.features]
     }
-    const xS = 262144,
-      NS = 256,
-      qS = 256;
+    const yk = 262144,
+      lk = 256,
+      ak = 256;
 
-    function uS(SS) {
-      if ("object" !== typeof SS || null === SS || Array.isArray(SS)) return "The pack has no files.";
-      const HS = [];
-      for (const [gS, tS] of Object.entries(SS)) {
-        if ("string" !== typeof tS) return `${gS} isn't text.`;
-        HS.push({
-          path: gS,
-          source: tS
+    function qk(kk) {
+      if ("object" !== typeof kk || null === kk || Array.isArray(kk)) return "The pack has no files.";
+      const Fk = [];
+      for (const [Ik, Xk] of Object.entries(kk)) {
+        if ("string" !== typeof Xk) return `${Ik} isn't text.`;
+        Fk.push({
+          path: Ik,
+          source: Xk
         })
       }
-      return HS.sort(((SS, HS) => fS(SS.path, HS.path))),
-        function(SS) {
-          if (0 === SS.length) return "The pack has no .wgsl files.";
-          if (SS.length > NS) return `The pack has more than ${NS} .wgsl files.`;
-          const HS = new Set;
+      return Fk.sort(((kk, Fk) => tk(kk.path, Fk.path))),
+        function(kk) {
+          if (0 === kk.length) return "The pack has no .wgsl files.";
+          if (kk.length > lk) return `The pack has more than ${lk} .wgsl files.`;
+          const Fk = new Set;
           for (const {
-              path: gS
+              path: Ik
             }
-            of SS) {
-            const SS = aS(gS);
-            if (null !== SS) return SS;
-            if (HS.has(gS)) return `The pack has two files at ${gS}.`;
-            HS.add(gS)
+            of kk) {
+            const kk = jk(Ik);
+            if (null !== kk) return kk;
+            if (Fk.has(Ik)) return `The pack has two files at ${Ik}.`;
+            Fk.add(Ik)
           }
-          return kS(SS) > xS ? `The pack's .wgsl files are over ${xS/1024} KB in total.` : null
-        }(HS) ?? HS
+          return Zk(kk) > yk ? `The pack's .wgsl files are over ${yk/1024} KB in total.` : null
+        }(Fk) ?? Fk
     }
 
-    function IS(SS) {
-      const HS = {};
-      for (const gS of SS) HS[gS.path] = gS.source;
-      return HS
+    function Lk(kk) {
+      const Fk = {};
+      for (const Ik of kk) Fk[Ik.path] = Ik.source;
+      return Fk
     }
 
-    function fS(SS, HS) {
-      return SS < HS ? -1 : SS > HS ? 1 : 0
+    function tk(kk, Fk) {
+      return kk < Fk ? -1 : kk > Fk ? 1 : 0
     }
 
-    function kS(SS) {
-      const HS = new TextEncoder;
-      let gS = 0;
+    function Zk(kk) {
+      const Fk = new TextEncoder;
+      let Ik = 0;
       for (const {
-          source: tS
+          source: Xk
         }
-        of SS) gS += HS.encode(tS).byteLength;
-      return gS
+        of kk) Ik += Fk.encode(Xk).byteLength;
+      return Ik
     }
 
-    function aS(SS) {
-      if (!SS.toLowerCase().endsWith(".wgsl")) return `${SS} isn't a .wgsl file.`;
-      if (SS.length > qS) return `A file path is over ${qS} characters.`;
-      if (SS.includes("\\") || /[\u0000-\u001f]/.test(SS)) return `${SS} isn't a valid file path.`;
-      return SS.split("/").some((SS => "" === SS || "." === SS || ".." === SS)) ? `${SS} isn't a valid file path.` : null
+    function jk(kk) {
+      if (!kk.toLowerCase().endsWith(".wgsl")) return `${kk} isn't a .wgsl file.`;
+      if (kk.length > ak) return `A file path is over ${ak} characters.`;
+      if (kk.includes("\\") || /[\u0000-\u001f]/.test(kk)) return `${kk} isn't a valid file path.`;
+      return kk.split("/").some((kk => "" === kk || "." === kk || ".." === kk)) ? `${kk} isn't a valid file path.` : null
     }
-    const KS = /^(.*)\[rot\[([1-4])$/;
+    const ek = /^(.*)\[rot\[([1-4])$/;
 
-    function jS(SS, HS) {
-      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const tS = new Map;
-      HS.forEach(((SS, HS) => {
+    function wk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const Xk = new Map;
+      Fk.forEach(((kk, Fk) => {
         let {
-          numAnimStates: gS,
-          animStartIdx: bS
-        } = SS;
-        for (let XS = 1; XS < gS; XS++) tS.set(bS + XS - 1, HS)
+          numAnimStates: Ik,
+          animStartIdx: Tk
+        } = kk;
+        for (let ik = 1; ik < Ik; ik++) Xk.set(Tk + ik - 1, Fk)
       }));
-      const bS = Object.entries(SS),
-        XS = new Map;
-      for (const [jS, GS] of bS) {
-        const SS = KS.exec(jS);
-        "1" === SS?.[2] && XS.set(SS[1], GS + 1)
+      const Tk = Object.entries(kk),
+        ik = new Map;
+      for (const [wk, Hk] of Tk) {
+        const kk = ek.exec(wk);
+        "1" === kk?.[2] && ik.set(kk[1], Hk + 1)
       }
-      const xS = SS => {
-          const HS = KS.exec(SS);
-          return HS && XS.has(HS[1]) ? {
-            root: HS[1],
-            rotation: Number(HS[2]) - 1
+      const yk = kk => {
+          const Fk = ek.exec(kk);
+          return Fk && ik.has(Fk[1]) ? {
+            root: Fk[1],
+            rotation: Number(Fk[2]) - 1
           } : null
         },
-        NS = new Set(bS.map((SS => {
-          let [HS] = SS;
-          return xS(HS)?.root ?? HS
+        lk = new Set(Tk.map((kk => {
+          let [Fk] = kk;
+          return yk(Fk)?.root ?? Fk
         }))),
-        qS = (SS, gS) => {
-          const tS = SS.replace(/_?0$/, "");
-          return (HS[gS]?.numAnimStates ?? 0) > 1 && !NS.has(tS) ? tS : SS
+        ak = (kk, Ik) => {
+          const Xk = kk.replace(/_?0$/, "");
+          return (Fk[Ik]?.numAnimStates ?? 0) > 1 && !lk.has(Xk) ? Xk : kk
         },
-        uS = new Map;
-      for (const [KS, jS] of bS) uS.set(jS, qS(xS(KS)?.root ?? KS, jS));
-      const IS = bS.reduce(((SS, HS) => {
-          let [, gS] = HS;
-          return Math.max(SS, gS + 1)
+        qk = new Map;
+      for (const [ek, wk] of Tk) qk.set(wk, ak(yk(ek)?.root ?? ek, wk));
+      const Lk = Tk.reduce(((kk, Fk) => {
+          let [, Ik] = Fk;
+          return Math.max(kk, Ik + 1)
         }), 0),
-        fS = Array.from({
-          length: IS
-        }, ((SS, HS) => ({
-          id: HS + 1,
+        tk = Array.from({
+          length: Lk
+        }, ((kk, Fk) => ({
+          id: Fk + 1,
           rotation: 0
         }))),
-        kS = new Map,
-        aS = new Map;
-      for (const [KS, jS] of bS) {
-        const SS = xS(KS),
-          HS = tS.get(jS);
-        if (void 0 !== HS) {
-          const gS = uS.get(HS);
-          aS.set(KS, {
-            name: KS,
-            texture: gS,
+        Zk = new Map,
+        jk = new Map;
+      for (const [ek, wk] of Tk) {
+        const kk = yk(ek),
+          Fk = Xk.get(wk);
+        if (void 0 !== Fk) {
+          const Ik = qk.get(Fk);
+          jk.set(ek, {
+            name: ek,
+            texture: Ik,
             kind: "frame"
-          }), SS && !aS.has(SS.root) && aS.set(SS.root, {
-            name: SS.root,
-            texture: gS,
+          }), kk && !jk.has(kk.root) && jk.set(kk.root, {
+            name: kk.root,
+            texture: Ik,
             kind: "frame"
           });
           continue
         }
-        const gS = uS.get(jS),
-          bS = SS?.root ?? KS;
-        if (gS !== bS && aS.set(bS, {
-            name: bS,
-            texture: gS,
+        const Ik = qk.get(wk),
+          Tk = kk?.root ?? ek;
+        if (Ik !== Tk && jk.set(Tk, {
+            name: Tk,
+            texture: Ik,
             kind: "frame"
-          }), SS) {
-          const HS = XS.get(SS.root);
-          fS[jS] = {
-            id: HS,
-            rotation: SS.rotation
-          }, kS.set(gS, HS), aS.set(KS, {
-            name: KS,
-            texture: gS,
+          }), kk) {
+          const Fk = ik.get(kk.root);
+          tk[wk] = {
+            id: Fk,
+            rotation: kk.rotation
+          }, Zk.set(Ik, Fk), jk.set(ek, {
+            name: ek,
+            texture: Ik,
             kind: "rotation"
           })
-        } else kS.set(gS, jS + 1)
+        } else Zk.set(Ik, wk + 1)
       }
-      for (const KS of kS.keys()) aS.delete(KS);
-      for (const [KS, jS] of gS) {
-        const SS = kS.get(jS);
-        void 0 === SS || kS.has(KS) || (kS.set(KS, SS), aS.delete(KS))
+      for (const ek of Zk.keys()) jk.delete(ek);
+      for (const [ek, wk] of Ik) {
+        const kk = Zk.get(wk);
+        void 0 === kk || Zk.has(ek) || (Zk.set(ek, kk), jk.delete(ek))
       }
       return {
-        named: [...kS].sort(((SS, HS) => {
-          let [gS] = SS, [tS] = HS;
-          return gS < tS ? -1 : gS > tS ? 1 : 0
-        })).map((SS => {
-          let [HS, gS] = SS;
+        named: [...Zk].sort(((kk, Fk) => {
+          let [Ik] = kk, [Xk] = Fk;
+          return Ik < Xk ? -1 : Ik > Xk ? 1 : 0
+        })).map((kk => {
+          let [Fk, Ik] = kk;
           return {
-            name: HS,
-            id: gS
+            name: Fk,
+            id: Ik
           }
         })),
-        aliases: [...aS.values()],
-        layers: fS
+        aliases: [...jk.values()],
+        layers: tk
       }
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

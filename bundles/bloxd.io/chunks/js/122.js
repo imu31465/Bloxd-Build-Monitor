@@ -1,243 +1,243 @@
 export const id = 122;
 export const ids = [122, 396];
 export const modules = {
-  36345: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      default: () => yH
+  36319: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      default: () => RF
     });
-    var tS = gS(369),
-      bS = gS(3639),
-      XS = gS(3676),
-      xS = gS(3671),
-      NS = gS(3665),
-      qS = gS(1281),
-      uS = gS(45),
-      IS = gS(1844),
-      fS = gS(1444),
-      kS = gS(1528),
-      aS = gS(1121),
-      KS = gS.n(aS),
-      jS = gS(1774),
-      GS = gS(64),
-      CS = gS(77),
-      nS = gS(2475),
-      PS = gS(1406),
-      QS = gS(1712),
-      DS = gS(1211),
-      wS = gS(3549),
-      hS = gS(4691),
-      ZS = gS(3614),
-      JS = gS(2031),
-      OS = gS(3635),
-      dS = gS(1851),
-      cS = gS(1588),
-      vS = gS(2273),
-      ES = gS(1419),
-      LS = gS(2725),
-      YS = gS(5182),
-      AS = gS(1181);
-    const yS = 15e3,
-      VS = 2500;
+    var Xk = Ik(318),
+      Tk = Ik(3442),
+      ik = Ik(3488),
+      yk = Ik(3482),
+      lk = Ik(3475),
+      ak = Ik(1179),
+      qk = Ik(41),
+      Lk = Ik(1665),
+      tk = Ik(1333),
+      Zk = Ik(1406),
+      jk = Ik(1055),
+      ek = Ik.n(jk),
+      wk = Ik(1617),
+      Hk = Ik(58),
+      Jk = Ik(74),
+      xk = Ik(2291),
+      Pk = Ik(1308),
+      Kk = Ik(1560),
+      Qk = Ik(1118),
+      sk = Ik(3352),
+      Vk = Ik(4543),
+      zk = Ik(3420),
+      Sk = Ik(1849),
+      vk = Ik(3437),
+      Ek = Ik(1673),
+      Ok = Ik(1453),
+      nk = Ik(2089),
+      Gk = Ik(1318),
+      pk = Ik(2525),
+      uk = Ik(5016),
+      bk = Ik(1096);
+    const Rk = 15e3,
+      Uk = 2500;
 
-    function iS(SS) {
-      var HS;
+    function Ck(kk) {
+      var Fk;
       let {
-        eventName: gS
-      } = SS;
+        eventName: Ik
+      } = kk;
       const {
-        t: tS
-      } = (0, qS.F)(), bS = dS.d[gS], [XS, xS] = (0, GS.useState)((() => Date.now() >= bS.endsAt.getTime())), [NS, uS] = (0, GS.useState)("overall"), IS = function(SS, HS) {
+        t: Xk
+      } = (0, ak.y)(), Tk = Ek.f[Ik], [ik, yk] = (0, Hk.useState)((() => Date.now() >= Tk.endsAt.getTime())), [lk, qk] = (0, Hk.useState)("overall"), Lk = function(kk, Fk) {
         const {
-          userContext: gS,
-          isUserContextUpdating: tS
-        } = (0, DS.b)(), bS = `${SS}:${HS}`, [XS, xS] = (0, GS.useState)({
-          requestKey: bS,
+          userContext: Ik,
+          isUserContextUpdating: Xk
+        } = (0, Qk.d)(), Tk = `${kk}:${Fk}`, [ik, yk] = (0, Hk.useState)({
+          requestKey: Tk,
           leaderboard: {
             status: "loading"
           }
         });
-        return (0, GS.useEffect)((() => {
-          if (tS) return;
-          let XS, NS = !1;
-          const qS = async () => {
+        return (0, Hk.useEffect)((() => {
+          if (Xk) return;
+          let ik, lk = !1;
+          const ak = async () => {
             if ("visible" === document.visibilityState) try {
-              const tS = await cS.b.getGameEventLeaderboard(gS, {
-                event: SS,
-                scope: HS
+              const Xk = await Ok.e.getGameEventLeaderboard(Ik, {
+                event: kk,
+                scope: Fk
               });
-              NS || xS({
-                requestKey: bS,
+              lk || yk({
+                requestKey: Tk,
                 leaderboard: {
                   status: "loaded",
-                  leaderboard: tS
+                  leaderboard: Xk
                 }
               })
             } catch {
-              NS || xS((SS => SS.requestKey === bS && "loaded" === SS.leaderboard.status ? SS : {
-                requestKey: bS,
+              lk || yk((kk => kk.requestKey === Tk && "loaded" === kk.leaderboard.status ? kk : {
+                requestKey: Tk,
                 leaderboard: {
                   status: "unavailable"
                 }
               }))
             }
-            NS || (XS = setTimeout(qS, yS))
+            lk || (ik = setTimeout(ak, Rk))
           };
-          return qS(), () => {
-            NS = !0, clearTimeout(XS)
+          return ak(), () => {
+            lk = !0, clearTimeout(ik)
           }
-        }), [SS, HS, bS, gS, tS]), XS.requestKey === bS ? XS.leaderboard : {
+        }), [kk, Fk, Tk, Ik, Xk]), ik.requestKey === Tk ? ik.leaderboard : {
           status: "loading"
         }
-      }(gS, NS), fS = function(SS) {
-        const HS = (0, GS.useRef)(null),
-          gS = (0, GS.useRef)(0),
-          tS = (0, GS.useRef)(),
-          [bS, XS] = (0, GS.useState)({});
-        return (0, GS.useEffect)((() => {
-          const bS = null === SS || void 0 === SS ? void 0 : SS.entries;
-          if (!bS) return;
-          const xS = new Map(bS.map((SS => [SS.player.name, SS.value]))),
-            NS = HS.current;
-          if (HS.current = xS, null === NS) return;
-          const qS = {};
-          for (const [SS, HS] of xS) {
-            const tS = NS.get(SS);
-            void 0 !== tS && HS > tS && (qS[SS] = {
-              amount: HS - tS,
-              key: gS.current++
+      }(Ik, lk), tk = function(kk) {
+        const Fk = (0, Hk.useRef)(null),
+          Ik = (0, Hk.useRef)(0),
+          Xk = (0, Hk.useRef)(),
+          [Tk, ik] = (0, Hk.useState)({});
+        return (0, Hk.useEffect)((() => {
+          const Tk = null === kk || void 0 === kk ? void 0 : kk.entries;
+          if (!Tk) return;
+          const yk = new Map(Tk.map((kk => [kk.player.name, kk.value]))),
+            lk = Fk.current;
+          if (Fk.current = yk, null === lk) return;
+          const ak = {};
+          for (const [kk, Fk] of yk) {
+            const Xk = lk.get(kk);
+            void 0 !== Xk && Fk > Xk && (ak[kk] = {
+              amount: Fk - Xk,
+              key: Ik.current++
             })
           }
-          0 !== Object.keys(qS).length && (XS(qS), clearTimeout(tS.current), tS.current = setTimeout((() => {
-            XS({})
-          }), VS))
-        }), [SS]), (0, GS.useEffect)((() => () => {
-          clearTimeout(tS.current)
-        }), []), bS
-      }("loaded" === IS.status ? IS.leaderboard : null), kS = function(SS) {
-        const [HS, gS] = (0, GS.useState)(null), tS = "loaded" === SS.status ? SS.leaderboard.goalProgress : void 0;
-        return (0, GS.useEffect)((() => {
-          tS && gS(tS)
-        }), [tS]), HS
-      }(IS), aS = vS.g[`profileEffect_${bS.prizePack}`];
-      if (XS) return null;
-      const jS = "loaded" === IS.status ? IS.leaderboard : null,
-        CS = null !== (HS = null === jS || void 0 === jS ? void 0 : jS.entries) && void 0 !== HS ? HS : null,
-        nS = null !== jS && void 0 !== jS && jS.own && null !== CS && !CS.some((SS => SS.isOwn)) ? jS.own : null;
-      return (0, AS.jsx)("section", {
+          0 !== Object.keys(ak).length && (ik(ak), clearTimeout(Xk.current), Xk.current = setTimeout((() => {
+            ik({})
+          }), Uk))
+        }), [kk]), (0, Hk.useEffect)((() => () => {
+          clearTimeout(Xk.current)
+        }), []), Tk
+      }("loaded" === Lk.status ? Lk.leaderboard : null), Zk = function(kk) {
+        const [Fk, Ik] = (0, Hk.useState)(null), Xk = "loaded" === kk.status ? kk.leaderboard.goalProgress : void 0;
+        return (0, Hk.useEffect)((() => {
+          Xk && Ik(Xk)
+        }), [Xk]), Fk
+      }(Lk), jk = nk.d[`profileEffect_${Tk.prizePack}`];
+      if (ik) return null;
+      const wk = "loaded" === Lk.status ? Lk.leaderboard : null,
+        Jk = null !== (Fk = null === wk || void 0 === wk ? void 0 : wk.entries) && void 0 !== Fk ? Fk : null,
+        xk = null !== wk && void 0 !== wk && wk.own && null !== Jk && !Jk.some((kk => kk.isOwn)) ? wk.own : null;
+      return (0, bk.jsx)("section", {
         className: "GameEventPanel AnimFadeIn",
-        children: (0, AS.jsxs)("div", {
+        children: (0, bk.jsxs)("div", {
           className: "GameEventPanelCard",
-          children: [(0, AS.jsxs)("div", {
+          children: [(0, bk.jsxs)("div", {
             className: "GameEventPanelInfo",
-            children: [(0, AS.jsxs)("div", {
+            children: [(0, bk.jsxs)("div", {
               className: "GameEventPanelStatus",
-              children: [(0, AS.jsxs)("span", {
+              children: [(0, bk.jsxs)("span", {
                 className: "GameEventPanelLive",
-                children: [(0, AS.jsx)("span", {
+                children: [(0, bk.jsx)("span", {
                   className: "GameEventPanelLiveDot"
-                }), tS("gameEvents:live")]
-              }), (0, AS.jsxs)("span", {
+                }), Xk("gameEvents:live")]
+              }), (0, bk.jsxs)("span", {
                 className: "GameEventPanelEndsIn",
-                children: [tS("gameEvents:endsIn"), (0, AS.jsx)(ZS.d, {
-                  toTime: bS.endsAt,
+                children: [Xk("gameEvents:endsIn"), (0, bk.jsx)(zk.b, {
+                  toTime: Tk.endsAt,
                   onReachEndOfCountdown: () => {
-                    xS(!0)
+                    yk(!0)
                   }
                 })]
               })]
-            }), (0, AS.jsx)("h2", {
+            }), (0, bk.jsx)("h2", {
               className: "GameEventPanelTitle",
-              children: tS(bS.titleKey)
-            }), (0, AS.jsxs)("div", {
+              children: Xk(Tk.titleKey)
+            }), (0, bk.jsxs)("div", {
               className: "GameEventPanelPrize",
-              children: [(0, AS.jsxs)("div", {
+              children: [(0, bk.jsxs)("div", {
                 className: "GameEventPanelPrizeSummary",
-                children: [aS && (0, AS.jsx)("div", {
+                children: [jk && (0, bk.jsx)("div", {
                   className: "GameEventPanelPrizePreview",
-                  children: (0, AS.jsx)(aS, {})
-                }), (0, AS.jsxs)("div", {
+                  children: (0, bk.jsx)(jk, {})
+                }), (0, bk.jsxs)("div", {
                   className: "GameEventPanelPrizeText",
-                  children: [(0, AS.jsx)("div", {
+                  children: [(0, bk.jsx)("div", {
                     className: "GameEventPanelPrizeLabel",
-                    children: tS("gameEvents:prize")
-                  }), (0, AS.jsx)("div", {
+                    children: Xk("gameEvents:prize")
+                  }), (0, bk.jsx)("div", {
                     className: "GameEventPanelPrizeName",
-                    children: tS(bS.prizeNameKey)
+                    children: Xk(Tk.prizeNameKey)
                   })]
                 })]
-              }), (0, AS.jsx)(WS, {
-                event: bS,
-                progress: kS
+              }), (0, bk.jsx)(Nk, {
+                event: Tk,
+                progress: Zk
               })]
             })]
-          }), (0, AS.jsxs)("div", {
+          }), (0, bk.jsxs)("div", {
             className: "GameEventPanelLeaderboard",
-            children: [(0, AS.jsxs)("div", {
+            children: [(0, bk.jsxs)("div", {
               className: "GameEventPanelLeaderboardHeader",
-              children: [(0, AS.jsx)("h3", {
+              children: [(0, bk.jsx)("h3", {
                 className: "GameEventPanelLeaderboardTitle",
-                children: tS(bS.leaderboard.titleKey)
-              }), (0, AS.jsx)(YS.d, {
-                ariaLabel: tS("gameEvents:leaderboardScope"),
-                options: dS.b.map((SS => ({
-                  value: SS,
-                  label: tS(`gameEvents:${SS}Scope`)
+                children: Xk(Tk.leaderboard.titleKey)
+              }), (0, bk.jsx)(uk.b, {
+                ariaLabel: Xk("gameEvents:leaderboardScope"),
+                options: Ek.c.map((kk => ({
+                  value: kk,
+                  label: Xk(`gameEvents:${kk}Scope`)
                 }))),
-                value: NS,
-                onChange: uS
+                value: lk,
+                onChange: qk
               })]
-            }), "loading" === IS.status && (0, AS.jsx)("div", {
+            }), "loading" === Lk.status && (0, bk.jsx)("div", {
               className: "GameEventPanelLeaderboardLoader AnimFadeIn",
-              children: (0, AS.jsx)(ES.c, {})
-            }), ("unavailable" === IS.status || "loaded" === IS.status && null === CS) && (0, AS.jsx)("div", {
+              children: (0, bk.jsx)(Gk.c, {})
+            }), ("unavailable" === Lk.status || "loaded" === Lk.status && null === Jk) && (0, bk.jsx)("div", {
               className: "GameEventPanelLeaderboardMessage",
-              children: tS("gameEvents:leaderboardUnavailable")
-            }), null !== CS && 0 === CS.length && (0, AS.jsx)("div", {
+              children: Xk("gameEvents:leaderboardUnavailable")
+            }), null !== Jk && 0 === Jk.length && (0, bk.jsx)("div", {
               className: "GameEventPanelLeaderboardMessage",
-              children: tS("friends" === NS ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
-            }), null !== CS && CS.length > 0 && (0, AS.jsx)("ol", {
+              children: Xk("friends" === lk ? "gameEvents:friendsLeaderboardEmpty" : "gameEvents:leaderboardEmpty")
+            }), null !== Jk && Jk.length > 0 && (0, bk.jsx)("ol", {
               className: "GameEventPanelRows",
-              children: CS.map((SS => {
-                const HS = fS[SS.player.name];
-                return (0, AS.jsxs)("li", {
-                  className: KS()("GameEventPanelRow", {
-                    GameEventPanelRowOwn: SS.isOwn,
-                    GameEventPanelRowTop: SS.rank <= 3
+              children: Jk.map((kk => {
+                const Fk = tk[kk.player.name];
+                return (0, bk.jsxs)("li", {
+                  className: ek()("GameEventPanelRow", {
+                    GameEventPanelRowOwn: kk.isOwn,
+                    GameEventPanelRowTop: kk.rank <= 3
                   }),
-                  children: [(0, AS.jsxs)("span", {
+                  children: [(0, bk.jsxs)("span", {
                     className: "GameEventPanelRank",
-                    children: ["#", SS.rank]
-                  }), (0, AS.jsx)("div", {
+                    children: ["#", kk.rank]
+                  }), (0, bk.jsx)("div", {
                     className: "GameEventPanelPlayer",
-                    children: (0, AS.jsx)(LS.g, {
+                    children: (0, bk.jsx)(pk.g, {
                       playerSocialPreview: {
-                        ...SS.player,
+                        ...kk.player,
                         location: {
                           status: "offline"
                         }
                       },
                       showLocation: !1
                     })
-                  }), void 0 !== HS && (0, AS.jsxs)("span", {
+                  }), void 0 !== Fk && (0, bk.jsxs)("span", {
                     className: "GameEventPanelGain",
-                    children: ["+", HS.amount.toLocaleString()]
-                  }, HS.key), (0, AS.jsx)("span", {
+                    children: ["+", Fk.amount.toLocaleString()]
+                  }, Fk.key), (0, bk.jsx)("span", {
                     className: "GameEventPanelScore",
-                    children: SS.value.toLocaleString()
+                    children: kk.value.toLocaleString()
                   })]
-                }, SS.player.name)
+                }, kk.player.name)
               }))
-            }), nS && (0, AS.jsxs)("div", {
+            }), xk && (0, bk.jsxs)("div", {
               className: "GameEventPanelRow GameEventPanelRowOwn GameEventPanelOwnRow",
-              children: [(0, AS.jsxs)("span", {
+              children: [(0, bk.jsxs)("span", {
                 className: "GameEventPanelRank",
-                children: ["#", nS.rank.toLocaleString()]
-              }), (0, AS.jsx)("span", {
+                children: ["#", xk.rank.toLocaleString()]
+              }), (0, bk.jsx)("span", {
                 className: "GameEventPanelPlayer",
-                children: tS("gameEvents:yourPlace")
-              }), (0, AS.jsx)("span", {
+                children: Xk("gameEvents:yourPlace")
+              }), (0, bk.jsx)("span", {
                 className: "GameEventPanelScore",
-                children: nS.value.toLocaleString()
+                children: xk.value.toLocaleString()
               })]
             })]
           })]
@@ -245,355 +245,355 @@ export const modules = {
       })
     }
 
-    function WS(SS) {
+    function Nk(kk) {
       let {
-        event: HS,
-        progress: gS
-      } = SS;
+        event: Fk,
+        progress: Ik
+      } = kk;
       const {
-        t: tS
-      } = (0, qS.F)(), bS = null !== gS && HS.prizeGoals.some(((SS, HS) => gS[HS] >= SS.target));
-      return (0, AS.jsxs)("div", {
+        t: Xk
+      } = (0, ak.y)(), Tk = null !== Ik && Fk.prizeGoals.some(((kk, Fk) => Ik[Fk] >= kk.target));
+      return (0, bk.jsxs)("div", {
         className: "GameEventPanelGoals",
-        children: [(0, AS.jsx)("div", {
+        children: [(0, bk.jsx)("div", {
           className: "GameEventPanelGoalsHeading",
-          children: tS(bS ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
-        }), (0, AS.jsx)("div", {
+          children: Xk(Tk ? "gameEvents:prizeEarned" : "gameEvents:goalsHeading")
+        }), (0, bk.jsx)("div", {
           className: "GameEventPanelGoalRow",
-          children: HS.prizeGoals.map(((SS, HS) => {
-            const bS = null === gS ? null : Math.min(gS[HS], SS.target);
-            return (0, AS.jsxs)(GS.Fragment, {
-              children: [HS > 0 && (0, AS.jsx)("div", {
+          children: Fk.prizeGoals.map(((kk, Fk) => {
+            const Tk = null === Ik ? null : Math.min(Ik[Fk], kk.target);
+            return (0, bk.jsxs)(Hk.Fragment, {
+              children: [Fk > 0 && (0, bk.jsx)("div", {
                 className: "GameEventPanelGoalsOr",
-                children: tS("gameEvents:goalsOr")
-              }), (0, AS.jsxs)("div", {
-                className: KS()("GameEventPanelGoal", {
-                  GameEventPanelGoalDone: bS === SS.target
+                children: Xk("gameEvents:goalsOr")
+              }), (0, bk.jsxs)("div", {
+                className: ek()("GameEventPanelGoal", {
+                  GameEventPanelGoalDone: Tk === kk.target
                 }),
-                children: [(0, AS.jsx)("span", {
+                children: [(0, bk.jsx)("span", {
                   className: "GameEventPanelGoalLabel",
-                  children: tS(SS.labelKey)
-                }), (0, AS.jsxs)("div", {
+                  children: Xk(kk.labelKey)
+                }), (0, bk.jsxs)("div", {
                   className: "GameEventPanelGoalBar",
-                  children: [(0, AS.jsx)("div", {
+                  children: [(0, bk.jsx)("div", {
                     className: "GameEventPanelGoalBarFill",
                     style: {
-                      width: (null !== bS && void 0 !== bS ? bS : 0) / SS.target * 100 + "%"
+                      width: (null !== Tk && void 0 !== Tk ? Tk : 0) / kk.target * 100 + "%"
                     }
-                  }), null !== bS && (0, AS.jsxs)("span", {
+                  }), null !== Tk && (0, bk.jsxs)("span", {
                     className: "GameEventPanelGoalCount",
-                    children: [bS.toLocaleString(), " / ", SS.target.toLocaleString()]
+                    children: [Tk.toLocaleString(), " / ", kk.target.toLocaleString()]
                   })]
                 })]
               })]
-            }, SS.board)
+            }, kk.board)
           }))
         })]
       })
     }
-    var zS = gS(1647),
-      US = gS(1689),
-      pS = gS(1107),
-      sS = gS(795),
-      BS = gS(3608);
+    var ck = Ik(1511),
+      Wk = Ik(1545),
+      fk = Ik(1041),
+      Bk = Ik(743),
+      dk = Ik(3414);
 
-    function MS(SS) {
+    function Yk(kk) {
       let {
-        gameNameWithVariation: HS
-      } = SS;
-      const gS = (0, zS.D)(HS),
-        [tS, bS] = (0, GS.useState)(null);
-      if ((0, GS.useEffect)((() => {
-          if (!gS) return;
-          let SS = !0;
-          return (0, US.i)(gS).then((HS => {
-            SS && bS(HS)
-          })).catch((SS => {
-            console.error(`Failed to load the page copy for ${gS.name}`, SS)
+        gameNameWithVariation: Fk
+      } = kk;
+      const Ik = (0, ck.J)(Fk),
+        [Xk, Tk] = (0, Hk.useState)(null);
+      if ((0, Hk.useEffect)((() => {
+          if (!Ik) return;
+          let kk = !0;
+          return (0, Wk.e)(Ik).then((Fk => {
+            kk && Tk(Fk)
+          })).catch((kk => {
+            console.error(`Failed to load the page copy for ${Ik.name}`, kk)
           })), () => {
-            SS = !1
+            kk = !1
           }
-        }), [gS]), !gS || !tS || tS.name !== gS.name) return null;
-      const XS = (0, US.e)(tS),
-        xS = new Set((0, pS.e)((0, sS.g)()).map((SS => (0, zS.w)(SS)))),
-        NS = tS.similarGames.filter((SS => xS.has((0, zS.w)(SS))));
-      return (0, AS.jsx)("div", {
+        }), [Ik]), !Ik || !Xk || Xk.name !== Ik.name) return null;
+      const ik = (0, Wk.d)(Xk),
+        yk = new Set((0, fk.d)((0, Bk.k)()).map((kk => (0, ck.C)(kk)))),
+        lk = Xk.similarGames.filter((kk => yk.has((0, ck.C)(kk))));
+      return (0, bk.jsx)("div", {
         className: "GamePageContent",
-        children: (0, AS.jsxs)("div", {
+        children: (0, bk.jsxs)("div", {
           className: "GamePageContentColumns",
-          children: [(0, AS.jsxs)("section", {
+          children: [(0, bk.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, AS.jsx)("h2", {
-              children: XS.whatIs
-            }), tS.whatIs.map((SS => (0, AS.jsx)("p", {
-              children: SS
-            }, SS)))]
-          }), (0, AS.jsxs)("section", {
+            children: [(0, bk.jsx)("h2", {
+              children: ik.whatIs
+            }), Xk.whatIs.map((kk => (0, bk.jsx)("p", {
+              children: kk
+            }, kk)))]
+          }), (0, bk.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, AS.jsx)("h2", {
-              children: XS.howToPlay
-            }), tS.howToPlay.map((SS => (0, AS.jsx)("p", {
-              children: SS
-            }, SS)))]
-          }), (0, AS.jsxs)("section", {
+            children: [(0, bk.jsx)("h2", {
+              children: ik.howToPlay
+            }), Xk.howToPlay.map((kk => (0, bk.jsx)("p", {
+              children: kk
+            }, kk)))]
+          }), (0, bk.jsxs)("section", {
             className: "GamePageContentSection",
-            children: [(0, AS.jsx)("h2", {
-              children: XS.features
-            }), (0, AS.jsx)("ul", {
-              children: tS.features.map((SS => (0, AS.jsx)("li", {
-                children: SS
-              }, SS)))
+            children: [(0, bk.jsx)("h2", {
+              children: ik.features
+            }), (0, bk.jsx)("ul", {
+              children: Xk.features.map((kk => (0, bk.jsx)("li", {
+                children: kk
+              }, kk)))
             })]
-          }), (0, AS.jsxs)("aside", {
+          }), (0, bk.jsxs)("aside", {
             className: "GamePageContentSection",
-            children: [(0, AS.jsx)("h2", {
-              children: XS.tips
-            }), (0, AS.jsx)("ul", {
-              children: tS.tips.map((SS => (0, AS.jsx)("li", {
-                children: SS
-              }, SS)))
+            children: [(0, bk.jsx)("h2", {
+              children: ik.tips
+            }), (0, bk.jsx)("ul", {
+              children: Xk.tips.map((kk => (0, bk.jsx)("li", {
+                children: kk
+              }, kk)))
             })]
-          }), (0, AS.jsxs)("section", {
+          }), (0, bk.jsxs)("section", {
             className: "GamePageContentSection GamePageContentFaq",
-            children: [(0, AS.jsx)("h2", {
-              children: XS.faq
-            }), tS.faq.map((SS => {
+            children: [(0, bk.jsx)("h2", {
+              children: ik.faq
+            }), Xk.faq.map((kk => {
               let {
-                question: HS,
-                answer: gS
-              } = SS;
-              return (0, AS.jsxs)("div", {
+                question: Fk,
+                answer: Ik
+              } = kk;
+              return (0, bk.jsxs)("div", {
                 className: "GamePageContentFaqItem",
-                children: [(0, AS.jsx)("h3", {
-                  children: HS
-                }), (0, AS.jsx)("p", {
-                  children: gS
+                children: [(0, bk.jsx)("h3", {
+                  children: Fk
+                }), (0, bk.jsx)("p", {
+                  children: Ik
                 })]
-              }, HS)
+              }, Fk)
             }))]
-          }), NS.length > 0 && (0, AS.jsxs)("nav", {
+          }), lk.length > 0 && (0, bk.jsxs)("nav", {
             className: "GamePageContentSection GamePageContentSimilarGamesSection",
-            children: [(0, AS.jsx)("h2", {
-              children: XS.similarGames
-            }), (0, AS.jsx)("ul", {
+            children: [(0, bk.jsx)("h2", {
+              children: ik.similarGames
+            }), (0, bk.jsx)("ul", {
               className: "GamePageContentSimilarGames",
-              children: NS.map((SS => (0, AS.jsx)("li", {
-                children: (0, AS.jsx)(BS.g, {
+              children: lk.map((kk => (0, bk.jsx)("li", {
+                children: (0, bk.jsx)(dk.c, {
                   source: {
                     type: "game",
-                    gameNameWithVariation: SS
+                    gameNameWithVariation: kk
                   },
                   entrySource: "other",
                   gameWidth: "100%",
                   useLongRatio: !0
                 })
-              }, SS)))
+              }, kk)))
             })]
           })]
         })
       })
     }
-    var FS = gS(1127),
-      RS = gS(104),
-      TS = gS(1216),
-      oS = gS(34280),
-      lS = gS(1749),
-      mS = gS(1622),
-      eS = gS(1608),
-      rS = gS(1704),
-      SH = gS(1541),
-      HH = gS(1435),
-      gH = gS(36353),
-      tH = gS(1318),
-      bH = gS(1087),
-      XH = gS(387),
-      xH = gS(1097),
-      NH = gS(1641),
-      qH = gS(9102),
-      uH = gS(24),
-      IH = gS(2641),
-      fH = gS(830),
-      kH = gS(1309),
-      aH = gS(6713),
-      KH = gS(3623);
+    var Ak = Ik(1066),
+      gk = Ik(95),
+      mk = Ik(1120),
+      hk = Ik(34231),
+      rk = Ik(1597),
+      Dk = Ik(1485),
+      Mk = Ik(1475),
+      kF = Ik(1556),
+      FF = Ik(1420),
+      IF = Ik(1324),
+      XF = Ik(36327),
+      TF = Ik(1223),
+      iF = Ik(1018),
+      yF = Ik(337),
+      lF = Ik(1023),
+      aF = Ik(1504),
+      qF = Ik(8898),
+      LF = Ik(25),
+      tF = Ik(2438),
+      ZF = Ik(768),
+      jF = Ik(1217),
+      eF = Ik(6501),
+      wF = Ik(3428);
 
-    function jH(SS) {
+    function HF(kk) {
       let {
-        preview: HS,
-        isBroken: gS
-      } = SS;
-      const tS = null === HS ? null : (0, XS.c)(HS, "small"),
-        xS = (0, bS.f)(null !== tS && void 0 !== tS ? tS : XS.l);
-      return null === HS ? (0, AS.jsx)("div", {
-        className: KS()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
-          FeaturedGamesPopupSlotThumbnailBroken: gS
+        preview: Fk,
+        isBroken: Ik
+      } = kk;
+      const Xk = null === Fk ? null : (0, ik.h)(Fk, "small"),
+        yk = (0, Tk.e)(null !== Xk && void 0 !== Xk ? Xk : ik.s);
+      return null === Fk ? (0, bk.jsx)("div", {
+        className: ek()("FeaturedGamesPopupSlotThumbnail FeaturedGamesPopupSlotThumbnailEmpty", {
+          FeaturedGamesPopupSlotThumbnailBroken: Ik
         }),
-        children: (0, AS.jsx)(FS.d, {
-          name: gS ? "triangle-exclamation" : "star"
+        children: (0, bk.jsx)(Ak.e, {
+          name: Ik ? "triangle-exclamation" : "star"
         })
-      }) : (0, AS.jsx)("div", {
-        className: KS()("FeaturedGamesPopupSlotThumbnail", NS.h),
-        style: (0, NS.g)(xS),
+      }) : (0, bk.jsx)("div", {
+        className: ek()("FeaturedGamesPopupSlotThumbnail", lk.g),
+        style: (0, lk.f)(yk),
         role: "img",
-        "aria-label": HS.name,
-        children: (0, AS.jsx)(NS.c, {
-          image: xS
+        "aria-label": Fk.name,
+        children: (0, bk.jsx)(lk.d, {
+          image: yk
         })
       })
     }
 
-    function GH(SS) {
+    function JF(kk) {
       let {
-        schematicId: HS,
-        gameName: gS
-      } = SS;
+        schematicId: Fk,
+        gameName: Ik
+      } = kk;
       const {
-        userContext: bS
-      } = (0, DS.b)(), XS = (0, KH.b)(), [xS, NS] = (0, GS.useState)(null), [qS, uS] = (0, GS.useState)(null), [IS, fS] = (0, GS.useState)(!1), aS = (0, GS.useCallback)((() => {
-        uS(null), cS.b.getFeaturedGames(bS).then((SS => {
-          XS.current && NS(SS.slots)
-        })).catch((SS => {
-          console.error("Failed to get featured games", SS), XS.current && uS("Failed to load featured games")
+        userContext: Tk
+      } = (0, Qk.d)(), ik = (0, wF.d)(), [yk, lk] = (0, Hk.useState)(null), [ak, qk] = (0, Hk.useState)(null), [Lk, tk] = (0, Hk.useState)(!1), jk = (0, Hk.useCallback)((() => {
+        qk(null), Ok.e.getFeaturedGames(Tk).then((kk => {
+          ik.current && lk(kk.slots)
+        })).catch((kk => {
+          console.error("Failed to get featured games", kk), ik.current && qk("Failed to load featured games")
         }))
-      }), [bS, XS]);
-      (0, GS.useEffect)((() => {
-        aS()
-      }), [aS]);
-      const KS = (SS, HS) => {
-        IS || (fS(!0), cS.b.setFeaturedGame(bS, SS, HS).then((() => {
-          XS.current && aS()
-        })).catch((SS => {
-          console.error("Failed to set featured game", SS), XS.current && uS("Failed to update the featured slot")
+      }), [Tk, ik]);
+      (0, Hk.useEffect)((() => {
+        jk()
+      }), [jk]);
+      const ek = (kk, Fk) => {
+        Lk || (tk(!0), Ok.e.setFeaturedGame(Tk, kk, Fk).then((() => {
+          ik.current && jk()
+        })).catch((kk => {
+          console.error("Failed to set featured game", kk), ik.current && qk("Failed to update the featured slot")
         })).finally((() => {
-          XS.current && fS(!1)
+          ik.current && tk(!1)
         })))
       };
-      return (0, AS.jsxs)("div", {
+      return (0, bk.jsxs)("div", {
         className: "FeaturedGamesPopupBody",
-        children: [(0, AS.jsx)("h1", {
+        children: [(0, bk.jsx)("h1", {
           className: "FeaturedGamesPopupTitle",
           children: "Featured Games"
-        }), !xS && !qS && (0, AS.jsx)("div", {
+        }), !yk && !ak && (0, bk.jsx)("div", {
           className: "FeaturedGamesPopupLoader",
-          children: (0, AS.jsx)(ES.c, {})
-        }), qS && (0, AS.jsx)("div", {
+          children: (0, bk.jsx)(Gk.c, {})
+        }), ak && (0, bk.jsx)("div", {
           className: "FeaturedGamesPopupError",
-          children: qS
-        }), xS && (0, AS.jsxs)(AS.Fragment, {
-          children: [(0, AS.jsx)("div", {
+          children: ak
+        }), yk && (0, bk.jsxs)(bk.Fragment, {
+          children: [(0, bk.jsx)("div", {
             className: "FeaturedGamesPopupSlots",
-            children: xS.map((SS => {
-              const gS = SS.schematicId === HS,
-                bS = null === SS.schematicId,
+            children: yk.map((kk => {
+              const Ik = kk.schematicId === Fk,
+                Tk = null === kk.schematicId,
                 {
-                  categoryGroup: XS
-                } = tS.M[SS.slotId];
-              return (0, AS.jsxs)("div", {
+                  categoryGroup: ik
+                } = Xk.N[kk.slotId];
+              return (0, bk.jsxs)("div", {
                 className: "FeaturedGamesPopupSlot",
-                children: [(0, AS.jsx)(jH, {
-                  preview: SS.preview,
-                  isBroken: !bS
-                }), (0, AS.jsxs)("div", {
+                children: [(0, bk.jsx)(HF, {
+                  preview: kk.preview,
+                  isBroken: !Tk
+                }), (0, bk.jsxs)("div", {
                   className: "FeaturedGamesPopupSlotText",
-                  children: [(0, AS.jsxs)("div", {
+                  children: [(0, bk.jsxs)("div", {
                     className: "FeaturedGamesPopupSlotLabel",
-                    children: [(0, tS.ob)(XS), " \xb7 position", " ", (0, tS.O)(SS.slotId, tS.Vb) + 1, " of", " ", (0, tS.Sb)(XS, tS.Vb)]
-                  }), bS && (0, AS.jsx)("div", {
+                    children: [(0, Xk.mb)(ik), " \xb7 position", " ", (0, Xk.P)(kk.slotId, Xk.Ub) + 1, " of", " ", (0, Xk.Sb)(ik, Xk.Ub)]
+                  }), Tk && (0, bk.jsx)("div", {
                     className: "FeaturedGamesPopupSlotEmpty",
                     children: "Empty"
-                  }), !bS && null !== SS.preview && (0, AS.jsx)("div", {
+                  }), !Tk && null !== kk.preview && (0, bk.jsx)("div", {
                     className: "FeaturedGamesPopupSlotGame",
-                    children: SS.preview.name
-                  }), !bS && null === SS.preview && (0, AS.jsxs)("div", {
+                    children: kk.preview.name
+                  }), !Tk && null === kk.preview && (0, bk.jsxs)("div", {
                     className: "FeaturedGamesPopupSlotMissing",
-                    children: [(0, AS.jsx)(FS.d, {
+                    children: [(0, bk.jsx)(Ak.e, {
                       name: "triangle-exclamation"
                     }), " Pinned game is no longer published"]
                   })]
-                }), (0, AS.jsxs)("div", {
+                }), (0, bk.jsxs)("div", {
                   className: "FeaturedGamesPopupSlotActions",
-                  children: [bS && (0, AS.jsxs)(kS.u, {
+                  children: [Tk && (0, bk.jsxs)(Zk.q, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      KS(SS.slotId, HS)
+                      ek(kk.slotId, Fk)
                     },
-                    disabled: IS,
-                    children: [(0, AS.jsx)(FS.d, {
+                    disabled: Lk,
+                    children: [(0, bk.jsx)(Ak.e, {
                       name: "star"
                     }), " Feature here"]
-                  }), !bS && !gS && (0, AS.jsxs)(kS.P, {
+                  }), !Tk && !Ik && (0, bk.jsxs)(Zk.Q, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      KS(SS.slotId, HS)
+                      ek(kk.slotId, Fk)
                     },
-                    disabled: IS,
-                    children: [(0, AS.jsx)(FS.d, {
+                    disabled: Lk,
+                    children: [(0, bk.jsx)(Ak.e, {
                       name: "star"
                     }), " Replace"]
-                  }), !bS && (0, AS.jsxs)(kS.L, {
+                  }), !Tk && (0, bk.jsxs)(Zk.G, {
                     className: "FeaturedGamesPopupSlotButton",
                     onClick: () => {
-                      KS(SS.slotId, null)
+                      ek(kk.slotId, null)
                     },
-                    disabled: IS,
-                    children: [(0, AS.jsx)(FS.d, {
+                    disabled: Lk,
+                    children: [(0, bk.jsx)(Ak.e, {
                       name: "xmark"
                     }), " Clear"]
                   })]
                 })]
-              }, SS.slotId)
+              }, kk.slotId)
             }))
-          }), (0, AS.jsx)("p", {
+          }), (0, bk.jsx)("p", {
             className: "FeaturedGamesPopupHint",
             children: "A game leaves its slot once it ranks higher on its own."
           })]
         })]
       })
     }
-    var CH = gS(4791),
-      nH = gS(4714),
-      PH = gS(3577);
-    const QH = 8,
-      DH = 12;
+    var xF = Ik(4663),
+      PF = Ik(4587),
+      KF = Ik(3378);
+    const QF = 8,
+      sF = 12;
 
-    function wH(SS) {
+    function VF(kk) {
       let {
-        customLobbies: HS,
-        favouriteLobbies: gS,
-        toggleLikeLobby: tS,
-        showReport: bS
-      } = SS;
-      const [XS, xS] = (0, GS.useState)(QH);
-      return (0, GS.useEffect)((() => {
-        if (XS >= HS.length) return;
-        let SS = !0;
-        return (0, PH.f)().then((() => {
-          SS && xS(XS + DH)
+        customLobbies: Fk,
+        favouriteLobbies: Ik,
+        toggleLikeLobby: Xk,
+        showReport: Tk
+      } = kk;
+      const [ik, yk] = (0, Hk.useState)(QF);
+      return (0, Hk.useEffect)((() => {
+        if (ik >= Fk.length) return;
+        let kk = !0;
+        return (0, KF.e)().then((() => {
+          kk && yk(ik + sF)
         })), () => {
-          SS = !1
+          kk = !1
         }
-      }), [XS, HS.length]), (0, AS.jsx)(AS.Fragment, {
-        children: HS.slice(0, XS).map((SS => (0, AS.jsx)(nH.f, {
-          customLobby: SS,
-          favouriteLobbies: gS,
-          toggleLikeLobby: tS,
-          showReport: bS
-        }, SS.name)))
+      }), [ik, Fk.length]), (0, bk.jsx)(bk.Fragment, {
+        children: Fk.slice(0, ik).map((kk => (0, bk.jsx)(PF.f, {
+          customLobby: kk,
+          favouriteLobbies: Ik,
+          toggleLikeLobby: Xk,
+          showReport: Tk
+        }, kk.name)))
       })
     }
-    var hH = gS(4723),
-      ZH = gS(4745),
-      JH = gS(4699),
-      OH = gS(3700),
-      dH = gS(9099),
-      cH = gS(221);
-    const vH = {
-      skyblock: [gS(36381).e]
+    var zF = Ik(4595),
+      SF = Ik(4607),
+      oF = Ik(4562),
+      vF = Ik(3520),
+      EF = Ik(8895),
+      OF = Ik(207);
+    const nF = {
+      skyblock: [Ik(36363).e]
     };
-    var EH = gS(680);
-    const LH = {
+    var GF = Ik(628);
+    const pF = {
       listedVariations: null,
-      backgroundImage: XS.l,
+      backgroundImage: ik.s,
       badges: [],
       category: null,
       title: null,
@@ -609,363 +609,363 @@ export const modules = {
       countdownInformation: null
     };
 
-    function YH(SS, HS) {
-      const gS = fH.f[SS.schematicId];
+    function uF(kk, Fk) {
+      const Ik = ZF.g[kk.schematicId];
       return {
         listedVariations: [],
-        backgroundImage: (0, XS.c)(SS, "large"),
+        backgroundImage: (0, ik.h)(kk, "large"),
         badges: [],
-        category: SS.gameCategory,
-        title: void 0 !== (null === gS || void 0 === gS ? void 0 : gS.title) ? HS(gS.title) : SS.name,
+        category: kk.gameCategory,
+        title: void 0 !== (null === Ik || void 0 === Ik ? void 0 : Ik.title) ? Fk(Ik.title) : kk.name,
         variationTitle: null,
-        description: void 0 !== (null === gS || void 0 === gS ? void 0 : gS.description) ? HS(gS.description) : SS.description,
-        ownerSocialPreviewWithoutLocation: "owner" in SS ? SS.owner : null,
-        ccu: SS.ccu,
-        favourites: SS.favourites,
+        description: void 0 !== (null === Ik || void 0 === Ik ? void 0 : Ik.description) ? Fk(Ik.description) : kk.description,
+        ownerSocialPreviewWithoutLocation: "owner" in kk ? kk.owner : null,
+        ccu: kk.ccu,
+        favourites: kk.favourites,
         isFavourite: null,
-        useRejoinLastLobbyButton: "persistWorld" in SS ? SS.persistWorld : null,
+        useRejoinLastLobbyButton: "persistWorld" in kk ? kk.persistWorld : null,
         showWorldsInsteadOfCustomLobbies: !1,
         canCreateCustomLobbies: !0,
         countdownInformation: null
       }
     }
 
-    function AH(SS) {
-      var HS, gS, tS;
-      return null !== (HS = null !== (gS = (0, cH.l)() ? function(SS) {
-        for (const [HS, gS] of Object.entries(vH)) {
-          const tS = [HS, ...gS.map((SS => (0, XH.Ib)(HS, SS)))];
-          if (tS.includes(SS)) return tS
+    function bF(kk) {
+      var Fk, Ik, Xk;
+      return null !== (Fk = null !== (Ik = (0, OF.h)() ? function(kk) {
+        for (const [Fk, Ik] of Object.entries(nF)) {
+          const Xk = [Fk, ...Ik.map((kk => (0, yF.$b)(Fk, kk)))];
+          if (Xk.includes(kk)) return Xk
         }
         return null
-      }(SS) : null) && void 0 !== gS ? gS : null === (tS = fH.d[SS]) || void 0 === tS ? void 0 : tS.listedVariations) && void 0 !== HS ? HS : null
+      }(kk) : null) && void 0 !== Ik ? Ik : null === (Xk = ZF.e[kk]) || void 0 === Xk ? void 0 : Xk.listedVariations) && void 0 !== Fk ? Fk : null
     }
 
-    function yH() {
+    function RF() {
       const {
-        gameNameWithVariation: SS
-      } = (0, mS.z)();
-      if ((0, GS.useEffect)(OH.o, []), SS && (0, tH.p)(SS)) return (0, AS.jsx)(VH, {
-        urlId: SS
-      }, SS);
-      const HS = SS && (0, bH.m)(SS) ? SS : "firstParty";
-      return (0, AS.jsx)(iH, {}, HS)
+        gameNameWithVariation: kk
+      } = (0, Dk.A)();
+      if ((0, Hk.useEffect)(vF.p, []), kk && (0, TF.r)(kk)) return (0, bk.jsx)(UF, {
+        urlId: kk
+      }, kk);
+      const Fk = kk && (0, iF.j)(kk) ? kk : "firstParty";
+      return (0, bk.jsx)(CF, {}, Fk)
     }
 
-    function VH(SS) {
+    function UF(kk) {
       let {
-        urlId: HS
-      } = SS;
+        urlId: Fk
+      } = kk;
       const {
-        userContext: gS,
-        isUserContextUpdating: tS
-      } = (0, DS.b)(), bS = (0, GS.useMemo)((() => (0, lS.i)(HS)), [HS]);
-      (0, GS.useMemo)((() => {
-        if (null === bS) return;
-        const SS = TS.userContextManager.peekCurrentUserContext();
-        (null !== SS ? cS.b.getGame(SS, bS.schematicId) : TS.userContextManager.getCurrentUserContext().then((SS => cS.b.getGame(SS, bS.schematicId)))).catch((SS => {
-          console.error(`Failed to get the custom game ${bS.schematicId}`, SS), (0, lS.h)(HS)
+        userContext: Ik,
+        isUserContextUpdating: Xk
+      } = (0, Qk.d)(), Tk = (0, Hk.useMemo)((() => (0, rk.e)(Fk)), [Fk]);
+      (0, Hk.useMemo)((() => {
+        if (null === Tk) return;
+        const kk = mk.userContextManager.peekCurrentUserContext();
+        (null !== kk ? Ok.e.getGame(kk, Tk.schematicId) : mk.userContextManager.getCurrentUserContext().then((kk => Ok.e.getGame(kk, Tk.schematicId)))).catch((kk => {
+          console.error(`Failed to get the custom game ${Tk.schematicId}`, kk), (0, rk.d)(Fk)
         }))
-      }), [bS, HS]);
-      const [XS, xS] = (0, GS.useState)(null), NS = (0, oS.e)();
-      (0, GS.useEffect)((() => {
-        if (null !== bS || tS) return;
-        let SS = !0;
-        return cS.b.getGameByUrlId(gS, HS).then((gS => {
-          SS && xS({
-            urlId: HS,
-            game: gS
+      }), [Tk, Fk]);
+      const [ik, yk] = (0, Hk.useState)(null), lk = (0, hk.c)();
+      (0, Hk.useEffect)((() => {
+        if (null !== Tk || Xk) return;
+        let kk = !0;
+        return Ok.e.getGameByUrlId(Ik, Fk).then((Ik => {
+          kk && yk({
+            urlId: Fk,
+            game: Ik
           })
-        })).catch((gS => {
-          console.error(`Failed to find the custom game with urlId ${HS}`, gS), SS && (0, eS.navigateToHomePage)()
+        })).catch((Ik => {
+          console.error(`Failed to find the custom game with urlId ${Fk}`, Ik), kk && (0, Mk.navigateToHomePage)()
         })), () => {
-          SS = !1
+          kk = !1
         }
-      }), [HS, bS, tS, gS]);
-      const qS = null !== bS && void 0 !== bS ? bS : (null === XS || void 0 === XS ? void 0 : XS.urlId) === HS ? XS.game : null;
-      return null === qS ? (0, AS.jsx)(ES.c, {}) : NS ? (0, AS.jsx)(iH, {
-        gameNameWithVariation: (0, bH.y)(qS.schematicId),
-        knownCustomGame: qS
-      }, qS.schematicId) : null
+      }), [Fk, Tk, Xk, Ik]);
+      const ak = null !== Tk && void 0 !== Tk ? Tk : (null === ik || void 0 === ik ? void 0 : ik.urlId) === Fk ? ik.game : null;
+      return null === ak ? (0, bk.jsx)(Gk.c, {}) : lk ? (0, bk.jsx)(CF, {
+        gameNameWithVariation: (0, iF.r)(ak.schematicId),
+        knownCustomGame: ak
+      }, ak.schematicId) : null
     }
 
-    function iH(SS) {
-      var HS, gS, xS, aS, dS, vS, ES, YS;
+    function CF(kk) {
+      var Fk, Ik, yk, jk, Ek, nk, Gk, uk;
       let {
-        gameNameWithVariation: yS,
-        knownCustomGame: VS = null
-      } = SS;
+        gameNameWithVariation: Rk,
+        knownCustomGame: Uk = null
+      } = kk;
       const {
-        t: WS
-      } = (0, qS.F)();
-      (0, IH.h)();
-      const US = (0, IH.k)(),
+        t: Nk
+      } = (0, ak.y)();
+      (0, tF.e)();
+      const Wk = (0, tF.l)(),
         {
-          userContext: pS,
-          isUserContextUpdating: sS
-        } = (0, DS.b)(),
-        BS = (0, JH.d)(),
-        TS = (0, eS.useNavigatePreserveSearch)(),
-        oS = (0, mS.z)(),
-        lS = (0, GS.useMemo)((() => yS ? {
-          gameNameWithVariation: yS
-        } : oS), [yS, oS]),
-        SH = (0, qH.b)(lS),
-        tH = (0, GS.useMemo)((() => {
-          const SS = function(SS) {
-            var HS, gS;
-            const tS = AH(SS);
-            if (!tS || 0 === tS.length || tS.includes(SS)) return SS;
-            const bS = uS.g.getItem((0, nS.j)(SS));
-            if (bS && tS.includes(bS)) return bS;
-            return null !== (HS = null === (gS = fH.d[SS]) || void 0 === gS ? void 0 : gS.defaultListedVariation) && void 0 !== HS ? HS : tS[0]
-          }(SH.gameNameWithVariation);
-          return SS === SH.gameNameWithVariation ? SH : {
-            ...SH,
-            gameNameWithVariation: SS
+          userContext: fk,
+          isUserContextUpdating: Bk
+        } = (0, Qk.d)(),
+        dk = (0, oF.f)(),
+        mk = (0, Mk.useNavigatePreserveSearch)(),
+        hk = (0, Dk.A)(),
+        rk = (0, Hk.useMemo)((() => Rk ? {
+          gameNameWithVariation: Rk
+        } : hk), [Rk, hk]),
+        FF = (0, qF.d)(rk),
+        TF = (0, Hk.useMemo)((() => {
+          const kk = function(kk) {
+            var Fk, Ik;
+            const Xk = bF(kk);
+            if (!Xk || 0 === Xk.length || Xk.includes(kk)) return kk;
+            const Tk = qk.j.getItem((0, xk.h)(kk));
+            if (Tk && Xk.includes(Tk)) return Tk;
+            return null !== (Fk = null === (Ik = ZF.e[kk]) || void 0 === Ik ? void 0 : Ik.defaultListedVariation) && void 0 !== Fk ? Fk : Xk[0]
+          }(FF.gameNameWithVariation);
+          return kk === FF.gameNameWithVariation ? FF : {
+            ...FF,
+            gameNameWithVariation: kk
           }
-        }), [SH]);
-      (0, GS.useEffect)((() => {
-        const SS = SH.gameNameWithVariation;
-        tH.gameNameWithVariation !== SS && SS !== (0, XH.Kb)(SS) && TS((0, zS.z)(tH.gameNameWithVariation), {
+        }), [FF]);
+      (0, Hk.useEffect)((() => {
+        const kk = FF.gameNameWithVariation;
+        TF.gameNameWithVariation !== kk && kk !== (0, yF.dc)(kk) && mk((0, ck.F)(TF.gameNameWithVariation), {
           replace: !0
         })
-      }), [tH.gameNameWithVariation, SH.gameNameWithVariation, TS]);
-      const [KH, jH] = (0, GS.useState)(""), PH = GS.useRef(null), [QH, DH] = (0, GS.useState)(), OH = (0, bH.m)(tH.gameNameWithVariation), cH = (0, GS.useMemo)((() => OH ? null : function(SS, HS, gS) {
-        var tS, bS;
-        const xS = fH.d[SS];
-        return (0, EH.K)(xS) ? null : {
-          listedVariations: AH(SS),
-          backgroundImage: (0, XS.g)(SS, (0, XS.b)(xS)),
-          badges: (0, IS.filterBadges)(xS.badges),
-          category: xS.type,
-          title: gS(xS.title),
-          variationTitle: xS.variationTitle ? gS(xS.variationTitle) : null,
-          description: gS(xS.description),
+      }), [TF.gameNameWithVariation, FF.gameNameWithVariation, mk]);
+      const [wF, HF] = (0, Hk.useState)(""), KF = Hk.useRef(null), [QF, sF] = (0, Hk.useState)(), vF = (0, iF.j)(TF.gameNameWithVariation), OF = (0, Hk.useMemo)((() => vF ? null : function(kk, Fk, Ik) {
+        var Xk, Tk;
+        const yk = ZF.e[kk];
+        return (0, GF.Q)(yk) ? null : {
+          listedVariations: bF(kk),
+          backgroundImage: (0, ik.m)(kk, (0, ik.e)(yk)),
+          badges: (0, Lk.filterBadges)(yk.badges),
+          category: yk.type,
+          title: Ik(yk.title),
+          variationTitle: yk.variationTitle ? Ik(yk.variationTitle) : null,
+          description: Ik(yk.description),
           ownerSocialPreviewWithoutLocation: null,
-          ccu: null !== HS ? null !== (tS = HS[SS]) && void 0 !== tS ? tS : 0 : null,
+          ccu: null !== Fk ? null !== (Xk = Fk[kk]) && void 0 !== Xk ? Xk : 0 : null,
           favourites: null,
           isFavourite: null,
-          useRejoinLastLobbyButton: xS.useRejoinLastLobbyButton,
-          showWorldsInsteadOfCustomLobbies: xS.showWorldsInsteadOfCustomLobbies,
-          canCreateCustomLobbies: null === (bS = xS.canCreateCustomLobbies) || void 0 === bS || bS,
-          countdownInformation: (0, nS.f)(SS)
+          useRejoinLastLobbyButton: yk.useRejoinLastLobbyButton,
+          showWorldsInsteadOfCustomLobbies: yk.showWorldsInsteadOfCustomLobbies,
+          canCreateCustomLobbies: null === (Tk = yk.canCreateCustomLobbies) || void 0 === Tk || Tk,
+          countdownInformation: (0, xk.d)(kk)
         }
-      }(tH.gameNameWithVariation, US, WS)), [OH, tH.gameNameWithVariation, US, WS]), [vH, yH] = (0, GS.useState)(!1), [VH, iH] = (0, GS.useState)((() => VS ? YH(VS, WS) : LH)), zH = null !== cH && void 0 !== cH ? cH : VH, [UH] = (0, GS.useState)(zH === LH), pH = (0, bS.f)(zH.backgroundImage, {
+      }(TF.gameNameWithVariation, Wk, Nk)), [vF, TF.gameNameWithVariation, Wk, Nk]), [nF, RF] = (0, Hk.useState)(!1), [UF, CF] = (0, Hk.useState)((() => Uk ? uF(Uk, Nk) : pF)), cF = null !== OF && void 0 !== OF ? OF : UF, [WF] = (0, Hk.useState)(cF === pF), fF = (0, Tk.e)(cF.backgroundImage, {
         keepPrevious: !0,
         decode: !0
       }), {
-        recentlyPlayedPublicLobbies: sH,
-        recentlyPlayedCustomLobbies: BH
-      } = (0, GS.useMemo)((() => function(SS, HS, gS, tS) {
-        var bS;
-        const XS = SS => {
-            const gS = (0, bH.t)(SS),
-              tS = HS.find((HS => "custom" === HS.type ? HS.schematicId === gS : HS.gameNameWithVariation === SS));
-            return tS ? [...tS.recentLobbies] : []
+        recentlyPlayedPublicLobbies: BF,
+        recentlyPlayedCustomLobbies: dF
+      } = (0, Hk.useMemo)((() => function(kk, Fk, Ik, Xk) {
+        var Tk;
+        const ik = kk => {
+            const Ik = (0, iF.n)(kk),
+              Xk = Fk.find((Fk => "custom" === Fk.type ? Fk.schematicId === Ik : Fk.gameNameWithVariation === kk));
+            return Xk ? [...Xk.recentLobbies] : []
           },
-          xS = (0, IS.getRecentGameNameWithVariationLobbiesKey)(SS),
-          NS = null !== (bS = uS.g.getItem(xS)) && void 0 !== bS ? bS : [],
-          qS = [...XS(SS), ...NS],
-          fS = [];
-        for (const uS of qS)(0, kH.P)(uS) && !fS.includes(uS) && fS.push(uS);
-        let kS = qS;
-        if (gS) {
-          const SS = XS("classic_worlds"),
-            HS = qS.filter((HS => !SS.includes(HS)));
-          kS = [...SS, ...HS]
+          yk = (0, Lk.getRecentGameNameWithVariationLobbiesKey)(kk),
+          lk = null !== (Tk = qk.j.getItem(yk)) && void 0 !== Tk ? Tk : [],
+          ak = [...ik(kk), ...lk],
+          tk = [];
+        for (const qk of ak)(0, jF.K)(qk) && !tk.includes(qk) && tk.push(qk);
+        let Zk = ak;
+        if (Ik) {
+          const kk = ik("classic_worlds"),
+            Fk = ak.filter((Fk => !kk.includes(Fk)));
+          Zk = [...kk, ...Fk]
         }
-        const aS = [],
-          KS = !1 === tS ? [] : kS;
-        for (const uS of KS)(0, kH.P)(uS) || aS.includes(uS) || aS.push(uS);
+        const jk = [],
+          ek = !1 === Xk ? [] : Zk;
+        for (const qk of ek)(0, jF.K)(qk) || jk.includes(qk) || jk.push(qk);
         return {
-          recentlyPlayedPublicLobbies: fS,
-          recentlyPlayedCustomLobbies: aS
+          recentlyPlayedPublicLobbies: tk,
+          recentlyPlayedCustomLobbies: jk
         }
-      }(tH.gameNameWithVariation, BS, zH.showWorldsInsteadOfCustomLobbies, zH.canCreateCustomLobbies)), [tH.gameNameWithVariation, BS, zH.showWorldsInsteadOfCustomLobbies, zH.canCreateCustomLobbies]), [MH, FH] = (0, GS.useState)(!0), [RH, TH] = (0, GS.useState)([]), [oH, lH] = (0, GS.useState)(null), [mH, eH] = (0, GS.useState)("explore"), rH = (0, GS.useRef)(!1), Sg = (0, GS.useCallback)((SS => {
-        (0, CS.unstable_batchedUpdates)((() => {
-          DH(SS), iH((HS => ({
-            ...YH(SS, WS),
-            isFavourite: HS.isFavourite
+      }(TF.gameNameWithVariation, dk, cF.showWorldsInsteadOfCustomLobbies, cF.canCreateCustomLobbies)), [TF.gameNameWithVariation, dk, cF.showWorldsInsteadOfCustomLobbies, cF.canCreateCustomLobbies]), [YF, AF] = (0, Hk.useState)(!0), [gF, mF] = (0, Hk.useState)([]), [hF, rF] = (0, Hk.useState)(null), [DF, MF] = (0, Hk.useState)("explore"), kI = (0, Hk.useRef)(!1), FI = (0, Hk.useCallback)((kk => {
+        (0, Jk.unstable_batchedUpdates)((() => {
+          sF(kk), CF((Fk => ({
+            ...uF(kk, Nk),
+            isFavourite: Fk.isFavourite
           })))
         }))
-      }), [WS]);
-      (0, GS.useEffect)((() => {
-        null === uH.b.get("gameEntrySource") && (0, uH.k)("gameInformationPageDirect")
+      }), [Nk]);
+      (0, Hk.useEffect)((() => {
+        null === LF.d.get("gameEntrySource") && (0, LF.h)("gameInformationPageDirect")
       }), []);
-      const Hg = (0, GS.useRef)(null);
-      (0, GS.useEffect)((() => {
-        const SS = SS => {
-            Hg.current = SS.target instanceof Element ? SS.target.closest("a, button") : null
+      const II = (0, Hk.useRef)(null);
+      (0, Hk.useEffect)((() => {
+        const kk = kk => {
+            II.current = kk.target instanceof Element ? kk.target.closest("a, button") : null
           },
-          HS = SS => {
-            "Tab" === SS.key && (Hg.current = null)
+          Fk = kk => {
+            "Tab" === kk.key && (II.current = null)
           };
-        return document.addEventListener("pointerdown", SS, !0), document.addEventListener("keydown", HS, !0), () => {
-          document.removeEventListener("pointerdown", SS, !0), document.removeEventListener("keydown", HS, !0)
+        return document.addEventListener("pointerdown", kk, !0), document.addEventListener("keydown", Fk, !0), () => {
+          document.removeEventListener("pointerdown", kk, !0), document.removeEventListener("keydown", Fk, !0)
         }
-      }), []), (0, wS.d)("Enter", (SS => {
-        const HS = SS.target instanceof Element ? SS.target : null;
-        if (SS.defaultPrevented || null !== HS && void 0 !== HS && HS.closest("input, textarea, select")) return;
-        const gS = null === HS || void 0 === HS ? void 0 : HS.closest("a, button");
-        gS && gS !== Hg.current || (SS.preventDefault(), Ig())
-      })), (0, hS.c)(eS.navigateToHomePage);
-      const gg = sH.length > 0 || BH.length > 0,
-        tg = !zH.useRejoinLastLobbyButton || 0 === sH.length,
-        bg = OH && null === zH.ownerSocialPreviewWithoutLocation,
-        Xg = pS.getPlayerName() === (null === QH || void 0 === QH || null === (HS = QH.owner) || void 0 === HS ? void 0 : HS.name),
-        xg = null !== (gS = null === (xS = zH.badges.find((SS => "event" === SS.type))) || void 0 === xS ? void 0 : xS.event) && void 0 !== gS ? gS : null,
-        Ng = tg ? kS.p : kS.g,
-        qg = (0, AS.jsx)(fS.h, {
-          tooltipInner: (0, AS.jsx)("div", {
-            children: WS("homePage:quickPlayInfo")
+      }), []), (0, sk.b)("Enter", (kk => {
+        const Fk = kk.target instanceof Element ? kk.target : null;
+        if (kk.defaultPrevented || null !== Fk && void 0 !== Fk && Fk.closest("input, textarea, select")) return;
+        const Ik = null === Fk || void 0 === Fk ? void 0 : Fk.closest("a, button");
+        Ik && Ik !== II.current || (kk.preventDefault(), tI())
+      })), (0, Vk.b)(Mk.navigateToHomePage);
+      const XI = BF.length > 0 || dF.length > 0,
+        TI = !cF.useRejoinLastLobbyButton || 0 === BF.length,
+        iI = vF && null === cF.ownerSocialPreviewWithoutLocation,
+        yI = fk.getPlayerName() === (null === QF || void 0 === QF || null === (Fk = QF.owner) || void 0 === Fk ? void 0 : Fk.name),
+        lI = null !== (Ik = null === (yk = cF.badges.find((kk => "event" === kk.type))) || void 0 === yk ? void 0 : yk.event) && void 0 !== Ik ? Ik : null,
+        aI = TI ? Zk.m : Zk.d,
+        qI = (0, bk.jsx)(tk.g, {
+          tooltipInner: (0, bk.jsx)("div", {
+            children: Nk("homePage:quickPlayInfo")
           }),
           hoverOnly: !0,
-          children: (0, AS.jsx)(Ng, {
+          children: (0, bk.jsx)(aI, {
             className: "GameInformationButton",
-            padDefaultFocus: tg,
+            padDefaultFocus: TI,
             showPress: !0,
             onClick: () => {
-              Ig()
+              tI()
             },
-            children: (0, AS.jsxs)("div", {
+            children: (0, bk.jsxs)("div", {
               className: "GameInformationButtonInner",
-              children: [tg && (0, AS.jsxs)(AS.Fragment, {
-                children: [(0, AS.jsx)(FS.d, {
+              children: [TI && (0, bk.jsxs)(bk.Fragment, {
+                children: [(0, bk.jsx)(Ak.e, {
                   name: "play"
                 }), " "]
-              }), WS("homePage:quickPlay")]
+              }), Nk("homePage:quickPlay")]
             })
           })
         });
-      (0, GS.useEffect)((() => {
-        if (!OH || sS) return;
-        let SS = !0;
-        const HS = (0, bH.t)(tH.gameNameWithVariation);
-        return cS.b.getGame(pS, HS).then((HS => {
-          SS && Sg(HS)
-        })).catch((HS => {
-          console.error("Failed to get Custom Game information", HS), SS && (0, eS.navigateToHomePage)()
-        })), cS.b.getFavouriteGames(pS).then((gS => {
-          SS && iH((SS => ({
-            ...SS,
-            isFavourite: gS.includes(HS)
+      (0, Hk.useEffect)((() => {
+        if (!vF || Bk) return;
+        let kk = !0;
+        const Fk = (0, iF.n)(TF.gameNameWithVariation);
+        return Ok.e.getGame(fk, Fk).then((Fk => {
+          kk && FI(Fk)
+        })).catch((Fk => {
+          console.error("Failed to get Custom Game information", Fk), kk && (0, Mk.navigateToHomePage)()
+        })), Ok.e.getFavouriteGames(fk).then((Ik => {
+          kk && CF((kk => ({
+            ...kk,
+            isFavourite: Ik.includes(Fk)
           })))
-        })).catch((HS => {
-          console.error("Failed to get favourite games", HS), SS && yH(!0)
+        })).catch((Fk => {
+          console.error("Failed to get favourite games", Fk), kk && RF(!0)
         })), () => {
-          SS = !1
+          kk = !1
         }
-      }), [OH, sS, tH.gameNameWithVariation, Sg, pS]);
-      const ug = !OH && null === cH;
+      }), [vF, Bk, TF.gameNameWithVariation, FI, fk]);
+      const LI = !vF && null === OF;
 
-      function Ig(SS) {
-        (0, dH.f)(), TS((0, PS.d)(tH.gameNameWithVariation, SS))
-      }(0, GS.useEffect)((() => {
-        ug && (0, eS.navigateToHomePage)()
-      }), [ug]), (0, GS.useEffect)((() => {
-        if (!1 === zH.canCreateCustomLobbies) return;
-        let SS = !0;
-        return null !== zH.showWorldsInsteadOfCustomLobbies && !1 === sS && (FH(!0), cS.b.getFavouriteLobbies(pS).then((SS => {
-          lH(SS)
-        })), cS.b.getOpenCustomLobbies(pS, {
-          gameNameWithVariation: zH.showWorldsInsteadOfCustomLobbies ? "classic" : tH.gameNameWithVariation,
-          onlyOwnedLobbies: "owned" === mH,
-          onlyFavouriteLobbies: "favourite" === mH
-        }).then((HS => {
-          SS && (0, CS.unstable_batchedUpdates)((() => {
-            TH(HS), FH(!1)
+      function tI(kk) {
+        (0, EF.e)(), mk((0, Pk.e)(TF.gameNameWithVariation, kk))
+      }(0, Hk.useEffect)((() => {
+        LI && (0, Mk.navigateToHomePage)()
+      }), [LI]), (0, Hk.useEffect)((() => {
+        if (!1 === cF.canCreateCustomLobbies) return;
+        let kk = !0;
+        return null !== cF.showWorldsInsteadOfCustomLobbies && !1 === Bk && (AF(!0), Ok.e.getFavouriteLobbies(fk).then((kk => {
+          rF(kk)
+        })), Ok.e.getOpenCustomLobbies(fk, {
+          gameNameWithVariation: cF.showWorldsInsteadOfCustomLobbies ? "classic" : TF.gameNameWithVariation,
+          onlyOwnedLobbies: "owned" === DF,
+          onlyFavouriteLobbies: "favourite" === DF
+        }).then((Fk => {
+          kk && (0, Jk.unstable_batchedUpdates)((() => {
+            mF(Fk), AF(!1)
           }))
-        })).catch((HS => {
-          console.error("Failed to get open custom lobbies", HS), SS && FH(!1)
+        })).catch((Fk => {
+          console.error("Failed to get open custom lobbies", Fk), kk && AF(!1)
         }))), () => {
-          SS = !1
+          kk = !1
         }
-      }), [sS, tH, mH, zH.showWorldsInsteadOfCustomLobbies, zH.canCreateCustomLobbies, pS]);
-      const fg = (0, GS.useCallback)((async SS => {
+      }), [Bk, TF, DF, cF.showWorldsInsteadOfCustomLobbies, cF.canCreateCustomLobbies, fk]);
+      const ZI = (0, Hk.useCallback)((async kk => {
           try {
-            if (!oH) return;
-            oH.includes(SS) ? (cS.b.unfavouriteLobby(pS, SS), lH(oH.filter((HS => HS !== SS)))) : (cS.b.favouriteLobby(pS, SS).catch((SS => {
-              console.error("Failed to favourite lobby", SS)
-            })), lH([...oH, SS]))
-          } catch (HS) {
-            console.error("Failed to like lobby", HS)
+            if (!hF) return;
+            hF.includes(kk) ? (Ok.e.unfavouriteLobby(fk, kk), rF(hF.filter((Fk => Fk !== kk)))) : (Ok.e.favouriteLobby(fk, kk).catch((kk => {
+              console.error("Failed to favourite lobby", kk)
+            })), rF([...hF, kk]))
+          } catch (Fk) {
+            console.error("Failed to like lobby", Fk)
           }
-        }), [pS, oH]),
-        kg = (null === QH || void 0 === QH ? void 0 : QH.schematicId) === (0, bH.t)(SH.gameNameWithVariation) ? QH : null,
-        ag = kg && (0, zS.E)(SH.gameNameWithVariation, (SS => WS(SS)), kg);
-      (0, rS.f)(kg && (0, zS.z)(SH.gameNameWithVariation, kg));
-      const Kg = RS.featureFlags.canUseCustomLobbies && !0 === zH.canCreateCustomLobbies,
-        jg = (0, AS.jsx)("div", {
+        }), [fk, hF]),
+        jI = (null === QF || void 0 === QF ? void 0 : QF.schematicId) === (0, iF.n)(FF.gameNameWithVariation) ? QF : null,
+        eI = jI && (0, ck.N)(FF.gameNameWithVariation, (kk => Nk(kk)), jI);
+      (0, kF.e)(jI && (0, ck.F)(FF.gameNameWithVariation, jI));
+      const wI = gk.featureFlags.canUseCustomLobbies && !0 === cF.canCreateCustomLobbies,
+        HI = (0, bk.jsx)("div", {
           className: "GameInformationPageContentAnchor",
-          children: (0, AS.jsx)(MS, {
-            gameNameWithVariation: tH.gameNameWithVariation
+          children: (0, bk.jsx)(Yk, {
+            gameNameWithVariation: TF.gameNameWithVariation
           })
         });
-      return (0, AS.jsx)(AS.Fragment, {
-        children: (0, AS.jsxs)("article", {
-          className: KS()("GameInformation", {
-            GameInformationFadeIn: UH,
-            GameInformationReleaseCountdown: "releaseCountdown" === (null === (aS = zH.countdownInformation) || void 0 === aS ? void 0 : aS.type)
+      return (0, bk.jsx)(bk.Fragment, {
+        children: (0, bk.jsxs)("article", {
+          className: ek()("GameInformation", {
+            GameInformationFadeIn: WF,
+            GameInformationReleaseCountdown: "releaseCountdown" === (null === (jk = cF.countdownInformation) || void 0 === jk ? void 0 : jk.type)
           }),
-          children: [ag && (0, AS.jsx)(QS.e, {
-            meta: ag
-          }), (0, AS.jsxs)("div", {
+          children: [eI && (0, bk.jsx)(Kk.d, {
+            meta: eI
+          }), (0, bk.jsxs)("div", {
             className: "GameInformationInner",
-            children: [(0, AS.jsxs)("div", {
+            children: [(0, bk.jsxs)("div", {
               className: "GameInformationTop",
-              children: [(0, AS.jsxs)("div", {
+              children: [(0, bk.jsxs)("div", {
                 className: "GameInformationTopBackgroundContainer",
-                children: [(0, AS.jsx)("div", {
+                children: [(0, bk.jsx)("div", {
                   className: "GameInformationTopBackgroundColor"
-                }), (0, AS.jsx)("div", {
-                  className: KS()("GameInformationTopBackgroundImage", NS.h),
-                  style: (0, NS.g)(pH),
-                  children: (0, AS.jsx)(NS.c, {
-                    image: pH
+                }), (0, bk.jsx)("div", {
+                  className: ek()("GameInformationTopBackgroundImage", lk.g),
+                  style: (0, lk.f)(fF),
+                  children: (0, bk.jsx)(lk.d, {
+                    image: fF
                   })
                 })]
-              }), (0, AS.jsxs)("div", {
+              }), (0, bk.jsxs)("div", {
                 className: "GameInformationTopLeft",
-                children: [(0, AS.jsx)(CH.d, {}), (0, AS.jsxs)("div", {
+                children: [(0, bk.jsx)(xF.e, {}), (0, bk.jsxs)("div", {
                   className: "GameInformationTopLeftBody",
-                  children: [(0, AS.jsxs)("div", {
+                  children: [(0, bk.jsxs)("div", {
                     className: "GameInformationHeader",
-                    children: [(0, AS.jsxs)("div", {
-                      className: KS()("GameInformationHeaderTagList", {
-                        GameInformationHeaderTagListPending: bg
+                    children: [(0, bk.jsxs)("div", {
+                      className: ek()("GameInformationHeaderTagList", {
+                        GameInformationHeaderTagListPending: iI
                       }),
-                      children: [zH.badges.map((SS => (0, AS.jsx)("div", {
-                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${SS.type}`,
-                        children: (0, AS.jsx)(OS.e, {
-                          badge: SS
+                      children: [cF.badges.map((kk => (0, bk.jsx)("div", {
+                        className: `GameInformationHeaderTag AnimFadeInScaleUp ${kk.type}`,
+                        children: (0, bk.jsx)(vk.c, {
+                          badge: kk
                         })
-                      }, SS.type))), OH && (0, AS.jsx)("div", {
+                      }, kk.type))), vF && (0, bk.jsx)("div", {
                         className: "GameInformationHeaderTag playerCrafted AnimFadeInScaleUp",
-                        children: (0, AS.jsx)(JS.c, {
-                          text: (0, tS.eb)({
+                        children: (0, bk.jsx)(Sk.c, {
+                          text: (0, Xk.bb)({
                             type: "playerCrafted"
                           })
                         })
-                      }), zH.category && (0, AS.jsx)("div", {
+                      }), cF.category && (0, bk.jsx)("div", {
                         className: "GameInformationHeaderTag CustomGameCategory AnimFadeInScaleUp",
-                        children: (0, AS.jsx)(JS.c, {
+                        children: (0, bk.jsx)(Sk.c, {
                           text: [{
-                            str: (0, tS.hb)(zH.category).toUpperCase()
+                            str: (0, Xk.eb)(cF.category).toUpperCase()
                           }]
                         })
-                      }), null !== zH.ccu && (0, AS.jsxs)("div", {
+                      }), null !== cF.ccu && (0, bk.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipCcu AnimFadeIn",
-                        children: [(0, AS.jsx)(FS.d, {
+                        children: [(0, bk.jsx)(Ak.e, {
                           name: "user"
-                        }), (0, kH.R)(zH.ccu), " online"]
-                      }), null !== zH.ownerSocialPreviewWithoutLocation && (0, AS.jsxs)("div", {
+                        }), (0, jF.Q)(cF.ccu), " online"]
+                      }), null !== cF.ownerSocialPreviewWithoutLocation && (0, bk.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipOwner AnimFadeIn",
-                        children: [(0, AS.jsx)("span", {
+                        children: [(0, bk.jsx)("span", {
                           children: "Made by"
-                        }), (0, AS.jsx)(LS.g, {
+                        }), (0, bk.jsx)(pk.g, {
                           playerSocialPreview: {
-                            ...zH.ownerSocialPreviewWithoutLocation,
+                            ...cF.ownerSocialPreviewWithoutLocation,
                             location: {
                               status: "offline"
                             }
@@ -973,402 +973,402 @@ export const modules = {
                           showLocation: !1,
                           linkToProfile: !0
                         })]
-                      }), bg && (0, AS.jsxs)("div", {
+                      }), iI && (0, bk.jsxs)("div", {
                         className: "CustomGameChip CustomGameChipOwner",
-                        children: [(0, AS.jsx)("span", {
+                        children: [(0, bk.jsx)("span", {
                           children: "Made by"
-                        }), (0, AS.jsx)("div", {
+                        }), (0, bk.jsx)("div", {
                           className: "CustomGameChipOwnerPlaceholder"
                         })]
-                      }), null !== zH.favourites && (null !== zH.isFavourite || OH && !vH) && (0, AS.jsx)(kS.w, {
+                      }), null !== cF.favourites && (null !== cF.isFavourite || vF && !nF) && (0, bk.jsx)(Zk.t, {
                         onClick: () => {
                           ! function() {
-                            if (!0 !== rH.current && (rH.current = !0, null !== zH.isFavourite)) {
-                              const SS = (0, bH.t)(tH.gameNameWithVariation);
-                              let HS;
-                              zH.isFavourite ? (HS = -1, cS.b.unfavouriteGame(pS, SS).catch((SS => {
-                                console.error("Failed to get unfavourite game", SS)
+                            if (!0 !== kI.current && (kI.current = !0, null !== cF.isFavourite)) {
+                              const kk = (0, iF.n)(TF.gameNameWithVariation);
+                              let Fk;
+                              cF.isFavourite ? (Fk = -1, Ok.e.unfavouriteGame(fk, kk).catch((kk => {
+                                console.error("Failed to get unfavourite game", kk)
                               })).finally((() => {
-                                rH.current = !1
-                              }))) : (HS = 1, cS.b.favouriteGame(pS, SS).catch((SS => {
-                                console.error("Failed to get favourite game", SS)
+                                kI.current = !1
+                              }))) : (Fk = 1, Ok.e.favouriteGame(fk, kk).catch((kk => {
+                                console.error("Failed to get favourite game", kk)
                               })).finally((() => {
-                                rH.current = !1
-                              }))), iH((SS => ({
-                                ...SS,
-                                isFavourite: !SS.isFavourite
-                              }))), iH((SS => ({
-                                ...SS,
-                                favourites: SS.favourites + HS
+                                kI.current = !1
+                              }))), CF((kk => ({
+                                ...kk,
+                                isFavourite: !kk.isFavourite
+                              }))), CF((kk => ({
+                                ...kk,
+                                favourites: kk.favourites + Fk
                               })))
                             }
                           }()
                         },
-                        isLiked: null !== (dS = zH.isFavourite) && void 0 !== dS && dS,
-                        disabled: null === zH.isFavourite,
-                        className: KS()("CustomGameChip AnimFadeIn", {
-                          CustomGameChipPending: null === zH.isFavourite
+                        isLiked: null !== (Ek = cF.isFavourite) && void 0 !== Ek && Ek,
+                        disabled: null === cF.isFavourite,
+                        className: ek()("CustomGameChip AnimFadeIn", {
+                          CustomGameChipPending: null === cF.isFavourite
                         })
-                      }, null === zH.isFavourite ? "pending" : "known"), OH && !bg && RS.featureFlags.useSocialFeatures && !Xg && (0, AS.jsx)(hH.d, {
+                      }, null === cF.isFavourite ? "pending" : "known"), vF && !iI && gk.featureFlags.useSocialFeatures && !yI && (0, bk.jsx)(zF.e, {
                         targetType: "customGame",
-                        targetId: (0, bH.t)(tH.gameNameWithVariation),
+                        targetId: (0, iF.n)(TF.gameNameWithVariation),
                         className: "CustomGameChip AnimFadeIn"
-                      }), (pS.playerHasRank("developer") || pS.playerHasRank("admin") && Xg) && (0, AS.jsxs)(kS.p, {
+                      }), (fk.playerHasRank("developer") || fk.playerHasRank("admin") && yI) && (0, bk.jsxs)(Zk.m, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          TS((0, NH.p)((0, xH.c)(tH.gameNameWithVariation, !0)))
+                          mk((0, aF.m)((0, lF.d)(TF.gameNameWithVariation, !0)))
                         },
-                        children: [(0, AS.jsx)(FS.d, {
+                        children: [(0, bk.jsx)(Ak.e, {
                           name: "star-christmas"
-                        }), " ", WS("studio:viewInStudio")]
-                      }), OH && pS.playerHasRank("developer") && (0, AS.jsxs)(kS.g, {
+                        }), " ", Nk("studio:viewInStudio")]
+                      }), vF && fk.playerHasRank("developer") && (0, bk.jsxs)(Zk.d, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          (0, aH.c)({
-                            schematicId: (0, bH.t)(tH.gameNameWithVariation),
+                          (0, eF.d)({
+                            schematicId: (0, iF.n)(TF.gameNameWithVariation),
                             canOverride: !0
                           })
                         },
-                        children: [(0, AS.jsx)(FS.d, {
+                        children: [(0, bk.jsx)(Ak.e, {
                           name: "circle-info"
                         }), " Approval Info"]
-                      }), OH && pS.playerHasRank("developer") && (0, AS.jsxs)(kS.g, {
+                      }), vF && fk.playerHasRank("developer") && (0, bk.jsxs)(Zk.d, {
                         className: "CustomGameChip AnimFadeIn",
                         onClick: () => {
-                          HH.NotificationProvider.showCustomPopup({
-                            body: () => (0, AS.jsx)(GH, {
-                              schematicId: (0, bH.t)(tH.gameNameWithVariation),
-                              gameName: zH.title
+                          IF.NotificationProvider.showCustomPopup({
+                            body: () => (0, bk.jsx)(JF, {
+                              schematicId: (0, iF.n)(TF.gameNameWithVariation),
+                              gameName: cF.title
                             }),
                             middleScreenPopupClassName: "FeaturedGamesPopup",
                             onClose: () => {},
                             unlockPointerKey: "featuredGamesPopup"
                           })
                         },
-                        children: [(0, AS.jsx)(FS.d, {
+                        children: [(0, bk.jsx)(Ak.e, {
                           name: "star"
                         }), " Featured Games"]
-                      }), "updateCountdown" === (null === (vS = zH.countdownInformation) || void 0 === vS ? void 0 : vS.type) && (0, AS.jsxs)("div", {
+                      }), "updateCountdown" === (null === (nk = cF.countdownInformation) || void 0 === nk ? void 0 : nk.type) && (0, bk.jsxs)("div", {
                         className: "CustomGameChip GameChipUpdateCountdown AnimFadeIn",
-                        children: [(0, AS.jsxs)("div", {
+                        children: [(0, bk.jsxs)("div", {
                           className: "GameChipUpdateCountdownTop",
-                          children: ["Update in ", (0, AS.jsx)(ZS.d, {
-                            toTime: zH.countdownInformation.countdownToTime
+                          children: ["Update in ", (0, bk.jsx)(zk.b, {
+                            toTime: cF.countdownInformation.countdownToTime
                           })]
-                        }), (0, AS.jsx)("div", {
+                        }), (0, bk.jsx)("div", {
                           className: "GameChipUpdateCountdownBottom",
-                          children: zH.countdownInformation.previewText
+                          children: cF.countdownInformation.previewText
                         })]
                       })]
-                    }, bg ? "pending" : "shown"), (0, AS.jsxs)("header", {
+                    }, iI ? "pending" : "shown"), (0, bk.jsxs)("header", {
                       className: "GameInformationTitle",
-                      children: [(0, AS.jsx)("div", {
+                      children: [(0, bk.jsx)("div", {
                         className: "GameInformationTitleAndChips",
-                        children: (0, AS.jsxs)("h1", {
+                        children: (0, bk.jsxs)("h1", {
                           className: "GameInformationTitleText FullyFancyText",
-                          children: [zH.title, " ", zH.variationTitle && (null === (ES = fH.d[tH.gameNameWithVariation]) || void 0 === ES ? void 0 : ES.variationThumbnailUseBigRatio) && (0, AS.jsx)("span", {
+                          children: [cF.title, " ", cF.variationTitle && (null === (Gk = ZF.e[TF.gameNameWithVariation]) || void 0 === Gk ? void 0 : Gk.variationThumbnailUseBigRatio) && (0, bk.jsx)("span", {
                             className: "GameInformationTitleVariation",
-                            children: zH.variationTitle
+                            children: cF.variationTitle
                           })]
                         })
-                      }), zH.listedVariations && zH.listedVariations.length > 0 && (0, AS.jsx)("div", {
-                        className: KS()("GameInformationVariationList", {
-                          GameInformationVariationListBig: null === (YS = fH.d[tH.gameNameWithVariation]) || void 0 === YS ? void 0 : YS.variationThumbnailUseBigRatio
+                      }), cF.listedVariations && cF.listedVariations.length > 0 && (0, bk.jsx)("div", {
+                        className: ek()("GameInformationVariationList", {
+                          GameInformationVariationListBig: null === (uk = ZF.e[TF.gameNameWithVariation]) || void 0 === uk ? void 0 : uk.variationThumbnailUseBigRatio
                         }),
-                        children: zH.listedVariations.map((SS => {
-                          var HS, gS;
-                          return (0, AS.jsxs)(WH, {
-                            variation: SS,
-                            isSelected: tH.gameNameWithVariation === SS,
-                            children: [null !== US && (0, AS.jsx)("div", {
+                        children: cF.listedVariations.map((kk => {
+                          var Fk, Ik;
+                          return (0, bk.jsxs)(NF, {
+                            variation: kk,
+                            isSelected: TF.gameNameWithVariation === kk,
+                            children: [null !== Wk && (0, bk.jsx)("div", {
                               className: "GameInformationVariationCCU AnimFadeIn",
-                              children: (0, AS.jsxs)("div", {
+                              children: (0, bk.jsxs)("div", {
                                 className: "GameInformationVariationCCUInner",
-                                children: [(0, AS.jsx)(FS.d, {
+                                children: [(0, bk.jsx)(Ak.e, {
                                   name: "user"
-                                }), " ", (0, kH.R)(null !== (HS = US[SS]) && void 0 !== HS ? HS : 0)]
+                                }), " ", (0, jF.Q)(null !== (Fk = Wk[kk]) && void 0 !== Fk ? Fk : 0)]
                               })
-                            }), (0, AS.jsx)("div", {
+                            }), (0, bk.jsx)("div", {
                               className: "GameInformationVariationTitle SmallTextBold",
-                              children: WS(null !== (gS = fH.d[SS].variationTitle) && void 0 !== gS ? gS : fH.d[SS].title)
-                            }), (0, AS.jsx)("div", {
+                              children: Nk(null !== (Ik = ZF.e[kk].variationTitle) && void 0 !== Ik ? Ik : ZF.e[kk].title)
+                            }), (0, bk.jsx)("div", {
                               className: "ThumbnailBadgesContainer",
-                              children: (0, IS.filterBadges)(fH.d[SS].badges).map((SS => (0, AS.jsx)("div", {
-                                className: "ThumbnailBadgeContainer " + SS.type,
-                                children: (0, AS.jsx)("div", {
+                              children: (0, Lk.filterBadges)(ZF.e[kk].badges).map((kk => (0, bk.jsx)("div", {
+                                className: "ThumbnailBadgeContainer " + kk.type,
+                                children: (0, bk.jsx)("div", {
                                   className: "ThumbnailBadgeMain",
-                                  children: (0, AS.jsx)(OS.e, {
-                                    badge: SS
+                                  children: (0, bk.jsx)(vk.c, {
+                                    badge: kk
                                   })
                                 })
-                              }, SS.type)))
+                              }, kk.type)))
                             })]
-                          }, SS)
+                          }, kk)
                         }))
                       })]
-                    }), zH.description && (0, AS.jsx)("p", {
+                    }), cF.description && (0, bk.jsx)("p", {
                       className: "GameInformationDescription",
-                      children: zH.description
+                      children: cF.description
                     })]
-                  }), (0, AS.jsxs)("div", {
+                  }), (0, bk.jsxs)("div", {
                     className: "GameInformationButtonRows",
-                    children: [(0, AS.jsxs)("div", {
+                    children: [(0, bk.jsxs)("div", {
                       className: "GameInformationButtonRow GameInformationButtonRowPrimary",
-                      children: [!tg && (0, AS.jsx)(fS.h, {
-                        tooltipInner: (0, AS.jsx)("div", {
-                          children: WS("homePage:rejoinLobbyNumberInfo")
+                      children: [!TI && (0, bk.jsx)(tk.g, {
+                        tooltipInner: (0, bk.jsx)("div", {
+                          children: Nk("homePage:rejoinLobbyNumberInfo")
                         }),
                         hoverOnly: !0,
-                        children: (0, AS.jsx)(kS.p, {
+                        children: (0, bk.jsx)(Zk.m, {
                           className: "GameInformationButton",
                           padDefaultFocus: !0,
                           showPress: !0,
                           onClick: () => {
-                            Ig(sH[0])
+                            tI(BF[0])
                           },
-                          children: (0, AS.jsxs)("div", {
+                          children: (0, bk.jsxs)("div", {
                             className: "GameInformationButtonInner",
-                            children: [(0, AS.jsx)(FS.d, {
+                            children: [(0, bk.jsx)(Ak.e, {
                               name: "play"
-                            }), " ", WS("homePage:rejoinLobbyNumber", {
-                              number: sH[0]
+                            }), " ", Nk("homePage:rejoinLobbyNumber", {
+                              number: BF[0]
                             })]
                           })
                         })
-                      }), tg && qg]
-                    }), (0, AS.jsxs)("div", {
+                      }), TI && qI]
+                    }), (0, bk.jsxs)("div", {
                       className: "GameInformationButtonRow GameInformationButtonRowSecondary",
-                      children: [!tg && qg, (0, AS.jsxs)("div", {
+                      children: [!TI && qI, (0, bk.jsxs)("div", {
                         className: "JoinLobbyContainer",
-                        children: [(0, AS.jsx)(FS.d, {
+                        children: [(0, bk.jsx)(Ak.e, {
                           name: "magnifying-glass",
                           className: "JoinLobbyInputIcon"
-                        }), (0, AS.jsx)(jS.e, {
+                        }), (0, bk.jsx)(wk.c, {
                           className: "JoinLobbyInput",
-                          placeholderText: WS("homePage:lobbyName"),
-                          maxLength: kH.Q,
-                          domRef: PH,
-                          onValueChange: SS => {
-                            SS = (0, kH.ob)(SS), jH(SS)
+                          placeholderText: Nk("homePage:lobbyName"),
+                          maxLength: jF.M,
+                          domRef: KF,
+                          onValueChange: kk => {
+                            kk = (0, jF.qb)(kk), HF(kk)
                           },
                           onEnter: () => {
-                            0 === KH.length ? Ig(sH[0]) : Ig(KH)
+                            0 === wF.length ? tI(BF[0]) : tI(wF)
                           }
-                        }), (0, AS.jsx)(kS.g, {
+                        }), (0, bk.jsx)(Zk.d, {
                           className: "JoinLobbyButton",
                           showPress: !0,
                           onClick: () => {
-                            0 === KH.length ? Ig(sH[0]) : Ig(KH)
+                            0 === wF.length ? tI(BF[0]) : tI(wF)
                           },
-                          children: WS("general:join")
+                          children: Nk("general:join")
                         })]
                       })]
-                    }), (0, AS.jsxs)("section", {
-                      className: KS()("LobbyCollection RecentLobbyCollection", {
-                        LobbyCollectionHidden: !gg
+                    }), (0, bk.jsxs)("section", {
+                      className: ek()("LobbyCollection RecentLobbyCollection", {
+                        LobbyCollectionHidden: !XI
                       }),
-                      children: [(0, AS.jsx)("div", {
+                      children: [(0, bk.jsx)("div", {
                         className: "LobbyCollectionHeader RecentLobbyCollectionHeader",
-                        children: (0, AS.jsxs)("div", {
+                        children: (0, bk.jsxs)("div", {
                           className: "LobbyCollectionTitle",
-                          children: [(0, AS.jsx)(FS.d, {
+                          children: [(0, bk.jsx)(Ak.e, {
                             name: "clock-rotate-left"
-                          }), gg && (0, AS.jsx)("h2", {
+                          }), XI && (0, bk.jsx)("h2", {
                             className: "VisuallyHidden",
-                            children: WS("homePage:recentlyPlayedLobbies")
+                            children: Nk("homePage:recentlyPlayedLobbies")
                           })]
                         })
-                      }), (0, AS.jsx)(ZH.b, {
-                        lobbyGroups: [sH, BH],
-                        onLobbyClick: SS => {
-                          Ig(SS)
+                      }), (0, bk.jsx)(SF.e, {
+                        lobbyGroups: [BF, dF],
+                        onLobbyClick: kk => {
+                          tI(kk)
                         },
-                        keyPrefix: tH.gameNameWithVariation
+                        keyPrefix: TF.gameNameWithVariation
                       })]
                     })]
                   })]
                 })]
-              }), null !== xg && (0, AS.jsx)(iS, {
-                eventName: xg
+              }), null !== lI && (0, bk.jsx)(Ck, {
+                eventName: lI
               })]
-            }), Kg && (0, AS.jsx)("div", {
+            }), wI && (0, bk.jsx)("div", {
               className: "GameInformationBottom",
-              children: (0, AS.jsxs)("section", {
+              children: (0, bk.jsxs)("section", {
                 className: "LobbyCollection",
-                children: [(0, AS.jsxs)("div", {
-                  className: KS()("LobbyCollectionHeader", {
-                    SandboxWorldsLobbyCollectionHeader: !0 === zH.showWorldsInsteadOfCustomLobbies
+                children: [(0, bk.jsxs)("div", {
+                  className: ek()("LobbyCollectionHeader", {
+                    SandboxWorldsLobbyCollectionHeader: !0 === cF.showWorldsInsteadOfCustomLobbies
                   }),
-                  children: [!0 === zH.showWorldsInsteadOfCustomLobbies && (0, AS.jsxs)("h2", {
+                  children: [!0 === cF.showWorldsInsteadOfCustomLobbies && (0, bk.jsxs)("h2", {
                     className: "LobbyCollectionTitle",
-                    children: [(0, AS.jsx)(FS.d, {
+                    children: [(0, bk.jsx)(Ak.e, {
                       name: "planet-ringed",
                       kit: "duotone"
-                    }), (0, AS.jsxs)("div", {
+                    }), (0, bk.jsxs)("div", {
                       className: "LobbyCollectionTitleText",
-                      children: [(0, AS.jsx)("div", {
+                      children: [(0, bk.jsx)("div", {
                         className: "LobbyCollectionTitleTextBackground"
-                      }), WS("game:worlds")]
+                      }), Nk("game:worlds")]
                     })]
-                  }), !1 === zH.showWorldsInsteadOfCustomLobbies && (0, AS.jsxs)("h2", {
+                  }), !1 === cF.showWorldsInsteadOfCustomLobbies && (0, bk.jsxs)("h2", {
                     className: "LobbyCollectionTitle",
-                    children: [(0, AS.jsx)(FS.d, {
+                    children: [(0, bk.jsx)(Ak.e, {
                       name: "joystick"
-                    }), (0, AS.jsxs)("div", {
+                    }), (0, bk.jsxs)("div", {
                       className: "LobbyCollectionTitleText",
-                      children: [(0, AS.jsx)("div", {
+                      children: [(0, bk.jsx)("div", {
                         className: "LobbyCollectionTitleTextBackground"
-                      }), WS("homePage:customLobbies")]
+                      }), Nk("homePage:customLobbies")]
                     })]
-                  }), (0, AS.jsx)(kS.P, {
+                  }), (0, bk.jsx)(Zk.Q, {
                     onClick: () => {
-                      eH("explore")
+                      MF("explore")
                     },
-                    active: "explore" === mH,
-                    children: WS("general:explore")
-                  }), (0, AS.jsx)(kS.P, {
+                    active: "explore" === DF,
+                    children: Nk("general:explore")
+                  }), (0, bk.jsx)(Zk.Q, {
                     onClick: () => {
-                      eH("favourite")
+                      MF("favourite")
                     },
-                    active: "favourite" === mH,
-                    children: WS("homePage:favouriteLobbies")
-                  }), (0, AS.jsx)(kS.P, {
+                    active: "favourite" === DF,
+                    children: Nk("homePage:favouriteLobbies")
+                  }), (0, bk.jsx)(Zk.Q, {
                     onClick: () => {
-                      eH("owned")
+                      MF("owned")
                     },
-                    active: "owned" === mH,
-                    children: WS("homePage:ownedLobbies")
+                    active: "owned" === DF,
+                    children: Nk("homePage:ownedLobbies")
                   })]
-                }), (0, AS.jsxs)("div", {
+                }), (0, bk.jsxs)("div", {
                   className: "CustomLobbyList",
-                  children: [(0, AS.jsxs)("div", {
+                  children: [(0, bk.jsxs)("div", {
                     className: "CustomLobbyListInner",
-                    children: [(0, AS.jsx)(nH.b, {
+                    children: [(0, bk.jsx)(PF.c, {
                       label: "Create",
                       onClick: () => {
-                        HH.NotificationProvider.showCustomPopup({
-                          body: SS => (0, AS.jsx)(gH.CreateCustomLobby, {
-                            gameNameWithVariation: tH.gameNameWithVariation,
-                            close: SS
+                        IF.NotificationProvider.showCustomPopup({
+                          body: kk => (0, bk.jsx)(XF.CreateCustomLobby, {
+                            gameNameWithVariation: TF.gameNameWithVariation,
+                            close: kk
                           }),
                           middleScreenPopupClassName: "CreateCustomLobbyPopup"
                         })
                       }
-                    }), !0 === MH && (0, AS.jsx)(nH.i, {}), !1 === MH && (0, AS.jsx)(wH, {
-                      customLobbies: RH,
-                      favouriteLobbies: oH,
-                      toggleLikeLobby: fg,
-                      showReport: RS.featureFlags.useSocialFeatures && "owned" !== mH
+                    }), !0 === YF && (0, bk.jsx)(PF.g, {}), !1 === YF && (0, bk.jsx)(VF, {
+                      customLobbies: gF,
+                      favouriteLobbies: hF,
+                      toggleLikeLobby: ZI,
+                      showReport: gk.featureFlags.useSocialFeatures && "owned" !== DF
                     })]
-                  }), jg]
+                  }), HI]
                 })]
               })
             })]
-          }), !Kg && jg]
+          }), !wI && HI]
         })
       })
     }
 
-    function WH(SS) {
+    function NF(kk) {
       let {
-        variation: HS,
-        isSelected: gS,
-        children: tS
-      } = SS;
-      const qS = fH.d[HS],
-        IS = (0, XS.g)(HS, (0, XS.i)(qS)),
-        fS = (0, bS.f)(IS),
-        kS = (0, xS.g)([(0, XS.f)(HS, (0, XS.b)(qS))]);
-      return (0, AS.jsxs)(eS.LinkPreserveSearch, {
-        to: (0, zS.z)(HS),
+        variation: Fk,
+        isSelected: Ik,
+        children: Xk
+      } = kk;
+      const ak = ZF.e[Fk],
+        Lk = (0, ik.m)(Fk, (0, ik.p)(ak)),
+        tk = (0, Tk.e)(Lk),
+        Zk = (0, yk.d)([(0, ik.k)(Fk, (0, ik.e)(ak))]);
+      return (0, bk.jsxs)(Mk.LinkPreserveSearch, {
+        to: (0, ck.F)(Fk),
         replace: !0,
-        className: KS()("GameInformationVariation", NS.h, {
-          SelectedGameInformationVariation: gS
+        className: ek()("GameInformationVariation", lk.g, {
+          SelectedGameInformationVariation: Ik
         }),
-        onClick: SS => {
-          if (!(0, SH.b)(SS)) return;
-          const gS = (0, nS.j)(HS);
-          uS.g.setItem(gS, HS)
+        onClick: kk => {
+          if (!(0, FF.e)(kk)) return;
+          const Ik = (0, xk.h)(Fk);
+          qk.j.setItem(Ik, Fk)
         },
-        onMouseEnter: kS.start,
-        onMouseLeave: kS.cancel,
-        onFocus: kS.start,
-        onBlur: kS.cancel,
-        style: (0, NS.g)(fS),
-        children: [(0, AS.jsx)(NS.c, {
-          image: fS
-        }), tS]
+        onMouseEnter: Zk.start,
+        onMouseLeave: Zk.cancel,
+        onFocus: Zk.start,
+        onBlur: Zk.cancel,
+        style: (0, lk.f)(tk),
+        children: [(0, bk.jsx)(lk.d, {
+          image: tk
+        }), Xk]
       })
     }
   },
-  6713: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => nS
+  6501: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => xk
     });
-    var tS = gS(64),
-      bS = gS(1528),
-      XS = gS(1588),
-      xS = gS(3623),
-      NS = gS(1211),
-      qS = gS(1419),
-      uS = gS(1444),
-      IS = gS(1127),
-      fS = gS(1121),
-      kS = gS.n(fS),
-      aS = gS(6705),
-      KS = gS(1181);
+    var Xk = Ik(58),
+      Tk = Ik(1406),
+      ik = Ik(1453),
+      yk = Ik(3428),
+      lk = Ik(1118),
+      ak = Ik(1318),
+      qk = Ik(1333),
+      Lk = Ik(1066),
+      tk = Ik(1055),
+      Zk = Ik.n(tk),
+      jk = Ik(6498),
+      ek = Ik(1096);
 
-    function jS(SS) {
+    function wk(kk) {
       let {
-        info: HS,
-        className: gS
-      } = SS;
+        info: Fk,
+        className: Ik
+      } = kk;
       const {
-        statusText: tS,
-        rowText: bS
-      } = (0, aS.f)();
-      return (0, KS.jsxs)("div", {
-        className: kS()("GameApprovalInfoDetails", gS),
-        children: [(0, KS.jsxs)("div", {
-          className: kS()("GameApprovalInfoSummary", HS.overallPassed ? "Passed" : "Failed"),
-          children: [(0, KS.jsx)(IS.d, {
-            name: HS.overallPassed ? "circle-check" : "circle-xmark"
-          }), (0, KS.jsx)("span", {
-            children: tS(HS.status)
+        statusText: Xk,
+        rowText: Tk
+      } = (0, jk.g)();
+      return (0, ek.jsxs)("div", {
+        className: Zk()("GameApprovalInfoDetails", Ik),
+        children: [(0, ek.jsxs)("div", {
+          className: Zk()("GameApprovalInfoSummary", Fk.overallPassed ? "Passed" : "Failed"),
+          children: [(0, ek.jsx)(Lk.e, {
+            name: Fk.overallPassed ? "circle-check" : "circle-xmark"
+          }), (0, ek.jsx)("span", {
+            children: Xk(Fk.status)
           })]
-        }), HS.rows.length > 0 && (0, KS.jsx)("div", {
+        }), Fk.rows.length > 0 && (0, ek.jsx)("div", {
           className: "GameApprovalInfoRows",
-          children: HS.rows.map((SS => {
+          children: Fk.rows.map((kk => {
             const {
-              label: HS,
-              value: gS
-            } = bS(SS);
-            return (0, KS.jsxs)("div", {
-              className: kS()("GameApprovalInfoRow", SS.passed ? "Passed" : "Failed"),
-              children: [(0, KS.jsx)(IS.d, {
-                name: SS.passed ? "check" : "xmark"
-              }), (0, KS.jsxs)("div", {
+              label: Fk,
+              value: Ik
+            } = Tk(kk);
+            return (0, ek.jsxs)("div", {
+              className: Zk()("GameApprovalInfoRow", kk.passed ? "Passed" : "Failed"),
+              children: [(0, ek.jsx)(Lk.e, {
+                name: kk.passed ? "check" : "xmark"
+              }), (0, ek.jsxs)("div", {
                 className: "GameApprovalInfoRowText",
-                children: [(0, KS.jsx)("div", {
+                children: [(0, ek.jsx)("div", {
                   className: "GameApprovalInfoRowLabel",
-                  children: HS
-                }), null !== gS && (0, KS.jsx)("div", {
+                  children: Fk
+                }), null !== Ik && (0, ek.jsx)("div", {
                   className: "GameApprovalInfoRowValue",
-                  children: gS
+                  children: Ik
                 })]
               })]
-            }, SS.kind)
+            }, kk.kind)
           }))
         })]
       })
     }
-    var GS = gS(1281),
-      CS = gS(1435);
+    var Hk = Ik(1179),
+      Jk = Ik(1324);
 
-    function nS(SS) {
-      CS.NotificationProvider.showCustomPopup({
-        body: () => (0, KS.jsx)(PS, {
-          ...SS
+    function xk(kk) {
+      Jk.NotificationProvider.showCustomPopup({
+        body: () => (0, ek.jsx)(Pk, {
+          ...kk
         }),
         middleScreenPopupClassName: "ApprovalInfoPopup",
         onClose: () => {},
@@ -1376,92 +1376,92 @@ export const modules = {
       })
     }
 
-    function PS(SS) {
+    function Pk(kk) {
       let {
-        schematicId: HS,
-        canOverride: gS,
-        onApprovalChanged: fS
-      } = SS;
+        schematicId: Fk,
+        canOverride: Ik,
+        onApprovalChanged: tk
+      } = kk;
       const {
-        t: kS
-      } = (0, GS.F)(), {
-        userContext: aS
-      } = (0, NS.b)(), CS = (0, xS.b)(), [nS, PS] = (0, tS.useState)(null), [QS, DS] = (0, tS.useState)(null), [wS, hS] = (0, tS.useState)(!1), ZS = (0, tS.useCallback)((() => {
-        DS(null), XS.b.getGameApprovalInfo(aS, HS).then((SS => {
-          CS.current && PS(SS)
-        })).catch((SS => {
-          console.error("Failed to get game approval info", SS), CS.current && DS(kS("studio:approvalLoadFailed"))
+        t: Zk
+      } = (0, Hk.y)(), {
+        userContext: jk
+      } = (0, lk.d)(), Jk = (0, yk.d)(), [xk, Pk] = (0, Xk.useState)(null), [Kk, Qk] = (0, Xk.useState)(null), [sk, Vk] = (0, Xk.useState)(!1), zk = (0, Xk.useCallback)((() => {
+        Qk(null), ik.e.getGameApprovalInfo(jk, Fk).then((kk => {
+          Jk.current && Pk(kk)
+        })).catch((kk => {
+          console.error("Failed to get game approval info", kk), Jk.current && Qk(Zk("studio:approvalLoadFailed"))
         }))
-      }), [aS, HS, CS, kS]);
-      (0, tS.useEffect)((() => {
-        ZS()
-      }), [ZS]);
-      const JS = SS => {
-        wS || (hS(!0), XS.b.setGameApproval(aS, HS, SS).then((() => {
-          null === fS || void 0 === fS || fS(), CS.current && ZS()
-        })).catch((SS => {
-          console.error("Failed to set game approval", SS)
+      }), [jk, Fk, Jk, Zk]);
+      (0, Xk.useEffect)((() => {
+        zk()
+      }), [zk]);
+      const Sk = kk => {
+        sk || (Vk(!0), ik.e.setGameApproval(jk, Fk, kk).then((() => {
+          null === tk || void 0 === tk || tk(), Jk.current && zk()
+        })).catch((kk => {
+          console.error("Failed to set game approval", kk)
         })).finally((() => {
-          CS.current && hS(!1)
+          Jk.current && Vk(!1)
         })))
       };
-      return (0, KS.jsxs)("div", {
+      return (0, ek.jsxs)("div", {
         className: "ApprovalInfoPopupBody",
-        children: [(0, KS.jsx)("h1", {
+        children: [(0, ek.jsx)("h1", {
           className: "ApprovalInfoPopupTitle",
-          children: kS("studio:approvalTitle")
-        }), !nS && !QS && (0, KS.jsx)("div", {
+          children: Zk("studio:approvalTitle")
+        }), !xk && !Kk && (0, ek.jsx)("div", {
           className: "ApprovalInfoPopupLoader",
-          children: (0, KS.jsx)(qS.c, {})
-        }), QS && (0, KS.jsx)("div", {
+          children: (0, ek.jsx)(ak.c, {})
+        }), Kk && (0, ek.jsx)("div", {
           className: "ApprovalInfoPopupError",
-          children: QS
-        }), nS && (0, KS.jsxs)(KS.Fragment, {
-          children: [(0, KS.jsx)(jS, {
-            info: nS
-          }), gS && (0, KS.jsxs)("div", {
+          children: Kk
+        }), xk && (0, ek.jsxs)(ek.Fragment, {
+          children: [(0, ek.jsx)(wk, {
+            info: xk
+          }), Ik && (0, ek.jsxs)("div", {
             className: "ApprovalInfoPopupActions",
-            children: [!0 !== nS.manualOverride && (0, KS.jsx)(uS.h, {
-              tooltipInner: (0, KS.jsx)("div", {
-                children: kS("studio:approvalApproveTooltip")
+            children: [!0 !== xk.manualOverride && (0, ek.jsx)(qk.g, {
+              tooltipInner: (0, ek.jsx)("div", {
+                children: Zk("studio:approvalApproveTooltip")
               }),
-              children: (0, KS.jsxs)(bS.p, {
+              children: (0, ek.jsxs)(Tk.m, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  JS(!0)
+                  Sk(!0)
                 },
-                disabled: wS,
-                children: [(0, KS.jsx)(IS.d, {
+                disabled: sk,
+                children: [(0, ek.jsx)(Lk.e, {
                   name: "check"
-                }), " ", kS("studio:approvalApprove")]
+                }), " ", Zk("studio:approvalApprove")]
               })
-            }), !1 !== nS.manualOverride && (0, KS.jsx)(uS.h, {
-              tooltipInner: (0, KS.jsx)("div", {
-                children: kS("studio:approvalDenyTooltip")
+            }), !1 !== xk.manualOverride && (0, ek.jsx)(qk.g, {
+              tooltipInner: (0, ek.jsx)("div", {
+                children: Zk("studio:approvalDenyTooltip")
               }),
-              children: (0, KS.jsxs)(bS.L, {
+              children: (0, ek.jsxs)(Tk.G, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  JS(!1)
+                  Sk(!1)
                 },
-                disabled: wS,
-                children: [(0, KS.jsx)(IS.d, {
+                disabled: sk,
+                children: [(0, ek.jsx)(Lk.e, {
                   name: "xmark"
-                }), " ", kS("studio:approvalDeny")]
+                }), " ", Zk("studio:approvalDeny")]
               })
-            }), null !== nS.manualOverride && (0, KS.jsx)(uS.h, {
-              tooltipInner: (0, KS.jsx)("div", {
-                children: kS("studio:approvalClearOverrideTooltip")
+            }), null !== xk.manualOverride && (0, ek.jsx)(qk.g, {
+              tooltipInner: (0, ek.jsx)("div", {
+                children: Zk("studio:approvalClearOverrideTooltip")
               }),
-              children: (0, KS.jsxs)(bS.g, {
+              children: (0, ek.jsxs)(Tk.d, {
                 className: "ApprovalInfoPopupActionButton",
                 onClick: () => {
-                  JS(null)
+                  Sk(null)
                 },
-                disabled: wS,
-                children: [(0, KS.jsx)(IS.d, {
+                disabled: sk,
+                children: [(0, ek.jsx)(Lk.e, {
                   name: "arrows-rotate"
-                }), " ", kS("studio:approvalClearOverride")]
+                }), " ", Zk("studio:approvalClearOverride")]
               })
             })]
           })]
@@ -1469,14 +1469,14 @@ export const modules = {
       })
     }
   },
-  6705: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => NS,
-      f: () => xS
+  6498: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => lk,
+      g: () => yk
     });
-    var tS = gS(387),
-      bS = gS(1281);
-    const XS = {
+    var Xk = Ik(337),
+      Tk = Ik(1179);
+    const ik = {
       manuallyApproved: "studio:approvalStatusManuallyApproved",
       manuallyAndAutoApproved: "studio:approvalStatusManuallyAndAutoApproved",
       manuallyDenied: "studio:approvalStatusManuallyDenied",
@@ -1485,60 +1485,60 @@ export const modules = {
       notIndexed: "studio:approvalStatusNotIndexed"
     };
 
-    function xS() {
+    function yk() {
       const {
-        t: SS,
-        selectedLanguage: HS
-      } = (0, bS.F)();
+        t: kk,
+        selectedLanguage: Fk
+      } = (0, Tk.y)();
       return {
-        statusText: HS => SS(XS[HS]),
-        rowText: gS => {
-          const XS = (SS, gS) => (0, tS.W)((0, bS.q)(HS.code, SS), 0, gS);
-          switch (gS.kind) {
+        statusText: Fk => kk(ik[Fk]),
+        rowText: Ik => {
+          const ik = (kk, Ik) => (0, Xk.gb)((0, Tk.l)(Fk.code, kk), 0, Ik);
+          switch (Ik.kind) {
             case "ownerAccountAge": {
-              const HS = gS.ownerIsLoggedIn ? "studio:approvalAccountAgeLoggedIn" : "studio:approvalAccountAgeNotLoggedIn";
+              const Fk = Ik.ownerIsLoggedIn ? "studio:approvalAccountAgeLoggedIn" : "studio:approvalAccountAgeNotLoggedIn";
               return {
-                label: SS("studio:approvalAccountAgeLabel"),
-                value: SS(HS, {
-                  age: XS(HS, gS.accountAgeMs),
-                  days: gS.minAccountAgeDays
+                label: kk("studio:approvalAccountAgeLabel"),
+                value: kk(Fk, {
+                  age: ik(Fk, Ik.accountAgeMs),
+                  days: Ik.minAccountAgeDays
                 })
               }
             }
             case "sinceUnbannedOrUnmuted":
               return {
-                label: SS("studio:approvalSinceUnbannedLabel"), value: SS("studio:approvalSinceUnbannedValue", {
-                  time: XS("studio:approvalSinceUnbannedValue", gS.sinceMs),
-                  days: gS.minDays
+                label: kk("studio:approvalSinceUnbannedLabel"), value: kk("studio:approvalSinceUnbannedValue", {
+                  time: ik("studio:approvalSinceUnbannedValue", Ik.sinceMs),
+                  days: Ik.minDays
                 })
               };
             case "reportHold": {
               const {
-                detail: HS
-              } = gS;
-              if (null === HS) return {
-                label: SS("studio:approvalUnderInvestigation"),
+                detail: Fk
+              } = Ik;
+              if (null === Fk) return {
+                label: kk("studio:approvalUnderInvestigation"),
                 value: null
               };
-              const tS = HS.weightedReporters.toFixed(1),
-                bS = HS.threshold.toFixed(1),
-                xS = SS("studio:approvalReportHoldLabel", {
-                  hours: HS.windowHours
+              const Xk = Fk.weightedReporters.toFixed(1),
+                Tk = Fk.threshold.toFixed(1),
+                yk = kk("studio:approvalReportHoldLabel", {
+                  hours: Fk.windowHours
                 });
-              if (null === HS.heldUntil) return {
-                label: xS,
-                value: SS("studio:approvalReportHoldValue", {
-                  weightedReporters: tS,
-                  threshold: bS
+              if (null === Fk.heldUntil) return {
+                label: yk,
+                value: kk("studio:approvalReportHoldValue", {
+                  weightedReporters: Xk,
+                  threshold: Tk
                 })
               };
-              const NS = "studio:approvalReportHoldValueHeld";
+              const lk = "studio:approvalReportHoldValueHeld";
               return {
-                label: xS,
-                value: SS(NS, {
-                  weightedReporters: tS,
-                  threshold: bS,
-                  time: XS(NS, HS.heldUntil - Date.now())
+                label: yk,
+                value: kk(lk, {
+                  weightedReporters: Xk,
+                  threshold: Tk,
+                  time: ik(lk, Fk.heldUntil - Date.now())
                 })
               }
             }
@@ -1547,85 +1547,85 @@ export const modules = {
       }
     }
 
-    function NS(SS) {
-      return null === SS.manualOverride && SS.rows.some((SS => "reportHold" === SS.kind && !SS.passed))
+    function lk(kk) {
+      return null === kk.manualOverride && kk.rows.some((kk => "reportHold" === kk.kind && !kk.passed))
     }
   },
-  34280: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => XS
+  34231: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik
     });
-    var tS = gS(64),
-      bS = gS(3577);
+    var Xk = Ik(58),
+      Tk = Ik(3378);
 
-    function XS() {
-      const [SS, HS] = (0, tS.useState)(!1);
-      return (0, tS.useLayoutEffect)((() => {
-        let SS = !0;
-        return (0, bS.f)().then((() => {
-          SS && HS(!0)
+    function ik() {
+      const [kk, Fk] = (0, Xk.useState)(!1);
+      return (0, Xk.useLayoutEffect)((() => {
+        let kk = !0;
+        return (0, Tk.e)().then((() => {
+          kk && Fk(!0)
         })), () => {
-          SS = !1
+          kk = !1
         }
-      }), []), SS
+      }), []), kk
     }
   },
-  9102: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => xS
+  8898: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => yk
     });
-    var tS = gS(1406),
-      bS = gS(1309),
-      XS = gS(680);
+    var Xk = Ik(1308),
+      Tk = Ik(1217),
+      ik = Ik(628);
 
-    function xS(SS) {
-      return SS = function(SS, HS) {
-        var gS;
-        const tS = new URLSearchParams(HS),
-          bS = tS.get("lobby"),
-          XS = tS.get("vm"),
-          xS = null !== (gS = bS) && void 0 !== gS ? gS : SS.lobbyName,
-          NS = null !== XS && void 0 !== XS ? XS : SS.directJoinVmUrl;
-        if (xS === SS.lobbyName && NS === SS.directJoinVmUrl) return SS;
+    function yk(kk) {
+      return kk = function(kk, Fk) {
+        var Ik;
+        const Xk = new URLSearchParams(Fk),
+          Tk = Xk.get("lobby"),
+          ik = Xk.get("vm"),
+          yk = null !== (Ik = Tk) && void 0 !== Ik ? Ik : kk.lobbyName,
+          lk = null !== ik && void 0 !== ik ? ik : kk.directJoinVmUrl;
+        if (yk === kk.lobbyName && lk === kk.directJoinVmUrl) return kk;
         return {
-          ...SS,
-          lobbyName: xS,
-          directJoinVmUrl: NS
+          ...kk,
+          lobbyName: yk,
+          directJoinVmUrl: lk
         }
-      }(SS, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), SS = function(SS) {
-        if ((0, XS.K)(SS.directJoinVmUrl)) return SS;
-        const HS = (0, bS.$)(SS.directJoinVmUrl);
-        null === HS && (SS.directJoinVmUrl = void 0);
-        return SS
-      }(SS = function(SS) {
-        if ((0, XS.K)(SS.gameNameWithVariation)) return SS;
-        return SS.gameNameWithVariation = (0, tS.i)(SS.gameNameWithVariation), SS
-      }(SS))
+      }(kk, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), kk = function(kk) {
+        if ((0, ik.Q)(kk.directJoinVmUrl)) return kk;
+        const Fk = (0, Tk.Z)(kk.directJoinVmUrl);
+        null === Fk && (kk.directJoinVmUrl = void 0);
+        return kk
+      }(kk = function(kk) {
+        if ((0, ik.Q)(kk.gameNameWithVariation)) return kk;
+        return kk.gameNameWithVariation = (0, Xk.n)(kk.gameNameWithVariation), kk
+      }(kk))
     }
   },
-  9099: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => XS,
-      f: () => bS
+  8895: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik,
+      e: () => Tk
     });
-    let tS = !1;
+    let Xk = !1;
 
-    function bS() {
-      tS = !0
+    function Tk() {
+      Xk = !0
     }
 
-    function XS() {
-      return tS
+    function ik() {
+      return Xk
     }
   },
-  36381: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => bS,
-      i: () => tS
+  36363: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Tk,
+      f: () => Xk
     });
-    const tS = "skyblockSkills",
-      bS = "skills_test_gym"
+    const Xk = "skyblockSkills",
+      Tk = "skills_test_gym"
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

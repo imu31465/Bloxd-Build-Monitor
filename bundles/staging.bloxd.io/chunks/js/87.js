@@ -1,417 +1,417 @@
 export const id = 87;
 export const ids = [87];
 export const modules = {
-  40911: (SS, HS, gS) => {
-    gS.d(HS, {
-      B: () => lS,
-      D: () => VS,
-      F: () => vS,
-      G: () => yS,
-      K: () => cS,
-      M: () => MS,
-      N: () => BS,
-      O: () => LS,
-      c: () => FS,
-      g: () => WS,
-      h: () => OS,
-      j: () => RS,
-      m: () => dS,
-      n: () => JS,
-      q: () => iS,
-      s: () => ES,
-      w: () => AS,
-      x: () => YS
+  40891: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      C: () => uk,
+      G: () => rk,
+      H: () => Uk,
+      I: () => nk,
+      M: () => Rk,
+      Q: () => Ok,
+      U: () => Yk,
+      X: () => dk,
+      _: () => pk,
+      d: () => Ak,
+      e: () => Nk,
+      h: () => vk,
+      l: () => gk,
+      n: () => Ek,
+      p: () => Sk,
+      t: () => Ck,
+      x: () => Gk,
+      z: () => bk
     });
-    var tS = gS(1471),
-      bS = gS(31),
-      XS = gS(1366),
-      xS = gS(2510),
-      NS = gS(4954),
-      qS = gS(4911);
-    let uS, IS = !1,
-      fS = !1,
-      kS = !1,
-      aS = !1;
-    const KS = 1300,
-      jS = 3e3;
-    let GS = 0,
-      CS = !1,
-      nS = !1,
-      PS = 0;
-    const QS = 2;
-    let DS = !1,
-      wS = !1;
-    const hS = new Set,
-      ZS = new Set;
+    var Xk = Ik(1364),
+      Tk = Ik(34),
+      ik = Ik(1270),
+      yk = Ik(2331),
+      lk = Ik(4814),
+      ak = Ik(4792);
+    let qk, Lk = !1,
+      tk = !1,
+      Zk = !1,
+      jk = !1;
+    const ek = 1300,
+      wk = 3e3;
+    let Hk = 0,
+      Jk = !1,
+      xk = !1,
+      Pk = 0;
+    const Kk = 2;
+    let Qk = !1,
+      sk = !1;
+    const Vk = new Set,
+      zk = new Set;
 
-    function JS() {
-      return IS
+    function Sk() {
+      return Lk
     }
 
-    function OS() {
-      return nS
+    function vk() {
+      return xk
     }
 
-    function dS() {
-      return wS
+    function Ek() {
+      return sk
     }
 
-    function cS() {
-      return (0, XS.v)() && !wS
+    function Ok() {
+      return (0, ik.n)() && !sk
     }
 
-    function vS(SS) {
-      let HS = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-      if (SS !== wS) {
-        wS = SS;
-        for (const SS of [...ZS]) SS(wS);
-        HS && BS()
+    function nk(kk) {
+      let Fk = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (kk !== sk) {
+        sk = kk;
+        for (const kk of [...zk]) kk(sk);
+        Fk && dk()
       }
     }
 
-    function ES(SS) {
-      return ZS.add(SS), () => {
-        ZS.delete(SS)
+    function Gk(kk) {
+      return zk.add(kk), () => {
+        zk.delete(kk)
       }
     }
 
-    function LS() {
-      (0, NS.i)(xS.A.Menu, (0, XS.v)() ? 0 : xS.A.Menu)
+    function pk() {
+      (0, lk.g)(yk.A.Menu, (0, ik.n)() ? 0 : yk.A.Menu)
     }
 
-    function YS() {
-      nS = !1, PS = 0, LS(), BS()
+    function uk() {
+      xk = !1, Pk = 0, pk(), dk()
     }
 
-    function AS(SS) {
-      return hS.add(SS), () => {
-        hS.delete(SS)
+    function bk(kk) {
+      return Vk.add(kk), () => {
+        Vk.delete(kk)
       }
     }
 
-    function yS(SS) {
-      fS = !1, SS !== IS && (IS = SS, aS = !1, clearTimeout(uS), kS = !IS && DS, IS ? (CS = !1, nS = !1, PS = 0) : cS() && !DS && (nS = !0), DS = !1, IS && !cS() && oS(), mS(), kS && BS())
+    function Rk(kk) {
+      tk = !1, kk !== Lk && (Lk = kk, jk = !1, clearTimeout(qk), Zk = !Lk && Qk, Lk ? (Jk = !1, xk = !1, Pk = 0) : Ok() && !Qk && (xk = !0), Qk = !1, Lk && !Ok() && hk(), Dk(), Zk && dk())
     }
 
-    function VS(SS) {
-      SS !== CS && (CS = SS, SS || BS())
+    function Uk(kk) {
+      kk !== Jk && (Jk = kk, kk || dk())
     }
 
-    function iS() {
-      fS = !1, aS || !0 !== pS() || (aS = !0, clearTimeout(uS), uS = setTimeout(zS, KS))
+    function Ck() {
+      tk = !1, jk || !0 !== fk() || (jk = !0, clearTimeout(qk), qk = setTimeout(ck, ek))
     }
 
-    function WS() {
-      return (!fS || performance.now() - GS > jS) && (fS = (0, qS.J)().lockPointer(), GS = performance.now()), fS
+    function Nk() {
+      return (!tk || performance.now() - Hk > wk) && (tk = (0, ak.I)().lockPointer(), Hk = performance.now()), tk
     }
 
-    function zS() {
-      US() && sS() && WS()
+    function ck() {
+      Wk() && Bk() && Nk()
     }
 
-    function US() {
-      return cS() && !IS && !CS && !(0, tS.h)()
+    function Wk() {
+      return Ok() && !Lk && !Jk && !(0, Xk.f)()
     }
 
-    function pS() {
-      var SS;
-      return "undefined" === typeof navigator || null === (SS = navigator.userActivation) || void 0 === SS ? void 0 : SS.isActive
+    function fk() {
+      var kk;
+      return "undefined" === typeof navigator || null === (kk = navigator.userActivation) || void 0 === kk ? void 0 : kk.isActive
     }
 
-    function sS() {
-      return kS && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== pS()
+    function Bk() {
+      return Zk && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== fk()
     }
 
-    function BS() {
-      cS() ? US() && !nS && sS() && WS() : IS && !DS && oS()
+    function dk() {
+      Ok() ? Wk() && !xk && Bk() && Nk() : Lk && !Qk && hk()
     }
 
-    function MS() {
-      nS ? navigator.vendor.startsWith("Apple") ? TS() : PS = QS : BS()
+    function Yk() {
+      xk ? navigator.vendor.startsWith("Apple") ? mk() : Pk = Kk : dk()
     }
 
-    function FS() {
-      PS > 0 && 0 === --PS && TS()
+    function Ak() {
+      Pk > 0 && 0 === --Pk && mk()
     }
 
-    function RS() {
-      PS = 0
+    function gk() {
+      Pk = 0
     }
 
-    function TS() {
-      US() && !0 === pS() && WS()
+    function mk() {
+      Wk() && !0 === fk() && Nk()
     }
 
-    function oS() {
-      DS = !0, (0, qS.J)().unlockPointer()
+    function hk() {
+      Qk = !0, (0, ak.I)().unlockPointer()
     }
 
-    function lS() {
-      fS = !1, kS = !1, aS = !1, clearTimeout(uS), CS = !1, nS = !1, PS = 0, DS = !1;
-      const SS = IS;
-      IS = !1, SS && mS()
+    function rk() {
+      tk = !1, Zk = !1, jk = !1, clearTimeout(qk), Jk = !1, xk = !1, Pk = 0, Qk = !1;
+      const kk = Lk;
+      Lk = !1, kk && Dk()
     }
 
-    function mS() {
-      for (const SS of [...hS]) SS(IS);
-      bS.k.cj("pointerLockUpdate", IS)
+    function Dk() {
+      for (const kk of [...Vk]) kk(Lk);
+      Tk.g.GL("pointerLockUpdate", Lk)
     }
   },
-  40707: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => kS,
-      g: () => NS,
-      i: () => fS,
-      l: () => uS,
-      p: () => xS,
-      r: () => IS,
-      v: () => qS
+  40685: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Zk,
+      f: () => lk,
+      g: () => tk,
+      j: () => qk,
+      n: () => yk,
+      q: () => Lk,
+      r: () => ak
     });
-    let tS = null,
-      bS = null,
-      XS = null;
+    let Xk = null,
+      Tk = null,
+      ik = null;
 
-    function xS(SS) {
-      tS = SS
+    function yk(kk) {
+      Xk = kk
     }
 
-    function NS() {
-      return tS
+    function lk() {
+      return Xk
     }
 
-    function qS(SS) {
-      bS = SS
+    function ak(kk) {
+      Tk = kk
     }
 
-    function uS() {
-      return bS
+    function qk() {
+      return Tk
     }
 
-    function IS(SS) {
-      XS = SS
+    function Lk(kk) {
+      ik = kk
     }
 
-    function fS() {
-      return XS
+    function tk() {
+      return ik
     }
 
-    function kS() {
-      var SS, HS;
-      return !0 === (null === (SS = bS) || void 0 === SS || null === (HS = SS.currentViewer) || void 0 === HS ? void 0 : HS.inPlayback)
+    function Zk() {
+      var kk, Fk;
+      return !0 === (null === (kk = Tk) || void 0 === kk || null === (Fk = kk.currentViewer) || void 0 === Fk ? void 0 : Fk.inPlayback)
     }
   },
-  4911: (SS, HS, gS) => {
-    gS.d(HS, {
-      A: () => dS,
-      B: () => cS,
-      D: () => nS,
-      H: () => xS,
-      J: () => NS,
-      M: () => JS,
-      e: () => ZS,
-      f: () => QS,
-      i: () => ES,
-      j: () => vS,
-      k: () => CS,
-      n: () => wS,
-      r: () => PS,
-      t: () => DS,
-      w: () => OS
+  4792: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      A: () => Ok,
+      D: () => xk,
+      F: () => yk,
+      I: () => lk,
+      L: () => Sk,
+      c: () => zk,
+      g: () => Kk,
+      k: () => Gk,
+      l: () => nk,
+      o: () => Jk,
+      s: () => sk,
+      t: () => Pk,
+      u: () => Qk,
+      y: () => vk,
+      z: () => Ek
     });
-    var tS = gS(4917);
-    const bS = {
+    var Xk = Ik(4794);
+    const Tk = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let XS = bS;
+    let ik = Tk;
 
-    function xS(SS) {
-      XS = null !== SS && void 0 !== SS ? SS : bS
+    function yk(kk) {
+      ik = null !== kk && void 0 !== kk ? kk : Tk
     }
 
-    function NS() {
-      return XS
+    function lk() {
+      return ik
     }
-    const qS = new Set,
-      uS = new Set;
-    let IS = -1;
-    const fS = new Set,
-      kS = new Set;
-    let aS = 0,
-      KS = 0;
-    const jS = new Set,
-      GS = new Set;
+    const ak = new Set,
+      qk = new Set;
+    let Lk = -1;
+    const tk = new Set,
+      Zk = new Set;
+    let jk = 0,
+      ek = 0;
+    const wk = new Set,
+      Hk = new Set;
 
-    function CS(SS) {
-      return qS.add(SS), () => {
-        qS.delete(SS)
+    function Jk(kk) {
+      return ak.add(kk), () => {
+        ak.delete(kk)
       }
     }
 
-    function nS(SS, HS) {
-      for (const tS of qS) try {
-        tS(SS)
-      } catch (gS) {
-        HS(gS)
+    function xk(kk, Fk) {
+      for (const Xk of ak) try {
+        Xk(kk)
+      } catch (Ik) {
+        Fk(Ik)
       }
     }
 
-    function PS(SS) {
-      return uS.add(SS), () => {
-        uS.delete(SS)
+    function Pk(kk) {
+      return qk.add(kk), () => {
+        qk.delete(kk)
       }
     }
 
-    function QS(SS, HS) {
-      const gS = IS < 0 ? 0 : SS - IS;
-      IS = SS;
-      for (const bS of uS) try {
-        bS(gS)
-      } catch (tS) {
-        HS(tS)
+    function Kk(kk, Fk) {
+      const Ik = Lk < 0 ? 0 : kk - Lk;
+      Lk = kk;
+      for (const Tk of qk) try {
+        Tk(Ik)
+      } catch (Xk) {
+        Fk(Xk)
       }
     }
 
-    function DS(SS) {
-      return fS.add(SS), () => {
-        fS.delete(SS)
+    function Qk(kk) {
+      return tk.add(kk), () => {
+        tk.delete(kk)
       }
     }
 
-    function wS(SS) {
-      return kS.add(SS), () => {
-        kS.delete(SS)
+    function sk(kk) {
+      return Zk.add(kk), () => {
+        Zk.delete(kk)
       }
     }
-    let hS = 0;
+    let Vk = 0;
 
-    function ZS(SS) {
-      hS += SS
+    function zk(kk) {
+      Vk += kk
     }
 
-    function JS() {
-      const SS = hS;
-      return hS = 0, SS
+    function Sk() {
+      const kk = Vk;
+      return Vk = 0, kk
     }
 
-    function OS(SS) {
-      return jS.add(SS), () => {
-        jS.delete(SS)
-      }
-    }
-
-    function dS(SS) {
-      return GS.add(SS), () => {
-        GS.delete(SS)
+    function vk(kk) {
+      return wk.add(kk), () => {
+        wk.delete(kk)
       }
     }
 
-    function cS() {
-      aS = 0, KS = 0, IS = -1
+    function Ek(kk) {
+      return Hk.add(kk), () => {
+        Hk.delete(kk)
+      }
     }
 
-    function vS(SS, HS) {
-      if ("paced" === SS) return KS += HS, null;
-      if ("drawn" !== SS && "skipped" !== SS) return null;
-      const gS = HS + KS;
-      return KS = 0, gS
+    function Ok() {
+      jk = 0, ek = 0, Lk = -1
     }
 
-    function ES(SS, HS, gS, bS) {
-      const XS = (0, tS.h)(HS),
-        xS = SS > 0 ? performance.now() : 0;
-      for (let tS = 0; tS < SS; tS++)
-        for (const SS of jS) try {
-          SS()
-        } catch (NS) {
-          bS(NS)
+    function nk(kk, Fk) {
+      if ("paced" === kk) return ek += Fk, null;
+      if ("drawn" !== kk && "skipped" !== kk) return null;
+      const Ik = Fk + ek;
+      return ek = 0, Ik
+    }
+
+    function Gk(kk, Fk, Ik, Tk) {
+      const ik = (0, Xk.f)(Fk),
+        yk = kk > 0 ? performance.now() : 0;
+      for (let Xk = 0; Xk < kk; Xk++)
+        for (const kk of wk) try {
+          kk()
+        } catch (lk) {
+          Tk(lk)
         }
-      if (SS > 0 && ZS(performance.now() - xS), null !== gS) {
-        for (const SS of fS) try {
-          SS(gS)
-        } catch (NS) {
-          bS(NS)
+      if (kk > 0 && zk(performance.now() - yk), null !== Ik) {
+        for (const kk of tk) try {
+          kk(Ik)
+        } catch (lk) {
+          Tk(lk)
         }
-        aS += gS
+        jk += Ik
       }
-      if ("drawn" === HS) {
-        const SS = aS;
-        aS = 0;
-        for (const HS of kS) try {
-          HS(SS)
-        } catch (NS) {
-          bS(NS)
+      if ("drawn" === Fk) {
+        const kk = jk;
+        jk = 0;
+        for (const Fk of Zk) try {
+          Fk(kk)
+        } catch (lk) {
+          Tk(lk)
         }
       }
-      for (const tS of GS) try {
-        tS(SS, XS)
-      } catch (NS) {
-        bS(NS)
+      for (const Xk of Hk) try {
+        Xk(kk, ik)
+      } catch (lk) {
+        Tk(lk)
       }
     }
   },
-  40917: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => tS
+  40900: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Xk
     });
-    const tS = {
-      stop: () => tS,
-      fade: () => tS,
-      rate: () => tS,
+    const Xk = {
+      stop: () => Xk,
+      fade: () => Xk,
+      rate: () => Xk,
       getVolume: () => 0,
       getRelativeVolume: () => 0,
-      setRelativeVolume: () => tS,
-      setPannerAttr: () => tS,
-      setPosition: () => tS
+      setRelativeVolume: () => Xk,
+      setPannerAttr: () => Xk,
+      setPosition: () => Xk
     }
   },
-  4938: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => qS,
-      e: () => XS,
-      h: () => NS
+  4801: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ak,
+      f: () => ik,
+      g: () => lk
     });
-    var tS = gS(2510),
-      bS = gS(4947);
+    var Xk = Ik(2331),
+      Tk = Ik(4810);
 
-    function XS(SS) {
+    function ik(kk) {
       let {
-        action: HS,
-        flags: gS
-      } = SS;
-      return "mid-fire" === HS && 0 !== (gS & tS.b.AltLeftClick)
+        action: Fk,
+        flags: Ik
+      } = kk;
+      return "mid-fire" === Fk && 0 !== (Ik & Xk.e.AltLeftClick)
     }
-    const xS = new Set;
+    const yk = new Set;
 
-    function NS(SS) {
-      return xS.add(SS), () => {
-        xS.delete(SS)
+    function lk(kk) {
+      return yk.add(kk), () => {
+        yk.delete(kk)
       }
     }
 
-    function qS(SS) {
-      const HS = bS.b[255 & SS];
-      if (void 0 === HS) return;
-      const gS = SS >>> 8 & 255,
-        XS = {
-          action: HS,
-          down: 0 !== (gS & tS.b.Down),
-          flags: gS,
-          press: SS >>> 16
+    function ak(kk) {
+      const Fk = Tk.e[255 & kk];
+      if (void 0 === Fk) return;
+      const Ik = kk >>> 8 & 255,
+        ik = {
+          action: Fk,
+          down: 0 !== (Ik & Xk.e.Down),
+          flags: Ik,
+          press: kk >>> 16
         };
-      for (const tS of xS) tS(XS)
+      for (const Xk of yk) Xk(ik)
     }
   },
-  4947: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => bS,
-      f: () => XS,
-      g: () => xS,
-      i: () => tS,
-      j: () => NS
+  4810: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Tk,
+      g: () => ik,
+      k: () => yk,
+      o: () => Xk,
+      s: () => lk
     });
-    const tS = {
+    const Xk = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -608,8 +608,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      bS = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      XS = {
+      Tk = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      ik = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -672,336 +672,336 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      xS = {
+      yk = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      NS = [16]
+      lk = [16]
   },
-  40938: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => IS,
-      g: () => uS,
-      h: () => qS
+  40930: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Lk,
+      e: () => qk,
+      h: () => ak
     });
-    var tS = gS(4935),
-      bS = gS(2510),
-      XS = gS(4954);
-    let xS = !1,
-      NS = !1;
+    var Xk = Ik(4799),
+      Tk = Ik(2331),
+      ik = Ik(4814);
+    let yk = !1,
+      lk = !1;
 
-    function qS(SS) {
-      xS = !0;
+    function ak(kk) {
+      yk = !0;
       try {
-        SS()
+        kk()
       } finally {
-        xS = !1
+        yk = !1
       }
     }
 
-    function uS(SS, HS) {
-      if (xS) return !1;
-      switch (SS) {
-        case tS.K.MouseDown:
-        case tS.K.MouseUp:
-        case tS.K.TouchStart:
-        case tS.K.TouchEnd:
-        case tS.K.TouchCancel:
-        case tS.K.TouchButton:
+    function qk(kk, Fk) {
+      if (yk) return !1;
+      switch (kk) {
+        case Xk.I.MouseDown:
+        case Xk.I.MouseUp:
+        case Xk.I.TouchStart:
+        case Xk.I.TouchEnd:
+        case Xk.I.TouchCancel:
+        case Xk.I.TouchButton:
           return !0;
-        case tS.K.KeyDown:
-        case tS.K.KeyUp:
-          return 0 === (HS & bS.c.Repeat) && !(0, XS.e)(document.activeElement);
+        case Xk.I.KeyDown:
+        case Xk.I.KeyUp:
+          return 0 === (Fk & Tk.i.Repeat) && !(0, ik.f)(document.activeElement);
         default:
           return !1
       }
     }
 
-    function IS(SS) {
-      NS || (NS = !0, queueMicrotask((() => {
-        NS = !1, SS()
+    function Lk(kk) {
+      lk || (lk = !0, queueMicrotask((() => {
+        lk = !1, kk()
       })))
     }
   },
-  4954: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => NS,
-      e: () => xS,
-      i: () => uS
+  4814: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => lk,
+      f: () => yk,
+      g: () => qk
     });
-    var tS = gS(2510),
-      bS = gS(2517);
-    const XS = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var Xk = Ik(2331),
+      Tk = Ik(2338);
+    const ik = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function xS(SS) {
-      return SS instanceof HTMLElement && (!!(SS.isContentEditable || SS instanceof HTMLTextAreaElement || SS instanceof HTMLSelectElement) || SS instanceof HTMLInputElement && !XS.has(SS.type))
+    function yk(kk) {
+      return kk instanceof HTMLElement && (!!(kk.isContentEditable || kk instanceof HTMLTextAreaElement || kk instanceof HTMLSelectElement) || kk instanceof HTMLInputElement && !ik.has(kk.type))
     }
 
-    function NS(SS) {
-      let HS = null;
-      const gS = gS => {
-          const bS = xS(gS);
-          bS !== HS && (HS = bS, SS(tS.g.UiCapture, tS.A.Keyboard, 0, 0, bS ? tS.A.Keyboard : 0))
+    function lk(kk) {
+      let Fk = null;
+      const Ik = Ik => {
+          const Tk = yk(Ik);
+          Tk !== Fk && (Fk = Tk, kk(Xk.m.UiCapture, Xk.A.Keyboard, 0, 0, Tk ? Xk.A.Keyboard : 0))
         },
-        bS = SS => {
-          gS(SS.target)
+        Tk = kk => {
+          Ik(kk.target)
         },
-        XS = SS => {
-          gS(SS.relatedTarget)
+        ik = kk => {
+          Ik(kk.relatedTarget)
         },
-        NS = () => {
-          gS(document.activeElement)
+        lk = () => {
+          Ik(document.activeElement)
         },
-        qS = {
+        ak = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", bS, qS), document.addEventListener("focusout", XS, qS), document.addEventListener("keydown", NS, qS), gS(document.activeElement), () => {
-        document.removeEventListener("focusin", bS, qS), document.removeEventListener("focusout", XS, qS), document.removeEventListener("keydown", NS, qS)
+      return document.addEventListener("focusin", Tk, ak), document.addEventListener("focusout", ik, ak), document.addEventListener("keydown", lk, ak), Ik(document.activeElement), () => {
+        document.removeEventListener("focusin", Tk, ak), document.removeEventListener("focusout", ik, ak), document.removeEventListener("keydown", lk, ak)
       }
     }
-    const qS = new Map;
+    const ak = new Map;
 
-    function uS(SS, HS) {
-      var gS;
-      let tS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      qS.set(tS, (null !== (gS = qS.get(tS)) && void 0 !== gS ? gS : 0) & ~SS | HS & SS);
-      let XS = 0;
-      for (const bS of qS.values()) XS |= bS;
-      return (0, bS.D)(SS, XS & SS)
+    function qk(kk, Fk) {
+      var Ik;
+      let Xk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      ak.set(Xk, (null !== (Ik = ak.get(Xk)) && void 0 !== Ik ? Ik : 0) & ~kk | Fk & kk);
+      let ik = 0;
+      for (const Tk of ak.values()) ik |= Tk;
+      return (0, Tk.x)(kk, ik & kk)
     }
   },
-  40977: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => IS,
-      c: () => qS,
-      d: () => NS,
-      h: () => uS
+  40963: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Lk,
+      e: () => ak,
+      i: () => lk,
+      m: () => qk
     });
-    var tS = gS(2073);
-    let bS = null,
-      XS = 0;
-    const xS = new Set;
+    var Xk = Ik(1886);
+    let Tk = null,
+      ik = 0;
+    const yk = new Set;
 
-    function NS() {
-      return bS
+    function lk() {
+      return Tk
     }
 
-    function qS() {
-      return XS
+    function ak() {
+      return ik
     }
 
-    function uS(SS) {
-      bS = SS, XS++, (0, tS.c)();
-      for (const HS of xS) HS()
+    function qk(kk) {
+      Tk = kk, ik++, (0, Xk.c)();
+      for (const Fk of yk) Fk()
     }
 
-    function IS(SS) {
-      xS.add(SS)
+    function Lk(kk) {
+      yk.add(kk)
     }
   },
-  41017: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => tS
+  41003: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk
     });
-    const tS = 2e3
+    const Xk = 2e3
   },
-  40914: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => wS,
-      e: () => kS,
-      g: () => PS,
-      k: () => DS,
-      o: () => QS,
-      q: () => hS
+  40896: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => sk,
+      d: () => Zk,
+      e: () => Pk,
+      f: () => Qk,
+      i: () => Kk,
+      l: () => Vk
     });
-    var tS = gS(179),
-      bS = gS(24),
-      XS = gS(31),
-      xS = gS(3058),
-      NS = gS(1378),
-      qS = gS(34166),
-      uS = gS(330),
-      IS = gS(104),
-      fS = gS(172);
+    var Xk = Ik(165),
+      Tk = Ik(25),
+      ik = Ik(34),
+      yk = Ik(2830),
+      lk = Ik(1276),
+      ak = Ik(34095),
+      qk = Ik(293),
+      Lk = Ik(95),
+      tk = Ik(161);
 
-    function kS() {
-      var SS;
-      const HS = (0, xS.H)(),
-        gS = function(SS, HS) {
+    function Zk() {
+      var kk;
+      const Fk = (0, yk.L)(),
+        Ik = function(kk, Fk) {
           return {
-            sampleCount: SS.antiAliasing ? 4 : 1,
-            n: (0, xS.y)(SS.pixelScale, HS),
-            pixelated: (0, xS.w)(SS.pixelSmoothing)
+            sampleCount: kk.antiAliasing ? 4 : 1,
+            n: (0, yk.B)(kk.pixelScale, Fk),
+            pixelated: (0, yk.x)(kk.pixelSmoothing)
           }
-        }(bS.b.get("clientEscMenuOptions"), HS);
-      return gS.sampleCount > 1 && (0, qS.b)() && (gS.sampleCount = 1), gS.n = null !== (SS = (0, qS.l)()) && void 0 !== SS ? SS : gS.n, tS.i.includes((0, IS.getSoftwareRenderer)()) && (gS.sampleCount = 1, gS.n = Math.max(gS.n, (0, xS.y)(fS.q.pixelScale, HS))), gS
+        }(Tk.d.get("clientEscMenuOptions"), Fk);
+      return Ik.sampleCount > 1 && (0, ak.e)() && (Ik.sampleCount = 1), Ik.n = null !== (kk = (0, ak.m)()) && void 0 !== kk ? kk : Ik.n, Xk.h.includes((0, Lk.getSoftwareRenderer)()) && (Ik.sampleCount = 1, Ik.n = Math.max(Ik.n, (0, yk.B)(tk.q.pixelScale, Fk))), Ik
     }
-    let aS = null,
-      KS = null;
-    const jS = new Set;
-    let GS = null;
+    let jk = null,
+      ek = null;
+    const wk = new Set;
+    let Hk = null;
 
-    function CS() {
-      for (const SS of jS) SS()
+    function Jk() {
+      for (const kk of wk) kk()
     }
 
-    function nS() {
-      if (null === aS) {
-        const SS = document.createElement("div");
-        SS.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;visibility:hidden;pointer-events:none", SS.setAttribute("aria-hidden", "true"), document.body.append(SS), KS = SS, aS = new xS.b(SS, CS)
+    function xk() {
+      if (null === jk) {
+        const kk = document.createElement("div");
+        kk.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;visibility:hidden;pointer-events:none", kk.setAttribute("aria-hidden", "true"), document.body.append(kk), ek = kk, jk = new yk.e(kk, Jk)
       }
-      return aS
+      return jk
     }
 
-    function PS(SS) {
-      const HS = (0, xS.l)(),
-        [gS, tS] = nS().size(HS);
-      return (0, xS.g)(gS, tS, HS, SS.n)
+    function Pk(kk) {
+      const Fk = (0, yk.m)(),
+        [Ik, Xk] = xk().size(Fk);
+      return (0, yk.h)(Ik, Xk, Fk, kk.n)
     }
 
-    function QS(SS) {
-      var HS, gS, tS, bS;
-      const XS = (0, xS.l)(),
-        [qS, uS] = nS().size(XS);
-      if (qS <= 0 || uS <= 0) return null;
-      const IS = (0, xS.g)(qS, uS, XS, kS().n);
-      return (0, xS.d)(SS, IS), SS.style.left = `${null!==(HS=null===(gS=GS)||void 0===gS?void 0:gS.rect.left)&&void 0!==HS?HS:0}px`, SS.style.top = `${null!==(tS=null===(bS=GS)||void 0===bS?void 0:bS.rect.top)&&void 0!==tS?tS:0}px`, (0, NS.T)(SS.style, GS), IS
+    function Kk(kk) {
+      var Fk, Ik, Xk, Tk;
+      const ik = (0, yk.m)(),
+        [ak, qk] = xk().size(ik);
+      if (ak <= 0 || qk <= 0) return null;
+      const Lk = (0, yk.h)(ak, qk, ik, Zk().n);
+      return (0, yk.f)(kk, Lk), kk.style.left = `${null!==(Fk=null===(Ik=Hk)||void 0===Ik?void 0:Ik.rect.left)&&void 0!==Fk?Fk:0}px`, kk.style.top = `${null!==(Xk=null===(Tk=Hk)||void 0===Tk?void 0:Tk.rect.top)&&void 0!==Xk?Xk:0}px`, (0, lk.P)(kk.style, Hk), Lk
     }
 
-    function DS(SS) {
-      GS = SS, nS(), (0, NS.I)(KS.style, SS, ""), CS()
+    function Qk(kk) {
+      Hk = kk, xk(), (0, lk.M)(ek.style, kk, ""), Jk()
     }
 
-    function wS(SS, HS) {
-      SS.style.imageRendering = (0, xS.J)(HS.pixelated)
+    function sk(kk, Fk) {
+      kk.style.imageRendering = (0, yk.N)(Fk.pixelated)
     }
 
-    function hS(SS, HS) {
-      const gS = (0, XS.m)("appManagerUpdated|clientEscMenuOptions", (() => {
-          wS(SS, kS()), HS()
+    function Vk(kk, Fk) {
+      const Ik = (0, ik.i)("appManagerUpdated|clientEscMenuOptions", (() => {
+          sk(kk, Zk()), Fk()
         })),
-        tS = (0, qS.u)(HS),
-        bS = (0, uS.k)(HS);
-      return nS(), jS.add(HS), () => {
-        gS(), tS(), bS(), jS.delete(HS)
+        Xk = (0, ak.v)(Fk),
+        Tk = (0, qk.n)(Fk);
+      return xk(), wk.add(Fk), () => {
+        Ik(), Xk(), Tk(), wk.delete(Fk)
       }
     }
   },
-  41025: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => xS,
-      e: () => XS,
-      i: () => bS
+  41009: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => yk,
+      g: () => ik,
+      i: () => Tk
     });
-    let tS = null;
+    let Xk = null;
 
-    function bS(SS) {
-      tS = SS
+    function Tk(kk) {
+      Xk = kk
     }
 
-    function XS(SS) {
-      tS === SS && (tS = null)
+    function ik(kk) {
+      Xk === kk && (Xk = null)
     }
 
-    function xS() {
-      var SS;
-      null === (SS = tS) || void 0 === SS || SS()
+    function yk() {
+      var kk;
+      null === (kk = Xk) || void 0 === kk || kk()
     }
   },
-  40972: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => bS,
-      h: () => uS,
-      l: () => XS,
-      p: () => fS,
-      s: () => IS,
-      w: () => kS
+  40957: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Tk,
+      f: () => qk,
+      i: () => ik,
+      l: () => tk,
+      o: () => Lk,
+      p: () => Zk
     });
-    var tS = gS(3030);
-    class bS extends Error {
-      constructor(SS, HS, gS) {
-        super(`${"fetch"===SS?"fetching":"decoding"} ${HS} failed`, gS), this.stage = SS, this.source = HS, this.name = "ShellImageError"
+    var Xk = Ik(2803);
+    class Tk extends Error {
+      constructor(kk, Fk, Ik) {
+        super(`${"fetch"===kk?"fetching":"decoding"} ${Fk} failed`, Ik), this.stage = kk, this.source = Fk, this.name = "ShellImageError"
       }
     }
-    async function XS(SS) {
-      let HS, gS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tS.J,
-        XS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
-      if ("string" === typeof SS) try {
-        HS = await gS(SS)
-      } catch (xS) {
-        throw new bS("fetch", SS, {
-          cause: xS
+    async function ik(kk) {
+      let Fk, Ik = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Xk.K,
+        ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
+      if ("string" === typeof kk) try {
+        Fk = await Ik(kk)
+      } catch (yk) {
+        throw new Tk("fetch", kk, {
+          cause: yk
         })
-      } else HS = SS;
+      } else Fk = kk;
       try {
-        const SS = new Blob([HS.slice()], {
+        const kk = new Blob([Fk.slice()], {
           type: "image/png"
         });
-        return await createImageBitmap(SS, {
+        return await createImageBitmap(kk, {
           premultiplyAlpha: "none",
           colorSpaceConversion: "none",
-          imageOrientation: XS
+          imageOrientation: ik
         })
-      } catch (xS) {
-        throw new bS("decode", "string" === typeof SS ? SS : `${HS.byteLength} bytes`, {
-          cause: xS
+      } catch (yk) {
+        throw new Tk("decode", "string" === typeof kk ? kk : `${Fk.byteLength} bytes`, {
+          cause: yk
         })
       }
     }
-    let xS = null;
-    const NS = new Map;
-    let qS = 1;
+    let yk = null;
+    const lk = new Map;
+    let ak = 1;
 
-    function uS(SS) {
-      if (xS = SS, null !== SS) {
-        for (const [HS, gS] of NS) SS.WgS(HS, gS);
-        NS.clear()
+    function qk(kk) {
+      if (yk = kk, null !== kk) {
+        for (const [Fk, Ik] of lk) kk.gIk(Fk, Ik);
+        lk.clear()
       }
     }
 
-    function IS(SS) {
-      const HS = qS++;
-      return xS ? xS.WgS(HS, SS) : NS.set(HS, SS), HS
+    function Lk(kk) {
+      const Fk = ak++;
+      return yk ? yk.gIk(Fk, kk) : lk.set(Fk, kk), Fk
     }
-    async function fS(SS, HS, gS) {
-      const tS = await XS(SS, HS, gS);
+    async function tk(kk, Fk, Ik) {
+      const Xk = await ik(kk, Fk, Ik);
       return {
-        id: IS(tS),
-        width: tS.width,
-        height: tS.height
+        id: Lk(Xk),
+        width: Xk.width,
+        height: Xk.height
       }
     }
 
-    function kS(SS) {
-      var HS;
-      const gS = NS.get(SS);
-      if (gS) return gS.close(), void NS.delete(SS);
-      null === (HS = xS) || void 0 === HS || HS.zgS(SS)
+    function Zk(kk) {
+      var Fk;
+      const Ik = lk.get(kk);
+      if (Ik) return Ik.close(), void lk.delete(kk);
+      null === (Fk = yk) || void 0 === Fk || Fk.mIk(kk)
     }
   },
-  40924: (SS, HS, gS) => {
-    function tS(SS, HS) {
-      if (!Object.prototype.hasOwnProperty.call(SS, HS)) throw new TypeError("attempted to use private field on non-instance");
-      return SS
+  40905: (kk, Fk, Ik) => {
+    function Xk(kk, Fk) {
+      if (!Object.prototype.hasOwnProperty.call(kk, Fk)) throw new TypeError("attempted to use private field on non-instance");
+      return kk
     }
-    gS.d(HS, {
-      c: () => tS
+    Ik.d(Fk, {
+      c: () => Xk
     })
   },
-  40928: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => bS
+  40914: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Tk
     });
-    var tS = 0;
+    var Xk = 0;
 
-    function bS(SS) {
-      return "__private_" + tS++ + "_" + SS
+    function Tk(kk) {
+      return "__private_" + Xk++ + "_" + kk
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

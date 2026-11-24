@@ -1,237 +1,237 @@
 export const id = 72;
 export const ids = [72];
 export const modules = {
-  9367: (SS, HS) => {
-    HS.d = 8, HS.f = function(SS, HS, gS, tS) {
-      if (!Array.isArray(SS)) return !!SS;
-      HS -= Math.floor(HS), gS -= Math.floor(gS), tS -= Math.floor(tS);
-      for (var bS = 0; bS < SS.length; bS += 6)
-        if (HS >= SS[bS] && HS < SS[bS + 3] && gS >= SS[bS + 1] && gS < SS[bS + 4] && tS >= SS[bS + 2] && tS < SS[bS + 5]) return !0;
+  9191: (kk, Fk) => {
+    Fk.b = 8, Fk.e = function(kk, Fk, Ik, Xk) {
+      if (!Array.isArray(kk)) return !!kk;
+      Fk -= Math.floor(Fk), Ik -= Math.floor(Ik), Xk -= Math.floor(Xk);
+      for (var Tk = 0; Tk < kk.length; Tk += 6)
+        if (Fk >= kk[Tk] && Fk < kk[Tk + 3] && Ik >= kk[Tk + 1] && Ik < kk[Tk + 4] && Xk >= kk[Tk + 2] && Xk < kk[Tk + 5]) return !0;
       return !1
-    }, HS.e = function(SS) {
-      for (var HS = [], gS = 0; gS < SS.length; gS++) {
-        var tS = SS[gS];
-        if (2 !== tS.length || 3 !== tS[0].length || 3 !== tS[1].length) throw new Error("Subvoxel boxes must contain two three-dimensional bounds");
-        for (var bS = 0; bS < 3; bS++) {
-          var XS = tS[0][bS],
-            xS = tS[1][bS];
-          if (!Number.isInteger(XS) || !Number.isInteger(xS) || XS < 0 || xS > 8 || XS >= xS) throw new Error("Subvoxel bounds must be integers satisfying 0 <= start < end <= 8");
-          HS[6 * gS + bS] = XS / 8, HS[6 * gS + bS + 3] = xS / 8
+    }, Fk.d = function(kk) {
+      for (var Fk = [], Ik = 0; Ik < kk.length; Ik++) {
+        var Xk = kk[Ik];
+        if (2 !== Xk.length || 3 !== Xk[0].length || 3 !== Xk[1].length) throw new Error("Subvoxel boxes must contain two three-dimensional bounds");
+        for (var Tk = 0; Tk < 3; Tk++) {
+          var ik = Xk[0][Tk],
+            yk = Xk[1][Tk];
+          if (!Number.isInteger(ik) || !Number.isInteger(yk) || ik < 0 || yk > 8 || ik >= yk) throw new Error("Subvoxel bounds must be integers satisfying 0 <= start < end <= 8");
+          Fk[6 * Ik + Tk] = ik / 8, Fk[6 * Ik + Tk + 3] = yk / 8
         }
       }
-      return HS
+      return Fk
     }
   },
-  9439: (SS, HS, gS) => {
-    gS.d(HS, {
-      A: () => KS,
-      E: () => uS,
-      G: () => kS,
-      b: () => tS,
-      d: () => bS,
-      g: () => GS,
-      i: () => qS,
-      j: () => CS,
-      m: () => NS,
-      q: () => xS,
-      s: () => XS,
-      v: () => aS,
-      z: () => jS
+  9260: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      A: () => Zk,
+      b: () => Xk,
+      d: () => Tk,
+      e: () => Hk,
+      f: () => ak,
+      j: () => Jk,
+      l: () => lk,
+      n: () => yk,
+      p: () => ik,
+      s: () => jk,
+      t: () => wk,
+      w: () => ek,
+      y: () => qk
     });
-    const tS = 39 == gS.j ? ["Conveyor Belt", "Splitter", "Sorting Gate", "Belt Loader", "Fast Belt", "Belt Lift", "Belt Drop", "Belt Tunnel", "Express Belt", "Fast Loader"] : null,
-      bS = .002,
-      XS = 2,
-      xS = 3,
-      NS = .5,
-      qS = 200;
+    const Xk = 39 == Ik.j ? ["Conveyor Belt", "Splitter", "Sorting Gate", "Belt Loader", "Fast Belt", "Belt Lift", "Belt Drop", "Belt Tunnel", "Express Belt", "Fast Loader"] : null,
+      Tk = .002,
+      ik = 2,
+      yk = 3,
+      lk = .5,
+      ak = 200;
 
-    function uS(SS, HS, gS) {
-      let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bS;
-      return Math.max(0, Math.min((gS - SS) * tS, HS))
+    function qk(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Tk;
+      return Math.max(0, Math.min((Ik - kk) * Xk, Fk))
     }
 
-    function IS(SS, HS, gS) {
-      let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bS;
-      const XS = [];
-      let xS = HS;
-      for (const bS of SS) {
-        const SS = uS(bS.at, xS, gS, tS);
-        XS.push(SS), xS = SS - NS
+    function Lk(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Tk;
+      const ik = [];
+      let yk = Fk;
+      for (const Tk of kk) {
+        const kk = qk(Tk.at, yk, Ik, Xk);
+        ik.push(kk), yk = kk - lk
       }
-      return XS
+      return ik
     }
 
-    function fS(SS, HS) {
-      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bS;
-      return 0 === SS.length ? 1 / 0 : SS[0].at + HS / gS
+    function tk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Tk;
+      return 0 === kk.length ? 1 / 0 : kk[0].at + Fk / Ik
     }
 
-    function kS(SS, HS, gS) {
-      let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bS,
-        XS = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-      const xS = IS(SS, HS, gS, tS),
-        [NS] = SS.splice(XS, 1);
-      return xS.splice(XS, 1), SS.forEach(((SS, HS) => {
-        SS.at = gS - xS[HS] / tS
-      })), NS
+    function Zk(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Tk,
+        ik = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
+      const yk = Lk(kk, Fk, Ik, Xk),
+        [lk] = kk.splice(ik, 1);
+      return yk.splice(ik, 1), kk.forEach(((kk, Fk) => {
+        kk.at = Ik - yk[Fk] / Xk
+      })), lk
     }
 
-    function aS(SS, HS, gS) {
-      let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bS;
-      for (let bS = fS(SS, HS, tS); bS <= gS; bS = fS(SS, HS, tS)) {
-        const gS = kS(SS, HS, bS, tS);
-        gS.at = bS, SS.push(gS)
+    function jk(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Tk;
+      for (let Tk = tk(kk, Fk, Xk); Tk <= Ik; Tk = tk(kk, Fk, Xk)) {
+        const Ik = Zk(kk, Fk, Tk, Xk);
+        Ik.at = Tk, kk.push(Ik)
       }
     }
 
-    function KS(SS, HS, gS) {
+    function ek(kk, Fk, Ik) {
       return {
-        name: SS,
-        at: gS - HS / (arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : bS)
+        name: kk,
+        at: Ik - Fk / (arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Tk)
       }
     }
 
-    function jS(SS, HS, gS, tS, XS) {
-      let xS = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : bS;
-      const NS = IS(SS, HS, XS, xS);
-      let qS = 0;
-      SS.forEach(((SS, HS) => {
-        SS.at = XS - NS[HS] / xS, NS[HS] > tS && (qS = HS + 1)
-      })), gS.at = XS - tS / xS, SS.splice(qS, 0, gS)
+    function wk(kk, Fk, Ik, Xk, ik) {
+      let yk = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : Tk;
+      const lk = Lk(kk, Fk, ik, yk);
+      let ak = 0;
+      kk.forEach(((kk, Fk) => {
+        kk.at = ik - lk[Fk] / yk, lk[Fk] > Xk && (ak = Fk + 1)
+      })), Ik.at = ik - Xk / yk, kk.splice(ak, 0, Ik)
     }
-    const GS = "baf2BeltLines",
-      CS = "baf2BeltMoves"
+    const Hk = "baf2BeltLines",
+      Jk = "baf2BeltMoves"
   },
-  9447: (SS, HS, gS) => {
-    gS.d(HS, {
-      A: () => aS,
-      E: () => xS,
-      F: () => QS,
-      G: () => wS,
-      K: () => PS,
-      L: () => nS,
-      M: () => uS,
-      O: () => GS,
-      Q: () => CS,
-      R: () => qS,
-      c: () => bS,
-      f: () => IS,
-      j: () => XS,
-      m: () => DS,
-      n: () => jS,
-      p: () => JS,
-      r: () => OS,
-      u: () => hS,
-      w: () => ZS,
-      x: () => kS,
-      z: () => fS
+  9264: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      C: () => tk,
+      D: () => jk,
+      G: () => yk,
+      I: () => Kk,
+      K: () => sk,
+      L: () => Pk,
+      N: () => xk,
+      O: () => qk,
+      S: () => Hk,
+      U: () => Jk,
+      V: () => ak,
+      b: () => Tk,
+      d: () => Lk,
+      e: () => ik,
+      h: () => Qk,
+      k: () => wk,
+      n: () => Sk,
+      r: () => vk,
+      t: () => Vk,
+      w: () => zk,
+      z: () => Zk
     });
-    var tS = gS(680);
-    const bS = {
+    var Xk = Ik(628);
+    const Tk = {
         "Belt Lift": 1,
         "Belt Drop": -1
       },
-      XS = "Belt Tunnel",
-      xS = 5,
-      NS = "|exit";
+      ik = "Belt Tunnel",
+      yk = 5,
+      lk = "|exit";
 
-    function qS(SS, HS) {
-      return HS ? `${XS}|meta|rot${SS}${NS}` : 1 === SS ? XS : `${XS}|meta|rot${SS}`
+    function ak(kk, Fk) {
+      return Fk ? `${ik}|meta|rot${kk}${lk}` : 1 === kk ? ik : `${ik}|meta|rot${kk}`
     }
 
-    function uS(SS) {
-      return SS.endsWith(NS) && SS.startsWith(`${XS}|`)
+    function qk(kk) {
+      return kk.endsWith(lk) && kk.startsWith(`${ik}|`)
     }
-    const IS = [
+    const Lk = [
         [0, -1],
         [-1, 0],
         [0, 1],
         [1, 0]
       ],
-      fS = "Splitter",
-      kS = "Sorting Gate",
-      aS = {
+      tk = "Splitter",
+      Zk = "Sorting Gate",
+      jk = {
         leftRight: "",
         leftFront: "|leftFront",
         frontRight: "|frontRight"
       },
-      KS = {
+      ek = {
         leftRight: ["right", "left"],
         leftFront: ["left", "front"],
         frontRight: ["front", "right"]
       },
-      jS = "|right";
+      wk = "|right";
 
-    function GS(SS) {
-      return SS.split("|")[0] !== fS ? null : SS.endsWith(aS.leftFront) ? "leftFront" : SS.endsWith(aS.frontRight) ? "frontRight" : "leftRight"
+    function Hk(kk) {
+      return kk.split("|")[0] !== tk ? null : kk.endsWith(jk.leftFront) ? "leftFront" : kk.endsWith(jk.frontRight) ? "frontRight" : "leftRight"
     }
 
-    function CS(SS, HS, gS) {
-      return function(SS) {
-        const HS = GS(SS);
-        return null === HS ? [] : KS[HS]
-      }(SS).map((SS => "right" === SS ? [gS, -HS] : "left" === SS ? [-gS, HS] : [HS, gS]))
+    function Jk(kk, Fk, Ik) {
+      return function(kk) {
+        const Fk = Hk(kk);
+        return null === Fk ? [] : ek[Fk]
+      }(kk).map((kk => "right" === kk ? [Ik, -Fk] : "left" === kk ? [-Ik, Fk] : [Fk, Ik]))
     }
 
-    function nS(SS) {
-      return SS.split("|")[0] === kS && SS.endsWith(jS)
+    function xk(kk) {
+      return kk.split("|")[0] === Zk && kk.endsWith(wk)
     }
 
-    function PS(SS, HS, gS) {
-      return nS(SS) ? [gS, -HS] : [-gS, HS]
+    function Pk(kk, Fk, Ik) {
+      return xk(kk) ? [Ik, -Fk] : [-Ik, Fk]
     }
-    const QS = 39 == gS.j ? ["Conveyor Belt", "Fast Belt", "Express Belt"] : null,
-      DS = ["turnLeft", "turnRight"];
+    const Kk = 39 == Ik.j ? ["Conveyor Belt", "Fast Belt", "Express Belt"] : null,
+      Qk = ["turnLeft", "turnRight"];
 
-    function wS(SS, HS, gS) {
-      return null !== gS ? `${SS}|meta|rot${HS}|${gS}` : 1 === HS ? SS : `${SS}|meta|rot${HS}`
+    function sk(kk, Fk, Ik) {
+      return null !== Ik ? `${kk}|meta|rot${Fk}|${Ik}` : 1 === Fk ? kk : `${kk}|meta|rot${Fk}`
     }
-    const hS = 39 == gS.j ? ["Burner Drill", "Crusher", "Smelter", "Press", "Wire Mill", "Alloy Kiln", "Electric Drill", "Assembler", "Tree Cutter", "Deep Drill", "Shatter Mill", "Sky Tap", "Crystal Vat", "Recycler", "Crop Harvester", "Centrifuge", "Synthesizer", "Mob Farm"] : null,
-      ZS = 192,
-      JS = 7 * tS.x,
-      OS = 4 * tS.x
+    const Vk = 39 == Ik.j ? ["Burner Drill", "Crusher", "Smelter", "Press", "Wire Mill", "Alloy Kiln", "Electric Drill", "Assembler", "Tree Cutter", "Deep Drill", "Shatter Mill", "Sky Tap", "Crystal Vat", "Recycler", "Crop Harvester", "Centrifuge", "Synthesizer", "Mob Farm"] : null,
+      zk = 192,
+      Sk = 7 * Xk.D,
+      vk = 4 * Xk.D
   },
-  9403: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => tS
+  9230: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk
     });
-    const tS = {
+    const Xk = {
       1: [1, 0],
       2: [0, -1],
       3: [-1, 0],
       4: [0, 1]
     }
   },
-  9361: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => FS,
-      h: () => BS,
-      j: () => iS,
-      n: () => sS,
-      o: () => zS,
-      r: () => MS,
-      s: () => US,
-      t: () => LS,
-      w: () => ES
+  9183: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Ak,
+      f: () => dk,
+      g: () => Ck,
+      j: () => Bk,
+      n: () => ck,
+      p: () => Yk,
+      s: () => Wk,
+      w: () => pk,
+      x: () => Gk
     });
-    var tS = gS(9367);
-    if (39 == gS.j) var bS = gS(215);
-    var XS = gS(9372),
-      xS = gS(9453),
-      NS = gS(9456),
-      qS = gS(9386),
-      uS = gS(3359),
-      IS = gS(387),
-      fS = gS(4586),
-      kS = gS(9411),
-      aS = gS(672),
-      KS = gS(4353),
-      jS = gS(9379),
-      GS = gS(9425);
-    if (39 == gS.j) var CS = gS(9465);
-    var nS = gS(9467),
-      PS = gS(9475);
-    const QS = {
+    var Xk = Ik(9191);
+    if (39 == Ik.j) var Tk = Ik(198);
+    var ik = Ik(9194),
+      yk = Ik(9267),
+      lk = Ik(9275),
+      ak = Ik(9219),
+      qk = Ik(3132),
+      Lk = Ik(337),
+      tk = Ik(4449),
+      Zk = Ik(9237),
+      jk = Ik(621),
+      ek = Ik(4202),
+      wk = Ik(9210),
+      Hk = Ik(9250);
+    if (39 == Ik.j) var Jk = Ik(9278);
+    var xk = Ik(9285),
+      Pk = Ik(9290);
+    const Kk = {
       ttb: 200,
       harvestType: "cuttable",
       soundType: {
@@ -250,327 +250,327 @@ export const modules = {
       blockModel: "slime_trail",
       heldItemGlb: "Slime Trail",
       unlitStandaloneMesh: !0,
-      dK: [14, 8, 11],
+      Ve: [14, 8, 11],
       drops: null,
       specialToolDrop: {
-        tool: [...IS.ge],
+        tool: [...Lk.ne],
         drops: "Slime Trail"
       }
     };
 
-    function DS(SS, HS) {
+    function Qk(kk, Fk) {
       let {
-        textureAnimation: gS,
-        rotatable: tS = !0
+        textureAnimation: Ik,
+        rotatable: Xk = !0
       } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
       return {
-        model: tS ? "rotatable" : "CustomModel",
+        model: Xk ? "rotatable" : "CustomModel",
         modelScale: 8,
-        blockModel: SS,
+        blockModel: kk,
         blockModelItem: !0,
         heldItemScale: 4,
-        itemTexture: HS,
+        itemTexture: Fk,
         customModelInfo: {
           yOffset: -.5,
-          yRotOffset: tS ? Math.PI : void 0,
-          textureAnimation: gS
+          yRotOffset: Xk ? Math.PI : void 0,
+          textureAnimation: Ik
         }
       }
     }
-    const wS = (0, tS.e)([
+    const sk = (0, Xk.d)([
         [
           [0, 0, 0],
           [8, 1, 8]
         ]
       ]),
-      hS = [(0, jS.Wb)("Maple Stairs", {
+      Vk = [(0, wk.mc)("Maple Stairs", {
         displayName: {
           translationKey: "item:mapleStairs"
         },
         ttb: 1800,
         textureInfo: "planks_maple",
         harvestType: "wood"
-      }), (0, jS.Wb)("Pine Stairs", {
+      }), (0, wk.mc)("Pine Stairs", {
         displayName: {
           translationKey: "item:pineStairs"
         },
         ttb: 1800,
         textureInfo: "planks_pine",
         harvestType: "wood"
-      }), (0, jS.Wb)("Plum Stairs", {
+      }), (0, wk.mc)("Plum Stairs", {
         displayName: {
           translationKey: "item:plumStairs"
         },
         ttb: 1800,
         textureInfo: "planks_plum",
         harvestType: "wood"
-      }), (0, jS.Wb)("Cedar Stairs", {
+      }), (0, wk.mc)("Cedar Stairs", {
         displayName: {
           translationKey: "item:cedarStairs"
         },
         ttb: 1800,
         textureInfo: "planks_cedar",
         harvestType: "wood"
-      }), (0, jS.Wb)("Aspen Stairs", {
+      }), (0, wk.mc)("Aspen Stairs", {
         displayName: {
           translationKey: "item:aspenStairs"
         },
         ttb: 1800,
         textureInfo: "planks_aspen",
         harvestType: "wood"
-      }), (0, jS.Wb)("Jungle Stairs", {
+      }), (0, wk.mc)("Jungle Stairs", {
         displayName: {
           translationKey: "item:jungleStairs"
         },
         ttb: 1800,
         textureInfo: "planks_jungle",
         harvestType: "wood"
-      }), (0, jS.Wb)("Palm Stairs", {
+      }), (0, wk.mc)("Palm Stairs", {
         displayName: {
           translationKey: "item:palmStairs"
         },
         ttb: 1800,
         textureInfo: "planks_palm",
         harvestType: "wood"
-      }), (0, jS.Wb)("Pear Stairs", {
+      }), (0, wk.mc)("Pear Stairs", {
         displayName: {
           translationKey: "item:pearStairs"
         },
         ttb: 1800,
         textureInfo: "planks_pear",
         harvestType: "wood"
-      }), (0, jS.Wb)("Cherry Stairs", {
+      }), (0, wk.mc)("Cherry Stairs", {
         displayName: {
           translationKey: "item:cherryStairs"
         },
         ttb: 1800,
         textureInfo: "planks_cherry",
         harvestType: "wood"
-      }), (0, jS.Wb)("Spectral Stairs", {
+      }), (0, wk.mc)("Spectral Stairs", {
         displayName: {
           translationKey: "item:spectralStairs"
         },
         ttb: 1800,
         textureInfo: "planks_spectral",
         harvestType: "wood"
-      }), (0, jS.Wb)("Mango Stairs", {
+      }), (0, wk.mc)("Mango Stairs", {
         displayName: {
           translationKey: "item:mangoStairs"
         },
         ttb: 1800,
         textureInfo: "planks_mango",
         harvestType: "wood"
-      }), (0, jS.Wb)("Messy Stone Stairs", {
+      }), (0, wk.mc)("Messy Stone Stairs", {
         displayName: {
           translationKey: "item:messyStoneStairs"
         },
         ttb: 1800,
         textureInfo: "messy_stone",
         harvestType: "rock"
-      }), (0, jS.Wb)("Stone Stairs", {
+      }), (0, wk.mc)("Stone Stairs", {
         displayName: {
           translationKey: "item:stoneStairs"
         },
         ttb: 1800,
         textureInfo: "stone",
         harvestType: "rock"
-      }), (0, jS.Wb)("Smooth Stone Stairs", {
+      }), (0, wk.mc)("Smooth Stone Stairs", {
         displayName: {
           translationKey: "item:smoothStoneStairs"
         },
         ttb: 1800,
         textureInfo: "smooth_stone",
         harvestType: "rock"
-      }), (0, jS.Wb)("Engraved Stone Stairs", {
+      }), (0, wk.mc)("Engraved Stone Stairs", {
         displayName: {
           translationKey: "item:engravedStoneStairs"
         },
         ttb: 1800,
         textureInfo: "stonebrick_carved",
         harvestType: "rock"
-      }), (0, jS.Wb)("Stone Bricks Stairs", {
+      }), (0, wk.mc)("Stone Bricks Stairs", {
         displayName: {
           translationKey: "item:stoneBricksStairs"
         },
         ttb: 1800,
         textureInfo: "stonebrick",
         harvestType: "rock"
-      }), (0, jS.Wb)("Mossy Stone Stairs", {
+      }), (0, wk.mc)("Mossy Stone Stairs", {
         displayName: {
           translationKey: "item:mossyStoneStairs"
         },
         ttb: 1800,
         textureInfo: "mossy_cobblestone",
         harvestType: "rock"
-      }), (0, jS.Wb)("Mossy Stone Bricks Stairs", {
+      }), (0, wk.mc)("Mossy Stone Bricks Stairs", {
         displayName: {
           translationKey: "item:mossyStoneBricksStairs"
         },
         ttb: 1800,
         textureInfo: "stonebrick_mossy",
         harvestType: "rock"
-      }), (0, jS.Wb)("Andesite Stairs", {
+      }), (0, wk.mc)("Andesite Stairs", {
         displayName: {
           translationKey: "item:andesiteStairs"
         },
         ttb: 1800,
         textureInfo: "stone_andesite",
         harvestType: "rock"
-      }), (0, jS.Wb)("Smooth Andesite Stairs", {
+      }), (0, wk.mc)("Smooth Andesite Stairs", {
         displayName: {
           translationKey: "item:smoothAndesiteStairs"
         },
         ttb: 1800,
         textureInfo: "stone_andesite_smooth",
         harvestType: "rock"
-      }), (0, jS.Wb)("Engraved Andesite Stairs", {
+      }), (0, wk.mc)("Engraved Andesite Stairs", {
         displayName: {
           translationKey: "item:engravedAndesiteStairs"
         },
         ttb: 1800,
         textureInfo: "engraved_andesite",
         harvestType: "rock"
-      }), (0, jS.Wb)("Andesite Bricks Stairs", {
+      }), (0, wk.mc)("Andesite Bricks Stairs", {
         displayName: {
           translationKey: "item:andesiteBricksStairs"
         },
         ttb: 1800,
         textureInfo: "andesite_brick",
         harvestType: "rock"
-      }), (0, jS.Wb)("Diorite Stairs", {
+      }), (0, wk.mc)("Diorite Stairs", {
         displayName: {
           translationKey: "item:dioriteStairs"
         },
         ttb: 1800,
         textureInfo: "stone_diorite",
         harvestType: "rock"
-      }), (0, jS.Wb)("Smooth Diorite Stairs", {
+      }), (0, wk.mc)("Smooth Diorite Stairs", {
         displayName: {
           translationKey: "item:smoothDioriteStairs"
         },
         ttb: 1800,
         textureInfo: "stone_diorite_smooth",
         harvestType: "rock"
-      }), (0, jS.Wb)("Engraved Diorite Stairs", {
+      }), (0, wk.mc)("Engraved Diorite Stairs", {
         displayName: {
           translationKey: "item:engravedDioriteStairs"
         },
         ttb: 1800,
         textureInfo: "engraved_diorite",
         harvestType: "rock"
-      }), (0, jS.Wb)("Diorite Bricks Stairs", {
+      }), (0, wk.mc)("Diorite Bricks Stairs", {
         displayName: {
           translationKey: "item:dioriteBricksStairs"
         },
         ttb: 1800,
         textureInfo: "diorite_brick",
         harvestType: "rock"
-      }), (0, jS.Wb)("Granite Stairs", {
+      }), (0, wk.mc)("Granite Stairs", {
         displayName: {
           translationKey: "item:graniteStairs"
         },
         ttb: 1800,
         textureInfo: "stone_granite",
         harvestType: "rock"
-      }), (0, jS.Wb)("Smooth Granite Stairs", {
+      }), (0, wk.mc)("Smooth Granite Stairs", {
         displayName: {
           translationKey: "item:smoothGraniteStairs"
         },
         ttb: 1800,
         textureInfo: "stone_granite_smooth",
         harvestType: "rock"
-      }), (0, jS.Wb)("Engraved Granite Stairs", {
+      }), (0, wk.mc)("Engraved Granite Stairs", {
         displayName: {
           translationKey: "item:engravedGraniteStairs"
         },
         ttb: 1800,
         textureInfo: "engraved_granite",
         harvestType: "rock"
-      }), (0, jS.Wb)("Granite Bricks Stairs", {
+      }), (0, wk.mc)("Granite Bricks Stairs", {
         displayName: {
           translationKey: "item:graniteBricksStairs"
         },
         ttb: 1800,
         textureInfo: "granite_brick",
         harvestType: "rock"
-      }), (0, jS.Wb)("Sandstone Stairs", {
+      }), (0, wk.mc)("Sandstone Stairs", {
         displayName: {
           translationKey: "item:sandstoneStairs"
         },
         ttb: 960,
         textureInfo: "sandstone_normal",
         harvestType: "rock"
-      }), (0, jS.Wb)("Smooth Sandstone Stairs", {
+      }), (0, wk.mc)("Smooth Sandstone Stairs", {
         displayName: {
           translationKey: "item:smoothSandstoneStairs"
         },
         ttb: 960,
         textureInfo: "sandstone_top",
         harvestType: "rock"
-      }), (0, jS.Wb)("Engraved Sandstone Stairs", {
+      }), (0, wk.mc)("Engraved Sandstone Stairs", {
         displayName: {
           translationKey: "item:engravedSandstoneStairs"
         },
         ttb: 960,
         textureInfo: "chiseled_sandstone",
         harvestType: "rock"
-      }), (0, jS.Wb)("Marked Sandstone Stairs", {
+      }), (0, wk.mc)("Marked Sandstone Stairs", {
         displayName: {
           translationKey: "item:markedSandstoneStairs"
         },
         ttb: 960,
         textureInfo: "cut_sandstone",
         harvestType: "rock"
-      }), (0, jS.Wb)("Sandstone Bricks Stairs", {
+      }), (0, wk.mc)("Sandstone Bricks Stairs", {
         displayName: {
           translationKey: "item:sandstoneBricksStairs"
         },
         ttb: 960,
         textureInfo: "sandstone_brick",
         harvestType: "rock"
-      }), (0, jS.Wb)("Red Sandstone Stairs", {
+      }), (0, wk.mc)("Red Sandstone Stairs", {
         displayName: {
           translationKey: "item:redSandstoneStairs"
         },
         ttb: 960,
         textureInfo: "red_sandstone",
         harvestType: "rock"
-      }), (0, jS.Wb)("Smooth Red Sandstone Stairs", {
+      }), (0, wk.mc)("Smooth Red Sandstone Stairs", {
         displayName: {
           translationKey: "item:smoothRedSandstoneStairs"
         },
         ttb: 960,
         textureInfo: "red_sandstone_top",
         harvestType: "rock"
-      }), (0, jS.Wb)("Engraved Red Sandstone Stairs", {
+      }), (0, wk.mc)("Engraved Red Sandstone Stairs", {
         displayName: {
           translationKey: "item:engravedRedSandstoneStairs"
         },
         ttb: 960,
         textureInfo: "chiseled_red_sandstone",
         harvestType: "rock"
-      }), (0, jS.Wb)("Marked Red Sandstone Stairs", {
+      }), (0, wk.mc)("Marked Red Sandstone Stairs", {
         displayName: {
           translationKey: "item:markedRedSandstoneStairs"
         },
         ttb: 960,
         textureInfo: "cut_red_sandstone",
         harvestType: "rock"
-      }), (0, jS.Wb)("Red Sandstone Bricks Stairs", {
+      }), (0, wk.mc)("Red Sandstone Bricks Stairs", {
         displayName: {
           translationKey: "item:redSandstoneBricksStairs"
         },
         ttb: 960,
         textureInfo: "red_sandstone_brick",
         harvestType: "rock"
-      }), (0, jS.Wb)("Bricks Stairs", {
+      }), (0, wk.mc)("Bricks Stairs", {
         displayName: {
           translationKey: "item:bricksStairs"
         },
         ttb: 2400,
         textureInfo: "brick",
         harvestType: "rock"
-      }), (0, jS.Wb)("Ice Bricks Stairs", {
+      }), (0, wk.mc)("Ice Bricks Stairs", {
         displayName: {
           translationKey: "item:iceBricksStairs"
         },
@@ -579,56 +579,56 @@ export const modules = {
         harvestType: "rock",
         harvestLevel: 0,
         stoodOnSpeedMultiplier: 1.4
-      }), ...(0, jS.s)("Concrete", (SS => ({
+      }), ...(0, wk.o)("Concrete", (kk => ({
         displayName: {
-          translationKey: `item:${(0,IS.ue)(SS)}ConcreteStairs`
+          translationKey: `item:${(0,Lk.ye)(kk)}ConcreteStairs`
         },
         ttb: 2160,
-        textureInfo: `${(0,IS.xe)(SS)}_concrete`,
+        textureInfo: `${(0,Lk.Ce)(kk)}_concrete`,
         harvestType: "rock"
-      }))), ...(0, jS.s)("Chalk", (SS => {
-        const HS = {
-          colour: `$t(colour:${(0,IS.xe)(SS)})`
+      }))), ...(0, wk.o)("Chalk", (kk => {
+        const Fk = {
+          colour: `$t(colour:${(0,Lk.Ce)(kk)})`
         };
         return {
           displayName: {
             translationKey: "item:colouredChalkStairs",
-            params: HS
+            params: Fk
           },
           description: {
             translationKey: "item:colouredChalkStairsDescription",
-            params: HS
+            params: Fk
           },
           ttb: 850,
-          textureInfo: `chalk_${(0,IS.xe)(SS)}`,
+          textureInfo: `chalk_${(0,Lk.Ce)(kk)}`,
           harvestType: "rock"
         }
-      })), ...(0, jS.s)("Chalk Bricks", (SS => {
-        const HS = {
-          colour: `$t(colour:${(0,IS.xe)(SS)})`
+      })), ...(0, wk.o)("Chalk Bricks", (kk => {
+        const Fk = {
+          colour: `$t(colour:${(0,Lk.Ce)(kk)})`
         };
         return {
           displayName: {
             translationKey: "item:colouredChalkBricksStairs",
-            params: HS
+            params: Fk
           },
           description: {
             translationKey: "item:colouredChalkBricksStairsDescription",
-            params: HS
+            params: Fk
           },
           ttb: 850,
-          textureInfo: `chalk_bricks_${(0,IS.xe)(SS)}`,
+          textureInfo: `chalk_bricks_${(0,Lk.Ce)(kk)}`,
           harvestType: "rock"
         }
       }))],
-      ZS = {
+      zk = {
         displayName: {
           translationKey: "item:chest"
         },
         ttb: 3e3,
         harvestType: "wood"
       },
-      JS = {
+      Sk = {
         Unloaded: {
           ttb: 100,
           textureInfo: "unloaded",
@@ -963,7 +963,7 @@ export const modules = {
             drops: "Coal Ore"
           },
           specialToolBonusDrops: {
-            "Golem Pickaxe": fS.p
+            "Golem Pickaxe": tk.n
           },
           description: {
             translationKey: "item:coalOreDescription"
@@ -983,7 +983,7 @@ export const modules = {
             drops: "Iron Ore"
           },
           specialToolBonusDrops: {
-            "Golem Pickaxe": fS.p
+            "Golem Pickaxe": tk.n
           },
           harvestLevel: 2,
           onMinedAura: 15
@@ -1001,11 +1001,11 @@ export const modules = {
             drops: "Gold Ore"
           },
           specialToolBonusDrops: {
-            "Golem Pickaxe": fS.p
+            "Golem Pickaxe": tk.n
           },
           harvestLevel: 3,
           onMinedAura: 30,
-          dK: [4, 4, 0]
+          Ve: [4, 4, 0]
         },
         "Lapis Lazuli Ore": {
           displayName: {
@@ -1015,7 +1015,7 @@ export const modules = {
           textureInfo: "lapis_ore",
           harvestType: "rock",
           harvestLevel: 3,
-          dK: [0, 0, 2]
+          Ve: [0, 0, 2]
         },
         "Emerald Ore": {
           displayName: {
@@ -1025,7 +1025,7 @@ export const modules = {
           textureInfo: "emerald_ore",
           harvestType: "rock",
           harvestLevel: 3,
-          dK: [1, 3, 1]
+          Ve: [1, 3, 1]
         },
         "Diamond Ore": {
           displayName: {
@@ -1041,13 +1041,13 @@ export const modules = {
             drops: "Diamond Ore"
           },
           specialToolBonusDrops: {
-            "Golem Pickaxe": fS.p
+            "Golem Pickaxe": tk.n
           },
           description: {
             translationKey: "item:diamondOreDescription"
           },
           onMinedAura: 40,
-          dK: [2, 5, 5]
+          Ve: [2, 5, 5]
         },
         "Block of Coal": {
           displayName: {
@@ -1581,7 +1581,7 @@ export const modules = {
           ttb: 1200,
           textureInfo: "pumpkin_face_on",
           harvestType: "wood",
-          dK: [14, 10, 4]
+          Ve: [14, 10, 4]
         },
         Watermelon: {
           displayName: {
@@ -1827,7 +1827,7 @@ export const modules = {
           ttb: 450,
           textureInfo: "redstone_lamp_on",
           harvestType: "rock",
-          dK: [14, 14, 14]
+          Ve: [14, 14, 14]
         },
         "Dim Lamp Off": {
           ttb: 450,
@@ -1839,7 +1839,7 @@ export const modules = {
             translationKey: "item:water"
           },
           textureInfo: [.5, .5, .8, .9],
-          aa: !0,
+          qj: !0,
           drops: null,
           harvestType: "rock"
         },
@@ -1979,7 +1979,7 @@ export const modules = {
           ttb: 3600,
           textureInfo: "beacon",
           harvestType: "rock",
-          dK: [5, 14, 14]
+          Ve: [5, 14, 14]
         },
         temp: {
           ttb: 1e3,
@@ -1992,7 +1992,7 @@ export const modules = {
           ttb: 1e3,
           textureInfo: "glowstone",
           harvestType: "rock",
-          dK: [15, 15, 13]
+          Ve: [15, 15, 13]
         },
         "Moonstone Explosive": {
           displayName: {
@@ -2206,7 +2206,7 @@ export const modules = {
           harvestType: "cuttable",
           itemTexture: "shadow_rose"
         },
-        ...(0, jS.wb)("Furnace", {
+        ...(0, wk.Gb)("Furnace", {
           displayName: {
             translationKey: "item:furnace"
           },
@@ -2216,10 +2216,10 @@ export const modules = {
           description: {
             translationKey: "item:furnaceDescription"
           },
-          dK: [8, 5, 2],
-          ...DS("Furnace", "furnace")
+          Ve: [8, 5, 2],
+          ...Qk("Furnace", "furnace")
         }),
-        ...(0, jS.wb)("Workbench", {
+        ...(0, wk.Gb)("Workbench", {
           displayName: {
             translationKey: "item:workbench"
           },
@@ -2229,7 +2229,7 @@ export const modules = {
           description: {
             translationKey: "item:workbenchDescription"
           },
-          ...DS("Workbench", "workbench")
+          ...Qk("Workbench", "workbench")
         }),
         "Block of Diamond": {
           displayName: {
@@ -2441,8 +2441,8 @@ export const modules = {
           harvestType: "wood",
           drops: "Maple Log"
         },
-        ...(0, jS.xb)("Chest", {
-          ...ZS,
+        ...(0, wk.Kb)("Chest", {
+          ...zk,
           textureInfo: ["chest_front", "chest_side", "chest_top[rot[1", "chest_top[rot[2", "chest_top[rot[3", "chest_top[rot[4", "chest_back"],
           rootMetaDesc: "Chest|meta|rot1"
         }, [
@@ -2505,7 +2505,7 @@ export const modules = {
           harvestType: "cuttable",
           damage: 27
         },
-        ...(0, jS.wb)("Maple Ladder", {
+        ...(0, wk.Gb)("Maple Ladder", {
           displayName: {
             translationKey: "item:ladder"
           },
@@ -2518,7 +2518,7 @@ export const modules = {
           blockModel: "Maple Ladder",
           blockModelItem: !0
         }),
-        ...(0, jS.wb)("Vines", {
+        ...(0, wk.Gb)("Vines", {
           displayName: {
             translationKey: "item:vines"
           },
@@ -2539,7 +2539,7 @@ export const modules = {
           textureInfo: "dirt",
           harvestType: "granule"
         },
-        ...(0, jS.wb)("Iron Ladder", {
+        ...(0, wk.Gb)("Iron Ladder", {
           displayName: {
             translationKey: "item:ironLadder"
           },
@@ -2690,7 +2690,7 @@ export const modules = {
           description: {
             translationKey: "item:artisanBenchDescription"
           },
-          ...DS("Artisan Bench", "artisan_bench", {
+          ...Qk("Artisan Bench", "artisan_bench", {
             rotatable: !1
           })
         },
@@ -3156,7 +3156,7 @@ export const modules = {
             translationKey: "item:wheatSeedsDescription"
           }
         },
-        ...(0, jS.pb)("Wheat", {
+        ...(0, wk.vb)("Wheat", {
           displayName: {
             translationKey: "item:wheat"
           },
@@ -3342,7 +3342,7 @@ export const modules = {
           harvestType: "cuttable",
           itemTexture: "shadow_rose"
         },
-        ...(0, jS.wb)("White Bed", {
+        ...(0, wk.Gb)("White Bed", {
           displayName: {
             translationKey: "item:whiteBed"
           },
@@ -3355,7 +3355,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "White Bed"
         }),
-        ...(0, jS.wb)("_White Bed Head", {
+        ...(0, wk.Gb)("_White Bed Head", {
           ttb: 240,
           itemTexture: "white_bed",
           model: "rotatable",
@@ -3366,7 +3366,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_White Bed Head"
         }),
-        ...(0, jS.wb)("Orange Bed", {
+        ...(0, wk.Gb)("Orange Bed", {
           displayName: {
             translationKey: "item:orangeBed"
           },
@@ -3379,7 +3379,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Orange Bed"
         }),
-        ...(0, jS.wb)("_Orange Bed Head", {
+        ...(0, wk.Gb)("_Orange Bed Head", {
           ttb: 240,
           itemTexture: "orange_bed",
           model: "rotatable",
@@ -3390,7 +3390,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Orange Bed Head"
         }),
-        ...(0, jS.wb)("Magenta Bed", {
+        ...(0, wk.Gb)("Magenta Bed", {
           displayName: {
             translationKey: "item:magentaBed"
           },
@@ -3403,7 +3403,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Magenta Bed"
         }),
-        ...(0, jS.wb)("_Magenta Bed Head", {
+        ...(0, wk.Gb)("_Magenta Bed Head", {
           ttb: 240,
           itemTexture: "magenta_bed",
           model: "rotatable",
@@ -3414,7 +3414,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Magenta Bed Head"
         }),
-        ...(0, jS.wb)("Light Blue Bed", {
+        ...(0, wk.Gb)("Light Blue Bed", {
           displayName: {
             translationKey: "item:lightBlueBed"
           },
@@ -3427,7 +3427,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Light Blue Bed"
         }),
-        ...(0, jS.wb)("_Light Blue Bed Head", {
+        ...(0, wk.Gb)("_Light Blue Bed Head", {
           ttb: 240,
           itemTexture: "light_blue_bed",
           model: "rotatable",
@@ -3438,7 +3438,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Light Blue Bed Head"
         }),
-        ...(0, jS.wb)("Yellow Bed", {
+        ...(0, wk.Gb)("Yellow Bed", {
           displayName: {
             translationKey: "item:yellowBed"
           },
@@ -3451,7 +3451,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Yellow Bed"
         }),
-        ...(0, jS.wb)("_Yellow Bed Head", {
+        ...(0, wk.Gb)("_Yellow Bed Head", {
           ttb: 240,
           itemTexture: "yellow_bed",
           model: "rotatable",
@@ -3462,7 +3462,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Yellow Bed Head"
         }),
-        ...(0, jS.wb)("Lime Bed", {
+        ...(0, wk.Gb)("Lime Bed", {
           displayName: {
             translationKey: "item:limeBed"
           },
@@ -3475,7 +3475,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Lime Bed"
         }),
-        ...(0, jS.wb)("_Lime Bed Head", {
+        ...(0, wk.Gb)("_Lime Bed Head", {
           ttb: 240,
           itemTexture: "lime_bed",
           model: "rotatable",
@@ -3486,7 +3486,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Lime Bed Head"
         }),
-        ...(0, jS.wb)("Pink Bed", {
+        ...(0, wk.Gb)("Pink Bed", {
           displayName: {
             translationKey: "item:pinkBed"
           },
@@ -3499,7 +3499,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Pink Bed"
         }),
-        ...(0, jS.wb)("_Pink Bed Head", {
+        ...(0, wk.Gb)("_Pink Bed Head", {
           ttb: 240,
           itemTexture: "pink_bed",
           model: "rotatable",
@@ -3510,7 +3510,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Pink Bed Head"
         }),
-        ...(0, jS.wb)("Gray Bed", {
+        ...(0, wk.Gb)("Gray Bed", {
           displayName: {
             translationKey: "item:grayBed"
           },
@@ -3523,7 +3523,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Gray Bed"
         }),
-        ...(0, jS.wb)("_Gray Bed Head", {
+        ...(0, wk.Gb)("_Gray Bed Head", {
           ttb: 240,
           itemTexture: "gray_bed",
           model: "rotatable",
@@ -3534,7 +3534,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Gray Bed Head"
         }),
-        ...(0, jS.wb)("Light Gray Bed", {
+        ...(0, wk.Gb)("Light Gray Bed", {
           displayName: {
             translationKey: "item:lightGrayBed"
           },
@@ -3547,7 +3547,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Light Gray Bed"
         }),
-        ...(0, jS.wb)("_Light Gray Bed Head", {
+        ...(0, wk.Gb)("_Light Gray Bed Head", {
           ttb: 240,
           itemTexture: "light_gray_bed",
           model: "rotatable",
@@ -3558,7 +3558,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Light Gray Bed Head"
         }),
-        ...(0, jS.wb)("Cyan Bed", {
+        ...(0, wk.Gb)("Cyan Bed", {
           displayName: {
             translationKey: "item:cyanBed"
           },
@@ -3571,7 +3571,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Cyan Bed"
         }),
-        ...(0, jS.wb)("_Cyan Bed Head", {
+        ...(0, wk.Gb)("_Cyan Bed Head", {
           ttb: 240,
           itemTexture: "cyan_bed",
           model: "rotatable",
@@ -3582,7 +3582,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Cyan Bed Head"
         }),
-        ...(0, jS.wb)("Purple Bed", {
+        ...(0, wk.Gb)("Purple Bed", {
           displayName: {
             translationKey: "item:purpleBed"
           },
@@ -3595,7 +3595,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Purple Bed"
         }),
-        ...(0, jS.wb)("_Purple Bed Head", {
+        ...(0, wk.Gb)("_Purple Bed Head", {
           ttb: 240,
           itemTexture: "purple_bed",
           model: "rotatable",
@@ -3606,7 +3606,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Purple Bed Head"
         }),
-        ...(0, jS.wb)("Blue Bed", {
+        ...(0, wk.Gb)("Blue Bed", {
           displayName: {
             translationKey: "item:blueBed"
           },
@@ -3619,7 +3619,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Blue Bed"
         }),
-        ...(0, jS.wb)("_Blue Bed Head", {
+        ...(0, wk.Gb)("_Blue Bed Head", {
           ttb: 240,
           itemTexture: "blue_bed",
           model: "rotatable",
@@ -3630,7 +3630,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Blue Bed Head"
         }),
-        ...(0, jS.wb)("Brown Bed", {
+        ...(0, wk.Gb)("Brown Bed", {
           displayName: {
             translationKey: "item:brownBed"
           },
@@ -3643,7 +3643,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Brown Bed"
         }),
-        ...(0, jS.wb)("_Brown Bed Head", {
+        ...(0, wk.Gb)("_Brown Bed Head", {
           ttb: 240,
           itemTexture: "brown_bed",
           model: "rotatable",
@@ -3654,7 +3654,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Brown Bed Head"
         }),
-        ...(0, jS.wb)("Green Bed", {
+        ...(0, wk.Gb)("Green Bed", {
           displayName: {
             translationKey: "item:greenBed"
           },
@@ -3667,7 +3667,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Green Bed"
         }),
-        ...(0, jS.wb)("_Green Bed Head", {
+        ...(0, wk.Gb)("_Green Bed Head", {
           ttb: 240,
           itemTexture: "green_bed",
           model: "rotatable",
@@ -3678,7 +3678,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Green Bed Head"
         }),
-        ...(0, jS.wb)("Red Bed", {
+        ...(0, wk.Gb)("Red Bed", {
           displayName: {
             translationKey: "item:redBed"
           },
@@ -3691,7 +3691,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Red Bed"
         }),
-        ...(0, jS.wb)("_Red Bed Head", {
+        ...(0, wk.Gb)("_Red Bed Head", {
           ttb: 240,
           itemTexture: "red_bed",
           model: "rotatable",
@@ -3702,7 +3702,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Red Bed Head"
         }),
-        ...(0, jS.wb)("Black Bed", {
+        ...(0, wk.Gb)("Black Bed", {
           displayName: {
             translationKey: "item:blackBed"
           },
@@ -3715,7 +3715,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Black Bed"
         }),
-        ...(0, jS.wb)("_Black Bed Head", {
+        ...(0, wk.Gb)("_Black Bed Head", {
           ttb: 240,
           itemTexture: "black_bed",
           model: "rotatable",
@@ -3749,15 +3749,15 @@ export const modules = {
             drops: "Moonstone Ore"
           },
           specialToolBonusDrops: {
-            "Golem Pickaxe": fS.p
+            "Golem Pickaxe": tk.n
           },
           description: {
             translationKey: "item:moonstoneOreDescription"
           },
           onMinedAura: 50,
-          dK: [6, 6, 6]
+          Ve: [6, 6, 6]
         },
-        ...(0, jS.xb)("Moonstone Chest", {
+        ...(0, wk.Kb)("Moonstone Chest", {
           displayName: {
             translationKey: "item:moonstoneChest"
           },
@@ -3789,7 +3789,7 @@ export const modules = {
           ttb: 600,
           textureInfo: "magma",
           harvestType: "rock",
-          dK: [9, 3, 1]
+          Ve: [9, 3, 1]
         },
         "Useless Soil": {
           displayName: {
@@ -4870,7 +4870,7 @@ export const modules = {
           harvestType: "cuttable",
           drops: "Autumn Maple Leaves"
         },
-        ...(0, jS.zb)("Fallen Maple Leaves", {
+        ...(0, wk.Lb)("Fallen Maple Leaves", {
           displayName: {
             translationKey: "item:fallenMapleLeaves"
           },
@@ -4882,7 +4882,7 @@ export const modules = {
           harvestType: "cuttable",
           rootMetaDesc: "Fallen Maple Leaves|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Maple Slab", {
+        ...(0, wk.Lb)("Maple Slab", {
           displayName: {
             translationKey: "item:mapleSlab"
           },
@@ -4894,7 +4894,7 @@ export const modules = {
           slabFullBlock: "Maple Wood Planks",
           rootMetaDesc: "Maple Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Pine Slab", {
+        ...(0, wk.Lb)("Pine Slab", {
           displayName: {
             translationKey: "item:pineSlab"
           },
@@ -4906,7 +4906,7 @@ export const modules = {
           slabFullBlock: "Pine Wood Planks",
           rootMetaDesc: "Pine Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Plum Slab", {
+        ...(0, wk.Lb)("Plum Slab", {
           displayName: {
             translationKey: "item:plumSlab"
           },
@@ -4918,7 +4918,7 @@ export const modules = {
           slabFullBlock: "Plum Wood Planks",
           rootMetaDesc: "Plum Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Cedar Slab", {
+        ...(0, wk.Lb)("Cedar Slab", {
           displayName: {
             translationKey: "item:cedarSlab"
           },
@@ -4930,7 +4930,7 @@ export const modules = {
           slabFullBlock: "Cedar Wood Planks",
           rootMetaDesc: "Cedar Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Aspen Slab", {
+        ...(0, wk.Lb)("Aspen Slab", {
           displayName: {
             translationKey: "item:aspenSlab"
           },
@@ -4942,7 +4942,7 @@ export const modules = {
           slabFullBlock: "Aspen Wood Planks",
           rootMetaDesc: "Aspen Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Jungle Slab", {
+        ...(0, wk.Lb)("Jungle Slab", {
           displayName: {
             translationKey: "item:jungleSlab"
           },
@@ -4954,7 +4954,7 @@ export const modules = {
           slabFullBlock: "Jungle Wood Planks",
           rootMetaDesc: "Jungle Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Palm Slab", {
+        ...(0, wk.Lb)("Palm Slab", {
           displayName: {
             translationKey: "item:palmSlab"
           },
@@ -4966,7 +4966,7 @@ export const modules = {
           slabFullBlock: "Palm Wood Planks",
           rootMetaDesc: "Palm Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Dirt Slab", {
+        ...(0, wk.Lb)("Dirt Slab", {
           displayName: {
             translationKey: "item:dirtSlab"
           },
@@ -4978,7 +4978,7 @@ export const modules = {
           slabFullBlock: "Dirt",
           rootMetaDesc: "Dirt Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Grass Slab", {
+        ...(0, wk.Lb)("Grass Slab", {
           displayName: {
             translationKey: "item:grassSlab"
           },
@@ -4990,7 +4990,7 @@ export const modules = {
           slabFullBlock: "Grass Block",
           rootMetaDesc: "Grass Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Messy Stone Slab", {
+        ...(0, wk.Lb)("Messy Stone Slab", {
           displayName: {
             translationKey: "item:messyStoneSlab"
           },
@@ -5002,7 +5002,7 @@ export const modules = {
           slabFullBlock: "Messy Stone",
           rootMetaDesc: "Messy Stone Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Stone Slab", {
+        ...(0, wk.Lb)("Stone Slab", {
           displayName: {
             translationKey: "item:stoneSlab"
           },
@@ -5014,7 +5014,7 @@ export const modules = {
           slabFullBlock: "Stone",
           rootMetaDesc: "Stone Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Smooth Stone Slab", {
+        ...(0, wk.Lb)("Smooth Stone Slab", {
           displayName: {
             translationKey: "item:smoothStoneSlab"
           },
@@ -5026,7 +5026,7 @@ export const modules = {
           slabFullBlock: "Smooth Stone",
           rootMetaDesc: "Smooth Stone Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Engraved Stone Slab", {
+        ...(0, wk.Lb)("Engraved Stone Slab", {
           displayName: {
             translationKey: "item:engravedStoneSlab"
           },
@@ -5038,7 +5038,7 @@ export const modules = {
           slabFullBlock: "Engraved Stone",
           rootMetaDesc: "Engraved Stone Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Stone Bricks Slab", {
+        ...(0, wk.Lb)("Stone Bricks Slab", {
           displayName: {
             translationKey: "item:stoneBricksSlab"
           },
@@ -5050,7 +5050,7 @@ export const modules = {
           slabFullBlock: "Stone Bricks",
           rootMetaDesc: "Stone Bricks Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Mossy Stone Slab", {
+        ...(0, wk.Lb)("Mossy Stone Slab", {
           displayName: {
             translationKey: "item:mossyStoneSlab"
           },
@@ -5062,7 +5062,7 @@ export const modules = {
           slabFullBlock: "Mossy Messy Stone",
           rootMetaDesc: "Mossy Stone Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Mossy Stone Bricks Slab", {
+        ...(0, wk.Lb)("Mossy Stone Bricks Slab", {
           displayName: {
             translationKey: "item:mossyStoneBricksSlab"
           },
@@ -5074,7 +5074,7 @@ export const modules = {
           slabFullBlock: "Mossy Stone Bricks",
           rootMetaDesc: "Mossy Stone Bricks Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Andesite Slab", {
+        ...(0, wk.Lb)("Andesite Slab", {
           displayName: {
             translationKey: "item:andesiteSlab"
           },
@@ -5086,7 +5086,7 @@ export const modules = {
           slabFullBlock: "Andesite",
           rootMetaDesc: "Andesite Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Smooth Andesite Slab", {
+        ...(0, wk.Lb)("Smooth Andesite Slab", {
           displayName: {
             translationKey: "item:smoothAndesiteSlab"
           },
@@ -5098,7 +5098,7 @@ export const modules = {
           slabFullBlock: "Smooth Andesite",
           rootMetaDesc: "Smooth Andesite Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Engraved Andesite Slab", {
+        ...(0, wk.Lb)("Engraved Andesite Slab", {
           displayName: {
             translationKey: "item:engravedAndesiteSlab"
           },
@@ -5110,7 +5110,7 @@ export const modules = {
           slabFullBlock: "Engraved Andesite",
           rootMetaDesc: "Engraved Andesite Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Andesite Bricks Slab", {
+        ...(0, wk.Lb)("Andesite Bricks Slab", {
           displayName: {
             translationKey: "item:andesiteBricksSlab"
           },
@@ -5122,7 +5122,7 @@ export const modules = {
           slabFullBlock: "Andesite Bricks",
           rootMetaDesc: "Andesite Bricks Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Diorite Slab", {
+        ...(0, wk.Lb)("Diorite Slab", {
           displayName: {
             translationKey: "item:dioriteSlab"
           },
@@ -5134,7 +5134,7 @@ export const modules = {
           slabFullBlock: "Diorite",
           rootMetaDesc: "Diorite Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Smooth Diorite Slab", {
+        ...(0, wk.Lb)("Smooth Diorite Slab", {
           displayName: {
             translationKey: "item:smoothDioriteSlab"
           },
@@ -5146,7 +5146,7 @@ export const modules = {
           slabFullBlock: "Smooth Diorite",
           rootMetaDesc: "Smooth Diorite Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Engraved Diorite Slab", {
+        ...(0, wk.Lb)("Engraved Diorite Slab", {
           displayName: {
             translationKey: "item:engravedDioriteSlab"
           },
@@ -5158,7 +5158,7 @@ export const modules = {
           slabFullBlock: "Engraved Diorite",
           rootMetaDesc: "Engraved Diorite Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Diorite Bricks Slab", {
+        ...(0, wk.Lb)("Diorite Bricks Slab", {
           displayName: {
             translationKey: "item:dioriteBricksSlab"
           },
@@ -5170,7 +5170,7 @@ export const modules = {
           slabFullBlock: "Diorite Bricks",
           rootMetaDesc: "Diorite Bricks Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Granite Slab", {
+        ...(0, wk.Lb)("Granite Slab", {
           displayName: {
             translationKey: "item:graniteSlab"
           },
@@ -5182,7 +5182,7 @@ export const modules = {
           slabFullBlock: "Granite",
           rootMetaDesc: "Granite Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Smooth Granite Slab", {
+        ...(0, wk.Lb)("Smooth Granite Slab", {
           displayName: {
             translationKey: "item:smoothGraniteSlab"
           },
@@ -5194,7 +5194,7 @@ export const modules = {
           slabFullBlock: "Smooth Granite",
           rootMetaDesc: "Smooth Granite Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Engraved Granite Slab", {
+        ...(0, wk.Lb)("Engraved Granite Slab", {
           displayName: {
             translationKey: "item:engravedGraniteSlab"
           },
@@ -5206,7 +5206,7 @@ export const modules = {
           slabFullBlock: "Engraved Granite",
           rootMetaDesc: "Engraved Granite Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Granite Bricks Slab", {
+        ...(0, wk.Lb)("Granite Bricks Slab", {
           displayName: {
             translationKey: "item:graniteBricksSlab"
           },
@@ -5218,7 +5218,7 @@ export const modules = {
           slabFullBlock: "Granite Bricks",
           rootMetaDesc: "Granite Bricks Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Sandstone Slab", {
+        ...(0, wk.Lb)("Sandstone Slab", {
           displayName: {
             translationKey: "item:sandstoneSlab"
           },
@@ -5230,7 +5230,7 @@ export const modules = {
           slabFullBlock: "Sandstone",
           rootMetaDesc: "Sandstone Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Smooth Sandstone Slab", {
+        ...(0, wk.Lb)("Smooth Sandstone Slab", {
           displayName: {
             translationKey: "item:smoothSandstoneSlab"
           },
@@ -5241,7 +5241,7 @@ export const modules = {
           slabFullBlock: "Smooth Sandstone",
           rootMetaDesc: "Smooth Sandstone Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Engraved Sandstone Slab", {
+        ...(0, wk.Lb)("Engraved Sandstone Slab", {
           displayName: {
             translationKey: "item:engravedSandstoneSlab"
           },
@@ -5253,7 +5253,7 @@ export const modules = {
           slabFullBlock: "Engraved Sandstone",
           rootMetaDesc: "Engraved Sandstone Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Marked Sandstone Slab", {
+        ...(0, wk.Lb)("Marked Sandstone Slab", {
           displayName: {
             translationKey: "item:markedSandstoneSlab"
           },
@@ -5265,7 +5265,7 @@ export const modules = {
           slabFullBlock: "Marked Sandstone",
           rootMetaDesc: "Marked Sandstone Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Sandstone Bricks Slab", {
+        ...(0, wk.Lb)("Sandstone Bricks Slab", {
           displayName: {
             translationKey: "item:sandstoneBricksSlab"
           },
@@ -5277,7 +5277,7 @@ export const modules = {
           slabFullBlock: "Sandstone Bricks",
           rootMetaDesc: "Sandstone Bricks Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Red Sandstone Slab", {
+        ...(0, wk.Lb)("Red Sandstone Slab", {
           displayName: {
             translationKey: "item:redSandstoneSlab"
           },
@@ -5289,7 +5289,7 @@ export const modules = {
           slabFullBlock: "Red Sandstone",
           rootMetaDesc: "Red Sandstone Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Smooth Red Sandstone Slab", {
+        ...(0, wk.Lb)("Smooth Red Sandstone Slab", {
           displayName: {
             translationKey: "item:smoothRedSandstoneSlab"
           },
@@ -5300,7 +5300,7 @@ export const modules = {
           slabFullBlock: "Smooth Red Sandstone",
           rootMetaDesc: "Smooth Red Sandstone Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Engraved Red Sandstone Slab", {
+        ...(0, wk.Lb)("Engraved Red Sandstone Slab", {
           displayName: {
             translationKey: "item:engravedRedSandstoneSlab"
           },
@@ -5312,7 +5312,7 @@ export const modules = {
           slabFullBlock: "Engraved Red Sandstone",
           rootMetaDesc: "Engraved Red Sandstone Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Marked Red Sandstone Slab", {
+        ...(0, wk.Lb)("Marked Red Sandstone Slab", {
           displayName: {
             translationKey: "item:markedRedSandstoneSlab"
           },
@@ -5324,7 +5324,7 @@ export const modules = {
           slabFullBlock: "Marked Red Sandstone",
           rootMetaDesc: "Marked Red Sandstone Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Red Sandstone Bricks Slab", {
+        ...(0, wk.Lb)("Red Sandstone Bricks Slab", {
           displayName: {
             translationKey: "item:redSandstoneBricksSlab"
           },
@@ -5336,7 +5336,7 @@ export const modules = {
           slabFullBlock: "Red Sandstone Bricks",
           rootMetaDesc: "Red Sandstone Bricks Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Bricks Slab", {
+        ...(0, wk.Lb)("Bricks Slab", {
           displayName: {
             translationKey: "item:bricksSlab"
           },
@@ -5348,7 +5348,7 @@ export const modules = {
           slabFullBlock: "Bricks",
           rootMetaDesc: "Bricks Slab|meta|rot1|bot"
         }),
-        ...(0, jS.zb)("Ice Bricks Slab", {
+        ...(0, wk.Lb)("Ice Bricks Slab", {
           displayName: {
             translationKey: "item:iceBricksSlab"
           },
@@ -5611,7 +5611,7 @@ export const modules = {
           harvestType: "cuttable",
           drops: "Pear Leaves"
         },
-        ...(0, jS.zb)("Pear Slab", {
+        ...(0, wk.Lb)("Pear Slab", {
           displayName: {
             translationKey: "item:pearSlab"
           },
@@ -5680,7 +5680,7 @@ export const modules = {
           textureInfo: "mega_compressed_messy_stone",
           harvestType: "rock"
         },
-        ...(0, jS.wb)("Board", {
+        ...(0, wk.Gb)("Board", {
           displayName: {
             translationKey: "item:board"
           },
@@ -5788,7 +5788,7 @@ export const modules = {
           harvestType: "cuttable",
           drops: "Watermelon Seeds"
         },
-        ...(0, jS.wb)("Attached Watermelon Stem", {
+        ...(0, wk.Gb)("Attached Watermelon Stem", {
           displayName: {
             translationKey: "item:attachedWatermelonStem"
           },
@@ -5832,7 +5832,7 @@ export const modules = {
           harvestType: "cuttable",
           drops: "Pumpkin Seeds"
         },
-        ...(0, jS.wb)("Attached Pumpkin Stem", {
+        ...(0, wk.Gb)("Attached Pumpkin Stem", {
           displayName: {
             translationKey: "item:attachedPumpkinStem"
           },
@@ -5863,7 +5863,7 @@ export const modules = {
           texturePerSide: [0, 0, 1, 1, 0, 0],
           harvestType: "wood"
         },
-        ...(0, jS.xb)("Carved Pumpkin", {
+        ...(0, wk.Kb)("Carved Pumpkin", {
           displayName: {
             translationKey: "item:carvedPumpkin"
           },
@@ -5872,7 +5872,7 @@ export const modules = {
           harvestType: "wood",
           rootMetaDesc: "Carved Pumpkin|meta|rot1"
         }),
-        ...(0, jS.xb)("Jack o'Lantern", {
+        ...(0, wk.Kb)("Jack o'Lantern", {
           displayName: {
             translationKey: "item:jackO'Lantern"
           },
@@ -5880,7 +5880,7 @@ export const modules = {
           textureInfo: ["pumpkin_face_on", "pumpkin_side", "pumpkin_top"],
           harvestType: "wood",
           rootMetaDesc: "Jack o'Lantern|meta|rot1",
-          dK: [14, 10, 4]
+          Ve: [14, 10, 4]
         }),
         "Melon Seeds": {
           displayName: {
@@ -5904,7 +5904,7 @@ export const modules = {
           harvestType: "cuttable",
           drops: "Melon Seeds"
         },
-        ...(0, jS.wb)("Attached Melon Stem", {
+        ...(0, wk.Gb)("Attached Melon Stem", {
           displayName: {
             translationKey: "item:attachedMelonStem"
           },
@@ -6152,7 +6152,7 @@ export const modules = {
             place: "stone"
           }
         },
-        ...(0, jS.wb)("Potion Table", {
+        ...(0, wk.Gb)("Potion Table", {
           displayName: {
             translationKey: "item:potionTable"
           },
@@ -6162,14 +6162,14 @@ export const modules = {
           description: {
             translationKey: "item:potionTableDescription"
           },
-          ...DS("Potion Table", "potion_table", {
+          ...Qk("Potion Table", "potion_table", {
             textureAnimation: {
               frames: 4,
               animationInterval: 200
             }
           })
         }),
-        ...(0, jS.wb)("Pine Ladder", {
+        ...(0, wk.Gb)("Pine Ladder", {
           displayName: {
             translationKey: "item:pineLadder"
           },
@@ -6185,7 +6185,7 @@ export const modules = {
           blockModelItem: !0,
           rotatableOffsetAmt: .375
         }),
-        ...(0, jS.wb)("Plum Ladder", {
+        ...(0, wk.Gb)("Plum Ladder", {
           displayName: {
             translationKey: "item:plumLadder"
           },
@@ -6201,7 +6201,7 @@ export const modules = {
           blockModelItem: !0,
           rotatableOffsetAmt: .375
         }),
-        ...(0, jS.wb)("Cedar Ladder", {
+        ...(0, wk.Gb)("Cedar Ladder", {
           displayName: {
             translationKey: "item:cedarLadder"
           },
@@ -6216,7 +6216,7 @@ export const modules = {
           heldItemScale: 10,
           blockModelItem: !0
         }),
-        ...(0, jS.wb)("Aspen Ladder", {
+        ...(0, wk.Gb)("Aspen Ladder", {
           displayName: {
             translationKey: "item:aspenLadder"
           },
@@ -6231,7 +6231,7 @@ export const modules = {
           heldItemScale: 10,
           blockModelItem: !0
         }),
-        ...(0, jS.wb)("Jungle Ladder", {
+        ...(0, wk.Gb)("Jungle Ladder", {
           displayName: {
             translationKey: "item:jungleLadder"
           },
@@ -6247,7 +6247,7 @@ export const modules = {
           blockModelItem: !0,
           rotatableOffsetAmt: .375
         }),
-        ...(0, jS.wb)("Palm Ladder", {
+        ...(0, wk.Gb)("Palm Ladder", {
           displayName: {
             translationKey: "item:palmLadder"
           },
@@ -6262,7 +6262,7 @@ export const modules = {
           heldItemScale: 10,
           blockModelItem: !0
         }),
-        ...(0, jS.wb)("Pear Ladder", {
+        ...(0, wk.Gb)("Pear Ladder", {
           displayName: {
             translationKey: "item:pearLadder"
           },
@@ -6286,7 +6286,7 @@ export const modules = {
           model: "CustomModel",
           harvestType: "cuttable",
           solid: !1,
-          tG: wS,
+          Re: sk,
           blockModel: "carpet_black_model",
           modelScale: 10,
           customModelInfo: {
@@ -6303,7 +6303,7 @@ export const modules = {
           model: "CustomModel",
           harvestType: "cuttable",
           solid: !1,
-          tG: wS,
+          Re: sk,
           blockModel: "carpet_blue_model",
           modelScale: 10,
           customModelInfo: {
@@ -6320,7 +6320,7 @@ export const modules = {
           model: "CustomModel",
           harvestType: "cuttable",
           solid: !1,
-          tG: wS,
+          Re: sk,
           blockModel: "carpet_brown_model",
           modelScale: 10,
           customModelInfo: {
@@ -6337,7 +6337,7 @@ export const modules = {
           model: "CustomModel",
           harvestType: "cuttable",
           solid: !1,
-          tG: wS,
+          Re: sk,
           blockModel: "carpet_cyan_model",
           modelScale: 10,
           customModelInfo: {
@@ -6354,7 +6354,7 @@ export const modules = {
           model: "CustomModel",
           harvestType: "cuttable",
           solid: !1,
-          tG: wS,
+          Re: sk,
           blockModel: "carpet_gray_model",
           modelScale: 10,
           customModelInfo: {
@@ -6371,7 +6371,7 @@ export const modules = {
           model: "CustomModel",
           harvestType: "cuttable",
           solid: !1,
-          tG: wS,
+          Re: sk,
           blockModel: "carpet_light_gray_model",
           modelScale: 10,
           customModelInfo: {
@@ -6388,7 +6388,7 @@ export const modules = {
           model: "CustomModel",
           harvestType: "cuttable",
           solid: !1,
-          tG: wS,
+          Re: sk,
           blockModel: "carpet_green_model",
           modelScale: 10,
           customModelInfo: {
@@ -6405,7 +6405,7 @@ export const modules = {
           model: "CustomModel",
           harvestType: "cuttable",
           solid: !1,
-          tG: wS,
+          Re: sk,
           blockModel: "carpet_light_blue_model",
           modelScale: 10,
           customModelInfo: {
@@ -6422,7 +6422,7 @@ export const modules = {
           model: "CustomModel",
           harvestType: "cuttable",
           solid: !1,
-          tG: wS,
+          Re: sk,
           blockModel: "carpet_lime_model",
           modelScale: 10,
           customModelInfo: {
@@ -6439,7 +6439,7 @@ export const modules = {
           model: "CustomModel",
           harvestType: "cuttable",
           solid: !1,
-          tG: wS,
+          Re: sk,
           blockModel: "carpet_magenta_model",
           modelScale: 10,
           customModelInfo: {
@@ -6456,7 +6456,7 @@ export const modules = {
           model: "CustomModel",
           harvestType: "cuttable",
           solid: !1,
-          tG: wS,
+          Re: sk,
           blockModel: "carpet_orange_model",
           modelScale: 10,
           customModelInfo: {
@@ -6473,7 +6473,7 @@ export const modules = {
           model: "CustomModel",
           harvestType: "cuttable",
           solid: !1,
-          tG: wS,
+          Re: sk,
           blockModel: "carpet_pink_model",
           modelScale: 10,
           customModelInfo: {
@@ -6490,7 +6490,7 @@ export const modules = {
           model: "CustomModel",
           harvestType: "cuttable",
           solid: !1,
-          tG: wS,
+          Re: sk,
           blockModel: "carpet_purple_model",
           modelScale: 10,
           customModelInfo: {
@@ -6507,7 +6507,7 @@ export const modules = {
           model: "CustomModel",
           harvestType: "cuttable",
           solid: !1,
-          tG: wS,
+          Re: sk,
           blockModel: "carpet_red_model",
           modelScale: 10,
           customModelInfo: {
@@ -6524,7 +6524,7 @@ export const modules = {
           model: "CustomModel",
           harvestType: "cuttable",
           solid: !1,
-          tG: wS,
+          Re: sk,
           blockModel: "carpet_white_model",
           modelScale: 10,
           customModelInfo: {
@@ -6541,7 +6541,7 @@ export const modules = {
           model: "CustomModel",
           harvestType: "cuttable",
           solid: !1,
-          tG: wS,
+          Re: sk,
           blockModel: "carpet_yellow_model",
           modelScale: 10,
           customModelInfo: {
@@ -6549,7 +6549,7 @@ export const modules = {
           },
           particlesIgnoreBlack: !0
         },
-        ...(0, jS.G)("Bookshelf", {
+        ...(0, wk.z)("Bookshelf", {
           displayName: {
             translationKey: "item:bookshelf"
           },
@@ -6560,7 +6560,7 @@ export const modules = {
           drops: null,
           rootMetaDesc: "Bookshelf|meta|rot1|books6"
         }),
-        ...(0, jS.db)("Mailbox", {
+        ...(0, wk.db)("Mailbox", {
           displayName: {
             translationKey: "item:mailbox"
           },
@@ -6587,7 +6587,7 @@ export const modules = {
             translationKey: "item:riceDescription"
           }
         },
-        ...(0, jS.pb)("Rice", {
+        ...(0, wk.vb)("Rice", {
           displayName: {
             translationKey: "item:rice"
           },
@@ -6619,7 +6619,7 @@ export const modules = {
             translationKey: "item:cranberriesDescription"
           }
         },
-        ...(0, jS.pb)("Cranberries", {
+        ...(0, wk.vb)("Cranberries", {
           ttb: 400,
           model: "CentreCross",
           solid: !1,
@@ -6666,7 +6666,7 @@ export const modules = {
             translationKey: "item:cottonSeedsDescription"
           }
         },
-        ...(0, jS.pb)("Cotton", {
+        ...(0, wk.vb)("Cotton", {
           displayName: {
             translationKey: "item:cotton"
           },
@@ -6820,7 +6820,7 @@ export const modules = {
           harvestType: "rock",
           unlitStandaloneMesh: !0
         },
-        ...(0, jS.P)(),
+        ...(0, wk.L)(),
         Grenade: {
           displayName: {
             translationKey: "item:grenade"
@@ -6868,7 +6868,7 @@ export const modules = {
           textureInfo: "leaves_cherry",
           harvestType: "cuttable"
         },
-        ...(0, jS.zb)("Fallen Cherry Leaves", {
+        ...(0, wk.Lb)("Fallen Cherry Leaves", {
           displayName: {
             translationKey: "item:fallenCherryLeaves"
           },
@@ -7033,7 +7033,7 @@ export const modules = {
           harvestType: "cuttable",
           drops: "Cherry Leaves"
         },
-        ...(0, jS.zb)("Cherry Slab", {
+        ...(0, wk.Lb)("Cherry Slab", {
           displayName: {
             translationKey: "item:cherrySlab"
           },
@@ -7045,7 +7045,7 @@ export const modules = {
           slabFullBlock: "Cherry Wood Planks",
           rootMetaDesc: "Cherry Slab|meta|rot1|bot"
         }),
-        ...(0, jS.wb)("Cherry Ladder", {
+        ...(0, wk.Gb)("Cherry Ladder", {
           displayName: {
             translationKey: "item:cherryLadder"
           },
@@ -7218,7 +7218,7 @@ export const modules = {
             translationKey: "item:cornSeedsDescription"
           }
         },
-        ...(0, jS.pb)("Corn Seeds", {
+        ...(0, wk.vb)("Corn Seeds", {
           displayName: {
             translationKey: "item:cornSeeds"
           },
@@ -7244,7 +7244,7 @@ export const modules = {
           harvestType: "cuttable",
           drops: "Corn Seeds"
         },
-        ...(0, jS.pb)("Corn Plant", {
+        ...(0, wk.vb)("Corn Plant", {
           displayName: {
             translationKey: "item:corn"
           },
@@ -7274,7 +7274,7 @@ export const modules = {
           drops: "Corn Seeds",
           onMinedAura: 10
         },
-        ...(0, jS.xb)("Loot Chest", {
+        ...(0, wk.Kb)("Loot Chest", {
           displayName: {
             translationKey: "item:chest"
           },
@@ -7308,28 +7308,28 @@ export const modules = {
           stoodOnSpeedMultiplier: 1.4,
           drops: null
         },
-        ...(0, jS.J)((SS => `${SS} Paintball Explosive`), {
-          textureInfo: SS => [`explosive_paint_${(0,IS.xe)(SS)}_side`, `explosive_paint_${(0,IS.xe)(SS)}_top`],
+        ...(0, wk.E)((kk => `${kk} Paintball Explosive`), {
+          textureInfo: kk => [`explosive_paint_${(0,Lk.Ce)(kk)}_side`, `explosive_paint_${(0,Lk.Ce)(kk)}_top`],
           texturePerSide: [0, 0, 1, 1, 0, 0],
           harvestType: "cuttable",
           ttb: 50
         }),
-        ...(0, jS.J)((SS => `${SS} Quick Paintball Explosive`), {
-          textureInfo: SS => `explosive_paint_quick_${(0,IS.xe)(SS)}`,
+        ...(0, wk.E)((kk => `${kk} Quick Paintball Explosive`), {
+          textureInfo: kk => `explosive_paint_quick_${(0,Lk.Ce)(kk)}`,
           harvestType: "cuttable",
           ttb: 50
         }),
-        ...(0, jS.J)((SS => `${SS} Seeking Paintball Explosive`), {
-          textureInfo: SS => `explosive_paint_seeking_${(0,IS.xe)(SS)}`,
+        ...(0, wk.E)((kk => `${kk} Seeking Paintball Explosive`), {
+          textureInfo: kk => `explosive_paint_seeking_${(0,Lk.Ce)(kk)}`,
           harvestType: "cuttable",
           ttb: 50
         }),
-        ...(0, jS.J)((SS => `${SS} Sticky Paintball Explosive`), {
-          textureInfo: SS => `explosive_paint_sticky_${(0,IS.xe)(SS)}`,
+        ...(0, wk.E)((kk => `${kk} Sticky Paintball Explosive`), {
+          textureInfo: kk => `explosive_paint_sticky_${(0,Lk.Ce)(kk)}`,
           harvestType: "cuttable",
           ttb: 50
         }),
-        ...(0, jS.wb)("White Strongbed", {
+        ...(0, wk.Gb)("White Strongbed", {
           displayName: {
             translationKey: "item:whiteStrongbed"
           },
@@ -7342,7 +7342,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "White Strongbed"
         }),
-        ...(0, jS.wb)("_White Strongbed Head", {
+        ...(0, wk.Gb)("_White Strongbed Head", {
           ttb: 480,
           itemTexture: "white_strongbed",
           model: "rotatable",
@@ -7353,7 +7353,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_White Strongbed Head"
         }),
-        ...(0, jS.wb)("Orange Strongbed", {
+        ...(0, wk.Gb)("Orange Strongbed", {
           displayName: {
             translationKey: "item:orangeStrongbed"
           },
@@ -7366,7 +7366,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Orange Strongbed"
         }),
-        ...(0, jS.wb)("_Orange Strongbed Head", {
+        ...(0, wk.Gb)("_Orange Strongbed Head", {
           ttb: 480,
           itemTexture: "orange_strongbed",
           model: "rotatable",
@@ -7377,7 +7377,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Orange Strongbed Head"
         }),
-        ...(0, jS.wb)("Magenta Strongbed", {
+        ...(0, wk.Gb)("Magenta Strongbed", {
           displayName: {
             translationKey: "item:magentaStrongbed"
           },
@@ -7390,7 +7390,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Magenta Strongbed"
         }),
-        ...(0, jS.wb)("_Magenta Strongbed Head", {
+        ...(0, wk.Gb)("_Magenta Strongbed Head", {
           ttb: 480,
           itemTexture: "magenta_strongbed",
           model: "rotatable",
@@ -7401,7 +7401,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Magenta Strongbed Head"
         }),
-        ...(0, jS.wb)("Light Blue Strongbed", {
+        ...(0, wk.Gb)("Light Blue Strongbed", {
           displayName: {
             translationKey: "item:lightBlueStrongbed"
           },
@@ -7414,7 +7414,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Light Blue Strongbed"
         }),
-        ...(0, jS.wb)("_Light Blue Strongbed Head", {
+        ...(0, wk.Gb)("_Light Blue Strongbed Head", {
           ttb: 480,
           itemTexture: "light_blue_strongbed",
           model: "rotatable",
@@ -7425,7 +7425,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Light Blue Strongbed Head"
         }),
-        ...(0, jS.wb)("Yellow Strongbed", {
+        ...(0, wk.Gb)("Yellow Strongbed", {
           displayName: {
             translationKey: "item:yellowStrongbed"
           },
@@ -7438,7 +7438,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Yellow Strongbed"
         }),
-        ...(0, jS.wb)("_Yellow Strongbed Head", {
+        ...(0, wk.Gb)("_Yellow Strongbed Head", {
           ttb: 480,
           itemTexture: "yellow_strongbed",
           model: "rotatable",
@@ -7449,7 +7449,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Yellow Strongbed Head"
         }),
-        ...(0, jS.wb)("Lime Strongbed", {
+        ...(0, wk.Gb)("Lime Strongbed", {
           displayName: {
             translationKey: "item:limeStrongbed"
           },
@@ -7462,7 +7462,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Lime Strongbed"
         }),
-        ...(0, jS.wb)("_Lime Strongbed Head", {
+        ...(0, wk.Gb)("_Lime Strongbed Head", {
           ttb: 480,
           itemTexture: "lime_strongbed",
           model: "rotatable",
@@ -7473,7 +7473,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Lime Strongbed Head"
         }),
-        ...(0, jS.wb)("Pink Strongbed", {
+        ...(0, wk.Gb)("Pink Strongbed", {
           displayName: {
             translationKey: "item:pinkStrongbed"
           },
@@ -7486,7 +7486,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Pink Strongbed"
         }),
-        ...(0, jS.wb)("_Pink Strongbed Head", {
+        ...(0, wk.Gb)("_Pink Strongbed Head", {
           ttb: 480,
           itemTexture: "pink_strongbed",
           model: "rotatable",
@@ -7497,7 +7497,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Pink Strongbed Head"
         }),
-        ...(0, jS.wb)("Gray Strongbed", {
+        ...(0, wk.Gb)("Gray Strongbed", {
           displayName: {
             translationKey: "item:grayStrongbed"
           },
@@ -7510,7 +7510,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Gray Strongbed"
         }),
-        ...(0, jS.wb)("_Gray Strongbed Head", {
+        ...(0, wk.Gb)("_Gray Strongbed Head", {
           ttb: 480,
           itemTexture: "gray_strongbed",
           model: "rotatable",
@@ -7521,7 +7521,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Gray Strongbed Head"
         }),
-        ...(0, jS.wb)("Light Gray Strongbed", {
+        ...(0, wk.Gb)("Light Gray Strongbed", {
           displayName: {
             translationKey: "item:lightGrayStrongbed"
           },
@@ -7534,7 +7534,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Light Gray Strongbed"
         }),
-        ...(0, jS.wb)("_Light Gray Strongbed Head", {
+        ...(0, wk.Gb)("_Light Gray Strongbed Head", {
           ttb: 480,
           itemTexture: "light_gray_strongbed",
           model: "rotatable",
@@ -7545,7 +7545,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Light Gray Strongbed Head"
         }),
-        ...(0, jS.wb)("Cyan Strongbed", {
+        ...(0, wk.Gb)("Cyan Strongbed", {
           displayName: {
             translationKey: "item:cyanStrongbed"
           },
@@ -7558,7 +7558,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Cyan Strongbed"
         }),
-        ...(0, jS.wb)("_Cyan Strongbed Head", {
+        ...(0, wk.Gb)("_Cyan Strongbed Head", {
           ttb: 480,
           itemTexture: "cyan_strongbed",
           model: "rotatable",
@@ -7569,7 +7569,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Cyan Strongbed Head"
         }),
-        ...(0, jS.wb)("Purple Strongbed", {
+        ...(0, wk.Gb)("Purple Strongbed", {
           displayName: {
             translationKey: "item:purpleStrongbed"
           },
@@ -7582,7 +7582,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Purple Strongbed"
         }),
-        ...(0, jS.wb)("_Purple Strongbed Head", {
+        ...(0, wk.Gb)("_Purple Strongbed Head", {
           ttb: 480,
           itemTexture: "purple_strongbed",
           model: "rotatable",
@@ -7593,7 +7593,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Purple Strongbed Head"
         }),
-        ...(0, jS.wb)("Blue Strongbed", {
+        ...(0, wk.Gb)("Blue Strongbed", {
           displayName: {
             translationKey: "item:blueStrongbed"
           },
@@ -7606,7 +7606,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Blue Strongbed"
         }),
-        ...(0, jS.wb)("_Blue Strongbed Head", {
+        ...(0, wk.Gb)("_Blue Strongbed Head", {
           ttb: 480,
           itemTexture: "blue_strongbed",
           model: "rotatable",
@@ -7617,7 +7617,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Blue Strongbed Head"
         }),
-        ...(0, jS.wb)("Brown Strongbed", {
+        ...(0, wk.Gb)("Brown Strongbed", {
           displayName: {
             translationKey: "item:brownStrongbed"
           },
@@ -7630,7 +7630,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Brown Strongbed"
         }),
-        ...(0, jS.wb)("_Brown Strongbed Head", {
+        ...(0, wk.Gb)("_Brown Strongbed Head", {
           ttb: 480,
           itemTexture: "brown_strongbed",
           model: "rotatable",
@@ -7641,7 +7641,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Brown Strongbed Head"
         }),
-        ...(0, jS.wb)("Green Strongbed", {
+        ...(0, wk.Gb)("Green Strongbed", {
           displayName: {
             translationKey: "item:greenStrongbed"
           },
@@ -7654,7 +7654,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Green Strongbed"
         }),
-        ...(0, jS.wb)("_Green Strongbed Head", {
+        ...(0, wk.Gb)("_Green Strongbed Head", {
           ttb: 480,
           itemTexture: "green_strongbed",
           model: "rotatable",
@@ -7665,7 +7665,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Green Strongbed Head"
         }),
-        ...(0, jS.wb)("Red Strongbed", {
+        ...(0, wk.Gb)("Red Strongbed", {
           displayName: {
             translationKey: "item:redStrongbed"
           },
@@ -7678,7 +7678,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Red Strongbed"
         }),
-        ...(0, jS.wb)("_Red Strongbed Head", {
+        ...(0, wk.Gb)("_Red Strongbed Head", {
           ttb: 480,
           itemTexture: "red_strongbed",
           model: "rotatable",
@@ -7689,7 +7689,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "_Red Strongbed Head"
         }),
-        ...(0, jS.wb)("Black Strongbed", {
+        ...(0, wk.Gb)("Black Strongbed", {
           displayName: {
             translationKey: "item:blackStrongbed"
           },
@@ -7702,7 +7702,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Black Strongbed"
         }),
-        ...(0, jS.wb)("_Black Strongbed Head", {
+        ...(0, wk.Gb)("_Black Strongbed Head", {
           ttb: 480,
           itemTexture: "black_strongbed",
           model: "rotatable",
@@ -7745,10 +7745,10 @@ export const modules = {
             animTextures: ["lava0", "lava1", "lava2", "lava3", "lava4", "lava5", "lava6", "lava7"],
             animationInterval: 800
           },
-          aa: !0,
+          qj: !0,
           drops: null,
           harvestType: "rock",
-          dK: [14, 8, 2]
+          Ve: [14, 8, 2]
         },
         "Fat Brown Mushroom": {
           displayName: {
@@ -8006,38 +8006,38 @@ export const modules = {
           harvestType: "rock",
           unlitStandaloneMesh: !0
         },
-        ...(0, jS.J)((SS => `Spawn Block (${SS})`), {
-          displayName: SS => ({
-            translationKey: `item:${(0,IS.ue)(SS)}SpawnBlock`
+        ...(0, wk.E)((kk => `Spawn Block (${kk})`), {
+          displayName: kk => ({
+            translationKey: `item:${(0,Lk.ye)(kk)}SpawnBlock`
           }),
           ttb: 1500,
-          textureInfo: SS => [`${(0,IS.xe)(SS)}_spawn_block_top[rot[1`, `${(0,IS.xe)(SS)}_spawn_block_top[rot[2`, `${(0,IS.xe)(SS)}_spawn_block_top[rot[3`, `${(0,IS.xe)(SS)}_spawn_block_top[rot[4`, `${(0,IS.xe)(SS)}_spawn_block_side`],
+          textureInfo: kk => [`${(0,Lk.Ce)(kk)}_spawn_block_top[rot[1`, `${(0,Lk.Ce)(kk)}_spawn_block_top[rot[2`, `${(0,Lk.Ce)(kk)}_spawn_block_top[rot[3`, `${(0,Lk.Ce)(kk)}_spawn_block_top[rot[4`, `${(0,Lk.Ce)(kk)}_spawn_block_side`],
           texturePerSide: [4, 4, 2, 4, 4, 4],
           harvestType: "rock",
-          rootMetaDesc: SS => `Spawn Block (${SS})|meta|rot1`,
+          rootMetaDesc: kk => `Spawn Block (${kk})|meta|rot1`,
           description: {
             translationKey: "item:spawnBlockDescription"
           }
         }),
-        ...(0, jS.J)((SS => `Spawn Block (${SS})|meta|rot2`), {
+        ...(0, wk.E)((kk => `Spawn Block (${kk})|meta|rot2`), {
           ttb: 1500,
-          textureInfo: SS => [`${(0,IS.xe)(SS)}_spawn_block_top[rot[1`, `${(0,IS.xe)(SS)}_spawn_block_top[rot[2`, `${(0,IS.xe)(SS)}_spawn_block_top[rot[3`, `${(0,IS.xe)(SS)}_spawn_block_top[rot[4`, `${(0,IS.xe)(SS)}_spawn_block_side`],
+          textureInfo: kk => [`${(0,Lk.Ce)(kk)}_spawn_block_top[rot[1`, `${(0,Lk.Ce)(kk)}_spawn_block_top[rot[2`, `${(0,Lk.Ce)(kk)}_spawn_block_top[rot[3`, `${(0,Lk.Ce)(kk)}_spawn_block_top[rot[4`, `${(0,Lk.Ce)(kk)}_spawn_block_side`],
           texturePerSide: [4, 4, 3, 4, 4, 4],
           harvestType: "rock"
         }),
-        ...(0, jS.J)((SS => `Spawn Block (${SS})|meta|rot3`), {
+        ...(0, wk.E)((kk => `Spawn Block (${kk})|meta|rot3`), {
           ttb: 1500,
-          textureInfo: SS => [`${(0,IS.xe)(SS)}_spawn_block_top[rot[1`, `${(0,IS.xe)(SS)}_spawn_block_top[rot[2`, `${(0,IS.xe)(SS)}_spawn_block_top[rot[3`, `${(0,IS.xe)(SS)}_spawn_block_top[rot[4`, `${(0,IS.xe)(SS)}_spawn_block_side`],
+          textureInfo: kk => [`${(0,Lk.Ce)(kk)}_spawn_block_top[rot[1`, `${(0,Lk.Ce)(kk)}_spawn_block_top[rot[2`, `${(0,Lk.Ce)(kk)}_spawn_block_top[rot[3`, `${(0,Lk.Ce)(kk)}_spawn_block_top[rot[4`, `${(0,Lk.Ce)(kk)}_spawn_block_side`],
           texturePerSide: [4, 4, 0, 4, 4, 4],
           harvestType: "rock"
         }),
-        ...(0, jS.J)((SS => `Spawn Block (${SS})|meta|rot4`), {
+        ...(0, wk.E)((kk => `Spawn Block (${kk})|meta|rot4`), {
           ttb: 1500,
-          textureInfo: SS => [`${(0,IS.xe)(SS)}_spawn_block_top[rot[1`, `${(0,IS.xe)(SS)}_spawn_block_top[rot[2`, `${(0,IS.xe)(SS)}_spawn_block_top[rot[3`, `${(0,IS.xe)(SS)}_spawn_block_top[rot[4`, `${(0,IS.xe)(SS)}_spawn_block_side`],
+          textureInfo: kk => [`${(0,Lk.Ce)(kk)}_spawn_block_top[rot[1`, `${(0,Lk.Ce)(kk)}_spawn_block_top[rot[2`, `${(0,Lk.Ce)(kk)}_spawn_block_top[rot[3`, `${(0,Lk.Ce)(kk)}_spawn_block_top[rot[4`, `${(0,Lk.Ce)(kk)}_spawn_block_side`],
           texturePerSide: [4, 4, 1, 4, 4, 4],
           harvestType: "rock"
         }),
-        ...(0, jS.xb)("Checkpoint Block", {
+        ...(0, wk.Kb)("Checkpoint Block", {
           displayName: {
             translationKey: "item:checkpointBlock"
           },
@@ -8054,7 +8054,7 @@ export const modules = {
           [0, 0, 0, 0, 0, 0],
           [0, 0, 1, 0, 0, 0]
         ]),
-        ...(0, jS.xb)("Custom Lobby Block", {
+        ...(0, wk.Kb)("Custom Lobby Block", {
           displayName: {
             translationKey: "item:customLobbyBlock"
           },
@@ -8071,19 +8071,19 @@ export const modules = {
           [4, 4, 0, 4, 4, 4],
           [4, 4, 1, 4, 4, 4]
         ]),
-        ...(0, jS.J)((SS => `Generator Spawn Block (${SS})`), {
-          displayName: SS => ({
-            translationKey: `item:${(0,IS.ue)(SS)}GeneratorSpawnBlock`
+        ...(0, wk.E)((kk => `Generator Spawn Block (${kk})`), {
+          displayName: kk => ({
+            translationKey: `item:${(0,Lk.ye)(kk)}GeneratorSpawnBlock`
           }),
           ttb: 1500,
-          textureInfo: SS => [`${(0,IS.xe)(SS)}_gen_spawn_top`, `${(0,IS.xe)(SS)}_gen_spawn_coal`, `${(0,IS.xe)(SS)}_gen_spawn_iron`],
+          textureInfo: kk => [`${(0,Lk.Ce)(kk)}_gen_spawn_top`, `${(0,Lk.Ce)(kk)}_gen_spawn_coal`, `${(0,Lk.Ce)(kk)}_gen_spawn_iron`],
           texturePerSide: [2, 2, 0, 0, 1, 1],
           harvestType: "rock",
           description: {
             translationKey: "item:teamGeneratorSpawnBlockDescription"
           }
         }, ["Red", "Blue", "Lime", "Yellow", "Cyan", "White", "Pink", "Gray"]),
-        ...(0, jS.xb)("Trader Shop Spawn Block", {
+        ...(0, wk.Kb)("Trader Shop Spawn Block", {
           displayName: {
             translationKey: "item:traderShopSpawnBlock"
           },
@@ -8100,7 +8100,7 @@ export const modules = {
           [5, 5, 0, 4, 4, 4],
           [5, 5, 1, 4, 4, 4]
         ]),
-        ...(0, jS.xb)("Wizard Shop Spawn Block", {
+        ...(0, wk.Kb)("Wizard Shop Spawn Block", {
           displayName: {
             translationKey: "item:wizardShopSpawnBlock"
           },
@@ -8242,12 +8242,12 @@ export const modules = {
           texturePerSide: [0, 0, 1, 1, 0, 0],
           harvestType: "rock"
         },
-        ...(0, jS.hb)("Pig"),
-        ...(0, jS.hb)("Cow"),
-        ...(0, jS.hb)("Sheep"),
-        ...(0, jS.hb)("Cave Golem"),
-        ...(0, jS.hb)("Draugr Zombie"),
-        ...(0, jS.hb)("Draugr Skeleton"),
+        ...(0, wk.lb)("Pig"),
+        ...(0, wk.lb)("Cow"),
+        ...(0, wk.lb)("Sheep"),
+        ...(0, wk.lb)("Cave Golem"),
+        ...(0, wk.lb)("Draugr Zombie"),
+        ...(0, wk.lb)("Draugr Skeleton"),
         "Empty Spawner Block": {
           displayName: {
             translationKey: "item:emptyMobSpawnerBlock"
@@ -8269,9 +8269,9 @@ export const modules = {
           particlesIgnoreBlack: !0,
           twoDBlockItem: !0
         },
-        ...(0, jS.hb)("Frost Golem"),
-        ...(0, jS.hb)("Frost Zombie"),
-        ...(0, jS.hb)("Frost Skeleton"),
+        ...(0, wk.lb)("Frost Golem"),
+        ...(0, wk.lb)("Frost Zombie"),
+        ...(0, wk.lb)("Frost Skeleton"),
         "Snowy Messy Stone": {
           displayName: {
             translationKey: "item:snowyMessyStone"
@@ -8280,7 +8280,7 @@ export const modules = {
           textureInfo: "snowy_messy_stone",
           harvestType: "rock"
         },
-        ...(0, jS.zb)("Snowy Stone Slab", {
+        ...(0, wk.Lb)("Snowy Stone Slab", {
           displayName: {
             translationKey: "item:snowyStoneSlab"
           },
@@ -8292,7 +8292,7 @@ export const modules = {
           slabFullBlock: "Snowy Messy Stone",
           rootMetaDesc: "Snowy Stone Slab|meta|rot1|bot"
         }),
-        ...(0, jS.hb)("Draugr Knight"),
+        ...(0, wk.lb)("Draugr Knight"),
         "Packed Snow": {
           displayName: {
             translationKey: "item:packedSnow"
@@ -8520,7 +8520,7 @@ export const modules = {
           harvestType: "cuttable",
           drops: "Spectral Leaves"
         },
-        ...(0, jS.zb)("Spectral Slab", {
+        ...(0, wk.Lb)("Spectral Slab", {
           displayName: {
             translationKey: "item:spectralSlab"
           },
@@ -8532,7 +8532,7 @@ export const modules = {
           slabFullBlock: "Spectral Wood Planks",
           rootMetaDesc: "Spectral Slab|meta|rot1|bot"
         }),
-        ...(0, jS.wb)("Spectral Ladder", {
+        ...(0, wk.Gb)("Spectral Ladder", {
           displayName: {
             translationKey: "item:spectralLadder"
           },
@@ -8547,7 +8547,7 @@ export const modules = {
           heldItemScale: 1,
           blockModelItem: !0
         }),
-        ...(0, jS.wb)("Wood Enchanting Table", {
+        ...(0, wk.Gb)("Wood Enchanting Table", {
           displayName: {
             translationKey: "item:woodEnchantingTable"
           },
@@ -8561,9 +8561,9 @@ export const modules = {
           description: {
             translationKey: "item:enchantingTableDescription"
           },
-          dK: [2, 0, 2]
+          Ve: [2, 0, 2]
         }),
-        ...(0, jS.wb)("Stone Enchanting Table", {
+        ...(0, wk.Gb)("Stone Enchanting Table", {
           displayName: {
             translationKey: "item:stoneEnchantingTable"
           },
@@ -8577,9 +8577,9 @@ export const modules = {
           description: {
             translationKey: "item:enchantingTableDescription"
           },
-          dK: [4, 0, 4]
+          Ve: [4, 0, 4]
         }),
-        ...(0, jS.wb)("Iron Enchanting Table", {
+        ...(0, wk.Gb)("Iron Enchanting Table", {
           displayName: {
             translationKey: "item:ironEnchantingTable"
           },
@@ -8593,9 +8593,9 @@ export const modules = {
           description: {
             translationKey: "item:enchantingTableDescription"
           },
-          dK: [6, 0, 6]
+          Ve: [6, 0, 6]
         }),
-        ...(0, jS.wb)("Gold Enchanting Table", {
+        ...(0, wk.Gb)("Gold Enchanting Table", {
           displayName: {
             translationKey: "item:goldEnchantingTable"
           },
@@ -8609,9 +8609,9 @@ export const modules = {
           description: {
             translationKey: "item:enchantingTableDescription"
           },
-          dK: [8, 0, 8]
+          Ve: [8, 0, 8]
         }),
-        ...(0, jS.wb)("Diamond Enchanting Table", {
+        ...(0, wk.Gb)("Diamond Enchanting Table", {
           displayName: {
             translationKey: "item:diamondEnchantingTable"
           },
@@ -8625,7 +8625,7 @@ export const modules = {
           description: {
             translationKey: "item:enchantingTableDescription"
           },
-          dK: [10, 0, 10]
+          Ve: [10, 0, 10]
         }),
         "Pine Grass Block": {
           displayName: {
@@ -8640,7 +8640,7 @@ export const modules = {
             place: "grass"
           }
         },
-        ...(0, jS.zb)("Pine Grass Slab", {
+        ...(0, wk.Lb)("Pine Grass Slab", {
           displayName: {
             translationKey: "item:pineGrassSlab"
           },
@@ -8703,11 +8703,11 @@ export const modules = {
           texturePerSide: [0, 0, 1, 1, 0, 0],
           harvestType: "wood"
         },
-        ...(0, jS.hb)("Wolf"),
-        ...(0, jS.hb)("Bear"),
-        ...(0, jS.hb)("Deer"),
-        ...(0, jS.hb)("Stag"),
-        ...(0, jS.wb)("Bone Antlers", {
+        ...(0, wk.lb)("Wolf"),
+        ...(0, wk.lb)("Bear"),
+        ...(0, wk.lb)("Deer"),
+        ...(0, wk.lb)("Stag"),
+        ...(0, wk.Gb)("Bone Antlers", {
           displayName: {
             translationKey: "item:boneAntlers"
           },
@@ -8724,7 +8724,7 @@ export const modules = {
           modelScale: 10,
           particlesIgnoreBlack: !0
         }),
-        ...(0, jS.wb)("Gold Antlers", {
+        ...(0, wk.Gb)("Gold Antlers", {
           displayName: {
             translationKey: "item:goldAntlers"
           },
@@ -8740,10 +8740,10 @@ export const modules = {
           blockModel: "gold_antlers_model",
           modelScale: 10,
           particlesIgnoreBlack: !0,
-          dK: [7, 7, 2]
+          Ve: [7, 7, 2]
         }),
-        ...(0, jS.hb)("Gold Watermelon Stag"),
-        ...(0, jS.wb)("Salvaging Table", {
+        ...(0, wk.lb)("Gold Watermelon Stag"),
+        ...(0, wk.Gb)("Salvaging Table", {
           displayName: {
             translationKey: "item:salvagingTable"
           },
@@ -8753,7 +8753,7 @@ export const modules = {
           description: {
             translationKey: "item:salvagingTableDescription"
           },
-          ...DS("Salvaging Table", "salvaging_table")
+          ...Qk("Salvaging Table", "salvaging_table")
         }),
         Chalk: {
           displayName: {
@@ -8766,49 +8766,49 @@ export const modules = {
           textureInfo: "chalk",
           harvestType: "rock"
         },
-        ...(0, jS.J)((SS => `${SS} Chalk`), {
-          displayName: SS => ({
+        ...(0, wk.E)((kk => `${kk} Chalk`), {
+          displayName: kk => ({
             translationKey: "item:colouredChalk",
             params: {
-              colour: `$t(colour:${(0,IS.xe)(SS)})`
+              colour: `$t(colour:${(0,Lk.Ce)(kk)})`
             }
           }),
-          description: SS => ({
+          description: kk => ({
             translationKey: "item:colouredChalkDescription",
             params: {
-              colour: `$t(colour:${(0,IS.xe)(SS)})`
+              colour: `$t(colour:${(0,Lk.Ce)(kk)})`
             }
           }),
           ttb: 850,
-          textureInfo: SS => `chalk_${(0,IS.xe)(SS)}`,
+          textureInfo: kk => `chalk_${(0,Lk.Ce)(kk)}`,
           harvestType: "rock"
         }),
-        ...(0, jS.J)((SS => `${SS} Chalk Bricks`), {
-          displayName: SS => ({
+        ...(0, wk.E)((kk => `${kk} Chalk Bricks`), {
+          displayName: kk => ({
             translationKey: "item:colouredChalkBricks",
             params: {
-              colour: `$t(colour:${(0,IS.xe)(SS)})`
+              colour: `$t(colour:${(0,Lk.Ce)(kk)})`
             }
           }),
-          description: SS => ({
+          description: kk => ({
             translationKey: "item:colouredChalkBricksDescription",
             params: {
-              colour: `$t(colour:${(0,IS.xe)(SS)})`
+              colour: `$t(colour:${(0,Lk.Ce)(kk)})`
             }
           }),
           ttb: 850,
-          textureInfo: SS => `chalk_bricks_${(0,IS.xe)(SS)}`,
+          textureInfo: kk => `chalk_bricks_${(0,Lk.Ce)(kk)}`,
           harvestType: "rock"
         }),
-        ...(0, jS.M)("$colour$ Chalk Slab", "$colour$ Chalk", "chalk_$colour$", "item:colouredChalkSlab", "item:colouredChalkSlabDescription", {
+        ...(0, wk.H)("$colour$ Chalk Slab", "$colour$ Chalk", "chalk_$colour$", "item:colouredChalkSlab", "item:colouredChalkSlabDescription", {
           ttb: 550,
           harvestType: "rock"
         }),
-        ...(0, jS.M)("$colour$ Chalk Bricks Slab", "$colour$ Chalk Bricks", ["chalk_bricks_slab_side_$colour$", "chalk_bricks_$colour$"], "item:colouredChalkBricksSlab", "item:colouredChalkBricksSlabDescription", {
+        ...(0, wk.H)("$colour$ Chalk Bricks Slab", "$colour$ Chalk Bricks", ["chalk_bricks_slab_side_$colour$", "chalk_bricks_$colour$"], "item:colouredChalkBricksSlab", "item:colouredChalkBricksSlabDescription", {
           ttb: 550,
           harvestType: "rock"
         }),
-        ...(0, jS.wb)("Leaf Bed", {
+        ...(0, wk.Gb)("Leaf Bed", {
           displayName: {
             translationKey: "item:leafBed"
           },
@@ -8821,7 +8821,7 @@ export const modules = {
           modelScale: 5,
           blockModel: "Leaf Bed"
         }),
-        ...(0, jS.wb)("_Leaf Bed Head", {
+        ...(0, wk.Gb)("_Leaf Bed Head", {
           ttb: 240,
           itemTexture: "leaf_bed",
           model: "rotatable",
@@ -8845,7 +8845,7 @@ export const modules = {
             place: "grass"
           }
         },
-        ...(0, jS.zb)("Jungle Grass Slab", {
+        ...(0, wk.Lb)("Jungle Grass Slab", {
           displayName: {
             translationKey: "item:jungleGrassSlab"
           },
@@ -9098,7 +9098,7 @@ export const modules = {
           harvestType: "cuttable",
           drops: "Mango Leaves"
         },
-        ...(0, jS.zb)("Mango Slab", {
+        ...(0, wk.Lb)("Mango Slab", {
           displayName: {
             translationKey: "item:mangoSlab"
           },
@@ -9110,7 +9110,7 @@ export const modules = {
           slabFullBlock: "Mango Wood Planks",
           rootMetaDesc: "Mango Slab|meta|rot1|bot"
         }),
-        ...(0, jS.wb)("Mango Ladder", {
+        ...(0, wk.Gb)("Mango Ladder", {
           displayName: {
             translationKey: "item:mangoLadder"
           },
@@ -9165,7 +9165,7 @@ export const modules = {
           harvestType: "cuttable",
           drops: "Banana Seeds"
         },
-        ...(0, jS.wb)("Attached Banana Stem", {
+        ...(0, wk.Gb)("Attached Banana Stem", {
           displayName: {
             translationKey: "item:attachedBananaStem"
           },
@@ -9231,8 +9231,8 @@ export const modules = {
             upForceScalar: .95
           }
         },
-        ...(0, jS.hb)("Gorilla"),
-        ...(0, jS.hb)("Wildcat"),
+        ...(0, wk.lb)("Gorilla"),
+        ...(0, wk.lb)("Wildcat"),
         "Fruity Maple Leaves": {
           displayName: {
             translationKey: "item:fruityMapleLeaves"
@@ -9324,8 +9324,8 @@ export const modules = {
             drops: "Fruity Mango Leaves"
           }
         },
-        ...(0, jS.hb)("Draugr Huntress"),
-        ...(0, jS.hb)("Magma Golem"),
+        ...(0, wk.lb)("Draugr Huntress"),
+        ...(0, wk.lb)("Magma Golem"),
         "Black Portal": {
           displayName: {
             translationKey: "item:blackPortal"
@@ -9338,7 +9338,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("Black")
+          Ve: (0, wk.yb)("Black")
         },
         "Blue Portal": {
           displayName: {
@@ -9352,7 +9352,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("Blue")
+          Ve: (0, wk.yb)("Blue")
         },
         "Brown Portal": {
           displayName: {
@@ -9366,7 +9366,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("Brown")
+          Ve: (0, wk.yb)("Brown")
         },
         "Cyan Portal": {
           displayName: {
@@ -9380,7 +9380,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("Cyan")
+          Ve: (0, wk.yb)("Cyan")
         },
         "Gray Portal": {
           displayName: {
@@ -9394,7 +9394,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("Gray")
+          Ve: (0, wk.yb)("Gray")
         },
         "Green Portal": {
           displayName: {
@@ -9408,7 +9408,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("Green")
+          Ve: (0, wk.yb)("Green")
         },
         "Grey Portal": {
           displayName: {
@@ -9422,7 +9422,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("Grey")
+          Ve: (0, wk.yb)("Grey")
         },
         "Light Blue Portal": {
           displayName: {
@@ -9436,7 +9436,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("Light Blue")
+          Ve: (0, wk.yb)("Light Blue")
         },
         "Light Gray Portal": {
           displayName: {
@@ -9450,7 +9450,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("Light Gray")
+          Ve: (0, wk.yb)("Light Gray")
         },
         "Lime Portal": {
           displayName: {
@@ -9464,7 +9464,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("Lime")
+          Ve: (0, wk.yb)("Lime")
         },
         "Magenta Portal": {
           displayName: {
@@ -9478,7 +9478,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("Magenta")
+          Ve: (0, wk.yb)("Magenta")
         },
         "Orange Portal": {
           displayName: {
@@ -9492,7 +9492,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("Orange")
+          Ve: (0, wk.yb)("Orange")
         },
         "Pink Portal": {
           displayName: {
@@ -9506,7 +9506,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("Pink")
+          Ve: (0, wk.yb)("Pink")
         },
         "Purple Portal": {
           displayName: {
@@ -9520,7 +9520,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("Purple")
+          Ve: (0, wk.yb)("Purple")
         },
         "Red Portal": {
           displayName: {
@@ -9534,7 +9534,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("Red")
+          Ve: (0, wk.yb)("Red")
         },
         "White Portal": {
           displayName: {
@@ -9548,7 +9548,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("White")
+          Ve: (0, wk.yb)("White")
         },
         "Yellow Portal": {
           displayName: {
@@ -9562,7 +9562,7 @@ export const modules = {
           drops: null,
           harvestType: "rock",
           solid: !0,
-          dK: (0, jS.qb)("Yellow")
+          Ve: (0, wk.yb)("Yellow")
         },
         "Leather Block": {
           displayName: {
@@ -9577,7 +9577,7 @@ export const modules = {
             place: "cloth"
           }
         },
-        ...(0, jS.hb)("Horse"),
+        ...(0, wk.lb)("Horse"),
         "Tomato Plant": {
           displayName: {
             translationKey: "item:tomato"
@@ -9589,7 +9589,7 @@ export const modules = {
           solid: !1,
           harvestType: "cuttable"
         },
-        ...(0, jS.pb)("Tomato Plant", {
+        ...(0, wk.vb)("Tomato Plant", {
           displayName: {
             translationKey: "item:tomato"
           },
@@ -9642,7 +9642,7 @@ export const modules = {
             translationKey: "item:carrotSeedsDescription"
           }
         },
-        ...(0, jS.pb)("Carrot Plant", {
+        ...(0, wk.vb)("Carrot Plant", {
           displayName: {
             translationKey: "item:carrotSeeds"
           },
@@ -9686,7 +9686,7 @@ export const modules = {
             translationKey: "item:potatoSeedsDescription"
           }
         },
-        ...(0, jS.pb)("Potato Plant", {
+        ...(0, wk.vb)("Potato Plant", {
           displayName: {
             translationKey: "item:potatoSeeds"
           },
@@ -9726,7 +9726,7 @@ export const modules = {
           solid: !1,
           harvestType: "cuttable"
         },
-        ...(0, jS.pb)("Strawberry Bush", {
+        ...(0, wk.vb)("Strawberry Bush", {
           displayName: {
             translationKey: "item:strawberries"
           },
@@ -9755,7 +9755,7 @@ export const modules = {
           solid: !1,
           harvestType: "cuttable"
         },
-        ...(0, jS.pb)("Sugar Cane Plant", {
+        ...(0, wk.vb)("Sugar Cane Plant", {
           displayName: {
             translationKey: "item:sugarCane"
           },
@@ -9804,7 +9804,7 @@ export const modules = {
           solid: !1,
           harvestType: "cuttable"
         },
-        ...(0, jS.pb)("Lettuce Plant", {
+        ...(0, wk.vb)("Lettuce Plant", {
           displayName: {
             translationKey: "item:lettuce"
           },
@@ -9841,7 +9841,7 @@ export const modules = {
           solid: !1,
           harvestType: "cuttable"
         },
-        ...(0, jS.pb)("Coffee Plant", {
+        ...(0, wk.vb)("Coffee Plant", {
           displayName: {
             translationKey: "item:coffeeBean"
           },
@@ -9878,7 +9878,7 @@ export const modules = {
           solid: !1,
           harvestType: "cuttable"
         },
-        ...(0, jS.pb)("Cauliflower Plant", {
+        ...(0, wk.vb)("Cauliflower Plant", {
           displayName: {
             translationKey: "item:cauliflower"
           },
@@ -9915,7 +9915,7 @@ export const modules = {
           solid: !1,
           harvestType: "cuttable"
         },
-        ...(0, jS.pb)("Parsnip Plant", {
+        ...(0, wk.vb)("Parsnip Plant", {
           displayName: {
             translationKey: "item:parsnip"
           },
@@ -9952,7 +9952,7 @@ export const modules = {
           solid: !1,
           harvestType: "cuttable"
         },
-        ...(0, jS.pb)("Blueberry Bush", {
+        ...(0, wk.vb)("Blueberry Bush", {
           displayName: {
             translationKey: "item:blueberries"
           },
@@ -9981,7 +9981,7 @@ export const modules = {
           solid: !1,
           harvestType: "cuttable"
         },
-        ...(0, jS.pb)("Red Cabbage Plant", {
+        ...(0, wk.vb)("Red Cabbage Plant", {
           displayName: {
             translationKey: "item:redCabbage"
           },
@@ -10022,7 +10022,7 @@ export const modules = {
             translationKey: "item:beetrootSeedsDescription"
           }
         },
-        ...(0, jS.pb)("Beetroot Plant", {
+        ...(0, wk.vb)("Beetroot Plant", {
           displayName: {
             translationKey: "item:beetrootSeeds"
           },
@@ -10082,7 +10082,7 @@ export const modules = {
           },
           canBePlacedOver: !0
         },
-        ...(0, jS.xb)("Iron Chest", {
+        ...(0, wk.Kb)("Iron Chest", {
           displayName: {
             translationKey: "item:ironChest"
           },
@@ -10175,7 +10175,7 @@ export const modules = {
             translationKey: "item:beetrootSeedsDescription"
           }
         },
-        ...(0, jS.E)("White Banner", {
+        ...(0, wk.x)("White Banner", {
           displayName: {
             translationKey: "item:whiteBanner"
           },
@@ -10196,7 +10196,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Orange Banner", {
+        ...(0, wk.x)("Orange Banner", {
           displayName: {
             translationKey: "item:orangeBanner"
           },
@@ -10217,7 +10217,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Magenta Banner", {
+        ...(0, wk.x)("Magenta Banner", {
           displayName: {
             translationKey: "item:magentaBanner"
           },
@@ -10238,7 +10238,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Light Blue Banner", {
+        ...(0, wk.x)("Light Blue Banner", {
           displayName: {
             translationKey: "item:lightBlueBanner"
           },
@@ -10259,7 +10259,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Yellow Banner", {
+        ...(0, wk.x)("Yellow Banner", {
           displayName: {
             translationKey: "item:yellowBanner"
           },
@@ -10280,7 +10280,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Lime Banner", {
+        ...(0, wk.x)("Lime Banner", {
           displayName: {
             translationKey: "item:limeBanner"
           },
@@ -10301,7 +10301,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Pink Banner", {
+        ...(0, wk.x)("Pink Banner", {
           displayName: {
             translationKey: "item:pinkBanner"
           },
@@ -10322,7 +10322,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Gray Banner", {
+        ...(0, wk.x)("Gray Banner", {
           displayName: {
             translationKey: "item:grayBanner"
           },
@@ -10343,7 +10343,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Light Gray Banner", {
+        ...(0, wk.x)("Light Gray Banner", {
           displayName: {
             translationKey: "item:lightGrayBanner"
           },
@@ -10364,7 +10364,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Cyan Banner", {
+        ...(0, wk.x)("Cyan Banner", {
           displayName: {
             translationKey: "item:cyanBanner"
           },
@@ -10385,7 +10385,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Purple Banner", {
+        ...(0, wk.x)("Purple Banner", {
           displayName: {
             translationKey: "item:purpleBanner"
           },
@@ -10406,7 +10406,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Blue Banner", {
+        ...(0, wk.x)("Blue Banner", {
           displayName: {
             translationKey: "item:blueBanner"
           },
@@ -10427,7 +10427,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Brown Banner", {
+        ...(0, wk.x)("Brown Banner", {
           displayName: {
             translationKey: "item:brownBanner"
           },
@@ -10448,7 +10448,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Green Banner", {
+        ...(0, wk.x)("Green Banner", {
           displayName: {
             translationKey: "item:greenBanner"
           },
@@ -10469,7 +10469,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Red Banner", {
+        ...(0, wk.x)("Red Banner", {
           displayName: {
             translationKey: "item:redBanner"
           },
@@ -10490,7 +10490,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Black Banner", {
+        ...(0, wk.x)("Black Banner", {
           displayName: {
             translationKey: "item:blackBanner"
           },
@@ -10511,7 +10511,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Draugr Banner", {
+        ...(0, wk.x)("Draugr Banner", {
           displayName: {
             translationKey: "item:draugrBanner"
           },
@@ -10532,11 +10532,11 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.hb)("Spirit Golem"),
-        ...(0, jS.hb)("Spirit Wolf"),
-        ...(0, jS.hb)("Spirit Bear"),
-        ...(0, jS.hb)("Spirit Stag"),
-        ...(0, jS.hb)("Spirit Gorilla"),
+        ...(0, wk.lb)("Spirit Golem"),
+        ...(0, wk.lb)("Spirit Wolf"),
+        ...(0, wk.lb)("Spirit Bear"),
+        ...(0, wk.lb)("Spirit Stag"),
+        ...(0, wk.lb)("Spirit Gorilla"),
         "Fertilised Soil": {
           displayName: {
             translationKey: "item:fertilisedSoil"
@@ -10546,13 +10546,13 @@ export const modules = {
           harvestType: "granule",
           drops: "Tilled Soil"
         },
-        ...(0, jS.gb)("Sheep"),
-        ...(0, jS.gb)("Cow"),
-        ...(0, jS.gb)("Pig"),
-        ...(0, jS.gb)("Horse"),
-        ...(0, jS.gb)("Wolf"),
-        ...(0, jS.gb)("Deer"),
-        ...(0, jS.gb)("Wildcat"),
+        ...(0, wk.jb)("Sheep"),
+        ...(0, wk.jb)("Cow"),
+        ...(0, wk.jb)("Pig"),
+        ...(0, wk.jb)("Horse"),
+        ...(0, wk.jb)("Wolf"),
+        ...(0, wk.jb)("Deer"),
+        ...(0, wk.jb)("Wildcat"),
         "Hollow Crate": {
           displayName: {
             translationKey: "item:hollowCrate"
@@ -10562,10 +10562,10 @@ export const modules = {
           harvestType: "wood",
           solid: !1
         },
-        ...(0, jS.hb)("Draugr Warper"),
-        ...(0, jS.sb)("Radar", "_Radar Dish Up", "active_radar", "radar_side_active", "radar_top_active"),
-        ...(0, jS.sb)("Inactive Radar", "_Radar Dish Down", "inactive_radar", "radar_side_inactive", "radar_top_inactive"),
-        ...(0, jS.sb)("Active Radar", "_Radar Dish Up", "active_radar", "radar_side_active", {
+        ...(0, wk.lb)("Draugr Warper"),
+        ...(0, wk.Cb)("Radar", "_Radar Dish Up", "active_radar", "radar_side_active", "radar_top_active"),
+        ...(0, wk.Cb)("Inactive Radar", "_Radar Dish Down", "inactive_radar", "radar_side_inactive", "radar_top_inactive"),
+        ...(0, wk.Cb)("Active Radar", "_Radar Dish Up", "active_radar", "radar_side_active", {
           textureInfo: ["radar_side_active", "radar_bottom", {
             animTextures: ["radar_screen0[rot[1", "radar_screen1[rot[1", "radar_screen2[rot[1", "radar_screen3[rot[1"],
             animationInterval: 275
@@ -10602,7 +10602,7 @@ export const modules = {
           textureInfo: "light_blue_lucky_block",
           harvestType: "rock"
         },
-        ...(0, jS.wb)("Gold Trophy", {
+        ...(0, wk.Gb)("Gold Trophy", {
           displayName: {
             translationKey: "item:goldTrophy"
           },
@@ -10617,9 +10617,9 @@ export const modules = {
           },
           blockModel: "Gold Trophy"
         }),
-        ...(0, jS.Bb)("Magenta"),
-        ...(0, jS.Bb)("Light Gray"),
-        ...(0, jS.Bb)("Red"),
+        ...(0, wk.Nb)("Magenta"),
+        ...(0, wk.Nb)("Light Gray"),
+        ...(0, wk.Nb)("Red"),
         "INTERNAL_MESH_Gold Trophy": {
           ttb: 2e3,
           harvestType: "rock",
@@ -10628,22 +10628,22 @@ export const modules = {
           twoDBlockItem: !0,
           modelScale: 1
         },
-        ...(0, jS.hb)("Frost Wraith"),
-        ...(0, jS.hb)("Draugr Reaver"),
-        ...(0, jS.Bb)("White"),
-        ...(0, jS.Bb)("Orange"),
-        ...(0, jS.Bb)("Light Blue"),
-        ...(0, jS.Bb)("Yellow"),
-        ...(0, jS.Bb)("Lime"),
-        ...(0, jS.Bb)("Pink"),
-        ...(0, jS.Bb)("Gray"),
-        ...(0, jS.Bb)("Cyan"),
-        ...(0, jS.Bb)("Purple"),
-        ...(0, jS.Bb)("Blue"),
-        ...(0, jS.Bb)("Brown"),
-        ...(0, jS.Bb)("Green"),
-        ...(0, jS.Bb)("Black"),
-        ...(0, jS.E)("Skull Banner", {
+        ...(0, wk.lb)("Frost Wraith"),
+        ...(0, wk.lb)("Draugr Reaver"),
+        ...(0, wk.Nb)("White"),
+        ...(0, wk.Nb)("Orange"),
+        ...(0, wk.Nb)("Light Blue"),
+        ...(0, wk.Nb)("Yellow"),
+        ...(0, wk.Nb)("Lime"),
+        ...(0, wk.Nb)("Pink"),
+        ...(0, wk.Nb)("Gray"),
+        ...(0, wk.Nb)("Cyan"),
+        ...(0, wk.Nb)("Purple"),
+        ...(0, wk.Nb)("Blue"),
+        ...(0, wk.Nb)("Brown"),
+        ...(0, wk.Nb)("Green"),
+        ...(0, wk.Nb)("Black"),
+        ...(0, wk.x)("Skull Banner", {
           displayName: {
             translationKey: "item:skullBanner"
           },
@@ -10664,7 +10664,7 @@ export const modules = {
             place: "cloth"
           }
         }),
-        ...(0, jS.E)("Rainbow Banner", {
+        ...(0, wk.x)("Rainbow Banner", {
           displayName: {
             translationKey: "item:rainbowBanner"
           },
@@ -10941,7 +10941,7 @@ export const modules = {
             yOffset: -.5
           }
         },
-        ...(0, jS.wb)("Wood Trophy", {
+        ...(0, wk.Gb)("Wood Trophy", {
           displayName: {
             translationKey: "item:woodTrophy"
           },
@@ -10964,7 +10964,7 @@ export const modules = {
           twoDBlockItem: !0,
           modelScale: 1
         },
-        ...(0, jS.wb)("Stone Trophy", {
+        ...(0, wk.Gb)("Stone Trophy", {
           displayName: {
             translationKey: "item:stoneTrophy"
           },
@@ -10987,7 +10987,7 @@ export const modules = {
           twoDBlockItem: !0,
           modelScale: 1
         },
-        ...(0, jS.wb)("Iron Trophy", {
+        ...(0, wk.Gb)("Iron Trophy", {
           displayName: {
             translationKey: "item:ironTrophy"
           },
@@ -11010,7 +11010,7 @@ export const modules = {
           twoDBlockItem: !0,
           modelScale: 1
         },
-        ...(0, jS.wb)("Diamond Trophy", {
+        ...(0, wk.Gb)("Diamond Trophy", {
           displayName: {
             translationKey: "item:diamondTrophy"
           },
@@ -11033,7 +11033,7 @@ export const modules = {
           twoDBlockItem: !0,
           modelScale: 1
         },
-        ...(0, jS.wb)("Moonstone Trophy", {
+        ...(0, wk.Gb)("Moonstone Trophy", {
           displayName: {
             translationKey: "item:moonstoneTrophy"
           },
@@ -11047,7 +11047,7 @@ export const modules = {
             yOffset: -.5
           },
           blockModel: "Moonstone Trophy",
-          dK: [5, 6, 8]
+          Ve: [5, 6, 8]
         }),
         "INTERNAL_MESH_Moonstone Trophy": {
           ttb: 2e3,
@@ -11249,7 +11249,7 @@ export const modules = {
             yOffset: -.5
           }
         },
-        ...(0, jS.wb)("White Directional Arrow", {
+        ...(0, wk.Gb)("White Directional Arrow", {
           displayName: {
             translationKey: "item:directionalArrow",
             params: {
@@ -11268,7 +11268,7 @@ export const modules = {
             yOffset: -.5
           }
         }),
-        ...(0, jS.wb)("Orange Directional Arrow", {
+        ...(0, wk.Gb)("Orange Directional Arrow", {
           displayName: {
             translationKey: "item:directionalArrow",
             params: {
@@ -11287,7 +11287,7 @@ export const modules = {
             yOffset: -.5
           }
         }),
-        ...(0, jS.wb)("Magenta Directional Arrow", {
+        ...(0, wk.Gb)("Magenta Directional Arrow", {
           displayName: {
             translationKey: "item:directionalArrow",
             params: {
@@ -11306,7 +11306,7 @@ export const modules = {
             yOffset: -.5
           }
         }),
-        ...(0, jS.wb)("Light Blue Directional Arrow", {
+        ...(0, wk.Gb)("Light Blue Directional Arrow", {
           displayName: {
             translationKey: "item:directionalArrow",
             params: {
@@ -11325,7 +11325,7 @@ export const modules = {
             yOffset: -.5
           }
         }),
-        ...(0, jS.wb)("Yellow Directional Arrow", {
+        ...(0, wk.Gb)("Yellow Directional Arrow", {
           displayName: {
             translationKey: "item:directionalArrow",
             params: {
@@ -11344,7 +11344,7 @@ export const modules = {
             yOffset: -.5
           }
         }),
-        ...(0, jS.wb)("Lime Directional Arrow", {
+        ...(0, wk.Gb)("Lime Directional Arrow", {
           displayName: {
             translationKey: "item:directionalArrow",
             params: {
@@ -11363,7 +11363,7 @@ export const modules = {
             yOffset: -.5
           }
         }),
-        ...(0, jS.wb)("Pink Directional Arrow", {
+        ...(0, wk.Gb)("Pink Directional Arrow", {
           displayName: {
             translationKey: "item:directionalArrow",
             params: {
@@ -11382,7 +11382,7 @@ export const modules = {
             yOffset: -.5
           }
         }),
-        ...(0, jS.wb)("Grey Directional Arrow", {
+        ...(0, wk.Gb)("Grey Directional Arrow", {
           displayName: {
             translationKey: "item:directionalArrow",
             params: {
@@ -11401,7 +11401,7 @@ export const modules = {
             yOffset: -.5
           }
         }),
-        ...(0, jS.wb)("Light Grey Directional Arrow", {
+        ...(0, wk.Gb)("Light Grey Directional Arrow", {
           displayName: {
             translationKey: "item:directionalArrow",
             params: {
@@ -11420,7 +11420,7 @@ export const modules = {
             yOffset: -.5
           }
         }),
-        ...(0, jS.wb)("Cyan Directional Arrow", {
+        ...(0, wk.Gb)("Cyan Directional Arrow", {
           displayName: {
             translationKey: "item:directionalArrow",
             params: {
@@ -11439,7 +11439,7 @@ export const modules = {
             yOffset: -.5
           }
         }),
-        ...(0, jS.wb)("Purple Directional Arrow", {
+        ...(0, wk.Gb)("Purple Directional Arrow", {
           displayName: {
             translationKey: "item:directionalArrow",
             params: {
@@ -11458,7 +11458,7 @@ export const modules = {
             yOffset: -.5
           }
         }),
-        ...(0, jS.wb)("Blue Directional Arrow", {
+        ...(0, wk.Gb)("Blue Directional Arrow", {
           displayName: {
             translationKey: "item:directionalArrow",
             params: {
@@ -11477,7 +11477,7 @@ export const modules = {
             yOffset: -.5
           }
         }),
-        ...(0, jS.wb)("Brown Directional Arrow", {
+        ...(0, wk.Gb)("Brown Directional Arrow", {
           displayName: {
             translationKey: "item:directionalArrow",
             params: {
@@ -11496,7 +11496,7 @@ export const modules = {
             yOffset: -.5
           }
         }),
-        ...(0, jS.wb)("Green Directional Arrow", {
+        ...(0, wk.Gb)("Green Directional Arrow", {
           displayName: {
             translationKey: "item:directionalArrow",
             params: {
@@ -11515,7 +11515,7 @@ export const modules = {
             yOffset: -.5
           }
         }),
-        ...(0, jS.wb)("Red Directional Arrow", {
+        ...(0, wk.Gb)("Red Directional Arrow", {
           displayName: {
             translationKey: "item:directionalArrow",
             params: {
@@ -11534,7 +11534,7 @@ export const modules = {
             yOffset: -.5
           }
         }),
-        ...(0, jS.wb)("Black Directional Arrow", {
+        ...(0, wk.Gb)("Black Directional Arrow", {
           displayName: {
             translationKey: "item:directionalArrow",
             params: {
@@ -11566,7 +11566,7 @@ export const modules = {
           },
           heldItemScale: 4
         },
-        ...(0, jS.wb)("Vending Machine", {
+        ...(0, wk.Gb)("Vending Machine", {
           ttb: 2e3,
           harvestType: "rock",
           model: "rotatable",
@@ -11578,7 +11578,7 @@ export const modules = {
           },
           rootMetaDesc: "Vending Machine|meta|rot1"
         }),
-        ...(0, jS.wb)("_Vending Machine Top", {
+        ...(0, wk.Gb)("_Vending Machine Top", {
           ttb: 2e3,
           harvestType: "rock",
           model: "rotatable",
@@ -11651,7 +11651,7 @@ export const modules = {
           twoDBlockItem: !0,
           modelScale: 1
         },
-        ...(0, jS.lb)("Torch", {
+        ...(0, wk.mb)("Torch", {
           ttb: 300,
           harvestType: "cuttable",
           itemTexture: "torch",
@@ -11667,14 +11667,14 @@ export const modules = {
           heldItemScale: 8,
           unlitStandaloneMesh: !0,
           rootMetaDesc: "Torch|meta|rot1|bot",
-          dK: [14, 14, 12]
+          Ve: [14, 14, 12]
         }, {
           wallBlockModel: "torch_wall"
         }),
-        ...(0, jS.K)((SS => `${SS} Torch`), {
+        ...(0, wk.G)((kk => `${kk} Torch`), {
           ttb: 300,
           harvestType: "cuttable",
-          itemTexture: SS => `torch_${(0,IS.xe)(SS)}`,
+          itemTexture: kk => `torch_${(0,Lk.Ce)(kk)}`,
           solid: !1,
           model: "CustomModel",
           modelScale: 8,
@@ -11682,26 +11682,26 @@ export const modules = {
             yOffset: -.5,
             unlit: !0
           }),
-          blockModel: SS => `torch_${(0,IS.xe)(SS)}`,
+          blockModel: kk => `torch_${(0,Lk.Ce)(kk)}`,
           blockModelItem: !0,
           heldItemScale: 8,
           unlitStandaloneMesh: !0,
-          rootMetaDesc: SS => `${SS} Torch|meta|rot1|bot`,
-          dK: SS => IS.F[SS]
-        }, (SS => `torch_wall_${(0,IS.xe)(SS)}`)),
-        ...(0, jS.J)((SS => `${SS} Neon`), {
+          rootMetaDesc: kk => `${kk} Torch|meta|rot1|bot`,
+          Ve: kk => Lk.M[kk]
+        }, (kk => `torch_wall_${(0,Lk.Ce)(kk)}`)),
+        ...(0, wk.E)((kk => `${kk} Neon`), {
           ttb: 200,
           harvestType: "granule",
           soundType: {
             break: "glass",
             place: "stone"
           },
-          textureInfo: SS => `neon_${(0,IS.xe)(SS)}`,
+          textureInfo: kk => `neon_${(0,Lk.Ce)(kk)}`,
           unlitStandaloneMesh: !0,
-          dK: SS => IS.F[SS]
+          Ve: kk => Lk.M[kk]
         }),
-        ...(0, jS.$)(),
-        ...(0, jS.J)((SS => `Invisible ${SS} Light`), {
+        ...(0, wk.$)(),
+        ...(0, wk.E)((kk => `Invisible ${kk} Light`), {
           ttb: 3e3,
           harvestType: "rock",
           soundType: {
@@ -11711,7 +11711,7 @@ export const modules = {
           textureInfo: "invisible_solid",
           transTex: !0,
           solid: !1,
-          dK: SS => IS.F[SS],
+          Ve: kk => Lk.M[kk],
           drops: null
         }),
         "Invisible Sky Light": {
@@ -11724,7 +11724,7 @@ export const modules = {
           textureInfo: "invisible_solid",
           transTex: !0,
           solid: !1,
-          bG: 15,
+          ge: 15,
           drops: null
         },
         "Dirt|PineGrassRoots": {
@@ -11794,7 +11794,7 @@ export const modules = {
           texturePerSide: [1, 1, 0, 0, 0, 0],
           harvestType: "rock"
         },
-        ...(0, jS.lb)("Glowing Mushroom", {
+        ...(0, wk.mb)("Glowing Mushroom", {
           ttb: 240,
           harvestType: "cuttable",
           soundType: {
@@ -11813,12 +11813,12 @@ export const modules = {
           heldItemScale: 6,
           unlitStandaloneMesh: !0,
           rootMetaDesc: "Glowing Mushroom|meta|rot1|bot",
-          dK: [8, 15, 15]
+          Ve: [8, 15, 15]
         }, {
           wallBlockModel: "glowing_mushroom_wall",
           yRotOffset: Math.PI / 2
         }),
-        ...(0, jS.lb)("Crystal", {
+        ...(0, wk.mb)("Crystal", {
           ttb: 600,
           harvestType: "rock",
           soundType: {
@@ -11837,7 +11837,7 @@ export const modules = {
           heldItemScale: 6,
           unlitStandaloneMesh: !0,
           rootMetaDesc: "Crystal|meta|rot1|bot",
-          dK: [8, 15, 7],
+          Ve: [8, 15, 7],
           drops: null,
           specialToolDrop: {
             tool: "Moonstone Pickaxe",
@@ -11847,8 +11847,8 @@ export const modules = {
         }, {
           xRotOffset: -Math.PI / 2
         }),
-        ...(0, jS.wb)("Slime Trail", {
-          ...QS,
+        ...(0, wk.Gb)("Slime Trail", {
+          ...Kk,
           rootMetaDesc: "Slime Trail|meta|rot1"
         }),
         "Overgrown Grass Block": {
@@ -11899,7 +11899,7 @@ export const modules = {
           drops: null,
           harvestType: "cuttable"
         },
-        ...(0, jS.ob)("Pipe", "pipe", {
+        ...(0, wk.sb)("Pipe", "pipe", {
           displayName: {
             translationKey: "item:pipe"
           },
@@ -11917,7 +11917,7 @@ export const modules = {
           particlesIgnoreBlack: !0,
           rootMetaDesc: "Pipe|meta|conn|none"
         }),
-        ...(0, jS.A)(),
+        ...(0, wk.u)(),
         "Auto Crafter": {
           displayName: {
             translationKey: "item:autoCrafter"
@@ -11932,8 +11932,8 @@ export const modules = {
           particlesIgnoreBlack: !0,
           altActionable: !0
         },
-        ...(0, jS.vb)(),
-        ...(0, jS.ob)("Extractor Pipe", "extractor_pipe", {
+        ...(0, wk.Eb)(),
+        ...(0, wk.sb)("Extractor Pipe", "extractor_pipe", {
           displayName: {
             translationKey: "item:extractorPipe"
           },
@@ -11969,8 +11969,8 @@ export const modules = {
           heldItemScale: 6,
           particlesIgnoreBlack: !0
         },
-        ...(0, jS.Db)(),
-        ...(0, jS.ob)("Wire", "wire", {
+        ...(0, wk.Ob)(),
+        ...(0, wk.sb)("Wire", "wire", {
           displayName: {
             translationKey: "item:wire"
           },
@@ -11988,7 +11988,7 @@ export const modules = {
           particlesIgnoreBlack: !0,
           rootMetaDesc: "Wire|meta|conn|none"
         }),
-        ...(0, jS.Z)("Filter Pipe", "filter_pipe", "pz", {
+        ...(0, wk.Y)("Filter Pipe", "filter_pipe", "pz", {
           displayName: {
             translationKey: "item:filterPipe"
           },
@@ -12007,7 +12007,7 @@ export const modules = {
           altActionable: !0,
           rootMetaDesc: "Filter Pipe|meta|input|none"
         }),
-        ...(0, jS.fb)("Merger Pipe", "merger_pipe", "pz", {
+        ...(0, wk.gb)("Merger Pipe", "merger_pipe", "pz", {
           displayName: {
             translationKey: "item:mergerPipe"
           },
@@ -12040,7 +12040,7 @@ export const modules = {
           particlesIgnoreBlack: !0,
           altActionable: !0
         },
-        ...(0, jS.hb)("Stalker"),
+        ...(0, wk.lb)("Stalker"),
         "Lunite Ore": {
           displayName: {
             translationKey: "item:luniteOre"
@@ -12055,13 +12055,13 @@ export const modules = {
             drops: "Lunite Ore"
           },
           specialToolBonusDrops: {
-            "Golem Pickaxe": fS.p
+            "Golem Pickaxe": tk.n
           },
           description: {
             translationKey: "item:luniteOreDescription"
           },
           onMinedAura: 40,
-          dK: [10, 3, 12]
+          Ve: [10, 3, 12]
         },
         "Block of Lunite": {
           displayName: {
@@ -12074,7 +12074,7 @@ export const modules = {
           textureInfo: "lunite_block",
           harvestType: "rock"
         },
-        ...(0, jS.ab)(),
+        ...(0, wk.cb)(),
         "Lunite Auto Crafter": {
           displayName: {
             translationKey: "item:luniteAutoCrafter"
@@ -12115,24 +12115,24 @@ export const modules = {
             place: "cloth"
           }
         },
-        ...(0, jS.hb)("Crone"),
-        ...(0, jS.hb)("Slime"),
+        ...(0, wk.lb)("Crone"),
+        ...(0, wk.lb)("Slime"),
         "Slime Trail|meta|rot1|Decaying": {
-          ...QS
+          ...Kk
         },
         "Slime Trail|meta|rot2|Decaying": {
-          ...QS
+          ...Kk
         },
         "Slime Trail|meta|rot3|Decaying": {
-          ...QS
+          ...Kk
         },
         "Slime Trail|meta|rot4|Decaying": {
-          ...QS
+          ...Kk
         },
-        ...(0, jS.hb)("Iron Guardian"),
-        ...(0, jS.hb)("Gold Guardian"),
-        ...(0, jS.hb)("Diamond Guardian"),
-        ...(0, jS.hb)("Moonstone Guardian"),
+        ...(0, wk.lb)("Iron Guardian"),
+        ...(0, wk.lb)("Gold Guardian"),
+        ...(0, wk.lb)("Diamond Guardian"),
+        ...(0, wk.lb)("Moonstone Guardian"),
         "Dry Grass Block": {
           displayName: {
             translationKey: "item:dryGrassBlock"
@@ -12180,7 +12180,7 @@ export const modules = {
           textureInfo: "dirt",
           harvestType: "granule"
         },
-        ...(0, jS.zb)("Dry Grass Slab", {
+        ...(0, wk.Lb)("Dry Grass Slab", {
           displayName: {
             translationKey: "item:dryGrassSlab"
           },
@@ -12192,7 +12192,7 @@ export const modules = {
           slabFullBlock: "Dry Grass Block",
           rootMetaDesc: "Dry Grass Slab|meta|rot1|bot"
         }),
-        ...(0, jS.lb)("Lantern", {
+        ...(0, wk.mb)("Lantern", {
           displayName: {
             translationKey: "item:lantern"
           },
@@ -12214,13 +12214,13 @@ export const modules = {
           heldItemScale: 8,
           unlitStandaloneMesh: !0,
           rootMetaDesc: "Lantern|meta|rot1|bot",
-          dK: [15, 15, 13]
+          Ve: [15, 15, 13]
         }, {
           wallBlockModel: "lantern_wall",
           yRotOffset: -Math.PI,
           noCeilingVariant: !0
         }),
-        ...(0, jS.wb)("Lily Pad", {
+        ...(0, wk.Gb)("Lily Pad", {
           rootMetaDesc: "Lily Pad|meta|rot1",
           displayName: {
             translationKey: "item:lilyPad"
@@ -12230,7 +12230,7 @@ export const modules = {
           model: "rotatable",
           harvestType: "cuttable",
           solid: !0,
-          tG: (0, tS.e)([
+          Re: (0, Xk.d)([
             [
               [0, 0, 0],
               [8, 1, 8]
@@ -12243,8 +12243,8 @@ export const modules = {
           },
           particlesIgnoreBlack: !0
         }),
-        ...(0, jS.hb)("Camel"),
-        ...(0, jS.gb)("Camel", 8),
+        ...(0, wk.lb)("Camel"),
+        ...(0, wk.jb)("Camel", 8),
         "Rare Lucky Block": {
           displayName: "Rare Lucky Block",
           ttb: 1200,
@@ -12384,7 +12384,7 @@ export const modules = {
           harvestType: "cuttable",
           description: "Place it to start a 30 second fuse. When it goes off, every placed block on the map is removed. Lucky blocks survive."
         },
-        ...(0, jS.w)(hS),
+        ...(0, wk.q)(Vk),
         "Toxic Waste Barrel": {
           displayName: {
             translationKey: "item:toxicWasteBarrel"
@@ -12407,10 +12407,10 @@ export const modules = {
             animTextures: ["toxic_waste0", "toxic_waste1", "toxic_waste2", "toxic_waste3", "toxic_waste4", "toxic_waste5", "toxic_waste6", "toxic_waste7"],
             animationInterval: 800
           },
-          aa: !0,
+          qj: !0,
           drops: null,
           harvestType: "rock",
-          dK: [6, 14, 4]
+          Ve: [6, 14, 4]
         },
         "Ancient Maple Log": {
           displayName: {
@@ -12435,7 +12435,7 @@ export const modules = {
             translationKey: "item:evilLuckyBlockDescription"
           }
         },
-        ...(0, jS.Eb)(hS),
+        ...(0, wk.Rb)(Vk),
         "INTERNAL_MESH_Small Twin Icicle": {
           ttb: 2e3,
           harvestType: "rock",
@@ -12472,10 +12472,10 @@ export const modules = {
           modelScale: 1,
           drops: null
         },
-        ...(0, jS.nb)(),
-        ...(0, jS.hb)("Tiki Terror"),
-        ...(0, jS.Nb)(PS.b),
-        ...(0, jS.R)(),
+        ...(0, wk.pb)(),
+        ...(0, wk.lb)("Tiki Terror"),
+        ...(0, wk._b)(Pk.d),
+        ...(0, wk.N)(),
         "Pure Coal Ore": {
           displayName: {
             translationKey: "item:pureCoalOre"
@@ -12484,16 +12484,16 @@ export const modules = {
           textureInfo: "pure_coal_ore",
           harvestType: "rock",
           drops: "Coal",
-          Eu: 9,
+          nq: 9,
           specialToolDrop: {
             tool: "Moonstone Pickaxe",
             drops: "Pure Coal Ore"
           },
           specialToolBonusDrops: {
-            "Golem Pickaxe": fS.p
+            "Golem Pickaxe": tk.n
           },
           onMinedAura: 45,
-          dK: [6, 6, 6]
+          Ve: [6, 6, 6]
         },
         "Pure Iron Ore": {
           displayName: {
@@ -12504,16 +12504,16 @@ export const modules = {
           harvestType: "rock",
           harvestLevel: 2,
           drops: "Raw Iron",
-          Eu: 9,
+          nq: 9,
           specialToolDrop: {
             tool: "Moonstone Pickaxe",
             drops: "Pure Iron Ore"
           },
           specialToolBonusDrops: {
-            "Golem Pickaxe": fS.p
+            "Golem Pickaxe": tk.n
           },
           onMinedAura: 135,
-          dK: [6, 6, 6]
+          Ve: [6, 6, 6]
         },
         "Pure Gold Ore": {
           displayName: {
@@ -12524,16 +12524,16 @@ export const modules = {
           harvestType: "rock",
           harvestLevel: 3,
           drops: "Raw Gold",
-          Eu: 9,
+          nq: 9,
           specialToolDrop: {
             tool: "Moonstone Pickaxe",
             drops: "Pure Gold Ore"
           },
           specialToolBonusDrops: {
-            "Golem Pickaxe": fS.p
+            "Golem Pickaxe": tk.n
           },
           onMinedAura: 270,
-          dK: [6, 6, 0]
+          Ve: [6, 6, 0]
         },
         "Pure Diamond Ore": {
           displayName: {
@@ -12544,16 +12544,16 @@ export const modules = {
           harvestType: "rock",
           harvestLevel: 3,
           drops: "Diamond",
-          Eu: 9,
+          nq: 9,
           specialToolDrop: {
             tool: "Moonstone Pickaxe",
             drops: "Pure Diamond Ore"
           },
           specialToolBonusDrops: {
-            "Golem Pickaxe": fS.p
+            "Golem Pickaxe": tk.n
           },
           onMinedAura: 360,
-          dK: [2, 6, 6]
+          Ve: [2, 6, 6]
         },
         "Pure Moonstone Ore": {
           displayName: {
@@ -12564,23 +12564,23 @@ export const modules = {
           harvestType: "rock",
           harvestLevel: 3,
           drops: "Moonstone",
-          Eu: 9,
+          nq: 9,
           specialToolDrop: {
             tool: "Moonstone Pickaxe",
             drops: "Pure Moonstone Ore"
           },
           specialToolBonusDrops: {
-            "Golem Pickaxe": fS.p
+            "Golem Pickaxe": tk.n
           },
           onMinedAura: 450,
-          dK: [6, 6, 6]
+          Ve: [6, 6, 6]
         },
-        ...(0, jS.Jb)(PS.b),
-        ...(0, jS.hb)("Iron Goofy Golem"),
-        ...(0, jS.hb)("Gold Goofy Golem"),
-        ...(0, jS.hb)("Diamond Goofy Golem"),
-        ...(0, jS.hb)("Moonstone Goofy Golem"),
-        ...(0, jS.I)(),
+        ...(0, wk.Wb)(Pk.d),
+        ...(0, wk.lb)("Iron Goofy Golem"),
+        ...(0, wk.lb)("Gold Goofy Golem"),
+        ...(0, wk.lb)("Diamond Goofy Golem"),
+        ...(0, wk.lb)("Moonstone Goofy Golem"),
+        ...(0, wk.D)(),
         "Crystal Block": {
           displayName: {
             translationKey: "item:crystalBlock"
@@ -12592,7 +12592,7 @@ export const modules = {
             break: "glass",
             place: "stone"
           },
-          dK: [9, 15, 5]
+          Ve: [9, 15, 5]
         },
         "Rope Block": {
           displayName: {
@@ -12618,7 +12618,7 @@ export const modules = {
             place: "sand"
           }
         },
-        ...(0, XS.i)(),
+        ...(0, ik.f)(),
         Darkstone: {
           displayName: {
             translationKey: "item:darkstone"
@@ -12650,7 +12650,7 @@ export const modules = {
           ttb: 1800,
           textureInfo: "darkstone_bricks_lava",
           harvestType: "rock",
-          dK: [9, 3, 1]
+          Ve: [9, 3, 1]
         },
         "Engraved Darkstone": {
           displayName: {
@@ -12668,7 +12668,7 @@ export const modules = {
           textureInfo: "darkstone_smooth",
           harvestType: "rock"
         },
-        ...(0, jS.V)(GS.l, ZS),
+        ...(0, wk.V)(Hk.l, zk),
         "INTERNAL_MESH_Floor Quarters": {
           ttb: 2e3,
           harvestType: "rock",
@@ -12751,7 +12751,7 @@ export const modules = {
           meshEntityBones: ["Cannon", "LeftArm", "RightArm"],
           drops: null
         },
-        ...(0, jS.xb)("Trading Terminal", {
+        ...(0, wk.Kb)("Trading Terminal", {
           displayName: {
             translationKey: "item:tradingTerminal"
           },
@@ -12760,7 +12760,7 @@ export const modules = {
           },
           ttb: 3e3,
           textureInfo: [{
-            animTextures: [0, 1, 2, 3, 4, 5, 6, 7].map((SS => `trading_terminal_front${SS}`)),
+            animTextures: [0, 1, 2, 3, 4, 5, 6, 7].map((kk => `trading_terminal_front${kk}`)),
             animationInterval: 400,
             interpolateFrames: !1
           }, "trading_terminal_side", "trading_terminal_top"],
@@ -12825,154 +12825,154 @@ export const modules = {
           altActionable: !0
         },
         ... function() {
-          const SS = {};
+          const kk = {};
           for (const {
-              wood: HS,
-              block: gS
+              wood: Fk,
+              block: Ik
             }
-            of nS.c) SS[gS] = {
+            of xk.c) kk[Ik] = {
             displayName: {
-              translationKey: `item:${(0,IS.ue)(gS)}`
+              translationKey: `item:${(0,Lk.ye)(Ik)}`
             },
             ttb: 960,
             harvestType: "wood",
-            ..."Maple" === HS ? {
+            ..."Maple" === Fk ? {
               showInCreativeInven: !1
             } : {},
-            ...DS(gS, (0, IS.xe)(gS), {
+            ...Qk(Ik, (0, Lk.Ce)(Ik), {
               rotatable: !1
             })
           };
-          return SS
+          return kk
         }(),
-        ...(0, xS.w)(),
-        ...(0, NS.e)()
+        ...(0, yk.p)(),
+        ...(0, lk.d)()
       };
-    for (const mS of Object.values(JS))
-      for (const SS of Array.isArray(mS.textureInfo) ? mS.textureInfo : [mS.textureInfo]) "object" === typeof SS && null !== SS && "animTextures" in SS && (0, uS.c)(SS);
-    let OS = 1,
-      dS = 0;
-    const cS = [],
-      vS = [],
-      ES = {},
-      LS = [];
-    for (const mS in JS) {
-      if (OS > 65535) throw new Error(`block ID was ${OS}, which is over 65535 - there is a limit of 65535 block types!`);
-      const SS = JS[mS];
-      if (SS.id = OS, JS[OS] = SS, SS.name = mS, SS.stackable = !0, (0, kS.g)(JS, SS), "door" === JS[SS.meta.rootName].model) SS.tG = (0, jS.T)(SS.meta.rot, SS.meta.open);
-      else if ("trapdoor" === JS[SS.meta.rootName].model) SS.tG = (0, jS.Gb)(SS.meta.rot, SS.meta.open);
+    for (const Dk of Object.values(Sk))
+      for (const kk of Array.isArray(Dk.textureInfo) ? Dk.textureInfo : [Dk.textureInfo]) "object" === typeof kk && null !== kk && "animTextures" in kk && (0, qk.d)(kk);
+    let vk = 1,
+      Ek = 0;
+    const Ok = [],
+      nk = [],
+      Gk = {},
+      pk = [];
+    for (const Dk in Sk) {
+      if (vk > 65535) throw new Error(`block ID was ${vk}, which is over 65535 - there is a limit of 65535 block types!`);
+      const kk = Sk[Dk];
+      if (kk.id = vk, Sk[vk] = kk, kk.name = Dk, kk.stackable = !0, (0, Zk.i)(Sk, kk), "door" === Sk[kk.meta.rootName].model) kk.Re = (0, wk.R)(kk.meta.rot, kk.meta.open);
+      else if ("trapdoor" === Sk[kk.meta.rootName].model) kk.Re = (0, wk.Ub)(kk.meta.rot, kk.meta.open);
       else {
-        const HS = (0, qS.c)(SS, JS[SS.meta.rootName]);
-        HS && (SS.tG = HS)
+        const Fk = (0, ak.g)(kk, Sk[kk.meta.rootName]);
+        Fk && (kk.Re = Fk)
       }
-      if ("object" === typeof SS.textureInfo && "animTextures" in SS.textureInfo) {
-        var YS;
-        const HS = [];
-        SS.atlasIdx = HS, cS.push({
-          blockName: mS,
-          animTextures: SS.textureInfo.animTextures,
-          atlasIndices: HS,
-          animationInterval: null !== (YS = SS.textureInfo.animationInterval) && void 0 !== YS ? YS : 200
+      if ("object" === typeof kk.textureInfo && "animTextures" in kk.textureInfo) {
+        var uk;
+        const Fk = [];
+        kk.atlasIdx = Fk, Ok.push({
+          blockName: Dk,
+          animTextures: kk.textureInfo.animTextures,
+          atlasIndices: Fk,
+          animationInterval: null !== (uk = kk.textureInfo.animationInterval) && void 0 !== uk ? uk : 200
         })
-      } else if (Array.isArray(SS.textureInfo)) {
-        for (const HS of SS.textureInfo) {
-          var AS;
-          if ("object" !== typeof HS || !("animTextures" in HS)) continue;
-          const SS = [];
-          cS.push({
-            blockName: mS,
-            animTextures: HS.animTextures,
-            atlasIndices: SS,
-            animationInterval: null !== (AS = HS.animationInterval) && void 0 !== AS ? AS : 200
+      } else if (Array.isArray(kk.textureInfo)) {
+        for (const Fk of kk.textureInfo) {
+          var bk;
+          if ("object" !== typeof Fk || !("animTextures" in Fk)) continue;
+          const kk = [];
+          Ok.push({
+            blockName: Dk,
+            animTextures: Fk.animTextures,
+            atlasIndices: kk,
+            animationInterval: null !== (bk = Fk.animationInterval) && void 0 !== bk ? bk : 200
           })
         }
-        vS.push(mS)
-      } else vS.push(mS);
-      OS++
+        nk.push(Dk)
+      } else nk.push(Dk);
+      vk++
     }
     for (const {
-        blockName: mS,
-        animTextures: eS,
-        atlasIndices: rS
+        blockName: Dk,
+        animTextures: Mk,
+        atlasIndices: kF
       }
-      of cS) {
-      const SS = eS.length;
-      if (Math.log(SS) / Math.log(2) % 1 !== 0) throw new Error(`${mS} has ${SS} animation states, which is not a power of 2`);
-      ES[eS[0]] ??= dS++, rS.push(ES[eS[0]])
+      of Ok) {
+      const kk = Mk.length;
+      if (Math.log(kk) / Math.log(2) % 1 !== 0) throw new Error(`${Dk} has ${kk} animation states, which is not a power of 2`);
+      Gk[Mk[0]] ??= Ek++, kF.push(Gk[Mk[0]])
     }
     for (const {
-        animTextures: mS,
-        atlasIndices: eS,
-        animationInterval: rS
+        animTextures: Dk,
+        atlasIndices: Mk,
+        animationInterval: kF
       }
-      of cS) {
-      LS[eS[0]] ??= {
-        numAnimStates: mS.length,
-        animStartIdx: dS,
-        animationInterval: rS
+      of Ok) {
+      pk[Mk[0]] ??= {
+        numAnimStates: Dk.length,
+        animStartIdx: Ek,
+        animationInterval: kF
       };
-      for (let SS = 1; SS < mS.length; SS++) {
-        var yS;
-        const HS = mS[SS],
-          gS = null !== (yS = ES[HS]) && void 0 !== yS ? yS : dS++;
-        ES[HS] = gS, eS.push(gS)
+      for (let kk = 1; kk < Dk.length; kk++) {
+        var Rk;
+        const Fk = Dk[kk],
+          Ik = null !== (Rk = Gk[Fk]) && void 0 !== Rk ? Rk : Ek++;
+        Gk[Fk] = Ik, Mk.push(Ik)
       }
     }
-    for (const mS of vS) {
-      var VS;
-      const SS = JS[mS];
-      SS.stackable = !0;
-      const HS = JS[SS.meta.rootName],
-        gS = null === (VS = HS.model) || void 0 === VS ? void 0 : VS.split("|")[0];
-      if (SS.textureInfo && !HS.blockModel && (!gS || "Slab" === gS || "Stairs" === gS || "fence" === gS || "fenceGate" === gS))
-        if ("string" === typeof SS.textureInfo) {
-          const HS = SS.textureInfo;
-          let gS = ES[HS];
-          void 0 === gS && (gS = dS++, ES[HS] = gS), SS.atlasIdx = gS
-        } else if (!Array.isArray(SS.textureInfo) || "number" !== typeof SS.textureInfo[0]) {
-        const HS = SS.textureInfo;
-        SS.atlasIdx = [];
-        for (let gS = 0; gS < HS.length; gS++) {
-          const tS = HS[gS],
-            bS = "string" === typeof tS ? tS : tS.animTextures[0];
-          let XS = ES[bS];
-          void 0 === XS && (XS = dS++, ES[bS] = XS), SS.atlasIdx.push(XS)
+    for (const Dk of nk) {
+      var Uk;
+      const kk = Sk[Dk];
+      kk.stackable = !0;
+      const Fk = Sk[kk.meta.rootName],
+        Ik = null === (Uk = Fk.model) || void 0 === Uk ? void 0 : Uk.split("|")[0];
+      if (kk.textureInfo && !Fk.blockModel && (!Ik || "Slab" === Ik || "Stairs" === Ik || "fence" === Ik || "fenceGate" === Ik))
+        if ("string" === typeof kk.textureInfo) {
+          const Fk = kk.textureInfo;
+          let Ik = Gk[Fk];
+          void 0 === Ik && (Ik = Ek++, Gk[Fk] = Ik), kk.atlasIdx = Ik
+        } else if (!Array.isArray(kk.textureInfo) || "number" !== typeof kk.textureInfo[0]) {
+        const Fk = kk.textureInfo;
+        kk.atlasIdx = [];
+        for (let Ik = 0; Ik < Fk.length; Ik++) {
+          const Xk = Fk[Ik],
+            Tk = "string" === typeof Xk ? Xk : Xk.animTextures[0];
+          let ik = Gk[Tk];
+          void 0 === ik && (ik = Ek++, Gk[Tk] = ik), kk.atlasIdx.push(ik)
         }
       }
     }
-    const iS = {};
-    for (const mS in JS) {
-      var WS;
-      const SS = JS[mS];
-      iS[mS] = null !== (WS = iS[SS.id]) && void 0 !== WS ? WS : new fS.b(SS)
+    const Ck = {};
+    for (const Dk in Sk) {
+      var Nk;
+      const kk = Sk[Dk];
+      Ck[Dk] = null !== (Nk = Ck[kk.id]) && void 0 !== Nk ? Nk : new tk.b(kk)
     }
-    const zS = 39 == gS.j ? iS : null,
-      US = {};
-    for (const mS in iS) {
-      const SS = mS.split("|");
-      if ("meta" === SS[1]) {
-        var pS;
-        const HS = null !== (pS = US[SS[0]]) && void 0 !== pS ? pS : [];
-        HS.push(mS), US[SS[0]] = HS
+    const ck = 39 == Ik.j ? Ck : null,
+      Wk = {};
+    for (const Dk in Ck) {
+      const kk = Dk.split("|");
+      if ("meta" === kk[1]) {
+        var fk;
+        const Fk = null !== (fk = Wk[kk[0]]) && void 0 !== fk ? fk : [];
+        Fk.push(Dk), Wk[kk[0]] = Fk
       }
     }
-    const sS = function(SS) {
-        let HS = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (SS === CS.c) return 0;
-        const gS = (0, bS.c)(iS, SS);
-        if (gS) return gS.id;
-        const tS = (0, bS.c)(iS, SS.split("|")[0]);
-        if (tS && SS === tS.rootMetaDesc) return tS.id;
-        if (!HS) throw new Error(`Invalid block name. You sent ${SS}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`);
+    const Bk = function(kk) {
+        let Fk = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (kk === Jk.c) return 0;
+        const Ik = (0, Tk.d)(Ck, kk);
+        if (Ik) return Ik.id;
+        const Xk = (0, Tk.d)(Ck, kk.split("|")[0]);
+        if (Xk && kk === Xk.rootMetaDesc) return Xk.id;
+        if (!Fk) throw new Error(`Invalid block name. You sent ${kk}. The only valid block names are 'Air' and those contained within the blockMetadata.ts file`);
         return null
       },
-      BS = SS => 0 === SS ? CS.c : iS[SS].name;
+      dk = kk => 0 === kk ? Jk.c : Ck[kk].name;
 
-    function MS(SS) {
-      return null !== iS[SS].meta.open
+    function Yk(kk) {
+      return null !== Ck[kk].meta.open
     }
-    const FS = iS.Unloaded.id,
-      RS = {
+    const Ak = Ck.Unloaded.id,
+      gk = {
         "Patterned Yellow Glass": 1007,
         "Black Concrete Slab|meta|rot4|side": 1220,
         Grenade: 1221,
@@ -13205,173 +13205,173 @@ export const modules = {
         "Nova Bomb": 8548,
         "INTERNAL_MESH_Red Directional Arrow": 8558
       },
-      [TS, oS] = Object.entries(iS).at(-1);
-    if (TS !== Object.keys(RS).at(-1)) throw new Error(`You have added new blocks. Please add the following to knownMetadataIds:\n"${TS}": ${oS.id},\nRemember that new blocks must come after existing blocks in blockInitInfo.`);
-    Object.entries(RS).forEach((SS => {
-      let [HS, gS] = SS;
-      if (iS[HS].id !== gS) throw new Error(`${HS} id is not ${gS}. This means you added a block _before_ other blocks. Blocks can only be added at the end of blockMetadata.ts`)
+      [mk, hk] = Object.entries(Ck).at(-1);
+    if (mk !== Object.keys(gk).at(-1)) throw new Error(`You have added new blocks. Please add the following to knownMetadataIds:\n"${mk}": ${hk.id},\nRemember that new blocks must come after existing blocks in blockInitInfo.`);
+    Object.entries(gk).forEach((kk => {
+      let [Fk, Ik] = kk;
+      if (Ck[Fk].id !== Ik) throw new Error(`${Fk} id is not ${Ik}. This means you added a block _before_ other blocks. Blocks can only be added at the end of blockMetadata.ts`)
     }));
-    for (const mS of aS.v) {
-      const SS = (0, IS.Sb)(mS);
-      if (!iS[SS]) throw new Error(`Missing Mob Spawner Block for mob type ${mS}: please add '...getMobSpawnerBlock("${mS}"),' to the end of blockInitInfo.ts`)
+    for (const Dk of jk.s) {
+      const kk = (0, Lk.jc)(Dk);
+      if (!Ck[kk]) throw new Error(`Missing Mob Spawner Block for mob type ${Dk}: please add '...getMobSpawnerBlock("${Dk}"),' to the end of blockInitInfo.ts`)
     }
-    for (const mS of KS.g) {
-      var lS;
-      if (null === (lS = KS.d[mS]) || void 0 === lS || !lS.supportsFriendship) continue;
-      const SS = (0, IS.Nb)(mS);
-      if (!iS[SS]) throw new Error(`Missing Mob Painting Block for mob type ${mS}: please add '...getMobPaintingBlock("${mS}"),' to the end of blockInitInfo`)
+    for (const Dk of ek.h) {
+      var rk;
+      if (null === (rk = ek.e[Dk]) || void 0 === rk || !rk.supportsFriendship) continue;
+      const kk = (0, Lk.hc)(Dk);
+      if (!Ck[kk]) throw new Error(`Missing Mob Painting Block for mob type ${Dk}: please add '...getMobPaintingBlock("${Dk}"),' to the end of blockInitInfo`)
     }
   },
-  9379: (SS, HS, gS) => {
-    gS.d(HS, {
-      $: () => PH,
-      A: () => rS,
-      Bb: () => aH,
-      Db: () => mS,
-      E: () => LS,
-      Eb: () => dS,
-      G: () => KS,
-      Gb: () => DS,
-      I: () => tH,
-      J: () => jH,
-      Jb: () => ES,
-      K: () => CH,
-      M: () => GS,
-      Nb: () => vS,
-      P: () => jS,
-      R: () => MS,
-      Rb: () => nH,
-      Sb: () => IH,
-      T: () => PS,
-      V: () => RS,
-      Vb: () => fH,
-      Wb: () => ZS,
-      Z: () => WS,
-      ab: () => SH,
-      c: () => gH,
-      d: () => YS,
-      db: () => aS,
-      f: () => XH,
-      fb: () => zS,
-      gb: () => oS,
-      h: () => uH,
-      hb: () => TS,
-      l: () => NH,
-      lb: () => GH,
-      nb: () => BS,
-      o: () => qH,
-      ob: () => US,
-      pb: () => kS,
-      qb: () => QH,
-      s: () => JS,
-      sb: () => lS,
-      vb: () => kH,
-      w: () => OS,
-      wb: () => pS,
-      xb: () => FS,
-      zb: () => wS
+  9210: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      $: () => KF,
+      Cb: () => rk,
+      D: () => TF,
+      E: () => HF,
+      Eb: () => jF,
+      G: () => xF,
+      Gb: () => fk,
+      H: () => Hk,
+      Kb: () => Ak,
+      L: () => wk,
+      Lb: () => sk,
+      N: () => Yk,
+      Nb: () => eF,
+      Ob: () => Dk,
+      R: () => Pk,
+      Rb: () => Ek,
+      Ub: () => Qk,
+      V: () => gk,
+      Wb: () => Gk,
+      Y: () => Nk,
+      _b: () => nk,
+      b: () => XF,
+      cb: () => FF,
+      cc: () => PF,
+      d: () => uk,
+      db: () => jk,
+      f: () => yF,
+      gb: () => ck,
+      gc: () => tF,
+      ic: () => ZF,
+      j: () => LF,
+      jb: () => hk,
+      k: () => aF,
+      lb: () => mk,
+      mb: () => JF,
+      mc: () => zk,
+      n: () => qF,
+      o: () => Sk,
+      pb: () => dk,
+      q: () => vk,
+      sb: () => Wk,
+      u: () => kF,
+      vb: () => Zk,
+      x: () => pk,
+      yb: () => QF,
+      z: () => ek
     });
-    var tS = gS(9367),
-      bS = gS(9386),
-      XS = gS(9395),
-      xS = gS(9416),
-      NS = gS(9420),
-      qS = gS(9425),
-      uS = gS(387),
-      IS = gS(9411),
-      fS = gS(672);
+    var Xk = Ik(9191),
+      Tk = Ik(9219),
+      ik = Ik(9223),
+      yk = Ik(9241),
+      lk = Ik(9244),
+      ak = Ik(9250),
+      qk = Ik(337),
+      Lk = Ik(9237),
+      tk = Ik(621);
 
-    function kS(SS, HS, gS, tS) {
-      const bS = {
-          ...HS
+    function Zk(kk, Fk, Ik, Xk) {
+      const Tk = {
+          ...Fk
         },
-        XS = {};
-      for (let NS = 0; NS < gS.length; NS++) {
-        var xS;
-        Object.assign(XS, {
-          [`${SS}_stage${NS+1}`]: Object.assign({
-            ...bS
+        ik = {};
+      for (let lk = 0; lk < Ik.length; lk++) {
+        var yk;
+        Object.assign(ik, {
+          [`${kk}_stage${lk+1}`]: Object.assign({
+            ...Tk
           }, {
-            textureInfo: gS[NS]
-          }, null !== (xS = null === tS || void 0 === tS ? void 0 : tS[NS + 1]) && void 0 !== xS ? xS : {})
+            textureInfo: Ik[lk]
+          }, null !== (yk = null === Xk || void 0 === Xk ? void 0 : Xk[lk + 1]) && void 0 !== yk ? yk : {})
         })
       }
-      return XS
+      return ik
     }
 
-    function aS(SS, HS) {
-      console.assert("meta|rot1|empty" === HS.rootMetaDesc.split("|").slice(1).join("|"), "mailbox root block .rootMetaDesc must be |meta|rot1|empty");
-      const gS = {
-        ...HS
+    function jk(kk, Fk) {
+      console.assert("meta|rot1|empty" === Fk.rootMetaDesc.split("|").slice(1).join("|"), "mailbox root block .rootMetaDesc must be |meta|rot1|empty");
+      const Ik = {
+        ...Fk
       };
-      delete gS.rootMetaDesc;
-      const tS = {
-          ...gS
+      delete Ik.rootMetaDesc;
+      const Xk = {
+          ...Ik
         },
-        bS = {
-          ...gS
+        Tk = {
+          ...Ik
         },
-        XS = {
-          ...gS
+        ik = {
+          ...Ik
         };
-      Object.assign(tS, {
+      Object.assign(Xk, {
         texturePerSide: [0, 1, 1, 1, 1, 1]
-      }), Object.assign(bS, {
+      }), Object.assign(Tk, {
         texturePerSide: [1, 1, 1, 1, 1, 0]
-      }), Object.assign(XS, {
+      }), Object.assign(ik, {
         texturePerSide: [1, 0, 1, 1, 1, 1]
       });
-      const xS = ["mailbox_front_full", "mailbox_side"];
+      const yk = ["mailbox_front_full", "mailbox_side"];
       return {
-        [SS]: HS,
-        [`${SS}|meta|rot2|empty`]: {
-          ...tS
+        [kk]: Fk,
+        [`${kk}|meta|rot2|empty`]: {
+          ...Xk
         },
-        [`${SS}|meta|rot3|empty`]: {
-          ...bS
+        [`${kk}|meta|rot3|empty`]: {
+          ...Tk
         },
-        [`${SS}|meta|rot4|empty`]: {
-          ...XS
+        [`${kk}|meta|rot4|empty`]: {
+          ...ik
         },
-        [`${SS}|meta|rot1|full`]: Object.assign({
-          ...gS
+        [`${kk}|meta|rot1|full`]: Object.assign({
+          ...Ik
         }, {
-          textureInfo: xS
+          textureInfo: yk
         }),
-        [`${SS}|meta|rot2|full`]: Object.assign({
-          ...tS
+        [`${kk}|meta|rot2|full`]: Object.assign({
+          ...Xk
         }, {
-          textureInfo: xS
+          textureInfo: yk
         }),
-        [`${SS}|meta|rot3|full`]: Object.assign({
-          ...bS
+        [`${kk}|meta|rot3|full`]: Object.assign({
+          ...Tk
         }, {
-          textureInfo: xS
+          textureInfo: yk
         }),
-        [`${SS}|meta|rot4|full`]: Object.assign({
-          ...XS
+        [`${kk}|meta|rot4|full`]: Object.assign({
+          ...ik
         }, {
-          textureInfo: xS
+          textureInfo: yk
         })
       }
     }
 
-    function KS(SS, HS) {
-      console.assert("meta|rot1|books6" === HS.rootMetaDesc.split("|").slice(1).join("|"), "bookshelf root block .rootMetaDesc must be |meta|rot1|books6");
-      const gS = {
-        ...HS
+    function ek(kk, Fk) {
+      console.assert("meta|rot1|books6" === Fk.rootMetaDesc.split("|").slice(1).join("|"), "bookshelf root block .rootMetaDesc must be |meta|rot1|books6");
+      const Ik = {
+        ...Fk
       };
-      delete gS.rootMetaDesc;
-      const tS = {
-          ...gS
+      delete Ik.rootMetaDesc;
+      const Xk = {
+          ...Ik
         },
-        bS = {
-          ...gS
+        Tk = {
+          ...Ik
         },
-        XS = {
-          ...gS
+        ik = {
+          ...Ik
         },
-        xS = {
+        yk = {
           0: ["bookshelf_empty", "planks_maple"],
           1: ["bookshelf_1", "planks_maple"],
           2: ["bookshelf_2", "planks_maple"],
@@ -13379,562 +13379,562 @@ export const modules = {
           4: ["bookshelf_4", "planks_maple"],
           5: ["bookshelf_5", "planks_maple"]
         };
-      Object.assign(tS, {
+      Object.assign(Xk, {
         texturePerSide: [0, 0, 1, 1, 1, 1]
-      }), Object.assign(bS, {
+      }), Object.assign(Tk, {
         texturePerSide: [1, 1, 1, 1, 0, 0]
-      }), Object.assign(XS, {
+      }), Object.assign(ik, {
         texturePerSide: [0, 0, 1, 1, 1, 1]
       });
-      const NS = {
-        [SS]: HS,
-        [`${SS}|meta|rot2|books6`]: {
-          ...tS
+      const lk = {
+        [kk]: Fk,
+        [`${kk}|meta|rot2|books6`]: {
+          ...Xk
         },
-        [`${SS}|meta|rot3|books6`]: {
-          ...bS
+        [`${kk}|meta|rot3|books6`]: {
+          ...Tk
         },
-        [`${SS}|meta|rot4|books6`]: {
-          ...XS
+        [`${kk}|meta|rot4|books6`]: {
+          ...ik
         },
-        [`Empty ${SS}`]: Object.assign({
-          ...gS
+        [`Empty ${kk}`]: Object.assign({
+          ...Ik
         }, {
-          textureInfo: xS[0],
+          textureInfo: yk[0],
           description: {
             translationKey: "item:emptyBookshelfDescription"
           },
-          rootMetaDesc: `Empty ${SS}|meta|rot1|books0`
+          rootMetaDesc: `Empty ${kk}|meta|rot1|books0`
         }),
-        [`Empty ${SS}|meta|rot2|books0`]: Object.assign({
-          ...tS
+        [`Empty ${kk}|meta|rot2|books0`]: Object.assign({
+          ...Xk
         }, {
-          textureInfo: xS[0]
+          textureInfo: yk[0]
         }),
-        [`Empty ${SS}|meta|rot3|books0`]: Object.assign({
-          ...bS
+        [`Empty ${kk}|meta|rot3|books0`]: Object.assign({
+          ...Tk
         }, {
-          textureInfo: xS[0]
+          textureInfo: yk[0]
         }),
-        [`Empty ${SS}|meta|rot4|books0`]: Object.assign({
-          ...XS
+        [`Empty ${kk}|meta|rot4|books0`]: Object.assign({
+          ...ik
         }, {
-          textureInfo: xS[0]
+          textureInfo: yk[0]
         })
       };
-      for (let qS = 1; qS <= 5; qS++) Object.assign(NS, {
-        [`${SS}|meta|rot1|books${qS}`]: Object.assign({
-          ...gS
+      for (let ak = 1; ak <= 5; ak++) Object.assign(lk, {
+        [`${kk}|meta|rot1|books${ak}`]: Object.assign({
+          ...Ik
         }, {
-          textureInfo: xS[qS]
+          textureInfo: yk[ak]
         })
-      }), Object.assign(NS, {
-        [`${SS}|meta|rot2|books${qS}`]: Object.assign({
-          ...tS
+      }), Object.assign(lk, {
+        [`${kk}|meta|rot2|books${ak}`]: Object.assign({
+          ...Xk
         }, {
-          textureInfo: xS[qS]
+          textureInfo: yk[ak]
         })
-      }), Object.assign(NS, {
-        [`${SS}|meta|rot3|books${qS}`]: Object.assign({
-          ...bS
+      }), Object.assign(lk, {
+        [`${kk}|meta|rot3|books${ak}`]: Object.assign({
+          ...Tk
         }, {
-          textureInfo: xS[qS]
+          textureInfo: yk[ak]
         })
-      }), Object.assign(NS, {
-        [`${SS}|meta|rot4|books${qS}`]: Object.assign({
-          ...XS
+      }), Object.assign(lk, {
+        [`${kk}|meta|rot4|books${ak}`]: Object.assign({
+          ...ik
         }, {
-          textureInfo: xS[qS]
+          textureInfo: yk[ak]
         })
       });
-      return NS
+      return lk
     }
 
-    function jS() {
-      const SS = {};
-      for (const HS of uS.Cc) {
-        const gS = `${HS.toLowerCase().split(" ").join("_")}_concrete`;
-        Object.assign(SS, wS(`${HS} Concrete Slab`, {
+    function wk() {
+      const kk = {};
+      for (const Fk of qk.Mc) {
+        const Ik = `${Fk.toLowerCase().split(" ").join("_")}_concrete`;
+        Object.assign(kk, sk(`${Fk} Concrete Slab`, {
           displayName: {
-            translationKey: `item:${(0,uS.ue)(HS)}ConcreteSlab`
+            translationKey: `item:${(0,qk.ye)(Fk)}ConcreteSlab`
           },
           ttb: 1080,
-          textureInfo: gS,
+          textureInfo: Ik,
           model: "Slab",
           harvestType: "rock",
-          slabFullBlock: `${HS} Concrete`,
-          rootMetaDesc: `${HS} Concrete Slab|meta|rot1|bot`
+          slabFullBlock: `${Fk} Concrete`,
+          rootMetaDesc: `${Fk} Concrete Slab|meta|rot1|bot`
         }))
       }
-      return SS
+      return kk
     }
 
-    function GS(SS, HS, gS, tS, bS, XS) {
-      const xS = {};
-      for (const NS of uS.Cc) {
-        const qS = SS.replace("$colour$", NS);
-        let IS;
-        IS = Array.isArray(gS) ? {
-          textureInfo: gS.map((SS => SS.replace("$colour$", (0, uS.xe)(NS)))),
+    function Hk(kk, Fk, Ik, Xk, Tk, ik) {
+      const yk = {};
+      for (const lk of qk.Mc) {
+        const ak = kk.replace("$colour$", lk);
+        let Lk;
+        Lk = Array.isArray(Ik) ? {
+          textureInfo: Ik.map((kk => kk.replace("$colour$", (0, qk.Ce)(lk)))),
           texturePerSide: [0, 0, 1, 1, 0, 0]
         } : {
-          textureInfo: gS.replace("$colour$", (0, uS.xe)(NS))
-        }, Object.assign(xS, wS(qS, {
+          textureInfo: Ik.replace("$colour$", (0, qk.Ce)(lk))
+        }, Object.assign(yk, sk(ak, {
           displayName: {
-            translationKey: tS,
+            translationKey: Xk,
             params: {
-              colour: `$t(colour:${(0,uS.xe)(NS)})`
+              colour: `$t(colour:${(0,qk.Ce)(lk)})`
             }
           },
           description: {
-            translationKey: bS,
+            translationKey: Tk,
             params: {
-              colour: `$t(colour:${(0,uS.xe)(NS)})`
+              colour: `$t(colour:${(0,qk.Ce)(lk)})`
             }
           },
           model: "Slab",
-          slabFullBlock: HS.replace("$colour$", NS),
-          ...IS,
-          rootMetaDesc: `${qS}|meta|rot1|bot`,
-          ...XS
+          slabFullBlock: Fk.replace("$colour$", lk),
+          ...Lk,
+          rootMetaDesc: `${ak}|meta|rot1|bot`,
+          ...ik
         }))
       }
-      return xS
+      return yk
     }
-    const CS = {
-        bot: (0, tS.e)([
+    const Jk = {
+        bot: (0, Xk.d)([
           [
             [0, 0, 0],
             [8, 4, 8]
           ]
         ]),
-        top: (0, tS.e)([
+        top: (0, Xk.d)([
           [
             [0, 4, 0],
             [8, 8, 8]
           ]
         ]),
-        side1: (0, tS.e)([
+        side1: (0, Xk.d)([
           [
             [0, 0, 0],
             [8, 8, 4]
           ]
         ]),
-        side2: (0, tS.e)([
+        side2: (0, Xk.d)([
           [
             [0, 0, 0],
             [4, 8, 8]
           ]
         ]),
-        side3: (0, tS.e)([
+        side3: (0, Xk.d)([
           [
             [0, 0, 4],
             [8, 8, 8]
           ]
         ]),
-        side4: (0, tS.e)([
+        side4: (0, Xk.d)([
           [
             [4, 0, 0],
             [8, 8, 8]
           ]
         ])
       },
-      nS = [(0, tS.e)([
+      xk = [(0, Xk.d)([
         [
           [0, 0, 7],
           [8, 8, 8]
         ]
-      ]), (0, tS.e)([
+      ]), (0, Xk.d)([
         [
           [7, 0, 0],
           [8, 8, 8]
         ]
-      ]), (0, tS.e)([
+      ]), (0, Xk.d)([
         [
           [0, 0, 0],
           [8, 8, 1]
         ]
-      ]), (0, tS.e)([
+      ]), (0, Xk.d)([
         [
           [0, 0, 0],
           [1, 8, 8]
         ]
       ])];
 
-    function PS(SS, HS) {
-      return nS[(SS - 1 + Number(HS)) % 4]
+    function Pk(kk, Fk) {
+      return xk[(kk - 1 + Number(Fk)) % 4]
     }
-    const QS = (0, tS.e)([
+    const Kk = (0, Xk.d)([
       [
         [0, 7, 0],
         [8, 8, 8]
       ]
     ]);
 
-    function DS(SS, HS) {
-      return HS ? nS[(SS + 1) % 4] : QS
+    function Qk(kk, Fk) {
+      return Fk ? xk[(kk + 1) % 4] : Kk
     }
 
-    function wS(SS, HS) {
-      console.assert("meta|rot1|bot" === HS.rootMetaDesc.split("|").slice(1).join("|"), "slab root block .rootMetaDesc must be |meta|rot1|bot");
-      const gS = {
-        ...HS
+    function sk(kk, Fk) {
+      console.assert("meta|rot1|bot" === Fk.rootMetaDesc.split("|").slice(1).join("|"), "slab root block .rootMetaDesc must be |meta|rot1|bot");
+      const Ik = {
+        ...Fk
       };
-      return delete gS.rootMetaDesc, {
-        [SS]: {
-          ...HS,
-          tG: CS.bot
+      return delete Ik.rootMetaDesc, {
+        [kk]: {
+          ...Fk,
+          Re: Jk.bot
         },
-        [`${SS}|meta|rot1|top`]: {
-          ...gS,
-          tG: CS.top
+        [`${kk}|meta|rot1|top`]: {
+          ...Ik,
+          Re: Jk.top
         },
-        [`${SS}|meta|rot1|side`]: {
-          ...gS,
-          tG: CS.side1
+        [`${kk}|meta|rot1|side`]: {
+          ...Ik,
+          Re: Jk.side1
         },
-        [`${SS}|meta|rot2|side`]: {
-          ...gS,
-          tG: CS.side2
+        [`${kk}|meta|rot2|side`]: {
+          ...Ik,
+          Re: Jk.side2
         },
-        [`${SS}|meta|rot3|side`]: {
-          ...gS,
-          tG: CS.side3
+        [`${kk}|meta|rot3|side`]: {
+          ...Ik,
+          Re: Jk.side3
         },
-        [`${SS}|meta|rot4|side`]: {
-          ...gS,
-          tG: CS.side4
+        [`${kk}|meta|rot4|side`]: {
+          ...Ik,
+          Re: Jk.side4
         }
       }
     }
 
-    function hS(SS, HS) {
-      const gS = {
-          ...HS,
+    function Vk(kk, Fk) {
+      const Ik = {
+          ...Fk,
           model: "Stairs"
         },
-        tS = {};
-      for (const XS of ["bot", "top"])
-        for (let HS = 1; HS <= 4; HS++) {
-          const xS = bS.g[XS][HS - 1];
-          1 === HS && "bot" === XS ? tS[SS] = {
-            ...gS,
-            rootMetaDesc: `${SS}|meta|rot1|bot`,
-            tG: xS
-          } : tS[`${SS}|meta|rot${HS}|${XS}`] = {
-            ...gS,
-            tG: xS
+        Xk = {};
+      for (const ik of ["bot", "top"])
+        for (let Fk = 1; Fk <= 4; Fk++) {
+          const yk = Tk.i[ik][Fk - 1];
+          1 === Fk && "bot" === ik ? Xk[kk] = {
+            ...Ik,
+            rootMetaDesc: `${kk}|meta|rot1|bot`,
+            Re: yk
+          } : Xk[`${kk}|meta|rot${Fk}|${ik}`] = {
+            ...Ik,
+            Re: yk
           }
         }
-      return tS
+      return Xk
     }
 
-    function ZS(SS, HS) {
+    function zk(kk, Fk) {
       return {
-        name: SS,
-        data: HS
+        name: kk,
+        data: Fk
       }
     }
 
-    function JS(SS, HS) {
-      return uS.Cc.map((gS => ZS(`${gS} ${SS} Stairs`, HS(gS))))
+    function Sk(kk, Fk) {
+      return qk.Mc.map((Ik => zk(`${Ik} ${kk} Stairs`, Fk(Ik))))
     }
 
-    function OS(SS) {
-      const HS = {};
+    function vk(kk) {
+      const Fk = {};
       for (const {
-          name: gS,
-          data: tS
+          name: Ik,
+          data: Xk
         }
-        of SS) Object.assign(HS, hS(gS, tS));
-      return HS
+        of kk) Object.assign(Fk, Vk(Ik, Xk));
+      return Fk
     }
 
-    function dS(SS) {
-      const HS = {};
+    function Ek(kk) {
+      const Fk = {};
       for (const {
-          name: gS,
-          data: tS
+          name: Ik,
+          data: Xk
         }
-        of SS) {
-        const SS = {
-          ...tS,
+        of kk) {
+        const kk = {
+          ...Xk,
           model: "Stairs"
         };
-        for (const tS of ["bot", "top"])
-          for (const XS of IS.k)
-            for (let xS = 1; xS <= 4; xS++) HS[`${gS}|meta|rot${xS}|${tS}|${XS}`] = {
-              ...SS,
-              tG: bS.i[tS][XS][xS - 1]
+        for (const Xk of ["bot", "top"])
+          for (const ik of Lk.l)
+            for (let yk = 1; yk <= 4; yk++) Fk[`${Ik}|meta|rot${yk}|${Xk}|${ik}`] = {
+              ...kk,
+              Re: Tk.l[Xk][ik][yk - 1]
             }
       }
-      return HS
+      return Fk
     }
 
-    function cS(SS, HS) {
-      const gS = `_${SS} Top`,
-        tS = {};
-      for (const bS of [0, xS.f])
-        for (const XS of xS.d) tS[(0, xS.i)(SS, XS | bS)] = {
-          ...HS,
+    function Ok(kk, Fk) {
+      const Ik = `_${kk} Top`,
+        Xk = {};
+      for (const Tk of [0, yk.f])
+        for (const ik of yk.e) Xk[(0, yk.i)(kk, ik | Tk)] = {
+          ...Fk,
           model: "fence",
-          tG: xS.r[XS],
-          attachedTop: (0, xS.i)(gS, XS)
+          Re: yk.t[ik],
+          attachedTop: (0, yk.i)(Ik, ik)
         };
-      for (const bS of xS.d) tS[(0, xS.i)(gS, bS)] = {
-        ...HS,
+      for (const Tk of yk.e) Xk[(0, yk.i)(Ik, Tk)] = {
+        ...Fk,
         model: "fence",
-        tG: xS.u[bS],
+        Re: yk.v[Tk],
         canBePlacedOver: !0,
         drops: null
       };
-      return tS
+      return Xk
     }
 
-    function vS(SS) {
-      const HS = {};
-      for (const gS of SS) {
-        const SS = `${gS} Fence`;
-        Object.assign(HS, cS(SS, {
+    function nk(kk) {
+      const Fk = {};
+      for (const Ik of kk) {
+        const kk = `${Ik} Fence`;
+        Object.assign(Fk, Ok(kk, {
           displayName: {
-            translationKey: `item:${(0,uS.ue)(SS)}`
+            translationKey: `item:${(0,qk.ye)(kk)}`
           },
           ttb: 1800,
-          textureInfo: `planks_${gS.toLowerCase()}`,
-          itemTexture: `${gS.toLowerCase()}_fence`,
+          textureInfo: `planks_${Ik.toLowerCase()}`,
+          itemTexture: `${Ik.toLowerCase()}_fence`,
           harvestType: "wood"
         }))
       }
-      return HS
+      return Fk
     }
 
-    function ES(SS) {
-      const HS = {};
-      for (const gS of SS) {
-        const SS = `${gS} Fence Gate`,
-          tS = `_${SS} Top`,
-          bS = {
+    function Gk(kk) {
+      const Fk = {};
+      for (const Ik of kk) {
+        const kk = `${Ik} Fence Gate`,
+          Xk = `_${kk} Top`,
+          Tk = {
             displayName: {
-              translationKey: `item:${(0,uS.ue)(SS)}`
+              translationKey: `item:${(0,qk.ye)(kk)}`
             },
             ttb: 1800,
-            textureInfo: `planks_${gS.toLowerCase()}`,
-            itemTexture: `${gS.toLowerCase()}_fence_gate`,
+            textureInfo: `planks_${Ik.toLowerCase()}`,
+            itemTexture: `${Ik.toLowerCase()}_fence_gate`,
             harvestType: "wood",
-            model: NS.h
+            model: lk.e
           };
         for (const {
-            rot: gS,
-            open: XS
+            rot: Ik,
+            open: ik
           }
-          of NS.k) HS[(0, NS.m)(SS, gS, XS)] = {
-          ...bS,
-          ...1 !== gS || XS ? {} : {
-            rootMetaDesc: `${SS}|meta|rot1|closed`
+          of lk.g) Fk[(0, lk.i)(kk, Ik, ik)] = {
+          ...Tk,
+          ...1 !== Ik || ik ? {} : {
+            rootMetaDesc: `${kk}|meta|rot1|closed`
           },
-          tG: (0, NS.v)(!1, gS, XS),
-          attachedTop: (0, NS.m)(tS, gS, XS)
+          Re: (0, lk.p)(!1, Ik, ik),
+          attachedTop: (0, lk.i)(Xk, Ik, ik)
         };
         for (const {
-            rot: gS,
-            open: XS
+            rot: Ik,
+            open: ik
           }
-          of NS.k) HS[(0, NS.m)(tS, gS, XS)] = {
-          ...bS,
-          ...1 !== gS || XS ? {} : {
-            rootMetaDesc: `${tS}|meta|rot1|closed`
+          of lk.g) Fk[(0, lk.i)(Xk, Ik, ik)] = {
+          ...Tk,
+          ...1 !== Ik || ik ? {} : {
+            rootMetaDesc: `${Xk}|meta|rot1|closed`
           },
-          tG: (0, NS.v)(!0, gS, XS),
+          Re: (0, lk.p)(!0, Ik, ik),
           canBePlacedOver: !0,
           drops: null
         }
       }
-      return HS
+      return Fk
     }
 
-    function LS(SS, HS) {
-      console.assert("meta|rot1|bot" === HS.rootMetaDesc.split("|").slice(1).join("|"), "banner root block .rootMetaDesc must be |meta|rot1|bot");
-      const gS = {
-        ...HS
+    function pk(kk, Fk) {
+      console.assert("meta|rot1|bot" === Fk.rootMetaDesc.split("|").slice(1).join("|"), "banner root block .rootMetaDesc must be |meta|rot1|bot");
+      const Ik = {
+        ...Fk
       };
-      delete gS.rootMetaDesc;
-      const tS = {
-          ...gS,
-          blockModel: `_${SS} Hanging`
+      delete Ik.rootMetaDesc;
+      const Xk = {
+          ...Ik,
+          blockModel: `_${kk} Hanging`
         },
-        bS = `_${SS} Flag`,
-        XS = {
-          ...HS,
-          drops: SS,
-          rootMetaDesc: `${bS}|meta|rot1|top`,
-          blockModel: `${bS} Hanging`
+        Tk = `_${kk} Flag`,
+        ik = {
+          ...Fk,
+          drops: kk,
+          rootMetaDesc: `${Tk}|meta|rot1|top`,
+          blockModel: `${Tk} Hanging`
         },
-        xS = {
-          ...XS
+        yk = {
+          ...ik
         };
-      delete xS.rootMetaDesc;
-      const NS = {
-        ...xS,
-        blockModel: bS
+      delete yk.rootMetaDesc;
+      const lk = {
+        ...yk,
+        blockModel: Tk
       };
       return {
-        [SS]: HS,
-        [`${SS}|meta|rot2|bot`]: {
-          ...gS
+        [kk]: Fk,
+        [`${kk}|meta|rot2|bot`]: {
+          ...Ik
         },
-        [`${SS}|meta|rot3|bot`]: {
-          ...gS
+        [`${kk}|meta|rot3|bot`]: {
+          ...Ik
         },
-        [`${SS}|meta|rot4|bot`]: {
-          ...gS
+        [`${kk}|meta|rot4|bot`]: {
+          ...Ik
         },
-        [bS]: XS,
-        [`${bS}|meta|rot2|top`]: {
-          ...xS
+        [Tk]: ik,
+        [`${Tk}|meta|rot2|top`]: {
+          ...yk
         },
-        [`${bS}|meta|rot3|top`]: {
-          ...xS
+        [`${Tk}|meta|rot3|top`]: {
+          ...yk
         },
-        [`${bS}|meta|rot4|top`]: {
-          ...xS
+        [`${Tk}|meta|rot4|top`]: {
+          ...yk
         },
-        [`${bS}|meta|rot1|side`]: {
-          ...xS
+        [`${Tk}|meta|rot1|side`]: {
+          ...yk
         },
-        [`${bS}|meta|rot2|side`]: {
-          ...xS
+        [`${Tk}|meta|rot2|side`]: {
+          ...yk
         },
-        [`${bS}|meta|rot3|side`]: {
-          ...xS
+        [`${Tk}|meta|rot3|side`]: {
+          ...yk
         },
-        [`${bS}|meta|rot4|side`]: {
-          ...xS
+        [`${Tk}|meta|rot4|side`]: {
+          ...yk
         },
-        [`${bS}|meta|rot1|bot`]: {
-          ...NS
+        [`${Tk}|meta|rot1|bot`]: {
+          ...lk
         },
-        [`${bS}|meta|rot2|bot`]: {
-          ...NS
+        [`${Tk}|meta|rot2|bot`]: {
+          ...lk
         },
-        [`${bS}|meta|rot3|bot`]: {
-          ...NS
+        [`${Tk}|meta|rot3|bot`]: {
+          ...lk
         },
-        [`${bS}|meta|rot4|bot`]: {
-          ...NS
+        [`${Tk}|meta|rot4|bot`]: {
+          ...lk
         },
-        [`${SS}|meta|rot1|top`]: {
-          ...tS
+        [`${kk}|meta|rot1|top`]: {
+          ...Xk
         },
-        [`${SS}|meta|rot2|top`]: {
-          ...tS
+        [`${kk}|meta|rot2|top`]: {
+          ...Xk
         },
-        [`${SS}|meta|rot3|top`]: {
-          ...tS
+        [`${kk}|meta|rot3|top`]: {
+          ...Xk
         },
-        [`${SS}|meta|rot4|top`]: {
-          ...tS
+        [`${kk}|meta|rot4|top`]: {
+          ...Xk
         },
-        [`${SS}|meta|rot1|side`]: {
-          ...tS
+        [`${kk}|meta|rot1|side`]: {
+          ...Xk
         },
-        [`${SS}|meta|rot2|side`]: {
-          ...tS
+        [`${kk}|meta|rot2|side`]: {
+          ...Xk
         },
-        [`${SS}|meta|rot3|side`]: {
-          ...tS
+        [`${kk}|meta|rot3|side`]: {
+          ...Xk
         },
-        [`${SS}|meta|rot4|side`]: {
-          ...tS
+        [`${kk}|meta|rot4|side`]: {
+          ...Xk
         }
       }
     }
-    const YS = ["nx", "ny", "nz", "px", "py", "pz"];
+    const uk = ["nx", "ny", "nz", "px", "py", "pz"];
 
-    function AS(SS, HS) {
-      const [gS, tS] = SS < HS ? [SS, HS] : [HS, SS];
-      return `${gS}_${tS}`
+    function bk(kk, Fk) {
+      const [Ik, Xk] = kk < Fk ? [kk, Fk] : [Fk, kk];
+      return `${Ik}_${Xk}`
     }
 
-    function yS(SS) {
-      return SS[1]
+    function Rk(kk) {
+      return kk[1]
     }
 
-    function VS(SS, HS, gS) {
-      return yS(HS) === yS(gS) ? `${SS}_straight_${yS(HS)}` : `${SS}_elbow_${AS(HS,gS)}`
+    function Uk(kk, Fk, Ik) {
+      return Rk(Fk) === Rk(Ik) ? `${kk}_straight_${Rk(Fk)}` : `${kk}_elbow_${bk(Fk,Ik)}`
     }
 
-    function iS(SS, HS, gS, tS, bS) {
-      const XS = `meta|${tS}|none`;
-      if (bS.rootMetaDesc.split("|").slice(1).join("|") !== XS) throw new Error(`${SS} root hub pipe .rootMetaDesc must be |${XS}, got "${bS.rootMetaDesc}"`);
-      if (void 0 !== bS.blockModel) throw new Error(`${SS} root hub pipe data must NOT set blockModel - the builder fills it per-variant`);
-      const xS = SS => {
-          const HS = {
-            ...bS,
-            blockModel: SS
+    function Ck(kk, Fk, Ik, Xk, Tk) {
+      const ik = `meta|${Xk}|none`;
+      if (Tk.rootMetaDesc.split("|").slice(1).join("|") !== ik) throw new Error(`${kk} root hub pipe .rootMetaDesc must be |${ik}, got "${Tk.rootMetaDesc}"`);
+      if (void 0 !== Tk.blockModel) throw new Error(`${kk} root hub pipe data must NOT set blockModel - the builder fills it per-variant`);
+      const yk = kk => {
+          const Fk = {
+            ...Tk,
+            blockModel: kk
           };
-          return delete HS.rootMetaDesc, HS
+          return delete Fk.rootMetaDesc, Fk
         },
-        NS = {
-          [SS]: {
-            ...bS,
-            blockModel: `${HS}_${tS}_${gS}`
+        lk = {
+          [kk]: {
+            ...Tk,
+            blockModel: `${Fk}_${Xk}_${Ik}`
           }
         };
-      for (const qS of YS) qS !== gS && (NS[`${SS}|meta|${tS}|${qS}`] = xS(`${HS}_${tS}_${qS}`));
-      return NS
+      for (const ak of uk) ak !== Ik && (lk[`${kk}|meta|${Xk}|${ak}`] = yk(`${Fk}_${Xk}_${ak}`));
+      return lk
     }
 
-    function WS(SS, HS, gS, tS) {
-      return iS(SS, HS, gS, "input", tS)
+    function Nk(kk, Fk, Ik, Xk) {
+      return Ck(kk, Fk, Ik, "input", Xk)
     }
 
-    function zS(SS, HS, gS, tS) {
-      return iS(SS, HS, gS, "output", tS)
+    function ck(kk, Fk, Ik, Xk) {
+      return Ck(kk, Fk, Ik, "output", Xk)
     }
 
-    function US(SS, HS, gS) {
-      console.assert("meta|conn|none" === gS.rootMetaDesc.split("|").slice(1).join("|"), `${SS} root pipe .rootMetaDesc must be |meta|conn|none`), console.assert(void 0 === gS.blockModel, `${SS} root pipe data must NOT set blockModel - the builder fills it per-variant`);
-      const tS = SS => {
-          const HS = {
-            ...gS,
-            blockModel: SS
+    function Wk(kk, Fk, Ik) {
+      console.assert("meta|conn|none" === Ik.rootMetaDesc.split("|").slice(1).join("|"), `${kk} root pipe .rootMetaDesc must be |meta|conn|none`), console.assert(void 0 === Ik.blockModel, `${kk} root pipe data must NOT set blockModel - the builder fills it per-variant`);
+      const Xk = kk => {
+          const Fk = {
+            ...Ik,
+            blockModel: kk
           };
-          return delete HS.rootMetaDesc, HS
+          return delete Fk.rootMetaDesc, Fk
         },
-        bS = {
-          [SS]: {
-            ...gS,
-            blockModel: `${HS}_isolated`
+        Tk = {
+          [kk]: {
+            ...Ik,
+            blockModel: `${Fk}_isolated`
           }
         };
-      for (const XS of YS) bS[`${SS}|meta|conn|${XS}`] = tS(`${HS}_end_${XS}`);
-      for (let XS = 0; XS < YS.length; XS++)
-        for (let gS = XS + 1; gS < YS.length; gS++) {
-          const [xS, NS] = [YS[XS], YS[gS]];
-          bS[`${SS}|meta|conn|${AS(xS,NS)}`] = tS(VS(HS, xS, NS))
+      for (const ik of uk) Tk[`${kk}|meta|conn|${ik}`] = Xk(`${Fk}_end_${ik}`);
+      for (let ik = 0; ik < uk.length; ik++)
+        for (let Ik = ik + 1; Ik < uk.length; Ik++) {
+          const [yk, lk] = [uk[ik], uk[Ik]];
+          Tk[`${kk}|meta|conn|${bk(yk,lk)}`] = Xk(Uk(Fk, yk, lk))
         }
-      return bS
+      return Tk
     }
 
-    function pS(SS, HS) {
-      console.assert("meta|rot1" === HS.rootMetaDesc.split("|").slice(1).join("|"), `${SS} root block .rootMetaDesc must be |meta|rot1`);
-      const gS = {
-        ...HS
+    function fk(kk, Fk) {
+      console.assert("meta|rot1" === Fk.rootMetaDesc.split("|").slice(1).join("|"), `${kk} root block .rootMetaDesc must be |meta|rot1`);
+      const Ik = {
+        ...Fk
       };
-      return delete gS.rootMetaDesc, {
-        [SS]: HS,
-        [`${SS}|meta|rot2`]: {
-          ...gS
+      return delete Ik.rootMetaDesc, {
+        [kk]: Fk,
+        [`${kk}|meta|rot2`]: {
+          ...Ik
         },
-        [`${SS}|meta|rot3`]: {
-          ...gS
+        [`${kk}|meta|rot3`]: {
+          ...Ik
         },
-        [`${SS}|meta|rot4`]: {
-          ...gS
+        [`${kk}|meta|rot4`]: {
+          ...Ik
         }
       }
     }
-    const sS = {
+    const Bk = {
       ttb: 1800,
       harvestType: "wood",
       solid: !0,
@@ -13947,95 +13947,95 @@ export const modules = {
       }
     };
 
-    function BS() {
-      const SS = {},
-        HS = ["", "Top", "Bottom", "Left", "Right", "Top Left", "Top Right", "Bottom Left", "Bottom Right"];
-      for (const gS of ["Standing", "Wall"])
-        for (const tS of "Standing" === gS ? [...HS, "Leg"] : HS) {
-          const HS = `Noticeboard ${gS}${tS?` ${tS}`:""}`;
-          Object.assign(SS, pS(HS, {
-            ...sS,
+    function dk() {
+      const kk = {},
+        Fk = ["", "Top", "Bottom", "Left", "Right", "Top Left", "Top Right", "Bottom Left", "Bottom Right"];
+      for (const Ik of ["Standing", "Wall"])
+        for (const Xk of "Standing" === Ik ? [...Fk, "Leg"] : Fk) {
+          const Fk = `Noticeboard ${Ik}${Xk?` ${Xk}`:""}`;
+          Object.assign(kk, fk(Fk, {
+            ...Bk,
             displayName: {
-              translationKey: `item:${(0,uS.ue)(HS)}`
+              translationKey: `item:${(0,qk.ye)(Fk)}`
             },
-            rootMetaDesc: `${HS}|meta|rot1`,
-            blockModel: (0, uS.xe)(HS),
-            itemTexture: (0, uS.xe)(HS)
+            rootMetaDesc: `${Fk}|meta|rot1`,
+            blockModel: (0, qk.Ce)(Fk),
+            itemTexture: (0, qk.Ce)(Fk)
           }))
         }
-      return SS
+      return kk
     }
 
-    function MS() {
-      const SS = {};
+    function Yk() {
+      const kk = {};
       for (const {
-          root: HS,
-          blockModelPrefix: gS
+          root: Fk,
+          blockModelPrefix: Ik
         }
-        of XS.o) {
-        const tS = {
-          ...sS,
+        of ik.k) {
+        const Xk = {
+          ...Bk,
           displayName: {
-            translationKey: `item:${(0,uS.ue)(XS.t)}`
+            translationKey: `item:${(0,qk.ye)(ik.q)}`
           },
-          drops: XS.t,
+          drops: ik.q,
           itemTexture: "noticeboard",
           customModelInfo: {
             yOffset: -.5,
             yRotOffset: Math.PI
           }
         };
-        for (let bS = 1; bS <= 4; bS++)
-          for (const xS of XS.d) {
-            const NS = (0, XS.h)(HS, bS, xS),
-              qS = `${gS}${XS.y[xS]}`;
-            SS[NS] = NS === HS ? {
-              ...tS,
-              rootMetaDesc: `${HS}|meta|rot1`,
-              blockModel: qS
+        for (let Tk = 1; Tk <= 4; Tk++)
+          for (const yk of ik.b) {
+            const lk = (0, ik.d)(Fk, Tk, yk),
+              ak = `${Ik}${ik.v[yk]}`;
+            kk[lk] = lk === Fk ? {
+              ...Xk,
+              rootMetaDesc: `${Fk}|meta|rot1`,
+              blockModel: ak
             } : {
-              ...tS,
-              blockModel: qS
+              ...Xk,
+              blockModel: ak
             }
           }
       }
-      return SS
+      return kk
     }
 
-    function FS(SS, HS) {
-      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [
+    function Ak(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [
         [1, 1, 2, 2, 0, 1],
         [0, 1, 2, 2, 1, 1],
         [1, 1, 2, 2, 1, 0],
         [1, 0, 2, 2, 1, 1]
       ];
-      console.assert("meta|rot1" === HS.rootMetaDesc.split("|").slice(1).join("|"), "threeTexRotBlock root block .rootMetaDesc must be |meta|rot1");
-      const tS = {
-        ...HS
+      console.assert("meta|rot1" === Fk.rootMetaDesc.split("|").slice(1).join("|"), "threeTexRotBlock root block .rootMetaDesc must be |meta|rot1");
+      const Xk = {
+        ...Fk
       };
-      return delete tS.rootMetaDesc, {
-        [SS]: {
-          ...HS,
-          texturePerSide: gS[0]
+      return delete Xk.rootMetaDesc, {
+        [kk]: {
+          ...Fk,
+          texturePerSide: Ik[0]
         },
-        [`${SS}|meta|rot2`]: {
-          ...tS,
-          texturePerSide: gS[1]
+        [`${kk}|meta|rot2`]: {
+          ...Xk,
+          texturePerSide: Ik[1]
         },
-        [`${SS}|meta|rot3`]: {
-          ...tS,
-          texturePerSide: gS[2]
+        [`${kk}|meta|rot3`]: {
+          ...Xk,
+          texturePerSide: Ik[2]
         },
-        [`${SS}|meta|rot4`]: {
-          ...tS,
-          texturePerSide: gS[3]
+        [`${kk}|meta|rot4`]: {
+          ...Xk,
+          texturePerSide: Ik[3]
         }
       }
     }
 
-    function RS(SS, HS) {
-      const gS = ["chest_double_front_lo", "chest_double_front_hi", "chest_side", "chest_double_top_1_lo", "chest_double_top_1_hi", "chest_double_top_2_lo", "chest_double_top_2_hi", "chest_double_back_lo", "chest_double_back_hi"],
-        tS = {
+    function gk(kk, Fk) {
+      const Ik = ["chest_double_front_lo", "chest_double_front_hi", "chest_side", "chest_double_top_1_lo", "chest_double_top_1_hi", "chest_double_top_2_lo", "chest_double_top_2_hi", "chest_double_back_lo", "chest_double_back_hi"],
+        Xk = {
           left: [
             [2, 2, 6, 5, 0, 8],
             [0, 8, 4, 4, 2, 2],
@@ -14049,37 +14049,37 @@ export const modules = {
             [7, 1, 4, 4, 2, 2]
           ]
         },
-        bS = {};
-      for (const XS of qS.g)
-        for (let xS = 1; xS <= 4; xS++) bS[(0, qS.e)(SS, xS, XS)] = {
-          ...HS,
-          textureInfo: gS,
-          texturePerSide: tS[XS][xS - 1]
+        Tk = {};
+      for (const ik of ak.i)
+        for (let yk = 1; yk <= 4; yk++) Tk[(0, ak.c)(kk, yk, ik)] = {
+          ...Fk,
+          textureInfo: Ik,
+          texturePerSide: Xk[ik][yk - 1]
         };
-      return bS
+      return Tk
     }
 
-    function TS(SS) {
-      const HS = (0, uS.Sb)(SS),
-        gS = fS.y.includes(SS) || fS.g.includes(SS) ? "passive" : fS.A.has(SS) ? "hostile" : "neutral";
+    function mk(kk) {
+      const Fk = (0, qk.jc)(kk),
+        Ik = tk.v.includes(kk) || tk.f.includes(kk) ? "passive" : tk.w.has(kk) ? "hostile" : "neutral";
       return {
-        [HS]: {
+        [Fk]: {
           displayName: {
-            translationKey: `item:${(0,uS.ue)(SS)}MobSpawnerBlock`
+            translationKey: `item:${(0,qk.ye)(kk)}MobSpawnerBlock`
           },
           description: {
-            translationKey: `item:${(0,uS.ue)(SS)}MobSpawnerBlockDescription`
+            translationKey: `item:${(0,qk.ye)(kk)}MobSpawnerBlockDescription`
           },
-          itemTexture: `${(0,uS.xe)(SS)}_spawner_block_icon`,
+          itemTexture: `${(0,qk.Ce)(kk)}_spawner_block_icon`,
           ttb: 5e3,
-          textureInfo: [`mob_spawner_${gS}_block_side`, "mob_spawner_block_top"],
+          textureInfo: [`mob_spawner_${Ik}_block_side`, "mob_spawner_block_top"],
           texturePerSide: [0, 0, 1, 1, 0, 0],
           transTex: !0,
           harvestType: "rock",
           drops: null,
           specialToolDrop: {
             tool: "Moonstone Pickaxe",
-            drops: HS
+            drops: Fk
           },
           particlesIgnoreBlack: !0,
           onMinedAura: 75,
@@ -14088,128 +14088,128 @@ export const modules = {
       }
     }
 
-    function oS(SS) {
-      let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-      const gS = (0, uS.Nb)(SS),
-        tS = `${(0,uS.xe)(SS)}_painting`,
-        bS = SS.replaceAll(" ", "_") + " Painting";
+    function hk(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+      const Ik = (0, qk.hc)(kk),
+        Xk = `${(0,qk.Ce)(kk)}_painting`,
+        Tk = kk.replaceAll(" ", "_") + " Painting";
       return {
-        ...pS(`_${gS} Top Left`, {
+        ...fk(`_${Ik} Top Left`, {
           ttb: 240,
-          itemTexture: tS,
+          itemTexture: Xk,
           model: "rotatable",
           harvestType: "wood",
-          rootMetaDesc: `_${gS} Top Left|meta|rot1`,
+          rootMetaDesc: `_${Ik} Top Left|meta|rot1`,
           particlesIgnoreBlack: !0,
           solid: !1,
-          modelScale: HS,
-          blockModel: `_${bS} Top Left`,
-          heldItemGlb: bS,
-          drops: gS
+          modelScale: Fk,
+          blockModel: `_${Tk} Top Left`,
+          heldItemGlb: Tk,
+          drops: Ik
         }),
-        ...pS(`_${gS} Top Right`, {
+        ...fk(`_${Ik} Top Right`, {
           ttb: 240,
-          itemTexture: tS,
+          itemTexture: Xk,
           model: "rotatable",
           harvestType: "wood",
-          rootMetaDesc: `_${gS} Top Right|meta|rot1`,
+          rootMetaDesc: `_${Ik} Top Right|meta|rot1`,
           particlesIgnoreBlack: !0,
           solid: !1,
-          modelScale: HS,
-          blockModel: `_${bS} Top Right`,
-          heldItemGlb: bS,
-          drops: gS
+          modelScale: Fk,
+          blockModel: `_${Tk} Top Right`,
+          heldItemGlb: Tk,
+          drops: Ik
         }),
-        ...pS(`${gS}`, {
+        ...fk(`${Ik}`, {
           ttb: 240,
-          itemTexture: tS,
+          itemTexture: Xk,
           model: "rotatable",
           harvestType: "wood",
-          rootMetaDesc: `${gS}|meta|rot1`,
+          rootMetaDesc: `${Ik}|meta|rot1`,
           particlesIgnoreBlack: !0,
           solid: !1,
-          modelScale: HS,
-          blockModel: `_${bS} Bottom Left`,
-          heldItemGlb: bS,
-          drops: gS
+          modelScale: Fk,
+          blockModel: `_${Tk} Bottom Left`,
+          heldItemGlb: Tk,
+          drops: Ik
         }),
-        ...pS(`_${gS} Bottom Right`, {
+        ...fk(`_${Ik} Bottom Right`, {
           ttb: 240,
-          itemTexture: tS,
+          itemTexture: Xk,
           model: "rotatable",
           harvestType: "wood",
-          rootMetaDesc: `_${gS} Bottom Right|meta|rot1`,
+          rootMetaDesc: `_${Ik} Bottom Right|meta|rot1`,
           particlesIgnoreBlack: !0,
           solid: !1,
-          modelScale: HS,
-          blockModel: `_${bS} Bottom Right`,
-          heldItemGlb: bS,
-          drops: gS
+          modelScale: Fk,
+          blockModel: `_${Tk} Bottom Right`,
+          heldItemGlb: Tk,
+          drops: Ik
         })
       }
     }
 
-    function lS(SS, HS, gS, tS, bS) {
-      const XS = `_${SS} Back`,
-        xS = `_${SS} Dish`,
-        NS = 3e3,
-        qS = "rock",
-        IS = "Radar";
+    function rk(kk, Fk, Ik, Xk, Tk) {
+      const ik = `_${kk} Back`,
+        yk = `_${kk} Dish`,
+        lk = 3e3,
+        ak = "rock",
+        Lk = "Radar";
       return {
-        ...FS(SS, {
+        ...Ak(kk, {
           displayName: {
-            translationKey: `item:${(0,uS.ue)(SS)}`
+            translationKey: `item:${(0,qk.ye)(kk)}`
           },
-          ttb: NS,
-          itemTexture: gS,
-          textureInfo: "string" === typeof bS ? [tS, bS, "radar_bottom"] : bS.textureInfo,
-          harvestType: qS,
-          drops: IS,
+          ttb: lk,
+          itemTexture: Ik,
+          textureInfo: "string" === typeof Tk ? [Xk, Tk, "radar_bottom"] : Tk.textureInfo,
+          harvestType: ak,
+          drops: Lk,
           twoDBlockItem: !0,
-          rootMetaDesc: `${SS}|meta|rot1`
-        }, "object" === typeof bS ? bS.texturesPerSide : [
+          rootMetaDesc: `${kk}|meta|rot1`
+        }, "object" === typeof Tk ? Tk.texturesPerSide : [
           [0, 0, 1, 2, 0, 0],
           [0, 0, 1, 2, 0, 0],
           [0, 0, 1, 2, 0, 0],
           [0, 0, 1, 2, 0, 0]
         ]),
-        ...pS(XS, {
-          ttb: NS,
-          textureInfo: [tS, "radar_bottom"],
+        ...fk(ik, {
+          ttb: lk,
+          textureInfo: [Xk, "radar_bottom"],
           texturePerSide: [0, 0, 1, 1, 0, 0],
-          harvestType: qS,
-          drops: IS,
-          rootMetaDesc: `${XS}|meta|rot1`
+          harvestType: ak,
+          drops: Lk,
+          rootMetaDesc: `${ik}|meta|rot1`
         }),
-        ...pS(xS, {
-          ttb: NS,
+        ...fk(yk, {
+          ttb: lk,
           model: "rotatable",
-          harvestType: qS,
-          drops: IS,
-          rootMetaDesc: `${xS}|meta|rot1`,
+          harvestType: ak,
+          drops: Lk,
+          rootMetaDesc: `${yk}|meta|rot1`,
           particlesIgnoreBlack: !0,
           modelScale: 8,
           customModelInfo: {
             yOffset: -.5
           },
           solid: !1,
-          blockModel: HS
+          blockModel: Fk
         })
       }
     }
 
-    function mS() {
-      const SS = "Solar Panel",
-        HS = [SS, "_Solar Panel SE", "_Solar Panel NW", "_Solar Panel NE"],
-        gS = {
+    function Dk() {
+      const kk = "Solar Panel",
+        Fk = [kk, "_Solar Panel SE", "_Solar Panel NW", "_Solar Panel NE"],
+        Ik = {
           ttb: 2400,
           textureInfo: ["solar_panel_side", "solar_panel_top", "solar_panel_bottom"],
           texturePerSide: [0, 0, 1, 2, 0, 0],
           harvestType: "rock"
         },
-        tS = {};
-      for (const bS of HS) {
-        const HS = bS === SS ? {
+        Xk = {};
+      for (const Tk of Fk) {
+        const Fk = Tk === kk ? {
           displayName: {
             translationKey: "item:solarPanel"
           },
@@ -14218,56 +14218,56 @@ export const modules = {
           },
           itemTexture: "solar_panel"
         } : {
-          drops: SS
+          drops: kk
         };
-        Object.assign(tS, pS(bS, {
-          ...gS,
-          rootMetaDesc: `${bS}|meta|rot1`,
-          ...HS
+        Object.assign(Xk, fk(Tk, {
+          ...Ik,
+          rootMetaDesc: `${Tk}|meta|rot1`,
+          ...Fk
         }))
       }
-      return tS
+      return Xk
     }
 
-    function eS(SS) {
+    function Mk(kk) {
       const {
-        root: HS,
-        cells: gS,
-        displayNameKey: tS,
-        descriptionKey: bS,
-        itemTexture: XS
-      } = SS, xS = {
+        root: Fk,
+        cells: Ik,
+        displayNameKey: Xk,
+        descriptionKey: Tk,
+        itemTexture: ik
+      } = kk, yk = {
         ttb: 3600,
         model: "rotatable",
         modelScale: 8,
         harvestType: "rock",
         particlesIgnoreBlack: !0,
         altActionable: !0
-      }, NS = {};
-      for (const [qS, uS] of gS) {
-        const SS = qS === HS ? {
+      }, lk = {};
+      for (const [ak, qk] of Ik) {
+        const kk = ak === Fk ? {
           displayName: {
-            translationKey: tS
+            translationKey: Xk
           },
           description: {
-            translationKey: bS
+            translationKey: Tk
           },
-          itemTexture: XS
+          itemTexture: ik
         } : {
-          drops: HS
+          drops: Fk
         };
-        Object.assign(NS, pS(qS, {
-          ...xS,
-          blockModel: uS,
-          rootMetaDesc: `${qS}|meta|rot1`,
-          ...SS
+        Object.assign(lk, fk(ak, {
+          ...yk,
+          blockModel: qk,
+          rootMetaDesc: `${ak}|meta|rot1`,
+          ...kk
         }))
       }
-      return NS
+      return lk
     }
 
-    function rS() {
-      return eS({
+    function kF() {
+      return Mk({
         root: "Auto Miner",
         cells: [
           ["Auto Miner", "auto_miner_foot_back"],
@@ -14282,8 +14282,8 @@ export const modules = {
       })
     }
 
-    function SH() {
-      return eS({
+    function FF() {
+      return Mk({
         root: "Lunite Auto Miner",
         cells: [
           ["Lunite Auto Miner", "auto_miner_lunite_foot_back"],
@@ -14297,9 +14297,9 @@ export const modules = {
         itemTexture: "autominer_lunite"
       })
     }
-    const HH = "Cannon",
-      gH = [{
-        block: HH,
+    const IF = "Cannon",
+      XF = [{
+        block: IF,
         blockModel: "cannon_bottom_back",
         x: 0,
         y: 0,
@@ -14336,8 +14336,8 @@ export const modules = {
         z: -1
       }];
 
-    function tH() {
-      const SS = {
+    function TF() {
+      const kk = {
           ttb: 3600,
           model: "rotatable",
           modelScale: 8,
@@ -14347,38 +14347,38 @@ export const modules = {
             yOffset: -.5
           }
         },
-        HS = {};
+        Fk = {};
       for (const {
-          block: gS,
-          blockModel: tS
+          block: Ik,
+          blockModel: Xk
         }
-        of gH) {
-        const bS = gS === HH ? {
+        of XF) {
+        const Tk = Ik === IF ? {
           displayName: {
             translationKey: "item:cannon"
           },
           blockModelItem: !0,
           heldItemScale: 4
         } : {
-          drops: HH
+          drops: IF
         };
-        Object.assign(HS, pS(gS, {
-          ...SS,
-          blockModel: tS,
-          rootMetaDesc: `${gS}|meta|rot1`,
-          ...bS
+        Object.assign(Fk, fk(Ik, {
+          ...kk,
+          blockModel: Xk,
+          rootMetaDesc: `${Ik}|meta|rot1`,
+          ...Tk
         }))
       }
-      return HS
+      return Fk
     }
-    const bH = "Rocket Ship",
-      XH = ["southwest", "southeast", "northwest", "northeast"],
-      xH = 5,
-      NH = xH,
-      qH = Array.from({
-        length: xH
-      }, ((SS, HS) => HS + 1)),
-      uH = {
+    const iF = "Rocket Ship",
+      yF = ["southwest", "southeast", "northwest", "northeast"],
+      lF = 5,
+      aF = lF,
+      qF = Array.from({
+        length: lF
+      }, ((kk, Fk) => Fk + 1)),
+      LF = {
         southwest: {
           x: 0,
           z: 0
@@ -14397,17 +14397,17 @@ export const modules = {
         }
       };
 
-    function IH(SS, HS) {
-      const gS = SS[0].toUpperCase() + SS.slice(1);
-      return `_${bH} ${gS} L${HS}`
+    function tF(kk, Fk) {
+      const Ik = kk[0].toUpperCase() + kk.slice(1);
+      return `_${iF} ${Ik} L${Fk}`
     }
 
-    function fH(SS) {
-      return 1 === SS ? bH : `${bH} S${SS}`
+    function ZF(kk) {
+      return 1 === kk ? iF : `${iF} S${kk}`
     }
 
-    function kH() {
-      const SS = {
+    function jF() {
+      const kk = {
           ttb: 3600,
           model: "CustomModel",
           modelScale: 8,
@@ -14415,11 +14415,11 @@ export const modules = {
           particlesIgnoreBlack: !0,
           altActionable: !0
         },
-        HS = HS => ({
-          ...SS,
+        Fk = Fk => ({
+          ...kk,
           blockModel: "rocket_southwest_1",
           displayName: {
-            translationKey: 1 === HS ? "item:rocketShip" : `item:rocketShipS${HS}`
+            translationKey: 1 === Fk ? "item:rocketShip" : `item:rocketShipS${Fk}`
           },
           description: {
             translationKey: "item:rocketShipDescription"
@@ -14427,20 +14427,20 @@ export const modules = {
           itemTexture: "rocket",
           drops: null
         }),
-        gS = {
-          [bH]: HS(1)
+        Ik = {
+          [iF]: Fk(1)
         };
-      for (const tS of XH)
-        for (let HS = 1; HS <= xH; HS++) "southwest" === tS && 1 === HS || (gS[IH(tS, HS)] = {
-          ...SS,
-          blockModel: `rocket_${tS}_${HS}`,
+      for (const Xk of yF)
+        for (let Fk = 1; Fk <= lF; Fk++) "southwest" === Xk && 1 === Fk || (Ik[tF(Xk, Fk)] = {
+          ...kk,
+          blockModel: `rocket_${Xk}_${Fk}`,
           drops: null
         });
-      for (let tS = 2; tS <= NH; tS++) gS[fH(tS)] = {
-        ...HS(tS),
-        heldItemGlb: bH
+      for (let Xk = 2; Xk <= aF; Xk++) Ik[ZF(Xk)] = {
+        ...Fk(Xk),
+        heldItemGlb: iF
       };
-      return gS["INTERNAL_MESH_Rocket Ship Full"] = {
+      return Ik["INTERNAL_MESH_Rocket Ship Full"] = {
         ttb: 3600,
         harvestType: "rock",
         blockModel: "rocket_full",
@@ -14448,16 +14448,16 @@ export const modules = {
         twoDBlockItem: !0,
         modelScale: 8,
         drops: null
-      }, gS
+      }, Ik
     }
 
-    function aH(SS) {
-      const HS = {
+    function eF(kk) {
+      const Fk = {
         displayName: {
-          translationKey: `item:small${SS.replaceAll(" ","")}Pod`
+          translationKey: `item:small${kk.replaceAll(" ","")}Pod`
         },
         ttb: 300,
-        itemTexture: `small_pod_${(0,uS.xe)(SS)}_icon`,
+        itemTexture: `small_pod_${(0,qk.Ce)(kk)}_icon`,
         model: "CustomModel",
         harvestType: "rock",
         solid: !1,
@@ -14468,94 +14468,94 @@ export const modules = {
         particlesIgnoreBlack: !0
       };
       return {
-        [`Small ${SS} Pod`]: {
-          ...HS,
-          blockModel: `Small ${SS} Pod`
+        [`Small ${kk} Pod`]: {
+          ...Fk,
+          blockModel: `Small ${kk} Pod`
         },
-        [`_Small ${SS} Pod Mid`]: {
-          ...HS,
-          blockModel: `_Small ${SS} Pod Mid`
+        [`_Small ${kk} Pod Mid`]: {
+          ...Fk,
+          blockModel: `_Small ${kk} Pod Mid`
         },
-        [`_Small ${SS} Pod Top`]: {
-          ...HS,
-          blockModel: `_Small ${SS} Pod Top`
+        [`_Small ${kk} Pod Top`]: {
+          ...Fk,
+          blockModel: `_Small ${kk} Pod Top`
         }
       }
     }
 
-    function KH(SS, HS) {
-      const gS = {};
-      for (const tS in SS) {
-        const bS = SS[tS];
-        gS[tS] = "function" === typeof bS ? bS(HS) : bS
+    function wF(kk, Fk) {
+      const Ik = {};
+      for (const Xk in kk) {
+        const Tk = kk[Xk];
+        Ik[Xk] = "function" === typeof Tk ? Tk(Fk) : Tk
       }
-      return gS
+      return Ik
     }
 
-    function jH(SS, HS) {
-      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : uS.Cc;
-      const tS = {};
-      for (const bS of gS) tS[SS(bS)] = KH(HS, bS);
-      return tS
+    function HF(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : qk.Mc;
+      const Xk = {};
+      for (const Tk of Ik) Xk[kk(Tk)] = wF(Fk, Tk);
+      return Xk
     }
 
-    function GH(SS, HS) {
-      let gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      console.assert("meta|rot1|bot" === HS.rootMetaDesc.split("|").slice(1).join("|"), `${SS} root block .rootMetaDesc must be |meta|rot1|bot`), console.assert("string" === typeof HS.blockModel, `${SS} root block .blockModel must be a string`);
-      const tS = {
-        ...HS
+    function JF(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      console.assert("meta|rot1|bot" === Fk.rootMetaDesc.split("|").slice(1).join("|"), `${kk} root block .rootMetaDesc must be |meta|rot1|bot`), console.assert("string" === typeof Fk.blockModel, `${kk} root block .blockModel must be a string`);
+      const Xk = {
+        ...Fk
       };
-      delete tS.rootMetaDesc;
+      delete Xk.rootMetaDesc;
       const {
-        wallBlockModel: bS,
-        yRotOffset: XS,
-        xRotOffset: xS,
-        noCeilingVariant: NS
-      } = gS, qS = {
-        ...tS,
-        ...bS ? {
-          blockModel: bS
+        wallBlockModel: Tk,
+        yRotOffset: ik,
+        xRotOffset: yk,
+        noCeilingVariant: lk
+      } = Ik, ak = {
+        ...Xk,
+        ...Tk ? {
+          blockModel: Tk
         } : {},
         model: "rotatable",
         customModelInfo: {
-          ...tS.customModelInfo,
-          yRotOffset: Math.PI + (null !== XS && void 0 !== XS ? XS : 0),
-          ...void 0 !== xS ? {
-            xRotOffset: xS
+          ...Xk.customModelInfo,
+          yRotOffset: Math.PI + (null !== ik && void 0 !== ik ? ik : 0),
+          ...void 0 !== yk ? {
+            xRotOffset: yk
           } : {}
         }
       };
       return {
-        [SS]: HS,
-        ...NS ? {} : {
-          [`${SS}|meta|rot1|top`]: {
-            ...tS
+        [kk]: Fk,
+        ...lk ? {} : {
+          [`${kk}|meta|rot1|top`]: {
+            ...Xk
           }
         },
-        [`${SS}|meta|rot1|side`]: {
-          ...qS
+        [`${kk}|meta|rot1|side`]: {
+          ...ak
         },
-        [`${SS}|meta|rot2|side`]: {
-          ...qS
+        [`${kk}|meta|rot2|side`]: {
+          ...ak
         },
-        [`${SS}|meta|rot3|side`]: {
-          ...qS
+        [`${kk}|meta|rot3|side`]: {
+          ...ak
         },
-        [`${SS}|meta|rot4|side`]: {
-          ...qS
+        [`${kk}|meta|rot4|side`]: {
+          ...ak
         }
       }
     }
 
-    function CH(SS, HS, gS) {
-      let tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : uS.Cc;
-      const bS = {};
-      for (const XS of tS) Object.assign(bS, GH(SS(XS), KH(HS, XS), {
-        wallBlockModel: gS(XS)
+    function xF(kk, Fk, Ik) {
+      let Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : qk.Mc;
+      const Tk = {};
+      for (const ik of Xk) Object.assign(Tk, JF(kk(ik), wF(Fk, ik), {
+        wallBlockModel: Ik(ik)
       }));
-      return bS
+      return Tk
     }
-    const nH = {
+    const PF = {
       "Landing Pad": 0,
       "Weak Jump Pad": 13,
       "Jump Pad": 20,
@@ -14563,8 +14563,8 @@ export const modules = {
       "Super Jump Pad": 31
     };
 
-    function PH() {
-      const SS = {
+    function KF() {
+      const kk = {
         ttb: 300,
         model: "CustomModel",
         harvestType: "cuttable",
@@ -14578,7 +14578,7 @@ export const modules = {
       };
       return {
         "Landing Pad": {
-          ...SS,
+          ...kk,
           displayName: {
             translationKey: "item:landingPad"
           },
@@ -14589,7 +14589,7 @@ export const modules = {
           blockModel: "landing_pad"
         },
         "Weak Jump Pad": {
-          ...SS,
+          ...kk,
           displayName: {
             translationKey: "item:weakJumpPad"
           },
@@ -14600,7 +14600,7 @@ export const modules = {
           blockModel: "jump_pad_weak"
         },
         "Jump Pad": {
-          ...SS,
+          ...kk,
           displayName: {
             translationKey: "item:jumpPad"
           },
@@ -14611,7 +14611,7 @@ export const modules = {
           blockModel: "jump_pad"
         },
         "Strong Jump Pad": {
-          ...SS,
+          ...kk,
           displayName: {
             translationKey: "item:strongJumpPad"
           },
@@ -14622,7 +14622,7 @@ export const modules = {
           blockModel: "jump_pad_strong"
         },
         "Super Jump Pad": {
-          ...SS,
+          ...kk,
           displayName: {
             translationKey: "item:superJumpPad"
           },
@@ -14635,132 +14635,132 @@ export const modules = {
       }
     }
 
-    function QH(SS) {
-      const HS = "Grey" === SS ? "Gray" : SS;
-      return uS.F[HS].map((SS => Math.floor(SS / 2) + 2))
+    function QF(kk) {
+      const Fk = "Grey" === kk ? "Gray" : kk;
+      return qk.M[Fk].map((kk => Math.floor(kk / 2) + 2))
     }
   },
-  9374: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => qS,
-      d: () => IS,
-      e: () => fS,
-      f: () => aS,
-      h: () => CS,
-      i: () => KS,
-      m: () => kS
+  9201: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => ak,
+      d: () => Lk,
+      f: () => tk,
+      h: () => jk,
+      k: () => Jk,
+      l: () => ek,
+      m: () => Zk
     });
-    var tS = gS(9367),
-      bS = gS(9379),
-      XS = gS(9432),
-      xS = gS(9439),
-      NS = gS(9447);
-    const qS = [1, 1, 0, 2, 1, 1],
-      uS = (0, tS.e)([
+    var Xk = Ik(9191),
+      Tk = Ik(9210),
+      ik = Ik(9257),
+      yk = Ik(9260),
+      lk = Ik(9264);
+    const ak = [1, 1, 0, 2, 1, 1],
+      qk = (0, Xk.d)([
         [
           [0, 0, 0],
           [8, 4, 8]
         ]
       ]),
-      IS = 1e3 * xS.d;
+      Lk = 1e3 * yk.d;
 
-    function fS(SS, HS) {
+    function tk(kk, Fk) {
       return {
         displayName: {
-          translationKey: `item:${SS}`
+          translationKey: `item:${kk}`
         },
         description: {
-          translationKey: `item:${SS}Description`
+          translationKey: `item:${kk}Description`
         },
         ttb: 600,
-        textureInfo: HS,
+        textureInfo: Fk,
         model: "Slab|rotatable",
         customModelInfo: {
           yOffset: -.25
         },
-        tG: uS,
+        Re: qk,
         harvestType: "rock",
         harvestLevel: 0,
         showInCreativeInven: !1
       }
     }
 
-    function kS(SS, HS) {
-      const [gS, tS] = NS.f[SS - 1];
-      return [gS * HS, 0, tS * HS]
+    function Zk(kk, Fk) {
+      const [Ik, Xk] = lk.d[kk - 1];
+      return [Ik * Fk, 0, Xk * Fk]
     }
 
-    function aS(SS, HS, gS, tS) {
-      let XS = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : IS;
-      const xS = (0, bS.xb)(SS, {
-        ...fS(HS, gS),
-        rootMetaDesc: `${SS}|meta|rot1`
-      }, [tS, tS, tS, tS]);
-      for (let bS = 1; bS <= 4; bS++) xS[1 === bS ? SS : `${SS}|meta|rot${bS}`].surfaceVelocity = kS(bS, XS);
-      return xS
+    function jk(kk, Fk, Ik, Xk) {
+      let ik = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Lk;
+      const yk = (0, Tk.Kb)(kk, {
+        ...tk(Fk, Ik),
+        rootMetaDesc: `${kk}|meta|rot1`
+      }, [Xk, Xk, Xk, Xk]);
+      for (let Tk = 1; Tk <= 4; Tk++) yk[1 === Tk ? kk : `${kk}|meta|rot${Tk}`].surfaceVelocity = Zk(Tk, ik);
+      return yk
     }
 
-    function KS(SS, HS, gS, tS) {
-      let bS = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : IS;
-      const XS = {};
-      for (const xS of NS.m) {
-        const uS = `${gS}_${"turnLeft"===xS?"turn_left":"turn_right"}`;
-        for (let gS = 1; gS <= 4; gS++) XS[(0, NS.G)(SS, gS, xS)] = {
-          ...fS(HS, [uS, ...tS]),
-          texturePerSide: qS,
-          surfaceVelocity: kS(gS, bS)
+    function ek(kk, Fk, Ik, Xk) {
+      let Tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : Lk;
+      const ik = {};
+      for (const yk of lk.h) {
+        const qk = `${Ik}_${"turnLeft"===yk?"turn_left":"turn_right"}`;
+        for (let Ik = 1; Ik <= 4; Ik++) ik[(0, lk.K)(kk, Ik, yk)] = {
+          ...tk(Fk, [qk, ...Xk]),
+          texturePerSide: ak,
+          surfaceVelocity: Zk(Ik, Tk)
         }
       }
-      return XS
+      return ik
     }
-    const jS = XS.l,
-      GS = jS.map((SS => SS.map((SS => 0 === SS ? 7 : 7 === SS ? 0 : SS))));
+    const wk = ik.o,
+      Hk = wk.map((kk => kk.map((kk => 0 === kk ? 7 : 7 === kk ? 0 : kk))));
 
-    function CS(SS, HS) {
-      const gS = SS => ({
+    function Jk(kk, Fk) {
+      const Ik = kk => ({
           displayName: {
-            translationKey: `item:${HS}`
+            translationKey: `item:${Fk}`
           },
           description: {
-            translationKey: `item:${HS}Description`
+            translationKey: `item:${Fk}Description`
           },
           ttb: 600,
-          textureInfo: ["belt_tunnel_mouth", "belt_tunnel_side", ...[1, 2, 3, 4].map((HS => `${SS}[rot[${HS}`)), "conveyor_belt_bottom", "belt_tunnel_back"],
+          textureInfo: ["belt_tunnel_mouth", "belt_tunnel_side", ...[1, 2, 3, 4].map((Fk => `${kk}[rot[${Fk}`)), "conveyor_belt_bottom", "belt_tunnel_back"],
           harvestType: "rock",
           harvestLevel: 0,
           showInCreativeInven: !1
         }),
-        tS = (0, bS.xb)(SS, {
-          ...gS("belt_tunnel_top"),
-          rootMetaDesc: `${SS}|meta|rot1`
-        }, jS);
-      return GS.forEach(((HS, bS) => {
-        tS[`${SS}|meta|rot${bS+1}|exit`] = {
-          ...gS("belt_tunnel_exit_top"),
-          texturePerSide: HS
+        Xk = (0, Tk.Kb)(kk, {
+          ...Ik("belt_tunnel_top"),
+          rootMetaDesc: `${kk}|meta|rot1`
+        }, wk);
+      return Hk.forEach(((Fk, Tk) => {
+        Xk[`${kk}|meta|rot${Tk+1}|exit`] = {
+          ...Ik("belt_tunnel_exit_top"),
+          texturePerSide: Fk
         }
-      })), tS
+      })), Xk
     }
   },
-  9372: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => kS,
-      e: () => fS,
-      i: () => NS,
-      m: () => IS
+  9194: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Zk,
+      e: () => tk,
+      f: () => lk,
+      g: () => Lk
     });
-    var tS = gS(4586),
-      bS = gS(9374),
-      XS = gS(9432),
-      xS = gS(9439);
+    var Xk = Ik(4449),
+      Tk = Ik(9201),
+      ik = Ik(9257),
+      yk = Ik(9260);
 
-    function NS() {
+    function lk() {
       return {
-        ...kS("Coal Deposit", "coalDeposit", "coal_deposit"),
-        ...kS("Iron Deposit", "ironDeposit", "iron_deposit"),
-        ...kS("Stone Deposit", "stoneDeposit", "stone_deposit"),
-        ...kS("Copper Deposit", "copperDeposit", "copper_deposit"),
-        ...kS("Gold Deposit", "goldDeposit", "gold_deposit"),
+        ...Zk("Coal Deposit", "coalDeposit", "coal_deposit"),
+        ...Zk("Iron Deposit", "ironDeposit", "iron_deposit"),
+        ...Zk("Stone Deposit", "stoneDeposit", "stone_deposit"),
+        ...Zk("Copper Deposit", "copperDeposit", "copper_deposit"),
+        ...Zk("Gold Deposit", "goldDeposit", "gold_deposit"),
         "Homestead Core": {
           displayName: {
             translationKey: "item:homesteadCore"
@@ -14773,7 +14773,7 @@ export const modules = {
           harvestType: "rock",
           drops: null,
           altActionable: !0,
-          dK: [4, 12, 14],
+          Ve: [4, 12, 14],
           showInCreativeInven: !1
         },
         "Drop Pad": {
@@ -14803,14 +14803,14 @@ export const modules = {
           drops: "Raw Copper",
           showInCreativeInven: !1
         },
-        ...(0, XS.u)("Burner Drill", "burnerDrill", "burner_drill", XS.b),
-        ...(0, XS.u)("Crusher", "crusher", "crusher"),
-        ...(0, XS.u)("Smelter", "smelter", "smelter"),
-        ...(0, XS.u)("Generator", "generator", "generator", XS.m),
-        ...(0, XS.u)("Press", "press", "press"),
-        ...(0, XS.u)("Wire Mill", "wireMill", "wire_mill"),
-        ...(0, bS.f)("Conveyor Belt", "conveyorBelt", ["conveyor_belt_top", "conveyor_belt_slab_side", "conveyor_belt_bottom"], bS.b),
-        ...(0, bS.f)("Splitter", "splitter", ["splitter_top", "splitter_slab_side", "conveyor_belt_bottom"], bS.b),
+        ...(0, ik.z)("Burner Drill", "burnerDrill", "burner_drill", ik.b),
+        ...(0, ik.z)("Crusher", "crusher", "crusher"),
+        ...(0, ik.z)("Smelter", "smelter", "smelter"),
+        ...(0, ik.z)("Generator", "generator", "generator", ik.r),
+        ...(0, ik.z)("Press", "press", "press"),
+        ...(0, ik.z)("Wire Mill", "wireMill", "wire_mill"),
+        ...(0, Tk.h)("Conveyor Belt", "conveyorBelt", ["conveyor_belt_top", "conveyor_belt_slab_side", "conveyor_belt_bottom"], Tk.b),
+        ...(0, Tk.h)("Splitter", "splitter", ["splitter_top", "splitter_slab_side", "conveyor_belt_bottom"], Tk.b),
         "Voltite Ore": {
           displayName: {
             translationKey: "item:voltiteOre"
@@ -14823,48 +14823,48 @@ export const modules = {
           harvestType: "rock",
           harvestLevel: 3,
           drops: "Raw Voltite",
-          dK: [2, 6, 6],
+          Ve: [2, 6, 6],
           showInCreativeInven: !1
         },
-        ...(0, XS.u)("Alloy Kiln", "alloyKiln", "alloy_kiln"),
-        ...(0, XS.u)("Electric Drill", "electricDrill", "electric_drill", XS.h),
-        ...(0, XS.u)("Assembler", "autoBench", "auto_bench"),
-        ...(0, bS.f)("Sorting Gate", "sortingGate", ["sorting_gate_top", "sorting_gate_slab_side", "conveyor_belt_bottom"], bS.b),
-        ...(0, bS.f)("Belt Loader", "beltLoader", ["belt_loader_top", "conveyor_belt_slab_side", "conveyor_belt_bottom", "belt_loader_slab_front"], [1, 1, 0, 2, 3, 1]),
-        ...fS("Storage Silo", "storageSilo", "storage_silo"),
-        ...fS("Charge Vault", "chargeVault", "charge_vault"),
-        ...IS("Machine Bench", "machineBench", "machine_bench"),
-        ...IS("Parts Bench", "partsBench", "parts_bench"),
-        ...IS("Tool Bench", "toolBench", "tool_bench"),
-        "_Homestead Core Mid": uS([{
+        ...(0, ik.z)("Alloy Kiln", "alloyKiln", "alloy_kiln"),
+        ...(0, ik.z)("Electric Drill", "electricDrill", "electric_drill", ik.m),
+        ...(0, ik.z)("Assembler", "autoBench", "auto_bench"),
+        ...(0, Tk.h)("Sorting Gate", "sortingGate", ["sorting_gate_top", "sorting_gate_slab_side", "conveyor_belt_bottom"], Tk.b),
+        ...(0, Tk.h)("Belt Loader", "beltLoader", ["belt_loader_top", "conveyor_belt_slab_side", "conveyor_belt_bottom", "belt_loader_slab_front"], [1, 1, 0, 2, 3, 1]),
+        ...tk("Storage Silo", "storageSilo", "storage_silo"),
+        ...tk("Charge Vault", "chargeVault", "charge_vault"),
+        ...Lk("Machine Bench", "machineBench", "machine_bench"),
+        ...Lk("Parts Bench", "partsBench", "parts_bench"),
+        ...Lk("Tool Bench", "toolBench", "tool_bench"),
+        "_Homestead Core Mid": qk([{
           animTextures: ["homestead_core_mid0", "homestead_core_mid1", "homestead_core_mid2", "homestead_core_mid3"],
           animationInterval: 250
         }], [0, 0, 0, 0, 0, 0], [3, 10, 12]),
-        "_Homestead Core Top": uS(["homestead_core_crown", "homestead_core_cap"], [0, 0, 1, 0, 0, 0], [4, 12, 14]),
-        ...(0, XS.x)("Burner Drill", "burnerDrill", "burner_drill", XS.r, XS.b),
-        ...(0, XS.x)("Crusher", "crusher", "crusher", XS.r),
-        ...(0, XS.x)("Smelter", "smelter", "smelter", XS.r),
-        ...(0, XS.x)("Generator", "generator", "generator", XS.r, XS.m),
-        ...(0, XS.x)("Press", "press", "press", XS.c),
-        ...(0, XS.x)("Wire Mill", "wireMill", "wire_mill", XS.c),
-        ...(0, XS.x)("Alloy Kiln", "alloyKiln", "alloy_kiln", XS.r),
-        ...(0, XS.x)("Electric Drill", "electricDrill", "electric_drill", XS.c, XS.h),
-        ...(0, XS.x)("Assembler", "autoBench", "auto_bench", XS.c),
-        ...(0, XS.u)("Tree Cutter", "treeCutter", "tree_cutter", XS.q),
-        ...(0, XS.x)("Tree Cutter", "treeCutter", "tree_cutter", XS.r, XS.q),
-        ...kS("Voltite Deposit", "voltiteDeposit", "voltite_deposit", [2, 6, 6]),
-        ...(0, XS.u)("Volt Engine", "voltEngine", "volt_engine", XS.m),
-        ...(0, XS.x)("Volt Engine", "voltEngine", "volt_engine", [2, 6, 8], XS.m),
-        ...(0, XS.u)("Deep Drill", "deepDrill", "deep_drill", XS.g),
-        ...(0, XS.x)("Deep Drill", "deepDrill", "deep_drill", [6, 4, 2], XS.g),
-        ...(0, XS.u)("Shatter Mill", "shatterMill", "shatter_mill"),
-        ...(0, XS.x)("Shatter Mill", "shatterMill", "shatter_mill", [6, 4, 2]),
-        ...(0, XS.u)("Sky Tap", "skyTap", "sky_tap", XS.n),
-        ...(0, XS.x)("Sky Tap", "skyTap", "sky_tap", [4, 6, 8], XS.n),
-        ...(0, bS.f)("Fast Belt", "fastBelt", ["fast_belt_top", "fast_belt_slab_side", "conveyor_belt_bottom"], bS.b, 1e3 * xS.d * xS.s),
-        ...fS("Charging Pad", "chargingPad", "charging_pad"),
-        ...(0, XS.u)("Crystal Vat", "crystalVat", "crystal_vat"),
-        ...(0, XS.x)("Crystal Vat", "crystalVat", "crystal_vat", [6, 3, 9]),
+        "_Homestead Core Top": qk(["homestead_core_crown", "homestead_core_cap"], [0, 0, 1, 0, 0, 0], [4, 12, 14]),
+        ...(0, ik.B)("Burner Drill", "burnerDrill", "burner_drill", ik.y, ik.b),
+        ...(0, ik.B)("Crusher", "crusher", "crusher", ik.y),
+        ...(0, ik.B)("Smelter", "smelter", "smelter", ik.y),
+        ...(0, ik.B)("Generator", "generator", "generator", ik.y, ik.r),
+        ...(0, ik.B)("Press", "press", "press", ik.e),
+        ...(0, ik.B)("Wire Mill", "wireMill", "wire_mill", ik.e),
+        ...(0, ik.B)("Alloy Kiln", "alloyKiln", "alloy_kiln", ik.y),
+        ...(0, ik.B)("Electric Drill", "electricDrill", "electric_drill", ik.e, ik.m),
+        ...(0, ik.B)("Assembler", "autoBench", "auto_bench", ik.e),
+        ...(0, ik.z)("Tree Cutter", "treeCutter", "tree_cutter", ik.w),
+        ...(0, ik.B)("Tree Cutter", "treeCutter", "tree_cutter", ik.y, ik.w),
+        ...Zk("Voltite Deposit", "voltiteDeposit", "voltite_deposit", [2, 6, 6]),
+        ...(0, ik.z)("Volt Engine", "voltEngine", "volt_engine", ik.r),
+        ...(0, ik.B)("Volt Engine", "voltEngine", "volt_engine", [2, 6, 8], ik.r),
+        ...(0, ik.z)("Deep Drill", "deepDrill", "deep_drill", ik.i),
+        ...(0, ik.B)("Deep Drill", "deepDrill", "deep_drill", [6, 4, 2], ik.i),
+        ...(0, ik.z)("Shatter Mill", "shatterMill", "shatter_mill"),
+        ...(0, ik.B)("Shatter Mill", "shatterMill", "shatter_mill", [6, 4, 2]),
+        ...(0, ik.z)("Sky Tap", "skyTap", "sky_tap", ik.u),
+        ...(0, ik.B)("Sky Tap", "skyTap", "sky_tap", [4, 6, 8], ik.u),
+        ...(0, Tk.h)("Fast Belt", "fastBelt", ["fast_belt_top", "fast_belt_slab_side", "conveyor_belt_bottom"], Tk.b, 1e3 * yk.d * yk.p),
+        ...tk("Charging Pad", "chargingPad", "charging_pad"),
+        ...(0, ik.z)("Crystal Vat", "crystalVat", "crystal_vat"),
+        ...(0, ik.B)("Crystal Vat", "crystalVat", "crystal_vat", [6, 3, 9]),
         Starframe: {
           displayName: {
             translationKey: "item:starframe"
@@ -14876,10 +14876,10 @@ export const modules = {
           textureInfo: "starframe",
           harvestType: "rock",
           harvestLevel: 0,
-          dK: [6, 6, 10],
+          Ve: [6, 6, 10],
           showInCreativeInven: !1
         },
-        ...fS("Forge Hopper", "forgeHopper", "forge_hopper", "machine_side"),
+        ...tk("Forge Hopper", "forgeHopper", "forge_hopper", "machine_side"),
         "Comet Ore": {
           displayName: {
             translationKey: "item:cometOre"
@@ -14892,7 +14892,7 @@ export const modules = {
           harvestType: "rock",
           harvestLevel: 3,
           drops: null,
-          dK: [8, 6, 10],
+          Ve: [8, 6, 10],
           showInCreativeInven: !1
         },
         "Comet Heart": {
@@ -14907,7 +14907,7 @@ export const modules = {
           harvestType: "rock",
           harvestLevel: 3,
           drops: null,
-          dK: [12, 10, 14],
+          Ve: [12, 10, 14],
           showInCreativeInven: !1
         },
         "_Starframe Spire": {
@@ -14921,18 +14921,18 @@ export const modules = {
           textureInfo: "starframe",
           harvestType: "rock",
           drops: null,
-          dK: [6, 6, 10],
+          Ve: [6, 6, 10],
           showInCreativeInven: !1
         },
-        ...(0, bS.i)("Conveyor Belt", "conveyorBelt", "conveyor_belt", ["conveyor_belt_slab_side", "conveyor_belt_bottom"]),
-        ...(0, bS.i)("Fast Belt", "fastBelt", "fast_belt", ["fast_belt_slab_side", "conveyor_belt_bottom"], 1e3 * xS.d * xS.s),
-        ...(0, XS.u)("Recycler", "recycler", "recycler"),
-        ...(0, XS.x)("Recycler", "recycler", "recycler", [3, 8, 4]),
-        ...qS("Belt Lift", "beltLift", "belt_lift"),
-        ...qS("Belt Drop", "beltDrop", "belt_drop"),
-        ...(0, XS.u)("Crop Harvester", "cropHarvester", "crop_harvester", XS.f),
-        ...(0, XS.x)("Crop Harvester", "cropHarvester", "crop_harvester", XS.c, XS.f),
-        ...(0, bS.h)("Belt Tunnel", "beltTunnel"),
+        ...(0, Tk.l)("Conveyor Belt", "conveyorBelt", "conveyor_belt", ["conveyor_belt_slab_side", "conveyor_belt_bottom"]),
+        ...(0, Tk.l)("Fast Belt", "fastBelt", "fast_belt", ["fast_belt_slab_side", "conveyor_belt_bottom"], 1e3 * yk.d * yk.p),
+        ...(0, ik.z)("Recycler", "recycler", "recycler"),
+        ...(0, ik.B)("Recycler", "recycler", "recycler", [3, 8, 4]),
+        ...ak("Belt Lift", "beltLift", "belt_lift"),
+        ...ak("Belt Drop", "beltDrop", "belt_drop"),
+        ...(0, ik.z)("Crop Harvester", "cropHarvester", "crop_harvester", ik.h),
+        ...(0, ik.B)("Crop Harvester", "cropHarvester", "crop_harvester", ik.e, ik.h),
+        ...(0, Tk.k)("Belt Tunnel", "beltTunnel"),
         "Pure Copper Ore": {
           displayName: {
             translationKey: "item:pureCopperOre"
@@ -14941,15 +14941,15 @@ export const modules = {
           textureInfo: "pure_copper_ore",
           harvestType: "rock",
           drops: "Raw Copper",
-          Eu: 9,
+          nq: 9,
           specialToolDrop: {
             tool: "Moonstone Pickaxe",
             drops: "Pure Copper Ore"
           },
           specialToolBonusDrops: {
-            "Golem Pickaxe": tS.p
+            "Golem Pickaxe": Xk.n
           },
-          dK: [6, 6, 6],
+          Ve: [6, 6, 6],
           showInCreativeInven: !1
         },
         "Pure Voltite Ore": {
@@ -14961,41 +14961,41 @@ export const modules = {
           harvestType: "rock",
           harvestLevel: 3,
           drops: "Raw Voltite",
-          Eu: 9,
+          nq: 9,
           specialToolDrop: {
             tool: "Moonstone Pickaxe",
             drops: "Pure Voltite Ore"
           },
           specialToolBonusDrops: {
-            "Golem Pickaxe": tS.p
+            "Golem Pickaxe": Xk.n
           },
-          dK: [2, 6, 6],
+          Ve: [2, 6, 6],
           showInCreativeInven: !1
         }
       }
     }
 
-    function qS(SS, HS, gS) {
-      const tS = {
+    function ak(kk, Fk, Ik) {
+      const Xk = {
         displayName: {
-          translationKey: `item:${HS}`
+          translationKey: `item:${Fk}`
         },
         description: {
-          translationKey: `item:${HS}Description`
+          translationKey: `item:${Fk}Description`
         },
         ttb: 600,
-        textureInfo: [`${gS}_top`, `${gS}_side`, "conveyor_belt_bottom"],
+        textureInfo: [`${Ik}_top`, `${Ik}_side`, "conveyor_belt_bottom"],
         texturePerSide: [1, 1, 0, 2, 1, 1],
         harvestType: "rock",
         harvestLevel: 0,
         showInCreativeInven: !1
       };
       return {
-        [SS]: tS
+        [kk]: Xk
       }
     }
 
-    function uS(SS, HS, gS) {
+    function qk(kk, Fk, Ik) {
       return {
         displayName: {
           translationKey: "item:homesteadCore"
@@ -15004,46 +15004,46 @@ export const modules = {
           translationKey: "item:homesteadCoreDescription"
         },
         ttb: 5e11,
-        textureInfo: SS,
-        texturePerSide: HS,
+        textureInfo: kk,
+        texturePerSide: Fk,
         harvestType: "rock",
         drops: null,
         altActionable: !0,
-        dK: gS,
+        Ve: Ik,
         showInCreativeInven: !1
       }
     }
 
-    function IS(SS, HS, gS) {
-      const tS = {
+    function Lk(kk, Fk, Ik) {
+      const Xk = {
         displayName: {
-          translationKey: `item:${HS}`
+          translationKey: `item:${Fk}`
         },
         description: {
-          translationKey: `item:${HS}Description`
+          translationKey: `item:${Fk}Description`
         },
         ttb: 3e3,
-        textureInfo: [`${gS}_side`, `${gS}_top`],
+        textureInfo: [`${Ik}_side`, `${Ik}_top`],
         texturePerSide: [0, 0, 1, 1, 0, 0],
         harvestType: "wood",
         altActionable: !0,
         showInCreativeInven: !1
       };
       return {
-        [SS]: tS
+        [kk]: Xk
       }
     }
 
-    function fS(SS, HS, gS) {
-      const tS = {
+    function tk(kk, Fk, Ik) {
+      const Xk = {
         displayName: {
-          translationKey: `item:${HS}`
+          translationKey: `item:${Fk}`
         },
         description: {
-          translationKey: `item:${HS}Description`
+          translationKey: `item:${Fk}Description`
         },
         ttb: 1500,
-        textureInfo: [`${gS}_top`, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : `${gS}_side`],
+        textureInfo: [`${Ik}_top`, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : `${Ik}_side`],
         texturePerSide: [1, 1, 0, 0, 1, 1],
         harvestType: "rock",
         harvestLevel: 0,
@@ -15051,86 +15051,86 @@ export const modules = {
         showInCreativeInven: !1
       };
       return {
-        [SS]: tS
+        [kk]: Xk
       }
     }
 
-    function kS(SS, HS, gS, tS) {
-      const bS = {
+    function Zk(kk, Fk, Ik, Xk) {
+      const Tk = {
         displayName: {
-          translationKey: `item:${HS}`
+          translationKey: `item:${Fk}`
         },
         description: {
-          translationKey: `item:${HS}Description`
+          translationKey: `item:${Fk}Description`
         },
         ttb: arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 6e3,
-        textureInfo: gS,
+        textureInfo: Ik,
         harvestType: "rock",
         harvestLevel: 0,
         drops: null,
         showInCreativeInven: !1,
-        ...tS ? {
-          dK: tS
+        ...Xk ? {
+          Ve: Xk
         } : {}
       };
       return {
-        [SS]: bS
+        [kk]: Tk
       }
     }
   },
-  9432: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => uS,
-      c: () => qS,
-      f: () => aS,
-      g: () => fS,
-      h: () => IS,
-      l: () => bS,
-      m: () => jS,
-      n: () => KS,
-      q: () => kS,
-      r: () => NS,
-      u: () => QS,
-      x: () => DS
+  9257: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      B: () => Qk,
+      b: () => qk,
+      e: () => ak,
+      h: () => jk,
+      i: () => tk,
+      m: () => Lk,
+      o: () => Tk,
+      r: () => wk,
+      u: () => ek,
+      w: () => Zk,
+      y: () => lk,
+      z: () => Kk
     });
-    var tS = gS(9379);
-    const bS = [
+    var Xk = Ik(9210);
+    const Tk = [
         [1, 1, 2, 6, 0, 7],
         [0, 7, 3, 6, 1, 1],
         [1, 1, 4, 6, 7, 0],
         [7, 0, 5, 6, 1, 1]
       ],
-      XS = [
+      ik = [
         [1, 8, 2, 6, 0, 7],
         [0, 7, 3, 6, 8, 1],
         [8, 1, 4, 6, 7, 0],
         [7, 0, 5, 6, 1, 8]
       ],
-      xS = [0, 0, 1, 2, 0, 0],
-      NS = [9, 6, 3],
-      qS = [3, 7, 9],
-      uS = {
+      yk = [0, 0, 1, 2, 0, 0],
+      lk = [9, 6, 3],
+      ak = [3, 7, 9],
+      qk = {
         underside: "burner_drill_bottom"
       },
-      IS = {
+      Lk = {
         underside: "electric_drill_bottom"
       },
-      fS = {
+      tk = {
         underside: "deep_drill_bottom"
       },
-      kS = {
+      Zk = {
         backRuns: !0
       },
-      aS = {
+      jk = {
         backRuns: !0
       },
-      KS = {
+      ek = {
         underside: "sky_tap_bottom"
       },
-      jS = {
+      wk = {
         uniform: !0
       },
-      GS = {
+      Hk = {
         burner_drill_side: {
           animationInterval: 200
         },
@@ -15189,48 +15189,48 @@ export const modules = {
         }
       };
 
-    function CS(SS) {
+    function Jk(kk) {
       return {
-        animTextures: [0, 1, 2, 3].map((HS => `${SS}_running${HS}`)),
+        animTextures: [0, 1, 2, 3].map((Fk => `${kk}_running${Fk}`)),
         animationInterval: 250,
-        ...GS[SS]
+        ...Hk[kk]
       }
     }
 
-    function nS(SS, HS, gS) {
-      var tS, NS;
-      const qS = gS ? CS(`${SS}_side`) : `${SS}_side`,
-        uS = null !== (tS = HS.underside) && void 0 !== tS ? tS : "machine_side";
-      if (HS.uniform) return {
-        textureInfo: [qS, `${SS}_top`, uS],
-        faces: [xS, xS, xS, xS]
+    function xk(kk, Fk, Ik) {
+      var Xk, lk;
+      const ak = Ik ? Jk(`${kk}_side`) : `${kk}_side`,
+        qk = null !== (Xk = Fk.underside) && void 0 !== Xk ? Xk : "machine_side";
+      if (Fk.uniform) return {
+        textureInfo: [ak, `${kk}_top`, qk],
+        faces: [yk, yk, yk, yk]
       };
-      const IS = gS && HS.backRuns ? CS(`${SS}_back`) : `${SS}_back`,
-        fS = [1, 2, 3, 4].map((HS => `${SS}_top[rot[${HS}`)),
-        kS = [null !== (NS = HS.front) && void 0 !== NS ? NS : `${SS}_front`, qS, ...fS, uS, IS];
-      if (HS.mirroredSides) {
-        const HS = gS ? CS(`${SS}_side_flip`) : `${SS}_side_flip`;
+      const Lk = Ik && Fk.backRuns ? Jk(`${kk}_back`) : `${kk}_back`,
+        tk = [1, 2, 3, 4].map((Fk => `${kk}_top[rot[${Fk}`)),
+        Zk = [null !== (lk = Fk.front) && void 0 !== lk ? lk : `${kk}_front`, ak, ...tk, qk, Lk];
+      if (Fk.mirroredSides) {
+        const Fk = Ik ? Jk(`${kk}_side_flip`) : `${kk}_side_flip`;
         return {
-          textureInfo: [...kS, HS],
-          faces: XS
+          textureInfo: [...Zk, Fk],
+          faces: ik
         }
       }
       return {
-        textureInfo: kS,
-        faces: bS
+        textureInfo: Zk,
+        faces: Tk
       }
     }
 
-    function PS(SS, HS) {
+    function Pk(kk, Fk) {
       return {
         displayName: {
-          translationKey: `item:${SS}`
+          translationKey: `item:${kk}`
         },
         description: {
-          translationKey: `item:${SS}Description`
+          translationKey: `item:${kk}Description`
         },
         ttb: 1500,
-        textureInfo: HS,
+        textureInfo: Fk,
         harvestType: "rock",
         harvestLevel: 0,
         altActionable: !0,
@@ -15238,92 +15238,92 @@ export const modules = {
       }
     }
 
-    function QS(SS, HS, gS) {
-      let bS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    function Kk(kk, Fk, Ik) {
+      let Tk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        textureInfo: XS,
-        faces: xS
-      } = nS(gS, bS, !1);
-      return (0, tS.xb)(SS, {
-        ...PS(HS, XS),
-        rootMetaDesc: `${SS}|meta|rot1`
-      }, xS)
+        textureInfo: ik,
+        faces: yk
+      } = xk(Ik, Tk, !1);
+      return (0, Xk.Kb)(kk, {
+        ...Pk(Fk, ik),
+        rootMetaDesc: `${kk}|meta|rot1`
+      }, yk)
     }
 
-    function DS(SS, HS, gS, tS) {
-      let bS = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+    function Qk(kk, Fk, Ik, Xk) {
+      let Tk = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
       const {
-        textureInfo: XS,
-        faces: xS
-      } = nS(gS, bS, !0), NS = {};
-      return xS.forEach(((gS, bS) => {
-        NS[`${SS}|meta|rot${bS+1}|Running`] = {
-          ...PS(HS, XS),
-          texturePerSide: gS,
-          dK: tS
+        textureInfo: ik,
+        faces: yk
+      } = xk(Ik, Tk, !0), lk = {};
+      return yk.forEach(((Ik, Tk) => {
+        lk[`${kk}|meta|rot${Tk+1}|Running`] = {
+          ...Pk(Fk, ik),
+          texturePerSide: Ik,
+          Ve: Xk
         }
-      })), NS
+      })), lk
     }
   },
-  9453: (SS, HS, gS) => {
-    gS.d(HS, {
-      e: () => fS,
-      f: () => IS,
-      j: () => nS,
-      m: () => kS,
-      q: () => GS,
-      t: () => PS,
-      w: () => uH
+  9267: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => tk,
+      f: () => Lk,
+      g: () => xk,
+      i: () => Zk,
+      j: () => Hk,
+      m: () => Pk,
+      p: () => LF
     });
-    var tS = gS(9379),
-      bS = gS(9372),
-      XS = gS(9374),
-      xS = gS(9432),
-      NS = gS(9439);
-    const qS = {
+    var Xk = Ik(9210),
+      Tk = Ik(9194),
+      ik = Ik(9201),
+      yk = Ik(9257),
+      lk = Ik(9260);
+    const ak = {
       uniform: !0,
       underside: "pump_bottom"
     };
 
-    function uS(SS) {
+    function qk(kk) {
       return {
         front: "output",
-        underside: `${SS}_bottom`,
+        underside: `${kk}_bottom`,
         mirroredSides: !0,
         backRuns: !0
       }
     }
-    const IS = "Fluid Pipe",
-      fS = "Coolant Pipe";
+    const Lk = "Fluid Pipe",
+      tk = "Coolant Pipe";
 
-    function kS(SS) {
-      return SS === IS || SS === fS
+    function Zk(kk) {
+      return kk === Lk || kk === tk
     }
-    const aS = "Full",
-      KS = 2,
-      jS = 350;
+    const jk = "Full",
+      ek = 2,
+      wk = 350;
 
-    function GS(SS, HS) {
-      let gS = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const tS = "cryo" === SS ? fS : IS;
-      return gS || 0 !== HS ? `${tS}|meta|conn|${QS(HS)}${gS?`|${aS}`:""}` : tS
+    function Hk(kk, Fk) {
+      let Ik = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const Xk = "cryo" === kk ? tk : Lk;
+      return Ik || 0 !== Fk ? `${Xk}|meta|conn|${Kk(Fk)}${Ik?`|${jk}`:""}` : Xk
     }
-    const CS = "Fluid Tank",
-      nS = 4;
+    const Jk = "Fluid Tank",
+      xk = 4;
 
-    function PS(SS) {
-      return 0 === SS ? CS : `${CS}|meta|rot1|Fill${SS}`
-    }
-
-    function QS(SS) {
-      const HS = tS.d.filter(((HS, gS) => SS >> gS & 1));
-      return HS.length ? HS.join("_") : "none"
+    function Pk(kk) {
+      return 0 === kk ? Jk : `${Jk}|meta|rot1|Fill${kk}`
     }
 
-    function DS(SS, HS, gS, tS) {
-      const bS = {
+    function Kk(kk) {
+      const Fk = Xk.d.filter(((Fk, Ik) => kk >> Ik & 1));
+      return Fk.length ? Fk.join("_") : "none"
+    }
+
+    function Qk(kk, Fk, Ik, Xk) {
+      const Tk = {
           displayName: {
-            translationKey: `item:${gS}`
+            translationKey: `item:${Ik}`
           },
           description: {
             translationKey: "item:fluidPipeDescription"
@@ -15338,50 +15338,50 @@ export const modules = {
           modelScale: 8,
           particlesIgnoreBlack: !0
         },
-        XS = {};
-      for (let xS = 0; xS < 64; xS++) {
-        const gS = GS(SS, xS, HS);
-        XS[gS] = {
-          ...bS,
-          blockModel: `${tS}_${QS(xS)}`,
-          ...kS(gS) ? {
-            rootMetaDesc: `${gS}|meta|conn|none`
+        ik = {};
+      for (let yk = 0; yk < 64; yk++) {
+        const Ik = Hk(kk, yk, Fk);
+        ik[Ik] = {
+          ...Tk,
+          blockModel: `${Xk}_${Kk(yk)}`,
+          ...Zk(Ik) ? {
+            rootMetaDesc: `${Ik}|meta|conn|none`
           } : {},
-          ..."cryo" === SS ? {
-            drops: IS
+          ..."cryo" === kk ? {
+            drops: Lk
           } : {},
-          ...HS ? {
+          ...Fk ? {
             customModelInfo: {
               textureAnimation: {
-                frames: KS,
-                animationInterval: jS
+                frames: ek,
+                animationInterval: wk
               }
             }
           } : {}
         }
       }
-      return XS
+      return ik
     }
-    const wS = 300;
+    const sk = 300;
 
-    function hS() {
-      const SS = {};
-      for (let HS = 1; HS <= nS; HS++) {
-        const gS = yS(`fluid_tank_fill${HS}`, 4, "_", wS),
-          tS = HS === nS;
-        SS[PS(HS)] = WS("fluidTank", [gS.animTextures[0], gS, ...tS ? [] : ["fluid_tank"]], {
-          ...US,
-          texturePerSide: tS ? [1, 1, 1, 1, 1, 1] : [1, 1, 2, 1, 1, 1]
+    function Vk() {
+      const kk = {};
+      for (let Fk = 1; Fk <= xk; Fk++) {
+        const Ik = Rk(`fluid_tank_fill${Fk}`, 4, "_", sk),
+          Xk = Fk === xk;
+        kk[Pk(Fk)] = Nk("fluidTank", [Ik.animTextures[0], Ik, ...Xk ? [] : ["fluid_tank"]], {
+          ...Wk,
+          texturePerSide: Xk ? [1, 1, 1, 1, 1, 1] : [1, 1, 2, 1, 1, 1]
         })
       }
-      return SS
+      return kk
     }
-    const ZS = xS.l.map((SS => SS.map((SS => 0 === SS ? 0 : 1))));
-    const JS = [0, 0, 0, 0, 0, 0],
-      OS = [1, 1, 1, 1, 1, 1],
-      dS = ["reactor_base", "reactor_base_top"],
-      cS = [0, 0, 1, 1, 0, 0],
-      vS = {
+    const zk = yk.o.map((kk => kk.map((kk => 0 === kk ? 0 : 1))));
+    const Sk = [0, 0, 0, 0, 0, 0],
+      vk = [1, 1, 1, 1, 1, 1],
+      Ek = ["reactor_base", "reactor_base_top"],
+      Ok = [0, 0, 1, 1, 0, 0],
+      nk = {
         Calm: {
           texture: "reactor_controller_green",
           ms: 800,
@@ -15403,332 +15403,332 @@ export const modules = {
           light: [13, 1, 1]
         }
       },
-      ES = "reactor_frame",
-      LS = 4,
-      YS = 4,
-      AS = 400;
+      Gk = "reactor_frame",
+      pk = 4,
+      uk = 4,
+      bk = 400;
 
-    function yS(SS) {
-      let HS = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4,
-        gS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "_running",
-        tS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 250;
+    function Rk(kk) {
+      let Fk = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 4,
+        Ik = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "_running",
+        Xk = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 250;
       return {
         animTextures: Array.from({
-          length: HS
-        }, ((HS, tS) => `${SS}${gS}${tS}`)),
-        animationInterval: tS
+          length: Fk
+        }, ((Fk, Xk) => `${kk}${Ik}${Xk}`)),
+        animationInterval: Xk
       }
     }
 
-    function VS(SS, HS) {
-      return [`${SS}0`, yS(SS, HS, "")]
+    function Uk(kk, Fk) {
+      return [`${kk}0`, Rk(kk, Fk, "")]
     }
 
-    function iS(SS) {
-      return [1, 2, 3, 4].map((HS => `${SS}[rot[${HS}`))
+    function Ck(kk) {
+      return [1, 2, 3, 4].map((Fk => `${kk}[rot[${Fk}`))
     }
 
-    function WS(SS, HS) {
+    function Nk(kk, Fk) {
       return {
         displayName: {
-          translationKey: `item:${SS}`
+          translationKey: `item:${kk}`
         },
         description: {
-          translationKey: `item:${SS}Description`
+          translationKey: `item:${kk}Description`
         },
         ttb: 1500,
-        textureInfo: HS,
+        textureInfo: Fk,
         harvestType: "rock",
         harvestLevel: 0,
         showInCreativeInven: !1,
         ...arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}
       }
     }
-    const zS = {
+    const ck = {
         transTex: !0,
         soundType: {
           break: "glass",
           place: "stone"
         }
       },
-      US = {
-        ...zS,
+      Wk = {
+        ...ck,
         altActionable: !0
       },
-      pS = {
+      fk = {
         ttb: 5e11,
         drops: null
       };
 
-    function sS(SS, HS, gS, tS) {
+    function Bk(kk, Fk, Ik, Xk) {
       return {
-        [SS]: HS,
-        [`${SS}|meta|rot1|${gS}`]: {
-          ...HS,
-          ...tS
+        [kk]: Fk,
+        [`${kk}|meta|rot1|${Ik}`]: {
+          ...Fk,
+          ...Xk
         }
       }
     }
 
-    function BS(SS, HS, gS) {
-      return (0, tS.xb)(SS, {
-        ...HS,
-        rootMetaDesc: `${SS}|meta|rot1`
-      }, gS)
+    function dk(kk, Fk, Ik) {
+      return (0, Xk.Kb)(kk, {
+        ...Fk,
+        rootMetaDesc: `${kk}|meta|rot1`
+      }, Ik)
     }
 
-    function MS(SS, HS, gS, tS) {
-      const bS = {};
-      return tS.forEach(((tS, XS) => {
-        bS[`${SS}|meta|rot${XS+1}|${HS}`] = {
-          ...gS,
-          texturePerSide: tS
+    function Yk(kk, Fk, Ik, Xk) {
+      const Tk = {};
+      return Xk.forEach(((Xk, ik) => {
+        Tk[`${kk}|meta|rot${ik+1}|${Fk}`] = {
+          ...Ik,
+          texturePerSide: Xk
         }
-      })), bS
+      })), Tk
     }
 
-    function FS(SS, HS, gS, tS) {
-      const bS = {};
-      for (let xS = 1; xS <= 4; xS++) bS[`${SS}|meta|rot${xS}|${gS}`] = {
-        ...(0, XS.e)(HS, tS),
-        texturePerSide: XS.b,
-        surfaceVelocity: (0, XS.m)(xS, XS.d),
-        drops: SS
+    function Ak(kk, Fk, Ik, Xk) {
+      const Tk = {};
+      for (let yk = 1; yk <= 4; yk++) Tk[`${kk}|meta|rot${yk}|${Ik}`] = {
+        ...(0, ik.f)(Fk, Xk),
+        texturePerSide: ik.b,
+        surfaceVelocity: (0, ik.m)(yk, ik.d),
+        drops: kk
       };
-      return bS
+      return Tk
     }
 
-    function RS() {
-      const SS = "Reactor Controller",
-        HS = [JS, JS, JS, JS],
-        gS = (SS, HS) => WS("reactorFrame", [SS], {
+    function gk() {
+      const kk = "Reactor Controller",
+        Fk = [Sk, Sk, Sk, Sk],
+        Ik = (kk, Fk) => Nk("reactorFrame", [kk], {
           drops: "Reactor Frame",
-          ...HS ? {
-            dK: HS
+          ...Fk ? {
+            Ve: Fk
           } : {}
         });
-      let tS = BS(SS, gS(ES), HS);
-      for (const [bS, XS] of Object.entries(vS)) {
-        const xS = {
-          animTextures: [`${XS.texture}0`, `${XS.texture}1`],
-          animationInterval: XS.ms
+      let Xk = dk(kk, Ik(Gk), Fk);
+      for (const [Tk, ik] of Object.entries(nk)) {
+        const yk = {
+          animTextures: [`${ik.texture}0`, `${ik.texture}1`],
+          animationInterval: ik.ms
         };
-        tS = {
-          ...tS,
-          ...MS(SS, bS, gS(xS, XS.light), HS)
+        Xk = {
+          ...Xk,
+          ...Yk(kk, Tk, Ik(yk, ik.light), Fk)
         }
       }
-      return tS
+      return Xk
     }
 
-    function TS() {
-      const SS = "Battery Controller",
-        HS = WS("batteryController", ["battery_controller_front", "battery_casing"], {
+    function mk() {
+      const kk = "Battery Controller",
+        Fk = Nk("batteryController", ["battery_controller_front", "battery_casing"], {
           altActionable: !0
         }),
-        gS = WS("batteryController", [yS("battery_controller_front"), "battery_casing"], {
+        Ik = Nk("batteryController", [Rk("battery_controller_front"), "battery_casing"], {
           altActionable: !0,
-          dK: xS.c
+          Ve: yk.e
         });
       return {
-        ...BS(SS, HS, ZS),
-        ...MS(SS, "Running", gS, ZS)
+        ...dk(kk, Fk, zk),
+        ...Yk(kk, "Running", Ik, zk)
       }
     }
-    const oS = "collider_side_off",
-      lS = 16,
-      mS = 200,
-      eS = [...iS("collider_top"), "collider_bottom"],
-      rS = "collider_top[rot[1",
-      SH = [0, 0, 1, 2, 0, 0];
+    const hk = "collider_side_off",
+      rk = 16,
+      Dk = 200,
+      Mk = [...Ck("collider_top"), "collider_bottom"],
+      kF = "collider_top[rot[1",
+      FF = [0, 0, 1, 2, 0, 0];
 
-    function HH(SS) {
-      return SS ? yS("collider_side", lS, "_running", mS) : oS
+    function IF(kk) {
+      return kk ? Rk("collider_side", rk, "_running", Dk) : hk
     }
 
-    function gH(SS) {
-      const HS = HH(SS);
-      return ["output", HS, ...eS, HS]
+    function XF(kk) {
+      const Fk = IF(kk);
+      return ["output", Fk, ...Mk, Fk]
     }
 
-    function tH(SS) {
-      return SS ? {
-        textureInfo: [oS, HH(!0), rS, "collider_bottom"],
+    function TF(kk) {
+      return kk ? {
+        textureInfo: [hk, IF(!0), kF, "collider_bottom"],
         texturePerSide: [1, 1, 2, 3, 1, 1]
       } : {
-        textureInfo: [oS, rS, "collider_bottom"],
-        texturePerSide: SH
+        textureInfo: [hk, kF, "collider_bottom"],
+        texturePerSide: FF
       }
     }
 
-    function bH() {
-      const SS = tH(!1),
-        HS = [SS.texturePerSide, SS.texturePerSide, SS.texturePerSide, SS.texturePerSide];
+    function iF() {
+      const kk = TF(!1),
+        Fk = [kk.texturePerSide, kk.texturePerSide, kk.texturePerSide, kk.texturePerSide];
       return {
-        ...BS("Collider", WS("collider", gH(!1), {
+        ...dk("Collider", Nk("collider", XF(!1), {
           altActionable: !0,
           drops: null
-        }), xS.l),
-        ...BS("_Collider Focus", WS("collider", SS.textureInfo, {
+        }), yk.o),
+        ...dk("_Collider Focus", Nk("collider", kk.textureInfo, {
           altActionable: !0,
           drops: null
-        }), HS),
-        ...BS("_Collider Output", WS("collider", SS.textureInfo, {
+        }), Fk),
+        ...dk("_Collider Output", Nk("collider", kk.textureInfo, {
           altActionable: !0,
           drops: null
-        }), HS)
+        }), Fk)
       }
     }
-    const XH = ["laser_front", "laser_side", ...Array(4).fill("laser_side"), "laser_side", "laser_back"];
+    const yF = ["laser_front", "laser_side", ...Array(4).fill("laser_side"), "laser_side", "laser_back"];
 
-    function xH() {
+    function lF() {
       const {
-        textureInfo: SS,
-        texturePerSide: HS
-      } = tH(!0);
-      return MS("_Collider Focus", "Running", WS("collider", SS, {
+        textureInfo: kk,
+        texturePerSide: Fk
+      } = TF(!0);
+      return Yk("_Collider Focus", "Running", Nk("collider", kk, {
         altActionable: !0,
         drops: null,
-        dK: [8, 3, 8]
-      }), [HS, HS, HS, HS])
+        Ve: [8, 3, 8]
+      }), [Fk, Fk, Fk, Fk])
     }
 
-    function NH() {
-      const SS = "wireless_terminal_top[rot[1";
-      return BS("Wireless Terminal", WS("wirelessTerminal", ["wireless_terminal_front", SS, ...iS("wireless_terminal_top"), "wireless_terminal_bottom", SS], {
+    function aF() {
+      const kk = "wireless_terminal_top[rot[1";
+      return dk("Wireless Terminal", Nk("wirelessTerminal", ["wireless_terminal_front", kk, ...Ck("wireless_terminal_top"), "wireless_terminal_bottom", kk], {
         altActionable: !0,
-        dK: [2, 6, 3]
-      }), xS.l)
+        Ve: [2, 6, 3]
+      }), yk.o)
     }
 
-    function qH(SS, HS, gS) {
-      return WS(SS, HS, {
-        ttb: gS,
+    function qF(kk, Fk, Ik) {
+      return Nk(kk, Fk, {
+        ttb: Ik,
         harvestLevel: 3,
         drops: null,
-        dK: [6, 10, 2]
+        Ve: [6, 10, 2]
       })
     }
 
-    function uH() {
+    function LF() {
       return {
-        "Uranium Ore": WS("uraniumOre", "uranium_ore", {
+        "Uranium Ore": Nk("uraniumOre", "uranium_ore", {
           ttb: 5400,
           harvestLevel: 3,
           drops: "Raw Uranium",
-          dK: [5, 8, 1]
+          Ve: [5, 8, 1]
         }),
-        ...(0, bS.b)("Uranium Deposit", "uraniumDeposit", "uranium_deposit", [5, 8, 1], 36e3),
+        ...(0, Tk.c)("Uranium Deposit", "uraniumDeposit", "uranium_deposit", [5, 8, 1], 36e3),
         "Sky Spring": {
-          ...(0, bS.b)("Sky Spring", "skySpring", "stone")["Sky Spring"],
+          ...(0, Tk.c)("Sky Spring", "skySpring", "stone")["Sky Spring"],
           textureInfo: [{
             animTextures: ["sky_spring0", "sky_spring1", "sky_spring2", "sky_spring3"],
             animationInterval: 800
           }, "stone"],
           texturePerSide: [1, 1, 0, 1, 1, 1]
         },
-        ...(0, bS.m)("Atomic Bench", "atomicBench", "atomic_bench"),
-        ...fH((0, xS.u)("Pump", "pump", "pump", qS)),
-        ...fH((0, xS.x)("Pump", "pump", "pump", xS.c, qS)),
-        ...(0, xS.u)("Condenser", "condenser", "condenser", uS("condenser")),
-        ...(0, xS.x)("Condenser", "condenser", "condenser", xS.c, uS("condenser")),
-        ...(0, xS.u)("Centrifuge", "centrifuge", "centrifuge", uS("centrifuge")),
-        ...(0, xS.x)("Centrifuge", "centrifuge", "centrifuge", [6, 9, 2], uS("centrifuge")),
-        ...(0, xS.u)("Synthesizer", "synthesizer", "synthesizer", uS("synthesizer")),
-        ...(0, xS.x)("Synthesizer", "synthesizer", "synthesizer", [3, 8, 3], uS("synthesizer")),
-        ...(0, xS.u)("Mob Farm", "mobFarm", "mob_farm"),
-        ...(0, xS.x)("Mob Farm", "mobFarm", "mob_farm", xS.r),
-        "Fluid Tank": WS("fluidTank", "fluid_tank", US),
-        ...RS(),
-        "Reactor Frame": WS("reactorFrame", "reactor_frame"),
-        "Reactor Casing": WS("reactorCasing", "reactor_casing"),
-        "Reactor Glass": WS("reactorGlass", "reactor_glass", zS),
-        ...sS("Reactor Port", WS("reactorPort", "fuel_port"), "Water", {
+        ...(0, Tk.g)("Atomic Bench", "atomicBench", "atomic_bench"),
+        ...ZF((0, yk.z)("Pump", "pump", "pump", ak)),
+        ...ZF((0, yk.B)("Pump", "pump", "pump", yk.e, ak)),
+        ...(0, yk.z)("Condenser", "condenser", "condenser", qk("condenser")),
+        ...(0, yk.B)("Condenser", "condenser", "condenser", yk.e, qk("condenser")),
+        ...(0, yk.z)("Centrifuge", "centrifuge", "centrifuge", qk("centrifuge")),
+        ...(0, yk.B)("Centrifuge", "centrifuge", "centrifuge", [6, 9, 2], qk("centrifuge")),
+        ...(0, yk.z)("Synthesizer", "synthesizer", "synthesizer", qk("synthesizer")),
+        ...(0, yk.B)("Synthesizer", "synthesizer", "synthesizer", [3, 8, 3], qk("synthesizer")),
+        ...(0, yk.z)("Mob Farm", "mobFarm", "mob_farm"),
+        ...(0, yk.B)("Mob Farm", "mobFarm", "mob_farm", yk.y),
+        "Fluid Tank": Nk("fluidTank", "fluid_tank", Wk),
+        ...gk(),
+        "Reactor Frame": Nk("reactorFrame", "reactor_frame"),
+        "Reactor Casing": Nk("reactorCasing", "reactor_casing"),
+        "Reactor Glass": Nk("reactorGlass", "reactor_glass", ck),
+        ...Bk("Reactor Port", Nk("reactorPort", "fuel_port"), "Water", {
           textureInfo: "water_port"
         }),
-        "Reactor Port|meta|rot1|Waste": WS("reactorPort", "output"),
-        ...sS("Fuel Rod", WS("fuelRod", "fuel_rod0"), "Running", {
-          textureInfo: VS("fuel_rod", LS),
-          texturePerSide: OS,
-          dK: [5, 9, 2]
+        "Reactor Port|meta|rot1|Waste": Nk("reactorPort", "output"),
+        ...Bk("Fuel Rod", Nk("fuelRod", "fuel_rod0"), "Running", {
+          textureInfo: Uk("fuel_rod", pk),
+          texturePerSide: vk,
+          Ve: [5, 9, 2]
         }),
-        "Graphite Block": WS("graphiteBlock", "graphite_block"),
-        ...sS("Coolant Channel", WS("coolantChannel", "coolant_channel0"), "Running", {
-          textureInfo: VS("coolant_channel", YS),
-          texturePerSide: OS
+        "Graphite Block": Nk("graphiteBlock", "graphite_block"),
+        ...Bk("Coolant Channel", Nk("coolantChannel", "coolant_channel0"), "Running", {
+          textureInfo: Uk("coolant_channel", uk),
+          texturePerSide: vk
         }),
-        "Reactor Slag": WS("reactorSlag", "reactor_slag", {
+        "Reactor Slag": Nk("reactorSlag", "reactor_slag", {
           drops: null,
-          dK: [3, 5, 1]
+          Ve: [3, 5, 1]
         }),
-        "Atomic Bomb": IH("atomicBomb", "atomic_bomb"),
-        ...TS(),
-        "Battery Casing": WS("batteryCasing", "battery_casing"),
-        ...sS("Battery Cell", WS("batteryCell", ["battery_cell", "battery_cell_top", "battery_cell_bottom"], {
+        "Atomic Bomb": tF("atomicBomb", "atomic_bomb"),
+        ...mk(),
+        "Battery Casing": Nk("batteryCasing", "battery_casing"),
+        ...Bk("Battery Cell", Nk("batteryCell", ["battery_cell", "battery_cell_top", "battery_cell_bottom"], {
           texturePerSide: [0, 0, 1, 2, 0, 0]
         }), "Running", {
-          textureInfo: ["battery_cell", yS("battery_cell", 4, "_running", AS), "battery_cell_top", "battery_cell_bottom"],
+          textureInfo: ["battery_cell", Rk("battery_cell", 4, "_running", bk), "battery_cell_top", "battery_cell_bottom"],
           texturePerSide: [1, 1, 2, 3, 1, 1],
-          dK: xS.c
+          Ve: yk.e
         }),
-        ...bH(),
-        ...BS("Laser", WS("laser", XH, {
+        ...iF(),
+        ...dk("Laser", Nk("laser", yF, {
           altActionable: !0
-        }), xS.l),
-        ...NH(),
-        ...(0, bS.e)("Dense Silo", "denseSilo", "dense_silo"),
-        ...(0, XS.f)("Express Belt", "expressBelt", ["express_belt_top", "express_belt_slab_side", "conveyor_belt_bottom"], XS.b, 1e3 * NS.d * NS.q),
-        ...(0, XS.i)("Express Belt", "expressBelt", "express_belt", ["express_belt_slab_side", "conveyor_belt_bottom"], 1e3 * NS.d * NS.q),
-        ...(0, XS.f)("Fast Loader", "fastLoader", ["fast_loader_top", "fast_belt_slab_side", "conveyor_belt_bottom", "fast_loader_slab_front"], [1, 1, 0, 2, 3, 1]),
-        ...FS("Splitter", "splitter", "leftFront", ["splitter_top_left_front", "splitter_slab_side", "conveyor_belt_bottom"]),
-        ...FS("Splitter", "splitter", "frontRight", ["splitter_top_front_right", "splitter_slab_side", "conveyor_belt_bottom"]),
-        ...FS("Sorting Gate", "sortingGate", "right", ["sorting_gate_top_right", "sorting_gate_slab_side", "conveyor_belt_bottom"]),
-        "Uranium Glass": WS("uraniumGlass", "uranium_glass", {
-          ...zS,
+        }), yk.o),
+        ...aF(),
+        ...(0, Tk.e)("Dense Silo", "denseSilo", "dense_silo"),
+        ...(0, ik.h)("Express Belt", "expressBelt", ["express_belt_top", "express_belt_slab_side", "conveyor_belt_bottom"], ik.b, 1e3 * lk.d * lk.n),
+        ...(0, ik.l)("Express Belt", "expressBelt", "express_belt", ["express_belt_slab_side", "conveyor_belt_bottom"], 1e3 * lk.d * lk.n),
+        ...(0, ik.h)("Fast Loader", "fastLoader", ["fast_loader_top", "fast_belt_slab_side", "conveyor_belt_bottom", "fast_loader_slab_front"], [1, 1, 0, 2, 3, 1]),
+        ...Ak("Splitter", "splitter", "leftFront", ["splitter_top_left_front", "splitter_slab_side", "conveyor_belt_bottom"]),
+        ...Ak("Splitter", "splitter", "frontRight", ["splitter_top_front_right", "splitter_slab_side", "conveyor_belt_bottom"]),
+        ...Ak("Sorting Gate", "sortingGate", "right", ["sorting_gate_top_right", "sorting_gate_slab_side", "conveyor_belt_bottom"]),
+        "Uranium Glass": Nk("uraniumGlass", "uranium_glass", {
+          ...ck,
           harvestType: "wood",
           ttb: 450,
-          dK: [4, 7, 1]
+          Ve: [4, 7, 1]
         }),
-        "Glow Lamp": WS("glowLamp", "glow_lamp", {
+        "Glow Lamp": Nk("glowLamp", "glow_lamp", {
           harvestType: "wood",
           ttb: 450,
-          dK: [8, 12, 13]
+          Ve: [8, 12, 13]
         }),
-        "_Jetpack Back": WS("jetChestplate", "jetpack_back", pS),
-        "_Atomic Spire": WS("atomicSpire", "atomic_spire", {
-          ...pS,
-          dK: [5, 9, 2]
+        "_Jetpack Back": Nk("jetChestplate", "jetpack_back", fk),
+        "_Atomic Spire": Nk("atomicSpire", "atomic_spire", {
+          ...fk,
+          Ve: [5, 9, 2]
         }),
-        "Isotope Comet Ore": qH("isotopeCometOre", "isotope_comet_ore", 5e3),
-        "Isotope Comet Heart": qH("isotopeCometHeart", "isotope_comet_heart", 18e3),
-        ...MS("Laser", "Running", WS("laser", XH, {
+        "Isotope Comet Ore": qF("isotopeCometOre", "isotope_comet_ore", 5e3),
+        "Isotope Comet Heart": qF("isotopeCometHeart", "isotope_comet_heart", 18e3),
+        ...Yk("Laser", "Running", Nk("laser", yF, {
           altActionable: !0,
-          dK: [9, 3, 9]
-        }), xS.l),
-        ...xH(),
-        ...DS("water", !1, "fluidPipe", "baf2_fluid_pipe"),
-        ...(0, xS.u)("Coolant Mixer", "coolantMixer", "coolant_mixer", uS("coolant_mixer")),
-        ...(0, xS.x)("Coolant Mixer", "coolantMixer", "coolant_mixer", xS.c, uS("coolant_mixer")),
-        ...DS("cryo", !1, "fluidPipe", "baf2_fluid_pipe"),
-        ...hS(),
-        ...DS("water", !0, "waterPipe", "baf2_water_pipe"),
-        ...DS("cryo", !0, "coolantPipe", "baf2_coolant_pipe"),
-        "Reactor Frame|meta|rot1|Formed": WS("reactorFrame", dS, {
-          texturePerSide: cS
+          Ve: [9, 3, 9]
+        }), yk.o),
+        ...lF(),
+        ...Qk("water", !1, "fluidPipe", "baf2_fluid_pipe"),
+        ...(0, yk.z)("Coolant Mixer", "coolantMixer", "coolant_mixer", qk("coolant_mixer")),
+        ...(0, yk.B)("Coolant Mixer", "coolantMixer", "coolant_mixer", yk.e, qk("coolant_mixer")),
+        ...Qk("cryo", !1, "fluidPipe", "baf2_fluid_pipe"),
+        ...Vk(),
+        ...Qk("water", !0, "waterPipe", "baf2_water_pipe"),
+        ...Qk("cryo", !0, "coolantPipe", "baf2_coolant_pipe"),
+        "Reactor Frame|meta|rot1|Formed": Nk("reactorFrame", Ek, {
+          texturePerSide: Ok
         }),
-        "Reactor Glass|meta|rot1|Formed": WS("reactorGlass", dS, {
-          texturePerSide: cS,
-          soundType: zS.soundType
+        "Reactor Glass|meta|rot1|Formed": Nk("reactorGlass", Ek, {
+          texturePerSide: Ok,
+          soundType: ck.soundType
         }),
-        "Reactor Port|meta|rot1|Formed": WS("reactorPort", "fuel_port"),
-        "Reactor Port|meta|rot1|Formed|Water": WS("reactorPort", "water_port"),
-        "Reactor Port|meta|rot1|Formed|Waste": WS("reactorPort", "output"),
-        ...MS("Collider", "Running", WS("collider", gH(!0), {
+        "Reactor Port|meta|rot1|Formed": Nk("reactorPort", "fuel_port"),
+        "Reactor Port|meta|rot1|Formed|Water": Nk("reactorPort", "water_port"),
+        "Reactor Port|meta|rot1|Formed|Waste": Nk("reactorPort", "output"),
+        ...Yk("Collider", "Running", Nk("collider", XF(!0), {
           altActionable: !0,
           drops: null,
-          dK: [8, 3, 8]
-        }), xS.l),
-        Scaffolding: WS("scaffolding", "scaffolding", {
+          Ve: [8, 3, 8]
+        }), yk.o),
+        Scaffolding: Nk("scaffolding", "scaffolding", {
           transTex: !0,
           ttb: 300,
           solid: !1,
@@ -15736,7 +15736,7 @@ export const modules = {
             upForceScalar: 1.05
           }
         }),
-        ...(0, tS.wb)("Nova Trophy", {
+        ...(0, Xk.Gb)("Nova Trophy", {
           displayName: {
             translationKey: "item:novaTrophy"
           },
@@ -15754,149 +15754,149 @@ export const modules = {
             yOffset: -.5
           },
           blockModel: "Nova Trophy",
-          dK: [4, 10, 5]
+          Ve: [4, 10, 5]
         }),
-        "Uranium Block": WS("uraniumBlock", "uranium_block", {
+        "Uranium Block": Nk("uraniumBlock", "uranium_block", {
           ttb: 3e3,
-          dK: [5, 9, 2]
+          Ve: [5, 9, 2]
         }),
-        "Pure Uranium Ore": WS("pureUraniumOre", "pure_uranium_ore", {
+        "Pure Uranium Ore": Nk("pureUraniumOre", "pure_uranium_ore", {
           ttb: 48600,
           harvestLevel: 3,
           drops: "Raw Uranium",
-          Eu: 9,
+          nq: 9,
           specialToolDrop: {
             tool: "Moonstone Pickaxe",
             drops: "Pure Uranium Ore"
           },
-          dK: [6, 10, 2]
+          Ve: [6, 10, 2]
         }),
-        "Copper Block": WS("copperBlock", "copper_block", {
+        "Copper Block": Nk("copperBlock", "copper_block", {
           ttb: 3e3
         }),
-        "Voltite Block": WS("voltiteBlock", "voltite_block", {
+        "Voltite Block": Nk("voltiteBlock", "voltite_block", {
           ttb: 3e3,
-          dK: [2, 6, 6]
+          Ve: [2, 6, 6]
         }),
-        "Nova Bomb": IH("novaBomb", "nova_bomb")
+        "Nova Bomb": tF("novaBomb", "nova_bomb")
       }
     }
 
-    function IH(SS, HS) {
-      return WS(SS, [`${HS}_side`, `${HS}_top`], {
+    function tF(kk, Fk) {
+      return Nk(kk, [`${Fk}_side`, `${Fk}_top`], {
         ttb: 50,
         texturePerSide: [0, 0, 1, 0, 0, 0],
         harvestType: "cuttable"
       })
     }
 
-    function fH(SS) {
-      for (const HS of Object.values(SS)) HS.drops = "Condenser";
-      return SS
+    function ZF(kk) {
+      for (const Fk of Object.values(kk)) Fk.drops = "Condenser";
+      return kk
     }
   },
-  9395: (SS, HS, gS) => {
-    gS.d(HS, {
-      B: () => PS,
-      C: () => uS,
-      D: () => qS,
-      d: () => GS,
-      h: () => QS,
-      l: () => NS,
-      o: () => xS,
-      s: () => nS,
-      t: () => IS,
-      u: () => DS,
-      y: () => CS
+  9223: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      C: () => qk,
+      F: () => ak,
+      b: () => Hk,
+      d: () => Kk,
+      h: () => lk,
+      k: () => yk,
+      m: () => xk,
+      q: () => Lk,
+      r: () => Qk,
+      v: () => Jk,
+      z: () => Pk
     });
-    var tS = gS(9403);
-    const bS = {
+    var Xk = Ik(9230);
+    const Tk = {
         root: "Noticeboard",
         blockModelPrefix: "noticeboard_wall",
         faceOffset: -.25
       },
-      XS = {
+      ik = {
         root: "Standing Noticeboard",
         blockModelPrefix: "noticeboard_standing",
         faceOffset: .125
       },
-      xS = [bS, XS],
-      NS = xS.map((SS => {
+      yk = [Tk, ik],
+      lk = yk.map((kk => {
         let {
-          root: HS
-        } = SS;
-        return HS
+          root: Fk
+        } = kk;
+        return Fk
       })),
-      qS = bS.root,
-      uS = XS.root,
-      IS = qS,
-      fS = ["l", "r", "u", "d"],
-      [kS, aS, KS, jS] = fS.map(((SS, HS) => 1 << HS)),
-      GS = Array.from({
-        length: 1 << fS.length
-      }, ((SS, HS) => HS)),
-      CS = {
+      ak = Tk.root,
+      qk = ik.root,
+      Lk = ak,
+      tk = ["l", "r", "u", "d"],
+      [Zk, jk, ek, wk] = tk.map(((kk, Fk) => 1 << Fk)),
+      Hk = Array.from({
+        length: 1 << tk.length
+      }, ((kk, Fk) => Fk)),
+      Jk = {
         0: "_single",
-        [kS]: "_horizontal_right",
-        [aS]: "_horizontal_left",
-        [kS | aS]: "_horizontal",
-        [KS]: "_vertical_bottom",
-        [jS]: "_vertical_top",
-        [KS | jS]: "_vertical",
-        [aS | jS]: "_top_left",
-        [kS | jS]: "_top_right",
-        [aS | KS]: "_bottom_left",
-        [kS | KS]: "_bottom_right",
-        [kS | aS | jS]: "_top",
-        [kS | aS | KS]: "_bottom",
-        [aS | KS | jS]: "_left",
-        [kS | KS | jS]: "_right",
-        [kS | aS | KS | jS]: ""
+        [Zk]: "_horizontal_right",
+        [jk]: "_horizontal_left",
+        [Zk | jk]: "_horizontal",
+        [ek]: "_vertical_bottom",
+        [wk]: "_vertical_top",
+        [ek | wk]: "_vertical",
+        [jk | wk]: "_top_left",
+        [Zk | wk]: "_top_right",
+        [jk | ek]: "_bottom_left",
+        [Zk | ek]: "_bottom_right",
+        [Zk | jk | wk]: "_top",
+        [Zk | jk | ek]: "_bottom",
+        [jk | ek | wk]: "_left",
+        [Zk | ek | wk]: "_right",
+        [Zk | jk | ek | wk]: ""
       },
-      nS = Object.fromEntries(Object.entries(tS.b).map((SS => {
-        let [HS, [gS, tS]] = SS;
-        return [HS, [-tS, gS]]
+      xk = Object.fromEntries(Object.entries(Xk.c).map((kk => {
+        let [Fk, [Ik, Xk]] = kk;
+        return [Fk, [-Xk, Ik]]
       }))),
-      PS = Object.fromEntries(Object.entries(tS.b).map((SS => {
-        let [HS, [gS, tS]] = SS;
-        return [HS, [
-          [gS, 0, tS],
-          [-gS, 0, -tS],
+      Pk = Object.fromEntries(Object.entries(Xk.c).map((kk => {
+        let [Fk, [Ik, Xk]] = kk;
+        return [Fk, [
+          [Ik, 0, Xk],
+          [-Ik, 0, -Xk],
           [0, 1, 0],
           [0, -1, 0]
         ]]
       })));
 
-    function QS(SS, HS, gS) {
-      const tS = fS.filter(((SS, HS) => gS & 1 << HS)).join("");
-      return "" === tS ? 1 === HS ? SS : `${SS}|meta|rot${HS}` : `${SS}|meta|rot${HS}|${tS}`
+    function Kk(kk, Fk, Ik) {
+      const Xk = tk.filter(((kk, Fk) => Ik & 1 << Fk)).join("");
+      return "" === Xk ? 1 === Fk ? kk : `${kk}|meta|rot${Fk}` : `${kk}|meta|rot${Fk}|${Xk}`
     }
 
-    function DS(SS) {
-      var HS;
-      const gS = null !== (HS = SS.split("|")[2]) && void 0 !== HS ? HS : "";
-      let tS = 0;
-      return fS.forEach(((SS, HS) => {
-        gS.includes(SS) && (tS |= 1 << HS)
-      })), tS
+    function Qk(kk) {
+      var Fk;
+      const Ik = null !== (Fk = kk.split("|")[2]) && void 0 !== Fk ? Fk : "";
+      let Xk = 0;
+      return tk.forEach(((kk, Fk) => {
+        Ik.includes(kk) && (Xk |= 1 << Fk)
+      })), Xk
     }
   },
-  9416: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => XS,
-      d: () => NS,
-      f: () => qS,
-      i: () => fS,
-      j: () => CS,
-      m: () => kS,
-      o: () => bS,
-      p: () => GS,
-      r: () => KS,
-      u: () => jS,
-      w: () => xS
+  9241: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ik,
+      e: () => lk,
+      f: () => ak,
+      i: () => tk,
+      k: () => Jk,
+      l: () => Zk,
+      m: () => Tk,
+      p: () => Hk,
+      t: () => ek,
+      v: () => wk,
+      z: () => yk
     });
-    var tS = gS(9367);
-    const bS = [{
+    var Xk = Ik(9191);
+    const Tk = [{
         letter: "n",
         name: "North",
         dx: 0,
@@ -15917,139 +15917,139 @@ export const modules = {
         dx: -1,
         dz: 0
       }],
-      XS = 39 == gS.j ? ["fence"] : null;
+      ik = 39 == Ik.j ? ["fence"] : null;
 
-    function xS(SS) {
-      return XS.includes(SS.model)
+    function yk(kk) {
+      return ik.includes(kk.model)
     }
-    const NS = Array.from({
-        length: 1 << bS.length
-      }, ((SS, HS) => HS)),
-      qS = 1 << bS.length,
-      uS = "Stacked";
+    const lk = Array.from({
+        length: 1 << Tk.length
+      }, ((kk, Fk) => Fk)),
+      ak = 1 << Tk.length,
+      qk = "Stacked";
 
-    function IS(SS) {
-      return bS.filter(((HS, gS) => SS & 1 << gS)).map((SS => {
+    function Lk(kk) {
+      return Tk.filter(((Fk, Ik) => kk & 1 << Ik)).map((kk => {
         let {
-          letter: HS
-        } = SS;
-        return HS
+          letter: Fk
+        } = kk;
+        return Fk
       })).join("")
     }
 
-    function fS(SS, HS) {
-      const gS = [IS(HS), HS & qS ? uS : ""].filter(Boolean);
-      return gS.length ? `${SS}|meta|${gS.join("|")}` : SS
+    function tk(kk, Fk) {
+      const Ik = [Lk(Fk), Fk & ak ? qk : ""].filter(Boolean);
+      return Ik.length ? `${kk}|meta|${Ik.join("|")}` : kk
     }
 
-    function kS(SS) {
-      var HS;
-      const gS = SS.split("|").slice(1),
-        tS = null !== (HS = gS.find((SS => SS !== uS))) && void 0 !== HS ? HS : "";
-      let XS = gS.includes(uS) ? qS : 0;
-      return bS.forEach(((SS, HS) => {
+    function Zk(kk) {
+      var Fk;
+      const Ik = kk.split("|").slice(1),
+        Xk = null !== (Fk = Ik.find((kk => kk !== qk))) && void 0 !== Fk ? Fk : "";
+      let ik = Ik.includes(qk) ? ak : 0;
+      return Tk.forEach(((kk, Fk) => {
         let {
-          letter: gS
-        } = SS;
-        tS.includes(gS) && (XS |= 1 << HS)
-      })), XS
+          letter: Ik
+        } = kk;
+        Xk.includes(Ik) && (ik |= 1 << Fk)
+      })), ik
     }
 
-    function aS(SS) {
-      return NS.map((HS => (0, tS.e)(function(SS, HS) {
+    function jk(kk) {
+      return lk.map((Fk => (0, Xk.d)(function(kk, Fk) {
         let {
-          post: gS,
-          northArm: tS
-        } = SS;
-        const XS = [gS];
-        let xS = tS;
-        return bS.forEach(((SS, gS) => {
-          HS & 1 << gS && XS.push(xS), xS = function(SS) {
-            let [HS, gS, tS, bS, XS, xS] = SS;
-            return [8 - xS, gS, HS, 8 - tS, XS, bS]
-          }(xS)
-        })), XS
-      }(SS, HS).map((SS => {
-        let [HS, gS, tS, bS, XS, xS] = SS;
+          post: Ik,
+          northArm: Xk
+        } = kk;
+        const ik = [Ik];
+        let yk = Xk;
+        return Tk.forEach(((kk, Ik) => {
+          Fk & 1 << Ik && ik.push(yk), yk = function(kk) {
+            let [Fk, Ik, Xk, Tk, ik, yk] = kk;
+            return [8 - yk, Ik, Fk, 8 - Xk, ik, Tk]
+          }(yk)
+        })), ik
+      }(kk, Fk).map((kk => {
+        let [Fk, Ik, Xk, Tk, ik, yk] = kk;
         return [
-          [HS, gS, tS],
-          [bS, XS, xS]
+          [Fk, Ik, Xk],
+          [Tk, ik, yk]
         ]
       })))))
     }
-    const KS = aS({
+    const ek = jk({
         post: [3, 0, 3, 5, 8, 5],
         northArm: [3, 0, 0, 5, 8, 3]
       }),
-      jS = aS({
+      wk = jk({
         post: [3, 0, 3, 5, 4, 5],
         northArm: [3, 0, 0, 5, 4, 3]
       }),
-      GS = {
+      Hk = {
         glb: "Fence",
         postPiece: "Bottom",
         topPiece: "Top"
       };
-    GS.glb;
+    Hk.glb;
 
-    function CS(SS, HS) {
-      return `${SS}${null===HS?"Post":bS[HS].name}`
+    function Jk(kk, Fk) {
+      return `${kk}${null===Fk?"Post":Tk[Fk].name}`
     }
   },
-  9425: (SS, HS, gS) => {
-    if (gS.d(HS, {
-        e: () => xS,
-        f: () => NS,
-        g: () => XS,
-        k: () => uS,
-        l: () => bS,
-        n: () => qS
-      }), 39 == gS.j) var tS = gS(9403);
-    const bS = "Chest",
-      XS = ["left", "right"];
+  9250: (kk, Fk, Ik) => {
+    if (Ik.d(Fk, {
+        c: () => yk,
+        e: () => lk,
+        i: () => ik,
+        j: () => qk,
+        l: () => Tk,
+        p: () => ak
+      }), 39 == Ik.j) var Xk = Ik(9230);
+    const Tk = "Chest",
+      ik = ["left", "right"];
 
-    function xS(SS, HS, gS) {
-      return `${SS}|meta|rot${HS}|${gS}`
+    function yk(kk, Fk, Ik) {
+      return `${kk}|meta|rot${Fk}|${Ik}`
     }
 
-    function NS(SS, HS) {
-      var gS;
-      return SS !== bS ? null : null !== (gS = XS.find((SS => HS.endsWith(`|${SS}`)))) && void 0 !== gS ? gS : null
+    function lk(kk, Fk) {
+      var Ik;
+      return kk !== Tk ? null : null !== (Ik = ik.find((kk => Fk.endsWith(`|${kk}`)))) && void 0 !== Ik ? Ik : null
     }
-    const qS = {
+    const ak = {
       left: "right",
       right: "left"
     };
 
-    function uS(SS, HS) {
-      const [gS, bS] = tS.b[SS];
-      return "left" === HS ? [-gS, -bS] : [gS, bS]
+    function qk(kk, Fk) {
+      const [Ik, Tk] = Xk.c[kk];
+      return "left" === Fk ? [-Ik, -Tk] : [Ik, Tk]
     }
   },
-  9420: (SS, HS, gS) => {
-    gS.d(HS, {
-      B: () => XS,
-      d: () => KS,
-      h: () => bS,
-      k: () => kS,
-      m: () => aS,
-      o: () => jS,
-      p: () => uS,
-      t: () => qS,
-      v: () => fS,
-      z: () => xS
+  9244: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => ek,
+      e: () => Tk,
+      g: () => Zk,
+      i: () => jk,
+      j: () => wk,
+      k: () => qk,
+      n: () => ak,
+      p: () => tk,
+      s: () => yk,
+      t: () => ik
     });
-    var tS = gS(9386);
-    const bS = "fenceGate";
+    var Xk = Ik(9219);
+    const Tk = "fenceGate";
 
-    function XS(SS) {
-      return (null === SS || void 0 === SS ? void 0 : SS.model) === bS
+    function ik(kk) {
+      return (null === kk || void 0 === kk ? void 0 : kk.model) === Tk
     }
 
-    function xS(SS) {
-      return XS(SS) && void 0 !== SS.attachedTop
+    function yk(kk) {
+      return ik(kk) && void 0 !== kk.attachedTop
     }
-    const NS = [{
+    const lk = [{
       dx: 0,
       dz: -1
     }, {
@@ -16063,54 +16063,54 @@ export const modules = {
       dz: 0
     }];
 
-    function qS(SS) {
-      return SS % 2 === 1
+    function ak(kk) {
+      return kk % 2 === 1
     }
 
-    function uS(SS, HS, gS) {
-      const tS = function(SS) {
-        return NS[(SS - 1) % 4]
-      }(SS);
-      return tS.dx * HS + tS.dz * gS > 0 ? (SS + 1) % 4 + 1 : SS
+    function qk(kk, Fk, Ik) {
+      const Xk = function(kk) {
+        return lk[(kk - 1) % 4]
+      }(kk);
+      return Xk.dx * Fk + Xk.dz * Ik > 0 ? (kk + 1) % 4 + 1 : kk
     }
-    const IS = new Map;
+    const Lk = new Map;
 
-    function fS(SS, HS, gS) {
-      const bS = `${SS}|${HS}|${gS}`;
-      return IS.has(bS) || IS.set(bS, (0, tS.b)(function(SS, HS, gS) {
-        return (0, tS.l)(function(SS, HS) {
-          return HS ? [
-            [0, 0, 0, 1, SS, 5],
-            [7, 0, 0, 8, SS, 5]
+    function tk(kk, Fk, Ik) {
+      const Tk = `${kk}|${Fk}|${Ik}`;
+      return Lk.has(Tk) || Lk.set(Tk, (0, Xk.c)(function(kk, Fk, Ik) {
+        return (0, Xk.m)(function(kk, Fk) {
+          return Fk ? [
+            [0, 0, 0, 1, kk, 5],
+            [7, 0, 0, 8, kk, 5]
           ] : [
-            [0, 0, 3, 8, SS, 5]
+            [0, 0, 3, 8, kk, 5]
           ]
-        }(SS ? 4 : 8, gS), HS - 1)
-      }(SS, HS, gS))), IS.get(bS)
+        }(kk ? 4 : 8, Ik), Fk - 1)
+      }(kk, Fk, Ik))), Lk.get(Tk)
     }
-    const kS = [1, 2, 3, 4].flatMap((SS => [!1, !0].map((HS => ({
-      rot: SS,
-      open: HS
+    const Zk = [1, 2, 3, 4].flatMap((kk => [!1, !0].map((Fk => ({
+      rot: kk,
+      open: Fk
     })))));
 
-    function aS(SS, HS, gS) {
-      return 1 !== HS || gS ? `${SS}|meta|rot${HS}|${gS?"open":"closed"}` : SS
+    function jk(kk, Fk, Ik) {
+      return 1 !== Fk || Ik ? `${kk}|meta|rot${Fk}|${Ik?"open":"closed"}` : kk
     }
-    const KS = "FenceGate",
-      jS = {
+    const ek = "FenceGate",
+      wk = {
         bottom: ["BottomLeft", "BottomRight"],
         top: ["TopLeft", "TopRight"]
       }
   },
-  9456: (SS, HS, gS) => {
-    function tS() {
-      const SS = {};
-      for (const HS of ["White", "Light Grey", "Light Blue", "Cyan", "Green", "Lime", "Yellow", "Orange", "Magenta", "Red"]) SS[`INTERNAL_MESH_${HS} Directional Arrow`] = {
+  9275: (kk, Fk, Ik) => {
+    function Xk() {
+      const kk = {};
+      for (const Fk of ["White", "Light Grey", "Light Blue", "Cyan", "Green", "Lime", "Yellow", "Orange", "Magenta", "Red"]) kk[`INTERNAL_MESH_${Fk} Directional Arrow`] = {
         ttb: 400,
         harvestType: "cuttable",
         model: "rotatable",
         solid: !1,
-        blockModel: `${HS} Directional Arrow`,
+        blockModel: `${Fk} Directional Arrow`,
         blockModelItem: !0,
         twoDBlockItem: !0,
         modelScale: 8,
@@ -16119,211 +16119,211 @@ export const modules = {
         },
         drops: null
       };
-      return SS
+      return kk
     }
-    gS.d(HS, {
-      e: () => tS
+    Ik.d(Fk, {
+      d: () => Xk
     })
   },
-  9467: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => tS,
-      g: () => XS
+  9285: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => Xk,
+      f: () => ik
     });
-    const tS = gS(9475).b.map((SS => ({
-        wood: SS,
-        block: "Maple" === SS ? "Showcase" : `${SS} Item Pedestal`
+    const Xk = Ik(9290).d.map((kk => ({
+        wood: kk,
+        block: "Maple" === kk ? "Showcase" : `${kk} Item Pedestal`
       }))),
-      bS = new Set(tS.map((SS => {
+      Tk = new Set(Xk.map((kk => {
         let {
-          block: HS
-        } = SS;
-        return HS
+          block: Fk
+        } = kk;
+        return Fk
       })));
 
-    function XS(SS) {
-      return bS.has(SS)
+    function ik(kk) {
+      return Tk.has(kk)
     }
   },
-  9386: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => NS,
-      c: () => iS,
-      g: () => KS,
-      i: () => nS,
-      l: () => xS,
-      m: () => kS,
-      p: () => GS,
-      s: () => aS,
-      w: () => CS
+  9219: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => lk,
+      g: () => Ck,
+      i: () => ek,
+      l: () => xk,
+      m: () => yk,
+      o: () => Zk,
+      q: () => Hk,
+      u: () => jk,
+      w: () => Jk
     });
-    var tS = gS(9367),
-      bS = gS(9411),
-      XS = gS(9395);
+    var Xk = Ik(9191),
+      Tk = Ik(9237),
+      ik = Ik(9223);
 
-    function xS(SS, HS) {
-      let gS = [...SS];
-      for (let tS = 0; tS < HS; tS++) gS = gS.map((SS => {
-        let [HS, gS, tS, bS, XS, xS] = SS;
-        return [tS, gS, 8 - bS, xS, XS, 8 - HS]
+    function yk(kk, Fk) {
+      let Ik = [...kk];
+      for (let Xk = 0; Xk < Fk; Xk++) Ik = Ik.map((kk => {
+        let [Fk, Ik, Xk, Tk, ik, yk] = kk;
+        return [Xk, Ik, 8 - Tk, yk, ik, 8 - Fk]
       }));
-      return gS
+      return Ik
     }
 
-    function NS(SS) {
-      return (0, tS.e)(SS.map((SS => {
-        let [HS, gS, tS, bS, XS, xS] = SS;
+    function lk(kk) {
+      return (0, Xk.d)(kk.map((kk => {
+        let [Fk, Ik, Xk, Tk, ik, yk] = kk;
         return [
-          [HS, gS, tS],
-          [bS, XS, xS]
+          [Fk, Ik, Xk],
+          [Tk, ik, yk]
         ]
       })))
     }
 
-    function qS() {
-      for (var SS = arguments.length, HS = new Array(SS), gS = 0; gS < SS; gS++) HS[gS] = arguments[gS];
-      return [0, 1, 2, 3].map((SS => NS(xS(HS, SS))))
+    function ak() {
+      for (var kk = arguments.length, Fk = new Array(kk), Ik = 0; Ik < kk; Ik++) Fk[Ik] = arguments[Ik];
+      return [0, 1, 2, 3].map((kk => lk(yk(Fk, kk))))
     }
 
-    function uS(SS) {
-      return SS.map((SS => {
-        let [HS, gS, tS, bS, XS, xS] = SS;
-        return [HS, 8 - XS, tS, bS, 8 - gS, xS]
+    function qk(kk) {
+      return kk.map((kk => {
+        let [Fk, Ik, Xk, Tk, ik, yk] = kk;
+        return [Fk, 8 - ik, Xk, Tk, 8 - Ik, yk]
       }))
     }
-    const IS = [0, 0, 0, 8, 4, 8],
-      fS = [0, 4, 0, 8, 8, 4],
-      kS = [IS, fS],
-      aS = uS(kS),
-      KS = {
-        bot: qS(...kS),
-        top: qS(...aS)
+    const Lk = [0, 0, 0, 8, 4, 8],
+      tk = [0, 4, 0, 8, 8, 4],
+      Zk = [Lk, tk],
+      jk = qk(Zk),
+      ek = {
+        bot: ak(...Zk),
+        top: ak(...jk)
       };
 
-    function jS(SS) {
-      return Object.fromEntries(bS.k.map((HS => [HS, SS(HS)])))
+    function wk(kk) {
+      return Object.fromEntries(Tk.l.map((Fk => [Fk, kk(Fk)])))
     }
-    const GS = {
-        innerLeft: [IS, fS, [4, 4, 4, 8, 8, 8]],
-        innerRight: [IS, fS, [0, 4, 4, 4, 8, 8]],
-        outerLeft: [IS, [4, 4, 0, 8, 8, 4]],
-        outerRight: [IS, [0, 4, 0, 4, 8, 4]]
+    const Hk = {
+        innerLeft: [Lk, tk, [4, 4, 4, 8, 8, 8]],
+        innerRight: [Lk, tk, [0, 4, 4, 4, 8, 8]],
+        outerLeft: [Lk, [4, 4, 0, 8, 8, 4]],
+        outerRight: [Lk, [0, 4, 0, 4, 8, 4]]
       },
-      CS = jS((SS => uS(GS[SS]))),
-      nS = {
-        bot: jS((SS => qS(...GS[SS]))),
-        top: jS((SS => qS(...CS[SS])))
+      Jk = wk((kk => qk(Hk[kk]))),
+      xk = {
+        bot: wk((kk => ak(...Hk[kk]))),
+        top: wk((kk => ak(...Jk[kk])))
       },
-      PS = qS([0, 0, 0, 8, 8, 1]),
-      QS = qS([0, 0, 0, 8, 1, 8]),
-      DS = qS([0, 0, 0, 8, 6, 8]),
-      wS = qS([0, 0, 0, 8, 3, 8]),
-      hS = qS([0, 0, 3, 8, 8, 6]),
-      ZS = qS([0, 0, 0, 8, 8, 2]),
-      JS = qS([0, 0, 2, 8, 8, 3]),
-      OS = qS([1, 0, 0, 7, 8, 6]),
-      dS = qS([0, 0, 0, 8, 8, 2]),
-      cS = qS([0, 0, 3, 8, 8, 5]),
-      vS = qS([0, 0, 6, 8, 8, 8]),
-      ES = qS([3, 0, 3, 5, 8, 5]),
-      LS = [0, 0, 0, 8, 6, 8],
-      YS = qS(LS),
-      AS = qS(LS, [0, 6, 7, 8, 7, 8]),
-      yS = qS(LS, [0, 6, 0, 8, 8, 1]),
-      VS = {
-        "Dangling Rope": qS([3, 0, 3, 5, 8, 5]),
-        "Dangling Vine": qS([2, 0, 2, 6, 8, 6]),
-        Vines: PS,
-        Board: PS,
-        "Slime Trail": QS,
-        "Wood Spikes": DS,
-        "Stone Spikes": DS,
-        "Iron Spikes": DS,
-        "Gold Spikes": DS,
-        "Diamond Spikes": DS,
-        "Kill Spikes": DS,
-        "Landing Pad": wS,
-        "Weak Jump Pad": wS,
-        "Jump Pad": wS,
-        "Strong Jump Pad": wS,
-        "Super Jump Pad": wS,
-        "Slicing Board": qS([1, 0, 1, 7, 2, 7]),
-        Football: qS([2, 0, 2, 6, 4, 6]),
-        "Coloured Wheel": qS([0, 0, 3, 8, 8, 5]),
-        Lantern: qS([1, 0, 1, 7, 8, 7])
+      Pk = ak([0, 0, 0, 8, 8, 1]),
+      Kk = ak([0, 0, 0, 8, 1, 8]),
+      Qk = ak([0, 0, 0, 8, 6, 8]),
+      sk = ak([0, 0, 0, 8, 3, 8]),
+      Vk = ak([0, 0, 3, 8, 8, 6]),
+      zk = ak([0, 0, 0, 8, 8, 2]),
+      Sk = ak([0, 0, 2, 8, 8, 3]),
+      vk = ak([1, 0, 0, 7, 8, 6]),
+      Ek = ak([0, 0, 0, 8, 8, 2]),
+      Ok = ak([0, 0, 3, 8, 8, 5]),
+      nk = ak([0, 0, 6, 8, 8, 8]),
+      Gk = ak([3, 0, 3, 5, 8, 5]),
+      pk = [0, 0, 0, 8, 6, 8],
+      uk = ak(pk),
+      bk = ak(pk, [0, 6, 7, 8, 7, 8]),
+      Rk = ak(pk, [0, 6, 0, 8, 8, 1]),
+      Uk = {
+        "Dangling Rope": ak([3, 0, 3, 5, 8, 5]),
+        "Dangling Vine": ak([2, 0, 2, 6, 8, 6]),
+        Vines: Pk,
+        Board: Pk,
+        "Slime Trail": Kk,
+        "Wood Spikes": Qk,
+        "Stone Spikes": Qk,
+        "Iron Spikes": Qk,
+        "Gold Spikes": Qk,
+        "Diamond Spikes": Qk,
+        "Kill Spikes": Qk,
+        "Landing Pad": sk,
+        "Weak Jump Pad": sk,
+        "Jump Pad": sk,
+        "Strong Jump Pad": sk,
+        "Super Jump Pad": sk,
+        "Slicing Board": ak([1, 0, 1, 7, 2, 7]),
+        Football: ak([2, 0, 2, 6, 4, 6]),
+        "Coloured Wheel": ak([0, 0, 3, 8, 8, 5]),
+        Lantern: ak([1, 0, 1, 7, 8, 7])
       };
 
-    function iS(SS, HS) {
-      var gS, tS, bS, xS;
-      let NS = VS[SS.meta.rootName];
-      const qS = null !== (gS = null !== (tS = SS.blockModel) && void 0 !== tS ? tS : HS.blockModel) && void 0 !== gS ? gS : "";
-      "noticeboard_standing_leg" === qS ? NS = ES : qS.startsWith("noticeboard_standing") ? NS = cS : qS.startsWith("noticeboard_wall") ? NS = vS : SS.meta.rootName.endsWith(" Directional Arrow") ? NS = QS : SS.meta.rootName.endsWith(" Ladder") ? NS = dS : SS.meta.rootName.endsWith(" Strongbed Head") ? NS = yS : SS.meta.rootName.endsWith(" Strongbed") ? NS = AS : / Bed(?: Head)?$/.test(SS.meta.rootName) ? NS = YS : /^_(Sheep|Cow|Pig|Horse|Wolf|Deer|Wildcat|Camel) Painting /.test(qS) ? NS = PS : / Banner(?: Flag)?(?: Hanging)?$/.test(qS) ? NS = qS.endsWith(" Flag Hanging") ? JS : qS.endsWith(" Hanging") ? ZS : hS : "lantern_wall" === qS && (NS = OS);
-      const uS = XS.l.includes(SS.meta.rootName) ? 2 : 0;
-      return null === (bS = NS) || void 0 === bS ? void 0 : bS[((null !== (xS = SS.meta.rot) && void 0 !== xS ? xS : 1) - 1 + uS) % 4]
+    function Ck(kk, Fk) {
+      var Ik, Xk, Tk, yk;
+      let lk = Uk[kk.meta.rootName];
+      const ak = null !== (Ik = null !== (Xk = kk.blockModel) && void 0 !== Xk ? Xk : Fk.blockModel) && void 0 !== Ik ? Ik : "";
+      "noticeboard_standing_leg" === ak ? lk = Gk : ak.startsWith("noticeboard_standing") ? lk = Ok : ak.startsWith("noticeboard_wall") ? lk = nk : kk.meta.rootName.endsWith(" Directional Arrow") ? lk = Kk : kk.meta.rootName.endsWith(" Ladder") ? lk = Ek : kk.meta.rootName.endsWith(" Strongbed Head") ? lk = Rk : kk.meta.rootName.endsWith(" Strongbed") ? lk = bk : / Bed(?: Head)?$/.test(kk.meta.rootName) ? lk = uk : /^_(Sheep|Cow|Pig|Horse|Wolf|Deer|Wildcat|Camel) Painting /.test(ak) ? lk = Pk : / Banner(?: Flag)?(?: Hanging)?$/.test(ak) ? lk = ak.endsWith(" Flag Hanging") ? Sk : ak.endsWith(" Hanging") ? zk : Vk : "lantern_wall" === ak && (lk = vk);
+      const qk = ik.h.includes(kk.meta.rootName) ? 2 : 0;
+      return null === (Tk = lk) || void 0 === Tk ? void 0 : Tk[((null !== (yk = kk.meta.rot) && void 0 !== yk ? yk : 1) - 1 + qk) % 4]
     }
   },
-  9475: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => tS
+  9290: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Xk
     });
-    const tS = ["Maple", "Pine", "Plum", "Cedar", "Aspen", "Jungle", "Palm", "Pear", "Cherry", "Spectral", "Mango"]
+    const Xk = ["Maple", "Pine", "Plum", "Cedar", "Aspen", "Jungle", "Palm", "Pear", "Cherry", "Spectral", "Mango"]
   },
-  9411: (SS, HS, gS) => {
-    gS.d(HS, {
-      b: () => tS,
-      e: () => XS,
-      g: () => xS,
-      j: () => NS,
-      k: () => bS
+  9237: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => Xk,
+      g: () => ik,
+      i: () => yk,
+      j: () => lk,
+      l: () => Tk
     });
-    let tS = function(SS) {
-      return SS[SS.bot = 0] = "bot", SS[SS.top = 1] = "top", SS[SS.side = 2] = "side", SS
+    let Xk = function(kk) {
+      return kk[kk.bot = 0] = "bot", kk[kk.top = 1] = "top", kk[kk.side = 2] = "side", kk
     }({});
-    const bS = ["innerLeft", "innerRight", "outerLeft", "outerRight"];
-    class XS {
-      constructor(SS, HS, gS, tS, bS, XS, xS, NS, qS, uS, IS, fS, kS, aS, KS, jS, GS, CS, nS, PS, QS, DS, wS) {
-        this.rootName = SS, this.rootId = HS, this.metaStr = gS, this.rot = tS, this.open = bS, this.halfblockPlacement = XS, this.Qb = xS, this.treeBase = NS, this.treeCanopy = qS, this.books = uS, this.freshlyGrown = IS, this.roots = fS, this.lava = kS, this.top = aS, this.grassRoots = KS, this.breaking = jS, this.flashing = GS, this.stairsCorner = CS, this.charging = nS, this.direction = PS, this.requiresAmmo = QS, this.woodType = DS, this.caughtMobType = wS
+    const Tk = ["innerLeft", "innerRight", "outerLeft", "outerRight"];
+    class ik {
+      constructor(kk, Fk, Ik, Xk, Tk, ik, yk, lk, ak, qk, Lk, tk, Zk, jk, ek, wk, Hk, Jk, xk, Pk, Kk, Qk, sk) {
+        this.rootName = kk, this.rootId = Fk, this.metaStr = Ik, this.rot = Xk, this.open = Tk, this.halfblockPlacement = ik, this.JT = yk, this.treeBase = lk, this.treeCanopy = ak, this.books = qk, this.freshlyGrown = Lk, this.roots = tk, this.lava = Zk, this.top = jk, this.grassRoots = ek, this.breaking = wk, this.flashing = Hk, this.stairsCorner = Jk, this.charging = xk, this.direction = Pk, this.requiresAmmo = Kk, this.woodType = Qk, this.caughtMobType = sk
       }
     }
     new Set(["metaStr", "rot", "halfblockPlacement", "stairsCorner"]);
 
-    function xS(SS, HS) {
-      HS.meta = NS(HS.name, HS.id, (HS => SS[HS].id), HS.rootMetaDesc)
+    function yk(kk, Fk) {
+      Fk.meta = lk(Fk.name, Fk.id, (Fk => kk[Fk].id), Fk.rootMetaDesc)
     }
 
-    function NS(SS, HS, gS, xS) {
-      const NS = null !== xS && void 0 !== xS ? xS : SS;
-      if (NS.split("|").length > 1 || NS.startsWith("Caught Mob")) {
-        var qS;
-        const SS = NS.split("|")[0],
-          HS = NS.split("|").slice(1).join("|"),
-          xS = HS.includes("rot") ? parseInt(HS.split("rot")[1][0]) : null;
-        let uS = !!HS.includes("open") || null;
-        HS.includes("closed") && (uS = !1);
-        let IS = HS.includes("bot") ? tS.bot : null;
-        HS.includes("top") ? IS = tS.top : HS.includes("side") && (IS = tS.side);
-        const fS = !!HS.includes("Growing") || null,
-          kS = !!HS.includes("TreeBase") || null,
-          aS = !!HS.includes("TreeCanopy") || null,
-          KS = HS.includes("books") ? parseInt(HS.split("books")[1][0]) : null,
-          jS = !!HS.includes("FreshlyGrown") || null,
-          GS = !(!HS.includes("Roots") || HS.includes("GrassRoots")) || null,
-          CS = !!HS.includes("Lava") || null,
-          nS = !("Top" !== HS && !HS.includes("|Top") && !HS.startsWith("Top|")) || null,
-          PS = !!HS.includes("GrassRoots") || null,
-          QS = !!HS.includes("Breaking") || null,
-          DS = !!HS.includes("Flashing") || null,
-          wS = null !== (qS = bS.find((SS => HS.endsWith(`|${SS}`)))) && void 0 !== qS ? qS : null,
-          hS = HS.includes("charging") ? parseInt(HS.split("charging")[1][0]) : null,
-          ZS = HS.includes("dir") ? parseInt(HS.split("dir")[1][0]) : null,
-          JS = !!HS.includes("RequiresAmmo") || null,
-          OS = kS ? HS.split("|")[1] : null,
-          dS = NS.startsWith("Caught Mob") ? NS.split(" ")[2].replaceAll("_", " ") : null;
-        return Object.freeze(new XS(SS, gS(SS), HS, xS, uS, IS, fS, kS, aS, KS, jS, GS, CS, nS, PS, QS, DS, wS, hS, ZS, JS, OS, dS))
+    function lk(kk, Fk, Ik, yk) {
+      const lk = null !== yk && void 0 !== yk ? yk : kk;
+      if (lk.split("|").length > 1 || lk.startsWith("Caught Mob")) {
+        var ak;
+        const kk = lk.split("|")[0],
+          Fk = lk.split("|").slice(1).join("|"),
+          yk = Fk.includes("rot") ? parseInt(Fk.split("rot")[1][0]) : null;
+        let qk = !!Fk.includes("open") || null;
+        Fk.includes("closed") && (qk = !1);
+        let Lk = Fk.includes("bot") ? Xk.bot : null;
+        Fk.includes("top") ? Lk = Xk.top : Fk.includes("side") && (Lk = Xk.side);
+        const tk = !!Fk.includes("Growing") || null,
+          Zk = !!Fk.includes("TreeBase") || null,
+          jk = !!Fk.includes("TreeCanopy") || null,
+          ek = Fk.includes("books") ? parseInt(Fk.split("books")[1][0]) : null,
+          wk = !!Fk.includes("FreshlyGrown") || null,
+          Hk = !(!Fk.includes("Roots") || Fk.includes("GrassRoots")) || null,
+          Jk = !!Fk.includes("Lava") || null,
+          xk = !("Top" !== Fk && !Fk.includes("|Top") && !Fk.startsWith("Top|")) || null,
+          Pk = !!Fk.includes("GrassRoots") || null,
+          Kk = !!Fk.includes("Breaking") || null,
+          Qk = !!Fk.includes("Flashing") || null,
+          sk = null !== (ak = Tk.find((kk => Fk.endsWith(`|${kk}`)))) && void 0 !== ak ? ak : null,
+          Vk = Fk.includes("charging") ? parseInt(Fk.split("charging")[1][0]) : null,
+          zk = Fk.includes("dir") ? parseInt(Fk.split("dir")[1][0]) : null,
+          Sk = !!Fk.includes("RequiresAmmo") || null,
+          vk = Zk ? Fk.split("|")[1] : null,
+          Ek = lk.startsWith("Caught Mob") ? lk.split(" ")[2].replaceAll("_", " ") : null;
+        return Object.freeze(new ik(kk, Ik(kk), Fk, yk, qk, Lk, tk, Zk, jk, ek, wk, Hk, Jk, xk, Pk, Kk, Qk, sk, Vk, zk, Sk, vk, Ek))
       }
-      return Object.freeze(new XS(SS, HS, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+      return Object.freeze(new ik(kk, Fk, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

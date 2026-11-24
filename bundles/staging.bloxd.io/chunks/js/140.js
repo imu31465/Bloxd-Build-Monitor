@@ -1,145 +1,145 @@
 export const id = 140;
 export const ids = [140];
 export const modules = {
-  41763: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      compilePagePack: () => uS,
-      prefetchCompiler: () => NS,
-      reconcileHint: () => qS
+  41740: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      compilePagePack: () => qk,
+      prefetchCompiler: () => lk,
+      reconcileHint: () => ak
     });
-    var tS = gS(6810),
-      bS = gS(6844),
-      XS = gS(6824),
-      xS = gS(6839);
+    var Xk = Ik(6596),
+      Tk = Ik(6639),
+      ik = Ik(6611),
+      yk = Ik(6631);
 
-    function NS() {
-      (0, tS.loadPageShaderPackCompiler)()
+    function lk() {
+      (0, Xk.loadPageShaderPackCompiler)()
     }
-    async function qS() {
-      const SS = await (0, tS.loadPageShaderPackCompiler)();
-      await (SS ? (0, bS.reconcileStoredShaderPackHint)(SS) : (0, bS.forgetShaderPackActiveHint)())
+    async function ak() {
+      const kk = await (0, Xk.loadPageShaderPackCompiler)();
+      await (kk ? (0, Tk.reconcileStoredShaderPackHint)(kk) : (0, Tk.forgetShaderPackActiveHint)())
     }
-    async function uS(SS) {
-      const HS = await (0, tS.loadPageShaderPackCompiler)();
-      if (!HS) return {
+    async function qk(kk) {
+      const Fk = await (0, Xk.loadPageShaderPackCompiler)();
+      if (!Fk) return {
         status: "none"
       };
-      const gS = await (0, xS.c)(SS, HS),
-        NS = (0, bS.storedPackOutcome)(gS, HS);
-      if ("none" === NS.kind) return {
+      const Ik = await (0, yk.c)(kk, Fk),
+        lk = (0, Tk.storedPackOutcome)(Ik, Fk);
+      if ("none" === lk.kind) return {
         status: "none"
       };
-      const qS = HS.f6((0, bS.storedShaderPackFiles)(gS), (0, XS.shaderPackTextures)());
-      if ("blocked" === NS.kind) return {
+      const ak = Fk.N7((0, Tk.storedShaderPackFiles)(Ik), (0, ik.shaderPackTextures)());
+      if ("blocked" === lk.kind) return {
         status: "blocked",
-        messageKey: NS.messageKey,
-        variants: 0 === qS.errors.length ? qS.variants : null
+        messageKey: lk.messageKey,
+        variants: 0 === ak.errors.length ? ak.variants : null
       };
-      if (qS.errors.length > 0) return console.error("Shader pack failed to compile after passing validation", qS.errors), {
+      if (ak.errors.length > 0) return console.error("Shader pack failed to compile after passing validation", ak.errors), {
         status: "none"
       };
       const {
-        name: uS,
-        keepCircleShadows: IS
-      } = gS.manifest;
+        name: qk,
+        keepCircleShadows: Lk
+      } = Ik.manifest;
       return {
         status: "active",
         pack: {
-          name: uS,
-          variants: qS.variants,
-          keepCircleShadows: !0 === IS
+          name: qk,
+          variants: ak.variants,
+          keepCircleShadows: !0 === Lk
         }
       }
     }
   },
-  6844: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      forgetShaderPackActiveHint: () => cS,
-      isOtherApiVersion: () => ZS,
-      isShaderPackActive: () => QS,
-      isShaderPackChangePending: () => hS,
-      markShaderPackChangePending: () => wS,
-      pageShaderPackValidationVersion: () => JS,
-      reconcileStoredShaderPackHint: () => dS,
-      removeShaderPack: () => PS,
-      replaceShaderPack: () => GS,
-      saveShaderPack: () => jS,
-      shaderPackNeedsCheck: () => OS,
-      storedPackOutcome: () => DS,
-      storedShaderPackFiles: () => kS,
-      toStoredShaderPack: () => fS
+  6639: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      forgetShaderPackActiveHint: () => Ok,
+      isOtherApiVersion: () => zk,
+      isShaderPackActive: () => Kk,
+      isShaderPackChangePending: () => Vk,
+      markShaderPackChangePending: () => sk,
+      pageShaderPackValidationVersion: () => Sk,
+      reconcileStoredShaderPackHint: () => Ek,
+      removeShaderPack: () => Pk,
+      replaceShaderPack: () => Hk,
+      saveShaderPack: () => wk,
+      shaderPackNeedsCheck: () => vk,
+      storedPackOutcome: () => Qk,
+      storedShaderPackFiles: () => Zk,
+      toStoredShaderPack: () => tk
     });
-    var tS = gS(5221),
-      bS = gS(5212),
-      XS = gS(45),
-      xS = gS(3591),
-      NS = gS(6848),
-      qS = gS(6824);
-    const uS = "shaderPackChangePending";
-    let IS = null;
+    var Xk = Ik(5053),
+      Tk = Ik(5047),
+      ik = Ik(41),
+      yk = Ik(3396),
+      lk = Ik(6644),
+      ak = Ik(6611);
+    const qk = "shaderPackChangePending";
+    let Lk = null;
 
-    function fS(SS, HS, gS) {
+    function tk(kk, Fk, Ik) {
       return {
-        manifest: SS.manifest,
-        files: (0, tS.v)(SS.files),
-        validation: HS,
-        ...gS && {
-          listing: gS
+        manifest: kk.manifest,
+        files: (0, Xk.w)(kk.files),
+        validation: Fk,
+        ...Ik && {
+          listing: Ik
         }
       }
     }
 
-    function kS(SS) {
-      return Object.keys(SS.files).map((HS => ({
-        path: HS,
-        source: SS.files[HS]
+    function Zk(kk) {
+      return Object.keys(kk.files).map((Fk => ({
+        path: Fk,
+        source: kk.files[Fk]
       })))
     }
-    let aS = Promise.resolve();
+    let jk = Promise.resolve();
 
-    function KS(SS) {
-      const HS = aS.then(SS);
-      return aS = HS.catch((() => {})), HS
-    }
-
-    function jS(SS, HS) {
-      return KS((() => CS(SS, HS)))
+    function ek(kk) {
+      const Fk = jk.then(kk);
+      return jk = Fk.catch((() => {})), Fk
     }
 
-    function GS(SS, HS, gS) {
-      return KS((async () => JSON.stringify(await (0, NS.f)()) === JSON.stringify(SS) && (null === HS ? (await nS(), !0) : CS(HS, gS))))
-    }
-    async function CS(SS, HS) {
-      const gS = await XS.e.setItem(NS.d, SS);
-      return gS && vS(SS, HS), gS
-    }
-    async function nS() {
-      await XS.e.removeItem(NS.d), XS.g.removeItem(xS.d)
+    function wk(kk, Fk) {
+      return ek((() => Jk(kk, Fk)))
     }
 
-    function PS() {
-      return KS(nS)
+    function Hk(kk, Fk, Ik) {
+      return ek((async () => JSON.stringify(await (0, lk.i)()) === JSON.stringify(kk) && (null === Fk ? (await xk(), !0) : Jk(Fk, Ik))))
+    }
+    async function Jk(kk, Fk) {
+      const Ik = await ik.g.setItem(lk.e, kk);
+      return Ik && nk(kk, Fk), Ik
+    }
+    async function xk() {
+      await ik.g.removeItem(lk.e), ik.j.removeItem(yk.e)
     }
 
-    function QS(SS, HS) {
-      return "active" === DS(SS, HS).kind
+    function Pk() {
+      return ek(xk)
     }
 
-    function DS(SS, HS) {
-      var gS;
-      return null === SS ? {
+    function Kk(kk, Fk) {
+      return "active" === Qk(kk, Fk).kind
+    }
+
+    function Qk(kk, Fk) {
+      var Ik;
+      return null === kk ? {
         kind: "none",
         reason: "nothingStored"
-      } : ZS(SS) ? {
+      } : zk(kk) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (gS = SS.validation) || void 0 === gS ? void 0 : gS.ok) || SS.validation.fromRecheck ? null === HS ? {
+      } : !1 !== (null === (Ik = kk.validation) || void 0 === Ik ? void 0 : Ik.ok) || kk.validation.fromRecheck ? null === Fk ? {
         kind: "none",
         reason: "noCompiler"
-      } : OS(SS, HS) ? {
+      } : vk(kk, Fk) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : SS.validation.ok ? {
+      } : kk.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -150,124 +150,124 @@ export const modules = {
       }
     }
 
-    function wS() {
-      XS.h.setItem(uS, performance.timeOrigin)
+    function sk() {
+      ik.m.setItem(qk, performance.timeOrigin)
     }
 
-    function hS() {
-      return XS.h.getItem(uS) === performance.timeOrigin
+    function Vk() {
+      return ik.m.getItem(qk) === performance.timeOrigin
     }
 
-    function ZS(SS) {
-      return !(0, bS.j)(SS.manifest.apiVersion)
+    function zk(kk) {
+      return !(0, Tk.i)(kk.manifest.apiVersion)
     }
 
-    function JS(SS) {
-      return IS ??= SS.dL((0, qS.shaderPackTextures)()), IS
+    function Sk(kk) {
+      return Lk ??= kk.nG((0, ak.shaderPackTextures)()), Lk
     }
 
-    function OS(SS, HS) {
-      var gS;
-      return (null === (gS = SS.validation) || void 0 === gS ? void 0 : gS.headerVersion) !== JS(HS)
+    function vk(kk, Fk) {
+      var Ik;
+      return (null === (Ik = kk.validation) || void 0 === Ik ? void 0 : Ik.headerVersion) !== Sk(Fk)
     }
 
-    function dS(SS) {
-      return KS((async () => {
-        vS(await (0, NS.f)(!0), SS)
+    function Ek(kk) {
+      return ek((async () => {
+        nk(await (0, lk.i)(!0), kk)
       }))
     }
 
-    function cS() {
-      return KS((async () => {
-        XS.g.removeItem(xS.d)
+    function Ok() {
+      return ek((async () => {
+        ik.j.removeItem(yk.e)
       }))
     }
 
-    function vS(SS, HS) {
-      QS(SS, HS) ? XS.g.setItem(xS.d, !0) : XS.g.removeItem(xS.d)
+    function nk(kk, Fk) {
+      Kk(kk, Fk) ? ik.j.setItem(yk.e, !0) : ik.j.removeItem(yk.e)
     }
   },
-  6839: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => qS,
-      g: () => NS
+  6631: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      c: () => ak,
+      f: () => lk
     });
-    var tS = gS(6844),
-      bS = gS(6824),
-      XS = gS(122);
-    const xS = 100;
-    async function NS(SS, HS) {
-      var gS;
-      let tS = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (gS = navigator.gpu) && void 0 !== gS ? gS : null;
-      const xS = SS.f6(HS, (0, bS.shaderPackTextures)());
-      if (xS.errors.length > 0) return uS(SS, xS.errors, xS.offInStrict);
-      const NS = await async function(SS) {
-        if (!SS) return null;
+    var Xk = Ik(6639),
+      Tk = Ik(6611),
+      ik = Ik(113);
+    const yk = 100;
+    async function lk(kk, Fk) {
+      var Ik;
+      let Xk = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (Ik = navigator.gpu) && void 0 !== Ik ? Ik : null;
+      const yk = kk.N7(Fk, (0, Tk.shaderPackTextures)());
+      if (yk.errors.length > 0) return qk(kk, yk.errors, yk.offInStrict);
+      const lk = await async function(kk) {
+        if (!kk) return null;
         try {
-          const HS = await (0, XS.x)(SS);
-          return HS ? await HS.requestDevice() : null
-        } catch (HS) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", HS), null
+          const Fk = await (0, ik.t)(kk);
+          return Fk ? await Fk.requestDevice() : null
+        } catch (Fk) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", Fk), null
         }
-      }(tS);
-      if (!NS) return null;
-      let qS = !1;
-      NS.lost.then((() => {
-        qS = !0
+      }(Xk);
+      if (!lk) return null;
+      let ak = !1;
+      lk.lost.then((() => {
+        ak = !0
       }));
       try {
-        const HS = await Promise.all(xS.validationModules.map((HS => async function(SS, HS, gS) {
-          HS.pushErrorScope("validation");
-          const tS = HS.createShaderModule({
-              code: gS.code
+        const Fk = await Promise.all(yk.validationModules.map((Fk => async function(kk, Fk, Ik) {
+          Fk.pushErrorScope("validation");
+          const Xk = Fk.createShaderModule({
+              code: Ik.code
             }),
-            bS = HS.popErrorScope(),
+            Tk = Fk.popErrorScope(),
             {
-              messages: XS
-            } = await tS.getCompilationInfo(),
-            xS = XS.filter((SS => "error" === SS.type)).map((HS => SS.mapValidationMessage(gS, HS))),
-            NS = await bS;
-          NS && 0 === xS.length && xS.push({
+              messages: ik
+            } = await Xk.getCompilationInfo(),
+            yk = ik.filter((kk => "error" === kk.type)).map((Fk => kk.mapValidationMessage(Ik, Fk))),
+            lk = await Tk;
+          lk && 0 === yk.length && yk.push({
             file: null,
             line: 0,
-            message: NS.message,
-            variants: [gS.key]
+            message: lk.message,
+            variants: [Ik.key]
           });
-          return xS
-        }(SS, NS, HS))));
-        return qS ? null : uS(SS, SS.VgS(HS.flat()), xS.offInStrict)
-      } catch (IS) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", IS), null
+          return yk
+        }(kk, lk, Fk))));
+        return ak ? null : qk(kk, kk.YIk(Fk.flat()), yk.offInStrict)
+      } catch (Lk) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", Lk), null
       } finally {
-        NS.destroy()
+        lk.destroy()
       }
     }
-    async function qS(SS, HS) {
-      var gS;
-      if (!(0, tS.shaderPackNeedsCheck)(SS, HS) || (0, tS.isOtherApiVersion)(SS)) return SS;
-      const bS = await NS(HS, (0, tS.storedShaderPackFiles)(SS));
-      if (!bS) return SS;
-      const XS = !1 === (null === (gS = SS.validation) || void 0 === gS ? void 0 : gS.ok) && !SS.validation.fromRecheck,
-        xS = {
-          ...SS,
-          validation: XS ? bS : {
-            ...bS,
+    async function ak(kk, Fk) {
+      var Ik;
+      if (!(0, Xk.shaderPackNeedsCheck)(kk, Fk) || (0, Xk.isOtherApiVersion)(kk)) return kk;
+      const Tk = await lk(Fk, (0, Xk.storedShaderPackFiles)(kk));
+      if (!Tk) return kk;
+      const ik = !1 === (null === (Ik = kk.validation) || void 0 === Ik ? void 0 : Ik.ok) && !kk.validation.fromRecheck,
+        yk = {
+          ...kk,
+          validation: ik ? Tk : {
+            ...Tk,
             fromRecheck: !0
           }
         };
-      return await (0, tS.replaceShaderPack)(SS, xS, HS) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), xS
+      return await (0, Xk.replaceShaderPack)(kk, yk, Fk) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), yk
     }
 
-    function uS(SS, HS, gS) {
+    function qk(kk, Fk, Ik) {
       return {
-        headerVersion: (0, tS.pageShaderPackValidationVersion)(SS),
-        ok: 0 === HS.length,
-        errors: HS.slice(0, xS),
-        moreErrors: Math.max(0, HS.length - xS),
-        offInStrict: gS
+        headerVersion: (0, Xk.pageShaderPackValidationVersion)(kk),
+        ok: 0 === Fk.length,
+        errors: Fk.slice(0, yk),
+        moreErrors: Math.max(0, Fk.length - yk),
+        offInStrict: Ik
       }
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

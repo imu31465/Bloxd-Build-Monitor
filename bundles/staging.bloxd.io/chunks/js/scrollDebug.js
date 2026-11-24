@@ -1,25 +1,25 @@
 export const id = 52;
 export const ids = [52];
 export const modules = {
-  4819: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      MAX_LINES: () => NS,
-      MAX_SETTLE_MS: () => xS,
-      SETTLE_MS: () => XS,
-      ScrollDebugLog: () => QS,
-      changeText: () => GS,
-      elementText: () => nS,
-      fullStateText: () => jS,
-      startScrollDebug: () => DS,
-      touchedText: () => PS
+  4700: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      MAX_LINES: () => lk,
+      MAX_SETTLE_MS: () => yk,
+      SETTLE_MS: () => ik,
+      ScrollDebugLog: () => Kk,
+      changeText: () => Hk,
+      elementText: () => xk,
+      fullStateText: () => wk,
+      startScrollDebug: () => Qk,
+      touchedText: () => Pk
     });
-    var tS = gS(24),
-      bS = gS(2953);
-    const XS = 300,
-      xS = 2e3,
-      NS = 40,
-      qS = 2,
-      uS = {
+    var Xk = Ik(25),
+      Tk = Ik(2744);
+    const ik = 300,
+      yk = 2e3,
+      lk = 40,
+      ak = 2,
+      qk = {
         vvOffsetTop: "vv offsetTop",
         vvOffsetLeft: "vv offsetLeft",
         vvPageTop: "vv pageTop",
@@ -31,142 +31,142 @@ export const modules = {
         scrollHeight: "scrollHeight",
         innerHeight: "innerHeight"
       },
-      IS = Object.keys(uS),
-      fS = new Set(["scrollHeight", "innerHeight"]);
+      Lk = Object.keys(qk),
+      tk = new Set(["scrollHeight", "innerHeight"]);
 
-    function kS(SS, HS) {
-      const gS = 10 ** HS;
-      return Math.round(SS * gS) / gS
+    function Zk(kk, Fk) {
+      const Ik = 10 ** Fk;
+      return Math.round(kk * Ik) / Ik
     }
 
-    function aS() {
-      const SS = window.visualViewport;
+    function jk() {
+      const kk = window.visualViewport;
       return {
-        vvOffsetTop: kS(SS.offsetTop, 1),
-        vvOffsetLeft: kS(SS.offsetLeft, 1),
-        vvPageTop: kS(SS.pageTop, 1),
-        vvPageLeft: kS(SS.pageLeft, 1),
-        vvHeight: kS(SS.height, 1),
-        vvScale: kS(SS.scale, 3),
-        scrollX: kS(window.scrollX, 1),
-        scrollY: kS(window.scrollY, 1),
+        vvOffsetTop: Zk(kk.offsetTop, 1),
+        vvOffsetLeft: Zk(kk.offsetLeft, 1),
+        vvPageTop: Zk(kk.pageTop, 1),
+        vvPageLeft: Zk(kk.pageLeft, 1),
+        vvHeight: Zk(kk.height, 1),
+        vvScale: Zk(kk.scale, 3),
+        scrollX: Zk(window.scrollX, 1),
+        scrollY: Zk(window.scrollY, 1),
         scrollHeight: document.documentElement.scrollHeight,
         innerHeight: window.innerHeight
       }
     }
 
-    function KS(SS, HS) {
-      return `${uS[SS]} ${HS}`
+    function ek(kk, Fk) {
+      return `${qk[kk]} ${Fk}`
     }
 
-    function jS(SS) {
-      return IS.map((HS => KS(HS, String(SS[HS])))).join(", ")
+    function wk(kk) {
+      return Lk.map((Fk => ek(Fk, String(kk[Fk])))).join(", ")
     }
 
-    function GS(SS, HS, gS, tS) {
-      return IS.flatMap((bS => {
-        const XS = SS[bS] !== HS[bS],
-          xS = gS[bS] < Math.min(SS[bS], HS[bS]) || tS[bS] > Math.max(SS[bS], HS[bS]);
-        if (!XS && !xS && !fS.has(bS)) return [];
-        return [KS(bS, `${XS?`${SS[bS]} -> ${HS[bS]}`:String(HS[bS])}${xS?` (via ${gS[bS]}..${tS[bS]})`:""}`)]
+    function Hk(kk, Fk, Ik, Xk) {
+      return Lk.flatMap((Tk => {
+        const ik = kk[Tk] !== Fk[Tk],
+          yk = Ik[Tk] < Math.min(kk[Tk], Fk[Tk]) || Xk[Tk] > Math.max(kk[Tk], Fk[Tk]);
+        if (!ik && !yk && !tk.has(Tk)) return [];
+        return [ek(Tk, `${ik?`${kk[Tk]} -> ${Fk[Tk]}`:String(Fk[Tk])}${yk?` (via ${Ik[Tk]}..${Xk[Tk]})`:""}`)]
       })).join(", ")
     }
 
-    function CS(SS, HS, gS) {
-      return Object.fromEntries(IS.map((tS => [tS, gS(SS[tS], HS[tS])])))
+    function Jk(kk, Fk, Ik) {
+      return Object.fromEntries(Lk.map((Xk => [Xk, Ik(kk[Xk], Fk[Xk])])))
     }
 
-    function nS(SS) {
-      var HS;
-      const gS = (null !== (HS = SS.getAttribute("class")) && void 0 !== HS ? HS : "").trim().replace(/\s+/g, ".").slice(0, 40);
-      return `${SS.tagName.toLowerCase()}${gS?`.${gS}`:""}`
+    function xk(kk) {
+      var Fk;
+      const Ik = (null !== (Fk = kk.getAttribute("class")) && void 0 !== Fk ? Fk : "").trim().replace(/\s+/g, ".").slice(0, 40);
+      return `${kk.tagName.toLowerCase()}${Ik?`.${Ik}`:""}`
     }
 
-    function PS(SS, HS) {
-      const gS = [];
-      for (let tS = SS.parentElement; null !== tS && gS.length < qS; tS = tS.parentElement) {
-        const SS = HS(tS);
-        "auto" !== SS && gS.push(`${SS} on ${nS(tS)}`)
+    function Pk(kk, Fk) {
+      const Ik = [];
+      for (let Xk = kk.parentElement; null !== Xk && Ik.length < ak; Xk = Xk.parentElement) {
+        const kk = Fk(Xk);
+        "auto" !== kk && Ik.push(`${kk} on ${xk(Xk)}`)
       }
-      return `${nS(SS)} touch-action ${HS(SS)}${gS.length>0?` (${gS.join(", ")})`:""}`
+      return `${xk(kk)} touch-action ${Fk(kk)}${Ik.length>0?` (${Ik.join(", ")})`:""}`
     }
-    class QS {
-      constructor(SS) {
-        this.deps = SS, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
-          const SS = this.deps.now(),
-            HS = SS - this.lastEventMs;
-          if (HS < XS && SS - this.burstStartMs < xS) return void(this.timer = setTimeout(this.settle, XS - HS));
+    class Kk {
+      constructor(kk) {
+        this.deps = kk, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
+          const kk = this.deps.now(),
+            Fk = kk - this.lastEventMs;
+          if (Fk < ik && kk - this.burstStartMs < yk) return void(this.timer = setTimeout(this.settle, ik - Fk));
           this.timer = null;
-          const gS = this.deps.read(),
+          const Ik = this.deps.read(),
             {
-              last: tS,
-              innerScrolled: bS,
-              burstTouch: qS
+              last: Xk,
+              innerScrolled: Tk,
+              burstTouch: ak
             } = this,
-            uS = CS(this.low, gS, Math.min),
-            fS = CS(this.high, gS, Math.max);
-          if (this.last = gS, this.low = gS, this.high = gS, this.innerScrolled = null, aS = uS, KS = fS, IS.every((SS => aS[SS] === KS[SS])) || !this.burstInGame || !this.deps.inGame()) return;
-          var aS, KS;
-          if (this.lines === NS) return this.capped = !0, void this.deps.log(`further changes unlogged: ${NS} lines logged`);
+            qk = Jk(this.low, Ik, Math.min),
+            tk = Jk(this.high, Ik, Math.max);
+          if (this.last = Ik, this.low = Ik, this.high = Ik, this.innerScrolled = null, jk = qk, ek = tk, Lk.every((kk => jk[kk] === ek[kk])) || !this.burstInGame || !this.deps.inGame()) return;
+          var jk, ek;
+          if (this.lines === lk) return this.capped = !0, void this.deps.log(`further changes unlogged: ${lk} lines logged`);
           this.lines++;
-          const jS = null === qS ? "no touch yet" : `touch on ${qS.text}, ${Math.round(this.burstStartMs-qS.atMs)} ms before`,
-            PS = null === bS ? "" : `; inner scroll ${nS(bS)} scrollTop ${kS(bS.scrollTop,1)}`;
-          this.deps.log(`moved over ${Math.round(SS-this.burstStartMs)} ms; ${jS}${PS}: ${GS(tS,gS,uS,fS)}`)
-        }, this.last = SS.read(), this.low = this.last, this.high = this.last, SS.log(`start: ${jS(this.last)}`)
+          const wk = null === ak ? "no touch yet" : `touch on ${ak.text}, ${Math.round(this.burstStartMs-ak.atMs)} ms before`,
+            Pk = null === Tk ? "" : `; inner scroll ${xk(Tk)} scrollTop ${Zk(Tk.scrollTop,1)}`;
+          this.deps.log(`moved over ${Math.round(kk-this.burstStartMs)} ms; ${wk}${Pk}: ${Hk(Xk,Ik,qk,tk)}`)
+        }, this.last = kk.read(), this.low = this.last, this.high = this.last, kk.log(`start: ${wk(this.last)}`)
       }
       moved() {
-        let SS = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        let kk = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         if (this.capped) return;
-        const HS = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
-        if (null !== SS && (null === HS || !SS.contains(HS.target))) return;
-        const gS = this.deps.now();
-        this.lastEventMs = gS, null === this.timer && (this.burstStartMs = gS, this.burstInGame = this.deps.inGame(), this.burstTouch = HS, this.timer = setTimeout(this.settle, XS));
-        const tS = this.deps.read();
-        this.low = CS(this.low, tS, Math.min), this.high = CS(this.high, tS, Math.max), this.innerScrolled = null !== SS && void 0 !== SS ? SS : this.innerScrolled
+        const Fk = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
+        if (null !== kk && (null === Fk || !kk.contains(Fk.target))) return;
+        const Ik = this.deps.now();
+        this.lastEventMs = Ik, null === this.timer && (this.burstStartMs = Ik, this.burstInGame = this.deps.inGame(), this.burstTouch = Fk, this.timer = setTimeout(this.settle, ik));
+        const Xk = this.deps.read();
+        this.low = Jk(this.low, Xk, Math.min), this.high = Jk(this.high, Xk, Math.max), this.innerScrolled = null !== kk && void 0 !== kk ? kk : this.innerScrolled
       }
     }
 
-    function DS() {
-      let SS = null;
-      const HS = new QS({
-        read: aS,
-        inGame: () => "inGame" === tS.b.get("gameState"),
-        lastTouch: () => SS,
-        log: SS => {
-          (0, bS.i)("scroll", SS)
+    function Qk() {
+      let kk = null;
+      const Fk = new Kk({
+        read: jk,
+        inGame: () => "inGame" === Xk.d.get("gameState"),
+        lastTouch: () => kk,
+        log: kk => {
+          (0, Tk.g)("scroll", kk)
         },
         now: () => performance.now()
       });
-      document.addEventListener("touchstart", (HS => {
-        if (HS.target instanceof Element) {
-          const gS = PS(HS.target, (SS => getComputedStyle(SS).touchAction));
-          SS = {
-            target: HS.target,
-            text: gS,
+      document.addEventListener("touchstart", (Fk => {
+        if (Fk.target instanceof Element) {
+          const Ik = Pk(Fk.target, (kk => getComputedStyle(kk).touchAction));
+          kk = {
+            target: Fk.target,
+            text: Ik,
             atMs: performance.now()
           }
         }
       }), {
         capture: !0,
         passive: !0
-      }), document.addEventListener("scroll", (SS => {
-        HS.moved(SS.target instanceof Element ? SS.target : null)
+      }), document.addEventListener("scroll", (kk => {
+        Fk.moved(kk.target instanceof Element ? kk.target : null)
       }), {
         capture: !0,
         passive: !0
       });
-      const gS = () => {
-        HS.moved()
+      const Ik = () => {
+        Fk.moved()
       };
-      window.addEventListener("resize", gS, {
+      window.addEventListener("resize", Ik, {
         passive: !0
-      }), window.visualViewport.addEventListener("scroll", gS, {
+      }), window.visualViewport.addEventListener("scroll", Ik, {
         passive: !0
-      }), window.visualViewport.addEventListener("resize", gS, {
+      }), window.visualViewport.addEventListener("resize", Ik, {
         passive: !0
       })
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

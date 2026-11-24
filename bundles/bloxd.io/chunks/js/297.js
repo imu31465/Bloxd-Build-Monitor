@@ -1,26 +1,26 @@
 export const id = 297;
 export const ids = [297];
 export const modules = {
-  41390: (SS, HS, gS) => {
-    function tS() {
-      return tS = Object.assign ? Object.assign.bind() : function(SS) {
-        for (var HS = 1; HS < arguments.length; HS++) {
-          var gS = arguments[HS];
-          for (var tS in gS)({}).hasOwnProperty.call(gS, tS) && (SS[tS] = gS[tS])
+  41385: (kk, Fk, Ik) => {
+    function Xk() {
+      return Xk = Object.assign ? Object.assign.bind() : function(kk) {
+        for (var Fk = 1; Fk < arguments.length; Fk++) {
+          var Ik = arguments[Fk];
+          for (var Xk in Ik)({}).hasOwnProperty.call(Ik, Xk) && (kk[Xk] = Ik[Xk])
         }
-        return SS
-      }, tS.apply(null, arguments)
+        return kk
+      }, Xk.apply(null, arguments)
     }
-    gS.d(HS, {
-      e: () => kS,
-      i: () => NS
+    Ik.d(Fk, {
+      c: () => Zk,
+      e: () => lk
     });
-    var bS = !1;
+    var Tk = !1;
     try {
-      bS = "undefined" !== typeof localStorage
-    } catch (KS) {}
-    var XS = "undefined" !== typeof process,
-      xS = bS && "function" === typeof localStorage.getItem && localStorage.getItem("DEBUG") || XS && {
+      Tk = "undefined" !== typeof localStorage
+    } catch (ek) {}
+    var ik = "undefined" !== typeof process,
+      yk = Tk && "function" === typeof localStorage.getItem && localStorage.getItem("DEBUG") || ik && {
         NODE_ENV: "production",
         PUBLIC_URL: "",
         WDS_SOCKET_HOST: void 0,
@@ -28,141 +28,141 @@ export const modules = {
         WDS_SOCKET_PORT: void 0,
         FAST_REFRESH: !0,
         REACT_APP_DEV_URLS: "false"
-      }.DEBUG ? console.log : function(SS) {
+      }.DEBUG ? console.log : function(kk) {
         return ""
       };
 
-    function NS(SS, HS, gS, bS, XS) {
-      void 0 === bS && (bS = {});
-      var xS = tS({}, IS(gS), bS),
-        NS = function(SS, HS, gS, bS, XS) {
-          var xS = [].concat(HS),
-            NS = aS(SS, gS, bS),
-            qS = NS.compilerHost,
-            uS = NS.updateFile,
-            IS = NS.deleteFile,
-            fS = new Map,
-            kS = 0,
-            KS = tS({}, qS, {
+    function lk(kk, Fk, Ik, Tk, ik) {
+      void 0 === Tk && (Tk = {});
+      var yk = Xk({}, Lk(Ik), Tk),
+        lk = function(kk, Fk, Ik, Tk, ik) {
+          var yk = [].concat(Fk),
+            lk = jk(kk, Ik, Tk),
+            ak = lk.compilerHost,
+            qk = lk.updateFile,
+            Lk = lk.deleteFile,
+            tk = new Map,
+            Zk = 0,
+            ek = Xk({}, ak, {
               getProjectVersion: function() {
-                return kS.toString()
+                return Zk.toString()
               },
               getCompilationSettings: function() {
-                return gS
+                return Ik
               },
               getCustomTransformers: function() {
-                return XS
+                return ik
               },
               getScriptFileNames: function() {
-                return xS.slice()
+                return yk.slice()
               },
-              getScriptSnapshot: function(HS) {
-                var gS = SS.readFile(HS);
-                if (gS && "string" === typeof gS) return bS.ScriptSnapshot.fromString(gS)
+              getScriptSnapshot: function(Fk) {
+                var Ik = kk.readFile(Fk);
+                if (Ik && "string" === typeof Ik) return Tk.ScriptSnapshot.fromString(Ik)
               },
-              getScriptVersion: function(SS) {
-                return fS.get(SS) || "0"
+              getScriptVersion: function(kk) {
+                return tk.get(kk) || "0"
               },
-              writeFile: SS.writeFile
+              writeFile: kk.writeFile
             }),
-            jS = {
-              languageServiceHost: KS,
-              updateFile: function(SS) {
-                kS++, fS.set(SS.fileName, kS.toString()), xS.includes(SS.fileName) || xS.push(SS.fileName), uS(SS)
+            wk = {
+              languageServiceHost: ek,
+              updateFile: function(kk) {
+                Zk++, tk.set(kk.fileName, Zk.toString()), yk.includes(kk.fileName) || yk.push(kk.fileName), qk(kk)
               },
-              deleteFile: function(SS) {
-                kS++, fS.set(SS.fileName, kS.toString());
-                var HS = xS.indexOf(SS.fileName); - 1 !== HS && xS.splice(HS, 1), IS(SS)
+              deleteFile: function(kk) {
+                Zk++, tk.set(kk.fileName, Zk.toString());
+                var Fk = yk.indexOf(kk.fileName); - 1 !== Fk && yk.splice(Fk, 1), Lk(kk)
               }
             };
-          return jS
-        }(SS, HS, xS, gS, XS),
-        qS = NS.languageServiceHost,
-        uS = NS.updateFile,
-        fS = NS.deleteFile,
-        kS = gS.createLanguageService(qS),
-        KS = kS.getCompilerOptionsDiagnostics();
-      if (KS.length) {
-        var jS = aS(SS, bS, gS);
-        throw new Error(gS.formatDiagnostics(KS, jS.compilerHost))
+          return wk
+        }(kk, Fk, yk, Ik, ik),
+        ak = lk.languageServiceHost,
+        qk = lk.updateFile,
+        tk = lk.deleteFile,
+        Zk = Ik.createLanguageService(ak),
+        ek = Zk.getCompilerOptionsDiagnostics();
+      if (ek.length) {
+        var wk = jk(kk, Tk, Ik);
+        throw new Error(Ik.formatDiagnostics(ek, wk.compilerHost))
       }
       return {
         name: "vfs",
-        sys: SS,
-        languageService: kS,
-        getSourceFile: function(SS) {
-          var HS;
-          return null == (HS = kS.getProgram()) ? void 0 : HS.getSourceFile(SS)
+        sys: kk,
+        languageService: Zk,
+        getSourceFile: function(kk) {
+          var Fk;
+          return null == (Fk = Zk.getProgram()) ? void 0 : Fk.getSourceFile(kk)
         },
-        createFile: function(SS, HS) {
-          uS(gS.createSourceFile(SS, HS, xS.target, !1))
+        createFile: function(kk, Fk) {
+          qk(Ik.createSourceFile(kk, Fk, yk.target, !1))
         },
-        updateFile: function(SS, HS, tS) {
-          var bS = kS.getProgram().getSourceFile(SS);
-          if (!bS) throw new Error("Did not find a source file for " + SS);
-          var XS = bS.text,
-            xS = null != tS ? tS : gS.createTextSpan(0, XS.length),
-            NS = XS.slice(0, xS.start) + HS + XS.slice(xS.start + xS.length),
-            qS = gS.updateSourceFile(bS, NS, {
-              span: xS,
-              newLength: HS.length
+        updateFile: function(kk, Fk, Xk) {
+          var Tk = Zk.getProgram().getSourceFile(kk);
+          if (!Tk) throw new Error("Did not find a source file for " + kk);
+          var ik = Tk.text,
+            yk = null != Xk ? Xk : Ik.createTextSpan(0, ik.length),
+            lk = ik.slice(0, yk.start) + Fk + ik.slice(yk.start + yk.length),
+            ak = Ik.updateSourceFile(Tk, lk, {
+              span: yk,
+              newLength: Fk.length
             });
-          uS(qS)
+          qk(ak)
         },
-        deleteFile: function(SS) {
-          var HS = kS.getProgram().getSourceFile(SS);
-          HS && fS(HS)
+        deleteFile: function(kk) {
+          var Fk = Zk.getProgram().getSourceFile(kk);
+          Fk && tk(Fk)
         }
       }
     }
 
-    function qS(SS) {
-      throw new Error("Method '" + SS + "' is not implemented.")
+    function ak(kk) {
+      throw new Error("Method '" + kk + "' is not implemented.")
     }
 
-    function uS(SS, HS) {
+    function qk(kk, Fk) {
       return function() {
-        for (var gS = arguments.length, tS = new Array(gS), bS = 0; bS < gS; bS++) tS[bS] = arguments[bS];
-        var XS = HS.apply(void 0, tS),
-          NS = "string" === typeof XS ? XS.slice(0, 80) + "..." : XS;
-        return xS.apply(void 0, ["> " + SS].concat(tS)), xS("< " + NS), XS
+        for (var Ik = arguments.length, Xk = new Array(Ik), Tk = 0; Tk < Ik; Tk++) Xk[Tk] = arguments[Tk];
+        var ik = Fk.apply(void 0, Xk),
+          lk = "string" === typeof ik ? ik.slice(0, 80) + "..." : ik;
+        return yk.apply(void 0, ["> " + kk].concat(Xk)), yk("< " + lk), ik
       }
     }
-    var IS = function(SS) {
-        return tS({}, SS.getDefaultCompilerOptions(), {
-          jsx: SS.JsxEmit.React,
+    var Lk = function(kk) {
+        return Xk({}, kk.getDefaultCompilerOptions(), {
+          jsx: kk.JsxEmit.React,
           strict: !0,
           esModuleInterop: !0,
-          module: SS.ModuleKind.ESNext,
+          module: kk.ModuleKind.ESNext,
           suppressOutputPathCheck: !0,
           skipLibCheck: !0,
           skipDefaultLibCheck: !0
-        }, SS.versionMajorMinor && Number(SS.versionMajorMinor.split(".")[0]) >= 6 ? {
+        }, kk.versionMajorMinor && Number(kk.versionMajorMinor.split(".")[0]) >= 6 ? {
           ignoreDeprecations: "6.0"
         } : {
-          moduleResolution: SS.ModuleResolutionKind.NodeJs
+          moduleResolution: kk.ModuleResolutionKind.NodeJs
         })
       },
-      fS = function(SS) {
-        return SS.replace("/", "/lib.").toLowerCase()
+      tk = function(kk) {
+        return kk.replace("/", "/lib.").toLowerCase()
       };
 
-    function kS(SS) {
+    function Zk(kk) {
       return {
         args: [],
         createDirectory: function() {
-          return qS("createDirectory")
+          return ak("createDirectory")
         },
-        directoryExists: uS("directoryExists", (function(HS) {
-          return Array.from(SS.keys()).some((function(SS) {
-            return SS.startsWith(HS)
+        directoryExists: qk("directoryExists", (function(Fk) {
+          return Array.from(kk.keys()).some((function(kk) {
+            return kk.startsWith(Fk)
           }))
         })),
         exit: function() {
-          return qS("exit")
+          return ak("exit")
         },
-        fileExists: uS("fileExists", (function(HS) {
-          return SS.has(HS) || SS.has(fS(HS))
+        fileExists: qk("fileExists", (function(Fk) {
+          return kk.has(Fk) || kk.has(tk(Fk))
         })),
         getCurrentDirectory: function() {
           return "/"
@@ -171,64 +171,64 @@ export const modules = {
           return []
         },
         getExecutingFilePath: function() {
-          return qS("getExecutingFilePath")
+          return ak("getExecutingFilePath")
         },
-        readDirectory: uS("readDirectory", (function(HS) {
-          return "/" === HS ? Array.from(SS.keys()) : []
+        readDirectory: qk("readDirectory", (function(Fk) {
+          return "/" === Fk ? Array.from(kk.keys()) : []
         })),
-        readFile: uS("readFile", (function(HS) {
-          var gS;
-          return null != (gS = SS.get(HS)) ? gS : SS.get(fS(HS))
+        readFile: qk("readFile", (function(Fk) {
+          var Ik;
+          return null != (Ik = kk.get(Fk)) ? Ik : kk.get(tk(Fk))
         })),
-        resolvePath: function(SS) {
-          return SS
+        resolvePath: function(kk) {
+          return kk
         },
         newLine: "\n",
         useCaseSensitiveFileNames: !0,
         write: function() {
-          return qS("write")
+          return ak("write")
         },
-        writeFile: function(HS, gS) {
-          SS.set(HS, gS)
+        writeFile: function(Fk, Ik) {
+          kk.set(Fk, Ik)
         },
-        deleteFile: function(HS) {
-          SS.delete(HS)
+        deleteFile: function(Fk) {
+          kk.delete(Fk)
         }
       }
     }
 
-    function aS(SS, HS, gS) {
-      var bS = new Map;
+    function jk(kk, Fk, Ik) {
+      var Tk = new Map;
       return {
-        compilerHost: tS({}, SS, {
-          getCanonicalFileName: function(SS) {
-            return SS
+        compilerHost: Xk({}, kk, {
+          getCanonicalFileName: function(kk) {
+            return kk
           },
           getDefaultLibFileName: function() {
-            return "/" + gS.getDefaultLibFileName(HS)
+            return "/" + Ik.getDefaultLibFileName(Fk)
           },
           getNewLine: function() {
-            return SS.newLine
+            return kk.newLine
           },
-          getSourceFile: function(tS, XS) {
-            var xS, NS;
-            return bS.get(tS) || (NS = gS.createSourceFile(tS, SS.readFile(tS), null != (xS = null != XS ? XS : HS.target) ? xS : IS(gS).target, !1), bS.set(NS.fileName, NS), NS)
+          getSourceFile: function(Xk, ik) {
+            var yk, lk;
+            return Tk.get(Xk) || (lk = Ik.createSourceFile(Xk, kk.readFile(Xk), null != (yk = null != ik ? ik : Fk.target) ? yk : Lk(Ik).target, !1), Tk.set(lk.fileName, lk), lk)
           },
           useCaseSensitiveFileNames: function() {
-            return SS.useCaseSensitiveFileNames
+            return kk.useCaseSensitiveFileNames
           }
         }),
-        updateFile: function(HS) {
-          var gS = bS.has(HS.fileName);
-          return SS.writeFile(HS.fileName, HS.text), bS.set(HS.fileName, HS), gS
+        updateFile: function(Fk) {
+          var Ik = Tk.has(Fk.fileName);
+          return kk.writeFile(Fk.fileName, Fk.text), Tk.set(Fk.fileName, Fk), Ik
         },
-        deleteFile: function(HS) {
-          var gS = bS.has(HS.fileName);
-          return bS.delete(HS.fileName), SS.deleteFile(HS.fileName), gS
+        deleteFile: function(Fk) {
+          var Ik = Tk.has(Fk.fileName);
+          return Tk.delete(Fk.fileName), kk.deleteFile(Fk.fileName), Ik
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

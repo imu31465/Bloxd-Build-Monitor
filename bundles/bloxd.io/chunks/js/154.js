@@ -1,50 +1,50 @@
 export const id = 154;
 export const ids = [154];
 export const modules = {
-  8300: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      AdsenseForGamesSdkAdaptor: () => XS
+  8118: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      AdsenseForGamesSdkAdaptor: () => ik
     });
-    var tS = gS(1397),
-      bS = gS(1267);
-    class XS extends tS.c {
+    var Xk = Ik(1295),
+      Tk = Ik(1173);
+    class ik extends Xk.d {
       constructor() {
         super(), this.name = "adsense"
       }
       static async setup() {
-        return window.adsbygoogle = window.adsbygoogle || [], window.adBreak = window.adConfig = function(SS) {
-          window.adsbygoogle.push(SS)
+        return window.adsbygoogle = window.adsbygoogle || [], window.adBreak = window.adConfig = function(kk) {
+          window.adsbygoogle.push(kk)
         }, window.adConfig({
           preloadAdBreaks: "on",
           sound: "on",
           onReady: () => {
             console.log("adsense for games ready")
           }
-        }), await (0, bS.c)("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", {
+        }), await (0, Tk.d)("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", {
           "data-ad-client": "ca-pub-5991928098122027",
           "data-ad-frequency-hint": "120s",
           type: "text/javascript"
-        }), console.log("Loaded adsense for games"), new XS
+        }), console.log("Loaded adsense for games"), new ik
       }
-      playVideoAd(SS, HS) {
+      playVideoAd(kk, Fk) {
         console.log("playPreroll requested");
-        let gS = !1;
-        const tS = setTimeout((() => {
-          console.log("Calling onEnd from timeout - window.adBreak did not respond after 3 seconds"), gS = !0, SS()
+        let Ik = !1;
+        const Xk = setTimeout((() => {
+          console.log("Calling onEnd from timeout - window.adBreak did not respond after 3 seconds"), Ik = !0, kk()
         }), 3e3);
         window.adBreak({
-          type: "video_start" === HS ? "start" : "next",
-          name: HS,
+          type: "video_start" === Fk ? "start" : "next",
+          name: Fk,
           beforeAd: () => {
-            console.log("beforeAd called"), clearTimeout(tS), window.adStartSoPause(null, {
+            console.log("beforeAd called"), clearTimeout(Xk), window.adStartSoPause(null, {
               preventMovement: !0
             })
           },
           afterAd: () => {
             console.log("afterAd called"), window.adCompleteSoResume()
           },
-          adBreakDone: HS => {
-            console.log("adBreakDone called", HS), clearTimeout(tS), gS || (console.log("Haven't called onEnd yet, calling it from adBreakDone."), SS())
+          adBreakDone: Fk => {
+            console.log("adBreakDone called", Fk), clearTimeout(Xk), Ik || (console.log("Haven't called onEnd yet, calling it from adBreakDone."), kk())
           }
         })
       }
@@ -52,4 +52,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

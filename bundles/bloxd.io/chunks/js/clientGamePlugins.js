@@ -1,303 +1,303 @@
 export const id = 27;
 export const ids = [27];
 export const modules = {
-  4985: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => AS,
-      g: () => YS
+  4837: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      d: () => bk,
+      e: () => uk
     });
-    var tS = gS(4992),
-      bS = gS(369);
-    const XS = 120,
-      xS = 260,
-      NS = 1.15,
-      qS = 1.2,
-      uS = 2,
-      IS = 1.08,
-      fS = .8,
-      kS = .95,
-      aS = 8,
-      KS = "[\"')\\]\u300d\u300f\uff09]*",
-      jS = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${KS}$`),
-      GS = new RegExp(`[?\uff1f]${KS}$`),
-      CS = new RegExp(`[!\uff01]${KS}$`),
-      nS = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      PS = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      QS = new RegExp(`[${PS}]`),
-      DS = new RegExp(`[${PS}]|[^${PS}]+`, "g"),
-      wS = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var Xk = Ik(4843),
+      Tk = Ik(318);
+    const ik = 120,
+      yk = 260,
+      lk = 1.15,
+      ak = 1.2,
+      qk = 2,
+      Lk = 1.08,
+      tk = .8,
+      Zk = .95,
+      jk = 8,
+      ek = "[\"')\\]\u300d\u300f\uff09]*",
+      wk = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${ek}$`),
+      Hk = new RegExp(`[?\uff1f]${ek}$`),
+      Jk = new RegExp(`[!\uff01]${ek}$`),
+      xk = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      Pk = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      Kk = new RegExp(`[${Pk}]`),
+      Qk = new RegExp(`[${Pk}]|[^${Pk}]+`, "g"),
+      sk = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function hS(SS) {
-      let HS = 2166136261;
-      for (let gS = 0; gS < SS.length; gS++) HS ^= SS.charCodeAt(gS), HS = Math.imul(HS, 16777619);
-      return (HS >>> 0) / 4294967295 * 2 - 1
+    function Vk(kk) {
+      let Fk = 2166136261;
+      for (let Ik = 0; Ik < kk.length; Ik++) Fk ^= kk.charCodeAt(Ik), Fk = Math.imul(Fk, 16777619);
+      return (Fk >>> 0) / 4294967295 * 2 - 1
     }
 
-    function ZS(SS) {
-      var HS;
-      if (QS.test(SS)) return 1;
-      const gS = SS.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        tS = gS.replace(/[^0-9]/g, "");
-      if (tS.length > 0 && !/\p{L}/u.test(gS)) return Math.min(tS.length, 4);
-      const bS = null !== (HS = gS.match(wS)) && void 0 !== HS ? HS : [];
-      if (0 === bS.length) {
-        var XS, xS;
-        const SS = null !== (XS = null === (xS = gS.match(/\p{L}/gu)) || void 0 === xS ? void 0 : xS.length) && void 0 !== XS ? XS : 0;
-        return 0 === SS ? 0 : Math.min(Math.max(1, Math.round(SS / 2.5)), aS)
+    function zk(kk) {
+      var Fk;
+      if (Kk.test(kk)) return 1;
+      const Ik = kk.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        Xk = Ik.replace(/[^0-9]/g, "");
+      if (Xk.length > 0 && !/\p{L}/u.test(Ik)) return Math.min(Xk.length, 4);
+      const Tk = null !== (Fk = Ik.match(sk)) && void 0 !== Fk ? Fk : [];
+      if (0 === Tk.length) {
+        var ik, yk;
+        const kk = null !== (ik = null === (yk = Ik.match(/\p{L}/gu)) || void 0 === yk ? void 0 : yk.length) && void 0 !== ik ? ik : 0;
+        return 0 === kk ? 0 : Math.min(Math.max(1, Math.round(kk / 2.5)), jk)
       }
-      const NS = gS.replace(/[^\p{L}]/gu, ""),
-        qS = bS.length > 1 && "e" === bS.at(-1) && NS.endsWith("e") && !NS.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(SS.replace(/[^\p{L}]/gu, ""));
-      return Math.min(bS.length - (qS ? 1 : 0), aS)
+      const lk = Ik.replace(/[^\p{L}]/gu, ""),
+        ak = Tk.length > 1 && "e" === Tk.at(-1) && lk.endsWith("e") && !lk.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(kk.replace(/[^\p{L}]/gu, ""));
+      return Math.min(Tk.length - (ak ? 1 : 0), jk)
     }
 
-    function JS(SS) {
-      return SS.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function Sk(kk) {
+      return kk.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function OS(SS) {
-      const HS = SS.replace(/[^\p{L}]/gu, "");
-      return HS.length >= 2 && HS === HS.toUpperCase() && HS !== HS.toLowerCase()
+    function vk(kk) {
+      const Fk = kk.replace(/[^\p{L}]/gu, "");
+      return Fk.length >= 2 && Fk === Fk.toUpperCase() && Fk !== Fk.toLowerCase()
     }
 
-    function dS(SS, HS) {
-      var gS;
-      const aS = HS && (0, tS.j)(HS),
-        KS = null !== (gS = null === aS || void 0 === aS ? void 0 : aS.syllableMs) && void 0 !== gS ? gS : tS.d,
-        PS = function(SS) {
-          const HS = [];
-          for (const tS of (0, bS.ec)(SS))
-            if ("string" === typeof tS)
-              for (const SS of tS.split(/(\s+)/)) {
-                if ("" === SS) continue;
-                if (/^\s+$/.test(SS)) {
-                  HS.push({
+    function Ek(kk, Fk) {
+      var Ik;
+      const jk = Fk && (0, Xk.k)(Fk),
+        ek = null !== (Ik = null === jk || void 0 === jk ? void 0 : jk.syllableMs) && void 0 !== Ik ? Ik : Xk.b,
+        Pk = function(kk) {
+          const Fk = [];
+          for (const Xk of (0, Tk.oc)(kk))
+            if ("string" === typeof Xk)
+              for (const kk of Xk.split(/(\s+)/)) {
+                if ("" === kk) continue;
+                if (/^\s+$/.test(kk)) {
+                  Fk.push({
                     kind: "space",
-                    text: SS
+                    text: kk
                   });
                   continue
                 }
-                if (!QS.test(SS)) {
-                  HS.push({
+                if (!Kk.test(kk)) {
+                  Fk.push({
                     kind: "word",
-                    text: SS,
+                    text: kk,
                     delayMs: 0
                   });
                   continue
                 }
-                let tS = !0;
-                for (const bS of null !== (gS = SS.match(DS)) && void 0 !== gS ? gS : []) {
-                  var gS;
-                  const SS = HS.at(-1);
-                  tS || "word" !== (null === SS || void 0 === SS ? void 0 : SS.kind) || QS.test(bS) || /[\p{L}\p{N}]/u.test(bS) ? (tS || HS.push({
+                let Xk = !0;
+                for (const Tk of null !== (Ik = kk.match(Qk)) && void 0 !== Ik ? Ik : []) {
+                  var Ik;
+                  const kk = Fk.at(-1);
+                  Xk || "word" !== (null === kk || void 0 === kk ? void 0 : kk.kind) || Kk.test(Tk) || /[\p{L}\p{N}]/u.test(Tk) ? (Xk || Fk.push({
                     kind: "space",
                     text: "\u200b"
-                  }), HS.push({
+                  }), Fk.push({
                     kind: "word",
-                    text: bS,
+                    text: Tk,
                     delayMs: 0
-                  }), tS = !1) : SS.text += bS
+                  }), Xk = !1) : kk.text += Tk
                 }
-              } else HS.push({
+              } else Fk.push({
                 kind: "icon",
-                text: tS.icon,
+                text: Xk.icon,
                 delayMs: 0
               });
-          return HS
-        }(SS),
-        wS = [];
-      let dS = [];
-      for (const tS of PS) "space" !== tS.kind && (dS.push(tS), jS.test(tS.text) && (wS.push(dS), dS = []));
-      wS.push(dS);
-      const cS = [];
-      let vS = 0;
-      for (const tS of wS) {
-        var ES, LS;
-        const SS = null !== (ES = null === (LS = tS.at(-1)) || void 0 === LS ? void 0 : LS.text) && void 0 !== ES ? ES : "",
-          HS = GS.test(SS),
-          gS = CS.test(SS),
-          bS = tS.map((SS => "word" === SS.kind ? ZS(SS.text) : 1)),
-          PS = bS.findLastIndex((SS => SS > 0));
-        for (const [GS, CS] of tS.entries()) {
-          const SS = "word" === CS.kind,
-            tS = bS[GS];
-          CS.delayMs = vS;
-          for (let bS = 0; aS && bS < tS; bS++) {
+          return Fk
+        }(kk),
+        sk = [];
+      let Ek = [];
+      for (const Xk of Pk) "space" !== Xk.kind && (Ek.push(Xk), wk.test(Xk.text) && (sk.push(Ek), Ek = []));
+      sk.push(Ek);
+      const Ok = [];
+      let nk = 0;
+      for (const Xk of sk) {
+        var Gk, pk;
+        const kk = null !== (Gk = null === (pk = Xk.at(-1)) || void 0 === pk ? void 0 : pk.text) && void 0 !== Gk ? Gk : "",
+          Fk = Hk.test(kk),
+          Ik = Jk.test(kk),
+          Tk = Xk.map((kk => "word" === kk.kind ? zk(kk.text) : 1)),
+          Pk = Tk.findLastIndex((kk => kk > 0));
+        for (const [Hk, Jk] of Xk.entries()) {
+          const kk = "word" === Jk.kind,
+            Xk = Tk[Hk];
+          Jk.delayMs = nk;
+          for (let Tk = 0; jk && Tk < Xk; Tk++) {
             const {
-              intonation: XS
-            } = aS;
-            let xS = PS > 0 ? -XS.declineSemitones * (GS / PS) : 0;
-            xS += hS(`${JS(CS.text)}|${bS}`) * XS.variationSemitones;
-            const jS = Math.min(1, XS.variationSemitones);
-            let nS = aS.glideSemitones,
-              QS = 1;
-            gS && (xS += XS.exclaimLiftSemitones, QS *= NS), HS && GS === PS && (xS += XS.questionRiseSemitones * (tS > 1 ? .5 + .5 * bS / (tS - 1) : 1), bS === tS - 1 && (nS = Math.abs(nS) + XS.questionRiseSemitones / 2)), SS && OS(CS.text) && (xS += uS * jS, QS *= qS), tS > 1 && 0 === bS && (xS += fS * jS, QS *= IS), cS.push({
-              atMs: vS + bS * KS,
-              semitones: xS,
-              glideSemitones: nS,
-              durationMs: bS < tS - 1 ? Math.min(aS.durationMs, KS * kS) : aS.durationMs,
-              level: QS
+              intonation: ik
+            } = jk;
+            let yk = Pk > 0 ? -ik.declineSemitones * (Hk / Pk) : 0;
+            yk += Vk(`${Sk(Jk.text)}|${Tk}`) * ik.variationSemitones;
+            const wk = Math.min(1, ik.variationSemitones);
+            let xk = jk.glideSemitones,
+              Kk = 1;
+            Ik && (yk += ik.exclaimLiftSemitones, Kk *= lk), Fk && Hk === Pk && (yk += ik.questionRiseSemitones * (Xk > 1 ? .5 + .5 * Tk / (Xk - 1) : 1), Tk === Xk - 1 && (xk = Math.abs(xk) + ik.questionRiseSemitones / 2)), kk && vk(Jk.text) && (yk += qk * wk, Kk *= ak), Xk > 1 && 0 === Tk && (yk += tk * wk, Kk *= Lk), Ok.push({
+              atMs: nk + Tk * ek,
+              semitones: yk,
+              glideSemitones: xk,
+              durationMs: Tk < Xk - 1 ? Math.min(jk.durationMs, ek * Zk) : jk.durationMs,
+              level: Kk
             })
           }
-          vS += tS * KS + (jS.test(CS.text) ? xS : nS.test(CS.text) ? XS : 0)
+          nk += Xk * ek + (wk.test(Jk.text) ? yk : xk.test(Jk.text) ? ik : 0)
         }
       }
       return {
-        pieces: PS.map((SS => "space" === SS.kind ? SS : "icon" === SS.kind ? {
+        pieces: Pk.map((kk => "space" === kk.kind ? kk : "icon" === kk.kind ? {
           kind: "icon",
-          icon: SS.text,
-          delayMs: SS.delayMs
+          icon: kk.text,
+          delayMs: kk.delayMs
         } : {
           kind: "word",
-          text: SS.text,
-          delayMs: SS.delayMs
+          text: kk.text,
+          delayMs: kk.delayMs
         })),
-        blips: cS
+        blips: Ok
       }
     }
-    var cS = gS(1281),
-      vS = gS(1334),
-      ES = gS(2069);
+    var Ok = Ik(1179),
+      nk = Ik(1241),
+      Gk = Ik(1881);
 
-    function LS(SS) {
-      if ("string" === typeof SS) return SS;
-      const HS = vS.f.get().getCurrentLanguageCode();
-      return (0, cS.x)(HS, SS.translationKey, (0, cS.t)(SS.params, ES.c.shown))
+    function pk(kk) {
+      if ("string" === typeof kk) return kk;
+      const Fk = nk.d.get().getCurrentLanguageCode();
+      return (0, Ok.q)(Fk, kk.translationKey, (0, Ok.m)(kk.params, Gk.d.shown))
     }
 
-    function YS(SS) {
-      const HS = void 0 === SS.voice ? null : (0, tS.k)(SS.voice),
-        gS = HS && (0, tS.j)(HS);
+    function uk(kk) {
+      const Fk = void 0 === kk.voice ? null : (0, Xk.n)(kk.voice),
+        Ik = Fk && (0, Xk.k)(Fk);
       return {
-        plan: dS(LS(SS.line), gS),
-        synth: gS
+        plan: Ek(pk(kk.line), Ik),
+        synth: Ik
       }
     }
 
-    function AS(SS) {
-      const HS = [];
-      let gS = [];
-      for (const [bS, XS] of SS.entries()) {
-        var tS;
-        "space" === XS.kind && (" " !== XS.text || "icon" !== (null === (tS = SS[bS + 1]) || void 0 === tS ? void 0 : tS.kind)) ? (gS.length > 0 && HS.push(gS), HS.push([XS]), gS = []) : gS.push(XS)
+    function bk(kk) {
+      const Fk = [];
+      let Ik = [];
+      for (const [Tk, ik] of kk.entries()) {
+        var Xk;
+        "space" === ik.kind && (" " !== ik.text || "icon" !== (null === (Xk = kk[Tk + 1]) || void 0 === Xk ? void 0 : Xk.kind)) ? (Ik.length > 0 && Fk.push(Ik), Fk.push([ik]), Ik = []) : Ik.push(ik)
       }
-      return gS.length > 0 && HS.push(gS), HS
+      return Ik.length > 0 && Fk.push(Ik), Fk
     }
   },
-  5e3: (SS, HS, gS) => {
-    gS.d(HS, {
-      c: () => IS,
-      d: () => fS
+  4850: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Lk,
+      i: () => tk
     });
-    var tS = gS(5005),
-      bS = gS(24);
-    const XS = .25,
-      xS = .85,
-      NS = .02,
-      qS = .01;
+    var Xk = Ik(4857),
+      Tk = Ik(25);
+    const ik = .25,
+      yk = .85,
+      lk = .02,
+      ak = .01;
 
-    function uS(SS, HS, gS, tS, bS, XS, NS) {
+    function qk(kk, Fk, Ik, Xk, Tk, ik, lk) {
       const {
-        waveform: qS,
-        pitchHz: uS,
-        attackMs: IS,
-        releaseMs: fS,
-        lowpassHz: kS
-      } = gS, aS = bS + tS.durationMs / 1e3, KS = uS * 2 ** (tS.semitones / 12), jS = SS.createOscillator();
-      jS.type = qS, jS.frequency.setValueAtTime(KS, bS), jS.frequency.exponentialRampToValueAtTime(KS * 2 ** (tS.glideSemitones / 12), aS);
-      const GS = bS + Math.min(IS, tS.durationMs) / 1e3,
-        CS = SS.createGain();
-      CS.gain.setValueAtTime(0, bS), CS.gain.linearRampToValueAtTime(XS, GS), CS.gain.linearRampToValueAtTime(XS * xS, Math.max(GS, aS - fS / 1e3)), CS.gain.linearRampToValueAtTime(0, aS);
-      const nS = [jS];
-      if (null !== kS) {
-        const HS = SS.createBiquadFilter();
-        HS.type = "lowpass", HS.frequency.value = kS, nS.push(HS)
+        waveform: ak,
+        pitchHz: qk,
+        attackMs: Lk,
+        releaseMs: tk,
+        lowpassHz: Zk
+      } = Ik, jk = Tk + Xk.durationMs / 1e3, ek = qk * 2 ** (Xk.semitones / 12), wk = kk.createOscillator();
+      wk.type = ak, wk.frequency.setValueAtTime(ek, Tk), wk.frequency.exponentialRampToValueAtTime(ek * 2 ** (Xk.glideSemitones / 12), jk);
+      const Hk = Tk + Math.min(Lk, Xk.durationMs) / 1e3,
+        Jk = kk.createGain();
+      Jk.gain.setValueAtTime(0, Tk), Jk.gain.linearRampToValueAtTime(ik, Hk), Jk.gain.linearRampToValueAtTime(ik * yk, Math.max(Hk, jk - tk / 1e3)), Jk.gain.linearRampToValueAtTime(0, jk);
+      const xk = [wk];
+      if (null !== Zk) {
+        const Fk = kk.createBiquadFilter();
+        Fk.type = "lowpass", Fk.frequency.value = Zk, xk.push(Fk)
       }
-      nS.push(CS, HS);
-      for (let xS = 1; xS < nS.length; xS++) nS[xS - 1].connect(nS[xS]);
-      return jS.onended = () => {
-        for (const SS of nS.slice(0, -1)) SS.disconnect();
-        NS()
-      }, jS.start(bS), jS.stop(aS), jS
+      xk.push(Jk, Fk);
+      for (let yk = 1; yk < xk.length; yk++) xk[yk - 1].connect(xk[yk]);
+      return wk.onended = () => {
+        for (const kk of xk.slice(0, -1)) kk.disconnect();
+        lk()
+      }, wk.start(Tk), wk.stop(jk), wk
     }
 
-    function IS(SS, HS, gS, tS, bS, xS) {
-      if (0 === tS.length) return xS(), () => {};
-      const IS = XS * gS.volume * bS,
-        fS = SS.createGain();
-      fS.connect(HS);
-      const kS = SS.currentTime + NS,
-        aS = new Set;
-      for (const XS of tS) {
-        const HS = uS(SS, fS, gS, XS, kS + XS.atMs / 1e3, IS * XS.level, (() => {
-          aS.delete(HS), 0 === aS.size && (fS.disconnect(), xS())
+    function Lk(kk, Fk, Ik, Xk, Tk, yk) {
+      if (0 === Xk.length) return yk(), () => {};
+      const Lk = ik * Ik.volume * Tk,
+        tk = kk.createGain();
+      tk.connect(Fk);
+      const Zk = kk.currentTime + lk,
+        jk = new Set;
+      for (const ik of Xk) {
+        const Fk = qk(kk, tk, Ik, ik, Zk + ik.atMs / 1e3, Lk * ik.level, (() => {
+          jk.delete(Fk), 0 === jk.size && (tk.disconnect(), yk())
         }));
-        aS.add(HS)
+        jk.add(Fk)
       }
       return () => {
-        const HS = SS.currentTime;
-        fS.gain.setTargetAtTime(0, HS, qS);
-        for (const SS of aS) try {
-          SS.stop(HS + 5 * qS)
+        const Fk = kk.currentTime;
+        tk.gain.setTargetAtTime(0, Fk, ak);
+        for (const kk of jk) try {
+          kk.stop(Fk + 5 * ak)
         } catch {}
       }
     }
 
-    function fS(SS, HS) {
-      var gS;
-      const XS = tS.Howler.ctx,
-        xS = tS.Howler.masterGain;
-      if (!XS || !xS || !bS.b.get("soundOnFromAd")) return () => {};
-      const NS = tS.Howler;
-      return null === (gS = NS._autoResume) || void 0 === gS || gS.call(NS), IS(XS, xS, SS, HS, bS.b.get("soundVolume"), (() => {
-        var SS;
-        null === (SS = NS._autoSuspend) || void 0 === SS || SS.call(NS)
+    function tk(kk, Fk) {
+      var Ik;
+      const ik = Xk.Howler.ctx,
+        yk = Xk.Howler.masterGain;
+      if (!ik || !yk || !Tk.d.get("soundOnFromAd")) return () => {};
+      const lk = Xk.Howler;
+      return null === (Ik = lk._autoResume) || void 0 === Ik || Ik.call(lk), Lk(ik, yk, kk, Fk, Tk.d.get("soundVolume"), (() => {
+        var kk;
+        null === (kk = lk._autoSuspend) || void 0 === kk || kk.call(lk)
       }))
     }
   },
-  39162: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      closeClientGame: () => yS,
-      createDefaultClientPlugins: () => AS
+  39149: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      closeClientGame: () => Rk,
+      createDefaultClientPlugins: () => bk
     });
-    var tS = gS(387);
+    var Xk = Ik(337);
 
-    function bS() {
-      let SS;
+    function Tk() {
+      let kk;
       return {
-        onCreate(HS) {
-          SS = HS
+        onCreate(Fk) {
+          kk = Fk
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(HS, gS, bS, XS, xS, NS) {
-          var qS, uS;
-          if ("Iron Chest" !== SS.getMetaInfo(xS).rootName) return;
-          if (!SS.hasEffect(HS, "Thief")) return;
-          const IS = SS.getBlockData(gS, bS, XS);
-          return SS.getPlayerDbId(HS) !== (null === IS || void 0 === IS || null === (qS = IS.persisted) || void 0 === qS || null === (uS = qS.shared) || void 0 === uS ? void 0 : uS.ownerDbId) ? (SS.sendMessage(HS, [{
+        onPlayerAttemptAltAction(Fk, Ik, Tk, ik, yk, lk) {
+          var ak, qk;
+          if ("Iron Chest" !== kk.getMetaInfo(yk).rootName) return;
+          if (!kk.hasEffect(Fk, "Thief")) return;
+          const Lk = kk.getBlockData(Ik, Tk, ik);
+          return kk.getPlayerDbId(Fk) !== (null === Lk || void 0 === Lk || null === (ak = Lk.persisted) || void 0 === ak || null === (qk = ak.shared) || void 0 === qk ? void 0 : qk.ownerDbId) ? (kk.sendMessage(Fk, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: tS.B.redUiText
+              color: Xk.J.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var XS = gS(4356),
-      xS = gS(1327);
-    const NS = 8.4,
-      qS = 1e-4,
-      uS = .15,
-      IS = .04,
-      fS = [.12, .04, .12],
-      kS = 26,
-      aS = {
+    var ik = Ik(4210),
+      yk = Ik(1231);
+    const lk = 8.4,
+      ak = 1e-4,
+      qk = .15,
+      Lk = .04,
+      tk = [.12, .04, .12],
+      Zk = 26,
+      jk = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        hf: 1,
-        minLifeTime: qS,
-        maxLifeTime: qS,
+        St: 1,
+        minLifeTime: ak,
+        maxLifeTime: ak,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -310,19 +310,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: XS.g.Standard
+        blendMode: ik.d.Standard
       },
-      KS = {
+      ek = {
         texture: "bubble",
         mipmaps: !1,
-        hf: 96,
+        St: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: kS,
+        emitRate: Zk,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -336,159 +336,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: XS.g.Standard
+        blendMode: ik.d.Standard
       },
-      jS = [0, 0, 0],
-      GS = [0, 0, 0];
+      wk = [0, 0, 0],
+      Hk = [0, 0, 0];
 
-    function CS(SS) {
-      const HS = new Map;
-      let gS = null;
+    function Jk(kk) {
+      const Fk = new Map;
+      let Ik = null;
 
-      function tS(SS) {
-        var HS, gS;
-        null === (HS = SS.bubbles) || void 0 === HS || HS.stop(), null === (gS = SS.fish) || void 0 === gS || gS.stop()
+      function Xk(kk) {
+        var Fk, Ik;
+        null === (Fk = kk.bubbles) || void 0 === Fk || Fk.stop(), null === (Ik = kk.fish) || void 0 === Ik || Ik.stop()
       }
 
-      function bS(gS) {
-        if (!gS.readDrawnPosition(SS, GS)) {
-          for (const SS of HS.values()) {
-            var tS;
-            null === (tS = SS.bubbles) || void 0 === tS || tS.setEmitRate(0)
+      function Tk(Ik) {
+        if (!Ik.readDrawnPosition(kk, Hk)) {
+          for (const kk of Fk.values()) {
+            var Xk;
+            null === (Xk = kk.bubbles) || void 0 === Xk || Xk.setEmitRate(0)
           }
           return
         }
-        const bS = performance.now();
-        for (const [SS, xS] of HS) {
-          var XS;
-          if (null === (XS = xS.bubbles) || void 0 === XS || XS.setEmitRate(0), !gS.readDrawnPosition(SS, jS)) continue;
-          if (!((jS[0] - GS[0]) ** 2 + (jS[1] - GS[1]) ** 2 + (jS[2] - GS[2]) ** 2 < 900)) continue;
-          const HS = Math.max(0, xS.biteAt - bS),
-            tS = xS.approachDurationMs > 0 ? Math.min(1, 1 - HS / xS.approachDurationMs) : 1,
-            qS = (xS.approachDurationMs - HS) / 1e3,
-            CS = xS.phase + .25 * Math.sin(1.7 * qS + xS.phase),
-            nS = Math.min(xS.approachDurationMs / 3e3 * 2.8, NS) * (1 - tS) * (1 + .15 * Math.sin(2.1 * qS + xS.phase)),
-            PS = Math.min(1, 4 * (1 - tS)),
-            QS = (.45 * Math.sin(4.1 * qS + xS.phase) + .18 * Math.sin(9.7 * qS + 2 * xS.phase)) * PS,
-            DS = jS[0] + Math.cos(CS) * nS - Math.sin(CS) * QS,
-            wS = Math.ceil(xS.surfaceY),
-            hS = jS[2] + Math.sin(CS) * nS + Math.cos(CS) * QS,
+        const Tk = performance.now();
+        for (const [kk, yk] of Fk) {
+          var ik;
+          if (null === (ik = yk.bubbles) || void 0 === ik || ik.setEmitRate(0), !Ik.readDrawnPosition(kk, wk)) continue;
+          if (!((wk[0] - Hk[0]) ** 2 + (wk[1] - Hk[1]) ** 2 + (wk[2] - Hk[2]) ** 2 < 900)) continue;
+          const Fk = Math.max(0, yk.biteAt - Tk),
+            Xk = yk.approachDurationMs > 0 ? Math.min(1, 1 - Fk / yk.approachDurationMs) : 1,
+            ak = (yk.approachDurationMs - Fk) / 1e3,
+            Jk = yk.phase + .25 * Math.sin(1.7 * ak + yk.phase),
+            xk = Math.min(yk.approachDurationMs / 3e3 * 2.8, lk) * (1 - Xk) * (1 + .15 * Math.sin(2.1 * ak + yk.phase)),
+            Pk = Math.min(1, 4 * (1 - Xk)),
+            Kk = (.45 * Math.sin(4.1 * ak + yk.phase) + .18 * Math.sin(9.7 * ak + 2 * yk.phase)) * Pk,
+            Qk = wk[0] + Math.cos(Jk) * xk - Math.sin(Jk) * Kk,
+            sk = Math.ceil(yk.surfaceY),
+            Vk = wk[2] + Math.sin(Jk) * xk + Math.cos(Jk) * Kk,
             {
-              fishAt: ZS,
-              bubblesAt: JS
-            } = xS;
-          ZS[0] = JS[0] = DS, ZS[1] = wS + uS, JS[1] = wS + IS, ZS[2] = JS[2] = hS, xS.fish ??= gS.createParticles(aS, {
-            pos: ZS
-          }), xS.fish.moveTo(ZS), xS.fish.emit(1), xS.bubbles ??= gS.createParticles(KS, {
-            pos: JS,
-            half: fS
-          }), xS.bubbles.moveTo(JS), xS.bubbles.setEmitRate(kS + 32 * (.5 + .5 * Math.sin(9 * qS + xS.phase)) ** 4 + 13 * tS)
+              fishAt: zk,
+              bubblesAt: Sk
+            } = yk;
+          zk[0] = Sk[0] = Qk, zk[1] = sk + qk, Sk[1] = sk + Lk, zk[2] = Sk[2] = Vk, yk.fish ??= Ik.createParticles(jk, {
+            pos: zk
+          }), yk.fish.moveTo(zk), yk.fish.emit(1), yk.bubbles ??= Ik.createParticles(ek, {
+            pos: Sk,
+            half: tk
+          }), yk.bubbles.moveTo(Sk), yk.bubbles.setEmitRate(Zk + 32 * (.5 + .5 * Math.sin(9 * ak + yk.phase)) ** 4 + 13 * Xk)
         }
       }
       return {
-        onCreate(SS) {
-          gS = SS
+        onCreate(kk) {
+          Ik = kk
         },
         onAfterRender() {
-          gS && bS(gS)
+          Ik && Tk(Ik)
         },
         onClose() {
-          for (const SS of HS.values()) tS(SS);
-          HS.clear(), gS = null
+          for (const kk of Fk.values()) Xk(kk);
+          Fk.clear(), Ik = null
         },
-        onReceivedMessageFromServer(SS, gS) {
-          if (SS !== xS.z) return;
+        onReceivedMessageFromServer(kk, Ik) {
+          if (kk !== yk.D) return;
           const {
-            hookId: bS,
-            waiting: XS
-          } = gS;
-          if (XS) HS.has(bS) || HS.set(bS, {
+            hookId: Tk,
+            waiting: ik
+          } = Ik;
+          if (ik) Fk.has(Tk) || Fk.set(Tk, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + XS.remainingMs,
-            approachDurationMs: XS.durationMs,
-            surfaceY: XS.surfaceY,
+            biteAt: performance.now() + ik.remainingMs,
+            approachDurationMs: ik.durationMs,
+            surfaceY: ik.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const SS = HS.get(bS);
-            SS && tS(SS), HS.delete(bS)
+            const kk = Fk.get(Tk);
+            kk && Xk(kk), Fk.delete(Tk)
           }
         }
       }
     }
-    var nS = gS(5e3),
-      PS = gS(4985);
+    var xk = Ik(4850),
+      Pk = Ik(4837);
 
-    function QS(SS) {
-      let HS, gS = null,
-        tS = null;
-      const bS = () => {
-        var SS;
-        null === (SS = tS) || void 0 === SS || SS(), tS = null
+    function Kk(kk) {
+      let Fk, Ik = null,
+        Xk = null;
+      const Tk = () => {
+        var kk;
+        null === (kk = Xk) || void 0 === kk || kk(), Xk = null
       };
       return {
-        onCreate(tS) {
-          HS = tS, gS = HS.getClientOption(SS, "dialogue")
+        onCreate(Xk) {
+          Fk = Xk, Ik = Fk.getClientOption(kk, "dialogue")
         },
         onAfterRender() {
-          if (!HS) return;
-          const XS = HS.getClientOption(SS, "dialogue");
-          if (XS === gS) return;
-          if (gS = XS, bS(), !XS || !1 === XS.animateIn) return;
+          if (!Fk) return;
+          const ik = Fk.getClientOption(kk, "dialogue");
+          if (ik === Ik) return;
+          if (Ik = ik, Tk(), !ik || !1 === ik.animateIn) return;
           const {
-            plan: xS,
-            synth: NS
-          } = (0, PS.g)(XS);
-          NS && (tS = (0, nS.d)(NS, xS.blips))
+            plan: yk,
+            synth: lk
+          } = (0, Pk.e)(ik);
+          lk && (Xk = (0, xk.i)(lk, yk.blips))
         },
-        onClose: bS
+        onClose: Tk
       }
     }
-    var DS = gS(39164);
-    const wS = [
+    var Qk = Ik(39154);
+    const sk = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      hS = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      ZS = [0, 1, 2, 0, 2, 3];
+      Vk = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      zk = [0, 1, 2, 0, 2, 3];
 
-    function JS(SS, HS, gS) {
-      var tS;
-      let [bS, XS, xS] = HS;
-      if (SS.hasPackModel("Furnace")) return null;
-      const NS = ((null !== (tS = SS.getMetaInfo(gS).rot) && void 0 !== tS ? tS : 1) - 1) * Math.PI / 2,
-        qS = Math.PI + NS,
-        uS = Math.cos(qS),
-        IS = Math.sin(qS),
-        fS = [];
-      for (const [KS, jS] of wS) fS.push(KS * uS, jS, -KS * IS);
-      const kS = {
-          positions: fS,
-          indices: ZS,
-          uvs: hS
+    function Sk(kk, Fk, Ik) {
+      var Xk;
+      let [Tk, ik, yk] = Fk;
+      if (kk.hasPackModel("Furnace")) return null;
+      const lk = ((null !== (Xk = kk.getMetaInfo(Ik).rot) && void 0 !== Xk ? Xk : 1) - 1) * Math.PI / 2,
+        ak = Math.PI + lk,
+        qk = Math.cos(ak),
+        Lk = Math.sin(ak),
+        tk = [];
+      for (const [ek, wk] of sk) tk.push(ek * qk, wk, -ek * Lk);
+      const Zk = {
+          positions: tk,
+          indices: zk,
+          uvs: Vk
         },
-        aS = [bS + .5 + .51 * Math.sin(NS), XS + .375, xS + .5 + .51 * Math.cos(NS)];
-      return SS.createGameMesh(kS, {
+        jk = [Tk + .5 + .51 * Math.sin(lk), ik + .375, yk + .5 + .51 * Math.cos(lk)];
+      return kk.createGameMesh(Zk, {
         kind: "furnaceFire"
-      }, aS)
+      }, jk)
     }
 
-    function OS(SS) {
-      return Math.floor(SS / 200) % 3
+    function vk(kk) {
+      return Math.floor(kk / 200) % 3
     }
 
-    function dS(SS, HS, gS) {
-      SS.setGameMesh(HS, {
-        uvOffset: [0, gS / 3]
+    function Ek(kk, Fk, Ik) {
+      kk.setGameMesh(Fk, {
+        uvOffset: [0, Ik / 3]
       })
     }
-    const cS = [.12, .025, .12],
-      vS = [{
+    const Ok = [.12, .025, .12],
+      nk = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -501,7 +501,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: XS.g.Standard,
+          blendMode: ik.d.Standard,
           soft: !0
         },
         perSecond: 7
@@ -518,196 +518,196 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: XS.g.Add,
+          blendMode: ik.d.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class ES {
+    class Gk {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(SS, HS) {
-        const gS = SS.getBlockId(HS[0], HS[1], HS[2]);
-        if ("Furnace" !== SS.getMetaInfo(gS).rootName) return;
-        const tS = performance.now();
-        let bS = this.smokes.find((SS => SS.pos[0] === HS[0] && SS.pos[1] === HS[1] && SS.pos[2] === HS[2] && SS.XI === gS));
-        if (bS || (bS = {
-            pos: [HS[0], HS[1], HS[2]],
-            XI: gS,
-            endMs: tS,
+      start(kk, Fk) {
+        const Ik = kk.getBlockId(Fk[0], Fk[1], Fk[2]);
+        if ("Furnace" !== kk.getMetaInfo(Ik).rootName) return;
+        const Xk = performance.now();
+        let Tk = this.smokes.find((kk => kk.pos[0] === Fk[0] && kk.pos[1] === Fk[1] && kk.pos[2] === Fk[2] && kk.iL === Ik));
+        if (Tk || (Tk = {
+            pos: [Fk[0], Fk[1], Fk[2]],
+            iL: Ik,
+            endMs: Xk,
             lastBurstMs: -1 / 0,
-            pending: new Array(vS.length).fill(0),
-            fire: JS(SS, HS, gS)
-          }, this.smokes.push(bS), null !== bS.fire && (dS(SS, bS.fire, OS(tS)), this.shownFireFrame = -1)), bS.endMs = tS + 6e3, this.smokes.length > 4) {
-          const HS = this.smokes.reduce(((SS, HS) => HS.endMs < SS.endMs ? HS : SS));
-          LS(SS, HS), this.smokes.splice(this.smokes.indexOf(HS), 1)
+            pending: new Array(nk.length).fill(0),
+            fire: Sk(kk, Fk, Ik)
+          }, this.smokes.push(Tk), null !== Tk.fire && (Ek(kk, Tk.fire, vk(Xk)), this.shownFireFrame = -1)), Tk.endMs = Xk + 6e3, this.smokes.length > 4) {
+          const Fk = this.smokes.reduce(((kk, Fk) => Fk.endMs < kk.endMs ? Fk : kk));
+          pk(kk, Fk), this.smokes.splice(this.smokes.indexOf(Fk), 1)
         }
-        tS - bS.lastBurstMs >= 300 && (bS.lastBurstMs = tS, vS.forEach(((SS, HS) => {
-          bS.pending[HS] += SS.style.count
+        Xk - Tk.lastBurstMs >= 300 && (Tk.lastBurstMs = Xk, nk.forEach(((kk, Fk) => {
+          Tk.pending[Fk] += kk.style.count
         })))
       }
-      onAfterRender(SS, HS) {
+      onAfterRender(kk, Fk) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const gS = performance.now();
-        this.smokes = this.smokes.filter((HS => {
-          const [tS, bS, XS] = HS.pos, xS = gS < HS.endMs && SS.getBlockId(tS, bS, XS) === HS.XI;
-          return xS || LS(SS, HS), xS
+        const Ik = performance.now();
+        this.smokes = this.smokes.filter((Fk => {
+          const [Xk, Tk, ik] = Fk.pos, yk = Ik < Fk.endMs && kk.getBlockId(Xk, Tk, ik) === Fk.iL;
+          return yk || pk(kk, Fk), yk
         }));
-        const tS = OS(gS);
-        if (tS !== this.shownFireFrame) {
-          this.shownFireFrame = tS;
-          for (const HS of this.smokes) null !== HS.fire && dS(SS, HS.fire, tS)
+        const Xk = vk(Ik);
+        if (Xk !== this.shownFireFrame) {
+          this.shownFireFrame = Xk;
+          for (const Fk of this.smokes) null !== Fk.fire && Ek(kk, Fk.fire, Xk)
         }
-        if (!SS.particlesEnabled()) {
-          for (const SS of this.smokes) SS.pending.fill(0);
+        if (!kk.particlesEnabled()) {
+          for (const kk of this.smokes) kk.pending.fill(0);
           return
         }
-        const bS = Math.min(HS, 250) / 1e3;
-        for (const XS of this.smokes) {
-          const [HS, tS, xS] = XS.pos;
-          if (0 !== SS.getBlockId(HS, tS + 1, xS)) {
-            XS.pending.fill(0);
+        const Tk = Math.min(Fk, 250) / 1e3;
+        for (const ik of this.smokes) {
+          const [Fk, Xk, yk] = ik.pos;
+          if (0 !== kk.getBlockId(Fk, Xk + 1, yk)) {
+            ik.pending.fill(0);
             continue
           }
-          const NS = (XS.endMs - gS) / 6e3,
-            qS = this.centre;
-          qS[0] = HS + .5, qS[1] = tS + 1.275, qS[2] = xS + .5, vS.forEach(((HS, gS) => {
-            XS.pending[gS] += HS.perSecond * NS * bS;
-            const tS = Math.floor(XS.pending[gS]);
-            tS > 0 && this.emit(SS, gS, qS, tS) && (XS.pending[gS] -= tS)
+          const lk = (ik.endMs - Ik) / 6e3,
+            ak = this.centre;
+          ak[0] = Fk + .5, ak[1] = Xk + 1.275, ak[2] = yk + .5, nk.forEach(((Fk, Ik) => {
+            ik.pending[Ik] += Fk.perSecond * lk * Tk;
+            const Xk = Math.floor(ik.pending[Ik]);
+            Xk > 0 && this.emit(kk, Ik, ak, Xk) && (ik.pending[Ik] -= Xk)
           }))
         }
       }
-      dispose(SS) {
-        for (const gS of this.smokes) LS(SS, gS);
+      dispose(kk) {
+        for (const Ik of this.smokes) pk(kk, Ik);
         this.smokes = [];
-        for (const gS of null !== (HS = this.puffers) && void 0 !== HS ? HS : []) {
-          var HS;
-          gS.dispose()
+        for (const Ik of null !== (Fk = this.puffers) && void 0 !== Fk ? Fk : []) {
+          var Fk;
+          Ik.dispose()
         }
         this.puffers = null
       }
-      emit(SS, HS, gS, tS) {
-        return this.puffers ??= vS.map((SS => {
+      emit(kk, Fk, Ik, Xk) {
+        return this.puffers ??= nk.map((kk => {
           let {
-            style: HS,
-            perSecond: gS
-          } = SS;
-          const tS = (HS.count / .3 + gS) * HS.life[1];
-          return new DS.e(HS, Math.ceil(4 * tS), cS)
-        })), this.puffers[HS].emit(SS, gS, this.renderFrame, tS)
+            style: Fk,
+            perSecond: Ik
+          } = kk;
+          const Xk = (Fk.count / .3 + Ik) * Fk.life[1];
+          return new Qk.f(Fk, Math.ceil(4 * Xk), Ok)
+        })), this.puffers[Fk].emit(kk, Ik, this.renderFrame, Xk)
       }
     }
 
-    function LS(SS, HS) {
-      null !== HS.fire && (SS.disposeGameMesh(HS.fire), HS.fire = null)
+    function pk(kk, Fk) {
+      null !== Fk.fire && (kk.disposeGameMesh(Fk.fire), Fk.fire = null)
     }
 
-    function YS() {
-      let SS;
-      const HS = new ES;
+    function uk() {
+      let kk;
+      const Fk = new Gk;
       return {
-        onCreate(HS) {
-          SS = HS
+        onCreate(Fk) {
+          kk = Fk
         },
-        onReceivedMessageFromServer(gS, tS) {
-          gS === xS.D && HS.start(SS, tS)
+        onReceivedMessageFromServer(Ik, Xk) {
+          Ik === yk.G && Fk.start(kk, Xk)
         },
-        onAfterRender(gS) {
-          HS.onAfterRender(SS, gS)
+        onAfterRender(Ik) {
+          Fk.onAfterRender(kk, Ik)
         },
         onClose() {
-          HS.dispose(SS)
+          Fk.dispose(kk)
         }
       }
     }
 
-    function AS(SS, HS, gS, tS) {
+    function bk(kk, Fk, Ik, Xk) {
       return {
-        dialogue: QS(tS.localPlayerId),
-        fishing: CS(tS.localPlayerId),
-        furnaceSmoke: YS(),
-        ironChest: bS()
+        dialogue: Kk(Xk.localPlayerId),
+        fishing: Jk(Xk.localPlayerId),
+        furnaceSmoke: uk(),
+        ironChest: Tk()
       }
     }
 
-    function yS(SS, HS) {
-      for (const bS of [SS, ...null !== HS && void 0 !== HS ? HS : []]) try {
-        var gS;
-        null === bS || void 0 === bS || null === (gS = bS.onClose) || void 0 === gS || gS.call(bS)
-      } catch (tS) {
-        console.error("Error in client onClose callback", tS)
+    function Rk(kk, Fk) {
+      for (const Tk of [kk, ...null !== Fk && void 0 !== Fk ? Fk : []]) try {
+        var Ik;
+        null === Tk || void 0 === Tk || null === (Ik = Tk.onClose) || void 0 === Ik || Ik.call(Tk)
+      } catch (Xk) {
+        console.error("Error in client onClose callback", Xk)
       }
     }
   },
-  39164: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => tS,
-      e: () => XS
+  39154: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      e: () => Xk,
+      f: () => ik
     });
-    const tS = 1 / .6,
-      bS = {
+    const Xk = 1 / .6,
+      Tk = {
         kind: "smokePuff"
       };
-    class XS {
-      constructor(SS, HS, gS) {
-        this.style = SS, this.hf = HS, this.half = gS, this.particles = null, this.lastFrame = -1
+    class ik {
+      constructor(kk, Fk, Ik) {
+        this.style = kk, this.St = Fk, this.half = Ik, this.particles = null, this.lastFrame = -1
       }
-      emit(SS, HS, gS) {
-        let XS = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return gS !== this.lastFrame && (this.lastFrame = gS, this.particles || (this.particles = SS.createParticles(function(SS, HS) {
+      emit(kk, Fk, Ik) {
+        let ik = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return Ik !== this.lastFrame && (this.lastFrame = Ik, this.particles || (this.particles = kk.createParticles(function(kk, Fk) {
           const [
-            [gS, XS, xS],
-            [NS, qS, uS]
-          ] = SS.colours;
+            [Ik, ik, yk],
+            [lk, ak, qk]
+          ] = kk.colours;
           return {
-            texture: SS.soft ? bS : "square_particle",
-            hf: HS,
-            minLifeTime: SS.life[0] / tS,
-            maxLifeTime: SS.life[1] / tS,
-            minEmitPower: SS.power[0] * tS,
-            maxEmitPower: SS.power[1] * tS,
-            minSize: SS.size[0],
-            maxSize: SS.size[1],
+            texture: kk.soft ? Tk : "square_particle",
+            St: Fk,
+            minLifeTime: kk.life[0] / Xk,
+            maxLifeTime: kk.life[1] / Xk,
+            minEmitPower: kk.power[0] * Xk,
+            maxEmitPower: kk.power[1] * Xk,
+            minSize: kk.size[0],
+            maxSize: kk.size[1],
             emitRate: 0,
-            gravity: [0, SS.lift * tS * tS, 0],
-            dir1: [-SS.spread, 1, -SS.spread],
-            dir2: [SS.spread, 1, SS.spread],
+            gravity: [0, kk.lift * Xk * Xk, 0],
+            dir1: [-kk.spread, 1, -kk.spread],
+            dir2: [kk.spread, 1, kk.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [gS, XS, xS, SS.alpha],
-              maxColor: [NS, qS, uS, SS.alpha]
+              minColor: [Ik, ik, yk, kk.alpha],
+              maxColor: [lk, ak, qk, kk.alpha]
             }, {
               timeFraction: 1,
-              minColor: [gS, XS, xS, 0],
-              maxColor: [NS, qS, uS, 0]
+              minColor: [Ik, ik, yk, 0],
+              maxColor: [lk, ak, qk, 0]
             }],
-            blendMode: SS.blendMode
+            blendMode: kk.blendMode
           }
-        }(this.style, this.hf), {
-          pos: HS,
+        }(this.style, this.St), {
+          pos: Fk,
           half: this.half
-        })), this.particles.moveTo(HS, this.half), this.particles.emit(XS), !0)
+        })), this.particles.moveTo(Fk, this.half), this.particles.emit(ik), !0)
       }
       dispose() {
-        var SS;
-        null === (SS = this.particles) || void 0 === SS || SS.stop(), this.particles = null
+        var kk;
+        null === (kk = this.particles) || void 0 === kk || kk.stop(), this.particles = null
       }
     }
   },
-  4992: (SS, HS, gS) => {
-    gS.d(HS, {
-      d: () => bS,
-      e: () => tS,
-      g: () => XS,
-      j: () => qS,
-      k: () => xS
+  4843: (kk, Fk, Ik) => {
+    Ik.d(Fk, {
+      b: () => Tk,
+      d: () => Xk,
+      g: () => ik,
+      k: () => ak,
+      n: () => yk
     });
-    const tS = ["sine", "triangle", "square", "sawtooth"],
-      bS = 55,
-      XS = {
+    const Xk = ["sine", "triangle", "square", "sawtooth"],
+      Tk = 55,
+      ik = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -846,39 +846,39 @@ export const modules = {
         }
       };
 
-    function xS(SS) {
-      return "string" !== typeof SS ? SS : Object.hasOwn(XS, SS) ? XS[SS] : null
+    function yk(kk) {
+      return "string" !== typeof kk ? kk : Object.hasOwn(ik, kk) ? ik[kk] : null
     }
 
-    function NS(SS, HS, gS) {
-      return Math.min(gS, Math.max(HS, SS))
+    function lk(kk, Fk, Ik) {
+      return Math.min(Ik, Math.max(Fk, kk))
     }
 
-    function qS(SS) {
-      const HS = NS(SS.durationMs, 10, 500),
-        gS = NS(SS.attackMs, 0, HS),
+    function ak(kk) {
+      const Fk = lk(kk.durationMs, 10, 500),
+        Ik = lk(kk.attackMs, 0, Fk),
         {
-          intonation: bS
-        } = SS;
+          intonation: Tk
+        } = kk;
       return {
-        waveform: tS.includes(SS.waveform) ? SS.waveform : "sine",
-        pitchHz: NS(SS.pitchHz, 20, 4e3),
-        glideSemitones: NS(SS.glideSemitones, -24, 24),
-        durationMs: HS,
-        attackMs: gS,
-        releaseMs: NS(SS.releaseMs, 0, HS - gS),
-        lowpassHz: null === SS.lowpassHz ? null : NS(SS.lowpassHz, 20, 2e4),
-        volume: NS(SS.volume, 0, 2),
+        waveform: Xk.includes(kk.waveform) ? kk.waveform : "sine",
+        pitchHz: lk(kk.pitchHz, 20, 4e3),
+        glideSemitones: lk(kk.glideSemitones, -24, 24),
+        durationMs: Fk,
+        attackMs: Ik,
+        releaseMs: lk(kk.releaseMs, 0, Fk - Ik),
+        lowpassHz: null === kk.lowpassHz ? null : lk(kk.lowpassHz, 20, 2e4),
+        volume: lk(kk.volume, 0, 2),
         intonation: {
-          variationSemitones: NS(bS.variationSemitones, 0, 6),
-          declineSemitones: NS(bS.declineSemitones, 0, 12),
-          questionRiseSemitones: NS(bS.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: NS(bS.exclaimLiftSemitones, 0, 12)
+          variationSemitones: lk(Tk.variationSemitones, 0, 6),
+          declineSemitones: lk(Tk.declineSemitones, 0, 12),
+          questionRiseSemitones: lk(Tk.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: lk(Tk.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: NS(SS.syllableMs, 25, 200)
+        syllableMs: lk(kk.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

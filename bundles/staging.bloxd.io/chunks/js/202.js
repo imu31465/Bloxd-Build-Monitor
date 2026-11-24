@@ -1,161 +1,161 @@
 export const id = 202;
 export const ids = [202];
 export const modules = {
-  34305: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      packDisplayName: () => KS,
-      packModelMessage: () => jS,
-      packModelSummary: () => CS,
-      refusedPackModels: () => GS
+  34255: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      packDisplayName: () => ek,
+      packModelMessage: () => wk,
+      packModelSummary: () => Jk,
+      refusedPackModels: () => Hk
     });
-    var tS = gS(34308),
-      bS = gS(34310);
-    const XS = "DRACO",
-      xS = 0,
-      NS = 1,
-      qS = 0,
-      uS = 1,
-      IS = 32768;
+    var Xk = Ik(34257),
+      Tk = Ik(34262);
+    const ik = "DRACO",
+      yk = 0,
+      lk = 1,
+      ak = 0,
+      qk = 1,
+      Lk = 32768;
 
-    function fS(SS) {
-      const HS = new DataView(SS.buffer, SS.byteOffset, SS.byteLength);
-      let gS = 0;
-      const tS = () => {
-          if (gS >= SS.byteLength) throw new RangeError("past the stream");
-          return SS[gS++]
+    function tk(kk) {
+      const Fk = new DataView(kk.buffer, kk.byteOffset, kk.byteLength);
+      let Ik = 0;
+      const Xk = () => {
+          if (Ik >= kk.byteLength) throw new RangeError("past the stream");
+          return kk[Ik++]
         },
-        bS = () => {
-          if (gS + 4 > SS.byteLength) throw new RangeError("past the stream");
-          const tS = HS.getUint32(gS, !0);
-          return gS += 4, tS
+        Tk = () => {
+          if (Ik + 4 > kk.byteLength) throw new RangeError("past the stream");
+          const Xk = Fk.getUint32(Ik, !0);
+          return Ik += 4, Xk
         },
-        fS = () => {
-          let SS = 0;
-          for (let HS = 0; HS < 35; HS += 7) {
-            const gS = tS();
-            if (SS += (127 & gS) * 2 ** HS, 0 === (128 & gS)) return SS
+        tk = () => {
+          let kk = 0;
+          for (let Fk = 0; Fk < 35; Fk += 7) {
+            const Ik = Xk();
+            if (kk += (127 & Ik) * 2 ** Fk, 0 === (128 & Ik)) return kk
           }
           throw new RangeError("varint too long")
         };
       try {
-        for (let SS = 0; SS < XS.length; SS++)
-          if (tS() !== XS.charCodeAt(SS)) return null;
-        const HS = tS(),
-          kS = tS(),
-          aS = tS(),
-          KS = tS(),
-          jS = tS() | tS() << 8;
-        if (2 !== HS) return null;
-        0 !== (jS & IS) && function(SS, HS, gS) {
-          const tS = () => {
-              HS(gS())
+        for (let kk = 0; kk < ik.length; kk++)
+          if (Xk() !== ik.charCodeAt(kk)) return null;
+        const Fk = Xk(),
+          Zk = Xk(),
+          jk = Xk(),
+          ek = Xk(),
+          wk = Xk() | Xk() << 8;
+        if (2 !== Fk) return null;
+        0 !== (wk & Lk) && function(kk, Fk, Ik) {
+          const Xk = () => {
+              Fk(Ik())
             },
-            bS = () => {
-              let gS = 1,
-                bS = !0;
-              for (; gS > 0;) {
-                gS--, bS || tS(), bS = !1;
-                const XS = SS();
-                for (let gS = 0; gS < XS; gS++) tS(), HS(SS());
-                gS += SS()
+            Tk = () => {
+              let Ik = 1,
+                Tk = !0;
+              for (; Ik > 0;) {
+                Ik--, Tk || Xk(), Tk = !1;
+                const ik = kk();
+                for (let Ik = 0; Ik < ik; Ik++) Xk(), Fk(kk());
+                Ik += kk()
               }
             },
-            XS = SS();
-          for (let xS = 0; xS < XS; xS++) SS(), bS();
-          bS()
-        }(fS, (HS => {
-          if (gS + HS > SS.byteLength) throw new RangeError("past the stream");
-          gS += HS
-        }), tS);
-        const GS = kS < 2 ? bS : fS;
-        if (aS === xS) return {
+            ik = kk();
+          for (let yk = 0; yk < ik; yk++) kk(), Tk();
+          Tk()
+        }(tk, (Fk => {
+          if (Ik + Fk > kk.byteLength) throw new RangeError("past the stream");
+          Ik += Fk
+        }), Xk);
+        const Hk = Zk < 2 ? Tk : tk;
+        if (jk === yk) return {
           faces: 0,
-          vertices: bS()
+          vertices: Tk()
         };
-        if (aS !== NS) return null;
-        if (KS === qS) {
+        if (jk !== lk) return null;
+        if (ek === ak) {
           return {
-            faces: GS(),
-            vertices: GS()
+            faces: Hk(),
+            vertices: Hk()
           }
         }
-        if (KS !== uS) return null;
-        tS(), kS < 2 && fS();
-        const CS = fS();
+        if (ek !== qk) return null;
+        Xk(), Zk < 2 && tk();
+        const Jk = tk();
         return {
-          faces: fS(),
-          vertices: CS
+          faces: tk(),
+          vertices: Jk
         }
       } catch {
         return null
       }
     }
 
-    function kS(SS, HS, gS) {
-      var tS, bS;
-      if (null === (tS = null === (bS = SS.extensionsUsed) || void 0 === bS ? void 0 : bS.includes("KHR_draco_mesh_compression")) || void 0 === tS || !tS) return null;
-      for (const KS of null !== (XS = SS.meshes) && void 0 !== XS ? XS : []) {
-        var XS;
-        for (const tS of KS.primitives) {
-          var xS, NS, qS, uS, IS, kS;
-          const bS = null === (xS = tS.extensions) || void 0 === xS ? void 0 : xS.KHR_draco_mesh_compression;
-          if ("object" !== typeof bS || null === bS) continue;
-          const XS = null === (NS = SS.bufferViews) || void 0 === NS ? void 0 : NS[bS.bufferView];
-          if (null === HS || void 0 === XS) return aS;
-          const KS = null !== (qS = XS.byteOffset) && void 0 !== qS ? qS : 0,
-            jS = fS(HS.subarray(KS, KS + XS.byteLength));
-          if (null === jS && !gS) continue;
-          const GS = null !== (uS = SS.accessors) && void 0 !== uS ? uS : [],
-            CS = null === (IS = GS[tS.attributes.POSITION]) || void 0 === IS ? void 0 : IS.count,
-            nS = void 0 === tS.indices ? 0 : null === (kS = GS[tS.indices]) || void 0 === kS ? void 0 : kS.count;
-          if (null === jS || void 0 === CS || void 0 === nS || 3 * jS.faces !== nS || jS.vertices > CS) return aS
+    function Zk(kk, Fk, Ik) {
+      var Xk, Tk;
+      if (null === (Xk = null === (Tk = kk.extensionsUsed) || void 0 === Tk ? void 0 : Tk.includes("KHR_draco_mesh_compression")) || void 0 === Xk || !Xk) return null;
+      for (const ek of null !== (ik = kk.meshes) && void 0 !== ik ? ik : []) {
+        var ik;
+        for (const Xk of ek.primitives) {
+          var yk, lk, ak, qk, Lk, Zk;
+          const Tk = null === (yk = Xk.extensions) || void 0 === yk ? void 0 : yk.KHR_draco_mesh_compression;
+          if ("object" !== typeof Tk || null === Tk) continue;
+          const ik = null === (lk = kk.bufferViews) || void 0 === lk ? void 0 : lk[Tk.bufferView];
+          if (null === Fk || void 0 === ik) return jk;
+          const ek = null !== (ak = ik.byteOffset) && void 0 !== ak ? ak : 0,
+            wk = tk(Fk.subarray(ek, ek + ik.byteLength));
+          if (null === wk && !Ik) continue;
+          const Hk = null !== (qk = kk.accessors) && void 0 !== qk ? qk : [],
+            Jk = null === (Lk = Hk[Xk.attributes.POSITION]) || void 0 === Lk ? void 0 : Lk.count,
+            xk = void 0 === Xk.indices ? 0 : null === (Zk = Hk[Xk.indices]) || void 0 === Zk ? void 0 : Zk.count;
+          if (null === wk || void 0 === Jk || void 0 === xk || 3 * wk.faces !== xk || wk.vertices > Jk) return jk
         }
       }
       return null
     }
-    const aS = "has a Draco stream whose counts don't match its accessors";
+    const jk = "has a Draco stream whose counts don't match its accessors";
 
-    function KS(SS) {
-      var HS;
-      return null !== (HS = SS.name) && void 0 !== HS ? HS : SS.fromFolderName || SS.id
+    function ek(kk) {
+      var Fk;
+      return null !== (Fk = kk.name) && void 0 !== Fk ? Fk : kk.fromFolderName || kk.id
     }
 
-    function jS(SS, HS, gS) {
-      return `Texture pack "${SS}": model "${HS}" was not loaded because it ${gS}. The default model is used instead.`
+    function wk(kk, Fk, Ik) {
+      return `Texture pack "${kk}": model "${Fk}" was not loaded because it ${Ik}. The default model is used instead.`
     }
 
-    function GS(SS, HS, gS) {
+    function Hk(kk, Fk, Ik) {
       let {
-        strictDraco: XS = !1
+        strictDraco: ik = !1
       } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const xS = {};
-      for (const [NS, qS] of Object.entries(HS)) {
-        let HS;
-        if (qS.startsWith("data:")) try {
-          const SS = new Uint8Array((0, bS.n)(qS));
-          if (HS = (0, tS.d)(SS), null === HS) {
+      const yk = {};
+      for (const [lk, ak] of Object.entries(Fk)) {
+        let Fk;
+        if (ak.startsWith("data:")) try {
+          const kk = new Uint8Array((0, Tk.p)(ak));
+          if (Fk = (0, Xk.b)(kk), null === Fk) {
             const {
-              json: gS,
-              bin: tS
-            } = (0, bS.v)(SS);
-            HS = kS(gS, tS, XS)
+              json: Ik,
+              bin: Xk
+            } = (0, Tk.v)(kk);
+            Fk = Zk(Ik, Xk, ik)
           }
         } catch {
-          HS = "is not a binary glTF 2.0 file"
-        } else HS = "loads data from outside the file";
-        HS && (xS[NS] = HS, gS && console.warn(jS(SS, NS, HS)))
+          Fk = "is not a binary glTF 2.0 file"
+        } else Fk = "loads data from outside the file";
+        Fk && (yk[lk] = Fk, Ik && console.warn(wk(kk, lk, Fk)))
       }
-      return xS
+      return yk
     }
 
-    function CS(SS, HS) {
-      const gS = Object.keys(HS);
-      if (0 === gS.length) return null;
-      if (1 === gS.length) return jS(SS, gS[0], HS[gS[0]]);
-      const tS = gS.map((SS => `"${SS}" ${HS[SS]}`)).join("; ");
-      return `Texture pack "${SS}": ${gS.length} models were not loaded (${tS}). The default models are used instead.`
+    function Jk(kk, Fk) {
+      const Ik = Object.keys(Fk);
+      if (0 === Ik.length) return null;
+      if (1 === Ik.length) return wk(kk, Ik[0], Fk[Ik[0]]);
+      const Xk = Ik.map((kk => `"${kk}" ${Fk[kk]}`)).join("; ");
+      return `Texture pack "${kk}": ${Ik.length} models were not loaded (${Xk}). The default models are used instead.`
     }
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);

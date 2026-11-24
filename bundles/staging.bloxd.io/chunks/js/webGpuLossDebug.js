@@ -1,71 +1,71 @@
 export const id = 68;
 export const ids = [68];
 export const modules = {
-  36432: (SS, HS, gS) => {
-    gS.r(HS), gS.d(HS, {
-      noteJsEngine: () => iS,
-      noteJsJoin: () => US,
-      noteWasmJoin: () => pS,
-      noteWasmPick: () => WS,
-      noteWebGpuLoss: () => sS,
-      startWebGpuLossDebug: () => VS
+  36415: (kk, Fk, Ik) => {
+    Ik.r(Fk), Ik.d(Fk, {
+      noteJsEngine: () => Ck,
+      noteJsJoin: () => Wk,
+      noteWasmJoin: () => fk,
+      noteWasmPick: () => Nk,
+      noteWebGpuLoss: () => Bk,
+      startWebGpuLossDebug: () => Uk
     });
-    var tS = gS(369),
-      bS = gS(24),
-      XS = gS(2922),
-      xS = gS(3591),
-      NS = gS(699),
-      qS = gS(104),
-      uS = gS(113),
-      IS = gS(2924),
-      fS = gS(45),
-      kS = gS(122),
-      aS = gS(362),
-      KS = gS(2953),
-      jS = gS(387),
-      GS = gS(34156);
-    const CS = 40,
-      nS = 160;
+    var Xk = Ik(318),
+      Tk = Ik(25),
+      ik = Ik(2717),
+      yk = Ik(3396),
+      lk = Ik(646),
+      ak = Ik(95),
+      qk = Ik(104),
+      Lk = Ik(2719),
+      tk = Ik(41),
+      Zk = Ik(113),
+      jk = Ik(309),
+      ek = Ik(2744),
+      wk = Ik(337),
+      Hk = Ik(34083);
+    const Jk = 40,
+      xk = 160;
 
-    function PS(SS, HS) {
-      return `"${(SS.length>HS?`${SS.slice(0,HS)}...`:SS).replace(/[^ -~]|["\\]/g,"?")}"`
+    function Pk(kk, Fk) {
+      return `"${(kk.length>Fk?`${kk.slice(0,Fk)}...`:kk).replace(/[^ -~]|["\\]/g,"?")}"`
     }
 
-    function QS(SS) {
-      return SS ? "yes" : "no"
+    function Kk(kk) {
+      return kk ? "yes" : "no"
     }
 
-    function DS(SS) {
-      var HS;
-      const gS = SS.storedRenderer;
-      return [`loss holds ${QS(SS.lossHolds)}`, `stops packs ${QS(SS.lossStopsPack)}`, `any loss ${QS(SS.anyLoss)}`, `old intel ${QS(SS.oldIntelDriver)}`, `default off for packs ${QS(SS.defaultOffForPacks)}`, `default off reason ${null!==(HS=SS.defaultOffReason)&&void 0!==HS?HS:"none"}`, `setting ${SS.setting?"on":"off"} (stored ${null===SS.settingStored?"unset":SS.settingStored?"on":"off"})`, `renderer url ${null===SS.urlRenderer?"none":PS(SS.urlRenderer,12)}, stored ${null===gS||void 0===gS?"none":PS(String(gS),12)}`].join(", ")
+    function Qk(kk) {
+      var Fk;
+      const Ik = kk.storedRenderer;
+      return [`loss holds ${Kk(kk.lossHolds)}`, `stops packs ${Kk(kk.lossStopsPack)}`, `any loss ${Kk(kk.anyLoss)}`, `old intel ${Kk(kk.oldIntelDriver)}`, `default off for packs ${Kk(kk.defaultOffForPacks)}`, `default off reason ${null!==(Fk=kk.defaultOffReason)&&void 0!==Fk?Fk:"none"}`, `setting ${kk.setting?"on":"off"} (stored ${null===kk.settingStored?"unset":kk.settingStored?"on":"off"})`, `renderer url ${null===kk.urlRenderer?"none":Pk(kk.urlRenderer,12)}, stored ${null===Ik||void 0===Ik?"none":Pk(String(Ik),12)}`].join(", ")
     }
 
-    function wS(SS) {
-      if (null === SS) return "no renderer settled";
+    function sk(kk) {
+      if (null === kk) return "no renderer settled";
       const {
-        requested: HS,
-        choice: gS,
-        source: tS,
-        fallbackReason: bS
-      } = SS;
-      return `renderer requested ${HS}, runs ${gS}, from ${tS}${null===bS?"":`, fell back: ${PS(bS,80)}`}`
+        requested: Fk,
+        choice: Ik,
+        source: Xk,
+        fallbackReason: Tk
+      } = kk;
+      return `renderer requested ${Fk}, runs ${Ik}, from ${Xk}${null===Tk?"":`, fell back: ${Pk(Tk,80)}`}`
     }
 
-    function hS(SS, HS) {
-      return SS ? `stopping packs: iOS, ${null!==HS&&void 0!==HS?HS:1} losses in a row within a day` : "stopping packs"
+    function Vk(kk, Fk) {
+      return kk ? `stopping packs: iOS, ${null!==Fk&&void 0!==Fk?Fk:1} losses in a row within a day` : "stopping packs"
     }
 
-    function ZS(SS) {
-      var HS, gS, tS;
-      return `pick (wasm): backend ${null!==(HS=SS.backend)&&void 0!==HS?HS:"none"}, webgpu fallback ${null!==(gS=SS.reason)&&void 0!==gS?gS:"none"}, from ${null!==(tS=SS.source)&&void 0!==tS?tS:"none"}, storage pull breaks ${QS(SS.storagePullBreaks)}; packs run ${QS("webgpu"===SS.backend)}, else ${SS.noWebGpu}`
+    function zk(kk) {
+      var Fk, Ik, Xk;
+      return `pick (wasm): backend ${null!==(Fk=kk.backend)&&void 0!==Fk?Fk:"none"}, webgpu fallback ${null!==(Ik=kk.reason)&&void 0!==Ik?Ik:"none"}, from ${null!==(Xk=kk.source)&&void 0!==Xk?Xk:"none"}, storage pull breaks ${Kk(kk.storagePullBreaks)}; packs run ${Kk("webgpu"===kk.backend)}, else ${kk.noWebGpu}`
     }
 
-    function JS(SS, HS, gS) {
-      return `pack ${null===SS?"(name not read)":PS(SS,CS)} ${HS}${null===gS?"":`, ${gS} variants`}`
+    function Sk(kk, Fk, Ik) {
+      return `pack ${null===kk?"(name not read)":Pk(kk,Jk)} ${Fk}${null===Ik?"":`, ${Ik} variants`}`
     }
-    const OS = "shaderPack:failedWebGpuOff",
-      dS = new class {
+    const vk = "shaderPack:failedWebGpuOff",
+      Ek = new class {
         constructor() {
           this.joins = 0, this.losses = 0, this.noPackSaid = !1
         }
@@ -73,155 +73,155 @@ export const modules = {
           return this.joins++, this.joins <= 5 ? "detail" : this.joins <= 30 ? "outcome" : 31 === this.joins ? "cap" : "none"
         }
         noPack() {
-          const SS = !this.noPackSaid;
-          return this.noPackSaid = !0, SS
+          const kk = !this.noPackSaid;
+          return this.noPackSaid = !0, kk
         }
         loss() {
           return this.losses++, this.losses <= 10 ? "line" : 11 === this.losses ? "cap" : "none"
         }
       };
-    let cS = null,
-      vS = null,
-      ES = 0;
+    let Ok = null,
+      nk = null,
+      Gk = 0;
 
-    function LS(SS) {
-      (0, KS.i)("webgpuloss", SS)
+    function pk(kk) {
+      (0, ek.g)("webgpuloss", kk)
     }
 
-    function YS() {
+    function uk() {
       return {
-        lossHolds: (0, aS.B)(),
-        lossStopsPack: (0, aS.J)(),
-        anyLoss: (0, aS.m)(),
-        oldIntelDriver: !0 === fS.g.getItem(kS.I),
-        defaultOffForPacks: bS.b.isWebGpuDefaultOff(),
-        defaultOffReason: bS.b.webGpuDefaultOffReason(),
-        settingStored: fS.g.getItem(tS.mc),
-        setting: bS.b.get("clientEscMenuOptions").useWebGpu,
-        urlRenderer: uS.currentUrl.getSearchParam(IS.e),
-        storedRenderer: fS.g.getItem(IS.f)
+        lossHolds: (0, jk.B)(),
+        lossStopsPack: (0, jk.H)(),
+        anyLoss: (0, jk.l)(),
+        oldIntelDriver: !0 === tk.j.getItem(Zk.M),
+        defaultOffForPacks: Tk.d.isWebGpuDefaultOff(),
+        defaultOffReason: Tk.d.webGpuDefaultOffReason(),
+        settingStored: tk.j.getItem(Xk.tc),
+        setting: Tk.d.get("clientEscMenuOptions").useWebGpu,
+        urlRenderer: qk.currentUrl.getSearchParam(Lk.c),
+        storedRenderer: tk.j.getItem(Lk.e)
       }
     }
 
-    function AS(SS) {
-      return function(SS, HS, gS) {
-        if (null === SS || void 0 === SS) return "none";
-        if ("object" !== typeof SS) return `unreadable (${typeof SS})`;
-        const tS = SS,
-          bS = "number" === typeof tS.at ? tS.at : null;
-        return ["browser " + (HS ? "this one" : "another"), null === bS ? "no time" : `set ${((gS-bS)/jS.i).toFixed(1)} h ago`, `losses ${"number"===typeof tS.losses?tS.losses:"unset (1)"}${null!==bS&&gS-bS<jS.h?", the last within a day":""}`, `first page ${"hidden"===tS.firstPage||"visible"===tS.firstPage?tS.firstPage:"unset (visible)"}`, `hold step ${"number"===typeof tS.holdStep?tS.holdStep:"unset (1)"}`].join(", ")
-      }(SS, function(SS) {
+    function bk(kk) {
+      return function(kk, Fk, Ik) {
+        if (null === kk || void 0 === kk) return "none";
+        if ("object" !== typeof kk) return `unreadable (${typeof kk})`;
+        const Xk = kk,
+          Tk = "number" === typeof Xk.at ? Xk.at : null;
+        return ["browser " + (Fk ? "this one" : "another"), null === Tk ? "no time" : `set ${((Ik-Tk)/wk.j).toFixed(1)} h ago`, `losses ${"number"===typeof Xk.losses?Xk.losses:"unset (1)"}${null!==Tk&&Ik-Tk<wk.i?", the last within a day":""}`, `first page ${"hidden"===Xk.firstPage||"visible"===Xk.firstPage?Xk.firstPage:"unset (visible)"}`, `hold step ${"number"===typeof Xk.holdStep?Xk.holdStep:"unset (1)"}`].join(", ")
+      }(kk, function(kk) {
         try {
-          return "object" === typeof SS && null !== SS && SS.browser === (0, aS.l)()
+          return "object" === typeof kk && null !== kk && kk.browser === (0, jk.h)()
         } catch {
           return !1
         }
-      }(SS), Date.now())
+      }(kk), Date.now())
     }
 
-    function yS() {
-      const SS = (0, aS.v)().now;
-      return "number" === typeof(null === SS || void 0 === SS ? void 0 : SS.losses) ? SS.losses : null
+    function Rk() {
+      const kk = (0, jk.s)().now;
+      return "number" === typeof(null === kk || void 0 === kk ? void 0 : kk.losses) ? kk.losses : null
     }
 
-    function VS() {
+    function Uk() {
       const {
-        atLoad: SS,
-        now: HS,
-        unreported: gS
-      } = (0, aS.v)(), tS = JSON.stringify(SS) === JSON.stringify(HS) ? "ia" : `now ${AS(HS)}`;
-      LS(`load (${NS.A?"wasm":"js"}, os ${(0,qS.getOperatingSystem)()}): stored loss ${AS(SS)}; ${tS}; unreported ${function(SS,HS){if(null===SS||void 0===SS||"object"!==typeof SS)return"none";const gS=SS;return HS.map((SS=>`${SS} ${"number"===typeof gS[SS]?gS[SS]:0}`)).join(", ")}(gS,aS.e)}; webgpu_loss_page ${aS.D}`), LS(`load: ${DS(YS())}; pack expected ${(0,xS.g)(qS.featureFlags.settings.canUseShaderPacks)?"yes":"no"}; WebGPU API ${"gpu"in navigator?"yes":"no"}`)
+        atLoad: kk,
+        now: Fk,
+        unreported: Ik
+      } = (0, jk.s)(), Xk = JSON.stringify(kk) === JSON.stringify(Fk) ? "Gj" : `now ${bk(Fk)}`;
+      pk(`load (${lk.x?"wasm":"js"}, os ${(0,ak.getOperatingSystem)()}): stored loss ${bk(kk)}; ${Xk}; unreported ${function(kk,Fk){if(null===kk||void 0===kk||"object"!==typeof kk)return"none";const Ik=kk;return Fk.map((kk=>`${kk} ${"number"===typeof Ik[kk]?Ik[kk]:0}`)).join(", ")}(Ik,jk.d)}; webgpu_loss_page ${jk.C}`), pk(`load: ${Qk(uk())}; pack expected ${(0,yk.h)(ak.featureFlags.settings.canUseShaderPacks)?"yes":"no"}; WebGPU API ${"gpu"in navigator?"yes":"no"}`)
     }
 
-    function iS(SS) {
-      cS = SS, LS(function(SS, HS, gS) {
-        const tS = SS.setting ? "the setting is on" : (0, GS.d)(SS.packActive, SS.defaultOffForPacks) ? "the pack forces it" : SS.packActive ? "the pack can't force it: default off for packs" : "no active pack, setting off";
-        return `engine (js): useWebGpu ${QS(SS.useWebGpu)} (${tS}); ${wS(HS)}; webgpu fallback ${null!==gS&&void 0!==gS?gS:"unset"}`
-      }(SS, (0, XS.i)(), (0, qS.getWebGpuFallbackReason)()))
+    function Ck(kk) {
+      Ok = kk, pk(function(kk, Fk, Ik) {
+        const Xk = kk.setting ? "the setting is on" : (0, Hk.c)(kk.packActive, kk.defaultOffForPacks) ? "the pack forces it" : kk.packActive ? "the pack can't force it: default off for packs" : "no active pack, setting off";
+        return `engine (js): useWebGpu ${Kk(kk.useWebGpu)} (${Xk}); ${sk(Fk)}; webgpu fallback ${null!==Ik&&void 0!==Ik?Ik:"unset"}`
+      }(kk, (0, ik.e)(), (0, ak.getWebGpuFallbackReason)()))
     }
 
-    function WS(SS) {
-      vS = SS, LS(ZS(SS))
+    function Nk(kk) {
+      nk = kk, pk(zk(kk))
     }
-    async function zS(SS, HS, tS, bS) {
-      const XS = ++ES,
-        xS = await async function(SS) {
-          var HS, tS;
+    async function ck(kk, Fk, Xk, Tk) {
+      const ik = ++Gk,
+        yk = await async function(kk) {
+          var Fk, Xk;
           const [{
-            shaderPackPage: bS,
-            harnessShaderPackMode: XS
+            shaderPackPage: Tk,
+            harnessShaderPackMode: ik
           }, {
-            getShaderPackPolicy: xS
+            getShaderPackPolicy: yk
           }, {
-            packRunsIn: NS
-          }] = await Promise.all([gS.e(115).then((() => gS(39226))), gS.e(91).then((() => gS(41274))), gS.e(138).then((() => gS(41278)))]), qS = await bS.load();
-          if ("none" === qS.status) return null;
-          const uS = null !== (HS = XS()) && void 0 !== HS ? HS : xS(SS),
-            IS = "active" === qS.status ? qS.pack.variants : qS.variants,
-            fS = NS(IS, uS);
+            packRunsIn: lk
+          }] = await Promise.all([Ik.e(115).then((() => Ik(39224))), Ik.e(91).then((() => Ik(41266))), Ik.e(138).then((() => Ik(41273)))]), ak = await Tk.load();
+          if ("none" === ak.status) return null;
+          const qk = null !== (Fk = ik()) && void 0 !== Fk ? Fk : yk(kk),
+            Lk = "active" === ak.status ? ak.pack.variants : ak.variants,
+            tk = lk(Lk, qk);
           return {
-            text: `${"active"===qS.status?JS(qS.pack.name,"active",IS.length):JS(null,`blocked (${qS.messageKey})`,null!==(tS=null===IS||void 0===IS?void 0:IS.length)&&void 0!==tS?tS:null)}; game policy ${uS}, runs in it ${fS?"yes":"no"}`,
-            runs: fS
+            text: `${"active"===ak.status?Sk(ak.pack.name,"active",Lk.length):Sk(null,`blocked (${ak.messageKey})`,null!==(Xk=null===Lk||void 0===Lk?void 0:Lk.length)&&void 0!==Xk?Xk:null)}; game policy ${qk}, runs in it ${tk?"yes":"no"}`,
+            runs: tk
           }
-        }(SS);
-      if (null === xS) return void(dS.noPack() && LS(`join ${XS}: no shader pack on this page (further joins without one not logged)`));
-      const NS = dS.join();
-      if ("none" === NS) return;
-      if ("cap" === NS) return void LS(`join ${XS}: further joins not logged`);
-      const qS = function(SS) {
-          switch (SS.status) {
+        }(kk);
+      if (null === yk) return void(Ek.noPack() && pk(`join ${ik}: no shader pack on this page (further joins without one not logged)`));
+      const lk = Ek.join();
+      if ("none" === lk) return;
+      if ("cap" === lk) return void pk(`join ${ik}: further joins not logged`);
+      const ak = function(kk) {
+          switch (kk.status) {
             case "ok":
-              return void 0 === SS.couldntRun ? "joined" : `joined without the pack: ${SS.couldntRun}`;
-            case "Hg":
-              return "Hg";
+              return void 0 === kk.couldntRun ? "joined" : `joined without the pack: ${kk.couldntRun}`;
+            case "iI":
+              return "iI";
             case "failed":
-              return `failed: ${SS.messageKey}`
+              return `failed: ${kk.messageKey}`
           }
-        }(HS),
-        uS = ("ok" === HS.status ? HS.couldntRun : "failed" === HS.status ? HS.messageKey : void 0) === OS ? `; cause: ${bS()}` : "";
-      "outcome" !== NS ? (LS(`join ${XS}: ${xS.text}`), xS.runs && (LS(`join ${XS}: needs WebGPU; ${tS()}`), LS(`join ${XS}: ${DS(YS())}`)), LS(`join ${XS}: ${qS}${uS}`)) : LS(`join ${XS}: ${qS}${uS}`)
+        }(Fk),
+        qk = ("ok" === Fk.status ? Fk.couldntRun : "failed" === Fk.status ? Fk.messageKey : void 0) === vk ? `; cause: ${Tk()}` : "";
+      "outcome" !== lk ? (pk(`join ${ik}: ${yk.text}`), yk.runs && (pk(`join ${ik}: needs WebGPU; ${Xk()}`), pk(`join ${ik}: ${Qk(uk())}`)), pk(`join ${ik}: ${ak}${qk}`)) : pk(`join ${ik}: ${ak}${qk}`)
     }
 
-    function US(SS, HS, gS) {
-      var tS;
-      const bS = null !== (tS = null === HS || void 0 === HS ? void 0 : HS.isRunning()) && void 0 !== tS && tS;
-      return zS(SS, gS, (() => `Lite runtime ${null===HS?"no":"yes, running "+(bS?"yes":"no")}; ${wS((0,XS.i)())}`), (() => {
-        return SS = cS, HS = YS(), gS = "ios" === (0, qS.getOperatingSystem)(), tS = yS(), null === SS ? "engine choice not seen" : SS.packActive ? (0, GS.d)(SS.packActive, SS.defaultOffForPacks) ? "the pack forced WebGPU, yet nothing asked for a renderer: unexpected" : HS.lossStopsPack ? `a loss ${hS(gS,tS)}` : "old Intel driver verdict, worded off as a loss is stored" : "no active pack when the engine was built, so nothing forced WebGPU; worded off as a loss is stored" + (HS.lossStopsPack ? "" : " (one that doesn't stop packs)");
-        var SS, HS, gS, tS
+    function Wk(kk, Fk, Ik) {
+      var Xk;
+      const Tk = null !== (Xk = null === Fk || void 0 === Fk ? void 0 : Fk.isRunning()) && void 0 !== Xk && Xk;
+      return ck(kk, Ik, (() => `Lite runtime ${null===Fk?"no":"yes, running "+(Tk?"yes":"no")}; ${sk((0,ik.e)())}`), (() => {
+        return kk = Ok, Fk = uk(), Ik = "ios" === (0, ak.getOperatingSystem)(), Xk = Rk(), null === kk ? "engine choice not seen" : kk.packActive ? (0, Hk.c)(kk.packActive, kk.defaultOffForPacks) ? "the pack forced WebGPU, yet nothing asked for a renderer: unexpected" : Fk.lossStopsPack ? `a loss ${Vk(Ik,Xk)}` : "old Intel driver verdict, worded off as a loss is stored" : "no active pack when the engine was built, so nothing forced WebGPU; worded off as a loss is stored" + (Fk.lossStopsPack ? "" : " (one that doesn't stop packs)");
+        var kk, Fk, Ik, Xk
       }))
     }
 
-    function pS(SS, HS, gS) {
-      return zS(SS, null !== HS ? {
+    function fk(kk, Fk, Ik) {
+      return ck(kk, null !== Fk ? {
         status: "failed",
-        messageKey: HS
+        messageKey: Fk
       } : {
         status: "ok",
-        couldntRun: null !== gS && void 0 !== gS ? gS : void 0
-      }, (() => null === vS ? "pick not seen" : ZS(vS)), (() => function(SS, HS, gS, tS) {
-        var bS, XS, xS, NS;
-        return null === SS ? "pick not seen" : "off_after_loss" === SS.reason ? `off after a loss, ${"pack"===SS.source?hS(gS,tS):`from ${null!==(NS=SS.source)&&void 0!==NS?NS:"none"}`}` : "not_requested" === SS.reason ? `not requested, from ${null!==(xS=SS.source)&&void 0!==xS?xS:"none"} (setting ${HS.setting?"on":"off"})` : `${null!==(bS=SS.reason)&&void 0!==bS?bS:"none"}, from ${null!==(XS=SS.source)&&void 0!==XS?XS:"none"}`
-      }(vS, YS(), "ios" === (0, qS.getOperatingSystem)(), yS())))
+        couldntRun: null !== Ik && void 0 !== Ik ? Ik : void 0
+      }, (() => null === nk ? "pick not seen" : zk(nk)), (() => function(kk, Fk, Ik, Xk) {
+        var Tk, ik, yk, lk;
+        return null === kk ? "pick not seen" : "off_after_loss" === kk.reason ? `off after a loss, ${"pack"===kk.source?Vk(Ik,Xk):`from ${null!==(lk=kk.source)&&void 0!==lk?lk:"none"}`}` : "not_requested" === kk.reason ? `not requested, from ${null!==(yk=kk.source)&&void 0!==yk?yk:"none"} (setting ${Fk.setting?"on":"off"})` : `${null!==(Tk=kk.reason)&&void 0!==Tk?Tk:"none"}, from ${null!==(ik=kk.source)&&void 0!==ik?ik:"none"}`
+      }(nk, uk(), "ios" === (0, ak.getOperatingSystem)(), Rk())))
     }
 
-    function sS(SS, HS, gS) {
-      const tS = dS.loss();
-      if ("none" === tS) return;
-      if ("cap" === tS) return void LS("further losses not logged");
-      const bS = YS();
-      LS(function(SS, HS, gS, tS) {
-        return `loss (${SS}): ${HS}${null===gS?"":` ${PS(gS,nS)}`}; ${tS}`
-      }(SS, HS, gS, `stored ${AS((0,aS.v)().now)}; holds ${bS.lossHolds?"yes":"no"}, stops packs ${bS.lossStopsPack?"yes":"no"}`))
+    function Bk(kk, Fk, Ik) {
+      const Xk = Ek.loss();
+      if ("none" === Xk) return;
+      if ("cap" === Xk) return void pk("further losses not logged");
+      const Tk = uk();
+      pk(function(kk, Fk, Ik, Xk) {
+        return `loss (${kk}): ${Fk}${null===Ik?"":` ${Pk(Ik,xk)}`}; ${Xk}`
+      }(kk, Fk, Ik, `stored ${bk((0,jk.s)().now)}; holds ${Tk.lossHolds?"yes":"no"}, stops packs ${Tk.lossStopsPack?"yes":"no"}`))
     }
   },
-  34156: (SS, HS, gS) => {
-    function tS(SS, HS) {
-      return SS && !HS
+  34083: (kk, Fk, Ik) => {
+    function Xk(kk, Fk) {
+      return kk && !Fk
     }
-    gS.d(HS, {
-      d: () => tS
+    Ik.d(Fk, {
+      c: () => Xk
     })
   }
 };
 Object.freeze(modules);
-for (const SS in modules) Object.freeze(modules[SS]);
+for (const kk in modules) Object.freeze(modules[kk]);
