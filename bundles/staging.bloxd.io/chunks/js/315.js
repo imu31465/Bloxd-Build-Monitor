@@ -1,582 +1,582 @@
 export const id = 315;
 export const ids = [315];
 export const modules = {
-  41881: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      ReadExrDataAsync: () => ET,
-      _ExrTextureLoader: () => pT
+  41777: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      ReadExrDataAsync: () => Az,
+      _ExrTextureLoader: () => Rz
     });
-    var hm = fm(38766),
-      Am = fm(37208),
-      am = fm(40186);
-    const xm = 4,
-      wm = 4,
-      Dm = 1,
-      im = 2,
-      Rm = 8,
-      pm = 65536,
-      Em = pm >> 3,
-      om = 14,
-      Om = 65537,
-      Ym = 1 << om,
-      qm = Ym - 1,
-      jm = 59,
-      Vm = 63,
-      Im = 2 + Vm - jm;
-    var Km, Qm;
+    var pD = wD(38662),
+      sD = wD(37125),
+      KD = wD(39990);
+    const rD = 4,
+      LD = 4,
+      cD = 1,
+      gD = 2,
+      RD = 8,
+      AD = 65536,
+      UD = AD >> 3,
+      fD = 14,
+      ID = 65537,
+      BD = 1 << fD,
+      GD = BD - 1,
+      hD = 59,
+      nD = 63,
+      MD = 2 + nD - hD;
+    var OD, JD;
 
-    function nm(mm, Tm) {
-      const fm = new Uint8Array(mm);
-      let hm = 0;
-      for (; 0 != fm[Tm.value + hm];) hm += 1;
-      const Am = (new TextDecoder).decode(fm.slice(Tm.value, Tm.value + hm));
-      return Tm.value = Tm.value + hm + 1, Am
+    function ED(DD, zD) {
+      const wD = new Uint8Array(DD);
+      let pD = 0;
+      for (; 0 != wD[zD.value + pD];) pD += 1;
+      const sD = (new TextDecoder).decode(wD.slice(zD.value, zD.value + pD));
+      return zD.value = zD.value + pD + 1, sD
     }
 
-    function Jm(mm, Tm) {
-      const fm = mm.getInt32(Tm.value, !0);
-      return Tm.value += xm, fm
+    function QD(DD, zD) {
+      const wD = DD.getInt32(zD.value, !0);
+      return zD.value += rD, wD
     }
 
-    function cm(mm, Tm) {
-      const fm = mm.getUint32(Tm.value, !0);
-      return Tm.value += xm, fm
+    function XD(DD, zD) {
+      const wD = DD.getUint32(zD.value, !0);
+      return zD.value += rD, wD
     }
 
-    function zm(mm, Tm) {
-      const fm = mm.getUint8(Tm.value);
-      return Tm.value += Dm, fm
+    function VD(DD, zD) {
+      const wD = DD.getUint8(zD.value);
+      return zD.value += cD, wD
     }
 
-    function Zm(mm, Tm) {
-      const fm = mm.getUint16(Tm.value, !0);
-      return Tm.value += im, fm
+    function PD(DD, zD) {
+      const wD = DD.getUint16(zD.value, !0);
+      return zD.value += gD, wD
     }
 
-    function km(mm, Tm) {
-      const fm = mm[Tm.value];
-      return Tm.value += Dm, fm
+    function CD(DD, zD) {
+      const wD = DD[zD.value];
+      return zD.value += cD, wD
     }
 
-    function bm(mm, Tm) {
-      let fm;
-      return fm = "getBigInt64" in DataView.prototype ? Number(mm.getBigInt64(Tm.value, !0)) : mm.getUint32(Tm.value + 4, !0) + Number(mm.getUint32(Tm.value, !0) << 32), Tm.value += Rm, fm
+    function xD(DD, zD) {
+      let wD;
+      return wD = "getBigInt64" in DataView.prototype ? Number(DD.getBigInt64(zD.value, !0)) : DD.getUint32(zD.value + 4, !0) + Number(DD.getUint32(zD.value, !0) << 32), zD.value += RD, wD
     }
 
-    function Sm(mm, Tm) {
-      const fm = mm.getFloat32(Tm.value, !0);
-      return Tm.value += wm, fm
+    function TD(DD, zD) {
+      const wD = DD.getFloat32(zD.value, !0);
+      return zD.value += LD, wD
     }
 
-    function em(mm, Tm) {
-      return (0, am.d)(Zm(mm, Tm))
+    function bD(DD, zD) {
+      return (0, KD.c)(PD(DD, zD))
     }
 
-    function Nm(mm, Tm) {
-      return (0, am.j)((0, Am.Clamp)(Sm(mm, Tm), -am.h, am.h))
+    function jD(DD, zD) {
+      return (0, KD.g)((0, sD.Clamp)(TD(DD, zD), -KD.f, KD.f))
     }
 
-    function Gm(mm, Tm, fm, hm) {
-      switch (fm) {
+    function dD(DD, zD, wD, pD) {
+      switch (wD) {
         case "string":
         case "stringvector":
         case "iccProfile":
-          return function(mm, Tm, fm) {
-            const hm = (new TextDecoder).decode(new Uint8Array(mm).slice(Tm.value, Tm.value + fm));
-            return Tm.value = Tm.value + fm, hm
-          }(mm.buffer, Tm, hm);
+          return function(DD, zD, wD) {
+            const pD = (new TextDecoder).decode(new Uint8Array(DD).slice(zD.value, zD.value + wD));
+            return zD.value = zD.value + wD, pD
+          }(DD.buffer, zD, pD);
         case "chlist":
-          return function(mm, Tm, fm) {
-            const hm = Tm.value,
-              Am = [];
-            for (; Tm.value < hm + fm - 1;) {
-              const fm = nm(mm.buffer, Tm),
-                hm = Jm(mm, Tm),
-                am = zm(mm, Tm);
-              Tm.value += 3;
-              const xm = Jm(mm, Tm),
-                wm = Jm(mm, Tm);
-              Am.push({
-                name: fm,
-                pixelType: hm,
-                pLinear: am,
-                xSampling: xm,
-                ySampling: wm
+          return function(DD, zD, wD) {
+            const pD = zD.value,
+              sD = [];
+            for (; zD.value < pD + wD - 1;) {
+              const wD = ED(DD.buffer, zD),
+                pD = QD(DD, zD),
+                KD = VD(DD, zD);
+              zD.value += 3;
+              const rD = QD(DD, zD),
+                LD = QD(DD, zD);
+              sD.push({
+                name: wD,
+                pixelType: pD,
+                pLinear: KD,
+                xSampling: rD,
+                ySampling: LD
               })
             }
-            return Tm.value += 1, Am
-          }(mm, Tm, hm);
+            return zD.value += 1, sD
+          }(DD, zD, pD);
         case "chromaticities":
-          return function(mm, Tm) {
+          return function(DD, zD) {
             return {
-              redX: Sm(mm, Tm),
-              redY: Sm(mm, Tm),
-              greenX: Sm(mm, Tm),
-              greenY: Sm(mm, Tm),
-              blueX: Sm(mm, Tm),
-              blueY: Sm(mm, Tm),
-              whiteX: Sm(mm, Tm),
-              whiteY: Sm(mm, Tm)
+              redX: TD(DD, zD),
+              redY: TD(DD, zD),
+              greenX: TD(DD, zD),
+              greenY: TD(DD, zD),
+              blueX: TD(DD, zD),
+              blueY: TD(DD, zD),
+              whiteX: TD(DD, zD),
+              whiteY: TD(DD, zD)
             }
-          }(mm, Tm);
+          }(DD, zD);
         case "compression":
-          return function(mm, Tm) {
-            return zm(mm, Tm)
-          }(mm, Tm);
+          return function(DD, zD) {
+            return VD(DD, zD)
+          }(DD, zD);
         case "box2i":
-          return function(mm, Tm) {
+          return function(DD, zD) {
             return {
-              xMin: Jm(mm, Tm),
-              yMin: Jm(mm, Tm),
-              xMax: Jm(mm, Tm),
-              yMax: Jm(mm, Tm)
+              xMin: QD(DD, zD),
+              yMin: QD(DD, zD),
+              xMax: QD(DD, zD),
+              yMax: QD(DD, zD)
             }
-          }(mm, Tm);
+          }(DD, zD);
         case "lineOrder":
-          return function(mm, Tm) {
-            const fm = zm(mm, Tm);
-            return Qm[fm]
-          }(mm, Tm);
+          return function(DD, zD) {
+            const wD = VD(DD, zD);
+            return JD[wD]
+          }(DD, zD);
         case "float":
-          return Sm(mm, Tm);
+          return TD(DD, zD);
         case "v2f":
-          return function(mm, Tm) {
-            return [Sm(mm, Tm), Sm(mm, Tm)]
-          }(mm, Tm);
+          return function(DD, zD) {
+            return [TD(DD, zD), TD(DD, zD)]
+          }(DD, zD);
         case "v3f":
-          return function(mm, Tm) {
-            return [Sm(mm, Tm), Sm(mm, Tm), Sm(mm, Tm)]
-          }(mm, Tm);
+          return function(DD, zD) {
+            return [TD(DD, zD), TD(DD, zD), TD(DD, zD)]
+          }(DD, zD);
         case "int":
-          return Jm(mm, Tm);
+          return QD(DD, zD);
         case "rational":
-          return function(mm, Tm) {
-            return [Jm(mm, Tm), cm(mm, Tm)]
-          }(mm, Tm);
+          return function(DD, zD) {
+            return [QD(DD, zD), XD(DD, zD)]
+          }(DD, zD);
         case "timecode":
-          return function(mm, Tm) {
-            return [cm(mm, Tm), cm(mm, Tm)]
-          }(mm, Tm);
+          return function(DD, zD) {
+            return [XD(DD, zD), XD(DD, zD)]
+          }(DD, zD);
         case "preview":
-          return Tm.value += hm, "skipped";
+          return zD.value += pD, "skipped";
         default:
-          return void(Tm.value += hm)
+          return void(zD.value += pD)
       }
     }
 
-    function Xm(mm) {
-      for (let Tm = 1; Tm < mm.length; Tm++) {
-        const fm = mm[Tm - 1] + mm[Tm] - 128;
-        mm[Tm] = fm
+    function SD(DD) {
+      for (let zD = 1; zD < DD.length; zD++) {
+        const wD = DD[zD - 1] + DD[zD] - 128;
+        DD[zD] = wD
       }
     }
 
-    function Pm(mm, Tm) {
-      let fm = 0,
-        hm = Math.floor((mm.length + 1) / 2),
-        Am = 0;
-      const am = mm.length - 1;
-      for (; !(Am > am) && (Tm[Am++] = mm[fm++], !(Am > am));) Tm[Am++] = mm[hm++]
-    }! function(mm) {
-      mm[mm.NO_COMPRESSION = 0] = "NO_COMPRESSION", mm[mm.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", mm[mm.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", mm[mm.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", mm[mm.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", mm[mm.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
-    }(Km || (Km = {})),
-    function(mm) {
-      mm[mm.INCREASING_Y = 0] = "INCREASING_Y", mm[mm.DECREASING_Y = 1] = "DECREASING_Y"
-    }(Qm || (Qm = {}));
-    const Hm = 20000630;
+    function iD(DD, zD) {
+      let wD = 0,
+        pD = Math.floor((DD.length + 1) / 2),
+        sD = 0;
+      const KD = DD.length - 1;
+      for (; !(sD > KD) && (zD[sD++] = DD[wD++], !(sD > KD));) zD[sD++] = DD[pD++]
+    }! function(DD) {
+      DD[DD.NO_COMPRESSION = 0] = "NO_COMPRESSION", DD[DD.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", DD[DD.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", DD[DD.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", DD[DD.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", DD[DD.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
+    }(OD || (OD = {})),
+    function(DD) {
+      DD[DD.INCREASING_Y = 0] = "INCREASING_Y", DD[DD.DECREASING_Y = 1] = "DECREASING_Y"
+    }(JD || (JD = {}));
+    const lD = 20000630;
 
-    function ym(mm, Tm) {
-      if (mm.getUint32(0, !0) != Hm) throw new Error("Incorrect OpenEXR format");
-      const fm = mm.getUint8(4),
-        Am = mm.getUint8(5),
-        am = {
-          singleTile: !!(2 & Am),
-          longName: !!(4 & Am),
-          deepFormat: !!(8 & Am),
-          multiPart: !!(16 & Am)
+    function WD(DD, zD) {
+      if (DD.getUint32(0, !0) != lD) throw new Error("Incorrect OpenEXR format");
+      const wD = DD.getUint8(4),
+        sD = DD.getUint8(5),
+        KD = {
+          singleTile: !!(2 & sD),
+          longName: !!(4 & sD),
+          deepFormat: !!(8 & sD),
+          multiPart: !!(16 & sD)
         };
-      Tm.value = 8;
-      const xm = {};
-      let wm = !0;
-      for (; wm;) {
-        const fm = nm(mm.buffer, Tm);
-        if (fm) {
-          const Am = nm(mm.buffer, Tm),
-            am = Gm(mm, Tm, Am, cm(mm, Tm));
-          void 0 === am ? hm.b.Warn(`Unknown header attribute type ${Am}'.`) : xm[fm] = am
-        } else wm = !1
+      zD.value = 8;
+      const rD = {};
+      let LD = !0;
+      for (; LD;) {
+        const wD = ED(DD.buffer, zD);
+        if (wD) {
+          const sD = ED(DD.buffer, zD),
+            KD = dD(DD, zD, sD, XD(DD, zD));
+          void 0 === KD ? pD.d.Warn(`Unknown header attribute type ${sD}'.`) : rD[wD] = KD
+        } else LD = !1
       }
-      if (0 != (-5 & Am)) throw new Error("Unsupported file format");
+      if (0 != (-5 & sD)) throw new Error("Unsupported file format");
       return {
-        version: fm,
-        spec: am,
-        ...xm
-      }
-    }
-    const Cm = 32768,
-      rm = 65535;
-
-    function sm(mm, Tm, fm, hm, Am) {
-      for (; fm < mm;) Tm = Tm << 8 | km(hm, Am), fm += 8;
-      return {
-        l: Tm >> (fm -= mm) & (1 << mm) - 1,
-        c: Tm,
-        lc: fm
+        version: wD,
+        spec: KD,
+        ...rD
       }
     }
+    const ND = 32768,
+      ZD = 65535;
 
-    function lm(mm, Tm, fm, hm) {
+    function yD(DD, zD, wD, pD, sD) {
+      for (; wD < DD;) zD = zD << 8 | CD(pD, sD), wD += 8;
       return {
-        c: mm = mm << 8 | km(fm, hm),
-        lc: Tm += 8
+        l: zD >> (wD -= DD) & (1 << DD) - 1,
+        c: zD,
+        lc: wD
       }
     }
 
-    function Mm(mm, Tm, fm, hm, Am, am, xm, wm, Dm) {
-      if (mm == Tm) {
-        if (hm < 8) {
-          const mm = lm(fm, hm, Am, am);
-          fm = mm.c, hm = mm.lc
+    function kD(DD, zD, wD, pD) {
+      return {
+        c: DD = DD << 8 | CD(wD, pD),
+        lc: zD += 8
+      }
+    }
+
+    function mD(DD, zD, wD, pD, sD, KD, rD, LD, cD) {
+      if (DD == zD) {
+        if (pD < 8) {
+          const DD = kD(wD, pD, sD, KD);
+          wD = DD.c, pD = DD.lc
         }
-        let mm = fm >> (hm -= 8);
-        if (mm = new Uint8Array([mm])[0], wm.value + mm > Dm) return null;
-        const Tm = xm[wm.value - 1];
-        for (; mm-- > 0;) xm[wm.value++] = Tm
+        let DD = wD >> (pD -= 8);
+        if (DD = new Uint8Array([DD])[0], LD.value + DD > cD) return null;
+        const zD = rD[LD.value - 1];
+        for (; DD-- > 0;) rD[LD.value++] = zD
       } else {
-        if (!(wm.value < Dm)) return null;
-        xm[wm.value++] = mm
+        if (!(LD.value < cD)) return null;
+        rD[LD.value++] = DD
       }
       return {
-        c: fm,
-        lc: hm
+        c: wD,
+        lc: pD
       }
     }
-    const um = new Array(59);
+    const eD = new Array(59);
 
-    function Bm(mm, Tm, fm, hm, Am, am) {
-      const xm = Tm;
-      let wm = 0,
-        Dm = 0;
-      for (; hm <= Am; hm++) {
-        if (xm.value - Tm.value > fm) return;
-        let im = sm(6, wm, Dm, mm, xm);
-        const Rm = im.l;
-        if (wm = im.c, Dm = im.lc, am[hm] = Rm, Rm == Vm) {
-          if (xm.value - Tm.value > fm) throw new Error("Error in HufUnpackEncTable");
-          im = sm(8, wm, Dm, mm, xm);
-          let Rm = im.l + Im;
-          if (wm = im.c, Dm = im.lc, hm + Rm > Am + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; Rm--;) am[hm++] = 0;
-          hm--
-        } else if (Rm >= jm) {
-          let mm = Rm - jm + 2;
-          if (hm + mm > Am + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; mm--;) am[hm++] = 0;
-          hm--
+    function oD(DD, zD, wD, pD, sD, KD) {
+      const rD = zD;
+      let LD = 0,
+        cD = 0;
+      for (; pD <= sD; pD++) {
+        if (rD.value - zD.value > wD) return;
+        let gD = yD(6, LD, cD, DD, rD);
+        const RD = gD.l;
+        if (LD = gD.c, cD = gD.lc, KD[pD] = RD, RD == nD) {
+          if (rD.value - zD.value > wD) throw new Error("Error in HufUnpackEncTable");
+          gD = yD(8, LD, cD, DD, rD);
+          let RD = gD.l + MD;
+          if (LD = gD.c, cD = gD.lc, pD + RD > sD + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; RD--;) KD[pD++] = 0;
+          pD--
+        } else if (RD >= hD) {
+          let DD = RD - hD + 2;
+          if (pD + DD > sD + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; DD--;) KD[pD++] = 0;
+          pD--
         }
-      }! function(mm) {
-        for (let fm = 0; fm <= 58; ++fm) um[fm] = 0;
-        for (let fm = 0; fm < Om; ++fm) um[mm[fm]] += 1;
-        let Tm = 0;
-        for (let fm = 58; fm > 0; --fm) {
-          const mm = Tm + um[fm] >> 1;
-          um[fm] = Tm, Tm = mm
+      }! function(DD) {
+        for (let wD = 0; wD <= 58; ++wD) eD[wD] = 0;
+        for (let wD = 0; wD < ID; ++wD) eD[DD[wD]] += 1;
+        let zD = 0;
+        for (let wD = 58; wD > 0; --wD) {
+          const DD = zD + eD[wD] >> 1;
+          eD[wD] = zD, zD = DD
         }
-        for (let fm = 0; fm < Om; ++fm) {
-          const Tm = mm[fm];
-          Tm > 0 && (mm[fm] = Tm | um[Tm]++ << 6)
+        for (let wD = 0; wD < ID; ++wD) {
+          const zD = DD[wD];
+          zD > 0 && (DD[wD] = zD | eD[zD]++ << 6)
         }
-      }(am)
+      }(KD)
     }
 
-    function Lm(mm) {
-      return 63 & mm
+    function aD(DD) {
+      return 63 & DD
     }
 
-    function tm(mm) {
-      return mm >> 6
+    function uD(DD) {
+      return DD >> 6
     }
 
-    function Um(mm, Tm, fm, hm, Am, am) {
-      const xm = fm.value,
-        wm = cm(Tm, fm),
-        Dm = cm(Tm, fm);
-      fm.value += 4;
-      const im = cm(Tm, fm);
-      if (fm.value += 4, wm < 0 || wm >= Om || Dm < 0 || Dm >= Om) throw new Error("Wrong HUF_ENCSIZE");
-      const Rm = new Array(Om),
-        pm = new Array(Ym);
-      ! function(mm) {
-        for (let Tm = 0; Tm < Ym; Tm++) mm[Tm] = {}, mm[Tm].len = 0, mm[Tm].lit = 0, mm[Tm].p = null
-      }(pm);
-      if (Bm(mm, fm, hm - (fm.value - xm), wm, Dm, Rm), im > 8 * (hm - (fm.value - xm))) throw new Error("Wrong hufUncompress");
-      ! function(mm, Tm, fm, hm) {
-        for (; Tm <= fm; Tm++) {
-          const fm = tm(mm[Tm]),
-            Am = Lm(mm[Tm]);
-          if (fm >> Am) throw new Error("Invalid table entry");
-          if (Am > om) {
-            const mm = hm[fm >> Am - om];
-            if (mm.len) throw new Error("Invalid table entry");
-            if (mm.lit++, mm.p) {
-              const Tm = mm.p;
-              mm.p = new Array(mm.lit);
-              for (let fm = 0; fm < mm.lit - 1; ++fm) mm.p[fm] = Tm[fm]
-            } else mm.p = new Array(1);
-            mm.p[mm.lit - 1] = Tm
-          } else if (Am) {
-            let mm = 0;
-            for (let am = 1 << om - Am; am > 0; am--) {
-              const am = hm[(fm << om - Am) + mm];
-              if (am.len || am.p) throw new Error("Invalid table entry");
-              am.len = Am, am.lit = Tm, mm++
+    function vD(DD, zD, wD, pD, sD, KD) {
+      const rD = wD.value,
+        LD = XD(zD, wD),
+        cD = XD(zD, wD);
+      wD.value += 4;
+      const gD = XD(zD, wD);
+      if (wD.value += 4, LD < 0 || LD >= ID || cD < 0 || cD >= ID) throw new Error("Wrong HUF_ENCSIZE");
+      const RD = new Array(ID),
+        AD = new Array(BD);
+      ! function(DD) {
+        for (let zD = 0; zD < BD; zD++) DD[zD] = {}, DD[zD].len = 0, DD[zD].lit = 0, DD[zD].p = null
+      }(AD);
+      if (oD(DD, wD, pD - (wD.value - rD), LD, cD, RD), gD > 8 * (pD - (wD.value - rD))) throw new Error("Wrong hufUncompress");
+      ! function(DD, zD, wD, pD) {
+        for (; zD <= wD; zD++) {
+          const wD = uD(DD[zD]),
+            sD = aD(DD[zD]);
+          if (wD >> sD) throw new Error("Invalid table entry");
+          if (sD > fD) {
+            const DD = pD[wD >> sD - fD];
+            if (DD.len) throw new Error("Invalid table entry");
+            if (DD.lit++, DD.p) {
+              const zD = DD.p;
+              DD.p = new Array(DD.lit);
+              for (let wD = 0; wD < DD.lit - 1; ++wD) DD.p[wD] = zD[wD]
+            } else DD.p = new Array(1);
+            DD.p[DD.lit - 1] = zD
+          } else if (sD) {
+            let DD = 0;
+            for (let KD = 1 << fD - sD; KD > 0; KD--) {
+              const KD = pD[(wD << fD - sD) + DD];
+              if (KD.len || KD.p) throw new Error("Invalid table entry");
+              KD.len = sD, KD.lit = zD, DD++
             }
           }
         }
-      }(Rm, wm, Dm, pm),
-      function(mm, Tm, fm, hm, Am, am, xm, wm, Dm) {
-        let im = 0,
-          Rm = 0;
-        const pm = xm,
-          Em = Math.trunc(hm.value + (Am + 7) / 8);
-        for (; hm.value < Em;) {
-          let Am = lm(im, Rm, fm, hm);
-          for (im = Am.c, Rm = Am.lc; Rm >= om;) {
-            const xm = Tm[im >> Rm - om & qm];
-            if (xm.len) {
-              Rm -= xm.len;
-              const mm = Mm(xm.lit, am, im, Rm, fm, hm, wm, Dm, pm);
-              mm && (im = mm.c, Rm = mm.lc)
+      }(RD, LD, cD, AD),
+      function(DD, zD, wD, pD, sD, KD, rD, LD, cD) {
+        let gD = 0,
+          RD = 0;
+        const AD = rD,
+          UD = Math.trunc(pD.value + (sD + 7) / 8);
+        for (; pD.value < UD;) {
+          let sD = kD(gD, RD, wD, pD);
+          for (gD = sD.c, RD = sD.lc; RD >= fD;) {
+            const rD = zD[gD >> RD - fD & GD];
+            if (rD.len) {
+              RD -= rD.len;
+              const DD = mD(rD.lit, KD, gD, RD, wD, pD, LD, cD, AD);
+              DD && (gD = DD.c, RD = DD.lc)
             } else {
-              if (!xm.p) throw new Error("hufDecode issues");
-              let Tm;
-              for (Tm = 0; Tm < xm.lit; Tm++) {
-                const om = Lm(mm[xm.p[Tm]]);
-                for (; Rm < om && hm.value < Em;) Am = lm(im, Rm, fm, hm), im = Am.c, Rm = Am.lc;
-                if (Rm >= om && tm(mm[xm.p[Tm]]) == (im >> Rm - om & (1 << om) - 1)) {
-                  Rm -= om;
-                  const mm = Mm(xm.p[Tm], am, im, Rm, fm, hm, wm, Dm, pm);
-                  mm && (im = mm.c, Rm = mm.lc);
+              if (!rD.p) throw new Error("hufDecode issues");
+              let zD;
+              for (zD = 0; zD < rD.lit; zD++) {
+                const fD = aD(DD[rD.p[zD]]);
+                for (; RD < fD && pD.value < UD;) sD = kD(gD, RD, wD, pD), gD = sD.c, RD = sD.lc;
+                if (RD >= fD && uD(DD[rD.p[zD]]) == (gD >> RD - fD & (1 << fD) - 1)) {
+                  RD -= fD;
+                  const DD = mD(rD.p[zD], KD, gD, RD, wD, pD, LD, cD, AD);
+                  DD && (gD = DD.c, RD = DD.lc);
                   break
                 }
               }
-              if (Tm == xm.lit) throw new Error("HufDecode issues")
+              if (zD == rD.lit) throw new Error("HufDecode issues")
             }
           }
         }
-        const Om = 8 - Am & 7;
-        for (im >>= Om, Rm -= Om; Rm > 0;) {
-          const mm = Tm[im << om - Rm & qm];
-          if (!mm.len) throw new Error("HufDecode issues");
+        const ID = 8 - sD & 7;
+        for (gD >>= ID, RD -= ID; RD > 0;) {
+          const DD = zD[gD << fD - RD & GD];
+          if (!DD.len) throw new Error("HufDecode issues");
           {
-            Rm -= mm.len;
-            const Tm = Mm(mm.lit, am, im, Rm, fm, hm, wm, Dm, pm);
-            Tm && (im = Tm.c, Rm = Tm.lc)
+            RD -= DD.len;
+            const zD = mD(DD.lit, KD, gD, RD, wD, pD, LD, cD, AD);
+            zD && (gD = zD.c, RD = zD.lc)
           }
         }
-      }(Rm, pm, mm, fm, im, Dm, am, Am, {
+      }(RD, AD, DD, wD, gD, cD, KD, sD, {
         value: 0
       })
     }
 
-    function dm(mm) {
-      return 65535 & mm
+    function tD(DD) {
+      return 65535 & DD
     }
 
-    function gm(mm) {
-      const Tm = dm(mm);
-      return Tm > 32767 ? Tm - 65536 : Tm
+    function FD(DD) {
+      const zD = tD(DD);
+      return zD > 32767 ? zD - 65536 : zD
     }
 
-    function Wm(mm, Tm) {
-      const fm = gm(mm),
-        hm = gm(Tm),
-        Am = fm + (1 & hm) + (hm >> 1);
+    function YD(DD, zD) {
+      const wD = FD(DD),
+        pD = FD(zD),
+        sD = wD + (1 & pD) + (pD >> 1);
       return {
-        a: Am,
-        b: Am - hm
+        a: sD,
+        b: sD - pD
       }
     }
 
-    function Fm(mm, Tm) {
-      const fm = dm(mm),
-        hm = dm(Tm),
-        Am = fm - (hm >> 1) & rm;
+    function HD(DD, zD) {
+      const wD = tD(DD),
+        pD = tD(zD),
+        sD = wD - (pD >> 1) & ZD;
       return {
-        a: hm + Am - Cm & rm,
-        b: Am
+        a: pD + sD - ND & ZD,
+        b: sD
       }
     }
 
-    function mT(mm, Tm, fm, hm, Am, am, xm) {
-      const wm = xm < 16384,
-        Dm = fm > Am ? Am : fm;
-      let im, Rm, pm = 1;
-      for (; pm <= Dm;) pm <<= 1;
-      for (pm >>= 1, im = pm, pm >>= 1; pm >= 1;) {
-        Rm = 0;
-        const xm = Rm + am * (Am - im),
-          Dm = am * pm,
-          Em = am * im,
-          om = hm * pm,
-          Om = hm * im;
-        let Ym, qm, jm, Vm;
-        for (; Rm <= xm; Rm += Em) {
-          let Am = Rm;
-          const am = Rm + hm * (fm - im);
-          for (; Am <= am; Am += Om) {
-            const fm = Am + om,
-              hm = Am + Dm,
-              am = hm + om;
-            if (wm) {
-              let xm = Wm(mm[Am + Tm], mm[hm + Tm]);
-              Ym = xm.a, jm = xm.b, xm = Wm(mm[fm + Tm], mm[am + Tm]), qm = xm.a, Vm = xm.b, xm = Wm(Ym, qm), mm[Am + Tm] = xm.a, mm[fm + Tm] = xm.b, xm = Wm(jm, Vm), mm[hm + Tm] = xm.a, mm[am + Tm] = xm.b
+    function qD(DD, zD, wD, pD, sD, KD, rD) {
+      const LD = rD < 16384,
+        cD = wD > sD ? sD : wD;
+      let gD, RD, AD = 1;
+      for (; AD <= cD;) AD <<= 1;
+      for (AD >>= 1, gD = AD, AD >>= 1; AD >= 1;) {
+        RD = 0;
+        const rD = RD + KD * (sD - gD),
+          cD = KD * AD,
+          UD = KD * gD,
+          fD = pD * AD,
+          ID = pD * gD;
+        let BD, GD, hD, nD;
+        for (; RD <= rD; RD += UD) {
+          let sD = RD;
+          const KD = RD + pD * (wD - gD);
+          for (; sD <= KD; sD += ID) {
+            const wD = sD + fD,
+              pD = sD + cD,
+              KD = pD + fD;
+            if (LD) {
+              let rD = YD(DD[sD + zD], DD[pD + zD]);
+              BD = rD.a, hD = rD.b, rD = YD(DD[wD + zD], DD[KD + zD]), GD = rD.a, nD = rD.b, rD = YD(BD, GD), DD[sD + zD] = rD.a, DD[wD + zD] = rD.b, rD = YD(hD, nD), DD[pD + zD] = rD.a, DD[KD + zD] = rD.b
             } else {
-              let xm = Fm(mm[Am + Tm], mm[hm + Tm]);
-              Ym = xm.a, jm = xm.b, xm = Fm(mm[fm + Tm], mm[am + Tm]), qm = xm.a, Vm = xm.b, xm = Fm(Ym, qm), mm[Am + Tm] = xm.a, mm[fm + Tm] = xm.b, xm = Fm(jm, Vm), mm[hm + Tm] = xm.a, mm[am + Tm] = xm.b
+              let rD = HD(DD[sD + zD], DD[pD + zD]);
+              BD = rD.a, hD = rD.b, rD = HD(DD[wD + zD], DD[KD + zD]), GD = rD.a, nD = rD.b, rD = HD(BD, GD), DD[sD + zD] = rD.a, DD[wD + zD] = rD.b, rD = HD(hD, nD), DD[pD + zD] = rD.a, DD[KD + zD] = rD.b
             }
           }
-          if (fm & pm) {
-            const fm = Am + Dm;
-            let hm;
-            hm = wm ? Wm(mm[Am + Tm], mm[fm + Tm]) : Fm(mm[Am + Tm], mm[fm + Tm]), Ym = hm.a, mm[fm + Tm] = hm.b, mm[Am + Tm] = Ym
+          if (wD & AD) {
+            const wD = sD + cD;
+            let pD;
+            pD = LD ? YD(DD[sD + zD], DD[wD + zD]) : HD(DD[sD + zD], DD[wD + zD]), BD = pD.a, DD[wD + zD] = pD.b, DD[sD + zD] = BD
           }
         }
-        if (Am & pm) {
-          let Am = Rm;
-          const am = Rm + hm * (fm - im);
-          for (; Am <= am; Am += Om) {
-            const fm = Am + om;
-            let hm;
-            hm = wm ? Wm(mm[Am + Tm], mm[fm + Tm]) : Fm(mm[Am + Tm], mm[fm + Tm]), Ym = hm.a, mm[fm + Tm] = hm.b, mm[Am + Tm] = Ym
+        if (sD & AD) {
+          let sD = RD;
+          const KD = RD + pD * (wD - gD);
+          for (; sD <= KD; sD += ID) {
+            const wD = sD + fD;
+            let pD;
+            pD = LD ? YD(DD[sD + zD], DD[wD + zD]) : HD(DD[sD + zD], DD[wD + zD]), BD = pD.a, DD[wD + zD] = pD.b, DD[sD + zD] = BD
           }
         }
-        im = pm, pm >>= 1
+        gD = AD, AD >>= 1
       }
-      return Rm
+      return RD
     }
 
-    function TT(mm) {
-      return new DataView(mm.array.buffer, mm.offset.value, mm.size)
+    function Dz(DD) {
+      return new DataView(DD.array.buffer, DD.offset.value, DD.size)
     }
 
-    function fT(mm) {
-      const Tm = mm.viewer.buffer.slice(mm.offset.value, mm.offset.value + mm.size),
-        fm = new Uint8Array(function(mm) {
-          let Tm = mm.byteLength;
-          const fm = [];
-          let hm = 0;
-          const Am = new DataView(mm);
-          for (; Tm > 0;) {
-            const mm = Am.getInt8(hm++);
-            if (mm < 0) {
-              const am = -mm;
-              Tm -= am + 1;
-              for (let mm = 0; mm < am; mm++) fm.push(Am.getUint8(hm++))
+    function zz(DD) {
+      const zD = DD.viewer.buffer.slice(DD.offset.value, DD.offset.value + DD.size),
+        wD = new Uint8Array(function(DD) {
+          let zD = DD.byteLength;
+          const wD = [];
+          let pD = 0;
+          const sD = new DataView(DD);
+          for (; zD > 0;) {
+            const DD = sD.getInt8(pD++);
+            if (DD < 0) {
+              const KD = -DD;
+              zD -= KD + 1;
+              for (let DD = 0; DD < KD; DD++) wD.push(sD.getUint8(pD++))
             } else {
-              const am = mm;
-              Tm -= 2;
-              const xm = Am.getUint8(hm++);
-              for (let mm = 0; mm < am + 1; mm++) fm.push(xm)
+              const KD = DD;
+              zD -= 2;
+              const rD = sD.getUint8(pD++);
+              for (let DD = 0; DD < KD + 1; DD++) wD.push(rD)
             }
           }
-          return fm
-        }(Tm)),
-        hm = new Uint8Array(fm.length);
-      return Xm(fm), Pm(fm, hm), new DataView(hm.buffer)
+          return wD
+        }(zD)),
+        pD = new Uint8Array(wD.length);
+      return SD(wD), iD(wD, pD), new DataView(pD.buffer)
     }
 
-    function hT(mm) {
-      const Tm = mm.array.slice(mm.offset.value, mm.offset.value + mm.size),
-        fm = fflate.unzlibSync(Tm),
-        hm = new Uint8Array(fm.length);
-      return Xm(fm), Pm(fm, hm), new DataView(hm.buffer)
+    function wz(DD) {
+      const zD = DD.array.slice(DD.offset.value, DD.offset.value + DD.size),
+        wD = fflate.unzlibSync(zD),
+        pD = new Uint8Array(wD.length);
+      return SD(wD), iD(wD, pD), new DataView(pD.buffer)
     }
 
-    function AT(mm) {
-      const Tm = mm.array.slice(mm.offset.value, mm.offset.value + mm.size),
-        fm = fflate.unzlibSync(Tm),
-        hm = mm.lines * mm.channels * mm.width,
-        Am = 1 == mm.type ? new Uint16Array(hm) : new Uint32Array(hm);
-      let am = 0,
-        xm = 0;
-      const wm = new Array(4);
-      for (let Dm = 0; Dm < mm.lines; Dm++)
-        for (let Tm = 0; Tm < mm.channels; Tm++) {
-          let Tm = 0;
-          switch (mm.type) {
+    function pz(DD) {
+      const zD = DD.array.slice(DD.offset.value, DD.offset.value + DD.size),
+        wD = fflate.unzlibSync(zD),
+        pD = DD.lines * DD.channels * DD.width,
+        sD = 1 == DD.type ? new Uint16Array(pD) : new Uint32Array(pD);
+      let KD = 0,
+        rD = 0;
+      const LD = new Array(4);
+      for (let cD = 0; cD < DD.lines; cD++)
+        for (let zD = 0; zD < DD.channels; zD++) {
+          let zD = 0;
+          switch (DD.type) {
             case 1:
-              wm[0] = am, wm[1] = wm[0] + mm.width, am = wm[1] + mm.width;
-              for (let hm = 0; hm < mm.width; ++hm) {
-                Tm += fm[wm[0]++] << 8 | fm[wm[1]++], Am[xm] = Tm, xm++
+              LD[0] = KD, LD[1] = LD[0] + DD.width, KD = LD[1] + DD.width;
+              for (let pD = 0; pD < DD.width; ++pD) {
+                zD += wD[LD[0]++] << 8 | wD[LD[1]++], sD[rD] = zD, rD++
               }
               break;
             case 2:
-              wm[0] = am, wm[1] = wm[0] + mm.width, wm[2] = wm[1] + mm.width, am = wm[2] + mm.width;
-              for (let hm = 0; hm < mm.width; ++hm) {
-                Tm += fm[wm[0]++] << 24 | fm[wm[1]++] << 16 | fm[wm[2]++] << 8, Am[xm] = Tm, xm++
+              LD[0] = KD, LD[1] = LD[0] + DD.width, LD[2] = LD[1] + DD.width, KD = LD[2] + DD.width;
+              for (let pD = 0; pD < DD.width; ++pD) {
+                zD += wD[LD[0]++] << 24 | wD[LD[1]++] << 16 | wD[LD[2]++] << 8, sD[rD] = zD, rD++
               }
           }
         }
-      return new DataView(Am.buffer)
+      return new DataView(sD.buffer)
     }
 
-    function aT(mm) {
-      const Tm = mm.viewer,
-        fm = {
-          value: mm.offset.value
+    function sz(DD) {
+      const zD = DD.viewer,
+        wD = {
+          value: DD.offset.value
         },
-        hm = new Uint16Array(mm.width * mm.scanlineBlockSize * (mm.channels * mm.type)),
-        Am = new Uint8Array(Em);
-      let am = 0;
-      const xm = new Array(mm.channels);
-      for (let im = 0; im < mm.channels; im++) xm[im] = {}, xm[im].start = am, xm[im].end = xm[im].start, xm[im].nx = mm.width, xm[im].ny = mm.lines, xm[im].size = mm.type, am += xm[im].nx * xm[im].ny * xm[im].size;
-      const wm = Zm(Tm, fm),
-        Dm = Zm(Tm, fm);
-      if (Dm >= Em) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
-      if (wm <= Dm)
-        for (let im = 0; im < Dm - wm + 1; im++) Am[im + wm] = zm(Tm, fm);
-      const Rm = new Uint16Array(pm),
-        om = function(mm, Tm) {
-          let fm = 0;
-          for (let Am = 0; Am < pm; ++Am)(0 == Am || mm[Am >> 3] & 1 << (7 & Am)) && (Tm[fm++] = Am);
-          const hm = fm - 1;
-          for (; fm < pm;) Tm[fm++] = 0;
-          return hm
-        }(Am, Rm),
-        Om = cm(Tm, fm);
-      Um(mm.array, Tm, fm, Om, hm, am);
-      for (let im = 0; im < mm.channels; ++im) {
-        const mm = xm[im];
-        for (let Tm = 0; Tm < xm[im].size; ++Tm) mT(hm, mm.start + Tm, mm.nx, mm.size, mm.ny, mm.nx * mm.size, om)
-      }! function(mm, Tm, fm) {
-        for (let hm = 0; hm < fm; ++hm) Tm[hm] = mm[Tm[hm]]
-      }(Rm, hm, am);
-      let Ym = 0;
-      const qm = new Uint8Array(hm.buffer.byteLength);
-      for (let pm = 0; pm < mm.lines; pm++)
-        for (let Tm = 0; Tm < mm.channels; Tm++) {
-          const mm = xm[Tm],
-            fm = mm.nx * mm.size,
-            Am = new Uint8Array(hm.buffer, mm.end * im, fm * im);
-          qm.set(Am, Ym), Ym += fm * im, mm.end += fm
+        pD = new Uint16Array(DD.width * DD.scanlineBlockSize * (DD.channels * DD.type)),
+        sD = new Uint8Array(UD);
+      let KD = 0;
+      const rD = new Array(DD.channels);
+      for (let gD = 0; gD < DD.channels; gD++) rD[gD] = {}, rD[gD].start = KD, rD[gD].end = rD[gD].start, rD[gD].nx = DD.width, rD[gD].ny = DD.lines, rD[gD].size = DD.type, KD += rD[gD].nx * rD[gD].ny * rD[gD].size;
+      const LD = PD(zD, wD),
+        cD = PD(zD, wD);
+      if (cD >= UD) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
+      if (LD <= cD)
+        for (let gD = 0; gD < cD - LD + 1; gD++) sD[gD + LD] = VD(zD, wD);
+      const RD = new Uint16Array(AD),
+        fD = function(DD, zD) {
+          let wD = 0;
+          for (let sD = 0; sD < AD; ++sD)(0 == sD || DD[sD >> 3] & 1 << (7 & sD)) && (zD[wD++] = sD);
+          const pD = wD - 1;
+          for (; wD < AD;) zD[wD++] = 0;
+          return pD
+        }(sD, RD),
+        ID = XD(zD, wD);
+      vD(DD.array, zD, wD, ID, pD, KD);
+      for (let gD = 0; gD < DD.channels; ++gD) {
+        const DD = rD[gD];
+        for (let zD = 0; zD < rD[gD].size; ++zD) qD(pD, DD.start + zD, DD.nx, DD.size, DD.ny, DD.nx * DD.size, fD)
+      }! function(DD, zD, wD) {
+        for (let pD = 0; pD < wD; ++pD) zD[pD] = DD[zD[pD]]
+      }(RD, pD, KD);
+      let BD = 0;
+      const GD = new Uint8Array(pD.buffer.byteLength);
+      for (let AD = 0; AD < DD.lines; AD++)
+        for (let zD = 0; zD < DD.channels; zD++) {
+          const DD = rD[zD],
+            wD = DD.nx * DD.size,
+            sD = new Uint8Array(pD.buffer, DD.end * gD, wD * gD);
+          GD.set(sD, BD), BD += wD * gD, DD.end += wD
         }
-      return new DataView(qm.buffer)
+      return new DataView(GD.buffer)
     }
-    var xT, wT = fm(40203);
-    ! function(mm) {
-      mm[mm.Float = 0] = "Float", mm[mm.HalfFloat = 1] = "HalfFloat"
-    }(xT || (xT = {}));
-    class DT {}
-    async function iT(mm, Tm, fm, hm) {
-      const Am = {
+    var Kz, rz = wD(40027);
+    ! function(DD) {
+      DD[DD.Float = 0] = "Float", DD[DD.HalfFloat = 1] = "HalfFloat"
+    }(Kz || (Kz = {}));
+    class Lz {}
+    async function cz(DD, zD, wD, pD) {
+      const sD = {
         size: 0,
-        viewer: Tm,
-        array: new Uint8Array(Tm.buffer),
-        offset: fm,
-        width: mm.dataWindow.xMax - mm.dataWindow.xMin + 1,
-        height: mm.dataWindow.yMax - mm.dataWindow.yMin + 1,
-        channels: mm.channels.length,
+        viewer: zD,
+        array: new Uint8Array(zD.buffer),
+        offset: wD,
+        width: DD.dataWindow.xMax - DD.dataWindow.xMin + 1,
+        height: DD.dataWindow.yMax - DD.dataWindow.yMin + 1,
+        channels: DD.channels.length,
         channelLineOffsets: {},
         scanOrder: () => 0,
         bytesPerLine: 0,
@@ -595,174 +595,174 @@ export const modules = {
         linearSpace: !1,
         textureType: 0
       };
-      switch (mm.compression) {
-        case Km.NO_COMPRESSION:
-          Am.lines = 1, Am.uncompress = TT;
+      switch (DD.compression) {
+        case OD.NO_COMPRESSION:
+          sD.lines = 1, sD.uncompress = Dz;
           break;
-        case Km.RLE_COMPRESSION:
-          Am.lines = 1, Am.uncompress = fT;
+        case OD.RLE_COMPRESSION:
+          sD.lines = 1, sD.uncompress = zz;
           break;
-        case Km.ZIPS_COMPRESSION:
-          Am.lines = 1, Am.uncompress = hT, await wT.h.LoadScriptAsync(DT.FFLATEUrl);
+        case OD.ZIPS_COMPRESSION:
+          sD.lines = 1, sD.uncompress = wz, await rz.h.LoadScriptAsync(Lz.FFLATEUrl);
           break;
-        case Km.ZIP_COMPRESSION:
-          Am.lines = 16, Am.uncompress = hT, await wT.h.LoadScriptAsync(DT.FFLATEUrl);
+        case OD.ZIP_COMPRESSION:
+          sD.lines = 16, sD.uncompress = wz, await rz.h.LoadScriptAsync(Lz.FFLATEUrl);
           break;
-        case Km.PIZ_COMPRESSION:
-          Am.lines = 32, Am.uncompress = aT;
+        case OD.PIZ_COMPRESSION:
+          sD.lines = 32, sD.uncompress = sz;
           break;
-        case Km.PXR24_COMPRESSION:
-          Am.lines = 16, Am.uncompress = AT, await wT.h.LoadScriptAsync(DT.FFLATEUrl);
+        case OD.PXR24_COMPRESSION:
+          sD.lines = 16, sD.uncompress = pz, await rz.h.LoadScriptAsync(Lz.FFLATEUrl);
           break;
         default:
-          throw new Error(Km[mm.compression] + " is unsupported")
+          throw new Error(OD[DD.compression] + " is unsupported")
       }
-      Am.scanlineBlockSize = Am.lines;
-      const am = {};
-      for (const wm of mm.channels) switch (wm.name) {
+      sD.scanlineBlockSize = sD.lines;
+      const KD = {};
+      for (const LD of DD.channels) switch (LD.name) {
         case "R":
         case "G":
         case "B":
         case "A":
         case "Y":
-          am[wm.name] = !0, Am.type = wm.pixelType
+          KD[LD.name] = !0, sD.type = LD.pixelType
       }
-      let xm = !1;
-      if (am.R && am.G && am.B && am.A) Am.outputChannels = 4, Am.decodeChannels = {
+      let rD = !1;
+      if (KD.R && KD.G && KD.B && KD.A) sD.outputChannels = 4, sD.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (am.R && am.G && am.B) xm = !0, Am.outputChannels = 4, Am.decodeChannels = {
+      else if (KD.R && KD.G && KD.B) rD = !0, sD.outputChannels = 4, sD.decodeChannels = {
         R: 0,
         G: 1,
         B: 2,
         A: 3
       };
-      else if (am.R && am.G) Am.outputChannels = 2, Am.decodeChannels = {
+      else if (KD.R && KD.G) sD.outputChannels = 2, sD.decodeChannels = {
         R: 0,
         G: 1
       };
-      else if (am.R) Am.outputChannels = 1, Am.decodeChannels = {
+      else if (KD.R) sD.outputChannels = 1, sD.decodeChannels = {
         R: 0
       };
       else {
-        if (!am.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
-        Am.outputChannels = 1, Am.decodeChannels = {
+        if (!KD.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
+        sD.outputChannels = 1, sD.decodeChannels = {
           Y: 0
         }
       }
-      if (1 === Am.type) switch (hm) {
-        case xT.Float:
-          Am.getter = em, Am.inputSize = im;
+      if (1 === sD.type) switch (pD) {
+        case Kz.Float:
+          sD.getter = bD, sD.inputSize = gD;
           break;
-        case xT.HalfFloat:
-          Am.getter = Zm, Am.inputSize = im
+        case Kz.HalfFloat:
+          sD.getter = PD, sD.inputSize = gD
       } else {
-        if (2 !== Am.type) throw new Error("Unsupported pixelType " + Am.type + " for " + mm.compression);
-        switch (hm) {
-          case xT.Float:
-            Am.getter = Sm, Am.inputSize = wm;
+        if (2 !== sD.type) throw new Error("Unsupported pixelType " + sD.type + " for " + DD.compression);
+        switch (pD) {
+          case Kz.Float:
+            sD.getter = TD, sD.inputSize = LD;
             break;
-          case xT.HalfFloat:
-            Am.getter = Nm, Am.inputSize = wm
+          case Kz.HalfFloat:
+            sD.getter = jD, sD.inputSize = LD
         }
       }
-      Am.blockCount = Am.height / Am.scanlineBlockSize;
-      for (let wm = 0; wm < Am.blockCount; wm++) bm(Tm, fm);
-      const Dm = Am.width * Am.height * Am.outputChannels;
-      switch (hm) {
-        case xT.Float:
-          Am.byteArray = new Float32Array(Dm), Am.textureType = 1, xm && Am.byteArray.fill(1, 0, Dm);
+      sD.blockCount = sD.height / sD.scanlineBlockSize;
+      for (let LD = 0; LD < sD.blockCount; LD++) xD(zD, wD);
+      const cD = sD.width * sD.height * sD.outputChannels;
+      switch (pD) {
+        case Kz.Float:
+          sD.byteArray = new Float32Array(cD), sD.textureType = 1, rD && sD.byteArray.fill(1, 0, cD);
           break;
-        case xT.HalfFloat:
-          Am.byteArray = new Uint16Array(Dm), Am.textureType = 2, xm && Am.byteArray.fill(15360, 0, Dm);
+        case Kz.HalfFloat:
+          sD.byteArray = new Uint16Array(cD), sD.textureType = 2, rD && sD.byteArray.fill(15360, 0, cD);
           break;
         default:
-          throw new Error("Unsupported type: " + hm)
+          throw new Error("Unsupported type: " + pD)
       }
-      let Rm = 0;
-      for (const wm of mm.channels) void 0 !== Am.decodeChannels[wm.name] && (Am.channelLineOffsets[wm.name] = Rm * Am.width), Rm += 2 * wm.pixelType;
-      return Am.bytesPerLine = Am.width * Rm, Am.outLineWidth = Am.width * Am.outputChannels, "INCREASING_Y" === mm.lineOrder ? Am.scanOrder = mm => mm : Am.scanOrder = mm => Am.height - 1 - mm, 4 == Am.outputChannels ? (Am.format = 5, Am.linearSpace = !0) : (Am.format = 6, Am.linearSpace = !1), Am
+      let RD = 0;
+      for (const LD of DD.channels) void 0 !== sD.decodeChannels[LD.name] && (sD.channelLineOffsets[LD.name] = RD * sD.width), RD += 2 * LD.pixelType;
+      return sD.bytesPerLine = sD.width * RD, sD.outLineWidth = sD.width * sD.outputChannels, "INCREASING_Y" === DD.lineOrder ? sD.scanOrder = DD => DD : sD.scanOrder = DD => sD.height - 1 - DD, 4 == sD.outputChannels ? (sD.format = 5, sD.linearSpace = !0) : (sD.format = 6, sD.linearSpace = !1), sD
     }
 
-    function RT(mm, Tm, fm, hm) {
-      const Am = {
+    function gz(DD, zD, wD, pD) {
+      const sD = {
         value: 0
       };
-      for (let am = 0; am < mm.height / mm.scanlineBlockSize; am++) {
-        const xm = Jm(fm, hm) - Tm.dataWindow.yMin;
-        mm.size = cm(fm, hm), mm.lines = xm + mm.scanlineBlockSize > mm.height ? mm.height - xm : mm.scanlineBlockSize;
-        const wm = mm.size < mm.lines * mm.bytesPerLine && mm.uncompress ? mm.uncompress(mm) : TT(mm);
-        hm.value += mm.size;
-        for (let fm = 0; fm < mm.scanlineBlockSize; fm++) {
-          const hm = am * mm.scanlineBlockSize,
-            xm = fm + mm.scanOrder(hm);
-          if (xm >= mm.height) continue;
-          const Dm = fm * mm.bytesPerLine,
-            im = (mm.height - 1 - xm) * mm.outLineWidth;
-          for (let fm = 0; fm < mm.channels; fm++) {
-            const hm = Tm.channels[fm].name,
-              am = mm.channelLineOffsets[hm],
-              xm = mm.decodeChannels[hm];
-            if (void 0 !== xm) {
-              Am.value = Dm + am;
-              for (let Tm = 0; Tm < mm.width; Tm++) {
-                const fm = im + Tm * mm.outputChannels + xm;
-                mm.byteArray && (mm.byteArray[fm] = mm.getter(wm, Am))
+      for (let KD = 0; KD < DD.height / DD.scanlineBlockSize; KD++) {
+        const rD = QD(wD, pD) - zD.dataWindow.yMin;
+        DD.size = XD(wD, pD), DD.lines = rD + DD.scanlineBlockSize > DD.height ? DD.height - rD : DD.scanlineBlockSize;
+        const LD = DD.size < DD.lines * DD.bytesPerLine && DD.uncompress ? DD.uncompress(DD) : Dz(DD);
+        pD.value += DD.size;
+        for (let wD = 0; wD < DD.scanlineBlockSize; wD++) {
+          const pD = KD * DD.scanlineBlockSize,
+            rD = wD + DD.scanOrder(pD);
+          if (rD >= DD.height) continue;
+          const cD = wD * DD.bytesPerLine,
+            gD = (DD.height - 1 - rD) * DD.outLineWidth;
+          for (let wD = 0; wD < DD.channels; wD++) {
+            const pD = zD.channels[wD].name,
+              KD = DD.channelLineOffsets[pD],
+              rD = DD.decodeChannels[pD];
+            if (void 0 !== rD) {
+              sD.value = cD + KD;
+              for (let zD = 0; zD < DD.width; zD++) {
+                const wD = gD + zD * DD.outputChannels + rD;
+                DD.byteArray && (DD.byteArray[wD] = DD.getter(LD, sD))
               }
             }
           }
         }
       }
     }
-    DT.DefaultOutputType = xT.HalfFloat, DT.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
-    class pT {
+    Lz.DefaultOutputType = Kz.HalfFloat, Lz.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
+    class Rz {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(mm, Tm, fm, hm, Am) {
+      loadCubeData(DD, zD, wD, pD, sD) {
         throw ".exr not supported in Cube."
       }
-      loadData(mm, Tm, fm) {
-        const Am = new DataView(mm.buffer),
-          am = {
+      loadData(DD, zD, wD) {
+        const sD = new DataView(DD.buffer),
+          KD = {
             value: 0
           },
-          xm = ym(Am, am);
-        iT(xm, Am, am, DT.DefaultOutputType).then((mm => {
-          RT(mm, xm, Am, am);
-          const hm = xm.dataWindow.xMax - xm.dataWindow.xMin + 1,
-            wm = xm.dataWindow.yMax - xm.dataWindow.yMin + 1;
-          fm(hm, wm, Tm.generateMipMaps, !1, (() => {
-            const fm = Tm.dO();
-            Tm.format = xm.format, Tm.type = mm.textureType, Tm.invertY = !1, Tm._gammaSpace = !xm.linearSpace, mm.byteArray && fm._uploadDataToTextureDirectly(Tm, mm.byteArray, 0, 0, void 0, !0)
+          rD = WD(sD, KD);
+        cz(rD, sD, KD, Lz.DefaultOutputType).then((DD => {
+          gz(DD, rD, sD, KD);
+          const pD = rD.dataWindow.xMax - rD.dataWindow.xMin + 1,
+            LD = rD.dataWindow.yMax - rD.dataWindow.yMin + 1;
+          wD(pD, LD, zD.generateMipMaps, !1, (() => {
+            const wD = zD.iI();
+            zD.format = rD.format, zD.type = DD.textureType, zD.invertY = !1, zD._gammaSpace = !rD.linearSpace, DD.byteArray && wD._uploadDataToTextureDirectly(zD, DD.byteArray, 0, 0, void 0, !0)
           }))
-        })).catch((mm => {
-          hm.b.Error("Failed to load EXR texture: ", mm)
+        })).catch((DD => {
+          pD.d.Error("Failed to load EXR texture: ", DD)
         }))
       }
     }
-    async function ET(mm) {
-      const Tm = new DataView(mm),
-        fm = {
+    async function Az(DD) {
+      const zD = new DataView(DD),
+        wD = {
           value: 0
         },
-        Am = ym(Tm, fm);
+        sD = WD(zD, wD);
       try {
-        const mm = await iT(Am, Tm, fm, xT.Float);
-        return RT(mm, Am, Tm, fm), mm.byteArray ? {
-          width: Am.dataWindow.xMax - Am.dataWindow.xMin + 1,
-          height: Am.dataWindow.yMax - Am.dataWindow.yMin + 1,
-          data: new Float32Array(mm.byteArray)
-        } : (hm.b.Error("Failed to decode EXR data: No byte array available."), {
+        const DD = await cz(sD, zD, wD, Kz.Float);
+        return gz(DD, sD, zD, wD), DD.byteArray ? {
+          width: sD.dataWindow.xMax - sD.dataWindow.xMin + 1,
+          height: sD.dataWindow.yMax - sD.dataWindow.yMin + 1,
+          data: new Float32Array(DD.byteArray)
+        } : (pD.d.Error("Failed to decode EXR data: No byte array available."), {
           width: 0,
           height: 0,
           data: null
         })
-      } catch (am) {
-        hm.b.Error("Failed to load EXR data: ", am)
+      } catch (KD) {
+        pD.d.Error("Failed to load EXR data: ", KD)
       }
       return {
         width: 0,
@@ -773,4 +773,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

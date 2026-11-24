@@ -1,114 +1,114 @@
-/*! For license information please see mpd96o.268.ae2f4eb5.chunk.js.LICENSE.txt */
+/*! For license information please see tz47m9.268.85dc0d6d.chunk.js.LICENSE.txt */
 export const id = 268;
 export const ids = [268];
 export const modules = {
-    40628: (mm, Tm, fm) => {
-        fm.r(Tm), fm.d(Tm, {
-          ActionCodeOperation: () => Em,
-          ActionCodeURL: () => WT,
-          AuthCredential: () => rT,
-          AuthErrorCodes: () => jm,
-          EmailAuthCredential: () => vT,
-          EmailAuthProvider: () => mf,
-          FacebookAuthProvider: () => Af,
-          FactorId: () => Dm,
-          GithubAuthProvider: () => xf,
-          GoogleAuthProvider: () => af,
-          OAuthCredential: () => UT,
-          OAuthProvider: () => hf,
-          OperationType: () => pm,
-          PhoneAuthCredential: () => gT,
-          PhoneAuthProvider: () => AA,
-          PhoneMultiFactorGenerator: () => ha,
-          ProviderId: () => im,
-          RecaptchaVerifier: () => gh,
-          SAMLAuthProvider: () => Df,
-          SignInMethod: () => Rm,
-          TotpMultiFactorGenerator: () => Aa,
-          TotpSecret: () => xa,
-          TwitterAuthProvider: () => Rf,
-          applyActionCode: () => Pf,
-          beforeAuthStateChanged: () => wh,
-          browserLocalPersistence: () => nh,
-          browserPopupRedirectResolver: () => ma,
-          browserSessionPersistence: () => ch,
-          checkActionCode: () => Hf,
-          confirmPasswordReset: () => Xf,
-          connectAuthEmulator: () => HT,
-          createUserWithEmailAndPassword: () => Cf,
-          debugErrorMap: () => Om,
-          deleteUser: () => Eh,
-          fetchSignInMethodsForEmail: () => uf,
-          getAdditionalUserInfo: () => hh,
-          getAuth: () => Oa,
-          getIdToken: () => Lm,
-          getIdTokenResult: () => tm,
-          getMultiFactorResolver: () => Yh,
-          getRedirectResult: () => ZA,
-          inMemoryPersistence: () => DT,
-          indexedDBLocalPersistence: () => sh,
-          initializeAuth: () => PT,
-          initializeRecaptchaConfig: () => ah,
-          isSignInWithEmailLink: () => lf,
-          linkWithCredential: () => zf,
-          linkWithPhoneNumber: () => mA,
-          linkWithPopup: () => OA,
-          linkWithRedirect: () => zA,
-          multiFactor: () => Vh,
-          onAuthStateChanged: () => Dh,
-          onIdTokenChanged: () => xh,
-          parseActionCodeURL: () => FT,
-          prodErrorMap: () => Ym,
-          reauthenticateWithCredential: () => Zf,
-          reauthenticateWithPhoneNumber: () => TA,
-          reauthenticateWithPopup: () => oA,
-          reauthenticateWithRedirect: () => cA,
-          reload: () => TT,
-          sendEmailVerification: () => Bf,
-          sendPasswordResetEmail: () => Gf,
-          sendSignInLinkToEmail: () => sf,
-          setPersistence: () => Ah,
-          signInAnonymously: () => Of,
-          signInWithCredential: () => Jf,
-          signInWithCustomToken: () => kf,
-          signInWithEmailAndPassword: () => rf,
-          signInWithEmailLink: () => Mf,
-          signInWithPhoneNumber: () => Fh,
-          signInWithPopup: () => EA,
-          signInWithRedirect: () => JA,
-          signOut: () => ph,
-          unlink: () => Vf,
-          updateCurrentUser: () => Rh,
-          updateEmail: () => tf,
-          updatePassword: () => Uf,
-          updatePhoneNumber: () => hA,
-          updateProfile: () => vf,
-          useDeviceLanguage: () => ih,
-          verifyBeforeUpdateEmail: () => Lf,
-          verifyPasswordResetCode: () => yf
+    40455: (DD, zD, wD) => {
+        wD.r(zD), wD.d(zD, {
+          ActionCodeOperation: () => UD,
+          ActionCodeURL: () => Yz,
+          AuthCredential: () => Nz,
+          AuthErrorCodes: () => hD,
+          EmailAuthCredential: () => az,
+          EmailAuthProvider: () => qz,
+          FacebookAuthProvider: () => pw,
+          FactorId: () => cD,
+          GithubAuthProvider: () => Kw,
+          GoogleAuthProvider: () => sw,
+          OAuthCredential: () => vz,
+          OAuthProvider: () => ww,
+          OperationType: () => AD,
+          PhoneAuthCredential: () => Fz,
+          PhoneAuthProvider: () => ps,
+          PhoneMultiFactorGenerator: () => sK,
+          ProviderId: () => gD,
+          RecaptchaVerifier: () => Fp,
+          SAMLAuthProvider: () => Lw,
+          SignInMethod: () => RD,
+          TotpMultiFactorGenerator: () => KK,
+          TotpSecret: () => LK,
+          TwitterAuthProvider: () => gw,
+          applyActionCode: () => dw,
+          beforeAuthStateChanged: () => Kp,
+          browserLocalPersistence: () => Op,
+          browserPopupRedirectResolver: () => zK,
+          browserSessionPersistence: () => Ep,
+          checkActionCode: () => Sw,
+          confirmPasswordReset: () => jw,
+          connectAuthEmulator: () => iz,
+          createUserWithEmailAndPassword: () => lw,
+          debugErrorMap: () => ID,
+          deleteUser: () => Rp,
+          fetchSignInMethodsForEmail: () => kw,
+          getAdditionalUserInfo: () => zp,
+          getAuth: () => BK,
+          getIdToken: () => aD,
+          getIdTokenResult: () => uD,
+          getMultiFactorResolver: () => fp,
+          getRedirectResult: () => Ps,
+          inMemoryPersistence: () => Lz,
+          indexedDBLocalPersistence: () => Np,
+          initializeAuth: () => Sz,
+          initializeRecaptchaConfig: () => pp,
+          isSignInWithEmailLink: () => Zw,
+          linkWithCredential: () => Qw,
+          linkWithPhoneNumber: () => qp,
+          linkWithPopup: () => fs,
+          linkWithRedirect: () => Vs,
+          multiFactor: () => Gp,
+          onAuthStateChanged: () => rp,
+          onIdTokenChanged: () => sp,
+          parseActionCodeURL: () => Hz,
+          prodErrorMap: () => BD,
+          reauthenticateWithCredential: () => Xw,
+          reauthenticateWithPhoneNumber: () => Ds,
+          reauthenticateWithPopup: () => Us,
+          reauthenticateWithRedirect: () => Xs,
+          reload: () => Dz,
+          sendEmailVerification: () => mw,
+          sendPasswordResetEmail: () => bw,
+          sendSignInLinkToEmail: () => Nw,
+          setPersistence: () => wp,
+          signInAnonymously: () => fw,
+          signInWithCredential: () => Ew,
+          signInWithCustomToken: () => Vw,
+          signInWithEmailAndPassword: () => Ww,
+          signInWithEmailLink: () => yw,
+          signInWithPhoneNumber: () => Hp,
+          signInWithPopup: () => As,
+          signInWithRedirect: () => Qs,
+          signOut: () => gp,
+          unlink: () => hw,
+          updateCurrentUser: () => cp,
+          updateEmail: () => aw,
+          updatePassword: () => uw,
+          updatePhoneNumber: () => ws,
+          updateProfile: () => ow,
+          useDeviceLanguage: () => Lp,
+          verifyBeforeUpdateEmail: () => ew,
+          verifyPasswordResetCode: () => iw
         });
-        var hm = fm(40614),
-          Am = fm(40606);
+        var pD = wD(40442),
+          sD = wD(40430);
 
-        function am(mm, Tm) {
-          var fm = {};
-          for (var hm in mm) Object.prototype.hasOwnProperty.call(mm, hm) && Tm.indexOf(hm) < 0 && (fm[hm] = mm[hm]);
-          if (null != mm && "function" === typeof Object.getOwnPropertySymbols) {
-            var Am = 0;
-            for (hm = Object.getOwnPropertySymbols(mm); Am < hm.length; Am++) Tm.indexOf(hm[Am]) < 0 && Object.prototype.propertyIsEnumerable.call(mm, hm[Am]) && (fm[hm[Am]] = mm[hm[Am]])
+        function KD(DD, zD) {
+          var wD = {};
+          for (var pD in DD) Object.prototype.hasOwnProperty.call(DD, pD) && zD.indexOf(pD) < 0 && (wD[pD] = DD[pD]);
+          if (null != DD && "function" === typeof Object.getOwnPropertySymbols) {
+            var sD = 0;
+            for (pD = Object.getOwnPropertySymbols(DD); sD < pD.length; sD++) zD.indexOf(pD[sD]) < 0 && Object.prototype.propertyIsEnumerable.call(DD, pD[sD]) && (wD[pD[sD]] = DD[pD[sD]])
           }
-          return fm
+          return wD
         }
         Object.create;
         Object.create;
         "function" === typeof SuppressedError && SuppressedError;
-        var xm = fm(40618),
-          wm = fm(40610);
-        const Dm = {
+        var rD = wD(40446),
+          LD = wD(40435);
+        const cD = {
             PHONE: "phone",
             TOTP: "totp"
           },
-          im = {
+          gD = {
             FACEBOOK: "facebook.com",
             GITHUB: "github.com",
             GOOGLE: "google.com",
@@ -116,7 +116,7 @@ export const modules = {
             PHONE: "phone",
             TWITTER: "twitter.com"
           },
-          Rm = {
+          RD = {
             EMAIL_LINK: "emailLink",
             EMAIL_PASSWORD: "password",
             FACEBOOK: "facebook.com",
@@ -125,12 +125,12 @@ export const modules = {
             PHONE: "phone",
             TWITTER: "twitter.com"
           },
-          pm = {
+          AD = {
             LINK: "link",
             REAUTHENTICATE: "reauthenticate",
             SIGN_IN: "signIn"
           },
-          Em = {
+          UD = {
             EMAIL_SIGNIN: "EMAIL_SIGNIN",
             PASSWORD_RESET: "PASSWORD_RESET",
             RECOVER_EMAIL: "RECOVER_EMAIL",
@@ -139,12 +139,12 @@ export const modules = {
             VERIFY_EMAIL: "VERIFY_EMAIL"
           };
 
-        function om() {
+        function fD() {
           return {
             "dependent-sdk-initialized-before-auth": "Another Firebase SDK was initialized and is trying to use Auth before Auth is initialized. Please be sure to call `initializeAuth` or `getAuth` before starting any other Firebase SDK."
           }
         }
-        const Om = function() {
+        const ID = function() {
             return {
               "admin-restricted-operation": "This operation is restricted to administrators only.",
               "argument-error": "",
@@ -253,11 +253,11 @@ export const modules = {
               "invalid-recaptcha-version": "The reCAPTCHA version is invalid when sending request to the backend."
             }
           },
-          Ym = om,
-          qm = new hm.e("auth", "Firebase", {
+          BD = fD,
+          GD = new pD.c("auth", "Firebase", {
             "dependent-sdk-initialized-before-auth": "Another Firebase SDK was initialized and is trying to use Auth before Auth is initialized. Please be sure to call `initializeAuth` or `getAuth` before starting any other Firebase SDK."
           }),
-          jm = {
+          hD = {
             ADMIN_ONLY_OPERATION: "auth/admin-restricted-operation",
             ARGUMENT_ERROR: "auth/argument-error",
             APP_NOT_AUTHORIZED: "auth/app-not-authorized",
@@ -362,108 +362,108 @@ export const modules = {
             INVALID_RECAPTCHA_VERSION: "auth/invalid-recaptcha-version",
             INVALID_REQ_TYPE: "auth/invalid-req-type"
           },
-          Vm = new xm.g("@firebase/auth");
+          nD = new rD.h("@firebase/auth");
 
-        function Im(mm) {
-          if (Vm.logLevel <= xm.d.ERROR) {
-            for (var Tm = arguments.length, fm = new Array(Tm > 1 ? Tm - 1 : 0), hm = 1; hm < Tm; hm++) fm[hm - 1] = arguments[hm];
-            Vm.error(`Auth (${Am.d}): ${mm}`, ...fm)
+        function MD(DD) {
+          if (nD.logLevel <= rD.e.ERROR) {
+            for (var zD = arguments.length, wD = new Array(zD > 1 ? zD - 1 : 0), pD = 1; pD < zD; pD++) wD[pD - 1] = arguments[pD];
+            nD.error(`Auth (${sD.e}): ${DD}`, ...wD)
           }
         }
 
-        function Km(mm) {
-          for (var Tm = arguments.length, fm = new Array(Tm > 1 ? Tm - 1 : 0), hm = 1; hm < Tm; hm++) fm[hm - 1] = arguments[hm];
-          throw cm(mm, ...fm)
+        function OD(DD) {
+          for (var zD = arguments.length, wD = new Array(zD > 1 ? zD - 1 : 0), pD = 1; pD < zD; pD++) wD[pD - 1] = arguments[pD];
+          throw XD(DD, ...wD)
         }
 
-        function Qm(mm) {
-          for (var Tm = arguments.length, fm = new Array(Tm > 1 ? Tm - 1 : 0), hm = 1; hm < Tm; hm++) fm[hm - 1] = arguments[hm];
-          return cm(mm, ...fm)
+        function JD(DD) {
+          for (var zD = arguments.length, wD = new Array(zD > 1 ? zD - 1 : 0), pD = 1; pD < zD; pD++) wD[pD - 1] = arguments[pD];
+          return XD(DD, ...wD)
         }
 
-        function nm(mm, Tm, fm) {
-          const Am = Object.assign(Object.assign({}, Ym()), {
-            [Tm]: fm
+        function ED(DD, zD, wD) {
+          const sD = Object.assign(Object.assign({}, BD()), {
+            [zD]: wD
           });
-          return new hm.e("auth", "Firebase", Am).create(Tm, {
-            appName: mm.name
+          return new pD.c("auth", "Firebase", sD).create(zD, {
+            appName: DD.name
           })
         }
 
-        function Jm(mm, Tm, fm) {
-          if (!(Tm instanceof fm)) throw fm.name !== Tm.constructor.name && Km(mm, "argument-error"), nm(mm, "argument-error", `Type of ${Tm.constructor.name} does not match expected instance.Did you pass a reference from a different Auth SDK?`)
+        function QD(DD, zD, wD) {
+          if (!(zD instanceof wD)) throw wD.name !== zD.constructor.name && OD(DD, "argument-error"), ED(DD, "argument-error", `Type of ${zD.constructor.name} does not match expected instance.Did you pass a reference from a different Auth SDK?`)
         }
 
-        function cm(mm) {
-          for (var Tm = arguments.length, fm = new Array(Tm > 1 ? Tm - 1 : 0), hm = 1; hm < Tm; hm++) fm[hm - 1] = arguments[hm];
-          if ("string" !== typeof mm) {
-            const Tm = fm[0],
-              hm = [...fm.slice(1)];
-            return hm[0] && (hm[0].appName = mm.name), mm._errorFactory.create(Tm, ...hm)
+        function XD(DD) {
+          for (var zD = arguments.length, wD = new Array(zD > 1 ? zD - 1 : 0), pD = 1; pD < zD; pD++) wD[pD - 1] = arguments[pD];
+          if ("string" !== typeof DD) {
+            const zD = wD[0],
+              pD = [...wD.slice(1)];
+            return pD[0] && (pD[0].appName = DD.name), DD._errorFactory.create(zD, ...pD)
           }
-          return qm.create(mm, ...fm)
+          return GD.create(DD, ...wD)
         }
 
-        function zm(mm, Tm) {
-          if (!mm) {
-            for (var fm = arguments.length, hm = new Array(fm > 2 ? fm - 2 : 0), Am = 2; Am < fm; Am++) hm[Am - 2] = arguments[Am];
-            throw cm(Tm, ...hm)
+        function VD(DD, zD) {
+          if (!DD) {
+            for (var wD = arguments.length, pD = new Array(wD > 2 ? wD - 2 : 0), sD = 2; sD < wD; sD++) pD[sD - 2] = arguments[sD];
+            throw XD(zD, ...pD)
           }
         }
 
-        function Zm(mm) {
-          const Tm = "INTERNAL ASSERTION FAILED: " + mm;
-          throw Im(Tm), new Error(Tm)
+        function PD(DD) {
+          const zD = "INTERNAL ASSERTION FAILED: " + DD;
+          throw MD(zD), new Error(zD)
         }
 
-        function km(mm, Tm) {
-          mm || Zm(Tm)
+        function CD(DD, zD) {
+          DD || PD(zD)
         }
 
-        function bm() {
-          var mm;
-          return "undefined" !== typeof self && (null === (mm = self.location) || void 0 === mm ? void 0 : mm.href) || ""
+        function xD() {
+          var DD;
+          return "undefined" !== typeof self && (null === (DD = self.location) || void 0 === DD ? void 0 : DD.href) || ""
         }
 
-        function Sm() {
-          return "http:" === em() || "https:" === em()
+        function TD() {
+          return "http:" === bD() || "https:" === bD()
         }
 
-        function em() {
-          var mm;
-          return "undefined" !== typeof self && (null === (mm = self.location) || void 0 === mm ? void 0 : mm.protocol) || null
+        function bD() {
+          var DD;
+          return "undefined" !== typeof self && (null === (DD = self.location) || void 0 === DD ? void 0 : DD.protocol) || null
         }
-        class Nm {
-          constructor(mm, Tm) {
-            this.shortDelay = mm, this.longDelay = Tm, km(Tm > mm, "Short delay should be less than long delay!"), this.isMobile = (0, hm.V)() || (0, hm.X)()
+        class jD {
+          constructor(DD, zD) {
+            this.shortDelay = DD, this.longDelay = zD, CD(zD > DD, "Short delay should be less than long delay!"), this.isMobile = (0, pD.S)() || (0, pD.T)()
           }
           get() {
-            return "undefined" !== typeof navigator && navigator && "onLine" in navigator && "boolean" === typeof navigator.onLine && (Sm() || (0, hm.P)() || "connection" in navigator) && !navigator.onLine ? Math.min(5e3, this.shortDelay) : this.isMobile ? this.longDelay : this.shortDelay
+            return "undefined" !== typeof navigator && navigator && "onLine" in navigator && "boolean" === typeof navigator.onLine && (TD() || (0, pD.L)() || "connection" in navigator) && !navigator.onLine ? Math.min(5e3, this.shortDelay) : this.isMobile ? this.longDelay : this.shortDelay
           }
         }
 
-        function Gm(mm, Tm) {
-          km(mm.emulator, "Emulator should always be set here");
+        function dD(DD, zD) {
+          CD(DD.emulator, "Emulator should always be set here");
           const {
-            url: fm
-          } = mm.emulator;
-          return Tm ? `${fm}${Tm.startsWith("/")?Tm.slice(1):Tm}` : fm
+            url: wD
+          } = DD.emulator;
+          return zD ? `${wD}${zD.startsWith("/")?zD.slice(1):zD}` : wD
         }
-        class Xm {
-          static initialize(mm, Tm, fm) {
-            this.fetchImpl = mm, Tm && (this.headersImpl = Tm), fm && (this.responseImpl = fm)
+        class SD {
+          static initialize(DD, zD, wD) {
+            this.fetchImpl = DD, zD && (this.headersImpl = zD), wD && (this.responseImpl = wD)
           }
           static fetch() {
-            return this.fetchImpl ? this.fetchImpl : "undefined" !== typeof self && "fetch" in self ? self.fetch : void Zm("Could not find fetch implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.fetchImpl ? this.fetchImpl : "undefined" !== typeof self && "fetch" in self ? self.fetch : void PD("Could not find fetch implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
           static headers() {
-            return this.headersImpl ? this.headersImpl : "undefined" !== typeof self && "Headers" in self ? self.Headers : void Zm("Could not find Headers implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.headersImpl ? this.headersImpl : "undefined" !== typeof self && "Headers" in self ? self.Headers : void PD("Could not find Headers implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
           static response() {
-            return this.responseImpl ? this.responseImpl : "undefined" !== typeof self && "Response" in self ? self.Response : void Zm("Could not find Response implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
+            return this.responseImpl ? this.responseImpl : "undefined" !== typeof self && "Response" in self ? self.Response : void PD("Could not find Response implementation, make sure you call FetchProvider.initialize() with an appropriate polyfill")
           }
         }
-        const Pm = {
+        const iD = {
             CREDENTIAL_MISMATCH: "custom-token-mismatch",
             MISSING_CUSTOM_TOKEN: "internal-error",
             INVALID_IDENTIFIER: "invalid-email",
@@ -511,74 +511,74 @@ export const modules = {
             INVALID_RECAPTCHA_VERSION: "invalid-recaptcha-version",
             INVALID_REQ_TYPE: "invalid-req-type"
           },
-          Hm = new Nm(3e4, 6e4);
+          lD = new jD(3e4, 6e4);
 
-        function ym(mm, Tm) {
-          return mm.tenantId && !Tm.tenantId ? Object.assign(Object.assign({}, Tm), {
-            tenantId: mm.tenantId
-          }) : Tm
+        function WD(DD, zD) {
+          return DD.tenantId && !zD.tenantId ? Object.assign(Object.assign({}, zD), {
+            tenantId: DD.tenantId
+          }) : zD
         }
-        async function Cm(mm, Tm, fm, Am) {
-          return rm(mm, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, (async () => {
-            let am = {},
-              xm = {};
-            Am && ("GET" === Tm ? xm = Am : am = {
-              body: JSON.stringify(Am)
+        async function ND(DD, zD, wD, sD) {
+          return ZD(DD, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {}, (async () => {
+            let KD = {},
+              rD = {};
+            sD && ("GET" === zD ? rD = sD : KD = {
+              body: JSON.stringify(sD)
             });
-            const wm = (0, hm.ab)(Object.assign({
-                key: mm.config.apiKey
-              }, xm)).slice(1),
-              Dm = await mm._getAdditionalHeaders();
-            return Dm["Content-Type"] = "application/json", mm.languageCode && (Dm["X-Firebase-Locale"] = mm.languageCode), Xm.fetch()(lm(mm, mm.config.apiHost, fm, wm), Object.assign({
-              method: Tm,
-              headers: Dm,
+            const LD = (0, pD.Y)(Object.assign({
+                key: DD.config.apiKey
+              }, rD)).slice(1),
+              cD = await DD._getAdditionalHeaders();
+            return cD["Content-Type"] = "application/json", DD.languageCode && (cD["X-Firebase-Locale"] = DD.languageCode), SD.fetch()(kD(DD, DD.config.apiHost, wD, LD), Object.assign({
+              method: zD,
+              headers: cD,
               referrerPolicy: "no-referrer"
-            }, am))
+            }, KD))
           }))
         }
-        async function rm(mm, Tm, fm) {
-          mm._canInitEmulator = !1;
-          const Am = Object.assign(Object.assign({}, Pm), Tm);
+        async function ZD(DD, zD, wD) {
+          DD._canInitEmulator = !1;
+          const sD = Object.assign(Object.assign({}, iD), zD);
           try {
-            const Tm = new Mm(mm),
-              hm = await Promise.race([fm(), Tm.promise]);
-            Tm.clearNetworkTimeout();
-            const am = await hm.json();
-            if ("needConfirmation" in am) throw um(mm, "account-exists-with-different-credential", am);
-            if (hm.ok && !("errorMessage" in am)) return am;
+            const zD = new mD(DD),
+              pD = await Promise.race([wD(), zD.promise]);
+            zD.clearNetworkTimeout();
+            const KD = await pD.json();
+            if ("needConfirmation" in KD) throw eD(DD, "account-exists-with-different-credential", KD);
+            if (pD.ok && !("errorMessage" in KD)) return KD;
             {
-              const Tm = hm.ok ? am.errorMessage : am.error.message,
-                [fm, xm] = Tm.split(" : ");
-              if ("FEDERATED_USER_ID_ALREADY_LINKED" === fm) throw um(mm, "credential-already-in-use", am);
-              if ("EMAIL_EXISTS" === fm) throw um(mm, "email-already-in-use", am);
-              if ("USER_DISABLED" === fm) throw um(mm, "user-disabled", am);
-              const wm = Am[fm] || fm.toLowerCase().replace(/[_\s]+/g, "-");
-              if (xm) throw nm(mm, wm, xm);
-              Km(mm, wm)
+              const zD = pD.ok ? KD.errorMessage : KD.error.message,
+                [wD, rD] = zD.split(" : ");
+              if ("FEDERATED_USER_ID_ALREADY_LINKED" === wD) throw eD(DD, "credential-already-in-use", KD);
+              if ("EMAIL_EXISTS" === wD) throw eD(DD, "email-already-in-use", KD);
+              if ("USER_DISABLED" === wD) throw eD(DD, "user-disabled", KD);
+              const LD = sD[wD] || wD.toLowerCase().replace(/[_\s]+/g, "-");
+              if (rD) throw ED(DD, LD, rD);
+              OD(DD, LD)
             }
-          } catch (am) {
-            if (am instanceof hm.h) throw am;
-            Km(mm, "network-request-failed", {
-              message: String(am)
+          } catch (KD) {
+            if (KD instanceof pD.e) throw KD;
+            OD(DD, "network-request-failed", {
+              message: String(KD)
             })
           }
         }
-        async function sm(mm, Tm, fm, hm) {
-          let Am = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-          const am = await Cm(mm, Tm, fm, hm, Am);
-          return "mfaPendingCredential" in am && Km(mm, "multi-factor-auth-required", {
-            _serverResponse: am
-          }), am
+        async function yD(DD, zD, wD, pD) {
+          let sD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+          const KD = await ND(DD, zD, wD, pD, sD);
+          return "mfaPendingCredential" in KD && OD(DD, "multi-factor-auth-required", {
+            _serverResponse: KD
+          }), KD
         }
 
-        function lm(mm, Tm, fm, hm) {
-          const Am = `${Tm}${fm}?${hm}`;
-          return mm.config.emulator ? Gm(mm.config, Am) : `${mm.config.apiScheme}://${Am}`
+        function kD(DD, zD, wD, pD) {
+          const sD = `${zD}${wD}?${pD}`;
+          return DD.config.emulator ? dD(DD.config, sD) : `${DD.config.apiScheme}://${sD}`
         }
-        class Mm {
-          constructor(mm) {
-            this.auth = mm, this.timer = null, this.promise = new Promise(((mm, Tm) => {
-              this.timer = setTimeout((() => Tm(Qm(this.auth, "network-request-failed"))), Hm.get())
+        class mD {
+          constructor(DD) {
+            this.auth = DD, this.timer = null, this.promise = new Promise(((DD, zD) => {
+              this.timer = setTimeout((() => zD(JD(this.auth, "network-request-failed"))), lD.get())
             }))
           }
           clearNetworkTimeout() {
@@ -586,75 +586,75 @@ export const modules = {
           }
         }
 
-        function um(mm, Tm, fm) {
-          const hm = {
-            appName: mm.name
+        function eD(DD, zD, wD) {
+          const pD = {
+            appName: DD.name
           };
-          fm.email && (hm.email = fm.email), fm.phoneNumber && (hm.phoneNumber = fm.phoneNumber);
-          const Am = Qm(mm, Tm, hm);
-          return Am.customData._tokenResponse = fm, Am
+          wD.email && (pD.email = wD.email), wD.phoneNumber && (pD.phoneNumber = wD.phoneNumber);
+          const sD = JD(DD, zD, pD);
+          return sD.customData._tokenResponse = wD, sD
         }
 
-        function Bm(mm) {
-          if (mm) try {
-            const Tm = new Date(Number(mm));
-            if (!isNaN(Tm.getTime())) return Tm.toUTCString()
-          } catch (Tm) {}
+        function oD(DD) {
+          if (DD) try {
+            const zD = new Date(Number(DD));
+            if (!isNaN(zD.getTime())) return zD.toUTCString()
+          } catch (zD) {}
         }
 
-        function Lm(mm) {
-          let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          return (0, hm.J)(mm).getIdToken(Tm)
+        function aD(DD) {
+          let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return (0, pD.H)(DD).getIdToken(zD)
         }
-        async function tm(mm) {
-          let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          const fm = (0, hm.J)(mm),
-            Am = await fm.getIdToken(Tm),
-            am = dm(Am);
-          zm(am && am.exp && am.auth_time && am.iat, fm.auth, "internal-error");
-          const xm = "object" === typeof am.firebase ? am.firebase : void 0,
-            wm = null === xm || void 0 === xm ? void 0 : xm.sign_in_provider;
+        async function uD(DD) {
+          let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          const wD = (0, pD.H)(DD),
+            sD = await wD.getIdToken(zD),
+            KD = tD(sD);
+          VD(KD && KD.exp && KD.auth_time && KD.iat, wD.auth, "internal-error");
+          const rD = "object" === typeof KD.firebase ? KD.firebase : void 0,
+            LD = null === rD || void 0 === rD ? void 0 : rD.sign_in_provider;
           return {
-            claims: am,
-            token: Am,
-            authTime: Bm(Um(am.auth_time)),
-            issuedAtTime: Bm(Um(am.iat)),
-            expirationTime: Bm(Um(am.exp)),
-            signInProvider: wm || null,
-            signInSecondFactor: (null === xm || void 0 === xm ? void 0 : xm.sign_in_second_factor) || null
+            claims: KD,
+            token: sD,
+            authTime: oD(vD(KD.auth_time)),
+            issuedAtTime: oD(vD(KD.iat)),
+            expirationTime: oD(vD(KD.exp)),
+            signInProvider: LD || null,
+            signInSecondFactor: (null === rD || void 0 === rD ? void 0 : rD.sign_in_second_factor) || null
           }
         }
 
-        function Um(mm) {
-          return 1e3 * Number(mm)
+        function vD(DD) {
+          return 1e3 * Number(DD)
         }
 
-        function dm(mm) {
-          const [Tm, fm, Am] = mm.split(".");
-          if (void 0 === Tm || void 0 === fm || void 0 === Am) return Im("JWT malformed, contained fewer than 3 sections"), null;
+        function tD(DD) {
+          const [zD, wD, sD] = DD.split(".");
+          if (void 0 === zD || void 0 === wD || void 0 === sD) return MD("JWT malformed, contained fewer than 3 sections"), null;
           try {
-            const mm = (0, hm.m)(fm);
-            return mm ? JSON.parse(mm) : (Im("Failed to decode base64 JWT payload"), null)
-          } catch (am) {
-            return Im("Caught error parsing JWT payload as JSON", null === am || void 0 === am ? void 0 : am.toString()), null
+            const DD = (0, pD.j)(wD);
+            return DD ? JSON.parse(DD) : (MD("Failed to decode base64 JWT payload"), null)
+          } catch (KD) {
+            return MD("Caught error parsing JWT payload as JSON", null === KD || void 0 === KD ? void 0 : KD.toString()), null
           }
         }
-        async function gm(mm, Tm) {
-          if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) return Tm;
+        async function FD(DD, zD) {
+          if (arguments.length > 2 && void 0 !== arguments[2] && arguments[2]) return zD;
           try {
-            return await Tm
-          } catch (fm) {
-            throw fm instanceof hm.h && function(mm) {
+            return await zD
+          } catch (wD) {
+            throw wD instanceof pD.e && function(DD) {
               let {
-                code: Tm
-              } = mm;
-              return "auth/user-disabled" === Tm || "auth/user-token-expired" === Tm
-            }(fm) && mm.auth.currentUser === mm && await mm.auth.signOut(), fm
+                code: zD
+              } = DD;
+              return "auth/user-disabled" === zD || "auth/user-token-expired" === zD
+            }(wD) && DD.auth.currentUser === DD && await DD.auth.signOut(), wD
           }
         }
-        class Wm {
-          constructor(mm) {
-            this.user = mm, this.isRunning = !1, this.timerId = null, this.errorBackoff = 3e4
+        class YD {
+          constructor(DD) {
+            this.user = DD, this.isRunning = !1, this.timerId = null, this.errorBackoff = 3e4
           }
           _start() {
             this.isRunning || (this.isRunning = !0, this.schedule())
@@ -662,43 +662,43 @@ export const modules = {
           _stop() {
             this.isRunning && (this.isRunning = !1, null !== this.timerId && clearTimeout(this.timerId))
           }
-          getInterval(mm) {
-            var Tm;
-            if (mm) {
-              const mm = this.errorBackoff;
-              return this.errorBackoff = Math.min(2 * this.errorBackoff, 96e4), mm
+          getInterval(DD) {
+            var zD;
+            if (DD) {
+              const DD = this.errorBackoff;
+              return this.errorBackoff = Math.min(2 * this.errorBackoff, 96e4), DD
             } {
               this.errorBackoff = 3e4;
-              const mm = (null !== (Tm = this.user.stsTokenManager.expirationTime) && void 0 !== Tm ? Tm : 0) - Date.now() - 3e5;
-              return Math.max(0, mm)
+              const DD = (null !== (zD = this.user.stsTokenManager.expirationTime) && void 0 !== zD ? zD : 0) - Date.now() - 3e5;
+              return Math.max(0, DD)
             }
           }
           schedule() {
-            let mm = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+            let DD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
             if (!this.isRunning) return;
-            const Tm = this.getInterval(mm);
+            const zD = this.getInterval(DD);
             this.timerId = setTimeout((async () => {
               await this.iteration()
-            }), Tm)
+            }), zD)
           }
           async iteration() {
             try {
               await this.user.getIdToken(!0)
-            } catch (mm) {
-              return void("auth/network-request-failed" === (null === mm || void 0 === mm ? void 0 : mm.code) && this.schedule(!0))
+            } catch (DD) {
+              return void("auth/network-request-failed" === (null === DD || void 0 === DD ? void 0 : DD.code) && this.schedule(!0))
             }
             this.schedule()
           }
         }
-        class Fm {
-          constructor(mm, Tm) {
-            this.createdAt = mm, this.lastLoginAt = Tm, this._initializeTime()
+        class HD {
+          constructor(DD, zD) {
+            this.createdAt = DD, this.lastLoginAt = zD, this._initializeTime()
           }
           _initializeTime() {
-            this.lastSignInTime = Bm(this.lastLoginAt), this.creationTime = Bm(this.createdAt)
+            this.lastSignInTime = oD(this.lastLoginAt), this.creationTime = oD(this.createdAt)
           }
-          _copy(mm) {
-            this.createdAt = mm.createdAt, this.lastLoginAt = mm.lastLoginAt, this._initializeTime()
+          _copy(DD) {
+            this.createdAt = DD.createdAt, this.lastLoginAt = DD.lastLoginAt, this._initializeTime()
           }
           toJSON() {
             return {
@@ -707,123 +707,123 @@ export const modules = {
             }
           }
         }
-        async function mT(mm) {
-          var Tm;
-          const fm = mm.auth,
-            hm = await mm.getIdToken(),
-            Am = await gm(mm, async function(mm, Tm) {
-              return Cm(mm, "POST", "/v1/accounts:lookup", Tm)
-            }(fm, {
-              idToken: hm
+        async function qD(DD) {
+          var zD;
+          const wD = DD.auth,
+            pD = await DD.getIdToken(),
+            sD = await FD(DD, async function(DD, zD) {
+              return ND(DD, "POST", "/v1/accounts:lookup", zD)
+            }(wD, {
+              idToken: pD
             }));
-          zm(null === Am || void 0 === Am ? void 0 : Am.users.length, fm, "internal-error");
-          const xm = Am.users[0];
-          mm._notifyReloadListener(xm);
-          const wm = (null === (Tm = xm.providerUserInfo) || void 0 === Tm ? void 0 : Tm.length) ? xm.providerUserInfo.map((mm => {
+          VD(null === sD || void 0 === sD ? void 0 : sD.users.length, wD, "internal-error");
+          const rD = sD.users[0];
+          DD._notifyReloadListener(rD);
+          const LD = (null === (zD = rD.providerUserInfo) || void 0 === zD ? void 0 : zD.length) ? rD.providerUserInfo.map((DD => {
             var {
-              providerId: Tm
-            } = mm, fm = am(mm, ["providerId"]);
+              providerId: zD
+            } = DD, wD = KD(DD, ["providerId"]);
             return {
-              providerId: Tm,
-              uid: fm.rawId || "",
-              displayName: fm.displayName || null,
-              email: fm.email || null,
-              phoneNumber: fm.phoneNumber || null,
-              photoURL: fm.photoUrl || null
+              providerId: zD,
+              uid: wD.rawId || "",
+              displayName: wD.displayName || null,
+              email: wD.email || null,
+              phoneNumber: wD.phoneNumber || null,
+              photoURL: wD.photoUrl || null
             }
           })) : [];
-          const Dm = (im = mm.providerData, Rm = wm, [...im.filter((mm => !Rm.some((Tm => Tm.providerId === mm.providerId)))), ...Rm]);
-          var im, Rm;
-          const pm = mm.isAnonymous,
-            Em = !(mm.email && xm.passwordHash) && !(null === Dm || void 0 === Dm ? void 0 : Dm.length),
-            om = !!pm && Em,
-            Om = {
-              uid: xm.localId,
-              displayName: xm.displayName || null,
-              photoURL: xm.photoUrl || null,
-              email: xm.email || null,
-              emailVerified: xm.emailVerified || !1,
-              phoneNumber: xm.phoneNumber || null,
-              tenantId: xm.tenantId || null,
-              providerData: Dm,
-              metadata: new Fm(xm.createdAt, xm.lastLoginAt),
-              isAnonymous: om
+          const cD = (gD = DD.providerData, RD = LD, [...gD.filter((DD => !RD.some((zD => zD.providerId === DD.providerId)))), ...RD]);
+          var gD, RD;
+          const AD = DD.isAnonymous,
+            UD = !(DD.email && rD.passwordHash) && !(null === cD || void 0 === cD ? void 0 : cD.length),
+            fD = !!AD && UD,
+            ID = {
+              uid: rD.localId,
+              displayName: rD.displayName || null,
+              photoURL: rD.photoUrl || null,
+              email: rD.email || null,
+              emailVerified: rD.emailVerified || !1,
+              phoneNumber: rD.phoneNumber || null,
+              tenantId: rD.tenantId || null,
+              providerData: cD,
+              metadata: new HD(rD.createdAt, rD.lastLoginAt),
+              isAnonymous: fD
             };
-          Object.assign(mm, Om)
+          Object.assign(DD, ID)
         }
-        async function TT(mm) {
-          const Tm = (0, hm.J)(mm);
-          await mT(Tm), await Tm.auth._persistUserIfCurrent(Tm), Tm.auth._notifyListenersIfCurrent(Tm)
+        async function Dz(DD) {
+          const zD = (0, pD.H)(DD);
+          await qD(zD), await zD.auth._persistUserIfCurrent(zD), zD.auth._notifyListenersIfCurrent(zD)
         }
-        class fT {
+        class zz {
           constructor() {
             this.refreshToken = null, this.accessToken = null, this.expirationTime = null
           }
           get isExpired() {
             return !this.expirationTime || Date.now() > this.expirationTime - 3e4
           }
-          updateFromServerResponse(mm) {
-            zm(mm.idToken, "internal-error"), zm("undefined" !== typeof mm.idToken, "internal-error"), zm("undefined" !== typeof mm.refreshToken, "internal-error");
-            const Tm = "expiresIn" in mm && "undefined" !== typeof mm.expiresIn ? Number(mm.expiresIn) : function(mm) {
-              const Tm = dm(mm);
-              return zm(Tm, "internal-error"), zm("undefined" !== typeof Tm.exp, "internal-error"), zm("undefined" !== typeof Tm.iat, "internal-error"), Number(Tm.exp) - Number(Tm.iat)
-            }(mm.idToken);
-            this.updateTokensAndExpiration(mm.idToken, mm.refreshToken, Tm)
+          updateFromServerResponse(DD) {
+            VD(DD.idToken, "internal-error"), VD("undefined" !== typeof DD.idToken, "internal-error"), VD("undefined" !== typeof DD.refreshToken, "internal-error");
+            const zD = "expiresIn" in DD && "undefined" !== typeof DD.expiresIn ? Number(DD.expiresIn) : function(DD) {
+              const zD = tD(DD);
+              return VD(zD, "internal-error"), VD("undefined" !== typeof zD.exp, "internal-error"), VD("undefined" !== typeof zD.iat, "internal-error"), Number(zD.exp) - Number(zD.iat)
+            }(DD.idToken);
+            this.updateTokensAndExpiration(DD.idToken, DD.refreshToken, zD)
           }
-          async getToken(mm) {
-            let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            return zm(!this.accessToken || this.refreshToken, mm, "user-token-expired"), Tm || !this.accessToken || this.isExpired ? this.refreshToken ? (await this.refresh(mm, this.refreshToken), this.accessToken) : null : this.accessToken
+          async getToken(DD) {
+            let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            return VD(!this.accessToken || this.refreshToken, DD, "user-token-expired"), zD || !this.accessToken || this.isExpired ? this.refreshToken ? (await this.refresh(DD, this.refreshToken), this.accessToken) : null : this.accessToken
           }
           clearRefreshToken() {
             this.refreshToken = null
           }
-          async refresh(mm, Tm) {
+          async refresh(DD, zD) {
             const {
-              accessToken: fm,
-              refreshToken: Am,
-              expiresIn: am
-            } = await async function(mm, Tm) {
-              const fm = await rm(mm, {}, (async () => {
-                const fm = (0, hm.ab)({
+              accessToken: wD,
+              refreshToken: sD,
+              expiresIn: KD
+            } = await async function(DD, zD) {
+              const wD = await ZD(DD, {}, (async () => {
+                const wD = (0, pD.Y)({
                     grant_type: "refresh_token",
-                    refresh_token: Tm
+                    refresh_token: zD
                   }).slice(1),
                   {
-                    tokenApiHost: Am,
-                    apiKey: am
-                  } = mm.config,
-                  xm = lm(mm, Am, "/v1/token", `key=${am}`),
-                  wm = await mm._getAdditionalHeaders();
-                return wm["Content-Type"] = "application/x-www-form-urlencoded", Xm.fetch()(xm, {
+                    tokenApiHost: sD,
+                    apiKey: KD
+                  } = DD.config,
+                  rD = kD(DD, sD, "/v1/token", `key=${KD}`),
+                  LD = await DD._getAdditionalHeaders();
+                return LD["Content-Type"] = "application/x-www-form-urlencoded", SD.fetch()(rD, {
                   method: "POST",
-                  headers: wm,
-                  body: fm
+                  headers: LD,
+                  body: wD
                 })
               }));
               return {
-                accessToken: fm.access_token,
-                expiresIn: fm.expires_in,
-                refreshToken: fm.refresh_token
+                accessToken: wD.access_token,
+                expiresIn: wD.expires_in,
+                refreshToken: wD.refresh_token
               }
-            }(mm, Tm);
-            this.updateTokensAndExpiration(fm, Am, Number(am))
+            }(DD, zD);
+            this.updateTokensAndExpiration(wD, sD, Number(KD))
           }
-          updateTokensAndExpiration(mm, Tm, fm) {
-            this.refreshToken = Tm || null, this.accessToken = mm || null, this.expirationTime = Date.now() + 1e3 * fm
+          updateTokensAndExpiration(DD, zD, wD) {
+            this.refreshToken = zD || null, this.accessToken = DD || null, this.expirationTime = Date.now() + 1e3 * wD
           }
-          static fromJSON(mm, Tm) {
+          static fromJSON(DD, zD) {
             const {
-              refreshToken: fm,
-              accessToken: hm,
-              expirationTime: Am
-            } = Tm, am = new fT;
-            return fm && (zm("string" === typeof fm, "internal-error", {
-              appName: mm
-            }), am.refreshToken = fm), hm && (zm("string" === typeof hm, "internal-error", {
-              appName: mm
-            }), am.accessToken = hm), Am && (zm("number" === typeof Am, "internal-error", {
-              appName: mm
-            }), am.expirationTime = Am), am
+              refreshToken: wD,
+              accessToken: pD,
+              expirationTime: sD
+            } = zD, KD = new zz;
+            return wD && (VD("string" === typeof wD, "internal-error", {
+              appName: DD
+            }), KD.refreshToken = wD), pD && (VD("string" === typeof pD, "internal-error", {
+              appName: DD
+            }), KD.accessToken = pD), sD && (VD("number" === typeof sD, "internal-error", {
+              appName: DD
+            }), KD.expirationTime = sD), KD
           }
           toJSON() {
             return {
@@ -832,56 +832,56 @@ export const modules = {
               expirationTime: this.expirationTime
             }
           }
-          _assign(mm) {
-            this.accessToken = mm.accessToken, this.refreshToken = mm.refreshToken, this.expirationTime = mm.expirationTime
+          _assign(DD) {
+            this.accessToken = DD.accessToken, this.refreshToken = DD.refreshToken, this.expirationTime = DD.expirationTime
           }
           _clone() {
-            return Object.assign(new fT, this.toJSON())
+            return Object.assign(new zz, this.toJSON())
           }
           _performRefresh() {
-            return Zm("not implemented")
+            return PD("not implemented")
           }
         }
 
-        function hT(mm, Tm) {
-          zm("string" === typeof mm || "undefined" === typeof mm, "internal-error", {
-            appName: Tm
+        function wz(DD, zD) {
+          VD("string" === typeof DD || "undefined" === typeof DD, "internal-error", {
+            appName: zD
           })
         }
-        class AT {
-          constructor(mm) {
+        class pz {
+          constructor(DD) {
             var {
-              uid: Tm,
-              auth: fm,
-              stsTokenManager: hm
-            } = mm, Am = am(mm, ["uid", "auth", "stsTokenManager"]);
-            this.providerId = "firebase", this.proactiveRefresh = new Wm(this), this.reloadUserInfo = null, this.reloadListener = null, this.uid = Tm, this.auth = fm, this.stsTokenManager = hm, this.accessToken = hm.accessToken, this.displayName = Am.displayName || null, this.email = Am.email || null, this.emailVerified = Am.emailVerified || !1, this.phoneNumber = Am.phoneNumber || null, this.photoURL = Am.photoURL || null, this.isAnonymous = Am.isAnonymous || !1, this.tenantId = Am.tenantId || null, this.providerData = Am.providerData ? [...Am.providerData] : [], this.metadata = new Fm(Am.createdAt || void 0, Am.lastLoginAt || void 0)
+              uid: zD,
+              auth: wD,
+              stsTokenManager: pD
+            } = DD, sD = KD(DD, ["uid", "auth", "stsTokenManager"]);
+            this.providerId = "firebase", this.proactiveRefresh = new YD(this), this.reloadUserInfo = null, this.reloadListener = null, this.uid = zD, this.auth = wD, this.stsTokenManager = pD, this.accessToken = pD.accessToken, this.displayName = sD.displayName || null, this.email = sD.email || null, this.emailVerified = sD.emailVerified || !1, this.phoneNumber = sD.phoneNumber || null, this.photoURL = sD.photoURL || null, this.isAnonymous = sD.isAnonymous || !1, this.tenantId = sD.tenantId || null, this.providerData = sD.providerData ? [...sD.providerData] : [], this.metadata = new HD(sD.createdAt || void 0, sD.lastLoginAt || void 0)
           }
-          async getIdToken(mm) {
-            const Tm = await gm(this, this.stsTokenManager.getToken(this.auth, mm));
-            return zm(Tm, this.auth, "internal-error"), this.accessToken !== Tm && (this.accessToken = Tm, await this.auth._persistUserIfCurrent(this), this.auth._notifyListenersIfCurrent(this)), Tm
+          async getIdToken(DD) {
+            const zD = await FD(this, this.stsTokenManager.getToken(this.auth, DD));
+            return VD(zD, this.auth, "internal-error"), this.accessToken !== zD && (this.accessToken = zD, await this.auth._persistUserIfCurrent(this), this.auth._notifyListenersIfCurrent(this)), zD
           }
-          getIdTokenResult(mm) {
-            return tm(this, mm)
+          getIdTokenResult(DD) {
+            return uD(this, DD)
           }
           reload() {
-            return TT(this)
+            return Dz(this)
           }
-          _assign(mm) {
-            this !== mm && (zm(this.uid === mm.uid, this.auth, "internal-error"), this.displayName = mm.displayName, this.photoURL = mm.photoURL, this.email = mm.email, this.emailVerified = mm.emailVerified, this.phoneNumber = mm.phoneNumber, this.isAnonymous = mm.isAnonymous, this.tenantId = mm.tenantId, this.providerData = mm.providerData.map((mm => Object.assign({}, mm))), this.metadata._copy(mm.metadata), this.stsTokenManager._assign(mm.stsTokenManager))
+          _assign(DD) {
+            this !== DD && (VD(this.uid === DD.uid, this.auth, "internal-error"), this.displayName = DD.displayName, this.photoURL = DD.photoURL, this.email = DD.email, this.emailVerified = DD.emailVerified, this.phoneNumber = DD.phoneNumber, this.isAnonymous = DD.isAnonymous, this.tenantId = DD.tenantId, this.providerData = DD.providerData.map((DD => Object.assign({}, DD))), this.metadata._copy(DD.metadata), this.stsTokenManager._assign(DD.stsTokenManager))
           }
-          _clone(mm) {
-            const Tm = new AT(Object.assign(Object.assign({}, this), {
-              auth: mm,
+          _clone(DD) {
+            const zD = new pz(Object.assign(Object.assign({}, this), {
+              auth: DD,
               stsTokenManager: this.stsTokenManager._clone()
             }));
-            return Tm.metadata._copy(this.metadata), Tm
+            return zD.metadata._copy(this.metadata), zD
           }
-          _onReload(mm) {
-            zm(!this.reloadListener, this.auth, "internal-error"), this.reloadListener = mm, this.reloadUserInfo && (this._notifyReloadListener(this.reloadUserInfo), this.reloadUserInfo = null)
+          _onReload(DD) {
+            VD(!this.reloadListener, this.auth, "internal-error"), this.reloadListener = DD, this.reloadUserInfo && (this._notifyReloadListener(this.reloadUserInfo), this.reloadUserInfo = null)
           }
-          _notifyReloadListener(mm) {
-            this.reloadListener ? this.reloadListener(mm) : this.reloadUserInfo = mm
+          _notifyReloadListener(DD) {
+            this.reloadListener ? this.reloadListener(DD) : this.reloadUserInfo = DD
           }
           _startProactiveRefresh() {
             this.proactiveRefresh._start()
@@ -889,17 +889,17 @@ export const modules = {
           _stopProactiveRefresh() {
             this.proactiveRefresh._stop()
           }
-          async _updateTokensIfNecessary(mm) {
-            let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              fm = !1;
-            mm.idToken && mm.idToken !== this.stsTokenManager.accessToken && (this.stsTokenManager.updateFromServerResponse(mm), fm = !0), Tm && await mT(this), await this.auth._persistUserIfCurrent(this), fm && this.auth._notifyListenersIfCurrent(this)
+          async _updateTokensIfNecessary(DD) {
+            let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+              wD = !1;
+            DD.idToken && DD.idToken !== this.stsTokenManager.accessToken && (this.stsTokenManager.updateFromServerResponse(DD), wD = !0), zD && await qD(this), await this.auth._persistUserIfCurrent(this), wD && this.auth._notifyListenersIfCurrent(this)
           }
           async delete() {
-            const mm = await this.getIdToken();
-            return await gm(this, async function(mm, Tm) {
-              return Cm(mm, "POST", "/v1/accounts:delete", Tm)
+            const DD = await this.getIdToken();
+            return await FD(this, async function(DD, zD) {
+              return ND(DD, "POST", "/v1/accounts:delete", zD)
             }(this.auth, {
-              idToken: mm
+              idToken: DD
             })), this.stsTokenManager.clearRefreshToken(), this.auth.signOut()
           }
           toJSON() {
@@ -912,7 +912,7 @@ export const modules = {
               photoURL: this.photoURL || void 0,
               phoneNumber: this.phoneNumber || void 0,
               tenantId: this.tenantId || void 0,
-              providerData: this.providerData.map((mm => Object.assign({}, mm))),
+              providerData: this.providerData.map((DD => Object.assign({}, DD))),
               stsTokenManager: this.stsTokenManager.toJSON(),
               _redirectEventId: this._redirectEventId
             }, this.metadata.toJSON()), {
@@ -923,103 +923,103 @@ export const modules = {
           get refreshToken() {
             return this.stsTokenManager.refreshToken || ""
           }
-          static _fromJSON(mm, Tm) {
-            var fm, hm, Am, am, xm, wm, Dm, im;
-            const Rm = null !== (fm = Tm.displayName) && void 0 !== fm ? fm : void 0,
-              pm = null !== (hm = Tm.email) && void 0 !== hm ? hm : void 0,
-              Em = null !== (Am = Tm.phoneNumber) && void 0 !== Am ? Am : void 0,
-              om = null !== (am = Tm.photoURL) && void 0 !== am ? am : void 0,
-              Om = null !== (xm = Tm.tenantId) && void 0 !== xm ? xm : void 0,
-              Ym = null !== (wm = Tm._redirectEventId) && void 0 !== wm ? wm : void 0,
-              qm = null !== (Dm = Tm.createdAt) && void 0 !== Dm ? Dm : void 0,
-              jm = null !== (im = Tm.lastLoginAt) && void 0 !== im ? im : void 0,
+          static _fromJSON(DD, zD) {
+            var wD, pD, sD, KD, rD, LD, cD, gD;
+            const RD = null !== (wD = zD.displayName) && void 0 !== wD ? wD : void 0,
+              AD = null !== (pD = zD.email) && void 0 !== pD ? pD : void 0,
+              UD = null !== (sD = zD.phoneNumber) && void 0 !== sD ? sD : void 0,
+              fD = null !== (KD = zD.photoURL) && void 0 !== KD ? KD : void 0,
+              ID = null !== (rD = zD.tenantId) && void 0 !== rD ? rD : void 0,
+              BD = null !== (LD = zD._redirectEventId) && void 0 !== LD ? LD : void 0,
+              GD = null !== (cD = zD.createdAt) && void 0 !== cD ? cD : void 0,
+              hD = null !== (gD = zD.lastLoginAt) && void 0 !== gD ? gD : void 0,
               {
-                uid: Vm,
-                emailVerified: Im,
-                isAnonymous: Km,
-                providerData: Qm,
-                stsTokenManager: nm
-              } = Tm;
-            zm(Vm && nm, mm, "internal-error");
-            const Jm = fT.fromJSON(this.name, nm);
-            zm("string" === typeof Vm, mm, "internal-error"), hT(Rm, mm.name), hT(pm, mm.name), zm("boolean" === typeof Im, mm, "internal-error"), zm("boolean" === typeof Km, mm, "internal-error"), hT(Em, mm.name), hT(om, mm.name), hT(Om, mm.name), hT(Ym, mm.name), hT(qm, mm.name), hT(jm, mm.name);
-            const cm = new AT({
-              uid: Vm,
-              auth: mm,
-              email: pm,
-              emailVerified: Im,
-              displayName: Rm,
-              isAnonymous: Km,
-              photoURL: om,
-              phoneNumber: Em,
-              tenantId: Om,
-              stsTokenManager: Jm,
-              createdAt: qm,
-              lastLoginAt: jm
+                uid: nD,
+                emailVerified: MD,
+                isAnonymous: OD,
+                providerData: JD,
+                stsTokenManager: ED
+              } = zD;
+            VD(nD && ED, DD, "internal-error");
+            const QD = zz.fromJSON(this.name, ED);
+            VD("string" === typeof nD, DD, "internal-error"), wz(RD, DD.name), wz(AD, DD.name), VD("boolean" === typeof MD, DD, "internal-error"), VD("boolean" === typeof OD, DD, "internal-error"), wz(UD, DD.name), wz(fD, DD.name), wz(ID, DD.name), wz(BD, DD.name), wz(GD, DD.name), wz(hD, DD.name);
+            const XD = new pz({
+              uid: nD,
+              auth: DD,
+              email: AD,
+              emailVerified: MD,
+              displayName: RD,
+              isAnonymous: OD,
+              photoURL: fD,
+              phoneNumber: UD,
+              tenantId: ID,
+              stsTokenManager: QD,
+              createdAt: GD,
+              lastLoginAt: hD
             });
-            return Qm && Array.isArray(Qm) && (cm.providerData = Qm.map((mm => Object.assign({}, mm)))), Ym && (cm._redirectEventId = Ym), cm
+            return JD && Array.isArray(JD) && (XD.providerData = JD.map((DD => Object.assign({}, DD)))), BD && (XD._redirectEventId = BD), XD
           }
-          static async _fromIdTokenResponse(mm, Tm) {
-            let fm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-            const hm = new fT;
-            hm.updateFromServerResponse(Tm);
-            const Am = new AT({
-              uid: Tm.localId,
-              auth: mm,
-              stsTokenManager: hm,
-              isAnonymous: fm
+          static async _fromIdTokenResponse(DD, zD) {
+            let wD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            const pD = new zz;
+            pD.updateFromServerResponse(zD);
+            const sD = new pz({
+              uid: zD.localId,
+              auth: DD,
+              stsTokenManager: pD,
+              isAnonymous: wD
             });
-            return await mT(Am), Am
+            return await qD(sD), sD
           }
         }
-        const aT = new Map;
+        const sz = new Map;
 
-        function xT(mm) {
-          km(mm instanceof Function, "Expected a class definition");
-          let Tm = aT.get(mm);
-          return Tm ? (km(Tm instanceof mm, "Instance stored in cache mismatched with class"), Tm) : (Tm = new mm, aT.set(mm, Tm), Tm)
+        function Kz(DD) {
+          CD(DD instanceof Function, "Expected a class definition");
+          let zD = sz.get(DD);
+          return zD ? (CD(zD instanceof DD, "Instance stored in cache mismatched with class"), zD) : (zD = new DD, sz.set(DD, zD), zD)
         }
-        class wT {
+        class rz {
           constructor() {
             this.type = "NONE", this.storage = {}
           }
           async _isAvailable() {
             return !0
           }
-          async _set(mm, Tm) {
-            this.storage[mm] = Tm
+          async _set(DD, zD) {
+            this.storage[DD] = zD
           }
-          async _get(mm) {
-            const Tm = this.storage[mm];
-            return void 0 === Tm ? null : Tm
+          async _get(DD) {
+            const zD = this.storage[DD];
+            return void 0 === zD ? null : zD
           }
-          async _remove(mm) {
-            delete this.storage[mm]
+          async _remove(DD) {
+            delete this.storage[DD]
           }
-          _addListener(mm, Tm) {}
-          _removeListener(mm, Tm) {}
+          _addListener(DD, zD) {}
+          _removeListener(DD, zD) {}
         }
-        wT.type = "NONE";
-        const DT = wT;
+        rz.type = "NONE";
+        const Lz = rz;
 
-        function iT(mm, Tm, fm) {
-          return `firebase:${mm}:${Tm}:${fm}`
+        function cz(DD, zD, wD) {
+          return `firebase:${DD}:${zD}:${wD}`
         }
-        class RT {
-          constructor(mm, Tm, fm) {
-            this.persistence = mm, this.auth = Tm, this.userKey = fm;
+        class gz {
+          constructor(DD, zD, wD) {
+            this.persistence = DD, this.auth = zD, this.userKey = wD;
             const {
-              config: hm,
-              name: Am
+              config: pD,
+              name: sD
             } = this.auth;
-            this.fullUserKey = iT(this.userKey, hm.apiKey, Am), this.fullPersistenceKey = iT("persistence", hm.apiKey, Am), this.boundEventHandler = Tm._onStorageEvent.bind(Tm), this.persistence._addListener(this.fullUserKey, this.boundEventHandler)
+            this.fullUserKey = cz(this.userKey, pD.apiKey, sD), this.fullPersistenceKey = cz("persistence", pD.apiKey, sD), this.boundEventHandler = zD._onStorageEvent.bind(zD), this.persistence._addListener(this.fullUserKey, this.boundEventHandler)
           }
-          setCurrentUser(mm) {
-            return this.persistence._set(this.fullUserKey, mm.toJSON())
+          setCurrentUser(DD) {
+            return this.persistence._set(this.fullUserKey, DD.toJSON())
           }
           async getCurrentUser() {
-            const mm = await this.persistence._get(this.fullUserKey);
-            return mm ? AT._fromJSON(this.auth, mm) : null
+            const DD = await this.persistence._get(this.fullUserKey);
+            return DD ? pz._fromJSON(this.auth, DD) : null
           }
           removeCurrentUser() {
             return this.persistence._remove(this.fullUserKey)
@@ -1027,364 +1027,364 @@ export const modules = {
           savePersistenceForRedirect() {
             return this.persistence._set(this.fullPersistenceKey, this.persistence.type)
           }
-          async setPersistence(mm) {
-            if (this.persistence === mm) return;
-            const Tm = await this.getCurrentUser();
-            return await this.removeCurrentUser(), this.persistence = mm, Tm ? this.setCurrentUser(Tm) : void 0
+          async setPersistence(DD) {
+            if (this.persistence === DD) return;
+            const zD = await this.getCurrentUser();
+            return await this.removeCurrentUser(), this.persistence = DD, zD ? this.setCurrentUser(zD) : void 0
           }
           delete() {
             this.persistence._removeListener(this.fullUserKey, this.boundEventHandler)
           }
-          static async create(mm, Tm) {
-            let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "authUser";
-            if (!Tm.length) return new RT(xT(DT), mm, fm);
-            const hm = (await Promise.all(Tm.map((async mm => {
-              if (await mm._isAvailable()) return mm
-            })))).filter((mm => mm));
-            let Am = hm[0] || xT(DT);
-            const am = iT(fm, mm.config.apiKey, mm.name);
-            let xm = null;
-            for (const im of Tm) try {
-              const Tm = await im._get(am);
-              if (Tm) {
-                const fm = AT._fromJSON(mm, Tm);
-                im !== Am && (xm = fm), Am = im;
+          static async create(DD, zD) {
+            let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "authUser";
+            if (!zD.length) return new gz(Kz(Lz), DD, wD);
+            const pD = (await Promise.all(zD.map((async DD => {
+              if (await DD._isAvailable()) return DD
+            })))).filter((DD => DD));
+            let sD = pD[0] || Kz(Lz);
+            const KD = cz(wD, DD.config.apiKey, DD.name);
+            let rD = null;
+            for (const gD of zD) try {
+              const zD = await gD._get(KD);
+              if (zD) {
+                const wD = pz._fromJSON(DD, zD);
+                gD !== sD && (rD = wD), sD = gD;
                 break
               }
-            } catch (Dm) {}
-            const wm = hm.filter((mm => mm._shouldAllowMigration));
-            return Am._shouldAllowMigration && wm.length ? (Am = wm[0], xm && await Am._set(am, xm.toJSON()), await Promise.all(Tm.map((async mm => {
-              if (mm !== Am) try {
-                await mm._remove(am)
-              } catch (Dm) {}
-            }))), new RT(Am, mm, fm)) : new RT(Am, mm, fm)
+            } catch (cD) {}
+            const LD = pD.filter((DD => DD._shouldAllowMigration));
+            return sD._shouldAllowMigration && LD.length ? (sD = LD[0], rD && await sD._set(KD, rD.toJSON()), await Promise.all(zD.map((async DD => {
+              if (DD !== sD) try {
+                await DD._remove(KD)
+              } catch (cD) {}
+            }))), new gz(sD, DD, wD)) : new gz(sD, DD, wD)
           }
         }
 
-        function pT(mm) {
-          const Tm = mm.toLowerCase();
-          if (Tm.includes("opera/") || Tm.includes("opr/") || Tm.includes("opios/")) return "Opera";
-          if (YT(Tm)) return "IEMobile";
-          if (Tm.includes("msie") || Tm.includes("trident/")) return "IE";
-          if (Tm.includes("edge/")) return "Edge";
-          if (ET(Tm)) return "Firefox";
-          if (Tm.includes("silk/")) return "Silk";
-          if (jT(Tm)) return "Blackberry";
-          if (VT(Tm)) return "Webos";
-          if (oT(Tm)) return "Safari";
-          if ((Tm.includes("chrome/") || OT(Tm)) && !Tm.includes("edge/")) return "Chrome";
-          if (qT(Tm)) return "Android";
+        function Rz(DD) {
+          const zD = DD.toLowerCase();
+          if (zD.includes("opera/") || zD.includes("opr/") || zD.includes("opios/")) return "Opera";
+          if (Iz(zD)) return "IEMobile";
+          if (zD.includes("msie") || zD.includes("trident/")) return "IE";
+          if (zD.includes("edge/")) return "Edge";
+          if (Az(zD)) return "Firefox";
+          if (zD.includes("silk/")) return "Silk";
+          if (Gz(zD)) return "Blackberry";
+          if (hz(zD)) return "Webos";
+          if (Uz(zD)) return "Safari";
+          if ((zD.includes("chrome/") || fz(zD)) && !zD.includes("edge/")) return "Chrome";
+          if (Bz(zD)) return "Android";
           {
-            const Tm = /([a-zA-Z\d\.]+)\/[a-zA-Z\d\.]*$/,
-              fm = mm.match(Tm);
-            if (2 === (null === fm || void 0 === fm ? void 0 : fm.length)) return fm[1]
+            const zD = /([a-zA-Z\d\.]+)\/[a-zA-Z\d\.]*$/,
+              wD = DD.match(zD);
+            if (2 === (null === wD || void 0 === wD ? void 0 : wD.length)) return wD[1]
           }
           return "Other"
         }
 
-        function ET() {
-          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)();
-          return /firefox\//i.test(mm)
+        function Az() {
+          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, pD.I)();
+          return /firefox\//i.test(DD)
         }
 
-        function oT() {
-          const mm = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)()).toLowerCase();
-          return mm.includes("safari/") && !mm.includes("chrome/") && !mm.includes("crios/") && !mm.includes("android")
+        function Uz() {
+          const DD = (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, pD.I)()).toLowerCase();
+          return DD.includes("safari/") && !DD.includes("chrome/") && !DD.includes("crios/") && !DD.includes("android")
         }
 
-        function OT() {
-          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)();
-          return /crios\//i.test(mm)
+        function fz() {
+          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, pD.I)();
+          return /crios\//i.test(DD)
         }
 
-        function YT() {
-          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)();
-          return /iemobile/i.test(mm)
+        function Iz() {
+          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, pD.I)();
+          return /iemobile/i.test(DD)
         }
 
-        function qT() {
-          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)();
-          return /android/i.test(mm)
+        function Bz() {
+          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, pD.I)();
+          return /android/i.test(DD)
         }
 
-        function jT() {
-          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)();
-          return /blackberry/i.test(mm)
+        function Gz() {
+          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, pD.I)();
+          return /blackberry/i.test(DD)
         }
 
-        function VT() {
-          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)();
-          return /webos/i.test(mm)
+        function hz() {
+          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, pD.I)();
+          return /webos/i.test(DD)
         }
 
-        function IT() {
-          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)();
-          return /iphone|ipad|ipod/i.test(mm) || /macintosh/i.test(mm) && /mobile/i.test(mm)
+        function nz() {
+          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, pD.I)();
+          return /iphone|ipad|ipod/i.test(DD) || /macintosh/i.test(DD) && /mobile/i.test(DD)
         }
 
-        function KT() {
-          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)();
-          return IT(mm) || qT(mm) || VT(mm) || jT(mm) || /windows phone/i.test(mm) || YT(mm)
+        function Mz() {
+          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, pD.I)();
+          return nz(DD) || Bz(DD) || hz(DD) || Gz(DD) || /windows phone/i.test(DD) || Iz(DD)
         }
 
-        function QT(mm) {
-          let Tm, fm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-          switch (mm) {
+        function Oz(DD) {
+          let zD, wD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+          switch (DD) {
             case "Browser":
-              Tm = pT((0, hm.N)());
+              zD = Rz((0, pD.I)());
               break;
             case "Worker":
-              Tm = `${pT((0,hm.N)())}-${mm}`;
+              zD = `${Rz((0,pD.I)())}-${DD}`;
               break;
             default:
-              Tm = mm
+              zD = DD
           }
-          const am = fm.length ? fm.join(",") : "FirebaseCore-web";
-          return `${Tm}/JsCore/${Am.d}/${am}`
+          const KD = wD.length ? wD.join(",") : "FirebaseCore-web";
+          return `${zD}/JsCore/${sD.e}/${KD}`
         }
-        async function nT(mm, Tm) {
-          return Cm(mm, "GET", "/v2/recaptchaConfig", ym(mm, Tm))
-        }
-
-        function JT(mm) {
-          return void 0 !== mm && void 0 !== mm.getResponse
+        async function Jz(DD, zD) {
+          return ND(DD, "GET", "/v2/recaptchaConfig", WD(DD, zD))
         }
 
-        function cT(mm) {
-          return void 0 !== mm && void 0 !== mm.enterprise
+        function Ez(DD) {
+          return void 0 !== DD && void 0 !== DD.getResponse
         }
-        class zT {
-          constructor(mm) {
-            if (this.siteKey = "", this.emailPasswordEnabled = !1, void 0 === mm.recaptchaKey) throw new Error("recaptchaKey undefined");
-            this.siteKey = mm.recaptchaKey.split("/")[3], this.emailPasswordEnabled = mm.recaptchaEnforcementState.some((mm => "EMAIL_PASSWORD_PROVIDER" === mm.provider && "OFF" !== mm.enforcementState))
+
+        function Qz(DD) {
+          return void 0 !== DD && void 0 !== DD.enterprise
+        }
+        class Xz {
+          constructor(DD) {
+            if (this.siteKey = "", this.emailPasswordEnabled = !1, void 0 === DD.recaptchaKey) throw new Error("recaptchaKey undefined");
+            this.siteKey = DD.recaptchaKey.split("/")[3], this.emailPasswordEnabled = DD.recaptchaEnforcementState.some((DD => "EMAIL_PASSWORD_PROVIDER" === DD.provider && "OFF" !== DD.enforcementState))
           }
         }
 
-        function ZT(mm) {
-          return new Promise(((Tm, fm) => {
-            const hm = document.createElement("script");
-            hm.setAttribute("src", mm), hm.onload = Tm, hm.onerror = mm => {
-                const Tm = Qm("internal-error");
-                Tm.customData = mm, fm(Tm)
-              }, hm.type = "text/javascript", hm.charset = "UTF-8",
+        function Vz(DD) {
+          return new Promise(((zD, wD) => {
+            const pD = document.createElement("script");
+            pD.setAttribute("src", DD), pD.onload = zD, pD.onerror = DD => {
+                const zD = JD("internal-error");
+                zD.customData = DD, wD(zD)
+              }, pD.type = "text/javascript", pD.charset = "UTF-8",
               function() {
-                var mm, Tm;
-                return null !== (Tm = null === (mm = document.getElementsByTagName("head")) || void 0 === mm ? void 0 : mm[0]) && void 0 !== Tm ? Tm : document
-              }().appendChild(hm)
+                var DD, zD;
+                return null !== (zD = null === (DD = document.getElementsByTagName("head")) || void 0 === DD ? void 0 : DD[0]) && void 0 !== zD ? zD : document
+              }().appendChild(pD)
           }))
         }
 
-        function kT(mm) {
-          return `__${mm}${Math.floor(1e6*Math.random())}`
+        function Pz(DD) {
+          return `__${DD}${Math.floor(1e6*Math.random())}`
         }
-        class bT {
-          constructor(mm) {
-            this.type = "recaptcha-enterprise", this.auth = GT(mm)
+        class Cz {
+          constructor(DD) {
+            this.type = "recaptcha-enterprise", this.auth = jz(DD)
           }
           async verify() {
-            let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "verify",
-              Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "verify",
+              zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
 
-            function fm(Tm, fm, hm) {
-              const Am = window.grecaptcha;
-              cT(Am) ? Am.enterprise.ready((() => {
-                Am.enterprise.execute(Tm, {
-                  action: mm
-                }).then((mm => {
-                  fm(mm)
+            function wD(zD, wD, pD) {
+              const sD = window.grecaptcha;
+              Qz(sD) ? sD.enterprise.ready((() => {
+                sD.enterprise.execute(zD, {
+                  action: DD
+                }).then((DD => {
+                  wD(DD)
                 })).catch((() => {
-                  fm("NO_RECAPTCHA")
+                  wD("NO_RECAPTCHA")
                 }))
-              })) : hm(Error("No reCAPTCHA enterprise script loaded."))
+              })) : pD(Error("No reCAPTCHA enterprise script loaded."))
             }
-            return new Promise(((mm, hm) => {
-              (async function(mm) {
-                if (!Tm) {
-                  if (null == mm.tenantId && null != mm._agentRecaptchaConfig) return mm._agentRecaptchaConfig.siteKey;
-                  if (null != mm.tenantId && void 0 !== mm._tenantRecaptchaConfigs[mm.tenantId]) return mm._tenantRecaptchaConfigs[mm.tenantId].siteKey
+            return new Promise(((DD, pD) => {
+              (async function(DD) {
+                if (!zD) {
+                  if (null == DD.tenantId && null != DD._agentRecaptchaConfig) return DD._agentRecaptchaConfig.siteKey;
+                  if (null != DD.tenantId && void 0 !== DD._tenantRecaptchaConfigs[DD.tenantId]) return DD._tenantRecaptchaConfigs[DD.tenantId].siteKey
                 }
-                return new Promise((async (Tm, fm) => {
-                  nT(mm, {
+                return new Promise((async (zD, wD) => {
+                  Jz(DD, {
                     clientType: "CLIENT_TYPE_WEB",
                     version: "RECAPTCHA_ENTERPRISE"
-                  }).then((hm => {
-                    if (void 0 !== hm.recaptchaKey) {
-                      const fm = new zT(hm);
-                      return null == mm.tenantId ? mm._agentRecaptchaConfig = fm : mm._tenantRecaptchaConfigs[mm.tenantId] = fm, Tm(fm.siteKey)
+                  }).then((pD => {
+                    if (void 0 !== pD.recaptchaKey) {
+                      const wD = new Xz(pD);
+                      return null == DD.tenantId ? DD._agentRecaptchaConfig = wD : DD._tenantRecaptchaConfigs[DD.tenantId] = wD, zD(wD.siteKey)
                     }
-                    fm(new Error("recaptcha Enterprise site key undefined"))
-                  })).catch((mm => {
-                    fm(mm)
+                    wD(new Error("recaptcha Enterprise site key undefined"))
+                  })).catch((DD => {
+                    wD(DD)
                   }))
                 }))
-              })(this.auth).then((Am => {
-                if (!Tm && cT(window.grecaptcha)) fm(Am, mm, hm);
+              })(this.auth).then((sD => {
+                if (!zD && Qz(window.grecaptcha)) wD(sD, DD, pD);
                 else {
-                  if ("undefined" === typeof window) return void hm(new Error("RecaptchaVerifier is only supported in browser"));
-                  ZT("https://www.google.com/recaptcha/enterprise.js?render=" + Am).then((() => {
-                    fm(Am, mm, hm)
-                  })).catch((mm => {
-                    hm(mm)
+                  if ("undefined" === typeof window) return void pD(new Error("RecaptchaVerifier is only supported in browser"));
+                  Vz("https://www.google.com/recaptcha/enterprise.js?render=" + sD).then((() => {
+                    wD(sD, DD, pD)
+                  })).catch((DD => {
+                    pD(DD)
                   }))
                 }
-              })).catch((mm => {
-                hm(mm)
+              })).catch((DD => {
+                pD(DD)
               }))
             }))
           }
         }
-        async function ST(mm, Tm, fm) {
-          let hm = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-          const Am = new bT(mm);
-          let am;
+        async function xz(DD, zD, wD) {
+          let pD = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+          const sD = new Cz(DD);
+          let KD;
           try {
-            am = await Am.verify(fm)
-          } catch (wm) {
-            am = await Am.verify(fm, !0)
+            KD = await sD.verify(wD)
+          } catch (LD) {
+            KD = await sD.verify(wD, !0)
           }
-          const xm = Object.assign({}, Tm);
-          return hm ? Object.assign(xm, {
-            captchaResp: am
-          }) : Object.assign(xm, {
-            captchaResponse: am
-          }), Object.assign(xm, {
+          const rD = Object.assign({}, zD);
+          return pD ? Object.assign(rD, {
+            captchaResp: KD
+          }) : Object.assign(rD, {
+            captchaResponse: KD
+          }), Object.assign(rD, {
             clientType: "CLIENT_TYPE_WEB"
-          }), Object.assign(xm, {
+          }), Object.assign(rD, {
             recaptchaVersion: "RECAPTCHA_ENTERPRISE"
-          }), xm
+          }), rD
         }
-        class eT {
-          constructor(mm) {
-            this.auth = mm, this.queue = []
+        class Tz {
+          constructor(DD) {
+            this.auth = DD, this.queue = []
           }
-          pushCallback(mm, Tm) {
-            const fm = Tm => new Promise(((fm, hm) => {
+          pushCallback(DD, zD) {
+            const wD = zD => new Promise(((wD, pD) => {
               try {
-                fm(mm(Tm))
-              } catch (Am) {
-                hm(Am)
+                wD(DD(zD))
+              } catch (sD) {
+                pD(sD)
               }
             }));
-            fm.onAbort = Tm, this.queue.push(fm);
-            const hm = this.queue.length - 1;
+            wD.onAbort = zD, this.queue.push(wD);
+            const pD = this.queue.length - 1;
             return () => {
-              this.queue[hm] = () => Promise.resolve()
+              this.queue[pD] = () => Promise.resolve()
             }
           }
-          async runMiddleware(mm) {
-            if (this.auth.currentUser === mm) return;
-            const Tm = [];
+          async runMiddleware(DD) {
+            if (this.auth.currentUser === DD) return;
+            const zD = [];
             try {
-              for (const fm of this.queue) await fm(mm), fm.onAbort && Tm.push(fm.onAbort)
-            } catch (fm) {
-              Tm.reverse();
-              for (const mm of Tm) try {
-                mm()
-              } catch (hm) {}
+              for (const wD of this.queue) await wD(DD), wD.onAbort && zD.push(wD.onAbort)
+            } catch (wD) {
+              zD.reverse();
+              for (const DD of zD) try {
+                DD()
+              } catch (pD) {}
               throw this.auth._errorFactory.create("login-blocked", {
-                originalMessage: null === fm || void 0 === fm ? void 0 : fm.message
+                originalMessage: null === wD || void 0 === wD ? void 0 : wD.message
               })
             }
           }
         }
-        class NT {
-          constructor(mm, Tm, fm, hm) {
-            this.app = mm, this.heartbeatServiceProvider = Tm, this.appCheckServiceProvider = fm, this.config = hm, this.currentUser = null, this.emulatorConfig = null, this.operations = Promise.resolve(), this.authStateSubscription = new XT(this), this.idTokenSubscription = new XT(this), this.beforeStateQueue = new eT(this), this.redirectUser = null, this.isProactiveRefreshEnabled = !1, this._canInitEmulator = !0, this._isInitialized = !1, this._deleted = !1, this._initializationPromise = null, this._popupRedirectResolver = null, this._errorFactory = qm, this._agentRecaptchaConfig = null, this._tenantRecaptchaConfigs = {}, this.lastNotifiedUid = void 0, this.languageCode = null, this.tenantId = null, this.settings = {
+        class bz {
+          constructor(DD, zD, wD, pD) {
+            this.app = DD, this.heartbeatServiceProvider = zD, this.appCheckServiceProvider = wD, this.config = pD, this.currentUser = null, this.emulatorConfig = null, this.operations = Promise.resolve(), this.authStateSubscription = new dz(this), this.idTokenSubscription = new dz(this), this.beforeStateQueue = new Tz(this), this.redirectUser = null, this.isProactiveRefreshEnabled = !1, this._canInitEmulator = !0, this._isInitialized = !1, this._deleted = !1, this._initializationPromise = null, this._popupRedirectResolver = null, this._errorFactory = GD, this._agentRecaptchaConfig = null, this._tenantRecaptchaConfigs = {}, this.lastNotifiedUid = void 0, this.languageCode = null, this.tenantId = null, this.settings = {
               appVerificationDisabledForTesting: !1
-            }, this.frameworks = [], this.name = mm.name, this.clientVersion = hm.sdkClientVersion
+            }, this.frameworks = [], this.name = DD.name, this.clientVersion = pD.sdkClientVersion
           }
-          _initializeWithPersistence(mm, Tm) {
-            return Tm && (this._popupRedirectResolver = xT(Tm)), this._initializationPromise = this.queue((async () => {
-              var fm, hm;
-              if (!this._deleted && (this.persistenceManager = await RT.create(this, mm), !this._deleted)) {
-                if (null === (fm = this._popupRedirectResolver) || void 0 === fm ? void 0 : fm._shouldInitProactively) try {
+          _initializeWithPersistence(DD, zD) {
+            return zD && (this._popupRedirectResolver = Kz(zD)), this._initializationPromise = this.queue((async () => {
+              var wD, pD;
+              if (!this._deleted && (this.persistenceManager = await gz.create(this, DD), !this._deleted)) {
+                if (null === (wD = this._popupRedirectResolver) || void 0 === wD ? void 0 : wD._shouldInitProactively) try {
                   await this._popupRedirectResolver._initialize(this)
-                } catch (Am) {}
-                await this.initializeCurrentUser(Tm), this.lastNotifiedUid = (null === (hm = this.currentUser) || void 0 === hm ? void 0 : hm.uid) || null, this._deleted || (this._isInitialized = !0)
+                } catch (sD) {}
+                await this.initializeCurrentUser(zD), this.lastNotifiedUid = (null === (pD = this.currentUser) || void 0 === pD ? void 0 : pD.uid) || null, this._deleted || (this._isInitialized = !0)
               }
             })), this._initializationPromise
           }
           async _onStorageEvent() {
             if (this._deleted) return;
-            const mm = await this.assertedPersistence.getCurrentUser();
-            return this.currentUser || mm ? this.currentUser && mm && this.currentUser.uid === mm.uid ? (this._currentUser._assign(mm), void await this.currentUser.getIdToken()) : void await this._updateCurrentUser(mm, !0) : void 0
+            const DD = await this.assertedPersistence.getCurrentUser();
+            return this.currentUser || DD ? this.currentUser && DD && this.currentUser.uid === DD.uid ? (this._currentUser._assign(DD), void await this.currentUser.getIdToken()) : void await this._updateCurrentUser(DD, !0) : void 0
           }
-          async initializeCurrentUser(mm) {
-            var Tm;
-            const fm = await this.assertedPersistence.getCurrentUser();
-            let hm = fm,
-              Am = !1;
-            if (mm && this.config.authDomain) {
+          async initializeCurrentUser(DD) {
+            var zD;
+            const wD = await this.assertedPersistence.getCurrentUser();
+            let pD = wD,
+              sD = !1;
+            if (DD && this.config.authDomain) {
               await this.getOrInitRedirectPersistenceManager();
-              const fm = null === (Tm = this.redirectUser) || void 0 === Tm ? void 0 : Tm._redirectEventId,
-                am = null === hm || void 0 === hm ? void 0 : hm._redirectEventId,
-                xm = await this.tryRedirectSignIn(mm);
-              fm && fm !== am || !(null === xm || void 0 === xm ? void 0 : xm.user) || (hm = xm.user, Am = !0)
+              const wD = null === (zD = this.redirectUser) || void 0 === zD ? void 0 : zD._redirectEventId,
+                KD = null === pD || void 0 === pD ? void 0 : pD._redirectEventId,
+                rD = await this.tryRedirectSignIn(DD);
+              wD && wD !== KD || !(null === rD || void 0 === rD ? void 0 : rD.user) || (pD = rD.user, sD = !0)
             }
-            if (!hm) return this.directlySetCurrentUser(null);
-            if (!hm._redirectEventId) {
-              if (Am) try {
-                await this.beforeStateQueue.runMiddleware(hm)
-              } catch (am) {
-                hm = fm, this._popupRedirectResolver._overrideRedirectResult(this, (() => Promise.reject(am)))
+            if (!pD) return this.directlySetCurrentUser(null);
+            if (!pD._redirectEventId) {
+              if (sD) try {
+                await this.beforeStateQueue.runMiddleware(pD)
+              } catch (KD) {
+                pD = wD, this._popupRedirectResolver._overrideRedirectResult(this, (() => Promise.reject(KD)))
               }
-              return hm ? this.reloadAndSetCurrentUserOrClear(hm) : this.directlySetCurrentUser(null)
+              return pD ? this.reloadAndSetCurrentUserOrClear(pD) : this.directlySetCurrentUser(null)
             }
-            return zm(this._popupRedirectResolver, this, "argument-error"), await this.getOrInitRedirectPersistenceManager(), this.redirectUser && this.redirectUser._redirectEventId === hm._redirectEventId ? this.directlySetCurrentUser(hm) : this.reloadAndSetCurrentUserOrClear(hm)
+            return VD(this._popupRedirectResolver, this, "argument-error"), await this.getOrInitRedirectPersistenceManager(), this.redirectUser && this.redirectUser._redirectEventId === pD._redirectEventId ? this.directlySetCurrentUser(pD) : this.reloadAndSetCurrentUserOrClear(pD)
           }
-          async tryRedirectSignIn(mm) {
-            let Tm = null;
+          async tryRedirectSignIn(DD) {
+            let zD = null;
             try {
-              Tm = await this._popupRedirectResolver._completeRedirectFn(this, mm, !0)
-            } catch (fm) {
+              zD = await this._popupRedirectResolver._completeRedirectFn(this, DD, !0)
+            } catch (wD) {
               await this._setRedirectUser(null)
             }
-            return Tm
+            return zD
           }
-          async reloadAndSetCurrentUserOrClear(mm) {
+          async reloadAndSetCurrentUserOrClear(DD) {
             try {
-              await mT(mm)
-            } catch (Tm) {
-              if ("auth/network-request-failed" !== (null === Tm || void 0 === Tm ? void 0 : Tm.code)) return this.directlySetCurrentUser(null)
+              await qD(DD)
+            } catch (zD) {
+              if ("auth/network-request-failed" !== (null === zD || void 0 === zD ? void 0 : zD.code)) return this.directlySetCurrentUser(null)
             }
-            return this.directlySetCurrentUser(mm)
+            return this.directlySetCurrentUser(DD)
           }
           useDeviceLanguage() {
             this.languageCode = function() {
               if ("undefined" === typeof navigator) return null;
-              const mm = navigator;
-              return mm.languages && mm.languages[0] || mm.language || null
+              const DD = navigator;
+              return DD.languages && DD.languages[0] || DD.language || null
             }()
           }
           async _delete() {
             this._deleted = !0
           }
-          async updateCurrentUser(mm) {
-            const Tm = mm ? (0, hm.J)(mm) : null;
-            return Tm && zm(Tm.auth.config.apiKey === this.config.apiKey, this, "invalid-user-token"), this._updateCurrentUser(Tm && Tm._clone(this))
+          async updateCurrentUser(DD) {
+            const zD = DD ? (0, pD.H)(DD) : null;
+            return zD && VD(zD.auth.config.apiKey === this.config.apiKey, this, "invalid-user-token"), this._updateCurrentUser(zD && zD._clone(this))
           }
-          async _updateCurrentUser(mm) {
-            let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (!this._deleted) return mm && zm(this.tenantId === mm.tenantId, this, "tenant-id-mismatch"), Tm || await this.beforeStateQueue.runMiddleware(mm), this.queue((async () => {
-              await this.directlySetCurrentUser(mm), this.notifyAuthListeners()
+          async _updateCurrentUser(DD) {
+            let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (!this._deleted) return DD && VD(this.tenantId === DD.tenantId, this, "tenant-id-mismatch"), zD || await this.beforeStateQueue.runMiddleware(DD), this.queue((async () => {
+              await this.directlySetCurrentUser(DD), this.notifyAuthListeners()
             }))
           }
           async signOut() {
             return await this.beforeStateQueue.runMiddleware(null), (this.redirectPersistenceManager || this._popupRedirectResolver) && await this._setRedirectUser(null), this._updateCurrentUser(null, !0)
           }
-          setPersistence(mm) {
+          setPersistence(DD) {
             return this.queue((async () => {
-              await this.assertedPersistence.setPersistence(xT(mm))
+              await this.assertedPersistence.setPersistence(Kz(DD))
             }))
           }
           async initializeRecaptchaConfig() {
-            const mm = await nT(this, {
+            const DD = await Jz(this, {
                 clientType: "CLIENT_TYPE_WEB",
                 version: "RECAPTCHA_ENTERPRISE"
               }),
-              Tm = new zT(mm);
-            if (null == this.tenantId ? this._agentRecaptchaConfig = Tm : this._tenantRecaptchaConfigs[this.tenantId] = Tm, Tm.emailPasswordEnabled) {
-              new bT(this).verify()
+              zD = new Xz(DD);
+            if (null == this.tenantId ? this._agentRecaptchaConfig = zD : this._tenantRecaptchaConfigs[this.tenantId] = zD, zD.emailPasswordEnabled) {
+              new Cz(this).verify()
             }
           }
           _getRecaptchaConfig() {
@@ -1393,47 +1393,47 @@ export const modules = {
           _getPersistence() {
             return this.assertedPersistence.persistence.type
           }
-          _updateErrorMap(mm) {
-            this._errorFactory = new hm.e("auth", "Firebase", mm())
+          _updateErrorMap(DD) {
+            this._errorFactory = new pD.c("auth", "Firebase", DD())
           }
-          onAuthStateChanged(mm, Tm, fm) {
-            return this.registerStateListener(this.authStateSubscription, mm, Tm, fm)
+          onAuthStateChanged(DD, zD, wD) {
+            return this.registerStateListener(this.authStateSubscription, DD, zD, wD)
           }
-          beforeAuthStateChanged(mm, Tm) {
-            return this.beforeStateQueue.pushCallback(mm, Tm)
+          beforeAuthStateChanged(DD, zD) {
+            return this.beforeStateQueue.pushCallback(DD, zD)
           }
-          onIdTokenChanged(mm, Tm, fm) {
-            return this.registerStateListener(this.idTokenSubscription, mm, Tm, fm)
+          onIdTokenChanged(DD, zD, wD) {
+            return this.registerStateListener(this.idTokenSubscription, DD, zD, wD)
           }
           toJSON() {
-            var mm;
+            var DD;
             return {
               apiKey: this.config.apiKey,
               authDomain: this.config.authDomain,
               appName: this.name,
-              currentUser: null === (mm = this._currentUser) || void 0 === mm ? void 0 : mm.toJSON()
+              currentUser: null === (DD = this._currentUser) || void 0 === DD ? void 0 : DD.toJSON()
             }
           }
-          async _setRedirectUser(mm, Tm) {
-            const fm = await this.getOrInitRedirectPersistenceManager(Tm);
-            return null === mm ? fm.removeCurrentUser() : fm.setCurrentUser(mm)
+          async _setRedirectUser(DD, zD) {
+            const wD = await this.getOrInitRedirectPersistenceManager(zD);
+            return null === DD ? wD.removeCurrentUser() : wD.setCurrentUser(DD)
           }
-          async getOrInitRedirectPersistenceManager(mm) {
+          async getOrInitRedirectPersistenceManager(DD) {
             if (!this.redirectPersistenceManager) {
-              const Tm = mm && xT(mm) || this._popupRedirectResolver;
-              zm(Tm, this, "argument-error"), this.redirectPersistenceManager = await RT.create(this, [xT(Tm._redirectPersistence)], "redirectUser"), this.redirectUser = await this.redirectPersistenceManager.getCurrentUser()
+              const zD = DD && Kz(DD) || this._popupRedirectResolver;
+              VD(zD, this, "argument-error"), this.redirectPersistenceManager = await gz.create(this, [Kz(zD._redirectPersistence)], "redirectUser"), this.redirectUser = await this.redirectPersistenceManager.getCurrentUser()
             }
             return this.redirectPersistenceManager
           }
-          async _redirectUserForId(mm) {
-            var Tm, fm;
-            return this._isInitialized && await this.queue((async () => {})), (null === (Tm = this._currentUser) || void 0 === Tm ? void 0 : Tm._redirectEventId) === mm ? this._currentUser : (null === (fm = this.redirectUser) || void 0 === fm ? void 0 : fm._redirectEventId) === mm ? this.redirectUser : null
+          async _redirectUserForId(DD) {
+            var zD, wD;
+            return this._isInitialized && await this.queue((async () => {})), (null === (zD = this._currentUser) || void 0 === zD ? void 0 : zD._redirectEventId) === DD ? this._currentUser : (null === (wD = this.redirectUser) || void 0 === wD ? void 0 : wD._redirectEventId) === DD ? this.redirectUser : null
           }
-          async _persistUserIfCurrent(mm) {
-            if (mm === this.currentUser) return this.queue((async () => this.directlySetCurrentUser(mm)))
+          async _persistUserIfCurrent(DD) {
+            if (DD === this.currentUser) return this.queue((async () => this.directlySetCurrentUser(DD)))
           }
-          _notifyListenersIfCurrent(mm) {
-            mm === this.currentUser && this.notifyAuthListeners()
+          _notifyListenersIfCurrent(DD) {
+            DD === this.currentUser && this.notifyAuthListeners()
           }
           _key() {
             return `${this.config.authDomain}:${this.config.apiKey}:${this.name}`
@@ -1448,192 +1448,192 @@ export const modules = {
             return this.currentUser
           }
           notifyAuthListeners() {
-            var mm, Tm;
+            var DD, zD;
             if (!this._isInitialized) return;
             this.idTokenSubscription.next(this.currentUser);
-            const fm = null !== (Tm = null === (mm = this.currentUser) || void 0 === mm ? void 0 : mm.uid) && void 0 !== Tm ? Tm : null;
-            this.lastNotifiedUid !== fm && (this.lastNotifiedUid = fm, this.authStateSubscription.next(this.currentUser))
+            const wD = null !== (zD = null === (DD = this.currentUser) || void 0 === DD ? void 0 : DD.uid) && void 0 !== zD ? zD : null;
+            this.lastNotifiedUid !== wD && (this.lastNotifiedUid = wD, this.authStateSubscription.next(this.currentUser))
           }
-          registerStateListener(mm, Tm, fm, hm) {
+          registerStateListener(DD, zD, wD, pD) {
             if (this._deleted) return () => {};
-            const Am = "function" === typeof Tm ? Tm : Tm.next.bind(Tm),
-              am = this._isInitialized ? Promise.resolve() : this._initializationPromise;
-            return zm(am, this, "internal-error"), am.then((() => Am(this.currentUser))), "function" === typeof Tm ? mm.addObserver(Tm, fm, hm) : mm.addObserver(Tm)
+            const sD = "function" === typeof zD ? zD : zD.next.bind(zD),
+              KD = this._isInitialized ? Promise.resolve() : this._initializationPromise;
+            return VD(KD, this, "internal-error"), KD.then((() => sD(this.currentUser))), "function" === typeof zD ? DD.addObserver(zD, wD, pD) : DD.addObserver(zD)
           }
-          async directlySetCurrentUser(mm) {
-            this.currentUser && this.currentUser !== mm && this._currentUser._stopProactiveRefresh(), mm && this.isProactiveRefreshEnabled && mm._startProactiveRefresh(), this.currentUser = mm, mm ? await this.assertedPersistence.setCurrentUser(mm) : await this.assertedPersistence.removeCurrentUser()
+          async directlySetCurrentUser(DD) {
+            this.currentUser && this.currentUser !== DD && this._currentUser._stopProactiveRefresh(), DD && this.isProactiveRefreshEnabled && DD._startProactiveRefresh(), this.currentUser = DD, DD ? await this.assertedPersistence.setCurrentUser(DD) : await this.assertedPersistence.removeCurrentUser()
           }
-          queue(mm) {
-            return this.operations = this.operations.then(mm, mm), this.operations
+          queue(DD) {
+            return this.operations = this.operations.then(DD, DD), this.operations
           }
           get assertedPersistence() {
-            return zm(this.persistenceManager, this, "internal-error"), this.persistenceManager
+            return VD(this.persistenceManager, this, "internal-error"), this.persistenceManager
           }
-          _logFramework(mm) {
-            mm && !this.frameworks.includes(mm) && (this.frameworks.push(mm), this.frameworks.sort(), this.clientVersion = QT(this.config.clientPlatform, this._getFrameworks()))
+          _logFramework(DD) {
+            DD && !this.frameworks.includes(DD) && (this.frameworks.push(DD), this.frameworks.sort(), this.clientVersion = Oz(this.config.clientPlatform, this._getFrameworks()))
           }
           _getFrameworks() {
             return this.frameworks
           }
           async _getAdditionalHeaders() {
-            var mm;
-            const Tm = {
+            var DD;
+            const zD = {
               "X-Client-Version": this.clientVersion
             };
-            this.app.options.appId && (Tm["X-Firebase-gmpid"] = this.app.options.appId);
-            const fm = await (null === (mm = this.heartbeatServiceProvider.getImmediate({
+            this.app.options.appId && (zD["X-Firebase-gmpid"] = this.app.options.appId);
+            const wD = await (null === (DD = this.heartbeatServiceProvider.getImmediate({
               optional: !0
-            })) || void 0 === mm ? void 0 : mm.getHeartbeatsHeader());
-            fm && (Tm["X-Firebase-Client"] = fm);
-            const hm = await this._getAppCheckToken();
-            return hm && (Tm["X-Firebase-AppCheck"] = hm), Tm
+            })) || void 0 === DD ? void 0 : DD.getHeartbeatsHeader());
+            wD && (zD["X-Firebase-Client"] = wD);
+            const pD = await this._getAppCheckToken();
+            return pD && (zD["X-Firebase-AppCheck"] = pD), zD
           }
           async _getAppCheckToken() {
-            var mm;
-            const Tm = await (null === (mm = this.appCheckServiceProvider.getImmediate({
+            var DD;
+            const zD = await (null === (DD = this.appCheckServiceProvider.getImmediate({
               optional: !0
-            })) || void 0 === mm ? void 0 : mm.getToken());
-            return (null === Tm || void 0 === Tm ? void 0 : Tm.error) && function(mm) {
-              if (Vm.logLevel <= xm.d.WARN) {
-                for (var Tm = arguments.length, fm = new Array(Tm > 1 ? Tm - 1 : 0), hm = 1; hm < Tm; hm++) fm[hm - 1] = arguments[hm];
-                Vm.warn(`Auth (${Am.d}): ${mm}`, ...fm)
+            })) || void 0 === DD ? void 0 : DD.getToken());
+            return (null === zD || void 0 === zD ? void 0 : zD.error) && function(DD) {
+              if (nD.logLevel <= rD.e.WARN) {
+                for (var zD = arguments.length, wD = new Array(zD > 1 ? zD - 1 : 0), pD = 1; pD < zD; pD++) wD[pD - 1] = arguments[pD];
+                nD.warn(`Auth (${sD.e}): ${DD}`, ...wD)
               }
-            }(`Error while retrieving App Check token: ${Tm.error}`), null === Tm || void 0 === Tm ? void 0 : Tm.token
+            }(`Error while retrieving App Check token: ${zD.error}`), null === zD || void 0 === zD ? void 0 : zD.token
           }
         }
 
-        function GT(mm) {
-          return (0, hm.J)(mm)
+        function jz(DD) {
+          return (0, pD.H)(DD)
         }
-        class XT {
-          constructor(mm) {
-            this.auth = mm, this.observer = null, this.addObserver = (0, hm.t)((mm => this.observer = mm))
+        class dz {
+          constructor(DD) {
+            this.auth = DD, this.observer = null, this.addObserver = (0, pD.r)((DD => this.observer = DD))
           }
           get next() {
-            return zm(this.observer, this.auth, "internal-error"), this.observer.next.bind(this.observer)
+            return VD(this.observer, this.auth, "internal-error"), this.observer.next.bind(this.observer)
           }
         }
 
-        function PT(mm, Tm) {
-          const fm = (0, Am.z)(mm, "auth");
-          if (fm.isInitialized()) {
-            const mm = fm.getImmediate(),
-              Am = fm.getOptions();
-            if ((0, hm.w)(Am, null !== Tm && void 0 !== Tm ? Tm : {})) return mm;
-            Km(mm, "already-initialized")
+        function Sz(DD, zD) {
+          const wD = (0, sD.v)(DD, "auth");
+          if (wD.isInitialized()) {
+            const DD = wD.getImmediate(),
+              sD = wD.getOptions();
+            if ((0, pD.u)(sD, null !== zD && void 0 !== zD ? zD : {})) return DD;
+            OD(DD, "already-initialized")
           }
-          return fm.initialize({
-            options: Tm
+          return wD.initialize({
+            options: zD
           })
         }
 
-        function HT(mm, Tm, fm) {
-          const hm = GT(mm);
-          zm(hm._canInitEmulator, hm, "emulator-config-failed"), zm(/^https?:\/\//.test(Tm), hm, "invalid-emulator-scheme");
-          const Am = !!(null === fm || void 0 === fm ? void 0 : fm.disableWarnings),
-            am = yT(Tm),
+        function iz(DD, zD, wD) {
+          const pD = jz(DD);
+          VD(pD._canInitEmulator, pD, "emulator-config-failed"), VD(/^https?:\/\//.test(zD), pD, "invalid-emulator-scheme");
+          const sD = !!(null === wD || void 0 === wD ? void 0 : wD.disableWarnings),
+            KD = lz(zD),
             {
-              host: xm,
-              port: wm
-            } = function(mm) {
-              const Tm = yT(mm),
-                fm = /(\/\/)?([^?#/]+)/.exec(mm.substr(Tm.length));
-              if (!fm) return {
+              host: rD,
+              port: LD
+            } = function(DD) {
+              const zD = lz(DD),
+                wD = /(\/\/)?([^?#/]+)/.exec(DD.substr(zD.length));
+              if (!wD) return {
                 host: "",
                 port: null
               };
-              const hm = fm[2].split("@").pop() || "",
-                Am = /^(\[[^\]]+\])(:|$)/.exec(hm);
-              if (Am) {
-                const mm = Am[1];
+              const pD = wD[2].split("@").pop() || "",
+                sD = /^(\[[^\]]+\])(:|$)/.exec(pD);
+              if (sD) {
+                const DD = sD[1];
                 return {
-                  host: mm,
-                  port: CT(hm.substr(mm.length + 1))
+                  host: DD,
+                  port: Wz(pD.substr(DD.length + 1))
                 }
               } {
-                const [mm, Tm] = hm.split(":");
+                const [DD, zD] = pD.split(":");
                 return {
-                  host: mm,
-                  port: CT(Tm)
+                  host: DD,
+                  port: Wz(zD)
                 }
               }
-            }(Tm),
-            Dm = null === wm ? "" : `:${wm}`;
-          hm.config.emulator = {
-            url: `${am}//${xm}${Dm}/`
-          }, hm.settings.appVerificationDisabledForTesting = !0, hm.emulatorConfig = Object.freeze({
-            host: xm,
-            port: wm,
-            protocol: am.replace(":", ""),
+            }(zD),
+            cD = null === LD ? "" : `:${LD}`;
+          pD.config.emulator = {
+            url: `${KD}//${rD}${cD}/`
+          }, pD.settings.appVerificationDisabledForTesting = !0, pD.emulatorConfig = Object.freeze({
+            host: rD,
+            port: LD,
+            protocol: KD.replace(":", ""),
             options: Object.freeze({
-              disableWarnings: Am
+              disableWarnings: sD
             })
-          }), Am || function() {
-            function mm() {
-              const mm = document.createElement("p"),
-                Tm = mm.style;
-              mm.innerText = "Running in emulator mode. Do not use with production credentials.", Tm.position = "fixed", Tm.width = "100%", Tm.backgroundColor = "#ffffff", Tm.border = ".1em solid #000000", Tm.color = "#b50000", Tm.bottom = "0px", Tm.left = "0px", Tm.margin = "0px", Tm.zIndex = "10000", Tm.textAlign = "center", mm.classList.add("firebase-emulator-warning"), document.body.appendChild(mm)
+          }), sD || function() {
+            function DD() {
+              const DD = document.createElement("p"),
+                zD = DD.style;
+              DD.innerText = "Running in emulator mode. Do not use with production credentials.", zD.position = "fixed", zD.width = "100%", zD.backgroundColor = "#ffffff", zD.border = ".1em solid #000000", zD.color = "#b50000", zD.bottom = "0px", zD.left = "0px", zD.margin = "0px", zD.zIndex = "10000", zD.textAlign = "center", DD.classList.add("firebase-emulator-warning"), document.body.appendChild(DD)
             }
             "undefined" !== typeof console && "function" === typeof console.info && console.info("WARNING: You are using the Auth Emulator, which is intended for local testing only.  Do not use with production credentials.");
-            "undefined" !== typeof window && "undefined" !== typeof document && ("loading" === document.readyState ? window.addEventListener("DOMContentLoaded", mm) : mm())
+            "undefined" !== typeof window && "undefined" !== typeof document && ("loading" === document.readyState ? window.addEventListener("DOMContentLoaded", DD) : DD())
           }()
         }
 
-        function yT(mm) {
-          const Tm = mm.indexOf(":");
-          return Tm < 0 ? "" : mm.substr(0, Tm + 1)
+        function lz(DD) {
+          const zD = DD.indexOf(":");
+          return zD < 0 ? "" : DD.substr(0, zD + 1)
         }
 
-        function CT(mm) {
-          if (!mm) return null;
-          const Tm = Number(mm);
-          return isNaN(Tm) ? null : Tm
+        function Wz(DD) {
+          if (!DD) return null;
+          const zD = Number(DD);
+          return isNaN(zD) ? null : zD
         }
-        class rT {
-          constructor(mm, Tm) {
-            this.providerId = mm, this.signInMethod = Tm
+        class Nz {
+          constructor(DD, zD) {
+            this.providerId = DD, this.signInMethod = zD
           }
           toJSON() {
-            return Zm("not implemented")
+            return PD("not implemented")
           }
-          _getIdTokenResponse(mm) {
-            return Zm("not implemented")
+          _getIdTokenResponse(DD) {
+            return PD("not implemented")
           }
-          _linkToIdToken(mm, Tm) {
-            return Zm("not implemented")
+          _linkToIdToken(DD, zD) {
+            return PD("not implemented")
           }
-          _getReauthenticationResolver(mm) {
-            return Zm("not implemented")
+          _getReauthenticationResolver(DD) {
+            return PD("not implemented")
           }
         }
-        async function sT(mm, Tm) {
-          return Cm(mm, "POST", "/v1/accounts:resetPassword", ym(mm, Tm))
+        async function Zz(DD, zD) {
+          return ND(DD, "POST", "/v1/accounts:resetPassword", WD(DD, zD))
         }
-        async function lT(mm, Tm) {
-          return Cm(mm, "POST", "/v1/accounts:update", Tm)
+        async function yz(DD, zD) {
+          return ND(DD, "POST", "/v1/accounts:update", zD)
         }
-        async function MT(mm, Tm) {
-          return sm(mm, "POST", "/v1/accounts:signInWithPassword", ym(mm, Tm))
+        async function kz(DD, zD) {
+          return yD(DD, "POST", "/v1/accounts:signInWithPassword", WD(DD, zD))
         }
-        async function uT(mm, Tm) {
-          return Cm(mm, "POST", "/v1/accounts:sendOobCode", ym(mm, Tm))
+        async function mz(DD, zD) {
+          return ND(DD, "POST", "/v1/accounts:sendOobCode", WD(DD, zD))
         }
-        async function BT(mm, Tm) {
-          return uT(mm, Tm)
+        async function ez(DD, zD) {
+          return mz(DD, zD)
         }
-        async function LT(mm, Tm) {
-          return uT(mm, Tm)
+        async function oz(DD, zD) {
+          return mz(DD, zD)
         }
-        class vT extends rT {
-          constructor(mm, Tm, fm) {
-            let hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            super("password", fm), this._email = mm, this._password = Tm, this._tenantId = hm
+        class az extends Nz {
+          constructor(DD, zD, wD) {
+            let pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+            super("password", wD), this._email = DD, this._password = zD, this._tenantId = pD
           }
-          static _fromEmailAndPassword(mm, Tm) {
-            return new vT(mm, Tm, "password")
+          static _fromEmailAndPassword(DD, zD) {
+            return new az(DD, zD, "password")
           }
-          static _fromEmailAndCode(mm, Tm) {
-            return new vT(mm, Tm, "emailLink", arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
+          static _fromEmailAndCode(DD, zD) {
+            return new az(DD, zD, "emailLink", arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null)
           }
           toJSON() {
             return {
@@ -1643,82 +1643,82 @@ export const modules = {
               tenantId: this._tenantId
             }
           }
-          static fromJSON(mm) {
-            const Tm = "string" === typeof mm ? JSON.parse(mm) : mm;
-            if ((null === Tm || void 0 === Tm ? void 0 : Tm.email) && (null === Tm || void 0 === Tm ? void 0 : Tm.password)) {
-              if ("password" === Tm.signInMethod) return this._fromEmailAndPassword(Tm.email, Tm.password);
-              if ("emailLink" === Tm.signInMethod) return this._fromEmailAndCode(Tm.email, Tm.password, Tm.tenantId)
+          static fromJSON(DD) {
+            const zD = "string" === typeof DD ? JSON.parse(DD) : DD;
+            if ((null === zD || void 0 === zD ? void 0 : zD.email) && (null === zD || void 0 === zD ? void 0 : zD.password)) {
+              if ("password" === zD.signInMethod) return this._fromEmailAndPassword(zD.email, zD.password);
+              if ("emailLink" === zD.signInMethod) return this._fromEmailAndCode(zD.email, zD.password, zD.tenantId)
             }
             return null
           }
-          async _getIdTokenResponse(mm) {
-            var Tm;
+          async _getIdTokenResponse(DD) {
+            var zD;
             switch (this.signInMethod) {
               case "password":
-                const fm = {
+                const wD = {
                   returnSecureToken: !0,
                   email: this._email,
                   password: this._password,
                   clientType: "CLIENT_TYPE_WEB"
                 };
-                if (null === (Tm = mm._getRecaptchaConfig()) || void 0 === Tm ? void 0 : Tm.emailPasswordEnabled) {
-                  const Tm = await ST(mm, fm, "signInWithPassword");
-                  return MT(mm, Tm)
+                if (null === (zD = DD._getRecaptchaConfig()) || void 0 === zD ? void 0 : zD.emailPasswordEnabled) {
+                  const zD = await xz(DD, wD, "signInWithPassword");
+                  return kz(DD, zD)
                 }
-                return MT(mm, fm).catch((async Tm => {
-                  if ("auth/missing-recaptcha-token" === Tm.code) {
+                return kz(DD, wD).catch((async zD => {
+                  if ("auth/missing-recaptcha-token" === zD.code) {
                     console.log("Sign-in with email address and password is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-in flow.");
-                    const Tm = await ST(mm, fm, "signInWithPassword");
-                    return MT(mm, Tm)
+                    const zD = await xz(DD, wD, "signInWithPassword");
+                    return kz(DD, zD)
                   }
-                  return Promise.reject(Tm)
+                  return Promise.reject(zD)
                 }));
               case "emailLink":
-                return async function(mm, Tm) {
-                  return sm(mm, "POST", "/v1/accounts:signInWithEmailLink", ym(mm, Tm))
-                }(mm, {
+                return async function(DD, zD) {
+                  return yD(DD, "POST", "/v1/accounts:signInWithEmailLink", WD(DD, zD))
+                }(DD, {
                   email: this._email,
                   oobCode: this._password
                 });
               default:
-                Km(mm, "internal-error")
+                OD(DD, "internal-error")
             }
           }
-          async _linkToIdToken(mm, Tm) {
+          async _linkToIdToken(DD, zD) {
             switch (this.signInMethod) {
               case "password":
-                return lT(mm, {
-                  idToken: Tm,
+                return yz(DD, {
+                  idToken: zD,
                   returnSecureToken: !0,
                   email: this._email,
                   password: this._password
                 });
               case "emailLink":
-                return async function(mm, Tm) {
-                  return sm(mm, "POST", "/v1/accounts:signInWithEmailLink", ym(mm, Tm))
-                }(mm, {
-                  idToken: Tm,
+                return async function(DD, zD) {
+                  return yD(DD, "POST", "/v1/accounts:signInWithEmailLink", WD(DD, zD))
+                }(DD, {
+                  idToken: zD,
                   email: this._email,
                   oobCode: this._password
                 });
               default:
-                Km(mm, "internal-error")
+                OD(DD, "internal-error")
             }
           }
-          _getReauthenticationResolver(mm) {
-            return this._getIdTokenResponse(mm)
+          _getReauthenticationResolver(DD) {
+            return this._getIdTokenResponse(DD)
           }
         }
-        async function tT(mm, Tm) {
-          return sm(mm, "POST", "/v1/accounts:signInWithIdp", ym(mm, Tm))
+        async function uz(DD, zD) {
+          return yD(DD, "POST", "/v1/accounts:signInWithIdp", WD(DD, zD))
         }
-        class UT extends rT {
+        class vz extends Nz {
           constructor() {
             super(...arguments), this.pendingToken = null
           }
-          static _fromParams(mm) {
-            const Tm = new UT(mm.providerId, mm.signInMethod);
-            return mm.idToken || mm.accessToken ? (mm.idToken && (Tm.idToken = mm.idToken), mm.accessToken && (Tm.accessToken = mm.accessToken), mm.nonce && !mm.pendingToken && (Tm.nonce = mm.nonce), mm.pendingToken && (Tm.pendingToken = mm.pendingToken)) : mm.oauthToken && mm.oauthTokenSecret ? (Tm.accessToken = mm.oauthToken, Tm.secret = mm.oauthTokenSecret) : Km("argument-error"), Tm
+          static _fromParams(DD) {
+            const zD = new vz(DD.providerId, DD.signInMethod);
+            return DD.idToken || DD.accessToken ? (DD.idToken && (zD.idToken = DD.idToken), DD.accessToken && (zD.accessToken = DD.accessToken), DD.nonce && !DD.pendingToken && (zD.nonce = DD.nonce), DD.pendingToken && (zD.pendingToken = DD.pendingToken)) : DD.oauthToken && DD.oauthTokenSecret ? (zD.accessToken = DD.oauthToken, zD.secret = DD.oauthTokenSecret) : OD("argument-error"), zD
           }
           toJSON() {
             return {
@@ -1731,126 +1731,126 @@ export const modules = {
               signInMethod: this.signInMethod
             }
           }
-          static fromJSON(mm) {
-            const Tm = "string" === typeof mm ? JSON.parse(mm) : mm,
+          static fromJSON(DD) {
+            const zD = "string" === typeof DD ? JSON.parse(DD) : DD,
               {
-                providerId: fm,
-                signInMethod: hm
-              } = Tm,
-              Am = am(Tm, ["providerId", "signInMethod"]);
-            if (!fm || !hm) return null;
-            const xm = new UT(fm, hm);
-            return xm.idToken = Am.idToken || void 0, xm.accessToken = Am.accessToken || void 0, xm.secret = Am.secret, xm.nonce = Am.nonce, xm.pendingToken = Am.pendingToken || null, xm
+                providerId: wD,
+                signInMethod: pD
+              } = zD,
+              sD = KD(zD, ["providerId", "signInMethod"]);
+            if (!wD || !pD) return null;
+            const rD = new vz(wD, pD);
+            return rD.idToken = sD.idToken || void 0, rD.accessToken = sD.accessToken || void 0, rD.secret = sD.secret, rD.nonce = sD.nonce, rD.pendingToken = sD.pendingToken || null, rD
           }
-          _getIdTokenResponse(mm) {
-            return tT(mm, this.buildRequest())
+          _getIdTokenResponse(DD) {
+            return uz(DD, this.buildRequest())
           }
-          _linkToIdToken(mm, Tm) {
-            const fm = this.buildRequest();
-            return fm.idToken = Tm, tT(mm, fm)
+          _linkToIdToken(DD, zD) {
+            const wD = this.buildRequest();
+            return wD.idToken = zD, uz(DD, wD)
           }
-          _getReauthenticationResolver(mm) {
-            const Tm = this.buildRequest();
-            return Tm.autoCreate = !1, tT(mm, Tm)
+          _getReauthenticationResolver(DD) {
+            const zD = this.buildRequest();
+            return zD.autoCreate = !1, uz(DD, zD)
           }
           buildRequest() {
-            const mm = {
+            const DD = {
               requestUri: "http://localhost",
               returnSecureToken: !0
             };
-            if (this.pendingToken) mm.pendingToken = this.pendingToken;
+            if (this.pendingToken) DD.pendingToken = this.pendingToken;
             else {
-              const Tm = {};
-              this.idToken && (Tm.id_token = this.idToken), this.accessToken && (Tm.access_token = this.accessToken), this.secret && (Tm.oauth_token_secret = this.secret), Tm.providerId = this.providerId, this.nonce && !this.pendingToken && (Tm.nonce = this.nonce), mm.postBody = (0, hm.ab)(Tm)
+              const zD = {};
+              this.idToken && (zD.id_token = this.idToken), this.accessToken && (zD.access_token = this.accessToken), this.secret && (zD.oauth_token_secret = this.secret), zD.providerId = this.providerId, this.nonce && !this.pendingToken && (zD.nonce = this.nonce), DD.postBody = (0, pD.Y)(zD)
             }
-            return mm
+            return DD
           }
         }
-        const dT = {
+        const tz = {
           USER_NOT_FOUND: "user-not-found"
         };
-        class gT extends rT {
-          constructor(mm) {
-            super("phone", "phone"), this.params = mm
+        class Fz extends Nz {
+          constructor(DD) {
+            super("phone", "phone"), this.params = DD
           }
-          static _fromVerification(mm, Tm) {
-            return new gT({
-              verificationId: mm,
-              verificationCode: Tm
+          static _fromVerification(DD, zD) {
+            return new Fz({
+              verificationId: DD,
+              verificationCode: zD
             })
           }
-          static _fromTokenResponse(mm, Tm) {
-            return new gT({
-              phoneNumber: mm,
-              temporaryProof: Tm
+          static _fromTokenResponse(DD, zD) {
+            return new Fz({
+              phoneNumber: DD,
+              temporaryProof: zD
             })
           }
-          _getIdTokenResponse(mm) {
-            return async function(mm, Tm) {
-              return sm(mm, "POST", "/v1/accounts:signInWithPhoneNumber", ym(mm, Tm))
-            }(mm, this._makeVerificationRequest())
+          _getIdTokenResponse(DD) {
+            return async function(DD, zD) {
+              return yD(DD, "POST", "/v1/accounts:signInWithPhoneNumber", WD(DD, zD))
+            }(DD, this._makeVerificationRequest())
           }
-          _linkToIdToken(mm, Tm) {
-            return async function(mm, Tm) {
-              const fm = await sm(mm, "POST", "/v1/accounts:signInWithPhoneNumber", ym(mm, Tm));
-              if (fm.temporaryProof) throw um(mm, "account-exists-with-different-credential", fm);
-              return fm
-            }(mm, Object.assign({
-              idToken: Tm
+          _linkToIdToken(DD, zD) {
+            return async function(DD, zD) {
+              const wD = await yD(DD, "POST", "/v1/accounts:signInWithPhoneNumber", WD(DD, zD));
+              if (wD.temporaryProof) throw eD(DD, "account-exists-with-different-credential", wD);
+              return wD
+            }(DD, Object.assign({
+              idToken: zD
             }, this._makeVerificationRequest()))
           }
-          _getReauthenticationResolver(mm) {
-            return async function(mm, Tm) {
-              return sm(mm, "POST", "/v1/accounts:signInWithPhoneNumber", ym(mm, Object.assign(Object.assign({}, Tm), {
+          _getReauthenticationResolver(DD) {
+            return async function(DD, zD) {
+              return yD(DD, "POST", "/v1/accounts:signInWithPhoneNumber", WD(DD, Object.assign(Object.assign({}, zD), {
                 operation: "REAUTH"
-              })), dT)
-            }(mm, this._makeVerificationRequest())
+              })), tz)
+            }(DD, this._makeVerificationRequest())
           }
           _makeVerificationRequest() {
             const {
-              temporaryProof: mm,
-              phoneNumber: Tm,
-              verificationId: fm,
-              verificationCode: hm
+              temporaryProof: DD,
+              phoneNumber: zD,
+              verificationId: wD,
+              verificationCode: pD
             } = this.params;
-            return mm && Tm ? {
-              temporaryProof: mm,
-              phoneNumber: Tm
+            return DD && zD ? {
+              temporaryProof: DD,
+              phoneNumber: zD
             } : {
-              sessionInfo: fm,
-              code: hm
+              sessionInfo: wD,
+              code: pD
             }
           }
           toJSON() {
-            const mm = {
+            const DD = {
               providerId: this.providerId
             };
-            return this.params.phoneNumber && (mm.phoneNumber = this.params.phoneNumber), this.params.temporaryProof && (mm.temporaryProof = this.params.temporaryProof), this.params.verificationCode && (mm.verificationCode = this.params.verificationCode), this.params.verificationId && (mm.verificationId = this.params.verificationId), mm
+            return this.params.phoneNumber && (DD.phoneNumber = this.params.phoneNumber), this.params.temporaryProof && (DD.temporaryProof = this.params.temporaryProof), this.params.verificationCode && (DD.verificationCode = this.params.verificationCode), this.params.verificationId && (DD.verificationId = this.params.verificationId), DD
           }
-          static fromJSON(mm) {
-            "string" === typeof mm && (mm = JSON.parse(mm));
+          static fromJSON(DD) {
+            "string" === typeof DD && (DD = JSON.parse(DD));
             const {
-              verificationId: Tm,
-              verificationCode: fm,
-              phoneNumber: hm,
-              temporaryProof: Am
-            } = mm;
-            return fm || Tm || hm || Am ? new gT({
-              verificationId: Tm,
-              verificationCode: fm,
-              phoneNumber: hm,
-              temporaryProof: Am
+              verificationId: zD,
+              verificationCode: wD,
+              phoneNumber: pD,
+              temporaryProof: sD
+            } = DD;
+            return wD || zD || pD || sD ? new Fz({
+              verificationId: zD,
+              verificationCode: wD,
+              phoneNumber: pD,
+              temporaryProof: sD
             }) : null
           }
         }
-        class WT {
-          constructor(mm) {
-            var Tm, fm, Am, am, xm, wm;
-            const Dm = (0, hm._)((0, hm.z)(mm)),
-              im = null !== (Tm = Dm.apiKey) && void 0 !== Tm ? Tm : null,
-              Rm = null !== (fm = Dm.oobCode) && void 0 !== fm ? fm : null,
-              pm = function(mm) {
-                switch (mm) {
+        class Yz {
+          constructor(DD) {
+            var zD, wD, sD, KD, rD, LD;
+            const cD = (0, pD.X)((0, pD.y)(DD)),
+              gD = null !== (zD = cD.apiKey) && void 0 !== zD ? zD : null,
+              RD = null !== (wD = cD.oobCode) && void 0 !== wD ? wD : null,
+              AD = function(DD) {
+                switch (DD) {
                   case "recoverEmail":
                     return "RECOVER_EMAIL";
                   case "resetPassword":
@@ -1866,226 +1866,226 @@ export const modules = {
                   default:
                     return null
                 }
-              }(null !== (Am = Dm.mode) && void 0 !== Am ? Am : null);
-            zm(im && Rm && pm, "argument-error"), this.apiKey = im, this.operation = pm, this.code = Rm, this.continueUrl = null !== (am = Dm.continueUrl) && void 0 !== am ? am : null, this.languageCode = null !== (xm = Dm.languageCode) && void 0 !== xm ? xm : null, this.tenantId = null !== (wm = Dm.tenantId) && void 0 !== wm ? wm : null
+              }(null !== (sD = cD.mode) && void 0 !== sD ? sD : null);
+            VD(gD && RD && AD, "argument-error"), this.apiKey = gD, this.operation = AD, this.code = RD, this.continueUrl = null !== (KD = cD.continueUrl) && void 0 !== KD ? KD : null, this.languageCode = null !== (rD = cD.languageCode) && void 0 !== rD ? rD : null, this.tenantId = null !== (LD = cD.tenantId) && void 0 !== LD ? LD : null
           }
-          static parseLink(mm) {
-            const Tm = function(mm) {
-              const Tm = (0, hm._)((0, hm.z)(mm)).link,
-                fm = Tm ? (0, hm._)((0, hm.z)(Tm)).deep_link_id : null,
-                Am = (0, hm._)((0, hm.z)(mm)).deep_link_id;
-              return (Am ? (0, hm._)((0, hm.z)(Am)).link : null) || Am || fm || Tm || mm
-            }(mm);
+          static parseLink(DD) {
+            const zD = function(DD) {
+              const zD = (0, pD.X)((0, pD.y)(DD)).link,
+                wD = zD ? (0, pD.X)((0, pD.y)(zD)).deep_link_id : null,
+                sD = (0, pD.X)((0, pD.y)(DD)).deep_link_id;
+              return (sD ? (0, pD.X)((0, pD.y)(sD)).link : null) || sD || wD || zD || DD
+            }(DD);
             try {
-              return new WT(Tm)
-            } catch (fm) {
+              return new Yz(zD)
+            } catch (wD) {
               return null
             }
           }
         }
 
-        function FT(mm) {
-          return WT.parseLink(mm)
+        function Hz(DD) {
+          return Yz.parseLink(DD)
         }
-        class mf {
+        class qz {
           constructor() {
-            this.providerId = mf.PROVIDER_ID
+            this.providerId = qz.PROVIDER_ID
           }
-          static credential(mm, Tm) {
-            return vT._fromEmailAndPassword(mm, Tm)
+          static credential(DD, zD) {
+            return az._fromEmailAndPassword(DD, zD)
           }
-          static credentialWithLink(mm, Tm) {
-            const fm = WT.parseLink(Tm);
-            return zm(fm, "argument-error"), vT._fromEmailAndCode(mm, fm.code, fm.tenantId)
+          static credentialWithLink(DD, zD) {
+            const wD = Yz.parseLink(zD);
+            return VD(wD, "argument-error"), az._fromEmailAndCode(DD, wD.code, wD.tenantId)
           }
         }
-        mf.PROVIDER_ID = "password", mf.EMAIL_PASSWORD_SIGN_IN_METHOD = "password", mf.EMAIL_LINK_SIGN_IN_METHOD = "emailLink";
-        class Tf {
-          constructor(mm) {
-            this.providerId = mm, this.defaultLanguageCode = null, this.customParameters = {}
+        qz.PROVIDER_ID = "password", qz.EMAIL_PASSWORD_SIGN_IN_METHOD = "password", qz.EMAIL_LINK_SIGN_IN_METHOD = "emailLink";
+        class Dw {
+          constructor(DD) {
+            this.providerId = DD, this.defaultLanguageCode = null, this.customParameters = {}
           }
-          setDefaultLanguage(mm) {
-            this.defaultLanguageCode = mm
+          setDefaultLanguage(DD) {
+            this.defaultLanguageCode = DD
           }
-          setCustomParameters(mm) {
-            return this.customParameters = mm, this
+          setCustomParameters(DD) {
+            return this.customParameters = DD, this
           }
           getCustomParameters() {
             return this.customParameters
           }
         }
-        class ff extends Tf {
+        class zw extends Dw {
           constructor() {
             super(...arguments), this.scopes = []
           }
-          addScope(mm) {
-            return this.scopes.includes(mm) || this.scopes.push(mm), this
+          addScope(DD) {
+            return this.scopes.includes(DD) || this.scopes.push(DD), this
           }
           getScopes() {
             return [...this.scopes]
           }
         }
-        class hf extends ff {
-          static credentialFromJSON(mm) {
-            const Tm = "string" === typeof mm ? JSON.parse(mm) : mm;
-            return zm("providerId" in Tm && "signInMethod" in Tm, "argument-error"), UT._fromParams(Tm)
+        class ww extends zw {
+          static credentialFromJSON(DD) {
+            const zD = "string" === typeof DD ? JSON.parse(DD) : DD;
+            return VD("providerId" in zD && "signInMethod" in zD, "argument-error"), vz._fromParams(zD)
           }
-          credential(mm) {
-            return this._credential(Object.assign(Object.assign({}, mm), {
-              nonce: mm.rawNonce
+          credential(DD) {
+            return this._credential(Object.assign(Object.assign({}, DD), {
+              nonce: DD.rawNonce
             }))
           }
-          _credential(mm) {
-            return zm(mm.idToken || mm.accessToken, "argument-error"), UT._fromParams(Object.assign(Object.assign({}, mm), {
+          _credential(DD) {
+            return VD(DD.idToken || DD.accessToken, "argument-error"), vz._fromParams(Object.assign(Object.assign({}, DD), {
               providerId: this.providerId,
               signInMethod: this.providerId
             }))
           }
-          static credentialFromResult(mm) {
-            return hf.oauthCredentialFromTaggedObject(mm)
+          static credentialFromResult(DD) {
+            return ww.oauthCredentialFromTaggedObject(DD)
           }
-          static credentialFromError(mm) {
-            return hf.oauthCredentialFromTaggedObject(mm.customData || {})
+          static credentialFromError(DD) {
+            return ww.oauthCredentialFromTaggedObject(DD.customData || {})
           }
-          static oauthCredentialFromTaggedObject(mm) {
+          static oauthCredentialFromTaggedObject(DD) {
             let {
-              _tokenResponse: Tm
-            } = mm;
-            if (!Tm) return null;
+              _tokenResponse: zD
+            } = DD;
+            if (!zD) return null;
             const {
-              oauthIdToken: fm,
-              oauthAccessToken: hm,
-              oauthTokenSecret: Am,
-              pendingToken: am,
-              nonce: xm,
-              providerId: wm
-            } = Tm;
-            if (!hm && !Am && !fm && !am) return null;
-            if (!wm) return null;
+              oauthIdToken: wD,
+              oauthAccessToken: pD,
+              oauthTokenSecret: sD,
+              pendingToken: KD,
+              nonce: rD,
+              providerId: LD
+            } = zD;
+            if (!pD && !sD && !wD && !KD) return null;
+            if (!LD) return null;
             try {
-              return new hf(wm)._credential({
-                idToken: fm,
-                accessToken: hm,
-                nonce: xm,
-                pendingToken: am
+              return new ww(LD)._credential({
+                idToken: wD,
+                accessToken: pD,
+                nonce: rD,
+                pendingToken: KD
               })
-            } catch (Dm) {
+            } catch (cD) {
               return null
             }
           }
         }
-        class Af extends ff {
+        class pw extends zw {
           constructor() {
             super("facebook.com")
           }
-          static credential(mm) {
-            return UT._fromParams({
-              providerId: Af.PROVIDER_ID,
-              signInMethod: Af.FACEBOOK_SIGN_IN_METHOD,
-              accessToken: mm
+          static credential(DD) {
+            return vz._fromParams({
+              providerId: pw.PROVIDER_ID,
+              signInMethod: pw.FACEBOOK_SIGN_IN_METHOD,
+              accessToken: DD
             })
           }
-          static credentialFromResult(mm) {
-            return Af.credentialFromTaggedObject(mm)
+          static credentialFromResult(DD) {
+            return pw.credentialFromTaggedObject(DD)
           }
-          static credentialFromError(mm) {
-            return Af.credentialFromTaggedObject(mm.customData || {})
+          static credentialFromError(DD) {
+            return pw.credentialFromTaggedObject(DD.customData || {})
           }
-          static credentialFromTaggedObject(mm) {
+          static credentialFromTaggedObject(DD) {
             let {
-              _tokenResponse: Tm
-            } = mm;
-            if (!Tm || !("oauthAccessToken" in Tm)) return null;
-            if (!Tm.oauthAccessToken) return null;
+              _tokenResponse: zD
+            } = DD;
+            if (!zD || !("oauthAccessToken" in zD)) return null;
+            if (!zD.oauthAccessToken) return null;
             try {
-              return Af.credential(Tm.oauthAccessToken)
-            } catch (fm) {
+              return pw.credential(zD.oauthAccessToken)
+            } catch (wD) {
               return null
             }
           }
         }
-        Af.FACEBOOK_SIGN_IN_METHOD = "facebook.com", Af.PROVIDER_ID = "facebook.com";
-        class af extends ff {
+        pw.FACEBOOK_SIGN_IN_METHOD = "facebook.com", pw.PROVIDER_ID = "facebook.com";
+        class sw extends zw {
           constructor() {
             super("google.com"), this.addScope("profile")
           }
-          static credential(mm, Tm) {
-            return UT._fromParams({
-              providerId: af.PROVIDER_ID,
-              signInMethod: af.GOOGLE_SIGN_IN_METHOD,
-              idToken: mm,
-              accessToken: Tm
+          static credential(DD, zD) {
+            return vz._fromParams({
+              providerId: sw.PROVIDER_ID,
+              signInMethod: sw.GOOGLE_SIGN_IN_METHOD,
+              idToken: DD,
+              accessToken: zD
             })
           }
-          static credentialFromResult(mm) {
-            return af.credentialFromTaggedObject(mm)
+          static credentialFromResult(DD) {
+            return sw.credentialFromTaggedObject(DD)
           }
-          static credentialFromError(mm) {
-            return af.credentialFromTaggedObject(mm.customData || {})
+          static credentialFromError(DD) {
+            return sw.credentialFromTaggedObject(DD.customData || {})
           }
-          static credentialFromTaggedObject(mm) {
+          static credentialFromTaggedObject(DD) {
             let {
-              _tokenResponse: Tm
-            } = mm;
-            if (!Tm) return null;
+              _tokenResponse: zD
+            } = DD;
+            if (!zD) return null;
             const {
-              oauthIdToken: fm,
-              oauthAccessToken: hm
-            } = Tm;
-            if (!fm && !hm) return null;
+              oauthIdToken: wD,
+              oauthAccessToken: pD
+            } = zD;
+            if (!wD && !pD) return null;
             try {
-              return af.credential(fm, hm)
-            } catch (Am) {
+              return sw.credential(wD, pD)
+            } catch (sD) {
               return null
             }
           }
         }
-        af.GOOGLE_SIGN_IN_METHOD = "google.com", af.PROVIDER_ID = "google.com";
-        class xf extends ff {
+        sw.GOOGLE_SIGN_IN_METHOD = "google.com", sw.PROVIDER_ID = "google.com";
+        class Kw extends zw {
           constructor() {
             super("github.com")
           }
-          static credential(mm) {
-            return UT._fromParams({
-              providerId: xf.PROVIDER_ID,
-              signInMethod: xf.GITHUB_SIGN_IN_METHOD,
-              accessToken: mm
+          static credential(DD) {
+            return vz._fromParams({
+              providerId: Kw.PROVIDER_ID,
+              signInMethod: Kw.GITHUB_SIGN_IN_METHOD,
+              accessToken: DD
             })
           }
-          static credentialFromResult(mm) {
-            return xf.credentialFromTaggedObject(mm)
+          static credentialFromResult(DD) {
+            return Kw.credentialFromTaggedObject(DD)
           }
-          static credentialFromError(mm) {
-            return xf.credentialFromTaggedObject(mm.customData || {})
+          static credentialFromError(DD) {
+            return Kw.credentialFromTaggedObject(DD.customData || {})
           }
-          static credentialFromTaggedObject(mm) {
+          static credentialFromTaggedObject(DD) {
             let {
-              _tokenResponse: Tm
-            } = mm;
-            if (!Tm || !("oauthAccessToken" in Tm)) return null;
-            if (!Tm.oauthAccessToken) return null;
+              _tokenResponse: zD
+            } = DD;
+            if (!zD || !("oauthAccessToken" in zD)) return null;
+            if (!zD.oauthAccessToken) return null;
             try {
-              return xf.credential(Tm.oauthAccessToken)
-            } catch (fm) {
+              return Kw.credential(zD.oauthAccessToken)
+            } catch (wD) {
               return null
             }
           }
         }
-        xf.GITHUB_SIGN_IN_METHOD = "github.com", xf.PROVIDER_ID = "github.com";
-        class wf extends rT {
-          constructor(mm, Tm) {
-            super(mm, mm), this.pendingToken = Tm
+        Kw.GITHUB_SIGN_IN_METHOD = "github.com", Kw.PROVIDER_ID = "github.com";
+        class rw extends Nz {
+          constructor(DD, zD) {
+            super(DD, DD), this.pendingToken = zD
           }
-          _getIdTokenResponse(mm) {
-            return tT(mm, this.buildRequest())
+          _getIdTokenResponse(DD) {
+            return uz(DD, this.buildRequest())
           }
-          _linkToIdToken(mm, Tm) {
-            const fm = this.buildRequest();
-            return fm.idToken = Tm, tT(mm, fm)
+          _linkToIdToken(DD, zD) {
+            const wD = this.buildRequest();
+            return wD.idToken = zD, uz(DD, wD)
           }
-          _getReauthenticationResolver(mm) {
-            const Tm = this.buildRequest();
-            return Tm.autoCreate = !1, tT(mm, Tm)
+          _getReauthenticationResolver(DD) {
+            const zD = this.buildRequest();
+            return zD.autoCreate = !1, uz(DD, zD)
           }
           toJSON() {
             return {
@@ -2094,17 +2094,17 @@ export const modules = {
               pendingToken: this.pendingToken
             }
           }
-          static fromJSON(mm) {
-            const Tm = "string" === typeof mm ? JSON.parse(mm) : mm,
+          static fromJSON(DD) {
+            const zD = "string" === typeof DD ? JSON.parse(DD) : DD,
               {
-                providerId: fm,
-                signInMethod: hm,
-                pendingToken: Am
-              } = Tm;
-            return fm && hm && Am && fm === hm ? new wf(fm, Am) : null
+                providerId: wD,
+                signInMethod: pD,
+                pendingToken: sD
+              } = zD;
+            return wD && pD && sD && wD === pD ? new rw(wD, sD) : null
           }
-          static _create(mm, Tm) {
-            return new wf(mm, Tm)
+          static _create(DD, zD) {
+            return new rw(DD, zD)
           }
           buildRequest() {
             return {
@@ -2114,753 +2114,753 @@ export const modules = {
             }
           }
         }
-        class Df extends Tf {
-          constructor(mm) {
-            zm(mm.startsWith("saml."), "argument-error"), super(mm)
+        class Lw extends Dw {
+          constructor(DD) {
+            VD(DD.startsWith("saml."), "argument-error"), super(DD)
           }
-          static credentialFromResult(mm) {
-            return Df.samlCredentialFromTaggedObject(mm)
+          static credentialFromResult(DD) {
+            return Lw.samlCredentialFromTaggedObject(DD)
           }
-          static credentialFromError(mm) {
-            return Df.samlCredentialFromTaggedObject(mm.customData || {})
+          static credentialFromError(DD) {
+            return Lw.samlCredentialFromTaggedObject(DD.customData || {})
           }
-          static credentialFromJSON(mm) {
-            const Tm = wf.fromJSON(mm);
-            return zm(Tm, "argument-error"), Tm
+          static credentialFromJSON(DD) {
+            const zD = rw.fromJSON(DD);
+            return VD(zD, "argument-error"), zD
           }
-          static samlCredentialFromTaggedObject(mm) {
+          static samlCredentialFromTaggedObject(DD) {
             let {
-              _tokenResponse: Tm
-            } = mm;
-            if (!Tm) return null;
+              _tokenResponse: zD
+            } = DD;
+            if (!zD) return null;
             const {
-              pendingToken: fm,
-              providerId: hm
-            } = Tm;
-            if (!fm || !hm) return null;
+              pendingToken: wD,
+              providerId: pD
+            } = zD;
+            if (!wD || !pD) return null;
             try {
-              return wf._create(hm, fm)
-            } catch (Am) {
+              return rw._create(pD, wD)
+            } catch (sD) {
               return null
             }
           }
         }
-        class Rf extends ff {
+        class gw extends zw {
           constructor() {
             super("twitter.com")
           }
-          static credential(mm, Tm) {
-            return UT._fromParams({
-              providerId: Rf.PROVIDER_ID,
-              signInMethod: Rf.TWITTER_SIGN_IN_METHOD,
-              oauthToken: mm,
-              oauthTokenSecret: Tm
+          static credential(DD, zD) {
+            return vz._fromParams({
+              providerId: gw.PROVIDER_ID,
+              signInMethod: gw.TWITTER_SIGN_IN_METHOD,
+              oauthToken: DD,
+              oauthTokenSecret: zD
             })
           }
-          static credentialFromResult(mm) {
-            return Rf.credentialFromTaggedObject(mm)
+          static credentialFromResult(DD) {
+            return gw.credentialFromTaggedObject(DD)
           }
-          static credentialFromError(mm) {
-            return Rf.credentialFromTaggedObject(mm.customData || {})
+          static credentialFromError(DD) {
+            return gw.credentialFromTaggedObject(DD.customData || {})
           }
-          static credentialFromTaggedObject(mm) {
+          static credentialFromTaggedObject(DD) {
             let {
-              _tokenResponse: Tm
-            } = mm;
-            if (!Tm) return null;
+              _tokenResponse: zD
+            } = DD;
+            if (!zD) return null;
             const {
-              oauthAccessToken: fm,
-              oauthTokenSecret: hm
-            } = Tm;
-            if (!fm || !hm) return null;
+              oauthAccessToken: wD,
+              oauthTokenSecret: pD
+            } = zD;
+            if (!wD || !pD) return null;
             try {
-              return Rf.credential(fm, hm)
-            } catch (Am) {
+              return gw.credential(wD, pD)
+            } catch (sD) {
               return null
             }
           }
         }
-        async function pf(mm, Tm) {
-          return sm(mm, "POST", "/v1/accounts:signUp", ym(mm, Tm))
+        async function Rw(DD, zD) {
+          return yD(DD, "POST", "/v1/accounts:signUp", WD(DD, zD))
         }
-        Rf.TWITTER_SIGN_IN_METHOD = "twitter.com", Rf.PROVIDER_ID = "twitter.com";
-        class Ef {
-          constructor(mm) {
-            this.user = mm.user, this.providerId = mm.providerId, this._tokenResponse = mm._tokenResponse, this.operationType = mm.operationType
+        gw.TWITTER_SIGN_IN_METHOD = "twitter.com", gw.PROVIDER_ID = "twitter.com";
+        class Aw {
+          constructor(DD) {
+            this.user = DD.user, this.providerId = DD.providerId, this._tokenResponse = DD._tokenResponse, this.operationType = DD.operationType
           }
-          static async _fromIdTokenResponse(mm, Tm, fm) {
-            let hm = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-            const Am = await AT._fromIdTokenResponse(mm, fm, hm),
-              am = of(fm);
-            return new Ef({
-              user: Am,
-              providerId: am,
-              _tokenResponse: fm,
-              operationType: Tm
+          static async _fromIdTokenResponse(DD, zD, wD) {
+            let pD = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+            const sD = await pz._fromIdTokenResponse(DD, wD, pD),
+              KD = Uw(wD);
+            return new Aw({
+              user: sD,
+              providerId: KD,
+              _tokenResponse: wD,
+              operationType: zD
             })
           }
-          static async _forOperation(mm, Tm, fm) {
-            await mm._updateTokensIfNecessary(fm, !0);
-            const hm = of(fm);
-            return new Ef({
-              user: mm,
-              providerId: hm,
-              _tokenResponse: fm,
-              operationType: Tm
+          static async _forOperation(DD, zD, wD) {
+            await DD._updateTokensIfNecessary(wD, !0);
+            const pD = Uw(wD);
+            return new Aw({
+              user: DD,
+              providerId: pD,
+              _tokenResponse: wD,
+              operationType: zD
             })
           }
         }
 
-        function of(mm) {
-          return mm.providerId ? mm.providerId : "phoneNumber" in mm ? "phone" : null
+        function Uw(DD) {
+          return DD.providerId ? DD.providerId : "phoneNumber" in DD ? "phone" : null
         }
-        async function Of(mm) {
-          var Tm;
-          const fm = GT(mm);
-          if (await fm._initializationPromise, null === (Tm = fm.currentUser) || void 0 === Tm ? void 0 : Tm.isAnonymous) return new Ef({
-            user: fm.currentUser,
+        async function fw(DD) {
+          var zD;
+          const wD = jz(DD);
+          if (await wD._initializationPromise, null === (zD = wD.currentUser) || void 0 === zD ? void 0 : zD.isAnonymous) return new Aw({
+            user: wD.currentUser,
             providerId: null,
             operationType: "signIn"
           });
-          const hm = await pf(fm, {
+          const pD = await Rw(wD, {
               returnSecureToken: !0
             }),
-            Am = await Ef._fromIdTokenResponse(fm, "signIn", hm, !0);
-          return await fm._updateCurrentUser(Am.user), Am
+            sD = await Aw._fromIdTokenResponse(wD, "signIn", pD, !0);
+          return await wD._updateCurrentUser(sD.user), sD
         }
-        class Yf extends hm.h {
-          constructor(mm, Tm, fm, hm) {
-            var Am;
-            super(Tm.code, Tm.message), this.operationType = fm, this.user = hm, Object.setPrototypeOf(this, Yf.prototype), this.customData = {
-              appName: mm.name,
-              tenantId: null !== (Am = mm.tenantId) && void 0 !== Am ? Am : void 0,
-              _serverResponse: Tm.customData._serverResponse,
-              operationType: fm
+        class Iw extends pD.e {
+          constructor(DD, zD, wD, pD) {
+            var sD;
+            super(zD.code, zD.message), this.operationType = wD, this.user = pD, Object.setPrototypeOf(this, Iw.prototype), this.customData = {
+              appName: DD.name,
+              tenantId: null !== (sD = DD.tenantId) && void 0 !== sD ? sD : void 0,
+              _serverResponse: zD.customData._serverResponse,
+              operationType: wD
             }
           }
-          static _fromErrorAndOperation(mm, Tm, fm, hm) {
-            return new Yf(mm, Tm, fm, hm)
+          static _fromErrorAndOperation(DD, zD, wD, pD) {
+            return new Iw(DD, zD, wD, pD)
           }
         }
 
-        function qf(mm, Tm, fm, hm) {
-          return ("reauthenticate" === Tm ? fm._getReauthenticationResolver(mm) : fm._getIdTokenResponse(mm)).catch((fm => {
-            if ("auth/multi-factor-auth-required" === fm.code) throw Yf._fromErrorAndOperation(mm, fm, Tm, hm);
-            throw fm
+        function Bw(DD, zD, wD, pD) {
+          return ("reauthenticate" === zD ? wD._getReauthenticationResolver(DD) : wD._getIdTokenResponse(DD)).catch((wD => {
+            if ("auth/multi-factor-auth-required" === wD.code) throw Iw._fromErrorAndOperation(DD, wD, zD, pD);
+            throw wD
           }))
         }
 
-        function jf(mm) {
-          return new Set(mm.map((mm => {
+        function Gw(DD) {
+          return new Set(DD.map((DD => {
             let {
-              providerId: Tm
-            } = mm;
-            return Tm
-          })).filter((mm => !!mm)))
+              providerId: zD
+            } = DD;
+            return zD
+          })).filter((DD => !!DD)))
         }
-        async function Vf(mm, Tm) {
-          const fm = (0, hm.J)(mm);
-          await Kf(!0, fm, Tm);
+        async function hw(DD, zD) {
+          const wD = (0, pD.H)(DD);
+          await Mw(!0, wD, zD);
           const {
-            providerUserInfo: Am
-          } = await async function(mm, Tm) {
-            return Cm(mm, "POST", "/v1/accounts:update", Tm)
-          }(fm.auth, {
-            idToken: await fm.getIdToken(),
-            deleteProvider: [Tm]
-          }), am = jf(Am || []);
-          return fm.providerData = fm.providerData.filter((mm => am.has(mm.providerId))), am.has("phone") || (fm.phoneNumber = null), await fm.auth._persistUserIfCurrent(fm), fm
+            providerUserInfo: sD
+          } = await async function(DD, zD) {
+            return ND(DD, "POST", "/v1/accounts:update", zD)
+          }(wD.auth, {
+            idToken: await wD.getIdToken(),
+            deleteProvider: [zD]
+          }), KD = Gw(sD || []);
+          return wD.providerData = wD.providerData.filter((DD => KD.has(DD.providerId))), KD.has("phone") || (wD.phoneNumber = null), await wD.auth._persistUserIfCurrent(wD), wD
         }
-        async function If(mm, Tm) {
-          let fm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const hm = await gm(mm, Tm._linkToIdToken(mm.auth, await mm.getIdToken()), fm);
-          return Ef._forOperation(mm, "link", hm)
+        async function nw(DD, zD) {
+          let wD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const pD = await FD(DD, zD._linkToIdToken(DD.auth, await DD.getIdToken()), wD);
+          return Aw._forOperation(DD, "link", pD)
         }
-        async function Kf(mm, Tm, fm) {
-          await mT(Tm);
-          const hm = !1 === mm ? "provider-already-linked" : "no-such-provider";
-          zm(jf(Tm.providerData).has(fm) === mm, Tm.auth, hm)
+        async function Mw(DD, zD, wD) {
+          await qD(zD);
+          const pD = !1 === DD ? "provider-already-linked" : "no-such-provider";
+          VD(Gw(zD.providerData).has(wD) === DD, zD.auth, pD)
         }
-        async function Qf(mm, Tm) {
-          let fm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        async function Ow(DD, zD) {
+          let wD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
           const {
-            auth: hm
-          } = mm, Am = "reauthenticate";
+            auth: pD
+          } = DD, sD = "reauthenticate";
           try {
-            const am = await gm(mm, qf(hm, Am, Tm, mm), fm);
-            zm(am.idToken, hm, "internal-error");
-            const xm = dm(am.idToken);
-            zm(xm, hm, "internal-error");
+            const KD = await FD(DD, Bw(pD, sD, zD, DD), wD);
+            VD(KD.idToken, pD, "internal-error");
+            const rD = tD(KD.idToken);
+            VD(rD, pD, "internal-error");
             const {
-              sub: wm
-            } = xm;
-            return zm(mm.uid === wm, hm, "user-mismatch"), Ef._forOperation(mm, Am, am)
-          } catch (am) {
-            throw "auth/user-not-found" === (null === am || void 0 === am ? void 0 : am.code) && Km(hm, "user-mismatch"), am
+              sub: LD
+            } = rD;
+            return VD(DD.uid === LD, pD, "user-mismatch"), Aw._forOperation(DD, sD, KD)
+          } catch (KD) {
+            throw "auth/user-not-found" === (null === KD || void 0 === KD ? void 0 : KD.code) && OD(pD, "user-mismatch"), KD
           }
         }
-        async function nf(mm, Tm) {
-          let fm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const hm = "signIn",
-            Am = await qf(mm, hm, Tm),
-            am = await Ef._fromIdTokenResponse(mm, hm, Am);
-          return fm || await mm._updateCurrentUser(am.user), am
+        async function Jw(DD, zD) {
+          let wD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const pD = "signIn",
+            sD = await Bw(DD, pD, zD),
+            KD = await Aw._fromIdTokenResponse(DD, pD, sD);
+          return wD || await DD._updateCurrentUser(KD.user), KD
         }
-        async function Jf(mm, Tm) {
-          return nf(GT(mm), Tm)
+        async function Ew(DD, zD) {
+          return Jw(jz(DD), zD)
         }
-        async function zf(mm, Tm) {
-          const fm = (0, hm.J)(mm);
-          return await Kf(!1, fm, Tm.providerId), If(fm, Tm)
+        async function Qw(DD, zD) {
+          const wD = (0, pD.H)(DD);
+          return await Mw(!1, wD, zD.providerId), nw(wD, zD)
         }
-        async function Zf(mm, Tm) {
-          return Qf((0, hm.J)(mm), Tm)
+        async function Xw(DD, zD) {
+          return Ow((0, pD.H)(DD), zD)
         }
-        async function kf(mm, Tm) {
-          const fm = GT(mm),
-            hm = await async function(mm, Tm) {
-              return sm(mm, "POST", "/v1/accounts:signInWithCustomToken", ym(mm, Tm))
-            }(fm, {
-              token: Tm,
+        async function Vw(DD, zD) {
+          const wD = jz(DD),
+            pD = await async function(DD, zD) {
+              return yD(DD, "POST", "/v1/accounts:signInWithCustomToken", WD(DD, zD))
+            }(wD, {
+              token: zD,
               returnSecureToken: !0
-            }), Am = await Ef._fromIdTokenResponse(fm, "signIn", hm);
-          return await fm._updateCurrentUser(Am.user), Am
+            }), sD = await Aw._fromIdTokenResponse(wD, "signIn", pD);
+          return await wD._updateCurrentUser(sD.user), sD
         }
-        class bf {
-          constructor(mm, Tm) {
-            this.factorId = mm, this.uid = Tm.mfaEnrollmentId, this.enrollmentTime = new Date(Tm.enrolledAt).toUTCString(), this.displayName = Tm.displayName
+        class Pw {
+          constructor(DD, zD) {
+            this.factorId = DD, this.uid = zD.mfaEnrollmentId, this.enrollmentTime = new Date(zD.enrolledAt).toUTCString(), this.displayName = zD.displayName
           }
-          static _fromServerResponse(mm, Tm) {
-            return "phoneInfo" in Tm ? Sf._fromServerResponse(mm, Tm) : "totpInfo" in Tm ? ef._fromServerResponse(mm, Tm) : Km(mm, "internal-error")
-          }
-        }
-        class Sf extends bf {
-          constructor(mm) {
-            super("phone", mm), this.phoneNumber = mm.phoneInfo
-          }
-          static _fromServerResponse(mm, Tm) {
-            return new Sf(Tm)
+          static _fromServerResponse(DD, zD) {
+            return "phoneInfo" in zD ? Cw._fromServerResponse(DD, zD) : "totpInfo" in zD ? xw._fromServerResponse(DD, zD) : OD(DD, "internal-error")
           }
         }
-        class ef extends bf {
-          constructor(mm) {
-            super("totp", mm)
+        class Cw extends Pw {
+          constructor(DD) {
+            super("phone", DD), this.phoneNumber = DD.phoneInfo
           }
-          static _fromServerResponse(mm, Tm) {
-            return new ef(Tm)
+          static _fromServerResponse(DD, zD) {
+            return new Cw(zD)
+          }
+        }
+        class xw extends Pw {
+          constructor(DD) {
+            super("totp", DD)
+          }
+          static _fromServerResponse(DD, zD) {
+            return new xw(zD)
           }
         }
 
-        function Nf(mm, Tm, fm) {
-          var hm;
-          zm((null === (hm = fm.url) || void 0 === hm ? void 0 : hm.length) > 0, mm, "invalid-continue-uri"), zm("undefined" === typeof fm.dynamicLinkDomain || fm.dynamicLinkDomain.length > 0, mm, "invalid-dynamic-link-domain"), Tm.continueUrl = fm.url, Tm.dynamicLinkDomain = fm.dynamicLinkDomain, Tm.canHandleCodeInApp = fm.handleCodeInApp, fm.iOS && (zm(fm.iOS.bundleId.length > 0, mm, "missing-ios-bundle-id"), Tm.iOSBundleId = fm.iOS.bundleId), fm.android && (zm(fm.android.packageName.length > 0, mm, "missing-android-pkg-name"), Tm.androidInstallApp = fm.android.installApp, Tm.androidMinimumVersionCode = fm.android.minimumVersion, Tm.androidPackageName = fm.android.packageName)
+        function Tw(DD, zD, wD) {
+          var pD;
+          VD((null === (pD = wD.url) || void 0 === pD ? void 0 : pD.length) > 0, DD, "invalid-continue-uri"), VD("undefined" === typeof wD.dynamicLinkDomain || wD.dynamicLinkDomain.length > 0, DD, "invalid-dynamic-link-domain"), zD.continueUrl = wD.url, zD.dynamicLinkDomain = wD.dynamicLinkDomain, zD.canHandleCodeInApp = wD.handleCodeInApp, wD.iOS && (VD(wD.iOS.bundleId.length > 0, DD, "missing-ios-bundle-id"), zD.iOSBundleId = wD.iOS.bundleId), wD.android && (VD(wD.android.packageName.length > 0, DD, "missing-android-pkg-name"), zD.androidInstallApp = wD.android.installApp, zD.androidMinimumVersionCode = wD.android.minimumVersion, zD.androidPackageName = wD.android.packageName)
         }
-        async function Gf(mm, Tm, fm) {
-          var hm;
-          const Am = GT(mm),
-            am = {
+        async function bw(DD, zD, wD) {
+          var pD;
+          const sD = jz(DD),
+            KD = {
               requestType: "PASSWORD_RESET",
-              email: Tm,
+              email: zD,
               clientType: "CLIENT_TYPE_WEB"
             };
-          if (null === (hm = Am._getRecaptchaConfig()) || void 0 === hm ? void 0 : hm.emailPasswordEnabled) {
-            const mm = await ST(Am, am, "getOobCode", !0);
-            fm && Nf(Am, mm, fm), await BT(Am, mm)
-          } else fm && Nf(Am, am, fm), await BT(Am, am).catch((async mm => {
-            if ("auth/missing-recaptcha-token" !== mm.code) return Promise.reject(mm);
+          if (null === (pD = sD._getRecaptchaConfig()) || void 0 === pD ? void 0 : pD.emailPasswordEnabled) {
+            const DD = await xz(sD, KD, "getOobCode", !0);
+            wD && Tw(sD, DD, wD), await ez(sD, DD)
+          } else wD && Tw(sD, KD, wD), await ez(sD, KD).catch((async DD => {
+            if ("auth/missing-recaptcha-token" !== DD.code) return Promise.reject(DD);
             {
               console.log("Password resets are protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the password reset flow.");
-              const mm = await ST(Am, am, "getOobCode", !0);
-              fm && Nf(Am, mm, fm), await BT(Am, mm)
+              const DD = await xz(sD, KD, "getOobCode", !0);
+              wD && Tw(sD, DD, wD), await ez(sD, DD)
             }
           }))
         }
-        async function Xf(mm, Tm, fm) {
-          await sT((0, hm.J)(mm), {
-            oobCode: Tm,
-            newPassword: fm
+        async function jw(DD, zD, wD) {
+          await Zz((0, pD.H)(DD), {
+            oobCode: zD,
+            newPassword: wD
           })
         }
-        async function Pf(mm, Tm) {
-          await async function(mm, Tm) {
-            return Cm(mm, "POST", "/v1/accounts:update", ym(mm, Tm))
-          }((0, hm.J)(mm), {
-            oobCode: Tm
+        async function dw(DD, zD) {
+          await async function(DD, zD) {
+            return ND(DD, "POST", "/v1/accounts:update", WD(DD, zD))
+          }((0, pD.H)(DD), {
+            oobCode: zD
           })
         }
-        async function Hf(mm, Tm) {
-          const fm = (0, hm.J)(mm),
-            Am = await sT(fm, {
-              oobCode: Tm
+        async function Sw(DD, zD) {
+          const wD = (0, pD.H)(DD),
+            sD = await Zz(wD, {
+              oobCode: zD
             }),
-            am = Am.requestType;
-          switch (zm(am, fm, "internal-error"), am) {
+            KD = sD.requestType;
+          switch (VD(KD, wD, "internal-error"), KD) {
             case "EMAIL_SIGNIN":
               break;
             case "VERIFY_AND_CHANGE_EMAIL":
-              zm(Am.newEmail, fm, "internal-error");
+              VD(sD.newEmail, wD, "internal-error");
               break;
             case "REVERT_SECOND_FACTOR_ADDITION":
-              zm(Am.mfaInfo, fm, "internal-error");
+              VD(sD.mfaInfo, wD, "internal-error");
             default:
-              zm(Am.email, fm, "internal-error")
+              VD(sD.email, wD, "internal-error")
           }
-          let xm = null;
-          return Am.mfaInfo && (xm = bf._fromServerResponse(GT(fm), Am.mfaInfo)), {
+          let rD = null;
+          return sD.mfaInfo && (rD = Pw._fromServerResponse(jz(wD), sD.mfaInfo)), {
             data: {
-              email: ("VERIFY_AND_CHANGE_EMAIL" === Am.requestType ? Am.newEmail : Am.email) || null,
-              previousEmail: ("VERIFY_AND_CHANGE_EMAIL" === Am.requestType ? Am.email : Am.newEmail) || null,
-              multiFactorInfo: xm
+              email: ("VERIFY_AND_CHANGE_EMAIL" === sD.requestType ? sD.newEmail : sD.email) || null,
+              previousEmail: ("VERIFY_AND_CHANGE_EMAIL" === sD.requestType ? sD.email : sD.newEmail) || null,
+              multiFactorInfo: rD
             },
-            operation: am
+            operation: KD
           }
         }
-        async function yf(mm, Tm) {
+        async function iw(DD, zD) {
           const {
-            data: fm
-          } = await Hf((0, hm.J)(mm), Tm);
-          return fm.email
+            data: wD
+          } = await Sw((0, pD.H)(DD), zD);
+          return wD.email
         }
-        async function Cf(mm, Tm, fm) {
-          var hm;
-          const Am = GT(mm),
-            am = {
+        async function lw(DD, zD, wD) {
+          var pD;
+          const sD = jz(DD),
+            KD = {
               returnSecureToken: !0,
-              email: Tm,
-              password: fm,
+              email: zD,
+              password: wD,
               clientType: "CLIENT_TYPE_WEB"
             };
-          let xm;
-          if (null === (hm = Am._getRecaptchaConfig()) || void 0 === hm ? void 0 : hm.emailPasswordEnabled) {
-            const mm = await ST(Am, am, "signUpPassword");
-            xm = pf(Am, mm)
-          } else xm = pf(Am, am).catch((async mm => {
-            if ("auth/missing-recaptcha-token" === mm.code) {
+          let rD;
+          if (null === (pD = sD._getRecaptchaConfig()) || void 0 === pD ? void 0 : pD.emailPasswordEnabled) {
+            const DD = await xz(sD, KD, "signUpPassword");
+            rD = Rw(sD, DD)
+          } else rD = Rw(sD, KD).catch((async DD => {
+            if ("auth/missing-recaptcha-token" === DD.code) {
               console.log("Sign-up is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-up flow.");
-              const mm = await ST(Am, am, "signUpPassword");
-              return pf(Am, mm)
+              const DD = await xz(sD, KD, "signUpPassword");
+              return Rw(sD, DD)
             }
-            return Promise.reject(mm)
+            return Promise.reject(DD)
           }));
-          const wm = await xm.catch((mm => Promise.reject(mm))),
-            Dm = await Ef._fromIdTokenResponse(Am, "signIn", wm);
-          return await Am._updateCurrentUser(Dm.user), Dm
+          const LD = await rD.catch((DD => Promise.reject(DD))),
+            cD = await Aw._fromIdTokenResponse(sD, "signIn", LD);
+          return await sD._updateCurrentUser(cD.user), cD
         }
 
-        function rf(mm, Tm, fm) {
-          return Jf((0, hm.J)(mm), mf.credential(Tm, fm))
+        function Ww(DD, zD, wD) {
+          return Ew((0, pD.H)(DD), qz.credential(zD, wD))
         }
-        async function sf(mm, Tm, fm) {
-          var hm;
-          const Am = GT(mm),
-            am = {
+        async function Nw(DD, zD, wD) {
+          var pD;
+          const sD = jz(DD),
+            KD = {
               requestType: "EMAIL_SIGNIN",
-              email: Tm,
+              email: zD,
               clientType: "CLIENT_TYPE_WEB"
             };
 
-          function xm(mm, Tm) {
-            zm(Tm.handleCodeInApp, Am, "argument-error"), Tm && Nf(Am, mm, Tm)
+          function rD(DD, zD) {
+            VD(zD.handleCodeInApp, sD, "argument-error"), zD && Tw(sD, DD, zD)
           }
-          if (null === (hm = Am._getRecaptchaConfig()) || void 0 === hm ? void 0 : hm.emailPasswordEnabled) {
-            const mm = await ST(Am, am, "getOobCode", !0);
-            xm(mm, fm), await LT(Am, mm)
-          } else xm(am, fm), await LT(Am, am).catch((async mm => {
-            if ("auth/missing-recaptcha-token" !== mm.code) return Promise.reject(mm);
+          if (null === (pD = sD._getRecaptchaConfig()) || void 0 === pD ? void 0 : pD.emailPasswordEnabled) {
+            const DD = await xz(sD, KD, "getOobCode", !0);
+            rD(DD, wD), await oz(sD, DD)
+          } else rD(KD, wD), await oz(sD, KD).catch((async DD => {
+            if ("auth/missing-recaptcha-token" !== DD.code) return Promise.reject(DD);
             {
               console.log("Email link sign-in is protected by reCAPTCHA for this project. Automatically triggering the reCAPTCHA flow and restarting the sign-in flow.");
-              const mm = await ST(Am, am, "getOobCode", !0);
-              xm(mm, fm), await LT(Am, mm)
+              const DD = await xz(sD, KD, "getOobCode", !0);
+              rD(DD, wD), await oz(sD, DD)
             }
           }))
         }
 
-        function lf(mm, Tm) {
-          const fm = WT.parseLink(Tm);
-          return "EMAIL_SIGNIN" === (null === fm || void 0 === fm ? void 0 : fm.operation)
+        function Zw(DD, zD) {
+          const wD = Yz.parseLink(zD);
+          return "EMAIL_SIGNIN" === (null === wD || void 0 === wD ? void 0 : wD.operation)
         }
-        async function Mf(mm, Tm, fm) {
-          const Am = (0, hm.J)(mm),
-            am = mf.credentialWithLink(Tm, fm || bm());
-          return zm(am._tenantId === (Am.tenantId || null), Am, "tenant-id-mismatch"), Jf(Am, am)
+        async function yw(DD, zD, wD) {
+          const sD = (0, pD.H)(DD),
+            KD = qz.credentialWithLink(zD, wD || xD());
+          return VD(KD._tenantId === (sD.tenantId || null), sD, "tenant-id-mismatch"), Ew(sD, KD)
         }
-        async function uf(mm, Tm) {
-          const fm = {
-              identifier: Tm,
-              continueUri: Sm() ? bm() : "http://localhost"
+        async function kw(DD, zD) {
+          const wD = {
+              identifier: zD,
+              continueUri: TD() ? xD() : "http://localhost"
             },
             {
-              signinMethods: Am
-            } = await async function(mm, Tm) {
-              return Cm(mm, "POST", "/v1/accounts:createAuthUri", ym(mm, Tm))
-            }((0, hm.J)(mm), fm);
-          return Am || []
+              signinMethods: sD
+            } = await async function(DD, zD) {
+              return ND(DD, "POST", "/v1/accounts:createAuthUri", WD(DD, zD))
+            }((0, pD.H)(DD), wD);
+          return sD || []
         }
-        async function Bf(mm, Tm) {
-          const fm = (0, hm.J)(mm),
-            Am = {
+        async function mw(DD, zD) {
+          const wD = (0, pD.H)(DD),
+            sD = {
               requestType: "VERIFY_EMAIL",
-              idToken: await mm.getIdToken()
+              idToken: await DD.getIdToken()
             };
-          Tm && Nf(fm.auth, Am, Tm);
+          zD && Tw(wD.auth, sD, zD);
           const {
-            email: am
-          } = await async function(mm, Tm) {
-            return uT(mm, Tm)
-          }(fm.auth, Am);
-          am !== mm.email && await mm.reload()
+            email: KD
+          } = await async function(DD, zD) {
+            return mz(DD, zD)
+          }(wD.auth, sD);
+          KD !== DD.email && await DD.reload()
         }
-        async function Lf(mm, Tm, fm) {
-          const Am = (0, hm.J)(mm),
-            am = {
+        async function ew(DD, zD, wD) {
+          const sD = (0, pD.H)(DD),
+            KD = {
               requestType: "VERIFY_AND_CHANGE_EMAIL",
-              idToken: await mm.getIdToken(),
-              newEmail: Tm
+              idToken: await DD.getIdToken(),
+              newEmail: zD
             };
-          fm && Nf(Am.auth, am, fm);
+          wD && Tw(sD.auth, KD, wD);
           const {
-            email: xm
-          } = await async function(mm, Tm) {
-            return uT(mm, Tm)
-          }(Am.auth, am);
-          xm !== mm.email && await mm.reload()
+            email: rD
+          } = await async function(DD, zD) {
+            return mz(DD, zD)
+          }(sD.auth, KD);
+          rD !== DD.email && await DD.reload()
         }
-        async function vf(mm, Tm) {
+        async function ow(DD, zD) {
           let {
-            displayName: fm,
-            photoURL: Am
-          } = Tm;
-          if (void 0 === fm && void 0 === Am) return;
-          const am = (0, hm.J)(mm),
-            xm = {
-              idToken: await am.getIdToken(),
-              displayName: fm,
-              photoUrl: Am,
+            displayName: wD,
+            photoURL: sD
+          } = zD;
+          if (void 0 === wD && void 0 === sD) return;
+          const KD = (0, pD.H)(DD),
+            rD = {
+              idToken: await KD.getIdToken(),
+              displayName: wD,
+              photoUrl: sD,
               returnSecureToken: !0
             },
-            wm = await gm(am, async function(mm, Tm) {
-              return Cm(mm, "POST", "/v1/accounts:update", Tm)
-            }(am.auth, xm));
-          am.displayName = wm.displayName || null, am.photoURL = wm.photoUrl || null;
-          const Dm = am.providerData.find((mm => {
+            LD = await FD(KD, async function(DD, zD) {
+              return ND(DD, "POST", "/v1/accounts:update", zD)
+            }(KD.auth, rD));
+          KD.displayName = LD.displayName || null, KD.photoURL = LD.photoUrl || null;
+          const cD = KD.providerData.find((DD => {
             let {
-              providerId: Tm
-            } = mm;
-            return "password" === Tm
+              providerId: zD
+            } = DD;
+            return "password" === zD
           }));
-          Dm && (Dm.displayName = am.displayName, Dm.photoURL = am.photoURL), await am._updateTokensIfNecessary(wm)
+          cD && (cD.displayName = KD.displayName, cD.photoURL = KD.photoURL), await KD._updateTokensIfNecessary(LD)
         }
 
-        function tf(mm, Tm) {
-          return df((0, hm.J)(mm), Tm, null)
+        function aw(DD, zD) {
+          return vw((0, pD.H)(DD), zD, null)
         }
 
-        function Uf(mm, Tm) {
-          return df((0, hm.J)(mm), null, Tm)
+        function uw(DD, zD) {
+          return vw((0, pD.H)(DD), null, zD)
         }
-        async function df(mm, Tm, fm) {
+        async function vw(DD, zD, wD) {
           const {
-            auth: hm
-          } = mm, Am = {
-            idToken: await mm.getIdToken(),
+            auth: pD
+          } = DD, sD = {
+            idToken: await DD.getIdToken(),
             returnSecureToken: !0
           };
-          Tm && (Am.email = Tm), fm && (Am.password = fm);
-          const am = await gm(mm, lT(hm, Am));
-          await mm._updateTokensIfNecessary(am, !0)
+          zD && (sD.email = zD), wD && (sD.password = wD);
+          const KD = await FD(DD, yz(pD, sD));
+          await DD._updateTokensIfNecessary(KD, !0)
         }
-        class gf {
-          constructor(mm, Tm) {
-            let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-            this.isNewUser = mm, this.providerId = Tm, this.profile = fm
+        class tw {
+          constructor(DD, zD) {
+            let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+            this.isNewUser = DD, this.providerId = zD, this.profile = wD
           }
         }
-        class Wf extends gf {
-          constructor(mm, Tm, fm, hm) {
-            super(mm, Tm, fm), this.username = hm
+        class Fw extends tw {
+          constructor(DD, zD, wD, pD) {
+            super(DD, zD, wD), this.username = pD
           }
         }
-        class Ff extends gf {
-          constructor(mm, Tm) {
-            super(mm, "facebook.com", Tm)
+        class Yw extends tw {
+          constructor(DD, zD) {
+            super(DD, "facebook.com", zD)
           }
         }
-        class mh extends Wf {
-          constructor(mm, Tm) {
-            super(mm, "github.com", Tm, "string" === typeof(null === Tm || void 0 === Tm ? void 0 : Tm.login) ? null === Tm || void 0 === Tm ? void 0 : Tm.login : null)
+        class Hw extends Fw {
+          constructor(DD, zD) {
+            super(DD, "github.com", zD, "string" === typeof(null === zD || void 0 === zD ? void 0 : zD.login) ? null === zD || void 0 === zD ? void 0 : zD.login : null)
           }
         }
-        class Th extends gf {
-          constructor(mm, Tm) {
-            super(mm, "google.com", Tm)
+        class qw extends tw {
+          constructor(DD, zD) {
+            super(DD, "google.com", zD)
           }
         }
-        class fh extends Wf {
-          constructor(mm, Tm, fm) {
-            super(mm, "twitter.com", Tm, fm)
+        class Dp extends Fw {
+          constructor(DD, zD, wD) {
+            super(DD, "twitter.com", zD, wD)
           }
         }
 
-        function hh(mm) {
+        function zp(DD) {
           const {
-            user: Tm,
-            _tokenResponse: fm
-          } = mm;
-          return Tm.isAnonymous && !fm ? {
+            user: zD,
+            _tokenResponse: wD
+          } = DD;
+          return zD.isAnonymous && !wD ? {
             providerId: null,
             isNewUser: !1,
             profile: null
-          } : function(mm) {
-            var Tm, fm;
-            if (!mm) return null;
+          } : function(DD) {
+            var zD, wD;
+            if (!DD) return null;
             const {
-              providerId: hm
-            } = mm, Am = mm.rawUserInfo ? JSON.parse(mm.rawUserInfo) : {}, am = mm.isNewUser || "identitytoolkit#SignupNewUserResponse" === mm.kind;
-            if (!hm && (null === mm || void 0 === mm ? void 0 : mm.idToken)) {
-              const hm = null === (fm = null === (Tm = dm(mm.idToken)) || void 0 === Tm ? void 0 : Tm.firebase) || void 0 === fm ? void 0 : fm.sign_in_provider;
-              if (hm) return new gf(am, "anonymous" !== hm && "custom" !== hm ? hm : null)
+              providerId: pD
+            } = DD, sD = DD.rawUserInfo ? JSON.parse(DD.rawUserInfo) : {}, KD = DD.isNewUser || "identitytoolkit#SignupNewUserResponse" === DD.kind;
+            if (!pD && (null === DD || void 0 === DD ? void 0 : DD.idToken)) {
+              const pD = null === (wD = null === (zD = tD(DD.idToken)) || void 0 === zD ? void 0 : zD.firebase) || void 0 === wD ? void 0 : wD.sign_in_provider;
+              if (pD) return new tw(KD, "anonymous" !== pD && "custom" !== pD ? pD : null)
             }
-            if (!hm) return null;
-            switch (hm) {
+            if (!pD) return null;
+            switch (pD) {
               case "facebook.com":
-                return new Ff(am, Am);
+                return new Yw(KD, sD);
               case "github.com":
-                return new mh(am, Am);
+                return new Hw(KD, sD);
               case "google.com":
-                return new Th(am, Am);
+                return new qw(KD, sD);
               case "twitter.com":
-                return new fh(am, Am, mm.screenName || null);
+                return new Dp(KD, sD, DD.screenName || null);
               case "custom":
               case "anonymous":
-                return new gf(am, null);
+                return new tw(KD, null);
               default:
-                return new gf(am, hm, Am)
+                return new tw(KD, pD, sD)
             }
-          }(fm)
+          }(wD)
         }
 
-        function Ah(mm, Tm) {
-          return (0, hm.J)(mm).setPersistence(Tm)
+        function wp(DD, zD) {
+          return (0, pD.H)(DD).setPersistence(zD)
         }
 
-        function ah(mm) {
-          return GT(mm).initializeRecaptchaConfig()
+        function pp(DD) {
+          return jz(DD).initializeRecaptchaConfig()
         }
 
-        function xh(mm, Tm, fm, Am) {
-          return (0, hm.J)(mm).onIdTokenChanged(Tm, fm, Am)
+        function sp(DD, zD, wD, sD) {
+          return (0, pD.H)(DD).onIdTokenChanged(zD, wD, sD)
         }
 
-        function wh(mm, Tm, fm) {
-          return (0, hm.J)(mm).beforeAuthStateChanged(Tm, fm)
+        function Kp(DD, zD, wD) {
+          return (0, pD.H)(DD).beforeAuthStateChanged(zD, wD)
         }
 
-        function Dh(mm, Tm, fm, Am) {
-          return (0, hm.J)(mm).onAuthStateChanged(Tm, fm, Am)
+        function rp(DD, zD, wD, sD) {
+          return (0, pD.H)(DD).onAuthStateChanged(zD, wD, sD)
         }
 
-        function ih(mm) {
-          (0, hm.J)(mm).useDeviceLanguage()
+        function Lp(DD) {
+          (0, pD.H)(DD).useDeviceLanguage()
         }
 
-        function Rh(mm, Tm) {
-          return (0, hm.J)(mm).updateCurrentUser(Tm)
+        function cp(DD, zD) {
+          return (0, pD.H)(DD).updateCurrentUser(zD)
         }
 
-        function ph(mm) {
-          return (0, hm.J)(mm).signOut()
+        function gp(DD) {
+          return (0, pD.H)(DD).signOut()
         }
-        async function Eh(mm) {
-          return (0, hm.J)(mm).delete()
+        async function Rp(DD) {
+          return (0, pD.H)(DD).delete()
         }
-        class oh {
-          constructor(mm, Tm, fm) {
-            this.type = mm, this.credential = Tm, this.auth = fm
+        class Ap {
+          constructor(DD, zD, wD) {
+            this.type = DD, this.credential = zD, this.auth = wD
           }
-          static _fromIdtoken(mm, Tm) {
-            return new oh("enroll", mm, Tm)
+          static _fromIdtoken(DD, zD) {
+            return new Ap("enroll", DD, zD)
           }
-          static _fromMfaPendingCredential(mm) {
-            return new oh("signin", mm)
+          static _fromMfaPendingCredential(DD) {
+            return new Ap("signin", DD)
           }
           toJSON() {
-            const mm = "enroll" === this.type ? "idToken" : "pendingCredential";
+            const DD = "enroll" === this.type ? "idToken" : "pendingCredential";
             return {
               multiFactorSession: {
-                [mm]: this.credential
+                [DD]: this.credential
               }
             }
           }
-          static fromJSON(mm) {
-            var Tm, fm;
-            if (null === mm || void 0 === mm ? void 0 : mm.multiFactorSession) {
-              if (null === (Tm = mm.multiFactorSession) || void 0 === Tm ? void 0 : Tm.pendingCredential) return oh._fromMfaPendingCredential(mm.multiFactorSession.pendingCredential);
-              if (null === (fm = mm.multiFactorSession) || void 0 === fm ? void 0 : fm.idToken) return oh._fromIdtoken(mm.multiFactorSession.idToken)
+          static fromJSON(DD) {
+            var zD, wD;
+            if (null === DD || void 0 === DD ? void 0 : DD.multiFactorSession) {
+              if (null === (zD = DD.multiFactorSession) || void 0 === zD ? void 0 : zD.pendingCredential) return Ap._fromMfaPendingCredential(DD.multiFactorSession.pendingCredential);
+              if (null === (wD = DD.multiFactorSession) || void 0 === wD ? void 0 : wD.idToken) return Ap._fromIdtoken(DD.multiFactorSession.idToken)
             }
             return null
           }
         }
-        class Oh {
-          constructor(mm, Tm, fm) {
-            this.session = mm, this.hints = Tm, this.signInResolver = fm
+        class Up {
+          constructor(DD, zD, wD) {
+            this.session = DD, this.hints = zD, this.signInResolver = wD
           }
-          static _fromError(mm, Tm) {
-            const fm = GT(mm),
-              hm = Tm.customData._serverResponse,
-              Am = (hm.mfaInfo || []).map((mm => bf._fromServerResponse(fm, mm)));
-            zm(hm.mfaPendingCredential, fm, "internal-error");
-            const am = oh._fromMfaPendingCredential(hm.mfaPendingCredential);
-            return new Oh(am, Am, (async mm => {
-              const Am = await mm._process(fm, am);
-              delete hm.mfaInfo, delete hm.mfaPendingCredential;
-              const xm = Object.assign(Object.assign({}, hm), {
-                idToken: Am.idToken,
-                refreshToken: Am.refreshToken
+          static _fromError(DD, zD) {
+            const wD = jz(DD),
+              pD = zD.customData._serverResponse,
+              sD = (pD.mfaInfo || []).map((DD => Pw._fromServerResponse(wD, DD)));
+            VD(pD.mfaPendingCredential, wD, "internal-error");
+            const KD = Ap._fromMfaPendingCredential(pD.mfaPendingCredential);
+            return new Up(KD, sD, (async DD => {
+              const sD = await DD._process(wD, KD);
+              delete pD.mfaInfo, delete pD.mfaPendingCredential;
+              const rD = Object.assign(Object.assign({}, pD), {
+                idToken: sD.idToken,
+                refreshToken: sD.refreshToken
               });
-              switch (Tm.operationType) {
+              switch (zD.operationType) {
                 case "signIn":
-                  const mm = await Ef._fromIdTokenResponse(fm, Tm.operationType, xm);
-                  return await fm._updateCurrentUser(mm.user), mm;
+                  const DD = await Aw._fromIdTokenResponse(wD, zD.operationType, rD);
+                  return await wD._updateCurrentUser(DD.user), DD;
                 case "reauthenticate":
-                  return zm(Tm.user, fm, "internal-error"), Ef._forOperation(Tm.user, Tm.operationType, xm);
+                  return VD(zD.user, wD, "internal-error"), Aw._forOperation(zD.user, zD.operationType, rD);
                 default:
-                  Km(fm, "internal-error")
+                  OD(wD, "internal-error")
               }
             }))
           }
-          async resolveSignIn(mm) {
-            const Tm = mm;
-            return this.signInResolver(Tm)
+          async resolveSignIn(DD) {
+            const zD = DD;
+            return this.signInResolver(zD)
           }
         }
 
-        function Yh(mm, Tm) {
-          var fm;
-          const Am = (0, hm.J)(mm),
-            am = Tm;
-          return zm(Tm.customData.operationType, Am, "argument-error"), zm(null === (fm = am.customData._serverResponse) || void 0 === fm ? void 0 : fm.mfaPendingCredential, Am, "argument-error"), Oh._fromError(Am, am)
+        function fp(DD, zD) {
+          var wD;
+          const sD = (0, pD.H)(DD),
+            KD = zD;
+          return VD(zD.customData.operationType, sD, "argument-error"), VD(null === (wD = KD.customData._serverResponse) || void 0 === wD ? void 0 : wD.mfaPendingCredential, sD, "argument-error"), Up._fromError(sD, KD)
         }
-        class qh {
-          constructor(mm) {
-            this.user = mm, this.enrolledFactors = [], mm._onReload((Tm => {
-              Tm.mfaInfo && (this.enrolledFactors = Tm.mfaInfo.map((Tm => bf._fromServerResponse(mm.auth, Tm))))
+        class Ip {
+          constructor(DD) {
+            this.user = DD, this.enrolledFactors = [], DD._onReload((zD => {
+              zD.mfaInfo && (this.enrolledFactors = zD.mfaInfo.map((zD => Pw._fromServerResponse(DD.auth, zD))))
             }))
           }
-          static _fromUser(mm) {
-            return new qh(mm)
+          static _fromUser(DD) {
+            return new Ip(DD)
           }
           async getSession() {
-            return oh._fromIdtoken(await this.user.getIdToken(), this.user.auth)
+            return Ap._fromIdtoken(await this.user.getIdToken(), this.user.auth)
           }
-          async enroll(mm, Tm) {
-            const fm = mm,
-              hm = await this.getSession(),
-              Am = await gm(this.user, fm._process(this.user.auth, hm, Tm));
-            return await this.user._updateTokensIfNecessary(Am), this.user.reload()
+          async enroll(DD, zD) {
+            const wD = DD,
+              pD = await this.getSession(),
+              sD = await FD(this.user, wD._process(this.user.auth, pD, zD));
+            return await this.user._updateTokensIfNecessary(sD), this.user.reload()
           }
-          async unenroll(mm) {
-            const Tm = "string" === typeof mm ? mm : mm.uid,
-              fm = await this.user.getIdToken();
+          async unenroll(DD) {
+            const zD = "string" === typeof DD ? DD : DD.uid,
+              wD = await this.user.getIdToken();
             try {
-              const mm = await gm(this.user, (hm = this.user.auth, Am = {
-                idToken: fm,
-                mfaEnrollmentId: Tm
-              }, Cm(hm, "POST", "/v2/accounts/mfaEnrollment:withdraw", ym(hm, Am))));
-              this.enrolledFactors = this.enrolledFactors.filter((mm => {
+              const DD = await FD(this.user, (pD = this.user.auth, sD = {
+                idToken: wD,
+                mfaEnrollmentId: zD
+              }, ND(pD, "POST", "/v2/accounts/mfaEnrollment:withdraw", WD(pD, sD))));
+              this.enrolledFactors = this.enrolledFactors.filter((DD => {
                 let {
-                  uid: fm
-                } = mm;
-                return fm !== Tm
-              })), await this.user._updateTokensIfNecessary(mm), await this.user.reload()
-            } catch (am) {
-              throw am
+                  uid: wD
+                } = DD;
+                return wD !== zD
+              })), await this.user._updateTokensIfNecessary(DD), await this.user.reload()
+            } catch (KD) {
+              throw KD
             }
-            var hm, Am
+            var pD, sD
           }
         }
-        const jh = new WeakMap;
+        const Bp = new WeakMap;
 
-        function Vh(mm) {
-          const Tm = (0, hm.J)(mm);
-          return jh.has(Tm) || jh.set(Tm, qh._fromUser(Tm)), jh.get(Tm)
+        function Gp(DD) {
+          const zD = (0, pD.H)(DD);
+          return Bp.has(zD) || Bp.set(zD, Ip._fromUser(zD)), Bp.get(zD)
         }
-        const Ih = "__sak";
-        class Kh {
-          constructor(mm, Tm) {
-            this.storageRetriever = mm, this.type = Tm
+        const hp = "__sak";
+        class np {
+          constructor(DD, zD) {
+            this.storageRetriever = DD, this.type = zD
           }
           _isAvailable() {
             try {
-              return this.storage ? (this.storage.setItem(Ih, "1"), this.storage.removeItem(Ih), Promise.resolve(!0)) : Promise.resolve(!1)
-            } catch (mm) {
+              return this.storage ? (this.storage.setItem(hp, "1"), this.storage.removeItem(hp), Promise.resolve(!0)) : Promise.resolve(!1)
+            } catch (DD) {
               return Promise.resolve(!1)
             }
           }
-          _set(mm, Tm) {
-            return this.storage.setItem(mm, JSON.stringify(Tm)), Promise.resolve()
+          _set(DD, zD) {
+            return this.storage.setItem(DD, JSON.stringify(zD)), Promise.resolve()
           }
-          _get(mm) {
-            const Tm = this.storage.getItem(mm);
-            return Promise.resolve(Tm ? JSON.parse(Tm) : null)
+          _get(DD) {
+            const zD = this.storage.getItem(DD);
+            return Promise.resolve(zD ? JSON.parse(zD) : null)
           }
-          _remove(mm) {
-            return this.storage.removeItem(mm), Promise.resolve()
+          _remove(DD) {
+            return this.storage.removeItem(DD), Promise.resolve()
           }
           get storage() {
             return this.storageRetriever()
           }
         }
-        class Qh extends Kh {
+        class Mp extends np {
           constructor() {
-            super((() => window.localStorage), "LOCAL"), this.boundEventHandler = (mm, Tm) => this.onStorageEvent(mm, Tm), this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.safariLocalStorageNotSynced = function() {
-              const mm = (0, hm.N)();
-              return oT(mm) || IT(mm)
+            super((() => window.localStorage), "LOCAL"), this.boundEventHandler = (DD, zD) => this.onStorageEvent(DD, zD), this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.safariLocalStorageNotSynced = function() {
+              const DD = (0, pD.I)();
+              return Uz(DD) || nz(DD)
             }() && function() {
               try {
                 return !(!window || window === window.top)
-              } catch (mm) {
+              } catch (DD) {
                 return !1
               }
-            }(), this.fallbackToPolling = KT(), this._shouldAllowMigration = !0
+            }(), this.fallbackToPolling = Mz(), this._shouldAllowMigration = !0
           }
-          forAllChangedKeys(mm) {
-            for (const Tm of Object.keys(this.listeners)) {
-              const fm = this.storage.getItem(Tm),
-                hm = this.localCache[Tm];
-              fm !== hm && mm(Tm, hm, fm)
+          forAllChangedKeys(DD) {
+            for (const zD of Object.keys(this.listeners)) {
+              const wD = this.storage.getItem(zD),
+                pD = this.localCache[zD];
+              wD !== pD && DD(zD, pD, wD)
             }
           }
-          onStorageEvent(mm) {
-            let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (!mm.key) return void this.forAllChangedKeys(((mm, Tm, fm) => {
-              this.notifyListeners(mm, fm)
+          onStorageEvent(DD) {
+            let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            if (!DD.key) return void this.forAllChangedKeys(((DD, zD, wD) => {
+              this.notifyListeners(DD, wD)
             }));
-            const fm = mm.key;
-            if (Tm ? this.detachListener() : this.stopPolling(), this.safariLocalStorageNotSynced) {
-              const hm = this.storage.getItem(fm);
-              if (mm.newValue !== hm) null !== mm.newValue ? this.storage.setItem(fm, mm.newValue) : this.storage.removeItem(fm);
-              else if (this.localCache[fm] === mm.newValue && !Tm) return
+            const wD = DD.key;
+            if (zD ? this.detachListener() : this.stopPolling(), this.safariLocalStorageNotSynced) {
+              const pD = this.storage.getItem(wD);
+              if (DD.newValue !== pD) null !== DD.newValue ? this.storage.setItem(wD, DD.newValue) : this.storage.removeItem(wD);
+              else if (this.localCache[wD] === DD.newValue && !zD) return
             }
-            const Am = () => {
-                const mm = this.storage.getItem(fm);
-                (Tm || this.localCache[fm] !== mm) && this.notifyListeners(fm, mm)
+            const sD = () => {
+                const DD = this.storage.getItem(wD);
+                (zD || this.localCache[wD] !== DD) && this.notifyListeners(wD, DD)
               },
-              am = this.storage.getItem(fm);
-            (0, hm.R)() && 10 === document.documentMode && am !== mm.newValue && mm.newValue !== mm.oldValue ? setTimeout(Am, 10) : Am()
+              KD = this.storage.getItem(wD);
+            (0, pD.P)() && 10 === document.documentMode && KD !== DD.newValue && DD.newValue !== DD.oldValue ? setTimeout(sD, 10) : sD()
           }
-          notifyListeners(mm, Tm) {
-            this.localCache[mm] = Tm;
-            const fm = this.listeners[mm];
-            if (fm)
-              for (const hm of Array.from(fm)) hm(Tm ? JSON.parse(Tm) : Tm)
+          notifyListeners(DD, zD) {
+            this.localCache[DD] = zD;
+            const wD = this.listeners[DD];
+            if (wD)
+              for (const pD of Array.from(wD)) pD(zD ? JSON.parse(zD) : zD)
           }
           startPolling() {
             this.stopPolling(), this.pollTimer = setInterval((() => {
-              this.forAllChangedKeys(((mm, Tm, fm) => {
+              this.forAllChangedKeys(((DD, zD, wD) => {
                 this.onStorageEvent(new StorageEvent("storage", {
-                  key: mm,
-                  oldValue: Tm,
-                  newValue: fm
+                  key: DD,
+                  oldValue: zD,
+                  newValue: wD
                 }), !0)
               }))
             }), 1e3)
@@ -2874,313 +2874,313 @@ export const modules = {
           detachListener() {
             window.removeEventListener("storage", this.boundEventHandler)
           }
-          _addListener(mm, Tm) {
-            0 === Object.keys(this.listeners).length && (this.fallbackToPolling ? this.startPolling() : this.attachListener()), this.listeners[mm] || (this.listeners[mm] = new Set, this.localCache[mm] = this.storage.getItem(mm)), this.listeners[mm].add(Tm)
+          _addListener(DD, zD) {
+            0 === Object.keys(this.listeners).length && (this.fallbackToPolling ? this.startPolling() : this.attachListener()), this.listeners[DD] || (this.listeners[DD] = new Set, this.localCache[DD] = this.storage.getItem(DD)), this.listeners[DD].add(zD)
           }
-          _removeListener(mm, Tm) {
-            this.listeners[mm] && (this.listeners[mm].delete(Tm), 0 === this.listeners[mm].size && delete this.listeners[mm]), 0 === Object.keys(this.listeners).length && (this.detachListener(), this.stopPolling())
+          _removeListener(DD, zD) {
+            this.listeners[DD] && (this.listeners[DD].delete(zD), 0 === this.listeners[DD].size && delete this.listeners[DD]), 0 === Object.keys(this.listeners).length && (this.detachListener(), this.stopPolling())
           }
-          async _set(mm, Tm) {
-            await super._set(mm, Tm), this.localCache[mm] = JSON.stringify(Tm)
+          async _set(DD, zD) {
+            await super._set(DD, zD), this.localCache[DD] = JSON.stringify(zD)
           }
-          async _get(mm) {
-            const Tm = await super._get(mm);
-            return this.localCache[mm] = JSON.stringify(Tm), Tm
+          async _get(DD) {
+            const zD = await super._get(DD);
+            return this.localCache[DD] = JSON.stringify(zD), zD
           }
-          async _remove(mm) {
-            await super._remove(mm), delete this.localCache[mm]
+          async _remove(DD) {
+            await super._remove(DD), delete this.localCache[DD]
           }
         }
-        Qh.type = "LOCAL";
-        const nh = Qh;
-        class Jh extends Kh {
+        Mp.type = "LOCAL";
+        const Op = Mp;
+        class Jp extends np {
           constructor() {
             super((() => window.sessionStorage), "SESSION")
           }
-          _addListener(mm, Tm) {}
-          _removeListener(mm, Tm) {}
+          _addListener(DD, zD) {}
+          _removeListener(DD, zD) {}
         }
-        Jh.type = "SESSION";
-        const ch = Jh;
-        class zh {
-          constructor(mm) {
-            this.eventTarget = mm, this.handlersMap = {}, this.boundEventHandler = this.handleEvent.bind(this)
+        Jp.type = "SESSION";
+        const Ep = Jp;
+        class Qp {
+          constructor(DD) {
+            this.eventTarget = DD, this.handlersMap = {}, this.boundEventHandler = this.handleEvent.bind(this)
           }
-          static _getInstance(mm) {
-            const Tm = this.receivers.find((Tm => Tm.isListeningto(mm)));
-            if (Tm) return Tm;
-            const fm = new zh(mm);
-            return this.receivers.push(fm), fm
+          static _getInstance(DD) {
+            const zD = this.receivers.find((zD => zD.isListeningto(DD)));
+            if (zD) return zD;
+            const wD = new Qp(DD);
+            return this.receivers.push(wD), wD
           }
-          isListeningto(mm) {
-            return this.eventTarget === mm
+          isListeningto(DD) {
+            return this.eventTarget === DD
           }
-          async handleEvent(mm) {
-            const Tm = mm,
+          async handleEvent(DD) {
+            const zD = DD,
               {
-                eventId: fm,
-                eventType: hm,
-                data: Am
-              } = Tm.data,
-              am = this.handlersMap[hm];
-            if (!(null === am || void 0 === am ? void 0 : am.size)) return;
-            Tm.ports[0].postMessage({
+                eventId: wD,
+                eventType: pD,
+                data: sD
+              } = zD.data,
+              KD = this.handlersMap[pD];
+            if (!(null === KD || void 0 === KD ? void 0 : KD.size)) return;
+            zD.ports[0].postMessage({
               status: "ack",
-              eventId: fm,
-              eventType: hm
+              eventId: wD,
+              eventType: pD
             });
-            const xm = Array.from(am).map((async mm => mm(Tm.origin, Am))),
-              wm = await
-            function(mm) {
-              return Promise.all(mm.map((async mm => {
+            const rD = Array.from(KD).map((async DD => DD(zD.origin, sD))),
+              LD = await
+            function(DD) {
+              return Promise.all(DD.map((async DD => {
                 try {
                   return {
                     fulfilled: !0,
-                    value: await mm
+                    value: await DD
                   }
-                } catch (Tm) {
+                } catch (zD) {
                   return {
                     fulfilled: !1,
-                    reason: Tm
+                    reason: zD
                   }
                 }
               })))
-            }(xm);
-            Tm.ports[0].postMessage({
+            }(rD);
+            zD.ports[0].postMessage({
               status: "done",
-              eventId: fm,
-              eventType: hm,
-              response: wm
+              eventId: wD,
+              eventType: pD,
+              response: LD
             })
           }
-          _subscribe(mm, Tm) {
-            0 === Object.keys(this.handlersMap).length && this.eventTarget.addEventListener("message", this.boundEventHandler), this.handlersMap[mm] || (this.handlersMap[mm] = new Set), this.handlersMap[mm].add(Tm)
+          _subscribe(DD, zD) {
+            0 === Object.keys(this.handlersMap).length && this.eventTarget.addEventListener("message", this.boundEventHandler), this.handlersMap[DD] || (this.handlersMap[DD] = new Set), this.handlersMap[DD].add(zD)
           }
-          _unsubscribe(mm, Tm) {
-            this.handlersMap[mm] && Tm && this.handlersMap[mm].delete(Tm), Tm && 0 !== this.handlersMap[mm].size || delete this.handlersMap[mm], 0 === Object.keys(this.handlersMap).length && this.eventTarget.removeEventListener("message", this.boundEventHandler)
+          _unsubscribe(DD, zD) {
+            this.handlersMap[DD] && zD && this.handlersMap[DD].delete(zD), zD && 0 !== this.handlersMap[DD].size || delete this.handlersMap[DD], 0 === Object.keys(this.handlersMap).length && this.eventTarget.removeEventListener("message", this.boundEventHandler)
           }
         }
 
-        function Zh() {
-          let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
-            Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
-            fm = "";
-          for (let hm = 0; hm < Tm; hm++) fm += Math.floor(10 * Math.random());
-          return mm + fm
+        function Xp() {
+          let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
+            zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10,
+            wD = "";
+          for (let pD = 0; pD < zD; pD++) wD += Math.floor(10 * Math.random());
+          return DD + wD
         }
-        zh.receivers = [];
-        class kh {
-          constructor(mm) {
-            this.target = mm, this.handlers = new Set
+        Qp.receivers = [];
+        class Vp {
+          constructor(DD) {
+            this.target = DD, this.handlers = new Set
           }
-          removeMessageHandler(mm) {
-            mm.messageChannel && (mm.messageChannel.port1.removeEventListener("message", mm.lV), mm.messageChannel.port1.close()), this.handlers.delete(mm)
+          removeMessageHandler(DD) {
+            DD.messageChannel && (DD.messageChannel.port1.removeEventListener("message", DD.bJ), DD.messageChannel.port1.close()), this.handlers.delete(DD)
           }
-          async _send(mm, Tm) {
-            let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 50;
-            const hm = "undefined" !== typeof MessageChannel ? new MessageChannel : null;
-            if (!hm) throw new Error("connection_unavailable");
-            let Am, am;
-            return new Promise(((xm, wm) => {
-              const Dm = Zh("", 20);
-              hm.port1.start();
-              const im = setTimeout((() => {
-                wm(new Error("unsupported_event"))
-              }), fm);
-              am = {
-                messageChannel: hm,
-                lV(mm) {
-                  const Tm = mm;
-                  if (Tm.data.eventId === Dm) switch (Tm.data.status) {
+          async _send(DD, zD) {
+            let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 50;
+            const pD = "undefined" !== typeof MessageChannel ? new MessageChannel : null;
+            if (!pD) throw new Error("connection_unavailable");
+            let sD, KD;
+            return new Promise(((rD, LD) => {
+              const cD = Xp("", 20);
+              pD.port1.start();
+              const gD = setTimeout((() => {
+                LD(new Error("unsupported_event"))
+              }), wD);
+              KD = {
+                messageChannel: pD,
+                bJ(DD) {
+                  const zD = DD;
+                  if (zD.data.eventId === cD) switch (zD.data.status) {
                     case "ack":
-                      clearTimeout(im), Am = setTimeout((() => {
-                        wm(new Error("timeout"))
+                      clearTimeout(gD), sD = setTimeout((() => {
+                        LD(new Error("timeout"))
                       }), 3e3);
                       break;
                     case "done":
-                      clearTimeout(Am), xm(Tm.data.response);
+                      clearTimeout(sD), rD(zD.data.response);
                       break;
                     default:
-                      clearTimeout(im), clearTimeout(Am), wm(new Error("invalid_response"))
+                      clearTimeout(gD), clearTimeout(sD), LD(new Error("invalid_response"))
                   }
                 }
-              }, this.handlers.add(am), hm.port1.addEventListener("message", am.lV), this.target.postMessage({
-                eventType: mm,
-                eventId: Dm,
-                data: Tm
-              }, [hm.port2])
+              }, this.handlers.add(KD), pD.port1.addEventListener("message", KD.bJ), this.target.postMessage({
+                eventType: DD,
+                eventId: cD,
+                data: zD
+              }, [pD.port2])
             })).finally((() => {
-              am && this.removeMessageHandler(am)
+              KD && this.removeMessageHandler(KD)
             }))
           }
         }
 
-        function bh() {
+        function Pp() {
           return window
         }
 
-        function Sh() {
-          return "undefined" !== typeof bh().WorkerGlobalScope && "function" === typeof bh().importScripts
+        function Cp() {
+          return "undefined" !== typeof Pp().WorkerGlobalScope && "function" === typeof Pp().importScripts
         }
-        const eh = "firebaseLocalStorageDb",
-          Nh = "firebaseLocalStorage",
-          Gh = "fbase_key";
-        class Xh {
-          constructor(mm) {
-            this.request = mm
+        const xp = "firebaseLocalStorageDb",
+          Tp = "firebaseLocalStorage",
+          bp = "fbase_key";
+        class jp {
+          constructor(DD) {
+            this.request = DD
           }
           toPromise() {
-            return new Promise(((mm, Tm) => {
+            return new Promise(((DD, zD) => {
               this.request.addEventListener("success", (() => {
-                mm(this.request.result)
+                DD(this.request.result)
               })), this.request.addEventListener("error", (() => {
-                Tm(this.request.error)
+                zD(this.request.error)
               }))
             }))
           }
         }
 
-        function Ph(mm, Tm) {
-          return mm.transaction([Nh], Tm ? "readwrite" : "readonly").objectStore(Nh)
+        function dp(DD, zD) {
+          return DD.transaction([Tp], zD ? "readwrite" : "readonly").objectStore(Tp)
         }
 
-        function Hh() {
-          const mm = indexedDB.open(eh, 1);
-          return new Promise(((Tm, fm) => {
-            mm.addEventListener("error", (() => {
-              fm(mm.error)
-            })), mm.addEventListener("upgradeneeded", (() => {
-              const Tm = mm.result;
+        function Sp() {
+          const DD = indexedDB.open(xp, 1);
+          return new Promise(((zD, wD) => {
+            DD.addEventListener("error", (() => {
+              wD(DD.error)
+            })), DD.addEventListener("upgradeneeded", (() => {
+              const zD = DD.result;
               try {
-                Tm.createObjectStore(Nh, {
-                  keyPath: Gh
+                zD.createObjectStore(Tp, {
+                  keyPath: bp
                 })
-              } catch (hm) {
-                fm(hm)
+              } catch (pD) {
+                wD(pD)
               }
-            })), mm.addEventListener("success", (async () => {
-              const fm = mm.result;
-              fm.objectStoreNames.contains(Nh) ? Tm(fm) : (fm.close(), await
+            })), DD.addEventListener("success", (async () => {
+              const wD = DD.result;
+              wD.objectStoreNames.contains(Tp) ? zD(wD) : (wD.close(), await
                 function() {
-                  const mm = indexedDB.deleteDatabase(eh);
-                  return new Xh(mm).toPromise()
-                }(), Tm(await Hh()))
+                  const DD = indexedDB.deleteDatabase(xp);
+                  return new jp(DD).toPromise()
+                }(), zD(await Sp()))
             }))
           }))
         }
-        async function yh(mm, Tm, fm) {
-          const hm = Ph(mm, !0).put({
-            [Gh]: Tm,
-            value: fm
+        async function ip(DD, zD, wD) {
+          const pD = dp(DD, !0).put({
+            [bp]: zD,
+            value: wD
           });
-          return new Xh(hm).toPromise()
+          return new jp(pD).toPromise()
         }
 
-        function Ch(mm, Tm) {
-          const fm = Ph(mm, !0).delete(Tm);
-          return new Xh(fm).toPromise()
+        function lp(DD, zD) {
+          const wD = dp(DD, !0).delete(zD);
+          return new jp(wD).toPromise()
         }
-        class rh {
+        class Wp {
           constructor() {
             this.type = "LOCAL", this._shouldAllowMigration = !0, this.listeners = {}, this.localCache = {}, this.pollTimer = null, this.pendingWrites = 0, this.receiver = null, this.sender = null, this.serviceWorkerReceiverAvailable = !1, this.activeServiceWorker = null, this._workerInitializationPromise = this.initializeServiceWorkerMessaging().then((() => {}), (() => {}))
           }
           async _openDb() {
-            return this.db || (this.db = await Hh()), this.db
+            return this.db || (this.db = await Sp()), this.db
           }
-          async _withRetries(mm) {
-            let Tm = 0;
+          async _withRetries(DD) {
+            let zD = 0;
             for (;;) try {
-              const Tm = await this._openDb();
-              return await mm(Tm)
-            } catch (fm) {
-              if (Tm++ > 3) throw fm;
+              const zD = await this._openDb();
+              return await DD(zD)
+            } catch (wD) {
+              if (zD++ > 3) throw wD;
               this.db && (this.db.close(), this.db = void 0)
             }
           }
           async initializeServiceWorkerMessaging() {
-            return Sh() ? this.initializeReceiver() : this.initializeSender()
+            return Cp() ? this.initializeReceiver() : this.initializeSender()
           }
           async initializeReceiver() {
-            this.receiver = zh._getInstance(Sh() ? self : null), this.receiver._subscribe("keyChanged", (async (mm, Tm) => ({
-              keyProcessed: (await this._poll()).includes(Tm.key)
-            }))), this.receiver._subscribe("ping", (async (mm, Tm) => ["keyChanged"]))
+            this.receiver = Qp._getInstance(Cp() ? self : null), this.receiver._subscribe("keyChanged", (async (DD, zD) => ({
+              keyProcessed: (await this._poll()).includes(zD.key)
+            }))), this.receiver._subscribe("ping", (async (DD, zD) => ["keyChanged"]))
           }
           async initializeSender() {
-            var mm, Tm;
+            var DD, zD;
             if (this.activeServiceWorker = await async function() {
                 if (!(null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker)) return null;
                 try {
                   return (await navigator.serviceWorker.ready).active
-                } catch (mm) {
+                } catch (DD) {
                   return null
                 }
               }(), !this.activeServiceWorker) return;
-            this.sender = new kh(this.activeServiceWorker);
-            const fm = await this.sender._send("ping", {}, 800);
-            fm && (null === (mm = fm[0]) || void 0 === mm ? void 0 : mm.fulfilled) && (null === (Tm = fm[0]) || void 0 === Tm ? void 0 : Tm.value.includes("keyChanged")) && (this.serviceWorkerReceiverAvailable = !0)
+            this.sender = new Vp(this.activeServiceWorker);
+            const wD = await this.sender._send("ping", {}, 800);
+            wD && (null === (DD = wD[0]) || void 0 === DD ? void 0 : DD.fulfilled) && (null === (zD = wD[0]) || void 0 === zD ? void 0 : zD.value.includes("keyChanged")) && (this.serviceWorkerReceiverAvailable = !0)
           }
-          async notifyServiceWorker(mm) {
+          async notifyServiceWorker(DD) {
             if (this.sender && this.activeServiceWorker && function() {
-                var mm;
-                return (null === (mm = null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker) || void 0 === mm ? void 0 : mm.controller) || null
+                var DD;
+                return (null === (DD = null === navigator || void 0 === navigator ? void 0 : navigator.serviceWorker) || void 0 === DD ? void 0 : DD.controller) || null
               }() === this.activeServiceWorker) try {
               await this.sender._send("keyChanged", {
-                key: mm
+                key: DD
               }, this.serviceWorkerReceiverAvailable ? 800 : 50)
-            } catch (Tm) {}
+            } catch (zD) {}
           }
           async _isAvailable() {
             try {
               if (!indexedDB) return !1;
-              const mm = await Hh();
-              return await yh(mm, Ih, "1"), await Ch(mm, Ih), !0
-            } catch (mm) {}
+              const DD = await Sp();
+              return await ip(DD, hp, "1"), await lp(DD, hp), !0
+            } catch (DD) {}
             return !1
           }
-          async _withPendingWrite(mm) {
+          async _withPendingWrite(DD) {
             this.pendingWrites++;
             try {
-              await mm()
+              await DD()
             } finally {
               this.pendingWrites--
             }
           }
-          async _set(mm, Tm) {
-            return this._withPendingWrite((async () => (await this._withRetries((fm => yh(fm, mm, Tm))), this.localCache[mm] = Tm, this.notifyServiceWorker(mm))))
+          async _set(DD, zD) {
+            return this._withPendingWrite((async () => (await this._withRetries((wD => ip(wD, DD, zD))), this.localCache[DD] = zD, this.notifyServiceWorker(DD))))
           }
-          async _get(mm) {
-            const Tm = await this._withRetries((Tm => async function(mm, Tm) {
-              const fm = Ph(mm, !1).get(Tm),
-                hm = await new Xh(fm).toPromise();
-              return void 0 === hm ? null : hm.value
-            }(Tm, mm)));
-            return this.localCache[mm] = Tm, Tm
+          async _get(DD) {
+            const zD = await this._withRetries((zD => async function(DD, zD) {
+              const wD = dp(DD, !1).get(zD),
+                pD = await new jp(wD).toPromise();
+              return void 0 === pD ? null : pD.value
+            }(zD, DD)));
+            return this.localCache[DD] = zD, zD
           }
-          async _remove(mm) {
-            return this._withPendingWrite((async () => (await this._withRetries((Tm => Ch(Tm, mm))), delete this.localCache[mm], this.notifyServiceWorker(mm))))
+          async _remove(DD) {
+            return this._withPendingWrite((async () => (await this._withRetries((zD => lp(zD, DD))), delete this.localCache[DD], this.notifyServiceWorker(DD))))
           }
           async _poll() {
-            const mm = await this._withRetries((mm => {
-              const Tm = Ph(mm, !1).getAll();
-              return new Xh(Tm).toPromise()
+            const DD = await this._withRetries((DD => {
+              const zD = dp(DD, !1).getAll();
+              return new jp(zD).toPromise()
             }));
-            if (!mm) return [];
+            if (!DD) return [];
             if (0 !== this.pendingWrites) return [];
-            const Tm = [],
-              fm = new Set;
+            const zD = [],
+              wD = new Set;
             for (const {
-                fbase_key: hm,
-                value: Am
+                fbase_key: pD,
+                value: sD
               }
-              of mm) fm.add(hm), JSON.stringify(this.localCache[hm]) !== JSON.stringify(Am) && (this.notifyListeners(hm, Am), Tm.push(hm));
-            for (const hm of Object.keys(this.localCache)) this.localCache[hm] && !fm.has(hm) && (this.notifyListeners(hm, null), Tm.push(hm));
-            return Tm
+              of DD) wD.add(pD), JSON.stringify(this.localCache[pD]) !== JSON.stringify(sD) && (this.notifyListeners(pD, sD), zD.push(pD));
+            for (const pD of Object.keys(this.localCache)) this.localCache[pD] && !wD.has(pD) && (this.notifyListeners(pD, null), zD.push(pD));
+            return zD
           }
-          notifyListeners(mm, Tm) {
-            this.localCache[mm] = Tm;
-            const fm = this.listeners[mm];
-            if (fm)
-              for (const hm of Array.from(fm)) hm(Tm)
+          notifyListeners(DD, zD) {
+            this.localCache[DD] = zD;
+            const wD = this.listeners[DD];
+            if (wD)
+              for (const pD of Array.from(wD)) pD(zD)
           }
           startPolling() {
             this.stopPolling(), this.pollTimer = setInterval((async () => this._poll()), 800)
@@ -3188,49 +3188,49 @@ export const modules = {
           stopPolling() {
             this.pollTimer && (clearInterval(this.pollTimer), this.pollTimer = null)
           }
-          _addListener(mm, Tm) {
-            0 === Object.keys(this.listeners).length && this.startPolling(), this.listeners[mm] || (this.listeners[mm] = new Set, this._get(mm)), this.listeners[mm].add(Tm)
+          _addListener(DD, zD) {
+            0 === Object.keys(this.listeners).length && this.startPolling(), this.listeners[DD] || (this.listeners[DD] = new Set, this._get(DD)), this.listeners[DD].add(zD)
           }
-          _removeListener(mm, Tm) {
-            this.listeners[mm] && (this.listeners[mm].delete(Tm), 0 === this.listeners[mm].size && delete this.listeners[mm]), 0 === Object.keys(this.listeners).length && this.stopPolling()
-          }
-        }
-        rh.type = "LOCAL";
-        const sh = rh;
-        const lh = 1e12;
-        class Mh {
-          constructor(mm) {
-            this.auth = mm, this.counter = lh, this._widgets = new Map
-          }
-          render(mm, Tm) {
-            const fm = this.counter;
-            return this._widgets.set(fm, new uh(mm, this.auth.name, Tm || {})), this.counter++, fm
-          }
-          reset(mm) {
-            var Tm;
-            const fm = mm || lh;
-            null === (Tm = this._widgets.get(fm)) || void 0 === Tm || Tm.delete(), this._widgets.delete(fm)
-          }
-          getResponse(mm) {
-            var Tm;
-            const fm = mm || lh;
-            return (null === (Tm = this._widgets.get(fm)) || void 0 === Tm ? void 0 : Tm.getResponse()) || ""
-          }
-          async execute(mm) {
-            var Tm;
-            const fm = mm || lh;
-            return null === (Tm = this._widgets.get(fm)) || void 0 === Tm || Tm.execute(), ""
+          _removeListener(DD, zD) {
+            this.listeners[DD] && (this.listeners[DD].delete(zD), 0 === this.listeners[DD].size && delete this.listeners[DD]), 0 === Object.keys(this.listeners).length && this.stopPolling()
           }
         }
-        class uh {
-          constructor(mm, Tm, fm) {
-            this.params = fm, this.timerId = null, this.deleted = !1, this.responseToken = null, this.clickHandler = () => {
+        Wp.type = "LOCAL";
+        const Np = Wp;
+        const Zp = 1e12;
+        class yp {
+          constructor(DD) {
+            this.auth = DD, this.counter = Zp, this._widgets = new Map
+          }
+          render(DD, zD) {
+            const wD = this.counter;
+            return this._widgets.set(wD, new kp(DD, this.auth.name, zD || {})), this.counter++, wD
+          }
+          reset(DD) {
+            var zD;
+            const wD = DD || Zp;
+            null === (zD = this._widgets.get(wD)) || void 0 === zD || zD.delete(), this._widgets.delete(wD)
+          }
+          getResponse(DD) {
+            var zD;
+            const wD = DD || Zp;
+            return (null === (zD = this._widgets.get(wD)) || void 0 === zD ? void 0 : zD.getResponse()) || ""
+          }
+          async execute(DD) {
+            var zD;
+            const wD = DD || Zp;
+            return null === (zD = this._widgets.get(wD)) || void 0 === zD || zD.execute(), ""
+          }
+        }
+        class kp {
+          constructor(DD, zD, wD) {
+            this.params = wD, this.timerId = null, this.deleted = !1, this.responseToken = null, this.clickHandler = () => {
               this.execute()
             };
-            const hm = "string" === typeof mm ? document.getElementById(mm) : mm;
-            zm(hm, "argument-error", {
-              appName: Tm
-            }), this.container = hm, this.isVisible = "invisible" !== this.params.size, this.isVisible ? this.execute() : this.container.addEventListener("click", this.clickHandler)
+            const pD = "string" === typeof DD ? document.getElementById(DD) : DD;
+            VD(pD, "argument-error", {
+              appName: zD
+            }), this.container = pD, this.isVisible = "invisible" !== this.params.size, this.isVisible ? this.execute() : this.container.addEventListener("click", this.clickHandler)
           }
           getResponse() {
             return this.checkIfDeleted(), this.responseToken
@@ -3240,23 +3240,23 @@ export const modules = {
           }
           execute() {
             this.checkIfDeleted(), this.timerId || (this.timerId = window.setTimeout((() => {
-              this.responseToken = function(mm) {
-                const Tm = [],
-                  fm = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-                for (let hm = 0; hm < mm; hm++) Tm.push(fm.charAt(Math.floor(Math.random() * fm.length)));
-                return Tm.join("")
+              this.responseToken = function(DD) {
+                const zD = [],
+                  wD = "1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+                for (let pD = 0; pD < DD; pD++) zD.push(wD.charAt(Math.floor(Math.random() * wD.length)));
+                return zD.join("")
               }(50);
               const {
-                callback: mm,
-                "expired-callback": Tm
+                callback: DD,
+                "expired-callback": zD
               } = this.params;
-              if (mm) try {
-                mm(this.responseToken)
-              } catch (fm) {}
+              if (DD) try {
+                DD(this.responseToken)
+              } catch (wD) {}
               this.timerId = window.setTimeout((() => {
-                if (this.timerId = null, this.responseToken = null, Tm) try {
-                  Tm()
-                } catch (fm) {}
+                if (this.timerId = null, this.responseToken = null, zD) try {
+                  zD()
+                } catch (wD) {}
                 this.isVisible && this.execute()
               }), 6e4)
             }), 500))
@@ -3265,268 +3265,268 @@ export const modules = {
             if (this.deleted) throw new Error("reCAPTCHA mock was already deleted!")
           }
         }
-        const Bh = kT("rcb"),
-          Lh = new Nm(3e4, 6e4);
-        class vh {
+        const mp = Pz("rcb"),
+          ep = new jD(3e4, 6e4);
+        class op {
           constructor() {
-            var mm;
-            this.hostLanguage = "", this.counter = 0, this.librarySeparatelyLoaded = !!(null === (mm = bh().grecaptcha) || void 0 === mm ? void 0 : mm.render)
+            var DD;
+            this.hostLanguage = "", this.counter = 0, this.librarySeparatelyLoaded = !!(null === (DD = Pp().grecaptcha) || void 0 === DD ? void 0 : DD.render)
           }
-          load(mm) {
-            let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-            return zm(function(mm) {
-              return mm.length <= 6 && /^\s*[a-zA-Z0-9\-]*\s*$/.test(mm)
-            }(Tm), mm, "argument-error"), this.shouldResolveImmediately(Tm) && JT(bh().grecaptcha) ? Promise.resolve(bh().grecaptcha) : new Promise(((fm, Am) => {
-              const am = bh().setTimeout((() => {
-                Am(Qm(mm, "network-request-failed"))
-              }), Lh.get());
-              bh()[Bh] = () => {
-                bh().clearTimeout(am), delete bh()[Bh];
-                const hm = bh().grecaptcha;
-                if (!hm || !JT(hm)) return void Am(Qm(mm, "internal-error"));
-                const xm = hm.render;
-                hm.render = (mm, Tm) => {
-                  const fm = xm(mm, Tm);
-                  return this.counter++, fm
-                }, this.hostLanguage = Tm, fm(hm)
+          load(DD) {
+            let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+            return VD(function(DD) {
+              return DD.length <= 6 && /^\s*[a-zA-Z0-9\-]*\s*$/.test(DD)
+            }(zD), DD, "argument-error"), this.shouldResolveImmediately(zD) && Ez(Pp().grecaptcha) ? Promise.resolve(Pp().grecaptcha) : new Promise(((wD, sD) => {
+              const KD = Pp().setTimeout((() => {
+                sD(JD(DD, "network-request-failed"))
+              }), ep.get());
+              Pp()[mp] = () => {
+                Pp().clearTimeout(KD), delete Pp()[mp];
+                const pD = Pp().grecaptcha;
+                if (!pD || !Ez(pD)) return void sD(JD(DD, "internal-error"));
+                const rD = pD.render;
+                pD.render = (DD, zD) => {
+                  const wD = rD(DD, zD);
+                  return this.counter++, wD
+                }, this.hostLanguage = zD, wD(pD)
               };
-              ZT(`https://www.google.com/recaptcha/api.js??${(0,hm.ab)({onload:Bh,render:"explicit",hl:Tm})}`).catch((() => {
-                clearTimeout(am), Am(Qm(mm, "internal-error"))
+              Vz(`https://www.google.com/recaptcha/api.js??${(0,pD.Y)({onload:mp,render:"explicit",hl:zD})}`).catch((() => {
+                clearTimeout(KD), sD(JD(DD, "internal-error"))
               }))
             }))
           }
           clearedOneInstance() {
             this.counter--
           }
-          shouldResolveImmediately(mm) {
-            var Tm;
-            return !!(null === (Tm = bh().grecaptcha) || void 0 === Tm ? void 0 : Tm.render) && (mm === this.hostLanguage || this.counter > 0 || this.librarySeparatelyLoaded)
+          shouldResolveImmediately(DD) {
+            var zD;
+            return !!(null === (zD = Pp().grecaptcha) || void 0 === zD ? void 0 : zD.render) && (DD === this.hostLanguage || this.counter > 0 || this.librarySeparatelyLoaded)
           }
         }
-        class th {
-          async load(mm) {
-            return new Mh(mm)
+        class ap {
+          async load(DD) {
+            return new yp(DD)
           }
           clearedOneInstance() {}
         }
-        const Uh = "recaptcha",
-          dh = {
+        const vp = "recaptcha",
+          tp = {
             theme: "light",
             type: "image"
           };
-        class gh {
-          constructor(mm) {
-            let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.assign({}, dh),
-              fm = arguments.length > 2 ? arguments[2] : void 0;
-            this.parameters = Tm, this.type = Uh, this.destroyed = !1, this.widgetId = null, this.tokenChangeListeners = new Set, this.renderPromise = null, this.recaptcha = null, this.auth = GT(fm), this.isInvisible = "invisible" === this.parameters.size, zm("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment");
-            const hm = "string" === typeof mm ? document.getElementById(mm) : mm;
-            zm(hm, this.auth, "argument-error"), this.container = hm, this.parameters.callback = this.makeTokenCallback(this.parameters.callback), this._recaptchaLoader = this.auth.settings.appVerificationDisabledForTesting ? new th : new vh, this.validateStartingState()
+        class Fp {
+          constructor(DD) {
+            let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.assign({}, tp),
+              wD = arguments.length > 2 ? arguments[2] : void 0;
+            this.parameters = zD, this.type = vp, this.destroyed = !1, this.widgetId = null, this.tokenChangeListeners = new Set, this.renderPromise = null, this.recaptcha = null, this.auth = jz(wD), this.isInvisible = "invisible" === this.parameters.size, VD("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment");
+            const pD = "string" === typeof DD ? document.getElementById(DD) : DD;
+            VD(pD, this.auth, "argument-error"), this.container = pD, this.parameters.callback = this.makeTokenCallback(this.parameters.callback), this._recaptchaLoader = this.auth.settings.appVerificationDisabledForTesting ? new ap : new op, this.validateStartingState()
           }
           async verify() {
             this.assertNotDestroyed();
-            const mm = await this.render(),
-              Tm = this.getAssertedRecaptcha(),
-              fm = Tm.getResponse(mm);
-            return fm || new Promise((fm => {
-              const hm = mm => {
-                mm && (this.tokenChangeListeners.delete(hm), fm(mm))
+            const DD = await this.render(),
+              zD = this.getAssertedRecaptcha(),
+              wD = zD.getResponse(DD);
+            return wD || new Promise((wD => {
+              const pD = DD => {
+                DD && (this.tokenChangeListeners.delete(pD), wD(DD))
               };
-              this.tokenChangeListeners.add(hm), this.isInvisible && Tm.execute(mm)
+              this.tokenChangeListeners.add(pD), this.isInvisible && zD.execute(DD)
             }))
           }
           render() {
             try {
               this.assertNotDestroyed()
-            } catch (mm) {
-              return Promise.reject(mm)
+            } catch (DD) {
+              return Promise.reject(DD)
             }
-            return this.renderPromise || (this.renderPromise = this.makeRenderPromise().catch((mm => {
-              throw this.renderPromise = null, mm
+            return this.renderPromise || (this.renderPromise = this.makeRenderPromise().catch((DD => {
+              throw this.renderPromise = null, DD
             }))), this.renderPromise
           }
           _reset() {
             this.assertNotDestroyed(), null !== this.widgetId && this.getAssertedRecaptcha().reset(this.widgetId)
           }
           clear() {
-            this.assertNotDestroyed(), this.destroyed = !0, this._recaptchaLoader.clearedOneInstance(), this.isInvisible || this.container.childNodes.forEach((mm => {
-              this.container.removeChild(mm)
+            this.assertNotDestroyed(), this.destroyed = !0, this._recaptchaLoader.clearedOneInstance(), this.isInvisible || this.container.childNodes.forEach((DD => {
+              this.container.removeChild(DD)
             }))
           }
           validateStartingState() {
-            zm(!this.parameters.sitekey, this.auth, "argument-error"), zm(this.isInvisible || !this.container.hasChildNodes(), this.auth, "argument-error"), zm("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment")
+            VD(!this.parameters.sitekey, this.auth, "argument-error"), VD(this.isInvisible || !this.container.hasChildNodes(), this.auth, "argument-error"), VD("undefined" !== typeof document, this.auth, "operation-not-supported-in-this-environment")
           }
-          makeTokenCallback(mm) {
-            return Tm => {
-              if (this.tokenChangeListeners.forEach((mm => mm(Tm))), "function" === typeof mm) mm(Tm);
-              else if ("string" === typeof mm) {
-                const fm = bh()[mm];
-                "function" === typeof fm && fm(Tm)
+          makeTokenCallback(DD) {
+            return zD => {
+              if (this.tokenChangeListeners.forEach((DD => DD(zD))), "function" === typeof DD) DD(zD);
+              else if ("string" === typeof DD) {
+                const wD = Pp()[DD];
+                "function" === typeof wD && wD(zD)
               }
             }
           }
           assertNotDestroyed() {
-            zm(!this.destroyed, this.auth, "internal-error")
+            VD(!this.destroyed, this.auth, "internal-error")
           }
           async makeRenderPromise() {
             if (await this.init(), !this.widgetId) {
-              let mm = this.container;
+              let DD = this.container;
               if (!this.isInvisible) {
-                const Tm = document.createElement("div");
-                mm.appendChild(Tm), mm = Tm
+                const zD = document.createElement("div");
+                DD.appendChild(zD), DD = zD
               }
-              this.widgetId = this.getAssertedRecaptcha().render(mm, this.parameters)
+              this.widgetId = this.getAssertedRecaptcha().render(DD, this.parameters)
             }
             return this.widgetId
           }
           async init() {
-            zm(Sm() && !Sh(), this.auth, "internal-error"), await
+            VD(TD() && !Cp(), this.auth, "internal-error"), await
             function() {
-              let mm = null;
-              return new Promise((Tm => {
-                "complete" !== document.readyState ? (mm = () => Tm(), window.addEventListener("load", mm)) : Tm()
-              })).catch((Tm => {
-                throw mm && window.removeEventListener("load", mm), Tm
+              let DD = null;
+              return new Promise((zD => {
+                "complete" !== document.readyState ? (DD = () => zD(), window.addEventListener("load", DD)) : zD()
+              })).catch((zD => {
+                throw DD && window.removeEventListener("load", DD), zD
               }))
             }(), this.recaptcha = await this._recaptchaLoader.load(this.auth, this.auth.languageCode || void 0);
-            const mm = await async function(mm) {
-              return (await Cm(mm, "GET", "/v1/recaptchaParams")).recaptchaSiteKey || ""
+            const DD = await async function(DD) {
+              return (await ND(DD, "GET", "/v1/recaptchaParams")).recaptchaSiteKey || ""
             }(this.auth);
-            zm(mm, this.auth, "internal-error"), this.parameters.sitekey = mm
+            VD(DD, this.auth, "internal-error"), this.parameters.sitekey = DD
           }
           getAssertedRecaptcha() {
-            return zm(this.recaptcha, this.auth, "internal-error"), this.recaptcha
+            return VD(this.recaptcha, this.auth, "internal-error"), this.recaptcha
           }
         }
-        class Wh {
-          constructor(mm, Tm) {
-            this.verificationId = mm, this.onConfirmation = Tm
+        class Yp {
+          constructor(DD, zD) {
+            this.verificationId = DD, this.onConfirmation = zD
           }
-          confirm(mm) {
-            const Tm = gT._fromVerification(this.verificationId, mm);
-            return this.onConfirmation(Tm)
+          confirm(DD) {
+            const zD = Fz._fromVerification(this.verificationId, DD);
+            return this.onConfirmation(zD)
           }
         }
-        async function Fh(mm, Tm, fm) {
-          const Am = GT(mm),
-            am = await fA(Am, Tm, (0, hm.J)(fm));
-          return new Wh(am, (mm => Jf(Am, mm)))
+        async function Hp(DD, zD, wD) {
+          const sD = jz(DD),
+            KD = await zs(sD, zD, (0, pD.H)(wD));
+          return new Yp(KD, (DD => Ew(sD, DD)))
         }
-        async function mA(mm, Tm, fm) {
-          const Am = (0, hm.J)(mm);
-          await Kf(!1, Am, "phone");
-          const am = await fA(Am.auth, Tm, (0, hm.J)(fm));
-          return new Wh(am, (mm => zf(Am, mm)))
+        async function qp(DD, zD, wD) {
+          const sD = (0, pD.H)(DD);
+          await Mw(!1, sD, "phone");
+          const KD = await zs(sD.auth, zD, (0, pD.H)(wD));
+          return new Yp(KD, (DD => Qw(sD, DD)))
         }
-        async function TA(mm, Tm, fm) {
-          const Am = (0, hm.J)(mm),
-            am = await fA(Am.auth, Tm, (0, hm.J)(fm));
-          return new Wh(am, (mm => Zf(Am, mm)))
+        async function Ds(DD, zD, wD) {
+          const sD = (0, pD.H)(DD),
+            KD = await zs(sD.auth, zD, (0, pD.H)(wD));
+          return new Yp(KD, (DD => Xw(sD, DD)))
         }
-        async function fA(mm, Tm, fm) {
-          var hm;
-          const Am = await fm.verify();
+        async function zs(DD, zD, wD) {
+          var pD;
+          const sD = await wD.verify();
           try {
-            let am;
-            if (zm("string" === typeof Am, mm, "argument-error"), zm(fm.type === Uh, mm, "argument-error"), am = "string" === typeof Tm ? {
-                phoneNumber: Tm
-              } : Tm, "session" in am) {
-              const Tm = am.session;
-              if ("phoneNumber" in am) {
-                zm("enroll" === Tm.type, mm, "internal-error");
-                const fm = await
-                function(mm, Tm) {
-                  return Cm(mm, "POST", "/v2/accounts/mfaEnrollment:start", ym(mm, Tm))
-                }(mm, {
-                  idToken: Tm.credential,
+            let KD;
+            if (VD("string" === typeof sD, DD, "argument-error"), VD(wD.type === vp, DD, "argument-error"), KD = "string" === typeof zD ? {
+                phoneNumber: zD
+              } : zD, "session" in KD) {
+              const zD = KD.session;
+              if ("phoneNumber" in KD) {
+                VD("enroll" === zD.type, DD, "internal-error");
+                const wD = await
+                function(DD, zD) {
+                  return ND(DD, "POST", "/v2/accounts/mfaEnrollment:start", WD(DD, zD))
+                }(DD, {
+                  idToken: zD.credential,
                   phoneEnrollmentInfo: {
-                    phoneNumber: am.phoneNumber,
-                    recaptchaToken: Am
+                    phoneNumber: KD.phoneNumber,
+                    recaptchaToken: sD
                   }
                 });
-                return fm.phoneSessionInfo.sessionInfo
+                return wD.phoneSessionInfo.sessionInfo
               } {
-                zm("signin" === Tm.type, mm, "internal-error");
-                const fm = (null === (hm = am.multiFactorHint) || void 0 === hm ? void 0 : hm.uid) || am.multiFactorUid;
-                zm(fm, mm, "missing-multi-factor-info");
-                const xm = await
-                function(mm, Tm) {
-                  return Cm(mm, "POST", "/v2/accounts/mfaSignIn:start", ym(mm, Tm))
-                }(mm, {
-                  mfaPendingCredential: Tm.credential,
-                  mfaEnrollmentId: fm,
+                VD("signin" === zD.type, DD, "internal-error");
+                const wD = (null === (pD = KD.multiFactorHint) || void 0 === pD ? void 0 : pD.uid) || KD.multiFactorUid;
+                VD(wD, DD, "missing-multi-factor-info");
+                const rD = await
+                function(DD, zD) {
+                  return ND(DD, "POST", "/v2/accounts/mfaSignIn:start", WD(DD, zD))
+                }(DD, {
+                  mfaPendingCredential: zD.credential,
+                  mfaEnrollmentId: wD,
                   phoneSignInInfo: {
-                    recaptchaToken: Am
+                    recaptchaToken: sD
                   }
                 });
-                return xm.phoneResponseInfo.sessionInfo
+                return rD.phoneResponseInfo.sessionInfo
               }
             } {
               const {
-                sessionInfo: Tm
-              } = await async function(mm, Tm) {
-                return Cm(mm, "POST", "/v1/accounts:sendVerificationCode", ym(mm, Tm))
-              }(mm, {
-                phoneNumber: am.phoneNumber,
-                recaptchaToken: Am
+                sessionInfo: zD
+              } = await async function(DD, zD) {
+                return ND(DD, "POST", "/v1/accounts:sendVerificationCode", WD(DD, zD))
+              }(DD, {
+                phoneNumber: KD.phoneNumber,
+                recaptchaToken: sD
               });
-              return Tm
+              return zD
             }
           } finally {
-            fm._reset()
+            wD._reset()
           }
         }
-        async function hA(mm, Tm) {
-          await If((0, hm.J)(mm), Tm)
+        async function ws(DD, zD) {
+          await nw((0, pD.H)(DD), zD)
         }
-        class AA {
-          constructor(mm) {
-            this.providerId = AA.PROVIDER_ID, this.auth = GT(mm)
+        class ps {
+          constructor(DD) {
+            this.providerId = ps.PROVIDER_ID, this.auth = jz(DD)
           }
-          verifyPhoneNumber(mm, Tm) {
-            return fA(this.auth, mm, (0, hm.J)(Tm))
+          verifyPhoneNumber(DD, zD) {
+            return zs(this.auth, DD, (0, pD.H)(zD))
           }
-          static credential(mm, Tm) {
-            return gT._fromVerification(mm, Tm)
+          static credential(DD, zD) {
+            return Fz._fromVerification(DD, zD)
           }
-          static credentialFromResult(mm) {
-            const Tm = mm;
-            return AA.credentialFromTaggedObject(Tm)
+          static credentialFromResult(DD) {
+            const zD = DD;
+            return ps.credentialFromTaggedObject(zD)
           }
-          static credentialFromError(mm) {
-            return AA.credentialFromTaggedObject(mm.customData || {})
+          static credentialFromError(DD) {
+            return ps.credentialFromTaggedObject(DD.customData || {})
           }
-          static credentialFromTaggedObject(mm) {
+          static credentialFromTaggedObject(DD) {
             let {
-              _tokenResponse: Tm
-            } = mm;
-            if (!Tm) return null;
+              _tokenResponse: zD
+            } = DD;
+            if (!zD) return null;
             const {
-              phoneNumber: fm,
-              temporaryProof: hm
-            } = Tm;
-            return fm && hm ? gT._fromTokenResponse(fm, hm) : null
+              phoneNumber: wD,
+              temporaryProof: pD
+            } = zD;
+            return wD && pD ? Fz._fromTokenResponse(wD, pD) : null
           }
         }
 
-        function aA(mm, Tm) {
-          return Tm ? xT(Tm) : (zm(mm._popupRedirectResolver, mm, "argument-error"), mm._popupRedirectResolver)
+        function ss(DD, zD) {
+          return zD ? Kz(zD) : (VD(DD._popupRedirectResolver, DD, "argument-error"), DD._popupRedirectResolver)
         }
-        AA.PROVIDER_ID = "phone", AA.PHONE_SIGN_IN_METHOD = "phone";
-        class xA extends rT {
-          constructor(mm) {
-            super("custom", "custom"), this.params = mm
+        ps.PROVIDER_ID = "phone", ps.PHONE_SIGN_IN_METHOD = "phone";
+        class Ks extends Nz {
+          constructor(DD) {
+            super("custom", "custom"), this.params = DD
           }
-          _getIdTokenResponse(mm) {
-            return tT(mm, this._buildIdpRequest())
+          _getIdTokenResponse(DD) {
+            return uz(DD, this._buildIdpRequest())
           }
-          _linkToIdToken(mm, Tm) {
-            return tT(mm, this._buildIdpRequest(Tm))
+          _linkToIdToken(DD, zD) {
+            return uz(DD, this._buildIdpRequest(zD))
           }
-          _getReauthenticationResolver(mm) {
-            return tT(mm, this._buildIdpRequest())
+          _getReauthenticationResolver(DD) {
+            return uz(DD, this._buildIdpRequest())
           }
-          _buildIdpRequest(mm) {
-            const Tm = {
+          _buildIdpRequest(DD) {
+            const zD = {
               requestUri: this.params.requestUri,
               sessionId: this.params.sessionId,
               postBody: this.params.postBody,
@@ -3535,187 +3535,187 @@ export const modules = {
               returnSecureToken: !0,
               returnIdpCredential: !0
             };
-            return mm && (Tm.idToken = mm), Tm
+            return DD && (zD.idToken = DD), zD
           }
         }
 
-        function wA(mm) {
-          return nf(mm.auth, new xA(mm), mm.bypassAuthState)
+        function rs(DD) {
+          return Jw(DD.auth, new Ks(DD), DD.bypassAuthState)
         }
 
-        function DA(mm) {
+        function Ls(DD) {
           const {
-            auth: Tm,
-            user: fm
-          } = mm;
-          return zm(fm, Tm, "internal-error"), Qf(fm, new xA(mm), mm.bypassAuthState)
+            auth: zD,
+            user: wD
+          } = DD;
+          return VD(wD, zD, "internal-error"), Ow(wD, new Ks(DD), DD.bypassAuthState)
         }
-        async function iA(mm) {
+        async function cs(DD) {
           const {
-            auth: Tm,
-            user: fm
-          } = mm;
-          return zm(fm, Tm, "internal-error"), If(fm, new xA(mm), mm.bypassAuthState)
+            auth: zD,
+            user: wD
+          } = DD;
+          return VD(wD, zD, "internal-error"), nw(wD, new Ks(DD), DD.bypassAuthState)
         }
-        class RA {
-          constructor(mm, Tm, fm, hm) {
-            let Am = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-            this.auth = mm, this.resolver = fm, this.user = hm, this.bypassAuthState = Am, this.pendingPromise = null, this.eventManager = null, this.filter = Array.isArray(Tm) ? Tm : [Tm]
+        class gs {
+          constructor(DD, zD, wD, pD) {
+            let sD = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+            this.auth = DD, this.resolver = wD, this.user = pD, this.bypassAuthState = sD, this.pendingPromise = null, this.eventManager = null, this.filter = Array.isArray(zD) ? zD : [zD]
           }
           execute() {
-            return new Promise((async (mm, Tm) => {
+            return new Promise((async (DD, zD) => {
               this.pendingPromise = {
-                resolve: mm,
-                reject: Tm
+                resolve: DD,
+                reject: zD
               };
               try {
                 this.eventManager = await this.resolver._initialize(this.auth), await this.onExecution(), this.eventManager.registerConsumer(this)
-              } catch (fm) {
-                this.reject(fm)
+              } catch (wD) {
+                this.reject(wD)
               }
             }))
           }
-          async onAuthEvent(mm) {
+          async onAuthEvent(DD) {
             const {
-              urlResponse: Tm,
-              sessionId: fm,
-              postBody: hm,
-              tenantId: Am,
-              error: am,
-              type: xm
-            } = mm;
-            if (am) return void this.reject(am);
-            const wm = {
+              urlResponse: zD,
+              sessionId: wD,
+              postBody: pD,
+              tenantId: sD,
+              error: KD,
+              type: rD
+            } = DD;
+            if (KD) return void this.reject(KD);
+            const LD = {
               auth: this.auth,
-              requestUri: Tm,
-              sessionId: fm,
-              tenantId: Am || void 0,
-              postBody: hm || void 0,
+              requestUri: zD,
+              sessionId: wD,
+              tenantId: sD || void 0,
+              postBody: pD || void 0,
               user: this.user,
               bypassAuthState: this.bypassAuthState
             };
             try {
-              this.resolve(await this.getIdpTask(xm)(wm))
-            } catch (Dm) {
-              this.reject(Dm)
+              this.resolve(await this.getIdpTask(rD)(LD))
+            } catch (cD) {
+              this.reject(cD)
             }
           }
-          onError(mm) {
-            this.reject(mm)
+          onError(DD) {
+            this.reject(DD)
           }
-          getIdpTask(mm) {
-            switch (mm) {
+          getIdpTask(DD) {
+            switch (DD) {
               case "signInViaPopup":
               case "signInViaRedirect":
-                return wA;
+                return rs;
               case "linkViaPopup":
               case "linkViaRedirect":
-                return iA;
+                return cs;
               case "reauthViaPopup":
               case "reauthViaRedirect":
-                return DA;
+                return Ls;
               default:
-                Km(this.auth, "internal-error")
+                OD(this.auth, "internal-error")
             }
           }
-          resolve(mm) {
-            km(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.resolve(mm), this.unregisterAndCleanUp()
+          resolve(DD) {
+            CD(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.resolve(DD), this.unregisterAndCleanUp()
           }
-          reject(mm) {
-            km(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.reject(mm), this.unregisterAndCleanUp()
+          reject(DD) {
+            CD(this.pendingPromise, "Pending promise was never set"), this.pendingPromise.reject(DD), this.unregisterAndCleanUp()
           }
           unregisterAndCleanUp() {
             this.eventManager && this.eventManager.unregisterConsumer(this), this.pendingPromise = null, this.cleanUp()
           }
         }
-        const pA = new Nm(2e3, 1e4);
-        async function EA(mm, Tm, fm) {
-          const hm = GT(mm);
-          Jm(mm, Tm, Tf);
-          const Am = aA(hm, fm);
-          return new YA(hm, "signInViaPopup", Tm, Am).executeNotNull()
+        const Rs = new jD(2e3, 1e4);
+        async function As(DD, zD, wD) {
+          const pD = jz(DD);
+          QD(DD, zD, Dw);
+          const sD = ss(pD, wD);
+          return new Is(pD, "signInViaPopup", zD, sD).executeNotNull()
         }
-        async function oA(mm, Tm, fm) {
-          const Am = (0, hm.J)(mm);
-          Jm(Am.auth, Tm, Tf);
-          const am = aA(Am.auth, fm);
-          return new YA(Am.auth, "reauthViaPopup", Tm, am, Am).executeNotNull()
+        async function Us(DD, zD, wD) {
+          const sD = (0, pD.H)(DD);
+          QD(sD.auth, zD, Dw);
+          const KD = ss(sD.auth, wD);
+          return new Is(sD.auth, "reauthViaPopup", zD, KD, sD).executeNotNull()
         }
-        async function OA(mm, Tm, fm) {
-          const Am = (0, hm.J)(mm);
-          Jm(Am.auth, Tm, Tf);
-          const am = aA(Am.auth, fm);
-          return new YA(Am.auth, "linkViaPopup", Tm, am, Am).executeNotNull()
+        async function fs(DD, zD, wD) {
+          const sD = (0, pD.H)(DD);
+          QD(sD.auth, zD, Dw);
+          const KD = ss(sD.auth, wD);
+          return new Is(sD.auth, "linkViaPopup", zD, KD, sD).executeNotNull()
         }
-        class YA extends RA {
-          constructor(mm, Tm, fm, hm, Am) {
-            super(mm, Tm, hm, Am), this.provider = fm, this.authWindow = null, this.pollId = null, YA.currentPopupAction && YA.currentPopupAction.cancel(), YA.currentPopupAction = this
+        class Is extends gs {
+          constructor(DD, zD, wD, pD, sD) {
+            super(DD, zD, pD, sD), this.provider = wD, this.authWindow = null, this.pollId = null, Is.currentPopupAction && Is.currentPopupAction.cancel(), Is.currentPopupAction = this
           }
           async executeNotNull() {
-            const mm = await this.execute();
-            return zm(mm, this.auth, "internal-error"), mm
+            const DD = await this.execute();
+            return VD(DD, this.auth, "internal-error"), DD
           }
           async onExecution() {
-            km(1 === this.filter.length, "Popup operations only handle one event");
-            const mm = Zh();
-            this.authWindow = await this.resolver._openPopup(this.auth, this.provider, this.filter[0], mm), this.authWindow.associatedEvent = mm, this.resolver._originValidation(this.auth).catch((mm => {
-              this.reject(mm)
-            })), this.resolver._isIframeWebStorageSupported(this.auth, (mm => {
-              mm || this.reject(Qm(this.auth, "web-storage-unsupported"))
+            CD(1 === this.filter.length, "Popup operations only handle one event");
+            const DD = Xp();
+            this.authWindow = await this.resolver._openPopup(this.auth, this.provider, this.filter[0], DD), this.authWindow.associatedEvent = DD, this.resolver._originValidation(this.auth).catch((DD => {
+              this.reject(DD)
+            })), this.resolver._isIframeWebStorageSupported(this.auth, (DD => {
+              DD || this.reject(JD(this.auth, "web-storage-unsupported"))
             })), this.pollUserCancellation()
           }
           get eventId() {
-            var mm;
-            return (null === (mm = this.authWindow) || void 0 === mm ? void 0 : mm.associatedEvent) || null
+            var DD;
+            return (null === (DD = this.authWindow) || void 0 === DD ? void 0 : DD.associatedEvent) || null
           }
           cancel() {
-            this.reject(Qm(this.auth, "cancelled-popup-request"))
+            this.reject(JD(this.auth, "cancelled-popup-request"))
           }
           cleanUp() {
-            this.authWindow && this.authWindow.close(), this.pollId && window.clearTimeout(this.pollId), this.authWindow = null, this.pollId = null, YA.currentPopupAction = null
+            this.authWindow && this.authWindow.close(), this.pollId && window.clearTimeout(this.pollId), this.authWindow = null, this.pollId = null, Is.currentPopupAction = null
           }
           pollUserCancellation() {
-            const mm = () => {
-              var Tm, fm;
-              (null === (fm = null === (Tm = this.authWindow) || void 0 === Tm ? void 0 : Tm.window) || void 0 === fm ? void 0 : fm.closed) ? this.pollId = window.setTimeout((() => {
-                this.pollId = null, this.reject(Qm(this.auth, "popup-closed-by-user"))
-              }), 8e3): this.pollId = window.setTimeout(mm, pA.get())
+            const DD = () => {
+              var zD, wD;
+              (null === (wD = null === (zD = this.authWindow) || void 0 === zD ? void 0 : zD.window) || void 0 === wD ? void 0 : wD.closed) ? this.pollId = window.setTimeout((() => {
+                this.pollId = null, this.reject(JD(this.auth, "popup-closed-by-user"))
+              }), 8e3): this.pollId = window.setTimeout(DD, Rs.get())
             };
-            mm()
+            DD()
           }
         }
-        YA.currentPopupAction = null;
-        const qA = "pendingRedirect",
-          jA = new Map;
-        class VA extends RA {
-          constructor(mm, Tm) {
-            super(mm, ["signInViaRedirect", "linkViaRedirect", "reauthViaRedirect", "unknown"], Tm, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.eventId = null
+        Is.currentPopupAction = null;
+        const Bs = "pendingRedirect",
+          Gs = new Map;
+        class hs extends gs {
+          constructor(DD, zD) {
+            super(DD, ["signInViaRedirect", "linkViaRedirect", "reauthViaRedirect", "unknown"], zD, void 0, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]), this.eventId = null
           }
           async execute() {
-            let mm = jA.get(this.auth._key());
-            if (!mm) {
+            let DD = Gs.get(this.auth._key());
+            if (!DD) {
               try {
-                const Tm = await async function(mm, Tm) {
-                  const fm = nA(Tm),
-                    hm = QA(mm);
-                  if (!await hm._isAvailable()) return !1;
-                  const Am = "true" === await hm._get(fm);
-                  return await hm._remove(fm), Am
+                const zD = await async function(DD, zD) {
+                  const wD = Es(zD),
+                    pD = Os(DD);
+                  if (!await pD._isAvailable()) return !1;
+                  const sD = "true" === await pD._get(wD);
+                  return await pD._remove(wD), sD
                 }(this.resolver, this.auth) ? await super.execute() : null;
-                mm = () => Promise.resolve(Tm)
-              } catch (Tm) {
-                mm = () => Promise.reject(Tm)
+                DD = () => Promise.resolve(zD)
+              } catch (zD) {
+                DD = () => Promise.reject(zD)
               }
-              jA.set(this.auth._key(), mm)
+              Gs.set(this.auth._key(), DD)
             }
-            return this.bypassAuthState || jA.set(this.auth._key(), (() => Promise.resolve(null))), mm()
+            return this.bypassAuthState || Gs.set(this.auth._key(), (() => Promise.resolve(null))), DD()
           }
-          async onAuthEvent(mm) {
-            if ("signInViaRedirect" === mm.type) return super.onAuthEvent(mm);
-            if ("unknown" !== mm.type) {
-              if (mm.eventId) {
-                const Tm = await this.auth._redirectUserForId(mm.eventId);
-                if (Tm) return this.user = Tm, super.onAuthEvent(mm);
+          async onAuthEvent(DD) {
+            if ("signInViaRedirect" === DD.type) return super.onAuthEvent(DD);
+            if ("unknown" !== DD.type) {
+              if (DD.eventId) {
+                const zD = await this.auth._redirectUserForId(DD.eventId);
+                if (zD) return this.user = zD, super.onAuthEvent(DD);
                 this.resolve(null)
               }
             } else this.resolve(null)
@@ -3723,199 +3723,199 @@ export const modules = {
           async onExecution() {}
           cleanUp() {}
         }
-        async function IA(mm, Tm) {
-          return QA(mm)._set(nA(Tm), "true")
+        async function ns(DD, zD) {
+          return Os(DD)._set(Es(zD), "true")
         }
 
-        function KA(mm, Tm) {
-          jA.set(mm._key(), Tm)
+        function Ms(DD, zD) {
+          Gs.set(DD._key(), zD)
         }
 
-        function QA(mm) {
-          return xT(mm._redirectPersistence)
+        function Os(DD) {
+          return Kz(DD._redirectPersistence)
         }
 
-        function nA(mm) {
-          return iT(qA, mm.config.apiKey, mm.name)
+        function Es(DD) {
+          return cz(Bs, DD.config.apiKey, DD.name)
         }
 
-        function JA(mm, Tm, fm) {
-          return async function(mm, Tm, fm) {
-            const hm = GT(mm);
-            Jm(mm, Tm, Tf), await hm._initializationPromise;
-            const Am = aA(hm, fm);
-            return await IA(Am, hm), Am._openRedirect(hm, Tm, "signInViaRedirect")
-          }(mm, Tm, fm)
+        function Qs(DD, zD, wD) {
+          return async function(DD, zD, wD) {
+            const pD = jz(DD);
+            QD(DD, zD, Dw), await pD._initializationPromise;
+            const sD = ss(pD, wD);
+            return await ns(sD, pD), sD._openRedirect(pD, zD, "signInViaRedirect")
+          }(DD, zD, wD)
         }
 
-        function cA(mm, Tm, fm) {
-          return async function(mm, Tm, fm) {
-            const Am = (0, hm.J)(mm);
-            Jm(Am.auth, Tm, Tf), await Am.auth._initializationPromise;
-            const am = aA(Am.auth, fm);
-            await IA(am, Am.auth);
-            const xm = await bA(Am);
-            return am._openRedirect(Am.auth, Tm, "reauthViaRedirect", xm)
-          }(mm, Tm, fm)
+        function Xs(DD, zD, wD) {
+          return async function(DD, zD, wD) {
+            const sD = (0, pD.H)(DD);
+            QD(sD.auth, zD, Dw), await sD.auth._initializationPromise;
+            const KD = ss(sD.auth, wD);
+            await ns(KD, sD.auth);
+            const rD = await xs(sD);
+            return KD._openRedirect(sD.auth, zD, "reauthViaRedirect", rD)
+          }(DD, zD, wD)
         }
 
-        function zA(mm, Tm, fm) {
-          return async function(mm, Tm, fm) {
-            const Am = (0, hm.J)(mm);
-            Jm(Am.auth, Tm, Tf), await Am.auth._initializationPromise;
-            const am = aA(Am.auth, fm);
-            await Kf(!1, Am, Tm.providerId), await IA(am, Am.auth);
-            const xm = await bA(Am);
-            return am._openRedirect(Am.auth, Tm, "linkViaRedirect", xm)
-          }(mm, Tm, fm)
+        function Vs(DD, zD, wD) {
+          return async function(DD, zD, wD) {
+            const sD = (0, pD.H)(DD);
+            QD(sD.auth, zD, Dw), await sD.auth._initializationPromise;
+            const KD = ss(sD.auth, wD);
+            await Mw(!1, sD, zD.providerId), await ns(KD, sD.auth);
+            const rD = await xs(sD);
+            return KD._openRedirect(sD.auth, zD, "linkViaRedirect", rD)
+          }(DD, zD, wD)
         }
-        async function ZA(mm, Tm) {
-          return await GT(mm)._initializationPromise, kA(mm, Tm, !1)
+        async function Ps(DD, zD) {
+          return await jz(DD)._initializationPromise, Cs(DD, zD, !1)
         }
-        async function kA(mm, Tm) {
-          let fm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-          const hm = GT(mm),
-            Am = aA(hm, Tm),
-            am = new VA(hm, Am, fm),
-            xm = await am.execute();
-          return xm && !fm && (delete xm.user._redirectEventId, await hm._persistUserIfCurrent(xm.user), await hm._setRedirectUser(null, Tm)), xm
+        async function Cs(DD, zD) {
+          let wD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+          const pD = jz(DD),
+            sD = ss(pD, zD),
+            KD = new hs(pD, sD, wD),
+            rD = await KD.execute();
+          return rD && !wD && (delete rD.user._redirectEventId, await pD._persistUserIfCurrent(rD.user), await pD._setRedirectUser(null, zD)), rD
         }
-        async function bA(mm) {
-          const Tm = Zh(`${mm.uid}:::`);
-          return mm._redirectEventId = Tm, await mm.auth._setRedirectUser(mm), await mm.auth._persistUserIfCurrent(mm), Tm
+        async function xs(DD) {
+          const zD = Xp(`${DD.uid}:::`);
+          return DD._redirectEventId = zD, await DD.auth._setRedirectUser(DD), await DD.auth._persistUserIfCurrent(DD), zD
         }
-        class SA {
-          constructor(mm) {
-            this.auth = mm, this.cachedEventUids = new Set, this.consumers = new Set, this.queuedRedirectEvent = null, this.hasHandledPotentialRedirect = !1, this.lastProcessedEventTime = Date.now()
+        class Ts {
+          constructor(DD) {
+            this.auth = DD, this.cachedEventUids = new Set, this.consumers = new Set, this.queuedRedirectEvent = null, this.hasHandledPotentialRedirect = !1, this.lastProcessedEventTime = Date.now()
           }
-          registerConsumer(mm) {
-            this.consumers.add(mm), this.queuedRedirectEvent && this.isEventForConsumer(this.queuedRedirectEvent, mm) && (this.sendToConsumer(this.queuedRedirectEvent, mm), this.saveEventToCache(this.queuedRedirectEvent), this.queuedRedirectEvent = null)
+          registerConsumer(DD) {
+            this.consumers.add(DD), this.queuedRedirectEvent && this.isEventForConsumer(this.queuedRedirectEvent, DD) && (this.sendToConsumer(this.queuedRedirectEvent, DD), this.saveEventToCache(this.queuedRedirectEvent), this.queuedRedirectEvent = null)
           }
-          unregisterConsumer(mm) {
-            this.consumers.delete(mm)
+          unregisterConsumer(DD) {
+            this.consumers.delete(DD)
           }
-          onEvent(mm) {
-            if (this.hasEventBeenHandled(mm)) return !1;
-            let Tm = !1;
-            return this.consumers.forEach((fm => {
-              this.isEventForConsumer(mm, fm) && (Tm = !0, this.sendToConsumer(mm, fm), this.saveEventToCache(mm))
-            })), this.hasHandledPotentialRedirect || ! function(mm) {
-              switch (mm.type) {
+          onEvent(DD) {
+            if (this.hasEventBeenHandled(DD)) return !1;
+            let zD = !1;
+            return this.consumers.forEach((wD => {
+              this.isEventForConsumer(DD, wD) && (zD = !0, this.sendToConsumer(DD, wD), this.saveEventToCache(DD))
+            })), this.hasHandledPotentialRedirect || ! function(DD) {
+              switch (DD.type) {
                 case "signInViaRedirect":
                 case "linkViaRedirect":
                 case "reauthViaRedirect":
                   return !0;
                 case "unknown":
-                  return NA(mm);
+                  return ds(DD);
                 default:
                   return !1
               }
-            }(mm) || (this.hasHandledPotentialRedirect = !0, Tm || (this.queuedRedirectEvent = mm, Tm = !0)), Tm
+            }(DD) || (this.hasHandledPotentialRedirect = !0, zD || (this.queuedRedirectEvent = DD, zD = !0)), zD
           }
-          sendToConsumer(mm, Tm) {
-            var fm;
-            if (mm.error && !NA(mm)) {
-              const hm = (null === (fm = mm.error.code) || void 0 === fm ? void 0 : fm.split("auth/")[1]) || "internal-error";
-              Tm.onError(Qm(this.auth, hm))
-            } else Tm.onAuthEvent(mm)
+          sendToConsumer(DD, zD) {
+            var wD;
+            if (DD.error && !ds(DD)) {
+              const pD = (null === (wD = DD.error.code) || void 0 === wD ? void 0 : wD.split("auth/")[1]) || "internal-error";
+              zD.onError(JD(this.auth, pD))
+            } else zD.onAuthEvent(DD)
           }
-          isEventForConsumer(mm, Tm) {
-            const fm = null === Tm.eventId || !!mm.eventId && mm.eventId === Tm.eventId;
-            return Tm.filter.includes(mm.type) && fm
+          isEventForConsumer(DD, zD) {
+            const wD = null === zD.eventId || !!DD.eventId && DD.eventId === zD.eventId;
+            return zD.filter.includes(DD.type) && wD
           }
-          hasEventBeenHandled(mm) {
-            return Date.now() - this.lastProcessedEventTime >= 6e5 && this.cachedEventUids.clear(), this.cachedEventUids.has(eA(mm))
+          hasEventBeenHandled(DD) {
+            return Date.now() - this.lastProcessedEventTime >= 6e5 && this.cachedEventUids.clear(), this.cachedEventUids.has(bs(DD))
           }
-          saveEventToCache(mm) {
-            this.cachedEventUids.add(eA(mm)), this.lastProcessedEventTime = Date.now()
+          saveEventToCache(DD) {
+            this.cachedEventUids.add(bs(DD)), this.lastProcessedEventTime = Date.now()
           }
         }
 
-        function eA(mm) {
-          return [mm.type, mm.eventId, mm.sessionId, mm.tenantId].filter((mm => mm)).join("-")
+        function bs(DD) {
+          return [DD.type, DD.eventId, DD.sessionId, DD.tenantId].filter((DD => DD)).join("-")
         }
 
-        function NA(mm) {
+        function ds(DD) {
           let {
-            type: Tm,
-            error: fm
-          } = mm;
-          return "unknown" === Tm && "auth/no-auth-event" === (null === fm || void 0 === fm ? void 0 : fm.code)
+            type: zD,
+            error: wD
+          } = DD;
+          return "unknown" === zD && "auth/no-auth-event" === (null === wD || void 0 === wD ? void 0 : wD.code)
         }
-        const GA = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/,
-          XA = /^https?/;
-        async function PA(mm) {
-          if (mm.config.emulator) return;
+        const Ss = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/,
+          is = /^https?/;
+        async function ls(DD) {
+          if (DD.config.emulator) return;
           const {
-            authorizedDomains: Tm
-          } = await async function(mm) {
-            return Cm(mm, "GET", "/v1/projects", arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }(mm);
-          for (const hm of Tm) try {
-            if (HA(hm)) return
-          } catch (fm) {}
-          Km(mm, "unauthorized-domain")
+            authorizedDomains: zD
+          } = await async function(DD) {
+            return ND(DD, "GET", "/v1/projects", arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
+          }(DD);
+          for (const pD of zD) try {
+            if (Ws(pD)) return
+          } catch (wD) {}
+          OD(DD, "unauthorized-domain")
         }
 
-        function HA(mm) {
-          const Tm = bm(),
+        function Ws(DD) {
+          const zD = xD(),
             {
-              protocol: fm,
-              hostname: hm
-            } = new URL(Tm);
-          if (mm.startsWith("chrome-extension://")) {
-            const Am = new URL(mm);
-            return "" === Am.hostname && "" === hm ? "chrome-extension:" === fm && mm.replace("chrome-extension://", "") === Tm.replace("chrome-extension://", "") : "chrome-extension:" === fm && Am.hostname === hm
+              protocol: wD,
+              hostname: pD
+            } = new URL(zD);
+          if (DD.startsWith("chrome-extension://")) {
+            const sD = new URL(DD);
+            return "" === sD.hostname && "" === pD ? "chrome-extension:" === wD && DD.replace("chrome-extension://", "") === zD.replace("chrome-extension://", "") : "chrome-extension:" === wD && sD.hostname === pD
           }
-          if (!XA.test(fm)) return !1;
-          if (GA.test(mm)) return hm === mm;
-          const Am = mm.replace(/\./g, "\\.");
-          return new RegExp("^(.+\\." + Am + "|" + Am + ")$", "i").test(hm)
+          if (!is.test(wD)) return !1;
+          if (Ss.test(DD)) return pD === DD;
+          const sD = DD.replace(/\./g, "\\.");
+          return new RegExp("^(.+\\." + sD + "|" + sD + ")$", "i").test(pD)
         }
-        const yA = new Nm(3e4, 6e4);
+        const Ns = new jD(3e4, 6e4);
 
-        function CA() {
-          const mm = bh().___jsl;
-          if (null === mm || void 0 === mm ? void 0 : mm.H)
-            for (const Tm of Object.keys(mm.H))
-              if (mm.H[Tm].r = mm.H[Tm].r || [], mm.H[Tm].L = mm.H[Tm].L || [], mm.H[Tm].r = [...mm.H[Tm].L], mm.CP)
-                for (let fm = 0; fm < mm.CP.length; fm++) mm.CP[fm] = null
+        function Zs() {
+          const DD = Pp().___jsl;
+          if (null === DD || void 0 === DD ? void 0 : DD.H)
+            for (const zD of Object.keys(DD.H))
+              if (DD.H[zD].r = DD.H[zD].r || [], DD.H[zD].L = DD.H[zD].L || [], DD.H[zD].r = [...DD.H[zD].L], DD.CP)
+                for (let wD = 0; wD < DD.CP.length; wD++) DD.CP[wD] = null
         }
-        let rA = null;
+        let ys = null;
 
-        function sA(mm) {
-          return rA = rA || function(mm) {
-            return new Promise(((Tm, fm) => {
-              var hm, Am, am;
+        function ks(DD) {
+          return ys = ys || function(DD) {
+            return new Promise(((zD, wD) => {
+              var pD, sD, KD;
 
-              function xm() {
-                CA(), gapi.load("gapi.iframes", {
+              function rD() {
+                Zs(), gapi.load("gapi.iframes", {
                   callback: () => {
-                    Tm(gapi.iframes.getContext())
+                    zD(gapi.iframes.getContext())
                   },
                   ontimeout: () => {
-                    CA(), fm(Qm(mm, "network-request-failed"))
+                    Zs(), wD(JD(DD, "network-request-failed"))
                   },
-                  timeout: yA.get()
+                  timeout: Ns.get()
                 })
               }
-              if (null === (Am = null === (hm = bh().gapi) || void 0 === hm ? void 0 : hm.iframes) || void 0 === Am ? void 0 : Am.Iframe) Tm(gapi.iframes.getContext());
+              if (null === (sD = null === (pD = Pp().gapi) || void 0 === pD ? void 0 : pD.iframes) || void 0 === sD ? void 0 : sD.Iframe) zD(gapi.iframes.getContext());
               else {
-                if (!(null === (am = bh().gapi) || void 0 === am ? void 0 : am.load)) {
-                  const Tm = kT("iframefcb");
-                  return bh()[Tm] = () => {
-                    gapi.load ? xm() : fm(Qm(mm, "network-request-failed"))
-                  }, ZT(`https://apis.google.com/js/api.js?onload=${Tm}`).catch((mm => fm(mm)))
+                if (!(null === (KD = Pp().gapi) || void 0 === KD ? void 0 : KD.load)) {
+                  const zD = Pz("iframefcb");
+                  return Pp()[zD] = () => {
+                    gapi.load ? rD() : wD(JD(DD, "network-request-failed"))
+                  }, Vz(`https://apis.google.com/js/api.js?onload=${zD}`).catch((DD => wD(DD)))
                 }
-                xm()
+                rD()
               }
-            })).catch((mm => {
-              throw rA = null, mm
+            })).catch((DD => {
+              throw ys = null, DD
             }))
-          }(mm), rA
+          }(DD), ys
         }
-        const lA = new Nm(5e3, 15e3),
-          MA = {
+        const ms = new jD(5e3, 15e3),
+          es = {
             style: {
               position: "absolute",
               top: "-100px",
@@ -3925,102 +3925,102 @@ export const modules = {
             "aria-hidden": "true",
             tabindex: "-1"
           },
-          uA = new Map([
+          os = new Map([
             ["identitytoolkit.googleapis.com", "p"],
             ["staging-identitytoolkit.sandbox.googleapis.com", "s"],
             ["test-identitytoolkit.sandbox.googleapis.com", "t"]
           ]);
 
-        function BA(mm) {
-          const Tm = mm.config;
-          zm(Tm.authDomain, mm, "auth-domain-config-required");
-          const fm = Tm.emulator ? Gm(Tm, "emulator/auth/iframe") : `https://${mm.config.authDomain}/__/auth/iframe`,
-            am = {
-              apiKey: Tm.apiKey,
-              appName: mm.name,
-              v: Am.d
+        function as(DD) {
+          const zD = DD.config;
+          VD(zD.authDomain, DD, "auth-domain-config-required");
+          const wD = zD.emulator ? dD(zD, "emulator/auth/iframe") : `https://${DD.config.authDomain}/__/auth/iframe`,
+            KD = {
+              apiKey: zD.apiKey,
+              appName: DD.name,
+              v: sD.e
             },
-            xm = uA.get(mm.config.apiHost);
-          xm && (am.eid = xm);
-          const wm = mm._getFrameworks();
-          return wm.length && (am.fw = wm.join(",")), `${fm}?${(0,hm.ab)(am).slice(1)}`
+            rD = os.get(DD.config.apiHost);
+          rD && (KD.eid = rD);
+          const LD = DD._getFrameworks();
+          return LD.length && (KD.fw = LD.join(",")), `${wD}?${(0,pD.Y)(KD).slice(1)}`
         }
-        const LA = {
+        const us = {
           location: "yes",
           resizable: "yes",
           statusbar: "yes",
           toolbar: "no"
         };
-        class vA {
-          constructor(mm) {
-            this.window = mm, this.associatedEvent = null
+        class vs {
+          constructor(DD) {
+            this.window = DD, this.associatedEvent = null
           }
           close() {
             if (this.window) try {
               this.window.close()
-            } catch (mm) {}
+            } catch (DD) {}
           }
         }
 
-        function tA(mm, Tm, fm) {
-          let Am = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 500,
-            am = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 600;
-          const xm = Math.max((window.screen.availHeight - am) / 2, 0).toString(),
-            wm = Math.max((window.screen.availWidth - Am) / 2, 0).toString();
-          let Dm = "";
-          const im = Object.assign(Object.assign({}, LA), {
-              width: Am.toString(),
-              height: am.toString(),
-              top: xm,
-              left: wm
+        function ts(DD, zD, wD) {
+          let sD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 500,
+            KD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 600;
+          const rD = Math.max((window.screen.availHeight - KD) / 2, 0).toString(),
+            LD = Math.max((window.screen.availWidth - sD) / 2, 0).toString();
+          let cD = "";
+          const gD = Object.assign(Object.assign({}, us), {
+              width: sD.toString(),
+              height: KD.toString(),
+              top: rD,
+              left: LD
             }),
-            Rm = (0, hm.N)().toLowerCase();
-          fm && (Dm = OT(Rm) ? "_blank" : fm), ET(Rm) && (Tm = Tm || "http://localhost", im.scrollbars = "yes");
-          const pm = Object.entries(im).reduce(((mm, Tm) => {
-            let [fm, hm] = Tm;
-            return `${mm}${fm}=${hm},`
+            RD = (0, pD.I)().toLowerCase();
+          wD && (cD = fz(RD) ? "_blank" : wD), Az(RD) && (zD = zD || "http://localhost", gD.scrollbars = "yes");
+          const AD = Object.entries(gD).reduce(((DD, zD) => {
+            let [wD, pD] = zD;
+            return `${DD}${wD}=${pD},`
           }), "");
           if (function() {
-              var mm;
-              return IT(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, hm.N)()) && !!(null === (mm = window.navigator) || void 0 === mm ? void 0 : mm.standalone)
-            }(Rm) && "_self" !== Dm) return function(mm, Tm) {
-            const fm = document.createElement("a");
-            fm.href = mm, fm.target = Tm;
-            const hm = document.createEvent("MouseEvent");
-            hm.initMouseEvent("click", !0, !0, window, 1, 0, 0, 0, 0, !1, !1, !1, !1, 1, null), fm.dispatchEvent(hm)
-          }(Tm || "", Dm), new vA(null);
-          const Em = window.open(Tm || "", Dm, pm);
-          zm(Em, mm, "popup-blocked");
+              var DD;
+              return nz(arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, pD.I)()) && !!(null === (DD = window.navigator) || void 0 === DD ? void 0 : DD.standalone)
+            }(RD) && "_self" !== cD) return function(DD, zD) {
+            const wD = document.createElement("a");
+            wD.href = DD, wD.target = zD;
+            const pD = document.createEvent("MouseEvent");
+            pD.initMouseEvent("click", !0, !0, window, 1, 0, 0, 0, 0, !1, !1, !1, !1, 1, null), wD.dispatchEvent(pD)
+          }(zD || "", cD), new vs(null);
+          const UD = window.open(zD || "", cD, AD);
+          VD(UD, DD, "popup-blocked");
           try {
-            Em.focus()
-          } catch (om) {}
-          return new vA(Em)
+            UD.focus()
+          } catch (fD) {}
+          return new vs(UD)
         }
-        const UA = "__/auth/handler",
-          dA = "emulator/auth/handler",
-          gA = encodeURIComponent("fac");
-        async function WA(mm, Tm, fm, am, xm, wm) {
-            zm(mm.config.authDomain, mm, "auth-domain-config-required"), zm(mm.config.apiKey, mm, "invalid-api-key");
-            const Dm = {
-              apiKey: mm.config.apiKey,
-              appName: mm.name,
-              authType: fm,
-              redirectUrl: am,
-              v: Am.d,
-              eventId: xm
+        const Fs = "__/auth/handler",
+          Ys = "emulator/auth/handler",
+          Hs = encodeURIComponent("fac");
+        async function qs(DD, zD, wD, KD, rD, LD) {
+            VD(DD.config.authDomain, DD, "auth-domain-config-required"), VD(DD.config.apiKey, DD, "invalid-api-key");
+            const cD = {
+              apiKey: DD.config.apiKey,
+              appName: DD.name,
+              authType: wD,
+              redirectUrl: KD,
+              v: sD.e,
+              eventId: rD
             };
-            if (Tm instanceof Tf) {
-              Tm.setDefaultLanguage(mm.languageCode), Dm.providerId = Tm.providerId || "", (0, hm.Q)(Tm.getCustomParameters()) || (Dm.customParameters = JSON.stringify(Tm.getCustomParameters()));
-              for (const [mm, Tm] of Object.entries(wm || {})) Dm[mm] = Tm
+            if (zD instanceof Dw) {
+              zD.setDefaultLanguage(DD.languageCode), cD.providerId = zD.providerId || "", (0, pD.N)(zD.getCustomParameters()) || (cD.customParameters = JSON.stringify(zD.getCustomParameters()));
+              for (const [DD, zD] of Object.entries(LD || {})) cD[DD] = zD
             }
-            if (Tm instanceof ff) {
-              const mm = Tm.getScopes().filter((mm => "" !== mm));
-              mm.length > 0 && (Dm.scopes = mm.join(","))
+            if (zD instanceof zw) {
+              const DD = zD.getScopes().filter((DD => "" !== DD));
+              DD.length > 0 && (cD.scopes = DD.join(","))
             }
-            mm.tenantId && (Dm.tid = mm.tenantId);
-            const im = Dm;
-            for (const hm of Object.keys(im)) void 0 === im[hm] && delete im[hm];
-            const Rm = await mm._getAppCheckToken(),
-              pm = Rm ? `#${gA}=${encodeURIComponent(Rm)}` : "";
-            return `${function(mm){let{config:Tm}=mm;if(!Tm.emulator)return`
-            https: //${Tm.authDomain}/${UA}`;return Gm(Tm,dA)}(mm)}?${(0,hm.ab)(im).slice(1)}${pm}`}const FA="webStorageSupport";const ma=class{constructor(){this.eventManagers={},this.iframes={},this.originValidationPromises={},this._redirectPersistence=ch,this._completeRedirectFn=kA,this._overrideRedirectResult=KA}async _openPopup(mm,Tm,fm,hm){var Am;km(null===(Am=this.eventManagers[mm._key()])||void 0===Am?void 0:Am.manager,"_initialize() not called before _openPopup()");return tA(mm,await WA(mm,Tm,fm,bm(),hm),Zh())}async _openRedirect(mm,Tm,fm,hm){await this._originValidation(mm);return function(mm){bh().location.href=mm}(await WA(mm,Tm,fm,bm(),hm)),new Promise((()=>{}))}_initialize(mm){const Tm=mm._key();if(this.eventManagers[Tm]){const{manager:mm,promise:fm}=this.eventManagers[Tm];return mm?Promise.resolve(mm):(km(fm,"If manager is not set, promise should be"),fm)}const fm=this.initAndGetManager(mm);return this.eventManagers[Tm]={promise:fm},fm.catch((()=>{delete this.eventManagers[Tm]})),fm}async initAndGetManager(mm){const Tm=await async function(mm){const Tm=await sA(mm),fm=bh().gapi;return zm(fm,mm,"internal-error"),Tm.open({where:document.body,url:BA(mm),messageHandlersFilter:fm.iframes.CROSS_ORIGIN_IFRAMES_FILTER,attributes:MA,dontclear:!0},(Tm=>new Promise((async(fm,hm)=>{await Tm.restyle({setHideOnLeave:!1});const Am=Qm(mm,"network-request-failed"),am=bh().setTimeout((()=>{hm(Am)}),lA.get());function xm(){bh().clearTimeout(am),fm(Tm)}Tm.ping(xm).then(xm,(()=>{hm(Am)}))}))))}(mm),fm=new SA(mm);return Tm.register("authEvent",(Tm=>{zm(null===Tm||void 0===Tm?void 0:Tm.authEvent,mm,"invalid-auth-event");return{status:fm.onEvent(Tm.authEvent)?"ACK":"ERROR"}}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER),this.eventManagers[mm._key()]={manager:fm},this.iframes[mm._key()]=Tm,fm}_isIframeWebStorageSupported(mm,Tm){this.iframes[mm._key()].send(FA,{type:FA},(fm=>{var hm;const Am=null===(hm=null===fm||void 0===fm?void 0:fm[0])||void 0===hm?void 0:hm[FA];void 0!==Am&&Tm(!!Am),Km(mm,"internal-error")}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER)}_originValidation(mm){const Tm=mm._key();return this.originValidationPromises[Tm]||(this.originValidationPromises[Tm]=PA(mm)),this.originValidationPromises[Tm]}get _shouldInitProactively(){return KT()||oT()||IT()}};class Ta{constructor(mm){this.factorId=mm}_process(mm,Tm,fm){switch(Tm.type){case"enroll":return this._finalizeEnroll(mm,Tm.credential,fm);case"signin":return this._finalizeSignIn(mm,Tm.credential);default:return Zm("unexpected MultiFactorSessionType")}}}class fa extends Ta{constructor(mm){super("phone"),this.credential=mm}static _fromCredential(mm){return new fa(mm)}_finalizeEnroll(mm,Tm,fm){return function(mm,Tm){return Cm(mm,"POST","/v2/accounts/mfaEnrollment:finalize",ym(mm,Tm))}(mm,{idToken:Tm,displayName:fm,phoneVerificationInfo:this.credential._makeVerificationRequest()})}_finalizeSignIn(mm,Tm){return function(mm,Tm){return Cm(mm,"POST","/v2/accounts/mfaSignIn:finalize",ym(mm,Tm))}(mm,{mfaPendingCredential:Tm,phoneVerificationInfo:this.credential._makeVerificationRequest()})}}class ha{constructor(){}static assertion(mm){return fa._fromCredential(mm)}}ha.FACTOR_ID="phone";class Aa{static assertionForEnrollment(mm,Tm){return aa._fromSecret(mm,Tm)}static assertionForSignIn(mm,Tm){return aa._fromEnrollmentId(mm,Tm)}static async generateSecret(mm){const Tm=mm;zm("undefined"!==typeof Tm.auth,"internal-error");const fm=await(hm=Tm.auth,Am={idToken:Tm.credential,totpEnrollmentInfo:{}},Cm(hm,"POST","/v2/accounts/mfaEnrollment:start",ym(hm,Am)));var hm,Am;return xa._fromStartTotpMfaEnrollmentResponse(fm,Tm.auth)}}Aa.FACTOR_ID="totp";class aa extends Ta{constructor(mm,Tm,fm){super("totp"),this.otp=mm,this.enrollmentId=Tm,this.secret=fm}static _fromSecret(mm,Tm){return new aa(Tm,void 0,mm)}static _fromEnrollmentId(mm,Tm){return new aa(Tm,mm)}async _finalizeEnroll(mm,Tm,fm){return zm("undefined"!==typeof this.secret,mm,"argument-error"),function(mm,Tm){return Cm(mm,"POST","/v2/accounts/mfaEnrollment:finalize",ym(mm,Tm))}(mm,{idToken:Tm,displayName:fm,totpVerificationInfo:this.secret._makeTotpVerificationInfo(this.otp)})}async _finalizeSignIn(mm,Tm){zm(void 0!==this.enrollmentId&&void 0!==this.otp,mm,"argument-error");const fm={verificationCode:this.otp};return function(mm,Tm){return Cm(mm,"POST","/v2/accounts/mfaSignIn:finalize",ym(mm,Tm))}(mm,{mfaPendingCredential:Tm,mfaEnrollmentId:this.enrollmentId,totpVerificationInfo:fm})}}class xa{constructor(mm,Tm,fm,hm,Am,am,xm){this.sessionInfo=am,this.auth=xm,this.secretKey=mm,this.hashingAlgorithm=Tm,this.codeLength=fm,this.codeIntervalSeconds=hm,this.enrollmentCompletionDeadline=Am}static _fromStartTotpMfaEnrollmentResponse(mm,Tm){return new xa(mm.totpSessionInfo.sharedSecretKey,mm.totpSessionInfo.hashingAlgorithm,mm.totpSessionInfo.verificationCodeLength,mm.totpSessionInfo.periodSec,new Date(mm.totpSessionInfo.finalizeEnrollmentTime).toUTCString(),mm.totpSessionInfo.sessionInfo,Tm)}_makeTotpVerificationInfo(mm){return{sessionInfo:this.sessionInfo,verificationCode:mm}}generateQrCodeUrl(mm,Tm){var fm;let hm=!1;return(wa(mm)||wa(Tm))&&(hm=!0),hm&&(wa(mm)&&(mm=(null===(fm=this.auth.currentUser)||void 0===fm?void 0:fm.email)||"unknownuser"),wa(Tm)&&(Tm=this.auth.name)),`otpauth://totp/${Tm}:${mm}?secret=${this.secretKey}&issuer=${Tm}&algorithm=${this.hashingAlgorithm}&digits=${this.codeLength}`}}function wa(mm){return"undefined"===typeof mm||0===(null===mm||void 0===mm?void 0:mm.length)}var Da="@firebase/auth",ia="0.23.2";class Ra{constructor(mm){this.auth=mm,this.internalListeners=new Map}getUid(){var mm;return this.assertAuthConfigured(),(null===(mm=this.auth.currentUser)||void 0===mm?void 0:mm.uid)||null}async getToken(mm){if(this.assertAuthConfigured(),await this.auth._initializationPromise,!this.auth.currentUser)return null;return{accessToken:await this.auth.currentUser.getIdToken(mm)}}addAuthTokenListener(mm){if(this.assertAuthConfigured(),this.internalListeners.has(mm))return;const Tm=this.auth.onIdTokenChanged((Tm=>{mm((null===Tm||void 0===Tm?void 0:Tm.stsTokenManager.accessToken)||null)}));this.internalListeners.set(mm,Tm),this.updateProactiveRefresh()}removeAuthTokenListener(mm){this.assertAuthConfigured();const Tm=this.internalListeners.get(mm);Tm&&(this.internalListeners.delete(mm),Tm(),this.updateProactiveRefresh())}assertAuthConfigured(){zm(this.auth._initializationPromise,"dependent-sdk-initialized-before-auth")}updateProactiveRefresh(){this.internalListeners.size>0?this.auth._startProactiveRefresh():this.auth._stopProactiveRefresh()}}const pa=(0,hm.I)("authIdTokenMaxAge")||300;let Ea=null;const oa=mm=>async Tm=>{const fm=Tm&&await Tm.getIdTokenResult(),hm=fm&&((new Date).getTime()-Date.parse(fm.issuedAtTime))/1e3;if(hm&&hm>pa)return;const Am=null===fm||void 0===fm?void 0:fm.token;Ea!==Am&&(Ea=Am,await fetch(mm,{method:Am?"POST":"DELETE",headers:Am?{Authorization:`Bearer ${Am}`}:{}}))};function Oa(){let mm=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,Am.H)();const Tm=(0,Am.z)(mm,"auth");if(Tm.isInitialized())return Tm.getImmediate();const fm=PT(mm,{popupRedirectResolver:ma,persistence:[sh,nh,ch]}),am=(0,hm.I)("authTokenSyncURL");if(am){const mm=oa(am);wh(fm,mm,(()=>mm(fm.currentUser))),xh(fm,(Tm=>mm(Tm)))}const xm=(0,hm.G)("auth");return xm&&HT(fm,`http://${xm}`),fm}var Ya;Ya="Browser",(0,Am.A)(new wm.h("auth",((mm,Tm)=>{let{options:fm}=Tm;const hm=mm.getProvider("app").getImmediate(),Am=mm.getProvider("heartbeat"),am=mm.getProvider("app-check-internal"),{apiKey:xm,authDomain:wm}=hm.options;zm(xm&&!xm.includes(":"),"invalid-api-key",{appName:hm.name});const Dm={apiKey:xm,authDomain:wm,clientPlatform:Ya,apiHost:"identitytoolkit.googleapis.com",tokenApiHost:"securetoken.googleapis.com",apiScheme:"https",sdkClientVersion:QT(Ya)},im=new NT(hm,Am,am,Dm);return function(mm,Tm){const fm=(null===Tm||void 0===Tm?void 0:Tm.persistence)||[],hm=(Array.isArray(fm)?fm:[fm]).map(xT);(null===Tm||void 0===Tm?void 0:Tm.errorMap)&&mm._updateErrorMap(Tm.errorMap),mm._initializeWithPersistence(hm,null===Tm||void 0===Tm?void 0:Tm.popupRedirectResolver)}(im,fm),im}),"PUBLIC").setInstantiationMode("EXPLICIT").setInstanceCreatedCallback(((mm,Tm,fm)=>{mm.getProvider("auth-internal").initialize()}))),(0,Am.A)(new wm.h("auth-internal",(mm=>(mm=>new Ra(mm))(GT(mm.getProvider("auth").getImmediate()))),"PRIVATE").setInstantiationMode("EXPLICIT")),(0,Am.N)(Da,ia,function(mm){switch(mm){case"Node":return"node";case"ReactNative":return"rn";case"Worker":return"webworker";case"Cordova":return"cordova";default:return}}(Ya)),(0,Am.N)(Da,ia,"esm2017")}};Object.freeze(modules);for(const mm in modules)Object.freeze(modules[mm]);
+            DD.tenantId && (cD.tid = DD.tenantId);
+            const gD = cD;
+            for (const pD of Object.keys(gD)) void 0 === gD[pD] && delete gD[pD];
+            const RD = await DD._getAppCheckToken(),
+              AD = RD ? `#${Hs}=${encodeURIComponent(RD)}` : "";
+            return `${function(DD){let{config:zD}=DD;if(!zD.emulator)return`
+            https: //${zD.authDomain}/${Fs}`;return dD(zD,Ys)}(DD)}?${(0,pD.Y)(gD).slice(1)}${AD}`}const DK="webStorageSupport";const zK=class{constructor(){this.eventManagers={},this.iframes={},this.originValidationPromises={},this._redirectPersistence=Ep,this._completeRedirectFn=Cs,this._overrideRedirectResult=Ms}async _openPopup(DD,zD,wD,pD){var sD;CD(null===(sD=this.eventManagers[DD._key()])||void 0===sD?void 0:sD.manager,"_initialize() not called before _openPopup()");return ts(DD,await qs(DD,zD,wD,xD(),pD),Xp())}async _openRedirect(DD,zD,wD,pD){await this._originValidation(DD);return function(DD){Pp().location.href=DD}(await qs(DD,zD,wD,xD(),pD)),new Promise((()=>{}))}_initialize(DD){const zD=DD._key();if(this.eventManagers[zD]){const{manager:DD,promise:wD}=this.eventManagers[zD];return DD?Promise.resolve(DD):(CD(wD,"If manager is not set, promise should be"),wD)}const wD=this.initAndGetManager(DD);return this.eventManagers[zD]={promise:wD},wD.catch((()=>{delete this.eventManagers[zD]})),wD}async initAndGetManager(DD){const zD=await async function(DD){const zD=await ks(DD),wD=Pp().gapi;return VD(wD,DD,"internal-error"),zD.open({where:document.body,url:as(DD),messageHandlersFilter:wD.iframes.CROSS_ORIGIN_IFRAMES_FILTER,attributes:es,dontclear:!0},(zD=>new Promise((async(wD,pD)=>{await zD.restyle({setHideOnLeave:!1});const sD=JD(DD,"network-request-failed"),KD=Pp().setTimeout((()=>{pD(sD)}),ms.get());function rD(){Pp().clearTimeout(KD),wD(zD)}zD.ping(rD).then(rD,(()=>{pD(sD)}))}))))}(DD),wD=new Ts(DD);return zD.register("authEvent",(zD=>{VD(null===zD||void 0===zD?void 0:zD.authEvent,DD,"invalid-auth-event");return{status:wD.onEvent(zD.authEvent)?"ACK":"ERROR"}}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER),this.eventManagers[DD._key()]={manager:wD},this.iframes[DD._key()]=zD,wD}_isIframeWebStorageSupported(DD,zD){this.iframes[DD._key()].send(DK,{type:DK},(wD=>{var pD;const sD=null===(pD=null===wD||void 0===wD?void 0:wD[0])||void 0===pD?void 0:pD[DK];void 0!==sD&&zD(!!sD),OD(DD,"internal-error")}),gapi.iframes.CROSS_ORIGIN_IFRAMES_FILTER)}_originValidation(DD){const zD=DD._key();return this.originValidationPromises[zD]||(this.originValidationPromises[zD]=ls(DD)),this.originValidationPromises[zD]}get _shouldInitProactively(){return Mz()||Uz()||nz()}};class wK{constructor(DD){this.factorId=DD}_process(DD,zD,wD){switch(zD.type){case"enroll":return this._finalizeEnroll(DD,zD.credential,wD);case"signin":return this._finalizeSignIn(DD,zD.credential);default:return PD("unexpected MultiFactorSessionType")}}}class pK extends wK{constructor(DD){super("phone"),this.credential=DD}static _fromCredential(DD){return new pK(DD)}_finalizeEnroll(DD,zD,wD){return function(DD,zD){return ND(DD,"POST","/v2/accounts/mfaEnrollment:finalize",WD(DD,zD))}(DD,{idToken:zD,displayName:wD,phoneVerificationInfo:this.credential._makeVerificationRequest()})}_finalizeSignIn(DD,zD){return function(DD,zD){return ND(DD,"POST","/v2/accounts/mfaSignIn:finalize",WD(DD,zD))}(DD,{mfaPendingCredential:zD,phoneVerificationInfo:this.credential._makeVerificationRequest()})}}class sK{constructor(){}static assertion(DD){return pK._fromCredential(DD)}}sK.FACTOR_ID="phone";class KK{static assertionForEnrollment(DD,zD){return rK._fromSecret(DD,zD)}static assertionForSignIn(DD,zD){return rK._fromEnrollmentId(DD,zD)}static async generateSecret(DD){const zD=DD;VD("undefined"!==typeof zD.auth,"internal-error");const wD=await(pD=zD.auth,sD={idToken:zD.credential,totpEnrollmentInfo:{}},ND(pD,"POST","/v2/accounts/mfaEnrollment:start",WD(pD,sD)));var pD,sD;return LK._fromStartTotpMfaEnrollmentResponse(wD,zD.auth)}}KK.FACTOR_ID="totp";class rK extends wK{constructor(DD,zD,wD){super("totp"),this.otp=DD,this.enrollmentId=zD,this.secret=wD}static _fromSecret(DD,zD){return new rK(zD,void 0,DD)}static _fromEnrollmentId(DD,zD){return new rK(zD,DD)}async _finalizeEnroll(DD,zD,wD){return VD("undefined"!==typeof this.secret,DD,"argument-error"),function(DD,zD){return ND(DD,"POST","/v2/accounts/mfaEnrollment:finalize",WD(DD,zD))}(DD,{idToken:zD,displayName:wD,totpVerificationInfo:this.secret._makeTotpVerificationInfo(this.otp)})}async _finalizeSignIn(DD,zD){VD(void 0!==this.enrollmentId&&void 0!==this.otp,DD,"argument-error");const wD={verificationCode:this.otp};return function(DD,zD){return ND(DD,"POST","/v2/accounts/mfaSignIn:finalize",WD(DD,zD))}(DD,{mfaPendingCredential:zD,mfaEnrollmentId:this.enrollmentId,totpVerificationInfo:wD})}}class LK{constructor(DD,zD,wD,pD,sD,KD,rD){this.sessionInfo=KD,this.auth=rD,this.secretKey=DD,this.hashingAlgorithm=zD,this.codeLength=wD,this.codeIntervalSeconds=pD,this.enrollmentCompletionDeadline=sD}static _fromStartTotpMfaEnrollmentResponse(DD,zD){return new LK(DD.totpSessionInfo.sharedSecretKey,DD.totpSessionInfo.hashingAlgorithm,DD.totpSessionInfo.verificationCodeLength,DD.totpSessionInfo.periodSec,new Date(DD.totpSessionInfo.finalizeEnrollmentTime).toUTCString(),DD.totpSessionInfo.sessionInfo,zD)}_makeTotpVerificationInfo(DD){return{sessionInfo:this.sessionInfo,verificationCode:DD}}generateQrCodeUrl(DD,zD){var wD;let pD=!1;return(cK(DD)||cK(zD))&&(pD=!0),pD&&(cK(DD)&&(DD=(null===(wD=this.auth.currentUser)||void 0===wD?void 0:wD.email)||"unknownuser"),cK(zD)&&(zD=this.auth.name)),`otpauth://totp/${zD}:${DD}?secret=${this.secretKey}&issuer=${zD}&algorithm=${this.hashingAlgorithm}&digits=${this.codeLength}`}}function cK(DD){return"undefined"===typeof DD||0===(null===DD||void 0===DD?void 0:DD.length)}var gK="@firebase/auth",RK="0.23.2";class AK{constructor(DD){this.auth=DD,this.internalListeners=new Map}getUid(){var DD;return this.assertAuthConfigured(),(null===(DD=this.auth.currentUser)||void 0===DD?void 0:DD.uid)||null}async getToken(DD){if(this.assertAuthConfigured(),await this.auth._initializationPromise,!this.auth.currentUser)return null;return{accessToken:await this.auth.currentUser.getIdToken(DD)}}addAuthTokenListener(DD){if(this.assertAuthConfigured(),this.internalListeners.has(DD))return;const zD=this.auth.onIdTokenChanged((zD=>{DD((null===zD||void 0===zD?void 0:zD.stsTokenManager.accessToken)||null)}));this.internalListeners.set(DD,zD),this.updateProactiveRefresh()}removeAuthTokenListener(DD){this.assertAuthConfigured();const zD=this.internalListeners.get(DD);zD&&(this.internalListeners.delete(DD),zD(),this.updateProactiveRefresh())}assertAuthConfigured(){VD(this.auth._initializationPromise,"dependent-sdk-initialized-before-auth")}updateProactiveRefresh(){this.internalListeners.size>0?this.auth._startProactiveRefresh():this.auth._stopProactiveRefresh()}}const UK=(0,pD.D)("authIdTokenMaxAge")||300;let fK=null;const IK=DD=>async zD=>{const wD=zD&&await zD.getIdTokenResult(),pD=wD&&((new Date).getTime()-Date.parse(wD.issuedAtTime))/1e3;if(pD&&pD>UK)return;const sD=null===wD||void 0===wD?void 0:wD.token;fK!==sD&&(fK=sD,await fetch(DD,{method:sD?"POST":"DELETE",headers:sD?{Authorization:`Bearer ${sD}`}:{}}))};function BK(){let DD=arguments.length>0&&void 0!==arguments[0]?arguments[0]:(0,sD.K)();const zD=(0,sD.v)(DD,"auth");if(zD.isInitialized())return zD.getImmediate();const wD=Sz(DD,{popupRedirectResolver:zK,persistence:[Np,Op,Ep]}),KD=(0,pD.D)("authTokenSyncURL");if(KD){const DD=IK(KD);Kp(wD,DD,(()=>DD(wD.currentUser))),sp(wD,(zD=>DD(zD)))}const rD=(0,pD.A)("auth");return rD&&iz(wD,`http://${rD}`),wD}var GK;GK="Browser",(0,sD.z)(new LD.f("auth",((DD,zD)=>{let{options:wD}=zD;const pD=DD.getProvider("app").getImmediate(),sD=DD.getProvider("heartbeat"),KD=DD.getProvider("app-check-internal"),{apiKey:rD,authDomain:LD}=pD.options;VD(rD&&!rD.includes(":"),"invalid-api-key",{appName:pD.name});const cD={apiKey:rD,authDomain:LD,clientPlatform:GK,apiHost:"identitytoolkit.googleapis.com",tokenApiHost:"securetoken.googleapis.com",apiScheme:"https",sdkClientVersion:Oz(GK)},gD=new bz(pD,sD,KD,cD);return function(DD,zD){const wD=(null===zD||void 0===zD?void 0:zD.persistence)||[],pD=(Array.isArray(wD)?wD:[wD]).map(Kz);(null===zD||void 0===zD?void 0:zD.errorMap)&&DD._updateErrorMap(zD.errorMap),DD._initializeWithPersistence(pD,null===zD||void 0===zD?void 0:zD.popupRedirectResolver)}(gD,wD),gD}),"PUBLIC").setInstantiationMode("EXPLICIT").setInstanceCreatedCallback(((DD,zD,wD)=>{DD.getProvider("auth-internal").initialize()}))),(0,sD.z)(new LD.f("auth-internal",(DD=>(DD=>new AK(DD))(jz(DD.getProvider("auth").getImmediate()))),"PRIVATE").setInstantiationMode("EXPLICIT")),(0,sD.T)(gK,RK,function(DD){switch(DD){case"Node":return"node";case"ReactNative":return"rn";case"Worker":return"webworker";case"Cordova":return"cordova";default:return}}(GK)),(0,sD.T)(gK,RK,"esm2017")}};Object.freeze(modules);for(const DD in modules)Object.freeze(modules[DD]);

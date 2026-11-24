@@ -1,757 +1,757 @@
 export const id = 133;
 export const ids = [133];
 export const modules = {
-  6562: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      loadPageShaderPackCompiler: () => oT
+  6645: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      loadPageShaderPackCompiler: () => Uz
     });
-    var hm = {};
-    fm.r(hm), fm.d(hm, {
-      AAm: () => Am,
-      Z6: () => am,
-      default: () => Bm,
-      aAm: () => xm,
-      xAm: () => wm,
-      initSync: () => um,
-      Ip: () => Dm,
-      Lfm: () => im,
-      wAm: () => Rm,
-      DAm: () => pm,
-      hG: () => Em,
-      iAm: () => om,
-      mG: () => Om,
-      RAm: () => Ym
+    var pD = {};
+    wD.r(pD), wD.d(pD, {
+      EsD: () => sD,
+      LDD: () => KD,
+      default: () => oD,
+      QsD: () => rD,
+      XsD: () => LD,
+      initSync: () => eD,
+      fA: () => cD,
+      RpD: () => gD,
+      VsD: () => RD,
+      CsD: () => AD,
+      Kl: () => UD,
+      xsD: () => fD,
+      qS: () => ID,
+      TsD: () => BD
     });
-    class Am {
-      static __wrap(mm) {
-        const Tm = Object.create(Am.prototype);
-        return Tm.__wbg_ptr = mm, jm.register(Tm, Tm.__wbg_ptr, Tm), Tm
+    class sD {
+      static __wrap(DD) {
+        const zD = Object.create(sD.prototype);
+        return zD.__wbg_ptr = DD, hD.register(zD, zD.__wbg_ptr, zD), zD
       }
       __destroy_into_raw() {
-        const mm = this.__wbg_ptr;
-        return this.__wbg_ptr = 0, jm.unregister(this), mm
+        const DD = this.__wbg_ptr;
+        return this.__wbg_ptr = 0, hD.unregister(this), DD
       }
       free() {
-        const mm = this.__destroy_into_raw();
-        sm.HMM0(mm, 0)
+        const DD = this.__destroy_into_raw();
+        yD.YEN2(DD, 0)
       }
-      get pAm() {
-        let mm, Tm;
+      get bsD() {
+        let DD, zD;
         try {
-          const fm = sm.QvdY(this.__wbg_ptr);
-          return mm = fm[0], Tm = fm[1], Jm(fm[0], fm[1])
+          const wD = yD.GNhq(this.__wbg_ptr);
+          return DD = wD[0], zD = wD[1], QD(wD[0], wD[1])
         } finally {
-          sm.Cuvu(mm, Tm, 1)
+          yD.yQTQ(DD, zD, 1)
         }
       }
       get features() {
-        const mm = sm.VpR7(this.__wbg_ptr);
-        var Tm = Im(mm[0], mm[1]);
-        return sm.Cuvu(mm[0], 4 * mm[1], 4), Tm
+        const DD = yD.NW8P(this.__wbg_ptr);
+        var zD = MD(DD[0], DD[1]);
+        return yD.yQTQ(DD[0], 4 * DD[1], 4), zD
       }
       get hooks() {
-        const mm = sm.hd2l(this.__wbg_ptr);
-        var Tm = Km(mm[0], mm[1]).slice();
-        return sm.Cuvu(mm[0], 1 * mm[1], 1), Tm
+        const DD = yD.rgfl(this.__wbg_ptr);
+        var zD = OD(DD[0], DD[1]).slice();
+        return yD.yQTQ(DD[0], 1 * DD[1], 1), zD
       }
-      mapValidationMessage(mm, Tm, fm, hm, Am) {
-        let am, xm;
+      mapValidationMessage(DD, zD, wD, pD, sD) {
+        let KD, rD;
         try {
-          const im = sm.sw4X(this.__wbg_ptr, mm, Tm, fm, Vm(hm), Vm(Am));
-          var wm = im[0],
-            Dm = im[1];
-          if (im[3]) throw wm = 0, Dm = 0, Gm(im[2]);
-          return am = wm, xm = Dm, Jm(wm, Dm)
+          const gD = yD.aEzN(this.__wbg_ptr, DD, zD, wD, nD(pD), nD(sD));
+          var LD = gD[0],
+            cD = gD[1];
+          if (gD[3]) throw LD = 0, cD = 0, dD(gD[2]);
+          return KD = LD, rD = cD, QD(LD, cD)
         } finally {
-          sm.Cuvu(am, xm, 1)
+          yD.yQTQ(KD, rD, 1)
         }
       }
       get moduleCodes() {
-        const mm = sm.Pglb(this.__wbg_ptr);
-        var Tm = Im(mm[0], mm[1]);
-        return sm.Cuvu(mm[0], 4 * mm[1], 4), Tm
+        const DD = yD.aRAI(this.__wbg_ptr);
+        var zD = MD(DD[0], DD[1]);
+        return yD.yQTQ(DD[0], 4 * DD[1], 4), zD
       }
-      get EAm() {
-        let mm, Tm;
+      get jsD() {
+        let DD, zD;
         try {
-          const fm = sm.QfcB(this.__wbg_ptr);
-          return mm = fm[0], Tm = fm[1], Jm(fm[0], fm[1])
+          const wD = yD.BulD(this.__wbg_ptr);
+          return DD = wD[0], zD = wD[1], QD(wD[0], wD[1])
         } finally {
-          sm.Cuvu(mm, Tm, 1)
+          yD.yQTQ(DD, zD, 1)
         }
       }
       get reads() {
-        const mm = sm.jq9I(this.__wbg_ptr);
-        var Tm = Im(mm[0], mm[1]);
-        return sm.Cuvu(mm[0], 4 * mm[1], 4), Tm
+        const DD = yD.Jgsb(this.__wbg_ptr);
+        var zD = MD(DD[0], DD[1]);
+        return yD.yQTQ(DD[0], 4 * DD[1], 4), zD
       }
       get validationModuleCodes() {
-        const mm = sm.qZLp(this.__wbg_ptr);
-        var Tm = Im(mm[0], mm[1]);
-        return sm.Cuvu(mm[0], 4 * mm[1], 4), Tm
+        const DD = yD.DqW9(this.__wbg_ptr);
+        var zD = MD(DD[0], DD[1]);
+        return yD.yQTQ(DD[0], 4 * DD[1], 4), zD
       }
       get validationModuleKeys() {
-        const mm = sm.Dkpo(this.__wbg_ptr);
-        var Tm = Km(mm[0], mm[1]).slice();
-        return sm.Cuvu(mm[0], 1 * mm[1], 1), Tm
+        const DD = yD.iZzo(this.__wbg_ptr);
+        var zD = OD(DD[0], DD[1]).slice();
+        return yD.yQTQ(DD[0], 1 * DD[1], 1), zD
       }
       get variantFlags() {
-        const mm = sm.aC3p(this.__wbg_ptr);
-        var Tm = Km(mm[0], mm[1]).slice();
-        return sm.Cuvu(mm[0], 1 * mm[1], 1), Tm
+        const DD = yD.lAP6(this.__wbg_ptr);
+        var zD = OD(DD[0], DD[1]).slice();
+        return yD.yQTQ(DD[0], 1 * DD[1], 1), zD
       }
     }
 
-    function am(mm, Tm, fm, hm, am, xm, wm) {
-      const Dm = Nm(mm, sm.YRie),
-        im = lm,
-        Rm = Nm(Tm, sm.YRie),
-        pm = lm,
-        Em = Nm(fm, sm.YRie),
-        om = lm,
-        Om = em(hm, sm.YRie),
-        Ym = lm,
-        qm = Nm(am, sm.YRie),
-        jm = lm,
-        Vm = Nm(xm, sm.YRie),
-        Im = lm,
-        Km = Nm(wm, sm.YRie),
-        Qm = lm,
-        nm = sm.RZ5J(Dm, im, Rm, pm, Em, om, Om, Ym, qm, jm, Vm, Im, Km, Qm);
-      if (nm[2]) throw Gm(nm[1]);
-      return Am.__wrap(nm[0])
+    function KD(DD, zD, wD, pD, KD, rD, LD) {
+      const cD = jD(DD, yD.lieu),
+        gD = kD,
+        RD = jD(zD, yD.lieu),
+        AD = kD,
+        UD = jD(wD, yD.lieu),
+        fD = kD,
+        ID = bD(pD, yD.lieu),
+        BD = kD,
+        GD = jD(KD, yD.lieu),
+        hD = kD,
+        nD = jD(rD, yD.lieu),
+        MD = kD,
+        OD = jD(LD, yD.lieu),
+        JD = kD,
+        ED = yD.lK0t(cD, gD, RD, AD, UD, fD, ID, BD, GD, hD, nD, MD, OD, JD);
+      if (ED[2]) throw dD(ED[1]);
+      return sD.__wrap(ED[0])
     }
 
-    function xm() {
-      const mm = sm.EK6q();
-      var Tm = Im(mm[0], mm[1]);
-      return sm.Cuvu(mm[0], 4 * mm[1], 4), Tm
+    function rD() {
+      const DD = yD.KYtr();
+      var zD = MD(DD[0], DD[1]);
+      return yD.yQTQ(DD[0], 4 * DD[1], 4), zD
     }
 
-    function wm() {
-      const mm = sm.QaJN();
-      var Tm = Im(mm[0], mm[1]);
-      return sm.Cuvu(mm[0], 4 * mm[1], 4), Tm
+    function LD() {
+      const DD = yD.jV3D();
+      var zD = MD(DD[0], DD[1]);
+      return yD.yQTQ(DD[0], 4 * DD[1], 4), zD
     }
 
-    function Dm() {
-      sm.DMwA()
+    function cD() {
+      yD.fnK7()
     }
 
-    function im(mm, Tm, fm, hm, Am) {
-      let am, xm;
+    function gD(DD, zD, wD, pD, sD) {
+      let KD, rD;
       try {
-        const im = Nm(mm, sm.YRie),
-          Rm = lm,
-          pm = em(Tm, sm.YRie),
-          Em = lm,
-          om = Nm(fm, sm.YRie),
-          Om = lm,
-          Ym = em(hm, sm.YRie),
-          qm = lm,
-          jm = function(mm, Tm) {
-            const fm = Tm(1 * mm.length, 1) >>> 0;
-            return Zm().set(mm, fm / 1), lm = mm.length, fm
-          }(Am, sm.YRie),
-          Vm = lm,
-          Im = sm.az99(im, Rm, pm, Em, om, Om, Ym, qm, jm, Vm);
-        var wm = Im[0],
-          Dm = Im[1];
-        if (Im[3]) throw wm = 0, Dm = 0, Gm(Im[2]);
-        return am = wm, xm = Dm, Jm(wm, Dm)
+        const gD = jD(DD, yD.lieu),
+          RD = kD,
+          AD = bD(zD, yD.lieu),
+          UD = kD,
+          fD = jD(wD, yD.lieu),
+          ID = kD,
+          BD = bD(pD, yD.lieu),
+          GD = kD,
+          hD = function(DD, zD) {
+            const wD = zD(1 * DD.length, 1) >>> 0;
+            return PD().set(DD, wD / 1), kD = DD.length, wD
+          }(sD, yD.lieu),
+          nD = kD,
+          MD = yD.heli(gD, RD, AD, UD, fD, ID, BD, GD, hD, nD);
+        var LD = MD[0],
+          cD = MD[1];
+        if (MD[3]) throw LD = 0, cD = 0, dD(MD[2]);
+        return KD = LD, rD = cD, QD(LD, cD)
       } finally {
-        sm.Cuvu(am, xm, 1)
+        yD.yQTQ(KD, rD, 1)
       }
     }
 
-    function Rm() {
-      let mm, Tm;
+    function RD() {
+      let DD, zD;
       try {
-        const fm = sm.DyR8();
-        return mm = fm[0], Tm = fm[1], Jm(fm[0], fm[1])
+        const wD = yD.pi1s();
+        return DD = wD[0], zD = wD[1], QD(wD[0], wD[1])
       } finally {
-        sm.Cuvu(mm, Tm, 1)
+        yD.yQTQ(DD, zD, 1)
       }
     }
 
-    function pm(mm) {
-      let Tm, fm;
+    function AD(DD) {
+      let zD, wD;
       try {
-        const am = sm.G2Te(mm);
-        var hm = am[0],
-          Am = am[1];
-        if (am[3]) throw hm = 0, Am = 0, Gm(am[2]);
-        return Tm = hm, fm = Am, Jm(hm, Am)
+        const KD = yD.F6Kj(DD);
+        var pD = KD[0],
+          sD = KD[1];
+        if (KD[3]) throw pD = 0, sD = 0, dD(KD[2]);
+        return zD = pD, wD = sD, QD(pD, sD)
       } finally {
-        sm.Cuvu(Tm, fm, 1)
+        yD.yQTQ(zD, wD, 1)
       }
     }
 
-    function Em() {
-      return sm.ntP4() >>> 0
+    function UD() {
+      return yD.OZhC() >>> 0
     }
 
-    function om() {
-      let mm, Tm;
+    function fD() {
+      let DD, zD;
       try {
-        const fm = sm.HeUK();
-        return mm = fm[0], Tm = fm[1], Jm(fm[0], fm[1])
+        const wD = yD.r2Te();
+        return DD = wD[0], zD = wD[1], QD(wD[0], wD[1])
       } finally {
-        sm.Cuvu(mm, Tm, 1)
+        yD.yQTQ(DD, zD, 1)
       }
     }
 
-    function Om(mm, Tm) {
-      let fm, hm;
+    function ID(DD, zD) {
+      let wD, pD;
       try {
-        const xm = Nm(mm, sm.YRie),
-          wm = lm,
-          Dm = em(Tm, sm.YRie),
-          im = lm,
-          Rm = sm.Soie(xm, wm, Dm, im);
-        var Am = Rm[0],
-          am = Rm[1];
-        if (Rm[3]) throw Am = 0, am = 0, Gm(Rm[2]);
-        return fm = Am, hm = am, Jm(Am, am)
+        const rD = jD(DD, yD.lieu),
+          LD = kD,
+          cD = bD(zD, yD.lieu),
+          gD = kD,
+          RD = yD.p0nD(rD, LD, cD, gD);
+        var sD = RD[0],
+          KD = RD[1];
+        if (RD[3]) throw sD = 0, KD = 0, dD(RD[2]);
+        return wD = sD, pD = KD, QD(sD, KD)
       } finally {
-        sm.Cuvu(fm, hm, 1)
+        yD.yQTQ(wD, pD, 1)
       }
     }
 
-    function Ym(mm) {
-      let Tm, fm;
+    function BD(DD) {
+      let zD, wD;
       try {
-        const am = sm.Jntx(Vm(mm));
-        var hm = am[0],
-          Am = am[1];
-        if (am[3]) throw hm = 0, Am = 0, Gm(am[2]);
-        return Tm = hm, fm = Am, Jm(hm, Am)
+        const KD = yD.r6gy(nD(DD));
+        var pD = KD[0],
+          sD = KD[1];
+        if (KD[3]) throw pD = 0, sD = 0, dD(KD[2]);
+        return zD = pD, wD = sD, QD(pD, sD)
       } finally {
-        sm.Cuvu(Tm, fm, 1)
+        yD.yQTQ(zD, wD, 1)
       }
     }
 
-    function qm() {
+    function GD() {
       return {
         __proto__: null,
-        tMVm: {
+        pK50: {
           __proto__: null,
-          UVEz: function(mm, Tm) {
-            return Vm(Error(Jm(mm, Tm)))
+          IHd4: function(DD, zD) {
+            return nD(Error(QD(DD, zD)))
           },
-          nOcV: function(mm) {
-            return null === km(mm)
+          higc: function(DD) {
+            return null === CD(DD)
           },
-          vyZ5: function(mm) {
-            return "string" === typeof km(mm)
+          W0OS: function(DD) {
+            return "string" === typeof CD(DD)
           },
-          BbZC: function(mm, Tm) {
-            const fm = km(Tm),
-              hm = "string" === typeof fm ? fm : void 0;
-            var Am, am = void 0 === (Am = hm) || null === Am ? 0 : function(mm, Tm, fm) {
-                if (void 0 === fm) {
-                  const fm = ym.encode(mm),
-                    hm = Tm(fm.length, 1) >>> 0;
-                  return Zm().subarray(hm, hm + fm.length).set(fm), lm = fm.length, hm
+          aHcP: function(DD, zD) {
+            const wD = CD(zD),
+              pD = "string" === typeof wD ? wD : void 0;
+            var sD, KD = void 0 === (sD = pD) || null === sD ? 0 : function(DD, zD, wD) {
+                if (void 0 === wD) {
+                  const wD = WD.encode(DD),
+                    pD = zD(wD.length, 1) >>> 0;
+                  return PD().subarray(pD, pD + wD.length).set(wD), kD = wD.length, pD
                 }
-                let hm = mm.length,
-                  Am = Tm(hm, 1) >>> 0;
-                const am = Zm();
-                let xm = 0;
-                for (; xm < hm; xm++) {
-                  const Tm = mm.charCodeAt(xm);
-                  if (Tm > 127) break;
-                  am[Am + xm] = Tm
+                let pD = DD.length,
+                  sD = zD(pD, 1) >>> 0;
+                const KD = PD();
+                let rD = 0;
+                for (; rD < pD; rD++) {
+                  const zD = DD.charCodeAt(rD);
+                  if (zD > 127) break;
+                  KD[sD + rD] = zD
                 }
-                if (xm !== hm) {
-                  0 !== xm && (mm = mm.slice(xm)), Am = fm(Am, hm, hm = xm + 3 * mm.length, 1) >>> 0;
-                  const Tm = Zm().subarray(Am + xm, Am + hm);
-                  xm += ym.encodeInto(mm, Tm).written, Am = fm(Am, hm, xm, 1) >>> 0
+                if (rD !== pD) {
+                  0 !== rD && (DD = DD.slice(rD)), sD = wD(sD, pD, pD = rD + 3 * DD.length, 1) >>> 0;
+                  const zD = PD().subarray(sD + rD, sD + pD);
+                  rD += WD.encodeInto(DD, zD).written, sD = wD(sD, pD, rD, 1) >>> 0
                 }
-                return lm = xm, Am
-              }(hm, sm.YRie, sm.rk7X),
-              xm = lm;
-            nm().setInt32(mm + 4, xm, !0), nm().setInt32(mm + 0, am, !0)
+                return kD = rD, sD
+              }(pD, yD.lieu, yD.LRsF),
+              rD = kD;
+            ED().setInt32(DD + 4, rD, !0), ED().setInt32(DD + 0, KD, !0)
           },
-          IbE5: function(mm, Tm) {
-            throw new Error(Jm(mm, Tm))
+          TsiV: function(DD, zD) {
+            throw new Error(QD(DD, zD))
           },
-          OeCC: function(mm, Tm) {
-            return km(mm).charCodeAt(Tm >>> 0)
+          y14F: function(DD, zD) {
+            return CD(DD).charCodeAt(zD >>> 0)
           },
-          hN1v: function(mm, Tm) {
-            console.error(Jm(mm, Tm))
+          ta0F: function(DD, zD) {
+            console.error(QD(DD, zD))
           },
-          waJu: function(mm) {
-            return km(mm).length
+          bWwl: function(DD) {
+            return CD(DD).length
           },
-          nc2o: function(mm, Tm) {
-            return Vm(Jm(mm, Tm))
+          tCS7: function(DD, zD) {
+            return nD(QD(DD, zD))
           },
-          tJ04: function(mm) {
-            Gm(mm)
+          TfRw: function(DD) {
+            dD(DD)
           }
         }
       }
     }
-    Symbol.dispose && (Am.prototype[Symbol.dispose] = Am.prototype.free);
-    const jm = "undefined" === typeof FinalizationRegistry ? {
+    Symbol.dispose && (sD.prototype[Symbol.dispose] = sD.prototype.free);
+    const hD = "undefined" === typeof FinalizationRegistry ? {
       register: () => {},
       unregister: () => {}
-    } : new FinalizationRegistry((mm => sm.HMM0(mm, 1)));
+    } : new FinalizationRegistry((DD => yD.YEN2(DD, 1)));
 
-    function Vm(mm) {
-      Sm === bm.length && bm.push(bm.length + 1);
-      const Tm = Sm;
-      return Sm = bm[Tm], bm[Tm] = mm, Tm
+    function nD(DD) {
+      TD === xD.length && xD.push(xD.length + 1);
+      const zD = TD;
+      return TD = xD[zD], xD[zD] = DD, zD
     }
 
-    function Im(mm, Tm) {
-      mm >>>= 0;
-      const fm = nm(),
-        hm = [];
-      for (let Am = mm; Am < mm + 4 * Tm; Am += 4) hm.push(Gm(fm.getUint32(Am, !0)));
-      return hm
+    function MD(DD, zD) {
+      DD >>>= 0;
+      const wD = ED(),
+        pD = [];
+      for (let sD = DD; sD < DD + 4 * zD; sD += 4) pD.push(dD(wD.getUint32(sD, !0)));
+      return pD
     }
 
-    function Km(mm, Tm) {
-      return mm >>>= 0, Zm().subarray(mm / 1, mm / 1 + Tm)
+    function OD(DD, zD) {
+      return DD >>>= 0, PD().subarray(DD / 1, DD / 1 + zD)
     }
-    let Qm = null;
+    let JD = null;
 
-    function nm() {
-      return null !== Qm && Qm.buffer === sm.memory.buffer || (Qm = new DataView(sm.memory.buffer)), Qm
+    function ED() {
+      return null !== JD && JD.buffer === yD.memory.buffer || (JD = new DataView(yD.memory.buffer)), JD
     }
 
-    function Jm(mm, Tm) {
-      return function(mm, Tm) {
-        Hm += Tm, Hm >= Pm && (Xm = new TextDecoder("utf-8", {
+    function QD(DD, zD) {
+      return function(DD, zD) {
+        lD += zD, lD >= iD && (SD = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), Xm.decode(), Hm = Tm);
-        return Xm.decode(Zm().subarray(mm, mm + Tm))
-      }(mm >>> 0, Tm)
+        }), SD.decode(), lD = zD);
+        return SD.decode(PD().subarray(DD, DD + zD))
+      }(DD >>> 0, zD)
     }
-    let cm = null;
-    let zm = null;
+    let XD = null;
+    let VD = null;
 
-    function Zm() {
-      return null !== zm && 0 !== zm.byteLength || (zm = new Uint8Array(sm.memory.buffer)), zm
-    }
-
-    function km(mm) {
-      return bm[mm]
-    }
-    let bm = new Array(1024).fill(void 0);
-    bm.push(void 0, null, !0, !1);
-    let Sm = bm.length;
-
-    function em(mm, Tm) {
-      const fm = Tm(4 * mm.length, 4) >>> 0;
-      return (null !== cm && 0 !== cm.byteLength || (cm = new Uint32Array(sm.memory.buffer)), cm).set(mm, fm / 4), lm = mm.length, fm
+    function PD() {
+      return null !== VD && 0 !== VD.byteLength || (VD = new Uint8Array(yD.memory.buffer)), VD
     }
 
-    function Nm(mm, Tm) {
-      const fm = Tm(4 * mm.length, 4) >>> 0,
-        hm = nm();
-      for (let Am = 0; Am < mm.length; Am++) hm.setUint32(fm + 4 * Am, Vm(mm[Am]), !0);
-      return lm = mm.length, fm
+    function CD(DD) {
+      return xD[DD]
+    }
+    let xD = new Array(1024).fill(void 0);
+    xD.push(void 0, null, !0, !1);
+    let TD = xD.length;
+
+    function bD(DD, zD) {
+      const wD = zD(4 * DD.length, 4) >>> 0;
+      return (null !== XD && 0 !== XD.byteLength || (XD = new Uint32Array(yD.memory.buffer)), XD).set(DD, wD / 4), kD = DD.length, wD
     }
 
-    function Gm(mm) {
-      const Tm = km(mm);
-      return function(mm) {
-        mm < 1028 || (bm[mm] = Sm, Sm = mm)
-      }(mm), Tm
+    function jD(DD, zD) {
+      const wD = zD(4 * DD.length, 4) >>> 0,
+        pD = ED();
+      for (let sD = 0; sD < DD.length; sD++) pD.setUint32(wD + 4 * sD, nD(DD[sD]), !0);
+      return kD = DD.length, wD
     }
-    let Xm = new TextDecoder("utf-8", {
+
+    function dD(DD) {
+      const zD = CD(DD);
+      return function(DD) {
+        DD < 1028 || (xD[DD] = TD, TD = DD)
+      }(DD), zD
+    }
+    let SD = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    Xm.decode();
-    const Pm = 2146435072;
-    let Hm = 0;
-    const ym = new TextEncoder;
-    "encodeInto" in ym || (ym.encodeInto = function(mm, Tm) {
-      const fm = ym.encode(mm);
-      return Tm.set(fm), {
-        read: mm.length,
-        written: fm.length
+    SD.decode();
+    const iD = 2146435072;
+    let lD = 0;
+    const WD = new TextEncoder;
+    "encodeInto" in WD || (WD.encodeInto = function(DD, zD) {
+      const wD = WD.encode(DD);
+      return zD.set(wD), {
+        read: DD.length,
+        written: wD.length
       }
     });
-    let Cm, rm, sm, lm = 0;
+    let ND, ZD, yD, kD = 0;
 
-    function Mm(mm, Tm) {
-      return rm = mm, sm = mm.exports, Cm = Tm, Qm = null, cm = null, zm = null, sm.TbUq(), sm
+    function mD(DD, zD) {
+      return ZD = DD, yD = DD.exports, ND = zD, JD = null, XD = null, VD = null, yD.BSII(), yD
     }
 
-    function um(mm) {
-      if (void 0 !== sm) return sm;
-      void 0 !== mm && (Object.getPrototypeOf(mm) === Object.prototype ? ({
-        module: mm
-      } = mm) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const Tm = qm();
-      mm instanceof WebAssembly.Module || (mm = new WebAssembly.Module(mm));
-      return Mm(new WebAssembly.Instance(mm, Tm), mm)
+    function eD(DD) {
+      if (void 0 !== yD) return yD;
+      void 0 !== DD && (Object.getPrototypeOf(DD) === Object.prototype ? ({
+        module: DD
+      } = DD) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const zD = GD();
+      DD instanceof WebAssembly.Module || (DD = new WebAssembly.Module(DD));
+      return mD(new WebAssembly.Instance(DD, zD), DD)
     }
-    async function Bm(mm) {
-      if (void 0 !== sm) return sm;
-      void 0 !== mm && (Object.getPrototypeOf(mm) === Object.prototype ? ({
-        module_or_path: mm
-      } = mm) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const Tm = qm();
-      ("string" === typeof mm || "function" === typeof Request && mm instanceof Request || "function" === typeof URL && mm instanceof URL) && (mm = fetch(mm));
+    async function oD(DD) {
+      if (void 0 !== yD) return yD;
+      void 0 !== DD && (Object.getPrototypeOf(DD) === Object.prototype ? ({
+        module_or_path: DD
+      } = DD) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const zD = GD();
+      ("string" === typeof DD || "function" === typeof Request && DD instanceof Request || "function" === typeof URL && DD instanceof URL) && (DD = fetch(DD));
       const {
-        instance: fm,
-        module: hm
-      } = await async function(mm, Tm) {
-        if ("function" === typeof Response && mm instanceof Response) {
-          if (!mm.ok) throw new Error(`failed to fetch Wasm: ${mm.status} ${mm.statusText} fetching '${mm.url}'`);
+        instance: wD,
+        module: pD
+      } = await async function(DD, zD) {
+        if ("function" === typeof Response && DD instanceof Response) {
+          if (!DD.ok) throw new Error(`failed to fetch Wasm: ${DD.status} ${DD.statusText} fetching '${DD.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(mm, Tm)
-          } catch (fm) {
-            if (! function(mm) {
-                switch (mm) {
+            return await WebAssembly.instantiateStreaming(DD, zD)
+          } catch (wD) {
+            if (! function(DD) {
+                switch (DD) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(mm.type) || "application/wasm" === mm.headers.get("Content-Type")) throw fm;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", fm)
+              }(DD.type) || "application/wasm" === DD.headers.get("Content-Type")) throw wD;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", wD)
           }
-          const hm = await mm.arrayBuffer();
-          return await WebAssembly.instantiate(hm, Tm)
+          const pD = await DD.arrayBuffer();
+          return await WebAssembly.instantiate(pD, zD)
         } {
-          const fm = await WebAssembly.instantiate(mm, Tm);
-          return fm instanceof WebAssembly.Instance ? {
-            instance: fm,
-            module: mm
-          } : fm
+          const wD = await WebAssembly.instantiate(DD, zD);
+          return wD instanceof WebAssembly.Instance ? {
+            instance: wD,
+            module: DD
+          } : wD
         }
-      }(await mm, Tm);
-      return Mm(fm, hm)
+      }(await DD, zD);
+      return mD(wD, pD)
     }
-    var Lm = fm(2876),
-      tm = fm(6571);
-    class Um extends Error {
+    var aD = wD(2868),
+      uD = wD(6653);
+    class vD extends Error {
       stage;
-      constructor(mm, Tm) {
-        super((0, Lm.C)(mm, Tm), {
-          cause: Tm
-        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = mm
+      constructor(DD, zD) {
+        super((0, aD.A)(DD, zD), {
+          cause: zD
+        }), this.name = "BloxdShaderPackWasmLoadError", this.stage = DD
       }
     }
-    let dm = null,
-      gm = null;
+    let tD = null,
+      FD = null;
 
-    function Wm() {
-      return dm ? Promise.resolve(dm) : (gm || (gm = async function() {
-        let mm;
+    function YD() {
+      return tD ? Promise.resolve(tD) : (FD || (FD = async function() {
+        let DD;
         try {
-          mm = await (0, Lm.G)(new fm.U(fm(6576)), (0, tm.c)("bloxd_wasm_shader_pack"))
-        } catch (Tm) {
-          throw new Um((0, Lm.M)(Tm), Tm)
+          DD = await (0, aD.B)(new wD.U(wD(6659)), (0, uD.d)("bloxd_wasm_shader_pack"))
+        } catch (zD) {
+          throw new vD((0, aD.G)(zD), zD)
         }
         try {
-          await Bm({
-            module_or_path: mm
+          await oD({
+            module_or_path: DD
           })
-        } catch (Tm) {
-          throw new Um("instantiate", Tm)
+        } catch (zD) {
+          throw new vD("instantiate", zD)
         }
-        return dm = hm, dm
-      }(), gm.then(void 0, (() => {
-        gm = null
-      }))), gm)
+        return tD = pD, tD
+      }(), FD.then(void 0, (() => {
+        FD = null
+      }))), FD)
     }
-    var Fm = fm(6580);
+    var HD = wD(6670);
 
-    function mT(mm) {
-      let [Tm, fm, hm, Am] = mm;
-      const am = {
-        file: Tm,
-        line: fm,
-        message: hm
+    function qD(DD) {
+      let [zD, wD, pD, sD] = DD;
+      const KD = {
+        file: zD,
+        line: wD,
+        message: pD
       };
-      return Am && (am.variants = Am.map(Fm.i)), am
+      return sD && (KD.variants = sD.map(HD.h)), KD
     }
 
-    function TT(mm) {
-      return JSON.parse(mm).map(mT)
+    function Dz(DD) {
+      return JSON.parse(DD).map(qD)
     }
 
-    function fT(mm, Tm) {
-      if (!Number.isInteger(mm) || mm < 0 || mm > 4294967295) throw new Error(`${Tm} ${mm} is not a whole number from 0 to 4294967295`);
-      return mm
+    function zz(DD, zD) {
+      if (!Number.isInteger(DD) || DD < 0 || DD > 4294967295) throw new Error(`${zD} ${DD} is not a whole number from 0 to 4294967295`);
+      return DD
     }
 
-    function hT(mm) {
-      return [mm.named.map((mm => mm.name)), Uint32Array.from(mm.named, (mm => fT(mm.id, "Texture ID")))]
+    function wz(DD) {
+      return [DD.named.map((DD => DD.name)), Uint32Array.from(DD.named, (DD => zz(DD.id, "Texture ID")))]
     }
-    const AT = new WeakMap;
-    const aT = new WeakMap,
-      xT = new WeakSet;
+    const pz = new WeakMap;
+    const sz = new WeakMap,
+      Kz = new WeakSet;
 
-    function wT(mm, Tm) {
-      if (xT.has(mm)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
+    function rz(DD, zD) {
+      if (Kz.has(DD)) throw new Error("The shader pack compiler crashed earlier on this page, so it can't run again until a reload");
       try {
-        return Tm()
-      } catch (fm) {
-        throw fm instanceof WebAssembly.RuntimeError && xT.add(mm), fm
+        return zD()
+      } catch (wD) {
+        throw wD instanceof WebAssembly.RuntimeError && Kz.add(DD), wD
       }
     }
 
-    function DT(mm) {
-      let Tm = aT.get(mm);
-      if (!Tm) {
-        let fm, hm;
-        Tm = {
-          Z6: (Tm, fm) => wT(mm, (() => function(mm, Tm, fm) {
-            const hm = mm.Z6(Tm.map((mm => mm.path)), Tm.map((mm => mm.source)), ...hT(fm), fm.aliases.map((mm => mm.name)), fm.aliases.map((mm => mm.texture)), fm.aliases.map((mm => mm.kind)));
-            let Am = !1;
+    function Lz(DD) {
+      let zD = sz.get(DD);
+      if (!zD) {
+        let wD, pD;
+        zD = {
+          LDD: (zD, wD) => rz(DD, (() => function(DD, zD, wD) {
+            const pD = DD.LDD(zD.map((DD => DD.path)), zD.map((DD => DD.source)), ...wz(wD), wD.aliases.map((DD => DD.name)), wD.aliases.map((DD => DD.texture)), wD.aliases.map((DD => DD.kind)));
+            let sD = !1;
             try {
-              const mm = hm.validationModuleCodes,
-                Tm = Array.from(hm.validationModuleKeys, ((Tm, fm) => ({
-                  key: (0, Fm.i)(Tm),
-                  code: mm[fm]
+              const DD = pD.validationModuleCodes,
+                zD = Array.from(pD.validationModuleKeys, ((zD, wD) => ({
+                  key: (0, HD.h)(zD),
+                  code: DD[wD]
                 }))),
-                fm = {
-                  errors: TT(hm.pAm),
-                  offInStrict: TT(hm.EAm),
-                  variants: (0, Fm.e)(hm),
-                  validationModules: Tm,
-                  features: hm.features
+                wD = {
+                  errors: Dz(pD.bsD),
+                  offInStrict: Dz(pD.jsD),
+                  variants: (0, HD.e)(pD),
+                  validationModules: zD,
+                  features: pD.features
                 };
-              return Tm.forEach(((mm, Tm) => {
-                AT.set(mm, {
-                  pack: hm,
-                  index: Tm
+              return zD.forEach(((DD, zD) => {
+                pz.set(DD, {
+                  pack: pD,
+                  index: zD
                 })
-              })), Am = Tm.length > 0, fm
+              })), sD = zD.length > 0, wD
             } finally {
-              Am || hm.free()
+              sD || pD.free()
             }
-          }(mm, Tm, fm))),
-          mapValidationMessage: (Tm, fm) => {
-            const hm = AT.get(Tm);
-            if (!hm) throw new Error("mapValidationMessage takes a validation module this compiler made");
-            return mT(JSON.parse(wT(mm, (() => hm.pack.mapValidationMessage(hm.index, fm.lineNum, fm.linePos, fm.message, fm.type)))))
+          }(DD, zD, wD))),
+          mapValidationMessage: (zD, wD) => {
+            const pD = pz.get(zD);
+            if (!pD) throw new Error("mapValidationMessage takes a validation module this compiler made");
+            return qD(JSON.parse(rz(DD, (() => pD.pack.mapValidationMessage(pD.index, wD.lineNum, wD.linePos, wD.message, wD.type)))))
           },
-          Lfm: Tm => wT(mm, (() => function(mm, Tm) {
-            const fm = new Int32Array(Tm.length),
-              hm = [];
-            return Tm.forEach(((mm, Tm) => {
-              fm[Tm] = mm.variants ? mm.variants.length : -1;
-              for (const fm of mm.variants ?? []) hm.push((0, Fm.f)(fm))
-            })), TT(mm.Lfm(Tm.map((mm => mm.file)), Uint32Array.from(Tm, (mm => fT(mm.line, "Diagnostic line"))), Tm.map((mm => mm.message)), fm, Uint8Array.from(hm)))
-          }(mm, Tm))),
-          mG: Tm => wT(mm, (() => mm.mG(...hT(Tm)))),
+          RpD: zD => rz(DD, (() => function(DD, zD) {
+            const wD = new Int32Array(zD.length),
+              pD = [];
+            return zD.forEach(((DD, zD) => {
+              wD[zD] = DD.variants ? DD.variants.length : -1;
+              for (const wD of DD.variants ?? []) pD.push((0, HD.f)(wD))
+            })), Dz(DD.RpD(zD.map((DD => DD.file)), Uint32Array.from(zD, (DD => zz(DD.line, "Diagnostic line"))), zD.map((DD => DD.message)), wD, Uint8Array.from(pD)))
+          }(DD, zD))),
+          qS: zD => rz(DD, (() => DD.qS(...wz(zD)))),
           get SHADER_PACK_HEADER_VERSION() {
-            return fm ??= wT(mm, (() => mm.iAm())), fm
+            return wD ??= rz(DD, (() => DD.xsD())), wD
           },
           get DEFAULT_SHADER_PACK_FILES() {
-            return hm ??= wT(mm, (() => {
-              const Tm = mm.xAm();
-              return mm.aAm().map(((mm, fm) => ({
-                path: mm,
-                source: Tm[fm]
+            return pD ??= rz(DD, (() => {
+              const zD = DD.XsD();
+              return DD.QsD().map(((DD, wD) => ({
+                path: DD,
+                source: zD[wD]
               })))
-            })), hm
+            })), pD
           },
-          RAm: Tm => wT(mm, (() => mm.RAm(Tm))),
-          resolveHeader: Tm => wT(mm, (() => mm.DAm((0, Fm.f)(Tm)))),
-          wAm: () => wT(mm, (() => mm.wAm()))
-        }, aT.set(mm, Tm)
+          TsD: zD => rz(DD, (() => DD.TsD(zD))),
+          resolveHeader: zD => rz(DD, (() => DD.CsD((0, HD.f)(zD)))),
+          VsD: () => rz(DD, (() => DD.VsD()))
+        }, sz.set(DD, zD)
       }
-      return Tm
+      return zD
     }
-    var iT = fm(3217),
-      RT = fm(6578);
-    const pT = "bloxdShaderPackWasmFailureReported";
-    let ET = null;
+    var cz = wD(3205),
+      gz = wD(6664);
+    const Rz = "bloxdShaderPackWasmFailureReported";
+    let Az = null;
 
-    function oT() {
-      return ET ??= async function() {
-        if ("undefined" === typeof WebAssembly) return OT("unsupported", "This browser has no WebAssembly"), null;
-        const mm = (0, RT.loadShaderPackTextures)().then((() => !0), (mm => (console.error("Could not load the shader pack textures, so shader packs can't run", mm), !1)));
+    function Uz() {
+      return Az ??= async function() {
+        if ("undefined" === typeof WebAssembly) return fz("unsupported", "This browser has no WebAssembly"), null;
+        const DD = (0, gz.loadShaderPackTextures)().then((() => !0), (DD => (console.error("Could not load the shader pack textures, so shader packs can't run", DD), !1)));
         try {
-          const Tm = await async function() {
-            let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Wm;
-            return DT(await mm())
+          const zD = await async function() {
+            let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : YD;
+            return Lz(await DD())
           }();
-          return await mm ? Tm : null
-        } catch (Tm) {
-          const mm = Tm instanceof Error ? Tm.message : String(Tm);
-          return OT(iT.b[Tm instanceof Um ? Tm.stage : "instantiate"], mm), null
+          return await DD ? zD : null
+        } catch (zD) {
+          const DD = zD instanceof Error ? zD.message : String(zD);
+          return fz(cz.e[zD instanceof vD ? zD.stage : "instantiate"], DD), null
         }
-      }(), ET
+      }(), Az
     }
 
-    function OT(mm, Tm) {
-      (0, iT.f)(pT, `Shader pack wasm ${mm}, so shader packs can't run: ${Tm}`, Tm, `shader_pack_${mm}`)
+    function fz(DD, zD) {
+      (0, cz.j)(Rz, `Shader pack wasm ${DD}, so shader packs can't run: ${zD}`, zD, `shader_pack_${DD}`)
     }
   },
-  6576: (mm, Tm, fm) => {
-    mm.exports = fm.p + "static/media/bloxd_wasm_shader_pack_bg.a1beb63474852f1908f1.wasm"
+  6659: (DD, zD, wD) => {
+    DD.exports = wD.p + "static/media/bloxd_wasm_shader_pack_bg.bccfa67f1d2e1d222959.wasm"
   },
-  6571: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => xm
+  6653: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => rD
     });
-    var hm = fm(2876);
-    const Am = {
-      bloxd_wasm: () => "613a21bc0b0d6795610be638608f6f896b7ac6493e7e1f81f22f78c10c130b20",
-      bloxd_wasm_client: () => "f500bfdaa7b954839685358849e4855ad2aa63607292f3b2cdd2ad1665214c7a",
-      bloxd_wasm_workers: () => "7dd9b485307e91e305e2fb397554b566560181e06f5a5b081a6f1c61898558ff",
-      bloxd_wasm_models: () => "9693b1d78529633a0838c883241b819b5bd68812b4c6423ce62c95631b8c3415",
-      bloxd_wasm_webgpu: () => "de2f06fb711bba52682b2f003e06cf94cb10abdd72e4193fc794f84415757080",
-      bloxd_wasm_webgl: () => "7e9ad7e1a934a29dd92aaf8ef4a10e072c55d9316e0d80238bf66fd7535f3ddf",
-      bloxd_wasm_webgl1: () => "700b62082439f7ae7c202d3ac83cf13cabe29e7e952f1a87e7cd44b1133e3b9f",
-      bloxd_wasm_replay: () => "5341c2187f01707d5afbab140cf74533d8b2076e23e63e9a772320066cfa1513",
-      bloxd_wasm_recorder: () => "c80280c22c0f6493e551f45d0599c93183458a244f322d6edf6273a3ebf0b864",
-      bloxd_wasm_anim: () => "44db7f8e6b21308f32edc10720aadbb617cfd625a2a950f110c26990904d5bc8",
-      bloxd_wasm_textures: () => "273e6f1c6bf63d7b0982fe740c5c8b042be9257ae55fae593545099e99bf76a8",
-      bloxd_wasm_shader_pack: () => "2cca231ad5b1288911ab113a53e7191b13627c0fdb4147c6e779bb6b366f71af"
+    var pD = wD(2868);
+    const sD = {
+      bloxd_wasm: () => "65e53edc5e3e962e1a92a587d8a28027f8eb8bbf9d122ae3c4664a5d1e3eeb52",
+      bloxd_wasm_client: () => "8bc7382052570456e32df38bb06cf837a4cdcf0c6efeb71183c9d9d96efdecc2",
+      bloxd_wasm_workers: () => "9d62ece3db9e2837185fc5cbad53d14e1aa611299a39cfe5dd4f80c692bc8153",
+      bloxd_wasm_models: () => "d952d307f65587ac75621c390045d763a956e5786dbdece0affe80fd6c11a572",
+      bloxd_wasm_webgpu: () => "aaf47b22bd97d7f9059c5cc77097acb8001c433a0191aa99b3b272ad0af40d0c",
+      bloxd_wasm_webgl: () => "758269d3a7396a32bdaeee633b3c45cd4d1efb4fd30ca2bacc7ee762494718ff",
+      bloxd_wasm_webgl1: () => "e473a9c2912b1b2ebd1af57ce23061b2484e5ad7c6b3bb8302c55025cbdc6150",
+      bloxd_wasm_replay: () => "fb6a7b64a8768ff2eb5122b936925ed35cbdcfc5efaf1bf3b7d53b1f4d483eae",
+      bloxd_wasm_recorder: () => "b5295674c11fb730f85cc5f9aef22b1971a45cc8f95ff014897be3749114a35e",
+      bloxd_wasm_anim: () => "2108b3f685a0b7e36780befaa10a018b8b914c00b52465c4d8de81cd4aaad1b7",
+      bloxd_wasm_textures: () => "441f3f36c1158de1a8f992401057b7b30a10760b00006c152617c9a76cf0dbfa",
+      bloxd_wasm_shader_pack: () => "504138fb584a53bf18bce9d737fbad86034e70bedc89181a53adee1dec66ef20"
     };
-    var am = fm(4632);
+    var KD = wD(4722);
 
-    function xm(mm) {
-      const Tm = Object.prototype.hasOwnProperty.call(Am, mm) ? Am[mm]() : void 0;
-      if (void 0 !== Tm) return {
-        sha256: Tm,
-        onMismatch: am.x
+    function rD(DD) {
+      const zD = Object.prototype.hasOwnProperty.call(sD, DD) ? sD[DD]() : void 0;
+      if (void 0 !== zD) return {
+        sha256: zD,
+        onMismatch: KD.B
       };
-      throw new hm.j(`${mm} has no release digest, so this build refuses it`)
+      throw new pD.l(`${DD} has no release digest, so this build refuses it`)
     }
   },
-  6580: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => Km,
-      e: () => Qm,
-      f: () => Vm,
-      i: () => jm
+  6670: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => OD,
+      e: () => JD,
+      f: () => nD,
+      h: () => hD
     });
-    var hm = fm(6586);
-    const Am = 6,
-      am = 3,
-      xm = 1,
-      wm = 2,
-      Dm = 4,
-      im = 8,
-      Rm = 16,
-      pm = 32,
-      Em = 64,
-      om = 128,
-      Om = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var pD = wD(6678);
+    const sD = 6,
+      KD = 3,
+      rD = 1,
+      LD = 2,
+      cD = 4,
+      gD = 8,
+      RD = 16,
+      AD = 32,
+      UD = 64,
+      fD = 128,
+      ID = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function Ym(mm) {
-      if (!mm) return 0;
-      const Tm = Om.indexOf(mm);
-      if (Tm <= 0) throw new Error(`"${mm}" is not a shader pack hook function`);
-      return Tm
+    function BD(DD) {
+      if (!DD) return 0;
+      const zD = ID.indexOf(DD);
+      if (zD <= 0) throw new Error(`"${DD}" is not a shader pack hook function`);
+      return zD
     }
 
-    function qm(mm) {
-      if (0 === mm) return null;
-      const Tm = Om[mm];
-      if (void 0 === Tm) throw new Error(`${mm} is not a shader pack hook function id`);
-      return Tm
+    function GD(DD) {
+      if (0 === DD) return null;
+      const zD = ID[DD];
+      if (void 0 === zD) throw new Error(`${DD} is not a shader pack hook function id`);
+      return zD
     }
 
-    function jm(mm) {
-      const Tm = hm.e.length;
+    function hD(DD) {
+      const zD = pD.c.length;
       return {
-        strict: mm >= Tm,
-        program: hm.e[mm % Tm]
+        strict: DD >= zD,
+        program: pD.c[DD % zD]
       }
     }
 
-    function Vm(mm) {
-      return Number(mm.strict) * hm.e.length + hm.e.indexOf(mm.program)
+    function nD(DD) {
+      return Number(DD.strict) * pD.c.length + pD.c.indexOf(DD.program)
     }
 
-    function Im(mm) {
-      return "" === mm ? [] : mm.split(" ")
+    function MD(DD) {
+      return "" === DD ? [] : DD.split(" ")
     }
 
-    function Km(mm) {
-      const Tm = {
-        variantFlags: new Uint8Array(Am),
-        hooks: new Uint8Array(Am * am),
-        moduleCodes: Array(Am).fill(""),
-        reads: Array(2 * Am).fill("")
+    function OD(DD) {
+      const zD = {
+        variantFlags: new Uint8Array(sD),
+        hooks: new Uint8Array(sD * KD),
+        moduleCodes: Array(sD).fill(""),
+        reads: Array(2 * sD).fill("")
       };
-      for (const fm of mm) {
-        const mm = Vm(fm.key),
-          hm = (mm, Tm) => null === fm.hooks.surface || fm.reads.fragment.includes(mm) ? 0 : Tm;
-        Tm.variantFlags[mm] = (fm.sceneDepth ? xm : 0) | (fm.movesVertices ? wm : 0) | (fm.sunShadow ? Dm : 0) | (fm.airShadow ? im : 0) | (fm.discards ? Rm : 0) | hm("localPosition", pm) | hm("enchantSpeed", Em) | hm("enchantTier", om), Tm.hooks[mm * am] = Ym(fm.hooks.vertex), Tm.hooks[mm * am + 1] = Ym(fm.hooks.surface), Tm.hooks[mm * am + 2] = Ym(fm.hooks.light), Tm.moduleCodes[mm] = fm.moduleCode, Tm.reads[2 * mm] = fm.reads.vertex.join(" "), Tm.reads[2 * mm + 1] = fm.reads.fragment.join(" ")
+      for (const wD of DD) {
+        const DD = nD(wD.key),
+          pD = (DD, zD) => null === wD.hooks.surface || wD.reads.fragment.includes(DD) ? 0 : zD;
+        zD.variantFlags[DD] = (wD.sceneDepth ? rD : 0) | (wD.movesVertices ? LD : 0) | (wD.sunShadow ? cD : 0) | (wD.airShadow ? gD : 0) | (wD.discards ? RD : 0) | pD("localPosition", AD) | pD("enchantSpeed", UD) | pD("enchantTier", fD), zD.hooks[DD * KD] = BD(wD.hooks.vertex), zD.hooks[DD * KD + 1] = BD(wD.hooks.surface), zD.hooks[DD * KD + 2] = BD(wD.hooks.light), zD.moduleCodes[DD] = wD.moduleCode, zD.reads[2 * DD] = wD.reads.vertex.join(" "), zD.reads[2 * DD + 1] = wD.reads.fragment.join(" ")
       }
-      return Tm
+      return zD
     }
 
-    function Qm(mm) {
+    function JD(DD) {
       const {
-        hooks: Tm,
-        moduleCodes: fm,
-        reads: hm
-      } = mm;
-      return Array.from(mm.variantFlags, ((mm, Am) => {
-        const pm = Am * am;
+        hooks: zD,
+        moduleCodes: wD,
+        reads: pD
+      } = DD;
+      return Array.from(DD.variantFlags, ((DD, sD) => {
+        const AD = sD * KD;
         return {
-          key: jm(Am),
+          key: hD(sD),
           hooks: {
-            vertex: qm(Tm[pm]),
-            surface: qm(Tm[pm + 1]),
-            light: qm(Tm[pm + 2])
+            vertex: GD(zD[AD]),
+            surface: GD(zD[AD + 1]),
+            light: GD(zD[AD + 2])
           },
-          moduleCode: fm[Am],
-          sceneDepth: 0 !== (mm & xm),
-          sunShadow: 0 !== (mm & Dm),
-          airShadow: 0 !== (mm & im),
-          movesVertices: 0 !== (mm & wm),
-          discards: 0 !== (mm & Rm),
+          moduleCode: wD[sD],
+          sceneDepth: 0 !== (DD & rD),
+          sunShadow: 0 !== (DD & cD),
+          airShadow: 0 !== (DD & gD),
+          movesVertices: 0 !== (DD & LD),
+          discards: 0 !== (DD & RD),
           reads: {
-            vertex: Im(hm[2 * Am]),
-            fragment: Im(hm[2 * Am + 1])
+            vertex: MD(pD[2 * sD]),
+            fragment: MD(pD[2 * sD + 1])
           }
         }
       }))
     }
   },
-  6586: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => hm,
-      i: () => xm,
-      l: () => wm,
-      p: () => Am,
-      t: () => am
+  6678: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => pD,
+      d: () => rD,
+      f: () => LD,
+      h: () => sD,
+      l: () => KD
     });
-    const hm = ["terrain", "liquid", "model"];
+    const pD = ["terrain", "liquid", "model"];
 
-    function Am() {
-      const mm = [];
-      for (const Tm of [!1, !0])
-        for (const fm of hm) mm.push({
-          strict: Tm,
-          program: fm
+    function sD() {
+      const DD = [];
+      for (const zD of [!1, !0])
+        for (const wD of pD) DD.push({
+          strict: zD,
+          program: wD
         });
-      return mm
+      return DD
     }
 
-    function am(mm) {
-      return `${mm.strict?"strict":"allow"}.${mm.program}`
+    function KD(DD) {
+      return `${DD.strict?"strict":"allow"}.${DD.program}`
     }
 
-    function xm(mm) {
-      return !mm.hooks.vertex && !mm.hooks.surface && !mm.hooks.light
+    function rD(DD) {
+      return !DD.hooks.vertex && !DD.hooks.surface && !DD.hooks.light
     }
 
-    function wm(mm, Tm) {
-      return "off" !== Tm && (null === mm || mm.some((mm => mm.key.strict === ("strict" === Tm) && !xm(mm))))
+    function LD(DD, zD) {
+      return "off" !== zD && (null === DD || DD.some((DD => DD.key.strict === ("strict" === zD) && !rD(DD))))
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

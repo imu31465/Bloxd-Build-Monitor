@@ -1,311 +1,311 @@
 export const id = 217;
 export const ids = [217];
 export const modules = {
-  36484: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => Zm,
-      e: () => km,
-      i: () => Im
+  36395: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => PD,
+      h: () => CD,
+      i: () => MD
     });
-    var hm = fm(294),
-      Am = fm(105);
-    const am = new(fm(36487).d)(new URL(fm.p + fm.u(3), fm.b), {
+    var pD = wD(287),
+      sD = wD(103);
+    const KD = new(wD(36404).e)(new URL(wD.p + wD.u(3), wD.b), {
       name: "blockIconWorker",
       type: "module"
     });
-    var xm = fm(1782),
-      wm = fm(2119);
-    const Dm = 1e4,
-      im = 3e4;
-    let Rm = null,
-      pm = null,
-      Em = null,
-      om = !1,
-      Om = 0;
-    const Ym = new Map;
-    let qm = null;
-    const jm = new Map,
-      Vm = new Map;
+    var rD = wD(1797),
+      LD = wD(2122);
+    const cD = 1e4,
+      gD = 3e4;
+    let RD = null,
+      AD = null,
+      UD = null,
+      fD = !1,
+      ID = 0;
+    const BD = new Map;
+    let GD = null;
+    const hD = new Map,
+      nD = new Map;
 
-    function Im(mm) {
-      const Tm = new Promise(((Tm, fm) => {
-        const hm = new Image;
-        hm.crossOrigin = "anonymous", hm.fetchPriority = "high", hm.onload = () => {
-          Tm(hm)
-        }, hm.onerror = () => {
-          fm(new Error(`A block icon's texture did not load: ${mm.slice(0,100)}`))
-        }, hm.src = mm
+    function MD(DD) {
+      const zD = new Promise(((zD, wD) => {
+        const pD = new Image;
+        pD.crossOrigin = "anonymous", pD.fetchPriority = "high", pD.onload = () => {
+          zD(pD)
+        }, pD.onerror = () => {
+          wD(new Error(`A block icon's texture did not load: ${DD.slice(0,100)}`))
+        }, pD.src = DD
       }));
-      return (0, wm.e)(Tm)
+      return (0, LD.e)(zD)
     }
 
-    function Km(mm) {
-      var Tm, fm;
-      om || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${mm}`), om = !0, null === (Tm = Rm) || void 0 === Tm || Tm.terminate(), Rm = null, pm = null, jm.clear(), Vm.clear();
-      for (const hm of Ym.values()) hm(null);
-      Ym.clear(), null === (fm = qm) || void 0 === fm || fm()
+    function OD(DD) {
+      var zD, wD;
+      fD || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${DD}`), fD = !0, null === (zD = RD) || void 0 === zD || zD.terminate(), RD = null, AD = null, hD.clear(), nD.clear();
+      for (const pD of BD.values()) pD(null);
+      BD.clear(), null === (wD = GD) || void 0 === wD || wD()
     }
 
-    function Qm() {
-      return Em ??= async function() {
+    function JD() {
+      return UD ??= async function() {
         if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === hm.e.ios_icon_worker_v1 && (0, Am.isWebKit)()) return;
+        if ("page" === pD.b.ios_icon_worker_v1 && (0, sD.isWebKit)()) return;
         try {
-          Rm = await async function() {
-            return await am.ready(), am.start()
+          RD = await async function() {
+            return await KD.ready(), KD.start()
           }()
-        } catch (wm) {
-          return void Km(`did not start (${String(wm)})`)
+        } catch (LD) {
+          return void OD(`did not start (${String(LD)})`)
         }
-        let mm = () => {};
-        const Tm = new Promise((Tm => {
-          mm = Tm
+        let DD = () => {};
+        const zD = new Promise((zD => {
+          DD = zD
         }));
-        Rm.onmessage = Tm => {
+        RD.onmessage = zD => {
           let {
-            data: fm
-          } = Tm;
-          if ("started" === fm.type) pm = Rm, mm();
-          else if ("failed" === fm.type) Km(`failed a draw (${fm.message})`);
+            data: wD
+          } = zD;
+          if ("started" === wD.type) AD = RD, DD();
+          else if ("failed" === wD.type) OD(`failed a draw (${wD.message})`);
           else {
-            var hm, Am;
-            null === (hm = Ym.get(fm.id)) || void 0 === hm || hm(fm.url), Ym.delete(fm.id), null === (Am = qm) || void 0 === Am || Am()
+            var pD, sD;
+            null === (pD = BD.get(wD.id)) || void 0 === pD || pD(wD.url), BD.delete(wD.id), null === (sD = GD) || void 0 === sD || sD()
           }
-        }, Rm.onerror = Tm => {
-          Tm.preventDefault(), Km(`stopped (${Tm.message||"its script did not load or run"})`), mm()
+        }, RD.onerror = zD => {
+          zD.preventDefault(), OD(`stopped (${zD.message||"its script did not load or run"})`), DD()
         };
-        const fm = `did not start in ${im/1e3} s`;
-        await (0, xm.l)(Tm, im, fm).catch((() => {
-          Km(fm)
+        const wD = `did not start in ${gD/1e3} s`;
+        await (0, rD.m)(zD, gD, wD).catch((() => {
+          OD(wD)
         }))
-      }(), Em
+      }(), UD
     }
 
-    function nm() {
-      if (null !== qm || 0 === Ym.size) return;
-      const mm = new Promise((mm => {
-          qm = mm
+    function ED() {
+      if (null !== GD || 0 === BD.size) return;
+      const DD = new Promise((DD => {
+          GD = DD
         })),
-        Tm = `did not answer in ${Dm/1e3} s`;
-      (0, xm.l)(mm, Dm, Tm).then((() => {
-        qm = null, nm()
+        zD = `did not answer in ${cD/1e3} s`;
+      (0, rD.m)(DD, cD, zD).then((() => {
+        GD = null, ED()
       }), (() => {
-        qm = null, Km(Tm)
+        GD = null, OD(zD)
       }))
     }
 
-    function Jm(mm, Tm) {
-      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      mm.postMessage(Tm, fm)
+    function QD(DD, zD) {
+      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+      DD.postMessage(zD, wD)
     }
 
-    function cm(mm, Tm, fm, hm) {
-      let Am = Tm.get(fm);
-      return void 0 === Am && (Am = hm().then((async Tm => {
+    function XD(DD, zD, wD, pD) {
+      let sD = zD.get(wD);
+      return void 0 === sD && (sD = pD().then((async zD => {
         let {
-          image: fm,
-          request: hm
-        } = Tm;
+          image: wD,
+          request: pD
+        } = zD;
         try {
-          const Tm = await createImageBitmap(fm);
-          Jm(mm, hm(Tm), [Tm])
-        } catch (Am) {
-          Km(`could not take an image (${String(Am)})`)
+          const zD = await createImageBitmap(wD);
+          QD(DD, pD(zD), [zD])
+        } catch (sD) {
+          OD(`could not take an image (${String(sD)})`)
         }
-      })), Am.catch((() => {
-        Tm.get(fm) === Am && Tm.delete(fm)
-      })), Tm.set(fm, Am)), Am
+      })), sD.catch((() => {
+        zD.get(wD) === sD && zD.delete(wD)
+      })), zD.set(wD, sD)), sD
     }
-    async function zm(mm, Tm) {
-      Qm();
-      const fm = pm;
-      if (null === fm) return null;
-      if (await mm(fm), pm !== fm) return null;
-      const hm = ++Om;
-      return new Promise((mm => {
-        Ym.set(hm, mm), Jm(fm, Tm(hm)), nm()
+    async function VD(DD, zD) {
+      JD();
+      const wD = AD;
+      if (null === wD) return null;
+      if (await DD(wD), AD !== wD) return null;
+      const pD = ++ID;
+      return new Promise((DD => {
+        BD.set(pD, DD), QD(wD, zD(pD)), ED()
       }))
     }
 
-    function Zm(mm, Tm, fm) {
-      return zm((Tm => Promise.all([mm.top, mm.left, mm.right].map((mm => function(mm, Tm) {
-        return cm(mm, jm, Tm, (async () => ({
-          image: await Im(Tm),
-          request: mm => ({
+    function PD(DD, zD, wD) {
+      return VD((zD => Promise.all([DD.top, DD.left, DD.right].map((DD => function(DD, zD) {
+        return XD(DD, hD, zD, (async () => ({
+          image: await MD(zD),
+          request: DD => ({
             type: "texture",
-            url: Tm,
-            bitmap: mm
+            url: zD,
+            bitmap: DD
           })
         })))
-      }(Tm, mm))))), (hm => ({
+      }(zD, DD))))), (pD => ({
         type: "draw",
-        id: hm,
-        ...mm,
-        size: Tm,
-        outlineWidth: fm
+        id: pD,
+        ...DD,
+        size: zD,
+        outlineWidth: wD
       })))
     }
 
-    function km(mm, Tm, fm, hm) {
-      return zm((fm => function(mm, Tm, fm) {
-        return cm(mm, Vm, Tm, (async () => {
+    function CD(DD, zD, wD, pD) {
+      return VD((wD => function(DD, zD, wD) {
+        return XD(DD, nD, zD, (async () => {
           const {
-            texture: mm,
-            ...hm
-          } = await fm();
+            texture: DD,
+            ...pD
+          } = await wD();
           return {
-            image: await Im(mm),
-            request: mm => ({
+            image: await MD(DD),
+            request: DD => ({
               type: "model",
-              name: Tm,
-              bitmap: mm,
-              geometry: hm
+              name: zD,
+              bitmap: DD,
+              geometry: pD
             })
           }
         }))
-      }(fm, mm, Tm)), (Tm => ({
+      }(wD, DD, zD)), (zD => ({
         type: "drawModel",
-        id: Tm,
-        name: mm,
-        size: fm,
-        outlineWidth: hm
+        id: zD,
+        name: DD,
+        size: wD,
+        outlineWidth: pD
       })))
     }
   },
-  36481: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => hm,
-      d: () => Dm,
-      f: () => xm,
-      g: () => Em,
-      k: () => im
+  36386: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => pD,
+      g: () => cD,
+      i: () => rD,
+      j: () => UD,
+      m: () => gD
     });
-    const hm = {
+    const pD = {
         across: Math.SQRT1_2,
         down: Math.SQRT1_2 / 2,
         up: Math.sqrt(3) / 2
       },
-      Am = .6,
-      am = {
-        width: 2 * hm.across,
-        height: 2 * hm.down + hm.up
+      sD = .6,
+      KD = {
+        width: 2 * pD.across,
+        height: 2 * pD.down + pD.up
       };
 
-    function xm(mm, Tm) {
-      const fm = Tm > 0 ? Tm + 1 : 0,
-        xm = mm * Am - Tm / hm.across;
-      return Math.max(0, Math.min(xm, (mm - 2 * fm) / am.height))
+    function rD(DD, zD) {
+      const wD = zD > 0 ? zD + 1 : 0,
+        rD = DD * sD - zD / pD.across;
+      return Math.max(0, Math.min(rD, (DD - 2 * wD) / KD.height))
     }
-    const wm = [15, 15, 15],
-      Dm = {
+    const LD = [15, 15, 15],
+      cD = {
         top: 1,
         left: .85,
         right: .7
       };
 
-    function im(mm, Tm, fm, hm) {
+    function gD(DD, zD, wD, pD) {
       const {
-        vertices: Am,
-        uvs: wm,
-        indices: Dm,
-        shades: im
-      } = mm, Rm = function(mm, Tm) {
-        const fm = xm(mm, Tm),
-          hm = am.width * fm,
-          Am = am.height * fm;
+        vertices: sD,
+        uvs: LD,
+        indices: cD,
+        shades: gD
+      } = DD, RD = function(DD, zD) {
+        const wD = rD(DD, zD),
+          pD = KD.width * wD,
+          sD = KD.height * wD;
         return {
-          left: (mm - hm) / 2,
-          top: (mm - Am) / 2,
-          width: hm,
-          height: Am
+          left: (DD - pD) / 2,
+          top: (DD - sD) / 2,
+          width: pD,
+          height: sD
         }
-      }(fm, hm), pm = new Float32Array(Am.length);
-      for (let am = 0; am < Am.length; am += 3) pm[am] = Rm.left + Am[am] * Rm.width, pm[am + 1] = Rm.top + Am[am + 1] * Rm.height, pm[am + 2] = Am[am + 2];
-      const om = new Float32Array(fm * fm).fill(-1 / 0),
-        Om = new Uint8ClampedArray(fm * fm * 4),
-        Ym = 255 * mm.alphaCutoff;
-      for (let am = 0; am < Dm.length; am += 3) {
-        const [mm, hm, Am] = [Dm[am], Dm[am + 1], Dm[am + 2]], [xm, Rm, Em] = [3 * mm, 3 * hm, 3 * Am], [qm, jm, Vm, Im, Km, Qm] = [pm[xm], pm[xm + 1], pm[Rm], pm[Rm + 1], pm[Em], pm[Em + 1]], nm = (Vm - qm) * (Qm - jm) - (Km - qm) * (Im - jm);
-        if (Math.abs(nm) < 1e-9) continue;
-        const Jm = im[am / 3],
-          [cm, zm, Zm, km, bm, Sm] = [wm[2 * mm], wm[2 * mm + 1], wm[2 * hm], wm[2 * hm + 1], wm[2 * Am], wm[2 * Am + 1]],
-          em = Math.max(0, Math.floor(Math.min(qm, Vm, Km))),
-          Nm = Math.min(fm - 1, Math.ceil(Math.max(qm, Vm, Km))),
-          Gm = Math.max(0, Math.floor(Math.min(jm, Im, Qm))),
-          Xm = Math.min(fm - 1, Math.ceil(Math.max(jm, Im, Qm)));
-        for (let am = Gm; am <= Xm; am++)
-          for (let mm = em; mm <= Nm; mm++) {
-            const [hm, Am] = [mm + .5, am + .5], wm = ((hm - qm) * (Qm - jm) - (Km - qm) * (Am - jm)) / nm, Dm = ((Vm - qm) * (Am - jm) - (hm - qm) * (Im - jm)) / nm, im = 1 - wm - Dm;
-            if (im < 0 || wm < 0 || Dm < 0) continue;
-            const em = im * pm[xm + 2] + wm * pm[Rm + 2] + Dm * pm[Em + 2],
-              Nm = am * fm + mm;
-            if (em <= om[Nm]) continue;
-            const Gm = Math.max(0, Math.min(Tm.width - 1, Math.floor((im * cm + wm * Zm + Dm * bm) * Tm.width))),
-              Xm = 4 * (Math.max(0, Math.min(Tm.height - 1, Math.floor((im * zm + wm * km + Dm * Sm) * Tm.height))) * Tm.width + Gm);
-            Tm.pixels[Xm + 3] < Ym || (om[Nm] = em, Om[4 * Nm] = Tm.pixels[Xm] * Jm, Om[4 * Nm + 1] = Tm.pixels[Xm + 1] * Jm, Om[4 * Nm + 2] = Tm.pixels[Xm + 2] * Jm, Om[4 * Nm + 3] = 255)
+      }(wD, pD), AD = new Float32Array(sD.length);
+      for (let KD = 0; KD < sD.length; KD += 3) AD[KD] = RD.left + sD[KD] * RD.width, AD[KD + 1] = RD.top + sD[KD + 1] * RD.height, AD[KD + 2] = sD[KD + 2];
+      const fD = new Float32Array(wD * wD).fill(-1 / 0),
+        ID = new Uint8ClampedArray(wD * wD * 4),
+        BD = 255 * DD.alphaCutoff;
+      for (let KD = 0; KD < cD.length; KD += 3) {
+        const [DD, pD, sD] = [cD[KD], cD[KD + 1], cD[KD + 2]], [rD, RD, UD] = [3 * DD, 3 * pD, 3 * sD], [GD, hD, nD, MD, OD, JD] = [AD[rD], AD[rD + 1], AD[RD], AD[RD + 1], AD[UD], AD[UD + 1]], ED = (nD - GD) * (JD - hD) - (OD - GD) * (MD - hD);
+        if (Math.abs(ED) < 1e-9) continue;
+        const QD = gD[KD / 3],
+          [XD, VD, PD, CD, xD, TD] = [LD[2 * DD], LD[2 * DD + 1], LD[2 * pD], LD[2 * pD + 1], LD[2 * sD], LD[2 * sD + 1]],
+          bD = Math.max(0, Math.floor(Math.min(GD, nD, OD))),
+          jD = Math.min(wD - 1, Math.ceil(Math.max(GD, nD, OD))),
+          dD = Math.max(0, Math.floor(Math.min(hD, MD, JD))),
+          SD = Math.min(wD - 1, Math.ceil(Math.max(hD, MD, JD)));
+        for (let KD = dD; KD <= SD; KD++)
+          for (let DD = bD; DD <= jD; DD++) {
+            const [pD, sD] = [DD + .5, KD + .5], LD = ((pD - GD) * (JD - hD) - (OD - GD) * (sD - hD)) / ED, cD = ((nD - GD) * (sD - hD) - (pD - GD) * (MD - hD)) / ED, gD = 1 - LD - cD;
+            if (gD < 0 || LD < 0 || cD < 0) continue;
+            const bD = gD * AD[rD + 2] + LD * AD[RD + 2] + cD * AD[UD + 2],
+              jD = KD * wD + DD;
+            if (bD <= fD[jD]) continue;
+            const dD = Math.max(0, Math.min(zD.width - 1, Math.floor((gD * XD + LD * PD + cD * xD) * zD.width))),
+              SD = 4 * (Math.max(0, Math.min(zD.height - 1, Math.floor((gD * VD + LD * CD + cD * TD) * zD.height))) * zD.width + dD);
+            zD.pixels[SD + 3] < BD || (fD[jD] = bD, ID[4 * jD] = zD.pixels[SD] * QD, ID[4 * jD + 1] = zD.pixels[SD + 1] * QD, ID[4 * jD + 2] = zD.pixels[SD + 2] * QD, ID[4 * jD + 3] = 255)
           }
       }
-      return Em(Om, fm, hm), Om
+      return UD(ID, wD, pD), ID
     }
-    let Rm = NaN,
-      pm = new Int32Array(0);
+    let RD = NaN,
+      AD = new Int32Array(0);
 
-    function Em(mm, Tm, fm) {
-      let hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Tm => 0 !== mm[4 * Tm + 3];
-      const Am = new Uint8Array(Tm * Tm);
-      for (let wm = 0; wm < Tm * Tm; wm++) Am[wm] = hm(wm) ? 1 : 0;
-      const am = (mm, fm) => mm >= 0 && fm >= 0 && mm < Tm && fm < Tm && 0 === Am[fm * Tm + mm],
-        xm = new Float32Array(Tm * Tm).fill(1 / 0),
-        Dm = function(mm) {
-          if (mm !== Rm) {
-            const Tm = Math.ceil(mm + 1),
-              fm = [];
-            for (let hm = -Tm; hm <= Tm; hm++)
-              for (let Am = -Tm; Am <= Tm; Am++) {
-                const Tm = Am * Am + hm * hm;
-                Tm > 0 && Tm < (mm + 1) ** 2 && fm.push(Am, hm, Tm)
+    function UD(DD, zD, wD) {
+      let pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : zD => 0 !== DD[4 * zD + 3];
+      const sD = new Uint8Array(zD * zD);
+      for (let LD = 0; LD < zD * zD; LD++) sD[LD] = pD(LD) ? 1 : 0;
+      const KD = (DD, wD) => DD >= 0 && wD >= 0 && DD < zD && wD < zD && 0 === sD[wD * zD + DD],
+        rD = new Float32Array(zD * zD).fill(1 / 0),
+        cD = function(DD) {
+          if (DD !== RD) {
+            const zD = Math.ceil(DD + 1),
+              wD = [];
+            for (let pD = -zD; pD <= zD; pD++)
+              for (let sD = -zD; sD <= zD; sD++) {
+                const zD = sD * sD + pD * pD;
+                zD > 0 && zD < (DD + 1) ** 2 && wD.push(sD, pD, zD)
               }
-            Rm = mm, pm = Int32Array.from(fm)
+            RD = DD, AD = Int32Array.from(wD)
           }
-          return pm
-        }(fm);
-      for (let wm = 0; wm < Tm; wm++)
-        for (let mm = 0; mm < Tm; mm++) {
-          if (1 === Am[wm * Tm + mm] && (am(mm - 1, wm) || am(mm + 1, wm) || am(mm, wm - 1) || am(mm, wm + 1)))
-            for (let fm = 0; fm < Dm.length; fm += 3) {
-              const hm = mm + Dm[fm],
-                Am = wm + Dm[fm + 1];
-              if (hm >= 0 && Am >= 0 && hm < Tm && Am < Tm) {
-                const mm = Am * Tm + hm;
-                xm[mm] = Math.min(xm[mm], Dm[fm + 2])
+          return AD
+        }(wD);
+      for (let LD = 0; LD < zD; LD++)
+        for (let DD = 0; DD < zD; DD++) {
+          if (1 === sD[LD * zD + DD] && (KD(DD - 1, LD) || KD(DD + 1, LD) || KD(DD, LD - 1) || KD(DD, LD + 1)))
+            for (let wD = 0; wD < cD.length; wD += 3) {
+              const pD = DD + cD[wD],
+                sD = LD + cD[wD + 1];
+              if (pD >= 0 && sD >= 0 && pD < zD && sD < zD) {
+                const DD = sD * zD + pD;
+                rD[DD] = Math.min(rD[DD], cD[wD + 2])
               }
             }
         }
-      for (let im = 0; im < Tm * Tm; im++) 1 !== Am[im] && xm[im] !== 1 / 0 && (mm.set(wm, 4 * im), mm[4 * im + 3] = Math.round(255 * Math.min(1, fm + 1 - Math.sqrt(xm[im]))))
+      for (let gD = 0; gD < zD * zD; gD++) 1 !== sD[gD] && rD[gD] !== 1 / 0 && (DD.set(LD, 4 * gD), DD[4 * gD + 3] = Math.round(255 * Math.min(1, wD + 1 - Math.sqrt(rD[gD]))))
     }
   },
-  36487: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => Am
+  36404: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => sD
     });
-    const hm = {
-      wait: function(mm) {
-        return new Promise((Tm => {
-          setTimeout(Tm, mm)
+    const pD = {
+      wait: function(DD) {
+        return new Promise((zD => {
+          setTimeout(zD, DD)
         }))
       },
       stallMs: 2e4
     };
-    class Am {
-      constructor(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : hm;
-        this.url = mm, this.options = Tm, this.timing = fm, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = mm
+    class sD {
+      constructor(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : pD;
+        this.url = DD, this.options = zD, this.timing = wD, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = DD
       }
       ready() {
         if (null === this.fetched) {
-          const mm = new AbortController;
-          this.fetchAbort = mm, this.fetched = this.fetchWithRetries(mm.signal).then((Tm => (this.fetchAbort === mm && (this.fetchAbort = null), Tm)))
+          const DD = new AbortController;
+          this.fetchAbort = DD, this.fetched = this.fetchWithRetries(DD.signal).then((zD => (this.fetchAbort === DD && (this.fetchAbort = null), zD)))
         }
         return this.fetched
       }
@@ -318,51 +318,51 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(mm) {
-        for (let Tm = 0;; Tm++) {
-          const fm = new URL(this.url);
-          if (Tm > 0 && fm.searchParams.set("cache-bust", `${Date.now()}-${Tm}`), await this.fetchWhole(fm, mm)) return this.scriptUrl = fm, !0;
-          if (Tm >= 3 || mm.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** Tm), mm.aborted) return !1
+      async fetchWithRetries(DD) {
+        for (let zD = 0;; zD++) {
+          const wD = new URL(this.url);
+          if (zD > 0 && wD.searchParams.set("cache-bust", `${Date.now()}-${zD}`), await this.fetchWhole(wD, DD)) return this.scriptUrl = wD, !0;
+          if (zD >= 3 || DD.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** zD), DD.aborted) return !1
         }
       }
-      async fetchWhole(mm, Tm) {
-        const fm = new AbortController;
-        let hm;
-        const Am = () => {
-            clearTimeout(hm), hm = setTimeout((() => {
-              fm.abort()
+      async fetchWhole(DD, zD) {
+        const wD = new AbortController;
+        let pD;
+        const sD = () => {
+            clearTimeout(pD), pD = setTimeout((() => {
+              wD.abort()
             }), this.timing.stallMs)
           },
-          am = () => {
-            fm.abort()
+          KD = () => {
+            wD.abort()
           };
-        Tm.addEventListener("abort", am, {
+        zD.addEventListener("abort", KD, {
           once: !0
-        }), Am();
+        }), sD();
         try {
-          var xm;
-          const Tm = await fetch(mm, {
-            signal: fm.signal
+          var rD;
+          const zD = await fetch(DD, {
+            signal: wD.signal
           });
-          if (!Tm.ok) return !1;
-          const hm = null === (xm = Tm.body) || void 0 === xm ? void 0 : xm.getReader();
-          if (!hm) return !1;
+          if (!zD.ok) return !1;
+          const pD = null === (rD = zD.body) || void 0 === rD ? void 0 : rD.getReader();
+          if (!pD) return !1;
           for (;;) {
             const {
-              done: mm
-            } = await hm.read();
-            if (mm) return !0;
-            Am()
+              done: DD
+            } = await pD.read();
+            if (DD) return !0;
+            sD()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(hm), Tm.removeEventListener("abort", am)
+          clearTimeout(pD), zD.removeEventListener("abort", KD)
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

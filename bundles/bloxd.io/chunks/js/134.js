@@ -1,27 +1,27 @@
 export const id = 134;
 export const ids = [134];
 export const modules = {
-  38858: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => Dm,
-      g: () => pm,
-      i: () => Em,
-      m: () => Ym,
-      n: () => Rm,
-      q: () => im,
-      u: () => om
+  38736: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => cD,
+      f: () => AD,
+      i: () => UD,
+      j: () => BD,
+      k: () => RD,
+      n: () => gD,
+      p: () => fD
     });
-    var hm = fm(336),
-      Am = fm(1698);
-    const am = "A valid external Instance reference no longer exists.",
-      xm = [
+    var pD = wD(330),
+      sD = wD(1727);
+    const KD = "A valid external Instance reference no longer exists.",
+      rD = [
         [1e4, "<10s", "lt10s"],
         [6e4, "<1m", "lt1m"],
         [3e5, "<5m", "lt5m"],
         [18e5, "<30m", "lt30m"],
         [1 / 0, "30m+", "ge30m"]
       ],
-      wm = [
+      LD = [
         [1e3, "lt1s"],
         [2e3, "lt2s"],
         [5e3, "lt5s"],
@@ -29,202 +29,202 @@ export const modules = {
         [3e4, "lt30s"],
         [1 / 0, "ge30s"]
       ];
-    const Dm = {
+    const cD = {
       WebGPU: "WebGPU device lost",
       WebGL2: "WebGL2 context lost"
     };
 
-    function im(mm, Tm) {
-      return mm ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(mm) {
-        var Tm;
-        const fm = null !== (Tm = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(mm)) && void 0 !== Tm ? Tm : /failed with ([A-Z][A-Z0-9_]+)/.exec(mm);
-        return fm ? fm[1] : mm.includes(am) ? "gpu_process_lost" : "other"
-      }(Tm)
+    function gD(DD, zD) {
+      return DD ? "frames_refused" : arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? "browser_destroyed" : function(DD) {
+        var zD;
+        const wD = null !== (zD = /Device removed reason: (?!S_OK)([A-Z][A-Z0-9_]+)/.exec(DD)) && void 0 !== zD ? zD : /failed with ([A-Z][A-Z0-9_]+)/.exec(DD);
+        return wD ? wD[1] : DD.includes(KD) ? "gpu_process_lost" : "other"
+      }(zD)
     }
 
-    function Rm(mm) {
-      return `${(null===mm||void 0===mm?void 0:mm.vendor)||"unknown vendor"} ${(null===mm||void 0===mm?void 0:mm.architecture)||"unknown architecture"}`
+    function RD(DD) {
+      return `${(null===DD||void 0===DD?void 0:DD.vendor)||"unknown vendor"} ${(null===DD||void 0===DD?void 0:DD.architecture)||"unknown architecture"}`
     }
 
-    function pm(mm) {
-      return qm(mm)[1]
+    function AD(DD) {
+      return GD(DD)[1]
     }
 
-    function Em(mm) {
-      return qm(mm)[2]
+    function UD(DD) {
+      return GD(DD)[2]
     }
 
-    function om(mm, Tm, fm) {
-      const Am = (0, hm.f)(),
-        am = null !== Am && Am >= Tm,
-        xm = document.hidden ? "hidden" : am ? "shown" : "visible",
-        wm = am ? fm - Am : null;
+    function fD(DD, zD, wD) {
+      const sD = (0, pD.e)(),
+        KD = null !== sD && sD >= zD,
+        rD = document.hidden ? "hidden" : KD ? "shown" : "visible",
+        LD = KD ? wD - sD : null;
       return {
-        page: null === wm ? xm : `${xm}${pm(wm)}`,
-        code: `${mm}_${null===wm?xm:`${xm}_${Em(wm)}`}_${Om(fm)}`
+        page: null === LD ? rD : `${rD}${AD(LD)}`,
+        code: `${DD}_${null===LD?rD:`${rD}_${UD(LD)}`}_${ID(wD)}`
       }
     }
 
-    function Om(mm) {
-      if ((0, Am.e)()) return "ad_open";
-      const Tm = (0, Am.c)();
-      return null === Tm ? "ad_none" : `ad_${Em(mm-Tm.endedAt)}_${Tm.pageHid?"h":"v"}`
+    function ID(DD) {
+      if ((0, sD.e)()) return "ad_open";
+      const zD = (0, sD.c)();
+      return null === zD ? "ad_none" : `ad_${UD(DD-zD.endedAt)}_${zD.pageHid?"h":"v"}`
     }
 
-    function Ym(mm) {
-      return jm(wm, mm)[1]
+    function BD(DD) {
+      return hD(LD, DD)[1]
     }
 
-    function qm(mm) {
-      return jm(xm, mm)
+    function GD(DD) {
+      return hD(rD, DD)
     }
 
-    function jm(mm, Tm) {
-      var fm;
-      return null !== (fm = mm.find((mm => {
-        let [fm] = mm;
-        return Tm < fm
-      }))) && void 0 !== fm ? fm : mm[mm.length - 1]
+    function hD(DD, zD) {
+      var wD;
+      return null !== (wD = DD.find((DD => {
+        let [wD] = DD;
+        return zD < wD
+      }))) && void 0 !== wD ? wD : DD[DD.length - 1]
     }
   },
-  39180: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => Dm
+  39038: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => cD
     });
-    var hm = fm(8854),
-      Am = fm(36573),
-      am = fm(39187);
-    const xm = {
+    var pD = wD(8901),
+      sD = wD(36486),
+      KD = wD(39042);
+    const rD = {
         seat: "seat_timeout",
         socket_unopened: "socket_timeout_unopened",
         socket: "socket_timeout"
       },
-      wm = {
+      LD = {
         seat: "seat_lost",
         socket_unopened: "socket_unopened",
         socket: "socket_closed"
       };
 
-    function Dm(mm, Tm) {
-      if (mm instanceof Am.e) return {
-        at: xm[Tm],
+    function cD(DD, zD) {
+      if (DD instanceof sD.c) return {
+        at: rD[zD],
         code: 0
       };
-      const fm = (0, hm.d)(mm),
-        Dm = "number" === typeof fm ? fm : 0;
-      return null !== (0, am.k)(Dm).name ? {
+      const wD = (0, pD.g)(DD),
+        cD = "number" === typeof wD ? wD : 0;
+      return null !== (0, KD.j)(cD).name ? {
         at: "refused",
-        code: Dm
+        code: cD
       } : {
-        at: wm[Tm],
-        code: Dm
+        at: LD[zD],
+        code: cD
       }
     }
   },
-  8854: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => am,
-      d: () => xm,
-      h: () => wm,
-      i: () => im,
-      m: () => Dm
+  8901: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => KD,
+      g: () => rD,
+      i: () => LD,
+      m: () => gD,
+      q: () => cD
     });
-    var hm = fm(198),
-      Am = fm(4564);
+    var pD = wD(197),
+      sD = wD(4657);
 
-    function am(mm) {
-      return xm(mm) === hm.b.gameOrPluginOnPlayerAuthRejected.code
+    function KD(DD) {
+      return rD(DD) === pD.e.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function xm(mm) {
-      return "object" === typeof mm && null !== mm ? mm.code : void 0
+    function rD(DD) {
+      return "object" === typeof DD && null !== DD ? DD.code : void 0
     }
 
-    function wm(mm) {
-      var Tm;
-      return null !== (Tm = Object.keys(Am.e).find((Tm => Am.e[Tm] === mm))) && void 0 !== Tm ? Tm : null
+    function LD(DD) {
+      var zD;
+      return null !== (zD = Object.keys(sD.b).find((zD => sD.b[zD] === DD))) && void 0 !== zD ? zD : null
     }
 
-    function Dm(mm) {
-      return "notWhitelisted" === mm ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function cD(DD) {
+      return "notWhitelisted" === DD ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const im = {
+    const gD = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  39187: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => Am,
-      f: () => am,
-      g: () => wm,
-      k: () => Rm,
-      m: () => Dm,
-      p: () => xm
+  39042: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => sD,
+      c: () => KD,
+      g: () => LD,
+      j: () => RD,
+      n: () => cD,
+      p: () => rD
     });
-    var hm = fm(198);
-    const Am = 3e3,
-      am = 15e3;
+    var pD = wD(197);
+    const sD = 3e3,
+      KD = 15e3;
 
-    function xm(mm) {
-      const Tm = mm.endsWith(hm.i);
+    function rD(DD) {
+      const zD = DD.endsWith(pD.j);
       return {
-        text: (Tm ? mm.slice(0, -hm.i.length) : mm) || null,
-        dropsCache: Tm
+        text: (zD ? DD.slice(0, -pD.j.length) : DD) || null,
+        dropsCache: zD
       }
     }
-    const wm = "Either your internet isn't working or this is a bug.";
+    const LD = "Either your internet isn't working or this is a bug.";
 
-    function Dm(mm, Tm) {
-      const fm = Rm(mm);
-      return null !== fm.name && "" === hm.b[fm.name].text && null !== Tm ? Tm : fm.reason
+    function cD(DD, zD) {
+      const wD = RD(DD);
+      return null !== wD.name && "" === pD.e[wD.name].text && null !== zD ? zD : wD.reason
     }
-    const im = "You were removed from the game.";
+    const gD = "You were removed from the game.";
 
-    function Rm(mm) {
-      var Tm;
-      let fm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const Am = null !== (Tm = Object.keys(hm.b).find((Tm => hm.b[Tm].code === mm))) && void 0 !== Tm ? Tm : null;
-      if (null === Am) return {
-        code: mm,
-        name: Am,
-        reason: null !== fm && void 0 !== fm ? fm : `${wm}\nCode: ${mm}`,
+    function RD(DD) {
+      var zD;
+      let wD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const sD = null !== (zD = Object.keys(pD.e).find((zD => pD.e[zD].code === DD))) && void 0 !== zD ? zD : null;
+      if (null === sD) return {
+        code: DD,
+        name: sD,
+        reason: null !== wD && void 0 !== wD ? wD : `${LD}\nCode: ${DD}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: am,
-        canReconnect: xm = !1
-      } = hm.b[Am], Dm = mm === hm.b.outdatedVersion.code || mm === hm.b.loadRecaptchaError.code;
+        text: KD,
+        canReconnect: rD = !1
+      } = pD.e[sD], cD = DD === pD.e.outdatedVersion.code || DD === pD.e.loadRecaptchaError.code;
       return {
-        code: mm,
-        name: Am,
-        reason: "" !== am ? am : null !== fm && void 0 !== fm ? fm : mm === hm.b.gameOrPluginKick.code ? im : `Code: ${mm}`,
-        canReconnect: xm,
-        automaticallyReconnect: mm === hm.b.customGameUpdated.code || mm === hm.b.duplicateLobbyNameError.code,
-        requiresRefresh: Dm
+        code: DD,
+        name: sD,
+        reason: "" !== KD ? KD : null !== wD && void 0 !== wD ? wD : DD === pD.e.gameOrPluginKick.code ? gD : `Code: ${DD}`,
+        canReconnect: rD,
+        automaticallyReconnect: DD === pD.e.customGameUpdated.code || DD === pD.e.duplicateLobbyNameError.code,
+        requiresRefresh: cD
       }
     }
   },
-  36943: (mm, Tm, fm) => {
-    function hm(mm) {
-      return "fetch" === mm || "timeout" === mm || "integrity" === mm ? "download" : "browser"
+  36808: (DD, zD, wD) => {
+    function pD(DD) {
+      return "fetch" === DD || "timeout" === DD || "integrity" === DD ? "download" : "browser"
     }
-    fm.d(Tm, {
-      c: () => Am,
-      e: () => xm,
-      h: () => Dm,
-      j: () => wm,
-      m: () => hm,
-      q: () => am
+    wD.d(zD, {
+      b: () => sD,
+      d: () => rD,
+      h: () => cD,
+      i: () => LD,
+      k: () => pD,
+      l: () => KD
     });
-    const Am = "https://discord.gg/playbloxd";
+    const sD = "https://discord.gg/playbloxd";
 
-    function am(mm) {
-      return "download" === mm ? {
+    function KD(DD) {
+      return "download" === DD ? {
         icon: "wifi",
         title: "wasmScreens:downloadFailedTitle",
         help: "wasmScreens:downloadFailedHelp",
@@ -243,21 +243,21 @@ export const modules = {
       }
     }
 
-    function xm(mm, Tm) {
+    function rD(DD, zD) {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:crashTitle",
-        help: Tm ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
+        help: zD ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
         helpValues: {
-          code: mm.code
+          code: DD.code
         },
-        discordLink: Tm,
+        discordLink: zD,
         confirm: "general:reload",
         cancel: "general:back"
       }
     }
 
-    function wm() {
+    function LD() {
       return {
         icon: "face-dizzy",
         title: "wasmScreens:turnstilePageTitle",
@@ -269,74 +269,74 @@ export const modules = {
       }
     }
 
-    function Dm(mm, Tm, fm) {
+    function cD(DD, zD, wD) {
       return {
         icon: "wifi",
         title: "wasmScreens:disconnectedTitle",
-        help: fm ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
+        help: wD ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
         helpValues: {
-          reason: mm.reason
+          reason: DD.reason
         },
-        discordLink: null === mm.name,
-        confirm: Tm ? "general:reconnect" : mm.requiresRefresh ? "general:reload" : "general:ok",
+        discordLink: null === DD.name,
+        confirm: zD ? "general:reconnect" : DD.requiresRefresh ? "general:reload" : "general:ok",
         cancel: null
       }
     }
   },
-  36395: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => dm,
-      f: () => mT,
-      g: () => Wm,
-      i: () => Um
+  36290: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => tD,
+      f: () => qD,
+      j: () => YD,
+      m: () => vD
     });
-    var hm = fm(2873),
-      Am = fm(2888),
-      am = fm(6571),
-      xm = fm(4632),
-      wm = fm(2882),
-      Dm = fm(2876);
-    const im = "bloxd-wasmDownloaded",
-      Rm = 12;
+    var pD = wD(2861),
+      sD = wD(2874),
+      KD = wD(6653),
+      rD = wD(4722),
+      LD = wD(2872),
+      cD = wD(2868);
+    const gD = "bloxd-wasmDownloaded",
+      RD = 12;
 
-    function pm(mm) {
-      return mm.pathname.slice(mm.pathname.lastIndexOf("/") + 1)
+    function AD(DD) {
+      return DD.pathname.slice(DD.pathname.lastIndexOf("/") + 1)
     }
 
-    function Em() {
+    function UD() {
       try {
         if ("undefined" === typeof localStorage) return null;
-        const mm = JSON.parse(localStorage.getItem(im) ?? "[]");
-        return Array.isArray(mm) ? mm.filter((mm => "string" === typeof mm)) : []
-      } catch (mm) {
-        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", mm), null
+        const DD = JSON.parse(localStorage.getItem(gD) ?? "[]");
+        return Array.isArray(DD) ? DD.filter((DD => "string" === typeof DD)) : []
+      } catch (DD) {
+        return console.warn("Bloxd wasm: the record of downloaded modules could not be read: asking the HTTP cache for none", DD), null
       }
     }
-    const om = Reflect.apply,
-      Om = "undefined" === typeof Worker ? void 0 : Worker,
-      Ym = Om?.prototype.postMessage,
-      qm = Om?.prototype.terminate,
-      jm = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
-      Vm = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
-      Im = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
-      Km = function() {
+    const fD = Reflect.apply,
+      ID = "undefined" === typeof Worker ? void 0 : Worker,
+      BD = ID?.prototype.postMessage,
+      GD = ID?.prototype.terminate,
+      hD = "undefined" === typeof EventTarget ? void 0 : EventTarget.prototype.addEventListener,
+      nD = "undefined" === typeof MessageEvent ? void 0 : Object.getOwnPropertyDescriptor(MessageEvent.prototype, "data")?.get,
+      MD = Object.getOwnPropertyDescriptor(Object.getPrototypeOf(Uint8Array.prototype), "buffer").get,
+      OD = function() {
         try {
-          return (0, xm.l)(Om, "Worker", !0) && (0, xm.l)(Ym, "postMessage") && (0, xm.l)(qm, "terminate") && (0, xm.l)(Im, "buffer") && void 0 !== jm && void 0 !== Vm
+          return (0, rD.j)(ID, "Worker", !0) && (0, rD.j)(BD, "postMessage") && (0, rD.j)(GD, "terminate") && (0, rD.j)(MD, "buffer") && void 0 !== hD && void 0 !== nD
         } catch {
           return !1
         }
       }();
-    let Qm = !1;
+    let JD = !1;
 
-    function nm() {
-      return Km && !Qm
+    function ED() {
+      return OD && !JD
     }
-    class Jm {
+    class QD {
       worker = null;
       failed = !1;
       constructor() {
-        if (nm()) try {
-          this.worker = zm(), om(jm, this.worker, ["error", () => {
+        if (ED()) try {
+          this.worker = VD(), fD(hD, this.worker, ["error", () => {
             this.failed = !0
           }])
         } catch {
@@ -344,125 +344,125 @@ export const modules = {
         }
       }
       take() {
-        const mm = this.worker;
-        if (this.worker = null, null !== mm && this.failed) throw om(qm, mm, []), new Error("it did not run");
-        return mm
+        const DD = this.worker;
+        if (this.worker = null, null !== DD && this.failed) throw fD(GD, DD, []), new Error("it did not run");
+        return DD
       }
       stop() {
-        const mm = this.worker;
-        this.worker = null, null !== mm && om(qm, mm, [])
+        const DD = this.worker;
+        this.worker = null, null !== DD && fD(GD, DD, [])
       }
     }
-    class cm {
+    class XD {
       decoded;
       worker;
       reject;
-      constructor(mm, Tm, fm, hm, am) {
+      constructor(DD, zD, wD, pD, KD) {
         try {
-          this.worker = am?.take() ?? zm()
-        } catch (im) {
-          throw Qm = !0, new Error(`The zstd decoder's worker did not start: ${(0,wm.c)(im)}`)
+          this.worker = KD?.take() ?? VD()
+        } catch (gD) {
+          throw JD = !0, new Error(`The zstd decoder's worker did not start: ${(0,LD.d)(gD)}`)
         }
-        const xm = this.worker;
-        this.decoded = (0, Am.i)(((Tm, Am) => {
-          this.reject = Am;
-          const am = (mm, Tm) => {
-            om(jm, xm, [mm, Tm])
+        const rD = this.worker;
+        this.decoded = (0, sD.k)(((zD, sD) => {
+          this.reject = sD;
+          const KD = (DD, zD) => {
+            fD(hD, rD, [DD, zD])
           };
-          am("message", (mm => {
-            hm();
+          KD("message", (DD => {
+            pD();
             try {
-              const hm = om(Vm, mm, []);
-              if (!0 === hm) Tm();
+              const pD = fD(nD, DD, []);
+              if (!0 === pD) zD();
               else {
-                if ("string" === typeof hm) throw hm.startsWith(wm.b) && (Qm = !0), new Error(hm);
-                fm(hm, om(Dm.y, hm, []))
+                if ("string" === typeof pD) throw pD.startsWith(LD.c) && (JD = !0), new Error(pD);
+                wD(pD, fD(cD.u, pD, []))
               }
-            } catch (im) {
-              Am(im)
+            } catch (gD) {
+              sD(gD)
             }
-          })), am("error", (() => {
-            Qm = !0, Am(new Error("The zstd decoder's worker did not run"))
-          })), am("messageerror", (() => {
-            Am(new Error(`${mm}'s decoder sent a piece that could not be read`))
+          })), KD("error", (() => {
+            JD = !0, sD(new Error("The zstd decoder's worker did not run"))
+          })), KD("messageerror", (() => {
+            sD(new Error(`${DD}'s decoder sent a piece that could not be read`))
           }))
-        })), (0, Dm.X)(this.decoded), om(Ym, xm, [
-          [mm, Tm]
+        })), (0, cD.R)(this.decoded), fD(BD, rD, [
+          [DD, zD]
         ])
       }
-      push(mm) {
-        om(Ym, this.worker, [mm, [om(Im, mm, [])]])
+      push(DD) {
+        fD(BD, this.worker, [DD, [fD(MD, DD, [])]])
       }
       end() {
-        om(Ym, this.worker, [null])
+        fD(BD, this.worker, [null])
       }
       markWorkerFailed() {
-        Qm = !0
+        JD = !0
       }
-      fail(mm) {
-        this.reject(mm), this.terminate()
+      fail(DD) {
+        this.reject(DD), this.terminate()
       }
       terminate() {
-        om(qm, this.worker, [])
+        fD(GD, this.worker, [])
       }
     }
 
-    function zm() {
-      if (globalThis.Worker !== Om) throw new Error("Worker is not the one the page loaded with");
-      return new Worker(new URL(fm.p + fm.u(67), fm.b), {
+    function VD() {
+      if (globalThis.Worker !== ID) throw new Error("Worker is not the one the page loaded with");
+      return new Worker(new URL(wD.p + wD.u(67), wD.b), {
         name: "wasmZstdDecoder",
         type: "module"
       })
     }
-    const Zm = Reflect.apply,
-      km = ArrayBuffer,
-      bm = "undefined" === typeof Response ? void 0 : Response,
-      Sm = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
-      em = function() {
-        let mm;
-        void 0 !== Sm && new Sm({
+    const PD = Reflect.apply,
+      CD = ArrayBuffer,
+      xD = "undefined" === typeof Response ? void 0 : Response,
+      TD = "undefined" === typeof ReadableStream ? void 0 : ReadableStream,
+      bD = function() {
+        let DD;
+        void 0 !== TD && new TD({
           __proto__: null,
-          start(Tm) {
+          start(zD) {
             const {
-              enqueue: fm,
-              close: hm,
-              error: Am
-            } = Object.getPrototypeOf(Tm);
-            mm = {
-              enqueue: fm,
-              close: hm,
-              error: Am
+              enqueue: wD,
+              close: pD,
+              error: sD
+            } = Object.getPrototypeOf(zD);
+            DD = {
+              enqueue: wD,
+              close: pD,
+              error: sD
             }
           }
         }, {
           __proto__: null
         });
-        return mm
+        return DD
       }(),
-      Nm = function() {
+      jD = function() {
         try {
-          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== em && (0, xm.l)(bm, "Response", !0) && (0, xm.l)(Sm, "ReadableStream", !0) && (0, xm.l)(em.enqueue, "enqueue") && (0, xm.l)(em.close, "close") && (0, xm.l)(em.error, "error") && (0, xm.l)(Dm.$, "body") && (0, xm.l)(Dm.O, "getReader") && (0, xm.l)(Dm._, "read")
+          return "undefined" !== typeof WebAssembly && "function" === typeof WebAssembly.compileStreaming && void 0 !== bD && (0, rD.j)(xD, "Response", !0) && (0, rD.j)(TD, "ReadableStream", !0) && (0, rD.j)(bD.enqueue, "enqueue") && (0, rD.j)(bD.close, "close") && (0, rD.j)(bD.error, "error") && (0, rD.j)(cD.U, "body") && (0, rD.j)(cD.H, "getReader") && (0, rD.j)(cD.T, "read")
         } catch {
           return !1
         }
       }();
-    async function Gm(mm, Tm, fm, hm, am, xm, im) {
-      const Rm = new km(Tm),
+    async function dD(DD, zD, wD, pD, KD, rD, gD) {
+      const RD = new CD(zD),
         {
-          controller: pm,
-          compiled: Em
-        } = function(mm) {
+          controller: AD,
+          compiled: UD
+        } = function(DD) {
           try {
-            let mm;
-            const Tm = new Sm({
+            let DD;
+            const zD = new TD({
                 __proto__: null,
-                start(Tm) {
-                  mm = Tm
+                start(zD) {
+                  DD = zD
                 }
               }, {
                 __proto__: null
               }),
-              fm = new bm(Tm, {
+              wD = new xD(zD, {
                 __proto__: null,
                 headers: {
                   __proto__: null,
@@ -470,387 +470,387 @@ export const modules = {
                 }
               });
             return {
-              controller: mm,
-              compiled: (0, Dm.X)((0, Dm.B)((0, Dm.ib)(fm)))
+              controller: DD,
+              compiled: (0, cD.R)((0, cD.w)((0, cD.db)(wD)))
             }
-          } catch (Tm) {
-            throw new Error(`${mm} could not be streamed into a compile: ${(0,wm.c)(Tm)}`)
+          } catch (zD) {
+            throw new Error(`${DD} could not be streamed into a compile: ${(0,LD.d)(zD)}`)
           }
-        }(mm),
+        }(DD),
         {
-          enqueue: om,
-          close: Om,
-          error: Ym
-        } = em,
-        qm = mm => {
+          enqueue: fD,
+          close: ID,
+          error: BD
+        } = bD,
+        GD = DD => {
           try {
-            Zm(Ym, pm, [mm])
+            PD(BD, AD, [DD])
           } catch {}
         };
-      let jm = 0;
-      const Vm = (fm, hm) => {
-        if (jm + hm > Tm) throw new Error(`${mm} decoded past its module's ${Tm} bytes`);
-        Zm(Dm.bb, new Dm.n(Rm), [new Dm.n(fm), jm]);
+      let hD = 0;
+      const nD = (wD, pD) => {
+        if (hD + pD > zD) throw new Error(`${DD} decoded past its module's ${zD} bytes`);
+        PD(cD.Y, new cD.o(RD), [new cD.o(wD), hD]);
         try {
-          Zm(om, pm, [new Dm.n(Rm, jm, hm)])
+          PD(fD, AD, [new cD.o(RD, hD, pD)])
         } catch {}
-        jm += hm
+        hD += pD
       };
-      let Im, Km;
+      let MD, OD;
       try {
-        Im = new cm(mm, Tm, Vm, hm, im)
-      } catch (zm) {
-        throw qm(zm), zm
+        MD = new XD(DD, zD, nD, pD, gD)
+      } catch (VD) {
+        throw GD(VD), VD
       }
-      const Qm = mm => {
-        Im.fail(mm), void 0 !== Km && Xm(Km)
+      const JD = DD => {
+        MD.fail(DD), void 0 !== OD && SD(OD)
       };
-      let nm = !1;
-      fm.addEventListener("abort", (() => {
-        nm && Im.markWorkerFailed(), Qm(new Error(`${mm} stalled`))
+      let ED = !1;
+      wD.addEventListener("abort", (() => {
+        ED && MD.markWorkerFailed(), JD(new Error(`${DD} stalled`))
       }), {
         once: !0
-      }), (0, Am.v)(Em, (() => {}), Qm);
+      }), (0, sD.u)(UD, (() => {}), JD);
       try {
-        let xm;
+        let rD;
         try {
-          xm = await fetch(mm, {
-            signal: fm
+          rD = await fetch(DD, {
+            signal: wD
           })
-        } catch (zm) {
-          throw new Error(`Fetching ${mm} failed: ${(0,wm.c)(zm)}`)
+        } catch (VD) {
+          throw new Error(`Fetching ${DD} failed: ${(0,LD.d)(VD)}`)
         }
         const {
-          ok: im,
-          status: Rm,
-          body: pm
-        } = function(mm, Tm) {
+          ok: gD,
+          status: RD,
+          body: AD
+        } = function(DD, zD) {
           try {
             const {
-              ok: mm,
-              status: fm
-            } = Tm;
+              ok: DD,
+              status: wD
+            } = zD;
             return {
-              ok: mm,
-              status: fm,
-              body: Zm(Dm.$, Tm, [])
+              ok: DD,
+              status: wD,
+              body: PD(cD.U, zD, [])
             }
           } catch {
-            throw new Error(`${mm} came in a response a page script made`)
+            throw new Error(`${DD} came in a response a page script made`)
           }
-        }(mm, xm);
-        if (!im) throw new Error(`Fetching ${mm} failed: HTTP ${Rm}`);
-        hm();
-        const Em = Zm(Dm.O, pm, []);
-        Km = Em;
-        const om = () => {
-          Xm(Em)
+        }(DD, rD);
+        if (!gD) throw new Error(`Fetching ${DD} failed: HTTP ${RD}`);
+        pD();
+        const UD = PD(cD.H, AD, []);
+        OD = UD;
+        const fD = () => {
+          SD(UD)
         };
-        for ((0, Am.v)(Im.decoded, om, om);;) {
-          let Tm;
+        for ((0, sD.u)(MD.decoded, fD, fD);;) {
+          let zD;
           try {
-            Tm = await Zm(Dm._, Em, [])
-          } catch (zm) {
-            throw new Error(`Downloading ${mm} failed: ${(0,wm.c)(zm)}`)
+            zD = await PD(cD.T, UD, [])
+          } catch (VD) {
+            throw new Error(`Downloading ${DD} failed: ${(0,LD.d)(VD)}`)
           }
-          if (Tm.done) break;
-          hm(), Im.push(Tm.value)
+          if (zD.done) break;
+          pD(), MD.push(zD.value)
         }
-        if (nm = !0, Im.end(), await Im.decoded, am(), jm !== Tm) throw new Error(`${mm} ended before its module did`)
-      } catch (zm) {
-        throw qm(zm), Qm(zm), zm
+        if (ED = !0, MD.end(), await MD.decoded, KD(), hD !== zD) throw new Error(`${DD} ended before its module did`)
+      } catch (VD) {
+        throw GD(VD), JD(VD), VD
       }
-      Im.terminate();
+      MD.terminate();
       try {
-        Zm(Om, pm, [])
+        PD(ID, AD, [])
       } catch {}
-      const Jm = await Em;
-      return void 0 !== xm && await (0, Dm.A)(mm, new Dm.n(Rm), {
-        sha256: xm.sha256,
+      const QD = await UD;
+      return void 0 !== rD && await (0, cD.v)(DD, new cD.o(RD), {
+        sha256: rD.sha256,
         onMismatch: () => {}
-      }), Jm
+      }), QD
     }
 
-    function Xm(mm) {
+    function SD(DD) {
       try {
-        (0, Dm.X)(mm.cancel())
+        (0, cD.R)(DD.cancel())
       } catch {}
     }
-    const Pm = ".zst.bin",
-      Hm = 1e3;
-    let ym = null;
+    const iD = ".zst.bin",
+      lD = 1e3;
+    let WD = null;
 
-    function Cm(mm) {
-      return ym ??= function() {
-        const mm = new Map,
-          Tm = "bloxd_wasm_webgpu:5121192,bloxd_wasm_webgl:5503528,bloxd_wasm_webgl1:4839018,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3704228";
-        for (const fm of Tm?.split(",") ?? []) {
-          const [Tm = "", hm] = fm.split(":"), Am = Number(hm);
-          Number.isInteger(Am) && Am > 0 && mm.set(Tm, Am)
+    function ND(DD) {
+      return WD ??= function() {
+        const DD = new Map,
+          zD = "bloxd_wasm_webgpu:5121192,bloxd_wasm_webgl:5503528,bloxd_wasm_webgl1:4839018,bloxd_wasm_workers:201241,bloxd_wasm_models:311531,bloxd_wasm_client:3704228";
+        for (const wD of zD?.split(",") ?? []) {
+          const [zD = "", pD] = wD.split(":"), sD = Number(pD);
+          Number.isInteger(sD) && sD > 0 && DD.set(zD, sD)
         }
-        return mm
-      }(), ym.get(mm)
+        return DD
+      }(), WD.get(DD)
     }
-    async function rm(mm, Tm) {
-      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const hm = Cm(mm.name);
-      if (void 0 === hm) return sm(await lm(mm, Tm, fm), "cold-wasm");
-      const am = Nm ? new Jm : null;
-      let xm;
+    async function ZD(DD, zD) {
+      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const pD = ND(DD.name);
+      if (void 0 === pD) return yD(await kD(DD, zD, wD), "cold-wasm");
+      const KD = jD ? new QD : null;
+      let rD;
       try {
-        if (im = mm.url(), Em()?.includes(pm(im)) && await async function(mm) {
-            const Tm = new AbortController;
-            let fm;
-            const hm = (0, Am.i)((mm => {
-              fm = setTimeout((() => {
-                Tm.abort(), mm(null)
-              }), Hm)
+        if (gD = DD.url(), UD()?.includes(AD(gD)) && await async function(DD) {
+            const zD = new AbortController;
+            let wD;
+            const pD = (0, sD.k)((DD => {
+              wD = setTimeout((() => {
+                zD.abort(), DD(null)
+              }), lD)
             }));
             try {
-              const fm = fetch(mm.href, {
+              const wD = fetch(DD.href, {
                   cache: "only-if-cached",
                   mode: "same-origin",
-                  signal: Tm.signal
+                  signal: zD.signal
                 }),
-                am = await (0, Am.r)([fm, hm]);
-              return !!am?.ok && ((0, Dm.X)(am.body.cancel()), !0)
+                KD = await (0, sD.r)([wD, pD]);
+              return !!KD?.ok && ((0, cD.R)(KD.body.cancel()), !0)
             } catch {
               return !1
             } finally {
-              clearTimeout(fm)
+              clearTimeout(wD)
             }
-          }(mm.url())) return am?.stop(), await async function(mm, Tm, fm, hm) {
-          let Am = !1;
-          const am = fm && {
-            sha256: fm.sha256,
+          }(DD.url())) return KD?.stop(), await async function(DD, zD, wD, pD) {
+          let sD = !1;
+          const KD = wD && {
+            sha256: wD.sha256,
             onMismatch: () => {
-              Am = !0
+              sD = !0
             }
           };
           try {
-            return sm(await lm(mm, am, hm), "warm")
-          } catch (xm) {
-            const hm = await Mm(mm, Tm, fm, null);
-            if (null === hm) throw Am && fm.onMismatch(), xm;
-            return console.warn(`${mm.url().href} from the HTTP cache failed: ${(0,wm.c)(xm)}: loaded its copy instead`), sm(hm, Am ? "warm-refused" : "warm-broken")
+            return yD(await kD(DD, KD, pD), "warm")
+          } catch (rD) {
+            const pD = await mD(DD, zD, wD, null);
+            if (null === pD) throw sD && wD.onMismatch(), rD;
+            return console.warn(`${DD.url().href} from the HTTP cache failed: ${(0,LD.d)(rD)}: loaded its copy instead`), yD(pD, sD ? "warm-refused" : "warm-broken")
           }
-        }(mm, hm, Tm, fm);
-        xm = await Mm(mm, hm, Tm, am)
+        }(DD, pD, zD, wD);
+        rD = await mD(DD, pD, zD, KD)
       } finally {
-        am?.stop()
+        KD?.stop()
       }
-      var im;
-      return null !== xm ? sm(xm, "cold-worker") : sm(await lm(mm, Tm, fm), "cold-wasm")
+      var gD;
+      return null !== rD ? yD(rD, "cold-worker") : yD(await kD(DD, zD, wD), "cold-wasm")
     }
 
-    function sm(mm, Tm) {
+    function yD(DD, zD) {
       return {
         __proto__: null,
-        module: mm,
-        path: Tm
+        module: DD,
+        path: zD
       }
     }
 
-    function lm(mm, Tm, fm) {
-      return void 0 === Cm(mm.name) ? (0, Dm.G)(mm.url(), Tm, fm) : (0, Dm.G)(mm.url(), Tm, {
-        ...fm,
+    function kD(DD, zD, wD) {
+      return void 0 === ND(DD.name) ? (0, cD.B)(DD.url(), zD, wD) : (0, cD.B)(DD.url(), zD, {
+        ...wD,
         hideThen: !0,
         onDownloaded: () => {
-          ! function(mm) {
-            const Tm = Em();
-            if (null === Tm) return;
-            const fm = pm(mm),
-              hm = Tm.filter((mm => mm !== fm));
-            hm.push(fm);
+          ! function(DD) {
+            const zD = UD();
+            if (null === zD) return;
+            const wD = AD(DD),
+              pD = zD.filter((DD => DD !== wD));
+            pD.push(wD);
             try {
-              localStorage.setItem(im, JSON.stringify(hm.slice(-Rm)))
-            } catch (Am) {
-              console.warn(`Bloxd wasm: ${fm} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, Am)
+              localStorage.setItem(gD, JSON.stringify(pD.slice(-RD)))
+            } catch (sD) {
+              console.warn(`Bloxd wasm: ${wD} could not be recorded as downloaded: a later join asks the HTTP cache nothing for it`, sD)
             }
-          }(mm.url()), fm.onDownloaded?.()
+          }(DD.url()), wD.onDownloaded?.()
         }
       })
     }
-    async function Mm(mm, Tm, fm, hm) {
-      if (!Nm || !nm()) return null;
-      const Am = mm.url(),
-        am = `${Am.href}${Pm}`;
+    async function mD(DD, zD, wD, pD) {
+      if (!jD || !ED()) return null;
+      const sD = DD.url(),
+        KD = `${sD.href}${iD}`;
       try {
-        return await (0, Dm.eb)(am, ((mm, Am, xm) => Gm(am, Tm, mm, Am, xm, fm, hm)))
-      } catch (xm) {
-        return console.warn(`${(0,wm.c)(xm)}: loading ${Am.href} instead`), null
+        return await (0, cD.ab)(KD, ((DD, sD, rD) => dD(KD, zD, DD, sD, rD, wD, pD)))
+      } catch (rD) {
+        return console.warn(`${(0,LD.d)(rD)}: loading ${sD.href} instead`), null
       }
     }
-    let um = null,
-      Bm = !1;
-    const Lm = new Map,
-      tm = new Map;
+    let eD = null,
+      oD = !1;
+    const aD = new Map,
+      uD = new Map;
 
-    function Um(mm, Tm, fm) {
-      return null === um ? um = gm(mm, Tm, fm?.memoryMaximumBytes) : mm !== um.build ? console.warn(`Bloxd wasm: ${mm.name} was asked for after ${um.build.name} started loading, which this thread keeps`) : Tm.name !== um.workers.name && console.warn(`Bloxd wasm: ${Tm.name} was asked for workers after ${um.workers.name}, which this thread keeps`), fm?.reloadFailedDownload && !Bm && (0, hm.bb)() && (Bm = !0, um = gm(um.build, um.workers, um.memoryMaximumBytes)), um.loaded
+    function vD(DD, zD, wD) {
+      return null === eD ? eD = FD(DD, zD, wD?.memoryMaximumBytes) : DD !== eD.build ? console.warn(`Bloxd wasm: ${DD.name} was asked for after ${eD.build.name} started loading, which this thread keeps`) : zD.name !== eD.workers.name && console.warn(`Bloxd wasm: ${zD.name} was asked for workers after ${eD.workers.name}, which this thread keeps`), wD?.reloadFailedDownload && !oD && (0, pD.$)() && (oD = !0, eD = FD(eD.build, eD.workers, eD.memoryMaximumBytes)), eD.loaded
     }
 
-    function dm(mm, Tm) {
-      if (null !== um) return (0, Am.f)([]);
-      const fm = mm.filter((mm => !Lm.has(mm.name))).map((mm => {
-        const fm = new AbortController,
-          hm = {
-            compiled: lm(mm, (0, am.c)(mm.name), {
-              priority: Tm,
-              Af: fm.signal,
+    function tD(DD, zD) {
+      if (null !== eD) return (0, sD.h)([]);
+      const wD = DD.filter((DD => !aD.has(DD.name))).map((DD => {
+        const wD = new AbortController,
+          pD = {
+            compiled: kD(DD, (0, KD.d)(DD.name), {
+              priority: zD,
+              sw: wD.signal,
               onDownloaded: () => {
-                hm.downloaded = !0
+                pD.downloaded = !0
               },
               retries: {
                 onRetry: () => {
-                  hm.downloaded = !1, null !== um && fm.abort()
+                  pD.downloaded = !1, null !== eD && wD.abort()
                 }
               }
             }),
-            cancel: fm,
+            cancel: wD,
             downloaded: !1
           };
-        return Lm.set(mm.name, hm), (0, Am.i)((Tm => {
-          (0, Am.v)(hm.compiled, (() => {
-            hm.downloaded = !0, Tm()
-          }), (hm => {
-            fm.signal.aborted || console.warn(`Bloxd wasm: ${mm.name}'s compile ahead of the load failed: the load compiles it afresh`, hm), Tm()
+        return aD.set(DD.name, pD), (0, sD.k)((zD => {
+          (0, sD.u)(pD.compiled, (() => {
+            pD.downloaded = !0, zD()
+          }), (pD => {
+            wD.signal.aborted || console.warn(`Bloxd wasm: ${DD.name}'s compile ahead of the load failed: the load compiles it afresh`, pD), zD()
           }))
         }))
       }));
-      return (0, Am.f)(fm)
+      return (0, sD.h)(wD)
     }
 
-    function gm(mm, Tm, fm) {
-      const am = (0, hm.J)((async () => {
-        (0, xm.z)(), tm.clear();
-        const fm = Fm(mm),
-          hm = Tm.name === mm.name ? fm : Fm(Tm);
+    function FD(DD, zD, wD) {
+      const KD = (0, pD.F)((async () => {
+        (0, rD.E)(), uD.clear();
+        const wD = HD(DD),
+          pD = zD.name === DD.name ? wD : HD(zD);
         for (const {
-            cancel: mm
+            cancel: DD
           }
-          of Lm.values()) mm.abort();
-        Lm.clear(), await (0, Am.f)([fm, hm]);
-        const am = await fm,
-          wm = await hm;
-        return (0, xm.z)(), {
-          module: am,
-          workerModule: wm
+          of aD.values()) DD.abort();
+        aD.clear(), await (0, sD.h)([wD, pD]);
+        const KD = await wD,
+          LD = await pD;
+        return (0, rD.E)(), {
+          module: KD,
+          workerModule: LD
         }
-      }), mm, fm);
+      }), DD, wD);
       return {
-        build: mm,
-        workers: Tm,
-        memoryMaximumBytes: fm,
-        loaded: am
+        build: DD,
+        workers: zD,
+        memoryMaximumBytes: wD,
+        loaded: KD
       }
     }
 
-    function Wm(mm) {
-      return tm.get(mm)
+    function YD(DD) {
+      return uD.get(DD)
     }
 
-    function Fm(mm) {
-      const Tm = performance.now(),
-        fm = Lm.get(mm.name);
-      Lm.delete(mm.name);
-      const hm = !0 === fm?.downloaded ? fm : void 0;
-      return void 0 !== fm && void 0 === hm && fm.cancel.abort(), (0, Am.i)(((fm, am) => {
-        const xm = (hm, Am) => {
-            tm.set(mm.name, {
-              path: Am,
-              ms: performance.now() - Tm
-            }), fm(hm)
+    function HD(DD) {
+      const zD = performance.now(),
+        wD = aD.get(DD.name);
+      aD.delete(DD.name);
+      const pD = !0 === wD?.downloaded ? wD : void 0;
+      return void 0 !== wD && void 0 === pD && wD.cancel.abort(), (0, sD.k)(((wD, KD) => {
+        const rD = (pD, sD) => {
+            uD.set(DD.name, {
+              path: sD,
+              ms: performance.now() - zD
+            }), wD(pD)
           },
-          wm = () => {
-            (0, Am.v)(TT(mm), (mm => {
+          LD = () => {
+            (0, sD.u)(Dz(DD), (DD => {
               let {
-                module: Tm,
-                path: fm
-              } = mm;
-              xm(Tm, fm)
-            }), am)
+                module: zD,
+                path: wD
+              } = DD;
+              rD(zD, wD)
+            }), KD)
           };
-        void 0 === hm ? wm() : (0, Am.v)(hm.compiled, (mm => {
-          xm(mm, "ahead")
-        }), wm)
+        void 0 === pD ? LD() : (0, sD.u)(pD.compiled, (DD => {
+          rD(DD, "ahead")
+        }), LD)
       }))
     }
-    async function mT(mm, Tm) {
+    async function qD(DD, zD) {
       const {
-        module: fm
-      } = await TT(mm, {
-        retries: Tm
+        module: wD
+      } = await Dz(DD, {
+        retries: zD
       });
-      return fm
+      return wD
     }
-    async function TT(mm) {
-      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return await rm(mm, (0, am.c)(mm.name), Tm)
+    async function Dz(DD) {
+      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      return await ZD(DD, (0, KD.d)(DD.name), zD)
     }
   },
-  6571: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => xm
+  6653: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => rD
     });
-    var hm = fm(2876);
-    const Am = {
-      bloxd_wasm: () => "613a21bc0b0d6795610be638608f6f896b7ac6493e7e1f81f22f78c10c130b20",
-      bloxd_wasm_client: () => "f500bfdaa7b954839685358849e4855ad2aa63607292f3b2cdd2ad1665214c7a",
-      bloxd_wasm_workers: () => "7dd9b485307e91e305e2fb397554b566560181e06f5a5b081a6f1c61898558ff",
-      bloxd_wasm_models: () => "9693b1d78529633a0838c883241b819b5bd68812b4c6423ce62c95631b8c3415",
-      bloxd_wasm_webgpu: () => "de2f06fb711bba52682b2f003e06cf94cb10abdd72e4193fc794f84415757080",
-      bloxd_wasm_webgl: () => "7e9ad7e1a934a29dd92aaf8ef4a10e072c55d9316e0d80238bf66fd7535f3ddf",
-      bloxd_wasm_webgl1: () => "700b62082439f7ae7c202d3ac83cf13cabe29e7e952f1a87e7cd44b1133e3b9f",
-      bloxd_wasm_replay: () => "5341c2187f01707d5afbab140cf74533d8b2076e23e63e9a772320066cfa1513",
-      bloxd_wasm_recorder: () => "c80280c22c0f6493e551f45d0599c93183458a244f322d6edf6273a3ebf0b864",
-      bloxd_wasm_anim: () => "44db7f8e6b21308f32edc10720aadbb617cfd625a2a950f110c26990904d5bc8",
-      bloxd_wasm_textures: () => "273e6f1c6bf63d7b0982fe740c5c8b042be9257ae55fae593545099e99bf76a8",
-      bloxd_wasm_shader_pack: () => "2cca231ad5b1288911ab113a53e7191b13627c0fdb4147c6e779bb6b366f71af"
+    var pD = wD(2868);
+    const sD = {
+      bloxd_wasm: () => "65e53edc5e3e962e1a92a587d8a28027f8eb8bbf9d122ae3c4664a5d1e3eeb52",
+      bloxd_wasm_client: () => "8bc7382052570456e32df38bb06cf837a4cdcf0c6efeb71183c9d9d96efdecc2",
+      bloxd_wasm_workers: () => "9d62ece3db9e2837185fc5cbad53d14e1aa611299a39cfe5dd4f80c692bc8153",
+      bloxd_wasm_models: () => "d952d307f65587ac75621c390045d763a956e5786dbdece0affe80fd6c11a572",
+      bloxd_wasm_webgpu: () => "aaf47b22bd97d7f9059c5cc77097acb8001c433a0191aa99b3b272ad0af40d0c",
+      bloxd_wasm_webgl: () => "758269d3a7396a32bdaeee633b3c45cd4d1efb4fd30ca2bacc7ee762494718ff",
+      bloxd_wasm_webgl1: () => "e473a9c2912b1b2ebd1af57ce23061b2484e5ad7c6b3bb8302c55025cbdc6150",
+      bloxd_wasm_replay: () => "fb6a7b64a8768ff2eb5122b936925ed35cbdcfc5efaf1bf3b7d53b1f4d483eae",
+      bloxd_wasm_recorder: () => "b5295674c11fb730f85cc5f9aef22b1971a45cc8f95ff014897be3749114a35e",
+      bloxd_wasm_anim: () => "2108b3f685a0b7e36780befaa10a018b8b914c00b52465c4d8de81cd4aaad1b7",
+      bloxd_wasm_textures: () => "441f3f36c1158de1a8f992401057b7b30a10760b00006c152617c9a76cf0dbfa",
+      bloxd_wasm_shader_pack: () => "504138fb584a53bf18bce9d737fbad86034e70bedc89181a53adee1dec66ef20"
     };
-    var am = fm(4632);
+    var KD = wD(4722);
 
-    function xm(mm) {
-      const Tm = Object.prototype.hasOwnProperty.call(Am, mm) ? Am[mm]() : void 0;
-      if (void 0 !== Tm) return {
-        sha256: Tm,
-        onMismatch: am.x
+    function rD(DD) {
+      const zD = Object.prototype.hasOwnProperty.call(sD, DD) ? sD[DD]() : void 0;
+      if (void 0 !== zD) return {
+        sha256: zD,
+        onMismatch: KD.B
       };
-      throw new hm.j(`${mm} has no release digest, so this build refuses it`)
+      throw new pD.l(`${DD} has no release digest, so this build refuses it`)
     }
   },
-  6586: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => hm,
-      i: () => xm,
-      l: () => wm,
-      p: () => Am,
-      t: () => am
+  6678: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => pD,
+      d: () => rD,
+      f: () => LD,
+      h: () => sD,
+      l: () => KD
     });
-    const hm = ["terrain", "liquid", "model"];
+    const pD = ["terrain", "liquid", "model"];
 
-    function Am() {
-      const mm = [];
-      for (const Tm of [!1, !0])
-        for (const fm of hm) mm.push({
-          strict: Tm,
-          program: fm
+    function sD() {
+      const DD = [];
+      for (const zD of [!1, !0])
+        for (const wD of pD) DD.push({
+          strict: zD,
+          program: wD
         });
-      return mm
+      return DD
     }
 
-    function am(mm) {
-      return `${mm.strict?"strict":"allow"}.${mm.program}`
+    function KD(DD) {
+      return `${DD.strict?"strict":"allow"}.${DD.program}`
     }
 
-    function xm(mm) {
-      return !mm.hooks.vertex && !mm.hooks.surface && !mm.hooks.light
+    function rD(DD) {
+      return !DD.hooks.vertex && !DD.hooks.surface && !DD.hooks.light
     }
 
-    function wm(mm, Tm) {
-      return "off" !== Tm && (null === mm || mm.some((mm => mm.key.strict === ("strict" === Tm) && !xm(mm))))
+    function LD(DD, zD) {
+      return "off" !== zD && (null === DD || DD.some((DD => DD.key.strict === ("strict" === zD) && !rD(DD))))
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

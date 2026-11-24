@@ -1,181 +1,181 @@
 export const id = 294;
 export const ids = [294];
 export const modules = {
-  41356: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => IT,
-      h: () => Nm,
-      ChangeSet: () => Gm,
-      k: () => eT,
-      o: () => lm,
-      q: () => PT,
-      s: () => Bm,
-      u: () => em,
-      x: () => aT,
-      C: () => MT,
-      y: () => uT,
-      G: () => yT,
-      J: () => nT,
-      M: () => Fm,
-      O: () => Ym,
-      Q: () => JT,
-      R: () => Zm,
-      U: () => bm,
-      Y: () => HT,
-      $: () => Tf,
-      ab: () => zm,
-      eb: () => ff,
-      gb: () => km
+  41212: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => nz,
+      e: () => jD,
+      ChangeSet: () => dD,
+      h: () => Tz,
+      j: () => kD,
+      k: () => Sz,
+      n: () => oD,
+      q: () => bD,
+      u: () => sz,
+      z: () => kz,
+      v: () => mz,
+      C: () => lz,
+      E: () => Jz,
+      G: () => HD,
+      K: () => BD,
+      M: () => Ez,
+      P: () => PD,
+      T: () => xD,
+      W: () => iz,
+      Z: () => Dw,
+      _: () => VD,
+      bb: () => zw,
+      fb: () => CD
     });
-    let hm = [],
-      Am = [];
+    let pD = [],
+      sD = [];
 
-    function am(mm) {
-      if (mm < 768) return !1;
-      for (let Tm = 0, fm = hm.length;;) {
-        let am = Tm + fm >> 1;
-        if (mm < hm[am]) fm = am;
+    function KD(DD) {
+      if (DD < 768) return !1;
+      for (let zD = 0, wD = pD.length;;) {
+        let KD = zD + wD >> 1;
+        if (DD < pD[KD]) wD = KD;
         else {
-          if (!(mm >= Am[am])) return !0;
-          Tm = am + 1
+          if (!(DD >= sD[KD])) return !0;
+          zD = KD + 1
         }
-        if (Tm == fm) return !1
+        if (zD == wD) return !1
       }
     }
 
-    function xm(mm) {
-      return mm >= 127462 && mm <= 127487
+    function rD(DD) {
+      return DD >= 127462 && DD <= 127487
     }(() => {
-      let mm = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((mm => mm ? parseInt(mm, 36) : 1));
-      for (let Tm = 0, fm = 0; Tm < mm.length; Tm++)(Tm % 2 ? Am : hm).push(fm += mm[Tm])
+      let DD = "lc,34,7n,7,7b,19,,,,2,,2,,,20,b,1c,l,g,,2t,7,2,6,2,2,,4,z,,u,r,2j,b,1m,9,9,,o,4,,9,,3,,5,17,3,3b,f,,w,1j,,,,4,8,4,,3,7,a,2,t,,1m,,,,2,4,8,,9,,a,2,q,,2,2,1l,,4,2,4,2,2,3,3,,u,2,3,,b,2,1l,,4,5,,2,4,,k,2,m,6,,,1m,,,2,,4,8,,7,3,a,2,u,,1n,,,,c,,9,,14,,3,,1l,3,5,3,,4,7,2,b,2,t,,1m,,2,,2,,3,,5,2,7,2,b,2,s,2,1l,2,,,2,4,8,,9,,a,2,t,,20,,4,,2,3,,,8,,29,,2,7,c,8,2q,,2,9,b,6,22,2,r,,,,,,1j,e,,5,,2,5,b,,10,9,,2u,4,,6,,2,2,2,p,2,4,3,g,4,d,,2,2,6,,f,,jj,3,qa,3,t,3,t,2,u,2,1s,2,,7,8,,2,b,9,,19,3,3b,2,y,,3a,3,4,2,9,,6,3,63,2,2,,1m,,,7,,,,,2,8,6,a,2,,1c,h,1r,4,1c,7,,,5,,14,9,c,2,w,4,2,2,,3,1k,,,2,3,,,3,1m,8,2,2,48,3,,d,,7,4,,6,,3,2,5i,1m,,5,ek,,5f,x,2da,3,3x,,2o,w,fe,6,2x,2,n9w,4,,a,w,2,28,2,7k,,3,,4,,p,2,5,,47,2,q,i,d,,12,8,p,b,1a,3,1c,,2,4,2,2,13,,1v,6,2,2,2,2,c,,8,,1b,,1f,,,3,2,2,5,2,,,16,2,8,,6m,,2,,4,,fn4,,kh,g,g,g,a6,2,gt,,6a,,45,5,1ae,3,,2,5,4,14,3,4,,4l,2,fx,4,ar,2,49,b,4w,,1i,f,1k,3,1d,4,2,2,1x,3,10,5,,8,1q,,c,2,1g,9,a,4,2,,2n,3,2,,,2,6,,4g,,3,8,l,2,1l,2,,,,,m,,e,7,3,5,5f,8,2,3,,,n,,29,,2,6,,,2,,,2,,2,6j,,2,4,6,2,,2,r,2,2d,8,2,,,2,2y,,,,2,6,,,2t,3,2,4,,5,77,9,,2,6t,,a,2,,,4,,40,4,2,2,4,,w,a,14,6,2,4,8,,9,6,2,3,1a,d,,2,ba,7,,6,,,2a,m,2,7,,2,,2,3e,6,3,,,2,,7,,,20,2,3,,,,9n,2,f0b,5,1n,7,t4,,1r,4,29,,f5k,2,43q,,,3,4,5,8,8,2,7,u,4,44,3,1iz,1j,4,1e,8,,e,,m,5,,f,11s,7,,h,2,7,,2,,5,79,7,c5,4,15s,7,31,7,240,5,gx7k,2o,3k,6o".split(",").map((DD => DD ? parseInt(DD, 36) : 1));
+      for (let zD = 0, wD = 0; zD < DD.length; zD++)(zD % 2 ? sD : pD).push(wD += DD[zD])
     })();
-    const wm = 8205;
+    const LD = 8205;
 
-    function Dm(mm, Tm) {
-      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? im : Rm)(mm, Tm, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function cD(DD, zD) {
+      return (!(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2] ? gD : RD)(DD, zD, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function im(mm, Tm, fm) {
-      if (Tm == mm.length) return Tm;
-      Tm && Em(mm.charCodeAt(Tm)) && om(mm.charCodeAt(Tm - 1)) && Tm--;
-      let hm = pm(mm, Tm);
-      for (Tm += Om(hm); Tm < mm.length;) {
-        let Am = pm(mm, Tm);
-        if (hm == wm || Am == wm || fm && am(Am)) Tm += Om(Am), hm = Am;
+    function gD(DD, zD, wD) {
+      if (zD == DD.length) return zD;
+      zD && UD(DD.charCodeAt(zD)) && fD(DD.charCodeAt(zD - 1)) && zD--;
+      let pD = AD(DD, zD);
+      for (zD += ID(pD); zD < DD.length;) {
+        let sD = AD(DD, zD);
+        if (pD == LD || sD == LD || wD && KD(sD)) zD += ID(sD), pD = sD;
         else {
-          if (!xm(Am)) break;
+          if (!rD(sD)) break;
           {
-            let fm = 0,
-              hm = Tm - 2;
-            for (; hm >= 0 && xm(pm(mm, hm));) fm++, hm -= 2;
-            if (fm % 2 == 0) break;
-            Tm += 2
+            let wD = 0,
+              pD = zD - 2;
+            for (; pD >= 0 && rD(AD(DD, pD));) wD++, pD -= 2;
+            if (wD % 2 == 0) break;
+            zD += 2
           }
         }
       }
-      return Tm
+      return zD
     }
 
-    function Rm(mm, Tm, fm) {
-      for (; Tm > 0;) {
-        let hm = im(mm, Tm - 2, fm);
-        if (hm < Tm) return hm;
-        Tm--
+    function RD(DD, zD, wD) {
+      for (; zD > 0;) {
+        let pD = gD(DD, zD - 2, wD);
+        if (pD < zD) return pD;
+        zD--
       }
       return 0
     }
 
-    function pm(mm, Tm) {
-      let fm = mm.charCodeAt(Tm);
-      if (!om(fm) || Tm + 1 == mm.length) return fm;
-      let hm = mm.charCodeAt(Tm + 1);
-      return Em(hm) ? hm - 56320 + (fm - 55296 << 10) + 65536 : fm
+    function AD(DD, zD) {
+      let wD = DD.charCodeAt(zD);
+      if (!fD(wD) || zD + 1 == DD.length) return wD;
+      let pD = DD.charCodeAt(zD + 1);
+      return UD(pD) ? pD - 56320 + (wD - 55296 << 10) + 65536 : wD
     }
 
-    function Em(mm) {
-      return mm >= 56320 && mm < 57344
+    function UD(DD) {
+      return DD >= 56320 && DD < 57344
     }
 
-    function om(mm) {
-      return mm >= 55296 && mm < 56320
+    function fD(DD) {
+      return DD >= 55296 && DD < 56320
     }
 
-    function Om(mm) {
-      return mm < 65536 ? 1 : 2
+    function ID(DD) {
+      return DD < 65536 ? 1 : 2
     }
-    class Ym {
-      lineAt(mm) {
-        if (mm < 0 || mm > this.length) throw new RangeError(`Invalid position ${mm} in document of length ${this.length}`);
-        return this.lineInner(mm, !1, 1, 0)
+    class BD {
+      lineAt(DD) {
+        if (DD < 0 || DD > this.length) throw new RangeError(`Invalid position ${DD} in document of length ${this.length}`);
+        return this.lineInner(DD, !1, 1, 0)
       }
-      line(mm) {
-        if (mm < 1 || mm > this.lines) throw new RangeError(`Invalid line number ${mm} in ${this.lines}-line document`);
-        return this.lineInner(mm, !0, 1, 0)
+      line(DD) {
+        if (DD < 1 || DD > this.lines) throw new RangeError(`Invalid line number ${DD} in ${this.lines}-line document`);
+        return this.lineInner(DD, !0, 1, 0)
       }
-      replace(mm, Tm, fm) {
-        [mm, Tm] = cm(this, mm, Tm);
-        let hm = [];
-        return this.decompose(0, mm, hm, 2), fm.length && fm.decompose(0, fm.length, hm, 3), this.decompose(Tm, this.length, hm, 1), jm.from(hm, this.length - (Tm - mm) + fm.length)
+      replace(DD, zD, wD) {
+        [DD, zD] = XD(this, DD, zD);
+        let pD = [];
+        return this.decompose(0, DD, pD, 2), wD.length && wD.decompose(0, wD.length, pD, 3), this.decompose(zD, this.length, pD, 1), hD.from(pD, this.length - (zD - DD) + wD.length)
       }
-      append(mm) {
-        return this.replace(this.length, this.length, mm)
+      append(DD) {
+        return this.replace(this.length, this.length, DD)
       }
-      slice(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        [mm, Tm] = cm(this, mm, Tm);
-        let fm = [];
-        return this.decompose(mm, Tm, fm, 0), jm.from(fm, Tm - mm)
+      slice(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        [DD, zD] = XD(this, DD, zD);
+        let wD = [];
+        return this.decompose(DD, zD, wD, 0), hD.from(wD, zD - DD)
       }
-      eq(mm) {
-        if (mm == this) return !0;
-        if (mm.length != this.length || mm.lines != this.lines) return !1;
-        let Tm = this.scanIdentical(mm, 1),
-          fm = this.length - this.scanIdentical(mm, -1),
-          hm = new Km(this),
-          Am = new Km(mm);
-        for (let am = Tm, xm = Tm;;) {
-          if (hm.next(am), Am.next(am), am = 0, hm.lineBreak != Am.lineBreak || hm.done != Am.done || hm.value != Am.value) return !1;
-          if (xm += hm.value.length, hm.done || xm >= fm) return !0
+      eq(DD) {
+        if (DD == this) return !0;
+        if (DD.length != this.length || DD.lines != this.lines) return !1;
+        let zD = this.scanIdentical(DD, 1),
+          wD = this.length - this.scanIdentical(DD, -1),
+          pD = new OD(this),
+          sD = new OD(DD);
+        for (let KD = zD, rD = zD;;) {
+          if (pD.next(KD), sD.next(KD), KD = 0, pD.lineBreak != sD.lineBreak || pD.done != sD.done || pD.value != sD.value) return !1;
+          if (rD += pD.value.length, pD.done || rD >= wD) return !0
         }
       }
       iter() {
-        return new Km(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
+        return new OD(this, arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1)
       }
-      iterRange(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
-        return new Qm(this, mm, Tm)
+      iterRange(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length;
+        return new JD(this, DD, zD)
       }
-      iterLines(mm, Tm) {
-        let fm;
-        if (null == mm) fm = this.iter();
+      iterLines(DD, zD) {
+        let wD;
+        if (null == DD) wD = this.iter();
         else {
-          null == Tm && (Tm = this.lines + 1);
-          let hm = this.line(mm).from;
-          fm = this.iterRange(hm, Math.max(hm, Tm == this.lines + 1 ? this.length : Tm <= 1 ? 0 : this.line(Tm - 1).to))
+          null == zD && (zD = this.lines + 1);
+          let pD = this.line(DD).from;
+          wD = this.iterRange(pD, Math.max(pD, zD == this.lines + 1 ? this.length : zD <= 1 ? 0 : this.line(zD - 1).to))
         }
-        return new nm(fm)
+        return new ED(wD)
       }
       toString() {
         return this.sliceString(0)
       }
       toJSON() {
-        let mm = [];
-        return this.flatten(mm), mm
+        let DD = [];
+        return this.flatten(DD), DD
       }
       constructor() {}
-      static of (mm) {
-        if (0 == mm.length) throw new RangeError("A document must have at least one line");
-        return 1 != mm.length || mm[0] ? mm.length <= 32 ? new qm(mm) : jm.from(qm.split(mm, [])) : Ym.empty
+      static of (DD) {
+        if (0 == DD.length) throw new RangeError("A document must have at least one line");
+        return 1 != DD.length || DD[0] ? DD.length <= 32 ? new GD(DD) : hD.from(GD.split(DD, [])) : BD.empty
       }
     }
-    class qm extends Ym {
-      constructor(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(mm) {
-          let Tm = -1;
-          for (let fm of mm) Tm += fm.length + 1;
-          return Tm
-        }(mm);
-        super(), this.text = mm, this.length = Tm
+    class GD extends BD {
+      constructor(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : function(DD) {
+          let zD = -1;
+          for (let wD of DD) zD += wD.length + 1;
+          return zD
+        }(DD);
+        super(), this.text = DD, this.length = zD
       }
       get lines() {
         return this.text.length
@@ -183,629 +183,629 @@ export const modules = {
       get children() {
         return null
       }
-      lineInner(mm, Tm, fm, hm) {
-        for (let Am = 0;; Am++) {
-          let am = this.text[Am],
-            xm = hm + am.length;
-          if ((Tm ? fm : xm) >= mm) return new Jm(hm, xm, fm, am);
-          hm = xm + 1, fm++
+      lineInner(DD, zD, wD, pD) {
+        for (let sD = 0;; sD++) {
+          let KD = this.text[sD],
+            rD = pD + KD.length;
+          if ((zD ? wD : rD) >= DD) return new QD(pD, rD, wD, KD);
+          pD = rD + 1, wD++
         }
       }
-      decompose(mm, Tm, fm, hm) {
-        let Am = mm <= 0 && Tm >= this.length ? this : new qm(Im(this.text, mm, Tm), Math.min(Tm, this.length) - Math.max(0, mm));
-        if (1 & hm) {
-          let mm = fm.pop(),
-            Tm = Vm(Am.text, mm.text.slice(), 0, Am.length);
-          if (Tm.length <= 32) fm.push(new qm(Tm, mm.length + Am.length));
+      decompose(DD, zD, wD, pD) {
+        let sD = DD <= 0 && zD >= this.length ? this : new GD(MD(this.text, DD, zD), Math.min(zD, this.length) - Math.max(0, DD));
+        if (1 & pD) {
+          let DD = wD.pop(),
+            zD = nD(sD.text, DD.text.slice(), 0, sD.length);
+          if (zD.length <= 32) wD.push(new GD(zD, DD.length + sD.length));
           else {
-            let mm = Tm.length >> 1;
-            fm.push(new qm(Tm.slice(0, mm)), new qm(Tm.slice(mm)))
+            let DD = zD.length >> 1;
+            wD.push(new GD(zD.slice(0, DD)), new GD(zD.slice(DD)))
           }
-        } else fm.push(Am)
+        } else wD.push(sD)
       }
-      replace(mm, Tm, fm) {
-        if (!(fm instanceof qm)) return super.replace(mm, Tm, fm);
-        [mm, Tm] = cm(this, mm, Tm);
-        let hm = Vm(this.text, Vm(fm.text, Im(this.text, 0, mm)), Tm),
-          Am = this.length + fm.length - (Tm - mm);
-        return hm.length <= 32 ? new qm(hm, Am) : jm.from(qm.split(hm, []), Am)
+      replace(DD, zD, wD) {
+        if (!(wD instanceof GD)) return super.replace(DD, zD, wD);
+        [DD, zD] = XD(this, DD, zD);
+        let pD = nD(this.text, nD(wD.text, MD(this.text, 0, DD)), zD),
+          sD = this.length + wD.length - (zD - DD);
+        return pD.length <= 32 ? new GD(pD, sD) : hD.from(GD.split(pD, []), sD)
       }
-      sliceString(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [mm, Tm] = cm(this, mm, Tm);
-        let hm = "";
-        for (let Am = 0, am = 0; Am <= Tm && am < this.text.length; am++) {
-          let xm = this.text[am],
-            wm = Am + xm.length;
-          Am > mm && am && (hm += fm), mm < wm && Tm > Am && (hm += xm.slice(Math.max(0, mm - Am), Tm - Am)), Am = wm + 1
+      sliceString(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [DD, zD] = XD(this, DD, zD);
+        let pD = "";
+        for (let sD = 0, KD = 0; sD <= zD && KD < this.text.length; KD++) {
+          let rD = this.text[KD],
+            LD = sD + rD.length;
+          sD > DD && KD && (pD += wD), DD < LD && zD > sD && (pD += rD.slice(Math.max(0, DD - sD), zD - sD)), sD = LD + 1
         }
-        return hm
+        return pD
       }
-      flatten(mm) {
-        for (let Tm of this.text) mm.push(Tm)
+      flatten(DD) {
+        for (let zD of this.text) DD.push(zD)
       }
       scanIdentical() {
         return 0
       }
-      static split(mm, Tm) {
-        let fm = [],
-          hm = -1;
-        for (let Am of mm) fm.push(Am), hm += Am.length + 1, 32 == fm.length && (Tm.push(new qm(fm, hm)), fm = [], hm = -1);
-        return hm > -1 && Tm.push(new qm(fm, hm)), Tm
+      static split(DD, zD) {
+        let wD = [],
+          pD = -1;
+        for (let sD of DD) wD.push(sD), pD += sD.length + 1, 32 == wD.length && (zD.push(new GD(wD, pD)), wD = [], pD = -1);
+        return pD > -1 && zD.push(new GD(wD, pD)), zD
       }
     }
-    class jm extends Ym {
-      constructor(mm, Tm) {
-        super(), this.children = mm, this.length = Tm, this.lines = 0;
-        for (let fm of mm) this.lines += fm.lines
+    class hD extends BD {
+      constructor(DD, zD) {
+        super(), this.children = DD, this.length = zD, this.lines = 0;
+        for (let wD of DD) this.lines += wD.lines
       }
-      lineInner(mm, Tm, fm, hm) {
-        for (let Am = 0;; Am++) {
-          let am = this.children[Am],
-            xm = hm + am.length,
-            wm = fm + am.lines - 1;
-          if ((Tm ? wm : xm) >= mm) return am.lineInner(mm, Tm, fm, hm);
-          hm = xm + 1, fm = wm + 1
+      lineInner(DD, zD, wD, pD) {
+        for (let sD = 0;; sD++) {
+          let KD = this.children[sD],
+            rD = pD + KD.length,
+            LD = wD + KD.lines - 1;
+          if ((zD ? LD : rD) >= DD) return KD.lineInner(DD, zD, wD, pD);
+          pD = rD + 1, wD = LD + 1
         }
       }
-      decompose(mm, Tm, fm, hm) {
-        for (let Am = 0, am = 0; am <= Tm && Am < this.children.length; Am++) {
-          let xm = this.children[Am],
-            wm = am + xm.length;
-          if (mm <= wm && Tm >= am) {
-            let Am = hm & ((am <= mm ? 1 : 0) | (wm >= Tm ? 2 : 0));
-            am >= mm && wm <= Tm && !Am ? fm.push(xm) : xm.decompose(mm - am, Tm - am, fm, Am)
+      decompose(DD, zD, wD, pD) {
+        for (let sD = 0, KD = 0; KD <= zD && sD < this.children.length; sD++) {
+          let rD = this.children[sD],
+            LD = KD + rD.length;
+          if (DD <= LD && zD >= KD) {
+            let sD = pD & ((KD <= DD ? 1 : 0) | (LD >= zD ? 2 : 0));
+            KD >= DD && LD <= zD && !sD ? wD.push(rD) : rD.decompose(DD - KD, zD - KD, wD, sD)
           }
-          am = wm + 1
+          KD = LD + 1
         }
       }
-      replace(mm, Tm, fm) {
-        if ([mm, Tm] = cm(this, mm, Tm), fm.lines < this.lines)
-          for (let hm = 0, Am = 0; hm < this.children.length; hm++) {
-            let am = this.children[hm],
-              xm = Am + am.length;
-            if (mm >= Am && Tm <= xm) {
-              let wm = am.replace(mm - Am, Tm - Am, fm),
-                Dm = this.lines - am.lines + wm.lines;
-              if (wm.lines < Dm >> 4 && wm.lines > Dm >> 6) {
-                let Am = this.children.slice();
-                return Am[hm] = wm, new jm(Am, this.length - (Tm - mm) + fm.length)
+      replace(DD, zD, wD) {
+        if ([DD, zD] = XD(this, DD, zD), wD.lines < this.lines)
+          for (let pD = 0, sD = 0; pD < this.children.length; pD++) {
+            let KD = this.children[pD],
+              rD = sD + KD.length;
+            if (DD >= sD && zD <= rD) {
+              let LD = KD.replace(DD - sD, zD - sD, wD),
+                cD = this.lines - KD.lines + LD.lines;
+              if (LD.lines < cD >> 4 && LD.lines > cD >> 6) {
+                let sD = this.children.slice();
+                return sD[pD] = LD, new hD(sD, this.length - (zD - DD) + wD.length)
               }
-              return super.replace(Am, xm, wm)
+              return super.replace(sD, rD, LD)
             }
-            Am = xm + 1
+            sD = rD + 1
           }
-        return super.replace(mm, Tm, fm)
+        return super.replace(DD, zD, wD)
       }
-      sliceString(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
-          fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
-        [mm, Tm] = cm(this, mm, Tm);
-        let hm = "";
-        for (let Am = 0, am = 0; Am < this.children.length && am <= Tm; Am++) {
-          let xm = this.children[Am],
-            wm = am + xm.length;
-          am > mm && Am && (hm += fm), mm < wm && Tm > am && (hm += xm.sliceString(mm - am, Tm - am, fm)), am = wm + 1
+      sliceString(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.length,
+          wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "\n";
+        [DD, zD] = XD(this, DD, zD);
+        let pD = "";
+        for (let sD = 0, KD = 0; sD < this.children.length && KD <= zD; sD++) {
+          let rD = this.children[sD],
+            LD = KD + rD.length;
+          KD > DD && sD && (pD += wD), DD < LD && zD > KD && (pD += rD.sliceString(DD - KD, zD - KD, wD)), KD = LD + 1
         }
-        return hm
+        return pD
       }
-      flatten(mm) {
-        for (let Tm of this.children) Tm.flatten(mm)
+      flatten(DD) {
+        for (let zD of this.children) zD.flatten(DD)
       }
-      scanIdentical(mm, Tm) {
-        if (!(mm instanceof jm)) return 0;
-        let fm = 0,
-          [hm, Am, am, xm] = Tm > 0 ? [0, 0, this.children.length, mm.children.length] : [this.children.length - 1, mm.children.length - 1, -1, -1];
-        for (;; hm += Tm, Am += Tm) {
-          if (hm == am || Am == xm) return fm;
-          let wm = this.children[hm],
-            Dm = mm.children[Am];
-          if (wm != Dm) return fm + wm.scanIdentical(Dm, Tm);
-          fm += wm.length + 1
+      scanIdentical(DD, zD) {
+        if (!(DD instanceof hD)) return 0;
+        let wD = 0,
+          [pD, sD, KD, rD] = zD > 0 ? [0, 0, this.children.length, DD.children.length] : [this.children.length - 1, DD.children.length - 1, -1, -1];
+        for (;; pD += zD, sD += zD) {
+          if (pD == KD || sD == rD) return wD;
+          let LD = this.children[pD],
+            cD = DD.children[sD];
+          if (LD != cD) return wD + LD.scanIdentical(cD, zD);
+          wD += LD.length + 1
         }
       }
-      static from(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mm.reduce(((mm, Tm) => mm + Tm.length + 1), -1),
-          fm = 0;
-        for (let Em of mm) fm += Em.lines;
-        if (fm < 32) {
-          let fm = [];
-          for (let Tm of mm) Tm.flatten(fm);
-          return new qm(fm, Tm)
+      static from(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD.reduce(((DD, zD) => DD + zD.length + 1), -1),
+          wD = 0;
+        for (let UD of DD) wD += UD.lines;
+        if (wD < 32) {
+          let wD = [];
+          for (let zD of DD) zD.flatten(wD);
+          return new GD(wD, zD)
         }
-        let hm = Math.max(32, fm >> 5),
-          Am = hm << 1,
-          am = hm >> 1,
-          xm = [],
-          wm = 0,
-          Dm = -1,
-          im = [];
+        let pD = Math.max(32, wD >> 5),
+          sD = pD << 1,
+          KD = pD >> 1,
+          rD = [],
+          LD = 0,
+          cD = -1,
+          gD = [];
 
-        function Rm(mm) {
-          let Tm;
-          if (mm.lines > Am && mm instanceof jm)
-            for (let fm of mm.children) Rm(fm);
-          else mm.lines > am && (wm > am || !wm) ? (pm(), xm.push(mm)) : mm instanceof qm && wm && (Tm = im[im.length - 1]) instanceof qm && mm.lines + Tm.lines <= 32 ? (wm += mm.lines, Dm += mm.length + 1, im[im.length - 1] = new qm(Tm.text.concat(mm.text), Tm.length + 1 + mm.length)) : (wm + mm.lines > hm && pm(), wm += mm.lines, Dm += mm.length + 1, im.push(mm))
+        function RD(DD) {
+          let zD;
+          if (DD.lines > sD && DD instanceof hD)
+            for (let wD of DD.children) RD(wD);
+          else DD.lines > KD && (LD > KD || !LD) ? (AD(), rD.push(DD)) : DD instanceof GD && LD && (zD = gD[gD.length - 1]) instanceof GD && DD.lines + zD.lines <= 32 ? (LD += DD.lines, cD += DD.length + 1, gD[gD.length - 1] = new GD(zD.text.concat(DD.text), zD.length + 1 + DD.length)) : (LD + DD.lines > pD && AD(), LD += DD.lines, cD += DD.length + 1, gD.push(DD))
         }
 
-        function pm() {
-          0 != wm && (xm.push(1 == im.length ? im[0] : jm.from(im, Dm)), Dm = -1, wm = im.length = 0)
+        function AD() {
+          0 != LD && (rD.push(1 == gD.length ? gD[0] : hD.from(gD, cD)), cD = -1, LD = gD.length = 0)
         }
-        for (let Em of mm) Rm(Em);
-        return pm(), 1 == xm.length ? xm[0] : new jm(xm, Tm)
+        for (let UD of DD) RD(UD);
+        return AD(), 1 == rD.length ? rD[0] : new hD(rD, zD)
       }
     }
 
-    function Vm(mm, Tm) {
-      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
-      for (let Am = 0, am = 0, xm = !0; am < mm.length && Am <= hm; am++) {
-        let wm = mm[am],
-          Dm = Am + wm.length;
-        Dm >= fm && (Dm > hm && (wm = wm.slice(0, hm - Am)), Am < fm && (wm = wm.slice(fm - Am)), xm ? (Tm[Tm.length - 1] += wm, xm = !1) : Tm.push(wm)), Am = Dm + 1
+    function nD(DD, zD) {
+      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 1e9;
+      for (let sD = 0, KD = 0, rD = !0; KD < DD.length && sD <= pD; KD++) {
+        let LD = DD[KD],
+          cD = sD + LD.length;
+        cD >= wD && (cD > pD && (LD = LD.slice(0, pD - sD)), sD < wD && (LD = LD.slice(wD - sD)), rD ? (zD[zD.length - 1] += LD, rD = !1) : zD.push(LD)), sD = cD + 1
       }
-      return Tm
+      return zD
     }
 
-    function Im(mm, Tm, fm) {
-      return Vm(mm, [""], Tm, fm)
+    function MD(DD, zD, wD) {
+      return nD(DD, [""], zD, wD)
     }
-    Ym.empty = new qm([""], 0);
-    class Km {
-      constructor(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        this.dir = Tm, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [mm], this.offsets = [Tm > 0 ? 1 : (mm instanceof qm ? mm.text.length : mm.children.length) << 1]
+    BD.empty = new GD([""], 0);
+    class OD {
+      constructor(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        this.dir = zD, this.done = !1, this.lineBreak = !1, this.value = "", this.nodes = [DD], this.offsets = [zD > 0 ? 1 : (DD instanceof GD ? DD.text.length : DD.children.length) << 1]
       }
-      nextInner(mm, Tm) {
+      nextInner(DD, zD) {
         for (this.done = this.lineBreak = !1;;) {
-          let fm = this.nodes.length - 1,
-            hm = this.nodes[fm],
-            Am = this.offsets[fm],
-            am = Am >> 1,
-            xm = hm instanceof qm ? hm.text.length : hm.children.length;
-          if (am == (Tm > 0 ? xm : 0)) {
-            if (0 == fm) return this.done = !0, this.value = "", this;
-            Tm > 0 && this.offsets[fm - 1]++, this.nodes.pop(), this.offsets.pop()
-          } else if ((1 & Am) == (Tm > 0 ? 0 : 1)) {
-            if (this.offsets[fm] += Tm, 0 == mm) return this.lineBreak = !0, this.value = "\n", this;
-            mm--
-          } else if (hm instanceof qm) {
-            let Am = hm.text[am + (Tm < 0 ? -1 : 0)];
-            if (this.offsets[fm] += Tm, Am.length > Math.max(0, mm)) return this.value = 0 == mm ? Am : Tm > 0 ? Am.slice(mm) : Am.slice(0, Am.length - mm), this;
-            mm -= Am.length
+          let wD = this.nodes.length - 1,
+            pD = this.nodes[wD],
+            sD = this.offsets[wD],
+            KD = sD >> 1,
+            rD = pD instanceof GD ? pD.text.length : pD.children.length;
+          if (KD == (zD > 0 ? rD : 0)) {
+            if (0 == wD) return this.done = !0, this.value = "", this;
+            zD > 0 && this.offsets[wD - 1]++, this.nodes.pop(), this.offsets.pop()
+          } else if ((1 & sD) == (zD > 0 ? 0 : 1)) {
+            if (this.offsets[wD] += zD, 0 == DD) return this.lineBreak = !0, this.value = "\n", this;
+            DD--
+          } else if (pD instanceof GD) {
+            let sD = pD.text[KD + (zD < 0 ? -1 : 0)];
+            if (this.offsets[wD] += zD, sD.length > Math.max(0, DD)) return this.value = 0 == DD ? sD : zD > 0 ? sD.slice(DD) : sD.slice(0, sD.length - DD), this;
+            DD -= sD.length
           } else {
-            let Am = hm.children[am + (Tm < 0 ? -1 : 0)];
-            mm > Am.length ? (mm -= Am.length, this.offsets[fm] += Tm) : (Tm < 0 && this.offsets[fm]--, this.nodes.push(Am), this.offsets.push(Tm > 0 ? 1 : (Am instanceof qm ? Am.text.length : Am.children.length) << 1))
+            let sD = pD.children[KD + (zD < 0 ? -1 : 0)];
+            DD > sD.length ? (DD -= sD.length, this.offsets[wD] += zD) : (zD < 0 && this.offsets[wD]--, this.nodes.push(sD), this.offsets.push(zD > 0 ? 1 : (sD instanceof GD ? sD.text.length : sD.children.length) << 1))
           }
         }
       }
       next() {
-        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return mm < 0 && (this.nextInner(-mm, -this.dir), mm = this.value.length), this.nextInner(mm, this.dir)
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return DD < 0 && (this.nextInner(-DD, -this.dir), DD = this.value.length), this.nextInner(DD, this.dir)
       }
     }
-    class Qm {
-      constructor(mm, Tm, fm) {
-        this.value = "", this.done = !1, this.cursor = new Km(mm, Tm > fm ? -1 : 1), this.pos = Tm > fm ? mm.length : 0, this.from = Math.min(Tm, fm), this.to = Math.max(Tm, fm)
+    class JD {
+      constructor(DD, zD, wD) {
+        this.value = "", this.done = !1, this.cursor = new OD(DD, zD > wD ? -1 : 1), this.pos = zD > wD ? DD.length : 0, this.from = Math.min(zD, wD), this.to = Math.max(zD, wD)
       }
-      nextInner(mm, Tm) {
-        if (Tm < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
-        mm += Math.max(0, Tm < 0 ? this.pos - this.to : this.from - this.pos);
-        let fm = Tm < 0 ? this.pos - this.from : this.to - this.pos;
-        mm > fm && (mm = fm), fm -= mm;
+      nextInner(DD, zD) {
+        if (zD < 0 ? this.pos <= this.from : this.pos >= this.to) return this.value = "", this.done = !0, this;
+        DD += Math.max(0, zD < 0 ? this.pos - this.to : this.from - this.pos);
+        let wD = zD < 0 ? this.pos - this.from : this.to - this.pos;
+        DD > wD && (DD = wD), wD -= DD;
         let {
-          value: hm
-        } = this.cursor.next(mm);
-        return this.pos += (hm.length + mm) * Tm, this.value = hm.length <= fm ? hm : Tm < 0 ? hm.slice(hm.length - fm) : hm.slice(0, fm), this.done = !this.value, this
+          value: pD
+        } = this.cursor.next(DD);
+        return this.pos += (pD.length + DD) * zD, this.value = pD.length <= wD ? pD : zD < 0 ? pD.slice(pD.length - wD) : pD.slice(0, wD), this.done = !this.value, this
       }
       next() {
-        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return mm < 0 ? mm = Math.max(mm, this.from - this.pos) : mm > 0 && (mm = Math.min(mm, this.to - this.pos)), this.nextInner(mm, this.cursor.dir)
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return DD < 0 ? DD = Math.max(DD, this.from - this.pos) : DD > 0 && (DD = Math.min(DD, this.to - this.pos)), this.nextInner(DD, this.cursor.dir)
       }
       get lineBreak() {
         return this.cursor.lineBreak && "" != this.value
       }
     }
-    class nm {
-      constructor(mm) {
-        this.inner = mm, this.afterBreak = !0, this.value = "", this.done = !1
+    class ED {
+      constructor(DD) {
+        this.inner = DD, this.afterBreak = !0, this.value = "", this.done = !1
       }
       next() {
-        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
           {
-            done: Tm,
-            lineBreak: fm,
-            value: hm
-          } = this.inner.next(mm);
-        return Tm && this.afterBreak ? (this.value = "", this.afterBreak = !1) : Tm ? (this.done = !0, this.value = "") : fm ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = hm, this.afterBreak = !1), this
+            done: zD,
+            lineBreak: wD,
+            value: pD
+          } = this.inner.next(DD);
+        return zD && this.afterBreak ? (this.value = "", this.afterBreak = !1) : zD ? (this.done = !0, this.value = "") : wD ? this.afterBreak ? this.value = "" : (this.afterBreak = !0, this.next()) : (this.value = pD, this.afterBreak = !1), this
       }
       get lineBreak() {
         return !1
       }
     }
-    "undefined" != typeof Symbol && (Ym.prototype[Symbol.iterator] = function() {
+    "undefined" != typeof Symbol && (BD.prototype[Symbol.iterator] = function() {
       return this.iter()
-    }, Km.prototype[Symbol.iterator] = Qm.prototype[Symbol.iterator] = nm.prototype[Symbol.iterator] = function() {
+    }, OD.prototype[Symbol.iterator] = JD.prototype[Symbol.iterator] = ED.prototype[Symbol.iterator] = function() {
       return this
     });
-    class Jm {
-      constructor(mm, Tm, fm, hm) {
-        this.from = mm, this.to = Tm, this.number = fm, this.text = hm
+    class QD {
+      constructor(DD, zD, wD, pD) {
+        this.from = DD, this.to = zD, this.number = wD, this.text = pD
       }
       get length() {
         return this.to - this.from
       }
     }
 
-    function cm(mm, Tm, fm) {
-      return [Tm = Math.max(0, Math.min(mm.length, Tm)), Math.max(Tm, Math.min(mm.length, fm))]
+    function XD(DD, zD, wD) {
+      return [zD = Math.max(0, Math.min(DD.length, zD)), Math.max(zD, Math.min(DD.length, wD))]
     }
 
-    function zm(mm, Tm) {
-      return Dm(mm, Tm, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
+    function VD(DD, zD) {
+      return cD(DD, zD, !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2], !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3])
     }
 
-    function Zm(mm, Tm) {
-      let fm = mm.charCodeAt(Tm);
-      if (!((hm = fm) >= 55296 && hm < 56320) || Tm + 1 == mm.length) return fm;
-      var hm;
-      let Am = mm.charCodeAt(Tm + 1);
-      return function(mm) {
-        return mm >= 56320 && mm < 57344
-      }(Am) ? Am - 56320 + (fm - 55296 << 10) + 65536 : fm
+    function PD(DD, zD) {
+      let wD = DD.charCodeAt(zD);
+      if (!((pD = wD) >= 55296 && pD < 56320) || zD + 1 == DD.length) return wD;
+      var pD;
+      let sD = DD.charCodeAt(zD + 1);
+      return function(DD) {
+        return DD >= 56320 && DD < 57344
+      }(sD) ? sD - 56320 + (wD - 55296 << 10) + 65536 : wD
     }
 
-    function km(mm) {
-      return mm <= 65535 ? String.fromCharCode(mm) : (mm -= 65536, String.fromCharCode(55296 + (mm >> 10), 56320 + (1023 & mm)))
+    function CD(DD) {
+      return DD <= 65535 ? String.fromCharCode(DD) : (DD -= 65536, String.fromCharCode(55296 + (DD >> 10), 56320 + (1023 & DD)))
     }
 
-    function bm(mm) {
-      return mm < 65536 ? 1 : 2
+    function xD(DD) {
+      return DD < 65536 ? 1 : 2
     }
-    const Sm = /\r\n?|\n/;
-    var em = function(mm) {
-      return mm[mm.Simple = 0] = "Simple", mm[mm.TrackDel = 1] = "TrackDel", mm[mm.TrackBefore = 2] = "TrackBefore", mm[mm.TrackAfter = 3] = "TrackAfter", mm
-    }(em || (em = {}));
-    class Nm {
-      constructor(mm) {
-        this.sections = mm
+    const TD = /\r\n?|\n/;
+    var bD = function(DD) {
+      return DD[DD.Simple = 0] = "Simple", DD[DD.TrackDel = 1] = "TrackDel", DD[DD.TrackBefore = 2] = "TrackBefore", DD[DD.TrackAfter = 3] = "TrackAfter", DD
+    }(bD || (bD = {}));
+    class jD {
+      constructor(DD) {
+        this.sections = DD
       }
       get length() {
-        let mm = 0;
-        for (let Tm = 0; Tm < this.sections.length; Tm += 2) mm += this.sections[Tm];
-        return mm
+        let DD = 0;
+        for (let zD = 0; zD < this.sections.length; zD += 2) DD += this.sections[zD];
+        return DD
       }
       get newLength() {
-        let mm = 0;
-        for (let Tm = 0; Tm < this.sections.length; Tm += 2) {
-          let fm = this.sections[Tm + 1];
-          mm += fm < 0 ? this.sections[Tm] : fm
+        let DD = 0;
+        for (let zD = 0; zD < this.sections.length; zD += 2) {
+          let wD = this.sections[zD + 1];
+          DD += wD < 0 ? this.sections[zD] : wD
         }
-        return mm
+        return DD
       }
       get empty() {
         return 0 == this.sections.length || 2 == this.sections.length && this.sections[1] < 0
       }
-      iterGaps(mm) {
-        for (let Tm = 0, fm = 0, hm = 0; Tm < this.sections.length;) {
-          let Am = this.sections[Tm++],
-            am = this.sections[Tm++];
-          am < 0 ? (mm(fm, hm, Am), hm += Am) : hm += am, fm += Am
+      iterGaps(DD) {
+        for (let zD = 0, wD = 0, pD = 0; zD < this.sections.length;) {
+          let sD = this.sections[zD++],
+            KD = this.sections[zD++];
+          KD < 0 ? (DD(wD, pD, sD), pD += sD) : pD += KD, wD += sD
         }
       }
-      iterChangedRanges(mm) {
-        Hm(this, mm, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChangedRanges(DD) {
+        lD(this, DD, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get invertedDesc() {
-        let mm = [];
-        for (let Tm = 0; Tm < this.sections.length;) {
-          let fm = this.sections[Tm++],
-            hm = this.sections[Tm++];
-          hm < 0 ? mm.push(fm, hm) : mm.push(hm, fm)
+        let DD = [];
+        for (let zD = 0; zD < this.sections.length;) {
+          let wD = this.sections[zD++],
+            pD = this.sections[zD++];
+          pD < 0 ? DD.push(wD, pD) : DD.push(pD, wD)
         }
-        return new Nm(mm)
+        return new jD(DD)
       }
-      composeDesc(mm) {
-        return this.empty ? mm : mm.empty ? this : Cm(this, mm)
+      composeDesc(DD) {
+        return this.empty ? DD : DD.empty ? this : ND(this, DD)
       }
-      mapDesc(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return mm.empty ? this : ym(this, mm, Tm)
+      mapDesc(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return DD.empty ? this : WD(this, DD, zD)
       }
-      mapPos(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : em.Simple,
-          hm = 0,
-          Am = 0;
-        for (let am = 0; am < this.sections.length;) {
-          let xm = this.sections[am++],
-            wm = this.sections[am++],
-            Dm = hm + xm;
-          if (wm < 0) {
-            if (Dm > mm) return Am + (mm - hm);
-            Am += xm
+      mapPos(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : bD.Simple,
+          pD = 0,
+          sD = 0;
+        for (let KD = 0; KD < this.sections.length;) {
+          let rD = this.sections[KD++],
+            LD = this.sections[KD++],
+            cD = pD + rD;
+          if (LD < 0) {
+            if (cD > DD) return sD + (DD - pD);
+            sD += rD
           } else {
-            if (fm != em.Simple && Dm >= mm && (fm == em.TrackDel && hm < mm && Dm > mm || fm == em.TrackBefore && hm < mm || fm == em.TrackAfter && Dm > mm)) return null;
-            if (Dm > mm || Dm == mm && Tm < 0 && !xm) return mm == hm || Tm < 0 ? Am : Am + wm;
-            Am += wm
+            if (wD != bD.Simple && cD >= DD && (wD == bD.TrackDel && pD < DD && cD > DD || wD == bD.TrackBefore && pD < DD || wD == bD.TrackAfter && cD > DD)) return null;
+            if (cD > DD || cD == DD && zD < 0 && !rD) return DD == pD || zD < 0 ? sD : sD + LD;
+            sD += LD
           }
-          hm = Dm
+          pD = cD
         }
-        if (mm > hm) throw new RangeError(`Position ${mm} is out of range for changeset of length ${hm}`);
-        return Am
+        if (DD > pD) throw new RangeError(`Position ${DD} is out of range for changeset of length ${pD}`);
+        return sD
       }
-      touchesRange(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mm;
-        for (let fm = 0, hm = 0; fm < this.sections.length && hm <= Tm;) {
-          let Am = hm + this.sections[fm++];
-          if (this.sections[fm++] >= 0 && hm <= Tm && Am >= mm) return !(hm < mm && Am > Tm) || "cover";
-          hm = Am
+      touchesRange(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD;
+        for (let wD = 0, pD = 0; wD < this.sections.length && pD <= zD;) {
+          let sD = pD + this.sections[wD++];
+          if (this.sections[wD++] >= 0 && pD <= zD && sD >= DD) return !(pD < DD && sD > zD) || "cover";
+          pD = sD
         }
         return !1
       }
       toString() {
-        let mm = "";
-        for (let Tm = 0; Tm < this.sections.length;) {
-          let fm = this.sections[Tm++],
-            hm = this.sections[Tm++];
-          mm += (mm ? " " : "") + fm + (hm >= 0 ? ":" + hm : "")
+        let DD = "";
+        for (let zD = 0; zD < this.sections.length;) {
+          let wD = this.sections[zD++],
+            pD = this.sections[zD++];
+          DD += (DD ? " " : "") + wD + (pD >= 0 ? ":" + pD : "")
         }
-        return mm
+        return DD
       }
       toJSON() {
         return this.sections
       }
-      static fromJSON(mm) {
-        if (!Array.isArray(mm) || mm.length % 2 || mm.some((mm => "number" != typeof mm))) throw new RangeError("Invalid JSON representation of ChangeDesc");
-        return new Nm(mm)
+      static fromJSON(DD) {
+        if (!Array.isArray(DD) || DD.length % 2 || DD.some((DD => "number" != typeof DD))) throw new RangeError("Invalid JSON representation of ChangeDesc");
+        return new jD(DD)
       }
-      static create(mm) {
-        return new Nm(mm)
+      static create(DD) {
+        return new jD(DD)
       }
     }
-    class Gm extends Nm {
-      constructor(mm, Tm) {
-        super(mm), this.inserted = Tm
+    class dD extends jD {
+      constructor(DD, zD) {
+        super(DD), this.inserted = zD
       }
-      apply(mm) {
-        if (this.length != mm.length) throw new RangeError("Applying change set to a document with the wrong length");
-        return Hm(this, ((Tm, fm, hm, Am, am) => mm = mm.replace(hm, hm + (fm - Tm), am)), !1), mm
+      apply(DD) {
+        if (this.length != DD.length) throw new RangeError("Applying change set to a document with the wrong length");
+        return lD(this, ((zD, wD, pD, sD, KD) => DD = DD.replace(pD, pD + (wD - zD), KD)), !1), DD
       }
-      mapDesc(mm) {
-        return ym(this, mm, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
+      mapDesc(DD) {
+        return WD(this, DD, arguments.length > 1 && void 0 !== arguments[1] && arguments[1], !0)
       }
-      invert(mm) {
-        let Tm = this.sections.slice(),
-          fm = [];
-        for (let hm = 0, Am = 0; hm < Tm.length; hm += 2) {
-          let am = Tm[hm],
-            xm = Tm[hm + 1];
-          if (xm >= 0) {
-            Tm[hm] = xm, Tm[hm + 1] = am;
-            let wm = hm >> 1;
-            for (; fm.length < wm;) fm.push(Ym.empty);
-            fm.push(am ? mm.slice(Am, Am + am) : Ym.empty)
+      invert(DD) {
+        let zD = this.sections.slice(),
+          wD = [];
+        for (let pD = 0, sD = 0; pD < zD.length; pD += 2) {
+          let KD = zD[pD],
+            rD = zD[pD + 1];
+          if (rD >= 0) {
+            zD[pD] = rD, zD[pD + 1] = KD;
+            let LD = pD >> 1;
+            for (; wD.length < LD;) wD.push(BD.empty);
+            wD.push(KD ? DD.slice(sD, sD + KD) : BD.empty)
           }
-          Am += am
+          sD += KD
         }
-        return new Gm(Tm, fm)
+        return new dD(zD, wD)
       }
-      compose(mm) {
-        return this.empty ? mm : mm.empty ? this : Cm(this, mm, !0)
+      compose(DD) {
+        return this.empty ? DD : DD.empty ? this : ND(this, DD, !0)
       }
-      map(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return mm.empty ? this : ym(this, mm, Tm, !0)
+      map(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return DD.empty ? this : WD(this, DD, zD, !0)
       }
-      iterChanges(mm) {
-        Hm(this, mm, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
+      iterChanges(DD) {
+        lD(this, DD, arguments.length > 1 && void 0 !== arguments[1] && arguments[1])
       }
       get desc() {
-        return Nm.create(this.sections)
+        return jD.create(this.sections)
       }
-      filter(mm) {
-        let Tm = [],
-          fm = [],
-          hm = [],
-          Am = new rm(this);
-        mm: for (let am = 0, xm = 0;;) {
-          let wm = am == mm.length ? 1e9 : mm[am++];
-          for (; xm < wm || xm == wm && 0 == Am.len;) {
-            if (Am.done) break mm;
-            let mm = Math.min(Am.len, wm - xm);
-            Xm(hm, mm, -1);
-            let am = -1 == Am.ins ? -1 : 0 == Am.off ? Am.ins : 0;
-            Xm(Tm, mm, am), am > 0 && Pm(fm, Tm, Am.text), Am.forward(mm), xm += mm
+      filter(DD) {
+        let zD = [],
+          wD = [],
+          pD = [],
+          sD = new ZD(this);
+        DD: for (let KD = 0, rD = 0;;) {
+          let LD = KD == DD.length ? 1e9 : DD[KD++];
+          for (; rD < LD || rD == LD && 0 == sD.len;) {
+            if (sD.done) break DD;
+            let DD = Math.min(sD.len, LD - rD);
+            SD(pD, DD, -1);
+            let KD = -1 == sD.ins ? -1 : 0 == sD.off ? sD.ins : 0;
+            SD(zD, DD, KD), KD > 0 && iD(wD, zD, sD.text), sD.forward(DD), rD += DD
           }
-          let Dm = mm[am++];
-          for (; xm < Dm;) {
-            if (Am.done) break mm;
-            let mm = Math.min(Am.len, Dm - xm);
-            Xm(Tm, mm, -1), Xm(hm, mm, -1 == Am.ins ? -1 : 0 == Am.off ? Am.ins : 0), Am.forward(mm), xm += mm
+          let cD = DD[KD++];
+          for (; rD < cD;) {
+            if (sD.done) break DD;
+            let DD = Math.min(sD.len, cD - rD);
+            SD(zD, DD, -1), SD(pD, DD, -1 == sD.ins ? -1 : 0 == sD.off ? sD.ins : 0), sD.forward(DD), rD += DD
           }
         }
         return {
-          changes: new Gm(Tm, fm),
-          filtered: Nm.create(hm)
+          changes: new dD(zD, wD),
+          filtered: jD.create(pD)
         }
       }
       toJSON() {
-        let mm = [];
-        for (let Tm = 0; Tm < this.sections.length; Tm += 2) {
-          let fm = this.sections[Tm],
-            hm = this.sections[Tm + 1];
-          hm < 0 ? mm.push(fm) : 0 == hm ? mm.push([fm]) : mm.push([fm].concat(this.inserted[Tm >> 1].toJSON()))
+        let DD = [];
+        for (let zD = 0; zD < this.sections.length; zD += 2) {
+          let wD = this.sections[zD],
+            pD = this.sections[zD + 1];
+          pD < 0 ? DD.push(wD) : 0 == pD ? DD.push([wD]) : DD.push([wD].concat(this.inserted[zD >> 1].toJSON()))
         }
-        return mm
+        return DD
       }
-      static of (mm, Tm, fm) {
-        let hm = [],
-          Am = [],
-          am = 0,
-          xm = null;
+      static of (DD, zD, wD) {
+        let pD = [],
+          sD = [],
+          KD = 0,
+          rD = null;
 
-        function wm() {
-          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !hm.length) return;
-          am < Tm && Xm(hm, Tm - am, -1);
-          let mm = new Gm(hm, Am);
-          xm = xm ? xm.compose(mm.map(xm)) : mm, hm = [], Am = [], am = 0
+        function LD() {
+          if (!(arguments.length > 0 && void 0 !== arguments[0] && arguments[0]) && !pD.length) return;
+          KD < zD && SD(pD, zD - KD, -1);
+          let DD = new dD(pD, sD);
+          rD = rD ? rD.compose(DD.map(rD)) : DD, pD = [], sD = [], KD = 0
         }
-        return function mm(Dm) {
-          if (Array.isArray(Dm))
-            for (let Tm of Dm) mm(Tm);
-          else if (Dm instanceof Gm) {
-            if (Dm.length != Tm) throw new RangeError(`Mismatched change set length (got ${Dm.length}, expected ${Tm})`);
-            wm(), xm = xm ? xm.compose(Dm.map(xm)) : Dm
+        return function DD(cD) {
+          if (Array.isArray(cD))
+            for (let zD of cD) DD(zD);
+          else if (cD instanceof dD) {
+            if (cD.length != zD) throw new RangeError(`Mismatched change set length (got ${cD.length}, expected ${zD})`);
+            LD(), rD = rD ? rD.compose(cD.map(rD)) : cD
           } else {
             let {
-              from: mm,
-              to: xm = mm,
-              insert: im
-            } = Dm;
-            if (mm > xm || mm < 0 || xm > Tm) throw new RangeError(`Invalid change range ${mm} to ${xm} (in doc of length ${Tm})`);
-            let Rm = im ? "string" == typeof im ? Ym.of(im.split(fm || Sm)) : im : Ym.empty,
-              pm = Rm.length;
-            if (mm == xm && 0 == pm) return;
-            mm < am && wm(), mm > am && Xm(hm, mm - am, -1), Xm(hm, xm - mm, pm), Pm(Am, hm, Rm), am = xm
+              from: DD,
+              to: rD = DD,
+              insert: gD
+            } = cD;
+            if (DD > rD || DD < 0 || rD > zD) throw new RangeError(`Invalid change range ${DD} to ${rD} (in doc of length ${zD})`);
+            let RD = gD ? "string" == typeof gD ? BD.of(gD.split(wD || TD)) : gD : BD.empty,
+              AD = RD.length;
+            if (DD == rD && 0 == AD) return;
+            DD < KD && LD(), DD > KD && SD(pD, DD - KD, -1), SD(pD, rD - DD, AD), iD(sD, pD, RD), KD = rD
           }
-        }(mm), wm(!xm), xm
+        }(DD), LD(!rD), rD
       }
-      static empty(mm) {
-        return new Gm(mm ? [mm, -1] : [], [])
+      static empty(DD) {
+        return new dD(DD ? [DD, -1] : [], [])
       }
-      static fromJSON(mm) {
-        if (!Array.isArray(mm)) throw new RangeError("Invalid JSON representation of ChangeSet");
-        let Tm = [],
-          fm = [];
-        for (let hm = 0; hm < mm.length; hm++) {
-          let Am = mm[hm];
-          if ("number" == typeof Am) Tm.push(Am, -1);
+      static fromJSON(DD) {
+        if (!Array.isArray(DD)) throw new RangeError("Invalid JSON representation of ChangeSet");
+        let zD = [],
+          wD = [];
+        for (let pD = 0; pD < DD.length; pD++) {
+          let sD = DD[pD];
+          if ("number" == typeof sD) zD.push(sD, -1);
           else {
-            if (!Array.isArray(Am) || "number" != typeof Am[0] || Am.some(((mm, Tm) => Tm && "string" != typeof mm))) throw new RangeError("Invalid JSON representation of ChangeSet");
-            if (1 == Am.length) Tm.push(Am[0], 0);
+            if (!Array.isArray(sD) || "number" != typeof sD[0] || sD.some(((DD, zD) => zD && "string" != typeof DD))) throw new RangeError("Invalid JSON representation of ChangeSet");
+            if (1 == sD.length) zD.push(sD[0], 0);
             else {
-              for (; fm.length < hm;) fm.push(Ym.empty);
-              fm[hm] = Ym.of(Am.slice(1)), Tm.push(Am[0], fm[hm].length)
+              for (; wD.length < pD;) wD.push(BD.empty);
+              wD[pD] = BD.of(sD.slice(1)), zD.push(sD[0], wD[pD].length)
             }
           }
         }
-        return new Gm(Tm, fm)
+        return new dD(zD, wD)
       }
-      static createSet(mm, Tm) {
-        return new Gm(mm, Tm)
+      static createSet(DD, zD) {
+        return new dD(DD, zD)
       }
     }
 
-    function Xm(mm, Tm, fm) {
-      let hm = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      if (0 == Tm && fm <= 0) return;
-      let Am = mm.length - 2;
-      Am >= 0 && fm <= 0 && fm == mm[Am + 1] ? mm[Am] += Tm : Am >= 0 && 0 == Tm && 0 == mm[Am] ? mm[Am + 1] += fm : hm ? (mm[Am] += Tm, mm[Am + 1] += fm) : mm.push(Tm, fm)
+    function SD(DD, zD, wD) {
+      let pD = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      if (0 == zD && wD <= 0) return;
+      let sD = DD.length - 2;
+      sD >= 0 && wD <= 0 && wD == DD[sD + 1] ? DD[sD] += zD : sD >= 0 && 0 == zD && 0 == DD[sD] ? DD[sD + 1] += wD : pD ? (DD[sD] += zD, DD[sD + 1] += wD) : DD.push(zD, wD)
     }
 
-    function Pm(mm, Tm, fm) {
-      if (0 == fm.length) return;
-      let hm = Tm.length - 2 >> 1;
-      if (hm < mm.length) mm[mm.length - 1] = mm[mm.length - 1].append(fm);
+    function iD(DD, zD, wD) {
+      if (0 == wD.length) return;
+      let pD = zD.length - 2 >> 1;
+      if (pD < DD.length) DD[DD.length - 1] = DD[DD.length - 1].append(wD);
       else {
-        for (; mm.length < hm;) mm.push(Ym.empty);
-        mm.push(fm)
+        for (; DD.length < pD;) DD.push(BD.empty);
+        DD.push(wD)
       }
     }
 
-    function Hm(mm, Tm, fm) {
-      let hm = mm.inserted;
-      for (let Am = 0, am = 0, xm = 0; xm < mm.sections.length;) {
-        let wm = mm.sections[xm++],
-          Dm = mm.sections[xm++];
-        if (Dm < 0) Am += wm, am += wm;
+    function lD(DD, zD, wD) {
+      let pD = DD.inserted;
+      for (let sD = 0, KD = 0, rD = 0; rD < DD.sections.length;) {
+        let LD = DD.sections[rD++],
+          cD = DD.sections[rD++];
+        if (cD < 0) sD += LD, KD += LD;
         else {
-          let im = Am,
-            Rm = am,
-            pm = Ym.empty;
-          for (; im += wm, Rm += Dm, Dm && hm && (pm = pm.append(hm[xm - 2 >> 1])), !(fm || xm == mm.sections.length || mm.sections[xm + 1] < 0);) wm = mm.sections[xm++], Dm = mm.sections[xm++];
-          Tm(Am, im, am, Rm, pm), Am = im, am = Rm
+          let gD = sD,
+            RD = KD,
+            AD = BD.empty;
+          for (; gD += LD, RD += cD, cD && pD && (AD = AD.append(pD[rD - 2 >> 1])), !(wD || rD == DD.sections.length || DD.sections[rD + 1] < 0);) LD = DD.sections[rD++], cD = DD.sections[rD++];
+          zD(sD, gD, KD, RD, AD), sD = gD, KD = RD
         }
       }
     }
 
-    function ym(mm, Tm, fm) {
-      let hm = [],
-        Am = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
-        am = new rm(mm),
-        xm = new rm(Tm),
-        wm = 0;
-      for (let Dm = -1;;) {
-        if (++wm > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
-        if (am.done && xm.len || xm.done && am.len) throw new Error("Mismatched change set lengths");
-        if (-1 == am.ins && -1 == xm.ins) {
-          let mm = Math.min(am.len, xm.len);
-          Xm(hm, mm, -1), am.forward(mm), xm.forward(mm)
-        } else if (xm.ins >= 0 && (am.ins < 0 || Dm == am.i || 0 == am.off && (xm.len < am.len || xm.len == am.len && !fm))) {
-          let mm = xm.len;
-          for (Xm(hm, xm.ins, -1); mm;) {
-            if (++wm > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
-            let Tm = Math.min(am.len, mm);
-            am.ins >= 0 && Dm < am.i && am.len <= Tm && (Xm(hm, 0, am.ins), Am && Pm(Am, hm, am.text), Dm = am.i), am.forward(Tm), mm -= Tm
+    function WD(DD, zD, wD) {
+      let pD = [],
+        sD = arguments.length > 3 && void 0 !== arguments[3] && arguments[3] ? [] : null,
+        KD = new ZD(DD),
+        rD = new ZD(zD),
+        LD = 0;
+      for (let cD = -1;;) {
+        if (++LD > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - likely malformed ChangeSet");
+        if (KD.done && rD.len || rD.done && KD.len) throw new Error("Mismatched change set lengths");
+        if (-1 == KD.ins && -1 == rD.ins) {
+          let DD = Math.min(KD.len, rD.len);
+          SD(pD, DD, -1), KD.forward(DD), rD.forward(DD)
+        } else if (rD.ins >= 0 && (KD.ins < 0 || cD == KD.i || 0 == KD.off && (rD.len < KD.len || rD.len == KD.len && !wD))) {
+          let DD = rD.len;
+          for (SD(pD, rD.ins, -1); DD;) {
+            if (++LD > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-b");
+            let zD = Math.min(KD.len, DD);
+            KD.ins >= 0 && cD < KD.i && KD.len <= zD && (SD(pD, 0, KD.ins), sD && iD(sD, pD, KD.text), cD = KD.i), KD.forward(zD), DD -= zD
           }
-          xm.next()
+          rD.next()
         } else {
-          if (!(am.ins >= 0)) {
-            if (am.done && xm.done) return Am ? Gm.createSet(hm, Am) : Nm.create(hm);
+          if (!(KD.ins >= 0)) {
+            if (KD.done && rD.done) return sD ? dD.createSet(pD, sD) : jD.create(pD);
             throw new Error("Mismatched change set lengths")
           } {
-            let mm = 0,
-              Tm = am.len;
-            for (; Tm;) {
-              if (++wm > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
-              if (-1 == xm.ins) {
-                let fm = Math.min(Tm, xm.len);
-                mm += fm, Tm -= fm, xm.forward(fm)
+            let DD = 0,
+              zD = KD.len;
+            for (; zD;) {
+              if (++LD > 2e6) throw new Error("BLOXD CODEMIRROR: mapSet exceeded max iterations - inner while-a");
+              if (-1 == rD.ins) {
+                let wD = Math.min(zD, rD.len);
+                DD += wD, zD -= wD, rD.forward(wD)
               } else {
-                if (!(0 == xm.ins && xm.len < Tm)) break;
-                Tm -= xm.len, xm.next()
+                if (!(0 == rD.ins && rD.len < zD)) break;
+                zD -= rD.len, rD.next()
               }
             }
-            Xm(hm, mm, Dm < am.i ? am.ins : 0), Am && Dm < am.i && Pm(Am, hm, am.text), Dm = am.i, am.forward(am.len - Tm)
+            SD(pD, DD, cD < KD.i ? KD.ins : 0), sD && cD < KD.i && iD(sD, pD, KD.text), cD = KD.i, KD.forward(KD.len - zD)
           }
         }
       }
     }
 
-    function Cm(mm, Tm) {
-      let fm = [],
-        hm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
-        Am = new rm(mm),
-        am = new rm(Tm),
-        xm = 0;
-      for (let wm = !1;;) {
-        if (++xm > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
-        if (Am.done && am.done) return hm ? Gm.createSet(fm, hm) : Nm.create(fm);
-        if (0 == Am.ins) Xm(fm, Am.len, 0, wm), Am.next();
-        else if (0 != am.len || am.done) {
-          if (Am.done || am.done) throw new Error("Mismatched change set lengths");
+    function ND(DD, zD) {
+      let wD = [],
+        pD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? [] : null,
+        sD = new ZD(DD),
+        KD = new ZD(zD),
+        rD = 0;
+      for (let LD = !1;;) {
+        if (++rD > 2e6) throw new Error("BLOXD CODEMIRROR: composeSets exceeded max iterations - likely malformed ChangeSet");
+        if (sD.done && KD.done) return pD ? dD.createSet(wD, pD) : jD.create(wD);
+        if (0 == sD.ins) SD(wD, sD.len, 0, LD), sD.next();
+        else if (0 != KD.len || KD.done) {
+          if (sD.done || KD.done) throw new Error("Mismatched change set lengths");
           {
-            let mm = Math.min(Am.len2, am.len),
-              Tm = fm.length;
-            if (-1 == Am.ins) {
-              let Tm = -1 == am.ins ? -1 : am.off ? 0 : am.ins;
-              Xm(fm, mm, Tm, wm), hm && Tm && Pm(hm, fm, am.text)
-            } else - 1 == am.ins ? (Xm(fm, Am.off ? 0 : Am.len, mm, wm), hm && Pm(hm, fm, Am.textBit(mm))) : (Xm(fm, Am.off ? 0 : Am.len, am.off ? 0 : am.ins, wm), hm && !am.off && Pm(hm, fm, am.text));
-            wm = (Am.ins > mm || am.ins >= 0 && am.len > mm) && (wm || fm.length > Tm), Am.forward2(mm), am.forward(mm)
+            let DD = Math.min(sD.len2, KD.len),
+              zD = wD.length;
+            if (-1 == sD.ins) {
+              let zD = -1 == KD.ins ? -1 : KD.off ? 0 : KD.ins;
+              SD(wD, DD, zD, LD), pD && zD && iD(pD, wD, KD.text)
+            } else - 1 == KD.ins ? (SD(wD, sD.off ? 0 : sD.len, DD, LD), pD && iD(pD, wD, sD.textBit(DD))) : (SD(wD, sD.off ? 0 : sD.len, KD.off ? 0 : KD.ins, LD), pD && !KD.off && iD(pD, wD, KD.text));
+            LD = (sD.ins > DD || KD.ins >= 0 && KD.len > DD) && (LD || wD.length > zD), sD.forward2(DD), KD.forward(DD)
           }
-        } else Xm(fm, 0, am.ins, wm), hm && Pm(hm, fm, am.text), am.next()
+        } else SD(wD, 0, KD.ins, LD), pD && iD(pD, wD, KD.text), KD.next()
       }
     }
-    class rm {
-      constructor(mm) {
-        this.set = mm, this.i = 0, this.next()
+    class ZD {
+      constructor(DD) {
+        this.set = DD, this.i = 0, this.next()
       }
       next() {
         let {
-          sections: mm
+          sections: DD
         } = this.set;
-        this.i < mm.length ? (this.len = mm[this.i++], this.ins = mm[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
+        this.i < DD.length ? (this.len = DD[this.i++], this.ins = DD[this.i++]) : (this.len = 0, this.ins = -2), this.off = 0
       }
       get done() {
         return -2 == this.ins
@@ -815,26 +815,26 @@ export const modules = {
       }
       get text() {
         let {
-          inserted: mm
-        } = this.set, Tm = this.i - 2 >> 1;
-        return Tm >= mm.length ? Ym.empty : mm[Tm]
+          inserted: DD
+        } = this.set, zD = this.i - 2 >> 1;
+        return zD >= DD.length ? BD.empty : DD[zD]
       }
-      textBit(mm) {
+      textBit(DD) {
         let {
-          inserted: Tm
-        } = this.set, fm = this.i - 2 >> 1;
-        return fm >= Tm.length && !mm ? Ym.empty : Tm[fm].slice(this.off, null == mm ? void 0 : this.off + mm)
+          inserted: zD
+        } = this.set, wD = this.i - 2 >> 1;
+        return wD >= zD.length && !DD ? BD.empty : zD[wD].slice(this.off, null == DD ? void 0 : this.off + DD)
       }
-      forward(mm) {
-        mm == this.len ? this.next() : (this.len -= mm, this.off += mm)
+      forward(DD) {
+        DD == this.len ? this.next() : (this.len -= DD, this.off += DD)
       }
-      forward2(mm) {
-        -1 == this.ins ? this.forward(mm) : mm == this.ins ? this.next() : (this.ins -= mm, this.off += mm)
+      forward2(DD) {
+        -1 == this.ins ? this.forward(DD) : DD == this.ins ? this.next() : (this.ins -= DD, this.off += DD)
       }
     }
-    class sm {
-      constructor(mm, Tm, fm) {
-        this.from = mm, this.to = Tm, this.flags = fm
+    class yD {
+      constructor(DD, zD, wD) {
+        this.from = DD, this.to = zD, this.flags = wD
       }
       get anchor() {
         return 32 & this.flags ? this.to : this.from
@@ -849,27 +849,27 @@ export const modules = {
         return 8 & this.flags ? -1 : 16 & this.flags ? 1 : 0
       }
       get bidiLevel() {
-        let mm = 7 & this.flags;
-        return 7 == mm ? null : mm
+        let DD = 7 & this.flags;
+        return 7 == DD ? null : DD
       }
       get goalColumn() {
-        let mm = this.flags >> 6;
-        return 16777215 == mm ? void 0 : mm
+        let DD = this.flags >> 6;
+        return 16777215 == DD ? void 0 : DD
       }
-      map(mm) {
-        let Tm, fm, hm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return this.empty ? Tm = fm = mm.mapPos(this.from, hm) : (Tm = mm.mapPos(this.from, 1), fm = mm.mapPos(this.to, -1)), Tm == this.from && fm == this.to ? this : new sm(Tm, fm, this.flags)
+      map(DD) {
+        let zD, wD, pD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return this.empty ? zD = wD = DD.mapPos(this.from, pD) : (zD = DD.mapPos(this.from, 1), wD = DD.mapPos(this.to, -1)), zD == this.from && wD == this.to ? this : new yD(zD, wD, this.flags)
       }
-      extend(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mm,
-          fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
-        if (mm <= this.anchor && Tm >= this.anchor) return lm.range(mm, Tm, void 0, void 0, fm);
-        let hm = Math.abs(mm - this.anchor) > Math.abs(Tm - this.anchor) ? mm : Tm;
-        return lm.range(this.anchor, hm, void 0, void 0, fm)
+      extend(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD,
+          wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+        if (DD <= this.anchor && zD >= this.anchor) return kD.range(DD, zD, void 0, void 0, wD);
+        let pD = Math.abs(DD - this.anchor) > Math.abs(zD - this.anchor) ? DD : zD;
+        return kD.range(this.anchor, pD, void 0, void 0, wD)
       }
-      eq(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return this.anchor == mm.anchor && this.head == mm.head && this.goalColumn == mm.goalColumn && (!Tm || !this.empty || this.assoc == mm.assoc)
+      eq(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return this.anchor == DD.anchor && this.head == DD.head && this.goalColumn == DD.goalColumn && (!zD || !this.empty || this.assoc == DD.assoc)
       }
       toJSON() {
         return {
@@ -877,447 +877,447 @@ export const modules = {
           head: this.head
         }
       }
-      static fromJSON(mm) {
-        if (!mm || "number" != typeof mm.anchor || "number" != typeof mm.head) throw new RangeError("Invalid JSON representation for SelectionRange");
-        return lm.range(mm.anchor, mm.head)
+      static fromJSON(DD) {
+        if (!DD || "number" != typeof DD.anchor || "number" != typeof DD.head) throw new RangeError("Invalid JSON representation for SelectionRange");
+        return kD.range(DD.anchor, DD.head)
       }
-      static create(mm, Tm, fm) {
-        return new sm(mm, Tm, fm)
+      static create(DD, zD, wD) {
+        return new yD(DD, zD, wD)
       }
     }
-    class lm {
-      constructor(mm, Tm) {
-        this.mo = mm, this.mainIndex = Tm
+    class kD {
+      constructor(DD, zD) {
+        this.rG = DD, this.mainIndex = zD
       }
-      map(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
-        return mm.empty ? this : lm.create(this.mo.map((fm => fm.map(mm, Tm))), this.mainIndex)
+      map(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1;
+        return DD.empty ? this : kD.create(this.rG.map((wD => wD.map(DD, zD))), this.mainIndex)
       }
-      eq(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        if (this.mo.length != mm.mo.length || this.mainIndex != mm.mainIndex) return !1;
-        for (let fm = 0; fm < this.mo.length; fm++)
-          if (!this.mo[fm].eq(mm.mo[fm], Tm)) return !1;
+      eq(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        if (this.rG.length != DD.rG.length || this.mainIndex != DD.mainIndex) return !1;
+        for (let wD = 0; wD < this.rG.length; wD++)
+          if (!this.rG[wD].eq(DD.rG[wD], zD)) return !1;
         return !0
       }
       get main() {
-        return this.mo[this.mainIndex]
+        return this.rG[this.mainIndex]
       }
       asSingle() {
-        return 1 == this.mo.length ? this : new lm([this.main], 0)
+        return 1 == this.rG.length ? this : new kD([this.main], 0)
       }
-      addRange(mm) {
-        let Tm = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-        return lm.create([mm].concat(this.mo), Tm ? 0 : this.mainIndex + 1)
+      addRange(DD) {
+        let zD = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        return kD.create([DD].concat(this.rG), zD ? 0 : this.mainIndex + 1)
       }
-      replaceRange(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
-          fm = this.mo.slice();
-        return fm[Tm] = mm, lm.create(fm, this.mainIndex)
+      replaceRange(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.mainIndex,
+          wD = this.rG.slice();
+        return wD[zD] = DD, kD.create(wD, this.mainIndex)
       }
       toJSON() {
         return {
-          mo: this.mo.map((mm => mm.toJSON())),
+          rG: this.rG.map((DD => DD.toJSON())),
           main: this.mainIndex
         }
       }
-      static fromJSON(mm) {
-        if (!mm || !Array.isArray(mm.mo) || "number" != typeof mm.main || mm.main >= mm.mo.length) throw new RangeError("Invalid JSON representation for EditorSelection");
-        return new lm(mm.mo.map((mm => sm.fromJSON(mm))), mm.main)
+      static fromJSON(DD) {
+        if (!DD || !Array.isArray(DD.rG) || "number" != typeof DD.main || DD.main >= DD.rG.length) throw new RangeError("Invalid JSON representation for EditorSelection");
+        return new kD(DD.rG.map((DD => yD.fromJSON(DD))), DD.main)
       }
-      static single(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mm;
-        return new lm([lm.range(mm, Tm)], 0)
+      static single(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD;
+        return new kD([kD.range(DD, zD)], 0)
       }
-      static create(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        if (0 == mm.length) throw new RangeError("A selection needs at least one range");
-        for (let fm = 0, hm = 0; hm < mm.length; hm++) {
-          let Am = mm[hm];
-          if (Am.empty ? Am.from <= fm : Am.from < fm) return lm.normalized(mm.slice(), Tm);
-          fm = Am.to
+      static create(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        if (0 == DD.length) throw new RangeError("A selection needs at least one range");
+        for (let wD = 0, pD = 0; pD < DD.length; pD++) {
+          let sD = DD[pD];
+          if (sD.empty ? sD.from <= wD : sD.from < wD) return kD.normalized(DD.slice(), zD);
+          wD = sD.to
         }
-        return new lm(mm, Tm)
+        return new kD(DD, zD)
       }
-      static cursor(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          fm = arguments.length > 2 ? arguments[2] : void 0,
-          hm = arguments.length > 3 ? arguments[3] : void 0;
-        return sm.create(mm, mm, (0 == Tm ? 0 : Tm < 0 ? 8 : 16) | (null == fm ? 7 : Math.min(6, fm)) | (null !== hm && void 0 !== hm ? hm : 16777215) << 6)
+      static cursor(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          wD = arguments.length > 2 ? arguments[2] : void 0,
+          pD = arguments.length > 3 ? arguments[3] : void 0;
+        return yD.create(DD, DD, (0 == zD ? 0 : zD < 0 ? 8 : 16) | (null == wD ? 7 : Math.min(6, wD)) | (null !== pD && void 0 !== pD ? pD : 16777215) << 6)
       }
-      static range(mm, Tm, fm, hm, Am) {
-        let am = (null !== fm && void 0 !== fm ? fm : 16777215) << 6 | (null == hm ? 7 : Math.min(6, hm));
-        return Am || mm == Tm || (Am = Tm < mm ? 1 : -1), Tm < mm ? sm.create(Tm, mm, 48 | am) : sm.create(mm, Tm, (Am ? Am < 0 ? 8 : 16 : 0) | am)
+      static range(DD, zD, wD, pD, sD) {
+        let KD = (null !== wD && void 0 !== wD ? wD : 16777215) << 6 | (null == pD ? 7 : Math.min(6, pD));
+        return sD || DD == zD || (sD = zD < DD ? 1 : -1), zD < DD ? yD.create(zD, DD, 48 | KD) : yD.create(DD, zD, (sD ? sD < 0 ? 8 : 16 : 0) | KD)
       }
-      static normalized(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-          fm = mm[Tm];
-        mm.sort(((mm, Tm) => mm.from - Tm.from)), Tm = mm.indexOf(fm);
-        for (let hm = 1; hm < mm.length; hm++) {
-          let fm = mm[hm],
-            Am = mm[hm - 1];
-          if (fm.empty ? fm.from <= Am.to : fm.from < Am.to) {
-            let am = Am.from,
-              xm = Math.max(fm.to, Am.to);
-            hm <= Tm && Tm--, mm.splice(--hm, 2, fm.anchor > fm.head ? lm.range(xm, am) : lm.range(am, xm))
+      static normalized(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+          wD = DD[zD];
+        DD.sort(((DD, zD) => DD.from - zD.from)), zD = DD.indexOf(wD);
+        for (let pD = 1; pD < DD.length; pD++) {
+          let wD = DD[pD],
+            sD = DD[pD - 1];
+          if (wD.empty ? wD.from <= sD.to : wD.from < sD.to) {
+            let KD = sD.from,
+              rD = Math.max(wD.to, sD.to);
+            pD <= zD && zD--, DD.splice(--pD, 2, wD.anchor > wD.head ? kD.range(rD, KD) : kD.range(KD, rD))
           }
         }
-        return new lm(mm, Tm)
+        return new kD(DD, zD)
       }
     }
 
-    function Mm(mm, Tm) {
-      for (let fm of mm.mo)
-        if (fm.to > Tm) throw new RangeError("Selection points outside of document")
+    function mD(DD, zD) {
+      for (let wD of DD.rG)
+        if (wD.to > zD) throw new RangeError("Selection points outside of document")
     }
-    let um = 0;
-    class Bm {
-      constructor(mm, Tm, fm, hm, Am) {
-        this.combine = mm, this.compareInput = Tm, this.compare = fm, this.isStatic = hm, this.id = um++, this.default = mm([]), this.extensions = "function" == typeof Am ? Am(this) : Am
+    let eD = 0;
+    class oD {
+      constructor(DD, zD, wD, pD, sD) {
+        this.combine = DD, this.compareInput = zD, this.compare = wD, this.isStatic = pD, this.id = eD++, this.default = DD([]), this.extensions = "function" == typeof sD ? sD(this) : sD
       }
       get reader() {
         return this
       }
       static define() {
-        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        return new Bm(mm.combine || (mm => mm), mm.compareInput || ((mm, Tm) => mm === Tm), mm.compare || (mm.combine ? (mm, Tm) => mm === Tm : Lm), !!mm.static, mm.enables)
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        return new oD(DD.combine || (DD => DD), DD.compareInput || ((DD, zD) => DD === zD), DD.compare || (DD.combine ? (DD, zD) => DD === zD : aD), !!DD.static, DD.enables)
       }
-      of(mm) {
-        return new tm([], this, 0, mm)
+      of(DD) {
+        return new uD([], this, 0, DD)
       }
-      compute(mm, Tm) {
+      compute(DD, zD) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new tm(mm, this, 1, Tm)
+        return new uD(DD, this, 1, zD)
       }
-      computeN(mm, Tm) {
+      computeN(DD, zD) {
         if (this.isStatic) throw new Error("Can't compute a static facet");
-        return new tm(mm, this, 2, Tm)
+        return new uD(DD, this, 2, zD)
       }
-      from(mm, Tm) {
-        return Tm || (Tm = mm => mm), this.compute([mm], (fm => Tm(fm.field(mm))))
+      from(DD, zD) {
+        return zD || (zD = DD => DD), this.compute([DD], (wD => zD(wD.field(DD))))
       }
     }
 
-    function Lm(mm, Tm) {
-      return mm == Tm || mm.length == Tm.length && mm.every(((mm, fm) => mm === Tm[fm]))
+    function aD(DD, zD) {
+      return DD == zD || DD.length == zD.length && DD.every(((DD, wD) => DD === zD[wD]))
     }
-    class tm {
-      constructor(mm, Tm, fm, hm) {
-        this.dependencies = mm, this.facet = Tm, this.type = fm, this.value = hm, this.id = um++
+    class uD {
+      constructor(DD, zD, wD, pD) {
+        this.dependencies = DD, this.facet = zD, this.type = wD, this.value = pD, this.id = eD++
       }
-      dynamicSlot(mm) {
-        var Tm;
-        let fm = this.value,
-          hm = this.facet.compareInput,
-          Am = this.id,
-          am = mm[Am] >> 1,
-          xm = 2 == this.type,
-          wm = !1,
-          Dm = !1,
-          im = [];
-        for (let Rm of this.dependencies) "doc" == Rm ? wm = !0 : "selection" == Rm ? Dm = !0 : 0 == (1 & (null !== (Tm = mm[Rm.id]) && void 0 !== Tm ? Tm : 1)) && im.push(mm[Rm.id]);
+      dynamicSlot(DD) {
+        var zD;
+        let wD = this.value,
+          pD = this.facet.compareInput,
+          sD = this.id,
+          KD = DD[sD] >> 1,
+          rD = 2 == this.type,
+          LD = !1,
+          cD = !1,
+          gD = [];
+        for (let RD of this.dependencies) "doc" == RD ? LD = !0 : "selection" == RD ? cD = !0 : 0 == (1 & (null !== (zD = DD[RD.id]) && void 0 !== zD ? zD : 1)) && gD.push(DD[RD.id]);
         return {
-          create: mm => (mm.values[am] = fm(mm), 1),
-          update(mm, Tm) {
-            if (wm && Tm.docChanged || Dm && (Tm.docChanged || Tm.selection) || dm(mm, im)) {
-              let Tm = fm(mm);
-              if (xm ? !Um(Tm, mm.values[am], hm) : !hm(Tm, mm.values[am])) return mm.values[am] = Tm, 1
+          create: DD => (DD.values[KD] = wD(DD), 1),
+          update(DD, zD) {
+            if (LD && zD.docChanged || cD && (zD.docChanged || zD.selection) || tD(DD, gD)) {
+              let zD = wD(DD);
+              if (rD ? !vD(zD, DD.values[KD], pD) : !pD(zD, DD.values[KD])) return DD.values[KD] = zD, 1
             }
             return 0
           },
-          reconfigure: (mm, Tm) => {
-            let wm, Dm = Tm.config.address[Am];
-            if (null != Dm) {
-              let Am = pT(Tm, Dm);
-              if (this.dependencies.every((fm => fm instanceof Bm ? Tm.facet(fm) === mm.facet(fm) : !(fm instanceof Fm) || Tm.field(fm, !1) == mm.field(fm, !1))) || (xm ? Um(wm = fm(mm), Am, hm) : hm(wm = fm(mm), Am))) return mm.values[am] = Am, 0
-            } else wm = fm(mm);
-            return mm.values[am] = wm, 1
+          reconfigure: (DD, zD) => {
+            let LD, cD = zD.config.address[sD];
+            if (null != cD) {
+              let sD = Rz(zD, cD);
+              if (this.dependencies.every((wD => wD instanceof oD ? zD.facet(wD) === DD.facet(wD) : !(wD instanceof HD) || zD.field(wD, !1) == DD.field(wD, !1))) || (rD ? vD(LD = wD(DD), sD, pD) : pD(LD = wD(DD), sD))) return DD.values[KD] = sD, 0
+            } else LD = wD(DD);
+            return DD.values[KD] = LD, 1
           }
         }
       }
     }
 
-    function Um(mm, Tm, fm) {
-      if (mm.length != Tm.length) return !1;
-      for (let hm = 0; hm < mm.length; hm++)
-        if (!fm(mm[hm], Tm[hm])) return !1;
+    function vD(DD, zD, wD) {
+      if (DD.length != zD.length) return !1;
+      for (let pD = 0; pD < DD.length; pD++)
+        if (!wD(DD[pD], zD[pD])) return !1;
       return !0
     }
 
-    function dm(mm, Tm) {
-      let fm = !1;
-      for (let hm of Tm) 1 & RT(mm, hm) && (fm = !0);
-      return fm
+    function tD(DD, zD) {
+      let wD = !1;
+      for (let pD of zD) 1 & gz(DD, pD) && (wD = !0);
+      return wD
     }
 
-    function gm(mm, Tm, fm) {
-      let hm = fm.map((Tm => mm[Tm.id])),
-        Am = fm.map((mm => mm.type)),
-        am = hm.filter((mm => !(1 & mm))),
-        xm = mm[Tm.id] >> 1;
+    function FD(DD, zD, wD) {
+      let pD = wD.map((zD => DD[zD.id])),
+        sD = wD.map((DD => DD.type)),
+        KD = pD.filter((DD => !(1 & DD))),
+        rD = DD[zD.id] >> 1;
 
-      function wm(mm) {
-        let fm = [];
-        for (let Tm = 0; Tm < hm.length; Tm++) {
-          let am = pT(mm, hm[Tm]);
-          if (2 == Am[Tm])
-            for (let mm of am) fm.push(mm);
-          else fm.push(am)
+      function LD(DD) {
+        let wD = [];
+        for (let zD = 0; zD < pD.length; zD++) {
+          let KD = Rz(DD, pD[zD]);
+          if (2 == sD[zD])
+            for (let DD of KD) wD.push(DD);
+          else wD.push(KD)
         }
-        return Tm.combine(fm)
+        return zD.combine(wD)
       }
       return {
-        create(mm) {
-          for (let Tm of hm) RT(mm, Tm);
-          return mm.values[xm] = wm(mm), 1
+        create(DD) {
+          for (let zD of pD) gz(DD, zD);
+          return DD.values[rD] = LD(DD), 1
         },
-        update(mm, fm) {
-          if (!dm(mm, am)) return 0;
-          let hm = wm(mm);
-          return Tm.compare(hm, mm.values[xm]) ? 0 : (mm.values[xm] = hm, 1)
+        update(DD, wD) {
+          if (!tD(DD, KD)) return 0;
+          let pD = LD(DD);
+          return zD.compare(pD, DD.values[rD]) ? 0 : (DD.values[rD] = pD, 1)
         },
-        reconfigure(mm, Am) {
-          let am = dm(mm, hm),
-            Dm = Am.config.facets[Tm.id],
-            im = Am.facet(Tm);
-          if (Dm && !am && Lm(fm, Dm)) return mm.values[xm] = im, 0;
-          let Rm = wm(mm);
-          return Tm.compare(Rm, im) ? (mm.values[xm] = im, 0) : (mm.values[xm] = Rm, 1)
+        reconfigure(DD, sD) {
+          let KD = tD(DD, pD),
+            cD = sD.config.facets[zD.id],
+            gD = sD.facet(zD);
+          if (cD && !KD && aD(wD, cD)) return DD.values[rD] = gD, 0;
+          let RD = LD(DD);
+          return zD.compare(RD, gD) ? (DD.values[rD] = gD, 0) : (DD.values[rD] = RD, 1)
         }
       }
     }
-    const Wm = Bm.define({
+    const YD = oD.define({
       static: !0
     });
-    class Fm {
-      constructor(mm, Tm, fm, hm, Am) {
-        this.id = mm, this.createF = Tm, this.updateF = fm, this.compareF = hm, this.spec = Am, this.provides = void 0
+    class HD {
+      constructor(DD, zD, wD, pD, sD) {
+        this.id = DD, this.createF = zD, this.updateF = wD, this.compareF = pD, this.spec = sD, this.provides = void 0
       }
-      static define(mm) {
-        let Tm = new Fm(um++, mm.create, mm.update, mm.compare || ((mm, Tm) => mm === Tm), mm);
-        return mm.provide && (Tm.provides = mm.provide(Tm)), Tm
+      static define(DD) {
+        let zD = new HD(eD++, DD.create, DD.update, DD.compare || ((DD, zD) => DD === zD), DD);
+        return DD.provide && (zD.provides = DD.provide(zD)), zD
       }
-      create(mm) {
-        let Tm = mm.facet(Wm).find((mm => mm.field == this));
-        return ((null === Tm || void 0 === Tm ? void 0 : Tm.create) || this.createF)(mm)
+      create(DD) {
+        let zD = DD.facet(YD).find((DD => DD.field == this));
+        return ((null === zD || void 0 === zD ? void 0 : zD.create) || this.createF)(DD)
       }
-      slot(mm) {
-        let Tm = mm[this.id] >> 1;
+      slot(DD) {
+        let zD = DD[this.id] >> 1;
         return {
-          create: mm => (mm.values[Tm] = this.create(mm), 1),
-          update: (mm, fm) => {
-            let hm = mm.values[Tm],
-              Am = this.updateF(hm, fm);
-            return this.compareF(hm, Am) ? 0 : (mm.values[Tm] = Am, 1)
+          create: DD => (DD.values[zD] = this.create(DD), 1),
+          update: (DD, wD) => {
+            let pD = DD.values[zD],
+              sD = this.updateF(pD, wD);
+            return this.compareF(pD, sD) ? 0 : (DD.values[zD] = sD, 1)
           },
-          reconfigure: (mm, fm) => {
-            let hm, Am = mm.facet(Wm),
-              am = fm.facet(Wm);
-            return (hm = Am.find((mm => mm.field == this))) && hm != am.find((mm => mm.field == this)) ? (mm.values[Tm] = hm.create(mm), 1) : null != fm.config.address[this.id] ? (mm.values[Tm] = fm.field(this), 0) : (mm.values[Tm] = this.create(mm), 1)
+          reconfigure: (DD, wD) => {
+            let pD, sD = DD.facet(YD),
+              KD = wD.facet(YD);
+            return (pD = sD.find((DD => DD.field == this))) && pD != KD.find((DD => DD.field == this)) ? (DD.values[zD] = pD.create(DD), 1) : null != wD.config.address[this.id] ? (DD.values[zD] = wD.field(this), 0) : (DD.values[zD] = this.create(DD), 1)
           }
         }
       }
-      init(mm) {
-        return [this, Wm.of({
+      init(DD) {
+        return [this, YD.of({
           field: this,
-          create: mm
+          create: DD
         })]
       }
       get extension() {
         return this
       }
     }
-    const mT = 4,
-      TT = 3,
-      fT = 2,
-      hT = 1;
+    const qD = 4,
+      Dz = 3,
+      zz = 2,
+      wz = 1;
 
-    function AT(mm) {
-      return Tm => new xT(Tm, mm)
+    function pz(DD) {
+      return zD => new Kz(zD, DD)
     }
-    const aT = {
-      highest: AT(0),
-      high: AT(hT),
-      default: AT(fT),
-      low: AT(TT),
-      lowest: AT(mT)
+    const sz = {
+      highest: pz(0),
+      high: pz(wz),
+      default: pz(zz),
+      low: pz(Dz),
+      lowest: pz(qD)
     };
-    class xT {
-      constructor(mm, Tm) {
-        this.inner = mm, this.prec = Tm
+    class Kz {
+      constructor(DD, zD) {
+        this.inner = DD, this.prec = zD
       }
     }
-    class wT {
-      of(mm) {
-        return new DT(this, mm)
+    class rz {
+      of(DD) {
+        return new Lz(this, DD)
       }
-      reconfigure(mm) {
-        return wT.reconfigure.of({
+      reconfigure(DD) {
+        return rz.reconfigure.of({
           compartment: this,
-          extension: mm
+          extension: DD
         })
       }
-      get(mm) {
-        return mm.config.compartments.get(this)
+      get(DD) {
+        return DD.config.compartments.get(this)
       }
     }
-    class DT {
-      constructor(mm, Tm) {
-        this.compartment = mm, this.inner = Tm
+    class Lz {
+      constructor(DD, zD) {
+        this.compartment = DD, this.inner = zD
       }
     }
-    class iT {
-      constructor(mm, Tm, fm, hm, Am, am) {
-        for (this.base = mm, this.compartments = Tm, this.dynamicSlots = fm, this.address = hm, this.staticValues = Am, this.facets = am, this.statusTemplate = []; this.statusTemplate.length < fm.length;) this.statusTemplate.push(0)
+    class cz {
+      constructor(DD, zD, wD, pD, sD, KD) {
+        for (this.base = DD, this.compartments = zD, this.dynamicSlots = wD, this.address = pD, this.staticValues = sD, this.facets = KD, this.statusTemplate = []; this.statusTemplate.length < wD.length;) this.statusTemplate.push(0)
       }
-      staticFacet(mm) {
-        let Tm = this.address[mm.id];
-        return null == Tm ? mm.default : this.staticValues[Tm >> 1]
+      staticFacet(DD) {
+        let zD = this.address[DD.id];
+        return null == zD ? DD.default : this.staticValues[zD >> 1]
       }
-      static resolve(mm, Tm, fm) {
-        let hm = [],
-          Am = Object.create(null),
-          am = new Map;
-        for (let pm of function(mm, Tm, fm) {
-            let hm = [
+      static resolve(DD, zD, wD) {
+        let pD = [],
+          sD = Object.create(null),
+          KD = new Map;
+        for (let AD of function(DD, zD, wD) {
+            let pD = [
                 [],
                 [],
                 [],
                 [],
                 []
               ],
-              Am = new Map;
+              sD = new Map;
 
-            function am(mm, xm) {
-              let wm = Am.get(mm);
-              if (null != wm) {
-                if (wm <= xm) return;
-                let Tm = hm[wm].indexOf(mm);
-                Tm > -1 && hm[wm].splice(Tm, 1), mm instanceof DT && fm.delete(mm.compartment)
+            function KD(DD, rD) {
+              let LD = sD.get(DD);
+              if (null != LD) {
+                if (LD <= rD) return;
+                let zD = pD[LD].indexOf(DD);
+                zD > -1 && pD[LD].splice(zD, 1), DD instanceof Lz && wD.delete(DD.compartment)
               }
-              if (Am.set(mm, xm), Array.isArray(mm))
-                for (let Tm of mm) am(Tm, xm);
-              else if (mm instanceof DT) {
-                if (fm.has(mm.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
-                let hm = Tm.get(mm.compartment) || mm.inner;
-                fm.set(mm.compartment, hm), am(hm, xm)
-              } else if (mm instanceof xT) am(mm.inner, mm.prec);
-              else if (mm instanceof Fm) hm[xm].push(mm), mm.provides && am(mm.provides, xm);
-              else if (mm instanceof tm) hm[xm].push(mm), mm.facet.extensions && am(mm.facet.extensions, fT);
+              if (sD.set(DD, rD), Array.isArray(DD))
+                for (let zD of DD) KD(zD, rD);
+              else if (DD instanceof Lz) {
+                if (wD.has(DD.compartment)) throw new RangeError("Duplicate use of compartment in extensions");
+                let pD = zD.get(DD.compartment) || DD.inner;
+                wD.set(DD.compartment, pD), KD(pD, rD)
+              } else if (DD instanceof Kz) KD(DD.inner, DD.prec);
+              else if (DD instanceof HD) pD[rD].push(DD), DD.provides && KD(DD.provides, rD);
+              else if (DD instanceof uD) pD[rD].push(DD), DD.facet.extensions && KD(DD.facet.extensions, zz);
               else {
-                let Tm = mm.extension;
-                if (!Tm) throw new Error(`Unrecognized extension value in extension set (${mm}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
-                am(Tm, xm)
+                let zD = DD.extension;
+                if (!zD) throw new Error(`Unrecognized extension value in extension set (${DD}). This sometimes happens because multiple instances of @codemirror/state are loaded, breaking instanceof checks.`);
+                KD(zD, rD)
               }
             }
-            return am(mm, fT), hm.reduce(((mm, Tm) => mm.concat(Tm)))
-          }(mm, Tm, am)) pm instanceof Fm ? hm.push(pm) : (Am[pm.facet.id] || (Am[pm.facet.id] = [])).push(pm);
-        let xm = Object.create(null),
-          wm = [],
-          Dm = [];
-        for (let pm of hm) xm[pm.id] = Dm.length << 1, Dm.push((mm => pm.slot(mm)));
-        let im = null === fm || void 0 === fm ? void 0 : fm.config.facets;
-        for (let pm in Am) {
-          let mm = Am[pm],
-            Tm = mm[0].facet,
-            hm = im && im[pm] || [];
-          if (mm.every((mm => 0 == mm.type)))
-            if (xm[Tm.id] = wm.length << 1 | 1, Lm(hm, mm)) wm.push(fm.facet(Tm));
+            return KD(DD, zz), pD.reduce(((DD, zD) => DD.concat(zD)))
+          }(DD, zD, KD)) AD instanceof HD ? pD.push(AD) : (sD[AD.facet.id] || (sD[AD.facet.id] = [])).push(AD);
+        let rD = Object.create(null),
+          LD = [],
+          cD = [];
+        for (let AD of pD) rD[AD.id] = cD.length << 1, cD.push((DD => AD.slot(DD)));
+        let gD = null === wD || void 0 === wD ? void 0 : wD.config.facets;
+        for (let AD in sD) {
+          let DD = sD[AD],
+            zD = DD[0].facet,
+            pD = gD && gD[AD] || [];
+          if (DD.every((DD => 0 == DD.type)))
+            if (rD[zD.id] = LD.length << 1 | 1, aD(pD, DD)) LD.push(wD.facet(zD));
             else {
-              let hm = Tm.combine(mm.map((mm => mm.value)));
-              wm.push(fm && Tm.compare(hm, fm.facet(Tm)) ? fm.facet(Tm) : hm)
+              let pD = zD.combine(DD.map((DD => DD.value)));
+              LD.push(wD && zD.compare(pD, wD.facet(zD)) ? wD.facet(zD) : pD)
             }
           else {
-            for (let Tm of mm) 0 == Tm.type ? (xm[Tm.id] = wm.length << 1 | 1, wm.push(Tm.value)) : (xm[Tm.id] = Dm.length << 1, Dm.push((mm => Tm.dynamicSlot(mm))));
-            xm[Tm.id] = Dm.length << 1, Dm.push((fm => gm(fm, Tm, mm)))
+            for (let zD of DD) 0 == zD.type ? (rD[zD.id] = LD.length << 1 | 1, LD.push(zD.value)) : (rD[zD.id] = cD.length << 1, cD.push((DD => zD.dynamicSlot(DD))));
+            rD[zD.id] = cD.length << 1, cD.push((wD => FD(wD, zD, DD)))
           }
         }
-        let Rm = Dm.map((mm => mm(xm)));
-        return new iT(mm, am, Rm, xm, wm, Am)
+        let RD = cD.map((DD => DD(rD)));
+        return new cz(DD, KD, RD, rD, LD, sD)
       }
     }
 
-    function RT(mm, Tm) {
-      if (1 & Tm) return 2;
-      let fm = Tm >> 1,
-        hm = mm.status[fm];
-      if (4 == hm) throw new Error("Cyclic dependency between fields and/or facets");
-      if (2 & hm) return hm;
-      mm.status[fm] = 4;
-      let Am = mm.computeSlot(mm, mm.config.dynamicSlots[fm]);
-      return mm.status[fm] = 2 | Am
+    function gz(DD, zD) {
+      if (1 & zD) return 2;
+      let wD = zD >> 1,
+        pD = DD.status[wD];
+      if (4 == pD) throw new Error("Cyclic dependency between fields and/or facets");
+      if (2 & pD) return pD;
+      DD.status[wD] = 4;
+      let sD = DD.computeSlot(DD, DD.config.dynamicSlots[wD]);
+      return DD.status[wD] = 2 | sD
     }
 
-    function pT(mm, Tm) {
-      return 1 & Tm ? mm.config.staticValues[Tm >> 1] : mm.values[Tm >> 1]
+    function Rz(DD, zD) {
+      return 1 & zD ? DD.config.staticValues[zD >> 1] : DD.values[zD >> 1]
     }
-    const ET = Bm.define(),
-      oT = Bm.define({
-        combine: mm => mm.some((mm => mm)),
+    const Az = oD.define(),
+      Uz = oD.define({
+        combine: DD => DD.some((DD => DD)),
         static: !0
       }),
-      OT = Bm.define({
-        combine: mm => mm.length ? mm[0] : void 0,
+      fz = oD.define({
+        combine: DD => DD.length ? DD[0] : void 0,
         static: !0
       }),
-      YT = Bm.define(),
-      qT = Bm.define(),
-      jT = Bm.define(),
-      VT = Bm.define({
-        combine: mm => !!mm.length && mm[0]
+      Iz = oD.define(),
+      Bz = oD.define(),
+      Gz = oD.define(),
+      hz = oD.define({
+        combine: DD => !!DD.length && DD[0]
       });
-    class IT {
-      constructor(mm, Tm) {
-        this.type = mm, this.value = Tm
+    class nz {
+      constructor(DD, zD) {
+        this.type = DD, this.value = zD
       }
       static define() {
-        return new KT
+        return new Mz
       }
     }
-    class KT {
-      of(mm) {
-        return new IT(this, mm)
+    class Mz {
+      of(DD) {
+        return new nz(this, DD)
       }
     }
-    class QT {
-      constructor(mm) {
-        this.map = mm
+    class Oz {
+      constructor(DD) {
+        this.map = DD
       }
-      of(mm) {
-        return new nT(this, mm)
+      of(DD) {
+        return new Jz(this, DD)
       }
     }
-    class nT {
-      constructor(mm, Tm) {
-        this.type = mm, this.value = Tm
+    class Jz {
+      constructor(DD, zD) {
+        this.type = DD, this.value = zD
       }
-      map(mm) {
-        let Tm = this.type.map(this.value, mm);
-        return void 0 === Tm ? void 0 : Tm == this.value ? this : new nT(this.type, Tm)
+      map(DD) {
+        let zD = this.type.map(this.value, DD);
+        return void 0 === zD ? void 0 : zD == this.value ? this : new Jz(this.type, zD)
       }
-      is(mm) {
-        return this.type == mm
+      is(DD) {
+        return this.type == DD
       }
       static define() {
-        return new QT((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (mm => mm))
+        return new Oz((arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}).map || (DD => DD))
       }
-      static mapEffects(mm, Tm) {
-        if (!mm.length) return mm;
-        let fm = [];
-        for (let hm of mm) {
-          let mm = hm.map(Tm);
-          mm && fm.push(mm)
+      static mapEffects(DD, zD) {
+        if (!DD.length) return DD;
+        let wD = [];
+        for (let pD of DD) {
+          let DD = pD.map(zD);
+          DD && wD.push(DD)
         }
-        return fm
+        return wD
       }
     }
-    nT.reconfigure = nT.define(), nT.appendConfig = nT.define();
-    class JT {
-      constructor(mm, Tm, fm, hm, Am, am) {
-        this.startState = mm, this.changes = Tm, this.selection = fm, this.effects = hm, this.annotations = Am, this.scrollIntoView = am, this._doc = null, this._state = null, fm && Mm(fm, Tm.newLength), Am.some((mm => mm.type == JT.time)) || (this.annotations = Am.concat(JT.time.of(Date.now())))
+    Jz.reconfigure = Jz.define(), Jz.appendConfig = Jz.define();
+    class Ez {
+      constructor(DD, zD, wD, pD, sD, KD) {
+        this.startState = DD, this.changes = zD, this.selection = wD, this.effects = pD, this.annotations = sD, this.scrollIntoView = KD, this._doc = null, this._state = null, wD && mD(wD, zD.newLength), sD.some((DD => DD.type == Ez.time)) || (this.annotations = sD.concat(Ez.time.of(Date.now())))
       }
-      static create(mm, Tm, fm, hm, Am, am) {
-        return new JT(mm, Tm, fm, hm, Am, am)
+      static create(DD, zD, wD, pD, sD, KD) {
+        return new Ez(DD, zD, wD, pD, sD, KD)
       }
       get newDoc() {
         return this._doc || (this._doc = this.changes.apply(this.startState.doc))
@@ -1328,9 +1328,9 @@ export const modules = {
       get state() {
         return this._state || this.startState.applyTransaction(this), this._state
       }
-      annotation(mm) {
-        for (let Tm of this.annotations)
-          if (Tm.type == mm) return Tm.value
+      annotation(DD) {
+        for (let zD of this.annotations)
+          if (zD.type == DD) return zD.value
       }
       get docChanged() {
         return !this.changes.empty
@@ -1338,584 +1338,584 @@ export const modules = {
       get reconfigured() {
         return this.startState.config != this.state.config
       }
-      isUserEvent(mm) {
-        let Tm = this.annotation(JT.userEvent);
-        return !(!Tm || !(Tm == mm || Tm.length > mm.length && Tm.slice(0, mm.length) == mm && "." == Tm[mm.length]))
+      isUserEvent(DD) {
+        let zD = this.annotation(Ez.userEvent);
+        return !(!zD || !(zD == DD || zD.length > DD.length && zD.slice(0, DD.length) == DD && "." == zD[DD.length]))
       }
     }
 
-    function cT(mm, Tm) {
-      let fm = [];
-      for (let hm = 0, Am = 0;;) {
-        let am, xm;
-        if (hm < mm.length && (Am == Tm.length || Tm[Am] >= mm[hm])) am = mm[hm++], xm = mm[hm++];
+    function Qz(DD, zD) {
+      let wD = [];
+      for (let pD = 0, sD = 0;;) {
+        let KD, rD;
+        if (pD < DD.length && (sD == zD.length || zD[sD] >= DD[pD])) KD = DD[pD++], rD = DD[pD++];
         else {
-          if (!(Am < Tm.length)) return fm;
-          am = Tm[Am++], xm = Tm[Am++]
-        }!fm.length || fm[fm.length - 1] < am ? fm.push(am, xm) : fm[fm.length - 1] < xm && (fm[fm.length - 1] = xm)
+          if (!(sD < zD.length)) return wD;
+          KD = zD[sD++], rD = zD[sD++]
+        }!wD.length || wD[wD.length - 1] < KD ? wD.push(KD, rD) : wD[wD.length - 1] < rD && (wD[wD.length - 1] = rD)
       }
     }
 
-    function zT(mm, Tm, fm) {
-      var hm;
-      let Am, am, xm;
-      return fm ? (Am = Tm.changes, am = Gm.empty(Tm.changes.length), xm = mm.changes.compose(Tm.changes)) : (Am = Tm.changes.map(mm.changes), am = mm.changes.mapDesc(Tm.changes, !0), xm = mm.changes.compose(Am)), {
-        changes: xm,
-        selection: Tm.selection ? Tm.selection.map(am) : null === (hm = mm.selection) || void 0 === hm ? void 0 : hm.map(Am),
-        effects: nT.mapEffects(mm.effects, Am).concat(nT.mapEffects(Tm.effects, am)),
-        annotations: mm.annotations.length ? mm.annotations.concat(Tm.annotations) : Tm.annotations,
-        scrollIntoView: mm.scrollIntoView || Tm.scrollIntoView
+    function Xz(DD, zD, wD) {
+      var pD;
+      let sD, KD, rD;
+      return wD ? (sD = zD.changes, KD = dD.empty(zD.changes.length), rD = DD.changes.compose(zD.changes)) : (sD = zD.changes.map(DD.changes), KD = DD.changes.mapDesc(zD.changes, !0), rD = DD.changes.compose(sD)), {
+        changes: rD,
+        selection: zD.selection ? zD.selection.map(KD) : null === (pD = DD.selection) || void 0 === pD ? void 0 : pD.map(sD),
+        effects: Jz.mapEffects(DD.effects, sD).concat(Jz.mapEffects(zD.effects, KD)),
+        annotations: DD.annotations.length ? DD.annotations.concat(zD.annotations) : zD.annotations,
+        scrollIntoView: DD.scrollIntoView || zD.scrollIntoView
       }
     }
 
-    function ZT(mm, Tm, fm) {
-      let hm = Tm.selection,
-        Am = ST(Tm.annotations);
-      return Tm.userEvent && (Am = Am.concat(JT.userEvent.of(Tm.userEvent))), {
-        changes: Tm.changes instanceof Gm ? Tm.changes : Gm.of(Tm.changes || [], fm, mm.facet(OT)),
-        selection: hm && (hm instanceof lm ? hm : lm.single(hm.anchor, hm.head)),
-        effects: ST(Tm.effects),
-        annotations: Am,
-        scrollIntoView: !!Tm.scrollIntoView
+    function Vz(DD, zD, wD) {
+      let pD = zD.selection,
+        sD = xz(zD.annotations);
+      return zD.userEvent && (sD = sD.concat(Ez.userEvent.of(zD.userEvent))), {
+        changes: zD.changes instanceof dD ? zD.changes : dD.of(zD.changes || [], wD, DD.facet(fz)),
+        selection: pD && (pD instanceof kD ? pD : kD.single(pD.anchor, pD.head)),
+        effects: xz(zD.effects),
+        annotations: sD,
+        scrollIntoView: !!zD.scrollIntoView
       }
     }
 
-    function kT(mm, Tm, fm) {
-      let hm = ZT(mm, Tm.length ? Tm[0] : {}, mm.doc.length);
-      Tm.length && !1 === Tm[0].filter && (fm = !1);
-      for (let am = 1; am < Tm.length; am++) {
-        !1 === Tm[am].filter && (fm = !1);
-        let Am = !!Tm[am].sequential;
-        hm = zT(hm, ZT(mm, Tm[am], Am ? hm.changes.newLength : mm.doc.length), Am)
+    function Pz(DD, zD, wD) {
+      let pD = Vz(DD, zD.length ? zD[0] : {}, DD.doc.length);
+      zD.length && !1 === zD[0].filter && (wD = !1);
+      for (let KD = 1; KD < zD.length; KD++) {
+        !1 === zD[KD].filter && (wD = !1);
+        let sD = !!zD[KD].sequential;
+        pD = Xz(pD, Vz(DD, zD[KD], sD ? pD.changes.newLength : DD.doc.length), sD)
       }
-      let Am = JT.create(mm, hm.changes, hm.selection, hm.effects, hm.annotations, hm.scrollIntoView);
-      return function(mm) {
-        let Tm = mm.startState,
-          fm = Tm.facet(jT),
-          hm = mm;
-        for (let Am = fm.length - 1; Am >= 0; Am--) {
-          let am = fm[Am](mm);
-          am && Object.keys(am).length && (hm = zT(hm, ZT(Tm, am, mm.changes.newLength), !0))
+      let sD = Ez.create(DD, pD.changes, pD.selection, pD.effects, pD.annotations, pD.scrollIntoView);
+      return function(DD) {
+        let zD = DD.startState,
+          wD = zD.facet(Gz),
+          pD = DD;
+        for (let sD = wD.length - 1; sD >= 0; sD--) {
+          let KD = wD[sD](DD);
+          KD && Object.keys(KD).length && (pD = Xz(pD, Vz(zD, KD, DD.changes.newLength), !0))
         }
-        return hm == mm ? mm : JT.create(Tm, mm.changes, mm.selection, hm.effects, hm.annotations, hm.scrollIntoView)
-      }(fm ? function(mm) {
-        let Tm = mm.startState,
-          fm = !0;
-        for (let Am of Tm.facet(YT)) {
-          let Tm = Am(mm);
-          if (!1 === Tm) {
-            fm = !1;
+        return pD == DD ? DD : Ez.create(zD, DD.changes, DD.selection, pD.effects, pD.annotations, pD.scrollIntoView)
+      }(wD ? function(DD) {
+        let zD = DD.startState,
+          wD = !0;
+        for (let sD of zD.facet(Iz)) {
+          let zD = sD(DD);
+          if (!1 === zD) {
+            wD = !1;
             break
           }
-          Array.isArray(Tm) && (fm = !0 === fm ? Tm : cT(fm, Tm))
+          Array.isArray(zD) && (wD = !0 === wD ? zD : Qz(wD, zD))
         }
-        if (!0 !== fm) {
-          let hm, Am;
-          if (!1 === fm) Am = mm.changes.invertedDesc, hm = Gm.empty(Tm.doc.length);
+        if (!0 !== wD) {
+          let pD, sD;
+          if (!1 === wD) sD = DD.changes.invertedDesc, pD = dD.empty(zD.doc.length);
           else {
-            let Tm = mm.changes.filter(fm);
-            hm = Tm.changes, Am = Tm.filtered.mapDesc(Tm.changes).invertedDesc
+            let zD = DD.changes.filter(wD);
+            pD = zD.changes, sD = zD.filtered.mapDesc(zD.changes).invertedDesc
           }
-          mm = JT.create(Tm, hm, mm.selection && mm.selection.map(Am), nT.mapEffects(mm.effects, Am), mm.annotations, mm.scrollIntoView)
+          DD = Ez.create(zD, pD, DD.selection && DD.selection.map(sD), Jz.mapEffects(DD.effects, sD), DD.annotations, DD.scrollIntoView)
         }
-        let hm = Tm.facet(qT);
-        for (let Am = hm.length - 1; Am >= 0; Am--) {
-          let fm = hm[Am](mm);
-          mm = fm instanceof JT ? fm : Array.isArray(fm) && 1 == fm.length && fm[0] instanceof JT ? fm[0] : kT(Tm, ST(fm), !1)
+        let pD = zD.facet(Bz);
+        for (let sD = pD.length - 1; sD >= 0; sD--) {
+          let wD = pD[sD](DD);
+          DD = wD instanceof Ez ? wD : Array.isArray(wD) && 1 == wD.length && wD[0] instanceof Ez ? wD[0] : Pz(zD, xz(wD), !1)
         }
-        return mm
-      }(Am) : Am)
+        return DD
+      }(sD) : sD)
     }
-    JT.time = IT.define(), JT.userEvent = IT.define(), JT.addToHistory = IT.define(), JT.remote = IT.define();
-    const bT = [];
+    Ez.time = nz.define(), Ez.userEvent = nz.define(), Ez.addToHistory = nz.define(), Ez.remote = nz.define();
+    const Cz = [];
 
-    function ST(mm) {
-      return null == mm ? bT : Array.isArray(mm) ? mm : [mm]
+    function xz(DD) {
+      return null == DD ? Cz : Array.isArray(DD) ? DD : [DD]
     }
-    var eT = function(mm) {
-      return mm[mm.Word = 0] = "Word", mm[mm.Space = 1] = "Space", mm[mm.Other = 2] = "Other", mm
-    }(eT || (eT = {}));
-    const NT = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
-    let GT;
+    var Tz = function(DD) {
+      return DD[DD.Word = 0] = "Word", DD[DD.Space = 1] = "Space", DD[DD.Other = 2] = "Other", DD
+    }(Tz || (Tz = {}));
+    const bz = /[\u00df\u0587\u0590-\u05f4\u0600-\u06ff\u3040-\u309f\u30a0-\u30ff\u3400-\u4db5\u4e00-\u9fcc\uac00-\ud7af]/;
+    let jz;
     try {
-      GT = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
-    } catch (hf) {}
+      jz = new RegExp("[\\p{Alphabetic}\\p{Number}_]", "u")
+    } catch (ww) {}
 
-    function XT(mm) {
-      return Tm => {
-        if (!/\S/.test(Tm)) return eT.Space;
-        if (function(mm) {
-            if (GT) return GT.test(mm);
-            for (let Tm = 0; Tm < mm.length; Tm++) {
-              let fm = mm[Tm];
-              if (/\w/.test(fm) || fm > "\x80" && (fm.toUpperCase() != fm.toLowerCase() || NT.test(fm))) return !0
+    function dz(DD) {
+      return zD => {
+        if (!/\S/.test(zD)) return Tz.Space;
+        if (function(DD) {
+            if (jz) return jz.test(DD);
+            for (let zD = 0; zD < DD.length; zD++) {
+              let wD = DD[zD];
+              if (/\w/.test(wD) || wD > "\x80" && (wD.toUpperCase() != wD.toLowerCase() || bz.test(wD))) return !0
             }
             return !1
-          }(Tm)) return eT.Word;
-        for (let fm = 0; fm < mm.length; fm++)
-          if (Tm.indexOf(mm[fm]) > -1) return eT.Word;
-        return eT.Other
+          }(zD)) return Tz.Word;
+        for (let wD = 0; wD < DD.length; wD++)
+          if (zD.indexOf(DD[wD]) > -1) return Tz.Word;
+        return Tz.Other
       }
     }
-    class PT {
-      constructor(mm, Tm, fm, hm, Am, am) {
-        this.config = mm, this.doc = Tm, this.selection = fm, this.values = hm, this.status = mm.statusTemplate.slice(), this.computeSlot = Am, am && (am._state = this);
-        for (let xm = 0; xm < this.config.dynamicSlots.length; xm++) RT(this, xm << 1);
+    class Sz {
+      constructor(DD, zD, wD, pD, sD, KD) {
+        this.config = DD, this.doc = zD, this.selection = wD, this.values = pD, this.status = DD.statusTemplate.slice(), this.computeSlot = sD, KD && (KD._state = this);
+        for (let rD = 0; rD < this.config.dynamicSlots.length; rD++) gz(this, rD << 1);
         this.computeSlot = null
       }
-      field(mm) {
-        let Tm = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
-          fm = this.config.address[mm.id];
-        if (null != fm) return RT(this, fm), pT(this, fm);
-        if (Tm) throw new RangeError("Field is not present in this state")
+      field(DD) {
+        let zD = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1],
+          wD = this.config.address[DD.id];
+        if (null != wD) return gz(this, wD), Rz(this, wD);
+        if (zD) throw new RangeError("Field is not present in this state")
       }
       update() {
-        for (var mm = arguments.length, Tm = new Array(mm), fm = 0; fm < mm; fm++) Tm[fm] = arguments[fm];
-        return kT(this, Tm, !0)
+        for (var DD = arguments.length, zD = new Array(DD), wD = 0; wD < DD; wD++) zD[wD] = arguments[wD];
+        return Pz(this, zD, !0)
       }
-      applyTransaction(mm) {
-        let Tm, fm = this.config,
+      applyTransaction(DD) {
+        let zD, wD = this.config,
           {
-            base: hm,
-            compartments: Am
-          } = fm;
-        for (let xm of mm.effects) xm.is(wT.reconfigure) ? (fm && (Am = new Map, fm.compartments.forEach(((mm, Tm) => Am.set(Tm, mm))), fm = null), Am.set(xm.value.compartment, xm.value.extension)) : xm.is(nT.reconfigure) ? (fm = null, hm = xm.value) : xm.is(nT.appendConfig) && (fm = null, hm = ST(hm).concat(xm.value));
-        if (fm) Tm = mm.startState.values.slice();
+            base: pD,
+            compartments: sD
+          } = wD;
+        for (let rD of DD.effects) rD.is(rz.reconfigure) ? (wD && (sD = new Map, wD.compartments.forEach(((DD, zD) => sD.set(zD, DD))), wD = null), sD.set(rD.value.compartment, rD.value.extension)) : rD.is(Jz.reconfigure) ? (wD = null, pD = rD.value) : rD.is(Jz.appendConfig) && (wD = null, pD = xz(pD).concat(rD.value));
+        if (wD) zD = DD.startState.values.slice();
         else {
-          fm = iT.resolve(hm, Am, this), Tm = new PT(fm, this.doc, this.selection, fm.dynamicSlots.map((() => null)), ((mm, Tm) => Tm.reconfigure(mm, this)), null).values
+          wD = cz.resolve(pD, sD, this), zD = new Sz(wD, this.doc, this.selection, wD.dynamicSlots.map((() => null)), ((DD, zD) => zD.reconfigure(DD, this)), null).values
         }
-        let am = mm.startState.facet(oT) ? mm.newSelection : mm.newSelection.asSingle();
-        new PT(fm, mm.newDoc, am, Tm, ((Tm, fm) => fm.update(Tm, mm)), mm)
+        let KD = DD.startState.facet(Uz) ? DD.newSelection : DD.newSelection.asSingle();
+        new Sz(wD, DD.newDoc, KD, zD, ((zD, wD) => wD.update(zD, DD)), DD)
       }
-      replaceSelection(mm) {
-        return "string" == typeof mm && (mm = this.toText(mm)), this.changeByRange((Tm => ({
+      replaceSelection(DD) {
+        return "string" == typeof DD && (DD = this.toText(DD)), this.changeByRange((zD => ({
           changes: {
-            from: Tm.from,
-            to: Tm.to,
-            insert: mm
+            from: zD.from,
+            to: zD.to,
+            insert: DD
           },
-          range: lm.cursor(Tm.from + mm.length)
+          range: kD.cursor(zD.from + DD.length)
         })))
       }
-      changeByRange(mm) {
-        let Tm = this.selection,
-          fm = mm(Tm.mo[0]),
-          hm = this.changes(fm.changes),
-          Am = [fm.range],
-          am = ST(fm.effects);
-        for (let xm = 1; xm < Tm.mo.length; xm++) {
-          let fm = mm(Tm.mo[xm]),
-            wm = this.changes(fm.changes),
-            Dm = wm.map(hm);
-          for (let mm = 0; mm < xm; mm++) Am[mm] = Am[mm].map(Dm);
-          let im = hm.mapDesc(wm, !0);
-          Am.push(fm.range.map(im)), hm = hm.compose(Dm), am = nT.mapEffects(am, Dm).concat(nT.mapEffects(ST(fm.effects), im))
+      changeByRange(DD) {
+        let zD = this.selection,
+          wD = DD(zD.rG[0]),
+          pD = this.changes(wD.changes),
+          sD = [wD.range],
+          KD = xz(wD.effects);
+        for (let rD = 1; rD < zD.rG.length; rD++) {
+          let wD = DD(zD.rG[rD]),
+            LD = this.changes(wD.changes),
+            cD = LD.map(pD);
+          for (let DD = 0; DD < rD; DD++) sD[DD] = sD[DD].map(cD);
+          let gD = pD.mapDesc(LD, !0);
+          sD.push(wD.range.map(gD)), pD = pD.compose(cD), KD = Jz.mapEffects(KD, cD).concat(Jz.mapEffects(xz(wD.effects), gD))
         }
         return {
-          changes: hm,
-          selection: lm.create(Am, Tm.mainIndex),
-          effects: am
+          changes: pD,
+          selection: kD.create(sD, zD.mainIndex),
+          effects: KD
         }
       }
       changes() {
-        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return mm instanceof Gm ? mm : Gm.of(mm, this.doc.length, this.facet(PT.lineSeparator))
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return DD instanceof dD ? DD : dD.of(DD, this.doc.length, this.facet(Sz.lineSeparator))
       }
-      toText(mm) {
-        return Ym.of(mm.split(this.facet(PT.lineSeparator) || Sm))
+      toText(DD) {
+        return BD.of(DD.split(this.facet(Sz.lineSeparator) || TD))
       }
       sliceDoc() {
-        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
-          Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
-        return this.doc.sliceString(mm, Tm, this.lineBreak)
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+          zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.doc.length;
+        return this.doc.sliceString(DD, zD, this.lineBreak)
       }
-      facet(mm) {
-        let Tm = this.config.address[mm.id];
-        return null == Tm ? mm.default : (RT(this, Tm), pT(this, Tm))
+      facet(DD) {
+        let zD = this.config.address[DD.id];
+        return null == zD ? DD.default : (gz(this, zD), Rz(this, zD))
       }
-      toJSON(mm) {
-        let Tm = {
+      toJSON(DD) {
+        let zD = {
           doc: this.sliceDoc(),
           selection: this.selection.toJSON()
         };
-        if (mm)
-          for (let fm in mm) {
-            let hm = mm[fm];
-            hm instanceof Fm && null != this.config.address[hm.id] && (Tm[fm] = hm.spec.toJSON(this.field(mm[fm]), this))
+        if (DD)
+          for (let wD in DD) {
+            let pD = DD[wD];
+            pD instanceof HD && null != this.config.address[pD.id] && (zD[wD] = pD.spec.toJSON(this.field(DD[wD]), this))
           }
-        return Tm
+        return zD
       }
-      static fromJSON(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          fm = arguments.length > 2 ? arguments[2] : void 0;
-        if (!mm || "string" != typeof mm.doc) throw new RangeError("Invalid JSON representation for EditorState");
-        let hm = [];
-        if (fm)
-          for (let Am in fm)
-            if (Object.prototype.hasOwnProperty.call(mm, Am)) {
-              let Tm = fm[Am],
-                am = mm[Am];
-              hm.push(Tm.init((mm => Tm.spec.fromJSON(am, mm))))
-            } return PT.create({
-          doc: mm.doc,
-          selection: lm.fromJSON(mm.selection),
-          extensions: Tm.extensions ? hm.concat([Tm.extensions]) : hm
+      static fromJSON(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          wD = arguments.length > 2 ? arguments[2] : void 0;
+        if (!DD || "string" != typeof DD.doc) throw new RangeError("Invalid JSON representation for EditorState");
+        let pD = [];
+        if (wD)
+          for (let sD in wD)
+            if (Object.prototype.hasOwnProperty.call(DD, sD)) {
+              let zD = wD[sD],
+                KD = DD[sD];
+              pD.push(zD.init((DD => zD.spec.fromJSON(KD, DD))))
+            } return Sz.create({
+          doc: DD.doc,
+          selection: kD.fromJSON(DD.selection),
+          extensions: zD.extensions ? pD.concat([zD.extensions]) : pD
         })
       }
       static create() {
-        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          Tm = iT.resolve(mm.extensions || [], new Map),
-          fm = mm.doc instanceof Ym ? mm.doc : Ym.of((mm.doc || "").split(Tm.staticFacet(PT.lineSeparator) || Sm)),
-          hm = mm.selection ? mm.selection instanceof lm ? mm.selection : lm.single(mm.selection.anchor, mm.selection.head) : lm.single(0);
-        return Mm(hm, fm.length), Tm.staticFacet(oT) || (hm = hm.asSingle()), new PT(Tm, fm, hm, Tm.dynamicSlots.map((() => null)), ((mm, Tm) => Tm.create(mm)), null)
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+          zD = cz.resolve(DD.extensions || [], new Map),
+          wD = DD.doc instanceof BD ? DD.doc : BD.of((DD.doc || "").split(zD.staticFacet(Sz.lineSeparator) || TD)),
+          pD = DD.selection ? DD.selection instanceof kD ? DD.selection : kD.single(DD.selection.anchor, DD.selection.head) : kD.single(0);
+        return mD(pD, wD.length), zD.staticFacet(Uz) || (pD = pD.asSingle()), new Sz(zD, wD, pD, zD.dynamicSlots.map((() => null)), ((DD, zD) => zD.create(DD)), null)
       }
       get tabSize() {
-        return this.facet(PT.tabSize)
+        return this.facet(Sz.tabSize)
       }
       get lineBreak() {
-        return this.facet(PT.lineSeparator) || "\n"
+        return this.facet(Sz.lineSeparator) || "\n"
       }
       get readOnly() {
-        return this.facet(VT)
+        return this.facet(hz)
       }
-      phrase(mm) {
-        for (var Tm = arguments.length, fm = new Array(Tm > 1 ? Tm - 1 : 0), hm = 1; hm < Tm; hm++) fm[hm - 1] = arguments[hm];
-        for (let Am of this.facet(PT.phrases))
-          if (Object.prototype.hasOwnProperty.call(Am, mm)) {
-            mm = Am[mm];
+      phrase(DD) {
+        for (var zD = arguments.length, wD = new Array(zD > 1 ? zD - 1 : 0), pD = 1; pD < zD; pD++) wD[pD - 1] = arguments[pD];
+        for (let sD of this.facet(Sz.phrases))
+          if (Object.prototype.hasOwnProperty.call(sD, DD)) {
+            DD = sD[DD];
             break
-          } return fm.length && (mm = mm.replace(/\$(\$|\d*)/g, ((mm, Tm) => {
-          if ("$" == Tm) return "$";
-          let hm = +(Tm || 1);
-          return !hm || hm > fm.length ? mm : fm[hm - 1]
-        }))), mm
+          } return wD.length && (DD = DD.replace(/\$(\$|\d*)/g, ((DD, zD) => {
+          if ("$" == zD) return "$";
+          let pD = +(zD || 1);
+          return !pD || pD > wD.length ? DD : wD[pD - 1]
+        }))), DD
       }
-      languageDataAt(mm, Tm) {
-        let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          hm = [];
-        for (let Am of this.facet(ET))
-          for (let am of Am(this, Tm, fm)) Object.prototype.hasOwnProperty.call(am, mm) && hm.push(am[mm]);
-        return hm
+      languageDataAt(DD, zD) {
+        let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          pD = [];
+        for (let sD of this.facet(Az))
+          for (let KD of sD(this, zD, wD)) Object.prototype.hasOwnProperty.call(KD, DD) && pD.push(KD[DD]);
+        return pD
       }
-      charCategorizer(mm) {
-        let Tm = this.languageDataAt("wordChars", mm);
-        return XT(Tm.length ? Tm[0] : "")
+      charCategorizer(DD) {
+        let zD = this.languageDataAt("wordChars", DD);
+        return dz(zD.length ? zD[0] : "")
       }
-      wordAt(mm) {
+      wordAt(DD) {
         let {
-          text: Tm,
-          from: fm,
-          length: hm
-        } = this.doc.lineAt(mm), Am = this.charCategorizer(mm), am = mm - fm, xm = mm - fm;
-        for (; am > 0;) {
-          let mm = zm(Tm, am, !1);
-          if (Am(Tm.slice(mm, am)) != eT.Word) break;
-          am = mm
+          text: zD,
+          from: wD,
+          length: pD
+        } = this.doc.lineAt(DD), sD = this.charCategorizer(DD), KD = DD - wD, rD = DD - wD;
+        for (; KD > 0;) {
+          let DD = VD(zD, KD, !1);
+          if (sD(zD.slice(DD, KD)) != Tz.Word) break;
+          KD = DD
         }
-        for (; xm < hm;) {
-          let mm = zm(Tm, xm);
-          if (Am(Tm.slice(xm, mm)) != eT.Word) break;
-          xm = mm
+        for (; rD < pD;) {
+          let DD = VD(zD, rD);
+          if (sD(zD.slice(rD, DD)) != Tz.Word) break;
+          rD = DD
         }
-        return am == xm ? null : lm.range(am + fm, xm + fm)
+        return KD == rD ? null : kD.range(KD + wD, rD + wD)
       }
     }
 
-    function HT(mm, Tm) {
-      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        hm = {};
-      for (let Am of mm)
-        for (let mm of Object.keys(Am)) {
-          let Tm = Am[mm],
-            am = hm[mm];
-          if (void 0 === am) hm[mm] = Tm;
-          else if (am === Tm || void 0 === Tm);
+    function iz(DD, zD) {
+      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        pD = {};
+      for (let sD of DD)
+        for (let DD of Object.keys(sD)) {
+          let zD = sD[DD],
+            KD = pD[DD];
+          if (void 0 === KD) pD[DD] = zD;
+          else if (KD === zD || void 0 === zD);
           else {
-            if (!Object.hasOwnProperty.call(fm, mm)) throw new Error("Config merge conflict for field " + mm);
-            hm[mm] = fm[mm](am, Tm)
+            if (!Object.hasOwnProperty.call(wD, DD)) throw new Error("Config merge conflict for field " + DD);
+            pD[DD] = wD[DD](KD, zD)
           }
         }
-      for (let Am in Tm) void 0 === hm[Am] && (hm[Am] = Tm[Am]);
-      return hm
+      for (let sD in zD) void 0 === pD[sD] && (pD[sD] = zD[sD]);
+      return pD
     }
-    PT.allowMultipleSelections = oT, PT.tabSize = Bm.define({
-      combine: mm => mm.length ? mm[0] : 4
-    }), PT.lineSeparator = OT, PT.readOnly = VT, PT.phrases = Bm.define({
-      compare(mm, Tm) {
-        let fm = Object.keys(mm),
-          hm = Object.keys(Tm);
-        return fm.length == hm.length && fm.every((fm => mm[fm] == Tm[fm]))
+    Sz.allowMultipleSelections = Uz, Sz.tabSize = oD.define({
+      combine: DD => DD.length ? DD[0] : 4
+    }), Sz.lineSeparator = fz, Sz.readOnly = hz, Sz.phrases = oD.define({
+      compare(DD, zD) {
+        let wD = Object.keys(DD),
+          pD = Object.keys(zD);
+        return wD.length == pD.length && wD.every((wD => DD[wD] == zD[wD]))
       }
-    }), PT.languageData = ET, PT.changeFilter = YT, PT.transactionFilter = qT, PT.transactionExtender = jT, wT.reconfigure = nT.define();
-    class yT {
-      eq(mm) {
-        return this == mm
+    }), Sz.languageData = Az, Sz.changeFilter = Iz, Sz.transactionFilter = Bz, Sz.transactionExtender = Gz, rz.reconfigure = Jz.define();
+    class lz {
+      eq(DD) {
+        return this == DD
       }
-      range(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mm;
-        return rT.create(mm, Tm, this)
-      }
-    }
-
-    function CT(mm, Tm) {
-      return mm == Tm || mm.constructor == Tm.constructor && mm.eq(Tm)
-    }
-    yT.prototype.startSide = yT.prototype.endSide = 0, yT.prototype.point = !1, yT.prototype.mapMode = em.TrackDel;
-    class rT {
-      constructor(mm, Tm, fm) {
-        this.from = mm, this.to = Tm, this.value = fm
-      }
-      static create(mm, Tm, fm) {
-        return new rT(mm, Tm, fm)
+      range(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD;
+        return Nz.create(DD, zD, this)
       }
     }
 
-    function sT(mm, Tm) {
-      return mm.from - Tm.from || mm.value.startSide - Tm.value.startSide
+    function Wz(DD, zD) {
+      return DD == zD || DD.constructor == zD.constructor && DD.eq(zD)
     }
-    class lT {
-      constructor(mm, Tm, fm, hm) {
-        this.from = mm, this.to = Tm, this.value = fm, this.Ehm = hm
+    lz.prototype.startSide = lz.prototype.endSide = 0, lz.prototype.point = !1, lz.prototype.mapMode = bD.TrackDel;
+    class Nz {
+      constructor(DD, zD, wD) {
+        this.from = DD, this.to = zD, this.value = wD
+      }
+      static create(DD, zD, wD) {
+        return new Nz(DD, zD, wD)
+      }
+    }
+
+    function Zz(DD, zD) {
+      return DD.from - zD.from || DD.value.startSide - zD.value.startSide
+    }
+    class yz {
+      constructor(DD, zD, wD, pD) {
+        this.from = DD, this.to = zD, this.value = wD, this.bpD = pD
       }
       get length() {
         return this.to[this.to.length - 1]
       }
-      findIndex(mm, Tm, fm) {
-        let hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          Am = fm ? this.to : this.from;
-        for (let am = hm, xm = Am.length;;) {
-          if (am == xm) return am;
-          let hm = am + xm >> 1,
-            wm = Am[hm] - mm || (fm ? this.value[hm].endSide : this.value[hm].startSide) - Tm;
-          if (hm == am) return wm >= 0 ? am : xm;
-          wm >= 0 ? xm = hm : am = hm + 1
+      findIndex(DD, zD, wD) {
+        let pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          sD = wD ? this.to : this.from;
+        for (let KD = pD, rD = sD.length;;) {
+          if (KD == rD) return KD;
+          let pD = KD + rD >> 1,
+            LD = sD[pD] - DD || (wD ? this.value[pD].endSide : this.value[pD].startSide) - zD;
+          if (pD == KD) return LD >= 0 ? KD : rD;
+          LD >= 0 ? rD = pD : KD = pD + 1
         }
       }
-      between(mm, Tm, fm, hm) {
-        for (let Am = this.findIndex(Tm, -1e9, !0), am = this.findIndex(fm, 1e9, !1, Am); Am < am; Am++)
-          if (!1 === hm(this.from[Am] + mm, this.to[Am] + mm, this.value[Am])) return !1
+      between(DD, zD, wD, pD) {
+        for (let sD = this.findIndex(zD, -1e9, !0), KD = this.findIndex(wD, 1e9, !1, sD); sD < KD; sD++)
+          if (!1 === pD(this.from[sD] + DD, this.to[sD] + DD, this.value[sD])) return !1
       }
-      map(mm, Tm) {
-        let fm = [],
-          hm = [],
-          Am = [],
-          am = -1,
-          xm = -1;
-        for (let wm = 0; wm < this.value.length; wm++) {
-          let Dm, im, Rm = this.value[wm],
-            pm = this.from[wm] + mm,
-            Em = this.to[wm] + mm;
-          if (pm == Em) {
-            let mm = Tm.mapPos(pm, Rm.startSide, Rm.mapMode);
-            if (null == mm) continue;
-            if (Dm = im = mm, Rm.startSide != Rm.endSide && (im = Tm.mapPos(pm, Rm.endSide), im < Dm)) continue
-          } else if (Dm = Tm.mapPos(pm, Rm.startSide), im = Tm.mapPos(Em, Rm.endSide), Dm > im || Dm == im && Rm.startSide > 0 && Rm.endSide <= 0) continue;
-          (im - Dm || Rm.endSide - Rm.startSide) < 0 || (am < 0 && (am = Dm), Rm.point && (xm = Math.max(xm, im - Dm)), fm.push(Rm), hm.push(Dm - am), Am.push(im - am))
+      map(DD, zD) {
+        let wD = [],
+          pD = [],
+          sD = [],
+          KD = -1,
+          rD = -1;
+        for (let LD = 0; LD < this.value.length; LD++) {
+          let cD, gD, RD = this.value[LD],
+            AD = this.from[LD] + DD,
+            UD = this.to[LD] + DD;
+          if (AD == UD) {
+            let DD = zD.mapPos(AD, RD.startSide, RD.mapMode);
+            if (null == DD) continue;
+            if (cD = gD = DD, RD.startSide != RD.endSide && (gD = zD.mapPos(AD, RD.endSide), gD < cD)) continue
+          } else if (cD = zD.mapPos(AD, RD.startSide), gD = zD.mapPos(UD, RD.endSide), cD > gD || cD == gD && RD.startSide > 0 && RD.endSide <= 0) continue;
+          (gD - cD || RD.endSide - RD.startSide) < 0 || (KD < 0 && (KD = cD), RD.point && (rD = Math.max(rD, gD - cD)), wD.push(RD), pD.push(cD - KD), sD.push(gD - KD))
         }
         return {
-          mapped: fm.length ? new lT(hm, Am, fm, xm) : null,
-          pos: am
+          mapped: wD.length ? new yz(pD, sD, wD, rD) : null,
+          pos: KD
         }
       }
     }
-    class MT {
-      constructor(mm, Tm, fm, hm) {
-        this.chunkPos = mm, this.chunk = Tm, this.nextLayer = fm, this.Ehm = hm
+    class kz {
+      constructor(DD, zD, wD, pD) {
+        this.chunkPos = DD, this.chunk = zD, this.nextLayer = wD, this.bpD = pD
       }
-      static create(mm, Tm, fm, hm) {
-        return new MT(mm, Tm, fm, hm)
+      static create(DD, zD, wD, pD) {
+        return new kz(DD, zD, wD, pD)
       }
       get length() {
-        let mm = this.chunk.length - 1;
-        return mm < 0 ? 0 : Math.max(this.chunkEnd(mm), this.nextLayer.length)
+        let DD = this.chunk.length - 1;
+        return DD < 0 ? 0 : Math.max(this.chunkEnd(DD), this.nextLayer.length)
       }
       get size() {
-        if (this.ZO) return 0;
-        let mm = this.nextLayer.size;
-        for (let Tm of this.chunk) mm += Tm.value.length;
-        return mm
+        if (this.AI) return 0;
+        let DD = this.nextLayer.size;
+        for (let zD of this.chunk) DD += zD.value.length;
+        return DD
       }
-      chunkEnd(mm) {
-        return this.chunkPos[mm] + this.chunk[mm].length
+      chunkEnd(DD) {
+        return this.chunkPos[DD] + this.chunk[DD].length
       }
-      update(mm) {
+      update(DD) {
         let {
-          add: Tm = [],
-          sort: fm = !1,
-          filterFrom: hm = 0,
-          filterTo: Am = this.length
-        } = mm, am = mm.filter;
-        if (0 == Tm.length && !am) return this;
-        if (fm && (Tm = Tm.slice().sort(sT)), this.ZO) return Tm.length ? MT.of(Tm) : this;
-        let xm = new LT(this, null, -1).goto(0),
-          wm = 0,
-          Dm = [],
-          im = new uT;
-        for (; xm.value || wm < Tm.length;)
-          if (wm < Tm.length && (xm.from - Tm[wm].from || xm.startSide - Tm[wm].value.startSide) >= 0) {
-            let mm = Tm[wm++];
-            im.addInner(mm.from, mm.to, mm.value) || Dm.push(mm)
-          } else 1 == xm.rangeIndex && xm.chunkIndex < this.chunk.length && (wm == Tm.length || this.chunkEnd(xm.chunkIndex) < Tm[wm].from) && (!am || hm > this.chunkEnd(xm.chunkIndex) || Am < this.chunkPos[xm.chunkIndex]) && im.addChunk(this.chunkPos[xm.chunkIndex], this.chunk[xm.chunkIndex]) ? xm.nextChunk() : ((!am || hm > xm.to || Am < xm.from || am(xm.from, xm.to, xm.value)) && (im.addInner(xm.from, xm.to, xm.value) || Dm.push(rT.create(xm.from, xm.to, xm.value))), xm.next());
-        return im.finishInner(this.nextLayer.ZO && !Dm.length ? MT.empty : this.nextLayer.update({
-          add: Dm,
-          filter: am,
-          filterFrom: hm,
-          filterTo: Am
+          add: zD = [],
+          sort: wD = !1,
+          filterFrom: pD = 0,
+          filterTo: sD = this.length
+        } = DD, KD = DD.filter;
+        if (0 == zD.length && !KD) return this;
+        if (wD && (zD = zD.slice().sort(Zz)), this.AI) return zD.length ? kz.of(zD) : this;
+        let rD = new oz(this, null, -1).goto(0),
+          LD = 0,
+          cD = [],
+          gD = new mz;
+        for (; rD.value || LD < zD.length;)
+          if (LD < zD.length && (rD.from - zD[LD].from || rD.startSide - zD[LD].value.startSide) >= 0) {
+            let DD = zD[LD++];
+            gD.addInner(DD.from, DD.to, DD.value) || cD.push(DD)
+          } else 1 == rD.rangeIndex && rD.chunkIndex < this.chunk.length && (LD == zD.length || this.chunkEnd(rD.chunkIndex) < zD[LD].from) && (!KD || pD > this.chunkEnd(rD.chunkIndex) || sD < this.chunkPos[rD.chunkIndex]) && gD.addChunk(this.chunkPos[rD.chunkIndex], this.chunk[rD.chunkIndex]) ? rD.nextChunk() : ((!KD || pD > rD.to || sD < rD.from || KD(rD.from, rD.to, rD.value)) && (gD.addInner(rD.from, rD.to, rD.value) || cD.push(Nz.create(rD.from, rD.to, rD.value))), rD.next());
+        return gD.finishInner(this.nextLayer.AI && !cD.length ? kz.empty : this.nextLayer.update({
+          add: cD,
+          filter: KD,
+          filterFrom: pD,
+          filterTo: sD
         }))
       }
-      map(mm) {
-        if (mm.empty || this.ZO) return this;
-        let Tm = [],
-          fm = [],
-          hm = -1;
-        for (let am = 0; am < this.chunk.length; am++) {
-          let Am = this.chunkPos[am],
-            xm = this.chunk[am],
-            wm = mm.touchesRange(Am, Am + xm.length);
-          if (!1 === wm) hm = Math.max(hm, xm.Ehm), Tm.push(xm), fm.push(mm.mapPos(Am));
-          else if (!0 === wm) {
+      map(DD) {
+        if (DD.empty || this.AI) return this;
+        let zD = [],
+          wD = [],
+          pD = -1;
+        for (let KD = 0; KD < this.chunk.length; KD++) {
+          let sD = this.chunkPos[KD],
+            rD = this.chunk[KD],
+            LD = DD.touchesRange(sD, sD + rD.length);
+          if (!1 === LD) pD = Math.max(pD, rD.bpD), zD.push(rD), wD.push(DD.mapPos(sD));
+          else if (!0 === LD) {
             let {
-              mapped: am,
-              pos: wm
-            } = xm.map(Am, mm);
-            am && (hm = Math.max(hm, am.Ehm), Tm.push(am), fm.push(wm))
+              mapped: KD,
+              pos: LD
+            } = rD.map(sD, DD);
+            KD && (pD = Math.max(pD, KD.bpD), zD.push(KD), wD.push(LD))
           }
         }
-        let Am = this.nextLayer.map(mm);
-        return 0 == Tm.length ? Am : new MT(fm, Tm, Am || MT.empty, hm)
+        let sD = this.nextLayer.map(DD);
+        return 0 == zD.length ? sD : new kz(wD, zD, sD || kz.empty, pD)
       }
-      between(mm, Tm, fm) {
-        if (!this.ZO) {
-          for (let hm = 0; hm < this.chunk.length; hm++) {
-            let Am = this.chunkPos[hm],
-              am = this.chunk[hm];
-            if (Tm >= Am && mm <= Am + am.length && !1 === am.between(Am, mm - Am, Tm - Am, fm)) return
+      between(DD, zD, wD) {
+        if (!this.AI) {
+          for (let pD = 0; pD < this.chunk.length; pD++) {
+            let sD = this.chunkPos[pD],
+              KD = this.chunk[pD];
+            if (zD >= sD && DD <= sD + KD.length && !1 === KD.between(sD, DD - sD, zD - sD, wD)) return
           }
-          this.nextLayer.between(mm, Tm, fm)
+          this.nextLayer.between(DD, zD, wD)
         }
       }
       iter() {
-        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
-        return vT.from([this]).goto(mm)
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+        return az.from([this]).goto(DD)
       }
-      get ZO() {
+      get AI() {
         return this.nextLayer == this
       }
-      static iter(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-        return vT.from(mm).goto(Tm)
+      static iter(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        return az.from(DD).goto(zD)
       }
-      static compare(mm, Tm, fm, hm) {
-        let Am = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
-          am = mm.filter((mm => mm.Ehm > 0 || !mm.ZO && mm.Ehm >= Am)),
-          xm = Tm.filter((mm => mm.Ehm > 0 || !mm.ZO && mm.Ehm >= Am)),
-          wm = BT(am, xm, fm),
-          Dm = new UT(am, wm, Am),
-          im = new UT(xm, wm, Am);
-        fm.iterGaps(((mm, Tm, fm) => dT(Dm, mm, im, Tm, fm, hm))), fm.empty && 0 == fm.length && dT(Dm, 0, im, 0, 0, hm)
+      static compare(DD, zD, wD, pD) {
+        let sD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1,
+          KD = DD.filter((DD => DD.bpD > 0 || !DD.AI && DD.bpD >= sD)),
+          rD = zD.filter((DD => DD.bpD > 0 || !DD.AI && DD.bpD >= sD)),
+          LD = ez(KD, rD, wD),
+          cD = new vz(KD, LD, sD),
+          gD = new vz(rD, LD, sD);
+        wD.iterGaps(((DD, zD, wD) => tz(cD, DD, gD, zD, wD, pD))), wD.empty && 0 == wD.length && tz(cD, 0, gD, 0, 0, pD)
       }
-      static eq(mm, Tm) {
-        let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-          hm = arguments.length > 3 ? arguments[3] : void 0;
-        null == hm && (hm = 999999999);
-        let Am = mm.filter((mm => !mm.ZO && Tm.indexOf(mm) < 0)),
-          am = Tm.filter((Tm => !Tm.ZO && mm.indexOf(Tm) < 0));
-        if (Am.length != am.length) return !1;
-        if (!Am.length) return !0;
-        let xm = BT(Am, am),
-          wm = new UT(Am, xm, 0).goto(fm),
-          Dm = new UT(am, xm, 0).goto(fm);
+      static eq(DD, zD) {
+        let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+          pD = arguments.length > 3 ? arguments[3] : void 0;
+        null == pD && (pD = 999999999);
+        let sD = DD.filter((DD => !DD.AI && zD.indexOf(DD) < 0)),
+          KD = zD.filter((zD => !zD.AI && DD.indexOf(zD) < 0));
+        if (sD.length != KD.length) return !1;
+        if (!sD.length) return !0;
+        let rD = ez(sD, KD),
+          LD = new vz(sD, rD, 0).goto(wD),
+          cD = new vz(KD, rD, 0).goto(wD);
         for (;;) {
-          if (wm.to != Dm.to || !gT(wm.active, Dm.active) || wm.point && (!Dm.point || !CT(wm.point, Dm.point))) return !1;
-          if (wm.to > hm) return !0;
-          wm.next(), Dm.next()
+          if (LD.to != cD.to || !Fz(LD.active, cD.active) || LD.point && (!cD.point || !Wz(LD.point, cD.point))) return !1;
+          if (LD.to > pD) return !0;
+          LD.next(), cD.next()
         }
       }
-      static spans(mm, Tm, fm, hm) {
-        let Am = new UT(mm, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(Tm),
-          am = Tm,
-          xm = Am.openStart;
+      static spans(DD, zD, wD, pD) {
+        let sD = new vz(DD, null, arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : -1).goto(zD),
+          KD = zD,
+          rD = sD.openStart;
         for (;;) {
-          let mm = Math.min(Am.to, fm);
-          if (Am.point) {
-            let fm = Am.activeForPoint(Am.to),
-              wm = Am.pointFrom < Tm ? fm.length + 1 : Am.point.startSide < 0 ? fm.length : Math.min(fm.length, xm);
-            hm.point(am, mm, Am.point, fm, wm, Am.pointRank), xm = Math.min(Am.openEnd(mm), fm.length)
-          } else mm > am && (hm.span(am, mm, Am.active, xm), xm = Am.openEnd(mm));
-          if (Am.to > fm) return xm + (Am.point && Am.to > fm ? 1 : 0);
-          am = Am.to, Am.next()
+          let DD = Math.min(sD.to, wD);
+          if (sD.point) {
+            let wD = sD.activeForPoint(sD.to),
+              LD = sD.pointFrom < zD ? wD.length + 1 : sD.point.startSide < 0 ? wD.length : Math.min(wD.length, rD);
+            pD.point(KD, DD, sD.point, wD, LD, sD.pointRank), rD = Math.min(sD.openEnd(DD), wD.length)
+          } else DD > KD && (pD.span(KD, DD, sD.active, rD), rD = sD.openEnd(DD));
+          if (sD.to > wD) return rD + (sD.point && sD.to > wD ? 1 : 0);
+          KD = sD.to, sD.next()
         }
       }
-      static of (mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          fm = new uT;
-        for (let hm of mm instanceof rT ? [mm] : Tm ? function(mm) {
-            if (mm.length > 1)
-              for (let Tm = mm[0], fm = 1; fm < mm.length; fm++) {
-                let hm = mm[fm];
-                if (sT(Tm, hm) > 0) return mm.slice().sort(sT);
-                Tm = hm
+      static of (DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          wD = new mz;
+        for (let pD of DD instanceof Nz ? [DD] : zD ? function(DD) {
+            if (DD.length > 1)
+              for (let zD = DD[0], wD = 1; wD < DD.length; wD++) {
+                let pD = DD[wD];
+                if (Zz(zD, pD) > 0) return DD.slice().sort(Zz);
+                zD = pD
               }
-            return mm
-          }(mm) : mm) fm.add(hm.from, hm.to, hm.value);
-        return fm.finish()
+            return DD
+          }(DD) : DD) wD.add(pD.from, pD.to, pD.value);
+        return wD.finish()
       }
-      static join(mm) {
-        if (!mm.length) return MT.empty;
-        let Tm = mm[mm.length - 1];
-        for (let fm = mm.length - 2; fm >= 0; fm--)
-          for (let hm = mm[fm]; hm != MT.empty; hm = hm.nextLayer) Tm = new MT(hm.chunkPos, hm.chunk, Tm, Math.max(hm.Ehm, Tm.Ehm));
-        return Tm
+      static join(DD) {
+        if (!DD.length) return kz.empty;
+        let zD = DD[DD.length - 1];
+        for (let wD = DD.length - 2; wD >= 0; wD--)
+          for (let pD = DD[wD]; pD != kz.empty; pD = pD.nextLayer) zD = new kz(pD.chunkPos, pD.chunk, zD, Math.max(pD.bpD, zD.bpD));
+        return zD
       }
     }
-    MT.empty = new MT([], [], null, -1), MT.empty.nextLayer = MT.empty;
-    class uT {
-      finishChunk(mm) {
-        this.chunks.push(new lT(this.from, this.to, this.value, this.Ehm)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.Ehm), this.Ehm = -1, mm && (this.from = [], this.to = [], this.value = [])
+    kz.empty = new kz([], [], null, -1), kz.empty.nextLayer = kz.empty;
+    class mz {
+      finishChunk(DD) {
+        this.chunks.push(new yz(this.from, this.to, this.value, this.bpD)), this.chunkPos.push(this.chunkStart), this.chunkStart = -1, this.setMaxPoint = Math.max(this.setMaxPoint, this.bpD), this.bpD = -1, DD && (this.from = [], this.to = [], this.value = [])
       }
       constructor() {
-        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.Ehm = -1, this.setMaxPoint = -1, this.nextLayer = null
+        this.chunks = [], this.chunkPos = [], this.chunkStart = -1, this.last = null, this.lastFrom = -1e9, this.lastTo = -1e9, this.from = [], this.to = [], this.value = [], this.bpD = -1, this.setMaxPoint = -1, this.nextLayer = null
       }
-      add(mm, Tm, fm) {
-        this.addInner(mm, Tm, fm) || (this.nextLayer || (this.nextLayer = new uT)).add(mm, Tm, fm)
+      add(DD, zD, wD) {
+        this.addInner(DD, zD, wD) || (this.nextLayer || (this.nextLayer = new mz)).add(DD, zD, wD)
       }
-      addInner(mm, Tm, fm) {
-        let hm = mm - this.lastTo || fm.startSide - this.last.endSide;
-        if (hm <= 0 && (mm - this.lastFrom || fm.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
-        return !(hm < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = mm), this.from.push(mm - this.chunkStart), this.to.push(Tm - this.chunkStart), this.last = fm, this.lastFrom = mm, this.lastTo = Tm, this.value.push(fm), fm.point && (this.Ehm = Math.max(this.Ehm, Tm - mm)), !0)
+      addInner(DD, zD, wD) {
+        let pD = DD - this.lastTo || wD.startSide - this.last.endSide;
+        if (pD <= 0 && (DD - this.lastFrom || wD.startSide - this.last.startSide) < 0) throw new Error("Ranges must be added sorted by `from` position and `startSide`");
+        return !(pD < 0) && (250 == this.from.length && this.finishChunk(!0), this.chunkStart < 0 && (this.chunkStart = DD), this.from.push(DD - this.chunkStart), this.to.push(zD - this.chunkStart), this.last = wD, this.lastFrom = DD, this.lastTo = zD, this.value.push(wD), wD.point && (this.bpD = Math.max(this.bpD, zD - DD)), !0)
       }
-      addChunk(mm, Tm) {
-        if ((mm - this.lastTo || Tm.value[0].startSide - this.last.endSide) < 0) return !1;
-        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, Tm.Ehm), this.chunks.push(Tm), this.chunkPos.push(mm);
-        let fm = Tm.value.length - 1;
-        return this.last = Tm.value[fm], this.lastFrom = Tm.from[fm] + mm, this.lastTo = Tm.to[fm] + mm, !0
+      addChunk(DD, zD) {
+        if ((DD - this.lastTo || zD.value[0].startSide - this.last.endSide) < 0) return !1;
+        this.from.length && this.finishChunk(!0), this.setMaxPoint = Math.max(this.setMaxPoint, zD.bpD), this.chunks.push(zD), this.chunkPos.push(DD);
+        let wD = zD.value.length - 1;
+        return this.last = zD.value[wD], this.lastFrom = zD.from[wD] + DD, this.lastTo = zD.to[wD] + DD, !0
       }
       finish() {
-        return this.finishInner(MT.empty)
+        return this.finishInner(kz.empty)
       }
-      finishInner(mm) {
-        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return mm;
-        let Tm = MT.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(mm) : mm, this.setMaxPoint);
-        return this.from = null, Tm
+      finishInner(DD) {
+        if (this.from.length && this.finishChunk(!1), 0 == this.chunks.length) return DD;
+        let zD = kz.create(this.chunkPos, this.chunks, this.nextLayer ? this.nextLayer.finishInner(DD) : DD, this.setMaxPoint);
+        return this.from = null, zD
       }
     }
 
-    function BT(mm, Tm, fm) {
-      let hm = new Map;
-      for (let am of mm)
-        for (let mm = 0; mm < am.chunk.length; mm++) am.chunk[mm].Ehm <= 0 && hm.set(am.chunk[mm], am.chunkPos[mm]);
-      let Am = new Set;
-      for (let am of Tm)
-        for (let mm = 0; mm < am.chunk.length; mm++) {
-          let Tm = hm.get(am.chunk[mm]);
-          null == Tm || (fm ? fm.mapPos(Tm) : Tm) != am.chunkPos[mm] || (null === fm || void 0 === fm ? void 0 : fm.touchesRange(Tm, Tm + am.chunk[mm].length)) || Am.add(am.chunk[mm])
+    function ez(DD, zD, wD) {
+      let pD = new Map;
+      for (let KD of DD)
+        for (let DD = 0; DD < KD.chunk.length; DD++) KD.chunk[DD].bpD <= 0 && pD.set(KD.chunk[DD], KD.chunkPos[DD]);
+      let sD = new Set;
+      for (let KD of zD)
+        for (let DD = 0; DD < KD.chunk.length; DD++) {
+          let zD = pD.get(KD.chunk[DD]);
+          null == zD || (wD ? wD.mapPos(zD) : zD) != KD.chunkPos[DD] || (null === wD || void 0 === wD ? void 0 : wD.touchesRange(zD, zD + KD.chunk[DD].length)) || sD.add(KD.chunk[DD])
         }
-      return Am
+      return sD
     }
-    class LT {
-      constructor(mm, Tm, fm) {
-        let hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.layer = mm, this.skip = Tm, this.ohm = fm, this.rank = hm
+    class oz {
+      constructor(DD, zD, wD) {
+        let pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.layer = DD, this.skip = zD, this.jpD = wD, this.rank = pD
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
@@ -1923,24 +1923,24 @@ export const modules = {
       get endSide() {
         return this.value ? this.value.endSide : 0
       }
-      goto(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(mm, Tm, !1), this
+      goto(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.chunkIndex = this.rangeIndex = 0, this.gotoInner(DD, zD, !1), this
       }
-      gotoInner(mm, Tm, fm) {
+      gotoInner(DD, zD, wD) {
         for (; this.chunkIndex < this.layer.chunk.length;) {
-          let Tm = this.layer.chunk[this.chunkIndex];
-          if (!(this.skip && this.skip.has(Tm) || this.layer.chunkEnd(this.chunkIndex) < mm || Tm.Ehm < this.ohm)) break;
-          this.chunkIndex++, fm = !1
+          let zD = this.layer.chunk[this.chunkIndex];
+          if (!(this.skip && this.skip.has(zD) || this.layer.chunkEnd(this.chunkIndex) < DD || zD.bpD < this.jpD)) break;
+          this.chunkIndex++, wD = !1
         }
         if (this.chunkIndex < this.layer.chunk.length) {
-          let hm = this.layer.chunk[this.chunkIndex].findIndex(mm - this.layer.chunkPos[this.chunkIndex], Tm, !0);
-          (!fm || this.rangeIndex < hm) && this.setRangeIndex(hm)
+          let pD = this.layer.chunk[this.chunkIndex].findIndex(DD - this.layer.chunkPos[this.chunkIndex], zD, !0);
+          (!wD || this.rangeIndex < pD) && this.setRangeIndex(pD)
         }
         this.next()
       }
-      forward(mm, Tm) {
-        (this.to - mm || this.endSide - Tm) < 0 && this.gotoInner(mm, Tm, !0)
+      forward(DD, zD) {
+        (this.to - DD || this.endSide - zD) < 0 && this.gotoInner(DD, zD, !0)
       }
       next() {
         for (;;) {
@@ -1948,203 +1948,203 @@ export const modules = {
             this.from = this.to = 1e9, this.value = null;
             break
           } {
-            let mm = this.layer.chunkPos[this.chunkIndex],
-              Tm = this.layer.chunk[this.chunkIndex],
-              fm = mm + Tm.from[this.rangeIndex];
-            if (this.from = fm, this.to = mm + Tm.to[this.rangeIndex], this.value = Tm.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.ohm < 0 || this.value.point && this.to - this.from >= this.ohm) break
+            let DD = this.layer.chunkPos[this.chunkIndex],
+              zD = this.layer.chunk[this.chunkIndex],
+              wD = DD + zD.from[this.rangeIndex];
+            if (this.from = wD, this.to = DD + zD.to[this.rangeIndex], this.value = zD.value[this.rangeIndex], this.setRangeIndex(this.rangeIndex + 1), this.jpD < 0 || this.value.point && this.to - this.from >= this.jpD) break
           }
         }
       }
-      setRangeIndex(mm) {
-        if (mm == this.layer.chunk[this.chunkIndex].value.length) {
+      setRangeIndex(DD) {
+        if (DD == this.layer.chunk[this.chunkIndex].value.length) {
           if (this.chunkIndex++, this.skip)
             for (; this.chunkIndex < this.layer.chunk.length && this.skip.has(this.layer.chunk[this.chunkIndex]);) this.chunkIndex++;
           this.rangeIndex = 0
-        } else this.rangeIndex = mm
+        } else this.rangeIndex = DD
       }
       nextChunk() {
         this.chunkIndex++, this.rangeIndex = 0, this.next()
       }
-      compare(mm) {
-        return this.from - mm.from || this.startSide - mm.startSide || this.rank - mm.rank || this.to - mm.to || this.endSide - mm.endSide
+      compare(DD) {
+        return this.from - DD.from || this.startSide - DD.startSide || this.rank - DD.rank || this.to - DD.to || this.endSide - DD.endSide
       }
     }
-    class vT {
-      constructor(mm) {
-        this.heap = mm
+    class az {
+      constructor(DD) {
+        this.heap = DD
       }
-      static from(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
-          hm = [];
-        for (let Am = 0; Am < mm.length; Am++)
-          for (let am = mm[Am]; !am.ZO; am = am.nextLayer) am.Ehm >= fm && hm.push(new LT(am, Tm, fm, Am));
-        return 1 == hm.length ? hm[0] : new vT(hm)
+      static from(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1,
+          pD = [];
+        for (let sD = 0; sD < DD.length; sD++)
+          for (let KD = DD[sD]; !KD.AI; KD = KD.nextLayer) KD.bpD >= wD && pD.push(new oz(KD, zD, wD, sD));
+        return 1 == pD.length ? pD[0] : new az(pD)
       }
       get startSide() {
         return this.value ? this.value.startSide : 0
       }
-      goto(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        for (let fm of this.heap) fm.goto(mm, Tm);
-        for (let fm = this.heap.length >> 1; fm >= 0; fm--) tT(this.heap, fm);
+      goto(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        for (let wD of this.heap) wD.goto(DD, zD);
+        for (let wD = this.heap.length >> 1; wD >= 0; wD--) uz(this.heap, wD);
         return this.next(), this
       }
-      forward(mm, Tm) {
-        for (let fm of this.heap) fm.forward(mm, Tm);
-        for (let fm = this.heap.length >> 1; fm >= 0; fm--) tT(this.heap, fm);
-        (this.to - mm || this.value.endSide - Tm) < 0 && this.next()
+      forward(DD, zD) {
+        for (let wD of this.heap) wD.forward(DD, zD);
+        for (let wD = this.heap.length >> 1; wD >= 0; wD--) uz(this.heap, wD);
+        (this.to - DD || this.value.endSide - zD) < 0 && this.next()
       }
       next() {
         if (0 == this.heap.length) this.from = this.to = 1e9, this.value = null, this.rank = -1;
         else {
-          let mm = this.heap[0];
-          this.from = mm.from, this.to = mm.to, this.value = mm.value, this.rank = mm.rank, mm.value && mm.next(), tT(this.heap, 0)
+          let DD = this.heap[0];
+          this.from = DD.from, this.to = DD.to, this.value = DD.value, this.rank = DD.rank, DD.value && DD.next(), uz(this.heap, 0)
         }
       }
     }
 
-    function tT(mm, Tm) {
-      for (let fm = mm[Tm];;) {
-        let hm = 1 + (Tm << 1);
-        if (hm >= mm.length) break;
-        let Am = mm[hm];
-        if (hm + 1 < mm.length && Am.compare(mm[hm + 1]) >= 0 && (Am = mm[hm + 1], hm++), fm.compare(Am) < 0) break;
-        mm[hm] = fm, mm[Tm] = Am, Tm = hm
+    function uz(DD, zD) {
+      for (let wD = DD[zD];;) {
+        let pD = 1 + (zD << 1);
+        if (pD >= DD.length) break;
+        let sD = DD[pD];
+        if (pD + 1 < DD.length && sD.compare(DD[pD + 1]) >= 0 && (sD = DD[pD + 1], pD++), wD.compare(sD) < 0) break;
+        DD[pD] = wD, DD[zD] = sD, zD = pD
       }
     }
-    class UT {
-      constructor(mm, Tm, fm) {
-        this.ohm = fm, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = vT.from(mm, Tm, fm)
+    class vz {
+      constructor(DD, zD, wD) {
+        this.jpD = wD, this.active = [], this.activeTo = [], this.activeRank = [], this.minActive = -1, this.point = null, this.pointFrom = 0, this.pointRank = 0, this.to = -1e9, this.endSide = 0, this.openStart = -1, this.cursor = az.from(DD, zD, wD)
       }
-      goto(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
-        return this.cursor.goto(mm, Tm), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = mm, this.endSide = Tm, this.openStart = -1, this.next(), this
+      goto(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1e9;
+        return this.cursor.goto(DD, zD), this.active.length = this.activeTo.length = this.activeRank.length = 0, this.minActive = -1, this.to = DD, this.endSide = zD, this.openStart = -1, this.next(), this
       }
-      forward(mm, Tm) {
-        for (; this.minActive > -1 && (this.activeTo[this.minActive] - mm || this.active[this.minActive].endSide - Tm) < 0;) this.removeActive(this.minActive);
-        this.cursor.forward(mm, Tm)
+      forward(DD, zD) {
+        for (; this.minActive > -1 && (this.activeTo[this.minActive] - DD || this.active[this.minActive].endSide - zD) < 0;) this.removeActive(this.minActive);
+        this.cursor.forward(DD, zD)
       }
-      removeActive(mm) {
-        WT(this.active, mm), WT(this.activeTo, mm), WT(this.activeRank, mm), this.minActive = mf(this.active, this.activeTo)
+      removeActive(DD) {
+        Yz(this.active, DD), Yz(this.activeTo, DD), Yz(this.activeRank, DD), this.minActive = qz(this.active, this.activeTo)
       }
-      addActive(mm) {
-        let Tm = 0,
+      addActive(DD) {
+        let zD = 0,
           {
-            value: fm,
-            to: hm,
-            rank: Am
+            value: wD,
+            to: pD,
+            rank: sD
           } = this.cursor;
-        for (; Tm < this.activeRank.length && (Am - this.activeRank[Tm] || hm - this.activeTo[Tm]) > 0;) Tm++;
-        FT(this.active, Tm, fm), FT(this.activeTo, Tm, hm), FT(this.activeRank, Tm, Am), mm && FT(mm, Tm, this.cursor.from), this.minActive = mf(this.active, this.activeTo)
+        for (; zD < this.activeRank.length && (sD - this.activeRank[zD] || pD - this.activeTo[zD]) > 0;) zD++;
+        Hz(this.active, zD, wD), Hz(this.activeTo, zD, pD), Hz(this.activeRank, zD, sD), DD && Hz(DD, zD, this.cursor.from), this.minActive = qz(this.active, this.activeTo)
       }
       next() {
-        let mm = this.to,
-          Tm = this.point;
+        let DD = this.to,
+          zD = this.point;
         this.point = null;
-        let fm = this.openStart < 0 ? [] : null;
+        let wD = this.openStart < 0 ? [] : null;
         for (;;) {
-          let hm = this.minActive;
-          if (hm > -1 && (this.activeTo[hm] - this.cursor.from || this.active[hm].endSide - this.cursor.startSide) < 0) {
-            if (this.activeTo[hm] > mm) {
-              this.to = this.activeTo[hm], this.endSide = this.active[hm].endSide;
+          let pD = this.minActive;
+          if (pD > -1 && (this.activeTo[pD] - this.cursor.from || this.active[pD].endSide - this.cursor.startSide) < 0) {
+            if (this.activeTo[pD] > DD) {
+              this.to = this.activeTo[pD], this.endSide = this.active[pD].endSide;
               break
             }
-            this.removeActive(hm), fm && WT(fm, hm)
+            this.removeActive(pD), wD && Yz(wD, pD)
           } else {
             if (!this.cursor.value) {
               this.to = this.endSide = 1e9;
               break
             }
-            if (this.cursor.from > mm) {
+            if (this.cursor.from > DD) {
               this.to = this.cursor.from, this.endSide = this.cursor.startSide;
               break
             } {
-              let mm = this.cursor.value;
-              if (mm.point) {
-                if (!(Tm && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
-                  this.point = mm, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = mm.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
+              let DD = this.cursor.value;
+              if (DD.point) {
+                if (!(zD && this.cursor.to == this.to && this.cursor.from < this.cursor.to)) {
+                  this.point = DD, this.pointFrom = this.cursor.from, this.pointRank = this.cursor.rank, this.to = this.cursor.to, this.endSide = DD.endSide, this.cursor.next(), this.forward(this.to, this.endSide);
                   break
                 }
                 this.cursor.next()
-              } else this.addActive(fm), this.cursor.next()
+              } else this.addActive(wD), this.cursor.next()
             }
           }
         }
-        if (fm) {
+        if (wD) {
           this.openStart = 0;
-          for (let Tm = fm.length - 1; Tm >= 0 && fm[Tm] < mm; Tm--) this.openStart++
+          for (let zD = wD.length - 1; zD >= 0 && wD[zD] < DD; zD--) this.openStart++
         }
       }
-      activeForPoint(mm) {
+      activeForPoint(DD) {
         if (!this.active.length) return this.active;
-        let Tm = [];
-        for (let fm = this.active.length - 1; fm >= 0 && !(this.activeRank[fm] < this.pointRank); fm--)(this.activeTo[fm] > mm || this.activeTo[fm] == mm && this.active[fm].endSide >= this.point.endSide) && Tm.push(this.active[fm]);
-        return Tm.reverse()
+        let zD = [];
+        for (let wD = this.active.length - 1; wD >= 0 && !(this.activeRank[wD] < this.pointRank); wD--)(this.activeTo[wD] > DD || this.activeTo[wD] == DD && this.active[wD].endSide >= this.point.endSide) && zD.push(this.active[wD]);
+        return zD.reverse()
       }
-      openEnd(mm) {
-        let Tm = 0;
-        for (let fm = this.activeTo.length - 1; fm >= 0 && this.activeTo[fm] > mm; fm--) Tm++;
-        return Tm
-      }
-    }
-
-    function dT(mm, Tm, fm, hm, Am, am) {
-      mm.goto(Tm), fm.goto(hm);
-      let xm = hm + Am,
-        wm = hm,
-        Dm = hm - Tm,
-        im = !!am.boundChange;
-      for (let Rm = !1;;) {
-        let Tm = mm.to + Dm - fm.to,
-          hm = Tm || mm.endSide - fm.endSide,
-          Am = hm < 0 ? mm.to + Dm : fm.to,
-          pm = Math.min(Am, xm);
-        if (mm.point || fm.point ? (mm.point && fm.point && CT(mm.point, fm.point) && gT(mm.activeForPoint(mm.to), fm.activeForPoint(fm.to)) || am.comparePoint(wm, pm, mm.point, fm.point), Rm = !1) : (Rm && am.boundChange(wm), pm > wm && !gT(mm.active, fm.active) && am.compareRange(wm, pm, mm.active, fm.active), im && pm < xm && (Tm || mm.openEnd(Am) != fm.openEnd(Am)) && (Rm = !0)), Am > xm) break;
-        wm = Am, hm <= 0 && mm.next(), hm >= 0 && fm.next()
+      openEnd(DD) {
+        let zD = 0;
+        for (let wD = this.activeTo.length - 1; wD >= 0 && this.activeTo[wD] > DD; wD--) zD++;
+        return zD
       }
     }
 
-    function gT(mm, Tm) {
-      if (mm.length != Tm.length) return !1;
-      for (let fm = 0; fm < mm.length; fm++)
-        if (mm[fm] != Tm[fm] && !CT(mm[fm], Tm[fm])) return !1;
+    function tz(DD, zD, wD, pD, sD, KD) {
+      DD.goto(zD), wD.goto(pD);
+      let rD = pD + sD,
+        LD = pD,
+        cD = pD - zD,
+        gD = !!KD.boundChange;
+      for (let RD = !1;;) {
+        let zD = DD.to + cD - wD.to,
+          pD = zD || DD.endSide - wD.endSide,
+          sD = pD < 0 ? DD.to + cD : wD.to,
+          AD = Math.min(sD, rD);
+        if (DD.point || wD.point ? (DD.point && wD.point && Wz(DD.point, wD.point) && Fz(DD.activeForPoint(DD.to), wD.activeForPoint(wD.to)) || KD.comparePoint(LD, AD, DD.point, wD.point), RD = !1) : (RD && KD.boundChange(LD), AD > LD && !Fz(DD.active, wD.active) && KD.compareRange(LD, AD, DD.active, wD.active), gD && AD < rD && (zD || DD.openEnd(sD) != wD.openEnd(sD)) && (RD = !0)), sD > rD) break;
+        LD = sD, pD <= 0 && DD.next(), pD >= 0 && wD.next()
+      }
+    }
+
+    function Fz(DD, zD) {
+      if (DD.length != zD.length) return !1;
+      for (let wD = 0; wD < DD.length; wD++)
+        if (DD[wD] != zD[wD] && !Wz(DD[wD], zD[wD])) return !1;
       return !0
     }
 
-    function WT(mm, Tm) {
-      for (let fm = Tm, hm = mm.length - 1; fm < hm; fm++) mm[fm] = mm[fm + 1];
-      mm.pop()
+    function Yz(DD, zD) {
+      for (let wD = zD, pD = DD.length - 1; wD < pD; wD++) DD[wD] = DD[wD + 1];
+      DD.pop()
     }
 
-    function FT(mm, Tm, fm) {
-      for (let hm = mm.length - 1; hm >= Tm; hm--) mm[hm + 1] = mm[hm];
-      mm[Tm] = fm
+    function Hz(DD, zD, wD) {
+      for (let pD = DD.length - 1; pD >= zD; pD--) DD[pD + 1] = DD[pD];
+      DD[zD] = wD
     }
 
-    function mf(mm, Tm) {
-      let fm = -1,
-        hm = 1e9;
-      for (let Am = 0; Am < Tm.length; Am++)(Tm[Am] - hm || mm[Am].endSide - mm[fm].endSide) < 0 && (fm = Am, hm = Tm[Am]);
-      return fm
+    function qz(DD, zD) {
+      let wD = -1,
+        pD = 1e9;
+      for (let sD = 0; sD < zD.length; sD++)(zD[sD] - pD || DD[sD].endSide - DD[wD].endSide) < 0 && (wD = sD, pD = zD[sD]);
+      return wD
     }
 
-    function Tf(mm, Tm) {
-      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : mm.length,
-        hm = 0;
-      for (let Am = 0; Am < fm && Am < mm.length;) 9 == mm.charCodeAt(Am) ? (hm += Tm - hm % Tm, Am++) : (hm++, Am = zm(mm, Am));
-      return hm
+    function Dw(DD, zD) {
+      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : DD.length,
+        pD = 0;
+      for (let sD = 0; sD < wD && sD < DD.length;) 9 == DD.charCodeAt(sD) ? (pD += zD - pD % zD, sD++) : (pD++, sD = VD(DD, sD));
+      return pD
     }
 
-    function ff(mm, Tm, fm, hm) {
-      for (let Am = 0, am = 0;;) {
-        if (am >= Tm) return Am;
-        if (Am == mm.length) break;
-        am += 9 == mm.charCodeAt(Am) ? fm - am % fm : 1, Am = zm(mm, Am)
+    function zw(DD, zD, wD, pD) {
+      for (let sD = 0, KD = 0;;) {
+        if (KD >= zD) return sD;
+        if (sD == DD.length) break;
+        KD += 9 == DD.charCodeAt(sD) ? wD - KD % wD : 1, sD = VD(DD, sD)
       }
-      return !0 === hm ? -1 : mm.length
+      return !0 === pD ? -1 : DD.length
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

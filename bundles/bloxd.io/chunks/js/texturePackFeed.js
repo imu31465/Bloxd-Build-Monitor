@@ -1,30 +1,30 @@
 export const id = 54;
 export const ids = [54];
 export const modules = {
-  51012: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      startPageTexturePackFeed: () => xm
+  50816: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      startPageTexturePackFeed: () => rD
     });
-    var hm = fm(1214),
-      Am = fm(37),
-      am = fm(51e3);
+    var pD = wD(1211),
+      sD = wD(35),
+      KD = wD(50808);
 
-    function xm(mm, Tm) {
-      const fm = new am.c({
-        store: Am.e,
-        warn: mm,
-        oneShot: Tm,
-        fetchLatest: async mm => {
-          const Tm = await fetch(`${hm.clientSideServerUrls.texturePackUrl}/${mm}.json`, {
+    function rD(DD, zD) {
+      const wD = new KD.b({
+        store: sD.g,
+        warn: DD,
+        oneShot: zD,
+        fetchLatest: async DD => {
+          const zD = await fetch(`${pD.clientSideServerUrls.texturePackUrl}/${DD}.json`, {
             cache: "reload"
           });
-          if (!Tm.ok) throw new Error(`fetching texture pack ${mm} answered HTTP ${Tm.status}`);
-          return await Tm.json()
+          if (!zD.ok) throw new Error(`fetching texture pack ${DD} answered HTTP ${zD.status}`);
+          return await zD.json()
         }
       });
-      return (0, am.d)(fm), fm
+      return (0, KD.e)(wD), wD
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,72 +1,72 @@
 export const id = 55;
 export const ids = [55];
 export const modules = {
-  34332: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      announceStoredTexturePack: () => Am.e,
-      takeOneShotTexturePack: () => hm.g
+  34250: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      announceStoredTexturePack: () => sD.e,
+      takeOneShotTexturePack: () => pD.f
     });
-    var hm = fm(34337),
-      Am = fm(34346)
+    var pD = wD(34257),
+      sD = wD(34265)
   },
-  34346: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => Am,
-      g: () => am
+  34265: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => sD,
+      g: () => KD
     });
-    var hm = fm(3251);
+    var pD = wD(3243);
 
-    function Am() {
+    function sD() {
       if ("undefined" === typeof BroadcastChannel) return null;
-      const mm = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      const DD = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
       try {
-        const Tm = new BroadcastChannel(hm.h);
-        Tm.postMessage({
-          stored: mm
-        }), Tm.close()
+        const zD = new BroadcastChannel(pD.m);
+        zD.postMessage({
+          stored: DD
+        }), zD.close()
       } catch {
         return null
       }
-      return mm
+      return DD
     }
 
-    function am(mm) {
-      const Tm = "object" === typeof mm && null !== mm ? mm.stored : null;
-      return "string" === typeof Tm ? Tm : null
+    function KD(DD) {
+      const zD = "object" === typeof DD && null !== DD ? DD.stored : null;
+      return "string" === typeof zD ? zD : null
     }
   },
-  34337: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => xm,
-      e: () => Am,
-      g: () => am
+  34257: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => rD,
+      e: () => sD,
+      f: () => KD
     });
-    var hm = fm(3251);
-    async function Am(mm, Tm, fm) {
-      let Am = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const am = xm(await mm.getItem(hm.e, Tm));
-      if (null === am || Am()) return null;
-      const wm = await mm.getItem(hm.f, Tm);
-      return Am() ? null : (await async function(mm) {
-        await Promise.all([mm.removeItem(hm.e), mm.removeItem(hm.f)])
-      }(mm).catch(fm), {
-        pack: am,
-        source: "string" === typeof wm ? wm : null
+    var pD = wD(3243);
+    async function sD(DD, zD, wD) {
+      let sD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const KD = rD(await DD.getItem(pD.h, zD));
+      if (null === KD || sD()) return null;
+      const LD = await DD.getItem(pD.k, zD);
+      return sD() ? null : (await async function(DD) {
+        await Promise.all([DD.removeItem(pD.h), DD.removeItem(pD.k)])
+      }(DD).catch(wD), {
+        pack: KD,
+        source: "string" === typeof LD ? LD : null
       })
     }
 
-    function am(mm) {
-      return (0, hm.n)() ? Promise.resolve(null) : Am(mm, !1, (mm => {
-        console.error("Error removing temporary texture pack: ", mm)
-      }), hm.n)
+    function KD(DD) {
+      return (0, pD.t)() ? Promise.resolve(null) : sD(DD, !1, (DD => {
+        console.error("Error removing temporary texture pack: ", DD)
+      }), pD.t)
     }
 
-    function xm(mm) {
-      if ("object" !== typeof mm || null === mm) return null;
-      const Tm = mm.metaData;
-      return "object" !== typeof Tm || null === Tm || "string" !== typeof Tm.id ? null : mm
+    function rD(DD) {
+      if ("object" !== typeof DD || null === DD) return null;
+      const zD = DD.metaData;
+      return "object" !== typeof zD || null === zD || "string" !== typeof zD.id ? null : DD
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

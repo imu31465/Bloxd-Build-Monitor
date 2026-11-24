@@ -1,80 +1,80 @@
 export const id = 301;
 export const ids = [301];
 export const modules = {
-  41537: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      ensureLocalBloxdTypes: () => jm
+  41387: (DD, zD, wD) => {
+    wD.d(zD, {
+      ensureLocalBloxdTypes: () => hD
     });
-    var hm = fm(4696),
-      Am = fm(41432),
-      am = fm(41424),
-      xm = fm(36950),
-      wm = fm(36955),
-      Dm = fm(36975);
-    const im = JSON.stringify({
+    var pD = wD(4782),
+      sD = wD(41275),
+      KD = wD(41269),
+      rD = wD(36813),
+      LD = wD(36819),
+      cD = wD(36833);
+    const gD = JSON.stringify({
       name: "@bloxd",
       types: "index.d.ts"
     }, null, "\t") + "\n";
 
-    function Rm(mm) {
-      return mm.replace(/^\//, "")
+    function RD(DD) {
+      return DD.replace(/^\//, "")
     }
 
-    function pm(mm) {
-      return Rm((0, wm.x)(mm.name, "")).replace(/\/$/, "")
+    function AD(DD) {
+      return RD((0, LD.u)(DD.name, "")).replace(/\/$/, "")
     }
 
-    function Em(mm) {
-      return mm.typesVfsPath.slice(mm.typesVfsPath.lastIndexOf("/") + 1)
+    function UD(DD) {
+      return DD.typesVfsPath.slice(DD.typesVfsPath.lastIndexOf("/") + 1)
     }
 
-    function om(mm) {
+    function fD(DD) {
       return JSON.stringify({
-        name: mm.specifier,
-        types: Em(mm)
+        name: DD.specifier,
+        types: UD(DD)
       }, null, "\t") + "\n"
     }
-    async function Om(mm) {
-      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
-      const fm = [];
-      for await (const [hm, Am] of mm.entries()) {
-        const mm = Tm ? `${Tm}/${hm}` : hm;
-        "directory" !== Am.kind ? fm.push(mm) : fm.push(...await Om(Am, mm))
+    async function ID(DD) {
+      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "";
+      const wD = [];
+      for await (const [pD, sD] of DD.entries()) {
+        const DD = zD ? `${zD}/${pD}` : pD;
+        "directory" !== sD.kind ? wD.push(DD) : wD.push(...await ID(sD, DD))
       }
-      return fm
+      return wD
     }
-    async function Ym(mm, Tm, fm) {
-      const hm = pm(Tm),
-        Am = await (0, Dm.l)(mm, hm);
-      if (!Am) return;
-      const am = new Set([Em(Tm), "package.json"]);
-      if (fm)
-        for (const Dm of Object.keys(Tm.files)) am.add(Dm);
-      const xm = await Om(Am),
-        wm = new Set;
-      for (const pm of xm) {
-        if (am.has(pm)) continue;
-        await (0, Dm.y)(mm, `${hm}/${pm}`);
-        const Tm = pm.split("/");
-        for (let mm = 1; mm < Tm.length; mm++) wm.add(Tm.slice(0, mm).join("/"))
+    async function BD(DD, zD, wD) {
+      const pD = AD(zD),
+        sD = await (0, cD.h)(DD, pD);
+      if (!sD) return;
+      const KD = new Set([UD(zD), "package.json"]);
+      if (wD)
+        for (const cD of Object.keys(zD.files)) KD.add(cD);
+      const rD = await ID(sD),
+        LD = new Set;
+      for (const AD of rD) {
+        if (KD.has(AD)) continue;
+        await (0, cD.D)(DD, `${pD}/${AD}`);
+        const zD = AD.split("/");
+        for (let DD = 1; DD < zD.length; DD++) LD.add(zD.slice(0, DD).join("/"))
       }
-      const im = [...wm].sort(((mm, Tm) => Tm.split("/").length - mm.split("/").length));
-      for (const pm of im) try {
-        await (0, Dm.y)(mm, `${hm}/${pm}`)
-      } catch (Rm) {
-        if (Rm instanceof DOMException && "InvalidModificationError" === Rm.name) continue;
-        throw Rm
+      const gD = [...LD].sort(((DD, zD) => zD.split("/").length - DD.split("/").length));
+      for (const AD of gD) try {
+        await (0, cD.D)(DD, `${pD}/${AD}`)
+      } catch (RD) {
+        if (RD instanceof DOMException && "InvalidModificationError" === RD.name) continue;
+        throw RD
       }
     }
 
-    function qm(mm) {
-      const Tm = {
+    function GD(DD) {
+      const zD = {
         "@bloxd": ["./node_modules/@bloxd/index.d.ts"]
       };
-      for (const hm of Object.values(xm.e)) Tm[hm.specifier] = [`.${hm.typesVfsPath}`];
-      const fm = [];
-      for (const hm of mm)
-        for (const mm of Object.keys(hm.files)) fm.push(Rm((0, wm.x)(hm.name, mm)));
+      for (const pD of Object.values(rD.h)) zD[pD.specifier] = [`.${pD.typesVfsPath}`];
+      const wD = [];
+      for (const pD of DD)
+        for (const DD of Object.keys(pD.files)) wD.push(RD((0, LD.u)(pD.name, DD)));
       return JSON.stringify({
         compilerOptions: {
           allowJs: !0,
@@ -87,26 +87,26 @@ export const modules = {
           noLib: !0,
           skipLibCheck: !0,
           baseUrl: ".",
-          paths: Tm
+          paths: zD
         },
         include: ["./**/*.ts", "./**/*.js", "./**/*.d.ts"],
-        files: ["node_modules/@bloxd/globals.d.ts", "node_modules/@bloxd/lib.d.ts", ...fm]
+        files: ["node_modules/@bloxd/globals.d.ts", "node_modules/@bloxd/lib.d.ts", ...wD]
       }, null, "\t") + "\n"
     }
-    async function jm(mm) {
-      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
-      const fm = new Set(Tm.map((mm => mm.name))),
-        Em = Object.values(xm.e).flatMap((Tm => {
-          const hm = Rm(Tm.typesVfsPath),
-            Am = `${pm(Tm)}/package.json`;
-          return [...fm.has(Tm.name) ? Object.entries(Tm.files).map((fm => {
-            let [hm, Am] = fm;
-            return (0, Dm.G)(mm, Rm((0, wm.x)(Tm.name, hm)), Am)
-          })) : [], (0, Dm.G)(mm, hm, Tm.types), (0, Dm.G)(mm, Am, om(Tm))]
+    async function hD(DD) {
+      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [];
+      const wD = new Set(zD.map((DD => DD.name))),
+        UD = Object.values(rD.h).flatMap((zD => {
+          const pD = RD(zD.typesVfsPath),
+            sD = `${AD(zD)}/package.json`;
+          return [...wD.has(zD.name) ? Object.entries(zD.files).map((wD => {
+            let [pD, sD] = wD;
+            return (0, cD.J)(DD, RD((0, LD.u)(zD.name, pD)), sD)
+          })) : [], (0, cD.J)(DD, pD, zD.types), (0, cD.J)(DD, sD, fD(zD))]
         }));
-      await Promise.all([(0, Dm.G)(mm, "node_modules/@bloxd/index.d.ts", hm.default), (0, Dm.G)(mm, "node_modules/@bloxd/globals.d.ts", am.e), (0, Dm.G)(mm, "node_modules/@bloxd/lib.d.ts", Am.e), (0, Dm.G)(mm, "node_modules/@bloxd/package.json", im), (0, Dm.G)(mm, "tsconfig.json", qm(Tm)), ...Em]), await Promise.all(Object.values(xm.e).map((Tm => Ym(mm, Tm, fm.has(Tm.name)))))
+      await Promise.all([(0, cD.J)(DD, "node_modules/@bloxd/index.d.ts", pD.default), (0, cD.J)(DD, "node_modules/@bloxd/globals.d.ts", KD.d), (0, cD.J)(DD, "node_modules/@bloxd/lib.d.ts", sD.e), (0, cD.J)(DD, "node_modules/@bloxd/package.json", gD), (0, cD.J)(DD, "tsconfig.json", GD(zD)), ...UD]), await Promise.all(Object.values(rD.h).map((zD => BD(DD, zD, wD.has(zD.name)))))
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

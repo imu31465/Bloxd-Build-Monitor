@@ -1,15 +1,15 @@
 export const id = 240;
 export const ids = [240];
 export const modules = {
-  37858: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => pm,
-      f: () => xm
+  37791: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => AD,
+      g: () => rD
     });
-    var hm = fm(9159),
-      Am = fm(9141),
-      am = fm(354);
-    const xm = {
+    var pD = wD(9220),
+      sD = wD(9198),
+      KD = wD(351);
+    const rD = {
       "Maple Door": {
         positions: [{
           block: "Maple Door",
@@ -2948,52 +2948,52 @@ export const modules = {
           z: 0
         }]
       },
-      ...wm("White"),
-      ...wm("Orange"),
-      ...wm("Magenta"),
-      ...wm("Light Blue"),
-      ...wm("Yellow"),
-      ...wm("Lime"),
-      ...wm("Pink"),
-      ...wm("Gray"),
-      ...wm("Light Gray"),
-      ...wm("Cyan"),
-      ...wm("Purple"),
-      ...wm("Blue"),
-      ...wm("Brown"),
-      ...wm("Green"),
-      ...wm("Red"),
-      ...wm("Black"),
-      ...wm("Draugr"),
-      ...wm("Skull"),
-      ...wm("Rainbow"),
-      ...Dm("Sheep"),
-      ...Dm("Cow"),
-      ...Dm("Pig"),
-      ...Dm("Horse"),
-      ...Dm("Camel"),
-      ...Dm("Wolf"),
-      ...Dm("Deer"),
-      ...Dm("Wildcat"),
-      ...im("Radar"),
-      ...im("Inactive Radar"),
-      ...im("Active Radar"),
-      ...Rm("Magenta"),
-      ...Rm("Light Gray"),
-      ...Rm("Red"),
-      ...Rm("White"),
-      ...Rm("Orange"),
-      ...Rm("Light Blue"),
-      ...Rm("Yellow"),
-      ...Rm("Lime"),
-      ...Rm("Pink"),
-      ...Rm("Gray"),
-      ...Rm("Cyan"),
-      ...Rm("Purple"),
-      ...Rm("Blue"),
-      ...Rm("Brown"),
-      ...Rm("Green"),
-      ...Rm("Black"),
+      ...LD("White"),
+      ...LD("Orange"),
+      ...LD("Magenta"),
+      ...LD("Light Blue"),
+      ...LD("Yellow"),
+      ...LD("Lime"),
+      ...LD("Pink"),
+      ...LD("Gray"),
+      ...LD("Light Gray"),
+      ...LD("Cyan"),
+      ...LD("Purple"),
+      ...LD("Blue"),
+      ...LD("Brown"),
+      ...LD("Green"),
+      ...LD("Red"),
+      ...LD("Black"),
+      ...LD("Draugr"),
+      ...LD("Skull"),
+      ...LD("Rainbow"),
+      ...cD("Sheep"),
+      ...cD("Cow"),
+      ...cD("Pig"),
+      ...cD("Horse"),
+      ...cD("Camel"),
+      ...cD("Wolf"),
+      ...cD("Deer"),
+      ...cD("Wildcat"),
+      ...gD("Radar"),
+      ...gD("Inactive Radar"),
+      ...gD("Active Radar"),
+      ...RD("Magenta"),
+      ...RD("Light Gray"),
+      ...RD("Red"),
+      ...RD("White"),
+      ...RD("Orange"),
+      ...RD("Light Blue"),
+      ...RD("Yellow"),
+      ...RD("Lime"),
+      ...RD("Pink"),
+      ...RD("Gray"),
+      ...RD("Cyan"),
+      ...RD("Purple"),
+      ...RD("Blue"),
+      ...RD("Brown"),
+      ...RD("Green"),
+      ...RD("Black"),
       "Auto Miner": {
         positions: [{
           block: "Auto Miner",
@@ -3107,11 +3107,11 @@ export const modules = {
         }]
       },
       ... function() {
-        const mm = "Lunite Auto Miner";
+        const DD = "Lunite Auto Miner";
         return {
-          [mm]: {
+          [DD]: {
             positions: [{
-              block: mm,
+              block: DD,
               x: 0,
               y: 0,
               z: 0
@@ -3137,9 +3137,9 @@ export const modules = {
               z: -2
             }]
           },
-          [`${mm}|meta|rot2`]: {
+          [`${DD}|meta|rot2`]: {
             positions: [{
-              block: `${mm}|meta|rot2`,
+              block: `${DD}|meta|rot2`,
               x: 0,
               y: 0,
               z: 0
@@ -3165,9 +3165,9 @@ export const modules = {
               z: 0
             }]
           },
-          [`${mm}|meta|rot3`]: {
+          [`${DD}|meta|rot3`]: {
             positions: [{
-              block: `${mm}|meta|rot3`,
+              block: `${DD}|meta|rot3`,
               x: 0,
               y: 0,
               z: 0
@@ -3193,9 +3193,9 @@ export const modules = {
               z: 2
             }]
           },
-          [`${mm}|meta|rot4`]: {
+          [`${DD}|meta|rot4`]: {
             positions: [{
-              block: `${mm}|meta|rot4`,
+              block: `${DD}|meta|rot4`,
               x: 0,
               y: 0,
               z: 0
@@ -3224,74 +3224,74 @@ export const modules = {
         }
       }(),
       ... function() {
-        const mm = {
-            1: mm => ({
+        const DD = {
+            1: DD => ({
               x: 0,
-              z: mm
+              z: DD
             }),
-            2: mm => ({
-              x: mm,
+            2: DD => ({
+              x: DD,
               z: 0
             }),
-            3: mm => ({
+            3: DD => ({
               x: 0,
-              z: -mm
+              z: -DD
             }),
-            4: mm => ({
-              x: -mm,
+            4: DD => ({
+              x: -DD,
               z: 0
             })
           },
-          Tm = {};
-        for (let fm = 1; fm <= 4; fm++) {
-          const Am = 1 === fm ? "" : `|meta|rot${fm}`;
-          Tm[`${hm.b[0].block}${Am}`] = {
-            positions: hm.b.map((Tm => {
+          zD = {};
+        for (let wD = 1; wD <= 4; wD++) {
+          const sD = 1 === wD ? "" : `|meta|rot${wD}`;
+          zD[`${pD.e[0].block}${sD}`] = {
+            positions: pD.e.map((zD => {
               let {
-                block: hm,
-                y: am,
-                z: xm
-              } = Tm;
+                block: pD,
+                y: KD,
+                z: rD
+              } = zD;
               return {
-                block: `${hm}${Am}`,
-                y: am,
-                ...mm[fm](xm)
+                block: `${pD}${sD}`,
+                y: KD,
+                ...DD[wD](rD)
               }
             }))
           }
         }
-        return Tm
+        return zD
       }(),
       ... function() {
-        const mm = {};
-        for (let Tm = 1; Tm <= hm.l; Tm++) {
-          const fm = (0, hm.dc)(Tm),
-            Am = hm.p[Tm - 1],
-            am = [{
-              block: fm,
+        const DD = {};
+        for (let zD = 1; zD <= pD.m; zD++) {
+          const wD = (0, pD.cc)(zD),
+            sD = pD.q[zD - 1],
+            KD = [{
+              block: wD,
               x: 0,
               y: 0,
               z: 0
             }];
-          for (const mm of hm.h)
-            for (let Tm = 1; Tm <= Am; Tm++) {
-              if ("southwest" === mm && 1 === Tm) continue;
+          for (const DD of pD.h)
+            for (let zD = 1; zD <= sD; zD++) {
+              if ("southwest" === DD && 1 === zD) continue;
               const {
-                x: fm,
-                z: Am
-              } = hm.i[mm];
-              am.push({
-                block: (0, hm.ac)(mm, Tm),
-                x: fm,
-                y: Tm - 1,
-                z: Am
+                x: wD,
+                z: sD
+              } = pD.l[DD];
+              KD.push({
+                block: (0, pD.$b)(DD, zD),
+                x: wD,
+                y: zD - 1,
+                z: sD
               })
             }
-          mm[fm] = {
-            positions: am
+          DD[wD] = {
+            positions: KD
           }
         }
-        return mm
+        return DD
       }(),
       "Solar Panel": {
         positions: [{
@@ -3405,159 +3405,159 @@ export const modules = {
       }
     };
 
-    function wm(mm) {
+    function LD(DD) {
       return {
-        [`${mm} Banner`]: {
+        [`${DD} Banner`]: {
           positions: [{
-            block: `${mm} Banner`,
+            block: `${DD} Banner`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${mm} Banner Flag|meta|rot1|bot`,
+            block: `_${DD} Banner Flag|meta|rot1|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${mm} Banner|meta|rot2|bot`]: {
+        [`${DD} Banner|meta|rot2|bot`]: {
           positions: [{
-            block: `${mm} Banner|meta|rot2|bot`,
+            block: `${DD} Banner|meta|rot2|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${mm} Banner Flag|meta|rot2|bot`,
+            block: `_${DD} Banner Flag|meta|rot2|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${mm} Banner|meta|rot3|bot`]: {
+        [`${DD} Banner|meta|rot3|bot`]: {
           positions: [{
-            block: `${mm} Banner|meta|rot3|bot`,
+            block: `${DD} Banner|meta|rot3|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${mm} Banner Flag|meta|rot3|bot`,
+            block: `_${DD} Banner Flag|meta|rot3|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${mm} Banner|meta|rot4|bot`]: {
+        [`${DD} Banner|meta|rot4|bot`]: {
           positions: [{
-            block: `${mm} Banner|meta|rot4|bot`,
+            block: `${DD} Banner|meta|rot4|bot`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${mm} Banner Flag|meta|rot4|bot`,
+            block: `_${DD} Banner Flag|meta|rot4|bot`,
             x: 0,
             y: 1,
             z: 0
           }]
         },
-        [`${mm} Banner|meta|rot1|side`]: {
+        [`${DD} Banner|meta|rot1|side`]: {
           positions: [{
-            block: `${mm} Banner|meta|rot1|side`,
+            block: `${DD} Banner|meta|rot1|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${mm} Banner Flag|meta|rot1|side`,
+            block: `_${DD} Banner Flag|meta|rot1|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${mm} Banner|meta|rot2|side`]: {
+        [`${DD} Banner|meta|rot2|side`]: {
           positions: [{
-            block: `${mm} Banner|meta|rot2|side`,
+            block: `${DD} Banner|meta|rot2|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${mm} Banner Flag|meta|rot2|side`,
+            block: `_${DD} Banner Flag|meta|rot2|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${mm} Banner|meta|rot3|side`]: {
+        [`${DD} Banner|meta|rot3|side`]: {
           positions: [{
-            block: `${mm} Banner|meta|rot3|side`,
+            block: `${DD} Banner|meta|rot3|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${mm} Banner Flag|meta|rot3|side`,
+            block: `_${DD} Banner Flag|meta|rot3|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${mm} Banner|meta|rot4|side`]: {
+        [`${DD} Banner|meta|rot4|side`]: {
           positions: [{
-            block: `${mm} Banner|meta|rot4|side`,
+            block: `${DD} Banner|meta|rot4|side`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${mm} Banner Flag|meta|rot4|side`,
+            block: `_${DD} Banner Flag|meta|rot4|side`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${mm} Banner|meta|rot1|top`]: {
+        [`${DD} Banner|meta|rot1|top`]: {
           positions: [{
-            block: `${mm} Banner|meta|rot1|top`,
+            block: `${DD} Banner|meta|rot1|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${mm} Banner Flag`,
+            block: `_${DD} Banner Flag`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${mm} Banner|meta|rot2|top`]: {
+        [`${DD} Banner|meta|rot2|top`]: {
           positions: [{
-            block: `${mm} Banner|meta|rot2|top`,
+            block: `${DD} Banner|meta|rot2|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${mm} Banner Flag|meta|rot2|top`,
+            block: `_${DD} Banner Flag|meta|rot2|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${mm} Banner|meta|rot3|top`]: {
+        [`${DD} Banner|meta|rot3|top`]: {
           positions: [{
-            block: `${mm} Banner|meta|rot3|top`,
+            block: `${DD} Banner|meta|rot3|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${mm} Banner Flag|meta|rot3|top`,
+            block: `_${DD} Banner Flag|meta|rot3|top`,
             x: 0,
             y: -1,
             z: 0
           }]
         },
-        [`${mm} Banner|meta|rot4|top`]: {
+        [`${DD} Banner|meta|rot4|top`]: {
           positions: [{
-            block: `${mm} Banner|meta|rot4|top`,
+            block: `${DD} Banner|meta|rot4|top`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${mm} Banner Flag|meta|rot4|top`,
+            block: `_${DD} Banner Flag|meta|rot4|top`,
             x: 0,
             y: -1,
             z: 0
@@ -3566,96 +3566,96 @@ export const modules = {
       }
     }
 
-    function Dm(mm) {
-      const Tm = (0, am.Tb)(mm);
+    function cD(DD) {
+      const zD = (0, KD.Xb)(DD);
       return {
-        [Tm]: {
+        [zD]: {
           positions: [{
-            block: Tm,
+            block: zD,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Tm} Top Left`,
+            block: `_${zD} Top Left`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Tm} Top Right`,
+            block: `_${zD} Top Right`,
             x: -1,
             y: 1,
             z: 0
           }, {
-            block: `_${Tm} Bottom Right`,
+            block: `_${zD} Bottom Right`,
             x: -1,
             y: 0,
             z: 0
           }]
         },
-        [`${Tm}|meta|rot2`]: {
+        [`${zD}|meta|rot2`]: {
           positions: [{
-            block: `${Tm}|meta|rot2`,
+            block: `${zD}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Tm} Top Left|meta|rot2`,
+            block: `_${zD} Top Left|meta|rot2`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Tm} Top Right|meta|rot2`,
+            block: `_${zD} Top Right|meta|rot2`,
             x: 0,
             y: 1,
             z: 1
           }, {
-            block: `_${Tm} Bottom Right|meta|rot2`,
+            block: `_${zD} Bottom Right|meta|rot2`,
             x: 0,
             y: 0,
             z: 1
           }]
         },
-        [`${Tm}|meta|rot3`]: {
+        [`${zD}|meta|rot3`]: {
           positions: [{
-            block: `${Tm}|meta|rot3`,
+            block: `${zD}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Tm} Top Left|meta|rot3`,
+            block: `_${zD} Top Left|meta|rot3`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Tm} Top Right|meta|rot3`,
+            block: `_${zD} Top Right|meta|rot3`,
             x: 1,
             y: 1,
             z: 0
           }, {
-            block: `_${Tm} Bottom Right|meta|rot3`,
+            block: `_${zD} Bottom Right|meta|rot3`,
             x: 1,
             y: 0,
             z: 0
           }]
         },
-        [`${Tm}|meta|rot4`]: {
+        [`${zD}|meta|rot4`]: {
           positions: [{
-            block: `${Tm}|meta|rot4`,
+            block: `${zD}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_${Tm} Top Left|meta|rot4`,
+            block: `_${zD} Top Left|meta|rot4`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_${Tm} Top Right|meta|rot4`,
+            block: `_${zD} Top Right|meta|rot4`,
             x: 0,
             y: 1,
             z: -1
           }, {
-            block: `_${Tm} Bottom Right|meta|rot4`,
+            block: `_${zD} Bottom Right|meta|rot4`,
             x: 0,
             y: 0,
             z: -1
@@ -3664,77 +3664,77 @@ export const modules = {
       }
     }
 
-    function im(mm) {
-      const Tm = `_${mm} Back`,
-        fm = `_${mm} Dish`;
+    function gD(DD) {
+      const zD = `_${DD} Back`,
+        wD = `_${DD} Dish`;
       return {
-        [mm]: {
+        [DD]: {
           positions: [{
-            block: mm,
+            block: DD,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: Tm,
+            block: zD,
             x: 0,
             y: 0,
             z: -1
           }, {
-            block: fm,
+            block: wD,
             x: 0,
             y: 1,
             z: -1
           }]
         },
-        [`${mm}|meta|rot2`]: {
+        [`${DD}|meta|rot2`]: {
           positions: [{
-            block: `${mm}|meta|rot2`,
+            block: `${DD}|meta|rot2`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${Tm}|meta|rot2`,
+            block: `${zD}|meta|rot2`,
             x: -1,
             y: 0,
             z: 0
           }, {
-            block: `${fm}|meta|rot2`,
+            block: `${wD}|meta|rot2`,
             x: -1,
             y: 1,
             z: 0
           }]
         },
-        [`${mm}|meta|rot3`]: {
+        [`${DD}|meta|rot3`]: {
           positions: [{
-            block: `${mm}|meta|rot3`,
+            block: `${DD}|meta|rot3`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${Tm}|meta|rot3`,
+            block: `${zD}|meta|rot3`,
             x: 0,
             y: 0,
             z: 1
           }, {
-            block: `${fm}|meta|rot3`,
+            block: `${wD}|meta|rot3`,
             x: 0,
             y: 1,
             z: 1
           }]
         },
-        [`${mm}|meta|rot4`]: {
+        [`${DD}|meta|rot4`]: {
           positions: [{
-            block: `${mm}|meta|rot4`,
+            block: `${DD}|meta|rot4`,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `${Tm}|meta|rot4`,
+            block: `${zD}|meta|rot4`,
             x: 1,
             y: 0,
             z: 0
           }, {
-            block: `${fm}|meta|rot4`,
+            block: `${wD}|meta|rot4`,
             x: 1,
             y: 1,
             z: 0
@@ -3743,22 +3743,22 @@ export const modules = {
       }
     }
 
-    function Rm(mm) {
-      const Tm = `Small ${mm} Pod`;
+    function RD(DD) {
+      const zD = `Small ${DD} Pod`;
       return {
-        [Tm]: {
+        [zD]: {
           positions: [{
-            block: Tm,
+            block: zD,
             x: 0,
             y: 0,
             z: 0
           }, {
-            block: `_Small ${mm} Pod Mid`,
+            block: `_Small ${DD} Pod Mid`,
             x: 0,
             y: 1,
             z: 0
           }, {
-            block: `_Small ${mm} Pod Top`,
+            block: `_Small ${DD} Pod Top`,
             x: 0,
             y: 2,
             z: 0
@@ -3766,280 +3766,280 @@ export const modules = {
         }
       }
     }
-    for (const Em in xm) {
-      for (const mm of xm[Em].positions)
-        if (mm.id = Am.i[mm.block].id, Em === mm.block && (0 !== mm.x || 0 !== mm.y || 0 !== mm.z)) throw new Error(`Multiblock "${Em}" has main block "${mm.block}" at non-origin position (${mm.x}, ${mm.y}, ${mm.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
-      xm[Am.i[Em].id] = xm[Em]
+    for (const UD in rD) {
+      for (const DD of rD[UD].positions)
+        if (DD.id = sD.l[DD.block].id, UD === DD.block && (0 !== DD.x || 0 !== DD.y || 0 !== DD.z)) throw new Error(`Multiblock "${UD}" has main block "${DD.block}" at non-origin position (${DD.x}, ${DD.y}, ${DD.z}) - if you need to do something like this, you'll need to rethink your approach: Banners are a good template to follow.`);
+      rD[sD.l[UD].id] = rD[UD]
     }
-    const pm = {};
-    for (const Em in xm)
+    const AD = {};
+    for (const UD in rD)
       for (const {
-          block: mm,
-          x: Tm,
-          y: fm,
-          z: hm
+          block: DD,
+          x: zD,
+          y: wD,
+          z: pD
         }
-        of xm[Em].positions) {
-        const am = {
-          mainMultiblock: Em,
-          compX: Tm,
-          compY: fm,
-          compZ: hm
+        of rD[UD].positions) {
+        const KD = {
+          mainMultiblock: UD,
+          compX: zD,
+          compY: wD,
+          compZ: pD
         };
-        pm[mm] = am, pm[Am.i[mm].id] = am
+        AD[DD] = KD, AD[sD.l[DD].id] = KD
       }
   },
-  38308: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => Dm,
-      d: () => wm
+  38189: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => cD,
+      h: () => LD
     });
-    var hm = fm(9141),
-      Am = fm(9193),
-      am = fm(9199);
-    const xm = Am.q.map((mm => {
+    var pD = wD(9198),
+      sD = wD(9240),
+      KD = wD(9244);
+    const rD = sD.t.map((DD => {
       let {
-        dx: Tm,
-        dz: fm
-      } = mm;
-      return [Tm, 0, fm]
+        dx: zD,
+        dz: wD
+      } = DD;
+      return [zD, 0, wD]
     }));
 
-    function wm(mm) {
-      const Tm = hm.i[mm];
-      return !!Tm && mm !== hm.b && !Tm.model && !Tm.Qo && !1 !== Tm.solid && !Tm.AO
+    function LD(DD) {
+      const zD = pD.l[DD];
+      return !!zD && DD !== pD.e && !zD.model && !zD.Af && !1 !== zD.solid && !zD.cG
     }
-    class Dm {
-      constructor(mm) {
-        this.model = mm, this.reshapeOffsets = [...xm, [0, -1, 0]]
+    class cD {
+      constructor(DD) {
+        this.model = DD, this.reshapeOffsets = [...rD, [0, -1, 0]]
       }
-      handles(mm) {
-        const Tm = hm.i[mm];
-        return (null === Tm || void 0 === Tm ? void 0 : Tm.model) === this.model && void 0 !== Tm.attachedTop
+      handles(DD) {
+        const zD = pD.l[DD];
+        return (null === zD || void 0 === zD ? void 0 : zD.model) === this.model && void 0 !== zD.attachedTop
       }
-      affects(mm) {
-        return this.handles(mm) || wm(mm) || (0, am.z)(hm.i[mm])
+      affects(DD) {
+        return this.handles(DD) || LD(DD) || (0, KD.v)(pD.l[DD])
       }
-      shape(mm, Tm, fm, xm, Dm) {
-        let im = this.handles(mm(Tm, fm + 1, xm)) ? Am.i : 0;
-        return Am.q.forEach(((Dm, Rm) => {
+      shape(DD, zD, wD, rD, cD) {
+        let gD = this.handles(DD(zD, wD + 1, rD)) ? sD.j : 0;
+        return sD.t.forEach(((cD, RD) => {
           let {
-            dx: pm,
-            dz: Em
-          } = Dm;
-          const om = mm(Tm + pm, fm, xm + Em);
-          (this.handles(om) || wm(om) || function(mm, Tm) {
-            const fm = hm.i[mm];
-            return (0, am.z)(fm) && (0, am.t)(fm.meta.rot) === (0 !== Am.q[Tm].dx)
-          }(om, Rm)) && (im |= 1 << Rm)
-        })), (0, hm.k)((0, Am.k)(hm.i[Dm].meta.rootName, im))
+            dx: AD,
+            dz: UD
+          } = cD;
+          const fD = DD(zD + AD, wD, rD + UD);
+          (this.handles(fD) || LD(fD) || function(DD, zD) {
+            const wD = pD.l[DD];
+            return (0, KD.v)(wD) && (0, KD.q)(wD.meta.rot) === (0 !== sD.t[zD].dx)
+          }(fD, RD)) && (gD |= 1 << RD)
+        })), (0, pD.p)((0, sD.l)(pD.l[cD].meta.rootName, gD))
       }
     }
   },
-  38058: (mm, Tm, fm) => {
-    function hm(mm, Tm) {
-      var fm;
-      Tm || (Tm = {});
-      const hm = null !== (fm = Tm.customAttributes) && void 0 !== fm ? fm : {};
-      var Am, am, xm;
-      "Gun" === (null === mm || void 0 === mm ? void 0 : mm.type) && (hm.shotsLeft = null !== (Am = null !== (am = hm.shotsLeft) && void 0 !== am ? am : null === (xm = hm.gunStats) || void 0 === xm ? void 0 : xm.clipSize) && void 0 !== Am ? Am : mm.clipSize);
-      if (hm.enchantmentTier && (hm.enchantmentTier = hm.enchantmentTier.toString()), hm.enchantments)
-        for (const pm in hm.enchantments) {
-          const mm = hm.enchantments[pm];
-          if ("number" !== typeof mm) {
-            const Tm = parseInt(mm);
-            isNaN(Tm) || Tm < 0 ? hm.enchantments[pm] = void 0 : hm.enchantments[pm] = Tm > 1e9 ? 1e9 : Tm
+  37978: (DD, zD, wD) => {
+    function pD(DD, zD) {
+      var wD;
+      zD || (zD = {});
+      const pD = null !== (wD = zD.customAttributes) && void 0 !== wD ? wD : {};
+      var sD, KD, rD;
+      "Gun" === (null === DD || void 0 === DD ? void 0 : DD.type) && (pD.shotsLeft = null !== (sD = null !== (KD = pD.shotsLeft) && void 0 !== KD ? KD : null === (rD = pD.gunStats) || void 0 === rD ? void 0 : rD.clipSize) && void 0 !== sD ? sD : DD.clipSize);
+      if (pD.enchantmentTier && (pD.enchantmentTier = pD.enchantmentTier.toString()), pD.enchantments)
+        for (const AD in pD.enchantments) {
+          const DD = pD.enchantments[AD];
+          if ("number" !== typeof DD) {
+            const zD = parseInt(DD);
+            isNaN(zD) || zD < 0 ? pD.enchantments[AD] = void 0 : pD.enchantments[AD] = zD > 1e9 ? 1e9 : zD
           }
         }
-      if (hm.enchantmentData)
-        for (const pm in hm.enchantmentData) {
-          const mm = hm.enchantmentData[pm];
-          if (!mm) continue;
-          if ("object" !== typeof mm) {
-            hm.enchantmentData[pm] = void 0;
+      if (pD.enchantmentData)
+        for (const AD in pD.enchantmentData) {
+          const DD = pD.enchantmentData[AD];
+          if (!DD) continue;
+          if ("object" !== typeof DD) {
+            pD.enchantmentData[AD] = void 0;
             continue
           }
-          const Tm = mm.icon,
-            fm = mm.description;
-          var wm, Dm, im, Rm;
-          if ("string" !== typeof Tm) hm.enchantmentData[pm].icon = null !== (wm = null === Tm || void 0 === Tm || null === (Dm = Tm.toString) || void 0 === Dm ? void 0 : Dm.call(Tm)) && void 0 !== wm ? wm : void 0;
-          if ("string" !== typeof fm) hm.enchantmentData[pm].description = null !== (im = null === fm || void 0 === fm || null === (Rm = fm.toString) || void 0 === Rm ? void 0 : Rm.call(fm)) && void 0 !== im ? im : void 0
+          const zD = DD.icon,
+            wD = DD.description;
+          var LD, cD, gD, RD;
+          if ("string" !== typeof zD) pD.enchantmentData[AD].icon = null !== (LD = null === zD || void 0 === zD || null === (cD = zD.toString) || void 0 === cD ? void 0 : cD.call(zD)) && void 0 !== LD ? LD : void 0;
+          if ("string" !== typeof wD) pD.enchantmentData[AD].description = null !== (gD = null === wD || void 0 === wD || null === (RD = wD.toString) || void 0 === RD ? void 0 : RD.call(wD)) && void 0 !== gD ? gD : void 0
         }
-      return Tm.customAttributes = hm, Tm
+      return zD.customAttributes = pD, zD
     }
-    fm.d(Tm, {
-      c: () => hm
+    wD.d(zD, {
+      b: () => pD
     })
   },
-  38306: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => Jm,
-      g: () => jm,
-      k: () => Dm,
-      l: () => pm,
-      p: () => cm
+  38180: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => QD,
+      e: () => hD,
+      f: () => cD,
+      g: () => AD,
+      h: () => XD
     });
-    var hm = fm(9141),
-      Am = fm(9167),
-      am = fm(38308);
-    const xm = (0, hm.k)("Noticeboard"),
-      wm = (0, hm.k)("Standing Noticeboard|meta|rot4|lrud");
+    var pD = wD(9198),
+      sD = wD(9228),
+      KD = wD(38189);
+    const rD = (0, pD.p)("Noticeboard"),
+      LD = (0, pD.p)("Standing Noticeboard|meta|rot4|lrud");
 
-    function Dm(mm) {
-      return xm <= mm && mm <= wm
+    function cD(DD) {
+      return rD <= DD && DD <= LD
     }
-    const im = new Uint8Array(wm - xm + 1);
-    for (let zm = xm; zm <= wm; zm++) im[zm - xm] = (0, Am.p)(hm.i[zm].meta.metaStr);
-    const Rm = 64,
-      pm = Rm * Rm,
-      [Em, om, Om, Ym] = [0, 1, 2, 3];
+    const gD = new Uint8Array(LD - rD + 1);
+    for (let VD = rD; VD <= LD; VD++) gD[VD - rD] = (0, sD.v)(pD.l[VD].meta.metaStr);
+    const RD = 64,
+      AD = RD * RD,
+      [UD, fD, ID, BD] = [0, 1, 2, 3];
 
-    function qm(mm) {
-      var Tm, fm;
-      return "string" === typeof(null === mm || void 0 === mm || null === (Tm = mm.persisted) || void 0 === Tm || null === (fm = Tm.shared) || void 0 === fm ? void 0 : fm.text)
-    }
-
-    function jm(mm) {
-      return qm(mm) && "" !== mm.persisted.shared.text.trim()
+    function GD(DD) {
+      var zD, wD;
+      return "string" === typeof(null === DD || void 0 === DD || null === (zD = DD.persisted) || void 0 === zD || null === (wD = zD.shared) || void 0 === wD ? void 0 : wD.text)
     }
 
-    function Vm(mm, Tm) {
-      let [fm, , hm] = Tm;
-      const [am, , xm] = Am.t[mm][om];
-      return fm * am + hm * xm
+    function hD(DD) {
+      return GD(DD) && "" !== DD.persisted.shared.text.trim()
     }
 
-    function Im(mm, Tm, fm) {
-      return fm[1] - Tm[1] || Vm(mm, Tm) - Vm(mm, fm)
+    function nD(DD, zD) {
+      let [wD, , pD] = zD;
+      const [KD, , rD] = sD.z[DD][fD];
+      return wD * KD + pD * rD
     }
 
-    function Km(mm, Tm, fm, am, wm) {
-      var Dm;
-      let Rm = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : mm(Tm[0], Tm[1], Tm[2]);
-      if (!(im[Rm - xm] & 1 << fm)) return null;
-      const [pm, Em, om] = Am.t[wm][fm], Om = [Tm[0] + pm, Tm[1] + Em, Tm[2] + om], Ym = mm(Om[0], Om[1], Om[2]), qm = null === (Dm = hm.i[Ym]) || void 0 === Dm ? void 0 : Dm.meta;
-      return (null === qm || void 0 === qm ? void 0 : qm.rootId) === am && qm.rot === wm && im[Ym - xm] & 1 << (1 ^ fm) ? Om : null
+    function MD(DD, zD, wD) {
+      return wD[1] - zD[1] || nD(DD, zD) - nD(DD, wD)
     }
 
-    function Qm(mm, Tm, fm, am) {
-      const xm = mm(Tm, fm, am);
-      if (!Dm(xm)) return null;
+    function OD(DD, zD, wD, KD, LD) {
+      var cD;
+      let RD = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : DD(zD[0], zD[1], zD[2]);
+      if (!(gD[RD - rD] & 1 << wD)) return null;
+      const [AD, UD, fD] = sD.z[LD][wD], ID = [zD[0] + AD, zD[1] + UD, zD[2] + fD], BD = DD(ID[0], ID[1], ID[2]), GD = null === (cD = pD.l[BD]) || void 0 === cD ? void 0 : cD.meta;
+      return (null === GD || void 0 === GD ? void 0 : GD.rootId) === KD && GD.rot === LD && gD[BD - rD] & 1 << (1 ^ wD) ? ID : null
+    }
+
+    function JD(DD, zD, wD, KD) {
+      const rD = DD(zD, wD, KD);
+      if (!cD(rD)) return null;
       const {
-        rootId: wm,
-        rot: im
-      } = hm.i[xm].meta, pm = (Tm, fm) => {
-        let hm = Tm,
-          Am = 1;
-        for (let am = Km(mm, hm, fm, wm, im); am && Am < Rm; am = Km(mm, hm, fm, wm, im)) hm = am, Am++;
+        rootId: LD,
+        rot: gD
+      } = pD.l[rD].meta, AD = (zD, wD) => {
+        let pD = zD,
+          sD = 1;
+        for (let KD = OD(DD, pD, wD, LD, gD); KD && sD < RD; KD = OD(DD, pD, wD, LD, gD)) pD = KD, sD++;
         return {
-          end: hm,
-          cells: Am
+          end: pD,
+          cells: sD
         }
-      }, qm = pm(pm([Tm, fm, am], Em).end, Om).end, jm = pm(qm, om).cells, [Vm, , Im] = Am.t[im][om];
-      let Qm = 1;
-      mm: for (; Qm < Rm; Qm++)
-        for (let Tm = 0; Tm < jm; Tm++)
-          if (!Km(mm, [qm[0] + Vm * Tm, qm[1] - Qm + 1, qm[2] + Im * Tm], Ym, wm, im)) break mm;
+      }, GD = AD(AD([zD, wD, KD], UD).end, ID).end, hD = AD(GD, fD).cells, [nD, , MD] = sD.z[gD][fD];
+      let JD = 1;
+      DD: for (; JD < RD; JD++)
+        for (let zD = 0; zD < hD; zD++)
+          if (!OD(DD, [GD[0] + nD * zD, GD[1] - JD + 1, GD[2] + MD * zD], BD, LD, gD)) break DD;
       return {
-        anchor: qm,
-        rootId: wm,
-        rot: im,
-        width: jm,
-        height: Qm
+        anchor: GD,
+        rootId: LD,
+        rot: gD,
+        width: hD,
+        height: JD
       }
     }
 
-    function nm(mm, Tm) {
-      for (const fm of function(mm) {
+    function ED(DD, zD) {
+      for (const wD of function(DD) {
           let {
-            anchor: Tm,
-            rot: fm,
-            width: hm,
-            height: am
-          } = mm;
-          const [xm, , wm] = Am.t[fm][om], Dm = [];
-          for (let Am = 0; Am < am; Am++)
-            for (let mm = 0; mm < hm; mm++) Dm.push([Tm[0] + xm * mm, Tm[1] - Am, Tm[2] + wm * mm]);
-          return Dm
-        }(mm))
-        if (qm(Tm(fm[0], fm[1], fm[2]))) return fm;
+            anchor: zD,
+            rot: wD,
+            width: pD,
+            height: KD
+          } = DD;
+          const [rD, , LD] = sD.z[wD][fD], cD = [];
+          for (let sD = 0; sD < KD; sD++)
+            for (let DD = 0; DD < pD; DD++) cD.push([zD[0] + rD * DD, zD[1] - sD, zD[2] + LD * DD]);
+          return cD
+        }(DD))
+        if (GD(zD(wD[0], wD[1], wD[2]))) return wD;
       return null
     }
 
-    function Jm(mm, Tm, fm, Am, am) {
-      const xm = mm(fm, Am, am);
-      if (!Dm(xm)) return null;
+    function QD(DD, zD, wD, sD, KD) {
+      const rD = DD(wD, sD, KD);
+      if (!cD(rD)) return null;
       const {
-        rootId: wm,
-        rot: im
-      } = hm.i[xm].meta, Rm = [
-        [fm, Am, am]
-      ], Em = new Set([Rm[0].join()]);
-      let om = Rm[0],
-        Om = null;
-      for (let hm = 0; hm < Rm.length; hm++) {
-        const fm = Rm[hm];
-        if (Im(im, fm, om) < 0 && (om = fm), qm(Tm(fm[0], fm[1], fm[2]))) {
-          const Tm = Qm(mm, fm[0], fm[1], fm[2]);
-          (!Om || Im(im, Tm.anchor, Om.anchor) < 0) && (Om = Tm)
+        rootId: LD,
+        rot: gD
+      } = pD.l[rD].meta, RD = [
+        [wD, sD, KD]
+      ], UD = new Set([RD[0].join()]);
+      let fD = RD[0],
+        ID = null;
+      for (let pD = 0; pD < RD.length; pD++) {
+        const wD = RD[pD];
+        if (MD(gD, wD, fD) < 0 && (fD = wD), GD(zD(wD[0], wD[1], wD[2]))) {
+          const zD = JD(DD, wD[0], wD[1], wD[2]);
+          (!ID || MD(gD, zD.anchor, ID.anchor) < 0) && (ID = zD)
         }
-        for (let Tm = 0; Tm < 4 && Rm.length < pm; Tm++) {
-          const hm = Km(mm, fm, Tm, wm, im);
-          hm && !Em.has(hm.join()) && (Em.add(hm.join()), Rm.push(hm))
+        for (let zD = 0; zD < 4 && RD.length < AD; zD++) {
+          const pD = OD(DD, wD, zD, LD, gD);
+          pD && !UD.has(pD.join()) && (UD.add(pD.join()), RD.push(pD))
         }
       }
-      return Om ??= Qm(mm, om[0], om[1], om[2]), {
-        cells: Rm,
-        topLeft: om,
-        rect: Om,
-        textCell: nm(Om, Tm)
+      return ID ??= JD(DD, fD[0], fD[1], fD[2]), {
+        cells: RD,
+        topLeft: fD,
+        rect: ID,
+        textCell: ED(ID, zD)
       }
     }
 
-    function cm(mm, Tm, fm, xm, wm) {
-      if (null !== fm && Dm(fm)) {
+    function XD(DD, zD, wD, rD, LD) {
+      if (null !== wD && cD(wD)) {
         const {
-          rootName: mm,
-          rot: Tm
-        } = hm.i[fm].meta;
-        if (Am.t[Tm].some((mm => {
-            let [Tm, fm, hm] = mm;
-            return Tm === xm[0] && fm === xm[1] && hm === xm[2]
+          rootName: DD,
+          rot: zD
+        } = pD.l[wD].meta;
+        if (sD.z[zD].some((DD => {
+            let [zD, wD, pD] = DD;
+            return zD === rD[0] && wD === rD[1] && pD === rD[2]
           }))) return {
-          root: mm,
-          rot: Tm
+          root: DD,
+          rot: zD
         }
       }
-      const [im, Rm] = Am.m[wm], pm = mm(Tm[0] - im, Tm[1], Tm[2] - Rm);
+      const [gD, RD] = sD.p[LD], AD = DD(zD[0] - gD, zD[1], zD[2] - RD);
       return {
-        root: (0, am.d)(pm) ? Am.y : Am.v,
-        rot: wm
+        root: (0, KD.h)(AD) ? sD.H : sD.D,
+        rot: LD
       }
     }
   },
-  38311: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => am,
-      e: () => xm,
-      h: () => Am,
-      j: () => wm
+  38195: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => KD,
+      g: () => rD,
+      i: () => sD,
+      m: () => LD
     });
-    var hm = fm(359);
-    const Am = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...fm(649).u.map((mm => `${mm} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...hm.f, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
-      am = ["Obby RPG"];
+    var pD = wD(353);
+    const sD = ["Snowball", "Snowball Launcher", "Pebble", "Reinforced Pebble", "Ball", "Reinforced Ball", "Mango", "Moonstone Orb", ...wD(616).v.map((DD => `${DD} Spawn Orb`)), "Fireball", "RPG", "Obby RPG", "Super RPG", "Grenade Launcher", "Iceball", "Bouncy Bomb", "Coconut", "Splash Speed Potion", "Splash Speed Potion II", "Splash Defense Potion", "Splash Defense Potion II", "Splash Strength Potion", "Splash Strength Potion II", "Splash Invisibility Potion", "Splash Jump Potion", "Splash Jump Potion II", "Splash Knockback Potion", "Splash Knockback Potion II", "Splash Poison Potion", "Splash Poison Potion II", "Splash Slowness Potion", "Splash Slowness Potion II", "Splash Weakness Potion", "Splash Weakness Potion II", "Splash Milk Potion", "Splash Instant Damage Potion", "Splash Instant Damage Potion II", "Splash Regeneration Potion", "Splash Regeneration Potion II", "Splash Instant Healing Potion", "Splash Instant Healing Potion II", "Splash Haste Potion", "Splash Haste Potion II", "Splash Shield Potion", "Splash Shield Potion II", "Splash Double Jump Potion", "Splash Heat Resistance Potion", "Splash X-Ray Vision Potion", "Splash Mining Yield Potion", "Splash Mining Yield Potion II", "Splash Brain Rot Potion", "Yellow Paintball Gun", "White Paintball Gun", "Red Paintball Gun", "Purple Paintball Gun", "Pink Paintball Gun", "Orange Paintball Gun", "Magenta Paintball Gun", "Lime Paintball Gun", "Light Gray Paintball Gun", "Light Blue Paintball Gun", "Green Paintball Gun", "Gray Paintball Gun", "Cyan Paintball Gun", "Brown Paintball Gun", "Blue Paintball Gun", "Black Paintball Gun", "Yellow Heavy Paintball Gun", "White Heavy Paintball Gun", "Red Heavy Paintball Gun", "Purple Heavy Paintball Gun", "Pink Heavy Paintball Gun", "Orange Heavy Paintball Gun", "Magenta Heavy Paintball Gun", "Lime Heavy Paintball Gun", "Light Gray Heavy Paintball Gun", "Light Blue Heavy Paintball Gun", "Green Heavy Paintball Gun", "Gray Heavy Paintball Gun", "Cyan Heavy Paintball Gun", "Brown Heavy Paintball Gun", "Blue Heavy Paintball Gun", "Black Heavy Paintball Gun", "Toxin Ball", "Splash Aura XP Potion", "Splash Aura XP Potion II", "Firecracker", "Rainbow Firecracker", "White Firecracker", "Orange Firecracker", "Magenta Firecracker", "Light Blue Firecracker", "Yellow Firecracker", "Lime Firecracker", "Pink Firecracker", "Gray Firecracker", "Light Gray Firecracker", "Cyan Firecracker", "Purple Firecracker", "Blue Firecracker", "Brown Firecracker", "Green Firecracker", "Red Firecracker", "Black Firecracker", "Firecracker Pebble", "Rainbow Firecracker Pebble", "White Firecracker Pebble", "Orange Firecracker Pebble", "Magenta Firecracker Pebble", "Light Blue Firecracker Pebble", "Yellow Firecracker Pebble", "Lime Firecracker Pebble", "Pink Firecracker Pebble", "Gray Firecracker Pebble", "Light Gray Firecracker Pebble", "Cyan Firecracker Pebble", "Purple Firecracker Pebble", "Blue Firecracker Pebble", "Brown Firecracker Pebble", "Green Firecracker Pebble", "Red Firecracker Pebble", "Black Firecracker Pebble", "Blinding Pebble", "Poop", "Wood Boomerang", "Stone Boomerang", "Iron Boomerang", "Gold Boomerang", "Diamond Boomerang", "Moonstone Boomerang", ...pD.i, "67 Base Projectile", "67 Boosted Projectile", "Capitano Grenade", "Scatter Pellet", "Lucky Bomb", "Unlucky Bomb", "Swap Orb"],
+      KD = ["Obby RPG"];
 
-    function xm(mm) {
-      const Tm = mm.indexOf("|");
-      return -1 === Tm ? {
-        item: mm,
+    function rD(DD) {
+      const zD = DD.indexOf("|");
+      return -1 === zD ? {
+        item: DD,
         clientPredictedThrower: null
       } : {
-        item: mm.slice(0, Tm),
-        clientPredictedThrower: mm.slice(Tm + 1)
+        item: DD.slice(0, zD),
+        clientPredictedThrower: DD.slice(zD + 1)
       }
     }
-    const wm = [...Am, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
+    const LD = [...sD, "Arrow", "Arrow of Speed", "Arrow of Slowness", "Arrow of Poison", "Arrow of Weakness", "Arrow of Knockback", "Arrow of Strength", "Arrow of Defense", "Arrow of Invisibility", "Arrow of Jumping", "Arrow of Milk", "Arrow of Instant Damage", "Arrow of Regeneration", "Arrow of Instant Healing", "Arrow of Haste", "Arrow of Shield", "Arrow of Double Jump", "Arrow of Heat Resistance", "Arrow of X-Ray Vision", "Arrow of Mining Yield", "Arrow of Brain Rot", "Arrow of Aura XP", "Bullet"]
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

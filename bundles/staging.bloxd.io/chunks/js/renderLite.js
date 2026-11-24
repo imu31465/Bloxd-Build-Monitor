@@ -1,75 +1,75 @@
 export const id = 49;
 export const ids = [49];
 export const modules = {
-  50979: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      startRenderLite: () => zm
+  50786: (DD, zD, wD) => {
+    wD.d(zD, {
+      startRenderLite: () => VD
     });
-    var hm = fm(2873),
-      Am = fm(675),
-      am = fm(130),
-      xm = fm(4741),
-      wm = fm(41094),
-      Dm = fm(4732),
-      im = fm(40793),
-      Rm = fm(40669),
-      pm = fm(40832),
-      Em = fm(2813),
-      om = fm(4448),
-      Om = fm(34153);
-    const Ym = new Map([
+    var pD = wD(2861),
+      sD = wD(638),
+      KD = wD(125),
+      rD = wD(4820),
+      LD = wD(40940),
+      cD = wD(4817),
+      gD = wD(40634),
+      RD = wD(40516),
+      AD = wD(40672),
+      UD = wD(2811),
+      fD = wD(4527),
+      ID = wD(34079);
+    const BD = new Map([
       ["r", " retry"],
       ["f", " fallback"]
     ]);
-    class qm {
-      constructor(mm) {
-        this.label = void 0, this.noted = void 0, this.lines = 0, this.atMs = -1 / 0, this.label = mm
+    class GD {
+      constructor(DD) {
+        this.label = void 0, this.noted = void 0, this.lines = 0, this.atMs = -1 / 0, this.label = DD
       }
-      line(mm, Tm) {
-        const fm = this.lines < 10 ? 6e4 : 6e5;
-        return void 0 === mm || mm === this.noted || Tm - this.atMs < fm ? null : (this.noted = mm, this.lines++, this.atMs = Tm, `${this.label}: ${mm}`)
+      line(DD, zD) {
+        const wD = this.lines < 10 ? 6e4 : 6e5;
+        return void 0 === DD || DD === this.noted || zD - this.atMs < wD ? null : (this.noted = DD, this.lines++, this.atMs = zD, `${this.label}: ${DD}`)
       }
     }
-    class jm {
+    class hD {
       constructor() {
-        this.failuresLogged = 0, this.heldLogged = !1, this.links = new qm("gl links"), this.programUse = new qm("gl programs")
+        this.failuresLogged = 0, this.heldLogged = !1, this.links = new GD("gl links"), this.programUse = new GD("gl programs")
       }
-      failures(mm) {
-        const Tm = mm ? mm.split(" ") : [],
-          fm = Tm.slice(this.failuresLogged).map((mm => {
-            var Tm;
-            const [fm, hm] = mm.split(":"), Am = null !== (Tm = Ym.get(fm.slice(-1))) && void 0 !== Tm ? Tm : "";
-            return `gl link failed: program row ${parseInt(fm)}${Am}, read ${hm} ms after issue`
+      failures(DD) {
+        const zD = DD ? DD.split(" ") : [],
+          wD = zD.slice(this.failuresLogged).map((DD => {
+            var zD;
+            const [wD, pD] = DD.split(":"), sD = null !== (zD = BD.get(wD.slice(-1))) && void 0 !== zD ? zD : "";
+            return `gl link failed: program row ${parseInt(wD)}${sD}, read ${pD} ms after issue`
           }));
-        return this.failuresLogged = Tm.length, fm
+        return this.failuresLogged = zD.length, wD
       }
-      heldAtBackstop(mm) {
-        return this.heldLogged || void 0 === mm ? null : (this.heldLogged = !0, `first view by the backstop, draws held for programs ${mm}`)
+      heldAtBackstop(DD) {
+        return this.heldLogged || void 0 === DD ? null : (this.heldLogged = !0, `first view by the backstop, draws held for programs ${DD}`)
       }
-      summaryLines(mm, Tm, fm, hm) {
-        const Am = this.links.line(mm, fm);
-        return [Am && `${Am}; tab ${(0,Om.g)(hm)}`, this.programUse.line(Tm, fm)].filter((mm => null !== mm))
+      summaryLines(DD, zD, wD, pD) {
+        const sD = this.links.line(DD, wD);
+        return [sD && `${sD}; tab ${(0,ID.d)(pD)}`, this.programUse.line(zD, wD)].filter((DD => null !== DD))
       }
     }
-    var Vm = fm(4637);
-    class Im {
+    var nD = wD(4729);
+    class MD {
       constructor() {
         this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, this.lastDrawnMs = null
       }
-      frame(mm, Tm, fm) {
-        if ("none" !== Tm && (this.frames++, "paced" === Tm && this.paced++, "drawn" === Tm)) {
-          if (this.drawn++, this.renderUs += fm, this.renderUsMax = Math.max(this.renderUsMax, fm), null !== this.lastDrawnMs) {
-            const Tm = mm - this.lastDrawnMs;
-            this.gapMaxMs = Math.max(this.gapMaxMs, Tm), Tm >= 50 && this.longGaps++
+      frame(DD, zD, wD) {
+        if ("none" !== zD && (this.frames++, "paced" === zD && this.paced++, "drawn" === zD)) {
+          if (this.drawn++, this.renderUs += wD, this.renderUsMax = Math.max(this.renderUsMax, wD), null !== this.lastDrawnMs) {
+            const zD = DD - this.lastDrawnMs;
+            this.gapMaxMs = Math.max(this.gapMaxMs, zD), zD >= 50 && this.longGaps++
           }
-          this.lastDrawnMs = mm
+          this.lastDrawnMs = DD
         }
       }
       restart() {
         this.take(), this.lastDrawnMs = null
       }
       take() {
-        const mm = {
+        const DD = {
           frames: this.frames,
           drawn: this.drawn,
           paced: this.paced,
@@ -78,253 +78,253 @@ export const modules = {
           renderUs: this.renderUs,
           renderUsMax: this.renderUsMax
         };
-        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, mm
+        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, DD
       }
     }
 
-    function Km(mm) {
-      return (mm / 1048576).toFixed(1)
+    function OD(DD) {
+      return (DD / 1048576).toFixed(1)
     }
-    class Qm {
+    class JD {
       constructor() {
         this.logged = 0, this.seen = new Set, this.unlogged = 0
       }
-      admit(mm) {
-        return this.logged >= 20 || this.seen.has(mm) ? (this.unlogged++, null) : (this.seen.add(mm), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${mm}` : mm)
+      admit(DD) {
+        return this.logged >= 20 || this.seen.has(DD) ? (this.unlogged++, null) : (this.seen.add(DD), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${DD}` : DD)
       }
       takeUnlogged() {
-        const mm = this.unlogged;
-        return this.unlogged = 0, mm
+        const DD = this.unlogged;
+        return this.unlogged = 0, DD
       }
     }
 
-    function nm(mm) {
-      (0, Em.g)("renderlite", mm)
+    function ED(DD) {
+      (0, UD.l)("renderlite", DD)
     }
-    class Jm {
-      constructor(mm) {
-        this.frames = new Im, this.events = new Qm, this.programLines = new jm, this.compileSummary = new qm("webgpu compiles"), this.hidden = new Om.d, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.gridLogged = !1, this.visibilityChanged = () => {
-          const mm = performance.now();
-          this.hidden.changed(mm), this.restartWindow(mm)
-        }, this.DE = () => {
-          var mm, Tm;
-          const fm = this.session,
-            Am = (0, Rm.i)(),
-            am = performance.now();
-          if (this.logLinks(am), this.logGrid(), null === fm || fm.isStopped || !0 !== (null === Am || void 0 === Am ? void 0 : Am.isCoreRunning)) return void this.restartWindow(am);
+    class QD {
+      constructor(DD) {
+        this.frames = new MD, this.events = new JD, this.programLines = new hD, this.compileSummary = new GD("webgpu compiles"), this.hidden = new ID.b, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.gridLogged = !1, this.visibilityChanged = () => {
+          const DD = performance.now();
+          this.hidden.changed(DD), this.restartWindow(DD)
+        }, this.DU = () => {
+          var DD, zD;
+          const wD = this.session,
+            sD = (0, RD.i)(),
+            KD = performance.now();
+          if (this.logLinks(KD), this.logGrid(), null === wD || wD.isStopped || !0 !== (null === sD || void 0 === sD ? void 0 : sD.isCoreRunning)) return void this.restartWindow(KD);
           if (document.hidden) return;
-          if (am - this.windowStart < 2500) return;
-          if (! function(mm) {
-              return mm < 12 || (mm - 12) % 3 === 2
+          if (KD - this.windowStart < 2500) return;
+          if (! function(DD) {
+              return DD < 12 || (DD - 12) % 3 === 2
             }(this.windows++)) return;
           this.logRenderer();
-          const Dm = fm.headerWord(xm.L.GpuTimed),
-            pm = fm.headerWord(xm.L.GpuFrameUs),
-            Em = this.sampled === fm ? {
-              timed: Dm - this.gpuTimed >>> 0,
-              us: pm - this.gpuUs >>> 0
+          const cD = wD.headerWord(rD.G.GpuTimed),
+            AD = wD.headerWord(rD.G.GpuFrameUs),
+            UD = this.sampled === wD ? {
+              timed: cD - this.gpuTimed >>> 0,
+              us: AD - this.gpuUs >>> 0
             } : null;
-          this.sampled = fm, this.gpuTimed = Dm, this.gpuUs = pm;
-          const om = null !== (mm = null === (Tm = (0, im.L)((0, hm.D)())) || void 0 === Tm ? void 0 : Tm.Thm()) && void 0 !== mm ? mm : 0;
-          nm(function(mm, Tm) {
-            const fm = Tm.windowMs / 1e3,
-              hm = [`${Math.round(fm)}s: ${mm.drawn} drawn (${(mm.drawn/fm).toFixed(1)}/s), ${mm.paced} paced, ${mm.frames-mm.drawn-mm.paced} skipped`, `gap max ${Math.round(mm.gapMaxMs)} ms, ${mm.longGaps} over 50 ms`, `render cpu ${mm.drawn?(mm.renderUs/mm.drawn/1e3).toFixed(2):"-"} ms mean, ${(mm.renderUsMax/1e3).toFixed(1)} max`];
-            null !== Tm.gpu && hm.push(`gpu ${Tm.gpu.timed?(Tm.gpu.us/Tm.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${Tm.gpu.timed} timed`);
-            const Am = Tm.census;
-            hm.push(null === Am ? "draws none yet" : `draws ${(0,wm.e)(Am)} (terrain ${Am.terrainOpaque}+${Am.terrainTransparent}, pack ${Am.terrainPack}, meshes ${Am.regular+Am.thin+Am.line+Am.text}, sky ${Am.earthSky+Am.skyMeshes}, particles ${Am.particles})`), null !== Am && Am.ringCopiesMax > 0 && hm.push(`frame rings ${Am.ringCopiesMax} copies max, ${Am.ringBusyWrites} busy writes so far`);
-            const am = null === Tm.gpuBytesBefore ? "" : ` (${Tm.gpuBytes>=Tm.gpuBytesBefore?"+":"-"}${Km(Math.abs(Tm.gpuBytes-Tm.gpuBytesBefore))})`;
-            return hm.push(`gpu mem ${Km(Tm.gpuBytes)} MiB${am}`), hm.push(`pending ${Tm.pending}`, "terrain " + (Tm.terrainDrawn ? "drawn" : "not drawn yet")), Tm.eventsUnlogged > 0 && hm.push(`${Tm.eventsUnlogged} events unlogged`), hm.join("; ")
+          this.sampled = wD, this.gpuTimed = cD, this.gpuUs = AD;
+          const fD = null !== (DD = null === (zD = (0, gD.N)((0, pD.z)())) || void 0 === zD ? void 0 : zD.MpD()) && void 0 !== DD ? DD : 0;
+          ED(function(DD, zD) {
+            const wD = zD.windowMs / 1e3,
+              pD = [`${Math.round(wD)}s: ${DD.drawn} drawn (${(DD.drawn/wD).toFixed(1)}/s), ${DD.paced} paced, ${DD.frames-DD.drawn-DD.paced} skipped`, `gap max ${Math.round(DD.gapMaxMs)} ms, ${DD.longGaps} over 50 ms`, `render cpu ${DD.drawn?(DD.renderUs/DD.drawn/1e3).toFixed(2):"-"} ms mean, ${(DD.renderUsMax/1e3).toFixed(1)} max`];
+            null !== zD.gpu && pD.push(`gpu ${zD.gpu.timed?(zD.gpu.us/zD.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${zD.gpu.timed} timed`);
+            const sD = zD.census;
+            pD.push(null === sD ? "draws none yet" : `draws ${(0,LD.d)(sD)} (terrain ${sD.terrainOpaque}+${sD.terrainTransparent}, pack ${sD.terrainPack}, meshes ${sD.regular+sD.thin+sD.line+sD.text}, sky ${sD.earthSky+sD.skyMeshes}, particles ${sD.particles})`), null !== sD && sD.ringCopiesMax > 0 && pD.push(`frame rings ${sD.ringCopiesMax} copies max, ${sD.ringBusyWrites} busy writes so far`);
+            const KD = null === zD.gpuBytesBefore ? "" : ` (${zD.gpuBytes>=zD.gpuBytesBefore?"+":"-"}${OD(Math.abs(zD.gpuBytes-zD.gpuBytesBefore))})`;
+            return pD.push(`gpu mem ${OD(zD.gpuBytes)} MiB${KD}`), pD.push(`pending ${zD.pending}`, "terrain " + (zD.terrainDrawn ? "drawn" : "not drawn yet")), zD.eventsUnlogged > 0 && pD.push(`${zD.eventsUnlogged} events unlogged`), pD.join("; ")
           }(this.frames.take(), {
-            windowMs: am - this.windowStart,
-            gpu: Em,
-            census: (0, wm.h)(Am.api),
-            gpuBytes: om,
+            windowMs: KD - this.windowStart,
+            gpu: UD,
+            census: (0, LD.h)(sD.api),
+            gpuBytes: fD,
             gpuBytesBefore: this.gpuBytes,
-            pending: fm.headerWord(xm.L.RenderPending),
-            terrainDrawn: 0 !== (fm.headerWord(xm.L.LoadSteps) & xm._.TerrainDrawn),
+            pending: wD.headerWord(rD.G.RenderPending),
+            terrainDrawn: 0 !== (wD.headerWord(rD.G.LoadSteps) & rD.V.TerrainDrawn),
             eventsUnlogged: this.events.takeUnlogged()
-          })), this.gpuBytes = om, this.windowStart = am
-        }, nm(`${(0,Vm.d)(mm)}; client ${Am.s.client} (${Am.s.reason})`), setInterval(this.DE, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
+          })), this.gpuBytes = fD, this.windowStart = KD
+        }, ED(`${(0,nD.d)(DD)}; client ${sD.n.client} (${sD.n.reason})`), setInterval(this.DU, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
       }
-      frame(mm, Tm, fm) {
-        this.session = mm, this.frames.frame(Tm, fm, "drawn" === fm ? mm.headerWord(xm.L.RenderUs) : 0)
+      frame(DD, zD, wD) {
+        this.session = DD, this.frames.frame(zD, wD, "drawn" === wD ? DD.headerWord(rD.G.RenderUs) : 0)
       }
-      coreErrors(mm) {
+      coreErrors(DD) {
         for (const {
-            code: hm,
-            detail: Am
+            code: pD,
+            detail: sD
           }
-          of mm) {
-          var Tm, fm;
-          if (hm >= xm.p.RenderDeviceLost && hm <= xm.p.RenderSerialLinks) this.event(`render error ${(0,Dm.ee)(hm)}${null!==(Tm=null===(fm=(0,pm.d)(hm,Am))||void 0===fm?void 0:fm.words)&&void 0!==Tm?Tm:""} (detail ${Am})`)
+          of DD) {
+          var zD, wD;
+          if (pD >= rD.o.RenderDeviceLost && pD <= rD.o.RenderSerialLinks) this.event(`render error ${(0,cD.fe)(pD)}${null!==(zD=null===(wD=(0,AD.e)(pD,sD))||void 0===wD?void 0:wD.words)&&void 0!==zD?zD:""} (detail ${sD})`)
         }
       }
-      reload(mm, Tm, fm, hm) {
-        this.event(`render reload: ${mm?"webgpu":"gl"} ${fm}, losses ${Tm}${void 0===hm?"":`: ${hm}`}`)
+      reload(DD, zD, wD, pD) {
+        this.event(`render reload: ${DD?"webgpu":"gl"} ${wD}, losses ${zD}${void 0===pD?"":`: ${pD}`}`)
       }
-      crashed(mm) {
+      crashed(DD) {
         let {
-          site: Tm,
-          error: fm,
-          header: hm
-        } = mm;
-        const Am = null !== hm && 0 !== hm.lastError ? `, last error ${(0,Dm.ee)(hm.lastError)} (detail ${hm.lastErrorDetail})` : "",
-          am = fm instanceof Error ? `${fm.name}: ${fm.message}` : null === fm || void 0 === fm ? "" : String(fm);
-        this.event(`core stopped at ${Tm}${Am}${am&&`: ${am}`}`)
+          site: zD,
+          error: wD,
+          header: pD
+        } = DD;
+        const sD = null !== pD && 0 !== pD.lastError ? `, last error ${(0,cD.fe)(pD.lastError)} (detail ${pD.lastErrorDetail})` : "",
+          KD = wD instanceof Error ? `${wD.name}: ${wD.message}` : null === wD || void 0 === wD ? "" : String(wD);
+        this.event(`core stopped at ${zD}${sD}${KD&&`: ${KD}`}`)
       }
-      event(mm) {
-        const Tm = this.events.admit(mm);
-        null !== Tm && nm(Tm)
+      event(DD) {
+        const zD = this.events.admit(DD);
+        null !== zD && ED(zD)
       }
-      restartWindow(mm) {
-        this.frames.restart(), this.windowStart = mm;
-        const Tm = this.session;
-        null === Tm || Tm.isStopped ? this.sampled = null : (this.sampled = Tm, this.gpuTimed = Tm.headerWord(xm.L.GpuTimed), this.gpuUs = Tm.headerWord(xm.L.GpuFrameUs))
+      restartWindow(DD) {
+        this.frames.restart(), this.windowStart = DD;
+        const zD = this.session;
+        null === zD || zD.isStopped ? this.sampled = null : (this.sampled = zD, this.gpuTimed = zD.headerWord(rD.G.GpuTimed), this.gpuUs = zD.headerWord(rD.G.GpuFrameUs))
       }
-      logLinks(mm) {
-        const Tm = window.bloxdRenderDebug;
-        for (const Am of this.programLines.failures(null === Tm || void 0 === Tm ? void 0 : Tm.linkFailures)) this.event(Am);
-        const fm = this.programLines.heldAtBackstop(null === Tm || void 0 === Tm ? void 0 : Tm.heldAtBackstop);
-        null !== fm && nm(fm);
-        for (const Am of this.programLines.summaryLines(null === Tm || void 0 === Tm ? void 0 : Tm.links, null === Tm || void 0 === Tm ? void 0 : Tm.programUse, mm, this.hidden.totals(mm))) nm(Am);
-        const hm = this.compileSummary.line(null === Tm || void 0 === Tm ? void 0 : Tm.compiles, mm);
-        null !== hm && nm(hm)
+      logLinks(DD) {
+        const zD = window.bloxdRenderDebug;
+        for (const sD of this.programLines.failures(null === zD || void 0 === zD ? void 0 : zD.linkFailures)) this.event(sD);
+        const wD = this.programLines.heldAtBackstop(null === zD || void 0 === zD ? void 0 : zD.heldAtBackstop);
+        null !== wD && ED(wD);
+        for (const sD of this.programLines.summaryLines(null === zD || void 0 === zD ? void 0 : zD.links, null === zD || void 0 === zD ? void 0 : zD.programUse, DD, this.hidden.totals(DD))) ED(sD);
+        const pD = this.compileSummary.line(null === zD || void 0 === zD ? void 0 : zD.compiles, DD);
+        null !== pD && ED(pD)
       }
       logGrid() {
-        var mm;
-        const Tm = null === (mm = window.bloxdRenderDebug) || void 0 === mm ? void 0 : mm.gridFaces;
-        this.gridLogged || void 0 === Tm || (this.gridLogged = !0, nm(`gl1 grid ${Tm}`))
+        var DD;
+        const zD = null === (DD = window.bloxdRenderDebug) || void 0 === DD ? void 0 : DD.gridFaces;
+        this.gridLogged || void 0 === zD || (this.gridLogged = !0, ED(`gl1 grid ${zD}`))
       }
       logRenderer() {
-        var mm, Tm;
+        var DD, zD;
         if (this.rendererLogged) return;
         this.rendererLogged = !0;
-        const fm = window.bloxdRenderDebug,
-          hm = (0, am.p)(),
-          Am = void 0 === (null === fm || void 0 === fm ? void 0 : fm.parallelCompile) ? "" : `; parallel compile ${fm.parallelCompile}`;
-        nm(`renderer gl ${hm?`${hm.vendor} / ${hm.renderer}`:"(not read)"}; terrain fetch ${null!==(mm=null===fm||void 0===fm?void 0:fm.fetch)&&void 0!==mm?mm:"(not noted)"}${Am}`), nm(`renderer caps ${null!==(Tm=null===fm||void 0===fm?void 0:fm.caps)&&void 0!==Tm?Tm:"(not noted)"}`)
+        const wD = window.bloxdRenderDebug,
+          pD = (0, KD.p)(),
+          sD = void 0 === (null === wD || void 0 === wD ? void 0 : wD.parallelCompile) ? "" : `; parallel compile ${wD.parallelCompile}`;
+        ED(`renderer gl ${pD?`${pD.vendor} / ${pD.renderer}`:"(not read)"}; terrain fetch ${null!==(DD=null===wD||void 0===wD?void 0:wD.fetch)&&void 0!==DD?DD:"(not noted)"}${sD}`), ED(`renderer caps ${null!==(zD=null===wD||void 0===wD?void 0:wD.caps)&&void 0!==zD?zD:"(not noted)"}`)
       }
     }
-    let cm = null;
+    let XD = null;
 
-    function zm(mm) {
-      return (0, om.e)(), cm ??= new Jm(mm), cm
+    function VD(DD) {
+      return (0, fD.f)(), XD ??= new QD(DD), XD
     }
   },
-  4637: (mm, Tm, fm) => {
-    function hm(mm) {
-      if (null === mm) return "backend: none picked (no renderer build)";
-      const Tm = mm.adapter ? `${mm.adapter.vendor}/${mm.adapter.architecture}` : "none";
-      return `backend ${mm.backend}: reason ${mm.reason}, source ${mm.source}, adapter ${Tm}`
+  4729: (DD, zD, wD) => {
+    function pD(DD) {
+      if (null === DD) return "backend: none picked (no renderer build)";
+      const zD = DD.adapter ? `${DD.adapter.vendor}/${DD.adapter.architecture}` : "none";
+      return `backend ${DD.backend}: reason ${DD.reason}, source ${DD.source}, adapter ${zD}`
     }
-    fm.d(Tm, {
-      d: () => hm
+    wD.d(zD, {
+      d: () => pD
     })
   },
-  34153: (mm, Tm, fm) => {
-    function hm(mm) {
-      return `hidden ${mm.changes} changes, ${Math.round(mm.hiddenMs)} ms`
+  34079: (DD, zD, wD) => {
+    function pD(DD) {
+      return `hidden ${DD.changes} changes, ${Math.round(DD.hiddenMs)} ms`
     }
-    fm.d(Tm, {
-      d: () => Am,
-      g: () => hm
+    wD.d(zD, {
+      b: () => sD,
+      d: () => pD
     });
-    class Am {
+    class sD {
       constructor() {
         this.changes = 0, this.hiddenMs = 0, this.hiddenSinceMs = document.hidden ? performance.now() : -1
       }
-      changed(mm) {
-        this.changes++, document.hidden ? this.hiddenSinceMs = mm : this.hiddenSinceMs >= 0 && (this.hiddenMs += mm - this.hiddenSinceMs, this.hiddenSinceMs = -1)
+      changed(DD) {
+        this.changes++, document.hidden ? this.hiddenSinceMs = DD : this.hiddenSinceMs >= 0 && (this.hiddenMs += DD - this.hiddenSinceMs, this.hiddenSinceMs = -1)
       }
-      totals(mm) {
+      totals(DD) {
         return {
           changes: this.changes,
-          hiddenMs: this.hiddenMs + (this.hiddenSinceMs >= 0 ? mm - this.hiddenSinceMs : 0)
+          hiddenMs: this.hiddenMs + (this.hiddenSinceMs >= 0 ? DD - this.hiddenSinceMs : 0)
         }
       }
     }
   },
-  41094: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => xm,
-      h: () => am,
-      l: () => wm
+  40940: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => rD,
+      h: () => KD,
+      j: () => LD
     });
-    var hm = fm(40663),
-      Am = fm(40669);
+    var pD = wD(40506),
+      sD = wD(40516);
 
-    function am(mm) {
-      if (mm.queries.drawCensus() < hm.Hb.BYTES) return null;
-      const Tm = mm.memoryData(mm.scratch(), hm.Hb.BYTES, 4, "the draw census");
-      return null === Tm ? null : {
-        terrainOpaque: hm.Hb.terrainOpaque(Tm, 0),
-        terrainTransparent: hm.Hb.terrainTransparent(Tm, 0),
-        terrainPack: hm.Hb.terrainPack(Tm, 0),
-        earthSky: hm.Hb.earthSky(Tm, 0),
-        skyMeshes: hm.Hb.skyMeshes(Tm, 0),
-        regular: hm.Hb.regular(Tm, 0),
-        thin: hm.Hb.thin(Tm, 0),
-        line: hm.Hb.line(Tm, 0),
-        text: hm.Hb.text(Tm, 0),
-        particles: hm.Hb.particles(Tm, 0),
-        terrainParts: hm.Hb.terrainParts(Tm, 0),
-        terrainCompiling: hm.Hb.terrainCompiling(Tm, 0),
-        ringCopiesMax: hm.Hb.ringCopiesMax(Tm, 0),
-        ringBusyWrites: hm.Hb.ringBusyWrites(Tm, 0)
+    function KD(DD) {
+      if (DD.queries.drawCensus() < pD.yb.BYTES) return null;
+      const zD = DD.memoryData(DD.scratch(), pD.yb.BYTES, 4, "the draw census");
+      return null === zD ? null : {
+        terrainOpaque: pD.yb.terrainOpaque(zD, 0),
+        terrainTransparent: pD.yb.terrainTransparent(zD, 0),
+        terrainPack: pD.yb.terrainPack(zD, 0),
+        earthSky: pD.yb.earthSky(zD, 0),
+        skyMeshes: pD.yb.skyMeshes(zD, 0),
+        regular: pD.yb.regular(zD, 0),
+        thin: pD.yb.thin(zD, 0),
+        line: pD.yb.line(zD, 0),
+        text: pD.yb.text(zD, 0),
+        particles: pD.yb.particles(zD, 0),
+        terrainParts: pD.yb.terrainParts(zD, 0),
+        terrainCompiling: pD.yb.terrainCompiling(zD, 0),
+        ringCopiesMax: pD.yb.ringCopiesMax(zD, 0),
+        ringBusyWrites: pD.yb.ringBusyWrites(zD, 0)
       }
     }
 
-    function xm(mm) {
+    function rD(DD) {
       const {
-        terrainOpaque: Tm,
-        terrainTransparent: fm,
-        earthSky: hm,
-        skyMeshes: Am,
-        regular: am,
-        thin: xm,
-        line: wm,
-        text: Dm,
-        particles: im
-      } = mm;
-      return Tm + fm + hm + Am + am + xm + wm + Dm + im
+        terrainOpaque: zD,
+        terrainTransparent: wD,
+        earthSky: pD,
+        skyMeshes: sD,
+        regular: KD,
+        thin: rD,
+        line: LD,
+        text: cD,
+        particles: gD
+      } = DD;
+      return zD + wD + pD + sD + KD + rD + LD + cD + gD
     }
 
-    function wm() {
-      const mm = (0, Am.i)();
-      return !0 === (null === mm || void 0 === mm ? void 0 : mm.isCoreRunning) ? function(mm) {
-        const Tm = am(mm);
-        if (null === Tm) return [];
+    function LD() {
+      const DD = (0, sD.i)();
+      return !0 === (null === DD || void 0 === DD ? void 0 : DD.isCoreRunning) ? function(DD) {
+        const zD = KD(DD);
+        if (null === zD) return [];
         const {
-          terrainOpaque: fm,
-          terrainTransparent: hm,
-          terrainPack: Am,
-          earthSky: wm,
-          skyMeshes: Dm,
-          regular: im,
-          thin: Rm,
-          line: pm,
-          text: Em,
-          particles: om
-        } = Tm;
+          terrainOpaque: wD,
+          terrainTransparent: pD,
+          terrainPack: sD,
+          earthSky: LD,
+          skyMeshes: cD,
+          regular: gD,
+          thin: RD,
+          line: AD,
+          text: UD,
+          particles: fD
+        } = zD;
         return [{
           label: "Drawn",
-          value: `${xm(Tm)}`
+          value: `${rD(zD)}`
         }, {
           label: "Terrain",
-          value: `${fm} opaque / ${hm} transparent (${Am} shader pack)`
+          value: `${wD} opaque / ${pD} transparent (${sD} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${im} / ${Rm}`
+          value: `${gD} / ${RD}`
         }, {
           label: "Text / Lines",
-          value: `${Em} / ${pm}`
+          value: `${UD} / ${AD}`
         }, {
           label: "Sky / Particles",
-          value: `${wm+Dm} / ${om}`
+          value: `${LD+cD} / ${fD}`
         }]
-      }(mm.api) : []
+      }(DD.api) : []
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

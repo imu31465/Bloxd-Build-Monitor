@@ -1,132 +1,132 @@
 export const id = 138;
 export const ids = [138];
 export const modules = {
-  6580: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => Km,
-      e: () => Qm,
-      f: () => Vm,
-      i: () => jm
+  6670: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => OD,
+      e: () => JD,
+      f: () => nD,
+      h: () => hD
     });
-    var hm = fm(6586);
-    const Am = 6,
-      am = 3,
-      xm = 1,
-      wm = 2,
-      Dm = 4,
-      im = 8,
-      Rm = 16,
-      pm = 32,
-      Em = 64,
-      om = 128,
-      Om = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
+    var pD = wD(6678);
+    const sD = 6,
+      KD = 3,
+      rD = 1,
+      LD = 2,
+      cD = 4,
+      gD = 8,
+      RD = 16,
+      AD = 32,
+      UD = 64,
+      fD = 128,
+      ID = ["", "bloxdTerrainVertex", "bloxdTerrainSurface", "bloxdTerrainLight", "bloxdLiquidVertex", "bloxdLiquidSurface", "bloxdLiquidLight", "bloxdModelVertex", "bloxdModelSurface", "bloxdModelLight", "bloxdDefaultSurface", "bloxdDefaultLight"];
 
-    function Ym(mm) {
-      if (!mm) return 0;
-      const Tm = Om.indexOf(mm);
-      if (Tm <= 0) throw new Error(`"${mm}" is not a shader pack hook function`);
-      return Tm
+    function BD(DD) {
+      if (!DD) return 0;
+      const zD = ID.indexOf(DD);
+      if (zD <= 0) throw new Error(`"${DD}" is not a shader pack hook function`);
+      return zD
     }
 
-    function qm(mm) {
-      if (0 === mm) return null;
-      const Tm = Om[mm];
-      if (void 0 === Tm) throw new Error(`${mm} is not a shader pack hook function id`);
-      return Tm
+    function GD(DD) {
+      if (0 === DD) return null;
+      const zD = ID[DD];
+      if (void 0 === zD) throw new Error(`${DD} is not a shader pack hook function id`);
+      return zD
     }
 
-    function jm(mm) {
-      const Tm = hm.e.length;
+    function hD(DD) {
+      const zD = pD.c.length;
       return {
-        strict: mm >= Tm,
-        program: hm.e[mm % Tm]
+        strict: DD >= zD,
+        program: pD.c[DD % zD]
       }
     }
 
-    function Vm(mm) {
-      return Number(mm.strict) * hm.e.length + hm.e.indexOf(mm.program)
+    function nD(DD) {
+      return Number(DD.strict) * pD.c.length + pD.c.indexOf(DD.program)
     }
 
-    function Im(mm) {
-      return "" === mm ? [] : mm.split(" ")
+    function MD(DD) {
+      return "" === DD ? [] : DD.split(" ")
     }
 
-    function Km(mm) {
-      const Tm = {
-        variantFlags: new Uint8Array(Am),
-        hooks: new Uint8Array(Am * am),
-        moduleCodes: Array(Am).fill(""),
-        reads: Array(2 * Am).fill("")
+    function OD(DD) {
+      const zD = {
+        variantFlags: new Uint8Array(sD),
+        hooks: new Uint8Array(sD * KD),
+        moduleCodes: Array(sD).fill(""),
+        reads: Array(2 * sD).fill("")
       };
-      for (const fm of mm) {
-        const mm = Vm(fm.key),
-          hm = (mm, Tm) => null === fm.hooks.surface || fm.reads.fragment.includes(mm) ? 0 : Tm;
-        Tm.variantFlags[mm] = (fm.sceneDepth ? xm : 0) | (fm.movesVertices ? wm : 0) | (fm.sunShadow ? Dm : 0) | (fm.airShadow ? im : 0) | (fm.discards ? Rm : 0) | hm("localPosition", pm) | hm("enchantSpeed", Em) | hm("enchantTier", om), Tm.hooks[mm * am] = Ym(fm.hooks.vertex), Tm.hooks[mm * am + 1] = Ym(fm.hooks.surface), Tm.hooks[mm * am + 2] = Ym(fm.hooks.light), Tm.moduleCodes[mm] = fm.moduleCode, Tm.reads[2 * mm] = fm.reads.vertex.join(" "), Tm.reads[2 * mm + 1] = fm.reads.fragment.join(" ")
+      for (const wD of DD) {
+        const DD = nD(wD.key),
+          pD = (DD, zD) => null === wD.hooks.surface || wD.reads.fragment.includes(DD) ? 0 : zD;
+        zD.variantFlags[DD] = (wD.sceneDepth ? rD : 0) | (wD.movesVertices ? LD : 0) | (wD.sunShadow ? cD : 0) | (wD.airShadow ? gD : 0) | (wD.discards ? RD : 0) | pD("localPosition", AD) | pD("enchantSpeed", UD) | pD("enchantTier", fD), zD.hooks[DD * KD] = BD(wD.hooks.vertex), zD.hooks[DD * KD + 1] = BD(wD.hooks.surface), zD.hooks[DD * KD + 2] = BD(wD.hooks.light), zD.moduleCodes[DD] = wD.moduleCode, zD.reads[2 * DD] = wD.reads.vertex.join(" "), zD.reads[2 * DD + 1] = wD.reads.fragment.join(" ")
       }
-      return Tm
+      return zD
     }
 
-    function Qm(mm) {
+    function JD(DD) {
       const {
-        hooks: Tm,
-        moduleCodes: fm,
-        reads: hm
-      } = mm;
-      return Array.from(mm.variantFlags, ((mm, Am) => {
-        const pm = Am * am;
+        hooks: zD,
+        moduleCodes: wD,
+        reads: pD
+      } = DD;
+      return Array.from(DD.variantFlags, ((DD, sD) => {
+        const AD = sD * KD;
         return {
-          key: jm(Am),
+          key: hD(sD),
           hooks: {
-            vertex: qm(Tm[pm]),
-            surface: qm(Tm[pm + 1]),
-            light: qm(Tm[pm + 2])
+            vertex: GD(zD[AD]),
+            surface: GD(zD[AD + 1]),
+            light: GD(zD[AD + 2])
           },
-          moduleCode: fm[Am],
-          sceneDepth: 0 !== (mm & xm),
-          sunShadow: 0 !== (mm & Dm),
-          airShadow: 0 !== (mm & im),
-          movesVertices: 0 !== (mm & wm),
-          discards: 0 !== (mm & Rm),
+          moduleCode: wD[sD],
+          sceneDepth: 0 !== (DD & rD),
+          sunShadow: 0 !== (DD & cD),
+          airShadow: 0 !== (DD & gD),
+          movesVertices: 0 !== (DD & LD),
+          discards: 0 !== (DD & RD),
           reads: {
-            vertex: Im(hm[2 * Am]),
-            fragment: Im(hm[2 * Am + 1])
+            vertex: MD(pD[2 * sD]),
+            fragment: MD(pD[2 * sD + 1])
           }
         }
       }))
     }
   },
-  40776: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => Am,
-      e: () => hm,
-      f: () => Em,
-      g: () => Rm,
-      h: () => qm,
-      i: () => am,
-      k: () => wm,
-      n: () => Dm,
-      q: () => xm,
-      u: () => Ym,
-      v: () => om,
-      x: () => Om
+  40617: (DD, zD, wD) => {
+    wD.d(zD, {
+      A: () => fD,
+      E: () => ID,
+      e: () => sD,
+      i: () => pD,
+      j: () => UD,
+      m: () => RD,
+      n: () => GD,
+      q: () => KD,
+      u: () => LD,
+      v: () => cD,
+      x: () => rD,
+      z: () => BD
     });
-    const hm = 3,
-      Am = 0,
-      am = 1,
-      xm = 2,
-      wm = {
+    const pD = 3,
+      sD = 0,
+      KD = 1,
+      rD = 2,
+      LD = {
         uniform: 3,
-        lE: 4,
+        dU: 4,
         special: 5,
         volume: 6,
         sampler: 7,
         entities: 8,
         entityGrids: 9
       },
-      Dm = 10,
-      im = "BloxdPackInputs",
-      Rm = "bloxdPackInputs",
-      pm = [{
+      cD = 10,
+      gD = "BloxdPackInputs",
+      RD = "bloxdPackInputs",
+      AD = [{
         name: "seconds",
         type: "f32",
         offset: 0
@@ -151,99 +151,99 @@ export const modules = {
         type: "vec3f",
         offset: 64
       }],
-      Em = 80;
+      UD = 80;
 
-    function om() {
-      const mm = pm.map((mm => {
+    function fD() {
+      const DD = AD.map((DD => {
         let {
-          name: Tm,
-          type: fm
-        } = mm;
-        return `    ${Tm}: ${fm},\n`
+          name: zD,
+          type: wD
+        } = DD;
+        return `    ${zD}: ${wD},\n`
       })).join("");
-      return `struct ${im} {\n${mm}}\n@group(${hm}) @binding(${Am}) var<uniform> ${Rm}: ${im};\n`
+      return `struct ${gD} {\n${DD}}\n@group(${pD}) @binding(${sD}) var<uniform> ${RD}: ${gD};\n`
     }
 
-    function Om(mm, Tm) {
-      const fm = new DataView(mm, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, Em),
-        [hm, Am, am, xm, wm, Dm] = pm;
-      fm.setFloat32(hm.offset, Tm.seconds, !0), fm.setUint32(Am.offset, Tm.lit ? 1 : 0, !0);
-      for (let im = 0; im < 3; im++) fm.setInt32(am.offset + 4 * im, Tm.renderOffset[im], !0), fm.setFloat32(xm.offset + 4 * im, Tm.Q0[im], !0), fm.setFloat32(wm.offset + 4 * im, Tm.eyePosition[im], !0), fm.setFloat32(Dm.offset + 4 * im, Tm.shadowDirection[im], !0)
+    function ID(DD, zD) {
+      const wD = new DataView(DD, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0, UD),
+        [pD, sD, KD, rD, LD, cD] = AD;
+      wD.setFloat32(pD.offset, zD.seconds, !0), wD.setUint32(sD.offset, zD.lit ? 1 : 0, !0);
+      for (let gD = 0; gD < 3; gD++) wD.setInt32(KD.offset + 4 * gD, zD.renderOffset[gD], !0), wD.setFloat32(rD.offset + 4 * gD, zD.gDD[gD], !0), wD.setFloat32(LD.offset + 4 * gD, zD.eyePosition[gD], !0), wD.setFloat32(cD.offset + 4 * gD, zD.shadowDirection[gD], !0)
     }
 
-    function Ym(mm) {
-      const Tm = new Uint32Array(Math.max(1, mm.length));
-      return mm.forEach(((mm, fm) => {
+    function BD(DD) {
+      const zD = new Uint32Array(Math.max(1, DD.length));
+      return DD.forEach(((DD, wD) => {
         let {
-          id: hm,
-          rotation: Am
-        } = mm;
-        Tm[fm] = 65535 & hm | (3 & Am) << 16
-      })), Tm
+          id: pD,
+          rotation: sD
+        } = DD;
+        zD[wD] = 65535 & pD | (3 & sD) << 16
+      })), zD
     }
-    const qm = {
+    const GD = {
       off: 0,
       strict: 1,
       allow: 2
     }
   },
-  6586: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => hm,
-      i: () => xm,
-      l: () => wm,
-      p: () => Am,
-      t: () => am
+  6678: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => pD,
+      d: () => rD,
+      f: () => LD,
+      h: () => sD,
+      l: () => KD
     });
-    const hm = ["terrain", "liquid", "model"];
+    const pD = ["terrain", "liquid", "model"];
 
-    function Am() {
-      const mm = [];
-      for (const Tm of [!1, !0])
-        for (const fm of hm) mm.push({
-          strict: Tm,
-          program: fm
+    function sD() {
+      const DD = [];
+      for (const zD of [!1, !0])
+        for (const wD of pD) DD.push({
+          strict: zD,
+          program: wD
         });
-      return mm
+      return DD
     }
 
-    function am(mm) {
-      return `${mm.strict?"strict":"allow"}.${mm.program}`
+    function KD(DD) {
+      return `${DD.strict?"strict":"allow"}.${DD.program}`
     }
 
-    function xm(mm) {
-      return !mm.hooks.vertex && !mm.hooks.surface && !mm.hooks.light
+    function rD(DD) {
+      return !DD.hooks.vertex && !DD.hooks.surface && !DD.hooks.light
     }
 
-    function wm(mm, Tm) {
-      return "off" !== Tm && (null === mm || mm.some((mm => mm.key.strict === ("strict" === Tm) && !xm(mm))))
+    function LD(DD, zD) {
+      return "off" !== zD && (null === DD || DD.some((DD => DD.key.strict === ("strict" === zD) && !rD(DD))))
     }
   },
-  41323: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      SHADER_PACK_INPUTS_BINDING: () => am.b,
-      SHADER_PACK_INPUTS_GROUP: () => am.e,
-      SHADER_PACK_INPUTS_SIZE: () => am.f,
-      SHADER_PACK_INPUTS_VAR: () => am.g,
-      SHADER_PACK_MODES: () => am.h,
-      SHADER_PACK_PROGRAMS: () => hm.e,
-      SHADER_PACK_SCENE_DEPTH_BINDING: () => am.i,
-      SHADER_PACK_SUN_SHADOW_BINDINGS: () => am.k,
-      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => am.n,
-      SHADER_PACK_TEXTURES_BINDING: () => am.q,
-      encodeTextureLayers: () => am.u,
-      flattenVariants: () => Am.b,
-      isVariantOff: () => hm.i,
-      packRunsIn: () => hm.l,
-      shaderPackInputsWgsl: () => am.v,
-      shaderPackVariantKeys: () => hm.p,
-      variantKeyId: () => hm.t,
-      writeShaderPackInputs: () => am.x
+  41183: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      SHADER_PACK_INPUTS_BINDING: () => KD.e,
+      SHADER_PACK_INPUTS_GROUP: () => KD.i,
+      SHADER_PACK_INPUTS_SIZE: () => KD.j,
+      SHADER_PACK_INPUTS_VAR: () => KD.m,
+      SHADER_PACK_MODES: () => KD.n,
+      SHADER_PACK_PROGRAMS: () => pD.c,
+      SHADER_PACK_SCENE_DEPTH_BINDING: () => KD.q,
+      SHADER_PACK_SUN_SHADOW_BINDINGS: () => KD.u,
+      SHADER_PACK_SUN_SHADOW_MASK_BINDING: () => KD.v,
+      SHADER_PACK_TEXTURES_BINDING: () => KD.x,
+      encodeTextureLayers: () => KD.z,
+      flattenVariants: () => sD.b,
+      isVariantOff: () => pD.d,
+      packRunsIn: () => pD.f,
+      shaderPackInputsWgsl: () => KD.A,
+      shaderPackVariantKeys: () => pD.h,
+      variantKeyId: () => pD.l,
+      writeShaderPackInputs: () => KD.E
     });
-    var hm = fm(6586),
-      Am = fm(6580),
-      am = fm(40776)
+    var pD = wD(6678),
+      sD = wD(6670),
+      KD = wD(40617)
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,493 +1,493 @@
 export const id = 95;
 export const ids = [93, 94, 95];
 export const modules = {
-  36705: (mm, Tm, fm) => {
-    function hm(mm, Tm, fm, hm) {
-      return !(fm && !mm.aimable) && (!Tm || mm.gun && "head" !== hm)
+  36591: (DD, zD, wD) => {
+    function pD(DD, zD, wD, pD) {
+      return !(wD && !DD.aimable) && (!zD || DD.gun && "head" !== pD)
     }
 
-    function Am(mm) {
-      return Math.max(.1 * mm, 1)
+    function sD(DD) {
+      return Math.max(.1 * DD, 1)
     }
 
-    function am(mm, Tm) {
-      return !mm && Tm
+    function KD(DD, zD) {
+      return !DD && zD
     }
-    fm.d(Tm, {
-      e: () => am,
-      g: () => Am,
-      h: () => hm
+    wD.d(zD, {
+      d: () => KD,
+      g: () => sD,
+      i: () => pD
     })
   },
-  36708: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => wm,
-      c: () => xm
+  36593: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => LD,
+      h: () => rD
     });
-    let hm = null;
-    const Am = {
+    let pD = null;
+    const sD = {
         crosshairAccuracy: [],
         turnDamageIndicators: []
       },
-      am = {
-        crosshairAccuracy: mm => {
-          const Tm = Am.crosshairAccuracy.at(-1);
-          Tm ? Tm.hook(mm) : hm = mm
+      KD = {
+        crosshairAccuracy: DD => {
+          const zD = sD.crosshairAccuracy.at(-1);
+          zD ? zD.hook(DD) : pD = DD
         },
-        turnDamageIndicators: mm => {
-          var Tm;
-          null === (Tm = Am.turnDamageIndicators.at(-1)) || void 0 === Tm || Tm.hook(mm)
+        turnDamageIndicators: DD => {
+          var zD;
+          null === (zD = sD.turnDamageIndicators.at(-1)) || void 0 === zD || zD.hook(DD)
         }
       };
 
-    function xm(mm, Tm) {
-      const fm = {
-          hook: Tm
+    function rD(DD, zD) {
+      const wD = {
+          hook: zD
         },
-        xm = Am[mm];
-      if (xm.push(fm), "crosshairAccuracy" === mm && null !== hm) {
-        const mm = hm;
-        hm = null, am.crosshairAccuracy(mm)
+        rD = sD[DD];
+      if (rD.push(wD), "crosshairAccuracy" === DD && null !== pD) {
+        const DD = pD;
+        pD = null, KD.crosshairAccuracy(DD)
       }
       return () => {
-        const mm = xm.indexOf(fm); - 1 !== mm && xm.splice(mm, 1)
+        const DD = rD.indexOf(wD); - 1 !== DD && rD.splice(DD, 1)
       }
     }
 
-    function wm() {
-      return am
+    function LD() {
+      return KD
     }
   },
-  36516: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      countDecodesAs: () => pm,
-      decodedAudio: () => Em
+  36432: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      countDecodesAs: () => AD,
+      decodedAudio: () => UD
     });
-    var hm = fm(3269),
-      Am = fm(4800);
-    const am = Am.Howler,
-      xm = new Map;
-    let wm = 0;
-    const Dm = {
+    var pD = wD(3252),
+      sD = wD(4875);
+    const KD = sD.Howler,
+      rD = new Map;
+    let LD = 0;
+    const cD = {
         song: 0,
         sheet: 0
       },
-      im = new WeakMap,
-      Rm = new WeakSet;
+      gD = new WeakMap,
+      RD = new WeakSet;
 
-    function pm(mm, Tm) {
-      return im.set(mm, Tm), mm
+    function AD(DD, zD) {
+      return gD.set(DD, zD), DD
     }
 
-    function Em() {
+    function UD() {
       return {
-        bytes: wm,
-        songsDecoded: Dm.song,
-        sheetsDecoded: Dm.sheet
+        bytes: LD,
+        songsDecoded: cD.song,
+        sheetsDecoded: cD.sheet
       }
     }
 
-    function om(mm) {
-      if (Rm.has(mm)) return;
-      Rm.add(mm);
-      const Tm = 1 === mm.decodeAudioData.length,
-        fm = mm.decodeAudioData.bind(mm);
-      mm.decodeAudioData = (mm, hm, Am) => {
-        const Rm = mm => {
-          const Tm = am._howls.filter((mm => "loaded" !== mm._state));
+    function fD(DD) {
+      if (RD.has(DD)) return;
+      RD.add(DD);
+      const zD = 1 === DD.decodeAudioData.length,
+        wD = DD.decodeAudioData.bind(DD);
+      DD.decodeAudioData = (DD, pD, sD) => {
+        const RD = DD => {
+          const zD = KD._howls.filter((DD => "loaded" !== DD._state));
           try {
-            null === hm || void 0 === hm || hm(mm)
+            null === pD || void 0 === pD || pD(DD)
           } finally {
-            const fm = Tm.find((mm => "loaded" === mm._state));
-            void 0 !== fm && "string" === typeof fm._src && function(mm, Tm, fm) {
-              var hm;
-              wm += fm - (null !== (hm = xm.get(Tm)) && void 0 !== hm ? hm : 0), xm.set(Tm, fm);
-              const Am = im.get(mm);
-              void 0 !== Am && Dm[Am]++
-            }(fm, fm._src, mm.length * mm.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
+            const wD = zD.find((DD => "loaded" === DD._state));
+            void 0 !== wD && "string" === typeof wD._src && function(DD, zD, wD) {
+              var pD;
+              LD += wD - (null !== (pD = rD.get(zD)) && void 0 !== pD ? pD : 0), rD.set(zD, wD);
+              const sD = gD.get(DD);
+              void 0 !== sD && cD[sD]++
+            }(wD, wD._src, DD.length * DD.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-          return mm
+          return DD
         };
-        if (!Tm) return fm(mm, Rm, Am);
-        const pm = fm(mm).then(Rm);
-        return pm.catch((mm => {
-          null === Am || void 0 === Am || Am(mm)
-        })), pm
+        if (!zD) return wD(DD, RD, sD);
+        const AD = wD(DD).then(RD);
+        return AD.catch((DD => {
+          null === sD || void 0 === sD || sD(DD)
+        })), AD
       }
-    }(0, hm.g)(Em);
-    const Om = Am.Howl.prototype,
-      Ym = Om.init;
-    Om.init = function(mm) {
-      return Am.Howler.volume(), am.ctx && om(am.ctx), Ym.call(this, mm)
+    }(0, pD.f)(UD);
+    const ID = sD.Howl.prototype,
+      BD = ID.init;
+    ID.init = function(DD) {
+      return sD.Howler.volume(), KD.ctx && fD(KD.ctx), BD.call(this, DD)
     };
-    const qm = Om.unload;
-    Om.unload = function() {
-      const mm = this._src,
-        Tm = qm.call(this);
-      if ("string" !== typeof mm) return Tm;
-      const fm = xm.get(mm);
-      return void 0 !== fm && function(mm) {
-        return !am._howls.some((Tm => Tm._src === mm || "string" === typeof Tm._src && mm.indexOf(Tm._src) >= 0))
-      }(mm) && (xm.delete(mm), wm -= fm), Tm
+    const GD = ID.unload;
+    ID.unload = function() {
+      const DD = this._src,
+        zD = GD.call(this);
+      if ("string" !== typeof DD) return zD;
+      const wD = rD.get(DD);
+      return void 0 !== wD && function(DD) {
+        return !KD._howls.some((zD => zD._src === DD || "string" === typeof zD._src && DD.indexOf(zD._src) >= 0))
+      }(DD) && (rD.delete(DD), LD -= wD), zD
     }
   },
-  36871: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => Dm
+  36742: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => cD
     });
-    var hm = fm(23),
-      Am = fm(36846),
-      am = fm(2518),
-      xm = fm(36877),
-      wm = fm(4800);
-    const Dm = function(mm) {
-      const Tm = new Set;
-      return fm => {
-        var hm;
-        const am = null === (hm = [...Am.e].find((mm => {
-          let [, Tm] = mm;
-          return Tm.includes(fm)
-        }))) || void 0 === hm ? void 0 : hm[0];
-        if (void 0 === am || Tm.has(am)) return;
-        Tm.add(am);
-        ! function(mm, Tm) {
+    var pD = wD(20),
+      sD = wD(36719),
+      KD = wD(2534),
+      rD = wD(36744),
+      LD = wD(4875);
+    const cD = function(DD) {
+      const zD = new Set;
+      return wD => {
+        var pD;
+        const KD = null === (pD = [...sD.d].find((DD => {
+          let [, zD] = DD;
+          return zD.includes(wD)
+        }))) || void 0 === pD ? void 0 : pD[0];
+        if (void 0 === KD || zD.has(KD)) return;
+        zD.add(KD);
+        ! function(DD, zD) {
           let {
-            afterJoin: fm,
-            joining: hm,
-            idle: Am,
-            fetchFile: am
-          } = Tm;
-          const xm = Tm => {
-            Tm >= mm.length || fm((() => {
-              Am((() => {
-                hm() ? xm(Tm) : am(mm[Tm]).catch((() => {})).finally((() => {
-                  xm(Tm + 1)
+            afterJoin: wD,
+            joining: pD,
+            idle: sD,
+            fetchFile: KD
+          } = zD;
+          const rD = zD => {
+            zD >= DD.length || wD((() => {
+              sD((() => {
+                pD() ? rD(zD) : KD(DD[zD]).catch((() => {})).finally((() => {
+                  rD(zD + 1)
                 }))
               }))
             }))
           };
-          xm(0)
-        }(Am.e.get(am).filter((mm => mm !== fm)).flatMap((Tm => {
-          const fm = (hm = (0, Am.h)(Tm).src, am = mm.canPlay, hm.find((mm => {
-            var Tm;
-            const fm = null === (Tm = /\.([^.]+)$/.exec(mm.split("?", 1)[0])) || void 0 === Tm ? void 0 : Tm[1];
-            return void 0 !== fm && am(fm.toLowerCase())
+          rD(0)
+        }(sD.d.get(KD).filter((DD => DD !== wD)).flatMap((zD => {
+          const wD = (pD = (0, sD.i)(zD).src, KD = DD.canPlay, pD.find((DD => {
+            var zD;
+            const wD = null === (zD = /\.([^.]+)$/.exec(DD.split("?", 1)[0])) || void 0 === zD ? void 0 : zD[1];
+            return void 0 !== wD && KD(wD.toLowerCase())
           })));
-          var hm, am;
-          return void 0 === fm ? [] : [fm]
-        })), mm)
+          var pD, KD;
+          return void 0 === wD ? [] : [wD]
+        })), DD)
       }
     }({
-      afterJoin: mm => {
-        (0, am.e)(hm.c.get("gameState"), mm)
+      afterJoin: DD => {
+        (0, KD.d)(pD.e.get("gameState"), DD)
       },
-      joining: () => (0, am.g)(hm.c.get("gameState")),
-      idle: fm(269).e,
-      fetchFile: xm.d,
-      canPlay: mm => !!wm.Howler.codecs(mm)
+      joining: () => (0, KD.g)(pD.e.get("gameState")),
+      idle: wD(262).b,
+      fetchFile: rD.e,
+      canPlay: DD => !!LD.Howler.codecs(DD)
     })
   },
-  36877: (mm, Tm, fm) => {
-    async function hm(mm) {
-      const Tm = await fetch(mm, {
+  36744: (DD, zD, wD) => {
+    async function pD(DD) {
+      const zD = await fetch(DD, {
         priority: "low"
       });
-      if (!Tm.ok) throw new Error(`Fetching ${mm} failed: HTTP ${Tm.status}`);
-      const fm = Tm.body.getReader();
-      for (; !(await fm.read()).done;);
+      if (!zD.ok) throw new Error(`Fetching ${DD} failed: HTTP ${zD.status}`);
+      const wD = zD.body.getReader();
+      for (; !(await wD.read()).done;);
     }
-    fm.d(Tm, {
-      d: () => hm
+    wD.d(zD, {
+      e: () => pD
     })
   },
-  36853: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => Am
+  36723: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => sD
     });
-    const hm = ["end", "stop", "playerror"];
+    const pD = ["end", "stop", "playerror"];
 
-    function Am(mm, Tm) {
-      const fm = () => {
-        if (function(mm) {
-            return "loaded" === mm.state() && !mm.playing() && !mm._playLock
-          }(mm)) {
-          for (const Tm of hm) mm.off(Tm, fm);
-          mm.unload(), Tm()
+    function sD(DD, zD) {
+      const wD = () => {
+        if (function(DD) {
+            return "loaded" === DD.state() && !DD.playing() && !DD._playLock
+          }(DD)) {
+          for (const zD of pD) DD.off(zD, wD);
+          DD.unload(), zD()
         }
       };
-      for (const Am of hm) mm.on(Am, fm);
-      fm()
+      for (const sD of pD) DD.on(sD, wD);
+      wD()
     }
   },
-  4800: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      Howl: () => Am.Howl,
-      Howler: () => Am.Howler,
-      musicOutput: () => qm,
-      readyAudioContext: () => jm
+  4875: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      Howl: () => sD.Howl,
+      Howler: () => sD.Howler,
+      musicOutput: () => GD,
+      readyAudioContext: () => hD
     });
-    var hm, Am = fm(4806),
-      am = fm(3443),
-      xm = fm(4588);
-    const wm = Am.Howler;
+    var pD, sD = wD(4877),
+      KD = wD(3444),
+      rD = wD(4682);
+    const LD = sD.Howler;
 
-    function Dm() {
-      var mm, Tm;
-      if (wm.ctx || !wm.usingWebAudio || "undefined" === typeof AudioContext || !(0, xm.k)()) return;
-      const fm = navigator.audioSession;
-      let hm;
-      "auto" === (null === fm || void 0 === fm ? void 0 : fm.type) && (fm.type = "ambient");
+    function cD() {
+      var DD, zD;
+      if (LD.ctx || !LD.usingWebAudio || "undefined" === typeof AudioContext || !(0, rD.l)()) return;
+      const wD = navigator.audioSession;
+      let pD;
+      "auto" === (null === wD || void 0 === wD ? void 0 : wD.type) && (wD.type = "ambient");
       try {
-        hm = new AudioContext({
+        pD = new AudioContext({
           sampleRate: 44100
         })
       } catch {
         return
       }
-      const Am = hm.createGain();
-      Am.gain.setValueAtTime(wm._muted ? 0 : null !== (mm = wm._volume) && void 0 !== mm ? mm : 1, hm.currentTime), Am.connect(hm.destination), wm.ctx = hm, wm.masterGain = Am, null === (Tm = wm._setup) || void 0 === Tm || Tm.call(wm)
+      const sD = pD.createGain();
+      sD.gain.setValueAtTime(LD._muted ? 0 : null !== (DD = LD._volume) && void 0 !== DD ? DD : 1, pD.currentTime), sD.connect(pD.destination), LD.ctx = pD, LD.masterGain = sD, null === (zD = LD._setup) || void 0 === zD || zD.call(LD)
     }
-    wm._mobileUnloaded = !0;
-    const im = wm.volume.bind(Am.Howler);
-    wm.volume = function() {
-      return Dm(), im(...arguments)
+    LD._mobileUnloaded = !0;
+    const gD = LD.volume.bind(sD.Howler);
+    LD.volume = function() {
+      return cD(), gD(...arguments)
     };
-    const Rm = wm.mute.bind(Am.Howler);
-    wm.mute = mm => (Dm(), Rm(mm));
-    const pm = Am.Howl.prototype,
-      Em = pm.init;
+    const RD = LD.mute.bind(sD.Howler);
+    LD.mute = DD => (cD(), RD(DD));
+    const AD = sD.Howl.prototype,
+      UD = AD.init;
 
-    function om() {
-      for (; wm._html5AudioPool.length < wm.html5PoolSize;) {
-        const mm = new Audio;
-        mm._unlocked = !0, wm._releaseHtml5Audio(mm)
+    function fD() {
+      for (; LD._html5AudioPool.length < LD.html5PoolSize;) {
+        const DD = new Audio;
+        DD._unlocked = !0, LD._releaseHtml5Audio(DD)
       }
-      for (const Tm of wm._howls)
-        if (!Tm._webAudio)
-          for (const fm of Tm._getSoundIds()) {
-            var mm;
-            const hm = null === (mm = Tm._soundById(fm)) || void 0 === mm ? void 0 : mm._node;
-            hm && !hm._unlocked && (hm._unlocked = !0, hm.load())
+      for (const zD of LD._howls)
+        if (!zD._webAudio)
+          for (const wD of zD._getSoundIds()) {
+            var DD;
+            const pD = null === (DD = zD._soundById(wD)) || void 0 === DD ? void 0 : DD._node;
+            pD && !pD._unlocked && (pD._unlocked = !0, pD.load())
           }
     }
-    pm.init = function(mm) {
-      return Dm(), Em.call(this, mm)
-    }, (0, xm.k)() && (wm._unlockAudio = () => {
-      const mm = wm.ctx;
-      if (wm._audioUnlocked || !mm) return;
-      wm.autoUnlock = !1;
-      const Tm = mm.createBuffer(1, 1, 22050);
-      wm._scratchBuffer = Tm;
-      const fm = new AbortController;
-      let hm = "afterPaint";
-      const Am = () => {
-          var hm;
-          if (wm._audioUnlocked) return;
-          null === (hm = wm._autoResume) || void 0 === hm || hm.call(wm);
-          const Am = mm.createBufferSource();
-          Am.buffer = Tm, Am.connect(mm.destination), Am.start(0), mm.resume().catch((() => {})), Am.onended = () => {
-            Am.disconnect(0), wm._audioUnlocked = !0, fm.abort();
-            for (const mm of wm._howls) mm._emit("unlock")
+    AD.init = function(DD) {
+      return cD(), UD.call(this, DD)
+    }, (0, rD.l)() && (LD._unlockAudio = () => {
+      const DD = LD.ctx;
+      if (LD._audioUnlocked || !DD) return;
+      LD.autoUnlock = !1;
+      const zD = DD.createBuffer(1, 1, 22050);
+      LD._scratchBuffer = zD;
+      const wD = new AbortController;
+      let pD = "afterPaint";
+      const sD = () => {
+          var pD;
+          if (LD._audioUnlocked) return;
+          null === (pD = LD._autoResume) || void 0 === pD || pD.call(LD);
+          const sD = DD.createBufferSource();
+          sD.buffer = zD, sD.connect(DD.destination), sD.start(0), DD.resume().catch((() => {})), sD.onended = () => {
+            sD.disconnect(0), LD._audioUnlocked = !0, wD.abort();
+            for (const DD of LD._howls) DD._emit("unlock")
           }
         },
-        Dm = () => {
-          om(), Am()
+        cD = () => {
+          fD(), sD()
         },
-        im = Tm => {
-          if (om(), "inTap" === hm) {
-            if ("running" === mm.state) return;
-            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), Am()
-          } else "afterPaint" === hm && (hm = "queued", (0, am.c)(Tm.timeStamp, (() => {
-            hm = "inTap", Am()
+        gD = zD => {
+          if (fD(), "inTap" === pD) {
+            if ("running" === DD.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), sD()
+          } else "afterPaint" === pD && (pD = "queued", (0, KD.d)(zD.timeStamp, (() => {
+            pD = "inTap", sD()
           })))
         };
-      for (const am of ["touchstart", "touchend"]) document.addEventListener(am, Dm, {
+      for (const KD of ["touchstart", "touchend"]) document.addEventListener(KD, cD, {
         capture: !0,
-        signal: fm.signal
+        signal: wD.signal
       });
-      for (const am of xm.c) document.addEventListener(am, im, {
+      for (const KD of rD.d) document.addEventListener(KD, gD, {
         capture: !0,
-        signal: fm.signal
+        signal: wD.signal
       })
     });
-    let Om = 0;
-    const Ym = null === (hm = wm._autoSuspend) || void 0 === hm ? void 0 : hm.bind(Am.Howler);
+    let ID = 0;
+    const BD = null === (pD = LD._autoSuspend) || void 0 === pD ? void 0 : pD.bind(sD.Howler);
 
-    function qm() {
-      jm();
+    function GD() {
+      hD();
       const {
-        ctx: mm,
-        masterGain: Tm
-      } = wm;
-      return mm && Tm ? {
-        ctx: mm,
-        destination: Tm,
-        holdAwake: mm => {
-          var Tm, fm;
-          (Om += mm ? 1 : -1, mm) ? null === (Tm = wm._autoResume) || void 0 === Tm || Tm.call(wm): null === (fm = wm._autoSuspend) || void 0 === fm || fm.call(wm)
+        ctx: DD,
+        masterGain: zD
+      } = LD;
+      return DD && zD ? {
+        ctx: DD,
+        destination: zD,
+        holdAwake: DD => {
+          var zD, wD;
+          (ID += DD ? 1 : -1, DD) ? null === (zD = LD._autoResume) || void 0 === zD || zD.call(LD): null === (wD = LD._autoSuspend) || void 0 === wD || wD.call(LD)
         },
         wake: () => {
-          var Tm;
-          "running" !== mm.state && (null === (Tm = wm._autoResume) || void 0 === Tm || Tm.call(wm), mm.resume().catch((() => {})))
+          var zD;
+          "running" !== DD.state && (null === (zD = LD._autoResume) || void 0 === zD || zD.call(LD), DD.resume().catch((() => {})))
         }
       } : null
     }
 
-    function jm() {
-      var mm;
-      (wm.volume(), wm.ctx && wm.autoUnlock) && (null === (mm = wm._unlockAudio) || void 0 === mm || mm.call(wm))
+    function hD() {
+      var DD;
+      (LD.volume(), LD.ctx && LD.autoUnlock) && (null === (DD = LD._unlockAudio) || void 0 === DD || DD.call(LD))
     }
-    Ym && (wm._autoSuspend = () => Om > 0 ? Am.Howler : Ym())
+    BD && (LD._autoSuspend = () => ID > 0 ? sD.Howler : BD())
   },
-  36868: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => hm
+  36738: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => pD
     });
-    const hm = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
+    const pD = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
   },
-  36863: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => xm,
-      f: () => Am,
-      h: () => hm
+  36733: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => rD,
+      g: () => sD,
+      j: () => pD
     });
 
-    function hm(mm) {
-      return mm.replace(/[_\-\s]*\d+$/, "") || mm
+    function pD(DD) {
+      return DD.replace(/[_\-\s]*\d+$/, "") || DD
     }
 
-    function Am(mm, Tm, fm) {
-      return fm <= 0 ? 0 : mm * fm / Math.max(Tm, fm)
+    function sD(DD, zD, wD) {
+      return wD <= 0 ? 0 : DD * wD / Math.max(zD, wD)
     }
 
-    function am(mm, Tm) {
-      const fm = mm.getDurationMs();
-      return fm > 0 ? mm.loudness * Math.max(0, 1 - (Tm - mm.startMs) / fm) : 0
+    function KD(DD, zD) {
+      const wD = DD.getDurationMs();
+      return wD > 0 ? DD.loudness * Math.max(0, 1 - (zD - DD.startMs) / wD) : 0
     }
-    class xm {
+    class rD {
       constructor() {
-        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
-          Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
-        this.maxVoices = mm, this.maxPerGroup = Tm, this.voices = []
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = DD, this.maxPerGroup = zD, this.voices = []
       }
-      admit(mm) {
-        if (this.voices = this.voices.filter((mm => mm.isAlive())), null !== mm.group) {
-          const Tm = this.voices.filter((Tm => Tm.group === mm.group));
-          if (Tm.length >= this.maxPerGroup && !this.dropLeastWorth(Tm, mm)) return !1
+      admit(DD) {
+        if (this.voices = this.voices.filter((DD => DD.isAlive())), null !== DD.group) {
+          const zD = this.voices.filter((zD => zD.group === DD.group));
+          if (zD.length >= this.maxPerGroup && !this.dropLeastWorth(zD, DD)) return !1
         }
-        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, mm)) && (this.voices.push(mm), !0)
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, DD)) && (this.voices.push(DD), !0)
       }
-      dropLeastWorth(mm, Tm) {
-        let fm = null,
-          hm = 1 / 0;
-        for (const Am of mm) {
-          if (!Am.canStop()) continue;
-          const mm = am(Am, Tm.startMs);
-          mm < hm && (fm = Am, hm = mm)
+      dropLeastWorth(DD, zD) {
+        let wD = null,
+          pD = 1 / 0;
+        for (const sD of DD) {
+          if (!sD.canStop()) continue;
+          const DD = KD(sD, zD.startMs);
+          DD < pD && (wD = sD, pD = DD)
         }
-        return !(!fm || Tm.loudness < hm) && (this.voices.splice(this.voices.indexOf(fm), 1), fm.stop(), !0)
+        return !(!wD || zD.loudness < pD) && (this.voices.splice(this.voices.indexOf(wD), 1), wD.stop(), !0)
       }
     }
   },
-  36895: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => am,
-      g: () => xm,
-      k: () => hm
+  36751: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => KD,
+      f: () => rD,
+      g: () => pD
     });
-    class hm {
-      constructor(mm) {
-        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = mm
+    class pD {
+      constructor(DD) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = DD
       }
-      setMultiplierType(mm, Tm) {
-        var fm;
-        this.multipliers[mm] = Tm, null === (fm = this._onUpdate) || void 0 === fm || fm.call(this)
+      setMultiplierType(DD, zD) {
+        var wD;
+        this.multipliers[DD] = zD, null === (wD = this._onUpdate) || void 0 === wD || wD.call(this)
       }
-      removeMultiplier(mm) {
-        var Tm;
-        delete this.multipliers[mm], null === (Tm = this._onUpdate) || void 0 === Tm || Tm.call(this)
+      removeMultiplier(DD) {
+        var zD;
+        delete this.multipliers[DD], null === (zD = this._onUpdate) || void 0 === zD || zD.call(this)
       }
-      getMultiplierType(mm) {
-        return this.multipliers[mm]
+      getMultiplierType(DD) {
+        return this.multipliers[DD]
       }
       getTotalMultipliedVal() {
-        let mm = 1;
-        for (const Tm in this.multipliers) mm *= this.multipliers[Tm];
-        return mm
+        let DD = 1;
+        for (const zD in this.multipliers) DD *= this.multipliers[zD];
+        return DD
       }
     }
-    class Am {
+    class sD {
       constructor() {
-        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = mm
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = DD
       }
-      setBooleanType(mm, Tm) {
-        const fm = this._getTotalBooleanVal();
-        this.booleans[mm] = !!Tm;
-        const hm = this.getTotalBooleanVal();
-        var Am;
-        hm !== fm && (null === (Am = this._onUpdate) || void 0 === Am || Am.call(this, hm, this.booleans));
-        return hm
+      setBooleanType(DD, zD) {
+        const wD = this._getTotalBooleanVal();
+        this.booleans[DD] = !!zD;
+        const pD = this.getTotalBooleanVal();
+        var sD;
+        pD !== wD && (null === (sD = this._onUpdate) || void 0 === sD || sD.call(this, pD, this.booleans));
+        return pD
       }
-      removeBoolean(mm) {
-        const Tm = this._getTotalBooleanVal();
-        delete this.booleans[mm];
-        const fm = this._getTotalBooleanVal();
-        var hm;
-        null !== fm && fm !== Tm && (null === (hm = this._onUpdate) || void 0 === hm || hm.call(this, fm, this.booleans));
-        return null !== fm && void 0 !== fm && fm
+      removeBoolean(DD) {
+        const zD = this._getTotalBooleanVal();
+        delete this.booleans[DD];
+        const wD = this._getTotalBooleanVal();
+        var pD;
+        null !== wD && wD !== zD && (null === (pD = this._onUpdate) || void 0 === pD || pD.call(this, wD, this.booleans));
+        return null !== wD && void 0 !== wD && wD
       }
-      getBooleanType(mm) {
-        return this.booleans[mm]
+      getBooleanType(DD) {
+        return this.booleans[DD]
       }
       getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
       forceUpdate() {
-        var mm;
-        null === (mm = this._onUpdate) || void 0 === mm || mm.call(this, this.getTotalBooleanVal(), this.booleans)
+        var DD;
+        null === (DD = this._onUpdate) || void 0 === DD || DD.call(this, this.getTotalBooleanVal(), this.booleans)
       }
       _getTotalBooleanVal() {
         throw new Error("This is an abstract class, use BooleanAndCombinator")
       }
     }
-    class am extends Am {
+    class KD extends sD {
       getTotalBooleanVal() {
-        const mm = this._getTotalBooleanVal();
-        if (null === mm) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return mm
+        const DD = this._getTotalBooleanVal();
+        if (null === DD) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return DD
       }
       _getTotalBooleanVal() {
-        let mm = !1,
-          Tm = !0;
-        for (const fm in this.booleans) mm = !0, Tm &&= this.booleans[fm];
-        return mm ? Tm : null
+        let DD = !1,
+          zD = !0;
+        for (const wD in this.booleans) DD = !0, zD &&= this.booleans[wD];
+        return DD ? zD : null
       }
     }
-    class xm extends Am {
+    class rD extends sD {
       getTotalBooleanVal() {
-        const mm = this._getTotalBooleanVal();
-        if (null === mm) throw new Error("Should not be gotten before at least 1 type has been initialised");
-        return mm
+        const DD = this._getTotalBooleanVal();
+        if (null === DD) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return DD
       }
       _getTotalBooleanVal() {
-        let mm = !1,
-          Tm = !1;
-        for (const fm in this.booleans) mm = !0, Tm ||= this.booleans[fm];
-        return mm ? Tm : null
+        let DD = !1,
+          zD = !1;
+        for (const wD in this.booleans) DD = !0, zD ||= this.booleans[wD];
+        return DD ? zD : null
       }
     }
   },
-  36886: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => am,
-      e: () => hm,
-      f: () => Am
+  36749: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => KD,
+      f: () => pD,
+      g: () => sD
     });
-    const hm = 15,
-      Am = 3,
-      am = 30
+    const pD = 15,
+      sD = 3,
+      KD = 30
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

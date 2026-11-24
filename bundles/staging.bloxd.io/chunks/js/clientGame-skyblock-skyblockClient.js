@@ -1,597 +1,597 @@
 export const id = 25;
 export const ids = [25];
 export const modules = {
-  36681: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => om,
-      e: () => Om,
-      f: () => Em,
-      i: () => pm
+  36577: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => fD,
+      g: () => ID,
+      i: () => UD,
+      l: () => AD
     });
-    var hm = fm(34283),
-      Am = fm(36686),
-      am = fm(36689),
-      xm = fm(8654),
-      wm = fm(1449),
-      Dm = fm(59),
-      im = fm(77),
-      Rm = fm(1135);
+    var pD = wD(34206),
+      sD = wD(36580),
+      KD = wD(36586),
+      rD = wD(8726),
+      LD = wD(1442),
+      cD = wD(58),
+      gD = wD(79),
+      RD = wD(1096);
 
-    function pm() {
-      var mm;
-      return (0, wm.i)(Am.e, (0, Am.p)()), (0, Rm.jsx)(Rm.Fragment, {
-        children: null === (mm = (0, Am.p)()) || void 0 === mm ? void 0 : mm.content
+    function AD() {
+      var DD;
+      return (0, LD.k)(sD.c, (0, sD.p)()), (0, RD.jsx)(RD.Fragment, {
+        children: null === (DD = (0, sD.p)()) || void 0 === DD ? void 0 : DD.content
       })
     }
 
-    function Em(mm) {
-      var Tm;
+    function UD(DD) {
+      var zD;
       let {
-        show: fm
-      } = mm;
-      (0, wm.i)(Am.e, (0, Am.p)());
-      const im = null === (Tm = (0, Am.p)()) || void 0 === Tm ? void 0 : Tm.menu;
-      return (0, Dm.useEffect)((() => {
-        var mm;
-        fm || (null === im || void 0 === im || null === (mm = im.onClose) || void 0 === mm || mm.call(im), (0, am.m)())
-      }), [fm, im]), (0, Dm.useEffect)((() => fm ? (0, xm.h)(am.u, am.d) : void 0), [fm]), (0, Rm.jsx)(hm.c, {
-        showing: fm,
+        show: wD
+      } = DD;
+      (0, LD.k)(sD.c, (0, sD.p)());
+      const gD = null === (zD = (0, sD.p)()) || void 0 === zD ? void 0 : zD.menu;
+      return (0, cD.useEffect)((() => {
+        var DD;
+        wD || (null === gD || void 0 === gD || null === (DD = gD.onClose) || void 0 === DD || DD.call(gD), (0, KD.q)())
+      }), [wD, gD]), (0, cD.useEffect)((() => wD ? (0, rD.g)(KD.y, KD.h) : void 0), [wD]), (0, RD.jsx)(pD.d, {
+        showing: wD,
         globallyUniqueKey: "clientGameMenu",
-        children: null === im || void 0 === im ? void 0 : im.content
+        children: null === gD || void 0 === gD ? void 0 : gD.content
       })
     }
 
-    function om(mm) {
+    function fD(DD) {
       let {
-        placement: Tm = "bottom"
-      } = mm;
-      return (0, Rm.jsx)("div", {
-        id: `clientGameHud-${Tm}`,
+        placement: zD = "bottom"
+      } = DD;
+      return (0, RD.jsx)("div", {
+        id: `clientGameHud-${zD}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function Om(mm) {
+    function ID(DD) {
       let {
-        children: Tm,
-        placement: fm = "bottom"
-      } = mm;
-      const [hm, Am] = (0, Dm.useState)(null);
-      return (0, Dm.useEffect)((() => {
-        Am(document.getElementById(`clientGameHud-${fm}`))
-      }), [fm]), hm ? (0, im.createPortal)(Tm, hm) : null
+        children: zD,
+        placement: wD = "bottom"
+      } = DD;
+      const [pD, sD] = (0, cD.useState)(null);
+      return (0, cD.useEffect)((() => {
+        sD(document.getElementById(`clientGameHud-${wD}`))
+      }), [wD]), pD ? (0, gD.createPortal)(zD, pD) : null
     }
   },
-  4773: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => qm,
-      e: () => jm
+  4849: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => GD,
+      i: () => hD
     });
-    var hm = fm(1080),
-      Am = fm.n(hm),
-      am = fm(59),
-      xm = fm(1208),
-      wm = fm(4782),
-      Dm = fm(1884),
-      im = fm(2391),
-      Rm = fm(4784),
-      pm = fm(1135);
-    const Em = new WeakMap;
-    let om = 0;
+    var pD = wD(1044),
+      sD = wD.n(pD),
+      KD = wD(58),
+      rD = wD(1200),
+      LD = wD(4852),
+      cD = wD(1895),
+      gD = wD(2402),
+      RD = wD(4859),
+      AD = wD(1096);
+    const UD = new WeakMap;
+    let fD = 0;
 
-    function Om(mm) {
-      let Tm = Em.get(mm);
-      return void 0 === Tm && (Tm = om++, Em.set(mm, Tm)), Tm
+    function ID(DD) {
+      let zD = UD.get(DD);
+      return void 0 === zD && (zD = fD++, UD.set(DD, zD)), zD
     }
 
-    function Ym(mm) {
+    function BD(DD) {
       let {
-        piece: Tm
-      } = mm;
-      return "space" === Tm.kind ? (0, pm.jsx)(pm.Fragment, {
-        children: Tm.text
-      }) : (0, pm.jsx)("span", {
+        piece: zD
+      } = DD;
+      return "space" === zD.kind ? (0, AD.jsx)(AD.Fragment, {
+        children: zD.text
+      }) : (0, AD.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${Tm.delayMs}ms`
+          "--word-delay": `${zD.delayMs}ms`
         },
-        children: (0, pm.jsx)(wm.e, {
-          text: "icon" === Tm.kind ? `[[${Tm.icon}]]` : Tm.text
+        children: (0, AD.jsx)(LD.d, {
+          text: "icon" === zD.kind ? `[[${zD.icon}]]` : zD.text
         })
       })
     }
 
-    function qm(mm) {
+    function GD(DD) {
       let {
-        display: Tm
-      } = mm;
+        display: zD
+      } = DD;
       const {
-        selectedLanguage: fm
-      } = (0, xm.A)(), hm = (0, am.useMemo)((() => (0, Rm.c)((0, Rm.f)(Tm).plan.pieces)), [Tm, fm.code]);
-      return (0, pm.jsxs)("div", {
-        className: Am()("Dialogue", {
-          DialogueAnimateIn: !1 !== Tm.animateIn
+        selectedLanguage: wD
+      } = (0, rD.E)(), pD = (0, KD.useMemo)((() => (0, RD.d)((0, RD.g)(zD).plan.pieces)), [zD, wD.code]);
+      return (0, AD.jsxs)("div", {
+        className: sD()("Dialogue", {
+          DialogueAnimateIn: !1 !== zD.animateIn
         }),
-        children: [Tm.speakerName && (0, pm.jsx)(Dm.b, {
-          text: Tm.speakerName,
+        children: [zD.speakerName && (0, AD.jsx)(cD.e, {
+          text: zD.speakerName,
           className: "DialogueSpeaker"
-        }), (0, pm.jsx)("p", {
+        }), (0, AD.jsx)("p", {
           className: "DialogueLine",
-          children: hm.map(((mm, Tm) => 1 === mm.length && "space" === mm[0].kind ? mm[0].text : (0, pm.jsx)("span", {
+          children: pD.map(((DD, zD) => 1 === DD.length && "space" === DD[0].kind ? DD[0].text : (0, AD.jsx)("span", {
             className: "DialogueGlue",
-            children: mm.map(((mm, Tm) => (0, pm.jsx)(Ym, {
-              piece: mm
-            }, Tm)))
-          }, Tm)))
+            children: DD.map(((DD, zD) => (0, AD.jsx)(BD, {
+              piece: DD
+            }, zD)))
+          }, zD)))
         })]
       })
     }
-    const jm = (0, am.memo)((function() {
-      const mm = (0, im.g)("dialogue");
-      return (0, pm.jsx)("div", {
+    const hD = (0, KD.memo)((function() {
+      const DD = (0, gD.h)("dialogue");
+      return (0, AD.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: mm && (0, pm.jsx)(qm, {
-          display: mm
-        }, Om(mm))
+        children: DD && (0, AD.jsx)(GD, {
+          display: DD
+        }, ID(DD))
       })
     }))
   },
-  4782: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => wm
+  4852: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => LD
     });
-    var hm = fm(59),
-      Am = fm(339),
-      am = fm(1893),
-      xm = fm(1135);
+    var pD = wD(58),
+      sD = wD(338),
+      KD = wD(1915),
+      rD = wD(1096);
 
-    function wm(mm) {
+    function LD(DD) {
       let {
-        text: Tm
-      } = mm;
-      const fm = [];
-      let wm = "";
-      return (0, Am.Zb)(Tm).forEach(((mm, Tm) => {
-        if ("string" === typeof mm || !(0, am.f)(mm.icon)) return void(wm += "string" === typeof mm ? mm : mm.icon);
-        const Am = Math.max(0, wm.trimEnd().search(/\S{1,12}$/));
-        fm.push((0, xm.jsxs)(hm.Fragment, {
-          children: [wm.slice(0, Am), (0, xm.jsxs)("span", {
+        text: zD
+      } = DD;
+      const wD = [];
+      let LD = "";
+      return (0, sD.Vb)(zD).forEach(((DD, zD) => {
+        if ("string" === typeof DD || !(0, KD.f)(DD.icon)) return void(LD += "string" === typeof DD ? DD : DD.icon);
+        const sD = Math.max(0, LD.trimEnd().search(/\S{1,12}$/));
+        wD.push((0, rD.jsxs)(pD.Fragment, {
+          children: [LD.slice(0, sD), (0, rD.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [wm.slice(Am), (0, xm.jsx)("span", {
+            children: [LD.slice(sD), (0, rD.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": mm.icon,
-              children: (0, xm.jsx)(am.d, {
-                itemName: mm.icon,
+              "aria-label": DD.icon,
+              children: (0, rD.jsx)(KD.d, {
+                itemName: DD.icon,
                 amount: 0
               })
             })]
           })]
-        }, Tm)), wm = ""
-      })), fm.push(wm), (0, xm.jsx)(xm.Fragment, {
-        children: fm
+        }, zD)), LD = ""
+      })), wD.push(LD), (0, rD.jsx)(rD.Fragment, {
+        children: wD
       })
     }
   },
-  34283: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => am
+  34206: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => KD
     });
-    var hm = fm(4477),
-      Am = fm(4481);
+    var pD = wD(4555),
+      sD = wD(4562);
 
-    function am(mm) {
+    function KD(DD) {
       let {
-        children: Tm,
-        showing: fm,
-        globallyUniqueKey: am,
-        alwaysMountChildren: xm = !1,
-        doGameplayStartStopOnShow: wm = !0,
-        keepsMovement: Dm = !1
-      } = mm;
-      return (0, Am.d)(!0, fm, am, Dm), (0, hm.c)(wm, fm), fm || xm ? Tm : null
+        children: zD,
+        showing: wD,
+        globallyUniqueKey: KD,
+        alwaysMountChildren: rD = !1,
+        doGameplayStartStopOnShow: LD = !0,
+        keepsMovement: cD = !1
+      } = DD;
+      return (0, sD.e)(!0, wD, KD, cD), (0, pD.b)(LD, wD), wD || rD ? zD : null
     }
   },
-  4784: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => Xm,
-      f: () => Gm
+  4859: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => SD,
+      g: () => dD
     });
-    var hm = fm(4789),
-      Am = fm(339);
-    const am = 120,
-      xm = 260,
-      wm = 1.15,
-      Dm = 1.2,
-      im = 2,
-      Rm = 1.08,
-      pm = .8,
-      Em = .95,
-      om = 8,
-      Om = "[\"')\\]\u300d\u300f\uff09]*",
-      Ym = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${Om}$`),
-      qm = new RegExp(`[?\uff1f]${Om}$`),
-      jm = new RegExp(`[!\uff01]${Om}$`),
-      Vm = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      Im = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      Km = new RegExp(`[${Im}]`),
-      Qm = new RegExp(`[${Im}]|[^${Im}]+`, "g"),
-      nm = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var pD = wD(4866),
+      sD = wD(338);
+    const KD = 120,
+      rD = 260,
+      LD = 1.15,
+      cD = 1.2,
+      gD = 2,
+      RD = 1.08,
+      AD = .8,
+      UD = .95,
+      fD = 8,
+      ID = "[\"')\\]\u300d\u300f\uff09]*",
+      BD = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${ID}$`),
+      GD = new RegExp(`[?\uff1f]${ID}$`),
+      hD = new RegExp(`[!\uff01]${ID}$`),
+      nD = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      MD = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      OD = new RegExp(`[${MD}]`),
+      JD = new RegExp(`[${MD}]|[^${MD}]+`, "g"),
+      ED = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function Jm(mm) {
-      let Tm = 2166136261;
-      for (let fm = 0; fm < mm.length; fm++) Tm ^= mm.charCodeAt(fm), Tm = Math.imul(Tm, 16777619);
-      return (Tm >>> 0) / 4294967295 * 2 - 1
+    function QD(DD) {
+      let zD = 2166136261;
+      for (let wD = 0; wD < DD.length; wD++) zD ^= DD.charCodeAt(wD), zD = Math.imul(zD, 16777619);
+      return (zD >>> 0) / 4294967295 * 2 - 1
     }
 
-    function cm(mm) {
-      var Tm;
-      if (Km.test(mm)) return 1;
-      const fm = mm.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        hm = fm.replace(/[^0-9]/g, "");
-      if (hm.length > 0 && !/\p{L}/u.test(fm)) return Math.min(hm.length, 4);
-      const Am = null !== (Tm = fm.match(nm)) && void 0 !== Tm ? Tm : [];
-      if (0 === Am.length) {
-        var am, xm;
-        const mm = null !== (am = null === (xm = fm.match(/\p{L}/gu)) || void 0 === xm ? void 0 : xm.length) && void 0 !== am ? am : 0;
-        return 0 === mm ? 0 : Math.min(Math.max(1, Math.round(mm / 2.5)), om)
+    function XD(DD) {
+      var zD;
+      if (OD.test(DD)) return 1;
+      const wD = DD.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        pD = wD.replace(/[^0-9]/g, "");
+      if (pD.length > 0 && !/\p{L}/u.test(wD)) return Math.min(pD.length, 4);
+      const sD = null !== (zD = wD.match(ED)) && void 0 !== zD ? zD : [];
+      if (0 === sD.length) {
+        var KD, rD;
+        const DD = null !== (KD = null === (rD = wD.match(/\p{L}/gu)) || void 0 === rD ? void 0 : rD.length) && void 0 !== KD ? KD : 0;
+        return 0 === DD ? 0 : Math.min(Math.max(1, Math.round(DD / 2.5)), fD)
       }
-      const wm = fm.replace(/[^\p{L}]/gu, ""),
-        Dm = Am.length > 1 && "e" === Am.at(-1) && wm.endsWith("e") && !wm.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(mm.replace(/[^\p{L}]/gu, ""));
-      return Math.min(Am.length - (Dm ? 1 : 0), om)
+      const LD = wD.replace(/[^\p{L}]/gu, ""),
+        cD = sD.length > 1 && "e" === sD.at(-1) && LD.endsWith("e") && !LD.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(DD.replace(/[^\p{L}]/gu, ""));
+      return Math.min(sD.length - (cD ? 1 : 0), fD)
     }
 
-    function zm(mm) {
-      return mm.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function VD(DD) {
+      return DD.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function Zm(mm) {
-      const Tm = mm.replace(/[^\p{L}]/gu, "");
-      return Tm.length >= 2 && Tm === Tm.toUpperCase() && Tm !== Tm.toLowerCase()
+    function PD(DD) {
+      const zD = DD.replace(/[^\p{L}]/gu, "");
+      return zD.length >= 2 && zD === zD.toUpperCase() && zD !== zD.toLowerCase()
     }
 
-    function km(mm, Tm) {
-      var fm;
-      const om = Tm && (0, hm.g)(Tm),
-        Om = null !== (fm = null === om || void 0 === om ? void 0 : om.syllableMs) && void 0 !== fm ? fm : hm.d,
-        Im = function(mm) {
-          const Tm = [];
-          for (const hm of (0, Am.Zb)(mm))
-            if ("string" === typeof hm)
-              for (const mm of hm.split(/(\s+)/)) {
-                if ("" === mm) continue;
-                if (/^\s+$/.test(mm)) {
-                  Tm.push({
+    function CD(DD, zD) {
+      var wD;
+      const fD = zD && (0, pD.i)(zD),
+        ID = null !== (wD = null === fD || void 0 === fD ? void 0 : fD.syllableMs) && void 0 !== wD ? wD : pD.c,
+        MD = function(DD) {
+          const zD = [];
+          for (const pD of (0, sD.Vb)(DD))
+            if ("string" === typeof pD)
+              for (const DD of pD.split(/(\s+)/)) {
+                if ("" === DD) continue;
+                if (/^\s+$/.test(DD)) {
+                  zD.push({
                     kind: "space",
-                    text: mm
+                    text: DD
                   });
                   continue
                 }
-                if (!Km.test(mm)) {
-                  Tm.push({
+                if (!OD.test(DD)) {
+                  zD.push({
                     kind: "word",
-                    text: mm,
+                    text: DD,
                     delayMs: 0
                   });
                   continue
                 }
-                let hm = !0;
-                for (const Am of null !== (fm = mm.match(Qm)) && void 0 !== fm ? fm : []) {
-                  var fm;
-                  const mm = Tm.at(-1);
-                  hm || "word" !== (null === mm || void 0 === mm ? void 0 : mm.kind) || Km.test(Am) || /[\p{L}\p{N}]/u.test(Am) ? (hm || Tm.push({
+                let pD = !0;
+                for (const sD of null !== (wD = DD.match(JD)) && void 0 !== wD ? wD : []) {
+                  var wD;
+                  const DD = zD.at(-1);
+                  pD || "word" !== (null === DD || void 0 === DD ? void 0 : DD.kind) || OD.test(sD) || /[\p{L}\p{N}]/u.test(sD) ? (pD || zD.push({
                     kind: "space",
                     text: "\u200b"
-                  }), Tm.push({
+                  }), zD.push({
                     kind: "word",
-                    text: Am,
+                    text: sD,
                     delayMs: 0
-                  }), hm = !1) : mm.text += Am
+                  }), pD = !1) : DD.text += sD
                 }
-              } else Tm.push({
+              } else zD.push({
                 kind: "icon",
-                text: hm.icon,
+                text: pD.icon,
                 delayMs: 0
               });
-          return Tm
-        }(mm),
-        nm = [];
-      let km = [];
-      for (const hm of Im) "space" !== hm.kind && (km.push(hm), Ym.test(hm.text) && (nm.push(km), km = []));
-      nm.push(km);
-      const bm = [];
-      let Sm = 0;
-      for (const hm of nm) {
-        var em, Nm;
-        const mm = null !== (em = null === (Nm = hm.at(-1)) || void 0 === Nm ? void 0 : Nm.text) && void 0 !== em ? em : "",
-          Tm = qm.test(mm),
-          fm = jm.test(mm),
-          Am = hm.map((mm => "word" === mm.kind ? cm(mm.text) : 1)),
-          Im = Am.findLastIndex((mm => mm > 0));
-        for (const [qm, jm] of hm.entries()) {
-          const mm = "word" === jm.kind,
-            hm = Am[qm];
-          jm.delayMs = Sm;
-          for (let Am = 0; om && Am < hm; Am++) {
+          return zD
+        }(DD),
+        ED = [];
+      let CD = [];
+      for (const pD of MD) "space" !== pD.kind && (CD.push(pD), BD.test(pD.text) && (ED.push(CD), CD = []));
+      ED.push(CD);
+      const xD = [];
+      let TD = 0;
+      for (const pD of ED) {
+        var bD, jD;
+        const DD = null !== (bD = null === (jD = pD.at(-1)) || void 0 === jD ? void 0 : jD.text) && void 0 !== bD ? bD : "",
+          zD = GD.test(DD),
+          wD = hD.test(DD),
+          sD = pD.map((DD => "word" === DD.kind ? XD(DD.text) : 1)),
+          MD = sD.findLastIndex((DD => DD > 0));
+        for (const [GD, hD] of pD.entries()) {
+          const DD = "word" === hD.kind,
+            pD = sD[GD];
+          hD.delayMs = TD;
+          for (let sD = 0; fD && sD < pD; sD++) {
             const {
-              intonation: am
-            } = om;
-            let xm = Im > 0 ? -am.declineSemitones * (qm / Im) : 0;
-            xm += Jm(`${zm(jm.text)}|${Am}`) * am.variationSemitones;
-            const Ym = Math.min(1, am.variationSemitones);
-            let Vm = om.glideSemitones,
-              Km = 1;
-            fm && (xm += am.exclaimLiftSemitones, Km *= wm), Tm && qm === Im && (xm += am.questionRiseSemitones * (hm > 1 ? .5 + .5 * Am / (hm - 1) : 1), Am === hm - 1 && (Vm = Math.abs(Vm) + am.questionRiseSemitones / 2)), mm && Zm(jm.text) && (xm += im * Ym, Km *= Dm), hm > 1 && 0 === Am && (xm += pm * Ym, Km *= Rm), bm.push({
-              atMs: Sm + Am * Om,
-              semitones: xm,
-              glideSemitones: Vm,
-              durationMs: Am < hm - 1 ? Math.min(om.durationMs, Om * Em) : om.durationMs,
-              level: Km
+              intonation: KD
+            } = fD;
+            let rD = MD > 0 ? -KD.declineSemitones * (GD / MD) : 0;
+            rD += QD(`${VD(hD.text)}|${sD}`) * KD.variationSemitones;
+            const BD = Math.min(1, KD.variationSemitones);
+            let nD = fD.glideSemitones,
+              OD = 1;
+            wD && (rD += KD.exclaimLiftSemitones, OD *= LD), zD && GD === MD && (rD += KD.questionRiseSemitones * (pD > 1 ? .5 + .5 * sD / (pD - 1) : 1), sD === pD - 1 && (nD = Math.abs(nD) + KD.questionRiseSemitones / 2)), DD && PD(hD.text) && (rD += gD * BD, OD *= cD), pD > 1 && 0 === sD && (rD += AD * BD, OD *= RD), xD.push({
+              atMs: TD + sD * ID,
+              semitones: rD,
+              glideSemitones: nD,
+              durationMs: sD < pD - 1 ? Math.min(fD.durationMs, ID * UD) : fD.durationMs,
+              level: OD
             })
           }
-          Sm += hm * Om + (Ym.test(jm.text) ? xm : Vm.test(jm.text) ? am : 0)
+          TD += pD * ID + (BD.test(hD.text) ? rD : nD.test(hD.text) ? KD : 0)
         }
       }
       return {
-        pieces: Im.map((mm => "space" === mm.kind ? mm : "icon" === mm.kind ? {
+        pieces: MD.map((DD => "space" === DD.kind ? DD : "icon" === DD.kind ? {
           kind: "icon",
-          icon: mm.text,
-          delayMs: mm.delayMs
+          icon: DD.text,
+          delayMs: DD.delayMs
         } : {
           kind: "word",
-          text: mm.text,
-          delayMs: mm.delayMs
+          text: DD.text,
+          delayMs: DD.delayMs
         })),
-        blips: bm
+        blips: xD
       }
     }
-    var bm = fm(1208),
-      Sm = fm(1259),
-      em = fm(1912);
+    var xD = wD(1200),
+      TD = wD(1260),
+      bD = wD(1932);
 
-    function Nm(mm) {
-      if ("string" === typeof mm) return mm;
-      const Tm = Sm.e.get().getCurrentLanguageCode();
-      return (0, bm.t)(Tm, mm.translationKey, (0, bm.r)(mm.params, em.e.shown))
+    function jD(DD) {
+      if ("string" === typeof DD) return DD;
+      const zD = TD.e.get().getCurrentLanguageCode();
+      return (0, xD.s)(zD, DD.translationKey, (0, xD.r)(DD.params, bD.d.shown))
     }
 
-    function Gm(mm) {
-      const Tm = void 0 === mm.voice ? null : (0, hm.k)(mm.voice),
-        fm = Tm && (0, hm.g)(Tm);
+    function dD(DD) {
+      const zD = void 0 === DD.voice ? null : (0, pD.l)(DD.voice),
+        wD = zD && (0, pD.i)(zD);
       return {
-        plan: km(Nm(mm.line), fm),
-        synth: fm
+        plan: CD(jD(DD.line), wD),
+        synth: wD
       }
     }
 
-    function Xm(mm) {
-      const Tm = [];
-      let fm = [];
-      for (const [Am, am] of mm.entries()) {
-        var hm;
-        "space" === am.kind && (" " !== am.text || "icon" !== (null === (hm = mm[Am + 1]) || void 0 === hm ? void 0 : hm.kind)) ? (fm.length > 0 && Tm.push(fm), Tm.push([am]), fm = []) : fm.push(am)
+    function SD(DD) {
+      const zD = [];
+      let wD = [];
+      for (const [sD, KD] of DD.entries()) {
+        var pD;
+        "space" === KD.kind && (" " !== KD.text || "icon" !== (null === (pD = DD[sD + 1]) || void 0 === pD ? void 0 : pD.kind)) ? (wD.length > 0 && zD.push(wD), zD.push([KD]), wD = []) : wD.push(KD)
       }
-      return fm.length > 0 && Tm.push(fm), Tm
+      return wD.length > 0 && zD.push(wD), zD
     }
   },
-  8654: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => am,
-      h: () => Am
+  8726: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => KD,
+      g: () => sD
     });
-    let hm = null;
-    const Am = function(mm) {
-        const Tm = {
-          cycle: mm,
+    let pD = null;
+    const sD = function(DD) {
+        const zD = {
+          cycle: DD,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return hm = Tm, () => {
-          hm === Tm && (hm = null)
+        return pD = zD, () => {
+          pD === zD && (pD = null)
         }
       },
-      am = () => {
-        var mm;
-        return null !== (mm = hm) && void 0 !== mm && mm.canCycle() ? hm.cycle : null
+      KD = () => {
+        var DD;
+        return null !== (DD = pD) && void 0 !== DD && DD.canCycle() ? pD.cycle : null
       }
   },
-  36689: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => am,
-      d: () => Ym,
-      e: () => qm,
-      h: () => wm,
-      i: () => Em,
-      m: () => jm,
-      p: () => pm,
-      r: () => Im,
-      u: () => Om,
-      v: () => Vm
+  36586: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => KD,
+      h: () => BD,
+      j: () => GD,
+      k: () => LD,
+      m: () => UD,
+      q: () => hD,
+      s: () => AD,
+      v: () => MD,
+      y: () => ID,
+      z: () => nD
     });
-    var hm = fm(23),
-      Am = fm(31);
-    const am = "clientGameInventoryButtonsChanged",
-      xm = new Map;
+    var pD = wD(20),
+      sD = wD(25);
+    const KD = "clientGameInventoryButtonsChanged",
+      rD = new Map;
 
-    function wm() {
-      return [...xm.values()].sort(((mm, Tm) => {
-        var fm, hm;
-        return (null !== (fm = mm.order) && void 0 !== fm ? fm : 0) - (null !== (hm = Tm.order) && void 0 !== hm ? hm : 0)
+    function LD() {
+      return [...rD.values()].sort(((DD, zD) => {
+        var wD, pD;
+        return (null !== (wD = DD.order) && void 0 !== wD ? wD : 0) - (null !== (pD = zD.order) && void 0 !== pD ? pD : 0)
       }))
     }
-    let Dm = null;
+    let cD = null;
 
-    function im(mm) {
-      Dm = mm
+    function gD(DD) {
+      cD = DD
     }
-    let Rm = !1;
+    let RD = !1;
 
-    function pm(mm) {
-      Rm = !0;
+    function AD(DD) {
+      RD = !0;
       try {
-        mm.onClick()
+        DD.onClick()
       } finally {
-        Rm = !1
+        RD = !1
       }
-      mm.panel && "clientGame" === hm.c.get("openInGameMenuName") && im(mm.id)
+      DD.panel && "clientGame" === pD.e.get("openInGameMenuName") && gD(DD.id)
     }
 
-    function Em() {
-      return Rm
+    function UD() {
+      return RD
     }
 
-    function om() {
-      return wm().filter((mm => mm.panel && !mm.disabled))
+    function fD() {
+      return LD().filter((DD => DD.panel && !DD.disabled))
     }
 
-    function Om(mm) {
-      const Tm = om(),
-        fm = Tm.findIndex((mm => mm.id === Dm));
-      return !(fm < 0 || Tm.length < 2) && (pm(Tm[(fm + mm + Tm.length) % Tm.length]), !0)
+    function ID(DD) {
+      const zD = fD(),
+        wD = zD.findIndex((DD => DD.id === cD));
+      return !(wD < 0 || zD.length < 2) && (AD(zD[(wD + DD + zD.length) % zD.length]), !0)
     }
 
-    function Ym() {
-      return null !== Dm && om().length > 1
+    function BD() {
+      return null !== cD && fD().length > 1
     }
 
-    function qm() {
-      im(null)
+    function GD() {
+      gD(null)
     }
 
-    function jm() {
-      "inventory" !== hm.c.get("openInGameMenuName") && im(null)
+    function hD() {
+      "inventory" !== pD.e.get("openInGameMenuName") && gD(null)
     }
 
-    function Vm() {
-      const mm = Dm;
-      return im(null), mm
+    function nD() {
+      const DD = cD;
+      return gD(null), DD
     }
 
-    function Im(mm) {
-      return xm.set(mm.id, mm), Am.j.gp(am, wm(), !0), () => {
-        xm.get(mm.id) === mm && (xm.delete(mm.id), Am.j.gp(am, wm()))
+    function MD(DD) {
+      return rD.set(DD.id, DD), sD.l.KG(KD, LD(), !0), () => {
+        rD.get(DD.id) === DD && (rD.delete(DD.id), sD.l.KG(KD, LD()))
       }
     }
   },
-  36686: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => wm,
-      h: () => qm,
-      j: () => jm,
-      m: () => Em,
-      p: () => im,
-      s: () => Ym,
-      u: () => om,
-      w: () => Rm
+  36580: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => LD,
+      g: () => GD,
+      i: () => hD,
+      m: () => UD,
+      p: () => gD,
+      r: () => BD,
+      t: () => fD,
+      w: () => RD
     });
-    var hm = fm(23),
-      Am = fm(31),
-      am = fm(1286),
-      xm = fm(36689);
-    const wm = "clientGameUiChanged";
-    let Dm = null;
+    var pD = wD(20),
+      sD = wD(25),
+      KD = wD(1299),
+      rD = wD(36586);
+    const LD = "clientGameUiChanged";
+    let cD = null;
 
-    function im() {
-      return Dm
+    function gD() {
+      return cD
     }
 
-    function Rm(mm, Tm) {
-      const fm = {
-        content: mm,
-        menu: Tm
+    function RD(DD, zD) {
+      const wD = {
+        content: DD,
+        menu: zD
       };
-      return Dm = fm, Am.j.gp(wm, Dm, !0), () => {
-        Dm === fm && (Dm = null, Om = !1, qm(), Am.j.gp(wm, null))
+      return cD = wD, sD.l.KG(LD, cD, !0), () => {
+        cD === wD && (cD = null, ID = !1, GD(), sD.l.KG(LD, null))
       }
     }
-    let pm = null;
+    let AD = null;
 
-    function Em() {
-      return pm
+    function UD() {
+      return AD
     }
 
-    function om(mm) {
-      return pm = mm, () => {
-        pm === mm && (pm = null)
+    function fD(DD) {
+      return AD = DD, () => {
+        AD === DD && (AD = null)
       }
     }
-    let Om = !1;
+    let ID = !1;
 
-    function Ym() {
-      const mm = hm.c.get("openInGameMenuName");
-      "clientGame" !== mm && (Om = "inventory" === mm), (0, xm.i)() || (0, xm.e)(), (0, am.p)(am.c), hm.c.set({
+    function BD() {
+      const DD = pD.e.get("openInGameMenuName");
+      "clientGame" !== DD && (ID = "inventory" === DD), (0, rD.m)() || (0, rD.j)(), (0, KD.p)(KD.b), pD.e.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function qm() {
-      Vm(!1)
+    function GD() {
+      nD(!1)
     }
 
-    function jm() {
-      Vm(Om)
+    function hD() {
+      nD(ID)
     }
 
-    function Vm(mm) {
-      "clientGame" === hm.c.get("openInGameMenuName") && hm.c.set({
-        openInGameMenuName: mm ? "inventory" : null
-      }), mm || (0, xm.e)(), Om = !1
+    function nD(DD) {
+      "clientGame" === pD.e.get("openInGameMenuName") && pD.e.set({
+        openInGameMenuName: DD ? "inventory" : null
+      }), DD || (0, rD.j)(), ID = !1
     }
   },
-  38609: (mm, Tm, fm) => {
-    function hm(mm, Tm, fm) {
-      const hm = new Set,
-        Am = new ResizeObserver(fm),
-        am = () => {
-          const Tm = new Set(document.querySelectorAll(mm));
-          let am = !1;
-          for (const mm of hm) Tm.has(mm) || (Am.unobserve(mm), hm.delete(mm), am = !0);
-          for (const mm of Tm) hm.has(mm) || (Am.observe(mm), xm.observe(mm, {
+  38493: (DD, zD, wD) => {
+    function pD(DD, zD, wD) {
+      const pD = new Set,
+        sD = new ResizeObserver(wD),
+        KD = () => {
+          const zD = new Set(document.querySelectorAll(DD));
+          let KD = !1;
+          for (const DD of pD) zD.has(DD) || (sD.unobserve(DD), pD.delete(DD), KD = !0);
+          for (const DD of zD) pD.has(DD) || (sD.observe(DD), rD.observe(DD, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), hm.add(mm));
-          am && fm()
+          }), pD.add(DD));
+          KD && wD()
         },
-        xm = new MutationObserver((Tm => {
-          Tm.some((mm => "attributes" === mm.type)) && fm(), Tm.some((Tm => function(mm, Tm, fm) {
-            if ("childList" !== mm.type) return !1;
-            for (const hm of mm.addedNodes)
-              if (hm instanceof Element && (hm.matches(Tm) || hm.querySelector(Tm))) return !0;
-            for (const hm of mm.removedNodes)
-              if (hm instanceof Element)
-                for (const mm of fm)
-                  if (hm.contains(mm)) return !0;
+        rD = new MutationObserver((zD => {
+          zD.some((DD => "attributes" === DD.type)) && wD(), zD.some((zD => function(DD, zD, wD) {
+            if ("childList" !== DD.type) return !1;
+            for (const pD of DD.addedNodes)
+              if (pD instanceof Element && (pD.matches(zD) || pD.querySelector(zD))) return !0;
+            for (const pD of DD.removedNodes)
+              if (pD instanceof Element)
+                for (const DD of wD)
+                  if (pD.contains(DD)) return !0;
             return !1
-          }(Tm, mm, hm))) && am()
+          }(zD, DD, pD))) && KD()
         }));
-      xm.observe(document.body, {
+      rD.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const wm of Tm) Am.observe(wm);
-      return window.addEventListener("resize", fm), am(), fm(), () => {
-        Am.disconnect(), xm.disconnect(), window.removeEventListener("resize", fm)
+      for (const LD of zD) sD.observe(LD);
+      return window.addEventListener("resize", wD), KD(), wD(), () => {
+        sD.disconnect(), rD.disconnect(), window.removeEventListener("resize", wD)
       }
     }
-    fm.d(Tm, {
-      e: () => hm
+    wD.d(zD, {
+      d: () => pD
     })
   },
-  8824: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => wm,
-      g: () => Dm
+  8883: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => LD,
+      g: () => cD
     });
-    var hm = fm(23),
-      Am = fm(1321),
-      am = fm(105);
-    const xm = {
+    var pD = wD(20),
+      sD = wD(1332),
+      KD = wD(103);
+    const rD = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -634,350 +634,350 @@ export const modules = {
       }
     };
 
-    function wm() {
-      return (0, am.isMobile)() && "function" === typeof navigator.vibrate
+    function LD() {
+      return (0, KD.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const Dm = new class {
-      constructor(mm) {
-        this.deps = mm, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const cD = new class {
+      constructor(DD) {
+        this.deps = DD, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(mm, Tm) {
-        var fm;
+      play(DD, zD) {
+        var wD;
         if (!this.deps.enabled()) return;
-        const hm = xm[mm],
-          Am = null !== Tm && void 0 !== Tm ? Tm : hm.pattern;
-        if (null === Am) return void console.warn("No vibration pattern for", mm);
-        const am = this.deps.now();
-        am - this.lastAnyAt < 40 && hm.priority < this.playingPriority || am - (null !== (fm = this.lastAt.get(mm)) && void 0 !== fm ? fm : -1 / 0) < hm.minGapMs || am < this.playingUntil && hm.priority < this.playingPriority || (this.lastAt.set(mm, am), this.lastAnyAt = am, this.playingUntil = am + Am.reduce(((mm, Tm) => mm + Tm), 0), this.playingPriority = hm.priority, this.deps.vibrate(Am))
+        const pD = rD[DD],
+          sD = null !== zD && void 0 !== zD ? zD : pD.pattern;
+        if (null === sD) return void console.warn("No vibration pattern for", DD);
+        const KD = this.deps.now();
+        KD - this.lastAnyAt < 40 && pD.priority < this.playingPriority || KD - (null !== (wD = this.lastAt.get(DD)) && void 0 !== wD ? wD : -1 / 0) < pD.minGapMs || KD < this.playingUntil && pD.priority < this.playingPriority || (this.lastAt.set(DD, KD), this.lastAnyAt = KD, this.playingUntil = KD + sD.reduce(((DD, zD) => DD + zD), 0), this.playingPriority = pD.priority, this.deps.vibrate(sD))
       }
     }({
-      vibrate: mm => {
-        navigator.vibrate([...mm])
+      vibrate: DD => {
+        navigator.vibrate([...DD])
       },
       now: () => performance.now(),
-      enabled: () => wm() && hm.c.get("isTouchScreen") && hm.c.get("clientEscMenuOptions").vibration && !(0, Am.f)()
+      enabled: () => LD() && pD.e.get("isTouchScreen") && pD.e.get("clientEscMenuOptions").vibration && !(0, sD.g)()
     })
   },
-  37243: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => wm,
-      c: () => xm
+  37164: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => LD,
+      f: () => rD
     });
-    var hm = fm(37233),
-      Am = fm(354),
-      am = fm(1877);
+    var pD = wD(37151),
+      sD = wD(351),
+      KD = wD(1886);
 
-    function xm(mm) {
-      if ("Ra" in mm) return nm.createAnimationScript(mm);
-      return new im(mm).createAnimationScript()
+    function rD(DD) {
+      if ("nK" in DD) return ED.createAnimationScript(DD);
+      return new gD(DD).createAnimationScript()
     }
 
-    function wm(mm, Tm, fm, Am) {
-      const am = mm.Ra <= 0 ? 1 : Tm + fm * Math.max(0, Am) / mm.Ra;
-      return mm.Ea === hm.k.LoopOnLastFrame ? am % 1 : mm.Ea === hm.k.NoLoop && am >= 1 ? null : Math.min(1, am)
+    function LD(DD, zD, wD, sD) {
+      const KD = DD.nK <= 0 ? 1 : zD + wD * Math.max(0, sD) / DD.nK;
+      return DD.MK === pD.h.LoopOnLastFrame ? KD % 1 : DD.MK === pD.h.NoLoop && KD >= 1 ? null : Math.min(1, KD)
     }
-    class Dm {
-      createAnimationScript(mm) {
+    class cD {
+      createAnimationScript(DD) {
         const {
-          Ra: Tm,
-          loop: fm,
-          oa: hm
-        } = mm;
+          nK: zD,
+          loop: wD,
+          JK: pD
+        } = DD;
         return {
-          Ra: Math.round(Tm),
-          Ea: this.createLoopMode(null !== fm && void 0 !== fm && fm),
-          oa: this.createNodeSkeletonAnimationScript(null !== hm && void 0 !== hm ? hm : null)
+          nK: Math.round(zD),
+          MK: this.createLoopMode(null !== wD && void 0 !== wD && wD),
+          JK: this.createNodeSkeletonAnimationScript(null !== pD && void 0 !== pD ? pD : null)
         }
       }
-      createLoopMode(mm) {
-        switch (mm) {
+      createLoopMode(DD) {
+        switch (DD) {
           case !1:
-            return hm.k.NoLoop;
+            return pD.h.NoLoop;
           case !0:
-            return hm.k.LoopOnLastFrame;
+            return pD.h.LoopOnLastFrame;
           case "hold-on-last-frame":
-            return hm.k.HoldOnLastFrame
+            return pD.h.HoldOnLastFrame
         }
-        throw new Error(`Invalid loop mode schema: ${mm}`)
+        throw new Error(`Invalid loop mode schema: ${DD}`)
       }
-      createNodeSkeletonAnimationScript(mm) {
-        if (null === mm) return null;
-        const Tm = {};
-        for (const fm in mm) {
-          const hm = mm[fm];
-          Tm[fm] = this.createNodeAnimationScript(hm)
+      createNodeSkeletonAnimationScript(DD) {
+        if (null === DD) return null;
+        const zD = {};
+        for (const wD in DD) {
+          const pD = DD[wD];
+          zD[wD] = this.createNodeAnimationScript(pD)
         }
-        return Tm
+        return zD
       }
-      createNodeAnimationScript(mm) {
+      createNodeAnimationScript(DD) {
         const {
-          timeline: Tm
-        } = mm, fm = Tm.filter((mm => Number.isFinite(mm.timeFraction)));
-        return fm.sort(((mm, Tm) => mm.timeFraction - Tm.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(fm, "rotation", Em),
-          position: this.createTimelineFromKeyframes(fm, "position", Om)
+          timeline: zD
+        } = DD, wD = zD.filter((DD => Number.isFinite(DD.timeFraction)));
+        return wD.sort(((DD, zD) => DD.timeFraction - zD.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(wD, "rotation", UD),
+          position: this.createTimelineFromKeyframes(wD, "position", ID)
         }
       }
-      createTimelineFromKeyframes(mm, Tm, fm) {
-        const hm = [];
-        for (const Dm of mm) {
-          const mm = Dm[Tm];
-          if (mm) {
-            const Tm = this.createAnimationFrameWithoutPrecomputes(Dm.timeFraction, mm);
-            Rm(Tm) && hm.push(Tm)
+      createTimelineFromKeyframes(DD, zD, wD) {
+        const pD = [];
+        for (const cD of DD) {
+          const DD = cD[zD];
+          if (DD) {
+            const zD = this.createAnimationFrameWithoutPrecomputes(cD.timeFraction, DD);
+            RD(zD) && pD.push(zD)
           }
         }
-        const Am = [];
-        for (let Dm = 0; Dm < hm.length; Dm++) {
-          var am, xm, wm;
-          const mm = hm[Dm],
-            Tm = null !== (am = hm[Dm - 1]) && void 0 !== am ? am : mm,
-            im = null !== (xm = hm[Dm + 1]) && void 0 !== xm ? xm : mm,
-            Rm = null !== (wm = hm[Dm + 2]) && void 0 !== wm ? wm : im;
-          Am.push({
-            ...mm,
-            ...fm(Tm.post, Tm.timeFraction, mm.post, mm.timeFraction, im.pre, im.timeFraction, Rm.pre, Rm.timeFraction)
+        const sD = [];
+        for (let cD = 0; cD < pD.length; cD++) {
+          var KD, rD, LD;
+          const DD = pD[cD],
+            zD = null !== (KD = pD[cD - 1]) && void 0 !== KD ? KD : DD,
+            gD = null !== (rD = pD[cD + 1]) && void 0 !== rD ? rD : DD,
+            RD = null !== (LD = pD[cD + 2]) && void 0 !== LD ? LD : gD;
+          sD.push({
+            ...DD,
+            ...wD(zD.post, zD.timeFraction, DD.post, DD.timeFraction, gD.pre, gD.timeFraction, RD.pre, RD.timeFraction)
           })
         }
-        return Am
+        return sD
       }
-      createAnimationFrameWithoutPrecomputes(mm, Tm) {
-        let fm, hm, Am = null;
-        var am;
-        if ("object" === typeof Tm && "point" in Tm) Am = null !== (am = Tm.qa) && void 0 !== am ? am : null, fm = Tm.point, hm = Tm.point;
-        else if ("object" === typeof Tm && "pre" in Tm) {
-          var xm;
-          Am = null !== (xm = Tm.qa) && void 0 !== xm ? xm : null, fm = Tm.pre, hm = Tm.post
-        } else fm = Tm, hm = Tm;
+      createAnimationFrameWithoutPrecomputes(DD, zD) {
+        let wD, pD, sD = null;
+        var KD;
+        if ("object" === typeof zD && "point" in zD) sD = null !== (KD = zD.XK) && void 0 !== KD ? KD : null, wD = zD.point, pD = zD.point;
+        else if ("object" === typeof zD && "pre" in zD) {
+          var rD;
+          sD = null !== (rD = zD.XK) && void 0 !== rD ? rD : null, wD = zD.pre, pD = zD.post
+        } else wD = zD, pD = zD;
         return {
-          timeFraction: mm,
-          qa: this.createLerpMode(Am),
-          pre: fm,
-          post: hm
+          timeFraction: DD,
+          XK: this.createLerpMode(sD),
+          pre: wD,
+          post: pD
         }
       }
-      createLerpMode(mm) {
-        return null === mm ? hm.i.Linear : Dm.LERP_MODE_SCHEMA_MAPPING[mm]
+      createLerpMode(DD) {
+        return null === DD ? pD.e.Linear : cD.LERP_MODE_SCHEMA_MAPPING[DD]
       }
     }
-    Dm.LERP_MODE_SCHEMA_MAPPING = {
-      linear: hm.i.Linear,
-      "catmull-rom-spline": hm.i.CatmullRomSpline
+    cD.LERP_MODE_SCHEMA_MAPPING = {
+      linear: pD.e.Linear,
+      "catmull-rom-spline": pD.e.CatmullRomSpline
     };
-    class im {
-      constructor(mm) {
-        this.animationSchema = mm
+    class gD {
+      constructor(DD) {
+        this.animationSchema = DD
       }
       createAnimationScript() {
         const {
-          animation_length: mm,
-          loop: Tm,
-          bones: fm
+          animation_length: DD,
+          loop: zD,
+          bones: wD
         } = this.animationSchema;
         return {
-          Ra: Math.round(1e3 * mm),
-          Ea: this.createLoopMode(null !== Tm && void 0 !== Tm && Tm),
-          oa: this.createNodeSkeletonAnimationScript(null !== fm && void 0 !== fm ? fm : null)
+          nK: Math.round(1e3 * DD),
+          MK: this.createLoopMode(null !== zD && void 0 !== zD && zD),
+          JK: this.createNodeSkeletonAnimationScript(null !== wD && void 0 !== wD ? wD : null)
         }
       }
-      createLoopMode(mm) {
-        switch (mm) {
+      createLoopMode(DD) {
+        switch (DD) {
           case !1:
-            return hm.k.NoLoop;
+            return pD.h.NoLoop;
           case !0:
-            return hm.k.LoopOnLastFrame;
+            return pD.h.LoopOnLastFrame;
           case "hold_on_last_frame":
-            return hm.k.HoldOnLastFrame
+            return pD.h.HoldOnLastFrame
         }
-        throw new Error(`Invalid Blockbench loop mode schema: ${mm}`)
+        throw new Error(`Invalid Blockbench loop mode schema: ${DD}`)
       }
-      createNodeSkeletonAnimationScript(mm) {
-        if (null === mm) return null;
-        const Tm = {};
-        for (const fm in mm) {
-          const hm = mm[fm];
-          Tm[fm] = this.createNodeAnimationScript(hm)
+      createNodeSkeletonAnimationScript(DD) {
+        if (null === DD) return null;
+        const zD = {};
+        for (const wD in DD) {
+          const pD = DD[wD];
+          zD[wD] = this.createNodeAnimationScript(pD)
         }
-        return Tm
+        return zD
       }
-      createNodeAnimationScript(mm) {
+      createNodeAnimationScript(DD) {
         const {
-          rotation: Tm,
-          position: fm
-        } = mm;
+          rotation: zD,
+          position: wD
+        } = DD;
         return {
-          rotation: this.createAnimationTimeline(null !== Tm && void 0 !== Tm ? Tm : null, qm, Em, !0),
-          position: this.createAnimationTimeline(null !== fm && void 0 !== fm ? fm : null, Vm, Om, !1)
+          rotation: this.createAnimationTimeline(null !== zD && void 0 !== zD ? zD : null, GD, UD, !0),
+          position: this.createAnimationTimeline(null !== wD && void 0 !== wD ? wD : null, nD, ID, !1)
         }
       }
-      createAnimationTimeline(mm, Tm, fm, hm) {
-        if (null === mm) return [];
-        if (Array.isArray(mm)) {
-          mm = {
-            "0.0": mm
+      createAnimationTimeline(DD, zD, wD, pD) {
+        if (null === DD) return [];
+        if (Array.isArray(DD)) {
+          DD = {
+            "0.0": DD
           }
         }
-        const Am = Object.entries(mm).map((mm => {
-          let [fm, hm] = mm;
-          const Am = Number(fm) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(Am, hm, Tm)
-        })).filter(Rm);
-        Am.sort(((mm, Tm) => mm.timeFraction - Tm.timeFraction)), hm && function(mm) {
-          for (let Tm = 1; Tm < mm.length; Tm++) {
-            const fm = mm[Tm - 1].post,
-              hm = mm[Tm],
-              Am = Im(hm.pre),
-              am = Im(hm.post),
-              xm = Qm(fm, hm.pre);
-            Qm(fm, Am) < xm && (mm[Tm] = {
-              ...hm,
-              pre: Am,
-              post: am
+        const sD = Object.entries(DD).map((DD => {
+          let [wD, pD] = DD;
+          const sD = Number(wD) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(sD, pD, zD)
+        })).filter(RD);
+        sD.sort(((DD, zD) => DD.timeFraction - zD.timeFraction)), pD && function(DD) {
+          for (let zD = 1; zD < DD.length; zD++) {
+            const wD = DD[zD - 1].post,
+              pD = DD[zD],
+              sD = MD(pD.pre),
+              KD = MD(pD.post),
+              rD = JD(wD, pD.pre);
+            JD(wD, sD) < rD && (DD[zD] = {
+              ...pD,
+              pre: sD,
+              post: KD
             })
           }
-        }(Am);
-        const am = [];
-        for (let im = 0; im < Am.length; im++) {
-          var xm, wm, Dm;
-          const mm = Am[im],
-            Tm = null !== (xm = Am[im - 1]) && void 0 !== xm ? xm : mm,
-            hm = null !== (wm = Am[im + 1]) && void 0 !== wm ? wm : mm,
-            Rm = null !== (Dm = Am[im + 2]) && void 0 !== Dm ? Dm : hm;
-          am.push({
-            ...mm,
-            ...fm(Tm.post, Tm.timeFraction, mm.post, mm.timeFraction, hm.pre, hm.timeFraction, Rm.pre, Rm.timeFraction)
+        }(sD);
+        const KD = [];
+        for (let gD = 0; gD < sD.length; gD++) {
+          var rD, LD, cD;
+          const DD = sD[gD],
+            zD = null !== (rD = sD[gD - 1]) && void 0 !== rD ? rD : DD,
+            pD = null !== (LD = sD[gD + 1]) && void 0 !== LD ? LD : DD,
+            RD = null !== (cD = sD[gD + 2]) && void 0 !== cD ? cD : pD;
+          KD.push({
+            ...DD,
+            ...wD(zD.post, zD.timeFraction, DD.post, DD.timeFraction, pD.pre, pD.timeFraction, RD.pre, RD.timeFraction)
           })
         }
-        return am
+        return KD
       }
-      createAnimationFrameWithoutPrecomputes(mm, Tm, fm) {
-        let hm, Am, am = null;
-        if ("object" === typeof Tm && "post" in Tm) {
-          var xm;
-          am = null !== (xm = Tm.lerp_mode) && void 0 !== xm ? xm : null, Am = Ym(Tm.post, fm), hm = Tm.pre ? Ym(Tm.pre, fm) : Am
+      createAnimationFrameWithoutPrecomputes(DD, zD, wD) {
+        let pD, sD, KD = null;
+        if ("object" === typeof zD && "post" in zD) {
+          var rD;
+          KD = null !== (rD = zD.lerp_mode) && void 0 !== rD ? rD : null, sD = BD(zD.post, wD), pD = zD.pre ? BD(zD.pre, wD) : sD
         } else {
-          const mm = Ym(Tm, fm);
-          Am = mm, hm = mm
+          const DD = BD(zD, wD);
+          sD = DD, pD = DD
         }
         return {
-          timeFraction: mm,
-          qa: this.createLerpMode(am),
-          pre: hm,
-          post: Am
+          timeFraction: DD,
+          XK: this.createLerpMode(KD),
+          pre: pD,
+          post: sD
         }
       }
-      createLerpMode(mm) {
-        return null === mm ? hm.i.Linear : im.LERP_MODE_SCHEMA_MAPPING[mm]
+      createLerpMode(DD) {
+        return null === DD ? pD.e.Linear : gD.LERP_MODE_SCHEMA_MAPPING[DD]
       }
     }
 
-    function Rm(mm) {
-      return Number.isFinite(mm.timeFraction) && pm(mm.pre) && pm(mm.post)
+    function RD(DD) {
+      return Number.isFinite(DD.timeFraction) && AD(DD.pre) && AD(DD.post)
     }
 
-    function pm(mm) {
-      return Number.isFinite(mm[0]) && Number.isFinite(mm[1]) && Number.isFinite(mm[2])
+    function AD(DD) {
+      return Number.isFinite(DD[0]) && Number.isFinite(DD[1]) && Number.isFinite(DD[2])
     }
 
-    function Em(mm, Tm, fm, hm, Am, am, xm, wm) {
-      const Dm = am - Tm,
-        im = am - hm,
-        Rm = wm - hm,
-        pm = [null, null, null];
-      for (let Em = 0; Em < pm.length; Em++) pm[Em] = om(mm[Em], fm[Em], Am[Em], xm[Em], Dm, Rm);
+    function UD(DD, zD, wD, pD, sD, KD, rD, LD) {
+      const cD = KD - zD,
+        gD = KD - pD,
+        RD = LD - pD,
+        AD = [null, null, null];
+      for (let UD = 0; UD < AD.length; UD++) AD[UD] = fD(DD[UD], wD[UD], sD[UD], rD[UD], cD, RD);
       return {
-        ja: im,
-        Va: pm
+        VK: gD,
+        PK: AD
       }
     }
 
-    function om(mm, Tm, fm, hm, am, xm) {
+    function fD(DD, zD, wD, pD, KD, rD) {
       return {
-        Ka: Am.c.computeShortestRotation(mm, fm) / am,
-        Qa: Am.c.computeShortestRotation(Tm, hm) / xm,
-        delta: Am.c.computeShortestRotation(Tm, fm)
+        xK: sD.c.computeShortestRotation(DD, wD) / KD,
+        TK: sD.c.computeShortestRotation(zD, pD) / rD,
+        delta: sD.c.computeShortestRotation(zD, wD)
       }
     }
 
-    function Om(mm, Tm, fm, hm, Am, am, xm, wm) {
-      const Dm = am - Tm,
-        im = am - hm,
-        Rm = wm - hm,
-        pm = [null, null, null];
-      for (let Em = 0; Em < pm.length; Em++) pm[Em] = {
-        Ka: (Am[Em] - mm[Em]) / Dm,
-        Qa: (xm[Em] - fm[Em]) / Rm,
-        delta: Am[Em] - fm[Em]
+    function ID(DD, zD, wD, pD, sD, KD, rD, LD) {
+      const cD = KD - zD,
+        gD = KD - pD,
+        RD = LD - pD,
+        AD = [null, null, null];
+      for (let UD = 0; UD < AD.length; UD++) AD[UD] = {
+        xK: (sD[UD] - DD[UD]) / cD,
+        TK: (rD[UD] - wD[UD]) / RD,
+        delta: sD[UD] - wD[UD]
       };
       return {
-        ja: im,
-        Va: pm
+        VK: gD,
+        PK: AD
       }
     }
 
-    function Ym(mm, Tm) {
-      return null === Tm ? mm : Tm(mm)
+    function BD(DD, zD) {
+      return null === zD ? DD : zD(DD)
     }
 
-    function qm(mm) {
-      const [Tm, fm, hm] = mm, xm = -(0, am.j)(Tm), wm = -(0, am.j)(fm), Dm = (0, am.j)(hm), im = Am.c.quaternionFromEulerZYX(xm, wm, Dm);
-      return Am.c.eulerYXZFromQuaternion(im)
+    function GD(DD) {
+      const [zD, wD, pD] = DD, rD = -(0, KD.l)(zD), LD = -(0, KD.l)(wD), cD = (0, KD.l)(pD), gD = sD.c.quaternionFromEulerZYX(rD, LD, cD);
+      return sD.c.eulerYXZFromQuaternion(gD)
     }
-    im.LERP_MODE_SCHEMA_MAPPING = {
-      linear: hm.i.Linear,
-      catmullrom: hm.i.CatmullRomSpline
+    gD.LERP_MODE_SCHEMA_MAPPING = {
+      linear: pD.e.Linear,
+      catmullrom: pD.e.CatmullRomSpline
     };
-    const jm = 1 / 16;
+    const hD = 1 / 16;
 
-    function Vm(mm) {
-      return [-mm[0] * jm, mm[1] * jm, mm[2] * jm]
+    function nD(DD) {
+      return [-DD[0] * hD, DD[1] * hD, DD[2] * hD]
     }
 
-    function Im(mm) {
-      const [Tm, fm, hm] = mm;
-      return [Tm >= 0 ? Math.PI - Tm : -Math.PI - Tm, Km(fm + Math.PI), Km(hm + Math.PI)]
+    function MD(DD) {
+      const [zD, wD, pD] = DD;
+      return [zD >= 0 ? Math.PI - zD : -Math.PI - zD, OD(wD + Math.PI), OD(pD + Math.PI)]
     }
 
-    function Km(mm) {
-      return Am.c.mod(mm + Math.PI, 2 * Math.PI) - Math.PI
+    function OD(DD) {
+      return sD.c.mod(DD + Math.PI, 2 * Math.PI) - Math.PI
     }
 
-    function Qm(mm, Tm) {
-      return Math.abs(Am.c.computeShortestRotation(mm[0], Tm[0])) + Math.abs(Am.c.computeShortestRotation(mm[1], Tm[1])) + Math.abs(Am.c.computeShortestRotation(mm[2], Tm[2]))
+    function JD(DD, zD) {
+      return Math.abs(sD.c.computeShortestRotation(DD[0], zD[0])) + Math.abs(sD.c.computeShortestRotation(DD[1], zD[1])) + Math.abs(sD.c.computeShortestRotation(DD[2], zD[2]))
     }
-    const nm = new Dm
+    const ED = new cD
   },
-  37233: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => xm,
-      h: () => am,
-      i: () => hm,
-      k: () => Am
+  37151: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => rD,
+      c: () => KD,
+      e: () => pD,
+      h: () => sD
     });
-    let hm = function(mm) {
-        return mm[mm.Linear = 0] = "Linear", mm[mm.CatmullRomSpline = 1] = "CatmullRomSpline", mm
+    let pD = function(DD) {
+        return DD[DD.Linear = 0] = "Linear", DD[DD.CatmullRomSpline = 1] = "CatmullRomSpline", DD
       }({}),
-      Am = function(mm) {
-        return mm[mm.NoLoop = 0] = "NoLoop", mm[mm.LoopOnLastFrame = 1] = "LoopOnLastFrame", mm[mm.HoldOnLastFrame = 2] = "HoldOnLastFrame", mm
+      sD = function(DD) {
+        return DD[DD.NoLoop = 0] = "NoLoop", DD[DD.LoopOnLastFrame = 1] = "LoopOnLastFrame", DD[DD.HoldOnLastFrame = 2] = "HoldOnLastFrame", DD
       }({}),
-      am = function(mm) {
-        return mm[mm.Movement = 0] = "Movement", mm[mm.Action = 1] = "Action", mm[mm.Emote = 2] = "Emote", mm[mm.Custom = 3] = "Custom", mm
+      KD = function(DD) {
+        return DD[DD.Movement = 0] = "Movement", DD[DD.Action = 1] = "Action", DD[DD.Emote = 2] = "Emote", DD[DD.Custom = 3] = "Custom", DD
       }({}),
-      xm = function(mm) {
-        return mm[mm.Start = 0] = "Start", mm[mm.Stop = 1] = "Stop", mm
+      rD = function(DD) {
+        return DD[DD.Start = 0] = "Start", DD[DD.Stop = 1] = "Stop", DD
       }({})
   },
-  4789: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => Am,
-      e: () => hm,
-      f: () => am,
-      g: () => Dm,
-      k: () => xm
+  4866: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => sD,
+      g: () => pD,
+      h: () => KD,
+      i: () => cD,
+      l: () => rD
     });
-    const hm = ["sine", "triangle", "square", "sawtooth"],
-      Am = 55,
-      am = {
+    const pD = ["sine", "triangle", "square", "sawtooth"],
+      sD = 55,
+      KD = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1116,39 +1116,39 @@ export const modules = {
         }
       };
 
-    function xm(mm) {
-      return "string" !== typeof mm ? mm : Object.hasOwn(am, mm) ? am[mm] : null
+    function rD(DD) {
+      return "string" !== typeof DD ? DD : Object.hasOwn(KD, DD) ? KD[DD] : null
     }
 
-    function wm(mm, Tm, fm) {
-      return Math.min(fm, Math.max(Tm, mm))
+    function LD(DD, zD, wD) {
+      return Math.min(wD, Math.max(zD, DD))
     }
 
-    function Dm(mm) {
-      const Tm = wm(mm.durationMs, 10, 500),
-        fm = wm(mm.attackMs, 0, Tm),
+    function cD(DD) {
+      const zD = LD(DD.durationMs, 10, 500),
+        wD = LD(DD.attackMs, 0, zD),
         {
-          intonation: Am
-        } = mm;
+          intonation: sD
+        } = DD;
       return {
-        waveform: hm.includes(mm.waveform) ? mm.waveform : "sine",
-        pitchHz: wm(mm.pitchHz, 20, 4e3),
-        glideSemitones: wm(mm.glideSemitones, -24, 24),
-        durationMs: Tm,
-        attackMs: fm,
-        releaseMs: wm(mm.releaseMs, 0, Tm - fm),
-        lowpassHz: null === mm.lowpassHz ? null : wm(mm.lowpassHz, 20, 2e4),
-        volume: wm(mm.volume, 0, 2),
+        waveform: pD.includes(DD.waveform) ? DD.waveform : "sine",
+        pitchHz: LD(DD.pitchHz, 20, 4e3),
+        glideSemitones: LD(DD.glideSemitones, -24, 24),
+        durationMs: zD,
+        attackMs: wD,
+        releaseMs: LD(DD.releaseMs, 0, zD - wD),
+        lowpassHz: null === DD.lowpassHz ? null : LD(DD.lowpassHz, 20, 2e4),
+        volume: LD(DD.volume, 0, 2),
         intonation: {
-          variationSemitones: wm(Am.variationSemitones, 0, 6),
-          declineSemitones: wm(Am.declineSemitones, 0, 12),
-          questionRiseSemitones: wm(Am.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: wm(Am.exclaimLiftSemitones, 0, 12)
+          variationSemitones: LD(sD.variationSemitones, 0, 6),
+          declineSemitones: LD(sD.declineSemitones, 0, 12),
+          questionRiseSemitones: LD(sD.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: LD(sD.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: wm(mm.syllableMs, 25, 200)
+        syllableMs: LD(DD.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

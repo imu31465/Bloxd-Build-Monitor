@@ -1,28 +1,28 @@
 export const id = 360;
 export const ids = [360];
 export const modules = {
-  61431: (mm, Tm, fm) => {
-    function hm(mm) {
-      return mm.features.has("timestamp-query")
+  61123: (DD, zD, wD) => {
+    function pD(DD) {
+      return DD.features.has("timestamp-query")
     }
 
-    function Am(mm) {
-      return hm(mm) ? {
-        device: mm,
-        markerPipeline: mm.createComputePipeline({
+    function sD(DD) {
+      return pD(DD) ? {
+        device: DD,
+        markerPipeline: DD.createComputePipeline({
           layout: "auto",
           compute: {
-            module: mm.createShaderModule({
+            module: DD.createShaderModule({
               code: "@compute @workgroup_size(1) fn main() {}"
             }),
             entryPoint: "main"
           }
         }),
-        querySet: mm.createQuerySet({
+        querySet: DD.createQuerySet({
           type: "timestamp",
           count: 2
         }),
-        resolveBuf: mm.createBuffer({
+        resolveBuf: DD.createBuffer({
           size: 16,
           usage: GPUBufferUsage.QUERY_RESOLVE | GPUBufferUsage.COPY_SRC
         }),
@@ -32,57 +32,57 @@ export const modules = {
       } : null
     }
 
-    function am(mm, Tm) {
-      const fm = Tm.beginComputePass({
+    function KD(DD, zD) {
+      const wD = zD.beginComputePass({
         timestampWrites: {
-          querySet: mm.querySet,
+          querySet: DD.querySet,
           beginningOfPassWriteIndex: 0
         }
       });
-      fm.setPipeline(mm.markerPipeline), fm.dispatchWorkgroups(1), fm.end()
+      wD.setPipeline(DD.markerPipeline), wD.dispatchWorkgroups(1), wD.end()
     }
 
-    function xm(mm, Tm) {
-      const fm = Tm.beginComputePass({
+    function rD(DD, zD) {
+      const wD = zD.beginComputePass({
         timestampWrites: {
-          querySet: mm.querySet,
+          querySet: DD.querySet,
           endOfPassWriteIndex: 1
         }
       });
-      fm.setPipeline(mm.markerPipeline), fm.dispatchWorkgroups(1), fm.end()
+      wD.setPipeline(DD.markerPipeline), wD.dispatchWorkgroups(1), wD.end()
     }
 
-    function wm(mm) {
-      if (mm.inFlight > 3) return;
-      const Tm = mm.device,
-        fm = mm.pool.pop() ?? Tm.createBuffer({
+    function LD(DD) {
+      if (DD.inFlight > 3) return;
+      const zD = DD.device,
+        wD = DD.pool.pop() ?? zD.createBuffer({
           size: 16,
           usage: GPUBufferUsage.COPY_DST | GPUBufferUsage.MAP_READ
         }),
-        hm = Tm.createCommandEncoder();
-      hm.resolveQuerySet(mm.querySet, 0, 2, mm.resolveBuf, 0), hm.copyBufferToBuffer(mm.resolveBuf, 0, fm, 0, 16), Tm.queue.submit([hm.finish()]), mm.inFlight++, fm.mapAsync(GPUMapMode.READ).then((() => {
-        const Tm = new BigInt64Array(fm.getMappedRange()),
-          hm = Number(Tm[1] - Tm[0]) / 1e6;
-        hm >= 0 && hm < 5e3 && (mm.lastMs = mm.lastMs > 0 ? .8 * mm.lastMs + .2 * hm : hm), fm.unmap(), mm.pool.push(fm), mm.inFlight--
+        pD = zD.createCommandEncoder();
+      pD.resolveQuerySet(DD.querySet, 0, 2, DD.resolveBuf, 0), pD.copyBufferToBuffer(DD.resolveBuf, 0, wD, 0, 16), zD.queue.submit([pD.finish()]), DD.inFlight++, wD.mapAsync(GPUMapMode.READ).then((() => {
+        const zD = new BigInt64Array(wD.getMappedRange()),
+          pD = Number(zD[1] - zD[0]) / 1e6;
+        pD >= 0 && pD < 5e3 && (DD.lastMs = DD.lastMs > 0 ? .8 * DD.lastMs + .2 * pD : pD), wD.unmap(), DD.pool.push(wD), DD.inFlight--
       }), (() => {
-        mm.inFlight--
+        DD.inFlight--
       }))
     }
 
-    function Dm(mm) {
-      mm.querySet.destroy(), mm.resolveBuf.destroy();
-      for (const Tm of mm.pool) Tm.destroy();
-      mm.pool.length = 0
+    function cD(DD) {
+      DD.querySet.destroy(), DD.resolveBuf.destroy();
+      for (const zD of DD.pool) zD.destroy();
+      DD.pool.length = 0
     }
-    fm.r(Tm), fm.d(Tm, {
-      createGpuFrameTimer: () => Am,
-      destroyGpuFrameTimer: () => Dm,
-      gpuFrameTimerBegin: () => am,
-      gpuFrameTimerEnd: () => xm,
-      gpuFrameTimerResolve: () => wm,
-      gpuTimingSupportedFor: () => hm
+    wD.r(zD), wD.d(zD, {
+      createGpuFrameTimer: () => sD,
+      destroyGpuFrameTimer: () => cD,
+      gpuFrameTimerBegin: () => KD,
+      gpuFrameTimerEnd: () => rD,
+      gpuFrameTimerResolve: () => LD,
+      gpuTimingSupportedFor: () => pD
     })
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

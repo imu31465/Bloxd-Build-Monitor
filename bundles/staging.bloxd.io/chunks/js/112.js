@@ -1,530 +1,530 @@
 export const id = 112;
 export const ids = [112];
 export const modules = {
-  4993: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => Rm,
-      h: () => im
+  5091: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => RD,
+      h: () => gD
     });
-    var hm = fm(59),
-      Am = fm(1454),
-      am = fm(1208),
-      xm = fm(105),
-      wm = fm(3139),
-      Dm = fm(1135);
+    var pD = wD(58),
+      sD = wD(1447),
+      KD = wD(1200),
+      rD = wD(103),
+      LD = wD(3128),
+      cD = wD(1096);
 
-    function im() {
-      return !(0, xm.isMobile)()
+    function gD() {
+      return !(0, rD.isMobile)()
     }
 
-    function Rm(mm) {
+    function RD(DD) {
       let {
-        disabled: Tm,
-        openFolderPicker: fm,
-        onFiles: xm
-      } = mm;
+        disabled: zD,
+        openFolderPicker: wD,
+        onFiles: rD
+      } = DD;
       const {
-        t: Rm
-      } = (0, am.A)(), pm = (0, hm.useRef)(null);
-      return (0, Dm.jsxs)("div", {
+        t: RD
+      } = (0, KD.E)(), AD = (0, pD.useRef)(null);
+      return (0, cD.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, Dm.jsx)("input", {
-          ref: pm,
+        children: [(0, cD.jsx)("input", {
+          ref: AD,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(mm) {
-            const Tm = Array.from(mm.target.files);
-            mm.target.value = "", xm(Tm)
+          onChange: function(DD) {
+            const zD = Array.from(DD.target.files);
+            DD.target.value = "", rD(zD)
           }
-        }), im() && (0, Dm.jsx)(Am.e, {
-          disabled: Tm,
-          onClick: fm,
-          children: Rm("general:chooseFolder")
-        }), (0, Dm.jsx)(Am.e, {
-          disabled: Tm,
+        }), gD() && (0, cD.jsx)(sD.f, {
+          disabled: zD,
+          onClick: wD,
+          children: RD("general:chooseFolder")
+        }), (0, cD.jsx)(sD.f, {
+          disabled: zD,
           onClick: () => {
-            (0, wm.e)(pm.current)
+            (0, LD.e)(AD.current)
           },
-          children: Rm("general:chooseZip")
+          children: RD("general:chooseZip")
         })]
       })
     }
   },
-  4980: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => wm,
-      f: () => xm,
-      j: () => am
+  5070: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => LD,
+      g: () => rD,
+      i: () => KD
     });
-    var hm = fm(4985);
-    const Am = [mm => mm.strict ? "strict" : "nonStrict", mm => mm.program];
+    var pD = wD(5076);
+    const sD = [DD => DD.strict ? "strict" : "nonStrict", DD => DD.program];
 
-    function am(mm, Tm) {
-      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const hm = {};
-      for (const Am in fm) hm[Am] = `\0${Am}\0`;
-      return mm(Tm, hm).replace(/\0(\w+)\0/g, ((mm, Tm) => fm[Tm]))
+    function KD(DD, zD) {
+      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const pD = {};
+      for (const sD in wD) pD[sD] = `\0${sD}\0`;
+      return DD(zD, pD).replace(/\0(\w+)\0/g, ((DD, zD) => wD[zD]))
     }
 
-    function xm(mm) {
-      return null === mm.file ? null : mm.line > 0 ? `${mm.file}:${mm.line}` : mm.file
+    function rD(DD) {
+      return null === DD.file ? null : DD.line > 0 ? `${DD.file}:${DD.line}` : DD.file
     }
 
-    function wm(mm) {
-      const Tm = new Map(mm.map((mm => [Dm(mm).join("."), mm])));
-      if (0 === Tm.size) return [];
-      const fm = Rm([...Tm.values()]);
-      return 0 === fm[0].length ? [] : fm
+    function LD(DD) {
+      const zD = new Map(DD.map((DD => [cD(DD).join("."), DD])));
+      if (0 === zD.size) return [];
+      const wD = RD([...zD.values()]);
+      return 0 === wD[0].length ? [] : wD
     }
 
-    function Dm(mm) {
-      return Am.map((Tm => Tm(mm)))
+    function cD(DD) {
+      return sD.map((zD => zD(DD)))
     }
-    const im = Am.map((mm => new Set(hm.d.map(mm)).size));
+    const gD = sD.map((DD => new Set(pD.d.map(DD)).size));
 
-    function Rm(mm) {
-      const Tm = Am.map((Tm => new Set(mm.map(Tm)))),
-        fm = Tm.reduce(((mm, Tm) => mm * Tm.size), 1),
-        hm = Tm.every(((mm, Tm) => 1 === mm.size || mm.size === im[Tm]));
-      if (fm === mm.length && hm) return [Am.filter(((mm, fm) => 1 === Tm[fm].size)).map((Tm => Tm(mm[0])))];
-      let am = null;
-      for (let xm = 0; xm < Am.length; xm++) {
-        if (1 === Tm[xm].size) continue;
-        const fm = pm(mm, Am[xm]).flatMap(Rm);
-        (null === am || fm.length < am.length) && (am = fm)
+    function RD(DD) {
+      const zD = sD.map((zD => new Set(DD.map(zD)))),
+        wD = zD.reduce(((DD, zD) => DD * zD.size), 1),
+        pD = zD.every(((DD, zD) => 1 === DD.size || DD.size === gD[zD]));
+      if (wD === DD.length && pD) return [sD.filter(((DD, wD) => 1 === zD[wD].size)).map((zD => zD(DD[0])))];
+      let KD = null;
+      for (let rD = 0; rD < sD.length; rD++) {
+        if (1 === zD[rD].size) continue;
+        const wD = AD(DD, sD[rD]).flatMap(RD);
+        (null === KD || wD.length < KD.length) && (KD = wD)
       }
-      return am
+      return KD
     }
 
-    function pm(mm, Tm) {
-      const fm = new Map;
-      for (const Am of mm) {
-        var hm;
-        const mm = Tm(Am);
-        fm.set(mm, [...null !== (hm = fm.get(mm)) && void 0 !== hm ? hm : [], Am])
+    function AD(DD, zD) {
+      const wD = new Map;
+      for (const sD of DD) {
+        var pD;
+        const DD = zD(sD);
+        wD.set(DD, [...null !== (pD = wD.get(DD)) && void 0 !== pD ? pD : [], sD])
       }
-      return [...fm.values()]
+      return [...wD.values()]
     }
   },
-  6547: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      ShaderPackPublishForm: () => Im
+  6624: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      ShaderPackPublishForm: () => MD
     });
-    var hm = fm(59),
-      Am = fm(6509),
-      am = fm(201),
-      xm = fm(4989),
-      wm = fm(1089),
-      Dm = fm(1454),
-      im = fm(1676),
-      Rm = fm(1160),
-      pm = fm(6552),
-      Em = fm(6555),
-      om = fm(1494),
-      Om = fm(1208),
-      Ym = fm(6562),
-      qm = fm(6595),
-      jm = fm(6507),
-      Vm = fm(1135);
+    var pD = wD(58),
+      sD = wD(6594),
+      KD = wD(206),
+      rD = wD(5084),
+      LD = wD(1057),
+      cD = wD(1447),
+      gD = wD(1687),
+      RD = wD(1127),
+      AD = wD(6630),
+      UD = wD(6637),
+      fD = wD(1495),
+      ID = wD(1200),
+      BD = wD(6645),
+      GD = wD(6682),
+      hD = wD(6590),
+      nD = wD(1096);
 
-    function Im(mm) {
-      var Tm, fm, pm;
+    function MD(DD) {
+      var zD, wD, AD;
       let {
-        existing: Im,
-        onPublished: Qm
-      } = mm;
+        existing: MD,
+        onPublished: JD
+      } = DD;
       const {
-        t: Jm
-      } = (0, Om.A)(), {
-        userContext: cm,
-        isUserContextUpdating: zm
-      } = (0, Rm.e)(), [Zm, km] = (0, hm.useState)(null), [bm, Sm] = (0, hm.useState)(0), [em, Nm] = (0, hm.useState)(null !== (Tm = null === Im || void 0 === Im ? void 0 : Im.name) && void 0 !== Tm ? Tm : ""), Gm = (0, hm.useRef)(em), Xm = (0, hm.useRef)(""), Pm = mm => {
-        Gm.current = mm, Nm(mm)
-      }, [Hm, ym] = (0, hm.useState)(null !== (fm = null === Im || void 0 === Im ? void 0 : Im.description) && void 0 !== fm ? fm : ""), Cm = (0, hm.useRef)(Hm), rm = (0, hm.useRef)(""), sm = mm => {
-        Cm.current = mm, ym(mm)
-      }, [lm, Mm] = (0, hm.useState)(!1), {
-        loading: um,
-        error: Bm,
-        setError: Lm,
-        onFiles: tm
-      } = (0, Em.f)((async mm => {
-        const Tm = await (0, Ym.loadPageShaderPackCompiler)();
-        if (!Tm) return void Lm(Jm("shaderPack:compilerUnavailable"));
-        const fm = await (0, qm.f)(Tm, mm.files);
-        if (km({
-            pack: mm,
-            validation: fm,
-            sourceBytes: (0, xm.t)(mm.files)
-          }), !Im) {
-          var hm;
-          if ("" !== Gm.current.trim() && Gm.current !== Xm.current || (Xm.current = (0, Am.X)(mm.manifest.name.trim(), Am.D), Pm(Xm.current)), "" === Cm.current.trim() || Cm.current === rm.current) rm.current = (0, Am.X)((null !== (hm = mm.manifest.description) && void 0 !== hm ? hm : "").trim(), Am.r), sm(rm.current);
-          Sm((mm => mm + 1))
+        t: QD
+      } = (0, ID.E)(), {
+        userContext: XD,
+        isUserContextUpdating: VD
+      } = (0, RD.c)(), [PD, CD] = (0, pD.useState)(null), [xD, TD] = (0, pD.useState)(0), [bD, jD] = (0, pD.useState)(null !== (zD = null === MD || void 0 === MD ? void 0 : MD.name) && void 0 !== zD ? zD : ""), dD = (0, pD.useRef)(bD), SD = (0, pD.useRef)(""), iD = DD => {
+        dD.current = DD, jD(DD)
+      }, [lD, WD] = (0, pD.useState)(null !== (wD = null === MD || void 0 === MD ? void 0 : MD.description) && void 0 !== wD ? wD : ""), ND = (0, pD.useRef)(lD), ZD = (0, pD.useRef)(""), yD = DD => {
+        ND.current = DD, WD(DD)
+      }, [kD, mD] = (0, pD.useState)(!1), {
+        loading: eD,
+        error: oD,
+        setError: aD,
+        onFiles: uD
+      } = (0, UD.f)((async DD => {
+        const zD = await (0, BD.loadPageShaderPackCompiler)();
+        if (!zD) return void aD(QD("shaderPack:compilerUnavailable"));
+        const wD = await (0, GD.h)(zD, DD.files);
+        if (CD({
+            pack: DD,
+            validation: wD,
+            sourceBytes: (0, rD.A)(DD.files)
+          }), !MD) {
+          var pD;
+          if ("" !== dD.current.trim() && dD.current !== SD.current || (SD.current = (0, sD.R)(DD.manifest.name.trim(), sD.C), iD(SD.current)), "" === ND.current.trim() || ND.current === ZD.current) ZD.current = (0, sD.R)((null !== (pD = DD.manifest.description) && void 0 !== pD ? pD : "").trim(), sD.p), yD(ZD.current);
+          TD((DD => DD + 1))
         }
-      })), Um = !zm && !cm.isLoggedIn() && !am.e.offlineMode, dm = em.trim(), gm = dm.length < Am.H, Wm = null !== Zm && !1 !== (null === (pm = Zm.validation) || void 0 === pm ? void 0 : pm.ok) && !um && !gm && !Um && !zm;
-      return (0, Vm.jsxs)("div", {
+      })), vD = !VD && !XD.isLoggedIn() && !KD.e.offlineMode, tD = bD.trim(), FD = tD.length < sD.G, YD = null !== PD && !1 !== (null === (AD = PD.validation) || void 0 === AD ? void 0 : AD.ok) && !eD && !FD && !vD && !VD;
+      return (0, nD.jsxs)("div", {
         className: "ShaderPackPublishForm",
-        children: [(0, Vm.jsx)("p", {
+        children: [(0, nD.jsx)("p", {
           className: "ShaderPackPublishIntro",
-          children: Im ? Jm("shaderPackListing:uploadIntro", {
-            minutes: String(Am.L / 6e4)
-          }) : Jm("shaderPackListing:publishIntro")
-        }), (0, Vm.jsx)(nm, {}), Um && (0, Vm.jsx)("div", {
+          children: MD ? QD("shaderPackListing:uploadIntro", {
+            minutes: String(sD.I / 6e4)
+          }) : QD("shaderPackListing:publishIntro")
+        }), (0, nD.jsx)(ED, {}), vD && (0, nD.jsx)("div", {
           className: "ShaderPackPublishNote Warning",
-          children: Jm("shaderPackListing:publishNeedsLogin")
-        }), (0, Vm.jsx)(Em.c, {
-          busy: um,
-          disabled: um || lm,
-          onFiles: mm => {
-            km(null), tm(mm)
+          children: QD("shaderPackListing:publishNeedsLogin")
+        }), (0, nD.jsx)(UD.e, {
+          busy: eD,
+          disabled: eD || kD,
+          onFiles: DD => {
+            CD(null), uD(DD)
           }
-        }), Zm && (0, Vm.jsxs)("div", {
+        }), PD && (0, nD.jsxs)("div", {
           className: "ShaderPackPublishSummary",
-          children: [(0, Vm.jsx)("div", {
+          children: [(0, nD.jsx)("div", {
             className: "ShaderPackPublishPackName",
-            children: Zm.pack.manifest.name
-          }), (0, Vm.jsxs)("div", {
+            children: PD.pack.manifest.name
+          }), (0, nD.jsxs)("div", {
             className: "ShaderPackPublishPackSize",
-            children: [Jm("shaderPackListing:sizeValue", {
-              kilobytes: String((0, jm.N)(Zm.sourceBytes))
-            }), " \xb7", " ", Jm("shaderPackListing:filesValue", {
-              files: String(Zm.pack.files.length)
+            children: [QD("shaderPackListing:sizeValue", {
+              kilobytes: String((0, hD.L)(PD.sourceBytes))
+            }), " \xb7", " ", QD("shaderPackListing:filesValue", {
+              files: String(PD.pack.files.length)
             })]
-          }), (0, Vm.jsx)(Km, {
-            picked: Zm
+          }), (0, nD.jsx)(OD, {
+            picked: PD
           })]
-        }), !Im && (0, Vm.jsxs)(Vm.Fragment, {
-          children: [(0, Vm.jsxs)("label", {
+        }), !MD && (0, nD.jsxs)(nD.Fragment, {
+          children: [(0, nD.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, Vm.jsx)("span", {
-              children: Jm("general:name")
-            }), (0, Vm.jsx)(im.e, {
+            children: [(0, nD.jsx)("span", {
+              children: QD("general:name")
+            }), (0, nD.jsx)(gD.e, {
               className: "ShaderPackPublishInput",
-              defaultValue: em,
-              maxLength: Am.D,
-              onValueChange: Pm
-            }, bm), Zm && gm && (0, Vm.jsx)("span", {
+              defaultValue: bD,
+              maxLength: sD.C,
+              onValueChange: iD
+            }, xD), PD && FD && (0, nD.jsx)("span", {
               className: "ShaderPackPublishHint",
-              children: Jm("shaderPackListing:nameTooShort", {
-                min: String(Am.H)
+              children: QD("shaderPackListing:nameTooShort", {
+                min: String(sD.G)
               })
             })]
-          }), (0, Vm.jsxs)("label", {
+          }), (0, nD.jsxs)("label", {
             className: "ShaderPackPublishField",
-            children: [(0, Vm.jsx)("span", {
-              children: Jm("general:description")
-            }), (0, Vm.jsx)(im.e, {
+            children: [(0, nD.jsx)("span", {
+              children: QD("general:description")
+            }), (0, nD.jsx)(gD.e, {
               className: "ShaderPackPublishInput ShaderPackPublishDescription",
-              defaultValue: Hm,
-              maxLength: Am.r,
-              onValueChange: sm,
+              defaultValue: lD,
+              maxLength: sD.p,
+              onValueChange: yD,
               useTextarea: !0
-            }, bm)]
+            }, xD)]
           })]
-        }), Bm && (0, Vm.jsx)("div", {
+        }), oD && (0, nD.jsx)("div", {
           className: "ShaderPackPublishNote Error",
-          children: Bm
-        }), (0, Vm.jsxs)(Dm.m, {
+          children: oD
+        }), (0, nD.jsxs)(cD.o, {
           className: "ShaderPackPublishButton",
-          disabled: !Wm,
-          loading: lm,
+          disabled: !YD,
+          loading: kD,
           onClick: () => {
             !async function() {
-              var mm;
-              if (!Zm) return;
+              var DD;
+              if (!PD) return;
               const {
-                name: Tm,
-                description: fm
-              } = null !== Im && void 0 !== Im ? Im : {
-                name: dm,
-                description: Hm.trim()
-              }, hm = {
-                packId: null !== (mm = null === Im || void 0 === Im ? void 0 : Im.packId) && void 0 !== mm ? mm : null,
-                name: Tm,
-                description: fm,
-                apiVersion: Zm.pack.manifest.apiVersion,
-                files: (0, xm.r)(Zm.pack.files),
-                keepCircleShadows: !0 === Zm.pack.manifest.keepCircleShadows
+                name: zD,
+                description: wD
+              } = null !== MD && void 0 !== MD ? MD : {
+                name: tD,
+                description: lD.trim()
+              }, pD = {
+                packId: null !== (DD = null === MD || void 0 === MD ? void 0 : MD.packId) && void 0 !== DD ? DD : null,
+                name: zD,
+                description: wD,
+                apiVersion: PD.pack.manifest.apiVersion,
+                files: (0, rD.z)(PD.pack.files),
+                keepCircleShadows: !0 === PD.pack.manifest.keepCircleShadows
               };
-              if ((new TextEncoder).encode(JSON.stringify(hm)).byteLength > 1024 * Am.V) Lm(Jm("shaderPackListing:publishTooBig", {
-                kilobytes: String(Am.V)
+              if ((new TextEncoder).encode(JSON.stringify(pD)).byteLength > 1024 * sD.N) aD(QD("shaderPackListing:publishTooBig", {
+                kilobytes: String(sD.N)
               }));
               else {
-                Mm(!0), Lm(null);
+                mD(!0), aD(null);
                 try {
-                  Qm(await om.d.publishShaderPack(cm, hm))
-                } catch (am) {
-                  console.error("Failed to publish the shader pack", am), Lm((0, jm.x)(am, Jm, "shaderPackListing:publishFailed"))
+                  JD(await fD.d.publishShaderPack(XD, pD))
+                } catch (KD) {
+                  console.error("Failed to publish the shader pack", KD), aD((0, hD.u)(KD, QD, "shaderPackListing:publishFailed"))
                 } finally {
-                  Mm(!1)
+                  mD(!1)
                 }
               }
             }()
           },
-          children: [(0, Vm.jsx)(wm.c, {
+          children: [(0, nD.jsx)(LD.e, {
             name: "upload"
-          }), " ", Jm(Im ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
+          }), " ", QD(MD ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
         })]
       })
     }
 
-    function Km(mm) {
+    function OD(DD) {
       let {
-        picked: Tm
-      } = mm;
+        picked: zD
+      } = DD;
       const {
-        t: fm
-      } = (0, Om.A)(), {
-        validation: hm
-      } = Tm;
-      return null === hm ? (0, Vm.jsx)("div", {
+        t: wD
+      } = (0, ID.E)(), {
+        validation: pD
+      } = zD;
+      return null === pD ? (0, nD.jsx)("div", {
         className: "ShaderPackPublishNote",
-        children: fm("shaderPackListing:publishUnchecked")
-      }) : hm.ok ? (0, Vm.jsxs)(Vm.Fragment, {
-        children: [(0, Vm.jsxs)("div", {
+        children: wD("shaderPackListing:publishUnchecked")
+      }) : pD.ok ? (0, nD.jsxs)(nD.Fragment, {
+        children: [(0, nD.jsxs)("div", {
           className: "ShaderPackPublishNote Ready",
-          children: [(0, Vm.jsx)(wm.c, {
+          children: [(0, nD.jsx)(LD.e, {
             name: "circle-check"
-          }), " ", fm("shaderPackListing:publishReady")]
-        }), hm.offInStrict.length > 0 && (0, Vm.jsxs)(Vm.Fragment, {
-          children: [(0, Vm.jsxs)("div", {
+          }), " ", wD("shaderPackListing:publishReady")]
+        }), pD.offInStrict.length > 0 && (0, nD.jsxs)(nD.Fragment, {
+          children: [(0, nD.jsxs)("div", {
             className: "ShaderPackPublishNote Warning",
-            children: [(0, Vm.jsx)(wm.c, {
+            children: [(0, nD.jsx)(LD.e, {
               name: "triangle-exclamation"
-            }), " ", fm("shaderPack:offInStrict")]
-          }), (0, Vm.jsx)(pm.c, {
-            diagnostics: hm.offInStrict,
-            t: fm
+            }), " ", wD("shaderPack:offInStrict")]
+          }), (0, nD.jsx)(AD.b, {
+            diagnostics: pD.offInStrict,
+            t: wD
           })]
         })]
-      }) : (0, Vm.jsxs)(Vm.Fragment, {
-        children: [(0, Vm.jsxs)("div", {
+      }) : (0, nD.jsxs)(nD.Fragment, {
+        children: [(0, nD.jsxs)("div", {
           className: "ShaderPackPublishNote Error",
-          children: [(0, Vm.jsx)(wm.c, {
+          children: [(0, nD.jsx)(LD.e, {
             name: "triangle-exclamation"
-          }), " ", fm("shaderPackListing:publishHasErrors")]
-        }), (0, Vm.jsx)(pm.c, {
-          diagnostics: hm.errors,
-          more: hm.moreErrors,
-          t: fm
+          }), " ", wD("shaderPackListing:publishHasErrors")]
+        }), (0, nD.jsx)(AD.b, {
+          diagnostics: pD.errors,
+          more: pD.moreErrors,
+          t: wD
         })]
       })
     }
-    const Qm = "\0";
+    const JD = "\0";
 
-    function nm() {
+    function ED() {
       const {
-        t: mm
-      } = (0, Om.A)(), [Tm, fm] = mm("shaderPackListing:bloxdhubHelp", {
-        site: Qm
-      }).split(Qm);
-      return (0, Vm.jsxs)("p", {
+        t: DD
+      } = (0, ID.E)(), [zD, wD] = DD("shaderPackListing:bloxdhubHelp", {
+        site: JD
+      }).split(JD);
+      return (0, nD.jsxs)("p", {
         className: "ShaderPackPublishIntro",
-        children: [Tm, (0, Vm.jsx)("a", {
+        children: [zD, (0, nD.jsx)("a", {
           className: "ShaderPackPublishLink",
-          href: Am.k,
+          href: sD.g,
           target: "_blank",
           rel: "noopener noreferrer",
-          children: Am.e
-        }), fm]
+          children: sD.d
+        }), wD]
       })
     }
   },
-  4985: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => hm.d,
-      d: () => Am,
-      e: () => hm.l
+  5076: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => pD.i,
+      d: () => sD,
+      h: () => pD.q
     });
-    var hm = fm(4989);
-    const Am = [!1, !0].flatMap((mm => ["terrain", "liquid", "model"].map((Tm => ({
-      strict: mm,
-      program: Tm
+    var pD = wD(5084);
+    const sD = [!1, !0].flatMap((DD => ["terrain", "liquid", "model"].map((zD => ({
+      strict: DD,
+      program: zD
     })))))
   },
-  4989: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => wm,
-      c: () => xm,
-      d: () => hm,
-      g: () => Ym,
-      i: () => pm,
-      l: () => Am,
-      o: () => am,
-      q: () => im,
-      r: () => Rm,
-      t: () => Em
+  5084: (DD, zD, wD) => {
+    wD.d(zD, {
+      A: () => UD,
+      d: () => LD,
+      e: () => rD,
+      i: () => pD,
+      m: () => BD,
+      n: () => AD,
+      q: () => sD,
+      r: () => KD,
+      v: () => gD,
+      z: () => RD
     });
-    const hm = 5;
+    const pD = 5;
 
-    function Am(mm) {
-      return mm === hm
+    function sD(DD) {
+      return DD === pD
     }
 
-    function am(mm) {
-      return [...mm.features]
+    function KD(DD) {
+      return [...DD.features]
     }
-    const xm = 262144,
-      wm = 256,
-      Dm = 256;
+    const rD = 262144,
+      LD = 256,
+      cD = 256;
 
-    function im(mm) {
-      if ("object" !== typeof mm || null === mm || Array.isArray(mm)) return "The pack has no files.";
-      const Tm = [];
-      for (const [fm, hm] of Object.entries(mm)) {
-        if ("string" !== typeof hm) return `${fm} isn't text.`;
-        Tm.push({
-          path: fm,
-          source: hm
+    function gD(DD) {
+      if ("object" !== typeof DD || null === DD || Array.isArray(DD)) return "The pack has no files.";
+      const zD = [];
+      for (const [wD, pD] of Object.entries(DD)) {
+        if ("string" !== typeof pD) return `${wD} isn't text.`;
+        zD.push({
+          path: wD,
+          source: pD
         })
       }
-      return Tm.sort(((mm, Tm) => pm(mm.path, Tm.path))),
-        function(mm) {
-          if (0 === mm.length) return "The pack has no .wgsl files.";
-          if (mm.length > wm) return `The pack has more than ${wm} .wgsl files.`;
-          const Tm = new Set;
+      return zD.sort(((DD, zD) => AD(DD.path, zD.path))),
+        function(DD) {
+          if (0 === DD.length) return "The pack has no .wgsl files.";
+          if (DD.length > LD) return `The pack has more than ${LD} .wgsl files.`;
+          const zD = new Set;
           for (const {
-              path: fm
+              path: wD
             }
-            of mm) {
-            const mm = om(fm);
-            if (null !== mm) return mm;
-            if (Tm.has(fm)) return `The pack has two files at ${fm}.`;
-            Tm.add(fm)
+            of DD) {
+            const DD = fD(wD);
+            if (null !== DD) return DD;
+            if (zD.has(wD)) return `The pack has two files at ${wD}.`;
+            zD.add(wD)
           }
-          return Em(mm) > xm ? `The pack's .wgsl files are over ${xm/1024} KB in total.` : null
-        }(Tm) ?? Tm
+          return UD(DD) > rD ? `The pack's .wgsl files are over ${rD/1024} KB in total.` : null
+        }(zD) ?? zD
     }
 
-    function Rm(mm) {
-      const Tm = {};
-      for (const fm of mm) Tm[fm.path] = fm.source;
-      return Tm
+    function RD(DD) {
+      const zD = {};
+      for (const wD of DD) zD[wD.path] = wD.source;
+      return zD
     }
 
-    function pm(mm, Tm) {
-      return mm < Tm ? -1 : mm > Tm ? 1 : 0
+    function AD(DD, zD) {
+      return DD < zD ? -1 : DD > zD ? 1 : 0
     }
 
-    function Em(mm) {
-      const Tm = new TextEncoder;
-      let fm = 0;
+    function UD(DD) {
+      const zD = new TextEncoder;
+      let wD = 0;
       for (const {
-          source: hm
+          source: pD
         }
-        of mm) fm += Tm.encode(hm).byteLength;
-      return fm
+        of DD) wD += zD.encode(pD).byteLength;
+      return wD
     }
 
-    function om(mm) {
-      if (!mm.toLowerCase().endsWith(".wgsl")) return `${mm} isn't a .wgsl file.`;
-      if (mm.length > Dm) return `A file path is over ${Dm} characters.`;
-      if (mm.includes("\\") || /[\u0000-\u001f]/.test(mm)) return `${mm} isn't a valid file path.`;
-      return mm.split("/").some((mm => "" === mm || "." === mm || ".." === mm)) ? `${mm} isn't a valid file path.` : null
+    function fD(DD) {
+      if (!DD.toLowerCase().endsWith(".wgsl")) return `${DD} isn't a .wgsl file.`;
+      if (DD.length > cD) return `A file path is over ${cD} characters.`;
+      if (DD.includes("\\") || /[\u0000-\u001f]/.test(DD)) return `${DD} isn't a valid file path.`;
+      return DD.split("/").some((DD => "" === DD || "." === DD || ".." === DD)) ? `${DD} isn't a valid file path.` : null
     }
-    const Om = /^(.*)\[rot\[([1-4])$/;
+    const ID = /^(.*)\[rot\[([1-4])$/;
 
-    function Ym(mm, Tm) {
-      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const hm = new Map;
-      Tm.forEach(((mm, Tm) => {
+    function BD(DD, zD) {
+      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const pD = new Map;
+      zD.forEach(((DD, zD) => {
         let {
-          numAnimStates: fm,
-          animStartIdx: Am
-        } = mm;
-        for (let am = 1; am < fm; am++) hm.set(Am + am - 1, Tm)
+          numAnimStates: wD,
+          animStartIdx: sD
+        } = DD;
+        for (let KD = 1; KD < wD; KD++) pD.set(sD + KD - 1, zD)
       }));
-      const Am = Object.entries(mm),
-        am = new Map;
-      for (const [Ym, qm] of Am) {
-        const mm = Om.exec(Ym);
-        "1" === mm?.[2] && am.set(mm[1], qm + 1)
+      const sD = Object.entries(DD),
+        KD = new Map;
+      for (const [BD, GD] of sD) {
+        const DD = ID.exec(BD);
+        "1" === DD?.[2] && KD.set(DD[1], GD + 1)
       }
-      const xm = mm => {
-          const Tm = Om.exec(mm);
-          return Tm && am.has(Tm[1]) ? {
-            root: Tm[1],
-            rotation: Number(Tm[2]) - 1
+      const rD = DD => {
+          const zD = ID.exec(DD);
+          return zD && KD.has(zD[1]) ? {
+            root: zD[1],
+            rotation: Number(zD[2]) - 1
           } : null
         },
-        wm = new Set(Am.map((mm => {
-          let [Tm] = mm;
-          return xm(Tm)?.root ?? Tm
+        LD = new Set(sD.map((DD => {
+          let [zD] = DD;
+          return rD(zD)?.root ?? zD
         }))),
-        Dm = (mm, fm) => {
-          const hm = mm.replace(/_?0$/, "");
-          return (Tm[fm]?.numAnimStates ?? 0) > 1 && !wm.has(hm) ? hm : mm
+        cD = (DD, wD) => {
+          const pD = DD.replace(/_?0$/, "");
+          return (zD[wD]?.numAnimStates ?? 0) > 1 && !LD.has(pD) ? pD : DD
         },
-        im = new Map;
-      for (const [Om, Ym] of Am) im.set(Ym, Dm(xm(Om)?.root ?? Om, Ym));
-      const Rm = Am.reduce(((mm, Tm) => {
-          let [, fm] = Tm;
-          return Math.max(mm, fm + 1)
+        gD = new Map;
+      for (const [ID, BD] of sD) gD.set(BD, cD(rD(ID)?.root ?? ID, BD));
+      const RD = sD.reduce(((DD, zD) => {
+          let [, wD] = zD;
+          return Math.max(DD, wD + 1)
         }), 0),
-        pm = Array.from({
-          length: Rm
-        }, ((mm, Tm) => ({
-          id: Tm + 1,
+        AD = Array.from({
+          length: RD
+        }, ((DD, zD) => ({
+          id: zD + 1,
           rotation: 0
         }))),
-        Em = new Map,
-        om = new Map;
-      for (const [Om, Ym] of Am) {
-        const mm = xm(Om),
-          Tm = hm.get(Ym);
-        if (void 0 !== Tm) {
-          const fm = im.get(Tm);
-          om.set(Om, {
-            name: Om,
-            texture: fm,
+        UD = new Map,
+        fD = new Map;
+      for (const [ID, BD] of sD) {
+        const DD = rD(ID),
+          zD = pD.get(BD);
+        if (void 0 !== zD) {
+          const wD = gD.get(zD);
+          fD.set(ID, {
+            name: ID,
+            texture: wD,
             kind: "frame"
-          }), mm && !om.has(mm.root) && om.set(mm.root, {
-            name: mm.root,
-            texture: fm,
+          }), DD && !fD.has(DD.root) && fD.set(DD.root, {
+            name: DD.root,
+            texture: wD,
             kind: "frame"
           });
           continue
         }
-        const fm = im.get(Ym),
-          Am = mm?.root ?? Om;
-        if (fm !== Am && om.set(Am, {
-            name: Am,
-            texture: fm,
+        const wD = gD.get(BD),
+          sD = DD?.root ?? ID;
+        if (wD !== sD && fD.set(sD, {
+            name: sD,
+            texture: wD,
             kind: "frame"
-          }), mm) {
-          const Tm = am.get(mm.root);
-          pm[Ym] = {
-            id: Tm,
-            rotation: mm.rotation
-          }, Em.set(fm, Tm), om.set(Om, {
-            name: Om,
-            texture: fm,
+          }), DD) {
+          const zD = KD.get(DD.root);
+          AD[BD] = {
+            id: zD,
+            rotation: DD.rotation
+          }, UD.set(wD, zD), fD.set(ID, {
+            name: ID,
+            texture: wD,
             kind: "rotation"
           })
-        } else Em.set(fm, Ym + 1)
+        } else UD.set(wD, BD + 1)
       }
-      for (const Om of Em.keys()) om.delete(Om);
-      for (const [Om, Ym] of fm) {
-        const mm = Em.get(Ym);
-        void 0 === mm || Em.has(Om) || (Em.set(Om, mm), om.delete(Om))
+      for (const ID of UD.keys()) fD.delete(ID);
+      for (const [ID, BD] of wD) {
+        const DD = UD.get(BD);
+        void 0 === DD || UD.has(ID) || (UD.set(ID, DD), fD.delete(ID))
       }
       return {
-        named: [...Em].sort(((mm, Tm) => {
-          let [fm] = mm, [hm] = Tm;
-          return fm < hm ? -1 : fm > hm ? 1 : 0
-        })).map((mm => {
-          let [Tm, fm] = mm;
+        named: [...UD].sort(((DD, zD) => {
+          let [wD] = DD, [pD] = zD;
+          return wD < pD ? -1 : wD > pD ? 1 : 0
+        })).map((DD => {
+          let [zD, wD] = DD;
           return {
-            name: Tm,
-            id: fm
+            name: zD,
+            id: wD
           }
         })),
-        aliases: [...om.values()],
-        layers: pm
+        aliases: [...fD.values()],
+        layers: AD
       }
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

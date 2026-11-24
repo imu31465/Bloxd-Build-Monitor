@@ -1,36 +1,36 @@
 export const id = 188;
 export const ids = [188];
 export const modules = {
-  40597: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      FORMER_BLOCK_IMAGE_NAMES: () => hm.e,
-      textureAnimationData: () => Am.x,
-      textureNameToIndex: () => Am.z
+  40415: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      FORMER_BLOCK_IMAGE_NAMES: () => pD.d,
+      textureAnimationData: () => sD.v,
+      textureNameToIndex: () => sD.z
     });
-    var hm = fm(38817),
-      Am = fm(9141)
+    var pD = wD(38698),
+      sD = wD(9198)
   },
-  9240: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => Am,
-      e: () => am
+  9286: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => sD,
+      e: () => KD
     });
-    var hm = fm(9184);
-    const Am = "Air",
-      am = Object.freeze(new hm.g(Am, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var pD = wD(9236);
+    const sD = "Air",
+      KD = Object.freeze(new pD.h(sD, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  38817: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => hm,
-      g: () => Am
+  38698: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => pD,
+      g: () => sD
     });
-    const hm = new Map(["graphite", "football", "torch", "torch_blue", "torch_cyan", "torch_green", "torch_orange", "torch_purple", "torch_red"].map((mm => [mm, `${mm}_block`])));
+    const pD = new Map(["graphite", "football", "torch", "torch_blue", "torch_cyan", "torch_green", "torch_orange", "torch_purple", "torch_red"].map((DD => [DD, `${DD}_block`])));
 
-    function Am(mm) {
-      var Tm;
-      return null !== (Tm = hm.get(mm)) && void 0 !== Tm ? Tm : mm
+    function sD(DD) {
+      var zD;
+      return null !== (zD = pD.get(DD)) && void 0 !== zD ? zD : DD
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

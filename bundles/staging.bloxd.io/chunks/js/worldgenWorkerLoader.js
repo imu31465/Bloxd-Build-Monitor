@@ -1,28 +1,28 @@
 export const id = 71;
 export const ids = [71];
 export const modules = {
-  36487: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => Am
+  36404: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => sD
     });
-    const hm = {
-      wait: function(mm) {
-        return new Promise((Tm => {
-          setTimeout(Tm, mm)
+    const pD = {
+      wait: function(DD) {
+        return new Promise((zD => {
+          setTimeout(zD, DD)
         }))
       },
       stallMs: 2e4
     };
-    class Am {
-      constructor(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : hm;
-        this.url = mm, this.options = Tm, this.timing = fm, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = mm
+    class sD {
+      constructor(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : pD;
+        this.url = DD, this.options = zD, this.timing = wD, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = DD
       }
       ready() {
         if (null === this.fetched) {
-          const mm = new AbortController;
-          this.fetchAbort = mm, this.fetched = this.fetchWithRetries(mm.signal).then((Tm => (this.fetchAbort === mm && (this.fetchAbort = null), Tm)))
+          const DD = new AbortController;
+          this.fetchAbort = DD, this.fetched = this.fetchWithRetries(DD.signal).then((zD => (this.fetchAbort === DD && (this.fetchAbort = null), zD)))
         }
         return this.fetched
       }
@@ -35,81 +35,81 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(mm) {
-        for (let Tm = 0;; Tm++) {
-          const fm = new URL(this.url);
-          if (Tm > 0 && fm.searchParams.set("cache-bust", `${Date.now()}-${Tm}`), await this.fetchWhole(fm, mm)) return this.scriptUrl = fm, !0;
-          if (Tm >= 3 || mm.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** Tm), mm.aborted) return !1
+      async fetchWithRetries(DD) {
+        for (let zD = 0;; zD++) {
+          const wD = new URL(this.url);
+          if (zD > 0 && wD.searchParams.set("cache-bust", `${Date.now()}-${zD}`), await this.fetchWhole(wD, DD)) return this.scriptUrl = wD, !0;
+          if (zD >= 3 || DD.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** zD), DD.aborted) return !1
         }
       }
-      async fetchWhole(mm, Tm) {
-        const fm = new AbortController;
-        let hm;
-        const Am = () => {
-            clearTimeout(hm), hm = setTimeout((() => {
-              fm.abort()
+      async fetchWhole(DD, zD) {
+        const wD = new AbortController;
+        let pD;
+        const sD = () => {
+            clearTimeout(pD), pD = setTimeout((() => {
+              wD.abort()
             }), this.timing.stallMs)
           },
-          am = () => {
-            fm.abort()
+          KD = () => {
+            wD.abort()
           };
-        Tm.addEventListener("abort", am, {
+        zD.addEventListener("abort", KD, {
           once: !0
-        }), Am();
+        }), sD();
         try {
-          var xm;
-          const Tm = await fetch(mm, {
-            signal: fm.signal
+          var rD;
+          const zD = await fetch(DD, {
+            signal: wD.signal
           });
-          if (!Tm.ok) return !1;
-          const hm = null === (xm = Tm.body) || void 0 === xm ? void 0 : xm.getReader();
-          if (!hm) return !1;
+          if (!zD.ok) return !1;
+          const pD = null === (rD = zD.body) || void 0 === rD ? void 0 : rD.getReader();
+          if (!pD) return !1;
           for (;;) {
             const {
-              done: mm
-            } = await hm.read();
-            if (mm) return !0;
-            Am()
+              done: DD
+            } = await pD.read();
+            if (DD) return !0;
+            sD()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(hm), Tm.removeEventListener("abort", am)
+          clearTimeout(pD), zD.removeEventListener("abort", KD)
         }
       }
     }
   },
-  51020: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      createWorldgenWorker: () => im,
-      prefetchWorldgenWorker: () => wm,
-      stopWorldgenWorkerPrefetch: () => Dm,
-      worldgenWorkerReady: () => xm
+  50822: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      createWorldgenWorker: () => gD,
+      prefetchWorldgenWorker: () => LD,
+      stopWorldgenWorkerPrefetch: () => cD,
+      worldgenWorkerReady: () => rD
     });
-    const hm = new(fm(36487).d)(new URL(fm.p + fm.u(70), fm.b), {
+    const pD = new(wD(36404).e)(new URL(wD.p + wD.u(70), wD.b), {
       name: "worldgenWorker",
       type: "module"
     });
-    let Am = !1,
-      am = !1;
+    let sD = !1,
+      KD = !1;
 
-    function xm() {
-      return Am = !0, hm.ready()
+    function rD() {
+      return sD = !0, pD.ready()
     }
 
-    function wm() {
-      hm.ready()
+    function LD() {
+      pD.ready()
     }
 
-    function Dm() {
-      Am || am || (am = !0, hm.cancel())
+    function cD() {
+      sD || KD || (KD = !0, pD.cancel())
     }
 
-    function im() {
-      return hm.start()
+    function gD() {
+      return pD.start()
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

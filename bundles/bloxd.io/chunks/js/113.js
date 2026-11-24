@@ -1,186 +1,186 @@
 export const id = 113;
 export const ids = [113, 116, 136, 137];
 export const modules = {
-  4985: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => hm.d,
-      d: () => Am,
-      e: () => hm.l
+  5076: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => pD.i,
+      d: () => sD,
+      h: () => pD.q
     });
-    var hm = fm(4989);
-    const Am = [!1, !0].flatMap((mm => ["terrain", "liquid", "model"].map((Tm => ({
-      strict: mm,
-      program: Tm
+    var pD = wD(5084);
+    const sD = [!1, !0].flatMap((DD => ["terrain", "liquid", "model"].map((zD => ({
+      strict: DD,
+      program: zD
     })))))
   },
-  40601: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => pm,
-      installListedShaderPack: () => Rm
+  40420: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => AD,
+      installListedShaderPack: () => RD
     });
-    var hm = fm(6509),
-      Am = fm(4989),
-      am = fm(1214),
-      xm = fm(6562),
-      wm = fm(4985),
-      Dm = fm(6600),
-      im = fm(6595);
-    async function Rm(mm) {
-      const Tm = await (0, xm.loadPageShaderPackCompiler)();
-      if (null === Tm) return {
+    var pD = wD(6594),
+      sD = wD(5084),
+      KD = wD(1211),
+      rD = wD(6645),
+      LD = wD(5076),
+      cD = wD(6691),
+      gD = wD(6682);
+    async function RD(DD) {
+      const zD = await (0, rD.loadPageShaderPackCompiler)();
+      if (null === zD) return {
         kind: "failed",
         reason: "compiler"
       };
-      const fm = await pm(mm, Tm);
-      return "failed" === fm.kind ? fm : await (0, Dm.saveShaderPack)(fm.stored, Tm) ? ((0, Dm.markShaderPackChangePending)(), fm) : {
+      const wD = await AD(DD, zD);
+      return "failed" === wD.kind ? wD : await (0, cD.saveShaderPack)(wD.stored, zD) ? ((0, cD.markShaderPackChangePending)(), wD) : {
         kind: "failed",
         reason: "save"
       }
     }
-    async function pm(mm, Tm) {
-      const fm = await async function(mm) {
+    async function AD(DD, zD) {
+      const wD = await async function(DD) {
         let {
-          packId: Tm,
-          sourceHash: fm
-        } = mm;
+          packId: zD,
+          sourceHash: wD
+        } = DD;
         try {
-          const mm = await fetch(`${am.clientSideServerUrls.s3Url}/${(0,hm.S)(Tm,fm)}`, {
+          const DD = await fetch(`${KD.clientSideServerUrls.s3Url}/${(0,pD.M)(zD,wD)}`, {
             headers: {
               Accept: "application/json"
             }
           });
-          if (!mm.ok) return console.error(`Failed to download shader pack ${Tm} (${mm.status})`), null;
-          const Am = await mm.json();
-          return "object" !== typeof Am || null === Am ? (console.error(`Shader pack ${Tm}'s source isn't an object`), null) : Am
-        } catch (Am) {
-          return console.error(`Failed to download shader pack ${Tm}`, Am), null
+          if (!DD.ok) return console.error(`Failed to download shader pack ${zD} (${DD.status})`), null;
+          const sD = await DD.json();
+          return "object" !== typeof sD || null === sD ? (console.error(`Shader pack ${zD}'s source isn't an object`), null) : sD
+        } catch (sD) {
+          return console.error(`Failed to download shader pack ${zD}`, sD), null
         }
-      }(mm);
-      if (null === fm) return {
+      }(DD);
+      if (null === wD) return {
         kind: "failed",
         reason: "download"
       };
-      if (!(0, wm.e)(fm.apiVersion)) return {
+      if (!(0, LD.h)(wD.apiVersion)) return {
         kind: "failed",
         reason: "apiVersion"
       };
-      const xm = (0, Am.q)(fm.files);
-      if ("string" === typeof xm) return console.error(`A listed shader pack breaks the pack rules: ${xm}`), {
+      const rD = (0, sD.v)(wD.files);
+      if ("string" === typeof rD) return console.error(`A listed shader pack breaks the pack rules: ${rD}`), {
         kind: "failed",
         reason: "invalid"
       };
-      const Rm = await (0, im.f)(Tm, xm);
-      if (!1 === (null === Rm || void 0 === Rm ? void 0 : Rm.ok)) return {
+      const RD = await (0, gD.h)(zD, rD);
+      if (!1 === (null === RD || void 0 === RD ? void 0 : RD.ok)) return {
         kind: "failed",
         reason: "errors"
       };
-      const pm = {
+      const AD = {
         manifest: {
-          apiVersion: fm.apiVersion,
-          name: mm.name,
-          author: mm.ownerName,
-          description: mm.description || null,
-          keepCircleShadows: !0 === fm.keepCircleShadows
+          apiVersion: wD.apiVersion,
+          name: DD.name,
+          author: DD.ownerName,
+          description: DD.description || null,
+          keepCircleShadows: !0 === wD.keepCircleShadows
         },
-        files: xm
+        files: rD
       };
       return {
         kind: "loaded",
-        stored: (0, Dm.toStoredShaderPack)(pm, Rm, {
-          packId: mm.packId,
-          sourceHash: mm.sourceHash
+        stored: (0, cD.toStoredShaderPack)(AD, RD, {
+          packId: DD.packId,
+          sourceHash: DD.sourceHash
         })
       }
     }
   },
-  6600: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      forgetShaderPackActiveHint: () => bm,
-      isOtherApiVersion: () => cm,
-      isShaderPackActive: () => Km,
-      isShaderPackChangePending: () => Jm,
-      markShaderPackChangePending: () => nm,
-      pageShaderPackValidationVersion: () => zm,
-      reconcileStoredShaderPackHint: () => km,
-      removeShaderPack: () => Im,
-      replaceShaderPack: () => qm,
-      saveShaderPack: () => Ym,
-      shaderPackNeedsCheck: () => Zm,
-      storedPackOutcome: () => Qm,
-      storedShaderPackFiles: () => Em,
-      toStoredShaderPack: () => pm
+  6691: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      forgetShaderPackActiveHint: () => xD,
+      isOtherApiVersion: () => XD,
+      isShaderPackActive: () => OD,
+      isShaderPackChangePending: () => QD,
+      markShaderPackChangePending: () => ED,
+      pageShaderPackValidationVersion: () => VD,
+      reconcileStoredShaderPackHint: () => CD,
+      removeShaderPack: () => MD,
+      replaceShaderPack: () => GD,
+      saveShaderPack: () => BD,
+      shaderPackNeedsCheck: () => PD,
+      storedPackOutcome: () => JD,
+      storedShaderPackFiles: () => UD,
+      toStoredShaderPack: () => AD
     });
-    var hm = fm(4989),
-      Am = fm(4985),
-      am = fm(37),
-      xm = fm(3461),
-      wm = fm(6609),
-      Dm = fm(6578);
-    const im = "shaderPackChangePending";
-    let Rm = null;
+    var pD = wD(5084),
+      sD = wD(5076),
+      KD = wD(35),
+      rD = wD(3462),
+      LD = wD(6693),
+      cD = wD(6664);
+    const gD = "shaderPackChangePending";
+    let RD = null;
 
-    function pm(mm, Tm, fm) {
+    function AD(DD, zD, wD) {
       return {
-        manifest: mm.manifest,
-        files: (0, hm.r)(mm.files),
-        validation: Tm,
-        ...fm && {
-          listing: fm
+        manifest: DD.manifest,
+        files: (0, pD.z)(DD.files),
+        validation: zD,
+        ...wD && {
+          listing: wD
         }
       }
     }
 
-    function Em(mm) {
-      return Object.keys(mm.files).map((Tm => ({
-        path: Tm,
-        source: mm.files[Tm]
+    function UD(DD) {
+      return Object.keys(DD.files).map((zD => ({
+        path: zD,
+        source: DD.files[zD]
       })))
     }
-    let om = Promise.resolve();
+    let fD = Promise.resolve();
 
-    function Om(mm) {
-      const Tm = om.then(mm);
-      return om = Tm.catch((() => {})), Tm
-    }
-
-    function Ym(mm, Tm) {
-      return Om((() => jm(mm, Tm)))
+    function ID(DD) {
+      const zD = fD.then(DD);
+      return fD = zD.catch((() => {})), zD
     }
 
-    function qm(mm, Tm, fm) {
-      return Om((async () => JSON.stringify(await (0, wm.e)()) === JSON.stringify(mm) && (null === Tm ? (await Vm(), !0) : jm(Tm, fm))))
-    }
-    async function jm(mm, Tm) {
-      const fm = await am.e.setItem(wm.c, mm);
-      return fm && Sm(mm, Tm), fm
-    }
-    async function Vm() {
-      await am.e.removeItem(wm.c), am.g.removeItem(xm.b)
+    function BD(DD, zD) {
+      return ID((() => hD(DD, zD)))
     }
 
-    function Im() {
-      return Om(Vm)
+    function GD(DD, zD, wD) {
+      return ID((async () => JSON.stringify(await (0, LD.c)()) === JSON.stringify(DD) && (null === zD ? (await nD(), !0) : hD(zD, wD))))
+    }
+    async function hD(DD, zD) {
+      const wD = await KD.g.setItem(LD.b, DD);
+      return wD && TD(DD, zD), wD
+    }
+    async function nD() {
+      await KD.g.removeItem(LD.b), KD.h.removeItem(rD.e)
     }
 
-    function Km(mm, Tm) {
-      return "active" === Qm(mm, Tm).kind
+    function MD() {
+      return ID(nD)
     }
 
-    function Qm(mm, Tm) {
-      var fm;
-      return null === mm ? {
+    function OD(DD, zD) {
+      return "active" === JD(DD, zD).kind
+    }
+
+    function JD(DD, zD) {
+      var wD;
+      return null === DD ? {
         kind: "none",
         reason: "nothingStored"
-      } : cm(mm) ? {
+      } : XD(DD) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (fm = mm.validation) || void 0 === fm ? void 0 : fm.ok) || mm.validation.fromRecheck ? null === Tm ? {
+      } : !1 !== (null === (wD = DD.validation) || void 0 === wD ? void 0 : wD.ok) || DD.validation.fromRecheck ? null === zD ? {
         kind: "none",
         reason: "noCompiler"
-      } : Zm(mm, Tm) ? {
+      } : PD(DD, zD) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : mm.validation.ok ? {
+      } : DD.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -191,331 +191,331 @@ export const modules = {
       }
     }
 
-    function nm() {
-      am.k.setItem(im, performance.timeOrigin)
+    function ED() {
+      KD.k.setItem(gD, performance.timeOrigin)
     }
 
-    function Jm() {
-      return am.k.getItem(im) === performance.timeOrigin
+    function QD() {
+      return KD.k.getItem(gD) === performance.timeOrigin
     }
 
-    function cm(mm) {
-      return !(0, Am.e)(mm.manifest.apiVersion)
+    function XD(DD) {
+      return !(0, sD.h)(DD.manifest.apiVersion)
     }
 
-    function zm(mm) {
-      return Rm ??= mm.mG((0, Dm.shaderPackTextures)()), Rm
+    function VD(DD) {
+      return RD ??= DD.qS((0, cD.shaderPackTextures)()), RD
     }
 
-    function Zm(mm, Tm) {
-      var fm;
-      return (null === (fm = mm.validation) || void 0 === fm ? void 0 : fm.headerVersion) !== zm(Tm)
+    function PD(DD, zD) {
+      var wD;
+      return (null === (wD = DD.validation) || void 0 === wD ? void 0 : wD.headerVersion) !== VD(zD)
     }
 
-    function km(mm) {
-      return Om((async () => {
-        Sm(await (0, wm.e)(!0), mm)
+    function CD(DD) {
+      return ID((async () => {
+        TD(await (0, LD.c)(!0), DD)
       }))
     }
 
-    function bm() {
-      return Om((async () => {
-        am.g.removeItem(xm.b)
+    function xD() {
+      return ID((async () => {
+        KD.h.removeItem(rD.e)
       }))
     }
 
-    function Sm(mm, Tm) {
-      Km(mm, Tm) ? am.g.setItem(xm.b, !0) : am.g.removeItem(xm.b)
+    function TD(DD, zD) {
+      OD(DD, zD) ? KD.h.setItem(rD.e, !0) : KD.h.removeItem(rD.e)
     }
   },
-  6578: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      loadShaderPackTextures: () => xm,
-      shaderPackTextures: () => wm
+  6664: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      loadShaderPackTextures: () => rD,
+      shaderPackTextures: () => LD
     });
-    var hm = fm(4989);
-    let Am = null,
-      am = null;
+    var pD = wD(5084);
+    let sD = null,
+      KD = null;
 
-    function xm() {
-      return am ??= Promise.all([fm.e(72), fm.e(188)]).then((() => fm(40597))).then((mm => {
+    function rD() {
+      return KD ??= Promise.all([wD.e(72), wD.e(188)]).then((() => wD(40415))).then((DD => {
         let {
-          FORMER_BLOCK_IMAGE_NAMES: Tm,
-          textureNameToIndex: fm,
-          textureAnimationData: am
-        } = mm;
-        return Am ??= (0, hm.g)(fm, am, Tm), Am
-      })), am
+          FORMER_BLOCK_IMAGE_NAMES: zD,
+          textureNameToIndex: wD,
+          textureAnimationData: KD
+        } = DD;
+        return sD ??= (0, pD.m)(wD, KD, zD), sD
+      })), KD
     }
 
-    function wm() {
-      if (null === Am) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return Am
+    function LD() {
+      if (null === sD) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return sD
     }
   },
-  6595: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => Dm,
-      f: () => wm
+  6682: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => cD,
+      h: () => LD
     });
-    var hm = fm(6600),
-      Am = fm(6578),
-      am = fm(118);
-    const xm = 100;
-    async function wm(mm, Tm) {
-      var fm;
-      let hm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (fm = navigator.gpu) && void 0 !== fm ? fm : null;
-      const xm = mm.Z6(Tm, (0, Am.shaderPackTextures)());
-      if (xm.errors.length > 0) return im(mm, xm.errors, xm.offInStrict);
-      const wm = await async function(mm) {
-        if (!mm) return null;
+    var pD = wD(6691),
+      sD = wD(6664),
+      KD = wD(119);
+    const rD = 100;
+    async function LD(DD, zD) {
+      var wD;
+      let pD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (wD = navigator.gpu) && void 0 !== wD ? wD : null;
+      const rD = DD.LDD(zD, (0, sD.shaderPackTextures)());
+      if (rD.errors.length > 0) return gD(DD, rD.errors, rD.offInStrict);
+      const LD = await async function(DD) {
+        if (!DD) return null;
         try {
-          const Tm = await (0, am.v)(mm);
-          return Tm ? await Tm.requestDevice() : null
-        } catch (Tm) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", Tm), null
+          const zD = await (0, KD.x)(DD);
+          return zD ? await zD.requestDevice() : null
+        } catch (zD) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", zD), null
         }
-      }(hm);
-      if (!wm) return null;
-      let Dm = !1;
-      wm.lost.then((() => {
-        Dm = !0
+      }(pD);
+      if (!LD) return null;
+      let cD = !1;
+      LD.lost.then((() => {
+        cD = !0
       }));
       try {
-        const Tm = await Promise.all(xm.validationModules.map((Tm => async function(mm, Tm, fm) {
-          Tm.pushErrorScope("validation");
-          const hm = Tm.createShaderModule({
-              code: fm.code
+        const zD = await Promise.all(rD.validationModules.map((zD => async function(DD, zD, wD) {
+          zD.pushErrorScope("validation");
+          const pD = zD.createShaderModule({
+              code: wD.code
             }),
-            Am = Tm.popErrorScope(),
+            sD = zD.popErrorScope(),
             {
-              messages: am
-            } = await hm.getCompilationInfo(),
-            xm = am.filter((mm => "error" === mm.type)).map((Tm => mm.mapValidationMessage(fm, Tm))),
-            wm = await Am;
-          wm && 0 === xm.length && xm.push({
+              messages: KD
+            } = await pD.getCompilationInfo(),
+            rD = KD.filter((DD => "error" === DD.type)).map((zD => DD.mapValidationMessage(wD, zD))),
+            LD = await sD;
+          LD && 0 === rD.length && rD.push({
             file: null,
             line: 0,
-            message: wm.message,
-            variants: [fm.key]
+            message: LD.message,
+            variants: [wD.key]
           });
-          return xm
-        }(mm, wm, Tm))));
-        return Dm ? null : im(mm, mm.Lfm(Tm.flat()), xm.offInStrict)
-      } catch (Rm) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", Rm), null
+          return rD
+        }(DD, LD, zD))));
+        return cD ? null : gD(DD, DD.RpD(zD.flat()), rD.offInStrict)
+      } catch (RD) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", RD), null
       } finally {
-        wm.destroy()
+        LD.destroy()
       }
     }
-    async function Dm(mm, Tm) {
-      var fm;
-      if (!(0, hm.shaderPackNeedsCheck)(mm, Tm) || (0, hm.isOtherApiVersion)(mm)) return mm;
-      const Am = await wm(Tm, (0, hm.storedShaderPackFiles)(mm));
-      if (!Am) return mm;
-      const am = !1 === (null === (fm = mm.validation) || void 0 === fm ? void 0 : fm.ok) && !mm.validation.fromRecheck,
-        xm = {
-          ...mm,
-          validation: am ? Am : {
-            ...Am,
+    async function cD(DD, zD) {
+      var wD;
+      if (!(0, pD.shaderPackNeedsCheck)(DD, zD) || (0, pD.isOtherApiVersion)(DD)) return DD;
+      const sD = await LD(zD, (0, pD.storedShaderPackFiles)(DD));
+      if (!sD) return DD;
+      const KD = !1 === (null === (wD = DD.validation) || void 0 === wD ? void 0 : wD.ok) && !DD.validation.fromRecheck,
+        rD = {
+          ...DD,
+          validation: KD ? sD : {
+            ...sD,
             fromRecheck: !0
           }
         };
-      return await (0, hm.replaceShaderPack)(mm, xm, Tm) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), xm
+      return await (0, pD.replaceShaderPack)(DD, rD, zD) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), rD
     }
 
-    function im(mm, Tm, fm) {
+    function gD(DD, zD, wD) {
       return {
-        headerVersion: (0, hm.pageShaderPackValidationVersion)(mm),
-        ok: 0 === Tm.length,
-        errors: Tm.slice(0, xm),
-        moreErrors: Math.max(0, Tm.length - xm),
-        offInStrict: fm
+        headerVersion: (0, pD.pageShaderPackValidationVersion)(DD),
+        ok: 0 === zD.length,
+        errors: zD.slice(0, rD),
+        moreErrors: Math.max(0, zD.length - rD),
+        offInStrict: wD
       }
     }
   },
-  4989: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => wm,
-      c: () => xm,
-      d: () => hm,
-      g: () => Ym,
-      i: () => pm,
-      l: () => Am,
-      o: () => am,
-      q: () => im,
-      r: () => Rm,
-      t: () => Em
+  5084: (DD, zD, wD) => {
+    wD.d(zD, {
+      A: () => UD,
+      d: () => LD,
+      e: () => rD,
+      i: () => pD,
+      m: () => BD,
+      n: () => AD,
+      q: () => sD,
+      r: () => KD,
+      v: () => gD,
+      z: () => RD
     });
-    const hm = 5;
+    const pD = 5;
 
-    function Am(mm) {
-      return mm === hm
+    function sD(DD) {
+      return DD === pD
     }
 
-    function am(mm) {
-      return [...mm.features]
+    function KD(DD) {
+      return [...DD.features]
     }
-    const xm = 262144,
-      wm = 256,
-      Dm = 256;
+    const rD = 262144,
+      LD = 256,
+      cD = 256;
 
-    function im(mm) {
-      if ("object" !== typeof mm || null === mm || Array.isArray(mm)) return "The pack has no files.";
-      const Tm = [];
-      for (const [fm, hm] of Object.entries(mm)) {
-        if ("string" !== typeof hm) return `${fm} isn't text.`;
-        Tm.push({
-          path: fm,
-          source: hm
+    function gD(DD) {
+      if ("object" !== typeof DD || null === DD || Array.isArray(DD)) return "The pack has no files.";
+      const zD = [];
+      for (const [wD, pD] of Object.entries(DD)) {
+        if ("string" !== typeof pD) return `${wD} isn't text.`;
+        zD.push({
+          path: wD,
+          source: pD
         })
       }
-      return Tm.sort(((mm, Tm) => pm(mm.path, Tm.path))),
-        function(mm) {
-          if (0 === mm.length) return "The pack has no .wgsl files.";
-          if (mm.length > wm) return `The pack has more than ${wm} .wgsl files.`;
-          const Tm = new Set;
+      return zD.sort(((DD, zD) => AD(DD.path, zD.path))),
+        function(DD) {
+          if (0 === DD.length) return "The pack has no .wgsl files.";
+          if (DD.length > LD) return `The pack has more than ${LD} .wgsl files.`;
+          const zD = new Set;
           for (const {
-              path: fm
+              path: wD
             }
-            of mm) {
-            const mm = om(fm);
-            if (null !== mm) return mm;
-            if (Tm.has(fm)) return `The pack has two files at ${fm}.`;
-            Tm.add(fm)
+            of DD) {
+            const DD = fD(wD);
+            if (null !== DD) return DD;
+            if (zD.has(wD)) return `The pack has two files at ${wD}.`;
+            zD.add(wD)
           }
-          return Em(mm) > xm ? `The pack's .wgsl files are over ${xm/1024} KB in total.` : null
-        }(Tm) ?? Tm
+          return UD(DD) > rD ? `The pack's .wgsl files are over ${rD/1024} KB in total.` : null
+        }(zD) ?? zD
     }
 
-    function Rm(mm) {
-      const Tm = {};
-      for (const fm of mm) Tm[fm.path] = fm.source;
-      return Tm
+    function RD(DD) {
+      const zD = {};
+      for (const wD of DD) zD[wD.path] = wD.source;
+      return zD
     }
 
-    function pm(mm, Tm) {
-      return mm < Tm ? -1 : mm > Tm ? 1 : 0
+    function AD(DD, zD) {
+      return DD < zD ? -1 : DD > zD ? 1 : 0
     }
 
-    function Em(mm) {
-      const Tm = new TextEncoder;
-      let fm = 0;
+    function UD(DD) {
+      const zD = new TextEncoder;
+      let wD = 0;
       for (const {
-          source: hm
+          source: pD
         }
-        of mm) fm += Tm.encode(hm).byteLength;
-      return fm
+        of DD) wD += zD.encode(pD).byteLength;
+      return wD
     }
 
-    function om(mm) {
-      if (!mm.toLowerCase().endsWith(".wgsl")) return `${mm} isn't a .wgsl file.`;
-      if (mm.length > Dm) return `A file path is over ${Dm} characters.`;
-      if (mm.includes("\\") || /[\u0000-\u001f]/.test(mm)) return `${mm} isn't a valid file path.`;
-      return mm.split("/").some((mm => "" === mm || "." === mm || ".." === mm)) ? `${mm} isn't a valid file path.` : null
+    function fD(DD) {
+      if (!DD.toLowerCase().endsWith(".wgsl")) return `${DD} isn't a .wgsl file.`;
+      if (DD.length > cD) return `A file path is over ${cD} characters.`;
+      if (DD.includes("\\") || /[\u0000-\u001f]/.test(DD)) return `${DD} isn't a valid file path.`;
+      return DD.split("/").some((DD => "" === DD || "." === DD || ".." === DD)) ? `${DD} isn't a valid file path.` : null
     }
-    const Om = /^(.*)\[rot\[([1-4])$/;
+    const ID = /^(.*)\[rot\[([1-4])$/;
 
-    function Ym(mm, Tm) {
-      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const hm = new Map;
-      Tm.forEach(((mm, Tm) => {
+    function BD(DD, zD) {
+      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const pD = new Map;
+      zD.forEach(((DD, zD) => {
         let {
-          numAnimStates: fm,
-          animStartIdx: Am
-        } = mm;
-        for (let am = 1; am < fm; am++) hm.set(Am + am - 1, Tm)
+          numAnimStates: wD,
+          animStartIdx: sD
+        } = DD;
+        for (let KD = 1; KD < wD; KD++) pD.set(sD + KD - 1, zD)
       }));
-      const Am = Object.entries(mm),
-        am = new Map;
-      for (const [Ym, qm] of Am) {
-        const mm = Om.exec(Ym);
-        "1" === mm?.[2] && am.set(mm[1], qm + 1)
+      const sD = Object.entries(DD),
+        KD = new Map;
+      for (const [BD, GD] of sD) {
+        const DD = ID.exec(BD);
+        "1" === DD?.[2] && KD.set(DD[1], GD + 1)
       }
-      const xm = mm => {
-          const Tm = Om.exec(mm);
-          return Tm && am.has(Tm[1]) ? {
-            root: Tm[1],
-            rotation: Number(Tm[2]) - 1
+      const rD = DD => {
+          const zD = ID.exec(DD);
+          return zD && KD.has(zD[1]) ? {
+            root: zD[1],
+            rotation: Number(zD[2]) - 1
           } : null
         },
-        wm = new Set(Am.map((mm => {
-          let [Tm] = mm;
-          return xm(Tm)?.root ?? Tm
+        LD = new Set(sD.map((DD => {
+          let [zD] = DD;
+          return rD(zD)?.root ?? zD
         }))),
-        Dm = (mm, fm) => {
-          const hm = mm.replace(/_?0$/, "");
-          return (Tm[fm]?.numAnimStates ?? 0) > 1 && !wm.has(hm) ? hm : mm
+        cD = (DD, wD) => {
+          const pD = DD.replace(/_?0$/, "");
+          return (zD[wD]?.numAnimStates ?? 0) > 1 && !LD.has(pD) ? pD : DD
         },
-        im = new Map;
-      for (const [Om, Ym] of Am) im.set(Ym, Dm(xm(Om)?.root ?? Om, Ym));
-      const Rm = Am.reduce(((mm, Tm) => {
-          let [, fm] = Tm;
-          return Math.max(mm, fm + 1)
+        gD = new Map;
+      for (const [ID, BD] of sD) gD.set(BD, cD(rD(ID)?.root ?? ID, BD));
+      const RD = sD.reduce(((DD, zD) => {
+          let [, wD] = zD;
+          return Math.max(DD, wD + 1)
         }), 0),
-        pm = Array.from({
-          length: Rm
-        }, ((mm, Tm) => ({
-          id: Tm + 1,
+        AD = Array.from({
+          length: RD
+        }, ((DD, zD) => ({
+          id: zD + 1,
           rotation: 0
         }))),
-        Em = new Map,
-        om = new Map;
-      for (const [Om, Ym] of Am) {
-        const mm = xm(Om),
-          Tm = hm.get(Ym);
-        if (void 0 !== Tm) {
-          const fm = im.get(Tm);
-          om.set(Om, {
-            name: Om,
-            texture: fm,
+        UD = new Map,
+        fD = new Map;
+      for (const [ID, BD] of sD) {
+        const DD = rD(ID),
+          zD = pD.get(BD);
+        if (void 0 !== zD) {
+          const wD = gD.get(zD);
+          fD.set(ID, {
+            name: ID,
+            texture: wD,
             kind: "frame"
-          }), mm && !om.has(mm.root) && om.set(mm.root, {
-            name: mm.root,
-            texture: fm,
+          }), DD && !fD.has(DD.root) && fD.set(DD.root, {
+            name: DD.root,
+            texture: wD,
             kind: "frame"
           });
           continue
         }
-        const fm = im.get(Ym),
-          Am = mm?.root ?? Om;
-        if (fm !== Am && om.set(Am, {
-            name: Am,
-            texture: fm,
+        const wD = gD.get(BD),
+          sD = DD?.root ?? ID;
+        if (wD !== sD && fD.set(sD, {
+            name: sD,
+            texture: wD,
             kind: "frame"
-          }), mm) {
-          const Tm = am.get(mm.root);
-          pm[Ym] = {
-            id: Tm,
-            rotation: mm.rotation
-          }, Em.set(fm, Tm), om.set(Om, {
-            name: Om,
-            texture: fm,
+          }), DD) {
+          const zD = KD.get(DD.root);
+          AD[BD] = {
+            id: zD,
+            rotation: DD.rotation
+          }, UD.set(wD, zD), fD.set(ID, {
+            name: ID,
+            texture: wD,
             kind: "rotation"
           })
-        } else Em.set(fm, Ym + 1)
+        } else UD.set(wD, BD + 1)
       }
-      for (const Om of Em.keys()) om.delete(Om);
-      for (const [Om, Ym] of fm) {
-        const mm = Em.get(Ym);
-        void 0 === mm || Em.has(Om) || (Em.set(Om, mm), om.delete(Om))
+      for (const ID of UD.keys()) fD.delete(ID);
+      for (const [ID, BD] of wD) {
+        const DD = UD.get(BD);
+        void 0 === DD || UD.has(ID) || (UD.set(ID, DD), fD.delete(ID))
       }
       return {
-        named: [...Em].sort(((mm, Tm) => {
-          let [fm] = mm, [hm] = Tm;
-          return fm < hm ? -1 : fm > hm ? 1 : 0
-        })).map((mm => {
-          let [Tm, fm] = mm;
+        named: [...UD].sort(((DD, zD) => {
+          let [wD] = DD, [pD] = zD;
+          return wD < pD ? -1 : wD > pD ? 1 : 0
+        })).map((DD => {
+          let [zD, wD] = DD;
           return {
-            name: Tm,
-            id: fm
+            name: zD,
+            id: wD
           }
         })),
-        aliases: [...om.values()],
-        layers: pm
+        aliases: [...fD.values()],
+        layers: AD
       }
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

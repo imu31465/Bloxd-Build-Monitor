@@ -1,62 +1,62 @@
 export const id = 358;
 export const ids = [358];
 export const modules = {
-  61416: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      applyLightFoOffset: () => xm,
-      getFloatingOriginOffset: () => Am,
-      lightFoVersion: () => am,
-      wrapRenderableForFO: () => wm
+  61108: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      applyLightFoOffset: () => rD,
+      getFloatingOriginOffset: () => sD,
+      lightFoVersion: () => KD,
+      wrapRenderableForFO: () => LD
     });
-    var hm = fm(41745);
+    var pD = wD(41634);
 
-    function Am(mm) {
-      const Tm = mm.camera;
-      if (!Tm) return {
+    function sD(DD) {
+      const zD = DD.camera;
+      if (!zD) return {
         x: 0,
         y: 0,
         z: 0
       };
-      const fm = Tm.worldMatrix;
+      const wD = zD.worldMatrix;
       return {
-        x: fm[12],
-        y: fm[13],
-        z: fm[14]
+        x: wD[12],
+        y: wD[13],
+        z: wD[14]
       }
     }
 
-    function am(mm) {
-      return mm.camera ? mm.camera.worldMatrixVersion : 0
+    function KD(DD) {
+      return DD.camera ? DD.camera.worldMatrixVersion : 0
     }
 
-    function xm(mm, Tm) {
-      const fm = Tm.camera?.worldMatrix;
-      if (!fm) return;
-      const Am = fm[12],
-        am = fm[13],
-        xm = fm[14];
-      let wm = 0;
-      for (const Dm of Tm.lights) {
-        if (wm >= hm.e) break;
-        if (!Dm._writeLightUbo) continue;
-        const Tm = 4 + 16 * wm,
-          fm = mm[Tm + 3];
-        if (0 === fm || 2 === fm) {
-          const fm = Dm.worldMatrix;
-          mm[Tm] = fm[12] - Am, mm[Tm + 1] = fm[13] - am, mm[Tm + 2] = fm[14] - xm
+    function rD(DD, zD) {
+      const wD = zD.camera?.worldMatrix;
+      if (!wD) return;
+      const sD = wD[12],
+        KD = wD[13],
+        rD = wD[14];
+      let LD = 0;
+      for (const cD of zD.lights) {
+        if (LD >= pD.d) break;
+        if (!cD._writeLightUbo) continue;
+        const zD = 4 + 16 * LD,
+          wD = DD[zD + 3];
+        if (0 === wD || 2 === wD) {
+          const wD = cD.worldMatrix;
+          DD[zD] = wD[12] - sD, DD[zD + 1] = wD[13] - KD, DD[zD + 2] = wD[14] - rD
         }
-        wm++
+        LD++
       }
     }
 
-    function wm(mm, Tm, fm) {
-      let hm = -1;
+    function LD(DD, zD, wD) {
+      let pD = -1;
       return () => {
-        const Am = Tm.camera ? Tm.camera.worldMatrixVersion : -1;
-        Am !== hm && (fm(), hm = Am), mm()
+        const sD = zD.camera ? zD.camera.worldMatrixVersion : -1;
+        sD !== pD && (wD(), pD = sD), DD()
       }
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

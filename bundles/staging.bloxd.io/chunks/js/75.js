@@ -1,18 +1,18 @@
 export const id = 75;
 export const ids = [75];
 export const modules = {
-  37158: (mm, Tm, fm) => {
-    if (fm.d(Tm, {
-        d: () => Dm,
-        g: () => Am,
-        h: () => xm,
-        i: () => am,
-        l: () => Qm,
-        n: () => jm
-      }), 39 == fm.j) var hm = fm(37164);
-    const Am = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
-      am = ["Blade", "Guard", "Handle"],
-      xm = {
+  37043: (DD, zD, wD) => {
+    if (wD.d(zD, {
+        b: () => cD,
+        e: () => sD,
+        g: () => rD,
+        j: () => KD,
+        l: () => JD,
+        p: () => hD
+      }), 39 == wD.j) var pD = wD(37045);
+    const sD = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
+      KD = ["Blade", "Guard", "Handle"],
+      rD = {
         Wood: {
           material: "Wood",
           baseSword: "Wood Sword",
@@ -131,59 +131,59 @@ export const modules = {
           handleReach: .5
         }
       },
-      wm = 4,
-      Dm = "Coal",
-      im = {
+      LD = 4,
+      cD = "Coal",
+      gD = {
         Blade: 1,
         Guard: .6,
         Handle: .4
       },
-      Rm = 1.15,
-      pm = 1.35,
-      Em = .06,
-      om = {
+      RD = 1.15,
+      AD = 1.35,
+      UD = .06,
+      fD = {
         defence: {
           name: "Bulwark",
           amount: .06,
-          describe: mm => `${cm(.06*mm)} less damage taken`
+          describe: DD => `${XD(.06*DD)} less damage taken`
         },
         coins: {
           name: "Midas",
           amount: 4,
-          describe: mm => `Mobs you slay drop ${Math.round(4*mm)}+ extra coins`
+          describe: DD => `Mobs you slay drop ${Math.round(4*DD)}+ extra coins`
         },
         crit: {
           name: "Keen Edge",
           chance: .12,
           amount: .6,
-          describe: mm => `${cm(.12*mm)} chance to strike for +60% damage`
+          describe: DD => `${XD(.12*DD)} chance to strike for +60% damage`
         },
         bossBane: {
           name: "Bossbane",
           amount: .2,
-          describe: mm => `+${cm(.2*mm)} damage to bosses`
+          describe: DD => `+${XD(.2*DD)} damage to bosses`
         },
         firePool: {
           name: "Magma Pool",
           chance: .15,
           amount: .12,
           cooldownMs: 3e3,
-          describe: mm => `${cm(.15*mm)} chance to leave a fire pool under the mob that burns for 3s`
+          describe: DD => `${XD(.15*DD)} chance to leave a fire pool under the mob that burns for 3s`
         },
         lifesteal: {
           name: "Bloodthirst",
           amount: .06,
-          describe: mm => `Heal ${cm(.06*mm)} of the damage you deal`
+          describe: DD => `Heal ${XD(.06*DD)} of the damage you deal`
         },
         starfall: {
           name: "Starfall",
           chance: .1,
           amount: .6,
           cooldownMs: 4e3,
-          describe: mm => `${cm(.1*mm)} chance to call a falling star that hits nearby mobs and slows them`
+          describe: DD => `${XD(.1*DD)} chance to call a falling star that hits nearby mobs and slows them`
         }
       },
-      Om = {
+      ID = {
         eclipseField: {
           name: "Eclipse Field",
           description: "Right-click: slow every mob within 6 blocks for 3s",
@@ -225,120 +225,120 @@ export const modules = {
           cooldownMs: 25e3
         }
       },
-      Ym = 39 == fm.j ? hm.c : null,
-      qm = "skyblock:forged:";
+      BD = 39 == wD.j ? pD.e : null,
+      GD = "skyblock:forged:";
 
-    function jm(mm, Tm) {
-      return `${mm} ${Tm}`
+    function hD(DD, zD) {
+      return `${DD} ${zD}`
     }
-    Am.flatMap((mm => am.map((Tm => jm(mm, Tm)))));
+    sD.flatMap((DD => KD.map((zD => hD(DD, zD)))));
 
-    function Vm(mm) {
+    function nD(DD) {
       let {
-        blade: Tm,
-        guard: fm,
-        handle: hm
-      } = mm;
-      return `${qm}${Tm.toLowerCase()}-${fm.toLowerCase()}-${hm.toLowerCase()}`
+        blade: zD,
+        guard: wD,
+        handle: pD
+      } = DD;
+      return `${GD}${zD.toLowerCase()}-${wD.toLowerCase()}-${pD.toLowerCase()}`
     }
 
-    function Im(mm) {
-      if (! function(mm) {
-          return "string" === typeof mm && mm.startsWith(qm)
-        }(mm)) return null;
-      const Tm = mm.slice(qm.length).split("-").map((mm => Am.find((Tm => Tm.toLowerCase() === mm))));
-      return 3 !== Tm.length || Tm.includes(void 0) ? null : {
-        blade: Tm[0],
-        guard: Tm[1],
-        handle: Tm[2]
+    function MD(DD) {
+      if (! function(DD) {
+          return "string" === typeof DD && DD.startsWith(GD)
+        }(DD)) return null;
+      const zD = DD.slice(GD.length).split("-").map((DD => sD.find((zD => zD.toLowerCase() === DD))));
+      return 3 !== zD.length || zD.includes(void 0) ? null : {
+        blade: zD[0],
+        guard: zD[1],
+        handle: zD[2]
       }
     }
-    const Km = new Map;
+    const OD = new Map;
 
-    function Qm(mm) {
-      var Tm;
-      let fm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Ym;
-      const hm = "string" === typeof mm ? Im(mm) : mm;
-      if (null === hm) return null;
-      const Am = Vm(hm),
-        Dm = fm === Ym ? Km.get(Am) : void 0;
-      if (void 0 !== Dm) return Dm;
-      const qm = function(mm, Tm) {
-        var fm, hm, Am, Dm, Ym, qm, jm, Im, Km;
+    function JD(DD) {
+      var zD;
+      let wD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BD;
+      const pD = "string" === typeof DD ? MD(DD) : DD;
+      if (null === pD) return null;
+      const sD = nD(pD),
+        cD = wD === BD ? OD.get(sD) : void 0;
+      if (void 0 !== cD) return cD;
+      const GD = function(DD, zD) {
+        var wD, pD, sD, cD, BD, GD, hD, MD, OD;
         const {
-          blade: Qm,
-          guard: Zm,
-          handle: km
-        } = mm, bm = xm, Sm = Qm === Zm && Zm === km, em = Jm((1 + bm[Qm].bladeDamage) * (Sm ? 1 + Em : 1)), Nm = null !== (fm = Tm.damageMultiplier) && void 0 !== fm ? fm : em, Gm = null !== (hm = Tm.cooldownMultiplier) && void 0 !== hm ? hm : bm[km].handleCooldown, Xm = null !== (Am = Tm.knockbackMultiplier) && void 0 !== Am ? Am : Jm(1 + bm[km].handleKnockback), Pm = null !== (Dm = Tm.reachBonus) && void 0 !== Dm ? Dm : bm[km].handleReach, Hm = null !== (Ym = Tm.damageReduction) && void 0 !== Ym ? Ym : bm[Zm].guardReduction, ym = null !== (qm = Tm.traits) && void 0 !== qm ? qm : function(mm) {
-          const Tm = {},
-            fm = {};
-          for (const wm of am) {
-            var hm, Am;
-            const am = xm[nm(mm, wm)].trait;
-            null !== am && (Tm[am] = (null !== (hm = Tm[am]) && void 0 !== hm ? hm : 0) + im[wm], fm[am] = (null !== (Am = fm[am]) && void 0 !== Am ? Am : 0) + 1)
+          blade: JD,
+          guard: PD,
+          handle: CD
+        } = DD, xD = rD, TD = JD === PD && PD === CD, bD = QD((1 + xD[JD].bladeDamage) * (TD ? 1 + UD : 1)), jD = null !== (wD = zD.damageMultiplier) && void 0 !== wD ? wD : bD, dD = null !== (pD = zD.cooldownMultiplier) && void 0 !== pD ? pD : xD[CD].handleCooldown, SD = null !== (sD = zD.knockbackMultiplier) && void 0 !== sD ? sD : QD(1 + xD[CD].handleKnockback), iD = null !== (cD = zD.reachBonus) && void 0 !== cD ? cD : xD[CD].handleReach, lD = null !== (BD = zD.damageReduction) && void 0 !== BD ? BD : xD[PD].guardReduction, WD = null !== (GD = zD.traits) && void 0 !== GD ? GD : function(DD) {
+          const zD = {},
+            wD = {};
+          for (const LD of KD) {
+            var pD, sD;
+            const KD = rD[ED(DD, LD)].trait;
+            null !== KD && (zD[KD] = (null !== (pD = zD[KD]) && void 0 !== pD ? pD : 0) + gD[LD], wD[KD] = (null !== (sD = wD[KD]) && void 0 !== sD ? sD : 0) + 1)
           }
-          for (const am of Object.keys(Tm)) {
-            const mm = 3 === fm[am] ? pm : 2 === fm[am] ? Rm : 1;
-            Tm[am] = Jm(Tm[am] * mm)
+          for (const KD of Object.keys(zD)) {
+            const DD = 3 === wD[KD] ? AD : 2 === wD[KD] ? RD : 1;
+            zD[KD] = QD(zD[KD] * DD)
           }
-          return Tm
-        }(mm), Cm = null !== (jm = Tm.ability) && void 0 !== jm ? jm : null, rm = void 0 !== Tm.name, sm = null !== (Im = Tm.name) && void 0 !== Im ? Im : Sm ? `Pure ${Qm} Sword` : `${bm[Zm].epithet} ${Qm} Sword`, lm = null !== (Km = Tm.lore) && void 0 !== Km ? Km : `Forged by the Forge Mother from a ${Qm.toLowerCase()} blade, ${Zm.toLowerCase()} guard and ${km.toLowerCase()} handle.`, Mm = function(mm) {
+          return zD
+        }(DD), ND = null !== (hD = zD.ability) && void 0 !== hD ? hD : null, ZD = void 0 !== zD.name, yD = null !== (MD = zD.name) && void 0 !== MD ? MD : TD ? `Pure ${JD} Sword` : `${xD[PD].epithet} ${JD} Sword`, kD = null !== (OD = zD.lore) && void 0 !== OD ? OD : `Forged by the Forge Mother from a ${JD.toLowerCase()} blade, ${PD.toLowerCase()} guard and ${CD.toLowerCase()} handle.`, mD = function(DD) {
           let {
-            blade: Tm,
-            guard: fm,
-            handle: hm
-          } = mm;
-          const Am = xm;
-          return wm * (Am[Tm].value + Am[fm].value + Am[hm].value)
-        }(mm), um = bm[Qm].value + bm[Zm].value + bm[km].value, Bm = rm ? "Tier 5" : um <= 4 ? "Tier 1" : um <= 8 ? "Tier 2" : um <= 14 ? "Tier 3" : um <= 22 ? "Tier 4" : "Tier 5", Lm = [];
-        1 !== Nm && Lm.push(`${zm(Nm-1)} damage`);
-        1 !== Gm && Lm.push(`${cm(1/Gm-1)} faster strikes`);
-        1 !== Xm && Lm.push(`${zm(Xm-1)} knockback`);
-        Pm > 0 && Lm.push(`+${Pm} reach`);
-        Hm > 0 && Lm.push(`${cm(Hm)} less damage taken while held`);
-        const tm = [];
-        for (const am of Object.keys(ym)) tm.push(`${om[am].name}: ${om[am].describe(ym[am])}`);
-        null !== Cm && tm.push(`${Om[Cm].name}: ${Om[Cm].description}`);
-        return Lm.push(...tm), {
-          id: Vm(mm),
-          parts: mm,
-          baseSword: bm[Qm].baseSword,
-          displayName: sm,
-          lore: lm,
-          properties: Lm,
-          effects: tm,
-          named: rm,
-          damageMultiplier: Nm,
-          cooldownMultiplier: Gm,
-          knockbackMultiplier: Xm,
-          reachBonus: Pm,
-          damageReduction: Hm,
-          traits: ym,
-          ability: Cm,
-          coalCost: Mm,
-          enchantmentTier: Bm,
-          powerMultiplier: Jm(Nm / Gm)
+            blade: zD,
+            guard: wD,
+            handle: pD
+          } = DD;
+          const sD = rD;
+          return LD * (sD[zD].value + sD[wD].value + sD[pD].value)
+        }(DD), eD = xD[JD].value + xD[PD].value + xD[CD].value, oD = ZD ? "Tier 5" : eD <= 4 ? "Tier 1" : eD <= 8 ? "Tier 2" : eD <= 14 ? "Tier 3" : eD <= 22 ? "Tier 4" : "Tier 5", aD = [];
+        1 !== jD && aD.push(`${VD(jD-1)} damage`);
+        1 !== dD && aD.push(`${XD(1/dD-1)} faster strikes`);
+        1 !== SD && aD.push(`${VD(SD-1)} knockback`);
+        iD > 0 && aD.push(`+${iD} reach`);
+        lD > 0 && aD.push(`${XD(lD)} less damage taken while held`);
+        const uD = [];
+        for (const KD of Object.keys(WD)) uD.push(`${fD[KD].name}: ${fD[KD].describe(WD[KD])}`);
+        null !== ND && uD.push(`${ID[ND].name}: ${ID[ND].description}`);
+        return aD.push(...uD), {
+          id: nD(DD),
+          parts: DD,
+          baseSword: xD[JD].baseSword,
+          displayName: yD,
+          lore: kD,
+          properties: aD,
+          effects: uD,
+          named: ZD,
+          damageMultiplier: jD,
+          cooldownMultiplier: dD,
+          knockbackMultiplier: SD,
+          reachBonus: iD,
+          damageReduction: lD,
+          traits: WD,
+          ability: ND,
+          coalCost: mD,
+          enchantmentTier: oD,
+          powerMultiplier: QD(jD / dD)
         }
-      }(hm, null !== (Tm = fm[Am]) && void 0 !== Tm ? Tm : {});
-      return fm === Ym && Km.set(Am, qm), qm
+      }(pD, null !== (zD = wD[sD]) && void 0 !== zD ? zD : {});
+      return wD === BD && OD.set(sD, GD), GD
     }
 
-    function nm(mm, Tm) {
-      return "Blade" === Tm ? mm.blade : "Guard" === Tm ? mm.guard : mm.handle
+    function ED(DD, zD) {
+      return "Blade" === zD ? DD.blade : "Guard" === zD ? DD.guard : DD.handle
     }
 
-    function Jm(mm) {
-      return Math.round(100 * mm) / 100
+    function QD(DD) {
+      return Math.round(100 * DD) / 100
     }
 
-    function cm(mm) {
-      return `${Math.round(100*mm)}%`
+    function XD(DD) {
+      return `${Math.round(100*DD)}%`
     }
 
-    function zm(mm) {
-      return `${mm>=0?"+":""}${cm(mm)}`
+    function VD(DD) {
+      return `${DD>=0?"+":""}${XD(DD)}`
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

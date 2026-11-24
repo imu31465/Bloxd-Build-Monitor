@@ -1,17 +1,17 @@
 export const id = 145;
 export const ids = [145];
 export const modules = {
-  7996: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      BloxdFirebaseSdk: () => Em
+  8111: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      BloxdFirebaseSdk: () => UD
     });
-    var hm = fm(1835),
-      Am = fm(2903),
-      am = fm(112),
-      xm = fm(105),
-      wm = fm(1681),
-      Dm = fm(2027);
-    const im = {
+    var pD = wD(1837),
+      sD = wD(2901),
+      KD = wD(113),
+      rD = wD(103),
+      LD = wD(1702),
+      cD = wD(2035);
+    const gD = {
       apiKey: "AIzaSyCJ-G6m_NyA3P021v-ugDmMmkcKysUebSE",
       authDomain: "bloxd-ee1aa.firebaseapp.com",
       projectId: "bloxd-ee1aa",
@@ -19,148 +19,148 @@ export const modules = {
       messagingSenderId: "758847442742",
       appId: "1:758847442742:web:7bb74eb261641e30f02d97"
     };
-    var Rm = fm(2932),
-      pm = fm(1696);
-    class Em {
+    var RD = wD(2925),
+      AD = wD(1724);
+    class UD {
       constructor() {}
       static async setup() {
         try {
-          return await Em.setupInternal()
-        } catch (mm) {
-          return console.error("Failed to setup Firebase SDK:", mm), null
+          return await UD.setupInternal()
+        } catch (DD) {
+          return console.error("Failed to setup Firebase SDK:", DD), null
         }
       }
       static async setupInternal() {
-        const mm = await Promise.all([fm.e(266), fm.e(265)]).then((() => fm(40604))),
-          Tm = await Promise.all([fm.e(266), fm.e(267)]).then((() => fm(40620))),
-          om = await Promise.all([fm.e(266), fm.e(268)]).then((() => fm(40628))),
-          Om = mm.initializeApp({
-            ...im,
-            measurementId: Am.e
+        const DD = await Promise.all([wD.e(266), wD.e(265)]).then((() => wD(40424))),
+          zD = await Promise.all([wD.e(266), wD.e(267)]).then((() => wD(40450))),
+          fD = await Promise.all([wD.e(266), wD.e(268)]).then((() => wD(40455))),
+          ID = DD.initializeApp({
+            ...gD,
+            measurementId: sD.b
           });
-        (0, Am.L)(), window.gtag("config", Am.e), (0, Am.F)(), window.gtag("config", "AW-16469618203");
-        const Ym = Tm.getAnalytics(Om),
-          qm = {
-            portal: am.currentUrl.getSearchParam("portal") || "root",
+        (0, sD.E)(), window.gtag("config", sD.b), (0, sD.z)(), window.gtag("config", "AW-16469618203");
+        const BD = zD.getAnalytics(ID),
+          GD = {
+            portal: KD.currentUrl.getSearchParam("portal") || "root",
             loggedIn: !1
           };
-        Tm.setUserProperties(Ym, qm);
-        const jm = om.initializeAuth(Om, {
-          persistence: [om.indexedDBLocalPersistence, om.browserLocalPersistence, om.browserSessionPersistence],
-          popupRedirectResolver: (0, xm.isMobileApp)() ? void 0 : om.browserPopupRedirectResolver
+        zD.setUserProperties(BD, GD);
+        const hD = fD.initializeAuth(ID, {
+          persistence: [fD.indexedDBLocalPersistence, fD.browserLocalPersistence, fD.browserSessionPersistence],
+          popupRedirectResolver: (0, rD.isMobileApp)() ? void 0 : fD.browserPopupRedirectResolver
         });
-        om.useDeviceLanguage(jm);
-        const Vm = new om.GoogleAuthProvider;
-        Vm.setCustomParameters({
+        fD.useDeviceLanguage(hD);
+        const nD = new fD.GoogleAuthProvider;
+        nD.setCustomParameters({
           prompt: "select_account"
         });
-        const Im = new om.OAuthProvider(hm.i[hm.e.APPLE]),
-          Km = new om.OAuthProvider(hm.i[hm.e.MICROSOFT]);
-        Km.setCustomParameters({
+        const MD = new fD.OAuthProvider(pD.g[pD.d.APPLE]),
+          OD = new fD.OAuthProvider(pD.g[pD.d.MICROSOFT]);
+        OD.setCustomParameters({
           prompt: "select_account",
           tenant: "consumers"
         });
-        const Qm = {
-          [hm.e.GOOGLE]: Vm,
-          [hm.e.APPLE]: Im,
-          [hm.e.MICROSOFT]: Km
+        const JD = {
+          [pD.d.GOOGLE]: nD,
+          [pD.d.APPLE]: MD,
+          [pD.d.MICROSOFT]: OD
         };
         window.gtag("set", {
           cookie_flags: "SameSite=None;Secure"
-        }), await new Promise((mm => {
-          const Tm = om.onIdTokenChanged(jm, (fm => {
-            Tm(), mm()
+        }), await new Promise((DD => {
+          const zD = fD.onIdTokenChanged(hD, (wD => {
+            zD(), DD()
           }))
         }));
-        class nm extends Em {
-          setUserProperties(mm) {
-            Tm.setUserProperties(Ym, mm)
+        class ED extends UD {
+          setUserProperties(DD) {
+            zD.setUserProperties(BD, DD)
           }
-          onIdTokenChanged(mm) {
-            om.onIdTokenChanged(jm, mm)
+          onIdTokenChanged(DD) {
+            fD.onIdTokenChanged(hD, DD)
           }
           canSignIn() {
             return !0
           }
-          async signInWithPopup(mm) {
-            var Tm;
-            const fm = await om.signInWithPopup(jm, Qm[mm]);
-            return null !== (Tm = null === fm || void 0 === fm ? void 0 : fm.user) && void 0 !== Tm ? Tm : null
+          async signInWithPopup(DD) {
+            var zD;
+            const wD = await fD.signInWithPopup(hD, JD[DD]);
+            return null !== (zD = null === wD || void 0 === wD ? void 0 : wD.user) && void 0 !== zD ? zD : null
           }
-          async getCurrentUser(mm) {
-            const Tm = jm.currentUser;
-            if (!Tm) return null;
+          async getCurrentUser(DD) {
+            const zD = hD.currentUser;
+            if (!zD) return null;
             const {
-              signInProvider: fm
-            } = await Tm.getIdTokenResult(!1);
-            return fm === hm.i[mm] ? Tm : null
+              signInProvider: wD
+            } = await zD.getIdTokenResult(!1);
+            return wD === pD.g[DD] ? zD : null
           }
-          async signOut(mm) {
-            null !== await this.getCurrentUser(mm) && await om.signOut(jm)
+          async signOut(DD) {
+            null !== await this.getCurrentUser(DD) && await fD.signOut(hD)
           }
         }
-        async function Jm(mm, Tm) {
-          const fm = await wm.e.request(`${mm}.${Tm}`, {});
-          if (null === fm) return null;
-          const hm = "google" === mm ? om.GoogleAuthProvider.credential(fm.idToken) : Im.credential({
-            idToken: fm.idToken
+        async function QD(DD, zD) {
+          const wD = await LD.c.request(`${DD}.${zD}`, {});
+          if (null === wD) return null;
+          const pD = "google" === DD ? fD.GoogleAuthProvider.credential(wD.idToken) : MD.credential({
+            idToken: wD.idToken
           });
-          return (await om.signInWithCredential(jm, hm)).user
+          return (await fD.signInWithCredential(hD, pD)).user
         }
-        class cm extends Em {
-          setUserProperties(mm) {
-            Tm.setUserProperties(Ym, mm)
+        class XD extends UD {
+          setUserProperties(DD) {
+            zD.setUserProperties(BD, DD)
           }
-          onIdTokenChanged(mm) {
-            om.onIdTokenChanged(jm, mm)
+          onIdTokenChanged(DD) {
+            fD.onIdTokenChanged(hD, DD)
           }
-          canSignIn(mm) {
-            return null !== (0, Dm.d)(mm)
+          canSignIn(DD) {
+            return null !== (0, cD.e)(DD)
           }
-          async signInWithPopup(mm) {
-            const Tm = (0, Dm.d)(mm);
-            if (null === Tm) return console.warn(`The app can't sign in with ${mm}; check canSignIn first`), null;
+          async signInWithPopup(DD) {
+            const zD = (0, cD.e)(DD);
+            if (null === zD) return console.warn(`The app can't sign in with ${DD}; check canSignIn first`), null;
             try {
-              return await Jm(Tm, "signIn")
-            } catch (fm) {
-              if (fm instanceof pm.e && "timeout" === fm.code) return null;
-              throw (0, Rm.reportClientError)("login_failed", fm, `app_${Tm}`), fm
+              return await QD(zD, "signIn")
+            } catch (wD) {
+              if (wD instanceof AD.c && "timeout" === wD.code) return null;
+              throw (0, RD.reportClientError)("login_failed", wD, `app_${zD}`), wD
             }
           }
-          async getCurrentUser(mm) {
-            const Tm = jm.currentUser;
-            if (Tm) {
+          async getCurrentUser(DD) {
+            const zD = hD.currentUser;
+            if (zD) {
               const {
-                signInProvider: fm
-              } = await Tm.getIdTokenResult(!1);
-              if (fm === hm.i[mm]) return Tm
+                signInProvider: wD
+              } = await zD.getIdTokenResult(!1);
+              if (wD === pD.g[DD]) return zD
             }
-            const fm = (0, Dm.d)(mm);
-            if (null === fm) return null;
+            const wD = (0, cD.e)(DD);
+            if (null === wD) return null;
             try {
-              return await Jm(fm, "getCurrentUser")
-            } catch (Am) {
-              return console.error(`Failed to get the current ${mm} user from the app:`, Am), null
+              return await QD(wD, "getCurrentUser")
+            } catch (sD) {
+              return console.error(`Failed to get the current ${DD} user from the app:`, sD), null
             }
           }
-          async signOut(mm) {
-            const Tm = (0, Dm.d)(mm);
-            null !== Tm && wm.e.request(`${Tm}.signOut`, {}).catch((Tm => {
-              console.error(`Failed to sign out of ${mm} in the app:`, Tm)
+          async signOut(DD) {
+            const zD = (0, cD.e)(DD);
+            null !== zD && LD.c.request(`${zD}.signOut`, {}).catch((zD => {
+              console.error(`Failed to sign out of ${DD} in the app:`, zD)
             }));
-            const fm = jm.currentUser;
-            if (fm) {
+            const wD = hD.currentUser;
+            if (wD) {
               const {
-                signInProvider: Tm
-              } = await fm.getIdTokenResult(!1);
-              Tm === hm.i[mm] && await om.signOut(jm)
+                signInProvider: zD
+              } = await wD.getIdTokenResult(!1);
+              zD === pD.g[DD] && await fD.signOut(hD)
             }
           }
         }
-        return (0, xm.isMobileApp)() ? (await wm.e.ready, new cm) : new nm
+        return (0, rD.isMobileApp)() ? (await LD.c.ready, new XD) : new ED
       }
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

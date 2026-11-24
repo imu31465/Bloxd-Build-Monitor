@@ -1,30 +1,30 @@
 export const id = 76;
 export const ids = [76];
 export const modules = {
-  4626: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => Rm
+  4718: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => RD
     });
-    var hm = fm(23),
-      Am = fm(31),
-      am = fm(1286),
-      xm = fm(2813);
-    const wm = 3e4,
-      Dm = 1e3;
+    var pD = wD(20),
+      sD = wD(25),
+      KD = wD(1299),
+      rD = wD(2811);
+    const LD = 3e4,
+      cD = 1e3;
 
-    function im() {
-      return "visible" === document.visibilityState && "inGame" === hm.c.get("gameState") && (0, am.r)()
+    function gD() {
+      return "visible" === document.visibilityState && "inGame" === pD.e.get("gameState") && (0, KD.s)()
     }
 
-    function Rm(mm, Tm) {
-      (0, xm.p)() || function(mm, Tm, fm) {
-        let hm = 0;
-        const Am = setInterval((() => {
-          Tm() && (hm += Dm, hm >= mm && (clearInterval(Am), fm()))
-        }), Dm)
-      }(wm, im, (() => {
-        Tm().then((() => {
-          mm(`saved for the player after ${wm/1e3} s of play`), (0, xm.w)(), Am.j.gp("chat", {
+    function RD(DD, zD) {
+      (0, rD.v)() || function(DD, zD, wD) {
+        let pD = 0;
+        const sD = setInterval((() => {
+          zD() && (pD += cD, pD >= DD && (clearInterval(sD), wD()))
+        }), cD)
+      }(LD, gD, (() => {
+        zD().then((() => {
+          DD(`saved for the player after ${LD/1e3} s of play`), (0, rD.D)(), sD.l.KG("chat", {
             content: [{
               str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
               style: {
@@ -36,347 +36,347 @@ export const modules = {
       }))
     }
   },
-  34146: (mm, Tm, fm) => {
-    function hm(mm, Tm) {
-      return 0 === mm.length ? 0 : mm[Math.min(mm.length - 1, Math.floor(Tm * mm.length))]
+  34070: (DD, zD, wD) => {
+    function pD(DD, zD) {
+      return 0 === DD.length ? 0 : DD[Math.min(DD.length - 1, Math.floor(zD * DD.length))]
     }
 
-    function Am(mm) {
-      return mm.toFixed(1)
+    function sD(DD) {
+      return DD.toFixed(1)
     }
-    fm.d(Tm, {
-      e: () => Am,
-      g: () => hm
+    wD.d(zD, {
+      d: () => sD,
+      h: () => pD
     })
   },
-  38001: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => im,
-      c: () => Rm,
-      d: () => Km,
-      f: () => Im,
-      h: () => Vm
+  37927: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => gD,
+      f: () => RD,
+      h: () => OD,
+      j: () => MD,
+      n: () => nD
     });
-    var hm = fm(4626),
-      Am = fm(34146),
-      am = fm(2813);
-    const xm = 20,
-      wm = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "yp", "jobMs"];
+    var pD = wD(4718),
+      sD = wD(34070),
+      KD = wD(2811);
+    const rD = 20,
+      LD = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "bA", "jobMs"];
 
-    function Dm(mm) {
-      return [...mm].sort(((mm, Tm) => mm - Tm))
+    function cD(DD) {
+      return [...DD].sort(((DD, zD) => DD - zD))
     }
-    const im = [];
+    const gD = [];
 
-    function Rm(mm, Tm, fm) {
-      return `${mm},${Tm},${fm}`
+    function RD(DD, zD, wD) {
+      return `${DD},${zD},${wD}`
     }
-    class pm {
+    class AD {
       constructor() {
         this.pending = new Map, this.jobs = new Map, this.edits = [], this.nextEdit = 0, this.reported = 0, this.windowStart = performance.now(), this.frames = 0, this.lastFrameAt = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
-      edit(mm, Tm) {
-        var fm;
-        const hm = null !== (fm = this.pending.get(mm)) && void 0 !== fm ? fm : [];
-        hm.push({
-          editAt: Tm,
+      edit(DD, zD) {
+        var wD;
+        const pD = null !== (wD = this.pending.get(DD)) && void 0 !== wD ? wD : [];
+        pD.push({
+          editAt: zD,
           meshJobId: 0
-        }), this.pending.set(mm, hm)
+        }), this.pending.set(DD, pD)
       }
-      frame(mm) {
-        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, mm - this.lastFrameAt)), this.lastFrameAt = mm, this.frames++, mm - this.windowStart >= 1e3 && this.summarise(mm)
+      frame(DD) {
+        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, DD - this.lastFrameAt)), this.lastFrameAt = DD, this.frames++, DD - this.windowStart >= 1e3 && this.summarise(DD)
       }
-      sent(mm, Tm, fm, hm, Am, am, xm) {
-        this.jobs.set(Tm, {
-          sentAt: xm,
+      sent(DD, zD, wD, pD, sD, KD, rD) {
+        this.jobs.set(zD, {
+          sentAt: rD,
           receivedAt: 0,
-          ahead: fm,
-          inFlight: hm,
-          yp: Am,
+          ahead: wD,
+          inFlight: pD,
+          bA: sD,
           jobMs: 0
-        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, fm), this.maxCapacity = Math.max(this.maxCapacity, Am);
-        for (const Dm of null !== (wm = this.pending.get(mm)) && void 0 !== wm ? wm : []) {
-          var wm;
-          am.includes(Dm.meshJobId) || (Dm.meshJobId = Tm)
+        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, wD), this.maxCapacity = Math.max(this.maxCapacity, sD);
+        for (const cD of null !== (LD = this.pending.get(DD)) && void 0 !== LD ? LD : []) {
+          var LD;
+          KD.includes(cD.meshJobId) || (cD.meshJobId = zD)
         }
       }
-      received(mm, Tm, fm) {
-        const hm = this.jobs.get(mm);
-        void 0 !== hm && (this.roundTrips.push(fm - hm.sentAt), hm.receivedAt = fm, hm.jobMs = Tm)
+      received(DD, zD, wD) {
+        const pD = this.jobs.get(DD);
+        void 0 !== pD && (this.roundTrips.push(wD - pD.sentAt), pD.receivedAt = wD, pD.jobMs = zD)
       }
-      failed(mm) {
-        this.jobs.delete(mm)
+      failed(DD) {
+        this.jobs.delete(DD)
       }
-      reassign(mm, Tm, fm) {
-        this.jobs.delete(Tm);
-        for (const Am of null !== (hm = this.pending.get(mm)) && void 0 !== hm ? hm : []) {
-          var hm;
-          Am.meshJobId === Tm && (Am.meshJobId = fm)
+      reassign(DD, zD, wD) {
+        this.jobs.delete(zD);
+        for (const sD of null !== (pD = this.pending.get(DD)) && void 0 !== pD ? pD : []) {
+          var pD;
+          sD.meshJobId === zD && (sD.meshJobId = wD)
         }
       }
-      applied(mm, Tm, fm) {
-        const hm = this.jobs.get(Tm);
-        this.jobs.delete(Tm), void 0 !== hm && this.show(mm, hm, fm, (mm => mm.meshJobId === Tm))
+      applied(DD, zD, wD) {
+        const pD = this.jobs.get(zD);
+        this.jobs.delete(zD), void 0 !== pD && this.show(DD, pD, wD, (DD => DD.meshJobId === zD))
       }
-      emptied(mm, Tm) {
-        const fm = {
-          sentAt: Tm,
-          receivedAt: Tm,
+      emptied(DD, zD) {
+        const wD = {
+          sentAt: zD,
+          receivedAt: zD,
           ahead: 0,
           inFlight: 0,
-          yp: 0,
+          bA: 0,
           jobMs: 0
         };
-        this.show(mm, fm, Tm, (() => !0))
+        this.show(DD, wD, zD, (() => !0))
       }
-      show(mm, Tm, fm, hm) {
-        const Am = this.pending.get(mm);
-        if (!Am) return;
-        const am = Am.filter((Am => !hm(Am) || (this.record(mm, Am.editAt, Tm, fm), !1)));
-        am.length > 0 ? this.pending.set(mm, am) : this.pending.delete(mm)
+      show(DD, zD, wD, pD) {
+        const sD = this.pending.get(DD);
+        if (!sD) return;
+        const KD = sD.filter((sD => !pD(sD) || (this.record(DD, sD.editAt, zD, wD), !1)));
+        KD.length > 0 ? this.pending.set(DD, KD) : this.pending.delete(DD)
       }
-      IO(mm) {
-        this.reported += mm, this === om && this.reported >= xm && null !== Om && (Om(), Om = null)
+      sI(DD) {
+        this.reported += DD, this === fD && this.reported >= rD && null !== ID && (ID(), ID = null)
       }
-      record(mm, Tm, fm, hm) {
-        const Am = {
-          totalMs: hm - Tm,
-          slotMs: fm.sentAt - Tm,
-          workerMs: fm.receivedAt - fm.sentAt,
-          applyMs: hm - fm.receivedAt,
-          ahead: fm.ahead,
-          inFlight: fm.inFlight,
-          yp: fm.yp,
-          jobMs: fm.jobMs
+      record(DD, zD, wD, pD) {
+        const sD = {
+          totalMs: pD - zD,
+          slotMs: wD.sentAt - zD,
+          workerMs: wD.receivedAt - wD.sentAt,
+          applyMs: pD - wD.receivedAt,
+          ahead: wD.ahead,
+          inFlight: wD.inFlight,
+          bA: wD.bA,
+          jobMs: wD.jobMs
         };
-        if (this.edits[this.nextEdit] = Am, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(Am.totalMs), this.IO(1), Am.totalMs < 100 || ++this.outliers > 5) return;
-        const xm = mm => Math.round(mm);
-        (0, am.g)("remesh", `slow edit (${mm}) shown in ${xm(Am.totalMs)} ms: slot ${xm(Am.slotMs)}, worker ${xm(Am.workerMs)} (${Am.ahead} ahead, ${Am.inFlight}/${Am.yp} in flight; job ${xm(Am.jobMs)}), apply ${xm(Am.applyMs)}`)
+        if (this.edits[this.nextEdit] = sD, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(sD.totalMs), this.sI(1), sD.totalMs < 100 || ++this.outliers > 5) return;
+        const rD = DD => Math.round(DD);
+        (0, KD.l)("remesh", `slow edit (${DD}) shown in ${rD(sD.totalMs)} ms: slot ${rD(sD.slotMs)}, worker ${rD(sD.workerMs)} (${sD.ahead} ahead, ${sD.inFlight}/${sD.bA} in flight; job ${rD(sD.jobMs)}), apply ${rD(sD.applyMs)}`)
       }
-      summarise(mm) {
-        const Tm = (mm - this.windowStart) / 1e3;
-        for (const [fm, hm] of this.pending) {
-          const Tm = hm.filter((Tm => mm - Tm.editAt <= 1e4));
-          this.gaveUp += hm.length - Tm.length, this.IO(hm.length - Tm.length), Tm.length > 0 ? this.pending.set(fm, Tm) : this.pending.delete(fm)
+      summarise(DD) {
+        const zD = (DD - this.windowStart) / 1e3;
+        for (const [wD, pD] of this.pending) {
+          const zD = pD.filter((zD => DD - zD.editAt <= 1e4));
+          this.gaveUp += pD.length - zD.length, this.sI(pD.length - zD.length), zD.length > 0 ? this.pending.set(wD, zD) : this.pending.delete(wD)
         }
-        for (const [fm, hm] of this.jobs) mm - hm.sentAt > (hm.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(fm);
+        for (const [wD, pD] of this.jobs) DD - pD.sentAt > (pD.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(wD);
         if (this.jobsSent > 0 || this.roundTrips.length > 0 || this.windowEdits.length > 0 || this.gaveUp > 0) {
-          const mm = Dm(this.roundTrips),
-            fm = Dm(this.windowEdits),
-            hm = Math.max(0, this.outliers - 5);
-          (0, am.g)("remesh", `${Math.round(this.frames/Tm)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,Am.g)(mm,.5))} max ${Math.round((0,Am.g)(mm,1))} ms | ${fm.length} edits shown, p50 ${Math.round((0,Am.g)(fm,.5))} max ${Math.round((0,Am.g)(fm,1))} ms${hm>0?`, ${hm} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
+          const DD = cD(this.roundTrips),
+            wD = cD(this.windowEdits),
+            pD = Math.max(0, this.outliers - 5);
+          (0, KD.l)("remesh", `${Math.round(this.frames/zD)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,sD.h)(DD,.5))} max ${Math.round((0,sD.h)(DD,1))} ms | ${wD.length} edits shown, p50 ${Math.round((0,sD.h)(wD,.5))} max ${Math.round((0,sD.h)(wD,1))} ms${pD>0?`, ${pD} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
         }
-        this.windowStart = mm, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
+        this.windowStart = DD, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
       }
       stats() {
-        const mm = wm.map((mm => {
-          const Tm = Dm(this.edits.map((Tm => Tm[mm])));
-          return `${mm}: p50 ${Math.round((0,Am.g)(Tm,.5))} p90 ${Math.round((0,Am.g)(Tm,.9))} max ${Math.round((0,Am.g)(Tm,1))}`
+        const DD = LD.map((DD => {
+          const zD = cD(this.edits.map((zD => zD[DD])));
+          return `${DD}: p50 ${Math.round((0,sD.h)(zD,.5))} p90 ${Math.round((0,sD.h)(zD,.9))} max ${Math.round((0,sD.h)(zD,1))}`
         }));
-        return [`${this.edits.length} edits`, ...mm].join("\n")
+        return [`${this.edits.length} edits`, ...DD].join("\n")
       }
       dump() {
-        const mm = this.edits.map((mm => wm.map((Tm => Math.round(10 * mm[Tm]) / 10)).join(",")));
-        return [this.stats(), wm.join(","), ...mm].join("\n")
+        const DD = this.edits.map((DD => LD.map((zD => Math.round(10 * DD[zD]) / 10)).join(",")));
+        return [this.stats(), LD.join(","), ...DD].join("\n")
       }
     }
-    class Em {
-      constructor(mm, Tm) {
-        this.log = mm, this.IE = Tm
+    class UD {
+      constructor(DD, zD) {
+        this.log = DD, this.AU = zD
       }
-      edit(mm, Tm, fm) {
-        const [hm, Am, am] = this.IE.oE.fAm(mm, Tm, fm), xm = this.IE.oE.HY.yY(hm, Am, am);
-        xm && xm.XY && this.log.edit(Rm(hm, Am, am), performance.now())
+      edit(DD, zD, wD) {
+        const [pD, sD, KD] = this.AU.KU.OsD(DD, zD, wD), rD = this.AU.KU.EB.QB(pD, sD, KD);
+        rD && rD.OB && this.log.edit(RD(pD, sD, KD), performance.now())
       }
-      sent(mm, Tm, fm, hm, Am) {
-        this.log.sent(Rm(mm.i, mm.j, mm.k), Tm, fm, hm, Am, im, performance.now())
+      sent(DD, zD, wD, pD, sD) {
+        this.log.sent(RD(DD.i, DD.j, DD.k), zD, wD, pD, sD, gD, performance.now())
       }
-      received(mm) {
-        this.log.received(mm.meshJobId, mm.jobMs, performance.now())
+      received(DD) {
+        this.log.received(DD.meshJobId, DD.jobMs, performance.now())
       }
-      failed(mm) {
-        this.log.failed(mm)
+      failed(DD) {
+        this.log.failed(DD)
       }
-      applied(mm, Tm) {
-        this.log.applied(Rm(mm.i, mm.j, mm.k), Tm, performance.now())
+      applied(DD, zD) {
+        this.log.applied(RD(DD.i, DD.j, DD.k), zD, performance.now())
       }
     }
-    let om = null,
-      Om = null,
-      Ym = !1,
-      qm = null;
+    let fD = null,
+      ID = null,
+      BD = !1,
+      GD = null;
 
-    function jm() {
-      return new Promise((mm => {
-        null !== om && om.reported >= xm ? mm() : Om = mm
+    function hD() {
+      return new Promise((DD => {
+        null !== fD && fD.reported >= rD ? DD() : ID = DD
       }))
     }
 
-    function Vm() {
-      const mm = new pm;
-      return om = mm, (0, am.f)("remesh", (() => mm.dump())), (0, am.b)("remeshStats", (() => {
-        console.log(mm.stats())
-      })), Ym || (Ym = !0, (0, hm.c)((mm => {
-        (0, am.g)("remesh", mm)
-      }), jm)), mm
+    function nD() {
+      const DD = new AD;
+      return fD = DD, (0, KD.i)("remesh", (() => DD.dump())), (0, KD.c)("remeshStats", (() => {
+        console.log(DD.stats())
+      })), BD || (BD = !0, (0, pD.d)((DD => {
+        (0, KD.l)("remesh", DD)
+      }), hD)), DD
     }
 
-    function Im(mm) {
-      const Tm = Vm();
-      qm = new Em(Tm, mm), mm.MI.meshProbe = qm, mm.on("beforeRender", (() => {
-        Tm.frame(performance.now())
+    function MD(DD) {
+      const zD = nD();
+      GD = new UD(zD, DD), DD.qJ.meshProbe = GD, DD.on("beforeRender", (() => {
+        zD.frame(performance.now())
       }))
     }
 
-    function Km(mm, Tm, fm) {
-      var hm;
-      null === (hm = qm) || void 0 === hm || hm.edit(mm, Tm, fm)
+    function OD(DD, zD, wD) {
+      var pD;
+      null === (pD = GD) || void 0 === pD || pD.edit(DD, zD, wD)
     }
   },
-  37754: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => hm
+  37678: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => pD
     });
-    const hm = {
+    const pD = {
       noaReady: null,
       chunkRequested: null,
       beforeServerListeners: null,
       wasmNetReady: null
     }
   },
-  37793: (mm, Tm, fm) => {
-    function hm(mm) {
-      return "string" !== typeof mm || 2 !== mm.length && ":" !== mm[2] ? null : mm[0] + mm[1]
+  37724: (DD, zD, wD) => {
+    function pD(DD) {
+      return "string" !== typeof DD || 2 !== DD.length && ":" !== DD[2] ? null : DD[0] + DD[1]
     }
-    fm.d(Tm, {
-      d: () => qm,
-      g: () => nm,
-      k: () => Qm,
-      l: () => Jm,
-      p: () => wm,
-      q: () => xm,
-      s: () => am,
-      u: () => Dm,
-      v: () => jm,
-      y: () => Ym
+    wD.d(zD, {
+      b: () => GD,
+      c: () => ED,
+      e: () => JD,
+      f: () => QD,
+      h: () => LD,
+      k: () => rD,
+      l: () => KD,
+      m: () => cD,
+      q: () => hD,
+      u: () => BD
     });
-    const Am = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
+    const sD = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
 
-    function am(mm) {
-      if (function(mm) {
-          for (let Tm = 0; Tm < Am.length; Tm++)
-            if (mm === Am[Tm]) return !0;
+    function KD(DD) {
+      if (function(DD) {
+          for (let zD = 0; zD < sD.length; zD++)
+            if (DD === sD[zD]) return !0;
           return !1
-        }(mm)) return !1;
-      const Tm = hm(mm);
-      return "op" === Tm || "ep" === Tm || "wi" === Tm || "pp" === Tm || "fp:call" === mm || "fp:t" === mm
+        }(DD)) return !1;
+      const zD = pD(DD);
+      return "op" === zD || "ep" === zD || "wi" === zD || "pp" === zD || "fp:call" === DD || "fp:t" === DD
     }
 
-    function xm(mm) {
-      return "fp" === hm(mm) && !am(mm)
+    function rD(DD) {
+      return "fp" === pD(DD) && !KD(DD)
     }
 
-    function wm(mm) {
-      if ("string" !== typeof mm) return !1;
-      return "o" === mm[0] && "p" === mm[1] && (2 === mm.length || ":" === mm[2]) || "fp:call" === mm || "2" === mm || "t" === mm || "a" === mm
+    function LD(DD) {
+      if ("string" !== typeof DD) return !1;
+      return "o" === DD[0] && "p" === DD[1] && (2 === DD.length || ":" === DD[2]) || "fp:call" === DD || "2" === DD || "t" === DD || "a" === DD
     }
 
-    function Dm(mm, Tm) {
-      return `~${function(mm){return mm.length<2?mm:":"===mm[1]?mm[0]:mm[0]+mm[1]}(Tm)}~${mm}`
+    function cD(DD, zD) {
+      return `~${function(DD){return DD.length<2?DD:":"===DD[1]?DD[0]:DD[0]+DD[1]}(zD)}~${DD}`
     }
-    const im = 200;
+    const gD = 200;
 
-    function Rm(mm) {
-      let Tm = mm.length - 1;
-      for (let fm = 0; fm < 2; fm++) {
-        const fm = Tm;
-        for (; Tm >= 0 && mm[Tm] >= "0" && mm[Tm] <= "9";) Tm--;
-        if (Tm < 0 || Tm === fm || ":" !== mm[Tm]) return -1;
-        Tm--
+    function RD(DD) {
+      let zD = DD.length - 1;
+      for (let wD = 0; wD < 2; wD++) {
+        const wD = zD;
+        for (; zD >= 0 && DD[zD] >= "0" && DD[zD] <= "9";) zD--;
+        if (zD < 0 || zD === wD || ":" !== DD[zD]) return -1;
+        zD--
       }
-      return Tm + 1
+      return zD + 1
     }
 
-    function pm(mm) {
-      return "unknown" === mm || Rm(mm) >= 0
+    function AD(DD) {
+      return "unknown" === DD || RD(DD) >= 0
     }
 
-    function Em(mm, Tm) {
-      return mm[Tm] >= "\ud800" && mm[Tm] <= "\udbff" && Tm + 1 < mm.length && mm[Tm + 1] >= "\udc00" && mm[Tm + 1] <= "\udfff" ? 2 : 1
+    function UD(DD, zD) {
+      return DD[zD] >= "\ud800" && DD[zD] <= "\udbff" && zD + 1 < DD.length && DD[zD + 1] >= "\udc00" && DD[zD + 1] <= "\udfff" ? 2 : 1
     }
 
-    function om(mm, Tm, fm) {
-      return 2 === fm ? 4 : mm[Tm] <= "\x7f" ? 1 : mm[Tm] <= "\u07ff" ? 2 : 3
+    function fD(DD, zD, wD) {
+      return 2 === wD ? 4 : DD[zD] <= "\x7f" ? 1 : DD[zD] <= "\u07ff" ? 2 : 3
     }
 
-    function Om(mm, Tm, fm) {
-      let hm = 0;
-      for (; hm < Tm;) {
-        const Tm = Em(mm, hm),
-          Am = om(mm, hm, Tm);
-        if (Am > fm) break;
-        fm -= Am, hm += Tm
+    function ID(DD, zD, wD) {
+      let pD = 0;
+      for (; pD < zD;) {
+        const zD = UD(DD, pD),
+          sD = fD(DD, pD, zD);
+        if (sD > wD) break;
+        wD -= sD, pD += zD
       }
-      return hm
+      return pD
     }
 
-    function Ym(mm) {
-      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
-      if ("string" !== typeof mm || mm.length > im || !pm(mm)) return "t";
-      let fm = 2;
-      for (let wm = 0; wm < mm.length;) {
-        const Tm = Em(mm, wm);
-        fm += om(mm, wm, Tm), wm += Tm
+    function BD(DD) {
+      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
+      if ("string" !== typeof DD || DD.length > gD || !AD(DD)) return "t";
+      let wD = 2;
+      for (let LD = 0; LD < DD.length;) {
+        const zD = UD(DD, LD);
+        wD += fD(DD, LD, zD), LD += zD
       }
-      if (fm <= Tm) return `t ${mm}`;
-      const hm = Rm(mm),
-        Am = Tm - 2 - (mm.length - hm);
-      if (Am < 0) return "t";
-      const am = Om(mm, hm, Am);
-      let xm = "t ";
-      for (let wm = 0; wm < am; wm++) xm += mm[wm];
-      for (let wm = hm; wm < mm.length; wm++) xm += mm[wm];
-      return xm
+      if (wD <= zD) return `t ${DD}`;
+      const pD = RD(DD),
+        sD = zD - 2 - (DD.length - pD);
+      if (sD < 0) return "t";
+      const KD = ID(DD, pD, sD);
+      let rD = "t ";
+      for (let LD = 0; LD < KD; LD++) rD += DD[LD];
+      for (let LD = pD; LD < DD.length; LD++) rD += DD[LD];
+      return rD
     }
-    const qm = 62;
+    const GD = 62;
 
-    function jm(mm) {
-      let Tm = "so:";
-      const fm = Om(mm, mm.length, qm - Tm.length);
-      for (let hm = 0; hm < fm; hm++) Tm += mm[hm];
-      return Tm
+    function hD(DD) {
+      let zD = "so:";
+      const wD = ID(DD, DD.length, GD - zD.length);
+      for (let pD = 0; pD < wD; pD++) zD += DD[pD];
+      return zD
     }
-    const Vm = "BABYLON ",
-      Im = "DECODE ",
-      Km = "BABYLON@ ";
+    const nD = "BABYLON ",
+      MD = "DECODE ",
+      OD = "BABYLON@ ";
 
-    function Qm(mm) {
-      return jm(Vm + mm)
-    }
-
-    function nm(mm, Tm) {
-      return jm(Km + mm + " " + Tm)
+    function JD(DD) {
+      return hD(nD + DD)
     }
 
-    function Jm(mm) {
-      return jm(Im + mm)
+    function ED(DD, zD) {
+      return hD(OD + DD + " " + zD)
+    }
+
+    function QD(DD) {
+      return hD(MD + DD)
     }
   },
-  38032: mm => {
-    mm.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
+  37960: DD => {
+    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
   },
-  38020: mm => {
-    mm.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
+  37947: DD => {
+    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
   },
-  38038: mm => {
-    mm.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  37966: DD => {
+    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   },
-  38016: mm => {
-    mm.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
+  37943: DD => {
+    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
   },
-  38025: mm => {
-    mm.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
+  37955: DD => {
+    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

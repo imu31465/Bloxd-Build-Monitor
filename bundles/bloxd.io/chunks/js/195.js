@@ -1,225 +1,225 @@
 export const id = 195;
 export const ids = [195];
 export const modules = {
-  36461: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      showOnboardingPopup: () => Pm
+  36367: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      showOnboardingPopup: () => iD
     });
-    var hm = fm(59),
-      Am = fm(1208),
-      am = fm(1354),
-      xm = fm(1454),
-      wm = fm(4252),
-      Dm = fm(1572),
-      im = fm(1563),
-      Rm = fm(2208),
-      pm = fm(1080),
-      Em = fm.n(pm),
-      om = fm(1162),
-      Om = fm(36470),
-      Ym = fm(1089),
-      qm = fm(2332),
-      jm = fm(3486),
-      Vm = fm(1160),
-      Im = fm(1135);
-    const Km = Object.entries(Dm.e).filter((mm => {
-      let [, Tm] = mm;
-      return "default" === Tm.cosmeticPack
+    var pD = wD(58),
+      sD = wD(1200),
+      KD = wD(1355),
+      rD = wD(1447),
+      LD = wD(4342),
+      cD = wD(1570),
+      gD = wD(1562),
+      RD = wD(2197),
+      AD = wD(1044),
+      UD = wD.n(AD),
+      fD = wD(1130),
+      ID = wD(36374),
+      BD = wD(1057),
+      GD = wD(2356),
+      hD = wD(3482),
+      nD = wD(1127),
+      MD = wD(1096);
+    const OD = Object.entries(cD.b).filter((DD => {
+      let [, zD] = DD;
+      return "default" === zD.cosmeticPack
     }));
 
-    function Qm(mm) {
-      return im.b.default.colourGroups[mm].colours.map(((mm, Tm) => {
+    function JD(DD) {
+      return gD.e.default.colourGroups[DD].colours.map(((DD, zD) => {
         let {
-          rbg: fm,
-          order: hm
-        } = mm;
+          rbg: wD,
+          order: pD
+        } = DD;
         return {
-          rbg: fm,
-          order: hm,
-          index: Tm
+          rbg: wD,
+          order: pD,
+          index: zD
         }
-      })).sort(((mm, Tm) => mm.order - Tm.order))
+      })).sort(((DD, zD) => DD.order - zD.order))
     }
-    const nm = Qm("eyes"),
-      Jm = Qm("skin");
+    const ED = JD("eyes"),
+      QD = JD("skin");
 
-    function cm(mm, Tm) {
-      var fm;
-      if (void 0 === Tm || "default" !== (null === (fm = (0, Rm.g)(mm, Tm)) || void 0 === fm ? void 0 : fm.cosmeticPack)) return null;
-      const hm = (0, Rm.e)(Tm);
-      return hm && [hm[0], Number(hm[1])]
-    }
-
-    function zm(mm, Tm, fm) {
-      return `${mm}_${Tm}_${fm}`
+    function XD(DD, zD) {
+      var wD;
+      if (void 0 === zD || "default" !== (null === (wD = (0, RD.l)(DD, zD)) || void 0 === wD ? void 0 : wD.cosmeticPack)) return null;
+      const pD = (0, RD.i)(zD);
+      return pD && [pD[0], Number(pD[1])]
     }
 
-    function Zm(mm) {
+    function VD(DD, zD, wD) {
+      return `${DD}_${zD}_${wD}`
+    }
+
+    function PD(DD) {
       let {
-        label: Tm,
-        colours: fm,
-        picked: hm,
-        onPick: am
-      } = mm;
+        label: zD,
+        colours: wD,
+        picked: pD,
+        onPick: KD
+      } = DD;
       const {
-        t: xm
-      } = (0, Am.A)();
-      return (0, Im.jsxs)("div", {
+        t: rD
+      } = (0, sD.E)();
+      return (0, MD.jsxs)("div", {
         className: "OnboardingColours",
-        children: [(0, Im.jsx)("div", {
+        children: [(0, MD.jsx)("div", {
           className: "OnboardingColoursLabel",
-          children: Tm
-        }), (0, Im.jsx)("div", {
+          children: zD
+        }), (0, MD.jsx)("div", {
           className: "OnboardingSwatches",
           role: "radiogroup",
-          "aria-label": Tm,
-          children: fm.map(((mm, Tm) => {
+          "aria-label": zD,
+          children: wD.map(((DD, zD) => {
             let {
-              rbg: fm,
-              index: Am
-            } = mm;
-            return (0, Im.jsx)("button", {
+              rbg: wD,
+              index: sD
+            } = DD;
+            return (0, MD.jsx)("button", {
               type: "button",
-              className: Em()("OnboardingSwatch", {
-                OnboardingSwatchSelected: Am === hm
+              className: UD()("OnboardingSwatch", {
+                OnboardingSwatchSelected: sD === pD
               }),
               style: {
-                backgroundColor: `rgb(${fm.join(",")})`
+                backgroundColor: `rgb(${wD.join(",")})`
               },
               role: "radio",
-              "aria-checked": Am === hm,
-              "aria-label": xm("homePage:onboardingColour", {
-                number: Tm + 1
+              "aria-checked": sD === pD,
+              "aria-label": rD("homePage:onboardingColour", {
+                number: zD + 1
               }),
               onClick: () => {
-                am(Am)
+                KD(sD)
               }
-            }, Am)
+            }, sD)
           }))
         })]
       })
     }
 
-    function km() {
+    function CD() {
       const {
-        t: mm
-      } = (0, Am.A)(), {
-        userContext: Tm,
-        isUserContextUpdating: fm
-      } = (0, Vm.e)(), [am, xm] = (0, hm.useState)(!1), [, Dm] = (0, hm.useReducer)((mm => mm + 1), 0), im = (0, hm.useRef)({}), Rm = (0, hm.useRef)(null), pm = (0, jm.c)(), Qm = {
-        ...Tm.getPlayerCosmetics(),
-        ...Rm.current
-      }, km = (0, hm.useRef)(null);
-      (0, hm.useEffect)((() => {
-        var mm;
-        am && (null === (mm = km.current) || void 0 === mm || mm.scrollIntoView({
+        t: DD
+      } = (0, sD.E)(), {
+        userContext: zD,
+        isUserContextUpdating: wD
+      } = (0, nD.c)(), [KD, rD] = (0, pD.useState)(!1), [, cD] = (0, pD.useReducer)((DD => DD + 1), 0), gD = (0, pD.useRef)({}), RD = (0, pD.useRef)(null), AD = (0, hD.c)(), JD = {
+        ...zD.getPlayerCosmetics(),
+        ...RD.current
+      }, CD = (0, pD.useRef)(null);
+      (0, pD.useEffect)((() => {
+        var DD;
+        KD && (null === (DD = CD.current) || void 0 === DD || DD.scrollIntoView({
           block: "nearest"
         }))
-      }), [am]);
-      const bm = (mm, Tm) => {
-          (0, Om.c)(mm, Object.entries(Tm)), pm.current ? Dm() : mm.publishUpdateIfCurrent()
+      }), [KD]);
+      const xD = (DD, zD) => {
+          (0, ID.b)(DD, Object.entries(zD)), AD.current ? cD() : DD.publishUpdateIfCurrent()
         },
-        Sm = mm => {
-          const hm = {
-            ...Rm.current,
-            ...mm
+        TD = DD => {
+          const pD = {
+            ...RD.current,
+            ...DD
           };
-          if (!fm) return Rm.current = null, void bm(Tm, hm);
-          Rm.current = hm, Dm(), om.userContextManager.getCurrentUserContext().then((mm => {
-            Rm.current === hm && (Rm.current = null, bm(mm, hm))
-          })).catch((mm => {
-            console.warn("Couldn't put on the onboarding look held for the account", mm), Rm.current === hm && (Rm.current = null, pm.current && Dm())
+          if (!wD) return RD.current = null, void xD(zD, pD);
+          RD.current = pD, cD(), fD.userContextManager.getCurrentUserContext().then((DD => {
+            RD.current === pD && (RD.current = null, xD(DD, pD))
+          })).catch((DD => {
+            console.warn("Couldn't put on the onboarding look held for the account", DD), RD.current === pD && (RD.current = null, AD.current && cD())
           }))
         };
-      (0, hm.useEffect)((() => () => {
-        Tm.publishUpdateIfCurrent()
-      }), [Tm]);
-      const em = cm("eyes", Qm.eyes),
-        Nm = cm("skin", Qm.skin);
-      return (0, Im.jsxs)(Im.Fragment, {
-        children: [(0, Im.jsx)("div", {
+      (0, pD.useEffect)((() => () => {
+        zD.publishUpdateIfCurrent()
+      }), [zD]);
+      const bD = XD("eyes", JD.eyes),
+        jD = XD("skin", JD.skin);
+      return (0, MD.jsxs)(MD.Fragment, {
+        children: [(0, MD.jsx)("div", {
           className: "OnboardingPresets",
-          children: Km.map(((Tm, fm) => {
-            let [hm, {
-              cosmetics: Am
-            }] = Tm;
-            const am = function(mm, Tm) {
-              return Object.entries(Tm).every((Tm => {
-                let [fm, hm] = Tm;
-                return "skin" === fm || ("eyes" === fm ? (null === (Am = cm("eyes", mm.eyes)) || void 0 === Am ? void 0 : Am[0]) === (null === (am = cm("eyes", hm)) || void 0 === am ? void 0 : am[0]) : mm[fm] === hm);
-                var Am, am
+          children: OD.map(((zD, wD) => {
+            let [pD, {
+              cosmetics: sD
+            }] = zD;
+            const KD = function(DD, zD) {
+              return Object.entries(zD).every((zD => {
+                let [wD, pD] = zD;
+                return "skin" === wD || ("eyes" === wD ? (null === (sD = XD("eyes", DD.eyes)) || void 0 === sD ? void 0 : sD[0]) === (null === (KD = XD("eyes", pD)) || void 0 === KD ? void 0 : KD[0]) : DD[wD] === pD);
+                var sD, KD
               }))
-            }(Qm, Am);
-            return (0, Im.jsx)("button", {
+            }(JD, sD);
+            return (0, MD.jsx)("button", {
               type: "button",
-              className: Em()("OnboardingPreset", {
-                OnboardingPresetSelected: am
+              className: UD()("OnboardingPreset", {
+                OnboardingPresetSelected: KD
               }),
-              "aria-label": mm("homePage:onboardingPreset", {
-                number: fm + 1
+              "aria-label": DD("homePage:onboardingPreset", {
+                number: wD + 1
               }),
-              "aria-pressed": am,
+              "aria-pressed": KD,
               onClick: () => {
-                (0, wm.g)(`preset.${hm}`);
+                (0, LD.h)(`preset.${pD}`);
                 const {
-                  eyes: mm,
-                  skin: Tm
-                } = im.current;
-                Sm({
-                  ...Am,
-                  ...void 0 !== mm && {
-                    eyes: zm("eyes", cm("eyes", Am.eyes)[0], mm)
+                  eyes: DD,
+                  skin: zD
+                } = gD.current;
+                TD({
+                  ...sD,
+                  ...void 0 !== DD && {
+                    eyes: VD("eyes", XD("eyes", sD.eyes)[0], DD)
                   },
-                  ...void 0 !== Tm && {
-                    skin: zm("skin", "0", Tm)
+                  ...void 0 !== zD && {
+                    skin: VD("skin", "0", zD)
                   }
                 })
               },
-              children: (0, Im.jsx)("div", {
+              children: (0, MD.jsx)("div", {
                 className: "OnboardingPresetImage",
                 style: {
-                  backgroundImage: `url(/textures/charSkins/previews/character_${hm}_preview.png)`
+                  backgroundImage: `url(/textures/charSkins/previews/character_${pD}_preview.png)`
                 }
               })
-            }, hm)
+            }, pD)
           }))
-        }), (0, Im.jsxs)("button", {
+        }), (0, MD.jsxs)("button", {
           type: "button",
           className: "OnboardingMoreOptions",
-          "aria-expanded": am,
+          "aria-expanded": KD,
           onClick: () => {
-            am || (0, wm.g)("more"), xm(!am)
+            KD || (0, LD.h)("more"), rD(!KD)
           },
-          children: [mm("homePage:onboardingMoreOptions"), (0, Im.jsx)(Ym.c, {
-            name: am ? "caret-up" : "caret-down"
+          children: [DD("homePage:onboardingMoreOptions"), (0, MD.jsx)(BD.e, {
+            name: KD ? "caret-up" : "caret-down"
           })]
-        }), am && (0, Im.jsxs)("div", {
-          ref: km,
+        }), KD && (0, MD.jsxs)("div", {
+          ref: CD,
           className: "OnboardingMore",
-          children: [(0, Im.jsx)("div", {
+          children: [(0, MD.jsx)("div", {
             className: "OnboardingMorePreview",
-            children: (0, Im.jsx)(qm.d, {
-              cosmetics: Qm
+            children: (0, MD.jsx)(GD.c, {
+              cosmetics: JD
             })
-          }), (0, Im.jsxs)("div", {
+          }), (0, MD.jsxs)("div", {
             className: "OnboardingMoreColours",
-            children: [(0, Im.jsx)(Zm, {
-              label: mm("homePage:onboardingEyeColour"),
-              colours: nm,
-              picked: null === em || void 0 === em ? void 0 : em[1],
-              onPick: mm => {
-                var Tm;
-                (0, wm.g)("eyes"), im.current.eyes = mm, Sm({
-                  eyes: zm("eyes", null !== (Tm = null === em || void 0 === em ? void 0 : em[0]) && void 0 !== Tm ? Tm : "0", mm)
+            children: [(0, MD.jsx)(PD, {
+              label: DD("homePage:onboardingEyeColour"),
+              colours: ED,
+              picked: null === bD || void 0 === bD ? void 0 : bD[1],
+              onPick: DD => {
+                var zD;
+                (0, LD.h)("eyes"), gD.current.eyes = DD, TD({
+                  eyes: VD("eyes", null !== (zD = null === bD || void 0 === bD ? void 0 : bD[0]) && void 0 !== zD ? zD : "0", DD)
                 })
               }
-            }), (0, Im.jsx)(Zm, {
-              label: mm("homePage:onboardingSkinColour"),
-              colours: Jm,
-              picked: null === Nm || void 0 === Nm ? void 0 : Nm[1],
-              onPick: mm => {
-                (0, wm.g)("skin"), im.current.skin = mm, Sm({
-                  skin: zm("skin", "0", mm)
+            }), (0, MD.jsx)(PD, {
+              label: DD("homePage:onboardingSkinColour"),
+              colours: QD,
+              picked: null === jD || void 0 === jD ? void 0 : jD[1],
+              onPick: DD => {
+                (0, LD.h)("skin"), gD.current.skin = DD, TD({
+                  skin: VD("skin", "0", DD)
                 })
               }
             })]
@@ -227,339 +227,339 @@ export const modules = {
         })]
       })
     }
-    var bm = fm(1270),
-      Sm = fm(23),
-      em = fm(34173),
-      Nm = fm(1345),
-      Gm = fm(1676);
+    var xD = wD(1270),
+      TD = wD(20),
+      bD = wD(34109),
+      jD = wD(1346),
+      dD = wD(1687);
 
-    function Xm(mm) {
+    function SD(DD) {
       const {
-        t: Tm
-      } = (0, Am.A)(), {
-        userContext: fm,
-        isUserContextUpdating: am
-      } = (0, Vm.e)(), Dm = am ? null : fm.getPlayerName(), im = (0, hm.useRef)(null), [Rm, pm] = (0, hm.useState)((() => null === Dm ? (0, bm.g)() : null)), [Em, om] = (0, hm.useState)(null), [Om, qm] = (0, hm.useState)(!1), Km = (0, hm.useRef)("mO"), Qm = (0, jm.c)(), nm = (0, hm.useRef)(null !== Rm), Jm = (0, hm.useRef)(!1), cm = null !== Rm && void 0 !== Rm ? Rm : Dm, zm = (0, hm.useRef)(null), Zm = mm => {
-        im.current && (im.current.value = mm), pm(mm)
-      }, km = (0, hm.useRef)(!1);
-      (0, hm.useEffect)((() => {
-        var mm, Tm;
-        !Om && km.current && (km.current = !1, null === (mm = im.current) || void 0 === mm || mm.focus(), null === (Tm = im.current) || void 0 === Tm || Tm.select())
-      }), [Om]);
-      const Xm = (0, hm.useRef)(null);
-      (0, hm.useEffect)((() => {
-        var mm;
-        null !== Em && (null === (mm = Xm.current) || void 0 === mm || mm.scrollIntoView({
+        t: zD
+      } = (0, sD.E)(), {
+        userContext: wD,
+        isUserContextUpdating: KD
+      } = (0, nD.c)(), cD = KD ? null : wD.getPlayerName(), gD = (0, pD.useRef)(null), [RD, AD] = (0, pD.useState)((() => null === cD ? (0, xD.h)() : null)), [UD, fD] = (0, pD.useState)(null), [ID, GD] = (0, pD.useState)(!1), OD = (0, pD.useRef)("Nf"), JD = (0, hD.c)(), ED = (0, pD.useRef)(null !== RD), QD = (0, pD.useRef)(!1), XD = null !== RD && void 0 !== RD ? RD : cD, VD = (0, pD.useRef)(null), PD = DD => {
+        gD.current && (gD.current.value = DD), AD(DD)
+      }, CD = (0, pD.useRef)(!1);
+      (0, pD.useEffect)((() => {
+        var DD, zD;
+        !ID && CD.current && (CD.current = !1, null === (DD = gD.current) || void 0 === DD || DD.focus(), null === (zD = gD.current) || void 0 === zD || zD.select())
+      }), [ID]);
+      const SD = (0, pD.useRef)(null);
+      (0, pD.useEffect)((() => {
+        var DD;
+        null !== UD && (null === (DD = SD.current) || void 0 === DD || DD.scrollIntoView({
           block: "nearest"
         }))
-      }), [Em]);
-      const Pm = (mm, Tm) => {
-        const fm = document.activeElement === im.current || km.current;
-        qm(!0), om(null), mm.then((mm => {
-          Qm.current && (qm(!1), km.current = fm, Tm(mm))
+      }), [UD]);
+      const iD = (DD, zD) => {
+        const wD = document.activeElement === gD.current || CD.current;
+        GD(!0), fD(null), DD.then((DD => {
+          JD.current && (GD(!1), CD.current = wD, zD(DD))
         }))
       };
-      (0, hm.useEffect)((() => {
-        var mm, Tm;
-        Sm.c.get("isTouchScreen") || (null === (mm = im.current) || void 0 === mm || mm.focus(), null === (Tm = im.current) || void 0 === Tm || Tm.select())
+      (0, pD.useEffect)((() => {
+        var DD, zD;
+        TD.e.get("isTouchScreen") || (null === (DD = gD.current) || void 0 === DD || DD.focus(), null === (zD = gD.current) || void 0 === zD || zD.select())
       }), []);
-      const Hm = () => {
-          (0, wm.h)(Km.current), mm()
+      const lD = () => {
+          (0, LD.i)(OD.current), DD()
         },
-        ym = mm => "refused" === mm.outcome ? mm.message : Tm((0, em.e)(mm.failure)),
-        Cm = mm => !(mm.length >= bm.m) && (om({
+        WD = DD => "refused" === DD.outcome ? DD.message : zD((0, bD.g)(DD.failure)),
+        ND = DD => !(DD.length >= xD.n) && (fD({
           kind: "error",
-          message: Tm("homePage:changeNameMinLengthError", {
-            length: bm.m
+          message: zD("homePage:changeNameMinLengthError", {
+            length: xD.n
           })
         }), !0),
-        rm = mm => {
-          var hm, Am, am;
-          mm.toLowerCase() !== (null === (hm = null !== (Am = null === (am = zm.current) || void 0 === am ? void 0 : am.name) && void 0 !== Am ? Am : Dm) || void 0 === hm ? void 0 : hm.toLowerCase()) ? Cm(mm) || Pm((0, em.d)(fm, mm), (fm => {
-            "taken" !== fm.outcome ? "refused" !== fm.outcome && "failed" !== fm.outcome ? fm.name !== mm ? (Km.current = "suffixed", zm.current = {
-              name: fm.name,
-              outcome: Km.current
-            }, Zm(fm.name), om({
+        ZD = DD => {
+          var pD, sD, KD;
+          DD.toLowerCase() !== (null === (pD = null !== (sD = null === (KD = VD.current) || void 0 === KD ? void 0 : KD.name) && void 0 !== sD ? sD : cD) || void 0 === pD ? void 0 : pD.toLowerCase()) ? ND(DD) || iD((0, bD.d)(wD, DD), (wD => {
+            "taken" !== wD.outcome ? "refused" !== wD.outcome && "failed" !== wD.outcome ? wD.name !== DD ? (OD.current = "suffixed", VD.current = {
+              name: wD.name,
+              outcome: OD.current
+            }, PD(wD.name), fD({
               kind: "suffixed",
-              taken: mm,
-              name: fm.name
-            })) : Hm() : om({
+              taken: DD,
+              name: wD.name
+            })) : lD() : fD({
               kind: "error",
-              message: ym(fm)
-            }) : om({
+              message: WD(wD)
+            }) : fD({
               kind: "error",
-              message: Tm("homePage:onboardingNameAllTaken")
+              message: zD("homePage:onboardingNameAllTaken")
             })
-          })) : Hm()
+          })) : lD()
         };
-      (0, hm.useEffect)((() => {
-        if (!Om || null !== Dm || !Jm.current) return;
-        const mm = setTimeout((() => {
-          Jm.current = !1, qm(!1), om({
+      (0, pD.useEffect)((() => {
+        if (!ID || null !== cD || !QD.current) return;
+        const DD = setTimeout((() => {
+          QD.current = !1, GD(!1), fD({
             kind: "noAccount"
           })
         }), 2e4);
         return () => {
-          clearTimeout(mm)
+          clearTimeout(DD)
         }
-      }), [Om, Dm]), (0, hm.useEffect)((() => {
-        if (null === Dm) return;
-        const mm = nm.current && "mO" === Km.current && fm.isLoggedIn();
-        nm.current = !1, "noAccount" === (null === Em || void 0 === Em ? void 0 : Em.kind) && om(null), mm && Zm(Dm), Jm.current && (Jm.current = !1, qm(!1), rm(mm ? Dm : cm))
-      }), [Dm]);
-      const sm = "error" === (null === Em || void 0 === Em ? void 0 : Em.kind) ? Em.message : "noAccount" === (null === Em || void 0 === Em ? void 0 : Em.kind) ? Tm("homePage:onboardingNameNoAccount") : null;
+      }), [ID, cD]), (0, pD.useEffect)((() => {
+        if (null === cD) return;
+        const DD = ED.current && "Nf" === OD.current && wD.isLoggedIn();
+        ED.current = !1, "noAccount" === (null === UD || void 0 === UD ? void 0 : UD.kind) && fD(null), DD && PD(cD), QD.current && (QD.current = !1, GD(!1), ZD(DD ? cD : XD))
+      }), [cD]);
+      const yD = "error" === (null === UD || void 0 === UD ? void 0 : UD.kind) ? UD.message : "noAccount" === (null === UD || void 0 === UD ? void 0 : UD.kind) ? zD("homePage:onboardingNameNoAccount") : null;
       return {
-        field: (0, Im.jsxs)("div", {
+        field: (0, MD.jsxs)("div", {
           className: "OnboardingNameField",
-          ref: Xm,
-          children: [(0, Im.jsx)("div", {
+          ref: SD,
+          children: [(0, MD.jsx)("div", {
             className: "OnboardingSubtitle",
-            children: Tm("general:name")
-          }), null === cm && (0, Im.jsx)(Nm.c, {}), null !== cm && (0, Im.jsxs)("div", {
+            children: zD("general:name")
+          }), null === XD && (0, MD.jsx)(jD.e, {}), null !== XD && (0, MD.jsxs)("div", {
             className: "OnboardingNameRow",
-            children: [(0, Im.jsx)(Gm.e, {
+            children: [(0, MD.jsx)(dD.e, {
               className: "OnboardingNameInput",
-              ariaLabel: Tm("general:name"),
-              maxLength: bm.j,
-              defaultValue: cm,
-              domRef: im,
-              forcedText: Om ? cm : null,
+              ariaLabel: zD("general:name"),
+              maxLength: xD.l,
+              defaultValue: XD,
+              domRef: gD,
+              forcedText: ID ? XD : null,
               onEnter: () => {
-                var mm;
-                null === (mm = im.current) || void 0 === mm || mm.blur()
+                var DD;
+                null === (DD = gD.current) || void 0 === DD || DD.blur()
               },
-              onValueChange: mm => {
-                const fm = (0, bm.r)(mm);
-                fm !== mm && im.current && (im.current.value = fm), om(fm !== mm ? {
+              onValueChange: DD => {
+                const wD = (0, xD.u)(DD);
+                wD !== DD && gD.current && (gD.current.value = wD), fD(wD !== DD ? {
                   kind: "error",
-                  message: Tm("homePage:nameCharacters")
-                } : null), fm !== cm && (Km.current = "changed"), pm(fm)
+                  message: zD("homePage:nameCharacters")
+                } : null), wD !== XD && (OD.current = "changed"), AD(wD)
               }
-            }), (0, Im.jsx)(xm.e, {
+            }), (0, MD.jsx)(rD.f, {
               className: "OnboardingRandomName",
-              ariaLabel: Tm("homePage:onboardingRandomName"),
-              disabled: Om,
+              ariaLabel: zD("homePage:onboardingRandomName"),
+              disabled: ID,
               onClick: () => {
                 (() => {
-                  if (om(null), null === Dm || fm.isLoggedIn()) return Zm((0, bm.g)()), void(Km.current = "rolled");
-                  Pm((0, em.j)(fm), (mm => {
-                    var Tm, hm;
-                    if ("refused" === mm.outcome || "failed" === mm.outcome) return Zm(fm.getPlayerName()), Km.current = null !== (Tm = null === (hm = zm.current) || void 0 === hm ? void 0 : hm.outcome) && void 0 !== Tm ? Tm : "mO", void om({
+                  if (fD(null), null === cD || wD.isLoggedIn()) return PD((0, xD.h)()), void(OD.current = "rolled");
+                  iD((0, bD.n)(wD), (DD => {
+                    var zD, pD;
+                    if ("refused" === DD.outcome || "failed" === DD.outcome) return PD(wD.getPlayerName()), OD.current = null !== (zD = null === (pD = VD.current) || void 0 === pD ? void 0 : pD.outcome) && void 0 !== zD ? zD : "Nf", void fD({
                       kind: "error",
-                      message: ym(mm)
+                      message: WD(DD)
                     });
-                    Km.current = "rolled", zm.current = {
-                      name: mm.name,
+                    OD.current = "rolled", VD.current = {
+                      name: DD.name,
                       outcome: "rolled"
-                    }, Zm(mm.name)
+                    }, PD(DD.name)
                   }))
                 })()
               },
-              children: (0, Im.jsx)(Ym.c, {
+              children: (0, MD.jsx)(BD.e, {
                 name: "dice"
               })
             })]
-          }), "suffixed" === (null === Em || void 0 === Em ? void 0 : Em.kind) && (0, Im.jsx)("div", {
+          }), "suffixed" === (null === UD || void 0 === UD ? void 0 : UD.kind) && (0, MD.jsx)("div", {
             className: "OnboardingNameNote",
-            children: Tm("homePage:onboardingNameSuffixed", {
-              taken: Em.taken,
-              name: Em.name
+            children: zD("homePage:onboardingNameSuffixed", {
+              taken: UD.taken,
+              name: UD.name
             })
-          }), null !== sm && (0, Im.jsx)("div", {
+          }), null !== yD && (0, MD.jsx)("div", {
             className: "OnboardingNameNote OnboardingNameError",
-            children: sm
+            children: yD
           })]
         }),
         submit: () => {
-          if (!Om && null !== cm) {
-            if (null === Dm) {
-              if (Cm(cm)) return;
-              return km.current = document.activeElement === im.current, Jm.current = !0, qm(!0), void om(null)
+          if (!ID && null !== XD) {
+            if (null === cD) {
+              if (ND(XD)) return;
+              return CD.current = document.activeElement === gD.current, QD.current = !0, GD(!0), void fD(null)
             }
-            rm(cm)
+            ZD(XD)
           }
         },
-        busy: Om,
-        ready: null !== cm
+        busy: ID,
+        ready: null !== XD
       }
     }
 
-    function Pm() {
-      const mm = {
+    function iD() {
+      const DD = {
         finished: !1
       };
-      am.NotificationProvider.showCustomPopup({
-        body: Tm => (0, Im.jsx)(Hm, {
+      KD.NotificationProvider.showCustomPopup({
+        body: zD => (0, MD.jsx)(lD, {
           onFinish: () => {
-            (0, wm.e)(), mm.finished = !0, Tm()
+            (0, LD.f)(), DD.finished = !0, zD()
           }
         }),
         middleScreenPopupClassName: "OnboardingPopup",
         ignoreBackgroundPress: !0,
         onClose: () => {
-          mm.finished || (0, wm.d)()
+          DD.finished || (0, LD.d)()
         }
       })
     }
 
-    function Hm(mm) {
+    function lD(DD) {
       let {
-        onFinish: Tm
-      } = mm;
+        onFinish: zD
+      } = DD;
       const {
-        t: fm
-      } = (0, Am.A)(), am = Xm(Tm);
-      return (0, hm.useEffect)((() => {
-        (0, wm.k)()
-      }), []), (0, Im.jsxs)("div", {
+        t: wD
+      } = (0, sD.E)(), KD = SD(zD);
+      return (0, pD.useEffect)((() => {
+        (0, LD.j)()
+      }), []), (0, MD.jsxs)("div", {
         className: "Onboarding",
-        children: [(0, Im.jsx)("div", {
+        children: [(0, MD.jsx)("div", {
           className: "OnboardingTitle",
-          children: fm("homePage:onboardingTitle")
-        }), (0, Im.jsxs)("div", {
+          children: wD("homePage:onboardingTitle")
+        }), (0, MD.jsxs)("div", {
           className: "OnboardingBody",
-          children: [am.field, (0, Im.jsx)(km, {})]
-        }), (0, Im.jsx)("div", {
+          children: [KD.field, (0, MD.jsx)(CD, {})]
+        }), (0, MD.jsx)("div", {
           className: "OnboardingFooter",
-          children: (0, Im.jsx)(xm.m, {
+          children: (0, MD.jsx)(rD.o, {
             className: "OnboardingPrimaryButton",
             padDefaultFocus: !0,
-            loading: am.busy,
-            disabled: !am.ready,
-            onClick: am.submit,
-            children: fm("homePage:onboardingDone")
+            loading: KD.busy,
+            disabled: !KD.ready,
+            onClick: KD.submit,
+            children: wD("homePage:onboardingDone")
           })
         })]
       })
     }
   },
-  36470: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => xm
+  36374: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => rD
     });
-    var hm = fm(1905),
-      Am = fm(1494);
-    const am = new class {
+    var pD = wD(1925),
+      sD = wD(1495);
+    const KD = new class {
       constructor() {
         this.pending = new Map, this.userContext = null, this.timer = null, this.lastSentAt = -1 / 0, this.watchingVisibility = !1
       }
-      save(mm, Tm) {
-        mm !== this.userContext && this.sendHeld(), this.userContext = mm;
-        for (const [hm, Am] of Tm) this.pending.set(hm, Am);
+      save(DD, zD) {
+        DD !== this.userContext && this.sendHeld(), this.userContext = DD;
+        for (const [pD, sD] of zD) this.pending.set(pD, sD);
         if (null !== this.timer) return;
-        const fm = this.lastSentAt + 1100 - Date.now();
-        fm <= 0 ? this.send(mm) : (this.timer = setTimeout((() => {
+        const wD = this.lastSentAt + 1100 - Date.now();
+        wD <= 0 ? this.send(DD) : (this.timer = setTimeout((() => {
           this.sendHeld()
-        }), fm), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
+        }), wD), this.watchingVisibility || (this.watchingVisibility = !0, document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.sendHeld()
         }))))
       }
       sendHeld() {
         null !== this.timer && null !== this.userContext && (clearTimeout(this.timer), this.timer = null, this.send(this.userContext))
       }
-      send(mm) {
-        const Tm = Array.from(this.pending, (mm => {
-          let [Tm, fm] = mm;
+      send(DD) {
+        const zD = Array.from(this.pending, (DD => {
+          let [zD, wD] = DD;
           return {
-            Sh: Tm,
-            eh: fm
+            Pp: zD,
+            Cp: wD
           }
         }));
-        this.pending.clear(), this.lastSentAt = Date.now(), Am.d.updateCosmetics(mm, Tm).catch((mm => {
-          console.error("Failed to update cosmetics", mm)
+        this.pending.clear(), this.lastSentAt = Date.now(), sD.d.updateCosmetics(DD, zD).catch((DD => {
+          console.error("Failed to update cosmetics", DD)
         }))
       }
     };
 
-    function xm(mm, Tm) {
-      for (const [fm, hm] of Tm) mm.setPlayerCosmetics(fm, hm);
-      if (null === hm.gameBridge.latest("connectedGame").websocketUrl) am.save(mm, Tm);
+    function rD(DD, zD) {
+      for (const [wD, pD] of zD) DD.setPlayerCosmetics(wD, pD);
+      if (null === pD.gameBridge.latest("connectedGame").websocketUrl) KD.save(DD, zD);
       else
-        for (const [fm, Am] of Tm) hm.gameBridge.send("updateMyCosmetic", {
-          Sh: fm,
-          eh: Am
+        for (const [wD, sD] of zD) pD.gameBridge.send("updateMyCosmetic", {
+          Pp: wD,
+          Cp: sD
         })
     }
   },
-  34173: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => Vm,
-      e: () => im,
-      h: () => Ym,
-      j: () => Om
+  34109: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => nD,
+      g: () => gD,
+      k: () => BD,
+      n: () => ID
     });
-    var hm = fm(168),
-      Am = fm(1270),
-      am = fm(1214),
-      xm = fm(1162),
-      wm = fm(1706);
-    const Dm = {
+    var pD = wD(157),
+      sD = wD(1270),
+      KD = wD(1211),
+      rD = wD(1130),
+      LD = wD(1733);
+    const cD = {
       offline: "homePage:onboardingNameNoAccount",
       outdated: "general:updatedReloading",
       busy: "homePage:changeNameTooFast",
       server: "homePage:changeNameFailed"
     };
 
-    function im(mm) {
-      return Dm[mm]
+    function gD(DD) {
+      return cD[DD]
     }
 
-    function Rm(mm) {
-      return (0, wm.c)(mm) ? "outdated" : mm instanceof hm.d ? 429 === mm.httpCode ? "busy" : "server" : "offline"
+    function RD(DD) {
+      return (0, LD.c)(DD) ? "outdated" : DD instanceof pD.c ? 429 === DD.httpCode ? "busy" : "server" : "offline"
     }
 
-    function pm(mm, Tm, fm) {
-      return (0, xm.postJsonWithMetricsCookiesAndJsonResponse)(`${am.clientSideServerUrls.indexUrl}${Tm}`, fm, {
+    function AD(DD, zD, wD) {
+      return (0, rD.postJsonWithMetricsCookiesAndJsonResponse)(`${KD.clientSideServerUrls.indexUrl}${zD}`, wD, {
         retries: 3
-      }, mm.getMetricsCookies()).catch((mm => (console.error("Bad response from the server when trying to change name:", Tm, mm), {
+      }, DD.getMetricsCookies()).catch((DD => (console.error("Bad response from the server when trying to change name:", zD, DD), {
         outcome: "failed",
-        failure: Rm(mm)
+        failure: RD(DD)
       })))
     }
 
-    function Em(mm) {
-      return "outcome" in mm && "failed" === mm.outcome
+    function UD(DD) {
+      return "outcome" in DD && "failed" === DD.outcome
     }
 
-    function om(mm) {
-      return console.error("Error when trying to get with new name from DB", mm), {
+    function fD(DD) {
+      return console.error("Error when trying to get with new name from DB", DD), {
         outcome: "refused",
-        message: mm
+        message: DD
       }
     }
-    async function Om(mm) {
-      const Tm = await pm(mm, "/index/name/random", {});
-      return Em(Tm) ? Tm : "err" in Tm ? om(Tm.err) : (mm.setPlayerName(Tm.name), {
+    async function ID(DD) {
+      const zD = await AD(DD, "/index/name/random", {});
+      return UD(zD) ? zD : "err" in zD ? fD(zD.err) : (DD.setPlayerName(zD.name), {
         outcome: "changed",
-        name: Tm.name
+        name: zD.name
       })
     }
-    async function Ym(mm, Tm) {
-      const fm = await pm(mm, "/index/name/update", {
-        name: Tm
+    async function BD(DD, zD) {
+      const wD = await AD(DD, "/index/name/update", {
+        name: zD
       });
-      return Em(fm) ? fm : "err" in fm ? om(fm.err) : fm.nameExists ? {
+      return UD(wD) ? wD : "err" in wD ? fD(wD.err) : wD.nameExists ? {
         outcome: "taken"
-      } : (mm.setPlayerName(Tm), {
+      } : (DD.setPlayerName(zD), {
         outcome: "changed",
-        name: Tm
+        name: zD
       })
     }
 
-    function qm(mm, Tm) {
-      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
-      const hm = 1 === Tm ? 1 : 10 ** (Tm - 1),
-        am = String(hm + Math.floor(fm() * (10 ** Tm - hm)));
-      return `${mm.slice(0,Am.j-Tm)}${am}`
+    function GD(DD, zD) {
+      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Math.random;
+      const pD = 1 === zD ? 1 : 10 ** (zD - 1),
+        KD = String(pD + Math.floor(wD() * (10 ** zD - pD)));
+      return `${DD.slice(0,sD.l-zD)}${KD}`
     }
-    const jm = [1, 2, 3, 4];
-    async function Vm(mm, Tm) {
-      const fm = await Ym(mm, Tm);
-      if ("taken" !== fm.outcome) return fm;
-      for (const hm of jm) {
-        const fm = qm(Tm, hm),
-          Am = await Ym(mm, fm);
-        if ("taken" !== Am.outcome) return Am
+    const hD = [1, 2, 3, 4];
+    async function nD(DD, zD) {
+      const wD = await BD(DD, zD);
+      if ("taken" !== wD.outcome) return wD;
+      for (const pD of hD) {
+        const wD = GD(zD, pD),
+          sD = await BD(DD, wD);
+        if ("taken" !== sD.outcome) return sD
       }
       return {
         outcome: "taken"
@@ -568,4 +568,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,261 +1,261 @@
 export const id = 304;
 export const ids = [304];
 export const modules = {
-  41717: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => Em,
-      e: () => jm,
-      f: () => om,
-      g: () => Om,
-      k: () => Im,
-      o: () => Vm
+  41595: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => UD,
+      g: () => hD,
+      k: () => fD,
+      n: () => ID,
+      r: () => MD,
+      s: () => nD
     });
-    var hm = fm(41678);
-    var Am = "Babylon Lite v1.32.0",
-      am = fm(41723);
+    var pD = wD(41545);
+    var sD = "Babylon Lite v1.32.0",
+      KD = wD(41602);
 
-    function xm(mm) {
-      return "clientWidth" in mm
+    function rD(DD) {
+      return "clientWidth" in DD
     }
-    var wm = 1;
+    var LD = 1;
 
-    function Dm(mm, Tm, fm) {
-      const Dm = Tm.getContext("webgpu");
-      Dm || (0, hm.c)(54), xm(Tm) && Tm.setAttribute("data-engine", Am);
-      const im = fm?.format ?? navigator.gpu.getPreferredCanvasFormat(),
-        Rm = fm?.srgb ? (pm = im).endsWith("-srgb") ? pm : `${pm}-srgb` : im;
-      var pm;
-      const Em = fm?.alphaMode ?? "opaque";
-      Dm.configure({
-        device: mm._device,
-        format: im,
-        alphaMode: Em,
-        viewFormats: [Rm]
+    function cD(DD, zD, wD) {
+      const cD = zD.getContext("webgpu");
+      cD || (0, pD.d)(54), rD(zD) && zD.setAttribute("data-engine", sD);
+      const gD = wD?.format ?? navigator.gpu.getPreferredCanvasFormat(),
+        RD = wD?.srgb ? (AD = gD).endsWith("-srgb") ? AD : `${AD}-srgb` : gD;
+      var AD;
+      const UD = wD?.alphaMode ?? "opaque";
+      cD.configure({
+        device: DD._device,
+        format: gD,
+        alphaMode: UD,
+        viewFormats: [RD]
       });
-      const om = 1 === fm?.msaaSamples ? 1 : 4,
-        Om = (0, am.d)({
+      const fD = 1 === wD?.msaaSamples ? 1 : 4,
+        ID = (0, KD.e)({
           lbl: "swapchain",
-          format: Rm,
+          format: RD,
           samples: 1,
           size: {
             width: 0,
             height: 0
           }
         });
-      return Om._eager = !0, {
-        engine: mm,
-        canvas: Tm,
-        format: Rm,
-        msaaSamples: om,
-        scRT: Om,
-        maxDevicePixelRatio: fm?.maxDevicePixelRatio ?? 1 / 0,
-        _uniqueId: wm++,
-        _context: Dm,
-        _configureFormat: im,
-        _alphaMode: Em,
+      return ID._eager = !0, {
+        engine: DD,
+        canvas: zD,
+        format: RD,
+        msaaSamples: fD,
+        scRT: ID,
+        maxDevicePixelRatio: wD?.maxDevicePixelRatio ?? 1 / 0,
+        _uniqueId: LD++,
+        _context: cD,
+        _configureFormat: gD,
+        _alphaMode: UD,
         _renderingContexts: []
       }
     }
 
-    function im(mm) {
-      const Tm = mm._context.getCurrentTexture(),
-        fm = mm.scRT;
-      fm._colorTexture = Tm, fm._colorView = Tm.createView({
-        format: mm.format
-      }), fm._width = Tm.width, fm._height = Tm.height
+    function gD(DD) {
+      const zD = DD._context.getCurrentTexture(),
+        wD = DD.scRT;
+      wD._colorTexture = zD, wD._colorView = zD.createView({
+        format: DD.format
+      }), wD._width = zD.width, wD._height = zD.height
     }
 
-    function Rm(mm) {
-      const Tm = mm.canvas;
-      if (!xm(Tm)) return;
-      const fm = mm._w ?? Tm.clientWidth,
-        hm = mm._h ?? Tm.clientHeight;
-      if (!(fm > 0 && hm > 0)) return;
-      const Am = Math.min(globalThis.devicePixelRatio || 1, mm.maxDevicePixelRatio);
-      pm(mm, fm * Am | 0, hm * Am | 0)
+    function RD(DD) {
+      const zD = DD.canvas;
+      if (!rD(zD)) return;
+      const wD = DD._w ?? zD.clientWidth,
+        pD = DD._h ?? zD.clientHeight;
+      if (!(wD > 0 && pD > 0)) return;
+      const sD = Math.min(globalThis.devicePixelRatio || 1, DD.maxDevicePixelRatio);
+      AD(DD, wD * sD | 0, pD * sD | 0)
     }
 
-    function pm(mm, Tm, fm) {
-      const hm = mm.canvas,
-        Am = 0 | Tm,
-        am = 0 | fm;
-      if (Am > 0 && am > 0 && (Am !== hm.width || am !== hm.height)) {
-        hm.width = Am, hm.height = am, mm.scRT._width = Am, mm.scRT._height = am;
-        for (const Tm of mm._renderingContexts) Tm._resize?.()
+    function AD(DD, zD, wD) {
+      const pD = DD.canvas,
+        sD = 0 | zD,
+        KD = 0 | wD;
+      if (sD > 0 && KD > 0 && (sD !== pD.width || KD !== pD.height)) {
+        pD.width = sD, pD.height = KD, DD.scRT._width = sD, DD.scRT._height = KD;
+        for (const zD of DD._renderingContexts) zD._resize?.()
       }
     }
-    var Em = 0;
+    var UD = 0;
 
-    function om(mm, Tm) {
-      return -1 !== mm._renderingContexts.indexOf(Tm)
+    function fD(DD, zD) {
+      return -1 !== DD._renderingContexts.indexOf(zD)
     }
 
-    function Om(mm, Tm) {
-      return -1 === mm._renderingContexts.indexOf(Tm) && (mm._renderingContexts.push(Tm), !0)
+    function ID(DD, zD) {
+      return -1 === DD._renderingContexts.indexOf(zD) && (DD._renderingContexts.push(zD), !0)
     }
-    var Ym = null;
-    var qm = ["float32-filterable", "texture-compression-astc", "texture-compression-bc", "texture-compression-etc2", "texture-compression-unaligned", "timestamp-query", "primitive-index"];
-    async function jm(mm, Tm) {
-      const am = await navigator.gpu.requestAdapter({
+    var BD = null;
+    var GD = ["float32-filterable", "texture-compression-astc", "texture-compression-bc", "texture-compression-etc2", "texture-compression-unaligned", "timestamp-query", "primitive-index"];
+    async function hD(DD, zD) {
+      const KD = await navigator.gpu.requestAdapter({
         powerPreference: "high-performance",
-        ...Ym ? Ym() : {}
+        ...BD ? BD() : {}
       });
-      am || (0, hm.c)(47);
-      const xm = Ym?.deviceFeatures?.(am, Tm) ?? function(mm) {
-          return qm.filter((Tm => mm.features.has(Tm)))
-        }(am),
-        wm = await am.requestDevice({
-          requiredFeatures: xm,
-          requiredLimits: Tm?.requiredLimits
+      KD || (0, pD.d)(47);
+      const rD = BD?.deviceFeatures?.(KD, zD) ?? function(DD) {
+          return GD.filter((zD => DD.features.has(zD)))
+        }(KD),
+        LD = await KD.requestDevice({
+          requiredFeatures: rD,
+          requiredLimits: zD?.requiredLimits
         });
-      console.log(`${Am} - WebGPU engine`);
-      const pm = !!Tm?.useHighPrecisionMatrix,
-        Em = !!Tm?.useFloatingOrigin;
-      if (Em && !pm && (0, hm.c)(48), pm) {
+      console.log(`${sD} - WebGPU engine`);
+      const AD = !!zD?.useHighPrecisionMatrix,
+        UD = !!zD?.useFloatingOrigin;
+      if (UD && !AD && (0, pD.d)(48), AD) {
         const {
-          allocateF64Mat4: mm
-        } = await fm.e(357).then((() => fm(61407)));
+          allocateF64Mat4: DD
+        } = await wD.e(357).then((() => wD(61106)));
         0
       }
-      let om, Om, jm, Vm;
-      if (Em) {
+      let fD, ID, hD, nD;
+      if (UD) {
         const [{
-          wrapRenderableForFO: mm,
-          lightFoVersion: Tm,
-          applyLightFoOffset: hm
+          wrapRenderableForFO: DD,
+          lightFoVersion: zD,
+          applyLightFoOffset: pD
         }, {
-          makePackMeshWorld: Am
-        }] = await Promise.all([fm.e(358).then((() => fm(61416))), fm.e(359).then((() => fm(61422)))]);
-        om = mm, Om = Am, jm = Tm, Vm = hm
+          makePackMeshWorld: sD
+        }] = await Promise.all([wD.e(358).then((() => wD(61108))), wD.e(359).then((() => wD(61116)))]);
+        fD = DD, ID = sD, hD = zD, nD = pD
       }
-      const Im = {
-          _device: wm
+      const MD = {
+          _device: LD
         },
-        Km = [Im];
-      return Object.assign(Im, {
-        engine: Im,
-        surfaces: Km,
-        _surfaces: Km,
-        _device: wm,
-        _options: Tm,
+        OD = [MD];
+      return Object.assign(MD, {
+        engine: MD,
+        surfaces: OD,
+        _surfaces: OD,
+        _device: LD,
+        _options: zD,
         drawCallCount: 0,
         gpuFrameTimeMs: 0,
-        useHighPrecisionMatrix: pm,
-        useFloatingOrigin: Em,
+        useHighPrecisionMatrix: AD,
+        useFloatingOrigin: UD,
         _animFrameId: 0,
         _renderFn: null,
         _currentEncoder: void 0,
         _currentDelta: 0,
         _cbs: [],
-        _wrapRenderableForFO: om,
-        _makePackMeshWorld: Om,
-        _lightFoVersion: jm,
-        _applyLightFoOffset: Vm
-      }, Dm(Im, mm, Tm)), Rm(Im), im(Im), Im
+        _wrapRenderableForFO: fD,
+        _makePackMeshWorld: ID,
+        _lightFoVersion: hD,
+        _applyLightFoOffset: nD
+      }, cD(MD, DD, zD)), RD(MD), gD(MD), MD
     }
 
-    function Vm(mm, Tm, fm) {
-      pm(mm, Tm, fm)
+    function nD(DD, zD, wD) {
+      AD(DD, zD, wD)
     }
 
-    function Im(mm, Tm) {
-      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : mm.surfaces;
-      if (fm !== mm.surfaces)
-        for (let Am = fm.length; Am--;) fm[Am].engine !== mm && (0, hm.c)(49);
-      Km(mm, Tm, fm)
+    function MD(DD, zD) {
+      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : DD.surfaces;
+      if (wD !== DD.surfaces)
+        for (let sD = wD.length; sD--;) wD[sD].engine !== DD && (0, pD.d)(49);
+      OD(DD, zD, wD)
     }
 
-    function Km(mm, Tm) {
-      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : mm._surfaces,
-        hm = 0;
-      for (let am = fm.length; am--;) hm += fm[am]._renderingContexts.length;
-      if (!hm) return mm.drawCallCount = 0, mm._flushGpuRetirements?.(mm);
-      const Am = mm._device.createCommandEncoder({
+    function OD(DD, zD) {
+      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : DD._surfaces,
+        pD = 0;
+      for (let KD = wD.length; KD--;) pD += wD[KD]._renderingContexts.length;
+      if (!pD) return DD.drawCallCount = 0, DD._flushGpuRetirements?.(DD);
+      const sD = DD._device.createCommandEncoder({
         label: "frame"
       });
-      mm._currentEncoder = Am, mm._currentDelta = Tm;
+      DD._currentEncoder = sD, DD._currentDelta = zD;
       try {
-        mm._gpuTimerBegin?.(Am), hm = 0;
-        for (let mm = 0; mm < fm.length; mm++) {
-          const Tm = fm[mm];
-          Tm._capturePreFrame?.(Tm), im(Tm);
-          const Am = Tm._renderingContexts;
-          for (let mm = 0; mm < Am.length; mm++) {
-            const Tm = Am[mm];
-            Tm._update(), hm += Tm._drawCallsPre + Tm._record()
+        DD._gpuTimerBegin?.(sD), pD = 0;
+        for (let DD = 0; DD < wD.length; DD++) {
+          const zD = wD[DD];
+          zD._capturePreFrame?.(zD), gD(zD);
+          const sD = zD._renderingContexts;
+          for (let DD = 0; DD < sD.length; DD++) {
+            const zD = sD[DD];
+            zD._update(), pD += zD._drawCallsPre + zD._record()
           }
         }
-        const Tm = mm._currentEncoder;
-        for (let mm = 0; mm < fm.length; mm++) {
-          const hm = fm[mm];
-          hm._captureService?.(hm, Tm)
+        const zD = DD._currentEncoder;
+        for (let DD = 0; DD < wD.length; DD++) {
+          const pD = wD[DD];
+          pD._captureService?.(pD, zD)
         }
-        mm._gpuTimerEnd?.(Tm), mm._cbs[0] = Tm.finish(), mm._device.queue.submit(mm._cbs), mm._flushGpuRetirements?.(mm), mm.drawCallCount = hm, mm._gpuTimerResolve?.()
+        DD._gpuTimerEnd?.(zD), DD._cbs[0] = zD.finish(), DD._device.queue.submit(DD._cbs), DD._flushGpuRetirements?.(DD), DD.drawCallCount = pD, DD._gpuTimerResolve?.()
       } finally {
-        mm._currentEncoder = void 0
+        DD._currentEncoder = void 0
       }
     }
   },
-  41682: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => Am,
-      h: () => am,
-      j: () => hm
+  41551: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => sD,
+      e: () => KD,
+      i: () => pD
     });
-    var hm = globalThis.GPUTextureUsage,
-      Am = globalThis.GPUBufferUsage,
-      am = globalThis.GPUShaderStage;
+    var pD = globalThis.GPUTextureUsage,
+      sD = globalThis.GPUBufferUsage,
+      KD = globalThis.GPUShaderStage;
     globalThis.GPUColorWrite
   },
-  41743: (mm, Tm, fm) => {
-    function hm(mm) {
-      Am(mm.splice(0))
+  41625: (DD, zD, wD) => {
+    function pD(DD) {
+      sD(DD.splice(0))
     }
 
-    function Am(mm) {
-      for (const fm of mm) try {
-        fm()
-      } catch (Tm) {
-        console.error("GPU resource retirement failed.", Tm)
+    function sD(DD) {
+      for (const wD of DD) try {
+        wD()
+      } catch (zD) {
+        console.error("GPU resource retirement failed.", zD)
       }
     }
 
-    function am(mm, Tm) {
-      mm._flushGpuRetirements ??= xm, (mm._retirements ??= []).push(Tm)
+    function KD(DD, zD) {
+      DD._flushGpuRetirements ??= rD, (DD._retirements ??= []).push(zD)
     }
 
-    function xm(mm) {
-      const Tm = mm._retirements;
-      if (!Tm) return;
-      mm._retirements = null;
-      const fm = mm._retiring ??= new Set;
-      fm.add(Tm), queueMicrotask((() => {
-        mm._device.queue.onSubmittedWorkDone().then((() => {
-          fm.delete(Tm), hm(Tm)
+    function rD(DD) {
+      const zD = DD._retirements;
+      if (!zD) return;
+      DD._retirements = null;
+      const wD = DD._retiring ??= new Set;
+      wD.add(zD), queueMicrotask((() => {
+        DD._device.queue.onSubmittedWorkDone().then((() => {
+          wD.delete(zD), pD(zD)
         })).catch((() => {}))
       }))
     }
-    fm.d(Tm, {
-      c: () => am
+    wD.d(zD, {
+      c: () => KD
     })
   },
-  41723: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => am,
-      h: () => xm,
-      k: () => wm
+  41602: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => KD,
+      f: () => rD,
+      g: () => LD
     });
-    var hm = fm(41682);
+    var pD = wD(41551);
 
-    function Am(mm) {
-      const Tm = mm.size;
-      return "canvas" in Tm ? Tm.canvas : Tm
+    function sD(DD) {
+      const zD = DD.size;
+      return "canvas" in zD ? zD.canvas : zD
     }
 
-    function am(mm) {
+    function KD(DD) {
       return {
-        _descriptor: mm,
-        _resolveSize: Am,
+        _descriptor: DD,
+        _resolveSize: sD,
         _colorTexture: null,
         _colorView: null,
         _depthTexture: null,
@@ -265,609 +265,609 @@ export const modules = {
       }
     }
 
-    function xm(mm, Tm) {
-      if (mm._eager) return void mm._syncEager?.(Tm);
-      wm(mm);
-      const fm = mm._descriptor,
+    function rD(DD, zD) {
+      if (DD._eager) return void DD._syncEager?.(zD);
+      LD(DD);
+      const wD = DD._descriptor,
         {
-          width: am,
-          height: xm
-        } = (mm._resolveSize ?? Am)(fm);
-      mm._width = am, mm._height = xm;
-      const Dm = Tm._device;
-      fm.format && (mm._colorTexture = Dm.createTexture({
-        label: fm.lbl,
+          width: KD,
+          height: rD
+        } = (DD._resolveSize ?? sD)(wD);
+      DD._width = KD, DD._height = rD;
+      const cD = zD._device;
+      wD.format && (DD._colorTexture = cD.createTexture({
+        label: wD.lbl,
         size: {
-          width: am,
-          height: xm
+          width: KD,
+          height: rD
         },
-        format: fm.format,
-        sampleCount: fm.samples,
-        usage: hm.j.RENDER_ATTACHMENT | hm.j.TEXTURE_BINDING | hm.j.COPY_SRC | hm.j.COPY_DST
-      }), mm._colorView = mm._colorTexture.createView()), fm.dFormat && (mm._depthTexture = Dm.createTexture({
-        label: fm.lbl,
+        format: wD.format,
+        sampleCount: wD.samples,
+        usage: pD.i.RENDER_ATTACHMENT | pD.i.TEXTURE_BINDING | pD.i.COPY_SRC | pD.i.COPY_DST
+      }), DD._colorView = DD._colorTexture.createView()), wD.dFormat && (DD._depthTexture = cD.createTexture({
+        label: wD.lbl,
         size: {
-          width: am,
-          height: xm
+          width: KD,
+          height: rD
         },
-        format: fm.dFormat,
-        sampleCount: fm.samples,
-        usage: hm.j.RENDER_ATTACHMENT | hm.j.TEXTURE_BINDING
-      }), mm._depthView = mm._depthTexture.createView())
+        format: wD.dFormat,
+        sampleCount: wD.samples,
+        usage: pD.i.RENDER_ATTACHMENT | pD.i.TEXTURE_BINDING
+      }), DD._depthView = DD._depthTexture.createView())
     }
 
-    function wm(mm) {
-      if (!mm || mm._eager && !mm._disposeAttachments) return;
-      const Tm = mm._colorTexture,
-        fm = mm._depthTexture;
-      if (mm._colorTexture = mm._depthTexture = null, mm._colorView = mm._depthView = null, mm._width = mm._height = 0, mm._disposeAttachments) mm._disposeAttachments(Tm, fm);
+    function LD(DD) {
+      if (!DD || DD._eager && !DD._disposeAttachments) return;
+      const zD = DD._colorTexture,
+        wD = DD._depthTexture;
+      if (DD._colorTexture = DD._depthTexture = null, DD._colorView = DD._depthView = null, DD._width = DD._height = 0, DD._disposeAttachments) DD._disposeAttachments(zD, wD);
       else try {
-        Tm?.destroy()
+        zD?.destroy()
       } finally {
-        !1 !== mm._ownsDepthTexture && fm?.destroy()
+        !1 !== DD._ownsDepthTexture && wD?.destroy()
       }
     }
   },
-  41735: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => hm,
-      h: () => Am,
-      l: () => am
+  41620: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => pD,
+      f: () => sD,
+      g: () => KD
     });
-    var hm = Float32Array,
-      Am = Float64Array,
-      am = Uint32Array
+    var pD = Float32Array,
+      sD = Float64Array,
+      KD = Uint32Array
   },
-  41745: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => hm
+  41634: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => pD
     });
-    var hm = 16
+    var pD = 16
   },
-  41678: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => Am
+  41545: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => sD
     });
-    var hm = null;
+    var pD = null;
 
-    function Am(mm) {
-      for (var Tm = arguments.length, fm = new Array(Tm > 1 ? Tm - 1 : 0), Am = 1; Am < Tm; Am++) fm[Am - 1] = arguments[Am];
-      const am = new Error(hm?.(mm, fm) ?? `#${mm}`);
-      throw am.lite = fm, am
+    function sD(DD) {
+      for (var zD = arguments.length, wD = new Array(zD > 1 ? zD - 1 : 0), sD = 1; sD < zD; sD++) wD[sD - 1] = arguments[sD];
+      const KD = new Error(pD?.(DD, wD) ?? `#${DD}`);
+      throw KD.lite = wD, KD
     }
   },
-  41703: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => Am
+  41580: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => sD
     });
-    var hm = fm(41688);
+    var pD = wD(41563);
 
-    function Am(mm) {
-      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const fm = Tm.compare,
-        Am = Tm.lodMinClamp ?? 0,
-        am = Tm.lodMaxClamp ?? 32,
-        xm = void 0 !== fm || 0 !== Am || 32 !== am ? `${fm??""}:${Am}:${am}` : "";
-      return (0, hm.b)(mm, Tm, xm)
+    function sD(DD) {
+      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const wD = zD.compare,
+        sD = zD.lodMinClamp ?? 0,
+        KD = zD.lodMaxClamp ?? 32,
+        rD = void 0 !== wD || 0 !== sD || 32 !== KD ? `${wD??""}:${sD}:${KD}` : "";
+      return (0, pD.c)(DD, zD, rD)
     }
   },
-  41686: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => am
+  41554: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => KD
     });
-    var hm = null;
+    var pD = null;
 
-    function Am(mm) {
-      const Tm = hm ??= new WeakMap;
-      Tm.set(mm, (Tm.get(mm) ?? 0) + 1)
+    function sD(DD) {
+      const zD = pD ??= new WeakMap;
+      zD.set(DD, (zD.get(DD) ?? 0) + 1)
     }
 
-    function am(mm) {
-      Am(mm.texture)
+    function KD(DD) {
+      sD(DD.texture)
     }
   },
-  41688: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => wm
+  41563: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => LD
     });
-    var hm = null,
-      Am = "nearest",
-      am = "clamp-to-edge",
-      xm = {
-        minFilter: Am,
-        magFilter: Am,
-        mipmapFilter: Am,
-        addressModeU: am,
-        addressModeV: am,
-        addressModeW: am,
+    var pD = null,
+      sD = "nearest",
+      KD = "clamp-to-edge",
+      rD = {
+        minFilter: sD,
+        magFilter: sD,
+        mipmapFilter: sD,
+        addressModeU: KD,
+        addressModeV: KD,
+        addressModeW: KD,
         maxAnisotropy: 1
       };
 
-    function wm(mm) {
-      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
-      const Am = mm._device,
-        am = hm ??= new WeakMap;
-      let wm = am.get(Am);
-      wm || am.set(Am, wm = new Map);
-      let Dm = fm;
-      for (const hm in xm) {
-        const mm = hm;
-        Dm += `:${Tm[mm]??xm[mm]}`
+    function LD(DD) {
+      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+      const sD = DD._device,
+        KD = pD ??= new WeakMap;
+      let LD = KD.get(sD);
+      LD || KD.set(sD, LD = new Map);
+      let cD = wD;
+      for (const pD in rD) {
+        const DD = pD;
+        cD += `:${zD[DD]??rD[DD]}`
       }
-      let im = wm.get(Dm);
-      return im || wm.set(Dm, im = Am.createSampler(Tm)), im
+      let gD = LD.get(cD);
+      return gD || LD.set(cD, gD = sD.createSampler(zD)), gD
     }
   },
-  41727: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => ym,
-      e: () => sm
+  41611: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => WD,
+      f: () => yD
     });
-    var hm = fm(41723),
-      Am = fm(41717);
+    var pD = wD(41602),
+      sD = wD(41595);
 
-    function am(mm, Tm) {
-      Tm._passes.length = 0, mm._currentProcessedTask = Tm;
+    function KD(DD, zD) {
+      zD._passes.length = 0, DD._currentProcessedTask = zD;
       try {
-        Tm.record()
+        zD.record()
       } finally {
-        mm._currentProcessedTask = null
+        DD._currentProcessedTask = null
       }
     }
-    var xm = fm(41735);
+    var rD = wD(41620);
 
-    function wm(mm) {
-      const Tm = mm.worldMatrixVersion;
-      if (mm._viewVer === Tm) return mm._viewCache;
-      const fm = mm._viewCache,
-        hm = mm.worldMatrix,
-        Am = mm._useFloatingOrigin,
-        am = Am ? 0 : hm[12],
-        xm = Am ? 0 : hm[13],
-        wm = Am ? 0 : hm[14];
-      return fm[0] = hm[0], fm[1] = hm[4], fm[2] = hm[8], fm[3] = 0, fm[4] = hm[1], fm[5] = hm[5], fm[6] = hm[9], fm[7] = 0, fm[8] = hm[2], fm[9] = hm[6], fm[10] = hm[10], fm[11] = 0, fm[12] = -(hm[0] * am + hm[1] * xm + hm[2] * wm), fm[13] = -(hm[4] * am + hm[5] * xm + hm[6] * wm), fm[14] = -(hm[8] * am + hm[9] * xm + hm[10] * wm), fm[15] = 1, mm._viewVer = Tm, fm
+    function LD(DD) {
+      const zD = DD.worldMatrixVersion;
+      if (DD._viewVer === zD) return DD._viewCache;
+      const wD = DD._viewCache,
+        pD = DD.worldMatrix,
+        sD = DD._useFloatingOrigin,
+        KD = sD ? 0 : pD[12],
+        rD = sD ? 0 : pD[13],
+        LD = sD ? 0 : pD[14];
+      return wD[0] = pD[0], wD[1] = pD[4], wD[2] = pD[8], wD[3] = 0, wD[4] = pD[1], wD[5] = pD[5], wD[6] = pD[9], wD[7] = 0, wD[8] = pD[2], wD[9] = pD[6], wD[10] = pD[10], wD[11] = 0, wD[12] = -(pD[0] * KD + pD[1] * rD + pD[2] * LD), wD[13] = -(pD[4] * KD + pD[5] * rD + pD[6] * LD), wD[14] = -(pD[8] * KD + pD[9] * rD + pD[10] * LD), wD[15] = 1, DD._viewVer = zD, wD
     }
-    var Dm = null;
+    var cD = null;
 
-    function im(mm) {
-      return mm._projFov === mm.fov && mm._projNear === mm.nearPlane && mm._projFar === mm.farPlane || (mm._projFov = mm.fov, mm._projNear = mm.nearPlane, mm._projFar = mm.farPlane, mm._projRev = (mm._projRev ?? 0) + 1), mm.worldMatrixVersion + (mm._projRev ?? 0)
+    function gD(DD) {
+      return DD._projFov === DD.fov && DD._projNear === DD.nearPlane && DD._projFar === DD.farPlane || (DD._projFov = DD.fov, DD._projNear = DD.nearPlane, DD._projFar = DD.farPlane, DD._projRev = (DD._projRev ?? 0) + 1), DD.worldMatrixVersion + (DD._projRev ?? 0)
     }
 
-    function Rm(mm, Tm) {
-      const fm = im(mm);
-      if (mm._projVer === fm && mm._projAspect === Tm) return mm._projCache;
-      const hm = mm._projCache;
-      return null !== Dm && mm.ortho ? Dm(mm, Tm, hm) : function(mm, Tm, fm, hm, Am) {
-        const am = 1 / Math.tan(.5 * Tm),
-          xm = Am - hm;
-        mm[0] = am / fm, mm[5] = am, mm[10] = -hm / xm, mm[11] = 1, mm[14] = Am * hm / xm
-      }(hm, mm.fov, Tm, mm.nearPlane, mm.farPlane), mm._projVer = fm, mm._projAspect = Tm, hm
+    function RD(DD, zD) {
+      const wD = gD(DD);
+      if (DD._projVer === wD && DD._projAspect === zD) return DD._projCache;
+      const pD = DD._projCache;
+      return null !== cD && DD.ortho ? cD(DD, zD, pD) : function(DD, zD, wD, pD, sD) {
+        const KD = 1 / Math.tan(.5 * zD),
+          rD = sD - pD;
+        DD[0] = KD / wD, DD[5] = KD, DD[10] = -pD / rD, DD[11] = 1, DD[14] = sD * pD / rD
+      }(pD, DD.fov, zD, DD.nearPlane, DD.farPlane), DD._projVer = wD, DD._projAspect = zD, pD
     }
-    var pm = fm(41682);
+    var AD = wD(41551);
 
-    function Em(mm, Tm, fm) {
-      return mm._device.createBuffer({
-        label: fm,
-        size: (hm = Tm, Am = 16, Math.ceil(hm / Am) * Am),
-        usage: pm.e.UNIFORM | pm.e.COPY_DST
+    function UD(DD, zD, wD) {
+      return DD._device.createBuffer({
+        label: wD,
+        size: (pD = zD, sD = 16, Math.ceil(pD / sD) * sD),
+        usage: AD.b.UNIFORM | AD.b.COPY_DST
       });
-      var hm, Am
+      var pD, sD
     }
-    var om = fm(41743),
-      Om = null;
+    var fD = wD(41625),
+      ID = null;
 
-    function Ym(mm) {
-      const Tm = mm._device,
-        fm = Om ??= new WeakMap;
-      let hm = fm.get(Tm);
-      return hm || (hm = Tm.createBindGroupLayout({
-        label: "Aq",
+    function BD(DD) {
+      const zD = DD._device,
+        wD = ID ??= new WeakMap;
+      let pD = wD.get(zD);
+      return pD || (pD = zD.createBindGroupLayout({
+        label: "oB",
         entries: [{
           binding: 0,
-          visibility: pm.h.VERTEX | pm.h.FRAGMENT,
+          visibility: AD.e.VERTEX | AD.e.FRAGMENT,
           buffer: {
             type: "uniform"
           }
         }, {
           binding: 1,
-          visibility: pm.h.FRAGMENT,
+          visibility: AD.e.FRAGMENT,
           buffer: {
             type: "uniform"
           }
         }]
-      }), fm.set(Tm, hm)), hm
+      }), wD.set(zD, pD)), pD
     }
 
-    function qm(mm, Tm, fm) {
-      const hm = mm._device,
-        Am = Em(mm, Tm.byteLength, fm);
+    function GD(DD, zD, wD) {
+      const pD = DD._device,
+        sD = UD(DD, zD.byteLength, wD);
       try {
-        hm.queue.writeBuffer(Am, 0, Tm.buffer, Tm.byteOffset, Tm.byteLength)
-      } catch (am) {
-        throw Am.destroy(), am
+        pD.queue.writeBuffer(sD, 0, zD.buffer, zD.byteOffset, zD.byteLength)
+      } catch (KD) {
+        throw sD.destroy(), KD
       }
-      return Am
+      return sD
     }
-    var jm = fm(41745),
-      Vm = new xm.l(1),
-      Im = new xm.e(Vm.buffer);
+    var hD = wD(41634),
+      nD = new rD.g(1),
+      MD = new rD.d(nD.buffer);
 
-    function Km(mm) {
-      let Tm = 0;
-      for (const fm of mm) Tm += fm._lightVersion ?? 0;
-      return Tm
+    function OD(DD) {
+      let zD = 0;
+      for (const wD of DD) zD += wD._lightVersion ?? 0;
+      return zD
     }
 
-    function Qm(mm, Tm) {
-      mm.fill(0);
-      let fm = 0;
-      for (const hm of Tm) {
-        if (fm >= jm.e) break;
-        hm._writeLightUbo && (hm._writeLightUbo(mm, 4 + 16 * fm), fm++)
+    function JD(DD, zD) {
+      DD.fill(0);
+      let wD = 0;
+      for (const pD of zD) {
+        if (wD >= hD.d) break;
+        pD._writeLightUbo && (pD._writeLightUbo(DD, 4 + 16 * wD), wD++)
       }
-      Vm[0] = fm, mm[0] = Im[0]
+      nD[0] = wD, DD[0] = MD[0]
     }
 
-    function nm(mm, Tm) {
-      let fm = Tm._lightGpuState;
-      const hm = 16 + 16 * jm.e * 4;
-      if (fm && fm._byteSize === hm) return fm;
-      const Am = !fm;
-      fm?._buffer.destroy();
-      const am = new xm.e(hm / 4);
-      return Qm(am, Tm.lights), mm._applyLightFoOffset?.(am, Tm), fm = {
-        _buffer: qm(mm, am),
-        _scratch: am,
-        rC: Km(Tm.lights) + (mm._lightFoVersion?.(Tm) ?? 0),
-        _listVersion: Tm._lightListVersion ?? 0,
-        _lightCount: Tm.lights.length,
-        _byteSize: hm
-      }, Tm._lightGpuState = fm, Am && Tm._disposables.push((() => {
-        Tm._lightGpuState?._buffer.destroy(), Tm._lightGpuState = void 0
-      })), fm
+    function ED(DD, zD) {
+      let wD = zD._lightGpuState;
+      const pD = 16 + 16 * hD.d * 4;
+      if (wD && wD._byteSize === pD) return wD;
+      const sD = !wD;
+      wD?._buffer.destroy();
+      const KD = new rD.d(pD / 4);
+      return JD(KD, zD.lights), DD._applyLightFoOffset?.(KD, zD), wD = {
+        _buffer: GD(DD, KD),
+        _scratch: KD,
+        vy: OD(zD.lights) + (DD._lightFoVersion?.(zD) ?? 0),
+        _listVersion: zD._lightListVersion ?? 0,
+        _lightCount: zD.lights.length,
+        _byteSize: pD
+      }, zD._lightGpuState = wD, sD && zD._disposables.push((() => {
+        zD._lightGpuState?._buffer.destroy(), zD._lightGpuState = void 0
+      })), wD
     }
 
-    function Jm(mm, Tm) {
-      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      const Am = Tm;
-      if (0 === hm && 16 === Am.length) return void mm.set(Am, fm);
-      const am = hm,
-        xm = fm;
-      mm[xm + 0] = Am[am + 0], mm[xm + 1] = Am[am + 1], mm[xm + 2] = Am[am + 2], mm[xm + 3] = Am[am + 3], mm[xm + 4] = Am[am + 4], mm[xm + 5] = Am[am + 5], mm[xm + 6] = Am[am + 6], mm[xm + 7] = Am[am + 7], mm[xm + 8] = Am[am + 8], mm[xm + 9] = Am[am + 9], mm[xm + 10] = Am[am + 10], mm[xm + 11] = Am[am + 11], mm[xm + 12] = Am[am + 12], mm[xm + 13] = Am[am + 13], mm[xm + 14] = Am[am + 14], mm[xm + 15] = Am[am + 15]
+    function QD(DD, zD) {
+      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      const sD = zD;
+      if (0 === pD && 16 === sD.length) return void DD.set(sD, wD);
+      const KD = pD,
+        rD = wD;
+      DD[rD + 0] = sD[KD + 0], DD[rD + 1] = sD[KD + 1], DD[rD + 2] = sD[KD + 2], DD[rD + 3] = sD[KD + 3], DD[rD + 4] = sD[KD + 4], DD[rD + 5] = sD[KD + 5], DD[rD + 6] = sD[KD + 6], DD[rD + 7] = sD[KD + 7], DD[rD + 8] = sD[KD + 8], DD[rD + 9] = sD[KD + 9], DD[rD + 10] = sD[KD + 10], DD[rD + 11] = sD[KD + 11], DD[rD + 12] = sD[KD + 12], DD[rD + 13] = sD[KD + 13], DD[rD + 14] = sD[KD + 14], DD[rD + 15] = sD[KD + 15]
     }
 
-    function cm(mm, Tm, fm, hm, Am) {
-      mm.fill(0);
-      const am = function(mm, Tm) {
-          const fm = im(mm);
-          if (mm._vpVer === fm && mm._vpAspect === Tm) return mm._vpCache;
-          const hm = mm._vpCache;
-          return function(mm, Tm, fm, hm, Am, am) {
-            const xm = fm[hm],
-              wm = fm[hm + 1],
-              Dm = fm[hm + 2],
-              im = fm[hm + 3],
-              Rm = fm[hm + 4],
-              pm = fm[hm + 5],
-              Em = fm[hm + 6],
-              om = fm[hm + 7],
-              Om = fm[hm + 8],
-              Ym = fm[hm + 9],
-              qm = fm[hm + 10],
-              jm = fm[hm + 11],
-              Vm = fm[hm + 12],
-              Im = fm[hm + 13],
-              Km = fm[hm + 14],
-              Qm = fm[hm + 15];
-            let nm = Am[am],
-              Jm = Am[am + 1],
-              cm = Am[am + 2],
-              zm = Am[am + 3];
-            mm[Tm] = xm * nm + Rm * Jm + Om * cm + Vm * zm, mm[Tm + 1] = wm * nm + pm * Jm + Ym * cm + Im * zm, mm[Tm + 2] = Dm * nm + Em * Jm + qm * cm + Km * zm, mm[Tm + 3] = im * nm + om * Jm + jm * cm + Qm * zm, nm = Am[am + 4], Jm = Am[am + 5], cm = Am[am + 6], zm = Am[am + 7], mm[Tm + 4] = xm * nm + Rm * Jm + Om * cm + Vm * zm, mm[Tm + 5] = wm * nm + pm * Jm + Ym * cm + Im * zm, mm[Tm + 6] = Dm * nm + Em * Jm + qm * cm + Km * zm, mm[Tm + 7] = im * nm + om * Jm + jm * cm + Qm * zm, nm = Am[am + 8], Jm = Am[am + 9], cm = Am[am + 10], zm = Am[am + 11], mm[Tm + 8] = xm * nm + Rm * Jm + Om * cm + Vm * zm, mm[Tm + 9] = wm * nm + pm * Jm + Ym * cm + Im * zm, mm[Tm + 10] = Dm * nm + Em * Jm + qm * cm + Km * zm, mm[Tm + 11] = im * nm + om * Jm + jm * cm + Qm * zm, nm = Am[am + 12], Jm = Am[am + 13], cm = Am[am + 14], zm = Am[am + 15], mm[Tm + 12] = xm * nm + Rm * Jm + Om * cm + Vm * zm, mm[Tm + 13] = wm * nm + pm * Jm + Ym * cm + Im * zm, mm[Tm + 14] = Dm * nm + Em * Jm + qm * cm + Km * zm, mm[Tm + 15] = im * nm + om * Jm + jm * cm + Qm * zm
-          }(hm, 0, Rm(mm, Tm), 0, wm(mm), 0), mm._vpVer = fm, mm._vpAspect = Tm, hm
-        }(hm, Am),
-        xm = wm(hm),
-        Dm = hm.worldMatrix;
-      Jm(mm, am, 0), Jm(mm, xm, 16), Tm.useFloatingOrigin ? (mm[32] = 0, mm[33] = 0, mm[34] = 0) : (mm[32] = Dm[12], mm[33] = Dm[13], mm[34] = Dm[14]), mm[87] = Tm.canvas.width;
-      const pm = fm.imageProcessing;
-      mm[76] = pm.exposure, mm[77] = pm.contrast, mm[78] = fm._envTextures?.lodGenerationScale ?? .8, mm[79] = +pm.toneMappingEnabled, mm[37] = Tm.canvas.height
+    function XD(DD, zD, wD, pD, sD) {
+      DD.fill(0);
+      const KD = function(DD, zD) {
+          const wD = gD(DD);
+          if (DD._vpVer === wD && DD._vpAspect === zD) return DD._vpCache;
+          const pD = DD._vpCache;
+          return function(DD, zD, wD, pD, sD, KD) {
+            const rD = wD[pD],
+              LD = wD[pD + 1],
+              cD = wD[pD + 2],
+              gD = wD[pD + 3],
+              RD = wD[pD + 4],
+              AD = wD[pD + 5],
+              UD = wD[pD + 6],
+              fD = wD[pD + 7],
+              ID = wD[pD + 8],
+              BD = wD[pD + 9],
+              GD = wD[pD + 10],
+              hD = wD[pD + 11],
+              nD = wD[pD + 12],
+              MD = wD[pD + 13],
+              OD = wD[pD + 14],
+              JD = wD[pD + 15];
+            let ED = sD[KD],
+              QD = sD[KD + 1],
+              XD = sD[KD + 2],
+              VD = sD[KD + 3];
+            DD[zD] = rD * ED + RD * QD + ID * XD + nD * VD, DD[zD + 1] = LD * ED + AD * QD + BD * XD + MD * VD, DD[zD + 2] = cD * ED + UD * QD + GD * XD + OD * VD, DD[zD + 3] = gD * ED + fD * QD + hD * XD + JD * VD, ED = sD[KD + 4], QD = sD[KD + 5], XD = sD[KD + 6], VD = sD[KD + 7], DD[zD + 4] = rD * ED + RD * QD + ID * XD + nD * VD, DD[zD + 5] = LD * ED + AD * QD + BD * XD + MD * VD, DD[zD + 6] = cD * ED + UD * QD + GD * XD + OD * VD, DD[zD + 7] = gD * ED + fD * QD + hD * XD + JD * VD, ED = sD[KD + 8], QD = sD[KD + 9], XD = sD[KD + 10], VD = sD[KD + 11], DD[zD + 8] = rD * ED + RD * QD + ID * XD + nD * VD, DD[zD + 9] = LD * ED + AD * QD + BD * XD + MD * VD, DD[zD + 10] = cD * ED + UD * QD + GD * XD + OD * VD, DD[zD + 11] = gD * ED + fD * QD + hD * XD + JD * VD, ED = sD[KD + 12], QD = sD[KD + 13], XD = sD[KD + 14], VD = sD[KD + 15], DD[zD + 12] = rD * ED + RD * QD + ID * XD + nD * VD, DD[zD + 13] = LD * ED + AD * QD + BD * XD + MD * VD, DD[zD + 14] = cD * ED + UD * QD + GD * XD + OD * VD, DD[zD + 15] = gD * ED + fD * QD + hD * XD + JD * VD
+          }(pD, 0, RD(DD, zD), 0, LD(DD), 0), DD._vpVer = wD, DD._vpAspect = zD, pD
+        }(pD, sD),
+        rD = LD(pD),
+        cD = pD.worldMatrix;
+      QD(DD, KD, 0), QD(DD, rD, 16), zD.useFloatingOrigin ? (DD[32] = 0, DD[33] = 0, DD[34] = 0) : (DD[32] = cD[12], DD[33] = cD[13], DD[34] = cD[14]), DD[87] = zD.canvas.width;
+      const AD = wD.imageProcessing;
+      DD[76] = AD.exposure, DD[77] = AD.contrast, DD[78] = wD._envTextures?.lodGenerationScale ?? .8, DD[79] = +AD.toneMappingEnabled, DD[37] = zD.canvas.height
     }
 
-    function zm(mm, Tm) {
+    function VD(DD, zD) {
       return {
-        _renderables: mm,
+        _renderables: DD,
         _opaqueBindings: [],
         _directBindings: [],
         _transparentBindings: [],
         _ob: [],
-        _lastVersion: Tm
+        _lastVersion: zD
       }
     }
 
-    function Zm(mm, Tm, fm) {
-      mm.clr ??= !0;
-      const Am = mm.rt._descriptor,
-        am = mm.depth?._descriptor,
-        Dm = {
-          _colorFormat: Am.format,
-          _depthStencilFormat: am?.dFormat ?? Am.dFormat,
-          _depthCompare: Am.depthCompare ?? am?.depthCompare,
-          _sampleCount: Am.samples
+    function PD(DD, zD, wD) {
+      DD.clr ??= !0;
+      const sD = DD.rt._descriptor,
+        KD = DD.depth?._descriptor,
+        cD = {
+          _colorFormat: sD.format,
+          _depthStencilFormat: KD?.dFormat ?? sD.dFormat,
+          _depthCompare: sD.depthCompare ?? KD?.depthCompare,
+          _sampleCount: sD.samples
         },
-        Rm = {
+        RD = {
           loadOp: "clear",
           storeOp: "store"
         },
-        pm = {
-          ...zm([], -1),
-          name: mm.name,
-          _config: mm,
-          _ownsTargets: !mm.sharedRt,
-          engine: Tm,
-          Aq: fm,
+        AD = {
+          ...VD([], -1),
+          name: DD.name,
+          _config: DD,
+          _ownsTargets: !DD.sharedRt,
+          engine: zD,
+          oB: wD,
           _passes: [],
           _renderPassDescriptor: {
-            colorAttachments: [Rm]
+            colorAttachments: [RD]
           },
-          _colorAttachment: Rm,
-          _sceneUBO: Em(Tm, 368),
-          _suData: new xm.e(92),
+          _colorAttachment: RD,
+          _sceneUBO: UD(zD, 368),
+          _suData: new rD.d(92),
           _sceneUboCacheKey: [],
-          _targetSignature: Dm,
+          _targetSignature: cD,
           _updateContext: {
             targetWidth: 0,
             targetHeight: 0
           },
           record() {
-            if (pm._disposed) throw new Error("RenderTask has been disposed.");
-            pm._recordExplicit ? pm._recordExplicit(pm, !0) : Sm(pm, !1 !== mm.autoMirror ? fm._renderables.slice() : pm._renderables, !0)
+            if (AD._disposed) throw new Error("RenderTask has been disposed.");
+            AD._recordExplicit ? AD._recordExplicit(AD, !0) : TD(AD, !1 !== DD.autoMirror ? wD._renderables.slice() : AD._renderables, !0)
           },
-          execute: () => function(mm, Tm, fm) {
-            if (!1 === mm.enabled) return 0;
-            const hm = mm.Aq;
-            ! function(mm, Tm, fm) {
-              const hm = mm.Aq;
-              !1 !== mm._config.autoMirror && mm._lastVersion !== hm._renderableVersion && Sm(mm, hm._renderables.slice());
-              Nm(mm, Tm);
-              const Am = mm._updateContext,
-                am = mm._config.cam ?? hm.camera;
-              fm._colorFormat && (mm._config._skipClusteredLights || hm._clusteredLightUpdater?.(am, Am.targetWidth, Am.targetHeight), function(mm, Tm) {
-                const fm = nm(mm, Tm),
-                  hm = Km(Tm.lights) + (mm._lightFoVersion?.(Tm) ?? 0),
-                  Am = Tm._lightListVersion ?? 0;
-                hm === fm.rC && Am === fm._listVersion && Tm.lights.length === fm._lightCount || (fm.rC = hm, fm._listVersion = Am, fm._lightCount = Tm.lights.length, Qm(fm._scratch, Tm.lights), mm._applyLightFoOffset?.(fm._scratch, Tm), mm._device.queue.writeBuffer(fm._buffer, 0, fm._scratch)), fm._buffer
-              }(Tm, hm));
-              (function(mm, Tm, fm, hm) {
-                if (!hm) return;
-                const Am = hm.viewport,
-                  am = mm._config.rt,
-                  xm = (mm._config.cs ? Tm.canvas.width / Tm.canvas.height : am._width / am._height) * (Am ? Am.width / Am.height : 1),
-                  wm = fm.fog,
-                  Dm = fm.imageProcessing,
-                  Rm = im(hm),
-                  pm = fm._envTextures,
-                  Em = mm._sceneUboCacheKey;
-                if (Em[0] === hm && Em[1] === wm && Em[2] === Rm && Em[3] === xm && Em[4] === Dm.exposure && Em[5] === Dm.contrast && Em[6] === pm) return;
-                Em[0] = hm, Em[1] = wm, Em[2] = Rm, Em[3] = xm, Em[4] = Dm.exposure, Em[5] = Dm.contrast, Em[6] = pm;
-                const om = mm._suData;
-                cm(om, Tm, fm, hm, xm);
-                const Om = fm._sceneUboContributors;
-                if (Om)
-                  for (const im of Om) im(om, fm);
-                Tm._device.queue.writeBuffer(mm._sceneUBO, 0, om)
-              })(mm, Tm, hm, am), Am.rW = am, mm._batchState?._reset(), Gm(mm._opaqueBindings, Am), Gm(mm._directBindings, Am), Gm(mm._transparentBindings, Am), mm._batchState?._flush(Tm),
-                function(mm, Tm) {
-                  const fm = mm._transparentBindings;
-                  if (fm.length <= 1 || !Tm) return;
-                  const hm = wm(Tm);
-                  for (const Am of fm) {
-                    const mm = Am.renderable._worldCenter;
-                    Am._sortDistance = mm ? mm[0] * hm[2] + mm[1] * hm[6] + mm[2] * hm[10] + hm[14] : 0
+          execute: () => function(DD, zD, wD) {
+            if (!1 === DD.enabled) return 0;
+            const pD = DD.oB;
+            ! function(DD, zD, wD) {
+              const pD = DD.oB;
+              !1 !== DD._config.autoMirror && DD._lastVersion !== pD._renderableVersion && TD(DD, pD._renderables.slice());
+              jD(DD, zD);
+              const sD = DD._updateContext,
+                KD = DD._config.cam ?? pD.camera;
+              wD._colorFormat && (DD._config._skipClusteredLights || pD._clusteredLightUpdater?.(KD, sD.targetWidth, sD.targetHeight), function(DD, zD) {
+                const wD = ED(DD, zD),
+                  pD = OD(zD.lights) + (DD._lightFoVersion?.(zD) ?? 0),
+                  sD = zD._lightListVersion ?? 0;
+                pD === wD.vy && sD === wD._listVersion && zD.lights.length === wD._lightCount || (wD.vy = pD, wD._listVersion = sD, wD._lightCount = zD.lights.length, JD(wD._scratch, zD.lights), DD._applyLightFoOffset?.(wD._scratch, zD), DD._device.queue.writeBuffer(wD._buffer, 0, wD._scratch)), wD._buffer
+              }(zD, pD));
+              (function(DD, zD, wD, pD) {
+                if (!pD) return;
+                const sD = pD.viewport,
+                  KD = DD._config.rt,
+                  rD = (DD._config.cs ? zD.canvas.width / zD.canvas.height : KD._width / KD._height) * (sD ? sD.width / sD.height : 1),
+                  LD = wD.fog,
+                  cD = wD.imageProcessing,
+                  RD = gD(pD),
+                  AD = wD._envTextures,
+                  UD = DD._sceneUboCacheKey;
+                if (UD[0] === pD && UD[1] === LD && UD[2] === RD && UD[3] === rD && UD[4] === cD.exposure && UD[5] === cD.contrast && UD[6] === AD) return;
+                UD[0] = pD, UD[1] = LD, UD[2] = RD, UD[3] = rD, UD[4] = cD.exposure, UD[5] = cD.contrast, UD[6] = AD;
+                const fD = DD._suData;
+                XD(fD, zD, wD, pD, rD);
+                const ID = wD._sceneUboContributors;
+                if (ID)
+                  for (const gD of ID) gD(fD, wD);
+                zD._device.queue.writeBuffer(DD._sceneUBO, 0, fD)
+              })(DD, zD, pD, KD), sD.Qq = KD, DD._batchState?._reset(), dD(DD._opaqueBindings, sD), dD(DD._directBindings, sD), dD(DD._transparentBindings, sD), DD._batchState?._flush(zD),
+                function(DD, zD) {
+                  const wD = DD._transparentBindings;
+                  if (wD.length <= 1 || !zD) return;
+                  const pD = LD(zD);
+                  for (const sD of wD) {
+                    const DD = sD.renderable._worldCenter;
+                    sD._sortDistance = DD ? DD[0] * pD[2] + DD[1] * pD[6] + DD[2] * pD[10] + pD[14] : 0
                   }
-                  fm.sort(km)
-                }(mm, am)
-            }(mm, Tm, fm);
-            const Am = mm._colorAttachment,
-              am = mm._config;
-            am.rt._colorView && (am.rt === hm.surface.scRT && (Am.view = am.rt._colorView), Am.resolveTarget = am.rst?._colorView ?? void 0, Am.clearValue = am.clrColor ?? hm.clearColor, Am.loadOp = am.clr ? "clear" : "load");
-            if (mm._executeWithTransmission) return mm._executeWithTransmission(fm._sampleCount);
-            const xm = Tm._currentEncoder.beginRenderPass(mm._renderPassDescriptor),
-              Dm = em(mm, xm);
-            return xm.end(), Dm
-          }(pm, Tm, Dm),
+                  wD.sort(CD)
+                }(DD, KD)
+            }(DD, zD, wD);
+            const sD = DD._colorAttachment,
+              KD = DD._config;
+            KD.rt._colorView && (KD.rt === pD.surface.scRT && (sD.view = KD.rt._colorView), sD.resolveTarget = KD.rst?._colorView ?? void 0, sD.clearValue = KD.clrColor ?? pD.clearColor, sD.loadOp = KD.clr ? "clear" : "load");
+            if (DD._executeWithTransmission) return DD._executeWithTransmission(wD._sampleCount);
+            const rD = zD._currentEncoder.beginRenderPass(DD._renderPassDescriptor),
+              cD = bD(DD, rD);
+            return rD.end(), cD
+          }(AD, zD, cD),
           dispose() {
-            if (pm._disposed) return;
-            pm._disposed = !0;
-            const Tm = pm._pendingMeshes;
-            Tm && (Tm.length = 0);
-            for (const mm of pm._renderables) pm._retireRenderable?.(pm.engine, mm);
-            pm._passes.length = pm._opaqueBindings.length = pm._directBindings.length = 0, pm._transparentBindings.length = pm._renderables.length = pm._ob.length = 0, pm._ownsTargets && ((0, hm.k)(mm.rt), (0, hm.k)(mm.rst)), mm.depth?._eager || (0, hm.k)(mm.depth);
-            const fm = pm._sceneUBO;
-            (0, om.c)(pm.engine, (() => fm.destroy())), pm._batchState?._release(pm.engine), pm._batchState = void 0
+            if (AD._disposed) return;
+            AD._disposed = !0;
+            const zD = AD._pendingMeshes;
+            zD && (zD.length = 0);
+            for (const DD of AD._renderables) AD._retireRenderable?.(AD.engine, DD);
+            AD._passes.length = AD._opaqueBindings.length = AD._directBindings.length = 0, AD._transparentBindings.length = AD._renderables.length = AD._ob.length = 0, AD._ownsTargets && ((0, pD.g)(DD.rt), (0, pD.g)(DD.rst)), DD.depth?._eager || (0, pD.g)(DD.depth);
+            const wD = AD._sceneUBO;
+            (0, fD.c)(AD.engine, (() => wD.destroy())), AD._batchState?._release(AD.engine), AD._batchState = void 0
           }
         };
-      return pm
+      return AD
     }
 
-    function km(mm, Tm) {
-      return Tm._sortDistance - mm._sortDistance || mm.renderable.order - Tm.renderable.order
+    function CD(DD, zD) {
+      return zD._sortDistance - DD._sortDistance || DD.renderable.order - zD.renderable.order
     }
 
-    function bm(mm, Tm) {
-      return mm.renderable.order - Tm.renderable.order
+    function xD(DD, zD) {
+      return DD.renderable.order - zD.renderable.order
     }
 
-    function Sm(mm) {
-      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mm._renderables,
-        fm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        Am = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
-        am = arguments.length > 4 ? arguments[4] : void 0;
-      const xm = mm._config,
-        wm = xm.rt,
-        Dm = mm._batchState,
-        im = zm(Tm, mm.Aq._renderableVersion);
-      if (fm) {
-        const Tm = (Tm, fm) => {
-          Tm && (fm || mm._ownsTargets || Tm._eager) && (0, hm.h)(Tm, mm.engine)
+    function TD(DD) {
+      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : DD._renderables,
+        wD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        sD = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+        KD = arguments.length > 4 ? arguments[4] : void 0;
+      const rD = DD._config,
+        LD = rD.rt,
+        cD = DD._batchState,
+        gD = VD(zD, DD.oB._renderableVersion);
+      if (wD) {
+        const zD = (zD, wD) => {
+          zD && (wD || DD._ownsTargets || zD._eager) && (0, pD.f)(zD, DD.engine)
         };
-        Tm(wm), wm._descriptor.samples > 1 && Tm(xm.rst), Tm(xm.depth, !0)
+        zD(LD), LD._descriptor.samples > 1 && zD(rD.rst), zD(rD.depth, !0)
       }
       const {
-        _opaqueBindings: Rm,
-        _directBindings: pm,
-        _transparentBindings: Em
-      } = im;
+        _opaqueBindings: RD,
+        _directBindings: AD,
+        _transparentBindings: UD
+      } = gD;
       try {
-        for (const fm of Tm) {
-          const Tm = fm.bind(mm.engine, mm._targetSignature);
-          im._batchState = mm._targetSignature._collectBatches?.(im._batchState, Tm), fm.isTransparent || fm._transmissive ? Em.push(Tm) : fm._direct ? pm.push(Tm) : Rm.push(Tm)
+        for (const wD of zD) {
+          const zD = wD.bind(DD.engine, DD._targetSignature);
+          gD._batchState = DD._targetSignature._collectBatches?.(gD._batchState, zD), wD.isTransparent || wD._transmissive ? UD.push(zD) : wD._direct ? AD.push(zD) : RD.push(zD)
         }
-        Rm.sort(bm), pm.sort(bm), fm && Nm(mm, mm.engine, !1)
-      } catch (om) {
-        throw im._batchState?._release(void 0, am ?? [Dm]), om
+        RD.sort(xD), AD.sort(xD), wD && jD(DD, DD.engine, !1)
+      } catch (fD) {
+        throw gD._batchState?._release(void 0, KD ?? [cD]), fD
       }
-      return fm && (! function(mm, Tm) {
-        const fm = mm._config,
-          hm = mm._colorAttachment;
-        hm.view = Tm._colorView, mm._renderPassDescriptor.colorAttachments = Tm._colorView ? [hm] : [];
-        const Am = fm.depth ?? Tm,
-          am = Am._depthView;
-        let xm;
-        if (am) {
-          const mm = Am._descriptor,
-            Tm = (fm.depth ? Am._eager : !1 === fm.depthClear) ? "load" : "clear";
-          xm = {
-            view: am,
-            depthClearValue: mm.depthClearValue ?? 0,
-            depthLoadOp: Tm,
+      return wD && (! function(DD, zD) {
+        const wD = DD._config,
+          pD = DD._colorAttachment;
+        pD.view = zD._colorView, DD._renderPassDescriptor.colorAttachments = zD._colorView ? [pD] : [];
+        const sD = wD.depth ?? zD,
+          KD = sD._depthView;
+        let rD;
+        if (KD) {
+          const DD = sD._descriptor,
+            zD = (wD.depth ? sD._eager : !1 === wD.depthClear) ? "load" : "clear";
+          rD = {
+            view: KD,
+            depthClearValue: DD.depthClearValue ?? 0,
+            depthLoadOp: zD,
             depthStoreOp: "store"
-          }, mm.dFormat?.includes("stencil") && (xm.stencilClearValue = 0, xm.stencilLoadOp = Tm, xm.stencilStoreOp = "store")
+          }, DD.dFormat?.includes("stencil") && (rD.stencilClearValue = 0, rD.stencilLoadOp = zD, rD.stencilStoreOp = "store")
         }
-        mm._renderPassDescriptor.depthStencilAttachment = xm
-      }(mm, wm), mm._updateContext.targetWidth = wm._width, mm._updateContext.targetHeight = wm._height), Am && (Object.assign(mm, im), Dm?._release(mm.engine, [im._batchState])), im
+        DD._renderPassDescriptor.depthStencilAttachment = rD
+      }(DD, LD), DD._updateContext.targetWidth = LD._width, DD._updateContext.targetHeight = LD._height), sD && (Object.assign(DD, gD), cD?._release(DD.engine, [gD._batchState])), gD
     }
 
-    function em(mm, Tm) {
-      const fm = mm.engine,
-        hm = mm._config,
-        am = hm.rt,
-        xm = mm.Aq,
-        wm = mm._opaqueBindings,
-        Dm = mm._ob,
-        im = mm._sceneBG;
-      if (function(mm, Tm, fm, hm) {
-          const Am = Tm?.viewport;
-          if (!Am) return;
-          const am = Math.floor(Am.x * fm),
-            xm = Math.floor((1 - Am.y - Am.height) * hm),
-            wm = Math.ceil((Am.x + Am.width) * fm) - am,
-            Dm = Math.ceil((1 - Am.y) * hm) - xm;
-          mm.setViewport(am, xm, wm, Dm, 0, 1), mm.setScissorRect(am, xm, wm, Dm)
-        }(Tm, hm.cam ?? xm.camera, am._width, am._height), Tm.setBindGroup(0, im), mm._lastVis !== Am.c || !Dm.length) {
-        const Tm = am._descriptor,
-          hm = fm._device.createRenderBundleEncoder({
-            colorFormats: Tm.format ? [Tm.format] : [],
-            depthStencilFormat: mm._targetSignature._depthStencilFormat,
-            sampleCount: Tm.samples
+    function bD(DD, zD) {
+      const wD = DD.engine,
+        pD = DD._config,
+        KD = pD.rt,
+        rD = DD.oB,
+        LD = DD._opaqueBindings,
+        cD = DD._ob,
+        gD = DD._sceneBG;
+      if (function(DD, zD, wD, pD) {
+          const sD = zD?.viewport;
+          if (!sD) return;
+          const KD = Math.floor(sD.x * wD),
+            rD = Math.floor((1 - sD.y - sD.height) * pD),
+            LD = Math.ceil((sD.x + sD.width) * wD) - KD,
+            cD = Math.ceil((1 - sD.y) * pD) - rD;
+          DD.setViewport(KD, rD, LD, cD, 0, 1), DD.setScissorRect(KD, rD, LD, cD)
+        }(zD, pD.cam ?? rD.camera, KD._width, KD._height), zD.setBindGroup(0, gD), DD._lastVis !== sD.e || !cD.length) {
+        const zD = KD._descriptor,
+          pD = wD._device.createRenderBundleEncoder({
+            colorFormats: zD.format ? [zD.format] : [],
+            depthStencilFormat: DD._targetSignature._depthStencilFormat,
+            sampleCount: zD.samples
           });
-        hm.setBindGroup(0, im), Xm(hm, wm, fm), Dm[0] = hm.finish(), mm._lastVis = Am.c
+        pD.setBindGroup(0, gD), SD(pD, LD, wD), cD[0] = pD.finish(), DD._lastVis = sD.e
       }
-      let Rm = wm.length;
-      return Tm.executeBundles(Dm), Tm.setBindGroup(0, im), Rm += Xm(Tm, mm._directBindings, fm), Rm += Xm(Tm, mm._transparentBindings, fm), Rm
+      let RD = LD.length;
+      return zD.executeBundles(cD), zD.setBindGroup(0, gD), RD += SD(zD, DD._directBindings, wD), RD += SD(zD, DD._transparentBindings, wD), RD
     }
 
-    function Nm(mm, Tm) {
-      let fm = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
-      const hm = nm(Tm, mm.Aq)._buffer;
-      if (hm === mm._lightsUBO) return;
-      const Am = Tm._device.createBindGroup({
-        layout: Ym(Tm),
+    function jD(DD, zD) {
+      let wD = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+      const pD = ED(zD, DD.oB)._buffer;
+      if (pD === DD._lightsUBO) return;
+      const sD = zD._device.createBindGroup({
+        layout: BD(zD),
         entries: [{
           binding: 0,
           resource: {
-            buffer: mm._sceneUBO
+            buffer: DD._sceneUBO
           }
         }, {
           binding: 1,
           resource: {
-            buffer: hm
+            buffer: pD
           }
         }]
       });
-      mm._lightsUBO = hm, mm._sceneBG = Am, fm && (mm._ob = [])
+      DD._lightsUBO = pD, DD._sceneBG = sD, wD && (DD._ob = [])
     }
 
-    function Gm(mm, Tm) {
-      for (const fm of mm) fm.update?.(Tm)
+    function dD(DD, zD) {
+      for (const wD of DD) wD.update?.(zD)
     }
 
-    function Xm(mm, Tm, fm) {
-      let hm = null,
-        Am = 0;
-      for (const am of Tm) {
-        const Tm = am.renderable.mesh;
-        Tm && !1 === Tm.visible || (am.pipeline !== hm && (mm.setPipeline(am.pipeline), hm = am.pipeline), Am += am.draw(mm, fm))
+    function SD(DD, zD, wD) {
+      let pD = null,
+        sD = 0;
+      for (const KD of zD) {
+        const zD = KD.renderable.mesh;
+        zD && !1 === zD.visible || (KD.pipeline !== pD && (DD.setPipeline(KD.pipeline), pD = KD.pipeline), sD += KD.draw(DD, wD))
       }
-      return Am
+      return sD
     }
 
-    function Pm(mm) {
-      const Tm = mm._materialSwapQueue;
-      if (!Tm[0] || mm._runtimeBuilds?.w) return;
-      let hm, Am, am;
-      const xm = mm._renderables;
-      for (const fm of Tm) {
-        const Tm = fm.material;
-        if (!Tm) continue;
-        const wm = fm._runtimeThinBuild;
-        if (wm) {
-          Am = wm(mm, fm, Am);
+    function iD(DD) {
+      const zD = DD._materialSwapQueue;
+      if (!zD[0] || DD._runtimeBuilds?.w) return;
+      let pD, sD, KD;
+      const rD = DD._renderables;
+      for (const wD of zD) {
+        const zD = wD.material;
+        if (!zD) continue;
+        const LD = wD._runtimeThinBuild;
+        if (LD) {
+          sD = LD(DD, wD, sD);
           continue
         }
-        const Dm = mm._groups.get(Tm._buildGroup),
-          im = Dm?.r;
-        if (!im) {
-          (am ??= []).push(fm);
+        const cD = DD._groups.get(zD._buildGroup),
+          gD = cD?.r;
+        if (!gD) {
+          (KD ??= []).push(wD);
           continue
         }
-        if (Dm._w?.(fm)) {
-          (am ??= []).push([fm, Tm]);
+        if (cD._w?.(wD)) {
+          (KD ??= []).push([wD, zD]);
           continue
         }
-        const Rm = mm._meshDisposables.get(fm);
-        Rm && (mm._meshDisposables.delete(fm), (0, om.c)(mm.surface.engine, (() => Rm.forEach((mm => mm())))));
-        const pm = Dm.o;
-        let Em;
-        for (let mm = xm.length; mm--;) xm[mm].mesh === fm && (Em = xm.splice(mm, 1)[0]);
-        Tm._csmGen = -~Tm._csmGen;
-        const Om = im(mm, fm);
-        if (pm) {
-          const mm = pm.indexOf(Em);
-          mm < 0 ? pm.push(Om) : pm[mm] = Om
+        const RD = DD._meshDisposables.get(wD);
+        RD && (DD._meshDisposables.delete(wD), (0, fD.c)(DD.surface.engine, (() => RD.forEach((DD => DD())))));
+        const AD = cD.o;
+        let UD;
+        for (let DD = rD.length; DD--;) rD[DD].mesh === wD && (UD = rD.splice(DD, 1)[0]);
+        zD._csmGen = -~zD._csmGen;
+        const ID = gD(DD, wD);
+        if (AD) {
+          const DD = AD.indexOf(UD);
+          DD < 0 ? AD.push(ID) : AD[DD] = ID
         }
-        hm = xm.push(Om)
+        pD = rD.push(ID)
       }
-      if (hm && (xm.sort(((mm, Tm) => mm.order - Tm.order)), mm._renderableVersion++, mm._materialEpoch++), Tm.length = 0, !am) return Am;
-      const wm = am;
-      return fm.e(363).then((() => fm(61450))).then((Tm => {
+      if (pD && (rD.sort(((DD, zD) => DD.order - zD.order)), DD._renderableVersion++, DD._materialEpoch++), zD.length = 0, !KD) return sD;
+      const LD = KD;
+      return wD.e(363).then((() => wD(61140))).then((zD => {
         let {
-          C: fm
-        } = Tm;
-        return fm(mm, wm, Am)
-      }), (Tm => {
-        const fm = mm._runtimeBuilds;
-        fm ? fm._x(Tm) : console.error(Tm)
+          C: wD
+        } = zD;
+        return wD(DD, LD, sD)
+      }), (zD => {
+        const wD = DD._runtimeBuilds;
+        wD ? wD._x(zD) : console.error(zD)
       }))
     }
-    var Hm = null;
+    var lD = null;
 
-    function ym(mm, Tm) {
-      const fm = mm.engine,
-        Am = {
-          _kind: "Aq",
-          surface: mm,
+    function WD(DD, zD) {
+      const wD = DD.engine,
+        sD = {
+          _kind: "oB",
+          surface: DD,
           clearColor: {
             r: .2,
             g: .2,
@@ -902,365 +902,365 @@ export const modules = {
           _built: !1,
           _drawCallsPre: 0,
           _update() {
-            fm.useFloatingOrigin && Am.camera && !Am.camera._useFloatingOrigin && (Am.camera._useFloatingOrigin = !0, Am.camera._viewVer = -1, Am.camera._vpVer = -1);
-            const mm = Am.fixedDeltaMs > 0 ? Am.fixedDeltaMs : fm._currentDelta,
-              Tm = fm._currentEncoder;
-            let hm = 0;
-            for (const fm of Am._beforeRender) fm(mm);
-            Am._materialSwapQueue.length && Pm(Am);
-            for (const am of Am._prePasses) hm += am.execute(Tm, fm);
-            for (const am of Am._uniformUpdaters) am.update(fm);
-            Am._drawCallsPre = hm
+            wD.useFloatingOrigin && sD.camera && !sD.camera._useFloatingOrigin && (sD.camera._useFloatingOrigin = !0, sD.camera._viewVer = -1, sD.camera._vpVer = -1);
+            const DD = sD.fixedDeltaMs > 0 ? sD.fixedDeltaMs : wD._currentDelta,
+              zD = wD._currentEncoder;
+            let pD = 0;
+            for (const wD of sD._beforeRender) wD(DD);
+            sD._materialSwapQueue.length && iD(sD);
+            for (const KD of sD._prePasses) pD += KD.execute(zD, wD);
+            for (const KD of sD._uniformUpdaters) KD.update(wD);
+            sD._drawCallsPre = pD
           },
-          _record: () => Am._frameGraph.execute(),
+          _record: () => sD._frameGraph.execute(),
           _resize() {
-            Am._frameGraph.build()
+            sD._frameGraph.build()
           }
         },
-        xm = function() {
-          const mm = {
+        rD = function() {
+          const DD = {
             _tasks: [],
             _currentProcessedTask: null,
             build() {
-              for (let Tm = 0; Tm < mm._tasks.length; Tm++) am(mm, mm._tasks[Tm]);
-              for (const Tm of mm._tasks)
-                for (const mm of Tm._passes) mm._initialize()
+              for (let zD = 0; zD < DD._tasks.length; zD++) KD(DD, DD._tasks[zD]);
+              for (const zD of DD._tasks)
+                for (const DD of zD._passes) DD._initialize()
             },
             execute() {
-              let Tm = 0;
-              for (const fm of mm._tasks)
-                if (!1 !== fm.executionEnabled)
-                  if (fm.execute) Tm += fm.execute();
+              let zD = 0;
+              for (const wD of DD._tasks)
+                if (!1 !== wD.executionEnabled)
+                  if (wD.execute) zD += wD.execute();
                   else
-                    for (const mm of fm._passes) Tm += mm._execute();
-              return Tm
+                    for (const DD of wD._passes) zD += DD._execute();
+              return zD
             },
             dispose() {
-              for (const Tm of mm._tasks) Tm.dispose();
-              mm._tasks.length = 0, mm._currentProcessedTask = null
+              for (const zD of DD._tasks) zD.dispose();
+              DD._tasks.length = 0, DD._currentProcessedTask = null
             }
           };
-          return mm
+          return DD
         }();
-      if (Am._frameGraph = xm, !1 !== Tm?.defaultRenderTask) {
-        const Tm = mm.msaaSamples > 1,
-          am = Tm ? (0, hm.d)({
+      if (sD._frameGraph = rD, !1 !== zD?.defaultRenderTask) {
+        const zD = DD.msaaSamples > 1,
+          KD = zD ? (0, pD.e)({
             lbl: "scene-color",
-            format: mm.format,
+            format: DD.format,
             dFormat: "depth24plus-stencil8",
-            samples: mm.msaaSamples,
-            size: mm
-          }) : mm.scRT,
-          wm = Tm ? void 0 : (0, hm.d)({
+            samples: DD.msaaSamples,
+            size: DD
+          }) : DD.scRT,
+          LD = zD ? void 0 : (0, pD.e)({
             lbl: "scene-depth",
             dFormat: "depth24plus-stencil8",
             samples: 1,
-            size: mm
+            size: DD
           });
-        ! function(mm, Tm) {
-          mm._tasks.push(Tm)
-        }(xm, Zm({
-          name: "Aq",
-          rt: am,
-          rst: Tm ? mm.scRT : void 0,
-          depth: wm
-        }, fm, Am))
+        ! function(DD, zD) {
+          DD._tasks.push(zD)
+        }(rD, PD({
+          name: "oB",
+          rt: KD,
+          rst: zD ? DD.scRT : void 0,
+          depth: LD
+        }, wD, sD))
       }
-      return Am._disposables.push((() => xm.dispose())), Am
+      return sD._disposables.push((() => rD.dispose())), sD
     }
-    async function Cm(mm) {
-      const Tm = mm;
-      for (Tm._built || (Tm._materialSwapQueue.length = 0); Tm._deferredBuilders.length;) {
-        const mm = Tm._deferredBuilders.splice(0);
-        await Promise.all(mm.map((mm => mm())))
+    async function ND(DD) {
+      const zD = DD;
+      for (zD._built || (zD._materialSwapQueue.length = 0); zD._deferredBuilders.length;) {
+        const DD = zD._deferredBuilders.splice(0);
+        await Promise.all(DD.map((DD => DD())))
       }
-      await Pm(Tm), Hm?.get(Tm)?.() || (Tm._runtimeBuilds?._e(), Tm._renderableVersion++, Tm._built = !0), await (Tm._rebuildHook?.(Tm))
+      await iD(zD), lD?.get(zD)?.() || (zD._runtimeBuilds?._e(), zD._renderableVersion++, zD._built = !0), await (zD._rebuildHook?.(zD))
     }
-    var rm = null;
-    async function sm(mm) {
-      const Tm = mm,
-        hm = Tm.surface;
-      (0, Am.f)(hm, Tm) || (await Cm(mm), Tm._renderables.sort(lm), await Promise.all(Tm._frameGraph._tasks.map((mm => mm._preload?.()))), rm && await rm(Tm), Tm._frameGraph.build(), hm._renderingContexts[0] && (await fm.e(361).then((() => fm(61437)))).configureSwapchainOverlayScene(hm, Tm), Hm?.get(Tm)?.() || (0, Am.g)(hm, Tm))
+    var ZD = null;
+    async function yD(DD) {
+      const zD = DD,
+        pD = zD.surface;
+      (0, sD.k)(pD, zD) || (await ND(DD), zD._renderables.sort(kD), await Promise.all(zD._frameGraph._tasks.map((DD => DD._preload?.()))), ZD && await ZD(zD), zD._frameGraph.build(), pD._renderingContexts[0] && (await wD.e(361).then((() => wD(61129)))).configureSwapchainOverlayScene(pD, zD), lD?.get(zD)?.() || (0, sD.n)(pD, zD))
     }
-    var lm = (mm, Tm) => mm.order - Tm.order
+    var kD = (DD, zD) => DD.order - zD.order
   },
-  41714: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => im,
-      c: () => Rm
+  41588: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => gD,
+      e: () => RD
     });
-    var hm = fm(41678),
-      Am = fm(41682),
-      am = fm(41686),
-      xm = fm(41688),
-      wm = fm(41691),
-      Dm = fm(41696);
+    var pD = wD(41545),
+      sD = wD(41551),
+      KD = wD(41554),
+      rD = wD(41563),
+      LD = wD(41570),
+      cD = wD(41578);
 
-    function im(mm, Tm, fm) {
-      let wm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      (Tm < 1 || fm < 1) && (0, hm.c)(676, Tm, fm);
-      const im = mm._device,
-        Rm = wm.mipMaps ?? !1,
-        pm = wm.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-        Em = Rm ? (0, Dm.c)(Tm, fm) : 1,
-        om = im.createTexture({
+    function gD(DD, zD, wD) {
+      let LD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      (zD < 1 || wD < 1) && (0, pD.d)(676, zD, wD);
+      const gD = DD._device,
+        RD = LD.mipMaps ?? !1,
+        AD = LD.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+        UD = RD ? (0, cD.b)(zD, wD) : 1,
+        fD = gD.createTexture({
           size: {
-            width: Tm,
-            height: fm
+            width: zD,
+            height: wD
           },
-          format: pm,
-          mipLevelCount: Em,
-          usage: Am.j.TEXTURE_BINDING | Am.j.COPY_DST | Am.j.RENDER_ATTACHMENT
+          format: AD,
+          mipLevelCount: UD,
+          usage: sD.i.TEXTURE_BINDING | sD.i.COPY_DST | sD.i.RENDER_ATTACHMENT
         }),
-        Om = {
-          addressModeU: wm.addressModeU ?? "clamp-to-edge",
-          addressModeV: wm.addressModeV ?? "clamp-to-edge",
-          minFilter: wm.minFilter ?? "linear",
-          magFilter: wm.magFilter ?? "linear",
-          mipmapFilter: Rm ? "linear" : "nearest"
+        ID = {
+          addressModeU: LD.addressModeU ?? "clamp-to-edge",
+          addressModeV: LD.addressModeV ?? "clamp-to-edge",
+          minFilter: LD.minFilter ?? "linear",
+          magFilter: LD.magFilter ?? "linear",
+          mipmapFilter: RD ? "linear" : "nearest"
         },
-        Ym = (0, xm.b)(mm, Om),
-        qm = {
-          texture: om,
-          view: om.createView(),
-          sampler: Ym,
-          width: Tm,
-          height: fm
+        BD = (0, rD.c)(DD, ID),
+        GD = {
+          texture: fD,
+          view: fD.createView(),
+          sampler: BD,
+          width: zD,
+          height: wD
         };
-      return (0, am.b)(qm), mm._dlr && mm._dlr.t(qm, {
+      return (0, KD.b)(GD), DD._dlr && DD._dlr.t(GD, {
         kind: "dynamic",
-        width: Tm,
-        height: fm,
-        format: pm,
-        levels: Em,
-        samplerDesc: Om,
+        width: zD,
+        height: wD,
+        format: AD,
+        levels: UD,
+        samplerDesc: ID,
         source: null,
         flipY: !0,
         premultipliedAlpha: !1
-      }), qm
+      }), GD
     }
 
-    function Rm(mm, Tm, fm) {
-      let hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const Am = hm.invertY ?? !0,
-        am = hm.premultiplyAlpha ?? !1;
-      mm._device.queue.copyExternalImageToTexture({
-        source: fm,
-        flipY: Am
+    function RD(DD, zD, wD) {
+      let pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+      const sD = pD.invertY ?? !0,
+        KD = pD.premultiplyAlpha ?? !1;
+      DD._device.queue.copyExternalImageToTexture({
+        source: wD,
+        flipY: sD
       }, {
-        texture: Tm.texture,
-        premultipliedAlpha: am
-      }, [Tm.width, Tm.height]);
-      const xm = Tm._recoverySource;
-      xm && "dynamic" === xm.kind && (xm.source = fm, xm.flipY = Am, xm.premultipliedAlpha = am), Tm.texture.mipLevelCount > 1 && (0, wm.generateMipmaps)(mm, Tm.texture)
+        texture: zD.texture,
+        premultipliedAlpha: KD
+      }, [zD.width, zD.height]);
+      const rD = zD._recoverySource;
+      rD && "dynamic" === rD.kind && (rD.source = wD, rD.flipY = sD, rD.premultipliedAlpha = KD), zD.texture.mipLevelCount > 1 && (0, LD.generateMipmaps)(DD, zD.texture)
     }
   },
-  41709: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => Dm
+  41582: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => cD
     });
-    var hm = fm(41678),
-      Am = fm(41682),
-      am = fm(41686),
-      xm = fm(41688),
-      wm = fm(41696);
-    async function Dm(mm, Tm) {
-      let Dm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const [im, Rm] = function(mm) {
-        const Tm = mm,
-          fm = [
-            [Tm.displayWidth, Tm.displayHeight],
-            [Tm.videoWidth, Tm.videoHeight],
-            [Tm.naturalWidth, Tm.naturalHeight],
-            [Tm.width, Tm.height]
+    var pD = wD(41545),
+      sD = wD(41551),
+      KD = wD(41554),
+      rD = wD(41563),
+      LD = wD(41578);
+    async function cD(DD, zD) {
+      let cD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const [gD, RD] = function(DD) {
+        const zD = DD,
+          wD = [
+            [zD.displayWidth, zD.displayHeight],
+            [zD.videoWidth, zD.videoHeight],
+            [zD.naturalWidth, zD.naturalHeight],
+            [zD.width, zD.height]
           ];
-        for (const [hm, Am] of fm)
-          if (void 0 !== hm && void 0 !== Am && Number.isInteger(hm) && Number.isInteger(Am) && hm > 0 && Am > 0) return [hm, Am];
+        for (const [pD, sD] of wD)
+          if (void 0 !== pD && void 0 !== sD && Number.isInteger(pD) && Number.isInteger(sD) && pD > 0 && sD > 0) return [pD, sD];
         throw new TypeError("createTexture2DFromExternalImage: source has no supported positive intrinsic dimensions")
-      }(Tm), [pm, Em] = function(mm, Tm, fm) {
-        if (void 0 === fm) return [mm, Tm];
-        if (!Number.isInteger(fm) || fm < 1) throw new TypeError(`createTexture2DFromExternalImage: maxDimension must be a positive integer (got ${fm})`);
-        if (Math.max(mm, Tm) <= fm) return [mm, Tm];
-        const hm = fm / Math.max(mm, Tm);
-        return mm >= Tm ? [fm, Math.max(1, Math.round(Tm * hm))] : [Math.max(1, Math.round(mm * hm)), fm]
-      }(im, Rm, Dm.maxDimension), om = Dm.mipMaps ?? !0, Om = Dm.premultiplyAlpha ?? !1;
-      let Ym = Tm,
-        qm = null;
-      const jm = {
+      }(zD), [AD, UD] = function(DD, zD, wD) {
+        if (void 0 === wD) return [DD, zD];
+        if (!Number.isInteger(wD) || wD < 1) throw new TypeError(`createTexture2DFromExternalImage: maxDimension must be a positive integer (got ${wD})`);
+        if (Math.max(DD, zD) <= wD) return [DD, zD];
+        const pD = wD / Math.max(DD, zD);
+        return DD >= zD ? [wD, Math.max(1, Math.round(zD * pD))] : [Math.max(1, Math.round(DD * pD)), wD]
+      }(gD, RD, cD.maxDimension), fD = cD.mipMaps ?? !0, ID = cD.premultiplyAlpha ?? !1;
+      let BD = zD,
+        GD = null;
+      const hD = {
         texture: null
       };
       try {
-        pm === im && Em === Rm || (qm = await createImageBitmap(Tm, {
-          resizeWidth: pm,
-          resizeHeight: Em,
+        AD === gD && UD === RD || (GD = await createImageBitmap(zD, {
+          resizeWidth: AD,
+          resizeHeight: UD,
           resizeQuality: "high",
-          premultiplyAlpha: Om ? "premultiply" : "none",
+          premultiplyAlpha: ID ? "premultiply" : "none",
           colorSpaceConversion: "none"
-        }), Ym = qm);
-        const Vm = mm._device,
-          Im = Dm.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-          Km = om ? (0, wm.c)(pm, Em) : 1,
-          Qm = Km > 1 ? (await Promise.resolve().then((() => fm(41691)))).generateMipmaps : null,
-          nm = {
-            addressModeU: Dm.addressModeU ?? "repeat",
-            addressModeV: Dm.addressModeV ?? "repeat",
-            minFilter: Dm.minFilter ?? "linear",
-            magFilter: Dm.magFilter ?? "linear",
-            mipmapFilter: om ? "linear" : "nearest"
+        }), BD = GD);
+        const nD = DD._device,
+          MD = cD.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+          OD = fD ? (0, LD.b)(AD, UD) : 1,
+          JD = OD > 1 ? (await Promise.resolve().then((() => wD(41570)))).generateMipmaps : null,
+          ED = {
+            addressModeU: cD.addressModeU ?? "repeat",
+            addressModeV: cD.addressModeV ?? "repeat",
+            minFilter: cD.minFilter ?? "linear",
+            magFilter: cD.magFilter ?? "linear",
+            mipmapFilter: fD ? "linear" : "nearest"
           };
-        nm.maxAnisotropy = "linear" === nm.minFilter && "linear" === nm.magFilter && "linear" === nm.mipmapFilter ? 4 : 1;
-        const Jm = Dm.invertY ?? !0,
-          cm = async Tm => {
-            let fm;
-            Vm.pushErrorScope("validation"), Vm.pushErrorScope("out-of-memory");
-            let am = null;
+        ED.maxAnisotropy = "linear" === ED.minFilter && "linear" === ED.magFilter && "linear" === ED.mipmapFilter ? 4 : 1;
+        const QD = cD.invertY ?? !0,
+          XD = async zD => {
+            let wD;
+            nD.pushErrorScope("validation"), nD.pushErrorScope("out-of-memory");
+            let KD = null;
             try {
-              const fm = jm.texture = Vm.createTexture({
+              const wD = hD.texture = nD.createTexture({
                 size: {
-                  width: pm,
-                  height: Em
+                  width: AD,
+                  height: UD
                 },
-                format: Im,
-                mipLevelCount: Km,
-                usage: Am.j.TEXTURE_BINDING | Am.j.COPY_DST | Am.j.RENDER_ATTACHMENT
+                format: MD,
+                mipLevelCount: OD,
+                usage: sD.i.TEXTURE_BINDING | sD.i.COPY_DST | sD.i.RENDER_ATTACHMENT
               });
-              Vm.queue.copyExternalImageToTexture({
-                source: Tm,
-                flipY: Jm
+              nD.queue.copyExternalImageToTexture({
+                source: zD,
+                flipY: QD
               }, {
-                texture: fm,
-                premultipliedAlpha: Om
+                texture: wD,
+                premultipliedAlpha: ID
               }, {
-                width: pm,
-                height: Em
-              }), Qm && Qm(mm, fm), am = (0, xm.b)(mm, nm)
-            } catch (om) {
-              fm = om
+                width: AD,
+                height: UD
+              }), JD && JD(DD, wD), KD = (0, rD.c)(DD, ED)
+            } catch (fD) {
+              wD = fD
             }
-            const [wm, Dm] = await Promise.all([Vm.popErrorScope(), Vm.popErrorScope()]);
-            if (fm) throw fm;
-            const im = Dm ?? wm;
-            if (im) throw new Error(`createTexture2DFromExternalImage: GPU upload failed: ${im.message}`, {
-              cause: im
+            const [LD, cD] = await Promise.all([nD.popErrorScope(), nD.popErrorScope()]);
+            if (wD) throw wD;
+            const gD = cD ?? LD;
+            if (gD) throw new Error(`createTexture2DFromExternalImage: GPU upload failed: ${gD.message}`, {
+              cause: gD
             });
-            const Rm = jm.texture;
-            return Rm && am || (0, hm.c)(677), {
-              texture: Rm,
-              view: Rm.createView(),
-              sampler: am,
-              width: pm,
-              height: Em
+            const RD = hD.texture;
+            return RD && KD || (0, pD.d)(677), {
+              texture: RD,
+              view: RD.createView(),
+              sampler: KD,
+              width: AD,
+              height: UD
             }
-          }, zm = await (mm._dlr?.x(Ym, pm, Em, Im, Km, nm, Jm, Om, cm)) ?? await cm(Ym);
-        return (0, am.b)(zm), zm
-      } catch (Vm) {
-        throw jm.texture?.destroy(), Vm
+          }, VD = await (DD._dlr?.x(BD, AD, UD, MD, OD, ED, QD, ID, XD)) ?? await XD(BD);
+        return (0, KD.b)(VD), VD
+      } catch (nD) {
+        throw hD.texture?.destroy(), nD
       } finally {
-        qm?.close()
+        GD?.close()
       }
     }
   },
-  41691: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      generateMipmaps: () => om,
-      recordMipmaps: () => Om
+  41570: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      generateMipmaps: () => fD,
+      recordMipmaps: () => ID
     });
-    var hm = fm(41682),
-      Am = fm(41688),
-      am = {
+    var pD = wD(41551),
+      sD = wD(41563),
+      KD = {
         magFilter: "linear",
         minFilter: "linear"
       };
-    var xm = "@group(0)@binding(0)var t:texture_2d<f32>;@group(0)@binding(1)var s:sampler;struct V{@builtin(position)p:vec4f,@location(0)u:vec2f};@vertex fn vs(@builtin(vertex_index)i:u32)->V{let p=array<vec2f,3>(vec2f(-1,-1),vec2f(3,-1),vec2f(-1,3))[i];return V(vec4f(p,0,1),p*vec2f(.5,-.5)+.5);}@fragment fn fs(v:V)->@location(0)vec4f{return textureSample(t,s,v.u);}",
-      wm = null,
-      Dm = null,
-      im = null,
-      Rm = null,
-      pm = null;
+    var rD = "@group(0)@binding(0)var t:texture_2d<f32>;@group(0)@binding(1)var s:sampler;struct V{@builtin(position)p:vec4f,@location(0)u:vec2f};@vertex fn vs(@builtin(vertex_index)i:u32)->V{let p=array<vec2f,3>(vec2f(-1,-1),vec2f(3,-1),vec2f(-1,3))[i];return V(vec4f(p,0,1),p*vec2f(.5,-.5)+.5);}@fragment fn fs(v:V)->@location(0)vec4f{return textureSample(t,s,v.u);}",
+      LD = null,
+      cD = null,
+      gD = null,
+      RD = null,
+      AD = null;
 
-    function Em(mm) {
-      const Tm = mm._device;
-      Tm !== pm && (wm?.clear(), wm = null, Dm = null, im = null, Rm = null, pm = null, pm = Tm), Dm ??= Tm.createShaderModule({
-        code: xm
-      }), im ??= function(mm) {
-        return (0, Am.b)(mm, am)
-      }(mm), Rm ??= Tm.createBindGroupLayout({
+    function UD(DD) {
+      const zD = DD._device;
+      zD !== AD && (LD?.clear(), LD = null, cD = null, gD = null, RD = null, AD = null, AD = zD), cD ??= zD.createShaderModule({
+        code: rD
+      }), gD ??= function(DD) {
+        return (0, sD.c)(DD, KD)
+      }(DD), RD ??= zD.createBindGroupLayout({
         entries: [{
           binding: 0,
-          visibility: hm.h.FRAGMENT,
+          visibility: pD.e.FRAGMENT,
           texture: {
             sampleType: "float"
           }
         }, {
           binding: 1,
-          visibility: hm.h.FRAGMENT,
+          visibility: pD.e.FRAGMENT,
           sampler: {}
         }]
       })
     }
 
-    function om(mm, Tm, fm) {
-      const hm = mm._device,
-        Am = hm.createCommandEncoder();
-      Om(mm, Tm, Am, fm), hm.queue.submit([Am.finish()])
+    function fD(DD, zD, wD) {
+      const pD = DD._device,
+        sD = pD.createCommandEncoder();
+      ID(DD, zD, sD, wD), pD.queue.submit([sD.finish()])
     }
 
-    function Om(mm, Tm, fm, hm) {
-      if (Tm.mipLevelCount <= 1) return;
-      const Am = mm._device,
-        am = function(mm, Tm) {
-          const fm = mm._device;
-          Em(mm), wm ??= new Map;
-          let hm = wm.get(Tm);
-          return hm || (hm = fm.createRenderPipeline({
-            layout: fm.createPipelineLayout({
-              bindGroupLayouts: [Rm]
+    function ID(DD, zD, wD, pD) {
+      if (zD.mipLevelCount <= 1) return;
+      const sD = DD._device,
+        KD = function(DD, zD) {
+          const wD = DD._device;
+          UD(DD), LD ??= new Map;
+          let pD = LD.get(zD);
+          return pD || (pD = wD.createRenderPipeline({
+            layout: wD.createPipelineLayout({
+              bindGroupLayouts: [RD]
             }),
             vertex: {
-              module: Dm,
+              module: cD,
               entryPoint: "vs"
             },
             fragment: {
-              module: Dm,
+              module: cD,
               entryPoint: "fs",
               targets: [{
-                format: Tm
+                format: zD
               }]
             },
             primitive: {
               topology: "triangle-list"
             }
-          }), wm.set(Tm, hm)), hm
-        }(mm, Tm.format),
-        xm = null != hm ? {
+          }), LD.set(zD, pD)), pD
+        }(DD, zD.format),
+        rD = null != pD ? {
           dimension: "2d",
-          baseArrayLayer: hm,
+          baseArrayLayer: pD,
           arrayLayerCount: 1
         } : {};
-      for (let wm = 1; wm < Tm.mipLevelCount; wm++) {
-        const mm = Tm.createView({
-            baseMipLevel: wm - 1,
+      for (let LD = 1; LD < zD.mipLevelCount; LD++) {
+        const DD = zD.createView({
+            baseMipLevel: LD - 1,
             mipLevelCount: 1,
-            ...xm
+            ...rD
           }),
-          hm = Tm.createView({
-            baseMipLevel: wm,
+          pD = zD.createView({
+            baseMipLevel: LD,
             mipLevelCount: 1,
-            ...xm
+            ...rD
           }),
-          Dm = Am.createBindGroup({
-            layout: Rm,
+          cD = sD.createBindGroup({
+            layout: RD,
             entries: [{
               binding: 0,
-              resource: mm
+              resource: DD
             }, {
               binding: 1,
-              resource: im
+              resource: gD
             }]
           }),
-          pm = fm.beginRenderPass({
+          AD = wD.beginRenderPass({
             colorAttachments: [{
-              view: hm,
+              view: pD,
               loadOp: "clear",
               storeOp: "store",
               clearValue: {
@@ -1271,82 +1271,82 @@ export const modules = {
               }
             }]
           });
-        pm.setPipeline(am), pm.setBindGroup(0, Dm), pm.draw(3), pm.end()
+        AD.setPipeline(KD), AD.setBindGroup(0, cD), AD.draw(3), AD.end()
       }
     }
   },
-  41696: (mm, Tm, fm) => {
-    function hm(mm, Tm) {
-      return Math.floor(Math.log2(Math.max(mm, Tm))) + 1
+  41578: (DD, zD, wD) => {
+    function pD(DD, zD) {
+      return Math.floor(Math.log2(Math.max(DD, zD))) + 1
     }
-    fm.d(Tm, {
-      c: () => hm
+    wD.d(zD, {
+      b: () => pD
     })
   },
-  41676: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => im,
-      g: () => Rm
+  41542: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => gD,
+      i: () => RD
     });
-    var hm = fm(41678),
-      Am = fm(41682),
-      am = fm(41686),
-      xm = fm(41688),
-      wm = fm(41691),
-      Dm = fm(41696);
+    var pD = wD(41545),
+      sD = wD(41551),
+      KD = wD(41554),
+      rD = wD(41563),
+      LD = wD(41570),
+      cD = wD(41578);
 
-    function im(mm, Tm, fm, wm) {
-      let im = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      (Tm < 1 || fm < 1 || wm < 1) && (0, hm.c)(722, Tm, fm, wm);
-      const Rm = mm._device,
-        pm = im.mipMaps ?? !0,
-        Em = im.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
-        om = Rm.createTexture({
+    function gD(DD, zD, wD, LD) {
+      let gD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      (zD < 1 || wD < 1 || LD < 1) && (0, pD.d)(722, zD, wD, LD);
+      const RD = DD._device,
+        AD = gD.mipMaps ?? !0,
+        UD = gD.srgb ? "rgba8unorm-srgb" : "rgba8unorm",
+        fD = RD.createTexture({
           size: {
-            width: Tm,
-            height: fm,
-            depthOrArrayLayers: wm
+            width: zD,
+            height: wD,
+            depthOrArrayLayers: LD
           },
           dimension: "2d",
-          format: Em,
-          mipLevelCount: pm ? (0, Dm.c)(Tm, fm) : 1,
-          usage: Am.j.TEXTURE_BINDING | Am.j.COPY_DST | Am.j.RENDER_ATTACHMENT
+          format: UD,
+          mipLevelCount: AD ? (0, cD.b)(zD, wD) : 1,
+          usage: sD.i.TEXTURE_BINDING | sD.i.COPY_DST | sD.i.RENDER_ATTACHMENT
         }),
-        Om = (0, xm.b)(mm, {
-          addressModeU: im.addressModeU ?? "repeat",
-          addressModeV: im.addressModeV ?? "repeat",
-          minFilter: im.minFilter ?? "linear",
-          magFilter: im.magFilter ?? "linear",
-          mipmapFilter: pm ? "linear" : "nearest"
+        ID = (0, rD.c)(DD, {
+          addressModeU: gD.addressModeU ?? "repeat",
+          addressModeV: gD.addressModeV ?? "repeat",
+          minFilter: gD.minFilter ?? "linear",
+          magFilter: gD.magFilter ?? "linear",
+          mipmapFilter: AD ? "linear" : "nearest"
         }),
-        Ym = {
-          texture: om,
-          view: om.createView({
+        BD = {
+          texture: fD,
+          view: fD.createView({
             dimension: "2d-array"
           }),
-          sampler: Om,
-          width: Tm,
-          height: fm,
-          layers: wm
+          sampler: ID,
+          width: zD,
+          height: wD,
+          layers: LD
         };
-      return (0, am.b)(Ym), Ym
+      return (0, KD.b)(BD), BD
     }
 
-    function Rm(mm, Tm, fm, Am) {
-      let am = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
-      (fm < 0 || fm >= Tm.layers || (0 | fm) !== fm) && (0, hm.c)(723, Tm.layers, fm);
-      const xm = am.invertY ?? !0,
-        Dm = am.premultiplyAlpha ?? !1;
-      mm._device.queue.copyExternalImageToTexture({
-        source: Am,
-        flipY: xm
+    function RD(DD, zD, wD, sD) {
+      let KD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {};
+      (wD < 0 || wD >= zD.layers || (0 | wD) !== wD) && (0, pD.d)(723, zD.layers, wD);
+      const rD = KD.invertY ?? !0,
+        cD = KD.premultiplyAlpha ?? !1;
+      DD._device.queue.copyExternalImageToTexture({
+        source: sD,
+        flipY: rD
       }, {
-        texture: Tm.texture,
-        origin: [0, 0, fm],
-        premultipliedAlpha: Dm
-      }, [Tm.width, Tm.height, 1]), Tm.texture.mipLevelCount > 1 && (0, wm.generateMipmaps)(mm, Tm.texture, fm)
+        texture: zD.texture,
+        origin: [0, 0, wD],
+        premultipliedAlpha: cD
+      }, [zD.width, zD.height, 1]), zD.texture.mipLevelCount > 1 && (0, LD.generateMipmaps)(DD, zD.texture, wD)
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

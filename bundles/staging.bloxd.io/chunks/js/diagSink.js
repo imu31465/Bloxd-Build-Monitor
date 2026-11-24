@@ -1,130 +1,130 @@
 export const id = 30;
 export const ids = [30];
 export const modules = {
-  36502: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      DUMP_GAP_MS: () => im,
-      DiagSink: () => om,
-      ITEM_GAP_MS: () => Am,
-      ITEM_METADATA_BYTES: () => Dm,
-      MAX_LINE_CHARS: () => xm,
-      MAX_MESSAGE_BYTES: () => am
+  36422: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      DUMP_GAP_MS: () => gD,
+      DiagSink: () => fD,
+      ITEM_GAP_MS: () => sD,
+      ITEM_METADATA_BYTES: () => cD,
+      MAX_LINE_CHARS: () => rD,
+      MAX_MESSAGE_BYTES: () => KD
     });
-    const hm = "bloxdDiagSinkDays",
-      Am = 4e4,
-      am = 2048,
-      xm = 400,
-      wm = 262144,
-      Dm = 1500,
-      im = 6e5,
-      Rm = new TextEncoder;
+    const pD = "bloxdDiagSinkDays",
+      sD = 4e4,
+      KD = 2048,
+      rD = 400,
+      LD = 262144,
+      cD = 1500,
+      gD = 6e5,
+      RD = new TextEncoder;
 
-    function pm(mm) {
-      return Rm.encode(mm).length
+    function AD(DD) {
+      return RD.encode(DD).length
     }
 
-    function Em(mm) {
-      return Dm + pm(mm)
+    function UD(DD) {
+      return cD + AD(DD)
     }
-    class om {
-      constructor(mm, Tm) {
-        this.claim = mm, this.deps = Tm, this.queue = [], this.pageLines = 0, this.pageBytes = 0, this.stopped = !1, this.dropped = !1, this.lastSentMs = Number.NEGATIVE_INFINITY, this.lastDumpMs = void 0, this.sentDumps = new Map, this.lastDumpMs = Tm.now()
+    class fD {
+      constructor(DD, zD) {
+        this.claim = DD, this.deps = zD, this.queue = [], this.pageLines = 0, this.pageBytes = 0, this.stopped = !1, this.dropped = !1, this.lastSentMs = Number.NEGATIVE_INFINITY, this.lastDumpMs = void 0, this.sentDumps = new Map, this.lastDumpMs = zD.now()
       }
       start() {
         setInterval((() => {
-          this.DE()
-        }), Am), window.addEventListener("visibilitychange", (() => {
+          this.DU()
+        }), sD), window.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.flush()
         }), !0)
       }
-      add(mm) {
-        this.stopped || (this.pageLines + this.queue.length < 500 ? this.queue.push(function(mm) {
-          const Tm = mm.replace(/\n/g, " | ");
-          if (Tm.length <= xm) return Tm;
-          let fm = xm - 3;
-          const hm = Tm.charCodeAt(fm - 1);
-          return hm >= 55296 && hm <= 56319 && fm--, `${Tm.slice(0,fm)}...`
-        }(mm)) : this.dropped = !0)
+      add(DD) {
+        this.stopped || (this.pageLines + this.queue.length < 500 ? this.queue.push(function(DD) {
+          const zD = DD.replace(/\n/g, " | ");
+          if (zD.length <= rD) return zD;
+          let wD = rD - 3;
+          const pD = zD.charCodeAt(wD - 1);
+          return pD >= 55296 && pD <= 56319 && wD--, `${zD.slice(0,wD)}...`
+        }(DD)) : this.dropped = !0)
       }
-      DE() {
-        this.deps.now() - this.lastDumpMs >= im && (this.lastDumpMs = this.deps.now(), this.queueDumps()), this.flush()
+      DU() {
+        this.deps.now() - this.lastDumpMs >= gD && (this.lastDumpMs = this.deps.now(), this.queueDumps()), this.flush()
       }
       flush() {
-        if (this.stopped || 0 === this.queue.length || this.deps.now() - this.lastSentMs < Am - 1e3) return;
-        const mm = this.readDay(),
-          Tm = [];
-        let fm = 0,
-          hm = null;
-        for (const Am of this.queue) {
-          const xm = pm(Am) + (Tm.length > 0 ? 1 : 0);
-          if (fm + xm > am) break;
-          const im = Dm + fm + xm;
-          if (this.pageBytes + im > wm) {
-            hm = "page";
+        if (this.stopped || 0 === this.queue.length || this.deps.now() - this.lastSentMs < sD - 1e3) return;
+        const DD = this.readDay(),
+          zD = [];
+        let wD = 0,
+          pD = null;
+        for (const sD of this.queue) {
+          const rD = AD(sD) + (zD.length > 0 ? 1 : 0);
+          if (wD + rD > KD) break;
+          const gD = cD + wD + rD;
+          if (this.pageBytes + gD > LD) {
+            pD = "page";
             break
           }
-          if (!this.dayFits(mm, Tm.length + 1, im)) {
-            hm = "day";
+          if (!this.dayFits(DD, zD.length + 1, gD)) {
+            pD = "day";
             break
           }
-          Tm.push(Am), fm += xm
+          zD.push(sD), wD += rD
         }
-        null === hm && this.dropped && Tm.length === this.queue.length && (hm = "page"), this.queue.splice(0, Tm.length), Tm.length > 0 && !this.sendCharged(mm, Tm.join("\n"), Tm.length, "lines") || null !== hm && this.stopAt(hm, mm)
+        null === pD && this.dropped && zD.length === this.queue.length && (pD = "page"), this.queue.splice(0, zD.length), zD.length > 0 && !this.sendCharged(DD, zD.join("\n"), zD.length, "lines") || null !== pD && this.stopAt(pD, DD)
       }
       queueDumps() {
-        for (const [mm, Tm] of this.deps.dumps()) {
-          const fm = Tm.split("\n").slice(0, 20),
-            hm = fm.join("\n");
-          if (this.sentDumps.get(mm) !== hm) {
-            this.sentDumps.set(mm, hm);
-            for (const Tm of fm) this.add(`[dump:${mm}] ${Tm}`)
+        for (const [DD, zD] of this.deps.dumps()) {
+          const wD = zD.split("\n").slice(0, 20),
+            pD = wD.join("\n");
+          if (this.sentDumps.get(DD) !== pD) {
+            this.sentDumps.set(DD, pD);
+            for (const zD of wD) this.add(`[dump:${DD}] ${zD}`)
           }
         }
       }
-      stopAt(mm, Tm) {
+      stopAt(DD, zD) {
         this.stopped = !0, this.queue.length = 0;
-        const fm = "page" === mm ? "diag_cap: the page's cap (500 lines, 256 KB), so this page sends no more" : `diag_cap: the claim's daily cap (${this.claim.perClientLines} lines, ${this.dayBytes()/1e3} KB), so it sends no more today`;
-        if ("day" === mm) {
-          if (Tm.capSent) return;
-          Tm.capSent = !0
-        } else if (!this.dayFits(Tm, 1, Em(fm))) return;
-        this.sendCharged(Tm, fm, 1, "cap")
+        const wD = "page" === DD ? "diag_cap: the page's cap (500 lines, 256 KB), so this page sends no more" : `diag_cap: the claim's daily cap (${this.claim.perClientLines} lines, ${this.dayBytes()/1e3} KB), so it sends no more today`;
+        if ("day" === DD) {
+          if (zD.capSent) return;
+          zD.capSent = !0
+        } else if (!this.dayFits(zD, 1, UD(wD))) return;
+        this.sendCharged(zD, wD, 1, "cap")
       }
       dayBytes() {
         return 400 * this.claim.perClientLines
       }
-      dayFits(mm, Tm, fm) {
-        return mm.lines + Tm <= this.claim.perClientLines && mm.bytes + fm <= this.dayBytes()
+      dayFits(DD, zD, wD) {
+        return DD.lines + zD <= this.claim.perClientLines && DD.bytes + wD <= this.dayBytes()
       }
       readDays() {
-        var mm;
-        return null !== (mm = this.deps.storage.getItem(hm)) && void 0 !== mm ? mm : {}
+        var DD;
+        return null !== (DD = this.deps.storage.getItem(pD)) && void 0 !== DD ? DD : {}
       }
       readDay() {
-        const mm = new Date(this.deps.now()).toISOString().slice(0, 10),
-          Tm = this.readDays()[this.claim.claimId];
-        return (null === Tm || void 0 === Tm ? void 0 : Tm.day) === mm ? Tm : {
-          day: mm,
+        const DD = new Date(this.deps.now()).toISOString().slice(0, 10),
+          zD = this.readDays()[this.claim.claimId];
+        return (null === zD || void 0 === zD ? void 0 : zD.day) === DD ? zD : {
+          day: DD,
           lines: 0,
           bytes: 0,
           capSent: !1
         }
       }
-      writeDay(mm) {
-        const Tm = Object.fromEntries(Object.entries(this.readDays()).filter((Tm => {
-          let [, fm] = Tm;
-          return fm.day === mm.day
+      writeDay(DD) {
+        const zD = Object.fromEntries(Object.entries(this.readDays()).filter((zD => {
+          let [, wD] = zD;
+          return wD.day === DD.day
         })));
-        return Tm[this.claim.claimId] = mm, this.deps.storage.setItem(hm, Tm)
+        return zD[this.claim.claimId] = DD, this.deps.storage.setItem(pD, zD)
       }
-      sendCharged(mm, Tm, fm, hm) {
-        const Am = Em(Tm);
-        return mm.lines += fm, mm.bytes += Am, this.writeDay(mm) ? (this.pageLines += fm, this.pageBytes += Am, this.lastSentMs = this.deps.now(), this.deps.send(Tm, {
-          diag_kind: hm
+      sendCharged(DD, zD, wD, pD) {
+        const sD = UD(zD);
+        return DD.lines += wD, DD.bytes += sD, this.writeDay(DD) ? (this.pageLines += wD, this.pageBytes += sD, this.lastSentMs = this.deps.now(), this.deps.send(zD, {
+          diag_kind: pD
         }), !0) : (console.warn("The diag sink can't keep its daily count, so it sends nothing"), this.stopped = !0, this.queue.length = 0, !1)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,156 +1,156 @@
 export const id = 189;
 export const ids = [189];
 export const modules = {
-  40692: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => Dm,
-      f: () => wm,
-      j: () => xm
+  40540: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => cD,
+      e: () => LD,
+      i: () => rD
     });
-    var hm = fm(40695),
-      Am = fm(4732),
-      am = fm(40701);
+    var pD = wD(40544),
+      sD = wD(4817),
+      KD = wD(40550);
 
-    function xm(mm) {
-      return mm.payloadKind === Am.gc.Msgpack ? (0, hm.e)(mm.payload) : void 0
+    function rD(DD) {
+      return DD.payloadKind === sD.pc.Msgpack ? (0, pD.b)(DD.payload) : void 0
     }
 
-    function wm(mm, Tm) {
-      if (Tm.payloadKind === Am.gc.Bytes || Tm.payloadKind === Am.gc.MsgpackBin) return (0, am.d)(mm, Tm.payload)
+    function LD(DD, zD) {
+      if (zD.payloadKind === sD.pc.Bytes || zD.payloadKind === sD.pc.MsgpackBin) return (0, KD.d)(DD, zD.payload)
     }
 
-    function Dm(mm) {
-      return null !== mm && "object" === typeof mm
+    function cD(DD) {
+      return null !== DD && "object" === typeof DD
     }
   },
-  40709: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => pm,
-      c: () => Em,
-      e: () => om,
-      g: () => Rm,
-      k: () => qm
+  40558: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => AD,
+      f: () => UD,
+      h: () => fD,
+      l: () => RD,
+      n: () => GD
     });
-    var hm = fm(4732),
-      Am = fm(40716);
-    const am = new Map,
-      xm = new Set,
-      wm = new Set;
-    let Dm = 0,
-      im = 0;
+    var pD = wD(4817),
+      sD = wD(40562);
+    const KD = new Map,
+      rD = new Set,
+      LD = new Set;
+    let cD = 0,
+      gD = 0;
 
-    function Rm(mm, Tm) {
-      let fm = am.get(mm);
-      return fm || (fm = new Set, am.set(mm, fm)), fm.add(Tm), () => {
-        fm.delete(Tm)
+    function RD(DD, zD) {
+      let wD = KD.get(DD);
+      return wD || (wD = new Set, KD.set(DD, wD)), wD.add(zD), () => {
+        wD.delete(zD)
       }
     }
 
-    function pm() {
-      return 0 !== Dm
+    function AD() {
+      return 0 !== cD
     }
 
-    function Em(mm) {
-      return xm.add(mm), () => {
-        xm.delete(mm)
+    function UD(DD) {
+      return rD.add(DD), () => {
+        rD.delete(DD)
       }
     }
 
-    function om(mm) {
-      return wm.add(mm), () => {
-        wm.delete(mm)
+    function fD(DD) {
+      return LD.add(DD), () => {
+        LD.delete(DD)
       }
     }
-    const Om = "A raw message listener threw";
+    const ID = "A raw message listener threw";
 
-    function Ym(mm) {
-      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : xm;
-      for (const hm of Tm) try {
-        hm()
-      } catch (fm) {
-        mm ? (0, Am.m)(fm, Om) : console.error(Om, fm)
+    function BD(DD) {
+      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rD;
+      for (const pD of zD) try {
+        pD()
+      } catch (wD) {
+        DD ? (0, sD.k)(wD, ID) : console.error(ID, wD)
       }
     }
-    const qm = {
-      fire: function(mm) {
-        if ("connection" === mm.type) {
-          const Tm = mm.phase === hm.L.Activated && mm.conn !== Dm && mm.conn > im,
-            fm = (mm.phase === hm.L.Left || mm.phase === hm.L.Closed) && mm.conn === Dm;
-          return void(Tm || fm ? (Dm = Tm ? mm.conn : 0, Ym(!0)) : mm.phase === hm.L.Resumed && 0 !== Dm && mm.conn > im && (Dm = mm.conn, Ym(!0, wm)))
+    const GD = {
+      fire: function(DD) {
+        if ("connection" === DD.type) {
+          const zD = DD.phase === pD.D.Activated && DD.conn !== cD && DD.conn > gD,
+            wD = (DD.phase === pD.D.Left || DD.phase === pD.D.Closed) && DD.conn === cD;
+          return void(zD || wD ? (cD = zD ? DD.conn : 0, BD(!0)) : DD.phase === pD.D.Resumed && 0 !== cD && DD.conn > gD && (cD = DD.conn, BD(!0, LD)))
         }
-        const Tm = am.get(mm.Hi);
-        if (Tm && mm.conn === Dm && 0 !== Dm)
-          for (const hm of Tm) try {
-            hm(mm)
-          } catch (fm) {
-            (0, Am.m)(fm, Om)
+        const zD = KD.get(DD.lg);
+        if (zD && DD.conn === cD && 0 !== cD)
+          for (const pD of zD) try {
+            pD(DD)
+          } catch (wD) {
+            (0, sD.k)(wD, ID)
           }
       },
-      close: function(mm) {
-        im = Math.max(im, mm, Dm), 0 !== Dm && (Dm = 0, Ym(!1))
+      close: function(DD) {
+        gD = Math.max(gD, DD, cD), 0 !== cD && (cD = 0, BD(!1))
       }
     }
   },
-  40681: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => im,
-      h: () => Dm,
-      k: () => wm
+  40529: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => gD,
+      d: () => cD,
+      h: () => LD
     });
-    var hm = fm(1270),
-      Am = fm(40663);
-    const am = new TextDecoder,
-      xm = new TextEncoder;
+    var pD = wD(1270),
+      sD = wD(40506);
+    const KD = new TextDecoder,
+      rD = new TextEncoder;
 
-    function wm(mm, Tm) {
-      const fm = mm.queries.entityName(Tm);
-      if (fm === Am.Vc) return;
-      const xm = mm.memoryData(mm.scratch(), 4 + fm, 4, "entity_name's answer");
-      if (!xm) return;
-      const wm = xm.getUint32(0, !0),
-        Dm = am.decode(new Uint8Array(xm.buffer, xm.byteOffset + 4, fm));
-      return (0, hm.e)(Dm, !1, wm === Am.$d ? null : wm)
+    function LD(DD, zD) {
+      const wD = DD.queries.entityName(zD);
+      if (wD === sD.Ec) return;
+      const rD = DD.memoryData(DD.scratch(), 4 + wD, 4, "entity_name's answer");
+      if (!rD) return;
+      const LD = rD.getUint32(0, !0),
+        cD = KD.decode(new Uint8Array(rD.buffer, rD.byteOffset + 4, wD));
+      return (0, pD.e)(cD, !1, LD === sD.Nd ? null : LD)
     }
 
-    function Dm(mm, Tm, fm) {
-      const hm = xm.encode(fm);
-      if (hm.length > Am.Kb) return !1;
-      const am = mm.memoryView(Uint8Array, mm.scratch(), hm.length, "has_effect's name");
-      return !!am && (am.set(hm), 1 === mm.queries.hasEffect(Tm, hm.length))
+    function cD(DD, zD, wD) {
+      const pD = rD.encode(wD);
+      if (pD.length > sD.Ab) return !1;
+      const KD = DD.memoryView(Uint8Array, DD.scratch(), pD.length, "has_effect's name");
+      return !!KD && (KD.set(pD), 1 === DD.queries.hasEffect(zD, pD.length))
     }
 
-    function im(mm, Tm, fm, hm) {
-      const xm = mm.queries.blockData(Tm, fm, hm);
-      if (xm === Am.Vc) return;
-      const wm = mm.memoryView(Uint8Array, mm.scratch(), xm, "block_data's answer");
-      return wm ? JSON.parse(am.decode(wm)) : void 0
+    function gD(DD, zD, wD, pD) {
+      const rD = DD.queries.blockData(zD, wD, pD);
+      if (rD === sD.Ec) return;
+      const LD = DD.memoryView(Uint8Array, DD.scratch(), rD, "block_data's answer");
+      return LD ? JSON.parse(KD.decode(LD)) : void 0
     }
   },
-  40695: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => Am,
-      g: () => Rm
+  40544: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => sD,
+      d: () => RD
     });
-    const hm = new TextDecoder;
+    const pD = new TextDecoder;
 
-    function Am(mm) {
-      const Tm = new am(mm),
-        fm = Tm.value();
-      if (Tm.at !== mm.length) throw new Error(`msgpack: ${mm.length-Tm.at} bytes after the value`);
-      return fm
+    function sD(DD) {
+      const zD = new KD(DD),
+        wD = zD.value();
+      if (zD.at !== DD.length) throw new Error(`msgpack: ${DD.length-zD.at} bytes after the value`);
+      return wD
     }
-    class am {
-      constructor(mm) {
-        this.bytes = mm, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(mm.buffer, mm.byteOffset, mm.byteLength)
+    class KD {
+      constructor(DD) {
+        this.bytes = DD, this.at = 0, this.depth = 0, this.view = void 0, this.view = new DataView(DD.buffer, DD.byteOffset, DD.byteLength)
       }
       value() {
-        const mm = this.u8();
-        if (mm <= 127) return mm;
-        if (mm >= 224) return mm - 256;
-        if (mm >= 128 && mm <= 143) return this.map(15 & mm);
-        if (mm >= 144 && mm <= 159) return this.array(15 & mm);
-        if (mm >= 160 && mm <= 191) return this.str(31 & mm);
-        switch (mm) {
+        const DD = this.u8();
+        if (DD <= 127) return DD;
+        if (DD >= 224) return DD - 256;
+        if (DD >= 128 && DD <= 143) return this.map(15 & DD);
+        if (DD >= 144 && DD <= 159) return this.array(15 & DD);
+        if (DD >= 160 && DD <= 191) return this.str(31 & DD);
+        switch (DD) {
           case 192:
             return null;
           case 194:
@@ -214,13 +214,13 @@ export const modules = {
           case 223:
             return this.map(this.u32());
           default:
-            throw new Error(`msgpack: unknown byte 0x${mm.toString(16)} at ${this.at-1}`)
+            throw new Error(`msgpack: unknown byte 0x${DD.toString(16)} at ${this.at-1}`)
         }
       }
-      take(mm) {
-        const Tm = this.at;
-        if (Tm + mm > this.bytes.length) throw new Error(`msgpack: ${mm} bytes past the end at ${Tm}`);
-        return this.at = Tm + mm, Tm
+      take(DD) {
+        const zD = this.at;
+        if (zD + DD > this.bytes.length) throw new Error(`msgpack: ${DD} bytes past the end at ${zD}`);
+        return this.at = zD + DD, zD
       }
       u8() {
         return this.view.getUint8(this.take(1))
@@ -231,958 +231,958 @@ export const modules = {
       u32() {
         return this.view.getUint32(this.take(4), !1)
       }
-      int64(mm) {
-        const Tm = this.take(8);
-        return mm ? this.view.getBigInt64(Tm, !1) : this.view.getBigUint64(Tm, !1)
+      int64(DD) {
+        const zD = this.take(8);
+        return DD ? this.view.getBigInt64(zD, !1) : this.view.getBigUint64(zD, !1)
       }
-      str(mm) {
-        const Tm = this.take(mm),
-          fm = this.bytes;
-        if (mm < 16) {
-          let Am = "";
-          for (let am = Tm; am < Tm + mm; am++) {
-            const xm = fm[am];
-            if (xm >= 128) return hm.decode(fm.subarray(Tm, Tm + mm));
-            Am += String.fromCharCode(xm)
+      str(DD) {
+        const zD = this.take(DD),
+          wD = this.bytes;
+        if (DD < 16) {
+          let sD = "";
+          for (let KD = zD; KD < zD + DD; KD++) {
+            const rD = wD[KD];
+            if (rD >= 128) return pD.decode(wD.subarray(zD, zD + DD));
+            sD += String.fromCharCode(rD)
           }
-          return Am
+          return sD
         }
-        return hm.decode(fm.subarray(Tm, Tm + mm))
+        return pD.decode(wD.subarray(zD, zD + DD))
       }
-      bin(mm) {
-        const Tm = this.take(mm);
-        return this.bytes.subarray(Tm, Tm + mm)
+      bin(DD) {
+        const zD = this.take(DD);
+        return this.bytes.subarray(zD, zD + DD)
       }
       enter() {
         if (++this.depth > 512) throw new Error("msgpack: nested too deep")
       }
-      array(mm) {
+      array(DD) {
         this.enter();
-        const Tm = [];
-        for (let fm = 0; fm < mm; fm++) Tm.push(this.value());
-        return this.depth--, Tm
+        const zD = [];
+        for (let wD = 0; wD < DD; wD++) zD.push(this.value());
+        return this.depth--, zD
       }
-      map(mm) {
+      map(DD) {
         this.enter();
-        const Tm = {};
-        for (let fm = 0; fm < mm; fm++) {
-          const mm = this.value(),
-            fm = this.value();
-          Tm["__proto__" === mm ? "__proto_" : String(mm)] = fm
+        const zD = {};
+        for (let wD = 0; wD < DD; wD++) {
+          const DD = this.value(),
+            wD = this.value();
+          zD["__proto__" === DD ? "__proto_" : String(DD)] = wD
         }
-        return this.depth--, Tm
+        return this.depth--, zD
       }
-      ext(mm) {
-        const Tm = this.view.getInt8(this.take(1)),
-          fm = this.take(mm);
-        if (0 !== Tm) {
-          if (-1 === Tm) {
-            if (1 === mm) return new Date(NaN);
-            if (4 === mm) return new Date(1e3 * this.view.getUint32(fm, !1));
-            if (8 === mm) {
-              const mm = this.view.getUint32(fm, !1),
-                Tm = mm >>> 2,
-                hm = 4294967296 * (3 & mm) + this.view.getUint32(fm + 4, !1);
-              return new Date(1e3 * hm + Tm / 1e6)
+      ext(DD) {
+        const zD = this.view.getInt8(this.take(1)),
+          wD = this.take(DD);
+        if (0 !== zD) {
+          if (-1 === zD) {
+            if (1 === DD) return new Date(NaN);
+            if (4 === DD) return new Date(1e3 * this.view.getUint32(wD, !1));
+            if (8 === DD) {
+              const DD = this.view.getUint32(wD, !1),
+                zD = DD >>> 2,
+                pD = 4294967296 * (3 & DD) + this.view.getUint32(wD + 4, !1);
+              return new Date(1e3 * pD + zD / 1e6)
             }
-            if (12 === mm) {
-              const mm = this.view.getUint32(fm, !1),
-                Tm = 4294967296 * this.view.getInt32(fm + 4, !1) + this.view.getUint32(fm + 8, !1);
-              return new Date(1e3 * Tm + mm / 1e6)
+            if (12 === DD) {
+              const DD = this.view.getUint32(wD, !1),
+                zD = 4294967296 * this.view.getInt32(wD + 4, !1) + this.view.getUint32(wD + 8, !1);
+              return new Date(1e3 * zD + DD / 1e6)
             }
           }
-          throw new Error(`msgpack: ext type ${Tm} of ${mm} bytes`)
+          throw new Error(`msgpack: ext type ${zD} of ${DD} bytes`)
         }
       }
     }
-    const xm = new TextEncoder,
-      wm = -(2n ** 63n),
-      Dm = 2n ** 63n - 1n,
-      im = 2n ** 64n - 1n;
+    const rD = new TextEncoder,
+      LD = -(2n ** 63n),
+      cD = 2n ** 63n - 1n,
+      gD = 2n ** 64n - 1n;
 
-    function Rm(mm) {
-      const Tm = new pm;
-      return Tm.value(mm, 0), Tm.bytes()
+    function RD(DD) {
+      const zD = new AD;
+      return zD.value(DD, 0), zD.bytes()
     }
-    class pm {
+    class AD {
       constructor() {
         this.buf = new Uint8Array(64), this.view = new DataView(this.buf.buffer), this.at = 0
       }
       bytes() {
         return this.buf.subarray(0, this.at)
       }
-      value(mm, Tm) {
-        if (Tm > 512) throw new Error("msgpack: nested too deep");
-        switch (typeof mm) {
+      value(DD, zD) {
+        if (zD > 512) throw new Error("msgpack: nested too deep");
+        switch (typeof DD) {
           case "undefined":
             return this.u8(212), this.u8(0), void this.u8(0);
           case "boolean":
-            return void this.u8(mm ? 195 : 194);
+            return void this.u8(DD ? 195 : 194);
           case "number":
-            return void this.number(mm);
+            return void this.number(DD);
           case "bigint":
-            return void this.bigint(mm);
+            return void this.bigint(DD);
           case "string":
-            return void this.string(mm);
+            return void this.string(DD);
           case "object":
-            if (null === mm) this.u8(192);
-            else if (mm instanceof Uint8Array) this.head(mm.length, 196, -1, 197, 198), this.room(mm.length), this.buf.set(mm, this.at), this.at += mm.length;
-            else if (Array.isArray(mm)) {
-              this.head(mm.length, 220, 144, 220, 221);
-              for (const fm of mm) this.value(fm, Tm + 1)
+            if (null === DD) this.u8(192);
+            else if (DD instanceof Uint8Array) this.head(DD.length, 196, -1, 197, 198), this.room(DD.length), this.buf.set(DD, this.at), this.at += DD.length;
+            else if (Array.isArray(DD)) {
+              this.head(DD.length, 220, 144, 220, 221);
+              for (const wD of DD) this.value(wD, zD + 1)
             } else {
-              var fm, hm;
-              if (Object.getPrototypeOf(mm) !== Object.prototype && null !== Object.getPrototypeOf(mm)) throw new Error(`msgpack: can't encode a ${null!==(fm=null===(hm=mm.constructor)||void 0===hm?void 0:hm.name)&&void 0!==fm?fm:"object"}`);
+              var wD, pD;
+              if (Object.getPrototypeOf(DD) !== Object.prototype && null !== Object.getPrototypeOf(DD)) throw new Error(`msgpack: can't encode a ${null!==(wD=null===(pD=DD.constructor)||void 0===pD?void 0:pD.name)&&void 0!==wD?wD:"object"}`);
               {
-                const fm = Object.keys(mm);
-                this.head(fm.length, 222, 128, 222, 223);
-                for (const hm of fm) this.string(hm), this.value(mm[hm], Tm + 1)
+                const wD = Object.keys(DD);
+                this.head(wD.length, 222, 128, 222, 223);
+                for (const pD of wD) this.string(pD), this.value(DD[pD], zD + 1)
               }
             }
             return;
           default:
-            throw new Error("msgpack: can't encode a " + typeof mm)
+            throw new Error("msgpack: can't encode a " + typeof DD)
         }
       }
-      number(mm) {
-        Number.isInteger(mm) && mm >= -2147483648 && mm <= 4294967295 ? mm >= 0 ? mm < 128 ? this.u8(mm) : mm < 256 ? (this.u8(204), this.u8(mm)) : mm < 65536 ? (this.u8(205), this.u16(mm)) : (this.u8(206), this.u32(mm)) : mm >= -32 ? this.u8(mm + 256) : mm >= -128 ? (this.u8(208), this.u8(mm + 256)) : mm >= -32768 ? (this.u8(209), this.u16(mm + 65536)) : (this.u8(210), this.u32(mm >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, mm, !1), this.at += 8)
+      number(DD) {
+        Number.isInteger(DD) && DD >= -2147483648 && DD <= 4294967295 ? DD >= 0 ? DD < 128 ? this.u8(DD) : DD < 256 ? (this.u8(204), this.u8(DD)) : DD < 65536 ? (this.u8(205), this.u16(DD)) : (this.u8(206), this.u32(DD)) : DD >= -32 ? this.u8(DD + 256) : DD >= -128 ? (this.u8(208), this.u8(DD + 256)) : DD >= -32768 ? (this.u8(209), this.u16(DD + 65536)) : (this.u8(210), this.u32(DD >>> 0)) : (this.u8(203), this.room(8), this.view.setFloat64(this.at, DD, !1), this.at += 8)
       }
-      bigint(mm) {
-        const Tm = mm >= wm && mm <= Dm;
-        if (!Tm && (mm < 0n || mm > im)) throw new Error("msgpack: a BigInt past 64 bits");
-        this.u8(Tm ? 211 : 207), this.room(8), Tm ? this.view.setBigInt64(this.at, mm, !1) : this.view.setBigUint64(this.at, mm, !1), this.at += 8
+      bigint(DD) {
+        const zD = DD >= LD && DD <= cD;
+        if (!zD && (DD < 0n || DD > gD)) throw new Error("msgpack: a BigInt past 64 bits");
+        this.u8(zD ? 211 : 207), this.room(8), zD ? this.view.setBigInt64(this.at, DD, !1) : this.view.setBigUint64(this.at, DD, !1), this.at += 8
       }
-      string(mm) {
-        const Tm = xm.encode(mm);
-        this.head(Tm.length, 217, 160, 218, 219), this.room(Tm.length), this.buf.set(Tm, this.at), this.at += Tm.length
+      string(DD) {
+        const zD = rD.encode(DD);
+        this.head(zD.length, 217, 160, 218, 219), this.room(zD.length), this.buf.set(zD, this.at), this.at += zD.length
       }
-      head(mm, Tm, fm, hm, Am) {
-        fm >= 0 && mm < (160 === fm ? 32 : 16) ? this.u8(fm | mm) : Tm !== hm && mm < 256 ? (this.u8(Tm), this.u8(mm)) : mm < 65536 ? (this.u8(hm), this.u16(mm)) : (this.u8(Am), this.u32(mm))
+      head(DD, zD, wD, pD, sD) {
+        wD >= 0 && DD < (160 === wD ? 32 : 16) ? this.u8(wD | DD) : zD !== pD && DD < 256 ? (this.u8(zD), this.u8(DD)) : DD < 65536 ? (this.u8(pD), this.u16(DD)) : (this.u8(sD), this.u32(DD))
       }
-      room(mm) {
-        if (this.at + mm <= this.buf.length) return;
-        let Tm = 2 * this.buf.length;
-        for (; Tm < this.at + mm;) Tm *= 2;
-        const fm = new Uint8Array(Tm);
-        fm.set(this.buf.subarray(0, this.at)), this.buf = fm, this.view = new DataView(fm.buffer)
+      room(DD) {
+        if (this.at + DD <= this.buf.length) return;
+        let zD = 2 * this.buf.length;
+        for (; zD < this.at + DD;) zD *= 2;
+        const wD = new Uint8Array(zD);
+        wD.set(this.buf.subarray(0, this.at)), this.buf = wD, this.view = new DataView(wD.buffer)
       }
-      u8(mm) {
-        this.room(1), this.buf[this.at++] = mm
+      u8(DD) {
+        this.room(1), this.buf[this.at++] = DD
       }
-      u16(mm) {
-        this.room(2), this.view.setUint16(this.at, mm, !1), this.at += 2
+      u16(DD) {
+        this.room(2), this.view.setUint16(this.at, DD, !1), this.at += 2
       }
-      u32(mm) {
-        this.room(4), this.view.setUint32(this.at, mm, !1), this.at += 4
+      u32(DD) {
+        this.room(4), this.view.setUint32(this.at, DD, !1), this.at += 4
       }
     }
   },
-  40701: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => xm
+  40550: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => rD
     });
-    var hm = fm(40684);
-    const Am = new TextDecoder("utf-8", {
+    var pD = wD(40535);
+    const sD = new TextDecoder("utf-8", {
       ignoreBOM: !0
     });
-    class am {
-      constructor(mm) {
-        this.buf = mm, this.at = 0, this.view = null
+    class KD {
+      constructor(DD) {
+        this.buf = DD, this.at = 0, this.view = null
       }
       bool() {
         return 0 !== this.u8()
       }
       long() {
-        let mm = this.u8(),
-          Tm = 127 & mm,
-          fm = 128;
-        for (; 128 & mm;) {
-          if (fm > 2 ** 63) throw new RangeError("avro: varint too long");
-          mm = this.u8(), Tm += (127 & mm) * fm, fm *= 128
+        let DD = this.u8(),
+          zD = 127 & DD,
+          wD = 128;
+        for (; 128 & DD;) {
+          if (wD > 2 ** 63) throw new RangeError("avro: varint too long");
+          DD = this.u8(), zD += (127 & DD) * wD, wD *= 128
         }
-        return Tm % 2 === 1 ? -(Tm + 1) / 2 : Tm / 2
+        return zD % 2 === 1 ? -(zD + 1) / 2 : zD / 2
       }
       float() {
-        const mm = this.take(4);
-        return this.floats().getFloat32(mm, !0)
+        const DD = this.take(4);
+        return this.floats().getFloat32(DD, !0)
       }
       double() {
-        const mm = this.take(8);
-        return this.floats().getFloat64(mm, !0)
+        const DD = this.take(8);
+        return this.floats().getFloat64(DD, !0)
       }
       str() {
-        const mm = this.size(),
-          Tm = this.take(mm),
-          fm = Tm + mm;
-        if (mm <= 32) {
-          let mm = "";
-          for (let hm = Tm; hm < fm; hm++) {
-            const am = this.buf[hm];
-            if (am >= 128) return Am.decode(this.buf.subarray(Tm, fm));
-            mm += String.fromCharCode(am)
+        const DD = this.size(),
+          zD = this.take(DD),
+          wD = zD + DD;
+        if (DD <= 32) {
+          let DD = "";
+          for (let pD = zD; pD < wD; pD++) {
+            const KD = this.buf[pD];
+            if (KD >= 128) return sD.decode(this.buf.subarray(zD, wD));
+            DD += String.fromCharCode(KD)
           }
-          return mm
+          return DD
         }
-        return Am.decode(this.buf.subarray(Tm, fm))
+        return sD.decode(this.buf.subarray(zD, wD))
       }
       bytes() {
         return this.fixed(this.size())
       }
-      fixed(mm) {
-        const Tm = this.take(mm);
-        return this.buf.slice(Tm, Tm + mm)
+      fixed(DD) {
+        const zD = this.take(DD);
+        return this.buf.slice(zD, zD + DD)
       }
-      index(mm) {
-        const Tm = this.long();
-        if (!(Tm >= 0 && Tm < mm)) throw new RangeError(`avro: index ${Tm} of ${mm}`);
-        return Tm
+      index(DD) {
+        const zD = this.long();
+        if (!(zD >= 0 && zD < DD)) throw new RangeError(`avro: index ${zD} of ${DD}`);
+        return zD
       }
-      HO(mm) {
-        const Tm = [];
-        for (let fm = this.long(); 0 !== fm; fm = this.long()) {
-          fm = this.block(fm);
-          for (let hm = 0; hm < fm; hm++) Tm.push(mm(this))
+      OI(DD) {
+        const zD = [];
+        for (let wD = this.long(); 0 !== wD; wD = this.long()) {
+          wD = this.block(wD);
+          for (let pD = 0; pD < wD; pD++) zD.push(DD(this))
         }
-        return Tm
+        return zD
       }
-      map(mm) {
-        const Tm = {};
-        for (let fm = this.long(); 0 !== fm; fm = this.long()) {
-          fm = this.block(fm);
-          for (let hm = 0; hm < fm; hm++) {
-            Tm[this.str()] = mm(this)
+      map(DD) {
+        const zD = {};
+        for (let wD = this.long(); 0 !== wD; wD = this.long()) {
+          wD = this.block(wD);
+          for (let pD = 0; pD < wD; pD++) {
+            zD[this.str()] = DD(this)
           }
         }
-        return Tm
+        return zD
       }
       end() {
         if (this.at !== this.buf.length) throw new RangeError(`avro: ${this.buf.length-this.at} bytes after the value`)
       }
-      block(mm) {
-        let Tm = mm;
-        if (Tm < 0 && (Tm = -Tm, this.long()), Tm > this.buf.length - this.at) throw new RangeError(`avro: block of ${Tm} items in ${this.buf.length-this.at} bytes`);
-        return Tm
+      block(DD) {
+        let zD = DD;
+        if (zD < 0 && (zD = -zD, this.long()), zD > this.buf.length - this.at) throw new RangeError(`avro: block of ${zD} items in ${this.buf.length-this.at} bytes`);
+        return zD
       }
       floats() {
         return this.view ??= new DataView(this.buf.buffer, this.buf.byteOffset, this.buf.byteLength), this.view
       }
       size() {
-        const mm = this.long();
-        if (mm < 0) throw new RangeError(`avro: length ${mm}`);
-        return mm
+        const DD = this.long();
+        if (DD < 0) throw new RangeError(`avro: length ${DD}`);
+        return DD
       }
       u8() {
-        const mm = this.buf[this.at];
-        if (void 0 === mm) throw new RangeError("avro: truncated");
-        return this.at++, mm
+        const DD = this.buf[this.at];
+        if (void 0 === DD) throw new RangeError("avro: truncated");
+        return this.at++, DD
       }
-      take(mm) {
-        const Tm = this.at;
-        if (mm > this.buf.length - Tm) throw new RangeError("avro: truncated");
-        return this.at = Tm + mm, Tm
+      take(DD) {
+        const zD = this.at;
+        if (DD > this.buf.length - zD) throw new RangeError("avro: truncated");
+        return this.at = zD + DD, zD
       }
     }
 
-    function xm(mm, Tm) {
-      const fm = new am(Tm),
-        Am = (0, hm.sb)(mm, fm);
-      return fm.end(), Am
+    function rD(DD, zD) {
+      const wD = new KD(zD),
+        sD = (0, pD.nb)(DD, wD);
+      return wD.end(), sD
     }
   },
-  40684: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      $: () => pm,
-      A: () => im,
-      D: () => xm,
-      E: () => km,
-      I: () => Am,
-      L: () => wm,
-      P: () => om,
-      R: () => zm,
-      S: () => cm,
-      V: () => nm,
-      X: () => Rm,
-      ab: () => Zm,
-      e: () => Qm,
-      eb: () => Om,
-      hb: () => Im,
-      i: () => qm,
-      k: () => jm,
-      l: () => Vm,
-      lb: () => Ym,
-      o: () => Jm,
-      pb: () => Dm,
-      r: () => hm,
-      sb: () => bm,
-      u: () => am,
-      x: () => Km,
-      y: () => Em
+  40535: (DD, zD, wD) => {
+    wD.d(zD, {
+      C: () => CD,
+      F: () => sD,
+      J: () => LD,
+      L: () => fD,
+      O: () => VD,
+      S: () => XD,
+      V: () => ED,
+      Z: () => RD,
+      ab: () => AD,
+      cb: () => PD,
+      d: () => JD,
+      db: () => ID,
+      e: () => GD,
+      g: () => hD,
+      hb: () => MD,
+      i: () => nD,
+      ib: () => BD,
+      j: () => QD,
+      mb: () => cD,
+      n: () => pD,
+      nb: () => xD,
+      o: () => KD,
+      r: () => OD,
+      u: () => UD,
+      x: () => gD,
+      y: () => rD
     });
-    const hm = 2,
-      Am = 12,
-      am = 27,
-      xm = 40,
-      wm = 52,
-      Dm = 59,
-      im = 63,
-      Rm = 83,
-      pm = 84,
-      Em = 89,
-      om = 91,
-      Om = 93,
-      Ym = 94,
-      qm = 95,
-      jm = 97,
-      Vm = 101,
-      Im = 102,
-      Km = 73,
-      Qm = 16,
-      nm = 86,
-      Jm = 60,
-      cm = 17,
-      zm = 56,
-      Zm = 100,
-      km = 81;
+    const pD = 2,
+      sD = 12,
+      KD = 27,
+      rD = 40,
+      LD = 52,
+      cD = 59,
+      gD = 63,
+      RD = 83,
+      AD = 84,
+      UD = 89,
+      fD = 91,
+      ID = 93,
+      BD = 94,
+      GD = 95,
+      hD = 97,
+      nD = 101,
+      MD = 102,
+      OD = 73,
+      JD = 16,
+      ED = 86,
+      QD = 60,
+      XD = 17,
+      VD = 56,
+      PD = 100,
+      CD = 81;
 
-    function bm(mm, Tm) {
-      switch (mm) {
-        case hm:
-          return function(mm) {
+    function xD(DD, zD) {
+      switch (DD) {
+        case pD:
+          return function(DD) {
             return {
-              Na: dm(mm),
-              Ga: mm.float(),
-              Xa: mm.long()
+              yK: tD(DD),
+              kK: DD.float(),
+              mK: DD.long()
             }
-          }(Tm);
-        case Am:
-          return function(mm) {
+          }(zD);
+        case sD:
+          return function(DD) {
             return {
-              rA: Xm(mm),
-              sA: Xm(mm)
+              os: SD(DD),
+              Fs: SD(DD)
             }
-          }(Tm);
-        case am:
-          return function(mm) {
+          }(zD);
+        case KD:
+          return function(DD) {
             return {
-              yA: mm.bool(),
-              CA: Xm(mm)
+              ys: DD.bool(),
+              es: SD(DD)
             }
-          }(Tm);
-        case xm:
-          return Tm.str();
-        case wm:
-          return function(mm) {
+          }(zD);
+        case rD:
+          return zD.str();
+        case LD:
+          return function(DD) {
             return {
-              id: mm.long(),
-              zf: wT(mm)
+              id: DD.long(),
+              Ow: rz(DD)
             }
-          }(Tm);
-        case Dm:
-          return function(mm) {
+          }(zD);
+        case cD:
+          return function(DD) {
             return {
-              DA: Xm(mm),
-              iA: iT(mm)
+              Ls: SD(DD),
+              gs: cz(DD)
             }
-          }(Tm);
-        case im:
-          return Tm.str();
-        case Rm:
-        case pm:
-          return Tm.long();
-        case Em:
-          return function(mm) {
+          }(zD);
+        case gD:
+          return zD.str();
+        case RD:
+        case AD:
+          return zD.long();
+        case UD:
+          return function(DD) {
             return {
-              dh: mm.long(),
-              gh: mm.bool(),
-              Wh: mm.float()
+              ap: DD.long(),
+              vp: DD.bool(),
+              tp: DD.float()
             }
-          }(Tm);
-        case om:
-          return Tm.long();
-        case Om:
-          return function(mm) {
+          }(zD);
+        case fD:
+          return zD.long();
+        case ID:
+          return function(DD) {
             return {
-              Zh: mm.bool(),
-              kh: ET(mm)
+              Qp: DD.bool(),
+              Xp: Az(DD)
             }
-          }(Tm);
-        case Ym:
-          return function(mm) {
+          }(zD);
+        case BD:
+          return function(DD) {
             return {
-              id: mm.str(),
-              position: pT(mm),
-              jh: oT(mm),
-              style: sm(mm),
-              Ih: mm.bool()
+              id: DD.str(),
+              position: Rz(DD),
+              Bp: Uz(DD),
+              style: yD(DD),
+              hp: DD.bool()
             }
-          }(Tm);
-        case qm:
-          return function(mm) {
+          }(zD);
+        case GD:
+          return function(DD) {
             return {
-              id: Xm(mm)
+              id: SD(DD)
             }
-          }(Tm);
-        case jm:
-          return function(mm) {
+          }(zD);
+        case hD:
+          return function(DD) {
             return {
-              va: mm.long(),
-              Ua: mm.str(),
-              da: aT(mm),
-              ga: aT(mm),
-              Wa: Xm(mm),
-              Fa: Xm(mm),
-              mx: Xm(mm),
-              Tx: Xm(mm),
-              hx: Xm(mm),
-              Ax: aT(mm),
-              wx: aT(mm),
-              Dx: Xm(mm),
-              ix: Xm(mm),
-              Rx: Xm(mm)
+              zr: DD.long(),
+              wr: DD.str(),
+              sr: sz(DD),
+              Kr: sz(DD),
+              rr: SD(DD),
+              Lr: SD(DD),
+              Rr: SD(DD),
+              Ar: SD(DD),
+              Ur: SD(DD),
+              Ir: sz(DD),
+              Br: sz(DD),
+              Gr: SD(DD),
+              hr: SD(DD),
+              nr: SD(DD)
             }
-          }(Tm);
-        case Vm:
-          return Tm.str();
-        case Im:
-          return Tm.long();
-        case Km:
-          return function(mm) {
+          }(zD);
+        case nD:
+          return zD.str();
+        case MD:
+          return zD.long();
+        case OD:
+          return function(DD) {
             return {
-              Wm: mm.long(),
-              Fm: mm.str(),
-              mT: mm.float()
+              vD: DD.long(),
+              tD: DD.str(),
+              FD: DD.float()
             }
-          }(Tm);
-        case Qm:
-          return function(mm) {
+          }(zD);
+        case JD:
+          return function(DD) {
             return {
-              Nh: mm.bool(),
-              Gh: Xm(mm),
-              Xh: mm.str(),
-              Ph: YT(mm),
-              Hh: YT(mm),
-              yh: mm.bool(),
-              Ch: mm.long(),
-              rh: qT(mm)
+              xp: DD.bool(),
+              Tp: SD(DD),
+              bp: DD.str(),
+              jp: Iz(DD),
+              dp: Iz(DD),
+              Sp: DD.bool(),
+              ip: DD.long(),
+              lp: Bz(DD)
             }
-          }(Tm);
-        case nm:
-          return function(mm) {
+          }(zD);
+        case ED:
+          return function(DD) {
             return {
-              ba: Xm(mm)
+              WK: SD(DD)
             }
-          }(Tm);
-        case Jm:
-          return function(mm) {
+          }(zD);
+        case QD:
+          return function(DD) {
             return {
-              Kh: mm.str(),
-              Qh: mm.str(),
-              nh: jT(mm),
-              eA: mm.str(),
-              NA: Fm(mm),
-              XA: mm.float()
+              np: DD.str(),
+              Mp: DD.str(),
+              Op: Gz(DD),
+              Ss: DD.str(),
+              ls: HD(DD),
+              Ws: DD.float()
             }
-          }(Tm);
-        case cm:
-          return function(mm) {
+          }(zD);
+        case XD:
+          return function(DD) {
             return {
-              Kh: mm.str(),
-              Qh: mm.str(),
-              nh: jT(mm)
+              np: DD.str(),
+              Mp: DD.str(),
+              Op: Gz(DD)
             }
-          }(Tm);
-        case zm:
-          return function(mm) {
-            return mm.HO(VT)
-          }(Tm);
-        case Zm:
-          return function(mm) {
+          }(zD);
+        case VD:
+          return function(DD) {
+            return DD.OI(hz)
+          }(zD);
+        case PD:
+          return function(DD) {
             return {
-              fh: KT(mm),
-              Dh: um(mm)
+              Hw: Mz(DD),
+              sp: eD(DD)
             }
-          }(Tm);
-        case km:
-          return function(mm) {
+          }(zD);
+        case CD:
+          return function(DD) {
             return {
-              Tm: mm.bool(),
-              fm: Xm(mm),
-              hm: nT(mm),
-              am: CT(mm)
+              DD: DD.bool(),
+              zD: SD(DD),
+              wD: Jz(DD),
+              sD: Wz(DD)
             }
-          }(Tm);
+          }(zD);
         default:
-          throw new Error(`no reader for to-client message ${mm}`)
+          throw new Error(`no reader for to-client message ${DD}`)
       }
     }
 
-    function Sm(mm) {
+    function TD(DD) {
       return {
-        entityName: mm.str()
+        entityName: DD.str()
       }
     }
 
-    function em(mm) {
-      const Tm = mm.index(4);
-      return 0 === Tm ? mm.str() : 1 === Tm ? mm.long() : 2 === Tm ? mm.bool() : Sm(mm)
+    function bD(DD) {
+      const zD = DD.index(4);
+      return 0 === zD ? DD.str() : 1 === zD ? DD.long() : 2 === zD ? DD.bool() : TD(DD)
     }
 
-    function Nm(mm) {
-      return 0 === mm.index(2) ? null : function(mm) {
-        return mm.map(em)
-      }(mm)
+    function jD(DD) {
+      return 0 === DD.index(2) ? null : function(DD) {
+        return DD.map(bD)
+      }(DD)
     }
 
-    function Gm(mm) {
+    function dD(DD) {
       return {
-        translationKey: mm.str(),
-        params: Nm(mm)
+        translationKey: DD.str(),
+        params: jD(DD)
       }
     }
 
-    function Xm(mm) {
-      return 0 === mm.index(2) ? null : mm.str()
+    function SD(DD) {
+      return 0 === DD.index(2) ? null : DD.str()
     }
 
-    function Pm(mm) {
-      return 0 === mm.index(2) ? null : function(mm) {
+    function iD(DD) {
+      return 0 === DD.index(2) ? null : function(DD) {
         return {
-          color: Xm(mm),
-          colour: Xm(mm),
-          fontSize: Xm(mm)
+          color: SD(DD),
+          colour: SD(DD),
+          fontSize: SD(DD)
         }
-      }(mm)
+      }(DD)
     }
 
-    function Hm(mm) {
+    function lD(DD) {
       return {
-        icon: mm.str(),
-        style: Pm(mm)
+        icon: DD.str(),
+        style: iD(DD)
       }
     }
 
-    function ym(mm) {
-      const Tm = mm.index(3);
-      return 0 === Tm ? {
-        string: mm.str()
-      } : 1 === Tm ? {
-        styledEntityName: Sm(mm)
+    function WD(DD) {
+      const zD = DD.index(3);
+      return 0 === zD ? {
+        string: DD.str()
+      } : 1 === zD ? {
+        styledEntityName: TD(DD)
       } : {
-        styledTranslatedText: Gm(mm)
+        styledTranslatedText: dD(DD)
       }
     }
 
-    function Cm(mm) {
-      const Tm = mm.index(3);
-      return 0 === Tm ? null : 1 === Tm ? mm.str() : mm.long()
+    function ND(DD) {
+      const zD = DD.index(3);
+      return 0 === zD ? null : 1 === zD ? DD.str() : DD.long()
     }
 
-    function rm(mm) {
-      return 0 === mm.index(2) ? null : mm.float()
+    function ZD(DD) {
+      return 0 === DD.index(2) ? null : DD.float()
     }
 
-    function sm(mm) {
-      return 0 === mm.index(2) ? null : function(mm) {
+    function yD(DD) {
+      return 0 === DD.index(2) ? null : function(DD) {
         return {
-          color: Xm(mm),
-          colour: Xm(mm),
-          fontWeight: Cm(mm),
-          fontStyle: Xm(mm),
-          fontSize: Xm(mm),
-          opacity: rm(mm)
+          color: SD(DD),
+          colour: SD(DD),
+          fontWeight: ND(DD),
+          fontStyle: SD(DD),
+          fontSize: SD(DD),
+          opacity: ZD(DD)
         }
-      }(mm)
+      }(DD)
     }
 
-    function lm(mm) {
+    function kD(DD) {
       return {
-        str: ym(mm),
-        style: sm(mm),
-        clickableUrl: Xm(mm)
+        str: WD(DD),
+        style: yD(DD),
+        clickableUrl: SD(DD)
       }
     }
 
-    function Mm(mm) {
-      return mm.str()
+    function mD(DD) {
+      return DD.str()
     }
 
-    function um(mm) {
-      return mm.HO(Mm)
+    function eD(DD) {
+      return DD.OI(mD)
     }
 
-    function Bm(mm) {
-      return 0 === mm.index(2) ? null : um(mm)
+    function oD(DD) {
+      return 0 === DD.index(2) ? null : eD(DD)
     }
 
-    function Lm(mm) {
+    function aD(DD) {
       return {
-        type: mm.str(),
-        progress: mm.float(),
-        width: Xm(mm),
-        height: Xm(mm),
-        colours: Bm(mm),
-        backgroundColour: Xm(mm)
+        type: DD.str(),
+        progress: DD.float(),
+        width: SD(DD),
+        height: SD(DD),
+        colours: oD(DD),
+        backgroundColour: SD(DD)
       }
     }
 
-    function tm(mm) {
+    function uD(DD) {
       return {
-        type: mm.str(),
-        action: mm.str(),
-        style: sm(mm)
+        type: DD.str(),
+        action: DD.str(),
+        style: yD(DD)
       }
     }
 
-    function Um(mm) {
-      const Tm = mm.index(7);
-      return 0 === Tm ? {
-        string: mm.str()
-      } : 1 === Tm ? {
-        entityName: Sm(mm)
-      } : 2 === Tm ? {
-        translatedText: Gm(mm)
-      } : 3 === Tm ? {
-        styledIcon: Hm(mm)
-      } : 4 === Tm ? {
-        Xf: lm(mm)
-      } : 5 === Tm ? {
-        styledProgressBar: Lm(mm)
+    function vD(DD) {
+      const zD = DD.index(7);
+      return 0 === zD ? {
+        string: DD.str()
+      } : 1 === zD ? {
+        entityName: TD(DD)
+      } : 2 === zD ? {
+        translatedText: dD(DD)
+      } : 3 === zD ? {
+        styledIcon: lD(DD)
+      } : 4 === zD ? {
+        xw: kD(DD)
+      } : 5 === zD ? {
+        styledProgressBar: aD(DD)
       } : {
-        styledKeyBinding: tm(mm)
+        styledKeyBinding: uD(DD)
       }
     }
 
-    function dm(mm) {
-      return mm.HO(Um)
+    function tD(DD) {
+      return DD.OI(vD)
     }
-    const gm = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
+    const FD = ["progressBar", "timedClick", "gravityBar", "precisionBar", "rhythmClick"];
 
-    function Wm(mm) {
-      return gm[mm.index(5)]
-    }
-
-    function Fm(mm) {
-      return 0 === mm.index(2) ? null : mm.double()
+    function YD(DD) {
+      return FD[DD.index(5)]
     }
 
-    function mT(mm) {
-      return 0 === mm.index(2) ? null : function(mm) {
+    function HD(DD) {
+      return 0 === DD.index(2) ? null : DD.double()
+    }
+
+    function qD(DD) {
+      return 0 === DD.index(2) ? null : function(DD) {
         return {
-          Sf: Fm(mm),
-          ef: mm.double(),
-          Nf: mm.double(),
-          Gf: mm.bool(),
-          description: dm(mm),
-          Hf: mm.str(),
-          scale: Fm(mm),
-          rotation: Fm(mm)
+          Xw: HD(DD),
+          Vw: DD.double(),
+          Pw: DD.double(),
+          Cw: DD.bool(),
+          description: tD(DD),
+          bw: DD.str(),
+          scale: HD(DD),
+          rotation: HD(DD)
         }
-      }(mm)
+      }(DD)
     }
 
-    function TT(mm) {
-      return 0 === mm.index(2) ? null : mm.bool()
+    function Dz(DD) {
+      return 0 === DD.index(2) ? null : DD.bool()
     }
 
-    function fT(mm) {
-      return 0 === mm.index(2) ? null : function(mm) {
+    function zz(DD) {
+      return 0 === DD.index(2) ? null : function(DD) {
         return {
-          Cf: mm.double(),
-          icon: mm.str(),
-          label: dm(mm),
-          rf: mm.bool(),
-          scale: Fm(mm),
-          rotation: Fm(mm),
-          sf: TT(mm)
+          dw: DD.double(),
+          icon: DD.str(),
+          label: tD(DD),
+          Sw: DD.bool(),
+          scale: HD(DD),
+          rotation: HD(DD),
+          iw: Dz(DD)
         }
-      }(mm)
+      }(DD)
     }
 
-    function hT(mm) {
-      return 0 === mm.index(2) ? null : function(mm) {
+    function wz(DD) {
+      return 0 === DD.index(2) ? null : function(DD) {
         return {
-          Sf: Fm(mm),
-          Mf: mm.double(),
-          uf: mm.double(),
-          Bf: mm.double(),
-          gravity: mm.double(),
-          Lf: mm.double(),
-          vf: mm.double(),
-          tf: mm.double(),
-          Gf: mm.bool(),
-          description: dm(mm),
-          icon: Xm(mm)
+          Xw: HD(DD),
+          Ww: DD.double(),
+          Nw: DD.double(),
+          Zw: DD.double(),
+          gravity: DD.double(),
+          yw: DD.double(),
+          kw: DD.double(),
+          mw: DD.double(),
+          Cw: DD.bool(),
+          description: tD(DD),
+          icon: SD(DD)
         }
-      }(mm)
+      }(DD)
     }
 
-    function AT(mm) {
-      return 0 === mm.index(2) ? null : function(mm) {
+    function pz(DD) {
+      return 0 === DD.index(2) ? null : function(DD) {
         return {
-          speed: mm.double(),
-          df: mm.double(),
-          label: dm(mm),
-          icon: Xm(mm),
-          scale: Fm(mm),
-          rotation: Fm(mm)
+          speed: DD.double(),
+          ow: DD.double(),
+          label: tD(DD),
+          icon: SD(DD),
+          scale: HD(DD),
+          rotation: HD(DD)
         }
-      }(mm)
+      }(DD)
     }
 
-    function aT(mm) {
-      return 0 === mm.index(2) ? null : mm.long()
+    function sz(DD) {
+      return 0 === DD.index(2) ? null : DD.long()
     }
 
-    function xT(mm) {
-      return 0 === mm.index(2) ? null : function(mm) {
+    function Kz(DD) {
+      return 0 === DD.index(2) ? null : function(DD) {
         return {
-          Wf: mm.long(),
-          Ff: mm.double(),
-          mh: mm.double(),
-          Th: aT(mm),
-          label: dm(mm),
-          icon: Xm(mm)
+          uw: DD.long(),
+          tw: DD.double(),
+          Fw: DD.double(),
+          Yw: sz(DD),
+          label: tD(DD),
+          icon: SD(DD)
         }
-      }(mm)
+      }(DD)
     }
 
-    function wT(mm) {
+    function rz(DD) {
       return {
-        type: Wm(mm),
-        progressBar: mT(mm),
-        timedClick: fT(mm),
-        gravityBar: hT(mm),
-        precisionBar: AT(mm),
-        rhythmClick: xT(mm)
+        type: YD(DD),
+        progressBar: qD(DD),
+        timedClick: zz(DD),
+        gravityBar: wz(DD),
+        precisionBar: pz(DD),
+        rhythmClick: Kz(DD)
       }
     }
-    const DT = ["playerGone", "rateLimited"];
+    const Lz = ["playerGone", "rateLimited"];
 
-    function iT(mm) {
-      return 0 === mm.index(2) ? null : function(mm) {
-        return DT[mm.index(2)]
-      }(mm)
+    function cz(DD) {
+      return 0 === DD.index(2) ? null : function(DD) {
+        return Lz[DD.index(2)]
+      }(DD)
     }
 
-    function RT(mm) {
-      return mm.float()
+    function gz(DD) {
+      return DD.float()
     }
 
-    function pT(mm) {
-      return mm.HO(RT)
+    function Rz(DD) {
+      return DD.OI(gz)
     }
 
-    function ET(mm) {
-      return 0 === mm.index(2) ? null : pT(mm)
+    function Az(DD) {
+      return 0 === DD.index(2) ? null : Rz(DD)
     }
 
-    function oT(mm) {
-      return 0 === mm.index(2) ? null : dm(mm)
+    function Uz(DD) {
+      return 0 === DD.index(2) ? null : tD(DD)
     }
 
-    function OT(mm) {
-      return mm.long()
+    function fz(DD) {
+      return DD.long()
     }
 
-    function YT(mm) {
-      return 0 === mm.index(2) ? null : function(mm) {
-        return mm.HO(OT)
-      }(mm)
+    function Iz(DD) {
+      return 0 === DD.index(2) ? null : function(DD) {
+        return DD.OI(fz)
+      }(DD)
     }
 
-    function qT(mm) {
-      return 0 === mm.index(2) ? null : function(mm) {
+    function Bz(DD) {
+      return 0 === DD.index(2) ? null : function(DD) {
         return {
-          Rh: mm.str(),
-          qh: mm.long()
+          rp: DD.str(),
+          Ip: DD.long()
         }
-      }(mm)
+      }(DD)
     }
 
-    function jT(mm) {
-      const Tm = mm.index(3);
-      return 0 === Tm ? null : 1 === Tm ? mm.str() : Gm(mm)
+    function Gz(DD) {
+      const zD = DD.index(3);
+      return 0 === zD ? null : 1 === zD ? DD.str() : dD(DD)
     }
 
-    function VT(mm) {
+    function hz(DD) {
       return {
-        bh: mm.str(),
-        Sh: mm.str(),
-        eh: mm.str()
+        Vp: DD.str(),
+        Pp: DD.str(),
+        Cp: DD.str()
       }
     }
 
-    function IT(mm) {
+    function nz(DD) {
       return {
-        hh: mm.str(),
-        Ah: Xm(mm),
-        ah: Xm(mm),
-        xh: um(mm)
+        qw: DD.str(),
+        Dp: SD(DD),
+        zp: SD(DD),
+        wp: eD(DD)
       }
     }
 
-    function KT(mm) {
-      return mm.HO(IT)
+    function Mz(DD) {
+      return DD.OI(nz)
     }
 
-    function QT(mm) {
+    function Oz(DD) {
       return {
-        Am: mm.str(),
-        x: mm.long(),
-        y: mm.long(),
-        z: mm.long()
+        pD: DD.str(),
+        x: DD.long(),
+        y: DD.long(),
+        z: DD.long()
       }
     }
 
-    function nT(mm) {
-      return mm.HO(QT)
+    function Jz(DD) {
+      return DD.OI(Oz)
     }
 
-    function JT(mm) {
-      return 0 === mm.index(2) ? null : function(mm) {
+    function Ez(DD) {
+      return 0 === DD.index(2) ? null : function(DD) {
         return {
-          Zm: mm.float(),
-          km: mm.long(),
-          bm: mm.long()
+          VD: DD.float(),
+          PD: DD.long(),
+          CD: DD.long()
         }
-      }(mm)
+      }(DD)
     }
 
-    function cT(mm) {
+    function Qz(DD) {
       return {
-        blockName: mm.str(),
-        jm: mm.bool(),
-        Vm: mm.bool(),
-        Im: mm.bool(),
-        Km: mm.float(),
-        Qm: mm.float(),
-        nm: mm.long(),
-        Jm: JT(mm)
+        blockName: DD.str(),
+        hD: DD.bool(),
+        nD: DD.bool(),
+        MD: DD.bool(),
+        OD: DD.float(),
+        JD: DD.float(),
+        ED: DD.long(),
+        QD: Ez(DD)
       }
     }
 
-    function zT(mm) {
-      return 0 === mm.index(2) ? null : function(mm) {
-        return mm.HO(cT)
-      }(mm)
+    function Xz(DD) {
+      return 0 === DD.index(2) ? null : function(DD) {
+        return DD.OI(Qz)
+      }(DD)
     }
 
-    function ZT(mm) {
+    function Vz(DD) {
       return {
-        Om: mm.str(),
-        Ym: zT(mm)
+        fD: DD.str(),
+        BD: Xz(DD)
       }
     }
 
-    function kT(mm) {
+    function Pz(DD) {
       return {
-        blockName: mm.str(),
-        frequency: mm.float()
+        blockName: DD.str(),
+        frequency: DD.float()
       }
     }
 
-    function bT(mm) {
-      return mm.HO(kT)
+    function Cz(DD) {
+      return DD.OI(Pz)
     }
 
-    function ST(mm) {
+    function xz(DD) {
       return {
-        Gm: mm.str(),
-        Xm: mm.str(),
-        frequency: mm.float(),
-        Pm: bT(mm)
+        bD: DD.str(),
+        jD: DD.str(),
+        frequency: DD.float(),
+        dD: Cz(DD)
       }
     }
 
-    function eT(mm) {
-      return mm.HO(ST)
+    function Tz(DD) {
+      return DD.OI(xz)
     }
 
-    function NT(mm) {
+    function bz(DD) {
       return {
-        blockName: mm.str(),
-        radius: mm.long(),
-        rm: mm.long(),
-        Dm: mm.long(),
-        im: mm.long(),
-        sm: mm.float()
+        blockName: DD.str(),
+        radius: DD.long(),
+        WD: DD.long(),
+        LD: DD.long(),
+        cD: DD.long(),
+        ND: DD.float()
       }
     }
 
-    function GT(mm) {
-      return mm.HO(NT)
+    function jz(DD) {
+      return DD.OI(bz)
     }
 
-    function XT(mm) {
+    function dz(DD) {
       return {
-        Dm: mm.long(),
-        im: mm.long(),
-        Rm: mm.long(),
-        pm: mm.bool(),
-        Em: ZT(mm),
-        Sm: eT(mm),
-        ym: GT(mm)
+        LD: DD.long(),
+        cD: DD.long(),
+        gD: DD.long(),
+        RD: DD.bool(),
+        AD: Vz(DD),
+        xD: Tz(DD),
+        iD: jz(DD)
       }
     }
 
-    function PT(mm) {
-      return mm.HO(XT)
+    function Sz(DD) {
+      return DD.OI(dz)
     }
 
-    function HT(mm) {
-      return 0 === mm.index(2) ? null : function(mm) {
+    function iz(DD) {
+      return 0 === DD.index(2) ? null : function(DD) {
         return {
-          name: mm.str(),
-          Bm: Xm(mm)
+          name: DD.str(),
+          mD: SD(DD)
         }
-      }(mm)
+      }(DD)
     }
 
-    function yT(mm) {
-      return 0 === mm.index(2) ? null : function(mm) {
+    function lz(DD) {
+      return 0 === DD.index(2) ? null : function(DD) {
         return {
-          terrain: HT(mm),
-          Lm: GT(mm)
+          terrain: iz(DD),
+          eD: jz(DD)
         }
-      }(mm)
+      }(DD)
     }
 
-    function CT(mm) {
-      return 0 === mm.index(2) ? null : function(mm) {
+    function Wz(DD) {
+      return 0 === DD.index(2) ? null : function(DD) {
         return {
-          layers: PT(mm),
-          lm: yT(mm)
+          layers: Sz(DD),
+          ZD: lz(DD)
         }
-      }(mm)
+      }(DD)
     }
   },
-  40675: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      A: () => Jm,
-      B: () => Sm,
-      D: () => Km,
-      G: () => Qm,
-      J: () => qm,
-      M: () => Zm,
-      P: () => Nm,
-      S: () => Om,
-      W: () => Xm,
-      _: () => Vm,
-      ab: () => jm,
-      bb: () => Im,
-      cb: () => nm,
-      e: () => Am,
-      h: () => Gm,
-      j: () => em,
-      k: () => om,
-      n: () => Ym,
-      q: () => bm,
-      t: () => cm,
-      w: () => km,
-      y: () => zm
+  40522: (DD, zD, wD) => {
+    wD.d(zD, {
+      $: () => nD,
+      A: () => VD,
+      B: () => QD,
+      E: () => TD,
+      F: () => OD,
+      J: () => JD,
+      N: () => GD,
+      Q: () => PD,
+      U: () => jD,
+      Y: () => ID,
+      _: () => SD,
+      ab: () => hD,
+      d: () => sD,
+      e: () => dD,
+      eb: () => MD,
+      fb: () => ED,
+      i: () => bD,
+      l: () => fD,
+      m: () => BD,
+      p: () => xD,
+      s: () => XD,
+      w: () => CD
     });
-    var hm = fm(2987);
-    const Am = {
+    var pD = wD(2980);
+    const sD = {
       Chat: 49,
       UiRequestResponded: 91,
       CodeCollab: 89,
@@ -1211,160 +1211,160 @@ export const modules = {
       LobbyManage: 96
     };
 
-    function am(mm, Tm) {
-      return !ArrayBuffer.isView(mm) || mm instanceof DataView ? Array.isArray(mm) ? mm.map((mm => Tm(mm))) : mm : Array.from(mm, (mm => Tm(mm)))
+    function KD(DD, zD) {
+      return !ArrayBuffer.isView(DD) || DD instanceof DataView ? Array.isArray(DD) ? DD.map((DD => zD(DD))) : DD : Array.from(DD, (DD => zD(DD)))
     }
 
-    function xm(mm) {
-      if ("string" !== typeof mm) return mm;
-      for (let Tm = 0; Tm < mm.length; Tm++) {
-        const fm = mm.charCodeAt(Tm);
-        if (fm >= 55296 && fm <= 57343) return Dm.decode(wm.encode(mm))
+    function rD(DD) {
+      if ("string" !== typeof DD) return DD;
+      for (let zD = 0; zD < DD.length; zD++) {
+        const wD = DD.charCodeAt(zD);
+        if (wD >= 55296 && wD <= 57343) return cD.decode(LD.encode(DD))
       }
-      return mm
+      return DD
     }
-    const wm = new TextEncoder,
-      Dm = new TextDecoder;
+    const LD = new TextEncoder,
+      cD = new TextDecoder;
 
-    function im(mm) {
-      return mm
+    function gD(DD) {
+      return DD
     }
-    let Rm;
+    let RD;
 
-    function pm(mm) {
-      return null === mm || "object" !== typeof mm ? mm : [xm(mm.dD), xm(mm.gD)]
-    }
-
-    function Em(mm) {
-      return null === mm || "object" !== typeof mm ? mm : [am(mm.Ph, im), am(mm.Ox, im)]
+    function AD(DD) {
+      return null === DD || "object" !== typeof DD ? DD : [rD(DD.Dg), rD(DD.zg)]
     }
 
-    function om(mm) {
-      return null === (Tm = mm) || "object" !== typeof Tm ? Tm : [xm(Tm.Hi), xm(Tm.yi)];
-      var Tm
+    function UD(DD) {
+      return null === DD || "object" !== typeof DD ? DD : [KD(DD.jp, gD), KD(DD.Or, gD)]
     }
 
-    function Om(mm) {
-      return null === (Tm = mm) || "object" !== typeof Tm ? Tm : [Tm.id, Tm.bR];
-      var Tm
+    function fD(DD) {
+      return null === (zD = DD) || "object" !== typeof zD ? zD : [rD(zD.lg), rD(zD.Wg)];
+      var zD
     }
 
-    function Ym(mm) {
-      return null === (Tm = mm) || "object" !== typeof Tm ? Tm : [Tm.va, xm(Tm.Ua), Tm.da, xm(Tm.Fa), Tm.Ax, Tm.wx, Tm.Fx, xm(Tm.mw), xm(Tm.Tw)];
-      var Tm
+    function ID(DD) {
+      return null === (zD = DD) || "object" !== typeof zD ? zD : [zD.id, zD.VR];
+      var zD
     }
 
-    function qm(mm) {
-      return null === (Tm = mm) || "object" !== typeof Tm ? Tm : [am(Tm.qR, im), Tm.jR];
-      var Tm
+    function BD(DD) {
+      return null === (zD = DD) || "object" !== typeof zD ? zD : [zD.zr, rD(zD.wr), zD.sr, rD(zD.Lr), zD.Ir, zD.Br, zD.wL, rD(zD.pL), rD(zD.sL)];
+      var zD
     }
 
-    function jm(mm) {
-      return null === (Tm = mm) || "object" !== typeof Tm ? Tm : [am(Tm.Ji, (mm => xm(mm))), xm(Tm.zi), Tm.Zi];
-      var Tm
+    function GD(DD) {
+      return null === (zD = DD) || "object" !== typeof zD ? zD : [KD(zD.UR, gD), zD.fR];
+      var zD
     }
 
-    function Vm(mm) {
-      return null === (Tm = mm) || "object" !== typeof Tm ? Tm : [am(Tm.Ux, im), xm(Tm.gx), Tm.Wx];
-      var Tm
+    function hD(DD) {
+      return null === (zD = DD) || "object" !== typeof zD ? zD : [KD(zD.Xg, (DD => rD(DD))), rD(zD.Vg), zD.Pg];
+      var zD
     }
 
-    function Im(mm) {
-      return null === (Tm = mm) || "object" !== typeof Tm ? Tm : [xm(Tm.Sh), xm(Tm.eh)];
-      var Tm
+    function nD(DD) {
+      return null === (zD = DD) || "object" !== typeof zD ? zD : [KD(zD.qr, gD), rD(zD.DL), zD.zL];
+      var zD
     }
 
-    function Km(mm) {
-      return null === (Tm = mm) || "object" !== typeof Tm ? Tm : [xm(Tm.xw)];
-      var Tm
+    function MD(DD) {
+      return null === (zD = DD) || "object" !== typeof zD ? zD : [rD(zD.Pp), rD(zD.Cp)];
+      var zD
     }
 
-    function Qm(mm) {
-      return xm(mm)
+    function OD(DD) {
+      return null === (zD = DD) || "object" !== typeof zD ? zD : [rD(zD.gL)];
+      var zD
     }
 
-    function nm(mm) {
-      return null === (Tm = mm) || "object" !== typeof Tm ? Tm : [xm(Tm.hR), xm(Tm.AR), xm(Tm.dD), xm(Tm.gD)];
-      var Tm
+    function JD(DD) {
+      return rD(DD)
     }
 
-    function Jm(mm) {
-      return pm(mm)
+    function ED(DD) {
+      return null === (zD = DD) || "object" !== typeof zD ? zD : [rD(zD.DR), rD(zD.zR), rD(zD.Dg), rD(zD.zg)];
+      var zD
     }
 
-    function cm(mm) {
-      return pm(mm)
+    function QD(DD) {
+      return AD(DD)
     }
 
-    function zm(mm) {
-      return null === (Tm = mm) || "object" !== typeof Tm ? Tm : [xm(Tm.Ex)];
-      var Tm
+    function XD(DD) {
+      return AD(DD)
     }
 
-    function Zm(mm) {
-      return mm
+    function VD(DD) {
+      return null === (zD = DD) || "object" !== typeof zD ? zD : [rD(zD.Mr)];
+      var zD
     }
 
-    function km(mm) {
-      return null === (Tm = mm) || "object" !== typeof Tm ? Tm : [xm(Tm.Hx), xm(Tm.yx)];
-      var Tm
+    function PD(DD) {
+      return DD
     }
 
-    function bm(mm) {
-      return xm(mm)
+    function CD(DD) {
+      return null === (zD = DD) || "object" !== typeof zD ? zD : [rD(zD.kr), rD(zD.mr)];
+      var zD
     }
 
-    function Sm(mm) {
-      return Em(mm)
+    function xD(DD) {
+      return rD(DD)
     }
 
-    function em(mm) {
-      return Em(mm)
+    function TD(DD) {
+      return UD(DD)
     }
 
-    function Nm(mm) {
-      return null === (Tm = mm) || "object" !== typeof Tm ? Tm : [xm(Tm.aR)];
-      var Tm
+    function bD(DD) {
+      return UD(DD)
     }
 
-    function Gm(mm) {
-      return (Rm ??= (0, hm.h)().map((mm => mm.name)), Rm).map((Tm => {
-        return "string" === typeof(fm = mm[Tm]) ? xm(fm) : am(fm, im);
-        var fm
+    function jD(DD) {
+      return null === (zD = DD) || "object" !== typeof zD ? zD : [rD(zD.wR)];
+      var zD
+    }
+
+    function dD(DD) {
+      return (RD ??= (0, pD.f)().map((DD => DD.name)), RD).map((zD => {
+        return "string" === typeof(wD = DD[zD]) ? rD(wD) : KD(wD, gD);
+        var wD
       }))
     }
 
-    function Xm(mm) {
-      return null === (Tm = mm) || "object" !== typeof Tm ? Tm : [Tm.Li, Tm.Ui, Tm.gi];
-      var Tm
+    function SD(DD) {
+      return null === (zD = DD) || "object" !== typeof zD ? zD : [zD.ag, zD.ug, zD.vg];
+      var zD
     }
   },
-  9240: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => Am,
-      e: () => am
+  9286: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => sD,
+      e: () => KD
     });
-    var hm = fm(9184);
-    const Am = "Air",
-      am = Object.freeze(new hm.g(Am, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var pD = wD(9236);
+    const sD = "Air",
+      KD = Object.freeze(new pD.h(sD, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   },
-  39366: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => am,
-      f: () => wm
+  39209: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => KD,
+      i: () => LD
     });
-    var hm = fm(354),
-      Am = fm(4399);
-    const am = new Set(Am.m),
-      xm = new Map;
+    var pD = wD(351),
+      sD = wD(4486);
+    const KD = new Set(sD.r),
+      rD = new Map;
 
-    function wm(mm, Tm) {
-      let fm = xm.get(Tm);
-      void 0 === fm && (fm = new Map, xm.set(Tm, fm));
-      let Am = fm.get(mm);
-      return void 0 === Am && (Am = `${mm}${(0,hm.C)(Tm)}`, fm.set(mm, Am)), Am
+    function LD(DD, zD) {
+      let wD = rD.get(zD);
+      void 0 === wD && (wD = new Map, rD.set(zD, wD));
+      let sD = wD.get(DD);
+      return void 0 === sD && (sD = `${DD}${(0,pD.y)(zD)}`, wD.set(DD, sD)), sD
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

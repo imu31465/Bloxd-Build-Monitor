@@ -1,78 +1,78 @@
 export const id = 241;
 export const ids = [241];
 export const modules = {
-  38124: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => im,
-      h: () => hm,
-      k: () => wm,
-      o: () => Am,
-      p: () => xm,
-      q: () => am
+  38039: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => gD,
+      f: () => pD,
+      g: () => LD,
+      j: () => sD,
+      l: () => rD,
+      n: () => KD
     });
-    const hm = 1.001,
-      Am = .501,
-      am = .025,
-      xm = .75,
-      wm = .08,
-      Dm = 4;
+    const pD = 1.001,
+      sD = .501,
+      KD = .025,
+      rD = .75,
+      LD = .08,
+      cD = 4;
 
-    function im() {
-      const mm = Am,
-        Tm = am,
-        fm = mm - Tm / 2,
-        hm = (2 * mm - 2 * Tm) / (2 * Dm - 1),
-        xm = [];
-      for (const Am of [-fm, fm])
-        for (const am of [-fm, fm])
-          for (let fm = 0; fm < Dm; fm++) {
-            const wm = -mm + Tm + hm * (2 * fm + .5);
-            xm.push([hm, Tm, Tm, wm, Am, am]), xm.push([Tm, hm, Tm, Am, wm, am]), xm.push([Tm, Tm, hm, Am, am, wm])
+    function gD() {
+      const DD = sD,
+        zD = KD,
+        wD = DD - zD / 2,
+        pD = (2 * DD - 2 * zD) / (2 * cD - 1),
+        rD = [];
+      for (const sD of [-wD, wD])
+        for (const KD of [-wD, wD])
+          for (let wD = 0; wD < cD; wD++) {
+            const LD = -DD + zD + pD * (2 * wD + .5);
+            rD.push([pD, zD, zD, LD, sD, KD]), rD.push([zD, pD, zD, sD, LD, KD]), rD.push([zD, zD, pD, sD, KD, LD])
           }
-      for (const Am of [-fm, fm])
-        for (const mm of [-fm, fm])
-          for (const hm of [-fm, fm]) xm.push([Tm, Tm, Tm, Am, mm, hm]);
-      return xm
+      for (const sD of [-wD, wD])
+        for (const DD of [-wD, wD])
+          for (const pD of [-wD, wD]) rD.push([zD, zD, zD, sD, DD, pD]);
+      return rD
     }
   },
-  38521: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      A: () => nm,
-      B: () => cm,
-      C: () => Qm,
-      E: () => Km,
-      F: () => Em,
-      I: () => Ym,
-      L: () => jm,
-      P: () => Am,
-      e: () => Rm,
-      g: () => Dm,
-      h: () => Im,
-      i: () => im,
-      m: () => wm,
-      o: () => xm,
-      s: () => am,
-      w: () => Jm,
-      x: () => om
+  38413: (DD, zD, wD) => {
+    wD.d(zD, {
+      B: () => fD,
+      F: () => ED,
+      G: () => XD,
+      H: () => JD,
+      I: () => OD,
+      J: () => UD,
+      L: () => BD,
+      P: () => hD,
+      R: () => sD,
+      e: () => RD,
+      i: () => cD,
+      m: () => MD,
+      o: () => gD,
+      p: () => LD,
+      t: () => rD,
+      w: () => KD,
+      z: () => QD
     });
-    var hm = fm(9231);
+    var pD = wD(9271);
 
-    function Am(mm) {
-      return Math.floor(mm).toLocaleString("en-US")
+    function sD(DD) {
+      return Math.floor(DD).toLocaleString("en-US")
     }
-    const am = 2e3,
-      xm = .005,
-      wm = .001,
-      Dm = 2,
-      im = "Fluid Tank",
-      Rm = "Coolant Mixer",
-      pm = 144;
+    const KD = 2e3,
+      rD = .005,
+      LD = .001,
+      cD = 2,
+      gD = "Fluid Tank",
+      RD = "Coolant Mixer",
+      AD = 144;
 
-    function Em(mm) {
-      const Tm = mm.split("|")[0];
-      return (0, hm.k)(Tm) ? Tm === hm.c ? "cryo" : "water" : null
+    function UD(DD) {
+      const zD = DD.split("|")[0];
+      return (0, pD.l)(zD) ? zD === pD.e ? "cryo" : "water" : null
     }
-    const om = [
+    const fD = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 1, 0],
@@ -80,43 +80,43 @@ export const modules = {
         [0, 0, 1],
         [0, 0, -1]
       ],
-      Om = 63;
+      ID = 63;
 
-    function Ym(mm) {
-      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const fm = Tm ? function(mm, Tm, fm) {
-        const hm = om.findIndex((hm => {
-          let [Am, am, xm] = hm;
-          return Am === mm && am === Tm && xm === fm
+    function BD(DD) {
+      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const wD = zD ? function(DD, zD, wD) {
+        const pD = fD.findIndex((pD => {
+          let [sD, KD, rD] = pD;
+          return sD === DD && KD === zD && rD === wD
         }));
-        return hm < 0 ? 0 : 1 << hm
-      }(Tm[0], Tm[1], Tm[2]) : 0;
-      return "maker" === mm ? {
-        kind: mm,
-        faces: fm
-      } : "user" === mm ? {
-        kind: mm,
-        faces: Om & ~fm
+        return pD < 0 ? 0 : 1 << pD
+      }(zD[0], zD[1], zD[2]) : 0;
+      return "maker" === DD ? {
+        kind: DD,
+        faces: wD
+      } : "user" === DD ? {
+        kind: DD,
+        faces: ID & ~wD
       } : {
-        kind: mm,
-        faces: Om
+        kind: DD,
+        faces: ID
       }
     }
 
-    function qm(mm) {
-      return "pipe" === mm || "tank" === mm || "maker" === mm
+    function GD(DD) {
+      return "pipe" === DD || "tank" === DD || "maker" === DD
     }
 
-    function jm(mm, Tm, fm) {
-      return 0 !== (mm.faces & 1 << fm) && 0 !== (Tm.faces & 1 << (1 ^ fm)) && (qm(mm.kind) || qm(Tm.kind))
+    function hD(DD, zD, wD) {
+      return 0 !== (DD.faces & 1 << wD) && 0 !== (zD.faces & 1 << (1 ^ wD)) && (GD(DD.kind) || GD(zD.kind))
     }
-    const Vm = (mm, Tm, fm, hm) => ({
-        input: mm,
-        inputAmount: hm,
-        output: Tm,
-        outputAmount: fm
+    const nD = (DD, zD, wD, pD) => ({
+        input: DD,
+        inputAmount: pD,
+        output: zD,
+        outputAmount: wD
       }),
-      Im = {
+      MD = {
         Condenser: {
           kind: "Condenser",
           opMs: 2e3,
@@ -135,7 +135,7 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [1, 2, 3],
-          recipes: [Vm("Uranium Grit", "Uranium Pellet", 1, 12), Vm("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          recipes: [nD("Uranium Grit", "Uranium Pellet", 1, 12), nD("Spent Pellet", "Plutonium Pellet", 1, 4)],
           powerPerOp: 600,
           waterPerOp: 24
         },
@@ -156,36 +156,36 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [],
-          recipes: [Vm("Biomass", "", 0, 1)],
+          recipes: [nD("Biomass", "", 0, 1)],
           powerPerOp: 720,
           waterPerOp: 144,
-          cryoMade: pm,
+          cryoMade: AD,
           couplable: !0,
           couplerSlot: 1
         }
       };
 
-    function Km(mm, Tm) {
-      return 1e3 * (null !== Tm && void 0 !== Tm ? Tm : 0) / mm.opMs
+    function OD(DD, zD) {
+      return 1e3 * (null !== zD && void 0 !== zD ? zD : 0) / DD.opMs
     }
 
-    function Qm(mm) {
-      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const fm = Km(Im["Coolant Mixer"], pm) * Tm;
-      return mm <= 0 ? 0 : Math.ceil(mm / fm - 1e-9)
+    function JD(DD) {
+      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const wD = OD(MD["Coolant Mixer"], AD) * zD;
+      return DD <= 0 ? 0 : Math.ceil(DD / wD - 1e-9)
     }
-    const nm = "baf2Water",
-      Jm = "baf2waterclose",
-      cm = "baf2wateropen"
+    const ED = "baf2Water",
+      QD = "baf2waterclose",
+      XD = "baf2wateropen"
   },
-  38509: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => Gm,
-      i: () => Xm
+  38400: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => dD,
+      e: () => SD
     });
-    var hm = fm(9141),
-      Am = fm(9167);
-    const am = [
+    var pD = wD(9198),
+      sD = wD(9228);
+    const KD = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
@@ -193,45 +193,45 @@ export const modules = {
       [0, 1, 0],
       [0, -1, 0]
     ];
-    var xm = fm(9193),
-      wm = fm(38308),
-      Dm = fm(9184);
-    const im = {
+    var rD = wD(9240),
+      LD = wD(38189),
+      cD = wD(9236);
+    const gD = {
       1: [0, -1],
       2: [-1, 0],
       3: [0, 1],
       4: [1, 0]
     };
 
-    function Rm(mm) {
-      let [Tm, fm] = mm;
-      return [-fm, Tm]
+    function RD(DD) {
+      let [zD, wD] = DD;
+      return [-wD, zD]
     }
 
-    function pm(mm, Tm) {
-      return mm[0] === Tm[0] && mm[1] === Tm[1]
+    function AD(DD, zD) {
+      return DD[0] === zD[0] && DD[1] === zD[1]
     }
 
-    function Em(mm, Tm) {
-      return mm[0] * Tm[0] + mm[1] * Tm[1] === 0
+    function UD(DD, zD) {
+      return DD[0] * zD[0] + DD[1] * zD[1] === 0
     }
-    const om = [
+    const fD = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
-    var Om = fm(9222);
+    var ID = wD(9264);
 
-    function Ym(mm, Tm, fm, hm, Am) {
-      return Tm < Om.k || Tm >= Om.k + Om.o || Math.floor(mm / Om.r) === Math.floor(hm / Om.r) && Math.floor(fm / Om.r) === Math.floor(Am / Om.r)
+    function BD(DD, zD, wD, pD, sD) {
+      return zD < ID.j || zD >= ID.j + ID.n || Math.floor(DD / ID.u) === Math.floor(pD / ID.u) && Math.floor(wD / ID.u) === Math.floor(sD / ID.u)
     }
-    const qm = "Splitter",
-      jm = "Sorting Gate",
-      Vm = new Set(Om.F),
-      Im = new Set([...Om.F, "Belt Loader", "Fast Loader", jm]),
-      Km = new Set(Om.q),
-      Qm = [
+    const GD = "Splitter",
+      hD = "Sorting Gate",
+      nD = new Set(ID.N),
+      MD = new Set([...ID.N, "Belt Loader", "Fast Loader", hD]),
+      OD = new Set(ID.q),
+      JD = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 0, 1],
@@ -240,259 +240,259 @@ export const modules = {
         [0, -1, 0]
       ];
 
-    function nm(mm) {
-      var Tm, fm;
-      return null !== (Tm = null === (fm = hm.i[mm]) || void 0 === fm ? void 0 : fm.meta.rootName) && void 0 !== Tm ? Tm : ""
+    function ED(DD) {
+      var zD, wD;
+      return null !== (zD = null === (wD = pD.l[DD]) || void 0 === wD ? void 0 : wD.meta.rootName) && void 0 !== zD ? zD : ""
     }
 
-    function Jm(mm) {
-      return nm(mm) === Om.e && (0, Om.M)(hm.i[mm].name)
+    function QD(DD) {
+      return ED(DD) === ID.f && (0, ID.W)(pD.l[DD].name)
     }
-    var cm = fm(9176),
-      zm = fm(9208);
-    const Zm = [
+    var XD = wD(9232),
+      VD = wD(9247);
+    const PD = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
 
-    function km(mm) {
-      var Tm, fm;
-      const Am = null === (Tm = hm.i[mm]) || void 0 === Tm ? void 0 : Tm.meta;
-      return (null === Am || void 0 === Am ? void 0 : Am.rootName) !== zm.o ? null : {
-        rot: null !== (fm = Am.rot) && void 0 !== fm ? fm : 1,
-        half: (0, zm.g)(Am.rootName, Am.metaStr)
+    function CD(DD) {
+      var zD, wD;
+      const sD = null === (zD = pD.l[DD]) || void 0 === zD ? void 0 : zD.meta;
+      return (null === sD || void 0 === sD ? void 0 : sD.rootName) !== VD.l ? null : {
+        rot: null !== (wD = sD.rot) && void 0 !== wD ? wD : 1,
+        half: (0, VD.e)(sD.rootName, sD.metaStr)
       }
     }
 
-    function bm(mm, Tm, fm, hm) {
-      return km(mm(Tm, fm, hm))
+    function xD(DD, zD, wD, pD) {
+      return CD(DD(zD, wD, pD))
     }
 
-    function Sm(mm, Tm, fm, hm, Am) {
+    function TD(DD, zD, wD, pD, sD) {
       let {
-        rot: am,
-        half: xm
-      } = Am;
-      const [wm, Dm] = (0, zm.k)(am, xm), im = bm(mm, Tm + wm, fm, hm + Dm);
-      return null !== im && im.rot === am && im.half === zm.q[xm]
+        rot: KD,
+        half: rD
+      } = sD;
+      const [LD, cD] = (0, VD.i)(KD, rD), gD = xD(DD, zD + LD, wD, pD + cD);
+      return null !== gD && gD.rot === KD && gD.half === VD.p[rD]
     }
-    var em = fm(38518);
-    const Nm = [new class {
+    var bD = wD(38409);
+    const jD = [new class {
       constructor() {
-        this.reshapeOffsets = om
+        this.reshapeOffsets = fD
       }
-      handles(mm) {
-        var Tm;
-        return "Stairs" === (null === (Tm = hm.i[mm]) || void 0 === Tm ? void 0 : Tm.model)
+      handles(DD) {
+        var zD;
+        return "Stairs" === (null === (zD = pD.l[DD]) || void 0 === zD ? void 0 : zD.model)
       }
-      affects(mm) {
-        return this.handles(mm)
+      affects(DD) {
+        return this.handles(DD)
       }
-      shape(mm, Tm, fm, Am, am) {
-        const xm = this.stairsOf(am),
-          wm = this.cornerAt(mm, Tm, fm, Am, xm),
-          im = xm.half === Dm.e.top ? "top" : "bot";
-        return (0, hm.k)(`${hm.i[am].meta.rootName}|meta|rot${xm.rot}|${im}${null===wm?"":`|${wm}`}`)
+      shape(DD, zD, wD, sD, KD) {
+        const rD = this.stairsOf(KD),
+          LD = this.cornerAt(DD, zD, wD, sD, rD),
+          gD = rD.half === cD.d.top ? "top" : "bot";
+        return (0, pD.p)(`${pD.l[KD].meta.rootName}|meta|rot${rD.rot}|${gD}${null===LD?"":`|${LD}`}`)
       }
-      stairsOf(mm) {
+      stairsOf(DD) {
         const {
-          rot: Tm,
-          halfblockPlacement: fm
-        } = hm.i[mm].meta;
+          rot: zD,
+          halfblockPlacement: wD
+        } = pD.l[DD].meta;
         return {
-          rot: Tm,
-          half: fm
+          rot: zD,
+          half: wD
         }
       }
-      stairsAt(mm, Tm, fm, hm) {
-        const Am = mm(Tm, fm, hm);
-        return this.handles(Am) ? this.stairsOf(Am) : null
+      stairsAt(DD, zD, wD, pD) {
+        const sD = DD(zD, wD, pD);
+        return this.handles(sD) ? this.stairsOf(sD) : null
       }
-      cornerAt(mm, Tm, fm, hm, Am) {
+      cornerAt(DD, zD, wD, pD, sD) {
         let {
-          rot: am,
-          half: xm
-        } = Am;
-        const wm = im[am],
-          Dm = Am => {
-            let [wm, Dm] = Am;
-            const im = this.stairsAt(mm, Tm + wm, fm, hm + Dm);
-            return null !== im && im.rot === am && im.half === xm
+          rot: KD,
+          half: rD
+        } = sD;
+        const LD = gD[KD],
+          cD = sD => {
+            let [LD, cD] = sD;
+            const gD = this.stairsAt(DD, zD + LD, wD, pD + cD);
+            return null !== gD && gD.rot === KD && gD.half === rD
           },
-          om = this.stairsAt(mm, Tm + wm[0], fm, hm + wm[1]);
-        if (null !== om && om.half === xm) {
-          const mm = im[om.rot];
-          if (Em(wm, mm) && !Dm([-mm[0], -mm[1]])) return pm(mm, Rm(wm)) ? "outerLeft" : "outerRight"
+          fD = this.stairsAt(DD, zD + LD[0], wD, pD + LD[1]);
+        if (null !== fD && fD.half === rD) {
+          const DD = gD[fD.rot];
+          if (UD(LD, DD) && !cD([-DD[0], -DD[1]])) return AD(DD, RD(LD)) ? "outerLeft" : "outerRight"
         }
-        const Om = this.stairsAt(mm, Tm - wm[0], fm, hm - wm[1]);
-        if (null !== Om && Om.half === xm) {
-          const mm = im[Om.rot];
-          if (Em(wm, mm) && !Dm(mm)) return pm(mm, Rm(wm)) ? "innerLeft" : "innerRight"
+        const ID = this.stairsAt(DD, zD - LD[0], wD, pD - LD[1]);
+        if (null !== ID && ID.half === rD) {
+          const DD = gD[ID.rot];
+          if (UD(LD, DD) && !cD(DD)) return AD(DD, RD(LD)) ? "innerLeft" : "innerRight"
         }
         return null
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = am, this.rootIds = new Set(Am.h.map((mm => (0, hm.k)(mm))))
+        this.reshapeOffsets = KD, this.rootIds = new Set(sD.k.map((DD => (0, pD.p)(DD))))
       }
-      handles(mm) {
-        var Tm;
-        const fm = null === (Tm = hm.i[mm]) || void 0 === Tm ? void 0 : Tm.meta;
-        return void 0 !== fm && this.rootIds.has(fm.rootId)
+      handles(DD) {
+        var zD;
+        const wD = null === (zD = pD.l[DD]) || void 0 === zD ? void 0 : zD.meta;
+        return void 0 !== wD && this.rootIds.has(wD.rootId)
       }
-      affects(mm) {
-        return this.handles(mm)
+      affects(DD) {
+        return this.handles(DD)
       }
-      placedBy(mm) {
-        return hm.i[mm].meta.rootName === Am.n ? null : Am.n
+      placedBy(DD) {
+        return pD.l[DD].meta.rootName === sD.t ? null : sD.t
       }
-      shape(mm, Tm, fm, am, xm) {
+      shape(DD, zD, wD, KD, rD) {
         const {
-          rootId: wm,
-          rootName: Dm,
-          rot: im
-        } = hm.i[xm].meta;
-        let Rm = 0;
-        return Am.t[im].forEach(((Am, xm) => {
-          var Dm;
-          let [pm, Em, om] = Am;
-          const Om = null === (Dm = hm.i[mm(Tm + pm, fm + Em, am + om)]) || void 0 === Dm ? void 0 : Dm.meta;
-          (null === Om || void 0 === Om ? void 0 : Om.rootId) === wm && Om.rot === im && (Rm |= 1 << xm)
-        })), (0, hm.k)((0, Am.f)(Dm, im, Rm))
+          rootId: LD,
+          rootName: cD,
+          rot: gD
+        } = pD.l[rD].meta;
+        let RD = 0;
+        return sD.z[gD].forEach(((sD, rD) => {
+          var cD;
+          let [AD, UD, fD] = sD;
+          const ID = null === (cD = pD.l[DD(zD + AD, wD + UD, KD + fD)]) || void 0 === cD ? void 0 : cD.meta;
+          (null === ID || void 0 === ID ? void 0 : ID.rootId) === LD && ID.rot === gD && (RD |= 1 << rD)
+        })), (0, pD.p)((0, sD.i)(cD, gD, RD))
       }
-    }, ...xm.d.map((mm => new wm.b(mm))), new class {
+    }, ...rD.e.map((DD => new LD.e(DD))), new class {
       constructor() {
-        this.reshapeOffsets = Qm
+        this.reshapeOffsets = JD
       }
-      handles(mm) {
-        const Tm = nm(mm);
-        return Vm.has(Tm) || Tm === Om.e
+      handles(DD) {
+        const zD = ED(DD);
+        return nD.has(zD) || zD === ID.f
       }
-      affects(mm) {
-        const Tm = nm(mm);
-        return Im.has(Tm) || Km.has(Tm) || Tm === qm || Tm === Om.e || void 0 !== Om.c[Tm]
+      affects(DD) {
+        const zD = ED(DD);
+        return MD.has(zD) || OD.has(zD) || zD === GD || zD === ID.f || void 0 !== ID.b[zD]
       }
-      shape(mm, Tm, fm, Am, am, xm) {
+      shape(DD, zD, wD, sD, KD, rD) {
         const {
-          rootName: wm,
-          rot: Dm
-        } = hm.i[am].meta;
-        return wm === Om.e ? xm ? am : function(mm, Tm, fm, Am, am) {
-          const [xm, wm] = Om.d[am - 1];
-          for (let Dm = 1; Dm <= Om.C; Dm++) {
-            const [im, Rm] = [Tm - xm * Dm, Am - wm * Dm], pm = mm(im, fm, Rm);
-            if (nm(pm) === Om.e && hm.i[pm].meta.rot === am && Ym(Tm, fm, Am, im, Rm)) return (0, hm.k)((0, Om.Q)(am, !Jm(pm)))
+          rootName: LD,
+          rot: cD
+        } = pD.l[KD].meta;
+        return LD === ID.f ? rD ? KD : function(DD, zD, wD, sD, KD) {
+          const [rD, LD] = ID.c[KD - 1];
+          for (let cD = 1; cD <= ID.J; cD++) {
+            const [gD, RD] = [zD - rD * cD, sD - LD * cD], AD = DD(gD, wD, RD);
+            if (ED(AD) === ID.f && pD.l[AD].meta.rot === KD && BD(zD, wD, sD, gD, RD)) return (0, pD.p)((0, ID.ab)(KD, !QD(AD)))
           }
-          return (0, hm.k)((0, Om.Q)(am, !1))
-        }(mm, Tm, fm, Am, Dm) : (0, hm.k)((0, Om.I)(wm, Dm, function(mm, Tm, fm, Am, am) {
-          const [xm, wm] = Om.d[am - 1], Dm = (am, xm) => function(mm, Tm, fm) {
-            var Am;
-            const am = null === (Am = hm.i[mm]) || void 0 === Am ? void 0 : Am.meta;
-            if (!am) return !1;
-            const xm = am.rootName,
-              wm = Im.has(xm) || Jm(mm);
-            if (!wm && !Km.has(xm) && xm !== qm) return !1;
-            const [Dm, im] = Om.d[am.rot - 1];
-            if (wm && Dm === -Tm && im === -fm) return !0;
-            if (Km.has(xm)) return Dm === Tm && im === fm;
-            const Rm = hm.i[mm].name;
-            return (xm === qm ? (0, Om.O)(Rm, Dm, im) : xm === jm ? [(0, Om.J)(Rm, Dm, im)] : []).some((mm => {
-              let [hm, Am] = mm;
-              return hm === -Tm && Am === -fm
+          return (0, pD.p)((0, ID.ab)(KD, !1))
+        }(DD, zD, wD, sD, cD) : (0, pD.p)((0, ID.O)(LD, cD, function(DD, zD, wD, sD, KD) {
+          const [rD, LD] = ID.c[KD - 1], cD = (KD, rD) => function(DD, zD, wD) {
+            var sD;
+            const KD = null === (sD = pD.l[DD]) || void 0 === sD ? void 0 : sD.meta;
+            if (!KD) return !1;
+            const rD = KD.rootName,
+              LD = MD.has(rD) || QD(DD);
+            if (!LD && !OD.has(rD) && rD !== GD) return !1;
+            const [cD, gD] = ID.c[KD.rot - 1];
+            if (LD && cD === -zD && gD === -wD) return !0;
+            if (OD.has(rD)) return cD === zD && gD === wD;
+            const RD = pD.l[DD].name;
+            return (rD === GD ? (0, ID._)(RD, cD, gD) : rD === hD ? [(0, ID.R)(RD, cD, gD)] : []).some((DD => {
+              let [pD, sD] = DD;
+              return pD === -zD && sD === -wD
             }))
-          }(mm(Tm + am, fm, Am + xm), am, xm), im = mm(Tm - xm, fm, Am - wm), Rm = nm(im) === qm && hm.i[im].meta.rot === am, pm = 1 === Om.c[nm(mm(Tm, fm - 1, Am))] || -1 === Om.c[nm(mm(Tm, fm + 1, Am))];
-          if (pm || Rm || Dm(-xm, -wm)) return null;
-          const Em = Dm(-wm, xm),
-            om = Dm(wm, -xm);
-          if (Em === om) return null;
-          return Em ? "turnLeft" : "turnRight"
-        }(mm, Tm, fm, Am, Dm)))
+          }(DD(zD + KD, wD, sD + rD), KD, rD), gD = DD(zD - rD, wD, sD - LD), RD = ED(gD) === GD && pD.l[gD].meta.rot === KD, AD = 1 === ID.b[ED(DD(zD, wD - 1, sD))] || -1 === ID.b[ED(DD(zD, wD + 1, sD))];
+          if (AD || RD || cD(-rD, -LD)) return null;
+          const UD = cD(-LD, rD),
+            fD = cD(LD, -rD);
+          if (UD === fD) return null;
+          return UD ? "turnLeft" : "turnRight"
+        }(DD, zD, wD, sD, cD)))
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = Zm, this.rootId = (0, hm.k)(zm.o)
+        this.reshapeOffsets = PD, this.rootId = (0, pD.p)(VD.l)
       }
-      handles(mm) {
-        var Tm;
-        return (null === (Tm = hm.i[mm]) || void 0 === Tm ? void 0 : Tm.meta.rootId) === this.rootId
+      handles(DD) {
+        var zD;
+        return (null === (zD = pD.l[DD]) || void 0 === zD ? void 0 : zD.meta.rootId) === this.rootId
       }
-      affects(mm) {
-        return this.handles(mm)
+      affects(DD) {
+        return this.handles(DD)
       }
-      shape(mm, Tm, fm, Am, am, xm) {
-        const wm = km(am);
-        return (0, hm.k)((Dm = wm.rot, null !== (im = xm ? this.reshapedHalf(mm, Tm, fm, Am, wm) : this.placedHalf(mm, Tm, fm, Am, wm.rot)) ? (0, zm.d)(zm.o, Dm, im) : 1 === Dm ? zm.o : `${zm.o}|meta|rot${Dm}`));
-        var Dm, im
+      shape(DD, zD, wD, sD, KD, rD) {
+        const LD = CD(KD);
+        return (0, pD.p)((cD = LD.rot, null !== (gD = rD ? this.reshapedHalf(DD, zD, wD, sD, LD) : this.placedHalf(DD, zD, wD, sD, LD.rot)) ? (0, VD.c)(VD.l, cD, gD) : 1 === cD ? VD.l : `${VD.l}|meta|rot${cD}`));
+        var cD, gD
       }
-      placedHalf(mm, Tm, fm, hm, Am) {
-        const [am, xm] = cm.c[Am];
-        for (const [wm, Dm] of [
+      placedHalf(DD, zD, wD, pD, sD) {
+        const [KD, rD] = XD.c[sD];
+        for (const [LD, cD] of [
             ["right", 1],
             ["left", -1]
           ]) {
-          const im = Tm + Dm * am,
-            Rm = hm + Dm * xm,
-            pm = bm(mm, im, fm, Rm);
-          if (null !== pm && pm.rot === Am && (null === pm.half || !Sm(mm, im, fm, Rm, pm))) return wm
+          const gD = zD + cD * KD,
+            RD = pD + cD * rD,
+            AD = xD(DD, gD, wD, RD);
+          if (null !== AD && AD.rot === sD && (null === AD.half || !TD(DD, gD, wD, RD, AD))) return LD
         }
         return null
       }
-      reshapedHalf(mm, Tm, fm, hm, Am) {
-        if (null !== Am.half && Sm(mm, Tm, fm, hm, Am)) return Am.half;
-        for (const am of ["right", "left"]) {
-          const [xm, wm] = (0, zm.k)(Am.rot, am), Dm = bm(mm, Tm + xm, fm, hm + wm);
-          if (null !== Dm && Dm.rot === Am.rot && Dm.half === zm.q[am]) return am
+      reshapedHalf(DD, zD, wD, pD, sD) {
+        if (null !== sD.half && TD(DD, zD, wD, pD, sD)) return sD.half;
+        for (const KD of ["right", "left"]) {
+          const [rD, LD] = (0, VD.i)(sD.rot, KD), cD = xD(DD, zD + rD, wD, pD + LD);
+          if (null !== cD && cD.rot === sD.rot && cD.half === VD.p[KD]) return KD
         }
         return null
       }
-    }, new em.d];
+    }, new bD.d];
 
-    function Gm(mm, Tm, fm, hm, Am) {
-      let am = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      for (const xm of Nm)
-        if (xm.handles(Am)) return xm.shape(mm, Tm, fm, hm, Am, am);
-      return Am
+    function dD(DD, zD, wD, pD, sD) {
+      let KD = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      for (const rD of jD)
+        if (rD.handles(sD)) return rD.shape(DD, zD, wD, pD, sD, KD);
+      return sD
     }
 
-    function Xm(mm) {
-      for (const hm of Nm) {
-        var Tm, fm;
-        if (hm.handles(mm)) return null !== (Tm = null === (fm = hm.placedBy) || void 0 === fm ? void 0 : fm.call(hm, mm)) && void 0 !== Tm ? Tm : null
+    function SD(DD) {
+      for (const pD of jD) {
+        var zD, wD;
+        if (pD.handles(DD)) return null !== (zD = null === (wD = pD.placedBy) || void 0 === wD ? void 0 : wD.call(pD, DD)) && void 0 !== zD ? zD : null
       }
       return null
     }
   },
-  38518: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => zm,
-      f: () => Km,
-      i: () => Im
+  38409: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => VD,
+      f: () => OD,
+      i: () => MD
     });
-    var hm = fm(9141),
-      Am = fm(9159),
-      am = fm(9231),
-      xm = fm(38521),
-      wm = fm(9222);
-    const Dm = (0, xm.I)("pipe"),
-      im = (0, xm.I)("tank"),
-      Rm = (0, xm.I)("port"),
-      pm = "Reactor Port";
+    var pD = wD(9198),
+      sD = wD(9220),
+      KD = wD(9271),
+      rD = wD(38413),
+      LD = wD(9264);
+    const cD = (0, rD.L)("pipe"),
+      gD = (0, rD.L)("tank"),
+      RD = (0, rD.L)("port"),
+      AD = "Reactor Port";
 
-    function Em(mm, Tm, fm) {
-      const hm = new Set([am.e, am.c, pm, ...Tm, ...fm, ...mm ? [xm.i] : []]);
+    function UD(DD, zD, wD) {
+      const pD = new Set([KD.f, KD.e, AD, ...zD, ...wD, ...DD ? [rD.o] : []]);
       return {
-        makers: new Set(Tm),
-        roots: hm
+        makers: new Set(zD),
+        roots: pD
       }
     }
-    const om = {
-        water: Em(!0, ["Condenser"], ["Centrifuge", "Synthesizer", xm.e]),
-        cryo: Em(!1, [xm.e], [])
+    const fD = {
+        water: UD(!0, ["Condenser"], ["Centrifuge", "Synthesizer", rD.e]),
+        cryo: UD(!1, [rD.e], [])
       },
-      Om = new Set([...om.water.roots, ...om.cryo.roots]),
-      Ym = {
+      ID = new Set([...fD.water.roots, ...fD.cryo.roots]),
+      BD = {
         nx: [-1, 0, 0],
         ny: [0, -1, 0],
         nz: [0, 0, -1],
@@ -500,127 +500,127 @@ export const modules = {
         py: [0, 1, 0],
         pz: [0, 0, 1]
       },
-      qm = Am.f.map((mm => Ym[mm])),
-      jm = qm.map((mm => {
-        let [Tm, fm, hm] = mm;
-        return xm.x.findIndex((mm => {
-          let [Am, am, xm] = mm;
-          return Am === Tm && am === fm && xm === hm
+      GD = sD.f.map((DD => BD[DD])),
+      hD = GD.map((DD => {
+        let [zD, wD, pD] = DD;
+        return rD.B.findIndex((DD => {
+          let [sD, KD, rD] = DD;
+          return sD === zD && KD === wD && rD === pD
         }))
       }));
 
-    function Vm(mm) {
-      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const fm = hm.i[mm],
-        Am = null === fm || void 0 === fm ? void 0 : fm.meta.rootName,
-        Em = om[Tm];
-      if (!Am || !Em.roots.has(Am)) return null;
-      if ((0, am.k)(Am)) return (0, xm.F)(fm.name) === Tm ? Dm : null;
-      if (Am === xm.i) return im;
-      if (Am === pm) return fm.name.endsWith("|Water") ? Rm : null;
-      const [Om, Ym] = wm.d[(fm.meta.rot || 1) - 1];
-      return (0, xm.I)(Em.makers.has(Am) ? "maker" : "user", [-Om, 0, -Ym])
+    function nD(DD) {
+      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const wD = pD.l[DD],
+        sD = null === wD || void 0 === wD ? void 0 : wD.meta.rootName,
+        UD = fD[zD];
+      if (!sD || !UD.roots.has(sD)) return null;
+      if ((0, KD.l)(sD)) return (0, rD.J)(wD.name) === zD ? cD : null;
+      if (sD === rD.o) return gD;
+      if (sD === AD) return wD.name.endsWith("|Water") ? RD : null;
+      const [ID, BD] = LD.c[(wD.meta.rot || 1) - 1];
+      return (0, rD.L)(UD.makers.has(sD) ? "maker" : "user", [-ID, 0, -BD])
     }
 
-    function Im(mm, Tm, fm, Am) {
-      let am = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+    function MD(DD, zD, wD, sD) {
+      let KD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
       const {
-        makers: wm
-      } = om[am];
-      return qm.some(((im, Rm) => {
-        var pm, Em;
-        let [om, Om, Ym] = im;
-        const qm = mm(Tm + om, fm + Om, Am + Ym),
-          Im = Vm(qm, am);
-        return null !== Im && wm.has(null !== (pm = null === (Em = hm.i[qm]) || void 0 === Em ? void 0 : Em.meta.rootName) && void 0 !== pm ? pm : "") && !(0, xm.L)(Dm, Im, jm[Rm])
+        makers: LD
+      } = fD[KD];
+      return GD.some(((gD, RD) => {
+        var AD, UD;
+        let [fD, ID, BD] = gD;
+        const GD = DD(zD + fD, wD + ID, sD + BD),
+          MD = nD(GD, KD);
+        return null !== MD && LD.has(null !== (AD = null === (UD = pD.l[GD]) || void 0 === UD ? void 0 : UD.meta.rootName) && void 0 !== AD ? AD : "") && !(0, rD.P)(cD, MD, hD[RD])
       }))
     }
 
-    function Km(mm) {
-      const Tm = hm.i[mm];
-      return Tm ? (0, xm.F)(Tm.name) : null
+    function OD(DD) {
+      const zD = pD.l[DD];
+      return zD ? (0, rD.J)(zD.name) : null
     }
-    let Qm = null;
+    let JD = null;
 
-    function nm(mm) {
-      if (!Qm) {
-        Qm = new Map;
-        for (const mm of ["water", "cryo"])
-          for (let Tm = 0; Tm < 64; Tm++)
-            for (const fm of [!1, !0]) Qm.set((0, am.l)(mm, Tm, fm), {
-              Qo: mm,
-              mask: Tm,
-              full: fm
+    function ED(DD) {
+      if (!JD) {
+        JD = new Map;
+        for (const DD of ["water", "cryo"])
+          for (let zD = 0; zD < 64; zD++)
+            for (const wD of [!1, !0]) JD.set((0, KD.m)(DD, zD, wD), {
+              Af: DD,
+              mask: zD,
+              full: wD
             })
       }
-      return Qm.get(mm)
+      return JD.get(DD)
     }
-    const Jm = new Map(Array.from({
-      length: am.g + 1
-    }, ((mm, Tm) => [(0, am.o)(Tm), Tm])));
+    const QD = new Map(Array.from({
+      length: KD.j + 1
+    }, ((DD, zD) => [(0, KD.p)(zD), zD])));
 
-    function cm(mm, Tm, fm, Am, am, xm) {
-      return qm.some(((wm, Dm) => {
-        var im, Rm, pm;
-        let [Em, om, Om] = wm;
-        if (0 === (xm >> Dm & 1)) return !1;
-        const Ym = null !== (im = null === (Rm = hm.i[mm(Tm + Em, fm + om, Am + Om)]) || void 0 === Rm ? void 0 : Rm.name) && void 0 !== im ? im : "",
-          qm = nm(Ym);
-        return qm ? qm.Qo === am && qm.full : (null !== (pm = function(mm) {
-          var Tm;
-          return null !== (Tm = Jm.get(mm)) && void 0 !== Tm ? Tm : null
-        }(Ym)) && void 0 !== pm ? pm : 0) > 0
+    function XD(DD, zD, wD, sD, KD, rD) {
+      return GD.some(((LD, cD) => {
+        var gD, RD, AD;
+        let [UD, fD, ID] = LD;
+        if (0 === (rD >> cD & 1)) return !1;
+        const BD = null !== (gD = null === (RD = pD.l[DD(zD + UD, wD + fD, sD + ID)]) || void 0 === RD ? void 0 : RD.name) && void 0 !== gD ? gD : "",
+          GD = ED(BD);
+        return GD ? GD.Af === KD && GD.full : (null !== (AD = function(DD) {
+          var zD;
+          return null !== (zD = QD.get(DD)) && void 0 !== zD ? zD : null
+        }(BD)) && void 0 !== AD ? AD : 0) > 0
       }))
     }
-    class zm {
+    class VD {
       constructor() {
-        this.reshapeOffsets = qm
+        this.reshapeOffsets = GD
       }
-      handles(mm) {
-        return null !== Km(mm)
+      handles(DD) {
+        return null !== OD(DD)
       }
-      affects(mm) {
-        var Tm, fm;
-        return Om.has(null !== (Tm = null === (fm = hm.i[mm]) || void 0 === fm ? void 0 : fm.meta.rootName) && void 0 !== Tm ? Tm : "")
+      affects(DD) {
+        var zD, wD;
+        return ID.has(null !== (zD = null === (wD = pD.l[DD]) || void 0 === wD ? void 0 : wD.meta.rootName) && void 0 !== zD ? zD : "")
       }
-      placedBy(mm) {
-        var Tm;
-        return (null === (Tm = hm.i[mm]) || void 0 === Tm ? void 0 : Tm.meta.rootName) === am.c ? am.e : null
+      placedBy(DD) {
+        var zD;
+        return (null === (zD = pD.l[DD]) || void 0 === zD ? void 0 : zD.meta.rootName) === KD.e ? KD.f : null
       }
-      shape(mm, Tm, fm, Am, wm, im) {
-        var Rm, pm, Em;
-        const om = null !== (Rm = null === (pm = hm.i[wm]) || void 0 === pm ? void 0 : pm.name) && void 0 !== Rm ? Rm : "",
-          Om = im || om !== am.e ? null !== (Em = (0, xm.F)(om)) && void 0 !== Em ? Em : "water" : function(mm, Tm, fm, hm) {
-            return qm.some(((Am, am) => {
-              let [wm, im, Rm] = Am;
-              const pm = Vm(mm(Tm + wm, fm + im, hm + Rm), "cryo");
-              return null !== pm && "port" !== pm.kind && (0, xm.L)(Dm, pm, jm[am])
+      shape(DD, zD, wD, sD, LD, gD) {
+        var RD, AD, UD;
+        const fD = null !== (RD = null === (AD = pD.l[LD]) || void 0 === AD ? void 0 : AD.name) && void 0 !== RD ? RD : "",
+          ID = gD || fD !== KD.f ? null !== (UD = (0, rD.J)(fD)) && void 0 !== UD ? UD : "water" : function(DD, zD, wD, pD) {
+            return GD.some(((sD, KD) => {
+              let [LD, gD, RD] = sD;
+              const AD = nD(DD(zD + LD, wD + gD, pD + RD), "cryo");
+              return null !== AD && "port" !== AD.kind && (0, rD.P)(cD, AD, hD[KD])
             })) ? "cryo" : "water"
-          }(mm, Tm, fm, Am),
-          Ym = function(mm, Tm, fm, hm) {
-            let Am = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              am = 0;
-            return qm.forEach(((wm, im) => {
-              let [Rm, pm, Em] = wm;
-              const om = Vm(mm(Tm + Rm, fm + pm, hm + Em), Am);
-              om && (0, xm.L)(Dm, om, jm[im]) && (am |= 1 << im)
-            })), am
-          }(mm, Tm, fm, Am, Om),
-          Im = im ? function(mm) {
-            var Tm;
-            return !0 === (null === (Tm = nm(mm)) || void 0 === Tm ? void 0 : Tm.full)
-          }(om) : cm(mm, Tm, fm, Am, Om, Ym);
-        return (0, hm.k)((0, am.l)(Om, Ym, Im))
+          }(DD, zD, wD, sD),
+          BD = function(DD, zD, wD, pD) {
+            let sD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              KD = 0;
+            return GD.forEach(((LD, gD) => {
+              let [RD, AD, UD] = LD;
+              const fD = nD(DD(zD + RD, wD + AD, pD + UD), sD);
+              fD && (0, rD.P)(cD, fD, hD[gD]) && (KD |= 1 << gD)
+            })), KD
+          }(DD, zD, wD, sD, ID),
+          MD = gD ? function(DD) {
+            var zD;
+            return !0 === (null === (zD = ED(DD)) || void 0 === zD ? void 0 : zD.full)
+          }(fD) : XD(DD, zD, wD, sD, ID, BD);
+        return (0, pD.p)((0, KD.m)(ID, BD, MD))
       }
     }
   },
-  38254: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => hm,
-      g: () => am
+  38151: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => pD,
+      c: () => KD
     });
-    const hm = ["Chest", "Loot Chest", "Moonstone Chest"],
-      Am = [{
+    const pD = ["Chest", "Loot Chest", "Moonstone Chest"],
+      sD = [{
         name: "Workbench",
         exactMatch: !0
       }, {
@@ -640,10 +640,10 @@ export const modules = {
         exactMatch: !1
       }];
 
-    function am(mm) {
-      return Am.find((Tm => Tm.exactMatch ? mm === Tm.name : mm.includes(Tm.name)))
+    function KD(DD) {
+      return sD.find((zD => zD.exactMatch ? DD === zD.name : DD.includes(zD.name)))
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

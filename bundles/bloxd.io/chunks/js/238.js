@@ -1,248 +1,248 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  37813: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => Am
+  37752: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => sD
     });
-    var hm = fm(37821);
-    class Am {
-      static GetPlanes(mm) {
-        const Tm = [];
-        for (let fm = 0; fm < 6; fm++) Tm.push(new hm.d(0, 0, 0, 0));
-        return Am.GetPlanesToRef(mm, Tm), Tm
+    var pD = wD(37754);
+    class sD {
+      static GetPlanes(DD) {
+        const zD = [];
+        for (let wD = 0; wD < 6; wD++) zD.push(new pD.e(0, 0, 0, 0));
+        return sD.GetPlanesToRef(DD, zD), zD
       }
-      static GetNearPlaneToRef(mm, Tm) {
-        const fm = mm.m;
-        Tm.normal.x = fm[3] + fm[2], Tm.normal.y = fm[7] + fm[6], Tm.normal.z = fm[11] + fm[10], Tm.d = fm[15] + fm[14], Tm.normalize()
+      static GetNearPlaneToRef(DD, zD) {
+        const wD = DD.m;
+        zD.normal.x = wD[3] + wD[2], zD.normal.y = wD[7] + wD[6], zD.normal.z = wD[11] + wD[10], zD.d = wD[15] + wD[14], zD.normalize()
       }
-      static GetFarPlaneToRef(mm, Tm) {
-        const fm = mm.m;
-        Tm.normal.x = fm[3] - fm[2], Tm.normal.y = fm[7] - fm[6], Tm.normal.z = fm[11] - fm[10], Tm.d = fm[15] - fm[14], Tm.normalize()
+      static GetFarPlaneToRef(DD, zD) {
+        const wD = DD.m;
+        zD.normal.x = wD[3] - wD[2], zD.normal.y = wD[7] - wD[6], zD.normal.z = wD[11] - wD[10], zD.d = wD[15] - wD[14], zD.normalize()
       }
-      static GetLeftPlaneToRef(mm, Tm) {
-        const fm = mm.m;
-        Tm.normal.x = fm[3] + fm[0], Tm.normal.y = fm[7] + fm[4], Tm.normal.z = fm[11] + fm[8], Tm.d = fm[15] + fm[12], Tm.normalize()
+      static GetLeftPlaneToRef(DD, zD) {
+        const wD = DD.m;
+        zD.normal.x = wD[3] + wD[0], zD.normal.y = wD[7] + wD[4], zD.normal.z = wD[11] + wD[8], zD.d = wD[15] + wD[12], zD.normalize()
       }
-      static GetRightPlaneToRef(mm, Tm) {
-        const fm = mm.m;
-        Tm.normal.x = fm[3] - fm[0], Tm.normal.y = fm[7] - fm[4], Tm.normal.z = fm[11] - fm[8], Tm.d = fm[15] - fm[12], Tm.normalize()
+      static GetRightPlaneToRef(DD, zD) {
+        const wD = DD.m;
+        zD.normal.x = wD[3] - wD[0], zD.normal.y = wD[7] - wD[4], zD.normal.z = wD[11] - wD[8], zD.d = wD[15] - wD[12], zD.normalize()
       }
-      static GetTopPlaneToRef(mm, Tm) {
-        const fm = mm.m;
-        Tm.normal.x = fm[3] - fm[1], Tm.normal.y = fm[7] - fm[5], Tm.normal.z = fm[11] - fm[9], Tm.d = fm[15] - fm[13], Tm.normalize()
+      static GetTopPlaneToRef(DD, zD) {
+        const wD = DD.m;
+        zD.normal.x = wD[3] - wD[1], zD.normal.y = wD[7] - wD[5], zD.normal.z = wD[11] - wD[9], zD.d = wD[15] - wD[13], zD.normalize()
       }
-      static GetBottomPlaneToRef(mm, Tm) {
-        const fm = mm.m;
-        Tm.normal.x = fm[3] + fm[1], Tm.normal.y = fm[7] + fm[5], Tm.normal.z = fm[11] + fm[9], Tm.d = fm[15] + fm[13], Tm.normalize()
+      static GetBottomPlaneToRef(DD, zD) {
+        const wD = DD.m;
+        zD.normal.x = wD[3] + wD[1], zD.normal.y = wD[7] + wD[5], zD.normal.z = wD[11] + wD[9], zD.d = wD[15] + wD[13], zD.normalize()
       }
-      static GetPlanesToRef(mm, Tm) {
-        Am.GetNearPlaneToRef(mm, Tm[0]), Am.GetFarPlaneToRef(mm, Tm[1]), Am.GetLeftPlaneToRef(mm, Tm[2]), Am.GetRightPlaneToRef(mm, Tm[3]), Am.GetTopPlaneToRef(mm, Tm[4]), Am.GetBottomPlaneToRef(mm, Tm[5])
+      static GetPlanesToRef(DD, zD) {
+        sD.GetNearPlaneToRef(DD, zD[0]), sD.GetFarPlaneToRef(DD, zD[1]), sD.GetLeftPlaneToRef(DD, zD[2]), sD.GetRightPlaneToRef(DD, zD[3]), sD.GetTopPlaneToRef(DD, zD[4]), sD.GetBottomPlaneToRef(DD, zD[5])
       }
-      static IsPointInFrustum(mm, Tm) {
-        for (let fm = 0; fm < 6; fm++)
-          if (Tm[fm].dotCoordinate(mm) < 0) return !1;
+      static IsPointInFrustum(DD, zD) {
+        for (let wD = 0; wD < 6; wD++)
+          if (zD[wD].dotCoordinate(DD) < 0) return !1;
         return !0
       }
     }
   },
-  37821: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => Am
+  37754: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => sD
     });
-    var hm = fm(37185);
-    class Am {
-      constructor(mm, Tm, fm, Am) {
-        this.normal = new hm.p(mm, Tm, fm), this.d = Am
+    var pD = wD(37079);
+    class sD {
+      constructor(DD, zD, wD, sD) {
+        this.normal = new pD.s(DD, zD, wD), this.d = sD
       }
-      ahm() {
+      QpD() {
         return [this.normal.x, this.normal.y, this.normal.z, this.d]
       }
       clone() {
-        return new Am(this.normal.x, this.normal.y, this.normal.z, this.d)
+        return new sD(this.normal.x, this.normal.y, this.normal.z, this.d)
       }
       getClassName() {
         return "Plane"
       }
       getHashCode() {
-        let mm = this.normal.getHashCode();
-        return mm = 397 * mm ^ this.d, mm
+        let DD = this.normal.getHashCode();
+        return DD = 397 * DD ^ this.d, DD
       }
       normalize() {
-        const mm = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let Tm = 0;
-        return 0 !== mm && (Tm = 1 / mm), this.normal.x *= Tm, this.normal.y *= Tm, this.normal.z *= Tm, this.d *= Tm, this
+        const DD = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
+        let zD = 0;
+        return 0 !== DD && (zD = 1 / DD), this.normal.x *= zD, this.normal.y *= zD, this.normal.z *= zD, this.d *= zD, this
       }
-      transform(mm) {
-        const Tm = Am._TmpMatrix;
-        mm.invertToRef(Tm);
-        const fm = Tm.m,
-          hm = this.normal.x,
-          am = this.normal.y,
-          xm = this.normal.z,
-          wm = this.d,
-          Dm = hm * fm[0] + am * fm[1] + xm * fm[2] + wm * fm[3],
-          im = hm * fm[4] + am * fm[5] + xm * fm[6] + wm * fm[7],
-          Rm = hm * fm[8] + am * fm[9] + xm * fm[10] + wm * fm[11],
-          pm = hm * fm[12] + am * fm[13] + xm * fm[14] + wm * fm[15];
-        return new Am(Dm, im, Rm, pm)
+      transform(DD) {
+        const zD = sD._TmpMatrix;
+        DD.invertToRef(zD);
+        const wD = zD.m,
+          pD = this.normal.x,
+          KD = this.normal.y,
+          rD = this.normal.z,
+          LD = this.d,
+          cD = pD * wD[0] + KD * wD[1] + rD * wD[2] + LD * wD[3],
+          gD = pD * wD[4] + KD * wD[5] + rD * wD[6] + LD * wD[7],
+          RD = pD * wD[8] + KD * wD[9] + rD * wD[10] + LD * wD[11],
+          AD = pD * wD[12] + KD * wD[13] + rD * wD[14] + LD * wD[15];
+        return new sD(cD, gD, RD, AD)
       }
-      dotCoordinate(mm) {
-        return this.normal.x * mm.x + this.normal.y * mm.y + this.normal.z * mm.z + this.d
+      dotCoordinate(DD) {
+        return this.normal.x * DD.x + this.normal.y * DD.y + this.normal.z * DD.z + this.d
       }
-      copyFromPoints(mm, Tm, fm) {
-        const hm = Tm.x - mm.x,
-          Am = Tm.y - mm.y,
-          am = Tm.z - mm.z,
-          xm = fm.x - mm.x,
-          wm = fm.y - mm.y,
-          Dm = fm.z - mm.z,
-          im = Am * Dm - am * wm,
-          Rm = am * xm - hm * Dm,
-          pm = hm * wm - Am * xm,
-          Em = Math.sqrt(im * im + Rm * Rm + pm * pm);
-        let om;
-        return om = 0 !== Em ? 1 / Em : 0, this.normal.x = im * om, this.normal.y = Rm * om, this.normal.z = pm * om, this.d = -(this.normal.x * mm.x + this.normal.y * mm.y + this.normal.z * mm.z), this
+      copyFromPoints(DD, zD, wD) {
+        const pD = zD.x - DD.x,
+          sD = zD.y - DD.y,
+          KD = zD.z - DD.z,
+          rD = wD.x - DD.x,
+          LD = wD.y - DD.y,
+          cD = wD.z - DD.z,
+          gD = sD * cD - KD * LD,
+          RD = KD * rD - pD * cD,
+          AD = pD * LD - sD * rD,
+          UD = Math.sqrt(gD * gD + RD * RD + AD * AD);
+        let fD;
+        return fD = 0 !== UD ? 1 / UD : 0, this.normal.x = gD * fD, this.normal.y = RD * fD, this.normal.z = AD * fD, this.d = -(this.normal.x * DD.x + this.normal.y * DD.y + this.normal.z * DD.z), this
       }
-      isFrontFacingTo(mm, Tm) {
-        return hm.p.Dot(this.normal, mm) <= Tm
+      isFrontFacingTo(DD, zD) {
+        return pD.s.Dot(this.normal, DD) <= zD
       }
-      signedDistanceTo(mm) {
-        return hm.p.Dot(mm, this.normal) + this.d
+      signedDistanceTo(DD) {
+        return pD.s.Dot(DD, this.normal) + this.d
       }
-      static FromArray(mm) {
-        return new Am(mm[0], mm[1], mm[2], mm[3])
+      static FromArray(DD) {
+        return new sD(DD[0], DD[1], DD[2], DD[3])
       }
-      static FromPoints(mm, Tm, fm) {
-        const hm = new Am(0, 0, 0, 0);
-        return hm.copyFromPoints(mm, Tm, fm), hm
+      static FromPoints(DD, zD, wD) {
+        const pD = new sD(0, 0, 0, 0);
+        return pD.copyFromPoints(DD, zD, wD), pD
       }
-      static FromPositionAndNormal(mm, Tm) {
-        const fm = new Am(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(mm, Tm, fm)
+      static FromPositionAndNormal(DD, zD) {
+        const wD = new sD(0, 0, 0, 0);
+        return this.FromPositionAndNormalToRef(DD, zD, wD)
       }
-      static FromPositionAndNormalToRef(mm, Tm, fm) {
-        return fm.normal.ZZ(Tm), fm.normal.normalize(), fm.d = -mm.dot(fm.normal), fm
+      static FromPositionAndNormalToRef(DD, zD, wD) {
+        return wD.normal.pC(zD), wD.normal.normalize(), wD.d = -DD.dot(wD.normal), wD
       }
-      static SignedDistanceToPlaneFromPositionAndNormal(mm, Tm, fm) {
-        const Am = -(Tm.x * mm.x + Tm.y * mm.y + Tm.z * mm.z);
-        return hm.p.Dot(fm, Tm) + Am
+      static SignedDistanceToPlaneFromPositionAndNormal(DD, zD, wD) {
+        const sD = -(zD.x * DD.x + zD.y * DD.y + zD.z * DD.z);
+        return pD.s.Dot(wD, zD) + sD
       }
     }
-    Am._TmpMatrix = hm.e.Identity()
+    sD._TmpMatrix = pD.e.Identity()
   },
-  38764: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => am
+  38658: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => KD
     });
-    var hm = fm(38766);
-    const Am = (mm, Tm, fm) => mm ? mm.getClassName && "Mesh" === mm.getClassName() ? null : !mm.getClassName || "SubMesh" !== mm.getClassName() && "PhysicsBody" !== mm.getClassName() ? mm.clone ? mm.clone() : Array.isArray(mm) ? mm.slice() : fm && "object" === typeof mm ? {
-      ...mm
-    } : null : mm.clone(Tm) : null;
-    class am {
-      static DeepCopy(mm, Tm, fm, am) {
-        let xm = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const wm = function(mm) {
-          const Tm = [];
+    var pD = wD(38662);
+    const sD = (DD, zD, wD) => DD ? DD.getClassName && "Mesh" === DD.getClassName() ? null : !DD.getClassName || "SubMesh" !== DD.getClassName() && "PhysicsBody" !== DD.getClassName() ? DD.clone ? DD.clone() : Array.isArray(DD) ? DD.slice() : wD && "object" === typeof DD ? {
+      ...DD
+    } : null : DD.clone(zD) : null;
+    class KD {
+      static DeepCopy(DD, zD, wD, KD) {
+        let rD = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const LD = function(DD) {
+          const zD = [];
           do {
-            const fm = Object.getOwnPropertyNames(mm);
-            for (const mm of fm) - 1 === Tm.indexOf(mm) && Tm.push(mm)
-          } while (mm = Object.getPrototypeOf(mm));
-          return Tm
-        }(mm);
-        for (const im of wm) {
-          if ("_" === im[0] && (!am || -1 === am.indexOf(im))) continue;
-          if (im.endsWith("Observable")) continue;
-          if (fm && -1 !== fm.indexOf(im)) continue;
-          const wm = mm[im],
-            Rm = typeof wm;
-          if ("function" !== Rm) try {
-            if ("object" === Rm)
-              if (wm instanceof Uint8Array) Tm[im] = Uint8Array.from(wm);
-              else if (wm instanceof Array) {
-              if (Tm[im] = [], wm.length > 0)
-                if ("object" == typeof wm[0])
-                  for (let mm = 0; mm < wm.length; mm++) {
-                    const fm = Am(wm[mm], Tm, xm); - 1 === Tm[im].indexOf(fm) && Tm[im].push(fm)
-                  } else Tm[im] = wm.slice(0)
-            } else Tm[im] = Am(wm, Tm, xm);
-            else Tm[im] = wm
-          } catch (Dm) {
-            hm.b.Warn(Dm.message)
+            const wD = Object.getOwnPropertyNames(DD);
+            for (const DD of wD) - 1 === zD.indexOf(DD) && zD.push(DD)
+          } while (DD = Object.getPrototypeOf(DD));
+          return zD
+        }(DD);
+        for (const gD of LD) {
+          if ("_" === gD[0] && (!KD || -1 === KD.indexOf(gD))) continue;
+          if (gD.endsWith("Observable")) continue;
+          if (wD && -1 !== wD.indexOf(gD)) continue;
+          const LD = DD[gD],
+            RD = typeof LD;
+          if ("function" !== RD) try {
+            if ("object" === RD)
+              if (LD instanceof Uint8Array) zD[gD] = Uint8Array.from(LD);
+              else if (LD instanceof Array) {
+              if (zD[gD] = [], LD.length > 0)
+                if ("object" == typeof LD[0])
+                  for (let DD = 0; DD < LD.length; DD++) {
+                    const wD = sD(LD[DD], zD, rD); - 1 === zD[gD].indexOf(wD) && zD[gD].push(wD)
+                  } else zD[gD] = LD.slice(0)
+            } else zD[gD] = sD(LD, zD, rD);
+            else zD[gD] = LD
+          } catch (cD) {
+            pD.d.Warn(cD.message)
           }
         }
       }
     }
   },
-  37970: (mm, Tm, fm) => {
-    function hm() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (mm => {
-        const Tm = 16 * Math.random() | 0;
-        return ("x" === mm ? Tm : 3 & Tm | 8).toString(16)
+  37891: (DD, zD, wD) => {
+    function pD() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (DD => {
+        const zD = 16 * Math.random() | 0;
+        return ("x" === DD ? zD : 3 & zD | 8).toString(16)
       }))
     }
-    fm.d(Tm, {
-      c: () => hm
+    wD.d(zD, {
+      c: () => pD
     })
   },
-  38766: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => hm
+  38662: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => pD
     });
-    class hm {
-      static _CheckLimit(mm, Tm) {
-        let fm = hm._LogLimitOutputs[mm];
-        return fm ? fm.current++ : (fm = {
-          limit: Tm,
+    class pD {
+      static _CheckLimit(DD, zD) {
+        let wD = pD._LogLimitOutputs[DD];
+        return wD ? wD.current++ : (wD = {
+          limit: zD,
           current: 1
-        }, hm._LogLimitOutputs[mm] = fm), fm.current <= fm.limit
+        }, pD._LogLimitOutputs[DD] = wD), wD.current <= wD.limit
       }
-      static _GenerateLimitMessage(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const fm = hm._LogLimitOutputs[mm];
-        if (!fm || !hm.MessageLimitReached) return;
-        const Am = this._Levels[Tm];
-        fm.current === fm.limit && hm[Am.name](hm.MessageLimitReached.replace(/%LIMIT%/g, "" + fm.limit).replace(/%TYPE%/g, Am.name ?? ""))
+      static _GenerateLimitMessage(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const wD = pD._LogLimitOutputs[DD];
+        if (!wD || !pD.MessageLimitReached) return;
+        const sD = this._Levels[zD];
+        wD.current === wD.limit && pD[sD.name](pD.MessageLimitReached.replace(/%LIMIT%/g, "" + wD.limit).replace(/%TYPE%/g, sD.name ?? ""))
       }
-      static _AddLogEntry(mm) {
-        hm._LogCache = mm + hm._LogCache, hm.OnNewCacheEntry && hm.OnNewCacheEntry(mm)
+      static _AddLogEntry(DD) {
+        pD._LogCache = DD + pD._LogCache, pD.OnNewCacheEntry && pD.OnNewCacheEntry(DD)
       }
-      static _FormatMessage(mm) {
-        const Tm = mm => mm < 10 ? "0" + mm : "" + mm,
-          fm = new Date;
-        return "[" + Tm(fm.getHours()) + ":" + Tm(fm.getMinutes()) + ":" + Tm(fm.getSeconds()) + "]: " + mm
+      static _FormatMessage(DD) {
+        const zD = DD => DD < 10 ? "0" + DD : "" + DD,
+          wD = new Date;
+        return "[" + zD(wD.getHours()) + ":" + zD(wD.getMinutes()) + ":" + zD(wD.getSeconds()) + "]: " + DD
       }
-      static _LogDisabled(mm, Tm) {}
+      static _LogDisabled(DD, zD) {}
       static _LogEnabled() {
-        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Tm = arguments.length > 1 ? arguments[1] : void 0,
-          fm = arguments.length > 2 ? arguments[2] : void 0;
-        const Am = Array.isArray(Tm) ? Tm[0] : Tm;
-        if (void 0 !== fm && !hm._CheckLimit(Am, fm)) return;
-        const am = hm._FormatMessage(Am),
-          xm = this._Levels[mm],
-          wm = Array.isArray(Tm) ? Tm.slice(1) : [];
-        xm.logFunc && xm.logFunc("BJS - " + am, ...wm);
-        const Dm = `<div style='color:${xm.color}'>${am}</div><br>`;
-        hm._AddLogEntry(Dm), hm._GenerateLimitMessage(Am, mm)
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          zD = arguments.length > 1 ? arguments[1] : void 0,
+          wD = arguments.length > 2 ? arguments[2] : void 0;
+        const sD = Array.isArray(zD) ? zD[0] : zD;
+        if (void 0 !== wD && !pD._CheckLimit(sD, wD)) return;
+        const KD = pD._FormatMessage(sD),
+          rD = this._Levels[DD],
+          LD = Array.isArray(zD) ? zD.slice(1) : [];
+        rD.logFunc && rD.logFunc("BJS - " + KD, ...LD);
+        const cD = `<div style='color:${rD.color}'>${KD}</div><br>`;
+        pD._AddLogEntry(cD), pD._GenerateLimitMessage(sD, DD)
       }
       static get LogCache() {
-        return hm._LogCache
+        return pD._LogCache
       }
       static ClearLogCache() {
-        hm._LogCache = "", hm._LogLimitOutputs = {}, hm.errorsCount = 0
+        pD._LogCache = "", pD._LogLimitOutputs = {}, pD.errorsCount = 0
       }
-      static set LogLevels(mm) {
-        hm.Log = hm._LogDisabled, hm.Warn = hm._LogDisabled, hm.Error = hm._LogDisabled;
-        const Tm = [hm.MessageLogLevel, hm.WarningLogLevel, hm.ErrorLogLevel];
-        for (const fm of Tm)
-          if ((mm & fm) === fm) {
-            const mm = this._Levels[fm];
-            hm[mm.name] = hm._LogEnabled.bind(hm, fm)
+      static set LogLevels(DD) {
+        pD.Log = pD._LogDisabled, pD.Warn = pD._LogDisabled, pD.Error = pD._LogDisabled;
+        const zD = [pD.MessageLogLevel, pD.WarningLogLevel, pD.ErrorLogLevel];
+        for (const wD of zD)
+          if ((DD & wD) === wD) {
+            const DD = this._Levels[wD];
+            pD[DD.name] = pD._LogEnabled.bind(pD, wD)
           }
       }
     }
-    hm.NoneLogLevel = 0, hm.MessageLogLevel = 1, hm.WarningLogLevel = 2, hm.ErrorLogLevel = 4, hm.AllLogLevel = 7, hm.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", hm._LogCache = "", hm._LogLimitOutputs = {}, hm._Levels = [{}, {
+    pD.NoneLogLevel = 0, pD.MessageLogLevel = 1, pD.WarningLogLevel = 2, pD.ErrorLogLevel = 4, pD.AllLogLevel = 7, pD.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", pD._LogCache = "", pD._LogLimitOutputs = {}, pD._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -254,8 +254,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], hm.errorsCount = 0, hm.Log = hm._LogEnabled.bind(hm, hm.MessageLogLevel), hm.Warn = hm._LogEnabled.bind(hm, hm.WarningLogLevel), hm.Error = hm._LogEnabled.bind(hm, hm.ErrorLogLevel)
+    }], pD.errorsCount = 0, pD.Log = pD._LogEnabled.bind(pD, pD.MessageLogLevel), pD.Warn = pD._LogEnabled.bind(pD, pD.WarningLogLevel), pD.Error = pD._LogEnabled.bind(pD, pD.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

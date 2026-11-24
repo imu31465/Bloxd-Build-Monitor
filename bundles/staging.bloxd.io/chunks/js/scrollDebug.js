@@ -1,25 +1,25 @@
 export const id = 52;
 export const ids = [52];
 export const modules = {
-  4646: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      MAX_LINES: () => wm,
-      MAX_SETTLE_MS: () => xm,
-      SETTLE_MS: () => am,
-      ScrollDebugLog: () => Km,
-      changeText: () => qm,
-      elementText: () => Vm,
-      fullStateText: () => Ym,
-      startScrollDebug: () => Qm,
-      touchedText: () => Im
+  4733: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      MAX_LINES: () => LD,
+      MAX_SETTLE_MS: () => rD,
+      SETTLE_MS: () => KD,
+      ScrollDebugLog: () => OD,
+      changeText: () => GD,
+      elementText: () => nD,
+      fullStateText: () => BD,
+      startScrollDebug: () => JD,
+      touchedText: () => MD
     });
-    var hm = fm(23),
-      Am = fm(2813);
-    const am = 300,
-      xm = 2e3,
-      wm = 40,
-      Dm = 2,
-      im = {
+    var pD = wD(20),
+      sD = wD(2811);
+    const KD = 300,
+      rD = 2e3,
+      LD = 40,
+      cD = 2,
+      gD = {
         vvOffsetTop: "vv offsetTop",
         vvOffsetLeft: "vv offsetLeft",
         vvPageTop: "vv pageTop",
@@ -31,142 +31,142 @@ export const modules = {
         scrollHeight: "scrollHeight",
         innerHeight: "innerHeight"
       },
-      Rm = Object.keys(im),
-      pm = new Set(["scrollHeight", "innerHeight"]);
+      RD = Object.keys(gD),
+      AD = new Set(["scrollHeight", "innerHeight"]);
 
-    function Em(mm, Tm) {
-      const fm = 10 ** Tm;
-      return Math.round(mm * fm) / fm
+    function UD(DD, zD) {
+      const wD = 10 ** zD;
+      return Math.round(DD * wD) / wD
     }
 
-    function om() {
-      const mm = window.visualViewport;
+    function fD() {
+      const DD = window.visualViewport;
       return {
-        vvOffsetTop: Em(mm.offsetTop, 1),
-        vvOffsetLeft: Em(mm.offsetLeft, 1),
-        vvPageTop: Em(mm.pageTop, 1),
-        vvPageLeft: Em(mm.pageLeft, 1),
-        vvHeight: Em(mm.height, 1),
-        vvScale: Em(mm.scale, 3),
-        scrollX: Em(window.scrollX, 1),
-        scrollY: Em(window.scrollY, 1),
+        vvOffsetTop: UD(DD.offsetTop, 1),
+        vvOffsetLeft: UD(DD.offsetLeft, 1),
+        vvPageTop: UD(DD.pageTop, 1),
+        vvPageLeft: UD(DD.pageLeft, 1),
+        vvHeight: UD(DD.height, 1),
+        vvScale: UD(DD.scale, 3),
+        scrollX: UD(window.scrollX, 1),
+        scrollY: UD(window.scrollY, 1),
         scrollHeight: document.documentElement.scrollHeight,
         innerHeight: window.innerHeight
       }
     }
 
-    function Om(mm, Tm) {
-      return `${im[mm]} ${Tm}`
+    function ID(DD, zD) {
+      return `${gD[DD]} ${zD}`
     }
 
-    function Ym(mm) {
-      return Rm.map((Tm => Om(Tm, String(mm[Tm])))).join(", ")
+    function BD(DD) {
+      return RD.map((zD => ID(zD, String(DD[zD])))).join(", ")
     }
 
-    function qm(mm, Tm, fm, hm) {
-      return Rm.flatMap((Am => {
-        const am = mm[Am] !== Tm[Am],
-          xm = fm[Am] < Math.min(mm[Am], Tm[Am]) || hm[Am] > Math.max(mm[Am], Tm[Am]);
-        if (!am && !xm && !pm.has(Am)) return [];
-        return [Om(Am, `${am?`${mm[Am]} -> ${Tm[Am]}`:String(Tm[Am])}${xm?` (via ${fm[Am]}..${hm[Am]})`:""}`)]
+    function GD(DD, zD, wD, pD) {
+      return RD.flatMap((sD => {
+        const KD = DD[sD] !== zD[sD],
+          rD = wD[sD] < Math.min(DD[sD], zD[sD]) || pD[sD] > Math.max(DD[sD], zD[sD]);
+        if (!KD && !rD && !AD.has(sD)) return [];
+        return [ID(sD, `${KD?`${DD[sD]} -> ${zD[sD]}`:String(zD[sD])}${rD?` (via ${wD[sD]}..${pD[sD]})`:""}`)]
       })).join(", ")
     }
 
-    function jm(mm, Tm, fm) {
-      return Object.fromEntries(Rm.map((hm => [hm, fm(mm[hm], Tm[hm])])))
+    function hD(DD, zD, wD) {
+      return Object.fromEntries(RD.map((pD => [pD, wD(DD[pD], zD[pD])])))
     }
 
-    function Vm(mm) {
-      var Tm;
-      const fm = (null !== (Tm = mm.getAttribute("class")) && void 0 !== Tm ? Tm : "").trim().replace(/\s+/g, ".").slice(0, 40);
-      return `${mm.tagName.toLowerCase()}${fm?`.${fm}`:""}`
+    function nD(DD) {
+      var zD;
+      const wD = (null !== (zD = DD.getAttribute("class")) && void 0 !== zD ? zD : "").trim().replace(/\s+/g, ".").slice(0, 40);
+      return `${DD.tagName.toLowerCase()}${wD?`.${wD}`:""}`
     }
 
-    function Im(mm, Tm) {
-      const fm = [];
-      for (let hm = mm.parentElement; null !== hm && fm.length < Dm; hm = hm.parentElement) {
-        const mm = Tm(hm);
-        "auto" !== mm && fm.push(`${mm} on ${Vm(hm)}`)
+    function MD(DD, zD) {
+      const wD = [];
+      for (let pD = DD.parentElement; null !== pD && wD.length < cD; pD = pD.parentElement) {
+        const DD = zD(pD);
+        "auto" !== DD && wD.push(`${DD} on ${nD(pD)}`)
       }
-      return `${Vm(mm)} touch-action ${Tm(mm)}${fm.length>0?` (${fm.join(", ")})`:""}`
+      return `${nD(DD)} touch-action ${zD(DD)}${wD.length>0?` (${wD.join(", ")})`:""}`
     }
-    class Km {
-      constructor(mm) {
-        this.deps = mm, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
-          const mm = this.deps.now(),
-            Tm = mm - this.lastEventMs;
-          if (Tm < am && mm - this.burstStartMs < xm) return void(this.timer = setTimeout(this.settle, am - Tm));
+    class OD {
+      constructor(DD) {
+        this.deps = DD, this.last = void 0, this.low = void 0, this.high = void 0, this.innerScrolled = null, this.burstInGame = !1, this.burstTouch = null, this.lines = 0, this.capped = !1, this.burstStartMs = 0, this.lastEventMs = 0, this.timer = null, this.settle = () => {
+          const DD = this.deps.now(),
+            zD = DD - this.lastEventMs;
+          if (zD < KD && DD - this.burstStartMs < rD) return void(this.timer = setTimeout(this.settle, KD - zD));
           this.timer = null;
-          const fm = this.deps.read(),
+          const wD = this.deps.read(),
             {
-              last: hm,
-              innerScrolled: Am,
-              burstTouch: Dm
+              last: pD,
+              innerScrolled: sD,
+              burstTouch: cD
             } = this,
-            im = jm(this.low, fm, Math.min),
-            pm = jm(this.high, fm, Math.max);
-          if (this.last = fm, this.low = fm, this.high = fm, this.innerScrolled = null, om = im, Om = pm, Rm.every((mm => om[mm] === Om[mm])) || !this.burstInGame || !this.deps.inGame()) return;
-          var om, Om;
-          if (this.lines === wm) return this.capped = !0, void this.deps.log(`further changes unlogged: ${wm} lines logged`);
+            gD = hD(this.low, wD, Math.min),
+            AD = hD(this.high, wD, Math.max);
+          if (this.last = wD, this.low = wD, this.high = wD, this.innerScrolled = null, fD = gD, ID = AD, RD.every((DD => fD[DD] === ID[DD])) || !this.burstInGame || !this.deps.inGame()) return;
+          var fD, ID;
+          if (this.lines === LD) return this.capped = !0, void this.deps.log(`further changes unlogged: ${LD} lines logged`);
           this.lines++;
-          const Ym = null === Dm ? "no touch yet" : `touch on ${Dm.text}, ${Math.round(this.burstStartMs-Dm.atMs)} ms before`,
-            Im = null === Am ? "" : `; inner scroll ${Vm(Am)} scrollTop ${Em(Am.scrollTop,1)}`;
-          this.deps.log(`moved over ${Math.round(mm-this.burstStartMs)} ms; ${Ym}${Im}: ${qm(hm,fm,im,pm)}`)
-        }, this.last = mm.read(), this.low = this.last, this.high = this.last, mm.log(`start: ${Ym(this.last)}`)
+          const BD = null === cD ? "no touch yet" : `touch on ${cD.text}, ${Math.round(this.burstStartMs-cD.atMs)} ms before`,
+            MD = null === sD ? "" : `; inner scroll ${nD(sD)} scrollTop ${UD(sD.scrollTop,1)}`;
+          this.deps.log(`moved over ${Math.round(DD-this.burstStartMs)} ms; ${BD}${MD}: ${GD(pD,wD,gD,AD)}`)
+        }, this.last = DD.read(), this.low = this.last, this.high = this.last, DD.log(`start: ${BD(this.last)}`)
       }
       moved() {
-        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         if (this.capped) return;
-        const Tm = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
-        if (null !== mm && (null === Tm || !mm.contains(Tm.target))) return;
-        const fm = this.deps.now();
-        this.lastEventMs = fm, null === this.timer && (this.burstStartMs = fm, this.burstInGame = this.deps.inGame(), this.burstTouch = Tm, this.timer = setTimeout(this.settle, am));
-        const hm = this.deps.read();
-        this.low = jm(this.low, hm, Math.min), this.high = jm(this.high, hm, Math.max), this.innerScrolled = null !== mm && void 0 !== mm ? mm : this.innerScrolled
+        const zD = null === this.timer ? this.deps.lastTouch() : this.burstTouch;
+        if (null !== DD && (null === zD || !DD.contains(zD.target))) return;
+        const wD = this.deps.now();
+        this.lastEventMs = wD, null === this.timer && (this.burstStartMs = wD, this.burstInGame = this.deps.inGame(), this.burstTouch = zD, this.timer = setTimeout(this.settle, KD));
+        const pD = this.deps.read();
+        this.low = hD(this.low, pD, Math.min), this.high = hD(this.high, pD, Math.max), this.innerScrolled = null !== DD && void 0 !== DD ? DD : this.innerScrolled
       }
     }
 
-    function Qm() {
-      let mm = null;
-      const Tm = new Km({
-        read: om,
-        inGame: () => "inGame" === hm.c.get("gameState"),
-        lastTouch: () => mm,
-        log: mm => {
-          (0, Am.g)("scroll", mm)
+    function JD() {
+      let DD = null;
+      const zD = new OD({
+        read: fD,
+        inGame: () => "inGame" === pD.e.get("gameState"),
+        lastTouch: () => DD,
+        log: DD => {
+          (0, sD.l)("scroll", DD)
         },
         now: () => performance.now()
       });
-      document.addEventListener("touchstart", (Tm => {
-        if (Tm.target instanceof Element) {
-          const fm = Im(Tm.target, (mm => getComputedStyle(mm).touchAction));
-          mm = {
-            target: Tm.target,
-            text: fm,
+      document.addEventListener("touchstart", (zD => {
+        if (zD.target instanceof Element) {
+          const wD = MD(zD.target, (DD => getComputedStyle(DD).touchAction));
+          DD = {
+            target: zD.target,
+            text: wD,
             atMs: performance.now()
           }
         }
       }), {
         capture: !0,
         passive: !0
-      }), document.addEventListener("scroll", (mm => {
-        Tm.moved(mm.target instanceof Element ? mm.target : null)
+      }), document.addEventListener("scroll", (DD => {
+        zD.moved(DD.target instanceof Element ? DD.target : null)
       }), {
         capture: !0,
         passive: !0
       });
-      const fm = () => {
-        Tm.moved()
+      const wD = () => {
+        zD.moved()
       };
-      window.addEventListener("resize", fm, {
+      window.addEventListener("resize", wD, {
         passive: !0
-      }), window.visualViewport.addEventListener("scroll", fm, {
+      }), window.visualViewport.addEventListener("scroll", wD, {
         passive: !0
-      }), window.visualViewport.addEventListener("resize", fm, {
+      }), window.visualViewport.addEventListener("resize", wD, {
         passive: !0
       })
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,105 +1,105 @@
 export const id = 309;
 export const ids = [309];
 export const modules = {
-  41799: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      _IESTextureLoader: () => wm
+  41686: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      _IESTextureLoader: () => LD
     });
-    var hm = fm(37208);
+    var pD = wD(37125);
 
-    function Am(mm) {
-      return mm.split(" ").filter((mm => "" !== mm)).map((mm => parseFloat(mm)))
+    function sD(DD) {
+      return DD.split(" ").filter((DD => "" !== DD)).map((DD => parseFloat(DD)))
     }
 
-    function am(mm, Tm, fm) {
-      for (; fm.length !== Tm;) {
-        const Tm = Am(mm.lines[mm.index++]);
-        fm.push(...Tm)
+    function KD(DD, zD, wD) {
+      for (; wD.length !== zD;) {
+        const zD = sD(DD.lines[DD.index++]);
+        wD.push(...zD)
       }
     }
 
-    function xm(mm, Tm, fm) {
-      let Am = 0,
-        am = 0,
-        xm = 0,
-        wm = 0,
-        Dm = 0,
-        im = 0;
-      for (let hm = 0; hm < mm.numberOfHorizontalAngles - 1; hm++)
-        if (fm < mm.horizontalAngles[hm + 1] || hm === mm.numberOfHorizontalAngles - 2) {
-          am = hm, xm = mm.horizontalAngles[hm], wm = mm.horizontalAngles[hm + 1];
+    function rD(DD, zD, wD) {
+      let sD = 0,
+        KD = 0,
+        rD = 0,
+        LD = 0,
+        cD = 0,
+        gD = 0;
+      for (let pD = 0; pD < DD.numberOfHorizontalAngles - 1; pD++)
+        if (wD < DD.horizontalAngles[pD + 1] || pD === DD.numberOfHorizontalAngles - 2) {
+          KD = pD, rD = DD.horizontalAngles[pD], LD = DD.horizontalAngles[pD + 1];
           break
-        } for (let hm = 0; hm < mm.numberOfVerticalAngles - 1; hm++)
-        if (Tm < mm.verticalAngles[hm + 1] || hm === mm.numberOfVerticalAngles - 2) {
-          Am = hm, Dm = mm.verticalAngles[hm], im = mm.verticalAngles[hm + 1];
+        } for (let pD = 0; pD < DD.numberOfVerticalAngles - 1; pD++)
+        if (zD < DD.verticalAngles[pD + 1] || pD === DD.numberOfVerticalAngles - 2) {
+          sD = pD, cD = DD.verticalAngles[pD], gD = DD.verticalAngles[pD + 1];
           break
-        } const Rm = wm - xm,
-        pm = im - Dm;
-      if (0 === pm) return 0;
-      const Em = 0 === Rm ? 0 : (fm - xm) / Rm,
-        om = (Tm - Dm) / pm,
-        Om = 0 === Rm ? am : am + 1,
-        Ym = (0, hm.Lerp)(mm.candelaValues[am][Am], mm.candelaValues[Om][Am], Em),
-        qm = (0, hm.Lerp)(mm.candelaValues[am][Am + 1], mm.candelaValues[Om][Am + 1], Em);
-      return (0, hm.Lerp)(Ym, qm, om)
+        } const RD = LD - rD,
+        AD = gD - cD;
+      if (0 === AD) return 0;
+      const UD = 0 === RD ? 0 : (wD - rD) / RD,
+        fD = (zD - cD) / AD,
+        ID = 0 === RD ? KD : KD + 1,
+        BD = (0, pD.Lerp)(DD.candelaValues[KD][sD], DD.candelaValues[ID][sD], UD),
+        GD = (0, pD.Lerp)(DD.candelaValues[KD][sD + 1], DD.candelaValues[ID][sD + 1], UD);
+      return (0, pD.Lerp)(BD, GD, fD)
     }
-    class wm {
+    class LD {
       constructor() {
         this.supportCascades = !1
       }
       loadCubeData() {
         throw ".ies not supported in Cube."
       }
-      loadData(mm, Tm, fm) {
-        const hm = function(mm) {
-          const Tm = {
-              lines: new TextDecoder("utf-8").decode(mm).split("\n"),
+      loadData(DD, zD, wD) {
+        const pD = function(DD) {
+          const zD = {
+              lines: new TextDecoder("utf-8").decode(DD).split("\n"),
               index: 0
             },
-            fm = {
-              version: Tm.lines[0],
+            wD = {
+              version: zD.lines[0],
               candelaValues: [],
               horizontalAngles: [],
               verticalAngles: [],
               numberOfHorizontalAngles: 0,
               numberOfVerticalAngles: 0
             };
-          for (Tm.index = 1; Tm.lines.length > 0 && !Tm.lines[Tm.index].includes("TILT=");) Tm.index++;
-          Tm.lines[Tm.index].includes("INCLUDE"), Tm.index++;
-          const hm = Am(Tm.lines[Tm.index++]);
-          fm.numberOfLights = hm[0], fm.lumensPerLamp = hm[1], fm.numberOfVerticalAngles = hm[3], fm.numberOfHorizontalAngles = hm[4], fm.photometricType = hm[5], fm.unitsType = hm[6], fm.width = hm[7], fm.length = hm[8], fm.height = hm[9], Tm.index++;
-          for (let Am = 0; Am < fm.numberOfHorizontalAngles; Am++) fm.candelaValues[Am] = [];
-          am(Tm, fm.numberOfVerticalAngles, fm.verticalAngles), am(Tm, fm.numberOfHorizontalAngles, fm.horizontalAngles);
-          for (let Am = 0; Am < fm.numberOfHorizontalAngles; Am++) am(Tm, fm.numberOfVerticalAngles, fm.candelaValues[Am]);
-          let wm = -1;
-          for (let Am = 0; Am < fm.numberOfHorizontalAngles; Am++)
-            for (let mm = 0; mm < fm.numberOfVerticalAngles; mm++) wm = Math.max(wm, fm.candelaValues[Am][mm]);
-          if (wm > 0)
-            for (let Am = 0; Am < fm.numberOfHorizontalAngles; Am++)
-              for (let mm = 0; mm < fm.numberOfVerticalAngles; mm++) fm.candelaValues[Am][mm] /= wm;
-          const Dm = 180,
-            im = 360,
-            Rm = new Float32Array(64800),
-            pm = fm.horizontalAngles[0],
-            Em = fm.horizontalAngles[fm.numberOfHorizontalAngles - 1];
-          for (let Am = 0; Am < 64800; Am++) {
-            let mm = Am % im;
-            const Tm = Math.floor(Am / im);
-            Em - pm !== 0 && (mm < pm || mm >= Em) && (mm %= 2 * Em, mm > Em && (mm = 2 * Em - mm)), Rm[Tm + mm * Dm] = xm(fm, Tm, mm)
+          for (zD.index = 1; zD.lines.length > 0 && !zD.lines[zD.index].includes("TILT=");) zD.index++;
+          zD.lines[zD.index].includes("INCLUDE"), zD.index++;
+          const pD = sD(zD.lines[zD.index++]);
+          wD.numberOfLights = pD[0], wD.lumensPerLamp = pD[1], wD.numberOfVerticalAngles = pD[3], wD.numberOfHorizontalAngles = pD[4], wD.photometricType = pD[5], wD.unitsType = pD[6], wD.width = pD[7], wD.length = pD[8], wD.height = pD[9], zD.index++;
+          for (let sD = 0; sD < wD.numberOfHorizontalAngles; sD++) wD.candelaValues[sD] = [];
+          KD(zD, wD.numberOfVerticalAngles, wD.verticalAngles), KD(zD, wD.numberOfHorizontalAngles, wD.horizontalAngles);
+          for (let sD = 0; sD < wD.numberOfHorizontalAngles; sD++) KD(zD, wD.numberOfVerticalAngles, wD.candelaValues[sD]);
+          let LD = -1;
+          for (let sD = 0; sD < wD.numberOfHorizontalAngles; sD++)
+            for (let DD = 0; DD < wD.numberOfVerticalAngles; DD++) LD = Math.max(LD, wD.candelaValues[sD][DD]);
+          if (LD > 0)
+            for (let sD = 0; sD < wD.numberOfHorizontalAngles; sD++)
+              for (let DD = 0; DD < wD.numberOfVerticalAngles; DD++) wD.candelaValues[sD][DD] /= LD;
+          const cD = 180,
+            gD = 360,
+            RD = new Float32Array(64800),
+            AD = wD.horizontalAngles[0],
+            UD = wD.horizontalAngles[wD.numberOfHorizontalAngles - 1];
+          for (let sD = 0; sD < 64800; sD++) {
+            let DD = sD % gD;
+            const zD = Math.floor(sD / gD);
+            UD - AD !== 0 && (DD < AD || DD >= UD) && (DD %= 2 * UD, DD > UD && (DD = 2 * UD - DD)), RD[zD + DD * cD] = rD(wD, zD, DD)
           }
           return {
             width: 180,
             height: 1,
-            data: Rm
+            data: RD
           }
-        }(new Uint8Array(mm.buffer, mm.byteOffset, mm.byteLength));
-        fm(hm.width, hm.height, !!Tm.useMipMaps, !1, (() => {
-          const mm = Tm.dO();
-          Tm.type = 1, Tm.format = 6, Tm._gammaSpace = !1, mm._uploadDataToTextureDirectly(Tm, hm.data)
+        }(new Uint8Array(DD.buffer, DD.byteOffset, DD.byteLength));
+        wD(pD.width, pD.height, !!zD.useMipMaps, !1, (() => {
+          const DD = zD.iI();
+          zD.type = 1, zD.format = 6, zD._gammaSpace = !1, DD._uploadDataToTextureDirectly(zD, pD.data)
         }))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

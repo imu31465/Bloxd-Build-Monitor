@@ -1,80 +1,80 @@
 export const id = 249;
 export const ids = [249];
 export const modules = {
-  39909: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      playDocsSound: () => wm
+  39736: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      playDocsSound: () => LD
     });
-    var hm = fm(4800),
-      Am = fm(36846),
-      am = fm(1214);
-    const xm = new Map;
+    var pD = wD(4875),
+      sD = wD(36719),
+      KD = wD(1211);
+    const rD = new Map;
 
-    function wm(mm, Tm, fm, wm, Dm) {
-      let im, Rm = null,
-        pm = 0,
-        Em = 0;
-      if (Tm) im = new hm.Howl({
-        src: [`${am.clientSideServerUrls.staticUrl}/sounds/music/${mm}.mp3`],
+    function LD(DD, zD, wD, LD, cD) {
+      let gD, RD = null,
+        AD = 0,
+        UD = 0;
+      if (zD) gD = new pD.Howl({
+        src: [`${KD.clientSideServerUrls.staticUrl}/sounds/music/${DD}.mp3`],
         html5: !0,
-        volume: fm
+        volume: wD
       });
       else {
-        var om;
-        Rm = (0, Am.j)(mm);
-        const Tm = (0, Am.h)(Rm),
-          fm = null !== (om = Tm.sprite[mm]) && void 0 !== om ? om : null;
-        if (!fm) throw new Error(`Docs sound ${mm} is not in sprite sheet ${Rm}`);
-        pm = fm[0] / 1e3, Em = fm[1] / 1e3, im = xm.get(Rm), im || (im = new hm.Howl({
-          ...Tm,
+        var fD;
+        RD = (0, sD.l)(DD);
+        const zD = (0, sD.i)(RD),
+          wD = null !== (fD = zD.sprite[DD]) && void 0 !== fD ? fD : null;
+        if (!wD) throw new Error(`Docs sound ${DD} is not in sprite sheet ${RD}`);
+        AD = wD[0] / 1e3, UD = wD[1] / 1e3, gD = rD.get(RD), gD || (gD = new pD.Howl({
+          ...zD,
           volume: 1
-        }), xm.set(Rm, im))
+        }), rD.set(RD, gD))
       }
-      const Om = Tm ? im.play() : im.play(mm);
-      im.volume(fm, Om), wm > 0 && im.seek(pm + wm, Om);
-      const Ym = () => Tm ? im.duration() : Em;
-      let qm = !1;
-      const jm = mm => {
-          qm || (qm = !0, im.off("play", Vm, Om), im.off("end", Im, Om), im.off("loaderror", Qm), im.off("playerror", Km, Om), Tm && im.unload(), Dm.onEnd(mm))
+      const ID = zD ? gD.play() : gD.play(DD);
+      gD.volume(wD, ID), LD > 0 && gD.seek(AD + LD, ID);
+      const BD = () => zD ? gD.duration() : UD;
+      let GD = !1;
+      const hD = DD => {
+          GD || (GD = !0, gD.off("play", nD, ID), gD.off("end", MD, ID), gD.off("loaderror", JD), gD.off("playerror", OD, ID), zD && gD.unload(), cD.onEnd(DD))
         },
-        Vm = () => {
-          Dm.onPlay(Ym())
+        nD = () => {
+          cD.onPlay(BD())
         },
-        Im = () => {
-          jm(!1)
+        MD = () => {
+          hD(!1)
         },
-        Km = (Tm, fm) => {
-          console.error(`Could not play docs sound ${mm}`, fm), jm(!0)
+        OD = (zD, wD) => {
+          console.error(`Could not play docs sound ${DD}`, wD), hD(!0)
         },
-        Qm = (mm, Tm) => {
-          null !== Rm && xm.get(Rm) === im && (xm.delete(Rm), im.unload()), Km(mm, Tm)
+        JD = (DD, zD) => {
+          null !== RD && rD.get(RD) === gD && (rD.delete(RD), gD.unload()), OD(DD, zD)
         };
-      return im.on("play", Vm, Om), im.once("end", Im, Om), im.once("loaderror", Qm), im.once("playerror", Km, Om), {
+      return gD.on("play", nD, ID), gD.once("end", MD, ID), gD.once("loaderror", JD), gD.once("playerror", OD, ID), {
         pause: () => {
-          im.pause(Om)
+          gD.pause(ID)
         },
         resume: () => {
-          im.play(Om)
+          gD.play(ID)
         },
-        seek: mm => {
-          const Tm = Ym(),
-            fm = Math.max(mm, 0);
-          im.seek(pm + (Tm > 0 ? Math.min(fm, Tm) : fm), Om)
+        seek: DD => {
+          const zD = BD(),
+            wD = Math.max(DD, 0);
+          gD.seek(AD + (zD > 0 ? Math.min(wD, zD) : wD), ID)
         },
-        rV: () => {
-          const mm = im.seek(Om);
-          return "number" === typeof mm ? Math.max(0, mm - pm) : 0
+        PJ: () => {
+          const DD = gD.seek(ID);
+          return "number" === typeof DD ? Math.max(0, DD - AD) : 0
         },
-        getDuration: Ym,
-        setVolume: mm => {
-          im.volume(mm, Om)
+        getDuration: BD,
+        setVolume: DD => {
+          gD.volume(DD, ID)
         },
         stop: () => {
-          qm || (im.stop(Om), jm(!1))
+          GD || (gD.stop(ID), hD(!1))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

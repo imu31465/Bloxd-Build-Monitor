@@ -1,462 +1,462 @@
 export const id = 103;
 export const ids = [103];
 export const modules = {
-  4848: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => Em
+  4920: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => UD
     });
-    var hm = fm(1080),
-      Am = fm.n(hm),
-      am = fm(1089),
-      xm = fm(1345),
-      wm = fm(3505),
-      Dm = fm(135),
-      im = fm(3551),
-      Rm = fm(3537),
-      pm = fm(1135);
+    var pD = wD(1044),
+      sD = wD.n(pD),
+      KD = wD(1057),
+      rD = wD(1346),
+      LD = wD(3494),
+      cD = wD(128),
+      gD = wD(3535),
+      RD = wD(3521),
+      AD = wD(1096);
 
-    function Em(mm) {
+    function UD(DD) {
       let {
-        game: Tm
-      } = mm;
-      const fm = (0, Dm.g)() ? "large" : "small",
-        hm = (0, im.f)(Tm, fm),
-        Em = (0, wm.g)(hm),
-        om = void 0 !== Em.blurhash;
-      return (0, pm.jsxs)("div", {
+        game: zD
+      } = DD;
+      const wD = (0, cD.m)() ? "large" : "small",
+        pD = (0, gD.f)(zD, wD),
+        UD = (0, LD.c)(pD),
+        fD = void 0 !== UD.blurhash;
+      return (0, AD.jsxs)("div", {
         className: "SchematicImageContainer",
-        children: [Em.isLoading && !om && (0, pm.jsx)(xm.c, {
+        children: [UD.isLoading && !fD && (0, AD.jsx)(rD.e, {
           loaderType: "Secondary"
-        }), !Em.failed && (null !== Em.src || om) && (0, pm.jsx)("div", {
-          className: Am()("SchematicImage", Rm.j, {
-            SchematicImageFadeIn: Em.fadeIn && !om
+        }), !UD.failed && (null !== UD.src || fD) && (0, AD.jsx)("div", {
+          className: sD()("SchematicImage", RD.g, {
+            SchematicImageFadeIn: UD.fadeIn && !fD
           }),
-          style: (0, Rm.g)(Em),
-          children: (0, pm.jsx)(Rm.c, {
-            image: Em
+          style: (0, RD.e)(UD),
+          children: (0, AD.jsx)(RD.b, {
+            image: UD
           })
-        }), Em.failed && (0, pm.jsx)("div", {
+        }), UD.failed && (0, AD.jsx)("div", {
           className: "SchematicImageError",
-          children: (0, pm.jsx)(am.c, {
+          children: (0, AD.jsx)(KD.e, {
             name: "face-dizzy"
           })
         })]
       })
     }
   },
-  4976: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => qm
+  5063: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => GD
     });
-    var hm = fm(59),
-      Am = fm(1080),
-      am = fm.n(Am),
-      xm = fm(4904),
-      wm = fm(1345),
-      Dm = fm(1208),
-      im = fm(3151),
-      Rm = fm(3315),
-      pm = fm(1089),
-      Em = fm(3158),
-      om = fm(4980),
-      Om = fm(4993),
-      Ym = fm(1135);
+    var pD = wD(58),
+      sD = wD(1044),
+      KD = wD.n(sD),
+      rD = wD(4974),
+      LD = wD(1346),
+      cD = wD(1200),
+      gD = wD(3141),
+      RD = wD(3294),
+      AD = wD(1057),
+      UD = wD(3150),
+      fD = wD(5070),
+      ID = wD(5091),
+      BD = wD(1096);
 
-    function qm(mm) {
+    function GD(DD) {
       let {
-        folderName: Tm,
-        onTexturePackUpdated: Am,
-        disabled: qm = !1,
-        maxFileSizeMb: jm,
-        packOwner: Vm
-      } = mm;
+        folderName: zD,
+        onTexturePackUpdated: sD,
+        disabled: GD = !1,
+        maxFileSizeMb: hD,
+        packOwner: nD
+      } = DD;
       const {
-        t: Im
-      } = (0, Dm.A)(), [Km, Qm] = (0, hm.useState)(!1), [nm, Jm] = (0, hm.useState)(null), [cm, zm] = (0, hm.useState)(null), Zm = (0, hm.useRef)(null);
-      async function km(mm) {
-        Qm(!0);
+        t: MD
+      } = (0, cD.E)(), [OD, JD] = (0, pD.useState)(!1), [ED, QD] = (0, pD.useState)(null), [XD, VD] = (0, pD.useState)(null), PD = (0, pD.useRef)(null);
+      async function CD(DD) {
+        JD(!0);
         try {
-          const Tm = await (0, im.t)(mm);
-          if ("customGame" === Vm && (0, Rm.n)(Tm)) return void Jm(Im(Rm.c));
-          if (void 0 !== jm) {
-            const mm = JSON.stringify(Tm).length / 1048576;
-            if (mm > jm) return void Jm(Im("customTexturePack:packTooBig", {
-              size: mm.toFixed(1),
-              max: jm
+          const zD = await (0, gD.o)(DD);
+          if ("customGame" === nD && (0, RD.i)(zD)) return void QD(MD(RD.c));
+          if (void 0 !== hD) {
+            const DD = JSON.stringify(zD).length / 1048576;
+            if (DD > hD) return void QD(MD("customTexturePack:packTooBig", {
+              size: DD.toFixed(1),
+              max: hD
             }))
           }
-          Jm(null), zm(null), Am(Tm), Zm.current = Tm,
-            function(mm, Tm) {
-              const hm = mm.modelOverrides;
-              hm && Promise.all([fm.e(203), fm.e(202)]).then((() => fm(34348))).then((fm => {
+          QD(null), VD(null), sD(zD), PD.current = zD,
+            function(DD, zD) {
+              const pD = DD.modelOverrides;
+              pD && Promise.all([wD.e(203), wD.e(202)]).then((() => wD(34269))).then((wD => {
                 let {
-                  packDisplayName: Am,
-                  refusedPackModels: am,
-                  packModelSummary: xm
-                } = fm;
-                const wm = Am(mm.metaData);
-                Tm(xm(wm, am(wm, hm, !1)))
-              })).catch((mm => {
-                console.error("Checking the texture pack's models failed:", mm)
+                  packDisplayName: sD,
+                  refusedPackModels: KD,
+                  packModelSummary: rD
+                } = wD;
+                const LD = sD(DD.metaData);
+                zD(rD(LD, KD(LD, pD, !1)))
+              })).catch((DD => {
+                console.error("Checking the texture pack's models failed:", DD)
               }))
-            }(Tm, (mm => {
-              Zm.current === Tm && zm(mm)
+            }(zD, (DD => {
+              PD.current === zD && VD(DD)
             }))
-        } catch (Tm) {
-          if (Tm instanceof Em.c) {
-            const mm = "customTexturePack:invalidPack" !== Tm.translationKey || (0, Om.h)() ? Tm.translationKey : "customTexturePack:invalidPackZip";
-            Jm((0, om.j)(Im, mm, Tm.params))
-          } else console.error("Couldn't read the texture pack", Tm), Jm(Im("customTexturePack:errorTitle"))
+        } catch (zD) {
+          if (zD instanceof UD.c) {
+            const DD = "customTexturePack:invalidPack" !== zD.translationKey || (0, ID.h)() ? zD.translationKey : "customTexturePack:invalidPackZip";
+            QD((0, fD.i)(MD, DD, zD.params))
+          } else console.error("Couldn't read the texture pack", zD), QD(MD("customTexturePack:errorTitle"))
         } finally {
-          Qm(!1)
+          JD(!1)
         }
       }
       const {
-        getRootProps: bm,
-        getInputProps: Sm,
-        isDragActive: em,
-        open: Nm
-      } = (0, xm.e)({
-        onDrop: km,
+        getRootProps: xD,
+        getInputProps: TD,
+        isDragActive: bD,
+        open: jD
+      } = (0, rD.c)({
+        onDrop: CD,
         noClick: !0,
         noKeyboard: !0,
         useFsAccessApi: !1,
-        disabled: qm
+        disabled: GD
       });
-      return (0, Ym.jsxs)("div", {
+      return (0, BD.jsxs)("div", {
         className: "CustomTexturePackContainer",
-        children: [(0, Ym.jsxs)("div", {
+        children: [(0, BD.jsxs)("div", {
           className: "CustomTextureWarning",
-          children: [Im("settingsMenu:customTextureWarning"), ".", (0, Ym.jsx)("br", {}), Im("settingsMenu:viewDocumentation"), ":", " ", (0, Ym.jsx)("a", {
+          children: [MD("settingsMenu:customTextureWarning"), ".", (0, BD.jsx)("br", {}), MD("settingsMenu:viewDocumentation"), ":", " ", (0, BD.jsx)("a", {
             href: "https://github.com/Bloxdy/texturePacks",
             target: "_blank",
             rel: "noreferrer",
             children: "github.com/Bloxdy/texturePacks"
           })]
-        }), nm && (0, Ym.jsxs)("div", {
+        }), ED && (0, BD.jsxs)("div", {
           className: "CustomTextureError",
-          children: [Im("general:error"), ": ", nm]
-        }), cm && (0, Ym.jsx)("div", {
+          children: [MD("general:error"), ": ", ED]
+        }), XD && (0, BD.jsx)("div", {
           className: "CustomTextureError",
-          children: cm
-        }), (0, Ym.jsxs)("div", {
-          ...bm({
-            className: am()("CustomTextureFolderUpload", {
-              ActiveDrag: em,
-              Disabled: qm
+          children: XD
+        }), (0, BD.jsxs)("div", {
+          ...xD({
+            className: KD()("CustomTextureFolderUpload", {
+              ActiveDrag: bD,
+              Disabled: GD
             })
           }),
-          children: [(0, Ym.jsx)("input", {
-            ...Sm({
+          children: [(0, BD.jsx)("input", {
+            ...TD({
               webkitdirectory: "true"
             })
-          }), Km && (0, Ym.jsx)("div", {
+          }), OD && (0, BD.jsx)("div", {
             className: "CustomTextureFolderUploadLoading",
-            children: (0, Ym.jsx)(wm.c, {})
-          }), !Km && !em && Tm && (0, Ym.jsxs)(Ym.Fragment, {
-            children: [(0, Ym.jsx)("div", {
+            children: (0, BD.jsx)(LD.e, {})
+          }), !OD && !bD && zD && (0, BD.jsxs)(BD.Fragment, {
+            children: [(0, BD.jsx)("div", {
               className: "CustomTextureFolderUploadIcon Active",
-              children: (0, Ym.jsx)(pm.c, {
+              children: (0, BD.jsx)(AD.e, {
                 name: "folder-image"
               })
-            }), (0, Ym.jsx)("div", {
+            }), (0, BD.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions Active",
-              children: Tm
+              children: zD
             })]
-          }), !Km && (em || !Tm) && (0, Ym.jsxs)(Ym.Fragment, {
-            children: [(0, Ym.jsx)("div", {
+          }), !OD && (bD || !zD) && (0, BD.jsxs)(BD.Fragment, {
+            children: [(0, BD.jsx)("div", {
               className: "CustomTextureFolderUploadIcon",
-              children: (0, Ym.jsx)(pm.c, {
+              children: (0, BD.jsx)(AD.e, {
                 name: "up-from-bracket"
               })
-            }), (0, Ym.jsx)("div", {
+            }), (0, BD.jsx)("div", {
               className: "CustomTextureFolderUploadInstructions",
-              children: Im((0, Om.h)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
+              children: MD((0, ID.h)() ? "customTexturePack:dropHere" : "customTexturePack:chooseZipInstructions")
             })]
-          }), !Km && (0, Ym.jsx)(Om.e, {
-            disabled: qm,
-            openFolderPicker: Nm,
-            onFiles: mm => {
-              km(mm)
+          }), !OD && (0, BD.jsx)(ID.d, {
+            disabled: GD,
+            openFolderPicker: jD,
+            onFiles: DD => {
+              CD(DD)
             }
           })]
         })]
       })
     }
   },
-  4993: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => Rm,
-      h: () => im
+  5091: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => RD,
+      h: () => gD
     });
-    var hm = fm(59),
-      Am = fm(1454),
-      am = fm(1208),
-      xm = fm(105),
-      wm = fm(3139),
-      Dm = fm(1135);
+    var pD = wD(58),
+      sD = wD(1447),
+      KD = wD(1200),
+      rD = wD(103),
+      LD = wD(3128),
+      cD = wD(1096);
 
-    function im() {
-      return !(0, xm.isMobile)()
+    function gD() {
+      return !(0, rD.isMobile)()
     }
 
-    function Rm(mm) {
+    function RD(DD) {
       let {
-        disabled: Tm,
-        openFolderPicker: fm,
-        onFiles: xm
-      } = mm;
+        disabled: zD,
+        openFolderPicker: wD,
+        onFiles: rD
+      } = DD;
       const {
-        t: Rm
-      } = (0, am.A)(), pm = (0, hm.useRef)(null);
-      return (0, Dm.jsxs)("div", {
+        t: RD
+      } = (0, KD.E)(), AD = (0, pD.useRef)(null);
+      return (0, cD.jsxs)("div", {
         className: "PackPickButtons",
         "data-pad-mouse-only": !0,
-        children: [(0, Dm.jsx)("input", {
-          ref: pm,
+        children: [(0, cD.jsx)("input", {
+          ref: AD,
           type: "file",
           accept: ".zip,application/zip",
           hidden: !0,
-          onChange: function(mm) {
-            const Tm = Array.from(mm.target.files);
-            mm.target.value = "", xm(Tm)
+          onChange: function(DD) {
+            const zD = Array.from(DD.target.files);
+            DD.target.value = "", rD(zD)
           }
-        }), im() && (0, Dm.jsx)(Am.e, {
-          disabled: Tm,
-          onClick: fm,
-          children: Rm("general:chooseFolder")
-        }), (0, Dm.jsx)(Am.e, {
-          disabled: Tm,
+        }), gD() && (0, cD.jsx)(sD.f, {
+          disabled: zD,
+          onClick: wD,
+          children: RD("general:chooseFolder")
+        }), (0, cD.jsx)(sD.f, {
+          disabled: zD,
           onClick: () => {
-            (0, wm.e)(pm.current)
+            (0, LD.e)(AD.current)
           },
-          children: Rm("general:chooseZip")
+          children: RD("general:chooseZip")
         })]
       })
     }
   },
-  4954: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => Om,
-      i: () => Im,
-      m: () => Ym,
-      o: () => Vm
+  5021: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => ID,
+      c: () => MD,
+      e: () => BD,
+      g: () => nD
     });
-    var hm = fm(59),
-      Am = fm(4957),
-      am = fm(4304),
-      xm = fm(1362),
-      wm = fm(4970),
-      Dm = fm(1080),
-      im = fm.n(Dm),
-      Rm = fm(1354),
-      pm = fm(1713),
-      Em = fm(4974),
-      om = fm(1135);
+    var pD = wD(58),
+      sD = wD(5026),
+      KD = wD(4395),
+      rD = wD(1366),
+      LD = wD(5049),
+      cD = wD(1044),
+      gD = wD.n(cD),
+      RD = wD(1355),
+      AD = wD(1737),
+      UD = wD(5057),
+      fD = wD(1096);
 
-    function Om(mm) {
+    function ID(DD) {
       let {
-        label: Tm,
-        onClick: fm,
-        checked: hm,
-        circleInfoText: Am,
-        className: wm,
-        disabled: Dm,
-        note: Rm
-      } = mm;
-      return (0, om.jsxs)("div", {
-        "aria-disabled": Dm || void 0,
+        label: zD,
+        onClick: wD,
+        checked: pD,
+        circleInfoText: sD,
+        className: LD,
+        disabled: cD,
+        note: RD
+      } = DD;
+      return (0, fD.jsxs)("div", {
+        "aria-disabled": cD || void 0,
         "data-pad-focusable": !0,
-        className: im()("SettingBox CheckboxContainer", {
-          [wm]: wm,
-          SettingBoxDisabled: Dm
+        className: gD()("SettingBox CheckboxContainer", {
+          [LD]: LD,
+          SettingBoxDisabled: cD
         }),
         onClick: () => {
-          Dm || fm(!hm)
+          cD || wD(!pD)
         },
-        children: [(0, om.jsxs)("div", {
+        children: [(0, fD.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, om.jsx)("label", {
+          children: [(0, fD.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, om.jsx)(am.b, {
+            children: (0, fD.jsx)(KD.d, {
               className: "SettingsCheckbox",
-              checked: hm,
-              disabled: Dm,
+              checked: pD,
+              disabled: cD,
               onChange: () => {}
             })
-          }), (0, om.jsxs)("div", {
+          }), (0, fD.jsxs)("div", {
             className: "CheckboxText",
-            children: [Tm, Am && (0, om.jsx)("span", {
-              onClick: mm => mm.stopPropagation(),
-              children: (0, om.jsx)(xm.e, {
+            children: [zD, sD && (0, fD.jsx)("span", {
+              onClick: DD => DD.stopPropagation(),
+              children: (0, fD.jsx)(rD.b, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: Am
+                hoverInfo: sD
               })
             })]
           })]
-        }), Rm && (0, om.jsx)("div", {
+        }), RD && (0, fD.jsx)("div", {
           className: "SettingNote",
-          children: Rm
+          children: RD
         })]
       })
     }
 
-    function Ym(mm) {
+    function BD(DD) {
       let {
-        name: Tm,
-        onChange: fm,
-        min: Am,
-        max: am,
-        step: wm,
-        initValue: Dm,
-        circleInfoText: Rm,
-        format: pm,
-        className: Em,
-        padStep: Om,
-        disabled: Ym = !1,
-        selectableMax: qm,
-        cappedNote: Vm,
-        onChangeComplete: Im
-      } = mm;
-      const [Km, Qm] = (0, hm.useState)(Dm), nm = (0, hm.useRef)(Dm);
-      (0, hm.useEffect)((() => {
-        nm.current = Dm, Qm(Dm)
-      }), [Dm]);
-      const Jm = void 0 !== qm && qm < am,
-        cm = Jm ? {
-          "--slider-selectable": (qm - Am) / (am - Am)
+        name: zD,
+        onChange: wD,
+        min: sD,
+        max: KD,
+        step: LD,
+        initValue: cD,
+        circleInfoText: RD,
+        format: AD,
+        className: UD,
+        padStep: ID,
+        disabled: BD = !1,
+        selectableMax: GD,
+        cappedNote: nD,
+        onChangeComplete: MD
+      } = DD;
+      const [OD, JD] = (0, pD.useState)(cD), ED = (0, pD.useRef)(cD);
+      (0, pD.useEffect)((() => {
+        ED.current = cD, JD(cD)
+      }), [cD]);
+      const QD = void 0 !== GD && GD < KD,
+        XD = QD ? {
+          "--slider-selectable": (GD - sD) / (KD - sD)
         } : void 0;
-      return (0, om.jsxs)("div", {
-        className: im()("SettingBox SettingsSliderDiv", {
-          [Em]: Em,
-          SettingBoxDisabled: Ym,
-          SliderCapped: Jm
+      return (0, fD.jsxs)("div", {
+        className: gD()("SettingBox SettingsSliderDiv", {
+          [UD]: UD,
+          SettingBoxDisabled: BD,
+          SliderCapped: QD
         }),
-        style: cm,
-        children: [(0, om.jsxs)("div", {
+        style: XD,
+        children: [(0, fD.jsxs)("div", {
           className: "SliderText",
-          children: [`${Tm}: ${pm?pm(Km):Km}`, Rm && (0, om.jsx)(xm.e, {
+          children: [`${zD}: ${AD?AD(OD):OD}`, RD && (0, fD.jsx)(rD.b, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: Rm
+            hoverInfo: RD
           })]
-        }), (0, om.jsx)("div", {
+        }), (0, fD.jsx)("div", {
           className: "SliderDiv",
-          children: (0, om.jsx)(jm, {
-            value: Km,
-            min: Am,
-            max: am,
-            step: wm,
-            onChange: mm => {
-              if (Jm && mm >= qm && Km === qm) return;
-              const Tm = Jm ? Math.min(mm, qm) : mm;
-              nm.current = Tm, Qm(Tm), fm(Tm)
+          children: (0, fD.jsx)(hD, {
+            value: OD,
+            min: sD,
+            max: KD,
+            step: LD,
+            onChange: DD => {
+              if (QD && DD >= GD && OD === GD) return;
+              const zD = QD ? Math.min(DD, GD) : DD;
+              ED.current = zD, JD(zD), wD(zD)
             },
-            onChangeComplete: Im && (() => {
-              Im(nm.current)
+            onChangeComplete: MD && (() => {
+              MD(ED.current)
             }),
-            format: pm,
-            padStep: Om,
-            disabled: Ym
+            format: AD,
+            padStep: ID,
+            disabled: BD
           })
-        }), Jm && Vm && (0, om.jsx)("div", {
+        }), QD && nD && (0, fD.jsx)("div", {
           className: "SettingNote",
-          children: Vm
+          children: nD
         })]
       })
     }
-    const qm = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const GD = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function jm(mm) {
-      var Tm;
+    function hD(DD) {
+      var zD;
       let {
-        value: fm,
-        min: am,
-        max: xm,
-        step: wm,
-        onChange: Dm,
-        orientation: im,
-        reverse: Rm,
-        setIsChanging: pm,
-        tooltip: Om,
-        labels: Ym,
-        handleLabel: jm,
-        format: Vm,
-        onChangeStart: Im,
-        onChangeComplete: Km,
-        padStep: Qm,
-        disabled: nm = !1
-      } = mm;
-      const Jm = (0, hm.useRef)(null),
-        cm = (0, hm.useRef)(null);
-      (0, hm.useLayoutEffect)((() => {
-        var mm, Tm, fm;
-        const hm = null !== (mm = null === (Tm = Jm.current) || void 0 === Tm ? void 0 : Tm.querySelector(".rangeslider")) && void 0 !== mm ? mm : null;
-        null === hm || void 0 === hm || hm.setAttribute("data-pad-slider", ""), null === hm || void 0 === hm || hm.setAttribute("data-pad-focusable", ""), null === hm || void 0 === hm || null === (fm = hm.querySelector(".rangeslider__handle")) || void 0 === fm || fm.setAttribute("data-pad-slider-handle", ""), cm.current = hm
-      }), []), (0, hm.useLayoutEffect)((() => {
-        var mm, Tm;
-        nm ? null === (mm = cm.current) || void 0 === mm || mm.setAttribute("aria-disabled", "true") : null === (Tm = cm.current) || void 0 === Tm || Tm.removeAttribute("aria-disabled")
-      }), [nm]);
-      const zm = (null !== (Tm = String(wm).split(".")[1]) && void 0 !== Tm ? Tm : "").length,
-        Zm = mm => {
-          const Tm = Number((Math.round((mm - am) / wm) * wm + am).toFixed(zm));
-          return Math.min(xm, Math.max(am, Tm))
+        value: wD,
+        min: KD,
+        max: rD,
+        step: LD,
+        onChange: cD,
+        orientation: gD,
+        reverse: RD,
+        setIsChanging: AD,
+        tooltip: ID,
+        labels: BD,
+        handleLabel: hD,
+        format: nD,
+        onChangeStart: MD,
+        onChangeComplete: OD,
+        padStep: JD,
+        disabled: ED = !1
+      } = DD;
+      const QD = (0, pD.useRef)(null),
+        XD = (0, pD.useRef)(null);
+      (0, pD.useLayoutEffect)((() => {
+        var DD, zD, wD;
+        const pD = null !== (DD = null === (zD = QD.current) || void 0 === zD ? void 0 : zD.querySelector(".rangeslider")) && void 0 !== DD ? DD : null;
+        null === pD || void 0 === pD || pD.setAttribute("data-pad-slider", ""), null === pD || void 0 === pD || pD.setAttribute("data-pad-focusable", ""), null === pD || void 0 === pD || null === (wD = pD.querySelector(".rangeslider__handle")) || void 0 === wD || wD.setAttribute("data-pad-slider-handle", ""), XD.current = pD
+      }), []), (0, pD.useLayoutEffect)((() => {
+        var DD, zD;
+        ED ? null === (DD = XD.current) || void 0 === DD || DD.setAttribute("aria-disabled", "true") : null === (zD = XD.current) || void 0 === zD || zD.removeAttribute("aria-disabled")
+      }), [ED]);
+      const VD = (null !== (zD = String(LD).split(".")[1]) && void 0 !== zD ? zD : "").length,
+        PD = DD => {
+          const zD = Number((Math.round((DD - KD) / LD) * LD + KD).toFixed(VD));
+          return Math.min(rD, Math.max(KD, zD))
         },
-        km = (0, hm.useRef)(Km);
-      km.current = Km, (0, hm.useEffect)((() => {
-        const mm = Jm.current;
-        if (!mm) return;
-        const Tm = mm => {
-          var Tm;
-          qm.has(mm.key) && (null === (Tm = km.current) || void 0 === Tm || Tm.call(km))
+        CD = (0, pD.useRef)(OD);
+      CD.current = OD, (0, pD.useEffect)((() => {
+        const DD = QD.current;
+        if (!DD) return;
+        const zD = DD => {
+          var zD;
+          GD.has(DD.key) && (null === (zD = CD.current) || void 0 === zD || zD.call(CD))
         };
-        return mm.addEventListener("keyup", Tm), () => {
-          mm.removeEventListener("keyup", Tm)
+        return DD.addEventListener("keyup", zD), () => {
+          DD.removeEventListener("keyup", zD)
         }
       }), []);
-      const bm = (0, hm.useRef)(!1);
-      return (0, Em.d)(cm, {
-        adjust: mm => {
-          if (nm) return;
-          const Tm = null !== Qm && void 0 !== Qm ? Qm : Math.max(wm, Math.round((xm - am) / 20 / wm) * wm),
-            hm = Zm(fm + mm * Tm * (Rm ? -1 : 1));
-          hm !== fm && (null === Im || void 0 === Im || Im(), Dm(hm), null === Km || void 0 === Km || Km())
+      const xD = (0, pD.useRef)(!1);
+      return (0, UD.c)(XD, {
+        adjust: DD => {
+          if (ED) return;
+          const zD = null !== JD && void 0 !== JD ? JD : Math.max(LD, Math.round((rD - KD) / 20 / LD) * LD),
+            pD = PD(wD + DD * zD * (RD ? -1 : 1));
+          pD !== wD && (null === MD || void 0 === MD || MD(), cD(pD), null === OD || void 0 === OD || OD())
         },
-        setFraction: mm => {
-          if (nm) return;
-          const Tm = Zm(am + (Rm ? 1 - mm : mm) * (xm - am));
-          Tm !== fm && (bm.current || (bm.current = !0, null === Im || void 0 === Im || Im()), Dm(Tm))
+        setFraction: DD => {
+          if (ED) return;
+          const zD = PD(KD + (RD ? 1 - DD : DD) * (rD - KD));
+          zD !== wD && (xD.current || (xD.current = !0, null === MD || void 0 === MD || MD()), cD(zD))
         },
         endDrag: () => {
-          bm.current && (bm.current = !1, null === Km || void 0 === Km || Km())
+          xD.current && (xD.current = !1, null === OD || void 0 === OD || OD())
         }
-      }), (0, om.jsx)("div", {
-        ref: Jm,
+      }), (0, fD.jsx)("div", {
+        ref: QD,
         style: {
           display: "contents"
         },
-        children: (0, om.jsx)(Am.d, {
-          value: fm,
-          min: am,
-          max: xm,
-          step: wm,
-          onChange: Dm,
-          orientation: im,
-          reverse: Rm,
-          tooltip: Om,
-          labels: Ym,
-          handleLabel: jm,
-          format: Vm,
+        children: (0, fD.jsx)(sD.c, {
+          value: wD,
+          min: KD,
+          max: rD,
+          step: LD,
+          onChange: cD,
+          orientation: gD,
+          reverse: RD,
+          tooltip: ID,
+          labels: BD,
+          handleLabel: hD,
+          format: nD,
           onChangeStart: () => {
-            null === Im || void 0 === Im || Im(), null === pm || void 0 === pm || pm(!0)
+            null === MD || void 0 === MD || MD(), null === AD || void 0 === AD || AD(!0)
           },
           onChangeComplete: () => {
-            null === pm || void 0 === pm || pm(!1), null === Km || void 0 === Km || Km()
+            null === AD || void 0 === AD || AD(!1), null === OD || void 0 === OD || OD()
           }
         })
       })
     }
-    async function Vm() {
-      const mm = Rm.NotificationProvider.showPromptPopup({
+    async function nD() {
+      const DD = RD.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -464,75 +464,75 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await mm.getResult() && (0, pm.reloadBloxd)()
+      !0 === await DD.getResult() && (0, AD.reloadBloxd)()
     }
 
-    function Im(mm) {
+    function MD(DD) {
       let {
-        label: Tm,
-        options: fm,
-        value: hm,
-        onChange: Am,
-        circleInfoText: am
-      } = mm;
-      return (0, om.jsxs)("div", {
+        label: zD,
+        options: wD,
+        value: pD,
+        onChange: sD,
+        circleInfoText: KD
+      } = DD;
+      return (0, fD.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, om.jsxs)("div", {
+        children: [(0, fD.jsxs)("div", {
           className: "SliderText",
-          children: [Tm, am && (0, om.jsx)(xm.e, {
+          children: [zD, KD && (0, fD.jsx)(rD.b, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: am
+            hoverInfo: KD
           })]
-        }), (0, om.jsx)(wm.b, {
-          ariaLabel: Tm,
-          options: fm,
-          value: hm,
-          onChange: Am
+        }), (0, fD.jsx)(LD.e, {
+          ariaLabel: zD,
+          options: wD,
+          value: pD,
+          onChange: sD
         })]
       })
     }
   },
-  4946: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => qm,
-      g: () => jm
+  5014: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => GD,
+      i: () => hD
     });
-    var hm = fm(3151),
-      Am = fm(2123),
-      am = fm(59),
-      xm = fm(1080),
-      wm = fm.n(xm),
-      Dm = fm(1345),
-      im = fm(3148),
-      Rm = fm(1354),
-      pm = fm(4954),
-      Em = fm(4976),
-      om = fm(675),
-      Om = fm(4996),
-      Ym = fm(1135);
+    var pD = wD(3141),
+      sD = wD(2130),
+      KD = wD(58),
+      rD = wD(1044),
+      LD = wD.n(rD),
+      cD = wD(1346),
+      gD = wD(3139),
+      RD = wD(1355),
+      AD = wD(5021),
+      UD = wD(5063),
+      fD = wD(638),
+      ID = wD(5097),
+      BD = wD(1096);
 
-    function qm(mm) {
-      var Tm;
+    function GD(DD) {
+      var zD;
       let {
-        setApplySettingsCallback: fm
-      } = mm;
-      const [, xm] = (0, am.useReducer)((mm => mm + 1), 0), wm = (0, am.useRef)(!1), Dm = (0, am.useRef)(null);
+        setApplySettingsCallback: wD
+      } = DD;
+      const [, rD] = (0, KD.useReducer)((DD => DD + 1), 0), LD = (0, KD.useRef)(!1), cD = (0, KD.useRef)(null);
 
-      function qm(mm, Tm) {
-        im.b.setFromJson(mm, "player");
-        const hm = im.b.saveTexturePack();
-        if (om.A) {
-          const mm = im.b.toJson();
-          hm.then((Tm => {
-            Tm && (0, Om.b)(mm)
+      function GD(DD, zD) {
+        gD.b.setFromJson(DD, "player");
+        const pD = gD.b.saveTexturePack();
+        if (fD.v) {
+          const DD = gD.b.toJson();
+          pD.then((zD => {
+            zD && (0, ID.e)(DD)
           }))
-        } else wm.current ||= Tm, Dm.current !== im.b.getId() || im.b.getId() === Am.l.CUSTOM && wm.current ? fm((() => pm.o)) : fm(null);
-        xm()
+        } else LD.current ||= zD, cD.current !== gD.b.getId() || gD.b.getId() === sD.m.CUSTOM && LD.current ? wD((() => AD.g)) : wD(null);
+        rD()
       }
-      async function Vm(mm) {
-        if (im.b.getId() !== mm.metaData.id) {
-          if (im.b.getId() === Am.l.CUSTOM && im.b.getFromFolderName()) {
-            const mm = Rm.NotificationProvider.showPromptPopup({
+      async function nD(DD) {
+        if (gD.b.getId() !== DD.metaData.id) {
+          if (gD.b.getId() === sD.m.CUSTOM && gD.b.getFromFolderName()) {
+            const DD = RD.NotificationProvider.showPromptPopup({
               title: "settingsMenu:loseChangesTitle",
               subtitle: "settingsMenu:loseChangesSubtitle",
               confirmText: "general:continue",
@@ -541,29 +541,29 @@ export const modules = {
               cancelText: "general:cancel",
               cancelTooltip: ""
             });
-            if (!0 !== await mm.getResult()) return
+            if (!0 !== await DD.getResult()) return
           }
-          qm(mm, !1)
+          GD(DD, !1)
         }
-      }(0, am.useEffect)((() => {
-        Dm.current = im.b.getId()
+      }(0, KD.useEffect)((() => {
+        cD.current = gD.b.getId()
       }), []);
-      const Im = hm.e,
-        Km = [Im, ...Object.values(Am.l).filter((mm => mm !== Im))];
-      return (0, Ym.jsx)(Ym.Fragment, {
-        children: (0, Ym.jsxs)("div", {
+      const MD = pD.b,
+        OD = [MD, ...Object.values(sD.m).filter((DD => DD !== MD))];
+      return (0, BD.jsx)(BD.Fragment, {
+        children: (0, BD.jsxs)("div", {
           className: "TexturePackCategory SettingsMenuRightInner",
-          children: [(0, Ym.jsx)("div", {
+          children: [(0, BD.jsx)("div", {
             className: "TexturePackList",
-            children: Km.map((mm => (0, Ym.jsx)(jm, {
-              id: mm,
-              isSelected: mm === im.b.getId(),
-              setSelected: Vm
-            }, mm)))
-          }), im.b.getId() === Am.l.CUSTOM && (0, Ym.jsx)(Em.b, {
-            folderName: null !== (Tm = im.b.getFromFolderName()) && void 0 !== Tm ? Tm : null,
-            onTexturePackUpdated: function(mm) {
-              qm(mm, !0)
+            children: OD.map((DD => (0, BD.jsx)(hD, {
+              id: DD,
+              isSelected: DD === gD.b.getId(),
+              setSelected: nD
+            }, DD)))
+          }), gD.b.getId() === sD.m.CUSTOM && (0, BD.jsx)(UD.b, {
+            folderName: null !== (zD = gD.b.getFromFolderName()) && void 0 !== zD ? zD : null,
+            onTexturePackUpdated: function(DD) {
+              GD(DD, !0)
             },
             packOwner: "player"
           })]
@@ -571,417 +571,417 @@ export const modules = {
       })
     }
 
-    function jm(mm) {
+    function hD(DD) {
       let {
-        id: Tm,
-        isSelected: fm,
-        setSelected: xm,
-        disabled: im = !1
-      } = mm;
-      const [Rm, pm] = (0, am.useState)(!0), [Em, om] = (0, am.useState)(""), [Om, qm] = (0, am.useState)(""), [jm, Vm] = (0, am.useState)(""), Im = (0, am.useRef)({});
-      return (0, am.useEffect)((() => {
-        (0, hm.s)(Tm).then((mm => {
-          var Tm;
-          mm && (Im.current = mm, pm(!1), om(Im.current.metaData.name), qm(Im.current.metaData.author), Vm(null !== (Tm = Im.current.metaData.previewImage) && void 0 !== Tm ? Tm : ""))
-        })).catch((mm => {
-          console.warn(`Failed to fetch texture pack ${Tm}`, mm)
+        id: zD,
+        isSelected: wD,
+        setSelected: rD,
+        disabled: gD = !1
+      } = DD;
+      const [RD, AD] = (0, KD.useState)(!0), [UD, fD] = (0, KD.useState)(""), [ID, GD] = (0, KD.useState)(""), [hD, nD] = (0, KD.useState)(""), MD = (0, KD.useRef)({});
+      return (0, KD.useEffect)((() => {
+        (0, pD.n)(zD).then((DD => {
+          var zD;
+          DD && (MD.current = DD, AD(!1), fD(MD.current.metaData.name), GD(MD.current.metaData.author), nD(null !== (zD = MD.current.metaData.previewImage) && void 0 !== zD ? zD : ""))
+        })).catch((DD => {
+          console.warn(`Failed to fetch texture pack ${zD}`, DD)
         }))
-      }), [Tm]), (0, Ym.jsxs)("div", {
+      }), [zD]), (0, BD.jsxs)("div", {
         "data-pad-focusable": !0,
-        "aria-disabled": im || void 0,
-        className: wm()("TexturePack", {
-          Selected: fm,
-          Custom: Tm === Am.l.CUSTOM,
-          Disabled: im
+        "aria-disabled": gD || void 0,
+        className: LD()("TexturePack", {
+          Selected: wD,
+          Custom: zD === sD.m.CUSTOM,
+          Disabled: gD
         }),
         onClick: () => {
-          Rm || im || xm(Im.current)
+          RD || gD || rD(MD.current)
         },
-        children: [(0, Ym.jsx)("div", {
+        children: [(0, BD.jsx)("div", {
           className: "TexturePackBg",
           style: {
-            backgroundImage: jm ? `url(${jm})` : void 0
+            backgroundImage: hD ? `url(${hD})` : void 0
           }
-        }), Rm && (0, Ym.jsx)("div", {
+        }), RD && (0, BD.jsx)("div", {
           className: "TexturePackName",
-          children: (0, Ym.jsx)(Dm.c, {})
-        }), !Rm && Em && (0, Ym.jsx)("div", {
+          children: (0, BD.jsx)(cD.e, {})
+        }), !RD && UD && (0, BD.jsx)("div", {
           className: "TexturePackName",
-          children: Em
-        }), !Rm && Om && (0, Ym.jsx)("div", {
+          children: UD
+        }), !RD && ID && (0, BD.jsx)("div", {
           className: "TexturePackAuthor",
-          children: Om
+          children: ID
         })]
       })
     }
   },
-  4980: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => wm,
-      f: () => xm,
-      j: () => am
+  5070: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => LD,
+      g: () => rD,
+      i: () => KD
     });
-    var hm = fm(4985);
-    const Am = [mm => mm.strict ? "strict" : "nonStrict", mm => mm.program];
+    var pD = wD(5076);
+    const sD = [DD => DD.strict ? "strict" : "nonStrict", DD => DD.program];
 
-    function am(mm, Tm) {
-      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const hm = {};
-      for (const Am in fm) hm[Am] = `\0${Am}\0`;
-      return mm(Tm, hm).replace(/\0(\w+)\0/g, ((mm, Tm) => fm[Tm]))
+    function KD(DD, zD) {
+      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      const pD = {};
+      for (const sD in wD) pD[sD] = `\0${sD}\0`;
+      return DD(zD, pD).replace(/\0(\w+)\0/g, ((DD, zD) => wD[zD]))
     }
 
-    function xm(mm) {
-      return null === mm.file ? null : mm.line > 0 ? `${mm.file}:${mm.line}` : mm.file
+    function rD(DD) {
+      return null === DD.file ? null : DD.line > 0 ? `${DD.file}:${DD.line}` : DD.file
     }
 
-    function wm(mm) {
-      const Tm = new Map(mm.map((mm => [Dm(mm).join("."), mm])));
-      if (0 === Tm.size) return [];
-      const fm = Rm([...Tm.values()]);
-      return 0 === fm[0].length ? [] : fm
+    function LD(DD) {
+      const zD = new Map(DD.map((DD => [cD(DD).join("."), DD])));
+      if (0 === zD.size) return [];
+      const wD = RD([...zD.values()]);
+      return 0 === wD[0].length ? [] : wD
     }
 
-    function Dm(mm) {
-      return Am.map((Tm => Tm(mm)))
+    function cD(DD) {
+      return sD.map((zD => zD(DD)))
     }
-    const im = Am.map((mm => new Set(hm.d.map(mm)).size));
+    const gD = sD.map((DD => new Set(pD.d.map(DD)).size));
 
-    function Rm(mm) {
-      const Tm = Am.map((Tm => new Set(mm.map(Tm)))),
-        fm = Tm.reduce(((mm, Tm) => mm * Tm.size), 1),
-        hm = Tm.every(((mm, Tm) => 1 === mm.size || mm.size === im[Tm]));
-      if (fm === mm.length && hm) return [Am.filter(((mm, fm) => 1 === Tm[fm].size)).map((Tm => Tm(mm[0])))];
-      let am = null;
-      for (let xm = 0; xm < Am.length; xm++) {
-        if (1 === Tm[xm].size) continue;
-        const fm = pm(mm, Am[xm]).flatMap(Rm);
-        (null === am || fm.length < am.length) && (am = fm)
+    function RD(DD) {
+      const zD = sD.map((zD => new Set(DD.map(zD)))),
+        wD = zD.reduce(((DD, zD) => DD * zD.size), 1),
+        pD = zD.every(((DD, zD) => 1 === DD.size || DD.size === gD[zD]));
+      if (wD === DD.length && pD) return [sD.filter(((DD, wD) => 1 === zD[wD].size)).map((zD => zD(DD[0])))];
+      let KD = null;
+      for (let rD = 0; rD < sD.length; rD++) {
+        if (1 === zD[rD].size) continue;
+        const wD = AD(DD, sD[rD]).flatMap(RD);
+        (null === KD || wD.length < KD.length) && (KD = wD)
       }
-      return am
+      return KD
     }
 
-    function pm(mm, Tm) {
-      const fm = new Map;
-      for (const Am of mm) {
-        var hm;
-        const mm = Tm(Am);
-        fm.set(mm, [...null !== (hm = fm.get(mm)) && void 0 !== hm ? hm : [], Am])
+    function AD(DD, zD) {
+      const wD = new Map;
+      for (const sD of DD) {
+        var pD;
+        const DD = zD(sD);
+        wD.set(DD, [...null !== (pD = wD.get(DD)) && void 0 !== pD ? pD : [], sD])
       }
-      return [...fm.values()]
+      return [...wD.values()]
     }
   },
-  4970: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => xm
+  5049: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => rD
     });
-    var hm = fm(1080),
-      Am = fm.n(hm),
-      am = fm(1135);
+    var pD = wD(1044),
+      sD = wD.n(pD),
+      KD = wD(1096);
 
-    function xm(mm) {
+    function rD(DD) {
       let {
-        options: Tm,
-        value: fm,
-        onChange: hm,
-        ariaLabel: xm,
-        className: wm,
-        reselectable: Dm = !1,
-        keepsFocus: im = !1,
-        padTabs: Rm
-      } = mm;
-      const pm = void 0 !== Rm;
-      return (0, am.jsx)("div", {
-        className: Am()("SegmentedToggle", wm),
+        options: zD,
+        value: wD,
+        onChange: pD,
+        ariaLabel: rD,
+        className: LD,
+        reselectable: cD = !1,
+        keepsFocus: gD = !1,
+        padTabs: RD
+      } = DD;
+      const AD = void 0 !== RD;
+      return (0, KD.jsx)("div", {
+        className: sD()("SegmentedToggle", LD),
         role: "group",
-        "aria-label": xm,
-        "data-pad-tabs": Rm,
-        children: Tm.map((mm => {
-          const Tm = mm.value === fm;
-          return (0, am.jsx)("button", {
+        "aria-label": rD,
+        "data-pad-tabs": RD,
+        children: zD.map((DD => {
+          const zD = DD.value === wD;
+          return (0, KD.jsx)("button", {
             type: "button",
-            "aria-pressed": Tm,
-            "data-pad-tab": pm || void 0,
-            "data-pad-selected": pm && Tm ? "true" : void 0,
-            "data-pad-default-focus": pm && Tm || void 0,
-            "aria-label": mm.ariaLabel,
-            title: mm.ariaLabel,
-            className: Am()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: Tm
+            "aria-pressed": zD,
+            "data-pad-tab": AD || void 0,
+            "data-pad-selected": AD && zD ? "true" : void 0,
+            "data-pad-default-focus": AD && zD || void 0,
+            "aria-label": DD.ariaLabel,
+            title: DD.ariaLabel,
+            className: sD()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: zD
             }),
-            onMouseDown: im ? mm => {
-              mm.preventDefault()
+            onMouseDown: gD ? DD => {
+              DD.preventDefault()
             } : void 0,
             onClick: () => {
-              Tm && !Dm || hm(mm.value)
+              zD && !cD || pD(DD.value)
             },
-            children: mm.label
-          }, mm.value)
+            children: DD.label
+          }, DD.value)
         }))
       })
     }
   },
-  4974: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => am,
-      d: () => xm
+  5057: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => KD,
+      c: () => rD
     });
-    var hm = fm(59);
-    const Am = new WeakMap,
-      am = mm => {
-        var Tm;
-        const fm = mm.closest("[data-pad-slider]");
-        return fm && null !== (Tm = Am.get(fm)) && void 0 !== Tm ? Tm : null
+    var pD = wD(58);
+    const sD = new WeakMap,
+      KD = DD => {
+        var zD;
+        const wD = DD.closest("[data-pad-slider]");
+        return wD && null !== (zD = sD.get(wD)) && void 0 !== zD ? zD : null
       },
-      xm = (mm, Tm) => {
-        const fm = (0, hm.useRef)(Tm);
-        fm.current = Tm, (0, hm.useEffect)((() => {
-          if (mm.current) return ((mm, Tm) => (Am.set(mm, Tm), () => {
-            Am.get(mm) === Tm && Am.delete(mm)
-          }))(mm.current, {
-            adjust: mm => {
-              fm.current.adjust(mm)
+      rD = (DD, zD) => {
+        const wD = (0, pD.useRef)(zD);
+        wD.current = zD, (0, pD.useEffect)((() => {
+          if (DD.current) return ((DD, zD) => (sD.set(DD, zD), () => {
+            sD.get(DD) === zD && sD.delete(DD)
+          }))(DD.current, {
+            adjust: DD => {
+              wD.current.adjust(DD)
             },
-            setFraction: mm => {
-              fm.current.setFraction(mm)
+            setFraction: DD => {
+              wD.current.setFraction(DD)
             },
             endDrag: () => {
-              fm.current.endDrag()
+              wD.current.endDrag()
             }
           })
-        }), [mm])
+        }), [DD])
       }
   },
-  4985: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => hm.d,
-      d: () => Am,
-      e: () => hm.l
+  5076: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => pD.i,
+      d: () => sD,
+      h: () => pD.q
     });
-    var hm = fm(4989);
-    const Am = [!1, !0].flatMap((mm => ["terrain", "liquid", "model"].map((Tm => ({
-      strict: mm,
-      program: Tm
+    var pD = wD(5084);
+    const sD = [!1, !0].flatMap((DD => ["terrain", "liquid", "model"].map((zD => ({
+      strict: DD,
+      program: zD
     })))))
   },
-  5004: (mm, Tm, fm) => {
-    function hm(mm, Tm) {
-      return Am(mm, Tm)
+  5099: (DD, zD, wD) => {
+    function pD(DD, zD) {
+      return sD(DD, zD)
     }
 
-    function Am(mm, Tm) {
-      if (mm === Tm) return !0;
-      if ("object" !== typeof mm || "object" !== typeof Tm || null === mm || null === Tm || Array.isArray(mm) !== Array.isArray(Tm)) return !1;
-      const fm = mm,
-        hm = Tm,
-        am = Object.keys(fm);
-      return am.length === Object.keys(hm).length && am.every((mm => Object.prototype.hasOwnProperty.call(hm, mm) && Am(fm[mm], hm[mm])))
+    function sD(DD, zD) {
+      if (DD === zD) return !0;
+      if ("object" !== typeof DD || "object" !== typeof zD || null === DD || null === zD || Array.isArray(DD) !== Array.isArray(zD)) return !1;
+      const wD = DD,
+        pD = zD,
+        KD = Object.keys(wD);
+      return KD.length === Object.keys(pD).length && KD.every((DD => Object.prototype.hasOwnProperty.call(pD, DD) && sD(wD[DD], pD[DD])))
     }
-    fm.d(Tm, {
-      e: () => hm
+    wD.d(zD, {
+      c: () => pD
     })
   },
-  4996: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => xm,
-      d: () => wm
+  5097: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => rD,
+      g: () => LD
     });
-    var hm = fm(2123),
-      Am = fm(5004);
-    let am = null;
+    var pD = wD(2130),
+      sD = wD(5099);
+    let KD = null;
 
-    function xm(mm) {
-      am = {
-        pack: mm.metaData.id === hm.c ? null : mm
+    function rD(DD) {
+      KD = {
+        pack: DD.metaData.id === pD.c ? null : DD
       }
     }
 
-    function wm(mm) {
-      return !(null === am || !(0, Am.e)(am.pack, mm)) && (am = null, !0)
+    function LD(DD) {
+      return !(null === KD || !(0, sD.c)(KD.pack, DD)) && (KD = null, !0)
     }
   },
-  4989: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => wm,
-      c: () => xm,
-      d: () => hm,
-      g: () => Ym,
-      i: () => pm,
-      l: () => Am,
-      o: () => am,
-      q: () => im,
-      r: () => Rm,
-      t: () => Em
+  5084: (DD, zD, wD) => {
+    wD.d(zD, {
+      A: () => UD,
+      d: () => LD,
+      e: () => rD,
+      i: () => pD,
+      m: () => BD,
+      n: () => AD,
+      q: () => sD,
+      r: () => KD,
+      v: () => gD,
+      z: () => RD
     });
-    const hm = 5;
+    const pD = 5;
 
-    function Am(mm) {
-      return mm === hm
+    function sD(DD) {
+      return DD === pD
     }
 
-    function am(mm) {
-      return [...mm.features]
+    function KD(DD) {
+      return [...DD.features]
     }
-    const xm = 262144,
-      wm = 256,
-      Dm = 256;
+    const rD = 262144,
+      LD = 256,
+      cD = 256;
 
-    function im(mm) {
-      if ("object" !== typeof mm || null === mm || Array.isArray(mm)) return "The pack has no files.";
-      const Tm = [];
-      for (const [fm, hm] of Object.entries(mm)) {
-        if ("string" !== typeof hm) return `${fm} isn't text.`;
-        Tm.push({
-          path: fm,
-          source: hm
+    function gD(DD) {
+      if ("object" !== typeof DD || null === DD || Array.isArray(DD)) return "The pack has no files.";
+      const zD = [];
+      for (const [wD, pD] of Object.entries(DD)) {
+        if ("string" !== typeof pD) return `${wD} isn't text.`;
+        zD.push({
+          path: wD,
+          source: pD
         })
       }
-      return Tm.sort(((mm, Tm) => pm(mm.path, Tm.path))),
-        function(mm) {
-          if (0 === mm.length) return "The pack has no .wgsl files.";
-          if (mm.length > wm) return `The pack has more than ${wm} .wgsl files.`;
-          const Tm = new Set;
+      return zD.sort(((DD, zD) => AD(DD.path, zD.path))),
+        function(DD) {
+          if (0 === DD.length) return "The pack has no .wgsl files.";
+          if (DD.length > LD) return `The pack has more than ${LD} .wgsl files.`;
+          const zD = new Set;
           for (const {
-              path: fm
+              path: wD
             }
-            of mm) {
-            const mm = om(fm);
-            if (null !== mm) return mm;
-            if (Tm.has(fm)) return `The pack has two files at ${fm}.`;
-            Tm.add(fm)
+            of DD) {
+            const DD = fD(wD);
+            if (null !== DD) return DD;
+            if (zD.has(wD)) return `The pack has two files at ${wD}.`;
+            zD.add(wD)
           }
-          return Em(mm) > xm ? `The pack's .wgsl files are over ${xm/1024} KB in total.` : null
-        }(Tm) ?? Tm
+          return UD(DD) > rD ? `The pack's .wgsl files are over ${rD/1024} KB in total.` : null
+        }(zD) ?? zD
     }
 
-    function Rm(mm) {
-      const Tm = {};
-      for (const fm of mm) Tm[fm.path] = fm.source;
-      return Tm
+    function RD(DD) {
+      const zD = {};
+      for (const wD of DD) zD[wD.path] = wD.source;
+      return zD
     }
 
-    function pm(mm, Tm) {
-      return mm < Tm ? -1 : mm > Tm ? 1 : 0
+    function AD(DD, zD) {
+      return DD < zD ? -1 : DD > zD ? 1 : 0
     }
 
-    function Em(mm) {
-      const Tm = new TextEncoder;
-      let fm = 0;
+    function UD(DD) {
+      const zD = new TextEncoder;
+      let wD = 0;
       for (const {
-          source: hm
+          source: pD
         }
-        of mm) fm += Tm.encode(hm).byteLength;
-      return fm
+        of DD) wD += zD.encode(pD).byteLength;
+      return wD
     }
 
-    function om(mm) {
-      if (!mm.toLowerCase().endsWith(".wgsl")) return `${mm} isn't a .wgsl file.`;
-      if (mm.length > Dm) return `A file path is over ${Dm} characters.`;
-      if (mm.includes("\\") || /[\u0000-\u001f]/.test(mm)) return `${mm} isn't a valid file path.`;
-      return mm.split("/").some((mm => "" === mm || "." === mm || ".." === mm)) ? `${mm} isn't a valid file path.` : null
+    function fD(DD) {
+      if (!DD.toLowerCase().endsWith(".wgsl")) return `${DD} isn't a .wgsl file.`;
+      if (DD.length > cD) return `A file path is over ${cD} characters.`;
+      if (DD.includes("\\") || /[\u0000-\u001f]/.test(DD)) return `${DD} isn't a valid file path.`;
+      return DD.split("/").some((DD => "" === DD || "." === DD || ".." === DD)) ? `${DD} isn't a valid file path.` : null
     }
-    const Om = /^(.*)\[rot\[([1-4])$/;
+    const ID = /^(.*)\[rot\[([1-4])$/;
 
-    function Ym(mm, Tm) {
-      let fm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const hm = new Map;
-      Tm.forEach(((mm, Tm) => {
+    function BD(DD, zD) {
+      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const pD = new Map;
+      zD.forEach(((DD, zD) => {
         let {
-          numAnimStates: fm,
-          animStartIdx: Am
-        } = mm;
-        for (let am = 1; am < fm; am++) hm.set(Am + am - 1, Tm)
+          numAnimStates: wD,
+          animStartIdx: sD
+        } = DD;
+        for (let KD = 1; KD < wD; KD++) pD.set(sD + KD - 1, zD)
       }));
-      const Am = Object.entries(mm),
-        am = new Map;
-      for (const [Ym, qm] of Am) {
-        const mm = Om.exec(Ym);
-        "1" === mm?.[2] && am.set(mm[1], qm + 1)
+      const sD = Object.entries(DD),
+        KD = new Map;
+      for (const [BD, GD] of sD) {
+        const DD = ID.exec(BD);
+        "1" === DD?.[2] && KD.set(DD[1], GD + 1)
       }
-      const xm = mm => {
-          const Tm = Om.exec(mm);
-          return Tm && am.has(Tm[1]) ? {
-            root: Tm[1],
-            rotation: Number(Tm[2]) - 1
+      const rD = DD => {
+          const zD = ID.exec(DD);
+          return zD && KD.has(zD[1]) ? {
+            root: zD[1],
+            rotation: Number(zD[2]) - 1
           } : null
         },
-        wm = new Set(Am.map((mm => {
-          let [Tm] = mm;
-          return xm(Tm)?.root ?? Tm
+        LD = new Set(sD.map((DD => {
+          let [zD] = DD;
+          return rD(zD)?.root ?? zD
         }))),
-        Dm = (mm, fm) => {
-          const hm = mm.replace(/_?0$/, "");
-          return (Tm[fm]?.numAnimStates ?? 0) > 1 && !wm.has(hm) ? hm : mm
+        cD = (DD, wD) => {
+          const pD = DD.replace(/_?0$/, "");
+          return (zD[wD]?.numAnimStates ?? 0) > 1 && !LD.has(pD) ? pD : DD
         },
-        im = new Map;
-      for (const [Om, Ym] of Am) im.set(Ym, Dm(xm(Om)?.root ?? Om, Ym));
-      const Rm = Am.reduce(((mm, Tm) => {
-          let [, fm] = Tm;
-          return Math.max(mm, fm + 1)
+        gD = new Map;
+      for (const [ID, BD] of sD) gD.set(BD, cD(rD(ID)?.root ?? ID, BD));
+      const RD = sD.reduce(((DD, zD) => {
+          let [, wD] = zD;
+          return Math.max(DD, wD + 1)
         }), 0),
-        pm = Array.from({
-          length: Rm
-        }, ((mm, Tm) => ({
-          id: Tm + 1,
+        AD = Array.from({
+          length: RD
+        }, ((DD, zD) => ({
+          id: zD + 1,
           rotation: 0
         }))),
-        Em = new Map,
-        om = new Map;
-      for (const [Om, Ym] of Am) {
-        const mm = xm(Om),
-          Tm = hm.get(Ym);
-        if (void 0 !== Tm) {
-          const fm = im.get(Tm);
-          om.set(Om, {
-            name: Om,
-            texture: fm,
+        UD = new Map,
+        fD = new Map;
+      for (const [ID, BD] of sD) {
+        const DD = rD(ID),
+          zD = pD.get(BD);
+        if (void 0 !== zD) {
+          const wD = gD.get(zD);
+          fD.set(ID, {
+            name: ID,
+            texture: wD,
             kind: "frame"
-          }), mm && !om.has(mm.root) && om.set(mm.root, {
-            name: mm.root,
-            texture: fm,
+          }), DD && !fD.has(DD.root) && fD.set(DD.root, {
+            name: DD.root,
+            texture: wD,
             kind: "frame"
           });
           continue
         }
-        const fm = im.get(Ym),
-          Am = mm?.root ?? Om;
-        if (fm !== Am && om.set(Am, {
-            name: Am,
-            texture: fm,
+        const wD = gD.get(BD),
+          sD = DD?.root ?? ID;
+        if (wD !== sD && fD.set(sD, {
+            name: sD,
+            texture: wD,
             kind: "frame"
-          }), mm) {
-          const Tm = am.get(mm.root);
-          pm[Ym] = {
-            id: Tm,
-            rotation: mm.rotation
-          }, Em.set(fm, Tm), om.set(Om, {
-            name: Om,
-            texture: fm,
+          }), DD) {
+          const zD = KD.get(DD.root);
+          AD[BD] = {
+            id: zD,
+            rotation: DD.rotation
+          }, UD.set(wD, zD), fD.set(ID, {
+            name: ID,
+            texture: wD,
             kind: "rotation"
           })
-        } else Em.set(fm, Ym + 1)
+        } else UD.set(wD, BD + 1)
       }
-      for (const Om of Em.keys()) om.delete(Om);
-      for (const [Om, Ym] of fm) {
-        const mm = Em.get(Ym);
-        void 0 === mm || Em.has(Om) || (Em.set(Om, mm), om.delete(Om))
+      for (const ID of UD.keys()) fD.delete(ID);
+      for (const [ID, BD] of wD) {
+        const DD = UD.get(BD);
+        void 0 === DD || UD.has(ID) || (UD.set(ID, DD), fD.delete(ID))
       }
       return {
-        named: [...Em].sort(((mm, Tm) => {
-          let [fm] = mm, [hm] = Tm;
-          return fm < hm ? -1 : fm > hm ? 1 : 0
-        })).map((mm => {
-          let [Tm, fm] = mm;
+        named: [...UD].sort(((DD, zD) => {
+          let [wD] = DD, [pD] = zD;
+          return wD < pD ? -1 : wD > pD ? 1 : 0
+        })).map((DD => {
+          let [zD, wD] = DD;
           return {
-            name: Tm,
-            id: fm
+            name: zD,
+            id: wD
           }
         })),
-        aliases: [...om.values()],
-        layers: pm
+        aliases: [...fD.values()],
+        layers: AD
       }
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

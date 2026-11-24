@@ -1,179 +1,179 @@
 export const id = 131;
 export const ids = [131];
 export const modules = {
-  41767: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      startHarnessShaderPack: () => pm
+  41654: (DD, zD, wD) => {
+    wD.d(zD, {
+      startHarnessShaderPack: () => AD
     });
-    var hm = fm(6509),
-      Am = fm(4989),
-      am = fm(6586),
-      xm = fm(6562),
-      wm = fm(4985),
-      Dm = fm(39342),
-      im = fm(6578),
-      Rm = fm(6595);
-    async function pm(mm, Tm) {
+    var pD = wD(6594),
+      sD = wD(5084),
+      KD = wD(6678),
+      rD = wD(6645),
+      LD = wD(5076),
+      cD = wD(39186),
+      gD = wD(6664),
+      RD = wD(6682);
+    async function AD(DD, zD) {
       const {
-        stored: fm,
-        info: pm
-      } = await async function(mm, Tm) {
-        const fm = await async function(mm) {
-          const Tm = await fetch(mm);
-          if (!Tm.ok) throw new Error(`Couldn't fetch the shader pack at ${mm}: HTTP ${Tm.status}`);
-          const fm = await Tm.json();
-          if (!(0, hm.l)(fm)) throw new Error(`The shader pack at ${mm} isn't a shader pack listing source`);
-          return fm
-        }(mm);
-        if (!(0, wm.e)(fm.apiVersion)) throw new Error(`The pack is for shader pack API version ${fm.apiVersion}; this build runs version ${wm.c}`);
-        const Dm = {
+        stored: wD,
+        info: AD
+      } = await async function(DD, zD) {
+        const wD = await async function(DD) {
+          const zD = await fetch(DD);
+          if (!zD.ok) throw new Error(`Couldn't fetch the shader pack at ${DD}: HTTP ${zD.status}`);
+          const wD = await zD.json();
+          if (!(0, pD.i)(wD)) throw new Error(`The shader pack at ${DD} isn't a shader pack listing source`);
+          return wD
+        }(DD);
+        if (!(0, LD.h)(wD.apiVersion)) throw new Error(`The pack is for shader pack API version ${wD.apiVersion}; this build runs version ${LD.b}`);
+        const cD = {
             manifest: {
-              apiVersion: fm.apiVersion,
-              name: fm.name,
-              author: fm.author,
+              apiVersion: wD.apiVersion,
+              name: wD.name,
+              author: wD.author,
               description: null,
-              keepCircleShadows: !0 === fm.keepCircleShadows
+              keepCircleShadows: !0 === wD.keepCircleShadows
             },
-            files: fm.files,
+            files: wD.files,
             validation: null
           },
-          pm = {
-            url: mm,
-            name: fm.name,
+          AD = {
+            url: DD,
+            name: wD.name,
             features: [],
             errors: [],
             runsInMode: !1
           },
-          Em = (0, Am.q)(fm.files);
-        if ("string" === typeof Em) return pm.errors = [{
+          UD = (0, sD.v)(wD.files);
+        if ("string" === typeof UD) return AD.errors = [{
           file: null,
           line: 0,
-          message: Em
+          message: UD
         }], {
-          stored: Dm,
-          info: pm
+          stored: cD,
+          info: AD
         };
-        const om = await (0, xm.loadPageShaderPackCompiler)();
-        if (!om) throw new Error("The shader pack compiler couldn't load");
-        const Om = await (0, Rm.f)(om, Em);
-        if (!Om) throw new Error("No WebGPU device could validate the shader pack");
-        if (pm.errors = [...Om.errors], Om.ok) {
-          const mm = om.Z6(Em, (0, im.shaderPackTextures)());
-          pm.features = (0, Am.o)(mm), pm.runsInMode = (0, am.l)(mm.variants, Tm)
+        const fD = await (0, rD.loadPageShaderPackCompiler)();
+        if (!fD) throw new Error("The shader pack compiler couldn't load");
+        const ID = await (0, RD.h)(fD, UD);
+        if (!ID) throw new Error("No WebGPU device could validate the shader pack");
+        if (AD.errors = [...ID.errors], ID.ok) {
+          const DD = fD.LDD(UD, (0, gD.shaderPackTextures)());
+          AD.features = (0, sD.r)(DD), AD.runsInMode = (0, KD.f)(DD.variants, zD)
         }
         return {
           stored: {
-            ...Dm,
-            validation: Om
+            ...cD,
+            validation: ID
           },
-          info: pm
+          info: AD
         }
-      }(mm, Tm), [Em] = pm.errors;
-      if (Em) {
-        const mm = null === Em.file ? "" : `${Em.file}:${Em.line}: `,
-          Tm = pm.errors.length > 1 ? ` (${pm.errors.length-1} more)` : "";
+      }(DD, zD), [UD] = AD.errors;
+      if (UD) {
+        const DD = null === UD.file ? "" : `${UD.file}:${UD.line}: `,
+          zD = AD.errors.length > 1 ? ` (${AD.errors.length-1} more)` : "";
         return {
-          info: pm,
-          problem: `The shader pack doesn't compile: ${mm}${Em.message}${Tm}`
+          info: AD,
+          problem: `The shader pack doesn't compile: ${DD}${UD.message}${zD}`
         }
       }
-      return pm.runsInMode ? ((0, Dm.setHarnessUrlShaderPack)(fm, Tm), {
-        info: pm,
+      return AD.runsInMode ? ((0, cD.setHarnessUrlShaderPack)(wD, zD), {
+        info: AD,
         problem: null
       }) : {
-        info: pm,
-        problem: `The shader pack runs nothing in ${Tm} mode`
+        info: AD,
+        problem: `The shader pack runs nothing in ${zD} mode`
       }
     }
   },
-  6600: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      forgetShaderPackActiveHint: () => bm,
-      isOtherApiVersion: () => cm,
-      isShaderPackActive: () => Km,
-      isShaderPackChangePending: () => Jm,
-      markShaderPackChangePending: () => nm,
-      pageShaderPackValidationVersion: () => zm,
-      reconcileStoredShaderPackHint: () => km,
-      removeShaderPack: () => Im,
-      replaceShaderPack: () => qm,
-      saveShaderPack: () => Ym,
-      shaderPackNeedsCheck: () => Zm,
-      storedPackOutcome: () => Qm,
-      storedShaderPackFiles: () => Em,
-      toStoredShaderPack: () => pm
+  6691: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      forgetShaderPackActiveHint: () => xD,
+      isOtherApiVersion: () => XD,
+      isShaderPackActive: () => OD,
+      isShaderPackChangePending: () => QD,
+      markShaderPackChangePending: () => ED,
+      pageShaderPackValidationVersion: () => VD,
+      reconcileStoredShaderPackHint: () => CD,
+      removeShaderPack: () => MD,
+      replaceShaderPack: () => GD,
+      saveShaderPack: () => BD,
+      shaderPackNeedsCheck: () => PD,
+      storedPackOutcome: () => JD,
+      storedShaderPackFiles: () => UD,
+      toStoredShaderPack: () => AD
     });
-    var hm = fm(4989),
-      Am = fm(4985),
-      am = fm(37),
-      xm = fm(3461),
-      wm = fm(6609),
-      Dm = fm(6578);
-    const im = "shaderPackChangePending";
-    let Rm = null;
+    var pD = wD(5084),
+      sD = wD(5076),
+      KD = wD(35),
+      rD = wD(3462),
+      LD = wD(6693),
+      cD = wD(6664);
+    const gD = "shaderPackChangePending";
+    let RD = null;
 
-    function pm(mm, Tm, fm) {
+    function AD(DD, zD, wD) {
       return {
-        manifest: mm.manifest,
-        files: (0, hm.r)(mm.files),
-        validation: Tm,
-        ...fm && {
-          listing: fm
+        manifest: DD.manifest,
+        files: (0, pD.z)(DD.files),
+        validation: zD,
+        ...wD && {
+          listing: wD
         }
       }
     }
 
-    function Em(mm) {
-      return Object.keys(mm.files).map((Tm => ({
-        path: Tm,
-        source: mm.files[Tm]
+    function UD(DD) {
+      return Object.keys(DD.files).map((zD => ({
+        path: zD,
+        source: DD.files[zD]
       })))
     }
-    let om = Promise.resolve();
+    let fD = Promise.resolve();
 
-    function Om(mm) {
-      const Tm = om.then(mm);
-      return om = Tm.catch((() => {})), Tm
-    }
-
-    function Ym(mm, Tm) {
-      return Om((() => jm(mm, Tm)))
+    function ID(DD) {
+      const zD = fD.then(DD);
+      return fD = zD.catch((() => {})), zD
     }
 
-    function qm(mm, Tm, fm) {
-      return Om((async () => JSON.stringify(await (0, wm.e)()) === JSON.stringify(mm) && (null === Tm ? (await Vm(), !0) : jm(Tm, fm))))
-    }
-    async function jm(mm, Tm) {
-      const fm = await am.e.setItem(wm.c, mm);
-      return fm && Sm(mm, Tm), fm
-    }
-    async function Vm() {
-      await am.e.removeItem(wm.c), am.g.removeItem(xm.b)
+    function BD(DD, zD) {
+      return ID((() => hD(DD, zD)))
     }
 
-    function Im() {
-      return Om(Vm)
+    function GD(DD, zD, wD) {
+      return ID((async () => JSON.stringify(await (0, LD.c)()) === JSON.stringify(DD) && (null === zD ? (await nD(), !0) : hD(zD, wD))))
+    }
+    async function hD(DD, zD) {
+      const wD = await KD.g.setItem(LD.b, DD);
+      return wD && TD(DD, zD), wD
+    }
+    async function nD() {
+      await KD.g.removeItem(LD.b), KD.h.removeItem(rD.e)
     }
 
-    function Km(mm, Tm) {
-      return "active" === Qm(mm, Tm).kind
+    function MD() {
+      return ID(nD)
     }
 
-    function Qm(mm, Tm) {
-      var fm;
-      return null === mm ? {
+    function OD(DD, zD) {
+      return "active" === JD(DD, zD).kind
+    }
+
+    function JD(DD, zD) {
+      var wD;
+      return null === DD ? {
         kind: "none",
         reason: "nothingStored"
-      } : cm(mm) ? {
+      } : XD(DD) ? {
         kind: "none",
         reason: "otherApiVersion"
-      } : !1 !== (null === (fm = mm.validation) || void 0 === fm ? void 0 : fm.ok) || mm.validation.fromRecheck ? null === Tm ? {
+      } : !1 !== (null === (wD = DD.validation) || void 0 === wD ? void 0 : wD.ok) || DD.validation.fromRecheck ? null === zD ? {
         kind: "none",
         reason: "noCompiler"
-      } : Zm(mm, Tm) ? {
+      } : PD(DD, zD) ? {
         kind: "blocked",
         messageKey: "shaderPack:failedUnchecked"
-      } : mm.validation.ok ? {
+      } : DD.validation.ok ? {
         kind: "active"
       } : {
         kind: "blocked",
@@ -184,147 +184,147 @@ export const modules = {
       }
     }
 
-    function nm() {
-      am.k.setItem(im, performance.timeOrigin)
+    function ED() {
+      KD.k.setItem(gD, performance.timeOrigin)
     }
 
-    function Jm() {
-      return am.k.getItem(im) === performance.timeOrigin
+    function QD() {
+      return KD.k.getItem(gD) === performance.timeOrigin
     }
 
-    function cm(mm) {
-      return !(0, Am.e)(mm.manifest.apiVersion)
+    function XD(DD) {
+      return !(0, sD.h)(DD.manifest.apiVersion)
     }
 
-    function zm(mm) {
-      return Rm ??= mm.mG((0, Dm.shaderPackTextures)()), Rm
+    function VD(DD) {
+      return RD ??= DD.qS((0, cD.shaderPackTextures)()), RD
     }
 
-    function Zm(mm, Tm) {
-      var fm;
-      return (null === (fm = mm.validation) || void 0 === fm ? void 0 : fm.headerVersion) !== zm(Tm)
+    function PD(DD, zD) {
+      var wD;
+      return (null === (wD = DD.validation) || void 0 === wD ? void 0 : wD.headerVersion) !== VD(zD)
     }
 
-    function km(mm) {
-      return Om((async () => {
-        Sm(await (0, wm.e)(!0), mm)
+    function CD(DD) {
+      return ID((async () => {
+        TD(await (0, LD.c)(!0), DD)
       }))
     }
 
-    function bm() {
-      return Om((async () => {
-        am.g.removeItem(xm.b)
+    function xD() {
+      return ID((async () => {
+        KD.h.removeItem(rD.e)
       }))
     }
 
-    function Sm(mm, Tm) {
-      Km(mm, Tm) ? am.g.setItem(xm.b, !0) : am.g.removeItem(xm.b)
+    function TD(DD, zD) {
+      OD(DD, zD) ? KD.h.setItem(rD.e, !0) : KD.h.removeItem(rD.e)
     }
   },
-  6595: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => Dm,
-      f: () => wm
+  6682: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => cD,
+      h: () => LD
     });
-    var hm = fm(6600),
-      Am = fm(6578),
-      am = fm(118);
-    const xm = 100;
-    async function wm(mm, Tm) {
-      var fm;
-      let hm = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (fm = navigator.gpu) && void 0 !== fm ? fm : null;
-      const xm = mm.Z6(Tm, (0, Am.shaderPackTextures)());
-      if (xm.errors.length > 0) return im(mm, xm.errors, xm.offInStrict);
-      const wm = await async function(mm) {
-        if (!mm) return null;
+    var pD = wD(6691),
+      sD = wD(6664),
+      KD = wD(119);
+    const rD = 100;
+    async function LD(DD, zD) {
+      var wD;
+      let pD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (wD = navigator.gpu) && void 0 !== wD ? wD : null;
+      const rD = DD.LDD(zD, (0, sD.shaderPackTextures)());
+      if (rD.errors.length > 0) return gD(DD, rD.errors, rD.offInStrict);
+      const LD = await async function(DD) {
+        if (!DD) return null;
         try {
-          const Tm = await (0, am.v)(mm);
-          return Tm ? await Tm.requestDevice() : null
-        } catch (Tm) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", Tm), null
+          const zD = await (0, KD.x)(DD);
+          return zD ? await zD.requestDevice() : null
+        } catch (zD) {
+          return console.error("Couldn't get a WebGPU device to validate the shader pack.", zD), null
         }
-      }(hm);
-      if (!wm) return null;
-      let Dm = !1;
-      wm.lost.then((() => {
-        Dm = !0
+      }(pD);
+      if (!LD) return null;
+      let cD = !1;
+      LD.lost.then((() => {
+        cD = !0
       }));
       try {
-        const Tm = await Promise.all(xm.validationModules.map((Tm => async function(mm, Tm, fm) {
-          Tm.pushErrorScope("validation");
-          const hm = Tm.createShaderModule({
-              code: fm.code
+        const zD = await Promise.all(rD.validationModules.map((zD => async function(DD, zD, wD) {
+          zD.pushErrorScope("validation");
+          const pD = zD.createShaderModule({
+              code: wD.code
             }),
-            Am = Tm.popErrorScope(),
+            sD = zD.popErrorScope(),
             {
-              messages: am
-            } = await hm.getCompilationInfo(),
-            xm = am.filter((mm => "error" === mm.type)).map((Tm => mm.mapValidationMessage(fm, Tm))),
-            wm = await Am;
-          wm && 0 === xm.length && xm.push({
+              messages: KD
+            } = await pD.getCompilationInfo(),
+            rD = KD.filter((DD => "error" === DD.type)).map((zD => DD.mapValidationMessage(wD, zD))),
+            LD = await sD;
+          LD && 0 === rD.length && rD.push({
             file: null,
             line: 0,
-            message: wm.message,
-            variants: [fm.key]
+            message: LD.message,
+            variants: [wD.key]
           });
-          return xm
-        }(mm, wm, Tm))));
-        return Dm ? null : im(mm, mm.Lfm(Tm.flat()), xm.offInStrict)
-      } catch (Rm) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", Rm), null
+          return rD
+        }(DD, LD, zD))));
+        return cD ? null : gD(DD, DD.RpD(zD.flat()), rD.offInStrict)
+      } catch (RD) {
+        return console.error("Couldn't validate the shader pack on WebGPU.", RD), null
       } finally {
-        wm.destroy()
+        LD.destroy()
       }
     }
-    async function Dm(mm, Tm) {
-      var fm;
-      if (!(0, hm.shaderPackNeedsCheck)(mm, Tm) || (0, hm.isOtherApiVersion)(mm)) return mm;
-      const Am = await wm(Tm, (0, hm.storedShaderPackFiles)(mm));
-      if (!Am) return mm;
-      const am = !1 === (null === (fm = mm.validation) || void 0 === fm ? void 0 : fm.ok) && !mm.validation.fromRecheck,
-        xm = {
-          ...mm,
-          validation: am ? Am : {
-            ...Am,
+    async function cD(DD, zD) {
+      var wD;
+      if (!(0, pD.shaderPackNeedsCheck)(DD, zD) || (0, pD.isOtherApiVersion)(DD)) return DD;
+      const sD = await LD(zD, (0, pD.storedShaderPackFiles)(DD));
+      if (!sD) return DD;
+      const KD = !1 === (null === (wD = DD.validation) || void 0 === wD ? void 0 : wD.ok) && !DD.validation.fromRecheck,
+        rD = {
+          ...DD,
+          validation: KD ? sD : {
+            ...sD,
             fromRecheck: !0
           }
         };
-      return await (0, hm.replaceShaderPack)(mm, xm, Tm) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), xm
+      return await (0, pD.replaceShaderPack)(DD, rD, zD) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), rD
     }
 
-    function im(mm, Tm, fm) {
+    function gD(DD, zD, wD) {
       return {
-        headerVersion: (0, hm.pageShaderPackValidationVersion)(mm),
-        ok: 0 === Tm.length,
-        errors: Tm.slice(0, xm),
-        moreErrors: Math.max(0, Tm.length - xm),
-        offInStrict: fm
+        headerVersion: (0, pD.pageShaderPackValidationVersion)(DD),
+        ok: 0 === zD.length,
+        errors: zD.slice(0, rD),
+        moreErrors: Math.max(0, zD.length - rD),
+        offInStrict: wD
       }
     }
   },
-  6509: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      D: () => wm,
-      H: () => xm,
-      K: () => hm,
-      L: () => Em,
-      P: () => Rm,
-      S: () => Km,
-      V: () => pm,
-      X: () => im,
-      e: () => Om,
-      g: () => qm,
-      k: () => Ym,
-      l: () => om,
-      m: () => Im,
-      o: () => nm,
-      r: () => Dm,
-      t: () => Am,
-      v: () => Qm,
-      z: () => am
+  6594: (DD, zD, wD) => {
+    wD.d(zD, {
+      A: () => KD,
+      C: () => LD,
+      G: () => rD,
+      H: () => pD,
+      I: () => UD,
+      K: () => RD,
+      M: () => OD,
+      N: () => AD,
+      R: () => gD,
+      d: () => ID,
+      f: () => GD,
+      g: () => BD,
+      i: () => fD,
+      k: () => MD,
+      l: () => ED,
+      p: () => cD,
+      s: () => sD,
+      w: () => JD
     });
-    const hm = ["forest", "desert", "water", "night", "cave"];
-    const Am = {
+    const pD = ["forest", "desert", "water", "night", "cave"];
+    const sD = {
         full: {
           width: 3840,
           height: 2160
@@ -338,49 +338,49 @@ export const modules = {
           height: 360
         }
       },
-      am = ["popular", "updated", "newest"],
-      xm = 3,
-      wm = 32,
-      Dm = 300;
+      KD = ["popular", "updated", "newest"],
+      rD = 3,
+      LD = 32,
+      cD = 300;
 
-    function im(mm, Tm) {
-      return mm.slice(0, Tm).replace(/[\uD800-\uDBFF]$/, "")
+    function gD(DD, zD) {
+      return DD.slice(0, zD).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const Rm = 64,
-      pm = 512,
-      Em = 18e5;
+    const RD = 64,
+      AD = 512,
+      UD = 18e5;
 
-    function om(mm) {
-      const Tm = mm,
-        fm = null === Tm || void 0 === Tm ? void 0 : Tm.files;
-      return "number" === typeof(null === Tm || void 0 === Tm ? void 0 : Tm.apiVersion) && "string" === typeof Tm.name && (null === Tm.author || "string" === typeof Tm.author) && (void 0 === Tm.keepCircleShadows || "boolean" === typeof Tm.keepCircleShadows) && "object" === typeof fm && null !== fm && Object.values(fm).every((mm => "string" === typeof mm))
+    function fD(DD) {
+      const zD = DD,
+        wD = null === zD || void 0 === zD ? void 0 : zD.files;
+      return "number" === typeof(null === zD || void 0 === zD ? void 0 : zD.apiVersion) && "string" === typeof zD.name && (null === zD.author || "string" === typeof zD.author) && (void 0 === zD.keepCircleShadows || "boolean" === typeof zD.keepCircleShadows) && "object" === typeof wD && null !== wD && Object.values(wD).every((DD => "string" === typeof DD))
     }
-    const Om = "Bloxdhub",
-      Ym = "https://bloxdhub.com/shaders";
+    const ID = "Bloxdhub",
+      BD = "https://bloxdhub.com/shaders";
 
-    function qm(mm) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(mm)}`
+    function GD(DD) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(DD)}`
     }
-    const jm = "Screenshot generation failed.",
-      Vm = "Its screenshots couldn't be generated:";
+    const hD = "Screenshot generation failed.",
+      nD = "Its screenshots couldn't be generated:";
 
-    function Im(mm) {
-      var Tm;
-      return mm === jm || null !== (Tm = null === mm || void 0 === mm ? void 0 : mm.startsWith(Vm)) && void 0 !== Tm && Tm
-    }
-
-    function Km(mm, Tm) {
-      return `shaderPacks/${mm}/${Tm}.json`
+    function MD(DD) {
+      var zD;
+      return DD === hD || null !== (zD = null === DD || void 0 === DD ? void 0 : DD.startsWith(nD)) && void 0 !== zD && zD
     }
 
-    function Qm(mm, Tm, fm, hm) {
-      return null === Tm.renderId ? nm(mm, Tm.baselineVersion, fm, hm) : `${mm}/${function(mm,Tm,fm,hm){return`shaderPacks/${mm}/${Tm}/${fm}-${hm}.webp`}(Tm.packId,Tm.renderId,fm,hm)}`
+    function OD(DD, zD) {
+      return `shaderPacks/${DD}/${zD}.json`
     }
 
-    function nm(mm, Tm, fm, hm) {
-      return `${mm}/${function(mm,Tm,fm){return`shaderPacks/baseline/${mm}/${Tm}-${fm}.webp`}(Tm,fm,hm)}`
+    function JD(DD, zD, wD, pD) {
+      return null === zD.renderId ? ED(DD, zD.baselineVersion, wD, pD) : `${DD}/${function(DD,zD,wD,pD){return`shaderPacks/${DD}/${zD}/${wD}-${pD}.webp`}(zD.packId,zD.renderId,wD,pD)}`
+    }
+
+    function ED(DD, zD, wD, pD) {
+      return `${DD}/${function(DD,zD,wD){return`shaderPacks/baseline/${DD}/${zD}-${wD}.webp`}(zD,wD,pD)}`
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,66 +1,66 @@
 export const id = 292;
 export const ids = [292];
 export const modules = {
-  41348: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      default: () => vT
+  41206: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      default: () => az
     });
-    var hm = fm(41350),
-      Am = fm(41394),
-      am = fm(41399),
-      xm = fm(59),
-      wm = fm(77),
-      Dm = fm(41416),
-      im = fm(41424),
-      Rm = fm(4696),
-      pm = fm(41432),
-      Em = fm(1884),
-      om = fm(41441),
-      Om = fm(41456),
-      Ym = fm.n(Om),
-      qm = fm(41408),
-      jm = fm(41410),
-      Vm = fm(1345),
-      Im = fm(36950),
-      Km = fm(1247),
-      Qm = fm(36964),
-      nm = fm(36836),
-      Jm = fm(1449),
-      cm = fm(653),
-      zm = fm(1254),
-      Zm = fm(41511),
-      km = fm(41356),
-      bm = fm(41361),
-      Sm = fm(1905),
-      em = fm(3729),
-      Nm = fm(31),
-      Gm = fm(1162);
-    const Xm = 1e4,
-      Pm = 250,
-      Hm = 250;
-    var ym = fm(41376);
-    const Cm = 50,
-      rm = 100;
-    const sm = 2e3,
-      lm = km.J.define(),
-      Mm = km.J.define(),
-      um = km.J.define();
-    class Bm extends bm.k {
-      constructor(mm, Tm, fm) {
-        super(), this.colour = mm, this.playerName = Tm, this.showName = fm
+    var pD = wD(41210),
+      sD = wD(41243),
+      KD = wD(41248),
+      rD = wD(58),
+      LD = wD(79),
+      cD = wD(41266),
+      gD = wD(41269),
+      RD = wD(4782),
+      AD = wD(41275),
+      UD = wD(1895),
+      fD = wD(41282),
+      ID = wD(41304),
+      BD = wD.n(ID),
+      GD = wD(41256),
+      hD = wD(41261),
+      nD = wD(1346),
+      MD = wD(36813),
+      OD = wD(1245),
+      JD = wD(36821),
+      ED = wD(36709),
+      QD = wD(1442),
+      XD = wD(619),
+      VD = wD(1251),
+      PD = wD(41355),
+      CD = wD(41212),
+      xD = wD(41217),
+      TD = wD(1925),
+      bD = wD(3757),
+      jD = wD(25),
+      dD = wD(1130);
+    const SD = 1e4,
+      iD = 250,
+      lD = 250;
+    var WD = wD(41231);
+    const ND = 50,
+      ZD = 100;
+    const yD = 2e3,
+      kD = CD.E.define(),
+      mD = CD.E.define(),
+      eD = CD.E.define();
+    class oD extends xD.r {
+      constructor(DD, zD, wD) {
+        super(), this.colour = DD, this.playerName = zD, this.showName = wD
       }
       toDOM() {
-        const mm = document.createElement("span");
-        mm.className = "cm-remote-cursor-wrapper", mm.style.borderLeftColor = this.colour;
-        const Tm = document.createElement("span");
-        if (Tm.className = "cm-remote-cursor", Tm.style.borderLeftColor = this.colour, mm.appendChild(Tm), this.showName) {
-          const Tm = document.createElement("span");
-          Tm.className = "cm-remote-cursor-name", Tm.style.backgroundColor = this.colour, Tm.textContent = this.playerName, mm.appendChild(Tm)
+        const DD = document.createElement("span");
+        DD.className = "cm-remote-cursor-wrapper", DD.style.borderLeftColor = this.colour;
+        const zD = document.createElement("span");
+        if (zD.className = "cm-remote-cursor", zD.style.borderLeftColor = this.colour, DD.appendChild(zD), this.showName) {
+          const zD = document.createElement("span");
+          zD.className = "cm-remote-cursor-name", zD.style.backgroundColor = this.colour, zD.textContent = this.playerName, DD.appendChild(zD)
         }
-        return mm
+        return DD
       }
-      eq(mm) {
-        return this.colour === mm.colour && this.playerName === mm.playerName && this.showName === mm.showName
+      eq(DD) {
+        return this.colour === DD.colour && this.playerName === DD.playerName && this.showName === DD.showName
       }
       get estimatedHeight() {
         return -1
@@ -70,270 +70,270 @@ export const modules = {
       }
     }
 
-    function Lm(mm, Tm) {
-      const fm = [],
-        hm = [];
-      for (const [, xm] of mm) {
-        const mm = Tm - xm.lastMoved < sm;
-        if (fm.push({
-            pos: xm.head,
-            decoration: bm.c.widget({
-              widget: new Bm(xm.colour, xm.playerName, mm),
+    function aD(DD, zD) {
+      const wD = [],
+        pD = [];
+      for (const [, rD] of DD) {
+        const DD = zD - rD.lastMoved < yD;
+        if (wD.push({
+            pos: rD.head,
+            decoration: xD.d.widget({
+              widget: new oD(rD.colour, rD.playerName, DD),
               side: 1
             })
-          }), xm.anchor !== xm.head) {
-          const mm = Math.min(xm.anchor, xm.head),
-            Tm = Math.max(xm.anchor, xm.head);
-          hm.push({
-            from: mm,
-            to: Tm,
-            decoration: bm.c.mark({
+          }), rD.anchor !== rD.head) {
+          const DD = Math.min(rD.anchor, rD.head),
+            zD = Math.max(rD.anchor, rD.head);
+          pD.push({
+            from: DD,
+            to: zD,
+            decoration: xD.d.mark({
               class: "cm-remote-selection",
               attributes: {
-                style: `background-color: ${xm.colour}33`
+                style: `background-color: ${rD.colour}33`
               }
             })
           })
         }
       }
-      const Am = new km.y,
-        am = [];
-      for (const xm of fm) am.push({
+      const sD = new CD.v,
+        KD = [];
+      for (const rD of wD) KD.push({
         bias: 1,
-        deco: xm.decoration,
-        from: xm.pos,
-        to: xm.pos
+        deco: rD.decoration,
+        from: rD.pos,
+        to: rD.pos
       });
-      for (const xm of hm) am.push({
+      for (const rD of pD) KD.push({
         bias: 0,
-        deco: xm.decoration,
-        from: xm.from,
-        to: xm.to
+        deco: rD.decoration,
+        from: rD.from,
+        to: rD.to
       });
-      am.sort(((mm, Tm) => mm.from - Tm.from || mm.deco.startSide - Tm.deco.startSide || mm.bias - Tm.bias));
-      for (const xm of am) Am.add(xm.from, xm.to, xm.deco);
-      return Am.finish()
+      KD.sort(((DD, zD) => DD.from - zD.from || DD.deco.startSide - zD.deco.startSide || DD.bias - zD.bias));
+      for (const rD of KD) sD.add(rD.from, rD.to, rD.deco);
+      return sD.finish()
     }
-    const tm = km.M.define({
+    const uD = CD.G.define({
       create: () => ({
         cursors: new Map,
-        Ym: bm.c.none
+        BD: xD.d.none
       }),
-      update(mm, Tm) {
-        let fm = mm.cursors,
-          hm = !1;
-        if (Tm.docChanged) {
-          const mm = new Map;
-          for (const [hm, Am] of fm) mm.set(hm, {
-            ...Am,
-            anchor: Tm.changes.mapPos(Am.anchor, 1),
-            head: Tm.changes.mapPos(Am.head, 1)
+      update(DD, zD) {
+        let wD = DD.cursors,
+          pD = !1;
+        if (zD.docChanged) {
+          const DD = new Map;
+          for (const [pD, sD] of wD) DD.set(pD, {
+            ...sD,
+            anchor: zD.changes.mapPos(sD.anchor, 1),
+            head: zD.changes.mapPos(sD.head, 1)
           });
-          fm = mm, hm = !0
+          wD = DD, pD = !0
         }
-        for (const Am of Tm.effects)
-          if (Am.is(lm)) {
-            if (!Number.isInteger(Am.value.anchor) || !Number.isInteger(Am.value.head)) {
-              console.warn(`Code Editor: ignored player ${Am.value.playerId}'s cursor at ${Am.value.anchor}-${Am.value.head}`);
+        for (const sD of zD.effects)
+          if (sD.is(kD)) {
+            if (!Number.isInteger(sD.value.anchor) || !Number.isInteger(sD.value.head)) {
+              console.warn(`Code Editor: ignored player ${sD.value.playerId}'s cursor at ${sD.value.anchor}-${sD.value.head}`);
               continue
             }
-            const am = Tm.state.doc.length,
-              xm = {
-                ...Am.value,
-                anchor: Math.min(Am.value.anchor, am),
-                head: Math.min(Am.value.head, am)
+            const KD = zD.state.doc.length,
+              rD = {
+                ...sD.value,
+                anchor: Math.min(sD.value.anchor, KD),
+                head: Math.min(sD.value.head, KD)
               };
-            fm === mm.cursors && (fm = new Map(fm)), fm.set(xm.playerId, xm), hm = !0
-          } else Am.is(Mm) ? fm.has(Am.value) && (fm === mm.cursors && (fm = new Map(fm)), fm.delete(Am.value), hm = !0) : Am.is(um) && (hm = !0);
-        return hm ? {
-          cursors: fm,
-          Ym: Lm(fm, Date.now())
-        } : mm
+            wD === DD.cursors && (wD = new Map(wD)), wD.set(rD.playerId, rD), pD = !0
+          } else sD.is(mD) ? wD.has(sD.value) && (wD === DD.cursors && (wD = new Map(wD)), wD.delete(sD.value), pD = !0) : sD.is(eD) && (pD = !0);
+        return pD ? {
+          cursors: wD,
+          BD: aD(wD, Date.now())
+        } : DD
       },
-      provide: mm => bm.f.Ym.from(mm, (mm => mm.Ym))
+      provide: DD => xD.i.BD.from(DD, (DD => DD.BD))
     });
-    const Um = km.J.define(),
-      dm = bm.c.mark({
+    const vD = CD.E.define(),
+      tD = xD.d.mark({
         class: "CodeInsertFlash"
       }),
-      gm = km.M.define({
-        create: () => bm.c.none,
-        update(mm, Tm) {
-          let fm = mm.map(Tm.changes);
-          for (const hm of Tm.effects) hm.is(Um) && (fm = hm.value ? bm.c.set(dm.range(hm.value.from, hm.value.to)) : bm.c.none);
-          return fm
+      FD = CD.G.define({
+        create: () => xD.d.none,
+        update(DD, zD) {
+          let wD = DD.map(zD.changes);
+          for (const pD of zD.effects) pD.is(vD) && (wD = pD.value ? xD.d.set(tD.range(pD.value.from, pD.value.to)) : xD.d.none);
+          return wD
         },
-        provide: mm => bm.f.Ym.from(mm)
+        provide: DD => xD.i.BD.from(DD)
       }),
-      Wm = km.M.define({
+      YD = CD.G.define({
         create: () => !1,
-        update: (mm, Tm) => mm || void 0 !== Tm.annotation(km.Q.userEvent) && !Tm.annotation(km.Q.remote)
+        update: (DD, zD) => DD || void 0 !== zD.annotation(CD.M.userEvent) && !zD.annotation(CD.M.remote)
       }),
-      Fm = [gm, Wm];
+      HD = [FD, YD];
 
-    function mT(mm) {
-      return mm.field(Wm)
+    function qD(DD) {
+      return DD.field(YD)
     }
-    const TT = 3e4;
+    const Dz = 3e4;
 
-    function fT(mm, Tm) {
-      const fm = (0, xm.useRef)(null);
-      (0, xm.useEffect)((() => {
-        var mm;
-        (null === (mm = fm.current) || void 0 === mm ? void 0 : mm.path) !== Tm && (fm.current = null)
-      }), [Tm]);
-      const hm = mm => {
-        var hm;
-        const Am = fm.current;
-        if (null === mm || void 0 === mm || !mm.dom.isConnected || !Am || Am.path !== Tm) return;
-        fm.current = null;
+    function zz(DD, zD) {
+      const wD = (0, rD.useRef)(null);
+      (0, rD.useEffect)((() => {
+        var DD;
+        (null === (DD = wD.current) || void 0 === DD ? void 0 : DD.path) !== zD && (wD.current = null)
+      }), [zD]);
+      const pD = DD => {
+        var pD;
+        const sD = wD.current;
+        if (null === DD || void 0 === DD || !DD.dom.isConnected || !sD || sD.path !== zD) return;
+        wD.current = null;
         const {
-          mO: xm
-        } = Am;
-        if (xm && null !== xm.text && performance.now() - xm.at < TT) {
-          const Tm = function(mm, Tm) {
-            if (mm === Tm) return null;
-            const fm = Math.min(mm.length, Tm.length);
-            let hm = 0;
-            for (; hm < fm && mm[hm] === Tm[hm];) hm++;
-            let Am = 0;
-            for (; Am < fm - hm && mm[mm.length - 1 - Am] === Tm[Tm.length - 1 - Am];) Am++;
+          Nf: rD
+        } = sD;
+        if (rD && null !== rD.text && performance.now() - rD.at < Dz) {
+          const zD = function(DD, zD) {
+            if (DD === zD) return null;
+            const wD = Math.min(DD.length, zD.length);
+            let pD = 0;
+            for (; pD < wD && DD[pD] === zD[pD];) pD++;
+            let sD = 0;
+            for (; sD < wD - pD && DD[DD.length - 1 - sD] === zD[zD.length - 1 - sD];) sD++;
             return {
-              from: hm,
-              to: mm.length - Am,
-              insert: Tm.slice(hm, Tm.length - Am)
+              from: pD,
+              to: DD.length - sD,
+              insert: zD.slice(pD, zD.length - sD)
             }
-          }(mm.state.doc.toString(), xm.text);
-          null !== Tm && mm.dispatch({
-            changes: Tm,
-            userEvent: xm.placed ? "input" : void 0
+          }(DD.state.doc.toString(), rD.text);
+          null !== zD && DD.dispatch({
+            changes: zD,
+            userEvent: rD.placed ? "input" : void 0
           })
         }
         const {
-          doc: wm
-        } = mm.state, Dm = wm.line(Math.min(Math.max(Am.line, 1), wm.lines)), im = Dm.from + Math.min(null !== (hm = Am.column) && void 0 !== hm ? hm : 0, Dm.length);
-        mm.dispatch({
+          doc: LD
+        } = DD.state, cD = LD.line(Math.min(Math.max(sD.line, 1), LD.lines)), gD = cD.from + Math.min(null !== (pD = sD.column) && void 0 !== pD ? pD : 0, cD.length);
+        DD.dispatch({
           selection: {
-            anchor: im
+            anchor: gD
           },
-          effects: am.c.scrollIntoView(im, {
+          effects: KD.e.scrollIntoView(gD, {
             y: "center"
           }),
-          userEvent: null !== xm && void 0 !== xm && xm.placed ? "select" : void 0
-        }), !1 !== (null === xm || void 0 === xm ? void 0 : xm.focused) && mm.focus()
+          userEvent: null !== rD && void 0 !== rD && rD.placed ? "select" : void 0
+        }), !1 !== (null === rD || void 0 === rD ? void 0 : rD.focused) && DD.focus()
       };
-      return (0, Jm.g)("CodeEditorGoToLine", (Tm => {
-        fm.current = Tm, hm(mm.current)
-      })), (0, Jm.g)("CodeEditorKeepEdits", (() => {
-        const hm = mm.current;
-        if (null === hm || !hm.dom.isConnected || null === Tm) return;
+      return (0, QD.g)("CodeEditorGoToLine", (zD => {
+        wD.current = zD, pD(DD.current)
+      })), (0, QD.g)("CodeEditorKeepEdits", (() => {
+        const pD = DD.current;
+        if (null === pD || !pD.dom.isConnected || null === zD) return;
         const {
-          doc: Am,
-          selection: am
-        } = hm.state, {
-          head: xm
-        } = am.main, wm = Am.lineAt(xm), Dm = {
-          text: (0, Zm.k)(hm.state).length > 0 ? Am.toString() : null,
+          doc: sD,
+          selection: KD
+        } = pD.state, {
+          head: rD
+        } = KD.main, LD = sD.lineAt(rD), cD = {
+          text: (0, PD.l)(pD.state).length > 0 ? sD.toString() : null,
           at: performance.now(),
-          focused: hm.hasFocus,
-          placed: mT(hm.state)
+          focused: pD.hasFocus,
+          placed: qD(pD.state)
         };
-        fm.current = {
-          path: Tm,
-          line: wm.number,
-          column: xm - wm.from,
-          mO: Dm
+        wD.current = {
+          path: zD,
+          line: LD.number,
+          column: rD - LD.from,
+          Nf: cD
         }
-      })), mm => {
-        var Am;
-        const am = fm.current;
-        !1 === (null === am || void 0 === am || null === (Am = am.mO) || void 0 === Am ? void 0 : Am.focused) && am.path === Tm || mm.focus(), hm(mm)
+      })), DD => {
+        var sD;
+        const KD = wD.current;
+        !1 === (null === KD || void 0 === KD || null === (sD = KD.Nf) || void 0 === sD ? void 0 : sD.focused) && KD.path === zD || DD.focus(), pD(DD)
       }
     }
-    var hT = fm(4296),
-      AT = fm(1208);
+    var wz = wD(4386),
+      pz = wD(1200);
 
-    function aT(mm, Tm) {
+    function sz(DD, zD) {
       const {
-        t: fm
-      } = (0, AT.A)();
-      (0, Jm.g)("CodeEditorInsertText", (hm => {
+        t: wD
+      } = (0, pz.E)();
+      (0, QD.g)("CodeEditorInsertText", (pD => {
         let {
-          text: Am,
-          focus: am
-        } = hm;
-        const xm = mm.current,
-          wm = null !== xm && void 0 !== xm && xm.dom.isConnected ? function(mm, Tm) {
-            if (!mT(mm)) return null;
+          text: sD,
+          focus: KD
+        } = pD;
+        const rD = DD.current,
+          LD = null !== rD && void 0 !== rD && rD.dom.isConnected ? function(DD, zD) {
+            if (!qD(DD)) return null;
             const {
-              from: fm,
-              to: hm
-            } = mm.selection.main, Am = fm + Tm.length;
+              from: wD,
+              to: pD
+            } = DD.selection.main, sD = wD + zD.length;
             return {
               changes: {
-                from: fm,
-                to: hm,
-                insert: Tm
+                from: wD,
+                to: pD,
+                insert: zD
               },
               selection: {
-                anchor: Am
+                anchor: sD
               },
-              effects: [bm.f.scrollIntoView(Am, {
+              effects: [xD.i.scrollIntoView(sD, {
                 y: "center"
-              }), Um.of({
-                from: fm,
-                to: Am
+              }), vD.of({
+                from: wD,
+                to: sD
               })],
               userEvent: "input"
             }
-          }(xm.state, Am) : null;
-        null !== xm && null !== wm ? (xm.dispatch(wm), am && xm.focus(), setTimeout((() => {
-          xm.dom.isConnected && xm.dispatch({
-            effects: Um.of(null)
+          }(rD.state, sD) : null;
+        null !== rD && null !== LD ? (rD.dispatch(LD), KD && rD.focus(), setTimeout((() => {
+          rD.dom.isConnected && rD.dispatch({
+            effects: vD.of(null)
           })
-        }), 1500)) : (0, hT.b)(Am).then((() => {
-          Tm({
-            message: fm("codeEditorWorld:pickCopied", {
-              coords: Am
+        }), 1500)) : (0, wz.e)(sD).then((() => {
+          zD({
+            message: wD("codeEditorWorld:pickCopied", {
+              coords: sD
             }),
             type: "success"
           })
-        }), (mm => {
-          console.error("Pick could not copy the coordinates", mm), Tm({
-            message: fm("codeEditorWorld:pickPlaceCursor", {
-              coords: Am
+        }), (DD => {
+          console.error("Pick could not copy the coordinates", DD), zD({
+            message: wD("codeEditorWorld:pickPlaceCursor", {
+              coords: sD
             }),
             type: "warning"
           })
         }))
       }))
     }
-    var xT = fm(41387);
-    const wT = "#e45649",
-      DT = "#383a42",
-      iT = "#696c77",
-      RT = "#986801",
-      pT = "#e5e5e6",
-      ET = "#fafafa",
-      oT = "#eaeaeb",
-      OT = "#526fff",
-      YT = bm.f.theme({
+    var Kz = wD(41239);
+    const rz = "#e45649",
+      Lz = "#383a42",
+      cz = "#696c77",
+      gz = "#986801",
+      Rz = "#e5e5e6",
+      Az = "#fafafa",
+      Uz = "#eaeaeb",
+      fz = "#526fff",
+      Iz = xD.i.theme({
         "&": {
-          color: DT,
-          backgroundColor: ET
+          color: Lz,
+          backgroundColor: Az
         },
         ".cm-content": {
-          caretColor: OT
+          caretColor: fz
         },
         ".cm-cursor, .cm-dropCursor": {
-          borderLeftColor: OT
+          borderLeftColor: fz
         },
         "&.cm-focused > .cm-scroller > .cm-selectionLayer .cm-selectionBackground, .cm-selectionBackground, .cm-content ::selection": {
           backgroundColor: "#d7d8de"
         },
         ".cm-panels": {
           backgroundColor: "#f0f0f1",
-          color: DT
+          color: Lz
         },
         ".cm-panels.cm-panels-top": {
           borderBottom: "2px solid #d4d4d6"
@@ -358,12 +358,12 @@ export const modules = {
           backgroundColor: "#4078f233"
         },
         ".cm-gutters": {
-          backgroundColor: ET,
-          color: iT,
+          backgroundColor: Az,
+          color: cz,
           border: "none"
         },
         ".cm-activeLineGutter": {
-          backgroundColor: pT
+          backgroundColor: Rz
         },
         ".cm-foldPlaceholder": {
           backgroundColor: "transparent",
@@ -372,88 +372,88 @@ export const modules = {
         },
         ".cm-tooltip": {
           border: "none",
-          backgroundColor: oT
+          backgroundColor: Uz
         },
         ".cm-tooltip .cm-tooltip-arrow:before": {
           borderTopColor: "transparent",
           borderBottomColor: "transparent"
         },
         ".cm-tooltip .cm-tooltip-arrow:after": {
-          borderTopColor: oT,
-          borderBottomColor: oT
+          borderTopColor: Uz,
+          borderBottomColor: Uz
         },
         ".cm-tooltip-autocomplete": {
           "& > ul > li[aria-selected]": {
-            backgroundColor: pT,
-            color: DT
+            backgroundColor: Rz,
+            color: Lz
           }
         }
       }, {
         dark: !1
       }),
-      qT = ym.d.define([{
-        tag: xT.l.keyword,
+      Bz = WD.e.define([{
+        tag: Kz.n.keyword,
         color: "#a626a4"
       }, {
-        tag: [xT.l.name, xT.l.deleted, xT.l.character, xT.l.propertyName, xT.l.macroName],
-        color: wT
+        tag: [Kz.n.name, Kz.n.deleted, Kz.n.character, Kz.n.propertyName, Kz.n.macroName],
+        color: rz
       }, {
-        tag: [xT.l.function(xT.l.variableName), xT.l.labelName],
+        tag: [Kz.n.function(Kz.n.variableName), Kz.n.labelName],
         color: "#4078f2"
       }, {
-        tag: [xT.l.color, xT.l.constant(xT.l.name), xT.l.standard(xT.l.name)],
-        color: RT
+        tag: [Kz.n.color, Kz.n.constant(Kz.n.name), Kz.n.standard(Kz.n.name)],
+        color: gz
       }, {
-        tag: [xT.l.definition(xT.l.name), xT.l.separator],
-        color: DT
+        tag: [Kz.n.definition(Kz.n.name), Kz.n.separator],
+        color: Lz
       }, {
-        tag: [xT.l.typeName, xT.l.className, xT.l.number, xT.l.changed, xT.l.annotation, xT.l.modifier, xT.l.self, xT.l.namespace],
+        tag: [Kz.n.typeName, Kz.n.className, Kz.n.number, Kz.n.changed, Kz.n.annotation, Kz.n.modifier, Kz.n.self, Kz.n.namespace],
         color: "#c18401"
       }, {
-        tag: [xT.l.operator, xT.l.operatorKeyword, xT.l.url, xT.l.escape, xT.l.regexp, xT.l.link, xT.l.special(xT.l.string)],
+        tag: [Kz.n.operator, Kz.n.operatorKeyword, Kz.n.url, Kz.n.escape, Kz.n.regexp, Kz.n.link, Kz.n.special(Kz.n.string)],
         color: "#0184bc"
       }, {
-        tag: [xT.l.meta, xT.l.comment],
-        color: iT
+        tag: [Kz.n.meta, Kz.n.comment],
+        color: cz
       }, {
-        tag: xT.l.strong,
+        tag: Kz.n.strong,
         fontWeight: "bold"
       }, {
-        tag: xT.l.emphasis,
+        tag: Kz.n.emphasis,
         fontStyle: "italic"
       }, {
-        tag: xT.l.strikethrough,
+        tag: Kz.n.strikethrough,
         textDecoration: "line-through"
       }, {
-        tag: xT.l.link,
-        color: iT,
+        tag: Kz.n.link,
+        color: cz,
         textDecoration: "underline"
       }, {
-        tag: xT.l.heading,
+        tag: Kz.n.heading,
         fontWeight: "bold",
-        color: wT
+        color: rz
       }, {
-        tag: [xT.l.atom, xT.l.bool, xT.l.special(xT.l.variableName)],
-        color: RT
+        tag: [Kz.n.atom, Kz.n.bool, Kz.n.special(Kz.n.variableName)],
+        color: gz
       }, {
-        tag: [xT.l.processingInstruction, xT.l.string, xT.l.inserted],
+        tag: [Kz.n.processingInstruction, Kz.n.string, Kz.n.inserted],
         color: "#50a14f"
       }, {
-        tag: xT.l.invalid,
+        tag: Kz.n.invalid,
         color: "#000000"
       }]),
-      jT = [YT, (0, ym.kb)(qT)];
-    var VT = fm(37008),
-      IT = fm(41516);
-    const KT = am.g.define(),
-      QT = am.j.define({
+      Gz = [Iz, (0, WD.hb)(Bz)];
+    var hz = wD(36863),
+      nz = wD(41361);
+    const Mz = KD.j.define(),
+      Oz = KD.k.define({
         create: () => !1,
-        update(mm, Tm) {
-          for (const fm of Tm.effects) fm.is(KT) && (mm = fm.value);
-          return mm
+        update(DD, zD) {
+          for (const wD of zD.effects) wD.is(Mz) && (DD = wD.value);
+          return DD
         }
       }),
-      nT = [{
+      Jz = [{
         action: "explain",
         label: "Explain this"
       }, {
@@ -464,68 +464,68 @@ export const modules = {
         label: "Change this\u2026"
       }];
 
-    function JT(mm, Tm) {
-      return [QT, am.l.fromClass(class {
-        constructor(mm) {
-          this.view = mm, this.onDown = mm => {
-            const Tm = mm.target instanceof Element && null !== mm.target.closest(".cm-tooltip");
-            0 !== mm.button || Tm || this.view.state.field(QT) || this.view.dispatch({
-              effects: KT.of(!0)
+    function Ez(DD, zD) {
+      return [Oz, KD.l.fromClass(class {
+        constructor(DD) {
+          this.view = DD, this.onDown = DD => {
+            const zD = DD.target instanceof Element && null !== DD.target.closest(".cm-tooltip");
+            0 !== DD.button || zD || this.view.state.field(Oz) || this.view.dispatch({
+              effects: Mz.of(!0)
             })
           }, this.onUp = () => {
-            this.view.state.field(QT) && this.view.dispatch({
-              effects: KT.of(!1)
+            this.view.state.field(Oz) && this.view.dispatch({
+              effects: Mz.of(!1)
             })
-          }, mm.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
+          }, DD.dom.addEventListener("mousedown", this.onDown), document.addEventListener("mouseup", this.onUp), window.addEventListener("blur", this.onUp)
         }
         destroy() {
           this.view.dom.removeEventListener("mousedown", this.onDown), document.removeEventListener("mouseup", this.onUp), window.removeEventListener("blur", this.onUp)
         }
-      }), am.q.compute(["selection", QT], (fm => function(mm, Tm, fm) {
-        const hm = mm.selection.main;
-        return hm.empty || mm.field(QT) || mm.sliceDoc(hm.from, hm.to).trim().length < 2 ? null : {
-          pos: hm.from,
+      }), KD.s.compute(["selection", Oz], (wD => function(DD, zD, wD) {
+        const pD = DD.selection.main;
+        return pD.empty || DD.field(Oz) || DD.sliceDoc(pD.from, pD.to).trim().length < 2 ? null : {
+          pos: pD.from,
           above: !0,
-          create: mm => {
-            const hm = document.createElement("div");
-            hm.className = "CodeSelectionActions", hm.setAttribute("role", "toolbar"), hm.setAttribute("aria-label", "AI Helper: picked code");
+          create: DD => {
+            const pD = document.createElement("div");
+            pD.className = "CodeSelectionActions", pD.setAttribute("role", "toolbar"), pD.setAttribute("aria-label", "AI Helper: picked code");
             for (const {
-                action: Am,
-                label: am
+                action: sD,
+                label: KD
               }
-              of nT) {
-              if (!fm && "explain" !== Am) continue;
-              const xm = document.createElement("button");
-              xm.type = "button", xm.textContent = am, "change" !== Am && (xm.title = IT.c, xm.dataset.asksAi = "true"), xm.addEventListener("mousedown", (mm => {
-                mm.preventDefault()
-              })), xm.addEventListener("click", (() => {
-                const fm = mm.state.selection.main;
-                if (fm.empty) return;
-                const hm = {
-                  action: Am,
-                  path: Tm,
-                  fromLine: mm.state.doc.lineAt(fm.from).number,
-                  toLine: mm.state.doc.lineAt(fm.to > fm.from && mm.state.doc.lineAt(fm.to).from === fm.to ? fm.to - 1 : fm.to).number,
-                  text: mm.state.sliceDoc(fm.from, fm.to)
+              of Jz) {
+              if (!wD && "explain" !== sD) continue;
+              const rD = document.createElement("button");
+              rD.type = "button", rD.textContent = KD, "change" !== sD && (rD.title = nz.b, rD.dataset.asksAi = "true"), rD.addEventListener("mousedown", (DD => {
+                DD.preventDefault()
+              })), rD.addEventListener("click", (() => {
+                const wD = DD.state.selection.main;
+                if (wD.empty) return;
+                const pD = {
+                  action: sD,
+                  path: zD,
+                  fromLine: DD.state.doc.lineAt(wD.from).number,
+                  toLine: DD.state.doc.lineAt(wD.to > wD.from && DD.state.doc.lineAt(wD.to).from === wD.to ? wD.to - 1 : wD.to).number,
+                  text: DD.state.sliceDoc(wD.from, wD.to)
                 };
-                Nm.j.gp("WorldCodeAiSelection", hm), mm.dispatch({
+                jD.l.KG("WorldCodeAiSelection", pD), DD.dispatch({
                   selection: {
-                    anchor: fm.to
+                    anchor: wD.to
                   }
                 })
-              })), hm.appendChild(xm)
+              })), pD.appendChild(rD)
             }
             return {
-              dom: hm
+              dom: pD
             }
           }
         }
-      }(fm, mm, Tm)))]
+      }(wD, DD, zD)))]
     }
-    var cT = fm(1135);
-    const zT = new Set(["(", "{", "[", "<"]),
-      ZT = new Set([")", "}", "]", ">"]),
-      kT = {
+    var Qz = wD(1096);
+    const Xz = new Set(["(", "{", "[", "<"]),
+      Vz = new Set([")", "}", "]", ">"]),
+      Pz = {
         text: "var(--codeTooltipText, white)",
         parameterName: "var(--codeTooltipParameterName, orange)",
         parameter: "var(--codeTooltipParameter, cyan)",
@@ -533,100 +533,100 @@ export const modules = {
         docs: "var(--codeTooltipDocs, gray)"
       };
 
-    function bT(mm) {
-      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+    function Cz(DD) {
+      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
 
-      function fm(mm, Tm) {
-        let fm = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        const hm = [];
-        for (const Am of mm) {
-          let mm;
-          mm = "punctuation" === Am.kind ? kT.text : "parameterName" === Am.kind ? kT.parameterName : Tm, hm.push({
-            str: Am.text,
+      function wD(DD, zD) {
+        let wD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        const pD = [];
+        for (const sD of DD) {
+          let DD;
+          DD = "punctuation" === sD.kind ? Pz.text : "parameterName" === sD.kind ? Pz.parameterName : zD, pD.push({
+            str: sD.text,
             style: {
-              color: mm,
-              opacity: fm ? .5 : void 0
+              color: DD,
+              opacity: wD ? .5 : void 0
             }
           })
         }
-        return hm
+        return pD
       }
-      const hm = [];
-      if (hm.push(...fm(mm.prefixDisplayParts, kT.text)), mm.parameters.length > 0) {
-        hm.push("\n");
-        for (let Am = 0; Am < mm.parameters.length; Am++) {
-          const am = mm.parameters[Am];
-          hm.push("\t"), hm.push(...fm(am.displayParts, kT.parameter, null !== Tm && Am !== Tm)), hm.push("\n")
+      const pD = [];
+      if (pD.push(...wD(DD.prefixDisplayParts, Pz.text)), DD.parameters.length > 0) {
+        pD.push("\n");
+        for (let sD = 0; sD < DD.parameters.length; sD++) {
+          const KD = DD.parameters[sD];
+          pD.push("\t"), pD.push(...wD(KD.displayParts, Pz.parameter, null !== zD && sD !== zD)), pD.push("\n")
         }
       }
-      return hm.push(...fm(mm.suffixDisplayParts, kT.suffix)), mm.documentation && (hm.push("\n\n"), hm.push(...fm(mm.documentation, kT.docs))), hm
+      return pD.push(...wD(DD.suffixDisplayParts, Pz.suffix)), DD.documentation && (pD.push("\n\n"), pD.push(...wD(DD.documentation, Pz.docs))), pD
     }
-    var ST = function(mm) {
-      return mm[mm.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", mm[mm.DuplicateIdentifier = 2300] = "DuplicateIdentifier", mm
-    }(ST || {});
-    const eT = new Set([ST.DuplicateIdentifier]),
-      NT = new Set([ST.VariableDefinedElsewhere]),
-      GT = new Set([]),
-      XT = "/index.js";
+    var xz = function(DD) {
+      return DD[DD.VariableDefinedElsewhere = 2304] = "VariableDefinedElsewhere", DD[DD.DuplicateIdentifier = 2300] = "DuplicateIdentifier", DD
+    }(xz || {});
+    const Tz = new Set([xz.DuplicateIdentifier]),
+      bz = new Set([xz.VariableDefinedElsewhere]),
+      jz = new Set([]),
+      dz = "/index.js";
 
-    function PT(mm) {
-      return "/" + mm
-    }
-
-    function HT(mm, Tm, fm) {
-      mm.getSourceFile(Tm) && mm.deleteFile(Tm), mm.createFile(Tm, fm)
+    function Sz(DD) {
+      return "/" + DD
     }
 
-    function yT(mm) {
-      return !!mm && ((0, Qm.o)(mm) || (0, Qm.m)(mm))
+    function iz(DD, zD, wD) {
+      DD.getSourceFile(zD) && DD.deleteFile(zD), DD.createFile(zD, wD)
     }
 
-    function CT(mm, Tm, fm) {
+    function lz(DD) {
+      return !!DD && ((0, JD.l)(DD) || (0, JD.i)(DD))
+    }
+
+    function Wz(DD, zD, wD) {
       return () => {
-        let hm = [...Tm.languageService.getSemanticDiagnostics(fm), ...Tm.languageService.getSyntacticDiagnostics(fm)];
-        return hm = hm.filter((mm => !(0, cm.H)(mm.start) && !(0, cm.H)(mm.length) && !eT.has(mm.code))), mm || (hm = hm.filter((mm => !NT.has(mm.code)))), hm.map((mm => ({
-          from: mm.start,
-          to: mm.start + mm.length,
-          message: "string" === typeof mm.messageText ? mm.messageText : mm.messageText.messageText,
-          severity: GT.has(mm.code) ? "warning" : "error"
+        let pD = [...zD.languageService.getSemanticDiagnostics(wD), ...zD.languageService.getSyntacticDiagnostics(wD)];
+        return pD = pD.filter((DD => !(0, XD.B)(DD.start) && !(0, XD.B)(DD.length) && !Tz.has(DD.code))), DD || (pD = pD.filter((DD => !bz.has(DD.code)))), pD.map((DD => ({
+          from: DD.start,
+          to: DD.start + DD.length,
+          message: "string" === typeof DD.messageText ? DD.messageText : DD.messageText.messageText,
+          severity: jz.has(DD.code) ? "warning" : "error"
         })))
       }
     }
 
-    function rT(mm, Tm) {
-      return fm => {
-        var hm, Am;
-        const am = mm.languageService.getCompletionsAtPosition(Tm, fm.pos, {});
-        if (!am) return {
-          from: fm.pos,
+    function Nz(DD, zD) {
+      return wD => {
+        var pD, sD;
+        const KD = DD.languageService.getCompletionsAtPosition(zD, wD.pos, {});
+        if (!KD) return {
+          from: wD.pos,
           options: []
         };
-        let xm = null !== (hm = null === (Am = am.optionalReplacementSpan) || void 0 === Am ? void 0 : Am.start) && void 0 !== hm ? hm : fm.pos;
-        if (!am.optionalReplacementSpan) {
-          const mm = fm.state.doc.sliceString(0, fm.pos);
-          for (; xm > 0 && /[\w$]/.test(mm[xm - 1]);) xm--
+        let rD = null !== (pD = null === (sD = KD.optionalReplacementSpan) || void 0 === sD ? void 0 : sD.start) && void 0 !== pD ? pD : wD.pos;
+        if (!KD.optionalReplacementSpan) {
+          const DD = wD.state.doc.sliceString(0, wD.pos);
+          for (; rD > 0 && /[\w$]/.test(DD[rD - 1]);) rD--
         }
-        return am.entries = am.entries.filter((mm => mm.kind !== Ym().ScriptElementKind.warning)), {
-          from: xm,
-          options: am.entries.map((hm => {
-            var Am, am, wm, Dm;
-            const im = mm.languageService.getCompletionEntryDetails(Tm, fm.pos, hm.name, {}, hm.source, {}, hm.data),
-              Rm = null !== (Am = null === (am = hm.replacementSpan) || void 0 === am ? void 0 : am.start) && void 0 !== Am ? Am : xm,
-              pm = hm.replacementSpan ? hm.replacementSpan.start + hm.replacementSpan.length : fm.pos,
-              Em = null !== (wm = hm.insertText) && void 0 !== wm ? wm : hm.name;
+        return KD.entries = KD.entries.filter((DD => DD.kind !== BD().ScriptElementKind.warning)), {
+          from: rD,
+          options: KD.entries.map((pD => {
+            var sD, KD, LD, cD;
+            const gD = DD.languageService.getCompletionEntryDetails(zD, wD.pos, pD.name, {}, pD.source, {}, pD.data),
+              RD = null !== (sD = null === (KD = pD.replacementSpan) || void 0 === KD ? void 0 : KD.start) && void 0 !== sD ? sD : rD,
+              AD = pD.replacementSpan ? pD.replacementSpan.start + pD.replacementSpan.length : wD.pos,
+              UD = null !== (LD = pD.insertText) && void 0 !== LD ? LD : pD.name;
             return {
-              label: hm.name,
-              detail: null === im || void 0 === im ? void 0 : im.displayParts.map((mm => mm.text)).join(""),
-              info: null === im || void 0 === im || null === (Dm = im.documentation) || void 0 === Dm ? void 0 : Dm.map((mm => mm.text)).join(""),
-              apply: mm => {
-                mm.dispatch({
+              label: pD.name,
+              detail: null === gD || void 0 === gD ? void 0 : gD.displayParts.map((DD => DD.text)).join(""),
+              info: null === gD || void 0 === gD || null === (cD = gD.documentation) || void 0 === cD ? void 0 : cD.map((DD => DD.text)).join(""),
+              apply: DD => {
+                DD.dispatch({
                   changes: {
-                    from: Rm,
-                    to: pm,
-                    insert: Em
+                    from: RD,
+                    to: AD,
+                    insert: UD
                   },
                   selection: {
-                    anchor: Rm + Em.length
+                    anchor: RD + UD.length
                   }
                 })
               }
@@ -636,114 +636,114 @@ export const modules = {
       }
     }
 
-    function sT(mm) {
-      return Tm => {
-        const fm = document.createElement("div");
-        fm.className = "CodeEditorTooltip";
-        let hm = !1;
+    function Zz(DD) {
+      return zD => {
+        const wD = document.createElement("div");
+        wD.className = "CodeEditorTooltip";
+        let pD = !1;
         return queueMicrotask((() => {
-          hm || (wm.render((0, cT.jsx)(Em.b, {
-            text: mm
-          }), fm), Tm.requestMeasure())
+          pD || (LD.render((0, Qz.jsx)(UD.e, {
+            text: DD
+          }), wD), zD.requestMeasure())
         })), {
-          dom: fm,
+          dom: wD,
           destroy() {
-            hm = !0, queueMicrotask((() => {
-              wm.unmountComponentAtNode(fm)
+            pD = !0, queueMicrotask((() => {
+              LD.unmountComponentAtNode(wD)
             }))
           }
         }
       }
     }
 
-    function lT(mm, Tm, fm) {
-      return hm => {
-        var Am;
-        if (!Tm) return [];
-        const am = null === (Am = hm.selection.mo[0]) || void 0 === Am ? void 0 : Am.head;
-        if (void 0 === am) return [];
-        const xm = mm.languageService.getSignatureHelpItems(fm, am, {});
-        if (!xm || !xm.items.length) return [];
-        const wm = xm.applicableSpan.start - xm.items[0].prefixDisplayParts.map((mm => mm.text)).join("").length,
-          Dm = xm.applicableSpan.start,
-          im = hm.doc.lineAt(am),
-          Rm = im.from,
-          pm = Math.min(im.to, am);
-        let Em, om;
-        return wm < Rm ? (Em = Rm, om = pm) : (Em = wm, om = Dm), [{
-          pos: Em,
-          end: om,
+    function yz(DD, zD, wD) {
+      return pD => {
+        var sD;
+        if (!zD) return [];
+        const KD = null === (sD = pD.selection.rG[0]) || void 0 === sD ? void 0 : sD.head;
+        if (void 0 === KD) return [];
+        const rD = DD.languageService.getSignatureHelpItems(wD, KD, {});
+        if (!rD || !rD.items.length) return [];
+        const LD = rD.applicableSpan.start - rD.items[0].prefixDisplayParts.map((DD => DD.text)).join("").length,
+          cD = rD.applicableSpan.start,
+          gD = pD.doc.lineAt(KD),
+          RD = gD.from,
+          AD = Math.min(gD.to, KD);
+        let UD, fD;
+        return LD < RD ? (UD = RD, fD = AD) : (UD = LD, fD = cD), [{
+          pos: UD,
+          end: fD,
           above: !1,
-          create: sT(bT(xm.items[0], xm.argumentIndex))
+          create: Zz(Cz(rD.items[0], rD.argumentIndex))
         }]
       }
     }
 
-    function MT(mm, Tm) {
-      return (fm, hm, Am) => {
-        const am = mm.languageService.getQuickInfoAtPosition(Tm, hm);
-        if (!am) return [];
-        const xm = am.textSpan.start,
-          wm = am.textSpan.start + am.textSpan.length;
-        if (hm < xm || hm >= wm) return [];
-        if (am.kind === Ym().ScriptElementKind.memberFunctionElement || am.kind === Ym().ScriptElementKind.variableElement && "declare" === am.kindModifiers) {
-          const mm = am.displayParts.findIndex((mm => "space" === mm.kind)); - 1 !== mm && (am.displayParts = am.displayParts.slice(mm));
-          const Tm = {
+    function kz(DD, zD) {
+      return (wD, pD, sD) => {
+        const KD = DD.languageService.getQuickInfoAtPosition(zD, pD);
+        if (!KD) return [];
+        const rD = KD.textSpan.start,
+          LD = KD.textSpan.start + KD.textSpan.length;
+        if (pD < rD || pD >= LD) return [];
+        if (KD.kind === BD().ScriptElementKind.memberFunctionElement || KD.kind === BD().ScriptElementKind.variableElement && "declare" === KD.kindModifiers) {
+          const DD = KD.displayParts.findIndex((DD => "space" === DD.kind)); - 1 !== DD && (KD.displayParts = KD.displayParts.slice(DD));
+          const zD = {
               prefixDisplayParts: [],
               parameters: [],
               suffixDisplayParts: [],
               documentation: []
             },
-            fm = am.displayParts.findIndex((mm => "punctuation" === mm.kind && "(" === mm.text)); - 1 !== fm && (Tm.prefixDisplayParts = am.displayParts.slice(0, fm + 1), am.displayParts = am.displayParts.slice(fm + 1));
-          const hm = am.displayParts.findLastIndex((mm => "punctuation" === mm.kind && ")" === mm.text)); - 1 !== hm && (Tm.suffixDisplayParts = am.displayParts.slice(hm), am.displayParts = am.displayParts.slice(0, hm));
-          let Am = 0,
-            Dm = [];
-          for (const xm of am.displayParts)
-            if (zT.has(xm.text) ? Am++ : ZT.has(xm.text) && Am--, "lineBreak" !== xm.kind) {
-              if ("space" === xm.kind) {
-                if (0 === Dm.length) continue;
-                Dm.push({
+            wD = KD.displayParts.findIndex((DD => "punctuation" === DD.kind && "(" === DD.text)); - 1 !== wD && (zD.prefixDisplayParts = KD.displayParts.slice(0, wD + 1), KD.displayParts = KD.displayParts.slice(wD + 1));
+          const pD = KD.displayParts.findLastIndex((DD => "punctuation" === DD.kind && ")" === DD.text)); - 1 !== pD && (zD.suffixDisplayParts = KD.displayParts.slice(pD), KD.displayParts = KD.displayParts.slice(0, pD));
+          let sD = 0,
+            cD = [];
+          for (const rD of KD.displayParts)
+            if (Xz.has(rD.text) ? sD++ : Vz.has(rD.text) && sD--, "lineBreak" !== rD.kind) {
+              if ("space" === rD.kind) {
+                if (0 === cD.length) continue;
+                cD.push({
                   kind: "space",
                   text: " "
                 })
-              } else Dm.push(xm);
-              0 === Am && "," === xm.text && (Tm.parameters.push({
-                displayParts: Dm
-              }), Dm = [])
-            } return Dm.length > 0 && Tm.parameters.push({
-            displayParts: Dm
-          }), Tm.documentation = am.documentation, [{
-            pos: xm,
-            end: wm,
+              } else cD.push(rD);
+              0 === sD && "," === rD.text && (zD.parameters.push({
+                displayParts: cD
+              }), cD = [])
+            } return cD.length > 0 && zD.parameters.push({
+            displayParts: cD
+          }), zD.documentation = KD.documentation, [{
+            pos: rD,
+            end: LD,
             above: !0,
-            create: sT(bT(Tm))
+            create: Zz(Cz(zD))
           }]
         }
-        const Dm = [];
-        for (const mm of am.displayParts) Dm.push({
-          str: mm.text,
+        const cD = [];
+        for (const DD of KD.displayParts) cD.push({
+          str: DD.text,
           style: {
-            color: kT.text
+            color: Pz.text
           }
         });
-        if (am.documentation) {
-          Dm.push("\n\n");
-          for (const mm of am.documentation) Dm.push({
-            str: mm.text,
+        if (KD.documentation) {
+          cD.push("\n\n");
+          for (const DD of KD.documentation) cD.push({
+            str: DD.text,
             style: {
-              color: kT.docs
+              color: Pz.docs
             }
           })
         }
         return [{
-          pos: xm,
-          end: wm,
+          pos: rD,
+          end: LD,
           above: !0,
-          create: sT(Dm)
+          create: Zz(cD)
         }]
       }
     }
-    const uT = {
+    const mz = {
       indentSize: 4,
       tabSize: 4,
       newLineCharacter: "\n",
@@ -762,209 +762,209 @@ export const modules = {
       insertSpaceAfterTypeAssertion: !1,
       placeOpenBraceOnNewLineForFunctions: !1,
       placeOpenBraceOnNewLineForControlBlocks: !1,
-      semicolons: Ym().SemicolonPreference.Insert
+      semicolons: BD().SemicolonPreference.Insert
     };
-    const BT = am.g.define(),
-      LT = {
+    const ez = KD.j.define(),
+      oz = {
         lineNumbers: !0,
         tabSize: 4
       };
 
-    function vT(mm) {
+    function az(DD) {
       let {
-        isLobbyCode: Tm,
-        code: fm,
-        onChange: wm,
-        canEditCode: Em,
-        setTemporaryMessage: Om,
-        close: cm,
-        showTooltips: Bm,
-        lightMode: Lm,
-        collabState: Um,
-        onRemoteDocChange: dm,
-        files: gm,
-        activePath: Wm,
-        pluginName: mT,
-        pluginFile: TT,
-        pluginSource: hT,
-        setActiveDocReplacer: AT,
-        showAiHints: xT,
-        canAiChangeCode: wT = Em
-      } = mm;
-      const [DT, iT] = (0, xm.useState)(null), RT = null === Um || void 0 === Um ? void 0 : Um.version, pT = null === Um || void 0 === Um ? void 0 : Um.clientID, ET = (0, xm.useRef)({
-        isLobbyCode: Tm,
-        files: gm,
-        code: fm,
-        activePath: Wm
-      }), oT = (0, xm.useRef)(dm);
-      oT.current = dm;
-      const OT = (0, xm.useRef)(null),
-        YT = (0, xm.useRef)(Um);
-      YT.current = Um;
-      const qT = (0, xm.useRef)(null),
-        IT = (0, xm.useRef)(null),
-        KT = (0, xm.useRef)(null),
-        QT = (0, xm.useRef)(cm);
-      QT.current = cm;
-      const nT = (0, xm.useRef)(fm);
-      nT.current = fm;
-      const zT = (0, xm.useRef)(hT);
-      zT.current = hT;
-      const ZT = function(mm, Tm, fm, hm) {
-        return fm ? `/plugin-preview/${fm}/${null!==hm&&void 0!==hm?hm:"index.ts"}` : mm ? PT(null !== Tm && void 0 !== Tm ? Tm : Km.i) : XT
-      }(Tm, Wm, mT, TT);
-      (0, xm.useEffect)((() => {
+        isLobbyCode: zD,
+        code: wD,
+        onChange: LD,
+        canEditCode: UD,
+        setTemporaryMessage: ID,
+        close: XD,
+        showTooltips: oD,
+        lightMode: aD,
+        collabState: vD,
+        onRemoteDocChange: tD,
+        files: FD,
+        activePath: YD,
+        pluginName: qD,
+        pluginFile: Dz,
+        pluginSource: wz,
+        setActiveDocReplacer: pz,
+        showAiHints: Kz,
+        canAiChangeCode: rz = UD
+      } = DD;
+      const [Lz, cz] = (0, rD.useState)(null), gz = null === vD || void 0 === vD ? void 0 : vD.version, Rz = null === vD || void 0 === vD ? void 0 : vD.clientID, Az = (0, rD.useRef)({
+        isLobbyCode: zD,
+        files: FD,
+        code: wD,
+        activePath: YD
+      }), Uz = (0, rD.useRef)(tD);
+      Uz.current = tD;
+      const fz = (0, rD.useRef)(null),
+        Iz = (0, rD.useRef)(vD);
+      Iz.current = vD;
+      const Bz = (0, rD.useRef)(null),
+        nz = (0, rD.useRef)(null),
+        Mz = (0, rD.useRef)(null),
+        Oz = (0, rD.useRef)(XD);
+      Oz.current = XD;
+      const Jz = (0, rD.useRef)(wD);
+      Jz.current = wD;
+      const Xz = (0, rD.useRef)(wz);
+      Xz.current = wz;
+      const Vz = function(DD, zD, wD, pD) {
+        return wD ? `/plugin-preview/${wD}/${null!==pD&&void 0!==pD?pD:"index.ts"}` : DD ? Sz(null !== zD && void 0 !== zD ? zD : OD.f) : dz
+      }(zD, YD, qD, Dz);
+      (0, rD.useEffect)((() => {
         !async function() {
           const {
-            isLobbyCode: mm,
-            files: Tm,
-            code: fm,
-            activePath: hm
-          } = ET.current, Am = {
+            isLobbyCode: DD,
+            files: zD,
+            code: wD,
+            activePath: pD
+          } = Az.current, sD = {
             allowJs: !0,
             checkJs: !1,
             noLib: !0,
             strict: !1,
-            module: Ym().ModuleKind.ESNext,
-            moduleResolution: Ym().ModuleResolutionKind.Bundler,
-            target: Ym().ScriptTarget.ES2015,
+            module: BD().ModuleKind.ESNext,
+            moduleResolution: BD().ModuleResolutionKind.Bundler,
+            target: BD().ScriptTarget.ES2015,
             paths: {
               "@bloxd": ["/node_modules/@bloxd/index.d.ts"],
-              ...Object.fromEntries(Object.values(Im.e).map((mm => [mm.specifier, [mm.typesVfsPath]])))
+              ...Object.fromEntries(Object.values(MD.h).map((DD => [DD.specifier, [DD.typesVfsPath]])))
             }
-          }, am = new Map, xm = [];
-          if (mm) {
-            const mm = null !== Tm && void 0 !== Tm ? Tm : {
-              [Km.i]: fm || "\n"
+          }, KD = new Map, rD = [];
+          if (DD) {
+            const DD = null !== zD && void 0 !== zD ? zD : {
+              [OD.f]: wD || "\n"
             };
-            for (const [Tm, fm] of Object.entries(mm)) {
-              const mm = PT(Tm);
-              am.set(mm, fm || "\n"), xm.push(mm)
+            for (const [zD, wD] of Object.entries(DD)) {
+              const DD = Sz(zD);
+              KD.set(DD, wD || "\n"), rD.push(DD)
             }
-            const Am = PT(null !== hm && void 0 !== hm ? hm : Km.i);
-            am.has(Am) ? am.set(Am, fm || "\n") : (am.set(Am, fm || "\n"), xm.push(Am)), am.set("/node_modules/@bloxd/index.d.ts", Rm.default), xm.push("/node_modules/@bloxd/index.d.ts");
-            for (const Tm of Object.values(Im.e)) {
-              am.set(Tm.typesVfsPath, Tm.types), xm.push(Tm.typesVfsPath);
-              for (const [mm, fm] of Object.entries(Tm.files)) {
-                const hm = `/plugin-preview/${Tm.name}/${mm}`;
-                am.set(hm, fm || "\n"), xm.push(hm)
+            const sD = Sz(null !== pD && void 0 !== pD ? pD : OD.f);
+            KD.has(sD) ? KD.set(sD, wD || "\n") : (KD.set(sD, wD || "\n"), rD.push(sD)), KD.set("/node_modules/@bloxd/index.d.ts", RD.default), rD.push("/node_modules/@bloxd/index.d.ts");
+            for (const zD of Object.values(MD.h)) {
+              KD.set(zD.typesVfsPath, zD.types), rD.push(zD.typesVfsPath);
+              for (const [DD, wD] of Object.entries(zD.files)) {
+                const pD = `/plugin-preview/${zD.name}/${DD}`;
+                KD.set(pD, wD || "\n"), rD.push(pD)
               }
             }
-          } else am.set(XT, fm || "\n"), xm.push(XT);
-          am.set("/globals.d.ts", mm ? im.e : Dm.e), am.set("/lib.d.ts", pm.e), xm.push("/globals.d.ts", "/lib.d.ts");
-          const wm = om.d(am),
-            Em = om.h(wm, xm, Ym(), Am);
-          iT({
-            io: Em,
-            fsMap: am
+          } else KD.set(dz, wD || "\n"), rD.push(dz);
+          KD.set("/globals.d.ts", DD ? gD.d : cD.e), KD.set("/lib.d.ts", AD.e), rD.push("/globals.d.ts", "/lib.d.ts");
+          const LD = fD.b(KD),
+            UD = fD.d(LD, rD, BD(), sD);
+          cz({
+            LG: UD,
+            fsMap: KD
           })
         }()
-      }), []), (0, xm.useEffect)((() => {
-        var mm, hm;
-        if (!DT || !Tm) return;
+      }), []), (0, rD.useEffect)((() => {
+        var DD, pD;
+        if (!Lz || !zD) return;
         const {
-          io: Am,
-          fsMap: am
-        } = DT;
-        if (function(mm, Tm, fm) {
-            const hm = new Set;
-            for (const [Am, am] of Object.entries(fm)) {
-              const fm = PT(Am);
-              hm.add(fm);
-              const xm = am || "\n";
-              Tm.get(fm) !== xm && (Tm.set(fm, xm), HT(mm, fm, xm))
+          LG: sD,
+          fsMap: KD
+        } = Lz;
+        if (function(DD, zD, wD) {
+            const pD = new Set;
+            for (const [sD, KD] of Object.entries(wD)) {
+              const wD = Sz(sD);
+              pD.add(wD);
+              const rD = KD || "\n";
+              zD.get(wD) !== rD && (zD.set(wD, rD), iz(DD, wD, rD))
             }
-            for (const Am of [...Tm.keys()]) "/globals.d.ts" === Am || "/lib.d.ts" === Am || Am.startsWith("/node_modules/") || Am.startsWith("/plugin-preview/") || hm.has(Am) || (Tm.delete(Am), mm.getSourceFile(Am) && mm.deleteFile(Am))
-          }(Am, am, null !== gm && void 0 !== gm ? gm : {
-            [Km.i]: fm || "\n"
-          }), mT) return void HT(Am, ZT, hT || "\n");
-        const xm = null !== (mm = null === (hm = OT.current) || void 0 === hm ? void 0 : hm.state.doc.toString()) && void 0 !== mm ? mm : fm;
-        HT(Am, ZT, xm || "\n")
-      }), [gm, Wm, DT, mT, hT, ZT, fm, Tm]), (0, xm.useEffect)((() => {
-        if (!DT) return;
+            for (const sD of [...zD.keys()]) "/globals.d.ts" === sD || "/lib.d.ts" === sD || sD.startsWith("/node_modules/") || sD.startsWith("/plugin-preview/") || pD.has(sD) || (zD.delete(sD), DD.getSourceFile(sD) && DD.deleteFile(sD))
+          }(sD, KD, null !== FD && void 0 !== FD ? FD : {
+            [OD.f]: wD || "\n"
+          }), qD) return void iz(sD, Vz, wz || "\n");
+        const rD = null !== (DD = null === (pD = fz.current) || void 0 === pD ? void 0 : pD.state.doc.toString()) && void 0 !== DD ? DD : wD;
+        iz(sD, Vz, rD || "\n")
+      }), [FD, YD, Lz, qD, wz, Vz, wD, zD]), (0, rD.useEffect)((() => {
+        if (!Lz) return;
         const {
-          io: mm
-        } = DT;
-        HT(mm, ZT, (mT ? hT : fm) || "\n")
-      }), [fm, mT, hT, ZT, DT]), (0, xm.useEffect)((() => () => {
-        IT.current && (IT.current(), IT.current = null)
-      }), []), (0, xm.useEffect)((() => (AT(((mm, Tm) => {
-        if (mT) return !1;
-        const fm = OT.current,
-          hm = YT.current,
-          Am = hm ? (0, Qm.u)(hm.docKey) : null;
-        if (!fm || !hm || qT.current !== hm.clientID || mm !== Am) return !1;
-        const am = fm.state.doc.toString();
-        return am !== Tm && fm.dispatch({
+          LG: DD
+        } = Lz;
+        iz(DD, Vz, (qD ? wz : wD) || "\n")
+      }), [wD, qD, wz, Vz, Lz]), (0, rD.useEffect)((() => () => {
+        nz.current && (nz.current(), nz.current = null)
+      }), []), (0, rD.useEffect)((() => (pz(((DD, zD) => {
+        if (qD) return !1;
+        const wD = fz.current,
+          pD = Iz.current,
+          sD = pD ? (0, JD.p)(pD.docKey) : null;
+        if (!wD || !pD || Bz.current !== pD.clientID || DD !== sD) return !1;
+        const KD = wD.state.doc.toString();
+        return KD !== zD && wD.dispatch({
           changes: {
             from: 0,
-            to: am.length,
-            insert: Tm
+            to: KD.length,
+            insert: zD
           }
         }), !0
       })), () => {
-        OT.current = null, qT.current = null, AT(null)
-      })), [AT, mT]);
-      const kT = Tm ? mT ? null : null !== Wm && void 0 !== Wm ? Wm : Km.i : VT.d,
-        bT = fT(OT, kT);
-      aT(OT, Om), (0, Jm.g)("FormatCode", (() => {
-        if (!DT || !OT.current || mT) return;
+        fz.current = null, Bz.current = null, pz(null)
+      })), [pz, qD]);
+      const Pz = zD ? qD ? null : null !== YD && void 0 !== YD ? YD : OD.f : hz.d,
+        Cz = zz(fz, Pz);
+      sz(fz, ID), (0, QD.g)("FormatCode", (() => {
+        if (!Lz || !fz.current || qD) return;
         const {
-          io: mm,
-          fsMap: fm
-        } = DT, hm = mm.getSourceFile(ZT).getFullText();
-        let Am = 0;
-        if (Tm && gm)
-          for (const [Tm, wm] of Object.entries(gm)) Tm !== (null !== Wm && void 0 !== Wm ? Wm : Km.i) && (Am += wm.length);
-        const am = function(mm, Tm, fm, hm, Am) {
-          const am = mm.languageService.getFormattingEditsForDocument(hm, uT);
-          if (!am.length) return zm.e.error("Code is already formatted.");
-          am.sort(((mm, Tm) => Tm.span.start - mm.span.start));
-          let xm = mm.getSourceFile(hm).getFullText();
-          for (const wm of am) xm = xm.slice(0, wm.span.start) + wm.gx + xm.slice(wm.span.start + wm.span.length);
-          return xm !== (fm ? (0, nm.j)(xm, Am) : (0, nm.h)(xm)) ? zm.e.error("Formatting the code will go beyond the character limit.") : zm.e.value(xm)
-        }(mm, 0, Tm, ZT, Am);
-        if (am.isError()) return void Om({
-          message: am.asError().message,
+          LG: DD,
+          fsMap: wD
+        } = Lz, pD = DD.getSourceFile(Vz).getFullText();
+        let sD = 0;
+        if (zD && FD)
+          for (const [zD, LD] of Object.entries(FD)) zD !== (null !== YD && void 0 !== YD ? YD : OD.f) && (sD += LD.length);
+        const KD = function(DD, zD, wD, pD, sD) {
+          const KD = DD.languageService.getFormattingEditsForDocument(pD, mz);
+          if (!KD.length) return VD.e.error("Code is already formatted.");
+          KD.sort(((DD, zD) => zD.span.start - DD.span.start));
+          let rD = DD.getSourceFile(pD).getFullText();
+          for (const LD of KD) rD = rD.slice(0, LD.span.start) + LD.DL + rD.slice(LD.span.start + LD.span.length);
+          return rD !== (wD ? (0, ED.k)(rD, sD) : (0, ED.i)(rD)) ? VD.e.error("Formatting the code will go beyond the character limit.") : VD.e.value(rD)
+        }(DD, 0, zD, Vz, sD);
+        if (KD.isError()) return void ID({
+          message: KD.asError().message,
           type: "warning"
         });
-        const xm = am.getValue();
-        xm && (OT.current.dispatch({
+        const rD = KD.getValue();
+        rD && (fz.current.dispatch({
           changes: {
             from: 0,
-            to: hm.length,
-            insert: xm
+            to: pD.length,
+            insert: rD
           },
           selection: {
-            anchor: xm.length
+            anchor: rD.length
           }
-        }), HT(mm, ZT, xm), wm(xm))
+        }), iz(DD, Vz, rD), LD(rD))
       }));
-      const ST = (0, xm.useMemo)((() => {
-        if (!DT) return [];
+      const xz = (0, rD.useMemo)((() => {
+        if (!Lz) return [];
         const {
-          io: mm,
-          fsMap: fm
-        } = DT;
-        ! function(mm, Tm, fm, hm) {
-          if (mm.getSourceFile(fm)) return;
-          const Am = hm || "\n";
-          Tm.set(fm, Am), mm.createFile(fm, Am)
-        }(mm, fm, ZT, (mT ? zT.current : nT.current) || "\n");
-        const xm = Tm && yT(mT ? null !== TT && void 0 !== TT ? TT : "index.ts" : Wm),
-          wm = [(0, Am.c)({
+          LG: DD,
+          fsMap: wD
+        } = Lz;
+        ! function(DD, zD, wD, pD) {
+          if (DD.getSourceFile(wD)) return;
+          const sD = pD || "\n";
+          zD.set(wD, sD), DD.createFile(wD, sD)
+        }(DD, wD, Vz, (qD ? Xz.current : Jz.current) || "\n");
+        const rD = zD && lz(qD ? null !== Dz && void 0 !== Dz ? Dz : "index.ts" : YD),
+          LD = [(0, sD.e)({
             jsx: !1,
-            typescript: xm
-          }), am.d.highest(am.c.domEventHandlers({
-            keydown: mm => "Escape" === mm.key ? (QT.current(), mm.stopPropagation(), !0) : (mm.stopPropagation(), !1)
-          })), (0, hm.d)({
-            override: [rT(mm, ZT)]
-          }), bm.h.fromClass(class {
-            constructor(mm) {
-              this.view = mm, this.timeout = null, this.scheduleParse()
+            typescript: rD
+          }), KD.h.highest(KD.e.domEventHandlers({
+            keydown: DD => "Escape" === DD.key ? (Oz.current(), DD.stopPropagation(), !0) : (DD.stopPropagation(), !1)
+          })), (0, pD.c)({
+            override: [Nz(DD, Vz)]
+          }), xD.n.fromClass(class {
+            constructor(DD) {
+              this.view = DD, this.timeout = null, this.scheduleParse()
             }
-            update(mm) {
-              (mm.docChanged || mm.viewportChanged) && this.scheduleParse()
+            update(DD) {
+              (DD.docChanged || DD.viewportChanged) && this.scheduleParse()
             }
             destroy() {
               null !== this.timeout && (clearTimeout(this.timeout), this.timeout = null)
@@ -972,215 +972,215 @@ export const modules = {
             scheduleParse() {
               null === this.timeout && (this.timeout = setTimeout((() => {
                 this.timeout = null;
-                const mm = this.view.viewport.to;
-                (0, ym.lb)(this.view.state, mm) || (0, ym.R)(this.view, mm, Cm) || this.scheduleParse()
-              }), rm))
+                const DD = this.view.viewport.to;
+                (0, WD.ib)(this.view.state, DD) || (0, WD.R)(this.view, DD, ND) || this.scheduleParse()
+              }), ZD))
             }
-          }), ...Fm, am.c.lineWrapping, am.j.define({
-            create: lT(mm, Bm, ZT),
-            update(Tm, fm) {
-              const hm = fm.effects.some((mm => mm.is(BT)));
-              return fm.docChanged || fm.selection || hm ? (HT(mm, ZT, fm.state.doc.toString() || " "), lT(mm, Bm, ZT)(fm.state)) : Tm
+          }), ...HD, KD.e.lineWrapping, KD.k.define({
+            create: yz(DD, oD, Vz),
+            update(zD, wD) {
+              const pD = wD.effects.some((DD => DD.is(ez)));
+              return wD.docChanged || wD.selection || pD ? (iz(DD, Vz, wD.state.doc.toString() || " "), yz(DD, oD, Vz)(wD.state)) : zD
             },
-            provide: mm => am.q.computeN([mm], (Tm => Tm.field(mm)))
-          }), (0, am.p)(MT(mm, ZT)), (0, jm.e)(CT(Tm, mm, ZT)), am.l.fromClass(class {
-            constructor(mm) {
-              this.view = mm, this.searchPanel = null
+            provide: DD => KD.s.computeN([DD], (zD => zD.field(DD)))
+          }), (0, KD.q)(kz(DD, Vz)), (0, hD.e)(Wz(zD, DD, Vz)), KD.l.fromClass(class {
+            constructor(DD) {
+              this.view = DD, this.searchPanel = null
             }
-            update(mm) {
-              const Tm = mm.view.dom.querySelector(".cm-search");
-              if (Tm !== this.searchPanel) {
-                if (this.searchPanel = Tm, !this.searchPanel) return;
-                this.searchPanel.addEventListener("keydown", (mm => {
-                  "Escape" === mm.key && (0, qm.e)(this.view), mm.stopPropagation()
+            update(DD) {
+              const zD = DD.view.dom.querySelector(".cm-search");
+              if (zD !== this.searchPanel) {
+                if (this.searchPanel = zD, !this.searchPanel) return;
+                this.searchPanel.addEventListener("keydown", (DD => {
+                  "Escape" === DD.key && (0, GD.c)(this.view), DD.stopPropagation()
                 }))
               }
             }
           })];
-        xT && !mT && wm.push(JT(Tm ? null !== Wm && void 0 !== Wm ? Wm : Km.i : VT.d, wT));
-        const Dm = YT.current;
-        if (Dm && !mT) {
-          wm.push(... function(mm, Tm, fm, hm, Am) {
-            let am = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-            const xm = (0, Qm.u)(fm),
-              wm = bm.h.fromClass(class {
-                constructor(mm) {
-                  this.view = mm, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = Nm.j.subscribe("codeCollab", (mm => {
-                    mm.docKey === xm && mm.type === Qm.f.Updates && (mm.updates ? this.applyUpdates(mm.updates) : this.pull())
+        Kz && !qD && LD.push(Ez(zD ? null !== YD && void 0 !== YD ? YD : OD.f : hz.d, rz));
+        const cD = Iz.current;
+        if (cD && !qD) {
+          LD.push(... function(DD, zD, wD, pD, sD) {
+            let KD = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
+            const rD = (0, JD.p)(wD),
+              LD = xD.n.fromClass(class {
+                constructor(DD) {
+                  this.view = DD, this.pushing = !1, this.pushTimeout = null, this.pushDelayTimeout = null, this.cursorTimeout = null, this.lastPushTime = 0, this.pulling = !1, this.pullPending = !1, this.lastCursorSent = 0, this.destroyed = !1, this.subToken = void 0, this.subToken = jD.l.subscribe("codeCollab", (DD => {
+                    DD.docKey === rD && DD.type === JD.f.Updates && (DD.updates ? this.applyUpdates(DD.updates) : this.pull())
                   })), this.pull()
                 }
-                applyUpdates(mm) {
-                  const Tm = JSON.parse(mm).map((mm => ({
-                    clientID: mm.clientID,
-                    changes: km.ChangeSet.fromJSON(mm.changes)
+                applyUpdates(DD) {
+                  const zD = JSON.parse(DD).map((DD => ({
+                    clientID: DD.clientID,
+                    changes: CD.ChangeSet.fromJSON(DD.changes)
                   })));
-                  Tm.length > 0 && (this.view.dispatch((0, Zm.j)(this.view.state, Tm)), Am && Am(this.view.state.doc.toString())), this.clearPushState(), this.push()
+                  zD.length > 0 && (this.view.dispatch((0, PD.h)(this.view.state, zD)), sD && sD(this.view.state.doc.toString())), this.clearPushState(), this.push()
                 }
                 clearPushState() {
                   this.pushing = !1, this.pushTimeout && (clearTimeout(this.pushTimeout), this.pushTimeout = null), this.pushDelayTimeout && (clearTimeout(this.pushDelayTimeout), this.pushDelayTimeout = null)
                 }
-                update(mm) {
-                  am && (mm.docChanged && this.push(), this.sendCursor())
+                update(DD) {
+                  KD && (DD.docChanged && this.push(), this.sendCursor())
                 }
                 push() {
-                  const mm = (0, Zm.k)(this.view.state);
-                  if (this.pushing || !mm.length) return;
-                  const Tm = Date.now() - this.lastPushTime;
-                  if (Tm < Hm) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
+                  const DD = (0, PD.l)(this.view.state);
+                  if (this.pushing || !DD.length) return;
+                  const zD = Date.now() - this.lastPushTime;
+                  if (zD < lD) return void(this.pushDelayTimeout || (this.pushDelayTimeout = setTimeout((() => {
                     this.pushDelayTimeout = null, this.push()
-                  }), Hm - Tm)));
+                  }), lD - zD)));
                   this.pushing = !0, this.lastPushTime = Date.now(), this.pushTimeout = setTimeout((() => {
                     this.clearPushState(), this.push()
-                  }), Xm);
-                  const fm = (0, Zm.f)(this.view.state),
-                    Am = mm.map((mm => ({
-                      clientID: mm.clientID,
-                      changes: mm.changes.toJSON()
+                  }), SD);
+                  const wD = (0, PD.d)(this.view.state),
+                    sD = DD.map((DD => ({
+                      clientID: DD.clientID,
+                      changes: DD.changes.toJSON()
                     }))),
-                    am = JSON.stringify(Am);
-                  am.length <= Qm.h ? Sm.gameBridge.send("sendCodeCollab", {
-                    va: Qm.b.Push,
-                    Ua: xm,
-                    da: fm,
-                    Fa: am
-                  }) : (0, Gm.postJsonWithMetricsCookiesAndJsonResponse)(`${hm.gsUrl}/code/collab-push`, em.t["collab-push"].toBuffer({
-                    gameNameWithVariation: hm.gameNameWithVariation,
-                    lobbyName: hm.lobbyName,
-                    docKey: xm,
-                    version: fm,
-                    updates: am
+                    KD = JSON.stringify(sD);
+                  KD.length <= JD.g ? TD.gameBridge.send("sendCodeCollab", {
+                    zr: JD.c.Push,
+                    wr: rD,
+                    sr: wD,
+                    Lr: KD
+                  }) : (0, dD.postJsonWithMetricsCookiesAndJsonResponse)(`${pD.gsUrl}/code/collab-push`, bD.t["collab-push"].toBuffer({
+                    gameNameWithVariation: pD.gameNameWithVariation,
+                    lobbyName: pD.lobbyName,
+                    docKey: rD,
+                    version: wD,
+                    updates: KD
                   }), {
                     retries: 0
-                  }).catch((mm => {
-                    console.error("[CodeCollab] HTTP push failed", mm)
+                  }).catch((DD => {
+                    console.error("[CodeCollab] HTTP push failed", DD)
                   }))
                 }
                 pull() {
                   if (this.destroyed) return;
                   if (this.pulling) return void(this.pullPending = !0);
                   this.pulling = !0, this.pullPending = !1;
-                  const mm = (0, Zm.f)(this.view.state);
-                  (0, Gm.postJsonWithMetricsCookiesAndJsonResponse)(`${hm.gsUrl}/code/collab-pull`, em.t["collab-pull"].toBuffer({
-                    gameNameWithVariation: hm.gameNameWithVariation,
-                    lobbyName: hm.lobbyName,
-                    docKey: xm,
-                    fromVersion: mm
+                  const DD = (0, PD.d)(this.view.state);
+                  (0, dD.postJsonWithMetricsCookiesAndJsonResponse)(`${pD.gsUrl}/code/collab-pull`, bD.t["collab-pull"].toBuffer({
+                    gameNameWithVariation: pD.gameNameWithVariation,
+                    lobbyName: pD.lobbyName,
+                    docKey: rD,
+                    fromVersion: DD
                   }), {
                     retries: 1
-                  }).then((mm => {
-                    this.destroyed || (mm.fullDoc ? Nm.j.gp("codeCollabRejoin", {
-                      docKey: xm,
-                      doc: mm.fullDoc,
-                      version: mm.version
-                    }) : this.applyUpdates(mm.updates))
-                  })).catch((mm => {
-                    console.error("[CodeCollab] Pull failed", mm)
+                  }).then((DD => {
+                    this.destroyed || (DD.fullDoc ? jD.l.KG("codeCollabRejoin", {
+                      docKey: rD,
+                      doc: DD.fullDoc,
+                      version: DD.version
+                    }) : this.applyUpdates(DD.updates))
+                  })).catch((DD => {
+                    console.error("[CodeCollab] Pull failed", DD)
                   })).finally((() => {
                     this.pulling = !1, this.pullPending && this.pull()
                   }))
                 }
                 sendCursor() {
-                  const mm = Date.now();
-                  if (mm - this.lastCursorSent < Pm) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
+                  const DD = Date.now();
+                  if (DD - this.lastCursorSent < iD) return void(this.cursorTimeout || (this.cursorTimeout = setTimeout((() => {
                     this.cursorTimeout = null, this.sendCursor()
-                  }), Pm)));
-                  this.lastCursorSent = mm;
-                  const Tm = this.view.state.selection.main;
-                  Sm.gameBridge.send("sendCodeCollab", {
-                    va: Qm.b.Cursor,
-                    Ua: xm,
-                    Ax: Tm.anchor,
-                    wx: Tm.head
+                  }), iD)));
+                  this.lastCursorSent = DD;
+                  const zD = this.view.state.selection.main;
+                  TD.gameBridge.send("sendCodeCollab", {
+                    zr: JD.c.Cursor,
+                    wr: rD,
+                    Ir: zD.anchor,
+                    Br: zD.head
                   })
                 }
                 destroy() {
-                  this.destroyed = !0, Nm.j.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
+                  this.destroyed = !0, jD.l.unsubscribe(this.subToken), this.clearPushState(), this.cursorTimeout && clearTimeout(this.cursorTimeout)
                 }
               });
-            return [(0, Zm.e)({
-              startVersion: mm,
-              clientID: Tm
-            }), wm]
-          }(RT, pT, Dm.docKey, Dm.httpConfig, (mm => {
-            var Tm;
-            null === (Tm = oT.current) || void 0 === Tm || Tm.call(oT, mm)
-          }), Em));
-          const mm = function(mm, Tm) {
-            const fm = (0, Qm.u)(mm);
+            return [(0, PD.c)({
+              startVersion: DD,
+              clientID: zD
+            }), LD]
+          }(gz, Rz, cD.docKey, cD.httpConfig, (DD => {
+            var zD;
+            null === (zD = Uz.current) || void 0 === zD || zD.call(Uz, DD)
+          }), UD));
+          const DD = function(DD, zD) {
+            const wD = (0, JD.p)(DD);
             return {
-              extensions: [tm],
-              connect(mm) {
-                if (Tm) {
-                  const fm = Tm.map((mm => lm.of({
-                    playerId: mm.playerId,
-                    playerName: mm.playerName,
-                    colour: mm.colour,
-                    anchor: mm.anchor,
-                    head: mm.head,
+              extensions: [uD],
+              connect(DD) {
+                if (zD) {
+                  const wD = zD.map((DD => kD.of({
+                    playerId: DD.playerId,
+                    playerName: DD.playerName,
+                    colour: DD.colour,
+                    anchor: DD.anchor,
+                    head: DD.head,
                     lastMoved: Date.now()
                   })));
-                  fm.length > 0 && mm.dispatch({
-                    effects: fm
+                  wD.length > 0 && DD.dispatch({
+                    effects: wD
                   })
                 }
-                const hm = Nm.j.subscribe("codeCollab", (Tm => {
-                    if (Tm.docKey === fm)
-                      if (Tm.type === Qm.f.RemoteCursor) mm.dispatch({
-                        effects: lm.of({
-                          playerId: Tm.playerId,
-                          playerName: Tm.playerName,
-                          colour: Tm.colour,
-                          anchor: Tm.anchor,
-                          head: Tm.head,
+                const pD = jD.l.subscribe("codeCollab", (zD => {
+                    if (zD.docKey === wD)
+                      if (zD.type === JD.f.RemoteCursor) DD.dispatch({
+                        effects: kD.of({
+                          playerId: zD.playerId,
+                          playerName: zD.playerName,
+                          colour: zD.colour,
+                          anchor: zD.anchor,
+                          head: zD.head,
                           lastMoved: Date.now()
                         })
                       });
-                      else if (Tm.type === Qm.f.Presence) {
-                      const fm = JSON.parse(Tm.peers),
-                        hm = new Set(fm.map((mm => mm.playerId))),
-                        Am = mm.state.field(tm),
-                        am = [];
-                      for (const [mm] of Am.cursors) hm.has(mm) || am.push(Mm.of(mm));
-                      am.length > 0 && mm.dispatch({
-                        effects: am
+                      else if (zD.type === JD.f.Presence) {
+                      const wD = JSON.parse(zD.peers),
+                        pD = new Set(wD.map((DD => DD.playerId))),
+                        sD = DD.state.field(uD),
+                        KD = [];
+                      for (const [DD] of sD.cursors) pD.has(DD) || KD.push(mD.of(DD));
+                      KD.length > 0 && DD.dispatch({
+                        effects: KD
                       })
                     }
                   })),
-                  Am = setInterval((() => {
-                    mm.dom.isConnected ? mm.dispatch({
-                      effects: um.of(Date.now())
-                    }) : clearInterval(Am)
-                  }), sm);
+                  sD = setInterval((() => {
+                    DD.dom.isConnected ? DD.dispatch({
+                      effects: eD.of(Date.now())
+                    }) : clearInterval(sD)
+                  }), yD);
                 return () => {
-                  Nm.j.unsubscribe(hm), clearInterval(Am)
+                  jD.l.unsubscribe(pD), clearInterval(sD)
                 }
               }
             }
-          }(Dm.docKey, Dm.existingCursors);
-          wm.push(...mm.extensions), KT.current = mm.connect
-        } else KT.current = null;
-        return wm
-      }), [Tm, DT, Bm, RT, pT, ZT, Wm, mT, TT, Em, xT, wT]);
-      if (!DT || !Um && !mT) return (0, cT.jsx)("div", {
+          }(cD.docKey, cD.existingCursors);
+          LD.push(...DD.extensions), Mz.current = DD.connect
+        } else Mz.current = null;
+        return LD
+      }), [zD, Lz, oD, gz, Rz, Vz, YD, qD, Dz, UD, Kz, rz]);
+      if (!Lz || !vD && !qD) return (0, Qz.jsx)("div", {
         className: "CodeEditorContent",
-        children: (0, cT.jsx)(Vm.c, {})
+        children: (0, Qz.jsx)(nD.e, {})
       });
-      const eT = mT ? `plugin-${mT}-${null!==TT&&void 0!==TT?TT:"index.ts"}` : Um ? `collab-${Um.clientID}` : `local-${Tm}`;
-      return (0, cT.jsx)(am.m, {
-        value: mT ? null !== hT && void 0 !== hT ? hT : "" : fm,
-        onChange: wm,
-        extensions: ST,
+      const Tz = qD ? `plugin-${qD}-${null!==Dz&&void 0!==Dz?Dz:"index.ts"}` : vD ? `collab-${vD.clientID}` : `local-${zD}`;
+      return (0, Qz.jsx)(KD.n, {
+        value: qD ? null !== wz && void 0 !== wz ? wz : "" : wD,
+        onChange: LD,
+        extensions: xz,
         className: "CodeEditorContent",
-        theme: Lm ? jT : "dark",
-        editable: Em && !mT,
-        basicSetup: LT,
-        onCreateEditor: mm => {
-          var Tm;
-          OT.current = mm, qT.current = null !== (Tm = null === Um || void 0 === Um ? void 0 : Um.clientID) && void 0 !== Tm ? Tm : null, bT(mm), IT.current && IT.current(), KT.current && (IT.current = KT.current(mm))
+        theme: aD ? Gz : "dark",
+        editable: UD && !qD,
+        basicSetup: oz,
+        onCreateEditor: DD => {
+          var zD;
+          fz.current = DD, Bz.current = null !== (zD = null === vD || void 0 === vD ? void 0 : vD.clientID) && void 0 !== zD ? zD : null, Cz(DD), nz.current && nz.current(), Mz.current && (nz.current = Mz.current(DD))
         }
-      }, eT)
+      }, Tz)
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

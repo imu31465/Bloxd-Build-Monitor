@@ -1,34 +1,34 @@
 export const id = 244;
 export const ids = [244];
 export const modules = {
-  41150: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => xm,
-      h: () => Rm,
-      k: () => im
+  41008: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => rD,
+      h: () => RD,
+      l: () => gD
     });
-    var hm, Am = fm(37208),
-      am = fm(37185);
-    ! function(mm) {
-      mm[mm.CW = 0] = "CW", mm[mm.CCW = 1] = "CCW"
-    }(hm || (hm = {}));
-    class xm {
-      static Interpolate(mm, Tm, fm, hm, Am) {
-        if (0 === mm) return 0;
-        const am = 1 - 3 * hm + 3 * Tm,
-          xm = 3 * hm - 6 * Tm,
-          wm = 3 * Tm;
-        let Dm = mm;
-        for (let im = 0; im < 5; im++) {
-          const Tm = Dm * Dm;
-          Dm -= (am * (Tm * Dm) + xm * Tm + wm * Dm - mm) * (1 / (3 * am * Tm + 2 * xm * Dm + wm)), Dm = Math.min(1, Math.max(0, Dm))
+    var pD, sD = wD(37125),
+      KD = wD(37079);
+    ! function(DD) {
+      DD[DD.CW = 0] = "CW", DD[DD.CCW = 1] = "CCW"
+    }(pD || (pD = {}));
+    class rD {
+      static Interpolate(DD, zD, wD, pD, sD) {
+        if (0 === DD) return 0;
+        const KD = 1 - 3 * pD + 3 * zD,
+          rD = 3 * pD - 6 * zD,
+          LD = 3 * zD;
+        let cD = DD;
+        for (let gD = 0; gD < 5; gD++) {
+          const zD = cD * cD;
+          cD -= (KD * (zD * cD) + rD * zD + LD * cD - DD) * (1 / (3 * KD * zD + 2 * rD * cD + LD)), cD = Math.min(1, Math.max(0, cD))
         }
-        return 3 * Math.pow(1 - Dm, 2) * Dm * fm + 3 * (1 - Dm) * Math.pow(Dm, 2) * Am + Math.pow(Dm, 3)
+        return 3 * Math.pow(1 - cD, 2) * cD * wD + 3 * (1 - cD) * Math.pow(cD, 2) * sD + Math.pow(cD, 3)
       }
     }
-    class wm {
-      constructor(mm) {
-        this._radians = mm, this._radians < 0 && (this._radians += 2 * Math.PI)
+    class LD {
+      constructor(DD) {
+        this._radians = DD, this._radians < 0 && (this._radians += 2 * Math.PI)
       }
       degrees() {
         return 180 * this._radians / Math.PI
@@ -36,242 +36,242 @@ export const modules = {
       radians() {
         return this._radians
       }
-      static BetweenTwoPoints(mm, Tm) {
-        const fm = Tm.subtract(mm),
-          hm = Math.atan2(fm.y, fm.x);
-        return new wm(hm)
+      static BetweenTwoPoints(DD, zD) {
+        const wD = zD.subtract(DD),
+          pD = Math.atan2(wD.y, wD.x);
+        return new LD(pD)
       }
-      static BetweenTwoVectors(mm, Tm) {
-        let fm = mm.lengthSquared() * Tm.lengthSquared();
-        if (0 === fm) return new wm(Math.PI / 2);
-        fm = Math.sqrt(fm);
-        let hm = mm.dot(Tm) / fm;
-        hm = (0, Am.Clamp)(hm, -1, 1);
-        const am = Math.acos(hm);
-        return new wm(am)
+      static BetweenTwoVectors(DD, zD) {
+        let wD = DD.lengthSquared() * zD.lengthSquared();
+        if (0 === wD) return new LD(Math.PI / 2);
+        wD = Math.sqrt(wD);
+        let pD = DD.dot(zD) / wD;
+        pD = (0, sD.Clamp)(pD, -1, 1);
+        const KD = Math.acos(pD);
+        return new LD(KD)
       }
-      static FromRadians(mm) {
-        return new wm(mm)
+      static FromRadians(DD) {
+        return new LD(DD)
       }
-      static FromDegrees(mm) {
-        return new wm(mm * Math.PI / 180)
-      }
-    }
-    class Dm {
-      constructor(mm, Tm, fm) {
-        this.startPoint = mm, this.midPoint = Tm, this.endPoint = fm;
-        const hm = Math.pow(Tm.x, 2) + Math.pow(Tm.y, 2),
-          Am = (Math.pow(mm.x, 2) + Math.pow(mm.y, 2) - hm) / 2,
-          xm = (hm - Math.pow(fm.x, 2) - Math.pow(fm.y, 2)) / 2,
-          Dm = (mm.x - Tm.x) * (Tm.y - fm.y) - (Tm.x - fm.x) * (mm.y - Tm.y);
-        this.centerPoint = new am.l((Am * (Tm.y - fm.y) - xm * (mm.y - Tm.y)) / Dm, ((mm.x - Tm.x) * xm - (Tm.x - fm.x) * Am) / Dm), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = wm.BetweenTwoPoints(this.centerPoint, this.startPoint);
-        const im = this.startAngle.degrees();
-        let Rm = wm.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
-          pm = wm.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
-        Rm - im > 180 && (Rm -= 360), Rm - im < -180 && (Rm += 360), pm - Rm > 180 && (pm -= 360), pm - Rm < -180 && (pm += 360), this.orientation = Rm - im < 0 ? 0 : 1, this.angle = wm.FromDegrees(0 === this.orientation ? im - pm : pm - im)
+      static FromDegrees(DD) {
+        return new LD(DD * Math.PI / 180)
       }
     }
-    class im {
-      constructor(mm, Tm) {
-        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new am.l(mm, Tm))
+    class cD {
+      constructor(DD, zD, wD) {
+        this.startPoint = DD, this.midPoint = zD, this.endPoint = wD;
+        const pD = Math.pow(zD.x, 2) + Math.pow(zD.y, 2),
+          sD = (Math.pow(DD.x, 2) + Math.pow(DD.y, 2) - pD) / 2,
+          rD = (pD - Math.pow(wD.x, 2) - Math.pow(wD.y, 2)) / 2,
+          cD = (DD.x - zD.x) * (zD.y - wD.y) - (zD.x - wD.x) * (DD.y - zD.y);
+        this.centerPoint = new KD.r((sD * (zD.y - wD.y) - rD * (DD.y - zD.y)) / cD, ((DD.x - zD.x) * rD - (zD.x - wD.x) * sD) / cD), this.radius = this.centerPoint.subtract(this.startPoint).length(), this.startAngle = LD.BetweenTwoPoints(this.centerPoint, this.startPoint);
+        const gD = this.startAngle.degrees();
+        let RD = LD.BetweenTwoPoints(this.centerPoint, this.midPoint).degrees(),
+          AD = LD.BetweenTwoPoints(this.centerPoint, this.endPoint).degrees();
+        RD - gD > 180 && (RD -= 360), RD - gD < -180 && (RD += 360), AD - RD > 180 && (AD -= 360), AD - RD < -180 && (AD += 360), this.orientation = RD - gD < 0 ? 0 : 1, this.angle = LD.FromDegrees(0 === this.orientation ? gD - AD : AD - gD)
       }
-      addLineTo(mm, Tm) {
-        if (this.closed) return this;
-        const fm = new am.l(mm, Tm),
-          hm = this._points[this._points.length - 1];
-        return this._points.push(fm), this._length += fm.subtract(hm).length(), this
+    }
+    class gD {
+      constructor(DD, zD) {
+        this._points = new Array, this._length = 0, this.closed = !1, this._points.push(new KD.r(DD, zD))
       }
-      addArcTo(mm, Tm, fm, hm) {
-        let Am = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+      addLineTo(DD, zD) {
         if (this.closed) return this;
-        const xm = this._points[this._points.length - 1],
-          wm = new am.l(mm, Tm),
-          im = new am.l(fm, hm),
-          Rm = new Dm(xm, wm, im);
-        let pm = Rm.angle.radians() / Am;
-        0 === Rm.orientation && (pm *= -1);
-        let Em = Rm.startAngle.radians() + pm;
-        for (let am = 0; am < Am; am++) {
-          const mm = Math.cos(Em) * Rm.radius + Rm.centerPoint.x,
-            Tm = Math.sin(Em) * Rm.radius + Rm.centerPoint.y;
-          this.addLineTo(mm, Tm), Em += pm
+        const wD = new KD.r(DD, zD),
+          pD = this._points[this._points.length - 1];
+        return this._points.push(wD), this._length += wD.subtract(pD).length(), this
+      }
+      addArcTo(DD, zD, wD, pD) {
+        let sD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+        if (this.closed) return this;
+        const rD = this._points[this._points.length - 1],
+          LD = new KD.r(DD, zD),
+          gD = new KD.r(wD, pD),
+          RD = new cD(rD, LD, gD);
+        let AD = RD.angle.radians() / sD;
+        0 === RD.orientation && (AD *= -1);
+        let UD = RD.startAngle.radians() + AD;
+        for (let KD = 0; KD < sD; KD++) {
+          const DD = Math.cos(UD) * RD.radius + RD.centerPoint.x,
+            zD = Math.sin(UD) * RD.radius + RD.centerPoint.y;
+          this.addLineTo(DD, zD), UD += AD
         }
         return this
       }
-      addQuadraticCurveTo(mm, Tm, fm, hm) {
-        let Am = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
+      addQuadraticCurveTo(DD, zD, wD, pD) {
+        let sD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 36;
         if (this.closed) return this;
-        const am = (mm, Tm, fm, hm) => (1 - mm) * (1 - mm) * Tm + 2 * mm * (1 - mm) * fm + mm * mm * hm,
-          xm = this._points[this._points.length - 1];
-        for (let wm = 0; wm <= Am; wm++) {
-          const Dm = wm / Am,
-            im = am(Dm, xm.x, mm, fm),
-            Rm = am(Dm, xm.y, Tm, hm);
-          this.addLineTo(im, Rm)
+        const KD = (DD, zD, wD, pD) => (1 - DD) * (1 - DD) * zD + 2 * DD * (1 - DD) * wD + DD * DD * pD,
+          rD = this._points[this._points.length - 1];
+        for (let LD = 0; LD <= sD; LD++) {
+          const cD = LD / sD,
+            gD = KD(cD, rD.x, DD, wD),
+            RD = KD(cD, rD.y, zD, pD);
+          this.addLineTo(gD, RD)
         }
         return this
       }
-      addBezierCurveTo(mm, Tm, fm, hm, Am, am) {
-        let xm = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
+      addBezierCurveTo(DD, zD, wD, pD, sD, KD) {
+        let rD = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 36;
         if (this.closed) return this;
-        const wm = (mm, Tm, fm, hm, Am) => (1 - mm) * (1 - mm) * (1 - mm) * Tm + 3 * mm * (1 - mm) * (1 - mm) * fm + 3 * mm * mm * (1 - mm) * hm + mm * mm * mm * Am,
-          Dm = this._points[this._points.length - 1];
-        for (let im = 0; im <= xm; im++) {
-          const Rm = im / xm,
-            pm = wm(Rm, Dm.x, mm, fm, Am),
-            Em = wm(Rm, Dm.y, Tm, hm, am);
-          this.addLineTo(pm, Em)
+        const LD = (DD, zD, wD, pD, sD) => (1 - DD) * (1 - DD) * (1 - DD) * zD + 3 * DD * (1 - DD) * (1 - DD) * wD + 3 * DD * DD * (1 - DD) * pD + DD * DD * DD * sD,
+          cD = this._points[this._points.length - 1];
+        for (let gD = 0; gD <= rD; gD++) {
+          const RD = gD / rD,
+            AD = LD(RD, cD.x, DD, wD, sD),
+            UD = LD(RD, cD.y, zD, pD, KD);
+          this.addLineTo(AD, UD)
         }
         return this
       }
-      isPointInside(mm) {
-        let Tm = !1;
-        const fm = this._points.length;
-        for (let hm = fm - 1, Am = 0; Am < fm; hm = Am++) {
-          let fm = this._points[hm],
-            am = this._points[Am],
-            xm = am.x - fm.x,
-            wm = am.y - fm.y;
-          if (Math.abs(wm) > Number.EPSILON) {
-            if (wm < 0 && (fm = this._points[Am], xm = -xm, am = this._points[hm], wm = -wm), mm.y < fm.y || mm.y > am.y) continue;
-            if (mm.y === fm.y && mm.x === fm.x) return !0;
+      isPointInside(DD) {
+        let zD = !1;
+        const wD = this._points.length;
+        for (let pD = wD - 1, sD = 0; sD < wD; pD = sD++) {
+          let wD = this._points[pD],
+            KD = this._points[sD],
+            rD = KD.x - wD.x,
+            LD = KD.y - wD.y;
+          if (Math.abs(LD) > Number.EPSILON) {
+            if (LD < 0 && (wD = this._points[sD], rD = -rD, KD = this._points[pD], LD = -LD), DD.y < wD.y || DD.y > KD.y) continue;
+            if (DD.y === wD.y && DD.x === wD.x) return !0;
             {
-              const hm = wm * (mm.x - fm.x) - xm * (mm.y - fm.y);
-              if (0 === hm) return !0;
-              if (hm < 0) continue;
-              Tm = !Tm
+              const pD = LD * (DD.x - wD.x) - rD * (DD.y - wD.y);
+              if (0 === pD) return !0;
+              if (pD < 0) continue;
+              zD = !zD
             }
           } else {
-            if (mm.y !== fm.y) continue;
-            if (am.x <= mm.x && mm.x <= fm.x || fm.x <= mm.x && mm.x <= am.x) return !0
+            if (DD.y !== wD.y) continue;
+            if (KD.x <= DD.x && DD.x <= wD.x || wD.x <= DD.x && DD.x <= KD.x) return !0
           }
         }
-        return Tm
+        return zD
       }
       close() {
         return this.closed = !0, this
       }
       length() {
-        let mm = this._length;
+        let DD = this._length;
         if (this.closed) {
-          const Tm = this._points[this._points.length - 1];
-          mm += this._points[0].subtract(Tm).length()
+          const zD = this._points[this._points.length - 1];
+          DD += this._points[0].subtract(zD).length()
         }
-        return mm
+        return DD
       }
       area() {
-        const mm = this._points.length;
-        let Tm = 0;
-        for (let fm = mm - 1, hm = 0; hm < mm; fm = hm++) Tm += this._points[fm].x * this._points[hm].y - this._points[hm].x * this._points[fm].y;
-        return .5 * Tm
+        const DD = this._points.length;
+        let zD = 0;
+        for (let wD = DD - 1, pD = 0; pD < DD; wD = pD++) zD += this._points[wD].x * this._points[pD].y - this._points[pD].x * this._points[wD].y;
+        return .5 * zD
       }
       getPoints() {
         return this._points
       }
-      getPointAtLengthPosition(mm) {
-        if (mm < 0 || mm > 1) return am.l.Zero();
-        const Tm = mm * this.length();
-        let fm = 0;
-        for (let hm = 0; hm < this._points.length; hm++) {
-          const mm = (hm + 1) % this._points.length,
-            Am = this._points[hm],
-            xm = this._points[mm].subtract(Am),
-            wm = xm.length() + fm;
-          if (Tm >= fm && Tm <= wm) {
-            const mm = xm.normalize(),
-              hm = Tm - fm;
-            return new am.l(Am.x + mm.x * hm, Am.y + mm.y * hm)
+      getPointAtLengthPosition(DD) {
+        if (DD < 0 || DD > 1) return KD.r.Zero();
+        const zD = DD * this.length();
+        let wD = 0;
+        for (let pD = 0; pD < this._points.length; pD++) {
+          const DD = (pD + 1) % this._points.length,
+            sD = this._points[pD],
+            rD = this._points[DD].subtract(sD),
+            LD = rD.length() + wD;
+          if (zD >= wD && zD <= LD) {
+            const DD = rD.normalize(),
+              pD = zD - wD;
+            return new KD.r(sD.x + DD.x * pD, sD.y + DD.y * pD)
           }
-          fm = wm
+          wD = LD
         }
-        return am.l.Zero()
+        return KD.r.Zero()
       }
-      static StartingAt(mm, Tm) {
-        return new im(mm, Tm)
+      static StartingAt(DD, zD) {
+        return new gD(DD, zD)
       }
     }
-    class Rm {
-      static CreateQuadraticBezier(mm, Tm, fm, hm) {
-        hm = hm > 2 ? hm : 3;
-        const Am = [],
-          xm = (mm, Tm, fm, hm) => (1 - mm) * (1 - mm) * Tm + 2 * mm * (1 - mm) * fm + mm * mm * hm;
-        for (let wm = 0; wm <= hm; wm++) Am.push(new am.p(xm(wm / hm, mm.x, Tm.x, fm.x), xm(wm / hm, mm.y, Tm.y, fm.y), xm(wm / hm, mm.z, Tm.z, fm.z)));
-        return new Rm(Am)
+    class RD {
+      static CreateQuadraticBezier(DD, zD, wD, pD) {
+        pD = pD > 2 ? pD : 3;
+        const sD = [],
+          rD = (DD, zD, wD, pD) => (1 - DD) * (1 - DD) * zD + 2 * DD * (1 - DD) * wD + DD * DD * pD;
+        for (let LD = 0; LD <= pD; LD++) sD.push(new KD.s(rD(LD / pD, DD.x, zD.x, wD.x), rD(LD / pD, DD.y, zD.y, wD.y), rD(LD / pD, DD.z, zD.z, wD.z)));
+        return new RD(sD)
       }
-      static CreateCubicBezier(mm, Tm, fm, hm, Am) {
-        Am = Am > 3 ? Am : 4;
-        const xm = [],
-          wm = (mm, Tm, fm, hm, Am) => (1 - mm) * (1 - mm) * (1 - mm) * Tm + 3 * mm * (1 - mm) * (1 - mm) * fm + 3 * mm * mm * (1 - mm) * hm + mm * mm * mm * Am;
-        for (let Dm = 0; Dm <= Am; Dm++) xm.push(new am.p(wm(Dm / Am, mm.x, Tm.x, fm.x, hm.x), wm(Dm / Am, mm.y, Tm.y, fm.y, hm.y), wm(Dm / Am, mm.z, Tm.z, fm.z, hm.z)));
-        return new Rm(xm)
+      static CreateCubicBezier(DD, zD, wD, pD, sD) {
+        sD = sD > 3 ? sD : 4;
+        const rD = [],
+          LD = (DD, zD, wD, pD, sD) => (1 - DD) * (1 - DD) * (1 - DD) * zD + 3 * DD * (1 - DD) * (1 - DD) * wD + 3 * DD * DD * (1 - DD) * pD + DD * DD * DD * sD;
+        for (let cD = 0; cD <= sD; cD++) rD.push(new KD.s(LD(cD / sD, DD.x, zD.x, wD.x, pD.x), LD(cD / sD, DD.y, zD.y, wD.y, pD.y), LD(cD / sD, DD.z, zD.z, wD.z, pD.z)));
+        return new RD(rD)
       }
-      static CreateHermiteSpline(mm, Tm, fm, hm, Am) {
-        const xm = [],
-          wm = 1 / Am;
-        for (let Dm = 0; Dm <= Am; Dm++) xm.push(am.p.Hermite(mm, Tm, fm, hm, Dm * wm));
-        return new Rm(xm)
+      static CreateHermiteSpline(DD, zD, wD, pD, sD) {
+        const rD = [],
+          LD = 1 / sD;
+        for (let cD = 0; cD <= sD; cD++) rD.push(KD.s.Hermite(DD, zD, wD, pD, cD * LD));
+        return new RD(rD)
       }
-      static CreateCatmullRomSpline(mm, Tm, fm) {
-        const hm = [],
-          Am = 1 / Tm;
-        let xm = 0;
-        if (fm) {
-          const fm = mm.length;
-          for (let wm = 0; wm < fm; wm++) {
-            xm = 0;
-            for (let Dm = 0; Dm < Tm; Dm++) hm.push(am.p.CatmullRom(mm[wm % fm], mm[(wm + 1) % fm], mm[(wm + 2) % fm], mm[(wm + 3) % fm], xm)), xm += Am
+      static CreateCatmullRomSpline(DD, zD, wD) {
+        const pD = [],
+          sD = 1 / zD;
+        let rD = 0;
+        if (wD) {
+          const wD = DD.length;
+          for (let LD = 0; LD < wD; LD++) {
+            rD = 0;
+            for (let cD = 0; cD < zD; cD++) pD.push(KD.s.CatmullRom(DD[LD % wD], DD[(LD + 1) % wD], DD[(LD + 2) % wD], DD[(LD + 3) % wD], rD)), rD += sD
           }
-          hm.push(hm[0])
+          pD.push(pD[0])
         } else {
-          const fm = [];
-          fm.push(mm[0].clone()), fm.push(...mm), fm.push(mm[mm.length - 1].clone());
-          let wm = 0;
-          for (; wm < fm.length - 3; wm++) {
-            xm = 0;
-            for (let mm = 0; mm < Tm; mm++) hm.push(am.p.CatmullRom(fm[wm], fm[wm + 1], fm[wm + 2], fm[wm + 3], xm)), xm += Am
+          const wD = [];
+          wD.push(DD[0].clone()), wD.push(...DD), wD.push(DD[DD.length - 1].clone());
+          let LD = 0;
+          for (; LD < wD.length - 3; LD++) {
+            rD = 0;
+            for (let DD = 0; DD < zD; DD++) pD.push(KD.s.CatmullRom(wD[LD], wD[LD + 1], wD[LD + 2], wD[LD + 3], rD)), rD += sD
           }
-          wm--, hm.push(am.p.CatmullRom(fm[wm], fm[wm + 1], fm[wm + 2], fm[wm + 3], xm))
+          LD--, pD.push(KD.s.CatmullRom(wD[LD], wD[LD + 1], wD[LD + 2], wD[LD + 3], rD))
         }
-        return new Rm(hm)
+        return new RD(pD)
       }
-      static ArcThru3Points(mm, Tm, fm) {
-        let hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
-          Am = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          xm = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-        const wm = [],
-          Dm = Tm.subtract(mm),
-          im = fm.subtract(Tm),
-          pm = mm.subtract(fm),
-          Em = am.p.Cross(Dm, im),
-          om = Em.length();
-        if (om < Math.pow(10, -8)) return new Rm(wm);
-        const Om = Dm.lengthSquared(),
-          Ym = im.lengthSquared(),
-          qm = pm.lengthSquared(),
-          jm = Em.lengthSquared(),
-          Vm = .5 * Dm.length() * im.length() * pm.length() / om,
-          Im = -.5 * Ym * am.p.Dot(Dm, pm) / jm,
-          Km = -.5 * qm * am.p.Dot(Dm, im) / jm,
-          Qm = -.5 * Om * am.p.Dot(im, pm) / jm,
-          nm = mm.scale(Im).add(Tm.scale(Km)).add(fm.scale(Qm)),
-          Jm = mm.subtract(nm).normalize(),
-          cm = am.p.Cross(Em, Jm).normalize();
-        if (xm) {
-          const Tm = 2 * Math.PI / hm;
-          for (let mm = 0; mm <= 2 * Math.PI; mm += Tm) wm.push(nm.add(Jm.scale(Vm * Math.cos(mm)).add(cm.scale(Vm * Math.sin(mm)))));
-          wm.push(mm)
+      static ArcThru3Points(DD, zD, wD) {
+        let pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 32,
+          sD = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+          rD = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+        const LD = [],
+          cD = zD.subtract(DD),
+          gD = wD.subtract(zD),
+          AD = DD.subtract(wD),
+          UD = KD.s.Cross(cD, gD),
+          fD = UD.length();
+        if (fD < Math.pow(10, -8)) return new RD(LD);
+        const ID = cD.lengthSquared(),
+          BD = gD.lengthSquared(),
+          GD = AD.lengthSquared(),
+          hD = UD.lengthSquared(),
+          nD = .5 * cD.length() * gD.length() * AD.length() / fD,
+          MD = -.5 * BD * KD.s.Dot(cD, AD) / hD,
+          OD = -.5 * GD * KD.s.Dot(cD, gD) / hD,
+          JD = -.5 * ID * KD.s.Dot(gD, AD) / hD,
+          ED = DD.scale(MD).add(zD.scale(OD)).add(wD.scale(JD)),
+          QD = DD.subtract(ED).normalize(),
+          XD = KD.s.Cross(UD, QD).normalize();
+        if (rD) {
+          const zD = 2 * Math.PI / pD;
+          for (let DD = 0; DD <= 2 * Math.PI; DD += zD) LD.push(ED.add(QD.scale(nD * Math.cos(DD)).add(XD.scale(nD * Math.sin(DD)))));
+          LD.push(DD)
         } else {
-          const Tm = 1 / hm;
-          let am, xm = 0;
+          const zD = 1 / pD;
+          let KD, rD = 0;
           do {
-            am = nm.add(Jm.scale(Vm * Math.cos(xm)).add(cm.scale(Vm * Math.sin(xm)))), wm.push(am), xm += Tm
-          } while (!am.equalsWithEpsilon(fm, Vm * Tm * 1.1));
-          wm.push(fm), Am && wm.push(mm)
+            KD = ED.add(QD.scale(nD * Math.cos(rD)).add(XD.scale(nD * Math.sin(rD)))), LD.push(KD), rD += zD
+          } while (!KD.equalsWithEpsilon(wD, nD * zD * 1.1));
+          LD.push(wD), sD && LD.push(DD)
         }
-        return new Rm(wm)
+        return new RD(LD)
       }
-      constructor(mm) {
-        this._length = 0, this._points = mm, this._length = this._computeLength(mm)
+      constructor(DD) {
+        this._length = 0, this._points = DD, this._length = this._computeLength(DD)
       }
       getPoints() {
         return this._points
@@ -279,121 +279,121 @@ export const modules = {
       length() {
         return this._length
       }
-      continue (mm) {
-        const Tm = this._points[this._points.length - 1],
-          fm = this._points.slice(),
-          hm = mm.getPoints();
-        for (let Am = 1; Am < hm.length; Am++) fm.push(hm[Am].subtract(hm[0]).add(Tm));
-        return new Rm(fm)
+      continue (DD) {
+        const zD = this._points[this._points.length - 1],
+          wD = this._points.slice(),
+          pD = DD.getPoints();
+        for (let sD = 1; sD < pD.length; sD++) wD.push(pD[sD].subtract(pD[0]).add(zD));
+        return new RD(wD)
       }
-      _computeLength(mm) {
-        let Tm = 0;
-        for (let fm = 1; fm < mm.length; fm++) Tm += mm[fm].subtract(mm[fm - 1]).length();
-        return Tm
+      _computeLength(DD) {
+        let zD = 0;
+        for (let wD = 1; wD < DD.length; wD++) zD += DD[wD].subtract(DD[wD - 1]).length();
+        return zD
       }
     }
   },
-  38764: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => am
+  38658: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => KD
     });
-    var hm = fm(38766);
-    const Am = (mm, Tm, fm) => mm ? mm.getClassName && "Mesh" === mm.getClassName() ? null : !mm.getClassName || "SubMesh" !== mm.getClassName() && "PhysicsBody" !== mm.getClassName() ? mm.clone ? mm.clone() : Array.isArray(mm) ? mm.slice() : fm && "object" === typeof mm ? {
-      ...mm
-    } : null : mm.clone(Tm) : null;
-    class am {
-      static DeepCopy(mm, Tm, fm, am) {
-        let xm = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const wm = function(mm) {
-          const Tm = [];
+    var pD = wD(38662);
+    const sD = (DD, zD, wD) => DD ? DD.getClassName && "Mesh" === DD.getClassName() ? null : !DD.getClassName || "SubMesh" !== DD.getClassName() && "PhysicsBody" !== DD.getClassName() ? DD.clone ? DD.clone() : Array.isArray(DD) ? DD.slice() : wD && "object" === typeof DD ? {
+      ...DD
+    } : null : DD.clone(zD) : null;
+    class KD {
+      static DeepCopy(DD, zD, wD, KD) {
+        let rD = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const LD = function(DD) {
+          const zD = [];
           do {
-            const fm = Object.getOwnPropertyNames(mm);
-            for (const mm of fm) - 1 === Tm.indexOf(mm) && Tm.push(mm)
-          } while (mm = Object.getPrototypeOf(mm));
-          return Tm
-        }(mm);
-        for (const im of wm) {
-          if ("_" === im[0] && (!am || -1 === am.indexOf(im))) continue;
-          if (im.endsWith("Observable")) continue;
-          if (fm && -1 !== fm.indexOf(im)) continue;
-          const wm = mm[im],
-            Rm = typeof wm;
-          if ("function" !== Rm) try {
-            if ("object" === Rm)
-              if (wm instanceof Uint8Array) Tm[im] = Uint8Array.from(wm);
-              else if (wm instanceof Array) {
-              if (Tm[im] = [], wm.length > 0)
-                if ("object" == typeof wm[0])
-                  for (let mm = 0; mm < wm.length; mm++) {
-                    const fm = Am(wm[mm], Tm, xm); - 1 === Tm[im].indexOf(fm) && Tm[im].push(fm)
-                  } else Tm[im] = wm.slice(0)
-            } else Tm[im] = Am(wm, Tm, xm);
-            else Tm[im] = wm
-          } catch (Dm) {
-            hm.b.Warn(Dm.message)
+            const wD = Object.getOwnPropertyNames(DD);
+            for (const DD of wD) - 1 === zD.indexOf(DD) && zD.push(DD)
+          } while (DD = Object.getPrototypeOf(DD));
+          return zD
+        }(DD);
+        for (const gD of LD) {
+          if ("_" === gD[0] && (!KD || -1 === KD.indexOf(gD))) continue;
+          if (gD.endsWith("Observable")) continue;
+          if (wD && -1 !== wD.indexOf(gD)) continue;
+          const LD = DD[gD],
+            RD = typeof LD;
+          if ("function" !== RD) try {
+            if ("object" === RD)
+              if (LD instanceof Uint8Array) zD[gD] = Uint8Array.from(LD);
+              else if (LD instanceof Array) {
+              if (zD[gD] = [], LD.length > 0)
+                if ("object" == typeof LD[0])
+                  for (let DD = 0; DD < LD.length; DD++) {
+                    const wD = sD(LD[DD], zD, rD); - 1 === zD[gD].indexOf(wD) && zD[gD].push(wD)
+                  } else zD[gD] = LD.slice(0)
+            } else zD[gD] = sD(LD, zD, rD);
+            else zD[gD] = LD
+          } catch (cD) {
+            pD.d.Warn(cD.message)
           }
         }
       }
     }
   },
-  38766: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => hm
+  38662: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => pD
     });
-    class hm {
-      static _CheckLimit(mm, Tm) {
-        let fm = hm._LogLimitOutputs[mm];
-        return fm ? fm.current++ : (fm = {
-          limit: Tm,
+    class pD {
+      static _CheckLimit(DD, zD) {
+        let wD = pD._LogLimitOutputs[DD];
+        return wD ? wD.current++ : (wD = {
+          limit: zD,
           current: 1
-        }, hm._LogLimitOutputs[mm] = fm), fm.current <= fm.limit
+        }, pD._LogLimitOutputs[DD] = wD), wD.current <= wD.limit
       }
-      static _GenerateLimitMessage(mm) {
-        let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const fm = hm._LogLimitOutputs[mm];
-        if (!fm || !hm.MessageLimitReached) return;
-        const Am = this._Levels[Tm];
-        fm.current === fm.limit && hm[Am.name](hm.MessageLimitReached.replace(/%LIMIT%/g, "" + fm.limit).replace(/%TYPE%/g, Am.name ?? ""))
+      static _GenerateLimitMessage(DD) {
+        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const wD = pD._LogLimitOutputs[DD];
+        if (!wD || !pD.MessageLimitReached) return;
+        const sD = this._Levels[zD];
+        wD.current === wD.limit && pD[sD.name](pD.MessageLimitReached.replace(/%LIMIT%/g, "" + wD.limit).replace(/%TYPE%/g, sD.name ?? ""))
       }
-      static _AddLogEntry(mm) {
-        hm._LogCache = mm + hm._LogCache, hm.OnNewCacheEntry && hm.OnNewCacheEntry(mm)
+      static _AddLogEntry(DD) {
+        pD._LogCache = DD + pD._LogCache, pD.OnNewCacheEntry && pD.OnNewCacheEntry(DD)
       }
-      static _FormatMessage(mm) {
-        const Tm = mm => mm < 10 ? "0" + mm : "" + mm,
-          fm = new Date;
-        return "[" + Tm(fm.getHours()) + ":" + Tm(fm.getMinutes()) + ":" + Tm(fm.getSeconds()) + "]: " + mm
+      static _FormatMessage(DD) {
+        const zD = DD => DD < 10 ? "0" + DD : "" + DD,
+          wD = new Date;
+        return "[" + zD(wD.getHours()) + ":" + zD(wD.getMinutes()) + ":" + zD(wD.getSeconds()) + "]: " + DD
       }
-      static _LogDisabled(mm, Tm) {}
+      static _LogDisabled(DD, zD) {}
       static _LogEnabled() {
-        let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          Tm = arguments.length > 1 ? arguments[1] : void 0,
-          fm = arguments.length > 2 ? arguments[2] : void 0;
-        const Am = Array.isArray(Tm) ? Tm[0] : Tm;
-        if (void 0 !== fm && !hm._CheckLimit(Am, fm)) return;
-        const am = hm._FormatMessage(Am),
-          xm = this._Levels[mm],
-          wm = Array.isArray(Tm) ? Tm.slice(1) : [];
-        xm.logFunc && xm.logFunc("BJS - " + am, ...wm);
-        const Dm = `<div style='color:${xm.color}'>${am}</div><br>`;
-        hm._AddLogEntry(Dm), hm._GenerateLimitMessage(Am, mm)
+        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          zD = arguments.length > 1 ? arguments[1] : void 0,
+          wD = arguments.length > 2 ? arguments[2] : void 0;
+        const sD = Array.isArray(zD) ? zD[0] : zD;
+        if (void 0 !== wD && !pD._CheckLimit(sD, wD)) return;
+        const KD = pD._FormatMessage(sD),
+          rD = this._Levels[DD],
+          LD = Array.isArray(zD) ? zD.slice(1) : [];
+        rD.logFunc && rD.logFunc("BJS - " + KD, ...LD);
+        const cD = `<div style='color:${rD.color}'>${KD}</div><br>`;
+        pD._AddLogEntry(cD), pD._GenerateLimitMessage(sD, DD)
       }
       static get LogCache() {
-        return hm._LogCache
+        return pD._LogCache
       }
       static ClearLogCache() {
-        hm._LogCache = "", hm._LogLimitOutputs = {}, hm.errorsCount = 0
+        pD._LogCache = "", pD._LogLimitOutputs = {}, pD.errorsCount = 0
       }
-      static set LogLevels(mm) {
-        hm.Log = hm._LogDisabled, hm.Warn = hm._LogDisabled, hm.Error = hm._LogDisabled;
-        const Tm = [hm.MessageLogLevel, hm.WarningLogLevel, hm.ErrorLogLevel];
-        for (const fm of Tm)
-          if ((mm & fm) === fm) {
-            const mm = this._Levels[fm];
-            hm[mm.name] = hm._LogEnabled.bind(hm, fm)
+      static set LogLevels(DD) {
+        pD.Log = pD._LogDisabled, pD.Warn = pD._LogDisabled, pD.Error = pD._LogDisabled;
+        const zD = [pD.MessageLogLevel, pD.WarningLogLevel, pD.ErrorLogLevel];
+        for (const wD of zD)
+          if ((DD & wD) === wD) {
+            const DD = this._Levels[wD];
+            pD[DD.name] = pD._LogEnabled.bind(pD, wD)
           }
       }
     }
-    hm.NoneLogLevel = 0, hm.MessageLogLevel = 1, hm.WarningLogLevel = 2, hm.ErrorLogLevel = 4, hm.AllLogLevel = 7, hm.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", hm._LogCache = "", hm._LogLimitOutputs = {}, hm._Levels = [{}, {
+    pD.NoneLogLevel = 0, pD.MessageLogLevel = 1, pD.WarningLogLevel = 2, pD.ErrorLogLevel = 4, pD.AllLogLevel = 7, pD.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", pD._LogCache = "", pD._LogLimitOutputs = {}, pD._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -405,8 +405,8 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], hm.errorsCount = 0, hm.Log = hm._LogEnabled.bind(hm, hm.MessageLogLevel), hm.Warn = hm._LogEnabled.bind(hm, hm.WarningLogLevel), hm.Error = hm._LogEnabled.bind(hm, hm.ErrorLogLevel)
+    }], pD.errorsCount = 0, pD.Log = pD._LogEnabled.bind(pD, pD.MessageLogLevel), pD.Warn = pD._LogEnabled.bind(pD, pD.WarningLogLevel), pD.Error = pD._LogEnabled.bind(pD, pD.ErrorLogLevel)
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

@@ -1,12 +1,12 @@
 # WASM module: `bloxd_wasm_bg`
 
-> environment **staging.bloxd.io** · build `mpd96o.85ad4551` · analyzed 2026-11-24T14:21:15+09:00
-> source: https://staging.bloxd.io/static/media/bloxd_wasm_bg.a1990935b232763da059.wasm
-> 337,698 bytes (329.8 KB) · sha256 `613a21bc0b0d6795…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **staging.bloxd.io** · build `tz47m9.2cb7e113` · analyzed 2026-11-24T17:23:02+09:00
+> source: https://staging.bloxd.io/static/media/bloxd_wasm_bg.a1e1cea62f727684ff7c.wasm
+> 337,698 bytes (329.8 KB) · sha256 `65e53edc5e3e962e…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
 
 ## Changes since the previous archived build
 
-- name-section module id `4c71880f2f66d659.2445` → `6da6288397ca1f8a.2445` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- name-section module id `6da6288397ca1f8a.2445` → `471b3c16d43cbdb9.2445` (numeric version suffix unchanged — same module version, re-randomized prefix)
 - export identifiers rotated by the obfuscator: 1/158 names kept (identifier names are randomly assigned per build; compare signatures instead)
 
 ## Overview
@@ -21,7 +21,7 @@
 | Data segments / bytes | 25 / 13,153 |
 | Element segments / entries | 1 / 57 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `6da6288397ca1f8a.2445` |
+| name-section module id | `471b3c16d43cbdb9.2445` |
 | Sections | 12 |
 
 ## Sections
@@ -51,12 +51,12 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `sMqr.cyay` | func | `(i32) -> ()` |
-| 1 | `sMqr.EPRD` | func | `(i32 i32) -> (i32)` |
-| 2 | `sMqr.WrjM` | func | `(i32) -> ()` |
-| 3 | `sMqr.M2vs` | func | `(i32 i32) -> ()` |
-| 4 | `sMqr.kewC` | func | `() -> (f64)` |
-| 5 | `sMqr.OxyO` | func | `(i32 i32) -> ()` |
+| 0 | `SDXV.mw1u` | func | `(i32) -> ()` |
+| 1 | `SDXV.C2qh` | func | `(i32 i32) -> (i32)` |
+| 2 | `SDXV.So7q` | func | `(i32) -> ()` |
+| 3 | `SDXV.OZmb` | func | `(i32 i32) -> ()` |
+| 4 | `SDXV.UgkJ` | func | `() -> (f64)` |
+| 5 | `SDXV.FllA` | func | `(i32 i32) -> ()` |
 
 ## Exports
 
@@ -64,164 +64,164 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `cxyk` | func | 239 | `(i32) -> (i32)` |
-| `Xryl` | global | 1 | `` |
-| `iPFi` | func | 322 | `(i32 i32) -> (i32 i32)` |
-| `KkHV` | func | 193 | `(i32) -> (i32)` |
-| `Hi9o` | func | 284 | `(i32 i32 i32 i32 f64 f64 f64) -> (i32 i32)` |
-| `KDVb` | func | 195 | `(i32) -> (i32)` |
-| `AHQF` | func | 129 | `(i32 i32 i32) -> ()` |
-| `bfqq` | func | 236 | `(i32) -> (i32)` |
-| `eFuH` | func | 233 | `(i32) -> (i32)` |
-| `heVR` | func | 305 | `(i32 i32) -> (i32 i32 i32)` |
-| `yJn8` | func | 343 | `() -> (i32)` |
-| `oR93` | func | 367 | `(i32) -> (i32)` |
-| `d0GP` | func | 228 | `(i32) -> (i32)` |
-| `HbHE` | func | 319 | `(i32 i32 i32) -> (i32 i32)` |
-| `kVgw` | func | 374 | `() -> (i32)` |
-| `Y9I4` | func | 220 | `(i32 i32) -> ()` |
-| `JEvF` | func | 160 | `() -> (i32)` |
-| `UTqO` | func | 304 | `(i32 i32) -> (i32 i32 i32)` |
-| `DeOT` | func | 300 | `(i32 f64 i32) -> (i32 i32 i32)` |
-| `cX6o` | func | 331 | `(f64) -> (i32)` |
-| `NsSo` | func | 298 | `(i32 i32 i32 i32 i32) -> (i32 i32)` |
-| `TGok` | func | 11 | `(i32) -> (i32)` |
-| `lU4g` | func | 267 | `(i32 i32 f64 f64 f64 f64 f64 f64 f64 f64 f64 i32) -> (f64 i32 i32)` |
-| `kH2W` | func | 329 | `(i32) -> (i32 f64)` |
-| `DuXv` | func | 137 | `(i32 i32 i32) -> ()` |
-| `Twpe` | func | 373 | `() -> (i32)` |
-| `hgxn` | func | 255 | `(i32) -> (i32)` |
-| `OeRF` | func | 211 | `(i32) -> (i32)` |
-| `bBvl` | func | 295 | `(i32 f64 i32) -> (i32 i32 i32)` |
-| `EJeT` | func | 307 | `(i32 i32) -> (i32 i32 i32)` |
-| `s9Qs` | func | 218 | `(i32 i32) -> (i32)` |
-| `AaYm` | func | 334 | `() -> (i32 i32)` |
-| `y3o1` | func | 302 | `(i32 i32 i32 i32) -> (i32 i32)` |
-| `qDgr` | func | 215 | `(i32 i32) -> (i32)` |
-| `AoYu` | func | 274 | `() -> ()` |
-| `gIrc` | func | 260 | `(i32) -> (i32)` |
-| `yjTu` | func | 335 | `() -> (i32 i32)` |
-| `GhUM` | func | 31 | `(i32 i32 i32) -> (i32)` |
-| `fKNE` | func | 369 | `() -> ()` |
-| `IkBW` | func | 321 | `(i32 i32 i32) -> (i32 i32)` |
-| `ScZG` | func | 258 | `(i32) -> (i32)` |
-| `KjAn` | func | 245 | `(i32) -> (i32)` |
-| `r2uS` | func | 178 | `() -> (i32)` |
-| `o0ei` | func | 102 | `(i32 i32 i32 i32) -> ()` |
-| `lw5Y` | func | 253 | `(i32) -> (i32)` |
-| `Cc0h` | func | 124 | `() -> (i32)` |
-| `RgXK` | func | 172 | `(i32 i32) -> ()` |
-| `cWQE` | func | 166 | `(i32 i32) -> ()` |
-| `EB9u` | func | 273 | `(f64 f64 f64 f64 f64 f64 f64 i32) -> (i32 i32 i32)` |
-| `MkJL` | func | 189 | `(i32 i32 i32) -> ()` |
-| `Uze3` | func | 368 | `(i32) -> ()` |
-| `PnsD` | func | 237 | `(i32) -> (f64)` |
-| `xho1` | func | 144 | `(i32 i32) -> ()` |
-| `f4VM` | func | 336 | `() -> (i32 i32)` |
-| `Qbl4` | func | 231 | `(i32) -> (i32)` |
-| `Upzl` | func | 316 | `(i32 i32 i32) -> (i32 i32)` |
-| `fUt1` | func | 264 | `() -> (i32)` |
-| `LscO` | func | 306 | `(i32 i32) -> (i32 i32 i32)` |
-| `uqPb` | func | 248 | `(i32) -> (i32)` |
-| `CVXG` | func | 324 | `(i32 i32) -> (i32 i32)` |
-| `Il7j` | func | 317 | `(i32) -> (i32 i32 i32)` |
-| `isX8` | func | 162 | `(i32 i32) -> ()` |
-| `riHs` | func | 294 | `(i32 i32 i32 i32 i32 i32) -> (i32 i32)` |
-| `nXkd` | func | 314 | `(i32 i32 i32) -> (i32 i32)` |
-| `Is5A` | func | 170 | `(i32 i32) -> ()` |
-| `w4t7` | func | 238 | `(i32) -> (i32)` |
-| `fsr0` | func | 276 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32)` |
-| `WTOE` | func | 278 | `(i32 i32) -> (i32)` |
-| `p4Q8` | func | 320 | `(i32 i32 i32) -> (i32 i32)` |
-| `ntPZ` | func | 158 | `() -> (i32)` |
-| `Prhy` | func | 328 | `(i32) -> (i32 i32)` |
-| `ODVm` | func | 325 | `(i32) -> (i32 i32)` |
-| `n87k` | func | 312 | `(i32 i32 i32) -> (i32 i32)` |
-| `O7kS` | func | 271 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32)` |
-| `Ptv5` | func | 250 | `(i32) -> (i32)` |
-| `gVY9` | func | 216 | `(i32) -> ()` |
-| `pZvX` | func | 108 | `() -> (i32)` |
-| `C9E5` | func | 171 | `(i32 i32) -> ()` |
-| `ZBMA` | func | 175 | `(i32) -> ()` |
-| `nxVR` | func | 301 | `(i32 i32 i32 i32) -> (i32 i32)` |
-| `aoc9` | func | 187 | `(i32 i32 i32) -> ()` |
-| `oSy8` | func | 282 | `(i32 i32 i32 i32) -> (i32 i32 i32 i32)` |
-| `z7yU` | func | 81 | `() -> (i32)` |
-| `YftN` | func | 230 | `(i32) -> (i32)` |
-| `NRVf` | func | 372 | `() -> (i32)` |
-| `JC6P` | func | 79 | `() -> (i32)` |
-| `AUC0` | func | 150 | `(i32 i32) -> ()` |
-| `nB4K` | func | 309 | `(i32 i32) -> (i32 i32 i32)` |
-| `Y0Be` | func | 249 | `(i32) -> (i32)` |
+| `Qpl6` | func | 11 | `(i32) -> (i32)` |
+| `bvku` | func | 335 | `() -> (i32 i32)` |
+| `RKgP` | func | 316 | `(i32 i32 i32) -> (i32 i32)` |
+| `qK8W` | func | 336 | `() -> (i32 i32)` |
+| `KXBh` | func | 254 | `(i32) -> (i32)` |
+| `tppD` | func | 267 | `(i32 i32 f64 f64 f64 f64 f64 f64 f64 f64 f64 i32) -> (f64 i32 i32)` |
+| `eIMv` | func | 232 | `(i32) -> (i32)` |
+| `k4oM` | func | 372 | `() -> (i32)` |
+| `M0AA` | func | 207 | `(i32) -> (i32)` |
+| `saih` | func | 160 | `() -> (i32)` |
+| `z4wv` | func | 260 | `(i32) -> (i32)` |
+| `MDO6` | func | 231 | `(i32) -> (i32)` |
+| `M1wO` | func | 98 | `(i32 i32 i32 i32 i32) -> (i32)` |
+| `sGrx` | func | 35 | `(i32 i32) -> (i32)` |
+| `Uwo2` | func | 333 | `() -> (i32 i32)` |
+| `CUPo` | func | 234 | `(i32) -> (i32)` |
+| `GWGf` | func | 277 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32)` |
+| `Oijc` | func | 320 | `(i32 i32 i32) -> (i32 i32)` |
+| `dCtS` | func | 31 | `(i32 i32 i32) -> (i32)` |
+| `s8PQ` | func | 102 | `(i32 i32 i32 i32) -> ()` |
+| `SWi3` | func | 307 | `(i32 i32) -> (i32 i32 i32)` |
+| `hUi9` | func | 250 | `(i32) -> (i32)` |
+| `qfBN` | func | 302 | `(i32 i32 i32 i32) -> (i32 i32)` |
+| `ZkDe` | func | 242 | `(i32) -> (i32)` |
+| `SclY` | func | 293 | `(i32 i32) -> (i32 i32 i32 i32)` |
+| `FYEh` | func | 284 | `(i32 i32 i32 i32 f64 f64 f64) -> (i32 i32)` |
+| `oomj` | func | 258 | `(i32) -> (i32)` |
+| `jqHl` | func | 329 | `(i32) -> (i32 f64)` |
+| `pBoj` | func | 234 | `(i32) -> (i32)` |
+| `RZhf` | global | 1 | `` |
+| `Oezk` | func | 298 | `(i32 i32 i32 i32 i32) -> (i32 i32)` |
+| `VfEi` | func | 374 | `() -> (i32)` |
+| `zRtv` | func | 314 | `(i32 i32 i32) -> (i32 i32)` |
+| `bmo3` | func | 328 | `(i32) -> (i32 i32)` |
+| `mTZR` | func | 274 | `() -> ()` |
+| `Djt9` | func | 301 | `(i32 i32 i32 i32) -> (i32 i32)` |
+| `WlAG` | func | 283 | `(i32 i32 i32 i32) -> (i32)` |
+| `c2rm` | func | 256 | `(i32) -> (i32)` |
+| `RqJL` | func | 222 | `(i32) -> ()` |
+| `srhO` | func | 240 | `(i32) -> (i32)` |
+| `f0xL` | func | 158 | `() -> (i32)` |
+| `mPpV` | func | 27 | `(i32 i32 i32 i32) -> (i32)` |
+| `aAHY` | func | 285 | `(i32 i32 i32 i32 i32) -> (i32 i32 i32)` |
+| `hmOL` | func | 249 | `(i32) -> (i32)` |
+| `aVuZ` | func | 244 | `(i32) -> (i32)` |
+| `Znft` | func | 175 | `(i32) -> ()` |
+| `WVOc` | func | 278 | `(i32 i32) -> (i32)` |
+| `vNlQ` | func | 171 | `(i32 i32) -> ()` |
+| `yF0o` | func | 170 | `(i32 i32) -> ()` |
+| `ftx9` | func | 150 | `(i32 i32) -> ()` |
+| `CgMO` | func | 324 | `(i32 i32) -> (i32 i32)` |
+| `DQI2` | func | 300 | `(i32 f64 i32) -> (i32 i32 i32)` |
+| `bqNH` | func | 245 | `(i32) -> (i32)` |
+| `GheG` | func | 296 | `(i32 i32 i32) -> (i32 i32 i32)` |
+| `QCju` | func | 241 | `(i32) -> (i32)` |
+| `FT1Q` | func | 166 | `(i32 i32) -> ()` |
+| `leSj` | func | 246 | `(i32) -> (i32)` |
+| `ZHxJ` | func | 273 | `(f64 f64 f64 f64 f64 f64 f64 i32) -> (i32 i32 i32)` |
+| `O4UP` | func | 233 | `(i32) -> (i32)` |
+| `QKIa` | func | 238 | `(i32) -> (i32)` |
+| `LfDf` | func | 138 | `(i32 i32) -> (i32)` |
+| `F2Gh` | func | 321 | `(i32 i32 i32) -> (i32 i32)` |
+| `XEr5` | func | 137 | `(i32 i32 i32) -> ()` |
+| `kBgH` | func | 280 | `(i32 i32 i32 i32 i32 i32) -> (i32 i32 i32)` |
+| `iVLa` | func | 237 | `(i32) -> (f64)` |
+| `qBZC` | func | 276 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32)` |
+| `u2xe` | func | 193 | `(i32) -> (i32)` |
+| `xk5s` | func | 74 | `(i32) -> ()` |
+| `PJ9I` | func | 303 | `(i32 i32) -> (i32 i32 i32)` |
+| `xF63` | func | 89 | `(i32 i32 i32 i32 i32) -> ()` |
+| `CO6A` | func | 368 | `(i32) -> ()` |
+| `fVE7` | func | 309 | `(i32 i32) -> (i32 i32 i32)` |
+| `RCKZ` | func | 251 | `(i32) -> (i32)` |
+| `p0zj` | func | 215 | `(i32 i32) -> (i32)` |
+| `fX0l` | func | 334 | `() -> (i32 i32)` |
+| `Ck3P` | func | 248 | `(i32) -> (i32)` |
+| `XFPB` | func | 279 | `(i32 i32 f64 i32 i32 i32) -> (i32 i32 i32)` |
+| `AsVm` | func | 308 | `(i32 i32) -> (i32 i32 i32)` |
+| `WrTh` | func | 178 | `() -> (i32)` |
+| `pnXP` | func | 281 | `(i32 i32 f64 i32 i32 i32) -> (i32 i32 i32)` |
+| `Zji1` | func | 129 | `(i32 i32 i32) -> ()` |
+| `gQde` | func | 349 | `(i32 i32 i32) -> ()` |
+| `O87p` | func | 97 | `(i32 i32 i32) -> ()` |
+| `wMUh` | func | 315 | `(i32) -> (i32 i32 i32)` |
+| `kS1t` | func | 259 | `(i32) -> (i32)` |
+| `sAdo` | func | 81 | `() -> (i32)` |
+| `juQp` | func | 305 | `(i32 i32) -> (i32 i32 i32)` |
+| `W5EA` | func | 107 | `(i32 i32 i32 i32) -> ()` |
+| `n4SZ` | func | 294 | `(i32 i32 i32 i32 i32 i32) -> (i32 i32)` |
+| `rnZx` | func | 209 | `(i32 i32) -> ()` |
+| `uiBE` | func | 373 | `() -> (i32)` |
+| `Ffx9` | func | 322 | `(i32 i32) -> (i32 i32)` |
+| `MseA` | func | 304 | `(i32 i32) -> (i32 i32 i32)` |
+| `GKQX` | func | 299 | `(i32 i32 i32) -> (i32 i32 i32)` |
+| `mzjh` | func | 311 | `(i32 i32 i32) -> (i32 i32)` |
+| `Sr6R` | func | 306 | `(i32 i32) -> (i32 i32 i32)` |
+| `LPAR` | func | 220 | `(i32 i32) -> ()` |
+| `LkxY` | func | 319 | `(i32 i32 i32) -> (i32 i32)` |
+| `Xtez` | func | 149 | `(i32 i32) -> ()` |
+| `HMLY` | func | 337 | `() -> (i32 i32)` |
+| `AVsQ` | func | 297 | `(i32 i32 i32) -> (i32 i32 i32)` |
+| `FqjK` | func | 189 | `(i32 i32 i32) -> ()` |
+| `GNLm` | func | 252 | `(i32) -> (i32)` |
+| `z70A` | func | 79 | `() -> (i32)` |
+| `yTgA` | func | 310 | `(i32 f64) -> (i32 i32 i32)` |
+| `M5kn` | func | 271 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32)` |
+| `GkPu` | func | 369 | `() -> ()` |
+| `GDUf` | func | 274 | `() -> ()` |
+| `sROC` | func | 211 | `(i32) -> (i32)` |
+| `v5VW` | func | 255 | `(i32) -> (i32)` |
+| `S2L8` | func | 228 | `(i32) -> (i32)` |
+| `HLv0` | func | 58 | `(i32 i32 i32 i32) -> ()` |
+| `WgwF` | func | 318 | `(i32) -> (i32 i32 i32)` |
+| `HUgl` | func | 169 | `(i32 i32 i32 i32) -> (i32)` |
+| `b1Ls` | func | 239 | `(i32) -> (i32)` |
+| `nxZE` | func | 247 | `(i32) -> (i32)` |
+| `Z8kh` | func | 172 | `(i32 i32) -> ()` |
+| `WWVX` | func | 325 | `(i32) -> (i32 i32)` |
+| `Jz9E` | func | 253 | `(i32) -> (i32)` |
+| `tDII` | func | 229 | `(i32) -> (i32)` |
+| `mC3m` | func | 330 | `(i32) -> (i32 i32)` |
+| `pOxO` | func | 367 | `(i32) -> (i32)` |
+| `J06w` | func | 264 | `() -> (i32)` |
+| `muvg` | func | 235 | `(i32) -> (i32)` |
+| `o1GC` | func | 236 | `(i32) -> (i32)` |
+| `T9NU` | func | 243 | `(i32) -> (i32)` |
+| `qBET` | func | 195 | `(i32) -> (i32)` |
+| `Fhir` | func | 332 | `() -> (i32 i32)` |
+| `amE4` | func | 216 | `(i32) -> ()` |
+| `McbW` | func | 144 | `(i32 i32) -> ()` |
+| `XaAM` | func | 197 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 f64 i32 i32 i32 i32) -> (i32 i32 i32)` |
+| `h8Ir` | func | 313 | `(i32 i32 i32) -> (i32 i32)` |
+| `t71l` | func | 275 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32)` |
+| `Qdkj` | func | 326 | `(i32) -> (i32 i32)` |
+| `KNyv` | func | 108 | `() -> (i32)` |
+| `Fxla` | func | 16 | `(i32 i32 f64 f64 f64 f64 f64 f64 f64 f64 f64) -> (f64)` |
+| `rCme` | func | 343 | `() -> (i32)` |
+| `VAWS` | func | 207 | `(i32) -> (i32)` |
+| `ktfo` | func | 230 | `(i32) -> (i32)` |
+| `aRlR` | func | 194 | `(i32) -> (i32)` |
+| `e3i3` | func | 88 | `(i32 i32 i32 i32) -> (i32)` |
+| `SWqT` | func | 317 | `(i32) -> (i32 i32 i32)` |
+| `ptYt` | func | 295 | `(i32 f64 i32) -> (i32 i32 i32)` |
+| `fKlz` | func | 206 | `(i32) -> (i32)` |
+| `Y3bd` | func | 312 | `(i32 i32 i32) -> (i32 i32)` |
+| `f2oV` | func | 323 | `(i32 i32) -> (i32 i32)` |
+| `ltA9` | func | 33 | `(i32) -> (i32)` |
 | `memory` | memory | 0 | `` |
-| `Xdd3` | func | 326 | `(i32) -> (i32 i32)` |
-| `sn7g` | func | 299 | `(i32 i32 i32) -> (i32 i32 i32)` |
-| `pFlh` | func | 296 | `(i32 i32 i32) -> (i32 i32 i32)` |
-| `xigm` | func | 280 | `(i32 i32 i32 i32 i32 i32) -> (i32 i32 i32)` |
-| `z3qa` | func | 179 | `() -> (i32)` |
-| `NmjU` | func | 297 | `(i32 i32 i32) -> (i32 i32 i32)` |
-| `d8I7` | func | 241 | `(i32) -> (i32)` |
-| `UMr0` | func | 207 | `(i32) -> (i32)` |
-| `K7Vu` | func | 98 | `(i32 i32 i32 i32 i32) -> (i32)` |
-| `ugkd` | func | 251 | `(i32) -> (i32)` |
-| `pvYx` | func | 234 | `(i32) -> (i32)` |
-| `GFCE` | func | 303 | `(i32 i32) -> (i32 i32 i32)` |
-| `XVHT` | func | 330 | `(i32) -> (i32 i32)` |
-| `AP98` | func | 242 | `(i32) -> (i32)` |
-| `WSDB` | func | 332 | `() -> (i32 i32)` |
-| `Y1T1` | func | 149 | `(i32 i32) -> ()` |
-| `BmOy` | func | 279 | `(i32 i32 f64 i32 i32 i32) -> (i32 i32 i32)` |
-| `vSGD` | func | 313 | `(i32 i32 i32) -> (i32 i32)` |
-| `l2Yj` | func | 274 | `() -> ()` |
-| `qdki` | func | 169 | `(i32 i32 i32 i32) -> (i32)` |
-| `cFMq` | func | 293 | `(i32 i32) -> (i32 i32 i32 i32)` |
-| `Obxy` | func | 246 | `(i32) -> (i32)` |
-| `EsIK` | func | 310 | `(i32 f64) -> (i32 i32 i32)` |
-| `PVLJ` | func | 89 | `(i32 i32 i32 i32 i32) -> ()` |
-| `YRkw` | func | 138 | `(i32 i32) -> (i32)` |
-| `ouFN` | func | 16 | `(i32 i32 f64 f64 f64 f64 f64 f64 f64 f64 f64) -> (f64)` |
-| `u5Py` | func | 275 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32)` |
-| `FoEt` | func | 243 | `(i32) -> (i32)` |
-| `nGl5` | func | 327 | `(i32) -> (i32 i32)` |
-| `GlH0` | func | 308 | `(i32 i32) -> (i32 i32 i32)` |
-| `Dvwj` | func | 235 | `(i32) -> (i32)` |
-| `QdBo` | func | 254 | `(i32) -> (i32)` |
-| `Xlko` | func | 197 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 f64 i32 i32 i32 i32) -> (i32 i32 i32)` |
-| `llZs` | global | 2 | `` |
-| `ZbDi` | func | 315 | `(i32) -> (i32 i32 i32)` |
-| `oRUn` | func | 252 | `(i32) -> (i32)` |
-| `Xr7O` | func | 247 | `(i32) -> (i32)` |
-| `Rc6W` | func | 318 | `(i32) -> (i32 i32 i32)` |
-| `LsY0` | func | 206 | `(i32) -> (i32)` |
-| `dAOh` | func | 240 | `(i32) -> (i32)` |
-| `vVO3` | func | 101 | `(i32 i32 i32 i32) -> ()` |
-| `qm17` | func | 74 | `(i32) -> ()` |
-| `rze3` | func | 259 | `(i32) -> (i32)` |
-| `pLPp` | func | 244 | `(i32) -> (i32)` |
-| `hyFe` | func | 97 | `(i32 i32 i32) -> ()` |
-| `aPVu` | func | 222 | `(i32) -> ()` |
-| `UDlB` | func | 27 | `(i32 i32 i32 i32) -> (i32)` |
-| `Aeni` | func | 88 | `(i32 i32 i32 i32) -> (i32)` |
-| `bNoJ` | func | 349 | `(i32 i32 i32) -> ()` |
-| `M1TV` | func | 283 | `(i32 i32 i32 i32) -> (i32)` |
-| `NcBM` | func | 281 | `(i32 i32 f64 i32 i32 i32) -> (i32 i32 i32)` |
-| `U3vo` | func | 337 | `() -> (i32 i32)` |
-| `Lass` | func | 256 | `(i32) -> (i32)` |
-| `FYN5` | func | 35 | `(i32 i32) -> (i32)` |
-| `yYLd` | func | 323 | `(i32 i32) -> (i32 i32)` |
-| `bF4P` | func | 277 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32)` |
-| `Oxpm` | func | 229 | `(i32) -> (i32)` |
-| `dlpx` | func | 58 | `(i32 i32 i32 i32) -> ()` |
-| `spLU` | func | 232 | `(i32) -> (i32)` |
-| `tXYL` | func | 194 | `(i32) -> (i32)` |
-| `IPuB` | func | 207 | `(i32) -> (i32)` |
-| `djiW` | func | 311 | `(i32 i32 i32) -> (i32 i32)` |
-| `ASsi` | func | 209 | `(i32 i32) -> ()` |
-| `Jo5Q` | func | 33 | `(i32) -> (i32)` |
-| `Dvuw` | func | 234 | `(i32) -> (i32)` |
-| `zxLg` | func | 285 | `(i32 i32 i32 i32 i32) -> (i32 i32 i32)` |
-| `lDLH` | func | 107 | `(i32 i32 i32 i32) -> ()` |
-| `upS4` | func | 333 | `() -> (i32 i32)` |
+| `sPSp` | func | 187 | `(i32 i32 i32) -> ()` |
+| `cbxe` | func | 331 | `(f64) -> (i32)` |
+| `STx2` | func | 162 | `(i32 i32) -> ()` |
+| `zkqW` | global | 2 | `` |
+| `nN1V` | func | 179 | `() -> (i32)` |
+| `tyBY` | func | 101 | `(i32 i32 i32 i32) -> ()` |
+| `Q5Oz` | func | 218 | `(i32 i32) -> (i32)` |
+| `j8d8` | func | 327 | `(i32) -> (i32 i32)` |
+| `GtSn` | func | 282 | `(i32 i32 i32 i32) -> (i32 i32 i32 i32)` |
+| `MXQI` | func | 124 | `() -> (i32)` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 

@@ -1,170 +1,170 @@
 export const id = 158;
 export const ids = [158];
 export const modules = {
-  39241: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => wm,
-      g: () => am
+  39083: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => LD,
+      d: () => KD
     });
-    var hm = fm(4037);
-    let Am = null;
+    var pD = wD(4107);
+    let sD = null;
 
-    function am(mm) {
-      return null !== Am && mm === Am
+    function KD(DD) {
+      return null !== sD && DD === sD
     }
 
-    function xm() {
-      this.YM = !1, this.stopPropagation = !1, this.bM = !1, this.disabled = !1
+    function rD() {
+      this.Dv = !1, this.stopPropagation = !1, this.Av = !1, this.disabled = !1
     }
-    class wm {
-      constructor(mm, Tm) {
+    class LD {
+      constructor(DD, zD) {
         this.version = "0.7.0";
-        var fm = Object.assign({}, new xm, Tm || {});
-        this.element = mm || document, this.YM = !!fm.YM, this.stopPropagation = !!fm.stopPropagation, this.bM = !!fm.bM, this.disabled = !!fm.disabled, this.filterEvents = (mm, Tm) => !0, this.ignoreEvent = mm => !1, this.down = new hm.EventEmitter, this.up = new hm.EventEmitter, this.state = {}, this.rM = {
+        var wD = Object.assign({}, new rD, zD || {});
+        this.element = DD || document, this.Dv = !!wD.Dv, this.stopPropagation = !!wD.stopPropagation, this.Av = !!wD.Av, this.disabled = !!wD.disabled, this.filterEvents = (DD, zD) => !0, this.ignoreEvent = DD => !1, this.down = new pD.EventEmitter, this.up = new pD.EventEmitter, this.state = {}, this.Fv = {
           dx: 0,
           dy: 0,
-          ATm: 0,
-          aTm: 0,
-          xTm: 0
+          IzD: 0,
+          BzD: 0,
+          GzD: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? im(this) : document.addEventListener("DOMContentLoaded", (mm => {
-          im(this)
+        }, "loading" !== document.readyState ? gD(this) : document.addEventListener("DOMContentLoaded", (DD => {
+          gD(this)
         }), {
           once: !0
         })
       }
-      bind(mm) {
-        for (var Tm = arguments.length, fm = new Array(Tm > 1 ? Tm - 1 : 0), hm = 1; hm < Tm; hm++) fm[hm - 1] = arguments[hm];
-        fm.forEach((Tm => {
-          var fm = this._keyBindmap[Tm] || [];
-          fm.includes(mm) || (fm.push(mm), this._keyBindmap[Tm] = fm)
-        })), this.state[mm] = !!this.state[mm], this.pressCount[mm] = this.pressCount[mm] || 0, this.releaseCount[mm] = this.releaseCount[mm] || 0
+      bind(DD) {
+        for (var zD = arguments.length, wD = new Array(zD > 1 ? zD - 1 : 0), pD = 1; pD < zD; pD++) wD[pD - 1] = arguments[pD];
+        wD.forEach((zD => {
+          var wD = this._keyBindmap[zD] || [];
+          wD.includes(DD) || (wD.push(DD), this._keyBindmap[zD] = wD)
+        })), this.state[DD] = !!this.state[DD], this.pressCount[DD] = this.pressCount[DD] || 0, this.releaseCount[DD] = this.releaseCount[DD] || 0
       }
-      unbind(mm) {
-        for (var Tm in this._keyBindmap) {
-          var fm = this._keyBindmap[Tm],
-            hm = fm.indexOf(mm);
-          hm > -1 && fm.splice(hm, 1)
+      unbind(DD) {
+        for (var zD in this._keyBindmap) {
+          var wD = this._keyBindmap[zD],
+            pD = wD.indexOf(DD);
+          pD > -1 && wD.splice(pD, 1)
         }
       }
       getBindings() {
-        var mm = {};
-        for (var Tm in this._keyBindmap) {
-          this._keyBindmap[Tm].forEach((fm => {
-            mm[fm] = mm[fm] || [], mm[fm].push(Tm)
+        var DD = {};
+        for (var zD in this._keyBindmap) {
+          this._keyBindmap[zD].forEach((wD => {
+            DD[wD] = DD[wD] || [], DD[wD].push(zD)
           }))
         }
-        return mm
+        return DD
       }
-      DE() {
-        Dm(this.rM), Dm(this.pressCount), Dm(this.releaseCount)
+      DU() {
+        cD(this.Fv), cD(this.pressCount), cD(this.releaseCount)
       }
     }
 
-    function Dm(mm) {
-      for (var Tm in mm) mm[Tm] = 0
+    function cD(DD) {
+      for (var zD in DD) DD[zD] = 0
     }
 
-    function im(mm) {
-      window.addEventListener("keydown", qm.bind(null, mm, !0), !1), window.addEventListener("keyup", qm.bind(null, mm, !1), !1);
-      var Tm = {
+    function gD(DD) {
+      window.addEventListener("keydown", GD.bind(null, DD, !0), !1), window.addEventListener("keyup", GD.bind(null, DD, !1), !1);
+      var zD = {
         passive: !0
       };
-      mm.element.addEventListener("touchstart", om.bind(void 0, mm), {
+      DD.element.addEventListener("touchstart", fD.bind(void 0, DD), {
         passive: !1
-      }), mm.element.addEventListener("touchend", Ym.bind(void 0, mm), Tm), mm.element.addEventListener("mousedown", jm.bind(null, mm, !0), Tm), window.document.addEventListener("mouseup", jm.bind(null, mm, !1), Tm), mm.element.addEventListener("touchmove", Vm.bind(null, mm), Tm), mm.element.addEventListener("mousemove", Vm.bind(null, mm), Tm), window.PointerEvent, mm.element.addEventListener("wheel", Im.bind(null, mm), Tm), mm.element.addEventListener("contextmenu", Km.bind(null, mm), !1), window.addEventListener("blur", Jm.bind(null, mm), !1)
+      }), DD.element.addEventListener("touchend", BD.bind(void 0, DD), zD), DD.element.addEventListener("mousedown", hD.bind(null, DD, !0), zD), window.document.addEventListener("mouseup", hD.bind(null, DD, !1), zD), DD.element.addEventListener("touchmove", nD.bind(null, DD), zD), DD.element.addEventListener("mousemove", nD.bind(null, DD), zD), window.PointerEvent, DD.element.addEventListener("wheel", MD.bind(null, DD), zD), DD.element.addEventListener("contextmenu", OD.bind(null, DD), !1), window.addEventListener("blur", QD.bind(null, DD), !1)
     }
-    var Rm = 0,
-      pm = 0,
-      Em = null;
+    var RD = 0,
+      AD = 0,
+      UD = null;
 
-    function om(mm, Tm) {
-      Tm.preventDefault(), Om(Tm)
+    function fD(DD, zD) {
+      zD.preventDefault(), ID(zD)
     }
 
-    function Om(mm) {
-      let Tm = !1;
-      for (let fm = 0; fm < mm.touches.length; ++fm)
-        if (mm.touches[fm].identifier === Em) {
-          Tm = !0;
+    function ID(DD) {
+      let zD = !1;
+      for (let wD = 0; wD < DD.touches.length; ++wD)
+        if (DD.touches[wD].identifier === UD) {
+          zD = !0;
           break
-        } if (!Tm) {
-        const Tm = mm.changedTouches[0];
-        Rm = Tm.clientX, pm = Tm.clientY, Em = Tm.identifier
+        } if (!zD) {
+        const zD = DD.changedTouches[0];
+        RD = zD.clientX, AD = zD.clientY, UD = zD.identifier
       }
     }
 
-    function Ym(mm, Tm) {
-      for (var fm = Tm.changedTouches, hm = 0; hm < fm.length; ++hm) fm[hm].identifier === Em && (Em = null)
+    function BD(DD, zD) {
+      for (var wD = zD.changedTouches, pD = 0; pD < wD.length; ++pD) wD[pD].identifier === UD && (UD = null)
     }
 
-    function qm(mm, Tm, fm) {
-      if (!mm.ignoreEvent(fm)) try {
-        cm(mm, fm), Tm && fm.isTrusted && !fm.repeat && mm._keyStates[fm.code] && zm(mm, fm.code)
+    function GD(DD, zD, wD) {
+      if (!DD.ignoreEvent(wD)) try {
+        XD(DD, wD), zD && wD.isTrusted && !wD.repeat && DD._keyStates[wD.code] && VD(DD, wD.code)
       } finally {
-        Zm(fm.code, Tm, mm, fm)
+        PD(wD.code, zD, DD, wD)
       }
     }
 
-    function jm(mm, Tm, fm) {
-      if (!mm.ignoreEvent(fm)) try {
-        cm(mm, fm)
+    function hD(DD, zD, wD) {
+      if (!DD.ignoreEvent(wD)) try {
+        XD(DD, wD)
       } finally {
-        ! function(mm, Tm, fm) {
-          if ("pointerId" in fm)
-            if (Tm) {
-              if (null !== mm._touches.currID) return;
-              mm._touches.currID = fm.pointerId
+        ! function(DD, zD, wD) {
+          if ("pointerId" in wD)
+            if (zD) {
+              if (null !== DD._touches.currID) return;
+              DD._touches.currID = wD.pointerId
             } else {
-              if (mm._touches.currID !== fm.pointerId) return;
-              mm._touches.currID = null
-            } var hm = "button" in fm ? fm.button + 1 : 1;
-          Zm("Mouse" + hm, Tm, mm, fm)
-        }(mm, Tm, fm)
+              if (DD._touches.currID !== wD.pointerId) return;
+              DD._touches.currID = null
+            } var pD = "button" in wD ? wD.button + 1 : 1;
+          PD("Mouse" + pD, zD, DD, wD)
+        }(DD, zD, wD)
       }
     }
 
-    function Vm(mm, Tm) {
-      var fm = Tm.movementX || Tm.mozMovementX || 0,
-        hm = Tm.movementY || Tm.mozMovementY || 0;
-      if (Tm.touches && 0 === (fm | hm)) {
-        var Am = function(mm) {
-          Om(mm);
-          for (let Tm = 0; Tm < mm.changedTouches.length; ++Tm)
-            if (mm.changedTouches[Tm].identifier == Em) {
-              const fm = mm.changedTouches[Tm],
-                hm = [fm.clientX - Rm, fm.clientY - pm];
-              return Rm = fm.clientX, pm = fm.clientY, hm
-            } return console.error(`Did not find touch id ${Em}`), [0, 0]
-        }(Tm);
-        fm = Am[0], hm = Am[1]
+    function nD(DD, zD) {
+      var wD = zD.movementX || zD.mozMovementX || 0,
+        pD = zD.movementY || zD.mozMovementY || 0;
+      if (zD.touches && 0 === (wD | pD)) {
+        var sD = function(DD) {
+          ID(DD);
+          for (let zD = 0; zD < DD.changedTouches.length; ++zD)
+            if (DD.changedTouches[zD].identifier == UD) {
+              const wD = DD.changedTouches[zD],
+                pD = [wD.clientX - RD, wD.clientY - AD];
+              return RD = wD.clientX, AD = wD.clientY, pD
+            } return console.error(`Did not find touch id ${UD}`), [0, 0]
+        }(zD);
+        wD = sD[0], pD = sD[1]
       }
-      mm.rM.dx += fm, mm.rM.dy += hm
+      DD.Fv.dx += wD, DD.Fv.dy += pD
     }
 
-    function Im(mm, Tm) {
-      cm(mm, Tm);
-      var fm = 1;
-      switch (Tm.deltaMode) {
+    function MD(DD, zD) {
+      XD(DD, zD);
+      var wD = 1;
+      switch (zD.deltaMode) {
         case 0:
-          fm = 1;
+          wD = 1;
           break;
         case 1:
-          fm = 12;
+          wD = 12;
           break;
         case 2:
-          fm = mm.element.clientHeight || window.innerHeight
+          wD = DD.element.clientHeight || window.innerHeight
       }
-      mm.rM.ATm += (Tm.deltaX || 0) * fm, mm.rM.aTm += (Tm.deltaY || 0) * fm, mm.rM.xTm += (Tm.deltaZ || 0) * fm
+      DD.Fv.IzD += (zD.deltaX || 0) * wD, DD.Fv.BzD += (zD.deltaY || 0) * wD, DD.Fv.GzD += (zD.deltaZ || 0) * wD
     }
 
-    function Km(mm, Tm) {
-      if (!mm.bM) return Tm.preventDefault(), !1
+    function OD(DD, zD) {
+      if (!DD.Av) return zD.preventDefault(), !1
     }
-    var Qm = {
+    var JD = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -175,260 +175,260 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function nm(mm, Tm) {
-      return !!mm[Qm[Tm]] || ("AltRight" === Tm || "ControlLeft" === Tm) && "function" === typeof mm.getModifierState && !0 === mm.getModifierState("AltGraph")
+    function ED(DD, zD) {
+      return !!DD[JD[zD]] || ("AltRight" === zD || "ControlLeft" === zD) && "function" === typeof DD.getModifierState && !0 === DD.getModifierState("AltGraph")
     }
 
-    function Jm(mm, Tm) {
-      for (var fm in mm._modifiersHeldThroughBlur = {}, Qm) mm._keyStates[fm] && (mm._modifiersHeldThroughBlur[fm] = !0);
-      Tm && Tm.isTrusted && function() {
+    function QD(DD, zD) {
+      for (var wD in DD._modifiersHeldThroughBlur = {}, JD) DD._keyStates[wD] && (DD._modifiersHeldThroughBlur[wD] = !0);
+      zD && zD.isTrusted && function() {
         try {
           return window.self !== window.top
-        } catch (mm) {
+        } catch (DD) {
           return !0
         }
-      }() && (clearTimeout(mm._blurRelease), mm._blurRelease = setTimeout((function() {
+      }() && (clearTimeout(DD._blurRelease), DD._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var Tm in mm._modifiersHeldThroughBlur = {}, mm._keyStates) mm._keyStates[Tm] && !/^Mouse\d/.test(Tm) && zm(mm, Tm)
+          for (var zD in DD._modifiersHeldThroughBlur = {}, DD._keyStates) DD._keyStates[zD] && !/^Mouse\d/.test(zD) && VD(DD, zD)
       }), 0))
     }
 
-    function cm(mm, Tm) {
-      var fm = mm._modifiersHeldThroughBlur;
-      if (fm && Tm.isTrusted && document.hasFocus())
-        for (var hm in fm) delete fm[hm], mm._keyStates[hm] && hm !== Tm.code && (nm(Tm, hm) || zm(mm, hm))
+    function XD(DD, zD) {
+      var wD = DD._modifiersHeldThroughBlur;
+      if (wD && zD.isTrusted && document.hasFocus())
+        for (var pD in wD) delete wD[pD], DD._keyStates[pD] && pD !== zD.code && (ED(zD, pD) || VD(DD, pD))
     }
 
-    function zm(mm, Tm) {
-      const fm = {
-          code: Tm,
+    function VD(DD, zD) {
+      const wD = {
+          code: zD,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        hm = Am;
-      Am = fm;
+        pD = sD;
+      sD = wD;
       try {
-        Zm(Tm, !1, mm, fm)
+        PD(zD, !1, DD, wD)
       } finally {
-        Am = hm
+        sD = pD
       }
     }
 
-    function Zm(mm, Tm, fm, hm) {
-      var Am = fm._keyBindmap[mm];
-      Am && (km(fm._keyStates[mm], Tm) && (fm._keyStates[mm] = Tm, Am.forEach((mm => {
-        (!fm.filterEvents || fm.filterEvents(hm, mm)) && function(mm, Tm, fm, hm) {
-          var Am = Tm ? fm.pressCount : fm.releaseCount;
-          Am[mm] = (Am[mm] || 0) + 1;
-          var am = fm._bindPressCount[mm] || 0;
-          (am += Tm ? 1 : -1) < 0 && (am = 0);
-          fm._bindPressCount[mm] = am;
-          var xm = fm.state[mm];
-          if (km(xm, am)) {
-            fm.state[mm] = am > 0;
-            var wm = Tm ? fm.down : fm.up;
-            fm.disabled || wm.emit(mm, hm)
+    function PD(DD, zD, wD, pD) {
+      var sD = wD._keyBindmap[DD];
+      sD && (CD(wD._keyStates[DD], zD) && (wD._keyStates[DD] = zD, sD.forEach((DD => {
+        (!wD.filterEvents || wD.filterEvents(pD, DD)) && function(DD, zD, wD, pD) {
+          var sD = zD ? wD.pressCount : wD.releaseCount;
+          sD[DD] = (sD[DD] || 0) + 1;
+          var KD = wD._bindPressCount[DD] || 0;
+          (KD += zD ? 1 : -1) < 0 && (KD = 0);
+          wD._bindPressCount[DD] = KD;
+          var rD = wD.state[DD];
+          if (CD(rD, KD)) {
+            wD.state[DD] = KD > 0;
+            var LD = zD ? wD.down : wD.up;
+            wD.disabled || LD.emit(DD, pD)
           }
-        }(mm, Tm, fm, hm)
-      }))), "button" in hm || (fm.YM && !hm.defaultPrevented && hm.preventDefault(), fm.stopPropagation && hm.stopPropagation()))
+        }(DD, zD, wD, pD)
+      }))), "button" in pD || (wD.Dv && !pD.defaultPrevented && pD.preventDefault(), wD.stopPropagation && pD.stopPropagation()))
     }
 
-    function km(mm, Tm) {
-      return mm ? !Tm : Tm
+    function CD(DD, zD) {
+      return DD ? !zD : zD
     }
   },
-  36768: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => Ym,
-      i: () => qm
+  36646: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => BD,
+      g: () => GD
     });
-    var hm = fm(59),
-      Am = fm(1449),
-      am = fm(1946),
-      xm = fm(36708),
-      wm = fm(653),
-      Dm = fm(1080),
-      im = fm.n(Dm),
-      Rm = fm(1135);
-    const pm = [Em()];
+    var pD = wD(58),
+      sD = wD(1442),
+      KD = wD(1973),
+      rD = wD(36593),
+      LD = wD(619),
+      cD = wD(1044),
+      gD = wD.n(cD),
+      RD = wD(1096);
+    const AD = [UD()];
 
-    function Em() {
+    function UD() {
       return {
         source: null,
         direction: null,
-        vy: null,
+        bZ: null,
         timeout: void 0,
         writtenAngle: null
       }
     }
 
-    function om(mm) {
-      return pm.find((Tm => null !== Tm.source && Tm.source === mm))
+    function fD(DD) {
+      return AD.find((zD => null !== zD.source && zD.source === DD))
     }
 
-    function Om(mm) {
-      clearTimeout(mm.timeout), mm.source = null, mm.direction = null, mm.writtenAngle = null, mm.vy && (mm.vy.style.rotate = "")
+    function ID(DD) {
+      clearTimeout(DD.timeout), DD.source = null, DD.direction = null, DD.writtenAngle = null, DD.bZ && (DD.bZ.style.rotate = "")
     }
-    const Ym = (0, hm.memo)((function() {
-      const [, mm] = (0, hm.useReducer)((mm => mm + 1), 0);
-      return (0, Am.g)("damagedByOtherPlayer", (Tm => {
+    const BD = (0, pD.memo)((function() {
+      const [, DD] = (0, pD.useReducer)((DD => DD + 1), 0);
+      return (0, sD.g)("damagedByOtherPlayer", (zD => {
         let {
-          Fm: fm,
-          direction: hm
-        } = Tm;
-        const Am = fm || "nonDirectional",
-          am = function(mm) {
-            var Tm;
-            const fm = null !== (Tm = om(mm)) && void 0 !== Tm ? Tm : pm.find((mm => null === mm.source));
-            if (fm) return fm;
-            const hm = {
+          tD: wD,
+          direction: pD
+        } = zD;
+        const sD = wD || "nonDirectional",
+          KD = function(DD) {
+            var zD;
+            const wD = null !== (zD = fD(DD)) && void 0 !== zD ? zD : AD.find((DD => null === DD.source));
+            if (wD) return wD;
+            const pD = {
               source: null,
               direction: null,
-              vy: null,
+              bZ: null,
               timeout: void 0,
               writtenAngle: null
             };
-            return pm.push(hm), hm
-          }(Am);
-        clearTimeout(am.timeout), am.source = Am, am.direction = hm, am.timeout = setTimeout((() => {
-          Om(am), mm()
-        }), 800), mm()
-      })), (0, am.e)("kill", (Tm => {
+            return AD.push(pD), pD
+          }(sD);
+        clearTimeout(KD.timeout), KD.source = sD, KD.direction = pD, KD.timeout = setTimeout((() => {
+          ID(KD), DD()
+        }), 800), DD()
+      })), (0, KD.c)("kill", (zD => {
         let {
-          killer: fm,
-          victim: hm
-        } = Tm;
-        const Am = fm.local && om(hm.id);
-        Am && (Om(Am), mm())
-      })), (0, hm.useEffect)((() => {
-        const mm = (0, xm.c)("turnDamageIndicators", qm);
+          killer: wD,
+          victim: pD
+        } = zD;
+        const sD = wD.local && fD(pD.id);
+        sD && (ID(sD), DD())
+      })), (0, pD.useEffect)((() => {
+        const DD = (0, rD.h)("turnDamageIndicators", GD);
         return () => {
-          mm(), pm.forEach(Om)
+          DD(), AD.forEach(ID)
         }
-      }), []), (0, Rm.jsx)("div", {
+      }), []), (0, RD.jsx)("div", {
         className: "DirectionalDamage",
-        children: pm.map(((mm, Tm) => (0, Rm.jsx)("div", {
-          ref: Tm => {
-            mm.vy = Tm
+        children: AD.map(((DD, zD) => (0, RD.jsx)("div", {
+          ref: zD => {
+            DD.bZ = zD
           },
-          className: im()("DamageIndicator", {
-            DamageIndicatorFullCircle: (0, wm.H)(mm.direction),
-            DamageIndicatorIdle: null === mm.source
+          className: gD()("DamageIndicator", {
+            DamageIndicatorFullCircle: (0, LD.B)(DD.direction),
+            DamageIndicatorIdle: null === DD.source
           })
-        }, Tm)))
+        }, zD)))
       })
     }));
 
-    function qm(mm) {
-      for (const Tm of pm) {
-        if (null === Tm.source || (0, wm.H)(Tm.direction)) continue;
-        const fm = Tm.direction - mm;
-        fm !== Tm.writtenAngle && (Tm.writtenAngle = fm, Tm.vy.style.rotate = `${fm}rad`)
+    function GD(DD) {
+      for (const zD of AD) {
+        if (null === zD.source || (0, LD.B)(zD.direction)) continue;
+        const wD = zD.direction - DD;
+        wD !== zD.writtenAngle && (zD.writtenAngle = wD, zD.bZ.style.rotate = `${wD}rad`)
       }
     }
   },
-  36582: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => Am,
-      e: () => am
+  36495: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => sD,
+      e: () => KD
     });
-    let hm = !1;
+    let pD = !1;
 
-    function Am() {
-      return hm
+    function sD() {
+      return pD
     }
 
-    function am(mm) {
-      return hm !== mm && (hm = mm, !0)
+    function KD(DD) {
+      return pD !== DD && (pD = DD, !0)
     }
   },
-  34245: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => am,
-      i: () => Am
+  34174: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => KD,
+      h: () => sD
     });
-    var hm = fm(23);
+    var pD = wD(20);
 
-    function Am(mm, Tm) {
-      return mm && !Tm
+    function sD(DD, zD) {
+      return DD && !zD
     }
 
-    function am() {
-      return Am(hm.c.get("isTouchScreen"), hm.c.get("clientEscMenuOptions").touchActionButtons)
+    function KD() {
+      return sD(pD.e.get("isTouchScreen"), pD.e.get("clientEscMenuOptions").touchActionButtons)
     }
   },
-  40749: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      startPadGameplay: () => Qm
+  40585: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      startPadGameplay: () => JD
     });
-    fm(40633);
-    var hm = fm(40639),
-      Am = fm(3729),
-      am = fm(23),
-      xm = fm(39192),
-      wm = fm(3672),
-      Dm = fm(39222),
-      im = fm(31),
-      Rm = fm(2760),
-      pm = fm(38530),
-      Em = fm(8792),
-      om = fm(40641);
-    const Om = {
+    wD(40468);
+    var pD = wD(40477),
+      sD = wD(3757),
+      KD = wD(20),
+      rD = wD(39047),
+      LD = wD(3688),
+      cD = wD(39066),
+      gD = wD(25),
+      RD = wD(2769),
+      AD = wD(38415),
+      UD = wD(8855),
+      fD = wD(40483);
+    const ID = {
       yawRadPerSec: 0,
       pitchRadPerSec: 0
     };
-    var Ym = fm(40654),
-      qm = fm(8778),
-      jm = fm(39237);
-    const Vm = mm => mm.padSneakToggled || !!am.c.get("clientEscMenuOptions").crouchIsToggle && mm.crouchToggled,
-      Im = () => {
-        const mm = (() => {
-          const mm = (0, Em.b)();
-          let Tm = Om;
-          const fm = new om.b;
-          let hm = !1,
-            Am = 0;
-          const am = () => {
-            const fm = performance.now(),
-              am = 0 === Am ? 0 : fm - Am;
-            if (Am = fm, !hm) return mm.discardPending(), null;
-            const xm = (0, om.k)(Tm, am),
-              wm = mm.drainLookDelta(),
-              Dm = (0, pm.h)();
+    var BD = wD(40499),
+      GD = wD(8833),
+      hD = wD(39079);
+    const nD = DD => DD.padSneakToggled || !!KD.e.get("clientEscMenuOptions").crouchIsToggle && DD.crouchToggled,
+      MD = () => {
+        const DD = (() => {
+          const DD = (0, UD.c)();
+          let zD = ID;
+          const wD = new fD.e;
+          let pD = !1,
+            sD = 0;
+          const KD = () => {
+            const wD = performance.now(),
+              KD = 0 === sD ? 0 : wD - sD;
+            if (sD = wD, !pD) return DD.discardPending(), null;
+            const rD = (0, fD.r)(zD, KD),
+              LD = DD.drainLookDelta(),
+              cD = (0, AD.h)();
             return {
-              XN: (xm.XN + wm.XN) * Dm,
-              yN: (xm.yN + wm.yN) * Dm
+              aT: (rD.aT + LD.aT) * cD,
+              qT: (rD.qT + LD.qT) * cD
             }
           };
           return {
-            update: (mm, Am, xm, wm) => {
-              mm.camera.Qv !== am && (mm.camera.Qv = am), hm = !0, Tm = (0, om.m)(fm, Am, xm, wm, performance.now())
+            update: (DD, sD, rD, LD) => {
+              DD.camera.qY !== KD && (DD.camera.qY = KD), pD = !0, zD = (0, fD.t)(wD, sD, rD, LD, performance.now())
             },
             release: () => {
-              hm = !1, Tm = Om, fm.reset()
+              pD = !1, zD = ID, wD.reset()
             },
-            uninstall: mm => {
-              mm.camera.Qv === am && (mm.camera.Qv = null)
+            uninstall: DD => {
+              DD.camera.qY === KD && (DD.camera.qY = null)
             }
           }
         })();
         return {
-          update: (Tm, fm, hm) => {
-            mm.update((0, Rm.d)(), Tm, fm, hm)
+          update: (zD, wD, pD) => {
+            DD.update((0, RD.e)(), zD, wD, pD)
           },
-          release: mm.release,
+          release: DD.release,
           uninstall: () => {
-            const Tm = (0, Rm.d)();
-            Tm && mm.uninstall(Tm)
+            const zD = (0, RD.e)();
+            zD && DD.uninstall(zD)
           }
         }
       };
-    var Km = fm(40648);
-    fm(37751), fm(8668);
-    fm(8683).b;
-    const Qm = () => {
-      const mm = (0, Km.b)((() => {
-          const mm = {
+    var OD = wD(40495);
+    wD(37669), wD(8745);
+    wD(8765).d;
+    const JD = () => {
+      const DD = (0, OD.e)((() => {
+          const DD = {
             x: 0,
             y: 0,
             magnitude: 0,
@@ -440,25 +440,25 @@ export const modules = {
             sprintHeld: !1
           };
           return {
-            bodies: () => (0, xm.c)(),
-            look: Im(),
-            move: (Tm, fm) => {
-              const hm = (0, Rm.d)(),
-                Am = hm.qI.tTm();
-              if (mm.x = Tm.x, mm.y = Tm.y, mm.magnitude = Tm.magnitude, mm.headingOffset = Tm.headingOffset, mm.jumpHeld = Tm.jumpHeld, Tm.jumpPressed && (mm.jumpPressedSinceTick = !0), mm.running = Tm.running, mm.sprintHeld = Tm.sprintHeld, fm) {
-                const Tm = (0, Ym.c)({
-                  ...fm,
-                  descending: hm.qI.mTm(hm.xH).shouldIgnoreCrouchingSpeedReduction(),
-                  canCrouch: !!hm.xI.canCrouch,
-                  toggled: Vm(Am)
+            bodies: () => (0, rD.b)(),
+            look: MD(),
+            move: (zD, wD) => {
+              const pD = (0, RD.e)(),
+                sD = pD.yJ.LwD();
+              if (DD.x = zD.x, DD.y = zD.y, DD.magnitude = zD.magnitude, DD.headingOffset = zD.headingOffset, DD.jumpHeld = zD.jumpHeld, zD.jumpPressed && (DD.jumpPressedSinceTick = !0), DD.running = zD.running, DD.sprintHeld = zD.sprintHeld, wD) {
+                const zD = (0, BD.e)({
+                  ...wD,
+                  descending: pD.yJ.gzD(pD.vW).shouldIgnoreCrouchingSpeedReduction(),
+                  canCrouch: !!pD.NJ.canCrouch,
+                  toggled: nD(sD)
                 });
-                mm.crouchHeld = Tm.crouchHeld, Am.padSneakToggled = Tm.toggled, Am.crouchToggled = !1, (0, qm.f)(Tm.toggled)
+                DD.crouchHeld = zD.crouchHeld, sD.padSneakToggled = zD.toggled, sD.crouchToggled = !1, (0, GD.e)(zD.toggled)
               }
-              Am.gamepad = mm
+              sD.gamepad = DD
             },
             stopMoving: () => {
-              var Tm;
-              Object.assign(mm, {
+              var zD;
+              Object.assign(DD, {
                 x: 0,
                 y: 0,
                 magnitude: 0,
@@ -469,579 +469,579 @@ export const modules = {
                 running: !1,
                 sprintHeld: !1
               });
-              const fm = null === (Tm = (0, Rm.d)()) || void 0 === Tm ? void 0 : Tm.qI.tTm();
-              (null === fm || void 0 === fm ? void 0 : fm.gamepad) === mm && (fm.gamepad = null)
+              const wD = null === (zD = (0, RD.e)()) || void 0 === zD ? void 0 : zD.yJ.LwD();
+              (null === wD || void 0 === wD ? void 0 : wD.gamepad) === DD && (wD.gamepad = null)
             },
             uninstall: () => {},
-            deviceChanged: mm => {
-              const Tm = (0, Rm.d)(),
-                fm = null === Tm || void 0 === Tm ? void 0 : Tm.qI.tTm();
-              "touch" === mm ? ((0, qm.f)(!1), null !== fm && void 0 !== fm && fm.padSneakToggled && (fm.padSneakToggled = !1, fm.isTouchscreen && !fm.gamepad && Tm.qI.ITm(Tm.xH).setCrouching(!!Tm.xI.canCrouch && fm.touchCrouch))) : "gamepad" === mm && fm && (0, qm.f)(Vm(fm))
+            deviceChanged: DD => {
+              const zD = (0, RD.e)(),
+                wD = null === zD || void 0 === zD ? void 0 : zD.yJ.LwD();
+              "touch" === DD ? ((0, GD.e)(!1), null !== wD && void 0 !== wD && wD.padSneakToggled && (wD.padSneakToggled = !1, wD.isTouchscreen && !wD.gamepad && zD.yJ.TzD(zD.vW).setCrouching(!!zD.NJ.canCrouch && wD.touchCrouch))) : "gamepad" === DD && wD && (0, GD.e)(nD(wD))
             },
             hasPlayer: () => {
-              var mm;
-              return !(null === (mm = (0, Rm.d)()) || void 0 === mm || !mm.xH)
+              var DD;
+              return !(null === (DD = (0, RD.e)()) || void 0 === DD || !DD.vW)
             },
             isPlayerDead: () => {
-              var mm;
-              const Tm = (0, Rm.d)();
-              return !1 === (null === (mm = Tm.qI.sTm(Tm.xH)) || void 0 === mm ? void 0 : mm.isAlive)
+              var DD;
+              const zD = (0, RD.e)();
+              return !1 === (null === (DD = zD.yJ.HzD(zD.vW)) || void 0 === DD ? void 0 : DD.isAlive)
             },
             isReplayMode: () => {
-              var mm, Tm;
-              return !(null === (mm = (0, Rm.c)()) || void 0 === mm || null === (Tm = mm.client) || void 0 === Tm || !Tm.isReplayMode())
+              var DD, zD;
+              return !(null === (DD = (0, RD.b)()) || void 0 === DD || null === (zD = DD.client) || void 0 === zD || !zD.isReplayMode())
             },
             isFreeCameraOn: () => {
-              var mm, Tm, fm;
-              return !(null === (mm = (0, Rm.c)()) || void 0 === mm || null === (Tm = mm.client) || void 0 === Tm || null === (fm = Tm.freeCameraController) || void 0 === fm || !fm.isEnabled())
+              var DD, zD, wD;
+              return !(null === (DD = (0, RD.b)()) || void 0 === DD || null === (zD = DD.client) || void 0 === zD || null === (wD = zD.freeCameraController) || void 0 === wD || !wD.isEnabled())
             },
-            targetsBlock: () => !!(0, Rm.d)().Qmm,
+            targetsBlock: () => !!(0, RD.e)().jDD,
             selectedSlotEmpty: () => {
-              var mm;
-              const Tm = (0, Rm.d)();
-              return !(null !== (mm = Tm.qI.QTm(Tm.xH)) && void 0 !== mm && mm.getItemAtSelectedSlot())
+              var DD;
+              const zD = (0, RD.e)();
+              return !(null !== (DD = zD.yJ.jzD(zD.vW)) && void 0 !== DD && DD.getItemAtSelectedSlot())
             },
             pickBlockAllowed: () => {
-              const mm = (0, Rm.d)().xI;
-              return !!mm.creative && !!mm.canPickBlocks
+              const DD = (0, RD.e)().NJ;
+              return !!DD.creative && !!DD.canPickBlocks
             },
-            scrollHotbar: mm => {
-              im.j.gp("ScrollInventorySlot", mm)
+            scrollHotbar: DD => {
+              gD.l.KG("ScrollInventorySlot", DD)
             },
-            hasFullInventory: () => (0, Dm.c)((0, Rm.d)()),
-            hasLobbyTab: () => (0, jm.c)((0, Rm.d)().xI),
+            hasFullInventory: () => (0, cD.e)((0, RD.e)()),
+            hasLobbyTab: () => (0, hD.b)((0, RD.e)().NJ),
             contextActionInputs: () => {
-              var mm, Tm, fm, hm;
-              const Am = (0, Rm.d)();
+              var DD, zD, wD, pD;
+              const sD = (0, RD.e)();
               return {
-                holdingGun: !(null === (mm = Am.qI.lTm(Am.xH)) || void 0 === mm || null === (Tm = mm.zK) || void 0 === Tm || !Tm.isGun()),
-                customButtons: null !== (fm = Am.xI.customButtons) && void 0 !== fm ? fm : null,
-                touchscreenActionButton: null !== (hm = Am.xI.touchscreenActionButton) && void 0 !== hm ? hm : null
+                holdingGun: !(null === (DD = sD.yJ.qzD(sD.vW)) || void 0 === DD || null === (zD = DD.lE) || void 0 === zD || !zD.isGun()),
+                customButtons: null !== (wD = sD.NJ.customButtons) && void 0 !== wD ? wD : null,
+                touchscreenActionButton: null !== (pD = sD.NJ.touchscreenActionButton) && void 0 !== pD ? pD : null
               }
             },
-            pressTouchButton: mm => {
-              (0, wm.sendColyMessage)(Am.Qj, mm)
+            pressTouchButton: DD => {
+              (0, LD.sendColyMessage)(sD.Yj, DD)
             }
           }
         })()),
-        Tm = (0, hm.c)(),
-        fm = null,
-        am = null;
+        zD = (0, pD.e)(),
+        wD = null,
+        KD = null;
       return () => {
-        mm(), Tm(), null === fm || void 0 === fm || fm(), null === am || void 0 === am || am()
+        DD(), zD(), null === wD || void 0 === wD || wD(), null === KD || void 0 === KD || KD()
       }
     }
   },
-  36689: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => am,
-      d: () => Ym,
-      e: () => qm,
-      h: () => wm,
-      i: () => Em,
-      m: () => jm,
-      p: () => pm,
-      r: () => Im,
-      u: () => Om,
-      v: () => Vm
+  36586: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => KD,
+      h: () => BD,
+      j: () => GD,
+      k: () => LD,
+      m: () => UD,
+      q: () => hD,
+      s: () => AD,
+      v: () => MD,
+      y: () => ID,
+      z: () => nD
     });
-    var hm = fm(23),
-      Am = fm(31);
-    const am = "clientGameInventoryButtonsChanged",
-      xm = new Map;
+    var pD = wD(20),
+      sD = wD(25);
+    const KD = "clientGameInventoryButtonsChanged",
+      rD = new Map;
 
-    function wm() {
-      return [...xm.values()].sort(((mm, Tm) => {
-        var fm, hm;
-        return (null !== (fm = mm.order) && void 0 !== fm ? fm : 0) - (null !== (hm = Tm.order) && void 0 !== hm ? hm : 0)
+    function LD() {
+      return [...rD.values()].sort(((DD, zD) => {
+        var wD, pD;
+        return (null !== (wD = DD.order) && void 0 !== wD ? wD : 0) - (null !== (pD = zD.order) && void 0 !== pD ? pD : 0)
       }))
     }
-    let Dm = null;
+    let cD = null;
 
-    function im(mm) {
-      Dm = mm
+    function gD(DD) {
+      cD = DD
     }
-    let Rm = !1;
+    let RD = !1;
 
-    function pm(mm) {
-      Rm = !0;
+    function AD(DD) {
+      RD = !0;
       try {
-        mm.onClick()
+        DD.onClick()
       } finally {
-        Rm = !1
+        RD = !1
       }
-      mm.panel && "clientGame" === hm.c.get("openInGameMenuName") && im(mm.id)
+      DD.panel && "clientGame" === pD.e.get("openInGameMenuName") && gD(DD.id)
     }
 
-    function Em() {
-      return Rm
+    function UD() {
+      return RD
     }
 
-    function om() {
-      return wm().filter((mm => mm.panel && !mm.disabled))
+    function fD() {
+      return LD().filter((DD => DD.panel && !DD.disabled))
     }
 
-    function Om(mm) {
-      const Tm = om(),
-        fm = Tm.findIndex((mm => mm.id === Dm));
-      return !(fm < 0 || Tm.length < 2) && (pm(Tm[(fm + mm + Tm.length) % Tm.length]), !0)
+    function ID(DD) {
+      const zD = fD(),
+        wD = zD.findIndex((DD => DD.id === cD));
+      return !(wD < 0 || zD.length < 2) && (AD(zD[(wD + DD + zD.length) % zD.length]), !0)
     }
 
-    function Ym() {
-      return null !== Dm && om().length > 1
+    function BD() {
+      return null !== cD && fD().length > 1
     }
 
-    function qm() {
-      im(null)
+    function GD() {
+      gD(null)
     }
 
-    function jm() {
-      "inventory" !== hm.c.get("openInGameMenuName") && im(null)
+    function hD() {
+      "inventory" !== pD.e.get("openInGameMenuName") && gD(null)
     }
 
-    function Vm() {
-      const mm = Dm;
-      return im(null), mm
+    function nD() {
+      const DD = cD;
+      return gD(null), DD
     }
 
-    function Im(mm) {
-      return xm.set(mm.id, mm), Am.j.gp(am, wm(), !0), () => {
-        xm.get(mm.id) === mm && (xm.delete(mm.id), Am.j.gp(am, wm()))
+    function MD(DD) {
+      return rD.set(DD.id, DD), sD.l.KG(KD, LD(), !0), () => {
+        rD.get(DD.id) === DD && (rD.delete(DD.id), sD.l.KG(KD, LD()))
       }
     }
   },
-  36686: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => wm,
-      h: () => qm,
-      j: () => jm,
-      m: () => Em,
-      p: () => im,
-      s: () => Ym,
-      u: () => om,
-      w: () => Rm
+  36580: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => LD,
+      g: () => GD,
+      i: () => hD,
+      m: () => UD,
+      p: () => gD,
+      r: () => BD,
+      t: () => fD,
+      w: () => RD
     });
-    var hm = fm(23),
-      Am = fm(31),
-      am = fm(1286),
-      xm = fm(36689);
-    const wm = "clientGameUiChanged";
-    let Dm = null;
+    var pD = wD(20),
+      sD = wD(25),
+      KD = wD(1299),
+      rD = wD(36586);
+    const LD = "clientGameUiChanged";
+    let cD = null;
 
-    function im() {
-      return Dm
+    function gD() {
+      return cD
     }
 
-    function Rm(mm, Tm) {
-      const fm = {
-        content: mm,
-        menu: Tm
+    function RD(DD, zD) {
+      const wD = {
+        content: DD,
+        menu: zD
       };
-      return Dm = fm, Am.j.gp(wm, Dm, !0), () => {
-        Dm === fm && (Dm = null, Om = !1, qm(), Am.j.gp(wm, null))
+      return cD = wD, sD.l.KG(LD, cD, !0), () => {
+        cD === wD && (cD = null, ID = !1, GD(), sD.l.KG(LD, null))
       }
     }
-    let pm = null;
+    let AD = null;
 
-    function Em() {
-      return pm
+    function UD() {
+      return AD
     }
 
-    function om(mm) {
-      return pm = mm, () => {
-        pm === mm && (pm = null)
+    function fD(DD) {
+      return AD = DD, () => {
+        AD === DD && (AD = null)
       }
     }
-    let Om = !1;
+    let ID = !1;
 
-    function Ym() {
-      const mm = hm.c.get("openInGameMenuName");
-      "clientGame" !== mm && (Om = "inventory" === mm), (0, xm.i)() || (0, xm.e)(), (0, am.p)(am.c), hm.c.set({
+    function BD() {
+      const DD = pD.e.get("openInGameMenuName");
+      "clientGame" !== DD && (ID = "inventory" === DD), (0, rD.m)() || (0, rD.j)(), (0, KD.p)(KD.b), pD.e.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function qm() {
-      Vm(!1)
+    function GD() {
+      nD(!1)
     }
 
-    function jm() {
-      Vm(Om)
+    function hD() {
+      nD(ID)
     }
 
-    function Vm(mm) {
-      "clientGame" === hm.c.get("openInGameMenuName") && hm.c.set({
-        openInGameMenuName: mm ? "inventory" : null
-      }), mm || (0, xm.e)(), Om = !1
+    function nD(DD) {
+      "clientGame" === pD.e.get("openInGameMenuName") && pD.e.set({
+        openInGameMenuName: DD ? "inventory" : null
+      }), DD || (0, rD.j)(), ID = !1
     }
   },
-  36578: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => Dm
+  36491: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => cD
     });
-    var hm = fm(339),
-      Am = fm(23),
-      am = fm(36582),
-      xm = fm(1635),
-      wm = fm(1957);
+    var pD = wD(338),
+      sD = wD(20),
+      KD = wD(36495),
+      rD = wD(1648),
+      LD = wD(1981);
 
-    function Dm(mm, Tm) {
-      var fm, Dm, im;
-      if (!Am.c.get("isKeydownEnabled") || mm.repeat) return;
-      const Rm = mm.code;
-      "Escape" === mm.key ? (0, xm.f)(mm) : null !== (fm = wm.r.OpenSettings) && void 0 !== fm && fm.includes(Rm) ? (0, xm.t)(mm, hm.n.SETTINGS) : null !== (Dm = wm.r.OpenCharacterCustomization) && void 0 !== Dm && Dm.includes(Rm) ? (0, am.d)() || (0, xm.t)(mm, hm.n.CUSTOMISATION, Tm()) : null !== (im = wm.r.ShowDebugOverlay) && void 0 !== im && im.includes(Rm) && Am.c.set({
-        showDebugOverlay: !Am.c.get("showDebugOverlay")
+    function cD(DD, zD) {
+      var wD, cD, gD;
+      if (!sD.e.get("isKeydownEnabled") || DD.repeat) return;
+      const RD = DD.code;
+      "Escape" === DD.key ? (0, rD.l)(DD) : null !== (wD = LD.u.OpenSettings) && void 0 !== wD && wD.includes(RD) ? (0, rD.w)(DD, pD.l.SETTINGS) : null !== (cD = LD.u.OpenCharacterCustomization) && void 0 !== cD && cD.includes(RD) ? (0, KD.d)() || (0, rD.w)(DD, pD.l.CUSTOMISATION, zD()) : null !== (gD = LD.u.ShowDebugOverlay) && void 0 !== gD && gD.includes(RD) && sD.e.set({
+        showDebugOverlay: !sD.e.get("showDebugOverlay")
       })
     }
   },
-  39180: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => Dm
+  39038: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => cD
     });
-    var hm = fm(8854),
-      Am = fm(36573),
-      am = fm(39187);
-    const xm = {
+    var pD = wD(8901),
+      sD = wD(36486),
+      KD = wD(39042);
+    const rD = {
         seat: "seat_timeout",
         socket_unopened: "socket_timeout_unopened",
         socket: "socket_timeout"
       },
-      wm = {
+      LD = {
         seat: "seat_lost",
         socket_unopened: "socket_unopened",
         socket: "socket_closed"
       };
 
-    function Dm(mm, Tm) {
-      if (mm instanceof Am.e) return {
-        at: xm[Tm],
+    function cD(DD, zD) {
+      if (DD instanceof sD.c) return {
+        at: rD[zD],
         code: 0
       };
-      const fm = (0, hm.d)(mm),
-        Dm = "number" === typeof fm ? fm : 0;
-      return null !== (0, am.k)(Dm).name ? {
+      const wD = (0, pD.g)(DD),
+        cD = "number" === typeof wD ? wD : 0;
+      return null !== (0, KD.j)(cD).name ? {
         at: "refused",
-        code: Dm
+        code: cD
       } : {
-        at: wm[Tm],
-        code: Dm
+        at: LD[zD],
+        code: cD
       }
     }
   },
-  8854: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => am,
-      d: () => xm,
-      h: () => wm,
-      i: () => im,
-      m: () => Dm
+  8901: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => KD,
+      g: () => rD,
+      i: () => LD,
+      m: () => gD,
+      q: () => cD
     });
-    var hm = fm(198),
-      Am = fm(4564);
+    var pD = wD(197),
+      sD = wD(4657);
 
-    function am(mm) {
-      return xm(mm) === hm.b.gameOrPluginOnPlayerAuthRejected.code
+    function KD(DD) {
+      return rD(DD) === pD.e.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function xm(mm) {
-      return "object" === typeof mm && null !== mm ? mm.code : void 0
+    function rD(DD) {
+      return "object" === typeof DD && null !== DD ? DD.code : void 0
     }
 
-    function wm(mm) {
-      var Tm;
-      return null !== (Tm = Object.keys(Am.e).find((Tm => Am.e[Tm] === mm))) && void 0 !== Tm ? Tm : null
+    function LD(DD) {
+      var zD;
+      return null !== (zD = Object.keys(sD.b).find((zD => sD.b[zD] === DD))) && void 0 !== zD ? zD : null
     }
 
-    function Dm(mm) {
-      return "notWhitelisted" === mm ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    function cD(DD) {
+      return "notWhitelisted" === DD ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
     }
-    const im = {
+    const gD = {
       private: "customLobby:cantJoinPrivate",
       notWhitelisted: "customLobby:cantJoinNotWhitelisted",
       banned: "customLobby:cantJoinBanned",
       adminLocked: "customLobby:cantJoinAdminLocked"
     }
   },
-  36549: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => Em,
-      f: () => Rm,
-      i: () => om,
-      l: () => pm
+  36467: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => UD,
+      f: () => RD,
+      i: () => fD,
+      m: () => AD
     });
-    var hm = fm(354),
-      Am = fm(685),
-      am = fm(695),
-      xm = fm(37);
-    const wm = {
+    var pD = wD(351),
+      sD = wD(648),
+      KD = wD(663),
+      rD = wD(35);
+    const LD = {
         idStorageKey: "playSessionId",
         lastActivityStorageKey: "playSessionLastActivityMs",
         expiryMs: 3e5
       },
-      Dm = "playSessionGameNameWithVariation",
-      im = "wasMatchmakePlayer";
+      cD = "playSessionGameNameWithVariation",
+      gD = "wasMatchmakePlayer";
 
-    function Rm() {
-      let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : xm.k;
-      (0, am.i)(mm, wm)
+    function RD() {
+      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : rD.k;
+      (0, KD.j)(DD, LD)
     }
 
-    function pm() {
-      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : xm.k).setItem(im, !0)
+    function AD() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : rD.k).setItem(gD, !0)
     }
 
-    function Em() {
-      let mm = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : xm.k;
-      return (0, am.d)(mm, wm)
+    function UD() {
+      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : rD.k;
+      return (0, KD.e)(DD, LD)
     }
 
-    function om(mm) {
-      let Tm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : xm.k;
-      const fm = (0, am.d)(Tm, wm),
-        Rm = function(mm) {
-          const Tm = mm.getItem(Dm);
-          return "string" !== typeof Tm ? null : Tm
-        }(Tm),
-        pm = function() {
-          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : xm.k).getItem(im)
-        }(Tm);
-      let Em;
-      return Em = null !== fm && null !== Rm && (0, am.f)(Tm, wm) && function(mm, Tm, fm) {
-          const Am = (0, hm.Pb)(mm),
-            am = (0, hm.Pb)(Tm),
-            xm = (0, hm.Jb)(mm),
-            wm = (0, hm.Jb)(Tm);
-          return !(Am !== am || !fm) || Am === am && xm === wm
-        }(Rm, mm, pm) ? fm : (0, Am.b)(), (0, am.k)(Tm, wm, Em), Tm.setItem(Dm, mm),
+    function fD(DD) {
+      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : rD.k;
+      const wD = (0, KD.e)(zD, LD),
+        RD = function(DD) {
+          const zD = DD.getItem(cD);
+          return "string" !== typeof zD ? null : zD
+        }(zD),
+        AD = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : rD.k).getItem(gD)
+        }(zD);
+      let UD;
+      return UD = null !== wD && null !== RD && (0, KD.h)(zD, LD) && function(DD, zD, wD) {
+          const sD = (0, pD.Tb)(DD),
+            KD = (0, pD.Tb)(zD),
+            rD = (0, pD.Ob)(DD),
+            LD = (0, pD.Ob)(zD);
+          return !(sD !== KD || !wD) || sD === KD && rD === LD
+        }(RD, DD, AD) ? wD : (0, sD.e)(), (0, KD.l)(zD, LD, UD), zD.setItem(cD, DD),
         function() {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : xm.k).removeItem(im)
-        }(Tm), Em
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : rD.k).removeItem(gD)
+        }(zD), UD
     }
   },
-  36545: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => Qm,
-      d: () => nm
+  36463: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => JD,
+      d: () => ED
     });
-    var hm = fm(1041),
-      Am = fm(208),
-      am = fm(347),
-      xm = fm(658),
-      wm = fm(354),
-      Dm = fm(1047),
-      im = fm(675),
-      Rm = fm(713),
-      pm = fm(4460),
-      Em = fm(105),
-      om = fm(135),
-      Om = fm(1713),
-      Ym = fm(115),
-      qm = fm(36549),
-      jm = fm(37),
-      Vm = fm(690),
-      Im = fm(330),
-      Km = fm(36554);
+    var pD = wD(1008),
+      sD = wD(212),
+      KD = wD(348),
+      rD = wD(625),
+      LD = wD(351),
+      cD = wD(1017),
+      gD = wD(638),
+      RD = wD(676),
+      AD = wD(4540),
+      UD = wD(103),
+      fD = wD(128),
+      ID = wD(1737),
+      BD = wD(116),
+      GD = wD(36467),
+      hD = wD(35),
+      nD = wD(655),
+      MD = wD(323),
+      OD = wD(36473);
 
-    function Qm() {
-      var mm, Tm;
-      return [...null !== (mm = navigator.languages) && void 0 !== mm ? mm : [null !== (Tm = navigator.language) && void 0 !== Tm ? Tm : "none"], "en-gb"]
+    function JD() {
+      var DD, zD;
+      return [...null !== (DD = navigator.languages) && void 0 !== DD ? DD : [null !== (zD = navigator.language) && void 0 !== zD ? zD : "none"], "en-gb"]
     }
 
-    function nm(mm, Tm, fm, nm, Jm) {
-      const cm = (0, hm.k)(Tm) ? (0, hm.n)(Tm) : null,
-        zm = mm.isLoggedIn() && void 0 !== (0, Am.c)(am.i, om.q) ? (0, Im.q)() : null,
-        Zm = {
-          cookies: (0, Om.getAllCookiesForGameNameWithVariation)(Tm),
-          isMobile: (0, Em.isMobile)(),
-          isUsingCustomGameTexturePack: null !== cm && Jm(cm),
+    function ED(DD, zD, wD, ED, QD) {
+      const XD = (0, pD.l)(zD) ? (0, pD.o)(zD) : null,
+        VD = DD.isLoggedIn() && void 0 !== (0, sD.d)(KD.k, fD.v) ? (0, MD.u)() : null,
+        PD = {
+          cookies: (0, ID.getAllCookiesForGameNameWithVariation)(zD),
+          isMobile: (0, UD.isMobile)(),
+          isUsingCustomGameTexturePack: null !== XD && QD(XD),
           generalCookies: {
-            joinDiscord: !!jm.g.getItem("DiscordPressed"),
-            newGo: pm.d,
-            ...mm.getMetricsCookies(),
-            trafficCode: nm,
-            compliance: Em.compliance
+            joinDiscord: !!hD.h.getItem("DiscordPressed"),
+            newGo: AD.b,
+            ...DD.getMetricsCookies(),
+            trafficCode: ED,
+            compliance: UD.compliance
           },
           browserInfo: {
             ua: window.navigator.userAgent,
-            name: (0, Em.getBrowserName)(),
-            version: (0, Em.getBrowserVersion)(),
+            name: (0, UD.getBrowserName)(),
+            version: (0, UD.getBrowserVersion)(),
             platform: navigator.platform,
-            platformType: (0, Em.getPlatformType)(),
-            deviceType: (0, Ym.d)()
+            platformType: (0, UD.getPlatformType)(),
+            deviceType: (0, BD.e)()
           },
-          isLoggedIn: mm.isLoggedIn(),
-          lobbyName: fm,
-          languages: Qm(),
-          version: xm.d,
-          siteUsed: om.q,
-          subsiteUsed: om.w,
-          playSessionId: (0, qm.i)(Tm),
-          visitSessionId: (0, Vm.f)(),
-          clientReason: im.s.reason,
-          budgetBasis: (0, Km.g)(),
-          ...null !== Rm.k && {
-            diagClaim: Rm.k.claimId
+          isLoggedIn: DD.isLoggedIn(),
+          lobbyName: wD,
+          languages: JD(),
+          version: rD.e,
+          siteUsed: fD.v,
+          subsiteUsed: fD.D,
+          playSessionId: (0, GD.i)(zD),
+          visitSessionId: (0, nD.d)(),
+          clientReason: gD.n.reason,
+          budgetBasis: (0, OD.i)(),
+          ...null !== RD.q && {
+            diagClaim: RD.q.claimId
           },
-          ...null !== zm && {
-            webGpuLoss: zm
+          ...null !== VD && {
+            webGpuLoss: VD
           }
         };
-      return null !== cm && (0, wm.Ac)(cm) ? (Zm.lobbyName = (0, hm.h)(cm, (0, hm.m)(Tm), fm), {
-        roomName: `classic_${Dm.e}`,
-        joinOptions: Zm
+      return null !== XD && (0, LD.Dc)(XD) ? (PD.lobbyName = (0, pD.k)(XD, (0, pD.m)(zD), wD), {
+        roomName: `classic_${cD.e}`,
+        joinOptions: PD
       }) : {
-        roomName: Tm,
-        joinOptions: Zm
+        roomName: zD,
+        joinOptions: PD
       }
     }
   },
-  39187: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => Am,
-      f: () => am,
-      g: () => wm,
-      k: () => Rm,
-      m: () => Dm,
-      p: () => xm
+  39042: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => sD,
+      c: () => KD,
+      g: () => LD,
+      j: () => RD,
+      n: () => cD,
+      p: () => rD
     });
-    var hm = fm(198);
-    const Am = 3e3,
-      am = 15e3;
+    var pD = wD(197);
+    const sD = 3e3,
+      KD = 15e3;
 
-    function xm(mm) {
-      const Tm = mm.endsWith(hm.i);
+    function rD(DD) {
+      const zD = DD.endsWith(pD.j);
       return {
-        text: (Tm ? mm.slice(0, -hm.i.length) : mm) || null,
-        dropsCache: Tm
+        text: (zD ? DD.slice(0, -pD.j.length) : DD) || null,
+        dropsCache: zD
       }
     }
-    const wm = "Either your internet isn't working or this is a bug.";
+    const LD = "Either your internet isn't working or this is a bug.";
 
-    function Dm(mm, Tm) {
-      const fm = Rm(mm);
-      return null !== fm.name && "" === hm.b[fm.name].text && null !== Tm ? Tm : fm.reason
+    function cD(DD, zD) {
+      const wD = RD(DD);
+      return null !== wD.name && "" === pD.e[wD.name].text && null !== zD ? zD : wD.reason
     }
-    const im = "You were removed from the game.";
+    const gD = "You were removed from the game.";
 
-    function Rm(mm) {
-      var Tm;
-      let fm = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const Am = null !== (Tm = Object.keys(hm.b).find((Tm => hm.b[Tm].code === mm))) && void 0 !== Tm ? Tm : null;
-      if (null === Am) return {
-        code: mm,
-        name: Am,
-        reason: null !== fm && void 0 !== fm ? fm : `${wm}\nCode: ${mm}`,
+    function RD(DD) {
+      var zD;
+      let wD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const sD = null !== (zD = Object.keys(pD.e).find((zD => pD.e[zD].code === DD))) && void 0 !== zD ? zD : null;
+      if (null === sD) return {
+        code: DD,
+        name: sD,
+        reason: null !== wD && void 0 !== wD ? wD : `${LD}\nCode: ${DD}`,
         canReconnect: !1,
         automaticallyReconnect: !1,
         requiresRefresh: !1
       };
       const {
-        text: am,
-        canReconnect: xm = !1
-      } = hm.b[Am], Dm = mm === hm.b.outdatedVersion.code || mm === hm.b.loadRecaptchaError.code;
+        text: KD,
+        canReconnect: rD = !1
+      } = pD.e[sD], cD = DD === pD.e.outdatedVersion.code || DD === pD.e.loadRecaptchaError.code;
       return {
-        code: mm,
-        name: Am,
-        reason: "" !== am ? am : null !== fm && void 0 !== fm ? fm : mm === hm.b.gameOrPluginKick.code ? im : `Code: ${mm}`,
-        canReconnect: xm,
-        automaticallyReconnect: mm === hm.b.customGameUpdated.code || mm === hm.b.duplicateLobbyNameError.code,
-        requiresRefresh: Dm
+        code: DD,
+        name: sD,
+        reason: "" !== KD ? KD : null !== wD && void 0 !== wD ? wD : DD === pD.e.gameOrPluginKick.code ? gD : `Code: ${DD}`,
+        canReconnect: rD,
+        automaticallyReconnect: DD === pD.e.customGameUpdated.code || DD === pD.e.duplicateLobbyNameError.code,
+        requiresRefresh: cD
       }
     }
   },
-  36964: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => Am,
-      f: () => am,
-      h: () => Em,
-      k: () => wm,
-      m: () => Dm,
-      o: () => im,
-      s: () => pm,
-      t: () => Rm,
-      u: () => xm
+  36821: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => sD,
+      f: () => KD,
+      g: () => UD,
+      h: () => LD,
+      i: () => cD,
+      l: () => gD,
+      m: () => AD,
+      n: () => RD,
+      p: () => rD
     });
-    var hm = fm(1247);
-    let Am = function(mm) {
-        return mm[mm.Join = 0] = "Join", mm[mm.Leave = 1] = "Leave", mm[mm.Push = 2] = "Push", mm[mm.Cursor = 3] = "Cursor", mm[mm.Submit = 4] = "Submit", mm[mm.ReloadAsVariation = 5] = "ReloadAsVariation", mm[mm.CreateFile = 6] = "CreateFile", mm[mm.RenameFile = 7] = "RenameFile", mm[mm.DeleteFile = 8] = "DeleteFile", mm[mm.SetEngine = 9] = "SetEngine", mm[mm.RenameFolder = 10] = "RenameFolder", mm
+    var pD = wD(1245);
+    let sD = function(DD) {
+        return DD[DD.Join = 0] = "Join", DD[DD.Leave = 1] = "Leave", DD[DD.Push = 2] = "Push", DD[DD.Cursor = 3] = "Cursor", DD[DD.Submit = 4] = "Submit", DD[DD.ReloadAsVariation = 5] = "ReloadAsVariation", DD[DD.CreateFile = 6] = "CreateFile", DD[DD.RenameFile = 7] = "RenameFile", DD[DD.DeleteFile = 8] = "DeleteFile", DD[DD.SetEngine = 9] = "SetEngine", DD[DD.RenameFolder = 10] = "RenameFolder", DD
       }({}),
-      am = function(mm) {
-        return mm[mm.Joined = 0] = "Joined", mm[mm.Updates = 1] = "Updates", mm[mm.Presence = 2] = "Presence", mm[mm.RemoteCursor = 3] = "RemoteCursor", mm[mm.ForceClose = 4] = "ForceClose", mm[mm.LobbyFilesChanged = 5] = "LobbyFilesChanged", mm[mm.EngineSettings = 6] = "EngineSettings", mm
+      KD = function(DD) {
+        return DD[DD.Joined = 0] = "Joined", DD[DD.Updates = 1] = "Updates", DD[DD.Presence = 2] = "Presence", DD[DD.RemoteCursor = 3] = "RemoteCursor", DD[DD.ForceClose = 4] = "ForceClose", DD[DD.LobbyFilesChanged = 5] = "LobbyFilesChanged", DD[DD.EngineSettings = 6] = "EngineSettings", DD
       }({});
 
-    function xm(mm) {
-      return "lobby" === mm.kind ? `lobby:${mm.path}` : `codeBlock:${mm.pos[0]},${mm.pos[1]},${mm.pos[2]}`
+    function rD(DD) {
+      return "lobby" === DD.kind ? `lobby:${DD.path}` : `codeBlock:${DD.pos[0]},${DD.pos[1]},${DD.pos[2]}`
     }
 
-    function wm(mm) {
-      if ("lobby" === mm) return {
+    function LD(DD) {
+      if ("lobby" === DD) return {
         kind: "lobby",
-        path: hm.i
+        path: pD.f
       };
-      if (mm.startsWith("lobby:")) {
-        const Tm = mm.slice(6);
-        return pm(Tm) ? {
+      if (DD.startsWith("lobby:")) {
+        const zD = DD.slice(6);
+        return AD(zD) ? {
           kind: "lobby",
-          path: Tm
+          path: zD
         } : null
       }
-      const Tm = mm.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
-      return Tm ? {
+      const zD = DD.match(/^codeBlock:(-?\d+),(-?\d+),(-?\d+)$/);
+      return zD ? {
         kind: "codeBlock",
-        pos: [parseInt(Tm[1]), parseInt(Tm[2]), parseInt(Tm[3])]
+        pos: [parseInt(zD[1]), parseInt(zD[2]), parseInt(zD[3])]
       } : null
     }
 
-    function Dm(mm) {
-      return mm.endsWith(".d.ts")
+    function cD(DD) {
+      return DD.endsWith(".d.ts")
     }
 
-    function im(mm) {
-      return mm.endsWith(".ts") && !Dm(mm)
+    function gD(DD) {
+      return DD.endsWith(".ts") && !cD(DD)
     }
-    const Rm = 64;
+    const RD = 64;
 
-    function pm(mm) {
-      if (!mm || mm !== mm.trim()) return !1;
-      if (mm.length > Rm) return !1;
-      if (mm.startsWith("/") || mm.includes("\\") || mm.includes("\0")) return !1;
-      if (!Dm(mm) && !im(mm) && ! function(mm) {
-          return mm.endsWith(".js") && !mm.endsWith(".min.js") && !mm.endsWith(".bundle.js")
-        }(mm)) return !1;
-      const Tm = mm.split("/");
-      for (const fm of Tm)
-        if ("" === fm || "." === fm || ".." === fm) return !1;
+    function AD(DD) {
+      if (!DD || DD !== DD.trim()) return !1;
+      if (DD.length > RD) return !1;
+      if (DD.startsWith("/") || DD.includes("\\") || DD.includes("\0")) return !1;
+      if (!cD(DD) && !gD(DD) && ! function(DD) {
+          return DD.endsWith(".js") && !DD.endsWith(".min.js") && !DD.endsWith(".bundle.js")
+        }(DD)) return !1;
+      const zD = DD.split("/");
+      for (const wD of zD)
+        if ("" === wD || "." === wD || ".." === wD) return !1;
       return !0
     }
-    const Em = 14e3
+    const UD = 14e3
   },
-  39106: (mm, Tm, fm) => {
-    function hm(mm, Tm, fm, hm, Am) {
-      var am = {};
-      return Object.keys(hm).forEach((function(mm) {
-        am[mm] = hm[mm]
-      })), am.enumerable = !!am.enumerable, am.configurable = !!am.configurable, ("value" in am || am.initializer) && (am.writable = !0), am = fm.slice().reverse().reduce((function(fm, hm) {
-        return hm(mm, Tm, fm) || fm
-      }), am), Am && void 0 !== am.initializer && (am.value = am.initializer ? am.initializer.call(Am) : void 0, am.initializer = void 0), void 0 === am.initializer && (Object.defineProperty(mm, Tm, am), am = null), am
+  38950: (DD, zD, wD) => {
+    function pD(DD, zD, wD, pD, sD) {
+      var KD = {};
+      return Object.keys(pD).forEach((function(DD) {
+        KD[DD] = pD[DD]
+      })), KD.enumerable = !!KD.enumerable, KD.configurable = !!KD.configurable, ("value" in KD || KD.initializer) && (KD.writable = !0), KD = wD.slice().reverse().reduce((function(wD, pD) {
+        return pD(DD, zD, wD) || wD
+      }), KD), sD && void 0 !== KD.initializer && (KD.value = KD.initializer ? KD.initializer.call(sD) : void 0, KD.initializer = void 0), void 0 === KD.initializer && (Object.defineProperty(DD, zD, KD), KD = null), KD
     }
-    fm.d(Tm, {
-      c: () => hm
+    wD.d(zD, {
+      d: () => pD
     })
   },
-  39098: (mm, Tm, fm) => {
-    function hm(mm, Tm, fm, hm) {
-      fm && Object.defineProperty(mm, Tm, {
-        enumerable: fm.enumerable,
-        configurable: fm.configurable,
-        writable: fm.writable,
-        value: fm.initializer ? fm.initializer.call(hm) : void 0
+  38941: (DD, zD, wD) => {
+    function pD(DD, zD, wD, pD) {
+      wD && Object.defineProperty(DD, zD, {
+        enumerable: wD.enumerable,
+        configurable: wD.configurable,
+        writable: wD.writable,
+        value: wD.initializer ? wD.initializer.call(pD) : void 0
       })
     }
-    fm.d(Tm, {
-      e: () => hm
+    wD.d(zD, {
+      c: () => pD
     })
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

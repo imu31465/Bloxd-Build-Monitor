@@ -1,502 +1,502 @@
 export const id = 247;
 export const ids = [247];
 export const modules = {
-  41102: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => am,
-      f: () => xm
+  40942: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => KD,
+      d: () => rD
     });
-    var hm = fm(1919);
-    let Am = !1;
+    var pD = wD(1941);
+    let sD = !1;
 
-    function am() {
-      Am = !0
+    function KD() {
+      sD = !0
     }
 
-    function xm() {
-      Am && (Am = !1, (0, hm.d)())
+    function rD() {
+      sD && (sD = !1, (0, pD.b)())
     }
   },
-  41094: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => xm,
-      h: () => am,
-      l: () => wm
+  40940: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => rD,
+      h: () => KD,
+      j: () => LD
     });
-    var hm = fm(40663),
-      Am = fm(40669);
+    var pD = wD(40506),
+      sD = wD(40516);
 
-    function am(mm) {
-      if (mm.queries.drawCensus() < hm.Hb.BYTES) return null;
-      const Tm = mm.memoryData(mm.scratch(), hm.Hb.BYTES, 4, "the draw census");
-      return null === Tm ? null : {
-        terrainOpaque: hm.Hb.terrainOpaque(Tm, 0),
-        terrainTransparent: hm.Hb.terrainTransparent(Tm, 0),
-        terrainPack: hm.Hb.terrainPack(Tm, 0),
-        earthSky: hm.Hb.earthSky(Tm, 0),
-        skyMeshes: hm.Hb.skyMeshes(Tm, 0),
-        regular: hm.Hb.regular(Tm, 0),
-        thin: hm.Hb.thin(Tm, 0),
-        line: hm.Hb.line(Tm, 0),
-        text: hm.Hb.text(Tm, 0),
-        particles: hm.Hb.particles(Tm, 0),
-        terrainParts: hm.Hb.terrainParts(Tm, 0),
-        terrainCompiling: hm.Hb.terrainCompiling(Tm, 0),
-        ringCopiesMax: hm.Hb.ringCopiesMax(Tm, 0),
-        ringBusyWrites: hm.Hb.ringBusyWrites(Tm, 0)
+    function KD(DD) {
+      if (DD.queries.drawCensus() < pD.yb.BYTES) return null;
+      const zD = DD.memoryData(DD.scratch(), pD.yb.BYTES, 4, "the draw census");
+      return null === zD ? null : {
+        terrainOpaque: pD.yb.terrainOpaque(zD, 0),
+        terrainTransparent: pD.yb.terrainTransparent(zD, 0),
+        terrainPack: pD.yb.terrainPack(zD, 0),
+        earthSky: pD.yb.earthSky(zD, 0),
+        skyMeshes: pD.yb.skyMeshes(zD, 0),
+        regular: pD.yb.regular(zD, 0),
+        thin: pD.yb.thin(zD, 0),
+        line: pD.yb.line(zD, 0),
+        text: pD.yb.text(zD, 0),
+        particles: pD.yb.particles(zD, 0),
+        terrainParts: pD.yb.terrainParts(zD, 0),
+        terrainCompiling: pD.yb.terrainCompiling(zD, 0),
+        ringCopiesMax: pD.yb.ringCopiesMax(zD, 0),
+        ringBusyWrites: pD.yb.ringBusyWrites(zD, 0)
       }
     }
 
-    function xm(mm) {
+    function rD(DD) {
       const {
-        terrainOpaque: Tm,
-        terrainTransparent: fm,
-        earthSky: hm,
-        skyMeshes: Am,
-        regular: am,
-        thin: xm,
-        line: wm,
-        text: Dm,
-        particles: im
-      } = mm;
-      return Tm + fm + hm + Am + am + xm + wm + Dm + im
+        terrainOpaque: zD,
+        terrainTransparent: wD,
+        earthSky: pD,
+        skyMeshes: sD,
+        regular: KD,
+        thin: rD,
+        line: LD,
+        text: cD,
+        particles: gD
+      } = DD;
+      return zD + wD + pD + sD + KD + rD + LD + cD + gD
     }
 
-    function wm() {
-      const mm = (0, Am.i)();
-      return !0 === (null === mm || void 0 === mm ? void 0 : mm.isCoreRunning) ? function(mm) {
-        const Tm = am(mm);
-        if (null === Tm) return [];
+    function LD() {
+      const DD = (0, sD.i)();
+      return !0 === (null === DD || void 0 === DD ? void 0 : DD.isCoreRunning) ? function(DD) {
+        const zD = KD(DD);
+        if (null === zD) return [];
         const {
-          terrainOpaque: fm,
-          terrainTransparent: hm,
-          terrainPack: Am,
-          earthSky: wm,
-          skyMeshes: Dm,
-          regular: im,
-          thin: Rm,
-          line: pm,
-          text: Em,
-          particles: om
-        } = Tm;
+          terrainOpaque: wD,
+          terrainTransparent: pD,
+          terrainPack: sD,
+          earthSky: LD,
+          skyMeshes: cD,
+          regular: gD,
+          thin: RD,
+          line: AD,
+          text: UD,
+          particles: fD
+        } = zD;
         return [{
           label: "Drawn",
-          value: `${xm(Tm)}`
+          value: `${rD(zD)}`
         }, {
           label: "Terrain",
-          value: `${fm} opaque / ${hm} transparent (${Am} shader pack)`
+          value: `${wD} opaque / ${pD} transparent (${sD} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${im} / ${Rm}`
+          value: `${gD} / ${RD}`
         }, {
           label: "Text / Lines",
-          value: `${Em} / ${pm}`
+          value: `${UD} / ${AD}`
         }, {
           label: "Sky / Particles",
-          value: `${wm+Dm} / ${om}`
+          value: `${LD+cD} / ${fD}`
         }]
-      }(mm.api) : []
+      }(DD.api) : []
     }
   },
-  41079: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => Om,
-      e: () => Em,
-      f: () => om
+  40919: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => ID,
+      f: () => UD,
+      g: () => fD
     });
-    var hm = fm(1921),
-      Am = fm(1290),
-      am = fm(40669),
-      xm = fm(40684),
-      wm = fm(40692),
-      Dm = fm(40709);
-    const im = new Am.d;
-    let Rm = !1;
+    var pD = wD(1950),
+      sD = wD(1301),
+      KD = wD(40516),
+      rD = wD(40535),
+      LD = wD(40540),
+      cD = wD(40558);
+    const gD = new sD.b;
+    let RD = !1;
 
-    function pm(mm) {
-      const Tm = (0, am.i)();
-      return null !== Tm && +mm === Tm.api.localId
+    function AD(DD) {
+      const zD = (0, KD.i)();
+      return null !== zD && +DD === zD.api.localId
     }
 
-    function Em() {
-      Rm || (Rm = !0, (0, Dm.g)(xm.o, (mm => {
-        var Tm, fm;
-        const hm = (0, wm.f)(xm.o, mm);
-        if (!(0, wm.b)(hm)) return;
-        const Am = hm;
-        pm(Am.Kh) && om(Am.Qh, {
-          icon: Am.eA,
-          level: Am.XA,
-          displayName: null !== (Tm = Am.nh) && void 0 !== Tm ? Tm : null,
-          durationMs: null !== (fm = Am.NA) && void 0 !== fm ? fm : null
+    function UD() {
+      RD || (RD = !0, (0, cD.l)(rD.j, (DD => {
+        var zD, wD;
+        const pD = (0, LD.e)(rD.j, DD);
+        if (!(0, LD.b)(pD)) return;
+        const sD = pD;
+        AD(sD.np) && fD(sD.Mp, {
+          icon: sD.Ss,
+          level: sD.Ws,
+          displayName: null !== (zD = sD.Op) && void 0 !== zD ? zD : null,
+          durationMs: null !== (wD = sD.ls) && void 0 !== wD ? wD : null
         })
-      })), (0, Dm.g)(xm.S, (mm => {
-        const Tm = (0, wm.f)(xm.S, mm);
-        if (!(0, wm.b)(Tm)) return;
-        const fm = Tm;
-        pm(fm.Kh) && hm.b.remove(fm.Qh)
-      })), (0, Dm.c)((() => {
-        hm.b.clear()
+      })), (0, cD.l)(rD.S, (DD => {
+        const zD = (0, LD.e)(rD.S, DD);
+        if (!(0, LD.b)(zD)) return;
+        const wD = zD;
+        AD(wD.np) && pD.d.remove(wD.Mp)
+      })), (0, cD.f)((() => {
+        pD.d.clear()
       })))
     }
 
-    function om(mm, Tm) {
-      hm.b.update(mm, Tm), im.forEach((Tm => {
-        Tm(mm)
+    function fD(DD, zD) {
+      pD.d.update(DD, zD), gD.forEach((zD => {
+        zD(DD)
       }))
     }
-    const Om = {
+    const ID = {
       localEffectUpdated: {
-        watch: mm => im.add(mm)
+        watch: DD => gD.add(DD)
       }
     }
   },
-  41084: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => Rm
+  40928: (DD, zD, wD) => {
+    wD.d(zD, {
+      d: () => RD
     });
-    var hm = fm(4741),
-      Am = fm(4732),
-      am = fm(40695),
-      xm = fm(40709);
-    const wm = new Set(hm.N),
-      Dm = hm.N.map((mm => (new TextEncoder).encode(mm))),
-      im = new Map;
+    var pD = wD(4820),
+      sD = wD(4817),
+      KD = wD(40544),
+      rD = wD(40558);
+    const LD = new Set(pD.M),
+      cD = pD.M.map((DD => (new TextEncoder).encode(DD))),
+      gD = new Map;
 
-    function Rm(mm, Tm) {
-      var fm;
-      return null === (fm = im.get(mm)) || void 0 === fm ? void 0 : fm[Tm]
-    }(0, xm.g)(hm.gc.NewOtherEntitySettings, (mm => {
-      mm.payloadKind === Am.gc.Msgpack && Dm.some((Tm => function(mm, Tm) {
-        const fm = Tm[0];
-        for (let hm = mm.indexOf(fm); - 1 !== hm && hm + Tm.length <= mm.length; hm = mm.indexOf(fm, hm + 1)) {
-          let fm = 1;
-          for (; fm < Tm.length && mm[hm + fm] === Tm[fm];) fm++;
-          if (fm === Tm.length) return !0
+    function RD(DD, zD) {
+      var wD;
+      return null === (wD = gD.get(DD)) || void 0 === wD ? void 0 : wD[zD]
+    }(0, rD.l)(pD.ec.NewOtherEntitySettings, (DD => {
+      DD.payloadKind === sD.pc.Msgpack && cD.some((zD => function(DD, zD) {
+        const wD = zD[0];
+        for (let pD = DD.indexOf(wD); - 1 !== pD && pD + zD.length <= DD.length; pD = DD.indexOf(wD, pD + 1)) {
+          let wD = 1;
+          for (; wD < zD.length && DD[pD + wD] === zD[wD];) wD++;
+          if (wD === zD.length) return !0
         }
         return !1
-      }(mm.payload, Tm))) && function(mm) {
-        if (null === mm || "object" !== typeof mm || null === mm.settings || "object" !== typeof mm.settings) return;
-        const Tm = String(mm.eId),
-          fm = mm.settings;
-        let hm = im.get(Tm);
-        for (const Am in fm) {
-          if (!wm.has(Am)) continue;
-          const mm = fm[Am];
-          null === mm || void 0 === mm ? hm && delete hm[Am] : (hm ??= {}, hm[Am] = mm)
+      }(DD.payload, zD))) && function(DD) {
+        if (null === DD || "object" !== typeof DD || null === DD.settings || "object" !== typeof DD.settings) return;
+        const zD = String(DD.eId),
+          wD = DD.settings;
+        let pD = gD.get(zD);
+        for (const sD in wD) {
+          if (!LD.has(sD)) continue;
+          const DD = wD[sD];
+          null === DD || void 0 === DD ? pD && delete pD[sD] : (pD ??= {}, pD[sD] = DD)
         }
-        hm && im.set(Tm, hm)
-      }((0, am.e)(mm.payload))
-    })), (0, xm.c)((() => {
-      im.clear()
+        pD && gD.set(zD, pD)
+      }((0, KD.b)(DD.payload))
+    })), (0, rD.f)((() => {
+      gD.clear()
     }))
   },
-  41073: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => om,
-      f: () => im,
-      h: () => pm
+  40916: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => fD,
+      e: () => gD,
+      g: () => AD
     });
-    var hm = fm(39121),
-      Am = fm(1912),
-      am = fm(1290),
-      xm = fm(40684),
-      wm = fm(40692),
-      Dm = fm(40709);
-    const im = new hm.b;
-    let Rm = {};
+    var pD = wD(38967),
+      sD = wD(1932),
+      KD = wD(1301),
+      rD = wD(40535),
+      LD = wD(40540),
+      cD = wD(40558);
+    const gD = new pD.e;
+    let RD = {};
 
-    function pm(mm) {
-      return Rm[mm]
+    function AD(DD) {
+      return RD[DD]
     }
-    const Em = new am.d;
+    const UD = new KD.b;
 
-    function om(mm) {
-      return Em.add(mm)
+    function fD(DD) {
+      return UD.add(DD)
     }
 
-    function Om(mm) {
-      Em.callEach(mm, "a roster listener")
-    }(0, Dm.g)(xm.ab, (mm => {
-      const Tm = (0, wm.f)(xm.ab, mm);
-      if (void 0 === Tm) return;
-      const fm = Tm.fh.some((mm => {
+    function ID(DD) {
+      UD.callEach(DD, "a roster listener")
+    }(0, cD.l)(rD.cb, (DD => {
+      const zD = (0, LD.e)(rD.cb, DD);
+      if (void 0 === zD) return;
+      const wD = zD.Hw.some((DD => {
           let {
-            hh: Tm,
-            Ah: fm
-          } = mm;
-          return null !== fm && im.has(Tm) && im.getName(Tm) !== fm
+            qw: zD,
+            Dp: wD
+          } = DD;
+          return null !== wD && gD.has(zD) && gD.getName(zD) !== wD
         })),
         {
-          added: hm,
-          removed: am,
-          settingChanges: Dm
-        } = im.apply(Tm),
-        Rm = new Set;
-      for (const Am of Dm)
-        for (const mm in Am.settings) Rm.add(mm);
-      const pm = fm || hm.length > 0 || am.length > 0;
-      (pm || Rm.has("hideNameSeed")) && function() {
-        const mm = new Map;
-        for (const Tm of im.ids()) {
-          const fm = im.getName(Tm),
-            hm = im.getSetting(Tm, "hideNameSeed");
-          void 0 !== fm && void 0 !== hm && null !== hm && mm.set(fm, hm)
+          added: pD,
+          removed: KD,
+          settingChanges: cD
+        } = gD.apply(zD),
+        RD = new Set;
+      for (const sD of cD)
+        for (const DD in sD.settings) RD.add(DD);
+      const AD = wD || pD.length > 0 || KD.length > 0;
+      (AD || RD.has("hideNameSeed")) && function() {
+        const DD = new Map;
+        for (const zD of gD.ids()) {
+          const wD = gD.getName(zD),
+            pD = gD.getSetting(zD, "hideNameSeed");
+          void 0 !== wD && void 0 !== pD && null !== pD && DD.set(wD, pD)
         }
-        Am.e.replaceAll(mm)
-      }(), Om({
+        sD.d.replaceAll(DD)
+      }(), ID({
         kind: "roster",
-        members: pm,
-        settings: Rm
+        members: AD,
+        settings: RD
       })
-    })), (0, Dm.g)(xm.R, (mm => {
-      const Tm = (0, wm.f)(xm.R, mm);
-      if (void 0 !== Tm) {
+    })), (0, cD.l)(rD.O, (DD => {
+      const zD = (0, LD.e)(rD.O, DD);
+      if (void 0 !== zD) {
         for (const {
-            bh: mm,
-            Sh: fm,
-            eh: hm
+            Vp: DD,
+            Pp: wD,
+            Cp: pD
           }
-          of Tm) Rm[mm] = {
-          ...Rm[mm],
-          [fm]: hm
+          of zD) RD[DD] = {
+          ...RD[DD],
+          [wD]: pD
         };
-        Om({
+        ID({
           kind: "cosmetics",
-          updates: Tm
+          updates: zD
         })
       }
-    })), (0, Dm.c)((() => {
-      im.clear(), Rm = {}, Am.e.clear(), Om({
+    })), (0, cD.f)((() => {
+      gD.clear(), RD = {}, sD.d.clear(), ID({
         kind: "reset"
       })
-    })), (0, Dm.e)((() => {
-      im.clear(), Om({
+    })), (0, cD.h)((() => {
+      gD.clear(), ID({
         kind: "reset"
       })
     }))
   },
-  41088: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => km,
-      e: () => qm,
-      g: () => Nm,
-      k: () => Gm
+  40931: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => CD,
+      f: () => GD,
+      g: () => jD,
+      h: () => dD
     });
-    var hm = fm(1270),
-      Am = fm(645),
-      am = fm(105),
-      xm = fm(4741),
-      wm = fm(40663),
-      Dm = fm(40681),
-      im = fm(40669),
-      Rm = fm(41084),
-      pm = fm(41073),
-      Em = fm(40692),
-      om = fm(40709);
+    var pD = wD(1270),
+      sD = wD(608),
+      KD = wD(103),
+      rD = wD(4820),
+      LD = wD(40506),
+      cD = wD(40529),
+      gD = wD(40516),
+      RD = wD(40928),
+      AD = wD(40916),
+      UD = wD(40540),
+      fD = wD(40558);
 
-    function Om(mm) {
+    function ID(DD) {
       let {
-        deadEId: Tm,
-        killerEId: fm,
-        killerLifeformType: hm,
-        withItem: Am,
-        killstreak: am
-      } = mm;
+        deadEId: zD,
+        killerEId: wD,
+        killerLifeformType: pD,
+        withItem: sD,
+        killstreak: KD
+      } = DD;
       return {
-        killer: Km({
-          eId: fm,
-          lifeformType: hm
+        killer: OD({
+          eId: wD,
+          lifeformType: pD
         }),
-        victim: Km({
-          eId: Tm
+        victim: OD({
+          eId: zD
         }),
-        withItem: Am,
-        killstreak: am
+        withItem: sD,
+        killstreak: KD
       }
     }
 
-    function Ym(mm) {
+    function BD(DD) {
       let {
-        killer: Tm,
-        victim: fm,
-        withItem: hm
-      } = mm;
+        killer: zD,
+        victim: wD,
+        withItem: pD
+      } = DD;
       return {
-        killer: Km(Tm),
-        victim: Km(fm),
-        withItem: hm,
+        killer: OD(zD),
+        victim: OD(wD),
+        withItem: pD,
         killstreak: 0
       }
     }
 
-    function qm(mm) {
-      cm && Zm((() => "killed" === mm.kind ? Om(mm.body) : Ym(mm.body)))
+    function GD(DD) {
+      XD && PD((() => "killed" === DD.kind ? ID(DD.body) : BD(DD.body)))
     }
-    const jm = "#2727f1",
-      Vm = "#912c2c";
+    const hD = "#2727f1",
+      nD = "#912c2c";
 
-    function Im(mm, Tm) {
-      var fm;
-      return pm.f.has(mm) ? null === (fm = pm.f.getSettings(mm)) || void 0 === fm ? void 0 : fm[Tm] : (0, Rm.e)(mm, Tm)
+    function MD(DD, zD) {
+      var wD;
+      return AD.e.has(DD) ? null === (wD = AD.e.getSettings(DD)) || void 0 === wD ? void 0 : wD[zD] : (0, RD.d)(DD, zD)
     }
 
-    function Km(mm) {
-      var Tm, fm, xm, wm, Rm;
+    function OD(DD) {
+      var zD, wD, rD, LD, RD;
       let {
-        eId: Em,
-        name: om,
-        colour: Om,
-        lifeformType: Ym
-      } = mm;
-      if (void 0 === Em || null === Em || "" === Em) {
-        const mm = om || null;
+        eId: UD,
+        name: fD,
+        colour: ID,
+        lifeformType: BD
+      } = DD;
+      if (void 0 === UD || null === UD || "" === UD) {
+        const DD = fD || null;
         return {
           id: null,
-          shownName: mm,
-          lifeformType: null === mm && null !== Ym && void 0 !== Ym ? Ym : null,
-          colour: Om || null,
+          shownName: DD,
+          lifeformType: null === DD && null !== BD && void 0 !== BD ? BD : null,
+          colour: ID || null,
           local: !1,
           realName: null
         }
       }
-      const qm = String(Em),
-        Km = null === (Tm = (0, im.i)()) || void 0 === Tm ? void 0 : Tm.api,
-        Qm = void 0 !== Km && String(Km.localId) === qm,
-        nm = null !== (fm = pm.f.getName(qm)) && void 0 !== fm ? fm : null,
-        Jm = null !== (xm = Im(qm, "hideNameSeed")) && void 0 !== xm ? xm : null;
-      let cm = null === nm ? null : (0, hm.e)(nm, !am.featureFlags.canSeeRealPlayerNames, Jm) || null,
-        zm = null;
-      if (null === cm && void 0 !== Km) {
-        const mm = Km.getEntityType(qm);
-        "Player" !== mm && (cm = (0, Dm.k)(Km, +qm) || null), zm = Am.n.includes(mm) ? mm : null
+      const GD = String(UD),
+        OD = null === (zD = (0, gD.i)()) || void 0 === zD ? void 0 : zD.api,
+        JD = void 0 !== OD && String(OD.localId) === GD,
+        ED = null !== (wD = AD.e.getName(GD)) && void 0 !== wD ? wD : null,
+        QD = null !== (rD = MD(GD, "hideNameSeed")) && void 0 !== rD ? rD : null;
+      let XD = null === ED ? null : (0, pD.e)(ED, !KD.featureFlags.canSeeRealPlayerNames, QD) || null,
+        VD = null;
+      if (null === XD && void 0 !== OD) {
+        const DD = OD.getEntityType(GD);
+        "Player" !== DD && (XD = (0, cD.h)(OD, +GD) || null), VD = sD.k.includes(DD) ? DD : null
       }
       return {
-        id: qm,
-        shownName: cm,
-        lifeformType: null === cm && null !== (wm = null !== (Rm = zm) && void 0 !== Rm ? Rm : Ym) && void 0 !== wm ? wm : null,
-        colour: Om || Im(qm, "killfeedColour") || (Qm ? jm : Vm),
-        local: Qm,
-        realName: nm
+        id: GD,
+        shownName: XD,
+        lifeformType: null === XD && null !== (LD = null !== (RD = VD) && void 0 !== RD ? RD : BD) && void 0 !== LD ? LD : null,
+        colour: ID || MD(GD, "killfeedColour") || (JD ? hD : nD),
+        local: JD,
+        realName: ED
       }
     }
-    const Qm = 32;
-    let nm = [],
-      Jm = null,
-      cm = !1,
-      zm = !1;
+    const JD = 32;
+    let ED = [],
+      QD = null,
+      XD = !1,
+      VD = !1;
 
-    function Zm(mm) {
-      null === Jm ? (nm.length === Qm && nm.shift(), nm.push(mm)) : Jm(mm())
+    function PD(DD) {
+      null === QD ? (ED.length === JD && ED.shift(), ED.push(DD)) : QD(DD())
     }
 
-    function km() {
-      zm || (zm = !0, (0, om.g)(xm.gc.PlayerKilled, (mm => {
-        const Tm = (0, Em.j)(mm);
-        (0, Em.b)(Tm) && Zm((() => Om(Tm)))
-      })), (0, om.g)(xm.gc.CustomKillfeed, (mm => {
-        const Tm = (0, Em.j)(mm);
-        (0, Em.b)(Tm) && (0, Em.b)(Tm.killer) && (0, Em.b)(Tm.victim) && Zm((() => Ym(Tm)))
-      })), (0, om.c)((() => {
-        nm = []
+    function CD() {
+      VD || (VD = !0, (0, fD.l)(rD.ec.PlayerKilled, (DD => {
+        const zD = (0, UD.i)(DD);
+        (0, UD.b)(zD) && PD((() => ID(zD)))
+      })), (0, fD.l)(rD.ec.CustomKillfeed, (DD => {
+        const zD = (0, UD.i)(DD);
+        (0, UD.b)(zD) && (0, UD.b)(zD.killer) && (0, UD.b)(zD.victim) && PD((() => BD(zD)))
+      })), (0, fD.f)((() => {
+        ED = []
       })))
     }
-    const bm = Object.freeze([0, 0, 0]),
-      Sm = [0, 0, 0],
-      em = [0, 0, 0],
-      Nm = {
+    const xD = Object.freeze([0, 0, 0]),
+      TD = [0, 0, 0],
+      bD = [0, 0, 0],
+      jD = {
         kill: {
-          watch(mm) {
-            if (cm = !0, 0 === nm.length) return Jm = mm, () => {
-              cm = !1, Jm = null
+          watch(DD) {
+            if (XD = !0, 0 === ED.length) return QD = DD, () => {
+              XD = !1, QD = null
             };
-            const Tm = setTimeout((() => {
-              const Tm = nm;
-              nm = [], Jm = mm;
-              for (const hm of Tm) try {
-                mm(hm())
-              } catch (fm) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", fm)
+            const zD = setTimeout((() => {
+              const zD = ED;
+              ED = [], QD = DD;
+              for (const pD of zD) try {
+                DD(pD())
+              } catch (wD) {
+                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", wD)
               }
             }), 0);
             return () => {
-              clearTimeout(Tm), cm = !1, Jm = null
+              clearTimeout(zD), XD = !1, QD = null
             }
           }
         }
       },
-      Gm = {
+      dD = {
         localPos() {
-          const mm = (0, im.i)();
-          if (null === mm) return bm;
-          const Tm = mm.api.apiView;
-          for (let fm = 0; fm < 3; fm++) Sm[fm] = wm.x.localPos(Tm, 0, fm);
-          return Sm
+          const DD = (0, gD.i)();
+          if (null === DD) return xD;
+          const zD = DD.api.apiView;
+          for (let wD = 0; wD < 3; wD++) TD[wD] = LD.v.localPos(zD, 0, wD);
+          return TD
         },
         targetedBlockPos() {
-          const mm = (0, im.i)();
-          if (null === mm || wm.x.targetBlockId(mm.api.apiView, 0) === wm.md) return null;
-          for (let Tm = 0; Tm < 3; Tm++) em[Tm] = wm.x.targetBlock(mm.api.apiView, 0, Tm);
-          return em
+          const DD = (0, gD.i)();
+          if (null === DD || LD.v.targetBlockId(DD.api.apiView, 0) === LD.Xc) return null;
+          for (let zD = 0; zD < 3; zD++) bD[zD] = LD.v.targetBlock(DD.api.apiView, 0, zD);
+          return bD
         }
       }
   },
-  39121: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => hm
+  38967: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => pD
     });
-    class hm {
+    class pD {
       constructor() {
         this.members = new Map
       }
-      apply(mm) {
-        const Tm = {
+      apply(DD) {
+        const zD = {
           added: [],
           removed: [],
           settingChanges: []
         };
-        for (const hm of mm.fh) {
-          let mm = this.members.get(hm.hh);
-          if (mm || (mm = {
+        for (const pD of DD.Hw) {
+          let DD = this.members.get(pD.qw);
+          if (DD || (DD = {
               name: null,
               settings: {}
-            }, this.members.set(hm.hh, mm), Tm.added.push(hm.hh)), null !== hm.Ah && (mm.name = hm.Ah), null !== hm.ah || hm.xh.length > 0) {
-            const fm = null === hm.ah ? {} : JSON.parse(hm.ah);
-            Object.assign(mm.settings, fm);
-            for (const Tm of hm.xh) delete mm.settings[Tm], fm[Tm] = void 0;
-            Tm.settingChanges.push({
-              playerId: hm.hh,
-              settings: fm
+            }, this.members.set(pD.qw, DD), zD.added.push(pD.qw)), null !== pD.Dp && (DD.name = pD.Dp), null !== pD.zp || pD.wp.length > 0) {
+            const wD = null === pD.zp ? {} : JSON.parse(pD.zp);
+            Object.assign(DD.settings, wD);
+            for (const zD of pD.wp) delete DD.settings[zD], wD[zD] = void 0;
+            zD.settingChanges.push({
+              playerId: pD.qw,
+              settings: wD
             })
           }
         }
-        for (const hm of mm.Dh) {
-          const mm = this.members.get(hm);
-          var fm;
-          if (mm) this.members.delete(hm), Tm.removed.push({
-            playerId: hm,
-            name: null !== (fm = mm.name) && void 0 !== fm ? fm : void 0
+        for (const pD of DD.sp) {
+          const DD = this.members.get(pD);
+          var wD;
+          if (DD) this.members.delete(pD), zD.removed.push({
+            playerId: pD,
+            name: null !== (wD = DD.name) && void 0 !== wD ? wD : void 0
           })
         }
-        return Tm
+        return zD
       }
-      has(mm) {
-        return this.members.has(mm)
+      has(DD) {
+        return this.members.has(DD)
       }
       ids() {
         return [...this.members.keys()]
       }
-      getName(mm) {
-        var Tm, fm;
-        return null !== (Tm = null === (fm = this.members.get(mm)) || void 0 === fm ? void 0 : fm.name) && void 0 !== Tm ? Tm : void 0
+      getName(DD) {
+        var zD, wD;
+        return null !== (zD = null === (wD = this.members.get(DD)) || void 0 === wD ? void 0 : wD.name) && void 0 !== zD ? zD : void 0
       }
-      getSettings(mm) {
-        var Tm;
-        return null === (Tm = this.members.get(mm)) || void 0 === Tm ? void 0 : Tm.settings
+      getSettings(DD) {
+        var zD;
+        return null === (zD = this.members.get(DD)) || void 0 === zD ? void 0 : zD.settings
       }
-      getSetting(mm, Tm) {
-        var fm;
-        return null === (fm = this.members.get(mm)) || void 0 === fm ? void 0 : fm.settings[Tm]
+      getSetting(DD, zD) {
+        var wD;
+        return null === (wD = this.members.get(DD)) || void 0 === wD ? void 0 : wD.settings[zD]
       }
       clear() {
         this.members.clear()
@@ -505,4 +505,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

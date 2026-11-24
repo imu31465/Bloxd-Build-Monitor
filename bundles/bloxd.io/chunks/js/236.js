@@ -1,571 +1,571 @@
 export const id = 236;
 export const ids = [236];
 export const modules = {
-  41124: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      noaDevTools: () => pm
+  40984: (DD, zD, wD) => {
+    wD.d(zD, {
+      noaDevTools: () => AD
     });
-    var hm = fm(37630),
-      Am = fm(37610),
-      am = fm(2760),
-      xm = fm(1713),
-      wm = fm(41049);
+    var pD = wD(37543),
+      sD = wD(37527),
+      KD = wD(2769),
+      rD = wD(1737),
+      LD = wD(40889);
 
-    function Dm(mm) {
+    function cD(DD) {
       const {
-        qY: Tm
-      } = mm, fm = Tm.engine, hm = {
-        width: fm.getRenderWidth(),
-        height: fm.getRenderHeight()
+        wB: zD
+      } = DD, wD = zD.engine, pD = {
+        width: wD.getRenderWidth(),
+        height: wD.getRenderHeight()
       };
       return {
-        canvas: fm.getRenderingCanvas(),
-        maxTextureSize: fm.getCaps().maxTextureSize,
-        drawing: () => !mm.yI,
-        resize: (mm, Tm) => {
-          fm.setSize(mm, Tm)
+        canvas: wD.getRenderingCanvas(),
+        maxTextureSize: wD.getCaps().maxTextureSize,
+        drawing: () => !DD.HJ,
+        resize: (DD, zD) => {
+          wD.setSize(DD, zD)
         },
         restoreSize: () => {
-          fm.setSize(hm.width, hm.height), Tm.resize()
+          wD.setSize(pD.width, pD.height), zD.resize()
         },
-        onFrameDrawn: Tm => (mm.on("afterRender", Tm), () => {
-          mm.off("afterRender", Tm)
+        onFrameDrawn: zD => (DD.on("afterRender", zD), () => {
+          DD.off("afterRender", zD)
         })
       }
     }
-    var im = fm(34163);
+    var gD = wD(34095);
 
-    function Rm(mm, Tm) {
+    function RD(DD, zD) {
       let {
-        width: im,
-        height: Rm,
-        colouring: pm
-      } = Tm;
-      const Em = "normals" === pm,
-        om = "depth" === pm;
-      return new Promise((Tm => {
+        width: gD,
+        height: RD,
+        colouring: AD
+      } = zD;
+      const UD = "normals" === AD,
+        fD = "depth" === AD;
+      return new Promise((zD => {
         try {
-          const Om = (0, am.d)();
-          if (Om.qY.jY) return "screenshot" !== mm || null !== pm ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void Tm()) : void(0, wm.f)(Dm(Om), im, Rm).finally(Tm);
-          const Ym = Om.qY.engine,
-            qm = Om.qY.wG(),
-            jm = im,
-            Vm = Rm;
-          Promise.all([Promise.all([fm.e(254), fm.e(255), fm.e(233)]).then((() => fm(61310))), Promise.all([fm.e(232), fm.e(231), fm.e(254), fm.e(255), fm.e(252), fm.e(256), fm.e(259), fm.e(311), fm.e(237)]).then((() => fm(61315))), Promise.all([fm.e(232), fm.e(231), fm.e(254), fm.e(255), fm.e(252), fm.e(262), fm.e(256), fm.e(264), fm.e(239)]).then((() => fm(61318))), fm.e(352).then((() => fm(61321))), Promise.all([fm.e(231), fm.e(227)]).then((() => fm(37181))), fm.e(253).then((() => fm(61328))), fm.e(234).then((() => fm(61335)))]).then((am => {
+          const ID = (0, KD.e)();
+          if (ID.wB.pB) return "screenshot" !== DD || null !== AD ? (console.warn("GLB downloads and coloured screenshots need WebGPU off in Graphics settings"), void zD()) : void(0, LD.g)(cD(ID), gD, RD).finally(zD);
+          const BD = ID.wB.engine,
+            GD = ID.wB.Ul(),
+            hD = gD,
+            nD = RD;
+          Promise.all([Promise.all([wD.e(254), wD.e(255), wD.e(233)]).then((() => wD(61016))), Promise.all([wD.e(232), wD.e(231), wD.e(254), wD.e(255), wD.e(252), wD.e(256), wD.e(259), wD.e(311), wD.e(237)]).then((() => wD(61020))), Promise.all([wD.e(232), wD.e(231), wD.e(254), wD.e(255), wD.e(252), wD.e(262), wD.e(256), wD.e(264), wD.e(239)]).then((() => wD(61022))), wD.e(352).then((() => wD(61028))), Promise.all([wD.e(231), wD.e(227)]).then((() => wD(37070))), wD.e(253).then((() => wD(61035))), wD.e(234).then((() => wD(61039)))]).then((KD => {
             const {
-              CreateScreenshotUsingRenderTarget: wm
-            } = am[1], {
-              ShaderMaterial: Dm
-            } = am[2], {
-              ShaderLanguage: im
-            } = am[3], {
-              WO: Rm
-            } = am[4], {
-              registerDevtoolsShader: pm
-            } = am[6], Om = im.GLSL, Im = new Map, Km = qm.meshes.filter((mm => mm.material));
-            let Qm = !1,
-              nm = null;
+              CreateScreenshotUsingRenderTarget: LD
+            } = KD[1], {
+              ShaderMaterial: cD
+            } = KD[2], {
+              ShaderLanguage: gD
+            } = KD[3], {
+              WI: RD
+            } = KD[4], {
+              registerDevtoolsShader: AD
+            } = KD[6], ID = gD.GLSL, MD = new Map, OD = GD.meshes.filter((DD => DD.material));
+            let JD = !1,
+              ED = null;
 
-            function Jm() {
-              var mm;
-              Qm && (Qm = !1, (0, hm.h)(qm.meshes, !1)), null === (mm = nm) || void 0 === mm || mm(), nm = null, Km.forEach((mm => {
-                const Tm = Im.get(mm);
-                Tm && (mm.material = Tm)
+            function QD() {
+              var DD;
+              JD && (JD = !1, (0, pD.g)(GD.meshes, !1)), null === (DD = ED) || void 0 === DD || DD(), ED = null, OD.forEach((DD => {
+                const zD = MD.get(DD);
+                zD && (DD.material = zD)
               }))
             }
-            if (Em) {
-              const mm = [],
-                Tm = [];
-              Km.forEach((fm => {
-                const hm = fm.name.toLowerCase(),
-                  Am = fm.DH().boundingBox.center,
-                  am = qm.activeCamera.position.subtract(Am).length();
-                hm.includes("sky") || hm.includes("background") || hm.includes("environment") || am > 1e3 ? Tm.push(fm) : mm.push(fm)
-              })), pm("devtoolsNormal", Om);
-              const fm = new Dm("normalMaterial", qm, "devtoolsNormal", {
+            if (UD) {
+              const DD = [],
+                zD = [];
+              OD.forEach((wD => {
+                const pD = wD.name.toLowerCase(),
+                  sD = wD.FW().boundingBox.center,
+                  KD = GD.activeCamera.position.subtract(sD).length();
+                pD.includes("sky") || pD.includes("background") || pD.includes("environment") || KD > 1e3 ? zD.push(wD) : DD.push(wD)
+              })), AD("devtoolsNormal", ID);
+              const wD = new cD("normalMaterial", GD, "devtoolsNormal", {
                 attributes: ["position", "normal"],
                 uniforms: ["worldViewProjection", "world"],
-                shaderLanguage: Om
+                shaderLanguage: ID
               });
-              pm("devtoolsWhite", Om);
-              const hm = new Dm("whiteMaterial", qm, "devtoolsWhite", {
+              AD("devtoolsWhite", ID);
+              const pD = new cD("whiteMaterial", GD, "devtoolsWhite", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection"],
-                shaderLanguage: Om
+                shaderLanguage: ID
               });
-              mm.forEach((mm => {
-                Im.set(mm, mm.material), mm.material = fm
-              })), Tm.forEach((mm => {
-                Im.set(mm, mm.material), mm.material = hm
+              DD.forEach((DD => {
+                MD.set(DD, DD.material), DD.material = wD
+              })), zD.forEach((DD => {
+                MD.set(DD, DD.material), DD.material = pD
               }))
-            } else if (om) {
-              pm("devtoolsDepth", Om);
-              const mm = qm.activeCamera.position;
-              let Tm = 0,
-                fm = 1 / 0;
-              Km.forEach((hm => {
-                const Am = hm.name.toLowerCase();
-                if (Am.includes("sky") || Am.includes("background") || Am.includes("environment")) return;
-                const am = hm.DH().boundingBox.center,
-                  xm = Rm.TransformCoordinates(am, hm.getWorldMatrix()),
-                  wm = mm.subtract(xm).length();
-                wm > 1e3 || (Tm = Math.max(Tm, wm), fm = Math.min(fm, wm))
+            } else if (fD) {
+              AD("devtoolsDepth", ID);
+              const DD = GD.activeCamera.position;
+              let zD = 0,
+                wD = 1 / 0;
+              OD.forEach((pD => {
+                const sD = pD.name.toLowerCase();
+                if (sD.includes("sky") || sD.includes("background") || sD.includes("environment")) return;
+                const KD = pD.FW().boundingBox.center,
+                  rD = RD.TransformCoordinates(KD, pD.getWorldMatrix()),
+                  LD = DD.subtract(rD).length();
+                LD > 1e3 || (zD = Math.max(zD, LD), wD = Math.min(wD, LD))
               }));
-              const hm = Tm - fm;
-              Tm += .1 * hm, fm = Math.max(0, fm - .1 * hm), console.log(`Depth range: min=${fm.toFixed(2)}, max=${Tm.toFixed(2)}, range=${hm.toFixed(2)}`), hm < 1 && (Tm = fm + 10);
-              const Am = new Dm("depthMaterial", qm, "devtoolsDepth", {
+              const pD = zD - wD;
+              zD += .1 * pD, wD = Math.max(0, wD - .1 * pD), console.log(`Depth range: min=${wD.toFixed(2)}, max=${zD.toFixed(2)}, range=${pD.toFixed(2)}`), pD < 1 && (zD = wD + 10);
+              const sD = new cD("depthMaterial", GD, "devtoolsDepth", {
                 attributes: ["position"],
                 uniforms: ["worldViewProjection", "world", "cameraPosition", "maxDepth", "minDepth"],
-                shaderLanguage: Om
+                shaderLanguage: ID
               });
-              Am.setVector3("cameraPosition", mm), Am.setFloat("maxDepth", Tm), Am.setFloat("minDepth", fm), Km.forEach((mm => {
-                Im.set(mm, mm.material), mm.material = Am
+              sD.setVector3("cameraPosition", DD), sD.setFloat("maxDepth", zD), sD.setFloat("minDepth", wD), OD.forEach((DD => {
+                MD.set(DD, DD.material), DD.material = sD
               }))
             }
-            if ((0, hm.h)(qm.meshes, !0), Qm = !0, "glb" === mm && (nm = (0, Am.c)(qm.meshes)), "screenshot" === mm) {
-              let mm = `bloxd-screenshot-${jm}x${Vm}-${Date.now()}.png`;
-              Em ? mm = `bloxd-screenshot-normals-${jm}x${Vm}-${Date.now()}.png` : om && (mm = `bloxd-screenshot-depth-${jm}x${Vm}-${Date.now()}.png`), wm(Ym, qm.activeCamera, {
-                width: jm,
-                height: Vm
-              }, (function(fm) {
-                Jm(), fetch(fm).then((function(mm) {
-                  return mm.blob()
-                })).then((function(fm) {
-                  (0, xm.downloadBlob)(fm, mm), Tm()
-                })).catch((function(mm) {
-                  console.error("Error processing screenshot:", mm), Tm()
+            if ((0, pD.g)(GD.meshes, !0), JD = !0, "glb" === DD && (ED = (0, sD.b)(GD.meshes)), "screenshot" === DD) {
+              let DD = `bloxd-screenshot-${hD}x${nD}-${Date.now()}.png`;
+              UD ? DD = `bloxd-screenshot-normals-${hD}x${nD}-${Date.now()}.png` : fD && (DD = `bloxd-screenshot-depth-${hD}x${nD}-${Date.now()}.png`), LD(BD, GD.activeCamera, {
+                width: hD,
+                height: nD
+              }, (function(wD) {
+                QD(), fetch(wD).then((function(DD) {
+                  return DD.blob()
+                })).then((function(wD) {
+                  (0, rD.downloadBlob)(wD, DD), zD()
+                })).catch((function(DD) {
+                  console.error("Error processing screenshot:", DD), zD()
                 }))
               }), "image/png", void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, (function() {
-                console.error("Screenshot timed out"), Jm(), Tm()
+                console.error("Screenshot timed out"), QD(), zD()
               }))
             } else {
-              let mm = "Aq";
-              Em ? mm = "scene-normals" : om && (mm = "scene-depth"), Em || om ? setTimeout((() => {
+              let DD = "oB";
+              UD ? DD = "scene-normals" : fD && (DD = "scene-depth"), UD || fD ? setTimeout((() => {
                 (async function() {
                   const {
-                    StandardMaterial: mm
-                  } = await Promise.all([fm.e(232), fm.e(231), fm.e(254), fm.e(255), fm.e(252), fm.e(262), fm.e(261), fm.e(238)]).then((() => fm(40357))), {
-                    Color3: Tm
-                  } = await Promise.all([fm.e(232), fm.e(235)]).then((() => fm(37330))), hm = [], Am = [];
-                  if (Km.forEach((mm => {
-                      const Tm = mm.name.toLowerCase(),
-                        fm = mm.DH().boundingBox.center,
-                        am = qm.activeCamera.position.subtract(fm).length();
-                      Tm.includes("sky") || Tm.includes("background") || Tm.includes("environment") || am > 1e3 ? Am.push(mm) : hm.push(mm)
-                    })), Em) hm.forEach(((fm, hm) => {
-                    const Am = fm.getVerticesData("normal");
-                    if (Am) {
-                      const am = [];
-                      for (let mm = 0; mm < Am.length; mm += 3) {
-                        const Tm = Math.abs(Am[mm]),
-                          fm = Math.abs(Am[mm + 1]),
-                          hm = Math.abs(Am[mm + 2]);
-                        am.push(Tm, fm, hm, 1)
+                    StandardMaterial: DD
+                  } = await Promise.all([wD.e(232), wD.e(231), wD.e(254), wD.e(255), wD.e(252), wD.e(262), wD.e(261), wD.e(238)]).then((() => wD(40192))), {
+                    Color3: zD
+                  } = await Promise.all([wD.e(232), wD.e(235)]).then((() => wD(37267))), pD = [], sD = [];
+                  if (OD.forEach((DD => {
+                      const zD = DD.name.toLowerCase(),
+                        wD = DD.FW().boundingBox.center,
+                        KD = GD.activeCamera.position.subtract(wD).length();
+                      zD.includes("sky") || zD.includes("background") || zD.includes("environment") || KD > 1e3 ? sD.push(DD) : pD.push(DD)
+                    })), UD) pD.forEach(((wD, pD) => {
+                    const sD = wD.getVerticesData("normal");
+                    if (sD) {
+                      const KD = [];
+                      for (let DD = 0; DD < sD.length; DD += 3) {
+                        const zD = Math.abs(sD[DD]),
+                          wD = Math.abs(sD[DD + 1]),
+                          pD = Math.abs(sD[DD + 2]);
+                        KD.push(zD, wD, pD, 1)
                       }
-                      fm.setVerticesData("color", am);
-                      const xm = new mm(`vertexColorMat_${hm}`, qm);
-                      xm.disableLighting = !0, xm.emissiveColor = new Tm(1, 1, 1), xm.specularColor = new Tm(0, 0, 0), fm.material = xm
+                      wD.setVerticesData("color", KD);
+                      const rD = new DD(`vertexColorMat_${pD}`, GD);
+                      rD.disableLighting = !0, rD.emissiveColor = new zD(1, 1, 1), rD.specularColor = new zD(0, 0, 0), wD.material = rD
                     }
-                  })), Am.forEach(((fm, hm) => {
-                    const Am = fm.getVerticesData("position");
-                    if (Am) {
-                      const am = [],
-                        xm = Am.length / 3;
-                      for (let mm = 0; mm < xm; mm++) am.push(1, 1, 1, 1);
-                      fm.setVerticesData("color", am);
-                      const wm = new mm(`whiteMat_${hm}`, qm);
-                      wm.disableLighting = !0, wm.emissiveColor = new Tm(1, 1, 1), wm.specularColor = new Tm(0, 0, 0), fm.material = wm
+                  })), sD.forEach(((wD, pD) => {
+                    const sD = wD.getVerticesData("position");
+                    if (sD) {
+                      const KD = [],
+                        rD = sD.length / 3;
+                      for (let DD = 0; DD < rD; DD++) KD.push(1, 1, 1, 1);
+                      wD.setVerticesData("color", KD);
+                      const LD = new DD(`whiteMat_${pD}`, GD);
+                      LD.disableLighting = !0, LD.emissiveColor = new zD(1, 1, 1), LD.specularColor = new zD(0, 0, 0), wD.material = LD
                     }
                   }));
-                  else if (om) {
-                    const fm = qm.activeCamera.position;
-                    let Am = 0,
-                      am = 1 / 0;
-                    hm.forEach((mm => {
-                      const Tm = mm.DH().boundingBox.center,
-                        hm = Rm.TransformCoordinates(Tm, mm.getWorldMatrix()),
-                        xm = fm.subtract(hm).length();
-                      Am = Math.max(Am, xm), am = Math.min(am, xm)
+                  else if (fD) {
+                    const wD = GD.activeCamera.position;
+                    let sD = 0,
+                      KD = 1 / 0;
+                    pD.forEach((DD => {
+                      const zD = DD.FW().boundingBox.center,
+                        pD = RD.TransformCoordinates(zD, DD.getWorldMatrix()),
+                        rD = wD.subtract(pD).length();
+                      sD = Math.max(sD, rD), KD = Math.min(KD, rD)
                     }));
-                    const xm = Am - am;
-                    Am += .1 * xm, am = Math.max(0, am - .1 * xm), xm < 1 && (Am = am + 10), Km.forEach(((hm, xm) => {
-                      const wm = hm.name.toLowerCase(),
-                        Dm = hm.DH().boundingBox.center,
-                        im = Rm.TransformCoordinates(Dm, hm.getWorldMatrix()),
-                        pm = fm.subtract(im).length();
-                      if (!(wm.includes("sky") || wm.includes("background") || wm.includes("environment") || pm > 1e3)) {
-                        const fm = 1 - Math.min(Math.max((pm - am) / (Am - am), 0), 1),
-                          wm = new mm(`depthMat_${xm}`, qm);
-                        wm.diffuseColor = new Tm(fm, fm, fm), wm.specularColor = new Tm(0, 0, 0), hm.material = wm
+                    const rD = sD - KD;
+                    sD += .1 * rD, KD = Math.max(0, KD - .1 * rD), rD < 1 && (sD = KD + 10), OD.forEach(((pD, rD) => {
+                      const LD = pD.name.toLowerCase(),
+                        cD = pD.FW().boundingBox.center,
+                        gD = RD.TransformCoordinates(cD, pD.getWorldMatrix()),
+                        AD = wD.subtract(gD).length();
+                      if (!(LD.includes("sky") || LD.includes("background") || LD.includes("environment") || AD > 1e3)) {
+                        const wD = 1 - Math.min(Math.max((AD - KD) / (sD - KD), 0), 1),
+                          LD = new DD(`depthMat_${rD}`, GD);
+                        LD.diffuseColor = new zD(wD, wD, wD), LD.specularColor = new zD(0, 0, 0), pD.material = LD
                       }
                     }))
                   }
-                })().then((() => Promise.all([fm.e(232), fm.e(231), fm.e(254), fm.e(255), fm.e(252), fm.e(262), fm.e(256), fm.e(261), fm.e(259), fm.e(251), fm.e(264), fm.e(274), fm.e(311), fm.e(244), fm.e(263), fm.e(230)]).then((() => fm(61344))))).then((Tm => Tm.GLTF2Export.GLBAsync(qm, mm))).then((mm => {
-                  Jm(), mm.downloadFiles(), Tm()
-                })).catch((mm => {
-                  console.error("Error exporting GLB:", mm), Jm(), Tm()
+                })().then((() => Promise.all([wD.e(232), wD.e(231), wD.e(254), wD.e(255), wD.e(252), wD.e(262), wD.e(256), wD.e(261), wD.e(259), wD.e(251), wD.e(264), wD.e(274), wD.e(311), wD.e(244), wD.e(263), wD.e(230)]).then((() => wD(61046))))).then((zD => zD.GLTF2Export.GLBAsync(GD, DD))).then((DD => {
+                  QD(), DD.downloadFiles(), zD()
+                })).catch((DD => {
+                  console.error("Error exporting GLB:", DD), QD(), zD()
                 }))
-              }), 100) : Promise.all([fm.e(232), fm.e(231), fm.e(254), fm.e(255), fm.e(252), fm.e(262), fm.e(256), fm.e(261), fm.e(259), fm.e(251), fm.e(264), fm.e(274), fm.e(311), fm.e(244), fm.e(263), fm.e(230)]).then((() => fm(61344))).then((fm => {
-                fm.GLTF2Export.GLBAsync(qm, mm).then((mm => {
-                  Jm(), mm.downloadFiles(), Tm()
-                })).catch((mm => {
-                  console.error("Error exporting GLB:", mm), Jm(), Tm()
+              }), 100) : Promise.all([wD.e(232), wD.e(231), wD.e(254), wD.e(255), wD.e(252), wD.e(262), wD.e(256), wD.e(261), wD.e(259), wD.e(251), wD.e(264), wD.e(274), wD.e(311), wD.e(244), wD.e(263), wD.e(230)]).then((() => wD(61046))).then((wD => {
+                wD.GLTF2Export.GLBAsync(GD, DD).then((DD => {
+                  QD(), DD.downloadFiles(), zD()
+                })).catch((DD => {
+                  console.error("Error exporting GLB:", DD), QD(), zD()
                 }))
-              })).catch((mm => {
-                console.error("Error importing serializers:", mm), Jm(), Tm()
+              })).catch((DD => {
+                console.error("Error importing serializers:", DD), QD(), zD()
               }))
             }
-          })).catch((mm => {
-            console.error("Error downloading the scene:", mm), Tm()
+          })).catch((DD => {
+            console.error("Error downloading the scene:", DD), zD()
           }))
-        } catch (Om) {
-          console.error("Error taking screenshot:", Om), Tm()
+        } catch (ID) {
+          console.error("Error taking screenshot:", ID), zD()
         }
       }))
     }
-    const pm = new class {
+    const AD = new class {
       constructor() {
-        this.tools = im.ALL_DEV_TOOLS
+        this.tools = gD.ALL_DEV_TOOLS
       }
-      downloadScene(mm, Tm) {
-        return Rm(mm, Tm)
+      downloadScene(DD, zD) {
+        return RD(DD, zD)
       }
-      async setAmbientLightIntensity(mm) {
+      async setAmbientLightIntensity(DD) {
         const {
-          Color3: Tm
-        } = await Promise.all([fm.e(232), fm.e(235)]).then((() => fm(37330)));
-        (0, am.d)().qY.wG().ambientColor = Tm.FromArray([mm, mm, mm])
+          Color3: zD
+        } = await Promise.all([wD.e(232), wD.e(235)]).then((() => wD(37267)));
+        (0, KD.e)().wB.Ul().ambientColor = zD.FromArray([DD, DD, DD])
       }
-      capturePhoto(mm, Tm, fm) {
-        return function(mm, Tm, fm, hm) {
-          return (0, wm.d)(Dm(mm), Tm, fm, hm)
-        }((0, am.d)(), mm, Tm, fm)
+      capturePhoto(DD, zD, wD) {
+        return function(DD, zD, wD, pD) {
+          return (0, LD.c)(cD(DD), zD, wD, pD)
+        }((0, KD.e)(), DD, zD, wD)
       }
     }
   },
-  41049: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      d: () => wm,
-      f: () => Dm
+  40889: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => LD,
+      g: () => cD
     });
-    var hm = fm(1730);
-    const Am = 33177600,
-      am = 3e4;
-    let xm = !1;
+    var pD = wD(1753);
+    const sD = 33177600,
+      KD = 3e4;
+    let rD = !1;
 
-    function wm(mm, Tm, fm) {
-      let hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    function LD(DD, zD, wD) {
+      let pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
       const {
-        scale: wm = 1,
-        type: Dm = "image/png",
-        quality: im
-      } = hm;
-      if (!mm.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
-      if (xm) return Promise.reject(new Error("A screenshot is already being taken"));
-      xm = !0;
-      const Rm = function(mm, Tm, fm) {
-        const hm = Math.max(1, mm),
-          am = Math.max(1, Tm),
-          xm = Math.min(1, fm / Math.max(hm, am), Math.sqrt(Am / (hm * am)));
+        scale: LD = 1,
+        type: cD = "image/png",
+        quality: gD
+      } = pD;
+      if (!DD.drawing()) return Promise.reject(new Error("Screenshots need a game to be running"));
+      if (rD) return Promise.reject(new Error("A screenshot is already being taken"));
+      rD = !0;
+      const RD = function(DD, zD, wD) {
+        const pD = Math.max(1, DD),
+          KD = Math.max(1, zD),
+          rD = Math.min(1, wD / Math.max(pD, KD), Math.sqrt(sD / (pD * KD)));
         return {
-          width: Math.max(1, Math.floor(hm * xm)),
-          height: Math.max(1, Math.floor(am * xm))
+          width: Math.max(1, Math.floor(pD * rD)),
+          height: Math.max(1, Math.floor(KD * rD))
         }
-      }(Tm, fm, mm.maxTextureSize);
-      return mm.resize(Rm.width, Rm.height, wm * Rm.width / Math.max(1, Tm)), new Promise(((Tm, fm) => {
-        let hm, Am = 2,
-          wm = null;
-        const Rm = () => {
-          var Tm;
-          xm = !1, null === (Tm = wm) || void 0 === Tm || Tm(), clearTimeout(hm), mm.restoreSize()
+      }(zD, wD, DD.maxTextureSize);
+      return DD.resize(RD.width, RD.height, LD * RD.width / Math.max(1, zD)), new Promise(((zD, wD) => {
+        let pD, sD = 2,
+          LD = null;
+        const RD = () => {
+          var zD;
+          rD = !1, null === (zD = LD) || void 0 === zD || zD(), clearTimeout(pD), DD.restoreSize()
         };
-        hm = setTimeout((() => {
-          Rm(), fm(new Error("No frame was drawn to capture"))
-        }), am), wm = mm.onFrameDrawn((() => {
-          if (Am--, Am > 0) return;
+        pD = setTimeout((() => {
+          RD(), wD(new Error("No frame was drawn to capture"))
+        }), KD), LD = DD.onFrameDrawn((() => {
+          if (sD--, sD > 0) return;
           const {
-            canvas: hm
-          } = mm, am = {
-            width: hm.width,
-            height: hm.height
+            canvas: pD
+          } = DD, KD = {
+            width: pD.width,
+            height: pD.height
           };
           try {
-            hm.toBlob((mm => {
-              mm ? Tm({
-                blob: mm,
-                ...am
-              }) : fm(new Error("The canvas gave no image"))
-            }), Dm, im)
-          } catch (xm) {
-            fm(xm)
+            pD.toBlob((DD => {
+              DD ? zD({
+                blob: DD,
+                ...KD
+              }) : wD(new Error("The canvas gave no image"))
+            }), cD, gD)
+          } catch (rD) {
+            wD(rD)
           } finally {
-            Rm()
+            RD()
           }
         }))
       }))
     }
-    async function Dm(mm, Tm, fm) {
+    async function cD(DD, zD, wD) {
       try {
-        const Am = await wm(mm, Tm, fm);
-        (0, hm.c)(Am.blob, `bloxd-screenshot-${Am.width}x${Am.height}-${Date.now()}.png`)
-      } catch (Am) {
-        console.error("Error taking screenshot:", Am)
+        const sD = await LD(DD, zD, wD);
+        (0, pD.b)(sD.blob, `bloxd-screenshot-${sD.width}x${sD.height}-${Date.now()}.png`)
+      } catch (sD) {
+        console.error("Error taking screenshot:", sD)
       }
     }
   },
-  37630: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => im,
-      h: () => wm,
-      j: () => xm
+  37543: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => gD,
+      g: () => LD,
+      i: () => rD
     });
-    var hm = fm(37623),
-      Am = fm(37637);
-    let am = 0;
+    var pD = wD(37535),
+      sD = wD(37550);
+    let KD = 0;
 
-    function xm(mm, Tm) {
-      const fm = mm;
-      fm._noaFaceGroups = null !== Tm && void 0 !== Tm ? Tm : null, fm._noaFaceEpoch = -1, fm._noaFaceMask = -1, fm._noaFaceCount = -1, fm._noaFaceMaterial = null;
-      const hm = mm.jK;
-      hm && 1 === hm.length && (hm[0].indexStart = 0, hm[0].indexCount = mm.getTotalIndices())
+    function rD(DD, zD) {
+      const wD = DD;
+      wD._noaFaceGroups = null !== zD && void 0 !== zD ? zD : null, wD._noaFaceEpoch = -1, wD._noaFaceMask = -1, wD._noaFaceCount = -1, wD._noaFaceMaterial = null;
+      const pD = DD.QE;
+      pD && 1 === pD.length && (pD[0].indexStart = 0, pD[0].indexCount = DD.getTotalIndices())
     }
 
-    function wm(mm, Tm) {
-      if (Tm) {
-        am++;
-        for (const Tm of mm) {
-          const mm = Tm._noaFaceGroups;
-          mm && xm(Tm, mm)
+    function LD(DD, zD) {
+      if (zD) {
+        KD++;
+        for (const zD of DD) {
+          const DD = zD._noaFaceGroups;
+          DD && rD(zD, DD)
         }
-      } else am = Math.max(0, am - 1)
+      } else KD = Math.max(0, KD - 1)
     }
 
-    function Dm(mm, Tm, fm) {
-      let Am = -1,
-        am = 0;
-      for (let xm = 0; xm < hm.f; xm++) {
-        const fm = mm[xm],
-          wm = mm[xm + 1];
-        wm > fm && Tm & 1 << hm.e[xm] && (Am < 0 && (Am = fm), am = wm)
+    function cD(DD, zD, wD) {
+      let sD = -1,
+        KD = 0;
+      for (let rD = 0; rD < pD.e; rD++) {
+        const wD = DD[rD],
+          LD = DD[rD + 1];
+        LD > wD && zD & 1 << pD.c[rD] && (sD < 0 && (sD = wD), KD = LD)
       }
-      return Am < 0 ? (fm[0] = 0, fm[1] = 0, 0) : (fm[0] = Am, fm[1] = am - Am, am - Am)
+      return sD < 0 ? (wD[0] = 0, wD[1] = 0, 0) : (wD[0] = sD, wD[1] = KD - sD, KD - sD)
     }
-    class im {
-      constructor(mm, Tm) {
-        this.MO = mm, this.engine = Tm, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
+    class gD {
+      constructor(DD, zD) {
+        this.CI = DD, this.engine = zD, this.epoch = 0, this.eyeX = NaN, this.eyeY = NaN, this.eyeZ = NaN, this.focalPx = NaN, this.culling = !1, this.range = new Int32Array(2)
       }
-      apply(mm, Tm) {
-        if (!Tm) return;
-        const fm = Tm.getProjectionMatrix().m,
-          xm = 0 === am && 0 === fm[15],
-          wm = Tm.globalPosition,
+      apply(DD, zD) {
+        if (!zD) return;
+        const wD = zD.getProjectionMatrix().m,
+          rD = 0 === KD && 0 === wD[15],
+          LD = zD.globalPosition,
           {
-            engine: im
+            engine: gD
           } = this,
-          Rm = xm ? (0, Am.b)(fm, im.getRenderWidth(), im.getRenderHeight()) : 0;
-        wm.x === this.eyeX && wm.y === this.eyeY && wm.z === this.eyeZ && Rm === this.focalPx && xm === this.culling || (this.epoch++, this.eyeX = wm.x, this.eyeY = wm.y, this.eyeZ = wm.z, this.focalPx = Rm, this.culling = xm);
+          RD = rD ? (0, sD.e)(wD, gD.getRenderWidth(), gD.getRenderHeight()) : 0;
+        LD.x === this.eyeX && LD.y === this.eyeY && LD.z === this.eyeZ && RD === this.focalPx && rD === this.culling || (this.epoch++, this.eyeX = LD.x, this.eyeY = LD.y, this.eyeZ = LD.z, this.focalPx = RD, this.culling = rD);
         const {
-          epoch: pm,
-          range: Em
-        } = this, om = this.MO / 2, Om = om * Math.sqrt(3), Ym = mm.data, qm = mm.length;
-        let jm = 0;
-        for (let am = 0; am < qm; am++) {
-          const mm = Ym[am],
-            Tm = mm._noaFaceGroups;
-          if (Tm && (mm._noaFaceEpoch !== pm || mm._noaFaceMaterial !== mm.material)) {
-            mm._noaFaceEpoch = pm, mm._noaFaceMaterial = mm.material;
-            const fm = mm.jK,
-              am = fm && 1 === fm.length ? fm[0] : null;
-            let im = -1;
-            if (xm && am && (0, hm.s)(mm.material)) {
-              const fm = mm.position,
-                hm = wm.x - fm.x,
-                am = wm.y - fm.y,
-                xm = wm.z - fm.z,
-                Dm = hm - om,
-                pm = am - om,
-                Em = xm - om,
-                Ym = Math.sqrt(Dm * Dm + pm * pm + Em * Em) + Om;
-              im = (0, Am.k)(Tm, hm, am, xm, (0, Am.d)(Ym, Rm))
+          epoch: AD,
+          range: UD
+        } = this, fD = this.CI / 2, ID = fD * Math.sqrt(3), BD = DD.data, GD = DD.length;
+        let hD = 0;
+        for (let KD = 0; KD < GD; KD++) {
+          const DD = BD[KD],
+            zD = DD._noaFaceGroups;
+          if (zD && (DD._noaFaceEpoch !== AD || DD._noaFaceMaterial !== DD.material)) {
+            DD._noaFaceEpoch = AD, DD._noaFaceMaterial = DD.material;
+            const wD = DD.QE,
+              KD = wD && 1 === wD.length ? wD[0] : null;
+            let gD = -1;
+            if (rD && KD && (0, pD.q)(DD.material)) {
+              const wD = DD.position,
+                pD = LD.x - wD.x,
+                KD = LD.y - wD.y,
+                rD = LD.z - wD.z,
+                cD = pD - fD,
+                AD = KD - fD,
+                UD = rD - fD,
+                BD = Math.sqrt(cD * cD + AD * AD + UD * UD) + ID;
+              gD = (0, sD.k)(zD, pD, KD, rD, (0, sD.f)(BD, RD))
             }
-            if (am && im !== mm._noaFaceMask) {
-              mm._noaFaceMask = im;
-              let fm = 0,
-                Am = Tm[hm.f]; - 1 !== im && (Am = Dm(Tm, im, Em), fm = Em[0]), mm._noaFaceCount = Am, am.indexStart = 6 * fm, am.indexCount = 6 * Am, am.setBoundingInfo(mm.DH())
+            if (KD && gD !== DD._noaFaceMask) {
+              DD._noaFaceMask = gD;
+              let wD = 0,
+                sD = zD[pD.e]; - 1 !== gD && (sD = cD(zD, gD, UD), wD = UD[0]), DD._noaFaceCount = sD, KD.indexStart = 6 * wD, KD.indexCount = 6 * sD, KD.setBoundingInfo(DD.FW())
             }
           }
-          Tm && 0 === mm._noaFaceCount || (Ym[jm++] = mm)
+          zD && 0 === DD._noaFaceCount || (BD[hD++] = DD)
         }
-        mm.length = jm
+        DD.length = hD
       }
     }
   },
-  37610: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      c: () => Dm,
-      g: () => wm
+  37527: (DD, zD, wD) => {
+    wD.d(zD, {
+      b: () => cD,
+      f: () => LD
     });
-    const hm = new WeakSet;
-    let Am = 0;
-    const am = new Set;
+    const pD = new WeakSet;
+    let sD = 0;
+    const KD = new Set;
 
-    function xm(mm, Tm) {
-      mm._data = Tm
+    function rD(DD, zD) {
+      DD._data = zD
     }
 
-    function wm(mm) {
-      var Tm, fm;
-      (null !== (Tm = null === (fm = mm.getBuffer()) || void 0 === fm ? void 0 : fm.yp) && void 0 !== Tm ? Tm : 0) > 0 && (hm.add(mm), 0 === Am ? xm(mm, null) : am.add(mm))
+    function LD(DD) {
+      var zD, wD;
+      (null !== (zD = null === (wD = DD.getBuffer()) || void 0 === wD ? void 0 : wD.bA) && void 0 !== zD ? zD : 0) > 0 && (pD.add(DD), 0 === sD ? rD(DD, null) : KD.add(DD))
     }
 
-    function Dm(mm) {
-      Am++;
-      for (const fm of function(mm) {
-          const Tm = new Set;
-          for (const Am of mm) {
-            const mm = Am.geometry;
-            for (const Am of Object.values(null !== (fm = null === mm || void 0 === mm ? void 0 : mm.getVertexBuffers()) && void 0 !== fm ? fm : {})) {
-              var fm;
-              const mm = Am.getWrapperBuffer();
-              hm.has(mm) && Tm.add(mm)
+    function cD(DD) {
+      sD++;
+      for (const wD of function(DD) {
+          const zD = new Set;
+          for (const sD of DD) {
+            const DD = sD.geometry;
+            for (const sD of Object.values(null !== (wD = null === DD || void 0 === DD ? void 0 : DD.getVertexBuffers()) && void 0 !== wD ? wD : {})) {
+              var wD;
+              const DD = sD.getWrapperBuffer();
+              pD.has(DD) && zD.add(DD)
             }
           }
-          return Tm
-        }(mm)) fm.getData() || im(fm), am.add(fm);
-      let Tm = !0;
+          return zD
+        }(DD)) wD.getData() || gD(wD), KD.add(wD);
+      let zD = !0;
       return () => {
-        if (Tm && (Tm = !1, Am--, 0 === Am)) {
-          for (const mm of am) xm(mm, null);
-          am.clear()
+        if (zD && (zD = !1, sD--, 0 === sD)) {
+          for (const DD of KD) rD(DD, null);
+          KD.clear()
         }
       }
     }
 
-    function im(mm) {
-      const Tm = mm.getBuffer();
-      if (!Tm || !(Tm.yp > 0)) return;
-      const fm = mm._engine,
-        hm = new Uint8Array(Tm.yp);
-      fm.bindArrayBuffer(Tm), fm._gl.getBufferSubData(fm._gl.ARRAY_BUFFER, 0, hm), fm._resetVertexBufferBinding(), xm(mm, hm)
+    function gD(DD) {
+      const zD = DD.getBuffer();
+      if (!zD || !(zD.bA > 0)) return;
+      const wD = DD._engine,
+        pD = new Uint8Array(zD.bA);
+      wD.bindArrayBuffer(zD), wD._gl.getBufferSubData(wD._gl.ARRAY_BUFFER, 0, pD), wD._resetVertexBufferBinding(), rD(DD, pD)
     }
   },
-  37623: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => xm,
-      f: () => am,
-      h: () => Dm,
-      l: () => hm,
-      m: () => wm,
-      q: () => Am,
-      s: () => im
+  37535: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => rD,
+      e: () => KD,
+      g: () => cD,
+      j: () => pD,
+      k: () => LD,
+      o: () => sD,
+      q: () => gD
     });
-    const hm = 6,
-      Am = [0, 2, 4, 1, 3, 5, 0, 2],
-      am = 6,
-      xm = [1, 0, 3, 2, 5, 4];
-    for (let Rm = am; Rm < Am.length; Rm++)
-      if (Am[Rm] !== Am[Rm - am]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
-    const wm = Am.length + 1,
-      Dm = (() => {
-        const mm = [];
-        for (let Tm = 0; Tm < am; Tm++) mm[Am[Tm]] = Tm;
-        return mm
+    const pD = 6,
+      sD = [0, 2, 4, 1, 3, 5, 0, 2],
+      KD = 6,
+      rD = [1, 0, 3, 2, 5, 4];
+    for (let RD = KD; RD < sD.length; RD++)
+      if (sD[RD] !== sD[RD - KD]) throw new Error("FACE_LAYOUT must repeat a prefix of its base groups");
+    const LD = sD.length + 1,
+      cD = (() => {
+        const DD = [];
+        for (let zD = 0; zD < KD; zD++) DD[sD[zD]] = zD;
+        return DD
       })();
 
-    function im(mm) {
-      return !!mm && mm.backFaceCulling && (0 === mm.transparencyMode || 1 === mm.transparencyMode)
+    function gD(DD) {
+      return !!DD && DD.backFaceCulling && (0 === DD.transparencyMode || 1 === DD.transparencyMode)
     }
   },
-  37637: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      b: () => wm,
-      d: () => Dm,
-      g: () => Rm,
-      k: () => im,
-      l: () => Om
+  37550: (DD, zD, wD) => {
+    wD.d(zD, {
+      e: () => LD,
+      f: () => cD,
+      j: () => RD,
+      k: () => gD,
+      m: () => ID
     });
-    var hm = fm(37623);
-    const Am = 1 / 16,
-      am = 1 / 64,
-      xm = 2048;
-    hm.l;
+    var pD = wD(37535);
+    const sD = 1 / 16,
+      KD = 1 / 64,
+      rD = 2048;
+    pD.j;
 
-    function wm(mm, Tm, fm) {
-      return Math.min(Math.abs(mm[0] * Tm), Math.abs(mm[5] * fm)) / 2
+    function LD(DD, zD, wD) {
+      return Math.min(Math.abs(DD[0] * zD), Math.abs(DD[5] * wD)) / 2
     }
 
-    function Dm(mm, Tm) {
-      return Am + am * mm * mm / Tm
+    function cD(DD, zD) {
+      return sD + KD * DD * DD / zD
     }
 
-    function im(mm, Tm, fm, Am, am) {
-      const xm = hm.m;
-      return Rm(mm[xm], mm[xm + 1], mm[xm + 2], mm[xm + 3], mm[xm + 4], mm[xm + 5], Tm, fm, Am, am)
+    function gD(DD, zD, wD, sD, KD) {
+      const rD = pD.k;
+      return RD(DD[rD], DD[rD + 1], DD[rD + 2], DD[rD + 3], DD[rD + 4], DD[rD + 5], zD, wD, sD, KD)
     }
 
-    function Rm(mm, Tm, fm, hm, Am, am, xm, wm, Dm, im) {
-      return (xm <= mm - im ? 0 : 1) | (xm >= Tm + im ? 0 : 2) | (wm <= fm - im ? 0 : 4) | (wm >= hm + im ? 0 : 8) | (Dm <= Am - im ? 0 : 16) | (Dm >= am + im ? 0 : 32)
+    function RD(DD, zD, wD, pD, sD, KD, rD, LD, cD, gD) {
+      return (rD <= DD - gD ? 0 : 1) | (rD >= zD + gD ? 0 : 2) | (LD <= wD - gD ? 0 : 4) | (LD >= pD + gD ? 0 : 8) | (cD <= sD - gD ? 0 : 16) | (cD >= KD + gD ? 0 : 32)
     }
-    const pm = (() => {
-        const mm = [];
-        for (let Tm = 0; Tm < hm.q.length; Tm++) {
-          let fm = 0;
-          for (let Am = Tm + 1; Am <= hm.q.length; Am++) {
-            const am = 1 << hm.q[Am - 1];
-            if (fm & am) break;
-            fm |= am, mm.push({
-              start: Tm,
-              end: Am,
-              mA: fm
+    const AD = (() => {
+        const DD = [];
+        for (let zD = 0; zD < pD.o.length; zD++) {
+          let wD = 0;
+          for (let sD = zD + 1; sD <= pD.o.length; sD++) {
+            const KD = 1 << pD.o[sD - 1];
+            if (wD & KD) break;
+            wD |= KD, DD.push({
+              start: zD,
+              end: sD,
+              Yp: wD
             })
           }
         }
-        return mm
+        return DD
       })(),
-      Em = [];
+      UD = [];
 
-    function om(mm, Tm) {
-      const fm = hm.h[Tm];
-      return mm[fm + 1] - mm[fm]
+    function fD(DD, zD) {
+      const wD = pD.g[zD];
+      return DD[wD + 1] - DD[wD]
     }
 
-    function Om(mm, Tm, fm) {
-      let Am = 0;
-      for (let xm = 0; xm < hm.l; xm++) om(mm, xm) > 0 && (Am |= 1 << xm);
-      if (0 === (Tm &= Am)) return 0;
-      if (Tm === Am) return fm[0] = 0, fm[1] = mm[hm.f], 1;
-      let am = null,
-        wm = 1 / 0;
-      for (const im of function(mm) {
-          let Tm = Em[mm];
-          if (Tm) return Tm;
-          const fm = new Map,
-            hm = (mm, Tm) => {
-              const hm = 4 * mm + Tm.length / 2;
-              fm.has(hm) || fm.set(hm, {
-                mA: mm,
-                windows: Tm
+    function ID(DD, zD, wD) {
+      let sD = 0;
+      for (let rD = 0; rD < pD.j; rD++) fD(DD, rD) > 0 && (sD |= 1 << rD);
+      if (0 === (zD &= sD)) return 0;
+      if (zD === sD) return wD[0] = 0, wD[1] = DD[pD.e], 1;
+      let KD = null,
+        LD = 1 / 0;
+      for (const gD of function(DD) {
+          let zD = UD[DD];
+          if (zD) return zD;
+          const wD = new Map,
+            pD = (DD, zD) => {
+              const pD = 4 * DD + zD.length / 2;
+              wD.has(pD) || wD.set(pD, {
+                Yp: DD,
+                windows: zD
               })
             };
-          for (const am of pm)
-            if ((am.mA & mm) === mm && hm(am.mA, [am.start, am.end]), 0 !== (am.mA & mm))
-              for (const Tm of pm) Tm.start < am.end || 0 !== (am.mA & Tm.mA) || 0 === (Tm.mA & mm) || ((am.mA | Tm.mA) & mm) !== mm || hm(am.mA | Tm.mA, [am.start, am.end, Tm.start, Tm.end]);
-          const Am = [...fm.values()];
-          return Tm = Am.filter((mm => !Am.some((Tm => Tm !== mm && (Tm.mA & mm.mA) === Tm.mA && Tm.windows.length <= mm.windows.length)))), Em[mm] = Tm, Tm
-        }(Tm)) {
-        let fm = (im.windows.length / 2 - 1) * xm;
-        const Dm = im.mA & ~Tm & Am;
-        for (let Tm = 0; Tm < hm.l; Tm++) Dm & 1 << Tm && (fm += om(mm, Tm));
-        fm < wm && (am = im, wm = fm)
+          for (const KD of AD)
+            if ((KD.Yp & DD) === DD && pD(KD.Yp, [KD.start, KD.end]), 0 !== (KD.Yp & DD))
+              for (const zD of AD) zD.start < KD.end || 0 !== (KD.Yp & zD.Yp) || 0 === (zD.Yp & DD) || ((KD.Yp | zD.Yp) & DD) !== DD || pD(KD.Yp | zD.Yp, [KD.start, KD.end, zD.start, zD.end]);
+          const sD = [...wD.values()];
+          return zD = sD.filter((DD => !sD.some((zD => zD !== DD && (zD.Yp & DD.Yp) === zD.Yp && zD.windows.length <= DD.windows.length)))), UD[DD] = zD, zD
+        }(zD)) {
+        let wD = (gD.windows.length / 2 - 1) * rD;
+        const cD = gD.Yp & ~zD & sD;
+        for (let zD = 0; zD < pD.j; zD++) cD & 1 << zD && (wD += fD(DD, zD));
+        wD < LD && (KD = gD, LD = wD)
       }
-      const Dm = am.windows;
-      for (let hm = 0; hm < Dm.length; hm += 2) {
-        const Tm = mm[Dm[hm]];
-        fm[hm] = Tm, fm[hm + 1] = mm[Dm[hm + 1]] - Tm
+      const cD = KD.windows;
+      for (let pD = 0; pD < cD.length; pD += 2) {
+        const zD = DD[cD[pD]];
+        wD[pD] = zD, wD[pD + 1] = DD[cD[pD + 1]] - zD
       }
-      return Dm.length / 2
+      return cD.length / 2
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

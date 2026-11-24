@@ -1,11 +1,11 @@
 export const id = 121;
 export const ids = [121];
 export const modules = {
-  6454: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => hm
+  6523: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => pD
     });
-    const hm = {
+    const pD = {
       canChange: !0,
       blockReach: 6,
       ezBridging: !0,
@@ -159,7 +159,7 @@ export const modules = {
       _health: null,
       _tasks: null,
       _availableLeaderboards: null,
-      _shopVersion: fm(1934).c,
+      _shopVersion: wD(1962).c,
       _pendingSpawn: null,
       _totalMaxHealth: null,
       _ignoreBasicBoards: !0,
@@ -168,4 +168,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

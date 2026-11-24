@@ -1,325 +1,329 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var mm = __webpack_require__.u,
-        Tm = __webpack_require__.e,
-        fm = {},
-        hm = {};
-      __webpack_require__.u = function(Tm) {
-        return mm(Tm) + (fm.hasOwnProperty(Tm) ? "?" + fm[Tm] : "")
-      }, __webpack_require__.e = function(Am) {
-        return Tm(Am).catch((function(Tm) {
-          var am = hm.hasOwnProperty(Am) ? hm[Am] : 4;
-          if (am < 1) {
-            var xm = mm(Am);
-            throw Tm.message = "Loading chunk " + Am + " failed after 4 retries.\n(" + xm + ")", Tm.request = xm, fm[Am] = "cache-bust=" + Date.now(), setTimeout((function() {
-              delete hm[Am]
-            }), 0), Tm
+      var DD = __webpack_require__.u,
+        zD = __webpack_require__.e,
+        wD = {},
+        pD = {};
+      __webpack_require__.u = function(zD) {
+        return DD(zD) + (wD.hasOwnProperty(zD) ? "?" + wD[zD] : "")
+      }, __webpack_require__.e = function(sD) {
+        return zD(sD).catch((function(zD) {
+          var KD = pD.hasOwnProperty(sD) ? pD[sD] : 4;
+          if (KD < 1) {
+            var rD = DD(sD);
+            if (zD.message = "Loading chunk " + sD + " failed after 4 retries.\n(" + rD + ")", zD.request = rD, wD[sD] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete pD[sD]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === zD.code) {
+              var LD = __webpack_require__.miniCssF(sD);
+              zD.message = zD.message.replace("Loading chunk", "Loading CSS chunk").replace(rD, LD), zD.request = LD
+            }
+            throw zD
           }
-          return new Promise((function(mm) {
-            var Tm = 4 - am + 1;
+          return new Promise((function(DD) {
+            var zD = 4 - KD + 1;
             setTimeout((function() {
-              var Tm = "cache-bust=" + Date.now();
-              fm[Am] = Tm, hm[Am] = am - 1, mm(__webpack_require__.e(Am))
-            }), function(mm) {
-              return 500 * Math.pow(2, mm)
-            }(Tm))
+              var zD = "cache-bust=" + Date.now();
+              wD[sD] = zD, pD[sD] = KD - 1, DD(__webpack_require__.e(sD))
+            }), function(DD) {
+              return 500 * Math.pow(2, DD)
+            }(zD))
           }))
         }))
       }
     }
   })();
-  const mm = Math.SQRT1_2,
-    Tm = Math.SQRT1_2 / 2,
-    fm = Math.sqrt(3) / 2,
-    hm = 2 * mm,
-    Am = 2 * Tm + fm;
+  const DD = Math.SQRT1_2,
+    zD = Math.SQRT1_2 / 2,
+    wD = Math.sqrt(3) / 2,
+    pD = 2 * DD,
+    sD = 2 * zD + wD;
 
-  function am(Tm, fm) {
-    const hm = fm > 0 ? fm + 1 : 0,
-      am = .6 * Tm - fm / mm;
-    return Math.max(0, Math.min(am, (Tm - 2 * hm) / Am))
+  function KD(zD, wD) {
+    const pD = wD > 0 ? wD + 1 : 0,
+      KD = .6 * zD - wD / DD;
+    return Math.max(0, Math.min(KD, (zD - 2 * pD) / sD))
   }
-  const xm = [15, 15, 15],
-    wm = {
+  const rD = [15, 15, 15],
+    LD = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function Dm(mm, Tm, fm, xm) {
+  function cD(DD, zD, wD, rD) {
     const {
-      vertices: wm,
-      uvs: Dm,
-      indices: im,
-      shades: Rm
-    } = mm, Em = function(mm, Tm) {
-      const fm = am(mm, Tm),
-        xm = hm * fm,
-        wm = Am * fm;
+      vertices: LD,
+      uvs: cD,
+      indices: gD,
+      shades: RD
+    } = DD, UD = function(DD, zD) {
+      const wD = KD(DD, zD),
+        rD = pD * wD,
+        LD = sD * wD;
       return {
-        left: (mm - xm) / 2,
-        top: (mm - wm) / 2,
-        width: xm,
-        height: wm
+        left: (DD - rD) / 2,
+        top: (DD - LD) / 2,
+        width: rD,
+        height: LD
       }
-    }(fm, xm), om = new Float32Array(wm.length);
-    for (let hm = 0; hm < wm.length; hm += 3) om[hm] = Em.left + wm[hm] * Em.width, om[hm + 1] = Em.top + wm[hm + 1] * Em.height, om[hm + 2] = wm[hm + 2];
-    const Om = new Float32Array(fm * fm).fill(-1 / 0),
-      Ym = new Uint8ClampedArray(fm * fm * 4),
-      qm = 255 * mm.alphaCutoff;
-    for (let hm = 0; hm < im.length; hm += 3) {
-      const [mm, Am, am] = [im[hm], im[hm + 1], im[hm + 2]], [xm, wm, pm] = [3 * mm, 3 * Am, 3 * am], [Em, jm, Vm, Im, Km, Qm] = [om[xm], om[xm + 1], om[wm], om[wm + 1], om[pm], om[pm + 1]], nm = (Vm - Em) * (Qm - jm) - (Km - Em) * (Im - jm);
-      if (Math.abs(nm) < 1e-9) continue;
-      const Jm = Rm[hm / 3],
-        [cm, zm, Zm, km, bm, Sm] = [Dm[2 * mm], Dm[2 * mm + 1], Dm[2 * Am], Dm[2 * Am + 1], Dm[2 * am], Dm[2 * am + 1]],
-        em = Math.max(0, Math.floor(Math.min(Em, Vm, Km))),
-        Nm = Math.min(fm - 1, Math.ceil(Math.max(Em, Vm, Km))),
-        Gm = Math.max(0, Math.floor(Math.min(jm, Im, Qm))),
-        Xm = Math.min(fm - 1, Math.ceil(Math.max(jm, Im, Qm)));
-      for (let hm = Gm; hm <= Xm; hm++)
-        for (let mm = em; mm <= Nm; mm++) {
-          const [Am, am] = [mm + .5, hm + .5], Dm = ((Am - Em) * (Qm - jm) - (Km - Em) * (am - jm)) / nm, im = ((Vm - Em) * (am - jm) - (Am - Em) * (Im - jm)) / nm, Rm = 1 - Dm - im;
-          if (Rm < 0 || Dm < 0 || im < 0) continue;
-          const em = Rm * om[xm + 2] + Dm * om[wm + 2] + im * om[pm + 2],
-            Nm = hm * fm + mm;
-          if (em <= Om[Nm]) continue;
-          const Gm = Math.max(0, Math.min(Tm.width - 1, Math.floor((Rm * cm + Dm * Zm + im * bm) * Tm.width))),
-            Xm = 4 * (Math.max(0, Math.min(Tm.height - 1, Math.floor((Rm * zm + Dm * km + im * Sm) * Tm.height))) * Tm.width + Gm);
-          Tm.pixels[Xm + 3] < qm || (Om[Nm] = em, Ym[4 * Nm] = Tm.pixels[Xm] * Jm, Ym[4 * Nm + 1] = Tm.pixels[Xm + 1] * Jm, Ym[4 * Nm + 2] = Tm.pixels[Xm + 2] * Jm, Ym[4 * Nm + 3] = 255)
+    }(wD, rD), fD = new Float32Array(LD.length);
+    for (let pD = 0; pD < LD.length; pD += 3) fD[pD] = UD.left + LD[pD] * UD.width, fD[pD + 1] = UD.top + LD[pD + 1] * UD.height, fD[pD + 2] = LD[pD + 2];
+    const ID = new Float32Array(wD * wD).fill(-1 / 0),
+      BD = new Uint8ClampedArray(wD * wD * 4),
+      GD = 255 * DD.alphaCutoff;
+    for (let pD = 0; pD < gD.length; pD += 3) {
+      const [DD, sD, KD] = [gD[pD], gD[pD + 1], gD[pD + 2]], [rD, LD, AD] = [3 * DD, 3 * sD, 3 * KD], [UD, hD, nD, MD, OD, JD] = [fD[rD], fD[rD + 1], fD[LD], fD[LD + 1], fD[AD], fD[AD + 1]], ED = (nD - UD) * (JD - hD) - (OD - UD) * (MD - hD);
+      if (Math.abs(ED) < 1e-9) continue;
+      const QD = RD[pD / 3],
+        [XD, VD, PD, CD, xD, TD] = [cD[2 * DD], cD[2 * DD + 1], cD[2 * sD], cD[2 * sD + 1], cD[2 * KD], cD[2 * KD + 1]],
+        bD = Math.max(0, Math.floor(Math.min(UD, nD, OD))),
+        jD = Math.min(wD - 1, Math.ceil(Math.max(UD, nD, OD))),
+        dD = Math.max(0, Math.floor(Math.min(hD, MD, JD))),
+        SD = Math.min(wD - 1, Math.ceil(Math.max(hD, MD, JD)));
+      for (let pD = dD; pD <= SD; pD++)
+        for (let DD = bD; DD <= jD; DD++) {
+          const [sD, KD] = [DD + .5, pD + .5], cD = ((sD - UD) * (JD - hD) - (OD - UD) * (KD - hD)) / ED, gD = ((nD - UD) * (KD - hD) - (sD - UD) * (MD - hD)) / ED, RD = 1 - cD - gD;
+          if (RD < 0 || cD < 0 || gD < 0) continue;
+          const bD = RD * fD[rD + 2] + cD * fD[LD + 2] + gD * fD[AD + 2],
+            jD = pD * wD + DD;
+          if (bD <= ID[jD]) continue;
+          const dD = Math.max(0, Math.min(zD.width - 1, Math.floor((RD * XD + cD * PD + gD * xD) * zD.width))),
+            SD = 4 * (Math.max(0, Math.min(zD.height - 1, Math.floor((RD * VD + cD * CD + gD * TD) * zD.height))) * zD.width + dD);
+          zD.pixels[SD + 3] < GD || (ID[jD] = bD, BD[4 * jD] = zD.pixels[SD] * QD, BD[4 * jD + 1] = zD.pixels[SD + 1] * QD, BD[4 * jD + 2] = zD.pixels[SD + 2] * QD, BD[4 * jD + 3] = 255)
         }
     }
-    return pm(Ym, fm, xm), Ym
+    return AD(BD, wD, rD), BD
   }
-  let im = NaN,
-    Rm = new Int32Array(0);
+  let gD = NaN,
+    RD = new Int32Array(0);
 
-  function pm(mm, Tm, fm) {
-    let hm = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Tm => 0 !== mm[4 * Tm + 3];
-    const Am = new Uint8Array(Tm * Tm);
-    for (let xm = 0; xm < Tm * Tm; xm++) Am[xm] = hm(xm) ? 1 : 0;
-    const am = (mm, fm) => mm >= 0 && fm >= 0 && mm < Tm && fm < Tm && 0 === Am[fm * Tm + mm],
-      wm = new Float32Array(Tm * Tm).fill(1 / 0),
-      Dm = function(mm) {
-        if (mm !== im) {
-          const Tm = Math.ceil(mm + 1),
-            fm = [];
-          for (let hm = -Tm; hm <= Tm; hm++)
-            for (let Am = -Tm; Am <= Tm; Am++) {
-              const Tm = Am * Am + hm * hm;
-              Tm > 0 && Tm < (mm + 1) ** 2 && fm.push(Am, hm, Tm)
+  function AD(DD, zD, wD) {
+    let pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : zD => 0 !== DD[4 * zD + 3];
+    const sD = new Uint8Array(zD * zD);
+    for (let rD = 0; rD < zD * zD; rD++) sD[rD] = pD(rD) ? 1 : 0;
+    const KD = (DD, wD) => DD >= 0 && wD >= 0 && DD < zD && wD < zD && 0 === sD[wD * zD + DD],
+      LD = new Float32Array(zD * zD).fill(1 / 0),
+      cD = function(DD) {
+        if (DD !== gD) {
+          const zD = Math.ceil(DD + 1),
+            wD = [];
+          for (let pD = -zD; pD <= zD; pD++)
+            for (let sD = -zD; sD <= zD; sD++) {
+              const zD = sD * sD + pD * pD;
+              zD > 0 && zD < (DD + 1) ** 2 && wD.push(sD, pD, zD)
             }
-          im = mm, Rm = Int32Array.from(fm)
+          gD = DD, RD = Int32Array.from(wD)
         }
-        return Rm
-      }(fm);
-    for (let xm = 0; xm < Tm; xm++)
-      for (let mm = 0; mm < Tm; mm++) {
-        if (1 === Am[xm * Tm + mm] && (am(mm - 1, xm) || am(mm + 1, xm) || am(mm, xm - 1) || am(mm, xm + 1)))
-          for (let fm = 0; fm < Dm.length; fm += 3) {
-            const hm = mm + Dm[fm],
-              Am = xm + Dm[fm + 1];
-            if (hm >= 0 && Am >= 0 && hm < Tm && Am < Tm) {
-              const mm = Am * Tm + hm;
-              wm[mm] = Math.min(wm[mm], Dm[fm + 2])
+        return RD
+      }(wD);
+    for (let rD = 0; rD < zD; rD++)
+      for (let DD = 0; DD < zD; DD++) {
+        if (1 === sD[rD * zD + DD] && (KD(DD - 1, rD) || KD(DD + 1, rD) || KD(DD, rD - 1) || KD(DD, rD + 1)))
+          for (let wD = 0; wD < cD.length; wD += 3) {
+            const pD = DD + cD[wD],
+              sD = rD + cD[wD + 1];
+            if (pD >= 0 && sD >= 0 && pD < zD && sD < zD) {
+              const DD = sD * zD + pD;
+              LD[DD] = Math.min(LD[DD], cD[wD + 2])
             }
           }
       }
-    for (let im = 0; im < Tm * Tm; im++) 1 !== Am[im] && wm[im] !== 1 / 0 && (mm.set(xm, 4 * im), mm[4 * im + 3] = Math.round(255 * Math.min(1, fm + 1 - Math.sqrt(wm[im]))))
+    for (let gD = 0; gD < zD * zD; gD++) 1 !== sD[gD] && LD[gD] !== 1 / 0 && (DD.set(rD, 4 * gD), DD[4 * gD + 3] = Math.round(255 * Math.min(1, wD + 1 - Math.sqrt(LD[gD]))))
   }
-  const Em = {
+  const UD = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    om = {
+    fD = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    Om = {
+    ID = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const Ym = 1e-6;
+  const BD = 1e-6;
 
-  function qm(mm, Tm, fm, hm) {
+  function GD(DD, zD, wD, pD) {
     let {
-      origin: Am,
-      across: am,
-      down: xm,
-      texture: wm,
-      rect: [Dm, im, Rm, pm],
-      shade: Em
-    } = hm;
-    const om = am.x * xm.y - am.y * xm.x;
-    if (Math.abs(om) < 1e-9) return;
-    const Om = [Am.x, Am.x + am.x, Am.x + xm.x, Am.x + am.x + xm.x],
-      qm = [Am.y, Am.y + am.y, Am.y + xm.y, Am.y + am.y + xm.y],
-      jm = Math.max(0, Math.floor(Math.min(...Om))),
-      Vm = Math.min(fm - 1, Math.ceil(Math.max(...Om))),
-      Im = Math.max(0, Math.floor(Math.min(...qm))),
-      Km = Math.min(fm - 1, Math.ceil(Math.max(...qm)));
-    for (let Qm = Im; Qm <= Km; Qm++)
-      for (let hm = jm; hm <= Vm; hm++) {
-        const Om = hm + .5 - Am.x,
-          qm = Qm + .5 - Am.y,
-          jm = (Om * xm.y - qm * xm.x) / om,
-          Vm = (am.x * qm - am.y * Om) / om;
-        if (jm < -Ym || jm > 1 + Ym || Vm < -Ym || Vm > 1 + Ym) continue;
-        const Im = Qm * fm + hm;
-        Tm[Im] = 1;
-        const Km = Dm + Math.min(Math.max(jm, 0), 1) * (Rm - Dm),
-          nm = im + Math.min(Math.max(Vm, 0), 1) * (pm - im),
-          Jm = Math.min(wm.width - 1, Math.floor(Km * wm.width)),
-          cm = 4 * (Math.min(wm.height - 1, Math.floor(nm * wm.height)) * wm.width + Jm),
-          zm = wm.pixels[cm + 3] / 255;
-        if (0 === zm) continue;
-        const Zm = 4 * Im,
-          km = mm[Zm + 3] / 255 * (1 - zm),
-          bm = zm + km;
-        for (let Tm = 0; Tm < 3; Tm++) mm[Zm + Tm] = (wm.pixels[cm + Tm] * Em * zm + mm[Zm + Tm] * km) / bm;
-        mm[Zm + 3] = 255 * bm
+      origin: sD,
+      across: KD,
+      down: rD,
+      texture: LD,
+      rect: [cD, gD, RD, AD],
+      shade: UD
+    } = pD;
+    const fD = KD.x * rD.y - KD.y * rD.x;
+    if (Math.abs(fD) < 1e-9) return;
+    const ID = [sD.x, sD.x + KD.x, sD.x + rD.x, sD.x + KD.x + rD.x],
+      GD = [sD.y, sD.y + KD.y, sD.y + rD.y, sD.y + KD.y + rD.y],
+      hD = Math.max(0, Math.floor(Math.min(...ID))),
+      nD = Math.min(wD - 1, Math.ceil(Math.max(...ID))),
+      MD = Math.max(0, Math.floor(Math.min(...GD))),
+      OD = Math.min(wD - 1, Math.ceil(Math.max(...GD)));
+    for (let JD = MD; JD <= OD; JD++)
+      for (let pD = hD; pD <= nD; pD++) {
+        const ID = pD + .5 - sD.x,
+          GD = JD + .5 - sD.y,
+          hD = (ID * rD.y - GD * rD.x) / fD,
+          nD = (KD.x * GD - KD.y * ID) / fD;
+        if (hD < -BD || hD > 1 + BD || nD < -BD || nD > 1 + BD) continue;
+        const MD = JD * wD + pD;
+        zD[MD] = 1;
+        const OD = cD + Math.min(Math.max(hD, 0), 1) * (RD - cD),
+          ED = gD + Math.min(Math.max(nD, 0), 1) * (AD - gD),
+          QD = Math.min(LD.width - 1, Math.floor(OD * LD.width)),
+          XD = 4 * (Math.min(LD.height - 1, Math.floor(ED * LD.height)) * LD.width + QD),
+          VD = LD.pixels[XD + 3] / 255;
+        if (0 === VD) continue;
+        const PD = 4 * MD,
+          CD = DD[PD + 3] / 255 * (1 - VD),
+          xD = VD + CD;
+        for (let zD = 0; zD < 3; zD++) DD[PD + zD] = (LD.pixels[XD + zD] * UD * VD + DD[PD + zD] * CD) / xD;
+        DD[PD + 3] = 255 * xD
       }
   }
 
-  function jm(mm, Tm, fm) {
-    const hm = mm.get(Tm);
-    if (void 0 === hm) throw new Error(`no ${fm} was sent for ${Tm.slice(0,100)}`);
-    return hm
+  function hD(DD, zD, wD) {
+    const pD = DD.get(zD);
+    if (void 0 === pD) throw new Error(`no ${wD} was sent for ${zD.slice(0,100)}`);
+    return pD
   }
-  const Vm = {
-      pixelsOf(mm) {
-        const Tm = new OffscreenCanvas(mm.width, mm.height),
-          fm = Tm.getContext("2d");
-        if (!fm) throw new Error("no 2D context");
-        return fm.drawImage(mm, 0, 0), mm.close(), {
-          width: Tm.width,
-          height: Tm.height,
-          pixels: fm.getImageData(0, 0, Tm.width, Tm.height).data
+  const nD = {
+      pixelsOf(DD) {
+        const zD = new OffscreenCanvas(DD.width, DD.height),
+          wD = zD.getContext("2d");
+        if (!wD) throw new Error("no 2D context");
+        return wD.drawImage(DD, 0, 0), DD.close(), {
+          width: zD.width,
+          height: zD.height,
+          pixels: wD.getImageData(0, 0, zD.width, zD.height).data
         }
       },
-      async encode(mm, Tm) {
-        const fm = new OffscreenCanvas(Tm, Tm),
-          hm = fm.getContext("2d");
-        if (!hm) throw new Error("no 2D context");
-        hm.putImageData(new ImageData(mm, Tm, Tm), 0, 0);
-        const Am = await fm.convertToBlob();
-        return new Promise(((mm, Tm) => {
-          const fm = new FileReader;
-          fm.onload = () => {
-            mm(fm.result)
-          }, fm.onerror = () => {
-            var mm;
-            Tm(null !== (mm = fm.error) && void 0 !== mm ? mm : new Error("the icon did not encode"))
-          }, fm.readAsDataURL(Am)
+      async encode(DD, zD) {
+        const wD = new OffscreenCanvas(zD, zD),
+          pD = wD.getContext("2d");
+        if (!pD) throw new Error("no 2D context");
+        pD.putImageData(new ImageData(DD, zD, zD), 0, 0);
+        const sD = await wD.convertToBlob();
+        return new Promise(((DD, zD) => {
+          const wD = new FileReader;
+          wD.onload = () => {
+            DD(wD.result)
+          }, wD.onerror = () => {
+            var DD;
+            zD(null !== (DD = wD.error) && void 0 !== DD ? DD : new Error("the icon did not encode"))
+          }, wD.readAsDataURL(sD)
         }))
       }
     },
-    Im = globalThis.WorkerGlobalScope;
-  void 0 !== Im && globalThis instanceof Im && function(hm, Am) {
-    const xm = new Map,
-      im = new Map,
-      Rm = (mm, Tm, fm) => {
+    MD = globalThis.WorkerGlobalScope;
+  void 0 !== MD && globalThis instanceof MD && function(pD, sD) {
+    const rD = new Map,
+      gD = new Map,
+      RD = (DD, zD, wD) => {
         (async () => {
           try {
-            hm.postMessage({
+            pD.postMessage({
               type: "drawn",
-              id: mm,
-              url: await Am.encode(fm(), Tm)
+              id: DD,
+              url: await sD.encode(wD(), zD)
             })
-          } catch (am) {
-            hm.postMessage({
+          } catch (KD) {
+            pD.postMessage({
               type: "failed",
-              message: String(am)
+              message: String(KD)
             })
           }
         })()
       };
-    hm.onmessage = hm => {
+    pD.onmessage = pD => {
       let {
-        data: Ym
-      } = hm;
-      if ("texture" === Ym.type) xm.set(Ym.url, Am.pixelsOf(Ym.bitmap));
-      else if ("model" === Ym.type) im.set(Ym.name, {
-        geometry: Ym.geometry,
-        texture: Am.pixelsOf(Ym.bitmap)
+        data: BD
+      } = pD;
+      if ("texture" === BD.type) rD.set(BD.url, sD.pixelsOf(BD.bitmap));
+      else if ("model" === BD.type) gD.set(BD.name, {
+        geometry: BD.geometry,
+        texture: sD.pixelsOf(BD.bitmap)
       });
-      else if ("draw" === Ym.type) {
+      else if ("draw" === BD.type) {
         const {
-          id: hm,
-          top: Am,
-          left: Dm,
-          right: im,
-          itemType: Vm,
-          size: Im,
-          outlineWidth: Km
-        } = Ym;
-        Rm(hm, Im, (() => function(hm, Am, xm, Dm) {
-          const im = am(xm, Dm),
-            Rm = im * mm,
-            Em = im * Tm,
-            om = im * fm,
-            Om = Math.max(...Am.boxes.map((mm => mm[4]))),
-            Ym = xm / 2,
-            jm = Em + (xm - Em - Em - Om * om) / 2,
-            Vm = (mm, Tm, fm) => ({
-              x: Ym + (mm - fm) * Rm,
-              y: jm - Em + (mm + fm) * Em + (Om - Tm) * om
+          id: pD,
+          top: sD,
+          left: cD,
+          right: gD,
+          itemType: nD,
+          size: MD,
+          outlineWidth: OD
+        } = BD;
+        RD(pD, MD, (() => function(pD, sD, rD, cD) {
+          const gD = KD(rD, cD),
+            RD = gD * DD,
+            UD = gD * zD,
+            fD = gD * wD,
+            ID = Math.max(...sD.boxes.map((DD => DD[4]))),
+            BD = rD / 2,
+            hD = UD + (rD - UD - UD - ID * fD) / 2,
+            nD = (DD, zD, wD) => ({
+              x: BD + (DD - wD) * RD,
+              y: hD - UD + (DD + wD) * UD + (ID - zD) * fD
             }),
-            Im = (mm, Tm, fm, hm, am, xm) => ({
-              origin: mm,
+            MD = (DD, zD, wD, pD, KD, rD) => ({
+              origin: DD,
               across: {
-                x: Tm.x - mm.x,
-                y: Tm.y - mm.y
+                x: zD.x - DD.x,
+                y: zD.y - DD.y
               },
               down: {
-                x: fm.x - mm.x,
-                y: fm.y - mm.y
+                x: wD.x - DD.x,
+                y: wD.y - DD.y
               },
-              texture: hm,
-              rect: Am.cropFaces ? am : [0, 0, 1, 1],
-              shade: xm
+              texture: pD,
+              rect: sD.cropFaces ? KD : [0, 0, 1, 1],
+              shade: rD
             }),
-            Km = new Uint8ClampedArray(xm * xm * 4),
-            Qm = new Uint8Array(xm * xm),
-            nm = wm;
-          for (const [mm, Tm, fm, am, wm, pm] of Am.boxes) {
-            const Am = Im(Vm(am, wm, pm), Vm(am, wm, fm), Vm(am, Tm, pm), hm.right, [1 - pm, 1 - wm, 1 - fm, 1 - Tm], nm.right),
-              Dm = Im(Vm(mm, wm, pm), Vm(am, wm, pm), Vm(mm, Tm, pm), hm.left, [mm, 1 - wm, am, 1 - Tm], nm.left),
-              im = Im(Vm(mm, wm, fm), Vm(am, wm, fm), Vm(mm, wm, pm), hm.top, [mm, fm, am, pm], nm.top);
-            for (const mm of [Am, Dm, im]) qm(Km, Qm, xm, mm)
+            OD = new Uint8ClampedArray(rD * rD * 4),
+            JD = new Uint8Array(rD * rD),
+            ED = LD;
+          for (const [DD, zD, wD, KD, LD, AD] of sD.boxes) {
+            const sD = MD(nD(KD, LD, AD), nD(KD, LD, wD), nD(KD, zD, AD), pD.right, [1 - AD, 1 - LD, 1 - wD, 1 - zD], ED.right),
+              cD = MD(nD(DD, LD, AD), nD(KD, LD, AD), nD(DD, zD, AD), pD.left, [DD, 1 - LD, KD, 1 - zD], ED.left),
+              gD = MD(nD(DD, LD, wD), nD(KD, LD, wD), nD(DD, LD, AD), pD.top, [DD, wD, KD, AD], ED.top);
+            for (const DD of [sD, cD, gD]) GD(OD, JD, rD, DD)
           }
-          return pm(Km, xm, Dm, (mm => 1 === Qm[mm])), Km
+          return AD(OD, rD, cD, (DD => 1 === JD[DD])), OD
         }({
-          top: jm(xm, Am, "texture"),
-          left: jm(xm, Dm, "texture"),
-          right: jm(xm, im, "texture")
-        }, function(mm) {
-          return "SlabBlock" === mm ? om : "StairsBlock" === mm ? Om : Em
-        }(Vm), Im, Km)))
+          top: hD(rD, sD, "texture"),
+          left: hD(rD, cD, "texture"),
+          right: hD(rD, gD, "texture")
+        }, function(DD) {
+          return "SlabBlock" === DD ? fD : "StairsBlock" === DD ? ID : UD
+        }(nD), MD, OD)))
       } else {
         const {
-          id: mm,
-          name: Tm,
-          size: fm,
-          outlineWidth: hm
-        } = Ym;
-        Rm(mm, fm, (() => {
+          id: DD,
+          name: zD,
+          size: wD,
+          outlineWidth: pD
+        } = BD;
+        RD(DD, wD, (() => {
           const {
-            geometry: mm,
-            texture: Am
-          } = jm(im, Tm, "model");
-          return Dm(mm, Am, fm, hm)
+            geometry: DD,
+            texture: sD
+          } = hD(gD, zD, "model");
+          return cD(DD, sD, wD, pD)
         }))
       }
-    }, hm.postMessage({
+    }, pD.postMessage({
       type: "started"
     })
-  }(globalThis, Vm)
+  }(globalThis, nD)
 })();

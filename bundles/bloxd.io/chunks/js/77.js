@@ -1,509 +1,509 @@
 export const id = 77;
 export const ids = [77];
 export const modules = {
-  4632: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      e: () => MT,
-      g: () => of,
-      i: () => WT,
-      l: () => ff,
-      m: () => UT,
-      p: () => FT,
-      q: () => CT,
-      s: () => LT,
-      u: () => ST,
-      x: () => Ef,
-      z: () => pf,
-      D: () => vT,
-      H: () => yT
+  4722: (DD, zD, wD) => {
+    wD.d(zD, {
+      c: () => kz,
+      e: () => Uw,
+      f: () => Yz,
+      j: () => zw,
+      n: () => vz,
+      q: () => Hz,
+      r: () => Wz,
+      v: () => oz,
+      x: () => xz,
+      B: () => Aw,
+      E: () => Rw,
+      G: () => az,
+      H: () => lz
     });
-    var hm = fm(2873);
-    const Am = Function.prototype.toString,
-      am = RegExp.prototype.exec,
-      xm = Reflect.apply,
-      wm = Function.prototype.call,
-      Dm = Function.prototype.apply,
-      im = Function.prototype.bind,
-      Rm = Object.defineProperty,
-      pm = Uint8Array;
-    let Em, om;
+    var pD = wD(2861);
+    const sD = Function.prototype.toString,
+      KD = RegExp.prototype.exec,
+      rD = Reflect.apply,
+      LD = Function.prototype.call,
+      cD = Function.prototype.apply,
+      gD = Function.prototype.bind,
+      RD = Object.defineProperty,
+      AD = Uint8Array;
+    let UD, fD;
     try {
-      Em = globalThis.crypto, om = void 0 === Em || null === Em ? void 0 : Em.getRandomValues
+      UD = globalThis.crypto, fD = void 0 === UD || null === UD ? void 0 : UD.getRandomValues
     } catch {}
-    const Om = "bloxdBindApply";
-    let Ym;
+    const ID = "bloxdBindApply";
+    let BD;
     try {
-      const mm = wm;
-      Rm(mm, Om, {
+      const DD = LD;
+      RD(DD, ID, {
         __proto__: null,
-        value: im,
+        value: gD,
         configurable: !0
       });
       try {
-        Ym = mm[Om](Dm)
+        BD = DD[ID](cD)
       } finally {
-        delete mm[Om]
+        delete DD[ID]
       }
     } catch {}
-    const qm = 16,
-      jm = 256,
-      Vm = 0,
-      Im = 1,
-      Km = 2,
-      Qm = 3;
-    let nm, Jm = Vm,
-      cm = xm,
-      zm = 0;
+    const GD = 16,
+      hD = 256,
+      nD = 0,
+      MD = 1,
+      OD = 2,
+      JD = 3;
+    let ED, QD = nD,
+      XD = rD,
+      VD = 0;
 
-    function Zm(mm, Tm) {
-      return mm === `function ${Tm}() { [native code] }` || mm === `function ${Tm}() {\n    [native code]\n}`
+    function PD(DD, zD) {
+      return DD === `function ${zD}() { [native code] }` || DD === `function ${zD}() {\n    [native code]\n}`
     }
-    const km = 0,
-      bm = 1,
-      Sm = 2;
-    let em = km;
+    const CD = 0,
+      xD = 1,
+      TD = 2;
+    let bD = CD;
 
-    function Nm(mm, Tm, fm) {
-      if (em === Sm && Jm === Im && ! function() {
-          const mm = nm;
-          return zm >= jm && (cm(om, Em, [mm]), zm = 0), mm[zm++] < 256 / qm
-        }()) return function(mm, Tm, fm) {
-        return cm(mm, Tm, fm ?? 0)
+    function jD(DD, zD, wD) {
+      if (bD === TD && QD === MD && ! function() {
+          const DD = ED;
+          return VD >= hD && (XD(fD, UD, [DD]), VD = 0), DD[VD++] < 256 / GD
+        }()) return function(DD, zD, wD) {
+        return XD(DD, zD, wD ?? 0)
       }(...arguments);
-      if (em === km || Jm === Km) return xm(mm, Tm, fm);
-      let hm;
-      em = km;
+      if (bD === CD || QD === OD) return rD(DD, zD, wD);
+      let pD;
+      bD = CD;
       try {
-        Jm === Vm && (Jm = Qm, Jm = function() {
-          const mm = xm(Am, xm, []);
-          if (Zm(mm, "apply")) return Km;
-          if (null === xm(am, /\(\.\.\.arguments\)/, [mm]) && null === xm(am, /^function\s*\(\.\.\.[\w$]+\)/, [mm])) return Km;
-          if ("function" !== typeof Ym || "function" !== typeof wm || "function" !== typeof Dm || "function" !== typeof im || "function" !== typeof Rm || "function" !== typeof om || "function" !== typeof pm || !Zm(xm(Am, wm, []), "call") || !Zm(xm(Am, Dm, []), "apply") || !Zm(xm(Am, im, []), "bind") || !Zm(xm(Am, Rm, []), "defineProperty") || !Zm(xm(Am, om, []), "getRandomValues") || !Zm(xm(Am, pm, []), "Uint8Array")) return Km;
-          const Tm = Ym,
-            fm = {},
-            hm = function(mm) {
-              return this === fm && mm === fm
+        QD === nD && (QD = JD, QD = function() {
+          const DD = rD(sD, rD, []);
+          if (PD(DD, "apply")) return OD;
+          if (null === rD(KD, /\(\.\.\.arguments\)/, [DD]) && null === rD(KD, /^function\s*\(\.\.\.[\w$]+\)/, [DD])) return OD;
+          if ("function" !== typeof BD || "function" !== typeof LD || "function" !== typeof cD || "function" !== typeof gD || "function" !== typeof RD || "function" !== typeof fD || "function" !== typeof AD || !PD(rD(sD, LD, []), "call") || !PD(rD(sD, cD, []), "apply") || !PD(rD(sD, gD, []), "bind") || !PD(rD(sD, RD, []), "defineProperty") || !PD(rD(sD, fD, []), "getRandomValues") || !PD(rD(sD, AD, []), "Uint8Array")) return OD;
+          const zD = BD,
+            wD = {},
+            pD = function(DD) {
+              return this === wD && DD === wD
             };
           try {
-            if (!0 !== Tm(hm, fm, [fm])) return Km;
-            const mm = new pm(jm);
-            Tm(om, Em, [mm]), nm = mm
+            if (!0 !== zD(pD, wD, [wD])) return OD;
+            const DD = new AD(hD);
+            zD(fD, UD, [DD]), ED = DD
           } catch {
-            return Km
+            return OD
           }
-          return cm = Tm, Im
-        }()), hm = xm(mm, Tm, fm)
-      } catch (Om) {
-        throw Jm = Km, Om
+          return XD = zD, MD
+        }()), pD = rD(DD, zD, wD)
+      } catch (ID) {
+        throw QD = OD, ID
       }
-      return em = Sm, hm
+      return bD = TD, pD
     }
-    let Gm = xm;
+    let dD = rD;
 
-    function Xm() {
-      return (Gm === xm ? 0 : 3) + em
-    }
-
-    function Pm() {
-      const mm = Xm();
-      return Gm = xm, mm
+    function SD() {
+      return (dD === rD ? 0 : 3) + bD
     }
 
-    function Hm(mm) {
-      Gm = mm >= 3 ? Nm : xm, em = mm % 3
-    }
-    const ym = Function.prototype.toString,
-      Cm = Object.getOwnPropertyDescriptor,
-      rm = Object.prototype.hasOwnProperty,
-      sm = RegExp.prototype.exec,
-      lm = TextEncoder.prototype.encodeInto,
-      Mm = String.prototype.startsWith,
-      um = Number.prototype.toString,
-      Bm = WeakMap.prototype.get,
-      Lm = WeakMap.prototype.set,
-      tm = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
-      Um = new TextEncoder,
-      dm = new Uint8Array(1024),
-      gm = 9999999,
-      Wm = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
-      Fm = new WeakMap;
-
-    function mT(mm) {
-      if ("function" !== typeof mm) return "#a0.0";
-      const Tm = Gm(Bm, Fm, [mm]);
-      if (void 0 !== Tm) return Tm;
-      const fm = Gm(ym, mm, []),
-        hm = fm.length > gm ? gm : fm.length,
-        Am = `#${function(mm,Tm){const fm=Gm(sm,tm,[Tm]);if(null===fm)return"s";const hm=fm[1];if("ProxyObject"===hm)return"p";if(""!==hm)return Gm(Mm,hm,["bound "])?"b":"n";try{const Tm=Cm(mm,"name"),fm=void 0!==Tm&&Gm(rm,Tm,["value"])?Tm.value:void 0;return"string"===typeof fm&&Gm(Mm,fm,["bound "])?"b":"p"}catch{return"p"}}(mm,fm)}${hm}.${function(mm){const{written:Tm}=Gm(lm,Um,[mm,dm]);let fm=2166136261;for(let hm=0;hm<Tm;hm++)fm=(fm^dm[hm])>>>0,fm=fm+(fm<<1)+(fm<<4)+(fm<<7)+(fm<<8)+(fm<<24)>>>0;return Gm(um,fm,[36])}(fm)}`;
-      return Gm(Lm, Fm, [mm, Am]), Am
+    function iD() {
+      const DD = SD();
+      return dD = rD, DD
     }
 
-    function TT(mm) {
-      const Tm = Gm(sm, Wm, [mm]);
-      return null === Tm ? mm : Tm[1]
+    function lD(DD) {
+      dD = DD >= 3 ? jD : rD, bD = DD % 3
     }
-    var fT = fm(2888);
-    const hT = Function.prototype.toString,
-      AT = Object.getOwnPropertyDescriptor,
-      aT = RegExp.prototype.exec,
-      xT = Object.prototype.hasOwnProperty,
-      wT = Set.prototype.has,
-      DT = WeakMap.prototype.get,
-      iT = WeakMap.prototype.set,
-      RT = Reflect.get,
-      pT = Object.getPrototypeOf,
-      ET = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+    const WD = Function.prototype.toString,
+      ND = Object.getOwnPropertyDescriptor,
+      ZD = Object.prototype.hasOwnProperty,
+      yD = RegExp.prototype.exec,
+      kD = TextEncoder.prototype.encodeInto,
+      mD = String.prototype.startsWith,
+      eD = Number.prototype.toString,
+      oD = WeakMap.prototype.get,
+      aD = WeakMap.prototype.set,
+      uD = /^function ([\w$ ]*)\(\) \{\s*\[native code\]\s*\}$/,
+      vD = new TextEncoder,
+      tD = new Uint8Array(1024),
+      FD = 9999999,
+      YD = /^(wh:[^#]+)#[abnps]\d{1,7}\.[0-9a-z]{1,7}$/,
+      HD = new WeakMap;
 
-    function oT(mm, Tm, fm) {
+    function qD(DD) {
+      if ("function" !== typeof DD) return "#a0.0";
+      const zD = dD(oD, HD, [DD]);
+      if (void 0 !== zD) return zD;
+      const wD = dD(WD, DD, []),
+        pD = wD.length > FD ? FD : wD.length,
+        sD = `#${function(DD,zD){const wD=dD(yD,uD,[zD]);if(null===wD)return"s";const pD=wD[1];if("ProxyObject"===pD)return"p";if(""!==pD)return dD(mD,pD,["bound "])?"b":"n";try{const zD=ND(DD,"name"),wD=void 0!==zD&&dD(ZD,zD,["value"])?zD.value:void 0;return"string"===typeof wD&&dD(mD,wD,["bound "])?"b":"p"}catch{return"p"}}(DD,wD)}${pD}.${function(DD){const{written:zD}=dD(kD,vD,[DD,tD]);let wD=2166136261;for(let pD=0;pD<zD;pD++)wD=(wD^tD[pD])>>>0,wD=wD+(wD<<1)+(wD<<4)+(wD<<7)+(wD<<8)+(wD<<24)>>>0;return dD(eD,wD,[36])}(wD)}`;
+      return dD(aD, HD, [DD, sD]), sD
+    }
+
+    function Dz(DD) {
+      const zD = dD(yD, YD, [DD]);
+      return null === zD ? DD : zD[1]
+    }
+    var zz = wD(2874);
+    const wz = Function.prototype.toString,
+      pz = Object.getOwnPropertyDescriptor,
+      sz = RegExp.prototype.exec,
+      Kz = Object.prototype.hasOwnProperty,
+      rz = Set.prototype.has,
+      Lz = WeakMap.prototype.get,
+      cz = WeakMap.prototype.set,
+      gz = Reflect.get,
+      Rz = Object.getPrototypeOf,
+      Az = "undefined" === typeof WebAssembly ? void 0 : WebAssembly;
+
+    function Uz(DD, zD, wD) {
       return {
-        code: mm,
-        holder: Tm,
-        key: fm,
+        code: DD,
+        holder: zD,
+        key: wD,
         ...arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-        native: new RegExp(`^function (get )?${fm}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
+        native: new RegExp(`^function (get )?${wD}\\(\\) \\{\\s*\\[native code\\]\\s*\\}$`)
       }
     }
 
-    function OT() {
-      return ET
+    function fz() {
+      return Az
     }
-    const YT = ET?.Instance.prototype,
-      qT = ET?.Memory.prototype;
+    const Iz = Az?.Instance.prototype,
+      Bz = Az?.Memory.prototype;
 
-    function jT() {
-      return qT
+    function Gz() {
+      return Bz
     }
-    let VT, IT;
+    let hz, nz;
     try {
-      const mm = globalThis.crypto,
-        Tm = mm?.subtle;
-      VT = mm ? pT(mm) : void 0, IT = Tm ? pT(Tm) : void 0
+      const DD = globalThis.crypto,
+        zD = DD?.subtle;
+      hz = DD ? Rz(DD) : void 0, nz = zD ? Rz(zD) : void 0
     } catch {}
 
-    function KT(mm, Tm) {
-      for (let fm = mm; void 0 !== fm && null !== fm; fm = pT(fm)) {
-        const mm = AT(fm, Tm);
-        if (mm) return mm
+    function Mz(DD, zD) {
+      for (let wD = DD; void 0 !== wD && null !== wD; wD = Rz(wD)) {
+        const DD = pz(wD, zD);
+        if (DD) return DD
       }
     }
-    const QT = [oT("in", OT, "instantiate", {
+    const Oz = [Uz("in", fz, "instantiate", {
       tier: "weighted",
       onNamespace: !0
-    }), oT("is", OT, "instantiateStreaming", {
+    }), Uz("is", fz, "instantiateStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), oT("co", OT, "compile", {
+    }), Uz("co", fz, "compile", {
       tier: "weighted",
       onNamespace: !0
-    }), oT("cs", OT, "compileStreaming", {
+    }), Uz("cs", fz, "compileStreaming", {
       tier: "weighted",
       onNamespace: !0
-    }), oT("mo", OT, "Module", {
+    }), Uz("mo", fz, "Module", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), oT("it", OT, "Instance", {
+    }), Uz("it", fz, "Instance", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), oT("me", OT, "Memory", {
+    }), Uz("me", fz, "Memory", {
       isConstructor: !0,
       tier: "punished",
       onNamespace: !0
-    }), oT("ex", (function() {
-      return YT
+    }), Uz("ex", (function() {
+      return Iz
     }), "exports", {
       isGetter: !0,
       tier: "punished"
-    }), oT("bu", jT, "buffer", {
+    }), Uz("bu", Gz, "buffer", {
       isGetter: !0,
       tier: "punished"
-    }), oT("gr", jT, "grow", {
+    }), Uz("gr", Gz, "grow", {
       tier: "punished"
-    }), oT("rc", (function() {
+    }), Uz("rc", (function() {
       return "undefined" === typeof Response ? void 0 : Response.prototype
-    }), "clone"), oT("cr", (function() {
+    }), "clone"), Uz("cr", (function() {
       return globalThis
     }), "crypto", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), oT("su", (function() {
-      return VT
+    }), Uz("su", (function() {
+      return hz
     }), "subtle", {
       isGetter: !0,
       tier: "punished",
       inSecureContext: !0
-    }), oT("dg", (function() {
-      return IT
+    }), Uz("dg", (function() {
+      return nz
     }), "digest", {
       tier: "punished",
       inSecureContext: !0
     })];
 
-    function nT(mm) {
-      let Tm;
+    function Jz(DD) {
+      let zD;
       try {
-        const fm = RT(globalThis, mm);
-        Tm = "function" === typeof fm ? fm.prototype : void 0
+        const wD = gz(globalThis, DD);
+        zD = "function" === typeof wD ? wD.prototype : void 0
       } catch {}
-      return () => Tm
+      return () => zD
     }
 
-    function JT(mm, Tm, fm) {
-      return fm.map((fm => oT(mm, Tm, fm)))
+    function Ez(DD, zD, wD) {
+      return wD.map((wD => Uz(DD, zD, wD)))
     }
-    const cT = oT("rx", nT("HTMLCanvasElement"), "getContext"),
-      zT = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
-      ZT = {
-        webgpu: [...JT("gd", nT("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...JT("gq", nT("GPUQueue"), ["submit", "writeBuffer"]), ...JT("ge", nT("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...JT("gp", nT("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), cT],
-        webgl: [...JT("g2", nT("WebGL2RenderingContext"), [...zT, "drawArraysInstanced", "drawElementsInstanced"]), cT],
-        webgl1: [...JT("g1", nT("WebGLRenderingContext"), zT), cT]
+    const Qz = Uz("rx", Jz("HTMLCanvasElement"), "getContext"),
+      Xz = ["createShader", "shaderSource", "compileShader", "createProgram", "linkProgram", "useProgram", "drawArrays", "drawElements", "depthFunc", "depthMask", "enable", "disable", "blendFuncSeparate", "colorMask"],
+      Vz = {
+        webgpu: [...Ez("gd", Jz("GPUDevice"), ["createShaderModule", "createRenderPipeline", "createCommandEncoder"]), ...Ez("gq", Jz("GPUQueue"), ["submit", "writeBuffer"]), ...Ez("ge", Jz("GPUCommandEncoder"), ["beginRenderPass", "finish"]), ...Ez("gp", Jz("GPURenderPassEncoder"), ["setPipeline", "setBindGroup", "draw", "drawIndexed", "drawIndirect", "drawIndexedIndirect", "executeBundles"]), Qz],
+        webgl: [...Ez("g2", Jz("WebGL2RenderingContext"), [...Xz, "drawArraysInstanced", "drawElementsInstanced"]), Qz],
+        webgl1: [...Ez("g1", Jz("WebGLRenderingContext"), Xz), Qz]
       };
-    let kT = [];
-    const bT = new WeakMap;
+    let Pz = [];
+    const Cz = new WeakMap;
 
-    function ST(mm, Tm) {
-      const fm = Pm();
+    function xz(DD, zD) {
+      const wD = iD();
       try {
-        Gm(iT, bT, [mm, Tm])
+        dD(cz, Cz, [DD, zD])
       } finally {
-        Hm(fm)
+        lD(wD)
       }
     }
 
-    function eT(mm) {
+    function Tz(DD) {
       try {
-        const Tm = Df(mm),
-          fm = Gm(DT, bT, [Tm]);
-        return Tf(fm, mm) ? NT(mm, !0) : `${NT(mm,!1)}${mT(fm??Tm)}`
+        const zD = Lw(DD),
+          wD = dD(Lz, Cz, [zD]);
+        return Dw(wD, DD) ? bz(DD, !0) : `${bz(DD,!1)}${qD(wD??zD)}`
       } catch {
-        return `${NT(mm,!1)}${mT(void 0)}`
+        return `${bz(DD,!1)}${qD(void 0)}`
       }
     }
 
-    function NT(mm, Tm) {
+    function bz(DD, zD) {
       let {
-        code: fm,
-        key: hm
-      } = mm;
-      return `wh:${fm}${Tm?"-dbg":""}:${hm}`
+        code: wD,
+        key: pD
+      } = DD;
+      return `wh:${wD}${zD?"-dbg":""}:${pD}`
     }
 
-    function GT(mm) {
-      return Object.values(ZT).flatMap((Tm => Tm.map((Tm => NT(Tm, mm)))))
+    function jz(DD) {
+      return Object.values(Vz).flatMap((zD => zD.map((zD => bz(zD, DD)))))
     }
-    const XT = new Set(GT(!0)),
-      PT = new Set([...GT(!1), ...XT]),
-      HT = NT(cT, !1);
+    const dz = new Set(jz(!0)),
+      Sz = new Set([...jz(!1), ...dz]),
+      iz = bz(Qz, !1);
 
-    function yT(mm) {
-      kT = ZT[mm]
+    function lz(DD) {
+      Pz = Vz[DD]
     }
 
-    function CT(mm) {
-      const Tm = Pm();
+    function Wz(DD) {
+      const zD = iD();
       try {
-        return rT(mm) || rT(TT(mm))
+        return Nz(DD) || Nz(Dz(DD))
       } finally {
-        Hm(Tm)
+        lD(zD)
       }
     }
 
-    function rT(mm) {
-      return Gm(wT, PT, [mm])
+    function Nz(DD) {
+      return dD(rz, Sz, [DD])
     }
 
-    function sT(mm) {
-      return new Set(QT.filter((Tm => Tm.tier === mm)).map((mm => `wh:${mm.code}`)))
+    function Zz(DD) {
+      return new Set(Oz.filter((zD => zD.tier === DD)).map((DD => `wh:${DD.code}`)))
     }
-    const lT = sT("punished"),
-      MT = !1,
-      uT = new Set(fT.b),
-      BT = sT("weighted");
+    const yz = Zz("punished"),
+      kz = !1,
+      mz = new Set(zz.e),
+      ez = Zz("weighted");
 
-    function LT(mm) {
-      const Tm = Pm();
+    function oz(DD) {
+      const zD = iD();
       try {
-        return tT(TT(mm))
+        return uz(Dz(DD))
       } finally {
-        Hm(Tm)
+        lD(zD)
       }
     }
 
-    function vT(mm) {
-      const Tm = Pm();
+    function az(DD) {
+      const zD = iD();
       try {
-        return TT(mm)
+        return Dz(DD)
       } finally {
-        Hm(Tm)
+        lD(zD)
       }
     }
 
-    function tT(mm) {
-      return Gm(wT, BT, [mm])
+    function uz(DD) {
+      return dD(rz, ez, [DD])
     }
 
-    function UT(mm) {
-      const Tm = Pm();
+    function vz(DD) {
+      const zD = iD();
       try {
-        return dT(mm)
+        return tz(DD)
       } finally {
-        Hm(Tm)
+        lD(zD)
       }
     }
 
-    function dT(mm) {
-      return Gm(wT, uT, [mm])
+    function tz(DD) {
+      return dD(rz, mz, [DD])
     }
 
-    function gT(mm) {
-      return "wb" === mm || Gm(wT, lT, [mm])
+    function Fz(DD) {
+      return "wb" === DD || dD(rz, yz, [DD])
     }
 
-    function WT(mm) {
-      const Tm = Pm();
+    function Yz(DD) {
+      const zD = iD();
       try {
-        return gT(mm) || dT(mm)
+        return Fz(DD) || tz(DD)
       } finally {
-        Hm(Tm)
+        lD(zD)
       }
     }
 
-    function FT(mm) {
-      const Tm = Pm();
+    function Hz(DD) {
+      const zD = iD();
       try {
-        return "wb" === mm || MT && gT(mm)
+        return "wb" === DD || kz && Fz(DD)
       } finally {
-        Hm(Tm)
+        lD(zD)
       }
     }
 
-    function mf(mm, Tm) {
+    function qz(DD, zD) {
       let {
-        isGetter: fm
-      } = Tm;
-      const hm = AT(mm, fm ? "get" : "value");
-      return void 0 === hm ? void 0 : hm.value
+        isGetter: wD
+      } = zD;
+      const pD = pz(DD, wD ? "get" : "value");
+      return void 0 === pD ? void 0 : pD.value
     }
 
-    function Tf(mm, Tm) {
+    function Dw(DD, zD) {
       let {
-        isConstructor: fm,
-        native: hm
-      } = Tm;
-      return "function" === typeof mm && (!(!fm && Gm(xT, mm, ["prototype"])) && null !== Gm(aT, hm, [Gm(hT, mm, [])]))
+        isConstructor: wD,
+        native: pD
+      } = zD;
+      return "function" === typeof DD && (!(!wD && dD(Kz, DD, ["prototype"])) && null !== dD(sz, pD, [dD(wz, DD, [])]))
     }
 
-    function ff(mm, Tm) {
-      return Tf(mm, oT("", (() => {}), Tm, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
+    function zw(DD, zD) {
+      return Dw(DD, Uz("", (() => {}), zD, arguments.length > 2 && void 0 !== arguments[2] && arguments[2] ? {
         isConstructor: !0
       } : {}))
     }
-    let hf = null,
-      Af = !1;
+    let ww = null,
+      pw = !1;
 
-    function af() {
+    function sw() {
       try {
-        return globalThis.WebAssembly === ET
+        return globalThis.WebAssembly === Az
       } catch {
         return !1
       }
     }
 
-    function xf(mm) {
+    function Kw(DD) {
       try {
-        return function(mm) {
+        return function(DD) {
           const {
-            holder: Tm,
-            key: fm,
-            onNamespace: hm,
-            inSecureContext: Am
-          } = mm, am = Tm(), xm = KT(am, fm);
-          if (!xm) return !(Am && !0 === globalThis.isSecureContext);
-          const wm = mf(xm, mm);
-          if (!Tf(wm, mm)) return !1;
-          if (hm) {
-            const Tm = globalThis.WebAssembly;
-            if (Tm !== am && null !== Tm && ("object" === typeof Tm || "function" === typeof Tm)) {
-              const hm = RT(Tm, fm);
-              return hm === wm || void 0 === hm || Tf(hm, mm)
+            holder: zD,
+            key: wD,
+            onNamespace: pD,
+            inSecureContext: sD
+          } = DD, KD = zD(), rD = Mz(KD, wD);
+          if (!rD) return !(sD && !0 === globalThis.isSecureContext);
+          const LD = qz(rD, DD);
+          if (!Dw(LD, DD)) return !1;
+          if (pD) {
+            const zD = globalThis.WebAssembly;
+            if (zD !== KD && null !== zD && ("object" === typeof zD || "function" === typeof zD)) {
+              const pD = gz(zD, wD);
+              return pD === LD || void 0 === pD || Dw(pD, DD)
             }
           }
           return !0
-        }(mm)
+        }(DD)
       } catch {
         return !1
       }
     }
 
-    function wf(mm) {
-      const Tm = `wh:${mm.code}`;
-      if ("punished" === mm.tier) return Tm;
+    function rw(DD) {
+      const zD = `wh:${DD.code}`;
+      if ("punished" === DD.tier) return zD;
       try {
-        return `${Tm}${mT(Df(mm))}`
+        return `${zD}${qD(Lw(DD))}`
       } catch {
-        return `${Tm}${mT(void 0)}`
+        return `${zD}${qD(void 0)}`
       }
     }
 
-    function Df(mm) {
-      const Tm = KT(mm.holder(), mm.key),
-        fm = void 0 === Tm ? void 0 : mf(Tm, mm);
-      return mm.onNamespace && !af() && Tf(fm, mm) ? RT(globalThis.WebAssembly, mm.key) : fm
+    function Lw(DD) {
+      const zD = Mz(DD.holder(), DD.key),
+        wD = void 0 === zD ? void 0 : qz(zD, DD);
+      return DD.onNamespace && !sw() && Dw(wD, DD) ? gz(globalThis.WebAssembly, DD.key) : wD
     }
 
-    function Rf(mm) {
-      if (gT(mm)) return 5;
-      const Tm = TT(mm);
-      return tT(Tm) ? 4 : dT(mm) ? 3 : rT(Tm) ? function(mm) {
-        return Gm(wT, XT, [mm])
-      }(Tm) ? -1 : Tm === HT ? 0 : 1 : 2
+    function gw(DD) {
+      if (Fz(DD)) return 5;
+      const zD = Dz(DD);
+      return uz(zD) ? 4 : tz(DD) ? 3 : Nz(zD) ? function(DD) {
+        return dD(rz, dz, [DD])
+      }(zD) ? -1 : zD === iz ? 0 : 1 : 2
     }
 
-    function pf() {
-      const mm = function() {
-        const mm = Xm();
-        return Jm === Vm || Jm === Im ? (Gm = Nm, em = bm) : Gm = xm, mm
+    function Rw() {
+      const DD = function() {
+        const DD = SD();
+        return QD === nD || QD === MD ? (dD = jD, bD = xD) : dD = rD, DD
       }();
       try {
-        if (null === hf || !gT(hf)) {
-          const mm = function() {
-            if (void 0 === ET) return null;
-            let mm = af() ? null : "wh:wa";
-            const Tm = Tm => {
-              null !== Tm && (null === mm || Rf(Tm) > Rf(mm)) && (mm = Tm)
+        if (null === ww || !Fz(ww)) {
+          const DD = function() {
+            if (void 0 === Az) return null;
+            let DD = sw() ? null : "wh:wa";
+            const zD = zD => {
+              null !== zD && (null === DD || gw(zD) > gw(DD)) && (DD = zD)
             };
-            for (let fm = 0; fm < QT.length; fm++) {
-              const mm = QT[fm];
-              void 0 === mm || xf(mm) || Tm(wf(mm))
+            for (let wD = 0; wD < Oz.length; wD++) {
+              const DD = Oz[wD];
+              void 0 === DD || Kw(DD) || zD(rw(DD))
             }
-            Tm((0, fT.o)());
-            for (let fm = 0; fm < kT.length; fm++) {
-              const mm = kT[fm];
-              void 0 === mm || xf(mm) || Tm(eT(mm))
+            zD((0, zz.p)());
+            for (let wD = 0; wD < Pz.length; wD++) {
+              const DD = Pz[wD];
+              void 0 === DD || Kw(DD) || zD(Tz(DD))
             }
-            return mm
+            return DD
           }();
-          (null === hf || null !== mm && Rf(mm) > Rf(hf)) && (hf = mm)
+          (null === ww || null !== DD && gw(DD) > gw(ww)) && (ww = DD)
         }
       } finally {
-        Hm(mm)
+        lD(DD)
       }
     }
 
-    function Ef() {
-      Af = !0
+    function Aw() {
+      pw = !0
     }
 
-    function of() {
-      if (Af) return "wb";
-      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && pf(), null !== hf) return hf;
-      if (void 0 === ET) return "wn:unsupported";
-      const mm = (0, hm.p)();
-      return null === mm ? null : `wn:${mm}`
+    function Uw() {
+      if (pw) return "wb";
+      if ((!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) && Rw(), null !== ww) return ww;
+      if (void 0 === Az) return "wn:unsupported";
+      const DD = (0, pD.m)();
+      return null === DD ? null : `wn:${DD}`
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);

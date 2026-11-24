@@ -1,40 +1,40 @@
 export const id = 129;
 export const ids = [129];
 export const modules = {
-  41131: (mm, Tm, fm) => {
-    fm.r(Tm), fm.d(Tm, {
-      ShaderPackCategory: () => Nm
+  40991: (DD, zD, wD) => {
+    wD.r(zD), wD.d(zD, {
+      ShaderPackCategory: () => jD
     });
-    var hm = fm(59),
-      Am = fm(1537),
-      am = fm(1454),
-      xm = fm(1519),
-      wm = fm(1208),
-      Dm = fm(105),
-      im = fm(23),
-      Rm = fm(1635),
-      pm = fm(6562),
-      Em = fm(330),
-      om = fm(6600),
-      Om = fm(6595),
-      Ym = fm(6609),
-      qm = fm(6507),
-      jm = fm(4954),
-      Vm = fm(4980),
-      Im = fm(6555),
-      Km = fm(3466);
+    var pD = wD(58),
+      sD = wD(1523),
+      KD = wD(1447),
+      rD = wD(1511),
+      LD = wD(1200),
+      cD = wD(103),
+      gD = wD(20),
+      RD = wD(1648),
+      AD = wD(6645),
+      UD = wD(323),
+      fD = wD(6691),
+      ID = wD(6682),
+      BD = wD(6693),
+      GD = wD(6590),
+      hD = wD(5021),
+      nD = wD(5070),
+      MD = wD(6637),
+      OD = wD(3466);
 
-    function Qm(mm, Tm) {
-      const fm = (0, om.storedPackOutcome)(mm, Tm);
-      return "none" !== fm.kind || "noCompiler" === fm.reason
+    function JD(DD, zD) {
+      const wD = (0, fD.storedPackOutcome)(DD, zD);
+      return "none" !== wD.kind || "noCompiler" === wD.reason
     }
-    var nm = fm(1080),
-      Jm = fm.n(nm),
-      cm = fm(4985),
-      zm = fm(1089),
-      Zm = fm(6552),
-      km = fm(1135);
-    const bm = {
+    var ED = wD(1044),
+      QD = wD.n(ED),
+      XD = wD(5076),
+      VD = wD(1057),
+      PD = wD(6630),
+      CD = wD(1096);
+    const xD = {
       ready: "shaderPack:statusReady",
       readyAfterReload: "shaderPack:statusReadyAfterReload",
       noWebGpu: "shaderPack:statusNoWebGpu",
@@ -47,249 +47,249 @@ export const modules = {
       noCompiler: "shaderPack:statusNoCompiler"
     };
 
-    function Sm(mm, Tm) {
-      return "failedRecheck" === mm && Tm.listing ? "shaderPack:statusFailedRecheckListed" : bm[mm]
+    function TD(DD, zD) {
+      return "failedRecheck" === DD && zD.listing ? "shaderPack:statusFailedRecheckListed" : xD[DD]
     }
 
-    function em(mm) {
+    function bD(DD) {
       let {
-        stored: Tm,
-        checking: fm,
-        webGpuUsable: hm,
-        changePending: Am,
-        compiler: am,
-        t: xm
-      } = mm;
-      const wm = function(mm, Tm, fm, hm, Am) {
-          const am = (0, om.storedPackOutcome)(mm, Am);
-          return "none" === am.kind ? "noCompiler" === am.reason ? Tm ? "checking" : "noCompiler" : "otherApiVersion" === am.reason ? "wrongApiVersion" : "failed" : (0, Km.e)() ? "harnessBuild" : "blocked" === am.kind ? (0, om.shaderPackNeedsCheck)(mm, Am) ? Tm ? "checking" : !1 === fm ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === fm ? "offNoWebGpu" : hm ? "readyAfterReload" : "ready"
-        }(Tm, fm, hm, Am, am),
-        Dm = "failed" === wm || "failedRecheck" === wm,
-        im = Dm || "wrongApiVersion" === wm || "noCompiler" === wm,
-        Rm = "ready" === wm || "readyAfterReload" === wm ? Tm.validation.offInStrict : [];
-      return (0, km.jsxs)(km.Fragment, {
-        children: [(0, km.jsxs)("div", {
-          className: Jm()("ShaderPackStatus", {
-            Ready: "ready" === wm,
-            Failed: im
+        stored: zD,
+        checking: wD,
+        webGpuUsable: pD,
+        changePending: sD,
+        compiler: KD,
+        t: rD
+      } = DD;
+      const LD = function(DD, zD, wD, pD, sD) {
+          const KD = (0, fD.storedPackOutcome)(DD, sD);
+          return "none" === KD.kind ? "noCompiler" === KD.reason ? zD ? "checking" : "noCompiler" : "otherApiVersion" === KD.reason ? "wrongApiVersion" : "failed" : (0, OD.f)() ? "harnessBuild" : "blocked" === KD.kind ? (0, fD.shaderPackNeedsCheck)(DD, sD) ? zD ? "checking" : !1 === wD ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === wD ? "offNoWebGpu" : pD ? "readyAfterReload" : "ready"
+        }(zD, wD, pD, sD, KD),
+        cD = "failed" === LD || "failedRecheck" === LD,
+        gD = cD || "wrongApiVersion" === LD || "noCompiler" === LD,
+        RD = "ready" === LD || "readyAfterReload" === LD ? zD.validation.offInStrict : [];
+      return (0, CD.jsxs)(CD.Fragment, {
+        children: [(0, CD.jsxs)("div", {
+          className: QD()("ShaderPackStatus", {
+            Ready: "ready" === LD,
+            Failed: gD
           }),
-          children: ["ready" === wm && (0, km.jsx)(zm.c, {
+          children: ["ready" === LD && (0, CD.jsx)(VD.e, {
             name: "circle-check"
-          }), im && (0, km.jsx)(zm.c, {
+          }), gD && (0, CD.jsx)(VD.e, {
             name: "triangle-exclamation"
-          }), "harnessBuild" === wm ? (0, Km.d)() : xm(Sm(wm, Tm), {
-            packVersion: String(Tm.manifest.apiVersion),
-            version: String(cm.c)
+          }), "harnessBuild" === LD ? (0, OD.b)() : rD(TD(LD, zD), {
+            packVersion: String(zD.manifest.apiVersion),
+            version: String(XD.b)
           })]
-        }), Dm && (0, km.jsx)(Zm.c, {
-          diagnostics: Tm.validation.errors,
-          more: Tm.validation.moreErrors,
-          t: xm
-        }), Rm.length > 0 && (0, km.jsxs)(km.Fragment, {
-          children: [(0, km.jsxs)("div", {
+        }), cD && (0, CD.jsx)(PD.b, {
+          diagnostics: zD.validation.errors,
+          more: zD.validation.moreErrors,
+          t: rD
+        }), RD.length > 0 && (0, CD.jsxs)(CD.Fragment, {
+          children: [(0, CD.jsxs)("div", {
             className: "ShaderPackStatus OffInStrict",
-            children: [(0, km.jsx)(zm.c, {
+            children: [(0, CD.jsx)(VD.e, {
               name: "triangle-exclamation"
-            }), xm("shaderPack:offInStrict")]
-          }), (0, km.jsx)(Zm.c, {
-            diagnostics: Rm,
-            t: xm
+            }), rD("shaderPack:offInStrict")]
+          }), (0, CD.jsx)(PD.b, {
+            diagnostics: RD,
+            t: rD
           })]
         })]
       })
     }
 
-    function Nm(mm) {
+    function jD(DD) {
       let {
-        setApplySettingsCallback: Tm
-      } = mm;
+        setApplySettingsCallback: zD
+      } = DD;
       const {
-        t: fm
-      } = (0, wm.A)(), [Am, xm] = (0, hm.useState)(null), [im, Rm] = (0, hm.useState)(null), [Km, nm] = (0, hm.useState)(null), [Jm] = (0, hm.useState)(Em.h), [cm, zm] = (0, hm.useState)(!0), [Zm, bm] = (0, hm.useState)(!1), {
-        loading: Sm,
-        error: Nm,
-        setError: Xm,
-        onFiles: Pm
-      } = (0, Im.f)((async mm => {
-        const Tm = await (0, pm.loadPageShaderPackCompiler)();
-        if (!Tm) return void Xm(fm("shaderPack:compilerUnavailable"));
-        Rm(Tm);
-        const hm = (0, om.toStoredShaderPack)(mm, await (0, Om.f)(Tm, mm.files));
-        await (0, om.saveShaderPack)(hm, Tm) ? (xm(hm), Hm(Am, hm, Tm)) : Xm(fm("shaderPack:saveFailed"))
+        t: wD
+      } = (0, LD.E)(), [sD, rD] = (0, pD.useState)(null), [gD, RD] = (0, pD.useState)(null), [OD, ED] = (0, pD.useState)(null), [QD] = (0, pD.useState)(UD.i), [XD, VD] = (0, pD.useState)(!0), [PD, xD] = (0, pD.useState)(!1), {
+        loading: TD,
+        error: jD,
+        setError: SD,
+        onFiles: iD
+      } = (0, MD.f)((async DD => {
+        const zD = await (0, AD.loadPageShaderPackCompiler)();
+        if (!zD) return void SD(wD("shaderPack:compilerUnavailable"));
+        RD(zD);
+        const pD = (0, fD.toStoredShaderPack)(DD, await (0, ID.h)(zD, DD.files));
+        await (0, fD.saveShaderPack)(pD, zD) ? (rD(pD), lD(sD, pD, zD)) : SD(wD("shaderPack:saveFailed"))
       }));
 
-      function Hm(mm, fm, hm) {
-        (function(mm, Tm, fm, hm) {
-          return fm || Qm(mm, hm) || Qm(Tm, hm)
-        })(mm, fm, (0, om.isShaderPackChangePending)(), hm) && ((0, om.markShaderPackChangePending)(), Tm((() => jm.o)))
+      function lD(DD, wD, pD) {
+        (function(DD, zD, wD, pD) {
+          return wD || JD(DD, pD) || JD(zD, pD)
+        })(DD, wD, (0, fD.isShaderPackChangePending)(), pD) && ((0, fD.markShaderPackChangePending)(), zD((() => hD.g)))
       }
-      return (0, hm.useEffect)((() => {
-        let mm = !1;
+      return (0, pD.useEffect)((() => {
+        let DD = !1;
         return async function() {
-          const Tm = (0, Dm.hasUsableWebGpuAdapter)(),
-            fm = await (0, Ym.e)();
-          if (mm) return;
-          xm(fm), bm(!0), zm(!1);
-          const hm = null !== fm ? (0, pm.loadPageShaderPackCompiler)() : null,
-            Am = await Tm;
-          if (mm) return;
-          nm(Am);
-          const am = await hm;
-          if (!mm && (Rm(am), null !== fm && Am && null !== am && (0, om.shaderPackNeedsCheck)(fm, am))) {
-            const Tm = await (0, Om.b)(fm, am);
-            mm || xm((mm => mm === fm ? Tm : mm))
+          const zD = (0, cD.hasUsableWebGpuAdapter)(),
+            wD = await (0, BD.c)();
+          if (DD) return;
+          rD(wD), xD(!0), VD(!1);
+          const pD = null !== wD ? (0, AD.loadPageShaderPackCompiler)() : null,
+            sD = await zD;
+          if (DD) return;
+          ED(sD);
+          const KD = await pD;
+          if (!DD && (RD(KD), null !== wD && sD && null !== KD && (0, fD.shaderPackNeedsCheck)(wD, KD))) {
+            const zD = await (0, ID.d)(wD, KD);
+            DD || rD((DD => DD === wD ? zD : DD))
           }
-        }().catch((Tm => {
-          console.error("Failed to load the stored shader pack", Tm), mm || Xm(fm("shaderPack:unexpectedError"))
+        }().catch((zD => {
+          console.error("Failed to load the stored shader pack", zD), DD || SD(wD("shaderPack:unexpectedError"))
         })).finally((() => {
-          mm || (zm(!1), bm(!1))
+          DD || (VD(!1), xD(!1))
         })), () => {
-          mm = !0
+          DD = !0
         }
-      }), []), (0, km.jsxs)("div", {
+      }), []), (0, CD.jsxs)("div", {
         className: "ShaderPackCategory SettingsMenuRightInner",
-        children: [(0, km.jsx)("div", {
+        children: [(0, CD.jsx)("div", {
           className: "ShaderPackIntro",
-          children: fm("shaderPack:intro")
-        }), (0, km.jsx)(Gm, {
-          to: qm.S,
+          children: wD("shaderPack:intro")
+        }), (0, CD.jsx)(dD, {
+          to: GD.S,
           className: "ShaderPackBrowseLink",
-          children: (0, km.jsx)(am.m, {
+          children: (0, CD.jsx)(KD.o, {
             className: "ShaderPackBrowseButton",
-            children: fm("shaderPackListing:browse")
+            children: wD("shaderPackListing:browse")
           })
-        }), !1 === Km && (0, km.jsx)("div", {
+        }), !1 === OD && (0, CD.jsx)("div", {
           className: "SettingsBoxWarning",
-          children: fm(Jm ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), null !== Nm && (0, km.jsxs)("div", {
+          children: wD(QD ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), null !== jD && (0, CD.jsxs)("div", {
           className: "ShaderPackCategoryError",
-          children: [fm("general:error"), ": ", Nm]
-        }), Am && (0, km.jsxs)("div", {
+          children: [wD("general:error"), ": ", jD]
+        }), sD && (0, CD.jsxs)("div", {
           className: "SettingBox ShaderPackSummary",
-          children: [(0, km.jsxs)("div", {
+          children: [(0, CD.jsxs)("div", {
             className: "ShaderPackSummaryHeader",
-            children: [(0, km.jsxs)("div", {
-              children: [(0, km.jsx)("div", {
+            children: [(0, CD.jsxs)("div", {
+              children: [(0, CD.jsx)("div", {
                 className: "ShaderPackName",
-                children: Am.manifest.name
-              }), Am.manifest.author && (0, km.jsx)("div", {
+                children: sD.manifest.name
+              }), sD.manifest.author && (0, CD.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, Vm.j)(fm, "shaderPack:byAuthor", {
-                  author: Am.manifest.author
+                children: (0, nD.i)(wD, "shaderPack:byAuthor", {
+                  author: sD.manifest.author
                 })
-              }), Am.manifest.description && (0, km.jsx)("div", {
+              }), sD.manifest.description && (0, CD.jsx)("div", {
                 className: "ShaderPackDescription",
-                children: Am.manifest.description
-              }), Am.listing && (0, km.jsx)("div", {
+                children: sD.manifest.description
+              }), sD.listing && (0, CD.jsx)("div", {
                 className: "ShaderPackAuthor",
-                children: (0, km.jsx)(Gm, {
-                  to: (0, qm.V)(Am.listing.packId),
+                children: (0, CD.jsx)(dD, {
+                  to: (0, GD.Y)(sD.listing.packId),
                   className: "ShaderPackListingLink",
-                  children: fm("shaderPackListing:openPackPage")
+                  children: wD("shaderPackListing:openPackPage")
                 })
               })]
-            }), (0, km.jsx)(am.P, {
-              disabled: cm || Sm,
+            }), (0, CD.jsx)(KD.T, {
+              disabled: XD || TD,
               onClick: async function() {
-                zm(!0), Xm(null), await (0, om.removeShaderPack)(), xm(null), zm(!1), Hm(Am, null, im)
+                VD(!0), SD(null), await (0, fD.removeShaderPack)(), rD(null), VD(!1), lD(sD, null, gD)
               },
-              children: fm("shaderPack:removePack")
+              children: wD("shaderPack:removePack")
             })]
-          }), (0, km.jsx)(em, {
-            stored: Am,
-            checking: Zm,
-            webGpuUsable: Km,
-            changePending: (0, om.isShaderPackChangePending)(),
-            compiler: im,
-            t: fm
+          }), (0, CD.jsx)(bD, {
+            stored: sD,
+            checking: PD,
+            webGpuUsable: OD,
+            changePending: (0, fD.isShaderPackChangePending)(),
+            compiler: gD,
+            t: wD
           })]
-        }), (0, km.jsx)(Im.c, {
-          busy: cm || Sm || Zm,
-          disabled: cm || Sm || Zm || !0 !== Km,
-          onFiles: Pm
+        }), (0, CD.jsx)(MD.e, {
+          busy: XD || TD || PD,
+          disabled: XD || TD || PD || !0 !== OD,
+          onFiles: iD
         })]
       })
     }
 
-    function Gm(mm) {
+    function dD(DD) {
       let {
-        to: Tm,
-        className: fm,
-        children: hm
-      } = mm;
+        to: zD,
+        className: wD,
+        children: pD
+      } = DD;
       const {
-        gameState: am
-      } = (0, im.m)(["gameState"]), {
-        pathname: wm,
-        search: Dm
-      } = (0, Am.w)(), pm = "landingPage" !== am && "studio" !== am;
-      return (0, km.jsx)(xm.LinkPreserveSearch, {
-        to: Tm,
-        className: fm,
-        target: pm ? "_blank" : void 0,
+        gameState: KD
+      } = (0, gD.n)(["gameState"]), {
+        pathname: LD,
+        search: cD
+      } = (0, sD.s)(), AD = "landingPage" !== KD && "studio" !== KD;
+      return (0, CD.jsx)(rD.LinkPreserveSearch, {
+        to: zD,
+        className: wD,
+        target: AD ? "_blank" : void 0,
         onClick: () => {
-          pm || ((0, qm.I)(`${wm}${Dm}`), (0, Rm.d)())
+          AD || ((0, GD.E)(`${LD}${cD}`), (0, RD.i)())
         },
-        children: hm
+        children: pD
       })
     }
   },
-  6507: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      C: () => jm,
-      F: () => km,
-      I: () => Rm,
-      J: () => Sm,
-      L: () => Ym,
-      N: () => Cm,
-      O: () => Hm,
-      S: () => xm,
-      U: () => ym,
-      V: () => Dm,
-      W: () => wm,
-      Z: () => Xm,
-      ab: () => Pm,
-      d: () => Vm,
-      eb: () => Im,
-      fb: () => bm,
-      g: () => zm,
-      j: () => qm,
-      n: () => Em,
-      o: () => pm,
-      q: () => em,
-      t: () => om,
-      w: () => Nm,
-      x: () => rm,
-      y: () => Om
+  6590: (DD, zD, wD) => {
+    wD.d(zD, {
+      $: () => LD,
+      B: () => CD,
+      E: () => RD,
+      F: () => TD,
+      I: () => BD,
+      L: () => ND,
+      P: () => lD,
+      S: () => rD,
+      V: () => WD,
+      Y: () => cD,
+      c: () => nD,
+      cb: () => SD,
+      g: () => VD,
+      gb: () => iD,
+      i: () => GD,
+      k: () => UD,
+      kb: () => MD,
+      lb: () => xD,
+      m: () => AD,
+      o: () => bD,
+      q: () => fD,
+      t: () => jD,
+      u: () => ZD,
+      w: () => ID,
+      x: () => hD
     });
-    var hm = fm(6509),
-      Am = fm(168),
-      am = fm(4501);
-    const xm = "/shader-packs",
-      wm = `${xm}/publish`;
+    var pD = wD(6594),
+      sD = wD(157),
+      KD = wD(4576);
+    const rD = "/shader-packs",
+      LD = `${rD}/publish`;
 
-    function Dm(mm) {
-      return `${xm}/${encodeURIComponent(mm)}`
+    function cD(DD) {
+      return `${rD}/${encodeURIComponent(DD)}`
     }
-    let im = null;
+    let gD = null;
 
-    function Rm(mm) {
-      im = mm
-    }
-
-    function pm() {
-      return im
+    function RD(DD) {
+      gD = DD
     }
 
-    function Em() {
-      im = null
+    function AD() {
+      return gD
     }
 
-    function om(mm) {
-      return mm.playerHasRank("developer") || mm.playerHasRank("admin")
+    function UD() {
+      gD = null
     }
-    const Om = ["terrain", "water", "models", "sunShadows", "strict"],
-      Ym = {
+
+    function fD(DD) {
+      return DD.playerHasRank("developer") || DD.playerHasRank("admin")
+    }
+    const ID = ["terrain", "water", "models", "sunShadows", "strict"],
+      BD = {
         terrain: "shaderPackListing:filterTerrain",
         water: "shaderPackListing:filterWater",
         models: "shaderPackListing:filterModels",
@@ -297,89 +297,89 @@ export const modules = {
         strict: "shaderPackListing:filterAllGames"
       };
 
-    function qm(mm, Tm) {
-      return mm.withFeatures.includes(Tm) ? "with" : mm.withoutFeatures.includes(Tm) ? "without" : null
+    function GD(DD, zD) {
+      return DD.withFeatures.includes(zD) ? "with" : DD.withoutFeatures.includes(zD) ? "without" : null
     }
 
-    function jm(mm) {
-      return null === mm ? "with" : "with" === mm ? "without" : null
+    function hD(DD) {
+      return null === DD ? "with" : "with" === DD ? "without" : null
     }
 
-    function Vm(mm) {
-      return "with" === mm ? "only" : null === mm ? "include" : void 0
+    function nD(DD) {
+      return "with" === DD ? "only" : null === DD ? "include" : void 0
     }
 
-    function Im(mm, Tm) {
-      const fm = qm(mm, Tm),
-        hm = mm => mm.filter((mm => mm !== Tm));
+    function MD(DD, zD) {
+      const wD = GD(DD, zD),
+        pD = DD => DD.filter((DD => DD !== zD));
       return {
-        withFeatures: null === fm ? [...mm.withFeatures, Tm] : hm(mm.withFeatures),
-        withoutFeatures: "with" === fm ? [...mm.withoutFeatures, Tm] : hm(mm.withoutFeatures)
+        withFeatures: null === wD ? [...DD.withFeatures, zD] : pD(DD.withFeatures),
+        withoutFeatures: "with" === wD ? [...DD.withoutFeatures, zD] : pD(DD.withoutFeatures)
       }
     }
-    const Km = "section",
-      Qm = "sort",
-      nm = "filters",
-      Jm = "q",
-      cm = "banned",
-      zm = "popular",
-      Zm = "strict";
+    const OD = "section",
+      JD = "sort",
+      ED = "filters",
+      QD = "q",
+      XD = "banned",
+      VD = "popular",
+      PD = "strict";
 
-    function km(mm) {
-      var Tm, fm, Am;
-      const xm = mm.get(Km),
-        wm = (null !== (Tm = mm.get(nm)) && void 0 !== Tm ? Tm : Zm).split(","),
-        Dm = mm.get(cm);
+    function CD(DD) {
+      var zD, wD, sD;
+      const rD = DD.get(OD),
+        LD = (null !== (zD = DD.get(ED)) && void 0 !== zD ? zD : PD).split(","),
+        cD = DD.get(XD);
       return {
-        section: "favourites" === xm || "mine" === xm ? xm : "explore",
-        sort: null !== (fm = hm.z.find((Tm => Tm === mm.get(Qm)))) && void 0 !== fm ? fm : zm,
-        withFeatures: Om.filter((mm => wm.includes(mm) && !wm.includes(`-${mm}`))),
-        withoutFeatures: Om.filter((mm => wm.includes(`-${mm}`))),
-        searchQuery: (null === (Am = mm.get(Jm)) || void 0 === Am ? void 0 : Am.slice(0, hm.P)) || null,
-        pageNumber: (0, am.f)(mm.get(am.d)),
-        banned: "only" === Dm ? "with" : "include" === Dm ? null : "without"
+        section: "favourites" === rD || "mine" === rD ? rD : "explore",
+        sort: null !== (wD = pD.A.find((zD => zD === DD.get(JD)))) && void 0 !== wD ? wD : VD,
+        withFeatures: ID.filter((DD => LD.includes(DD) && !LD.includes(`-${DD}`))),
+        withoutFeatures: ID.filter((DD => LD.includes(`-${DD}`))),
+        searchQuery: (null === (sD = DD.get(QD)) || void 0 === sD ? void 0 : sD.slice(0, pD.K)) || null,
+        pageNumber: (0, KD.g)(DD.get(KD.d)),
+        banned: "only" === cD ? "with" : "include" === cD ? null : "without"
       }
     }
 
-    function bm(mm, Tm) {
-      var fm;
-      const hm = Gm(Tm);
-      (0, am.h)(mm, Km, "explore" === Tm.section ? null : Tm.section), (0, am.h)(mm, Qm, Tm.sort === zm ? null : Tm.sort), (0, am.h)(mm, nm, hm === Zm ? null : hm), (0, am.h)(mm, Jm, Tm.searchQuery), (0, am.h)(mm, cm, null !== (fm = Vm(Tm.banned)) && void 0 !== fm ? fm : null), (0, am.i)(mm, Tm.pageNumber)
+    function xD(DD, zD) {
+      var wD;
+      const pD = dD(zD);
+      (0, KD.j)(DD, OD, "explore" === zD.section ? null : zD.section), (0, KD.j)(DD, JD, zD.sort === VD ? null : zD.sort), (0, KD.j)(DD, ED, pD === PD ? null : pD), (0, KD.j)(DD, QD, zD.searchQuery), (0, KD.j)(DD, XD, null !== (wD = nD(zD.banned)) && void 0 !== wD ? wD : null), (0, KD.n)(DD, zD.pageNumber)
     }
 
-    function Sm(mm) {
-      const Tm = new URLSearchParams;
-      return bm(Tm, {
+    function TD(DD) {
+      const zD = new URLSearchParams;
+      return xD(zD, {
         section: "explore",
-        sort: zm,
-        withFeatures: "strict" === mm ? [mm] : [mm, "strict"],
+        sort: VD,
+        withFeatures: "strict" === DD ? [DD] : [DD, "strict"],
         withoutFeatures: [],
         searchQuery: null,
         pageNumber: 1,
         banned: "without"
-      }), `${xm}?${Tm.toString()}`
+      }), `${rD}?${zD.toString()}`
     }
 
-    function em(mm) {
-      return Gm(mm) === Zm
+    function bD(DD) {
+      return dD(DD) === PD
     }
 
-    function Nm(mm) {
-      return null !== mm.searchQuery || "with" === mm.banned || Gm(mm) !== Zm
+    function jD(DD) {
+      return null !== DD.searchQuery || "with" === DD.banned || dD(DD) !== PD
     }
 
-    function Gm(mm) {
-      return Om.flatMap((Tm => {
-        const fm = qm(mm, Tm);
-        return "with" === fm ? [Tm] : "without" === fm ? [`-${Tm}`] : []
+    function dD(DD) {
+      return ID.flatMap((zD => {
+        const wD = GD(DD, zD);
+        return "with" === wD ? [zD] : "without" === wD ? [`-${zD}`] : []
       })).join(",")
     }
-    const Xm = {
+    const SD = {
         popular: "shaderPackListing:sortPopular",
         updated: "shaderPackListing:sortUpdated",
         newest: "shaderPackListing:sortNewest"
       },
-      Pm = {
+      iD = {
         forest: "shaderPackListing:viewForest",
         desert: "shaderPackListing:viewDesert",
         water: "shaderPackListing:viewWater",
@@ -387,79 +387,79 @@ export const modules = {
         cave: "shaderPackListing:viewCave"
       };
 
-    function Hm(mm) {
-      return Math.round(100 * Math.max(0, 1 - 1 / mm))
+    function lD(DD) {
+      return Math.round(100 * Math.max(0, 1 - 1 / DD))
     }
 
-    function ym(mm, Tm, fm, Am) {
-      const am = [];
-      mm.isBanned && am.push({
+    function WD(DD, zD, wD, sD) {
+      const KD = [];
+      DD.isBanned && KD.push({
         tone: "warning",
-        text: Am("shaderPackListing:ownerBanned"),
+        text: sD("shaderPackListing:ownerBanned"),
         detail: null
       });
       const {
-        pending: xm
-      } = mm;
-      if (null === mm.brokenError || xm && !xm.error || am.push({
+        pending: rD
+      } = DD;
+      if (null === DD.brokenError || rD && !rD.error || KD.push({
           tone: "warning",
-          text: Am("shaderPackListing:ownerBroken"),
-          detail: mm.brokenError
-        }), null !== xm && void 0 !== xm && xm.error) am.push({
+          text: sD("shaderPackListing:ownerBroken"),
+          detail: DD.brokenError
+        }), null !== rD && void 0 !== rD && rD.error) KD.push({
         tone: "warning",
-        text: Am(Tm ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, hm.m)(xm.error) ? null : xm.error
+        text: sD(zD ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, pD.k)(rD.error) ? null : rD.error
       });
-      else if (xm) {
-        const mm = null === xm.renderNotBefore ? 0 : xm.renderNotBefore - fm,
-          hm = String(Math.ceil(mm / 6e4)),
-          wm = Am(Tm ? mm > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : mm > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: hm
+      else if (rD) {
+        const DD = null === rD.renderNotBefore ? 0 : rD.renderNotBefore - wD,
+          pD = String(Math.ceil(DD / 6e4)),
+          LD = sD(zD ? DD > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : DD > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: pD
           });
-        am.push({
+        KD.push({
           tone: "info",
-          text: wm,
+          text: LD,
           detail: null
         })
       }
-      return mm.listed || am.push({
+      return DD.listed || KD.push({
         tone: "info",
-        text: Am("shaderPackListing:ownerUnlisted"),
+        text: sD("shaderPackListing:ownerUnlisted"),
         detail: null
-      }), am
+      }), KD
     }
 
-    function Cm(mm) {
-      return Math.max(1, Math.round(mm / 1024))
+    function ND(DD) {
+      return Math.max(1, Math.round(DD / 1024))
     }
 
-    function rm(mm, Tm, fm) {
-      return mm instanceof Am.d && mm.errorMessageForUser ? mm.errorMessageForUser : Tm(fm)
+    function ZD(DD, zD, wD) {
+      return DD instanceof sD.c && DD.errorMessageForUser ? DD.errorMessageForUser : zD(wD)
     }
   },
-  6509: (mm, Tm, fm) => {
-    fm.d(Tm, {
-      D: () => wm,
-      H: () => xm,
-      K: () => hm,
-      L: () => Em,
-      P: () => Rm,
-      S: () => Km,
-      V: () => pm,
-      X: () => im,
-      e: () => Om,
-      g: () => qm,
-      k: () => Ym,
-      l: () => om,
-      m: () => Im,
-      o: () => nm,
-      r: () => Dm,
-      t: () => Am,
-      v: () => Qm,
-      z: () => am
+  6594: (DD, zD, wD) => {
+    wD.d(zD, {
+      A: () => KD,
+      C: () => LD,
+      G: () => rD,
+      H: () => pD,
+      I: () => UD,
+      K: () => RD,
+      M: () => OD,
+      N: () => AD,
+      R: () => gD,
+      d: () => ID,
+      f: () => GD,
+      g: () => BD,
+      i: () => fD,
+      k: () => MD,
+      l: () => ED,
+      p: () => cD,
+      s: () => sD,
+      w: () => JD
     });
-    const hm = ["forest", "desert", "water", "night", "cave"];
-    const Am = {
+    const pD = ["forest", "desert", "water", "night", "cave"];
+    const sD = {
         full: {
           width: 3840,
           height: 2160
@@ -473,49 +473,49 @@ export const modules = {
           height: 360
         }
       },
-      am = ["popular", "updated", "newest"],
-      xm = 3,
-      wm = 32,
-      Dm = 300;
+      KD = ["popular", "updated", "newest"],
+      rD = 3,
+      LD = 32,
+      cD = 300;
 
-    function im(mm, Tm) {
-      return mm.slice(0, Tm).replace(/[\uD800-\uDBFF]$/, "")
+    function gD(DD, zD) {
+      return DD.slice(0, zD).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const Rm = 64,
-      pm = 512,
-      Em = 18e5;
+    const RD = 64,
+      AD = 512,
+      UD = 18e5;
 
-    function om(mm) {
-      const Tm = mm,
-        fm = null === Tm || void 0 === Tm ? void 0 : Tm.files;
-      return "number" === typeof(null === Tm || void 0 === Tm ? void 0 : Tm.apiVersion) && "string" === typeof Tm.name && (null === Tm.author || "string" === typeof Tm.author) && (void 0 === Tm.keepCircleShadows || "boolean" === typeof Tm.keepCircleShadows) && "object" === typeof fm && null !== fm && Object.values(fm).every((mm => "string" === typeof mm))
+    function fD(DD) {
+      const zD = DD,
+        wD = null === zD || void 0 === zD ? void 0 : zD.files;
+      return "number" === typeof(null === zD || void 0 === zD ? void 0 : zD.apiVersion) && "string" === typeof zD.name && (null === zD.author || "string" === typeof zD.author) && (void 0 === zD.keepCircleShadows || "boolean" === typeof zD.keepCircleShadows) && "object" === typeof wD && null !== wD && Object.values(wD).every((DD => "string" === typeof DD))
     }
-    const Om = "Bloxdhub",
-      Ym = "https://bloxdhub.com/shaders";
+    const ID = "Bloxdhub",
+      BD = "https://bloxdhub.com/shaders";
 
-    function qm(mm) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(mm)}`
+    function GD(DD) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(DD)}`
     }
-    const jm = "Screenshot generation failed.",
-      Vm = "Its screenshots couldn't be generated:";
+    const hD = "Screenshot generation failed.",
+      nD = "Its screenshots couldn't be generated:";
 
-    function Im(mm) {
-      var Tm;
-      return mm === jm || null !== (Tm = null === mm || void 0 === mm ? void 0 : mm.startsWith(Vm)) && void 0 !== Tm && Tm
-    }
-
-    function Km(mm, Tm) {
-      return `shaderPacks/${mm}/${Tm}.json`
+    function MD(DD) {
+      var zD;
+      return DD === hD || null !== (zD = null === DD || void 0 === DD ? void 0 : DD.startsWith(nD)) && void 0 !== zD && zD
     }
 
-    function Qm(mm, Tm, fm, hm) {
-      return null === Tm.renderId ? nm(mm, Tm.baselineVersion, fm, hm) : `${mm}/${function(mm,Tm,fm,hm){return`shaderPacks/${mm}/${Tm}/${fm}-${hm}.webp`}(Tm.packId,Tm.renderId,fm,hm)}`
+    function OD(DD, zD) {
+      return `shaderPacks/${DD}/${zD}.json`
     }
 
-    function nm(mm, Tm, fm, hm) {
-      return `${mm}/${function(mm,Tm,fm){return`shaderPacks/baseline/${mm}/${Tm}-${fm}.webp`}(Tm,fm,hm)}`
+    function JD(DD, zD, wD, pD) {
+      return null === zD.renderId ? ED(DD, zD.baselineVersion, wD, pD) : `${DD}/${function(DD,zD,wD,pD){return`shaderPacks/${DD}/${zD}/${wD}-${pD}.webp`}(zD.packId,zD.renderId,wD,pD)}`
+    }
+
+    function ED(DD, zD, wD, pD) {
+      return `${DD}/${function(DD,zD,wD){return`shaderPacks/baseline/${DD}/${zD}-${wD}.webp`}(zD,wD,pD)}`
     }
   }
 };
 Object.freeze(modules);
-for (const mm in modules) Object.freeze(modules[mm]);
+for (const DD in modules) Object.freeze(modules[DD]);
