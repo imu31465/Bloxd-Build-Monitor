@@ -1,78 +1,78 @@
 export const id = 247;
 export const ids = [247];
 export const modules = {
-  38123: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      b: () => cB,
-      c: () => TB,
-      e: () => vB,
-      i: () => JB,
-      k: () => GB,
-      m: () => oB
+  38309: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => Ht,
+      e: () => Ot,
+      f: () => dt,
+      j: () => qt,
+      n: () => mt,
+      o: () => Dt
     });
-    const TB = 1.001,
-      JB = .501,
-      oB = .025,
-      GB = .75,
-      vB = .08,
-      kB = 4;
+    const Ot = 1.001,
+      qt = .501,
+      Dt = .025,
+      mt = .75,
+      dt = .08,
+      jt = 4;
 
-    function cB() {
-      const BB = JB,
-        IB = oB,
-        ZB = BB - IB / 2,
-        TB = (2 * BB - 2 * IB) / (2 * kB - 1),
-        GB = [];
-      for (const JB of [-ZB, ZB])
-        for (const oB of [-ZB, ZB])
-          for (let ZB = 0; ZB < kB; ZB++) {
-            const vB = -BB + IB + TB * (2 * ZB + .5);
-            GB.push([TB, IB, IB, vB, JB, oB]), GB.push([IB, TB, IB, JB, vB, oB]), GB.push([IB, IB, TB, JB, oB, vB])
+    function Ht() {
+      const tt = qt,
+        et = Dt,
+        Vt = tt - et / 2,
+        Ot = (2 * tt - 2 * et) / (2 * jt - 1),
+        mt = [];
+      for (const qt of [-Vt, Vt])
+        for (const Dt of [-Vt, Vt])
+          for (let Vt = 0; Vt < jt; Vt++) {
+            const dt = -tt + et + Ot * (2 * Vt + .5);
+            mt.push([Ot, et, et, dt, qt, Dt]), mt.push([et, Ot, et, qt, dt, Dt]), mt.push([et, et, Ot, qt, Dt, dt])
           }
-      for (const JB of [-ZB, ZB])
-        for (const BB of [-ZB, ZB])
-          for (const TB of [-ZB, ZB]) GB.push([IB, IB, IB, JB, BB, TB]);
-      return GB
+      for (const qt of [-Vt, Vt])
+        for (const tt of [-Vt, Vt])
+          for (const Ot of [-Vt, Vt]) mt.push([et, et, et, qt, tt, Ot]);
+      return mt
     }
   },
-  38468: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      B: () => FB,
-      E: () => QB,
-      H: () => wB,
-      I: () => CB,
-      K: () => dB,
-      N: () => zB,
-      R: () => gB,
-      U: () => yB,
-      W: () => JB,
-      e: () => nB,
-      f: () => kB,
-      h: () => WB,
-      j: () => cB,
-      n: () => vB,
-      q: () => GB,
-      t: () => oB,
-      x: () => sB
+  38641: (tt, et, Vt) => {
+    Vt.d(et, {
+      A: () => ht,
+      E: () => Ct,
+      I: () => Jt,
+      K: () => lt,
+      N: () => wt,
+      O: () => Nt,
+      Q: () => qt,
+      b: () => Xt,
+      f: () => jt,
+      j: () => bt,
+      k: () => Ht,
+      m: () => dt,
+      o: () => mt,
+      s: () => Dt,
+      t: () => Kt,
+      u: () => Et,
+      w: () => ut
     });
-    var TB = ZB(9380);
+    var Ot = Vt(9497);
 
-    function JB(BB) {
-      return Math.floor(BB).toLocaleString("en-US")
+    function qt(tt) {
+      return Math.floor(tt).toLocaleString("en-US")
     }
-    const oB = 2e3,
-      GB = .005,
-      vB = .001,
-      kB = 2,
-      cB = "Fluid Tank",
-      nB = "Coolant Mixer",
-      hB = 144;
+    const Dt = 2e3,
+      mt = .005,
+      dt = .001,
+      jt = 2,
+      Ht = "Fluid Tank",
+      Xt = "Coolant Mixer",
+      Qt = 144;
 
-    function zB(BB) {
-      const IB = BB.split("|")[0];
-      return (0, TB.j)(IB) ? IB === TB.d ? "cryo" : "water" : null
+    function lt(tt) {
+      const et = tt.split("|")[0];
+      return (0, Ot.n)(et) ? et === Ot.e ? "cryo" : "water" : null
     }
-    const FB = [
+    const Et = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 1, 0],
@@ -80,43 +80,43 @@ export const modules = {
         [0, 0, 1],
         [0, 0, -1]
       ],
-      NB = 63;
+      ft = 63;
 
-    function gB(BB) {
-      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-      const ZB = IB ? function(BB, IB, ZB) {
-        const TB = FB.findIndex((TB => {
-          let [JB, oB, GB] = TB;
-          return JB === BB && oB === IB && GB === ZB
+    function wt(tt) {
+      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const Vt = et ? function(tt, et, Vt) {
+        const Ot = Et.findIndex((Ot => {
+          let [qt, Dt, mt] = Ot;
+          return qt === tt && Dt === et && mt === Vt
         }));
-        return TB < 0 ? 0 : 1 << TB
-      }(IB[0], IB[1], IB[2]) : 0;
-      return "maker" === BB ? {
-        kind: BB,
-        faces: ZB
-      } : "user" === BB ? {
-        kind: BB,
-        faces: NB & ~ZB
+        return Ot < 0 ? 0 : 1 << Ot
+      }(et[0], et[1], et[2]) : 0;
+      return "maker" === tt ? {
+        kind: tt,
+        faces: Vt
+      } : "user" === tt ? {
+        kind: tt,
+        faces: ft & ~Vt
       } : {
-        kind: BB,
-        faces: NB
+        kind: tt,
+        faces: ft
       }
     }
 
-    function qB(BB) {
-      return "pipe" === BB || "tank" === BB || "maker" === BB
+    function yt(tt) {
+      return "pipe" === tt || "tank" === tt || "maker" === tt
     }
 
-    function yB(BB, IB, ZB) {
-      return 0 !== (BB.faces & 1 << ZB) && 0 !== (IB.faces & 1 << (1 ^ ZB)) && (qB(BB.kind) || qB(IB.kind))
+    function Nt(tt, et, Vt) {
+      return 0 !== (tt.faces & 1 << Vt) && 0 !== (et.faces & 1 << (1 ^ Vt)) && (yt(tt.kind) || yt(et.kind))
     }
-    const UB = (BB, IB, ZB, TB) => ({
-        input: BB,
-        inputAmount: TB,
-        output: IB,
-        outputAmount: ZB
+    const Mt = (tt, et, Vt, Ot) => ({
+        input: tt,
+        inputAmount: Ot,
+        output: et,
+        outputAmount: Vt
       }),
-      WB = {
+      bt = {
         Condenser: {
           kind: "Condenser",
           opMs: 2e3,
@@ -135,7 +135,7 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [1, 2, 3],
-          recipes: [UB("Uranium Grit", "Uranium Pellet", 1, 12), UB("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          recipes: [Mt("Uranium Grit", "Uranium Pellet", 1, 12), Mt("Spent Pellet", "Plutonium Pellet", 1, 4)],
           powerPerOp: 600,
           waterPerOp: 24
         },
@@ -156,36 +156,36 @@ export const modules = {
           inputSlot: 0,
           fuelSlot: null,
           outputSlots: [],
-          recipes: [UB("Biomass", "", 0, 1)],
+          recipes: [Mt("Biomass", "", 0, 1)],
           powerPerOp: 720,
           waterPerOp: 144,
-          cryoMade: hB,
+          cryoMade: Qt,
           couplable: !0,
           couplerSlot: 1
         }
       };
 
-    function dB(BB, IB) {
-      return 1e3 * (null !== IB && void 0 !== IB ? IB : 0) / BB.opMs
+    function Jt(tt, et) {
+      return 1e3 * (null !== et && void 0 !== et ? et : 0) / tt.opMs
     }
 
-    function CB(BB) {
-      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const ZB = dB(WB["Coolant Mixer"], hB) * IB;
-      return BB <= 0 ? 0 : Math.ceil(BB / ZB - 1e-9)
+    function Ct(tt) {
+      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const Vt = Jt(bt["Coolant Mixer"], Qt) * et;
+      return tt <= 0 ? 0 : Math.ceil(tt / Vt - 1e-9)
     }
-    const QB = "baf2Water",
-      sB = "baf2waterclose",
-      wB = "baf2wateropen"
+    const ut = "baf2Water",
+      Kt = "baf2waterclose",
+      ht = "baf2wateropen"
   },
-  38463: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      b: () => jB,
-      f: () => PB
+  38634: (tt, et, Vt) => {
+    Vt.d(et, {
+      e: () => Zt,
+      h: () => Lt
     });
-    var TB = ZB(9296),
-      JB = ZB(9328);
-    const oB = [
+    var Ot = Vt(9425),
+      qt = Vt(9454);
+    const Dt = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
@@ -193,45 +193,45 @@ export const modules = {
       [0, 1, 0],
       [0, -1, 0]
     ];
-    var GB = ZB(9347),
-      vB = ZB(38284),
-      kB = ZB(9340);
-    const cB = {
+    var mt = Vt(9475),
+      dt = Vt(38467),
+      jt = Vt(9466);
+    const Ht = {
       1: [0, -1],
       2: [-1, 0],
       3: [0, 1],
       4: [1, 0]
     };
 
-    function nB(BB) {
-      let [IB, ZB] = BB;
-      return [-ZB, IB]
+    function Xt(tt) {
+      let [et, Vt] = tt;
+      return [-Vt, et]
     }
 
-    function hB(BB, IB) {
-      return BB[0] === IB[0] && BB[1] === IB[1]
+    function Qt(tt, et) {
+      return tt[0] === et[0] && tt[1] === et[1]
     }
 
-    function zB(BB, IB) {
-      return BB[0] * IB[0] + BB[1] * IB[1] === 0
+    function lt(tt, et) {
+      return tt[0] * et[0] + tt[1] * et[1] === 0
     }
-    const FB = [
+    const Et = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
-    var NB = ZB(9375);
+    var ft = Vt(9492);
 
-    function gB(BB, IB, ZB, TB, JB) {
-      return IB < NB.o || IB >= NB.o + NB.s || Math.floor(BB / NB.x) === Math.floor(TB / NB.x) && Math.floor(ZB / NB.x) === Math.floor(JB / NB.x)
+    function wt(tt, et, Vt, Ot, qt) {
+      return et < ft.l || et >= ft.l + ft.n || Math.floor(tt / ft.q) === Math.floor(Ot / ft.q) && Math.floor(Vt / ft.q) === Math.floor(qt / ft.q)
     }
-    const qB = "Splitter",
-      yB = "Sorting Gate",
-      UB = new Set(NB.J),
-      WB = new Set([...NB.J, "Belt Loader", "Fast Loader", yB]),
-      dB = new Set(NB.t),
-      CB = [
+    const yt = "Splitter",
+      Nt = "Sorting Gate",
+      Mt = new Set(ft.C),
+      bt = new Set([...ft.C, "Belt Loader", "Fast Loader", Nt]),
+      Jt = new Set(ft.o),
+      Ct = [
         [1, 0, 0],
         [-1, 0, 0],
         [0, 0, 1],
@@ -240,259 +240,259 @@ export const modules = {
         [0, -1, 0]
       ];
 
-    function QB(BB) {
-      var IB, ZB;
-      return null !== (IB = null === (ZB = TB.f[BB]) || void 0 === ZB ? void 0 : ZB.meta.rootName) && void 0 !== IB ? IB : ""
+    function ut(tt) {
+      var et, Vt;
+      return null !== (et = null === (Vt = Ot.h[tt]) || void 0 === Vt ? void 0 : Vt.meta.rootName) && void 0 !== et ? et : ""
     }
 
-    function sB(BB) {
-      return QB(BB) === NB.g && (0, NB.W)(TB.f[BB].name)
+    function Kt(tt) {
+      return ut(tt) === ft.f && (0, ft.L)(Ot.h[tt].name)
     }
-    var wB = ZB(9336),
-      OB = ZB(9358);
-    const YB = [
+    var ht = Vt(9462),
+      vt = Vt(9480);
+    const Wt = [
       [1, 0, 0],
       [-1, 0, 0],
       [0, 0, 1],
       [0, 0, -1]
     ];
 
-    function iB(BB) {
-      var IB, ZB;
-      const JB = null === (IB = TB.f[BB]) || void 0 === IB ? void 0 : IB.meta;
-      return (null === JB || void 0 === JB ? void 0 : JB.rootName) !== OB.o ? null : {
-        rot: null !== (ZB = JB.rot) && void 0 !== ZB ? ZB : 1,
-        half: (0, OB.f)(JB.rootName, JB.metaStr)
+    function St(tt) {
+      var et, Vt;
+      const qt = null === (et = Ot.h[tt]) || void 0 === et ? void 0 : et.meta;
+      return (null === qt || void 0 === qt ? void 0 : qt.rootName) !== vt.n ? null : {
+        rot: null !== (Vt = qt.rot) && void 0 !== Vt ? Vt : 1,
+        half: (0, vt.g)(qt.rootName, qt.metaStr)
       }
     }
 
-    function pB(BB, IB, ZB, TB) {
-      return iB(BB(IB, ZB, TB))
+    function ct(tt, et, Vt, Ot) {
+      return St(tt(et, Vt, Ot))
     }
 
-    function aB(BB, IB, ZB, TB, JB) {
+    function Rt(tt, et, Vt, Ot, qt) {
       let {
-        rot: oB,
-        half: GB
-      } = JB;
-      const [vB, kB] = (0, OB.n)(oB, GB), cB = pB(BB, IB + vB, ZB, TB + kB);
-      return null !== cB && cB.rot === oB && cB.half === OB.q[GB]
+        rot: Dt,
+        half: mt
+      } = qt;
+      const [dt, jt] = (0, vt.l)(Dt, mt), Ht = ct(tt, et + dt, Vt, Ot + jt);
+      return null !== Ht && Ht.rot === Dt && Ht.half === vt.r[mt]
     }
-    var HB = ZB(38466);
-    const MB = [new class {
+    var It = Vt(38639);
+    const Pt = [new class {
       constructor() {
-        this.reshapeOffsets = FB
+        this.reshapeOffsets = Et
       }
-      handles(BB) {
-        var IB;
-        return "Stairs" === (null === (IB = TB.f[BB]) || void 0 === IB ? void 0 : IB.model)
+      handles(tt) {
+        var et;
+        return "Stairs" === (null === (et = Ot.h[tt]) || void 0 === et ? void 0 : et.model)
       }
-      affects(BB) {
-        return this.handles(BB)
+      affects(tt) {
+        return this.handles(tt)
       }
-      shape(BB, IB, ZB, JB, oB) {
-        const GB = this.stairsOf(oB),
-          vB = this.cornerAt(BB, IB, ZB, JB, GB),
-          cB = GB.half === kB.e.top ? "top" : "bot";
-        return (0, TB.g)(`${TB.f[oB].meta.rootName}|meta|rot${GB.rot}|${cB}${null===vB?"":`|${vB}`}`)
+      shape(tt, et, Vt, qt, Dt) {
+        const mt = this.stairsOf(Dt),
+          dt = this.cornerAt(tt, et, Vt, qt, mt),
+          Ht = mt.half === jt.b.top ? "top" : "bot";
+        return (0, Ot.k)(`${Ot.h[Dt].meta.rootName}|meta|rot${mt.rot}|${Ht}${null===dt?"":`|${dt}`}`)
       }
-      stairsOf(BB) {
+      stairsOf(tt) {
         const {
-          rot: IB,
-          halfblockPlacement: ZB
-        } = TB.f[BB].meta;
+          rot: et,
+          halfblockPlacement: Vt
+        } = Ot.h[tt].meta;
         return {
-          rot: IB,
-          half: ZB
+          rot: et,
+          half: Vt
         }
       }
-      stairsAt(BB, IB, ZB, TB) {
-        const JB = BB(IB, ZB, TB);
-        return this.handles(JB) ? this.stairsOf(JB) : null
+      stairsAt(tt, et, Vt, Ot) {
+        const qt = tt(et, Vt, Ot);
+        return this.handles(qt) ? this.stairsOf(qt) : null
       }
-      cornerAt(BB, IB, ZB, TB, JB) {
+      cornerAt(tt, et, Vt, Ot, qt) {
         let {
-          rot: oB,
-          half: GB
-        } = JB;
-        const vB = cB[oB],
-          kB = JB => {
-            let [vB, kB] = JB;
-            const cB = this.stairsAt(BB, IB + vB, ZB, TB + kB);
-            return null !== cB && cB.rot === oB && cB.half === GB
+          rot: Dt,
+          half: mt
+        } = qt;
+        const dt = Ht[Dt],
+          jt = qt => {
+            let [dt, jt] = qt;
+            const Ht = this.stairsAt(tt, et + dt, Vt, Ot + jt);
+            return null !== Ht && Ht.rot === Dt && Ht.half === mt
           },
-          FB = this.stairsAt(BB, IB + vB[0], ZB, TB + vB[1]);
-        if (null !== FB && FB.half === GB) {
-          const BB = cB[FB.rot];
-          if (zB(vB, BB) && !kB([-BB[0], -BB[1]])) return hB(BB, nB(vB)) ? "outerLeft" : "outerRight"
+          Et = this.stairsAt(tt, et + dt[0], Vt, Ot + dt[1]);
+        if (null !== Et && Et.half === mt) {
+          const tt = Ht[Et.rot];
+          if (lt(dt, tt) && !jt([-tt[0], -tt[1]])) return Qt(tt, Xt(dt)) ? "outerLeft" : "outerRight"
         }
-        const NB = this.stairsAt(BB, IB - vB[0], ZB, TB - vB[1]);
-        if (null !== NB && NB.half === GB) {
-          const BB = cB[NB.rot];
-          if (zB(vB, BB) && !kB(BB)) return hB(BB, nB(vB)) ? "innerLeft" : "innerRight"
+        const ft = this.stairsAt(tt, et - dt[0], Vt, Ot - dt[1]);
+        if (null !== ft && ft.half === mt) {
+          const tt = Ht[ft.rot];
+          if (lt(dt, tt) && !jt(tt)) return Qt(tt, Xt(dt)) ? "innerLeft" : "innerRight"
         }
         return null
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = oB, this.rootIds = new Set(JB.i.map((BB => (0, TB.g)(BB))))
+        this.reshapeOffsets = Dt, this.rootIds = new Set(qt.f.map((tt => (0, Ot.k)(tt))))
       }
-      handles(BB) {
-        var IB;
-        const ZB = null === (IB = TB.f[BB]) || void 0 === IB ? void 0 : IB.meta;
-        return void 0 !== ZB && this.rootIds.has(ZB.rootId)
+      handles(tt) {
+        var et;
+        const Vt = null === (et = Ot.h[tt]) || void 0 === et ? void 0 : et.meta;
+        return void 0 !== Vt && this.rootIds.has(Vt.rootId)
       }
-      affects(BB) {
-        return this.handles(BB)
+      affects(tt) {
+        return this.handles(tt)
       }
-      placedBy(BB) {
-        return TB.f[BB].meta.rootName === JB.n ? null : JB.n
+      placedBy(tt) {
+        return Ot.h[tt].meta.rootName === qt.m ? null : qt.m
       }
-      shape(BB, IB, ZB, oB, GB) {
+      shape(tt, et, Vt, Dt, mt) {
         const {
-          rootId: vB,
-          rootName: kB,
-          rot: cB
-        } = TB.f[GB].meta;
-        let nB = 0;
-        return JB.r[cB].forEach(((JB, GB) => {
-          var kB;
-          let [hB, zB, FB] = JB;
-          const NB = null === (kB = TB.f[BB(IB + hB, ZB + zB, oB + FB)]) || void 0 === kB ? void 0 : kB.meta;
-          (null === NB || void 0 === NB ? void 0 : NB.rootId) === vB && NB.rot === cB && (nB |= 1 << GB)
-        })), (0, TB.g)((0, JB.g)(kB, cB, nB))
+          rootId: dt,
+          rootName: jt,
+          rot: Ht
+        } = Ot.h[mt].meta;
+        let Xt = 0;
+        return qt.u[Ht].forEach(((qt, mt) => {
+          var jt;
+          let [Qt, lt, Et] = qt;
+          const ft = null === (jt = Ot.h[tt(et + Qt, Vt + lt, Dt + Et)]) || void 0 === jt ? void 0 : jt.meta;
+          (null === ft || void 0 === ft ? void 0 : ft.rootId) === dt && ft.rot === Ht && (Xt |= 1 << mt)
+        })), (0, Ot.k)((0, qt.e)(jt, Ht, Xt))
       }
-    }, ...GB.b.map((BB => new vB.d(BB))), new class {
+    }, ...mt.e.map((tt => new dt.b(tt))), new class {
       constructor() {
-        this.reshapeOffsets = CB
+        this.reshapeOffsets = Ct
       }
-      handles(BB) {
-        const IB = QB(BB);
-        return UB.has(IB) || IB === NB.g
+      handles(tt) {
+        const et = ut(tt);
+        return Mt.has(et) || et === ft.f
       }
-      affects(BB) {
-        const IB = QB(BB);
-        return WB.has(IB) || dB.has(IB) || IB === qB || IB === NB.g || void 0 !== NB.e[IB]
+      affects(tt) {
+        const et = ut(tt);
+        return bt.has(et) || Jt.has(et) || et === yt || et === ft.f || void 0 !== ft.c[et]
       }
-      shape(BB, IB, ZB, JB, oB, GB) {
+      shape(tt, et, Vt, qt, Dt, mt) {
         const {
-          rootName: vB,
-          rot: kB
-        } = TB.f[oB].meta;
-        return vB === NB.g ? GB ? oB : function(BB, IB, ZB, JB, oB) {
-          const [GB, vB] = NB.f[oB - 1];
-          for (let kB = 1; kB <= NB.F; kB++) {
-            const [cB, nB] = [IB - GB * kB, JB - vB * kB], hB = BB(cB, ZB, nB);
-            if (QB(hB) === NB.g && TB.f[hB].meta.rot === oB && gB(IB, ZB, JB, cB, nB)) return (0, TB.g)((0, NB.ab)(oB, !sB(hB)))
+          rootName: dt,
+          rot: jt
+        } = Ot.h[Dt].meta;
+        return dt === ft.f ? mt ? Dt : function(tt, et, Vt, qt, Dt) {
+          const [mt, dt] = ft.e[Dt - 1];
+          for (let jt = 1; jt <= ft.y; jt++) {
+            const [Ht, Xt] = [et - mt * jt, qt - dt * jt], Qt = tt(Ht, Vt, Xt);
+            if (ut(Qt) === ft.f && Ot.h[Qt].meta.rot === Dt && wt(et, Vt, qt, Ht, Xt)) return (0, Ot.k)((0, ft.S)(Dt, !Kt(Qt)))
           }
-          return (0, TB.g)((0, NB.ab)(oB, !1))
-        }(BB, IB, ZB, JB, kB) : (0, TB.g)((0, NB.N)(vB, kB, function(BB, IB, ZB, JB, oB) {
-          const [GB, vB] = NB.f[oB - 1], kB = (oB, GB) => function(BB, IB, ZB) {
-            var JB;
-            const oB = null === (JB = TB.f[BB]) || void 0 === JB ? void 0 : JB.meta;
-            if (!oB) return !1;
-            const GB = oB.rootName,
-              vB = WB.has(GB) || sB(BB);
-            if (!vB && !dB.has(GB) && GB !== qB) return !1;
-            const [kB, cB] = NB.f[oB.rot - 1];
-            if (vB && kB === -IB && cB === -ZB) return !0;
-            if (dB.has(GB)) return kB === IB && cB === ZB;
-            const nB = TB.f[BB].name;
-            return (GB === qB ? (0, NB._)(nB, kB, cB) : GB === yB ? [(0, NB.R)(nB, kB, cB)] : []).some((BB => {
-              let [TB, JB] = BB;
-              return TB === -IB && JB === -ZB
+          return (0, Ot.k)((0, ft.S)(Dt, !1))
+        }(tt, et, Vt, qt, jt) : (0, Ot.k)((0, ft.D)(dt, jt, function(tt, et, Vt, qt, Dt) {
+          const [mt, dt] = ft.e[Dt - 1], jt = (Dt, mt) => function(tt, et, Vt) {
+            var qt;
+            const Dt = null === (qt = Ot.h[tt]) || void 0 === qt ? void 0 : qt.meta;
+            if (!Dt) return !1;
+            const mt = Dt.rootName,
+              dt = bt.has(mt) || Kt(tt);
+            if (!dt && !Jt.has(mt) && mt !== yt) return !1;
+            const [jt, Ht] = ft.e[Dt.rot - 1];
+            if (dt && jt === -et && Ht === -Vt) return !0;
+            if (Jt.has(mt)) return jt === et && Ht === Vt;
+            const Xt = Ot.h[tt].name;
+            return (mt === yt ? (0, ft.O)(Xt, jt, Ht) : mt === Nt ? [(0, ft.F)(Xt, jt, Ht)] : []).some((tt => {
+              let [Ot, qt] = tt;
+              return Ot === -et && qt === -Vt
             }))
-          }(BB(IB + oB, ZB, JB + GB), oB, GB), cB = BB(IB - GB, ZB, JB - vB), nB = QB(cB) === qB && TB.f[cB].meta.rot === oB, hB = 1 === NB.e[QB(BB(IB, ZB - 1, JB))] || -1 === NB.e[QB(BB(IB, ZB + 1, JB))];
-          if (hB || nB || kB(-GB, -vB)) return null;
-          const zB = kB(-vB, GB),
-            FB = kB(vB, -GB);
-          if (zB === FB) return null;
-          return zB ? "turnLeft" : "turnRight"
-        }(BB, IB, ZB, JB, kB)))
+          }(tt(et + Dt, Vt, qt + mt), Dt, mt), Ht = tt(et - mt, Vt, qt - dt), Xt = ut(Ht) === yt && Ot.h[Ht].meta.rot === Dt, Qt = 1 === ft.c[ut(tt(et, Vt - 1, qt))] || -1 === ft.c[ut(tt(et, Vt + 1, qt))];
+          if (Qt || Xt || jt(-mt, -dt)) return null;
+          const lt = jt(-dt, mt),
+            Et = jt(dt, -mt);
+          if (lt === Et) return null;
+          return lt ? "turnLeft" : "turnRight"
+        }(tt, et, Vt, qt, jt)))
       }
     }, new class {
       constructor() {
-        this.reshapeOffsets = YB, this.rootId = (0, TB.g)(OB.o)
+        this.reshapeOffsets = Wt, this.rootId = (0, Ot.k)(vt.n)
       }
-      handles(BB) {
-        var IB;
-        return (null === (IB = TB.f[BB]) || void 0 === IB ? void 0 : IB.meta.rootId) === this.rootId
+      handles(tt) {
+        var et;
+        return (null === (et = Ot.h[tt]) || void 0 === et ? void 0 : et.meta.rootId) === this.rootId
       }
-      affects(BB) {
-        return this.handles(BB)
+      affects(tt) {
+        return this.handles(tt)
       }
-      shape(BB, IB, ZB, JB, oB, GB) {
-        const vB = iB(oB);
-        return (0, TB.g)((kB = vB.rot, null !== (cB = GB ? this.reshapedHalf(BB, IB, ZB, JB, vB) : this.placedHalf(BB, IB, ZB, JB, vB.rot)) ? (0, OB.b)(OB.o, kB, cB) : 1 === kB ? OB.o : `${OB.o}|meta|rot${kB}`));
-        var kB, cB
+      shape(tt, et, Vt, qt, Dt, mt) {
+        const dt = St(Dt);
+        return (0, Ot.k)((jt = dt.rot, null !== (Ht = mt ? this.reshapedHalf(tt, et, Vt, qt, dt) : this.placedHalf(tt, et, Vt, qt, dt.rot)) ? (0, vt.e)(vt.n, jt, Ht) : 1 === jt ? vt.n : `${vt.n}|meta|rot${jt}`));
+        var jt, Ht
       }
-      placedHalf(BB, IB, ZB, TB, JB) {
-        const [oB, GB] = wB.c[JB];
-        for (const [vB, kB] of [
+      placedHalf(tt, et, Vt, Ot, qt) {
+        const [Dt, mt] = ht.e[qt];
+        for (const [dt, jt] of [
             ["right", 1],
             ["left", -1]
           ]) {
-          const cB = IB + kB * oB,
-            nB = TB + kB * GB,
-            hB = pB(BB, cB, ZB, nB);
-          if (null !== hB && hB.rot === JB && (null === hB.half || !aB(BB, cB, ZB, nB, hB))) return vB
+          const Ht = et + jt * Dt,
+            Xt = Ot + jt * mt,
+            Qt = ct(tt, Ht, Vt, Xt);
+          if (null !== Qt && Qt.rot === qt && (null === Qt.half || !Rt(tt, Ht, Vt, Xt, Qt))) return dt
         }
         return null
       }
-      reshapedHalf(BB, IB, ZB, TB, JB) {
-        if (null !== JB.half && aB(BB, IB, ZB, TB, JB)) return JB.half;
-        for (const oB of ["right", "left"]) {
-          const [GB, vB] = (0, OB.n)(JB.rot, oB), kB = pB(BB, IB + GB, ZB, TB + vB);
-          if (null !== kB && kB.rot === JB.rot && kB.half === OB.q[oB]) return oB
+      reshapedHalf(tt, et, Vt, Ot, qt) {
+        if (null !== qt.half && Rt(tt, et, Vt, Ot, qt)) return qt.half;
+        for (const Dt of ["right", "left"]) {
+          const [mt, dt] = (0, vt.l)(qt.rot, Dt), jt = ct(tt, et + mt, Vt, Ot + dt);
+          if (null !== jt && jt.rot === qt.rot && jt.half === vt.r[Dt]) return Dt
         }
         return null
       }
-    }, new HB.c];
+    }, new It.e];
 
-    function jB(BB, IB, ZB, TB, JB) {
-      let oB = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
-      for (const GB of MB)
-        if (GB.handles(JB)) return GB.shape(BB, IB, ZB, TB, JB, oB);
-      return JB
+    function Zt(tt, et, Vt, Ot, qt) {
+      let Dt = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      for (const mt of Pt)
+        if (mt.handles(qt)) return mt.shape(tt, et, Vt, Ot, qt, Dt);
+      return qt
     }
 
-    function PB(BB) {
-      for (const TB of MB) {
-        var IB, ZB;
-        if (TB.handles(BB)) return null !== (IB = null === (ZB = TB.placedBy) || void 0 === ZB ? void 0 : ZB.call(TB, BB)) && void 0 !== IB ? IB : null
+    function Lt(tt) {
+      for (const Ot of Pt) {
+        var et, Vt;
+        if (Ot.handles(tt)) return null !== (et = null === (Vt = Ot.placedBy) || void 0 === Vt ? void 0 : Vt.call(Ot, tt)) && void 0 !== et ? et : null
       }
       return null
     }
   },
-  38466: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      c: () => OB,
-      e: () => dB,
-      f: () => WB
+  38639: (tt, et, Vt) => {
+    Vt.d(et, {
+      e: () => vt,
+      h: () => Jt,
+      i: () => bt
     });
-    var TB = ZB(9296),
-      JB = ZB(9316),
-      oB = ZB(9380),
-      GB = ZB(38468),
-      vB = ZB(9375);
-    const kB = (0, GB.R)("pipe"),
-      cB = (0, GB.R)("tank"),
-      nB = (0, GB.R)("port"),
-      hB = "Reactor Port";
+    var Ot = Vt(9425),
+      qt = Vt(9443),
+      Dt = Vt(9497),
+      mt = Vt(38641),
+      dt = Vt(9492);
+    const jt = (0, mt.N)("pipe"),
+      Ht = (0, mt.N)("tank"),
+      Xt = (0, mt.N)("port"),
+      Qt = "Reactor Port";
 
-    function zB(BB, IB, ZB) {
-      const TB = new Set([oB.f, oB.d, hB, ...IB, ...ZB, ...BB ? [GB.j] : []]);
+    function lt(tt, et, Vt) {
+      const Ot = new Set([Dt.i, Dt.e, Qt, ...et, ...Vt, ...tt ? [mt.k] : []]);
       return {
-        makers: new Set(IB),
-        roots: TB
+        makers: new Set(et),
+        roots: Ot
       }
     }
-    const FB = {
-        water: zB(!0, ["Condenser"], ["Centrifuge", "Synthesizer", GB.e]),
-        cryo: zB(!1, [GB.e], [])
+    const Et = {
+        water: lt(!0, ["Condenser"], ["Centrifuge", "Synthesizer", mt.b]),
+        cryo: lt(!1, [mt.b], [])
       },
-      NB = new Set([...FB.water.roots, ...FB.cryo.roots]),
-      gB = {
+      ft = new Set([...Et.water.roots, ...Et.cryo.roots]),
+      wt = {
         nx: [-1, 0, 0],
         ny: [0, -1, 0],
         nz: [0, 0, -1],
@@ -500,127 +500,127 @@ export const modules = {
         py: [0, 1, 0],
         pz: [0, 0, 1]
       },
-      qB = JB.f.map((BB => gB[BB])),
-      yB = qB.map((BB => {
-        let [IB, ZB, TB] = BB;
-        return GB.B.findIndex((BB => {
-          let [JB, oB, GB] = BB;
-          return JB === IB && oB === ZB && GB === TB
+      yt = qt.d.map((tt => wt[tt])),
+      Nt = yt.map((tt => {
+        let [et, Vt, Ot] = tt;
+        return mt.u.findIndex((tt => {
+          let [qt, Dt, mt] = tt;
+          return qt === et && Dt === Vt && mt === Ot
         }))
       }));
 
-    function UB(BB) {
-      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
-      const ZB = TB.f[BB],
-        JB = null === ZB || void 0 === ZB ? void 0 : ZB.meta.rootName,
-        zB = FB[IB];
-      if (!JB || !zB.roots.has(JB)) return null;
-      if ((0, oB.j)(JB)) return (0, GB.N)(ZB.name) === IB ? kB : null;
-      if (JB === GB.j) return cB;
-      if (JB === hB) return ZB.name.endsWith("|Water") ? nB : null;
-      const [NB, gB] = vB.f[(ZB.meta.rot || 1) - 1];
-      return (0, GB.R)(zB.makers.has(JB) ? "maker" : "user", [-NB, 0, -gB])
+    function Mt(tt) {
+      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const Vt = Ot.h[tt],
+        qt = null === Vt || void 0 === Vt ? void 0 : Vt.meta.rootName,
+        lt = Et[et];
+      if (!qt || !lt.roots.has(qt)) return null;
+      if ((0, Dt.n)(qt)) return (0, mt.K)(Vt.name) === et ? jt : null;
+      if (qt === mt.k) return Ht;
+      if (qt === Qt) return Vt.name.endsWith("|Water") ? Xt : null;
+      const [ft, wt] = dt.e[(Vt.meta.rot || 1) - 1];
+      return (0, mt.N)(lt.makers.has(qt) ? "maker" : "user", [-ft, 0, -wt])
     }
 
-    function WB(BB, IB, ZB, JB) {
-      let oB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+    function bt(tt, et, Vt, qt) {
+      let Dt = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
       const {
-        makers: vB
-      } = FB[oB];
-      return qB.some(((cB, nB) => {
-        var hB, zB;
-        let [FB, NB, gB] = cB;
-        const qB = BB(IB + FB, ZB + NB, JB + gB),
-          WB = UB(qB, oB);
-        return null !== WB && vB.has(null !== (hB = null === (zB = TB.f[qB]) || void 0 === zB ? void 0 : zB.meta.rootName) && void 0 !== hB ? hB : "") && !(0, GB.U)(kB, WB, yB[nB])
+        makers: dt
+      } = Et[Dt];
+      return yt.some(((Ht, Xt) => {
+        var Qt, lt;
+        let [Et, ft, wt] = Ht;
+        const yt = tt(et + Et, Vt + ft, qt + wt),
+          bt = Mt(yt, Dt);
+        return null !== bt && dt.has(null !== (Qt = null === (lt = Ot.h[yt]) || void 0 === lt ? void 0 : lt.meta.rootName) && void 0 !== Qt ? Qt : "") && !(0, mt.O)(jt, bt, Nt[Xt])
       }))
     }
 
-    function dB(BB) {
-      const IB = TB.f[BB];
-      return IB ? (0, GB.N)(IB.name) : null
+    function Jt(tt) {
+      const et = Ot.h[tt];
+      return et ? (0, mt.K)(et.name) : null
     }
-    let CB = null;
+    let Ct = null;
 
-    function QB(BB) {
-      if (!CB) {
-        CB = new Map;
-        for (const BB of ["water", "cryo"])
-          for (let IB = 0; IB < 64; IB++)
-            for (const ZB of [!1, !0]) CB.set((0, oB.n)(BB, IB, ZB), {
-              gF: BB,
-              mask: IB,
-              full: ZB
+    function ut(tt) {
+      if (!Ct) {
+        Ct = new Map;
+        for (const tt of ["water", "cryo"])
+          for (let et = 0; et < 64; et++)
+            for (const Vt of [!1, !0]) Ct.set((0, Dt.o)(tt, et, Vt), {
+              OE: tt,
+              mask: et,
+              full: Vt
             })
       }
-      return CB.get(BB)
+      return Ct.get(tt)
     }
-    const sB = new Map(Array.from({
-      length: oB.i + 1
-    }, ((BB, IB) => [(0, oB.o)(IB), IB])));
+    const Kt = new Map(Array.from({
+      length: Dt.l + 1
+    }, ((tt, et) => [(0, Dt.p)(et), et])));
 
-    function wB(BB, IB, ZB, JB, oB, GB) {
-      return qB.some(((vB, kB) => {
-        var cB, nB, hB;
-        let [zB, FB, NB] = vB;
-        if (0 === (GB >> kB & 1)) return !1;
-        const gB = null !== (cB = null === (nB = TB.f[BB(IB + zB, ZB + FB, JB + NB)]) || void 0 === nB ? void 0 : nB.name) && void 0 !== cB ? cB : "",
-          qB = QB(gB);
-        return qB ? qB.gF === oB && qB.full : (null !== (hB = function(BB) {
-          var IB;
-          return null !== (IB = sB.get(BB)) && void 0 !== IB ? IB : null
-        }(gB)) && void 0 !== hB ? hB : 0) > 0
+    function ht(tt, et, Vt, qt, Dt, mt) {
+      return yt.some(((dt, jt) => {
+        var Ht, Xt, Qt;
+        let [lt, Et, ft] = dt;
+        if (0 === (mt >> jt & 1)) return !1;
+        const wt = null !== (Ht = null === (Xt = Ot.h[tt(et + lt, Vt + Et, qt + ft)]) || void 0 === Xt ? void 0 : Xt.name) && void 0 !== Ht ? Ht : "",
+          yt = ut(wt);
+        return yt ? yt.OE === Dt && yt.full : (null !== (Qt = function(tt) {
+          var et;
+          return null !== (et = Kt.get(tt)) && void 0 !== et ? et : null
+        }(wt)) && void 0 !== Qt ? Qt : 0) > 0
       }))
     }
-    class OB {
+    class vt {
       constructor() {
-        this.reshapeOffsets = qB
+        this.reshapeOffsets = yt
       }
-      handles(BB) {
-        return null !== dB(BB)
+      handles(tt) {
+        return null !== Jt(tt)
       }
-      affects(BB) {
-        var IB, ZB;
-        return NB.has(null !== (IB = null === (ZB = TB.f[BB]) || void 0 === ZB ? void 0 : ZB.meta.rootName) && void 0 !== IB ? IB : "")
+      affects(tt) {
+        var et, Vt;
+        return ft.has(null !== (et = null === (Vt = Ot.h[tt]) || void 0 === Vt ? void 0 : Vt.meta.rootName) && void 0 !== et ? et : "")
       }
-      placedBy(BB) {
-        var IB;
-        return (null === (IB = TB.f[BB]) || void 0 === IB ? void 0 : IB.meta.rootName) === oB.d ? oB.f : null
+      placedBy(tt) {
+        var et;
+        return (null === (et = Ot.h[tt]) || void 0 === et ? void 0 : et.meta.rootName) === Dt.e ? Dt.i : null
       }
-      shape(BB, IB, ZB, JB, vB, cB) {
-        var nB, hB, zB;
-        const FB = null !== (nB = null === (hB = TB.f[vB]) || void 0 === hB ? void 0 : hB.name) && void 0 !== nB ? nB : "",
-          NB = cB || FB !== oB.f ? null !== (zB = (0, GB.N)(FB)) && void 0 !== zB ? zB : "water" : function(BB, IB, ZB, TB) {
-            return qB.some(((JB, oB) => {
-              let [vB, cB, nB] = JB;
-              const hB = UB(BB(IB + vB, ZB + cB, TB + nB), "cryo");
-              return null !== hB && "port" !== hB.kind && (0, GB.U)(kB, hB, yB[oB])
+      shape(tt, et, Vt, qt, dt, Ht) {
+        var Xt, Qt, lt;
+        const Et = null !== (Xt = null === (Qt = Ot.h[dt]) || void 0 === Qt ? void 0 : Qt.name) && void 0 !== Xt ? Xt : "",
+          ft = Ht || Et !== Dt.i ? null !== (lt = (0, mt.K)(Et)) && void 0 !== lt ? lt : "water" : function(tt, et, Vt, Ot) {
+            return yt.some(((qt, Dt) => {
+              let [dt, Ht, Xt] = qt;
+              const Qt = Mt(tt(et + dt, Vt + Ht, Ot + Xt), "cryo");
+              return null !== Qt && "port" !== Qt.kind && (0, mt.O)(jt, Qt, Nt[Dt])
             })) ? "cryo" : "water"
-          }(BB, IB, ZB, JB),
-          gB = function(BB, IB, ZB, TB) {
-            let JB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
-              oB = 0;
-            return qB.forEach(((vB, cB) => {
-              let [nB, hB, zB] = vB;
-              const FB = UB(BB(IB + nB, ZB + hB, TB + zB), JB);
-              FB && (0, GB.U)(kB, FB, yB[cB]) && (oB |= 1 << cB)
-            })), oB
-          }(BB, IB, ZB, JB, NB),
-          WB = cB ? function(BB) {
-            var IB;
-            return !0 === (null === (IB = QB(BB)) || void 0 === IB ? void 0 : IB.full)
-          }(FB) : wB(BB, IB, ZB, JB, NB, gB);
-        return (0, TB.g)((0, oB.n)(NB, gB, WB))
+          }(tt, et, Vt, qt),
+          wt = function(tt, et, Vt, Ot) {
+            let qt = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              Dt = 0;
+            return yt.forEach(((dt, Ht) => {
+              let [Xt, Qt, lt] = dt;
+              const Et = Mt(tt(et + Xt, Vt + Qt, Ot + lt), qt);
+              Et && (0, mt.O)(jt, Et, Nt[Ht]) && (Dt |= 1 << Ht)
+            })), Dt
+          }(tt, et, Vt, qt, ft),
+          bt = Ht ? function(tt) {
+            var et;
+            return !0 === (null === (et = ut(tt)) || void 0 === et ? void 0 : et.full)
+          }(Et) : ht(tt, et, Vt, qt, ft, wt);
+        return (0, Ot.k)((0, Dt.o)(ft, wt, bt))
       }
     }
   },
-  38249: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => TB,
-      g: () => oB
+  38428: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => Ot,
+      f: () => Dt
     });
-    const TB = ["Chest", "Loot Chest", "Moonstone Chest"],
-      JB = [{
+    const Ot = ["Chest", "Loot Chest", "Moonstone Chest"],
+      qt = [{
         name: "Workbench",
         exactMatch: !0
       }, {
@@ -640,10 +640,10 @@ export const modules = {
         exactMatch: !1
       }];
 
-    function oB(BB) {
-      return JB.find((IB => IB.exactMatch ? BB === IB.name : BB.includes(IB.name)))
+    function Dt(tt) {
+      return qt.find((et => et.exactMatch ? tt === et.name : tt.includes(et.name)))
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const tt in modules) Object.freeze(modules[tt]);

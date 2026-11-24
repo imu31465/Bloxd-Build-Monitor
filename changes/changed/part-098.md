@@ -1,4131 +1,4424 @@
-# Changed — Bundle Modifications Report (Part 098 / 137)
+# Changed — Bundle Modifications Report (Part 098 / 141)
 
-- **Updated at**: `2026-11-25T07:51 JST`
-- **Part**: `98 / 137` (**413** changed item(s) on this page)
+- **Updated at**: `2026-11-25T08:36 JST`
+- **Part**: `98 / 141` (**418** changed item(s) on this page)
 - **Navigation**: [Index (`changes/changed.md`)](../changed.md) · [← Part 097](part-097.md) · [Part 099 →](part-099.md)
 
-## `bloxd.io` · `bundles/bloxd.io/chunks/js/94.js` (7zvlu.7df130a9 → c6gaap.4d6587ec · continued)
+## `bloxd.io` · `bundles/bloxd.io/chunks/js/93.js` (c6gaap.4d6587ec → igzsf.a0b73a5f · continued)
+
+- **File**: `bundles/bloxd.io/chunks/js/93.js` (47 changed item(s) total)
+- **GitHub File Diff**: [View file diff on GitHub](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b)
+
+#### 16. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L54-L59` → after: `L54-L59`)
+
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR54) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L54-L59)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L54-L59) · [Before (L54-L59)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L54-L59)
 
-- **File**: `bundles/bloxd.io/chunks/js/94.js` (3778 changed item(s) total)
-- **GitHub File Diff**: [View file diff on GitHub](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030)
+```diff
+-       getCustomGameFromPath: () => OI.k,
+-       getCustomGameListingPage: () => PI.h,
+-       getCustomGamePagePath: () => OI.l,
+-       getCustomGamePageRedirectPath: () => OI.m,
+-       getCustomGameSchematicIdFromPath: () => OI.q,
+-       getCustomGameThumbnailCandidates: () => WI.c,
++       getCustomGameFromPath: () => ve.j,
++       getCustomGameListingPage: () => Le.j,
++       getCustomGamePagePath: () => ve.n,
++       getCustomGamePageRedirectPath: () => ve.o,
++       getCustomGameSchematicIdFromPath: () => ve.p,
++       getCustomGameThumbnailCandidates: () => be.d,
+```
+
+#### 17. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L61-L69` → after: `L61-L69`)
+
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR61) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L61-L69)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L61-L69) · [Before (L61-L69)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L61-L69)
+
+```diff
+-       getCustomGameUrlIdFromPath: () => OI.u,
+-       getFirstPartyStudioGameName: () => oB.g,
+-       getGameCanonicalUrl: () => OI.w,
+-       getGameImageBlurhash: () => dI.b,
+-       getGameImagePath: () => wI.f,
+-       getGameImageVariantPath: () => sI.j,
+-       getGameImageVariantSource: () => CI.d,
+-       getGameImageVariants: () => CI.e,
+-       getGamePage: () => OI.G,
++       getCustomGameUrlIdFromPath: () => ve.t,
++       getFirstPartyStudioGameName: () => Dt.f,
++       getGameCanonicalUrl: () => ve.u,
++       getGameImageBlurhash: () => Je.c,
++       getGameImagePath: () => he.e,
++       getGameImageVariantPath: () => Ke.k,
++       getGameImageVariantSource: () => Ce.c,
++       getGameImageVariants: () => Ce.g,
++       getGamePage: () => ve.A,
+```
+
+#### 18. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L71-L79` → after: `L71-L79`)
+
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR71) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L71-L79)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L71-L79) · [Before (L71-L79)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L71-L79)
+
+```diff
+-       getGamePagePath: () => OI.A,
+-       getGamePageRedirectPath: () => OI.D,
+-       getGameSeoMetadata: () => OI.I,
+-       getGameTileImagePaths: () => CI.i,
+-       getIndexedCustomGameListingPaths: () => PI.i,
+-       getIndexedGamePages: () => OI.K,
+-       getJsonLdScriptText: () => OI.N,
+-       getPathGamePageContentGame: () => OI.R,
+-       getPathSeoMetadata: () => OI.S,
++       getGamePagePath: () => ve.v,
++       getGamePageRedirectPath: () => ve.w,
++       getGameSeoMetadata: () => ve.D,
++       getGameTileImagePaths: () => Ce.k,
++       getIndexedCustomGameListingPaths: () => Le.l,
++       getIndexedGamePages: () => ve.E,
++       getJsonLdScriptText: () => ve.H,
++       getPathGamePageContentGame: () => ve.K,
++       getPathSeoMetadata: () => ve.N,
+```
 
-#### 1041. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8658` → after: `L8494`)
+#### 19. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L81-L88` → after: `L81-L88`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8494) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8494)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8494) · [Before (L8658)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8658)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR81) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L81-L88)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L81-L88) · [Before (L81-L88)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L81-L88)
 
 ```diff
--           ny: jB,
-+           lg: IB,
+-       getPlayerSeoMetadata: () => OI.V,
+-       getSeoMetaTagAttributes: () => OI.Y,
+-       getShaderPackPolicy: () => TB.j,
+-       getShaderPackSeoMetadata: () => OI.ab,
+-       getStaticGameConfig: () => TB.m,
+-       getStaticPageSeoMetadata: () => OI.bb,
+-       getUndescribedPageSeoMetadata: () => OI.db,
+-       goalRushStaticConfig: () => KB.e,
++       getPlayerSeoMetadata: () => ve.O,
++       getSeoMetaTagAttributes: () => ve.Q,
++       getShaderPackPolicy: () => Ot.h,
++       getShaderPackSeoMetadata: () => ve.U,
++       getStaticGameConfig: () => Ot.k,
++       getStaticPageSeoMetadata: () => ve.W,
++       getUndescribedPageSeoMetadata: () => ve.Y,
++       goalRushStaticConfig: () => st.c,
 ```
 
-#### 1042. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8661-L8662` → after: `L8497-L8498`)
+#### 20. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L90-L91` → after: `L90-L91`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8497) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8497-L8498)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8497-L8498) · [Before (L8661-L8662)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8661-L8662)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR90) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L90-L91)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L90-L91) · [Before (L90-L91)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L90-L91)
 
 ```diff
--         const IB = EB.e.BILLBOARDMODE_ALL | EB.e.BILLBOARDMODE_USE_POSITION;
--         this.sunMesh = (0, LB.l)(BB, "dayNightSun", (0, tB.f)({
-+         const GB = wB.d.BILLBOARDMODE_ALL | wB.d.BILLBOARDMODE_USE_POSITION;
-+         this.sunMesh = (0, WB.n)(BB, "dayNightSun", (0, CB.f)({
+-       greenvilleStaticConfig: () => pB.e,
+-       heroesvbrainrotsStaticConfig: () => VB.e,
++       greenvilleStaticConfig: () => ct.b,
++       heroesvbrainrotsStaticConfig: () => nt.c,
 ```
 
-#### 1043. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8665` → after: `L8501`)
+#### 21. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L93-L96` → after: `L93-L96`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8501) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8501)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8501) · [Before (L8665)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8665)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR93) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L93-L96)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L93-L96) · [Before (L93-L96)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L93-L96)
 
 ```diff
--         })), this.sunMat = ha(jB, "dayNightSun", ia.n), this.sunMesh.material = this.sunMat, this.sunMesh.billboardMode = IB, this.setupSkyMesh(this.sunMesh), this.moonMesh = (0, LB.l)(BB, "dayNightMoon", (0, tB.f)({
-+         })), this.sunMat = Rn(IB, "dayNightSun", wn.f), this.sunMesh.material = this.sunMat, this.sunMesh.billboardMode = GB, this.setupSkyMesh(this.sunMesh), this.moonMesh = (0, WB.n)(BB, "dayNightMoon", (0, CB.f)({
+-       infectionStaticConfig: () => PB.d,
+-       isGameIndexed: () => OI.eb,
+-       knockoutStaticConfig: () => bB.d,
+-       lastStandStaticConfig: () => XB.e,
++       infectionStaticConfig: () => Lt.c,
++       isGameIndexed: () => ve.$,
++       knockoutStaticConfig: () => pt.e,
++       lastStandStaticConfig: () => zt.c,
 ```
 
-#### 1044. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8668` → after: `L8504`)
+#### 22. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L99-L106` → after: `L99-L106`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8504) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8504)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8504) · [Before (L8668)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8668)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR99) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L99-L106)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L99-L106) · [Before (L99-L106)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L99-L106)
 
 ```diff
--         })), this.moonMat = ha(jB, "dayNightMoon", ia.e), this.moonMesh.material = this.moonMat, this.moonMesh.billboardMode = IB, this.setupSkyMesh(this.moonMesh), this.applySizes(), this.starsMesh.mH(!1), this.sunMesh.mH(!1), this.moonMesh.mH(!1)
-+         })), this.moonMat = Rn(IB, "dayNightMoon", wn.b), this.moonMesh.material = this.moonMat, this.moonMesh.billboardMode = GB, this.setupSkyMesh(this.moonMesh), this.applySizes(), this.starsMesh.qY(!1), this.sunMesh.qY(!1), this.moonMesh.qY(!1)
+-       luckyTowersStaticConfig: () => OB.c,
+-       murderMysteryStaticConfig: () => HB.b,
+-       naturalDisasterStaticConfig: () => rB.c,
+-       ninetyNineNightsStaticConfig: () => mB.b,
+-       normaliseFirstPartyGameNames: () => oB.i,
+-       oneBlockStaticConfig: () => WB.e,
+-       paintballStaticConfig: () => RB.e,
+-       parkourStaticConfig: () => zB.d,
++       luckyTowersStaticConfig: () => vt.e,
++       murderMysteryStaticConfig: () => It.c,
++       naturalDisasterStaticConfig: () => kt.b,
++       ninetyNineNightsStaticConfig: () => Gt.e,
++       normaliseFirstPartyGameNames: () => Dt.g,
++       oneBlockStaticConfig: () => bt.d,
++       paintballStaticConfig: () => Ft.c,
++       parkourStaticConfig: () => lt.b,
 ```
 
-#### 1045. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8671` → after: `L8507`)
+#### 23. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L108-L109` → after: `L108-L109`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8507) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8507)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8507) · [Before (L8671)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8671)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR108) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L108-L109)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L108-L109) · [Before (L108-L109)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L108-L109)
 
 ```diff
--         BB.infiniteDistance = !0, BB.renderingGroupId = -1, BB.Ny = !1, BB.xJ = !0, BB.cJ = !0, BB.applyFog = !1, this.ur.pm.py(BB, !1, this.ur.qr, !1)
-+         BB.infiniteDistance = !0, BB.renderingGroupId = -1, BB.tg = !1, BB.RN = !0, BB.XN = !0, BB.applyFog = !1, this.Nz.Ig.xg(BB, !1, this.Nz.Mz, !1)
+-       piratesStaticConfig: () => sB.e,
+-       plotsStaticConfig: () => QB.b,
++       piratesStaticConfig: () => Kt.c,
++       plotsStaticConfig: () => ut.c,
 ```
 
-#### 1046. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8677-L8678` → after: `L8513-L8514`)
+#### 24. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L111` → after: `L111`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8513) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8513-L8514)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8513-L8514) · [Before (L8677-L8678)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8677-L8678)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR111) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L111)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L111) · [Before (L111)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L111)
 
 ```diff
--           pm: BB
--         } = this.ur, jB = .8 * BB.fC().far, zB = function() {
-+           Ig: BB
-+         } = this.Nz, IB = .8 * BB.qS().far, ZB = function() {
+-       pvpCivStaticConfig: () => II.c,
++       pvpCivStaticConfig: () => Ve.d,
 ```
 
-#### 1047. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8682` → after: `L8518`)
+#### 25. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L113-L114` → after: `L113-L114`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8518) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8518)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8518) · [Before (L8682)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8682)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR113) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L113-L114)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L113-L114) · [Before (L113-L114)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L113-L114)
 
 ```diff
--         (0, HB.k)(this.sunMesh, QB.x * jB, QB.y * jB, QB.z * jB);
-+         (0, aB.q)(this.sunMesh, TB.x * IB, TB.y * IB, TB.z * IB);
+-       rankedStaticConfig: () => uB.e,
+-       readDocsPageMarkdownPath: () => rI.v,
++       rankedStaticConfig: () => Ut.d,
++       readDocsPageMarkdownPath: () => ke.u,
 ```
 
-#### 1048. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8685` → after: `L8521`)
+#### 26. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L116-L120` → after: `L116-L120`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8521) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8521)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8521) · [Before (L8685)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8685)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR116) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L116-L120)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L116-L120) · [Before (L116-L120)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L116-L120)
 
 ```diff
--         (0, HB.k)(this.moonMesh, dB.x * jB, dB.y * jB, dB.z * jB)
-+         (0, aB.q)(this.moonMesh, oB.x * IB, oB.y * IB, oB.z * IB)
+-       renderSeoMetaTags: () => OI.ib,
+-       rocketParkourStaticConfig: () => LB.d,
+-       rocketSpleefStaticConfig: () => wB.c,
+-       seoSiteOrigin: () => RI.b,
+-       shootingStaticConfig: () => FB.b,
++       renderSeoMetaTags: () => ve.bb,
++       rocketParkourStaticConfig: () => ot.e,
++       rocketSpleefStaticConfig: () => ht.d,
++       seoSiteOrigin: () => Fe.c,
++       shootingStaticConfig: () => Et.c,
 ```
 
-#### 1049. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8690-L8691` → after: `L8526-L8527`)
+#### 27. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L123` → after: `L123`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8526) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8526-L8527)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8526-L8527) · [Before (L8690-L8691)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8690-L8691)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR123) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L123)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L123) · [Before (L123)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L123)
 
 ```diff
--           pm: BB
--         } = this.ur, {
-+           Ig: BB
-+         } = this.Nz, {
+-       skyblockStaticConfig: () => dB.b,
++       skyblockStaticConfig: () => Jt.d,
 ```
 
-#### 1050. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8693-L8694` → after: `L8529-L8530`)
+#### 28. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L132` → after: `L132`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8529) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8529-L8530)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8529-L8530) · [Before (L8693-L8694)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8693-L8694)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR132) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L132)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L132) · [Before (L132)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L132)
 
 ```diff
--         } = BB.fC(), zB = .95 * jB;
--         this.starsMesh.pp.set(zB, zB, zB);
-+         } = BB.qS(), ZB = .95 * IB;
-+         this.starsMesh.ek.set(ZB, ZB, ZB);
+-     var TB = ZB(810);
++     var Ot = Vt(839);
 ```
 
-#### 1051. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8697` → after: `L8533`)
+#### 29. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L136-L152` → after: `L136-L146`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8533) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8533)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8533) · [Before (L8697)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8697)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR136) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L136-L146)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L136-L146) · [Before (L136-L152)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L136-L152)
 
 ```diff
--         this.sunMesh.pp.set(nB, nB, nB);
-+         this.sunMesh.ek.set(JB, JB, JB);
+-       return null !== (IB = null === (ZB = (0, TB.m)(BB)) || void 0 === ZB ? void 0 : ZB.defaultListedVariation) && void 0 !== IB ? IB : BB
+-     }
+-     var oB = ZB(1051),
+-       GB = ZB(1075),
+-       vB = ZB(803),
+-       kB = ZB(788),
+-       cB = ZB(796),
+-       nB = ZB(779),
+-       hB = ZB(770),
+-       zB = ZB(817),
+-       FB = ZB(840),
+-       NB = ZB(820),
+-       gB = ZB(826),
+-       qB = ZB(828),
+-       yB = ZB(832),
+-       UB = ZB(844),
+- ... (1 more removed lines; see GitHub link above)
++       return null !== (et = null === (Vt = (0, Ot.k)(tt)) || void 0 === Vt ? void 0 : Vt.defaultListedVariation) && void 0 !== et ? et : tt
++     }
++     var Dt = Vt(1099),
++       mt = Vt(1130),
++       dt = Vt(836),
++       jt = Vt(823),
++       Ht = Vt(827),
++       Xt = Vt(821),
++       Qt = Vt(818),
++       lt = Vt(843),
++       Et = Vt(869),
 ```
 
-#### 1052. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8699` → after: `L8535`)
+#### 30. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L154-L156` → after: `L148-L149`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8535) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8535)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8535) · [Before (L8699)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8699)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR148) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L148-L149)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L148-L149) · [Before (L154-L156)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L154-L156)
 
 ```diff
--         this.moonMesh.pp.set(dB, dB, dB)
-+         this.moonMesh.ek.set(oB, oB, oB)
+-       CB = ZB(857),
+-       QB = ZB(860),
+-       sB = ZB(862),
++       wt = Vt(853),
++       yt = Vt(859),
 ```
 
-#### 1053. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8719` → after: `L8555`)
+#### 31. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L158-L164` → after: `L151-L154`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8555) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8555)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8555) · [Before (L8719)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8719)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR151) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L151-L154)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L151-L154) · [Before (L158-L164)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L158-L164)
 
 ```diff
--         ny: BB,
-+         lg: BB,
+-       OB = ZB(873),
+-       YB = ZB(878),
+-       iB = ZB(885),
+-       pB = ZB(893),
+-       aB = ZB(901),
+-       HB = ZB(908),
+-       MB = ZB(914),
++       Mt = Vt(877),
++       bt = Vt(886),
++       Jt = Vt(894),
++       Ct = Vt(912),
 ```
 
-#### 1054. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8728-L8738` → after: `L8564-L8574`)
+#### 32. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L166-L171` → after: `L156-L161`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8564) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8564-L8574)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8564-L8574) · [Before (L8728-L8738)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8728-L8738)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR156) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L156-L161)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L156-L161) · [Before (L166-L171)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L166-L171)
 
 ```diff
--     var Xa = zB(4334),
--       Za = zB(37987),
--       Aa = zB(37424),
--       Ta = zB(37711),
--       Pa = zB(37534),
--       Wa = zB(814),
--       ea = zB(2885),
--       la = zB(4396),
--       wa = zB(128),
--       xa = zB(348),
--       Ka = zB(39307);
-+     var rn = ZB(4416),
-+       mn = ZB(37964),
-+       Xn = ZB(37346),
-+       Ln = ZB(37668),
-+       en = ZB(37477),
-+       un = ZB(810),
-+       fn = ZB(2935),
-+       An = ZB(4479),
-+       tn = ZB(129),
-+       bn = ZB(331),
-+       xn = ZB(39281);
+-       PB = ZB(923),
+-       RB = ZB(927),
+-       rB = ZB(936),
+-       mB = ZB(938),
+-       XB = ZB(941),
+-       LB = ZB(944),
++       Kt = Vt(922),
++       ht = Vt(929),
++       vt = Vt(934),
++       Wt = Vt(937),
++       St = Vt(940),
++       ct = Vt(945),
 ```
 
-#### 1055. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8746` → after: `L8582`)
+#### 33. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L174-L176` → after: `L164-L168`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8582) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8582)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8582) · [Before (L8746)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8746)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR164) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L164-L168)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L164-L168) · [Before (L174-L176)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L174-L176)
 
 ```diff
--       return `${BB.getMode()}|${BB.Rm()}`
-+       return `${BB.getMode()}|${BB.Xg()}`
+-       fB = ZB(962),
+-       lB = ZB(967),
+-       AB = ZB(976),
++       Pt = Vt(957),
++       Zt = Vt(964),
++       Lt = Vt(968),
++       Ft = Vt(970),
++       kt = Vt(975),
 ```
 
-#### 1056. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8754` → after: `L8590`)
+#### 34. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L178-L188` → after: `L170-L188`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8590) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8590)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8590) · [Before (L8754)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8754)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR170) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L170-L188)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L170-L188) · [Before (L178-L188)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L178-L188)
 
 ```diff
--         this.page = BB, this.lastPassedCheck = null, this.checkGeneration = 0, this.checksRunning = 0, this.heldFailures = [], this.inGame = !1, this.game = 0, this.notifiedModelFallback = !1, this.failedModelCode = new Set, yB.n.subscribe(Ca, (BB => {
-+         this.page = BB, this.lastPassedCheck = null, this.checkGeneration = 0, this.checksRunning = 0, this.heldFailures = [], this.inGame = !1, this.game = 0, this.notifiedModelFallback = !1, this.failedModelCode = new Set, qB.l.subscribe(En, (BB => {
+-       bB = ZB(993),
+-       xB = ZB(996),
+-       EB = ZB(1004),
+-       DB = ZB(1007),
+-       KB = ZB(1011),
+-       VB = ZB(1013),
+-       SB = ZB(1017),
+-       BI = ZB(1025),
+-       II = ZB(1032),
+-       ZI = ZB(1039),
+-       TI = ZB(1046);
++       zt = Vt(991),
++       ot = Vt(998),
++       rt = Vt(1001),
++       Ut = Vt(1009),
++       At = Vt(1016),
++       it = Vt(1024),
++       Yt = Vt(1031),
++       Bt = Vt(1035),
++       pt = Vt(1037),
++       xt = Vt(1045),
++       Tt = Vt(1049),
++       gt = Vt(1052),
++       st = Vt(1059),
++       nt = Vt(1067),
++       te = Vt(1073),
++       ee = Vt(1075),
++ ... (3 more added lines; see GitHub link above)
 ```
 
-#### 1057. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8760` → after: `L8596`)
+#### 35. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L404-L411` → after: `L404-L411`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8596) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8596)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8596) · [Before (L8760)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8760)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR404) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L404-L411)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L404-L411) · [Before (L404-L411)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L404-L411)
 
 ```diff
--           jB === this.game && this.inGame && yB.n.Ly("chat", (0, la.g)(zB, QB))
-+           IB === this.game && this.inGame && qB.l.Gq("chat", (0, An.j)(ZB, TB))
+-     var WI = ZB(1632),
+-       dI = ZB(1642),
+-       CI = ZB(3685),
+-       QI = ZB(3696),
+-       sI = ZB(1638),
+-       wI = ZB(3688),
+-       OI = ZB(1614),
+-       YI = ZB(1663);
++     var be = Vt(1661),
++       Je = Vt(1674),
++       Ce = Vt(3577),
++       ue = Vt(3593),
++       Ke = Vt(1667),
++       he = Vt(3585),
++       ve = Vt(1641),
++       We = Vt(1687);
 ```
 
-#### 1058. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8768` → after: `L8604`)
+#### 36. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L414-L433` → after: `L414-L433`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8604) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8604)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8604) · [Before (L8768)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8768)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR414) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L414-L433)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L414-L433) · [Before (L414-L433)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L414-L433)
 
 ```diff
--         if ((0, IN.q)("webgpuloss")) {
-+         if ((0, Tv.t)("webgpuloss")) {
+-       return `<${BB}><h2>${(0,OI.g)(IB)}</h2>${ZB}</${BB}>`
+-     }
+- 
+-     function pI(BB) {
+-       return BB.map((BB => `<p>${(0,OI.g)(BB)}</p>`)).join("")
+-     }
+- 
+-     function aI(BB) {
+-       return `<ul>${BB.map((BB=>`<li>${BB}</li>`)).join("")}</ul>`
+-     }
+- 
+-     function HI(BB) {
+-       return aI(BB.map(OI.g))
+-     }
+- 
+-     function MI(BB, IB) {
+- ... (4 more removed lines; see GitHub link above)
++       return `<${tt}><h2>${(0,ve.g)(et)}</h2>${Vt}</${tt}>`
++     }
++ 
++     function ce(tt) {
++       return tt.map((tt => `<p>${(0,ve.g)(tt)}</p>`)).join("")
++     }
++ 
++     function Re(tt) {
++       return `<ul>${tt.map((tt=>`<li>${tt}</li>`)).join("")}</ul>`
++     }
++ 
++     function Ie(tt) {
++       return Re(tt.map(ve.g))
++     }
++ 
++     function Pe(tt, et) {
++ ... (4 more added lines; see GitHub link above)
 ```
 
-#### 1059. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8770` → after: `L8606`)
+#### 37. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L437` → after: `L437`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8606) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8606)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8606) · [Before (L8770)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8770)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR437) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L437)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L437) · [Before (L437)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L437)
 
 ```diff
--             status: "xz"
-+             status: "fZ"
+-       const ZB = (0, OI.G)(BB);
++       const Vt = (0, ve.A)(tt);
 ```
 
-#### 1060. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8772` → after: `L8608`)
+#### 38. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L446` → after: `L446`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8608) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8608)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8608) · [Before (L8772)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8772)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR446) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L446)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L446) · [Before (L446)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L446)
 
 ```diff
--           (0, NN.d)((QB => QB.noteJsJoin(jB, BB, zB)))
-+           (0, Jv.e)((TB => TB.noteJsJoin(IB, BB, ZB)))
+-           return `<h3>${(0,OI.g)(IB)}</h3><p>${(0,OI.g)(ZB)}</p>`
++           return `<h3>${(0,ve.g)(et)}</h3><p>${(0,ve.g)(Vt)}</p>`
 ```
 
-#### 1061. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8775-L8777` → after: `L8611-L8613`)
+#### 39. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L448-L452` → after: `L448-L452`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8611) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8611-L8613)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8611-L8613) · [Before (L8775-L8777)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8775-L8777)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR448) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L448-L452)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L448-L452) · [Before (L448-L452)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L448-L452)
 
 ```diff
--           status: "xz"
--         } : (yB.n.Ly("matchmakeAndPlayStepCompleted", {
--           step: Lj.j.SHADER_PACK,
-+           status: "fZ"
-+         } : (qB.l.Gq("matchmakeAndPlayStepCompleted", {
-+           step: WI.l.SHADER_PACK,
+-       return `<main style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"><article>${[`<header><h1>${(0,OI.g)(TB.name)}</h1><p>${(0,OI.g)(TB.description)}</p></header>`,iI("section",JB.whatIs,pI(TB.whatIs)),iI("section",JB.howToPlay,pI(TB.howToPlay)) … [truncated]
+-     }
+-     var PI = ZB(1657),
+-       RI = ZB(1651),
+-       rI = ZB(4995)
++       return `<main style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"><article>${[`<header><h1>${(0,ve.g)(Ot.name)}</h1><p>${(0,ve.g)(Ot.description)}</p></header>`,Se("section",qt.whatIs,ce(Ot.whatIs)),Se("section",qt.howToPlay,ce(Ot.howToPlay)) … [truncated]
++     }
++     var Le = Vt(1680),
++       Fe = Vt(1676),
++       ke = Vt(4986)
 ```
 
-#### 1062. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8779` → after: `L8615`)
+#### 40. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L454` → after: `L454`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8615) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8615)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8615) · [Before (L8779)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8779)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR454) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L454)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L454) · [Before (L454)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L454)
 
 ```diff
--         }), "ok" === dB.status && (this.inGame = !0, void 0 !== dB.couldntRun && this.notify(la.b, dB.couldntRun), BB && !BB.isRunning() && this.notify("shaderPack:offInThisGame"), BB && this.failedModelCode.has(BB.defineFor("model")) && this.notifyModelFallback(), this.recheck(B … [truncated]
-+         }), "ok" === oB.status && (this.inGame = !0, void 0 !== oB.couldntRun && this.notify(An.c, oB.couldntRun), BB && !BB.isRunning() && this.notify("shaderPack:offInThisGame"), BB && this.failedModelCode.has(BB.defineFor("model")) && this.notifyModelFallback(), this.recheck(B … [truncated]
+-   4995: (BB, IB, ZB) => {
++   4986: (tt, et, Vt) => {
 ```
 
-#### 1063. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8804-L8805` → after: `L8640-L8641`)
+#### 41. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L457` → after: `L457`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8640) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8640-L8641)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8640-L8641) · [Before (L8804-L8805)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8804-L8805)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR457) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L457)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L457) · [Before (L457)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L457)
 
 ```diff
--           const uB = null !== (IB = null !== dB && void 0 !== dB ? dB : null === nB || void 0 === nB ? void 0 : nB.message) && void 0 !== IB ? IB : nB,
--             UB = () => NB.packVariant === BB.defineFor(NB.program) && ("model" === NB.program || NB.lighting === BB.Rm());
-+           const kB = null !== (GB = null !== oB && void 0 !== oB ? oB : null === JB || void 0 === JB ? void 0 : JB.message) && void 0 !== GB ? GB : JB,
-+             cB = () => vB.packVariant === BB.defineFor(vB.program) && ("model" === vB.program || vB.lighting === BB.Xg());
+-       e: () => kB,
++       d: () => jt,
 ```
 
-#### 1064. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8807` → after: `L8643`)
+#### 42. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L463-L465` → after: `L462-L465`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8643) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8643)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8643) · [Before (L8807)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8807)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR462) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L462-L465)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L462-L465) · [Before (L463-L465)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L463-L465)
 
 ```diff
--             zB || (this.failedModelCode.add(NB.packVariant), this.inGame && UB() && (console.error(`Shader pack program ${QB} failed in game, so its models are drawn without the pack:`, uB), this.notifyModelFallback()))
-+             ZB || (this.failedModelCode.add(vB.packVariant), this.inGame && cB() && (console.error(`Shader pack program ${TB} failed in game, so its models are drawn without the pack:`, kB), this.notifyModelFallback()))
+-       q: () => hB,
+-       u: () => gB,
+-       v: () => FB
++       p: () => Xt,
++       r: () => Qt,
++       t: () => wt,
++       u: () => Et
 ```
 
-#### 1065. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8813` → after: `L8649`)
+#### 43. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L467` → after: `L467`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8649) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8649)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8649) · [Before (L8813)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8813)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR467) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L467)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L467) · [Before (L467)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L467)
 
 ```diff
--               console.error(`Shader pack program ${QB} failed in game:`, uB)
-+               console.error(`Shader pack program ${TB} failed in game:`, kB)
+-     var TB = ZB(1651);
++     var Ot = Vt(1676);
 ```
 
-#### 1066. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8839` → after: `L8675`)
+#### 44. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L470` → after: `L470`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8675) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8675)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8675) · [Before (L8839)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8839)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR470) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L470)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L470) · [Before (L470)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L470)
 
 ```diff
--         const dB = null !== (QB = (0, Ka.harnessShaderPackMode)()) && void 0 !== QB ? QB : (0, Wa.e)(jB);
-+         const oB = null !== (TB = (0, xn.harnessShaderPackMode)()) && void 0 !== TB ? TB : (0, un.j)(IB);
+-       GB = `${TB.b}${oB}`,
++       mt = `${Ot.c}${Dt}`,
 ```
 
-#### 1067. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8841` → after: `L8677`)
+#### 45. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L479` → after: `L479`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8677) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8677)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8677) · [Before (L8841)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8841)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR479) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L479)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L479) · [Before (L479)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L479)
 
 ```diff
--           if ((0, cd.m)(nB.variants, dB)) {
-+           if ((0, to.l)(JB.variants, oB)) {
+-       return `/docs/${cB(BB)}.md`
++       return `/docs/${Ht(tt)}.md`
 ```
+
+#### 46. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L483` → after: `L483`)
+
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR483) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L483)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L483) · [Before (L483)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L483)
+
+```diff
+-       return `/docs/${cB(BB)}/${IB+1}.md`
++       return `/docs/${Ht(tt)}/${et+1}.md`
+```
+
+#### 47. `bundles/bloxd.io/chunks/js/93.js` (Changed code · before: `L504` → after: `L504`)
+
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205bR504) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-f3db39c2f0444b32bf243400ff6c9545d2e2dc22ac36423a8ba29c521279205b) · [After (L504)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/93.js#L504) · [Before (L504)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/93.js#L504)
+
+```diff
+-       return `/docsHtml/${cB(BB)}.html`
++       return `/docsHtml/${Ht(tt)}.html`
+```
+
+## `bloxd.io` · `bundles/bloxd.io/chunks/js/94.js` (c6gaap.4d6587ec → igzsf.a0b73a5f)
+
+- **File**: `bundles/bloxd.io/chunks/js/94.js` (3948 changed item(s) total)
+- **GitHub File Diff**: [View file diff on GitHub](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030)
 
-#### 1068. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8853` → after: `L8689`)
+#### 1. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1` → after: `L1`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8689) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8689)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8689) · [Before (L8853)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8853)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1) · [Before (L1)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1)
 
 ```diff
--           if (!(0, cd.m)(nB.pack.variants, dB)) return {
-+           if (!(0, to.l)(JB.pack.variants, oB)) return {
+- /*! For license information please see c6gaap.94.a0a18958.chunk.js.LICENSE.txt */
++ /*! For license information please see igzsf.94.2f83ebcc.chunk.js.LICENSE.txt */
 ```
 
-#### 1069. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8861` → after: `L8697`)
+#### 2. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L5` → after: `L5`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8697) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8697)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8697) · [Before (L8861)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8861)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R5) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L5)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L5) · [Before (L5)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L5)
 
 ```diff
--               const jB = (0, ea.k)();
-+               const IB = (0, fn.f)();
+-   39622: () => {
++   39771: () => {
 ```
 
-#### 1070. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8863-L8865` → after: `L8699-L8701`)
+#### 3. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8` → after: `L8`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8699) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8699-L8701)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8699-L8701) · [Before (L8863-L8865)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8863-L8865)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L8) · [Before (L8)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L8)
 
 ```diff
--               return !0 === (null === jB || void 0 === jB || null === (BB = jB.fallbackReason) || void 0 === BB ? void 0 : BB.endsWith(wa.d)) ? "shaderPack:failedNoWebGpu" : null
--             }()) && void 0 !== IB ? IB : function() {
--               const BB = (0, ea.k)();
-+               return !0 === (null === IB || void 0 === IB || null === (BB = IB.fallbackReason) || void 0 === BB ? void 0 : BB.endsWith(tn.b)) ? "shaderPack:failedNoWebGpu" : null
-+             }()) && void 0 !== GB ? GB : function() {
-+               const BB = (0, fn.f)();
+-   39641: (BB, IB, ZB) => {
++   39792: (tt, et, Vt) => {
 ```
 
-#### 1071. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8879-L8880` → after: `L8715-L8716`)
+#### 4. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L21` → after: `L21`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8715) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8715-L8716)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8715-L8716) · [Before (L8879-L8880)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8879-L8880)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R21) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L21)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L21) · [Before (L21)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L21)
 
 ```diff
--         return "xz" === uB.status ? {
--           status: "xz"
-+         return "fZ" === kB.status ? {
-+           status: "fZ"
+-       gB = ZB(9301).b,
++       wt = Vt(9427).d,
 ```
 
-#### 1072. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8912` → after: `L8748`)
+#### 5. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L36` → after: `L36`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8748) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8748)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8748) · [Before (L8912)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8912)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R36) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L36)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L36) · [Before (L36)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L36)
 
 ```diff
--               message: `The check failed: ${QB instanceof Error?QB.message:String(QB)}`
-+               message: `The check failed: ${TB instanceof Error?TB.message:String(TB)}`
+-         var zB = 0 === cB ? ZB : 1 === cB ? TB : JB;
++         var lt = 0 === Ht ? Vt : 1 === Ht ? Ot : qt;
 ```
 
-#### 1073. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8929` → after: `L8765`)
+#### 6. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L46-L47` → after: `L46-L47`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8765) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8765)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8765) · [Before (L8929)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8929)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R46) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L46-L47)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L46-L47) · [Before (L46-L47)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L46-L47)
 
 ```diff
--         this.lastPassedCheck = null, this.endGame(), yB.n.Ly(la.f, "shaderPack:failedToCompile")
-+         this.lastPassedCheck = null, this.endGame(), qB.l.Gq(An.f, "shaderPack:failedToCompile")
+-           var dB = qB > 0 ? (nB[cB] - GB[cB]) / qB : (hB[cB] - oB[cB]) / qB,
+-             CB = qB > 0 ? (hB[cB] - kB - oB[cB]) / qB : (nB[cB] + kB - GB[cB]) / qB;
++           var Jt = yt > 0 ? (Xt[Ht] - mt[Ht]) / yt : (Qt[Ht] - Dt[Ht]) / yt,
++             Ct = yt > 0 ? (Qt[Ht] - jt - Dt[Ht]) / yt : (Xt[Ht] + jt - mt[Ht]) / yt;
 ```
 
-#### 1074. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8940` → after: `L8776`)
+#### 7. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L74-L75` → after: `L74-L75`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8776) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8776)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8776) · [Before (L8940)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8940)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R74) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L74-L75)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L74-L75) · [Before (L74-L75)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L74-L75)
 
 ```diff
--         yB.n.Ly(Ca, zB, !0)
-+         qB.l.Gq(En, ZB, !0)
+-         var dB = FB ? yB + 1 - gB : gB - yB;
+-         dB < 0 && (dB = 0), kB[zB] = WB < 1 / 0 ? WB * dB : 1 / 0
++         var Jt = Et ? Nt + 1 - wt : wt - Nt;
++         Jt < 0 && (Jt = 0), jt[lt] = bt < 1 / 0 ? bt * Jt : 1 / 0
 ```
 
-#### 1075. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8943-L8944` → after: `L8779-L8780`)
+#### 8. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L156-L157` → after: `L156-L157`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8779) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8779-L8780)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8779-L8780) · [Before (L8943-L8944)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8943-L8944)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R156) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L156-L157)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L156-L157) · [Before (L156-L157)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L156-L157)
 
 ```diff
--     var Oa = zB(38850),
--       Bp = zB(39315);
-+     var Bh = ZB(38786),
-+       Ih = ZB(39288);
+-           var eB = pB ? gB : 1;
+-           if (rB > 0 ? hB[QB] = Math.round(hB[QB] * eB) / eB : cB[QB] = Math.round(cB[QB] * eB) / eB, IB(dB, QB, rB, mB)) return dB;
++           var rt = ct ? wt : 1;
++           if (kt > 0 ? Qt[ut] = Math.round(Qt[ut] * rt) / rt : Ht[ut] = Math.round(Ht[ut] * rt) / rt, et(Jt, ut, kt, Gt)) return Jt;
 ```
 
-#### 1076. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8947` → after: `L8783`)
+#### 9. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L186` → after: `L186`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8783) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8783)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8783) · [Before (L8947)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8947)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R186) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L186)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L186) · [Before (L186)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L186)
 
 ```diff
--         this.ur = BB, this.skyBoxMesh = null, this.earthSkyKey = null, this.skyBoxRequestId = 0, this.dayAndNightSky = void 0, this.dayAndNightSky = new Va(BB), this.setupSkyBox(), this.setupFog(), this.setupLighting()
-+         this.Nz = BB, this.skyBoxMesh = null, this.earthSkyKey = null, this.skyBoxRequestId = 0, this.dayAndNightSky = void 0, this.dayAndNightSky = new Pn(BB), this.setupSkyBox(), this.setupFog(), this.setupLighting()
+-   39693: (BB, IB, ZB) => {
++   39842: (tt, et, Vt) => {
 ```
 
-#### 1077. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8953-L8954` → after: `L8789-L8790`)
+#### 10. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L190` → after: `L189-L190`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8789) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8789-L8790)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8789-L8790) · [Before (L8953-L8954)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8953-L8954)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R189) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L189-L190)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L189-L190) · [Before (L190)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L190)
 
 ```diff
--         this.ur.pm.wjB = () => {
--           this.updateSkyboxSize(), this.dayAndNightSky.wjB()
-+         this.Nz.Ig.dZB = () => {
-+           this.updateSkyboxSize(), this.dayAndNightSky.dZB()
+-       d: () => JB
++       g: () => Dt,
++       k: () => qt
 ```
 
-#### 1078. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8957` → after: `L8793`)
+#### 11. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L199` → after: `L199`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8793) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8793)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8793) · [Before (L8957)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8957)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R199) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L199)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L199) · [Before (L199)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L199)
 
 ```diff
--           BB(), this.ur.pm.wjB = null, this.skyBoxRequestId++, null === (jB = this.skyBoxMesh) || void 0 === jB || jB.dispose(!1, !0), this.skyBoxMesh = null, this.earthSkyKey = null, this.ur.pm.J7 = null, this.ur.pm.model.earthSky = null
-+           BB(), this.Nz.Ig.dZB = null, this.skyBoxRequestId++, null === (IB = this.skyBoxMesh) || void 0 === IB || IB.dispose(!1, !0), this.skyBoxMesh = null, this.earthSkyKey = null, this.Nz.Ig.WBB = null, this.Nz.Ig.model.earthSky = null
+-       const IB = (null !== BB && void 0 !== BB ? BB : "").match(/-?\d+(?:\.\d+)?/g);
++       const et = (null !== tt && void 0 !== tt ? tt : "").match(/-?\d+(?:\.\d+)?/g);
 ```
 
-#### 1079. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8963-L8964` → after: `L8799-L8800`)
+#### 12. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L204` → after: `L204`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8799) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8799-L8800)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8799-L8800) · [Before (L8963-L8964)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8963-L8964)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R204) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L204)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L204) · [Before (L204)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L204)
 
 ```diff
--           pm: BB
--         } = this.ur, {
-+           Ig: BB
-+         } = this.Nz, {
+-       return BB === IB ? String(BB) : `${BB}-${IB}`
++       return tt === et ? String(tt) : `${tt}-${et}`
 ```
 
-#### 1080. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8966-L8967` → after: `L8802-L8803`)
+#### 13. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L218` → after: `L218`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8802) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8802-L8803)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8802-L8803) · [Before (L8966-L8967)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8966-L8967)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R218) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L218)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L218) · [Before (L218)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L218)
 
 ```diff
--         } = BB.fC();
--         this.skyBoxMesh.pp.set(jB, jB, jB)
-+         } = BB.qS();
-+         this.skyBoxMesh.ek.set(IB, IB, IB)
+-             const BB = `${kB} ${cB} ${JB}`,
++             const tt = `${jt} ${Ht} ${qt}`,
 ```
 
-#### 1081. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8970` → after: `L8806`)
+#### 14. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L232` → after: `L232`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8806) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8806)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8806) · [Before (L8970)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8970)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R232) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L232)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L232) · [Before (L232)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L232)
 
 ```diff
--         if (this.ur.mJ)
-+         if (this.Nz.oN)
+-       return JB.push(...oB.values()), JB.sort(((BB, IB) => BB.z0 - IB.z0 || BB.x0 - IB.x0)).map((BB => `x${GB(BB.x0,BB.x1)} z${GB(BB.z0,BB.z1)} ${BB.name}`))
++       return qt.push(...Dt.values()), qt.sort(((tt, et) => tt.z0 - et.z0 || tt.x0 - et.x0)).map((tt => `x${mt(tt.x0,tt.x1)} z${mt(tt.z0,tt.z1)} ${tt.name}`))
 ```
 
-#### 1082. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8972` → after: `L8808`)
+#### 15. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L239-L240` → after: `L239-L240`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8808) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8808)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8808) · [Before (L8972)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8972)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R239) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L239-L240)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L239-L240) · [Before (L239-L240)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L239-L240)
 
 ```diff
--             const BB = "object" === typeof jB ? jB : {
-+             const BB = "object" === typeof IB ? IB : {
+-         nB = [`The chunk from ${BB.join(" ")} to ${kB.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
+-       null !== JB && nB.push(`The player's feet are at ${JB.map(Math.floor).join(" ")}, ${cB?"in this chunk":"outside this chunk"}.`);
++         Xt = [`The chunk from ${tt.join(" ")} to ${jt.join(" ")}. Each line is one layer (y), with boxes of one block: x from-to, z from-to, then the block. Air is left out.`];
++       null !== qt && Xt.push(`The player's feet are at ${qt.map(Math.floor).join(" ")}, ${Ht?"in this chunk":"outside this chunk"}.`);
 ```
 
-#### 1083. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8979-L8981` → after: `L8815-L8817`)
+#### 16. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L245` → after: `L245`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8815) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8815-L8817)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8815-L8817) · [Before (L8979-L8981)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8979-L8981)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R245) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L245)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L245) · [Before (L245)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L245)
 
 ```diff
--               } = Da(BB, "earth" === (null === zB || void 0 === zB ? void 0 : zB.type) ? zB : void 0);
--             this.ur.pm.J7 = [QB, nB, dB]
--           } else this.ur.pm.J7 = null
-+               } = Hn(BB, "earth" === (null === ZB || void 0 === ZB ? void 0 : ZB.type) ? ZB : void 0);
-+             this.Nz.Ig.WBB = [TB, JB, oB]
-+           } else this.Nz.Ig.WBB = null
+-         (null === oB || void 0 === oB ? void 0 : oB.boxes) === JB ? oB.to = TB : hB.push({
++         (null === Dt || void 0 === Dt ? void 0 : Dt.boxes) === qt ? Dt.to = Ot : Qt.push({
 ```
 
-#### 1084. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8986` → after: `L8822`)
+#### 17. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L255` → after: `L255`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8822) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8822)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8822) · [Before (L8986)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8986)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R255) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L255)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L255) · [Before (L255)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L255)
 
 ```diff
--         if (void 0 === zB && "earth" !== jB) return void console.error(`Skybox "${jB}" not found, ignoring update...`);
-+         if (void 0 === ZB && "earth" !== IB) return void console.error(`Skybox "${IB}" not found, ignoring update...`);
+-         const BB = `y${GB(TB.from,TB.to)}: ${TB.boxes}`;
++         const tt = `y${mt(Ot.from,Ot.to)}: ${Ot.boxes}`;
 ```
 
-#### 1085. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8992` → after: `L8828`)
+#### 18. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L257` → after: `L257`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8828) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8828)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8828) · [Before (L8992)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8992)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R257) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L257)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L257) · [Before (L257)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L257)
 
 ```diff
--           if (dp(BB, jB) === (null === (nB = (0, Aa.h)(this.earthSkyKey)) || void 0 === nB ? void 0 : nB.dithering)) return void np(this.skyBoxMesh, this.earthSkyKey, BB, jB)
-+           if (Gh(BB, IB) === (null === (JB = (0, Xn.f)(this.earthSkyKey)) || void 0 === JB ? void 0 : JB.dithering)) return void oh(this.skyBoxMesh, this.earthSkyKey, BB, IB)
+-           nB.push(`Cut short: the layers from y${TB.from} up aren't shown, as there are too many blocks.`);
++           Xt.push(`Cut short: the layers from y${Ot.from} up aren't shown, as there are too many blocks.`);
 ```
 
-#### 1086. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L8995-L8997` → after: `L8831-L8833`)
+#### 19. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L265` → after: `L265`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8831) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8831-L8833)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8831-L8833) · [Before (L8995-L8997)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L8995-L8997)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R265) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L265)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L265) · [Before (L265)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L265)
 
 ```diff
--           ny: dB,
--           rm: IB
--         } = this.ur.pm, NB = "earth" === jB || "earth" === zB.type;
-+           lg: oB,
-+           Zg: GB
-+         } = this.Nz.Ig, vB = "earth" === IB || "earth" === ZB.type;
+-   39701: (BB, IB, ZB) => {
++   39850: (tt, et, Vt) => {
 ```
 
-#### 1087. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9003` → after: `L8839`)
+#### 20. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L267-L268` → after: `L267-L268`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8839) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8839)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8839) · [Before (L9003)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9003)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R267) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L267-L268)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L267-L268) · [Before (L267-L268)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L267-L268)
 
 ```diff
--         const uB = (0, LB.l)(this.ur.pm, Xa.c.SKYBOX, (0, tB.h)()),
-+         const kB = (0, WB.n)(this.Nz.Ig, rn.c.SKYBOX, (0, CB.g)()),
+-       d: () => TB,
+-       g: () => JB
++       e: () => Ot,
++       h: () => qt
 ```
 
-#### 1088. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9008` → after: `L8844`)
+#### 21. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L273` → after: `L273`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8844) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8844)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8844) · [Before (L9008)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9008)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R273) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L273)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L273) · [Before (L273)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L273)
 
 ```diff
--             jB = (0, Bp.d)(AI.c.get("clientEscMenuOptions").pixelScale),
-+             IB = (0, Ih.c)(RG.d.get("clientEscMenuOptions").pixelScale),
+-   36909: (BB, IB, ZB) => {
++   37110: (tt, et, Vt) => {
 ```
 
-#### 1089. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9013` → after: `L8849`)
+#### 22. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L277-L278` → after: `L276-L278`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8849) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8849)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8849) · [Before (L9013)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9013)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R276) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L276-L278)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L276-L278) · [Before (L277-L278)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L277-L278)
 
 ```diff
--               reflectionTexture: (0, gB.s)(dB, {
-+               reflectionTexture: (0, dB.q)(oB, {
+-       f: () => sB,
+-       h: () => NB
++       h: () => ut,
++       i: () => Kt,
++       k: () => ft
 ```
 
-#### 1090. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9022` → after: `L8858`)
+#### 23. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L280` → after: `L280`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8858) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8858)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8858) · [Before (L9022)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9022)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R280) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L280)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L280) · [Before (L280)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L280)
 
 ```diff
--             ny: dB,
-+             lg: oB,
+-     var TB = ZB(1091),
++     var Ot = Vt(1140),
 ```
 
-#### 1091. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9027` → after: `L8863`)
+#### 24. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L283-L290` → after: `L283-L290`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8863) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8863)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8863) · [Before (L9027)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9027)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R283) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L283-L290)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L283-L290) · [Before (L283-L290)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L283-L290)
 
 ```diff
--         uB.Ny = !1, uB.cJ = !0, uB.xJ = !0, uB.applyFog = this.shouldApplyFogToSkyBox(), uB.renderingGroupId = -1, uB.vJ();
-+         kB.tg = !1, kB.XN = !0, kB.RN = !0, kB.applyFog = this.shouldApplyFogToSkyBox(), kB.renderingGroupId = -1, kB.eN();
+-       GB = ZB(82),
+-       vB = ZB(1429),
+-       kB = ZB(1516),
+-       cB = ZB(1421),
+-       nB = ZB(1343),
+-       hB = ZB(1248),
+-       zB = ZB(36916),
+-       FB = ZB(1153);
++       mt = Vt(83),
++       dt = Vt(1472),
++       jt = Vt(1556),
++       Ht = Vt(1464),
++       Xt = Vt(1371),
++       Qt = Vt(1286),
++       lt = Vt(37112),
++       Et = Vt(1188);
 ```
 
-#### 1092. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9029` → after: `L8865`)
+#### 25. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L294` → after: `L294`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8865) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8865)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8865) · [Before (L9029)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9029)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R294) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L294)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L294) · [Before (L294)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L294)
 
 ```diff
--         (0, wB.g)(aB, {
-+         (0, AB.f)(nB, {
+-       return (0, oB.useEffect)((() => (ZB((0, zB.j)(BB)), (0, zB.I)((() => {
++       return (0, Dt.useEffect)((() => (Vt((0, lt.j)(tt)), (0, lt.G)((() => {
 ```
 
-#### 1093. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9034` → after: `L8870`)
+#### 26. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L314` → after: `L314`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8870) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8870)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8870) · [Before (L9034)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9034)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R314) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L314)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L314) · [Before (L314)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L314)
 
 ```diff
--         }), (0, nj.h)(aB), (0, Oa.b)(uB, (() => {
-+         }), (0, JI.e)(nB), (0, Bh.d)(kB, (() => {
+-       const ZB = (0, zB.k)(BB),
++       const Vt = (0, lt.n)(tt),
 ```
 
-#### 1094. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9040` → after: `L8876`)
+#### 27. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L316` → after: `L316`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8876) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8876)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8876) · [Before (L9040)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9040)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R316) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L316)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L316) · [Before (L316)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L316)
 
 ```diff
--         null === (zB = this.skyBoxMesh) || void 0 === zB || zB.dispose(!1, !0), this.skyBoxMesh = BB, this.earthSkyKey = jB, this.updateSkyboxSize(), BB && this.ur.pm.py(BB, !1, this.ur.qr, !1), this.ur.pm.model.earthSky = null !== (QB = jB && (0, Aa.h)(jB)) && void 0 !== QB ? QB … [truncated]
-+         null === (ZB = this.skyBoxMesh) || void 0 === ZB || ZB.dispose(!1, !0), this.skyBoxMesh = BB, this.earthSkyKey = IB, this.updateSkyboxSize(), BB && this.Nz.Ig.xg(BB, !1, this.Nz.Mz, !1), this.Nz.Ig.model.earthSky = null !== (TB = IB && (0, Xn.f)(IB)) && void 0 !== TB ? TB … [truncated]
+-       return !ZB.slice(TB + 1).some((IB => (0, zB.r)(BB, IB)))
++       return !Vt.slice(Ot + 1).some((et => (0, lt.u)(tt, et)))
 ```
 
-#### 1095. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9044` → after: `L8880`)
+#### 28. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L326` → after: `L326`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8880) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8880)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8880) · [Before (L9044)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9044)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R326) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L326)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L326) · [Before (L326)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L326)
 
 ```diff
--         const BB = yB.n.subscribe("fogChunkDistanceChanged", (() => {
-+         const BB = qB.l.subscribe("fogChunkDistanceChanged", (() => {
+-       const kB = IB && (0, zB.o)(JB, oB),
++       const jt = et && (0, lt.s)(qt, Dt),
 ```
 
-#### 1096. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9060` → after: `L8896`)
+#### 29. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L328` → after: `L328`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8896) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8896)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8896) · [Before (L9060)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9060)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R328) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L328)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L328) · [Before (L328)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L328)
 
 ```diff
--           yB.n.unsubscribe(BB), jB(), zB(), QB(), nB()
-+           qB.l.unsubscribe(BB), IB(), ZB(), TB(), JB()
+-         hB = GB ? TB : ZB;
++         Qt = mt ? Ot : Vt;
 ```
 
-#### 1097. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9064` → after: `L8900`)
+#### 30. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L331` → after: `L331`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8900) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8900)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8900) · [Before (L9064)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9064)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R331) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L331)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L331) · [Before (L331)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L331)
 
 ```diff
--         return !0 === this.ur.wG.fogOnSkybox
-+         return !0 === this.Nz.vW.fogOnSkybox
+-         null === vB || void 0 === vB || vB(), (0, zB.n)(JB, oB)
++         null === dt || void 0 === dt || dt(), (0, lt.o)(qt, Dt)
 ```
 
-#### 1098. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9068` → after: `L8904`)
+#### 31. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L334` → after: `L334`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8904) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8904)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8904) · [Before (L9068)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9068)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R334) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L334)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L334) · [Before (L334)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L334)
 
 ```diff
--         const zB = null !== (BB = this.ur.wG.fogChunkDistanceOverride) && void 0 !== BB ? BB : AI.c.get("clientEscMenuOptions").fogChunkDistance,
-+         const ZB = null !== (BB = this.Nz.vW.fogChunkDistanceOverride) && void 0 !== BB ? BB : RG.d.get("clientEscMenuOptions").fogChunkDistance,
+-       }), (0, nB.t)("popup", null !== hB && void 0 !== hB ? hB : ZB, FB, IB && null !== hB, null, kB ? void 0 : "controller:menusSkipTutorial")
++       }), (0, Xt.w)("popup", null !== Qt && void 0 !== Qt ? Qt : Vt, Et, et && null !== Qt, null, jt ? void 0 : "controller:menusSkipTutorial")
 ```
 
-#### 1099. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9074` → after: `L8910`)
+#### 32. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L347` → after: `L347`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8910) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8910)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8910) · [Before (L9074)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9074)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R347) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L347)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L347) · [Before (L347)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L347)
 
 ```diff
--         dB && (null === (jB = (0, Aa.h)(dB)) || void 0 === jB ? void 0 : jB.fog) !== nB && (0, SB.P)(dB, {
-+         oB && (null === (IB = (0, Xn.f)(oB)) || void 0 === IB ? void 0 : IB.fog) !== JB && (0, QB.bb)(oB, {
+-       } = (0, hB.G)(), vB = yB(IB, ZB);
++       } = (0, Qt.H)(), dt = Nt(et, Vt);
 ```
 
-#### 1100. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9076` → after: `L8912`)
+#### 33. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L354` → after: `L354`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8912) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8912)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8912) · [Before (L9076)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9076)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R354) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L354)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L354) · [Before (L354)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L354)
 
 ```diff
--         }), QB && QB.applyFog !== nB && (QB.applyFog = nB, (0, Oa.b)(QB, (() => {
-+         }), TB && TB.applyFog !== JB && (TB.applyFog = JB, (0, Bh.d)(TB, (() => {
+-           children: [(0, zB.o)(IB, ZB) && (0, FB.jsx)(kB.k, {
++           children: [(0, lt.s)(et, Vt) && (0, Et.jsx)(jt.g, {
 ```
 
-#### 1101. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9078-L9084` → after: `L8914-L8920`)
+#### 34. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L357` → after: `L357`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8914) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8914-L8920)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8914-L8920) · [Before (L9078-L9084)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9078-L9084)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R357) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L357)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L357) · [Before (L357)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L357)
 
 ```diff
--         }), this.ur.pm.rm));
--         const IB = this.ur.wG.fogColourOverride,
--           uB = IB ? (0, NB.S)(IB) : zp;
--         let UB = 100 * JB.e.ZJ,
--           aB = 101 * JB.e.ZJ;
--         const pB = this.ur.wG.fogBlockDistanceOverride;
--         (0, XB.I)(pB) ? !AI.c.get("clientEscMenuOptions").showFog && (0, XB.I)(this.ur.wG.fogChunkDistanceOverride) || (UB = JB.e.ZJ * zB, aB = 0 === zB ? 5 : JB.e.ZJ * (zB + 1)): (UB = 0, aB = pB), (0, Ta.s)(this.ur.pm, UB, aB, uB)
-+         }), this.Nz.Ig.Zg));
-+         const GB = this.Nz.vW.fogColourOverride,
-+           kB = GB ? (0, vB.$)(GB) : Th;
-+         let cB = 100 * NB.f.YN,
-+           nB = 101 * NB.f.YN;
-+         const hB = this.Nz.vW.fogBlockDistanceOverride;
-+         (0, rB.L)(hB) ? !RG.d.get("clientEscMenuOptions").showFog && (0, rB.L)(this.Nz.vW.fogChunkDistanceOverride) || (cB = NB.f.YN * ZB, nB = 0 === ZB ? 5 : NB.f.YN * (ZB + 1)): (cB = 0, nB = hB), (0, Ln.q)(this.Nz.Ig, cB, nB, kB)
+-               null === oB || void 0 === oB || oB(), (0, zB.n)(IB, ZB)
++               null === Dt || void 0 === Dt || Dt(), (0, lt.o)(et, Vt)
 ```
 
-#### 1102. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9100` → after: `L8936`)
+#### 35. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L360` → after: `L360`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8936) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8936)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8936) · [Before (L9100)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9100)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R360) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L360)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L360) · [Before (L360)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L360)
 
 ```diff
--           nB = yB.n.subscribe("appManagerUpdated|clientEscMenuOptions", (() => {
-+           JB = qB.l.subscribe("appManagerUpdated|clientEscMenuOptions", (() => {
+-           }), !JB && (0, FB.jsx)(kB.g, {
++           }), !qt && (0, Et.jsx)(jt.f, {
 ```
 
-#### 1103. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9104` → after: `L8940`)
+#### 36. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L363` → after: `L363`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8940) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8940)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8940) · [Before (L9104)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9104)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R363) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L363)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L363) · [Before (L363)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L363)
 
 ```diff
--           BB(), jB(), zB(), QB(), yB.n.unsubscribe(nB)
-+           BB(), IB(), ZB(), TB(), qB.l.unsubscribe(JB)
+-               (0, zB.f)(ZB)
++               (0, lt.d)(Vt)
 ```
 
-#### 1104. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9110-L9111` → after: `L8946-L8947`)
+#### 37. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L367` → after: `L367`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8946) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8946-L8947)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8946-L8947) · [Before (L9110-L9111)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9110-L9111)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R367) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L367)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L367) · [Before (L367)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L367)
 
 ```diff
--         } = this.ur.wG, jB = AI.c.get("clientEscMenuOptions").enableLighting, zB = null !== BB && void 0 !== BB ? BB : jB, QB = this.ur.pm.Rm !== zB;
--         this.ur.pm.Rm = zB, QB && ((0, Pa.d)(), zB && this.ur.fL.requeueChunksForLighting(), Ra.lightingChanged(this.ur.mJ));
-+         } = this.Nz.vW, IB = RG.d.get("clientEscMenuOptions").enableLighting, ZB = null !== BB && void 0 !== BB ? BB : IB, TB = this.Nz.Ig.Xg !== ZB;
-+         this.Nz.Ig.Xg = ZB, TB && ((0, en.d)(), ZB && this.Nz.pW.requeueChunksForLighting(), Sn.lightingChanged(this.Nz.oN));
+-           }), !vB && (0, FB.jsx)(kB.k, {
++           }), !dt && (0, Et.jsx)(jt.g, {
 ```
 
-#### 1105. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9116-L9117` → after: `L8952-L8953`)
+#### 38. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L441` → after: `L441`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8952) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8952-L8953)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8952-L8953) · [Before (L9116-L9117)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9116-L9117)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R441) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L441)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L441) · [Before (L441)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L441)
 
 ```diff
--         } = this.ur.wG;
--         this.ur.pm.skyLightColourOverride = nB ? (0, NB.S)(nB) : null, this.ur.pm.ambientLightColourOverride = dB ? (0, NB.S)(dB) : null, this.ur.pm.visionMinLightColour = IB ? (0, NB.S)(IB) : null
-+         } = this.Nz.vW;
-+         this.Nz.Ig.skyLightColourOverride = JB ? (0, vB.$)(JB) : null, this.Nz.Ig.ambientLightColourOverride = oB ? (0, vB.$)(oB) : null, this.Nz.Ig.visionMinLightColour = GB ? (0, vB.$)(GB) : null
+-       } = (0, vB.b)({
++       } = (0, dt.c)({
 ```
 
-#### 1106. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9125` → after: `L8961`)
+#### 39. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L501` → after: `L501`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8961) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8961)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8961) · [Before (L9125)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9125)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R501) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L501)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L501) · [Before (L501)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L501)
 
 ```diff
--       const eB = null === (nB = null !== (dB = zB.infiniteDistance) && void 0 !== dB ? dB : null === QB || void 0 === QB ? void 0 : QB.infiniteDistance) || void 0 === nB || nB;
-+       const fB = null === (JB = null !== (oB = ZB.infiniteDistance) && void 0 !== oB ? oB : null === TB || void 0 === TB ? void 0 : TB.infiniteDistance) || void 0 === JB || JB;
+-       }), (0, cB.i)())
++       }), (0, Ht.k)())
 ```
 
-#### 1107. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9127-L9129` → after: `L8963-L8965`)
+#### 40. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L542` → after: `L542`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8963) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8963-L8965)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8963-L8965) · [Before (L9127-L9129)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9127-L9129)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R542) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L542)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L542) · [Before (L542)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L542)
 
 ```diff
--       const lB = null !== (IB = zB.sunPosition) && void 0 !== IB ? IB : null === QB || void 0 === QB ? void 0 : QB.sunPosition,
--         wB = null !== (NB = zB.up) && void 0 !== NB ? NB : null === QB || void 0 === QB ? void 0 : QB.up;
--       (0, SB.P)(jB, {
-+       const lB = null !== (GB = ZB.sunPosition) && void 0 !== GB ? GB : null === TB || void 0 === TB ? void 0 : TB.sunPosition,
-+         AB = null !== (vB = ZB.up) && void 0 !== vB ? vB : null === TB || void 0 === TB ? void 0 : TB.up;
-+       (0, QB.bb)(IB, {
+-       }), (0, cB.i)()) : null
++       }), (0, Ht.k)()) : null
 ```
 
-#### 1108. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9131-L9138` → after: `L8967-L8974`)
+#### 41. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L545` → after: `L545`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8967) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8967-L8974)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8967-L8974) · [Before (L9131-L9138)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9131-L9138)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R545) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L545)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L545) · [Before (L545)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L545)
 
 ```diff
--         inclination: null !== (uB = null !== (UB = zB.inclination) && void 0 !== UB ? UB : null === QB || void 0 === QB ? void 0 : QB.inclination) && void 0 !== uB ? uB : -.2,
--         turbidity: null !== (aB = null !== (pB = zB.turbidity) && void 0 !== pB ? pB : null === QB || void 0 === QB ? void 0 : QB.turbidity) && void 0 !== aB ? aB : 10,
--         luminance: null !== (rB = null !== (sB = zB.luminance) && void 0 !== sB ? sB : null === QB || void 0 === QB ? void 0 : QB.luminance) && void 0 !== rB ? rB : .1,
--         rayleigh: null !== (JB = null !== (mB = zB.rayleigh) && void 0 !== mB ? mB : null === QB || void 0 === QB ? void 0 : QB.rayleigh) && void 0 !== JB ? JB : 2,
--         mieCoefficient: null !== (yB = null !== (kB = zB.mieCoefficient) && void 0 !== kB ? kB : null === QB || void 0 === QB ? void 0 : QB.mieCoefficient) && void 0 !== yB ? yB : .005,
--         mieDirectionalG: null !== (GB = null !== (LB = zB.mieDirectionalG) && void 0 !== LB ? LB : null === QB || void 0 === QB ? void 0 : QB.mieDirectionalG) && void 0 !== GB ? GB : .8,
--         distance: null !== (gB = null !== (tB = zB.distance) && void 0 !== tB ? tB : null === QB || void 0 === QB ? void 0 : QB.distance) && void 0 !== gB ? gB : 500,
--         useSunPosition: null !== (MB = null !== (EB = zB.useSunPosition) && void 0 !== EB ? EB : null === QB || void 0 === QB ? void 0 : QB.useSunPosition) && void 0 !== MB ? MB : fa,
-+         inclination: null !== (kB = null !== (cB = ZB.inclination) && void 0 !== cB ? cB : null === TB || void 0 === TB ? void 0 : TB.inclination) && void 0 !== kB ? kB : -.2,
-+         turbidity: null !== (nB = null !== (hB = ZB.turbidity) && void 0 !== hB ? hB : null === TB || void 0 === TB ? void 0 : TB.turbidity) && void 0 !== nB ? nB : 10,
-+         luminance: null !== (zB = null !== (FB = ZB.luminance) && void 0 !== FB ? FB : null === TB || void 0 === TB ? void 0 : TB.luminance) && void 0 !== zB ? zB : .1,
-+         rayleigh: null !== (NB = null !== (gB = ZB.rayleigh) && void 0 !== gB ? gB : null === TB || void 0 === TB ? void 0 : TB.rayleigh) && void 0 !== NB ? NB : 2,
-+         mieCoefficient: null !== (qB = null !== (yB = ZB.mieCoefficient) && void 0 !== yB ? yB : null === TB || void 0 === TB ? void 0 : TB.mieCoefficient) && void 0 !== qB ? qB : .005,
-+         mieDirectionalG: null !== (UB = null !== (WB = ZB.mieDirectionalG) && void 0 !== WB ? WB : null === TB || void 0 === TB ? void 0 : TB.mieDirectionalG) && void 0 !== UB ? UB : .8,
-+         distance: null !== (dB = null !== (CB = ZB.distance) && void 0 !== CB ? CB : null === TB || void 0 === TB ? void 0 : TB.distance) && void 0 !== dB ? dB : 500,
-+         useSunPosition: null !== (sB = null !== (wB = ZB.useSunPosition) && void 0 !== wB ? wB : null === TB || void 0 === TB ? void 0 : TB.useSunPosition) && void 0 !== sB ? sB : Yn,
+-   39319: (BB, IB, ZB) => {
++   39453: (tt, et, Vt) => {
 ```
 
-#### 1109. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9140-L9143` → after: `L8976-L8979`)
+#### 42. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L549-L550` → after: `L549-L550`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8976) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8976-L8979)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8976-L8979) · [Before (L9140-L9143)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9140-L9143)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R549) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L549-L550)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L549-L550) · [Before (L549-L550)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L549-L550)
 
 ```diff
--         cameraOffset: [null !== (iB = null !== (qB = zB.xCameraOffset) && void 0 !== qB ? qB : null === QB || void 0 === QB ? void 0 : QB.xCameraOffset) && void 0 !== iB ? iB : 0, null !== (fB = null !== (oB = zB.yCameraOffset) && void 0 !== oB ? oB : null === QB || void 0 === QB … [truncated]
--         azimuth: null !== (FB = null !== (YB = zB.azimuth) && void 0 !== YB ? YB : null === QB || void 0 === QB ? void 0 : QB.azimuth) && void 0 !== FB ? FB : .55,
--         sunPosition: [null !== (VB = null === lB || void 0 === lB ? void 0 : lB[0]) && void 0 !== VB ? VB : oa[0], null !== (hB = null === lB || void 0 === lB ? void 0 : lB[1]) && void 0 !== hB ? hB : oa[1], null !== (XB = null === lB || void 0 === lB ? void 0 : lB[2]) && void 0  … [truncated]
--         up: [null !== (ZB = null === wB || void 0 === wB ? void 0 : wB[0]) && void 0 !== ZB ? ZB : qa[0], null !== (AB = null === wB || void 0 === wB ? void 0 : wB[1]) && void 0 !== AB ? AB : qa[1], null !== (TB = null === wB || void 0 === wB ? void 0 : wB[2]) && void 0 !== TB ?  … [truncated]
-+         cameraOffset: [null !== (OB = null !== (YB = ZB.xCameraOffset) && void 0 !== YB ? YB : null === TB || void 0 === TB ? void 0 : TB.xCameraOffset) && void 0 !== OB ? OB : 0, null !== (iB = null !== (pB = ZB.yCameraOffset) && void 0 !== pB ? pB : null === TB || void 0 === TB … [truncated]
-+         azimuth: null !== (MB = null !== (jB = ZB.azimuth) && void 0 !== jB ? jB : null === TB || void 0 === TB ? void 0 : TB.azimuth) && void 0 !== MB ? MB : .55,
-+         sunPosition: [null !== (PB = null === lB || void 0 === lB ? void 0 : lB[0]) && void 0 !== PB ? PB : pn[0], null !== (RB = null === lB || void 0 === lB ? void 0 : lB[1]) && void 0 !== RB ? RB : pn[1], null !== (rB = null === lB || void 0 === lB ? void 0 : lB[2]) && void 0  … [truncated]
-+         up: [null !== (mB = null === AB || void 0 === AB ? void 0 : AB[0]) && void 0 !== mB ? mB : On[0], null !== (XB = null === AB || void 0 === AB ? void 0 : AB[1]) && void 0 !== XB ? XB : On[1], null !== (LB = null === AB || void 0 === AB ? void 0 : AB[2]) && void 0 !== LB ?  … [truncated]
+-     var TB = ZB(1821),
+-       JB = ZB(1403),
++     var Ot = Vt(1842),
++       qt = Vt(1450),
 ```
 
-#### 1110. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9153` → after: `L8989`)
+#### 43. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L552` → after: `L552`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8989) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8989)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8989) · [Before (L9153)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9153)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R552) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L552)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L552) · [Before (L552)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L552)
 
 ```diff
--           }(0, SB.P)(jB, {
-+           }(0, QB.bb)(IB, {
+-       GB = ZB(1091),
++       mt = Vt(1140),
 ```
 
-#### 1111. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9157` → after: `L8993`)
+#### 44. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L554-L555` → after: `L554-L555`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8993) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8993)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8993) · [Before (L9157)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9157)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R554) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L554-L555)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L554-L555) · [Before (L554-L555)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L554-L555)
 
 ```diff
--       }(BB, jB, null !== (PB = null !== (WB = zB.vertexTint) && void 0 !== WB ? WB : null === QB || void 0 === QB ? void 0 : QB.vertexTint) && void 0 !== PB ? PB : [255, 255, 255])
-+       }(BB, IB, null !== (eB = null !== (uB = ZB.vertexTint) && void 0 !== uB ? uB : null === TB || void 0 === TB ? void 0 : TB.vertexTint) && void 0 !== eB ? eB : [255, 255, 255])
+-       kB = ZB(1516),
+-       cB = ZB(105);
++       jt = Vt(1556),
++       Ht = Vt(106);
 ```
 
-#### 1112. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9162` → after: `L8998`)
+#### 45. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L560` → after: `L560`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R8998) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L8998)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L8998) · [Before (L9162)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9162)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R560) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L560)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L560) · [Before (L560)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L560)
 
 ```diff
--       return null !== (zB = null !== (QB = BB.dithering) && void 0 !== QB ? QB : null === jB || void 0 === jB ? void 0 : jB.dithering) && void 0 !== zB && zB
-+       return null !== (ZB = null !== (TB = BB.dithering) && void 0 !== TB ? TB : null === IB || void 0 === IB ? void 0 : IB.dithering) && void 0 !== ZB && ZB
+-       return "webm" === BB ? nB : hB
++       return "webm" === tt ? Xt : Qt
 ```
 
-#### 1113. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9164-L9165` → after: `L9000-L9001`)
+#### 46. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L572` → after: `L572`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9000) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9000-L9001)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9000-L9001) · [Before (L9164-L9165)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9164-L9165)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R572) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L572)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L572) · [Before (L572)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L572)
 
 ```diff
--     var Ip = zB(37357);
--     const Np = XB.y / 8,
-+     var vh = ZB(37291);
-+     const kh = rB.C / 8,
+-     var gB = ZB(1153);
++     var wt = Vt(1188);
 ```
 
-#### 1114. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9169` → after: `L9005`)
+#### 47. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L641` → after: `L641`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9005) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9005)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9005) · [Before (L9169)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9169)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R641) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L641)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L641) · [Before (L641)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L641)
 
 ```diff
--         for (let jB = 0; jB <= XB.y; jB += Np) BB.push({
-+         for (let IB = 0; IB <= rB.C; IB += kh) BB.push({
+-             children: `Your device does not support exporting. Try recording with an external software like ${BB}.`
++             children: `Your device does not support exporting. Try recording with an external software like ${tt}.`
 ```
 
-#### 1115. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9171` → after: `L9007`)
+#### 48. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L644` → after: `L644`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9007) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9007)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9007) · [Before (L9171)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9171)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R644) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L644)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L644) · [Before (L644)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L644)
 
 ```diff
--           isChunkBound: jB % XB.y === 0
-+           isChunkBound: IB % rB.C === 0
+-             children: (0, gB.jsx)(kB.M, {
++             children: (0, wt.jsx)(jt.G, {
 ```
 
-#### 1116. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9178` → after: `L9014`)
+#### 49. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L716` → after: `L716`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9014) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9014)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9014) · [Before (L9178)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9178)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R716) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L716)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L716) · [Before (L716)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L716)
 
 ```diff
--         this.ur = BB, this.rendererId = jB, this.config = zB, this.tornDown = !1, this.borderMesh = null, this.subdivMesh = null, this.borderMaterial = null, this.subdivMaterial = null, this.lastChunkI = NaN, this.lastChunkJ = NaN, this.lastChunkK = NaN, this.planeThickness = voi … [truncated]
-+         this.Nz = BB, this.rendererId = IB, this.config = ZB, this.tornDown = !1, this.borderMesh = null, this.subdivMesh = null, this.borderMaterial = null, this.subdivMaterial = null, this.lastChunkI = NaN, this.lastChunkJ = NaN, this.lastChunkK = NaN, this.planeThickness = voi … [truncated]
+-           children: [(0, gB.jsx)(kB.p, {
++           children: [(0, wt.jsx)(jt.m, {
 ```
 
-#### 1117. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9180` → after: `L9016`)
+#### 50. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L726` → after: `L726`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9016) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9016)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9016) · [Before (L9180)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9180)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R726) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L726)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L726) · [Before (L726)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L726)
 
 ```diff
--         })), pp.registerRenderer(this.ur, this)
-+         })), hh.registerRenderer(this.Nz, this)
+-           }), (0, gB.jsx)(kB.M, {
++           }), (0, wt.jsx)(jt.G, {
 ```
 
-#### 1118. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9183` → after: `L9019`)
+#### 51. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L736-L738` → after: `L736-L738`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9019) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9019)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9019) · [Before (L9183)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9183)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R736) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L736-L738)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L736-L738) · [Before (L736-L738)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L736-L738)
 
 ```diff
--         this.tornDown || (this.tornDown = !0, this.disposeMeshes(), pp.unregisterRenderer(this.ur, this))
-+         this.tornDown || (this.tornDown = !0, this.disposeMeshes(), hh.unregisterRenderer(this.Nz, this))
+-     var dB = ZB(5028),
+-       CB = ZB(37019),
+-       QB = ZB(37024);
++     var Jt = Vt(5030),
++       Ct = Vt(37238),
++       ut = Vt(37243);
 ```
 
-#### 1119. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9191` → after: `L9027`)
+#### 52. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L743` → after: `L743`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9027) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9027)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9027) · [Before (L9191)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9191)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R743) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L743)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L743) · [Before (L743)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L743)
 
 ```diff
--         }, BB.on("vp", pp.tickHandler))
-+         }, BB.on("Iz", hh.tickHandler))
+-         const BB = (0, QB.b)();
++         const tt = (0, ut.e)();
 ```
 
-#### 1120. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9194` → after: `L9030`)
+#### 53. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L748` → after: `L748`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9030) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9030)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9030) · [Before (L9194)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9194)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R748) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L748)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L748) · [Before (L748)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L748)
 
 ```diff
--         delete pp.allRenderers[jB.rendererId], pp.tickHandler && 0 === Object.keys(pp.allRenderers).length && (BB.off("vp", pp.tickHandler), pp.tickHandler = null)
-+         delete hh.allRenderers[IB.rendererId], hh.tickHandler && 0 === Object.keys(hh.allRenderers).length && (BB.off("Iz", hh.tickHandler), hh.tickHandler = null)
+-           of CB.d)
++           of Ct.g)
 ```
 
-#### 1121. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9205` → after: `L9041`)
+#### 54. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L777` → after: `L777`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9041) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9041)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9041) · [Before (L9205)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9205)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R777) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L777)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L777) · [Before (L777)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L777)
 
 ```diff
--         const QB = [(0, XB.v)(BB), (0, XB.v)(jB), (0, XB.v)(zB)],
-+         const TB = [(0, rB.y)(BB), (0, rB.y)(IB), (0, rB.y)(ZB)],
+-     var YB = ZB(39152);
++     var Wt = Vt(39288);
 ```
 
-#### 1122. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9213` → after: `L9049`)
+#### 55. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L781` → after: `L781`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9049) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9049)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9049) · [Before (L9213)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9213)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R781) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L781)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L781) · [Before (L781)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L781)
 
 ```diff
--                     (nB.isChunkBound && dB.isChunkBound ? jB : zB).push(...QB(BB, mp(nB.offset), mp(dB.offset)))
-+                     (JB.isChunkBound && oB.isChunkBound ? IB : ZB).push(...TB(BB, gh(JB.offset), gh(oB.offset)))
+-       BB.holdInput(!1), (0, YB.e)(!1)
++       tt.holdInput(!1), (0, Wt.g)(!1)
 ```
 
-#### 1123. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9216` → after: `L9052`)
+#### 56. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L785` → after: `L785`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9052) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9052)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9052) · [Before (L9216)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9216)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R785) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L785)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L785) · [Before (L785)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L785)
 
 ```diff
--         this.borderMaterial = this.createPlaneMaterial(`chunkBorderMat-${BB}-${jB}-${zB}`, this.config.borderColor), this.borderMesh = this.addPlanes("chunkBorders", nB, this.borderMaterial, QB), this.subdivMaterial = this.createPlaneMaterial(`chunkSubdivMat-${BB}-${jB}-${zB}`, t … [truncated]
-+         this.borderMaterial = this.createPlaneMaterial(`chunkBorderMat-${BB}-${IB}-${ZB}`, this.config.borderColor), this.borderMesh = this.addPlanes("chunkBorders", JB, this.borderMaterial, TB), this.subdivMaterial = this.createPlaneMaterial(`chunkSubdivMat-${BB}-${IB}-${ZB}`, t … [truncated]
+-       if ((0, YB.d)() || iB) return;
++       if ((0, Wt.c)() || St) return;
 ```
 
-#### 1124. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9219` → after: `L9055`)
+#### 57. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L827` → after: `L827`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9055) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9055)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9055) · [Before (L9219)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9219)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R827) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L827)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L827) · [Before (L827)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L827)
 
 ```diff
--         const nB = (0, LB.l)(this.ur.pm, BB, function(BB) {
-+         const JB = (0, WB.n)(this.Nz.Ig, BB, function(BB) {
+-       const nB = null !== (IB = null === (ZB = oB.startFailure) || void 0 === ZB ? void 0 : ZB.call(oB)) && void 0 !== IB ? IB : null;
++       const Xt = null !== (et = null === (Vt = Dt.startFailure) || void 0 === Vt ? void 0 : Vt.call(Dt)) && void 0 !== et ? et : null;
 ```
 
-#### 1125. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9228` → after: `L9064`)
+#### 58. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L833` → after: `L833`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9064) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9064)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9064) · [Before (L9228)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9228)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R833) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L833)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L833) · [Before (L833)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L833)
 
 ```diff
--         return nB.material = zB, nB.Ny = !1, this.ur.pm.py(nB, !0, QB), nB
-+         return JB.material = ZB, JB.tg = !1, this.Nz.Ig.xg(JB, !0, TB), JB
+-           return !(0, YB.d)() && ((0, YB.e)(!0), BB.holdInput(!0), !0)
++           return !(0, Wt.c)() && ((0, Wt.g)(!0), tt.holdInput(!0), !0)
 ```
 
-#### 1126. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9234` → after: `L9070`)
+#### 59. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L837` → after: `L837`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9070) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9070)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9070) · [Before (L9234)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9234)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R837) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L837)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L837) · [Before (L837)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L837)
 
 ```diff
--           ny: this.ur.pm.ny,
-+           lg: this.Nz.Ig.lg,
+-         hB = await OB(GB.includeUi, (() => oB.canvas()), oB.bM)
++         Qt = await vt(mt.includeUi, (() => Dt.canvas()), Dt.bI)
 ```
 
-#### 1127. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9236` → after: `L9072`)
+#### 60. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L850` → after: `L850`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9072) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9072)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9072) · [Before (L9236)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9236)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R850) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L850)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L850) · [Before (L850)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L850)
 
 ```diff
--             ...SB.b,
-+             ...QB.c,
+-         NB = oB.playbackSpeed(), oB.closeViewer(), oB.setPlaybackSpeed(1), oB.pause(), oB.seekToTick(null !== vB && void 0 !== vB ? vB : 0);
++         ft = Dt.playbackSpeed(), Dt.closeViewer(), Dt.setPlaybackSpeed(1), Dt.pause(), Dt.seekToTick(null !== dt && void 0 !== dt ? dt : 0);
 ```
 
-#### 1128. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9251` → after: `L9087`)
+#### 61. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L858` → after: `L858`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9087) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9087)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9087) · [Before (L9251)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9251)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R858) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L858)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L858) · [Before (L858)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L858)
 
 ```diff
--     const rp = XB.y / 2,
-+     const zh = rB.C / 2,
+-           return null !== ZB && void 0 !== ZB ? ZB : null
++           return null !== Vt && void 0 !== Vt ? Vt : null
 ```
 
-#### 1129. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9254-L9255` → after: `L9090-L9091`)
+#### 62. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L865` → after: `L865`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9090) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9090-L9091)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9090-L9091) · [Before (L9254-L9255)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9254-L9255)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R865) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L865)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L865) · [Before (L865)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L865)
 
 ```diff
--         [BB, XB.y, jB, rp, zB, 0, 0],
--         [BB, XB.y, jB, rp, zB, sp, 0]
-+         [BB, rB.C, IB, zh, ZB, 0, 0],
-+         [BB, rB.C, IB, zh, ZB, Fh, 0]
+-           if (!IB) throw new Error(`No MediaRecorder mime type available for ${BB}`);
++           if (!et) throw new Error(`No MediaRecorder mime type available for ${tt}`);
 ```
 
-#### 1130. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9257-L9258` → after: `L9093-L9094`)
+#### 63. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L908` → after: `L908`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9093) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9093-L9094)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9093-L9094) · [Before (L9257-L9258)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9257-L9258)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R908) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L908)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L908) · [Before (L908)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L908)
 
 ```diff
--         [XB.y, BB, rp, jB, zB, 0, 0],
--         [XB.y, BB, rp, jB, zB, 0, sp]
-+         [rB.C, BB, zh, IB, ZB, 0, 0],
-+         [rB.C, BB, zh, IB, ZB, 0, Fh]
+-         const nB = null !== (QB = null === (aB = oB.playbackFailure) || void 0 === aB ? void 0 : aB.call(oB)) && void 0 !== QB ? QB : null;
++         const Xt = null !== (ut = null === (Rt = Dt.playbackFailure) || void 0 === Rt ? void 0 : Rt.call(Dt)) && void 0 !== ut ? ut : null;
 ```
 
-#### 1131. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9260-L9261` → after: `L9096-L9097`)
+#### 64. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L911` → after: `L911`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9096) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9096-L9097)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9096-L9097) · [Before (L9260-L9261)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9260-L9261)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R911) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L911)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L911) · [Before (L911)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L911)
 
 ```diff
--         [BB, XB.y, zB, jB, rp, 0, sp],
--         [XB.y, BB, zB, jB, rp, sp, 0]
-+         [BB, rB.C, ZB, IB, zh, 0, Fh],
-+         [rB.C, BB, ZB, IB, zh, Fh, 0]
+-           subtitle: `${nB} Nothing was saved.`
++           subtitle: `${Xt} Nothing was saved.`
 ```
 
-#### 1132. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9265` → after: `L9101`)
+#### 65. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L916` → after: `L916`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9101) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9101)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9101) · [Before (L9265)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9265)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R916) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L916)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L916) · [Before (L916)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L916)
 
 ```diff
--       return 0 === BB ? -.01 : BB === XB.y ? XB.y + Up : BB + Up
-+       return 0 === BB ? -.01 : BB === rB.C ? rB.C + ch : BB + ch
+-         gB.size > 0 ? (0, TB.d)(gB, function(BB, IB) {
++         wt.size > 0 ? (0, Ot.c)(wt, function(tt, et) {
 ```
 
-#### 1133. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9271` → after: `L9107`)
+#### 66. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L920-L921` → after: `L920-L921`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9107) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9107)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9107) · [Before (L9271)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9271)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R920) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L920-L921)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L920-L921) · [Before (L920-L921)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L920-L921)
 
 ```diff
--         this.ur = BB, this.config = null, this.renderCallback = null, this.sampleX = new Float64Array(yp), this.sampleZ = new Float64Array(yp), this.sampleY = new Float64Array(yp), this.sampleAirborne = new Uint8Array(yp), this.worldOffset = [0, 0, 0], this.playerPos = [0, 0, 0], … [truncated]
-+         this.Nz = BB, this.config = null, this.renderCallback = null, this.sampleX = new Float64Array(qh), this.sampleZ = new Float64Array(qh), this.sampleY = new Float64Array(qh), this.sampleAirborne = new Uint8Array(qh), this.worldOffset = [0, 0, 0], this.playerPos = [0, 0, 0], … [truncated]
+-           if (BB) return `${BB.replace(/\.bloxdreplay$/i,"")}.${ZB}`;
+-           return `bloxd-replay-${Date.now()}.${ZB}`
++           if (tt) return `${tt.replace(/\.bloxdreplay$/i,"")}.${Vt}`;
++           return `bloxd-replay-${Date.now()}.${Vt}`
 ```
 
-#### 1134. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9289` → after: `L9125`)
+#### 67. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L954` → after: `L954`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9125) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9125)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9125) · [Before (L9289)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9289)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R954) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L954)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L954) · [Before (L954)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L954)
 
 ```diff
--         this.config = BB, this.renderer.setColour(BB.colour), this.renderCallback || (this.renderCallback = BB => this.onBeforeRender(BB), this.ur.on("beforeRender", this.renderCallback))
-+         this.config = BB, this.renderer.setColour(BB.colour), this.renderCallback || (this.renderCallback = BB => this.onBeforeRender(BB), this.Nz.on("beforeRender", this.renderCallback))
+-   5019: (BB, IB, ZB) => {
++   5021: (tt, et, Vt) => {
 ```
 
-#### 1135. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9297` → after: `L9133`)
+#### 68. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L956-L957` → after: `L956-L957`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9133) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9133)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9133) · [Before (L9297)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9297)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R956) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L956-L957)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L956-L957) · [Before (L956-L957)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L956-L957)
 
 ```diff
--         const BB = this.ur.vG.Gw(this.ur.zV);
-+         const BB = this.Nz.zW.zK(this.Nz.Jm);
+-       d: () => nB,
+-       g: () => hB
++       e: () => Xt,
++       i: () => Qt
 ```
 
-#### 1136. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9299` → after: `L9135`)
+#### 69. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L959-L960` → after: `L959-L960`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9135) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9135)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9135) · [Before (L9299)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9299)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R959) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L959-L960)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L959-L960) · [Before (L959-L960)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L959-L960)
 
 ```diff
--         GB().copy(this.worldOffset, this.ur.qr), GB().add(this.playerPos, BB.rK, this.worldOffset);
-+         UB().copy(this.worldOffset, this.Nz.Mz), UB().add(this.playerPos, BB.qV, this.worldOffset);
+-     var TB = ZB(5028),
+-       JB = ZB(20);
++     var Ot = Vt(5030),
++       qt = Vt(26);
 ```
 
-#### 1137. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9308` → after: `L9144`)
+#### 70. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1017` → after: `L1017`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9144) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9144)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9144) · [Before (L9308)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9308)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1017) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1017)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1017) · [Before (L1017)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1017)
 
 ```diff
--         if (Fu.endAtSolidFace && this.ur.zr.vW(Math.floor(jB[0]), Math.floor(jB[1]), Math.floor(jB[2]))) {
-+         if (ak.endAtSolidFace && this.Nz.vz.qD(Math.floor(IB[0]), Math.floor(IB[1]), Math.floor(IB[2]))) {
+-       if (!oB || !GB || !JB.d.get("soundOnFromAd")) return () => {};
++       if (!Dt || !mt || !qt.b.get("soundOnFromAd")) return () => {};
 ```
 
-#### 1138. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9327` → after: `L9163`)
+#### 71. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1019` → after: `L1019`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9163) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9163)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9163) · [Before (L9327)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9327)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1019) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1019)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1019) · [Before (L1019)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1019)
 
 ```diff
--           yB = NB.b.lerp(JB, jB[1], mB),
-+           qB = vB.e.lerp(NB, IB[1], gB),
+-       return null === (ZB = vB._autoResume) || void 0 === ZB || ZB.call(vB), nB(oB, GB, BB, IB, JB.d.get("soundVolume"), (() => {
++       return null === (Vt = dt._autoResume) || void 0 === Vt || Vt.call(dt), Xt(Dt, mt, tt, et, qt.b.get("soundVolume"), (() => {
 ```
 
-#### 1139. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9355` → after: `L9191`)
+#### 72. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1025` → after: `L1025`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9191) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9191)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9191) · [Before (L9355)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9355)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1025) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1025)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1025) · [Before (L1025)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1025)
 
 ```diff
--         return this.ur.zr.vW(BB, jB, zB) && !this.ur.zr.vW(BB, jB + 1, zB)
-+         return this.Nz.vz.qD(BB, IB, ZB) && !this.Nz.vz.qD(BB, IB + 1, ZB)
+-   39671: (BB, IB, ZB) => {
++   39819: (tt, et, Vt) => {
 ```
 
-#### 1140. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9358` → after: `L9194`)
+#### 73. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1027-L1028` → after: `L1027`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9194) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9194)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9194) · [Before (L9358)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9358)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1027) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1027)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1027) · [Before (L1027-L1028)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1027-L1028)
 
 ```diff
--         this.renderCallback && (this.ur.off("beforeRender", this.renderCallback), this.renderCallback = null), this.renderer.dispose()
-+         this.renderCallback && (this.Nz.off("beforeRender", this.renderCallback), this.renderCallback = null), this.renderer.dispose()
+-       c: () => zB,
+-       d: () => NB,
++       b: () => lt,
 ```
 
-#### 1141. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9361-L9362` → after: `L9197-L9198`)
+#### 74. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1030` → after: `L1029-L1030`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9197) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9197-L9198)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9197-L9198) · [Before (L9361-L9362)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9361-L9362)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1029) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1029-L1030)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1029-L1030) · [Before (L1030)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1030)
 
 ```diff
--     var Lp = zB(36897),
--       gp = zB(37902);
-+     var Wh = ZB(36846),
-+       dh = ZB(37855);
+-       h: () => hB,
++       i: () => Ht,
++       j: () => Qt,
 ```
 
-#### 1142. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9365` → after: `L9201`)
+#### 75. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1032-L1034` → after: `L1032-L1034`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9201) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9201)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9201) · [Before (L9365)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9365)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1032) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1032-L1034)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1032-L1034) · [Before (L1032-L1034)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1032-L1034)
 
 ```diff
--         this.ur = void 0, this.bloxd = void 0, this.bloxdSetBlockNoMulti = (BB, jB, zB, QB, nB) => {
-+         this.Nz = void 0, this.bloxd = void 0, this.bloxdSetBlockNoMulti = (BB, IB, ZB, TB, JB) => {
+-       m: () => GB,
+-       o: () => nB,
+-       s: () => gB
++       p: () => mt,
++       t: () => Xt,
++       v: () => wt
 ```
 
-#### 1143. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9367` → after: `L9203`)
+#### 76. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1036-L1039` → after: `L1036-L1039`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9203) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9203)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9203) · [Before (L9367)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9367)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1036) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1036-L1039)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1036-L1039) · [Before (L1036-L1039)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1036-L1039)
 
 ```diff
--         }, this.ur = BB, this.bloxd = jB
-+         }, this.Nz = BB, this.bloxd = IB
+-     var TB = ZB(2029),
+-       JB = ZB(24),
+-       oB = ZB(2046);
+-     const GB = (0, oB.h)((function() {
++     var Ot = Vt(2043),
++       qt = Vt(31),
++       Dt = Vt(2054);
++     const mt = (0, Dt.l)((function() {
 ```
 
-#### 1144. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9370` → after: `L9206`)
+#### 77. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1042-L1045` → after: `L1042-L1045`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9206) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9206)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9206) · [Before (L9370)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9370)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1042) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1042-L1045)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1042-L1045) · [Before (L1042-L1045)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1042-L1045)
 
 ```diff
--         if (!(nB in gp.d)) return console.error(`Called for non multiblock ${nB}`), !1;
-+         if (!(JB in dh.h)) return console.error(`Called for non multiblock ${JB}`), !1;
+-           health: null !== (BB = TB.c.get("_health")) && void 0 !== BB ? BB : null,
+-           maxHealth: null !== (IB = TB.c.get("_totalMaxHealth")) && void 0 !== IB ? IB : null,
+-           shield: null !== (ZB = TB.c.get("_shield")) && void 0 !== ZB ? ZB : null,
+-           maxShield: null !== (JB = TB.c.get("maxShield")) && void 0 !== JB ? JB : null
++           health: null !== (tt = Ot.b.get("_health")) && void 0 !== tt ? tt : null,
++           maxHealth: null !== (et = Ot.b.get("_totalMaxHealth")) && void 0 !== et ? et : null,
++           shield: null !== (Vt = Ot.b.get("_shield")) && void 0 !== Vt ? Vt : null,
++           maxShield: null !== (qt = Ot.b.get("maxShield")) && void 0 !== qt ? qt : null
 ```
 
-#### 1145. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9377-L9379` → after: `L9213-L9215`)
+#### 78. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1047` → after: `L1047`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9213) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9213-L9215)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9213-L9215) · [Before (L9377-L9379)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9377-L9379)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1047) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1047)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1047) · [Before (L1047)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1047)
 
 ```diff
--           of gp.d[nB].positions) {
--           const nB = this.bloxd.JG(jB + IB, zB + NB, QB + uB);
--           if (this.ur.JBB(nB) || !this.bloxd.playerCanChangePos(BB, jB + IB, zB + NB, QB + uB, aB.i[dB].id)) return !1
-+           of dh.h[JB].positions) {
-+           const JB = this.bloxd.WU(IB + GB, ZB + vB, TB + kB);
-+           if (this.Nz.fBB(JB) || !this.bloxd.playerCanChangePos(BB, IB + GB, ZB + vB, TB + kB, nB.f[oB].id)) return !1
+-       }), [], (0, oB.f)("_health", "_totalMaxHealth", "_shield", "maxShield")),
++       }), [], (0, Dt.k)("_health", "_totalMaxHealth", "_shield", "maxShield")),
 ```
 
-#### 1146. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9391` → after: `L9227`)
+#### 79. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1065` → after: `L1065`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9227) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9227)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9227) · [Before (L9391)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9391)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1065) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1065)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1065) · [Before (L1065)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1065)
 
 ```diff
--           of gp.d[jB].positions) zB.push([BB[0] + nB, BB[1] + dB, BB[2] + IB]);
-+           of dh.h[IB].positions) ZB.push([BB[0] + JB, BB[1] + oB, BB[2] + GB]);
+-     const cB = (0, oB.h)((function() {
++     const Ht = (0, Dt.l)((function() {
 ```
 
-#### 1147. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9395` → after: `L9231`)
+#### 80. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1067-L1068` → after: `L1067-L1068`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9231) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9231)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9231) · [Before (L9395)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9395)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1067) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1067-L1068)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1067-L1068) · [Before (L1067-L1068)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1067-L1068)
 
 ```diff
--         if (BB in gp.b) {
-+         if (BB in dh.d) {
+-       return null !== (BB = TB.c.get("_aura")) && void 0 !== BB ? BB : null
+-     }), [], (0, oB.f)("_aura"));
++       return null !== (tt = Ot.b.get("_aura")) && void 0 !== tt ? tt : null
++     }), [], (0, Dt.k)("_aura"));
 ```
 
-#### 1148. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9412` → after: `L9248`)
+#### 81. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1072` → after: `L1072`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9248) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9248)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9248) · [Before (L9412)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9412)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1072) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1072)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1072) · [Before (L1072)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1072)
 
 ```diff
--             of gp.d[nB].positions) {
-+             of dh.h[JB].positions) {
+-         watch: IB => (0, JB.p)("shotPlayer", (ZB => {
++         watch: et => (0, qt.n)("shotPlayer", (Vt => {
 ```
 
-#### 1149. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9416` → after: `L9252`)
+#### 82. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1089` → after: `L1089`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9252) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9252)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9252) · [Before (L9416)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9416)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1089) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1089)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1089) · [Before (L1089)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1089)
 
 ```diff
--               sB = this.bloxd.JG(nB, pB, rB);
-+               FB = this.bloxd.WU(JB, hB, zB);
+-       return (0, oB.b)("chat", (IB => {
++       return (0, Dt.d)("chat", (et => {
 ```
 
-#### 1150. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9429` → after: `L9265`)
+#### 83. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1096` → after: `L1096`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9265) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9265)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9265) · [Before (L9429)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9429)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1096) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1096)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1096) · [Before (L1096)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1096)
 
 ```diff
--             block: (0, aB.g)(BB),
-+             block: (0, nB.e)(BB),
+-           serverChatMsgId: null !== ZB && void 0 !== ZB ? ZB : null,
++           serverChatMsgId: null !== Vt && void 0 !== Vt ? Vt : null,
 ```
 
-#### 1151. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9443-L9444` → after: `L9279-L9280`)
+#### 84. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1115` → after: `L1115`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9279) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9279-L9280)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9279-L9280) · [Before (L9443-L9444)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9443-L9444)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1115) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1115)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1115) · [Before (L1115)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1115)
 
 ```diff
--         } = gp.b[BB], uB = jB - dB, UB = zB - IB, aB = QB - NB, pB = this.bloxd.JG(uB, UB, aB);
--         if (pB in gp.d)
-+         } = dh.d[BB], kB = IB - oB, cB = ZB - GB, nB = TB - vB, hB = this.bloxd.WU(kB, cB, nB);
-+         if (hB in dh.h)
+-         translationKey: `touchKeys:${BB}`
++         translationKey: `touchKeys:${tt}`
 ```
 
-#### 1152. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9451` → after: `L9287`)
+#### 85. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1136` → after: `L1136`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9287) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9287)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9287) · [Before (L9451)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9451)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1136) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1136)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1136) · [Before (L1136)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1136)
 
 ```diff
--             of gp.d[pB].positions)
-+             of dh.h[hB].positions)
+-   38687: (BB, IB, ZB) => {
++   38872: (tt, et, Vt) => {
 ```
 
-#### 1153. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9469-L9471` → after: `L9305-L9307`)
+#### 86. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1142-L1143` → after: `L1142-L1143`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9305) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9305-L9307)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9305-L9307) · [Before (L9469-L9471)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9469-L9471)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1142) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1142-L1143)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1142-L1143) · [Before (L1142-L1143)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1142-L1143)
 
 ```diff
--         const NB = this.bloxd.JG(BB, jB, zB),
--           uB = null !== (nB = this.getRestoredTop(BB, jB, zB, NB, QB, IB)) && void 0 !== nB ? nB : QB;
--         if (NB in gp.b) {
-+         const vB = this.bloxd.WU(BB, IB, ZB),
-+           kB = null !== (JB = this.getRestoredTop(BB, IB, ZB, vB, TB, GB)) && void 0 !== JB ? JB : TB;
-+         if (vB in dh.d) {
+-       BloxdWasmFetchError: () => FG.d,
+-       BloxdWasmHttpError: () => FG.e,
++       BloxdWasmFetchError: () => lm.c,
++       BloxdWasmHttpError: () => lm.f,
 ```
 
-#### 1154. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9484` → after: `L9320`)
+#### 87. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1145-L1150` → after: `L1145-L1150`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9320) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9320)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9320) · [Before (L9484)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9484)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1145) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1145-L1150)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1145-L1150) · [Before (L1145-L1150)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1145-L1150)
 
 ```diff
--             of gp.d[QB].positions) {
-+             of dh.h[TB].positions) {
+-       BloxdWasmTimeoutError: () => FG.k,
+-       MAX_RETRY_AFTER_MS: () => FG.q,
+-       PROMISE_HOOK_CODES: () => NG.b,
+-       RETRY_DELAYS_MS: () => FG.s,
+-       STALL_TIMEOUT_MS: () => FG.w,
+-       WASM_HOOKS_ENFORCED: () => UG.d,
++       BloxdWasmTimeoutError: () => lm.j,
++       MAX_RETRY_AFTER_MS: () => lm.n,
++       PROMISE_HOOK_CODES: () => Em.c,
++       RETRY_DELAYS_MS: () => lm.r,
++       STALL_TIMEOUT_MS: () => lm.u,
++       WASM_HOOKS_ENFORCED: () => Nm.e,
 ```
 
-#### 1155. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9488` → after: `L9324`)
+#### 88. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1152-L1167` → after: `L1152-L1167`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9324) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9324)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9324) · [Before (L9488)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9488)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1152) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1152-L1167)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1152-L1167) · [Before (L1152-L1167)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1152-L1167)
 
 ```diff
--             this.bloxd.JG(QB, UB, aB) === BB && dB(QB, UB, aB, 0, !0)
-+             this.bloxd.WU(TB, cB, nB) === BB && oB(TB, cB, nB, 0, !0)
+-       bloxdTextureWasmUrl: () => qG.c,
+-       bloxdWasmCore: () => zG.e,
+-       compileBloxdTextureWasm: () => qG.f,
+-       compileBloxdWasmAhead: () => hG.b,
+-       compileBloxdWasmBrowser: () => hG.c,
+-       describeBloxdWasmFailure: () => cG.g,
+-       fetchBytes: () => FG.K,
+-       getBloxdWasm: () => cG.x,
+-       getBloxdWasmBuild: () => cG.i,
+-       getBloxdWasmFailureReason: () => cG.j,
+-       getBloxdWasmFailureStage: () => cG.m,
+-       getBloxdWasmFailureStatus: () => cG.o,
+-       getBloxdWasmLoadCompile: () => hG.e,
+-       getBloxdWasmMemory: () => cG.r,
+-       getBloxdWasmModule: () => cG.t,
+-       getBloxdWasmStatus: () => cG.u,
++       bloxdTextureWasmUrl: () => wm.b,
++       bloxdWasmCore: () => Qm.d,
++       compileBloxdTextureWasm: () => wm.c,
++       compileBloxdWasmAhead: () => Xm.d,
++       compileBloxdWasmBrowser: () => Xm.h,
++       describeBloxdWasmFailure: () => jm.k,
++       fetchBytes: () => lm.I,
++       getBloxdWasm: () => jm.F,
++       getBloxdWasmBuild: () => jm.n,
++       getBloxdWasmFailureReason: () => jm.q,
++       getBloxdWasmFailureStage: () => jm.s,
++       getBloxdWasmFailureStatus: () => jm.w,
++       getBloxdWasmLoadCompile: () => Xm.k,
++       getBloxdWasmMemory: () => jm.z,
++       getBloxdWasmModule: () => jm.A,
++       getBloxdWasmStatus: () => jm.D,
 ```
 
-#### 1156. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9491` → after: `L9327`)
+#### 89. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1169-L1191` → after: `L1169-L1191`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9327) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9327)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9327) · [Before (L9491)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9491)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1169) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1169-L1191)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1169-L1191) · [Before (L1169-L1191)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1169-L1191)
 
 ```diff
--         if (uB in gp.b) {
-+         if (kB in dh.d) {
+-       getLastBloxdWasmPanic: () => cG.B,
+-       initBloxdWasmBrowser: () => zG.h,
+-       initBloxdWasmFromModule: () => zG.i,
+-       isBloxdWasmDownloadFailureRetryable: () => cG.K,
+-       isBloxdWasmLoadUnstreamed: () => FG.S,
+-       isBloxdWasmReady: () => cG.M,
+-       isEnforceableWasmReport: () => UG.l,
+-       isPromiseHookReport: () => UG.q,
+-       isPunishedWasmReport: () => UG.s,
+-       isRendererWasmReport: () => UG.t,
+-       isRetryableDownloadFailure: () => FG.U,
+-       isWeightedWasmReport: () => UG.w,
+-       loadBloxdWasmBrowser: () => hG.h,
+-       markBloxdWasmFailed: () => cG.O,
+-       noteBloxdRenderDebugHook: () => UG.A,
+-       onBloxdWasmFailed: () => cG.S,
+- ... (7 more removed lines; see GitHub link above)
++       getLastBloxdWasmPanic: () => jm.J,
++       initBloxdWasmBrowser: () => Qm.e,
++       initBloxdWasmFromModule: () => Qm.f,
++       isBloxdWasmDownloadFailureRetryable: () => jm.T,
++       isBloxdWasmLoadUnstreamed: () => lm.M,
++       isBloxdWasmReady: () => jm.W,
++       isEnforceableWasmReport: () => Nm.k,
++       isPromiseHookReport: () => Nm.o,
++       isPunishedWasmReport: () => Nm.p,
++       isRendererWasmReport: () => Nm.r,
++       isRetryableDownloadFailure: () => lm.N,
++       isWeightedWasmReport: () => Nm.u,
++       loadBloxdWasmBrowser: () => Xm.o,
++       markBloxdWasmFailed: () => jm.Y,
++       noteBloxdRenderDebugHook: () => Nm.v,
++       onBloxdWasmFailed: () => jm.$,
++ ... (7 more added lines; see GitHub link above)
 ```
 
-#### 1157. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9497` → after: `L9333`)
+#### 90. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1193-L1197` → after: `L1193-L1197`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9333) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9333)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9333) · [Before (L9497)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9497)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1193) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1193-L1197)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1193-L1197) · [Before (L1193-L1197)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1193-L1197)
 
 ```diff
--           } = gp.b[uB];
-+           } = dh.d[kB];
+-     ZB(36540);
+-     var JB = ZB(38696),
+-       oB = ZB(9328),
+-       GB = ZB(36771),
+-       vB = ZB(360);
++     Vt(36757);
++     var qt = Vt(38876),
++       Dt = Vt(9454),
++       mt = Vt(36990),
++       dt = Vt(391);
 ```
 
-#### 1158. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9504` → after: `L9340`)
+#### 91. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1207-L1215` → after: `L1207-L1215`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9340) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9340)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9340) · [Before (L9504)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9504)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1207) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1207-L1215)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1207-L1215) · [Before (L1207-L1215)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1207-L1215)
 
 ```diff
--             of gp.d[QB].positions) {
-+             of dh.h[TB].positions) {
+-     var cB = ZB(38766),
+-       nB = ZB(9296),
+-       hB = ZB(212),
+-       zB = ZB(2326),
+-       FB = ZB(38202),
+-       NB = ZB(201),
+-       gB = ZB(3316),
+-       qB = ZB(24),
+-       yB = ZB(364),
++     var Ht = Vt(38945),
++       Xt = Vt(9425),
++       Qt = Vt(241),
++       lt = Vt(2290),
++       Et = Vt(38394),
++       ft = Vt(229),
++       wt = Vt(3217),
++       yt = Vt(31),
++       Nt = Vt(404),
 ```
 
-#### 1159. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9508-L9511` → after: `L9344-L9347`)
+#### 92. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1217-L1253` → after: `L1217-L1245`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9344) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9344-L9347)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9344-L9347) · [Before (L9508-L9511)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9508-L9511)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1217) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1217-L1245)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1217-L1245) · [Before (L1217-L1253)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1217-L1253)
 
 ```diff
--             if (!this.bloxd.Bl(QB, sB, JB)) continue;
--             const mB = this.bloxd.JG(QB, sB, JB),
--               yB = !this.ur.Gs.vW(mB);
--             dB(QB, sB, JB, aB.i[uB].id, yB)
-+             if (!this.bloxd.pD(TB, FB, NB)) continue;
-+             const gB = this.bloxd.WU(TB, FB, NB),
-+               qB = !this.Nz.zF.qD(gB);
-+             oB(TB, FB, NB, nB.f[kB].id, qB)
+-       WB = ZB(37956),
+-       dB = ZB(37253),
+-       CB = ZB(37671),
+-       QB = ZB(37336),
+-       sB = ZB(38010),
+-       wB = ZB(37296),
+-       OB = ZB(38741),
+-       YB = ZB(37243),
+-       iB = ZB(37869),
+-       pB = ZB(37495),
+-       aB = ZB(37504),
+-       HB = ZB(38159),
+-       MB = ZB(37975),
+-       jB = ZB(37923),
+-       PB = ZB(105),
+-       RB = ZB(38703),
+- ... (21 more removed lines; see GitHub link above)
++       bt = Vt(38157),
++       Jt = Vt(37467),
++       Ct = Vt(37875),
++       ut = Vt(37545),
++       Kt = Vt(38215),
++       ht = Vt(37502),
++       vt = Vt(38922),
++       Wt = Vt(37454),
++       St = Vt(38068),
++       ct = Vt(37694),
++       Rt = Vt(37699),
++       It = Vt(38347),
++       Pt = Vt(38172),
++       Zt = Vt(38120),
++       Lt = Vt(106),
++       Ft = Vt(38879),
++ ... (13 more added lines; see GitHub link above)
 ```
 
-#### 1160. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9518-L9519` → after: `L9354-L9355`)
+#### 93. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1264` → after: `L1264`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9354) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9354-L9355)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9354-L9355) · [Before (L9518-L9519)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9518-L9519)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1264) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1264)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1264) · [Before (L1264)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1264)
 
 ```diff
--         const IB = null === (nB = aB.i[QB]) || void 0 === nB ? void 0 : nB.attachedTop;
--         return !!IB && (null === (dB = aB.i[this.bloxd.JG(BB, jB, zB)]) || void 0 === dB ? void 0 : dB.meta.rootId) === aB.i[IB].meta.rootId
-+         const GB = null === (JB = nB.f[TB]) || void 0 === JB ? void 0 : JB.attachedTop;
-+         return !!GB && (null === (oB = nB.f[this.bloxd.WU(BB, IB, ZB)]) || void 0 === oB ? void 0 : oB.meta.rootId) === nB.f[GB].meta.rootId
+-               if (IB.has(oB.name.toLowerCase())) throw new Error(`Two nodes are named ${oB.name}`);
++               if (et.has(Dt.name.toLowerCase())) throw new Error(`Two nodes are named ${Dt.name}`);
 ```
 
-#### 1161. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9523-L9528` → after: `L9359-L9364`)
+#### 94. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1267` → after: `L1267`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9359) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9359-L9364)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9359-L9364) · [Before (L9523-L9528)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9523-L9528)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1267) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1267)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1267) · [Before (L1267)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1267)
 
 ```diff
--         const NB = aB.i[nB],
--           uB = (null === NB || void 0 === NB ? void 0 : NB.attachedTop) && aB.i[NB.attachedTop],
--           UB = null === (IB = aB.i[QB]) || void 0 === IB ? void 0 : IB.meta.rootId;
--         if (null === dB || !uB || UB === NB.meta.rootId || UB === uB.meta.rootId || !this.bloxd.Bl(BB, jB - 1, zB)) return null;
--         const pB = aB.i[this.bloxd.JG(BB, jB - 1, zB)];
--         return (null === pB || void 0 === pB ? void 0 : pB.meta.rootId) === NB.meta.rootId ? aB.i[pB.attachedTop].id : null
-+         const vB = nB.f[JB],
-+           kB = (null === vB || void 0 === vB ? void 0 : vB.attachedTop) && nB.f[vB.attachedTop],
-+           cB = null === (GB = nB.f[TB]) || void 0 === GB ? void 0 : GB.meta.rootId;
-+         if (null === oB || !kB || cB === vB.meta.rootId || cB === kB.meta.rootId || !this.bloxd.pD(BB, IB - 1, ZB)) return null;
-+         const hB = nB.f[this.bloxd.WU(BB, IB - 1, ZB)];
-+         return (null === hB || void 0 === hB ? void 0 : hB.meta.rootId) === vB.meta.rootId ? nB.f[hB.attachedTop].id : null
+-                 if (oB.hasGeometry) throw new Error(`Mesh ${oB.name} has nodes under it: put them in a group beside it`);
++                 if (Dt.hasGeometry) throw new Error(`Mesh ${Dt.name} has nodes under it: put them in a group beside it`);
 ```
 
-#### 1162. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9532-L9538` → after: `L9368-L9374`)
+#### 95. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1305` → after: `L1305`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9368) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9368-L9374)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9368-L9374) · [Before (L9532-L9538)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9532-L9538)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1305) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1305)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1305) · [Before (L1305)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1305)
 
 ```diff
--         const pB = null === (NB = aB.i[QB]) || void 0 === NB ? void 0 : NB.attachedTop,
--           rB = null === (uB = aB.i[nB]) || void 0 === uB ? void 0 : uB.attachedTop;
--         if (!pB && !rB || !this.bloxd.Bl(BB, jB + 1, zB)) return;
--         const sB = this.bloxd.JG(BB, jB + 1, zB),
--           JB = !!pB && (null === (UB = aB.i[sB]) || void 0 === UB ? void 0 : UB.meta.rootId) === aB.i[pB].meta.rootId,
--           mB = rB ? aB.i[rB].id : 0;
--         pB && rB && aB.i[QB].meta.rootId === aB.i[nB].meta.rootId ? JB && sB !== mB && dB(BB, jB + 1, zB, mB, !0) : !rB || !JB && 0 !== sB || null !== IB && !this.placerCanAddTop(IB, BB, jB + 1, zB, mB) ? JB && dB(BB, jB + 1, zB, 0, !0) : dB(BB, jB + 1, zB, mB, !0)
-+         const hB = null === (vB = nB.f[TB]) || void 0 === vB ? void 0 : vB.attachedTop,
-+           zB = null === (kB = nB.f[JB]) || void 0 === kB ? void 0 : kB.attachedTop;
-+         if (!hB && !zB || !this.bloxd.pD(BB, IB + 1, ZB)) return;
-+         const FB = this.bloxd.WU(BB, IB + 1, ZB),
-+           NB = !!hB && (null === (cB = nB.f[FB]) || void 0 === cB ? void 0 : cB.meta.rootId) === nB.f[hB].meta.rootId,
-+           gB = zB ? nB.f[zB].id : 0;
-+         hB && zB && nB.f[TB].meta.rootId === nB.f[JB].meta.rootId ? NB && FB !== gB && oB(BB, IB + 1, ZB, gB, !0) : !zB || !NB && 0 !== FB || null !== GB && !this.placerCanAddTop(GB, BB, IB + 1, ZB, gB) ? NB && oB(BB, IB + 1, ZB, 0, !0) : oB(BB, IB + 1, ZB, gB, !0)
+-       return vI(TB) < vI(ZB) ? TB : ZB
++       return je(Ot) < je(Vt) ? Ot : Vt
 ```
 
-#### 1163. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9544` → after: `L9380`)
+#### 96. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1311` → after: `L1311`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9380) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9380)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9380) · [Before (L9544)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9544)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1311) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1311)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1311) · [Before (L1311)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1311)
 
 ```diff
--     var Sp = zB(9323);
-+     var Qh = ZB(9355);
+-         return BB + ("string" === typeof IB ? 1 : (void 0 === IB.collapsesTo ? 0 : 1) + vI(null !== (ZB = IB.children) && void 0 !== ZB ? ZB : []))
++         return tt + ("string" === typeof et ? 1 : (void 0 === et.collapsesTo ? 0 : 1) + je(null !== (Vt = et.children) && void 0 !== Vt ? Vt : []))
 ```
 
-#### 1164. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9548` → after: `L9384`)
+#### 97. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1318` → after: `L1318`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9384) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9384)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9384) · [Before (L9548)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9548)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1318) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1318)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1318) · [Before (L1318)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1318)
 
 ```diff
--       (null === BB || void 0 === BB ? void 0 : BB.chestStr) !== XB.g || Object.isFrozen(BB) || (BB.chestStr = (0, XB.E)(BB.chestStr))
-+       (null === BB || void 0 === BB ? void 0 : BB.chestStr) !== rB.e || Object.isFrozen(BB) || (BB.chestStr = (0, rB.H)(BB.chestStr))
+-           if ("vR" in BB && !0 === BB.vR) throw new Error(`${BB.name} is drawn as an instance of another mesh`);
++           if ("pI" in tt && !0 === tt.pI) throw new Error(`${tt.name} is drawn as an instance of another mesh`);
 ```
 
-#### 1165. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9555` → after: `L9391`)
+#### 98. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1323` → after: `L1323`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9391) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9391)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9391) · [Before (L9555)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9555)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1323) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1323)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1323) · [Before (L1323)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1323)
 
 ```diff
--         if (this.storage.get(BB, jB, zB) && console.error(new Error(`adding chunk x y z ${BB} ${jB} ${zB} to dataowner that already exists`).stack), 0 === QB.length) return void this.storage.set(BB, jB, zB, Mp);
-+         if (this.storage.get(BB, IB, ZB) && console.error(new Error(`adding chunk x y z ${BB} ${IB} ${ZB} to dataowner that already exists`).stack), 0 === TB.length) return void this.storage.set(BB, IB, ZB, sh);
+-           return !TB(BB) || ZB(BB).length > 0 ? null : `${null!==(IB=null===(JB=BB.material)||void 0===JB?void 0:JB.uniqueId)&&void 0!==IB?IB:"none"} ${BB.getVerticesDataKinds().sort().join(",")}`
++           return !Ot(tt) || Vt(tt).length > 0 ? null : `${null!==(et=null===(qt=tt.material)||void 0===qt?void 0:qt.uniqueId)&&void 0!==et?et:"none"} ${tt.getVerticesDataKinds().sort().join(",")}`
 ```
 
-#### 1166. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9566-L9567` → after: `L9402-L9403`)
+#### 99. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1337` → after: `L1337`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9402) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9402-L9403)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9402-L9403) · [Before (L9566-L9567)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9566-L9567)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1337) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1337)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1337) · [Before (L1337)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1337)
 
 ```diff
--           (BB[0] > 31 || BB[1] > 31 || BB[2] > 31 || BB[0] < 0 || BB[1] < 0 || BB[2] < 0) && (BB = (0, XB.ab)(BB));
--           const jB = null !== IB && void 0 !== IB ? IB : {
-+           (BB[0] > 31 || BB[1] > 31 || BB[2] > 31 || BB[0] < 0 || BB[1] < 0 || BB[2] < 0) && (BB = (0, rB.gb)(BB));
-+           const IB = null !== GB && void 0 !== GB ? GB : {
+-             let JB, oB = null !== (IB = GB.get(ZB)) && void 0 !== IB ? IB : 1;
++             let qt, Dt = null !== (et = mt.get(Vt)) && void 0 !== et ? et : 1;
 ```
 
-#### 1167. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9600` → after: `L9436`)
+#### 100. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1339` → after: `L1339`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9436) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9436)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9436) · [Before (L9600)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9600)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1339) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1339)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1339) · [Before (L1339)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1339)
 
 ```diff
--           if ((0, XB.I)(BB)) console.error("ChunkInfo block at local pos", IB, "was nullish:", BB);
-+           if ((0, rB.L)(BB)) console.error("ChunkInfo block at local pos", GB, "was nullish:", BB);
+-               oB++, JB = `${BB}|${oB}`
++               Dt++, qt = `${tt}|${Dt}`
 ```
 
-#### 1168. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9613` → after: `L9449`)
+#### 101. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1348` → after: `L1348`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9449) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9449)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9449) · [Before (L9613)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9613)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1348) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1348)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1348) · [Before (L1348)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1348)
 
 ```diff
--           dB = [BB * JB.e.ZJ, jB * JB.e.ZJ, zB * JB.e.ZJ];
-+           oB = [BB * NB.f.YN, IB * NB.f.YN, ZB * NB.f.YN];
+-                 nB = null === BB ? null : `${BB}/${GB.toLowerCase()}`;
++                 Xt = null === tt ? null : `${tt}/${mt.toLowerCase()}`;
 ```
 
-#### 1169. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9618` → after: `L9454`)
+#### 102. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1370` → after: `L1370`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9454) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9454)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9454) · [Before (L9618)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9618)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1370) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1370)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1370) · [Before (L1370)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1370)
 
 ```diff
--             nB = this.bloxd.JG(zB[0], zB[1], zB[2]);
-+             JB = this.bloxd.WU(ZB[0], ZB[1], ZB[2]);
+-       const TB = xB.l.itemsClient[IB],
++       const Ot = xt.g.itemsClient[et],
 ```
 
-#### 1170. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9624-L9626` → after: `L9460-L9462`)
+#### 103. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1373-L1374` → after: `L1373-L1374`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9460) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9460-L9462)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9460-L9462) · [Before (L9624-L9626)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9624-L9626)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1373) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1373-L1374)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1373-L1374) · [Before (L1373-L1374)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1373-L1374)
 
 ```diff
--         const QB = (0, XB.P)(BB),
--           nB = (0, XB.P)(jB),
--           dB = (0, XB.P)(zB),
-+         const TB = (0, rB.T)(BB),
-+           JB = (0, rB.T)(IB),
-+           oB = (0, rB.T)(ZB),
+-           const ZB = (0, KB.s)(BB);
+-           if (null !== ZB) return SB.f.enabled && SB.f.hasAnimation(ZB) ? {
++           const Vt = (0, st.m)(tt);
++           if (null !== Vt) return te.g.enabled && te.g.hasAnimation(Vt) ? {
 ```
 
-#### 1171. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9629` → after: `L9465`)
+#### 104. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1376` → after: `L1376`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9465) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9465)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9465) · [Before (L9629)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9629)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1376) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1376)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1376) · [Before (L1376)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1376)
 
 ```diff
--         delete IB[`${(0,XB.S)(BB)}|${(0,XB.S)(jB)}|${(0,XB.S)(zB)}`]
-+         delete GB[`${(0,rB.W)(BB)}|${(0,rB.W)(IB)}|${(0,rB.W)(ZB)}`]
+-             moved: SB.f.bonesMoved(ZB)
++             moved: te.g.bonesMoved(Vt)
 ```
 
-#### 1172. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9634` → after: `L9470`)
+#### 105. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1378` → after: `L1378`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9470) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9470)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9470) · [Before (L9634)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9634)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1378) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1378)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1378) · [Before (L1378)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1378)
 
 ```diff
--         const dB = JB.e.ZJ;
-+         const oB = NB.f.YN;
+-           const TB = null === (IB = nB.f[BB]) || void 0 === IB ? void 0 : IB.meshEntityBones;
++           const Ot = null === (et = Xt.h[tt]) || void 0 === et ? void 0 : et.meshEntityBones;
 ```
 
-#### 1173. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9641` → after: `L9477`)
+#### 106. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1385` → after: `L1385`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9477) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9477)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9477) · [Before (L9641)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9641)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1385) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1385)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1385) · [Before (L1385)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1385)
 
 ```diff
--         return this.storage.get((0, XB.P)(BB), (0, XB.P)(jB), (0, XB.P)(zB))[`${(0,XB.S)(BB)}|${(0,XB.S)(jB)}|${(0,XB.S)(zB)}`]
-+         return this.storage.get((0, rB.T)(BB), (0, rB.T)(IB), (0, rB.T)(ZB))[`${(0,rB.W)(BB)}|${(0,rB.W)(IB)}|${(0,rB.W)(ZB)}`]
+-       const oB = BB.Ig.kR;
++       const Dt = tt.Bf.xI;
 ```
 
-#### 1174. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9656-L9658` → after: `L9492-L9494`)
+#### 107. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1390` → after: `L1390`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9492) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9492-L9494)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9492-L9494) · [Before (L9656-L9658)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9656-L9658)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1390) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1390)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1390) · [Before (L1390)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1390)
 
 ```diff
--         const dB = (0, XB.P)(BB),
--           IB = (0, XB.P)(jB),
--           NB = (0, XB.P)(zB);
-+         const oB = (0, rB.T)(BB),
-+           GB = (0, rB.T)(IB),
-+           vB = (0, rB.T)(ZB);
+-         const ZB = `skeletalVehicle|${IB}`,
++         const Vt = `skeletalVehicle|${et}`,
 ```
 
-#### 1175. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9661` → after: `L9497`)
+#### 108. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1393` → after: `L1393`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9497) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9497)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9497) · [Before (L9661)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9661)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1393) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1393)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1393) · [Before (L1393)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1393)
 
 ```diff
--         const UB = `${(0,XB.S)(BB)}|${(0,XB.S)(jB)}|${(0,XB.S)(zB)}`,
-+         const cB = `${(0,rB.W)(BB)}|${(0,rB.W)(IB)}|${(0,rB.W)(ZB)}`,
+-             const JB = BB.Ig.JR(),
++             const qt = tt.Bf.vI(),
 ```
 
-#### 1176. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9667` → after: `L9503`)
+#### 109. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1399` → after: `L1399`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9503) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9503)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9503) · [Before (L9667)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9667)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1399) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1399)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1399) · [Before (L1399)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1399)
 
 ```diff
--         const dB = arguments.length >= 4 ? QB : this.getBlockData(BB, jB, zB),
-+         const oB = arguments.length >= 4 ? TB : this.getBlockData(BB, IB, ZB),
+-               kB = await (0, II.e)(oB, JB, GB, vB);
++               jt = await (0, Ve.f)(Dt, qt, mt, dt);
 ```
 
-#### 1177. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9693-L9696` → after: `L9529-L9532`)
+#### 110. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1403` → after: `L1403`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9529) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9529-L9532)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9529-L9532) · [Before (L9693-L9696)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9693-L9696)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1403) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1403)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1403) · [Before (L1403)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1403)
 
 ```diff
--     var qp = zB(37109),
--       fp = zB(39319),
--       op = zB(39321),
--       Hp = zB(38137),
-+     var Yh = ZB(37060),
-+       ih = ZB(39296),
-+       ph = ZB(39301),
-+       ah = ZB(38115),
+-                   const ZB = BB.meshes.find((BB => BB.name === ZI.e));
++                   const Vt = tt.meshes.find((tt => tt.name === Oe.d));
 ```
 
-#### 1178. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9703` → after: `L9539`)
+#### 111. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1409-L1410` → after: `L1409-L1410`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9539) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9539)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9539) · [Before (L9703)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9703)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1409) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1409-L1410)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1409-L1410) · [Before (L1409-L1410)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1409-L1410)
 
 ```diff
--         this.bloxd = void 0, this.books = new Map, this.bloxd = BB, this.bloxd.isClient && this.onPlayerJoin(this.bloxd.ur.zV)
-+         this.bloxd = void 0, this.books = new Map, this.bloxd = BB, this.bloxd.isClient && this.onPlayerJoin(this.bloxd.Nz.Jm)
+-               if (null !== ZB.vehicleType && !SB.f.animatesModel(ZB.vehicleType, [ZI.e, ...TB])) return console.error(`Animation for ${ZB.vehicleType}: its clips move none of the model's bones, so it draws as one mesh`), kB.dispose(), !1;
+-               if (oB.length > 0) return console.error(`${IB.name}'s model has no ${oB.join(", ")} to keep as bones, so it draws as one mesh`), kB.dispose(), !1;
++               if (null !== Vt.vehicleType && !te.g.animatesModel(Vt.vehicleType, [Oe.d, ...Ot])) return console.error(`Animation for ${Vt.vehicleType}: its clips move none of the model's bones, so it draws as one mesh`), jt.dispose(), !1;
++               if (Dt.length > 0) return console.error(`${et.name}'s model has no ${Dt.join(", ")} to keep as bones, so it draws as one mesh`), jt.dispose(), !1;
 ```
 
-#### 1179. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9719` → after: `L9555`)
+#### 112. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1420-L1424` → after: `L1420-L1424`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9555) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9555)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9555) · [Before (L9719)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9719)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1420) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1420-L1424)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1420-L1424) · [Before (L1420-L1424)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1420-L1424)
 
 ```diff
--           nB = (0, op.c)(null !== zB && void 0 !== zB ? zB : Vp);
-+           JB = (0, ph.e)(null !== ZB && void 0 !== ZB ? ZB : Ph);
+-             for (const qB of zB) zI(BB.Ig, qB, IB.name);
+-             for (const qB of hB) qB.yR(), qB.material ? qB.sideOrientation = wB.d.ClockWiseSideOrientation : ((0, pB.d)(qB) || qB.JR().jR(qB), qB.qY(!1));
+-             for (const qB of hB) qB.material && BB.Ig.uR(qB);
+-             const FB = BB.Ig.kR,
+-               NB = BB.oN ? {
++             for (const yt of lt) Ee(tt.Bf, yt, et.name);
++             for (const yt of Qt) yt.eZ(), yt.material ? yt.sideOrientation = ht.e.ClockWiseSideOrientation : ((0, ct.f)(yt) || yt.vI().wZ(yt), yt.Av(!1));
++             for (const yt of Qt) yt.material && tt.Bf.aZ(yt);
++             const Et = tt.Bf.xI,
++               ft = tt.YE ? {
 ```
 
-#### 1180. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9734` → after: `L9570`)
+#### 113. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1428` → after: `L1428`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9570) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9570)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9570) · [Before (L9734)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9734)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1428) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1428)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1428) · [Before (L1428)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1428)
 
 ```diff
--         return void 0 !== nB ? nB : Object.hasOwn(QB.base, jB) ? QB.base[jB] : void 0
-+         return void 0 !== JB ? JB : Object.hasOwn(TB.base, IB) ? TB.base[IB] : void 0
+-               ah: 8,
++               uQ: 8,
 ```
 
-#### 1181. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9745` → after: `L9581`)
+#### 114. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1436` → after: `L1436`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9581) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9581)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9581) · [Before (L9745)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9745)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1436) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1436)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1436) · [Before (L1436)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1436)
 
 ```diff
--           jB(IB, null !== (dB = null === nB || void 0 === nB ? void 0 : nB.get(IB)) && void 0 !== dB ? dB : QB[IB])
-+           IB(GB, null !== (oB = null === JB || void 0 === JB ? void 0 : JB.get(GB)) && void 0 !== oB ? oB : TB[GB])
+-             }), FB.setPickableForType(TB, null !== ZB.vehicleType), FB.setCullableForType(TB, !0), (0, BI.m)(nB), !0
++             }), Et.setPickableForType(Ot, null !== Vt.vehicleType), Et.setCullableForType(Ot, !0), (0, ee.s)(Xt), !0
 ```
 
-#### 1182. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9753` → after: `L9589`)
+#### 115. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1445` → after: `L1445`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9589) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9589)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9589) · [Before (L9753)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9753)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1445) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1445)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1445) · [Before (L1445)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1445)
 
 ```diff
--         return void 0 !== QB && (QB.base !== fp.d || (null !== (jB = null === (zB = QB.overrides) || void 0 === zB ? void 0 : zB.size) && void 0 !== jB ? jB : 0) > 0)
-+         return void 0 !== TB && (TB.base !== ih.d || (null !== (IB = null === (ZB = TB.overrides) || void 0 === ZB ? void 0 : ZB.size) && void 0 !== IB ? IB : 0) > 0)
+-             console.error(`Could not load the bones of ${IB}, so it draws as one mesh\n`, BB), oB.set(IB, {
++             console.error(`Could not load the bones of ${et}, so it draws as one mesh\n`, tt), Dt.set(et, {
 ```
 
-#### 1183. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9761` → after: `L9597`)
+#### 116. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1461-L1463` → after: `L1461-L1463`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9597) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9597)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9597) · [Before (L9761)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9761)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1461) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1461-L1463)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1461-L1463) · [Before (L1461-L1463)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1461-L1463)
 
 ```diff
--           qa: nB,
-+           pn: JB,
+-           oB.qY(IB, !0), oB.setPosition(IB, 0, 0, 0), oB.setRotationEuler(IB, 0, 0, 0), oB.set(IB, "aOpacity", 1), oB.set(IB, "aLightLevels", VB.b);
+-           const [JB, GB, kB] = Array.isArray(ZB) ? ZB : [ZB, ZB, ZB], cB = TB.bakeInScaling;
+-           if (oB.setScale(IB, -JB * cB, GB * cB, kB * cB), BB.oN) {
++           Dt.Av(et, !0), Dt.setPosition(et, 0, 0, 0), Dt.setRotationEuler(et, 0, 0, 0), Dt.set(et, "aOpacity", 1), Dt.set(et, "aLightLevels", nt.c);
++           const [qt, mt, jt] = Array.isArray(Vt) ? Vt : [Vt, Vt, Vt], Ht = Ot.bakeInScaling;
++           if (Dt.setScale(et, -qt * Ht, mt * Ht, jt * Ht), tt.YE) {
 ```
 
-#### 1184. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9773` → after: `L9609`)
+#### 117. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1475` → after: `L1475`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9609) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9609)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9609) · [Before (L9773)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9773)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1475) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1475)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1475) · [Before (L1475)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1475)
 
 ```diff
--               qa: NB,
-+               pn: vB,
+-         return "string" === typeof BB ? [BB] : [BB.nodeName, ...hI(null !== (IB = BB.children) && void 0 !== IB ? IB : [])]
++         return "string" === typeof tt ? [tt] : [tt.nodeName, ...le(null !== (et = tt.children) && void 0 !== et ? et : [])]
 ```
 
-#### 1185. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9777` → after: `L9613`)
+#### 118. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1480-L1484` → after: `L1480-L1484`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9613) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9613)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9613) · [Before (L9777)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9777)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1480) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1480-L1484)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1480-L1484) · [Before (L1480-L1484)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1480-L1484)
 
 ```diff
--               qa: NB,
-+               pn: vB,
+-       IB.name = `${ZB}SkeletalVehicleMat`;
+-       const TB = (0, YB._)(IB);
+-       (0, YB.J)(TB), (0, JI.d)(IB, (() => {
+-         (0, TI.c)(TB, BB), (0, lB.e)(TB, !0)
+-       })), (0, JI.e)(IB)
++       et.name = `${Vt}SkeletalVehicleMat`;
++       const Ot = (0, Wt.X)(et);
++       (0, Wt.C)(Ot), (0, De.e)(et, (() => {
++         (0, qe.d)(Ot, tt), (0, it.d)(Ot, !0)
++       })), (0, De.f)(et)
 ```
 
-#### 1186. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9786` → after: `L9622`)
+#### 119. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1504` → after: `L1504`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9622) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9622)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9622) · [Before (L9786)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9786)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1504) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1504)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1504) · [Before (L1504)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1504)
 
 ```diff
--         Array.isArray(nB) ? dB = nB : (dB = Fp, Fp[0] = nB, Fp.length = 1);
-+         Array.isArray(JB) ? oB = JB : (oB = Mh, Mh[0] = JB, Mh.length = 1);
+-         this.bloxd = void 0, this.Nz = void 0
++         this.bloxd = void 0, this.ql = void 0
 ```
 
-#### 1187. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9844` → after: `L9680`)
+#### 120. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1513` → after: `L1513`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9680) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9680)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9680) · [Before (L9844)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9844)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1513) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1513)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1513) · [Before (L1513)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1513)
 
 ```diff
--         if (!1 !== this.bloxd.Gs.metadatas[zB].stackable) {
-+         if (!1 !== this.bloxd.zF.metadatas[ZB].stackable) {
+-         return gI.sourcesByScene.set(BB, ZB), (0, bB.d)(BB, (() => {
++         return ye.sourcesByScene.set(tt, Vt), (0, pt.c)(tt, (() => {
 ```
 
-#### 1188. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9854-L9855` → after: `L9690-L9691`)
+#### 121. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1518-L1521` → after: `L1518-L1521`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9690) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9690-L9691)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9690-L9691) · [Before (L9854-L9855)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9854-L9855)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1518) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1518-L1521)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1518-L1521) · [Before (L1518-L1521)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1518-L1521)
 
 ```diff
--             fa: 0,
--             zu: null,
-+             Hn: 0,
-+             Dv: null,
+-         this.bloxd = BB, this.Nz = BB.Nz;
+-         const IB = (0, bB.d)(this.Nz.Ig.JR(), (() => {
+-           for (const BB of this.bloxd.zW.fR("isBoard")) {
+-             const IB = this.bloxd.zW.getState(BB.bR, "hidingMeshManager");
++         this.bloxd = tt, this.ql = tt.ql;
++         const et = (0, pt.c)(this.ql.Bf.vI(), (() => {
++           for (const tt of this.bloxd.mJ.bZ("isBoard")) {
++             const et = this.bloxd.mJ.getState(tt.uZ, "hidingMeshManager");
 ```
 
-#### 1189. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9868` → after: `L9704`)
+#### 122. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1529` → after: `L1529`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9704) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9704)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9704) · [Before (L9868)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9868)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1529) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1529)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1529) · [Before (L1529)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1529)
 
 ```diff
--             zu: sB,
-+             Dv: FB,
+-           for (const BB of this.bloxd.zW.fR("isBoard")) this.bloxd.zW.deleteEntity(BB.bR)
++           for (const tt of this.bloxd.mJ.bZ("isBoard")) this.bloxd.mJ.deleteEntity(tt.uZ)
 ```
 
-#### 1190. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9872-L9873` → after: `L9708-L9709`)
+#### 123. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1534` → after: `L1534`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9708) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9708-L9709)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9708-L9709) · [Before (L9872-L9873)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9872-L9873)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1534) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1534)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1534) · [Before (L1534)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1534)
 
 ```diff
--           fa: rB / UB,
--           zu: sB,
-+           Hn: zB / cB,
-+           Dv: FB,
+-         (0, LB.c)(this.Nz).mergeParticleSystemUpdate((0, XB.e)(BB), IB, ZB);
++         (0, ot.e)(this.ql).mergeParticleSystemUpdate((0, zt.c)(tt), et, Vt);
 ```
 
-#### 1191. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9903` → after: `L9739`)
+#### 124. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1536` → after: `L1536`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9739) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9739)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9739) · [Before (L9903)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9903)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1536) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1536)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1536) · [Before (L1536)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1536)
 
 ```diff
--         if (!1 !== this.bloxd.Gs.metadatas[jB].stackable) {
-+         if (!1 !== this.bloxd.zF.metadatas[IB].stackable) {
+-         (0, rB.L)(JB) || (0, jB.d)(JB, ZB)
++         (0, kt.B)(qt) || (0, Zt.d)(qt, Vt)
 ```
 
-#### 1192. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9923` → after: `L9759`)
+#### 125. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1539` → after: `L1539`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9759) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9759)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9759) · [Before (L9923)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9923)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1539) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1539)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1539) · [Before (L1539)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1539)
 
 ```diff
--           zu: dB,
-+           Dv: oB,
+-         return (0, LB.c)(this.Nz).getParticleSystemUpdate((0, XB.e)(BB), null !== IB && void 0 !== IB ? IB : "__root__")
++         return (0, ot.e)(this.ql).getParticleSystemUpdate((0, zt.c)(tt), null !== et && void 0 !== et ? et : "__root__")
 ```
 
-#### 1193. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9971-L9972` → after: `L9807-L9808`)
+#### 126. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1545-L1546` → after: `L1545-L1546`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9807) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9807-L9808)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9807-L9808) · [Before (L9971-L9972)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9971-L9972)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1545) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1545-L1546)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1545-L1546) · [Before (L1545-L1546)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1545-L1546)
 
 ```diff
--       const zB = fp.h[BB];
--       return zB ? void 0 === jB ? zB : (jB <= 0 && (jB = 1), zB.map((BB => {
-+       const ZB = ih.e[BB];
-+       return ZB ? void 0 === IB ? ZB : (IB <= 0 && (IB = 1), ZB.map((BB => {
+-           kB = null !== (JB = null === vB || void 0 === vB || null === (oB = vB.persisted.shared.text) || void 0 === oB ? void 0 : oB.toString()) && void 0 !== JB ? JB : "",
+-           cB = null !== (GB = null === vB || void 0 === vB ? void 0 : vB.persisted.shared.textSize) && void 0 !== GB ? GB : 0;
++           jt = null !== (qt = null === dt || void 0 === dt || null === (Dt = dt.persisted.shared.text) || void 0 === Dt ? void 0 : Dt.toString()) && void 0 !== qt ? qt : "",
++           Ht = null !== (mt = null === dt || void 0 === dt ? void 0 : dt.persisted.shared.textSize) && void 0 !== mt ? mt : 0;
 ```
 
-#### 1194. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9983-L9986` → after: `L9819-L9822`)
+#### 127. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1549-L1551` → after: `L1549-L1551`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9819) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9819-L9822)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9819-L9822) · [Before (L9983-L9986)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9983-L9986)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1549) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1549-L1551)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1549-L1551) · [Before (L1549-L1551)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1549-L1551)
 
 ```diff
--     var Zp = zB(38558),
--       Ap = zB(38563),
--       Tp = zB(1270),
--       Pp = zB(6428);
-+     var mh = ZB(38513),
-+       Xh = ZB(38518),
-+       Lh = ZB(1300),
-+       eh = ZB(6635);
+-             position: DB.rN.Zero(),
+-             rotation: DB.rN.Zero(),
+-             ek: DB.rN.One()
++             position: gt.uf.Zero(),
++             rotation: gt.uf.Zero(),
++             cj: gt.uf.One()
 ```
 
-#### 1195. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L9994-L9996` → after: `L9830-L9832`)
+#### 128. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1554` → after: `L1554`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9830) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9830-L9832)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9830-L9832) · [Before (L9994-L9996)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L9994-L9996)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1554) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1554)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1554) · [Before (L1554)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1554)
 
 ```diff
--     var ep = zB(38554),
--       lp = zB(37727),
--       wp = zB(34254);
-+     var fh = ZB(38504),
-+       lh = ZB(37683),
-+       Ah = ZB(34197);
+-           "" === kB.trim() ? IB = (0, WB.e)(this.Nz.Ig, "EmptyBoardMesh") : (IB = this.createBoardTextPlane(kB, cB, 1, 7 / 8, 256), (0, eB.i)(BB, TB, .375), BB.rotation.y += Math.PI, IB.rotation = BB.rotation);
++           "" === jt.trim() ? et = (0, bt.f)(this.ql.Bf, "EmptyBoardMesh") : (et = this.createBoardTextPlane(jt, Ht, 1, 7 / 8, 256), (0, rt.g)(tt, Ot, .375), tt.rotation.y += Math.PI, et.rotation = tt.rotation);
 ```
 
-#### 1196. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10000` → after: `L9836`)
+#### 129. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1571` → after: `L1571`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9836) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9836)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9836) · [Before (L10000)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10000)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1571) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1571)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1571) · [Before (L1571)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1571)
 
 ```diff
--         this.bloxd = BB, this.enchanter = void 0, xp ??= new lp.d(qp.k), this.enchanter = xp
-+         this.bloxd = BB, this.enchanter = void 0, th ??= new lh.c(Yh.k), this.enchanter = th
+-         } = oB.l.find((IB => {
++         } = Dt.h.find((et => {
 ```
 
-#### 1197. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10003` → after: `L9839`)
+#### 130. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1576-L1578` → after: `L1576-L1578`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9839) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9839)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9839) · [Before (L10003)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10003)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1576) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1576-L1578)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1576-L1578) · [Before (L1576-L1578)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1576-L1578)
 
 ```diff
--         return this.bloxd.isClient && console.assert(BB === this.bloxd.ur.zV || BB === this.bloxd.ur.FBB, "eId in client getPossibleEnchantments must be local player"), this.enchanter.getPossibleEnchantmentsForItem(jB)
-+         return this.bloxd.isClient && console.assert(BB === this.bloxd.Nz.Jm || BB === this.bloxd.Nz.oIB, "eId in client getPossibleEnchantments must be local player"), this.enchanter.getPossibleEnchantmentsForItem(IB)
+-         })), [nB, , hB] = oB.r[JB][1], [zB, FB] = oB.m[JB], NB = cB + .01, gB = [.5 + nB * (vB - 1) / 2 + zB * NB, .5 - (kB - 1) / 2, .5 + hB * (vB - 1) / 2 + FB * NB];
+-         IB = (0, GB.o)(IB, ZB, vB, kB);
+-         const qB = (0, GB.u)(vB, kB),
++         })), [Xt, , Qt] = Dt.u[qt][1], [lt, Et] = Dt.l[qt], ft = Ht + .01, wt = [.5 + Xt * (dt - 1) / 2 + lt * ft, .5 - (jt - 1) / 2, .5 + Qt * (dt - 1) / 2 + Et * ft];
++         et = (0, mt.k)(et, Vt, dt, jt);
++         const yt = (0, mt.q)(dt, jt),
 ```
 
-#### 1198. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10006-L10009` → after: `L9842-L9845`)
+#### 131. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1582` → after: `L1582`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9842) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9842-L9845)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9842-L9845) · [Before (L10006-L10009)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10006-L10009)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1582) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1582)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1582) · [Before (L1582)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1582)
 
 ```diff
--         if (this.bloxd.isClient && console.assert(BB === this.bloxd.ur.zV || BB === this.bloxd.ur.FBB, "eId in client canUseEnchantingTable must be local player"), !this.bloxd.getClientPredictedOption(BB, "canCraft")) return !1;
--         if (!(0, wp.q)(zB)) return !1;
--         const QB = this.bloxd.vG.yjB(BB).getItemAtIdx(jB);
--         return 0 !== this.getPossibleEnchantments(BB, null === QB || void 0 === QB ? void 0 : QB.name).length && !(!QB || (0, wp.m)(QB.attributes))
-+         if (this.bloxd.isClient && console.assert(BB === this.bloxd.Nz.Jm || BB === this.bloxd.Nz.oIB, "eId in client canUseEnchantingTable must be local player"), !this.bloxd.getClientPredictedOption(BB, "canCraft")) return !1;
-+         if (!(0, Ah.m)(ZB)) return !1;
-+         const TB = this.bloxd.zW.lIB(BB).getItemAtIdx(IB);
-+         return 0 !== this.getPossibleEnchantments(BB, null === TB || void 0 === TB ? void 0 : TB.name).length && !(!TB || (0, Ah.i)(TB.attributes))
+-           return BB.rotation = new DB.rN(0, (JB + 1) * Math.PI / 2, 0), {
++           return tt.rotation = new gt.uf(0, (qt + 1) * Math.PI / 2, 0), {
 ```
 
-#### 1199. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10012` → after: `L9848`)
+#### 132. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1590-L1596` → after: `L1590-L1596`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9848) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9848)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9848) · [Before (L10012)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10012)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1590) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1590-L1596)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1590-L1596) · [Before (L1590-L1596)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1590-L1596)
 
 ```diff
--         return (0, wp.q)(BB)
-+         return (0, Ah.m)(BB)
+-           Ig: vB
+-         } = this.Nz, {
+-           lg: kB
+-         } = vB, cB = Math.round(oB * ZB), nB = Math.round(oB * TB), hB = (0, tB.d)(this.Nz, "BoardDynamicTexture", cB, nB, {
+-           mipped: dB.j.trilinear,
+-           unmipped: dB.j.bilinear
+-         }), zB = (0, WB.n)(vB, "BoardPlane", (0, CB.f)({
++           Bf: dt
++         } = this.ql, {
++           Fw: jt
++         } = dt, Ht = Math.round(Dt * Vt), Xt = Math.round(Dt * Ot), Qt = (0, Bt.f)(this.ql, "BoardDynamicTexture", Ht, Xt, {
++           mipped: Jt.k.trilinear,
++           unmipped: Jt.k.bilinear
++         }), lt = (0, bt.q)(dt, "BoardPlane", (0, Ct.j)({
 ```
 
-#### 1200. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10015` → after: `L9851`)
+#### 133. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1599-L1600` → after: `L1599-L1600`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9851) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9851)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9851) · [Before (L10015)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10015)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1599) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1599-L1600)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1599-L1600) · [Before (L1599-L1600)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1599-L1600)
 
 ```diff
--         return (0, wp.b)(BB, jB)
-+         return (0, Ah.c)(BB, IB)
+-         })), FB = oB / 256, NB = (0, QB.g)(hB);
+-         JB.e.fontSize = GB.d[IB].ingameFontSize * FB, JB.e.fontWeight = "bold", JB.e.font = "'Jetbrains Mono', monospace", PB.featureFlags.canSeePlayerWrittenText && JB.e.drawText(NB, BB, 0, (-10 - 7 * IB) * FB, cB, nB), (0, tB.g)(hB);
++         })), Et = Dt / 256, ft = (0, ut.h)(Qt);
++         qt.b.fontSize = mt.d[et].ingameFontSize * Et, qt.b.fontWeight = "bold", qt.b.font = "'Jetbrains Mono', monospace", Lt.featureFlags.canSeePlayerWrittenText && qt.b.drawText(ft, tt, 0, (-10 - 7 * et) * Et, Ht, Xt), (0, Bt.k)(Qt);
 ```
 
-#### 1201. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10018` → after: `L9854`)
+#### 134. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1605` → after: `L1605`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9854) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9854)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9854) · [Before (L10018)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10018)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1605) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1605)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1605) · [Before (L1605)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1605)
 
 ```diff
--         return (0, wp.g)(BB)
-+         return (0, Ah.f)(BB)
+-           lg: kB,
++           Fw: jt,
 ```
 
-#### 1202. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10023-L10028` → after: `L9859-L9864`)
+#### 135. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1610` → after: `L1610`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9859) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9859-L9864)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9859-L9864) · [Before (L10023-L10028)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10023-L10028)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1610) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1610)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1610) · [Before (L1610)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1610)
 
 ```diff
--     }(0, aB.k)("Coal Ore"), (0, aB.k)("Iron Ore"), (0, aB.k)("Gold Ore"), (0, aB.k)("Diamond Ore"), (0, aB.k)("Moonstone Ore"), (0, aB.k)("Pure Coal Ore"), (0, aB.k)("Pure Iron Ore"), (0, aB.k)("Pure Gold Ore"), (0, aB.k)("Pure Diamond Ore"), (0, aB.k)("Pure Moonstone Ore"), (0,  … [truncated]
--     var Cp = zB(37746),
--       cp = zB(37131),
--       bp = zB(37748);
--     new Set(Object.keys(bp.e).map((BB => BB.toLowerCase())));
--     const vp = new Set(cp.e.map((function(BB) {
-+     }(0, nB.g)("Coal Ore"), (0, nB.g)("Iron Ore"), (0, nB.g)("Gold Ore"), (0, nB.g)("Diamond Ore"), (0, nB.g)("Moonstone Ore"), (0, nB.g)("Pure Coal Ore"), (0, nB.g)("Pure Iron Ore"), (0, nB.g)("Pure Gold Ore"), (0, nB.g)("Pure Diamond Ore"), (0, nB.g)("Pure Moonstone Ore"), (0,  … [truncated]
-+     var xh = ZB(37696),
-+       Eh = ZB(37079),
-+       Dh = ZB(37705);
-+     new Set(Object.keys(Dh.d).map((BB => BB.toLowerCase())));
-+     const Kh = new Set(Eh.f.map((function(BB) {
+-             ...(0, tB.f)(hB)
++             ...(0, Bt.h)(Qt)
 ```
 
-#### 1203. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10054` → after: `L9890`)
+#### 136. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1618` → after: `L1618`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9890) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9890)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9890) · [Before (L10054)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10054)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1618) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1618)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1618) · [Before (L1618)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1618)
 
 ```diff
--         const QB = null !== (zB = this.resolved) && void 0 !== zB ? zB : this.buildResolvedSettings(BB, jB);
-+         const TB = null !== (ZB = this.resolved) && void 0 !== ZB ? ZB : this.buildResolvedSettings(BB, IB);
+-         return zB.material = gB, zB.yR(), zB
++         return lt.material = wt, lt.eZ(), lt
 ```
 
-#### 1204. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10060` → after: `L9896`)
+#### 137. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1622-L1623` → after: `L1622-L1623`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9896) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9896)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9896) · [Before (L10060)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10060)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1622) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1622-L1623)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1622-L1623) · [Before (L1622-L1623)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1622-L1623)
 
 ```diff
--         const QB = null !== (zB = this.blockLookups) && void 0 !== zB ? zB : this.buildBlockLookups(BB, jB);
-+         const TB = null !== (ZB = this.blockLookups) && void 0 !== ZB ? ZB : this.buildBlockLookups(BB, IB);
+-           zW: TB
+-         } = this.Nz, JB = TB.add(BB, 1, 1);
++           mJ: Ot
++         } = this.ql, qt = Ot.add(tt, 1, 1);
 ```
 
-#### 1205. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10091-L10092` → after: `L9927-L9928`)
+#### 138. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1625` → after: `L1625`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9927) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9927-L9928)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9927-L9928) · [Before (L10091-L10092)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10091-L10092)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1625) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1625)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1625) · [Before (L1625)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1625)
 
 ```diff
--           speedMultiplier: void 0 === nB ? zB.speedMultiplier : (0, Cp.g)(Rp(dB.speedMultiplierByBlock, nB)),
--           canAutoStep: void 0 === QB ? zB.canAutoStep : (0, Cp.d)(Rp(dB.canAutoStepByBlock, QB))
-+           speedMultiplier: void 0 === JB ? ZB.speedMultiplier : (0, xh.i)(Vh(oB.speedMultiplierByBlock, JB)),
-+           canAutoStep: void 0 === TB ? ZB.canAutoStep : (0, xh.e)(Vh(oB.canAutoStepByBlock, TB))
+-         TB.xR(JB, "hidingMeshManager", {
++         Ot.RZ(qt, "hidingMeshManager", {
 ```
 
-#### 1206. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10096` → after: `L9932`)
+#### 139. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1627` → after: `L1627`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9932) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9932)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9932) · [Before (L10096)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10096)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1627) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1627)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1627) · [Before (L1627)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1627)
 
 ```diff
--     var Br = zB(38266);
-+     var Bz = ZB(38256);
+-             if ((0, bB.c)(this.Nz)) return;
++             if ((0, pt.b)(this.ql)) return;
 ```
 
-#### 1207. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10100` → after: `L9936`)
+#### 140. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1632` → after: `L1632`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9936) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9936)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9936) · [Before (L10100)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10100)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1632) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1632)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1632) · [Before (L1632)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1632)
 
 ```diff
--         this.DN = new WeakMap
-+         this.sv = new WeakMap
+-             oB = BB, TB.xR(JB, TB.names.mesh, {
++             Dt = tt, Ot.RZ(qt, Ot.names.mesh, {
 ```
 
-#### 1208. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10103` → after: `L9939`)
+#### 141. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1639` → after: `L1639`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9939) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9939)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9939) · [Before (L10103)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10103)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1639) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1639)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1639) · [Before (L1639)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1639)
 
 ```diff
--         return dB && (QB > jB || nB > zB) ? (this.DN.set(BB, {
-+         return oB && (TB > IB || JB > ZB) ? (this.sv.set(BB, {
+-             null === (BB = oB) || void 0 === BB || BB.dispose(!1, !0), TB.Qr(JB, TB.names.mesh)
++             null === (tt = Dt) || void 0 === tt || tt.dispose(!1, !0), Ot.ZZ(qt, Ot.names.mesh)
 ```
 
-#### 1209. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10109` → after: `L9945`)
+#### 142. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1643` → after: `L1643`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9945) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9945)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9945) · [Before (L10109)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10109)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1643) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1643)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1643) · [Before (L1643)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1643)
 
 ```diff
--         }) : (this.DN.delete(BB), {
-+         }) : (this.sv.delete(BB), {
+-           Ev: "Board",
++           mj: "Board",
 ```
 
-#### 1210. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10115` → after: `L9951`)
+#### 143. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1645` → after: `L1645`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9951) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9951)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9951) · [Before (L10115)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10115)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1645) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1645)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1645) · [Before (L1645)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1645)
 
 ```diff
--         return this.DN.get(BB)
-+         return this.sv.get(BB)
+-         }), TB.xR(JB, "isBoard")
++         }), Ot.RZ(qt, "isBoard")
 ```
 
-#### 1211. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10118` → after: `L9954`)
+#### 144. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1649-L1650` → after: `L1649-L1650`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9954) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9954)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9954) · [Before (L10118)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10118)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1649) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1649-L1650)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1649-L1650) · [Before (L1649-L1650)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1649-L1650)
 
 ```diff
--         this.DN.delete(BB)
-+         this.sv.delete(BB)
+-         for (const JB of this.bloxd.zW.fR("isBoard"))
+-           if (UB().squaredDistance(this.bloxd.zW.aU(JB.bR), TB) < .01) return void this.bloxd.zW.deleteEntity(JB.bR)
++         for (const qt of this.bloxd.mJ.bZ("isBoard"))
++           if (Mt().squaredDistance(this.bloxd.mJ.YM(qt.uZ), Ot) < .01) return void this.bloxd.mJ.deleteEntity(qt.uZ)
 ```
 
-#### 1212. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10121-L10122` → after: `L9957-L9958`)
+#### 145. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1653-L1655` → after: `L1653-L1655`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9957) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9957-L9958)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9957-L9958) · [Before (L10121-L10122)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10121-L10122)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1653) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1653-L1655)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1653-L1655) · [Before (L1653-L1655)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1653-L1655)
 
 ```diff
--     var Qr = zB(9366),
--       nr = zB(39330);
-+     var Tz = ZB(9388),
-+       Jz = ZB(39308);
+-         for (const TB of this.bloxd.zW.fR("isBoard")) {
+-           const [JB, oB, GB] = (0, rB._)(this.bloxd.zW.aU(TB.bR));
+-           JB === BB && oB === IB && GB === ZB && this.bloxd.zW.deleteEntity(TB.bR)
++         for (const Ot of this.bloxd.mJ.bZ("isBoard")) {
++           const [qt, Dt, mt] = (0, kt.O)(this.bloxd.mJ.YM(Ot.uZ));
++           qt === tt && Dt === et && mt === Vt && this.bloxd.mJ.deleteEntity(Ot.uZ)
 ```
 
-#### 1213. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10125` → after: `L9961`)
+#### 146. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1660` → after: `L1660`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9961) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9961)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9961) · [Before (L10125)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10125)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1660) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1660)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1660) · [Before (L1660)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1660)
 
 ```diff
--         this.isClient = jB, this.callbacks = zB, this.ur = void 0, this.vG = void 0, this.multiblockManager = void 0, this.blockDataOwner = void 0, this.craftingManager = void 0, this.enchantingManager = void 0, this.entityNames = {}, this.meshParticleSystems = {}, this.Gs = new  … [truncated]
-+         this.isClient = IB, this.callbacks = ZB, this.Nz = void 0, this.zW = void 0, this.multiblockManager = void 0, this.blockDataOwner = void 0, this.craftingManager = void 0, this.enchantingManager = void 0, this.entityNames = {}, this.meshParticleSystems = {}, this.zF = new  … [truncated]
+-             return "Fireball" === BB ? kB("Fireball Block", .95) : "RPG" === BB ? kB("Rocket", .5) : "Obby RPG" === BB ? kB("Obby Rocket", .5) : "Super RPG" === BB ? kB("Super Rocket", .7) : "Grenade Launcher" === BB ? kB("Grenade", .357) : "Iceball" === BB ? kB("Iceball Block",  … [truncated]
++             return "Fireball" === tt ? jt("Fireball Block", .95) : "RPG" === tt ? jt("Rocket", .5) : "Obby RPG" === tt ? jt("Obby Rocket", .5) : "Super RPG" === tt ? jt("Super Rocket", .7) : "Grenade Launcher" === tt ? jt("Grenade", .357) : "Iceball" === tt ? jt("Iceball Block",  … [truncated]
 ```
 
-#### 1214. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10148` → after: `L9984`)
+#### 147. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1667-L1669` → after: `L1667-L1669`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9984) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9984)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9984) · [Before (L10148)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10148)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1667) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1667-L1669)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1667-L1669) · [Before (L1667-L1669)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1667-L1669)
 
 ```diff
--         this.multiblockManager.eD(BB, jB, zB, QB, nB, dB)
-+         this.multiblockManager.UH(BB, IB, ZB, TB, JB, oB)
+-           ZB = xB.l.itemsClient[IB.item],
+-           TB = IB.thrownRole ? ZB.getMeshWithRole(IB.scale, sB.d.thrown) : ZB.getMesh(IB.scale);
+-         return IB.billboard && (TB.billboardMode = wB.d.BILLBOARDMODE_Y), TB
++           Vt = xt.g.itemsClient[et.item],
++           Ot = et.thrownRole ? Vt.getMeshWithRole(et.scale, Kt.b.thrown) : Vt.getMesh(et.scale);
++         return et.billboard && (Ot.billboardMode = ht.e.BILLBOARDMODE_Y), Ot
 ```
 
-#### 1215. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10151` → after: `L9987`)
+#### 148. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1672` → after: `L1672`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9987) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9987)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9987) · [Before (L10151)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10151)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1672) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1672)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1672) · [Before (L1672)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1672)
 
 ```diff
--         const dB = this.JG(BB, jB, zB);
-+         const oB = this.WU(BB, IB, ZB);
+-         const ZB = this.Nz.Ig.JR(),
++         const Vt = this.ql.Bf.vI(),
 ```
 
-#### 1216. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10156` → after: `L9992`)
+#### 149. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1678-L1679` → after: `L1678-L1679`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9992) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9992)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9992) · [Before (L10156)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10156)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1678) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1678-L1679)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1678-L1679) · [Before (L1678-L1679)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1678-L1679)
 
 ```diff
--         return nB in gp.d ? this.multiblockManager.playerCanPlaceItem(BB, jB, zB, QB, nB) : this.playerCanChangePos(BB, jB, zB, QB, nB, dB)
-+         return JB in dh.h ? this.multiblockManager.playerCanPlaceItem(BB, IB, ZB, TB, JB) : this.playerCanChangePos(BB, IB, ZB, TB, JB, oB)
+-           TB = this.Nz.Ig.Kr(`${IB.texture}|minLifetime${IB.minLifeTime}`, ZB);
+-         if (TB.texture = (0, dB.u)(BB, (0, gB.f)(IB.texture)), "timeFraction" in IB.colorGradients[0])
++           Ot = this.ql.Bf.xZ(`${et.texture}|minLifetime${et.minLifeTime}`, Vt);
++         if (Ot.texture = (0, Jt.w)(tt, (0, wt.g)(et.texture)), "timeFraction" in et.colorGradients[0])
 ```
 
-#### 1217. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10161` → after: `L9997`)
+#### 150. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1681-L1682` → after: `L1681-L1682`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R9997) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L9997)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L9997) · [Before (L10161)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10161)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1681) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1681-L1682)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1681-L1682) · [Before (L1681-L1682)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1681-L1682)
 
 ```diff
--         return this.isClient ? this.Bl(jB, zB, QB) && this.posSatisfiesModifyConstraints(BB, jB, zB, QB) && (!this.ur.Gs.vW(nB) || this.ur.zr.hA.has(nB) || !this.ur.vG.djB(jB, zB, QB, this.ur.Gs.HA(nB), dB ? BB : null)) : this.Bl(jB, zB, QB) && this.posSatisfiesModifyConstraints( … [truncated]
-+         return this.isClient ? this.pD(IB, ZB, TB) && this.posSatisfiesModifyConstraints(BB, IB, ZB, TB) && (!this.Nz.zF.qD(JB) || this.Nz.vz.Bx.has(JB) || !this.Nz.zW.HIB(IB, ZB, TB, this.Nz.zF.HA(JB), oB ? BB : null)) : this.pD(IB, ZB, TB) && this.posSatisfiesModifyConstraints( … [truncated]
+-             const BB = JB.maxColor ? (0, jB.j)(JB.maxColor) : void 0;
+-             TB.addColorGradient(JB.timeFraction, (0, jB.j)(JB.minColor), BB)
++             const tt = qt.maxColor ? (0, Zt.n)(qt.maxColor) : void 0;
++             Ot.addColorGradient(qt.timeFraction, (0, Zt.n)(qt.minColor), tt)
 ```
 
-#### 1218. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10176-L10177` → after: `L10012-L10013`)
+#### 151. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1685` → after: `L1685`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10012) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10012-L10013)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10012-L10013) · [Before (L10176-L10177)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10176-L10177)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1685) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1685)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1685) · [Before (L1685)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1685)
 
 ```diff
--         if (BB && BB !== Qr.b) {
--           if (this.Gs.metadatas[BB]) return this.Gs.metadatas[BB].id;
-+         if (BB && BB !== Tz.c) {
-+           if (this.zF.metadatas[BB]) return this.zF.metadatas[BB].id;
+-             TB.addColorGradient(1, (0, jB.l)(255, 255, 255, BB), (0, jB.l)(255, 255, 255, 1)), TB.useRampGradients = !0, TB.addColorRemapGradient(0, BB, 1), TB.addColorRemapGradient(1, BB, 1), MB.d.applyRampColoursToPSystem(TB, IB.colorGradients.map((BB => BB.color)))
++             Ot.addColorGradient(1, (0, Zt.p)(255, 255, 255, tt), (0, Zt.p)(255, 255, 255, 1)), Ot.useRampGradients = !0, Ot.addColorRemapGradient(0, tt, 1), Ot.addColorRemapGradient(1, tt, 1), Pt.e.applyRampColoursToPSystem(Ot, et.colorGradients.map((tt => tt.color)))
 ```
 
-#### 1219. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10183` → after: `L10019`)
+#### 152. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1687` → after: `L1687`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10019) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10019)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10019) · [Before (L10183)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10183)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1687) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1687)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1687) · [Before (L1687)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1687)
 
 ```diff
--         return BB && BB !== Qr.b ? this.Gs.metadatas[BB].name : Qr.b
-+         return BB && BB !== Tz.c ? this.zF.metadatas[BB].name : Tz.c
+-         TB.blendMode = IB.blendMode, TB.minLifeTime = IB.minLifeTime, TB.maxLifeTime = IB.maxLifeTime, TB.minEmitPower = IB.minEmitPower, TB.maxEmitPower = IB.maxEmitPower, TB.minSize = IB.minSize, TB.maxSize = IB.maxSize, TB.gravity = new DB.rN(IB.gravity[0], IB.gravity[1], IB.g … [truncated]
++         Ot.blendMode = et.blendMode, Ot.minLifeTime = et.minLifeTime, Ot.maxLifeTime = et.maxLifeTime, Ot.minEmitPower = et.minEmitPower, Ot.maxEmitPower = et.maxEmitPower, Ot.minSize = et.minSize, Ot.maxSize = et.maxSize, Ot.gravity = new gt.uf(et.gravity[0], et.gravity[1], et.g … [truncated]
 ```
 
-#### 1220. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10186` → after: `L10022`)
+#### 153. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1692` → after: `L1692`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10022) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10022)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10022) · [Before (L10186)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10186)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1692) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1692)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1692) · [Before (L1692)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1692)
 
 ```diff
--         const jB = this.Gs.metadatas;
-+         const IB = this.zF.metadatas;
+-         const IB = this.Nz.Ig.JR(),
++         const et = this.ql.Bf.vI(),
 ```
 
-#### 1221. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10190` → after: `L10026`)
+#### 154. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1694-L1695` → after: `L1694-L1695`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10026) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10026)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10026) · [Before (L10190)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10190)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1694) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1694-L1695)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1694-L1695) · [Before (L1694-L1695)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1694-L1695)
 
 ```diff
--         return BB && BB !== Qr.b ? this.getItemTypeObjImpl(BB) : null
-+         return BB && BB !== Tz.c ? this.getItemTypeObjImpl(BB) : null
+-         (0, jB.x)(this.Nz, ZB), ZB.createBoxEmitter(new DB.rN(Math.min(BB.dir1[0], BB.dir2[0]), Math.min(BB.dir1[1], BB.dir2[1]), Math.min(BB.dir1[2], BB.dir2[2])), new DB.rN(Math.max(BB.dir1[0], BB.dir2[0]), Math.max(BB.dir1[1], BB.dir2[1]), Math.max(BB.dir1[2], BB.dir2[2])), ne … [truncated]
+-         new MB.e(ZB, BB.maxLifeTime).emitAmount(BB.manualEmitCount), this.bloxd.client.gameRecorder.recordParticleEffectPlayed(BB)
++         (0, Zt.z)(this.ql, Vt), Vt.createBoxEmitter(new gt.uf(Math.min(tt.dir1[0], tt.dir2[0]), Math.min(tt.dir1[1], tt.dir2[1]), Math.min(tt.dir1[2], tt.dir2[2])), new gt.uf(Math.max(tt.dir1[0], tt.dir2[0]), Math.max(tt.dir1[1], tt.dir2[1]), Math.max(tt.dir1[2], tt.dir2[2])), ne … [truncated]
++         new Pt.g(Vt, tt.maxLifeTime).emitAmount(tt.manualEmitCount), this.bloxd.client.gameRecorder.recordParticleEffectPlayed(tt)
 ```
 
-#### 1222. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10193-L10194` → after: `L10029-L10030`)
+#### 155. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1698-L1699` → after: `L1698-L1699`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10029) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10029-L10030)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10029-L10030) · [Before (L10193-L10194)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10193-L10194)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1698) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1698-L1699)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1698-L1699) · [Before (L1698-L1699)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1698-L1699)
 
 ```diff
--         if (!BB || BB === Qr.b) return Qr.e;
--         const jB = this.Gs.metadatas[BB];
-+         if (!BB || BB === Tz.c) return Tz.d;
-+         const IB = this.zF.metadatas[BB];
+-         if (BB instanceof OB.d) return !1;
+-         const IB = `${BB.blendMode}|${BB.useRampGradients}`,
++         if (tt instanceof vt.b) return !1;
++         const et = `${tt.blendMode}|${tt.useRampGradients}`,
 ```
 
-#### 1223. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10202` → after: `L10038`)
+#### 156. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1701` → after: `L1701`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10038) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10038)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10038) · [Before (L10202)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10202)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1701) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1701)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1701) · [Before (L1701)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1701)
 
 ```diff
--         if (nr.e.has(zB) && (this.isClient || "Player" === this.getEntityType(BB))) {
-+         if (Jz.d.has(ZB) && (this.isClient || "Player" === this.getEntityType(BB))) {
+-           TB = this.Nz.Ig.JR();
++           Ot = this.ql.Bf.vI();
 ```
 
-#### 1224. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10205` → after: `L10041`)
+#### 157. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1705` → after: `L1705`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10041) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10041)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10041) · [Before (L10205)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10205)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1705) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1705)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1705) · [Before (L1705)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1705)
 
 ```diff
--           if (!(0, XB.I)(nB)) return nB
-+           if (!(0, rB.L)(JB)) return JB
+-         const TB = this.Nz.Ig.JR();
++         const Ot = this.ql.Bf.vI();
 ```
 
-#### 1225. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10211-L10212` → after: `L10047-L10048`)
+#### 158. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1709` → after: `L1709`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10047) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10047-L10048)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10047-L10048) · [Before (L10211-L10212)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10211-L10212)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1709) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1709)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1709) · [Before (L1709)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1709)
 
 ```diff
--         const QB = null === (zB = this.Gs.metadatas[BB]) || void 0 === zB ? void 0 : zB[jB];
--         return (0, XB.I)(QB) && "displayName" === jB ? this.getItemName(BB) : QB
-+         const TB = null === (ZB = this.zF.metadatas[BB]) || void 0 === ZB ? void 0 : ZB[IB];
-+         return (0, rB.L)(TB) && "displayName" === IB ? this.getItemName(BB) : TB
+-             TB = null !== (JB = IB.meshOffset) && void 0 !== JB ? JB : UB().nZ(0, BB / 2, 0),
++             Ot = null !== (qt = et.meshOffset) && void 0 !== qt ? qt : Mt().Re(0, tt / 2, 0),
 ```
 
-#### 1226. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10222` → after: `L10058`)
+#### 159. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1711` → after: `L1711`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10058) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10058)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10058) · [Before (L10222)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10222)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1711) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1711)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1711) · [Before (L1711)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1711)
 
 ```diff
--         return UB ? Math.max(0, null !== (dB = this.getItemStat(BB, UB, "attackRange")) && void 0 !== dB ? dB : IB) : IB
-+         return cB ? Math.max(0, null !== (oB = this.getItemStat(BB, cB, "attackRange")) && void 0 !== oB ? oB : GB) : GB
+-             kB = nI(this.Nz, IB.blockName, IB.size);
++             jt = Qe(this.ql, et.blockName, et.size);
 ```
 
-#### 1227. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10226` → after: `L10062`)
+#### 160. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1713` → after: `L1713`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10062) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10062)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10062) · [Before (L10226)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10226)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1713) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1713)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1713) · [Before (L1713)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1713)
 
 ```diff
--         return null !== (jB = this.getClientPredictedOption(BB, "blockReach")) && void 0 !== jB ? jB : JB.e.zk
-+         return null !== (IB = this.getClientPredictedOption(BB, "blockReach")) && void 0 !== IB ? IB : NB.f.Aq
+-             gR: kB,
++             RP: jt,
 ```
 
-#### 1228. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10234-L10237` → after: `L10070-L10073`)
+#### 161. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1720-L1721` → after: `L1720-L1721`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10070) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10070-L10073)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10070-L10073) · [Before (L10234-L10237)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10234-L10237)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1720) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1720-L1721)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1720-L1721) · [Before (L1720-L1721)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1720-L1721)
 
 ```diff
--           return !(0, NB.Fc)({
--             blockHarvestType: this.Gs.metadatas[jB].harvestType,
--             blockHarvestLevel: this.Gs.metadatas[jB].harvestLevel,
--             harvestLevel: null !== (dB = this.getItemStat(BB, jB, "harvestLevel")) && void 0 !== dB ? dB : 0,
-+           return !(0, vB.Dc)({
-+             blockHarvestType: this.zF.metadatas[IB].harvestType,
-+             blockHarvestLevel: this.zF.metadatas[IB].harvestLevel,
-+             harvestLevel: null !== (oB = this.getItemStat(BB, IB, "harvestLevel")) && void 0 !== oB ? oB : 0,
+-               gR: null,
+-               mesh: (0, WB.p)(this.Nz.Ig, `skeletalVehicleLoading|${IB.blockName}`),
++               RP: null,
++               mesh: (0, bt.r)(this.ql.Bf, `skeletalVehicleLoading|${et.blockName}`),
 ```
 
-#### 1229. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10245` → after: `L10081`)
+#### 162. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1728-L1729` → after: `L1728-L1729`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10081) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10081)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10081) · [Before (L10245)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10245)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1728) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1728-L1729)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1728-L1729) · [Before (L1728-L1729)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1728-L1729)
 
 ```diff
--         return (0, NB.he)(this.getItemStat(BB, jB, "drops"), this.getItemStat(BB, jB, "specialToolDrop"), (() => this.getMetaInfo(jB).rootName), zB)
-+         return (0, vB.$d)(this.getItemStat(BB, IB, "drops"), this.getItemStat(BB, IB, "specialToolDrop"), (() => this.getMetaInfo(IB).rootName), ZB)
+-             gR: null,
+-             mesh: null !== (oB = null === (GB = xB.l.itemsClient[IB.blockName]) || void 0 === GB ? void 0 : GB.getMesh(IB.size, ZB)) && void 0 !== oB ? oB : null,
++             RP: null,
++             mesh: null !== (Dt = null === (mt = xt.g.itemsClient[et.blockName]) || void 0 === mt ? void 0 : mt.getMesh(et.size, Vt)) && void 0 !== Dt ? Dt : null,
 ```
 
-#### 1230. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10249` → after: `L10085`)
+#### 163. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1742` → after: `L1742`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10085) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10085)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10085) · [Before (L10249)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10249)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1742) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1742)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1742) · [Before (L1742)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1742)
 
 ```diff
--         return jB && null !== (zB = null === (QB = aB.i[BB]) || void 0 === QB ? void 0 : QB.Pa) && void 0 !== zB ? zB : 1
-+         return IB && null !== (ZB = null === (TB = nB.f[BB]) || void 0 === TB ? void 0 : TB.bn) && void 0 !== ZB ? ZB : 1
+-             qB = `${BB}|${JSON.stringify(NB)}${zB?"|mirrored":""}`,
++             yt = `${tt}|${JSON.stringify(ft)}${lt?"|mirrored":""}`,
 ```
 
-#### 1231. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10260` → after: `L10096`)
+#### 164. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1748` → after: `L1748`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10096) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10096)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10096) · [Before (L10260)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10260)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1748) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1748)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1748) · [Before (L1748)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1748)
 
 ```diff
--         return this.ur.vG.HBB(BB, "inventory") ? this.ur.vG.yjB(BB).getItemAtSelectedSlot() : null
-+         return this.Nz.zW.TIB(BB, "inventory") ? this.Nz.zW.lIB(BB).getItemAtSelectedSlot() : null
+-               JB = IB.diffuseColor ? void 0 : (0, cB.f)(IB.texture);
++               qt = et.diffuseColor ? void 0 : (0, Ht.h)(et.texture);
 ```
 
-#### 1232. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10263` → after: `L10099`)
+#### 165. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1760` → after: `L1760`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10099) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10099)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10099) · [Before (L10263)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10263)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1760) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1760)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1760) · [Before (L1760)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1760)
 
 ```diff
--         return (0, tj.h)(this.ur, BB, !1).length >= 1
-+         return (0, CI.c)(this.Nz, BB, !1).length >= 1
+-               } = gB.e.getTexture((0, cB.f)(IB.texture), EB.m.BLOCK);
++               } = wt.e.getTexture((0, Ht.h)(et.texture), Tt.k.BLOCK);
 ```
 
-#### 1233. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10267` → after: `L10103`)
+#### 166. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1762` → after: `L1762`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10103) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10103)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10103) · [Before (L10267)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10267)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1762) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1762)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1762) · [Before (L1762)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1762)
 
 ```diff
--         const QB = this.Gs.metadatas;
-+         const TB = this.zF.metadatas;
+-                   transparencyMode: YB.o.alphaTest,
++                   transparencyMode: Wt.n.alphaTest,
 ```
 
-#### 1234. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10273` → after: `L10109`)
+#### 167. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1768` → after: `L1768`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10109) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10109)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10109) · [Before (L10273)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10273)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1768) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1768)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1768) · [Before (L1768)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1768)
 
 ```diff
--             !(0, XB.I)(jB) && (void 0 === nB || jB > nB) && (nB = jB);
-+             !(0, rB.L)(IB) && (void 0 === JB || IB > JB) && (JB = IB);
+-                     samplingMode: dB.j.nearestNearestMipLinear,
++                     samplingMode: Jt.k.nearestNearestMipLinear,
 ```
 
-#### 1235. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10282` → after: `L10118`)
+#### 168. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1778` → after: `L1778`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10118) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10118)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10118) · [Before (L10282)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10282)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1778) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1778)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1778) · [Before (L1778)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1778)
 
 ```diff
--           }(0, XB.I)(jB) && (this.stoodOnKnown[NB] || (this.stoodOnDefaults[NB] = this.getDefaultItemStat(NB, "stoodOnSpeedMultiplier"), this.stoodOnKnown[NB] = !0), jB = this.stoodOnDefaults[NB]), !(0, XB.I)(jB) && (void 0 === nB || jB > nB) && (nB = jB)
-+           }(0, rB.L)(IB) && (this.stoodOnKnown[vB] || (this.stoodOnDefaults[vB] = this.getDefaultItemStat(vB, "stoodOnSpeedMultiplier"), this.stoodOnKnown[vB] = !0), IB = this.stoodOnDefaults[vB]), !(0, rB.L)(IB) && (void 0 === JB || IB > JB) && (JB = IB)
+-                 const BB = null === (yB = nB.f[IB.texture]) || void 0 === yB ? void 0 : yB.textureInfo;
++                 const tt = null === (Nt = Xt.h[et.texture]) || void 0 === Nt ? void 0 : Nt.textureInfo;
 ```
 
-#### 1236. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10284` → after: `L10120`)
+#### 169. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1780-L1781` → after: `L1780-L1781`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10120) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10120)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10120) · [Before (L10284)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10284)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1780) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1780-L1781)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1780-L1781) · [Before (L1780-L1781)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1780-L1781)
 
 ```diff
--         return null !== (zB = nB) && void 0 !== zB ? zB : 1
-+         return null !== (ZB = JB) && void 0 !== ZB ? ZB : 1
+-                 if (BB && "object" === typeof BB && "animTextures" in BB) ZB = (0, iB.g)(BB.animTextures.length, null !== (sB = BB.animationInterval) && void 0 !== sB ? sB : 200), JB = BB.animTextures[0];
+-                 else console.warn(`Box mesh entity animateTexture=true but texture "${IB.texture}" is not an animated block \u2014 rendering static.`)
++                 if (tt && "object" === typeof tt && "animTextures" in tt) Vt = (0, St.j)(tt.animTextures.length, null !== (Kt = tt.animationInterval) && void 0 !== Kt ? Kt : 200), qt = tt.animTextures[0];
++                 else console.warn(`Box mesh entity animateTexture=true but texture "${et.texture}" is not an animated block \u2014 rendering static.`)
 ```
 
-#### 1237. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10287` → after: `L10123`)
+#### 170. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1787-L1788` → after: `L1787-L1788`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10123) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10123)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10123) · [Before (L10287)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10287)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1787) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1787-L1788)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1787-L1788) · [Before (L1787-L1788)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1787-L1788)
 
 ```diff
--         const jB = this.Gs.metadatas,
-+         const IB = this.zF.metadatas,
+-               name: `${qB}EntityMesh`,
+-               lg: TB,
++               name: `${yt}EntityMesh`,
++               Fw: Ot,
 ```
 
-#### 1238. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10293` → after: `L10129`)
+#### 171. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1794` → after: `L1794`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10129) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10129)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10129) · [Before (L10293)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10293)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1794) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1794)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1794) · [Before (L1794)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1794)
 
 ```diff
--           (0, XB.I)(BB) || (zB.push(nB), QB.push(Number(BB)))
-+           (0, rB.L)(BB) || (ZB.push(JB), TB.push(Number(BB)))
+-                 ZB && (0, YB.r)(BB, iB.e, ZB), (0, lB.e)(BB, !0), (0, YB.F)(BB)
++                 Vt && (0, Wt.p)(tt, St.e, Vt), (0, it.d)(tt, !0), (0, Wt.B)(tt)
 ```
 
-#### 1239. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10301` → after: `L10137`)
+#### 172. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1797` → after: `L1797`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10137) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10137)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10137) · [Before (L10301)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10301)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1797) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1797)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1797) · [Before (L1797)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1797)
 
 ```diff
--         const QB = this.Gs.metadatas;
-+         const TB = this.zF.metadatas;
+-             }), GB = IB.faceUV ? IB.faceUV.map((BB => [BB[0] + .01, BB[1] + .01, BB[2] - .01, BB[3] - .01])) : void 0, vB = (0, WB.n)(this.Nz.Ig, `${qB}EntityMesh`, (0, CB.b)({
++             }), mt = et.faceUV ? et.faceUV.map((tt => [tt[0] + .01, tt[1] + .01, tt[2] - .01, tt[3] - .01])) : void 0, dt = (0, bt.q)(this.ql.Bf, `${yt}EntityMesh`, (0, Ct.c)({
 ```
 
-#### 1240. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10317` → after: `L10153`)
+#### 173. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1803-L1805` → after: `L1803-L1805`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10153) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10153)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10153) · [Before (L10317)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10317)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1803) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1803-L1805)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1803-L1805) · [Before (L1803-L1805)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1803-L1805)
 
 ```diff
--           if (!(0, XB.I)(zB))
-+           if (!(0, rB.L)(ZB))
+-             if (vB.material = oB, vB.Im("aOpacity", 1), vB.Zm.aOpacity = 1, this.Nz.oN) {
+-               const BB = void 0 === JB ? void 0 : (0, hB.e)(nB.r, JB);
+-               vB.Im("aShaderPackItem", 4), vB.Zm.aShaderPackItem = new DB.Vector4(void 0 === BB ? 0 : BB + 1, 0, 0, 0)
++             if (dt.material = Dt, dt.tL("aOpacity", 1), dt.qL.aOpacity = 1, this.ql.YE) {
++               const tt = void 0 === qt ? void 0 : (0, Qt.c)(Xt.s, qt);
++               dt.tL("aShaderPackItem", 4), dt.qL.aShaderPackItem = new gt.Vector4(void 0 === tt ? 0 : tt + 1, 0, 0, 0)
 ```
 
-#### 1241. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10328` → after: `L10164`)
+#### 174. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1807` → after: `L1807`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10164) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10164)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10164) · [Before (L10328)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10328)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1807) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1807)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1807) · [Before (L1807)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1807)
 
 ```diff
--         return 1 === jB ? QB = .5 * zB : 2 === jB ? QB = .75 * zB : jB >= this.maxBunnyHops && (QB = zB), 1 + QB
-+         return 1 === IB ? TB = .5 * ZB : 2 === IB ? TB = .75 * ZB : IB >= this.maxBunnyHops && (TB = ZB), 1 + TB
+-             vB.RN = !0, vB.XN = !0, vB.qY(!1), (0, pB.d)(vB) || vB.JR().jR(vB), QB.set(qB, vB), wB = vB
++             dt.Cf = !0, dt.hf = !0, dt.Av(!1), (0, ct.f)(dt) || dt.vI().wZ(dt), ut.set(yt, dt), ht = dt
 ```
 
-#### 1242. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10341` → after: `L10177`)
+#### 175. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1809-L1811` → after: `L1809-L1811`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10177) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10177)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10177) · [Before (L10341)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10341)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1809) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1809-L1811)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1809-L1811) · [Before (L1809-L1811)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1809-L1811)
 
 ```diff
--         return this.ur.pickBlock(jB, zB, this.getBlockReach(BB))
-+         return this.Nz.pickBlock(IB, ZB, this.getBlockReach(BB))
+-           const OB = wB.createInstance(`${qB}EntityMeshInstance`);
+-           return OB.ek.set(FB * JB, FB * oB, FB * GB), this.Nz.Ig.xg(OB), (0, aB.q)(OB, 0, 0, 0), ZB(OB), {
+-             gR: null,
++           const vt = ht.createInstance(`${yt}EntityMeshInstance`);
++           return vt.cj.set(Et * qt, Et * Dt, Et * mt), this.ql.Bf.ow(vt), (0, Rt.s)(vt, 0, 0, 0), Vt(vt), {
++             RP: null,
 ```
 
-#### 1243. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10354-L10355` → after: `L10190-L10191`)
+#### 176. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1813` → after: `L1813`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10190) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10190-L10191)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10190-L10191) · [Before (L10354-L10355)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10354-L10355)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1813) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1813)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1813) · [Before (L1813)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1813)
 
 ```diff
--         BB.attributes.customAttributes = Object.assign(null !== (QB = BB.attributes.customAttributes) && void 0 !== QB ? QB : {}, {
--           author: this.getEntityName(this.isClient ? this.ur.zV : zB),
-+         BB.attributes.customAttributes = Object.assign(null !== (TB = BB.attributes.customAttributes) && void 0 !== TB ? TB : {}, {
-+           author: this.getEntityName(this.isClient ? this.Nz.Jm : ZB),
+-             meshOffset: null !== (vB = IB.meshOffset) && void 0 !== vB ? vB : UB().nZ(0, oB / 2, 0),
++             meshOffset: null !== (dt = et.meshOffset) && void 0 !== dt ? dt : Mt().Re(0, Dt / 2, 0),
 ```
 
-#### 1244. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10360` → after: `L10196`)
+#### 177. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1823-L1824` → after: `L1823-L1824`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10196) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10196)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10196) · [Before (L10360)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10360)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1823) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1823-L1824)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1823-L1824) · [Before (L1823-L1824)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1823-L1824)
 
 ```diff
--         const dB = aB.i[QB].name,
-+         const oB = nB.f[TB].name,
+-               const vB = BB.JR(),
+-                 kB = Math.min(4096, vB.PN().getCaps().maxTextureSize),
++               const dt = tt.vI(),
++                 jt = Math.min(4096, dt.Jf().getCaps().maxTextureSize),
 ```
 
-#### 1245. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10362` → after: `L10198`)
+#### 178. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1830` → after: `L1830`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10198) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10198)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10198) · [Before (L10362)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10362)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1830) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1830)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1830) · [Before (L1830)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1830)
 
 ```diff
--         dB !== IB && this.eD(BB, jB, zB, (0, aB.k)(IB))
-+         oB !== GB && this.UH(BB, IB, ZB, (0, nB.g)(GB))
+-                 zB = (0, QB.k)(vB, "Leaderboard", {
++                 lt = (0, ut.i)(dt, "Leaderboard", {
 ```
 
-#### 1246. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10366-L10367` → after: `L10202-L10203`)
+#### 179. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1835` → after: `L1835`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10202) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10202-L10203)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10202-L10203) · [Before (L10366-L10367)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10366-L10367)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1835) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1835)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1835) · [Before (L1835)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1835)
 
 ```diff
--         const QB = aB.i[BB].name.split("|");
--         return `${QB[0]}|meta|${null!==(zB=QB[2])&&void 0!==zB?zB:"rot1"}|${jB>0?"full":"empty"}`
-+         const TB = nB.f[BB].name.split("|");
-+         return `${TB[0]}|meta|${null!==(ZB=TB[2])&&void 0!==ZB?ZB:"rot1"}|${IB>0?"full":"empty"}`
+-                 FB = (0, QB.g)(zB),
++                 Et = (0, ut.h)(lt),
 ```
 
-#### 1247. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10370` → after: `L10206`)
+#### 180. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1838` → after: `L1838`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10206) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10206)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10206) · [Before (L10370)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10370)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1838) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1838)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1838) · [Before (L1838)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1838)
 
 ```diff
--         const zB = aB.i[BB].name,
-+         const ZB = nB.f[BB].name,
+-                 qB = null !== (JB = TB.initial) && void 0 !== JB ? JB : null;
++                 yt = null !== (qt = Ot.initial) && void 0 !== qt ? qt : null;
 ```
 
-#### 1248. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10374` → after: `L10210`)
+#### 181. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1840` → after: `L1840`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10210) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10210)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10210) · [Before (L10374)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10374)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1840) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1840)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1840) · [Before (L1840)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1840)
 
 ```diff
--           return `${0===jB?"Empty Bookshelf":"Bookshelf"}|meta|${null!==(nB=QB[2])&&void 0!==nB?nB:"rot1"}|books${jB}`
-+           return `${0===IB?"Empty Bookshelf":"Bookshelf"}|meta|${null!==(JB=TB[2])&&void 0!==JB?JB:"rot1"}|books${IB}`
+-                 (0, RB.c)(FB, NB.width, NB.height, cB, IB, {
++                 (0, Ft.d)(Et, ft.width, ft.height, Ht, et, {
 ```
 
-#### 1249. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10381` → after: `L10217`)
+#### 182. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1845` → after: `L1845`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10217) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10217)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10217) · [Before (L10381)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10381)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1845) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1845)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1845) · [Before (L1845)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1845)
 
 ```diff
--         const nB = this.vG.yjB(BB).getItems();
-+         const JB = this.zW.lIB(BB).getItems();
+-                 }), (0, QB.T)(zB, !0, !1)
++                 }), (0, ut.S)(lt, !0, !1)
 ```
 
-#### 1250. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10384` → after: `L10220`)
+#### 183. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1849` → after: `L1849`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10220) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10220)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10220) · [Before (L10384)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10384)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1849) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1849)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1849) · [Before (L1849)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1849)
 
 ```diff
--           if (NB.o.includes(null === BB || void 0 === BB ? void 0 : BB.name)) {
-+           if (vB.A.includes(null === BB || void 0 === BB ? void 0 : BB.name)) {
+-                   qB = null !== BB && void 0 !== BB ? BB : null, yB()
++                   yt = null !== tt && void 0 !== tt ? tt : null, Nt()
 ```
 
-#### 1251. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10398` → after: `L10234`)
+#### 184. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1853-L1854` → after: `L1853-L1854`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10234) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10234)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10234) · [Before (L10398)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10398)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1853) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1853-L1854)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1853-L1854) · [Before (L1853-L1854)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1853-L1854)
 
 ```diff
--           BB <= 0 ? jB.setItemSlot(zB, Qr.b, null) : jB.setItemSlot(zB, QB.name, BB, QB.attributes)
-+           BB <= 0 ? IB.setItemSlot(ZB, Tz.c, null) : IB.setItemSlot(ZB, TB.name, BB, TB.attributes)
+-                 }))) && void 0 !== oB ? oB : () => {},
+-                 sB = (0, bB.d)(vB, yB, {
++                 }))) && void 0 !== Dt ? Dt : () => {},
++                 Kt = (0, pt.c)(dt, Nt, {
 ```
 
-#### 1252. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10402` → after: `L10238`)
+#### 185. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1861` → after: `L1861`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10238) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10238)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10238) · [Before (L10402)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10402)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1861) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1861)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1861) · [Before (L1861)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1861)
 
 ```diff
--         if (this.vG.HBB(BB, "itemState")) return "Item";
-+         if (this.zW.TIB(BB, "itemState")) return "Item";
+-                   lg: vB,
++                   Fw: dt,
 ```
 
-#### 1253. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10406` → after: `L10242`)
+#### 186. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1869` → after: `L1869`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10242) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10242)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10242) · [Before (L10406)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10406)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1869) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1869)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1869) · [Before (L1869)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1869)
 
 ```diff
--           return -1 === BB ? jB : jB.slice(0, BB)
-+           return -1 === BB ? IB : IB.slice(0, BB)
+-                 OB = (0, WB.n)(BB, "Leaderboard", (0, CB.f)({
++                 vt = (0, bt.q)(tt, "Leaderboard", (0, Ct.j)({
 ```
 
-#### 1254. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10414` → after: `L10250`)
+#### 187. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1874` → after: `L1874`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10250) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10250)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10250) · [Before (L10414)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10414)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1874) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1874)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1874) · [Before (L1874)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1874)
 
 ```diff
--           IB = GB().copy(this.tempVec2, JB.j[dB.pose]);
-+           GB = UB().copy(this.tempVec2, NB.o[oB.pose]);
+-               return OB.material = wB, OB.oR.add((() => {
++               return vt.material = ht, vt.ZI.add((() => {
 ```
 
-#### 1255. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10418-L10419` → after: `L10254-L10255`)
+#### 188. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1877-L1878` → after: `L1877-L1878`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10254) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10254-L10255)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10254-L10255) · [Before (L10418-L10419)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10418-L10419)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1877) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1877-L1878)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1877-L1878) · [Before (L1877-L1878)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1877-L1878)
 
 ```diff
--         if (jB.type === Pp.t.DEFAULT) {
--           const jB = (0, Zp.d)(this.iK(BB), this.getLifeformType(BB));
-+         if (IB.type === eh.o.DEFAULT) {
-+           const IB = (0, mh.h)(this.sV(BB), this.getLifeformType(BB));
+-             }(this.Nz.Ig, IB, null !== (wB = null === (OB = this.bloxd.client.getConnectionInfo()) || void 0 === OB ? void 0 : OB.userContext.whamm) && void 0 !== wB ? wB : null, {
+-               initial: void 0 === BB ? null : null === (MB = this.Nz.Tm[this.Nz.Jm]) || void 0 === MB || null === (jB = MB[BB]) || void 0 === jB ? void 0 : jB._leaderboardAround,
++             }(this.ql.Bf, et, null !== (ht = null === (vt = this.bloxd.client.getConnectionInfo()) || void 0 === vt ? void 0 : vt.userContext.whamm) && void 0 !== ht ? ht : null, {
++               initial: void 0 === tt ? null : null === (Pt = this.ql.dL[this.ql.lL]) || void 0 === Pt || null === (Zt = Pt[tt]) || void 0 === Zt ? void 0 : Zt._leaderboardAround,
 ```
 
-#### 1256. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10424` → after: `L10260`)
+#### 189. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1881` → after: `L1881`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10260) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10260)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10260) · [Before (L10424)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10424)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1881) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1881)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1881) · [Before (L1881)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1881)
 
 ```diff
--         QB && (UB += Math.max(Math.abs(QB[0]), Math.abs(QB[2])), aB += QB[1]), (UB > Ap.f || aB > Ap.e) && ((jB.type !== Pp.t.DEFAULT || QB) && this.onCollisionBoxCapped(), UB = Math.min(UB, Ap.f), aB = Math.min(aB, Ap.e)), this.updatePositionAndPhysicsImpl(BB, jB, zB, null !== Q … [truncated]
-+         TB && (cB += Math.max(Math.abs(TB[0]), Math.abs(TB[2])), nB += TB[1]), (cB > Xh.d || nB > Xh.c) && ((IB.type !== eh.o.DEFAULT || TB) && this.onCollisionBoxCapped(), cB = Math.min(cB, Xh.d), nB = Math.min(nB, Xh.c)), this.updatePositionAndPhysicsImpl(BB, IB, ZB, null !== T … [truncated]
+-                 const ZB = qB.l.subscribe(`otherEntitySettingsClientifiedEId|${BB}|_leaderboardAround`, IB);
++                 const Vt = yt.j.subscribe(`otherEntitySettingsClientifiedEId|${tt}|_leaderboardAround`, et);
 ```
 
-#### 1257. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10427-L10428` → after: `L10263-L10264`)
+#### 190. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1883` → after: `L1883`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10263) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10263-L10264)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10263-L10264) · [Before (L10427-L10428)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10427-L10428)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1883) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1883)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1883) · [Before (L1883)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1883)
 
 ```diff
--         const dB = this.ur.vG.Gw(BB),
--           IB = null === zB && ((0, vB.r)(jB.type) || jB.type === Pp.t.SLEEPING),
-+         const oB = this.Nz.zW.zK(BB),
-+           GB = null === ZB && ((0, KB.w)(IB.type) || IB.type === eh.o.SLEEPING),
+-                   qB.l.unsubscribe(ZB)
++                   yt.j.unsubscribe(Vt)
 ```
 
-#### 1258. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10430` → after: `L10266`)
+#### 191. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1887` → after: `L1887`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10266) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10266)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10266) · [Before (L10430)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10430)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1887) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1887)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1887) · [Before (L1887)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1887)
 
 ```diff
--         this.ur.vG.bjB(BB, NB.width, NB.height, NB.width)
-+         this.Nz.zW.wZB(BB, vB.width, vB.height, vB.width)
+-               initial: (0, RB.m)(IB.leaderboardTop),
++               initial: (0, Ft.n)(et.leaderboardTop),
 ```
 
-#### 1259. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10434` → after: `L10270`)
+#### 192. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1889-L1890` → after: `L1889-L1890`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10270) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10270)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10270) · [Before (L10434)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10434)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1889) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1889-L1890)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1889-L1890) · [Before (L1889-L1890)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1889-L1890)
 
 ```diff
--         const zB = this.ur.vG.Gw(BB),
-+         const ZB = this.Nz.zW.zK(BB),
+-                 const ZB = qB.l.subscribe(`leaderboardTop|${BB}`, (BB => {
+-                   const ZB = (0, RB.m)(BB);
++                 const Vt = yt.j.subscribe(`leaderboardTop|${tt}`, (tt => {
++                   const Vt = (0, Ft.n)(tt);
 ```
 
-#### 1260. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10437` → after: `L10273`)
+#### 193. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1894` → after: `L1894`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10273) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10273)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10273) · [Before (L10437)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10437)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1894) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1894)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1894) · [Before (L1894)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1894)
 
 ```diff
--         const nB = null !== (jB = zB.qr) && void 0 !== jB ? jB : this.ur.qr,
-+         const JB = null !== (IB = ZB.Mz) && void 0 !== IB ? IB : this.Nz.Mz,
+-                   qB.l.unsubscribe(ZB)
++                   yt.j.unsubscribe(Vt)
 ```
 
-#### 1261. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10453` → after: `L10289`)
+#### 194. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1898-L1900` → after: `L1898-L1900`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10289) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10289)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10289) · [Before (L10453)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10453)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1898) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1898-L1900)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1898-L1900) · [Before (L1898-L1900)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1898-L1900)
 
 ```diff
--                   const dB = !0 === QB ? jr : QB;
-+                   const oB = !0 === TB ? Iz : TB;
+-             JB = 2 * TB.qm().boundingBox.extendSize.y;
+-           return this.Nz.Ig.xg(TB), ZB(TB), {
+-             gR: null,
++             qt = 2 * Ot.fL().boundingBox.extendSize.y;
++           return this.ql.Bf.ow(Ot), Vt(Ot), {
++             RP: null,
 ```
 
-#### 1262. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10458` → after: `L10294`)
+#### 195. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1902` → after: `L1902`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10294) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10294)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10294) · [Before (L10458)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10458)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1902) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1902)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1902) · [Before (L1902)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1902)
 
 ```diff
--           }(zB.xBB, nB, QB.width, QB.height, ((jB, zB, QB) => this.Bl(jB, zB, QB) ? this.getBlockCollisionForPlayer(BB, jB, zB, QB, this.getClientPredictedBlock(BB, jB, zB, QB)) : null));
-+           }(ZB.UIB, JB, TB.width, TB.height, ((IB, ZB, TB) => this.pD(IB, ZB, TB) ? this.getBlockCollisionForPlayer(BB, IB, ZB, TB, this.getClientPredictedBlock(BB, IB, ZB, TB)) : null));
+-             meshOffset: null !== (mB = IB.meshOffset) && void 0 !== mB ? mB : UB().nZ(0, JB / 2, 0),
++             meshOffset: null !== (Gt = et.meshOffset) && void 0 !== Gt ? Gt : Mt().Re(0, qt / 2, 0),
 ```
 
-#### 1263. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10462` → after: `L10298`)
+#### 196. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1912` → after: `L1912`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10298) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10298)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10298) · [Before (L10462)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10462)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1912) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1912)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1912) · [Before (L1912)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1912)
 
 ```diff
--         const jB = this.ur.vG.Gw(BB),
-+         const IB = this.Nz.zW.zK(BB),
+-           if ((0, rB.L)(IB.eId)) console.error("No eId specified for mesh particle system, will not be possible to update it");
++           if ((0, kt.B)(et.eId)) console.error("No eId specified for mesh particle system, will not be possible to update it");
 ```
 
-#### 1264. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10464` → after: `L10300`)
+#### 197. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1915-L1916` → after: `L1915-L1916`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10300) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10300)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10300) · [Before (L10464)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10464)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1915) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1915-L1916)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1915-L1916) · [Before (L1915-L1916)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1915-L1916)
 
 ```diff
--         void 0 !== zB && (this.playerBodyGrowth.clear(jB), this.ur.vG.bjB(BB, zB.width, zB.height, zB.width))
-+         void 0 !== ZB && (this.playerBodyGrowth.clear(IB), this.Nz.zW.wZB(BB, ZB.width, ZB.height, ZB.width))
+-             (0, rB.L)(this.bloxd.meshParticleSystems[IB.eId]) && (this.bloxd.meshParticleSystems[IB.eId] = {});
+-             const ZB = null !== (LB = IB.nodeName) && void 0 !== LB ? LB : "__root__";
++             (0, kt.B)(this.bloxd.meshParticleSystems[et.eId]) && (this.bloxd.meshParticleSystems[et.eId] = {});
++             const Vt = null !== (ot = et.nodeName) && void 0 !== ot ? ot : "__root__";
 ```
 
-#### 1265. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10468` → after: `L10304`)
+#### 198. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1919` → after: `L1919`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10304) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10304)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10304) · [Before (L10468)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10468)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1919) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1919)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1919) · [Before (L1919)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1919)
 
 ```diff
--         return null !== (jB = null === (zB = this.vehicleSettingOverridesByEId.get(BB)) || void 0 === zB ? void 0 : zB.getOverrides()) && void 0 !== jB ? jB : null
-+         return null !== (IB = null === (ZB = this.vehicleSettingOverridesByEId.get(BB)) || void 0 === ZB ? void 0 : ZB.getOverrides()) && void 0 !== IB ? IB : null
+-               (0, rB.L)(null === this || void 0 === this || null === (BB = this.bloxd) || void 0 === BB || null === (TB = BB.meshParticleSystems) || void 0 === TB ? void 0 : TB[IB.eId]) || (delete this.bloxd.meshParticleSystems[IB.eId][ZB], 0 === Object.keys(this.bloxd.meshPartic … [truncated]
++               (0, kt.B)(null === this || void 0 === this || null === (tt = this.bloxd) || void 0 === tt || null === (Ot = tt.meshParticleSystems) || void 0 === Ot ? void 0 : Ot[et.eId]) || (delete this.bloxd.meshParticleSystems[et.eId][Vt], 0 === Object.keys(this.bloxd.meshPartic … [truncated]
 ```
 
-#### 1266. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10489` → after: `L10325`)
+#### 199. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1922-L1923` → after: `L1922-L1923`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10325) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10325)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10325) · [Before (L10489)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10489)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1922) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1922-L1923)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1922-L1923) · [Before (L1922-L1923)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1922-L1923)
 
 ```diff
--         return this.vG.CBB(BB).physicsState
-+         return this.zW.dIB(BB).physicsState
+-           return this.Nz.Ig.xg(TB), ZB(TB), {
+-             gR: null,
++           return this.ql.Bf.ow(Ot), Vt(Ot), {
++             RP: null,
 ```
 
-#### 1267. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10511-L10512` → after: `L10347-L10348`)
+#### 200. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1925` → after: `L1925`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10347) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10347-L10348)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10347-L10348) · [Before (L10511-L10512)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10511-L10512)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1925) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1925)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1925) · [Before (L1925)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1925)
 
 ```diff
--           vG: zB
--         } = this.ur, QB = zB.getState(BB, zB.names.yJ);
-+           zW: ZB
-+         } = this.Nz, TB = ZB.getState(BB, ZB.names.GN);
+-             meshOffset: null !== (XB = IB.meshOffset) && void 0 !== XB ? XB : UB().nZ(0, IB.height / 2, 0),
++             meshOffset: null !== (zt = et.meshOffset) && void 0 !== zt ? zt : Mt().Re(0, et.height / 2, 0),
 ```
 
-#### 1268. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10516` → after: `L10352`)
+#### 201. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1931-L1934` → after: `L1931-L1934`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10352) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10352)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10352) · [Before (L10516)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10516)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1931) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1931-L1934)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1931-L1934) · [Before (L1931-L1934)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1931-L1934)
 
 ```diff
--         const zB = (0, vB.c)(BB);
-+         const ZB = (0, KB.d)(BB);
+-           const BB = this.Nz.Ig.kR,
+-             TB = (0, HB.j)("Player");
+-           BB.qY(TB, !0), BB.setPosition(TB, 0, 0, 0), BB.setRotationEuler(TB, 0, 0, 0), BB.set(TB, "aOpacity", 1), BB.Wm(TB, "aOpacity", 1);
+-           const JB = null === (eB = (0, zB.h)("head", null === (uB = IB.textures) || void 0 === uB ? void 0 : uB.head)) || void 0 === eB ? void 0 : eB.personModel;
++           const tt = this.ql.Bf.xI,
++             Ot = (0, It.k)("Player");
++           tt.Av(Ot, !0), tt.setPosition(Ot, 0, 0, 0), tt.setRotationEuler(Ot, 0, 0, 0), tt.set(Ot, "aOpacity", 1), tt.wL(Ot, "aOpacity", 1);
++           const qt = null === (rt = (0, lt.n)("head", null === (Ut = et.textures) || void 0 === Ut ? void 0 : Ut.head)) || void 0 === rt ? void 0 : rt.personModel;
 ```
 
-#### 1269. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10518` → after: `L10354`)
+#### 202. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1939` → after: `L1939`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10354) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10354)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10354) · [Before (L10518)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10518)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1939) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1939)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1939) · [Before (L1939)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1939)
 
 ```diff
--         const QB = this.ur.vG.pT(null !== jB && void 0 !== jB ? jB : this.ur.zV),
-+         const TB = this.Nz.zW.vx(null !== IB && void 0 !== IB ? IB : this.Nz.Jm),
+-           const oB = null !== (fB = IB.size) && void 0 !== fB ? fB : 1;
++           const Dt = null !== (At = et.size) && void 0 !== At ? At : 1;
 ```
 
-#### 1270. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10523` → after: `L10359`)
+#### 203. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1941` → after: `L1941`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10359) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10359)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10359) · [Before (L10523)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10523)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1941) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1941)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1941) · [Before (L1941)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1941)
 
 ```diff
--         QB.Hy[1] = 0, QB.applyImpulse([0, dB, 0]), this.useConsumableVehicleImpl(jB, BB, zB)
-+         TB.zq[1] = 0, TB.applyImpulse([0, oB, 0]), this.useConsumableVehicleImpl(IB, BB, ZB)
+-           for (const ZB of FB.d) {
++           for (const Vt of Et.c) {
 ```
 
-#### 1271. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10526` → after: `L10362`)
+#### 204. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1943` → after: `L1943`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10362) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10362)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10362) · [Before (L10526)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10526)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1943) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1943)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1943) · [Before (L1943)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1943)
 
 ```diff
--         const QB = this.ur.vG.pT(BB),
-+         const TB = this.Nz.zW.vx(BB),
+-             HB.d.Player.meshApi.updatePlayerCosmetic(null, TB, ZB, null === (VB = IB.textures) || void 0 === VB ? void 0 : VB[ZB])
++             It.b.Player.meshApi.updatePlayerCosmetic(null, Ot, Vt, null === (nt = et.textures) || void 0 === nt ? void 0 : nt[Vt])
 ```
 
-#### 1272. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10535-L10536` → after: `L10371-L10372`)
+#### 205. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1946` → after: `L1946`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10371) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10371-L10372)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10371-L10372) · [Before (L10535-L10536)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10535-L10536)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1946) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1946)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1946) · [Before (L1946)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1946)
 
 ```diff
--           nB = JB.e.gliderFuelCooldown * zB,
--           dB = this.isClient ? nB : Math.max(0, nB - JB.e.gliderFuelServerLeewayMs);
-+           JB = NB.f.gliderFuelCooldown * ZB,
-+           oB = this.isClient ? JB : Math.max(0, JB - NB.f.gliderFuelServerLeewayMs);
+-             gR: TB,
++             RP: Ot,
 ```
 
-#### 1273. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10540` → after: `L10376`)
+#### 206. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1948-L1949` → after: `L1948-L1949`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10376) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10376)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10376) · [Before (L10540)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10540)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1948) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1948-L1949)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1948-L1949) · [Before (L1948-L1949)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1948-L1949)
 
 ```diff
--         (0, Br.g)(this.ur, BB, jB, zB)
-+         (0, Bz.f)(this.Nz, BB, IB, ZB)
+-             meshOffset: null !== (tB = IB.meshOffset) && void 0 !== tB ? tB : UB().nZ(0, 0, 0),
+-             nameYOffset: (null !== (KB = null === JB || void 0 === JB ? void 0 : JB.height) && void 0 !== KB ? KB : NB.f.fq) * oB + .5
++             meshOffset: null !== (Bt = et.meshOffset) && void 0 !== Bt ? Bt : Mt().Re(0, 0, 0),
++             nameYOffset: (null !== (st = null === qt || void 0 === qt ? void 0 : qt.height) && void 0 !== st ? st : ft.e.Yy) * Dt + .5
 ```
 
-#### 1274. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10544` → after: `L10380`)
+#### 207. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1957-L1958` → after: `L1957-L1958`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10380) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10380)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10380) · [Before (L10544)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10544)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1957) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1957-L1958)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1957-L1958) · [Before (L1957-L1958)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1957-L1958)
 
 ```diff
--         for (const zB of this.ur.vG.FY(this.ur.vG.names.qS)) zB.SJ === BB && jB.push(zB.VY);
-+         for (const ZB of this.Nz.zW.fR(this.Nz.zW.names.nC)) ZB.zN === BB && IB.push(ZB.bR);
+-         const TB = `ParticleEmitter|${JSON.stringify(BB)}`,
+-           JB = this.Nz.Ig.JR(),
++         const Ot = `ParticleEmitter|${JSON.stringify(tt)}`,
++           qt = this.ql.Bf.vI(),
 ```
 
-#### 1275. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10551` → after: `L10387`)
+#### 208. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1961` → after: `L1961`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10387) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10387)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10387) · [Before (L10551)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10551)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1961) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1961)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1961) · [Before (L1961)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1961)
 
 ```diff
--           const [nB, dB, IB] = NB.pos, uB = QB.get(nB, dB, IB), [UB, aB, pB] = [BB * JB.e.ZJ, jB * JB.e.ZJ, zB * JB.e.ZJ];
-+           const [JB, oB, GB] = vB.pos, kB = TB.get(JB, oB, GB), [cB, nB, hB] = [BB * NB.f.YN, IB * NB.f.YN, ZB * NB.f.YN];
+-           const BB = (0, WB.n)(this.Nz.Ig, `${TB}EntityMesh`, (0, CB.b)({
++           const tt = (0, bt.q)(this.ql.Bf, `${Ot}EntityMesh`, (0, Ct.c)({
 ```
 
-#### 1276. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10568-L10569` → after: `L10404-L10405`)
+#### 209. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1966` → after: `L1966`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10404) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10404-L10405)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10404-L10405) · [Before (L10568-L10569)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10568-L10569)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1966) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1966)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1966) · [Before (L1966)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1966)
 
 ```diff
--           nB = null !== (jB = null === QB || void 0 === QB ? void 0 : QB[1]) && void 0 !== jB ? jB : 0,
--           dB = this.ur.vG.JjB(BB);
-+           JB = null !== (IB = null === TB || void 0 === TB ? void 0 : TB[1]) && void 0 !== IB ? IB : 0,
-+           oB = this.Nz.zW.uIB(BB);
+-           BB.visibility = 0, BB.RN = !0, BB.XN = !0, BB.qY(!1), BB.tg = !1, (0, pB.d)(BB) || BB.JR().jR(BB), (0, fB.h)(BB), oB.particleEmitter = BB
++           tt.visibility = 0, tt.Cf = !0, tt.hf = !0, tt.Av(!1), tt.Gw = !1, (0, ct.f)(tt) || tt.vI().wZ(tt), (0, At.g)(tt), Dt.particleEmitter = tt
 ```
 
-#### 1277. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10571` → after: `L10407`)
+#### 210. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1968-L1969` → after: `L1968-L1969`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10407) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10407)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10407) · [Before (L10571)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10571)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1968) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1968-L1969)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1968-L1969) · [Before (L1968-L1969)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1968-L1969)
 
 ```diff
--         "sitting" === (null === dB || void 0 === dB ? void 0 : dB.pose) ? IB = JB.e.sittingEyeHeightRatio: !0 === (null === dB || void 0 === dB ? void 0 : dB.crouching) && (IB = JB.e.crouchingEyeHeightRatio);
-+         "sitting" === (null === oB || void 0 === oB ? void 0 : oB.pose) ? GB = NB.f.sittingEyeHeightRatio: !0 === (null === oB || void 0 === oB ? void 0 : oB.crouching) && (GB = NB.f.crouchingEyeHeightRatio);
+-         const GB = oB.particleEmitter.createInstance(`${TB}EntityMeshInstance`);
+-         GB.ek.set(BB.width, BB.height, BB.depth), GB.tg = !1, GB.position.set(0, 0, 0);
++         const mt = Dt.particleEmitter.createInstance(`${Ot}EntityMeshInstance`);
++         mt.cj.set(tt.width, tt.height, tt.depth), mt.Gw = !1, mt.position.set(0, 0, 0);
 ```
 
-#### 1278. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10574` → after: `L10410`)
+#### 211. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1971` → after: `L1971`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10410) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10410)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10410) · [Before (L10574)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10574)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1971) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1971)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1971) · [Before (L1971)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1971)
 
 ```diff
--         } = (0, ep.c)(zB), uB = nB + NB * this.iK(BB) * IB;
-+         } = (0, fh.c)(ZB), kB = JB + vB * this.sV(BB) * GB;
+-         if ((0, rB.L)(BB.dir1) || (vB.direction1._x = BB.dir1[0], vB.direction1._y = BB.dir1[1], vB.direction1._z = BB.dir1[2]), (0, rB.L)(BB.dir2) || (vB.direction2._x = BB.dir2[0], vB.direction2._y = BB.dir2[1], vB.direction2._z = BB.dir2[2]), "ring" === BB.emitterShape && (vB. … [truncated]
++         if ((0, kt.B)(tt.dir1) || (dt.direction1._x = tt.dir1[0], dt.direction1._y = tt.dir1[1], dt.direction1._z = tt.dir1[2]), (0, kt.B)(tt.dir2) || (dt.direction2._x = tt.dir2[0], dt.direction2._y = tt.dir2[1], dt.direction2._z = tt.dir2[2]), "ring" === tt.emitterShape && (dt. … [truncated]
 ```
 
-#### 1279. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10592-L10593` → after: `L10428-L10429`)
+#### 212. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1974` → after: `L1974`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10428) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10428-L10429)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10428-L10429) · [Before (L10592-L10593)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10592-L10593)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1974) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1974)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1974) · [Before (L1974)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1974)
 
 ```diff
--       IjB(BB, jB) {
--         return GB().subtract(null !== jB && void 0 !== jB ? jB : GB().create(), BB, this.ur.qr)
-+       jIB(BB, IB) {
-+         return UB().subtract(null !== IB && void 0 !== IB ? IB : UB().create(), BB, this.Nz.Mz)
+-           (0, rB.L)(BB) || (0, jB.d)(vB, BB)
++           (0, kt.B)(tt) || (0, Zt.d)(dt, tt)
 ```
 
-#### 1280. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10596` → after: `L10432`)
+#### 213. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1983-L1993` → after: `L1983-L1993`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10432) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10432)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10432) · [Before (L10596)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10596)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1983) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1983-L1993)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1983-L1993) · [Before (L1983-L1993)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1983-L1993)
 
 ```diff
--         return GB().add(null !== jB && void 0 !== jB ? jB : GB().create(), BB, this.ur.qr)
-+         return UB().add(null !== IB && void 0 !== IB ? IB : UB().create(), BB, this.Nz.Mz)
+-     var qI = ZB(38099),
+-       yI = ZB(36),
+-       UI = ZB(1305),
+-       WI = ZB(168),
+-       dI = ZB(4691),
+-       CI = ZB(37722),
+-       QI = ZB(1281),
+-       sI = ZB(1385),
+-       wI = ZB(38295),
+-       OI = ZB(4267),
+-       YI = ZB(39618);
++     var Ne = Vt(38285),
++       ae = Vt(39),
++       Me = Vt(1333),
++       be = Vt(184),
++       Je = Vt(4641),
++       Ce = Vt(37931),
++       ue = Vt(1308),
++       Ke = Vt(1429),
++       he = Vt(38478),
++       ve = Vt(4204),
++       We = Vt(39768);
 ```
 
-#### 1281. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10606` → after: `L10442`)
+#### 214. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1996` → after: `L1996`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10442) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10442)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10442) · [Before (L10606)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10606)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1996) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1996)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1996) · [Before (L1996)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1996)
 
 ```diff
--         this.Bl(BB, jB, zB) && (null === (nB = (dB = this.callbacks).justBeforeBlockAdded) || void 0 === nB || nB.call(dB, BB, jB, zB, QB), "Bookshelf" === this.getMetaInfo(QB).rootName && void 0 === (null === (IB = this.blockDataOwner.getBlockData(BB, jB, zB)) || void 0 === IB | … [truncated]
-+         this.pD(BB, IB, ZB) && (null === (JB = (oB = this.callbacks).justBeforeBlockAdded) || void 0 === JB || JB.call(oB, BB, IB, ZB, TB), "Bookshelf" === this.getMetaInfo(TB).rootName && void 0 === (null === (GB = this.blockDataOwner.getBlockData(BB, IB, ZB)) || void 0 === GB | … [truncated]
+-         super(), IB = IB || {}, this.Nz = BB;
++         super(), et = et || {}, this.ql = tt;
 ```
 
-#### 1282. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10617` → after: `L10453`)
+#### 215. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L1998-L2002` → after: `L1998-L2002`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10453) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10453)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10453) · [Before (L10617)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10617)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R1998) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L1998-L2002)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L1998-L2002) · [Before (L1998-L2002)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L1998-L2002)
 
 ```diff
--         const QB = this.ur.vG.CBB(BB);
-+         const TB = this.Nz.zW.dIB(BB);
+-         this.element = ZB.element, this.canvas = ZB.canvas, this.Rm = {
+-           Am: !1,
+-           Km: !1,
+-           BX: !1,
+-           sH: !!document.hasFocus()
++         this.element = Vt.element, this.canvas = Vt.canvas, this.cL = {
++           RL: !1,
++           YL: !1,
++           gL: !1,
++           bR: !!document.hasFocus()
 ```
 
-#### 1283. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10619-L10620` → after: `L10455-L10456`)
+#### 216. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2005-L2008` → after: `L2005-L2008`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10455) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10455-L10456)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10455-L10456) · [Before (L10619-L10620)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10619-L10620)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2005) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2005-L2008)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2005-L2008) · [Before (L2005-L2008)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2005-L2008)
 
 ```diff
--         const nB = this.ur.vG.pT(BB);
--         nB.Hy[0] = 0, nB.Hy[2] = 0, zB && (nB.Hy[1] > 0 && (nB.Hy[1] = 0), nB.wZ[1] > 0 && (nB.wZ[1] = 0), this.ur.vG.JjB(BB).hitInPrevTick = !0);
-+         const JB = this.Nz.zW.vx(BB);
-+         JB.zq[0] = 0, JB.zq[2] = 0, ZB && (JB.zq[1] > 0 && (JB.zq[1] = 0), JB.Al[1] > 0 && (JB.Al[1] = 0), this.Nz.zW.uIB(BB).hitInPrevTick = !0);
+-         this.jW = new YI.c(this.element, 10), this.jW.bM = IB.bM, this.jW.yX = IB.yX, this.EX = (TB = this.element, "pointerLockElement" in document && "function" === typeof TB.requestPointerLock), this.gL = !!IB.qL, this.jW.qL = this.gL && this.EX, this.jW.dL = IB.dL, this.jW.wL … [truncated]
+-           BB !== this.Rm.Am && (this.Rm.Am = BB, BB && (this.Nz.camera.uL = !0), this.emit(BB ? "gainedPointerLock" : "lostPointerLock"), BB && (this.Rm.BX = !0))
+-         }, this.jW.fL = () => {
+-           this.jW.kU = BB.Ig.resize.bind(BB.Ig),
++         this.MJ = new We.e(this.element, 10), this.MJ.bI = et.bI, this.MJ.jF = et.jF, this.XF = (Ot = this.element, "pointerLockElement" in document && "function" === typeof Ot.requestPointerLock), this.JF = !!et.uF, this.MJ.uF = this.JF && this.XF, this.MJ.KF = et.KF, this.MJ.vF … [truncated]
++           tt !== this.cL.RL && (this.cL.RL = tt, tt && (this.ql.camera.kF = !0), this.emit(tt ? "gainedPointerLock" : "lostPointerLock"), tt && (this.cL.gL = !0))
++         }, this.MJ.YF = () => {
++           this.MJ.iN = tt.Bf.resize.bind(tt.Bf),
 ```
 
-#### 1284. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10623-L10624` → after: `L10459-L10460`)
+#### 217. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2011` → after: `L2011`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10459) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10459-L10460)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10459-L10460) · [Before (L10623-L10624)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10623-L10624)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2011) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2011)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2011) · [Before (L2011)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2011)
 
 ```diff
--         } = JB.e;
--         jB[0] = NB.b.clampAbs(jB[0], dB), jB[1] = NB.b.clampAbs(jB[1], dB), jB[2] = NB.b.clampAbs(jB[2], dB), nB.applyImpulse(jB)
-+         } = NB.f;
-+         IB[0] = vB.e.clampAbs(IB[0], oB), IB[1] = vB.e.clampAbs(IB[1], oB), IB[2] = vB.e.clampAbs(IB[2], oB), JB.applyImpulse(IB)
+-                 BB.Rm.Km = !0;
++                 tt.cL.YL = !0;
 ```
 
-#### 1285. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10626` → after: `L10462`)
+#### 218. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2013` → after: `L2013`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10462) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10462)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10462) · [Before (L10626)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10626)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2013) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2013)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2013) · [Before (L2013)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2013)
 
 ```diff
--       yjB(BB) {
-+       lIB(BB) {
+-                   BB.Rm.Km = !1, document.removeEventListener(ZB.type, IB)
++                   tt.cL.YL = !1, document.removeEventListener(Vt.type, et)
 ```
 
-#### 1286. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10628` → after: `L10464`)
+#### 219. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2018` → after: `L2018`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10464) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10464)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10464) · [Before (L10628)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10628)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2018) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2018)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2018) · [Before (L2018)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2018)
 
 ```diff
--         return null === (jB = this.ur.vG.mjB(BB)) || void 0 === jB ? void 0 : jB.inventory
-+         return null === (IB = this.Nz.zW.fIB(BB)) || void 0 === IB ? void 0 : IB.inventory
+-               this.Rm.BX = !0
++               this.cL.gL = !0
 ```
 
-#### 1287. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10642-L10643` → after: `L10478-L10479`)
+#### 220. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2020` → after: `L2020`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10478) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10478-L10479)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10478-L10479) · [Before (L10642-L10643)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10642-L10643)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2020) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2020)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2020) · [Before (L2020)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2020)
 
 ```diff
--               const UB = this.JG(NB[0], NB[1], NB[2]);
--               this.ur.Gs.vW(UB) && (QB = uB, nB = UB)
-+               const cB = this.WU(vB[0], vB[1], vB[2]);
-+               this.Nz.zF.qD(cB) && (TB = kB, JB = cB)
+-               this.Rm.BX = !1
++               this.cL.gL = !1
 ```
 
-#### 1288. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10648` → after: `L10484`)
+#### 221. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2022` → after: `L2022`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10484) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10484)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10484) · [Before (L10648)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10648)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2022) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2022)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2022) · [Before (L2022)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2022)
 
 ```diff
--         return (0, NB.Xd)(this.getPlayerRanks(BB), jB)
-+         return (0, vB.Qd)(this.getPlayerRanks(BB), IB)
+-               this.Rm.sH = !0
++               this.cL.bR = !0
 ```
 
-#### 1289. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10651` → after: `L10487`)
+#### 222. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2024` → after: `L2024`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10487) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10487)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10487) · [Before (L10651)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10651)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2024) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2024)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2024) · [Before (L2024)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2024)
 
 ```diff
--         return (0, NB._d)(this.getPlayerRanks(BB), jB)
-+         return (0, vB.Ud)(this.getPlayerRanks(BB), IB)
+-               this.Rm.sH = !1
++               this.cL.bR = !1
 ```
 
-#### 1290. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10654-L10656` → after: `L10490-L10492`)
+#### 223. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2027` → after: `L2027`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10490) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10490-L10492)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10490-L10492) · [Before (L10654-L10656)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10654-L10656)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2027) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2027)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2027) · [Before (L2027)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2027)
 
 ```diff
--         const NB = null !== QB && void 0 !== QB ? QB : this.JG(BB, jB, zB),
--           uB = this.ur.Gs.Ls(NB);
--         return (0, iQ.f)(BB, jB, zB, NB, uB, nB, dB, IB)
-+         const vB = null !== TB && void 0 !== TB ? TB : this.WU(BB, IB, ZB),
-+           kB = this.Nz.zF.FF(vB);
-+         return (0, OT.e)(BB, IB, ZB, vB, kB, JB, oB, GB)
+-             this.Rm.BX = !0, this.Rm.sH = !0, this.element.removeEventListener("mousedown", IB)
++             this.cL.gL = !0, this.cL.bR = !0, this.element.removeEventListener("mousedown", et)
 ```
 
-#### 1291. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10659-L10660` → after: `L10495-L10496`)
+#### 224. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2029` → after: `L2029`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10495) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10495-L10496)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10495-L10496) · [Before (L10659-L10660)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10659-L10660)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2029) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2029)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2029) · [Before (L2029)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2029)
 
 ```diff
--         switch ((0, Sj.U)(jB, QB), (0, Sj.U)(jB, nB), zB) {
--           case Tp.q.CAN_WALK_THROUGH:
-+         switch ((0, QI.$)(IB, TB), (0, QI.$)(IB, JB), ZB) {
-+           case Lh.s.CAN_WALK_THROUGH:
+-           this.element.addEventListener("mousedown", IB), this.emit("DOMready"), this.jW.fL = null
++           this.element.addEventListener("mousedown", et), this.emit("DOMready"), this.MJ.YF = null
 ```
 
-#### 1292. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10663` → after: `L10499`)
+#### 225. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2037` → after: `L2037`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10499) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10499)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10499) · [Before (L10663)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10663)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2037) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2037)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2037) · [Before (L2037)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2037)
 
 ```diff
--           case Tp.q.CANT_WALK_THROUGH:
-+           case Lh.s.CANT_WALK_THROUGH:
+-         BB || (this.Nz.camera.uL = !0), this.jW.mq = !!BB && this.EX
++         tt || (this.ql.camera.kF = !0), this.MJ.zy = !!tt && this.XF
 ```
 
-#### 1293. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10666` → after: `L10502`)
+#### 226. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2040` → after: `L2040`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10502) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10502)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10502) · [Before (L10666)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10666)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2040) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2040)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2040) · [Before (L2040)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2040)
 
 ```diff
--           case Tp.q.DEFAULT_WALK_THROUGH:
-+           case Lh.s.DEFAULT_WALK_THROUGH:
+-         this.jW.qL = !!BB && this.gL && this.EX
++         this.MJ.uF = !!tt && this.JF && this.XF
 ```
 
-#### 1294. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10674-L10676` → after: `L10510-L10512`)
+#### 227. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2043` → after: `L2043`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10510) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10510-L10512)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10510-L10512) · [Before (L10674-L10676)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10674-L10676)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2043) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2043)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2043) · [Before (L2043)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2043)
 
 ```diff
--           IB = aB.i[nB];
--         const NB = aB.i[this.JG(jB, zB - 1, QB)];
--         !(0, Sp.u)(IB) && (0, Sp.u)(NB) && (dB = [jB, zB - 1, QB], IB = NB);
-+           GB = nB.f[JB];
-+         const vB = nB.f[this.WU(IB, ZB - 1, TB)];
-+         !(0, Qh.t)(GB) && (0, Qh.t)(vB) && (oB = [IB, ZB - 1, TB], GB = vB);
+-         return this.Rm.Am
++         return this.cL.RL
 ```
 
-#### 1295. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10681` → after: `L10517`)
+#### 228. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2046` → after: `L2046`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10517) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10517)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10517) · [Before (L10681)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10681)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2046) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2046)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2046) · [Before (L2046)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2046)
 
 ```diff
--         } = IB.meta, [rB, , sB] = this.getEntityPos(BB), JB = pB ? UB : (0, Sp.l)(UB, rB - (dB[0] + .5), sB - (dB[2] + .5));
-+         } = GB.meta, [zB, , FB] = this.getEntityPos(BB), NB = hB ? cB : (0, Qh.o)(cB, zB - (oB[0] + .5), FB - (oB[2] + .5));
+-         return this.Rm.Km
++         return this.cL.YL
 ```
 
-#### 1296. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10684` → after: `L10520`)
+#### 229. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2049` → after: `L2049`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10520) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10520)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10520) · [Before (L10684)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10684)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2049) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2049)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2049) · [Before (L2049)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2049)
 
 ```diff
--           toRootId: (0, aB.k)((0, Sp.h)(uB, JB, !pB)),
-+           toRootId: (0, nB.g)((0, Qh.j)(kB, NB, !hB)),
+-         return this.Rm.BX
++         return this.cL.gL
 ```
 
-#### 1297. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10689-L10690` → after: `L10525-L10526`)
+#### 230. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2052` → after: `L2052`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10525) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10525-L10526)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10525-L10526) · [Before (L10689-L10690)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10689-L10690)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2052) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2052)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2052) · [Before (L2052)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2052)
 
 ```diff
--         if ((0, Sp.y)(aB.i[nB])) return this.parseSwapFenceGateArgs(BB, jB, zB, QB, nB);
--         const dB = aB.i[nB].name.split("|"),
-+         if ((0, Qh.x)(nB.f[JB])) return this.parseSwapFenceGateArgs(BB, IB, ZB, TB, JB);
-+         const oB = nB.f[JB].name.split("|"),
+-         return this.Rm.sH
++         return this.cL.bR
 ```
 
-#### 1298. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10694` → after: `L10530`)
+#### 231. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2057` → after: `L2057`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10530) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10530)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10530) · [Before (L10694)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10694)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2057) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2057)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2057) · [Before (L2057)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2057)
 
 ```diff
--         if (IB in gp.b) {
-+         if (GB in dh.d) {
+-       var IB = BB.tL || null;
++       var et = tt.Vk || null;
 ```
 
-#### 1299. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10700` → after: `L10536`)
+#### 232. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2073` → after: `L2073`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10536) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10536)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10536) · [Before (L10700)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10700)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2073) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2073)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2073) · [Before (L2073)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2073)
 
 ```diff
--           } = gp.b[IB];
-+           } = dh.d[GB];
+-     ZB(39622);
++     Vt(39771);
 ```
 
-#### 1300. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10710` → after: `L10546`)
+#### 233. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2093` → after: `L2093`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10546) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10546)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10546) · [Before (L10710)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10710)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2093) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2093)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2093) · [Before (L2093)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2093)
 
 ```diff
--           toRootId: (0, aB.k)(rB),
-+           toRootId: (0, nB.g)(zB),
+-     var MI = ZB(3e3),
++     var Pe = Vt(2934),
 ```
 
-#### 1301. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10715` → after: `L10551`)
+#### 234. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2095` → after: `L2095`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10551) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10551)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10551) · [Before (L10715)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10715)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2095) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2095)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2095) · [Before (L2095)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2095)
 
 ```diff
--     var Ir = zB(38298);
-+     var Gz = ZB(38277);
+-       PI = ZB(39629),
++       Le = Vt(39780),
 ```
 
-#### 1302. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10729` → after: `L10565`)
+#### 235. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2097-L2098` → after: `L2097-L2098`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10565) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10565)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10565) · [Before (L10729)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10729)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2097) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2097-L2098)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2097-L2098) · [Before (L2097-L2098)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2097-L2098)
 
 ```diff
--         this.changedCells.set(`${BB},${jB},${zB}`, [BB, jB, zB]), this.redrawQueued || (this.redrawQueued = !0, queueMicrotask((() => {
-+         this.changedCells.set(`${BB},${IB},${ZB}`, [BB, IB, ZB]), this.redrawQueued || (this.redrawQueued = !0, queueMicrotask((() => {
+-     var rI = ZB(39636),
+-       mI = ZB(364);
++     var ke = Vt(39787),
++       Ge = Vt(404);
 ```
 
-#### 1303. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10734` → after: `L10570`)
+#### 236. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2101` → after: `L2101`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10570) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10570)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10570) · [Before (L10734)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10734)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2101) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2101)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2101) · [Before (L2101)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2101)
 
 ```diff
--         const QB = `${BB},${jB},${zB}`,
-+         const TB = `${BB},${IB},${ZB}`,
+-         this.Tz = new rI(BB.base, BB.vec), this.Wv = IB, this.Gl = !0, this.friction = ZB, this.restitution = TB, this.gravityMultiplier = JB, this.Wz = oB, this.Tl = !!GB, this.iz = -1, this.fluidDrag = -1, this.fluidDragVert = -1, this.fluidDragHoriz = -1, this.Cz = null, this. … [truncated]
++         this.xQ = new ke(tt.base, tt.vec), this.Sd = et, this.zk = !0, this.friction = Vt, this.restitution = Ot, this.gravityMultiplier = qt, this.Hl = Dt, this.Fk = !!mt, this.Nl = -1, this.fluidDrag = -1, this.fluidDragVert = -1, this.fluidDragHoriz = -1, this.Ql = null, this. … [truncated]
 ```
 
-#### 1304. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10743` → after: `L10579`)
+#### 237. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2104` → after: `L2104`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10579) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10579)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10579) · [Before (L10743)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10743)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2104) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2104)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2104) · [Before (L2104)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2104)
 
 ```diff
--           }] of this.drawnText)(0, XB.T)(IB).join() === QB && (this.drawnText.delete(dB), this.changed(...NB))
-+           }] of this.drawnText)(0, rB._)(GB).join() === TB && (this.drawnText.delete(oB), this.changed(...vB))
+-         this.Tz.base[0] = BB.Tz.base[0], this.Tz.base[1] = BB.Tz.base[1], this.Tz.base[2] = BB.Tz.base[2], this.Tz.vec[0] = BB.Tz.vec[0], this.Tz.vec[1] = BB.Tz.vec[1], this.Tz.vec[2] = BB.Tz.vec[2], this.Tz.max[0] = BB.Tz.max[0], this.Tz.max[1] = BB.Tz.max[1], this.Tz.max[2] = B … [truncated]
++         this.xQ.base[0] = tt.xQ.base[0], this.xQ.base[1] = tt.xQ.base[1], this.xQ.base[2] = tt.xQ.base[2], this.xQ.vec[0] = tt.xQ.vec[0], this.xQ.vec[1] = tt.xQ.vec[1], this.xQ.vec[2] = tt.xQ.vec[2], this.xQ.max[0] = tt.xQ.max[0], this.xQ.max[1] = tt.xQ.max[1], this.xQ.max[2] = t … [truncated]
 ```
 
-#### 1305. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10766` → after: `L10602`)
+#### 238. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2107` → after: `L2107`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10602) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10602)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10602) · [Before (L10766)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10766)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2107) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2107)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2107) · [Before (L2107)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2107)
 
 ```diff
--           if ((0, Ir.g)(QB)) {
-+           if ((0, Gz.d)(TB)) {
+-         mI.copy(this.Tz.base, BB.Tz.base), mI.copy(this.Tz.vec, BB.Tz.vec), mI.copy(this.Tz.max, BB.Tz.max), mI.copy(this.zq, BB.zq), mI.copy(this.resting, BB.resting), this.inFluid = BB.inFluid, this.ratioInFluid = BB.ratioInFluid, mI.copy(this.Rl, BB.Rl), mI.copy(this.Al, BB.Al … [truncated]
++         Ge.copy(this.xQ.base, tt.xQ.base), Ge.copy(this.xQ.vec, tt.xQ.vec), Ge.copy(this.xQ.max, tt.xQ.max), Ge.copy(this.Dy, tt.Dy), Ge.copy(this.resting, tt.resting), this.inFluid = tt.inFluid, this.ratioInFluid = tt.ratioInFluid, Ge.copy(this.QG, tt.QG), Ge.copy(this.lG, tt.lG … [truncated]
 ```
 
-#### 1306. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10771` → after: `L10607`)
+#### 239. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2110` → after: `L2110`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10607) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10607)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10607) · [Before (L10771)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10771)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2110) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2110)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2110) · [Before (L2110)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2110)
 
 ```diff
--             this.bloxd.client.meshCreator.addNoticeboardText(zB.rect, BB.text, null !== (dB = BB.textSize) && void 0 !== dB ? dB : 0), this.drawnText.set(zB.rect.anchor.join(), {
-+             this.bloxd.client.meshCreator.addNoticeboardText(ZB.rect, BB.text, null !== (oB = BB.textSize) && void 0 !== oB ? oB : 0), this.drawnText.set(ZB.rect.anchor.join(), {
+-         LI(BB), mI.subtract(BB, BB, this.Tz.base), this.Tz.translate(BB), this.Kl()
++         oe(tt), Ge.subtract(tt, tt, this.xQ.base), this.xQ.translate(tt), this.wG()
 ```
 
-#### 1307. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10779` → after: `L10615`)
+#### 240. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2113` → after: `L2113`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10615) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10615)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10615) · [Before (L10779)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10779)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2113) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2113)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2113) · [Before (L2113)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2113)
 
 ```diff
--         const QB = this.bloxd.JG(...BB);
-+         const TB = this.bloxd.WU(...BB);
+-         return mI.clone(this.Tz.base)
++         return Ge.clone(this.xQ.base)
 ```
 
-#### 1308. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10784` → after: `L10620`)
+#### 241. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2116` → after: `L2116`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10620) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10620)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10620) · [Before (L10784)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10784)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2116) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2116)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2116) · [Before (L2116)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2116)
 
 ```diff
--         } = aB.i[QB].meta, NB = dB.y[IB], uB = [BB];
-+         } = nB.f[TB].meta, vB = oB.r[GB], kB = [BB];
+-         LI(BB), this.Rl[0] = this.Rl[0] + BB[0], this.Rl[1] = this.Rl[1] + BB[1], this.Rl[2] = this.Rl[2] + BB[2], this.Kl()
++         oe(tt), this.QG[0] = this.QG[0] + tt[0], this.QG[1] = this.QG[1] + tt[1], this.QG[2] = this.QG[2] + tt[2], this.wG()
 ```
 
-#### 1309. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10787` → after: `L10623`)
+#### 242. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2119` → after: `L2119`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10623) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10623)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10623) · [Before (L10787)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10787)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2119) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2119)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2119) · [Before (L2119)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2119)
 
 ```diff
--         for (; uB.length > 0 && zB.length - UB < Ir.i;) {
-+         for (; kB.length > 0 && ZB.length - cB < Gz.l;) {
+-         LI(BB), this.Al[0] = this.Al[0] + BB[0], this.Al[1] = this.Al[1] + BB[1], this.Al[2] = this.Al[2] + BB[2], this.Kl()
++         oe(tt), this.lG[0] = this.lG[0] + tt[0], this.lG[1] = this.lG[1] + tt[1], this.lG[2] = this.lG[2] + tt[2], this.wG()
 ```
 
-#### 1310. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10795` → after: `L10631`)
+#### 243. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2135` → after: `L2135`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10631) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10631)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10631) · [Before (L10795)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10795)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2135) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2135)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2135) · [Before (L2135)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2135)
 
 ```diff
--             if (!this.bloxd.Bl(...NB)) {
-+             if (!this.bloxd.pD(...vB)) {
+-     var eI = ZB(39636);
++     var re = Vt(39787);
 ```
 
-#### 1311. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10799` → after: `L10635`)
+#### 244. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2142` → after: `L2142`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10635) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10635)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10635) · [Before (L10799)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10799)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2142) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2142)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2142) · [Before (L2142)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2142)
 
 ```diff
--             const rB = null === (pB = aB.i[this.bloxd.JG(...NB)]) || void 0 === pB ? void 0 : pB.meta;
-+             const zB = null === (hB = nB.f[this.bloxd.WU(...vB)]) || void 0 === hB ? void 0 : hB.meta;
+-       this.iz = .1, this.fluidDrag = .4, this.pz = 2, this.gravity = [0, -10, 0], this.minBounceImpulse = .5
++       this.Nl = .1, this.fluidDrag = .4, this.al = 2, this.gravity = [0, -10, 0], this.minBounceImpulse = .5
 ```
 
-#### 1312. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10806-L10807` → after: `L10642-L10643`)
+#### 245. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2146` → after: `L2146`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10642) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10642-L10643)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10642-L10643) · [Before (L10806-L10807)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10806-L10807)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2146) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2146)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2146) · [Before (L2146)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2146)
 
 ```diff
--         const QB = (0, XB.T)(BB).join(),
--           nB = null !== (zB = this.waitingOnChunk.get(QB)) && void 0 !== zB ? zB : new Map;
-+         const TB = (0, rB._)(BB).join(),
-+           JB = null !== (ZB = this.waitingOnChunk.get(TB)) && void 0 !== ZB ? ZB : new Map;
+-         BB = Object.assign(new fI, BB), this.gravity = BB.gravity, this.iz = BB.iz, this.pz = BB.pz, this.fluidDrag = BB.fluidDrag, this.minBounceImpulse = BB.minBounceImpulse, this.bodies = [], this._tickNext = 0, this._tickEnd = 0, this.Qz = BB.Qz, this.Ql = BB.Ql, this.rollbac … [truncated]
++         tt = Object.assign(new Ae, tt), this.gravity = tt.gravity, this.Nl = tt.Nl, this.al = tt.al, this.fluidDrag = tt.fluidDrag, this.minBounceImpulse = tt.minBounceImpulse, this.bodies = [], this._tickNext = 0, this._tickEnd = 0, this.ll = tt.ll, this.mG = tt.mG, this.rollbac … [truncated]
 ```
 
-#### 1313. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10811-L10816` → after: `L10647-L10652`)
+#### 246. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2152` → after: `L2152`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10647) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10647-L10652)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10647-L10652) · [Before (L10811-L10816)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10811-L10816)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2152) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2152)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2152) · [Before (L2152)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2152)
 
 ```diff
--     var Ur = zB(39131),
--       ar = zB(36830),
--       pr = zB(39029),
--       rr = zB(1297),
--       sr = zB(1991),
--       Jr = zB(36893);
-+     var cz = ZB(39078),
-+       nz = ZB(36783),
-+       hz = ZB(38980),
-+       zz = ZB(1333),
-+       Fz = ZB(2003),
-+       Nz = ZB(36843);
+-         var GB = this.JA(BB, IB, ZB, TB, JB, oB);
++         var mt = this.aG(tt, et, Vt, Ot, qt, Dt);
 ```
 
-#### 1314. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10825` → after: `L10661`)
+#### 247. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2160` → after: `L2160`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10661) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10661)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10661) · [Before (L10825)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10825)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2160) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2160)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2160) · [Before (L2160)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2160)
 
 ```diff
--             (0, pr.hidingMeshesChunkAdded)(this.ur, BB, jB, zB), this.client.gameRecorder.onChunkAdded(BB, jB, zB, QB), this.noticeboardTextRenderer.chunkAdded(BB, jB, zB)
-+             (0, hz.hidingMeshesChunkAdded)(this.Nz, BB, IB, ZB), this.client.gameRecorder.onChunkAdded(BB, IB, ZB, TB), this.noticeboardTextRenderer.chunkAdded(BB, IB, ZB)
+-         return !(IB < 0) && (this.bodies.splice(IB, 1), IB < this._tickNext && this._tickNext--, IB < this._tickEnd && this._tickEnd--, BB.Tz = BB.Wz = null, !0)
++         return !(et < 0) && (this.bodies.splice(et, 1), et < this._tickNext && this._tickNext--, et < this._tickEnd && this._tickEnd--, tt.xQ = tt.Hl = null, !0)
 ```
 
-#### 1315. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10831-L10832` → after: `L10667-L10668`)
+#### 248. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2163` → after: `L2163`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10667) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10667-L10668)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10667-L10668) · [Before (L10831-L10832)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10831-L10832)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2163) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2163)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2163) · [Before (L2163)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2163)
 
 ```diff
--             yB.n.Ly("EffectUpdate", {
--               VB: BB,
-+             qB.l.Gq("EffectUpdate", {
-+               PB: BB,
+-     var AI = ZB(37729);
++     var Ye = Vt(37935);
 ```
 
-#### 1316. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10840` → after: `L10676`)
+#### 249. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2187` → after: `L2187`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10676) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10676)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10676) · [Before (L10840)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10840)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2187) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2187)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2187) · [Before (L2187)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2187)
 
 ```diff
--         }), this.ur = BB, this.client = jB, this.hideNameSeedSub = null, this.noticeboardTextRenderer = new ur(this), this.recentChunkEdits = new Ur.f, this.applyingServerBlocks = !1, this.riddenVehicleEId = null, this.appliedPositionOffset = null, this.hideNameSeedSub = yB.n.sub … [truncated]
-+         }), this.Nz = BB, this.client = IB, this.hideNameSeedSub = null, this.noticeboardTextRenderer = new kz(this), this.recentChunkEdits = new cz.c, this.applyingServerBlocks = !1, this.riddenVehicleEId = null, this.appliedPositionOffset = null, this.hideNameSeedSub = qB.l.sub … [truncated]
+-           IB > 0 && (kB = `alloc_failed ${IB} bytes; ${kB}`)
++           et > 0 && (jt = `alloc_failed ${et} bytes; ${jt}`)
 ```
 
-#### 1317. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10847-L10848` → after: `L10683-L10684`)
+#### 250. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2193` → after: `L2193`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10683) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10683-L10684)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10683-L10684) · [Before (L10847-L10848)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10847-L10848)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2193) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2193)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2193) · [Before (L2193)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2193)
 
 ```diff
--           this.hideNameSeedSub && (yB.n.unsubscribe(this.hideNameSeedSub), this.hideNameSeedSub = null), sr.b.clear()
--         })), (0, Jr.i)(Xp), (0, mB.i)((BB => {
-+           this.hideNameSeedSub && (qB.l.unsubscribe(this.hideNameSeedSub), this.hideNameSeedSub = null), Fz.b.clear()
-+         })), (0, Nz.d)(rh), (0, gB.j)((BB => {
+-         } = EI, cB = new xI(`${IB}${TB}: ${JB} ${vB?"trapped":"threw"} (${kB})${GB}`);
++         } = Te, Ht = new xe(`${et}${Ot}: ${qt} ${dt?"trapped":"threw"} (${jt})${mt}`);
 ```
 
-#### 1318. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10851` → after: `L10687`)
+#### 251. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2197-L2198` → after: `L2197-L2198`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10687) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10687)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10687) · [Before (L10851)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10851)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2197) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2197-L2198)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2197-L2198) · [Before (L2197-L2198)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2197-L2198)
 
 ```diff
--           return null !== (jB = null === zB || void 0 === zB ? void 0 : zB.itemTexture) && void 0 !== jB ? jB : null === zB || void 0 === zB ? void 0 : zB.textureInfo
-+           return null !== (IB = null === ZB || void 0 === ZB ? void 0 : ZB.itemTexture) && void 0 !== IB ? IB : null === ZB || void 0 === ZB ? void 0 : ZB.textureInfo
+-       const cB = `${GB}${vB?", and wasm is off from now on":""}`;
+-       KI(`${TB} ${vB?"trap":"error"}`, (() => new Error(`wasm physics: ${TB}: ${JB} ${vB?"trapped":"threw"} (${kB}), so ${cB}`)), oB, !vB)
++       const Ht = `${mt}${dt?", and wasm is off from now on":""}`;
++       se(`${Ot} ${dt?"trap":"error"}`, (() => new Error(`wasm physics: ${Ot}: ${qt} ${dt?"trapped":"threw"} (${jt}), so ${Ht}`)), Dt, !dt)
 ```
 
-#### 1319. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10863` → after: `L10699`)
+#### 252. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2209` → after: `L2209`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10699) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10699)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10699) · [Before (L10863)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10863)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2209) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2209)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2209) · [Before (L2209)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2209)
 
 ```diff
--         const dB = this.JG(BB, jB, zB);
-+         const oB = this.WU(BB, IB, ZB);
+-       TB && console.error(kB), null === (JB = ZB.JN) || void 0 === JB || JB.call(ZB, kB)
++       Ot && console.error(jt), null === (qt = Vt.iE) || void 0 === qt || qt.call(Vt, jt)
 ```
 
-#### 1320. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10867` → after: `L10703`)
+#### 253. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2250` → after: `L2250`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10703) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10703)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10703) · [Before (L10867)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10867)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2250) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2250)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2250) · [Before (L2250)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2250)
 
 ```diff
--         this.Bl(BB, jB, zB) && (this.ur.eD(nB, BB, jB, zB), this.client.gameRecorder.onBlockPlaced(BB, jB, zB, QB, nB), this.applyingServerBlocks || this.recentChunkEdits.noteEdit(BB, jB, zB))
-+         this.pD(BB, IB, ZB) && (this.Nz.UH(JB, BB, IB, ZB), this.client.gameRecorder.onBlockPlaced(BB, IB, ZB, TB, JB), this.applyingServerBlocks || this.recentChunkEdits.noteEdit(BB, IB, ZB))
+-       var ZB = (ZB, TB, JB) => null !== IB.Ul && TB <= IB.Ul || BB.testSolid(ZB, TB, JB);
++       var Vt = (Vt, Ot, qt) => null !== et.Yk && Ot <= et.Yk || tt.testSolid(Vt, Ot, qt);
 ```
 
-#### 1321. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10881` → after: `L10717`)
+#### 254. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2272` → after: `L2272`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10717) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10717)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10717) · [Before (L10881)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10881)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2272) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2272)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2272) · [Before (L2272)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2272)
 
 ```diff
--         return CB.i.itemsClient[BB]
-+         return xB.l.itemsClient[BB]
+-         QZ = "function" === typeof IB.Ch && "function" === typeof IB.Qh && wZ(IB.Ch(), dZ) && wZ(IB.Qh(), CZ), QZ || console.error(new Error("wasm physics: the module's layout differs from wasmPhysicsLayout.ts (a stale @bloxd/wasm build?), so physics and picks cannot run in wasm" … [truncated]
++         uV = "function" === typeof et.yQ && "function" === typeof et.NQ && hV(et.yQ(), JV) && hV(et.NQ(), CV), uV || console.error(new Error("wasm physics: the module's layout differs from wasmPhysicsLayout.ts (a stale @bloxd/wasm build?), so physics and picks cannot run in wasm" … [truncated]
 ```
 
-#### 1322. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10889-L10892` → after: `L10725-L10728`)
+#### 255. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2291` → after: `L2291`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10725) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10725-L10728)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10725-L10728) · [Before (L10889-L10892)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10889-L10892)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2291) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2291)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2291) · [Before (L2291)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2291)
 
 ```diff
--         const aB = this.ur.vG.pT(BB);
--         if (aB.fN = dB.fN, aB.fluidDrag = dB.fluidDrag, aB.fluidDragHoriz = dB.fluidDragHorizontal, aB.fluidDragVert = dB.fluidDragVertical, aB.gravityMultiplier = dB.gravityMultiplier, aB.sZ = dB.canAutoStep, nB && this.ur.vG.JjB(BB).setPose(dB.pose, IB), null === (UB = this.ur. … [truncated]
--           const BB = this.ur.vG.CBB(this.ur.zV);
--           BB ? BB.physicsState = jB : console.error("No movement component found for player entity")
-+         const nB = this.Nz.zW.vx(BB);
-+         if (nB.Wv = oB.Wv, nB.fluidDrag = oB.fluidDrag, nB.fluidDragHoriz = oB.fluidDragHorizontal, nB.fluidDragVert = oB.fluidDragVertical, nB.gravityMultiplier = oB.gravityMultiplier, nB.Tl = oB.canAutoStep, JB && this.Nz.zW.uIB(BB).setPose(oB.pose, GB), null === (cB = this.Nz. … [truncated]
-+           const BB = this.Nz.zW.dIB(this.Nz.Jm);
-+           BB ? BB.physicsState = IB : console.error("No movement component found for player entity")
+-       return ZB.includes(".") ? ZB : ZB + ".0"
++       return Vt.includes(".") ? Vt : Vt + ".0"
 ```
 
-#### 1323. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10897` → after: `L10733`)
+#### 256. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2301` → after: `L2301`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10733) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10733)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10733) · [Before (L10897)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10897)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2301) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2301)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2301) · [Before (L2301)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2301)
 
 ```diff
--           duration: null !== (pB = dB.effect.duration) && void 0 !== pB ? pB : null,
-+           duration: null !== (hB = oB.effect.duration) && void 0 !== hB ? hB : null,
+-       return BB ? IB : 0
++       return tt ? et : 0
 ```
 
-#### 1324. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10901` → after: `L10737`)
+#### 257. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2305-L2307` → after: `L2305-L2307`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10737) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10737)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10737) · [Before (L10901)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10901)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2305) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2305-L2307)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2305-L2307) · [Before (L2305-L2307)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2305-L2307)
 
 ```diff
--         for (const sB of (0, Cp.n)()) {
-+         for (const FB of (0, xh.q)()) {
+-       const IB = iZ(BB.Gl, 1) | iZ(BB.Tl, 2) | iZ(BB.preventFallOffEdge, 4) | iZ(BB.alwaysApplyHorizFriction, 8) | iZ(BB.slideOnCollision, 16) | iZ(BB.rolledBackLastTick, 32) | iZ(BB.depenetrate, 64) | iZ(BB.inFluid, GZ) | iZ(BB.Wz, vZ) | iZ(BB.Cz, 512) | iZ(BB.wakeInFluid, cZ),
+-         ZB = BB.Ul;
+-       return null === ZB ? IB : "number" === typeof ZB ? IB | kZ : null
++       const et = SV(tt.zk, 1) | SV(tt.Fk, 2) | SV(tt.preventFallOffEdge, 4) | SV(tt.alwaysApplyHorizFriction, 8) | SV(tt.slideOnCollision, 16) | SV(tt.rolledBackLastTick, 32) | SV(tt.depenetrate, 64) | SV(tt.inFluid, dV) | SV(tt.Hl, jV) | SV(tt.Ql, 512) | SV(tt.wakeInFluid, XV),
++         Vt = tt.Yk;
++       return null === Vt ? et : "number" === typeof Vt ? et | HV : null
 ```
 
-#### 1325. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10908` → after: `L10744`)
+#### 258. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2317` → after: `L2317`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10744) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10744)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10744) · [Before (L10908)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10908)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2317) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2317)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2317) · [Before (L2317)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2317)
 
 ```diff
--         const QB = this.ur.vG.CBB(this.ur.zV),
-+         const TB = this.Nz.zW.dIB(this.Nz.Jm),
+-       const cB = TB.Tz;
++       const Ht = Ot.xQ;
 ```
 
-#### 1326. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10910-L10911` → after: `L10746-L10747`)
+#### 259. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2326` → after: `L2326`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10746) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10746-L10747)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10746-L10747) · [Before (L10910-L10911)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10910-L10911)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2326) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2326)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2326) · [Before (L2326)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2326)
 
 ```diff
--         QB.physicsState.type !== Pp.t.DEFAULT && QB.physicsState.type !== zB.physicsState.type && this.updatePositionAndPhysics(this.ur.zV, {
--           type: Pp.t.DEFAULT,
-+         TB.physicsState.type !== eh.o.DEFAULT && TB.physicsState.type !== ZB.physicsState.type && this.updatePositionAndPhysics(this.Nz.Jm, {
-+           type: eh.o.DEFAULT,
+-       const nB = TB.zq;
++       const Xt = Ot.Dy;
 ```
 
-#### 1327. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10917` → after: `L10753`)
+#### 260. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2328` → after: `L2328`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10753) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10753)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10753) · [Before (L10917)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10917)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2328) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2328)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2328) · [Before (L2328)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2328)
 
 ```diff
--         return console.assert(BB === this.ur.zV, "Should only get targeted block for local player"), null !== (jB = this.ur.VBB) && void 0 !== jB ? jB : this.ur.camera.nC()
-+         return console.assert(BB === this.Nz.Jm, "Should only get targeted block for local player"), null !== (IB = this.Nz.kIB) && void 0 !== IB ? IB : this.Nz.camera.XV()
+-       const hB = TB.Rl;
++       const Qt = Ot.QG;
 ```
 
-#### 1328. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10921` → after: `L10757`)
+#### 261. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2330` → after: `L2330`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10757) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10757)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10757) · [Before (L10921)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10921)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2330) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2330)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2330) · [Before (L2330)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2330)
 
 ```diff
--         return null !== (jB = null === (zB = this.ur.vG.JjB(BB)) || void 0 === zB ? void 0 : zB.meshOffset) && void 0 !== jB ? jB : null
-+         return null !== (IB = null === (ZB = this.Nz.zW.uIB(BB)) || void 0 === ZB ? void 0 : ZB.meshOffset) && void 0 !== IB ? IB : null
+-       const zB = TB.Al;
++       const lt = Ot.lG;
 ```
 
-#### 1329. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10924` → after: `L10760`)
+#### 262. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2342` → after: `L2342`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10760) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10760)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10760) · [Before (L10924)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10924)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2342) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2342)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2342) · [Before (L2342)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2342)
 
 ```diff
--         return this.ur.JG(BB, jB, zB)
-+         return this.Nz.WU(BB, IB, ZB)
+-       return 65536 * (null !== (IB = BB.hA) && void 0 !== IB ? IB : 0) + ZB
++       return 65536 * (null !== (et = tt.JG) && void 0 !== et ? et : 0) + Vt
 ```
 
-#### 1330. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10927` → after: `L10763`)
+#### 263. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2346` → after: `L2346`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10763) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10763)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10763) · [Before (L10927)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10927)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2346) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2346)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2346) · [Before (L2346)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2346)
 
 ```diff
--         return console.assert(BB === this.ur.zV || BB === this.ur.FBB, "eId in client getClientPredictedOption must be local player"), this.ur.wG[jB]
-+         return console.assert(BB === this.Nz.Jm || BB === this.Nz.oIB, "eId in client getClientPredictedOption must be local player"), this.Nz.vW[IB]
+-       return Math.max(BB.qF.length, BB.NF.length)
++       return Math.max(tt.qE.length, tt.VE.length)
 ```
 
-#### 1331. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10930` → after: `L10766`)
+#### 264. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2385-L2387` → after: `L2385-L2387`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10766) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10766)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10766) · [Before (L10930)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10930)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2385) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2385-L2387)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2385-L2387) · [Before (L2385-L2387)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2385-L2387)
 
 ```diff
--         return this.ur.vG.iG(BB)
-+         return this.Nz.zW.aU(BB)
+-         const BB = this.mirror.vz,
+-           IB = BB.BF(),
+-           ZB = this.mirror.wasm.wasmView(Int32Array, BB.IF(), 3 * IB);
++         const tt = this.mirror.sQ,
++           et = tt.rl(),
++           Vt = this.mirror.wasm.wasmView(Int32Array, tt.Ul(), 3 * et);
 ```
 
-#### 1332. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10935-L10937` → after: `L10771-L10773`)
+#### 265. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2390` → after: `L2390`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10771) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10771-L10773)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10771-L10773) · [Before (L10935-L10937)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10935-L10937)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2390) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2390)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2390) · [Before (L2390)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2390)
 
 ```diff
--         if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) return null !== (nB = null === (dB = (0, wN.getCaughtUpMeshRotation)(this.ur, (0, AB.b)(BB))) || void 0 === dB ? void 0 : dB.renderRotation[1]) && void 0 !== nB ? nB : 0;
--         const IB = this.ur.vG.getState((0, AB.b)(BB), "meshRotation");
--         return null !== (jB = null !== (zB = null === (QB = this.client.getColyseusEntity(BB)) || void 0 === QB ? void 0 : QB.yRotation) && void 0 !== zB ? zB : null === IB || void 0 === IB ? void 0 : IB.serverSetRotation[1]) && void 0 !== jB ? jB : 0
-+         if (arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) return null !== (JB = null === (oB = (0, uv.getCaughtUpMeshRotation)(this.Nz, (0, XB.e)(BB))) || void 0 === oB ? void 0 : oB.renderRotation[1]) && void 0 !== JB ? JB : 0;
-+         const GB = this.Nz.zW.getState((0, XB.e)(BB), "meshRotation");
-+         return null !== (IB = null !== (ZB = null === (TB = this.client.getColyseusEntity(BB)) || void 0 === TB ? void 0 : TB.yRotation) && void 0 !== ZB ? ZB : null === GB || void 0 === GB ? void 0 : GB.serverSetRotation[1]) && void 0 !== IB ? IB : 0
+-           const BB = `${ZB[JB]},${ZB[JB+1]},${ZB[JB+2]}`;
++           const tt = `${Vt[qt]},${Vt[qt+1]},${Vt[qt+2]}`;
 ```
 
-#### 1333. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10941` → after: `L10777`)
+#### 266. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2398-L2399` → after: `L2398-L2399`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10777) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10777)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10777) · [Before (L10941)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10941)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2398) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2398-L2399)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2398-L2399) · [Before (L2398-L2399)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2398-L2399)
 
 ```diff
--         return BB !== this.ur.zV && BB !== this.ur.FBB ? null !== (jB = null === (zB = this.ur.vG.JjB(BB)) || void 0 === zB ? void 0 : zB.ridingVehicleEId) && void 0 !== jB ? jB : null : this.riddenVehicleEId
-+         return BB !== this.Nz.Jm && BB !== this.Nz.oIB ? null !== (IB = null === (ZB = this.Nz.zW.uIB(BB)) || void 0 === ZB ? void 0 : ZB.ridingVehicleEId) && void 0 !== IB ? IB : null : this.riddenVehicleEId
+-       if (!IB.sA) throw new Error(`wasm physics: a pick ${ZB}, and picks here run only in wasm`);
+-       return BB.jsPicks++, IB.sA()
++       if (!et.hG) throw new Error(`wasm physics: a pick ${Vt}, and picks here run only in wasm`);
++       return tt.jsPicks++, et.hG()
 ```
 
-#### 1334. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10944` → after: `L10780`)
+#### 267. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2426-L2427` → after: `L2426-L2427`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10780) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10780)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10780) · [Before (L10944)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10944)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2426) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2426-L2427)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2426-L2427) · [Before (L2426-L2427)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2426-L2427)
 
 ```diff
--         return this.riddenVehicleEId === BB ? [this.ur.zV] : []
-+         return this.riddenVehicleEId === BB ? [this.Nz.Jm] : []
+-         } = BB, vB = ZB.vz, kB = this.rounds;
+-         kB.QF();
++         } = tt, dt = Vt.sQ, jt = this.rounds;
++         jt.XE();
 ```
 
-#### 1335. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10947` → after: `L10783`)
+#### 268. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2431` → after: `L2431`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10783) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10783)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10783) · [Before (L10947)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10947)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2431) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2431)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2431) · [Before (L2431)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2431)
 
 ```diff
--         return BB !== this.ur.zV && BB !== this.ur.FBB ? null : this.appliedPositionOffset
-+         return BB !== this.Nz.Jm && BB !== this.Nz.oIB ? null : this.appliedPositionOffset
+-           const cB = vB.TF();
++           const Ht = dt.il();
 ```
 
-#### 1336. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10951` → after: `L10787`)
+#### 269. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2440` → after: `L2440`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10787) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10787)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10787) · [Before (L10951)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10951)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2440) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2440)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2440) · [Before (L2440)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2440)
 
 ```diff
--         null !== dB && zB && (0, vB.r)(jB.type) && (this.setVehicleSettingOverrides(dB, null), this.riddenVehicleEId = null), zB && (this.appliedPositionOffset = null !== QB && void 0 !== QB ? QB : null), super.updatePositionAndPhysics(BB, jB, zB, QB, nB)
-+         null !== oB && ZB && (0, KB.w)(IB.type) && (this.setVehicleSettingOverrides(oB, null), this.riddenVehicleEId = null), ZB && (this.appliedPositionOffset = null !== TB && void 0 !== TB ? TB : null), super.updatePositionAndPhysics(BB, IB, ZB, TB, JB)
+-           return BB.Xu[0] = nB[0], BB.Xu[1] = nB[1], BB.Xu[2] = nB[2], BB.Eu[0] = nB[3], BB.Eu[1] = nB[4], BB.Eu[2] = nB[5], BB.Bl[0] = nB[6], BB.Bl[1] = nB[7], BB.Bl[2] = nB[8], !0
++           return tt.Rk[0] = Xt[0], tt.Rk[1] = Xt[1], tt.Rk[2] = Xt[2], tt.Zk[0] = Xt[3], tt.Zk[1] = Xt[4], tt.Zk[2] = Xt[5], tt.Lk[0] = Xt[6], tt.Lk[1] = Xt[7], tt.Lk[2] = Xt[8], !0
 ```
 
-#### 1337. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10957` → after: `L10793`)
+#### 270. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2442` → after: `L2442`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10793) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10793)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10793) · [Before (L10957)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10957)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2442) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2442)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2442) · [Before (L2442)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2442)
 
 ```diff
--         return console.assert(BB === this.ur.zV || BB === this.ur.FBB, "eId in client posSatisfiesModifyConstraints must be local player"), this.ur.zr.fBB(jB, zB, QB)
-+         return console.assert(BB === this.Nz.Jm || BB === this.Nz.oIB, "eId in client posSatisfiesModifyConstraints must be local player"), this.Nz.vz.ZIB(IB, ZB, TB)
+-         return vB.lz(), XZ
++         return dt.Rl(), zV
 ```
 
-#### 1338. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10960` → after: `L10796`)
+#### 271. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2445` → after: `L2445`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10796) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10796)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10796) · [Before (L10960)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10960)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2445) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2445)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2445) · [Before (L2445)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2445)
 
 ```diff
--         const BB = (0, sU.h)().ids();
-+         const BB = (0, hc.e)().ids();
+-         const IB = this.mirror.zF,
++         const et = this.mirror.tE,
 ```
 
-#### 1339. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10962` → after: `L10798`)
+#### 272. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2451` → after: `L2451`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10798) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10798)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10798) · [Before (L10962)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10962)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2451) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2451)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2451) · [Before (L2451)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2451)
 
 ```diff
--         const jB = this.ur.FBB;
-+         const IB = this.Nz.oIB;
+-           return BB ? BB(ZB) && (null === (TB = IB.HA(ZB)) || void 0 === TB || TB) : IB.FF(ZB)
++           return tt ? tt(Vt) && (null === (Ot = et.vG(Vt)) || void 0 === Ot || Ot) : et.eE(Vt)
 ```
 
-#### 1340. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10967` → after: `L10803`)
+#### 273. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2456` → after: `L2456`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10803) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10803)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10803) · [Before (L10967)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10967)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2456) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2456)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2456) · [Before (L2456)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2456)
 
 ```diff
--         return null !== (jB = super.getRawEntityName(BB)) && void 0 !== jB ? jB : (0, sU.h)().getName(BB)
-+         return null !== (IB = super.getRawEntityName(BB)) && void 0 !== IB ? IB : (0, hc.e)().getName(BB)
+-         }, this.mirror.vz.hF(TB.index, JB.kinds, JB.shapeOffsets, JB.shapes, this.mirror.unloadedId), TB.registryKey = ZB, this.tables.set(BB, TB), TB.index) : -1
++         }, this.mirror.sQ.nl(Ot.index, qt.kinds, qt.shapeOffsets, qt.shapes, this.mirror.unloadedId), Ot.registryKey = Vt, this.tables.set(tt, Ot), Ot.index) : -1
 ```
 
-#### 1341. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10971-L10972` → after: `L10807-L10808`)
+#### 274. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2459` → after: `L2459`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10807) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10807-L10808)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10807-L10808) · [Before (L10971-L10972)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10971-L10972)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2459) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2459)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2459) · [Before (L2459)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2459)
 
 ```diff
--         const zB = this.ur.vG.yjB(this.ur.zV),
--           QB = null !== (jB = null === zB || void 0 === zB ? void 0 : zB.getItemAtSelectedSlot()) && void 0 !== jB ? jB : null,
-+         const ZB = this.Nz.zW.lIB(this.Nz.Jm),
-+           TB = null !== (IB = null === ZB || void 0 === ZB ? void 0 : ZB.getItemAtSelectedSlot()) && void 0 !== IB ? IB : null,
+-         return this.pickIoView ??= new this.mirror.wasm.WasmBufferView(Float64Array, this.mirror.vz.JF(), 12), this.pickIoView.view()
++         return this.pickIoView ??= new this.mirror.wasm.WasmBufferView(Float64Array, this.mirror.sQ.Yl(), 12), this.pickIoView.view()
 ```
 
-#### 1342. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10974-L10975` → after: `L10810-L10811`)
+#### 275. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2474` → after: `L2474`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10810) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10810-L10811)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10810-L10811) · [Before (L10974-L10975)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10974-L10975)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2474) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2474)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2474) · [Before (L2474)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2474)
 
 ```diff
--           dB = this.ur.vG.CBB(this.ur.zV);
--         dB.gliderSpeedBonus = NB.c.getGlidingSpeedBonus(QB);
-+           oB = this.Nz.zW.dIB(this.Nz.Jm);
-+         oB.gliderSpeedBonus = vB.i.getGlidingSpeedBonus(TB);
+-         return TB[0] === IB[0] && TB[1] === IB[1] && TB[2] === IB[2] && Object.is(TB[3], ZB[0]) && Object.is(TB[4], ZB[1]) && Object.is(TB[5], ZB[2]) || (TB[0] = IB[0], TB[1] = IB[1], TB[2] = IB[2], TB[3] = ZB[0], TB[4] = ZB[1], TB[5] = ZB[2], BB.Jz(TB[0], TB[1], TB[2], TB[3], TB … [truncated]
++         return Ot[0] === et[0] && Ot[1] === et[1] && Ot[2] === et[2] && Object.is(Ot[3], Vt[0]) && Object.is(Ot[4], Vt[1]) && Object.is(Ot[5], Vt[2]) || (Ot[0] = et[0], Ot[1] = et[1], Ot[2] = et[2], Ot[3] = Vt[0], Ot[4] = Vt[1], Ot[5] = Vt[2], tt.TQ(Ot[0], Ot[1], Ot[2], Ot[3], Ot … [truncated]
 ```
 
-#### 1343. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10979-L10981` → after: `L10815-L10817`)
+#### 276. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2479-L2480` → after: `L2479-L2480`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10815) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10815-L10817)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10815-L10817) · [Before (L10979-L10981)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10979-L10981)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2479) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2479-L2480)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2479-L2480) · [Before (L2479-L2480)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2479-L2480)
 
 ```diff
--           if (dB.physicsState.type === Pp.t.SLEEPING) return;
--           dB.physicsState.type !== Pp.t.DEFAULT && dB.physicsState.type !== IB.physicsState.type && this.updatePositionAndPhysics(this.ur.zV, {
--             type: Pp.t.DEFAULT,
-+           if (oB.physicsState.type === eh.o.SLEEPING) return;
-+           oB.physicsState.type !== eh.o.DEFAULT && oB.physicsState.type !== GB.physicsState.type && this.updatePositionAndPhysics(this.Nz.Jm, {
-+             type: eh.o.DEFAULT,
+-         const GB = null !== (ZB = null === (TB = IB.getDesyncedBlockCount) || void 0 === TB ? void 0 : TB.call(IB)) && void 0 !== ZB ? ZB : 0,
+-           vB = 0 === GB ? 0 : null !== (JB = null === (oB = IB.getDesyncVersion) || void 0 === oB ? void 0 : oB.call(IB)) && void 0 !== JB ? JB : -1;
++         const mt = null !== (Vt = null === (Ot = et.getDesyncedBlockCount) || void 0 === Ot ? void 0 : Ot.call(et)) && void 0 !== Vt ? Vt : 0,
++           dt = 0 === mt ? 0 : null !== (qt = null === (Dt = et.getDesyncVersion) || void 0 === Dt ? void 0 : Dt.call(et)) && void 0 !== qt ? qt : -1;
 ```
 
-#### 1344. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10984-L10985` → after: `L10820-L10821`)
+#### 277. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2486` → after: `L2486`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10820) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10820-L10821)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10820-L10821) · [Before (L10984-L10985)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10984-L10985)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2486) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2486)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2486) · [Before (L2486)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2486)
 
 ```diff
--         } else(0, vB.i)(dB.physicsState.type) && this.updatePositionAndPhysics(this.ur.zV, {
--           type: Pp.t.DEFAULT,
-+         } else(0, KB.m)(oB.physicsState.type) && this.updatePositionAndPhysics(this.Nz.Jm, {
-+           type: eh.o.DEFAULT,
+-           }(IB.Bx, this.types) && lZ(IB.HJ, this.walkRects) && lZ(IB.Ix, this.cantRects)) return this.valid;
++           }(et.WG, this.types) && iV(et.Uq, this.walkRects) && iV(et.rG, this.cantRects)) return this.valid;
 ```
 
-#### 1345. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L10995` → after: `L10831`)
+#### 278. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2488-L2491` → after: `L2488-L2491`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10831) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10831)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10831) · [Before (L10995)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L10995)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2488) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2488-L2491)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2488-L2491) · [Before (L2488-L2491)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2488-L2491)
 
 ```diff
--         const nB = null !== (zB = (0, sU.k)(BB, "hideNameSeed")) && void 0 !== zB ? zB : null;
-+         const JB = null !== (ZB = (0, hc.i)(BB, "hideNameSeed")) && void 0 !== ZB ? ZB : null;
+-         for (const cB of IB.Bx) "number" === typeof cB && this.types.push(cB);
+-         if (AZ(IB.HJ, this.walkRects), AZ(IB.Ix, this.cantRects), 0 === GB && 0 === this.types.length && 0 === this.walkRects.length && 0 === this.cantRects.length) return this.nonEmpty && (BB.Zz(), this.nonEmpty = !1), this.valid = !0, !0;
+-         const kB = 0 === GB ? fZ : this.packDesync(IB, GB, vB);
+-         return this.valid = null !== kB, kB && (BB.Gz(kB, Float64Array.from(this.types), Float64Array.from(this.walkRects), Float64Array.from(this.cantRects)), this.nonEmpty = !0), this.valid
++         for (const Ht of et.WG) "number" === typeof Ht && this.types.push(Ht);
++         if (YV(et.Uq, this.walkRects), YV(et.rG, this.cantRects), 0 === mt && 0 === this.types.length && 0 === this.walkRects.length && 0 === this.cantRects.length) return this.nonEmpty && (tt.pQ(), this.nonEmpty = !1), this.valid = !0, !0;
++         const jt = 0 === mt ? AV : this.packDesync(et, mt, dt);
++         return this.valid = null !== jt, jt && (tt.gQ(jt, Float64Array.from(this.types), Float64Array.from(this.walkRects), Float64Array.from(this.cantRects)), this.nonEmpty = !0), this.valid
 ```
 
-#### 1346. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11003-L11004` → after: `L10839-L10840`)
+#### 279. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2536` → after: `L2536`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10839) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10839-L10840)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10839-L10840) · [Before (L11003-L11004)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11003-L11004)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2536) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2536)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2536) · [Before (L2536)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2536)
 
 ```diff
--         const nB = null !== (jB = (0, sU.k)(BB, "hideNameSeed")) && void 0 !== jB ? jB : null;
--         return (0, rr.d)(QB, zB, nB)
-+         const JB = null !== (IB = (0, hc.i)(BB, "hideNameSeed")) && void 0 !== IB ? IB : null;
-+         return (0, zz.c)(TB, ZB, JB)
+-         this.wasm = BB, this.zF = IB, this.options = ZB, this.label = TB, this.handling = JB, this.vz = void 0, this.epochStartMs = performance.now(), this.epoch = -1, this.registryState = -1, this.unsupported = !1, this.broken = !1, this.WN = !1, this.picks = new LZ(this), this. … [truncated]
++         this.wasm = tt, this.tE = et, this.options = Vt, this.label = Ot, this.handling = qt, this.sQ = void 0, this.epochStartMs = performance.now(), this.epoch = -1, this.registryState = -1, this.unsupported = !1, this.broken = !1, this.df = !1, this.picks = new oV(this), this. … [truncated]
 ```
 
-#### 1347. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11008` → after: `L10844`)
+#### 280. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2544` → after: `L2544`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10844) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10844)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10844) · [Before (L11008)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11008)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2544) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2544)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2544) · [Before (L2544)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2544)
 
 ```diff
--         const QB = null !== (zB = this.getRawEntityName(BB)) && void 0 !== zB ? zB : this.getRawEntityName((0, AB.b)(BB));
-+         const TB = null !== (ZB = this.getRawEntityName(BB)) && void 0 !== ZB ? ZB : this.getRawEntityName((0, XB.e)(BB));
+-           return DI(ZB, TB, vB, `${JB} mirror`, "creating it", oB), null
++           return ge(Vt, Ot, dt, `${qt} mirror`, "creating it", Dt), null
 ```
 
-#### 1348. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11016` → after: `L10852`)
+#### 281. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2551` → after: `L2551`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10852) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10852)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10852) · [Before (L11016)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11016)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2551) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2551)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2551) · [Before (L2551)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2551)
 
 ```diff
--         void 0 === jB || (0, sU.h)().has(BB) || sr.b.delete(jB), super.removeEntityName(BB)
-+         void 0 === IB || (0, hc.e)().has(BB) || Fz.b.delete(IB), super.removeEntityName(BB)
+-         return !this.WN && !this.broken && this.wasm.isBloxdWasmReady()
++         return !this.df && !this.broken && this.wasm.isBloxdWasmReady()
 ```
 
-#### 1349. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11019` → after: `L10855`)
+#### 282. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2560` → after: `L2560`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10855) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10855)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10855) · [Before (L11019)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11019)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2560) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2560)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2560) · [Before (L2560)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2560)
 
 ```diff
--         return BB === this.ur.zV ? (0, DB.f)(BB) : this.client.getEntityScale(BB)
-+         return BB === this.Nz.Jm ? (0, HB.e)(BB) : this.client.getEntityScale(BB)
+-         return this.usable() && !this.unsupported && MZ(this.zF) === this.registryState
++         return this.usable() && !this.unsupported && PV(this.tE) === this.registryState
 ```
 
-#### 1350. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11023` → after: `L10859`)
+#### 283. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2564` → after: `L2564`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10859) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10859)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10859) · [Before (L11023)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11023)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2564) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2564)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2564) · [Before (L2564)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2564)
 
 ```diff
--         return null !== (jB = (0, sU.k)(BB, "ranks")) && void 0 !== jB ? jB : []
-+         return null !== (IB = (0, hc.i)(BB, "ranks")) && void 0 !== IB ? IB : []
+-         const ZB = this.vz.BF();
++         const Vt = this.sQ.rl();
 ```
 
-#### 1351. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11032` → after: `L10868`)
+#### 284. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2566-L2567` → after: `L2566-L2567`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10868) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10868)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10868) · [Before (L11032)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11032)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2566) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2566-L2567)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2566-L2567) · [Before (L2566-L2567)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2566-L2567)
 
 ```diff
--         this.eD(NB[0], NB[1], NB[2], uB);
-+         this.UH(vB[0], vB[1], vB[2], kB);
+-         const TB = Array.from(this.wasm.wasmView(Int32Array, this.vz.IF(), 3 * ZB));
+-         this.vz.lz();
++         const Ot = Array.from(this.wasm.wasmView(Int32Array, this.sQ.Ul(), 3 * Vt));
++         this.sQ.Rl();
 ```
 
-#### 1352. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11036` → after: `L10872`)
+#### 285. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2573` → after: `L2573`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10872) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10872)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10872) · [Before (L11036)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11036)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2573) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2573)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2573) · [Before (L2573)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2573)
 
 ```diff
--         return (0, AB.b)(BB) !== this.ur.zV && (pB = [jB + .5, zB + 1, QB + .5]), Lu.e.play(aB, 1, pB), {
-+         return (0, XB.e)(BB) !== this.Nz.Jm && (hB = [IB + .5, ZB + 1, TB + .5]), yk.d.play(nB, 1, hB), {
+-             this.vz.Sz(TB[oB], TB[oB + 1], TB[oB + 2]), this.unreadable.set(`${TB[oB]},${TB[oB+1]},${TB[oB+2]}`, JB)
++             this.sQ.ol(Ot[Dt], Ot[Dt + 1], Ot[Dt + 2]), this.unreadable.set(`${Ot[Dt]},${Ot[Dt+1]},${Ot[Dt+2]}`, qt)
 ```
 
-#### 1353. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11045` → after: `L10881`)
+#### 286. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2577-L2578` → after: `L2577-L2578`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10881) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10881)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10881) · [Before (L11045)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11045)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2577) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2577-L2578)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2577-L2578) · [Before (L2577-L2578)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2577-L2578)
 
 ```diff
--         return this.ur.zr.Bl(BB, jB, zB)
-+         return this.Nz.vz.pD(BB, IB, ZB)
+-         const [BB, IB, ZB] = this.vz.dz(), TB = this.unreadable.get(`${BB},${IB},${ZB}`);
+-         if (!TB) throw new Error(`wasm physics: a read threw in chunk ${BB},${IB},${ZB}, which was never marked unreadable`);
++         const [tt, et, Vt] = this.sQ.Xl(), Ot = this.unreadable.get(`${tt},${et},${Vt}`);
++         if (!Ot) throw new Error(`wasm physics: a read threw in chunk ${tt},${et},${Vt}, which was never marked unreadable`);
 ```
 
-#### 1354. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11049-L11051` → after: `L10885-L10887`)
+#### 287. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2591` → after: `L2591`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10885) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10885-L10887)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10885-L10887) · [Before (L11049-L11051)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11049-L11051)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2591) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2591)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2591) · [Before (L2591)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2591)
 
 ```diff
--           Wn: QB,
--           jT: nB
--         } = this.ur.zr;
-+           HJ: TB,
-+           Ix: JB
-+         } = this.Nz.vz;
+-         return this.picks.TF(BB, IB)
++         return this.picks.il(tt, et)
 ```
 
-#### 1355. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11055-L11057` → after: `L10891-L10893`)
+#### 288. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2597` → after: `L2597`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10891) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10891-L10893)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10891-L10893) · [Before (L11055-L11057)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11055-L11057)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2597) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2597)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2597) · [Before (L2597)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2597)
 
 ```diff
--         const zB = this.ur.vG.CBB(this.ur.zV);
--         (0, vB.h)(zB.physicsState.type) && this.updatePositionAndPhysics(this.ur.zV, {
--           type: Pp.t.DEFAULT,
-+         const ZB = this.Nz.zW.dIB(this.Nz.Jm);
-+         (0, KB.j)(ZB.physicsState.type) && this.updatePositionAndPhysics(this.Nz.Jm, {
-+           type: eh.o.DEFAULT,
+-         this.usable() && this.vz.kF(BB, IB, ZB, TB)
++         this.usable() && this.sQ.Tl(tt, et, Vt, Ot)
 ```
 
-#### 1356. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11062` → after: `L10898`)
+#### 289. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2600` → after: `L2600`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10898) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10898)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10898) · [Before (L11062)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11062)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2600) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2600)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2600) · [Before (L2600)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2600)
 
 ```diff
--         return console.assert(BB === this.ur.zV || BB === this.ur.FBB, "eId in client getClientPredictedBlock must be local player"), this.ur.JG(jB, zB, QB)
-+         return console.assert(BB === this.Nz.Jm || BB === this.Nz.oIB, "eId in client getClientPredictedBlock must be local player"), this.Nz.WU(IB, ZB, TB)
+-         this.usable() && this.vz.xz(BB, IB, ZB)
++         this.usable() && this.sQ.Ll(tt, et, Vt)
 ```
 
-#### 1357. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11065` → after: `L10901`)
+#### 290. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2603` → after: `L2603`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10901) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10901)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10901) · [Before (L11065)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11065)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2603) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2603)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2603) · [Before (L2603)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2603)
 
 ```diff
--         return this.getBlockCollisionForWalkThroughContext(jB, zB, QB, null !== nB && void 0 !== nB ? nB : null, this.ur.zr.hA, this.ur.zr.Wn, this.ur.zr.jT)
-+         return this.getBlockCollisionForWalkThroughContext(IB, ZB, TB, null !== JB && void 0 !== JB ? JB : null, this.Nz.vz.Bx, this.Nz.vz.HJ, this.Nz.vz.Ix)
+-         this.usable() && this.vz.bz()
++         this.usable() && this.sQ.Zl()
 ```
 
-#### 1358. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11068` → after: `L10904`)
+#### 291. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2606` → after: `L2606`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10904) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10904)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10904) · [Before (L11068)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11068)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2606) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2606)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2606) · [Before (L2606)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2606)
 
 ```diff
--         "Board" === this.getMetaInfo(QB).rootName && this.Bl(BB, jB, zB) && this.client.meshCreator.removeBoard(BB, jB, zB)
-+         "Board" === this.getMetaInfo(TB).rootName && this.pD(BB, IB, ZB) && this.client.meshCreator.removeBoard(BB, IB, ZB)
+-         const JB = this.wasm.wasmView(Uint16Array, this.vz.ez(BB, IB, ZB), WZ),
++         const qt = this.wasm.wasmView(Uint16Array, this.sQ.Sl(tt, et, Vt), bV),
 ```
 
-#### 1359. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11075-L11076` → after: `L10911-L10912`)
+#### 292. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2615` → after: `L2615`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10911) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10911-L10912)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10911-L10912) · [Before (L11075-L11076)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11075-L11076)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2615) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2615)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2615) · [Before (L2615)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2615)
 
 ```diff
--         const zB = this.ur.vG.HjB(BB);
--         return null !== (jB = null === zB || void 0 === zB ? void 0 : zB.lifeformType) && void 0 !== jB ? jB : null
-+         const ZB = this.Nz.zW.oZB(BB);
-+         return null !== (IB = null === ZB || void 0 === ZB ? void 0 : ZB.lifeformType) && void 0 !== IB ? IB : null
+-         if (this.WN || !VI(this.wasm)) return {
++         if (this.df || !ne(this.wasm)) return {
 ```
 
-#### 1360. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11079` → after: `L10915`)
+#### 293. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2621` → after: `L2621`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10915) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10915)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10915) · [Before (L11079)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11079)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2621) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2621)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2621) · [Before (L2621)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2621)
 
 ```diff
--         return this.ur.vG.hjB(BB).isAlive
-+         return this.Nz.zW.hZB(BB).isAlive
+-         const BB = this.vz.UF();
++         const tt = this.sQ.mE();
 ```
 
-#### 1361. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11086` → after: `L10922`)
+#### 294. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2623-L2624` → after: `L2623-L2624`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10922) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10922)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10922) · [Before (L11086)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11086)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2623) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2623-L2624)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2623-L2624) · [Before (L2623-L2624)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2623-L2624)
 
 ```diff
--         return yB.n.Ly("middleScreenBarInitiate", {
-+         return qB.l.Gq("middleScreenBarInitiate", {
+-           resident: this.vz.vF(),
+-           known: this.vz.Kz(),
++           resident: this.sQ.xl(),
++           known: this.sQ.Gl(),
 ```
 
-#### 1362. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11088` → after: `L10924`)
+#### 295. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2633` → after: `L2633`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10924) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10924)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10924) · [Before (L11088)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11088)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2633) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2633)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2633) · [Before (L2633)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2633)
 
 ```diff
--           Tn: !0,
-+           pJ: !0,
+-         const BB = this.zF,
++         const tt = this.tE,
 ```
 
-#### 1363. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11093` → after: `L10929`)
+#### 296. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2637` → after: `L2637`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10929) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10929)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10929) · [Before (L11093)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11093)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2637) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2637)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2637) · [Before (L2637)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2637)
 
 ```diff
--         const QB = this.ur.vG.getState(this.ur.zV, "cameraShake");
-+         const TB = this.Nz.zW.getState(this.Nz.Jm, "cameraShake");
+-         const ZB = PZ(jZ(BB), (IB => BB.FF(IB)));
++         const Vt = LV(ZV(tt), (et => tt.eE(et)));
 ```
 
-#### 1364. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11097` → after: `L10933`)
+#### 297. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2640-L2641` → after: `L2640-L2641`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10933) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10933)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10933) · [Before (L11097)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11097)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2640) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2640-L2641)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2640-L2641) · [Before (L2640-L2641)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2640-L2641)
 
 ```diff
--         (0, FB.s)(this.ur, BB, jB)
-+         (0, MB.p)(this.Nz, BB, IB)
+-           for (let ZB = 0; ZB < IB.length; ZB++) IB[ZB] = BB.NF[ZB] ? 1 : 0;
+-           this.vz.nF(ZB.kinds, ZB.shapeOffsets, ZB.shapes, IB);
++           for (let Vt = 0; Vt < et.length; Vt++) et[Vt] = tt.VE[Vt] ? 1 : 0;
++           this.sQ.sl(Vt.kinds, Vt.shapeOffsets, Vt.shapes, et);
 ```
 
-#### 1365. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11100` → after: `L10936`)
+#### 298. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2643-L2644` → after: `L2643-L2644`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10936) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10936)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10936) · [Before (L11100)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11100)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2643) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2643-L2644)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2643-L2644) · [Before (L2643-L2644)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2643-L2644)
 
 ```diff
--         (0, FB.u)(this.ur, BB, jB)
-+         (0, MB.s)(this.Nz, BB, IB)
+-           for (let ZB = 0; ZB < TB.length; ZB++) TB[ZB] = BB.qF[ZB] ? 1 : 0;
+-           this.vz.yF(TB)
++           for (let Vt = 0; Vt < Ot.length; Vt++) Ot[Vt] = tt.qE[Vt] ? 1 : 0;
++           this.sQ.DE(Ot)
 ```
 
-#### 1366. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11103-L11109` → after: `L10939-L10945`)
+#### 299. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2649` → after: `L2649`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10939) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10939-L10945)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10939-L10945) · [Before (L11103-L11109)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11103-L11109)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2649) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2649)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2649) · [Before (L2649)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2649)
 
 ```diff
--     var kr = zB(1778),
--       Gr = zB(1253),
--       Lr = zB(1121),
--       gr = zB(36538),
--       tr = zB(1069),
--       Sr = zB(37050),
--       Mr = zB(752);
-+     var yz = ZB(1805),
-+       Uz = ZB(1261),
-+       Wz = ZB(1125),
-+       dz = ZB(36492),
-+       Cz = ZB(1060),
-+       Qz = ZB(36996),
-+       sz = ZB(740);
+-         if (this.options.vz) return;
++         if (this.options.sQ) return;
 ```
 
-#### 1367. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11112` → after: `L10948`)
+#### 300. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2651` → after: `L2651`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10948) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10948)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10948) · [Before (L11112)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11112)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2651) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2651)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2651) · [Before (L2651)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2651)
 
 ```diff
--       BB = (0, AB.b)(String(BB));
-+       BB = (0, XB.e)(String(BB));
+-         BB !== this.epoch && (this.epoch = BB, this.vz.cF(BB), this.vz.evict(this.options.maxResident, Math.max(0, BB - this.options.idleSeconds)))
++         tt !== this.epoch && (this.epoch = tt, this.sQ.gl(tt), this.sQ.evict(this.options.maxResident, Math.max(0, tt - this.options.idleSeconds)))
 ```
 
-#### 1368. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11122` → after: `L10958`)
+#### 301. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2654` → after: `L2654`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10958) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10958)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10958) · [Before (L11122)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11122)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2654) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2654)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2654) · [Before (L2654)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2654)
 
 ```diff
--       return jB === BB.zV || jB === BB.camera.Jw
-+       return IB === BB.Jm || IB === BB.camera.IK
+-         this.WN || (this.WN = !0, this.options.vz || SI(this.wasm, this.vz))
++         this.df || (this.df = !0, this.options.sQ || tV(this.wasm, this.sQ))
 ```
 
-#### 1369. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11124` → after: `L10960`)
+#### 302. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2664` → after: `L2664`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10960) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10960)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10960) · [Before (L11124)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11124)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2664) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2664)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2664) · [Before (L2664)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2664)
 
 ```diff
--     var fr = zB(38187);
-+     var iz = ZB(38174);
+-           vz: IB
++           sQ: et
 ```
 
-#### 1370. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11129` → after: `L10965`)
+#### 303. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2700` → after: `L2700`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10965) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10965)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10965) · [Before (L11129)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11129)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2700) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2700)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2700) · [Before (L2700)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2700)
 
 ```diff
--         return null !== (jB = bu.l[BB]) && void 0 !== jB ? jB : null
-+         return null !== (IB = xk.k[BB]) && void 0 !== IB ? IB : null
+-         ZB[TB] = IB ? ZB[TB] | BB : ZB[TB] & ~BB
++         Vt[Ot] = et ? Vt[Ot] | tt : Vt[Ot] & ~tt
 ```
 
-#### 1371. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11135` → after: `L10971`)
+#### 304. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2834` → after: `L2834`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10971) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10971)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10971) · [Before (L11135)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11135)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2834) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2834)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2834) · [Before (L2834)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2834)
 
 ```diff
--       "aiState" in QB && BB.updateEntityField(jB, "aiState", null === (nB = zB.aiState) || void 0 === nB ? -1 : bu.l.indexOf(nB))
-+       "aiState" in TB && BB.updateEntityField(IB, "aiState", null === (JB = ZB.aiState) || void 0 === JB ? -1 : xk.k.indexOf(JB))
+-         VZ(this.zq, BB)
++         nV(this.Dy, tt)
 ```
 
-#### 1372. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11158` → after: `L10994`)
+#### 305. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2846` → after: `L2846`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10994) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10994)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10994) · [Before (L11158)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11158)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2846) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2846)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2846) · [Before (L2846)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2846)
 
 ```diff
--       for (const [QB, nB] of Object.entries((0, DB.h)(BB))) {
-+       for (const [TB, JB] of Object.entries((0, HB.i)(BB))) {
+-         VZ(this.Rl, BB)
++         nV(this.QG, tt)
 ```
 
-#### 1373. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11162` → after: `L10998`)
+#### 306. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2852` → after: `L2852`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R10998) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L10998)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L10998) · [Before (L11162)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11162)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2852) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2852)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2852) · [Before (L2852)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2852)
 
 ```diff
--           enchantmentTier: null !== (zB = nB.enchantmentTier) && void 0 !== zB ? zB : ""
-+           enchantmentTier: null !== (ZB = JB.enchantmentTier) && void 0 !== ZB ? ZB : ""
+-         VZ(this.Al, BB)
++         nV(this.lG, tt)
 ```
 
-#### 1374. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11171` → after: `L11007`)
+#### 307. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2859` → after: `L2859`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11007) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11007)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11007) · [Before (L11171)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11171)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2859) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2859)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2859) · [Before (L2859)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2859)
 
 ```diff
--       for (const zB of Sr.x) zB in BB && (jB[zB] = BB[zB]);
-+       for (const ZB of Qz.D) ZB in BB && (IB[ZB] = BB[ZB]);
+-     var SZ = ZB(39636);
++     var tO = Vt(39787);
 ```
 
-#### 1375. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11180` → after: `L11016`)
+#### 308. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2881` → after: `L2881`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11016) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11016)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11016) · [Before (L11180)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11180)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2881) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2881)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2881) · [Before (L2881)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2881)
 
 ```diff
--         ridingVehicleEId: ir(null !== (jB = BB.ridingVehicleEId) && void 0 !== jB ? jB : null)
-+         ridingVehicleEId: Oz(null !== (IB = BB.ridingVehicleEId) && void 0 !== IB ? IB : null)
+-         FB[NB + 0] = TB, FB[NB + 1] = JB, FB[NB + 2] = oB, FB[NB + 3] = GB, FB[NB + 4] = -1, FB[NB + 5] = -1, FB[NB + 6] = -1, FB[NB + 7] = -1, FB[NB + 8] = 0, FB[NB + 9] = 10, FB[NB + BZ] = 0, FB[NB + BZ + 1] = 0, FB[NB + BZ + 2] = 0, FB[NB + 13] = 0, FB[NB + IZ] = 17 | (kB ? 2  … [truncated]
++         Et[ft + 0] = Ot, Et[ft + 1] = qt, Et[ft + 2] = Dt, Et[ft + 3] = mt, Et[ft + 4] = -1, Et[ft + 5] = -1, Et[ft + 6] = -1, Et[ft + 7] = -1, Et[ft + 8] = 0, Et[ft + 9] = 10, Et[ft + eV] = 0, Et[ft + eV + 1] = 0, Et[ft + eV + 2] = 0, Et[ft + 13] = 0, Et[ft + VV] = 17 | (jt ? 2  … [truncated]
 ```
 
-#### 1376. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11185` → after: `L11021`)
+#### 309. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2932` → after: `L2932`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11021) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11021)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11021) · [Before (L11185)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11185)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2932) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2932)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2932) · [Before (L2932)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2932)
 
 ```diff
--       return BB ? "string" !== typeof BB.nB ? BB : {
-+       return BB ? "string" !== typeof BB.JB ? BB : {
+-     IT.prototype.loadFromCopy = XI.prototype.loadFromCopy, IT.prototype.loadStateFromCopy = XI.prototype.loadStateFromCopy, IT.prototype.setPosition = XI.prototype.setPosition, IT.prototype.aU = XI.prototype.aU, IT.prototype.applyForce = XI.prototype.applyForce, IT.prototype.appl … [truncated]
++     VO.prototype.loadFromCopy = ze.prototype.loadFromCopy, VO.prototype.loadStateFromCopy = ze.prototype.loadStateFromCopy, VO.prototype.setPosition = ze.prototype.setPosition, VO.prototype.YM = ze.prototype.YM, VO.prototype.applyForce = ze.prototype.applyForce, VO.prototype.appl … [truncated]
 ```
 
-#### 1377. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11187` → after: `L11023`)
+#### 310. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2935` → after: `L2935`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11023) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11023)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11023) · [Before (L11187)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11187)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2935) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2935)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2935) · [Before (L2935)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2935)
 
 ```diff
--         nB: Er(BB.nB)
-+         JB: wz(BB.JB)
+-         this.wasm = BB, this.physics = IB, this.handle = void 0, this.f64Pages = [], this.f32Pages = [], this.fresh = [], this.freed = [], this.freedHead = 0, this.slotOwners = [], this.releaseCount = 0, this.handle = new(BB.getBloxdWasm().Vn)
++         this.wasm = tt, this.physics = et, this.handle = void 0, this.f64Pages = [], this.f32Pages = [], this.fresh = [], this.freed = [], this.freedHead = 0, this.slotOwners = [], this.releaseCount = 0, this.handle = new(tt.getBloxdWasm().pX)
 ```
 
-#### 1378. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11212-L11219` → after: `L11048-L11055`)
+#### 311. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2964` → after: `L2964`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11048) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11048-L11055)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11048-L11055) · [Before (L11212-L11219)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11212-L11219)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2964) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2964)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2964) · [Before (L2964)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2964)
 
 ```diff
--         speed: null !== (jB = null !== (zB = null === tB || void 0 === tB ? void 0 : tB.speed) && void 0 !== zB ? zB : null === SB || void 0 === SB ? void 0 : SB.speed) && void 0 !== jB ? jB : 0,
--         jumping: null !== (QB = null !== (nB = null === tB || void 0 === tB ? void 0 : tB.jumping) && void 0 !== nB ? nB : null === SB || void 0 === SB ? void 0 : SB.jumping) && void 0 !== QB && QB,
--         crouching: null !== (dB = null !== (IB = null === tB || void 0 === tB ? void 0 : tB.crouching) && void 0 !== IB ? IB : null === SB || void 0 === SB ? void 0 : SB.crouching) && void 0 !== dB && dB,
--         cameraPitch: null !== (NB = null !== (uB = null === tB || void 0 === tB ? void 0 : tB.cameraPitch) && void 0 !== uB ? uB : null === SB || void 0 === SB ? void 0 : SB.cameraPitch) && void 0 !== NB ? NB : 0,
--         armSwinging: null !== (UB = null !== (aB = null === tB || void 0 === tB ? void 0 : tB.armSwinging) && void 0 !== aB ? aB : null === SB || void 0 === SB ? void 0 : SB.armSwinging) && void 0 !== UB && UB,
--         heldItemName: null !== (pB = null !== (rB = null === MB || void 0 === MB ? void 0 : MB.heldItemName) && void 0 !== rB ? rB : null === SB || void 0 === SB ? void 0 : SB.heldItemName) && void 0 !== pB ? pB : null,
--         heldItemEnchantmentTier: null !== (sB = null !== (JB = null === MB || void 0 === MB ? void 0 : MB.heldItemEnchantmentTier) && void 0 !== JB ? JB : null === SB || void 0 === SB ? void 0 : SB.heldItemEnchantmentTier) && void 0 !== sB ? sB : null,
--         pose: null !== (mB = null !== (yB = null === tB || void 0 === tB ? void 0 : tB.pose) && void 0 !== yB ? yB : null === SB || void 0 === SB ? void 0 : SB.pose) && void 0 !== mB ? mB : "standing",
-+         speed: null !== (IB = null !== (ZB = null === CB || void 0 === CB ? void 0 : CB.speed) && void 0 !== ZB ? ZB : null === QB || void 0 === QB ? void 0 : QB.speed) && void 0 !== IB ? IB : 0,
-+         jumping: null !== (TB = null !== (JB = null === CB || void 0 === CB ? void 0 : CB.jumping) && void 0 !== JB ? JB : null === QB || void 0 === QB ? void 0 : QB.jumping) && void 0 !== TB && TB,
-+         crouching: null !== (oB = null !== (GB = null === CB || void 0 === CB ? void 0 : CB.crouching) && void 0 !== GB ? GB : null === QB || void 0 === QB ? void 0 : QB.crouching) && void 0 !== oB && oB,
-+         cameraPitch: null !== (vB = null !== (kB = null === CB || void 0 === CB ? void 0 : CB.cameraPitch) && void 0 !== kB ? kB : null === QB || void 0 === QB ? void 0 : QB.cameraPitch) && void 0 !== vB ? vB : 0,
-+         armSwinging: null !== (cB = null !== (nB = null === CB || void 0 === CB ? void 0 : CB.armSwinging) && void 0 !== nB ? nB : null === QB || void 0 === QB ? void 0 : QB.armSwinging) && void 0 !== cB && cB,
-+         heldItemName: null !== (hB = null !== (zB = null === sB || void 0 === sB ? void 0 : sB.heldItemName) && void 0 !== zB ? zB : null === QB || void 0 === QB ? void 0 : QB.heldItemName) && void 0 !== hB ? hB : null,
-+         heldItemEnchantmentTier: null !== (FB = null !== (NB = null === sB || void 0 === sB ? void 0 : sB.heldItemEnchantmentTier) && void 0 !== NB ? NB : null === QB || void 0 === QB ? void 0 : QB.heldItemEnchantmentTier) && void 0 !== FB ? FB : null,
-+         pose: null !== (gB = null !== (qB = null === CB || void 0 === CB ? void 0 : CB.pose) && void 0 !== qB ? qB : null === QB || void 0 === QB ? void 0 : QB.pose) && void 0 !== gB ? gB : "standing",
+-         const BB = this.handle.ph(),
++         const tt = this.handle.CQ(),
 ```
 
-#### 1379. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11221` → after: `L11057`)
+#### 312. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L2966` → after: `L2966`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11057) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11057)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11057) · [Before (L11221)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11221)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R2966) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L2966)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L2966) · [Before (L2966)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L2966)
 
 ```diff
--         ridingVehicleEId: null !== (kB = null !== (GB = null === tB || void 0 === tB ? void 0 : tB.ridingVehicleEId) && void 0 !== GB ? GB : null === SB || void 0 === SB ? void 0 : SB.ridingVehicleEId) && void 0 !== kB ? kB : null,
-+         ridingVehicleEId: null !== (yB = null !== (UB = null === CB || void 0 === CB ? void 0 : CB.ridingVehicleEId) && void 0 !== UB ? UB : null === QB || void 0 === QB ? void 0 : QB.ridingVehicleEId) && void 0 !== yB ? yB : null,
+-         this.f64Pages.push(new IB(Float64Array, this.handle.jh(BB), 4096)), this.f32Pages.push(new IB(Float32Array, this.handle.Mh(BB), 5376));
++         this.f64Pages.push(new et(Float64Array, this.handle.vQ(tt), 4096)), this.f32Pages.push(new et(Float32Array, this.handle.hQ(tt), 5376));
 ```
 
-#### 1380. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11225` → after: `L11061`)
+#### 313. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3036` → after: `L3036`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11061) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11061)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11061) · [Before (L11225)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11225)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3036) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3036)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3036) · [Before (L3036)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3036)
 
 ```diff
--         baseRenderHeading: null !== (LB = null !== (gB = null === tB || void 0 === tB ? void 0 : tB.baseRenderHeading) && void 0 !== gB ? gB : null === SB || void 0 === SB ? void 0 : SB.baseRenderHeading) && void 0 !== LB ? LB : 0,
-+         baseRenderHeading: null !== (WB = null !== (dB = null === CB || void 0 === CB ? void 0 : CB.baseRenderHeading) && void 0 !== dB ? dB : null === QB || void 0 === QB ? void 0 : QB.baseRenderHeading) && void 0 !== WB ? WB : 0,
+-         return null !== (IB = this.slotOfBody.get(BB)) && void 0 !== IB ? IB : -1
++         return null !== (et = this.slotOfBody.get(tt)) && void 0 !== et ? et : -1
 ```
 
-#### 1381. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11227` → after: `L11063`)
+#### 314. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3049-L3050` → after: `L3049-L3050`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11063) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11063)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11063) · [Before (L11227)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11227)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3049) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3049-L3050)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3049-L3050) · [Before (L3049-L3050)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3049-L3050)
 
 ```diff
--         RY: BB.RY,
-+         Tm: BB.Tm,
+-         if (this.rows.invalidate(), this.isStaging.length < BB.ah) {
+-           const IB = new Uint8Array(BB.ah);
++         if (this.rows.invalidate(), this.isStaging.length < tt.uQ) {
++           const et = new Uint8Array(tt.uQ);
 ```
 
-#### 1382. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11234` → after: `L11070`)
+#### 315. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3059` → after: `L3059`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11070) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11070)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11070) · [Before (L11234)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11234)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3059) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3059)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3059) · [Before (L3059)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3059)
 
 ```diff
--       if (!zB) throw new Error(`Colyseus entity not found for entity ${jB}`);
-+       if (!ZB) throw new Error(`Colyseus entity not found for entity ${IB}`);
+-             const oB = TB.Tz;
++             const Dt = Ot.xQ;
 ```
 
-#### 1383. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11239` → after: `L11075`)
+#### 316. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3070-L3072` → after: `L3070-L3072`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11075) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11075)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11075) · [Before (L11239)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11239)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3070) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3070-L3072)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3070-L3072) · [Before (L3070-L3072)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3070-L3072)
 
 ```diff
--       return zB.toString() === jB.zV.toString() ? Xr(function(BB, jB) {
-+       return ZB.toString() === IB.Jm.toString() ? rz(function(BB, IB) {
+-             const cB = TB.zq,
+-               nB = TB.Rl,
+-               hB = TB.Al,
++             const Ht = Ot.Dy,
++               Xt = Ot.QG,
++               Qt = Ot.lG,
 ```
 
-#### 1384. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11241-L11245` → after: `L11077-L11081`)
+#### 317. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3077` → after: `L3077`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11077) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11077-L11081)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11077-L11081) · [Before (L11241-L11245)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11241-L11245)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3077) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3077)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3077) · [Before (L3077)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3077)
 
 ```diff
--         const NB = BB.vG.JjB(jB),
--           uB = BB.vG.XjB(jB),
--           UB = BB.vG.RjB(jB),
--           aB = BB.vG.getState(jB, "movement"),
--           pB = (0, Cp.t)(BB.bloxd.getResolvedPhysicsSettings(jB, aB.physicsState), aB.steeringHeading, lU.b.getPlayerFacingHeading(BB));
-+         const vB = BB.zW.uIB(IB),
-+           kB = BB.zW.zZB(IB),
-+           cB = BB.zW.YZB(IB),
-+           nB = BB.zW.getState(IB, "movement"),
-+           hB = (0, xh.u)(BB.bloxd.getResolvedPhysicsSettings(IB, nB.physicsState), nB.steeringHeading, uc.c.getPlayerFacingHeading(BB));
+-                 Wv: NB,
++                 Sd: ft,
 ```
 
-#### 1385. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11248-L11249` → after: `L11084-L11085`)
+#### 318. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3081` → after: `L3081`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11084) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11084-L11085)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11084-L11085) · [Before (L11248-L11249)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11248-L11249)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3081) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3081)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3081) · [Before (L3081)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3081)
 
 ```diff
--           name: null !== (zB = BB.bloxd.getRawEntityName(jB)) && void 0 !== zB ? zB : "",
--           position: Dr(BB.vG.iG(jB)),
-+           name: null !== (ZB = BB.bloxd.getRawEntityName(IB)) && void 0 !== ZB ? ZB : "",
-+           position: Hz(BB.zW.aU(IB)),
+-                 iz: UB,
++                 Nl: Mt,
 ```
 
-#### 1386. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11251-L11252` → after: `L11087-L11088`)
+#### 319. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3092` → after: `L3092`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11087) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11087-L11088)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11087-L11088) · [Before (L11251-L11252)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11251-L11252)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3092) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3092)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3092) · [Before (L3092)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3092)
 
 ```diff
--           scale: (0, DB.f)(jB),
--           followingEId: null !== (QB = null !== (nB = null === UB || void 0 === UB ? void 0 : UB.SJ) && void 0 !== nB ? nB : null === NB || void 0 === NB ? void 0 : NB.followingEId) && void 0 !== QB ? QB : null,
-+           scale: (0, HB.e)(IB),
-+           followingEId: null !== (TB = null !== (JB = null === cB || void 0 === cB ? void 0 : cB.zN) && void 0 !== JB ? JB : null === vB || void 0 === vB ? void 0 : vB.followingEId) && void 0 !== TB ? TB : null,
+-             BB[OB + 0] = NB, BB[OB + 1] = gB, BB[OB + 2] = qB, BB[OB + 3] = yB, BB[OB + 4] = UB, BB[OB + 5] = WB, BB[OB + 6] = dB, BB[OB + 7] = CB, BB[OB + 8] = QB, BB[OB + 9] = sB, BB[OB + BZ] = FB[0], BB[OB + BZ + 1] = FB[1], BB[OB + BZ + 2] = FB[2], BB[OB + 13] = wB & kZ ? TB. … [truncated]
++             tt[vt + 0] = ft, tt[vt + 1] = wt, tt[vt + 2] = yt, tt[vt + 3] = Nt, tt[vt + 4] = Mt, tt[vt + 5] = bt, tt[vt + 6] = Jt, tt[vt + 7] = Ct, tt[vt + 8] = ut, tt[vt + 9] = Kt, tt[vt + eV] = Et[0], tt[vt + eV + 1] = Et[1], tt[vt + eV + 2] = Et[2], tt[vt + 13] = ht & HV ? Ot. … [truncated]
 ```
 
-#### 1387. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11254` → after: `L11090`)
+#### 320. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3132` → after: `L3132`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11090) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11090)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11090) · [Before (L11254)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11254)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3132) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3132)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3132) · [Before (L3132)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3132)
 
 ```diff
--           shouldMatchFollowingEntityRotation: null === (dB = null === UB || void 0 === UB ? void 0 : UB.OjB) || void 0 === dB || dB,
-+           shouldMatchFollowingEntityRotation: null === (oB = null === cB || void 0 === cB ? void 0 : cB.iZB) || void 0 === oB || oB,
+-         this.physics = BB, this.kind = IB, this.wasm = ZB, this.rollsBack = TB, this.hostStore = JB, this.current = null, this.store = null, this.staging = void 0, this.listView = null, this.impactsView = null, this.resultView = null, this.listed = 0, this.listSynced = !1, this.l … [truncated]
++         this.physics = tt, this.kind = et, this.wasm = Vt, this.rollsBack = Ot, this.hostStore = qt, this.current = null, this.store = null, this.staging = void 0, this.listView = null, this.impactsView = null, this.resultView = null, this.listed = 0, this.listSynced = !1, this.l … [truncated]
 ```
 
-#### 1388. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11256` → after: `L11092`)
+#### 321. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3134` → after: `L3134`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11092) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11092)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11092) · [Before (L11256)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11256)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3134) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3134)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3134) · [Before (L3134)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3134)
 
 ```diff
--           RY: hr(null === (IB = BB.RY[BB.zV]) || void 0 === IB ? void 0 : IB[jB]),
-+           Tm: Rz(null === (GB = BB.Tm[BB.Jm]) || void 0 === GB ? void 0 : GB[IB]),
+-           return IB >= 0 ? IB : this.staging.yC(BB)
++           return et >= 0 ? et : this.staging.gJ(tt)
 ```
 
-#### 1389. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11262-L11263` → after: `L11098-L11099`)
+#### 322. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3154` → after: `L3154`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11098) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11098-L11099)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11098-L11099) · [Before (L11262-L11263)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11262-L11263)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3154) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3154)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3154) · [Before (L3154)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3154)
 
 ```diff
--         const zB = BB.vG.RjB(jB);
--         return (null === zB || void 0 === zB ? void 0 : zB.SJ) === BB.zV
-+         const ZB = BB.zW.YZB(IB);
-+         return (null === ZB || void 0 === ZB ? void 0 : ZB.zN) === BB.Jm
+-         return "string" === typeof IB ? IB : BB && !BB(IB, this.yC, !0) ? "has a lookup context wasm can't take (a world offset or walk-through override)" : IB
++         return "string" === typeof et ? et : tt && !tt(et, this.gJ, !0) ? "has a lookup context wasm can't take (a world offset or walk-through override)" : et
 ```
 
-#### 1390. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11267-L11269` → after: `L11103-L11105`)
+#### 323. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3170` → after: `L3170`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11103) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11103-L11105)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11103-L11105) · [Before (L11267-L11269)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11267-L11269)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3170) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3170)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3170) · [Before (L3170)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3170)
 
 ```diff
--           pB = jB.vG.JjB(zB),
--           rB = jB.vG.XjB(zB),
--           sB = jB.vG.RjB(zB),
-+           hB = IB.zW.uIB(ZB),
-+           zB = IB.zW.zZB(ZB),
-+           FB = IB.zW.YZB(ZB),
+-           this.current = new(this.wasm.getBloxdWasm().PhysicsEngine)(IB.iz, IB.fluidDrag, IB.pz, ZB[0], ZB[1], ZB[2], IB.minBounceImpulse, yZ[this.kind]), this.options.fill(NaN), this.listView = null, this.listed = 0, this.listSynced = !1, this.rollbackSlot = -1
++           this.current = new(this.wasm.getBloxdWasm().PhysicsEngine)(et.Nl, et.fluidDrag, et.al, Vt[0], Vt[1], Vt[2], et.minBounceImpulse, aV[this.kind]), this.options.fill(NaN), this.listView = null, this.listed = 0, this.listSynced = !1, this.rollbackSlot = -1
 ```
 
-#### 1391. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11272` → after: `L11108`)
+#### 324. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3175` → after: `L3175`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11108) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11108)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11108) · [Before (L11272)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11272)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3175) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3175)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3175) · [Before (L3175)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3175)
 
 ```diff
--         if (null !== sB && void 0 !== sB && sB.OjB) {
-+         if (null !== FB && void 0 !== FB && FB.iZB) {
+-         if (BB.zz() < IB && (BB.yz(Math.max(IB, 2 * BB.zz(), 16)), this.listView = null), !this.listView) {
++         if (tt.Vl() < et && (tt.dl(Math.max(et, 2 * tt.Vl(), 16)), this.listView = null), !this.listView) {
 ```
 
-#### 1392. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11274-L11276` → after: `L11110-L11112`)
+#### 325. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3177` → after: `L3177`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11110) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11110-L11112)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11110-L11112) · [Before (L11274-L11276)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11274-L11276)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3177) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3177)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3177) · [Before (L3177)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3177)
 
 ```diff
--           const BB = jB.vG.CBB(jB.zV),
--             zB = (0, Cp.t)(jB.bloxd.getResolvedPhysicsSettings(jB.zV, BB.physicsState), BB.steeringHeading, lU.b.getPlayerFacingHeading(jB));
--           mB = [null !== (yB = null !== (kB = null === JB || void 0 === JB || null === (GB = JB.serverSetRotation) || void 0 === GB ? void 0 : GB[0]) && void 0 !== kB ? kB : aB.xRotation) && void 0 !== yB ? yB : 0, zB, null !== (LB = null !== (gB = null === JB || void 0 === JB || … [truncated]
-+           const BB = IB.zW.dIB(IB.Jm),
-+             ZB = (0, xh.u)(IB.bloxd.getResolvedPhysicsSettings(IB.Jm, BB.physicsState), BB.steeringHeading, uc.c.getPlayerFacingHeading(IB));
-+           gB = [null !== (qB = null !== (yB = null === NB || void 0 === NB || null === (UB = NB.serverSetRotation) || void 0 === UB ? void 0 : UB[0]) && void 0 !== yB ? yB : nB.xRotation) && void 0 !== qB ? qB : 0, ZB, null !== (WB = null !== (dB = null === NB || void 0 === NB || … [truncated]
+-           this.listView = new IB(Uint32Array, BB.Fz(), BB.zz()), this.impactsView = new IB(Float64Array, BB.hz(), 3), this.resultView = new IB(Float64Array, BB.Uz(), 5)
++           this.listView = new et(Uint32Array, tt.Ol(), tt.Vl()), this.impactsView = new et(Float64Array, tt.el(), 3), this.resultView = new et(Float64Array, tt.jl(), 5)
 ```
 
-#### 1393. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11280` → after: `L11116`)
+#### 326. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3185` → after: `L3185`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11116) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11116)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11116) · [Before (L11280)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11280)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3185) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3185)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3185) · [Before (L3185)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3185)
 
 ```diff
--           mB = [0, null !== (SB = null !== (MB = pB.heading) && void 0 !== MB ? MB : aB.yRotation) && void 0 !== SB ? SB : 0, 0]
-+           gB = [0, null !== (QB = null !== (sB = hB.heading) && void 0 !== sB ? sB : nB.yRotation) && void 0 !== QB ? QB : 0, 0]
+-           const BB = new Uint32Array(this.store.ah);
++           const tt = new Uint32Array(this.store.uQ);
 ```
 
-#### 1394. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11283-L11285` → after: `L11119-L11121`)
+#### 327. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3197` → after: `L3197`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11119) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11119-L11121)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11119-L11121) · [Before (L11283-L11285)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11283-L11285)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3197) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3197)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3197) · [Before (L3197)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3197)
 
 ```diff
--           type: null !== (QB = null !== (nB = aB.type) && void 0 !== nB ? nB : BB.getEntityType(zB)) && void 0 !== QB ? QB : "Player",
--           name: null !== (dB = null !== (IB = aB.name) && void 0 !== IB ? IB : jB.bloxd.getRawEntityName(zB)) && void 0 !== dB ? dB : "",
--           position: Dr(jB.vG.iG(zB)),
-+           type: null !== (TB = null !== (JB = nB.type) && void 0 !== JB ? JB : BB.getEntityType(ZB)) && void 0 !== TB ? TB : "Player",
-+           name: null !== (oB = null !== (GB = nB.name) && void 0 !== GB ? GB : IB.bloxd.getRawEntityName(ZB)) && void 0 !== oB ? oB : "",
-+           position: Hz(IB.zW.aU(ZB)),
+-           let kB = this.yC(vB);
++           let jt = this.gJ(dt);
 ```
 
-#### 1395. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11287-L11288` → after: `L11123-L11124`)
+#### 328. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3210` → after: `L3210`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11123) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11123-L11124)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11123-L11124) · [Before (L11287-L11288)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11287-L11288)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3210) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3210)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3210) · [Before (L3210)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3210)
 
 ```diff
--           scale: (0, DB.f)(zB),
--           followingEId: null !== (NB = null === sB || void 0 === sB ? void 0 : sB.SJ) && void 0 !== NB ? NB : null,
-+           scale: (0, HB.e)(ZB),
-+           followingEId: null !== (vB = null === FB || void 0 === FB ? void 0 : FB.zN) && void 0 !== vB ? vB : null,
+-         return this.reserveList(IB, TB), this.staging.clear(), null === this.fillList(BB, !0) ? `lists a body twice, or ${kT}` : (this.listSynced && TB === this.listed || (IB.Yz(TB, ZB.handle), this.listSynced = !0, this.listed = TB), this.listReleases = ZB.releases, this.setRoll … [truncated]
++         return this.reserveList(et, Ot), this.staging.clear(), null === this.fillList(tt, !0) ? `lists a body twice, or ${HO}` : (this.listSynced && Ot === this.listed || (et.yl(Ot, Vt.handle), this.listSynced = !0, this.listed = Ot), this.listReleases = Vt.releases, this.setRoll … [truncated]
 ```
 
-#### 1396. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11290` → after: `L11126`)
+#### 329. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3216` → after: `L3216`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11126) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11126)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11126) · [Before (L11290)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11290)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3216) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3216)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3216) · [Before (L3216)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3216)
 
 ```diff
--           shouldMatchFollowingEntityRotation: null === (uB = null === sB || void 0 === sB ? void 0 : sB.OjB) || void 0 === uB || uB,
-+           shouldMatchFollowingEntityRotation: null === (kB = null === FB || void 0 === FB ? void 0 : FB.iZB) || void 0 === kB || kB,
+-         ZB < 0 && (ZB = this.staging.rollbackSlot()), ZB !== this.rollbackSlot && (BB.jz(ZB, IB.handle), this.rollbackSlot = ZB)
++         Vt < 0 && (Vt = this.staging.rollbackSlot()), Vt !== this.rollbackSlot && (tt.Jl(Vt, et.handle), this.rollbackSlot = Vt)
 ```
 
-#### 1397. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11292` → after: `L11128`)
+#### 330. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3227` → after: `L3227`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11128) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11128)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11128) · [Before (L11292)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11292)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3227) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3227)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3227) · [Before (L3227)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3227)
 
 ```diff
--           RY: hr(null === (UB = jB.RY[jB.zV]) || void 0 === UB ? void 0 : UB[zB]),
-+           Tm: Rz(null === (cB = IB.Tm[IB.Jm]) || void 0 === cB ? void 0 : cB[ZB]),
+-         return this.reserveList(TB, IB), null === this.fillList(BB, !1) ? 2 : (TB.Yz(IB, ZB.handle), this.listSynced = !0, this.listed = IB, this.listReleases = ZB.releases, 1)
++         return this.reserveList(Ot, et), null === this.fillList(tt, !1) ? 2 : (Ot.yl(et, Vt.handle), this.listSynced = !0, this.listed = et, this.listReleases = Vt.releases, 1)
 ```
 
-#### 1398. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11303-L11304` → after: `L11139-L11140`)
+#### 331. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3232` → after: `L3232`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11139) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11139-L11140)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11139-L11140) · [Before (L11303-L11304)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11303-L11304)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3232) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3232)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3232) · [Before (L3232)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3232)
 
 ```diff
--             type: null !== (QB = null !== (nB = aB.type) && void 0 !== nB ? nB : BB.getEntityType(zB)) && void 0 !== QB ? QB : "Player",
--             name: null !== (dB = aB.name) && void 0 !== dB ? dB : "",
-+             type: null !== (TB = null !== (JB = nB.type) && void 0 !== JB ? JB : BB.getEntityType(ZB)) && void 0 !== TB ? TB : "Player",
-+             name: null !== (oB = nB.name) && void 0 !== oB ? oB : "",
+-           const TB = this.yC(BB[ZB]);
++           const Ot = this.gJ(tt[Vt]);
 ```
 
-#### 1399. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11307-L11308` → after: `L11143-L11144`)
+#### 332. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3247` → after: `L3247`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11143) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11143-L11144)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11143-L11144) · [Before (L11307-L11308)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11307-L11308)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3247) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3247)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3247) · [Before (L3247)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3247)
 
 ```diff
--             scale: null !== (IB = aB.scale) && void 0 !== IB ? IB : 1,
--             followingEId: null !== (NB = aB.followingEId) && void 0 !== NB ? NB : null,
-+             scale: null !== (GB = nB.scale) && void 0 !== GB ? GB : 1,
-+             followingEId: null !== (vB = nB.followingEId) && void 0 !== vB ? vB : null,
+-         Object.is(IB[0], BB.iz) && Object.is(IB[1], BB.fluidDrag) && Object.is(IB[2], BB.pz) && Object.is(IB[3], ZB[0]) && Object.is(IB[4], ZB[1]) && Object.is(IB[5], ZB[2]) && Object.is(IB[6], BB.minBounceImpulse) || (IB[0] = BB.iz, IB[1] = BB.fluidDrag, IB[2] = BB.pz, IB[3] = Z … [truncated]
++         Object.is(et[0], tt.Nl) && Object.is(et[1], tt.fluidDrag) && Object.is(et[2], tt.al) && Object.is(et[3], Vt[0]) && Object.is(et[4], Vt[1]) && Object.is(et[5], Vt[2]) && Object.is(et[6], tt.minBounceImpulse) || (et[0] = tt.Nl, et[1] = tt.fluidDrag, et[2] = tt.al, et[3] = V … [truncated]
 ```
 
-#### 1400. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11312` → after: `L11148`)
+#### 333. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3257` → after: `L3257`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11148) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11148)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11148) · [Before (L11312)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11312)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3257) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3257)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3257) · [Before (L3257)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3257)
 
 ```diff
--             RY: hr(null === (UB = jB.RY[jB.zV]) || void 0 === UB ? void 0 : UB[zB]),
-+             Tm: Rz(null === (cB = IB.Tm[IB.Jm]) || void 0 === cB ? void 0 : cB[ZB]),
+-         this.physics = BB, this.host = IB, this.bodies = void 0, this.impacts = new Float64Array(3), this.testSolid = void 0, this.testFluid = void 0, this.rollsBack = void 0, this.failedInTick = !1, this.stoppedMs = 0, this.stoppedRun = 0, this.lastStopAt = 0, this.lost = !1, th … [truncated]
++         this.physics = tt, this.host = et, this.bodies = void 0, this.impacts = new Float64Array(3), this.testSolid = void 0, this.testFluid = void 0, this.rollsBack = void 0, this.failedInTick = !1, this.stoppedMs = 0, this.stoppedRun = 0, this.lastStopAt = 0, this.lost = !1, th … [truncated]
 ```
 
-#### 1401. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11330` → after: `L11166`)
+#### 334. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3268` → after: `L3268`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11166) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11166)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11166) · [Before (L11330)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11330)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3268) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3268)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3268) · [Before (L3268)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3268)
 
 ```diff
--         return BB.vG.yjB(BB.zV)
-+         return BB.zW.lIB(BB.Jm)
+-         if (this.host.stats.stoppedTicks++, this.host.failure.fatal) throw new Error(`wasm physics: ${TB} physics ${BB}, and it runs only in wasm here`);
++         if (this.host.stats.stoppedTicks++, this.host.failure.fatal) throw new Error(`wasm physics: ${Ot} physics ${tt}, and it runs only in wasm here`);
 ```
 
-#### 1402. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11352-L11353` → after: `L11188-L11189`)
+#### 335. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3270` → after: `L3270`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11188) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11188-L11189)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11188-L11189) · [Before (L11352-L11353)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11352-L11353)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3270) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3270)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3270) · [Before (L3270)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3270)
 
 ```diff
--       for (let nB = 0; nB < XB.n; nB++) lr(BB.slots[nB], jB.slots[nB]) || (QB[nB] = BB.slots[nB]);
--       return (0, NB.Ac)(QB) || (zB.slots = QB), zB
-+       for (let JB = 0; JB < rB.m; JB++) lz(BB.slots[JB], IB.slots[JB]) || (TB[JB] = BB.slots[JB]);
-+       return (0, vB.vc)(TB) || (ZB.slots = TB), ZB
+-         KI(BB, (() => new Error(`wasm physics: ${TB} physics ${BB}, so its tick stopped there`)), this.host.failure, !0, this.stopsReported);
++         se(tt, (() => new Error(`wasm physics: ${Ot} physics ${tt}, so its tick stopped there`)), this.host.failure, !0, this.stopsReported);
 ```
 
-#### 1403. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11357` → after: `L11193`)
+#### 336. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3272` → after: `L3272`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11193) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11193)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11193) · [Before (L11357)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11357)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3272) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3272)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3272) · [Before (L3272)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3272)
 
 ```diff
--       return !!BB && (void 0 !== BB.selectedSlotIndex || void 0 !== BB.slots && !(0, NB.Ac)(BB.slots))
-+       return !!BB && (void 0 !== BB.selectedSlotIndex || void 0 !== BB.slots && !(0, vB.vc)(BB.slots))
+-         JB - this.lastStopAt > 3e3 && (this.stoppedMs = 0, this.stoppedRun = 0), this.lastStopAt = JB, this.stoppedMs += ZB, this.stoppedRun++, !this.lost && this.stoppedRun >= 100 && this.stoppedMs >= 1e4 && this.lose(`${BB}, on every tick for ${Math.round(this.stoppedMs/1e3)}s` … [truncated]
++         qt - this.lastStopAt > 3e3 && (this.stoppedMs = 0, this.stoppedRun = 0), this.lastStopAt = qt, this.stoppedMs += Vt, this.stoppedRun++, !this.lost && this.stoppedRun >= 100 && this.stoppedMs >= 1e4 && this.lose(`${tt}, on every tick for ${Math.round(this.stoppedMs/1e3)}s` … [truncated]
 ```
 
-#### 1404. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11363` → after: `L11199`)
+#### 337. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3280` → after: `L3280`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11199) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11199)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11199) · [Before (L11363)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11363)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3280) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3280)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3280) · [Before (L3280)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3280)
 
 ```diff
--           return Array.isArray(BB.slots) && BB.slots.length === XB.n && void 0 !== BB.selectedSlotIndex
-+           return Array.isArray(BB.slots) && BB.slots.length === rB.m && void 0 !== BB.selectedSlotIndex
+-         const IB = new Error(`wasm physics: ${this.host.kind} physics ${BB}, so it can't tick until the page reloads`);
++         const et = new Error(`wasm physics: ${this.host.kind} physics ${tt}, so it can't tick until the page reloads`);
 ```
 
-#### 1405. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11385` → after: `L11221`)
+#### 338. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3282` → after: `L3282`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11221) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11221)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11221) · [Before (L11385)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11385)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3282) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3282)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3282) · [Before (L3282)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3282)
 
 ```diff
--         selectedSlotIndex: null !== (zB = jB.selectedSlotIndex) && void 0 !== zB ? zB : BB.selectedSlotIndex,
-+         selectedSlotIndex: null !== (ZB = IB.selectedSlotIndex) && void 0 !== ZB ? ZB : BB.selectedSlotIndex,
+-         (console.error(IB), this.host.failure.lost) ? this.host.failure.lost(IB): null === (ZB = (TB = this.host.failure).JN) || void 0 === ZB || ZB.call(TB, IB)
++         (console.error(et), this.host.failure.lost) ? this.host.failure.lost(et): null === (Vt = (Ot = this.host.failure).iE) || void 0 === Vt || Vt.call(Ot, et)
 ```
 
-#### 1406. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11393` → after: `L11229`)
+#### 339. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3315-L3316` → after: `L3315-L3316`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11229) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11229)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11229) · [Before (L11393)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11393)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3315) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3315-L3316)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3315-L3316) · [Before (L3315-L3316)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3315-L3316)
 
 ```diff
--         for (let BB = 0; BB < XB.n; BB++) {
-+         for (let BB = 0; BB < rB.m; BB++) {
+-         if (!this.rollsBack) return BB.Qz || BB.Ql ? "was given unloaded hooks" : null;
+-         return (0, AI.o)(BB.Qz) === this.host.kind && "cell" === (0, AI.o)(BB.Ql) ? null : "had an unloaded hook replaced"
++         if (!this.rollsBack) return tt.ll || tt.mG ? "was given unloaded hooks" : null;
++         return (0, Ye.n)(tt.ll) === this.host.kind && "cell" === (0, Ye.n)(tt.mG) ? null : "had an unloaded hook replaced"
 ```
 
-#### 1407. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11396` → after: `L11232`)
+#### 340. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3329` → after: `L3329`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11232) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11232)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11232) · [Before (L11396)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11396)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3329) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3329)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3329) · [Before (L3329)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3329)
 
 ```diff
--           if (nB) zB.setItemSlot(BB, nB.name, null !== (QB = nB.amount) && void 0 !== QB ? QB : 0, er(nB.attributes));
-+           if (JB) ZB.setItemSlot(BB, JB.name, null !== (TB = JB.amount) && void 0 !== TB ? TB : 0, fz(JB.attributes));
+-           if (JB = IB, 5 === JB.Bz(BB, this.bodies.bodyStore.handle)) return kT
++           if (qt = et, 5 === qt.YQ(tt, this.bodies.bodyStore.handle)) return HO
 ```
 
-#### 1408. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11399` → after: `L11235`)
+#### 341. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3364` → after: `L3364`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11235) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11235)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11235) · [Before (L11399)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11399)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3364) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3364)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3364) · [Before (L3364)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3364)
 
 ```diff
--         zB.getSelectedSlotIndex() !== jB.selectedSlotIndex && (zB.setSelectedSlotIndex(jB.selectedSlotIndex), yB.n.Ly("setSelectedInventorySlotI", jB.selectedSlotIndex))
-+         ZB.getSelectedSlotIndex() !== IB.selectedSlotIndex && (ZB.setSelectedSlotIndex(IB.selectedSlotIndex), qB.l.Gq("setSelectedInventorySlotI", IB.selectedSlotIndex))
+-           const oB = BB.resume(IB.vz, ZB);
++           const Dt = tt.resume(et.sQ, Vt);
 ```
 
-#### 1409. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11416` → after: `L11252`)
+#### 342. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3366` → after: `L3366`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11252) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11252)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11252) · [Before (L11416)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11416)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3366) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3366)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3366) · [Before (L3366)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3366)
 
 ```diff
--       Rr(Sr.t, BB)
-+       Vz(Qz.w, BB)
+-             if (this.host.stats.missRounds++, ++TB > 4096) return IB.vz.lz(), "missed chunks for 4096 rounds";
++             if (this.host.stats.missRounds++, ++Ot > 4096) return et.sQ.Rl(), "missed chunks for 4096 rounds";
 ```
 
-#### 1410. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11418` → after: `L11254`)
+#### 343. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3372` → after: `L3372`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11254) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11254)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11254) · [Before (L11418)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11418)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3372) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3372)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3372) · [Before (L3372)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3372)
 
 ```diff
--     var Bs = zB(37046);
-+     var BF = ZB(36990);
+-           if (3 === oB) throw new bI(new Error(YZ(BB.nz())));
++           if (3 === Dt) throw new pe(new Error(WV(tt.tl())));
 ```
 
-#### 1411. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11443` → after: `L11279`)
+#### 344. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3375` → after: `L3375`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11279) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11279)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11279) · [Before (L11443)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11443)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3375) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3375)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3375) · [Before (L3375)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3375)
 
 ```diff
--         QB[dB] = ns(BB[dB], null !== (nB = jB[dB]) && void 0 !== nB ? nB : null, zB, {
-+         TB[oB] = TF(BB[oB], null !== (JB = IB[oB]) && void 0 !== JB ? JB : null, ZB, {
+-           if (vB.Wz) {
++           if (dt.Hl) {
 ```
 
-#### 1412. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11454` → after: `L11290`)
+#### 345. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3379` → after: `L3379`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11290) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11290)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11290) · [Before (L11454)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11454)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3379) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3379)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3379) · [Before (L3379)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3379)
 
 ```diff
--       let QB = as(BB.ticks[zB]);
-+       let TB = cF(BB.ticks[ZB]);
+-               vB.Wz(this.impacts)
++               dt.Hl(this.impacts)
 ```
 
-#### 1413. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11482` → after: `L11318`)
+#### 346. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3389` → after: `L3389`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11318) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11318)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11318) · [Before (L11482)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11482)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3389) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3389)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3389) · [Before (L3389)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3389)
 
 ```diff
--         zB[nB] = us(null !== (QB = BB[nB]) && void 0 !== QB ? QB : null, jB[nB])
-+         ZB[JB] = vF(null !== (TB = BB[JB]) && void 0 !== TB ? TB : null, IB[JB])
+-           if (null !== kB) return `${kB} in an onCollide handler`;
++           if (null !== jt) return `${jt} in an onCollide handler`;
 ```
 
-#### 1414. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11487` → after: `L11323`)
+#### 347. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3417` → after: `L3417`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11323) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11323)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11323) · [Before (L11487)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11487)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3417) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3417)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3417) · [Before (L3417)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3417)
 
 ```diff
--     function as(BB) {
-+     function cF(BB) {
+-             ZB.Cz && ZB.Cz()
++             Vt.Ql && Vt.Ql()
 ```
 
-#### 1415. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11496` → after: `L11332`)
+#### 348. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3431-L3432` → after: `L3431-L3432`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11332) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11332)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11332) · [Before (L11496)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11496)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3431) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3431-L3432)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3431-L3432) · [Before (L3431-L3432)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3431-L3432)
 
 ```diff
--         effects: null !== (jB = BB.effects) && void 0 !== jB ? jB : {}
-+         effects: null !== (IB = BB.effects) && void 0 !== IB ? IB : {}
+-         const oB = !IB.Tz;
+-         return oB && (this.pendingSlot = -1, this.pendingBody = null), !(this.tickLen > ZB.length) && (BB.gz(this.committedCursor, this.tickLen, oB), !(this.host.prepare && !this.host.prepare(BB, TB.yC, 0 !== JB)) && (!!TB.encodeStagedAfterHandler(this.pendingSlot, this.committed … [truncated]
++         const Dt = !et.xQ;
++         return Dt && (this.pendingSlot = -1, this.pendingBody = null), !(this.tickLen > Vt.length) && (tt.Dl(this.committedCursor, this.tickLen, Dt), !(this.host.prepare && !this.host.prepare(tt, Ot.gJ, 0 !== qt)) && (!!Ot.encodeStagedAfterHandler(this.pendingSlot, this.committed … [truncated]
 ```
 
-#### 1416. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11509` → after: `L11345`)
+#### 349. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3437` → after: `L3437`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11345) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11345)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11345) · [Before (L11509)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11509)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3437) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3437)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3437) · [Before (L3437)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3437)
 
 ```diff
--         effects: null !== (zB = jB.effects) && void 0 !== zB ? zB : BB.effects
-+         effects: null !== (ZB = IB.effects) && void 0 !== ZB ? ZB : BB.effects
+-         this.Nz = BB, this.physics = IB, this.options = ZB, this.stats = {
++         this.ql = tt, this.physics = et, this.options = Vt, this.stats = {
 ```
 
-#### 1417. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11529-L11531` → after: `L11365-L11367`)
+#### 350. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3488` → after: `L3488`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11365) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11365-L11367)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11365-L11367) · [Before (L11529-L11531)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11529-L11531)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3488) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3488)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3488) · [Before (L3488)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3488)
 
 ```diff
--       if (lU.b.isCameraDetachedFromPlayer(BB)) return !1;
--       const jB = BB.vG.getState(BB.zV, "cameraShake").frontFacing;
--       return 0 === BB.camera.Xw && !jB
-+       if (uc.c.isCameraDetachedFromPlayer(BB)) return !1;
-+       const IB = BB.zW.getState(BB.Jm, "cameraShake").frontFacing;
-+       return 0 === BB.camera.NK && !IB
+-           JN: ZB.reportError,
++           iE: Vt.reportError,
 ```
 
-#### 1418. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11536` → after: `L11372`)
+#### 351. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3501-L3502` → after: `L3501-L3502`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11372) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11372)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11372) · [Before (L11536)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11536)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3501) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3501-L3502)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3501-L3502) · [Before (L3501-L3502)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3501-L3502)
 
 ```diff
--       const QB = BB.vG.ZjB(BB.zV);
-+       const TB = BB.zW.FZB(BB.Jm);
+-               const ZB = this.Nz.zW.vx(this.Nz.Jm);
+-               BB.sz(ZB ? IB(ZB) : -1)
++               const Vt = this.ql.mJ.YG(this.ql.lL);
++               tt.El(Vt ? et(Vt) : -1)
 ```
 
-#### 1419. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11544` → after: `L11380`)
+#### 352. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3549` → after: `L3549`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11380) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11380)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11380) · [Before (L11544)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11544)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3549) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3549)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3549) · [Before (L3549)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3549)
 
 ```diff
--       const jB = BB.vG.ZjB(BB.zV);
-+       const IB = BB.zW.FZB(BB.Jm);
+-         this.driver.Iz(BB)
++         this.driver.BQ(tt)
 ```
 
-#### 1420. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11549-L11550` → after: `L11385-L11386`)
+#### 353. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3560` → after: `L3560`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11385) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11385-L11386)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11385-L11386) · [Before (L11549-L11550)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11549-L11550)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3560) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3560)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3560) · [Before (L3560)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3560)
 
 ```diff
--       const jB = BB.camera.iG(),
--         zB = BB.camera.uC();
-+       const IB = BB.camera.aU(),
-+         ZB = BB.camera.fV();
+-         return GB.JA(vB, BB, IB, ZB, TB, JB, oB)
++         return mt.aG(dt, tt, et, Vt, Ot, qt, Dt)
 ```
 
-#### 1421. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11559-L11563` → after: `L11395-L11399`)
+#### 354. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3571` → after: `L3571`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11395) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11395-L11399)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11395-L11399) · [Before (L11559-L11563)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11559-L11563)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3571) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3571)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3571) · [Before (L3571)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3571)
 
 ```diff
--     var Ls = zB(37821),
--       gs = zB(37031),
--       ts = zB(37816),
--       Ss = zB(37151);
--     const Ms = XB.y * XB.y * XB.y;
-+     var yF = ZB(37794),
-+       UF = ZB(36984),
-+       WF = ZB(37787),
-+       dF = ZB(37101);
-+     const CF = rB.C * rB.C * rB.C;
+-           return BB = IB, this.physics.rollbackBody = uI(((BB, ZB, TB, JB, oB, GB, vB) => IB.JA(IB.allocate(), BB, ZB, TB, JB, oB, GB, vB))), IB
++           return tt = et, this.physics.rollbackBody = Ue(((tt, Vt, Ot, qt, Dt, mt, dt) => et.aG(et.allocate(), tt, Vt, Ot, qt, Dt, mt, dt))), et
 ```
 
-#### 1422. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11584` → after: `L11420`)
+#### 355. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3586` → after: `L3586`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11420) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11420)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11420) · [Before (L11584)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11584)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3586) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3586)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3586) · [Before (L3586)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3586)
 
 ```diff
--         const [BB, nB, dB] = (0, ts.e)(zB);
-+         const [BB, JB, oB] = (0, WF.h)(ZB);
+-           return BB ? TB && !(0, AI.d)(TB) ? mZ(IB, ZB, "has a block test not marked markIdOnlyBlockTest") : !JB || eZ(JB[0]) && eZ(JB[1]) && eZ(JB[2]) ? BB.TF(IB, ZB) : mZ(IB, ZB, "has an offset that isn't whole cells") : mZ(IB, ZB, "has no mirror")
++           return tt ? Ot && !(0, Ye.d)(Ot) ? GV(et, Vt, "has a block test not marked markIdOnlyBlockTest") : !qt || rV(qt[0]) && rV(qt[1]) && rV(qt[2]) ? tt.il(et, Vt) : GV(et, Vt, "has an offset that isn't whole cells") : GV(et, Vt, "has no mirror")
 ```
 
-#### 1423. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11587` → after: `L11423`)
+#### 356. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3605` → after: `L3605`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11423) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11423)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11423) · [Before (L11587)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11587)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3605) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3605)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3605) · [Before (L3605)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3605)
 
 ```diff
--           rle: [...Ls.encode(QB.Vr)],
-+           rle: [...yF.encode(TB.mz)],
+-             const ZB = BB.Rz(IB.vz, JB[0], JB[1], JB[2], oB[0], oB[1], oB[2], TB[0], TB[1], TB[2]);
++             const Vt = tt.ul(et.sQ, qt[0], qt[1], qt[2], Dt[0], Dt[1], Dt[2], Ot[0], Ot[1], Ot[2]);
 ```
 
-#### 1424. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11598` → after: `L11434`)
+#### 357. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3609` → after: `L3609`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11434) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11434)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11434) · [Before (L11598)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11598)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3609) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3609)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3609) · [Before (L3609)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3609)
 
 ```diff
--             Vr: qs(zB.rle),
-+             mz: wF(ZB.rle),
+-           IB.vz.lz()
++           et.sQ.Rl()
 ```
 
-#### 1425. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11605` → after: `L11441`)
+#### 358. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3617` → after: `L3617`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11441) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11441)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11441) · [Before (L11605)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11605)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3617) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3617)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3617) · [Before (L3617)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3617)
 
 ```diff
--         case "eD":
-+         case "UH":
+-         return null !== (BB = null === (IB = this.mirror) || void 0 === IB ? void 0 : IB.residency()) && void 0 !== BB ? BB : null
++         return null !== (tt = null === (et = this.mirror) || void 0 === et ? void 0 : et.residency()) && void 0 !== tt ? tt : null
 ```
 
-#### 1426. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11614` → after: `L11450`)
+#### 359. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3620-L3621` → after: `L3620-L3621`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11450) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11450)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11450) · [Before (L11614)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11614)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3620) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3620-L3621)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3620-L3621) · [Before (L3620-L3621)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3620-L3621)
 
 ```diff
--       const [QB, nB, dB] = jB, IB = Math.floor(QB / XB.y), uB = Math.floor(nB / XB.y), UB = Math.floor(dB / XB.y), aB = (0, ts.c)(IB, uB, UB), pB = BB.get(aB);
-+       const [TB, JB, oB] = IB, GB = Math.floor(TB / rB.C), kB = Math.floor(JB / rB.C), cB = Math.floor(oB / rB.C), nB = (0, WF.c)(GB, kB, cB), hB = BB.get(nB);
+-         const IB = this.Nz.Mz;
+-         return this.context.setOffsets(BB, IB, IB) && this.context.uploadOverrides(BB, this.Nz.vz)
++         const et = this.ql.bl;
++         return this.context.setOffsets(tt, et, et) && this.context.uploadOverrides(tt, this.ql.sQ)
 ```
 
-#### 1427. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11616-L11619` → after: `L11452-L11455`)
+#### 360. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3630-L3631` → after: `L3630-L3631`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11452) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11452-L11455)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11452-L11455) · [Before (L11616-L11619)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11616-L11619)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3630) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3630-L3631)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3630-L3631) · [Before (L3630-L3631)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3630-L3631)
 
 ```diff
--       const rB = NB.b.mod(QB, XB.y),
--         sB = NB.b.mod(nB, XB.y),
--         JB = NB.b.mod(dB, XB.y);
--       (0, ts.d)(pB.Vr).set(rB, sB, JB, zB)
-+       const zB = vB.e.mod(TB, rB.C),
-+         FB = vB.e.mod(JB, rB.C),
-+         NB = vB.e.mod(oB, rB.C);
-+       (0, WF.g)(hB.mz).set(zB, FB, NB, ZB)
+-         const IB = this.Nz.vz.Bg.physicsWorld;
+-         return IB && sZ(this.options.wasm) ? (this.mirror = new xZ(this.options.wasm, IB, this.Nz.zF, this.failure), this.mirror) : null
++         const et = this.ql.sQ.Yf.physicsWorld;
++         return et && KV(this.options.wasm) ? (this.mirror = new xV(this.options.wasm, et, this.ql.tE, this.failure), this.mirror) : null
 ```
 
-#### 1428. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11623` → after: `L11459`)
+#### 361. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3637` → after: `L3637`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11459) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11459)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11459) · [Before (L11623)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11623)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3637) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3637)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3637) · [Before (L3637)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3637)
 
 ```diff
--       const [QB, nB, dB] = jB, IB = Math.floor(QB / XB.y), uB = Math.floor(nB / XB.y), UB = Math.floor(dB / XB.y), aB = BB.get((0, ts.c)(IB, uB, UB));
-+       const [TB, JB, oB] = IB, GB = Math.floor(TB / rB.C), kB = Math.floor(JB / rB.C), cB = Math.floor(oB / rB.C), nB = BB.get((0, WF.c)(GB, kB, cB));
+-     var zT = ZB(38446);
++     var EO = Vt(38628);
 ```
 
-#### 1429. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11625` → after: `L11461`)
+#### 362. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3647` → after: `L3647`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11461) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11461)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11461) · [Before (L11625)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11625)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3647) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3647)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3647) · [Before (L3647)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3647)
 
 ```diff
--       const pB = [NB.b.mod(QB, XB.y), NB.b.mod(nB, XB.y), NB.b.mod(dB, XB.y)],
-+       const hB = [vB.e.mod(TB, rB.C), vB.e.mod(JB, rB.C), vB.e.mod(oB, rB.C)],
+-         takeRefusedAllocation: null !== (IB = BB.takeBloxdWasmRefusedAllocation) && void 0 !== IB ? IB : () => 0
++         takeRefusedAllocation: null !== (et = tt.takeBloxdWasmRefusedAllocation) && void 0 !== et ? et : () => 0
 ```
 
-#### 1430. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11637-L11642` → after: `L11473-L11478`)
+#### 363. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3657-L3659` → after: `L3657-L3659`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11473) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11473-L11478)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11473-L11478) · [Before (L11637-L11642)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11637-L11642)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3657) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3657-L3659)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3657-L3659) · [Before (L3657-L3659)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3657-L3659)
 
 ```diff
--       for (const nB of jB.vG.FY(jB.vG.names.position)) zB.add(nB.VY);
--       for (const nB of jB.vG.FY("itemState")) zB.add(nB.VY);
--       for (const nB of zB) qr(jB, nB) || (jB.vG.deleteEntity(nB), (0, Ss.b)(String(nB)));
--       jB.RY[jB.zV] && (jB.RY[jB.zV] = {});
--       const QB = jB.vG.AjB(jB.zV);
--       QB && (QB.planeEId = null), yB.n.Ly(`otherEntitySettingsClientifiedEId|${jB.zV}|canSee`, !1), jB.vG.hjB(jB.zV).isAlive = !1
-+       for (const JB of IB.zW.fR(IB.zW.names.position)) ZB.add(JB.bR);
-+       for (const JB of IB.zW.fR("itemState")) ZB.add(JB.bR);
-+       for (const JB of ZB) Yz(IB, JB) || (IB.zW.deleteEntity(JB), (0, dF.d)(String(JB)));
-+       IB.Tm[IB.Jm] && (IB.Tm[IB.Jm] = {});
-+       const TB = IB.zW.NZB(IB.Jm);
-+       TB && (TB.planeEId = null), qB.l.Gq(`otherEntitySettingsClientifiedEId|${IB.Jm}|canSee`, !1), IB.zW.hZB(IB.Jm).isAlive = !1
+-         const vB = null !== (TB = null === (JB = (oB = GB.bindings).kh) || void 0 === JB ? void 0 : JB.call(oB)) && void 0 !== TB ? TB : [];
+-         if (!(vB.length === gT.length && gT.every(((BB, IB) => vB[IB] === BB)))) throw new Error(`@bloxd/wasm's chunk ingest constants [${Array.from(vB).join()}] are not [${gT.join()}]`);
+-         return new qT(GB, new GB.bindings.Zh, IB, ZB)
++         const dt = null !== (Ot = null === (qt = (Dt = mt.bindings).qQ) || void 0 === qt ? void 0 : qt.call(Dt)) && void 0 !== Ot ? Ot : [];
++         if (!(dt.length === yO.length && yO.every(((tt, et) => dt[et] === tt)))) throw new Error(`@bloxd/wasm's chunk ingest constants [${Array.from(dt).join()}] are not [${yO.join()}]`);
++         return new NO(mt, new mt.bindings.sX, et, Vt)
 ```
 
-#### 1431. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11646` → after: `L11482`)
+#### 364. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3662` → after: `L3662`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11482) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11482)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11482) · [Before (L11646)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11646)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3662) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3662)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3662) · [Before (L3662)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3662)
 
 ```diff
--       BB.zr.BzB(), BB.zr.ijB.empty(), BB.zr.jzB = !0;
-+       BB.vz.pZB(), BB.vz.IZB.empty(), BB.vz.aZB = !0;
+-         this.runtime = BB, this.handle = IB, this.zF = ZB, this.reportTrap = TB, this.lightU8 = void 0, this.lightU16 = void 0, this.registryState = -1, this.lightU8 = new BB.BufferView(Uint8Array, IB.iF(!1), NT), this.lightU16 = new BB.BufferView(Uint16Array, IB.iF(!0), NT)
++         this.runtime = tt, this.handle = et, this.tE = Vt, this.reportTrap = Ot, this.lightU8 = void 0, this.lightU16 = void 0, this.registryState = -1, this.lightU8 = new tt.BufferView(Uint8Array, et.wE(!1), wO), this.lightU16 = new tt.BufferView(Uint16Array, et.wE(!0), wO)
 ```
 
-#### 1432. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11654-L11656` → after: `L11490-L11492`)
+#### 365. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3665` → after: `L3665`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11490) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11490-L11492)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11490-L11492) · [Before (L11654-L11656)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11654-L11656)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3665) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3665)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3665) · [Before (L3665)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3665)
 
 ```diff
--       BB.zr.QzB(jB * XB.y, zB * XB.y, QB * XB.y);
--       const IB = `${jB}|${zB}|${QB}|${BB.IBB}`,
--         NB = new Uint16Array(XB.y * XB.y * XB.y);
-+       BB.vz.HZB(IB * rB.C, ZB * rB.C, TB * rB.C);
-+       const GB = `${IB}|${ZB}|${TB}|${BB.jBB}`,
-+         vB = new Uint16Array(rB.C * rB.C * rB.C);
+-         return this.attempt((() => (this.syncRegistry(), WT(this.handle.aF(IB.vz, IB.slot, BB)), this.scan(IB))))
++         return this.attempt((() => (this.syncRegistry(), bO(this.handle.NE(et.sQ, et.slot, tt)), this.scan(et))))
 ```
 
-#### 1433. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11658-L11659` → after: `L11494-L11495`)
+#### 366. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3671` → after: `L3671`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11494) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11494-L11495)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11494-L11495) · [Before (L11658-L11659)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11658-L11659)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3671) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3671)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3671) · [Before (L3671)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3671)
 
 ```diff
--       const uB = (0, ts.d)(NB);
--       BB.zr.bS(IB, uB, null), BB.bloxd.chunkAdded(jB, zB, QB, uB, is(dB))
-+       const kB = (0, WF.g)(vB);
-+       BB.vz.zC(GB, kB, null), BB.bloxd.chunkAdded(IB, ZB, TB, kB, sF(oB))
+-         return this.attempt((() => (WT(this.handle.pF(BB, IB)), IB ? this.lightU16.view().slice() : this.lightU8.view().slice())))
++         return this.attempt((() => (bO(this.handle.yE(tt, et)), et ? this.lightU16.view().slice() : this.lightU8.view().slice())))
 ```
 
-#### 1434. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11664-L11665` → after: `L11500-L11501`)
+#### 367. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3674` → after: `L3674`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11500) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11500-L11501)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11500-L11501) · [Before (L11664-L11665)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11664-L11665)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3674) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3674)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3674) · [Before (L3674)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3674)
 
 ```diff
--       for (const zB of Object.keys(BB.zr.Fm.hash)) {
--         const QB = BB.zr.Fm.hash[Number(zB)];
-+       for (const ZB of Object.keys(BB.vz.Wg.hash)) {
-+         const TB = BB.vz.Wg.hash[Number(ZB)];
+-         const IB = this.handle.scan(BB.vz, BB.slot),
++         const et = this.handle.scan(tt.sQ, tt.slot),
 ```
 
-#### 1435. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11667` → after: `L11503`)
+#### 368. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3678-L3681` → after: `L3678-L3681`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11503) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11503)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11503) · [Before (L11667)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11667)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3678) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3678-L3681)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3678-L3681) · [Before (L3678-L3681)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3678-L3681)
 
 ```diff
--           Vr: new Uint16Array(QB.Vr.data),
-+           mz: new Uint16Array(TB.mz.data),
+-           Cw: this.runtime.view(Uint16Array, this.handle.HF(), 32).slice(),
+-           Ow: 1 === ZB || 0 !== ZB && void 0,
+-           hN: 0 !== (4 & IB),
+-           Gw: this.runtime.view(Uint16Array, this.handle.MF(), TB).slice()
++           VK: this.runtime.view(Uint16Array, this.handle.aE(), 32).slice(),
++           jK: 1 === Vt || 0 !== Vt && void 0,
++           sE: 0 !== (4 & et),
++           Tu: this.runtime.view(Uint16Array, this.handle.ME(), Ot).slice()
 ```
 
-#### 1436. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11673-L11674` → after: `L11509-L11510`)
+#### 369. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3692` → after: `L3692`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11509) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11509-L11510)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11509-L11510) · [Before (L11673-L11674)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11673-L11674)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3692) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3692)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3692) · [Before (L3692)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3692)
 
 ```diff
--     var Xs = zB(36574),
--       Zs = zB(37012);
-+     var PF = ZB(36529),
-+       RF = ZB(36969);
+-             ZB = new Error(`Chunk ingest trapped in wasm (${BB})`);
++             Vt = new Error(`Chunk ingest trapped in wasm (${tt})`);
 ```
 
-#### 1437. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11677` → after: `L11513`)
+#### 370. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3698-L3699` → after: `L3698-L3699`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11513) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11513)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11513) · [Before (L11677)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11677)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3698) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3698-L3699)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3698-L3699) · [Before (L3698-L3699)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3698-L3699)
 
 ```diff
--         this.client = BB, this.ur = jB, this.isRecording = !1, this.isClipping = !1, this.clippingWanted = !1, this.sessionAllowsClipping = !1, this.maxClipTicks = Mr.i * JB.e.clientTicksPerSecond, this.windowStartChunks = new Map, this.state = {
-+         this.client = BB, this.Nz = IB, this.isRecording = !1, this.isClipping = !1, this.clippingWanted = !1, this.sessionAllowsClipping = !1, this.maxClipTicks = sz.g * NB.f.clientTicksPerSecond, this.windowStartChunks = new Map, this.state = {
+-         const IB = this.zF,
+-           ZB = 65536 * (null !== (BB = IB.hA) && void 0 !== BB ? BB : 0) + IB.Jg.length;
++         const et = this.tE,
++           Vt = 65536 * (null !== (tt = et.JG) && void 0 !== tt ? tt : 0) + et.Tf.length;
 ```
 
-#### 1438. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11681-L11682` → after: `L11517-L11518`)
+#### 371. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3703` → after: `L3703`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11517) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11517-L11518)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11517-L11518) · [Before (L11681-L11682)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11681-L11682)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3703) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3703)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3703) · [Before (L3703)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3703)
 
 ```diff
--             KF: JB.e.clientTicksPerSecond,
--             keyframeIntervalTicks: Sr.d,
-+             bM: NB.f.clientTicksPerSecond,
-+             keyframeIntervalTicks: Qz.e,
+-           const IB = Math.max(BB.Jg.length, BB.Jw.length, BB.Gs.length, BB.Fs.length),
++           const et = Math.max(tt.Tf.length, tt.Yu.length, tt.pC.length, tt.gC.length),
 ```
 
-#### 1439. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11687` → after: `L11523`)
+#### 372. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3706-L3707` → after: `L3706-L3707`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11523) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11523)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11523) · [Before (L11687)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11687)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3706) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3706-L3707)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3706-L3707) · [Before (L3706-L3707)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3706-L3707)
 
 ```diff
--             lobbyType: tr.e.STANDARD,
-+             lobbyType: Cz.d.STANDARD,
+-             const IB = BB.Jg[TB];
+-             ZB[TB] = (void 0 === IB ? 2 : IB ? 1 : 0) | (BB.Jw[TB] ? 4 : 0) | (BB.Gs[TB] ? 8 : 0) | (BB.Fs[TB] ? 16 : 0)
++             const et = tt.Tf[Ot];
++             Vt[Ot] = (void 0 === et ? 2 : et ? 1 : 0) | (tt.Yu[Ot] ? 4 : 0) | (tt.pC[Ot] ? 8 : 0) | (tt.gC[Ot] ? 16 : 0)
 ```
 
-#### 1440. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11705` → after: `L11541`)
+#### 373. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3711` → after: `L3711`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11541) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11541)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11541) · [Before (L11705)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11705)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3711) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3711)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3711) · [Before (L3711)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3711)
 
 ```diff
--         }, this.pendingStructuralEvents = [], this.pendingEphemeralEvents = [], this.effectTracker = new Bs.c;
-+         }, this.pendingStructuralEvents = [], this.pendingEphemeralEvents = [], this.effectTracker = new BF.d;
+-         this.handle.jF(TB)
++         this.handle.bE(Ot)
 ```
 
-#### 1441. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11709-L11710` → after: `L11545-L11546`)
+#### 374. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3720-L3721` → after: `L3720-L3721`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11545) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11545-L11546)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11545-L11546) · [Before (L11709-L11710)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11709-L11710)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3720) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3720-L3721)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3720-L3721) · [Before (L3720-L3721)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3720-L3721)
 
 ```diff
--         this.ur.on("vp", zB);
--         const QB = yB.n.subscribe("EffectUpdate", (BB => {
-+         this.Nz.on("Iz", ZB);
-+         const TB = qB.l.subscribe("EffectUpdate", (BB => {
+-     var dT = ZB(38455);
+-     const CT = [11, 0, 1, 2, 3, 4, 5, 6, 10, 0, 1, 2, 32768, 4 * dT.K, dT.x, dT.t, dT.u, dT.s, dT.n, dT.B, dT.E, dT.o, dT.Q, dT.M, dT.W, dT._, dT.U, dT.m, dT.g, dT.i, dT.k, dT.H, dT.b, ...dT.J],
++     var JO = Vt(38632);
++     const CO = [11, 0, 1, 2, 3, 4, 5, 6, 10, 0, 1, 2, 32768, 4 * JO.P, JO.G, JO.A, JO.D, JO.w, JO.t, JO.H, JO.K, JO.v, JO.U, JO.T, JO._, JO.$, JO.X, JO.r, JO.i, JO.m, JO.n, JO.N, JO.e, ...JO.O],
 ```
 
-#### 1442. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11713` → after: `L11549`)
+#### 375. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3728-L3729` → after: `L3728-L3729`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11549) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11549)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11549) · [Before (L11713)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11713)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3728) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3728-L3729)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3728-L3729) · [Before (L3728-L3729)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3728-L3729)
 
 ```diff
--               VB: Er(BB.VB)
-+               PB: wz(BB.PB)
+-         const vB = null !== (TB = null === (JB = (oB = GB.bindings).oh) || void 0 === JB ? void 0 : JB.call(oB)) && void 0 !== TB ? TB : [];
+-         return vB.length === CT.length && CT.every(((BB, IB) => vB[IB] === BB)) ? new sT(GB, new GB.bindings.Ih, IB, ZB) : (console.error(`@bloxd/wasm's block edit constants [${Array.from(vB).join()}] are not [${CT.join()}], so blocks are set in JS`), null)
++         const dt = null !== (Ot = null === (qt = (Dt = mt.bindings).VQ) || void 0 === qt ? void 0 : qt.call(Dt)) && void 0 !== Ot ? Ot : [];
++         return dt.length === CO.length && CO.every(((tt, et) => dt[et] === tt)) ? new KO(mt, new mt.bindings.gX, et, Vt) : (console.error(`@bloxd/wasm's block edit constants [${Array.from(dt).join()}] are not [${CO.join()}], so blocks are set in JS`), null)
 ```
 
-#### 1443. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11716-L11717` → after: `L11552-L11553`)
+#### 376. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3732` → after: `L3732`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11552) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11552-L11553)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11552-L11553) · [Before (L11716-L11717)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11716-L11717)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3732) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3732)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3732) · [Before (L3732)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3732)
 
 ```diff
--           nB = yB.n.subscribe("RemoveEffect", (BB => {
--             this.isCapturing() && this.effectTracker.handleRemove(Er(BB.VB), BB.name)
-+           JB = qB.l.subscribe("RemoveEffect", (BB => {
-+             this.isCapturing() && this.effectTracker.handleRemove(wz(BB.PB), BB.name)
+-         this.runtime = BB, this.handle = IB, this.zF = ZB, this.JN = TB, this.header = void 0, this.journalPtr = void 0, this.sentProps = null, this.plainProps = null, this.hookedProps = null, this.busy = !1, this.startFailedAt = null, this.header = new BB.BufferView(Uint32Array, … [truncated]
++         this.runtime = tt, this.handle = et, this.tE = Vt, this.iE = Ot, this.header = void 0, this.journalPtr = void 0, this.sentProps = null, this.plainProps = null, this.hookedProps = null, this.busy = !1, this.startFailedAt = null, this.header = new tt.BufferView(Uint32Array, … [truncated]
 ```
 
-#### 1444. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11720` → after: `L11556`)
+#### 377. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3735` → after: `L3735`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11556) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11556)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11556) · [Before (L11720)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11720)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3735) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3735)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3735) · [Before (L3735)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3735)
 
 ```diff
--           this.ur.off("vp", zB), yB.n.unsubscribe(QB), yB.n.unsubscribe(nB)
-+           this.Nz.off("Iz", ZB), qB.l.unsubscribe(TB), qB.l.unsubscribe(JB)
+-         let JB = (0, dT.jb)(IB);
++         let qt = (0, JO.mb)(et);
 ```
 
-#### 1445. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11722-L11723` → after: `L11558-L11559`)
+#### 378. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3741` → after: `L3741`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11558) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11558-L11559)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11558-L11559) · [Before (L11722-L11723)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11722-L11723)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3741) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3741)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3741) · [Before (L3741)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3741)
 
 ```diff
--         const dB = AI.c.get("clientEscMenuOptions");
--         this.clippingWanted = dB.enableClipping, this.maxClipTicks = dB.clipDurationSeconds * JB.e.clientTicksPerSecond
-+         const oB = RG.d.get("clientEscMenuOptions");
-+         this.clippingWanted = oB.enableClipping, this.maxClipTicks = oB.clipDurationSeconds * NB.f.clientTicksPerSecond
+-           GB = this.propsFor(null === ZB || void 0 === ZB ? void 0 : ZB.isHookId), vB = null !== (kB = null === ZB || void 0 === ZB || null === (cB = ZB.watched) || void 0 === cB ? void 0 : cB.call(ZB)) && void 0 !== kB ? kB : QT
++           mt = this.propsFor(null === Vt || void 0 === Vt ? void 0 : Vt.isHookId), dt = null !== (jt = null === Vt || void 0 === Vt || null === (Ht = Vt.watched) || void 0 === Ht ? void 0 : Ht.call(Vt)) && void 0 !== jt ? jt : uO
 ```
 
-#### 1446. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11745` → after: `L11581`)
+#### 379. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3743-L3744` → after: `L3743-L3744`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11581) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11581)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11581) · [Before (L11745)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11745)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3743) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3743-L3744)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3743-L3744) · [Before (L3743-L3744)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3743-L3744)
 
 ```diff
--         return this.state.ticks.length / this.state.meta.KF
-+         return this.state.ticks.length / this.state.meta.bM
+-           if (this.startFailedAt !== this.zF.hA) {
+-             this.startFailedAt = this.zF.hA;
++           if (this.startFailedAt !== this.tE.JG) {
++             this.startFailedAt = this.tE.JG;
 ```
 
-#### 1447. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11751` → after: `L11587`)
+#### 380. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3746` → after: `L3746`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11587) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11587)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11587) · [Before (L11751)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11751)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3746) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3746)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3746) · [Before (L3746)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3746)
 
 ```diff
--         this.maxClipTicks = NB.b.clamp(BB, Mr.m, Mr.j) * JB.e.clientTicksPerSecond, this.isClipping && this.maybeEvictClipWindow(), yB.n.Ly("gameRecorder|clipSettingsChanged")
-+         this.maxClipTicks = vB.e.clamp(BB, sz.l, sz.k) * NB.f.clientTicksPerSecond, this.isClipping && this.maybeEvictClipWindow(), qB.l.Gq("gameRecorder|clipSettingsChanged")
+-             this.JN(new Error(`Block edits could not start in wasm (${BB}), so batches are set in JS until that is fixed`))
++             this.iE(new Error(`Block edits could not start in wasm (${tt}), so batches are set in JS until that is fixed`))
 ```
 
-#### 1448. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11754` → after: `L11590`)
+#### 381. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3750-L3751` → after: `L3750-L3751`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11590) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11590)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11590) · [Before (L11754)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11754)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3750) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3750-L3751)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3750-L3751) · [Before (L3750-L3751)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3750-L3751)
 
 ```diff
--         this.gameAllowsReplays() ? this.isClipping ? 0 !== this.state.ticks.length ? (this.saveCapture(), this.beginCaptureSession(), (0, Zs.g)(Zs.d.clipSaved)) : (0, Zs.g)(Zs.d.clipEmpty) : (0, Zs.g)(Zs.d.clippingNotOn) : this.showReplaysDisabledMessage()
-+         this.gameAllowsReplays() ? this.isClipping ? 0 !== this.state.ticks.length ? (this.saveCapture(), this.beginCaptureSession(), (0, RF.d)(RF.b.clipSaved)) : (0, RF.d)(RF.b.clipEmpty) : (0, RF.d)(RF.b.clippingNotOn) : this.showReplaysDisabledMessage()
+-         const nB = dT.B | (null !== ZB && void 0 !== ZB && ZB.isHookId ? dT.E : 0);
+-         if (!this.call(BB, !1, (() => (GB !== this.sentProps && (this.handle.OF(GB), this.sentProps = GB), this.handle.YF(vB), this.handle.QF(IB), !0)))) return JB;
++         const Xt = JO.H | (null !== Vt && void 0 !== Vt && Vt.isHookId ? JO.K : 0);
++         if (!this.call(tt, !1, (() => (mt !== this.sentProps && (this.handle.EE(mt), this.sentProps = mt), this.handle.fE(dt), this.handle.XE(et), !0)))) return qt;
 ```
 
-#### 1449. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11757` → after: `L11593`)
+#### 382. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3780` → after: `L3780`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11593) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11593)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11593) · [Before (L11757)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11757)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3780) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3780)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3780) · [Before (L3780)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3780)
 
 ```diff
--         this.isClipping && (this.isClipping = !1, this.clearCaptureBuffers(), yB.n.Ly("gameRecorder|setClipping", !1))
-+         this.isClipping && (this.isClipping = !1, this.clearCaptureBuffers(), qB.l.Gq("gameRecorder|setClipping", !1))
+-         return this.runtime.isReady() && BB.Bg.physicsWorld === IB
++         return this.runtime.isReady() && tt.Yf.physicsWorld === et
 ```
 
-#### 1450. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11779` → after: `L11615`)
+#### 383. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3783` → after: `L3783`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11615) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11615)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11615) · [Before (L11779)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11779)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3783) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3783)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3783) · [Before (L3783)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3783)
 
 ```diff
--             xd: jB,
-+             Po: IB,
+-         return this.busy || !this.runtime.isReady() ? null : BB.Bg.physicsWorld
++         return this.busy || !this.runtime.isReady() ? null : tt.Yf.physicsWorld
 ```
 
-#### 1451. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11781` → after: `L11617`)
+#### 384. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3792-L3793` → after: `L3792-L3793`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11617) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11617)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11617) · [Before (L11781)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11781)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3792) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3792-L3793)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3792-L3793) · [Before (L3792-L3793)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3792-L3793)
 
 ```diff
--             Kd: QB
-+             Ro: TB
+-             oB = ZB ? `, its ${ZB} voxel writes undone for JS to redo` : "";
+-           return this.JN(new Error(`Block edits trapped in wasm (${JB})${oB}, so blocks are set in JS from now on`)), null
++             Dt = Vt ? `, its ${Vt} voxel writes undone for JS to redo` : "";
++           return this.iE(new Error(`Block edits trapped in wasm (${qt})${Dt}, so blocks are set in JS from now on`)), null
 ```
 
-#### 1452. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11792` → after: `L11628`)
+#### 385. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3805` → after: `L3805`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11628) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11628)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11628) · [Before (L11792)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11792)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3805) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3805)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3805) · [Before (L3805)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3805)
 
 ```diff
--             QB: Zr(QB)
-+             TB: mz(TB)
+-           if (void 0 === vB && (vB = BB.Bg.slotData(ZB), JB.set(ZB, vB)), vB) {
++           if (void 0 === dt && (dt = tt.Yf.slotData(Vt), qt.set(Vt, dt)), dt) {
 ```
 
-#### 1453. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L11800-L11801` → after: `L11636-L11637`)
+#### 386. `bundles/bloxd.io/chunks/js/94.js` (Changed code · before: `L3813` → after: `L3813`)
 
-- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R11636) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L11636-L11637)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/c6gaap.4d6587ec/bundles/bloxd.io/chunks/js/94.js#L11636-L11637) · [Before (L11800-L11801)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2/bundles/bloxd.io/chunks/js/94.js#L11800-L11801)
+- **Links**: [Diff Hunk](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030R3813) · [File Diff](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f#diff-144a34b6e2679088350e14dbbc3e2e78535888d647cfdddc09207124de64e030) · [After (L3813)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/build/bloxd.io/igzsf.a0b73a5f/bundles/bloxd.io/chunks/js/94.js#L3813) · [Before (L3813)](https://github.com/imu31465/Bloxd-Build-Monitor/blob/b4e1daae7e6b1111c92ff0193dea5054a123c4fd/bundles/bloxd.io/chunks/js/94.js#L3813)
 
 ```diff
--             PQ: Er(BB),
--             WQ: jB,
-+             rT: wz(BB),
-+             mT: IB,
+-         const IB = this.zF.hA,
++         const et = this.tE.JG,
 ```

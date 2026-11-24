@@ -1,240 +1,240 @@
-/*! For license information please see c6gaap.222.db12de31.chunk.js.LICENSE.txt */
+/*! For license information please see igzsf.222.e227d559.chunk.js.LICENSE.txt */
 export const id = 222;
 export const ids = [222];
 export const modules = {
-  39636: (BB, IB, ZB) => {
-    BB.exports = JB;
-    var TB = ZB(364);
+  39787: (tt, et, Vt) => {
+    tt.exports = qt;
+    var Ot = Vt(404);
 
-    function JB(BB, IB) {
-      if (!(this instanceof JB)) return new JB(BB, IB);
-      var ZB = TB.create();
-      TB.add(ZB, BB, IB), this.base = TB.min(TB.create(), BB, ZB), this.vec = TB.clone(IB), this.max = TB.max(TB.create(), BB, ZB), this.mag = TB.length(this.vec)
+    function qt(tt, et) {
+      if (!(this instanceof qt)) return new qt(tt, et);
+      var Vt = Ot.create();
+      Ot.add(Vt, tt, et), this.base = Ot.min(Ot.create(), tt, Vt), this.vec = Ot.clone(et), this.max = Ot.max(Ot.create(), tt, Vt), this.mag = Ot.length(this.vec)
     }
-    var oB = JB.prototype;
-    oB.width = function() {
+    var Dt = qt.prototype;
+    Dt.width = function() {
       return this.vec[0]
-    }, oB.height = function() {
+    }, Dt.height = function() {
       return this.vec[1]
-    }, oB.depth = function() {
+    }, Dt.depth = function() {
       return this.vec[2]
-    }, oB.x0 = function() {
+    }, Dt.x0 = function() {
       return this.base[0]
-    }, oB.y0 = function() {
+    }, Dt.y0 = function() {
       return this.base[1]
-    }, oB.z0 = function() {
+    }, Dt.z0 = function() {
       return this.base[2]
-    }, oB.x1 = function() {
+    }, Dt.x1 = function() {
       return this.max[0]
-    }, oB.y1 = function() {
+    }, Dt.y1 = function() {
       return this.max[1]
-    }, oB.z1 = function() {
+    }, Dt.z1 = function() {
       return this.max[2]
-    }, oB.translate = function(BB) {
-      return TB.add(this.max, this.max, BB), TB.add(this.base, this.base, BB), this
-    }, oB.setPosition = function(BB) {
-      return TB.add(this.max, BB, this.vec), TB.copy(this.base, BB), this
-    }, oB.expand = function(BB) {
-      var IB = TB.create(),
-        ZB = TB.create();
-      return TB.max(IB, BB.max, this.max), TB.min(ZB, BB.base, this.base), TB.subtract(IB, IB, ZB), new JB(ZB, IB)
-    }, oB.intersects = function(BB) {
-      return !(BB.base[0] > this.max[0]) && (!(BB.base[1] > this.max[1]) && (!(BB.base[2] > this.max[2]) && (!(BB.max[0] < this.base[0]) && (!(BB.max[1] < this.base[1]) && !(BB.max[2] < this.base[2])))))
-    }, oB.touches = function(BB) {
-      var IB = this.union(BB);
-      return null !== IB && (0 == IB.width() || 0 == IB.height() || 0 == IB.depth())
-    }, oB.union = function(BB) {
-      if (!this.intersects(BB)) return null;
-      var IB = Math.max(BB.base[0], this.base[0]),
-        ZB = Math.max(BB.base[1], this.base[1]),
-        TB = Math.max(BB.base[2], this.base[2]);
-      return new JB([IB, ZB, TB], [Math.min(BB.max[0], this.max[0]) - IB, Math.min(BB.max[1], this.max[1]) - ZB, Math.min(BB.max[2], this.max[2]) - TB])
+    }, Dt.translate = function(tt) {
+      return Ot.add(this.max, this.max, tt), Ot.add(this.base, this.base, tt), this
+    }, Dt.setPosition = function(tt) {
+      return Ot.add(this.max, tt, this.vec), Ot.copy(this.base, tt), this
+    }, Dt.expand = function(tt) {
+      var et = Ot.create(),
+        Vt = Ot.create();
+      return Ot.max(et, tt.max, this.max), Ot.min(Vt, tt.base, this.base), Ot.subtract(et, et, Vt), new qt(Vt, et)
+    }, Dt.intersects = function(tt) {
+      return !(tt.base[0] > this.max[0]) && (!(tt.base[1] > this.max[1]) && (!(tt.base[2] > this.max[2]) && (!(tt.max[0] < this.base[0]) && (!(tt.max[1] < this.base[1]) && !(tt.max[2] < this.base[2])))))
+    }, Dt.touches = function(tt) {
+      var et = this.union(tt);
+      return null !== et && (0 == et.width() || 0 == et.height() || 0 == et.depth())
+    }, Dt.union = function(tt) {
+      if (!this.intersects(tt)) return null;
+      var et = Math.max(tt.base[0], this.base[0]),
+        Vt = Math.max(tt.base[1], this.base[1]),
+        Ot = Math.max(tt.base[2], this.base[2]);
+      return new qt([et, Vt, Ot], [Math.min(tt.max[0], this.max[0]) - et, Math.min(tt.max[1], this.max[1]) - Vt, Math.min(tt.max[2], this.max[2]) - Ot])
     }
   },
-  39629: BB => {
-    BB.exports = function(BB, IB, ZB, TB, JB, oB) {
-      var GB = +IB[0],
-        vB = +IB[1],
-        kB = +IB[2],
-        cB = +ZB[0],
-        nB = +ZB[1],
-        hB = +ZB[2],
-        zB = Math.sqrt(cB * cB + nB * nB + hB * hB);
-      if (0 === zB) throw new Error("Can't raycast along a zero vector");
-      return function(BB, IB, ZB, TB, JB, oB, GB, vB, kB, cB) {
-        for (var nB = 0, hB = Math.floor, zB = 0 | hB(IB), FB = 0 | hB(ZB), NB = 0 | hB(TB), gB = JB > 0 ? 1 : -1, qB = oB > 0 ? 1 : -1, yB = GB > 0 ? 1 : -1, UB = Math.abs(1 / JB), WB = Math.abs(1 / oB), dB = Math.abs(1 / GB), CB = UB < 1 / 0 ? UB * (gB > 0 ? zB + 1 - IB : IB - zB) : 1 / 0, QB = WB < 1 / 0 ? WB * (qB > 0 ? FB + 1 - ZB : ZB - FB) : 1 / 0, sB = dB < 1 / 0 ? dB * (yB > 0 ? NB + 1 - TB : TB - NB) : 1 / 0, wB = -1; nB <= vB;) {
-          var OB = BB(zB, FB, NB);
-          if (OB) return kB && (kB[0] = IB + nB * JB, kB[1] = ZB + nB * oB, kB[2] = TB + nB * GB), cB && (cB[0] = cB[1] = cB[2] = 0, 0 === wB && (cB[0] = -gB), 1 === wB && (cB[1] = -qB), 2 === wB && (cB[2] = -yB)), OB;
-          CB < QB ? CB < sB ? (zB += gB, nB = CB, CB += UB, wB = 0) : (NB += yB, nB = sB, sB += dB, wB = 2) : QB < sB ? (FB += qB, nB = QB, QB += WB, wB = 1) : (NB += yB, nB = sB, sB += dB, wB = 2)
+  39780: tt => {
+    tt.exports = function(tt, et, Vt, Ot, qt, Dt) {
+      var mt = +et[0],
+        dt = +et[1],
+        jt = +et[2],
+        Ht = +Vt[0],
+        Xt = +Vt[1],
+        Qt = +Vt[2],
+        lt = Math.sqrt(Ht * Ht + Xt * Xt + Qt * Qt);
+      if (0 === lt) throw new Error("Can't raycast along a zero vector");
+      return function(tt, et, Vt, Ot, qt, Dt, mt, dt, jt, Ht) {
+        for (var Xt = 0, Qt = Math.floor, lt = 0 | Qt(et), Et = 0 | Qt(Vt), ft = 0 | Qt(Ot), wt = qt > 0 ? 1 : -1, yt = Dt > 0 ? 1 : -1, Nt = mt > 0 ? 1 : -1, Mt = Math.abs(1 / qt), bt = Math.abs(1 / Dt), Jt = Math.abs(1 / mt), Ct = Mt < 1 / 0 ? Mt * (wt > 0 ? lt + 1 - et : et - lt) : 1 / 0, ut = bt < 1 / 0 ? bt * (yt > 0 ? Et + 1 - Vt : Vt - Et) : 1 / 0, Kt = Jt < 1 / 0 ? Jt * (Nt > 0 ? ft + 1 - Ot : Ot - ft) : 1 / 0, ht = -1; Xt <= dt;) {
+          var vt = tt(lt, Et, ft);
+          if (vt) return jt && (jt[0] = et + Xt * qt, jt[1] = Vt + Xt * Dt, jt[2] = Ot + Xt * mt), Ht && (Ht[0] = Ht[1] = Ht[2] = 0, 0 === ht && (Ht[0] = -wt), 1 === ht && (Ht[1] = -yt), 2 === ht && (Ht[2] = -Nt)), vt;
+          Ct < ut ? Ct < Kt ? (lt += wt, Xt = Ct, Ct += Mt, ht = 0) : (ft += Nt, Xt = Kt, Kt += Jt, ht = 2) : ut < Kt ? (Et += yt, Xt = ut, ut += bt, ht = 1) : (ft += Nt, Xt = Kt, Kt += Jt, ht = 2)
         }
-        return kB && (kB[0] = IB + nB * JB, kB[1] = ZB + nB * oB, kB[2] = TB + nB * GB), cB && (cB[0] = cB[1] = cB[2] = 0), 0
-      }(BB, GB, vB, kB, cB /= zB, nB /= zB, hB /= zB, TB = "undefined" === typeof TB ? 64 : +TB, JB, oB)
+        return jt && (jt[0] = et + Xt * qt, jt[1] = Vt + Xt * Dt, jt[2] = Ot + Xt * mt), Ht && (Ht[0] = Ht[1] = Ht[2] = 0), 0
+      }(tt, mt, dt, jt, Ht /= lt, Xt /= lt, Qt /= lt, Ot = "undefined" === typeof Ot ? 64 : +Ot, qt, Dt)
     }
   },
-  39182: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => vB,
-      f: () => oB
+  39322: (tt, et, Vt) => {
+    Vt.d(et, {
+      c: () => dt,
+      g: () => Dt
     });
-    var TB = ZB(4267);
-    let JB = null;
+    var Ot = Vt(4204);
+    let qt = null;
 
-    function oB(BB) {
-      return null !== JB && BB === JB
+    function Dt(tt) {
+      return null !== qt && tt === qt
     }
 
-    function GB() {
-      this.ZD = !1, this.stopPropagation = !1, this.nD = !1, this.disabled = !1
+    function mt() {
+      this.PU = !1, this.stopPropagation = !1, this.kU = !1, this.disabled = !1
     }
-    class vB {
-      constructor(BB, IB) {
+    class dt {
+      constructor(tt, et) {
         this.version = "0.7.0";
-        var ZB = Object.assign({}, new GB, IB || {});
-        this.element = BB || document, this.ZD = !!ZB.ZD, this.stopPropagation = !!ZB.stopPropagation, this.nD = !!ZB.nD, this.disabled = !!ZB.disabled, this.filterEvents = (BB, IB) => !0, this.ignoreEvent = BB => !1, this.down = new TB.EventEmitter, this.up = new TB.EventEmitter, this.state = {}, this.zD = {
+        var Vt = Object.assign({}, new mt, et || {});
+        this.element = tt || document, this.PU = !!Vt.PU, this.stopPropagation = !!Vt.stopPropagation, this.kU = !!Vt.kU, this.disabled = !!Vt.disabled, this.filterEvents = (tt, et) => !0, this.ignoreEvent = tt => !1, this.down = new Ot.EventEmitter, this.up = new Ot.EventEmitter, this.state = {}, this.rU = {
           dx: 0,
           dy: 0,
-          wIB: 0,
-          OIB: 0,
-          YIB: 0
+          Ket: 0,
+          het: 0,
+          Wet: 0
         }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
           lastX: 0,
           lastY: 0,
           currID: null
-        }, "loading" !== document.readyState ? cB(this) : document.addEventListener("DOMContentLoaded", (BB => {
-          cB(this)
+        }, "loading" !== document.readyState ? Ht(this) : document.addEventListener("DOMContentLoaded", (tt => {
+          Ht(this)
         }), {
           once: !0
         })
       }
-      bind(BB) {
-        for (var IB = arguments.length, ZB = new Array(IB > 1 ? IB - 1 : 0), TB = 1; TB < IB; TB++) ZB[TB - 1] = arguments[TB];
-        ZB.forEach((IB => {
-          var ZB = this._keyBindmap[IB] || [];
-          ZB.includes(BB) || (ZB.push(BB), this._keyBindmap[IB] = ZB)
-        })), this.state[BB] = !!this.state[BB], this.pressCount[BB] = this.pressCount[BB] || 0, this.releaseCount[BB] = this.releaseCount[BB] || 0
+      bind(tt) {
+        for (var et = arguments.length, Vt = new Array(et > 1 ? et - 1 : 0), Ot = 1; Ot < et; Ot++) Vt[Ot - 1] = arguments[Ot];
+        Vt.forEach((et => {
+          var Vt = this._keyBindmap[et] || [];
+          Vt.includes(tt) || (Vt.push(tt), this._keyBindmap[et] = Vt)
+        })), this.state[tt] = !!this.state[tt], this.pressCount[tt] = this.pressCount[tt] || 0, this.releaseCount[tt] = this.releaseCount[tt] || 0
       }
-      unbind(BB) {
-        for (var IB in this._keyBindmap) {
-          var ZB = this._keyBindmap[IB],
-            TB = ZB.indexOf(BB);
-          TB > -1 && ZB.splice(TB, 1)
+      unbind(tt) {
+        for (var et in this._keyBindmap) {
+          var Vt = this._keyBindmap[et],
+            Ot = Vt.indexOf(tt);
+          Ot > -1 && Vt.splice(Ot, 1)
         }
       }
       getBindings() {
-        var BB = {};
-        for (var IB in this._keyBindmap) {
-          this._keyBindmap[IB].forEach((ZB => {
-            BB[ZB] = BB[ZB] || [], BB[ZB].push(IB)
+        var tt = {};
+        for (var et in this._keyBindmap) {
+          this._keyBindmap[et].forEach((Vt => {
+            tt[Vt] = tt[Vt] || [], tt[Vt].push(et)
           }))
         }
-        return BB
+        return tt
       }
-      Iz() {
-        kB(this.zD), kB(this.pressCount), kB(this.releaseCount)
+      BQ() {
+        jt(this.rU), jt(this.pressCount), jt(this.releaseCount)
       }
     }
 
-    function kB(BB) {
-      for (var IB in BB) BB[IB] = 0
+    function jt(tt) {
+      for (var et in tt) tt[et] = 0
     }
 
-    function cB(BB) {
-      window.addEventListener("keydown", qB.bind(null, BB, !0), !1), window.addEventListener("keyup", qB.bind(null, BB, !1), !1);
-      var IB = {
+    function Ht(tt) {
+      window.addEventListener("keydown", yt.bind(null, tt, !0), !1), window.addEventListener("keyup", yt.bind(null, tt, !1), !1);
+      var et = {
         passive: !0
       };
-      BB.element.addEventListener("touchstart", FB.bind(void 0, BB), {
+      tt.element.addEventListener("touchstart", Et.bind(void 0, tt), {
         passive: !1
-      }), BB.element.addEventListener("touchend", gB.bind(void 0, BB), IB), BB.element.addEventListener("mousedown", yB.bind(null, BB, !0), IB), window.document.addEventListener("mouseup", yB.bind(null, BB, !1), IB), BB.element.addEventListener("touchmove", UB.bind(null, BB), IB), BB.element.addEventListener("mousemove", UB.bind(null, BB), IB), window.PointerEvent, BB.element.addEventListener("wheel", WB.bind(null, BB), IB), BB.element.addEventListener("contextmenu", dB.bind(null, BB), !1), window.addEventListener("blur", sB.bind(null, BB), !1)
+      }), tt.element.addEventListener("touchend", wt.bind(void 0, tt), et), tt.element.addEventListener("mousedown", Nt.bind(null, tt, !0), et), window.document.addEventListener("mouseup", Nt.bind(null, tt, !1), et), tt.element.addEventListener("touchmove", Mt.bind(null, tt), et), tt.element.addEventListener("mousemove", Mt.bind(null, tt), et), window.PointerEvent, tt.element.addEventListener("wheel", bt.bind(null, tt), et), tt.element.addEventListener("contextmenu", Jt.bind(null, tt), !1), window.addEventListener("blur", Kt.bind(null, tt), !1)
     }
-    var nB = 0,
-      hB = 0,
-      zB = null;
+    var Xt = 0,
+      Qt = 0,
+      lt = null;
 
-    function FB(BB, IB) {
-      IB.preventDefault(), NB(IB)
+    function Et(tt, et) {
+      et.preventDefault(), ft(et)
     }
 
-    function NB(BB) {
-      let IB = !1;
-      for (let ZB = 0; ZB < BB.touches.length; ++ZB)
-        if (BB.touches[ZB].identifier === zB) {
-          IB = !0;
+    function ft(tt) {
+      let et = !1;
+      for (let Vt = 0; Vt < tt.touches.length; ++Vt)
+        if (tt.touches[Vt].identifier === lt) {
+          et = !0;
           break
-        } if (!IB) {
-        const IB = BB.changedTouches[0];
-        nB = IB.clientX, hB = IB.clientY, zB = IB.identifier
+        } if (!et) {
+        const et = tt.changedTouches[0];
+        Xt = et.clientX, Qt = et.clientY, lt = et.identifier
       }
     }
 
-    function gB(BB, IB) {
-      for (var ZB = IB.changedTouches, TB = 0; TB < ZB.length; ++TB) ZB[TB].identifier === zB && (zB = null)
+    function wt(tt, et) {
+      for (var Vt = et.changedTouches, Ot = 0; Ot < Vt.length; ++Ot) Vt[Ot].identifier === lt && (lt = null)
     }
 
-    function qB(BB, IB, ZB) {
-      if (!BB.ignoreEvent(ZB)) try {
-        wB(BB, ZB), IB && ZB.isTrusted && !ZB.repeat && BB._keyStates[ZB.code] && OB(BB, ZB.code)
+    function yt(tt, et, Vt) {
+      if (!tt.ignoreEvent(Vt)) try {
+        ht(tt, Vt), et && Vt.isTrusted && !Vt.repeat && tt._keyStates[Vt.code] && vt(tt, Vt.code)
       } finally {
-        YB(ZB.code, IB, BB, ZB)
+        Wt(Vt.code, et, tt, Vt)
       }
     }
 
-    function yB(BB, IB, ZB) {
-      if (!BB.ignoreEvent(ZB)) try {
-        wB(BB, ZB)
+    function Nt(tt, et, Vt) {
+      if (!tt.ignoreEvent(Vt)) try {
+        ht(tt, Vt)
       } finally {
-        ! function(BB, IB, ZB) {
-          if ("pointerId" in ZB)
-            if (IB) {
-              if (null !== BB._touches.currID) return;
-              BB._touches.currID = ZB.pointerId
+        ! function(tt, et, Vt) {
+          if ("pointerId" in Vt)
+            if (et) {
+              if (null !== tt._touches.currID) return;
+              tt._touches.currID = Vt.pointerId
             } else {
-              if (BB._touches.currID !== ZB.pointerId) return;
-              BB._touches.currID = null
-            } var TB = "button" in ZB ? ZB.button + 1 : 1;
-          YB("Mouse" + TB, IB, BB, ZB)
-        }(BB, IB, ZB)
+              if (tt._touches.currID !== Vt.pointerId) return;
+              tt._touches.currID = null
+            } var Ot = "button" in Vt ? Vt.button + 1 : 1;
+          Wt("Mouse" + Ot, et, tt, Vt)
+        }(tt, et, Vt)
       }
     }
 
-    function UB(BB, IB) {
-      var ZB = IB.movementX || IB.mozMovementX || 0,
-        TB = IB.movementY || IB.mozMovementY || 0;
-      if (IB.touches && 0 === (ZB | TB)) {
-        var JB = function(BB) {
-          NB(BB);
-          for (let IB = 0; IB < BB.changedTouches.length; ++IB)
-            if (BB.changedTouches[IB].identifier == zB) {
-              const ZB = BB.changedTouches[IB],
-                TB = [ZB.clientX - nB, ZB.clientY - hB];
-              return nB = ZB.clientX, hB = ZB.clientY, TB
-            } return console.error(`Did not find touch id ${zB}`), [0, 0]
-        }(IB);
-        ZB = JB[0], TB = JB[1]
+    function Mt(tt, et) {
+      var Vt = et.movementX || et.mozMovementX || 0,
+        Ot = et.movementY || et.mozMovementY || 0;
+      if (et.touches && 0 === (Vt | Ot)) {
+        var qt = function(tt) {
+          ft(tt);
+          for (let et = 0; et < tt.changedTouches.length; ++et)
+            if (tt.changedTouches[et].identifier == lt) {
+              const Vt = tt.changedTouches[et],
+                Ot = [Vt.clientX - Xt, Vt.clientY - Qt];
+              return Xt = Vt.clientX, Qt = Vt.clientY, Ot
+            } return console.error(`Did not find touch id ${lt}`), [0, 0]
+        }(et);
+        Vt = qt[0], Ot = qt[1]
       }
-      BB.zD.dx += ZB, BB.zD.dy += TB
+      tt.rU.dx += Vt, tt.rU.dy += Ot
     }
 
-    function WB(BB, IB) {
-      wB(BB, IB);
-      var ZB = 1;
-      switch (IB.deltaMode) {
+    function bt(tt, et) {
+      ht(tt, et);
+      var Vt = 1;
+      switch (et.deltaMode) {
         case 0:
-          ZB = 1;
+          Vt = 1;
           break;
         case 1:
-          ZB = 12;
+          Vt = 12;
           break;
         case 2:
-          ZB = BB.element.clientHeight || window.innerHeight
+          Vt = tt.element.clientHeight || window.innerHeight
       }
-      BB.zD.wIB += (IB.deltaX || 0) * ZB, BB.zD.OIB += (IB.deltaY || 0) * ZB, BB.zD.YIB += (IB.deltaZ || 0) * ZB
+      tt.rU.Ket += (et.deltaX || 0) * Vt, tt.rU.het += (et.deltaY || 0) * Vt, tt.rU.Wet += (et.deltaZ || 0) * Vt
     }
 
-    function dB(BB, IB) {
-      if (!BB.nD) return IB.preventDefault(), !1
+    function Jt(tt, et) {
+      if (!tt.kU) return et.preventDefault(), !1
     }
-    var CB = {
+    var Ct = {
       AltLeft: "altKey",
       AltRight: "altKey",
       ControlLeft: "ctrlKey",
@@ -245,91 +245,91 @@ export const modules = {
       MetaRight: "metaKey"
     };
 
-    function QB(BB, IB) {
-      return !!BB[CB[IB]] || ("AltRight" === IB || "ControlLeft" === IB) && "function" === typeof BB.getModifierState && !0 === BB.getModifierState("AltGraph")
+    function ut(tt, et) {
+      return !!tt[Ct[et]] || ("AltRight" === et || "ControlLeft" === et) && "function" === typeof tt.getModifierState && !0 === tt.getModifierState("AltGraph")
     }
 
-    function sB(BB, IB) {
-      for (var ZB in BB._modifiersHeldThroughBlur = {}, CB) BB._keyStates[ZB] && (BB._modifiersHeldThroughBlur[ZB] = !0);
-      IB && IB.isTrusted && function() {
+    function Kt(tt, et) {
+      for (var Vt in tt._modifiersHeldThroughBlur = {}, Ct) tt._keyStates[Vt] && (tt._modifiersHeldThroughBlur[Vt] = !0);
+      et && et.isTrusted && function() {
         try {
           return window.self !== window.top
-        } catch (BB) {
+        } catch (tt) {
           return !0
         }
-      }() && (clearTimeout(BB._blurRelease), BB._blurRelease = setTimeout((function() {
+      }() && (clearTimeout(tt._blurRelease), tt._blurRelease = setTimeout((function() {
         if (!document.hasFocus())
-          for (var IB in BB._modifiersHeldThroughBlur = {}, BB._keyStates) BB._keyStates[IB] && !/^Mouse\d/.test(IB) && OB(BB, IB)
+          for (var et in tt._modifiersHeldThroughBlur = {}, tt._keyStates) tt._keyStates[et] && !/^Mouse\d/.test(et) && vt(tt, et)
       }), 0))
     }
 
-    function wB(BB, IB) {
-      var ZB = BB._modifiersHeldThroughBlur;
-      if (ZB && IB.isTrusted && document.hasFocus())
-        for (var TB in ZB) delete ZB[TB], BB._keyStates[TB] && TB !== IB.code && (QB(IB, TB) || OB(BB, TB))
+    function ht(tt, et) {
+      var Vt = tt._modifiersHeldThroughBlur;
+      if (Vt && et.isTrusted && document.hasFocus())
+        for (var Ot in Vt) delete Vt[Ot], tt._keyStates[Ot] && Ot !== et.code && (ut(et, Ot) || vt(tt, Ot))
     }
 
-    function OB(BB, IB) {
-      const ZB = {
-          code: IB,
+    function vt(tt, et) {
+      const Vt = {
+          code: et,
           preventDefault: () => {},
           stopPropagation: () => {}
         },
-        TB = JB;
-      JB = ZB;
+        Ot = qt;
+      qt = Vt;
       try {
-        YB(IB, !1, BB, ZB)
+        Wt(et, !1, tt, Vt)
       } finally {
-        JB = TB
+        qt = Ot
       }
     }
 
-    function YB(BB, IB, ZB, TB) {
-      var JB = ZB._keyBindmap[BB];
-      JB && (iB(ZB._keyStates[BB], IB) && (ZB._keyStates[BB] = IB, JB.forEach((BB => {
-        (!ZB.filterEvents || ZB.filterEvents(TB, BB)) && function(BB, IB, ZB, TB) {
-          var JB = IB ? ZB.pressCount : ZB.releaseCount;
-          JB[BB] = (JB[BB] || 0) + 1;
-          var oB = ZB._bindPressCount[BB] || 0;
-          (oB += IB ? 1 : -1) < 0 && (oB = 0);
-          ZB._bindPressCount[BB] = oB;
-          var GB = ZB.state[BB];
-          if (iB(GB, oB)) {
-            ZB.state[BB] = oB > 0;
-            var vB = IB ? ZB.down : ZB.up;
-            ZB.disabled || vB.emit(BB, TB)
+    function Wt(tt, et, Vt, Ot) {
+      var qt = Vt._keyBindmap[tt];
+      qt && (St(Vt._keyStates[tt], et) && (Vt._keyStates[tt] = et, qt.forEach((tt => {
+        (!Vt.filterEvents || Vt.filterEvents(Ot, tt)) && function(tt, et, Vt, Ot) {
+          var qt = et ? Vt.pressCount : Vt.releaseCount;
+          qt[tt] = (qt[tt] || 0) + 1;
+          var Dt = Vt._bindPressCount[tt] || 0;
+          (Dt += et ? 1 : -1) < 0 && (Dt = 0);
+          Vt._bindPressCount[tt] = Dt;
+          var mt = Vt.state[tt];
+          if (St(mt, Dt)) {
+            Vt.state[tt] = Dt > 0;
+            var dt = et ? Vt.down : Vt.up;
+            Vt.disabled || dt.emit(tt, Ot)
           }
-        }(BB, IB, ZB, TB)
-      }))), "button" in TB || (ZB.ZD && !TB.defaultPrevented && TB.preventDefault(), ZB.stopPropagation && TB.stopPropagation()))
+        }(tt, et, Vt, Ot)
+      }))), "button" in Ot || (Vt.PU && !Ot.defaultPrevented && Ot.preventDefault(), Vt.stopPropagation && Ot.stopPropagation()))
     }
 
-    function iB(BB, IB) {
-      return BB ? !IB : IB
+    function St(tt, et) {
+      return tt ? !et : et
     }
   },
-  36565: (BB, IB) => {
-    function ZB(BB) {
-      if (BB && "object" === typeof BB) {
-        var IB = BB.which || BB.keyCode || BB.charCode;
-        IB && (BB = IB)
+  36785: (tt, et) => {
+    function Vt(tt) {
+      if (tt && "object" === typeof tt) {
+        var et = tt.which || tt.keyCode || tt.charCode;
+        et && (tt = et)
       }
-      if ("number" === typeof BB) return GB[BB];
-      var ZB, oB = String(BB);
-      return (ZB = TB[oB.toLowerCase()]) ? ZB : (ZB = JB[oB.toLowerCase()]) || (1 === oB.length ? oB.charCodeAt(0) : void 0)
+      if ("number" === typeof tt) return mt[tt];
+      var Vt, Dt = String(tt);
+      return (Vt = Ot[Dt.toLowerCase()]) ? Vt : (Vt = qt[Dt.toLowerCase()]) || (1 === Dt.length ? Dt.charCodeAt(0) : void 0)
     }
-    ZB.isEventKey = function(BB, IB) {
-      if (BB && "object" === typeof BB) {
-        var ZB = BB.which || BB.keyCode || BB.charCode;
-        if (null === ZB || void 0 === ZB) return !1;
-        if ("string" === typeof IB) {
-          var oB;
-          if (oB = TB[IB.toLowerCase()]) return oB === ZB;
-          if (oB = JB[IB.toLowerCase()]) return oB === ZB
-        } else if ("number" === typeof IB) return IB === ZB;
+    Vt.isEventKey = function(tt, et) {
+      if (tt && "object" === typeof tt) {
+        var Vt = tt.which || tt.keyCode || tt.charCode;
+        if (null === Vt || void 0 === Vt) return !1;
+        if ("string" === typeof et) {
+          var Dt;
+          if (Dt = Ot[et.toLowerCase()]) return Dt === Vt;
+          if (Dt = qt[et.toLowerCase()]) return Dt === Vt
+        } else if ("number" === typeof et) return et === Vt;
         return !1
       }
     };
-    var TB = (IB = BB.exports = ZB).code = IB.codes = {
+    var Ot = (et = tt.exports = Vt).code = et.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -374,7 +374,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      JB = IB.aliases = {
+      qt = et.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -396,139 +396,139 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (oB = 97; oB < 123; oB++) TB[String.fromCharCode(oB)] = oB - 32;
-    for (var oB = 48; oB < 58; oB++) TB[oB - 48] = oB;
-    for (oB = 1; oB < 13; oB++) TB["f" + oB] = oB + 111;
-    for (oB = 0; oB < 10; oB++) TB["numpad " + oB] = oB + 96;
-    var GB = IB.names = IB.title = {};
-    for (oB in TB) GB[TB[oB]] = oB;
-    for (var vB in JB) TB[vB] = JB[vB]
+    for (Dt = 97; Dt < 123; Dt++) Ot[String.fromCharCode(Dt)] = Dt - 32;
+    for (var Dt = 48; Dt < 58; Dt++) Ot[Dt - 48] = Dt;
+    for (Dt = 1; Dt < 13; Dt++) Ot["f" + Dt] = Dt + 111;
+    for (Dt = 0; Dt < 10; Dt++) Ot["numpad " + Dt] = Dt + 96;
+    var mt = et.names = et.title = {};
+    for (Dt in Ot) mt[Ot[Dt]] = Dt;
+    for (var dt in qt) Ot[dt] = qt[dt]
   },
-  39618: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      c: () => TB
+  39768: (tt, et, Vt) => {
+    Vt.d(et, {
+      e: () => Ot
     });
-    class TB {
+    class Ot {
       constructor() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-          IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
-        this.qL = !1, this.dL = !1, this.bM = 30, this.yX = 0, this.wL = 100, this.mq = !1, this.fullscreen = !1, this.dU = function(BB) {}, this.YL = function(BB, IB, ZB) {}, this.fL = function() {}, this.kU = function() {}, this.RL = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(BB) {}, this._data = new JB(IB),
-          function(BB) {
+        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+        this.uF = !1, this.KF = !1, this.bI = 30, this.jF = 0, this.vF = 100, this.zy = !1, this.fullscreen = !1, this.bM = function(tt) {}, this.SF = function(tt, et, Vt) {}, this.YF = function() {}, this.iN = function() {}, this.ZF = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(tt) {}, this._data = new qt(et),
+          function(tt) {
             if ("loading" === document.readyState) {
-              var IB = () => {
-                document.removeEventListener("readystatechange", IB), BB()
+              var et = () => {
+                document.removeEventListener("readystatechange", et), tt()
               };
-              document.addEventListener("readystatechange", IB)
-            } else setTimeout(BB, 0)
+              document.addEventListener("readystatechange", et)
+            } else setTimeout(tt, 0)
           }((() => {
-            ! function(BB) {
-              var IB = BB._data,
-                ZB = IB.nowObject.now();
-              IB.lastTickStarted = ZB, IB.lastFrameStarted = ZB, IB.lastRenderStarted = ZB, IB.frameCB = () => function(BB) {
-                var IB = BB._data;
-                requestAnimationFrame(IB.frameCB), vB(BB);
-                var ZB = IB.nowObject.now(),
-                  TB = ZB - IB.lastFrameStarted;
-                if (IB.lastFrameStarted = ZB, BB.yX > 0) {
-                  IB.renderAccum += TB;
-                  var JB = 1e3 / BB.yX;
-                  if (IB.renderAccum < JB) return;
-                  IB.renderAccum -= JB, IB.renderAccum > JB && (IB.renderAccum = JB)
+            ! function(tt) {
+              var et = tt._data,
+                Vt = et.nowObject.now();
+              et.lastTickStarted = Vt, et.lastFrameStarted = Vt, et.lastRenderStarted = Vt, et.frameCB = () => function(tt) {
+                var et = tt._data;
+                requestAnimationFrame(et.frameCB), dt(tt);
+                var Vt = et.nowObject.now(),
+                  Ot = Vt - et.lastFrameStarted;
+                if (et.lastFrameStarted = Vt, tt.jF > 0) {
+                  et.renderAccum += Ot;
+                  var qt = 1e3 / tt.jF;
+                  if (et.renderAccum < qt) return;
+                  et.renderAccum -= qt, et.renderAccum > qt && (et.renderAccum = qt)
                 }
-                var oB = ZB - IB.lastRenderStarted;
-                IB.lastRenderStarted = ZB;
-                var GB = 1e3 / BB.bM,
-                  kB = (ZB - IB.lastTickStarted) / GB;
-                kB < 0 && (kB = 0);
-                BB.YL(oB, kB, GB), setTimeout(vB, 0, BB, !0)
-              }(BB), IB.intervalCB = () => vB(BB), requestAnimationFrame(IB.frameCB), IB.pollTime > 0 && (IB.intervalID = setInterval(IB.intervalCB, Math.max(IB.pollTime, 1e3 / BB.bM / 2)))
+                var Dt = Vt - et.lastRenderStarted;
+                et.lastRenderStarted = Vt;
+                var mt = 1e3 / tt.bI,
+                  jt = (Vt - et.lastTickStarted) / mt;
+                jt < 0 && (jt = 0);
+                tt.SF(Dt, jt, mt), setTimeout(dt, 0, tt, !0)
+              }(tt), et.intervalCB = () => dt(tt), requestAnimationFrame(et.frameCB), et.pollTime > 0 && (et.intervalID = setInterval(et.intervalCB, Math.max(et.pollTime, 1e3 / tt.bI / 2)))
             }(this),
-            function(BB, IB) {
-              if (!IB) return;
-              var ZB = !1,
-                TB = !1,
-                JB = BB => {
-                  if (!!BB !== (ZB = IB === document.pointerLockElement))
-                    if (BB) {
-                      var TB = IB.requestPointerLock();
-                      TB && TB.catch && TB.catch((BB => {}))
+            function(tt, et) {
+              if (!et) return;
+              var Vt = !1,
+                Ot = !1,
+                qt = tt => {
+                  if (!!tt !== (Vt = et === document.pointerLockElement))
+                    if (tt) {
+                      var Ot = et.requestPointerLock();
+                      Ot && Ot.catch && Ot.catch((tt => {}))
                     } else document.exitPointerLock()
                 },
-                oB = BB => {
-                  !!BB !== (TB = IB === document.fullscreenElement) && (BB ? IB.requestFullscreen ? IB.requestFullscreen() : IB.webkitRequestFullscreen && IB.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
+                Dt = tt => {
+                  !!tt !== (Ot = et === document.fullscreenElement) && (tt ? et.requestFullscreen ? et.requestFullscreen() : et.webkitRequestFullscreen && et.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
                 };
-              document.addEventListener("pointerlockchange", (TB => {
-                ZB = IB === document.pointerLockElement, BB.RL(ZB)
-              })), document.addEventListener("fullscreenchange", (ZB => {
-                TB = IB === document.fullscreenElement, BB.onFullscreenChanged(TB)
-              })), document.addEventListener("pointerlockerror", (TB => {
-                ZB = IB === document.pointerLockElement, BB.onPointerLockError(TB)
-              })), Object.defineProperty(BB, "mq", {
-                get: () => ZB,
-                set: JB
-              }), Object.defineProperty(BB, "fullscreen", {
-                get: () => TB,
-                set: oB
-              }), IB.addEventListener("click", (IB => {
-                BB.qL && JB(!0), BB.dL && oB(!0)
+              document.addEventListener("pointerlockchange", (Ot => {
+                Vt = et === document.pointerLockElement, tt.ZF(Vt)
+              })), document.addEventListener("fullscreenchange", (Vt => {
+                Ot = et === document.fullscreenElement, tt.onFullscreenChanged(Ot)
+              })), document.addEventListener("pointerlockerror", (Ot => {
+                Vt = et === document.pointerLockElement, tt.onPointerLockError(Ot)
+              })), Object.defineProperty(tt, "zy", {
+                get: () => Vt,
+                set: qt
+              }), Object.defineProperty(tt, "fullscreen", {
+                get: () => Ot,
+                set: Dt
+              }), et.addEventListener("click", (et => {
+                tt.uF && qt(!0), tt.KF && Dt(!0)
               }));
-              var GB = () => BB.kU();
+              var mt = () => tt.iN();
               if (window.ResizeObserver) {
-                new ResizeObserver(GB).observe(IB)
-              } else window.addEventListener("resize", GB)
-            }(this, BB), this.fL()
+                new ResizeObserver(mt).observe(et)
+              } else window.addEventListener("resize", mt)
+            }(this, tt), this.YF()
           }))
       }
     }
 
-    function JB() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      this.nowObject = performance || Date, this.pollTime = BB, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
+    function qt() {
+      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      this.nowObject = performance || Date, this.pollTime = tt, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
     }
-    var oB = 3,
-      GB = 20;
+    var Dt = 3,
+      mt = 20;
 
-    function vB(BB) {
-      for (var IB = BB._data, ZB = 1e3 / BB.bM, TB = IB.nowObject.now() + GB, JB = 0; IB.nowObject.now() >= IB.lastTickStarted + ZB && IB.nowObject.now() < TB && ++JB <= oB;) BB.dU(ZB), IB.lastTickStarted += ZB;
-      var vB = 5 * (ZB + 5),
-        kB = IB.nowObject.now();
-      if (kB - IB.lastTickStarted > vB)
-        for (; kB >= IB.lastTickStarted + ZB;) IB.lastTickStarted += ZB
+    function dt(tt) {
+      for (var et = tt._data, Vt = 1e3 / tt.bI, Ot = et.nowObject.now() + mt, qt = 0; et.nowObject.now() >= et.lastTickStarted + Vt && et.nowObject.now() < Ot && ++qt <= Dt;) tt.bM(Vt), et.lastTickStarted += Vt;
+      var dt = 5 * (Vt + 5),
+        jt = et.nowObject.now();
+      if (jt - et.lastTickStarted > dt)
+        for (; jt >= et.lastTickStarted + Vt;) et.lastTickStarted += Vt
     }
   },
-  36717: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => GB
+  36950: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => mt
     });
-    var TB = ZB(63);
-    const JB = TB.useLayoutEffect;
-    const oB = function(BB) {
-      var IB = (0, TB.useRef)(BB);
-      return JB((function() {
-        IB.current = BB
-      })), IB
+    var Ot = Vt(63);
+    const qt = Ot.useLayoutEffect;
+    const Dt = function(tt) {
+      var et = (0, Ot.useRef)(tt);
+      return qt((function() {
+        et.current = tt
+      })), et
     };
-    var GB = function(BB) {
-      var IB = oB(BB);
-      (0, TB.useEffect)((function() {
-        var BB = function(BB) {
-          var ZB;
-          if (null != IB.current && (ZB = IB.current(BB)), BB.defaultPrevented && (BB.returnValue = ""), "string" === typeof ZB) return BB.returnValue = ZB, ZB
+    var mt = function(tt) {
+      var et = Dt(tt);
+      (0, Ot.useEffect)((function() {
+        var tt = function(tt) {
+          var Vt;
+          if (null != et.current && (Vt = et.current(tt)), tt.defaultPrevented && (tt.returnValue = ""), "string" === typeof Vt) return tt.returnValue = Vt, Vt
         };
-        return window.addEventListener("beforeunload", BB),
+        return window.addEventListener("beforeunload", tt),
           function() {
-            window.removeEventListener("beforeunload", BB)
+            window.removeEventListener("beforeunload", tt)
           }
       }), [])
     }
   },
-  36600: BB => {
-    var IB, ZB = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      TB = /OS X/.test(ZB),
-      JB = /Opera/.test(ZB),
-      oB = !/like Gecko/.test(ZB) && !JB,
-      GB = BB.exports = {
-        0: TB ? "<menu>" : "<UNK>",
+  36830: tt => {
+    var et, Vt = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      Ot = /OS X/.test(Vt),
+      qt = /Opera/.test(Vt),
+      Dt = !/like Gecko/.test(Vt) && !qt,
+      mt = tt.exports = {
+        0: Ot ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -571,7 +571,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: TB ? "<meta>" : "<menu>",
+        93: Ot ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -594,7 +594,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: TB && oB ? "-" : "<volume-mute>",
+        173: Ot && Dt ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -620,7 +620,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: JB ? "`" : "<unicode>",
+        231: qt ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -631,183 +631,183 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (IB = 58; IB < 65; ++IB) GB[IB] = String.fromCharCode(IB);
-    for (IB = 48; IB < 58; ++IB) GB[IB] = IB - 48 + "";
-    for (IB = 65; IB < 91; ++IB) GB[IB] = String.fromCharCode(IB);
-    for (IB = 96; IB < 106; ++IB) GB[IB] = "<num-" + (IB - 96) + ">";
-    for (IB = 112; IB < 136; ++IB) GB[IB] = "F" + (IB - 111)
+    for (et = 58; et < 65; ++et) mt[et] = String.fromCharCode(et);
+    for (et = 48; et < 58; ++et) mt[et] = et - 48 + "";
+    for (et = 65; et < 91; ++et) mt[et] = String.fromCharCode(et);
+    for (et = 96; et < 106; ++et) mt[et] = "<num-" + (et - 96) + ">";
+    for (et = 112; et < 136; ++et) mt[et] = "F" + (et - 111)
   },
-  39039: (BB, IB, ZB) => {
-    function TB(BB, IB, ZB, TB, JB) {
-      var oB = {};
-      return Object.keys(TB).forEach((function(BB) {
-        oB[BB] = TB[BB]
-      })), oB.enumerable = !!oB.enumerable, oB.configurable = !!oB.configurable, ("value" in oB || oB.initializer) && (oB.writable = !0), oB = ZB.slice().reverse().reduce((function(ZB, TB) {
-        return TB(BB, IB, ZB) || ZB
-      }), oB), JB && void 0 !== oB.initializer && (oB.value = oB.initializer ? oB.initializer.call(JB) : void 0, oB.initializer = void 0), void 0 === oB.initializer && (Object.defineProperty(BB, IB, oB), oB = null), oB
+  39177: (tt, et, Vt) => {
+    function Ot(tt, et, Vt, Ot, qt) {
+      var Dt = {};
+      return Object.keys(Ot).forEach((function(tt) {
+        Dt[tt] = Ot[tt]
+      })), Dt.enumerable = !!Dt.enumerable, Dt.configurable = !!Dt.configurable, ("value" in Dt || Dt.initializer) && (Dt.writable = !0), Dt = Vt.slice().reverse().reduce((function(Vt, Ot) {
+        return Ot(tt, et, Vt) || Vt
+      }), Dt), qt && void 0 !== Dt.initializer && (Dt.value = Dt.initializer ? Dt.initializer.call(qt) : void 0, Dt.initializer = void 0), void 0 === Dt.initializer && (Object.defineProperty(tt, et, Dt), Dt = null), Dt
     }
-    ZB.d(IB, {
-      b: () => TB
+    Vt.d(et, {
+      e: () => Ot
     })
   },
-  39032: (BB, IB, ZB) => {
-    function TB(BB, IB, ZB, TB) {
-      ZB && Object.defineProperty(BB, IB, {
-        enumerable: ZB.enumerable,
-        configurable: ZB.configurable,
-        writable: ZB.writable,
-        value: ZB.initializer ? ZB.initializer.call(TB) : void 0
+  39169: (tt, et, Vt) => {
+    function Ot(tt, et, Vt, Ot) {
+      Vt && Object.defineProperty(tt, et, {
+        enumerable: Vt.enumerable,
+        configurable: Vt.configurable,
+        writable: Vt.writable,
+        value: Vt.initializer ? Vt.initializer.call(Ot) : void 0
       })
     }
-    ZB.d(IB, {
-      d: () => TB
+    Vt.d(et, {
+      b: () => Ot
     })
   },
-  38714: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      b: () => oB
+  38897: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => Dt
     });
-    var TB = ZB(38718);
-    const JB = (BB, IB, ZB) => BB ? BB.getClassName && "Mesh" === BB.getClassName() ? null : !BB.getClassName || "SubMesh" !== BB.getClassName() && "PhysicsBody" !== BB.getClassName() ? BB.clone ? BB.clone() : Array.isArray(BB) ? BB.slice() : ZB && "object" === typeof BB ? {
-      ...BB
-    } : null : BB.clone(IB) : null;
-    class oB {
-      static DeepCopy(BB, IB, ZB, oB) {
-        let GB = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const vB = function(BB) {
-          const IB = [];
+    var Ot = Vt(38899);
+    const qt = (tt, et, Vt) => tt ? tt.getClassName && "Mesh" === tt.getClassName() ? null : !tt.getClassName || "SubMesh" !== tt.getClassName() && "PhysicsBody" !== tt.getClassName() ? tt.clone ? tt.clone() : Array.isArray(tt) ? tt.slice() : Vt && "object" === typeof tt ? {
+      ...tt
+    } : null : tt.clone(et) : null;
+    class Dt {
+      static DeepCopy(tt, et, Vt, Dt) {
+        let mt = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const dt = function(tt) {
+          const et = [];
           do {
-            const ZB = Object.getOwnPropertyNames(BB);
-            for (const BB of ZB) - 1 === IB.indexOf(BB) && IB.push(BB)
-          } while (BB = Object.getPrototypeOf(BB));
-          return IB
-        }(BB);
-        for (const cB of vB) {
-          if ("_" === cB[0] && (!oB || -1 === oB.indexOf(cB))) continue;
-          if (cB.endsWith("Observable")) continue;
-          if (ZB && -1 !== ZB.indexOf(cB)) continue;
-          const vB = BB[cB],
-            nB = typeof vB;
-          if ("function" !== nB) try {
-            if ("object" === nB)
-              if (vB instanceof Uint8Array) IB[cB] = Uint8Array.from(vB);
-              else if (vB instanceof Array) {
-              if (IB[cB] = [], vB.length > 0)
-                if ("object" == typeof vB[0])
-                  for (let BB = 0; BB < vB.length; BB++) {
-                    const ZB = JB(vB[BB], IB, GB); - 1 === IB[cB].indexOf(ZB) && IB[cB].push(ZB)
-                  } else IB[cB] = vB.slice(0)
-            } else IB[cB] = JB(vB, IB, GB);
-            else IB[cB] = vB
-          } catch (kB) {
-            TB.d.Warn(kB.message)
+            const Vt = Object.getOwnPropertyNames(tt);
+            for (const tt of Vt) - 1 === et.indexOf(tt) && et.push(tt)
+          } while (tt = Object.getPrototypeOf(tt));
+          return et
+        }(tt);
+        for (const Ht of dt) {
+          if ("_" === Ht[0] && (!Dt || -1 === Dt.indexOf(Ht))) continue;
+          if (Ht.endsWith("Observable")) continue;
+          if (Vt && -1 !== Vt.indexOf(Ht)) continue;
+          const dt = tt[Ht],
+            Xt = typeof dt;
+          if ("function" !== Xt) try {
+            if ("object" === Xt)
+              if (dt instanceof Uint8Array) et[Ht] = Uint8Array.from(dt);
+              else if (dt instanceof Array) {
+              if (et[Ht] = [], dt.length > 0)
+                if ("object" == typeof dt[0])
+                  for (let tt = 0; tt < dt.length; tt++) {
+                    const Vt = qt(dt[tt], et, mt); - 1 === et[Ht].indexOf(Vt) && et[Ht].push(Vt)
+                  } else et[Ht] = dt.slice(0)
+            } else et[Ht] = qt(dt, et, mt);
+            else et[Ht] = dt
+          } catch (jt) {
+            Ot.d.Warn(jt.message)
           }
         }
       }
     }
   },
-  38754: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      e: () => JB,
-      i: () => oB,
-      j: () => GB,
-      n: () => vB
+  38927: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => qt,
+      f: () => Dt,
+      h: () => mt,
+      i: () => dt
     });
-    var TB = ZB(37311);
-    class JB {
-      constructor(BB, IB, ZB) {
-        this.gradient = BB, this.color1 = IB, this.color2 = ZB
+    var Ot = Vt(37513);
+    class qt {
+      constructor(tt, et, Vt) {
+        this.gradient = tt, this.color1 = et, this.color2 = Vt
       }
-      getColorToRef(BB) {
-        this.color2 ? TB.g.LerpToRef(this.color1, this.color2, Math.random(), BB) : BB.TY(this.color1)
-      }
-    }
-    class oB {
-      constructor(BB, IB) {
-        this.gradient = BB, this.color = IB
+      getColorToRef(tt) {
+        this.color2 ? Ot.c.LerpToRef(this.color1, this.color2, Math.random(), tt) : tt.rK(this.color1)
       }
     }
-    class GB {
-      constructor(BB, IB, ZB) {
-        this.gradient = BB, this.factor1 = IB, this.factor2 = ZB
+    class Dt {
+      constructor(tt, et) {
+        this.gradient = tt, this.color = et
+      }
+    }
+    class mt {
+      constructor(tt, et, Vt) {
+        this.gradient = tt, this.factor1 = et, this.factor2 = Vt
       }
       getFactor() {
         return void 0 === this.factor2 || this.factor2 === this.factor1 ? this.factor1 : this.factor1 + (this.factor2 - this.factor1) * Math.random()
       }
     }
-    class vB {
-      static GetCurrentGradient(BB, IB, ZB) {
-        if (IB[0].gradient > BB) return void ZB(IB[0], IB[0], 1);
-        for (let JB = 0; JB < IB.length - 1; JB++) {
-          const TB = IB[JB],
-            oB = IB[JB + 1];
-          if (BB >= TB.gradient && BB <= oB.gradient) {
-            return void ZB(TB, oB, (BB - TB.gradient) / (oB.gradient - TB.gradient))
+    class dt {
+      static GetCurrentGradient(tt, et, Vt) {
+        if (et[0].gradient > tt) return void Vt(et[0], et[0], 1);
+        for (let qt = 0; qt < et.length - 1; qt++) {
+          const Ot = et[qt],
+            Dt = et[qt + 1];
+          if (tt >= Ot.gradient && tt <= Dt.gradient) {
+            return void Vt(Ot, Dt, (tt - Ot.gradient) / (Dt.gradient - Ot.gradient))
           }
         }
-        const TB = IB.length - 1;
-        ZB(IB[TB], IB[TB], 1)
+        const Ot = et.length - 1;
+        Vt(et[Ot], et[Ot], 1)
       }
     }
   },
-  38718: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => TB
+  38899: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => Ot
     });
-    class TB {
-      static _CheckLimit(BB, IB) {
-        let ZB = TB._LogLimitOutputs[BB];
-        return ZB ? ZB.current++ : (ZB = {
-          limit: IB,
+    class Ot {
+      static _CheckLimit(tt, et) {
+        let Vt = Ot._LogLimitOutputs[tt];
+        return Vt ? Vt.current++ : (Vt = {
+          limit: et,
           current: 1
-        }, TB._LogLimitOutputs[BB] = ZB), ZB.current <= ZB.limit
+        }, Ot._LogLimitOutputs[tt] = Vt), Vt.current <= Vt.limit
       }
-      static _GenerateLimitMessage(BB) {
-        let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const ZB = TB._LogLimitOutputs[BB];
-        if (!ZB || !TB.MessageLimitReached) return;
-        const JB = this._Levels[IB];
-        ZB.current === ZB.limit && TB[JB.name](TB.MessageLimitReached.replace(/%LIMIT%/g, "" + ZB.limit).replace(/%TYPE%/g, JB.name ?? ""))
+      static _GenerateLimitMessage(tt) {
+        let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const Vt = Ot._LogLimitOutputs[tt];
+        if (!Vt || !Ot.MessageLimitReached) return;
+        const qt = this._Levels[et];
+        Vt.current === Vt.limit && Ot[qt.name](Ot.MessageLimitReached.replace(/%LIMIT%/g, "" + Vt.limit).replace(/%TYPE%/g, qt.name ?? ""))
       }
-      static _AddLogEntry(BB) {
-        TB._LogCache = BB + TB._LogCache, TB.OnNewCacheEntry && TB.OnNewCacheEntry(BB)
+      static _AddLogEntry(tt) {
+        Ot._LogCache = tt + Ot._LogCache, Ot.OnNewCacheEntry && Ot.OnNewCacheEntry(tt)
       }
-      static _FormatMessage(BB) {
-        const IB = BB => BB < 10 ? "0" + BB : "" + BB,
-          ZB = new Date;
-        return "[" + IB(ZB.getHours()) + ":" + IB(ZB.getMinutes()) + ":" + IB(ZB.getSeconds()) + "]: " + BB
+      static _FormatMessage(tt) {
+        const et = tt => tt < 10 ? "0" + tt : "" + tt,
+          Vt = new Date;
+        return "[" + et(Vt.getHours()) + ":" + et(Vt.getMinutes()) + ":" + et(Vt.getSeconds()) + "]: " + tt
       }
-      static _LogDisabled(BB, IB) {}
+      static _LogDisabled(tt, et) {}
       static _LogEnabled() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          IB = arguments.length > 1 ? arguments[1] : void 0,
-          ZB = arguments.length > 2 ? arguments[2] : void 0;
-        const JB = Array.isArray(IB) ? IB[0] : IB;
-        if (void 0 !== ZB && !TB._CheckLimit(JB, ZB)) return;
-        const oB = TB._FormatMessage(JB),
-          GB = this._Levels[BB],
-          vB = Array.isArray(IB) ? IB.slice(1) : [];
-        GB.logFunc && GB.logFunc("BJS - " + oB, ...vB);
-        const kB = `<div style='color:${GB.color}'>${oB}</div><br>`;
-        TB._AddLogEntry(kB), TB._GenerateLimitMessage(JB, BB)
+        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          et = arguments.length > 1 ? arguments[1] : void 0,
+          Vt = arguments.length > 2 ? arguments[2] : void 0;
+        const qt = Array.isArray(et) ? et[0] : et;
+        if (void 0 !== Vt && !Ot._CheckLimit(qt, Vt)) return;
+        const Dt = Ot._FormatMessage(qt),
+          mt = this._Levels[tt],
+          dt = Array.isArray(et) ? et.slice(1) : [];
+        mt.logFunc && mt.logFunc("BJS - " + Dt, ...dt);
+        const jt = `<div style='color:${mt.color}'>${Dt}</div><br>`;
+        Ot._AddLogEntry(jt), Ot._GenerateLimitMessage(qt, tt)
       }
       static get LogCache() {
-        return TB._LogCache
+        return Ot._LogCache
       }
       static ClearLogCache() {
-        TB._LogCache = "", TB._LogLimitOutputs = {}, TB.errorsCount = 0
+        Ot._LogCache = "", Ot._LogLimitOutputs = {}, Ot.errorsCount = 0
       }
-      static set LogLevels(BB) {
-        TB.Log = TB._LogDisabled, TB.Warn = TB._LogDisabled, TB.Error = TB._LogDisabled;
-        const IB = [TB.MessageLogLevel, TB.WarningLogLevel, TB.ErrorLogLevel];
-        for (const ZB of IB)
-          if ((BB & ZB) === ZB) {
-            const BB = this._Levels[ZB];
-            TB[BB.name] = TB._LogEnabled.bind(TB, ZB)
+      static set LogLevels(tt) {
+        Ot.Log = Ot._LogDisabled, Ot.Warn = Ot._LogDisabled, Ot.Error = Ot._LogDisabled;
+        const et = [Ot.MessageLogLevel, Ot.WarningLogLevel, Ot.ErrorLogLevel];
+        for (const Vt of et)
+          if ((tt & Vt) === Vt) {
+            const tt = this._Levels[Vt];
+            Ot[tt.name] = Ot._LogEnabled.bind(Ot, Vt)
           }
       }
     }
-    TB.NoneLogLevel = 0, TB.MessageLogLevel = 1, TB.WarningLogLevel = 2, TB.ErrorLogLevel = 4, TB.AllLogLevel = 7, TB.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", TB._LogCache = "", TB._LogLimitOutputs = {}, TB._Levels = [{}, {
+    Ot.NoneLogLevel = 0, Ot.MessageLogLevel = 1, Ot.WarningLogLevel = 2, Ot.ErrorLogLevel = 4, Ot.AllLogLevel = 7, Ot.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Ot._LogCache = "", Ot._LogLimitOutputs = {}, Ot._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -819,42 +819,42 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], TB.errorsCount = 0, TB.Log = TB._LogEnabled.bind(TB, TB.MessageLogLevel), TB.Warn = TB._LogEnabled.bind(TB, TB.WarningLogLevel), TB.Error = TB._LogEnabled.bind(TB, TB.ErrorLogLevel)
+    }], Ot.errorsCount = 0, Ot.Log = Ot._LogEnabled.bind(Ot, Ot.MessageLogLevel), Ot.Warn = Ot._LogEnabled.bind(Ot, Ot.WarningLogLevel), Ot.Error = Ot._LogEnabled.bind(Ot, Ot.ErrorLogLevel)
   },
-  38756: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      c: () => GB
+  38935: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => mt
     });
-    var TB = ZB(37120),
-      JB = ZB(37158),
-      oB = ZB(38714);
-    class GB {
+    var Ot = Vt(37336),
+      qt = Vt(37372),
+      Dt = Vt(38897);
+    class mt {
       constructor() {
-        this.direction1 = new TB.s(0, 1, 0), this.direction2 = new TB.s(0, 1, 0), this.minEmitBox = new TB.s(-.5, -.5, -.5), this.maxEmitBox = new TB.s(.5, .5, .5)
+        this.direction1 = new Ot.n(0, 1, 0), this.direction2 = new Ot.n(0, 1, 0), this.minEmitBox = new Ot.n(-.5, -.5, -.5), this.maxEmitBox = new Ot.n(.5, .5, .5)
       }
-      startDirectionFunction(BB, IB, ZB, oB) {
-        const GB = (0, JB.RandomRange)(this.direction1.x, this.direction2.x),
-          vB = (0, JB.RandomRange)(this.direction1.y, this.direction2.y),
-          kB = (0, JB.RandomRange)(this.direction1.z, this.direction2.z);
-        if (oB) return IB.x = GB, IB.y = vB, void(IB.z = kB);
-        TB.s.TransformNormalFromFloatsToRef(GB, vB, kB, BB, IB)
+      startDirectionFunction(tt, et, Vt, Dt) {
+        const mt = (0, qt.RandomRange)(this.direction1.x, this.direction2.x),
+          dt = (0, qt.RandomRange)(this.direction1.y, this.direction2.y),
+          jt = (0, qt.RandomRange)(this.direction1.z, this.direction2.z);
+        if (Dt) return et.x = mt, et.y = dt, void(et.z = jt);
+        Ot.n.TransformNormalFromFloatsToRef(mt, dt, jt, tt, et)
       }
-      startPositionFunction(BB, IB, ZB, oB) {
-        const GB = (0, JB.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
-          vB = (0, JB.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
-          kB = (0, JB.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
-        if (oB) return IB.x = GB, IB.y = vB, void(IB.z = kB);
-        TB.s.TransformCoordinatesFromFloatsToRef(GB, vB, kB, BB, IB)
+      startPositionFunction(tt, et, Vt, Dt) {
+        const mt = (0, qt.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
+          dt = (0, qt.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
+          jt = (0, qt.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
+        if (Dt) return et.x = mt, et.y = dt, void(et.z = jt);
+        Ot.n.TransformCoordinatesFromFloatsToRef(mt, dt, jt, tt, et)
       }
       clone() {
-        const BB = new GB;
-        return oB.b.DeepCopy(this, BB), BB
+        const tt = new mt;
+        return Dt.d.DeepCopy(this, tt), tt
       }
-      applyToShader(BB) {
-        BB.setVector3("direction1", this.direction1), BB.setVector3("direction2", this.direction2), BB.setVector3("minEmitBox", this.minEmitBox), BB.setVector3("maxEmitBox", this.maxEmitBox)
+      applyToShader(tt) {
+        tt.setVector3("direction1", this.direction1), tt.setVector3("direction2", this.direction2), tt.setVector3("minEmitBox", this.minEmitBox), tt.setVector3("maxEmitBox", this.maxEmitBox)
       }
-      buildUniformLayout(BB) {
-        BB.addUniform("direction1", 3), BB.addUniform("direction2", 3), BB.addUniform("minEmitBox", 3), BB.addUniform("maxEmitBox", 3)
+      buildUniformLayout(tt) {
+        tt.addUniform("direction1", 3), tt.addUniform("direction2", 3), tt.addUniform("minEmitBox", 3), tt.addUniform("maxEmitBox", 3)
       }
       getEffectDefines() {
         return "#define BOXEMITTER"
@@ -863,54 +863,54 @@ export const modules = {
         return "BoxParticleEmitter"
       }
       serialize() {
-        const BB = {};
-        return BB.type = this.getClassName(), BB.direction1 = this.direction1.HTB(), BB.direction2 = this.direction2.HTB(), BB.minEmitBox = this.minEmitBox.HTB(), BB.maxEmitBox = this.maxEmitBox.HTB(), BB
+        const tt = {};
+        return tt.type = this.getClassName(), tt.direction1 = this.direction1.GOt(), tt.direction2 = this.direction2.GOt(), tt.minEmitBox = this.minEmitBox.GOt(), tt.maxEmitBox = this.maxEmitBox.GOt(), tt
       }
-      parse(BB) {
-        TB.s.FromArrayToRef(BB.direction1, 0, this.direction1), TB.s.FromArrayToRef(BB.direction2, 0, this.direction2), TB.s.FromArrayToRef(BB.minEmitBox, 0, this.minEmitBox), TB.s.FromArrayToRef(BB.maxEmitBox, 0, this.maxEmitBox)
+      parse(tt) {
+        Ot.n.FromArrayToRef(tt.direction1, 0, this.direction1), Ot.n.FromArrayToRef(tt.direction2, 0, this.direction2), Ot.n.FromArrayToRef(tt.minEmitBox, 0, this.minEmitBox), Ot.n.FromArrayToRef(tt.maxEmitBox, 0, this.maxEmitBox)
       }
     }
   },
-  38712: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      b: () => vB,
-      d: () => GB
+  38888: (tt, et, Vt) => {
+    Vt.d(et, {
+      c: () => dt,
+      f: () => mt
     });
-    var TB = ZB(37120),
-      JB = ZB(37158),
-      oB = ZB(38714);
-    class GB {
+    var Ot = Vt(37336),
+      qt = Vt(37372),
+      Dt = Vt(38897);
+    class mt {
       constructor() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          JB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-        this.radius = BB, this.height = IB, this.radiusRange = ZB, this.directionRandomizer = JB, this._tempVector = TB.s.Zero()
+        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          qt = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.radius = tt, this.height = et, this.radiusRange = Vt, this.directionRandomizer = qt, this._tempVector = Ot.n.Zero()
       }
-      startDirectionFunction(BB, IB, ZB, oB, GB) {
-        ZB.position.subtractToRef(BB.getTranslation(), this._tempVector), this._tempVector.normalize(), TB.s.TransformNormalToRef(this._tempVector, GB, this._tempVector);
-        const vB = (0, JB.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
-        let kB = Math.atan2(this._tempVector.x, this._tempVector.z);
-        kB += (0, JB.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = vB, this._tempVector.x = Math.sin(kB), this._tempVector.z = Math.cos(kB), this._tempVector.normalize(), oB ? IB.TY(this._tempVector) : TB.s.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, BB, IB)
+      startDirectionFunction(tt, et, Vt, Dt, mt) {
+        Vt.position.subtractToRef(tt.getTranslation(), this._tempVector), this._tempVector.normalize(), Ot.n.TransformNormalToRef(this._tempVector, mt, this._tempVector);
+        const dt = (0, qt.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
+        let jt = Math.atan2(this._tempVector.x, this._tempVector.z);
+        jt += (0, qt.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = dt, this._tempVector.x = Math.sin(jt), this._tempVector.z = Math.cos(jt), this._tempVector.normalize(), Dt ? et.rK(this._tempVector) : Ot.n.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, tt, et)
       }
-      startPositionFunction(BB, IB, ZB, oB) {
-        const GB = (0, JB.RandomRange)(-this.height / 2, this.height / 2),
-          vB = (0, JB.RandomRange)(0, 2 * Math.PI),
-          kB = (0, JB.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
-          cB = Math.sqrt(kB) * this.radius,
-          nB = cB * Math.cos(vB),
-          hB = cB * Math.sin(vB);
-        oB ? IB.cBB(nB, GB, hB) : TB.s.TransformCoordinatesFromFloatsToRef(nB, GB, hB, BB, IB)
+      startPositionFunction(tt, et, Vt, Dt) {
+        const mt = (0, qt.RandomRange)(-this.height / 2, this.height / 2),
+          dt = (0, qt.RandomRange)(0, 2 * Math.PI),
+          jt = (0, qt.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
+          Ht = Math.sqrt(jt) * this.radius,
+          Xt = Ht * Math.cos(dt),
+          Qt = Ht * Math.sin(dt);
+        Dt ? et.W9(Xt, mt, Qt) : Ot.n.TransformCoordinatesFromFloatsToRef(Xt, mt, Qt, tt, et)
       }
       clone() {
-        const BB = new GB(this.radius, this.directionRandomizer);
-        return oB.b.DeepCopy(this, BB), BB
+        const tt = new mt(this.radius, this.directionRandomizer);
+        return Dt.d.DeepCopy(this, tt), tt
       }
-      applyToShader(BB) {
-        BB.setFloat("radius", this.radius), BB.setFloat("height", this.height), BB.setFloat("radiusRange", this.radiusRange), BB.setFloat("directionRandomizer", this.directionRandomizer)
+      applyToShader(tt) {
+        tt.setFloat("radius", this.radius), tt.setFloat("height", this.height), tt.setFloat("radiusRange", this.radiusRange), tt.setFloat("directionRandomizer", this.directionRandomizer)
       }
-      buildUniformLayout(BB) {
-        BB.addUniform("radius", 1), BB.addUniform("height", 1), BB.addUniform("radiusRange", 1), BB.addUniform("directionRandomizer", 1)
+      buildUniformLayout(tt) {
+        tt.addUniform("radius", 1), tt.addUniform("height", 1), tt.addUniform("radiusRange", 1), tt.addUniform("directionRandomizer", 1)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER"
@@ -919,37 +919,37 @@ export const modules = {
         return "CylinderParticleEmitter"
       }
       serialize() {
-        const BB = {};
-        return BB.type = this.getClassName(), BB.radius = this.radius, BB.height = this.height, BB.radiusRange = this.radiusRange, BB.directionRandomizer = this.directionRandomizer, BB
+        const tt = {};
+        return tt.type = this.getClassName(), tt.radius = this.radius, tt.height = this.height, tt.radiusRange = this.radiusRange, tt.directionRandomizer = this.directionRandomizer, tt
       }
-      parse(BB) {
-        this.radius = BB.radius, this.height = BB.height, this.radiusRange = BB.radiusRange, this.directionRandomizer = BB.directionRandomizer
+      parse(tt) {
+        this.radius = tt.radius, this.height = tt.height, this.radiusRange = tt.radiusRange, this.directionRandomizer = tt.directionRandomizer
       }
     }
-    class vB extends GB {
+    class dt extends mt {
       constructor() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-          ZB = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
-          JB = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new TB.s(0, 1, 0),
-          oB = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new TB.s(0, 1, 0);
-        super(BB, IB, ZB), this.direction1 = JB, this.direction2 = oB
+        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          Vt = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          qt = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Ot.n(0, 1, 0),
+          Dt = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new Ot.n(0, 1, 0);
+        super(tt, et, Vt), this.direction1 = qt, this.direction2 = Dt
       }
-      startDirectionFunction(BB, IB, ZB, oB) {
-        const GB = (0, JB.RandomRange)(this.direction1.x, this.direction2.x),
-          vB = (0, JB.RandomRange)(this.direction1.y, this.direction2.y),
-          kB = (0, JB.RandomRange)(this.direction1.z, this.direction2.z);
-        oB ? IB.cBB(GB, vB, kB) : TB.s.TransformNormalFromFloatsToRef(GB, vB, kB, BB, IB)
+      startDirectionFunction(tt, et, Vt, Dt) {
+        const mt = (0, qt.RandomRange)(this.direction1.x, this.direction2.x),
+          dt = (0, qt.RandomRange)(this.direction1.y, this.direction2.y),
+          jt = (0, qt.RandomRange)(this.direction1.z, this.direction2.z);
+        Dt ? et.W9(mt, dt, jt) : Ot.n.TransformNormalFromFloatsToRef(mt, dt, jt, tt, et)
       }
       clone() {
-        const BB = new vB(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
-        return oB.b.DeepCopy(this, BB), BB
+        const tt = new dt(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
+        return Dt.d.DeepCopy(this, tt), tt
       }
-      applyToShader(BB) {
-        BB.setFloat("radius", this.radius), BB.setFloat("height", this.height), BB.setFloat("radiusRange", this.radiusRange), BB.setVector3("direction1", this.direction1), BB.setVector3("direction2", this.direction2)
+      applyToShader(tt) {
+        tt.setFloat("radius", this.radius), tt.setFloat("height", this.height), tt.setFloat("radiusRange", this.radiusRange), tt.setVector3("direction1", this.direction1), tt.setVector3("direction2", this.direction2)
       }
-      buildUniformLayout(BB) {
-        BB.addUniform("radius", 1), BB.addUniform("height", 1), BB.addUniform("radiusRange", 1), BB.addUniform("direction1", 3), BB.addUniform("direction2", 3)
+      buildUniformLayout(tt) {
+        tt.addUniform("radius", 1), tt.addUniform("height", 1), tt.addUniform("radiusRange", 1), tt.addUniform("direction1", 3), tt.addUniform("direction2", 3)
       }
       getEffectDefines() {
         return "#define CYLINDEREMITTER\n#define DIRECTEDCYLINDEREMITTER"
@@ -958,239 +958,239 @@ export const modules = {
         return "CylinderDirectedParticleEmitter"
       }
       serialize() {
-        const BB = super.serialize();
-        return BB.direction1 = this.direction1.HTB(), BB.direction2 = this.direction2.HTB(), BB
+        const tt = super.serialize();
+        return tt.direction1 = this.direction1.GOt(), tt.direction2 = this.direction2.GOt(), tt
       }
-      parse(BB) {
-        super.parse(BB), TB.s.FromArrayToRef(BB.direction1, 0, this.direction1), TB.s.FromArrayToRef(BB.direction2, 0, this.direction2)
+      parse(tt) {
+        super.parse(tt), Ot.n.FromArrayToRef(tt.direction1, 0, this.direction1), Ot.n.FromArrayToRef(tt.direction2, 0, this.direction2)
       }
     }
   },
-  38844: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => hB
+  39010: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => Qt
     });
-    const TB = .5 * (Math.sqrt(3) - 1),
-      JB = (3 - Math.sqrt(3)) / 6,
-      oB = 1 / 3,
-      GB = 1 / 6,
-      vB = (Math.sqrt(5) - 1) / 4,
-      kB = (5 - Math.sqrt(5)) / 20,
-      cB = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
-      nB = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
-    const hB = class {
+    const Ot = .5 * (Math.sqrt(3) - 1),
+      qt = (3 - Math.sqrt(3)) / 6,
+      Dt = 1 / 3,
+      mt = 1 / 6,
+      dt = (Math.sqrt(5) - 1) / 4,
+      jt = (5 - Math.sqrt(5)) / 20,
+      Ht = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
+      Xt = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
+    const Qt = class {
       constructor() {
-        let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
-        const IB = "function" == typeof BB ? BB : function(BB) {
-          let IB = 0,
-            ZB = 0,
-            TB = 0,
-            JB = 1;
-          const oB = function() {
-            let BB = 4022871197;
-            return function(IB) {
-              IB = IB.toString();
-              for (let ZB = 0; ZB < IB.length; ZB++) {
-                BB += IB.charCodeAt(ZB);
-                let TB = .02519603282416938 * BB;
-                BB = TB >>> 0, TB -= BB, TB *= BB, BB = TB >>> 0, TB -= BB, BB += 4294967296 * TB
+        let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
+        const et = "function" == typeof tt ? tt : function(tt) {
+          let et = 0,
+            Vt = 0,
+            Ot = 0,
+            qt = 1;
+          const Dt = function() {
+            let tt = 4022871197;
+            return function(et) {
+              et = et.toString();
+              for (let Vt = 0; Vt < et.length; Vt++) {
+                tt += et.charCodeAt(Vt);
+                let Ot = .02519603282416938 * tt;
+                tt = Ot >>> 0, Ot -= tt, Ot *= tt, tt = Ot >>> 0, Ot -= tt, tt += 4294967296 * Ot
               }
-              return 2.3283064365386963e-10 * (BB >>> 0)
+              return 2.3283064365386963e-10 * (tt >>> 0)
             }
           }();
-          IB = oB(" "), ZB = oB(" "), TB = oB(" "), IB -= oB(BB), IB < 0 && (IB += 1);
-          ZB -= oB(BB), ZB < 0 && (ZB += 1);
-          TB -= oB(BB), TB < 0 && (TB += 1);
+          et = Dt(" "), Vt = Dt(" "), Ot = Dt(" "), et -= Dt(tt), et < 0 && (et += 1);
+          Vt -= Dt(tt), Vt < 0 && (Vt += 1);
+          Ot -= Dt(tt), Ot < 0 && (Ot += 1);
           return function() {
-            const BB = 2091639 * IB + 2.3283064365386963e-10 * JB;
-            return IB = ZB, ZB = TB, TB = BB - (JB = 0 | BB)
+            const tt = 2091639 * et + 2.3283064365386963e-10 * qt;
+            return et = Vt, Vt = Ot, Ot = tt - (qt = 0 | tt)
           }
-        }(BB);
-        this.p = function(BB) {
-          const IB = new Uint8Array(256);
-          for (let ZB = 0; ZB < 256; ZB++) IB[ZB] = ZB;
-          for (let ZB = 0; ZB < 255; ZB++) {
-            const TB = ZB + ~~(BB() * (256 - ZB)),
-              JB = IB[ZB];
-            IB[ZB] = IB[TB], IB[TB] = JB
+        }(tt);
+        this.p = function(tt) {
+          const et = new Uint8Array(256);
+          for (let Vt = 0; Vt < 256; Vt++) et[Vt] = Vt;
+          for (let Vt = 0; Vt < 255; Vt++) {
+            const Ot = Vt + ~~(tt() * (256 - Vt)),
+              qt = et[Vt];
+            et[Vt] = et[Ot], et[Ot] = qt
           }
-          return IB
-        }(IB), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
-        for (let ZB = 0; ZB < 512; ZB++) this.perm[ZB] = this.p[255 & ZB], this.permMod12[ZB] = this.perm[ZB] % 12
+          return et
+        }(et), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
+        for (let Vt = 0; Vt < 512; Vt++) this.perm[Vt] = this.p[255 & Vt], this.permMod12[Vt] = this.perm[Vt] % 12
       }
-      noise2D(BB, IB) {
-        const ZB = this.permMod12,
-          oB = this.perm;
-        let GB = 0,
-          vB = 0,
-          kB = 0;
-        const nB = (BB + IB) * TB,
-          hB = Math.floor(BB + nB),
-          zB = Math.floor(IB + nB),
-          FB = (hB + zB) * JB,
-          NB = BB - (hB - FB),
-          gB = IB - (zB - FB);
-        let qB, yB;
-        NB > gB ? (qB = 1, yB = 0) : (qB = 0, yB = 1);
-        const UB = NB - qB + JB,
-          WB = gB - yB + JB,
-          dB = NB - 1 + 2 * JB,
-          CB = gB - 1 + 2 * JB,
-          QB = 255 & hB,
-          sB = 255 & zB;
-        let wB = .5 - NB * NB - gB * gB;
-        if (wB >= 0) {
-          const BB = 3 * ZB[QB + oB[sB]];
-          wB *= wB, GB = wB * wB * (cB[BB] * NB + cB[BB + 1] * gB)
+      noise2D(tt, et) {
+        const Vt = this.permMod12,
+          Dt = this.perm;
+        let mt = 0,
+          dt = 0,
+          jt = 0;
+        const Xt = (tt + et) * Ot,
+          Qt = Math.floor(tt + Xt),
+          lt = Math.floor(et + Xt),
+          Et = (Qt + lt) * qt,
+          ft = tt - (Qt - Et),
+          wt = et - (lt - Et);
+        let yt, Nt;
+        ft > wt ? (yt = 1, Nt = 0) : (yt = 0, Nt = 1);
+        const Mt = ft - yt + qt,
+          bt = wt - Nt + qt,
+          Jt = ft - 1 + 2 * qt,
+          Ct = wt - 1 + 2 * qt,
+          ut = 255 & Qt,
+          Kt = 255 & lt;
+        let ht = .5 - ft * ft - wt * wt;
+        if (ht >= 0) {
+          const tt = 3 * Vt[ut + Dt[Kt]];
+          ht *= ht, mt = ht * ht * (Ht[tt] * ft + Ht[tt + 1] * wt)
         }
-        let OB = .5 - UB * UB - WB * WB;
-        if (OB >= 0) {
-          const BB = 3 * ZB[QB + qB + oB[sB + yB]];
-          OB *= OB, vB = OB * OB * (cB[BB] * UB + cB[BB + 1] * WB)
+        let vt = .5 - Mt * Mt - bt * bt;
+        if (vt >= 0) {
+          const tt = 3 * Vt[ut + yt + Dt[Kt + Nt]];
+          vt *= vt, dt = vt * vt * (Ht[tt] * Mt + Ht[tt + 1] * bt)
         }
-        let YB = .5 - dB * dB - CB * CB;
-        if (YB >= 0) {
-          const BB = 3 * ZB[QB + 1 + oB[sB + 1]];
-          YB *= YB, kB = YB * YB * (cB[BB] * dB + cB[BB + 1] * CB)
+        let Wt = .5 - Jt * Jt - Ct * Ct;
+        if (Wt >= 0) {
+          const tt = 3 * Vt[ut + 1 + Dt[Kt + 1]];
+          Wt *= Wt, jt = Wt * Wt * (Ht[tt] * Jt + Ht[tt + 1] * Ct)
         }
-        return 70 * (GB + vB + kB)
+        return 70 * (mt + dt + jt)
       }
-      noise3D(BB, IB, ZB) {
-        const TB = this.permMod12,
-          JB = this.perm;
-        let vB, kB, nB, hB;
-        const zB = (BB + IB + ZB) * oB,
-          FB = Math.floor(BB + zB),
-          NB = Math.floor(IB + zB),
-          gB = Math.floor(ZB + zB),
-          qB = (FB + NB + gB) * GB,
-          yB = BB - (FB - qB),
-          UB = IB - (NB - qB),
-          WB = ZB - (gB - qB);
-        let dB, CB, QB, sB, wB, OB;
-        yB >= UB ? UB >= WB ? (dB = 1, CB = 0, QB = 0, sB = 1, wB = 1, OB = 0) : yB >= WB ? (dB = 1, CB = 0, QB = 0, sB = 1, wB = 0, OB = 1) : (dB = 0, CB = 0, QB = 1, sB = 1, wB = 0, OB = 1) : UB < WB ? (dB = 0, CB = 0, QB = 1, sB = 0, wB = 1, OB = 1) : yB < WB ? (dB = 0, CB = 1, QB = 0, sB = 0, wB = 1, OB = 1) : (dB = 0, CB = 1, QB = 0, sB = 1, wB = 1, OB = 0);
-        const YB = yB - dB + GB,
-          iB = UB - CB + GB,
-          pB = WB - QB + GB,
-          aB = yB - sB + 2 * GB,
-          HB = UB - wB + 2 * GB,
-          MB = WB - OB + 2 * GB,
-          jB = yB - 1 + .5,
-          PB = UB - 1 + .5,
-          RB = WB - 1 + .5,
-          rB = 255 & FB,
-          mB = 255 & NB,
-          XB = 255 & gB;
-        let LB = .6 - yB * yB - UB * UB - WB * WB;
-        if (LB < 0) vB = 0;
+      noise3D(tt, et, Vt) {
+        const Ot = this.permMod12,
+          qt = this.perm;
+        let dt, jt, Xt, Qt;
+        const lt = (tt + et + Vt) * Dt,
+          Et = Math.floor(tt + lt),
+          ft = Math.floor(et + lt),
+          wt = Math.floor(Vt + lt),
+          yt = (Et + ft + wt) * mt,
+          Nt = tt - (Et - yt),
+          Mt = et - (ft - yt),
+          bt = Vt - (wt - yt);
+        let Jt, Ct, ut, Kt, ht, vt;
+        Nt >= Mt ? Mt >= bt ? (Jt = 1, Ct = 0, ut = 0, Kt = 1, ht = 1, vt = 0) : Nt >= bt ? (Jt = 1, Ct = 0, ut = 0, Kt = 1, ht = 0, vt = 1) : (Jt = 0, Ct = 0, ut = 1, Kt = 1, ht = 0, vt = 1) : Mt < bt ? (Jt = 0, Ct = 0, ut = 1, Kt = 0, ht = 1, vt = 1) : Nt < bt ? (Jt = 0, Ct = 1, ut = 0, Kt = 0, ht = 1, vt = 1) : (Jt = 0, Ct = 1, ut = 0, Kt = 1, ht = 1, vt = 0);
+        const Wt = Nt - Jt + mt,
+          St = Mt - Ct + mt,
+          ct = bt - ut + mt,
+          Rt = Nt - Kt + 2 * mt,
+          It = Mt - ht + 2 * mt,
+          Pt = bt - vt + 2 * mt,
+          Zt = Nt - 1 + .5,
+          Lt = Mt - 1 + .5,
+          Ft = bt - 1 + .5,
+          kt = 255 & Et,
+          Gt = 255 & ft,
+          zt = 255 & wt;
+        let ot = .6 - Nt * Nt - Mt * Mt - bt * bt;
+        if (ot < 0) dt = 0;
         else {
-          const BB = 3 * TB[rB + JB[mB + JB[XB]]];
-          LB *= LB, vB = LB * LB * (cB[BB] * yB + cB[BB + 1] * UB + cB[BB + 2] * WB)
+          const tt = 3 * Ot[kt + qt[Gt + qt[zt]]];
+          ot *= ot, dt = ot * ot * (Ht[tt] * Nt + Ht[tt + 1] * Mt + Ht[tt + 2] * bt)
         }
-        let eB = .6 - YB * YB - iB * iB - pB * pB;
-        if (eB < 0) kB = 0;
+        let rt = .6 - Wt * Wt - St * St - ct * ct;
+        if (rt < 0) jt = 0;
         else {
-          const BB = 3 * TB[rB + dB + JB[mB + CB + JB[XB + QB]]];
-          eB *= eB, kB = eB * eB * (cB[BB] * YB + cB[BB + 1] * iB + cB[BB + 2] * pB)
+          const tt = 3 * Ot[kt + Jt + qt[Gt + Ct + qt[zt + ut]]];
+          rt *= rt, jt = rt * rt * (Ht[tt] * Wt + Ht[tt + 1] * St + Ht[tt + 2] * ct)
         }
-        let uB = .6 - aB * aB - HB * HB - MB * MB;
-        if (uB < 0) nB = 0;
+        let Ut = .6 - Rt * Rt - It * It - Pt * Pt;
+        if (Ut < 0) Xt = 0;
         else {
-          const BB = 3 * TB[rB + sB + JB[mB + wB + JB[XB + OB]]];
-          uB *= uB, nB = uB * uB * (cB[BB] * aB + cB[BB + 1] * HB + cB[BB + 2] * MB)
+          const tt = 3 * Ot[kt + Kt + qt[Gt + ht + qt[zt + vt]]];
+          Ut *= Ut, Xt = Ut * Ut * (Ht[tt] * Rt + Ht[tt + 1] * It + Ht[tt + 2] * Pt)
         }
-        let fB = .6 - jB * jB - PB * PB - RB * RB;
-        if (fB < 0) hB = 0;
+        let At = .6 - Zt * Zt - Lt * Lt - Ft * Ft;
+        if (At < 0) Qt = 0;
         else {
-          const BB = 3 * TB[rB + 1 + JB[mB + 1 + JB[XB + 1]]];
-          fB *= fB, hB = fB * fB * (cB[BB] * jB + cB[BB + 1] * PB + cB[BB + 2] * RB)
+          const tt = 3 * Ot[kt + 1 + qt[Gt + 1 + qt[zt + 1]]];
+          At *= At, Qt = At * At * (Ht[tt] * Zt + Ht[tt + 1] * Lt + Ht[tt + 2] * Ft)
         }
-        return 32 * (vB + kB + nB + hB)
+        return 32 * (dt + jt + Xt + Qt)
       }
-      noise4D(BB, IB, ZB, TB) {
-        const JB = this.perm;
-        let oB, GB, cB, hB, zB;
-        const FB = (BB + IB + ZB + TB) * vB,
-          NB = Math.floor(BB + FB),
-          gB = Math.floor(IB + FB),
-          qB = Math.floor(ZB + FB),
-          yB = Math.floor(TB + FB),
-          UB = (NB + gB + qB + yB) * kB,
-          WB = BB - (NB - UB),
-          dB = IB - (gB - UB),
-          CB = ZB - (qB - UB),
-          QB = TB - (yB - UB);
-        let sB = 0,
-          wB = 0,
-          OB = 0,
-          YB = 0;
-        WB > dB ? sB++ : wB++, WB > CB ? sB++ : OB++, WB > QB ? sB++ : YB++, dB > CB ? wB++ : OB++, dB > QB ? wB++ : YB++, CB > QB ? OB++ : YB++;
-        const iB = sB >= 3 ? 1 : 0,
-          pB = wB >= 3 ? 1 : 0,
-          aB = OB >= 3 ? 1 : 0,
-          HB = YB >= 3 ? 1 : 0,
-          MB = sB >= 2 ? 1 : 0,
-          jB = wB >= 2 ? 1 : 0,
-          PB = OB >= 2 ? 1 : 0,
-          RB = YB >= 2 ? 1 : 0,
-          rB = sB >= 1 ? 1 : 0,
-          mB = wB >= 1 ? 1 : 0,
-          XB = OB >= 1 ? 1 : 0,
-          LB = YB >= 1 ? 1 : 0,
-          eB = WB - iB + kB,
-          uB = dB - pB + kB,
-          fB = CB - aB + kB,
-          lB = QB - HB + kB,
-          AB = WB - MB + 2 * kB,
-          tB = dB - jB + 2 * kB,
-          bB = CB - PB + 2 * kB,
-          xB = QB - RB + 2 * kB,
-          EB = WB - rB + 3 * kB,
-          DB = dB - mB + 3 * kB,
-          KB = CB - XB + 3 * kB,
-          VB = QB - LB + 3 * kB,
-          SB = WB - 1 + 4 * kB,
-          BI = dB - 1 + 4 * kB,
-          II = CB - 1 + 4 * kB,
-          ZI = QB - 1 + 4 * kB,
-          TI = 255 & NB,
-          JI = 255 & gB,
-          oI = 255 & qB,
-          GI = 255 & yB;
-        let vI = .6 - WB * WB - dB * dB - CB * CB - QB * QB;
-        if (vI < 0) oB = 0;
+      noise4D(tt, et, Vt, Ot) {
+        const qt = this.perm;
+        let Dt, mt, Ht, Qt, lt;
+        const Et = (tt + et + Vt + Ot) * dt,
+          ft = Math.floor(tt + Et),
+          wt = Math.floor(et + Et),
+          yt = Math.floor(Vt + Et),
+          Nt = Math.floor(Ot + Et),
+          Mt = (ft + wt + yt + Nt) * jt,
+          bt = tt - (ft - Mt),
+          Jt = et - (wt - Mt),
+          Ct = Vt - (yt - Mt),
+          ut = Ot - (Nt - Mt);
+        let Kt = 0,
+          ht = 0,
+          vt = 0,
+          Wt = 0;
+        bt > Jt ? Kt++ : ht++, bt > Ct ? Kt++ : vt++, bt > ut ? Kt++ : Wt++, Jt > Ct ? ht++ : vt++, Jt > ut ? ht++ : Wt++, Ct > ut ? vt++ : Wt++;
+        const St = Kt >= 3 ? 1 : 0,
+          ct = ht >= 3 ? 1 : 0,
+          Rt = vt >= 3 ? 1 : 0,
+          It = Wt >= 3 ? 1 : 0,
+          Pt = Kt >= 2 ? 1 : 0,
+          Zt = ht >= 2 ? 1 : 0,
+          Lt = vt >= 2 ? 1 : 0,
+          Ft = Wt >= 2 ? 1 : 0,
+          kt = Kt >= 1 ? 1 : 0,
+          Gt = ht >= 1 ? 1 : 0,
+          zt = vt >= 1 ? 1 : 0,
+          ot = Wt >= 1 ? 1 : 0,
+          rt = bt - St + jt,
+          Ut = Jt - ct + jt,
+          At = Ct - Rt + jt,
+          it = ut - It + jt,
+          Yt = bt - Pt + 2 * jt,
+          Bt = Jt - Zt + 2 * jt,
+          pt = Ct - Lt + 2 * jt,
+          xt = ut - Ft + 2 * jt,
+          Tt = bt - kt + 3 * jt,
+          gt = Jt - Gt + 3 * jt,
+          st = Ct - zt + 3 * jt,
+          nt = ut - ot + 3 * jt,
+          te = bt - 1 + 4 * jt,
+          ee = Jt - 1 + 4 * jt,
+          Ve = Ct - 1 + 4 * jt,
+          Oe = ut - 1 + 4 * jt,
+          qe = 255 & ft,
+          De = 255 & wt,
+          me = 255 & yt,
+          de = 255 & Nt;
+        let je = .6 - bt * bt - Jt * Jt - Ct * Ct - ut * ut;
+        if (je < 0) Dt = 0;
         else {
-          const BB = JB[TI + JB[JI + JB[oI + JB[GI]]]] % 32 * 4;
-          vI *= vI, oB = vI * vI * (nB[BB] * WB + nB[BB + 1] * dB + nB[BB + 2] * CB + nB[BB + 3] * QB)
+          const tt = qt[qe + qt[De + qt[me + qt[de]]]] % 32 * 4;
+          je *= je, Dt = je * je * (Xt[tt] * bt + Xt[tt + 1] * Jt + Xt[tt + 2] * Ct + Xt[tt + 3] * ut)
         }
-        let kI = .6 - eB * eB - uB * uB - fB * fB - lB * lB;
-        if (kI < 0) GB = 0;
+        let He = .6 - rt * rt - Ut * Ut - At * At - it * it;
+        if (He < 0) mt = 0;
         else {
-          const BB = JB[TI + iB + JB[JI + pB + JB[oI + aB + JB[GI + HB]]]] % 32 * 4;
-          kI *= kI, GB = kI * kI * (nB[BB] * eB + nB[BB + 1] * uB + nB[BB + 2] * fB + nB[BB + 3] * lB)
+          const tt = qt[qe + St + qt[De + ct + qt[me + Rt + qt[de + It]]]] % 32 * 4;
+          He *= He, mt = He * He * (Xt[tt] * rt + Xt[tt + 1] * Ut + Xt[tt + 2] * At + Xt[tt + 3] * it)
         }
-        let cI = .6 - AB * AB - tB * tB - bB * bB - xB * xB;
-        if (cI < 0) cB = 0;
+        let Xe = .6 - Yt * Yt - Bt * Bt - pt * pt - xt * xt;
+        if (Xe < 0) Ht = 0;
         else {
-          const BB = JB[TI + MB + JB[JI + jB + JB[oI + PB + JB[GI + RB]]]] % 32 * 4;
-          cI *= cI, cB = cI * cI * (nB[BB] * AB + nB[BB + 1] * tB + nB[BB + 2] * bB + nB[BB + 3] * xB)
+          const tt = qt[qe + Pt + qt[De + Zt + qt[me + Lt + qt[de + Ft]]]] % 32 * 4;
+          Xe *= Xe, Ht = Xe * Xe * (Xt[tt] * Yt + Xt[tt + 1] * Bt + Xt[tt + 2] * pt + Xt[tt + 3] * xt)
         }
-        let nI = .6 - EB * EB - DB * DB - KB * KB - VB * VB;
-        if (nI < 0) hB = 0;
+        let Qe = .6 - Tt * Tt - gt * gt - st * st - nt * nt;
+        if (Qe < 0) Qt = 0;
         else {
-          const BB = JB[TI + rB + JB[JI + mB + JB[oI + XB + JB[GI + LB]]]] % 32 * 4;
-          nI *= nI, hB = nI * nI * (nB[BB] * EB + nB[BB + 1] * DB + nB[BB + 2] * KB + nB[BB + 3] * VB)
+          const tt = qt[qe + kt + qt[De + Gt + qt[me + zt + qt[de + ot]]]] % 32 * 4;
+          Qe *= Qe, Qt = Qe * Qe * (Xt[tt] * Tt + Xt[tt + 1] * gt + Xt[tt + 2] * st + Xt[tt + 3] * nt)
         }
-        let hI = .6 - SB * SB - BI * BI - II * II - ZI * ZI;
-        if (hI < 0) zB = 0;
+        let le = .6 - te * te - ee * ee - Ve * Ve - Oe * Oe;
+        if (le < 0) lt = 0;
         else {
-          const BB = JB[TI + 1 + JB[JI + 1 + JB[oI + 1 + JB[GI + 1]]]] % 32 * 4;
-          hI *= hI, zB = hI * hI * (nB[BB] * SB + nB[BB + 1] * BI + nB[BB + 2] * II + nB[BB + 3] * ZI)
+          const tt = qt[qe + 1 + qt[De + 1 + qt[me + 1 + qt[de + 1]]]] % 32 * 4;
+          le *= le, lt = le * le * (Xt[tt] * te + Xt[tt + 1] * ee + Xt[tt + 2] * Ve + Xt[tt + 3] * Oe)
         }
-        return 27 * (oB + GB + cB + hB + zB)
+        return 27 * (Dt + mt + Ht + Qt + lt)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const tt in modules) Object.freeze(modules[tt]);

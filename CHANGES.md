@@ -1,4 +1,4 @@
-Bloxd build update — 2026-11-25T07:51 JST (bloxd.io=c6gaap.4d6587ec, staging.bloxd.io=c6gaap.4d6587ec)
+Bloxd build update — 2026-11-25T08:36 JST (bloxd.io=igzsf.a0b73a5f, staging.bloxd.io=igzsf.a0b73a5f)
 
 Bundle files use stable Webpack paths; original CDN names and hashes remain in .monitor-state.json.
 Fixed reports: [Added](changes/added.md) · [Removed](changes/removed.md) · [Changed](changes/changed.md) · [Build History](HISTORY.md)
@@ -7,48 +7,48 @@ Readable per-file diff: [changes/changed.md](changes/changed.md)
 
 | Environment | Previous Build | Current Build | Added | Removed | Changed | Size Delta | GitHub Diff |
 |---|---|---|---:|---:|---:|---:|---|
-| bloxd.io | `7zvlu.7df130a9` | `c6gaap.4d6587ec` | [234](changes/added.md) | [199](changes/removed.md) | [59626](changes/changed.md) | -100.95 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/bloxd.io/c6gaap.4d6587ec) · [Snapshot](https://github.com/imu31465/Bloxd-Build-Monitor/tree/build/bloxd.io/c6gaap.4d6587ec) |
-| staging.bloxd.io | `7zvlu.7df130a9` | `c6gaap.4d6587ec` | [234](changes/added.md) | [199](changes/removed.md) | [59626](changes/changed.md) | -100.95 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/3b14ebb6c99f523147f6c8af3fb8f77fee98a0e2...build/staging.bloxd.io/c6gaap.4d6587ec) · [Snapshot](https://github.com/imu31465/Bloxd-Build-Monitor/tree/build/staging.bloxd.io/c6gaap.4d6587ec) |
+| bloxd.io | `c6gaap.4d6587ec` | `igzsf.a0b73a5f` | [226](changes/added.md) | [218](changes/removed.md) | [61351](changes/changed.md) | +59.88 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/bloxd.io/igzsf.a0b73a5f) · [Snapshot](https://github.com/imu31465/Bloxd-Build-Monitor/tree/build/bloxd.io/igzsf.a0b73a5f) |
+| staging.bloxd.io | `c6gaap.4d6587ec` | `igzsf.a0b73a5f` | [226](changes/added.md) | [218](changes/removed.md) | [61351](changes/changed.md) | +59.88 KB | [Compare](https://github.com/imu31465/Bloxd-Build-Monitor/compare/b4e1daae7e6b1111c92ff0193dea5054a123c4fd...build/staging.bloxd.io/igzsf.a0b73a5f) · [Snapshot](https://github.com/imu31465/Bloxd-Build-Monitor/tree/build/staging.bloxd.io/igzsf.a0b73a5f) |
 
-## bloxd.io — 7zvlu.7df130a9 → c6gaap.4d6587ec
+## bloxd.io — c6gaap.4d6587ec → igzsf.a0b73a5f
 
 ```diff
 - Files: 447 files
 + Files: 447 files (changed 397, added 0, removed 0, unchanged 50)
-- Total size: 46.48 MB
-+ Total size: 46.38 MB (-100.95 KB)
-+ Diff items (2-char JS identifiers filtered): Added 234, Removed 199, Changed 59626
+- Total size: 46.38 MB
++ Total size: 46.44 MB (+59.88 KB)
++ Diff items (2-char JS identifiers filtered): Added 226, Removed 218, Changed 61351
 + Largest changes:
-- chunks/js/77.js decreased 39.16 KB (5217fd73 → d6e967b1)
-- main.js decreased 26.29 KB (7df130a9 → 4d6587ec)
-- chunks/js/94.js decreased 23.22 KB (2edce302 → a0a18958)
-+ chunks/js/248.js increased 16.87 KB (c876618e → 83c9b88d)
-- chunks/js/wasmPlay.js decreased 15.50 KB (1eff47d0 → 44dbfe10)
-- chunks/js/86.js decreased 14.56 KB (12694581 → 3051b2ca)
-- chunks/js/230.js decreased 1.06 KB (93244bd2 → 3562c5e1)
-+ chunks/js/148.js increased 694 B (2833b6b9 → 09e18aef)
-+ chunks/js/worldgenWorker.js increased 431 B (09f9f943 → c68f1924)
-+ chunks/js/140.js increased 372 B (46468abf → 82e1e0b2)
++ chunks/js/86.js increased 33.75 KB (3051b2ca → 4efae5b1)
++ chunks/js/wasmPlay.js increased 27.83 KB (44dbfe10 → b2fe1283)
++ chunks/js/77.js increased 24.06 KB (d6e967b1 → 7725c0e2)
+- chunks/js/248.js decreased 21.39 KB (83c9b88d → fe3d9a18)
+- chunks/js/230.js decreased 14.40 KB (3562c5e1 → d72205d2)
++ main.js increased 7.33 KB (4d6587ec → a0b73a5f)
++ chunks/js/94.js increased 2.64 KB (a0a18958 → 2f83ebcc)
++ chunks/js/100.js increased 55 B (f19ab2ed → ba53decb)
+- chunks/js/255.js decreased 52 B (44fb8353 → 120db1f0)
++ chunks/js/140.js increased 49 B (82e1e0b2 → dbfb5c83)
 ```
 
 
-## staging.bloxd.io — 7zvlu.7df130a9 → c6gaap.4d6587ec
+## staging.bloxd.io — c6gaap.4d6587ec → igzsf.a0b73a5f
 
 ```diff
 - Files: 447 files
 + Files: 447 files (changed 397, added 0, removed 0, unchanged 50)
-- Total size: 46.48 MB
-+ Total size: 46.38 MB (-100.95 KB)
-+ Diff items (2-char JS identifiers filtered): Added 234, Removed 199, Changed 59626
+- Total size: 46.38 MB
++ Total size: 46.44 MB (+59.88 KB)
++ Diff items (2-char JS identifiers filtered): Added 226, Removed 218, Changed 61351
 + Largest changes:
-- chunks/js/77.js decreased 39.16 KB (5217fd73 → d6e967b1)
-- main.js decreased 26.29 KB (7df130a9 → 4d6587ec)
-- chunks/js/94.js decreased 23.22 KB (2edce302 → a0a18958)
-+ chunks/js/248.js increased 16.87 KB (c876618e → 83c9b88d)
-- chunks/js/wasmPlay.js decreased 15.50 KB (1eff47d0 → 44dbfe10)
-- chunks/js/86.js decreased 14.56 KB (12694581 → 3051b2ca)
-- chunks/js/230.js decreased 1.06 KB (93244bd2 → 3562c5e1)
-+ chunks/js/148.js increased 694 B (2833b6b9 → 09e18aef)
-+ chunks/js/worldgenWorker.js increased 431 B (09f9f943 → c68f1924)
-+ chunks/js/140.js increased 372 B (46468abf → 82e1e0b2)
++ chunks/js/86.js increased 33.75 KB (3051b2ca → 4efae5b1)
++ chunks/js/wasmPlay.js increased 27.83 KB (44dbfe10 → b2fe1283)
++ chunks/js/77.js increased 24.06 KB (d6e967b1 → 7725c0e2)
+- chunks/js/248.js decreased 21.39 KB (83c9b88d → fe3d9a18)
+- chunks/js/230.js decreased 14.40 KB (3562c5e1 → d72205d2)
++ main.js increased 7.33 KB (4d6587ec → a0b73a5f)
++ chunks/js/94.js increased 2.64 KB (a0a18958 → 2f83ebcc)
++ chunks/js/100.js increased 55 B (f19ab2ed → ba53decb)
+- chunks/js/255.js decreased 52 B (44fb8353 → 120db1f0)
++ chunks/js/140.js increased 49 B (82e1e0b2 → dbfb5c83)
 ```

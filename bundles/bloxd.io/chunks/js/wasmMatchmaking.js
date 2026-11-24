@@ -1,30 +1,30 @@
-/*! For license information please see c6gaap.wasmMatchmaking.52e2e759.chunk.js.LICENSE.txt */
+/*! For license information please see igzsf.wasmMatchmaking.7634980f.chunk.js.LICENSE.txt */
 export const id = 63;
 export const ids = [63];
 export const modules = {
-  36565: (BB, IB) => {
-    function ZB(BB) {
-      if (BB && "object" === typeof BB) {
-        var IB = BB.which || BB.keyCode || BB.charCode;
-        IB && (BB = IB)
+  36785: (tt, et) => {
+    function Vt(tt) {
+      if (tt && "object" === typeof tt) {
+        var et = tt.which || tt.keyCode || tt.charCode;
+        et && (tt = et)
       }
-      if ("number" === typeof BB) return GB[BB];
-      var ZB, oB = String(BB);
-      return (ZB = TB[oB.toLowerCase()]) ? ZB : (ZB = JB[oB.toLowerCase()]) || (1 === oB.length ? oB.charCodeAt(0) : void 0)
+      if ("number" === typeof tt) return mt[tt];
+      var Vt, Dt = String(tt);
+      return (Vt = Ot[Dt.toLowerCase()]) ? Vt : (Vt = qt[Dt.toLowerCase()]) || (1 === Dt.length ? Dt.charCodeAt(0) : void 0)
     }
-    ZB.isEventKey = function(BB, IB) {
-      if (BB && "object" === typeof BB) {
-        var ZB = BB.which || BB.keyCode || BB.charCode;
-        if (null === ZB || void 0 === ZB) return !1;
-        if ("string" === typeof IB) {
-          var oB;
-          if (oB = TB[IB.toLowerCase()]) return oB === ZB;
-          if (oB = JB[IB.toLowerCase()]) return oB === ZB
-        } else if ("number" === typeof IB) return IB === ZB;
+    Vt.isEventKey = function(tt, et) {
+      if (tt && "object" === typeof tt) {
+        var Vt = tt.which || tt.keyCode || tt.charCode;
+        if (null === Vt || void 0 === Vt) return !1;
+        if ("string" === typeof et) {
+          var Dt;
+          if (Dt = Ot[et.toLowerCase()]) return Dt === Vt;
+          if (Dt = qt[et.toLowerCase()]) return Dt === Vt
+        } else if ("number" === typeof et) return et === Vt;
         return !1
       }
     };
-    var TB = (IB = BB.exports = ZB).code = IB.codes = {
+    var Ot = (et = tt.exports = Vt).code = et.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      JB = IB.aliases = {
+      qt = et.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (oB = 97; oB < 123; oB++) TB[String.fromCharCode(oB)] = oB - 32;
-    for (var oB = 48; oB < 58; oB++) TB[oB - 48] = oB;
-    for (oB = 1; oB < 13; oB++) TB["f" + oB] = oB + 111;
-    for (oB = 0; oB < 10; oB++) TB["numpad " + oB] = oB + 96;
-    var GB = IB.names = IB.title = {};
-    for (oB in TB) GB[TB[oB]] = oB;
-    for (var vB in JB) TB[vB] = JB[vB]
+    for (Dt = 97; Dt < 123; Dt++) Ot[String.fromCharCode(Dt)] = Dt - 32;
+    for (var Dt = 48; Dt < 58; Dt++) Ot[Dt - 48] = Dt;
+    for (Dt = 1; Dt < 13; Dt++) Ot["f" + Dt] = Dt + 111;
+    for (Dt = 0; Dt < 10; Dt++) Ot["numpad " + Dt] = Dt + 96;
+    var mt = et.names = et.title = {};
+    for (Dt in Ot) mt[Ot[Dt]] = Dt;
+    for (var dt in qt) Ot[dt] = qt[dt]
   },
-  36717: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => GB
+  36950: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => mt
     });
-    var TB = ZB(63);
-    const JB = TB.useLayoutEffect;
-    const oB = function(BB) {
-      var IB = (0, TB.useRef)(BB);
-      return JB((function() {
-        IB.current = BB
-      })), IB
+    var Ot = Vt(63);
+    const qt = Ot.useLayoutEffect;
+    const Dt = function(tt) {
+      var et = (0, Ot.useRef)(tt);
+      return qt((function() {
+        et.current = tt
+      })), et
     };
-    var GB = function(BB) {
-      var IB = oB(BB);
-      (0, TB.useEffect)((function() {
-        var BB = function(BB) {
-          var ZB;
-          if (null != IB.current && (ZB = IB.current(BB)), BB.defaultPrevented && (BB.returnValue = ""), "string" === typeof ZB) return BB.returnValue = ZB, ZB
+    var mt = function(tt) {
+      var et = Dt(tt);
+      (0, Ot.useEffect)((function() {
+        var tt = function(tt) {
+          var Vt;
+          if (null != et.current && (Vt = et.current(tt)), tt.defaultPrevented && (tt.returnValue = ""), "string" === typeof Vt) return tt.returnValue = Vt, Vt
         };
-        return window.addEventListener("beforeunload", BB),
+        return window.addEventListener("beforeunload", tt),
           function() {
-            window.removeEventListener("beforeunload", BB)
+            window.removeEventListener("beforeunload", tt)
           }
       }), [])
     }
   },
-  36600: BB => {
-    var IB, ZB = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      TB = /OS X/.test(ZB),
-      JB = /Opera/.test(ZB),
-      oB = !/like Gecko/.test(ZB) && !JB,
-      GB = BB.exports = {
-        0: TB ? "<menu>" : "<UNK>",
+  36830: tt => {
+    var et, Vt = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      Ot = /OS X/.test(Vt),
+      qt = /Opera/.test(Vt),
+      Dt = !/like Gecko/.test(Vt) && !qt,
+      mt = tt.exports = {
+        0: Ot ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: TB ? "<meta>" : "<menu>",
+        93: Ot ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: TB && oB ? "-" : "<volume-mute>",
+        173: Ot && Dt ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: JB ? "`" : "<unicode>",
+        231: qt ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,322 +234,322 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (IB = 58; IB < 65; ++IB) GB[IB] = String.fromCharCode(IB);
-    for (IB = 48; IB < 58; ++IB) GB[IB] = IB - 48 + "";
-    for (IB = 65; IB < 91; ++IB) GB[IB] = String.fromCharCode(IB);
-    for (IB = 96; IB < 106; ++IB) GB[IB] = "<num-" + (IB - 96) + ">";
-    for (IB = 112; IB < 136; ++IB) GB[IB] = "F" + (IB - 111)
+    for (et = 58; et < 65; ++et) mt[et] = String.fromCharCode(et);
+    for (et = 48; et < 58; ++et) mt[et] = et - 48 + "";
+    for (et = 65; et < 91; ++et) mt[et] = String.fromCharCode(et);
+    for (et = 96; et < 106; ++et) mt[et] = "<num-" + (et - 96) + ">";
+    for (et = 112; et < 136; ++et) mt[et] = "F" + (et - 111)
   },
-  9019: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => oB,
-      g: () => JB
+  9140: (tt, et, Vt) => {
+    Vt.d(et, {
+      c: () => Dt,
+      d: () => qt
     });
-    let TB = !1;
+    let Ot = !1;
 
-    function JB() {
-      TB = !0
+    function qt() {
+      Ot = !0
     }
 
-    function oB() {
-      return TB
+    function Dt() {
+      return Ot
     }
   },
-  36472: (BB, IB, ZB) => {
-    ZB.r(IB), ZB.d(IB, {
-      InGameUi: () => CB.d,
-      LobbyLeaderboard: () => QB.c,
-      loadCharacterCustomisationUI: () => sB,
-      loadCharacterPreview: () => wB,
-      matchmakeAndPlay: () => pB,
-      matchmakeForAhead: () => vB.e,
-      setUpGame: () => OB
+  36693: (tt, et, Vt) => {
+    Vt.r(et), Vt.d(et, {
+      InGameUi: () => Ct.d,
+      LobbyLeaderboard: () => ut.b,
+      loadCharacterCustomisationUI: () => Kt,
+      loadCharacterPreview: () => ht,
+      matchmakeAndPlay: () => ct,
+      matchmakeForAhead: () => dt.f,
+      setUpGame: () => vt
     });
-    var TB = ZB(1305),
-      JB = ZB(168),
-      oB = ZB(20),
-      GB = ZB(36478),
-      vB = ZB(36483),
-      kB = ZB(2029),
-      cB = ZB(36524);
+    var Ot = Vt(1333),
+      qt = Vt(184),
+      Dt = Vt(26),
+      mt = Vt(36695),
+      dt = Vt(36697),
+      jt = Vt(2043),
+      Ht = Vt(36742);
 
-    function nB() {
-      return !1 !== kB.c.get("canCustomiseChar")
+    function Xt() {
+      return !1 !== jt.b.get("canCustomiseChar")
     }
-    let hB = !1;
-    var zB = ZB(1382),
-      FB = ZB(1310),
-      NB = ZB(256),
-      gB = ZB(3733),
-      qB = ZB(9019),
-      yB = ZB(9016);
+    let Qt = !1;
+    var lt = Vt(1423),
+      Et = Vt(1338),
+      ft = Vt(287),
+      wt = Vt(3643),
+      yt = Vt(9140),
+      Nt = Vt(9138);
 
-    function UB() {
-      (0, qB.d)() || (0, yB.c)().catch((BB => {
-        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", BB)
+    function Mt() {
+      (0, yt.c)() || (0, Nt.b)().catch((tt => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", tt)
       }))
     }
-    var WB = ZB(3625),
-      dB = ZB(1824);
-    var CB = ZB(36535),
-      QB = ZB(37031);
+    var bt = Vt(3510),
+      Jt = Vt(1849);
+    var Ct = Vt(36753),
+      ut = Vt(37247);
 
-    function sB() {
-      return ZB.e(220).then((() => ZB(41316)))
+    function Kt() {
+      return Vt.e(220).then((() => Vt(41508)))
     }
 
-    function wB() {
-      return ZB.e(296).then((() => ZB(41319)))
+    function ht() {
+      return Vt.e(296).then((() => Vt(41510)))
     }
 
-    function OB() {
-      return (0, yB.e)()
+    function vt() {
+      return (0, Nt.f)()
     }
-    hB || (hB = !0, document.addEventListener("keydown", (BB => {
-        (0, cB.d)(BB, nB)
+    Qt || (Qt = !0, document.addEventListener("keydown", (tt => {
+        (0, Ht.b)(tt, Xt)
       }))),
-      function(BB) {
-        var IB;
-        return !0 !== (null === BB || void 0 === BB ? void 0 : BB.saveData) && !/2g$/.test(null !== (IB = null === BB || void 0 === BB ? void 0 : BB.effectiveType) && void 0 !== IB ? IB : "")
-      }(navigator.connection) && (0, gB.c)((() => {
-        (0, qB.d)() || Promise.all([ZB.e(78), ZB.e(90), ZB.e(215), ZB.e(214), ZB.e(137), ZB.e(140), ZB.e(59)]).then((() => ZB(41074))).then((async BB => {
-          (0, qB.d)() || (await BB.startLoadAheadOfJoin({
-            joinStarted: qB.d,
-            language: FB.h.get().getCurrentLanguageCode()
-          }), (0, NB.c)(UB))
-        }), (BB => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", BB)
+      function(tt) {
+        var et;
+        return !0 !== (null === tt || void 0 === tt ? void 0 : tt.saveData) && !/2g$/.test(null !== (et = null === tt || void 0 === tt ? void 0 : tt.effectiveType) && void 0 !== et ? et : "")
+      }(navigator.connection) && (0, wt.e)((() => {
+        (0, yt.c)() || Promise.all([Vt.e(78), Vt.e(90), Vt.e(215), Vt.e(214), Vt.e(137), Vt.e(140), Vt.e(59)]).then((() => Vt(41248))).then((async tt => {
+          (0, yt.c)() || (await tt.startLoadAheadOfJoin({
+            joinStarted: yt.c,
+            language: Et.e.get().getCurrentLanguageCode()
+          }), (0, ft.c)(Mt))
+        }), (tt => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", tt)
         }))
       }));
-    const YB = oB.d.get("router");
-    null === YB ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function BB(IB) {
-      if ((0, dB.e)(IB.state.location.pathname)) return void(0, yB.d)().catch((() => {}));
-      const ZB = IB.subscribe((TB => {
-        (0, dB.e)(TB.location.pathname) && (ZB(), (0, WB.h)().then((() => {
-          BB(IB)
+    const Wt = Dt.b.get("router");
+    null === Wt ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function tt(et) {
+      if ((0, Jt.b)(et.state.location.pathname)) return void(0, Nt.d)().catch((() => {}));
+      const Vt = et.subscribe((Ot => {
+        (0, Jt.b)(Ot.location.pathname) && (Vt(), (0, bt.e)().then((() => {
+          tt(et)
         })))
       }))
-    }(YB), (0, GB.d)();
-    const iB = (0, vB.c)((async function(BB, IB) {
+    }(Wt), (0, mt.e)();
+    const St = (0, dt.d)((async function(tt, et) {
       let {
-        place: ZB,
-        userContext: oB,
-        direct: GB,
-        matchedAt: vB,
-        rematch: kB
-      } = BB;
-      const cB = GB ? 1 / 0 : vB;
-      let nB;
+        place: Vt,
+        userContext: Dt,
+        direct: mt,
+        matchedAt: dt,
+        rematch: jt
+      } = tt;
+      const Ht = mt ? 1 / 0 : dt;
+      let Xt;
       try {
-        nB = await (0, yB.d)()
-      } catch (hB) {
-        return console.error("The wasm client did not load:", hB), (0, zB.l)({
+        Xt = await (0, Nt.d)()
+      } catch (Qt) {
+        return console.error("The wasm client did not load:", Qt), (0, lt.o)({
           websocketUrl: null
-        }), TB.b.errorWithCode(String(hB), JB.l.CONNECT_TO_GAME_SERVER, {
-          error: hB,
-          severity: IB.aborted ? "low" : "medium",
-          fZ: IB.aborted
+        }), Ot.e.errorWithCode(String(Qt), qt.n.CONNECT_TO_GAME_SERVER, {
+          error: Qt,
+          severity: et.aborted ? "low" : "medium",
+          nV: et.aborted
         })
       }
-      return nB.playWasmGame({
-        userContext: oB,
-        place: ZB,
-        matchedAt: cB,
-        rematch: kB
-      }, IB)
+      return Xt.playWasmGame({
+        userContext: Dt,
+        place: Vt,
+        matchedAt: Ht,
+        rematch: jt
+      }, et)
     }));
 
-    function pB() {
-      return (0, yB.d)().catch((() => {})), iB(...arguments)
+    function ct() {
+      return (0, Nt.d)().catch((() => {})), St(...arguments)
     }
   },
-  9016: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      c: () => FB,
-      d: () => zB,
-      e: () => NB
+  9138: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => Et,
+      d: () => lt,
+      f: () => ft
     });
-    var TB = ZB(3316),
-      JB = ZB(2392),
-      oB = ZB(2224),
-      GB = ZB(4821),
-      vB = ZB(3676),
-      kB = ZB(9019);
-    let cB = null;
+    var Ot = Vt(3217),
+      qt = Vt(2331),
+      Dt = Vt(2208),
+      mt = Vt(4791),
+      dt = Vt(3564),
+      jt = Vt(9140);
+    let Ht = null;
 
-    function nB() {
-      return Promise.all([ZB.e(75), ZB.e(78), ZB.e(90), ZB.e(215), ZB.e(214), ZB.e(160), ZB.e(137), ZB.e(198), ZB.e(140), ZB.e(88), ZB.e(275), ZB.e(64)]).then((() => ZB(40726)))
+    function Xt() {
+      return Promise.all([Vt.e(75), Vt.e(78), Vt.e(90), Vt.e(215), Vt.e(214), Vt.e(160), Vt.e(137), Vt.e(198), Vt.e(140), Vt.e(88), Vt.e(275), Vt.e(64)]).then((() => Vt(40874)))
     }
 
-    function hB() {
-      Promise.all([ZB.e(73), ZB.e(76), ZB.e(75), ZB.e(74), ZB.e(90), ZB.e(87), ZB.e(273), ZB.e(191), ZB.e(228), ZB.e(252), ZB.e(275), ZB.e(47)]).then((() => ZB(41032))).catch((() => {}))
+    function Qt() {
+      Promise.all([Vt.e(73), Vt.e(76), Vt.e(75), Vt.e(74), Vt.e(90), Vt.e(87), Vt.e(273), Vt.e(191), Vt.e(228), Vt.e(252), Vt.e(275), Vt.e(47)]).then((() => Vt(41197))).catch((() => {}))
     }
 
-    function zB() {
-      return GB.c.cancelDownloadForJoin(), (0, vB.b)(), (0, JB.g)(), (0, kB.g)(), (0, oB.k)(), hB(), Promise.all([ZB.e(78), ZB.e(90), ZB.e(215), ZB.e(214), ZB.e(137), ZB.e(140), ZB.e(59)]).then((() => ZB(41074))).then((BB => {
+    function lt() {
+      return mt.d.cancelDownloadForJoin(), (0, dt.c)(), (0, qt.f)(), (0, jt.d)(), (0, Dt.h)(), Qt(), Promise.all([Vt.e(78), Vt.e(90), Vt.e(215), Vt.e(214), Vt.e(137), Vt.e(140), Vt.e(59)]).then((() => Vt(41248))).then((tt => {
         let {
-          startJoinLoad: IB
-        } = BB;
-        IB()
-      }), (() => {})), cB ??= nB().then((BB => (BB.startWasmPlay(), BB.followPageUiPack((BB => {
-        TB.e.showGamePack(BB)
-      })), BB)), (BB => {
-        throw cB = null, BB
-      })), cB
+          startJoinLoad: et
+        } = tt;
+        et()
+      }), (() => {})), Ht ??= Xt().then((tt => (tt.startWasmPlay(), tt.followPageUiPack((tt => {
+        Ot.e.showGamePack(tt)
+      })), tt)), (tt => {
+        throw Ht = null, tt
+      })), Ht
     }
 
-    function FB() {
-      return hB(), ZB.e(276).then((() => ZB(41082))).catch((() => {})), nB().then((() => {}))
+    function Et() {
+      return Qt(), Vt.e(276).then((() => Vt(41257))).catch((() => {})), Xt().then((() => {}))
     }
 
-    function NB() {
-      return nB().then((BB => {
-        BB.startWasmPreviews(), BB.prefetchWasmPreviews()
+    function ft() {
+      return Xt().then((tt => {
+        tt.startWasmPreviews(), tt.prefetchWasmPreviews()
       }))
     }
   },
-  36492: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      c: () => zB,
-      f: () => nB,
-      h: () => FB,
-      l: () => hB
+  36709: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => lt,
+      d: () => Xt,
+      f: () => Et,
+      j: () => Qt
     });
-    var TB = ZB(360),
-      JB = ZB(694),
-      oB = ZB(700),
-      GB = ZB(36);
-    const vB = {
+    var Ot = Vt(391),
+      qt = Vt(736),
+      Dt = Vt(741),
+      mt = Vt(39);
+    const dt = {
         idStorageKey: "playSessionId",
         lastActivityStorageKey: "playSessionLastActivityMs",
         expiryMs: 3e5
       },
-      kB = "playSessionGameNameWithVariation",
-      cB = "wasMatchmakePlayer";
+      jt = "playSessionGameNameWithVariation",
+      Ht = "wasMatchmakePlayer";
 
-    function nB() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GB.n;
-      (0, oB.i)(BB, vB)
+    function Xt() {
+      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mt.h;
+      (0, Dt.h)(tt, dt)
     }
 
-    function hB() {
-      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GB.n).setItem(cB, !0)
+    function Qt() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mt.h).setItem(Ht, !0)
     }
 
-    function zB() {
-      let BB = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GB.n;
-      return (0, oB.c)(BB, vB)
+    function lt() {
+      let tt = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mt.h;
+      return (0, Dt.d)(tt, dt)
     }
 
-    function FB(BB) {
-      let IB = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : GB.n;
-      const ZB = (0, oB.c)(IB, vB),
-        nB = function(BB) {
-          const IB = BB.getItem(kB);
-          return "string" !== typeof IB ? null : IB
-        }(IB),
-        hB = function() {
-          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GB.n).getItem(cB)
-        }(IB);
-      let zB;
-      return zB = null !== ZB && null !== nB && (0, oB.e)(IB, vB) && function(BB, IB, ZB) {
-          const JB = (0, TB.Vb)(BB),
-            oB = (0, TB.Vb)(IB),
-            GB = (0, TB.Pb)(BB),
-            vB = (0, TB.Pb)(IB);
-          return !(JB !== oB || !ZB) || JB === oB && GB === vB
-        }(nB, BB, hB) ? ZB : (0, JB.d)(), (0, oB.l)(IB, vB, zB), IB.setItem(kB, BB),
+    function Et(tt) {
+      let et = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : mt.h;
+      const Vt = (0, Dt.d)(et, dt),
+        Xt = function(tt) {
+          const et = tt.getItem(jt);
+          return "string" !== typeof et ? null : et
+        }(et),
+        Qt = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mt.h).getItem(Ht)
+        }(et);
+      let lt;
+      return lt = null !== Vt && null !== Xt && (0, Dt.g)(et, dt) && function(tt, et, Vt) {
+          const qt = (0, Ot.bc)(tt),
+            Dt = (0, Ot.bc)(et),
+            mt = (0, Ot.Wb)(tt),
+            dt = (0, Ot.Wb)(et);
+          return !(qt !== Dt || !Vt) || qt === Dt && mt === dt
+        }(Xt, tt, Qt) ? Vt : (0, qt.b)(), (0, Dt.k)(et, dt, lt), et.setItem(jt, tt),
         function() {
-          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : GB.n).removeItem(cB)
-        }(IB), zB
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : mt.h).removeItem(Ht)
+        }(et), lt
     }
   },
-  36485: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      b: () => CB,
-      d: () => QB
+  36701: (tt, et, Vt) => {
+    Vt.d(et, {
+      d: () => Ct,
+      e: () => ut
     });
-    var TB = ZB(1058),
-      JB = ZB(212),
-      oB = ZB(357),
-      GB = ZB(671),
-      vB = ZB(360),
-      kB = ZB(1060),
-      cB = ZB(684),
-      nB = ZB(714),
-      hB = ZB(4704),
-      zB = ZB(105),
-      FB = ZB(140),
-      NB = ZB(1805),
-      gB = ZB(121),
-      qB = ZB(36492),
-      yB = ZB(36),
-      UB = ZB(696),
-      WB = ZB(676),
-      dB = ZB(36501);
+    var Ot = Vt(1103),
+      qt = Vt(241),
+      Dt = Vt(388),
+      mt = Vt(712),
+      dt = Vt(391),
+      jt = Vt(1109),
+      Ht = Vt(725),
+      Xt = Vt(757),
+      Qt = Vt(4655),
+      lt = Vt(106),
+      Et = Vt(153),
+      ft = Vt(1826),
+      wt = Vt(129),
+      yt = Vt(36709),
+      Nt = Vt(39),
+      Mt = Vt(738),
+      bt = Vt(717),
+      Jt = Vt(36715);
 
-    function CB() {
-      var BB, IB;
-      return [...null !== (BB = navigator.languages) && void 0 !== BB ? BB : [null !== (IB = navigator.language) && void 0 !== IB ? IB : "none"], "en-Gb"]
+    function Ct() {
+      var tt, et;
+      return [...null !== (tt = navigator.languages) && void 0 !== tt ? tt : [null !== (et = navigator.language) && void 0 !== et ? et : "none"], "en-Gb"]
     }
 
-    function QB(BB, IB, ZB, QB, sB) {
-      const wB = (0, TB.i)(IB) ? (0, TB.l)(IB) : null,
-        OB = BB.isLoggedIn() && void 0 !== (0, JB.e)(oB.r, FB.siteUsed) ? (0, WB.f)() : null,
-        YB = {
-          cookies: (0, NB.getAllCookiesForGameNameWithVariation)(IB),
-          isMobile: (0, zB.isMobile)(),
-          isUsingCustomGameTexturePack: null !== wB && sB(wB),
+    function ut(tt, et, Vt, ut, Kt) {
+      const ht = (0, Ot.k)(et) ? (0, Ot.p)(et) : null,
+        vt = tt.isLoggedIn() && void 0 !== (0, qt.c)(Dt.j, Et.siteUsed) ? (0, bt.g)() : null,
+        Wt = {
+          cookies: (0, ft.getAllCookiesForGameNameWithVariation)(et),
+          isMobile: (0, lt.isMobile)(),
+          isUsingCustomGameTexturePack: null !== ht && Kt(ht),
           generalCookies: {
-            joinDiscord: !!yB.m.getItem("DiscordPressed"),
-            newGo: hB.b,
-            ...BB.getMetricsCookies(),
-            trafficCode: QB,
-            compliance: zB.compliance
+            joinDiscord: !!Nt.e.getItem("DiscordPressed"),
+            newGo: Qt.d,
+            ...tt.getMetricsCookies(),
+            trafficCode: ut,
+            compliance: lt.compliance
           },
           browserInfo: {
             ua: window.navigator.userAgent,
-            name: (0, zB.getBrowserName)(),
-            version: (0, zB.getBrowserVersion)(),
+            name: (0, lt.getBrowserName)(),
+            version: (0, lt.getBrowserVersion)(),
             platform: navigator.platform,
-            platformType: (0, zB.getPlatformType)(),
-            deviceType: (0, gB.e)()
+            platformType: (0, lt.getPlatformType)(),
+            deviceType: (0, wt.d)()
           },
-          isLoggedIn: BB.isLoggedIn(),
-          lobbyName: ZB,
-          languages: CB(),
-          version: GB.b,
-          siteUsed: FB.siteUsed,
-          subsiteUsed: FB.subsiteUsed,
-          playSessionId: (0, qB.h)(IB),
-          visitSessionId: (0, UB.i)(),
-          clientReason: cB.p.reason,
-          budgetBasis: (0, dB.h)(),
-          ...null !== nB.t && {
-            diagClaim: nB.t.claimId
+          isLoggedIn: tt.isLoggedIn(),
+          lobbyName: Vt,
+          languages: Ct(),
+          version: mt.d,
+          siteUsed: Et.siteUsed,
+          subsiteUsed: Et.subsiteUsed,
+          playSessionId: (0, yt.f)(et),
+          visitSessionId: (0, Mt.e)(),
+          clientReason: Ht.u.reason,
+          budgetBasis: (0, Jt.g)(),
+          ...null !== Xt.p && {
+            diagClaim: Xt.p.claimId
           },
-          ...null !== OB && {
-            webGpuLoss: OB
+          ...null !== vt && {
+            webGpuLoss: vt
           }
         };
-      return null !== wB && (0, vB.Gc)(wB) ? (YB.lobbyName = (0, TB.h)(wB, (0, TB.k)(IB), ZB), {
-        roomName: `classic_${kB.h}`,
-        joinOptions: YB
+      return null !== ht && (0, dt.Jc)(ht) ? (Wt.lobbyName = (0, Ot.i)(ht, (0, Ot.o)(et), Vt), {
+        roomName: `classic_${jt.f}`,
+        joinOptions: Wt
       }) : {
-        roomName: IB,
-        joinOptions: YB
+        roomName: et,
+        joinOptions: Wt
       }
     }
   },
-  9388: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      c: () => JB,
-      d: () => oB
+  9512: (tt, et, Vt) => {
+    Vt.d(et, {
+      c: () => qt,
+      e: () => Dt
     });
-    var TB = ZB(9340);
-    const JB = "Air",
-      oB = Object.freeze(new TB.i(JB, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var Ot = Vt(9466);
+    const qt = "Air",
+      Dt = Object.freeze(new Ot.d(qt, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const tt in modules) Object.freeze(modules[tt]);

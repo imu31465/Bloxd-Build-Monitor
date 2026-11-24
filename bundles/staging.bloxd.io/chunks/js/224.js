@@ -1,585 +1,585 @@
 export const id = 224;
 export const ids = [224];
 export const modules = {
-  36909: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => wB,
-      e: () => QB,
-      f: () => sB,
-      h: () => NB
+  37110: (tt, et, Vt) => {
+    Vt.d(et, {
+      e: () => ht,
+      h: () => ut,
+      i: () => Kt,
+      k: () => ft
     });
-    var TB = ZB(1091),
-      JB = ZB.n(TB),
-      oB = ZB(63),
-      GB = ZB(82),
-      vB = ZB(1429),
-      kB = ZB(1516),
-      cB = ZB(1421),
-      nB = ZB(1343),
-      hB = ZB(1248),
-      zB = ZB(36916),
-      FB = ZB(1153);
+    var Ot = Vt(1140),
+      qt = Vt.n(Ot),
+      Dt = Vt(63),
+      mt = Vt(83),
+      dt = Vt(1472),
+      jt = Vt(1556),
+      Ht = Vt(1464),
+      Xt = Vt(1371),
+      Qt = Vt(1286),
+      lt = Vt(37112),
+      Et = Vt(1188);
 
-    function NB(BB) {
-      const [IB, ZB] = (0, oB.useState)((() => (0, zB.j)(BB)));
-      return (0, oB.useEffect)((() => (ZB((0, zB.j)(BB)), (0, zB.I)((() => {
-        ZB((0, zB.j)(BB))
-      })))), [BB]), IB
+    function ft(tt) {
+      const [et, Vt] = (0, Dt.useState)((() => (0, lt.j)(tt)));
+      return (0, Dt.useEffect)((() => (Vt((0, lt.j)(tt)), (0, lt.G)((() => {
+        Vt((0, lt.j)(tt))
+      })))), [tt]), et
     }
 
-    function gB(BB, IB) {
-      "function" === typeof BB ? BB(IB) : BB && (BB.current = IB)
+    function wt(tt, et) {
+      "function" === typeof tt ? tt(et) : tt && (tt.current = et)
     }
 
-    function qB(BB) {
+    function yt(tt) {
       let {
-        tutorial: IB,
-        step: ZB,
-        enabled: TB = !0
-      } = BB;
-      const JB = NB(IB);
-      return TB && JB === ZB
+        tutorial: et,
+        step: Vt,
+        enabled: Ot = !0
+      } = tt;
+      const qt = ft(et);
+      return Ot && qt === Vt
     }
 
-    function yB(BB, IB) {
-      const ZB = (0, zB.k)(BB),
-        TB = ZB.indexOf(IB);
-      return !ZB.slice(TB + 1).some((IB => (0, zB.r)(BB, IB)))
+    function Nt(tt, et) {
+      const Vt = (0, lt.n)(tt),
+        Ot = Vt.indexOf(et);
+      return !Vt.slice(Ot + 1).some((et => (0, lt.u)(tt, et)))
     }
 
-    function UB(BB, IB, ZB, TB) {
+    function Mt(tt, et, Vt, Ot) {
       let {
-        tutorial: JB,
-        step: oB,
-        waitForClick: GB = !1,
-        onPrevious: vB
-      } = BB;
-      const kB = IB && (0, zB.o)(JB, oB),
-        cB = IB && !yB(JB, oB),
-        hB = GB ? TB : ZB;
-      let FB = null;
-      kB ? FB = () => {
-        null === vB || void 0 === vB || vB(), (0, zB.n)(JB, oB)
-      } : cB && (FB = () => {
-        (0, zB.h)(JB)
-      }), (0, nB.t)("popup", null !== hB && void 0 !== hB ? hB : ZB, FB, IB && null !== hB, null, kB ? void 0 : "controller:menusSkipTutorial")
+        tutorial: qt,
+        step: Dt,
+        waitForClick: mt = !1,
+        onPrevious: dt
+      } = tt;
+      const jt = et && (0, lt.s)(qt, Dt),
+        Ht = et && !Nt(qt, Dt),
+        Qt = mt ? Ot : Vt;
+      let Et = null;
+      jt ? Et = () => {
+        null === dt || void 0 === dt || dt(), (0, lt.o)(qt, Dt)
+      } : Ht && (Et = () => {
+        (0, lt.h)(qt)
+      }), (0, Xt.w)("popup", null !== Qt && void 0 !== Qt ? Qt : Vt, Et, et && null !== Qt, null, jt ? void 0 : "controller:menusSkipTutorial")
     }
 
-    function WB(BB) {
+    function bt(tt) {
       let {
-        tutorial: IB,
-        step: ZB,
-        text: TB,
-        waitForClick: JB = !1,
-        onPrevious: oB
-      } = BB;
+        tutorial: et,
+        step: Vt,
+        text: Ot,
+        waitForClick: qt = !1,
+        onPrevious: Dt
+      } = tt;
       const {
-        t: GB
-      } = (0, hB.G)(), vB = yB(IB, ZB);
-      return (0, FB.jsxs)(FB.Fragment, {
-        children: [(0, FB.jsx)("div", {
+        t: mt
+      } = (0, Qt.H)(), dt = Nt(et, Vt);
+      return (0, Et.jsxs)(Et.Fragment, {
+        children: [(0, Et.jsx)("div", {
           className: "TutorialStepText",
-          children: TB
-        }), (0, FB.jsxs)("div", {
+          children: Ot
+        }), (0, Et.jsxs)("div", {
           className: "TutorialStepButtons",
-          children: [(0, zB.o)(IB, ZB) && (0, FB.jsx)(kB.k, {
+          children: [(0, lt.s)(et, Vt) && (0, Et.jsx)(jt.g, {
             className: "TutorialStepButton",
             onClick: () => {
-              null === oB || void 0 === oB || oB(), (0, zB.n)(IB, ZB)
+              null === Dt || void 0 === Dt || Dt(), (0, lt.o)(et, Vt)
             },
-            children: GB("tutorial:back")
-          }), !JB && (0, FB.jsx)(kB.g, {
+            children: mt("tutorial:back")
+          }), !qt && (0, Et.jsx)(jt.f, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, zB.f)(ZB)
+              (0, lt.d)(Vt)
             },
             padDefaultFocus: !0,
-            children: GB(vB ? "tutorial:done" : "tutorial:next")
-          }), !vB && (0, FB.jsx)(kB.k, {
+            children: mt(dt ? "tutorial:done" : "tutorial:next")
+          }), !dt && (0, Et.jsx)(jt.g, {
             className: "TutorialStepButton",
             onClick: () => {
-              (0, zB.h)(IB)
+              (0, lt.h)(et)
             },
-            children: GB("tutorial:skip")
+            children: mt("tutorial:skip")
           })]
         })]
       })
     }
-    const dB = 6;
+    const Jt = 6;
 
-    function CB(BB) {
+    function Ct(tt) {
       let {
-        rect: IB,
-        margin: ZB
-      } = BB;
-      const TB = Math.max(0, IB.top - ZB),
-        JB = IB.bottom + ZB,
-        oB = Math.max(0, IB.left - ZB),
-        GB = IB.right + ZB;
-      return (0, FB.jsxs)(FB.Fragment, {
-        children: [(0, FB.jsx)("div", {
+        rect: et,
+        margin: Vt
+      } = tt;
+      const Ot = Math.max(0, et.top - Vt),
+        qt = et.bottom + Vt,
+        Dt = Math.max(0, et.left - Vt),
+        mt = et.right + Vt;
+      return (0, Et.jsxs)(Et.Fragment, {
+        children: [(0, Et.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
             top: 0,
             left: 0,
             right: 0,
-            height: TB
+            height: Ot
           }
-        }), (0, FB.jsx)("div", {
+        }), (0, Et.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: JB,
+            top: qt,
             left: 0,
             right: 0,
             bottom: 0
           }
-        }), (0, FB.jsx)("div", {
+        }), (0, Et.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: TB,
+            top: Ot,
             left: 0,
-            width: oB,
-            height: JB - TB
+            width: Dt,
+            height: qt - Ot
           }
-        }), (0, FB.jsx)("div", {
+        }), (0, Et.jsx)("div", {
           className: "TutorialSpotlightBackdrop",
           style: {
-            top: TB,
-            left: GB,
+            top: Ot,
+            left: mt,
             right: 0,
-            height: JB - TB
+            height: qt - Ot
           }
         })]
       })
     }
 
-    function QB(BB) {
+    function ut(tt) {
       let {
-        target: IB,
-        placement: ZB,
-        boxRef: TB,
-        className: kB,
-        spotlight: nB = !0,
-        spotlightMargin: hB = dB,
-        children: zB
-      } = BB;
+        target: et,
+        placement: Vt,
+        boxRef: Ot,
+        className: jt,
+        spotlight: Xt = !0,
+        spotlightMargin: Qt = Jt,
+        children: lt
+      } = tt;
       const {
-        getArrowProps: NB,
-        getTooltipProps: gB,
-        setTooltipRef: qB,
-        setTriggerRef: yB,
-        update: UB
-      } = (0, vB.b)({
-        placement: ZB,
+        getArrowProps: ft,
+        getTooltipProps: wt,
+        setTooltipRef: yt,
+        setTriggerRef: Nt,
+        update: Mt
+      } = (0, dt.c)({
+        placement: Vt,
         trigger: null,
         visible: !0,
         interactive: !0,
         closeOnOutsideClick: !1,
-        offset: [0, hB]
+        offset: [0, Qt]
       });
-      (0, oB.useLayoutEffect)((() => {
-        yB(IB)
-      }), [IB, yB]);
-      const WB = function(BB, IB) {
-        const [ZB, TB] = (0, oB.useState)(null);
-        return (0, oB.useEffect)((() => {
-          if (!IB || !BB) return void TB(null);
-          let ZB = 0,
-            JB = null;
-          const oB = () => {
-            const IB = BB.getBoundingClientRect();
-            JB && IB.left === JB.left && IB.top === JB.top && IB.width === JB.width && IB.height === JB.height || (JB = IB, TB(IB)), ZB = requestAnimationFrame(oB)
+      (0, Dt.useLayoutEffect)((() => {
+        Nt(et)
+      }), [et, Nt]);
+      const bt = function(tt, et) {
+        const [Vt, Ot] = (0, Dt.useState)(null);
+        return (0, Dt.useEffect)((() => {
+          if (!et || !tt) return void Ot(null);
+          let Vt = 0,
+            qt = null;
+          const Dt = () => {
+            const et = tt.getBoundingClientRect();
+            qt && et.left === qt.left && et.top === qt.top && et.width === qt.width && et.height === qt.height || (qt = et, Ot(et)), Vt = requestAnimationFrame(Dt)
           };
-          return oB(), () => {
-            cancelAnimationFrame(ZB)
+          return Dt(), () => {
+            cancelAnimationFrame(Vt)
           }
-        }), [BB, IB]), ZB
-      }(IB, nB);
-      (0, oB.useEffect)((() => {
-        null === UB || void 0 === UB || UB()
-      }), [WB, UB]), (0, oB.useEffect)((() => {
-        if (nB || !IB || !UB) return;
-        const BB = new ResizeObserver((() => {
-          UB()
+        }), [tt, et]), Vt
+      }(et, Xt);
+      (0, Dt.useEffect)((() => {
+        null === Mt || void 0 === Mt || Mt()
+      }), [bt, Mt]), (0, Dt.useEffect)((() => {
+        if (Xt || !et || !Mt) return;
+        const tt = new ResizeObserver((() => {
+          Mt()
         }));
-        return BB.observe(IB), IB.parentElement && BB.observe(IB.parentElement), () => {
-          BB.disconnect()
+        return tt.observe(et), et.parentElement && tt.observe(et.parentElement), () => {
+          tt.disconnect()
         }
-      }), [IB, nB, UB]), (0, oB.useEffect)((() => {
-        nB && (null === IB || void 0 === IB || IB.scrollIntoView({
+      }), [et, Xt, Mt]), (0, Dt.useEffect)((() => {
+        Xt && (null === et || void 0 === et || et.scrollIntoView({
           block: "nearest",
           inline: "nearest"
         }))
-      }), [IB, nB]);
-      const QB = (0, oB.useCallback)((BB => {
-        qB(BB), TB && (TB.current = BB)
-      }), [qB, TB]);
-      return (0, GB.createPortal)((0, FB.jsxs)(FB.Fragment, {
-        children: [WB && (0, FB.jsx)(CB, {
-          rect: WB,
-          margin: hB
-        }), (0, FB.jsxs)("div", {
-          ref: QB,
-          ...gB({
-            className: JB()("tooltip-container SmallTextLight TutorialStep", kB)
+      }), [et, Xt]);
+      const ut = (0, Dt.useCallback)((tt => {
+        yt(tt), Ot && (Ot.current = tt)
+      }), [yt, Ot]);
+      return (0, mt.createPortal)((0, Et.jsxs)(Et.Fragment, {
+        children: [bt && (0, Et.jsx)(Ct, {
+          rect: bt,
+          margin: Qt
+        }), (0, Et.jsxs)("div", {
+          ref: ut,
+          ...wt({
+            className: qt()("tooltip-container SmallTextLight TutorialStep", jt)
           }),
-          children: [zB, (0, FB.jsx)("div", {
-            ...NB({
+          children: [lt, (0, Et.jsx)("div", {
+            ...ft({
               className: "tooltip-arrow"
             })
           })]
         })]
-      }), (0, cB.i)())
+      }), (0, Ht.k)())
     }
-    const sB = (0, oB.forwardRef)((function(BB, IB) {
+    const Kt = (0, Dt.forwardRef)((function(tt, et) {
       let {
-        placement: ZB = "right",
-        children: TB,
-        ...JB
-      } = BB;
-      const GB = qB(JB),
-        vB = (0, oB.useRef)(null),
-        kB = (0, oB.useRef)(null);
-      UB(JB, GB, vB, kB);
-      const [cB, nB] = (0, oB.useState)(null), hB = TB.ref, zB = (0, oB.useCallback)((BB => {
-        kB.current = BB, nB(BB), gB(IB, BB), gB(hB, BB)
-      }), [IB, hB]);
-      return (0, FB.jsxs)(FB.Fragment, {
-        children: [(0, oB.cloneElement)(TB, {
-          ref: zB
-        }), GB && (0, FB.jsx)(QB, {
-          target: cB,
-          placement: ZB,
-          boxRef: vB,
-          children: (0, FB.jsx)(WB, {
-            ...JB
+        placement: Vt = "right",
+        children: Ot,
+        ...qt
+      } = tt;
+      const mt = yt(qt),
+        dt = (0, Dt.useRef)(null),
+        jt = (0, Dt.useRef)(null);
+      Mt(qt, mt, dt, jt);
+      const [Ht, Xt] = (0, Dt.useState)(null), Qt = Ot.ref, lt = (0, Dt.useCallback)((tt => {
+        jt.current = tt, Xt(tt), wt(et, tt), wt(Qt, tt)
+      }), [et, Qt]);
+      return (0, Et.jsxs)(Et.Fragment, {
+        children: [(0, Dt.cloneElement)(Ot, {
+          ref: lt
+        }), mt && (0, Et.jsx)(ut, {
+          target: Ht,
+          placement: Vt,
+          boxRef: dt,
+          children: (0, Et.jsx)(bt, {
+            ...qt
           })
         })]
       })
     }));
 
-    function wB(BB) {
-      const IB = qB(BB),
-        ZB = (0, oB.useRef)(null);
-      return UB(BB, IB, ZB, null), IB ? (0, GB.createPortal)((0, FB.jsx)("div", {
+    function ht(tt) {
+      const et = yt(tt),
+        Vt = (0, Dt.useRef)(null);
+      return Mt(tt, et, Vt, null), et ? (0, mt.createPortal)((0, Et.jsx)("div", {
         className: "TutorialCentreBackdrop",
-        children: (0, FB.jsx)("div", {
-          ref: ZB,
+        children: (0, Et.jsx)("div", {
+          ref: Vt,
           className: "tooltip-container SmallTextLight TutorialStep TutorialCentreStep",
-          children: (0, FB.jsx)(WB, {
-            ...BB
+          children: (0, Et.jsx)(bt, {
+            ...tt
           })
         })
-      }), (0, cB.i)()) : null
+      }), (0, Ht.k)()) : null
     }
   },
-  36625: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      b: () => oB,
-      c: () => gB,
-      g: () => qB,
-      h: () => vB,
-      l: () => zB,
-      p: () => yB,
-      q: () => hB,
-      s: () => WB,
-      t: () => NB,
-      w: () => UB
+  36867: (tt, et, Vt) => {
+    Vt.d(et, {
+      A: () => ft,
+      E: () => Mt,
+      d: () => Dt,
+      f: () => wt,
+      j: () => yt,
+      n: () => dt,
+      q: () => lt,
+      t: () => Nt,
+      w: () => Qt,
+      y: () => bt
     });
-    var TB = ZB(20),
-      JB = ZB(24);
-    const oB = "clientGameInventoryButtonsChanged",
-      GB = new Map;
+    var Ot = Vt(26),
+      qt = Vt(31);
+    const Dt = "clientGameInventoryButtonsChanged",
+      mt = new Map;
 
-    function vB() {
-      return [...GB.values()].sort(((BB, IB) => {
-        var ZB, TB;
-        return (null !== (ZB = BB.order) && void 0 !== ZB ? ZB : 0) - (null !== (TB = IB.order) && void 0 !== TB ? TB : 0)
+    function dt() {
+      return [...mt.values()].sort(((tt, et) => {
+        var Vt, Ot;
+        return (null !== (Vt = tt.order) && void 0 !== Vt ? Vt : 0) - (null !== (Ot = et.order) && void 0 !== Ot ? Ot : 0)
       }))
     }
-    let kB = null;
+    let jt = null;
 
-    function cB(BB) {
-      kB = BB
+    function Ht(tt) {
+      jt = tt
     }
-    let nB = !1;
+    let Xt = !1;
 
-    function hB(BB) {
-      nB = !0;
+    function Qt(tt) {
+      Xt = !0;
       try {
-        BB.onClick()
+        tt.onClick()
       } finally {
-        nB = !1
+        Xt = !1
       }
-      BB.panel && "clientGame" === TB.d.get("openInGameMenuName") && cB(BB.id)
+      tt.panel && "clientGame" === Ot.b.get("openInGameMenuName") && Ht(tt.id)
     }
 
-    function zB() {
-      return nB
+    function lt() {
+      return Xt
     }
 
-    function FB() {
-      return vB().filter((BB => BB.panel && !BB.disabled))
+    function Et() {
+      return dt().filter((tt => tt.panel && !tt.disabled))
     }
 
-    function NB(BB) {
-      const IB = FB(),
-        ZB = IB.findIndex((BB => BB.id === kB));
-      return !(ZB < 0 || IB.length < 2) && (hB(IB[(ZB + BB + IB.length) % IB.length]), !0)
+    function ft(tt) {
+      const et = Et(),
+        Vt = et.findIndex((tt => tt.id === jt));
+      return !(Vt < 0 || et.length < 2) && (Qt(et[(Vt + tt + et.length) % et.length]), !0)
     }
 
-    function gB() {
-      return null !== kB && FB().length > 1
+    function wt() {
+      return null !== jt && Et().length > 1
     }
 
-    function qB() {
-      cB(null)
+    function yt() {
+      Ht(null)
     }
 
-    function yB() {
-      "inventory" !== TB.d.get("openInGameMenuName") && cB(null)
+    function Nt() {
+      "inventory" !== Ot.b.get("openInGameMenuName") && Ht(null)
     }
 
-    function UB() {
-      const BB = kB;
-      return cB(null), BB
+    function Mt() {
+      const tt = jt;
+      return Ht(null), tt
     }
 
-    function WB(BB) {
-      return GB.set(BB.id, BB), JB.l.Gq(oB, vB(), !0), () => {
-        GB.get(BB.id) === BB && (GB.delete(BB.id), JB.l.Gq(oB, vB()))
+    function bt(tt) {
+      return mt.set(tt.id, tt), qt.j.sw(Dt, dt(), !0), () => {
+        mt.get(tt.id) === tt && (mt.delete(tt.id), qt.j.sw(Dt, dt()))
       }
     }
   },
-  36619: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => vB,
-      f: () => qB,
-      i: () => yB,
-      m: () => zB,
-      q: () => cB,
-      t: () => gB,
-      v: () => FB,
-      x: () => nB
+  36861: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => dt,
+      c: () => yt,
+      g: () => Nt,
+      i: () => lt,
+      l: () => Ht,
+      m: () => wt,
+      o: () => Et,
+      q: () => Xt
     });
-    var TB = ZB(20),
-      JB = ZB(24),
-      oB = ZB(1353),
-      GB = ZB(36625);
-    const vB = "clientGameUiChanged";
-    let kB = null;
+    var Ot = Vt(26),
+      qt = Vt(31),
+      Dt = Vt(1387),
+      mt = Vt(36867);
+    const dt = "clientGameUiChanged";
+    let jt = null;
 
-    function cB() {
-      return kB
+    function Ht() {
+      return jt
     }
 
-    function nB(BB, IB) {
-      const ZB = {
-        content: BB,
-        menu: IB
+    function Xt(tt, et) {
+      const Vt = {
+        content: tt,
+        menu: et
       };
-      return kB = ZB, JB.l.Gq(vB, kB, !0), () => {
-        kB === ZB && (kB = null, NB = !1, qB(), JB.l.Gq(vB, null))
+      return jt = Vt, qt.j.sw(dt, jt, !0), () => {
+        jt === Vt && (jt = null, ft = !1, yt(), qt.j.sw(dt, null))
       }
     }
-    let hB = null;
+    let Qt = null;
 
-    function zB() {
-      return hB
+    function lt() {
+      return Qt
     }
 
-    function FB(BB) {
-      return hB = BB, () => {
-        hB === BB && (hB = null)
+    function Et(tt) {
+      return Qt = tt, () => {
+        Qt === tt && (Qt = null)
       }
     }
-    let NB = !1;
+    let ft = !1;
 
-    function gB() {
-      const BB = TB.d.get("openInGameMenuName");
-      "clientGame" !== BB && (NB = "inventory" === BB), (0, GB.l)() || (0, GB.g)(), (0, oB.t)(oB.e), TB.d.set({
+    function wt() {
+      const tt = Ot.b.get("openInGameMenuName");
+      "clientGame" !== tt && (ft = "inventory" === tt), (0, mt.q)() || (0, mt.j)(), (0, Dt.p)(Dt.c), Ot.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function qB() {
-      UB(!1)
+    function yt() {
+      Mt(!1)
     }
 
-    function yB() {
-      UB(NB)
+    function Nt() {
+      Mt(ft)
     }
 
-    function UB(BB) {
-      "clientGame" === TB.d.get("openInGameMenuName") && TB.d.set({
-        openInGameMenuName: BB ? "inventory" : null
-      }), BB || (0, GB.g)(), NB = !1
+    function Mt(tt) {
+      "clientGame" === Ot.b.get("openInGameMenuName") && Ot.b.set({
+        openInGameMenuName: tt ? "inventory" : null
+      }), tt || (0, mt.j)(), ft = !1
     }
   },
-  36916: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      A: () => mB,
-      E: () => PB,
-      I: () => XB,
-      e: () => kB,
-      f: () => pB,
-      g: () => vB,
-      h: () => jB,
-      j: () => YB,
-      k: () => QB,
-      n: () => MB,
-      o: () => HB,
-      r: () => OB,
-      v: () => RB,
-      z: () => rB
+  37112: (tt, et, Vt) => {
+    Vt.d(et, {
+      B: () => Gt,
+      F: () => Lt,
+      G: () => zt,
+      b: () => jt,
+      d: () => ct,
+      g: () => dt,
+      h: () => Zt,
+      j: () => Wt,
+      n: () => ut,
+      o: () => Pt,
+      s: () => It,
+      u: () => vt,
+      v: () => Ft,
+      y: () => kt
     });
-    var TB = ZB(36);
-    const JB = {
+    var Ot = Vt(39);
+    const qt = {
         codeBlock: ["codeBlockIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "worldCodeButton", "exportButton", "helpButton"],
         worldCode: ["worldCodeIntro", "docsButton", "hideDocsButton", "aiHelperButton", "hideAiHelperButton", "exportButton", "helpButton"]
       },
-      oB = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
-      GB = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
-      vB = oB.filter((BB => "docsButton" !== BB)),
-      kB = GB.filter((BB => "aiHelperButton" !== BB)),
-      cB = "codeEditorTutorials",
-      nB = {
+      Dt = ["docsButton", "docsPanel", "docsClientOptionsTab", "docsClientOptions", "docsApiReferenceTab", "docsApiReference", "docsCallbacksTab", "docsCallbacks", "hideDocsButton"],
+      mt = ["aiHelperButton", "aiPanel", "aiAskBox", "aiModelChip", "aiAnswer", "aiEdits", "aiGear", "aiNotes", "aiGameSettings", "hideAiHelperButton"],
+      dt = Dt.filter((tt => "docsButton" !== tt)),
+      jt = mt.filter((tt => "aiHelperButton" !== tt)),
+      Ht = "codeEditorTutorials",
+      Xt = {
         codeBlockIntro: "codeBlockIntroShown",
         worldCodeIntro: "worldCodeIntroShown"
       },
-      hB = {
+      Qt = {
         welcome: "welcomeComplete",
         docsOverview: "docsOverviewComplete",
         aiHelperOverview: "aiHelperOverviewComplete"
       };
-    let zB = null,
-      FB = null;
-    const NB = new Set,
-      gB = new Set;
-    let qB = null;
-    const yB = new Set,
-      UB = new Set;
+    let lt = null,
+      Et = null;
+    const ft = new Set,
+      wt = new Set;
+    let yt = null;
+    const Nt = new Set,
+      Mt = new Set;
 
-    function WB() {
-      UB.forEach((BB => {
-        BB()
+    function bt() {
+      Mt.forEach((tt => {
+        tt()
       }))
     }
 
-    function dB() {
-      if (!zB) {
-        const BB = TB.m.getItem(cB);
-        zB = {
+    function Jt() {
+      if (!lt) {
+        const tt = Ot.e.getItem(Ht);
+        lt = {
           codeBlockIntroShown: !1,
           worldCodeIntroShown: !1,
           welcomeComplete: !1,
           docsOverviewComplete: !1,
           aiHelperOverviewComplete: !1,
-          ..."object" === typeof BB && null !== BB ? BB : {}
+          ..."object" === typeof tt && null !== tt ? tt : {}
         }
       }
-      return zB
+      return lt
     }
 
-    function CB(BB) {
-      const IB = dB();
-      IB[BB] || (zB = {
-        ...IB,
-        [BB]: !0
-      }, TB.m.setItem(cB, zB))
+    function Ct(tt) {
+      const et = Jt();
+      et[tt] || (lt = {
+        ...et,
+        [tt]: !0
+      }, Ot.e.setItem(Ht, lt))
     }
 
-    function QB(BB) {
-      return "docsOverview" === BB ? oB : "aiHelperOverview" === BB ? GB : FB ? JB[FB] : []
+    function ut(tt) {
+      return "docsOverview" === tt ? Dt : "aiHelperOverview" === tt ? mt : Et ? qt[Et] : []
     }
 
-    function sB(BB) {
-      return ("worldCodeButton" !== BB || !dB().worldCodeIntroShown) && !yB.has(BB)
+    function Kt(tt) {
+      return ("worldCodeButton" !== tt || !Jt().worldCodeIntroShown) && !Nt.has(tt)
     }
 
-    function wB(BB) {
-      var IB;
-      return (null === (IB = qB) || void 0 === IB ? void 0 : IB.name) === BB ? qB.stepsDone : NB
+    function ht(tt) {
+      var et;
+      return (null === (et = yt) || void 0 === et ? void 0 : et.name) === tt ? yt.stepsDone : ft
     }
 
-    function OB(BB, IB) {
-      if (! function(BB) {
-          return qB ? qB.name === BB : "welcome" === BB
-        }(BB) || !sB(IB) || wB(BB).has(IB)) return !1;
-      if (qB) return !0;
-      const ZB = nB[IB];
-      return ZB ? !dB()[ZB] || gB.has(IB) : !dB()[hB[BB]]
+    function vt(tt, et) {
+      if (! function(tt) {
+          return yt ? yt.name === tt : "welcome" === tt
+        }(tt) || !Kt(et) || ht(tt).has(et)) return !1;
+      if (yt) return !0;
+      const Vt = Xt[et];
+      return Vt ? !Jt()[Vt] || wt.has(et) : !Jt()[Qt[tt]]
     }
 
-    function YB(BB) {
-      var IB;
-      return null !== (IB = QB(BB).find((IB => OB(BB, IB)))) && void 0 !== IB ? IB : null
+    function Wt(tt) {
+      var et;
+      return null !== (et = ut(tt).find((et => vt(tt, et)))) && void 0 !== et ? et : null
     }
 
-    function iB(BB) {
-      var IB;
-      CB(hB[BB]), (null === (IB = qB) || void 0 === IB ? void 0 : IB.name) === BB && (qB = null)
+    function St(tt) {
+      var et;
+      Ct(Qt[tt]), (null === (et = yt) || void 0 === et ? void 0 : et.name) === tt && (yt = null)
     }
 
-    function pB(BB) {
-      const IB = (qB ? [qB.name] : ["welcome", "docsOverview"]).find((IB => YB(IB) === BB));
-      if (!IB) return;
-      wB(IB).add(BB);
-      const ZB = nB[BB];
-      ZB && (CB(ZB), qB || gB.add(BB)), null === YB(IB) && iB(IB), WB()
+    function ct(tt) {
+      const et = (yt ? [yt.name] : ["welcome", "docsOverview"]).find((et => Wt(et) === tt));
+      if (!et) return;
+      ht(et).add(tt);
+      const Vt = Xt[tt];
+      Vt && (Ct(Vt), yt || wt.add(tt)), null === Wt(et) && St(et), bt()
     }
 
-    function aB(BB, IB) {
-      const ZB = QB(BB),
-        TB = wB(BB);
-      for (let JB = ZB.indexOf(IB) - 1; JB >= 0; JB--)
-        if (TB.has(ZB[JB]) && sB(ZB[JB])) return ZB[JB];
+    function Rt(tt, et) {
+      const Vt = ut(tt),
+        Ot = ht(tt);
+      for (let qt = Vt.indexOf(et) - 1; qt >= 0; qt--)
+        if (Ot.has(Vt[qt]) && Kt(Vt[qt])) return Vt[qt];
       return null
     }
 
-    function HB(BB, IB) {
-      return null !== aB(BB, IB)
+    function It(tt, et) {
+      return null !== Rt(tt, et)
     }
 
-    function MB(BB, IB) {
-      const ZB = aB(BB, IB);
-      ZB && (wB(BB).delete(ZB), WB())
+    function Pt(tt, et) {
+      const Vt = Rt(tt, et);
+      Vt && (ht(tt).delete(Vt), bt())
     }
 
-    function jB(BB) {
-      iB(BB), "welcome" === BB && QB("welcome").forEach((BB => {
-        const IB = nB[BB];
-        IB && CB(IB)
-      })), WB()
+    function Zt(tt) {
+      St(tt), "welcome" === tt && ut("welcome").forEach((tt => {
+        const et = Xt[tt];
+        et && Ct(et)
+      })), bt()
     }
 
-    function PB(BB) {
-      qB = {
-        name: BB,
+    function Lt(tt) {
+      yt = {
+        name: tt,
         stepsDone: new Set
-      }, WB()
+      }, bt()
     }
 
-    function RB() {
-      (qB || 0 !== NB.size || 0 !== gB.size) && (qB = null, NB.clear(), gB.clear(), WB())
+    function Ft() {
+      (yt || 0 !== ft.size || 0 !== wt.size) && (yt = null, ft.clear(), wt.clear(), bt())
     }
 
-    function rB(BB, IB) {
-      const ZB = IB ? BB : FB === BB ? null : FB;
-      ZB !== FB && (FB = ZB, WB())
+    function kt(tt, et) {
+      const Vt = et ? tt : Et === tt ? null : Et;
+      Vt !== Et && (Et = Vt, bt())
     }
 
-    function mB(BB, IB) {
-      yB.has(BB) === IB && (IB ? yB.delete(BB) : yB.add(BB), WB())
+    function Gt(tt, et) {
+      Nt.has(tt) === et && (et ? Nt.delete(tt) : Nt.add(tt), bt())
     }
 
-    function XB(BB) {
-      return UB.add(BB), () => {
-        UB.delete(BB)
+    function zt(tt) {
+      return Mt.add(tt), () => {
+        Mt.delete(tt)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const tt in modules) Object.freeze(modules[tt]);

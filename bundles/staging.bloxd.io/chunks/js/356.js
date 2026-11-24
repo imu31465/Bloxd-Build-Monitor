@@ -1,68 +1,68 @@
 export const id = 356;
 export const ids = [356];
 export const modules = {
-  42552: (BB, IB, ZB) => {
-    function TB(BB) {
-      return Math.floor(BB / 8)
+  42791: (tt, et, Vt) => {
+    function Ot(tt) {
+      return Math.floor(tt / 8)
     }
 
-    function JB(BB) {
-      return 1 << BB % 8
+    function qt(tt) {
+      return 1 << tt % 8
     }
-    ZB.d(IB, {
-      OptimizeIndices: () => GB
+    Vt.d(et, {
+      OptimizeIndices: () => mt
     });
-    class oB {
-      constructor(BB) {
-        this.size = BB, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
+    class Dt {
+      constructor(tt) {
+        this.size = tt, this._byteArray = new Uint8Array(Math.ceil(this.size / 8))
       }
-      get(BB) {
-        if (BB >= this.size) throw new RangeError("Bit index out of range");
-        const IB = TB(BB),
-          ZB = JB(BB);
-        return 0 !== (this._byteArray[IB] & ZB)
+      get(tt) {
+        if (tt >= this.size) throw new RangeError("Bit index out of range");
+        const et = Ot(tt),
+          Vt = qt(tt);
+        return 0 !== (this._byteArray[et] & Vt)
       }
-      set(BB, IB) {
-        if (BB >= this.size) throw new RangeError("Bit index out of range");
-        const ZB = TB(BB),
-          oB = JB(BB);
-        IB ? this._byteArray[ZB] |= oB : this._byteArray[ZB] &= ~oB
+      set(tt, et) {
+        if (tt >= this.size) throw new RangeError("Bit index out of range");
+        const Vt = Ot(tt),
+          Dt = qt(tt);
+        et ? this._byteArray[Vt] |= Dt : this._byteArray[Vt] &= ~Dt
       }
     }
 
-    function GB(BB) {
-      const IB = [],
-        ZB = BB.length / 3;
-      for (let oB = 0; oB < ZB; oB++) IB.push([BB[3 * oB], BB[3 * oB + 1], BB[3 * oB + 2]]);
-      const TB = new Map;
-      for (let oB = 0; oB < IB.length; oB++) {
-        const BB = IB[oB];
-        for (const IB of BB) {
-          let BB = TB.get(IB);
-          BB || TB.set(IB, BB = []), BB.push(oB)
+    function mt(tt) {
+      const et = [],
+        Vt = tt.length / 3;
+      for (let Dt = 0; Dt < Vt; Dt++) et.push([tt[3 * Dt], tt[3 * Dt + 1], tt[3 * Dt + 2]]);
+      const Ot = new Map;
+      for (let Dt = 0; Dt < et.length; Dt++) {
+        const tt = et[Dt];
+        for (const et of tt) {
+          let tt = Ot.get(et);
+          tt || Ot.set(et, tt = []), tt.push(Dt)
         }
       }
-      const JB = new oB(ZB),
-        GB = [],
-        vB = BB => {
-          const ZB = [BB];
-          for (; ZB.length > 0;) {
-            const BB = ZB.pop();
-            if (!JB.get(BB)) {
-              JB.set(BB, !0), GB.push(IB[BB]);
-              for (const oB of IB[BB]) {
-                const BB = TB.get(oB);
-                if (!BB) return;
-                for (const IB of BB) JB.get(IB) || ZB.push(IB)
+      const qt = new Dt(Vt),
+        mt = [],
+        dt = tt => {
+          const Vt = [tt];
+          for (; Vt.length > 0;) {
+            const tt = Vt.pop();
+            if (!qt.get(tt)) {
+              qt.set(tt, !0), mt.push(et[tt]);
+              for (const Dt of et[tt]) {
+                const tt = Ot.get(Dt);
+                if (!tt) return;
+                for (const et of tt) qt.get(et) || Vt.push(et)
               }
             }
           }
         };
-      for (let oB = 0; oB < ZB; oB++) JB.get(oB) || vB(oB);
-      let kB = 0;
-      for (const oB of GB) BB[kB++] = oB[0], BB[kB++] = oB[1], BB[kB++] = oB[2]
+      for (let Dt = 0; Dt < Vt; Dt++) qt.get(Dt) || dt(Dt);
+      let jt = 0;
+      for (const Dt of mt) tt[jt++] = Dt[0], tt[jt++] = Dt[1], tt[jt++] = Dt[2]
     }
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const tt in modules) Object.freeze(modules[tt]);

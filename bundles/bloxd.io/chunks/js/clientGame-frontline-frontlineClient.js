@@ -1,128 +1,128 @@
 export const id = 17;
 export const ids = [17];
 export const modules = {
-  36613: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      e: () => FB,
-      h: () => NB,
-      l: () => zB,
-      n: () => hB
+  36853: (tt, et, Vt) => {
+    Vt.d(et, {
+      e: () => Et,
+      g: () => ft,
+      i: () => lt,
+      m: () => Qt
     });
-    var TB = ZB(34184),
-      JB = ZB(36619),
-      oB = ZB(36625),
-      GB = ZB(8840),
-      vB = ZB(1507),
-      kB = ZB(63),
-      cB = ZB(82),
-      nB = ZB(1153);
+    var Ot = Vt(34371),
+      qt = Vt(36861),
+      Dt = Vt(36867),
+      mt = Vt(8936),
+      dt = Vt(1554),
+      jt = Vt(63),
+      Ht = Vt(83),
+      Xt = Vt(1188);
 
-    function hB() {
-      var BB;
-      return (0, vB.h)(JB.d, (0, JB.q)()), (0, nB.jsx)(nB.Fragment, {
-        children: null === (BB = (0, JB.q)()) || void 0 === BB ? void 0 : BB.content
+    function Qt() {
+      var tt;
+      return (0, dt.h)(qt.b, (0, qt.l)()), (0, Xt.jsx)(Xt.Fragment, {
+        children: null === (tt = (0, qt.l)()) || void 0 === tt ? void 0 : tt.content
       })
     }
 
-    function zB(BB) {
-      var IB;
+    function lt(tt) {
+      var et;
       let {
-        show: ZB
-      } = BB;
-      (0, vB.h)(JB.d, (0, JB.q)());
-      const cB = null === (IB = (0, JB.q)()) || void 0 === IB ? void 0 : IB.menu;
-      return (0, kB.useEffect)((() => {
-        var BB;
-        ZB || (null === cB || void 0 === cB || null === (BB = cB.onClose) || void 0 === BB || BB.call(cB), (0, oB.p)())
-      }), [ZB, cB]), (0, kB.useEffect)((() => ZB ? (0, GB.g)(oB.t, oB.c) : void 0), [ZB]), (0, nB.jsx)(TB.e, {
-        showing: ZB,
+        show: Vt
+      } = tt;
+      (0, dt.h)(qt.b, (0, qt.l)());
+      const Ht = null === (et = (0, qt.l)()) || void 0 === et ? void 0 : et.menu;
+      return (0, jt.useEffect)((() => {
+        var tt;
+        Vt || (null === Ht || void 0 === Ht || null === (tt = Ht.onClose) || void 0 === tt || tt.call(Ht), (0, Dt.t)())
+      }), [Vt, Ht]), (0, jt.useEffect)((() => Vt ? (0, mt.g)(Dt.A, Dt.f) : void 0), [Vt]), (0, Xt.jsx)(Ot.b, {
+        showing: Vt,
         globallyUniqueKey: "clientGameMenu",
-        children: null === cB || void 0 === cB ? void 0 : cB.content
+        children: null === Ht || void 0 === Ht ? void 0 : Ht.content
       })
     }
 
-    function FB(BB) {
+    function Et(tt) {
       let {
-        placement: IB = "bottom"
-      } = BB;
-      return (0, nB.jsx)("div", {
-        id: `clientGameHud-${IB}`,
+        placement: et = "bottom"
+      } = tt;
+      return (0, Xt.jsx)("div", {
+        id: `clientGameHud-${et}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function NB(BB) {
+    function ft(tt) {
       let {
-        children: IB,
-        placement: ZB = "bottom"
-      } = BB;
-      const [TB, JB] = (0, kB.useState)(null);
-      return (0, kB.useEffect)((() => {
-        JB(document.getElementById(`clientGameHud-${ZB}`))
-      }), [ZB]), TB ? (0, cB.createPortal)(IB, TB) : null
+        children: et,
+        placement: Vt = "bottom"
+      } = tt;
+      const [Ot, qt] = (0, jt.useState)(null);
+      return (0, jt.useEffect)((() => {
+        qt(document.getElementById(`clientGameHud-${Vt}`))
+      }), [Vt]), Ot ? (0, Ht.createPortal)(et, Ot) : null
     }
   },
-  34184: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      e: () => oB
+  34371: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => Dt
     });
-    var TB = ZB(4721),
-      JB = ZB(4728);
+    var Ot = Vt(4668),
+      qt = Vt(4677);
 
-    function oB(BB) {
+    function Dt(tt) {
       let {
-        children: IB,
-        showing: ZB,
-        globallyUniqueKey: oB,
-        alwaysMountChildren: GB = !1,
-        doGameplayStartStopOnShow: vB = !0,
-        keepsMovement: kB = !1
-      } = BB;
-      return (0, JB.e)(!0, ZB, oB, kB), (0, TB.e)(vB, ZB), ZB || GB ? IB : null
+        children: et,
+        showing: Vt,
+        globallyUniqueKey: Dt,
+        alwaysMountChildren: mt = !1,
+        doGameplayStartStopOnShow: dt = !0,
+        keepsMovement: jt = !1
+      } = tt;
+      return (0, qt.d)(!0, Vt, Dt, jt), (0, Ot.e)(dt, Vt), Vt || mt ? et : null
     }
   },
-  36708: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => oB,
-      f: () => GB,
-      i: () => vB,
-      k: () => kB
+  36941: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => Dt,
+      d: () => mt,
+      h: () => dt,
+      j: () => jt
     });
-    var TB = ZB(63),
-      JB = ZB(3272);
-    const oB = 8,
-      GB = "InGameHeaderContainer",
-      vB = "TopRightElements";
+    var Ot = Vt(63),
+      qt = Vt(3176);
+    const Dt = 8,
+      mt = "InGameHeaderContainer",
+      dt = "TopRightElements";
 
-    function kB(BB) {
-      const [IB] = (0, JB.b)(), [ZB, kB] = (0, TB.useState)(!1);
-      return (0, TB.useLayoutEffect)((() => {
-        if (!BB) return;
-        const IB = document.querySelector(`.${GB}`),
-          ZB = document.querySelector(`.${vB}`),
-          TB = () => {
-            const TB = BB.getBoundingClientRect(),
-              JB = IB ? IB.getBoundingClientRect().right : 0,
-              GB = ZB ? ZB.getBoundingClientRect().left : window.innerWidth,
-              vB = TB.left < JB + oB,
-              cB = TB.right > GB - oB;
-            kB(vB || cB)
+    function jt(tt) {
+      const [et] = (0, qt.c)(), [Vt, jt] = (0, Ot.useState)(!1);
+      return (0, Ot.useLayoutEffect)((() => {
+        if (!tt) return;
+        const et = document.querySelector(`.${mt}`),
+          Vt = document.querySelector(`.${dt}`),
+          Ot = () => {
+            const Ot = tt.getBoundingClientRect(),
+              qt = et ? et.getBoundingClientRect().right : 0,
+              mt = Vt ? Vt.getBoundingClientRect().left : window.innerWidth,
+              dt = Ot.left < qt + Dt,
+              Ht = Ot.right > mt - Dt;
+            jt(dt || Ht)
           };
-        TB();
-        const JB = new ResizeObserver(TB);
-        return JB.observe(BB), IB && JB.observe(IB), ZB && JB.observe(ZB), () => {
-          JB.disconnect()
+        Ot();
+        const qt = new ResizeObserver(Ot);
+        return qt.observe(tt), et && qt.observe(et), Vt && qt.observe(Vt), () => {
+          qt.disconnect()
         }
-      }), [BB, IB]), ZB
+      }), [tt, et]), Vt
     }
   },
-  36706: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      e: () => JB
+  36932: (tt, et, Vt) => {
+    Vt.d(et, {
+      e: () => qt
     });
-    const TB = [{
+    const Ot = [{
       maxDist: 30,
       timeBetweenSoftChecks: 1e3,
       softUpdateDist: 2,
@@ -139,214 +139,214 @@ export const modules = {
       hardUpdateDist: 100
     }];
 
-    function JB(BB, IB, ZB) {
-      const JB = Math.abs(BB - IB),
-        oB = Date.now() - ZB;
-      for (const GB of TB)
-        if (BB < GB.maxDist) return JB >= GB.hardUpdateDist || oB > GB.timeBetweenSoftChecks && JB >= GB.softUpdateDist;
+    function qt(tt, et, Vt) {
+      const qt = Math.abs(tt - et),
+        Dt = Date.now() - Vt;
+      for (const mt of Ot)
+        if (tt < mt.maxDist) return qt >= mt.hardUpdateDist || Dt > mt.timeBetweenSoftChecks && qt >= mt.softUpdateDist;
       return !1
     }
   },
-  8840: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      e: () => oB,
-      g: () => JB
+  8936: (tt, et, Vt) => {
+    Vt.d(et, {
+      c: () => Dt,
+      g: () => qt
     });
-    let TB = null;
-    const JB = function(BB) {
-        const IB = {
-          cycle: BB,
+    let Ot = null;
+    const qt = function(tt) {
+        const et = {
+          cycle: tt,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return TB = IB, () => {
-          TB === IB && (TB = null)
+        return Ot = et, () => {
+          Ot === et && (Ot = null)
         }
       },
-      oB = () => {
-        var BB;
-        return null !== (BB = TB) && void 0 !== BB && BB.canCycle() ? TB.cycle : null
+      Dt = () => {
+        var tt;
+        return null !== (tt = Ot) && void 0 !== tt && tt.canCycle() ? Ot.cycle : null
       }
   },
-  38578: (BB, IB, ZB) => {
-    function TB(BB, IB, ZB) {
-      var TB;
+  38751: (tt, et, Vt) => {
+    function Ot(tt, et, Vt) {
+      var Ot;
       const {
-        width: JB,
-        height: oB
-      } = ZB, GB = null !== (TB = BB.text) && void 0 !== TB ? TB : BB, vB = (GB.x / 100 - .5) * JB, kB = (GB.y / 100 - .5) * oB, cB = JB / 2 - IB.x;
-      if (null !== BB.text && Math.abs(vB) <= cB && kB >= IB.top - oB / 2 && kB <= oB / 2 - IB.bottom) return {
-        x: GB.x,
-        y: GB.y
+        width: qt,
+        height: Dt
+      } = Vt, mt = null !== (Ot = tt.text) && void 0 !== Ot ? Ot : tt, dt = (mt.x / 100 - .5) * qt, jt = (mt.y / 100 - .5) * Dt, Ht = qt / 2 - et.x;
+      if (null !== tt.text && Math.abs(dt) <= Ht && jt >= et.top - Dt / 2 && jt <= Dt / 2 - et.bottom) return {
+        x: mt.x,
+        y: mt.y
       };
-      const nB = Math.min(0 === vB ? 1 / 0 : cB / Math.abs(vB), kB > 0 ? (oB / 2 - IB.bottom) / kB : kB < 0 ? (IB.top - oB / 2) / kB : 1 / 0);
-      return !Number.isFinite(nB) || nB < 0 ? {
+      const Xt = Math.min(0 === dt ? 1 / 0 : Ht / Math.abs(dt), jt > 0 ? (Dt / 2 - et.bottom) / jt : jt < 0 ? (et.top - Dt / 2) / jt : 1 / 0);
+      return !Number.isFinite(Xt) || Xt < 0 ? {
         x: 50,
         y: 50
       } : {
-        x: 50 + vB * nB / JB * 100,
-        y: 50 + kB * nB / oB * 100
+        x: 50 + dt * Xt / qt * 100,
+        y: 50 + jt * Xt / Dt * 100
       }
     }
-    ZB.d(IB, {
-      e: () => TB
+    Vt.d(et, {
+      b: () => Ot
     })
   },
-  36625: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      b: () => oB,
-      c: () => gB,
-      g: () => qB,
-      h: () => vB,
-      l: () => zB,
-      p: () => yB,
-      q: () => hB,
-      s: () => WB,
-      t: () => NB,
-      w: () => UB
+  36867: (tt, et, Vt) => {
+    Vt.d(et, {
+      A: () => ft,
+      E: () => Mt,
+      d: () => Dt,
+      f: () => wt,
+      j: () => yt,
+      n: () => dt,
+      q: () => lt,
+      t: () => Nt,
+      w: () => Qt,
+      y: () => bt
     });
-    var TB = ZB(20),
-      JB = ZB(24);
-    const oB = "clientGameInventoryButtonsChanged",
-      GB = new Map;
+    var Ot = Vt(26),
+      qt = Vt(31);
+    const Dt = "clientGameInventoryButtonsChanged",
+      mt = new Map;
 
-    function vB() {
-      return [...GB.values()].sort(((BB, IB) => {
-        var ZB, TB;
-        return (null !== (ZB = BB.order) && void 0 !== ZB ? ZB : 0) - (null !== (TB = IB.order) && void 0 !== TB ? TB : 0)
+    function dt() {
+      return [...mt.values()].sort(((tt, et) => {
+        var Vt, Ot;
+        return (null !== (Vt = tt.order) && void 0 !== Vt ? Vt : 0) - (null !== (Ot = et.order) && void 0 !== Ot ? Ot : 0)
       }))
     }
-    let kB = null;
+    let jt = null;
 
-    function cB(BB) {
-      kB = BB
+    function Ht(tt) {
+      jt = tt
     }
-    let nB = !1;
+    let Xt = !1;
 
-    function hB(BB) {
-      nB = !0;
+    function Qt(tt) {
+      Xt = !0;
       try {
-        BB.onClick()
+        tt.onClick()
       } finally {
-        nB = !1
+        Xt = !1
       }
-      BB.panel && "clientGame" === TB.d.get("openInGameMenuName") && cB(BB.id)
+      tt.panel && "clientGame" === Ot.b.get("openInGameMenuName") && Ht(tt.id)
     }
 
-    function zB() {
-      return nB
+    function lt() {
+      return Xt
     }
 
-    function FB() {
-      return vB().filter((BB => BB.panel && !BB.disabled))
+    function Et() {
+      return dt().filter((tt => tt.panel && !tt.disabled))
     }
 
-    function NB(BB) {
-      const IB = FB(),
-        ZB = IB.findIndex((BB => BB.id === kB));
-      return !(ZB < 0 || IB.length < 2) && (hB(IB[(ZB + BB + IB.length) % IB.length]), !0)
+    function ft(tt) {
+      const et = Et(),
+        Vt = et.findIndex((tt => tt.id === jt));
+      return !(Vt < 0 || et.length < 2) && (Qt(et[(Vt + tt + et.length) % et.length]), !0)
     }
 
-    function gB() {
-      return null !== kB && FB().length > 1
+    function wt() {
+      return null !== jt && Et().length > 1
     }
 
-    function qB() {
-      cB(null)
+    function yt() {
+      Ht(null)
     }
 
-    function yB() {
-      "inventory" !== TB.d.get("openInGameMenuName") && cB(null)
+    function Nt() {
+      "inventory" !== Ot.b.get("openInGameMenuName") && Ht(null)
     }
 
-    function UB() {
-      const BB = kB;
-      return cB(null), BB
+    function Mt() {
+      const tt = jt;
+      return Ht(null), tt
     }
 
-    function WB(BB) {
-      return GB.set(BB.id, BB), JB.l.Gq(oB, vB(), !0), () => {
-        GB.get(BB.id) === BB && (GB.delete(BB.id), JB.l.Gq(oB, vB()))
+    function bt(tt) {
+      return mt.set(tt.id, tt), qt.j.sw(Dt, dt(), !0), () => {
+        mt.get(tt.id) === tt && (mt.delete(tt.id), qt.j.sw(Dt, dt()))
       }
     }
   },
-  36619: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => vB,
-      f: () => qB,
-      i: () => yB,
-      m: () => zB,
-      q: () => cB,
-      t: () => gB,
-      v: () => FB,
-      x: () => nB
+  36861: (tt, et, Vt) => {
+    Vt.d(et, {
+      b: () => dt,
+      c: () => yt,
+      g: () => Nt,
+      i: () => lt,
+      l: () => Ht,
+      m: () => wt,
+      o: () => Et,
+      q: () => Xt
     });
-    var TB = ZB(20),
-      JB = ZB(24),
-      oB = ZB(1353),
-      GB = ZB(36625);
-    const vB = "clientGameUiChanged";
-    let kB = null;
+    var Ot = Vt(26),
+      qt = Vt(31),
+      Dt = Vt(1387),
+      mt = Vt(36867);
+    const dt = "clientGameUiChanged";
+    let jt = null;
 
-    function cB() {
-      return kB
+    function Ht() {
+      return jt
     }
 
-    function nB(BB, IB) {
-      const ZB = {
-        content: BB,
-        menu: IB
+    function Xt(tt, et) {
+      const Vt = {
+        content: tt,
+        menu: et
       };
-      return kB = ZB, JB.l.Gq(vB, kB, !0), () => {
-        kB === ZB && (kB = null, NB = !1, qB(), JB.l.Gq(vB, null))
+      return jt = Vt, qt.j.sw(dt, jt, !0), () => {
+        jt === Vt && (jt = null, ft = !1, yt(), qt.j.sw(dt, null))
       }
     }
-    let hB = null;
+    let Qt = null;
 
-    function zB() {
-      return hB
+    function lt() {
+      return Qt
     }
 
-    function FB(BB) {
-      return hB = BB, () => {
-        hB === BB && (hB = null)
+    function Et(tt) {
+      return Qt = tt, () => {
+        Qt === tt && (Qt = null)
       }
     }
-    let NB = !1;
+    let ft = !1;
 
-    function gB() {
-      const BB = TB.d.get("openInGameMenuName");
-      "clientGame" !== BB && (NB = "inventory" === BB), (0, GB.l)() || (0, GB.g)(), (0, oB.t)(oB.e), TB.d.set({
+    function wt() {
+      const tt = Ot.b.get("openInGameMenuName");
+      "clientGame" !== tt && (ft = "inventory" === tt), (0, mt.q)() || (0, mt.j)(), (0, Dt.p)(Dt.c), Ot.b.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function qB() {
-      UB(!1)
+    function yt() {
+      Mt(!1)
     }
 
-    function yB() {
-      UB(NB)
+    function Nt() {
+      Mt(ft)
     }
 
-    function UB(BB) {
-      "clientGame" === TB.d.get("openInGameMenuName") && TB.d.set({
-        openInGameMenuName: BB ? "inventory" : null
-      }), BB || (0, GB.g)(), NB = !1
+    function Mt(tt) {
+      "clientGame" === Ot.b.get("openInGameMenuName") && Ot.b.set({
+        openInGameMenuName: tt ? "inventory" : null
+      }), tt || (0, mt.j)(), ft = !1
     }
   },
-  39495: (BB, IB, ZB) => {
-    ZB.r(IB), ZB.d(IB, {
-      default: () => qI
+  39650: (tt, et, Vt) => {
+    Vt.r(et), Vt.d(et, {
+      default: () => Ne
     });
-    const TB = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
-    var JB = ZB(63),
-      oB = ZB(36619),
-      GB = ZB(37060),
-      vB = ZB(36636),
-      kB = ZB(1805),
-      cB = ZB(24);
-    const nB = {
+    const Ot = ["skin", "head", "body", "legs", "shoes", "eyebrows", "eyes"];
+    var qt = Vt(63),
+      Dt = Vt(36861),
+      mt = Vt(37273),
+      dt = Vt(36872),
+      jt = Vt(1826),
+      Ht = Vt(31);
+    const Xt = {
       M1911: "pistol",
       Deagle: "pistol",
       "Block-19": "pistol",
@@ -372,284 +372,284 @@ export const modules = {
       "Splash Instant Healing Potion": "throwable",
       Snowdash: "throwable"
     };
-    const hB = 32;
+    const Qt = 32;
 
-    function zB(BB, IB, ZB, TB) {
+    function lt(tt, et, Vt, Ot) {
       return {
         tag: "line",
         attrs: {
-          x1: BB,
-          y1: IB,
-          x2: ZB,
-          y2: TB,
+          x1: tt,
+          y1: et,
+          x2: Vt,
+          y2: Ot,
           "stroke-width": arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 2
         }
       }
     }
 
-    function FB(BB) {
+    function Et(tt) {
       return {
         tag: "circle",
         attrs: {
-          cx: hB,
-          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : hB,
-          r: BB,
+          cx: Qt,
+          cy: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Qt,
+          r: tt,
           class: "Fill"
         }
       }
     }
 
-    function NB(BB, IB) {
+    function ft(tt, et) {
       return {
         tag: "path",
         attrs: {
-          d: BB,
-          "stroke-width": IB
+          d: tt,
+          "stroke-width": et
         }
       }
     }
 
-    function gB(BB, IB, ZB) {
+    function wt(tt, et, Vt) {
       return {
         tag: "circle",
         attrs: {
-          cx: hB,
-          cy: hB,
-          r: BB,
-          "stroke-width": IB,
-          class: ZB
+          cx: Qt,
+          cy: Qt,
+          r: tt,
+          "stroke-width": et,
+          class: Vt
         }
       }
     }
 
-    function qB(BB, IB, ZB) {
+    function yt(tt, et, Vt) {
       return {
         tag: "text",
         attrs: {
-          x: BB,
-          y: IB,
+          x: tt,
+          y: et,
           class: "Fill Label"
         },
-        text: ZB
+        text: Vt
       }
     }
-    const yB = {
-      pistol: BB => [zB(hB, hB - BB - 5, hB, hB - BB), zB(hB - BB - 5, hB, hB - BB, hB), zB(hB + BB, hB, hB + BB + 5, hB), FB(1.4)],
-      rifle: BB => [zB(hB, hB - BB - 8, hB, hB - BB), zB(hB, hB + BB, hB, hB + BB + 8), zB(hB - BB - 8, hB, hB - BB, hB), zB(hB + BB, hB, hB + BB + 8, hB), FB(1)],
-      smg: BB => {
-        const IB = Math.PI / 2,
-          ZB = [];
-        for (let GB = 0; GB < 4; GB++) ZB.push((JB = GB * IB + .35, oB = (GB + 1) * IB - .35, NB(`M${hB+(TB=6+BB)*Math.cos(JB)} ${hB+TB*Math.sin(JB)} A${TB} ${TB} 0 0 1 ${hB+TB*Math.cos(oB)} ${hB+TB*Math.sin(oB)}`, 2)));
-        var TB, JB, oB;
-        return [...ZB, FB(1.4)]
+    const Nt = {
+      pistol: tt => [lt(Qt, Qt - tt - 5, Qt, Qt - tt), lt(Qt - tt - 5, Qt, Qt - tt, Qt), lt(Qt + tt, Qt, Qt + tt + 5, Qt), Et(1.4)],
+      rifle: tt => [lt(Qt, Qt - tt - 8, Qt, Qt - tt), lt(Qt, Qt + tt, Qt, Qt + tt + 8), lt(Qt - tt - 8, Qt, Qt - tt, Qt), lt(Qt + tt, Qt, Qt + tt + 8, Qt), Et(1)],
+      smg: tt => {
+        const et = Math.PI / 2,
+          Vt = [];
+        for (let mt = 0; mt < 4; mt++) Vt.push((qt = mt * et + .35, Dt = (mt + 1) * et - .35, ft(`M${Qt+(Ot=6+tt)*Math.cos(qt)} ${Qt+Ot*Math.sin(qt)} A${Ot} ${Ot} 0 0 1 ${Qt+Ot*Math.cos(Dt)} ${Qt+Ot*Math.sin(Dt)}`, 2)));
+        var Ot, qt, Dt;
+        return [...Vt, Et(1.4)]
       },
-      shotgun: BB => [gB(BB, 3, "Ring Outline"), gB(BB, 1.5, "Ring")],
-      marksman: BB => [NB(`M${26-BB/2} ${39+BB/2} L32 33 L${38+BB/2} ${39+BB/2}`, 2), zB(14 - BB, hB, 24 - BB, hB, 1.5), zB(40 + BB, hB, 50 + BB, hB, 1.5), zB(14 - BB, 30, 14 - BB, 34, 1.5), zB(50 + BB, 30, 50 + BB, 34, 1.5)],
-      machineGun: BB => {
-        const IB = 10 + BB,
-          ZB = [];
-        for (const [TB, JB] of [
+      shotgun: tt => [wt(tt, 3, "Ring Outline"), wt(tt, 1.5, "Ring")],
+      marksman: tt => [ft(`M${26-tt/2} ${39+tt/2} L32 33 L${38+tt/2} ${39+tt/2}`, 2), lt(14 - tt, Qt, 24 - tt, Qt, 1.5), lt(40 + tt, Qt, 50 + tt, Qt, 1.5), lt(14 - tt, 30, 14 - tt, 34, 1.5), lt(50 + tt, 30, 50 + tt, 34, 1.5)],
+      machineGun: tt => {
+        const et = 10 + tt,
+          Vt = [];
+        for (const [Ot, qt] of [
             [-1, -1],
             [1, -1],
             [-1, 1],
             [1, 1]
-          ]) ZB.push(NB(`M${hB+TB*IB} ${hB+JB*(IB-5)} L${hB+TB*IB} ${hB+JB*IB} L${hB+TB*(IB-5)} ${hB+JB*IB}`, 2));
-        return [...ZB, zB(hB, 28, hB, 36, 1.5), zB(28, hB, 36, hB, 1.5)]
+          ]) Vt.push(ft(`M${Qt+Ot*et} ${Qt+qt*(et-5)} L${Qt+Ot*et} ${Qt+qt*et} L${Qt+Ot*(et-5)} ${Qt+qt*et}`, 2));
+        return [...Vt, lt(Qt, 28, Qt, 36, 1.5), lt(28, Qt, 36, Qt, 1.5)]
       },
-      launcher: () => [zB(14, 30, 50, 30, 1.5), zB(hB, 24, hB, 52, 1.5), zB(28, 38, 36, 38, 1.5), zB(29, 44, 35, 44, 1.5), zB(30, 50, 34, 50, 1.5), qB(38, 40, "100"), qB(37, 46, "200"), FB(1.4, 30)],
-      melee: () => [NB("M32 26 L38 32 L32 38 L26 32 Z", 1.5), FB(1.2)],
-      throwable: () => [FB(1.6)]
+      launcher: () => [lt(14, 30, 50, 30, 1.5), lt(Qt, 24, Qt, 52, 1.5), lt(28, 38, 36, 38, 1.5), lt(29, 44, 35, 44, 1.5), lt(30, 50, 34, 50, 1.5), yt(38, 40, "100"), yt(37, 46, "200"), Et(1.4, 30)],
+      melee: () => [ft("M32 26 L38 32 L32 38 L26 32 Z", 1.5), Et(1.2)],
+      throwable: () => [Et(1.6)]
     };
 
-    function UB(BB) {
+    function Mt(tt) {
       let {
-        tag: IB,
-        attrs: ZB,
-        text: TB
-      } = BB, JB = `<${IB}`;
-      for (const [oB, GB] of Object.entries(ZB)) JB += ` ${oB}="${GB}"`;
-      return void 0 === TB ? `${JB}/>` : `${JB}>${TB}</${IB}>`
+        tag: et,
+        attrs: Vt,
+        text: Ot
+      } = tt, qt = `<${et}`;
+      for (const [Dt, mt] of Object.entries(Vt)) qt += ` ${Dt}="${mt}"`;
+      return void 0 === Ot ? `${qt}/>` : `${qt}>${Ot}</${et}>`
     }
-    class WB {
-      constructor(BB, IB) {
-        this.api = BB, this.localPlayerId = IB, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = BB => {
-          this.element = BB, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, BB && !this.enabled && (BB.style.display = "none")
+    class bt {
+      constructor(tt, et) {
+        this.api = tt, this.localPlayerId = et, this.element = null, this.drawnFamily = null, this.shapes = [], this.drawnGap = 0, this.coneDrawn = !1, this.drawnVisible = null, this.drawnPressed = null, this.shownRadius = 0, this.ownsCrosshair = !1, this.enabled = !0, this.sniperOverlay = !1, this.mouseDown = !1, this.gapPerVh = 0, this.tokens = void 0, this.bindElement = tt => {
+          this.element = tt, this.drawnFamily = null, this.drawnVisible = null, this.drawnPressed = null, tt && !this.enabled && (tt.style.display = "none")
         }, this.measure = () => {
-          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, kB.getRemInPx)()))
-        }, this.tokens = [cB.l.subscribe("aimingOverlay", (BB => {
-          this.sniperOverlay = "sniper" === BB
-        })), cB.l.subscribe("mouseState", (BB => {
+          this.gapPerVh = window.innerHeight / 100 * (64 / (4 * (0, jt.getRemInPx)()))
+        }, this.tokens = [Ht.j.subscribe("aimingOverlay", (tt => {
+          this.sniperOverlay = "sniper" === tt
+        })), Ht.j.subscribe("mouseState", (tt => {
           let {
-            isDown: IB
-          } = BB;
-          this.mouseDown = IB
+            isDown: et
+          } = tt;
+          this.mouseDown = et
         }))], window.addEventListener("resize", this.measure), this.measure()
       }
-      qY(BB) {
-        BB !== this.enabled && (this.enabled = BB, this.drawnVisible = null, BB || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
+      Av(tt) {
+        tt !== this.enabled && (this.enabled = tt, this.drawnVisible = null, tt || (this.setOwnsCrosshair(!1), this.element && (this.element.style.display = "none")))
       }
-      frame(BB, IB) {
-        var ZB, TB;
+      frame(tt, et) {
+        var Vt, Ot;
         if (!this.enabled) return;
         const {
-          api: JB
-        } = this, oB = JB.isAlive(this.localPlayerId) && null !== (ZB = null === (TB = JB.FZB(this.localPlayerId)) || void 0 === TB ? void 0 : TB.name) && void 0 !== ZB ? ZB : null, GB = (vB = oB) && nB[vB] || null;
-        var vB;
-        if (this.setOwnsCrosshair(null !== GB), !this.element) return;
-        const kB = JB.getHeldGunInaccuracy(),
-          cB = null !== kB,
-          hB = null !== GB && !this.sniperOverlay && JB.isCrosshairShown();
-        if (hB !== this.drawnVisible && (this.drawnVisible = hB, this.element.style.display = hB ? "block" : "none"), !hB) return;
-        const zB = cB ? function(BB) {
-            return "launcher" === BB || "melee" === BB || "throwable" === BB ? "none" : "shotgun" === BB ? "cone" : "offset"
-          }(GB) : "none",
-          FB = null !== kB && void 0 !== kB ? kB : 0;
-        "cone" === zB ? this.drawCone(GB, this.coneRadiusVh(FB, IB) * this.gapPerVh, BB) : (this.coneDrawn = !1, this.draw(GB, "none" === zB ? 2 : this.offsetGap(FB)));
-        const NB = !cB && this.mouseDown;
-        NB !== this.drawnPressed && (this.drawnPressed = NB, this.element.classList.toggle("Pressed", NB))
+          api: qt
+        } = this, Dt = qt.isAlive(this.localPlayerId) && null !== (Vt = null === (Ot = qt.bVt(this.localPlayerId)) || void 0 === Ot ? void 0 : Ot.name) && void 0 !== Vt ? Vt : null, mt = (dt = Dt) && Xt[dt] || null;
+        var dt;
+        if (this.setOwnsCrosshair(null !== mt), !this.element) return;
+        const jt = qt.getHeldGunInaccuracy(),
+          Ht = null !== jt,
+          Qt = null !== mt && !this.sniperOverlay && qt.isCrosshairShown();
+        if (Qt !== this.drawnVisible && (this.drawnVisible = Qt, this.element.style.display = Qt ? "block" : "none"), !Qt) return;
+        const lt = Ht ? function(tt) {
+            return "launcher" === tt || "melee" === tt || "throwable" === tt ? "none" : "shotgun" === tt ? "cone" : "offset"
+          }(mt) : "none",
+          Et = null !== jt && void 0 !== jt ? jt : 0;
+        "cone" === lt ? this.drawCone(mt, this.coneRadiusVh(Et, et) * this.gapPerVh, tt) : (this.coneDrawn = !1, this.draw(mt, "none" === lt ? 2 : this.offsetGap(Et)));
+        const ft = !Ht && this.mouseDown;
+        ft !== this.drawnPressed && (this.drawnPressed = ft, this.element.classList.toggle("Pressed", ft))
       }
       dispose() {
-        for (const BB of this.tokens) cB.l.unsubscribe(BB);
+        for (const tt of this.tokens) Ht.j.unsubscribe(tt);
         window.removeEventListener("resize", this.measure), this.setOwnsCrosshair(!1)
       }
-      draw(BB, IB) {
-        var ZB, TB;
-        BB !== this.drawnFamily ? (this.drawnFamily = BB, this.drawnGap = IB, this.element.innerHTML = function(BB, IB) {
-          return `<svg viewBox="0 0 64 64">${yB[BB](IB).map(UB).join("")}</svg>`
-        }(BB, IB), this.shapes = Array.from(null !== (ZB = null === (TB = this.element.firstElementChild) || void 0 === TB ? void 0 : TB.children) && void 0 !== ZB ? ZB : [])) : IB !== this.drawnGap && (this.drawnGap = IB, function(BB, IB, ZB) {
-          const TB = yB[IB](ZB);
-          for (let JB = 0; JB < TB.length; JB++)
-            for (const [IB, ZB] of Object.entries(TB[JB].attrs)) {
-              const TB = String(ZB);
-              BB[JB].getAttribute(IB) !== TB && BB[JB].setAttribute(IB, TB)
+      draw(tt, et) {
+        var Vt, Ot;
+        tt !== this.drawnFamily ? (this.drawnFamily = tt, this.drawnGap = et, this.element.innerHTML = function(tt, et) {
+          return `<svg viewBox="0 0 64 64">${Nt[tt](et).map(Mt).join("")}</svg>`
+        }(tt, et), this.shapes = Array.from(null !== (Vt = null === (Ot = this.element.firstElementChild) || void 0 === Ot ? void 0 : Ot.children) && void 0 !== Vt ? Vt : [])) : et !== this.drawnGap && (this.drawnGap = et, function(tt, et, Vt) {
+          const Ot = Nt[et](Vt);
+          for (let qt = 0; qt < Ot.length; qt++)
+            for (const [et, Vt] of Object.entries(Ot[qt].attrs)) {
+              const Ot = String(Vt);
+              tt[qt].getAttribute(et) !== Ot && tt[qt].setAttribute(et, Ot)
             }
-        }(this.shapes, BB, IB))
+        }(this.shapes, tt, et))
       }
-      drawCone(BB, IB, ZB) {
-        BB === this.drawnFamily && this.coneDrawn ? this.shownRadius += (IB - this.shownRadius) * (1 - Math.exp(-ZB / 80)) : this.shownRadius = IB, this.coneDrawn = !0, this.draw(BB, Math.round(4 * this.shownRadius) / 4)
+      drawCone(tt, et, Vt) {
+        tt === this.drawnFamily && this.coneDrawn ? this.shownRadius += (et - this.shownRadius) * (1 - Math.exp(-Vt / 80)) : this.shownRadius = et, this.coneDrawn = !0, this.draw(tt, Math.round(4 * this.shownRadius) / 4)
       }
-      coneRadiusVh(BB, IB) {
-        if (!(IB > 0)) return 1;
-        const ZB = BB * GB.e / 2;
-        return Math.max(50 * Math.tan(ZB) / IB, 1)
+      coneRadiusVh(tt, et) {
+        if (!(et > 0)) return 1;
+        const Vt = tt * mt.g / 2;
+        return Math.max(50 * Math.tan(Vt) / et, 1)
       }
-      offsetGap(BB) {
-        const IB = 2 + ((0, vB.f)(BB) - 1) * this.gapPerVh;
-        return Math.min(24, Math.round(2 * IB) / 2)
+      offsetGap(tt) {
+        const et = 2 + ((0, dt.c)(tt) - 1) * this.gapPerVh;
+        return Math.min(24, Math.round(2 * et) / 2)
       }
-      setOwnsCrosshair(BB) {
-        BB !== this.ownsCrosshair && (this.ownsCrosshair = BB, document.body.classList.toggle("FrontlineCustomCrosshair", BB))
+      setOwnsCrosshair(tt) {
+        tt !== this.ownsCrosshair && (this.ownsCrosshair = tt, document.body.classList.toggle("FrontlineCustomCrosshair", tt))
       }
     }
-    const dB = "FrontlineCustomDamage",
-      CB = .45,
-      QB = .2;
-    class sB {
-      constructor(BB, IB) {
-        this.api = BB, this.localPlayerId = IB, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
+    const Jt = "FrontlineCustomDamage",
+      Ct = .45,
+      ut = .2;
+    class Kt {
+      constructor(tt, et) {
+        this.api = tt, this.localPlayerId = et, this.root = null, this.lowLayer = null, this.arcLayer = null, this.arcs = [], this.flashes = [], this.lastHealthPool = null, this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, this.maxHealth = null, this.jB = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = BB => {
-          var IB, ZB;
-          this.clearHits(), this.root = BB, this.lowLayer = null !== (IB = null === BB || void 0 === BB ? void 0 : BB.querySelector(".FrontlineDamageLow")) && void 0 !== IB ? IB : null, this.arcLayer = null !== (ZB = null === BB || void 0 === BB ? void 0 : BB.querySelector(".FrontlineDamageArcs")) && void 0 !== ZB ? ZB : null, this.showRoot(), this.drawLow()
-        }, this.token = cB.l.subscribe("damagedByOtherPlayer", (BB => {
+        }, this.maxHealth = null, this.Lt = 1, this.dead = !1, this.enabled = !0, this.cameraHeading = 0, this.token = void 0, this.readHealth = NaN, this.readShield = NaN, this.readMaxHealth = NaN, this.bindElement = tt => {
+          var et, Vt;
+          this.clearHits(), this.root = tt, this.lowLayer = null !== (et = null === tt || void 0 === tt ? void 0 : tt.querySelector(".FrontlineDamageLow")) && void 0 !== et ? et : null, this.arcLayer = null !== (Vt = null === tt || void 0 === tt ? void 0 : tt.querySelector(".FrontlineDamageArcs")) && void 0 !== Vt ? Vt : null, this.showRoot(), this.drawLow()
+        }, this.token = Ht.j.subscribe("damagedByOtherPlayer", (tt => {
           let {
-            direction: IB,
-            aB: ZB
-          } = BB;
-          this.onHurt(IB, ZB)
-        })), this.syncHealth(), document.body.classList.add(dB)
+            direction: et,
+            Pt: Vt
+          } = tt;
+          this.onHurt(et, Vt)
+        })), this.syncHealth(), document.body.classList.add(Jt)
       }
-      qY(BB) {
-        BB !== this.enabled && (this.enabled = BB, document.body.classList.toggle(dB, BB), BB || this.clearHits(), this.showRoot())
+      Av(tt) {
+        tt !== this.enabled && (this.enabled = tt, document.body.classList.toggle(Jt, tt), tt || this.clearHits(), this.showRoot())
       }
-      frame(BB) {
-        this.syncHealth(), this.cameraHeading = BB;
-        for (const IB of this.arcs) this.drawArcAngle(IB)
+      frame(tt) {
+        this.syncHealth(), this.cameraHeading = tt;
+        for (const et of this.arcs) this.drawArcAngle(et)
       }
       dispose() {
-        cB.l.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(dB)
+        Ht.j.unsubscribe(this.token), this.clearHits(), document.body.classList.remove(Jt)
       }
       showRoot() {
         this.root && (this.root.style.display = this.enabled ? "" : "none")
       }
       syncHealth() {
-        const BB = this.api.getClientOption(this.localPlayerId, "_health"),
-          IB = this.api.getClientOption(this.localPlayerId, "_shield"),
-          ZB = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
-        if (Object.is(BB, this.readHealth) && Object.is(IB, this.readShield) && Object.is(ZB, this.readMaxHealth)) return;
-        if (this.readHealth = BB, this.readShield = IB, this.readMaxHealth = ZB, null === BB || void 0 === BB || !ZB) return this.lastHealthPool = null, this.maxHealth = null, this.jB = 1, this.dead = !1, void this.drawLow();
-        const TB = BB + (null !== IB && void 0 !== IB ? IB : 0);
-        if (null !== this.lastHealthPool && TB < this.lastHealthPool) {
-          const BB = performance.now(),
-            IB = (this.lastHealthPool - TB) / ZB;
-          this.lastDrop = BB - this.lastDrop.at < 300 ? {
-            frac: this.lastDrop.frac + IB,
+        const tt = this.api.getClientOption(this.localPlayerId, "_health"),
+          et = this.api.getClientOption(this.localPlayerId, "_shield"),
+          Vt = this.api.getClientOption(this.localPlayerId, "_totalMaxHealth");
+        if (Object.is(tt, this.readHealth) && Object.is(et, this.readShield) && Object.is(Vt, this.readMaxHealth)) return;
+        if (this.readHealth = tt, this.readShield = et, this.readMaxHealth = Vt, null === tt || void 0 === tt || !Vt) return this.lastHealthPool = null, this.maxHealth = null, this.Lt = 1, this.dead = !1, void this.drawLow();
+        const Ot = tt + (null !== et && void 0 !== et ? et : 0);
+        if (null !== this.lastHealthPool && Ot < this.lastHealthPool) {
+          const tt = performance.now(),
+            et = (this.lastHealthPool - Ot) / Vt;
+          this.lastDrop = tt - this.lastDrop.at < 300 ? {
+            frac: this.lastDrop.frac + et,
             at: this.lastDrop.at
           } : {
-            frac: IB,
-            at: BB
+            frac: et,
+            at: tt
           }
         }
-        this.dead = BB <= 0, this.dead && this.clearHits(), this.lastHealthPool = TB, this.maxHealth = ZB, this.jB = BB > 0 ? BB / ZB : 1, this.drawLow()
+        this.dead = tt <= 0, this.dead && this.clearHits(), this.lastHealthPool = Ot, this.maxHealth = Vt, this.Lt = tt > 0 ? tt / Vt : 1, this.drawLow()
       }
-      onHurt(BB, IB) {
+      onHurt(tt, et) {
         if (this.syncHealth(), this.dead || !this.enabled) return;
-        const ZB = Math.min(1, this.takeDamageFrac(IB) / .3);
-        null !== BB && this.showArc(BB, ZB), this.flashEdge(null === BB ? null : BB - this.cameraHeading, .4 + .6 * ZB)
+        const Vt = Math.min(1, this.takeDamageFrac(et) / .3);
+        null !== tt && this.showArc(tt, Vt), this.flashEdge(null === tt ? null : tt - this.cameraHeading, .4 + .6 * Vt)
       }
-      takeDamageFrac(BB) {
-        if (void 0 !== BB && this.maxHealth) return BB / this.maxHealth;
+      takeDamageFrac(tt) {
+        if (void 0 !== tt && this.maxHealth) return tt / this.maxHealth;
         if (performance.now() - this.lastDrop.at >= 300) return .12;
         const {
-          frac: IB
+          frac: et
         } = this.lastDrop;
         return this.lastDrop = {
           frac: 0,
           at: -1 / 0
-        }, IB
+        }, et
       }
       drawLow() {
         if (!this.lowLayer) return;
-        const BB = OB((CB - this.jB) / .25),
-          IB = OB((QB - this.jB) / .15000000000000002),
-          ZB = this.jB < CB;
-        this.lowLayer.classList.toggle("Active", ZB), this.lowLayer.classList.toggle("Critical", this.jB < QB), this.lowLayer.style.opacity = String(ZB ? .55 + .3 * BB + .15 * IB : 0)
+        const tt = vt((Ct - this.Lt) / .25),
+          et = vt((ut - this.Lt) / .15000000000000002),
+          Vt = this.Lt < Ct;
+        this.lowLayer.classList.toggle("Active", Vt), this.lowLayer.classList.toggle("Critical", this.Lt < ut), this.lowLayer.style.opacity = String(Vt ? .55 + .3 * tt + .15 * et : 0)
       }
-      showArc(BB, IB) {
-        var ZB, TB;
+      showArc(tt, et) {
+        var Vt, Ot;
         if (!this.arcLayer) return;
-        let JB = this.arcs.find((IB => wB(IB.direction, BB) < .6));
-        if (!JB) {
-          const IB = document.createElement("div");
-          IB.className = "FrontlineDamageArc", IB.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(IB), JB = {
-            element: IB,
-            direction: BB,
+        let qt = this.arcs.find((et => ht(et.direction, tt) < .6));
+        if (!qt) {
+          const et = document.createElement("div");
+          et.className = "FrontlineDamageArc", et.appendChild(document.createElement("div")).className = "FrontlineDamageArcBand", this.arcLayer.appendChild(et), qt = {
+            element: et,
+            direction: tt,
             drawnAngle: null,
             fade: null,
             pop: null
-          }, this.arcs.push(JB)
+          }, this.arcs.push(qt)
         }
-        JB.direction = BB, this.drawArcAngle(JB);
-        const oB = JB.fade ? Number(getComputedStyle(JB.element).opacity) : 0;
-        null === (ZB = JB.fade) || void 0 === ZB || ZB.cancel(), null === (TB = JB.pop) || void 0 === TB || TB.cancel(), JB.element.style.opacity = "1";
-        const GB = JB.element.animate([{
-          opacity: oB
+        qt.direction = tt, this.drawArcAngle(qt);
+        const Dt = qt.fade ? Number(getComputedStyle(qt.element).opacity) : 0;
+        null === (Vt = qt.fade) || void 0 === Vt || Vt.cancel(), null === (Ot = qt.pop) || void 0 === Ot || Ot.cancel(), qt.element.style.opacity = "1";
+        const mt = qt.element.animate([{
+          opacity: Dt
         }, {
           opacity: 1
         }], 144);
-        JB.fade = GB, JB.pop = JB.element.animate([{
-          scale: 1.1 + (1.16 - 1.1) * IB
+        qt.fade = mt, qt.pop = qt.element.animate([{
+          scale: 1.1 + (1.16 - 1.1) * et
         }, {
           scale: 1
         }], {
           duration: 160,
           easing: "cubic-bezier(0.2, 0.7, 0.3, 1)"
         });
-        const vB = JB;
-        GB.onfinish = () => {
-          if (vB.fade !== GB) return;
-          const BB = vB.element.animate([{
+        const dt = qt;
+        mt.onfinish = () => {
+          if (dt.fade !== mt) return;
+          const tt = dt.element.animate([{
             opacity: 1
           }, {
             opacity: 0
@@ -659,128 +659,128 @@ export const modules = {
             easing: "cubic-bezier(0.4, 0, 0.7, 1)",
             fill: "forwards"
           });
-          BB.startTime = GB.startTime, vB.fade = BB, BB.onfinish = () => {
-            vB.fade === BB && (vB.element.remove(), YB(this.arcs, vB))
+          tt.startTime = mt.startTime, dt.fade = tt, tt.onfinish = () => {
+            dt.fade === tt && (dt.element.remove(), Wt(this.arcs, dt))
           }
         }
       }
-      drawArcAngle(BB) {
-        const IB = BB.direction - this.cameraHeading;
-        (null === BB.drawnAngle || Math.abs(IB - BB.drawnAngle) > .005) && (BB.drawnAngle = IB, BB.element.style.rotate = `${IB}rad`)
+      drawArcAngle(tt) {
+        const et = tt.direction - this.cameraHeading;
+        (null === tt.drawnAngle || Math.abs(et - tt.drawnAngle) > .005) && (tt.drawnAngle = et, tt.element.style.rotate = `${et}rad`)
       }
-      flashEdge(BB, IB) {
-        var ZB, TB, JB;
+      flashEdge(tt, et) {
+        var Vt, Ot, qt;
         if (!this.root) return;
-        let oB = this.flashes.find((IB => null === IB.angle || null === BB ? IB.angle === BB : wB(IB.angle, BB) < .5));
-        if (!oB) {
-          const IB = document.createElement("div");
-          IB.className = "FrontlineDamageFlash";
-          const ZB = IB.appendChild(document.createElement("div"));
-          ZB.className = "FrontlineDamageFlashGlow", this.root.insertBefore(IB, this.arcLayer), oB = {
-            element: IB,
-            glow: ZB,
-            angle: BB,
+        let Dt = this.flashes.find((et => null === et.angle || null === tt ? et.angle === tt : ht(et.angle, tt) < .5));
+        if (!Dt) {
+          const et = document.createElement("div");
+          et.className = "FrontlineDamageFlash";
+          const Vt = et.appendChild(document.createElement("div"));
+          Vt.className = "FrontlineDamageFlashGlow", this.root.insertBefore(et, this.arcLayer), Dt = {
+            element: et,
+            glow: Vt,
+            angle: tt,
             level: 0,
             animation: null
-          }, this.flashes.push(oB)
+          }, this.flashes.push(Dt)
         }
-        const GB = null === (ZB = oB.animation) || void 0 === ZB || null === (TB = ZB.effect) || void 0 === TB ? void 0 : TB.getComputedTiming().progress,
-          vB = null === GB || void 0 === GB ? 0 : oB.level * (1 - GB);
-        oB.level = Math.min(1, Math.max(IB, vB + .6 * IB)), oB.angle = BB;
+        const mt = null === (Vt = Dt.animation) || void 0 === Vt || null === (Ot = Vt.effect) || void 0 === Ot ? void 0 : Ot.getComputedTiming().progress,
+          dt = null === mt || void 0 === mt ? 0 : Dt.level * (1 - mt);
+        Dt.level = Math.min(1, Math.max(et, dt + .6 * et)), Dt.angle = tt;
         const {
-          x: kB,
-          y: cB,
-          rx: nB,
-          ry: hB
-        } = function(BB, IB) {
-          const ZB = window.innerWidth,
-            TB = window.innerHeight;
-          if (null === BB) return {
-            x: ZB / 2,
-            y: TB / 2,
+          x: jt,
+          y: Ht,
+          rx: Xt,
+          ry: Qt
+        } = function(tt, et) {
+          const Vt = window.innerWidth,
+            Ot = window.innerHeight;
+          if (null === tt) return {
+            x: Vt / 2,
+            y: Ot / 2,
             rx: 0,
             ry: 0
           };
-          const JB = Math.sin(BB),
-            oB = -Math.cos(BB),
-            GB = ZB / 2 / Math.max(1e-6, Math.abs(JB)),
-            vB = TB / 2 / Math.max(1e-6, Math.abs(oB)),
-            kB = Math.min(GB, vB),
-            cB = Math.round(ZB / 2 + JB * kB),
-            nB = Math.round(TB / 2 + oB * kB),
-            hB = TB / 100 * (.85 + .25 * IB),
-            zB = GB <= vB,
-            FB = Math.round((zB ? 30 : 74) * hB),
-            NB = Math.round((zB ? 58 : 26) * hB);
+          const qt = Math.sin(tt),
+            Dt = -Math.cos(tt),
+            mt = Vt / 2 / Math.max(1e-6, Math.abs(qt)),
+            dt = Ot / 2 / Math.max(1e-6, Math.abs(Dt)),
+            jt = Math.min(mt, dt),
+            Ht = Math.round(Vt / 2 + qt * jt),
+            Xt = Math.round(Ot / 2 + Dt * jt),
+            Qt = Ot / 100 * (.85 + .25 * et),
+            lt = mt <= dt,
+            Et = Math.round((lt ? 30 : 74) * Qt),
+            ft = Math.round((lt ? 58 : 26) * Qt);
           return {
-            x: cB,
-            y: nB,
-            rx: FB,
-            ry: NB
+            x: Ht,
+            y: Xt,
+            rx: Et,
+            ry: ft
           }
-        }(BB, oB.level), {
-          style: zB
-        } = oB.glow;
-        oB.glow.classList.toggle("Everywhere", null === BB), zB.setProperty("--glowX", `${kB}px`), zB.setProperty("--glowY", `${cB}px`), zB.setProperty("--glowRx", `${nB}px`), zB.setProperty("--glowRy", `${hB}px`), oB.element.style.transformOrigin = `${kB}px ${cB}px`, null === (JB = oB.animation) || void 0 === JB || JB.cancel();
-        const FB = oB.element.animate([{
+        }(tt, Dt.level), {
+          style: lt
+        } = Dt.glow;
+        Dt.glow.classList.toggle("Everywhere", null === tt), lt.setProperty("--glowX", `${jt}px`), lt.setProperty("--glowY", `${Ht}px`), lt.setProperty("--glowRx", `${Xt}px`), lt.setProperty("--glowRy", `${Qt}px`), Dt.element.style.transformOrigin = `${jt}px ${Ht}px`, null === (qt = Dt.animation) || void 0 === qt || qt.cancel();
+        const Et = Dt.element.animate([{
           opacity: 0,
           scale: .82,
           easing: "cubic-bezier(0.2, 0.8, 0.3, 1)"
         }, {
-          opacity: oB.level,
+          opacity: Dt.level,
           scale: 1,
           offset: .12,
           easing: "linear"
         }, {
-          opacity: .8 * oB.level,
+          opacity: .8 * Dt.level,
           offset: .38,
           easing: "cubic-bezier(0.4, 0, 0.7, 1)"
         }, {
           opacity: 0,
           scale: .92
         }], {
-          duration: 520 + 180 * oB.level
+          duration: 520 + 180 * Dt.level
         });
-        oB.animation = FB;
-        const NB = oB;
-        FB.onfinish = () => {
-          NB.animation === FB && (NB.element.remove(), YB(this.flashes, NB))
+        Dt.animation = Et;
+        const ft = Dt;
+        Et.onfinish = () => {
+          ft.animation === Et && (ft.element.remove(), Wt(this.flashes, ft))
         }
       }
       clearHits() {
-        for (const TB of this.arcs) {
-          var BB, IB;
-          null === (BB = TB.fade) || void 0 === BB || BB.cancel(), TB.fade = null, null === (IB = TB.pop) || void 0 === IB || IB.cancel(), TB.element.remove()
+        for (const Ot of this.arcs) {
+          var tt, et;
+          null === (tt = Ot.fade) || void 0 === tt || tt.cancel(), Ot.fade = null, null === (et = Ot.pop) || void 0 === et || et.cancel(), Ot.element.remove()
         }
         this.arcs.length = 0;
-        for (const TB of this.flashes) {
-          var ZB;
-          null === (ZB = TB.animation) || void 0 === ZB || ZB.cancel(), TB.element.remove()
+        for (const Ot of this.flashes) {
+          var Vt;
+          null === (Vt = Ot.animation) || void 0 === Vt || Vt.cancel(), Ot.element.remove()
         }
         this.flashes.length = 0
       }
     }
 
-    function wB(BB, IB) {
-      return Math.abs(Math.atan2(Math.sin(BB - IB), Math.cos(BB - IB)))
+    function ht(tt, et) {
+      return Math.abs(Math.atan2(Math.sin(tt - et), Math.cos(tt - et)))
     }
 
-    function OB(BB) {
-      return Math.max(0, Math.min(1, BB))
+    function vt(tt) {
+      return Math.max(0, Math.min(1, tt))
     }
 
-    function YB(BB, IB) {
-      const ZB = BB.indexOf(IB); - 1 !== ZB && BB.splice(ZB, 1)
+    function Wt(tt, et) {
+      const Vt = tt.indexOf(et); - 1 !== Vt && tt.splice(Vt, 1)
     }
-    var iB = ZB(1091),
-      pB = ZB.n(iB),
-      aB = ZB(36613),
-      HB = ZB(36708),
-      MB = ZB(1248),
-      jB = ZB(1507);
-    const PB = "frontlineHudChanged",
-      RB = "frontlineScoreboardChanged";
-    class rB {
+    var St = Vt(1140),
+      ct = Vt.n(St),
+      Rt = Vt(36853),
+      It = Vt(36941),
+      Pt = Vt(1286),
+      Zt = Vt(1554);
+    const Lt = "frontlineHudChanged",
+      Ft = "frontlineScoreboardChanged";
+    class kt {
       constructor() {
         this.wire = ["none"], this.scoreboard = {
           wire: ["none"],
@@ -793,101 +793,101 @@ export const modules = {
       getScoreboard() {
         return this.scoreboard
       }
-      sN(BB) {
-        this.wire = BB, cB.l.Gq(PB, BB, !0)
+      Qf(tt) {
+        this.wire = tt, Ht.j.sw(Lt, tt, !0)
       }
-      receiveScoreboard(BB) {
-        let IB = "scoreboard" === BB[0] ? performance.now() + BB[5] : 0;
-        const ZB = this.scoreboard.endsAt;
-        0 !== IB && 0 !== ZB && Math.abs(IB - ZB) < 1e3 && (IB = ZB), this.scoreboard = {
-          wire: BB,
-          endsAt: IB
-        }, cB.l.Gq(RB, this.scoreboard, !0)
+      receiveScoreboard(tt) {
+        let et = "scoreboard" === tt[0] ? performance.now() + tt[5] : 0;
+        const Vt = this.scoreboard.endsAt;
+        0 !== et && 0 !== Vt && Math.abs(et - Vt) < 1e3 && (et = Vt), this.scoreboard = {
+          wire: tt,
+          endsAt: et
+        }, Ht.j.sw(Ft, this.scoreboard, !0)
       }
     }
-    var mB = ZB(1153);
-    const XB = {
+    var Gt = Vt(1188);
+    const zt = {
       Red: "frontlineHud:teamRed",
       Blue: "frontlineHud:teamBlue"
     };
 
-    function LB(BB) {
-      const [IB, ZB] = (0, JB.useState)((() => (BB - performance.now()) / 1e3));
-      return (0, JB.useEffect)((() => {
-        if (0 === BB) return;
-        const IB = () => {
-          ZB((BB - performance.now()) / 1e3)
+    function ot(tt) {
+      const [et, Vt] = (0, qt.useState)((() => (tt - performance.now()) / 1e3));
+      return (0, qt.useEffect)((() => {
+        if (0 === tt) return;
+        const et = () => {
+          Vt((tt - performance.now()) / 1e3)
         };
-        IB();
-        const TB = window.setInterval(IB, 250);
+        et();
+        const Ot = window.setInterval(et, 250);
         return () => {
-          window.clearInterval(TB)
+          window.clearInterval(Ot)
         }
-      }), [BB]), IB
+      }), [tt]), et
     }
 
-    function eB(BB) {
+    function rt(tt) {
       let {
-        className: IB,
-        point: ZB
-      } = BB;
-      const [TB, JB, oB, GB, vB, kB] = ZB;
-      return (0, mB.jsxs)("div", {
-        className: pB()(IB, `Owner-${JB||"None"}`, `Leader-${GB||"None"}`, {
-          Contested: vB,
-          Here: kB
+        className: et,
+        point: Vt
+      } = tt;
+      const [Ot, qt, Dt, mt, dt, jt] = Vt;
+      return (0, Gt.jsxs)("div", {
+        className: ct()(et, `Owner-${qt||"None"}`, `Leader-${mt||"None"}`, {
+          Contested: dt,
+          Here: jt
         }),
-        children: [(0, mB.jsx)("span", {
+        children: [(0, Gt.jsx)("span", {
           className: "FrontlinePointLetter",
-          children: TB
-        }), (0, mB.jsx)("i", {
+          children: Ot
+        }), (0, Gt.jsx)("i", {
           className: "FrontlinePointFill",
           style: {
-            width: `${oB}%`
+            width: `${Dt}%`
           }
         })]
       })
     }
-    const uB = (0, JB.memo)((function(BB) {
+    const Ut = (0, qt.memo)((function(tt) {
         let {
-          points: IB,
-          markers: ZB
-        } = BB;
+          points: et,
+          markers: Vt
+        } = tt;
         const {
-          t: TB
-        } = (0, MB.G)();
-        return IB ? (0, mB.jsx)("div", {
+          t: Ot
+        } = (0, Pt.H)();
+        return et ? (0, Gt.jsx)("div", {
           className: "FrontlinePointMarkers",
-          children: IB.map((BB => {
-            const [IB, , , , , , , JB] = BB;
-            return (0, mB.jsxs)("div", {
-              ref: ZB.bindMarker(IB),
+          children: et.map((tt => {
+            const [et, , , , , , , qt] = tt;
+            return (0, Gt.jsxs)("div", {
+              ref: Vt.bindMarker(et),
               className: "FrontlinePointMarker",
-              children: [(0, mB.jsx)(eB, {
+              children: [(0, Gt.jsx)(rt, {
                 className: "FrontlinePointMarkerTile",
-                point: BB
-              }), (0, mB.jsxs)("div", {
+                point: tt
+              }), (0, Gt.jsxs)("div", {
                 className: "FrontlinePointMarkerLabels",
-                children: [JB && (0, mB.jsx)("span", {
-                  className: pB()("FrontlinePointMarkerHomeTurf", `Team-${JB}`),
-                  children: TB("frontlineHud:homeTurf", {
-                    team: TB(XB[JB])
+                children: [qt && (0, Gt.jsx)("span", {
+                  className: ct()("FrontlinePointMarkerHomeTurf", `Team-${qt}`),
+                  children: Ot("frontlineHud:homeTurf", {
+                    team: Ot(zt[qt])
                   })
-                }), (0, mB.jsx)("span", {
+                }), (0, Gt.jsx)("span", {
                   className: "FrontlinePointMarkerDistance"
                 })]
               })]
-            }, IB)
+            }, et)
           }))
         }) : null
       })),
-      fB = {
+      At = {
         capturing: "frontlineHud:capturing",
         contesting: "frontlineHud:contesting",
         defending: "frontlineHud:defending",
         captured: "frontlineHud:captured"
       },
-      lB = {
+      it = {
         captured: "frontlineHud:capturedTag",
         lost: "frontlineHud:lostTag",
         milestone: "frontlineHud:milestoneTag",
@@ -895,321 +895,321 @@ export const modules = {
         reinforcements: "frontlineHud:reinforcementsTag"
       };
 
-    function AB(BB) {
+    function Yt(tt) {
       let {
-        hud: IB,
-        crosshair: ZB,
-        damage: TB,
-        markers: JB
-      } = BB;
-      const oB = (0, jB.h)(PB, IB.getWire()),
-        GB = (0, jB.h)(RB, IB.getScoreboard());
-      return (0, mB.jsxs)(mB.Fragment, {
-        children: [(0, mB.jsx)(tB, {
-          damage: TB
-        }), (0, mB.jsx)(uB, {
-          points: "scoreboard" === GB.wire[0] ? GB.wire[6] : null,
-          markers: JB
-        }), (0, mB.jsx)(xB, {
-          view: GB
-        }), (0, mB.jsx)("div", {
+        hud: et,
+        crosshair: Vt,
+        damage: Ot,
+        markers: qt
+      } = tt;
+      const Dt = (0, Zt.h)(Lt, et.getWire()),
+        mt = (0, Zt.h)(Ft, et.getScoreboard());
+      return (0, Gt.jsxs)(Gt.Fragment, {
+        children: [(0, Gt.jsx)(Bt, {
+          damage: Ot
+        }), (0, Gt.jsx)(Ut, {
+          points: "scoreboard" === mt.wire[0] ? mt.wire[6] : null,
+          markers: qt
+        }), (0, Gt.jsx)(xt, {
+          view: mt
+        }), (0, Gt.jsx)("div", {
           className: "FrontlineReticle",
-          ref: ZB.bindElement
-        }), (0, mB.jsx)(aB.h, {
-          children: (0, mB.jsx)(bB, {
-            wire: oB
+          ref: Vt.bindElement
+        }), (0, Gt.jsx)(Rt.g, {
+          children: (0, Gt.jsx)(pt, {
+            wire: Dt
           })
         })]
       })
     }
-    const tB = (0, JB.memo)((function(BB) {
+    const Bt = (0, qt.memo)((function(tt) {
         let {
-          damage: IB
-        } = BB;
-        return (0, mB.jsxs)("div", {
+          damage: et
+        } = tt;
+        return (0, Gt.jsxs)("div", {
           className: "FrontlineDamage",
-          ref: IB.bindElement,
-          children: [(0, mB.jsx)("div", {
+          ref: et.bindElement,
+          children: [(0, Gt.jsx)("div", {
             className: "FrontlineDamageLow",
-            children: (0, mB.jsx)("div", {
+            children: (0, Gt.jsx)("div", {
               className: "FrontlineDamageShade"
             })
-          }), (0, mB.jsx)("div", {
+          }), (0, Gt.jsx)("div", {
             className: "FrontlineDamageArcs"
           })]
         })
       })),
-      bB = (0, JB.memo)((function(BB) {
+      pt = (0, qt.memo)((function(tt) {
         let {
-          wire: IB
-        } = BB;
+          wire: et
+        } = tt;
         const {
-          t: ZB
-        } = (0, MB.G)();
-        if ("capture" === IB[0]) {
-          const [, BB, TB, JB, oB, GB, vB] = IB, kB = Math.round(JB / 100 * 24);
-          return (0, mB.jsxs)("div", {
-            className: pB()("FrontlinePlate", `Status-${TB}`, `Leader-${oB||"None"}`),
-            children: [(0, mB.jsx)(VB, {}), (0, mB.jsxs)("div", {
+          t: Vt
+        } = (0, Pt.H)();
+        if ("capture" === et[0]) {
+          const [, tt, Ot, qt, Dt, mt, dt] = et, jt = Math.round(qt / 100 * 24);
+          return (0, Gt.jsxs)("div", {
+            className: ct()("FrontlinePlate", `Status-${Ot}`, `Leader-${Dt||"None"}`),
+            children: [(0, Gt.jsx)(nt, {}), (0, Gt.jsxs)("div", {
               className: "FrontlinePlateRow",
-              children: [(0, mB.jsx)("span", {
+              children: [(0, Gt.jsx)("span", {
                 className: "FrontlineObjective",
-                children: BB
-              }), (0, mB.jsxs)("div", {
+                children: tt
+              }), (0, Gt.jsxs)("div", {
                 className: "FrontlinePlateMiddle",
-                children: [(0, mB.jsx)("div", {
+                children: [(0, Gt.jsx)("div", {
                   className: "FrontlinePlateMeta",
-                  children: ZB("frontlineHud:objective", {
-                    point: BB,
-                    friendly: GB,
-                    enemy: vB
+                  children: Vt("frontlineHud:objective", {
+                    point: tt,
+                    friendly: mt,
+                    enemy: dt
                   })
-                }), (0, mB.jsx)("div", {
+                }), (0, Gt.jsx)("div", {
                   className: "FrontlinePlateStatus",
-                  children: ZB(fB[TB])
+                  children: Vt(At[Ot])
                 })]
-              }), (0, mB.jsxs)("span", {
+              }), (0, Gt.jsxs)("span", {
                 className: "FrontlinePercent",
-                children: [String(JB).padStart(3, "0"), (0, mB.jsx)("small", {
+                children: [String(qt).padStart(3, "0"), (0, Gt.jsx)("small", {
                   children: "%"
                 })]
               })]
-            }), (0, mB.jsx)(DB, {
+            }), (0, Gt.jsx)(gt, {
               segments: 24,
-              lit: kB
+              lit: jt
             })]
           })
         }
-        if ("alert" === IB[0]) {
-          const [, BB, TB, JB] = IB;
-          return (0, mB.jsxs)("div", {
-            className: pB()("FrontlinePlate", "FrontlineAlert", `Tone-${JB}`),
-            children: [(0, mB.jsx)(VB, {}), (0, mB.jsx)("div", {
+        if ("alert" === et[0]) {
+          const [, tt, Ot, qt] = et;
+          return (0, Gt.jsxs)("div", {
+            className: ct()("FrontlinePlate", "FrontlineAlert", `Tone-${qt}`),
+            children: [(0, Gt.jsx)(nt, {}), (0, Gt.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: ZB(lB[BB])
-            }), (0, mB.jsx)("div", {
+              children: Vt(it[tt])
+            }), (0, Gt.jsx)("div", {
               className: "FrontlinePlateStatus",
-              children: TB
+              children: Ot
             })]
           })
         }
         return null
       })),
-      xB = (0, JB.memo)((function(BB) {
+      xt = (0, qt.memo)((function(tt) {
         let {
-          view: IB
-        } = BB;
+          view: et
+        } = tt;
         const {
-          t: ZB
-        } = (0, MB.G)(), TB = (0, JB.useRef)(null), oB = function(BB, IB) {
-          const [ZB, TB] = (0, JB.useState)(!1);
-          return (0, JB.useLayoutEffect)((() => {
-            const IB = BB.current;
-            if (!IB) return;
-            const ZB = document.querySelector(`.${HB.f}`),
-              JB = document.querySelector(`.${HB.i}`),
-              oB = () => {
-                var BB;
-                const oB = IB.querySelector(".FrontlineTeamTrack"),
-                  GB = (0, kB.getRemInPx)(),
-                  vB = IB.getBoundingClientRect().width - 2 * (null !== (BB = null === oB || void 0 === oB ? void 0 : oB.getBoundingClientRect().width) && void 0 !== BB ? BB : 0),
-                  cB = window.innerWidth / 2,
-                  nB = ZB ? ZB.getBoundingClientRect().right : 0,
-                  hB = JB ? JB.getBoundingClientRect().left : window.innerWidth,
-                  zB = Math.min(cB - nB, hB - cB) - HB.d - vB / 2,
-                  FB = zB < 6 * GB,
-                  NB = FB ? (window.innerWidth - vB) / 2 - HB.d : zB;
-                IB.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(NB,14*GB)))}px`), TB(FB)
+          t: Vt
+        } = (0, Pt.H)(), Ot = (0, qt.useRef)(null), Dt = function(tt, et) {
+          const [Vt, Ot] = (0, qt.useState)(!1);
+          return (0, qt.useLayoutEffect)((() => {
+            const et = tt.current;
+            if (!et) return;
+            const Vt = document.querySelector(`.${It.d}`),
+              qt = document.querySelector(`.${It.h}`),
+              Dt = () => {
+                var tt;
+                const Dt = et.querySelector(".FrontlineTeamTrack"),
+                  mt = (0, jt.getRemInPx)(),
+                  dt = et.getBoundingClientRect().width - 2 * (null !== (tt = null === Dt || void 0 === Dt ? void 0 : Dt.getBoundingClientRect().width) && void 0 !== tt ? tt : 0),
+                  Ht = window.innerWidth / 2,
+                  Xt = Vt ? Vt.getBoundingClientRect().right : 0,
+                  Qt = qt ? qt.getBoundingClientRect().left : window.innerWidth,
+                  lt = Math.min(Ht - Xt, Qt - Ht) - It.b - dt / 2,
+                  Et = lt < 6 * mt,
+                  ft = Et ? (window.innerWidth - dt) / 2 - It.b : lt;
+                et.style.setProperty("--frontlineTrackWidth", `${Math.max(0,Math.floor(Math.min(ft,14*mt)))}px`), Ot(Et)
               };
-            oB();
-            const GB = new ResizeObserver(oB);
-            for (const BB of [IB, ZB, JB]) BB && GB.observe(BB);
-            return window.addEventListener("resize", oB), () => {
-              GB.disconnect(), window.removeEventListener("resize", oB)
+            Dt();
+            const mt = new ResizeObserver(Dt);
+            for (const tt of [et, Vt, qt]) tt && mt.observe(tt);
+            return window.addEventListener("resize", Dt), () => {
+              mt.disconnect(), window.removeEventListener("resize", Dt)
             }
-          }), [BB, IB]), ZB
-        }(TB, "scoreboard" === IB.wire[0]);
-        if ("scoreboard" !== IB.wire[0]) return null;
-        const [, GB, vB, cB, nB, , hB] = IB.wire, zB = "Red" === GB ? "Blue" : "Red";
-        return (0, mB.jsxs)("div", {
-          className: pB()("FrontlineScoreboardContainer", {
-            Below: oB
+          }), [tt, et]), Vt
+        }(Ot, "scoreboard" === et.wire[0]);
+        if ("scoreboard" !== et.wire[0]) return null;
+        const [, mt, dt, Ht, Xt, , Qt] = et.wire, lt = "Red" === mt ? "Blue" : "Red";
+        return (0, Gt.jsxs)("div", {
+          className: ct()("FrontlineScoreboardContainer", {
+            Below: Dt
           }),
-          children: [(0, mB.jsxs)("div", {
-            ref: TB,
+          children: [(0, Gt.jsxs)("div", {
+            ref: Ot,
             className: "FrontlineScoreboard",
-            children: [(0, mB.jsx)(VB, {}), (0, mB.jsx)(EB, {
-              team: GB,
-              tickets: vB,
-              goal: nB,
+            children: [(0, Gt.jsx)(nt, {}), (0, Gt.jsx)(Tt, {
+              team: mt,
+              tickets: dt,
+              goal: Xt,
               side: "Friendly"
-            }), (0, mB.jsx)("div", {
+            }), (0, Gt.jsx)("div", {
               className: "FrontlinePoints",
-              children: hB.map((BB => (0, mB.jsx)(eB, {
+              children: Qt.map((tt => (0, Gt.jsx)(rt, {
                 className: "FrontlinePoint",
-                point: BB
-              }, BB[0])))
-            }), (0, mB.jsx)(EB, {
-              team: zB,
-              tickets: cB,
-              goal: nB,
+                point: tt
+              }, tt[0])))
+            }), (0, Gt.jsx)(Tt, {
+              team: lt,
+              tickets: Ht,
+              goal: Xt,
               side: "Enemy"
             })]
-          }), (0, mB.jsxs)("div", {
+          }), (0, Gt.jsxs)("div", {
             className: "FrontlineClockTab",
-            children: [(0, mB.jsx)(KB, {
-              endsAt: IB.endsAt
-            }), (0, mB.jsx)("div", {
+            children: [(0, Gt.jsx)(st, {
+              endsAt: et.endsAt
+            }), (0, Gt.jsx)("div", {
               className: "FrontlinePlateMeta",
-              children: ZB("frontlineHud:ticketGoal", {
-                goal: nB
+              children: Vt("frontlineHud:ticketGoal", {
+                goal: Xt
               })
             })]
           })]
         })
       }));
 
-    function EB(BB) {
+    function Tt(tt) {
       let {
-        team: IB,
-        tickets: ZB,
-        goal: TB,
-        side: JB
-      } = BB;
+        team: et,
+        tickets: Vt,
+        goal: Ot,
+        side: qt
+      } = tt;
       const {
-        t: oB
-      } = (0, MB.G)(), GB = String(ZB).padStart(3, "0"), vB = GB.search(/[1-9]/), kB = -1 === vB ? GB : GB.slice(0, vB), cB = Math.min(20, Math.floor(ZB / TB * 20));
-      return (0, mB.jsxs)("div", {
-        className: pB()("FrontlineTeamScore", JB, `Team-${IB}`),
-        children: [(0, mB.jsxs)("div", {
+        t: Dt
+      } = (0, Pt.H)(), mt = String(Vt).padStart(3, "0"), dt = mt.search(/[1-9]/), jt = -1 === dt ? mt : mt.slice(0, dt), Ht = Math.min(20, Math.floor(Vt / Ot * 20));
+      return (0, Gt.jsxs)("div", {
+        className: ct()("FrontlineTeamScore", qt, `Team-${et}`),
+        children: [(0, Gt.jsxs)("div", {
           className: "FrontlineTickets",
-          children: [(0, mB.jsx)("span", {
+          children: [(0, Gt.jsx)("span", {
             className: "Lead",
-            children: kB
-          }), -1 !== vB && GB.slice(vB)]
-        }), (0, mB.jsxs)("div", {
+            children: jt
+          }), -1 !== dt && mt.slice(dt)]
+        }), (0, Gt.jsxs)("div", {
           className: "FrontlineTeamTrack",
-          children: [(0, mB.jsx)("div", {
+          children: [(0, Gt.jsx)("div", {
             className: "FrontlinePlateMeta",
-            children: oB(XB[IB])
-          }), (0, mB.jsx)(DB, {
+            children: Dt(zt[et])
+          }), (0, Gt.jsx)(gt, {
             segments: 20,
-            lit: cB
+            lit: Ht
           })]
         })]
       })
     }
 
-    function DB(BB) {
+    function gt(tt) {
       let {
-        segments: IB,
-        lit: ZB
-      } = BB;
-      return (0, mB.jsx)("div", {
+        segments: et,
+        lit: Vt
+      } = tt;
+      return (0, Gt.jsx)("div", {
         className: "FrontlineBar",
         children: Array.from({
-          length: IB
-        }, ((BB, IB) => (0, mB.jsx)("i", {
-          className: pB()({
-            Lit: IB < ZB
+          length: et
+        }, ((tt, et) => (0, Gt.jsx)("i", {
+          className: ct()({
+            Lit: et < Vt
           })
-        }, IB)))
+        }, et)))
       })
     }
 
-    function KB(BB) {
+    function st(tt) {
       let {
-        endsAt: IB
-      } = BB;
-      const ZB = Math.max(0, Math.ceil(LB(IB)));
-      return (0, mB.jsxs)("div", {
-        className: pB()("FrontlineClock", {
-          Urgent: ZB <= 60
+        endsAt: et
+      } = tt;
+      const Vt = Math.max(0, Math.ceil(ot(et)));
+      return (0, Gt.jsxs)("div", {
+        className: ct()("FrontlineClock", {
+          Urgent: Vt <= 60
         }),
-        children: [Math.floor(ZB / 60), ":", String(ZB % 60).padStart(2, "0")]
+        children: [Math.floor(Vt / 60), ":", String(Vt % 60).padStart(2, "0")]
       })
     }
 
-    function VB() {
-      return (0, mB.jsxs)(mB.Fragment, {
-        children: [(0, mB.jsx)("i", {
+    function nt() {
+      return (0, Gt.jsxs)(Gt.Fragment, {
+        children: [(0, Gt.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, mB.jsx)("i", {
+        }), (0, Gt.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
         })]
       })
     }
-    var SB = ZB(36706),
-      BI = ZB(1310),
-      II = ZB(38532),
-      ZI = ZB(38578);
-    class TI {
-      constructor(BB) {
-        var IB;
-        this.hud = BB, this.markers = new Map, this.refs = new Map, this.viewport = {
+    var te = Vt(36932),
+      ee = Vt(1338),
+      Ve = Vt(38716),
+      Oe = Vt(38751);
+    class qe {
+      constructor(tt) {
+        var et;
+        this.hud = tt, this.markers = new Map, this.refs = new Map, this.viewport = {
           width: window.innerWidth,
           height: window.innerHeight
-        }, this.render = null, this.WN = !1, this.kU = () => {
+        }, this.render = null, this.df = !1, this.iN = () => {
           this.viewport = {
             width: window.innerWidth,
             height: window.innerHeight
           }
-        }, window.addEventListener("resize", this.kU), null === (IB = window.visualViewport) || void 0 === IB || IB.addEventListener("resize", this.kU)
+        }, window.addEventListener("resize", this.iN), null === (et = window.visualViewport) || void 0 === et || et.addEventListener("resize", this.iN)
       }
-      bindMarker(BB) {
-        let IB = this.refs.get(BB);
-        return IB || (IB = IB => {
-          var ZB;
-          null === (ZB = this.markers.get(BB)) || void 0 === ZB || ZB.stopObserving(), this.markers.delete(BB), IB && !this.WN && this.markers.set(BB, this.mount(IB))
-        }, this.refs.set(BB, IB)), IB
+      bindMarker(tt) {
+        let et = this.refs.get(tt);
+        return et || (et = et => {
+          var Vt;
+          null === (Vt = this.markers.get(tt)) || void 0 === Vt || Vt.stopObserving(), this.markers.delete(tt), et && !this.df && this.markers.set(tt, this.mount(et))
+        }, this.refs.set(tt, et)), et
       }
-      frame(BB, IB) {
-        this.render = BB;
-        const ZB = this.hud.getScoreboard().wire;
-        if ("scoreboard" === ZB[0] && 0 !== this.markers.size)
-          for (const [TB, , , , , , JB] of ZB[6]) {
-            const BB = this.markers.get(TB);
-            BB && JB && (BB.target ??= [0, 0, 0], BB.target[0] = JB[0], BB.target[1] = JB[1] + 2.5, BB.target[2] = JB[2], this.place(BB), this.RI(BB, IB && Math.hypot(JB[0] - IB[0], JB[1] - IB[1], JB[2] - IB[2])))
+      frame(tt, et) {
+        this.render = tt;
+        const Vt = this.hud.getScoreboard().wire;
+        if ("scoreboard" === Vt[0] && 0 !== this.markers.size)
+          for (const [Ot, , , , , , qt] of Vt[6]) {
+            const tt = this.markers.get(Ot);
+            tt && qt && (tt.target ??= [0, 0, 0], tt.target[0] = qt[0], tt.target[1] = qt[1] + 2.5, tt.target[2] = qt[2], this.place(tt), this.Ye(tt, et && Math.hypot(qt[0] - et[0], qt[1] - et[1], qt[2] - et[2])))
           }
       }
       dispose() {
-        var BB;
-        this.WN = !0, window.removeEventListener("resize", this.kU), null === (BB = window.visualViewport) || void 0 === BB || BB.removeEventListener("resize", this.kU);
-        for (const IB of this.markers.values()) IB.stopObserving();
+        var tt;
+        this.df = !0, window.removeEventListener("resize", this.iN), null === (tt = window.visualViewport) || void 0 === tt || tt.removeEventListener("resize", this.iN);
+        for (const et of this.markers.values()) et.stopObserving();
         this.markers.clear(), this.refs.clear(), this.render = null
       }
-      place(BB) {
+      place(tt) {
         const {
-          render: IB,
-          viewport: ZB
+          render: et,
+          viewport: Vt
         } = this;
-        if (!IB || !BB.target) return;
-        const TB = (50 - IB.screenBandPct.y) / 100 * ZB.height,
-          JB = {
-            x: BB.halfSize.width + 8,
-            top: BB.halfSize.height + 8,
-            bottom: BB.halfSize.height + BB.labelsBelow + TB
+        if (!et || !tt.target) return;
+        const Ot = (50 - et.screenBandPct.y) / 100 * Vt.height,
+          qt = {
+            x: tt.halfSize.width + 8,
+            top: tt.halfSize.height + 8,
+            bottom: tt.halfSize.height + tt.labelsBelow + Ot
           },
-          oB = IB.projectWorldPosToViewport(BB.target),
-          GB = null !== oB && void 0 !== oB ? oB : IB.projectWorldPosToScreenPos(BB.target),
-          vB = (0, ZI.e)({
-            x: GB.x,
-            y: GB.y,
-            text: oB
-          }, JB, ZB);
-        (0, II.d)(BB.root, Math.round(100 * vB.x) / 100, Math.round(100 * vB.y) / 100)
+          Dt = et.projectWorldPosToViewport(tt.target),
+          mt = null !== Dt && void 0 !== Dt ? Dt : et.projectWorldPosToScreenPos(tt.target),
+          dt = (0, Oe.b)({
+            x: mt.x,
+            y: mt.y,
+            text: Dt
+          }, qt, Vt);
+        (0, Ve.e)(tt.root, Math.round(100 * dt.x) / 100, Math.round(100 * dt.y) / 100)
       }
-      RI(BB, IB) {
-        if (null === IB) return void(null !== BB.metres && (BB.metres = null, BB.distance.textContent = ""));
-        const ZB = Date.now();
-        (null === BB.metres || (0, SB.e)(IB, BB.metres, BB.metresShownAt)) && (BB.metres = Math.round(IB), BB.metresShownAt = ZB, BB.distance.textContent = (0, MB.C)(BI.h.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
-          distance: String(BB.metres)
+      Ye(tt, et) {
+        if (null === et) return void(null !== tt.metres && (tt.metres = null, tt.distance.textContent = ""));
+        const Vt = Date.now();
+        (null === tt.metres || (0, te.e)(et, tt.metres, tt.metresShownAt)) && (tt.metres = Math.round(et), tt.metresShownAt = Vt, tt.distance.textContent = (0, Pt.A)(ee.e.get().getCurrentLanguageCode(), "frontlineHud:markerDistance", {
+          distance: String(tt.metres)
         }))
       }
-      mount(BB) {
-        const IB = {
-            root: BB,
-            distance: BB.querySelector(".FrontlinePointMarkerDistance"),
+      mount(tt) {
+        const et = {
+            root: tt,
+            distance: tt.querySelector(".FrontlinePointMarkerDistance"),
             halfSize: {
               width: 0,
               height: 0
@@ -1220,26 +1220,26 @@ export const modules = {
             metresShownAt: 0,
             stopObserving: () => {}
           },
-          ZB = BB.querySelector(".FrontlinePointMarkerLabels"),
-          TB = new ResizeObserver((() => {
-            IB.halfSize = {
-              width: Math.max(BB.offsetWidth, ZB.offsetWidth) / 2,
-              height: BB.offsetHeight / 2
-            }, IB.labelsBelow = ZB.offsetTop + ZB.offsetHeight - BB.offsetHeight, this.place(IB)
+          Vt = tt.querySelector(".FrontlinePointMarkerLabels"),
+          Ot = new ResizeObserver((() => {
+            et.halfSize = {
+              width: Math.max(tt.offsetWidth, Vt.offsetWidth) / 2,
+              height: tt.offsetHeight / 2
+            }, et.labelsBelow = Vt.offsetTop + Vt.offsetHeight - tt.offsetHeight, this.place(et)
           }));
-        return TB.observe(BB, {
+        return Ot.observe(tt, {
           box: "border-box"
-        }), TB.observe(ZB, {
+        }), Ot.observe(Vt, {
           box: "border-box"
-        }), IB.stopObserving = () => {
-          TB.disconnect()
-        }, IB
+        }), et.stopObserving = () => {
+          Ot.disconnect()
+        }, et
       }
     }
-    var JI = ZB(6595),
-      oI = ZB(2763);
-    const GI = "frontlineRoundEndChanged";
-    class vI {
+    var De = Vt(6631),
+      me = Vt(2719);
+    const de = "frontlineRoundEndChanged";
+    class je {
       constructor() {
         this.view = {
           wire: ["none"],
@@ -1250,245 +1250,245 @@ export const modules = {
       getView() {
         return this.view
       }
-      sN(BB) {
-        const IB = "roundEnd" === BB[0] ? performance.now() + BB[5] : 0;
+      Qf(tt) {
+        const et = "roundEnd" === tt[0] ? performance.now() + tt[5] : 0;
         this.view = {
-          wire: BB,
+          wire: tt,
           key: this.view.key + 1,
-          endsAt: IB
-        }, cB.l.Gq(GI, this.view, !0)
+          endsAt: et
+        }, Ht.j.sw(de, this.view, !0)
       }
     }
-    const kI = (0, JB.lazy)((() => (0, oI.b)(Promise.all([ZB.e(239), ZB.e(202)]).then((() => ZB(41783))), (BB => BB.FrontlineMvpLineup)))),
-      cI = [4800, 4e3, 3200],
-      nI = [1, 0, 2],
-      hI = {
+    const He = (0, qt.lazy)((() => (0, me.e)(Promise.all([Vt.e(239), Vt.e(202)]).then((() => Vt(42021))), (tt => tt.FrontlineMvpLineup)))),
+      Xe = [4800, 4e3, 3200],
+      Qe = [1, 0, 2],
+      le = {
         victory: "frontlineRoundEnd:victory",
         defeat: "frontlineRoundEnd:defeat",
         draw: "frontlineRoundEnd:draw"
       },
-      zI = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
+      Ee = ["frontlineRoundEnd:mvp", "frontlineRoundEnd:second", "frontlineRoundEnd:third"];
 
-    function FI(BB) {
+    function fe(tt) {
       let {
-        controller: IB
-      } = BB;
-      const ZB = (0, jB.h)(GI, IB.getView()),
-        TB = LB(ZB.endsAt);
-      return "roundEnd" !== ZB.wire[0] || 1e3 * TB < -2e3 ? null : (0, mB.jsx)(NI, {
-        wire: ZB.wire,
-        secondsLeft: Math.max(0, Math.ceil(TB))
-      }, ZB.key)
+        controller: et
+      } = tt;
+      const Vt = (0, Zt.h)(de, et.getView()),
+        Ot = ot(Vt.endsAt);
+      return "roundEnd" !== Vt.wire[0] || 1e3 * Ot < -2e3 ? null : (0, Gt.jsx)(we, {
+        wire: Vt.wire,
+        secondsLeft: Math.max(0, Math.ceil(Ot))
+      }, Vt.key)
     }
-    const NI = (0, JB.memo)((function(BB) {
+    const we = (0, qt.memo)((function(tt) {
       let {
-        wire: IB,
-        secondsLeft: ZB
-      } = BB;
+        wire: et,
+        secondsLeft: Vt
+      } = tt;
       const {
-        t: oB
-      } = (0, MB.G)(), [, GB, vB, kB, cB, , nB, hB] = IB, zB = (0, JB.useMemo)((() => nI.filter((BB => BB < hB.length))), [hB]), FB = (0, JB.useMemo)((() => zB.map((BB => {
-        const [, , , , , IB, ZB] = hB[BB];
+        t: Dt
+      } = (0, Pt.H)(), [, mt, dt, jt, Ht, , Xt, Qt] = et, lt = (0, qt.useMemo)((() => Qe.filter((tt => tt < Qt.length))), [Qt]), Et = (0, qt.useMemo)((() => lt.map((tt => {
+        const [, , , , , et, Vt] = Qt[tt];
         return {
-          cosmetics: TB.map(((BB, ZB) => [BB, IB[ZB]])),
-          size: 0 === BB ? 1.15 : .85,
+          cosmetics: Ot.map(((tt, Vt) => [tt, et[Vt]])),
+          size: 0 === tt ? 1.15 : .85,
           heldGun: {
-            name: ZB,
-            aimed: 0 === BB
+            name: Vt,
+            aimed: 0 === tt
           },
-          showAfterMs: cI[BB]
+          showAfterMs: Xe[tt]
         }
-      }))), [hB, zB]);
-      return (0, mB.jsxs)("div", {
-        className: pB()("FrontlineRoundEnd", `Result-${GB}`),
+      }))), [Qt, lt]);
+      return (0, Gt.jsxs)("div", {
+        className: ct()("FrontlineRoundEnd", `Result-${mt}`),
         style: {
           "--titleRiseMs": "2600ms"
         },
-        children: [(0, mB.jsx)("div", {
+        children: [(0, Gt.jsx)("div", {
           className: "FrontlineRoundEndVeil"
-        }), (0, mB.jsxs)("div", {
+        }), (0, Gt.jsxs)("div", {
           className: "FrontlineRoundEndTitle",
-          children: [(0, mB.jsxs)("div", {
+          children: [(0, Gt.jsxs)("div", {
             className: "FrontlineRoundEndResult",
-            children: [(0, mB.jsx)("i", {
+            children: [(0, Gt.jsx)("i", {
               className: "FrontlineBracket TopLeft"
-            }), (0, mB.jsx)("i", {
+            }), (0, Gt.jsx)("i", {
               className: "FrontlineBracket BottomRight"
-            }), (NB = oB(hI[GB]), /\p{Script=Arabic}/u.test(NB) ? [NB] : (0, JI.b)(NB)).map(((BB, IB) => (0, mB.jsx)("span", {
+            }), (ft = Dt(le[mt]), /\p{Script=Arabic}/u.test(ft) ? [ft] : (0, De.e)(ft)).map(((tt, et) => (0, Gt.jsx)("span", {
               style: {
-                "--letter": IB
+                "--letter": et
               },
-              children: BB
-            }, IB)))]
-          }), (0, mB.jsxs)("div", {
+              children: tt
+            }, et)))]
+          }), (0, Gt.jsxs)("div", {
             className: "FrontlineRoundEndScore",
-            children: [vB && "victory" === GB && (0, mB.jsx)("span", {
+            children: [dt && "victory" === mt && (0, Gt.jsx)("span", {
               className: "FrontlineRoundEndComeback",
-              children: oB("frontlineRoundEnd:comeback")
-            }), (0, mB.jsxs)("span", {
+              children: Dt("frontlineRoundEnd:comeback")
+            }), (0, Gt.jsxs)("span", {
               className: "FrontlineRoundEndTickets",
-              children: [(0, mB.jsx)("b", {
+              children: [(0, Gt.jsx)("b", {
                 className: "Friendly",
-                children: kB
-              }), " \u2013 ", (0, mB.jsx)("b", {
+                children: jt
+              }), " \u2013 ", (0, Gt.jsx)("b", {
                 className: "Enemy",
-                children: cB
+                children: Ht
               })]
             })]
           })]
-        }), zB.length > 0 && (0, mB.jsxs)("div", {
+        }), lt.length > 0 && (0, Gt.jsxs)("div", {
           className: "FrontlineRoundEndMvps",
           style: {
-            "--columns": zB.length
+            "--columns": lt.length
           },
-          children: [(0, mB.jsx)(JB.Suspense, {
+          children: [(0, Gt.jsx)(qt.Suspense, {
             fallback: null,
-            children: (0, mB.jsx)(kI, {
+            children: (0, Gt.jsx)(He, {
               className: "FrontlineRoundEndLineup",
-              players: FB
+              players: Et
             })
-          }), zB.map((BB => (0, mB.jsx)(gI, {
-            mvp: hB[BB],
-            place: BB
-          }, BB)))]
-        }), (0, mB.jsx)("div", {
+          }), lt.map((tt => (0, Gt.jsx)(ye, {
+            mvp: Qt[tt],
+            place: tt
+          }, tt)))]
+        }), (0, Gt.jsx)("div", {
           className: "FrontlineRoundEndNext",
-          children: oB("frontlineRoundEnd:nextFront", {
-            map: nB,
-            seconds: String(ZB)
+          children: Dt("frontlineRoundEnd:nextFront", {
+            map: Xt,
+            seconds: String(Vt)
           })
         })]
       });
-      var NB
+      var ft
     }));
 
-    function gI(BB) {
+    function ye(tt) {
       let {
-        mvp: IB,
-        place: ZB
-      } = BB;
+        mvp: et,
+        place: Vt
+      } = tt;
       const {
-        t: TB
-      } = (0, MB.G)(), [JB, oB, GB, vB, kB] = IB, [cB, nB] = TB(function(BB, IB) {
-        return 1 === IB && "damage" !== BB ? `frontlineRoundEnd:${BB}One` : `frontlineRoundEnd:${BB}`
-      }(GB, vB), {
+        t: Ot
+      } = (0, Pt.H)(), [qt, Dt, mt, dt, jt] = et, [Ht, Xt] = Ot(function(tt, et) {
+        return 1 === et && "damage" !== tt ? `frontlineRoundEnd:${tt}One` : `frontlineRoundEnd:${tt}`
+      }(mt, dt), {
         name: "\0",
-        count: vB.toLocaleString()
+        count: dt.toLocaleString()
       }).split("\0");
-      return (0, mB.jsxs)("div", {
-        className: pB()("FrontlineMvpCard", `Place-${ZB+1}`, `Team-${oB}`),
+      return (0, Gt.jsxs)("div", {
+        className: ct()("FrontlineMvpCard", `Place-${Vt+1}`, `Team-${Dt}`),
         style: {
-          "--revealMs": `${cI[ZB]}ms`
+          "--revealMs": `${Xe[Vt]}ms`
         },
-        children: [(0, mB.jsx)("i", {
+        children: [(0, Gt.jsx)("i", {
           className: "FrontlineBracket TopRight"
-        }), (0, mB.jsx)("i", {
+        }), (0, Gt.jsx)("i", {
           className: "FrontlineBracket BottomLeft"
-        }), (0, mB.jsx)("div", {
+        }), (0, Gt.jsx)("div", {
           className: "FrontlineMvpPlace",
-          children: TB(zI[ZB])
-        }), (0, mB.jsxs)("div", {
+          children: Ot(Ee[Vt])
+        }), (0, Gt.jsxs)("div", {
           className: "FrontlineMvpLine",
-          children: [cB, (0, mB.jsx)("span", {
+          children: [Ht, (0, Gt.jsx)("span", {
             className: "FrontlineMvpName",
-            children: JB
-          }), nB]
-        }), (0, mB.jsx)("div", {
+            children: qt
+          }), Xt]
+        }), (0, Gt.jsx)("div", {
           className: "FrontlineMvpKit",
-          children: kB
+          children: jt
         })]
       })
     }
-    const qI = function(BB, IB, ZB, TB) {
+    const Ne = function(tt, et, Vt, Ot) {
       let {
-        localPlayerId: GB
-      } = TB;
-      const vB = new rB,
-        kB = new vI;
-      let cB = null,
-        nB = null,
-        hB = null,
-        zB = null,
-        FB = null,
-        NB = [!1, !1];
-      const gB = () => {
-        var BB, IB;
-        const [ZB, TB] = NB;
-        null === (BB = nB) || void 0 === BB || BB.qY(!ZB), null === (IB = hB) || void 0 === IB || IB.qY(!TB)
+        localPlayerId: mt
+      } = Ot;
+      const dt = new kt,
+        jt = new je;
+      let Ht = null,
+        Xt = null,
+        Qt = null,
+        lt = null,
+        Et = null,
+        ft = [!1, !1];
+      const wt = () => {
+        var tt, et;
+        const [Vt, Ot] = ft;
+        null === (tt = Xt) || void 0 === tt || tt.Av(!Vt), null === (et = Qt) || void 0 === et || et.Av(!Ot)
       };
       return {
-        onCreate: BB => {
-          cB = BB, nB = new WB(BB, GB), hB = new sB(BB, GB), zB = new TI(vB), gB(), FB = (0, oB.x)((0, JB.createElement)(JB.Fragment, null, (0, JB.createElement)(AB, {
-            hud: vB,
-            crosshair: nB,
-            damage: hB,
-            markers: zB
-          }), (0, JB.createElement)(FI, {
-            controller: kB
+        onCreate: tt => {
+          Ht = tt, Xt = new bt(tt, mt), Qt = new Kt(tt, mt), lt = new qe(dt), wt(), Et = (0, Dt.q)((0, qt.createElement)(qt.Fragment, null, (0, qt.createElement)(Yt, {
+            hud: dt,
+            crosshair: Xt,
+            damage: Qt,
+            markers: lt
+          }), (0, qt.createElement)(fe, {
+            controller: jt
           })))
         },
         onClose: () => {
-          var BB, IB, ZB, TB;
-          null === (BB = FB) || void 0 === BB || BB(), null === (IB = nB) || void 0 === IB || IB.dispose(), nB = null, null === (ZB = hB) || void 0 === ZB || ZB.dispose(), hB = null, null === (TB = zB) || void 0 === TB || TB.dispose(), zB = null, cB = null
+          var tt, et, Vt, Ot;
+          null === (tt = Et) || void 0 === tt || tt(), null === (et = Xt) || void 0 === et || et.dispose(), Xt = null, null === (Vt = Qt) || void 0 === Vt || Vt.dispose(), Qt = null, null === (Ot = lt) || void 0 === Ot || Ot.dispose(), lt = null, Ht = null
         },
-        onAfterRender: (BB, IB) => {
-          var ZB, TB, JB, oB;
-          null === (ZB = nB) || void 0 === ZB || ZB.frame(BB, IB.tanHalfFovY), null === (TB = hB) || void 0 === TB || TB.frame(IB.cameraHeading), null === (JB = zB) || void 0 === JB || JB.frame(IB, null !== (oB = cB) && void 0 !== oB && oB.checkValid(GB) ? cB.aU(GB) : null)
+        onAfterRender: (tt, et) => {
+          var Vt, Ot, qt, Dt;
+          null === (Vt = Xt) || void 0 === Vt || Vt.frame(tt, et.tanHalfFovY), null === (Ot = Qt) || void 0 === Ot || Ot.frame(et.cameraHeading), null === (qt = lt) || void 0 === qt || qt.frame(et, null !== (Dt = Ht) && void 0 !== Dt && Dt.checkValid(mt) ? Ht.YM(mt) : null)
         },
-        onReceivedMessageFromServer: (BB, IB) => {
-          "frontlineHud" === BB ? vB.sN(IB) : "frontlineScoreboard" === BB ? vB.receiveScoreboard(IB) : "frontlineRoundEnd" === BB ? kB.sN(IB) : "frontlinePrefs" === BB && (NB = IB, gB())
+        onReceivedMessageFromServer: (tt, et) => {
+          "frontlineHud" === tt ? dt.Qf(et) : "frontlineScoreboard" === tt ? dt.receiveScoreboard(et) : "frontlineRoundEnd" === tt ? jt.Qf(et) : "frontlinePrefs" === tt && (ft = et, wt())
         }
       }
     }
   },
-  6595: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      b: () => JB
+  6631: (tt, et, Vt) => {
+    Vt.d(et, {
+      e: () => qt
     });
-    const TB = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
+    const Ot = "function" === typeof Intl.Segmenter ? new Intl.Segmenter(void 0, {
       granularity: "grapheme"
     }) : null;
 
-    function JB(BB) {
-      return null === TB ? Array.from(BB) : Array.from(TB.segment(BB), (BB => {
+    function qt(tt) {
+      return null === Ot ? Array.from(tt) : Array.from(Ot.segment(tt), (tt => {
         let {
-          segment: IB
-        } = BB;
-        return IB
+          segment: et
+        } = tt;
+        return et
       }))
     }
   },
-  38532: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      d: () => GB,
-      f: () => oB
+  38716: (tt, et, Vt) => {
+    Vt.d(et, {
+      e: () => mt,
+      g: () => Dt
     });
-    const TB = new WeakMap;
+    const Ot = new WeakMap;
 
-    function JB(BB) {
-      let IB = TB.get(BB);
-      return IB || (IB = {
-        hidden: BB.hidden,
+    function qt(tt) {
+      let et = Ot.get(tt);
+      return et || (et = {
+        hidden: tt.hidden,
         x: NaN,
         y: NaN
-      }, TB.set(BB, IB)), IB
+      }, Ot.set(tt, et)), et
     }
 
-    function oB(BB, IB) {
-      const ZB = JB(BB);
-      ZB.hidden !== IB && (ZB.hidden = IB, BB.hidden = IB)
+    function Dt(tt, et) {
+      const Vt = qt(tt);
+      Vt.hidden !== et && (Vt.hidden = et, tt.hidden = et)
     }
 
-    function GB(BB, IB, ZB) {
-      const TB = JB(BB);
-      TB.x === IB && TB.y === ZB || (TB.x = IB, TB.y = ZB, BB.style.translate = `${IB}vw ${ZB}vh`)
+    function mt(tt, et, Vt) {
+      const Ot = qt(tt);
+      Ot.x === et && Ot.y === Vt || (Ot.x = et, Ot.y = Vt, tt.style.translate = `${et}vw ${Vt}vh`)
     }
   },
-  37093: (BB, IB, ZB) => {
-    ZB.d(IB, {
-      b: () => TB
+  37306: (tt, et, Vt) => {
+    Vt.d(et, {
+      e: () => Ot
     });
-    const TB = {
+    const Ot = {
       "skyblock:forged:astral-astral-astral": {
         name: "Heart of the Cosmos",
         lore: "Three shards of the night sky, forged as one. The stars answer whoever holds it.",
@@ -1650,4 +1650,4 @@ export const modules = {
   }
 };
 Object.freeze(modules);
-for (const BB in modules) Object.freeze(modules[BB]);
+for (const tt in modules) Object.freeze(modules[tt]);
