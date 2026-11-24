@@ -1,213 +1,373 @@
 export const id = 116;
-export const ids = [116, 136];
+export const ids = [116, 118, 138, 139];
 export const modules = {
-  6630: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      loadShaderPackTextures: () => nC,
-      shaderPackTextures: () => fC
+  5159: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Op.f,
+      g: () => op,
+      k: () => Op.o
     });
-    var QC = ZC(5002);
-    let wC = null,
-      bC = null;
+    var Op = cp(5167);
+    const op = [!1, !0].flatMap((pp => ["terrain", "liquid", "model"].map((ip => ({
+      strict: pp,
+      program: ip
+    })))))
+  },
+  6798: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      forgetShaderPackActiveHint: () => Cp,
+      isOtherApiVersion: () => mp,
+      isShaderPackActive: () => dp,
+      isShaderPackChangePending: () => kp,
+      markShaderPackChangePending: () => jp,
+      pageShaderPackValidationVersion: () => Rp,
+      reconcileStoredShaderPackHint: () => Mp,
+      removeShaderPack: () => Hp,
+      replaceShaderPack: () => wp,
+      saveShaderPack: () => Up,
+      shaderPackNeedsCheck: () => qp,
+      storedPackOutcome: () => ep,
+      storedShaderPackFiles: () => Pp,
+      toStoredShaderPack: () => Ap
+    });
+    var Op = cp(5167),
+      op = cp(5159),
+      Ip = cp(44),
+      Sp = cp(3564),
+      xp = cp(6804),
+      Lp = cp(6772);
+    const Yp = "shaderPackChangePending";
+    let Dp = null;
 
-    function nC() {
-      return bC ??= Promise.all([ZC.e(72), ZC.e(188)]).then((() => ZC(40313))).then((CC => {
-        let {
-          FORMER_BLOCK_IMAGE_NAMES: zC,
-          textureNameToIndex: ZC,
-          textureAnimationData: bC
-        } = CC;
-        return wC ??= (0, QC.k)(ZC, bC, zC), wC
-      })), bC
+    function Ap(pp, ip, cp) {
+      return {
+        manifest: pp.manifest,
+        files: (0, Op.v)(pp.files),
+        validation: ip,
+        ...cp && {
+          listing: cp
+        }
+      }
     }
 
-    function fC() {
-      if (null === wC) throw new Error("Shader pack textures read before loadShaderPackTextures");
-      return wC
+    function Pp(pp) {
+      return Object.keys(pp.files).map((ip => ({
+        path: ip,
+        source: pp.files[ip]
+      })))
+    }
+    let Wp = Promise.resolve();
+
+    function yp(pp) {
+      const ip = Wp.then(pp);
+      return Wp = ip.catch((() => {})), ip
+    }
+
+    function Up(pp, ip) {
+      return yp((() => vp(pp, ip)))
+    }
+
+    function wp(pp, ip, cp) {
+      return yp((async () => JSON.stringify(await (0, xp.f)()) === JSON.stringify(pp) && (null === ip ? (await tp(), !0) : vp(ip, cp))))
+    }
+    async function vp(pp, ip) {
+      const cp = await Ip.g.setItem(xp.e, pp);
+      return cp && Ep(pp, ip), cp
+    }
+    async function tp() {
+      await Ip.g.removeItem(xp.e), Ip.h.removeItem(Sp.d)
+    }
+
+    function Hp() {
+      return yp(tp)
+    }
+
+    function dp(pp, ip) {
+      return "active" === ep(pp, ip).kind
+    }
+
+    function ep(pp, ip) {
+      var cp;
+      return null === pp ? {
+        kind: "none",
+        reason: "nothingStored"
+      } : mp(pp) ? {
+        kind: "none",
+        reason: "otherApiVersion"
+      } : !1 !== (null === (cp = pp.validation) || void 0 === cp ? void 0 : cp.ok) || pp.validation.fromRecheck ? null === ip ? {
+        kind: "none",
+        reason: "noCompiler"
+      } : qp(pp, ip) ? {
+        kind: "blocked",
+        messageKey: "shaderPack:failedUnchecked"
+      } : pp.validation.ok ? {
+        kind: "active"
+      } : {
+        kind: "blocked",
+        messageKey: "shaderPack:failedValidation"
+      } : {
+        kind: "none",
+        reason: "failedWhenLoaded"
+      }
+    }
+
+    function jp() {
+      Ip.l.setItem(Yp, performance.timeOrigin)
+    }
+
+    function kp() {
+      return Ip.l.getItem(Yp) === performance.timeOrigin
+    }
+
+    function mp(pp) {
+      return !(0, op.k)(pp.manifest.apiVersion)
+    }
+
+    function Rp(pp) {
+      return Dp ??= pp.Rl((0, Lp.shaderPackTextures)()), Dp
+    }
+
+    function qp(pp, ip) {
+      var cp;
+      return (null === (cp = pp.validation) || void 0 === cp ? void 0 : cp.headerVersion) !== Rp(ip)
+    }
+
+    function Mp(pp) {
+      return yp((async () => {
+        Ep(await (0, xp.f)(!0), pp)
+      }))
+    }
+
+    function Cp() {
+      return yp((async () => {
+        Ip.h.removeItem(Sp.d)
+      }))
+    }
+
+    function Ep(pp, ip) {
+      dp(pp, ip) ? Ip.h.setItem(Sp.d, !0) : Ip.h.removeItem(Sp.d)
     }
   },
-  5002: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => fC,
-      g: () => nC,
-      j: () => QC,
-      k: () => SC,
-      m: () => WC,
-      q: () => wC,
-      r: () => bC,
-      s: () => qC,
-      w: () => FC,
-      y: () => NC
+  6804: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => op,
+      f: () => Ip
     });
-    const QC = 5;
+    var Op = cp(44);
+    const op = "shaderPack";
+    async function Ip() {
+      var pp;
+      let ip = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (pp = await Op.g.getItem(op, ip)) && void 0 !== pp ? pp : null
+    }
+  },
+  6772: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      loadShaderPackTextures: () => Sp,
+      shaderPackTextures: () => xp
+    });
+    var Op = cp(5167);
+    let op = null,
+      Ip = null;
 
-    function wC(CC) {
-      return CC === QC
+    function Sp() {
+      return Ip ??= Promise.all([cp.e(73), cp.e(190)]).then((() => cp(40670))).then((pp => {
+        let {
+          FORMER_BLOCK_IMAGE_NAMES: ip,
+          textureNameToIndex: cp,
+          textureAnimationData: Ip
+        } = pp;
+        return op ??= (0, Op.j)(cp, Ip, ip), op
+      })), Ip
     }
 
-    function bC(CC) {
-      return [...CC.features]
+    function xp() {
+      if (null === op) throw new Error("Shader pack textures read before loadShaderPackTextures");
+      return op
     }
-    const nC = 262144,
-      fC = 256,
-      oC = 256;
+  },
+  5167: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => xp,
+      e: () => Sp,
+      f: () => Op,
+      j: () => Up,
+      m: () => Ap,
+      o: () => op,
+      p: () => Ip,
+      s: () => Yp,
+      v: () => Dp,
+      z: () => Pp
+    });
+    const Op = 5;
 
-    function qC(CC) {
-      if ("object" !== typeof CC || null === CC || Array.isArray(CC)) return "The pack has no files.";
-      const zC = [];
-      for (const [ZC, QC] of Object.entries(CC)) {
-        if ("string" !== typeof QC) return `${ZC} isn't text.`;
-        zC.push({
-          path: ZC,
-          source: QC
+    function op(pp) {
+      return pp === Op
+    }
+
+    function Ip(pp) {
+      return [...pp.features]
+    }
+    const Sp = 262144,
+      xp = 256,
+      Lp = 256;
+
+    function Yp(pp) {
+      if ("object" !== typeof pp || null === pp || Array.isArray(pp)) return "The pack has no files.";
+      const ip = [];
+      for (const [cp, Op] of Object.entries(pp)) {
+        if ("string" !== typeof Op) return `${cp} isn't text.`;
+        ip.push({
+          path: cp,
+          source: Op
         })
       }
-      return zC.sort(((CC, zC) => WC(CC.path, zC.path))),
-        function(CC) {
-          if (0 === CC.length) return "The pack has no .wgsl files.";
-          if (CC.length > fC) return `The pack has more than ${fC} .wgsl files.`;
-          const zC = new Set;
+      return ip.sort(((pp, ip) => Ap(pp.path, ip.path))),
+        function(pp) {
+          if (0 === pp.length) return "The pack has no .wgsl files.";
+          if (pp.length > xp) return `The pack has more than ${xp} .wgsl files.`;
+          const ip = new Set;
           for (const {
-              path: ZC
+              path: cp
             }
-            of CC) {
-            const CC = MC(ZC);
-            if (null !== CC) return CC;
-            if (zC.has(ZC)) return `The pack has two files at ${ZC}.`;
-            zC.add(ZC)
+            of pp) {
+            const pp = Wp(cp);
+            if (null !== pp) return pp;
+            if (ip.has(cp)) return `The pack has two files at ${cp}.`;
+            ip.add(cp)
           }
-          return NC(CC) > nC ? `The pack's .wgsl files are over ${nC/1024} KB in total.` : null
-        }(zC) ?? zC
+          return Pp(pp) > Sp ? `The pack's .wgsl files are over ${Sp/1024} KB in total.` : null
+        }(ip) ?? ip
     }
 
-    function FC(CC) {
-      const zC = {};
-      for (const ZC of CC) zC[ZC.path] = ZC.source;
-      return zC
+    function Dp(pp) {
+      const ip = {};
+      for (const cp of pp) ip[cp.path] = cp.source;
+      return ip
     }
 
-    function WC(CC, zC) {
-      return CC < zC ? -1 : CC > zC ? 1 : 0
+    function Ap(pp, ip) {
+      return pp < ip ? -1 : pp > ip ? 1 : 0
     }
 
-    function NC(CC) {
-      const zC = new TextEncoder;
-      let ZC = 0;
+    function Pp(pp) {
+      const ip = new TextEncoder;
+      let cp = 0;
       for (const {
-          source: QC
+          source: Op
         }
-        of CC) ZC += zC.encode(QC).byteLength;
-      return ZC
+        of pp) cp += ip.encode(Op).byteLength;
+      return cp
     }
 
-    function MC(CC) {
-      if (!CC.toLowerCase().endsWith(".wgsl")) return `${CC} isn't a .wgsl file.`;
-      if (CC.length > oC) return `A file path is over ${oC} characters.`;
-      if (CC.includes("\\") || /[\u0000-\u001f]/.test(CC)) return `${CC} isn't a valid file path.`;
-      return CC.split("/").some((CC => "" === CC || "." === CC || ".." === CC)) ? `${CC} isn't a valid file path.` : null
+    function Wp(pp) {
+      if (!pp.toLowerCase().endsWith(".wgsl")) return `${pp} isn't a .wgsl file.`;
+      if (pp.length > Lp) return `A file path is over ${Lp} characters.`;
+      if (pp.includes("\\") || /[\u0000-\u001f]/.test(pp)) return `${pp} isn't a valid file path.`;
+      return pp.split("/").some((pp => "" === pp || "." === pp || ".." === pp)) ? `${pp} isn't a valid file path.` : null
     }
-    const gC = /^(.*)\[rot\[([1-4])$/;
+    const yp = /^(.*)\[rot\[([1-4])$/;
 
-    function SC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const QC = new Map;
-      zC.forEach(((CC, zC) => {
+    function Up(pp, ip) {
+      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
+      const Op = new Map;
+      ip.forEach(((pp, ip) => {
         let {
-          numAnimStates: ZC,
-          animStartIdx: wC
-        } = CC;
-        for (let bC = 1; bC < ZC; bC++) QC.set(wC + bC - 1, zC)
+          numAnimStates: cp,
+          animStartIdx: op
+        } = pp;
+        for (let Ip = 1; Ip < cp; Ip++) Op.set(op + Ip - 1, ip)
       }));
-      const wC = Object.entries(CC),
-        bC = new Map;
-      for (const [SC, pC] of wC) {
-        const CC = gC.exec(SC);
-        "1" === CC?.[2] && bC.set(CC[1], pC + 1)
+      const op = Object.entries(pp),
+        Ip = new Map;
+      for (const [Up, wp] of op) {
+        const pp = yp.exec(Up);
+        "1" === pp?.[2] && Ip.set(pp[1], wp + 1)
       }
-      const nC = CC => {
-          const zC = gC.exec(CC);
-          return zC && bC.has(zC[1]) ? {
-            root: zC[1],
-            rotation: Number(zC[2]) - 1
+      const Sp = pp => {
+          const ip = yp.exec(pp);
+          return ip && Ip.has(ip[1]) ? {
+            root: ip[1],
+            rotation: Number(ip[2]) - 1
           } : null
         },
-        fC = new Set(wC.map((CC => {
-          let [zC] = CC;
-          return nC(zC)?.root ?? zC
+        xp = new Set(op.map((pp => {
+          let [ip] = pp;
+          return Sp(ip)?.root ?? ip
         }))),
-        oC = (CC, ZC) => {
-          const QC = CC.replace(/_?0$/, "");
-          return (zC[ZC]?.numAnimStates ?? 0) > 1 && !fC.has(QC) ? QC : CC
+        Lp = (pp, cp) => {
+          const Op = pp.replace(/_?0$/, "");
+          return (ip[cp]?.numAnimStates ?? 0) > 1 && !xp.has(Op) ? Op : pp
         },
-        qC = new Map;
-      for (const [gC, SC] of wC) qC.set(SC, oC(nC(gC)?.root ?? gC, SC));
-      const FC = wC.reduce(((CC, zC) => {
-          let [, ZC] = zC;
-          return Math.max(CC, ZC + 1)
+        Yp = new Map;
+      for (const [yp, Up] of op) Yp.set(Up, Lp(Sp(yp)?.root ?? yp, Up));
+      const Dp = op.reduce(((pp, ip) => {
+          let [, cp] = ip;
+          return Math.max(pp, cp + 1)
         }), 0),
-        WC = Array.from({
-          length: FC
-        }, ((CC, zC) => ({
-          id: zC + 1,
+        Ap = Array.from({
+          length: Dp
+        }, ((pp, ip) => ({
+          id: ip + 1,
           rotation: 0
         }))),
-        NC = new Map,
-        MC = new Map;
-      for (const [gC, SC] of wC) {
-        const CC = nC(gC),
-          zC = QC.get(SC);
-        if (void 0 !== zC) {
-          const ZC = qC.get(zC);
-          MC.set(gC, {
-            name: gC,
-            texture: ZC,
+        Pp = new Map,
+        Wp = new Map;
+      for (const [yp, Up] of op) {
+        const pp = Sp(yp),
+          ip = Op.get(Up);
+        if (void 0 !== ip) {
+          const cp = Yp.get(ip);
+          Wp.set(yp, {
+            name: yp,
+            texture: cp,
             kind: "frame"
-          }), CC && !MC.has(CC.root) && MC.set(CC.root, {
-            name: CC.root,
-            texture: ZC,
+          }), pp && !Wp.has(pp.root) && Wp.set(pp.root, {
+            name: pp.root,
+            texture: cp,
             kind: "frame"
           });
           continue
         }
-        const ZC = qC.get(SC),
-          wC = CC?.root ?? gC;
-        if (ZC !== wC && MC.set(wC, {
-            name: wC,
-            texture: ZC,
+        const cp = Yp.get(Up),
+          op = pp?.root ?? yp;
+        if (cp !== op && Wp.set(op, {
+            name: op,
+            texture: cp,
             kind: "frame"
-          }), CC) {
-          const zC = bC.get(CC.root);
-          WC[SC] = {
-            id: zC,
-            rotation: CC.rotation
-          }, NC.set(ZC, zC), MC.set(gC, {
-            name: gC,
-            texture: ZC,
+          }), pp) {
+          const ip = Ip.get(pp.root);
+          Ap[Up] = {
+            id: ip,
+            rotation: pp.rotation
+          }, Pp.set(cp, ip), Wp.set(yp, {
+            name: yp,
+            texture: cp,
             kind: "rotation"
           })
-        } else NC.set(ZC, SC + 1)
+        } else Pp.set(cp, Up + 1)
       }
-      for (const gC of NC.keys()) MC.delete(gC);
-      for (const [gC, SC] of ZC) {
-        const CC = NC.get(SC);
-        void 0 === CC || NC.has(gC) || (NC.set(gC, CC), MC.delete(gC))
+      for (const yp of Pp.keys()) Wp.delete(yp);
+      for (const [yp, Up] of cp) {
+        const pp = Pp.get(Up);
+        void 0 === pp || Pp.has(yp) || (Pp.set(yp, pp), Wp.delete(yp))
       }
       return {
-        named: [...NC].sort(((CC, zC) => {
-          let [ZC] = CC, [QC] = zC;
-          return ZC < QC ? -1 : ZC > QC ? 1 : 0
-        })).map((CC => {
-          let [zC, ZC] = CC;
+        named: [...Pp].sort(((pp, ip) => {
+          let [cp] = pp, [Op] = ip;
+          return cp < Op ? -1 : cp > Op ? 1 : 0
+        })).map((pp => {
+          let [ip, cp] = pp;
           return {
-            name: zC,
-            id: ZC
+            name: ip,
+            id: cp
           }
         })),
-        aliases: [...MC.values()],
-        layers: WC
+        aliases: [...Wp.values()],
+        layers: Ap
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

@@ -1,28 +1,28 @@
-export const id = 71;
-export const ids = [71];
+export const id = 72;
+export const ids = [72];
 export const modules = {
-  36294: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => wC
+  36630: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => op
     });
-    const QC = {
-      wait: function(CC) {
-        return new Promise((zC => {
-          setTimeout(zC, CC)
+    const Op = {
+      wait: function(pp) {
+        return new Promise((ip => {
+          setTimeout(ip, pp)
         }))
       },
       stallMs: 2e4
     };
-    class wC {
-      constructor(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : QC;
-        this.url = CC, this.options = zC, this.timing = ZC, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = CC
+    class op {
+      constructor(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Op;
+        this.url = pp, this.options = ip, this.timing = cp, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = pp
       }
       ready() {
         if (null === this.fetched) {
-          const CC = new AbortController;
-          this.fetchAbort = CC, this.fetched = this.fetchWithRetries(CC.signal).then((zC => (this.fetchAbort === CC && (this.fetchAbort = null), zC)))
+          const pp = new AbortController;
+          this.fetchAbort = pp, this.fetched = this.fetchWithRetries(pp.signal).then((ip => (this.fetchAbort === pp && (this.fetchAbort = null), ip)))
         }
         return this.fetched
       }
@@ -35,81 +35,81 @@ export const modules = {
       start() {
         return new Worker(this.scriptUrl, this.options)
       }
-      async fetchWithRetries(CC) {
-        for (let zC = 0;; zC++) {
-          const ZC = new URL(this.url);
-          if (zC > 0 && ZC.searchParams.set("cache-bust", `${Date.now()}-${zC}`), await this.fetchWhole(ZC, CC)) return this.scriptUrl = ZC, !0;
-          if (zC >= 3 || CC.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** zC), CC.aborted) return !1
+      async fetchWithRetries(pp) {
+        for (let ip = 0;; ip++) {
+          const cp = new URL(this.url);
+          if (ip > 0 && cp.searchParams.set("cache-bust", `${Date.now()}-${ip}`), await this.fetchWhole(cp, pp)) return this.scriptUrl = cp, !0;
+          if (ip >= 3 || pp.aborted) return !1;
+          if (await this.timing.wait(500 * 2 ** ip), pp.aborted) return !1
         }
       }
-      async fetchWhole(CC, zC) {
-        const ZC = new AbortController;
-        let QC;
-        const wC = () => {
-            clearTimeout(QC), QC = setTimeout((() => {
-              ZC.abort()
+      async fetchWhole(pp, ip) {
+        const cp = new AbortController;
+        let Op;
+        const op = () => {
+            clearTimeout(Op), Op = setTimeout((() => {
+              cp.abort()
             }), this.timing.stallMs)
           },
-          bC = () => {
-            ZC.abort()
+          Ip = () => {
+            cp.abort()
           };
-        zC.addEventListener("abort", bC, {
+        ip.addEventListener("abort", Ip, {
           once: !0
-        }), wC();
+        }), op();
         try {
-          var nC;
-          const zC = await fetch(CC, {
-            signal: ZC.signal
+          var Sp;
+          const ip = await fetch(pp, {
+            signal: cp.signal
           });
-          if (!zC.ok) return !1;
-          const QC = null === (nC = zC.body) || void 0 === nC ? void 0 : nC.getReader();
-          if (!QC) return !1;
+          if (!ip.ok) return !1;
+          const Op = null === (Sp = ip.body) || void 0 === Sp ? void 0 : Sp.getReader();
+          if (!Op) return !1;
           for (;;) {
             const {
-              done: CC
-            } = await QC.read();
-            if (CC) return !0;
-            wC()
+              done: pp
+            } = await Op.read();
+            if (pp) return !0;
+            op()
           }
         } catch {
           return !1
         } finally {
-          clearTimeout(QC), zC.removeEventListener("abort", bC)
+          clearTimeout(Op), ip.removeEventListener("abort", Ip)
         }
       }
     }
   },
-  50762: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      createWorldgenWorker: () => qC,
-      prefetchWorldgenWorker: () => fC,
-      stopWorldgenWorkerPrefetch: () => oC,
-      worldgenWorkerReady: () => nC
+  51244: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      createWorldgenWorker: () => Yp,
+      prefetchWorldgenWorker: () => xp,
+      stopWorldgenWorkerPrefetch: () => Lp,
+      worldgenWorkerReady: () => Sp
     });
-    const QC = new(ZC(36294).d)(new URL(ZC.p + ZC.u(70), ZC.b), {
+    const Op = new(cp(36630).b)(new URL(cp.p + cp.u(71), cp.b), {
       name: "worldgenWorker",
       type: "module"
     });
-    let wC = !1,
-      bC = !1;
+    let op = !1,
+      Ip = !1;
 
-    function nC() {
-      return wC = !0, QC.ready()
+    function Sp() {
+      return op = !0, Op.ready()
     }
 
-    function fC() {
-      QC.ready()
+    function xp() {
+      Op.ready()
     }
 
-    function oC() {
-      wC || bC || (bC = !0, QC.cancel())
+    function Lp() {
+      op || Ip || (Ip = !0, Op.cancel())
     }
 
-    function qC() {
-      return QC.start()
+    function Yp() {
+      return Op.start()
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

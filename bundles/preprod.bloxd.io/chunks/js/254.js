@@ -1,1512 +1,701 @@
 export const id = 254;
 export const ids = [254];
 export const modules = {
-  39882: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => NC,
-      g: () => WC,
-      h: () => oC,
-      i: () => MC,
-      k: () => qC,
-      m: () => fC,
-      o: () => FC
+  40016: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      default: () => Zp
     });
-    var QC = ZC(38507),
-      wC = ZC(39889);
+    cp(6592);
+    var Op = cp(62),
+      op = cp(40024),
+      Ip = cp(40289),
+      Sp = cp(40405),
+      xp = cp(40443),
+      Lp = cp(40459),
+      Yp = cp(37479),
+      Dp = cp(37313),
+      Ap = cp(40568),
+      Pp = cp(40626),
+      Wp = (cp(40663), cp(1234)),
+      yp = cp(195),
+      Up = cp(1201),
+      wp = cp(25),
+      vp = cp(2835),
+      tp = cp(1480),
+      Hp = cp(1060),
+      dp = cp(6583),
+      ep = cp(6598),
+      jp = cp(4534),
+      kp = cp(1112);
+    const mp = 1.2,
+      Rp = .2,
+      qp = .0066 * Math.PI / 180,
+      Mp = new Set(["Escape", "KeyG"]),
+      Cp = {
+        ArrowLeft: -1,
+        ArrowRight: 1
+      },
+      Ep = "ArrowUp",
+      Xp = new Set([...Object.keys(Cp), Ep, "ArrowDown"]),
+      lp = 32,
+      Qp = 1,
+      Jp = 10,
+      Bp = "F4",
+      Np = "Period",
+      Tp = Math.PI / 2 - .001,
+      fp = Math.PI / 6,
+      bp = Math.PI / 6,
+      hp = 1.08,
+      ap = [{
+        name: "X",
+        direction: [1, 0, 0],
+        colour: "#e5534b"
+      }, {
+        name: "Y",
+        direction: [0, 1, 0],
+        colour: "#57ab5a"
+      }, {
+        name: "Z",
+        direction: [0, 0, 1],
+        colour: "#539bf5"
+      }],
+      np = 24,
+      Fp = 7,
+      gp = 4,
+      Gp = .01,
+      rp = 4;
 
-    function bC(CC, zC, ZC, QC) {
-      switch (zC) {
-        case 5120: {
-          let zC = CC.getInt8(ZC);
-          return QC && (zC = Math.max(zC / 127, -1)), zC
-        }
-        case 5121: {
-          let zC = CC.getUint8(ZC);
-          return QC && (zC /= 255), zC
-        }
-        case 5122: {
-          let zC = CC.getInt16(ZC, !0);
-          return QC && (zC = Math.max(zC / 32767, -1)), zC
-        }
-        case 5123: {
-          let zC = CC.getUint16(ZC, !0);
-          return QC && (zC /= 65535), zC
-        }
-        case 5131:
-          return (0, wC.e)(CC.getUint16(ZC, !0));
-        case 5124:
-          return CC.getInt32(ZC, !0);
-        case 5125:
-          return CC.getUint32(ZC, !0);
-        case 5126:
-          return CC.getFloat32(ZC, !0);
-        default:
-          throw new Error(`Invalid component type ${zC}`)
-      }
-    }
-
-    function nC(CC, zC, ZC, QC, bC) {
-      switch (zC) {
-        case 5120:
-          QC && (bC = Math.round(127 * bC)), CC.setInt8(ZC, bC);
-          break;
-        case 5121:
-          QC && (bC = Math.round(255 * bC)), CC.setUint8(ZC, bC);
-          break;
-        case 5122:
-          QC && (bC = Math.round(32767 * bC)), CC.setInt16(ZC, bC, !0);
-          break;
-        case 5123:
-          QC && (bC = Math.round(65535 * bC)), CC.setUint16(ZC, bC, !0);
-          break;
-        case 5131:
-          CC.setUint16(ZC, (0, wC.k)(bC), !0);
-          break;
-        case 5124:
-          CC.setInt32(ZC, bC, !0);
-          break;
-        case 5125:
-          CC.setUint32(ZC, bC, !0);
-          break;
-        case 5126:
-          CC.setFloat32(ZC, bC, !0);
-          break;
-        default:
-          throw new Error(`Invalid component type ${zC}`)
-      }
-    }
-
-    function fC(CC) {
-      switch (CC) {
-        case 5120:
-        case 5121:
-          return 1;
-        case 5122:
-        case 5123:
-        case 5131:
-          return 2;
-        case 5124:
-        case 5125:
-        case 5126:
-          return 4;
-        default:
-          throw new Error(`Invalid type '${CC}'`)
-      }
-    }
-
-    function oC(CC, zC, ZC, QC, wC, oC, qC, FC) {
-      const WC = new Array(QC),
-        NC = new Array(QC);
-      if (CC instanceof Array) {
-        let wC = zC / 4;
-        const bC = ZC / 4;
-        for (let zC = 0; zC < oC; zC += QC) {
-          for (let zC = 0; zC < QC; zC++) WC[zC] = NC[zC] = CC[wC + zC];
-          FC(NC, zC);
-          for (let zC = 0; zC < QC; zC++) WC[zC] !== NC[zC] && (CC[wC + zC] = NC[zC]);
-          wC += bC
-        }
-      } else {
-        const MC = ArrayBuffer.isView(CC) ? new DataView(CC.buffer, CC.byteOffset, CC.byteLength) : new DataView(CC),
-          gC = fC(wC);
-        for (let CC = 0; CC < oC; CC += QC) {
-          for (let CC = 0, ZC = zC; CC < QC; CC++, ZC += gC) WC[CC] = NC[CC] = bC(MC, wC, ZC, qC);
-          FC(NC, CC);
-          for (let CC = 0, ZC = zC; CC < QC; CC++, ZC += gC) WC[CC] !== NC[CC] && nC(MC, wC, ZC, qC, NC[CC]);
-          zC += ZC
-        }
-      }
-    }
-
-    function qC(CC, zC, ZC, wC, bC, nC, qC, FC) {
-      const WC = zC * fC(ZC),
-        NC = qC * zC;
-      if (5126 !== ZC || bC !== WC) {
-        const QC = new Float32Array(NC);
-        return oC(CC, wC, bC, zC, ZC, NC, nC, ((CC, ZC) => {
-          for (let wC = 0; wC < zC; wC++) QC[ZC + wC] = CC[wC]
-        })), QC
-      }
-      if (!(CC instanceof Array || CC instanceof Float32Array) || 0 !== wC || CC.length !== NC) {
-        if (CC instanceof Array) {
-          const zC = wC / 4;
-          return CC.slice(zC, zC + NC)
-        }
-        if (ArrayBuffer.isView(CC)) {
-          const zC = CC.byteOffset + wC;
-          return 0 !== (3 & zC) && (QC.c.Warn("Float array must be aligned to 4-bytes border"), FC = !0), FC ? new Float32Array(CC.buffer.slice(zC, zC + NC * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(CC.buffer, zC, NC)
-        }
-        return new Float32Array(CC, wC, NC)
-      }
-      return FC ? CC.slice() : CC
-    }
-
-    function FC(CC, zC, ZC, wC, bC, nC, qC) {
-      const FC = fC(ZC),
-        WC = function(CC) {
-          switch (CC) {
-            case 5120:
-              return Int8Array;
-            case 5121:
-              return Uint8Array;
-            case 5122:
-              return Int16Array;
-            case 5123:
-            case 5131:
-              return Uint16Array;
-            case 5124:
-              return Int32Array;
-            case 5125:
-              return Uint32Array;
-            case 5126:
-              return Float32Array;
-            default:
-              throw new Error(`Invalid component type '${CC}'`)
-          }
-        }(ZC),
-        NC = nC * zC;
-      if (Array.isArray(CC)) {
-        if (0 !== (3 & wC) || 0 !== (3 & bC)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
-        const QC = wC / 4,
-          fC = bC / 4;
-        if (QC + (nC - 1) * fC + zC > CC.length) throw new Error("Last accessed index is out of bounds.");
-        if (fC < zC) throw new Error("Data stride cannot be smaller than the component size.");
-        if (fC !== zC) {
-          const QC = new WC(NC);
-          return oC(CC, wC, bC, zC, ZC, NC, !1, ((CC, ZC) => {
-            for (let wC = 0; wC < zC; wC++) QC[ZC + wC] = CC[wC]
-          })), QC
-        }
-        return new WC(CC.slice(QC, QC + NC))
-      }
-      let MC, gC = wC;
-      ArrayBuffer.isView(CC) ? (MC = CC.buffer, gC += CC.byteOffset) : MC = CC;
-      if (gC + (nC - 1) * bC + zC * FC > MC.byteLength) throw new Error("Last accessed byte is out of bounds.");
-      const SC = zC * FC;
-      if (bC < SC) throw new Error("Byte stride cannot be smaller than the component's byte size.");
-      if (bC !== SC) {
-        const CC = new WC(NC),
-          ZC = new Uint8Array(MC, gC),
-          QC = new Uint8Array(CC.buffer),
-          wC = zC * FC;
-        for (let zC = 0, fC = 0, oC = 0; zC < nC; zC++, fC += bC, oC += wC) QC.set(ZC.subarray(fC, fC + wC), oC);
-        return CC
-      }
-      return 1 !== FC && 0 !== (gC & FC - 1) && (QC.c.Warn("Array must be aligned to border of element size. Data will be copied."), qC = !0), qC ? new WC(MC.slice(gC, gC + NC * FC)) : new WC(MC, gC, NC)
-    }
-
-    function WC(CC, zC, ZC, wC, bC, nC, qC, FC) {
-      const WC = zC * fC(ZC),
-        NC = qC * zC;
-      if (FC.length !== NC) throw new Error("Output length is not valid");
-      if (5126 === ZC && bC === WC)
-        if (CC instanceof Array) {
-          const zC = wC / 4;
-          FC.set(CC, zC)
-        } else if (ArrayBuffer.isView(CC)) {
-        const zC = CC.byteOffset + wC;
-        if (0 !== (3 & zC)) return QC.c.Warn("Float array must be aligned to 4-bytes border"), void FC.set(new Float32Array(CC.buffer.slice(zC, zC + NC * Float32Array.BYTES_PER_ELEMENT)));
-        const ZC = new Float32Array(CC.buffer, zC, NC);
-        FC.set(ZC)
-      } else {
-        const zC = new Float32Array(CC, wC, NC);
-        FC.set(zC)
-      } else oC(CC, wC, bC, zC, ZC, NC, nC, ((CC, ZC) => {
-        for (let QC = 0; QC < zC; QC++) FC[ZC + QC] = CC[QC]
-      }))
-    }
-
-    function NC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
-        QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
-      if (Array.isArray(CC)) {
-        for (let wC = 0; wC < zC; wC++)
-          if (CC[ZC + wC] - QC > 65535) return !0;
-        return !1
-      }
-      return 4 === CC.BYTES_PER_ELEMENT
-    }
-
-    function MC(CC) {
-      const zC = CC.buffer;
-      if (zC instanceof ArrayBuffer) return CC;
-      const ZC = new ArrayBuffer(CC.byteLength);
-      return new Uint8Array(ZC).set(new Uint8Array(zC, CC.byteOffset, CC.byteLength)), ZC
-    }
-  },
-  39703: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => iC,
-      f: () => JC,
-      n: () => IC,
-      j: () => mC,
-      o: () => HC
-    });
-    class QC {
-      constructor() {
-        this.children = []
-      }
-      isValid(CC) {
-        return !0
-      }
-      process(CC, zC, ZC) {
-        let QC = "";
-        if (this.line) {
-          let ZC = this.line;
-          const wC = zC.processor;
-          if (wC) {
-            wC.lineProcessor && (ZC = wC.lineProcessor(ZC, zC.isFragment, zC.processingContext));
-            const QC = zC.processor?.attributeKeywordName ?? "attribute",
-              bC = zC.isFragment && zC.processor?.varyingFragmentKeywordName ? zC.processor?.varyingFragmentKeywordName : !zC.isFragment && zC.processor?.varyingVertexKeywordName ? zC.processor?.varyingVertexKeywordName : "varying";
-            if (!zC.isFragment && wC.attributeProcessor && this.line.startsWith(QC)) ZC = wC.attributeProcessor(this.line, CC, zC.processingContext);
-            else if (wC.varyingProcessor && (wC.varyingCheck?.(this.line, zC.isFragment) || !wC.varyingCheck && this.line.startsWith(bC))) ZC = wC.varyingProcessor(this.line, zC.isFragment, CC, zC.processingContext);
-            else if (wC.uniformProcessor && wC.uniformRegexp && wC.uniformRegexp.test(this.line)) zC.lookForClosingBracketForUniformBuffer || (ZC = wC.uniformProcessor(this.line, zC.isFragment, CC, zC.processingContext));
-            else if (wC.uniformBufferProcessor && wC.uniformBufferRegexp && wC.uniformBufferRegexp.test(this.line)) zC.lookForClosingBracketForUniformBuffer || (ZC = wC.uniformBufferProcessor(this.line, zC.isFragment, zC.processingContext), zC.lookForClosingBracketForUniformBuffer = !0);
-            else if (wC.textureProcessor && wC.textureRegexp && wC.textureRegexp.test(this.line)) ZC = wC.textureProcessor(this.line, zC.isFragment, CC, zC.processingContext);
-            else if ((wC.uniformProcessor || wC.uniformBufferProcessor) && this.line.startsWith("uniform") && !zC.lookForClosingBracketForUniformBuffer) {
-              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? wC.uniformProcessor && (ZC = wC.uniformProcessor(this.line, zC.isFragment, CC, zC.processingContext)) : wC.uniformBufferProcessor && (ZC = wC.uniformBufferProcessor(this.line, zC.isFragment, zC.processingContext), zC.lookForClosingBracketForUniformBuffer = !0)
-            }
-            zC.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (zC.lookForClosingBracketForUniformBuffer = !1, wC.endOfUniformBufferProcessor && (ZC = wC.endOfUniformBufferProcessor(this.line, zC.isFragment, zC.processingContext)))
-          }
-          QC += ZC + "\n"
-        }
-        for (const wC of this.children) QC += wC.process(CC, zC, ZC);
-        return this.additionalDefineKey && (CC[this.additionalDefineKey] = this.additionalDefineValue || "true", ZC[this.additionalDefineKey] = CC[this.additionalDefineKey]), QC
-      }
-    }
-    class wC {
-      constructor() {
-        this._lines = []
-      }
-      get currentLine() {
-        return this._lines[this.lineIndex]
-      }
-      get canRead() {
-        return this.lineIndex < this._lines.length - 1
-      }
-      set lines(CC) {
-        this._lines.length = 0;
-        for (const zC of CC) {
-          if (!zC || "\r" === zC) continue;
-          if ("#" === zC[0]) {
-            this._lines.push(zC);
-            continue
-          }
-          const CC = zC.trim();
-          if (!CC) continue;
-          if (CC.startsWith("//")) {
-            this._lines.push(zC);
-            continue
-          }
-          const ZC = CC.indexOf(";");
-          if (-1 === ZC) this._lines.push(CC);
-          else if (ZC === CC.length - 1) CC.length > 1 && this._lines.push(CC);
-          else {
-            const CC = zC.split(";");
-            for (let zC = 0; zC < CC.length; zC++) {
-              let ZC = CC[zC];
-              ZC && (ZC = ZC.trim(), ZC && this._lines.push(ZC + (zC !== CC.length - 1 ? ";" : "")))
+    function Zp(pp) {
+      let {
+        heatmap: ip,
+        scale: cp,
+        fullyOpaqueFrom: Qp,
+        bounds: fp,
+        fitBounds: bp,
+        schematic: hp,
+        controls: ap,
+        onStepTime: np,
+        onShowAllTime: Fp,
+        onTogglePlaying: gp,
+        getReadout: rp = null
+      } = pp;
+      const {
+        t: Zp
+      } = (0, Up.H)(), {
+        clientEscMenuOptions: xi
+      } = (0, wp.o)(["clientEscMenuOptions"]), Di = (0, Op.useRef)(null), Ai = (0, Op.useRef)(null), Pi = (0, Op.useRef)(null), Wi = (0, vp.d)(Di), [yi, Ui] = (0, Op.useState)(!1), [wi, vi] = (0, Op.useState)(!1), [ti, Hi] = (0, Op.useState)(!0), di = (0, Op.useRef)(!1), [ei, ui] = (0, Op.useState)(!1), ji = wi || !ti && ei, [ki, mi] = (0, Op.useState)(!1), [Ri, qi] = (0, Op.useState)(!0), [Mi, Ci] = (0, Op.useState)(null), Ei = fp.min, [Xi, li] = (0, Op.useState)(Ei);
+      Xi[0] === Ei[0] && Xi[1] === Ei[1] && Xi[2] === Ei[2] || (li(Ei), null !== Mi && Ci({
+        ...Mi,
+        position: Li(Mi.position, Li(Xi, Yi(Ei, -1)))
+      }));
+      const Qi = (0, Op.useMemo)((() => function(pp) {
+          return [pp.max[0] - pp.min[0] + 1, pp.max[1] - pp.min[1] + 1, pp.max[2] - pp.min[2] + 1]
+        }(fp)), [fp]),
+        Ji = (0, Op.useMemo)((() => function(pp, ip) {
+          const cp = [],
+            Op = [];
+          for (const [op, Ip] of Object.entries(pp.frequencies)) {
+            const pp = Number(op);
+            for (const [op, Sp] of Object.entries(Ip)) {
+              const Ip = Number(op);
+              for (const [op, xp] of Object.entries(Sp)) xp <= 0 || (cp.push(pp - ip[0], Ip - ip[1], Number(op) - ip[2]), Op.push(xp))
             }
           }
-        }
-      }
-    }
-    class bC extends QC {
-      process(CC, zC, ZC) {
-        for (let QC = 0; QC < this.children.length; QC++) {
-          const wC = this.children[QC];
-          if (wC.isValid(CC)) return wC.process(CC, zC, ZC)
-        }
-        return ""
-      }
-    }
-    class nC extends QC {
-      isValid(CC) {
-        return this.testExpression.isTrue(CC)
-      }
-    }
-    class fC {
-      isTrue(CC) {
-        return !0
-      }
-      static postfixToInfix(CC) {
-        const zC = [];
-        for (const ZC of CC)
-          if (void 0 === fC._OperatorPriority[ZC]) zC.push(ZC);
-          else {
-            const CC = zC[zC.length - 1],
-              QC = zC[zC.length - 2];
-            zC.length -= 2, zC.push(`(${QC}${ZC}${CC})`)
-          } return zC[zC.length - 1]
-      }
-      static infixToPostfix(CC) {
-        const zC = fC._InfixToPostfixCache.get(CC);
-        if (zC) return zC.accessTime = Date.now(), zC.result;
-        if (!CC.includes("&&") && !CC.includes("||") && !CC.includes(")") && !CC.includes("(")) return [CC];
-        const ZC = [];
-        let QC = -1;
-        const wC = () => {
-            FC = FC.trim(), "" !== FC && (ZC.push(FC), FC = "")
-          },
-          bC = CC => {
-            QC < fC._Stack.length - 1 && (fC._Stack[++QC] = CC)
-          },
-          nC = () => fC._Stack[QC],
-          oC = () => -1 === QC ? "!!INVALID EXPRESSION!!" : fC._Stack[QC--];
-        let qC = 0,
-          FC = "";
-        for (; qC < CC.length;) {
-          const zC = CC.charAt(qC),
-            WC = qC < CC.length - 1 ? CC.substring(qC, 2 + qC) : "";
-          if ("(" === zC) FC = "", bC(zC);
-          else if (")" === zC) {
-            for (wC(); - 1 !== QC && "(" !== nC();) ZC.push(oC());
-            oC()
-          } else if (fC._OperatorPriority[WC] > 1) {
-            for (wC(); - 1 !== QC && fC._OperatorPriority[nC()] >= fC._OperatorPriority[WC];) ZC.push(oC());
-            bC(WC), qC++
-          } else FC += zC;
-          qC++
-        }
-        for (wC(); - 1 !== QC;) "(" === nC() ? oC() : ZC.push(oC());
-        return fC._InfixToPostfixCache.size >= fC.InfixToPostfixCacheLimitSize && fC.ClearCache(), fC._InfixToPostfixCache.set(CC, {
-          result: ZC,
-          accessTime: Date.now()
-        }), ZC
-      }
-      static ClearCache() {
-        const CC = Array.from(fC._InfixToPostfixCache.entries()).sort(((CC, zC) => CC[1].accessTime - zC[1].accessTime));
-        for (let zC = 0; zC < fC.InfixToPostfixCacheCleanupSize; zC++) fC._InfixToPostfixCache.delete(CC[zC][0])
-      }
-    }
-    fC.InfixToPostfixCacheLimitSize = 5e4, fC.InfixToPostfixCacheCleanupSize = 25e3, fC._InfixToPostfixCache = new Map, fC._OperatorPriority = {
-      ")": 0,
-      "(": 1,
-      "||": 2,
-      "&&": 3
-    }, fC._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
-    class oC extends fC {
-      constructor(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        super(), this.define = CC, this.not = zC
-      }
-      isTrue(CC) {
-        let zC = void 0 !== CC[this.define];
-        return this.not && (zC = !zC), zC
-      }
-    }
-    class qC extends fC {
-      isTrue(CC) {
-        return this.leftOperand.isTrue(CC) || this.rightOperand.isTrue(CC)
-      }
-    }
-    class FC extends fC {
-      isTrue(CC) {
-        return this.leftOperand.isTrue(CC) && this.rightOperand.isTrue(CC)
-      }
-    }
-    class WC extends fC {
-      constructor(CC, zC, ZC) {
-        super(), this.define = CC, this.operand = zC, this.testValue = ZC
-      }
-      toString() {
-        return `${this.define} ${this.operand} ${this.testValue}`
-      }
-      isTrue(CC) {
-        let zC = !1;
-        const ZC = parseInt(void 0 != CC[this.define] ? CC[this.define] : this.define),
-          QC = parseInt(void 0 != CC[this.testValue] ? CC[this.testValue] : this.testValue);
-        if (isNaN(ZC) || isNaN(QC)) return !1;
-        switch (this.operand) {
-          case ">":
-            zC = ZC > QC;
-            break;
-          case "<":
-            zC = ZC < QC;
-            break;
-          case "<=":
-            zC = ZC <= QC;
-            break;
-          case ">=":
-            zC = ZC >= QC;
-            break;
-          case "==":
-            zC = ZC === QC;
-            break;
-          case "!=":
-            zC = ZC !== QC
-        }
-        return zC
-      }
-    }
-    var NC = ZC(39694),
-      MC = ZC(39692);
-    const gC = /defined\s*?\((.+?)\)/g,
-      SC = /defined\s*?\[(.+?)\]/g,
-      pC = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
-      PC = /__decl__/,
-      GC = /light\{X\}.(\w*)/g,
-      RC = /\{X\}/g,
-      AC = [],
-      xC = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
-
-    function JC(CC) {
-      CC.processor && CC.processor.initializeShaders && CC.processor.initializeShaders(CC.processingContext)
-    }
-
-    function IC(CC, zC, ZC, QC) {
-      zC.processor?.preProcessShaderCode && (CC = zC.processor.preProcessShaderCode(CC, zC.isFragment)), mC(CC, zC, (CC => {
-        zC.processCodeAfterIncludes && (CC = zC.processCodeAfterIncludes(zC.isFragment ? "fragment" : "vertex", CC, zC.defines));
-        const wC = function(CC, zC, ZC) {
-          let QC = function(CC, zC) {
-            if (zC.processor?.noPrecision) return CC;
-            const ZC = zC.shouldUseHighPrecisionShader; - 1 === CC.indexOf("precision highp float") ? CC = ZC ? "precision highp float;\n" + CC : "precision mediump float;\n" + CC : ZC || (CC = CC.replace("precision highp float", "precision mediump float"));
-            return CC
-          }(CC, zC);
-          if (!zC.processor) return QC;
-          if (0 === zC.processor.shaderLanguage && -1 !== QC.indexOf("#version 3") && (QC = QC.replace("#version 300 es", ""), !zC.processor.parseGLES3)) return QC;
-          const wC = zC.defines,
-            bC = dC(zC, ZC);
-          zC.processor.preProcessor && (QC = zC.processor.preProcessor(QC, wC, bC, zC.isFragment, zC.processingContext));
-          const nC = {};
-          QC = YC(QC, bC, zC, nC), zC.processor.postProcessor && (QC = zC.processor.postProcessor(QC, wC, zC.isFragment, zC.processingContext, ZC ? {
-            drawBuffersExtensionDisabled: !ZC.getCaps().drawBuffersExtension
-          } : {}, bC, nC));
-          ZC?._features.needShaderCodeInlining && (QC = ZC.inlineShaderCode(QC));
-          return QC
-        }(CC, zC, QC);
-        ZC(wC, CC)
-      }))
-    }
-
-    function iC(CC, zC, ZC) {
-      return ZC.processor && ZC.processor.finalizeShaders ? ZC.processor.finalizeShaders(CC, zC, ZC.processingContext) : {
-        vertexCode: CC,
-        fragmentCode: zC
-      }
-    }
-
-    function vC(CC) {
-      const zC = /defined\((.+)\)/.exec(CC);
-      if (zC && zC.length) return new oC(zC[1].trim(), "!" === CC[0]);
-      const ZC = ["==", "!=", ">=", "<=", "<", ">"];
-      let QC = "",
-        wC = 0;
-      for (QC of ZC)
-        if (wC = CC.indexOf(QC), wC > -1) break;
-      if (-1 === wC) return new oC(CC);
-      const bC = CC.substring(0, wC).trim(),
-        nC = CC.substring(wC + QC.length).trim();
-      return new WC(bC, QC, nC)
-    }
-
-    function eC(CC, zC) {
-      const ZC = new nC,
-        QC = CC.substring(0, zC);
-      let wC = CC.substring(zC);
-      return wC = wC.substring(0, (wC.indexOf("//") + 1 || wC.length + 1) - 1).trim(), ZC.testExpression = "#ifdef" === QC ? new oC(wC) : "#ifndef" === QC ? new oC(wC, !0) : function(CC) {
-        CC = CC.replace(gC, "defined[$1]");
-        const zC = fC.infixToPostfix(CC),
-          ZC = [];
-        for (const wC of zC)
-          if ("||" !== wC && "&&" !== wC) ZC.push(wC);
-          else if (ZC.length >= 2) {
-          let CC = ZC[ZC.length - 1],
-            zC = ZC[ZC.length - 2];
-          ZC.length -= 2;
-          const QC = "&&" == wC ? new FC : new qC;
-          "string" === typeof CC && (CC = CC.replace(SC, "defined($1)")), "string" === typeof zC && (zC = zC.replace(SC, "defined($1)")), QC.leftOperand = "string" === typeof zC ? vC(zC) : zC, QC.rightOperand = "string" === typeof CC ? vC(CC) : CC, ZC.push(QC)
-        }
-        let QC = ZC[ZC.length - 1];
-        return "string" === typeof QC && (QC = QC.replace(SC, "defined($1)")), "string" === typeof QC ? vC(QC) : QC
-      }(wC), ZC
-    }
-
-    function hC(CC, zC, ZC, wC) {
-      let bC;
-      for (; KC(CC, ZC, wC);) {
-        bC = CC.currentLine;
-        const nC = bC.substring(0, 5).toLowerCase();
-        if ("#else" === nC) {
-          const ZC = new QC;
-          return zC.children.push(ZC), void KC(CC, ZC, wC)
-        }
-        if ("#elif" === nC) {
-          const CC = eC(bC, 5);
-          zC.children.push(CC), ZC = CC
-        }
-      }
-    }
-
-    function KC(CC, zC, ZC) {
-      for (; CC.canRead;) {
-        CC.lineIndex++;
-        const wC = CC.currentLine;
-        if (wC.indexOf("#") >= 0) {
-          const QC = xC.exec(wC);
-          if (QC && QC.length) {
-            switch (QC[0]) {
-              case "#ifdef": {
-                const QC = new bC;
-                zC.children.push(QC);
-                const nC = eC(wC, 6);
-                QC.children.push(nC), hC(CC, QC, nC, ZC);
-                break
-              }
-              case "#else":
-              case "#elif":
-                return !0;
-              case "#endif":
-                return !1;
-              case "#ifndef": {
-                const QC = new bC;
-                zC.children.push(QC);
-                const nC = eC(wC, 7);
-                QC.children.push(nC), hC(CC, QC, nC, ZC);
-                break
-              }
-              case "#if": {
-                const QC = new bC,
-                  nC = eC(wC, 3);
-                zC.children.push(QC), QC.children.push(nC), hC(CC, QC, nC, ZC);
-                break
-              }
-            }
-            continue
+          return {
+            positions: Int32Array.from(cp),
+            values: Float64Array.from(Op),
+            count: Op.length
           }
-        }
-        const nC = new QC;
-        if (nC.line = wC, zC.children.push(nC), "#" === wC[0] && "d" === wC[1]) {
-          const CC = wC.replace(";", "").split(" ");
-          nC.additionalDefineKey = CC[1], 3 === CC.length && (nC.additionalDefineValue = CC[2])
-        }
-      }
-      return !1
-    }
-
-    function YC(CC, zC, ZC, bC) {
-      const nC = new QC,
-        fC = new wC;
-      return fC.lineIndex = -1, fC.lines = CC.split("\n"), KC(fC, nC, bC), nC.process(zC, ZC, bC)
-    }
-
-    function dC(CC, zC) {
-      const ZC = CC.defines,
-        QC = {};
-      for (const wC of ZC) {
-        const CC = wC.replace("#define", "").replace(";", "").trim().split(" ");
-        QC[CC[0]] = CC.length > 1 ? CC[1] : ""
-      }
-      return 0 === CC.processor?.shaderLanguage && (QC.GL_ES = "true"), QC.__VERSION__ = CC.version, QC[CC.platformName] = "true", (0, MC.l)(QC, zC?.isNDCHalfZRange, zC?.BZC, zC?.useExactSrgbConversions), QC
-    }
-
-    function mC(CC, zC, ZC) {
-      let QC;
-      for (AC.length = 0; null !== (QC = pC.exec(CC));) AC.push(QC);
-      let wC = [CC],
-        bC = !1;
-      for (const fC of AC) {
-        let CC = fC[1];
-        if (-1 !== CC.indexOf("__decl__") && (CC = CC.replace(PC, ""), zC.supportsUniformBuffers && (CC = CC.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), CC += "Declaration"), !zC.includesShadersStore[CC]) {
-          const QC = zC.shadersRepository + "ShadersInclude/" + CC + ".fx";
-          return void HC.loadFile(QC, (QC => {
-            zC.includesShadersStore[CC] = QC, mC(wC.join(""), zC, ZC)
-          }))
-        } {
-          let ZC = zC.includesShadersStore[CC];
-          if (fC[2]) {
-            const CC = fC[3].split(",");
-            for (let zC = 0; zC < CC.length; zC += 2) {
-              const QC = new RegExp(CC[zC], "g"),
-                wC = CC[zC + 1];
-              ZC = ZC.replace(QC, wC)
-            }
+        }(ip, Ei)), [ip, Ei]),
+        Bi = mp * xi.cameraFOV / 100,
+        Ni = Wi.height > 0 ? Wi.width / Wi.height : 1,
+        Ti = (0, Op.useMemo)((() => function(pp, ip) {
+          return {
+            min: [pp.min[0] - ip[0], pp.min[1] - ip[1], pp.min[2] - ip[2]],
+            max: [pp.max[0] - ip[0] + 1, pp.max[1] - ip[1] + 1, pp.max[2] - ip[2] + 1]
           }
-          if (fC[4]) {
-            const CC = fC[5];
-            if (-1 !== CC.indexOf("..")) {
-              const QC = CC.split(".."),
-                wC = parseInt(QC[0]);
-              let bC = parseInt(QC[1]),
-                nC = ZC.slice(0);
-              ZC = "", isNaN(bC) && (bC = zC.indexParameters[QC[1]]);
-              for (let CC = wC; CC < bC; CC++) zC.supportsUniformBuffers || (nC = nC.replace(GC, ((CC, zC) => zC + "{X}"))), ZC += nC.replace(RC, CC.toString()) + "\n"
-            } else zC.supportsUniformBuffers || (ZC = ZC.replace(GC, ((CC, zC) => zC + "{X}"))), ZC = ZC.replace(RC, CC)
-          }
-          const QC = [];
-          for (const CC of wC) {
-            const zC = CC.split(fC[0]);
-            for (let CC = 0; CC < zC.length - 1; CC++) QC.push(zC[CC]), QC.push(ZC);
-            QC.push(zC[zC.length - 1])
-          }
-          wC = QC, bC = bC || ZC.indexOf("#include<") >= 0 || ZC.indexOf("#include <") >= 0
-        }
-      }
-      AC.length = 0;
-      const nC = wC.join("");
-      bC ? mC(nC.toString(), zC, ZC) : ZC(nC)
-    }
-    const HC = {
-      loadFile: (CC, zC, ZC, QC, wC, bC) => {
-        throw (0, NC.i)("FileTools")
-      }
-    }
-  },
-  39692: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => wC,
-      h: () => bC,
-      l: () => fC,
-      n: () => nC,
-      o: () => oC
-    });
-    var QC = ZC(39694);
-    const wC = {};
-
-    function bC(CC, zC) {
-      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (zC ? zC + "\n" : "") + CC
-    }
-
-    function nC(CC, zC, ZC, bC, nC, fC, oC) {
-      const qC = oC || wC.loadFile;
-      if (!qC) throw (0, QC.i)("FileTools");
-      return qC(CC, zC, ZC, bC, nC, fC)
-    }
-
-    function fC(CC, zC, ZC, QC) {
-      if (CC) return zC ? CC.IS_NDC_HALF_ZRANGE = "" : delete CC.IS_NDC_HALF_ZRANGE, ZC ? CC.USE_REVERSE_DEPTHBUFFER = "" : delete CC.USE_REVERSE_DEPTHBUFFER, void(QC ? CC.USE_EXACT_SRGB_CONVERSIONS = "" : delete CC.USE_EXACT_SRGB_CONVERSIONS);
-      {
-        let CC = "";
-        return zC && (CC += "#define IS_NDC_HALF_ZRANGE"), ZC && (CC && (CC += "\n"), CC += "#define USE_REVERSE_DEPTHBUFFER"), QC && (CC && (CC += "\n"), CC += "#define USE_EXACT_SRGB_CONVERSIONS"), CC
-      }
-    }
-
-    function oC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        QC = arguments.length > 3 ? arguments[3] : void 0;
-      switch (CC) {
-        case 3: {
-          const CC = new Int8Array(zC);
-          return QC && CC.set(new Int8Array(QC)), CC
-        }
-        case 0: {
-          const CC = new Uint8Array(zC);
-          return QC && CC.set(new Uint8Array(QC)), CC
-        }
-        case 4: {
-          const CC = "number" !== typeof zC ? new Int16Array(zC) : new Int16Array(ZC ? zC / 2 : zC);
-          return QC && CC.set(new Int16Array(QC)), CC
-        }
-        case 5:
-        case 8:
-        case 9:
-        case 10:
-        case 2: {
-          const CC = "number" !== typeof zC ? new Uint16Array(zC) : new Uint16Array(ZC ? zC / 2 : zC);
-          return QC && CC.set(new Uint16Array(QC)), CC
-        }
-        case 6: {
-          const CC = "number" !== typeof zC ? new Int32Array(zC) : new Int32Array(ZC ? zC / 4 : zC);
-          return QC && CC.set(new Int32Array(QC)), CC
-        }
-        case 7:
-        case 11:
-        case 12:
-        case 13:
-        case 14:
-        case 15: {
-          const CC = "number" !== typeof zC ? new Uint32Array(zC) : new Uint32Array(ZC ? zC / 4 : zC);
-          return QC && CC.set(new Uint32Array(QC)), CC
-        }
-        case 1: {
-          const CC = "number" !== typeof zC ? new Float32Array(zC) : new Float32Array(ZC ? zC / 4 : zC);
-          return QC && CC.set(new Float32Array(QC)), CC
-        }
-      }
-      const wC = new Uint8Array(zC);
-      return QC && wC.set(new Uint8Array(QC)), wC
-    }
-  },
-  39694: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => qC,
-      d: () => FC,
-      f: () => oC,
-      i: () => wC
-    });
-    const QC = {};
-
-    function wC(CC) {
-      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !QC[CC]) return QC[CC] = !0, `${CC} needs to be imported before as it contains a side-effect required by your code.`
-    }
-    const bC = {};
-    let nC = !1,
-      fC = 0;
-
-    function oC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-      const QC = function() {
-        if ((ZC || nC) && 0 === fC) {
-          const ZC = `${CC}.${zC}`;
-          bC[ZC] || (bC[ZC] = !0, console.warn(`[Babylon.js] ${ZC}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
-        }
+        }(bp, Ei)), [bp, Ei]),
+        fi = oi(Ti, Ni, Bi),
+        bi = null !== Mi && void 0 !== Mi ? Mi : fi,
+        ai = (0, Op.useRef)({
+          fittedView: fi,
+          fieldOfView: Bi,
+          mouseSensitivity: xi.mouseSensitivity,
+          canLock: ti
+        });
+      ai.current = {
+        fittedView: fi,
+        fieldOfView: Bi,
+        mouseSensitivity: xi.mouseSensitivity,
+        canLock: ti
       };
-      return QC.__isSideEffectStub = !0, QC
-    }
-
-    function qC(CC) {
-      return !!CC && !CC.__isSideEffectStub
-    }
-
-    function FC(CC, zC) {
-      return {
-        get() {},
-        set(CC) {
-          Object.defineProperty(this, zC, {
-            value: CC,
-            writable: !0,
-            configurable: !0,
-            enumerable: !0
-          })
-        },
-        configurable: !0,
-        enumerable: !0
-      }
-    }
-  },
-  39680: (CC, zC, ZC) => {
-    function QC() {
-      return "undefined" !== typeof window
-    }
-
-    function wC() {
-      return "undefined" !== typeof navigator
-    }
-
-    function bC() {
-      return "undefined" !== typeof document
-    }
-
-    function nC(CC) {
-      let zC = "",
-        ZC = CC.firstChild;
-      for (; ZC;) 3 === ZC.nodeType && (zC += ZC.textContent), ZC = ZC.nextSibling;
-      return zC
-    }
-    ZC.d(zC, {
-      e: () => nC,
-      f: () => bC,
-      h: () => wC,
-      k: () => QC
-    })
-  },
-  39872: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => QC,
-      f: () => wC,
-      j: () => bC
-    });
-    class QC extends Error {}
-    QC._setPrototypeOf = Object.setPrototypeOf || ((CC, zC) => (CC.__proto__ = zC, CC));
-    const wC = {
-      MeshInvalidPositionsError: 0,
-      UnsupportedTextureError: 1e3,
-      GLTFLoaderUnexpectedMagicError: 2e3,
-      SceneLoaderError: 3e3,
-      LoadFileError: 4e3,
-      RequestFileError: 4001,
-      ReadFileError: 4002
-    };
-    class bC extends QC {
-      constructor(CC, zC, ZC) {
-        super(CC), this.errorCode = zC, this.innerError = ZC, this.name = "RuntimeError", QC._setPrototypeOf(this, bC.prototype)
-      }
-    }
-  },
-  39865: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => dC,
-      e: () => RC,
-      g: () => eC,
-      h: () => KC,
-      i: () => iC,
-      m: () => JC,
-      o: () => IC,
-      p: () => XC,
-      r: () => vC,
-      v: () => AC
-    });
-    var QC = ZC(39867),
-      wC = ZC(39680),
-      bC = ZC(36987);
-    class nC {}
-    nC.FilesToLoad = {};
-    var fC = ZC(39872),
-      oC = ZC(39878),
-      qC = ZC(36985),
-      FC = ZC(39692),
-      WC = ZC(39703),
-      NC = ZC(38507),
-      MC = ZC(39712),
-      gC = ZC(39882);
-    const SC = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
-    class pC extends fC.j {
-      constructor(CC, zC) {
-        super(CC, fC.f.LoadFileError), this.name = "LoadFileError", fC.d._setPrototypeOf(this, pC.prototype), zC instanceof QC.d ? this.request = zC : this.file = zC
-      }
-    }
-    class PC extends fC.j {
-      constructor(CC, zC) {
-        super(CC, fC.f.RequestFileError), this.request = zC, this.name = "RequestFileError", fC.d._setPrototypeOf(this, PC.prototype)
-      }
-    }
-    class GC extends fC.j {
-      constructor(CC, zC) {
-        super(CC, fC.f.ReadFileError), this.file = zC, this.name = "ReadFileError", fC.d._setPrototypeOf(this, GC.prototype)
-      }
-    }
-    const RC = {
-        DefaultRetryStrategy: class {
-          static ExponentialBackoff() {
-            let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
-              zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
-            return (ZC, QC, wC) => 0 !== QC.status || wC >= CC || -1 !== ZC.indexOf("file:") ? -1 : Math.pow(2, wC) * zC
-          }
-        }.ExponentialBackoff(),
-        BaseUrl: "",
-        CorsBehavior: "anonymous",
-        PreprocessUrl: CC => CC,
-        ScriptBaseUrl: "",
-        ScriptPreprocessUrl: CC => CC,
-        CleanUrl: CC => CC = CC.replace(/#/gm, "%23")
-      },
-      AC = (CC, zC) => {
-        if ((!CC || 0 !== CC.indexOf("data:")) && RC.CorsBehavior)
-          if ("string" === typeof RC.CorsBehavior || RC.CorsBehavior instanceof String) zC.crossOrigin = RC.CorsBehavior;
-          else {
-            const ZC = RC.CorsBehavior(CC);
-            ZC && (zC.crossOrigin = ZC)
-          }
-      },
-      xC = {
-        getRequiredSize: null
-      },
-      JC = function(CC, zC, ZC, wC) {
-        let bC, fC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
-          FC = arguments.length > 5 ? arguments[5] : void 0,
-          WC = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : qC.c.LastCreatedEngine;
-        if ("undefined" === typeof HTMLImageElement && !WC?._features.forceBitmapOverHTMLImageElement) return ZC("LoadImage is only supported in web or BabylonNative environments."), null;
-        if (WC?._features.forceBitmapOverHTMLImageElement && "string" !== typeof CC && "undefined" !== typeof Blob) {
-          let QC;
-          if (CC instanceof Blob) QC = CC;
-          else {
-            const zC = CC instanceof ArrayBuffer ? CC : (0, gC.i)(CC);
-            QC = new Blob([zC], {
-              type: fC
-            })
-          }
-          return WC.createImageBitmap(QC, {
-            premultiplyAlpha: "none",
-            colorSpaceConversion: "none",
-            ...FC
-          }).then(zC).catch((zC => {
-            ZC && ZC("Error while trying to load image: " + CC, zC)
-          })), null
-        }
-        let NC = !1;
-        if (CC instanceof ArrayBuffer || ArrayBuffer.isView(CC))
-          if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
-            let zC;
-            zC = CC instanceof ArrayBuffer ? CC : (0, gC.i)(CC), bC = URL.createObjectURL(new Blob([zC], {
-              type: fC
-            })), NC = !0
-          } else bC = `data:${fC};base64,` + (0, oC.i)(CC);
-        else CC instanceof Blob ? (bC = URL.createObjectURL(CC), NC = !0) : (bC = RC.CleanUrl(CC), bC = RC.PreprocessUrl(bC));
-        const MC = zC => {
-          if (ZC) {
-            const QC = bC || CC.toString();
-            ZC(`Error while trying to load image: ${0===QC.indexOf("http")||QC.length<=128?QC:QC.slice(0,128)+"..."}`, zC)
-          }
-        };
-        if (WC?._features.forceBitmapOverHTMLImageElement) return iC(bC, (QC => {
-          WC.createImageBitmap(new Blob([QC], {
-            type: fC
-          }), {
-            premultiplyAlpha: "none",
-            colorSpaceConversion: "none",
-            ...FC
-          }).then((CC => {
-            zC(CC), NC && URL.revokeObjectURL(bC)
-          })).catch((zC => {
-            ZC && ZC("Error while trying to load image: " + CC, zC)
-          }))
-        }), void 0, wC || void 0, !0, ((CC, zC) => {
-          MC(zC)
-        })), null;
-        const SC = new Image;
-        if (xC.getRequiredSize) {
-          const zC = xC.getRequiredSize(CC);
-          zC.width && (SC.width = zC.width), zC.height && (SC.height = zC.height)
-        }
-        AC(bC, SC);
-        const pC = [],
-          PC = () => {
-            for (const CC of pC) CC.target.removeEventListener(CC.name, CC.handler);
-            pC.length = 0
-          };
-        pC.push({
-          target: SC,
-          name: "load",
-          handler: () => {
-            PC(), zC(SC), NC && SC.src && URL.revokeObjectURL(SC.src)
-          }
-        }), pC.push({
-          target: SC,
-          name: "error",
-          handler: CC => {
-            PC(), MC(CC), NC && SC.src && URL.revokeObjectURL(SC.src)
-          }
-        }), pC.push({
-          target: document,
-          name: "securitypolicyviolation",
-          handler: CC => {
-            if (CC.blockedURI !== SC.src || "Cg" === CC.disposition) return;
-            PC();
-            const zC = new Error(`CSP violation of policy ${CC.effectiveDirective} ${CC.blockedURI}. Current policy is ${CC.originalPolicy}`);
-            qC.c.UseFallbackTexture = !1, MC(zC), NC && SC.src && URL.revokeObjectURL(SC.src), SC.src = ""
-          }
-        }), (() => {
-          for (const CC of pC) CC.target.addEventListener(CC.name, CC.handler)
-        })();
-        const GC = "blob:" === bC.substring(0, 5),
-          JC = "data:" === bC.substring(0, 5),
-          IC = () => {
-            GC || JC || !QC.d.IsCustomRequestAvailable ? SC.src = bC : iC(bC, ((CC, zC, ZC) => {
-              const QC = new Blob([CC], {
-                  type: !fC && ZC ? ZC : fC
-                }),
-                wC = URL.createObjectURL(QC);
-              NC = !0, SC.src = wC
-            }), void 0, wC || void 0, !0, ((CC, zC) => {
-              MC(zC)
-            }))
-          },
-          vC = () => {
-            wC && wC.loadImage(bC, SC)
-          };
-        if (!GC && !JC && wC && wC.enableTexturesOffline) wC.open(vC, IC);
-        else {
-          if (-1 !== bC.indexOf("file:")) {
-            const CC = decodeURIComponent(bC.substring(5).toLowerCase());
-            if (nC.FilesToLoad[CC] && "undefined" !== typeof URL) {
-              try {
-                let zC;
-                try {
-                  zC = URL.createObjectURL(nC.FilesToLoad[CC])
-                } catch (eC) {
-                  zC = URL.createObjectURL(nC.FilesToLoad[CC])
-                }
-                SC.src = zC, NC = !0
-              } catch (hC) {
-                SC.src = ""
-              }
-              return SC
-            }
-          }
-          IC()
-        }
-        return SC
-      },
-      IC = (CC, zC, ZC, QC, wC) => {
-        const nC = new FileReader,
-          fC = {
-            onCompleteObservable: new bC.d,
-            abort: () => nC.abort()
-          };
-        return nC.onloadend = () => fC.onCompleteObservable.notifyObservers(fC), wC && (nC.onerror = () => {
-          wC(new GC(`Unable to read ${CC.name}`, CC))
-        }), nC.onload = CC => {
-          zC(CC.target.result)
-        }, ZC && (nC.onprogress = ZC), QC ? nC.readAsArrayBuffer(CC) : nC.readAsText(CC), fC
-      },
-      iC = (CC, zC, ZC, QC, wC, oC, qC) => {
-        if (CC.name) return IC(CC, zC, ZC, wC, oC ? CC => {
-          oC(void 0, CC)
-        } : void 0);
-        const FC = CC;
-        if (-1 !== FC.indexOf("file:")) {
-          let CC = decodeURIComponent(FC.substring(5).toLowerCase());
-          0 === CC.indexOf("./") && (CC = CC.substring(2));
-          const QC = nC.FilesToLoad[CC];
-          if (QC) return IC(QC, zC, ZC, wC, oC ? CC => oC(void 0, new pC(CC.message, CC.file)) : void 0)
-        }
-        const {
-          match: WC,
-          type: gC
-        } = YC(FC);
-        if (WC) {
-          const CC = {
-            onCompleteObservable: new bC.d,
-            abort: () => () => {}
-          };
-          try {
-            const CC = wC ? dC(FC) : mC(FC);
-            zC(CC, void 0, gC)
-          } catch (fC) {
-            oC ? oC(void 0, fC) : NC.c.Error(fC.message || "Failed to parse the Data URL")
-          }
-          return MC.d.SetImmediate((() => {
-            CC.onCompleteObservable.notifyObservers(CC)
-          })), CC
-        }
-        return vC(FC, ((CC, ZC) => {
-          zC(CC, ZC?.responseURL, ZC?.getResponseHeader("content-type"))
-        }), ZC, QC, wC, oC ? CC => {
-          oC(CC.request, new pC(CC.message, CC.request))
-        } : void 0, qC)
-      },
-      vC = (CC, zC, ZC, nC, fC, oC, FC) => {
-        null !== nC && (nC ?? (nC = qC.c.LastCreatedScene?.offlineProvider)), CC = RC.CleanUrl(CC), CC = RC.PreprocessUrl(CC);
-        const WC = RC.BaseUrl + CC;
-        let MC = !1;
-        const gC = {
-            onCompleteObservable: new bC.d,
-            abort: () => MC = !0
-          },
-          SC = () => {
-            let CC, bC = new QC.d,
-              nC = null;
-            const qC = () => {
-              bC && (ZC && bC.removeEventListener("progress", ZC), CC && bC.removeEventListener("readystatechange", CC), bC.removeEventListener("loadend", SC))
-            };
-            let SC = () => {
-              qC(), gC.onCompleteObservable.notifyObservers(gC), gC.onCompleteObservable.clear(), ZC = void 0, CC = null, SC = null, oC = void 0, FC = void 0, zC = void 0
-            };
-            gC.abort = () => {
-              MC = !0, SC && SC(), bC && bC.readyState !== (XMLHttpRequest.DONE || 4) && bC.abort(), null !== nC && (clearTimeout(nC), nC = null), bC = null
-            };
-            const pC = CC => {
-                const zC = CC.message || "Unknown error";
-                oC && bC ? oC(new PC(zC, bC)) : NC.c.Error(zC)
-              },
-              GC = NC => {
-                if (bC) {
-                  if (bC.open("GET", WC), FC) try {
-                    FC(bC)
-                  } catch (gC) {
-                    return void pC(gC)
-                  }
-                  fC && (bC.responseType = "arraybuffer"), ZC && bC.addEventListener("progress", ZC), SC && bC.addEventListener("loadend", SC), CC = () => {
-                    if (!MC && bC && bC.readyState === (XMLHttpRequest.DONE || 4)) {
-                      if (CC && bC.removeEventListener("readystatechange", CC), bC.status >= 200 && bC.status < 300 || 0 === bC.status && (!(0, wC.k)() || hC())) {
-                        const CC = fC ? bC.response : bC.responseText;
-                        if (null !== CC) {
-                          try {
-                            zC && zC(CC, bC)
-                          } catch (gC) {
-                            pC(gC)
-                          }
-                          return
-                        }
-                      }
-                      const ZC = RC.DefaultRetryStrategy;
-                      if (ZC) {
-                        const CC = ZC(WC, bC, NC);
-                        if (-1 !== CC) return qC(), bC = new QC.d, void(nC = setTimeout((() => GC(NC + 1)), CC))
-                      }
-                      const FC = new PC("Error status: " + bC.status + " " + bC.statusText + " - Unable to load " + WC, bC);
-                      oC && oC(FC)
-                    }
-                  }, bC.addEventListener("readystatechange", CC), bC.send()
-                }
-              };
-            GC(0)
-          };
-        if (nC && nC.enableSceneOffline && !CC.startsWith("blob:")) {
-          const QC = CC => {
-              CC && CC.status > 400 ? oC && oC(CC) : SC()
+      const ni = (0, Op.useMemo)((() => {
+          if (!ji) return null;
+          const pp = (pp, cp, Op) => {
+              var op, Ip, Sp;
+              return null !== (op = null === (Ip = ip.frequencies[pp + Ei[0]]) || void 0 === Ip || null === (Sp = Ip[cp + Ei[1]]) || void 0 === Sp ? void 0 : Sp[Op + Ei[2]]) && void 0 !== op ? op : 0
             },
-            wC = () => {
-              nC && nC.loadFile(RC.BaseUrl + CC, (CC => {
-                !MC && zC && zC(CC), gC.onCompleteObservable.notifyObservers(gC)
-              }), ZC ? CC => {
-                !MC && ZC && ZC(CC)
-              } : void 0, QC, fC)
-            };
-          nC.open(wC, QC)
-        } else SC();
-        return gC
-      },
-      eC = CC => {
-        const {
-          match: zC,
-          type: ZC
-        } = YC(CC);
-        if (zC) return ZC || void 0;
-        const QC = CC.lastIndexOf(".");
-        switch (CC.substring(QC + 1).toLowerCase()) {
-          case "glb":
-            return "model/gltf-binary";
-          case "bin":
-            return "application/octet-stream";
-          case "Wm":
-            return "model/gltf+json";
-          case "jpg":
-          case "jpeg":
-            return "image/jpeg";
-          case "png":
-            return "image/png";
-          case "webp":
-            return "image/webp";
-          case "ktx":
-            return "image/ktx";
-          case "ktx2":
-            return "image/ktx2";
-          case "avif":
-            return "image/avif";
-          default:
-            return
-        }
-      },
-      hC = () => "undefined" !== typeof location && "file:" === location.protocol,
-      KC = CC => SC.test(CC),
-      YC = CC => {
-        const zC = SC.exec(CC);
-        if (null === zC || 0 === zC.length) return {
-          match: !1,
-          type: ""
-        };
-        return {
-          match: !0,
-          type: zC[0].replace("data:", "").replace(";base64,", "")
-        }
-      };
-
-    function dC(CC) {
-      return (0, oC.d)(CC.split(",")[1])
-    }
-    const mC = CC => (0, oC.f)(CC.split(",")[1]);
-    let HC;
-    const EC = (CC, zC, ZC, QC, wC, bC, nC, fC, oC, qC) => {
-      HC = {
-        DecodeBase64UrlToBinary: CC,
-        DecodeBase64UrlToString: zC,
-        DefaultRetryStrategy: ZC.DefaultRetryStrategy,
-        BaseUrl: ZC.BaseUrl,
-        CorsBehavior: ZC.CorsBehavior,
-        PreprocessUrl: ZC.PreprocessUrl,
-        IsBase64DataUrl: QC,
-        IsFileURL: wC,
-        LoadFile: bC,
-        LoadImage: nC,
-        ReadFile: fC,
-        RequestFile: oC,
-        SetCorsBehavior: qC
-      }, Object.defineProperty(HC, "DefaultRetryStrategy", {
-        get: function() {
-          return ZC.DefaultRetryStrategy
-        },
-        set: function(CC) {
-          ZC.DefaultRetryStrategy = CC
-        }
-      }), Object.defineProperty(HC, "BaseUrl", {
-        get: function() {
-          return ZC.BaseUrl
-        },
-        set: function(CC) {
-          ZC.BaseUrl = CC
-        }
-      }), Object.defineProperty(HC, "PreprocessUrl", {
-        get: function() {
-          return ZC.PreprocessUrl
-        },
-        set: function(CC) {
-          ZC.PreprocessUrl = CC
-        }
-      }), Object.defineProperty(HC, "CorsBehavior", {
-        get: function() {
-          return ZC.CorsBehavior
-        },
-        set: function(CC) {
-          ZC.CorsBehavior = CC
-        }
-      })
-    };
-    let lC = !1;
-
-    function XC() {
-      lC || (lC = !0, EC(dC, mC, RC, KC, hC, iC, JC, IC, vC, AC), FC.e.loadFile = iC, FC.e.loadImage = JC, WC.o.loadFile = iC)
-    }
-  },
-  39889: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => fC,
-      h: () => bC,
-      k: () => nC
-    });
-    let QC = null;
-
-    function wC() {
-      if (QC) return QC;
-      const CC = new ArrayBuffer(4),
-        zC = new Float32Array(CC),
-        ZC = new Uint32Array(CC),
-        wC = new Uint32Array(512),
-        bC = new Uint32Array(512);
-      for (let QC = 0; QC < 256; ++QC) {
-        const CC = QC - 127;
-        CC < -24 ? (wC[QC] = 0, wC[256 | QC] = 32768, bC[QC] = 24, bC[256 | QC] = 24) : CC < -14 ? (wC[QC] = 1024 >> -CC - 14, wC[256 | QC] = 1024 >> -CC - 14 | 32768, bC[QC] = -CC - 1, bC[256 | QC] = -CC - 1) : CC <= 15 ? (wC[QC] = CC + 15 << 10, wC[256 | QC] = CC + 15 << 10 | 32768, bC[QC] = 13, bC[256 | QC] = 13) : CC < 128 ? (wC[QC] = 31744, wC[256 | QC] = 64512, bC[QC] = 24, bC[256 | QC] = 24) : (wC[QC] = 31744, wC[256 | QC] = 64512, bC[QC] = 13, bC[256 | QC] = 13)
-      }
-      const nC = new Uint32Array(2048),
-        fC = new Uint32Array(64),
-        oC = new Uint32Array(64);
-      for (let QC = 1; QC < 1024; ++QC) {
-        let CC = QC << 13,
-          zC = 0;
-        for (; 0 === (8388608 & CC);) CC <<= 1, zC -= 8388608;
-        CC &= -8388609, zC += 947912704, nC[QC] = CC | zC
-      }
-      for (let QC = 1024; QC < 2048; ++QC) nC[QC] = 939524096 + (QC - 1024 << 13);
-      for (let QC = 1; QC < 31; ++QC) fC[QC] = QC << 23;
-      fC[31] = 1199570944, fC[32] = 2147483648;
-      for (let QC = 33; QC < 63; ++QC) fC[QC] = 2147483648 + (QC - 32 << 23);
-      fC[63] = 3347054592;
-      for (let QC = 1; QC < 64; ++QC) 32 !== QC && (oC[QC] = 1024);
-      return QC = {
-        floatView: zC,
-        uint32View: ZC,
-        baseTable: wC,
-        shiftTable: bC,
-        mantissaTable: nC,
-        exponentTable: fC,
-        offsetTable: oC
-      }, QC
-    }
-    const bC = 65504;
-
-    function nC(CC) {
-      const zC = wC();
-      zC.floatView[0] = CC;
-      const ZC = zC.uint32View[0],
-        QC = ZC >> 23 & 511;
-      return zC.baseTable[QC] + ((8388607 & ZC) >> zC.shiftTable[QC])
-    }
-
-    function fC(CC) {
-      const zC = wC();
-      return zC.uint32View[0] = zC.mantissaTable[zC.offsetTable[CC >> 10] + (1023 & CC)] + zC.exponentTable[CC >> 10], zC.floatView[0]
-    }
-  },
-  39878: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => bC,
-      f: () => wC,
-      i: () => QC
-    });
-    const QC = CC => {
-        const zC = ArrayBuffer.isView(CC) ? new Uint8Array(CC.buffer, CC.byteOffset, CC.byteLength) : new Uint8Array(CC);
-        return "function" === typeof zC.toBase64 ? zC.toBase64() : function(CC) {
-          const zC = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
-          let ZC, QC, wC, bC, nC, fC, oC, qC = "",
-            FC = 0;
-          for (; FC < CC.length;) ZC = CC[FC++], QC = FC < CC.length ? CC[FC++] : Number.NaN, wC = FC < CC.length ? CC[FC++] : Number.NaN, bC = ZC >> 2, nC = (3 & ZC) << 4 | QC >> 4, fC = (15 & QC) << 2 | wC >> 6, oC = 63 & wC, isNaN(QC) ? fC = oC = 64 : isNaN(wC) && (oC = 64), qC += zC.charAt(bC) + zC.charAt(nC) + zC.charAt(fC) + zC.charAt(oC);
-          return qC
-        }(zC)
-      },
-      wC = CC => atob(CC),
-      bC = CC => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(CC).buffer : function(CC) {
-        const zC = wC(CC),
-          ZC = zC.length,
-          QC = new Uint8Array(new ArrayBuffer(ZC));
-        for (let wC = 0; wC < ZC; wC++) QC[wC] = zC.charCodeAt(wC);
-        return QC.buffer
-      }(CC)
-  },
-  39712: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => wC,
-      g: () => nC
-    });
-    let QC = [];
-    class wC {
-      static SetImmediate(CC) {
-        0 === QC.length && setTimeout((() => {
-          const CC = QC;
-          QC = [];
-          for (const zC of CC) zC()
-        }), 1), QC.push(CC)
-      }
-    }
-
-    function bC(CC, zC, ZC) {
-      try {
-        if (CC()) return zC(), !0
-      } catch (QC) {
-        return ZC?.(QC), !0
-      }
-      return !1
-    }
-    const nC = function(CC, zC, ZC) {
-      let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
-        wC = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
-        nC = arguments.length > 6 ? arguments[6] : void 0;
-      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && bC(CC, zC, ZC)) return null;
-      const fC = setInterval((() => {
-        bC(CC, zC, ZC) ? clearInterval(fC) : (wC -= QC, wC < 0 && (clearInterval(fC), ZC?.(new Error("Operation timed out after maximum retries. " + (nC || "")), !0)))
-      }), QC);
-      return () => clearInterval(fC)
-    }
-  },
-  39867: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => QC
-    });
-    class QC {
-      constructor() {
-        this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
-      }
-      static get IsCustomRequestAvailable() {
-        return Object.keys(QC.CustomRequestHeaders).length > 0 || QC.CustomRequestModifiers.length > 0
-      }
-      static _CleanUrl(CC) {
-        return CC = (CC = CC.replace("file:http:", "http:")).replace("file:https:", "https:")
-      }
-      static _ShouldSkipRequestModifications(CC) {
-        return QC.SkipRequestModificationForBabylonCDN && (CC.includes("preview.babylonjs.com") || CC.includes("cdn.babylonjs.com"))
-      }
-      static _CollectCustomizations(CC) {
-        const zC = {
-          ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
-        };
-        if (QC._ShouldSkipRequestModifications(CC)) return {
-          url: CC,
-          headers: zC
-        };
-        for (const wC in QC.CustomRequestHeaders) {
-          const CC = QC.CustomRequestHeaders[wC];
-          CC && (zC[wC] = CC)
-        }
-        const ZC = {
-          setRequestHeader: (CC, ZC) => {
-            zC[CC] = ZC
+            Op = function(pp, ip, cp, Op) {
+              let op = 0,
+                Ip = 1 / 0;
+              for (const Ap of [0, 1, 2]) {
+                if (0 === ip[Ap]) {
+                  if (pp[Ap] < 0 || pp[Ap] > cp[Ap]) return null;
+                  continue
+                }
+                const Op = (0 - pp[Ap]) / ip[Ap],
+                  Sp = (cp[Ap] - pp[Ap]) / ip[Ap];
+                op = Math.max(op, Math.min(Op, Sp)), Ip = Math.min(Ip, Math.max(Op, Sp))
+              }
+              if (op > Ip) return null;
+              const Sp = [0, 1, 2].map((Op => Math.min(cp[Op] - 1, Math.max(0, Math.floor(pp[Op] + ip[Op] * op))))),
+                xp = [0, 1, 2].map((pp => Math.sign(ip[pp]))),
+                Lp = [0, 1, 2].map((cp => {
+                  if (0 === xp[cp]) return 1 / 0;
+                  return ((xp[cp] > 0 ? Sp[cp] + 1 : Sp[cp]) - pp[cp]) / ip[cp]
+                })),
+                Yp = [0, 1, 2].map((pp => 0 === xp[pp] ? 1 / 0 : Math.abs(1 / ip[pp])));
+              let Dp = null;
+              for (;;) {
+                const pp = Op(Sp[0], Sp[1], Sp[2]);
+                if (pp >= 1) return Sp;
+                pp > 0 && (Dp = [Sp[0], Sp[1], Sp[2]]);
+                const ip = Lp[0] < Lp[1] ? Lp[0] < Lp[2] ? 0 : 2 : Lp[1] < Lp[2] ? 1 : 2;
+                if (Lp[ip] > Ip) return Dp;
+                if (Sp[ip] += xp[ip], Lp[ip] += Yp[ip], Sp[ip] < 0 || Sp[ip] >= cp[ip]) return Dp
+              }
+            }(bi.position, ci(bi), Qi, ((ip, Op, op) => (0, dp.u)(pp(ip, Op, op), cp, Qp)));
+          return null === Op ? null : {
+            x: Op[0] + Ei[0],
+            y: Op[1] + Ei[1],
+            z: Op[2] + Ei[2],
+            value: pp(Op[0], Op[1], Op[2])
           }
-        };
-        for (const wC of QC.CustomRequestModifiers) {
-          if (QC._ShouldSkipRequestModifications(CC)) break;
-          const zC = wC(ZC, CC);
-          "string" === typeof zC && (CC = zC)
+        }), [ji, ip, Ei, bi, Qi, cp, Qp]),
+        {
+          keyHandlers: Fi
+        } = (0, ep.f)({
+          isEnabled: ji,
+          claimedKeyCodes: Xp,
+          RP: pp => {
+            Ci((ip => function(pp, ip) {
+              const cp = [Math.sin(pp.heading), 0, Math.cos(pp.heading)],
+                Op = Li(Li(Yi(cp, ip.forward), Yi(Oi(pp.heading), ip.right)), [0, ip.up, 0]);
+              return {
+                ...pp,
+                position: Li(pp.position, Op)
+              }
+            }(null !== ip && void 0 !== ip ? ip : ai.current.fittedView, pp)))
+          },
+          onZoomChange: mi
+        });
+      (0, Op.useEffect)((() => {
+        const pp = Ai.current;
+        if (!pp) return;
+        let ip;
+        try {
+          ip = function(pp, ip) {
+            const cp = new op.d(pp, !0, {
+                stencil: !1
+              }, !0),
+              Op = new Ip.c(cp),
+              [Wp, yp, Up] = dp.J;
+            Op.clearColor = new Yp.b(Wp / 255, yp / 255, Up / 255, 1);
+            const wp = new Sp.b("Heatmap3DCamera", Dp.Zy.Zero(), Op);
+            wp.fov = ip, wp.minZ = .05;
+            const vp = new xp.d("Heatmap3DLight", new Dp.Zy(.4, 1, -.6), Op);
+            vp.diffuse = Yp.Color3.White(), vp.groundColor = Yp.Color3.Black(), vp.specular = Yp.Color3.Black();
+            const tp = new Lp.StandardMaterial("Heatmap3DCellMaterial", Op);
+            tp.diffuseColor = new Yp.Color3(.4, .4, .4), tp.emissiveColor = new Yp.Color3(.62, .62, .62), tp.specularColor = Yp.Color3.Black();
+            const Hp = (0, Ap.e)("Heatmap3DCells", {
+              size: 1
+            }, Op);
+            Hp.material = tp, Hp.Ow = !1, Hp.Gy = !0, Hp.isVisible = !1;
+            const ep = (0, Ap.e)("Heatmap3DTranslucentCells", {
+              size: 1
+            }, Op);
+            ep.material = tp, ep.hasVertexAlpha = !0, ep.Ow = !1, ep.Gy = !0, ep.isVisible = !1;
+            const jp = new Lp.StandardMaterial("Heatmap3DSchematicMaterial", Op);
+            jp.diffuseColor = new Yp.Color3(.6, .6, .6), jp.emissiveColor = new Yp.Color3(.4, .4, .4), jp.specularColor = Yp.Color3.Black();
+            const kp = (0, Ap.e)("Heatmap3DSchematicBlocks", {
+              size: 1
+            }, Op);
+            kp.material = jp, kp.Ow = !1, kp.Gy = !0, kp.isVisible = !1;
+            const mp = (0, Pp.b)("Heatmap3DTarget", {
+              lines: ii([-.52, -.52, -.52], [.52, .52, .52])
+            }, Op);
+            return mp.color = new Yp.Color3(.06, .14, .23), mp.renderingGroupId = 1, mp.Ow = !1, mp.isVisible = !1, {
+              engine: cp,
+              pw: Op,
+              camera: wp,
+              cells: Hp,
+              translucentCells: ep,
+              translucent: {
+                rc: new Float32Array(0),
+                colours: new Float32Array(0),
+                count: 0
+              },
+              translucentSortedFrom: null,
+              schematicBlocks: kp,
+              targetOutline: mp,
+              chunkGrid: null,
+              chunkGridCentre: null,
+              chunkGridOrigin: null,
+              targetFieldOfView: ip,
+              needsRender: !0
+            }
+          }(pp, ai.current.fieldOfView)
+        } catch (cp) {
+          return console.error("Failed to start the 3D heatmap", cp), void Ui(!0)
         }
-        return {
-          url: CC,
-          headers: zC
+        return Pi.current = ip, ip.engine.runRenderLoop((() => {
+          const pp = ip.camera;
+          pp.fov !== ip.targetFieldOfView && (pp.fov += (ip.targetFieldOfView - pp.fov) * (pp.fov > ip.targetFieldOfView ? .3 : .2), Math.abs(ip.targetFieldOfView - pp.fov) < 5e-4 && (pp.fov = ip.targetFieldOfView), ip.needsRender = !0), ip.needsRender && (ip.pw.render(), ip.needsRender = !ip.pw.isReady() || !ip.engine.areAllEffectsReady())
+        })), () => {
+          Pi.current = null, ip.engine.dispose()
         }
-      }
-      static async FetchAsync(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const ZC = zC.method ?? "GET";
-        if ("undefined" !== typeof fetch) {
+      }), []), (0, Op.useEffect)((() => {
+        const pp = Ai.current;
+        if (!pp) return;
+        const ip = () => {
+            di.current = !1, vi(document.pointerLockElement === pp)
+          },
+          cp = () => {
+            di.current && (di.current = !1, Hi(!1))
+          },
+          Op = ip => {
+            const cp = !ai.current.canLock && document.activeElement === pp && 0 !== (1 & ip.buttons);
+            if (document.pointerLockElement !== pp && !cp) return;
+            const Op = ai.current.mouseSensitivity * qp;
+            Ci((pp => function(pp, ip, cp) {
+              const Op = 2 * Math.PI;
+              return {
+                ...pp,
+                heading: ((pp.heading + ip) % Op + Op) % Op,
+                pitch: Math.max(-Tp, Math.min(Tp, pp.pitch + cp))
+              }
+            }(null !== pp && void 0 !== pp ? pp : ai.current.fittedView, ip.movementX * Op, ip.movementY * Op)))
+          };
+        return document.addEventListener("pointerlockchange", ip), document.addEventListener("pointerlockerror", cp), document.addEventListener("pointermove", Op), () => {
+          document.removeEventListener("pointerlockchange", ip), document.removeEventListener("pointerlockerror", cp), document.removeEventListener("pointermove", Op), document.pointerLockElement === pp && (0, jp.c)()
+        }
+      }), []), (0, Op.useEffect)((() => {
+        const pp = Pi.current;
+        null !== pp && 0 !== Wi.width && 0 !== Wi.height && (pp.engine.resize(), pp.needsRender = !0)
+      }), [Wi.width, Wi.height]), (0, Op.useEffect)((() => {
+        const pp = Pi.current;
+        null !== pp && (pp.targetFieldOfView = Bi * (ki ? Rp : 1))
+      }), [Bi, ki]), (0, Op.useEffect)((() => {
+        const pp = Pi.current;
+        null !== pp && function(pp, ip, cp, Op) {
+          const op = [],
+            Ip = [],
+            Sp = [],
+            xp = [];
+          for (let Lp = 0; Lp < ip.count; Lp++) {
+            const pp = ip.values[Lp],
+              Yp = (0, dp.u)(pp, cp, Op);
+            if (Yp <= 0) continue;
+            const [Dp, Ap, Pp] = (0, dp.n)((0, dp.F)(pp, cp)), Wp = Yp >= 1;
+            (Wp ? op : Sp).push(ip.positions[3 * Lp] + .5, ip.positions[3 * Lp + 1] + .5, ip.positions[3 * Lp + 2] + .5), (Wp ? Ip : xp).push(Dp / 255, Ap / 255, Pp / 255, Yp)
+          }
+          Kp(pp.cells, Float32Array.from(op), Float32Array.from(Ip), Ip.length / 4), pp.translucent = {
+            rc: Float32Array.from(Sp),
+            colours: Float32Array.from(xp),
+            count: xp.length / 4
+          }, pp.translucentSortedFrom = null, Vp(pp), pp.needsRender = !0
+        }(pp, Ji, cp, Qp)
+      }), [Ji, cp, Qp]), (0, Op.useEffect)((() => {
+        const pp = Pi.current;
+        null !== pp && function(pp, ip) {
+          pp.chunkGridOrigin = ip, pp.chunkGridCentre = null, sp(pp)
+        }(pp, fp.min)
+      }), [fp]), (0, Op.useEffect)((() => {
+        const pp = Pi.current;
+        null !== pp && function(pp, ip, cp) {
+          const Op = [],
+            op = [];
+          if (null !== ip) {
+            const {
+              positions: pp,
+              colours: Ip,
+              count: Sp
+            } = ip.surface;
+            for (let ip = 0; ip < Sp; ip++) {
+              const Sp = [pp[3 * ip], pp[3 * ip + 1], pp[3 * ip + 2]];
+              [0, 1, 2].every((pp => Sp[pp] >= cp.min[pp] - lp && Sp[pp] <= cp.max[pp] + lp)) && (Op.push(Sp[0] - cp.min[0] + .5, Sp[1] - cp.min[1] + .5, Sp[2] - cp.min[2] + .5), op.push(Ip[3 * ip] / 255, Ip[3 * ip + 1] / 255, Ip[3 * ip + 2] / 255, 1))
+            }
+          }
+          Kp(pp.schematicBlocks, Float32Array.from(Op), Float32Array.from(op), op.length / 4), pp.needsRender = !0
+        }(pp, hp, fp)
+      }), [hp, fp]), (0, Op.useEffect)((() => {
+        const pp = Pi.current;
+        null !== pp && null !== pp.chunkGrid && (pp.chunkGrid.isVisible = Ri, pp.needsRender = !0)
+      }), [Ri, fp]), (0, Op.useEffect)((() => {
+        const pp = Pi.current;
+        null !== pp && function(pp, ip, cp) {
           const {
-            url: wC,
-            headers: bC
-          } = QC._CollectCustomizations(QC._CleanUrl(CC), zC.headers ?? {});
-          return await fetch(wC, {
-            method: ZC,
-            headers: bC,
-            body: zC.body ?? void 0
-          })
+            camera: Op
+          } = pp;
+          Op.position.set(ip.position[0], ip.position[1], ip.position[2]), Op.rotation.set(ip.pitch, ip.heading, 0);
+          const op = (Jp + 1) * yp.g.Qy * Math.sqrt(3);
+          Op.maxZ = Math.max(op, Math.hypot(...Li(ip.position, Yi(Si({
+            min: [0, 0, 0],
+            max: cp
+          }), -1))) + 2 * Math.hypot(...cp)), sp(pp), Vp(pp), pp.needsRender = !0
+        }(pp, bi, Qi)
+      }), [bi, Qi]), (0, Op.useEffect)((() => {
+        const pp = Pi.current;
+        null !== pp && (pp.targetOutline.isVisible = null !== ni, null !== ni && pp.targetOutline.position.set(ni.x - Ei[0] + .5, ni.y - Ei[1] + .5, ni.z - Ei[2] + .5), pp.needsRender = !0)
+      }), [ni, Ei]);
+      return (0, kp.jsxs)("div", {
+        className: "StudioHeatmapMap StudioHeatmap3D",
+        ref: Di,
+        children: [(0, kp.jsx)("canvas", {
+          className: "StudioHeatmapMapCanvas",
+          ref: Ai,
+          style: {
+            width: `${Wi.width}px`,
+            height: `${Wi.height}px`
+          },
+          tabIndex: 0,
+          "aria-label": Zp("3D heatmap"),
+          onClick: () => {
+            const pp = Ai.current;
+            if (null === pp) return;
+            if (pp.focus({
+                preventScroll: !0
+              }), wi || !ti) return;
+            const ip = pp.requestPointerLock();
+            ip instanceof Promise ? ip.catch((pp => {
+              pp instanceof DOMException && ("WrongDocumentError" === pp.name || "NotSupportedError" === pp.name) && Hi(!1)
+            })) : di.current = !0
+          },
+          ...Fi,
+          onKeyDown: pp => {
+            if (ji && Mp.has(pp.code)) return pp.preventDefault(), void(() => {
+              const pp = Ai.current;
+              null !== pp && document.pointerLockElement === pp ? (0, jp.c)() : null === pp || void 0 === pp || pp.blur()
+            })();
+            const ip = Cp[pp.code];
+            return ji && void 0 !== ip ? (pp.preventDefault(), void np(ip)) : ji && (0, ep.b)("replayPlayPause", pp.code) && !(0, ep.b)("Zoom", pp.code) ? (pp.preventDefault(), void(pp.repeat || gp())) : ji && pp.code === Ep ? (pp.preventDefault(), void Fp()) : ji && pp.code === Np ? (pp.preventDefault(), void Ci(null)) : ji && pp.code === Bp ? (pp.preventDefault(), void qi((pp => !pp))) : void Fi.onKeyDown(pp)
+          },
+          onFocus: () => {
+            ui(!0)
+          },
+          onBlur: () => {
+            ui(!1), Fi.onBlur()
+          }
+        }), yi && (0, kp.jsx)("div", {
+          className: "StudioHeatmap3DUnavailable SmallTextLight",
+          children: Zp("3D view isn't available in this browser.")
+        }), ji && (0, kp.jsx)("div", {
+          className: "StudioHeatmap3DCrosshair"
+        }), (0, kp.jsx)("div", {
+          className: "StudioHeatmap3DCoordinates SmallTextLight",
+          children: bi.position.map(((pp, ip) => (pp + Ei[ip]).toFixed(2))).join(" ")
+        }), Ri && (0, kp.jsx)(zp, {
+          heading: bi.heading,
+          pitch: bi.pitch,
+          onViewFrom: pp => {
+            const ip = Yi(pp, -1),
+              cp = 0 === ip[1] ? {
+                heading: Math.atan2(ip[0], ip[2]),
+                pitch: 0
+              } : {
+                heading: bi.heading,
+                pitch: ip[1] < 0 ? Tp : -Tp
+              };
+            Ci(oi(Ti, Ni, Bi, cp))
+          },
+          onTurn: (pp, ip) => {
+            Ci((cp => function(pp, ip, cp, Op) {
+              return Ii(pp, ip, {
+                heading: pp.heading + cp * Gp,
+                pitch: Math.max(-Tp, Math.min(Tp, pp.pitch + Op * Gp))
+              })
+            }(null !== cp && void 0 !== cp ? cp : ai.current.fittedView, Si(Ti), pp, ip)))
+          },
+          onFlip: () => {
+            Ci((pp => function(pp, ip) {
+              return Ii(pp, ip, {
+                heading: pp.heading + Math.PI,
+                pitch: -pp.pitch
+              })
+            }(null !== pp && void 0 !== pp ? pp : ai.current.fittedView, Si(Ti))))
+          }
+        }), null !== ni && (0, kp.jsx)("div", {
+          className: "StudioHeatmapMapReadout SmallTextLight",
+          children: null === rp ? Zp("studio:heatmapBlockReadout", {
+            x: ni.x,
+            y: ni.y,
+            z: ni.z,
+            count: (0, Wp.O)(ni.value)
+          }) : rp(ni.x, ni.y, ni.z, ni.value)
+        }), (0, kp.jsxs)("div", {
+          className: "StudioHeatmapMapControls",
+          children: [ap, (0, kp.jsx)(tp.S, {
+            active: null === Mi,
+            onClick: () => {
+              Ci(null)
+            },
+            children: (0, kp.jsx)(Hp.d, {
+              name: "eye"
+            })
+          })]
+        })]
+      })
+    }
+
+    function zp(pp) {
+      let {
+        heading: ip,
+        pitch: cp,
+        onViewFrom: op,
+        onTurn: Ip,
+        onFlip: Sp
+      } = pp;
+      const {
+        t: xp
+      } = (0, Up.H)(), Lp = (0, Op.useRef)(null), Yp = ci({
+        heading: ip,
+        pitch: cp
+      }), Dp = Oi(ip), Ap = Ai(Yp, Dp), Pp = np + Fp + 2, Wp = ap.flatMap((pp => [1, -1].map((ip => {
+        const cp = Yi(pp.direction, ip);
+        return {
+          ...pp,
+          sign: ip,
+          direction: cp,
+          endX: Pp + Di(cp, Dp) * np,
+          endY: Pp - Di(cp, Ap) * np,
+          depth: Di(cp, Yp)
         }
-        return await new Promise(((wC, bC) => {
-          const nC = new QC;
-          nC.responseType = "arraybuffer", nC.addEventListener("readystatechange", (() => {
-            if (4 === nC.readyState)
-              if (nC.status >= 200 && nC.status < 300) {
-                const CC = "undefined" !== typeof Headers ? new Headers : void 0,
-                  zC = nC.getResponseHeader("Content-Type");
-                zC && CC && CC.set("Content-Type", zC), "undefined" !== typeof Response ? wC(new Response(nC.response, {
-                  status: nC.status,
-                  statusText: nC.statusText,
-                  headers: CC
-                })) : wC({
-                  ok: !0,
-                  status: nC.status,
-                  statusText: nC.statusText,
-                  headers: {
-                    get: CC => nC.getResponseHeader(CC)
-                  },
-                  arrayBuffer: async () => await Promise.resolve(nC.response)
-                })
-              } else bC(new Error(`HTTP ${nC.status} loading '${nC.requestURL}': ${nC.statusText}`))
-          })), nC.open(ZC, CC, zC.headers), nC.send(zC.body ?? null)
-        }))
+      })))).sort(((pp, ip) => ip.depth - pp.depth));
+      return (0, kp.jsxs)("svg", {
+        className: "StudioHeatmap3DGizmo",
+        width: 2 * Pp,
+        height: 2 * Pp,
+        "aria-hidden": !0,
+        onPointerDown: pp => {
+          var ip, cp;
+          pp.currentTarget.setPointerCapture(pp.pointerId);
+          const Op = pp.target,
+            op = Op.getAttribute("data-end");
+          Lp.current = {
+            pointerId: pp.pointerId,
+            x: pp.clientX,
+            y: pp.clientY,
+            travel: 0,
+            side: null === op ? null : null !== (ip = null === (cp = Wp[Number(op)]) || void 0 === cp ? void 0 : cp.direction) && void 0 !== ip ? ip : null,
+            isOnMiddle: Op.hasAttribute("data-middle")
+          }
+        },
+        onPointerMove: pp => {
+          const ip = Lp.current;
+          if (null === ip || ip.pointerId !== pp.pointerId) return;
+          const cp = pp.clientX - ip.x,
+            Op = pp.clientY - ip.y;
+          ip.x = pp.clientX, ip.y = pp.clientY, ip.travel += Math.abs(cp) + Math.abs(Op), ip.travel >= rp && Ip(cp, Op)
+        },
+        onPointerUp: pp => {
+          const ip = Lp.current;
+          Lp.current = null, null === ip || ip.pointerId !== pp.pointerId || ip.travel >= rp || (null !== ip.side ? op(ip.side) : ip.isOnMiddle && Sp())
+        },
+        onPointerCancel: () => {
+          Lp.current = null
+        },
+        children: [Wp.map(((pp, ip) => {
+          const cp = pp.sign > 0;
+          return (0, kp.jsxs)("g", {
+            children: [(0, kp.jsx)("line", {
+              x1: Pp,
+              y1: Pp,
+              x2: pp.endX,
+              y2: pp.endY,
+              stroke: pp.colour,
+              strokeOpacity: cp ? 1 : .5,
+              strokeWidth: 2,
+              strokeLinecap: "round"
+            }), (0, kp.jsx)("circle", {
+              className: "StudioHeatmap3DGizmoEnd",
+              "data-end": ip,
+              cx: pp.endX,
+              cy: pp.endY,
+              r: cp ? Fp : Fp - 1,
+              fill: pp.colour,
+              fillOpacity: cp ? 1 : .3,
+              stroke: pp.colour,
+              strokeWidth: cp ? 0 : 1.5,
+              children: (0, kp.jsx)("title", {
+                children: `${xp("View from")} ${cp?"+":"\u2212"}${pp.name}`
+              })
+            }), cp && (0, kp.jsx)("text", {
+              pointerEvents: "none",
+              x: pp.endX,
+              y: pp.endY,
+              fill: "#151515",
+              fontSize: 9,
+              fontWeight: "bold",
+              textAnchor: "middle",
+              dominantBaseline: "central",
+              children: pp.name
+            })]
+          }, `${cp?"+":"-"}${pp.name}`)
+        })), (0, kp.jsx)("circle", {
+          className: "StudioHeatmap3DGizmoEnd",
+          "data-middle": !0,
+          cx: Pp,
+          cy: Pp,
+          r: gp,
+          fill: "#d0d0d0",
+          fillOpacity: .85,
+          children: (0, kp.jsx)("title", {
+            children: xp("View from the opposite side")
+          })
+        })]
+      })
+    }
+
+    function sp(pp) {
+      var ip, cp, Op;
+      const {
+        chunkGridOrigin: op,
+        camera: Ip
+      } = pp;
+      if (null === op) return;
+      const Sp = [Ip.position.x, Ip.position.y, Ip.position.z],
+        xp = [0, 2].map((pp => Math.floor((Sp[pp] + op[pp]) / yp.g.Qy))),
+        Lp = pp.chunkGridCentre;
+      if (null !== Lp && Lp.every(((pp, ip) => pp === xp[ip]))) return;
+      const Ap = null === (ip = null === (cp = pp.chunkGrid) || void 0 === cp ? void 0 : cp.isVisible) || void 0 === ip || ip;
+      null === (Op = pp.chunkGrid) || void 0 === Op || Op.dispose();
+      const [Wp, Up] = [0, 2].map(((pp, ip) => {
+        const cp = [];
+        for (let Op = xp[ip] - Jp; Op <= xp[ip] + Jp + 1; Op++) cp.push(Op * yp.g.Qy - op[pp]);
+        return cp
+      })), wp = -op[1], vp = [];
+      for (const Yp of Up) vp.push([new Dp.Zy(Wp[0], wp, Yp), new Dp.Zy(Wp[Wp.length - 1], wp, Yp)]);
+      for (const Yp of Wp) vp.push([new Dp.Zy(Yp, wp, Up[0]), new Dp.Zy(Yp, wp, Up[Up.length - 1])]);
+      const tp = (0, Pp.b)("Heatmap3DChunkGrid", {
+        lines: vp
+      }, pp.pw);
+      tp.color = new Yp.Color3(.45, .6, .78), tp.Ow = !1, tp.isVisible = Ap, pp.chunkGrid = tp, pp.chunkGridCentre = xp, pp.needsRender = !0
+    }
+
+    function Kp(pp, ip, cp, Op) {
+      pp.I9("matrix", function(pp, ip) {
+        const cp = new Float32Array(16 * ip);
+        for (let Op = 0; Op < ip; Op++) {
+          const ip = 16 * Op;
+          cp[ip] = 1, cp[ip + 5] = 1, cp[ip + 10] = 1, cp[ip + 12] = pp[3 * Op], cp[ip + 13] = pp[3 * Op + 1], cp[ip + 14] = pp[3 * Op + 2], cp[ip + 15] = 1
+        }
+        return cp
+      }(ip, Op), 16, !0), pp.I9("color", cp, 4, !0), pp.isVisible = Op > 0
+    }
+
+    function Vp(pp) {
+      const {
+        camera: ip,
+        translucent: cp
+      } = pp, Op = [ip.position.x, ip.position.y, ip.position.z], op = pp.translucentSortedFrom;
+      if (null !== op && Math.hypot(Op[0] - op[0], Op[1] - op[1], Op[2] - op[2]) < Qp) return;
+      pp.translucentSortedFrom = Op;
+      const Ip = new Float64Array(cp.count),
+        Sp = new Uint32Array(cp.count);
+      for (let Yp = 0; Yp < cp.count; Yp++) {
+        const pp = cp.rc[3 * Yp] - Op[0],
+          ip = cp.rc[3 * Yp + 1] - Op[1],
+          op = cp.rc[3 * Yp + 2] - Op[2];
+        Ip[Yp] = pp * pp + ip * ip + op * op, Sp[Yp] = Yp
       }
-      get requestURL() {
-        return this._requestURL
-      }
-      get onprogress() {
-        return this._xhr.onprogress
-      }
-      set onprogress(CC) {
-        this._xhr.onprogress = CC
-      }
-      get readyState() {
-        return this._xhr.readyState
-      }
-      get status() {
-        return this._xhr.status
-      }
-      get statusText() {
-        return this._xhr.statusText
-      }
-      get response() {
-        return this._xhr.response
-      }
-      get responseURL() {
-        return this._xhr.responseURL
-      }
-      get responseText() {
-        return this._xhr.responseText
-      }
-      get responseType() {
-        return this._xhr.responseType
-      }
-      set responseType(CC) {
-        this._xhr.responseType = CC
-      }
-      get timeout() {
-        return this._xhr.timeout
-      }
-      set timeout(CC) {
-        this._xhr.timeout = CC
-      }
-      addEventListener(CC, zC, ZC) {
-        this._xhr.addEventListener(CC, zC, ZC)
-      }
-      removeEventListener(CC, zC, ZC) {
-        this._xhr.removeEventListener(CC, zC, ZC)
-      }
-      abort() {
-        this._xhr.abort()
-      }
-      send(CC) {
-        this._xhr.send(CC)
-      }
-      open(CC, zC, ZC) {
-        const {
-          url: wC,
-          headers: bC
-        } = QC._CollectCustomizations(zC, ZC);
-        this._requestURL = QC._CleanUrl(wC), this._xhr.open(CC, this._requestURL, !0);
-        for (const QC in bC) this._xhr.setRequestHeader(QC, bC[QC])
-      }
-      setRequestHeader(CC, zC) {
-        this._xhr.setRequestHeader(CC, zC)
-      }
-      getResponseHeader(CC) {
-        return this._xhr.getResponseHeader(CC)
+      Sp.sort(((pp, ip) => Ip[ip] - Ip[pp]));
+      const xp = new Float32Array(3 * cp.count),
+        Lp = new Float32Array(4 * cp.count);
+      Sp.forEach(((pp, ip) => {
+        xp.set(cp.rc.subarray(3 * pp, 3 * pp + 3), 3 * ip), Lp.set(cp.colours.subarray(4 * pp, 4 * pp + 4), 4 * ip)
+      })), Kp(pp.translucentCells, xp, Lp, cp.count), pp.needsRender = !0
+    }
+
+    function ii(pp, ip) {
+      const cp = (cp, Op, op) => new Dp.Zy(0 === cp ? pp[0] : ip[0], 0 === Op ? pp[1] : ip[1], 0 === op ? pp[2] : ip[2]),
+        Op = [];
+      for (const op of [0, 1])
+        for (const pp of [0, 1]) Op.push([cp(0, op, pp), cp(1, op, pp)], [cp(op, 0, pp), cp(op, 1, pp)], [cp(op, pp, 0), cp(op, pp, 1)]);
+      return Op
+    }
+
+    function ci(pp) {
+      return [Math.sin(pp.heading) * Math.cos(pp.pitch), -Math.sin(pp.pitch), Math.cos(pp.heading) * Math.cos(pp.pitch)]
+    }
+
+    function Oi(pp) {
+      return [Math.cos(pp), 0, -Math.sin(pp)]
+    }
+
+    function oi(pp, ip, cp) {
+      let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {
+        heading: fp,
+        pitch: bp
+      };
+      const op = [pp.max[0] - pp.min[0], pp.max[1] - pp.min[1], pp.max[2] - pp.min[2]],
+        Ip = ci(Op),
+        Sp = Oi(Op.heading),
+        xp = Ai(Ip, Sp),
+        Lp = Math.tan(cp / 2),
+        Yp = Lp * ip;
+      let Dp = 1;
+      for (const Ap of [-op[0] / 2, op[0] / 2])
+        for (const pp of [-op[1] / 2, op[1] / 2])
+          for (const ip of [-op[2] / 2, op[2] / 2]) {
+            const cp = [Ap, pp, ip],
+              Op = Di(cp, Ip);
+            Dp = Math.max(Dp, Math.abs(Di(cp, Sp)) / Yp - Op, Math.abs(Di(cp, xp)) / Lp - Op)
+          }
+      return {
+        position: Li([pp.min[0] + op[0] / 2, pp.min[1] + op[1] / 2, pp.min[2] + op[2] / 2], Yi(Ip, -Dp * hp)),
+        heading: Op.heading,
+        pitch: Op.pitch
       }
     }
-    QC.CustomRequestHeaders = {}, QC.CustomRequestModifiers = new Array, QC.SkipRequestModificationForBabylonCDN = !0
+
+    function Ii(pp, ip, cp) {
+      const Op = xi(pp),
+        op = xi(cp),
+        Ip = Li(pp.position, Yi(ip, -1)),
+        Sp = [0, 1, 2].reduce(((pp, ip) => Li(pp, Yi(op[ip], Di(Ip, Op[ip])))), [0, 0, 0]);
+      return {
+        position: Li(ip, Sp),
+        heading: cp.heading,
+        pitch: cp.pitch
+      }
+    }
+
+    function Si(pp) {
+      return Yi(Li(pp.min, pp.max), .5)
+    }
+
+    function xi(pp) {
+      const ip = ci(pp),
+        cp = Oi(pp.heading);
+      return [ip, cp, Ai(ip, cp)]
+    }
+
+    function Li(pp, ip) {
+      return [pp[0] + ip[0], pp[1] + ip[1], pp[2] + ip[2]]
+    }
+
+    function Yi(pp, ip) {
+      return [pp[0] * ip, pp[1] * ip, pp[2] * ip]
+    }
+
+    function Di(pp, ip) {
+      return pp[0] * ip[0] + pp[1] * ip[1] + pp[2] * ip[2]
+    }
+
+    function Ai(pp, ip) {
+      return [pp[1] * ip[2] - pp[2] * ip[1], pp[2] * ip[0] - pp[0] * ip[2], pp[0] * ip[1] - pp[1] * ip[0]]
+    }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

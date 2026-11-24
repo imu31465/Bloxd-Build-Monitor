@@ -1,1119 +1,1724 @@
 export const id = 107;
 export const ids = [107];
 export const modules = {
-  4922: (CC, zC) => {
-    zC.b = function(CC, zC) {
-      if (CC && zC) {
-        var ZC = Array.isArray(zC) ? zC : zC.split(","),
-          QC = CC.name || "",
-          wC = (CC.type || "").toLowerCase(),
-          bC = wC.replace(/\/.*$/, "");
-        return ZC.some((function(CC) {
-          var zC = CC.trim().toLowerCase();
-          return "." === zC.charAt(0) ? QC.toLowerCase().endsWith(zC) : zC.endsWith("/*") ? bC === zC.replace(/\/.*$/, "") : wC === zC
-        }))
-      }
-      return !0
-    }
-  },
-  4895: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => Mz
+  5052: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Ap,
+      i: () => Dp,
+      l: () => Pp
     });
-    var QC = ZC(48),
-      wC = ZC(4903),
-      bC = ZC.n(wC);
+    cp(5054);
+    var Op = cp(1201),
+      op = cp(1049),
+      Ip = cp.n(op),
+      Sp = cp(1387),
+      xp = (cp(62), cp(4462)),
+      Lp = cp(1060),
+      Yp = cp(1112);
 
-    function nC(CC, zC, ZC, QC) {
-      return new(ZC || (ZC = Promise))((function(wC, bC) {
-        function nC(CC) {
-          try {
-            oC(QC.next(CC))
-          } catch (zC) {
-            bC(zC)
-          }
-        }
-
-        function fC(CC) {
-          try {
-            oC(QC.throw(CC))
-          } catch (zC) {
-            bC(zC)
-          }
-        }
-
-        function oC(CC) {
-          var zC;
-          CC.done ? wC(CC.value) : (zC = CC.value, zC instanceof ZC ? zC : new ZC((function(CC) {
-            CC(zC)
-          }))).then(nC, fC)
-        }
-        oC((QC = QC.apply(CC, zC || [])).next())
-      }))
-    }
-
-    function fC(CC, zC) {
-      var ZC, QC, wC, bC, nC = {
-        label: 0,
-        sent: function() {
-          if (1 & wC[0]) throw wC[1];
-          return wC[1]
-        },
-        trys: [],
-        ops: []
-      };
-      return bC = {
-        next: fC(0),
-        throw: fC(1),
-        return: fC(2)
-      }, "function" === typeof Symbol && (bC[Symbol.iterator] = function() {
-        return this
-      }), bC;
-
-      function fC(fC) {
-        return function(oC) {
-          return function(fC) {
-            if (ZC) throw new TypeError("Generator is already executing.");
-            for (; bC && (bC = 0, fC[0] && (nC = 0)), nC;) try {
-              if (ZC = 1, QC && (wC = 2 & fC[0] ? QC.return : fC[0] ? QC.throw || ((wC = QC.return) && wC.call(QC), 0) : QC.next) && !(wC = wC.call(QC, fC[1])).done) return wC;
-              switch (QC = 0, wC && (fC = [2 & fC[0], wC.value]), fC[0]) {
-                case 0:
-                case 1:
-                  wC = fC;
-                  break;
-                case 4:
-                  return nC.label++, {
-                    value: fC[1],
-                    done: !1
-                  };
-                case 5:
-                  nC.label++, QC = fC[1], fC = [0];
-                  continue;
-                case 7:
-                  fC = nC.ops.pop(), nC.trys.pop();
-                  continue;
-                default:
-                  if (!(wC = (wC = nC.trys).length > 0 && wC[wC.length - 1]) && (6 === fC[0] || 2 === fC[0])) {
-                    nC = 0;
-                    continue
-                  }
-                  if (3 === fC[0] && (!wC || fC[1] > wC[0] && fC[1] < wC[3])) {
-                    nC.label = fC[1];
-                    break
-                  }
-                  if (6 === fC[0] && nC.label < wC[1]) {
-                    nC.label = wC[1], wC = fC;
-                    break
-                  }
-                  if (wC && nC.label < wC[2]) {
-                    nC.label = wC[2], nC.ops.push(fC);
-                    break
-                  }
-                  wC[2] && nC.ops.pop(), nC.trys.pop();
-                  continue
-              }
-              fC = zC.call(CC, nC)
-            } catch (oC) {
-              fC = [6, oC], QC = 0
-            } finally {
-              ZC = wC = 0
-            }
-            if (5 & fC[0]) throw fC[1];
-            return {
-              value: fC[0] ? fC[1] : void 0,
-              done: !0
-            }
-          }([fC, oC])
-        }
-      }
-    }
-    Object.create;
-
-    function oC(CC, zC) {
-      var ZC = "function" === typeof Symbol && CC[Symbol.iterator];
-      if (!ZC) return CC;
-      var QC, wC, bC = ZC.call(CC),
-        nC = [];
-      try {
-        for (;
-          (void 0 === zC || zC-- > 0) && !(QC = bC.next()).done;) nC.push(QC.value)
-      } catch (fC) {
-        wC = {
-          error: fC
-        }
-      } finally {
-        try {
-          QC && !QC.done && (ZC = bC.return) && ZC.call(bC)
-        } finally {
-          if (wC) throw wC.error
-        }
-      }
-      return nC
-    }
-
-    function qC(CC, zC, ZC) {
-      if (ZC || 2 === arguments.length)
-        for (var QC, wC = 0, bC = zC.length; wC < bC; wC++) !QC && wC in zC || (QC || (QC = Array.prototype.slice.call(zC, 0, wC)), QC[wC] = zC[wC]);
-      return CC.concat(QC || Array.prototype.slice.call(zC))
-    }
-    Object.create;
-    "function" === typeof SuppressedError && SuppressedError;
-    var FC = new Map([
-      ["aac", "audio/aac"],
-      ["abw", "application/x-abiword"],
-      ["arc", "application/x-freearc"],
-      ["avif", "image/avif"],
-      ["avi", "video/x-msvideo"],
-      ["azw", "application/vnd.amazon.ebook"],
-      ["bin", "application/octet-stream"],
-      ["bmp", "image/bmp"],
-      ["bz", "application/x-bzip"],
-      ["bz2", "application/x-bzip2"],
-      ["cda", "application/x-cdf"],
-      ["csh", "application/x-csh"],
-      ["css", "text/css"],
-      ["csv", "text/csv"],
-      ["doc", "application/msword"],
-      ["docx", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"],
-      ["eot", "application/vnd.ms-fontobject"],
-      ["epub", "application/epub+zip"],
-      ["gz", "application/gzip"],
-      ["gif", "image/gif"],
-      ["heic", "image/heic"],
-      ["heif", "image/heif"],
-      ["htm", "text/html"],
-      ["html", "text/html"],
-      ["ico", "image/vnd.microsoft.icon"],
-      ["ics", "text/calendar"],
-      ["jar", "application/java-archive"],
-      ["jpeg", "image/jpeg"],
-      ["jpg", "image/jpeg"],
-      ["js", "text/javascript"],
-      ["json", "application/json"],
-      ["jsonld", "application/ld+json"],
-      ["mid", "audio/midi"],
-      ["midi", "audio/midi"],
-      ["mjs", "text/javascript"],
-      ["mp3", "audio/mpeg"],
-      ["mp4", "video/mp4"],
-      ["mpeg", "video/mpeg"],
-      ["mpkg", "application/vnd.apple.installer+xml"],
-      ["odp", "application/vnd.oasis.opendocument.presentation"],
-      ["ods", "application/vnd.oasis.opendocument.spreadsheet"],
-      ["odt", "application/vnd.oasis.opendocument.text"],
-      ["oga", "audio/ogg"],
-      ["ogv", "video/ogg"],
-      ["ogx", "application/ogg"],
-      ["opus", "audio/opus"],
-      ["otf", "font/otf"],
-      ["png", "image/png"],
-      ["pdf", "application/pdf"],
-      ["php", "application/x-httpd-php"],
-      ["ppt", "application/vnd.ms-powerpoint"],
-      ["pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation"],
-      ["rar", "application/vnd.rar"],
-      ["rtf", "application/rtf"],
-      ["sh", "application/x-sh"],
-      ["svg", "image/svg+xml"],
-      ["swf", "application/x-shockwave-flash"],
-      ["tar", "application/x-tar"],
-      ["tif", "image/tiff"],
-      ["tiff", "image/tiff"],
-      ["ts", "video/mp2t"],
-      ["ttf", "font/ttf"],
-      ["txt", "text/plain"],
-      ["vsd", "application/vnd.visio"],
-      ["wav", "audio/wav"],
-      ["weba", "audio/webm"],
-      ["webm", "video/webm"],
-      ["webp", "image/webp"],
-      ["woff", "font/woff"],
-      ["woff2", "font/woff2"],
-      ["xhtml", "application/xhtml+xml"],
-      ["xls", "application/vnd.ms-excel"],
-      ["xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"],
-      ["xml", "application/xml"],
-      ["xul", "application/vnd.mozilla.xul+xml"],
-      ["zip", "application/zip"],
-      ["7z", "application/x-7z-compressed"],
-      ["mkv", "video/x-matroska"],
-      ["mov", "video/quicktime"],
-      ["cq", "application/vnd.ms-outlook"]
-    ]);
-
-    function WC(CC, zC) {
-      var ZC = function(CC) {
-        var zC = CC.name;
-        if (zC && -1 !== zC.lastIndexOf(".") && !CC.type) {
-          var ZC = zC.split(".").pop().toLowerCase(),
-            QC = FC.get(ZC);
-          QC && Object.defineProperty(CC, "type", {
-            value: QC,
-            writable: !1,
-            configurable: !1,
-            enumerable: !0
-          })
-        }
-        return CC
-      }(CC);
-      if ("string" !== typeof ZC.path) {
-        var QC = CC.webkitRelativePath;
-        Object.defineProperty(ZC, "path", {
-          value: "string" === typeof zC ? zC : "string" === typeof QC && QC.length > 0 ? QC : CC.name,
-          writable: !1,
-          configurable: !1,
-          enumerable: !0
-        })
-      }
-      return ZC
-    }
-    var NC = [".DS_Store", "Thumbs.db"];
-
-    function MC(CC) {
-      return "object" === typeof CC && null !== CC
-    }
-
-    function gC(CC) {
-      return GC(CC.target.files).map((function(CC) {
-        return WC(CC)
-      }))
-    }
-
-    function SC(CC) {
-      return nC(this, void 0, void 0, (function() {
-        return fC(this, (function(zC) {
-          switch (zC.label) {
-            case 0:
-              return [4, Promise.all(CC.map((function(CC) {
-                return CC.getFile()
-              })))];
-            case 1:
-              return [2, zC.sent().map((function(CC) {
-                return WC(CC)
-              }))]
-          }
-        }))
-      }))
-    }
-
-    function pC(CC, zC) {
-      return nC(this, void 0, void 0, (function() {
-        var ZC;
-        return fC(this, (function(QC) {
-          switch (QC.label) {
-            case 0:
-              return CC.items ? (ZC = GC(CC.items).filter((function(CC) {
-                return "file" === CC.kind
-              })), "drop" !== zC ? [2, ZC] : [4, Promise.all(ZC.map(RC))]) : [3, 2];
-            case 1:
-              return [2, PC(AC(QC.sent()))];
-            case 2:
-              return [2, PC(GC(CC.files).map((function(CC) {
-                return WC(CC)
-              })))]
-          }
-        }))
-      }))
-    }
-
-    function PC(CC) {
-      return CC.filter((function(CC) {
-        return -1 === NC.indexOf(CC.name)
-      }))
-    }
-
-    function GC(CC) {
-      if (null === CC) return [];
-      for (var zC = [], ZC = 0; ZC < CC.length; ZC++) {
-        var QC = CC[ZC];
-        zC.push(QC)
-      }
-      return zC
-    }
-
-    function RC(CC) {
-      if ("function" !== typeof CC.webkitGetAsEntry) return xC(CC);
-      var zC = CC.webkitGetAsEntry();
-      return zC && zC.isDirectory ? IC(zC) : xC(CC)
-    }
-
-    function AC(CC) {
-      return CC.reduce((function(CC, zC) {
-        return qC(qC([], oC(CC), !1), oC(Array.isArray(zC) ? AC(zC) : [zC]), !1)
-      }), [])
-    }
-
-    function xC(CC) {
-      var zC = CC.getAsFile();
-      if (!zC) return Promise.reject("".concat(CC, " is not a File"));
-      var ZC = WC(zC);
-      return Promise.resolve(ZC)
-    }
-
-    function JC(CC) {
-      return nC(this, void 0, void 0, (function() {
-        return fC(this, (function(zC) {
-          return [2, CC.isDirectory ? IC(CC) : iC(CC)]
-        }))
-      }))
-    }
-
-    function IC(CC) {
-      var zC = CC.createReader();
-      return new Promise((function(CC, ZC) {
-        var QC = [];
-        ! function wC() {
-          var bC = this;
-          zC.readEntries((function(zC) {
-            return nC(bC, void 0, void 0, (function() {
-              var bC, nC, oC;
-              return fC(this, (function(fC) {
-                switch (fC.label) {
-                  case 0:
-                    if (zC.length) return [3, 5];
-                    fC.label = 1;
-                  case 1:
-                    return fC.trys.push([1, 3, , 4]), [4, Promise.all(QC)];
-                  case 2:
-                    return bC = fC.sent(), CC(bC), [3, 4];
-                  case 3:
-                    return nC = fC.sent(), ZC(nC), [3, 4];
-                  case 4:
-                    return [3, 6];
-                  case 5:
-                    oC = Promise.all(zC.map(JC)), QC.push(oC), wC(), fC.label = 6;
-                  case 6:
-                    return [2]
-                }
-              }))
-            }))
-          }), (function(CC) {
-            ZC(CC)
-          }))
-        }()
-      }))
-    }
-
-    function iC(CC) {
-      return nC(this, void 0, void 0, (function() {
-        return fC(this, (function(zC) {
-          return [2, new Promise((function(zC, ZC) {
-            CC.file((function(ZC) {
-              var QC = WC(ZC, CC.fullPath);
-              zC(QC)
-            }), (function(CC) {
-              ZC(CC)
-            }))
-          }))]
-        }))
-      }))
-    }
-    var vC = ZC(4922);
-
-    function eC(CC) {
-      return function(CC) {
-        if (Array.isArray(CC)) return HC(CC)
-      }(CC) || function(CC) {
-        if ("undefined" !== typeof Symbol && null != CC[Symbol.iterator] || null != CC["@@iterator"]) return Array.from(CC)
-      }(CC) || mC(CC) || function() {
-        throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
-      }()
-    }
-
-    function hC(CC, zC) {
-      var ZC = Object.keys(CC);
-      if (Object.getOwnPropertySymbols) {
-        var QC = Object.getOwnPropertySymbols(CC);
-        zC && (QC = QC.filter((function(zC) {
-          return Object.getOwnPropertyDescriptor(CC, zC).enumerable
-        }))), ZC.push.apply(ZC, QC)
-      }
-      return ZC
-    }
-
-    function KC(CC) {
-      for (var zC = 1; zC < arguments.length; zC++) {
-        var ZC = null != arguments[zC] ? arguments[zC] : {};
-        zC % 2 ? hC(Object(ZC), !0).forEach((function(zC) {
-          YC(CC, zC, ZC[zC])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(CC, Object.getOwnPropertyDescriptors(ZC)) : hC(Object(ZC)).forEach((function(zC) {
-          Object.defineProperty(CC, zC, Object.getOwnPropertyDescriptor(ZC, zC))
-        }))
-      }
-      return CC
-    }
-
-    function YC(CC, zC, ZC) {
-      return zC in CC ? Object.defineProperty(CC, zC, {
-        value: ZC,
-        enumerable: !0,
-        configurable: !0,
-        writable: !0
-      }) : CC[zC] = ZC, CC
-    }
-
-    function dC(CC, zC) {
-      return function(CC) {
-        if (Array.isArray(CC)) return CC
-      }(CC) || function(CC, zC) {
-        var ZC = null == CC ? null : "undefined" !== typeof Symbol && CC[Symbol.iterator] || CC["@@iterator"];
-        if (null == ZC) return;
-        var QC, wC, bC = [],
-          nC = !0,
-          fC = !1;
-        try {
-          for (ZC = ZC.call(CC); !(nC = (QC = ZC.next()).done) && (bC.push(QC.value), !zC || bC.length !== zC); nC = !0);
-        } catch (oC) {
-          fC = !0, wC = oC
-        } finally {
-          try {
-            nC || null == ZC.return || ZC.return()
-          } finally {
-            if (fC) throw wC
-          }
-        }
-        return bC
-      }(CC, zC) || mC(CC, zC) || function() {
-        throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
-      }()
-    }
-
-    function mC(CC, zC) {
-      if (CC) {
-        if ("string" === typeof CC) return HC(CC, zC);
-        var ZC = Object.prototype.toString.call(CC).slice(8, -1);
-        return "Object" === ZC && CC.constructor && (ZC = CC.constructor.name), "Map" === ZC || "Set" === ZC ? Array.from(CC) : "Arguments" === ZC || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(ZC) ? HC(CC, zC) : void 0
-      }
-    }
-
-    function HC(CC, zC) {
-      (null == zC || zC > CC.length) && (zC = CC.length);
-      for (var ZC = 0, QC = new Array(zC); ZC < zC; ZC++) QC[ZC] = CC[ZC];
-      return QC
-    }
-    var EC = "file-invalid-type",
-      lC = "file-too-large",
-      XC = "file-too-small",
-      cC = "too-many-files",
-      uC = function(CC) {
-        CC = Array.isArray(CC) && 1 === CC.length ? CC[0] : CC;
-        var zC = Array.isArray(CC) ? "one of ".concat(CC.join(", ")) : CC;
-        return {
-          code: EC,
-          message: "File type must be ".concat(zC)
-        }
-      },
-      rC = function(CC) {
-        return {
-          code: lC,
-          message: "File is larger than ".concat(CC, " ").concat(1 === CC ? "byte" : "bytes")
-        }
-      },
-      sC = function(CC) {
-        return {
-          code: XC,
-          message: "File is smaller than ".concat(CC, " ").concat(1 === CC ? "byte" : "bytes")
-        }
-      },
-      TC = {
-        code: cC,
-        message: "Too many files"
-      };
-
-    function aC(CC, zC) {
-      var ZC = "application/x-moz-file" === CC.type || (0, vC.b)(CC, zC);
-      return [ZC, ZC ? null : uC(zC)]
-    }
-
-    function tC(CC, zC, ZC) {
-      if (DC(CC.size))
-        if (DC(zC) && DC(ZC)) {
-          if (CC.size > ZC) return [!1, rC(ZC)];
-          if (CC.size < zC) return [!1, sC(zC)]
-        } else {
-          if (DC(zC) && CC.size < zC) return [!1, sC(zC)];
-          if (DC(ZC) && CC.size > ZC) return [!1, rC(ZC)]
-        } return [!0, null]
-    }
-
-    function DC(CC) {
-      return void 0 !== CC && null !== CC
-    }
-
-    function jC(CC) {
-      return "function" === typeof CC.isPropagationStopped ? CC.isPropagationStopped() : "undefined" !== typeof CC.cancelBubble && CC.cancelBubble
-    }
-
-    function yC(CC) {
-      return CC.dataTransfer ? Array.prototype.some.call(CC.dataTransfer.types, (function(CC) {
-        return "Files" === CC || "application/x-moz-file" === CC
-      })) : !!CC.target && !!CC.target.files
-    }
-
-    function LC(CC) {
-      CC.preventDefault()
-    }
-
-    function UC() {
-      for (var CC = arguments.length, zC = new Array(CC), ZC = 0; ZC < CC; ZC++) zC[ZC] = arguments[ZC];
-      return function(CC) {
-        for (var ZC = arguments.length, QC = new Array(ZC > 1 ? ZC - 1 : 0), wC = 1; wC < ZC; wC++) QC[wC - 1] = arguments[wC];
-        return zC.some((function(zC) {
-          return !jC(CC) && zC && zC.apply(void 0, [CC].concat(QC)), jC(CC)
-        }))
-      }
-    }
-
-    function BC(CC) {
-      return "audio/*" === CC || "video/*" === CC || "image/*" === CC || "text/*" === CC || /\w+\/[-+.\w]+/g.test(CC)
-    }
-
-    function OC(CC) {
-      return /^.*\.[\w]+$/.test(CC)
-    }
-    var kC = ["children"],
-      VC = ["open"],
-      Cz = ["refKey", "role", "onKeyDown", "onFocus", "onBlur", "onClick", "onDragEnter", "onDragOver", "onDragLeave", "onDrop"],
-      zz = ["refKey", "onChange", "onClick"];
-
-    function Zz(CC) {
-      return function(CC) {
-        if (Array.isArray(CC)) return bz(CC)
-      }(CC) || function(CC) {
-        if ("undefined" !== typeof Symbol && null != CC[Symbol.iterator] || null != CC["@@iterator"]) return Array.from(CC)
-      }(CC) || wz(CC) || function() {
-        throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
-      }()
-    }
-
-    function Qz(CC, zC) {
-      return function(CC) {
-        if (Array.isArray(CC)) return CC
-      }(CC) || function(CC, zC) {
-        var ZC = null == CC ? null : "undefined" !== typeof Symbol && CC[Symbol.iterator] || CC["@@iterator"];
-        if (null == ZC) return;
-        var QC, wC, bC = [],
-          nC = !0,
-          fC = !1;
-        try {
-          for (ZC = ZC.call(CC); !(nC = (QC = ZC.next()).done) && (bC.push(QC.value), !zC || bC.length !== zC); nC = !0);
-        } catch (oC) {
-          fC = !0, wC = oC
-        } finally {
-          try {
-            nC || null == ZC.return || ZC.return()
-          } finally {
-            if (fC) throw wC
-          }
-        }
-        return bC
-      }(CC, zC) || wz(CC, zC) || function() {
-        throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
-      }()
-    }
-
-    function wz(CC, zC) {
-      if (CC) {
-        if ("string" === typeof CC) return bz(CC, zC);
-        var ZC = Object.prototype.toString.call(CC).slice(8, -1);
-        return "Object" === ZC && CC.constructor && (ZC = CC.constructor.name), "Map" === ZC || "Set" === ZC ? Array.from(CC) : "Arguments" === ZC || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(ZC) ? bz(CC, zC) : void 0
-      }
-    }
-
-    function bz(CC, zC) {
-      (null == zC || zC > CC.length) && (zC = CC.length);
-      for (var ZC = 0, QC = new Array(zC); ZC < zC; ZC++) QC[ZC] = CC[ZC];
-      return QC
-    }
-
-    function nz(CC, zC) {
-      var ZC = Object.keys(CC);
-      if (Object.getOwnPropertySymbols) {
-        var QC = Object.getOwnPropertySymbols(CC);
-        zC && (QC = QC.filter((function(zC) {
-          return Object.getOwnPropertyDescriptor(CC, zC).enumerable
-        }))), ZC.push.apply(ZC, QC)
-      }
-      return ZC
-    }
-
-    function fz(CC) {
-      for (var zC = 1; zC < arguments.length; zC++) {
-        var ZC = null != arguments[zC] ? arguments[zC] : {};
-        zC % 2 ? nz(Object(ZC), !0).forEach((function(zC) {
-          oz(CC, zC, ZC[zC])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(CC, Object.getOwnPropertyDescriptors(ZC)) : nz(Object(ZC)).forEach((function(zC) {
-          Object.defineProperty(CC, zC, Object.getOwnPropertyDescriptor(ZC, zC))
-        }))
-      }
-      return CC
-    }
-
-    function oz(CC, zC, ZC) {
-      return zC in CC ? Object.defineProperty(CC, zC, {
-        value: ZC,
-        enumerable: !0,
-        configurable: !0,
-        writable: !0
-      }) : CC[zC] = ZC, CC
-    }
-
-    function qz(CC, zC) {
-      if (null == CC) return {};
-      var ZC, QC, wC = function(CC, zC) {
-        if (null == CC) return {};
-        var ZC, QC, wC = {},
-          bC = Object.keys(CC);
-        for (QC = 0; QC < bC.length; QC++) ZC = bC[QC], zC.indexOf(ZC) >= 0 || (wC[ZC] = CC[ZC]);
-        return wC
-      }(CC, zC);
-      if (Object.getOwnPropertySymbols) {
-        var bC = Object.getOwnPropertySymbols(CC);
-        for (QC = 0; QC < bC.length; QC++) ZC = bC[QC], zC.indexOf(ZC) >= 0 || Object.prototype.propertyIsEnumerable.call(CC, ZC) && (wC[ZC] = CC[ZC])
-      }
-      return wC
-    }
-    var Fz = (0, QC.forwardRef)((function(CC, zC) {
-      var ZC = CC.children,
-        wC = Mz(qz(CC, kC)),
-        bC = wC.open,
-        nC = qz(wC, VC);
-      return (0, QC.useImperativeHandle)(zC, (function() {
-        return {
-          open: bC
-        }
-      }), [bC]), QC.createElement(QC.Fragment, null, ZC(fz(fz({}, nC), {}, {
-        open: bC
-      })))
-    }));
-    Fz.displayName = "Dropzone";
-    var Wz = {
-      disabled: !1,
-      getFilesFromEvent: function(CC) {
-        return nC(this, void 0, void 0, (function() {
-          return fC(this, (function(zC) {
-            return MC(CC) && MC(CC.dataTransfer) ? [2, pC(CC.dataTransfer, CC.type)] : function(CC) {
-              return MC(CC) && MC(CC.target)
-            }(CC) ? [2, gC(CC)] : Array.isArray(CC) && CC.every((function(CC) {
-              return "getFile" in CC && "function" === typeof CC.getFile
-            })) ? [2, SC(CC)] : [2, []]
-          }))
-        }))
-      },
-      maxSize: 1 / 0,
-      minSize: 0,
-      multiple: !0,
-      maxFiles: 0,
-      preventDropOnDocument: !0,
-      noClick: !1,
-      noKeyboard: !1,
-      noDrag: !1,
-      noDragEventsBubbling: !1,
-      validator: null,
-      useFsAccessApi: !0,
-      autoFocus: !1
-    };
-    Fz.defaultProps = Wz, Fz.propTypes = {
-      children: bC().func,
-      accept: bC().objectOf(bC().arrayOf(bC().string)),
-      multiple: bC().bool,
-      preventDropOnDocument: bC().bool,
-      noClick: bC().bool,
-      noKeyboard: bC().bool,
-      noDrag: bC().bool,
-      noDragEventsBubbling: bC().bool,
-      minSize: bC().number,
-      maxSize: bC().number,
-      maxFiles: bC().number,
-      disabled: bC().bool,
-      getFilesFromEvent: bC().func,
-      onFileDialogCancel: bC().func,
-      onFileDialogOpen: bC().func,
-      useFsAccessApi: bC().bool,
-      autoFocus: bC().bool,
-      onDragEnter: bC().func,
-      onDragLeave: bC().func,
-      onDragOver: bC().func,
-      onDrop: bC().func,
-      onDropAccepted: bC().func,
-      onDropRejected: bC().func,
-      onError: bC().func,
-      validator: bC().func
-    };
-    var Nz = {
-      kY: !1,
-      isFileDialogActive: !1,
-      isDragActive: !1,
-      isDragAccept: !1,
-      isDragReject: !1,
-      acceptedFiles: [],
-      fileRejections: []
-    };
-
-    function Mz() {
-      var CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        zC = fz(fz({}, Wz), CC),
-        ZC = zC.accept,
-        wC = zC.disabled,
-        bC = zC.getFilesFromEvent,
-        nC = zC.maxSize,
-        fC = zC.minSize,
-        oC = zC.multiple,
-        qC = zC.maxFiles,
-        FC = zC.onDragEnter,
-        WC = zC.onDragLeave,
-        NC = zC.onDragOver,
-        MC = zC.onDrop,
-        gC = zC.onDropAccepted,
-        SC = zC.onDropRejected,
-        pC = zC.onFileDialogCancel,
-        PC = zC.onFileDialogOpen,
-        GC = zC.useFsAccessApi,
-        RC = zC.autoFocus,
-        AC = zC.preventDropOnDocument,
-        xC = zC.noClick,
-        JC = zC.noKeyboard,
-        IC = zC.noDrag,
-        iC = zC.noDragEventsBubbling,
-        vC = zC.onError,
-        hC = zC.validator,
-        mC = (0, QC.useMemo)((function() {
-          return function(CC) {
-            if (DC(CC)) return Object.entries(CC).reduce((function(CC, zC) {
-              var ZC = dC(zC, 2),
-                QC = ZC[0],
-                wC = ZC[1];
-              return [].concat(eC(CC), [QC], eC(wC))
-            }), []).filter((function(CC) {
-              return BC(CC) || OC(CC)
-            })).join(",")
-          }(ZC)
-        }), [ZC]),
-        HC = (0, QC.useMemo)((function() {
-          return function(CC) {
-            return DC(CC) ? [{
-              description: "Files",
-              accept: Object.entries(CC).filter((function(CC) {
-                var zC = dC(CC, 2),
-                  ZC = zC[0],
-                  QC = zC[1],
-                  wC = !0;
-                return BC(ZC) || (console.warn('Skipped "'.concat(ZC, '" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types.')), wC = !1), Array.isArray(QC) && QC.every(OC) || (console.warn('Skipped "'.concat(ZC, '" because an invalid file extension was provided.')), wC = !1), wC
-              })).reduce((function(CC, zC) {
-                var ZC = dC(zC, 2),
-                  QC = ZC[0],
-                  wC = ZC[1];
-                return KC(KC({}, CC), {}, YC({}, QC, wC))
-              }), {})
-            }] : CC
-          }(ZC)
-        }), [ZC]),
-        EC = (0, QC.useMemo)((function() {
-          return "function" === typeof PC ? PC : Sz
-        }), [PC]),
-        lC = (0, QC.useMemo)((function() {
-          return "function" === typeof pC ? pC : Sz
-        }), [pC]),
-        XC = (0, QC.useRef)(null),
-        cC = (0, QC.useRef)(null),
-        uC = Qz((0, QC.useReducer)(gz, Nz), 2),
-        rC = uC[0],
-        sC = uC[1],
-        kC = rC.kY,
-        VC = rC.isFileDialogActive,
-        wz = (0, QC.useRef)("undefined" !== typeof window && window.isSecureContext && GC && "showOpenFilePicker" in window),
-        bz = function() {
-          !wz.current && VC && setTimeout((function() {
-            cC.current && (cC.current.files.length || (sC({
-              type: "closeDialog"
-            }), lC()))
-          }), 300)
-        };
-      (0, QC.useEffect)((function() {
-        return window.addEventListener("focus", bz, !1),
-          function() {
-            window.removeEventListener("focus", bz, !1)
-          }
-      }), [cC, VC, lC, wz]);
-      var nz = (0, QC.useRef)([]),
-        Fz = function(CC) {
-          XC.current && XC.current.contains(CC.target) || (CC.preventDefault(), nz.current = [])
-        };
-      (0, QC.useEffect)((function() {
-        return AC && (document.addEventListener("dragover", LC, !1), document.addEventListener("drop", Fz, !1)),
-          function() {
-            AC && (document.removeEventListener("dragover", LC), document.removeEventListener("drop", Fz))
-          }
-      }), [XC, AC]), (0, QC.useEffect)((function() {
-        return !wC && RC && XC.current && XC.current.focus(),
-          function() {}
-      }), [XC, RC, wC]);
-      var Mz = (0, QC.useCallback)((function(CC) {
-          vC ? vC(CC) : console.error(CC)
-        }), [vC]),
-        pz = (0, QC.useCallback)((function(CC) {
-          CC.preventDefault(), CC.persist(), Yz(CC), nz.current = [].concat(Zz(nz.current), [CC.target]), yC(CC) && Promise.resolve(bC(CC)).then((function(zC) {
-            if (!jC(CC) || iC) {
-              var ZC = zC.length,
-                QC = ZC > 0 && function(CC) {
-                  var zC = CC.files,
-                    ZC = CC.accept,
-                    QC = CC.minSize,
-                    wC = CC.maxSize,
-                    bC = CC.multiple,
-                    nC = CC.maxFiles,
-                    fC = CC.validator;
-                  return !(!bC && zC.length > 1 || bC && nC >= 1 && zC.length > nC) && zC.every((function(CC) {
-                    var zC = dC(aC(CC, ZC), 1)[0],
-                      bC = dC(tC(CC, QC, wC), 1)[0],
-                      nC = fC ? fC(CC) : null;
-                    return zC && bC && !nC
-                  }))
-                }({
-                  files: zC,
-                  accept: mC,
-                  minSize: fC,
-                  maxSize: nC,
-                  multiple: oC,
-                  maxFiles: qC,
-                  validator: hC
-                });
-              sC({
-                isDragAccept: QC,
-                isDragReject: ZC > 0 && !QC,
-                isDragActive: !0,
-                type: "setDraggedFiles"
-              }), FC && FC(CC)
-            }
-          })).catch((function(CC) {
-            return Mz(CC)
-          }))
-        }), [bC, FC, Mz, iC, mC, fC, nC, oC, qC, hC]),
-        Pz = (0, QC.useCallback)((function(CC) {
-          CC.preventDefault(), CC.persist(), Yz(CC);
-          var zC = yC(CC);
-          if (zC && CC.dataTransfer) try {
-            CC.dataTransfer.dropEffect = "copy"
-          } catch (ZC) {}
-          return zC && NC && NC(CC), !1
-        }), [NC, iC]),
-        Gz = (0, QC.useCallback)((function(CC) {
-          CC.preventDefault(), CC.persist(), Yz(CC);
-          var zC = nz.current.filter((function(CC) {
-              return XC.current && XC.current.contains(CC)
-            })),
-            ZC = zC.indexOf(CC.target); - 1 !== ZC && zC.splice(ZC, 1), nz.current = zC, zC.length > 0 || (sC({
-            type: "setDraggedFiles",
-            isDragActive: !1,
-            isDragAccept: !1,
-            isDragReject: !1
-          }), yC(CC) && WC && WC(CC))
-        }), [XC, WC, iC]),
-        Rz = (0, QC.useCallback)((function(CC, zC) {
-          var ZC = [],
-            QC = [];
-          CC.forEach((function(CC) {
-            var zC = Qz(aC(CC, mC), 2),
-              wC = zC[0],
-              bC = zC[1],
-              oC = Qz(tC(CC, fC, nC), 2),
-              qC = oC[0],
-              FC = oC[1],
-              WC = hC ? hC(CC) : null;
-            if (wC && qC && !WC) ZC.push(CC);
-            else {
-              var NC = [bC, FC];
-              WC && (NC = NC.concat(WC)), QC.push({
-                file: CC,
-                errors: NC.filter((function(CC) {
-                  return CC
-                }))
-              })
-            }
-          })), (!oC && ZC.length > 1 || oC && qC >= 1 && ZC.length > qC) && (ZC.forEach((function(CC) {
-            QC.push({
-              file: CC,
-              errors: [TC]
-            })
-          })), ZC.splice(0)), sC({
-            acceptedFiles: ZC,
-            fileRejections: QC,
-            type: "setFiles"
-          }), MC && MC(ZC, QC, zC), QC.length > 0 && SC && SC(QC, zC), ZC.length > 0 && gC && gC(ZC, zC)
-        }), [sC, oC, mC, fC, nC, qC, MC, gC, SC, hC]),
-        Az = (0, QC.useCallback)((function(CC) {
-          CC.preventDefault(), CC.persist(), Yz(CC), nz.current = [], yC(CC) && Promise.resolve(bC(CC)).then((function(zC) {
-            jC(CC) && !iC || Rz(zC, CC)
-          })).catch((function(CC) {
-            return Mz(CC)
-          })), sC({
-            type: "reset"
-          })
-        }), [bC, Rz, Mz, iC]),
-        xz = (0, QC.useCallback)((function() {
-          if (wz.current) {
-            sC({
-              type: "openDialog"
-            }), EC();
-            var CC = {
-              multiple: oC,
-              types: HC
-            };
-            window.showOpenFilePicker(CC).then((function(CC) {
-              return bC(CC)
-            })).then((function(CC) {
-              Rz(CC, null), sC({
-                type: "closeDialog"
-              })
-            })).catch((function(CC) {
-              var zC;
-              (zC = CC) instanceof DOMException && ("AbortError" === zC.name || zC.code === zC.ABORT_ERR) ? (lC(CC), sC({
-                type: "closeDialog"
-              })) : ! function(CC) {
-                return CC instanceof DOMException && ("SecurityError" === CC.name || CC.code === CC.SECURITY_ERR)
-              }(CC) ? Mz(CC) : (wz.current = !1, cC.current ? (cC.current.value = null, cC.current.click()) : Mz(new Error("Cannot open the file picker because the https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API is not supported and no <input> was provided.")))
-            }))
-          } else cC.current && (sC({
-            type: "openDialog"
-          }), EC(), cC.current.value = null, cC.current.click())
-        }), [sC, EC, lC, GC, Rz, Mz, HC, oC]),
-        Jz = (0, QC.useCallback)((function(CC) {
-          XC.current && XC.current.isEqualNode(CC.target) && (" " !== CC.key && "Enter" !== CC.key && 32 !== CC.keyCode && 13 !== CC.keyCode || (CC.preventDefault(), xz()))
-        }), [XC, xz]),
-        Iz = (0, QC.useCallback)((function() {
-          sC({
-            type: "focus"
-          })
-        }), []),
-        iz = (0, QC.useCallback)((function() {
-          sC({
-            type: "blur"
-          })
-        }), []),
-        vz = (0, QC.useCallback)((function() {
-          xC || (! function() {
-            var CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.navigator.userAgent;
-            return function(CC) {
-              return -1 !== CC.indexOf("MSIE") || -1 !== CC.indexOf("Trident/")
-            }(CC) || function(CC) {
-              return -1 !== CC.indexOf("Edge/")
-            }(CC)
-          }() ? xz() : setTimeout(xz, 0))
-        }), [xC, xz]),
-        ez = function(CC) {
-          return wC ? null : CC
-        },
-        hz = function(CC) {
-          return JC ? null : ez(CC)
-        },
-        Kz = function(CC) {
-          return IC ? null : ez(CC)
-        },
-        Yz = function(CC) {
-          iC && CC.stopPropagation()
-        },
-        dz = (0, QC.useMemo)((function() {
-          return function() {
-            var CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-              zC = CC.refKey,
-              ZC = void 0 === zC ? "ref" : zC,
-              QC = CC.role,
-              bC = CC.onKeyDown,
-              nC = CC.onFocus,
-              fC = CC.onBlur,
-              oC = CC.onClick,
-              qC = CC.onDragEnter,
-              FC = CC.onDragOver,
-              WC = CC.onDragLeave,
-              NC = CC.onDrop,
-              MC = qz(CC, Cz);
-            return fz(fz(oz({
-              onKeyDown: hz(UC(bC, Jz)),
-              onFocus: hz(UC(nC, Iz)),
-              onBlur: hz(UC(fC, iz)),
-              onClick: ez(UC(oC, vz)),
-              onDragEnter: Kz(UC(qC, pz)),
-              onDragOver: Kz(UC(FC, Pz)),
-              onDragLeave: Kz(UC(WC, Gz)),
-              onDrop: Kz(UC(NC, Az)),
-              role: "string" === typeof QC && "" !== QC ? QC : "presentation"
-            }, ZC, XC), wC || JC ? {} : {
-              tabIndex: 0
-            }), MC)
-          }
-        }), [XC, Jz, Iz, iz, vz, pz, Pz, Gz, Az, JC, IC, wC]),
-        mz = (0, QC.useCallback)((function(CC) {
-          CC.stopPropagation()
-        }), []),
-        Hz = (0, QC.useMemo)((function() {
-          return function() {
-            var CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-              zC = CC.refKey,
-              ZC = void 0 === zC ? "ref" : zC,
-              QC = CC.onChange,
-              wC = CC.onClick,
-              bC = qz(CC, zz);
-            return fz(fz({}, oz({
-              accept: mC,
-              multiple: oC,
-              type: "file",
-              style: {
-                display: "none"
-              },
-              onChange: ez(UC(QC, Az)),
-              onClick: ez(UC(wC, mz)),
-              tabIndex: -1
-            }, ZC, cC)), bC)
-          }
-        }), [cC, ZC, oC, Az, wC]);
-      return fz(fz({}, rC), {}, {
-        kY: kC && !wC,
-        getRootProps: dz,
-        getInputProps: Hz,
-        rootRef: XC,
-        inputRef: cC,
-        open: ez(xz)
+    function Dp(pp) {
+      let {
+        children: ip,
+        label: cp,
+        className: op,
+        circleInfoText: xp,
+        disabled: Dp,
+        onLabelClick: Ap
+      } = pp;
+      const {
+        t: Pp
+      } = (0, Op.H)(), Wp = (0, Yp.jsxs)("div", {
+        className: Ip()("Label", {
+          ClickableLabel: void 0 !== Ap
+        }),
+        onClick: Ap,
+        children: [Pp(cp), xp && (0, Yp.jsx)(Lp.d, {
+          name: "circle-info"
+        })]
+      });
+      return (0, Yp.jsxs)("div", {
+        className: Ip()("LabeledInput", {
+          [op]: op,
+          DisabledLabelInput: Dp
+        }),
+        children: [xp && (0, Yp.jsx)(Sp.f, {
+          tooltipInner: (0, Yp.jsx)("div", {
+            className: "LabeledInputTooltip",
+            children: Pp(xp)
+          }),
+          children: Wp
+        }), !xp && Wp, ip]
       })
     }
 
-    function gz(CC, zC) {
-      switch (zC.type) {
-        case "focus":
-          return fz(fz({}, CC), {}, {
-            kY: !0
-          });
-        case "blur":
-          return fz(fz({}, CC), {}, {
-            kY: !1
-          });
-        case "openDialog":
-          return fz(fz({}, Nz), {}, {
-            isFileDialogActive: !0
-          });
-        case "closeDialog":
-          return fz(fz({}, CC), {}, {
-            isFileDialogActive: !1
-          });
-        case "setDraggedFiles":
-          return fz(fz({}, CC), {}, {
-            isDragActive: zC.isDragActive,
-            isDragAccept: zC.isDragAccept,
-            isDragReject: zC.isDragReject
-          });
-        case "setFiles":
-          return fz(fz({}, CC), {}, {
-            acceptedFiles: zC.acceptedFiles,
-            fileRejections: zC.fileRejections
-          });
-        case "reset":
-          return fz({}, Nz);
-        default:
-          return CC
+    function Ap(pp) {
+      let {
+        checked: ip,
+        setChecked: cp
+      } = pp;
+      return (0, Yp.jsx)("div", {
+        className: "OtherInput ClickableOtherInput",
+        "data-pad-focusable": !0,
+        onClick: pp => {
+          cp(!ip)
+        },
+        children: (0, Yp.jsx)(xp.b, {
+          checked: ip,
+          onChange: pp => {
+            cp(pp.target.checked)
+          },
+          disabled: !1
+        })
+      })
+    }
+
+    function Pp(pp) {
+      let {
+        checked: ip,
+        setChecked: cp,
+        disabled: Op
+      } = pp;
+      return (0, Yp.jsx)("div", {
+        className: Ip()("SwitchContainer", {
+          SwitchContainerDisabled: Op
+        }),
+        onClick: () => {
+          Op || cp(!ip)
+        },
+        children: (0, Yp.jsx)(xp.b, {
+          className: "SwitchCheckbox",
+          checked: ip,
+          onChange: pp => {
+            cp(pp.target.checked)
+          },
+          disabled: !!Op
+        })
+      })
+    }
+  },
+  5061: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Yp
+    });
+    var Op = cp(1049),
+      op = cp.n(Op),
+      Ip = cp(4719),
+      Sp = cp(1201),
+      xp = cp(1112);
+    const Lp = [...Ip.h, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+
+    function Yp(pp) {
+      const {
+        disabled: ip,
+        hideWrapper: cp
+      } = pp, {
+        t: Op
+      } = (0, Sp.H)(), Yp = pp.advancedMode ? Lp.map((ip => [ip, pp.callbacks[ip]])) : Ip.h.map((ip => [ip, pp.callbacks[ip]])), Ap = (0, xp.jsx)("div", {
+        className: op()("PluginsGrid", {
+          SectionBody: !cp
+        }),
+        children: Yp.map((pp => {
+          let [cp, Op] = pp;
+          return (0, xp.jsx)(Dp, {
+            plugin: cp,
+            callbacks: Op,
+            disabled: ip
+          }, cp)
+        }))
+      });
+      return cp ? Ap : (0, xp.jsxs)("div", {
+        className: "BloxdForm",
+        children: [(0, xp.jsx)("div", {
+          className: "SectionTitle",
+          children: Op("worldBuilder:pluginsSection")
+        }), Ap]
+      })
+    }
+
+    function Dp(pp) {
+      let {
+        plugin: ip,
+        callbacks: {
+          isEnabled: cp,
+          eC: Op
+        },
+        disabled: Ip
+      } = pp;
+      const {
+        t: Lp
+      } = (0, Sp.H)(), Yp = cp();
+      return (0, xp.jsxs)("div", {
+        className: op()("PluginCard", {
+          PluginCardEnabled: Yp,
+          PluginCardDisabledForm: Ip
+        }),
+        "data-pad-focusable": !0,
+        "aria-disabled": Ip || void 0,
+        onClick: () => {
+          Ip || Op(!Yp)
+        },
+        children: [(0, xp.jsx)("div", {
+          className: "PluginCardIcon",
+          children: (0, xp.jsx)("img", {
+            src: `/textures/games/classic/customGames/${ip}.png`,
+            alt: ip
+          })
+        }), (0, xp.jsxs)("div", {
+          className: "PluginCardBody",
+          children: [(0, xp.jsx)("div", {
+            className: "PluginCardTitle",
+            children: Lp(Ap[ip])
+          }), (0, xp.jsx)("div", {
+            className: "PluginCardDescription",
+            children: Lp(Pp[ip])
+          })]
+        }), (0, xp.jsx)("span", {
+          className: "PluginCardToggleLabel",
+          children: Lp(Yp ? "general:on" : "general:off")
+        })]
+      })
+    }
+    const Ap = {
+        fallDamage: "classic:enableFallDamage",
+        tpRequests: "classic:enableTpRequests",
+        spawnProtection: "classic:enableSpawnProtection",
+        spawnReset: "classic:enableSpawnReset",
+        smpMarketplace: "classic:enableSmpMarketplace",
+        survivalGuns: "classic:enableSurvivalGuns",
+        dayNight: "classic:enableDayNight"
+      },
+      Pp = {
+        fallDamage: "classic:enableFallDamageDescription",
+        tpRequests: "classic:enableTpRequestsDescription",
+        spawnProtection: "classic:enableSpawnProtectionDescription",
+        spawnReset: "classic:enableSpawnResetDescription",
+        smpMarketplace: "classic:enableSmpMarketplaceDescription",
+        survivalGuns: "classic:enableSurvivalGunsDescription",
+        dayNight: "classic:enableDayNightDescription"
+      }
+  },
+  5048: (pp, ip, cp) => {
+    cp.d(ip, {
+      j: () => Si,
+      d: () => Ii,
+      f: () => oi,
+      k: () => xi
+    });
+    var Op = cp(62),
+      op = cp(1372),
+      Ip = cp(1480),
+      Sp = cp(1692),
+      xp = cp(1201),
+      Lp = cp(1361),
+      Yp = cp(1387),
+      Dp = cp(1060),
+      Ap = cp(1234),
+      Pp = cp(1049),
+      Wp = cp.n(Pp),
+      yp = cp(322),
+      Up = cp(4719),
+      wp = cp(1251),
+      vp = cp(5052),
+      tp = cp(3224),
+      Hp = cp(5061),
+      dp = cp(1112);
+
+    function ep(pp) {
+      let {
+        icon: ip,
+        title: cp,
+        disabled: Op,
+        children: op
+      } = pp;
+      return (0, dp.jsxs)("div", {
+        className: Wp()("ManageCard", {
+          ManageCardDisabled: Op
+        }),
+        children: [(0, dp.jsxs)("div", {
+          className: "ManageCardHead",
+          children: [(0, dp.jsx)("div", {
+            className: "ManageCardIcon",
+            children: (0, dp.jsx)(Dp.d, {
+              name: ip
+            })
+          }), (0, dp.jsx)("div", {
+            children: (0, dp.jsx)("h2", {
+              className: "ManageCardTitle",
+              children: cp
+            })
+          })]
+        }), (0, dp.jsxs)("div", {
+          className: "ManageCardBody",
+          children: [op, Op && (0, dp.jsx)("div", {
+            className: "ManageCardDisabledOverlay"
+          })]
+        })]
+      })
+    }
+
+    function jp(pp) {
+      let {
+        label: ip,
+        caption: cp,
+        children: Op
+      } = pp;
+      return (0, dp.jsxs)("div", {
+        className: "ManageStackedField",
+        children: [(0, dp.jsx)("div", {
+          className: "ManageStackedFieldLabel",
+          children: ip
+        }), Op, cp && (0, dp.jsx)("div", {
+          className: "ManageStackedFieldCaption",
+          children: cp
+        })]
+      })
+    }
+
+    function kp(pp) {
+      let {
+        label: ip,
+        caption: cp,
+        disabled: Op,
+        children: op
+      } = pp;
+      return (0, dp.jsxs)("div", {
+        className: Wp()("ManageField", {
+          ManageFieldDisabled: Op
+        }),
+        children: [(0, dp.jsxs)("div", {
+          className: "ManageFieldText",
+          children: [(0, dp.jsx)("div", {
+            className: "ManageFieldLabel",
+            children: ip
+          }), (0, dp.jsx)("div", {
+            className: "ManageFieldCaption",
+            children: cp
+          })]
+        }), (0, dp.jsx)("div", {
+          className: "ManageFieldControl",
+          children: op
+        })]
+      })
+    }
+
+    function mp(pp) {
+      var ip, cp;
+      let {
+        schematicData: Op,
+        updateSchematicData: op,
+        publishFormEnabled: Ip,
+        formEnabled: Sp
+      } = pp;
+      const {
+        t: Lp
+      } = (0, xp.H)(), Yp = !Ip, Dp = {
+        tpRequests: {
+          isEnabled: () => !Op.disableTpRequests,
+          eC: pp => op("disableTpRequests", !pp)
+        },
+        spawnProtection: {
+          isEnabled: () => !Op.disableSpawnProtection,
+          eC: pp => op("disableSpawnProtection", !pp)
+        },
+        spawnReset: {
+          isEnabled: () => !!Op.enableSpawnReset,
+          eC: pp => op("enableSpawnReset", pp)
+        },
+        smpMarketplace: {
+          isEnabled: () => !!Op.enableSmpMarketplace,
+          eC: pp => op("enableSmpMarketplace", pp)
+        },
+        survivalGuns: {
+          isEnabled: () => !!Op.enableSurvivalGuns,
+          eC: pp => op("enableSurvivalGuns", pp)
+        },
+        fallDamage: {
+          isEnabled: () => !Op.disableFallDamage,
+          eC: pp => op("disableFallDamage", !pp)
+        },
+        dayNight: {
+          isEnabled: () => !!Op.enableDayNight,
+          eC: pp => op("enableDayNight", pp)
+        }
+      };
+      return (0, dp.jsxs)(dp.Fragment, {
+        children: [!1 === Op.schematicContainsSpawnBlock && (0, dp.jsx)("div", {
+          className: "ManageWarningBanner",
+          children: Lp("worldBuilder:mustContainSpawnBlock")
+        }), (0, dp.jsxs)("div", {
+          className: "ManageSettingsGrid",
+          children: [(0, dp.jsxs)(ep, {
+            icon: "globe",
+            title: Lp("worldBuilder:worldRulesSection"),
+            disabled: !Sp,
+            children: [(0, dp.jsx)(kp, {
+              label: Lp("classic:defaultGamemode"),
+              caption: Lp("classic:defaultGamemodeDescription"),
+              disabled: Yp,
+              children: (0, dp.jsx)(tp.d, {
+                controlClassName: "ManageDropdown",
+                options: Up.E.map((pp => ({
+                  value: pp,
+                  label: yp.o[pp]
+                }))),
+                value: Op.defaultGamemode,
+                onChange: pp => op("defaultGamemode", pp.value)
+              })
+            }), (0, dp.jsx)(kp, {
+              label: Lp("classic:voidDeathHeight"),
+              caption: Lp("classic:voidDeathHeightDescription"),
+              disabled: Yp,
+              children: (0, dp.jsxs)("div", {
+                className: "ManageNumberField",
+                children: [(0, dp.jsx)("input", {
+                  type: "number",
+                  max: wp.F,
+                  value: null !== (ip = Op.voidDeathHeight) && void 0 !== ip ? ip : "",
+                  onChange: pp => {
+                    const ip = parseInt(pp.target.value);
+                    op("voidDeathHeight", ip)
+                  }
+                }), (0, dp.jsx)("span", {
+                  className: "ManageFieldUnit",
+                  children: Lp("worldBuilder:blocksUnit")
+                })]
+              })
+            }), (0, dp.jsx)(kp, {
+              label: Lp("classic:worldBorder"),
+              caption: Lp("classic:worldBorderDescription"),
+              disabled: Yp,
+              children: (0, dp.jsxs)("div", {
+                className: "ManageNumberField",
+                children: [(0, dp.jsx)("input", {
+                  type: "number",
+                  min: wp.L,
+                  max: wp.G,
+                  placeholder: Lp("worldBuilder:noWorldBorderLimit"),
+                  value: null !== (cp = Op.worldBorder) && void 0 !== cp ? cp : "",
+                  onChange: pp => {
+                    const ip = parseInt(pp.target.value);
+                    op("worldBorder", isNaN(ip) ? null : ip)
+                  }
+                }), (0, dp.jsx)("span", {
+                  className: "ManageFieldUnit",
+                  children: Lp("worldBuilder:blocksUnit")
+                })]
+              })
+            }), (0, dp.jsx)(kp, {
+              label: Lp("classic:disableMobs"),
+              caption: Lp("classic:disableMobsDescription"),
+              disabled: Yp,
+              children: (0, dp.jsx)(vp.l, {
+                checked: Op.disableMobs,
+                setChecked: pp => op("disableMobs", pp),
+                disabled: Yp
+              })
+            })]
+          }), (0, dp.jsxs)(ep, {
+            icon: "user-group",
+            title: Lp("worldBuilder:playerAndLobbySection"),
+            disabled: !Sp,
+            children: [(0, dp.jsx)(kp, {
+              label: Lp("classic:disableKeepInventory"),
+              caption: Lp("classic:disableKeepInventoryDescription"),
+              disabled: Yp,
+              children: (0, dp.jsx)(vp.l, {
+                checked: Op.disableKeepInventory,
+                setChecked: pp => op("disableKeepInventory", pp),
+                disabled: Yp
+              })
+            }), (0, dp.jsx)(kp, {
+              label: Lp("classic:persistInventory"),
+              caption: Lp("classic:persistInventoryDescription"),
+              disabled: Yp,
+              children: (0, dp.jsx)(tp.d, {
+                controlClassName: "ManageDropdown",
+                options: Up.k.map((pp => ({
+                  value: pp,
+                  label: yp.d[pp]
+                }))),
+                value: Op.persistInventory,
+                onChange: pp => op("persistInventory", pp.value)
+              })
+            }), (0, dp.jsx)(kp, {
+              label: Lp("classic:persistWorld"),
+              caption: Lp("classic:persistWorldDescription"),
+              disabled: Yp,
+              children: (0, dp.jsx)(vp.l, {
+                checked: Op.persistWorld,
+                setChecked: pp => op("persistWorld", pp),
+                disabled: Yp
+              })
+            }), (0, dp.jsx)(kp, {
+              label: Lp("classic:disableLobbySpawn"),
+              caption: Lp("classic:disableLobbySpawnDescription"),
+              disabled: Yp,
+              children: (0, dp.jsx)(vp.l, {
+                checked: Op.disableLobbySpawn,
+                setChecked: pp => op("disableLobbySpawn", pp),
+                disabled: Yp
+              })
+            }), (0, dp.jsx)(kp, {
+              label: Lp("classic:hideLobbyCode"),
+              caption: Lp("classic:hideLobbyCodeDescription"),
+              disabled: Yp,
+              children: (0, dp.jsx)(vp.l, {
+                checked: Op.hideLobbyCode,
+                setChecked: pp => op("hideLobbyCode", pp),
+                disabled: Yp
+              })
+            })]
+          })]
+        }), (0, dp.jsx)(ep, {
+          icon: "layer-group",
+          title: Lp("worldBuilder:pluginsSection"),
+          disabled: !Sp,
+          children: (0, dp.jsx)(Hp.e, {
+            callbacks: Dp,
+            disabled: Yp,
+            advancedMode: !0,
+            hideWrapper: !0
+          })
+        })]
+      })
+    }
+    var Rp = cp(5067),
+      qp = cp(4462),
+      Mp = cp(1520),
+      Cp = cp(3587),
+      Ep = cp(1141),
+      Xp = cp(5025),
+      lp = cp(5076),
+      Qp = cp(1482);
+    const Jp = 50,
+      Bp = .3;
+    async function Np(pp) {
+      const ip = await
+      function(pp) {
+        return new Promise(((ip, cp) => {
+          const Op = new FileReader;
+          Op.onload = () => ip(Op.result), Op.onerror = cp, Op.readAsDataURL(pp)
+        }))
+      }(pp), cp = await
+      function(pp) {
+        return new Promise(((ip, cp) => {
+          const Op = new Image;
+          Op.onload = () => ip(Op), Op.onerror = () => cp(new Error("Failed to load image")), Op.src = pp
+        }))
+      }(ip);
+      if (cp.naturalHeight > cp.naturalWidth) throw new Tp;
+      const Op = 1024 * Jp,
+        {
+          dataUrl: op,
+          finalQuality: Ip
+        } = function(pp, ip) {
+          const cp = document.createElement("canvas");
+          cp.width = pp.naturalWidth, cp.height = pp.naturalHeight, cp.getContext("2d").drawImage(pp, 0, 0);
+          let Op = .92,
+            op = cp.toDataURL("image/jpeg", Op);
+          for (; .75 * op.length > ip && Op > .05;) Op -= .05, op = cp.toDataURL("image/jpeg", Op);
+          return {
+            dataUrl: op,
+            finalQuality: Op
+          }
+        }(cp, Op);
+      if (Math.ceil(.75 * op.length) > Op) throw new fp;
+      return {
+        base64Jpg: op,
+        heavilyCompressed: Ip < Bp
+      }
+    }
+    class Tp extends Error {}
+    class fp extends Error {}
+    var bp = function(pp) {
+      return pp[pp.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", pp[pp.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", pp
+    }(bp || {});
+
+    function hp(pp) {
+      var ip;
+      let {
+        schematicId: cp,
+        hasReadUploadPolicy: op,
+        onPolicyValidationError: Lp,
+        onThumbnailReady: Yp
+      } = pp;
+      const {
+        t: Pp
+      } = (0, xp.H)(), [yp, Up] = (0, Op.useState)(null), [wp, vp] = (0, Op.useState)(""), [tp, Hp] = (0, Op.useState)(""), [ep, jp] = (0, Op.useState)(!0), [kp, mp] = (0, Op.useState)(!1), Rp = (0, Op.useRef)(!1), [qp, Mp] = (0, Op.useState)(null), [Cp, Ep] = (0, Op.useState)(!1), [Xp, Qp] = (0, Op.useState)(!1), Jp = (0, Op.useRef)(0), {
+        getRootProps: Bp,
+        getInputProps: bp,
+        isDragActive: hp
+      } = (0, lp.c)({
+        accept: {
+          "image/*": [".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp"]
+        },
+        multiple: !1,
+        onDrop: async pp => {
+          if (0 === pp.length) return;
+          const ip = pp[0],
+            cp = ++Jp.current;
+          Mp(null), Ep(!1), Up(null), vp(ip.name);
+          try {
+            const pp = await Np(ip);
+            if (cp !== Jp.current) return;
+            Up(pp), Ep(pp.heavilyCompressed)
+          } catch (Op) {
+            if (cp !== Jp.current) return;
+            Mp(Pp(Op instanceof Tp ? "thumbnail:portraitImagesNotAllowed" : Op instanceof fp ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
+          }
+        },
+        useFsAccessApi: !1
+      }), ap = wp.length <= 30 ? wp : `${wp.slice(0,27)}...`, np = null !== (ip = null === yp || void 0 === yp ? void 0 : yp.base64Jpg) && void 0 !== ip ? ip : null, Fp = tp.trim(), gp = Fp.length >= Ap.m && Fp.length <= Ap.k, Gp = Xp && !yp && !qp, rp = Xp && !gp;
+      return (0, dp.jsxs)("div", {
+        className: "ThumbnailUploadContainer",
+        children: [(0, dp.jsxs)("div", {
+          ...Bp({
+            className: Wp()("ThumbnailUploadDropzone", {
+              ActiveDrag: hp,
+              ValidationError: Gp
+            })
+          }),
+          children: [(0, dp.jsx)("input", {
+            ...bp()
+          }), !hp && np ? (0, dp.jsxs)(dp.Fragment, {
+            children: [(0, dp.jsxs)("div", {
+              className: "ThumbnailAspectPreviews",
+              children: [(0, dp.jsxs)("div", {
+                className: "ThumbnailAspectPreview",
+                children: [(0, dp.jsx)("div", {
+                  className: "ThumbnailAspectLabel",
+                  children: "1:1"
+                }), (0, dp.jsx)("div", {
+                  className: "ThumbnailAspectFrame Square",
+                  children: (0, dp.jsx)("img", {
+                    src: np,
+                    alt: "1:1 preview"
+                  })
+                })]
+              }), (0, dp.jsxs)("div", {
+                className: "ThumbnailAspectPreview",
+                children: [(0, dp.jsx)("div", {
+                  className: "ThumbnailAspectLabel",
+                  children: "16:9"
+                }), (0, dp.jsx)("div", {
+                  className: "ThumbnailAspectFrame Wide",
+                  children: (0, dp.jsx)("img", {
+                    src: np,
+                    alt: "16:9 preview"
+                  })
+                })]
+              })]
+            }), (0, dp.jsxs)("div", {
+              children: [(0, dp.jsx)("div", {
+                className: "ThumbnailUploadInstructions Active",
+                children: ap
+              }), (0, dp.jsx)("div", {
+                className: "ThumbnailUploadInstructions Preview",
+                children: Pp("thumbnail:preview")
+              })]
+            })]
+          }) : (0, dp.jsxs)(dp.Fragment, {
+            children: [(0, dp.jsx)("div", {
+              className: "ThumbnailUploadIcon",
+              children: (0, dp.jsx)(Dp.d, {
+                name: "image"
+              })
+            }), (0, dp.jsx)("div", {
+              className: "ThumbnailUploadInstructions",
+              children: Pp("thumbnail:dragImageHere")
+            })]
+          })]
+        }), Gp && (0, dp.jsx)("div", {
+          className: "ThumbnailUploadError",
+          children: Pp("thumbnail:imageRequired")
+        }), (0, dp.jsx)(Sp.c, {
+          className: Wp()("ThumbnailUploadNameInput", {
+            ValidationError: rp
+          }),
+          placeholderText: Pp("thumbnail:thumbnailName"),
+          defaultValue: tp,
+          onValueChange: pp => {
+            Hp(pp)
+          },
+          maxLength: Ap.k
+        }), rp && (0, dp.jsx)("div", {
+          className: "ThumbnailUploadError",
+          children: Pp("thumbnail:nameRequired", {
+            min: Ap.m,
+            max: Ap.k
+          })
+        }), (0, dp.jsxs)("label", {
+          className: "ThumbnailUploadCheckbox",
+          children: [(0, dp.jsx)("input", {
+            type: "checkbox",
+            checked: ep,
+            onChange: pp => {
+              jp(pp.target.checked)
+            }
+          }), Pp("thumbnail:setAsThumbnailOnceApproved")]
+        }), Cp && (0, dp.jsx)("div", {
+          className: "ThumbnailUploadWarning",
+          children: Pp("thumbnail:heavyCompressionWarning")
+        }), qp && (0, dp.jsx)("div", {
+          className: "ThumbnailUploadError",
+          children: qp
+        }), (0, dp.jsx)(Ip.o, {
+          disabled: kp,
+          className: "ThumbnailUploadButton",
+          onClick: async () => {
+            if (Qp(!0), !Rp.current && yp && gp && op) {
+              Rp.current = !0, mp(!0), Mp(null);
+              try {
+                await Yp(yp.base64Jpg, Fp, ep ? cp : null)
+              } catch (pp) {
+                Mp(pp.errorMessageForUser ? Pp(pp.errorMessageForUser, pp.errorMessageTranslationParams) : Pp("thumbnail:failedToUploadImage"))
+              } finally {
+                Rp.current = !1, mp(!1)
+              }
+            } else op || Lp()
+          },
+          children: Pp(kp ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
+        })]
+      })
+    }
+    const ap = 2e3;
+
+    function np(pp) {
+      let {
+        schematicId: ip,
+        ownedThumbnailCount: cp,
+        onClose: op,
+        onThumbnailReady: Ip
+      } = pp;
+      const {
+        t: Sp
+      } = (0, xp.H)(), {
+        userContext: Lp
+      } = (0, Ep.b)(), [Yp, Pp] = (0, Op.useState)(!1), [yp, Up] = (0, Op.useState)(!1), [wp, vp] = (0, Op.useState)(!1), tp = (0, Op.useRef)();
+      (0, Op.useEffect)((() => () => {
+        clearTimeout(tp.current)
+      }), []);
+      const Hp = function(pp, ip) {
+        const cp = [];
+        return pp.isLoggedIn() || cp.push(bp.NOT_LOGGED_IN), ip >= Ap.T && cp.push(bp.THUMBNAIL_LIMIT_REACHED), cp
+      }(Lp, cp);
+      if (Hp.length > 0) {
+        const pp = {
+          [bp.NOT_LOGGED_IN]: {
+            key: "thumbnail:mustBeLoggedInToUpload"
+          },
+          [bp.THUMBNAIL_LIMIT_REACHED]: {
+            key: "thumbnail:thumbnailLimitReachedPleaseDelete",
+            params: {
+              max: Ap.T
+            }
+          }
+        };
+        return (0, dp.jsxs)("div", {
+          className: "ThumbnailUploaderInner",
+          children: [(0, dp.jsx)("h1", {
+            className: "SchematicPopupTitle",
+            children: Sp("thumbnail:cannotUploadThumbnail")
+          }), Hp.map(((ip, cp) => {
+            const Op = pp[ip];
+            return (0, dp.jsxs)("div", {
+              className: "CannotUploadThumbnailItem",
+              children: [(0, dp.jsx)(Dp.d, {
+                name: "triangle-exclamation"
+              }), (0, dp.jsx)("span", {
+                children: Sp(Op.key, Op.params)
+              })]
+            }, cp)
+          }))]
+        })
+      }
+      return (0, dp.jsxs)("div", {
+        className: Wp()("ThumbnailUploaderInner", {
+          ThumbnailUploaderSuccess: Yp
+        }),
+        children: [Yp && (0, dp.jsxs)("div", {
+          className: "ThumbnailUploadSuccessOverlay",
+          children: [(0, dp.jsxs)("div", {
+            className: "ThumbnailUploadSuccessIcon FullyFancyText AnimFadeInScaleUp",
+            children: [(0, dp.jsx)(Dp.d, {
+              name: "check"
+            }), (0, dp.jsx)(Qp.b, {})]
+          }), (0, dp.jsx)("div", {
+            className: "ThumbnailUploadSuccessText AnimFadeInScaleUp",
+            children: Sp("thumbnail:thumbnailUploaded")
+          })]
+        }), (0, dp.jsx)("h1", {
+          className: "SchematicPopupTitle",
+          children: Sp("thumbnail:uploadThumbnail")
+        }), (0, dp.jsxs)("div", {
+          className: "ThumbnailUploaderBody",
+          children: [(0, dp.jsxs)("div", {
+            className: "ThumbnailUploaderLeft",
+            children: [(0, dp.jsx)("h3", {
+              className: "SchematicPopupSubtitle",
+              children: Sp("thumbnail:chooseImage", {
+                maxSizeKb: Jp
+              })
+            }), (0, dp.jsx)(hp, {
+              schematicId: ip,
+              hasReadUploadPolicy: yp,
+              onPolicyValidationError: () => {
+                vp(!0)
+              },
+              onThumbnailReady: async (pp, ip, cp) => {
+                await Ip(pp, ip, cp), Pp(!0), tp.current = setTimeout(op, ap)
+              }
+            })]
+          }), (0, dp.jsxs)("div", {
+            className: "ThumbnailUploadPolicy",
+            children: [(0, dp.jsx)("h3", {
+              className: "ThumbnailUploadPolicyTitle",
+              children: Sp("thumbnail:uploadPolicy")
+            }), (0, dp.jsxs)("ul", {
+              className: "ThumbnailUploadPolicyList",
+              children: [(0, dp.jsxs)("li", {
+                className: "ThumbnailUploadPolicyItem Allowed",
+                children: [(0, dp.jsx)(Dp.d, {
+                  name: "check"
+                }), (0, dp.jsx)("span", {
+                  children: Sp("thumbnail:policyFollowGuidelines")
+                })]
+              }), (0, dp.jsxs)("li", {
+                className: "ThumbnailUploadPolicyItem Allowed",
+                children: [(0, dp.jsx)(Dp.d, {
+                  name: "check"
+                }), (0, dp.jsx)("span", {
+                  children: Sp("thumbnail:policyInGameAssets")
+                })]
+              }), (0, dp.jsxs)("li", {
+                className: "ThumbnailUploadPolicyItem Allowed",
+                children: [(0, dp.jsx)(Dp.d, {
+                  name: "check"
+                }), (0, dp.jsx)("span", {
+                  children: Sp("thumbnail:policyLimitText")
+                })]
+              }), (0, dp.jsxs)("li", {
+                className: "ThumbnailUploadPolicyItem NotAllowed",
+                children: [(0, dp.jsx)(Dp.d, {
+                  name: "x"
+                }), (0, dp.jsx)("span", {
+                  children: Sp("thumbnail:policyCopyrightContent")
+                })]
+              }), (0, dp.jsxs)("li", {
+                className: "ThumbnailUploadPolicyItem NotAllowed",
+                children: [(0, dp.jsx)(Dp.d, {
+                  name: "x"
+                }), (0, dp.jsx)("span", {
+                  children: Sp("thumbnail:policyOutOfGameAssets")
+                })]
+              }), (0, dp.jsxs)("li", {
+                className: "ThumbnailUploadPolicyItem NotAllowed",
+                children: [(0, dp.jsx)(Dp.d, {
+                  name: "x"
+                }), (0, dp.jsx)("span", {
+                  children: Sp("thumbnail:policyBloxdTags")
+                })]
+              }), (0, dp.jsxs)("li", {
+                className: "ThumbnailUploadPolicyItem NotAllowed",
+                children: [(0, dp.jsx)(Dp.d, {
+                  name: "x"
+                }), (0, dp.jsx)("span", {
+                  children: Sp("thumbnail:policyMustReflectGame")
+                })]
+              })]
+            }), (0, dp.jsxs)("label", {
+              className: Wp()("ThumbnailUploadCheckbox Policy", {
+                ValidationError: wp && !yp
+              }),
+              children: [(0, dp.jsx)("input", {
+                type: "checkbox",
+                checked: yp,
+                onChange: pp => {
+                  Up(pp.target.checked)
+                }
+              }), Sp("thumbnail:agreeToUploadPolicy")]
+            }), wp && !yp && (0, dp.jsx)("div", {
+              className: "ThumbnailPolicyError",
+              children: Sp("thumbnail:policyRequired")
+            })]
+          })]
+        })]
+      })
+    }
+    var Fp = cp(1211);
+    const gp = {
+      "custom-game-bad-thumbnail": {
+        reason: "thumbnail:rejectionInappropriate",
+        tips: ["thumbnail:rejectionInappropriateTip1", "thumbnail:rejectionInappropriateTip2", "thumbnail:rejectionInappropriateTip3"]
+      },
+      "thumbnail-copyright-content": {
+        reason: "thumbnail:rejectionCopyright",
+        tips: ["thumbnail:rejectionCopyrightTip1", "thumbnail:rejectionCopyrightTip2", "thumbnail:rejectionCopyrightTip3"]
+      },
+      "thumbnail-random-irrelevant-content": {
+        reason: "thumbnail:rejectionIrrelevant",
+        tips: ["thumbnail:rejectionIrrelevantTip1", "thumbnail:rejectionIrrelevantTip2", "thumbnail:rejectionIrrelevantTip3"]
+      },
+      "thumbnail-sexual-content": {
+        reason: "thumbnail:rejectionSexual",
+        tips: ["thumbnail:rejectionSexualTip1", "thumbnail:rejectionSexualTip2", "thumbnail:rejectionSexualTip3"]
+      },
+      "thumbnail-substances-content": {
+        reason: "thumbnail:rejectionSubstances",
+        tips: ["thumbnail:rejectionSubstancesTip1", "thumbnail:rejectionSubstancesTip2"]
+      },
+      "thumbnail-unauthorized-bloxd-branding": {
+        reason: "thumbnail:rejectionUnauthorisedBranding",
+        tips: ["thumbnail:rejectionUnauthorisedBrandingTip1", "thumbnail:rejectionUnauthorisedBrandingTip2", "thumbnail:rejectionUnauthorisedBrandingTip3", "thumbnail:rejectionUnauthorisedBrandingTip4"]
+      },
+      "thumbnail-violent-gore-content": {
+        reason: "thumbnail:rejectionViolence",
+        tips: ["thumbnail:rejectionViolenceTip1", "thumbnail:rejectionViolenceTip2", "thumbnail:rejectionViolenceTip3", "thumbnail:rejectionViolenceTip4"]
+      }
+    };
+
+    function Gp(pp) {
+      var ip, cp;
+      let {
+        schematicData: Sp,
+        updateSchematicData: Yp,
+        publishFormEnabled: Ap,
+        onClose: Pp
+      } = pp;
+      const {
+        t: yp
+      } = (0, xp.H)(), {
+        userContext: Up,
+        isUserContextUpdating: wp
+      } = (0, Ep.b)(), vp = (0, Cp.b)(), [tp, Hp] = (0, Op.useState)([]), [ep, jp] = (0, Op.useState)([]), [kp, mp] = (0, Op.useState)(!0), [Rp, qp] = (0, Op.useState)(null !== (ip = Sp.customThumbnailId) && void 0 !== ip ? ip : null), [lp, Qp] = (0, Op.useState)(null), Jp = (0, Op.useRef)(null !== (cp = Sp.customThumbnailId) && void 0 !== cp ? cp : null), Bp = (0, Op.useRef)(0), Np = (0, Op.useRef)(null), Tp = (0, Op.useRef)(null), fp = (0, Op.useRef)(null), bp = (0, Op.useRef)(!1);
+
+      function hp(pp, ip) {
+        fp.current && (clearTimeout(fp.current), fp.current = null), Qp(pp), null !== pp && ip && (fp.current = setTimeout((() => {
+          Qp(null), fp.current = null
+        }), 5e3))
+      }(0, Op.useEffect)((() => () => {
+        clearTimeout(Tp.current), clearTimeout(fp.current)
+      }), []);
+      const ap = (0, Op.useCallback)((() => {
+        mp(!0), Mp.b.getOwnedThumbnails(Up).then((pp => {
+          const ip = [],
+            cp = [];
+          for (const Op of pp.thumbnails) Op.rejectionPolicyId ? ip.push(Op) : cp.push(Op);
+          ip.sort(((pp, ip) => pp.lastUpdatedAt - ip.lastUpdatedAt)), cp.sort(((pp, ip) => {
+            const cp = pp.approved ? 1 : 0,
+              Op = (ip.approved ? 1 : 0) - cp;
+            return 0 !== Op ? Op : ip.lastUpdatedAt - pp.lastUpdatedAt
+          })), jp(ip), Hp(cp)
+        })).catch((pp => {
+          console.error("Failed to fetch thumbnails:", pp)
+        })).finally((() => {
+          mp(!1)
+        }))
+      }), [Up]);
+      async function gp(pp, ip, cp) {
+        return Mp.b.uploadSchematicThumbnail(Up, pp, ip, cp).then((() => {
+          hp({
+            text: yp("thumbnail:uploadedAwaitingModeration"),
+            type: "success"
+          }, !0), ap()
+        }))
+      }
+
+      function Gp() {
+        Bp.current = Date.now(), Tp.current = null;
+        const pp = Np.current;
+        Np.current = null, hp({
+          text: yp("thumbnail:settingThumbnail"),
+          type: "info"
+        }, !1), Mp.b.setSchematicThumbnail(Up, Sp.schematicId, pp).then((() => {
+          vp.current && (hp({
+            text: yp("thumbnail:thumbnailUpdated"),
+            type: "success"
+          }, !0), Jp.current = pp, Yp("customThumbnailId", pp), Yp("customThumbnailBlurhash", void 0), Yp("customThumbnailVariants", void 0))
+        })).catch((pp => {
+          vp.current && (hp({
+            text: pp.errorMessageForUser ? yp(pp.errorMessageForUser, pp.errorMessageTranslationParams) : yp("thumbnail:failedToSetThumbnail"),
+            type: "error"
+          }, !0), qp(Jp.current))
+        }))
+      }
+
+      function zp(pp) {
+        qp(pp), Np.current = pp;
+        const ip = Date.now() - Bp.current;
+        ip >= 1e3 ? Gp() : (hp({
+          text: yp("thumbnail:settingThumbnail"),
+          type: "info"
+        }, !1), Tp.current || (Tp.current = setTimeout((() => {
+          Gp()
+        }), 1e3 - ip)))
+      }
+      return (0, Op.useEffect)((() => {
+        !1 === wp && ap()
+      }), [wp, ap]), ep.length > 0 ? (0, dp.jsx)(rp, {
+        rejectedThumbnails: ep,
+        userContext: Up,
+        isMountedRef: vp,
+        onAcknowledged: ap
+      }) : (0, dp.jsxs)("div", {
+        className: "BloxdForm ThumbnailSection",
+        children: [(0, dp.jsxs)("div", {
+          className: "SectionTitle",
+          children: [yp("thumbnail:gameThumbnail"), lp && (0, dp.jsx)("span", {
+            className: Wp()("ThumbnailActionMsg", `ThumbnailActionMsg--${lp.type}`),
+            children: lp.text
+          })]
+        }), (0, dp.jsx)("div", {
+          className: "SectionBody",
+          children: (0, dp.jsxs)("div", {
+            className: "ThumbnailGrid",
+            children: [(0, dp.jsxs)("div", {
+              className: Wp()("ThumbnailGridItem ThumbnailGridItemDefault", {
+                ThumbnailGridItemSelected: null === Rp
+              }),
+              onClick: () => zp(null),
+              children: [(0, dp.jsx)(Xp.b, {
+                game: {
+                  schematicId: Sp.schematicId,
+                  imageBlurhash: Sp.imageBlurhash
+                }
+              }), (0, dp.jsx)("div", {
+                className: "ThumbnailGridItemLabel ThumbnailDefaultLabel",
+                children: yp("general:default")
+              })]
+            }), kp && (0, dp.jsx)(Lp.c, {}), tp.map(((pp, ip) => (0, dp.jsxs)("div", {
+              className: Wp()("ThumbnailGridItem", {
+                ThumbnailGridItemSelected: Rp === pp.id,
+                ThumbnailGridItemPending: !pp.approved
+              }),
+              onClick: () => {
+                pp.approved && zp(pp.id)
+              },
+              children: [pp.approved && (0, dp.jsx)("img", {
+                src: `${Fp.clientSideServerUrls.s3Url}/customThumbnails/${pp.id}.jpg`,
+                alt: "Thumbnail"
+              }), pp.approved && (0, dp.jsx)("div", {
+                className: "ThumbnailGridItemLabel",
+                children: pp.name
+              }), pp.id && (0, dp.jsx)(Ip.K, {
+                className: "ThumbnailDeleteButton",
+                onClick: ip => async function(pp, ip, cp) {
+                  pp.stopPropagation();
+                  const Op = await op.NotificationProvider.showCustomPopup({
+                      body: pp => (0, dp.jsx)(Zp, {
+                        thumbnailId: ip,
+                        thumbnailName: cp,
+                        onClose: ip => {
+                          ip && (bp.current = !0), pp()
+                        }
+                      }),
+                      middleScreenPopupClassName: "ThumbnailDeleteConfirmPopup",
+                      onClose: Pp
+                    }).getResult(),
+                    Ip = bp.current;
+                  bp.current = !1, Ip && !0 === Op && (vp.current && hp({
+                    text: yp("thumbnail:deletingThumbnail"),
+                    type: "info"
+                  }, !1), Mp.b.deleteSchematicThumbnail(Up, ip).then((() => {
+                    vp.current && (hp({
+                      text: yp("thumbnail:thumbnailDeleted"),
+                      type: "success"
+                    }, !0), Jp.current === ip && zp(null), ap())
+                  })).catch((pp => {
+                    vp.current && hp({
+                      text: pp.errorMessageForUser ? yp(pp.errorMessageForUser, pp.errorMessageTranslationParams) : yp("thumbnail:failedToDeleteThumbnail"),
+                      type: "error"
+                    }, !0)
+                  })))
+                }(ip, pp.id, pp.name),
+                children: (0, dp.jsx)(Dp.d, {
+                  name: "trash-can"
+                })
+              }), !pp.approved && (0, dp.jsx)("div", {
+                className: "ThumbnailUnapprovedIcon",
+                children: (0, dp.jsx)(Dp.d, {
+                  name: "hourglass-clock"
+                })
+              }), !pp.approved && (0, dp.jsxs)("div", {
+                className: "ThumbnailGridItemLabel ThumbnailPendingLabel",
+                children: [pp.name, (0, dp.jsx)("br", {}), yp("thumbnail:pendingApproval")]
+              })]
+            }, ip))), (0, dp.jsxs)("div", {
+              className: Wp()("ThumbnailGridItem ThumbnailUploadTile", {
+                ThumbnailUploadTileDisabled: !Ap
+              }),
+              onClick: () => {
+                Ap && function(pp) {
+                  let {
+                    schematicId: ip,
+                    ownedThumbnailCount: cp,
+                    onThumbnailReady: Op,
+                    onClose: Ip
+                  } = pp;
+                  op.NotificationProvider.showCustomPopup({
+                    body: pp => (0, dp.jsx)(np, {
+                      schematicId: ip,
+                      ownedThumbnailCount: cp,
+                      onClose: pp,
+                      onThumbnailReady: Op
+                    }),
+                    middleScreenPopupClassName: "SchematicThumbnailPopup",
+                    onClose: Ip,
+                    unlockPointerKey: "schematicThumbnailUploaderPopup"
+                  })
+                }({
+                  schematicId: Sp.schematicId,
+                  ownedThumbnailCount: tp.length,
+                  onThumbnailReady: gp,
+                  onClose: Pp
+                })
+              },
+              children: [(0, dp.jsx)(Dp.d, {
+                name: "plus"
+              }), (0, dp.jsx)("div", {
+                className: "ThumbnailGridItemLabel",
+                children: yp("thumbnail:uploadThumbnail")
+              })]
+            })]
+          })
+        })]
+      })
+    }
+
+    function rp(pp) {
+      let {
+        rejectedThumbnails: ip,
+        userContext: cp,
+        isMountedRef: op,
+        onAcknowledged: Sp
+      } = pp;
+      const {
+        t: Yp
+      } = (0, xp.H)(), [Ap, Pp] = (0, Op.useState)(!1), [Wp, yp] = (0, Op.useState)(!1), Up = function(pp) {
+        const ip = new Map;
+        for (const cp of pp) {
+          const pp = cp.rejectionPolicyId,
+            Op = ip.get(pp);
+          Op ? Op.push(cp) : ip.set(pp, [cp])
+        }
+        return ip
+      }(ip);
+      return (0, dp.jsxs)("div", {
+        className: "ThumbnailRejectionNotice",
+        children: [(0, dp.jsxs)("div", {
+          className: "ThumbnailRejectionNoticeTitle",
+          children: [(0, dp.jsx)(Dp.d, {
+            name: "triangle-exclamation"
+          }), " ", Yp("thumbnail:thumbnailsRejected"), " ", (0, dp.jsx)(Dp.d, {
+            name: "triangle-exclamation"
+          })]
+        }), (0, dp.jsx)("div", {
+          className: "ThumbnailRejectionNoticeSubtitle",
+          children: Yp("thumbnail:thumbnailsRejectedDescription")
+        }), (0, dp.jsx)("div", {
+          className: "ThumbnailRejectionNoticeList",
+          children: [...Up.entries()].map((pp => {
+            let [ip, cp] = pp;
+            const Op = gp[ip];
+            return (0, dp.jsxs)("div", {
+              className: "ThumbnailRejectionNoticeGroup",
+              children: [(0, dp.jsx)("div", {
+                className: "ThumbnailRejectionNoticeItems",
+                children: cp.map((pp => (0, dp.jsxs)("div", {
+                  className: "ThumbnailRejectionNoticeItem",
+                  children: [(0, dp.jsx)("div", {
+                    className: "ThumbnailRejectionNoticeItemIcon",
+                    children: (0, dp.jsx)(Dp.d, {
+                      name: "image-slash"
+                    })
+                  }), (0, dp.jsx)("div", {
+                    className: "ThumbnailRejectionNoticeItemDetails",
+                    children: (0, dp.jsx)("div", {
+                      className: "ThumbnailRejectionNoticeItemName",
+                      children: pp.name
+                    })
+                  })]
+                }, pp.id)))
+              }), (0, dp.jsxs)("div", {
+                className: "ThumbnailRejectionNoticeGroupReason",
+                children: [Yp("thumbnail:rejectionReason"), " ", Op ? Yp(Op.reason) : ip]
+              }), Op && (0, dp.jsx)("ul", {
+                className: "ThumbnailRejectionNoticeGroupTips",
+                children: Op.tips.map((pp => (0, dp.jsx)("li", {
+                  children: Yp(pp)
+                }, pp)))
+              })]
+            }, ip)
+          }))
+        }), (0, dp.jsxs)("label", {
+          className: "ThumbnailRejectionNoticeCheckbox",
+          children: [(0, dp.jsx)(qp.b, {
+            checked: Ap,
+            onChange: pp => Pp(pp.target.checked),
+            disabled: Wp
+          }), (0, dp.jsx)("span", {
+            children: Yp("thumbnail:haveReadRejectionReasons")
+          })]
+        }), (0, dp.jsx)(Ip.o, {
+          onClick: async function() {
+            yp(!0);
+            const pp = await Promise.allSettled(ip.map((pp => Mp.b.deleteSchematicThumbnail(cp, pp.id))));
+            if (!op.current) return;
+            const Op = pp.filter((pp => "rejected" === pp.status));
+            Op.length > 0 && console.error("Some rejected thumbnails failed to delete:", Op), Sp()
+          },
+          disabled: !Ap || Wp,
+          className: "ThumbnailRejectionNoticeAcceptButton",
+          children: Wp ? (0, dp.jsx)(Lp.c, {}) : Yp("general:accept")
+        })]
+      })
+    }
+
+    function Zp(pp) {
+      let {
+        thumbnailId: ip,
+        thumbnailName: cp,
+        onClose: Op
+      } = pp;
+      const {
+        t: op
+      } = (0, xp.H)();
+      return (0, dp.jsxs)("div", {
+        className: "ThumbnailDeleteConfirm",
+        children: [(0, dp.jsx)("div", {
+          className: "ThumbnailDeleteConfirmTitle",
+          children: op("thumbnail:deleteThumbnail")
+        }), (0, dp.jsxs)("div", {
+          className: "ThumbnailDeleteConfirmImageContainer",
+          children: [(0, dp.jsx)("img", {
+            className: "ThumbnailDeleteConfirmImage",
+            src: `${Fp.clientSideServerUrls.s3Url}/customThumbnails/${ip}.jpg`,
+            alt: "Thumbnail to delete"
+          }), (0, dp.jsx)("div", {
+            className: "ThumbnailGridItemLabel",
+            children: cp
+          })]
+        }), (0, dp.jsx)("div", {
+          className: "ThumbnailDeleteConfirmSubtitle",
+          children: op("thumbnail:deleteThumbnailConfirmation")
+        }), (0, dp.jsxs)("div", {
+          className: "ThumbnailDeleteConfirmButtons",
+          children: [(0, dp.jsxs)(Ip.K, {
+            className: "ThumbnailDeleteConfirmButton",
+            onClick: () => Op(!0),
+            children: [(0, dp.jsx)(Dp.d, {
+              name: "trash-can"
+            }), " ", op("general:delete")]
+          }), (0, dp.jsx)(Ip.j, {
+            className: "ThumbnailDeleteConfirmButton",
+            onClick: () => Op(!1),
+            children: op("general:cancel")
+          })]
+        })]
+      })
+    }
+    var zp = cp(2187),
+      sp = cp(5103),
+      Kp = cp(5107),
+      Vp = cp(5152);
+
+    function ii(pp) {
+      let {
+        schematicData: ip,
+        setTexturePack: cp,
+        initializeTexturePack: op,
+        publishFormEnabled: Ip
+      } = pp;
+      const {
+        t: Sp
+      } = (0, xp.H)(), [Lp, Yp] = (0, Op.useState)(null), [Dp, Ap] = (0, Op.useState)(null), [Pp, yp] = (0, Op.useState)(!1), Up = (0, Cp.b)(), wp = Ip && !Pp, vp = ip.customTexturePackKey;
+
+      function tp(pp) {
+        var ip;
+        Yp(pp.metaData.id), Ap(null !== (ip = pp.metaData.fromFolderName) && void 0 !== ip ? ip : null), (pp.metaData.id !== zp.q.CUSTOM || pp.metaData.fromFolderName) && cp(pp)
+      }
+      return (0, Op.useEffect)((() => {
+        vp && (yp(!0), (0, sp.d)(vp).then((pp => {
+          var ip;
+          Up.current && (pp ? (Yp(pp.metaData.id), Ap(null !== (ip = pp.metaData.fromFolderName) && void 0 !== ip ? ip : null), op(pp)) : console.error(`No texture pack at ${vp}`))
+        })).catch((pp => {
+          console.error("Error fetching texture pack: ", pp)
+        })).finally((() => {
+          yp(!1)
+        })))
+      }), [vp, op, Up]), (0, dp.jsxs)("div", {
+        className: "BloxdForm TexturePackSection",
+        children: [(0, dp.jsx)("div", {
+          className: "SectionTitle",
+          children: Sp("customTexturePack:customTexturePack")
+        }), (0, dp.jsxs)("div", {
+          className: "TexturePackList",
+          children: [(0, dp.jsx)("div", {
+            className: Wp()("TexturePack", {
+              Selected: null === Lp && !Pp,
+              Disabled: !wp
+            }),
+            onClick: () => {
+              wp && (Yp(null), cp(null), Ap(null))
+            },
+            children: (0, dp.jsx)("div", {
+              className: "TexturePackName",
+              children: "No Override"
+            })
+          }), Object.values(zp.q).map((pp => (0, dp.jsx)(Kp.f, {
+            id: pp,
+            isSelected: pp === Lp,
+            setSelected: tp,
+            disabled: !wp
+          }, pp)))]
+        }), Lp === zp.q.CUSTOM && (0, dp.jsx)(Vp.b, {
+          folderName: Dp,
+          onTexturePackUpdated: tp,
+          disabled: !wp,
+          maxFileSizeMb: 25,
+          packOwner: "customGame"
+        })]
+      })
+    }
+    var ci = cp(5188);
+
+    function Oi(pp) {
+      var ip;
+      let {
+        gameCategory: cp,
+        setGameCategory: Op,
+        disabled: op
+      } = pp;
+      const Sp = null !== (ip = (0, yp.ob)(cp)) && void 0 !== ip ? ip : "other";
+      return (0, dp.jsxs)("div", {
+        className: "GameCategoryPicker",
+        children: [(0, dp.jsx)(vp.i, {
+          label: "worldBuilder:gameCategoryGroup",
+          className: "GameCategoryGroup",
+          disabled: op,
+          children: (0, dp.jsx)(tp.d, {
+            options: yp.db.map((pp => ({
+              value: pp,
+              label: yp.cb[pp]
+            }))),
+            value: Sp,
+            onChange: pp => {
+              pp.value !== Sp && Op(yp.X[pp.value][0])
+            }
+          })
+        }), (0, dp.jsx)(vp.i, {
+          label: "worldBuilder:gameCategory",
+          className: "GameCategory",
+          disabled: op,
+          children: (0, dp.jsx)("div", {
+            className: "GameCategoryOptions",
+            children: yp.X[Sp].map((pp => (0, dp.jsx)(Ip.S, {
+              active: pp === cp,
+              onClick: () => {
+                Op(pp)
+              },
+              children: (0, yp.nb)(pp)
+            }, pp)))
+          })
+        })]
+      })
+    }
+
+    function oi(pp) {
+      let {
+        editor: ip,
+        onClose: cp
+      } = pp;
+      const {
+        t: Op
+      } = (0, xp.H)(), {
+        schematicData: op,
+        updateSchematicData: Ip,
+        publishFormEnabled: Lp,
+        formEnabled: Yp
+      } = ip;
+      return (0, dp.jsxs)(dp.Fragment, {
+        children: [(0, dp.jsxs)(ep, {
+          icon: "pen-to-square",
+          title: Op("worldBuilder:basicsSection"),
+          disabled: !Yp,
+          children: [(0, dp.jsx)(jp, {
+            label: Op("general:name"),
+            caption: Op("worldBuilder:schematicNameTagsHint"),
+            children: (0, dp.jsx)(Sp.c, {
+              className: "SchematicPageName",
+              defaultValue: op.name,
+              onValueChange: pp => Ip("name", pp),
+              placeholderText: Op("worldBuilder:schematicNamePlaceholder"),
+              maxLength: Ap.qb
+            })
+          }), (0, dp.jsx)(jp, {
+            label: Op("general:description"),
+            children: (0, dp.jsx)(Sp.c, {
+              className: "SchematicPageDescription",
+              useTextarea: !0,
+              defaultValue: op.description,
+              onValueChange: pp => Ip("description", pp),
+              placeholderText: Op("worldBuilder:schematicDescriptionPlaceholder"),
+              maxLength: Ap.ob
+            })
+          }), (0, dp.jsx)(Oi, {
+            gameCategory: op.gameCategory,
+            setGameCategory: pp => Ip("gameCategory", pp),
+            disabled: !Lp
+          }), !0 === op.gamePublished && (0, dp.jsx)(Gp, {
+            schematicData: op,
+            updateSchematicData: Ip,
+            publishFormEnabled: Lp,
+            onClose: function() {
+              null === cp || void 0 === cp || cp()
+            }
+          })]
+        }), (0, dp.jsx)(mp, {
+          schematicData: op,
+          updateSchematicData: Ip,
+          publishFormEnabled: Lp,
+          formEnabled: Yp
+        }), !0 === op.gamePublished && (0, dp.jsx)(ep, {
+          icon: "palette",
+          title: Op("worldBuilder:texturePackSection"),
+          disabled: !Yp,
+          children: (0, dp.jsx)(ii, {
+            schematicData: op,
+            setTexturePack: ip.setTexturePack,
+            initializeTexturePack: ip.initializeTexturePack,
+            publishFormEnabled: Lp
+          })
+        })]
+      })
+    }
+
+    function Ii(pp) {
+      let {
+        editor: ip
+      } = pp;
+      const {
+        t: cp
+      } = (0, xp.H)(), {
+        schematicData: Op,
+        formEnabled: op,
+        hasUnsavedChanges: Sp
+      } = ip, Ap = op && Sp;
+      return (0, dp.jsxs)("footer", {
+        className: "SchematicPageFooter",
+        children: [op && Sp && (0, dp.jsxs)("div", {
+          className: "SchematicPageFooterStatus",
+          children: [(0, dp.jsx)("span", {
+            className: "SchematicPageFooterStatusDot"
+          }), cp("worldBuilder:unsavedChanges")]
+        }), (0, dp.jsx)(Yp.f, {
+          tooltipInner: (0, dp.jsx)("div", {
+            className: "SaveButtonTooltip",
+            children: cp(op && !Sp ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
+          }),
+          children: (0, dp.jsxs)(Ip.f, {
+            className: "SaveChangesButton",
+            onClick: () => ip.saveSchematic(Op.gamePublished),
+            disabled: !Ap,
+            children: [(0, dp.jsxs)("span", {
+              className: op ? "" : "SaveChangesButtonBodyHidden",
+              children: [(0, dp.jsx)(Dp.d, {
+                name: "wrench"
+              }), " ", cp("worldBuilder:saveChanges")]
+            }), !op && (0, dp.jsx)(Lp.c, {})]
+          })
+        })]
+      })
+    }
+
+    function Si(pp) {
+      let {
+        schematic: ip,
+        onSchematicUpdate: cp,
+        onClose: op,
+        inSourceWorld: Sp
+      } = pp;
+      const {
+        t: Lp
+      } = (0, xp.H)();
+
+      function Yp() {
+        null === op || void 0 === op || op()
+      }
+      const Dp = (0, ci.b)(ip, {
+        onNavigateAway: Yp,
+        inSourceWorld: Sp
+      });
+      return (0, Op.useEffect)((() => {
+        null === cp || void 0 === cp || cp(Dp.schematicData)
+      }), [Dp.schematicData, cp]), (0, dp.jsxs)("div", {
+        className: "SchematicPage SchematicPagePopupVariant",
+        children: [(0, dp.jsxs)("div", {
+          className: "SchematicPageBody",
+          children: [(0, dp.jsx)(Ip.d, {
+            onClick: Yp,
+            children: Lp("worldBuilder:back")
+          }), (0, dp.jsx)(ep, {
+            icon: "rocket-launch",
+            title: Lp("worldBuilder:actionsSection"),
+            disabled: !Dp.formEnabled,
+            children: (0, dp.jsx)(Rp.e, {
+              editor: Dp
+            })
+          }), (0, dp.jsx)(oi, {
+            editor: Dp,
+            onClose: Yp
+          })]
+        }), (0, dp.jsx)(Ii, {
+          editor: Dp
+        })]
+      })
+    }
+
+    function xi(pp) {
+      let {
+        schematic: ip,
+        onSchematicUpdate: cp,
+        onClose: Op,
+        inSourceWorld: Ip
+      } = pp;
+      op.NotificationProvider.showCustomPopup({
+        body: pp => (0, dp.jsx)(Si, {
+          schematic: ip,
+          onSchematicUpdate: cp,
+          onClose: pp,
+          inSourceWorld: Ip
+        }),
+        middleScreenPopupClassName: "SchematicPopup",
+        onClose: Op,
+        unlockPointerKey: "schematicPagePopup"
+      })
+    }
+  },
+  5067: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Ap
+    });
+    var Op = cp(1049),
+      op = cp.n(Op),
+      Ip = cp(1201),
+      Sp = cp(1060),
+      xp = cp(1480),
+      Lp = cp(1387),
+      Yp = cp(1361),
+      Dp = cp(1112);
+
+    function Ap(pp) {
+      let {
+        editor: ip,
+        className: cp
+      } = pp;
+      const {
+        t: Op
+      } = (0, Ip.H)(), {
+        schematicData: Ap,
+        formEnabled: Pp,
+        publishFormEnabled: Wp
+      } = ip, yp = !Pp || !Wp;
+      return (0, Dp.jsxs)("div", {
+        className: op()("PublishButtonContainer", cp),
+        children: [ip.canEditSourceWorld && (0, Dp.jsxs)(xp.f, {
+          onClick: ip.editSourceWorld,
+          disabled: yp,
+          children: [(0, Dp.jsx)(Sp.d, {
+            name: "edit"
+          }), " ", Op("worldBuilder:editSourceWorld")]
+        }), !Ap.gamePublished && (0, Dp.jsx)(Lp.f, {
+          tooltipInner: (0, Dp.jsx)("div", {
+            className: "PublishButtonTooltip",
+            children: Op("worldBuilder:publishAsGameDescription")
+          }),
+          children: (0, Dp.jsxs)(xp.o, {
+            onClick: () => ip.saveSchematic(!0),
+            disabled: yp,
+            children: [(0, Dp.jsx)(Sp.d, {
+              name: "rocket-launch"
+            }), " ", Op("worldBuilder:publishAsGame"), " ", (0, Dp.jsx)(Sp.d, {
+              name: "info-circle"
+            })]
+          })
+        }), !0 === Ap.gamePublished && (0, Dp.jsxs)(Dp.Fragment, {
+          children: [(0, Dp.jsx)(Lp.f, {
+            tooltipInner: (0, Dp.jsx)("div", {
+              className: "PublishButtonTooltip",
+              children: Op("worldBuilder:unpublishAsGameDescription")
+            }),
+            children: (0, Dp.jsxs)(xp.K, {
+              onClick: ip.unpublishSchematic,
+              disabled: yp,
+              children: [(0, Dp.jsx)(Sp.d, {
+                name: "rocket-launch"
+              }), " ", Op("worldBuilder:unpublishAsGame"), " ", (0, Dp.jsx)(Sp.d, {
+                name: "info-circle"
+              })]
+            })
+          }), (0, Dp.jsxs)(xp.f, {
+            onClick: ip.playGame,
+            disabled: yp,
+            children: [(0, Dp.jsx)(Sp.d, {
+              name: "joystick"
+            }), " ", Op("general:playGame")]
+          })]
+        }), !Pp && (0, Dp.jsx)(Yp.c, {
+          loaderType: "Secondary"
+        })]
+      })
+    }
+  },
+  5103: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => op
+    });
+    var Op = cp(1211);
+    async function op(pp) {
+      const ip = await fetch(`${Op.clientSideServerUrls.s3Url}/${pp}`, {
+        headers: {
+          Accept: "application/json"
+        }
+      });
+      if (404 === ip.status || 403 === ip.status) return null;
+      if (!ip.ok) throw new Error(`Failed to download the texture pack (${ip.status})`);
+      return await ip.json()
+    }
+  },
+  5188: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => wp
+    });
+    var Op = cp(62),
+      op = cp(1356),
+      Ip = cp(1014),
+      Sp = cp(156),
+      xp = cp(1569),
+      Lp = cp(25),
+      Yp = cp(1956),
+      Dp = cp(1520),
+      Ap = cp(4677),
+      Pp = cp(1372),
+      Wp = cp(1141),
+      yp = cp(1538);
+
+    function Up(pp, ip) {
+      return {
+        schematicId: pp.schematicId,
+        name: pp.name,
+        description: pp.description,
+        gamePublished: ip,
+        gameCategory: pp.gameCategory,
+        defaultGamemode: pp.defaultGamemode,
+        voidDeathHeight: pp.voidDeathHeight,
+        disableKeepInventory: pp.disableKeepInventory,
+        disableTpRequests: pp.disableTpRequests,
+        disableLobbySpawn: pp.disableLobbySpawn,
+        disableMobs: pp.disableMobs,
+        disableSpawnProtection: pp.disableSpawnProtection,
+        disableFallDamage: pp.disableFallDamage,
+        worldBorder: pp.worldBorder,
+        hideLobbyCode: pp.hideLobbyCode,
+        enableSmpMarketplace: pp.enableSmpMarketplace,
+        enableSurvivalGuns: pp.enableSurvivalGuns,
+        enableSpawnReset: pp.enableSpawnReset,
+        enableDayNight: pp.enableDayNight,
+        persistWorld: pp.persistWorld,
+        persistInventory: pp.persistInventory
       }
     }
 
-    function Sz() {}
-  }
+    function wp(pp) {
+      let {
+        onNavigateAway: ip,
+        inSourceWorld: cp = !1
+      } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const {
+        userContext: wp
+      } = (0, Wp.b)(), vp = (0, yp.useNavigatePreserveSearch)(), [tp, Hp] = (0, Op.useState)({
+        ...pp
+      }), [dp, ep] = (0, Op.useState)("Enter"), [jp, kp] = (0, Op.useState)(void 0), mp = (0, Op.useRef)(Up(pp, pp.gamePublished)), Rp = (0, Op.useRef)(void 0), qp = "Enter" === dp, Mp = wp.playerHasRank("developer") || wp.playerHasRank("admin") || "Enter" === dp && !1 !== tp.schematicContainsSpawnBlock, Cp = void 0 !== jp && jp !== Rp.current || JSON.stringify(Up(tp, tp.gamePublished)) !== JSON.stringify(mp.current);
+
+      function Ep(pp, ip) {
+        Hp((cp => ({
+          ...cp,
+          [pp]: ip
+        })))
+      }
+      const Xp = (0, Op.useCallback)((pp => {
+        Rp.current = pp, kp(pp)
+      }), []);
+
+      function lp(pp) {
+        ep("Loading");
+        const ip = Up(tp, pp),
+          cp = jp !== Rp.current ? jp : void 0;
+        Dp.b.updateSchematic(wp, ip, cp).then((cp => {
+          let {
+            customTexturePackKey: Op
+          } = cp;
+          ep("Success"), Ep("customTexturePackKey", Op), mp.current = ip, Rp.current = void 0, kp(void 0), setTimeout((() => {
+            Ep("gamePublished", pp), ep("Enter")
+          }), 1e3)
+        })).catch((pp => {
+          var ip;
+          (console.error("Failed to save schematic:", pp), ep("Error"), pp instanceof Sp.e && pp.errorMessageForUser) && Pp.NotificationProvider.showAlertPopup({
+            title: "worldBuilder:changesNotSaved",
+            subtitle: pp.errorMessageForUser,
+            textOpts: {
+              subtitle: null !== (ip = pp.errorMessageTranslationParams) && void 0 !== ip ? ip : void 0
+            },
+            confirmText: "general:ok"
+          });
+          setTimeout((() => {
+            ep("Enter")
+          }), 1e3)
+        }))
+      }
+      return {
+        schematicData: tp,
+        updateSchematicData: Ep,
+        setTexturePack: kp,
+        initializeTexturePack: Xp,
+        updateState: dp,
+        formEnabled: qp,
+        publishFormEnabled: Mp,
+        hasUnsavedChanges: Cp,
+        canEditSourceWorld: !cp,
+        saveSchematic: lp,
+        unpublishSchematic: function() {
+          Pp.NotificationProvider.showPromptPopup({
+            icon: "rocket-launch",
+            title: "worldBuilder:unpublishAsGameConfirmTitle",
+            subtitle: "worldBuilder:unpublishAsGameConfirmSubtitle",
+            confirmText: "worldBuilder:unpublishAsGame",
+            cancelText: "general:cancel",
+            unlockPointerKey: "unpublishGamePrompt"
+          }).getResult().then((pp => {
+            !0 === pp && lp(!1)
+          }))
+        },
+        editSourceWorld: function() {
+          ep("Loading"), Ap.b.getSourceWorld(tp.schematicId).then((pp => {
+            Yp.gameBridge.send("leaveGame", {
+              reloadPath: "/"
+            }), (0, Lp.k)("other"), vp((0, op.c)("classic", pp)), null === ip || void 0 === ip || ip()
+          })).catch((pp => {
+            console.error("Failed to get source world:", pp), ep("Error"), setTimeout((() => {
+              ep("Enter")
+            }), 1e3)
+          }))
+        },
+        playGame: function() {
+          Yp.gameBridge.send("leaveGame", {
+            reloadPath: "/"
+          }), vp((0, xp.u)((0, Ip.t)(tp.schematicId), tp)), null === ip || void 0 === ip || ip()
+        }
+      }
+    }
+  },
+  5054: () => {}
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

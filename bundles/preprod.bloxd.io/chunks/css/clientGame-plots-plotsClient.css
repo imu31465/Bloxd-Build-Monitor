@@ -1,3 +1,802 @@
+.PlotsJournalButtonContainer {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  min-height: 0;
+  pointer-events: none
+}
+
+.PlotsJournalButton {
+  align-items: center;
+  background: none;
+  background: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-left: .35rem solid #ffb914;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: content-box;
+  box-sizing: border-box;
+  color: inherit;
+  color: #fcd373;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  font-size: max(1.3rem, 12px);
+  gap: .5rem;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0 calc(.5rem + env(safe-area-inset-right)) 0 0;
+  min-height: 44px;
+  padding: .3rem .8rem .3rem .5rem;
+  pointer-events: auto;
+  position: relative;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+@media(hover:hover) {
+  .PlotsJournalButton:hover {
+    background: #394980
+  }
+}
+
+.PlotsJournalButton.pad-focused {
+  background: #394980
+}
+
+@media(hover:none) {
+  .PlotsJournalButton:active {
+    background: #394980
+  }
+}
+
+.PlotsJournalButton .PlotsJournalButtonIcon {
+  height: max(2.6rem, 24px);
+  position: relative;
+  width: max(2.6rem, 24px)
+}
+
+.PlotsJournalButton .PlotsJournalButtonKey {
+  display: inline-flex;
+  font-size: .8em
+}
+
+.PlotsJournalButton .PlotsJournalButtonHand {
+  font-size: 24px
+}
+
+.PlotsJournalButton.Touch {
+  flex-direction: column;
+  gap: .3rem;
+  justify-content: center;
+  min-height: 88px;
+  min-width: max(7rem, 64px);
+  padding: .6rem .8rem
+}
+
+.PlotsJournalButton.Touch .PlotsJournalButtonIcon {
+  height: max(3.6rem, 32px);
+  width: max(3.6rem, 32px)
+}
+
+.tooltip-container.TutorialStep {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  gap: .6rem;
+  max-width: 18rem;
+  padding: .6rem .75rem
+}
+
+.tooltip-container.TutorialStep .TutorialStepText {
+  text-align: center
+}
+
+.tooltip-container.TutorialStep .TutorialStepText .TutorialStepList {
+  margin: .4rem 0;
+  padding-left: 1.4rem;
+  text-align: left
+}
+
+.tooltip-container.TutorialStep .TutorialStepText p {
+  margin: 0 0 .4rem
+}
+
+.tooltip-container.TutorialStep .TutorialStepText p:last-child {
+  margin-bottom: 0
+}
+
+.tooltip-container.TutorialStep .TutorialStepButtons {
+  display: flex;
+  gap: .5rem;
+  justify-content: center
+}
+
+.tooltip-container.TutorialStep .TutorialStepButtons .TutorialStepButton {
+  font-size: .9rem
+}
+
+.tooltip-container.TutorialStep .TutorialStepButtons .TutorialStepButton .ButtonBody {
+  padding: .35rem .8rem
+}
+
+.TutorialCentreBackdrop,
+.TutorialSpotlightBackdrop {
+  background-color: rgba(26, 31, 46, .6);
+  position: fixed;
+  z-index: 3999
+}
+
+.TutorialCentreBackdrop {
+  align-items: center;
+  display: flex;
+  inset: 0;
+  justify-content: center
+}
+
+.TutorialCentreBackdrop .tooltip-container.TutorialStep.TutorialCentreStep {
+  box-sizing: border-box;
+  font-size: 1.3rem;
+  gap: 1rem;
+  max-height: 90vh;
+  max-width: none;
+  overflow-y: auto;
+  padding: 1.25rem 1.5rem;
+  width: min(32rem, 90vw)
+}
+
+.TutorialCentreBackdrop .tooltip-container.TutorialStep.TutorialCentreStep .TutorialStepButtons .TutorialStepButton {
+  font-size: 1.1rem
+}
+
+.TutorialCentreBackdrop .tooltip-container.TutorialStep.TutorialCentreStep .TutorialStepButtons .TutorialStepButton .ButtonBody {
+  padding: .5rem 1.2rem
+}
+
+.PlotsGuideSkipButton {
+  background: none;
+  border: none;
+  box-sizing: content-box;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit
+}
+
+@media(pointer:coarse) {
+  .PlotsGuideSkipButton:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.PlotsGuideSkipButton {
+  color: #cfcfcf;
+  cursor: pointer;
+  font-size: max(1.1rem, 12px);
+  font-weight: 700;
+  text-decoration: underline
+}
+
+@media(hover:hover) {
+  .PlotsGuideSkipButton:hover {
+    color: #fff
+  }
+}
+
+.PlotsGuideSkipButton.pad-focused {
+  color: #fff
+}
+
+@media(hover:none) {
+  .PlotsGuideSkipButton:active {
+    color: #fff
+  }
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.PlotsGuideBubble {
+  animation: PlotsGuideBubbleIn .18s ease-out;
+  font-size: max(1.4rem, 14px);
+  font-weight: 800;
+  gap: 0;
+  line-height: 1.3;
+  max-width: min(20em, 100vw - 2rem);
+  padding: 0;
+  white-space: normal
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.PlotsGuideBubble .PlotsGuideBubbleHeader {
+  align-items: center;
+  display: flex;
+  gap: .5em;
+  padding: .45em .45em 0 .6em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.PlotsGuideBubble .PlotsGuideBubbleHeader .PlotsGuideBubblePortrait {
+  -ms-interpolation-mode: nearest-neighbor;
+  flex-shrink: 0;
+  height: 1.8em;
+  image-rendering: optimizeSpeed;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  width: 1.8em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.PlotsGuideBubble .PlotsGuideBubbleHeader .PlotsGuideBubbleSpeaker {
+  color: #fcd373;
+  flex: 1 1;
+  font-size: .8em;
+  font-weight: 900
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.PlotsGuideBubble .PlotsGuideBubbleText {
+  margin: 0;
+  padding: .35em .9em .65em .6em
+}
+
+.WholeAppWrapper .WholeAppWrapperInner .tooltip-container.PlotsGuideBubble.Passive {
+  pointer-events: none
+}
+
+@keyframes PlotsGuideBubbleIn {
+  0% {
+    opacity: 0;
+    scale: .94
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .WholeAppWrapper .WholeAppWrapperInner .tooltip-container.PlotsGuideBubble {
+    animation: none
+  }
+}
+
+.PlotsCard {
+  --plots-card-accent: #ffb914;
+  align-items: center;
+  animation: PlotsCardIn .18s ease-out;
+  background: rgba(38, 52, 93, .85);
+  border: 1px solid #0f0f0f;
+  border-left: .35rem solid var(--plots-card-accent);
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: border-box;
+  color: #fff;
+  display: flex;
+  gap: .9rem;
+  padding: .6rem 1rem;
+  pointer-events: none;
+  text-align: left;
+  width: var(--hotbar-slots-width, 42rem)
+}
+
+.PlotsCard .PlotsCardIcon {
+  color: var(--plots-card-accent);
+  flex-shrink: 0;
+  font-size: 2.2rem
+}
+
+.PlotsCard .PlotsCardBody {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  gap: .3rem;
+  min-width: 0
+}
+
+.PlotsCard .PlotsCardBody .PlotsCardTitle {
+  color: #fcd373;
+  font-size: 1.4rem
+}
+
+.PlotsCard .PlotsCardBody .PlotsCardHint {
+  font-size: 1.15rem
+}
+
+.PlotsCard.Celebrate {
+  --plots-card-accent: #1dd06d;
+  animation: PlotsCardCelebrate .52s cubic-bezier(.3, 1.5, .5, 1)
+}
+
+.PlotsCard.Celebrate .PlotsCardBody .PlotsCardTitle {
+  color: #1dd06d;
+  font-size: 1.6rem
+}
+
+@keyframes PlotsCardIn {
+  0% {
+    opacity: 0;
+    transform: translateY(.4rem)
+  }
+}
+
+@keyframes PlotsCardCelebrate {
+  0% {
+    opacity: 0;
+    transform: scale(.85)
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.06)
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+@media(max-height:420px), (max-width:650px) {
+  .PlotsCard {
+    gap: 6px;
+    padding: 4px 8px
+  }
+
+  .PlotsCard .PlotsCardIcon {
+    font-size: max(2.2rem, 16px)
+  }
+
+  .PlotsCard .PlotsCardBody {
+    gap: 2px
+  }
+
+  .PlotsCard .PlotsCardBody .PlotsCardTitle {
+    font-size: max(1.4rem, 12px)
+  }
+
+  .PlotsCard .PlotsCardBody .PlotsCardHint {
+    font-size: max(1.15rem, 11px)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .PlotsCard,
+  .PlotsCard.Celebrate {
+    animation: none
+  }
+}
+
+.PlotsProgress {
+  align-items: center;
+  display: flex;
+  gap: .6rem
+}
+
+.PlotsProgress .PlotsProgressBar {
+  background: rgba(57, 73, 128, .4);
+  flex: 1 1;
+  height: .6rem;
+  min-width: 4rem;
+  overflow: hidden
+}
+
+.PlotsProgress .PlotsProgressBar .PlotsProgressBarFill {
+  background: #1dd06d;
+  height: 100%;
+  transform-origin: left;
+  transition: transform .25s ease-out
+}
+
+.PlotsProgress .PlotsProgressCount {
+  flex-shrink: 0;
+  font-size: 1.1rem;
+  font-weight: 700
+}
+
+@media(max-height:420px), (max-width:650px) {
+  .PlotsProgress {
+    gap: 4px
+  }
+
+  .PlotsProgress .PlotsProgressBar {
+    height: max(.6rem, 5px)
+  }
+
+  .PlotsProgress .PlotsProgressCount {
+    font-size: max(1.1rem, 10px)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .PlotsProgress .PlotsProgressBar .PlotsProgressBarFill {
+    transition: none
+  }
+}
+
+.PlotsGuideHandLayer {
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: fixed;
+  z-index: 1
+}
+
+.PlotsGuideHandLayer .PlotsGuideHand {
+  animation: PlotsGuideHandIn .18s ease-out;
+  left: 0;
+  position: absolute;
+  top: 0;
+  translate: -100vw -100vh;
+  will-change: translate
+}
+
+.PlotsGuideHandLayer .PlotsGuideHand .TouchTutorialIcon {
+  animation: PlotsGuideHandPoint .8s ease-in-out infinite alternate both;
+  bottom: 0;
+  font-size: max(3rem, 28px);
+  left: 0
+}
+
+@keyframes PlotsGuideHandIn {
+  0% {
+    opacity: 0
+  }
+}
+
+@keyframes PlotsGuideHandPoint {
+  0% {
+    transform: translate(-50%, -35%) rotate(-90deg)
+  }
+
+  to {
+    transform: translate(-50%) rotate(-90deg)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .PlotsGuideHandLayer .PlotsGuideHand {
+    animation: none
+  }
+
+  .PlotsGuideHandLayer .PlotsGuideHand .TouchTutorialIcon {
+    animation: none;
+    transform: translate(-50%) rotate(-90deg)
+  }
+}
+
+.PlotsGuideDragHand {
+  left: 50%;
+  pointer-events: none;
+  position: fixed;
+  top: 50%;
+  z-index: 1
+}
+
+.PlotsGuideDragHand .TouchTutorialIcon {
+  animation: PlotsGuideDragHandSlide 1.6s ease-in-out infinite;
+  font-size: max(3.5rem, 32px);
+  left: 0;
+  top: 0
+}
+
+@keyframes PlotsGuideDragHandSlide {
+  0% {
+    opacity: 0;
+    transform: translate(-150%) scale(1.1)
+  }
+
+  15% {
+    opacity: 1;
+    transform: translate(-150%) scale(1)
+  }
+
+  70% {
+    opacity: 1;
+    transform: translate(50%) scale(1)
+  }
+
+  to {
+    opacity: 0;
+    transform: translate(50%) scale(1.1)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .PlotsGuideDragHand .TouchTutorialIcon {
+    animation: none;
+    transform: translate(-50%)
+  }
+}
+
+.PlotsPlacementLayer {
+  cursor: crosshair;
+  inset: 0;
+  pointer-events: auto;
+  position: fixed;
+  touch-action: none;
+  z-index: 2
+}
+
+.PlotsJournal .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser {
+  align-items: center;
+  animation: PlotsGuideChooserIn .18s ease-out;
+  background: #f2e7d0;
+  box-sizing: border-box;
+  color: #3e2e24;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  height: 100%;
+  isolation: isolate;
+  padding: 1rem 1.2rem 1.4rem;
+  position: relative;
+  text-align: center
+}
+
+.PlotsJournal .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserTitle {
+  font-size: max(2.2rem, 16px);
+  font-weight: 900;
+  margin: 0
+}
+
+.PlotsJournal .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserNote {
+  align-items: center;
+  color: #6d2e91;
+  display: flex;
+  font-size: max(1.4rem, 12px);
+  font-style: italic;
+  font-weight: 700;
+  gap: .5em;
+  margin: 0
+}
+
+.PlotsJournal .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserNote img {
+  -ms-interpolation-mode: nearest-neighbor;
+  height: 1.8em;
+  image-rendering: optimizeSpeed;
+  image-rendering: -o-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: optimize-contrast;
+  width: 1.8em
+}
+
+.PlotsJournal .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserStarters {
+  grid-gap: 1.5rem;
+  align-self: stretch;
+  display: grid;
+  flex: 1 1;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: .4rem;
+  min-height: 0
+}
+
+.PlotsJournal .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserStarters .PlotsGuideStarter {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  min-height: 0
+}
+
+.PlotsJournal .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserStarters .PlotsGuideStarter .PlotsGuideStarterSketch {
+  background: none;
+  border: none;
+  box-sizing: content-box;
+  color: inherit;
+  cursor: pointer;
+  flex: 1 1;
+  font: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  margin: 0;
+  min-height: 0;
+  padding: 0;
+  position: relative;
+  text-align: inherit;
+  text-shadow: inherit;
+  text-transform: inherit;
+  width: 100%
+}
+
+.PlotsJournal .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserStarters .PlotsGuideStarter .PlotsGuideStarterSketch img {
+  height: 100%;
+  inset: 0;
+  object-fit: contain;
+  position: absolute;
+  -webkit-user-select: none;
+  user-select: none;
+  width: 100%
+}
+
+.PlotsJournal .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserStarters .PlotsGuideStarter .PlotsGuideStarterInfo {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem
+}
+
+.PlotsJournal .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserStarters .PlotsGuideStarter .PlotsGuideStarterInfo .PlotsGuideStarterText {
+  column-gap: .6rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center
+}
+
+.PlotsJournal .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserStarters .PlotsGuideStarter .PlotsGuideStarterInfo .PlotsGuideStarterText .PlotsGuideStarterName {
+  flex-basis: 100%;
+  font-size: max(1.7rem, 14px);
+  font-weight: 900
+}
+
+.PlotsJournal .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserStarters .PlotsGuideStarter .PlotsGuideStarterInfo .PlotsGuideStarterText .PlotsGuideStarterEffort {
+  color: #6d2e91;
+  font-size: max(1.2rem, 11px);
+  font-weight: 900
+}
+
+.PlotsJournal .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserStarters .PlotsGuideStarter .PlotsGuideStarterInfo .PlotsGuideStarterText .PlotsGuideStarterBlocks {
+  color: #85634d;
+  font-size: max(1.2rem, 11px);
+  font-weight: 700
+}
+
+.PlotsJournal .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserStarters .PlotsGuideStarter .PlotsGuideStarterInfo>.NewButton {
+  color: #fff;
+  font-size: max(1.4rem, 13px);
+  min-width: 8em;
+  position: relative;
+  z-index: 2
+}
+
+.PlotsJournal.Spread .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser:after {
+  background: linear-gradient(90deg, transparent, rgba(62, 46, 36, .18), transparent);
+  bottom: 0;
+  content: "";
+  left: 46%;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 8%;
+  z-index: 1
+}
+
+.PlotsJournal:not(.Spread) .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserStarters {
+  gap: .6rem;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: repeat(3, minmax(0, 1fr))
+}
+
+.PlotsJournal:not(.Spread) .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserStarters .PlotsGuideStarter {
+  flex-direction: row;
+  gap: .8rem
+}
+
+.PlotsJournal:not(.Spread) .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserStarters .PlotsGuideStarter .PlotsGuideStarterSketch {
+  flex: 0 0 45%;
+  height: 100%
+}
+
+.PlotsJournal:not(.Spread) .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserStarters .PlotsGuideStarter .PlotsGuideStarterInfo {
+  align-items: flex-start;
+  flex: 1 1
+}
+
+.PlotsJournal:not(.Spread) .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser .PlotsGuideChooserStarters .PlotsGuideStarter .PlotsGuideStarterInfo .PlotsGuideStarterText {
+  justify-content: flex-start;
+  text-align: left
+}
+
+@keyframes PlotsGuideChooserIn {
+  0% {
+    opacity: 0
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .PlotsJournal .PlotsJournalBookPages.PlotsGuideChooserCover .PlotsGuideChooser {
+    animation: none
+  }
+}
+
+@keyframes rainbowShimmer {
+  0% {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(88.88889%)
+  }
+}
+
+@keyframes rainbowShimmerPosition {
+  to {
+    background-position: -200% 0
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fadeInScaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(.6)
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.1)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes fadeInScaleUpNoOversize {
+  0% {
+    opacity: 0;
+    transform: scale(.8)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes shake {
+  0% {
+    rotate: 3deg
+  }
+
+  5% {
+    rotate: -2deg
+  }
+
+  10% {
+    rotate: 2deg
+  }
+
+  15% {
+    rotate: -3deg
+  }
+
+  20% {
+    rotate: 0deg
+  }
+}
+
+@keyframes loadingShimmer {
+  0% {
+    transform: translateX(-66.6666666667%)
+  }
+
+  to {
+    transform: none
+  }
+}
+
+@keyframes topRightStackIn {
+  0% {
+    opacity: 0;
+    transform: translateX(1.5rem)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
+}
+
 .GameBackgroundScreen.PlotsJournalOverlay {
   background: rgba(26, 31, 46, .6);
   box-sizing: border-box;
@@ -70,6 +869,31 @@
 .PlotsJournal.Spread .PlotsJournalBookPages .PlotsJournalSheet .PlotsJournalSide.Right:after {
   background: linear-gradient(90deg, rgba(62, 46, 36, .18), transparent);
   left: 0
+}
+
+.PlotsJournal .PlotsJournalGuideSkip {
+  align-self: start;
+  color: #85634d;
+  grid-area: pages;
+  justify-self: end;
+  margin: .9rem 1.1rem 0 0;
+  z-index: 2
+}
+
+@media(hover:hover) {
+  .PlotsJournal .PlotsJournalGuideSkip:hover {
+    color: #3e2e24
+  }
+}
+
+.PlotsJournal .PlotsJournalGuideSkip.pad-focused {
+  color: #3e2e24
+}
+
+@media(hover:none) {
+  .PlotsJournal .PlotsJournalGuideSkip:active {
+    color: #3e2e24
+  }
 }
 
 .PlotsJournal .ExitButton.PlotsJournalClose {
@@ -278,182 +1102,6 @@
   transform: rotate(90deg)
 }
 
-@keyframes rainbowShimmer {
-  0% {
-    transform: translateX(0)
-  }
-
-  to {
-    transform: translateX(88.88889%)
-  }
-}
-
-@keyframes rainbowShimmerPosition {
-  to {
-    background-position: -200% 0
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0
-  }
-
-  to {
-    opacity: 1
-  }
-}
-
-@keyframes fadeInScaleUp {
-  0% {
-    opacity: 0;
-    transform: scale(.6)
-  }
-
-  50% {
-    opacity: 1;
-    transform: scale(1.1)
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1)
-  }
-}
-
-@keyframes fadeInScaleUpNoOversize {
-  0% {
-    opacity: 0;
-    transform: scale(.8)
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1)
-  }
-}
-
-@keyframes shake {
-  0% {
-    rotate: 3deg
-  }
-
-  5% {
-    rotate: -2deg
-  }
-
-  10% {
-    rotate: 2deg
-  }
-
-  15% {
-    rotate: -3deg
-  }
-
-  20% {
-    rotate: 0deg
-  }
-}
-
-@keyframes loadingShimmer {
-  0% {
-    transform: translateX(-66.6666666667%)
-  }
-
-  to {
-    transform: none
-  }
-}
-
-@keyframes topRightStackIn {
-  0% {
-    opacity: 0;
-    transform: translateX(1.5rem)
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0)
-  }
-}
-
-.PlotsJournalButtonContainer {
-  align-items: center;
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-end;
-  min-height: 0;
-  pointer-events: none
-}
-
-.PlotsJournalButton {
-  align-items: center;
-  background: none;
-  background: rgba(38, 52, 93, .85);
-  border: 1px solid #0f0f0f;
-  border-left: .35rem solid #ffb914;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  box-sizing: content-box;
-  box-sizing: border-box;
-  color: inherit;
-  color: #fcd373;
-  cursor: pointer;
-  display: flex;
-  font: inherit;
-  font-size: max(1.3rem, 12px);
-  gap: .5rem;
-  letter-spacing: inherit;
-  line-height: inherit;
-  margin: 0 calc(.5rem + env(safe-area-inset-right)) 0 0;
-  min-height: 44px;
-  padding: .3rem .8rem .3rem .5rem;
-  pointer-events: auto;
-  text-align: inherit;
-  text-shadow: inherit;
-  text-transform: inherit
-}
-
-@media(hover:hover) {
-  .PlotsJournalButton:hover {
-    background: #394980
-  }
-}
-
-.PlotsJournalButton.pad-focused {
-  background: #394980
-}
-
-@media(hover:none) {
-  .PlotsJournalButton:active {
-    background: #394980
-  }
-}
-
-.PlotsJournalButton .PlotsJournalButtonIcon {
-  height: max(2.6rem, 24px);
-  position: relative;
-  width: max(2.6rem, 24px)
-}
-
-.PlotsJournalButton .PlotsJournalButtonKey {
-  display: inline-flex;
-  font-size: .8em
-}
-
-.PlotsJournalButton.Touch {
-  flex-direction: column;
-  gap: .3rem;
-  justify-content: center;
-  min-height: 88px;
-  min-width: max(7rem, 64px);
-  padding: .6rem .8rem
-}
-
-.PlotsJournalButton.Touch .PlotsJournalButtonIcon {
-  height: max(3.6rem, 32px);
-  width: max(3.6rem, 32px)
-}
-
 .PlotsPlacementCard {
   background: rgba(38, 52, 93, .85);
   border: 1px solid #0f0f0f;
@@ -500,6 +1148,30 @@
   margin: 0 .4em 0 0
 }
 
+.PlotsPlacementCard .PlotsPlacementCardButtons .PlotsPlacementBuild {
+  display: flex
+}
+
+.PlotsPlacementCard .PlotsPlacementCardButtons .PlotsPlacementBuild>.NewButton {
+  flex: 1 0 auto
+}
+
+.PlotsPlacementCard .PlotsPlacementCardButtons .PlotsPlacementBuild.Pulse {
+  animation: PlotsPlacementBuildPulse 1s ease-in-out infinite alternate
+}
+
+@keyframes PlotsPlacementBuildPulse {
+  to {
+    transform: scale(1.08)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .PlotsPlacementCard .PlotsPlacementCardButtons .PlotsPlacementBuild.Pulse {
+    animation: none
+  }
+}
+
 @keyframes PlotsPlacementCardNudge {
 
   20%,
@@ -535,15 +1207,6 @@
   .PlotsPlacementCard .PlotsPlacementCardButtons>* {
     font-size: max(1.2rem, 12px)
   }
-}
-
-.PlotsPlacementLayer {
-  cursor: crosshair;
-  inset: 0;
-  pointer-events: auto;
-  position: fixed;
-  touch-action: none;
-  z-index: 2
 }
 
 .PlotsPlotBannerContainer {
@@ -685,165 +1348,5 @@
 
   to {
     transform: none
-  }
-}
-
-.PlotsProgress {
-  align-items: center;
-  display: flex;
-  gap: .6rem
-}
-
-.PlotsProgress .PlotsProgressBar {
-  background: rgba(57, 73, 128, .4);
-  flex: 1 1;
-  height: .6rem;
-  min-width: 4rem;
-  overflow: hidden
-}
-
-.PlotsProgress .PlotsProgressBar .PlotsProgressBarFill {
-  background: #1dd06d;
-  height: 100%;
-  transform-origin: left;
-  transition: transform .25s ease-out
-}
-
-.PlotsProgress .PlotsProgressCount {
-  flex-shrink: 0;
-  font-size: 1.1rem;
-  font-weight: 700
-}
-
-@media(max-height:420px), (max-width:650px) {
-  .PlotsProgress {
-    gap: 4px
-  }
-
-  .PlotsProgress .PlotsProgressBar {
-    height: max(.6rem, 5px)
-  }
-
-  .PlotsProgress .PlotsProgressCount {
-    font-size: max(1.1rem, 10px)
-  }
-}
-
-@media(prefers-reduced-motion:reduce) {
-  .PlotsProgress .PlotsProgressBar .PlotsProgressBarFill {
-    transition: none
-  }
-}
-
-.PlotsStepCard {
-  --plots-step-accent: #ffb914;
-  align-items: center;
-  animation: PlotsStepCardIn .18s ease-out;
-  background: rgba(38, 52, 93, .85);
-  border: 1px solid #0f0f0f;
-  border-left: .35rem solid var(--plots-step-accent);
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  box-sizing: border-box;
-  color: #fff;
-  display: flex;
-  gap: .9rem;
-  padding: .6rem 1rem;
-  pointer-events: none;
-  text-align: left;
-  width: var(--hotbar-slots-width, 42rem)
-}
-
-.PlotsStepCard .PlotsStepCardIcon {
-  color: var(--plots-step-accent);
-  flex-shrink: 0;
-  font-size: 2.2rem
-}
-
-.PlotsStepCard .PlotsStepCardBody {
-  display: flex;
-  flex: 1 1;
-  flex-direction: column;
-  gap: .3rem;
-  min-width: 0
-}
-
-.PlotsStepCard .PlotsStepCardBody .PlotsStepCardTitle {
-  color: #fcd373;
-  font-size: 1.4rem
-}
-
-.PlotsStepCard .PlotsStepCardBody .PlotsStepCardHint {
-  font-size: 1.15rem
-}
-
-.PlotsStepCard.Celebrate {
-  --plots-step-accent: #1dd06d;
-  animation: PlotsStepCardCelebrate .52s cubic-bezier(.3, 1.5, .5, 1)
-}
-
-.PlotsStepCard.Celebrate .PlotsStepCardBody .PlotsStepCardTitle {
-  color: #1dd06d;
-  font-size: 1.6rem
-}
-
-.PlotsStepCard.Celebrate.Gold {
-  --plots-step-accent: #ffb914
-}
-
-.PlotsStepCard.Celebrate.Gold .PlotsStepCardBody .PlotsStepCardTitle {
-  color: #fcd373
-}
-
-@keyframes PlotsStepCardIn {
-  0% {
-    opacity: 0;
-    transform: translateY(.4rem)
-  }
-}
-
-@keyframes PlotsStepCardCelebrate {
-  0% {
-    opacity: 0;
-    transform: scale(.85)
-  }
-
-  60% {
-    opacity: 1;
-    transform: scale(1.06)
-  }
-
-  to {
-    transform: scale(1)
-  }
-}
-
-@media(max-height:420px), (max-width:650px) {
-  .PlotsStepCard {
-    gap: 6px;
-    padding: 4px 8px
-  }
-
-  .PlotsStepCard .PlotsStepCardIcon {
-    font-size: max(2.2rem, 16px)
-  }
-
-  .PlotsStepCard .PlotsStepCardBody {
-    gap: 2px
-  }
-
-  .PlotsStepCard .PlotsStepCardBody .PlotsStepCardTitle {
-    font-size: max(1.4rem, 12px)
-  }
-
-  .PlotsStepCard .PlotsStepCardBody .PlotsStepCardHint {
-    font-size: max(1.15rem, 11px)
-  }
-}
-
-@media(prefers-reduced-motion:reduce) {
-
-  .PlotsStepCard,
-  .PlotsStepCard.Celebrate {
-    animation: none
   }
 }

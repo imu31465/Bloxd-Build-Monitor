@@ -1,181 +1,181 @@
 export const id = 2;
 export const ids = [2];
 export const modules = {
-  36279: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      drawBlockIcon: () => PC,
-      drawBlockIconUrl: () => GC,
-      getDrawnBlockIcon: () => pC
+  36611: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      drawBlockIcon: () => vp,
+      drawBlockIconUrl: () => tp,
+      getDrawnBlockIcon: () => wp
     });
-    var QC = ZC(36288);
-    const wC = {
+    var Op = cp(36618);
+    const op = {
         boxes: [
           [0, 0, 0, 1, 1, 1]
         ],
         cropFaces: !1
       },
-      bC = {
+      Ip = {
         boxes: [
           [0, 0, 0, 1, .5, 1]
         ],
         cropFaces: !1
       },
-      nC = {
+      Sp = {
         boxes: [
           [0, 0, 0, 1, .5, 1],
           [0, .5, 0, .5, 1, 1]
         ],
         cropFaces: !0
       };
-    const fC = 1e-6;
+    const xp = 1e-6;
 
-    function oC(CC, zC, ZC, QC) {
+    function Lp(pp, ip, cp, Op) {
       let {
-        origin: wC,
-        across: bC,
-        down: nC,
-        texture: oC,
-        rect: [qC, FC, WC, NC],
-        shade: MC
-      } = QC;
-      const gC = bC.x * nC.y - bC.y * nC.x;
-      if (Math.abs(gC) < 1e-9) return;
-      const SC = [wC.x, wC.x + bC.x, wC.x + nC.x, wC.x + bC.x + nC.x],
-        pC = [wC.y, wC.y + bC.y, wC.y + nC.y, wC.y + bC.y + nC.y],
-        PC = Math.max(0, Math.floor(Math.min(...SC))),
-        GC = Math.min(ZC - 1, Math.ceil(Math.max(...SC))),
-        RC = Math.max(0, Math.floor(Math.min(...pC))),
-        AC = Math.min(ZC - 1, Math.ceil(Math.max(...pC)));
-      for (let xC = RC; xC <= AC; xC++)
-        for (let QC = PC; QC <= GC; QC++) {
-          const SC = QC + .5 - wC.x,
-            pC = xC + .5 - wC.y,
-            PC = (SC * nC.y - pC * nC.x) / gC,
-            GC = (bC.x * pC - bC.y * SC) / gC;
-          if (PC < -fC || PC > 1 + fC || GC < -fC || GC > 1 + fC) continue;
-          const RC = xC * ZC + QC;
-          zC[RC] = 1;
-          const AC = qC + Math.min(Math.max(PC, 0), 1) * (WC - qC),
-            JC = FC + Math.min(Math.max(GC, 0), 1) * (NC - FC),
-            IC = Math.min(oC.width - 1, Math.floor(AC * oC.width)),
-            iC = 4 * (Math.min(oC.height - 1, Math.floor(JC * oC.height)) * oC.width + IC),
-            vC = oC.pixels[iC + 3] / 255;
-          if (0 === vC) continue;
-          const eC = 4 * RC,
-            hC = CC[eC + 3] / 255 * (1 - vC),
-            KC = vC + hC;
-          for (let zC = 0; zC < 3; zC++) CC[eC + zC] = (oC.pixels[iC + zC] * MC * vC + CC[eC + zC] * hC) / KC;
-          CC[eC + 3] = 255 * KC
+        origin: op,
+        across: Ip,
+        down: Sp,
+        texture: Lp,
+        rect: [Yp, Dp, Ap, Pp],
+        shade: Wp
+      } = Op;
+      const yp = Ip.x * Sp.y - Ip.y * Sp.x;
+      if (Math.abs(yp) < 1e-9) return;
+      const Up = [op.x, op.x + Ip.x, op.x + Sp.x, op.x + Ip.x + Sp.x],
+        wp = [op.y, op.y + Ip.y, op.y + Sp.y, op.y + Ip.y + Sp.y],
+        vp = Math.max(0, Math.floor(Math.min(...Up))),
+        tp = Math.min(cp - 1, Math.ceil(Math.max(...Up))),
+        Hp = Math.max(0, Math.floor(Math.min(...wp))),
+        dp = Math.min(cp - 1, Math.ceil(Math.max(...wp)));
+      for (let ep = Hp; ep <= dp; ep++)
+        for (let Op = vp; Op <= tp; Op++) {
+          const Up = Op + .5 - op.x,
+            wp = ep + .5 - op.y,
+            vp = (Up * Sp.y - wp * Sp.x) / yp,
+            tp = (Ip.x * wp - Ip.y * Up) / yp;
+          if (vp < -xp || vp > 1 + xp || tp < -xp || tp > 1 + xp) continue;
+          const Hp = ep * cp + Op;
+          ip[Hp] = 1;
+          const dp = Yp + Math.min(Math.max(vp, 0), 1) * (Ap - Yp),
+            jp = Dp + Math.min(Math.max(tp, 0), 1) * (Pp - Dp),
+            kp = Math.min(Lp.width - 1, Math.floor(dp * Lp.width)),
+            mp = 4 * (Math.min(Lp.height - 1, Math.floor(jp * Lp.height)) * Lp.width + kp),
+            Rp = Lp.pixels[mp + 3] / 255;
+          if (0 === Rp) continue;
+          const qp = 4 * Hp,
+            Mp = pp[qp + 3] / 255 * (1 - Rp),
+            Cp = Rp + Mp;
+          for (let ip = 0; ip < 3; ip++) pp[qp + ip] = (Lp.pixels[mp + ip] * Wp * Rp + pp[qp + ip] * Mp) / Cp;
+          pp[qp + 3] = 255 * Cp
         }
     }
-    var qC = ZC(36291);
-    const FC = new Map,
-      WC = new Map,
-      NC = new Map,
-      MC = new Map;
+    var Yp = cp(36622);
+    const Dp = new Map,
+      Ap = new Map,
+      Pp = new Map,
+      Wp = new Map;
 
-    function gC(CC, zC, ZC) {
-      return `${zC}|${ZC}|${CC}`
+    function yp(pp, ip, cp) {
+      return `${ip}|${cp}|${pp}`
     }
 
-    function SC(CC, zC, ZC) {
-      let QC = CC.get(zC);
-      return void 0 === QC && (QC = ZC().catch((ZC => {
-        throw CC.delete(zC), ZC
-      })), CC.set(zC, QC)), QC
+    function Up(pp, ip, cp) {
+      let Op = pp.get(ip);
+      return void 0 === Op && (Op = cp().catch((cp => {
+        throw pp.delete(ip), cp
+      })), pp.set(ip, Op)), Op
     }
 
-    function pC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return WC.get(gC(CC, zC, ZC))
+    function wp(pp, ip) {
+      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Ap.get(yp(pp, ip, cp))
     }
 
-    function PC(CC, zC, ZC, QC) {
-      const wC = gC(CC, zC, ZC);
-      return SC(FC, wC, (async () => {
-        const bC = await RC(QC(CC), zC, ZC);
-        return WC.set(wC, bC), bC
+    function vp(pp, ip, cp, Op) {
+      const op = yp(pp, ip, cp);
+      return Up(Dp, op, (async () => {
+        const Ip = await Hp(Op(pp), ip, cp);
+        return Ap.set(op, Ip), Ip
       }))
     }
 
-    function GC(CC, zC, ZC, QC) {
-      return SC(NC, gC(CC, zC, ZC), (async () => {
-        var wC;
-        const bC = QC(CC);
-        return null !== (wC = await (0, qC.c)(bC, zC, ZC)) && void 0 !== wC ? wC : (await RC(bC, zC, ZC)).toDataURL()
+    function tp(pp, ip, cp, Op) {
+      return Up(Pp, yp(pp, ip, cp), (async () => {
+        var op;
+        const Ip = Op(pp);
+        return null !== (op = await (0, Yp.d)(Ip, ip, cp)) && void 0 !== op ? op : (await Hp(Ip, ip, cp)).toDataURL()
       }))
     }
-    async function RC(CC, zC, ZC) {
+    async function Hp(pp, ip, cp) {
       let {
-        top: fC,
-        left: qC,
-        right: FC,
-        itemType: WC
-      } = CC;
-      const [NC, MC, gC] = await Promise.all([AC(fC), AC(qC), AC(FC)]), SC = function(CC, zC, ZC, wC) {
-        const bC = (0, QC.h)(ZC, wC),
-          nC = bC * QC.c.across,
-          fC = bC * QC.c.down,
-          qC = bC * QC.c.up,
-          FC = Math.max(...zC.boxes.map((CC => CC[4]))),
-          WC = ZC / 2,
-          NC = fC + (ZC - fC - fC - FC * qC) / 2,
-          MC = (CC, zC, ZC) => ({
-            x: WC + (CC - ZC) * nC,
-            y: NC - fC + (CC + ZC) * fC + (FC - zC) * qC
+        top: xp,
+        left: Yp,
+        right: Dp,
+        itemType: Ap
+      } = pp;
+      const [Pp, Wp, yp] = await Promise.all([dp(xp), dp(Yp), dp(Dp)]), Up = function(pp, ip, cp, op) {
+        const Ip = (0, Op.g)(cp, op),
+          Sp = Ip * Op.c.across,
+          xp = Ip * Op.c.down,
+          Yp = Ip * Op.c.up,
+          Dp = Math.max(...ip.boxes.map((pp => pp[4]))),
+          Ap = cp / 2,
+          Pp = xp + (cp - xp - xp - Dp * Yp) / 2,
+          Wp = (pp, ip, cp) => ({
+            x: Ap + (pp - cp) * Sp,
+            y: Pp - xp + (pp + cp) * xp + (Dp - ip) * Yp
           }),
-          gC = (CC, ZC, QC, wC, bC, nC) => ({
-            origin: CC,
+          yp = (pp, cp, Op, op, Ip, Sp) => ({
+            origin: pp,
             across: {
-              x: ZC.x - CC.x,
-              y: ZC.y - CC.y
+              x: cp.x - pp.x,
+              y: cp.y - pp.y
             },
             down: {
-              x: QC.x - CC.x,
-              y: QC.y - CC.y
+              x: Op.x - pp.x,
+              y: Op.y - pp.y
             },
-            texture: wC,
-            rect: zC.cropFaces ? bC : [0, 0, 1, 1],
-            shade: nC
+            texture: op,
+            rect: ip.cropFaces ? Ip : [0, 0, 1, 1],
+            shade: Sp
           }),
-          SC = new Uint8ClampedArray(ZC * ZC * 4),
-          pC = new Uint8Array(ZC * ZC),
-          PC = QC.g;
-        for (const [QC, GC, RC, AC, xC, JC] of zC.boxes) {
-          const zC = gC(MC(AC, xC, JC), MC(AC, xC, RC), MC(AC, GC, JC), CC.right, [1 - JC, 1 - xC, 1 - RC, 1 - GC], PC.right),
-            wC = gC(MC(QC, xC, JC), MC(AC, xC, JC), MC(QC, GC, JC), CC.left, [QC, 1 - xC, AC, 1 - GC], PC.left),
-            bC = gC(MC(QC, xC, RC), MC(AC, xC, RC), MC(QC, xC, JC), CC.top, [QC, RC, AC, JC], PC.top);
-          for (const CC of [zC, wC, bC]) oC(SC, pC, ZC, CC)
+          Up = new Uint8ClampedArray(cp * cp * 4),
+          wp = new Uint8Array(cp * cp),
+          vp = Op.d;
+        for (const [Op, tp, Hp, dp, ep, jp] of ip.boxes) {
+          const ip = yp(Wp(dp, ep, jp), Wp(dp, ep, Hp), Wp(dp, tp, jp), pp.right, [1 - jp, 1 - ep, 1 - Hp, 1 - tp], vp.right),
+            op = yp(Wp(Op, ep, jp), Wp(dp, ep, jp), Wp(Op, tp, jp), pp.left, [Op, 1 - ep, dp, 1 - tp], vp.left),
+            Ip = yp(Wp(Op, ep, Hp), Wp(dp, ep, Hp), Wp(Op, ep, jp), pp.top, [Op, Hp, dp, jp], vp.top);
+          for (const pp of [ip, op, Ip]) Lp(Up, wp, cp, pp)
         }
-        return (0, QC.j)(SC, ZC, wC, (CC => 1 === pC[CC])), SC
+        return (0, Op.k)(Up, cp, op, (pp => 1 === wp[pp])), Up
       }({
-        top: NC,
-        left: MC,
-        right: gC
-      }, function(CC) {
-        return "SlabBlock" === CC ? bC : "StairsBlock" === CC ? nC : wC
-      }(WC), zC, ZC), pC = document.createElement("canvas");
-      pC.width = zC, pC.height = zC;
-      const PC = pC.getContext("2d");
-      if (!PC) throw new Error("Failed to get 2D context");
-      return PC.putImageData(new ImageData(SC, zC, zC), 0, 0), pC
+        top: Pp,
+        left: Wp,
+        right: yp
+      }, function(pp) {
+        return "SlabBlock" === pp ? Ip : "StairsBlock" === pp ? Sp : op
+      }(Ap), ip, cp), wp = document.createElement("canvas");
+      wp.width = ip, wp.height = ip;
+      const vp = wp.getContext("2d");
+      if (!vp) throw new Error("Failed to get 2D context");
+      return vp.putImageData(new ImageData(Up, ip, ip), 0, 0), wp
     }
 
-    function AC(CC) {
-      return SC(MC, CC, (async () => {
-        const zC = await (0, qC.f)(CC),
-          ZC = document.createElement("canvas");
-        ZC.width = zC.width, ZC.height = zC.height;
-        const QC = ZC.getContext("2d");
-        if (!QC) throw new Error("Failed to get 2D context");
-        return QC.drawImage(zC, 0, 0), {
-          width: zC.width,
-          height: zC.height,
-          pixels: QC.getImageData(0, 0, zC.width, zC.height).data
+    function dp(pp) {
+      return Up(Wp, pp, (async () => {
+        const ip = await (0, Yp.h)(pp),
+          cp = document.createElement("canvas");
+        cp.width = ip.width, cp.height = ip.height;
+        const Op = cp.getContext("2d");
+        if (!Op) throw new Error("Failed to get 2D context");
+        return Op.drawImage(ip, 0, 0), {
+          width: ip.width,
+          height: ip.height,
+          pixels: Op.getImageData(0, 0, ip.width, ip.height).data
         }
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

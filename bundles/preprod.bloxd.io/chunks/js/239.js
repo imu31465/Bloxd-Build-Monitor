@@ -1,273 +1,394 @@
 export const id = 239;
-export const ids = [238, 239];
+export const ids = [239];
 export const modules = {
-  60929: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      RegisterShaderMaterial: () => QC.e,
-      ShaderMaterial: () => QC.r,
-      ShaderMaterialCreateFromSnippetAsync: () => QC.f,
-      ShaderMaterialParse: () => QC.o,
-      ShaderMaterialParseFromFileAsync: () => QC.i,
-      ShaderMaterialParseFromSnippetAsync: () => QC.k
+  37399: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => xp,
+      e: () => Sp,
+      f: () => op
     });
-    var QC = ZC(40297);
-    (0, QC.e)()
-  },
-  37590: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => wC
-    });
-    var QC = ZC(37596);
-    class wC {
-      static GetPlanes(CC) {
-        const zC = [];
-        for (let ZC = 0; ZC < 6; ZC++) zC.push(new QC.d(0, 0, 0, 0));
-        return wC.GetPlanesToRef(CC, zC), zC
+    const Op = 1024,
+      op = 16,
+      Ip = 36e4;
+    class Sp {
+      constructor(pp) {
+        this.boneCount = pp, this.rotation = void 0, this.position = void 0, this.scale = void 0, this.touched = void 0, this.rotation = new Float64Array(3 * pp), this.position = new Float64Array(3 * pp), this.scale = new Float64Array(3 * pp).fill(1), this.touched = new Uint8Array(pp)
       }
-      static GetNearPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] + ZC[2], zC.normal.y = ZC[7] + ZC[6], zC.normal.z = ZC[11] + ZC[10], zC.d = ZC[15] + ZC[14], zC.normalize()
+      clampToLimits() {
+        for (let pp = 0; pp < this.boneCount; pp++)
+          if (0 !== this.touched[pp])
+            for (let ip = 3 * pp; ip < 3 * pp + 3; ip++) {
+              const pp = this.rotation[ip],
+                cp = this.position[ip],
+                Sp = this.scale[ip];
+              pp >= -36e4 && pp <= Ip || (this.rotation[ip] = Lp(pp, Ip)), cp >= -1024 && cp <= Op || (this.position[ip] = Lp(cp, Op)), Sp >= -op && Sp <= op || (this.scale[ip] = Lp(Sp, op, 1))
+            }
       }
-      static GetFarPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] - ZC[2], zC.normal.y = ZC[7] - ZC[6], zC.normal.z = ZC[11] - ZC[10], zC.d = ZC[15] - ZC[14], zC.normalize()
-      }
-      static GetLeftPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] + ZC[0], zC.normal.y = ZC[7] + ZC[4], zC.normal.z = ZC[11] + ZC[8], zC.d = ZC[15] + ZC[12], zC.normalize()
-      }
-      static GetRightPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] - ZC[0], zC.normal.y = ZC[7] - ZC[4], zC.normal.z = ZC[11] - ZC[8], zC.d = ZC[15] - ZC[12], zC.normalize()
-      }
-      static GetTopPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] - ZC[1], zC.normal.y = ZC[7] - ZC[5], zC.normal.z = ZC[11] - ZC[9], zC.d = ZC[15] - ZC[13], zC.normalize()
-      }
-      static GetBottomPlaneToRef(CC, zC) {
-        const ZC = CC.m;
-        zC.normal.x = ZC[3] + ZC[1], zC.normal.y = ZC[7] + ZC[5], zC.normal.z = ZC[11] + ZC[9], zC.d = ZC[15] + ZC[13], zC.normalize()
-      }
-      static GetPlanesToRef(CC, zC) {
-        wC.GetNearPlaneToRef(CC, zC[0]), wC.GetFarPlaneToRef(CC, zC[1]), wC.GetLeftPlaneToRef(CC, zC[2]), wC.GetRightPlaneToRef(CC, zC[3]), wC.GetTopPlaneToRef(CC, zC[4]), wC.GetBottomPlaneToRef(CC, zC[5])
-      }
-      static IsPointInFrustum(CC, zC) {
-        for (let ZC = 0; ZC < 6; ZC++)
-          if (zC[ZC].dotCoordinate(CC) < 0) return !1;
-        return !0
-      }
-    }
-  },
-  37596: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => wC
-    });
-    var QC = ZC(36963);
-    class wC {
-      constructor(CC, zC, ZC, wC) {
-        this.normal = new QC.r(CC, zC, ZC), this.d = wC
-      }
-      VZC() {
-        return [this.normal.x, this.normal.y, this.normal.z, this.d]
-      }
-      clone() {
-        return new wC(this.normal.x, this.normal.y, this.normal.z, this.d)
-      }
-      getClassName() {
-        return "Plane"
-      }
-      getHashCode() {
-        let CC = this.normal.getHashCode();
-        return CC = 397 * CC ^ this.d, CC
-      }
-      normalize() {
-        const CC = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let zC = 0;
-        return 0 !== CC && (zC = 1 / CC), this.normal.x *= zC, this.normal.y *= zC, this.normal.z *= zC, this.d *= zC, this
-      }
-      transform(CC) {
-        const zC = wC._TmpMatrix;
-        CC.invertToRef(zC);
-        const ZC = zC.m,
-          QC = this.normal.x,
-          bC = this.normal.y,
-          nC = this.normal.z,
-          fC = this.d,
-          oC = QC * ZC[0] + bC * ZC[1] + nC * ZC[2] + fC * ZC[3],
-          qC = QC * ZC[4] + bC * ZC[5] + nC * ZC[6] + fC * ZC[7],
-          FC = QC * ZC[8] + bC * ZC[9] + nC * ZC[10] + fC * ZC[11],
-          WC = QC * ZC[12] + bC * ZC[13] + nC * ZC[14] + fC * ZC[15];
-        return new wC(oC, qC, FC, WC)
-      }
-      dotCoordinate(CC) {
-        return this.normal.x * CC.x + this.normal.y * CC.y + this.normal.z * CC.z + this.d
-      }
-      copyFromPoints(CC, zC, ZC) {
-        const QC = zC.x - CC.x,
-          wC = zC.y - CC.y,
-          bC = zC.z - CC.z,
-          nC = ZC.x - CC.x,
-          fC = ZC.y - CC.y,
-          oC = ZC.z - CC.z,
-          qC = wC * oC - bC * fC,
-          FC = bC * nC - QC * oC,
-          WC = QC * fC - wC * nC,
-          NC = Math.sqrt(qC * qC + FC * FC + WC * WC);
-        let MC;
-        return MC = 0 !== NC ? 1 / NC : 0, this.normal.x = qC * MC, this.normal.y = FC * MC, this.normal.z = WC * MC, this.d = -(this.normal.x * CC.x + this.normal.y * CC.y + this.normal.z * CC.z), this
-      }
-      isFrontFacingTo(CC, zC) {
-        return QC.r.Dot(this.normal, CC) <= zC
-      }
-      signedDistanceTo(CC) {
-        return QC.r.Dot(CC, this.normal) + this.d
-      }
-      static FromArray(CC) {
-        return new wC(CC[0], CC[1], CC[2], CC[3])
-      }
-      static FromPoints(CC, zC, ZC) {
-        const QC = new wC(0, 0, 0, 0);
-        return QC.copyFromPoints(CC, zC, ZC), QC
-      }
-      static FromPositionAndNormal(CC, zC) {
-        const ZC = new wC(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(CC, zC, ZC)
-      }
-      static FromPositionAndNormalToRef(CC, zC, ZC) {
-        return ZC.normal.Av(zC), ZC.normal.normalize(), ZC.d = -CC.dot(ZC.normal), ZC
-      }
-      static SignedDistanceToPlaneFromPositionAndNormal(CC, zC, ZC) {
-        const wC = -(zC.x * CC.x + zC.y * CC.y + zC.z * CC.z);
-        return QC.r.Dot(ZC, zC) + wC
-      }
-    }
-    wC._TmpMatrix = QC.b.Identity()
-  },
-  38501: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => bC
-    });
-    var QC = ZC(38507);
-    const wC = (CC, zC, ZC) => CC ? CC.getClassName && "Mesh" === CC.getClassName() ? null : !CC.getClassName || "SubMesh" !== CC.getClassName() && "PhysicsBody" !== CC.getClassName() ? CC.clone ? CC.clone() : Array.isArray(CC) ? CC.slice() : ZC && "object" === typeof CC ? {
-      ...CC
-    } : null : CC.clone(zC) : null;
-    class bC {
-      static DeepCopy(CC, zC, ZC, bC) {
-        let nC = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const fC = function(CC) {
-          const zC = [];
-          do {
-            const ZC = Object.getOwnPropertyNames(CC);
-            for (const CC of ZC) - 1 === zC.indexOf(CC) && zC.push(CC)
-          } while (CC = Object.getPrototypeOf(CC));
-          return zC
-        }(CC);
-        for (const qC of fC) {
-          if ("_" === qC[0] && (!bC || -1 === bC.indexOf(qC))) continue;
-          if (qC.endsWith("Observable")) continue;
-          if (ZC && -1 !== ZC.indexOf(qC)) continue;
-          const fC = CC[qC],
-            FC = typeof fC;
-          if ("function" !== FC) try {
-            if ("object" === FC)
-              if (fC instanceof Uint8Array) zC[qC] = Uint8Array.from(fC);
-              else if (fC instanceof Array) {
-              if (zC[qC] = [], fC.length > 0)
-                if ("object" == typeof fC[0])
-                  for (let CC = 0; CC < fC.length; CC++) {
-                    const ZC = wC(fC[CC], zC, nC); - 1 === zC[qC].indexOf(ZC) && zC[qC].push(ZC)
-                  } else zC[qC] = fC.slice(0)
-            } else zC[qC] = wC(fC, zC, nC);
-            else zC[qC] = fC
-          } catch (oC) {
-            QC.c.Warn(oC.message)
+      reset() {
+        for (let pp = 0; pp < this.boneCount; pp++)
+          if (0 !== this.touched[pp]) {
+            this.touched[pp] = 0;
+            for (let ip = 3 * pp; ip < 3 * pp + 3; ip++) this.rotation[ip] = 0, this.position[ip] = 0, this.scale[ip] = 1
           }
+      }
+    }
+    class xp {
+      constructor(pp) {
+        this.rotation = void 0, this.position = void 0, this.scaleDelta = void 0, this.boneWeight = void 0, this.touched = void 0, this.overrides = void 0, this.touchedBones = void 0, this.touchedCount = 0, this.rotation = new Float64Array(3 * pp), this.position = new Float64Array(3 * pp), this.scaleDelta = new Float64Array(3 * pp), this.boneWeight = new Float64Array(pp), this.touched = new Uint8Array(pp), this.overrides = new Uint8Array(pp), this.touchedBones = new Int32Array(pp)
+      }
+      touch(pp, ip, cp) {
+        0 === this.touched[pp] && (this.touched[pp] = 1, this.touchedBones[this.touchedCount++] = pp), this.boneWeight[pp] += ip, cp && (this.overrides[pp] = 1)
+      }
+      applyTo(pp, ip, cp) {
+        let Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        for (let op = 0; op < this.touchedCount; op++) {
+          const Ip = this.touchedBones[op],
+            Sp = this.boneWeight[Ip];
+          if (cp || 1 === this.overrides[Ip]) {
+            const cp = ip * Math.min(1, Sp);
+            for (let ip = 3 * Ip; ip < 3 * Ip + 3; ip++) pp.rotation[ip] += (this.rotation[ip] / Sp - pp.rotation[ip]) * cp, pp.position[ip] += (this.position[ip] / Sp - pp.position[ip]) * cp, pp.scale[ip] += (1 + this.scaleDelta[ip] / Sp - pp.scale[ip]) * cp
+          } else {
+            const cp = Op && Sp > 1 ? ip / Sp : ip;
+            for (let ip = 3 * Ip; ip < 3 * Ip + 3; ip++) pp.rotation[ip] += this.rotation[ip] * cp, pp.position[ip] += this.position[ip] * cp, pp.scale[ip] *= 1 + this.scaleDelta[ip] * cp
+          }
+          pp.touched[Ip] = 1
         }
       }
+      clear() {
+        for (let pp = 0; pp < this.touchedCount; pp++) {
+          const ip = this.touchedBones[pp];
+          this.touched[ip] = 0, this.overrides[ip] = 0, this.boneWeight[ip] = 0;
+          for (let pp = 3 * ip; pp < 3 * ip + 3; pp++) this.rotation[pp] = 0, this.position[pp] = 0, this.scaleDelta[pp] = 0
+        }
+        this.touchedCount = 0
+      }
+    }
+
+    function Lp(pp, ip) {
+      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      return Number.isNaN(pp) ? cp : Math.min(ip, Math.max(-ip, pp))
     }
   },
-  37731: (CC, zC, ZC) => {
-    function QC() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (CC => {
-        const zC = 16 * Math.random() | 0;
-        return ("x" === CC ? zC : 3 & zC | 8).toString(16)
-      }))
-    }
-    ZC.d(zC, {
-      b: () => QC
-    })
-  },
-  38507: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => QC
+  37395: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Lp,
+      d: () => xp
     });
-    class QC {
-      static _CheckLimit(CC, zC) {
-        let ZC = QC._LogLimitOutputs[CC];
-        return ZC ? ZC.current++ : (ZC = {
-          limit: zC,
-          current: 1
-        }, QC._LogLimitOutputs[CC] = ZC), ZC.current <= ZC.limit
+    var Op = cp(37385),
+      op = cp(337),
+      Ip = cp(1927),
+      Sp = cp(37399);
+
+    function xp(pp) {
+      if ("Lo" in pp) return Rp.createAnimationScript(pp);
+      return new Dp(pp).createAnimationScript()
+    }
+
+    function Lp(pp, ip, cp, op) {
+      const Ip = pp.Lo <= 0 ? 1 : ip + cp * Math.max(0, op) / pp.Lo;
+      return pp.Yo === Op.j.LoopOnLastFrame ? Ip % 1 : pp.Yo === Op.j.NoLoop && Ip >= 1 ? null : Math.min(1, Ip)
+    }
+    class Yp {
+      createAnimationScript(pp) {
+        const {
+          Lo: ip,
+          loop: cp,
+          Do: Op
+        } = pp;
+        return {
+          Lo: Math.round(ip),
+          Yo: this.createLoopMode(null !== cp && void 0 !== cp && cp),
+          Do: this.createNodeSkeletonAnimationScript(null !== Op && void 0 !== Op ? Op : null)
+        }
       }
-      static _GenerateLimitMessage(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const ZC = QC._LogLimitOutputs[CC];
-        if (!ZC || !QC.MessageLimitReached) return;
-        const wC = this._Levels[zC];
-        ZC.current === ZC.limit && QC[wC.name](QC.MessageLimitReached.replace(/%LIMIT%/g, "" + ZC.limit).replace(/%TYPE%/g, wC.name ?? ""))
+      createLoopMode(pp) {
+        switch (pp) {
+          case !1:
+            return Op.j.NoLoop;
+          case !0:
+            return Op.j.LoopOnLastFrame;
+          case "hold-on-last-frame":
+            return Op.j.HoldOnLastFrame
+        }
+        throw new Error(`Invalid loop mode schema: ${pp}`)
       }
-      static _AddLogEntry(CC) {
-        QC._LogCache = CC + QC._LogCache, QC.OnNewCacheEntry && QC.OnNewCacheEntry(CC)
+      createNodeSkeletonAnimationScript(pp) {
+        if (null === pp) return null;
+        const ip = {};
+        for (const cp in pp) {
+          const Op = pp[cp];
+          ip[cp] = this.createNodeAnimationScript(Op)
+        }
+        return ip
       }
-      static _FormatMessage(CC) {
-        const zC = CC => CC < 10 ? "0" + CC : "" + CC,
-          ZC = new Date;
-        return "[" + zC(ZC.getHours()) + ":" + zC(ZC.getMinutes()) + ":" + zC(ZC.getSeconds()) + "]: " + CC
+      createNodeAnimationScript(pp) {
+        const {
+          timeline: ip
+        } = pp, cp = ip.filter((pp => Number.isFinite(pp.timeFraction)));
+        return cp.sort(((pp, ip) => pp.timeFraction - ip.timeFraction)), {
+          rotation: this.createTimelineFromKeyframes(cp, "rotation", Wp),
+          position: this.createTimelineFromKeyframes(cp, "position", Up),
+          scale: this.createTimelineFromKeyframes(cp, "scale", Up, vp)
+        }
       }
-      static _LogDisabled(CC, zC) {}
-      static _LogEnabled() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          zC = arguments.length > 1 ? arguments[1] : void 0,
-          ZC = arguments.length > 2 ? arguments[2] : void 0;
-        const wC = Array.isArray(zC) ? zC[0] : zC;
-        if (void 0 !== ZC && !QC._CheckLimit(wC, ZC)) return;
-        const bC = QC._FormatMessage(wC),
-          nC = this._Levels[CC],
-          fC = Array.isArray(zC) ? zC.slice(1) : [];
-        nC.logFunc && nC.logFunc("BJS - " + bC, ...fC);
-        const oC = `<div style='color:${nC.color}'>${bC}</div><br>`;
-        QC._AddLogEntry(oC), QC._GenerateLimitMessage(wC, CC)
-      }
-      static get LogCache() {
-        return QC._LogCache
-      }
-      static ClearLogCache() {
-        QC._LogCache = "", QC._LogLimitOutputs = {}, QC.errorsCount = 0
-      }
-      static set LogLevels(CC) {
-        QC.Log = QC._LogDisabled, QC.Warn = QC._LogDisabled, QC.Error = QC._LogDisabled;
-        const zC = [QC.MessageLogLevel, QC.WarningLogLevel, QC.ErrorLogLevel];
-        for (const ZC of zC)
-          if ((CC & ZC) === ZC) {
-            const CC = this._Levels[ZC];
-            QC[CC.name] = QC._LogEnabled.bind(QC, ZC)
+      createTimelineFromKeyframes(pp, ip, cp) {
+        let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : pp => pp;
+        const op = [];
+        for (const Yp of pp) {
+          const pp = Yp[ip];
+          if (pp) {
+            const ip = this.createAnimationFrameWithoutPrecomputes(Yp.timeFraction, pp, Op);
+            Ap(ip) && op.push(ip)
           }
+        }
+        const Ip = [];
+        for (let Yp = 0; Yp < op.length; Yp++) {
+          var Sp, xp, Lp;
+          const pp = op[Yp],
+            ip = null !== (Sp = op[Yp - 1]) && void 0 !== Sp ? Sp : pp,
+            Op = null !== (xp = op[Yp + 1]) && void 0 !== xp ? xp : pp,
+            Dp = null !== (Lp = op[Yp + 2]) && void 0 !== Lp ? Lp : Op;
+          Ip.push({
+            ...pp,
+            ...cp(ip.post, ip.timeFraction, pp.post, pp.timeFraction, Op.pre, Op.timeFraction, Dp.pre, Dp.timeFraction)
+          })
+        }
+        return Ip
+      }
+      createAnimationFrameWithoutPrecomputes(pp, ip, cp) {
+        let Op, op, Ip = null;
+        var Sp;
+        if ("object" === typeof ip && "point" in ip) Ip = null !== (Sp = ip.Wo) && void 0 !== Sp ? Sp : null, Op = ip.point, op = ip.point;
+        else if ("object" === typeof ip && "pre" in ip) {
+          var xp;
+          Ip = null !== (xp = ip.Wo) && void 0 !== xp ? xp : null, Op = ip.pre, op = ip.post
+        } else Op = ip, op = ip;
+        return {
+          timeFraction: pp,
+          Wo: this.createLerpMode(Ip),
+          pre: cp(Op),
+          post: cp(op)
+        }
+      }
+      createLerpMode(pp) {
+        return null === pp ? Op.f.Linear : Yp.LERP_MODE_SCHEMA_MAPPING[pp]
       }
     }
-    QC.NoneLogLevel = 0, QC.MessageLogLevel = 1, QC.WarningLogLevel = 2, QC.ErrorLogLevel = 4, QC.AllLogLevel = 7, QC.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", QC._LogCache = "", QC._LogLimitOutputs = {}, QC._Levels = [{}, {
-      color: "white",
-      logFunc: console.log,
-      name: "Log"
-    }, {
-      color: "orange",
-      logFunc: console.warn,
-      name: "Warn"
-    }, {}, {
-      color: "red",
-      logFunc: console.error,
-      name: "Error"
-    }], QC.errorsCount = 0, QC.Log = QC._LogEnabled.bind(QC, QC.MessageLogLevel), QC.Warn = QC._LogEnabled.bind(QC, QC.WarningLogLevel), QC.Error = QC._LogEnabled.bind(QC, QC.ErrorLogLevel)
+    Yp.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Op.f.Linear,
+      "catmull-rom-spline": Op.f.CatmullRomSpline
+    };
+    class Dp {
+      constructor(pp) {
+        this.animationSchema = pp
+      }
+      createAnimationScript() {
+        const {
+          animation_length: pp,
+          loop: ip,
+          bones: cp
+        } = this.animationSchema;
+        return {
+          Lo: Math.round(1e3 * pp),
+          Yo: this.createLoopMode(null !== ip && void 0 !== ip && ip),
+          Do: this.createNodeSkeletonAnimationScript(null !== cp && void 0 !== cp ? cp : null)
+        }
+      }
+      createLoopMode(pp) {
+        switch (pp) {
+          case !1:
+            return Op.j.NoLoop;
+          case !0:
+            return Op.j.LoopOnLastFrame;
+          case "hold_on_last_frame":
+            return Op.j.HoldOnLastFrame
+        }
+        throw new Error(`Invalid Blockbench loop mode schema: ${pp}`)
+      }
+      createNodeSkeletonAnimationScript(pp) {
+        if (null === pp) return null;
+        const ip = {};
+        for (const cp in pp) {
+          const Op = pp[cp];
+          ip[cp] = this.createNodeAnimationScript(Op)
+        }
+        return ip
+      }
+      createNodeAnimationScript(pp) {
+        const {
+          rotation: ip,
+          position: cp,
+          scale: Op
+        } = pp;
+        return {
+          rotation: this.createAnimationTimeline(null !== ip && void 0 !== ip ? ip : null, Hp, Wp, !0),
+          position: this.createAnimationTimeline(null !== cp && void 0 !== cp ? cp : null, ep, Up, !1),
+          scale: this.createAnimationTimeline(null !== Op && void 0 !== Op ? Op : null, wp, Up, !1)
+        }
+      }
+      createAnimationTimeline(pp, ip, cp, Op) {
+        if (null === pp) return [];
+        (Array.isArray(pp) || "number" === typeof pp) && (pp = {
+          "0.0": pp
+        });
+        const op = Object.entries(pp).map((pp => {
+          let [cp, Op] = pp;
+          const op = Number(cp) / this.animationSchema.animation_length;
+          return this.createAnimationFrameWithoutPrecomputes(op, Op, ip)
+        })).filter(Ap);
+        op.sort(((pp, ip) => pp.timeFraction - ip.timeFraction)), Op && function(pp) {
+          for (let ip = 1; ip < pp.length; ip++) {
+            const cp = pp[ip - 1].post,
+              Op = pp[ip],
+              op = jp(Op.pre),
+              Ip = jp(Op.post),
+              Sp = mp(cp, Op.pre);
+            mp(cp, op) < Sp && (pp[ip] = {
+              ...Op,
+              pre: op,
+              post: Ip
+            })
+          }
+        }(op);
+        const Ip = [];
+        for (let Yp = 0; Yp < op.length; Yp++) {
+          var Sp, xp, Lp;
+          const pp = op[Yp],
+            ip = null !== (Sp = op[Yp - 1]) && void 0 !== Sp ? Sp : pp,
+            Op = null !== (xp = op[Yp + 1]) && void 0 !== xp ? xp : pp,
+            Dp = null !== (Lp = op[Yp + 2]) && void 0 !== Lp ? Lp : Op;
+          Ip.push({
+            ...pp,
+            ...cp(ip.post, ip.timeFraction, pp.post, pp.timeFraction, Op.pre, Op.timeFraction, Dp.pre, Dp.timeFraction)
+          })
+        }
+        return Ip
+      }
+      createAnimationFrameWithoutPrecomputes(pp, ip, cp) {
+        let Op, op, Ip = null;
+        if ("object" === typeof ip && "post" in ip) {
+          var Sp;
+          Ip = null !== (Sp = ip.lerp_mode) && void 0 !== Sp ? Sp : null, op = cp(ip.post), Op = void 0 !== ip.pre ? cp(ip.pre) : op
+        } else {
+          const pp = cp(ip);
+          op = pp, Op = pp
+        }
+        return {
+          timeFraction: pp,
+          Wo: this.createLerpMode(Ip),
+          pre: Op,
+          post: op
+        }
+      }
+      createLerpMode(pp) {
+        return null === pp ? Op.f.Linear : Dp.LERP_MODE_SCHEMA_MAPPING[pp]
+      }
+    }
+
+    function Ap(pp) {
+      return Number.isFinite(pp.timeFraction) && Pp(pp.pre) && Pp(pp.post)
+    }
+
+    function Pp(pp) {
+      return Number.isFinite(pp[0]) && Number.isFinite(pp[1]) && Number.isFinite(pp[2])
+    }
+
+    function Wp(pp, ip, cp, Op, op, Ip, Sp, xp) {
+      const Lp = Ip - ip,
+        Yp = Ip - Op,
+        Dp = xp - Op,
+        Ap = [null, null, null];
+      for (let Pp = 0; Pp < Ap.length; Pp++) Ap[Pp] = yp(pp[Pp], cp[Pp], op[Pp], Sp[Pp], Lp, Dp);
+      return {
+        yo: Yp,
+        Uo: Ap
+      }
+    }
+
+    function yp(pp, ip, cp, Op, Ip, Sp) {
+      return {
+        vo: op.d.computeShortestRotation(pp, cp) / Ip,
+        Ho: op.d.computeShortestRotation(ip, Op) / Sp,
+        delta: op.d.computeShortestRotation(ip, cp)
+      }
+    }
+
+    function Up(pp, ip, cp, Op, op, Ip, Sp, xp) {
+      const Lp = Ip - ip,
+        Yp = Ip - Op,
+        Dp = xp - Op,
+        Ap = [null, null, null];
+      for (let Pp = 0; Pp < Ap.length; Pp++) Ap[Pp] = {
+        vo: (op[Pp] - pp[Pp]) / Lp,
+        Ho: (Sp[Pp] - cp[Pp]) / Dp,
+        delta: op[Pp] - cp[Pp]
+      };
+      return {
+        yo: Yp,
+        Uo: Ap
+      }
+    }
+
+    function wp(pp) {
+      return vp("number" === typeof pp ? [pp, pp, pp] : pp)
+    }
+
+    function vp(pp) {
+      return [tp(pp[0]), tp(pp[1]), tp(pp[2])]
+    }
+
+    function tp(pp) {
+      return Number.isFinite(pp) ? Math.min(Sp.f, Math.max(-Sp.f, pp)) : pp
+    }
+
+    function Hp(pp) {
+      const [ip, cp, Op] = pp, Sp = -(0, Ip.o)(ip), xp = -(0, Ip.o)(cp), Lp = (0, Ip.o)(Op), Yp = op.d.quaternionFromEulerZYX(Sp, xp, Lp);
+      return op.d.eulerYXZFromQuaternion(Yp)
+    }
+    Dp.LERP_MODE_SCHEMA_MAPPING = {
+      linear: Op.f.Linear,
+      catmullrom: Op.f.CatmullRomSpline
+    };
+    const dp = 1 / 16;
+
+    function ep(pp) {
+      return [-pp[0] * dp, pp[1] * dp, pp[2] * dp]
+    }
+
+    function jp(pp) {
+      const [ip, cp, Op] = pp;
+      return [ip >= 0 ? Math.PI - ip : -Math.PI - ip, kp(cp + Math.PI), kp(Op + Math.PI)]
+    }
+
+    function kp(pp) {
+      return op.d.mod(pp + Math.PI, 2 * Math.PI) - Math.PI
+    }
+
+    function mp(pp, ip) {
+      return Math.abs(op.d.computeShortestRotation(pp[0], ip[0])) + Math.abs(op.d.computeShortestRotation(pp[1], ip[1])) + Math.abs(op.d.computeShortestRotation(pp[2], ip[2]))
+    }
+    const Rp = new Yp
+  },
+  37385: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Sp,
+      e: () => Ip,
+      f: () => Op,
+      j: () => op
+    });
+    let Op = function(pp) {
+        return pp[pp.Linear = 0] = "Linear", pp[pp.CatmullRomSpline = 1] = "CatmullRomSpline", pp
+      }({}),
+      op = function(pp) {
+        return pp[pp.NoLoop = 0] = "NoLoop", pp[pp.LoopOnLastFrame = 1] = "LoopOnLastFrame", pp[pp.HoldOnLastFrame = 2] = "HoldOnLastFrame", pp
+      }({}),
+      Ip = function(pp) {
+        return pp[pp.Movement = 0] = "Movement", pp[pp.Action = 1] = "Action", pp[pp.Emote = 2] = "Emote", pp[pp.Custom = 3] = "Custom", pp
+      }({}),
+      Sp = function(pp) {
+        return pp[pp.Start = 0] = "Start", pp[pp.Stop = 1] = "Stop", pp
+      }({})
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

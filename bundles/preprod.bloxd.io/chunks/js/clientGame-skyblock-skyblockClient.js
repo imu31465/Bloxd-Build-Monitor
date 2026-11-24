@@ -1,597 +1,597 @@
 export const id = 25;
 export const ids = [25];
 export const modules = {
-  36483: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => MC,
-      c: () => gC,
-      d: () => NC,
-      f: () => WC
+  36791: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Wp,
+      h: () => yp,
+      i: () => Pp,
+      k: () => Ap
     });
-    var QC = ZC(34153),
-      wC = ZC(36488),
-      bC = ZC(36490),
-      nC = ZC(8735),
-      fC = ZC(1383),
-      oC = ZC(48),
-      qC = ZC(60),
-      FC = ZC(1056);
+    var Op = cp(34430),
+      op = cp(36799),
+      Ip = cp(36804),
+      Sp = cp(8852),
+      xp = cp(1476),
+      Lp = cp(62),
+      Yp = cp(82),
+      Dp = cp(1112);
 
-    function WC() {
-      var CC;
-      return (0, fC.f)(wC.d, (0, wC.q)()), (0, FC.jsx)(FC.Fragment, {
-        children: null === (CC = (0, wC.q)()) || void 0 === CC ? void 0 : CC.content
+    function Ap() {
+      var pp;
+      return (0, xp.i)(op.d, (0, op.s)()), (0, Dp.jsx)(Dp.Fragment, {
+        children: null === (pp = (0, op.s)()) || void 0 === pp ? void 0 : pp.content
       })
     }
 
-    function NC(CC) {
-      var zC;
+    function Pp(pp) {
+      var ip;
       let {
-        show: ZC
-      } = CC;
-      (0, fC.f)(wC.d, (0, wC.q)());
-      const qC = null === (zC = (0, wC.q)()) || void 0 === zC ? void 0 : zC.menu;
-      return (0, oC.useEffect)((() => {
-        var CC;
-        ZC || (null === qC || void 0 === qC || null === (CC = qC.onClose) || void 0 === CC || CC.call(qC), (0, bC.p)())
-      }), [ZC, qC]), (0, oC.useEffect)((() => ZC ? (0, nC.f)(bC.z, bC.g) : void 0), [ZC]), (0, FC.jsx)(QC.d, {
-        showing: ZC,
+        show: cp
+      } = pp;
+      (0, xp.i)(op.d, (0, op.s)());
+      const Yp = null === (ip = (0, op.s)()) || void 0 === ip ? void 0 : ip.menu;
+      return (0, Lp.useEffect)((() => {
+        var pp;
+        cp || (null === Yp || void 0 === Yp || null === (pp = Yp.onClose) || void 0 === pp || pp.call(Yp), (0, Ip.q)())
+      }), [cp, Yp]), (0, Lp.useEffect)((() => cp ? (0, Sp.e)(Ip.A, Ip.d) : void 0), [cp]), (0, Dp.jsx)(Op.b, {
+        showing: cp,
         globallyUniqueKey: "clientGameMenu",
-        children: null === qC || void 0 === qC ? void 0 : qC.content
+        children: null === Yp || void 0 === Yp ? void 0 : Yp.content
       })
     }
 
-    function MC(CC) {
+    function Wp(pp) {
       let {
-        placement: zC = "bottom"
-      } = CC;
-      return (0, FC.jsx)("div", {
-        id: `clientGameHud-${zC}`,
+        placement: ip = "bottom"
+      } = pp;
+      return (0, Dp.jsx)("div", {
+        id: `clientGameHud-${ip}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function gC(CC) {
+    function yp(pp) {
       let {
-        children: zC,
-        placement: ZC = "bottom"
-      } = CC;
-      const [QC, wC] = (0, oC.useState)(null);
-      return (0, oC.useEffect)((() => {
-        wC(document.getElementById(`clientGameHud-${ZC}`))
-      }), [ZC]), QC ? (0, qC.createPortal)(zC, QC) : null
+        children: ip,
+        placement: cp = "bottom"
+      } = pp;
+      const [Op, op] = (0, Lp.useState)(null);
+      return (0, Lp.useEffect)((() => {
+        op(document.getElementById(`clientGameHud-${cp}`))
+      }), [cp]), Op ? (0, Yp.createPortal)(ip, Op) : null
     }
   },
-  4760: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => pC,
-      d: () => PC
+  4950: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => wp,
+      i: () => vp
     });
-    var QC = ZC(1002),
-      wC = ZC.n(QC),
-      bC = ZC(48),
-      nC = ZC(1143),
-      fC = ZC(4769),
-      oC = ZC(1811),
-      qC = ZC(2369),
-      FC = ZC(4775),
-      WC = ZC(1056);
-    const NC = new WeakMap;
-    let MC = 0;
+    var Op = cp(1049),
+      op = cp.n(Op),
+      Ip = cp(62),
+      Sp = cp(1201),
+      xp = cp(4956),
+      Lp = cp(1929),
+      Yp = cp(2492),
+      Dp = cp(4964),
+      Ap = cp(1112);
+    const Pp = new WeakMap;
+    let Wp = 0;
 
-    function gC(CC) {
-      let zC = NC.get(CC);
-      return void 0 === zC && (zC = MC++, NC.set(CC, zC)), zC
+    function yp(pp) {
+      let ip = Pp.get(pp);
+      return void 0 === ip && (ip = Wp++, Pp.set(pp, ip)), ip
     }
 
-    function SC(CC) {
+    function Up(pp) {
       let {
-        piece: zC
-      } = CC;
-      return "space" === zC.kind ? (0, WC.jsx)(WC.Fragment, {
-        children: zC.text
-      }) : (0, WC.jsx)("span", {
+        piece: ip
+      } = pp;
+      return "space" === ip.kind ? (0, Ap.jsx)(Ap.Fragment, {
+        children: ip.text
+      }) : (0, Ap.jsx)("span", {
         className: "DialogueWord",
         style: {
-          "--word-delay": `${zC.delayMs}ms`
+          "--word-delay": `${ip.delayMs}ms`
         },
-        children: (0, WC.jsx)(fC.e, {
-          text: "icon" === zC.kind ? `[[${zC.icon}]]` : zC.text
+        children: (0, Ap.jsx)(xp.d, {
+          text: "icon" === ip.kind ? `[[${ip.icon}]]` : ip.text
         })
       })
     }
 
-    function pC(CC) {
+    function wp(pp) {
       let {
-        display: zC
-      } = CC;
+        display: ip
+      } = pp;
       const {
-        selectedLanguage: ZC
-      } = (0, nC.y)(), QC = (0, bC.useMemo)((() => (0, FC.c)((0, FC.f)(zC).plan.pieces)), [zC, ZC.code]);
-      return (0, WC.jsxs)("div", {
-        className: wC()("Dialogue", {
-          DialogueAnimateIn: !1 !== zC.animateIn
+        selectedLanguage: cp
+      } = (0, Sp.H)(), Op = (0, Ip.useMemo)((() => (0, Dp.e)((0, Dp.h)(ip).plan.pieces)), [ip, cp.code]);
+      return (0, Ap.jsxs)("div", {
+        className: op()("Dialogue", {
+          DialogueAnimateIn: !1 !== ip.animateIn
         }),
-        children: [zC.speakerName && (0, WC.jsx)(oC.e, {
-          text: zC.speakerName,
+        children: [ip.speakerName && (0, Ap.jsx)(Lp.e, {
+          text: ip.speakerName,
           className: "DialogueSpeaker"
-        }), (0, WC.jsx)("p", {
+        }), (0, Ap.jsx)("p", {
           className: "DialogueLine",
-          children: QC.map(((CC, zC) => 1 === CC.length && "space" === CC[0].kind ? CC[0].text : (0, WC.jsx)("span", {
+          children: Op.map(((pp, ip) => 1 === pp.length && "space" === pp[0].kind ? pp[0].text : (0, Ap.jsx)("span", {
             className: "DialogueGlue",
-            children: CC.map(((CC, zC) => (0, WC.jsx)(SC, {
-              piece: CC
-            }, zC)))
-          }, zC)))
+            children: pp.map(((pp, ip) => (0, Ap.jsx)(Up, {
+              piece: pp
+            }, ip)))
+          }, ip)))
         })]
       })
     }
-    const PC = (0, bC.memo)((function() {
-      const CC = (0, qC.h)("dialogue");
-      return (0, WC.jsx)("div", {
+    const vp = (0, Ip.memo)((function() {
+      const pp = (0, Yp.i)("dialogue");
+      return (0, Ap.jsx)("div", {
         className: "DialogueAnchor",
         "data-camera-keeper": "",
         role: "status",
         "aria-live": "polite",
         "aria-atomic": "true",
-        children: CC && (0, WC.jsx)(pC, {
-          display: CC
-        }, gC(CC))
+        children: pp && (0, Ap.jsx)(wp, {
+          display: pp
+        }, yp(pp))
       })
     }))
   },
-  4769: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => fC
+  4956: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => xp
     });
-    var QC = ZC(48),
-      wC = ZC(310),
-      bC = ZC(1822),
-      nC = ZC(1056);
+    var Op = cp(62),
+      op = cp(322),
+      Ip = cp(1941),
+      Sp = cp(1112);
 
-    function fC(CC) {
+    function xp(pp) {
       let {
-        text: zC
-      } = CC;
-      const ZC = [];
-      let fC = "";
-      return (0, wC.dc)(zC).forEach(((CC, zC) => {
-        if ("string" === typeof CC || !(0, bC.h)(CC.icon)) return void(fC += "string" === typeof CC ? CC : CC.icon);
-        const wC = Math.max(0, fC.trimEnd().search(/\S{1,12}$/));
-        ZC.push((0, nC.jsxs)(QC.Fragment, {
-          children: [fC.slice(0, wC), (0, nC.jsxs)("span", {
+        text: ip
+      } = pp;
+      const cp = [];
+      let xp = "";
+      return (0, op.nc)(ip).forEach(((pp, ip) => {
+        if ("string" === typeof pp || !(0, Ip.f)(pp.icon)) return void(xp += "string" === typeof pp ? pp : pp.icon);
+        const op = Math.max(0, xp.trimEnd().search(/\S{1,12}$/));
+        cp.push((0, Sp.jsxs)(Op.Fragment, {
+          children: [xp.slice(0, op), (0, Sp.jsxs)("span", {
             className: "InlineIconTextGlue",
-            children: [fC.slice(wC), (0, nC.jsx)("span", {
+            children: [xp.slice(op), (0, Sp.jsx)("span", {
               className: "InlineIconTextIcon",
               role: "img",
-              "aria-label": CC.icon,
-              children: (0, nC.jsx)(bC.e, {
-                itemName: CC.icon,
+              "aria-label": pp.icon,
+              children: (0, Sp.jsx)(Ip.d, {
+                itemName: pp.icon,
                 amount: 0
               })
             })]
           })]
-        }, zC)), fC = ""
-      })), ZC.push(fC), (0, nC.jsx)(nC.Fragment, {
-        children: ZC
+        }, ip)), xp = ""
+      })), cp.push(xp), (0, Sp.jsx)(Sp.Fragment, {
+        children: cp
       })
     }
   },
-  34153: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => bC
+  34430: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Ip
     });
-    var QC = ZC(4473),
-      wC = ZC(4479);
+    var Op = cp(4628),
+      op = cp(4635);
 
-    function bC(CC) {
+    function Ip(pp) {
       let {
-        children: zC,
-        showing: ZC,
-        globallyUniqueKey: bC,
-        alwaysMountChildren: nC = !1,
-        doGameplayStartStopOnShow: fC = !0,
-        keepsMovement: oC = !1
-      } = CC;
-      return (0, wC.b)(!0, ZC, bC, oC), (0, QC.d)(fC, ZC), ZC || nC ? zC : null
+        children: ip,
+        showing: cp,
+        globallyUniqueKey: Ip,
+        alwaysMountChildren: Sp = !1,
+        doGameplayStartStopOnShow: xp = !0,
+        keepsMovement: Lp = !1
+      } = pp;
+      return (0, op.e)(!0, cp, Ip, Lp), (0, Op.d)(xp, cp), cp || Sp ? ip : null
     }
   },
-  4775: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => EC,
-      f: () => HC
+  4964: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Jp,
+      h: () => Qp
     });
-    var QC = ZC(4783),
-      wC = ZC(310);
-    const bC = 120,
-      nC = 260,
-      fC = 1.15,
-      oC = 1.2,
-      qC = 2,
-      FC = 1.08,
-      WC = .8,
-      NC = .95,
-      MC = 8,
-      gC = "[\"')\\]\u300d\u300f\uff09]*",
-      SC = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${gC}$`),
-      pC = new RegExp(`[?\uff1f]${gC}$`),
-      PC = new RegExp(`[!\uff01]${gC}$`),
-      GC = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      RC = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      AC = new RegExp(`[${RC}]`),
-      xC = new RegExp(`[${RC}]|[^${RC}]+`, "g"),
-      JC = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var Op = cp(4970),
+      op = cp(322);
+    const Ip = 120,
+      Sp = 260,
+      xp = 1.15,
+      Lp = 1.2,
+      Yp = 2,
+      Dp = 1.08,
+      Ap = .8,
+      Pp = .95,
+      Wp = 8,
+      yp = "[\"')\\]\u300d\u300f\uff09]*",
+      Up = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${yp}$`),
+      wp = new RegExp(`[?\uff1f]${yp}$`),
+      vp = new RegExp(`[!\uff01]${yp}$`),
+      tp = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      Hp = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      dp = new RegExp(`[${Hp}]`),
+      ep = new RegExp(`[${Hp}]|[^${Hp}]+`, "g"),
+      jp = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function IC(CC) {
-      let zC = 2166136261;
-      for (let ZC = 0; ZC < CC.length; ZC++) zC ^= CC.charCodeAt(ZC), zC = Math.imul(zC, 16777619);
-      return (zC >>> 0) / 4294967295 * 2 - 1
+    function kp(pp) {
+      let ip = 2166136261;
+      for (let cp = 0; cp < pp.length; cp++) ip ^= pp.charCodeAt(cp), ip = Math.imul(ip, 16777619);
+      return (ip >>> 0) / 4294967295 * 2 - 1
     }
 
-    function iC(CC) {
-      var zC;
-      if (AC.test(CC)) return 1;
-      const ZC = CC.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        QC = ZC.replace(/[^0-9]/g, "");
-      if (QC.length > 0 && !/\p{L}/u.test(ZC)) return Math.min(QC.length, 4);
-      const wC = null !== (zC = ZC.match(JC)) && void 0 !== zC ? zC : [];
-      if (0 === wC.length) {
-        var bC, nC;
-        const CC = null !== (bC = null === (nC = ZC.match(/\p{L}/gu)) || void 0 === nC ? void 0 : nC.length) && void 0 !== bC ? bC : 0;
-        return 0 === CC ? 0 : Math.min(Math.max(1, Math.round(CC / 2.5)), MC)
+    function mp(pp) {
+      var ip;
+      if (dp.test(pp)) return 1;
+      const cp = pp.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        Op = cp.replace(/[^0-9]/g, "");
+      if (Op.length > 0 && !/\p{L}/u.test(cp)) return Math.min(Op.length, 4);
+      const op = null !== (ip = cp.match(jp)) && void 0 !== ip ? ip : [];
+      if (0 === op.length) {
+        var Ip, Sp;
+        const pp = null !== (Ip = null === (Sp = cp.match(/\p{L}/gu)) || void 0 === Sp ? void 0 : Sp.length) && void 0 !== Ip ? Ip : 0;
+        return 0 === pp ? 0 : Math.min(Math.max(1, Math.round(pp / 2.5)), Wp)
       }
-      const fC = ZC.replace(/[^\p{L}]/gu, ""),
-        oC = wC.length > 1 && "e" === wC.at(-1) && fC.endsWith("e") && !fC.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(CC.replace(/[^\p{L}]/gu, ""));
-      return Math.min(wC.length - (oC ? 1 : 0), MC)
+      const xp = cp.replace(/[^\p{L}]/gu, ""),
+        Lp = op.length > 1 && "e" === op.at(-1) && xp.endsWith("e") && !xp.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(pp.replace(/[^\p{L}]/gu, ""));
+      return Math.min(op.length - (Lp ? 1 : 0), Wp)
     }
 
-    function vC(CC) {
-      return CC.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function Rp(pp) {
+      return pp.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function eC(CC) {
-      const zC = CC.replace(/[^\p{L}]/gu, "");
-      return zC.length >= 2 && zC === zC.toUpperCase() && zC !== zC.toLowerCase()
+    function qp(pp) {
+      const ip = pp.replace(/[^\p{L}]/gu, "");
+      return ip.length >= 2 && ip === ip.toUpperCase() && ip !== ip.toLowerCase()
     }
 
-    function hC(CC, zC) {
-      var ZC;
-      const MC = zC && (0, QC.m)(zC),
-        gC = null !== (ZC = null === MC || void 0 === MC ? void 0 : MC.syllableMs) && void 0 !== ZC ? ZC : QC.b,
-        RC = function(CC) {
-          const zC = [];
-          for (const QC of (0, wC.dc)(CC))
-            if ("string" === typeof QC)
-              for (const CC of QC.split(/(\s+)/)) {
-                if ("" === CC) continue;
-                if (/^\s+$/.test(CC)) {
-                  zC.push({
+    function Mp(pp, ip) {
+      var cp;
+      const Wp = ip && (0, Op.m)(ip),
+        yp = null !== (cp = null === Wp || void 0 === Wp ? void 0 : Wp.syllableMs) && void 0 !== cp ? cp : Op.d,
+        Hp = function(pp) {
+          const ip = [];
+          for (const Op of (0, op.nc)(pp))
+            if ("string" === typeof Op)
+              for (const pp of Op.split(/(\s+)/)) {
+                if ("" === pp) continue;
+                if (/^\s+$/.test(pp)) {
+                  ip.push({
                     kind: "space",
-                    text: CC
+                    text: pp
                   });
                   continue
                 }
-                if (!AC.test(CC)) {
-                  zC.push({
+                if (!dp.test(pp)) {
+                  ip.push({
                     kind: "word",
-                    text: CC,
+                    text: pp,
                     delayMs: 0
                   });
                   continue
                 }
-                let QC = !0;
-                for (const wC of null !== (ZC = CC.match(xC)) && void 0 !== ZC ? ZC : []) {
-                  var ZC;
-                  const CC = zC.at(-1);
-                  QC || "word" !== (null === CC || void 0 === CC ? void 0 : CC.kind) || AC.test(wC) || /[\p{L}\p{N}]/u.test(wC) ? (QC || zC.push({
+                let Op = !0;
+                for (const op of null !== (cp = pp.match(ep)) && void 0 !== cp ? cp : []) {
+                  var cp;
+                  const pp = ip.at(-1);
+                  Op || "word" !== (null === pp || void 0 === pp ? void 0 : pp.kind) || dp.test(op) || /[\p{L}\p{N}]/u.test(op) ? (Op || ip.push({
                     kind: "space",
                     text: "\u200b"
-                  }), zC.push({
+                  }), ip.push({
                     kind: "word",
-                    text: wC,
+                    text: op,
                     delayMs: 0
-                  }), QC = !1) : CC.text += wC
+                  }), Op = !1) : pp.text += op
                 }
-              } else zC.push({
+              } else ip.push({
                 kind: "icon",
-                text: QC.icon,
+                text: Op.icon,
                 delayMs: 0
               });
-          return zC
-        }(CC),
-        JC = [];
-      let hC = [];
-      for (const QC of RC) "space" !== QC.kind && (hC.push(QC), SC.test(QC.text) && (JC.push(hC), hC = []));
-      JC.push(hC);
-      const KC = [];
-      let YC = 0;
-      for (const QC of JC) {
-        var dC, mC;
-        const CC = null !== (dC = null === (mC = QC.at(-1)) || void 0 === mC ? void 0 : mC.text) && void 0 !== dC ? dC : "",
-          zC = pC.test(CC),
-          ZC = PC.test(CC),
-          wC = QC.map((CC => "word" === CC.kind ? iC(CC.text) : 1)),
-          RC = wC.findLastIndex((CC => CC > 0));
-        for (const [pC, PC] of QC.entries()) {
-          const CC = "word" === PC.kind,
-            QC = wC[pC];
-          PC.delayMs = YC;
-          for (let wC = 0; MC && wC < QC; wC++) {
+          return ip
+        }(pp),
+        jp = [];
+      let Mp = [];
+      for (const Op of Hp) "space" !== Op.kind && (Mp.push(Op), Up.test(Op.text) && (jp.push(Mp), Mp = []));
+      jp.push(Mp);
+      const Cp = [];
+      let Ep = 0;
+      for (const Op of jp) {
+        var Xp, lp;
+        const pp = null !== (Xp = null === (lp = Op.at(-1)) || void 0 === lp ? void 0 : lp.text) && void 0 !== Xp ? Xp : "",
+          ip = wp.test(pp),
+          cp = vp.test(pp),
+          op = Op.map((pp => "word" === pp.kind ? mp(pp.text) : 1)),
+          Hp = op.findLastIndex((pp => pp > 0));
+        for (const [wp, vp] of Op.entries()) {
+          const pp = "word" === vp.kind,
+            Op = op[wp];
+          vp.delayMs = Ep;
+          for (let op = 0; Wp && op < Op; op++) {
             const {
-              intonation: bC
-            } = MC;
-            let nC = RC > 0 ? -bC.declineSemitones * (pC / RC) : 0;
-            nC += IC(`${vC(PC.text)}|${wC}`) * bC.variationSemitones;
-            const SC = Math.min(1, bC.variationSemitones);
-            let GC = MC.glideSemitones,
-              AC = 1;
-            ZC && (nC += bC.exclaimLiftSemitones, AC *= fC), zC && pC === RC && (nC += bC.questionRiseSemitones * (QC > 1 ? .5 + .5 * wC / (QC - 1) : 1), wC === QC - 1 && (GC = Math.abs(GC) + bC.questionRiseSemitones / 2)), CC && eC(PC.text) && (nC += qC * SC, AC *= oC), QC > 1 && 0 === wC && (nC += WC * SC, AC *= FC), KC.push({
-              atMs: YC + wC * gC,
-              semitones: nC,
-              glideSemitones: GC,
-              durationMs: wC < QC - 1 ? Math.min(MC.durationMs, gC * NC) : MC.durationMs,
-              level: AC
+              intonation: Ip
+            } = Wp;
+            let Sp = Hp > 0 ? -Ip.declineSemitones * (wp / Hp) : 0;
+            Sp += kp(`${Rp(vp.text)}|${op}`) * Ip.variationSemitones;
+            const Up = Math.min(1, Ip.variationSemitones);
+            let tp = Wp.glideSemitones,
+              dp = 1;
+            cp && (Sp += Ip.exclaimLiftSemitones, dp *= xp), ip && wp === Hp && (Sp += Ip.questionRiseSemitones * (Op > 1 ? .5 + .5 * op / (Op - 1) : 1), op === Op - 1 && (tp = Math.abs(tp) + Ip.questionRiseSemitones / 2)), pp && qp(vp.text) && (Sp += Yp * Up, dp *= Lp), Op > 1 && 0 === op && (Sp += Ap * Up, dp *= Dp), Cp.push({
+              atMs: Ep + op * yp,
+              semitones: Sp,
+              glideSemitones: tp,
+              durationMs: op < Op - 1 ? Math.min(Wp.durationMs, yp * Pp) : Wp.durationMs,
+              level: dp
             })
           }
-          YC += QC * gC + (SC.test(PC.text) ? nC : GC.test(PC.text) ? bC : 0)
+          Ep += Op * yp + (Up.test(vp.text) ? Sp : tp.test(vp.text) ? Ip : 0)
         }
       }
       return {
-        pieces: RC.map((CC => "space" === CC.kind ? CC : "icon" === CC.kind ? {
+        pieces: Hp.map((pp => "space" === pp.kind ? pp : "icon" === pp.kind ? {
           kind: "icon",
-          icon: CC.text,
-          delayMs: CC.delayMs
+          icon: pp.text,
+          delayMs: pp.delayMs
         } : {
           kind: "word",
-          text: CC.text,
-          delayMs: CC.delayMs
+          text: pp.text,
+          delayMs: pp.delayMs
         })),
-        blips: KC
+        blips: Cp
       }
     }
-    var KC = ZC(1143),
-      YC = ZC(1192),
-      dC = ZC(1843);
+    var Cp = cp(1201),
+      Ep = cp(1260),
+      Xp = cp(1963);
 
-    function mC(CC) {
-      if ("string" === typeof CC) return CC;
-      const zC = YC.h.get().getCurrentLanguageCode();
-      return (0, KC.r)(zC, CC.translationKey, (0, KC.q)(CC.params, dC.d.shown))
+    function lp(pp) {
+      if ("string" === typeof pp) return pp;
+      const ip = Ep.g.get().getCurrentLanguageCode();
+      return (0, Cp.w)(ip, pp.translationKey, (0, Cp.t)(pp.params, Xp.d.shown))
     }
 
-    function HC(CC) {
-      const zC = void 0 === CC.voice ? null : (0, QC.q)(CC.voice),
-        ZC = zC && (0, QC.m)(zC);
+    function Qp(pp) {
+      const ip = void 0 === pp.voice ? null : (0, Op.o)(pp.voice),
+        cp = ip && (0, Op.m)(ip);
       return {
-        plan: hC(mC(CC.line), ZC),
-        synth: ZC
+        plan: Mp(lp(pp.line), cp),
+        synth: cp
       }
     }
 
-    function EC(CC) {
-      const zC = [];
-      let ZC = [];
-      for (const [wC, bC] of CC.entries()) {
-        var QC;
-        "space" === bC.kind && (" " !== bC.text || "icon" !== (null === (QC = CC[wC + 1]) || void 0 === QC ? void 0 : QC.kind)) ? (ZC.length > 0 && zC.push(ZC), zC.push([bC]), ZC = []) : ZC.push(bC)
+    function Jp(pp) {
+      const ip = [];
+      let cp = [];
+      for (const [op, Ip] of pp.entries()) {
+        var Op;
+        "space" === Ip.kind && (" " !== Ip.text || "icon" !== (null === (Op = pp[op + 1]) || void 0 === Op ? void 0 : Op.kind)) ? (cp.length > 0 && ip.push(cp), ip.push([Ip]), cp = []) : cp.push(Ip)
       }
-      return ZC.length > 0 && zC.push(ZC), zC
+      return cp.length > 0 && ip.push(cp), ip
     }
   },
-  8735: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => bC,
-      f: () => wC
+  8852: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Ip,
+      e: () => op
     });
-    let QC = null;
-    const wC = function(CC) {
-        const zC = {
-          cycle: CC,
+    let Op = null;
+    const op = function(pp) {
+        const ip = {
+          cycle: pp,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return QC = zC, () => {
-          QC === zC && (QC = null)
+        return Op = ip, () => {
+          Op === ip && (Op = null)
         }
       },
-      bC = () => {
-        var CC;
-        return null !== (CC = QC) && void 0 !== CC && CC.canCycle() ? QC.cycle : null
+      Ip = () => {
+        var pp;
+        return null !== (pp = Op) && void 0 !== pp && pp.canCycle() ? Op.cycle : null
       }
   },
-  36490: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      B: () => GC,
-      c: () => bC,
-      g: () => SC,
-      j: () => pC,
-      m: () => fC,
-      o: () => NC,
-      p: () => PC,
-      r: () => WC,
-      v: () => RC,
-      z: () => gC
+  36804: (pp, ip, cp) => {
+    cp.d(ip, {
+      A: () => yp,
+      E: () => tp,
+      b: () => Ip,
+      d: () => Up,
+      f: () => wp,
+      j: () => xp,
+      n: () => Pp,
+      q: () => vp,
+      u: () => Ap,
+      w: () => Hp
     });
-    var QC = ZC(20),
-      wC = ZC(28);
-    const bC = "clientGameInventoryButtonsChanged",
-      nC = new Map;
+    var Op = cp(25),
+      op = cp(34);
+    const Ip = "clientGameInventoryButtonsChanged",
+      Sp = new Map;
 
-    function fC() {
-      return [...nC.values()].sort(((CC, zC) => {
-        var ZC, QC;
-        return (null !== (ZC = CC.order) && void 0 !== ZC ? ZC : 0) - (null !== (QC = zC.order) && void 0 !== QC ? QC : 0)
+    function xp() {
+      return [...Sp.values()].sort(((pp, ip) => {
+        var cp, Op;
+        return (null !== (cp = pp.order) && void 0 !== cp ? cp : 0) - (null !== (Op = ip.order) && void 0 !== Op ? Op : 0)
       }))
     }
-    let oC = null;
+    let Lp = null;
 
-    function qC(CC) {
-      oC = CC
+    function Yp(pp) {
+      Lp = pp
     }
-    let FC = !1;
+    let Dp = !1;
 
-    function WC(CC) {
-      FC = !0;
+    function Ap(pp) {
+      Dp = !0;
       try {
-        CC.onClick()
+        pp.onClick()
       } finally {
-        FC = !1
+        Dp = !1
       }
-      CC.panel && "clientGame" === QC.b.get("openInGameMenuName") && qC(CC.id)
+      pp.panel && "clientGame" === Op.c.get("openInGameMenuName") && Yp(pp.id)
     }
 
-    function NC() {
-      return FC
+    function Pp() {
+      return Dp
     }
 
-    function MC() {
-      return fC().filter((CC => CC.panel && !CC.disabled))
+    function Wp() {
+      return xp().filter((pp => pp.panel && !pp.disabled))
     }
 
-    function gC(CC) {
-      const zC = MC(),
-        ZC = zC.findIndex((CC => CC.id === oC));
-      return !(ZC < 0 || zC.length < 2) && (WC(zC[(ZC + CC + zC.length) % zC.length]), !0)
+    function yp(pp) {
+      const ip = Wp(),
+        cp = ip.findIndex((pp => pp.id === Lp));
+      return !(cp < 0 || ip.length < 2) && (Ap(ip[(cp + pp + ip.length) % ip.length]), !0)
     }
 
-    function SC() {
-      return null !== oC && MC().length > 1
+    function Up() {
+      return null !== Lp && Wp().length > 1
     }
 
-    function pC() {
-      qC(null)
+    function wp() {
+      Yp(null)
     }
 
-    function PC() {
-      "inventory" !== QC.b.get("openInGameMenuName") && qC(null)
+    function vp() {
+      "inventory" !== Op.c.get("openInGameMenuName") && Yp(null)
     }
 
-    function GC() {
-      const CC = oC;
-      return qC(null), CC
+    function tp() {
+      const pp = Lp;
+      return Yp(null), pp
     }
 
-    function RC(CC) {
-      return nC.set(CC.id, CC), wC.o.bp(bC, fC(), !0), () => {
-        nC.get(CC.id) === CC && (nC.delete(CC.id), wC.o.bp(bC, fC()))
+    function Hp(pp) {
+      return Sp.set(pp.id, pp), op.m.GA(Ip, xp(), !0), () => {
+        Sp.get(pp.id) === pp && (Sp.delete(pp.id), op.m.GA(Ip, xp()))
       }
     }
   },
-  36488: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      C: () => FC,
-      d: () => fC,
-      h: () => pC,
-      k: () => PC,
-      o: () => NC,
-      q: () => qC,
-      u: () => SC,
-      y: () => MC
+  36799: (pp, ip, cp) => {
+    cp.d(ip, {
+      A: () => Dp,
+      d: () => xp,
+      h: () => wp,
+      l: () => vp,
+      o: () => Pp,
+      s: () => Yp,
+      t: () => Up,
+      x: () => Wp
     });
-    var QC = ZC(20),
-      wC = ZC(28),
-      bC = ZC(1240),
-      nC = ZC(36490);
-    const fC = "clientGameUiChanged";
-    let oC = null;
+    var Op = cp(25),
+      op = cp(34),
+      Ip = cp(1308),
+      Sp = cp(36804);
+    const xp = "clientGameUiChanged";
+    let Lp = null;
 
-    function qC() {
-      return oC
+    function Yp() {
+      return Lp
     }
 
-    function FC(CC, zC) {
-      const ZC = {
-        content: CC,
-        menu: zC
+    function Dp(pp, ip) {
+      const cp = {
+        content: pp,
+        menu: ip
       };
-      return oC = ZC, wC.o.bp(fC, oC, !0), () => {
-        oC === ZC && (oC = null, gC = !1, pC(), wC.o.bp(fC, null))
+      return Lp = cp, op.m.GA(xp, Lp, !0), () => {
+        Lp === cp && (Lp = null, yp = !1, wp(), op.m.GA(xp, null))
       }
     }
-    let WC = null;
+    let Ap = null;
 
-    function NC() {
-      return WC
+    function Pp() {
+      return Ap
     }
 
-    function MC(CC) {
-      return WC = CC, () => {
-        WC === CC && (WC = null)
+    function Wp(pp) {
+      return Ap = pp, () => {
+        Ap === pp && (Ap = null)
       }
     }
-    let gC = !1;
+    let yp = !1;
 
-    function SC() {
-      const CC = QC.b.get("openInGameMenuName");
-      "clientGame" !== CC && (gC = "inventory" === CC), (0, nC.o)() || (0, nC.j)(), (0, bC.u)(bC.e), QC.b.set({
+    function Up() {
+      const pp = Op.c.get("openInGameMenuName");
+      "clientGame" !== pp && (yp = "inventory" === pp), (0, Sp.n)() || (0, Sp.f)(), (0, Ip.s)(Ip.c), Op.c.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function pC() {
-      GC(!1)
+    function wp() {
+      tp(!1)
     }
 
-    function PC() {
-      GC(gC)
+    function vp() {
+      tp(yp)
     }
 
-    function GC(CC) {
-      "clientGame" === QC.b.get("openInGameMenuName") && QC.b.set({
-        openInGameMenuName: CC ? "inventory" : null
-      }), CC || (0, nC.j)(), gC = !1
+    function tp(pp) {
+      "clientGame" === Op.c.get("openInGameMenuName") && Op.c.set({
+        openInGameMenuName: pp ? "inventory" : null
+      }), pp || (0, Sp.f)(), yp = !1
     }
   },
-  38341: (CC, zC, ZC) => {
-    function QC(CC, zC, ZC) {
-      const QC = new Set,
-        wC = new ResizeObserver(ZC),
-        bC = () => {
-          const zC = new Set(document.querySelectorAll(CC));
-          let bC = !1;
-          for (const CC of QC) zC.has(CC) || (wC.unobserve(CC), QC.delete(CC), bC = !0);
-          for (const CC of zC) QC.has(CC) || (wC.observe(CC), nC.observe(CC, {
+  38729: (pp, ip, cp) => {
+    function Op(pp, ip, cp) {
+      const Op = new Set,
+        op = new ResizeObserver(cp),
+        Ip = () => {
+          const ip = new Set(document.querySelectorAll(pp));
+          let Ip = !1;
+          for (const pp of Op) ip.has(pp) || (op.unobserve(pp), Op.delete(pp), Ip = !0);
+          for (const pp of ip) Op.has(pp) || (op.observe(pp), Sp.observe(pp, {
             attributes: !0,
             attributeFilter: ["class", "style"]
-          }), QC.add(CC));
-          bC && ZC()
+          }), Op.add(pp));
+          Ip && cp()
         },
-        nC = new MutationObserver((zC => {
-          zC.some((CC => "attributes" === CC.type)) && ZC(), zC.some((zC => function(CC, zC, ZC) {
-            if ("childList" !== CC.type) return !1;
-            for (const QC of CC.addedNodes)
-              if (QC instanceof Element && (QC.matches(zC) || QC.querySelector(zC))) return !0;
-            for (const QC of CC.removedNodes)
-              if (QC instanceof Element)
-                for (const CC of ZC)
-                  if (QC.contains(CC)) return !0;
+        Sp = new MutationObserver((ip => {
+          ip.some((pp => "attributes" === pp.type)) && cp(), ip.some((ip => function(pp, ip, cp) {
+            if ("childList" !== pp.type) return !1;
+            for (const Op of pp.addedNodes)
+              if (Op instanceof Element && (Op.matches(ip) || Op.querySelector(ip))) return !0;
+            for (const Op of pp.removedNodes)
+              if (Op instanceof Element)
+                for (const pp of cp)
+                  if (Op.contains(pp)) return !0;
             return !1
-          }(zC, CC, QC))) && bC()
+          }(ip, pp, Op))) && Ip()
         }));
-      nC.observe(document.body, {
+      Sp.observe(document.body, {
         childList: !0,
         subtree: !0
       });
-      for (const fC of zC) wC.observe(fC);
-      return window.addEventListener("resize", ZC), bC(), ZC(), () => {
-        wC.disconnect(), nC.disconnect(), window.removeEventListener("resize", ZC)
+      for (const xp of ip) op.observe(xp);
+      return window.addEventListener("resize", cp), Ip(), cp(), () => {
+        op.disconnect(), Sp.disconnect(), window.removeEventListener("resize", cp)
       }
     }
-    ZC.d(zC, {
-      b: () => QC
+    cp.d(ip, {
+      d: () => Op
     })
   },
-  8876: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => fC,
-      f: () => oC
+  9002: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => xp,
+      f: () => Lp
     });
-    var QC = ZC(20),
-      wC = ZC(1275),
-      bC = ZC(77);
-    const nC = {
+    var Op = cp(25),
+      op = cp(1349),
+      Ip = cp(104);
+    const Sp = {
       blockMined: {
         pattern: [18],
         priority: 1,
@@ -634,350 +634,41 @@ export const modules = {
       }
     };
 
-    function fC() {
-      return (0, bC.isMobile)() && "function" === typeof navigator.vibrate
+    function xp() {
+      return (0, Ip.isMobile)() && "function" === typeof navigator.vibrate
     }
-    const oC = new class {
-      constructor(CC) {
-        this.deps = CC, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+    const Lp = new class {
+      constructor(pp) {
+        this.deps = pp, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
       }
-      play(CC, zC) {
-        var ZC;
+      play(pp, ip) {
+        var cp;
         if (!this.deps.enabled()) return;
-        const QC = nC[CC],
-          wC = null !== zC && void 0 !== zC ? zC : QC.pattern;
-        if (null === wC) return void console.warn("No vibration pattern for", CC);
-        const bC = this.deps.now();
-        bC - this.lastAnyAt < 40 && QC.priority < this.playingPriority || bC - (null !== (ZC = this.lastAt.get(CC)) && void 0 !== ZC ? ZC : -1 / 0) < QC.minGapMs || bC < this.playingUntil && QC.priority < this.playingPriority || (this.lastAt.set(CC, bC), this.lastAnyAt = bC, this.playingUntil = bC + wC.reduce(((CC, zC) => CC + zC), 0), this.playingPriority = QC.priority, this.deps.vibrate(wC))
+        const Op = Sp[pp],
+          op = null !== ip && void 0 !== ip ? ip : Op.pattern;
+        if (null === op) return void console.warn("No vibration pattern for", pp);
+        const Ip = this.deps.now();
+        Ip - this.lastAnyAt < 40 && Op.priority < this.playingPriority || Ip - (null !== (cp = this.lastAt.get(pp)) && void 0 !== cp ? cp : -1 / 0) < Op.minGapMs || Ip < this.playingUntil && Op.priority < this.playingPriority || (this.lastAt.set(pp, Ip), this.lastAnyAt = Ip, this.playingUntil = Ip + op.reduce(((pp, ip) => pp + ip), 0), this.playingPriority = Op.priority, this.deps.vibrate(op))
       }
     }({
-      vibrate: CC => {
-        navigator.vibrate([...CC])
+      vibrate: pp => {
+        navigator.vibrate([...pp])
       },
       now: () => performance.now(),
-      enabled: () => fC() && QC.b.get("isTouchScreen") && QC.b.get("clientEscMenuOptions").vibration && !(0, wC.g)()
+      enabled: () => xp() && Op.c.get("isTouchScreen") && Op.c.get("clientEscMenuOptions").vibration && !(0, op.e)()
     })
   },
-  37023: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => fC,
-      f: () => nC
+  4970: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => op,
+      f: () => Op,
+      i: () => Ip,
+      m: () => Lp,
+      o: () => Sp
     });
-    var QC = ZC(37014),
-      wC = ZC(326),
-      bC = ZC(1806);
-
-    function nC(CC) {
-      if ("Cb" in CC) return JC.createAnimationScript(CC);
-      return new qC(CC).createAnimationScript()
-    }
-
-    function fC(CC, zC, ZC, wC) {
-      const bC = CC.Cb <= 0 ? 1 : zC + ZC * Math.max(0, wC) / CC.Cb;
-      return CC.zb === QC.g.LoopOnLastFrame ? bC % 1 : CC.zb === QC.g.NoLoop && bC >= 1 ? null : Math.min(1, bC)
-    }
-    class oC {
-      createAnimationScript(CC) {
-        const {
-          Cb: zC,
-          loop: ZC,
-          Zb: QC
-        } = CC;
-        return {
-          Cb: Math.round(zC),
-          zb: this.createLoopMode(null !== ZC && void 0 !== ZC && ZC),
-          Zb: this.createNodeSkeletonAnimationScript(null !== QC && void 0 !== QC ? QC : null)
-        }
-      }
-      createLoopMode(CC) {
-        switch (CC) {
-          case !1:
-            return QC.g.NoLoop;
-          case !0:
-            return QC.g.LoopOnLastFrame;
-          case "hold-on-last-frame":
-            return QC.g.HoldOnLastFrame
-        }
-        throw new Error(`Invalid loop mode schema: ${CC}`)
-      }
-      createNodeSkeletonAnimationScript(CC) {
-        if (null === CC) return null;
-        const zC = {};
-        for (const ZC in CC) {
-          const QC = CC[ZC];
-          zC[ZC] = this.createNodeAnimationScript(QC)
-        }
-        return zC
-      }
-      createNodeAnimationScript(CC) {
-        const {
-          timeline: zC
-        } = CC, ZC = zC.filter((CC => Number.isFinite(CC.timeFraction)));
-        return ZC.sort(((CC, zC) => CC.timeFraction - zC.timeFraction)), {
-          rotation: this.createTimelineFromKeyframes(ZC, "rotation", NC),
-          position: this.createTimelineFromKeyframes(ZC, "position", gC)
-        }
-      }
-      createTimelineFromKeyframes(CC, zC, ZC) {
-        const QC = [];
-        for (const oC of CC) {
-          const CC = oC[zC];
-          if (CC) {
-            const zC = this.createAnimationFrameWithoutPrecomputes(oC.timeFraction, CC);
-            FC(zC) && QC.push(zC)
-          }
-        }
-        const wC = [];
-        for (let oC = 0; oC < QC.length; oC++) {
-          var bC, nC, fC;
-          const CC = QC[oC],
-            zC = null !== (bC = QC[oC - 1]) && void 0 !== bC ? bC : CC,
-            qC = null !== (nC = QC[oC + 1]) && void 0 !== nC ? nC : CC,
-            FC = null !== (fC = QC[oC + 2]) && void 0 !== fC ? fC : qC;
-          wC.push({
-            ...CC,
-            ...ZC(zC.post, zC.timeFraction, CC.post, CC.timeFraction, qC.pre, qC.timeFraction, FC.pre, FC.timeFraction)
-          })
-        }
-        return wC
-      }
-      createAnimationFrameWithoutPrecomputes(CC, zC) {
-        let ZC, QC, wC = null;
-        var bC;
-        if ("object" === typeof zC && "point" in zC) wC = null !== (bC = zC.nb) && void 0 !== bC ? bC : null, ZC = zC.point, QC = zC.point;
-        else if ("object" === typeof zC && "pre" in zC) {
-          var nC;
-          wC = null !== (nC = zC.nb) && void 0 !== nC ? nC : null, ZC = zC.pre, QC = zC.post
-        } else ZC = zC, QC = zC;
-        return {
-          timeFraction: CC,
-          nb: this.createLerpMode(wC),
-          pre: ZC,
-          post: QC
-        }
-      }
-      createLerpMode(CC) {
-        return null === CC ? QC.f.Linear : oC.LERP_MODE_SCHEMA_MAPPING[CC]
-      }
-    }
-    oC.LERP_MODE_SCHEMA_MAPPING = {
-      linear: QC.f.Linear,
-      "catmull-rom-spline": QC.f.CatmullRomSpline
-    };
-    class qC {
-      constructor(CC) {
-        this.animationSchema = CC
-      }
-      createAnimationScript() {
-        const {
-          animation_length: CC,
-          loop: zC,
-          bones: ZC
-        } = this.animationSchema;
-        return {
-          Cb: Math.round(1e3 * CC),
-          zb: this.createLoopMode(null !== zC && void 0 !== zC && zC),
-          Zb: this.createNodeSkeletonAnimationScript(null !== ZC && void 0 !== ZC ? ZC : null)
-        }
-      }
-      createLoopMode(CC) {
-        switch (CC) {
-          case !1:
-            return QC.g.NoLoop;
-          case !0:
-            return QC.g.LoopOnLastFrame;
-          case "hold_on_last_frame":
-            return QC.g.HoldOnLastFrame
-        }
-        throw new Error(`Invalid Blockbench loop mode schema: ${CC}`)
-      }
-      createNodeSkeletonAnimationScript(CC) {
-        if (null === CC) return null;
-        const zC = {};
-        for (const ZC in CC) {
-          const QC = CC[ZC];
-          zC[ZC] = this.createNodeAnimationScript(QC)
-        }
-        return zC
-      }
-      createNodeAnimationScript(CC) {
-        const {
-          rotation: zC,
-          position: ZC
-        } = CC;
-        return {
-          rotation: this.createAnimationTimeline(null !== zC && void 0 !== zC ? zC : null, pC, NC, !0),
-          position: this.createAnimationTimeline(null !== ZC && void 0 !== ZC ? ZC : null, GC, gC, !1)
-        }
-      }
-      createAnimationTimeline(CC, zC, ZC, QC) {
-        if (null === CC) return [];
-        if (Array.isArray(CC)) {
-          CC = {
-            "0.0": CC
-          }
-        }
-        const wC = Object.entries(CC).map((CC => {
-          let [ZC, QC] = CC;
-          const wC = Number(ZC) / this.animationSchema.animation_length;
-          return this.createAnimationFrameWithoutPrecomputes(wC, QC, zC)
-        })).filter(FC);
-        wC.sort(((CC, zC) => CC.timeFraction - zC.timeFraction)), QC && function(CC) {
-          for (let zC = 1; zC < CC.length; zC++) {
-            const ZC = CC[zC - 1].post,
-              QC = CC[zC],
-              wC = RC(QC.pre),
-              bC = RC(QC.post),
-              nC = xC(ZC, QC.pre);
-            xC(ZC, wC) < nC && (CC[zC] = {
-              ...QC,
-              pre: wC,
-              post: bC
-            })
-          }
-        }(wC);
-        const bC = [];
-        for (let qC = 0; qC < wC.length; qC++) {
-          var nC, fC, oC;
-          const CC = wC[qC],
-            zC = null !== (nC = wC[qC - 1]) && void 0 !== nC ? nC : CC,
-            QC = null !== (fC = wC[qC + 1]) && void 0 !== fC ? fC : CC,
-            FC = null !== (oC = wC[qC + 2]) && void 0 !== oC ? oC : QC;
-          bC.push({
-            ...CC,
-            ...ZC(zC.post, zC.timeFraction, CC.post, CC.timeFraction, QC.pre, QC.timeFraction, FC.pre, FC.timeFraction)
-          })
-        }
-        return bC
-      }
-      createAnimationFrameWithoutPrecomputes(CC, zC, ZC) {
-        let QC, wC, bC = null;
-        if ("object" === typeof zC && "post" in zC) {
-          var nC;
-          bC = null !== (nC = zC.lerp_mode) && void 0 !== nC ? nC : null, wC = SC(zC.post, ZC), QC = zC.pre ? SC(zC.pre, ZC) : wC
-        } else {
-          const CC = SC(zC, ZC);
-          wC = CC, QC = CC
-        }
-        return {
-          timeFraction: CC,
-          nb: this.createLerpMode(bC),
-          pre: QC,
-          post: wC
-        }
-      }
-      createLerpMode(CC) {
-        return null === CC ? QC.f.Linear : qC.LERP_MODE_SCHEMA_MAPPING[CC]
-      }
-    }
-
-    function FC(CC) {
-      return Number.isFinite(CC.timeFraction) && WC(CC.pre) && WC(CC.post)
-    }
-
-    function WC(CC) {
-      return Number.isFinite(CC[0]) && Number.isFinite(CC[1]) && Number.isFinite(CC[2])
-    }
-
-    function NC(CC, zC, ZC, QC, wC, bC, nC, fC) {
-      const oC = bC - zC,
-        qC = bC - QC,
-        FC = fC - QC,
-        WC = [null, null, null];
-      for (let NC = 0; NC < WC.length; NC++) WC[NC] = MC(CC[NC], ZC[NC], wC[NC], nC[NC], oC, FC);
-      return {
-        fb: qC,
-        ob: WC
-      }
-    }
-
-    function MC(CC, zC, ZC, QC, bC, nC) {
-      return {
-        Fb: wC.c.computeShortestRotation(CC, ZC) / bC,
-        Wb: wC.c.computeShortestRotation(zC, QC) / nC,
-        delta: wC.c.computeShortestRotation(zC, ZC)
-      }
-    }
-
-    function gC(CC, zC, ZC, QC, wC, bC, nC, fC) {
-      const oC = bC - zC,
-        qC = bC - QC,
-        FC = fC - QC,
-        WC = [null, null, null];
-      for (let NC = 0; NC < WC.length; NC++) WC[NC] = {
-        Fb: (wC[NC] - CC[NC]) / oC,
-        Wb: (nC[NC] - ZC[NC]) / FC,
-        delta: wC[NC] - ZC[NC]
-      };
-      return {
-        fb: qC,
-        ob: WC
-      }
-    }
-
-    function SC(CC, zC) {
-      return null === zC ? CC : zC(CC)
-    }
-
-    function pC(CC) {
-      const [zC, ZC, QC] = CC, nC = -(0, bC.j)(zC), fC = -(0, bC.j)(ZC), oC = (0, bC.j)(QC), qC = wC.c.quaternionFromEulerZYX(nC, fC, oC);
-      return wC.c.eulerYXZFromQuaternion(qC)
-    }
-    qC.LERP_MODE_SCHEMA_MAPPING = {
-      linear: QC.f.Linear,
-      catmullrom: QC.f.CatmullRomSpline
-    };
-    const PC = 1 / 16;
-
-    function GC(CC) {
-      return [-CC[0] * PC, CC[1] * PC, CC[2] * PC]
-    }
-
-    function RC(CC) {
-      const [zC, ZC, QC] = CC;
-      return [zC >= 0 ? Math.PI - zC : -Math.PI - zC, AC(ZC + Math.PI), AC(QC + Math.PI)]
-    }
-
-    function AC(CC) {
-      return wC.c.mod(CC + Math.PI, 2 * Math.PI) - Math.PI
-    }
-
-    function xC(CC, zC) {
-      return Math.abs(wC.c.computeShortestRotation(CC[0], zC[0])) + Math.abs(wC.c.computeShortestRotation(CC[1], zC[1])) + Math.abs(wC.c.computeShortestRotation(CC[2], zC[2]))
-    }
-    const JC = new oC
-  },
-  37014: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => nC,
-      d: () => bC,
-      f: () => QC,
-      g: () => wC
-    });
-    let QC = function(CC) {
-        return CC[CC.Linear = 0] = "Linear", CC[CC.CatmullRomSpline = 1] = "CatmullRomSpline", CC
-      }({}),
-      wC = function(CC) {
-        return CC[CC.NoLoop = 0] = "NoLoop", CC[CC.LoopOnLastFrame = 1] = "LoopOnLastFrame", CC[CC.HoldOnLastFrame = 2] = "HoldOnLastFrame", CC
-      }({}),
-      bC = function(CC) {
-        return CC[CC.Movement = 0] = "Movement", CC[CC.Action = 1] = "Action", CC[CC.Emote = 2] = "Emote", CC[CC.Custom = 3] = "Custom", CC
-      }({}),
-      nC = function(CC) {
-        return CC[CC.Start = 0] = "Start", CC[CC.Stop = 1] = "Stop", CC
-      }({})
-  },
-  4783: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => wC,
-      f: () => QC,
-      i: () => bC,
-      m: () => oC,
-      q: () => nC
-    });
-    const QC = ["sine", "triangle", "square", "sawtooth"],
-      wC = 55,
-      bC = {
+    const Op = ["sine", "triangle", "square", "sawtooth"],
+      op = 55,
+      Ip = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -1116,39 +807,39 @@ export const modules = {
         }
       };
 
-    function nC(CC) {
-      return "string" !== typeof CC ? CC : Object.hasOwn(bC, CC) ? bC[CC] : null
+    function Sp(pp) {
+      return "string" !== typeof pp ? pp : Object.hasOwn(Ip, pp) ? Ip[pp] : null
     }
 
-    function fC(CC, zC, ZC) {
-      return Math.min(ZC, Math.max(zC, CC))
+    function xp(pp, ip, cp) {
+      return Math.min(cp, Math.max(ip, pp))
     }
 
-    function oC(CC) {
-      const zC = fC(CC.durationMs, 10, 500),
-        ZC = fC(CC.attackMs, 0, zC),
+    function Lp(pp) {
+      const ip = xp(pp.durationMs, 10, 500),
+        cp = xp(pp.attackMs, 0, ip),
         {
-          intonation: wC
-        } = CC;
+          intonation: op
+        } = pp;
       return {
-        waveform: QC.includes(CC.waveform) ? CC.waveform : "sine",
-        pitchHz: fC(CC.pitchHz, 20, 4e3),
-        glideSemitones: fC(CC.glideSemitones, -24, 24),
-        durationMs: zC,
-        attackMs: ZC,
-        releaseMs: fC(CC.releaseMs, 0, zC - ZC),
-        lowpassHz: null === CC.lowpassHz ? null : fC(CC.lowpassHz, 20, 2e4),
-        volume: fC(CC.volume, 0, 2),
+        waveform: Op.includes(pp.waveform) ? pp.waveform : "sine",
+        pitchHz: xp(pp.pitchHz, 20, 4e3),
+        glideSemitones: xp(pp.glideSemitones, -24, 24),
+        durationMs: ip,
+        attackMs: cp,
+        releaseMs: xp(pp.releaseMs, 0, ip - cp),
+        lowpassHz: null === pp.lowpassHz ? null : xp(pp.lowpassHz, 20, 2e4),
+        volume: xp(pp.volume, 0, 2),
         intonation: {
-          variationSemitones: fC(wC.variationSemitones, 0, 6),
-          declineSemitones: fC(wC.declineSemitones, 0, 12),
-          questionRiseSemitones: fC(wC.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: fC(wC.exclaimLiftSemitones, 0, 12)
+          variationSemitones: xp(op.variationSemitones, 0, 6),
+          declineSemitones: xp(op.declineSemitones, 0, 12),
+          questionRiseSemitones: xp(op.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: xp(op.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: fC(CC.syllableMs, 25, 200)
+        syllableMs: xp(pp.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

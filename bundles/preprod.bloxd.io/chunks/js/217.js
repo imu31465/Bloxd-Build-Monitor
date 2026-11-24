@@ -1,368 +1,708 @@
 export const id = 217;
 export const ids = [217];
 export const modules = {
-  36291: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => eC,
-      d: () => hC,
-      f: () => RC
+  36539: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      CreateCustomLobby: () => Ep
     });
-    var QC = ZC(264),
-      wC = ZC(77);
-    const bC = new(ZC(36294).d)(new URL(ZC.p + ZC.u(3), ZC.b), {
-      name: "blockIconWorker",
-      type: "module"
-    });
-    var nC = ZC(1724),
-      fC = ZC(2057);
-    const oC = 1e4,
-      qC = 3e4;
-    let FC = null,
-      WC = null,
-      NC = null,
-      MC = !1,
-      gC = 0;
-    const SC = new Map;
-    let pC = null;
-    const PC = new Map,
-      GC = new Map;
+    cp(36543);
+    var Op = cp(4719),
+      op = cp(62),
+      Ip = cp(1692),
+      Sp = cp(1049),
+      xp = cp.n(Sp),
+      Lp = cp(3224),
+      Yp = cp(1149),
+      Dp = cp(1211),
+      Ap = cp(4677),
+      Pp = cp(1480),
+      Wp = cp(36549),
+      yp = cp(1201),
+      Up = cp(1356),
+      wp = cp(1538),
+      vp = cp(25),
+      tp = cp(1482),
+      Hp = cp(640),
+      dp = cp(5052),
+      ep = cp(768),
+      jp = cp(1251),
+      kp = cp(1234),
+      mp = cp(5061),
+      Rp = cp(1060),
+      qp = cp(36557),
+      Mp = cp(36565),
+      Cp = cp(1112);
 
-    function RC(CC) {
-      const zC = new Promise(((zC, ZC) => {
-        const QC = new Image;
-        QC.crossOrigin = "anonymous", QC.fetchPriority = "high", QC.onload = () => {
-          zC(QC)
-        }, QC.onerror = () => {
-          ZC(new Error(`A block icon's texture did not load: ${CC.slice(0,100)}`))
-        }, QC.src = CC
-      }));
-      return (0, fC.f)(zC)
-    }
-
-    function AC(CC) {
-      var zC, ZC;
-      MC || console.warn(`[blockIconWorker] block icons draw on the page, as the worker ${CC}`), MC = !0, null === (zC = FC) || void 0 === zC || zC.terminate(), FC = null, WC = null, PC.clear(), GC.clear();
-      for (const QC of SC.values()) QC(null);
-      SC.clear(), null === (ZC = pC) || void 0 === ZC || ZC()
-    }
-
-    function xC() {
-      return NC ??= async function() {
-        if ("undefined" === typeof Worker || "undefined" === typeof OffscreenCanvas || "undefined" === typeof createImageBitmap) return;
-        if ("page" === QC.d.ios_icon_worker_v1 && (0, wC.isWebKit)()) return;
-        try {
-          FC = await async function() {
-            return await bC.ready(), bC.start()
-          }()
-        } catch (fC) {
-          return void AC(`did not start (${String(fC)})`)
-        }
-        let CC = () => {};
-        const zC = new Promise((zC => {
-          CC = zC
-        }));
-        FC.onmessage = zC => {
-          let {
-            data: ZC
-          } = zC;
-          if ("started" === ZC.type) WC = FC, CC();
-          else if ("failed" === ZC.type) AC(`failed a draw (${ZC.message})`);
-          else {
-            var QC, wC;
-            null === (QC = SC.get(ZC.id)) || void 0 === QC || QC(ZC.url), SC.delete(ZC.id), null === (wC = pC) || void 0 === wC || wC()
-          }
-        }, FC.onerror = zC => {
-          zC.preventDefault(), AC(`stopped (${zC.message||"its script did not load or run"})`), CC()
-        };
-        const ZC = `did not start in ${qC/1e3} s`;
-        await (0, nC.n)(zC, qC, ZC).catch((() => {
-          AC(ZC)
-        }))
-      }(), NC
-    }
-
-    function JC() {
-      if (null !== pC || 0 === SC.size) return;
-      const CC = new Promise((CC => {
-          pC = CC
-        })),
-        zC = `did not answer in ${oC/1e3} s`;
-      (0, nC.n)(CC, oC, zC).then((() => {
-        pC = null, JC()
-      }), (() => {
-        pC = null, AC(zC)
-      }))
-    }
-
-    function IC(CC, zC) {
-      let ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-      CC.postMessage(zC, ZC)
-    }
-
-    function iC(CC, zC, ZC, QC) {
-      let wC = zC.get(ZC);
-      return void 0 === wC && (wC = QC().then((async zC => {
-        let {
-          image: ZC,
-          request: QC
-        } = zC;
-        try {
-          const zC = await createImageBitmap(ZC);
-          IC(CC, QC(zC), [zC])
-        } catch (wC) {
-          AC(`could not take an image (${String(wC)})`)
-        }
-      })), wC.catch((() => {
-        zC.get(ZC) === wC && zC.delete(ZC)
-      })), zC.set(ZC, wC)), wC
-    }
-    async function vC(CC, zC) {
-      xC();
-      const ZC = WC;
-      if (null === ZC) return null;
-      if (await CC(ZC), WC !== ZC) return null;
-      const QC = ++gC;
-      return new Promise((CC => {
-        SC.set(QC, CC), IC(ZC, zC(QC)), JC()
-      }))
-    }
-
-    function eC(CC, zC, ZC) {
-      return vC((zC => Promise.all([CC.top, CC.left, CC.right].map((CC => function(CC, zC) {
-        return iC(CC, PC, zC, (async () => ({
-          image: await RC(zC),
-          request: CC => ({
-            type: "texture",
-            url: zC,
-            bitmap: CC
-          })
-        })))
-      }(zC, CC))))), (QC => ({
-        type: "draw",
-        id: QC,
-        ...CC,
-        size: zC,
-        outlineWidth: ZC
-      })))
-    }
-
-    function hC(CC, zC, ZC, QC) {
-      return vC((ZC => function(CC, zC, ZC) {
-        return iC(CC, GC, zC, (async () => {
-          const {
-            texture: CC,
-            ...QC
-          } = await ZC();
-          return {
-            image: await RC(CC),
-            request: CC => ({
-              type: "model",
-              name: zC,
-              bitmap: CC,
-              geometry: QC
-            })
-          }
-        }))
-      }(ZC, CC, zC)), (zC => ({
-        type: "drawModel",
-        id: zC,
-        name: CC,
-        size: ZC,
-        outlineWidth: QC
-      })))
-    }
-  },
-  36288: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => QC,
-      g: () => oC,
-      h: () => nC,
-      j: () => NC,
-      k: () => qC
-    });
-    const QC = {
-        across: Math.SQRT1_2,
-        down: Math.SQRT1_2 / 2,
-        up: Math.sqrt(3) / 2
-      },
-      wC = .6,
-      bC = {
-        width: 2 * QC.across,
-        height: 2 * QC.down + QC.up
-      };
-
-    function nC(CC, zC) {
-      const ZC = zC > 0 ? zC + 1 : 0,
-        nC = CC * wC - zC / QC.across;
-      return Math.max(0, Math.min(nC, (CC - 2 * ZC) / bC.height))
-    }
-    const fC = [15, 15, 15],
-      oC = {
-        top: 1,
-        left: .85,
-        right: .7
-      };
-
-    function qC(CC, zC, ZC, QC) {
+    function Ep(pp) {
+      var ip, cp, Sp, Ep;
+      let {
+        gameNameWithVariation: Xp,
+        close: lp,
+        initialDefaultGamemode: Qp
+      } = pp;
       const {
-        vertices: wC,
-        uvs: fC,
-        indices: oC,
-        shades: qC
-      } = CC, FC = function(CC, zC) {
-        const ZC = nC(CC, zC),
-          QC = bC.width * ZC,
-          wC = bC.height * ZC;
-        return {
-          left: (CC - QC) / 2,
-          top: (CC - wC) / 2,
-          width: QC,
-          height: wC
-        }
-      }(ZC, QC), WC = new Float32Array(wC.length);
-      for (let bC = 0; bC < wC.length; bC += 3) WC[bC] = FC.left + wC[bC] * FC.width, WC[bC + 1] = FC.top + wC[bC + 1] * FC.height, WC[bC + 2] = wC[bC + 2];
-      const MC = new Float32Array(ZC * ZC).fill(-1 / 0),
-        gC = new Uint8ClampedArray(ZC * ZC * 4),
-        SC = 255 * CC.alphaCutoff;
-      for (let bC = 0; bC < oC.length; bC += 3) {
-        const [CC, QC, wC] = [oC[bC], oC[bC + 1], oC[bC + 2]], [nC, FC, NC] = [3 * CC, 3 * QC, 3 * wC], [pC, PC, GC, RC, AC, xC] = [WC[nC], WC[nC + 1], WC[FC], WC[FC + 1], WC[NC], WC[NC + 1]], JC = (GC - pC) * (xC - PC) - (AC - pC) * (RC - PC);
-        if (Math.abs(JC) < 1e-9) continue;
-        const IC = qC[bC / 3],
-          [iC, vC, eC, hC, KC, YC] = [fC[2 * CC], fC[2 * CC + 1], fC[2 * QC], fC[2 * QC + 1], fC[2 * wC], fC[2 * wC + 1]],
-          dC = Math.max(0, Math.floor(Math.min(pC, GC, AC))),
-          mC = Math.min(ZC - 1, Math.ceil(Math.max(pC, GC, AC))),
-          HC = Math.max(0, Math.floor(Math.min(PC, RC, xC))),
-          EC = Math.min(ZC - 1, Math.ceil(Math.max(PC, RC, xC)));
-        for (let bC = HC; bC <= EC; bC++)
-          for (let CC = dC; CC <= mC; CC++) {
-            const [QC, wC] = [CC + .5, bC + .5], fC = ((QC - pC) * (xC - PC) - (AC - pC) * (wC - PC)) / JC, oC = ((GC - pC) * (wC - PC) - (QC - pC) * (RC - PC)) / JC, qC = 1 - fC - oC;
-            if (qC < 0 || fC < 0 || oC < 0) continue;
-            const dC = qC * WC[nC + 2] + fC * WC[FC + 2] + oC * WC[NC + 2],
-              mC = bC * ZC + CC;
-            if (dC <= MC[mC]) continue;
-            const HC = Math.max(0, Math.min(zC.width - 1, Math.floor((qC * iC + fC * eC + oC * KC) * zC.width))),
-              EC = 4 * (Math.max(0, Math.min(zC.height - 1, Math.floor((qC * vC + fC * hC + oC * YC) * zC.height))) * zC.width + HC);
-            zC.pixels[EC + 3] < SC || (MC[mC] = dC, gC[4 * mC] = zC.pixels[EC] * IC, gC[4 * mC + 1] = zC.pixels[EC + 1] * IC, gC[4 * mC + 2] = zC.pixels[EC + 2] * IC, gC[4 * mC + 3] = 255)
-          }
-      }
-      return NC(gC, ZC, QC), gC
-    }
-    let FC = NaN,
-      WC = new Int32Array(0);
+        t: Jp
+      } = (0, yp.H)(), Bp = (0, wp.useNavigatePreserveSearch)(), [Np, Tp] = (0, op.useState)("Enter"), [fp, bp] = (0, op.useState)(""), hp = op.useRef(null), ap = null === (ip = ep.c[Xp]) || void 0 === ip ? void 0 : ip.showWorldsInsteadOfCustomLobbies, np = ap ? 1 : null === (cp = ep.c[Xp]) || void 0 === cp ? void 0 : cp.customLobbyCustomSchematicLimit, [Fp, gp] = (0, op.useState)(!ap);
+      Qp || (Qp = "classic_creative" === Xp || "classic_creativeFlat" === Xp ? "creative" : "classic" === Xp ? "peaceful" : "survival");
+      const Gp = {
+        baseOptions: {
+          gameNameWithVariation: ap ? "classic" : Xp,
+          name: "",
+          visibility: "unlisted"
+        },
+        listedOptions: {
+          description: "",
+          color: "",
+          emojis: ""
+        },
+        mapOptions: {
+          mapType: "classic_creativeFlat" === Xp ? "flat" : "default",
+          schematicIdList: []
+        },
+        worldOptions: null
+      };
+      ap && (Gp.worldOptions = {
+        defaultGamemode: Qp,
+        disableProtectors: !1,
+        spawnProtection: !0,
+        disableTpRequests: !1,
+        disableTribeCreation: !1,
+        disableLobbySpawn: !1,
+        voidDeathHeight: -1e4,
+        worldBorder: null,
+        disableFallDamage: !0,
+        disableMobs: !1,
+        worldGenSeed: "",
+        enableSmpMarketplace: !1,
+        enableSurvivalGuns: !1,
+        enableSpawnReset: !1,
+        enableDayNight: !0
+      });
+      const [rp, Zp] = (0, op.useState)(Gp), [zp, sp] = (0, op.useState)(null);
 
-    function NC(CC, zC, ZC) {
-      let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : zC => 0 !== CC[4 * zC + 3];
-      const wC = new Uint8Array(zC * zC);
-      for (let fC = 0; fC < zC * zC; fC++) wC[fC] = QC(fC) ? 1 : 0;
-      const bC = (CC, ZC) => CC >= 0 && ZC >= 0 && CC < zC && ZC < zC && 0 === wC[ZC * zC + CC],
-        nC = new Float32Array(zC * zC).fill(1 / 0),
-        oC = function(CC) {
-          if (CC !== FC) {
-            const zC = Math.ceil(CC + 1),
-              ZC = [];
-            for (let QC = -zC; QC <= zC; QC++)
-              for (let wC = -zC; wC <= zC; wC++) {
-                const zC = wC * wC + QC * QC;
-                zC > 0 && zC < (CC + 1) ** 2 && ZC.push(wC, QC, zC)
-              }
-            FC = CC, WC = Int32Array.from(ZC)
+      function Kp(pp, ip) {
+        Zp({
+          ...rp,
+          baseOptions: {
+            ...rp.baseOptions,
+            [pp]: ip
           }
-          return WC
-        }(ZC);
-      for (let fC = 0; fC < zC; fC++)
-        for (let CC = 0; CC < zC; CC++) {
-          if (1 === wC[fC * zC + CC] && (bC(CC - 1, fC) || bC(CC + 1, fC) || bC(CC, fC - 1) || bC(CC, fC + 1)))
-            for (let ZC = 0; ZC < oC.length; ZC += 3) {
-              const QC = CC + oC[ZC],
-                wC = fC + oC[ZC + 1];
-              if (QC >= 0 && wC >= 0 && QC < zC && wC < zC) {
-                const CC = wC * zC + QC;
-                nC[CC] = Math.min(nC[CC], oC[ZC + 2])
-              }
+        })
+      }
+
+      function Vp(pp, ip) {
+        Zp({
+          ...rp,
+          listedOptions: {
+            ...rp.listedOptions,
+            [pp]: ip
+          }
+        })
+      }
+
+      function ii(pp, ip) {
+        Zp({
+          ...rp,
+          worldOptions: {
+            ...rp.worldOptions,
+            [pp]: ip
+          }
+        })
+      }
+
+      function ci(pp) {
+        Zp({
+          ...rp,
+          mapOptions: {
+            ...rp.mapOptions,
+            ...pp
+          }
+        })
+      }(0, op.useEffect)((() => {
+        Ap.b.getNewStarterName().then((pp => {
+          Zp((ip => "" !== ip.baseOptions.name ? ip : {
+            ...ip,
+            baseOptions: {
+              ...ip.baseOptions,
+              name: pp
             }
-        }
-      for (let qC = 0; qC < zC * zC; qC++) 1 !== wC[qC] && nC[qC] !== 1 / 0 && (CC.set(fC, 4 * qC), CC[4 * qC + 3] = Math.round(255 * Math.min(1, ZC + 1 - Math.sqrt(nC[qC]))))
+          }))
+        })).catch((pp => {
+          console.error("Error getting new starter name:", pp)
+        }))
+      }), []), (0, op.useEffect)((() => {
+        "customSchematic" === rp.mapOptions.mapType && null === zp && (0, Yp.postJsonWithMetricsCookiesAndJsonResponse)(`${Dp.clientSideServerUrls.indexUrl}/index/schematic/get-owned-schematics`, {}, {
+          retries: 0,
+          minTimeout: 3e3
+        }).then((pp => {
+          sp(pp)
+        }))
+      }), [rp.mapOptions.mapType, zp]);
+      const Oi = {
+          tpRequests: {
+            isEnabled: () => !rp.worldOptions.disableTpRequests,
+            eC: pp => {
+              ii("disableTpRequests", !pp)
+            }
+          },
+          spawnProtection: {
+            isEnabled: () => rp.worldOptions.spawnProtection,
+            eC: pp => {
+              ii("spawnProtection", pp)
+            }
+          },
+          spawnReset: {
+            isEnabled: () => rp.worldOptions.enableSpawnReset,
+            eC: pp => {
+              ii("enableSpawnReset", pp)
+            }
+          },
+          smpMarketplace: {
+            isEnabled: () => rp.worldOptions.enableSmpMarketplace,
+            eC: pp => {
+              ii("enableSmpMarketplace", pp)
+            }
+          },
+          survivalGuns: {
+            isEnabled: () => rp.worldOptions.enableSurvivalGuns,
+            eC: pp => {
+              ii("enableSurvivalGuns", pp)
+            }
+          },
+          fallDamage: {
+            isEnabled: () => !rp.worldOptions.disableFallDamage,
+            eC: pp => {
+              ii("disableFallDamage", !pp)
+            }
+          },
+          dayNight: {
+            isEnabled: () => rp.worldOptions.enableDayNight,
+            eC: pp => {
+              ii("enableDayNight", pp)
+            }
+          }
+        },
+        oi = "Enter" !== Np,
+        Ii = (0, Cp.jsx)(dp.i, {
+          className: "NameInput",
+          label: "general:name",
+          disabled: "Enter" !== Np,
+          children: (0, Cp.jsx)(Ip.c, {
+            domRef: hp,
+            onValueChange: (pp, ip) => {
+              const cp = (0, kp.rb)(pp);
+              Kp("name", cp), hp.current.value = cp
+            },
+            maxLength: kp.M,
+            defaultValue: rp.baseOptions.name
+          })
+        });
+      return (0, Cp.jsxs)("div", {
+        className: xp()("CreateCustomLobby", {
+          CreateCustomLobbySuccess: "Success" === Np,
+          AdvancedMode: Fp
+        }),
+        children: ["Success" === Np && (0, Cp.jsxs)("div", {
+          className: "CreateCustomLobbySuccessOverlay",
+          children: [(0, Cp.jsxs)("div", {
+            className: "CreateCustomLobbySuccessTitle FullyFancyText AnimFadeInScaleUp",
+            children: [(0, Cp.jsx)(Rp.d, {
+              name: "check"
+            }), (0, Cp.jsx)(tp.b, {})]
+          }), (0, Cp.jsx)("div", {
+            className: "CreateCustomLobbySuccessButtons AnimFadeInScaleUp",
+            children: (0, Cp.jsx)(Pp.o, {
+              padDefaultFocus: !0,
+              onClick: () => {
+                (0, vp.k)("worldCreation"), Bp((0, Up.c)(Xp, rp.baseOptions.name))
+              },
+              children: Jp("homePage:joinLobbyName", {
+                lobbyName: rp.baseOptions.name
+              })
+            })
+          })]
+        }), (0, Cp.jsx)("div", {
+          className: "CreateCustomLobbyTitleContainer",
+          children: (0, Cp.jsx)("div", {
+            className: "CreateCustomLobbyTitle",
+            children: Jp(ap ? "homePage:createWorld" : "homePage:createCustomLobby")
+          })
+        }), (0, Cp.jsx)(Mp.b, {
+          locked: oi,
+          children: (0, Cp.jsxs)("div", {
+            className: "CreateCustomLobbyFields",
+            children: [!Fp && Ii, Fp && (0, Cp.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, Cp.jsx)("div", {
+                className: "SectionTitle",
+                children: Jp("customLobby:generalOptions")
+              }), (0, Cp.jsxs)("div", {
+                className: "SectionBody",
+                children: [Ii, (0, Cp.jsx)(dp.i, {
+                  label: "customLobby:visibility",
+                  circleInfoText: Jp("customLobby:visibilityDescription"),
+                  disabled: "Enter" !== Np,
+                  children: (0, Cp.jsx)(Lp.d, {
+                    options: Op.o.map((pp => ({
+                      value: pp,
+                      label: Op.d[pp]
+                    }))),
+                    value: rp.baseOptions.visibility,
+                    onChange: pp => {
+                      Kp("visibility", pp.value)
+                    }
+                  })
+                })]
+              })]
+            }), ap && (0, Cp.jsx)(qp.e, {
+              value: rp.worldOptions.defaultGamemode,
+              onChange: pp => {
+                ii("defaultGamemode", pp)
+              },
+              showAll: Fp,
+              disabled: oi
+            }), (ap || !(0, Hp.G)(np) && np > 0) && (0, Cp.jsx)(qp.i, {
+              mapTypes: ap ? Op.G : Op.m,
+              value: rp.mapOptions.mapType,
+              onChange: pp => {
+                const ip = {
+                  mapType: pp
+                };
+                "customSchematic" !== pp && (ip.schematicIdList = []), ci(ip)
+              },
+              showAll: Fp,
+              disabled: oi,
+              children: "customSchematic" === rp.mapOptions.mapType && (0, Cp.jsxs)(Cp.Fragment, {
+                children: [(0, Cp.jsxs)("div", {
+                  className: "SchematicListTitle AnimFadeIn",
+                  children: [ap && Jp("customLobby:selectWorldSchematic"), !ap && Jp("customLobby:selectCustomLobbySchematics", {
+                    schematicLimit: np
+                  })]
+                }), (0, Cp.jsx)("div", {
+                  className: xp()("SchematicListContainer AnimFadeIn", {
+                    SchematicListContainerDisabled: "Enter" !== Np
+                  }),
+                  children: (0, Cp.jsx)(Wp.c, {
+                    loading: null === zp,
+                    schematics: null !== zp && void 0 !== zp ? zp : [],
+                    onSchematicPicked: function(pp) {
+                      const ip = rp.mapOptions.schematicIdList;
+                      if (ip.includes(pp.schematicId)) ci({
+                        schematicIdList: ip.filter((ip => ip !== pp.schematicId))
+                      });
+                      else {
+                        if (np && rp.mapOptions.schematicIdList.length >= np) return;
+                        ci({
+                          schematicIdList: [...rp.mapOptions.schematicIdList, pp.schematicId]
+                        })
+                      }
+                    },
+                    selectedSchematicIdList: rp.mapOptions.schematicIdList,
+                    disableAutoExport: !0
+                  })
+                })]
+              })
+            }), Fp && (0, Cp.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, Cp.jsx)("div", {
+                className: "SectionTitle",
+                children: Jp("customLobby:listedOptions")
+              }), (0, Cp.jsxs)("div", {
+                className: "SectionBody",
+                children: [(0, Cp.jsx)(dp.i, {
+                  label: "general:description",
+                  className: "CustomLobbyDescription",
+                  disabled: "Enter" !== Np,
+                  children: (0, Cp.jsx)(Ip.c, {
+                    onValueChange: (pp, ip) => {
+                      Vp("description", pp)
+                    },
+                    maxLength: 100,
+                    defaultValue: rp.listedOptions.description
+                  })
+                }), (0, Cp.jsx)(dp.i, {
+                  label: "general:color",
+                  circleInfoText: "customLobby:lobbyColorDescription",
+                  disabled: "Enter" !== Np,
+                  children: (0, Cp.jsx)("div", {
+                    className: "OtherInput",
+                    children: (0, Cp.jsx)("input", {
+                      type: "color",
+                      value: rp.listedOptions.color,
+                      onChange: pp => {
+                        Vp("color", pp.target.value)
+                      }
+                    })
+                  })
+                }), (0, Cp.jsx)(dp.i, {
+                  label: "general:emojis",
+                  circleInfoText: "customLobby:lobbyEmojisDescription",
+                  disabled: "Enter" !== Np,
+                  children: (0, Cp.jsx)(Ip.c, {
+                    onValueChange: (pp, ip) => {
+                      Vp("emojis", pp)
+                    },
+                    maxLength: 6,
+                    defaultValue: rp.listedOptions.emojis
+                  })
+                })]
+              })]
+            }), Fp && ap && (0, Cp.jsxs)("div", {
+              className: "BloxdForm",
+              children: [(0, Cp.jsx)("div", {
+                className: "SectionTitle",
+                children: Jp("customLobby:advancedOptions")
+              }), (0, Cp.jsxs)("div", {
+                className: "SectionBody",
+                children: [(0, Cp.jsx)(dp.i, {
+                  label: "classic:worldGenSeed",
+                  disabled: "Enter" !== Np,
+                  children: (0, Cp.jsx)(Ip.c, {
+                    onValueChange: (pp, ip) => {
+                      ii("worldGenSeed", pp)
+                    },
+                    maxLength: kp.M
+                  })
+                }), (0, Cp.jsx)(dp.i, {
+                  label: "classic:disableProtectors",
+                  disabled: "Enter" !== Np,
+                  children: (0, Cp.jsx)(dp.e, {
+                    checked: rp.worldOptions.disableProtectors,
+                    setChecked: pp => {
+                      ii("disableProtectors", pp)
+                    }
+                  })
+                }), (0, Cp.jsx)(dp.i, {
+                  label: "classic:disableTribeCreation",
+                  disabled: "Enter" !== Np,
+                  children: (0, Cp.jsx)(dp.e, {
+                    checked: rp.worldOptions.disableTribeCreation,
+                    setChecked: pp => {
+                      ii("disableTribeCreation", pp)
+                    }
+                  })
+                }), (0, Cp.jsx)(dp.i, {
+                  label: "classic:voidDeathHeight",
+                  circleInfoText: "classic:voidDeathHeightDescription",
+                  disabled: "Enter" !== Np,
+                  children: (0, Cp.jsx)("input", {
+                    type: "number",
+                    max: jp.F,
+                    value: null !== (Sp = rp.worldOptions.voidDeathHeight) && void 0 !== Sp ? Sp : "",
+                    onChange: pp => {
+                      const ip = parseInt(pp.target.value);
+                      ii("voidDeathHeight", isNaN(ip) ? null : ip)
+                    }
+                  })
+                }), (0, Cp.jsx)(dp.i, {
+                  label: "classic:disableLobbySpawn",
+                  disabled: "Enter" !== Np,
+                  children: (0, Cp.jsx)(dp.e, {
+                    checked: rp.worldOptions.disableLobbySpawn,
+                    setChecked: pp => {
+                      ii("disableLobbySpawn", pp)
+                    }
+                  })
+                }), (0, Cp.jsx)(dp.i, {
+                  label: "classic:worldBorder",
+                  circleInfoText: "classic:worldBorderDescription",
+                  disabled: "Enter" !== Np,
+                  children: (0, Cp.jsx)("input", {
+                    type: "number",
+                    min: jp.L,
+                    max: jp.G,
+                    value: null !== (Ep = rp.worldOptions.worldBorder) && void 0 !== Ep ? Ep : "",
+                    onChange: pp => {
+                      const ip = parseInt(pp.target.value);
+                      ii("worldBorder", isNaN(ip) ? null : ip)
+                    }
+                  })
+                }), (0, Cp.jsx)(dp.i, {
+                  label: "classic:disableMobs",
+                  disabled: "Enter" !== Np,
+                  children: (0, Cp.jsx)(dp.e, {
+                    checked: rp.worldOptions.disableMobs,
+                    setChecked: pp => {
+                      ii("disableMobs", pp)
+                    }
+                  })
+                })]
+              })]
+            }), ap && (0, Cp.jsx)(mp.e, {
+              callbacks: Oi,
+              disabled: "Enter" !== Np,
+              advancedMode: Fp
+            })]
+          })
+        }), (0, Cp.jsxs)("div", {
+          className: "CreateCustomLobbyFooter",
+          children: [(0, Cp.jsx)(Pp.o, {
+            className: "CreateCustomLobbyButton",
+            padDefaultFocus: !0,
+            loading: "Enter" !== Np,
+            onClick: () => {
+              !async function() {
+                if ("Enter" === Np) {
+                  Tp("Loading"), bp("");
+                  try {
+                    await Ap.b.createCustomLobby(rp), Tp("Success")
+                  } catch (pp) {
+                    bp(pp.message), console.error(pp.message), Tp("Enter")
+                  }
+                }
+              }()
+            },
+            children: Jp("general:create")
+          }), ap && (0, Cp.jsx)("div", {
+            className: "CreateCustomLobbyAdvancedToggle",
+            "data-pad-ignore": oi || void 0,
+            children: (0, Cp.jsx)(dp.i, {
+              label: "customLobby:showAdvancedOptions",
+              disabled: oi,
+              onLabelClick: () => {
+                gp(!Fp)
+              },
+              children: (0, Cp.jsx)(dp.e, {
+                checked: Fp,
+                setChecked: gp
+              })
+            })
+          }), fp && (0, Cp.jsx)("div", {
+            className: "CreateCustomLobbyError AnimFadeInScaleUp",
+            children: fp
+          })]
+        })]
+      })
     }
   },
-  36294: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => wC
+  36565: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Lp
     });
-    const QC = {
-      wait: function(CC) {
-        return new Promise((zC => {
-          setTimeout(zC, CC)
-        }))
-      },
-      stallMs: 2e4
-    };
-    class wC {
-      constructor(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-          ZC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : QC;
-        this.url = CC, this.options = zC, this.timing = ZC, this.fetched = null, this.fetchAbort = null, this.scriptUrl = void 0, this.scriptUrl = CC
-      }
-      ready() {
-        if (null === this.fetched) {
-          const CC = new AbortController;
-          this.fetchAbort = CC, this.fetched = this.fetchWithRetries(CC.signal).then((zC => (this.fetchAbort === CC && (this.fetchAbort = null), zC)))
-        }
-        return this.fetched
-      }
-      cancel() {
-        null !== this.fetchAbort && (this.fetchAbort.abort(), this.fetchAbort = null, this.fetched = null)
-      }
-      forgetFailedFetch() {
-        this.fetched = null
-      }
-      start() {
-        return new Worker(this.scriptUrl, this.options)
-      }
-      async fetchWithRetries(CC) {
-        for (let zC = 0;; zC++) {
-          const ZC = new URL(this.url);
-          if (zC > 0 && ZC.searchParams.set("cache-bust", `${Date.now()}-${zC}`), await this.fetchWhole(ZC, CC)) return this.scriptUrl = ZC, !0;
-          if (zC >= 3 || CC.aborted) return !1;
-          if (await this.timing.wait(500 * 2 ** zC), CC.aborted) return !1
-        }
-      }
-      async fetchWhole(CC, zC) {
-        const ZC = new AbortController;
-        let QC;
-        const wC = () => {
-            clearTimeout(QC), QC = setTimeout((() => {
-              ZC.abort()
-            }), this.timing.stallMs)
-          },
-          bC = () => {
-            ZC.abort()
-          };
-        zC.addEventListener("abort", bC, {
-          once: !0
-        }), wC();
-        try {
-          var nC;
-          const zC = await fetch(CC, {
-            signal: ZC.signal
-          });
-          if (!zC.ok) return !1;
-          const QC = null === (nC = zC.body) || void 0 === nC ? void 0 : nC.getReader();
-          if (!QC) return !1;
-          for (;;) {
-            const {
-              done: CC
-            } = await QC.read();
-            if (CC) return !0;
-            wC()
-          }
-        } catch {
-          return !1
-        } finally {
-          clearTimeout(QC), zC.removeEventListener("abort", bC)
-        }
-      }
+    var Op = cp(1049),
+      op = cp.n(Op),
+      Ip = cp(62),
+      Sp = cp(4664),
+      xp = cp(1112);
+
+    function Lp(pp) {
+      let {
+        locked: ip,
+        children: cp
+      } = pp;
+      const Op = (0, Ip.useRef)(null),
+        Lp = (0, Sp.c)(Op, "y");
+      return (0, xp.jsx)("div", {
+        ref: Op,
+        className: op()("CreateCustomLobbyBody", {
+          CreateCustomLobbyBodyMoreAbove: Lp.before,
+          CreateCustomLobbyBodyMoreBelow: Lp.after
+        }),
+        "data-pad-ignore": ip || void 0,
+        children: cp
+      })
     }
-  }
+  },
+  36549: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Dp,
+      g: () => Pp
+    });
+    var Op = cp(62),
+      op = cp(1372),
+      Ip = cp(1201),
+      Sp = cp(1361),
+      xp = cp(3581),
+      Lp = cp(5048),
+      Yp = cp(1112);
+
+    function Dp(pp) {
+      let {
+        loading: ip,
+        schematics: cp,
+        onSchematicPicked: Op,
+        selectedSchematicIdList: op = [],
+        disableAutoExport: Lp
+      } = pp;
+      const {
+        t: Dp
+      } = (0, Ip.H)();
+      return (0, Yp.jsxs)("div", {
+        className: "SchematicList",
+        children: [ip && (0, Yp.jsx)(Sp.c, {}), !ip && 0 === cp.length && (0, Yp.jsx)("div", {
+          className: "NoSchematicsText",
+          children: Dp("worldBuilder:noSavedSchematic")
+        }), !ip && cp.map((pp => (0, Yp.jsx)(xp.g, {
+          source: {
+            type: "schematic",
+            schematic: pp
+          },
+          gameWidth: "25%",
+          useLongRatio: !0,
+          onClick: () => {
+            Op(pp)
+          },
+          isSelected: op.includes(pp.schematicId),
+          hideCcu: !0,
+          hideFavourites: !0,
+          showPublishedChip: !0,
+          hideUnpublishedChip: !0,
+          disabled: pp.isAutoExported && Lp,
+          disabledReason: "worldBuilder:autoExportDisabled"
+        }, pp.schematicId)))]
+      })
+    }
+
+    function Ap(pp) {
+      let {
+        ownedSchematics: ip,
+        currentWorldSchematicId: cp,
+        onClose: op
+      } = pp;
+      const {
+        t: Sp
+      } = (0, Ip.H)(), [xp, Ap] = (0, Op.useState)(null);
+      return (0, Yp.jsxs)("div", {
+        className: "SchematicListWindow",
+        children: [null === xp && (0, Yp.jsxs)(Yp.Fragment, {
+          children: [(0, Yp.jsx)("h1", {
+            className: "SchematicPopupTitle",
+            children: Sp("worldBuilder:schematicList")
+          }), (0, Yp.jsx)("h2", {
+            className: "SchematicPopupSubtitle",
+            children: Sp("worldBuilder:clickSchematicForOptions")
+          }), (0, Yp.jsx)("div", {
+            className: "SchematicPopupSchematicListContainer",
+            children: (0, Yp.jsx)(Dp, {
+              loading: !1,
+              schematics: ip,
+              onSchematicPicked: pp => {
+                Ap(pp)
+              },
+              disableAutoExport: !1
+            })
+          })]
+        }), null !== xp && (0, Yp.jsx)(Lp.j, {
+          schematic: xp,
+          inSourceWorld: xp.schematicId === cp,
+          onSchematicUpdate: pp => {
+            Ap(pp)
+          },
+          onClose: () => {
+            Ap(null), op()
+          }
+        })]
+      })
+    }
+
+    function Pp(pp) {
+      let {
+        ownedSchematics: ip,
+        currentWorldSchematicId: cp,
+        onClose: Op
+      } = pp;
+      op.NotificationProvider.showCustomPopup({
+        body: pp => (0, Yp.jsx)(Ap, {
+          ownedSchematics: ip,
+          currentWorldSchematicId: cp,
+          onClose: pp
+        }),
+        middleScreenPopupClassName: "SchematicPopup",
+        onClose: Op,
+        unlockPointerKey: "schematicListPopup"
+      })
+    }
+  },
+  36557: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Yp,
+      i: () => Dp
+    });
+    cp(62);
+    var Op = cp(1049),
+      op = cp.n(Op),
+      Ip = cp(4719),
+      Sp = cp(322),
+      xp = cp(1201),
+      Lp = cp(1112);
+
+    function Yp(pp) {
+      let {
+        value: ip,
+        onChange: cp,
+        showAll: Op,
+        disabled: Yp = !1
+      } = pp;
+      const {
+        t: Dp
+      } = (0, xp.H)();
+      return (0, Lp.jsxs)("div", {
+        className: op()("BloxdForm GamemodeForm", {
+          BasicOptions: !Op
+        }),
+        children: [(0, Lp.jsx)("div", {
+          className: "SectionTitle",
+          children: Dp("classic:defaultGamemode")
+        }), (0, Lp.jsx)("div", {
+          className: "SectionBody",
+          children: Ip.E.map((pp => Op || (0, Ip.u)(pp) ? (0, Lp.jsx)("button", {
+            type: "button",
+            className: op()("WorldGamemode", {
+              Selected: ip === pp
+            }),
+            disabled: Yp,
+            onClick: () => {
+              cp(pp)
+            },
+            style: {
+              "--background-image": `url(${Sp.p[pp]})`
+            },
+            children: Sp.o[pp]
+          }, pp) : null))
+        })]
+      })
+    }
+
+    function Dp(pp) {
+      let {
+        mapTypes: ip,
+        value: cp,
+        onChange: Op,
+        showAll: Yp,
+        disabled: Dp = !1,
+        children: Ap
+      } = pp;
+      const {
+        t: Pp
+      } = (0, xp.H)();
+      return (0, Lp.jsxs)("div", {
+        className: op()("BloxdForm MapTypeForm", {
+          BasicOptions: !Yp
+        }),
+        children: [(0, Lp.jsx)("div", {
+          className: "SectionTitle",
+          children: Pp("customLobby:mapType")
+        }), (0, Lp.jsx)("div", {
+          className: "SectionBody",
+          children: ip.map((pp => Yp || (0, Ip.y)(pp) ? (0, Lp.jsx)("button", {
+            type: "button",
+            className: op()("MapType", {
+              Selected: cp === pp
+            }),
+            disabled: Dp,
+            onClick: () => {
+              Op(pp)
+            },
+            style: {
+              "--background-image": `url(${Sp.k[pp]})`
+            },
+            children: Sp.h[pp]
+          }, pp) : null))
+        }), Ap]
+      })
+    }
+  },
+  36543: () => {}
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

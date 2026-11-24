@@ -1,17 +1,13 @@
 # WASM module: `bloxd_wasm_anim_bg`
 
-> environment **preprod.bloxd.io** · build `w4ddu.56408518` · analyzed 2026-11-24T00:42:21+09:00
-> source: https://preprod.bloxd.io/static/media/bloxd_wasm_anim_bg.72dea6b87a87456a5828.wasm
-> 415,630 bytes (405.9 KB) · sha256 `70063f4837211665…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
+> environment **preprod.bloxd.io** · build `sn3sfj.2522680a` · analyzed 2026-11-25T01:02:22+09:00
+> source: https://preprod.bloxd.io/static/media/bloxd_wasm_anim_bg.ab5b80b8d68f5e91c45a.wasm
+> 415,630 bytes (405.9 KB) · sha256 `12c4beb6cacfbdea…` · parser: `scripts/wasm_inspect.py` (clean-room W3C binary format)
 
 ## Changes since the previous archived build
 
-- size 415,766 → 415,630 bytes (-136)
-- data bytes 157,622 → 157,486
-- name-section module id `f4f099776fbc89e4.821` → `dc158b5881af9ce6.821` (numeric version suffix unchanged — same module version, re-randomized prefix)
+- name-section module id `dc158b5881af9ce6.821` → `a4add8235fd6a386.821` (numeric version suffix unchanged — same module version, re-randomized prefix)
 - export identifiers rotated by the obfuscator: 1/10 names kept (identifier names are randomly assigned per build; compare signatures instead)
-- new embedded strings: `not an animation file: name it <name>.animation.json or <nam`
-- removed embedded strings: `not an animation file: name it <name>.animation.json or <nam`
 
 ## Overview
 
@@ -25,7 +21,7 @@
 | Data segments / bytes | 23 / 157,486 |
 | Element segments / entries | 1 / 60 |
 | Memories / tables / globals | 1 / 1 / 3 |
-| name-section module id | `dc158b5881af9ce6.821` |
+| name-section module id | `a4add8235fd6a386.821` |
 | Sections | 12 |
 
 ## Sections
@@ -55,11 +51,11 @@
 
 | # | module.name | kind | type |
 |---:|---|---|---|
-| 0 | `OrUC.SICw` | func | `(i32 i32) -> ()` |
-| 1 | `OrUC.Rv0u` | func | `(i32) -> ()` |
-| 2 | `OrUC.B5M0` | func | `(i32 i32) -> ()` |
-| 3 | `OrUC.xH1Z` | func | `(i32 i32) -> (i32)` |
-| 4 | `OrUC.I3eF` | func | `(i32 i32) -> ()` |
+| 0 | `VfU7.zT7c` | func | `(i32 i32) -> ()` |
+| 1 | `VfU7.bQdA` | func | `(i32) -> ()` |
+| 2 | `VfU7.geTR` | func | `(i32 i32) -> ()` |
+| 3 | `VfU7.spUr` | func | `(i32 i32) -> (i32)` |
+| 4 | `VfU7.bBjB` | func | `(i32 i32) -> ()` |
 
 ## Exports
 
@@ -67,16 +63,16 @@
 
 | name | kind | index | type |
 |---|---|---:|---|
-| `XsNz` | func | 222 | `(i32 i32) -> (i32)` |
-| `LnDQ` | func | 237 | `(i32 i32 i32) -> ()` |
+| `DaQn` | global | 2 | `` |
+| `fgSa` | func | 222 | `(i32 i32) -> (i32)` |
+| `V64H` | func | 261 | `() -> ()` |
+| `hVwD` | func | 223 | `(i32 i32 i32 i32) -> (i32)` |
+| `YCl1` | global | 1 | `` |
+| `jq1x` | func | 261 | `() -> ()` |
+| `PZPw` | func | 237 | `(i32 i32 i32) -> ()` |
+| `xO7R` | func | 213 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)` |
+| `zeZa` | func | 228 | `(i32 i32 i32) -> (i32 i32)` |
 | `memory` | memory | 0 | `` |
-| `B1Kp` | func | 261 | `() -> ()` |
-| `S3an` | func | 261 | `() -> ()` |
-| `CHOi` | global | 1 | `` |
-| `wywx` | global | 2 | `` |
-| `l7s8` | func | 223 | `(i32 i32 i32 i32) -> (i32)` |
-| `JmIP` | func | 213 | `(i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32 i32) -> (i32 i32 i32 i32)` |
-| `UdTS` | func | 228 | `(i32 i32 i32) -> (i32 i32)` |
 
 > Note: export identifiers in Bloxd wasm builds are randomly re-assigned each build; use signatures and counts for comparisons.
 

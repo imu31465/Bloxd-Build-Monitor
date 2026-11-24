@@ -1,40 +1,37 @@
 export const id = 168;
 export const ids = [168];
 export const modules = {
-  8962: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      pageBody: () => QC
+  9101: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      pageBody: () => Op
     });
-    const QC = {
-      whatIs: ["Infinite blocks, custom tools and no limits on what you build. Bloxd Creative is the free building mode where you can get creating straight away. Build in a shared world with players from all over, or set up your own free build server and create with your friends online. There's no health bar and nobody can attack you, so all you have to think about is your build."],
-      howToPlay: ["Open the creative menu and grab any block or item you want. It's all sorted into categories like Building Blocks, Coloured Blocks, Nature, Decoration, Utility, Tools and Vehicles, and World Tools. Place as many as you like, fly around your build and make anything from a tiny cottage to an entire city.", "Want a completely blank canvas? Try Superflat, a world of endless flat grass that's great for big projects. In the normal Creative world, use Teleport To Fresh Land to jump to a random empty spot so nobody gets in your way. Place a Protector and other players can't change blocks or open chests in that area. If you'd like a plot of your own that's saved for good, Plots is the one to try."],
-      features: ["Infinite Blocks and Items from the Creative Menu", "Fly Freely Around Your Builds", "Superflat Worlds for Big Builds", "Teleport To Fresh Land for Uninterrupted Building", "Free Private Build Servers to Create with Friends", "Extra Tools for Server Owners, Including WorldBuilder and Code Editing", "Protectors to Keep Your Builds Safe", "No Health Bar and No Attacks from Other Players"],
-      tips: ["Teleport To Fresh Land is the quickest way to find some empty space", "In public lobbies, build away from spawn, because blocks near spawn reset every few hours", "Put down a Protector so other players can't change your build or open your chests", "Use /tp to get around fast, and type /help to see all the commands", "Saplings are limited in Creative, so plan your trees carefully", "Free cam lets you check your build from every angle", "If you want your build to stay exactly as you left it, start a private build server"],
-      similarGames: ["classic", "classic_survival", "plots", "skyblock", "oneBlock"],
+    const Op = {
+      whatIs: ["When the sun goes down, the monsters come out. Bloxd Day & Night Survival is a survival mode built around the clock. You mine, craft and build while it's light, then protect your base once it gets dark. Light up your world with torches and see if you can make it through the night. Choose this over regular Survival if you want torches, night-time danger and a Days Survived leaderboard to be the main event. So, how many days can you last?"],
+      howToPlay: ["Use the daylight to gather resources, craft tools and build somewhere safe. Time goes from dawn to day, then dusk to night. The game announces the time, and there's a progress bar showing how far through the cycle you are. Once dusk hits, get ready. At night it gets properly dark and only hostile mobs spawn, right on the surface. That includes the Draugr Huntress and the rare Draugr Warper.", "Torches are your best defence, because hostile mobs won't spawn near light. You get a few free torches when you first join, so stick them around your base. When morning comes, any hostile mobs still out in the sunlight start to burn. Mobs in caves or under cover are fine, though, so watch yourself underground. Sleep in a bed to skip the night, and keep surviving to climb the Days Survived leaderboard."],
+      features: ["Dawn, Day, Dusk and Night Cycle with Time Announcements", "Hostile Mobs That Spawn on the Surface at Night", "Torches to Keep Monsters Away from Your Base", "Free Torches When You First Join", "Sleep in a Bed to Skip the Night", "Days Survived and Days Played Leaderboard", "Mining, Crafting, Base Building and PvP", "Free Private Servers with Day & Night Settings"],
+      tips: ["Get torches up around your base before dusk", "Use the free torches you start with straight away", "Keep an eye on the progress bar so the night doesn't sneak up on you", "Not ready to fight? Stay inside at night", "Wait for sunrise, because monsters left out in the open start to burn", "Careful in caves. Mobs underground don't burn", "Guard your base with Protectors, which you make from diamonds", "In public lobbies, build away from spawn, since the area near spawn resets every few hours"],
+      similarGames: ["classic_survival", "classic", "classic_survivalGuns", "skyblock"],
       faq: [{
-        question: "What is Bloxd Creative?",
-        answer: "Bloxd Creative is the creative building mode in Bloxd.io. You get infinite blocks and custom tools to build whatever you like, on your own or with friends."
+        question: "What is Bloxd Day and Night Survival?",
+        answer: "A survival mode on Bloxd.io with a day-night cycle. You build and explore during the day, then use torches to protect your base from the monsters that come out at night."
       }, {
-        question: "Can you fly in Bloxd Creative?",
-        answer: "Yes, you can fly in Creative, so you can reach every bit of your build."
+        question: "How do I stop monsters spawning near my base in Bloxd?",
+        answer: "Torches. Hostile mobs won't spawn near light, so light up your base and the area around it before night falls."
       }, {
-        question: "What is Superflat in Bloxd?",
-        answer: "A Creative world made of endless flat grass. It gives you a clean canvas for your biggest projects."
+        question: "How do I skip the night in Day & Night Survival?",
+        answer: "Sleep in a bed. By default the night gets skipped once more than half the players are asleep. Private-server owners can change that or turn sleeping off."
       }, {
-        question: "How do I make a free build server in Bloxd?",
-        answer: "Start your own private lobby for free and invite your friends. As the owner you also get extra tools like WorldBuilder."
+        question: "What happens to monsters when the sun comes up?",
+        answer: "Hostile mobs standing in direct sunlight start to burn. Mobs in caves or under cover are safe, so stay alert if you're underground."
       }, {
-        question: "Can you use TNT in Bloxd Creative?",
-        answer: "Not in public Creative worlds. You can't take explosives from the menu or craft them, so nobody can blow up other people's builds."
+        question: "How are Days Survived counted?",
+        answer: "One day is a full cycle of day, dusk, night and dawn. Days Survived is how many days in a row you've stayed alive, and it resets when you die. Days Played keeps going no matter what. You'll see both on the lobby leaderboard."
       }, {
-        question: "Why did my build disappear in Bloxd Creative?",
-        answer: "In public lobbies, blocks near spawn reset every few hours; a message shows when you cross the edge of that area. Build further away, use Teleport To Fresh Land, or start a private build server, where nothing resets unless its owner turns on Enable Spawn Reset."
-      }, {
-        question: "What's the difference between Creative and Plots?",
-        answer: "Creative is an open shared world. You build wherever you want and guard areas with Protectors. In Plots you claim your own 91\xd791 plot that only you and the players you add can change, and it's saved for good once you've changed 500 blocks."
+        question: "Can I change the day and night settings on my own server?",
+        answer: "Yes. On your free private server you can pause the cycle, set the time, pick how many players need to sleep and turn the leaderboard on or off, plus a few other options."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

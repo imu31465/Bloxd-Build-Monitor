@@ -1,92 +1,92 @@
 export const id = 4;
 export const ids = [4];
 export const modules = {
-  36302: (CC, zC, ZC) => {
-    var QC = {
-      "./Artisan Bench.json": [41003, 275],
-      "./Aspen Item Pedestal.json": [41009, 276],
-      "./Cedar Item Pedestal.json": [41018, 277],
-      "./Cherry Item Pedestal.json": [41025, 278],
-      "./Furnace.json": [41031, 279],
-      "./Jungle Item Pedestal.json": [41035, 280],
-      "./Mango Item Pedestal.json": [41044, 281],
-      "./Palm Item Pedestal.json": [41047, 282],
-      "./Pear Item Pedestal.json": [41050, 283],
-      "./Pine Item Pedestal.json": [41056, 284],
-      "./Plum Item Pedestal.json": [41062, 285],
-      "./Potion Table.json": [41067, 286],
-      "./Salvaging Table.json": [41070, 287],
-      "./Showcase.json": [41075, 288],
-      "./Spectral Item Pedestal.json": [41082, 289],
-      "./Workbench.json": [41084, 290]
+  36642: (pp, ip, cp) => {
+    var Op = {
+      "./Artisan Bench.json": [41402, 280],
+      "./Aspen Item Pedestal.json": [41410, 281],
+      "./Cedar Item Pedestal.json": [41418, 282],
+      "./Cherry Item Pedestal.json": [41427, 283],
+      "./Furnace.json": [41432, 284],
+      "./Jungle Item Pedestal.json": [41440, 285],
+      "./Mango Item Pedestal.json": [41446, 286],
+      "./Palm Item Pedestal.json": [41454, 287],
+      "./Pear Item Pedestal.json": [41461, 288],
+      "./Pine Item Pedestal.json": [41467, 289],
+      "./Plum Item Pedestal.json": [41469, 290],
+      "./Potion Table.json": [41478, 291],
+      "./Salvaging Table.json": [41481, 292],
+      "./Showcase.json": [41484, 293],
+      "./Spectral Item Pedestal.json": [41492, 294],
+      "./Workbench.json": [41498, 295]
     };
 
-    function wC(CC) {
-      if (!ZC.o(QC, CC)) return Promise.resolve().then((() => {
-        var zC = new Error("Cannot find module '" + CC + "'");
-        throw zC.code = "MODULE_NOT_FOUND", zC
+    function op(pp) {
+      if (!cp.o(Op, pp)) return Promise.resolve().then((() => {
+        var ip = new Error("Cannot find module '" + pp + "'");
+        throw ip.code = "MODULE_NOT_FOUND", ip
       }));
-      var zC = QC[CC],
-        wC = zC[0];
-      return ZC.e(zC[1]).then((() => ZC(wC)))
+      var ip = Op[pp],
+        op = ip[0];
+      return cp.e(ip[1]).then((() => cp(op)))
     }
-    wC.keys = () => Object.keys(QC), wC.id = 36302, CC.exports = wC
+    op.keys = () => Object.keys(Op), op.id = 36642, pp.exports = op
   },
-  36297: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      getBlockModelIconUrl: () => NC,
-      hasBlockModelIcon: () => qC
+  36635: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      getBlockModelIconUrl: () => Pp,
+      hasBlockModelIcon: () => Yp
     });
-    var QC = ZC(36291),
-      wC = ZC(36288);
-    const bC = ZC(36302),
-      nC = new Map(bC.keys().filter((CC => CC.startsWith("./"))).map((CC => [CC.slice(2, -5), CC]))),
-      fC = new Map,
-      oC = new Map;
+    var Op = cp(36622),
+      op = cp(36618);
+    const Ip = cp(36642),
+      Sp = new Map(Ip.keys().filter((pp => pp.startsWith("./"))).map((pp => [pp.slice(2, -5), pp]))),
+      xp = new Map,
+      Lp = new Map;
 
-    function qC(CC) {
-      return nC.has(CC)
+    function Yp(pp) {
+      return Sp.has(pp)
     }
 
-    function FC(CC) {
-      return bC(nC.get(CC))
+    function Dp(pp) {
+      return Ip(Sp.get(pp))
     }
-    async function WC(CC, zC, ZC) {
+    async function Ap(pp, ip, cp) {
       const {
-        data: QC,
-        texture: bC
+        data: Op,
+        texture: Ip
       } = await
-      function(CC) {
-        let zC = fC.get(CC);
-        return zC || (zC = FC(CC).then((async CC => {
-          const zC = new Image;
-          zC.src = CC.texture, await zC.decode();
-          const ZC = document.createElement("canvas");
-          ZC.width = zC.width, ZC.height = zC.height;
-          const QC = ZC.getContext("2d");
-          return QC.drawImage(zC, 0, 0), {
-            data: CC,
+      function(pp) {
+        let ip = xp.get(pp);
+        return ip || (ip = Dp(pp).then((async pp => {
+          const ip = new Image;
+          ip.src = pp.texture, await ip.decode();
+          const cp = document.createElement("canvas");
+          cp.width = ip.width, cp.height = ip.height;
+          const Op = cp.getContext("2d");
+          return Op.drawImage(ip, 0, 0), {
+            data: pp,
             texture: {
-              width: zC.width,
-              height: zC.height,
-              pixels: QC.getImageData(0, 0, zC.width, zC.height).data
+              width: ip.width,
+              height: ip.height,
+              pixels: Op.getImageData(0, 0, ip.width, ip.height).data
             }
           }
-        })), zC.catch((() => {
-          fC.delete(CC)
-        })), fC.set(CC, zC)), zC
-      }(CC), nC = document.createElement("canvas");
-      return nC.width = zC, nC.height = zC, nC.getContext("2d").putImageData(new ImageData((0, wC.k)(QC, bC, zC, ZC), zC, zC), 0, 0), nC.toDataURL()
+        })), ip.catch((() => {
+          xp.delete(pp)
+        })), xp.set(pp, ip)), ip
+      }(pp), Sp = document.createElement("canvas");
+      return Sp.width = ip, Sp.height = ip, Sp.getContext("2d").putImageData(new ImageData((0, op.m)(Op, Ip, ip, cp), ip, ip), 0, 0), Sp.toDataURL()
     }
 
-    function NC(CC, zC, ZC) {
-      const wC = `${zC}|${ZC}|${CC}`;
-      let bC = oC.get(wC);
-      return bC || (bC = (0, QC.d)(CC, (() => FC(CC)), zC, ZC).then((QC => null !== QC && void 0 !== QC ? QC : WC(CC, zC, ZC))), bC.catch((() => {
-        oC.delete(wC)
-      })), oC.set(wC, bC)), bC
+    function Pp(pp, ip, cp) {
+      const op = `${ip}|${cp}|${pp}`;
+      let Ip = Lp.get(op);
+      return Ip || (Ip = (0, Op.f)(pp, (() => Dp(pp)), ip, cp).then((Op => null !== Op && void 0 !== Op ? Op : Ap(pp, ip, cp))), Ip.catch((() => {
+        Lp.delete(op)
+      })), Lp.set(op, Ip)), Ip
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

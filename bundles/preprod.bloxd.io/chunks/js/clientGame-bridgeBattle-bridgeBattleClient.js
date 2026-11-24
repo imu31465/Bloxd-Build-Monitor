@@ -1,22 +1,22 @@
 export const id = 10;
 export const ids = [10];
 export const modules = {
-  39114: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      default: () => QC
+  39460: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      default: () => Op
     });
-    const QC = function(CC, zC, ZC) {
-      let QC;
+    const Op = function(pp, ip, cp) {
+      let Op;
       return {
-        onCreate: CC => {
-          QC = CC
+        onCreate: pp => {
+          Op = pp
         },
-        onPlayerAltAction: (CC, zC, ZC, wC, bC, nC) => {
-          nC && "Mesh" === QC.getEntityType(nC) && ("Permanent Upgrades" === QC.getEntityName(nC) ? QC.openShop(CC, !1, "Upgrades") : "Items" === QC.getEntityName(nC) ? QC.openShop(CC, !1, "Items") : "Prestige" === QC.getEntityName(nC) && QC.openShop(CC, !1, "Prestige"))
+        onPlayerAltAction: (pp, ip, cp, op, Ip, Sp) => {
+          Sp && "Mesh" === Op.getEntityType(Sp) && ("Permanent Upgrades" === Op.getEntityName(Sp) ? Op.openShop(pp, !1, "Upgrades") : "Items" === Op.getEntityName(Sp) ? Op.openShop(pp, !1, "Items") : "Prestige" === Op.getEntityName(Sp) && Op.openShop(pp, !1, "Prestige"))
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

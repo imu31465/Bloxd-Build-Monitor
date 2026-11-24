@@ -1,19 +1,19 @@
 export const id = 371;
 export const ids = [371];
 export const modules = {
-  61101: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      passPixelShaderWGSL: () => nC
+  61525: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      lodPixelShader: () => Sp
     });
-    var QC = ZC(39674);
-    const wC = "passPixelShader",
-      bC = "varying vUV: vec2f;var textureSamplerSampler: sampler;var textureSampler: texture_2d<f32>;\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {fragmentOutputs.color=textureSample(textureSampler,textureSamplerSampler,input.vUV);}";
-    QC.b.ShadersStoreWGSL[wC] || (QC.b.ShadersStoreWGSL[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+    var Op = cp(40062);
+    const op = "lodPixelShader",
+      Ip = "precision highp float;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform sampler2D textureSampler;uniform float lod;uniform vec2 texSize;uniform int gamma;void main(void)\n{ivec2 textureDimensions=textureSize(textureSampler,0);gl_FragColor=texelFetch(textureSampler,ivec2(vUV*vec2(textureDimensions)),int(lod));if (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
+    Op.b.ShadersStore[op] || (Op.b.ShadersStore[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

@@ -1,369 +1,884 @@
 export const id = 263;
 export const ids = [263];
 export const modules = {
-  41402: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => QC
+  40451: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Pp
     });
-    class QC {}
-    QC.AUTOSAMPLERSUFFIX = "Sampler", QC.DISABLEUA = "#define DISABLE_UNIFORMITY_ANALYSIS", QC.ALPHA_DISABLE = 0, QC.ALPHA_ADD = 1, QC.ALPHA_COMBINE = 2, QC.ALPHA_SUBTRACT = 3, QC.ALPHA_MULTIPLY = 4, QC.ALPHA_MAXIMIZED = 5, QC.ALPHA_ONEONE = 6, QC.ALPHA_PREMULTIPLIED = 7, QC.ALPHA_PREMULTIPLIED_PORTERDUFF = 8, QC.ALPHA_INTERPOLATE = 9, QC.ALPHA_SCREENMODE = 10, QC.ALPHA_ONEONE_ONEONE = 11, QC.ALPHA_ALPHATOCOLOR = 12, QC.ALPHA_REVERSEONEMINUS = 13, QC.ALPHA_SRC_DSTONEMINUSSRCALPHA = 14, QC.ALPHA_ONEONE_ONEZERO = 15, QC.ALPHA_EXCLUSION = 16, QC.ALPHA_LAYER_ACCUMULATE = 17, QC.ALPHA_MIN = 18, QC.ALPHA_MAX = 19, QC.ALPHA_DUAL_SRC0_ADD_SRC1xDST = 20, QC.ALPHA_REPLACE_COLOR = 21, QC.ALPHA_EQUATION_ADD = 0, QC.ALPHA_EQUATION_SUBSTRACT = 1, QC.ALPHA_EQUATION_REVERSE_SUBTRACT = 2, QC.ALPHA_EQUATION_MAX = 3, QC.ALPHA_EQUATION_MIN = 4, QC.ALPHA_EQUATION_DARKEN = 5, QC.DELAYLOADSTATE_NONE = 0, QC.DELAYLOADSTATE_LOADED = 1, QC.DELAYLOADSTATE_LOADING = 2, QC.DELAYLOADSTATE_NOTLOADED = 4, QC.NEVER = 512, QC.ALWAYS = 519, QC.LESS = 513, QC.EQUAL = 514, QC.LEQUAL = 515, QC.GREATER = 516, QC.GEQUAL = 518, QC.NOTEQUAL = 517, QC.KEEP = 7680, QC.ZERO = 0, QC.REPLACE = 7681, QC.INCR = 7682, QC.DECR = 7683, QC.INVERT = 5386, QC.INCR_WRAP = 34055, QC.DECR_WRAP = 34056, QC.TEXTURE_CLAMP_ADDRESSMODE = 0, QC.TEXTURE_WRAP_ADDRESSMODE = 1, QC.TEXTURE_MIRROR_ADDRESSMODE = 2, QC.TEXTURE_REPETITION_NONE = 0, QC.TEXTURE_REPETITION_NOISE_BLEND = 1, QC.TEXTURE_REPETITION_HEX_TILING = 2, QC.TEXTURE_REPETITION_TILE_RANDOMIZATION = 3, QC.TEXTURE_REPETITION_VORONOI_BOMBING = 4, QC.TEXTURE_CREATIONFLAG_STORAGE = 1, QC.TEXTUREFORMAT_ALPHA = 0, QC.TEXTUREFORMAT_LUMINANCE = 1, QC.TEXTUREFORMAT_LUMINANCE_ALPHA = 2, QC.TEXTUREFORMAT_RGB = 4, QC.TEXTUREFORMAT_RGBA = 5, QC.TEXTUREFORMAT_RED = 6, QC.TEXTUREFORMAT_R = 6, QC.TEXTUREFORMAT_R16_UNORM = 33322, QC.TEXTUREFORMAT_RG16_UNORM = 33324, QC.TEXTUREFORMAT_RGB16_UNORM = 32852, QC.TEXTUREFORMAT_RGBA16_UNORM = 32859, QC.TEXTUREFORMAT_R16_SNORM = 36760, QC.TEXTUREFORMAT_RG16_SNORM = 36761, QC.TEXTUREFORMAT_RGB16_SNORM = 36762, QC.TEXTUREFORMAT_RGBA16_SNORM = 36763, QC.TEXTUREFORMAT_RG = 7, QC.TEXTUREFORMAT_RED_INTEGER = 8, QC.TEXTUREFORMAT_R_INTEGER = 8, QC.TEXTUREFORMAT_RG_INTEGER = 9, QC.TEXTUREFORMAT_RGB_INTEGER = 10, QC.TEXTUREFORMAT_RGBA_INTEGER = 11, QC.TEXTUREFORMAT_BGRA = 12, QC.TEXTUREFORMAT_DEPTH24_STENCIL8 = 13, QC.TEXTUREFORMAT_DEPTH32_FLOAT = 14, QC.TEXTUREFORMAT_DEPTH16 = 15, QC.TEXTUREFORMAT_DEPTH24 = 16, QC.TEXTUREFORMAT_DEPTH24UNORM_STENCIL8 = 17, QC.TEXTUREFORMAT_DEPTH32FLOAT_STENCIL8 = 18, QC.TEXTUREFORMAT_STENCIL8 = 19, QC.TEXTUREFORMAT_UNDEFINED = 4294967295, QC.TEXTUREFORMAT_COMPRESSED_RGBA_BPTC_UNORM = 36492, QC.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_BPTC_UNORM = 36493, QC.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT = 36495, QC.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_SIGNED_FLOAT = 36494, QC.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT5 = 33779, QC.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT = 35919, QC.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT3 = 33778, QC.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT = 35918, QC.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT1 = 33777, QC.TEXTUREFORMAT_COMPRESSED_RGB_S3TC_DXT1 = 33776, QC.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT = 35917, QC.TEXTUREFORMAT_COMPRESSED_SRGB_S3TC_DXT1_EXT = 35916, QC.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_4x4 = 37808, QC.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x4 = 37809, QC.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x5 = 37810, QC.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x5 = 37811, QC.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x6 = 37812, QC.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x5 = 37813, QC.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x6 = 37814, QC.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x8 = 37815, QC.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x5 = 37816, QC.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x6 = 37817, QC.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x8 = 37818, QC.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x10 = 37819, QC.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x10 = 37820, QC.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x12 = 37821, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR = 37840, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR = 37841, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR = 37842, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR = 37843, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR = 37844, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR = 37845, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR = 37846, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR = 37847, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR = 37848, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR = 37849, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR = 37850, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR = 37851, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR = 37852, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR = 37853, QC.TEXTUREFORMAT_COMPRESSED_RGB_ETC1_WEBGL = 36196, QC.TEXTUREFORMAT_COMPRESSED_RGB8_ETC2 = 37492, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_ETC2 = 37493, QC.TEXTUREFORMAT_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37494, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37495, QC.TEXTUREFORMAT_COMPRESSED_RGBA8_ETC2_EAC = 37496, QC.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = 37497, QC.TEXTURETYPE_UNSIGNED_BYTE = 0, QC.TEXTURETYPE_UNSIGNED_INT = 0, QC.TEXTURETYPE_FLOAT = 1, QC.TEXTURETYPE_HALF_FLOAT = 2, QC.TEXTURETYPE_BYTE = 3, QC.TEXTURETYPE_SHORT = 4, QC.TEXTURETYPE_UNSIGNED_SHORT = 5, QC.TEXTURETYPE_INT = 6, QC.TEXTURETYPE_UNSIGNED_INTEGER = 7, QC.TEXTURETYPE_UNSIGNED_SHORT_4_4_4_4 = 8, QC.TEXTURETYPE_UNSIGNED_SHORT_5_5_5_1 = 9, QC.TEXTURETYPE_UNSIGNED_SHORT_5_6_5 = 10, QC.TEXTURETYPE_UNSIGNED_INT_2_10_10_10_REV = 11, QC.TEXTURETYPE_UNSIGNED_INT_24_8 = 12, QC.TEXTURETYPE_UNSIGNED_INT_10F_11F_11F_REV = 13, QC.TEXTURETYPE_UNSIGNED_INT_5_9_9_9_REV = 14, QC.TEXTURETYPE_FLOAT_32_UNSIGNED_INT_24_8_REV = 15, QC.TEXTURETYPE_UNDEFINED = 16, QC.TEXTURE_2D = 3553, QC.TEXTURE_2D_ARRAY = 35866, QC.TEXTURE_CUBE_MAP = 34067, QC.TEXTURE_CUBE_MAP_ARRAY = 3735928559, QC.TEXTURE_3D = 32879, QC.TEXTURE_NEAREST_SAMPLINGMODE = 1, QC.TEXTURE_NEAREST_NEAREST = 1, QC.TEXTURE_BILINEAR_SAMPLINGMODE = 2, QC.TEXTURE_LINEAR_LINEAR = 2, QC.TEXTURE_TRILINEAR_SAMPLINGMODE = 3, QC.TEXTURE_LINEAR_LINEAR_MIPLINEAR = 3, QC.TEXTURE_NEAREST_NEAREST_MIPNEAREST = 4, QC.TEXTURE_NEAREST_LINEAR_MIPNEAREST = 5, QC.TEXTURE_NEAREST_LINEAR_MIPLINEAR = 6, QC.TEXTURE_NEAREST_LINEAR = 7, QC.TEXTURE_NEAREST_NEAREST_MIPLINEAR = 8, QC.TEXTURE_LINEAR_NEAREST_MIPNEAREST = 9, QC.TEXTURE_LINEAR_NEAREST_MIPLINEAR = 10, QC.TEXTURE_LINEAR_LINEAR_MIPNEAREST = 11, QC.TEXTURE_LINEAR_NEAREST = 12, QC.TEXTURE_EXPLICIT_MODE = 0, QC.TEXTURE_SPHERICAL_MODE = 1, QC.TEXTURE_PLANAR_MODE = 2, QC.TEXTURE_CUBIC_MODE = 3, QC.TEXTURE_PROJECTION_MODE = 4, QC.TEXTURE_SKYBOX_MODE = 5, QC.TEXTURE_INVCUBIC_MODE = 6, QC.TEXTURE_EQUIRECTANGULAR_MODE = 7, QC.TEXTURE_FIXED_EQUIRECTANGULAR_MODE = 8, QC.TEXTURE_FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, QC.TEXTURE_FILTERING_QUALITY_OFFLINE = 4096, QC.TEXTURE_FILTERING_QUALITY_HIGH = 64, QC.TEXTURE_FILTERING_QUALITY_MEDIUM = 16, QC.TEXTURE_FILTERING_QUALITY_LOW = 8, QC.SCALEMODE_FLOOR = 1, QC.SCALEMODE_NEAREST = 2, QC.SCALEMODE_CEILING = 3, QC.MATERIAL_TextureDirtyFlag = 1, QC.MATERIAL_LightDirtyFlag = 2, QC.MATERIAL_FresnelDirtyFlag = 4, QC.MATERIAL_AttributesDirtyFlag = 8, QC.MATERIAL_MiscDirtyFlag = 16, QC.MATERIAL_PrePassDirtyFlag = 32, QC.MATERIAL_ImageProcessingDirtyFlag = 64, QC.MATERIAL_AllDirtyFlag = 127, QC.MATERIAL_TriangleFillMode = 0, QC.MATERIAL_WireFrameFillMode = 1, QC.MATERIAL_PointFillMode = 2, QC.MATERIAL_PointListDrawMode = 3, QC.MATERIAL_LineListDrawMode = 4, QC.MATERIAL_LineLoopDrawMode = 5, QC.MATERIAL_LineStripDrawMode = 6, QC.MATERIAL_TriangleStripDrawMode = 7, QC.MATERIAL_TriangleFanDrawMode = 8, QC.MATERIAL_ClockWiseSideOrientation = 0, QC.MATERIAL_CounterClockWiseSideOrientation = 1, QC.MATERIAL_DIFFUSE_MODEL_E_OREN_NAYAR = 0, QC.MATERIAL_DIFFUSE_MODEL_BURLEY = 1, QC.MATERIAL_DIFFUSE_MODEL_LAMBERT = 2, QC.MATERIAL_DIFFUSE_MODEL_LEGACY = 3, QC.MATERIAL_DIELECTRIC_SPECULAR_MODEL_GLTF = 0, QC.MATERIAL_DIELECTRIC_SPECULAR_MODEL_OPENPBR = 1, QC.MATERIAL_CONDUCTOR_SPECULAR_MODEL_GLTF = 0, QC.MATERIAL_CONDUCTOR_SPECULAR_MODEL_OPENPBR = 1, QC.ACTION_NothingTrigger = 0, QC.ACTION_OnPickTrigger = 1, QC.ACTION_OnLeftPickTrigger = 2, QC.ACTION_OnRightPickTrigger = 3, QC.ACTION_OnCenterPickTrigger = 4, QC.ACTION_OnPickDownTrigger = 5, QC.ACTION_OnDoublePickTrigger = 6, QC.ACTION_OnPickUpTrigger = 7, QC.ACTION_OnPickOutTrigger = 16, QC.ACTION_OnLongPressTrigger = 8, QC.ACTION_OnPointerOverTrigger = 9, QC.ACTION_OnPointerOutTrigger = 10, QC.ACTION_OnEveryFrameTrigger = 11, QC.ACTION_OnIntersectionEnterTrigger = 12, QC.ACTION_OnIntersectionExitTrigger = 13, QC.ACTION_OnKeyDownTrigger = 14, QC.ACTION_OnKeyUpTrigger = 15, QC.PARTICLES_BILLBOARDMODE_Y = 2, QC.PARTICLES_BILLBOARDMODE_ALL = 7, QC.PARTICLES_BILLBOARDMODE_STRETCHED = 8, QC.PARTICLES_BILLBOARDMODE_STRETCHED_LOCAL = 9, QC.MESHES_CULLINGSTRATEGY_STANDARD = 0, QC.MESHES_CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY = 1, QC.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION = 2, QC.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION_THEN_BSPHERE_ONLY = 3, QC.SCENELOADER_NO_LOGGING = 0, QC.SCENELOADER_MINIMAL_LOGGING = 1, QC.SCENELOADER_SUMMARY_LOGGING = 2, QC.SCENELOADER_DETAILED_LOGGING = 3, QC.PREPASS_IRRADIANCE_LEGACY_TEXTURE_TYPE = 0, QC.PREPASS_POSITION_TEXTURE_TYPE = 1, QC.PREPASS_VELOCITY_TEXTURE_TYPE = 2, QC.PREPASS_REFLECTIVITY_TEXTURE_TYPE = 3, QC.PREPASS_COLOR_TEXTURE_TYPE = 4, QC.PREPASS_DEPTH_TEXTURE_TYPE = 5, QC.PREPASS_NORMAL_TEXTURE_TYPE = 6, QC.PREPASS_ALBEDO_SQRT_TEXTURE_TYPE = 7, QC.PREPASS_WORLD_NORMAL_TEXTURE_TYPE = 8, QC.PREPASS_LOCAL_POSITION_TEXTURE_TYPE = 9, QC.PREPASS_SCREENSPACE_DEPTH_TEXTURE_TYPE = 10, QC.PREPASS_VELOCITY_LINEAR_TEXTURE_TYPE = 11, QC.PREPASS_ALBEDO_TEXTURE_TYPE = 12, QC.PREPASS_NORMALIZED_VIEW_DEPTH_TEXTURE_TYPE = 13, QC.PREPASS_IRRADIANCE_TEXTURE_TYPE = 14, QC.PREPASS_OBJECT_ID_TEXTURE_TYPE = 15, QC.PREPASS_MESH_BLEND_TAG_TEXTURE_TYPE = 16, QC.BUFFER_CREATIONFLAG_READ = 1, QC.BUFFER_CREATIONFLAG_WRITE = 2, QC.BUFFER_CREATIONFLAG_READWRITE = 3, QC.BUFFER_CREATIONFLAG_UNIFORM = 4, QC.BUFFER_CREATIONFLAG_VERTEX = 8, QC.BUFFER_CREATIONFLAG_INDEX = 16, QC.BUFFER_CREATIONFLAG_STORAGE = 32, QC.BUFFER_CREATIONFLAG_INDIRECT = 64, QC.RENDERPASS_MAIN = 0, QC.INPUT_ALT_KEY = 18, QC.INPUT_CTRL_KEY = 17, QC.INPUT_META_KEY1 = 91, QC.INPUT_META_KEY2 = 92, QC.INPUT_META_KEY3 = 93, QC.INPUT_SHIFT_KEY = 16, QC.SNAPSHOTRENDERING_STANDARD = 0, QC.SNAPSHOTRENDERING_FAST = 1, QC.PERSPECTIVE_CAMERA = 0, QC.ORTHOGRAPHIC_CAMERA = 1, QC.FOVMODE_VERTICAL_FIXED = 0, QC.FOVMODE_HORIZONTAL_FIXED = 1, QC.RIG_MODE_NONE = 0, QC.RIG_MODE_STEREOSCOPIC_ANAGLYPH = 10, QC.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL = 11, QC.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED = 12, QC.RIG_MODE_STEREOSCOPIC_OVERUNDER = 13, QC.RIG_MODE_STEREOSCOPIC_INTERLACED = 14, QC.RIG_MODE_VR = 20, QC.RIG_MODE_CUSTOM = 22, QC.MAX_SUPPORTED_UV_SETS = 6, QC.GL_ALPHA_EQUATION_ADD = 32774, QC.GL_ALPHA_EQUATION_MIN = 32775, QC.GL_ALPHA_EQUATION_MAX = 32776, QC.GL_ALPHA_EQUATION_SUBTRACT = 32778, QC.GL_ALPHA_EQUATION_REVERSE_SUBTRACT = 32779, QC.GL_ALPHA_FUNCTION_SRC = 768, QC.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_COLOR = 769, QC.GL_ALPHA_FUNCTION_SRC_ALPHA = 770, QC.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_ALPHA = 771, QC.GL_ALPHA_FUNCTION_DST_ALPHA = 772, QC.GL_ALPHA_FUNCTION_ONE_MINUS_DST_ALPHA = 773, QC.GL_ALPHA_FUNCTION_DST_COLOR = 774, QC.GL_ALPHA_FUNCTION_ONE_MINUS_DST_COLOR = 775, QC.GL_ALPHA_FUNCTION_SRC_ALPHA_SATURATED = 776, QC.GL_ALPHA_FUNCTION_CONSTANT_COLOR = 32769, QC.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_COLOR = 32770, QC.GL_ALPHA_FUNCTION_CONSTANT_ALPHA = 32771, QC.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_ALPHA = 32772, QC.GL_ALPHA_FUNCTION_SRC1_COLOR = 35065, QC.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_COLOR = 35066, QC.GL_ALPHA_FUNCTION_SRC1_ALPHA = 34185, QC.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_ALPHA = 35067, QC.SnippetUrl = "https://snippet.babylonjs.com", QC.FOGMODE_NONE = 0, QC.FOGMODE_EXP = 1, QC.FOGMODE_EXP2 = 2, QC.FOGMODE_LINEAR = 3, QC.BYTE = 5120, QC.UNSIGNED_BYTE = 5121, QC.SHORT = 5122, QC.UNSIGNED_SHORT = 5123, QC.INT = 5124, QC.UNSIGNED_INT = 5125, QC.FLOAT = 5126, QC.HALF_FLOAT = 5131, QC.PositionKind = "position", QC.NormalKind = "normal", QC.TangentKind = "tangent", QC.UVKind = "uv", QC.UV2Kind = "uv2", QC.UV3Kind = "uv3", QC.UV4Kind = "uv4", QC.UV5Kind = "uv5", QC.UV6Kind = "uv6", QC.ColorKind = "color", QC.ColorInstanceKind = "instanceColor", QC.MatricesIndicesKind = "matricesIndices", QC.MatricesWeightsKind = "matricesWeights", QC.MatricesIndicesExtraKind = "matricesIndicesExtra", QC.MatricesWeightsExtraKind = "matricesWeightsExtra", QC.ANIMATIONTYPE_FLOAT = 0, QC.ANIMATIONTYPE_VECTOR3 = 1, QC.ANIMATIONTYPE_QUATERNION = 2, QC.ANIMATIONTYPE_MATRIX = 3, QC.ANIMATIONTYPE_COLOR3 = 4, QC.ANIMATIONTYPE_COLOR4 = 7, QC.ANIMATIONTYPE_VECTOR2 = 5, QC.ANIMATIONTYPE_SIZE = 6, QC.ShadowMinZ = 0, QC.ShadowMaxZ = 1e4, QC.OUTLINELAYER_SAMPLING_TRIDIRECTIONAL = 0, QC.OUTLINELAYER_SAMPLING_OCTADIRECTIONAL = 1
-  },
-  41384: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => oC
-    });
-    var QC = ZC(39811),
-      wC = ZC(39818),
-      bC = ZC(36963),
-      nC = ZC(40084),
-      fC = ZC(40049);
-    let oC = (() => {
-      var CC;
-      let zC, ZC, oC, qC, FC = nC.c,
-        WC = [];
-      return CC = class extends FC {
-        constructor() {
-          super(...arguments), this._position = (0, QC.n)(this, WC), this._needProjectionMatrixCompute = !0, this._viewMatrix = bC.b.Identity(), this._projectionMatrix = bC.b.Identity()
+    var Op = cp(40203),
+      op = cp(40210),
+      Ip = cp(37320),
+      Sp = cp(37487),
+      xp = cp(40415),
+      Lp = cp(40332),
+      Yp = cp(37368),
+      Dp = cp(40398),
+      Ap = cp(40233);
+    let Pp = (() => {
+      var pp, ip;
+      let cp, Pp, Wp, yp, Up, wp, vp, tp, Hp, dp, ep, jp, kp, mp = xp.b,
+        Rp = [],
+        qp = [],
+        Mp = [],
+        Cp = [],
+        Ep = [],
+        Xp = [],
+        lp = [],
+        Qp = [],
+        Jp = [],
+        Bp = [],
+        Np = [],
+        Tp = [],
+        fp = [],
+        bp = [],
+        hp = [],
+        ap = [],
+        np = [],
+        Fp = [],
+        gp = [],
+        Gp = [],
+        rp = [];
+      return pp = class extends mp {
+        get range() {
+          return this._range
         }
-        _setPosition(CC) {
-          this._position = CC
+        set range(pp) {
+          this._range = pp, this._inverseSquaredRange = 1 / (this.range * this.range)
         }
-        get position() {
-          return this._position
+        get intensityMode() {
+          return this._intensityMode
         }
-        set position(CC) {
-          this._setPosition(CC)
+        set intensityMode(pp) {
+          this._intensityMode = pp, this._computePhotometricScale()
         }
-        _setDirection(CC) {
-          this._direction = CC
+        get radius() {
+          return this._radius
         }
-        get direction() {
-          return this._direction
+        set radius(pp) {
+          this._radius = pp, this._computePhotometricScale()
         }
-        set direction(CC) {
-          this._setDirection(CC)
+        get renderPriority() {
+          return (0, Op.e)(this, ip, "f")
         }
-        get shadowMinZ() {
-          return this._shadowMinZ
+        set renderPriority(pp) {
+          (0, Op.f)(this, ip, pp, "f")
         }
-        set shadowMinZ(CC) {
-          this._shadowMinZ = CC, this.forceProjectionMatrixCompute()
+        get shadowEnabled() {
+          return this._shadowEnabled
         }
-        get shadowMaxZ() {
-          return this._shadowMaxZ
+        set shadowEnabled(pp) {
+          this._shadowEnabled !== pp && (this._shadowEnabled = pp, this._markMeshesAsLightDirty())
         }
-        set shadowMaxZ(CC) {
-          this._shadowMaxZ = CC, this.forceProjectionMatrixCompute()
+        get includedOnlyMeshes() {
+          return this._includedOnlyMeshes
         }
-        computeTransformedInformation() {
-          return !(!this.parent || !this.parent.getWorldMatrix) && (this.transformedPosition || (this.transformedPosition = bC.r.Zero()), bC.r.TransformCoordinatesToRef(this.position, this.parent.getWorldMatrix(), this.transformedPosition), this.direction && (this.transformedDirection || (this.transformedDirection = bC.r.Zero()), bC.r.TransformNormalToRef(this.direction, this.parent.getWorldMatrix(), this.transformedDirection)), !0)
+        set includedOnlyMeshes(pp) {
+          this._includedOnlyMeshes = pp, this._hookArrayForIncludedOnly(pp)
         }
-        getDepthScale() {
-          return 50
+        get excludedMeshes() {
+          return this._excludedMeshes
         }
-        getShadowDirection(CC) {
-          return this.transformedDirection ? this.transformedDirection : this.direction
+        set excludedMeshes(pp) {
+          this._excludedMeshes = pp, this._hookArrayForExcluded(pp)
         }
-        getAbsolutePosition() {
-          return this.transformedPosition ? this.transformedPosition : this.position
+        get excludeWithLayerMask() {
+          return this._excludeWithLayerMask
         }
-        setDirectionToTarget(CC) {
-          return this.direction = bC.r.Normalize(CC.subtract(this.position)), this.direction
+        set excludeWithLayerMask(pp) {
+          this._excludeWithLayerMask = pp, this._resyncMeshes()
         }
-        getRotation() {
-          this.direction.normalize();
-          const CC = bC.r.Cross(this.direction, fC.c.Y),
-            zC = bC.r.Cross(CC, this.direction);
-          return bC.r.RotationFromAxis(CC, zC, this.direction)
+        get includeOnlyWithLayerMask() {
+          return this._includeOnlyWithLayerMask
         }
-        needCube() {
-          return !1
+        set includeOnlyWithLayerMask(pp) {
+          this._includeOnlyWithLayerMask = pp, this._resyncMeshes()
         }
-        needProjectionMatrixCompute() {
-          return this._needProjectionMatrixCompute
+        get lightmapMode() {
+          return this._lightmapMode
         }
-        forceProjectionMatrixCompute() {
-          this._needProjectionMatrixCompute = !0
+        set lightmapMode(pp) {
+          this._lightmapMode !== pp && (this._lightmapMode = pp, this._markMeshesAsLightDirty())
         }
-        _initCache() {
-          super._initCache(), this._cache.position = bC.r.Zero()
+        getViewMatrix(pp) {
+          return null
         }
-        _isSynchronized() {
-          return !!this._cache.position.equals(this.position)
+        getProjectionMatrix(pp, ip) {
+          return null
         }
-        computeWorldMatrix(CC) {
-          return !CC && this.isSynchronized() ? (this._currentRenderId = this.Km().getRenderId(), this._worldMatrix) : (this._updateCache(), this._cache.position.Av(this.position), this._worldMatrix || (this._worldMatrix = bC.b.Identity()), bC.b.TranslationToRef(this.position.x, this.position.y, this.position.z, this._worldMatrix), this.parent && this.parent.getWorldMatrix && (this._worldMatrix.multiplyToRef(this.parent.getWorldMatrix(), this._worldMatrix), this._markSyncedWithParent()), this._worldMatrixDeterminantIsDirty = !0, this._worldMatrix)
+        constructor(cp, op, Ip) {
+          super(cp, op, !1), this.diffuse = ((0, Op.l)(this, Rp), (0, Op.l)(this, qp, new Sp.d(1, 1, 1))), this.specular = ((0, Op.l)(this, Mp), (0, Op.l)(this, Cp, new Sp.d(1, 1, 1))), this.falloffType = ((0, Op.l)(this, Ep), (0, Op.l)(this, Xp, pp.FALLOFF_DEFAULT)), this.intensity = ((0, Op.l)(this, lp), (0, Op.l)(this, Qp, 1)), this._range = ((0, Op.l)(this, Jp), Number.MAX_VALUE), this._inverseSquaredRange = 0, this._photometricScale = 1, this._intensityMode = pp.INTENSITYMODE_AUTOMATIC, this._radius = 1e-5, this._renderPriority = (0, Op.l)(this, Bp, void 0), ip.set(this, ((0, Op.l)(this, Np), (0, Op.l)(this, Tp, 0))), this._shadowEnabled = ((0, Op.l)(this, fp), (0, Op.l)(this, bp, !0)), this._includedOnlyMeshes = (0, Op.l)(this, hp), this._excludeWithLayerMask = (0, Op.l)(this, ap, 0), this._includeOnlyWithLayerMask = ((0, Op.l)(this, np), (0, Op.l)(this, Fp, 0)), this._lightmapMode = ((0, Op.l)(this, gp), (0, Op.l)(this, Gp, 0)), this._shadowGenerators = ((0, Op.l)(this, rp), null), this._excludedMeshesIds = new Array, this._includedOnlyMeshesIds = new Array, this._currentViewDepth = 0, this._clusteredContainer = null, this._isLight = !0, Ip || this.Gl().addLight(this), this._uniformBuffer = new Lp.b(this.Gl().gy(), void 0, void 0, cp), this._buildUniformLayout(), this.includedOnlyMeshes = [], this.excludedMeshes = [], Ip || this._resyncMeshes()
         }
-        getDepthMinZ(CC) {
-          return void 0 !== this.shadowMinZ ? this.shadowMinZ : CC?.minZ || 0
+        transferTexturesToEffect(pp, ip) {
+          return this
         }
-        getDepthMaxZ(CC) {
-          return void 0 !== this.shadowMaxZ ? this.shadowMaxZ : CC?.maxZ || 1e4
+        _bindLight(pp, ip, cp, Op) {
+          let op = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4];
+          const Ip = pp.toString();
+          let xp = !1;
+          if (this._uniformBuffer.bindToEffect(cp, "Light" + Ip), this._renderId !== ip.getRenderId() || this._lastUseSpecular !== Op || !this._uniformBuffer.useUbo) {
+            this._renderId = ip.getRenderId(), this._lastUseSpecular = Op;
+            const pp = this.getScaledIntensity();
+            this.transferToEffect(cp, Ip), this.diffuse.scaleToRef(pp, Sp.j.Color3[0]), this._uniformBuffer.updateColor4("vLightDiffuse", Sp.j.Color3[0], this.range, Ip), Op && (this.specular.scaleToRef(pp, Sp.j.Color3[1]), this._uniformBuffer.updateColor4("vLightSpecular", Sp.j.Color3[1], this.radius, Ip)), xp = !0
+          }
+          if (this.transferTexturesToEffect(cp, Ip), ip.shadowsEnabled && this.shadowEnabled && op) {
+            const pp = this.getShadowGenerator(ip.activeCamera) ?? this.getShadowGenerator();
+            pp && (pp.bindShadowLight(Ip, cp), xp = !0)
+          }
+          xp ? this._uniformBuffer.update() : this._uniformBuffer.bindUniformBuffer()
         }
-        setShadowProjectionMatrix(CC, zC, ZC) {
-          return this.customProjectionMatrixBuilder ? this.customProjectionMatrixBuilder(zC, ZC, CC) : this._setDefaultShadowProjectionMatrix(CC, zC, ZC), this
+        getClassName() {
+          return "Light"
+        }
+        toString(pp) {
+          let ip = "Name: " + this.name;
+          if (ip += ", type: " + ["Point", "Directional", "Spot", "Hemispheric", "Clustered"][this.getTypeID()], this.animations)
+            for (let cp = 0; cp < this.animations.length; cp++) ip += ", animation[0]: " + this.animations[cp].toString(pp);
+          return ip
         }
         _syncParentEnabledState() {
-          super._syncParentEnabledState(), this.parent && this.parent.getWorldMatrix || (this.transformedPosition = null, this.transformedDirection = null)
+          super._syncParentEnabledState(), this.uR() || this._resyncMeshes()
         }
-        getViewMatrix(CC) {
-          const zC = bC.j.Eg[0];
-          let ZC = this.position;
-          this.computeTransformedInformation() && (ZC = this.transformedPosition), bC.r.NormalizeToRef(this.getShadowDirection(CC), zC), 1 === Math.abs(bC.r.Dot(zC, bC.r.Up())) && (zC.z = 1e-13);
-          const QC = bC.j.Eg[1];
-          return ZC.addToRef(zC, QC), bC.b.LookAtLHToRef(ZC, QC, bC.r.Up(), this._viewMatrix), this._viewMatrix
+        eC(pp) {
+          super.eC(pp), this._resyncMeshes()
         }
-        getProjectionMatrix(CC, zC) {
-          return this.setShadowProjectionMatrix(this._projectionMatrix, CC ?? this._viewMatrix, zC ?? []), this._projectionMatrix
+        getShadowGenerator() {
+          let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+          return null === this._shadowGenerators ? null : this._shadowGenerators.get(pp) ?? null
         }
-      }, (() => {
-        const bC = "function" === typeof Symbol && Symbol.metadata ? Object.create(FC[Symbol.metadata] ?? null) : void 0;
-        zC = [(0, wC.J)()], ZC = [(0, wC.J)()], oC = [(0, wC.M)()], qC = [(0, wC.M)()], (0, QC.j)(CC, null, zC, {
+        getShadowGenerators() {
+          return this._shadowGenerators
+        }
+        getAbsolutePosition() {
+          return Ip.o.Zero()
+        }
+        canAffectMesh(pp) {
+          return !pp || !(this.includedOnlyMeshes && this.includedOnlyMeshes.length > 0 && -1 === this.includedOnlyMeshes.indexOf(pp)) && (!(this.excludedMeshes && this.excludedMeshes.length > 0 && -1 !== this.excludedMeshes.indexOf(pp)) && ((0 === this.includeOnlyWithLayerMask || 0 !== (this.includeOnlyWithLayerMask & pp.layerMask)) && !(0 !== this.excludeWithLayerMask && this.excludeWithLayerMask & pp.layerMask)))
+        }
+        dispose(pp) {
+          let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this._shadowGenerators) {
+            const pp = this._shadowGenerators.values();
+            for (let ip = pp.next(); !0 !== ip.done; ip = pp.next()) {
+              ip.value.dispose()
+            }
+            this._shadowGenerators = null
+          }
+          if (this.Gl().stopAnimation(this), this._parentContainer) {
+            const pp = this._parentContainer.lights.indexOf(this);
+            pp > -1 && this._parentContainer.lights.splice(pp, 1), this._parentContainer = null
+          }
+          for (const cp of this.Gl().meshes) cp._removeLightSource(this, !0);
+          this._uniformBuffer.dispose(), this.Gl().removeLight(this), super.dispose(pp, ip)
+        }
+        getTypeID() {
+          return 0
+        }
+        getScaledIntensity() {
+          return this._photometricScale * this.intensity
+        }
+        clone(ip) {
+          let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          const Op = pp.GetConstructorFromName(this.getTypeID(), ip, this.Gl());
+          if (!Op) return null;
+          const op = Ap.c.Clone(Op, this);
+          return ip && (op.name = ip), cp && (op.parent = cp), op.eC(this.isEnabled()), this.onClonedObservable.notifyObservers(op), op
+        }
+        serialize() {
+          const pp = Ap.c.Serialize(this);
+          if (pp.uniqueId = this.uniqueId, pp.type = this.getTypeID(), this.parent && this.parent._serializeAsParent(pp), this.excludedMeshes.length > 0) {
+            pp.excludedMeshesIds = [];
+            for (const ip of this.excludedMeshes) pp.excludedMeshesIds.push(ip.id)
+          }
+          if (this.includedOnlyMeshes.length > 0) {
+            pp.includedOnlyMeshesIds = [];
+            for (const ip of this.includedOnlyMeshes) pp.includedOnlyMeshesIds.push(ip.id)
+          }
+          return Ap.c.AppendSerializedAnimations(this, pp), pp.By = this.serializeAnimationRanges(), pp.isEnabled = this.isEnabled(), pp
+        }
+        static GetConstructorFromName(pp, ip, cp) {
+          const Op = xp.b.Construct("Light_Type_" + pp, ip, cp);
+          return Op || null
+        }
+        static Parse(ip, cp) {
+          let Op = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "";
+          const op = pp.GetConstructorFromName(ip.type, ip.name, cp);
+          if (!op) return null;
+          const Ip = Ap.c.Parse(op, ip, cp, Op);
+          if (ip.excludedMeshesIds && (Ip._excludedMeshesIds = ip.excludedMeshesIds), ip.includedOnlyMeshesIds && (Ip._includedOnlyMeshesIds = ip.includedOnlyMeshesIds), void 0 !== ip.parentId && (Ip._waitingParentId = ip.parentId), void 0 !== ip.parentInstanceIndex && (Ip._waitingParentInstanceIndex = ip.parentInstanceIndex), void 0 !== ip.falloffType && (Ip.falloffType = ip.falloffType), void 0 !== ip.lightmapMode && (Ip.lightmapMode = ip.lightmapMode), ip.animations) {
+            for (let pp = 0; pp < ip.animations.length; pp++) {
+              const cp = ip.animations[pp],
+                Op = (0, Yp.d)("BABYLON.Animation");
+              Op && Ip.animations.push(Op.Parse(cp))
+            }
+            xp.b.ParseAnimationRanges(Ip, ip, cp)
+          }
+          return ip.autoAnimate && cp.beginAnimation(Ip, ip.autoAnimateFrom, ip.autoAnimateTo, ip.autoAnimateLoop, ip.autoAnimateSpeed || 1), void 0 !== ip.isEnabled && Ip.eC(ip.isEnabled), Ip._onParsed(ip, cp, Op), Ip
+        }
+        _onParsed(pp, ip) {}
+        _hookArrayForExcluded(pp) {
+          var ip = this;
+          const cp = pp.push;
+          pp.push = function() {
+            for (var Op = arguments.length, op = new Array(Op), Ip = 0; Ip < Op; Ip++) op[Ip] = arguments[Ip];
+            const Sp = cp.apply(pp, op);
+            if (ip._clusteredContainer) return Sp;
+            for (const pp of op) pp._resyncLightSource(ip);
+            return Sp
+          };
+          const Op = pp.splice;
+          pp.splice = (ip, cp) => {
+            const op = Op.call(pp, ip, cp ?? pp.length);
+            if (this._clusteredContainer) return op;
+            for (const pp of op) pp._resyncLightSource(this);
+            return op
+          }, this._resyncMeshes()
+        }
+        _hookArrayForIncludedOnly(pp) {
+          var ip = this;
+          const cp = pp.push;
+          pp.push = function() {
+            for (var Op = arguments.length, op = new Array(Op), Ip = 0; Ip < Op; Ip++) op[Ip] = arguments[Ip];
+            const Sp = cp.apply(pp, op);
+            return ip._resyncMeshes(), Sp
+          };
+          const Op = pp.splice;
+          pp.splice = (ip, cp) => {
+            const op = Op.call(pp, ip, cp ?? pp.length);
+            return this._resyncMeshes(), op
+          }, this._resyncMeshes()
+        }
+        _resyncMeshes() {
+          if (!this._clusteredContainer)
+            for (const pp of this.Gl().meshes) pp._resyncLightSource(this)
+        }
+        _markMeshesAsLightDirty() {
+          for (const pp of this.Gl().meshes) - 1 !== pp.lightSources.indexOf(this) && pp._markSubMeshesAsLightDirty()
+        }
+        _computePhotometricScale() {
+          this._photometricScale = this._getPhotometricScale(), this.Gl().resetCachedMaterial()
+        }
+        _getPhotometricScale() {
+          let ip = 0;
+          const cp = this.getTypeID();
+          let Op = this.intensityMode;
+          switch (Op === pp.INTENSITYMODE_AUTOMATIC && (Op = cp === pp.LIGHTTYPEID_DIRECTIONALLIGHT ? pp.INTENSITYMODE_ILLUMINANCE : pp.INTENSITYMODE_LUMINOUSINTENSITY), cp) {
+            case pp.LIGHTTYPEID_POINTLIGHT:
+            case pp.LIGHTTYPEID_SPOTLIGHT:
+              switch (Op) {
+                case pp.INTENSITYMODE_LUMINOUSPOWER:
+                  ip = 1 / (4 * Math.PI);
+                  break;
+                case pp.INTENSITYMODE_LUMINOUSINTENSITY:
+                  ip = 1;
+                  break;
+                case pp.INTENSITYMODE_LUMINANCE:
+                  ip = this.radius * this.radius
+              }
+              break;
+            case pp.LIGHTTYPEID_DIRECTIONALLIGHT:
+              switch (Op) {
+                case pp.INTENSITYMODE_ILLUMINANCE:
+                  ip = 1;
+                  break;
+                case pp.INTENSITYMODE_LUMINANCE: {
+                  let pp = this.radius;
+                  pp = Math.max(pp, .001);
+                  ip = 2 * Math.PI * (1 - Math.cos(pp));
+                  break
+                }
+              }
+              break;
+            case pp.LIGHTTYPEID_HEMISPHERICLIGHT:
+            case pp.LIGHTTYPEID_RECT_AREALIGHT:
+              ip = 1
+          }
+          return ip
+        }
+        _reorderLightsInScene() {
+          const pp = this.Gl();
+          0 != this._renderPriority && (pp.requireLightSorting = !0), this.Gl().sortLightsByPriority()
+        }
+        areLightTexturesReady() {
+          return !0
+        }
+        _isReady() {
+          return !0
+        }
+      }, ip = new WeakMap, (() => {
+        const ip = "function" === typeof Symbol && Symbol.metadata ? Object.create(mp[Symbol.metadata] ?? null) : void 0;
+        cp = [(0, op.n)()], Pp = [(0, op.n)()], Wp = [(0, op.K)()], yp = [(0, op.K)()], Up = [(0, op.K)()], wp = [(0, op.K)()], vp = [(0, op.K)()], tp = [(0, op.K)()], Hp = [(0, op.e)("_reorderLightsInScene")], dp = [(0, op.K)("shadowEnabled")], ep = [(0, op.K)("excludeWithLayerMask")], jp = [(0, op.K)("includeOnlyWithLayerMask")], kp = [(0, op.K)("lightmapMode")], (0, Op.j)(pp, null, Up, {
           kind: "getter",
-          name: "position",
+          name: "range",
           static: !1,
           private: !1,
           access: {
-            has: CC => "position" in CC,
-            get: CC => CC.position
+            has: pp => "range" in pp,
+            get: pp => pp.range
           },
-          metadata: bC
-        }, null, WC), (0, QC.j)(CC, null, ZC, {
+          metadata: ip
+        }, null, Rp), (0, Op.j)(pp, null, wp, {
           kind: "getter",
-          name: "direction",
+          name: "intensityMode",
           static: !1,
           private: !1,
           access: {
-            has: CC => "direction" in CC,
-            get: CC => CC.direction
+            has: pp => "intensityMode" in pp,
+            get: pp => pp.intensityMode
           },
-          metadata: bC
-        }, null, WC), (0, QC.j)(CC, null, oC, {
+          metadata: ip
+        }, null, Rp), (0, Op.j)(pp, null, vp, {
           kind: "getter",
-          name: "shadowMinZ",
+          name: "radius",
           static: !1,
           private: !1,
           access: {
-            has: CC => "shadowMinZ" in CC,
-            get: CC => CC.shadowMinZ
+            has: pp => "radius" in pp,
+            get: pp => pp.radius
           },
-          metadata: bC
-        }, null, WC), (0, QC.j)(CC, null, qC, {
-          kind: "getter",
-          name: "shadowMaxZ",
+          metadata: ip
+        }, null, Rp), (0, Op.j)(pp, null, Hp, {
+          kind: "accessor",
+          name: "renderPriority",
           static: !1,
           private: !1,
           access: {
-            has: CC => "shadowMaxZ" in CC,
-            get: CC => CC.shadowMaxZ
+            has: pp => "renderPriority" in pp,
+            get: pp => pp.renderPriority,
+            set: (pp, ip) => {
+              pp.renderPriority = ip
+            }
           },
-          metadata: bC
-        }, null, WC), bC && Object.defineProperty(CC, Symbol.metadata, {
+          metadata: ip
+        }, Tp, fp), (0, Op.j)(null, null, cp, {
+          kind: "field",
+          name: "diffuse",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "diffuse" in pp,
+            get: pp => pp.diffuse,
+            set: (pp, ip) => {
+              pp.diffuse = ip
+            }
+          },
+          metadata: ip
+        }, qp, Mp), (0, Op.j)(null, null, Pp, {
+          kind: "field",
+          name: "specular",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "specular" in pp,
+            get: pp => pp.specular,
+            set: (pp, ip) => {
+              pp.specular = ip
+            }
+          },
+          metadata: ip
+        }, Cp, Ep), (0, Op.j)(null, null, Wp, {
+          kind: "field",
+          name: "falloffType",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "falloffType" in pp,
+            get: pp => pp.falloffType,
+            set: (pp, ip) => {
+              pp.falloffType = ip
+            }
+          },
+          metadata: ip
+        }, Xp, lp), (0, Op.j)(null, null, yp, {
+          kind: "field",
+          name: "intensity",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "intensity" in pp,
+            get: pp => pp.intensity,
+            set: (pp, ip) => {
+              pp.intensity = ip
+            }
+          },
+          metadata: ip
+        }, Qp, Jp), (0, Op.j)(null, null, tp, {
+          kind: "field",
+          name: "_renderPriority",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "_renderPriority" in pp,
+            get: pp => pp._renderPriority,
+            set: (pp, ip) => {
+              pp._renderPriority = ip
+            }
+          },
+          metadata: ip
+        }, Bp, Np), (0, Op.j)(null, null, dp, {
+          kind: "field",
+          name: "_shadowEnabled",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "_shadowEnabled" in pp,
+            get: pp => pp._shadowEnabled,
+            set: (pp, ip) => {
+              pp._shadowEnabled = ip
+            }
+          },
+          metadata: ip
+        }, bp, hp), (0, Op.j)(null, null, ep, {
+          kind: "field",
+          name: "_excludeWithLayerMask",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "_excludeWithLayerMask" in pp,
+            get: pp => pp._excludeWithLayerMask,
+            set: (pp, ip) => {
+              pp._excludeWithLayerMask = ip
+            }
+          },
+          metadata: ip
+        }, ap, np), (0, Op.j)(null, null, jp, {
+          kind: "field",
+          name: "_includeOnlyWithLayerMask",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "_includeOnlyWithLayerMask" in pp,
+            get: pp => pp._includeOnlyWithLayerMask,
+            set: (pp, ip) => {
+              pp._includeOnlyWithLayerMask = ip
+            }
+          },
+          metadata: ip
+        }, Fp, gp), (0, Op.j)(null, null, kp, {
+          kind: "field",
+          name: "_lightmapMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "_lightmapMode" in pp,
+            get: pp => pp._lightmapMode,
+            set: (pp, ip) => {
+              pp._lightmapMode = ip
+            }
+          },
+          metadata: ip
+        }, Gp, rp), ip && Object.defineProperty(pp, Symbol.metadata, {
           enumerable: !0,
           configurable: !0,
           writable: !0,
-          value: bC
+          value: ip
         })
-      })(), CC
+      })(), pp.FALLOFF_DEFAULT = Dp.b.FALLOFF_DEFAULT, pp.FALLOFF_PHYSICAL = Dp.b.FALLOFF_PHYSICAL, pp.FALLOFF_GLTF = Dp.b.FALLOFF_GLTF, pp.FALLOFF_STANDARD = Dp.b.FALLOFF_STANDARD, pp.LIGHTMAP_DEFAULT = Dp.b.LIGHTMAP_DEFAULT, pp.LIGHTMAP_SPECULAR = Dp.b.LIGHTMAP_SPECULAR, pp.LIGHTMAP_SHADOWSONLY = Dp.b.LIGHTMAP_SHADOWSONLY, pp.INTENSITYMODE_AUTOMATIC = Dp.b.INTENSITYMODE_AUTOMATIC, pp.INTENSITYMODE_LUMINOUSPOWER = Dp.b.INTENSITYMODE_LUMINOUSPOWER, pp.INTENSITYMODE_LUMINOUSINTENSITY = Dp.b.INTENSITYMODE_LUMINOUSINTENSITY, pp.INTENSITYMODE_ILLUMINANCE = Dp.b.INTENSITYMODE_ILLUMINANCE, pp.INTENSITYMODE_LUMINANCE = Dp.b.INTENSITYMODE_LUMINANCE, pp.LIGHTTYPEID_POINTLIGHT = Dp.b.LIGHTTYPEID_POINTLIGHT, pp.LIGHTTYPEID_DIRECTIONALLIGHT = Dp.b.LIGHTTYPEID_DIRECTIONALLIGHT, pp.LIGHTTYPEID_SPOTLIGHT = Dp.b.LIGHTTYPEID_SPOTLIGHT, pp.LIGHTTYPEID_HEMISPHERICLIGHT = Dp.b.LIGHTTYPEID_HEMISPHERICLIGHT, pp.LIGHTTYPEID_RECT_AREALIGHT = Dp.b.LIGHTTYPEID_RECT_AREALIGHT, pp
     })()
   },
-  41396: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => wC
+  40415: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Ap
     });
-    var QC = ZC(40303);
-    class wC extends QC.h {
-      constructor(CC, zC, ZC, wC, bC) {
-        let nC = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
-          fC = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
-          oC = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3,
-          qC = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
-          FC = arguments.length > 9 ? arguments[9] : void 0,
-          WC = arguments.length > 10 ? arguments[10] : void 0,
-          NC = arguments.length > 11 ? arguments[11] : void 0,
-          MC = arguments.length > 12 ? arguments[12] : void 0;
-        super(null, bC, !nC, fC, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, FC), this.format = wC, this._engine && (this._engine._caps.textureFloatLinearFiltering || 1 !== qC || (oC = 1), this._engine._caps.textureHalfFloatLinearFiltering || 2 !== qC || (oC = 1), this._texture = this._engine.createRawTexture(CC, zC, ZC, wC, nC, fC, oC, null, qC, FC ?? 0, WC ?? !1, MC), this.wrapU = QC.h.CLAMP_ADDRESSMODE, this.wrapV = QC.h.CLAMP_ADDRESSMODE, this._waitingForData = !!NC && !CC)
-      }
-      update(CC) {
-        this.updateMipLevel(CC, 0)
-      }
-      updateMipLevel(CC, zC) {
-        this._getEngine().updateRawTexture(this._texture, CC, this._texture.format, this._texture.invertY, null, this._texture.type, this._texture._useSRGBBuffer, zC), this._waitingForData = !1
-      }
-      clone() {
-        if (!this._texture) return super.clone();
-        const CC = new wC(null, this.getSize().width, this.getSize().height, this.format, this.Km(), this._texture.generateMipMaps, this._invertY, this.samplingMode, this._texture.type, this._texture._creationFlags, this._useSRGBBuffer);
-        return CC._texture = this._texture, this._texture.incrementReferences(), CC
-      }
-      isReady() {
-        return super.isReady() && !this._waitingForData
-      }
-      static CreateLuminanceTexture(CC, zC, ZC, QC) {
-        return new wC(CC, zC, ZC, 1, QC, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
-      }
-      static CreateLuminanceAlphaTexture(CC, zC, ZC, QC) {
-        return new wC(CC, zC, ZC, 2, QC, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
-      }
-      static CreateAlphaTexture(CC, zC, ZC, QC) {
-        return new wC(CC, zC, ZC, 0, QC, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
-      }
-      static CreateRGBTexture(CC, zC, ZC, QC) {
-        return new wC(CC, zC, ZC, 4, QC, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9])
-      }
-      static CreateRGBATexture(CC, zC, ZC, QC) {
-        return new wC(CC, zC, ZC, 5, QC, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9], arguments.length > 10 && void 0 !== arguments[10] && arguments[10])
-      }
-      static CreateRGBAStorageTexture(CC, zC, ZC, QC) {
-        return new wC(CC, zC, ZC, 5, QC, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, 1, arguments.length > 8 && void 0 !== arguments[8] && arguments[8])
-      }
-      static CreateRTexture(CC, zC, ZC, bC) {
-        let nC = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          fC = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-          oC = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : QC.h.TRILINEAR_SAMPLINGMODE;
-        return new wC(CC, zC, ZC, 6, bC, nC, fC, oC, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1)
-      }
-      static CreateRStorageTexture(CC, zC, ZC, bC) {
-        let nC = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
-          fC = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
-          oC = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : QC.h.TRILINEAR_SAMPLINGMODE;
-        return new wC(CC, zC, ZC, 6, bC, nC, fC, oC, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1, 1)
+    var Op = cp(40203),
+      op = cp(37320),
+      Ip = cp(40210),
+      Sp = cp(37349),
+      xp = cp(37345),
+      Lp = cp(40096),
+      Yp = cp(40233);
+    class Dp {
+      constructor() {
+        this._doNotSerialize = !1, this._isDisposed = !1, this._sceneRootNodesIndex = -1, this._isEnabled = !0, this._isParentEnabled = !0, this._isReady = !0, this._onEnabledStateChangedObservable = new Sp.d, this._onEffectiveEnabledStateChangedObservable = null, this._onClonedObservable = new Sp.d, this._inheritVisibility = !1, this._isVisible = !0
       }
     }
-  },
-  41438: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => QC.b
-    });
-    var QC = ZC(40265);
-    (0, QC.e)()
-  },
-  41392: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => QC.c
-    });
-    var QC = ZC(40283);
-    (0, QC.e)()
-  },
-  40283: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => NC,
-      e: () => SC
-    });
-    var QC, wC, bC = ZC(37142),
-      nC = ZC(39959),
-      fC = ZC(40224),
-      oC = ZC(40292),
-      qC = ZC(40110),
-      FC = ZC(40297),
-      WC = ZC(39694);
-    class NC extends fC.b {
-      _isShaderMaterial(CC) {
-        return !!CC && "ShaderMaterial" === CC.getClassName()
-      }
-      constructor(CC) {
-        let zC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-          QC = arguments.length > 5 ? arguments[5] : void 0,
-          wC = arguments.length > 6 ? arguments[6] : void 0,
-          fC = arguments.length > 7 ? arguments[7] : void 0;
-        super(CC, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, zC, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = QC, this.useVertexAlpha = wC, this.color = new bC.e(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, zC && (this.color = zC.color.clone(), this.alpha = zC.alpha, this.useVertexColor = zC.useVertexColor, this.useVertexAlpha = zC.useVertexAlpha), this.intersectionThreshold = .1;
-        const oC = {
-          attributes: [nC.k.PositionKind],
-          uniforms: ["world", "viewProjection"],
-          needAlphaBlending: !0,
-          defines: [],
-          useClipPlane: null,
-          shaderLanguage: 0
-        };
-        if (this.useVertexAlpha ? oC.defines.push("#define VERTEXALPHA") : oC.needAlphaBlending = !1, this.useVertexColor ? (oC.defines.push("#define VERTEXCOLOR"), oC.attributes.push(nC.k.ColorKind)) : (oC.uniforms.push("color"), this._color4 = new bC.g), fC) this.material = fC;
-        else {
-          this.Km().mg().isWebGPU && !NC.ForceGLSL && (this._shaderLanguage = 1), oC.shaderLanguage = this._shaderLanguage, oC.extraInitializationsAsync = async () => {
-            1 === this._shaderLanguage ? await Promise.all([ZC.e(344).then((() => ZC(42355))), ZC.e(350).then((() => ZC(42359)))]) : await Promise.all([ZC.e(326).then((() => ZC(42363))), ZC.e(332).then((() => ZC(42370)))])
-          };
-          const CC = new FC.r("colorShader", this.Km(), "color", oC, !1);
-          CC.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(CC)
+    let Ap = (() => {
+      var pp;
+      let ip, cp, Ap, Pp, Wp, yp = [],
+        Up = [],
+        wp = [],
+        vp = [],
+        tp = [],
+        Hp = [],
+        dp = [],
+        ep = [],
+        jp = [],
+        kp = [];
+      return pp = class {
+        static AddNodeConstructor(pp, ip) {
+          this._NodeConstructors[pp] = ip
         }
-      }
-      getClassName() {
-        return "LinesMesh"
-      }
-      get material() {
-        return this._internalAbstractMeshDataInfo._material
-      }
-      set material(CC) {
-        const zC = this.material;
-        if (zC === CC) return;
-        const ZC = zC && this._ownsMaterial;
-        this._ownsMaterial = !1, this._setInternalMaterial(CC), ZC && zC?.dispose()
-      }
-      _setInternalMaterial(CC) {
-        this._setMaterial(CC), this.material && (this.material.fillMode = qC.d.LineListDrawMode, this.material.disableLighting = !0)
-      }
-      get checkCollisions() {
-        return !1
-      }
-      set checkCollisions(CC) {}
-      _bind(CC, zC) {
-        if (!this._geometry) return this;
-        const ZC = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
-        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(zC, ZC) : this._geometry._bind(zC, ZC, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
-          const {
-            r: CC,
-            g: zC,
-            b: ZC
-          } = this.color;
-          this._color4.set(CC, zC, ZC, this.alpha), this.material.setColor4("color", this._color4)
+        static Construct(pp, ip, cp, Op) {
+          const op = this._NodeConstructors[pp];
+          return op ? op(ip, cp, Op) : null
         }
-        return this
-      }
-      _draw(CC, zC, ZC) {
-        if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
-        const QC = this.Km().mg();
-        return this._unIndexed ? QC.drawArraysType(qC.d.LineListDrawMode, CC.verticesStart, CC.verticesCount, ZC) : QC.drawElementsType(qC.d.LineListDrawMode, CC.indexStart, CC.indexCount, ZC), this
-      }
-      dispose(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || zC) && this.material?.dispose(!1, !1, !0), super.dispose(CC)
-      }
-      clone(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          ZC = arguments.length > 2 ? arguments[2] : void 0;
-        if (zC && void 0 === zC._addToSceneRootNodes) {
-          const ZC = zC;
-          return ZC.source = this, new NC(CC, this.Km(), ZC.parent, ZC.source, ZC.doNotCloneChildren)
+        set accessibilityTag(pp) {
+          this._accessibilityTag = pp, this.onAccessibilityTagChangedObservable.notifyObservers(pp)
         }
-        return new NC(CC, this.Km(), zC, this, ZC)
-      }
-      createInstance(CC) {
-        const zC = new MC(CC, this);
-        if (this.ZE) {
-          zC.ZE = {};
-          for (const CC in this.ZE) zC.ZE[CC] = this.ZE[CC]
+        get accessibilityTag() {
+          return this._accessibilityTag
         }
-        return zC
-      }
-      serialize(CC) {
-        super.serialize(CC), CC.color = this.color.VZC(), CC.alpha = this.alpha
-      }
-      static Parse(CC, zC) {
-        const ZC = new NC(CC.name, zC);
-        return ZC.color = bC.e.FromArray(CC.color), ZC.alpha = CC.alpha, ZC
-      }
-    }
-    NC.ForceGLSL = !1;
-    class MC extends oC.c {
-      constructor(CC, zC) {
-        super(CC, zC), this.intersectionThreshold = zC.intersectionThreshold
-      }
-      getClassName() {
-        return "InstancedLinesMesh"
-      }
-    }
-    let gC = !1;
-
-    function SC() {
-      gC || (gC = !0, fC.b._LinesMeshParser = (CC, zC) => NC.Parse(CC, zC))
-    }(QC = NC.prototype).enableEdgesRendering ?? (QC.enableEdgesRendering = (0, WC.f)("LinesMesh", "enableEdgesRendering")), (wC = MC.prototype).enableEdgesRendering ?? (wC.enableEdgesRendering = (0, WC.f)("InstancedLinesMesh", "enableEdgesRendering"))
+        get doNotSerialize() {
+          return !!this._nodeDataStorage._doNotSerialize || !!this._parentNode && this._parentNode.doNotSerialize
+        }
+        set doNotSerialize(pp) {
+          this._nodeDataStorage._doNotSerialize = pp
+        }
+        uR() {
+          return this._nodeDataStorage._isDisposed
+        }
+        set parent(pp) {
+          if (this._parentNode === pp) return;
+          const ip = this._parentNode;
+          if (this._parentNode && void 0 !== this._parentNode._children && null !== this._parentNode._children) {
+            const ip = this._parentNode._children.indexOf(this); - 1 !== ip && this._parentNode._children.splice(ip, 1), pp || this._nodeDataStorage._isDisposed || this._addToSceneRootNodes()
+          }
+          this._parentNode = pp, this._isDirty = !0, this._parentNode && (void 0 !== this._parentNode._children && null !== this._parentNode._children || (this._parentNode._children = new Array), this._parentNode._children.push(this), ip || this._removeFromSceneRootNodes()), this._syncParentEnabledState()
+        }
+        get parent() {
+          return this._parentNode
+        }
+        get inheritVisibility() {
+          return this._nodeDataStorage._inheritVisibility
+        }
+        set inheritVisibility(pp) {
+          this._nodeDataStorage._inheritVisibility = pp
+        }
+        get isVisible() {
+          return !(this.inheritVisibility && this._parentNode && !this._parentNode.isVisible) && this._nodeDataStorage._isVisible
+        }
+        set isVisible(pp) {
+          this._nodeDataStorage._isVisible = pp
+        }
+        _serializeAsParent(pp) {
+          pp.parentId = this.uniqueId
+        }
+        _addToSceneRootNodes() {
+          -1 === this._nodeDataStorage._sceneRootNodesIndex && (this._nodeDataStorage._sceneRootNodesIndex = this._scene.rootNodes.length, this._scene.rootNodes.push(this))
+        }
+        _removeFromSceneRootNodes() {
+          if (-1 !== this._nodeDataStorage._sceneRootNodesIndex) {
+            const pp = this._scene.rootNodes,
+              ip = pp.length - 1;
+            pp[this._nodeDataStorage._sceneRootNodesIndex] = pp[ip], pp[this._nodeDataStorage._sceneRootNodesIndex]._nodeDataStorage._sceneRootNodesIndex = this._nodeDataStorage._sceneRootNodesIndex, this._scene.rootNodes.pop(), this._nodeDataStorage._sceneRootNodesIndex = -1
+          }
+        }
+        get animationPropertiesOverride() {
+          return this._animationPropertiesOverride ? this._animationPropertiesOverride : this._scene.animationPropertiesOverride
+        }
+        set animationPropertiesOverride(pp) {
+          this._animationPropertiesOverride = pp
+        }
+        getClassName() {
+          return "Node"
+        }
+        set onDispose(pp) {
+          this._onDisposeObserver && this.Kl.remove(this._onDisposeObserver), this._onDisposeObserver = this.Kl.add(pp)
+        }
+        get onEnabledStateChangedObservable() {
+          return this._nodeDataStorage._onEnabledStateChangedObservable
+        }
+        get onEffectiveEnabledStateChangedObservable() {
+          var pp;
+          return (pp = this._nodeDataStorage)._onEffectiveEnabledStateChangedObservable ?? (pp._onEffectiveEnabledStateChangedObservable = new Sp.d)
+        }
+        get onClonedObservable() {
+          return this._nodeDataStorage._onClonedObservable
+        }
+        constructor(pp) {
+          let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+            cp = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2];
+          this._isDirty = !1, this._nodeDataStorage = new Dp, this.name = (0, Op.l)(this, yp, void 0), this.id = ((0, Op.l)(this, Up), (0, Op.l)(this, wp, void 0)), this.uniqueId = ((0, Op.l)(this, vp), (0, Op.l)(this, tp, void 0)), this.state = ((0, Op.l)(this, Hp), (0, Op.l)(this, dp, "")), this.metadata = ((0, Op.l)(this, ep), (0, Op.l)(this, jp, null)), this._internalMetadata = (0, Op.l)(this, kp), this.reservedDataStore = null, this._accessibilityTag = null, this.onAccessibilityTagChangedObservable = new Sp.d, this._parentContainer = null, this.animations = [], this._ranges = {}, this.onReady = null, this._currentRenderId = -1, this._parentUpdateId = -1, this._childUpdateId = -1, this._waitingParentId = null, this._waitingParentInstanceIndex = null, this._waitingParsedUniqueId = null, this._cache = {}, this._parentNode = null, this._children = null, this._worldMatrix = op.b.Identity(), this._worldMatrixDeterminant = 0, this._worldMatrixDeterminantIsDirty = !0, this._animationPropertiesOverride = null, this._isNode = !0, this.Kl = new Sp.d, this._onDisposeObserver = null, this._behaviors = new Array, this.name = pp, this.id = pp, this._scene = ip || xp.e.LastCreatedScene, this.uniqueId = this._scene.getUniqueId(), this._initCache(), cp && this._addToSceneRootNodes()
+        }
+        Gl() {
+          return this._scene
+        }
+        gy() {
+          return this._scene.gy()
+        }
+        addBehavior(pp) {
+          let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          return -1 !== this._behaviors.indexOf(pp) || (pp.init(), this._scene.isLoading && !ip ? this._scene.onDataLoadedObservable.addOnce((() => {
+            this._behaviors.includes(pp) && pp.attach(this)
+          })) : pp.attach(this), this._behaviors.push(pp)), this
+        }
+        removeBehavior(pp) {
+          const ip = this._behaviors.indexOf(pp);
+          return -1 === ip || (this._behaviors.splice(ip, 1), pp.detach()), this
+        }
+        get behaviors() {
+          return this._behaviors
+        }
+        getBehaviorByName(pp) {
+          for (const ip of this._behaviors)
+            if (ip.name === pp) return ip;
+          return null
+        }
+        getWorldMatrix() {
+          return this._currentRenderId !== this._scene.getRenderId() && this.computeWorldMatrix(), this._worldMatrix
+        }
+        _getWorldMatrixDeterminant() {
+          return this._worldMatrixDeterminantIsDirty && (this._worldMatrixDeterminantIsDirty = !1, this._worldMatrixDeterminant = this._worldMatrix.determinant()), this._worldMatrixDeterminant
+        }
+        get worldMatrixFromCache() {
+          return this._worldMatrix
+        }
+        _initCache() {
+          this._cache = {}
+        }
+        updateCache(pp) {
+          !pp && this.isSynchronized() || this._updateCache()
+        }
+        _getActionManagerForTrigger(pp) {
+          return this.parent ? this.parent._getActionManagerForTrigger(pp, !1) : null
+        }
+        _updateCache(pp) {}
+        _isSynchronized() {
+          return !0
+        }
+        _markSyncedWithParent() {
+          this._parentNode && (this._parentUpdateId = this._parentNode._childUpdateId)
+        }
+        isSynchronizedWithParent() {
+          return !this._parentNode || !this._parentNode._isDirty && this._parentUpdateId === this._parentNode._childUpdateId && this._parentNode.isSynchronized()
+        }
+        isSynchronized() {
+          return !(this._parentNode && !this.isSynchronizedWithParent()) && this._isSynchronized()
+        }
+        isReady() {
+          return this._nodeDataStorage._isReady
+        }
+        ocp(pp) {
+          return this._currentRenderId = Number.MAX_VALUE, this._isDirty = !0, this
+        }
+        isEnabled() {
+          return !1 === (!(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0]) ? this._nodeDataStorage._isEnabled : !!this._nodeDataStorage._isEnabled && this._nodeDataStorage._isParentEnabled
+        }
+        _hasEffectiveEnabledStateObservers() {
+          const pp = this._nodeDataStorage._onEffectiveEnabledStateChangedObservable;
+          return !!pp && pp.hasObservers()
+        }
+        _syncParentEnabledState() {
+          const pp = this._hasEffectiveEnabledStateObservers(),
+            ip = pp ? this.isEnabled() : null;
+          if (this._nodeDataStorage._isParentEnabled = !this._parentNode || this._parentNode.isEnabled(), this._children)
+            for (const cp of this._children) cp._syncParentEnabledState();
+          if (pp) {
+            const pp = this.isEnabled();
+            pp !== ip && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(pp)
+          }
+        }
+        eC(pp) {
+          if (this._nodeDataStorage._isEnabled === pp) return;
+          const ip = this._hasEffectiveEnabledStateObservers(),
+            cp = ip ? this.isEnabled() : null;
+          if (this._nodeDataStorage._isEnabled = pp, this._syncParentEnabledState(), this._nodeDataStorage._onEnabledStateChangedObservable.notifyObservers(pp), ip) {
+            const pp = this.isEnabled();
+            pp !== cp && this._nodeDataStorage._onEffectiveEnabledStateChangedObservable.notifyObservers(pp)
+          }
+        }
+        isDescendantOf(pp) {
+          return !!this.parent && (this.parent === pp || this.parent.isDescendantOf(pp))
+        }
+        _getDescendants(pp) {
+          let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            cp = arguments.length > 2 ? arguments[2] : void 0;
+          if (this._children)
+            for (let Op = 0; Op < this._children.length; Op++) {
+              const op = this._children[Op];
+              cp && !cp(op) || pp.push(op), ip || op._getDescendants(pp, !1, cp)
+            }
+        }
+        getDescendants(pp, ip) {
+          const cp = [];
+          return this._getDescendants(cp, pp, ip), cp
+        }
+        getChildMeshes(pp, ip) {
+          const cp = [];
+          return this._getDescendants(cp, pp, (pp => (!ip || ip(pp)) && void 0 !== pp.cullingStrategy)), cp
+        }
+        getChildren(pp) {
+          let ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          return this.getDescendants(ip, pp)
+        }
+        _setReady(pp) {
+          pp !== this._nodeDataStorage._isReady && (pp ? (this.onReady && this.onReady(this), this._nodeDataStorage._isReady = !0) : this._nodeDataStorage._isReady = !1)
+        }
+        getAnimationByName(pp) {
+          for (let ip = 0; ip < this.animations.length; ip++) {
+            const cp = this.animations[ip];
+            if (cp.name === pp) return cp
+          }
+          return null
+        }
+        createAnimationRange(ip, cp, Op) {
+          if (!this._ranges[ip]) {
+            this._ranges[ip] = pp._AnimationRangeFactory(ip, cp, Op);
+            for (let pp = 0, op = this.animations.length; pp < op; pp++) this.animations[pp] && this.animations[pp].createRange(ip, cp, Op)
+          }
+        }
+        deleteAnimationRange(pp) {
+          let ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          for (let cp = 0, Op = this.animations.length; cp < Op; cp++) this.animations[cp] && this.animations[cp].deleteRange(pp, ip);
+          this._ranges[pp] = null
+        }
+        getAnimationRange(pp) {
+          return this._ranges[pp] || null
+        }
+        clone(ip, cp, Op) {
+          const op = Yp.c.Clone((() => new pp(ip, this.Gl())), this);
+          if (cp && (op.parent = cp), !Op) {
+            const pp = this.getDescendants(!0);
+            for (let cp = 0; cp < pp.length; cp++) {
+              const Op = pp[cp];
+              Op.clone(ip + "." + Op.name, op)
+            }
+          }
+          return op
+        }
+        getAnimationRanges() {
+          const pp = [];
+          let ip;
+          for (ip in this._ranges) pp.push(this._ranges[ip]);
+          return pp
+        }
+        beginAnimation(pp, ip, cp, Op) {
+          const op = this.getAnimationRange(pp);
+          return op ? this._scene.beginAnimation(this, op.from, op.to, ip, cp, Op) : null
+        }
+        serializeAnimationRanges() {
+          const pp = [];
+          for (const ip in this._ranges) {
+            const cp = this._ranges[ip];
+            if (!cp) continue;
+            const Op = {};
+            Op.name = ip, Op.from = cp.from, Op.to = cp.to, pp.push(Op)
+          }
+          return pp
+        }
+        computeWorldMatrix(pp) {
+          return this._worldMatrix || (this._worldMatrix = op.b.Identity()), this._worldMatrix
+        }
+        dispose(pp) {
+          let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          if (this._nodeDataStorage._isDisposed = !0, !pp) {
+            const cp = this.getDescendants(!0);
+            for (const Op of cp) Op.dispose(pp, ip)
+          }
+          this.parent ? this.parent = null : this._removeFromSceneRootNodes(), this.Kl.notifyObservers(this), this.Kl.clear(), this.onEnabledStateChangedObservable.clear(), this._nodeDataStorage._onEffectiveEnabledStateChangedObservable?.clear(), this.onClonedObservable.clear();
+          for (const cp of this._behaviors) cp.detach();
+          this._behaviors.length = 0, this.metadata = null
+        }
+        static ParseAnimationRanges(pp, ip, cp) {
+          if (ip.By)
+            for (let Op = 0; Op < ip.By.length; Op++) {
+              const cp = ip.By[Op];
+              pp.createAnimationRange(cp.name, cp.from, cp.to)
+            }
+        }
+        getHierarchyBoundingVectors() {
+          let pp, ip, cp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0],
+            Op = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          this.Gl().incrementRenderId(), this.computeWorldMatrix(!0);
+          const Ip = this;
+          if (Ip.bJ && Ip.Am) {
+            const cp = Ip.bJ();
+            pp = cp.boundingBox.minimumWorld.clone(), ip = cp.boundingBox.maximumWorld.clone()
+          } else pp = new op.o(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), ip = new op.o(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
+          if (cp) {
+            const cp = this.getDescendants(!1);
+            for (const Ip of cp) {
+              const cp = Ip;
+              if (cp.computeWorldMatrix(!0), Op && !Op(cp)) continue;
+              if (!cp.bJ || 0 === cp.getTotalVertices()) continue;
+              const Sp = cp.bJ().boundingBox,
+                xp = Sp.minimumWorld,
+                Lp = Sp.maximumWorld;
+              op.o.CheckExtends(xp, pp, ip), op.o.CheckExtends(Lp, pp, ip)
+            }
+          }
+          return {
+            min: pp,
+            max: ip
+          }
+        }
+      }, (() => {
+        const op = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
+        ip = [(0, Ip.K)()], cp = [(0, Ip.K)()], Ap = [(0, Ip.K)()], Pp = [(0, Ip.K)()], Wp = [(0, Ip.K)()], (0, Op.j)(null, null, ip, {
+          kind: "field",
+          name: "name",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "name" in pp,
+            get: pp => pp.name,
+            set: (pp, ip) => {
+              pp.name = ip
+            }
+          },
+          metadata: op
+        }, yp, Up), (0, Op.j)(null, null, cp, {
+          kind: "field",
+          name: "id",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "id" in pp,
+            get: pp => pp.id,
+            set: (pp, ip) => {
+              pp.id = ip
+            }
+          },
+          metadata: op
+        }, wp, vp), (0, Op.j)(null, null, Ap, {
+          kind: "field",
+          name: "uniqueId",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "uniqueId" in pp,
+            get: pp => pp.uniqueId,
+            set: (pp, ip) => {
+              pp.uniqueId = ip
+            }
+          },
+          metadata: op
+        }, tp, Hp), (0, Op.j)(null, null, Pp, {
+          kind: "field",
+          name: "state",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "state" in pp,
+            get: pp => pp.state,
+            set: (pp, ip) => {
+              pp.state = ip
+            }
+          },
+          metadata: op
+        }, dp, ep), (0, Op.j)(null, null, Wp, {
+          kind: "field",
+          name: "metadata",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "metadata" in pp,
+            get: pp => pp.metadata,
+            set: (pp, ip) => {
+              pp.metadata = ip
+            }
+          },
+          metadata: op
+        }, jp, kp), op && Object.defineProperty(pp, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: op
+        })
+      })(), pp._AnimationRangeFactory = (pp, ip, cp) => {
+        throw (0, Lp.o)("AnimationRange")
+      }, pp._NodeConstructors = {}, pp
+    })()
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

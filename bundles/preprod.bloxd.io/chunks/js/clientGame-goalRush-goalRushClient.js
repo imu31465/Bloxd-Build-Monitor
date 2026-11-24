@@ -1,73 +1,73 @@
 export const id = 18;
 export const ids = [18];
 export const modules = {
-  39262: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      default: () => wC
+  39631: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      default: () => op
     });
-    const QC = .4,
-      wC = function(CC, zC, ZC, wC) {
-        let bC, {
-            localPlayerId: nC
-          } = wC,
-          fC = !1,
-          oC = null,
-          qC = null,
-          FC = null,
-          WC = 1,
-          NC = null,
-          MC = 0,
-          gC = 0;
+    const Op = .4,
+      op = function(pp, ip, cp, op) {
+        let Ip, {
+            localPlayerId: Sp
+          } = op,
+          xp = !1,
+          Lp = null,
+          Yp = null,
+          Dp = null,
+          Ap = 1,
+          Pp = null,
+          Wp = 0,
+          yp = 0;
 
-        function SC() {
-          if (NC) {
-            const CC = NC;
-            CC.fade(CC.getVolume(), 0, 500), setTimeout((() => {
-              CC.stop()
-            }), 500), NC = null
+        function Up() {
+          if (Pp) {
+            const pp = Pp;
+            pp.fade(pp.getVolume(), 0, 500), setTimeout((() => {
+              pp.stop()
+            }), 500), Pp = null
           }
-          gC = 0
+          yp = 0
         }
 
-        function pC(CC) {
-          var zC;
-          if (!oC || fC || null === qC) return void(NC && SC());
-          const ZC = Date.now();
-          if (!NC || ZC - MC > 54e3) {
-            if (NC) {
-              const CC = NC;
-              CC.fade(CC.getVolume(), 0, 2e3), setTimeout((() => {
-                CC.stop()
+        function wp(pp) {
+          var ip;
+          if (!Lp || xp || null === Yp) return void(Pp && Up());
+          const cp = Date.now();
+          if (!Pp || cp - Wp > 54e3) {
+            if (Pp) {
+              const pp = Pp;
+              pp.fade(pp.getVolume(), 0, 2e3), setTimeout((() => {
+                pp.stop()
               }), 2e3)
             }
-            NC = bC.playSound(nC, "crowdAmbience", QC, 1), MC = ZC, gC = QC
+            Pp = Ip.playSound(Sp, "crowdAmbience", Op, 1), Wp = cp, yp = Op
           }
-          const wC = function() {
-              if (null === qC || null === FC || !oC) return 0;
-              const CC = bC.getPositionView(oC);
-              if (!CC) return 0;
-              const zC = Math.abs(CC[2] - qC),
-                ZC = Math.abs(CC[2] - FC),
-                QC = Math.min(zC, ZC);
-              return Math.max(0, 1 - QC / WC)
+          const op = function() {
+              if (null === Yp || null === Dp || !Lp) return 0;
+              const pp = Ip.getPositionView(Lp);
+              if (!pp) return 0;
+              const ip = Math.abs(pp[2] - Yp),
+                cp = Math.abs(pp[2] - Dp),
+                Op = Math.min(ip, cp);
+              return Math.max(0, 1 - Op / Ap)
             }(),
-            pC = CC / 1e3;
-          gC += (QC + .6 * wC - gC) * Math.min(1, 2 * pC), null === (zC = NC) || void 0 === zC || zC.setRelativeVolume(gC)
+            wp = pp / 1e3;
+          yp += (Op + .6 * op - yp) * Math.min(1, 2 * wp), null === (ip = Pp) || void 0 === ip || ip.setRelativeVolume(yp)
         }
         return {
-          onCreate: CC => {
-            bC = CC
+          onCreate: pp => {
+            Ip = pp
           },
-          onReceivedMessageFromServer: (CC, zC) => {
-            var ZC;
-            "ballState" === CC ? (oC = null !== (ZC = zC.eId) && void 0 !== ZC ? ZC : null, oC || SC()) : "frozen" === CC ? fC = zC.frozen : "pitchInfo" === CC && (qC = zC.goalZRed, FC = zC.goalZBlue, WC = Math.abs(FC - qC) / 2)
+          onReceivedMessageFromServer: (pp, ip) => {
+            var cp;
+            "ballState" === pp ? (Lp = null !== (cp = ip.eId) && void 0 !== cp ? cp : null, Lp || Up()) : "frozen" === pp ? xp = ip.frozen : "pitchInfo" === pp && (Yp = ip.goalZRed, Dp = ip.goalZBlue, Ap = Math.abs(Dp - Yp) / 2)
           },
-          ZN: CC => {
-            pC(CC)
+          LP: pp => {
+            wp(pp)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

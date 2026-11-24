@@ -1,176 +1,105 @@
 export const id = 314;
 export const ids = [314];
 export const modules = {
-  41679: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      _TGATextureLoader: () => fC
+  42034: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      _IESTextureLoader: () => xp
     });
-    var QC = ZC(38507);
+    var Op = cp(37356);
 
-    function wC(CC) {
-      let zC = 0;
-      return {
-        id_length: CC[zC++],
-        colormap_type: CC[zC++],
-        image_type: CC[zC++],
-        colormap_index: CC[zC++] | CC[zC++] << 8,
-        colormap_length: CC[zC++] | CC[zC++] << 8,
-        colormap_size: CC[zC++],
-        origin: [CC[zC++] | CC[zC++] << 8, CC[zC++] | CC[zC++] << 8],
-        width: CC[zC++] | CC[zC++] << 8,
-        height: CC[zC++] | CC[zC++] << 8,
-        pixel_size: CC[zC++],
-        flags: CC[17]
+    function op(pp) {
+      return pp.split(" ").filter((pp => "" !== pp)).map((pp => parseFloat(pp)))
+    }
+
+    function Ip(pp, ip, cp) {
+      for (; cp.length !== ip;) {
+        const ip = op(pp.lines[pp.index++]);
+        cp.push(...ip)
       }
     }
 
-    function bC(CC, zC) {
-      if (zC.length < 19) return void QC.c.Error("Unable to load TGA file - Not enough data to contain header");
-      let ZC = 18;
-      const bC = wC(zC);
-      if (bC.id_length + ZC > zC.length) return void QC.c.Error("Unable to load TGA file - Not enough data");
-      ZC += bC.id_length;
-      let fC, oC = !1,
-        qC = !1,
-        FC = !1;
-      switch (bC.image_type) {
-        case 9:
-          oC = !0;
-        case 1:
-          qC = !0;
-          break;
-        case 10:
-          oC = !0;
-        case 2:
-          break;
-        case 11:
-          oC = !0;
-        case 3:
-          FC = !0
-      }
-      const WC = bC.pixel_size >> 3,
-        NC = bC.width * bC.height * WC;
-      let MC, gC, SC, pC, PC, GC, RC;
-      if (qC && (MC = zC.subarray(ZC, ZC += bC.colormap_length * (bC.colormap_size >> 3))), oC) {
-        let CC, QC, wC;
-        fC = new Uint8Array(NC);
-        let bC = 0;
-        const nC = new Uint8Array(WC);
-        for (; ZC < NC && bC < NC;)
-          if (CC = zC[ZC++], QC = 1 + (127 & CC), 128 & CC) {
-            for (wC = 0; wC < WC; ++wC) nC[wC] = zC[ZC++];
-            for (wC = 0; wC < QC; ++wC) fC.set(nC, bC + wC * WC);
-            bC += WC * QC
-          } else {
-            for (QC *= WC, wC = 0; wC < QC; ++wC) fC[bC + wC] = zC[ZC++];
-            bC += QC
-          }
-      } else fC = zC.subarray(ZC, ZC + (qC ? bC.width * bC.height : NC));
-      switch ((48 & bC.flags) >> 4) {
-        default:
-        case 2:
-          gC = 0, pC = 1, RC = bC.width, SC = 0, PC = 1, GC = bC.height;
-          break;
-        case 0:
-          gC = 0, pC = 1, RC = bC.width, SC = bC.height - 1, PC = -1, GC = -1;
-          break;
-        case 3:
-          gC = bC.width - 1, pC = -1, RC = -1, SC = 0, PC = 1, GC = bC.height;
-          break;
-        case 1:
-          gC = bC.width - 1, pC = -1, RC = -1, SC = bC.height - 1, PC = -1, GC = -1
-      }
-      const AC = "_getImageData" + (FC ? "Grey" : "") + bC.pixel_size + "bits",
-        xC = nC[AC](bC, MC, fC, SC, PC, GC, gC, pC, RC);
-      CC.mg()._uploadDataToTextureDirectly(CC, xC)
+    function Sp(pp, ip, cp) {
+      let op = 0,
+        Ip = 0,
+        Sp = 0,
+        xp = 0,
+        Lp = 0,
+        Yp = 0;
+      for (let Op = 0; Op < pp.numberOfHorizontalAngles - 1; Op++)
+        if (cp < pp.horizontalAngles[Op + 1] || Op === pp.numberOfHorizontalAngles - 2) {
+          Ip = Op, Sp = pp.horizontalAngles[Op], xp = pp.horizontalAngles[Op + 1];
+          break
+        } for (let Op = 0; Op < pp.numberOfVerticalAngles - 1; Op++)
+        if (ip < pp.verticalAngles[Op + 1] || Op === pp.numberOfVerticalAngles - 2) {
+          op = Op, Lp = pp.verticalAngles[Op], Yp = pp.verticalAngles[Op + 1];
+          break
+        } const Dp = xp - Sp,
+        Ap = Yp - Lp;
+      if (0 === Ap) return 0;
+      const Pp = 0 === Dp ? 0 : (cp - Sp) / Dp,
+        Wp = (ip - Lp) / Ap,
+        yp = 0 === Dp ? Ip : Ip + 1,
+        Up = (0, Op.Lerp)(pp.candelaValues[Ip][op], pp.candelaValues[yp][op], Pp),
+        wp = (0, Op.Lerp)(pp.candelaValues[Ip][op + 1], pp.candelaValues[yp][op + 1], Pp);
+      return (0, Op.Lerp)(Up, wp, Wp)
     }
-    const nC = {
-      GetTGAHeader: wC,
-      UploadContent: bC,
-      _getImageData8bits: function(CC, zC, ZC, QC, wC, bC, nC, fC, oC) {
-        const qC = ZC,
-          FC = zC,
-          WC = CC.width,
-          NC = CC.height;
-        let MC, gC, SC, pC = 0;
-        const PC = new Uint8Array(WC * NC * 4);
-        for (SC = QC; SC !== bC; SC += wC)
-          for (gC = nC; gC !== oC; gC += fC, pC++) MC = qC[pC], PC[4 * (gC + WC * SC) + 3] = 255, PC[4 * (gC + WC * SC) + 2] = FC[3 * MC + 0], PC[4 * (gC + WC * SC) + 1] = FC[3 * MC + 1], PC[4 * (gC + WC * SC) + 0] = FC[3 * MC + 2];
-        return PC
-      },
-      _getImageData16bits: function(CC, zC, ZC, QC, wC, bC, nC, fC, oC) {
-        const qC = ZC,
-          FC = CC.width,
-          WC = CC.height;
-        let NC, MC, gC, SC = 0;
-        const pC = new Uint8Array(FC * WC * 4);
-        for (gC = QC; gC !== bC; gC += wC)
-          for (MC = nC; MC !== oC; MC += fC, SC += 2) {
-            NC = qC[SC + 0] + (qC[SC + 1] << 8);
-            const CC = 255 * ((31744 & NC) >> 10) / 31 | 0,
-              zC = 255 * ((992 & NC) >> 5) / 31 | 0,
-              ZC = 255 * (31 & NC) / 31 | 0;
-            pC[4 * (MC + FC * gC) + 0] = CC, pC[4 * (MC + FC * gC) + 1] = zC, pC[4 * (MC + FC * gC) + 2] = ZC, pC[4 * (MC + FC * gC) + 3] = 32768 & NC ? 0 : 255
-          }
-        return pC
-      },
-      _getImageData24bits: function(CC, zC, ZC, QC, wC, bC, nC, fC, oC) {
-        const qC = ZC,
-          FC = CC.width,
-          WC = CC.height;
-        let NC, MC, gC = 0;
-        const SC = new Uint8Array(FC * WC * 4);
-        for (MC = QC; MC !== bC; MC += wC)
-          for (NC = nC; NC !== oC; NC += fC, gC += 3) SC[4 * (NC + FC * MC) + 3] = 255, SC[4 * (NC + FC * MC) + 2] = qC[gC + 0], SC[4 * (NC + FC * MC) + 1] = qC[gC + 1], SC[4 * (NC + FC * MC) + 0] = qC[gC + 2];
-        return SC
-      },
-      _getImageData32bits: function(CC, zC, ZC, QC, wC, bC, nC, fC, oC) {
-        const qC = ZC,
-          FC = CC.width,
-          WC = CC.height;
-        let NC, MC, gC = 0;
-        const SC = new Uint8Array(FC * WC * 4);
-        for (MC = QC; MC !== bC; MC += wC)
-          for (NC = nC; NC !== oC; NC += fC, gC += 4) SC[4 * (NC + FC * MC) + 2] = qC[gC + 0], SC[4 * (NC + FC * MC) + 1] = qC[gC + 1], SC[4 * (NC + FC * MC) + 0] = qC[gC + 2], SC[4 * (NC + FC * MC) + 3] = qC[gC + 3];
-        return SC
-      },
-      _getImageDataGrey8bits: function(CC, zC, ZC, QC, wC, bC, nC, fC, oC) {
-        const qC = ZC,
-          FC = CC.width,
-          WC = CC.height;
-        let NC, MC, gC, SC = 0;
-        const pC = new Uint8Array(FC * WC * 4);
-        for (gC = QC; gC !== bC; gC += wC)
-          for (MC = nC; MC !== oC; MC += fC, SC++) NC = qC[SC], pC[4 * (MC + FC * gC) + 0] = NC, pC[4 * (MC + FC * gC) + 1] = NC, pC[4 * (MC + FC * gC) + 2] = NC, pC[4 * (MC + FC * gC) + 3] = 255;
-        return pC
-      },
-      _getImageDataGrey16bits: function(CC, zC, ZC, QC, wC, bC, nC, fC, oC) {
-        const qC = ZC,
-          FC = CC.width,
-          WC = CC.height;
-        let NC, MC, gC = 0;
-        const SC = new Uint8Array(FC * WC * 4);
-        for (MC = QC; MC !== bC; MC += wC)
-          for (NC = nC; NC !== oC; NC += fC, gC += 2) SC[4 * (NC + FC * MC) + 0] = qC[gC + 0], SC[4 * (NC + FC * MC) + 1] = qC[gC + 0], SC[4 * (NC + FC * MC) + 2] = qC[gC + 0], SC[4 * (NC + FC * MC) + 3] = qC[gC + 1];
-        return SC
-      }
-    };
-    class fC {
+    class xp {
       constructor() {
         this.supportCascades = !1
       }
       loadCubeData() {
-        throw ".env not supported in Cube."
+        throw ".ies not supported in Cube."
       }
-      loadData(CC, zC, ZC) {
-        const QC = new Uint8Array(CC.buffer, CC.byteOffset, CC.byteLength),
-          nC = wC(QC);
-        ZC(nC.width, nC.height, zC.generateMipMaps, !1, (() => {
-          bC(zC, QC)
+      loadData(pp, ip, cp) {
+        const Op = function(pp) {
+          const ip = {
+              lines: new TextDecoder("utf-8").decode(pp).split("\n"),
+              index: 0
+            },
+            cp = {
+              version: ip.lines[0],
+              candelaValues: [],
+              horizontalAngles: [],
+              verticalAngles: [],
+              numberOfHorizontalAngles: 0,
+              numberOfVerticalAngles: 0
+            };
+          for (ip.index = 1; ip.lines.length > 0 && !ip.lines[ip.index].includes("TILT=");) ip.index++;
+          ip.lines[ip.index].includes("INCLUDE"), ip.index++;
+          const Op = op(ip.lines[ip.index++]);
+          cp.numberOfLights = Op[0], cp.lumensPerLamp = Op[1], cp.numberOfVerticalAngles = Op[3], cp.numberOfHorizontalAngles = Op[4], cp.photometricType = Op[5], cp.unitsType = Op[6], cp.width = Op[7], cp.length = Op[8], cp.height = Op[9], ip.index++;
+          for (let op = 0; op < cp.numberOfHorizontalAngles; op++) cp.candelaValues[op] = [];
+          Ip(ip, cp.numberOfVerticalAngles, cp.verticalAngles), Ip(ip, cp.numberOfHorizontalAngles, cp.horizontalAngles);
+          for (let op = 0; op < cp.numberOfHorizontalAngles; op++) Ip(ip, cp.numberOfVerticalAngles, cp.candelaValues[op]);
+          let xp = -1;
+          for (let op = 0; op < cp.numberOfHorizontalAngles; op++)
+            for (let pp = 0; pp < cp.numberOfVerticalAngles; pp++) xp = Math.max(xp, cp.candelaValues[op][pp]);
+          if (xp > 0)
+            for (let op = 0; op < cp.numberOfHorizontalAngles; op++)
+              for (let pp = 0; pp < cp.numberOfVerticalAngles; pp++) cp.candelaValues[op][pp] /= xp;
+          const Lp = 180,
+            Yp = 360,
+            Dp = new Float32Array(64800),
+            Ap = cp.horizontalAngles[0],
+            Pp = cp.horizontalAngles[cp.numberOfHorizontalAngles - 1];
+          for (let op = 0; op < 64800; op++) {
+            let pp = op % Yp;
+            const ip = Math.floor(op / Yp);
+            Pp - Ap !== 0 && (pp < Ap || pp >= Pp) && (pp %= 2 * Pp, pp > Pp && (pp = 2 * Pp - pp)), Dp[ip + pp * Lp] = Sp(cp, ip, pp)
+          }
+          return {
+            width: 180,
+            height: 1,
+            data: Dp
+          }
+        }(new Uint8Array(pp.buffer, pp.byteOffset, pp.byteLength));
+        cp(Op.width, Op.height, !!ip.useMipMaps, !1, (() => {
+          const pp = ip.gy();
+          ip.type = 1, ip.format = 6, ip._gammaSpace = !1, pp._uploadDataToTextureDirectly(ip, Op.data)
         }))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

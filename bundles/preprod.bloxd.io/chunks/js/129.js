@@ -1,521 +1,432 @@
 export const id = 129;
 export const ids = [129];
 export const modules = {
-  40908: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      ShaderPackCategory: () => mC
+  6690: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      default: () => Np
     });
-    var QC = ZC(48),
-      wC = ZC(1463),
-      bC = ZC(1388),
-      nC = ZC(1453),
-      fC = ZC(1143),
-      oC = ZC(77),
-      qC = ZC(20),
-      FC = ZC(1557),
-      WC = ZC(6609),
-      NC = ZC(296),
-      MC = ZC(6658),
-      gC = ZC(6651),
-      SC = ZC(6660),
-      pC = ZC(6556),
-      PC = ZC(4942),
-      GC = ZC(4992),
-      RC = ZC(6600),
-      AC = ZC(3436);
+    var Op = cp(62),
+      op = cp(1543),
+      Ip = cp(1049),
+      Sp = cp.n(Ip),
+      xp = cp(322),
+      Lp = cp(6704),
+      Yp = cp(1060),
+      Dp = cp(1538),
+      Ap = cp(4653),
+      Pp = cp(1480),
+      Wp = cp(3224),
+      yp = cp(4656),
+      Up = cp(1692),
+      wp = cp(4648),
+      vp = cp(1141),
+      tp = cp(25),
+      Hp = cp(1520),
+      dp = cp(1211),
+      ep = cp(104),
+      jp = cp(1201),
+      kp = cp(1361),
+      mp = cp(1234),
+      Rp = cp(6698),
+      qp = cp(6712),
+      Mp = cp(1112);
 
-    function xC(CC, zC) {
-      const ZC = (0, MC.storedPackOutcome)(CC, zC);
-      return "none" !== ZC.kind || "noCompiler" === ZC.reason
-    }
-    var JC = ZC(1002),
-      IC = ZC.n(JC),
-      iC = ZC(4998),
-      vC = ZC(1013),
-      eC = ZC(6596),
-      hC = ZC(1056);
-    const KC = {
-      ready: "shaderPack:statusReady",
-      readyAfterReload: "shaderPack:statusReadyAfterReload",
-      noWebGpu: "shaderPack:statusNoWebGpu",
-      offNoWebGpu: "shaderPack:statusOffNoWebGpu",
-      failed: "shaderPack:statusFailed",
-      failedRecheck: "shaderPack:statusFailedRecheck",
-      wrongApiVersion: "shaderPack:statusWrongApiVersion",
-      checking: "shaderPack:statusChecking",
-      unchecked: "shaderPack:statusUnchecked",
-      noCompiler: "shaderPack:statusNoCompiler"
-    };
-
-    function YC(CC, zC) {
-      return "failedRecheck" === CC && zC.listing ? "shaderPack:statusFailedRecheckListed" : KC[CC]
-    }
-
-    function dC(CC) {
+    function Cp(pp) {
       let {
-        stored: zC,
-        checking: ZC,
-        webGpuUsable: QC,
-        changePending: wC,
-        compiler: bC,
-        t: nC
-      } = CC;
-      const fC = function(CC, zC, ZC, QC, wC) {
-          const bC = (0, MC.storedPackOutcome)(CC, wC);
-          return "none" === bC.kind ? "noCompiler" === bC.reason ? zC ? "checking" : "noCompiler" : "otherApiVersion" === bC.reason ? "wrongApiVersion" : "failed" : (0, AC.f)() ? "harnessBuild" : "blocked" === bC.kind ? (0, MC.shaderPackNeedsCheck)(CC, wC) ? zC ? "checking" : !1 === ZC ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === ZC ? "offNoWebGpu" : QC ? "readyAfterReload" : "ready"
-        }(zC, ZC, QC, wC, bC),
-        oC = "failed" === fC || "failedRecheck" === fC,
-        qC = oC || "wrongApiVersion" === fC || "noCompiler" === fC,
-        FC = "ready" === fC || "readyAfterReload" === fC ? zC.validation.offInStrict : [];
-      return (0, hC.jsxs)(hC.Fragment, {
-        children: [(0, hC.jsxs)("div", {
-          className: IC()("ShaderPackStatus", {
-            Ready: "ready" === fC,
-            Failed: qC
-          }),
-          children: ["ready" === fC && (0, hC.jsx)(vC.c, {
-            name: "circle-check"
-          }), qC && (0, hC.jsx)(vC.c, {
-            name: "triangle-exclamation"
-          }), "harnessBuild" === fC ? (0, AC.e)() : nC(YC(fC, zC), {
-            packVersion: String(zC.manifest.apiVersion),
-            version: String(iC.b)
-          })]
-        }), oC && (0, hC.jsx)(eC.d, {
-          diagnostics: zC.validation.errors,
-          more: zC.validation.moreErrors,
-          t: nC
-        }), FC.length > 0 && (0, hC.jsxs)(hC.Fragment, {
-          children: [(0, hC.jsxs)("div", {
-            className: "ShaderPackStatus OffInStrict",
-            children: [(0, hC.jsx)(vC.c, {
-              name: "triangle-exclamation"
-            }), nC("shaderPack:offInStrict")]
-          }), (0, hC.jsx)(eC.d, {
-            diagnostics: FC,
-            t: nC
-          })]
-        })]
-      })
-    }
-
-    function mC(CC) {
-      let {
-        setApplySettingsCallback: zC
-      } = CC;
+        pack: ip,
+        view: cp,
+        favourite: Op,
+        notice: op
+      } = pp;
       const {
-        t: ZC
-      } = (0, fC.y)(), [wC, nC] = (0, QC.useState)(null), [qC, FC] = (0, QC.useState)(null), [AC, JC] = (0, QC.useState)(null), [IC] = (0, QC.useState)(NC.k), [iC, vC] = (0, QC.useState)(!0), [eC, KC] = (0, QC.useState)(!1), {
-        loading: YC,
-        error: mC,
-        setError: EC,
-        onFiles: lC
-      } = (0, RC.i)((async CC => {
-        const zC = await (0, WC.loadPageShaderPackCompiler)();
-        if (!zC) return void EC(ZC("shaderPack:compilerUnavailable"));
-        FC(zC);
-        const QC = (0, MC.toStoredShaderPack)(CC, await (0, gC.c)(zC, CC.files));
-        await (0, MC.saveShaderPack)(QC, zC) ? (nC(QC), XC(wC, QC, zC)) : EC(ZC("shaderPack:saveFailed"))
-      }));
-
-      function XC(CC, ZC, QC) {
-        (function(CC, zC, ZC, QC) {
-          return ZC || xC(CC, QC) || xC(zC, QC)
-        })(CC, ZC, (0, MC.isShaderPackChangePending)(), QC) && ((0, MC.markShaderPackChangePending)(), zC((() => PC.h)))
-      }
-      return (0, QC.useEffect)((() => {
-        let CC = !1;
-        return async function() {
-          const zC = (0, oC.hasUsableWebGpuAdapter)(),
-            ZC = await (0, SC.e)();
-          if (CC) return;
-          nC(ZC), KC(!0), vC(!1);
-          const QC = null !== ZC ? (0, WC.loadPageShaderPackCompiler)() : null,
-            wC = await zC;
-          if (CC) return;
-          JC(wC);
-          const bC = await QC;
-          if (!CC && (FC(bC), null !== ZC && wC && null !== bC && (0, MC.shaderPackNeedsCheck)(ZC, bC))) {
-            const zC = await (0, gC.b)(ZC, bC);
-            CC || nC((CC => CC === ZC ? zC : CC))
-          }
-        }().catch((zC => {
-          console.error("Failed to load the stored shader pack", zC), CC || EC(ZC("shaderPack:unexpectedError"))
-        })).finally((() => {
-          CC || (vC(!1), KC(!1))
-        })), () => {
-          CC = !0
-        }
-      }), []), (0, hC.jsxs)("div", {
-        className: "ShaderPackCategory SettingsMenuRightInner",
-        children: [(0, hC.jsx)("div", {
-          className: "ShaderPackIntro",
-          children: ZC("shaderPack:intro")
-        }), (0, hC.jsx)(HC, {
-          to: pC.W,
-          className: "ShaderPackBrowseLink",
-          children: (0, hC.jsx)(bC.o, {
-            className: "ShaderPackBrowseButton",
-            children: ZC("shaderPackListing:browse")
-          })
-        }), !1 === AC && (0, hC.jsx)("div", {
-          className: "SettingsBoxWarning",
-          children: ZC(IC ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), null !== mC && (0, hC.jsxs)("div", {
-          className: "ShaderPackCategoryError",
-          children: [ZC("general:error"), ": ", mC]
-        }), wC && (0, hC.jsxs)("div", {
-          className: "SettingBox ShaderPackSummary",
-          children: [(0, hC.jsxs)("div", {
-            className: "ShaderPackSummaryHeader",
-            children: [(0, hC.jsxs)("div", {
-              children: [(0, hC.jsx)("div", {
-                className: "ShaderPackName",
-                children: wC.manifest.name
-              }), wC.manifest.author && (0, hC.jsx)("div", {
-                className: "ShaderPackAuthor",
-                children: (0, GC.h)(ZC, "shaderPack:byAuthor", {
-                  author: wC.manifest.author
-                })
-              }), wC.manifest.description && (0, hC.jsx)("div", {
-                className: "ShaderPackDescription",
-                children: wC.manifest.description
-              }), wC.listing && (0, hC.jsx)("div", {
-                className: "ShaderPackAuthor",
-                children: (0, hC.jsx)(HC, {
-                  to: (0, pC.$)(wC.listing.packId),
-                  className: "ShaderPackListingLink",
-                  children: ZC("shaderPackListing:openPackPage")
-                })
+        width: Ip,
+        height: xp
+      } = Lp.u.thumb, {
+        live: Ap
+      } = ip;
+      return (0, Mp.jsx)("div", {
+        className: "ShaderPackCard",
+        children: (0, Mp.jsxs)("div", {
+          className: "ShaderPackCardTile",
+          children: [(0, Mp.jsxs)(Dp.LinkPreserveSearch, {
+            to: (0, Rp.V)(ip.packId),
+            className: "ShaderPackCardLink",
+            children: [Ap && (0, Mp.jsx)("img", {
+              className: "ShaderPackCardImage",
+              src: (0, Lp.x)(dp.clientSideServerUrls.s3Url, Ap, cp, "thumb"),
+              width: Ip,
+              height: xp,
+              loading: "lazy",
+              alt: "",
+              draggable: !1
+            }), Ap && (0, Mp.jsx)(qp.d, {
+              item: Ap
+            }), !Ap && (0, Mp.jsx)("div", {
+              className: "ShaderPackCardImage ShaderPackCardImagePending",
+              children: (0, Mp.jsx)(Yp.d, {
+                name: "hourglass"
+              })
+            }), (0, Mp.jsxs)("div", {
+              className: "ShaderPackCardText",
+              children: [op && (0, Mp.jsx)("div", {
+                className: Sp()("ShaderPackCardNotice", {
+                  Warning: "warning" === op.tone
+                }),
+                children: op.text
+              }), (0, Mp.jsx)("div", {
+                className: "ShaderPackCardName SmallTextBold",
+                children: ip.name
               })]
-            }), (0, hC.jsx)(bC.K, {
-              disabled: iC || YC,
-              onClick: async function() {
-                vC(!0), EC(null), await (0, MC.removeShaderPack)(), nC(null), vC(!1), XC(wC, null, qC)
-              },
-              children: ZC("shaderPack:removePack")
             })]
-          }), (0, hC.jsx)(dC, {
-            stored: wC,
-            checking: eC,
-            webGpuUsable: AC,
-            changePending: (0, MC.isShaderPackChangePending)(),
-            compiler: qC,
-            t: ZC
+          }), Ap && (0, Mp.jsxs)("div", {
+            className: "ShaderPackCardStats",
+            children: [(0, Mp.jsxs)("div", {
+              className: "ShaderPackCardUses SmallTextBold",
+              children: [(0, Mp.jsx)(Yp.d, {
+                name: "download"
+              }), (0, mp.O)(Ap.downloads)]
+            }), Op && (0, Mp.jsx)(Pp.x, {
+              onClick: Op.onToggle,
+              isLiked: !0 === Op.isFavourite,
+              isLoading: null === Op.isFavourite
+            })]
           })]
-        }), (0, hC.jsx)(RC.e, {
-          busy: iC || YC || eC,
-          disabled: iC || YC || eC || !0 !== AC,
-          onFiles: lC
+        })
+      })
+    }
+    var Ep = cp(6716);
+
+    function Xp(pp) {
+      let {
+        results: ip,
+        loading: cp,
+        failed: Op,
+        onRetry: op,
+        view: Ip,
+        previewView: xp
+      } = pp;
+      const {
+        t: Lp
+      } = (0, jp.H)(), Yp = (0, Ep.i)(), Dp = Date.now(), Ap = null === ip ? 0 : "owned" === ip.kind ? ip.packs.length : ip.page.results.length;
+      return (0, Mp.jsxs)("div", {
+        className: Sp()("ShaderPackBrowseResults", {
+          Loading: cp && null !== ip
+        }),
+        children: [cp && null === ip && (0, Mp.jsx)("div", {
+          className: "ShaderPackBrowseMessage",
+          children: (0, Mp.jsx)(kp.c, {})
+        }), Op && (0, Mp.jsxs)("div", {
+          className: "ShaderPackBrowseMessage",
+          children: [Lp("shaderPackListing:loadFailed"), (0, Mp.jsx)(Pp.f, {
+            onClick: op,
+            children: Lp("general:tryAgain")
+          })]
+        }), "listing" === (null === ip || void 0 === ip ? void 0 : ip.kind) && Ap > 0 && (0, Mp.jsx)("div", {
+          className: "ShaderPackBrowseGrid",
+          children: ip.page.results.map((pp => (0, Mp.jsx)(Cp, {
+            pack: {
+              packId: pp.packId,
+              name: pp.name,
+              live: pp
+            },
+            view: xp,
+            favourite: {
+              isFavourite: Yp.isFavourite(pp.packId),
+              onToggle: () => {
+                Yp.toggle(pp.packId)
+              }
+            }
+          }, pp.packId)))
+        }), "owned" === (null === ip || void 0 === ip ? void 0 : ip.kind) && Ap > 0 && (0, Mp.jsx)("div", {
+          className: "ShaderPackBrowseGrid",
+          children: ip.packs.map((pp => {
+            var ip;
+            return (0, Mp.jsx)(Cp, {
+              pack: pp,
+              view: xp,
+              notice: pp.owner ? (0, Rp.S)(pp.owner, !(null === (ip = pp.live) || void 0 === ip || !ip.renderId), Dp, Lp)[0] : void 0
+            }, pp.packId)
+          }))
+        }), null !== ip && 0 === Ap && (0, Mp.jsx)("div", {
+          className: "ShaderPackBrowseMessage",
+          children: Lp(lp(Ip))
         })]
       })
     }
 
-    function HC(CC) {
-      let {
-        to: zC,
-        className: ZC,
-        children: QC
-      } = CC;
-      const {
-        gameState: bC
-      } = (0, qC.k)(["gameState"]), {
-        pathname: fC,
-        search: oC
-      } = (0, wC.v)(), WC = "landingPage" !== bC && "studio" !== bC;
-      return (0, hC.jsx)(nC.LinkPreserveSearch, {
-        to: zC,
-        className: ZC,
-        target: WC ? "_blank" : void 0,
-        onClick: () => {
-          WC || ((0, pC.J)(`${fC}${oC}`), (0, FC.f)())
-        },
-        children: QC
-      })
+    function lp(pp) {
+      return "mine" === pp.section ? "shaderPackListing:noOwnPacks" : (0, Rp.r)(pp) ? "general:noResults" : "favourites" === pp.section ? "shaderPackListing:noFavourites" : "general:noResults"
     }
-  },
-  6556: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      $: () => oC,
-      B: () => gC,
-      E: () => PC,
-      I: () => hC,
-      J: () => FC,
-      M: () => YC,
-      Q: () => SC,
-      S: () => uC,
-      V: () => XC,
-      W: () => nC,
-      X: () => cC,
-      ab: () => fC,
-      db: () => EC,
-      e: () => GC,
-      f: () => vC,
-      gb: () => lC,
-      i: () => pC,
-      ib: () => RC,
-      jb: () => KC,
-      m: () => NC,
-      q: () => WC,
-      r: () => dC,
-      u: () => MC,
-      w: () => mC,
-      z: () => rC
-    });
-    var QC = ZC(6560),
-      wC = ZC(134),
-      bC = ZC(4496);
-    const nC = "/shader-packs",
-      fC = `${nC}/publish`;
-
-    function oC(CC) {
-      return `${nC}/${encodeURIComponent(CC)}`
-    }
-    let qC = null;
-
-    function FC(CC) {
-      qC = CC
-    }
-
-    function WC() {
-      return qC
-    }
-
-    function NC() {
-      qC = null
-    }
-
-    function MC(CC) {
-      return CC.playerHasRank("developer") || CC.playerHasRank("admin")
-    }
-    const gC = ["terrain", "water", "models", "sunShadows", "strict"],
-      SC = {
-        terrain: "shaderPackListing:filterTerrain",
-        water: "shaderPackListing:filterWater",
-        models: "shaderPackListing:filterModels",
-        sunShadows: "shaderPackListing:filterShadows",
-        strict: "shaderPackListing:filterAllGames"
+    var Qp = cp(6733);
+    const Jp = 24,
+      Bp = {
+        favourites: "general:favourites",
+        mine: "shaderPackListing:mine"
       };
 
-    function pC(CC, zC) {
-      return CC.withFeatures.includes(zC) ? "with" : CC.withoutFeatures.includes(zC) ? "without" : null
-    }
-
-    function PC(CC) {
-      return null === CC ? "with" : "with" === CC ? "without" : null
-    }
-
-    function GC(CC) {
-      return "with" === CC ? "only" : null === CC ? "include" : void 0
-    }
-
-    function RC(CC, zC) {
-      const ZC = pC(CC, zC),
-        QC = CC => CC.filter((CC => CC !== zC));
-      return {
-        withFeatures: null === ZC ? [...CC.withFeatures, zC] : QC(CC.withFeatures),
-        withoutFeatures: "with" === ZC ? [...CC.withoutFeatures, zC] : QC(CC.withoutFeatures)
-      }
-    }
-    const AC = "section",
-      xC = "sort",
-      JC = "filters",
-      IC = "q",
-      iC = "banned",
-      vC = "popular",
-      eC = "strict";
-
-    function hC(CC) {
-      var zC, ZC, wC;
-      const nC = CC.get(AC),
-        fC = (null !== (zC = CC.get(JC)) && void 0 !== zC ? zC : eC).split(","),
-        oC = CC.get(iC);
-      return {
-        section: "favourites" === nC || "mine" === nC ? nC : "explore",
-        sort: null !== (ZC = QC.x.find((zC => zC === CC.get(xC)))) && void 0 !== ZC ? ZC : vC,
-        withFeatures: gC.filter((CC => fC.includes(CC) && !fC.includes(`-${CC}`))),
-        withoutFeatures: gC.filter((CC => fC.includes(`-${CC}`))),
-        searchQuery: (null === (wC = CC.get(IC)) || void 0 === wC ? void 0 : wC.slice(0, QC.G)) || null,
-        pageNumber: (0, bC.f)(CC.get(bC.b)),
-        banned: "only" === oC ? "with" : "include" === oC ? null : "without"
-      }
-    }
-
-    function KC(CC, zC) {
-      var ZC;
-      const QC = HC(zC);
-      (0, bC.i)(CC, AC, "explore" === zC.section ? null : zC.section), (0, bC.i)(CC, xC, zC.sort === vC ? null : zC.sort), (0, bC.i)(CC, JC, QC === eC ? null : QC), (0, bC.i)(CC, IC, zC.searchQuery), (0, bC.i)(CC, iC, null !== (ZC = GC(zC.banned)) && void 0 !== ZC ? ZC : null), (0, bC.l)(CC, zC.pageNumber)
-    }
-
-    function YC(CC) {
-      const zC = new URLSearchParams;
-      return KC(zC, {
-        section: "explore",
-        sort: vC,
-        withFeatures: "strict" === CC ? [CC] : [CC, "strict"],
-        withoutFeatures: [],
-        searchQuery: null,
-        pageNumber: 1,
-        banned: "without"
-      }), `${nC}?${zC.toString()}`
-    }
-
-    function dC(CC) {
-      return HC(CC) === eC
-    }
-
-    function mC(CC) {
-      return null !== CC.searchQuery || "with" === CC.banned || HC(CC) !== eC
-    }
-
-    function HC(CC) {
-      return gC.flatMap((zC => {
-        const ZC = pC(CC, zC);
-        return "with" === ZC ? [zC] : "without" === ZC ? [`-${zC}`] : []
-      })).join(",")
-    }
-    const EC = {
-        popular: "shaderPackListing:sortPopular",
-        updated: "shaderPackListing:sortUpdated",
-        newest: "shaderPackListing:sortNewest"
-      },
-      lC = {
-        forest: "shaderPackListing:viewForest",
-        desert: "shaderPackListing:viewDesert",
-        water: "shaderPackListing:viewWater",
-        night: "shaderPackListing:viewNight",
-        cave: "shaderPackListing:viewCave"
-      };
-
-    function XC(CC) {
-      return Math.round(100 * Math.max(0, 1 - 1 / CC))
-    }
-
-    function cC(CC, zC, ZC, wC) {
-      const bC = [];
-      CC.isBanned && bC.push({
-        tone: "warning",
-        text: wC("shaderPackListing:ownerBanned"),
-        detail: null
-      });
+    function Np() {
+      var pp, ip, cp, Ip;
       const {
-        pending: nC
-      } = CC;
-      if (null === CC.brokenError || nC && !nC.error || bC.push({
-          tone: "warning",
-          text: wC("shaderPackListing:ownerBroken"),
-          detail: CC.brokenError
-        }), null !== nC && void 0 !== nC && nC.error) bC.push({
-        tone: "warning",
-        text: wC(zC ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
-        detail: (0, QC.i)(nC.error) ? null : nC.error
-      });
-      else if (nC) {
-        const CC = null === nC.renderNotBefore ? 0 : nC.renderNotBefore - ZC,
-          QC = String(Math.ceil(CC / 6e4)),
-          fC = wC(zC ? CC > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : CC > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
-            minutes: QC
-          });
-        bC.push({
-          tone: "info",
-          text: fC,
-          detail: null
+        t: kp
+      } = (0, jp.H)(), mp = (0, Dp.useNavigatePreserveSearch)(), qp = (0, op.r)(), {
+        userContext: Cp,
+        isUserContextUpdating: lp
+      } = (0, vp.b)(), [Np, Tp] = (0, Ep.h)(), [fp, bp] = (0, Ep.d)(), hp = (0, Op.useRef)(!1), [ap, np] = (0, Ap.o)(), Fp = (0, Rp.C)(ap), [gp, Gp] = (0, Op.useState)(null !== (pp = Fp.searchQuery) && void 0 !== pp ? pp : ""), rp = (0, Op.useRef)(null), {
+        searchQuery: Zp
+      } = Fp;
+      (0, Op.useEffect)((() => {
+        Gp(null !== Zp && void 0 !== Zp ? Zp : ""), rp.current && (rp.current.value = null !== Zp && void 0 !== Zp ? Zp : "")
+      }), [Zp]);
+      const [zp, sp] = (0, Op.useState)(null), [Kp, Vp] = (0, Op.useState)(!1), [ii, ci] = (0, Op.useState)(!1), [Oi, oi] = (0, Op.useState)(0), Ii = (0, Op.useRef)(0), Si = JSON.stringify(Fp), xi = (0, Rp.k)();
+
+      function Li() {
+        null !== xi ? (mp(xi), tp.c.set({
+          openEverythingMenuName: xp.n.SETTINGS,
+          openSettingsCategory: "Dy"
+        })) : mp("/")
+      }
+
+      function Yi(pp) {
+        np((ip => {
+          (0, Rp.eb)(ip, {
+            ...Fp,
+            pageNumber: 1,
+            ...pp
+          })
+        }))
+      }
+
+      function Di() {
+        const pp = gp.trim() || null;
+        Yi({
+          searchQuery: pp,
+          ...null !== pp && !hp.current && (0, Rp.l)(Fp) && {
+            withFeatures: [],
+            withoutFeatures: []
+          }
         })
-      }
-      return CC.listed || bC.push({
-        tone: "info",
-        text: wC("shaderPackListing:ownerUnlisted"),
-        detail: null
-      }), bC
-    }
-
-    function uC(CC) {
-      return Math.max(1, Math.round(CC / 1024))
-    }
-
-    function rC(CC, zC, ZC) {
-      return CC instanceof wC.d && CC.errorMessageForUser ? CC.errorMessageForUser : zC(ZC)
-    }
-  },
-  6560: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      A: () => nC,
-      B: () => QC,
-      E: () => NC,
-      G: () => FC,
-      J: () => AC,
-      L: () => WC,
-      P: () => qC,
-      b: () => gC,
-      e: () => pC,
-      f: () => SC,
-      g: () => MC,
-      i: () => RC,
-      m: () => JC,
-      o: () => oC,
-      s: () => wC,
-      w: () => xC,
-      x: () => bC,
-      y: () => fC
-    });
-    const QC = ["forest", "desert", "water", "night", "cave"];
-    const wC = {
-        full: {
-          width: 3840,
-          height: 2160
-        },
-        large: {
-          width: 1920,
-          height: 1080
-        },
-        thumb: {
-          width: 640,
-          height: 360
-        }
-      },
-      bC = ["popular", "updated", "newest"],
-      nC = 3,
-      fC = 32,
-      oC = 300;
-
-    function qC(CC, zC) {
-      return CC.slice(0, zC).replace(/[\uD800-\uDBFF]$/, "")
-    }
-    const FC = 64,
-      WC = 512,
-      NC = 18e5;
-
-    function MC(CC) {
-      const zC = CC,
-        ZC = null === zC || void 0 === zC ? void 0 : zC.files;
-      return "number" === typeof(null === zC || void 0 === zC ? void 0 : zC.apiVersion) && "string" === typeof zC.name && (null === zC.author || "string" === typeof zC.author) && (void 0 === zC.keepCircleShadows || "boolean" === typeof zC.keepCircleShadows) && "object" === typeof ZC && null !== ZC && Object.values(ZC).every((CC => "string" === typeof CC))
-    }
-    const gC = "Bloxdhub",
-      SC = "https://bloxdhub.com/shaders";
-
-    function pC(CC) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(CC)}`
-    }
-    const PC = "Screenshot generation failed.",
-      GC = "Its screenshots couldn't be generated:";
-
-    function RC(CC) {
-      var zC;
-      return CC === PC || null !== (zC = null === CC || void 0 === CC ? void 0 : CC.startsWith(GC)) && void 0 !== zC && zC
-    }
-
-    function AC(CC, zC) {
-      return `shaderPacks/${CC}/${zC}.json`
-    }
-
-    function xC(CC, zC, ZC, QC) {
-      return null === zC.renderId ? JC(CC, zC.baselineVersion, ZC, QC) : `${CC}/${function(CC,zC,ZC,QC){return`shaderPacks/${CC}/${zC}/${ZC}-${QC}.webp`}(zC.packId,zC.renderId,ZC,QC)}`
-    }
-
-    function JC(CC, zC, ZC, QC) {
-      return `${CC}/${function(CC,zC,ZC){return`shaderPacks/baseline/${CC}/${zC}-${ZC}.webp`}(zC,ZC,QC)}`
+      }(0, wp.e)(Li), (0, Ep.b)(), (0, Op.useEffect)((() => {
+        if (lp) return;
+        const pp = ++Ii.current,
+          ip = JSON.parse(Si);
+        Vp(!0), ci(!1), async function(pp) {
+          if ("mine" === pp.section) return {
+            kind: "owned",
+            packs: await Hp.b.getOwnedShaderPacks(Cp)
+          };
+          const ip = "favourites" === pp.section,
+            cp = ip && (0, Rp.l)(pp),
+            Op = await Hp.b.getShaderPacks(Cp, {
+              sort: ip ? Rp.d : pp.sort,
+              features: cp ? [] : pp.withFeatures,
+              withoutFeatures: cp ? [] : pp.withoutFeatures,
+              searchQuery: pp.searchQuery,
+              pageNumber: pp.pageNumber,
+              pageSize: Jp,
+              onlyFavourites: ip,
+              banned: (0, Rp.n)(Cp) ? (0, Rp.b)(pp.banned) : void 0
+            });
+          return {
+            kind: "listing",
+            page: Op
+          }
+        }(ip).then((ip => {
+          Ii.current === pp && sp(ip)
+        })).catch((ip => {
+          Ii.current === pp && (console.error("Failed to get shader packs", ip), sp(null), ci(!0))
+        })).finally((() => {
+          Ii.current === pp && Vp(!1)
+        }))
+      }), [Si, Cp, lp, Oi]);
+      const [Ai, Pi] = (0, Op.useState)(null), Wi = null !== (cp = null === (Ip = ("listing" === (null === zp || void 0 === zp ? void 0 : zp.kind) ? zp.page.results : (null !== (ip = null === zp || void 0 === zp ? void 0 : zp.packs) && void 0 !== ip ? ip : []).flatMap((pp => pp.live ? [pp.live] : [])))[0]) || void 0 === Ip ? void 0 : Ip.baselineVersion) && void 0 !== cp ? cp : null;
+      (0, Op.useEffect)((() => {
+        null !== Wi && Pi(Wi)
+      }), [Wi]);
+      const yi = "mine" === Fp.section,
+        Ui = (0, Rp.n)(Cp),
+        wi = pp => {
+          "explore" !== Fp.section && (pp.stopPropagation(), pp.preventDefault(), Yi({
+            section: "explore"
+          }))
+        };
+      return (0, Mp.jsxs)("div", {
+        className: "ShaderPackBrowse AnimFadeIn",
+        children: [(0, Mp.jsx)(Pp.d, {
+          onClick: Li,
+          children: kp(null === xi ? "homePage:backToGames" : "shaderPackListing:backToSettings")
+        }), (0, Mp.jsxs)("div", {
+          className: "ShaderPackBrowseHeader",
+          children: [(0, Mp.jsxs)("div", {
+            className: "ShaderPackBrowseHeaderRow",
+            children: [(0, Mp.jsx)("h1", {
+              className: "VisuallyHidden",
+              children: kp("shaderPackListing:title")
+            }), (0, Mp.jsxs)("div", {
+              className: "ShaderPackBrowseTabs",
+              children: [(0, Mp.jsx)("div", {
+                className: Sp()("ShaderPackBrowseSort", {
+                  Active: "explore" === Fp.section
+                }),
+                onMouseDownCapture: wi,
+                onTouchEndCapture: wi,
+                children: (0, Mp.jsx)(Wp.d, {
+                  options: Lp.A.map((pp => ({
+                    value: pp,
+                    label: kp(Rp.Z[pp])
+                  }))),
+                  value: Fp.sort,
+                  onChange: pp => {
+                    Yi({
+                      section: "explore",
+                      sort: pp.value
+                    })
+                  }
+                })
+              }), Object.keys(Bp).map((pp => (0, Mp.jsx)(Pp.S, {
+                active: Fp.section === pp,
+                onClick: () => {
+                  Yi({
+                    section: pp
+                  })
+                },
+                children: kp(Bp[pp])
+              }, pp)))]
+            }), !yi && (0, Mp.jsx)("div", {
+              className: "ShaderPackBrowseDivider"
+            }), !yi && (0, Mp.jsxs)("div", {
+              className: "ShaderPackBrowseSearch",
+              children: [(0, Mp.jsx)("div", {
+                className: "ShaderPackBrowseSearchIcon",
+                children: (0, Mp.jsx)(Yp.d, {
+                  name: "magnifying-glass"
+                })
+              }), (0, Mp.jsx)(Up.c, {
+                className: "ShaderPackBrowseSearchInput",
+                placeholderText: kp("shaderPackListing:searchPlaceholder"),
+                maxLength: Lp.P,
+                defaultValue: gp,
+                domRef: rp,
+                onValueChange: Gp,
+                onEnter: Di
+              }), (0, Mp.jsx)(Pp.f, {
+                onClick: Di,
+                children: kp("general:search")
+              })]
+            }), !yi && (0, Mp.jsxs)(Pp.S, {
+              className: Sp()("ShaderPackBrowseFilterToggle", {
+                Open: fp
+              }),
+              pressed: fp,
+              onClick: () => {
+                bp(!fp)
+              },
+              children: [kp("shaderPackListing:filter"), " ", (0, Mp.jsx)(Yp.d, {
+                name: fp ? "angle-up" : "angle-down"
+              })]
+            }), (0, Mp.jsx)("div", {
+              className: "ShaderPackBrowseSpace"
+            }), ep.featureFlags.settings.canUseShaderPacks && (0, Mp.jsxs)(Pp.o, {
+              onClick: () => {
+                mp(Rp.X)
+              },
+              children: [(0, Mp.jsx)(Yp.d, {
+                name: "upload"
+              }), " ", kp("shaderPackListing:publish")]
+            })]
+          }), !yi && fp && (0, Mp.jsxs)("div", {
+            className: "ShaderPackBrowseFeatures",
+            children: [Rp.w.map((pp => {
+              const ip = (0, Rp.e)(Fp, pp),
+                cp = kp(Rp.L[pp]);
+              return (0, Mp.jsx)(Pp.S, {
+                className: Sp()("ShaderPackBrowseFeature", {
+                  Without: "without" === ip
+                }),
+                active: "with" === ip,
+                pressed: null !== ip,
+                onClick: () => {
+                  hp.current = !0, Yi((0, Rp.bb)(Fp, pp))
+                },
+                children: (0, Mp.jsxs)("span", {
+                  className: "ShaderPackBrowseFeatureLabel",
+                  children: [(0, Mp.jsxs)("span", {
+                    className: "ShaderPackBrowseFeatureReserve",
+                    children: [(0, Mp.jsx)(Yp.d, {
+                      name: "check"
+                    }), " ", cp]
+                  }), (0, Mp.jsxs)("span", {
+                    children: [null !== ip && (0, Mp.jsx)(Yp.d, {
+                      name: "with" === ip ? "check" : "xmark"
+                    }), " ", cp]
+                  })]
+                })
+              }, pp)
+            })), Ui && (0, Mp.jsx)(Pp.S, {
+              className: Sp()("ShaderPackBrowseFeature", {
+                Without: "without" === Fp.banned
+              }),
+              active: "with" === Fp.banned,
+              pressed: null !== Fp.banned,
+              onClick: () => {
+                const pp = "without" === Fp.banned && !hp.current && (0, Rp.l)(Fp);
+                Yi({
+                  banned: (0, Rp.z)(Fp.banned),
+                  ...pp && {
+                    withFeatures: [],
+                    withoutFeatures: []
+                  }
+                })
+              },
+              children: (0, Mp.jsxs)("span", {
+                className: "ShaderPackBrowseFeatureLabel",
+                children: [(0, Mp.jsxs)("span", {
+                  className: "ShaderPackBrowseFeatureReserve",
+                  children: [(0, Mp.jsx)(Yp.d, {
+                    name: "check"
+                  }), " BANNED"]
+                }), (0, Mp.jsxs)("span", {
+                  children: [null !== Fp.banned && (0, Mp.jsx)(Yp.d, {
+                    name: "with" === Fp.banned ? "check" : "xmark"
+                  }), " BANNED"]
+                })]
+              })
+            })]
+          })]
+        }), (!yi || null !== Ai) && (0, Mp.jsx)("div", {
+          className: "ShaderPackBrowseScenes",
+          children: (0, Mp.jsx)(Qp.e, {
+            selected: Np,
+            onSelect: Tp,
+            imageUrl: pp => null === Ai ? null : (0, Lp.r)(dp.clientSideServerUrls.s3Url, Ai, pp, "thumb")
+          })
+        }), (0, Mp.jsx)(Xp, {
+          results: zp,
+          loading: Kp,
+          failed: ii,
+          onRetry: () => {
+            oi((pp => pp + 1))
+          },
+          view: Fp,
+          previewView: Np
+        }), "listing" === (null === zp || void 0 === zp ? void 0 : zp.kind) && (0, Mp.jsx)(yp.d, {
+          className: "ShaderPackBrowsePagination",
+          page: zp.page.pageNumber,
+          totalPages: zp.page.totalPages,
+          onSetPage: pp => {
+            np((ip => {
+              (0, Ap.k)(ip, pp)
+            }))
+          },
+          getPageHref: function(pp) {
+            const ip = new URLSearchParams(ap);
+            (0, Ap.k)(ip, pp);
+            const cp = ip.toString();
+            return cp ? `${qp.pathname}?${cp}` : qp.pathname
+          }
+        })]
+      })
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

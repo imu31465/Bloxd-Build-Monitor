@@ -1,143 +1,262 @@
-export const id = 58;
-export const ids = [58];
+export const id = 59;
+export const ids = [59];
 export const modules = {
-  36664: (CC, zC, ZC) => {
-    async function QC(CC) {
-      const zC = await fetch(CC, {
+  36986: (pp, ip, cp) => {
+    async function Op(pp) {
+      const ip = await fetch(pp, {
         priority: "low"
       });
-      if (!zC.ok) throw new Error(`Fetching ${CC} failed: HTTP ${zC.status}`);
-      const ZC = zC.body.getReader();
-      for (; !(await ZC.read()).done;);
+      if (!ip.ok) throw new Error(`Fetching ${pp} failed: HTTP ${ip.status}`);
+      const cp = ip.body.getReader();
+      for (; !(await cp.read()).done;);
     }
-    ZC.d(zC, {
-      c: () => QC
+    cp.d(ip, {
+      c: () => Op
     })
   },
-  40885: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      prefetchWasmClient: () => iC,
-      startJoinLoad: () => AC,
-      startLoadAheadOfJoin: () => JC
+  39241: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Lp
     });
-    var QC = ZC(2848),
-      wC = ZC(36201),
-      bC = ZC(40697),
-      nC = ZC(1029),
-      fC = ZC(615),
-      oC = ZC(40542),
-      qC = (ZC(40598), ZC(36664)),
-      FC = ZC(40561),
-      WC = ZC(40540),
-      NC = ZC(40810),
-      MC = ZC(40677);
-    const gC = "[bloxd-wasm-client]";
-    let SC = null,
-      pC = null,
-      PC = null,
-      GC = null,
-      RC = null;
+    var Op = cp(9034),
+      op = cp(36689),
+      Ip = cp(39244);
+    const Sp = {
+        seat: "seat_timeout",
+        socket_unopened: "socket_timeout_unopened",
+        socket: "socket_timeout"
+      },
+      xp = {
+        seat: "seat_lost",
+        socket_unopened: "socket_unopened",
+        socket: "socket_closed"
+      };
 
-    function AC() {
-      return GC ??= (async () => {
-        if ("undefined" === typeof WebAssembly) return;
-        const CC = await (0, WC.P)();
-        if (null === CC) return;
-        if ((0, oC.q)(CC)) return (0, WC.S)("none"), void xC("none");
-        if ("wasm" !== (0, fC.h)(window.location.search) && null !== (0, FC.e)(CC, (0, FC.g)(CC))) return (0, WC.S)("none"), void xC("none");
-        (0, WC.S)(CC.backend);
-        const zC = await CC.load();
-        xC(zC.name);
-        const ZC = "unloaded" === (0, QC.y)();
-        if (ZC && (0, WC.m)(), !await (0, NC.b)(zC)) return void console.warn(`${gC} the join's early wasm load failed: the boot loads the client itself`);
-        if (!ZC) return;
-        const bC = (0, wC.g)(zC.name);
-        void 0 !== bC ? (0, nC.logClientMeasurement)("wasm_join_compile", {
-          ms: Math.round(bC.ms)
-        }, {
-          path: bC.path,
-          build: zC.name
-        }) : console.warn(`${gC} the join's wasm load left no record of how it compiled ${zC.name}`)
-      })().catch((CC => {
-        console.warn(`${gC} the join's early wasm load did not start: the boot loads the client itself`, CC)
-      })), GC
+    function Lp(pp, ip) {
+      if (pp instanceof op.f) return {
+        at: Sp[ip],
+        code: 0
+      };
+      const cp = (0, Op.f)(pp),
+        Lp = "number" === typeof cp ? cp : 0;
+      return null !== (0, Ip.h)(Lp).name ? {
+        at: "refused",
+        code: Lp
+      } : {
+        at: xp[ip],
+        code: Lp
+      }
+    }
+  },
+  9034: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Ip,
+      f: () => Sp,
+      h: () => xp,
+      l: () => Yp,
+      o: () => Lp
+    });
+    var Op = cp(195),
+      op = cp(4719);
+
+    function Ip(pp) {
+      return Sp(pp) === Op.e.gameOrPluginOnPlayerAuthRejected.code
     }
 
-    function xC(CC) {
-      null !== RC && (0, nC.logClientMeasurement)("wasm_compile_ahead", {
-        hit: RC === CC ? 1 : 0
+    function Sp(pp) {
+      return "object" === typeof pp && null !== pp ? pp.code : void 0
+    }
+
+    function xp(pp) {
+      var ip;
+      return null !== (ip = Object.keys(op.c).find((ip => op.c[ip] === pp))) && void 0 !== ip ? ip : null
+    }
+
+    function Lp(pp) {
+      return "notWhitelisted" === pp ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    }
+    const Yp = {
+      private: "customLobby:cantJoinPrivate",
+      notWhitelisted: "customLobby:cantJoinNotWhitelisted",
+      banned: "customLobby:cantJoinBanned",
+      adminLocked: "customLobby:cantJoinAdminLocked"
+    }
+  },
+  41270: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      prefetchWasmClient: () => jp,
+      startJoinLoad: () => tp,
+      startLoadAheadOfJoin: () => dp
+    });
+    var Op = cp(2963),
+      op = cp(36519),
+      Ip = cp(41058),
+      Sp = cp(1080),
+      xp = cp(40911),
+      Lp = (cp(40976), cp(36986)),
+      Yp = cp(40902),
+      Dp = cp(41185),
+      Ap = cp(41046);
+    const Pp = "[bloxd-wasm-client]";
+    let Wp = null,
+      yp = null,
+      Up = null,
+      wp = null,
+      vp = null;
+
+    function tp() {
+      return wp ??= (async () => {
+        if ("undefined" === typeof WebAssembly) return;
+        const pp = await (0, Yp.L)();
+        if (null === pp) return;
+        if ((0, xp.s)(pp)) return (0, Yp.N)("none"), void Hp("none");
+        (0, Yp.N)(pp.backend);
+        const ip = await pp.load();
+        Hp(ip.name);
+        const cp = "unloaded" === (0, Op.E)();
+        if (cp && (0, Yp.j)(), !await (0, Dp.e)(ip)) return void console.warn(`${Pp} the join's early wasm load failed: the boot loads the client itself`);
+        if (!cp) return;
+        const Ip = (0, op.i)(ip.name);
+        void 0 !== Ip ? (0, Sp.logClientMeasurement)("wasm_join_compile", {
+          ms: Math.round(Ip.ms)
+        }, {
+          path: Ip.path,
+          build: ip.name
+        }) : console.warn(`${Pp} the join's wasm load left no record of how it compiled ${ip.name}`)
+      })().catch((pp => {
+        console.warn(`${Pp} the join's early wasm load did not start: the boot loads the client itself`, pp)
+      })), wp
+    }
+
+    function Hp(pp) {
+      null !== vp && (0, Sp.logClientMeasurement)("wasm_compile_ahead", {
+        hit: vp === pp ? 1 : 0
       }, {
-        guessed: RC,
-        loaded: CC
+        guessed: vp,
+        loaded: pp
       })
     }
 
-    function JC() {
-      let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      if (null === PC) {
-        var zC;
-        const ZC = null !== (zC = CC.joinStarted) && void 0 !== zC ? zC : () => !1;
-        PC = Promise.all([iC(CC), IC(ZC)]).then((() => {}))
+    function dp() {
+      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      if (null === Up) {
+        var ip;
+        const cp = null !== (ip = pp.joinStarted) && void 0 !== ip ? ip : () => !1;
+        Up = Promise.all([jp(pp), ep(cp)]).then((() => {}))
       }
-      return PC
+      return Up
     }
 
-    function IC(CC) {
-      return pC ??= (async () => {
+    function ep(pp) {
+      return yp ??= (async () => {
         if ("undefined" === typeof WebAssembly) return;
-        const zC = await (0, WC.h)();
-        null === zC || CC() || "unloaded" !== (0, QC.y)() || (RC = zC.name, await (0, wC.b)([zC, bC.e], "low"))
-      })().catch((CC => {
-        console.warn(`${gC} the compile ahead of the join did not start: the join loads the client itself`, CC)
-      })), pC
+        const ip = await (0, Yp.f)();
+        null === ip || pp() || "unloaded" !== (0, Op.E)() || (vp = ip.name, await (0, op.e)([ip, Ip.g], "low"))
+      })().catch((pp => {
+        console.warn(`${Pp} the compile ahead of the join did not start: the join loads the client itself`, pp)
+      })), yp
     }
 
-    function iC() {
+    function jp() {
       let {
-        joinStarted: CC = () => !1,
-        language: zC = ""
+        joinStarted: pp = () => !1,
+        language: ip = ""
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return SC ??= async function(CC, zC) {
-        if (!await async function(CC) {
-            if (CC()) return !1;
-            let zC;
+      return Wp ??= async function(pp, ip) {
+        if (!await async function(pp) {
+            if (pp()) return !1;
+            let ip;
             try {
-              var QC;
-              const CC = await fetch(`${ZC.p}static/js/w4ddu.wasmJoinFiles.json`, {
+              var Op;
+              const pp = await fetch(`${cp.p}static/js/sn3sfj.wasmJoinFiles.json`, {
                 priority: "low",
                 cache: "no-cache"
               });
-              if (!CC.ok) throw new Error(`HTTP ${CC.status}`);
-              if (/\bno-store\b/.test(null !== (QC = CC.headers.get("Cache-Control")) && void 0 !== QC ? QC : "")) return !1;
-              const wC = await CC.json();
-              if (!Array.isArray(wC)) throw new Error("not a list");
-              zC = wC
-            } catch (bC) {
-              return console.warn(`${gC} the join's chunk list did not load: the join downloads its chunks itself`, bC), !CC()
+              if (!pp.ok) throw new Error(`HTTP ${pp.status}`);
+              if (/\bno-store\b/.test(null !== (Op = pp.headers.get("Cache-Control")) && void 0 !== Op ? Op : "")) return !1;
+              const op = await pp.json();
+              if (!Array.isArray(op)) throw new Error("not a list");
+              ip = op
+            } catch (Ip) {
+              return console.warn(`${Pp} the join's chunk list did not load: the join downloads its chunks itself`, Ip), !pp()
             }
-            if (CC()) return !1;
-            const wC = document.createElement("link").relList.supports("prefetch");
-            for (const nC of zC) {
-              const CC = `${ZC.p}${nC}`;
-              wC ? vC(CC) : (0, qC.c)(CC).catch((zC => {
-                console.warn(`${gC} prefetching ${CC} failed`, zC)
+            if (pp()) return !1;
+            const op = document.createElement("link").relList.supports("prefetch");
+            for (const Sp of ip) {
+              const pp = `${cp.p}${Sp}`;
+              op ? kp(pp) : (0, Lp.c)(pp).catch((ip => {
+                console.warn(`${Pp} prefetching ${pp} failed`, ip)
               }))
             }
             return !0
-          }(CC)) return;
-        const QC = [(0, qC.c)((0, MC.f)())];
-        (0, MC.e)(zC) && QC.push((0, qC.c)((0, MC.j)()));
-        await Promise.all(QC)
-      }(CC, zC).catch((CC => {
-        console.warn(`${gC} the prefetch failed: the join downloads the client itself`, CC)
-      })), SC
+          }(pp)) return;
+        const Op = [(0, Lp.c)((0, Ap.f)())];
+        (0, Ap.e)(ip) && Op.push((0, Lp.c)((0, Ap.j)()));
+        await Promise.all(Op)
+      }(pp, ip).catch((pp => {
+        console.warn(`${Pp} the prefetch failed: the join downloads the client itself`, pp)
+      })), Wp
     }
 
-    function vC(CC) {
-      const zC = document.createElement("link");
-      zC.rel = "prefetch", zC.href = CC, CC.endsWith(".js") && (zC.crossOrigin = "anonymous"), document.head.appendChild(zC)
+    function kp(pp) {
+      const ip = document.createElement("link");
+      ip.rel = "prefetch", ip.href = pp, pp.endsWith(".js") && (ip.crossOrigin = "anonymous"), document.head.appendChild(ip)
+    }
+  },
+  39244: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => op,
+      e: () => Ip,
+      g: () => xp,
+      h: () => Dp,
+      k: () => Lp,
+      n: () => Sp
+    });
+    var Op = cp(195);
+    const op = 3e3,
+      Ip = 15e3;
+
+    function Sp(pp) {
+      const ip = pp.endsWith(Op.l);
+      return {
+        text: (ip ? pp.slice(0, -Op.l.length) : pp) || null,
+        dropsCache: ip
+      }
+    }
+    const xp = "Either your internet isn't working or this is a bug.";
+
+    function Lp(pp, ip) {
+      const cp = Dp(pp);
+      return null !== cp.name && "" === Op.e[cp.name].text && null !== ip ? ip : cp.reason
+    }
+    const Yp = "You were removed from the game.";
+
+    function Dp(pp) {
+      var ip;
+      let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const op = null !== (ip = Object.keys(Op.e).find((ip => Op.e[ip].code === pp))) && void 0 !== ip ? ip : null;
+      if (null === op) return {
+        code: pp,
+        name: op,
+        reason: null !== cp && void 0 !== cp ? cp : `${xp}\nCode: ${pp}`,
+        canReconnect: !1,
+        automaticallyReconnect: !1,
+        requiresRefresh: !1
+      };
+      const {
+        text: Ip,
+        canReconnect: Sp = !1
+      } = Op.e[op], Lp = pp === Op.e.outdatedVersion.code || pp === Op.e.loadRecaptchaError.code;
+      return {
+        code: pp,
+        name: op,
+        reason: "" !== Ip ? Ip : null !== cp && void 0 !== cp ? cp : pp === Op.e.gameOrPluginKick.code ? Yp : `Code: ${pp}`,
+        canReconnect: Sp,
+        automaticallyReconnect: pp === Op.e.customGameUpdated.code || pp === Op.e.duplicateLobbyNameError.code,
+        requiresRefresh: Lp
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

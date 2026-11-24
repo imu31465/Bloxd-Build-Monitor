@@ -1,776 +1,289 @@
 export const id = 315;
 export const ids = [315];
 export const modules = {
-  41687: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      ReadExrDataAsync: () => Wz,
-      _ExrTextureLoader: () => Fz
+  42046: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      _BasisTextureLoader: () => tp
     });
-    var QC = ZC(38507),
-      wC = ZC(36991),
-      bC = ZC(39889);
-    const nC = 4,
-      fC = 4,
-      oC = 1,
-      qC = 2,
-      FC = 8,
-      WC = 65536,
-      NC = WC >> 3,
-      MC = 14,
-      gC = 65537,
-      SC = 1 << MC,
-      pC = SC - 1,
-      PC = 59,
-      GC = 63,
-      RC = 2 + GC - PC;
-    var AC, xC;
+    var Op, op = cp(40304),
+      Ip = cp(38905),
+      Sp = cp(40654),
+      xp = cp(40033);
 
-    function JC(CC, zC) {
-      const ZC = new Uint8Array(CC);
-      let QC = 0;
-      for (; 0 != ZC[zC.value + QC];) QC += 1;
-      const wC = (new TextDecoder).decode(ZC.slice(zC.value, zC.value + QC));
-      return zC.value = zC.value + QC + 1, wC
-    }
+    function Lp() {
+      const pp = 0,
+        ip = 1,
+        cp = 2,
+        Op = 3,
+        op = 6,
+        Ip = 8,
+        Sp = 9,
+        xp = 10,
+        Lp = 14;
+      let Yp = null;
 
-    function IC(CC, zC) {
-      const ZC = CC.getInt32(zC.value, !0);
-      return zC.value += nC, ZC
-    }
-
-    function iC(CC, zC) {
-      const ZC = CC.getUint32(zC.value, !0);
-      return zC.value += nC, ZC
-    }
-
-    function vC(CC, zC) {
-      const ZC = CC.getUint8(zC.value);
-      return zC.value += oC, ZC
-    }
-
-    function eC(CC, zC) {
-      const ZC = CC.getUint16(zC.value, !0);
-      return zC.value += qC, ZC
-    }
-
-    function hC(CC, zC) {
-      const ZC = CC[zC.value];
-      return zC.value += oC, ZC
-    }
-
-    function KC(CC, zC) {
-      let ZC;
-      return ZC = "getBigInt64" in DataView.prototype ? Number(CC.getBigInt64(zC.value, !0)) : CC.getUint32(zC.value + 4, !0) + Number(CC.getUint32(zC.value, !0) << 32), zC.value += FC, ZC
-    }
-
-    function YC(CC, zC) {
-      const ZC = CC.getFloat32(zC.value, !0);
-      return zC.value += fC, ZC
-    }
-
-    function dC(CC, zC) {
-      return (0, bC.e)(eC(CC, zC))
-    }
-
-    function mC(CC, zC) {
-      return (0, bC.k)((0, wC.Clamp)(YC(CC, zC), -bC.h, bC.h))
-    }
-
-    function HC(CC, zC, ZC, QC) {
-      switch (ZC) {
-        case "string":
-        case "stringvector":
-        case "iccProfile":
-          return function(CC, zC, ZC) {
-            const QC = (new TextDecoder).decode(new Uint8Array(CC).slice(zC.value, zC.value + ZC));
-            return zC.value = zC.value + ZC, QC
-          }(CC.buffer, zC, QC);
-        case "chlist":
-          return function(CC, zC, ZC) {
-            const QC = zC.value,
-              wC = [];
-            for (; zC.value < QC + ZC - 1;) {
-              const ZC = JC(CC.buffer, zC),
-                QC = IC(CC, zC),
-                bC = vC(CC, zC);
-              zC.value += 3;
-              const nC = IC(CC, zC),
-                fC = IC(CC, zC);
-              wC.push({
-                name: ZC,
-                pixelType: QC,
-                pLinear: bC,
-                xSampling: nC,
-                ySampling: fC
-              })
-            }
-            return zC.value += 1, wC
-          }(CC, zC, QC);
-        case "chromaticities":
-          return function(CC, zC) {
-            return {
-              redX: YC(CC, zC),
-              redY: YC(CC, zC),
-              greenX: YC(CC, zC),
-              greenY: YC(CC, zC),
-              blueX: YC(CC, zC),
-              blueY: YC(CC, zC),
-              whiteX: YC(CC, zC),
-              whiteY: YC(CC, zC)
-            }
-          }(CC, zC);
-        case "compression":
-          return function(CC, zC) {
-            return vC(CC, zC)
-          }(CC, zC);
-        case "box2i":
-          return function(CC, zC) {
-            return {
-              xMin: IC(CC, zC),
-              yMin: IC(CC, zC),
-              xMax: IC(CC, zC),
-              yMax: IC(CC, zC)
-            }
-          }(CC, zC);
-        case "lineOrder":
-          return function(CC, zC) {
-            const ZC = vC(CC, zC);
-            return xC[ZC]
-          }(CC, zC);
-        case "float":
-          return YC(CC, zC);
-        case "v2f":
-          return function(CC, zC) {
-            return [YC(CC, zC), YC(CC, zC)]
-          }(CC, zC);
-        case "v3f":
-          return function(CC, zC) {
-            return [YC(CC, zC), YC(CC, zC), YC(CC, zC)]
-          }(CC, zC);
-        case "int":
-          return IC(CC, zC);
-        case "rational":
-          return function(CC, zC) {
-            return [IC(CC, zC), iC(CC, zC)]
-          }(CC, zC);
-        case "timecode":
-          return function(CC, zC) {
-            return [iC(CC, zC), iC(CC, zC)]
-          }(CC, zC);
-        case "preview":
-          return zC.value += QC, "skipped";
-        default:
-          return void(zC.value += QC)
-      }
-    }
-
-    function EC(CC) {
-      for (let zC = 1; zC < CC.length; zC++) {
-        const ZC = CC[zC - 1] + CC[zC] - 128;
-        CC[zC] = ZC
-      }
-    }
-
-    function lC(CC, zC) {
-      let ZC = 0,
-        QC = Math.floor((CC.length + 1) / 2),
-        wC = 0;
-      const bC = CC.length - 1;
-      for (; !(wC > bC) && (zC[wC++] = CC[ZC++], !(wC > bC));) zC[wC++] = CC[QC++]
-    }! function(CC) {
-      CC[CC.NO_COMPRESSION = 0] = "NO_COMPRESSION", CC[CC.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", CC[CC.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", CC[CC.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", CC[CC.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", CC[CC.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
-    }(AC || (AC = {})),
-    function(CC) {
-      CC[CC.INCREASING_Y = 0] = "INCREASING_Y", CC[CC.DECREASING_Y = 1] = "DECREASING_Y"
-    }(xC || (xC = {}));
-    const XC = 20000630;
-
-    function cC(CC, zC) {
-      if (CC.getUint32(0, !0) != XC) throw new Error("Incorrect OpenEXR format");
-      const ZC = CC.getUint8(4),
-        wC = CC.getUint8(5),
-        bC = {
-          singleTile: !!(2 & wC),
-          longName: !!(4 & wC),
-          deepFormat: !!(8 & wC),
-          multiPart: !!(16 & wC)
-        };
-      zC.value = 8;
-      const nC = {};
-      let fC = !0;
-      for (; fC;) {
-        const ZC = JC(CC.buffer, zC);
-        if (ZC) {
-          const wC = JC(CC.buffer, zC),
-            bC = HC(CC, zC, wC, iC(CC, zC));
-          void 0 === bC ? QC.c.Warn(`Unknown header attribute type ${wC}'.`) : nC[ZC] = bC
-        } else fC = !1
-      }
-      if (0 != (-5 & wC)) throw new Error("Unsupported file format");
-      return {
-        version: ZC,
-        spec: bC,
-        ...nC
-      }
-    }
-    const uC = 32768,
-      rC = 65535;
-
-    function sC(CC, zC, ZC, QC, wC) {
-      for (; ZC < CC;) zC = zC << 8 | hC(QC, wC), ZC += 8;
-      return {
-        l: zC >> (ZC -= CC) & (1 << CC) - 1,
-        c: zC,
-        lc: ZC
-      }
-    }
-
-    function TC(CC, zC, ZC, QC) {
-      return {
-        c: CC = CC << 8 | hC(ZC, QC),
-        lc: zC += 8
-      }
-    }
-
-    function aC(CC, zC, ZC, QC, wC, bC, nC, fC, oC) {
-      if (CC == zC) {
-        if (QC < 8) {
-          const CC = TC(ZC, QC, wC, bC);
-          ZC = CC.c, QC = CC.lc
-        }
-        let CC = ZC >> (QC -= 8);
-        if (CC = new Uint8Array([CC])[0], fC.value + CC > oC) return null;
-        const zC = nC[fC.value - 1];
-        for (; CC-- > 0;) nC[fC.value++] = zC
-      } else {
-        if (!(fC.value < oC)) return null;
-        nC[fC.value++] = CC
-      }
-      return {
-        c: ZC,
-        lc: QC
-      }
-    }
-    const tC = new Array(59);
-
-    function DC(CC, zC, ZC, QC, wC, bC) {
-      const nC = zC;
-      let fC = 0,
-        oC = 0;
-      for (; QC <= wC; QC++) {
-        if (nC.value - zC.value > ZC) return;
-        let qC = sC(6, fC, oC, CC, nC);
-        const FC = qC.l;
-        if (fC = qC.c, oC = qC.lc, bC[QC] = FC, FC == GC) {
-          if (nC.value - zC.value > ZC) throw new Error("Error in HufUnpackEncTable");
-          qC = sC(8, fC, oC, CC, nC);
-          let FC = qC.l + RC;
-          if (fC = qC.c, oC = qC.lc, QC + FC > wC + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; FC--;) bC[QC++] = 0;
-          QC--
-        } else if (FC >= PC) {
-          let CC = FC - PC + 2;
-          if (QC + CC > wC + 1) throw new Error("Error in HufUnpackEncTable");
-          for (; CC--;) bC[QC++] = 0;
-          QC--
-        }
-      }! function(CC) {
-        for (let ZC = 0; ZC <= 58; ++ZC) tC[ZC] = 0;
-        for (let ZC = 0; ZC < gC; ++ZC) tC[CC[ZC]] += 1;
-        let zC = 0;
-        for (let ZC = 58; ZC > 0; --ZC) {
-          const CC = zC + tC[ZC] >> 1;
-          tC[ZC] = zC, zC = CC
-        }
-        for (let ZC = 0; ZC < gC; ++ZC) {
-          const zC = CC[ZC];
-          zC > 0 && (CC[ZC] = zC | tC[zC]++ << 6)
-        }
-      }(bC)
-    }
-
-    function jC(CC) {
-      return 63 & CC
-    }
-
-    function yC(CC) {
-      return CC >> 6
-    }
-
-    function LC(CC, zC, ZC, QC, wC, bC) {
-      const nC = ZC.value,
-        fC = iC(zC, ZC),
-        oC = iC(zC, ZC);
-      ZC.value += 4;
-      const qC = iC(zC, ZC);
-      if (ZC.value += 4, fC < 0 || fC >= gC || oC < 0 || oC >= gC) throw new Error("Wrong HUF_ENCSIZE");
-      const FC = new Array(gC),
-        WC = new Array(SC);
-      ! function(CC) {
-        for (let zC = 0; zC < SC; zC++) CC[zC] = {}, CC[zC].len = 0, CC[zC].lit = 0, CC[zC].p = null
-      }(WC);
-      if (DC(CC, ZC, QC - (ZC.value - nC), fC, oC, FC), qC > 8 * (QC - (ZC.value - nC))) throw new Error("Wrong hufUncompress");
-      ! function(CC, zC, ZC, QC) {
-        for (; zC <= ZC; zC++) {
-          const ZC = yC(CC[zC]),
-            wC = jC(CC[zC]);
-          if (ZC >> wC) throw new Error("Invalid table entry");
-          if (wC > MC) {
-            const CC = QC[ZC >> wC - MC];
-            if (CC.len) throw new Error("Invalid table entry");
-            if (CC.lit++, CC.p) {
-              const zC = CC.p;
-              CC.p = new Array(CC.lit);
-              for (let ZC = 0; ZC < CC.lit - 1; ++ZC) CC.p[ZC] = zC[ZC]
-            } else CC.p = new Array(1);
-            CC.p[CC.lit - 1] = zC
-          } else if (wC) {
-            let CC = 0;
-            for (let bC = 1 << MC - wC; bC > 0; bC--) {
-              const bC = QC[(ZC << MC - wC) + CC];
-              if (bC.len || bC.p) throw new Error("Invalid table entry");
-              bC.len = wC, bC.lit = zC, CC++
-            }
-          }
-        }
-      }(FC, fC, oC, WC),
-      function(CC, zC, ZC, QC, wC, bC, nC, fC, oC) {
-        let qC = 0,
-          FC = 0;
-        const WC = nC,
-          NC = Math.trunc(QC.value + (wC + 7) / 8);
-        for (; QC.value < NC;) {
-          let wC = TC(qC, FC, ZC, QC);
-          for (qC = wC.c, FC = wC.lc; FC >= MC;) {
-            const nC = zC[qC >> FC - MC & pC];
-            if (nC.len) {
-              FC -= nC.len;
-              const CC = aC(nC.lit, bC, qC, FC, ZC, QC, fC, oC, WC);
-              CC && (qC = CC.c, FC = CC.lc)
-            } else {
-              if (!nC.p) throw new Error("hufDecode issues");
-              let zC;
-              for (zC = 0; zC < nC.lit; zC++) {
-                const MC = jC(CC[nC.p[zC]]);
-                for (; FC < MC && QC.value < NC;) wC = TC(qC, FC, ZC, QC), qC = wC.c, FC = wC.lc;
-                if (FC >= MC && yC(CC[nC.p[zC]]) == (qC >> FC - MC & (1 << MC) - 1)) {
-                  FC -= MC;
-                  const CC = aC(nC.p[zC], bC, qC, FC, ZC, QC, fC, oC, WC);
-                  CC && (qC = CC.c, FC = CC.lc);
-                  break
+      function Dp(pp, ip, cp, Op, op) {
+        const Ip = pp.getImageTranscodedSizeInBytes(ip, cp, Op);
+        let Sp = new Uint8Array(Ip);
+        if (!pp.transcodeImage(Sp, ip, cp, Op, 1, 0)) return null;
+        if (op) {
+          Sp = function(pp, ip, cp, Op) {
+            const op = new Uint16Array(4),
+              Ip = new Uint16Array(cp * Op),
+              Sp = cp / 4,
+              xp = Op / 4;
+            for (let Lp = 0; Lp < xp; Lp++)
+              for (let Op = 0; Op < Sp; Op++) {
+                const xp = ip + 8 * (Lp * Sp + Op);
+                op[0] = pp[xp] | pp[xp + 1] << 8, op[1] = pp[xp + 2] | pp[xp + 3] << 8, op[2] = (2 * (31 & op[0]) + 1 * (31 & op[1])) / 3 | (2 * (2016 & op[0]) + 1 * (2016 & op[1])) / 3 & 2016 | (2 * (63488 & op[0]) + 1 * (63488 & op[1])) / 3 & 63488, op[3] = (2 * (31 & op[1]) + 1 * (31 & op[0])) / 3 | (2 * (2016 & op[1]) + 1 * (2016 & op[0])) / 3 & 2016 | (2 * (63488 & op[1]) + 1 * (63488 & op[0])) / 3 & 63488;
+                for (let ip = 0; ip < 4; ip++) {
+                  const Sp = pp[xp + 4 + ip];
+                  let Yp = (4 * Lp + ip) * cp + 4 * Op;
+                  Ip[Yp++] = op[3 & Sp], Ip[Yp++] = op[Sp >> 2 & 3], Ip[Yp++] = op[Sp >> 4 & 3], Ip[Yp] = op[Sp >> 6 & 3]
                 }
               }
-              if (zC == nC.lit) throw new Error("HufDecode issues")
-            }
-          }
+            return Ip
+          }(Sp, 0, pp.getImageWidth(ip, cp) + 3 & -4, pp.getImageHeight(ip, cp) + 3 & -4)
         }
-        const gC = 8 - wC & 7;
-        for (qC >>= gC, FC -= gC; FC > 0;) {
-          const CC = zC[qC << MC - FC & pC];
-          if (!CC.len) throw new Error("HufDecode issues");
-          {
-            FC -= CC.len;
-            const zC = aC(CC.lit, bC, qC, FC, ZC, QC, fC, oC, WC);
-            zC && (qC = zC.c, FC = zC.lc)
-          }
-        }
-      }(FC, WC, CC, ZC, qC, oC, bC, wC, {
-        value: 0
-      })
-    }
-
-    function UC(CC) {
-      return 65535 & CC
-    }
-
-    function BC(CC) {
-      const zC = UC(CC);
-      return zC > 32767 ? zC - 65536 : zC
-    }
-
-    function OC(CC, zC) {
-      const ZC = BC(CC),
-        QC = BC(zC),
-        wC = ZC + (1 & QC) + (QC >> 1);
-      return {
-        a: wC,
-        b: wC - QC
+        return Sp
       }
-    }
-
-    function kC(CC, zC) {
-      const ZC = UC(CC),
-        QC = UC(zC),
-        wC = ZC - (QC >> 1) & rC;
-      return {
-        a: QC + wC - uC & rC,
-        b: wC
-      }
-    }
-
-    function VC(CC, zC, ZC, QC, wC, bC, nC) {
-      const fC = nC < 16384,
-        oC = ZC > wC ? wC : ZC;
-      let qC, FC, WC = 1;
-      for (; WC <= oC;) WC <<= 1;
-      for (WC >>= 1, qC = WC, WC >>= 1; WC >= 1;) {
-        FC = 0;
-        const nC = FC + bC * (wC - qC),
-          oC = bC * WC,
-          NC = bC * qC,
-          MC = QC * WC,
-          gC = QC * qC;
-        let SC, pC, PC, GC;
-        for (; FC <= nC; FC += NC) {
-          let wC = FC;
-          const bC = FC + QC * (ZC - qC);
-          for (; wC <= bC; wC += gC) {
-            const ZC = wC + MC,
-              QC = wC + oC,
-              bC = QC + MC;
-            if (fC) {
-              let nC = OC(CC[wC + zC], CC[QC + zC]);
-              SC = nC.a, PC = nC.b, nC = OC(CC[ZC + zC], CC[bC + zC]), pC = nC.a, GC = nC.b, nC = OC(SC, pC), CC[wC + zC] = nC.a, CC[ZC + zC] = nC.b, nC = OC(PC, GC), CC[QC + zC] = nC.a, CC[bC + zC] = nC.b
-            } else {
-              let nC = kC(CC[wC + zC], CC[QC + zC]);
-              SC = nC.a, PC = nC.b, nC = kC(CC[ZC + zC], CC[bC + zC]), pC = nC.a, GC = nC.b, nC = kC(SC, pC), CC[wC + zC] = nC.a, CC[ZC + zC] = nC.b, nC = kC(PC, GC), CC[QC + zC] = nC.a, CC[bC + zC] = nC.b
-            }
+      onmessage = Ap => {
+        if ("init" === Ap.data.action) {
+          if (Ap.data.url) try {
+            importScripts(Ap.data.url)
+          } catch (Pp) {
+            postMessage({
+              action: "error",
+              error: Pp
+            })
           }
-          if (ZC & WC) {
-            const ZC = wC + oC;
-            let QC;
-            QC = fC ? OC(CC[wC + zC], CC[ZC + zC]) : kC(CC[wC + zC], CC[ZC + zC]), SC = QC.a, CC[ZC + zC] = QC.b, CC[wC + zC] = SC
-          }
-        }
-        if (wC & WC) {
-          let wC = FC;
-          const bC = FC + QC * (ZC - qC);
-          for (; wC <= bC; wC += gC) {
-            const ZC = wC + MC;
-            let QC;
-            QC = fC ? OC(CC[wC + zC], CC[ZC + zC]) : kC(CC[wC + zC], CC[ZC + zC]), SC = QC.a, CC[ZC + zC] = QC.b, CC[wC + zC] = SC
-          }
-        }
-        qC = WC, WC >>= 1
-      }
-      return FC
-    }
-
-    function Cz(CC) {
-      return new DataView(CC.array.buffer, CC.offset.value, CC.size)
-    }
-
-    function zz(CC) {
-      const zC = CC.viewer.buffer.slice(CC.offset.value, CC.offset.value + CC.size),
-        ZC = new Uint8Array(function(CC) {
-          let zC = CC.byteLength;
-          const ZC = [];
-          let QC = 0;
-          const wC = new DataView(CC);
-          for (; zC > 0;) {
-            const CC = wC.getInt8(QC++);
-            if (CC < 0) {
-              const bC = -CC;
-              zC -= bC + 1;
-              for (let CC = 0; CC < bC; CC++) ZC.push(wC.getUint8(QC++))
-            } else {
-              const bC = CC;
-              zC -= 2;
-              const nC = wC.getUint8(QC++);
-              for (let CC = 0; CC < bC + 1; CC++) ZC.push(nC)
-            }
-          }
-          return ZC
-        }(zC)),
-        QC = new Uint8Array(ZC.length);
-      return EC(ZC), lC(ZC, QC), new DataView(QC.buffer)
-    }
-
-    function Zz(CC) {
-      const zC = CC.array.slice(CC.offset.value, CC.offset.value + CC.size),
-        ZC = fflate.unzlibSync(zC),
-        QC = new Uint8Array(ZC.length);
-      return EC(ZC), lC(ZC, QC), new DataView(QC.buffer)
-    }
-
-    function Qz(CC) {
-      const zC = CC.array.slice(CC.offset.value, CC.offset.value + CC.size),
-        ZC = fflate.unzlibSync(zC),
-        QC = CC.lines * CC.channels * CC.width,
-        wC = 1 == CC.type ? new Uint16Array(QC) : new Uint32Array(QC);
-      let bC = 0,
-        nC = 0;
-      const fC = new Array(4);
-      for (let oC = 0; oC < CC.lines; oC++)
-        for (let zC = 0; zC < CC.channels; zC++) {
-          let zC = 0;
-          switch (CC.type) {
-            case 1:
-              fC[0] = bC, fC[1] = fC[0] + CC.width, bC = fC[1] + CC.width;
-              for (let QC = 0; QC < CC.width; ++QC) {
-                zC += ZC[fC[0]++] << 8 | ZC[fC[1]++], wC[nC] = zC, nC++
+          Yp || (Yp = BASIS({
+            wasmBinary: Ap.data.wasmBinary
+          })), null !== Yp && Yp.then((pp => {
+            BASIS = pp, pp.initializeBasis(), postMessage({
+              action: "init"
+            })
+          }))
+        } else if ("transcode" === Ap.data.action) {
+          const Yp = Ap.data.config,
+            Pp = Ap.data.imageData,
+            Wp = new BASIS.BasisFile(Pp),
+            yp = function(pp) {
+              const ip = pp.getHasAlpha(),
+                cp = pp.getNumImages(),
+                Op = [];
+              for (let op = 0; op < cp; op++) {
+                const ip = {
+                    levels: []
+                  },
+                  cp = pp.getNumLevels(op);
+                for (let Op = 0; Op < cp; Op++) {
+                  const cp = {
+                    width: pp.getImageWidth(op, Op),
+                    height: pp.getImageHeight(op, Op)
+                  };
+                  ip.levels.push(cp)
+                }
+                Op.push(ip)
               }
-              break;
-            case 2:
-              fC[0] = bC, fC[1] = fC[0] + CC.width, fC[2] = fC[1] + CC.width, bC = fC[2] + CC.width;
-              for (let QC = 0; QC < CC.width; ++QC) {
-                zC += ZC[fC[0]++] << 24 | ZC[fC[1]++] << 16 | ZC[fC[2]++] << 8, wC[nC] = zC, nC++
+              return {
+                hasAlpha: ip,
+                images: Op
               }
+            }(Wp);
+          let Up = Ap.data.ignoreSupportedFormats ? null : function(Yp, Dp) {
+              let Ap = null;
+              Yp.supportedCompressionFormats && (Ap = Yp.supportedCompressionFormats.astc ? xp : Yp.supportedCompressionFormats.bc7 ? op : Yp.supportedCompressionFormats.s3tc ? Dp.hasAlpha ? Op : cp : Yp.supportedCompressionFormats.pvrtc ? Dp.hasAlpha ? Sp : Ip : Yp.supportedCompressionFormats.etc2 ? ip : Yp.supportedCompressionFormats.etc1 ? pp : Lp);
+              return Ap
+            }(Ap.data.config, yp),
+            wp = !1;
+          null === Up && (wp = !0, Up = yp.hasAlpha ? Op : cp);
+          let vp = !0;
+          Wp.startTranscoding() || (vp = !1);
+          const tp = [];
+          for (let pp = 0; pp < yp.images.length && vp; pp++) {
+            const ip = yp.images[pp];
+            if (void 0 === Yp.loadSingleImage || Yp.loadSingleImage === pp) {
+              let cp = ip.levels.length;
+              !1 === Yp.loadMipmapLevels && (cp = 1);
+              for (let Op = 0; Op < cp; Op++) {
+                const cp = ip.levels[Op],
+                  op = Dp(Wp, pp, Op, Up, wp);
+                if (!op) {
+                  vp = !1;
+                  break
+                }
+                cp.transcodedPixels = op, tp.push(cp.transcodedPixels.buffer)
+              }
+            }
           }
-        }
-      return new DataView(wC.buffer)
-    }
-
-    function wz(CC) {
-      const zC = CC.viewer,
-        ZC = {
-          value: CC.offset.value
-        },
-        QC = new Uint16Array(CC.width * CC.scanlineBlockSize * (CC.channels * CC.type)),
-        wC = new Uint8Array(NC);
-      let bC = 0;
-      const nC = new Array(CC.channels);
-      for (let qC = 0; qC < CC.channels; qC++) nC[qC] = {}, nC[qC].start = bC, nC[qC].end = nC[qC].start, nC[qC].nx = CC.width, nC[qC].ny = CC.lines, nC[qC].size = CC.type, bC += nC[qC].nx * nC[qC].ny * nC[qC].size;
-      const fC = eC(zC, ZC),
-        oC = eC(zC, ZC);
-      if (oC >= NC) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
-      if (fC <= oC)
-        for (let qC = 0; qC < oC - fC + 1; qC++) wC[qC + fC] = vC(zC, ZC);
-      const FC = new Uint16Array(WC),
-        MC = function(CC, zC) {
-          let ZC = 0;
-          for (let wC = 0; wC < WC; ++wC)(0 == wC || CC[wC >> 3] & 1 << (7 & wC)) && (zC[ZC++] = wC);
-          const QC = ZC - 1;
-          for (; ZC < WC;) zC[ZC++] = 0;
-          return QC
-        }(wC, FC),
-        gC = iC(zC, ZC);
-      LC(CC.array, zC, ZC, gC, QC, bC);
-      for (let qC = 0; qC < CC.channels; ++qC) {
-        const CC = nC[qC];
-        for (let zC = 0; zC < nC[qC].size; ++zC) VC(QC, CC.start + zC, CC.nx, CC.size, CC.ny, CC.nx * CC.size, MC)
-      }! function(CC, zC, ZC) {
-        for (let QC = 0; QC < ZC; ++QC) zC[QC] = CC[zC[QC]]
-      }(FC, QC, bC);
-      let SC = 0;
-      const pC = new Uint8Array(QC.buffer.byteLength);
-      for (let WC = 0; WC < CC.lines; WC++)
-        for (let zC = 0; zC < CC.channels; zC++) {
-          const CC = nC[zC],
-            ZC = CC.nx * CC.size,
-            wC = new Uint8Array(QC.buffer, CC.end * qC, ZC * qC);
-          pC.set(wC, SC), SC += ZC * qC, CC.end += ZC
-        }
-      return new DataView(pC.buffer)
-    }
-    var bz, nz = ZC(39913);
-    ! function(CC) {
-      CC[CC.Float = 0] = "Float", CC[CC.HalfFloat = 1] = "HalfFloat"
-    }(bz || (bz = {}));
-    class fz {}
-    async function oz(CC, zC, ZC, QC) {
-      const wC = {
-        size: 0,
-        viewer: zC,
-        array: new Uint8Array(zC.buffer),
-        offset: ZC,
-        width: CC.dataWindow.xMax - CC.dataWindow.xMin + 1,
-        height: CC.dataWindow.yMax - CC.dataWindow.yMin + 1,
-        channels: CC.channels.length,
-        channelLineOffsets: {},
-        scanOrder: () => 0,
-        bytesPerLine: 0,
-        outLineWidth: 0,
-        lines: 0,
-        scanlineBlockSize: 0,
-        inputSize: null,
-        type: 0,
-        uncompress: null,
-        getter: () => 0,
-        format: 5,
-        outputChannels: 0,
-        decodeChannels: {},
-        blockCount: null,
-        byteArray: null,
-        linearSpace: !1,
-        textureType: 0
-      };
-      switch (CC.compression) {
-        case AC.NO_COMPRESSION:
-          wC.lines = 1, wC.uncompress = Cz;
-          break;
-        case AC.RLE_COMPRESSION:
-          wC.lines = 1, wC.uncompress = zz;
-          break;
-        case AC.ZIPS_COMPRESSION:
-          wC.lines = 1, wC.uncompress = Zz, await nz.g.LoadScriptAsync(fz.FFLATEUrl);
-          break;
-        case AC.ZIP_COMPRESSION:
-          wC.lines = 16, wC.uncompress = Zz, await nz.g.LoadScriptAsync(fz.FFLATEUrl);
-          break;
-        case AC.PIZ_COMPRESSION:
-          wC.lines = 32, wC.uncompress = wz;
-          break;
-        case AC.PXR24_COMPRESSION:
-          wC.lines = 16, wC.uncompress = Qz, await nz.g.LoadScriptAsync(fz.FFLATEUrl);
-          break;
-        default:
-          throw new Error(AC[CC.compression] + " is unsupported")
-      }
-      wC.scanlineBlockSize = wC.lines;
-      const bC = {};
-      for (const fC of CC.channels) switch (fC.name) {
-        case "R":
-        case "G":
-        case "B":
-        case "A":
-        case "Y":
-          bC[fC.name] = !0, wC.type = fC.pixelType
-      }
-      let nC = !1;
-      if (bC.R && bC.G && bC.B && bC.A) wC.outputChannels = 4, wC.decodeChannels = {
-        R: 0,
-        G: 1,
-        B: 2,
-        A: 3
-      };
-      else if (bC.R && bC.G && bC.B) nC = !0, wC.outputChannels = 4, wC.decodeChannels = {
-        R: 0,
-        G: 1,
-        B: 2,
-        A: 3
-      };
-      else if (bC.R && bC.G) wC.outputChannels = 2, wC.decodeChannels = {
-        R: 0,
-        G: 1
-      };
-      else if (bC.R) wC.outputChannels = 1, wC.decodeChannels = {
-        R: 0
-      };
-      else {
-        if (!bC.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
-        wC.outputChannels = 1, wC.decodeChannels = {
-          Y: 0
+          Wp.close(), Wp.delete(), wp && (Up = -1), vp ? postMessage({
+            action: "transcode",
+            success: vp,
+            id: Ap.data.id,
+            fileInfo: yp,
+            format: Up
+          }, tp) : postMessage({
+            action: "transcode",
+            success: vp,
+            id: Ap.data.id
+          })
         }
       }
-      if (1 === wC.type) switch (QC) {
-        case bz.Float:
-          wC.getter = dC, wC.inputSize = qC;
-          break;
-        case bz.HalfFloat:
-          wC.getter = eC, wC.inputSize = qC
-      } else {
-        if (2 !== wC.type) throw new Error("Unsupported pixelType " + wC.type + " for " + CC.compression);
-        switch (QC) {
-          case bz.Float:
-            wC.getter = YC, wC.inputSize = fC;
+    }! function(pp) {
+      pp[pp.cTFETC1 = 0] = "cTFETC1", pp[pp.cTFETC2 = 1] = "cTFETC2", pp[pp.cTFBC1 = 2] = "cTFBC1", pp[pp.cTFBC3 = 3] = "cTFBC3", pp[pp.cTFBC4 = 4] = "cTFBC4", pp[pp.cTFBC5 = 5] = "cTFBC5", pp[pp.cTFBC7 = 6] = "cTFBC7", pp[pp.cTFPVRTC1_4_RGB = 8] = "cTFPVRTC1_4_RGB", pp[pp.cTFPVRTC1_4_RGBA = 9] = "cTFPVRTC1_4_RGBA", pp[pp.cTFASTC_4x4 = 10] = "cTFASTC_4x4", pp[pp.cTFATC_RGB = 11] = "cTFATC_RGB", pp[pp.cTFATC_RGBA_INTERPOLATED_ALPHA = 12] = "cTFATC_RGBA_INTERPOLATED_ALPHA", pp[pp.cTFRGBA32 = 13] = "cTFRGBA32", pp[pp.cTFRGB565 = 14] = "cTFRGB565", pp[pp.cTFBGR565 = 15] = "cTFBGR565", pp[pp.cTFRGBA4444 = 16] = "cTFRGBA4444", pp[pp.cTFFXT1_RGB = 17] = "cTFFXT1_RGB", pp[pp.cTFPVRTC2_4_RGB = 18] = "cTFPVRTC2_4_RGB", pp[pp.cTFPVRTC2_4_RGBA = 19] = "cTFPVRTC2_4_RGBA", pp[pp.cTFETC2_EAC_R11 = 20] = "cTFETC2_EAC_R11", pp[pp.cTFETC2_EAC_RG11 = 21] = "cTFETC2_EAC_RG11"
+    }(Op || (Op = {}));
+    const Yp = {
+      JSModuleURL: `${op.i._DefaultCdnUrl}/basisTranscoder/1/basis_transcoder.js`,
+      WasmModuleURL: `${op.i._DefaultCdnUrl}/basisTranscoder/1/basis_transcoder.wasm`
+    };
+    let Dp = null,
+      Ap = null,
+      Pp = 0;
+    const Wp = async () => (Dp || (Dp = new Promise(((pp, ip) => {
+      Ap ? pp(Ap) : op.i.LoadFileAsync(op.i.GetBabylonScriptURL(Yp.WasmModuleURL)).then((cp => {
+        if ("function" !== typeof URL) return ip("Basis transcoder requires an environment with a URL constructor");
+        const Op = URL.createObjectURL(new Blob([`(${Lp})()`], {
+          type: "application/javascript"
+        }));
+        Ap = new Worker(Op), async function(pp, ip, cp) {
+          return await new Promise(((Op, Ip) => {
+            const Sp = ip => {
+              "init" === ip.data.action ? (pp.removeEventListener("message", Sp), Op(pp)) : "error" === ip.data.action && Ip(ip.data.error || "error initializing worker")
+            };
+            pp.addEventListener("message", Sp), pp.postMessage({
+              action: "init",
+              url: cp ? op.i.GetBabylonScriptURL(cp) : void 0,
+              wasmBinary: ip
+            }, [ip])
+          }))
+        }(Ap, cp, Yp.JSModuleURL).then(pp, ip)
+      })).catch(ip)
+    }))), await Dp), yp = async (pp, ip) => {
+      const cp = pp instanceof ArrayBuffer ? new Uint8Array(pp) : pp;
+      return await new Promise(((pp, Op) => {
+        Wp().then((() => {
+          const op = Pp++,
+            Ip = ip => {
+              "transcode" === ip.data.action && ip.data.id === op && (Ap.removeEventListener("message", Ip), ip.data.success ? pp(ip.data) : Op("Transcode is not supported on this device"))
+            };
+          Ap.addEventListener("message", Ip);
+          const Sp = new Uint8Array(cp.byteLength);
+          Sp.set(new Uint8Array(cp.buffer, cp.byteOffset, cp.byteLength)), Ap.postMessage({
+            action: "transcode",
+            id: op,
+            imageData: Sp,
+            config: ip,
+            ignoreSupportedFormats: false
+          }, [Sp.buffer])
+        }), (pp => {
+          Op(pp)
+        }))
+      }))
+    }, Up = (pp, ip) => {
+      let cp = ip._gl?.TEXTURE_2D;
+      pp.isCube && (cp = ip._gl?.TEXTURE_CUBE_MAP), ip._bindTextureDirectly(cp, pp, !0)
+    }, wp = (pp, ip) => {
+      const cp = pp.gy();
+      for (let op = 0; op < ip.fileInfo.images.length; op++) {
+        const Lp = ip.fileInfo.images[op].levels[0];
+        if (pp._invertVScale = pp.invertY, -1 === ip.format || ip.format === Op.cTFRGB565)
+          if (pp.type = 10, pp.format = 4, !cp._features.basisNeedsPOT || Math.log2(Lp.width) % 1 === 0 && Math.log2(Lp.height) % 1 === 0) pp._invertVScale = !pp.invertY, pp.width = Lp.width + 3 & -4, pp.height = Lp.height + 3 & -4, pp.samplingMode = 2, Up(pp, cp), cp._uploadDataToTextureDirectly(pp, new Uint16Array(Lp.transcodedPixels.buffer), op, 0, 4, !0);
+          else {
+            const ip = new xp.b(cp, 2);
+            pp._invertVScale = pp.invertY, ip.type = 10, ip.format = 4, ip.width = Lp.width + 3 & -4, ip.height = Lp.height + 3 & -4, Up(ip, cp), cp._uploadDataToTextureDirectly(ip, new Uint16Array(Lp.transcodedPixels.buffer), op, 0, 4, !0), cp._rescaleTexture(ip, pp, cp.scenes[0], cp._getInternalFormat(4), (() => {
+              cp._releaseTexture(ip), Up(pp, cp)
+            }))
+          }
+        else {
+          pp.width = Lp.width, pp.height = Lp.height, pp.generateMipMaps = ip.fileInfo.images[op].levels.length > 1;
+          const Op = vp.GetInternalFormatFromBasisFormat(ip.format, cp);
+          pp.format = Op, Up(pp, cp);
+          const xp = ip.fileInfo.images[op].levels;
+          for (let ip = 0; ip < xp.length; ip++) {
+            const Ip = xp[ip];
+            cp._uploadCompressedDataToTextureDirectly(pp, Op, Ip.width, Ip.height, Ip.transcodedPixels, op, ip)
+          }!cp._features.basisNeedsPOT || Math.log2(pp.width) % 1 === 0 && Math.log2(pp.height) % 1 === 0 || (Ip.e.Warn("Loaded .basis texture width and height are not a power of two. Texture wrapping will be set to Texture.CLAMP_ADDRESSMODE as other modes are not supported with non power of two dimensions in webGL 1."), pp._cachedWrapU = Sp.d.CLAMP_ADDRESSMODE, pp._cachedWrapV = Sp.d.CLAMP_ADDRESSMODE)
+        }
+      }
+    }, vp = {
+      JSModuleURL: Yp.JSModuleURL,
+      WasmModuleURL: Yp.WasmModuleURL,
+      GetInternalFormatFromBasisFormat: (pp, ip) => {
+        let cp;
+        switch (pp) {
+          case Op.cTFETC1:
+            cp = 36196;
             break;
-          case bz.HalfFloat:
-            wC.getter = mC, wC.inputSize = fC
+          case Op.cTFBC1:
+            cp = 33776;
+            break;
+          case Op.cTFBC4:
+            cp = 33779;
+            break;
+          case Op.cTFASTC_4x4:
+            cp = 37808;
+            break;
+          case Op.cTFETC2:
+            cp = 37496;
+            break;
+          case Op.cTFBC7:
+            cp = 36492
         }
-      }
-      wC.blockCount = wC.height / wC.scanlineBlockSize;
-      for (let fC = 0; fC < wC.blockCount; fC++) KC(zC, ZC);
-      const oC = wC.width * wC.height * wC.outputChannels;
-      switch (QC) {
-        case bz.Float:
-          wC.byteArray = new Float32Array(oC), wC.textureType = 1, nC && wC.byteArray.fill(1, 0, oC);
-          break;
-        case bz.HalfFloat:
-          wC.byteArray = new Uint16Array(oC), wC.textureType = 2, nC && wC.byteArray.fill(15360, 0, oC);
-          break;
-        default:
-          throw new Error("Unsupported type: " + QC)
-      }
-      let FC = 0;
-      for (const fC of CC.channels) void 0 !== wC.decodeChannels[fC.name] && (wC.channelLineOffsets[fC.name] = FC * wC.width), FC += 2 * fC.pixelType;
-      return wC.bytesPerLine = wC.width * FC, wC.outLineWidth = wC.width * wC.outputChannels, "INCREASING_Y" === CC.lineOrder ? wC.scanOrder = CC => CC : wC.scanOrder = CC => wC.height - 1 - CC, 4 == wC.outputChannels ? (wC.format = 5, wC.linearSpace = !0) : (wC.format = 6, wC.linearSpace = !1), wC
-    }
-
-    function qz(CC, zC, ZC, QC) {
-      const wC = {
-        value: 0
-      };
-      for (let bC = 0; bC < CC.height / CC.scanlineBlockSize; bC++) {
-        const nC = IC(ZC, QC) - zC.dataWindow.yMin;
-        CC.size = iC(ZC, QC), CC.lines = nC + CC.scanlineBlockSize > CC.height ? CC.height - nC : CC.scanlineBlockSize;
-        const fC = CC.size < CC.lines * CC.bytesPerLine && CC.uncompress ? CC.uncompress(CC) : Cz(CC);
-        QC.value += CC.size;
-        for (let ZC = 0; ZC < CC.scanlineBlockSize; ZC++) {
-          const QC = bC * CC.scanlineBlockSize,
-            nC = ZC + CC.scanOrder(QC);
-          if (nC >= CC.height) continue;
-          const oC = ZC * CC.bytesPerLine,
-            qC = (CC.height - 1 - nC) * CC.outLineWidth;
-          for (let ZC = 0; ZC < CC.channels; ZC++) {
-            const QC = zC.channels[ZC].name,
-              bC = CC.channelLineOffsets[QC],
-              nC = CC.decodeChannels[QC];
-            if (void 0 !== nC) {
-              wC.value = oC + bC;
-              for (let zC = 0; zC < CC.width; zC++) {
-                const ZC = qC + zC * CC.outputChannels + nC;
-                CC.byteArray && (CC.byteArray[ZC] = CC.getter(fC, wC))
-              }
-            }
-          }
-        }
-      }
-    }
-    fz.DefaultOutputType = bz.HalfFloat, fz.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
-    class Fz {
+        if (void 0 === cp) throw "The chosen Basis transcoder format is not currently supported";
+        return cp
+      },
+      TranscodeAsync: yp,
+      LoadTextureFromTranscodeResult: wp
+    };
+    class tp {
       constructor() {
         this.supportCascades = !1
       }
-      loadCubeData(CC, zC, ZC, QC, wC) {
-        throw ".exr not supported in Cube."
-      }
-      loadData(CC, zC, ZC) {
-        const wC = new DataView(CC.buffer),
-          bC = {
-            value: 0
-          },
-          nC = cC(wC, bC);
-        oz(nC, wC, bC, fz.DefaultOutputType).then((CC => {
-          qz(CC, nC, wC, bC);
-          const QC = nC.dataWindow.xMax - nC.dataWindow.xMin + 1,
-            fC = nC.dataWindow.yMax - nC.dataWindow.yMin + 1;
-          ZC(QC, fC, zC.generateMipMaps, !1, (() => {
-            const ZC = zC.mg();
-            zC.format = nC.format, zC.type = CC.textureType, zC.invertY = !1, zC._gammaSpace = !nC.linearSpace, CC.byteArray && ZC._uploadDataToTextureDirectly(zC, CC.byteArray, 0, 0, void 0, !0)
-          }))
-        })).catch((CC => {
-          QC.c.Error("Failed to load EXR texture: ", CC)
+      loadCubeData(pp, ip, cp, Op, Ip) {
+        if (Array.isArray(pp)) return;
+        const Sp = ip.gy().getCaps(),
+          xp = {
+            supportedCompressionFormats: {
+              etc1: !!Sp.etc1,
+              s3tc: !!Sp.s3tc,
+              pvrtc: !!Sp.pvrtc,
+              etc2: !!Sp.etc2,
+              astc: !!Sp.astc,
+              bc7: !!Sp.bptc
+            }
+          };
+        yp(pp, xp).then((pp => {
+          const cp = pp.fileInfo.images[0].levels.length > 1 && ip.generateMipMaps;
+          wp(ip, pp), ip.gy()._setCubeMapTextureParams(ip, cp), ip.isReady = !0, ip.onLoadedObservable.notifyObservers(ip), ip.onLoadedObservable.clear(), Op && Op()
+        })).catch((pp => {
+          op.i.Warn("Failed to transcode Basis file, transcoding may not be supported on this device"), ip.isReady = !0, Ip && Ip(pp)
         }))
       }
-    }
-    async function Wz(CC) {
-      const zC = new DataView(CC),
-        ZC = {
-          value: 0
-        },
-        wC = cC(zC, ZC);
-      try {
-        const CC = await oz(wC, zC, ZC, bz.Float);
-        return qz(CC, wC, zC, ZC), CC.byteArray ? {
-          width: wC.dataWindow.xMax - wC.dataWindow.xMin + 1,
-          height: wC.dataWindow.yMax - wC.dataWindow.yMin + 1,
-          data: new Float32Array(CC.byteArray)
-        } : (QC.c.Error("Failed to decode EXR data: No byte array available."), {
-          width: 0,
-          height: 0,
-          data: null
-        })
-      } catch (bC) {
-        QC.c.Error("Failed to load EXR data: ", bC)
-      }
-      return {
-        width: 0,
-        height: 0,
-        data: null
+      loadData(pp, ip, cp) {
+        const Op = ip.gy().getCaps(),
+          Ip = {
+            supportedCompressionFormats: {
+              etc1: !!Op.etc1,
+              s3tc: !!Op.s3tc,
+              pvrtc: !!Op.pvrtc,
+              etc2: !!Op.etc2,
+              astc: !!Op.astc,
+              bc7: !!Op.bptc
+            }
+          };
+        yp(pp, Ip).then((pp => {
+          const Op = pp.fileInfo.images[0].levels[0],
+            op = pp.fileInfo.images[0].levels.length > 1 && ip.generateMipMaps;
+          cp(Op.width, Op.height, op, -1 !== pp.format, (() => {
+            wp(ip, pp)
+          }))
+        })).catch((pp => {
+          op.i.Warn("Failed to transcode Basis file, transcoding may not be supported on this device"), op.i.Warn(`Failed to transcode Basis file: ${pp}`), cp(0, 0, !1, !1, (() => {}), !0)
+        }))
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

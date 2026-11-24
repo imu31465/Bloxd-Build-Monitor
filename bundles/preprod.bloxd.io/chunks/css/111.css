@@ -1,522 +1,147 @@
-.ShaderPackInformation {
+.ShaderPackPublishPage {
   display: flex;
   flex-direction: column;
   gap: .5rem;
+  margin: 0 auto;
+  max-width: 50rem;
   padding-bottom: 1rem;
   width: 100%
 }
 
-.ShaderPackInformation .BackButton {
-  font-size: 2rem;
-  padding-left: .3rem
-}
-
-.ShaderPackInformation .ShaderPackInformationBody {
-  container: shaderPackBody/inline-size;
-  align-self: center;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-  max-width: max(115.5555555556vh, 50rem);
-  width: 100%
-}
-
-.ShaderPackInformation .ShaderPackInformationBody>.ShaderPackPreviews {
-  align-self: center
-}
-
-.ShaderPackInformation .ShaderPackInformationMessage {
+.ShaderPackPublishPage .ShaderPackPublishBack {
   align-items: center;
-  color: #a4a4a4;
   display: flex;
-  flex-direction: column;
-  font-size: 1.2rem;
-  gap: 1rem;
-  padding-top: 4rem;
-  text-align: center
+  padding: .6rem .75rem
 }
 
-.ShaderPackInformation .ShaderPackInformationMessage .LogoLoaderOuter {
-  font-size: 3rem
+.ShaderPackPublishPage .ShaderPackPublishBack .BackButton {
+  font-size: 1.5rem;
+  padding-left: .3rem;
+  position: relative
 }
 
-.ShaderPackInformation .ShaderPackInformationHeader {
-  grid-gap: .75rem;
-  align-items: center;
-  display: grid;
-  gap: .75rem;
-  grid-template-columns: 1fr minmax(0, auto) 1fr;
-  padding: .5rem 0
-}
-
-.ShaderPackInformation .ShaderPackInformationHeader h1 {
-  font-size: 2.2rem;
-  grid-column: 2;
-  line-height: 2.6rem;
-  margin: 0;
-  overflow-wrap: anywhere;
-  text-align: center
-}
-
-.ShaderPackInformation .ShaderPackInformationHeader .ShaderPackInformationActions {
-  grid-column: 3;
-  justify-self: end;
-  margin-block: -.2166666667rem
-}
-
-@container shaderPackBody (max-width: 40rem) {
-
-  .ShaderPackInformation .ShaderPackInformationHeader .ShaderPackInformationActions,
-  .ShaderPackInformation .ShaderPackInformationHeader h1 {
-    grid-column: 1/-1
-  }
-
-  .ShaderPackInformation .ShaderPackInformationHeader .ShaderPackInformationActions {
-    justify-self: center;
-    margin-block: 0 .4166666667rem
+@media(pointer:coarse) {
+  .ShaderPackPublishPage .ShaderPackPublishBack .BackButton:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
   }
 }
 
-.ShaderPackInformation .ShaderPackInformationActions {
-  zoom: 1.2;
-  align-items: flex-start;
-  display: flex;
-  gap: .5rem
+.ShaderPackPublishPage .ShaderPackPublishBack {
+  padding-left: 0
 }
 
-.ShaderPackInformation .ShaderPackInformationActions .ShaderPackInformationLike {
-  box-sizing: border-box;
-  height: 2.6rem;
-  padding: 0 .6rem
-}
-
-.ShaderPackInformation .ShaderPackInformationActions .ShaderPackUse {
-  align-items: flex-end;
-  display: flex;
-  flex-direction: column;
-  font-size: 1.2rem;
-  gap: .3rem
-}
-
-.ShaderPackInformation .ShaderPackInformationActions .ShaderPackUse .ShaderPackUseNote {
-  color: #a4a4a4;
-  font-size: .95rem;
-  max-width: 16rem;
-  text-align: right
-}
-
-.ShaderPackInformation .ShaderPackInformationActions .ShaderPackUse .ShaderPackUseNote.Error {
-  color: #ff8a80
-}
-
-.ShaderPackInformation .ShaderPackSectionTitle {
-  font-size: 1.4rem;
+.ShaderPackPublishPage .ShaderPackPublishTitle {
+  font-size: 1.8rem;
   margin: 0
 }
 
-.ShaderPackInformation .ShaderPackFacts {
+.ShaderPackPublishForm {
   display: flex;
   flex-direction: column;
   gap: .75rem
 }
 
-.ShaderPackInformation .ShaderPackFacts .ShaderPackDescription {
-  font-size: 1.15rem;
-  margin: 0;
-  overflow-wrap: anywhere;
-  white-space: pre-wrap
-}
-
-.ShaderPackInformation .ShaderPackFacts>.ShaderPackInformationActions {
-  align-self: flex-end
-}
-
-@container shaderPackBody (max-width: 40rem) {
-  .ShaderPackInformation .ShaderPackFacts>.ShaderPackInformationActions {
-    align-self: center
-  }
-}
-
-.ShaderPackInformation .ShaderPackFacts:has(.ProfilePreview)>.ShaderPackInformationActions {
-  margin-bottom: .4166666667rem
-}
-
-.ShaderPackInformation .ShaderPackFacts .ShaderPackFeatureList {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: .4rem
-}
-
-.ShaderPackInformation .ShaderPackFacts .ShaderPackFeatureList .ShaderPackAuthor {
-  align-items: center;
-  display: flex;
-  gap: .4rem;
-  margin-right: .4rem
-}
-
-.ShaderPackInformation .ShaderPackFacts .ShaderPackFeatureList .ShaderPackBloxdhubLogo {
-  display: flex;
-  flex-shrink: 0
-}
-
-.ShaderPackInformation .ShaderPackFacts .ShaderPackFeatureList .ShaderPackBloxdhubLogo img {
-  border-radius: 0;
-  height: 1.7rem;
-  width: 1.7rem
-}
-
-.ShaderPackInformation .ShaderPackFacts .ShaderPackFeatureList .ShaderPackBloxdhubName {
-  align-items: center;
-  border-radius: 0;
-  display: flex;
-  font-size: 1rem;
-  font-weight: 700;
-  gap: .4rem;
-  height: 1.7rem;
-  padding-left: .6rem
-}
-
-@media(hover:hover) {
-  .ShaderPackInformation .ShaderPackFacts .ShaderPackFeatureList .ShaderPackBloxdhubName:hover {
-    background-color: rgba(57, 73, 128, .6)
-  }
-}
-
-.ShaderPackInformation .ShaderPackFacts .ShaderPackFeatureList .ShaderPackBloxdhubName.pad-focused {
-  background-color: rgba(57, 73, 128, .6)
-}
-
-@media(hover:none) {
-  .ShaderPackInformation .ShaderPackFacts .ShaderPackFeatureList .ShaderPackBloxdhubName:active {
-    background-color: rgba(57, 73, 128, .6)
-  }
-}
-
-.ShaderPackInformation .ShaderPackFacts .ShaderPackFeatureList .ShaderPackBloxdhubName img {
-  border-radius: 0;
-  height: 1.7rem;
-  width: 1.7rem
-}
-
-.ShaderPackInformation .ShaderPackFacts .ShaderPackFeatureList .ShaderPackFeature {
-  align-items: center;
-  background-color: #3c4b68;
-  border-radius: 0;
-  box-sizing: border-box;
-  color: inherit;
-  display: flex;
-  font-size: 1rem;
-  height: 1.7rem;
-  padding: 0 .6rem;
-  text-decoration: none;
-  transition: color .2s
-}
-
-@media(hover:hover) {
-  .ShaderPackInformation .ShaderPackFacts .ShaderPackFeatureList .ShaderPackFeature:hover {
-    color: #ffb914
-  }
-}
-
-.ShaderPackInformation .ShaderPackFacts .ShaderPackFeatureList .ShaderPackFeature.pad-focused {
-  color: #ffb914
-}
-
-@media(hover:none) {
-  .ShaderPackInformation .ShaderPackFacts .ShaderPackFeatureList .ShaderPackFeature:active {
-    color: #ffb914
-  }
-}
-
-.ShaderPackInformation .ShaderPackFacts .ShaderPackFactList {
-  grid-gap: .5rem;
-  display: grid;
-  gap: .5rem;
-  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+.ShaderPackPublishForm .ShaderPackPublishIntro {
+  color: #cfcfcf;
+  font-size: 1.1rem;
   margin: 0
 }
 
-.ShaderPackInformation .ShaderPackFacts .ShaderPackFactList div {
-  background-color: rgba(57, 73, 128, .4);
-  border-radius: 0;
-  padding: .5rem .75rem
+.ShaderPackPublishForm .ShaderPackPublishLink {
+  color: #ffb914;
+  text-decoration: underline
 }
 
-.ShaderPackInformation .ShaderPackFacts .ShaderPackFactList dt {
-  color: #a4a4a4;
-  font-size: .95rem
-}
-
-.ShaderPackInformation .ShaderPackFacts .ShaderPackFactList dd {
-  font-size: 1.2rem;
-  margin: 0
-}
-
-.ShaderPackOwnerPanel {
+.ShaderPackPublishForm .ShaderPackPublishSummary {
   background-color: rgba(57, 73, 128, .4);
   border-radius: 0;
   display: flex;
   flex-direction: column;
-  gap: .75rem;
+  gap: .5rem;
   padding: .75rem
 }
 
-.ShaderPackOwnerPanel .ShaderPackOwnerNotice {
-  align-items: flex-start;
-  color: #85baff;
-  display: flex;
-  font-size: 1.1rem;
-  gap: .5rem
+.ShaderPackPublishForm .ShaderPackPublishSummary .ShaderPackPublishPackName {
+  font-size: 1.3rem;
+  font-weight: 700;
+  overflow-wrap: anywhere
 }
 
-.ShaderPackOwnerPanel .ShaderPackOwnerNotice.Warning {
+.ShaderPackPublishForm .ShaderPackPublishSummary .ShaderPackPublishPackSize {
+  color: #a4a4a4;
+  font-size: 1rem
+}
+
+.ShaderPackPublishForm .ShaderPackPublishNote {
+  align-items: center;
+  color: #85baff;
+  display: flex;
+  font-size: 1.05rem;
+  gap: .5rem;
+  overflow-wrap: anywhere
+}
+
+.ShaderPackPublishForm .ShaderPackPublishNote.Ready {
+  color: #1dd06d
+}
+
+.ShaderPackPublishForm .ShaderPackPublishNote.Warning {
   color: #fcd373
 }
 
-.ShaderPackOwnerPanel .ShaderPackOwnerNotice .ShaderPackOwnerNoticeDetail {
-  color: #cfcfcf;
-  font-size: .95rem;
-  margin: .3rem 0 0;
-  overflow-wrap: anywhere;
-  white-space: pre-wrap
+.ShaderPackPublishForm .ShaderPackPublishNote.Error {
+  color: #ff8a80
 }
 
-.ShaderPackOwnerPanel .ShaderPackOwnerError {
-  color: #ff8a80;
-  font-size: 1.05rem
-}
-
-.ShaderPackOwnerPanel .ShaderPackOwnerActions {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 1.1rem;
-  gap: .5rem
-}
-
-.ShaderPackPreviews {
+.ShaderPackPublishForm .ShaderPackPublishField {
   display: flex;
   flex-direction: column;
-  gap: .5rem;
-  width: min(100%, 115.5555555556vh)
+  font-size: 1.1rem;
+  gap: .3rem
 }
 
-.ShaderPackPreviews .ShaderPackViewPicker {
-  align-self: center;
-  max-width: 100%
+.ShaderPackPublishForm .ShaderPackPublishField .ShaderPackPublishInput {
+  font-size: 1.1rem;
+  padding: .4rem .5rem;
+  text-align: left
 }
 
-.ShaderPackPreviews .ShaderPackCompare,
-.ShaderPackPreviews .ShaderPackPreviewMain {
-  aspect-ratio: 16/9;
-  background-color: #394980;
-  border: none;
-  border-radius: 0;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  display: block;
-  overflow: hidden;
-  position: relative;
-  width: 100%
+.ShaderPackPublishForm .ShaderPackPublishField .ShaderPackPublishDescription {
+  min-height: 5rem;
+  resize: vertical
 }
 
-.ShaderPackPreviews .ShaderPackCompare img,
-.ShaderPackPreviews .ShaderPackPreviewMain img {
-  display: block;
-  height: 100%;
-  object-fit: cover;
-  width: 100%
+.ShaderPackPublishForm .ShaderPackPublishField .ShaderPackPublishHint {
+  color: #fcd373;
+  font-size: .95rem
 }
 
-.ShaderPackPreviews .ShaderPackPreviewMain {
-  font: inherit;
-  letter-spacing: inherit;
+.ShaderPackPublishForm .ShaderPackPublishButton {
+  align-self: flex-start
+}
+
+.ShaderPackDiagnostics {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  gap: .4rem;
+  list-style: none;
+  margin: 0;
+  overflow-wrap: anywhere;
   padding: 0
 }
 
-.ShaderPackPreviews .ShaderPackPreviewMain:enabled {
-  cursor: zoom-in
+.ShaderPackDiagnostics .ShaderPackDiagnosticLocation {
+  color: #ffb914;
+  font-family: monospace;
+  margin-right: .5rem
 }
 
-.ShaderPackPreviews .ShaderPackCompare {
-  --line: 0.25rem;
-  cursor: ew-resize;
-  touch-action: pan-y;
-  -webkit-user-select: none;
-  user-select: none
-}
-
-.ShaderPackPreviews .ShaderPackCompare .ShaderPackCompareLine,
-.ShaderPackPreviews .ShaderPackCompare .ShaderPackComparePack {
-  left: 0;
-  position: absolute;
-  top: 0
-}
-
-.ShaderPackPreviews .ShaderPackCompare .ShaderPackCompareLine {
-  background: linear-gradient(90deg, #ff6b9d, #ffa64d, gold, #7dd87d, #6bb5ff, #c084fc, #ff6b9d) 0 0/33.3333333333% 100% repeat-x;
-  clip-path: inset(0 calc(100% - var(--split) - var(--line)/2) 0 0);
-  height: 100%;
-  pointer-events: none;
-  width: 100%
-}
-
-.ShaderPackPreviews .ShaderPackCompare .ShaderPackCompareBaseline {
-  background-size: cover
-}
-
-.ShaderPackPreviews .ShaderPackCompare .ShaderPackCompareNotice,
-.ShaderPackPreviews .ShaderPackCompare .ShaderPackComparePack {
-  clip-path: inset(var(--line) calc(100% - var(--split) + var(--line)/2) var(--line) 0)
-}
-
-.ShaderPackPreviews .ShaderPackCompare:focus-visible {
-  outline: .15rem solid #ffb914
-}
-
-.ShaderPackPreviews .ShaderPackPreviewStage {
-  position: relative
-}
-
-.ShaderPackPreviews .ShaderPackPreviewStage .ShaderPackStageButton {
-  background: none;
-  border: none;
-  bottom: 0;
-  color: inherit;
-  cursor: pointer;
-  font: inherit;
-  font-size: 1.2rem;
-  padding: .5rem;
-  position: absolute
-}
-
-.ShaderPackPreviews .ShaderPackPreviewStage .ShaderPackStageButton .ShaderPackStageButtonFace {
-  align-items: center;
-  background-color: rgba(26, 31, 46, .6);
-  display: flex;
-  gap: .3em;
-  padding: .2em .5em
-}
-
-@media(hover:hover) {
-  .ShaderPackPreviews .ShaderPackPreviewStage .ShaderPackStageButton:hover .ShaderPackStageButtonFace {
-    background-color: rgba(26, 31, 46, .85)
-  }
-}
-
-.ShaderPackPreviews .ShaderPackPreviewStage .ShaderPackStageButton.pad-focused .ShaderPackStageButtonFace {
-  background-color: rgba(26, 31, 46, .85)
-}
-
-@media(hover:none) {
-  .ShaderPackPreviews .ShaderPackPreviewStage .ShaderPackStageButton:active .ShaderPackStageButtonFace {
-    background-color: rgba(26, 31, 46, .85)
-  }
-}
-
-.ShaderPackPreviews .ShaderPackPreviewStage .ShaderPackStageButton.Left {
-  left: 0
-}
-
-.ShaderPackPreviews .ShaderPackPreviewStage .ShaderPackStageButton.Right {
-  right: 0
-}
-
-.ShaderPackFullSize {
-  align-items: center;
-  background-color: rgba(26, 31, 46, .85);
-  cursor: zoom-out;
-  display: flex;
-  inset: 0;
-  justify-content: center;
-  position: fixed;
-  z-index: 16
-}
-
-.ShaderPackFullSize .ShaderPackFullSizeImage {
-  aspect-ratio: 16/9;
-  background-size: cover;
-  width: min(100vw, 177.7777777778vh);
-  width: min(100vw, 177.7777777778dvh)
-}
-
-.ShaderPackFullSize .ShaderPackFullSizeClose {
-  font-size: 3rem;
-  position: absolute;
-  right: 1rem;
-  top: 1rem
-}
-
-.ShaderPackPreviewsNotice {
-  --diagonal: 29.3577535428deg;
-  container-type: size;
-  align-items: center;
-  display: flex;
-  inset: 0;
-  justify-content: center;
-  overflow: hidden;
-  pointer-events: none;
-  position: absolute
-}
-
-.ShaderPackCardTile .ShaderPackPreviewsNotice {
-  --diagonal: 33.690067526deg
-}
-
-.ShaderPackPreviewsNotice>span {
-  background-color: rgba(38, 52, 93, .85);
-  color: #fff;
-  flex: none;
-  font-size: 4.5cqw;
-  font-weight: 700;
-  opacity: .5;
-  padding: .2em .6em;
-  text-align: center;
-  text-transform: uppercase;
-  transform: rotate(var(--diagonal));
-  white-space: nowrap;
-  width: 150cqw
-}
-
-.ShaderPackViewPicker {
-  display: flex;
-  gap: .4rem;
-  min-width: 0;
-  overflow-x: auto
-}
-
-.ShaderPackViewPicker .ShaderPackViewOption {
-  aspect-ratio: 16/9;
-  background-color: #394980;
-  border: .15rem solid transparent;
-  border-radius: 0;
-  color: inherit;
-  cursor: pointer;
-  flex-shrink: 0;
-  font: inherit;
-  padding: 0;
-  position: relative;
-  width: 7rem
-}
-
-.ShaderPackViewPicker .ShaderPackViewOption img {
-  display: block;
-  height: 100%;
-  object-fit: cover;
-  width: 100%
-}
-
-.ShaderPackViewPicker .ShaderPackViewOption span {
-  align-items: center;
-  display: flex;
-  font-size: 1rem;
-  inset: 0;
-  justify-content: center;
-  position: absolute
-}
-
-.ShaderPackViewPicker .ShaderPackViewOption.Selected {
-  border-color: #ffb914
+.ShaderPackDiagnostics .ShaderPackDiagnosticVariants {
+  color: #a4a4a4;
+  margin-left: .5rem
 }
 
 @keyframes rainbowShimmer {
@@ -618,68 +243,44 @@
   }
 }
 
-.SegmentedToggle {
-  background-color: #3c4b68;
-  border: 1px solid #0f0f0f;
+.ShaderPackDropZone {
+  align-items: center;
+  border: 1px solid #ffb914;
   border-radius: 0;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: border-box;
   display: flex;
-  flex-shrink: 0
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  min-height: 12rem;
+  padding: 2rem 1rem
 }
 
-.SegmentedToggle .SegmentedToggleOption {
-  background: none;
-  border: none;
+.ShaderPackDropZone .ShaderPackDropZoneIcon {
+  font-size: 3rem;
+  opacity: .4;
+  text-shadow: 0 0 0 #000;
+  transition: opacity .3s
+}
+
+.ShaderPackDropZone .ShaderPackDropZoneInstructions {
   color: #cfcfcf;
-  cursor: pointer;
-  font: inherit;
-  min-width: 5.5em;
-  padding: .4em 1em;
-  position: relative
+  font-size: 1.2rem;
+  text-align: center
 }
 
-@media(pointer:coarse) {
-  .SegmentedToggle .SegmentedToggleOption:before {
-    content: "";
-    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
-    position: absolute
-  }
+.ShaderPackDropZone.ActiveDrag .ShaderPackDropZoneIcon {
+  opacity: 1
 }
 
-.SegmentedToggle .SegmentedToggleOption:before {
-  inset-inline: 0
+.ShaderPackDropZone.Disabled {
+  opacity: .5;
+  pointer-events: none
 }
 
-.SegmentedToggle .SegmentedToggleOption:not(:first-child) {
-  border-left: 1px solid #0f0f0f
-}
-
-@media(hover:hover) {
-  .SegmentedToggle .SegmentedToggleOption:hover {
-    background-color: #394980;
-    color: #fff
-  }
-}
-
-.SegmentedToggle .SegmentedToggleOption.pad-focused {
-  background-color: #394980;
-  color: #fff
-}
-
-@media(hover:none) {
-  .SegmentedToggle .SegmentedToggleOption:active {
-    background-color: #394980;
-    color: #fff
-  }
-}
-
-.SegmentedToggle .SegmentedToggleOption:focus-visible {
-  outline: 2px solid #ffb914;
-  outline-offset: -2px
-}
-
-.SegmentedToggle .SegmentedToggleOption.SegmentedToggleOptionSelected {
-  background-color: #2e80ee;
-  color: #fff;
-  cursor: default
+.PackPickButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  justify-content: center
 }

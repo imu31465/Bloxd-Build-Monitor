@@ -1,24 +1,24 @@
 export const id = 24;
 export const ids = [24];
 export const modules = {
-  39360: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      default: () => QC
+  39744: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      default: () => Op
     });
-    const QC = function() {
-      let CC;
+    const Op = function() {
+      let pp;
       return {
-        onCreate: zC => {
-          CC = zC
+        onCreate: ip => {
+          pp = ip
         },
-        onPlayerAltAction: (zC, ZC, QC, wC, bC, nC) => {
-          if (!nC || "Mesh" !== CC.getEntityType(nC)) return;
-          const fC = CC.getEntityName(nC);
-          "Perks" === fC ? CC.openShop(zC, !1, "Perks") : "Returning Bonus" === fC && CC.openShop(zC, !1, "Returning Player Bonus")
+        onPlayerAltAction: (ip, cp, Op, op, Ip, Sp) => {
+          if (!Sp || "Mesh" !== pp.getEntityType(Sp)) return;
+          const xp = pp.getEntityName(Sp);
+          "Perks" === xp ? pp.openShop(ip, !1, "Perks") : "Returning Bonus" === xp && pp.openShop(ip, !1, "Returning Player Bonus")
         }
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

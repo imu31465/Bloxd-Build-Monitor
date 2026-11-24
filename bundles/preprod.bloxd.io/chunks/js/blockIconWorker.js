@@ -1,325 +1,329 @@
 (() => {
   (() => {
     if ("undefined" !== typeof __webpack_require__) {
-      var CC = __webpack_require__.u,
-        zC = __webpack_require__.e,
-        ZC = {},
-        QC = {};
-      __webpack_require__.u = function(zC) {
-        return CC(zC) + (ZC.hasOwnProperty(zC) ? "?" + ZC[zC] : "")
-      }, __webpack_require__.e = function(wC) {
-        return zC(wC).catch((function(zC) {
-          var bC = QC.hasOwnProperty(wC) ? QC[wC] : 4;
-          if (bC < 1) {
-            var nC = CC(wC);
-            throw zC.message = "Loading chunk " + wC + " failed after 4 retries.\n(" + nC + ")", zC.request = nC, ZC[wC] = "cache-bust=" + Date.now(), setTimeout((function() {
-              delete QC[wC]
-            }), 0), zC
+      var pp = __webpack_require__.u,
+        ip = __webpack_require__.e,
+        cp = {},
+        Op = {};
+      __webpack_require__.u = function(ip) {
+        return pp(ip) + (cp.hasOwnProperty(ip) ? "?" + cp[ip] : "")
+      }, __webpack_require__.e = function(op) {
+        return ip(op).catch((function(ip) {
+          var Ip = Op.hasOwnProperty(op) ? Op[op] : 4;
+          if (Ip < 1) {
+            var Sp = pp(op);
+            if (ip.message = "Loading chunk " + op + " failed after 4 retries.\n(" + Sp + ")", ip.request = Sp, cp[op] = "cache-bust=" + Date.now(), setTimeout((function() {
+                delete Op[op]
+              }), 0), "CSS_CHUNK_LOAD_FAILED" === ip.code) {
+              var xp = __webpack_require__.miniCssF(op);
+              ip.message = ip.message.replace("Loading chunk", "Loading CSS chunk").replace(Sp, xp), ip.request = xp
+            }
+            throw ip
           }
-          return new Promise((function(CC) {
-            var zC = 4 - bC + 1;
+          return new Promise((function(pp) {
+            var ip = 4 - Ip + 1;
             setTimeout((function() {
-              var zC = "cache-bust=" + Date.now();
-              ZC[wC] = zC, QC[wC] = bC - 1, CC(__webpack_require__.e(wC))
-            }), function(CC) {
-              return 500 * Math.pow(2, CC)
-            }(zC))
+              var ip = "cache-bust=" + Date.now();
+              cp[op] = ip, Op[op] = Ip - 1, pp(__webpack_require__.e(op))
+            }), function(pp) {
+              return 500 * Math.pow(2, pp)
+            }(ip))
           }))
         }))
       }
     }
   })();
-  const CC = Math.SQRT1_2,
-    zC = Math.SQRT1_2 / 2,
-    ZC = Math.sqrt(3) / 2,
-    QC = 2 * CC,
-    wC = 2 * zC + ZC;
+  const pp = Math.SQRT1_2,
+    ip = Math.SQRT1_2 / 2,
+    cp = Math.sqrt(3) / 2,
+    Op = 2 * pp,
+    op = 2 * ip + cp;
 
-  function bC(zC, ZC) {
-    const QC = ZC > 0 ? ZC + 1 : 0,
-      bC = .6 * zC - ZC / CC;
-    return Math.max(0, Math.min(bC, (zC - 2 * QC) / wC))
+  function Ip(ip, cp) {
+    const Op = cp > 0 ? cp + 1 : 0,
+      Ip = .6 * ip - cp / pp;
+    return Math.max(0, Math.min(Ip, (ip - 2 * Op) / op))
   }
-  const nC = [15, 15, 15],
-    fC = {
+  const Sp = [15, 15, 15],
+    xp = {
       top: 1,
       left: .85,
       right: .7
     };
 
-  function oC(CC, zC, ZC, nC) {
+  function Lp(pp, ip, cp, Sp) {
     const {
-      vertices: fC,
-      uvs: oC,
-      indices: qC,
-      shades: FC
-    } = CC, NC = function(CC, zC) {
-      const ZC = bC(CC, zC),
-        nC = QC * ZC,
-        fC = wC * ZC;
+      vertices: xp,
+      uvs: Lp,
+      indices: Yp,
+      shades: Dp
+    } = pp, Pp = function(pp, ip) {
+      const cp = Ip(pp, ip),
+        Sp = Op * cp,
+        xp = op * cp;
       return {
-        left: (CC - nC) / 2,
-        top: (CC - fC) / 2,
-        width: nC,
-        height: fC
+        left: (pp - Sp) / 2,
+        top: (pp - xp) / 2,
+        width: Sp,
+        height: xp
       }
-    }(ZC, nC), MC = new Float32Array(fC.length);
-    for (let QC = 0; QC < fC.length; QC += 3) MC[QC] = NC.left + fC[QC] * NC.width, MC[QC + 1] = NC.top + fC[QC + 1] * NC.height, MC[QC + 2] = fC[QC + 2];
-    const gC = new Float32Array(ZC * ZC).fill(-1 / 0),
-      SC = new Uint8ClampedArray(ZC * ZC * 4),
-      pC = 255 * CC.alphaCutoff;
-    for (let QC = 0; QC < qC.length; QC += 3) {
-      const [CC, wC, bC] = [qC[QC], qC[QC + 1], qC[QC + 2]], [nC, fC, WC] = [3 * CC, 3 * wC, 3 * bC], [NC, PC, GC, RC, AC, xC] = [MC[nC], MC[nC + 1], MC[fC], MC[fC + 1], MC[WC], MC[WC + 1]], JC = (GC - NC) * (xC - PC) - (AC - NC) * (RC - PC);
-      if (Math.abs(JC) < 1e-9) continue;
-      const IC = FC[QC / 3],
-        [iC, vC, eC, hC, KC, YC] = [oC[2 * CC], oC[2 * CC + 1], oC[2 * wC], oC[2 * wC + 1], oC[2 * bC], oC[2 * bC + 1]],
-        dC = Math.max(0, Math.floor(Math.min(NC, GC, AC))),
-        mC = Math.min(ZC - 1, Math.ceil(Math.max(NC, GC, AC))),
-        HC = Math.max(0, Math.floor(Math.min(PC, RC, xC))),
-        EC = Math.min(ZC - 1, Math.ceil(Math.max(PC, RC, xC)));
-      for (let QC = HC; QC <= EC; QC++)
-        for (let CC = dC; CC <= mC; CC++) {
-          const [wC, bC] = [CC + .5, QC + .5], oC = ((wC - NC) * (xC - PC) - (AC - NC) * (bC - PC)) / JC, qC = ((GC - NC) * (bC - PC) - (wC - NC) * (RC - PC)) / JC, FC = 1 - oC - qC;
-          if (FC < 0 || oC < 0 || qC < 0) continue;
-          const dC = FC * MC[nC + 2] + oC * MC[fC + 2] + qC * MC[WC + 2],
-            mC = QC * ZC + CC;
-          if (dC <= gC[mC]) continue;
-          const HC = Math.max(0, Math.min(zC.width - 1, Math.floor((FC * iC + oC * eC + qC * KC) * zC.width))),
-            EC = 4 * (Math.max(0, Math.min(zC.height - 1, Math.floor((FC * vC + oC * hC + qC * YC) * zC.height))) * zC.width + HC);
-          zC.pixels[EC + 3] < pC || (gC[mC] = dC, SC[4 * mC] = zC.pixels[EC] * IC, SC[4 * mC + 1] = zC.pixels[EC + 1] * IC, SC[4 * mC + 2] = zC.pixels[EC + 2] * IC, SC[4 * mC + 3] = 255)
+    }(cp, Sp), Wp = new Float32Array(xp.length);
+    for (let Op = 0; Op < xp.length; Op += 3) Wp[Op] = Pp.left + xp[Op] * Pp.width, Wp[Op + 1] = Pp.top + xp[Op + 1] * Pp.height, Wp[Op + 2] = xp[Op + 2];
+    const yp = new Float32Array(cp * cp).fill(-1 / 0),
+      Up = new Uint8ClampedArray(cp * cp * 4),
+      wp = 255 * pp.alphaCutoff;
+    for (let Op = 0; Op < Yp.length; Op += 3) {
+      const [pp, op, Ip] = [Yp[Op], Yp[Op + 1], Yp[Op + 2]], [Sp, xp, Ap] = [3 * pp, 3 * op, 3 * Ip], [Pp, vp, tp, Hp, dp, ep] = [Wp[Sp], Wp[Sp + 1], Wp[xp], Wp[xp + 1], Wp[Ap], Wp[Ap + 1]], jp = (tp - Pp) * (ep - vp) - (dp - Pp) * (Hp - vp);
+      if (Math.abs(jp) < 1e-9) continue;
+      const kp = Dp[Op / 3],
+        [mp, Rp, qp, Mp, Cp, Ep] = [Lp[2 * pp], Lp[2 * pp + 1], Lp[2 * op], Lp[2 * op + 1], Lp[2 * Ip], Lp[2 * Ip + 1]],
+        Xp = Math.max(0, Math.floor(Math.min(Pp, tp, dp))),
+        lp = Math.min(cp - 1, Math.ceil(Math.max(Pp, tp, dp))),
+        Qp = Math.max(0, Math.floor(Math.min(vp, Hp, ep))),
+        Jp = Math.min(cp - 1, Math.ceil(Math.max(vp, Hp, ep)));
+      for (let Op = Qp; Op <= Jp; Op++)
+        for (let pp = Xp; pp <= lp; pp++) {
+          const [op, Ip] = [pp + .5, Op + .5], Lp = ((op - Pp) * (ep - vp) - (dp - Pp) * (Ip - vp)) / jp, Yp = ((tp - Pp) * (Ip - vp) - (op - Pp) * (Hp - vp)) / jp, Dp = 1 - Lp - Yp;
+          if (Dp < 0 || Lp < 0 || Yp < 0) continue;
+          const Xp = Dp * Wp[Sp + 2] + Lp * Wp[xp + 2] + Yp * Wp[Ap + 2],
+            lp = Op * cp + pp;
+          if (Xp <= yp[lp]) continue;
+          const Qp = Math.max(0, Math.min(ip.width - 1, Math.floor((Dp * mp + Lp * qp + Yp * Cp) * ip.width))),
+            Jp = 4 * (Math.max(0, Math.min(ip.height - 1, Math.floor((Dp * Rp + Lp * Mp + Yp * Ep) * ip.height))) * ip.width + Qp);
+          ip.pixels[Jp + 3] < wp || (yp[lp] = Xp, Up[4 * lp] = ip.pixels[Jp] * kp, Up[4 * lp + 1] = ip.pixels[Jp + 1] * kp, Up[4 * lp + 2] = ip.pixels[Jp + 2] * kp, Up[4 * lp + 3] = 255)
         }
     }
-    return WC(SC, ZC, nC), SC
+    return Ap(Up, cp, Sp), Up
   }
-  let qC = NaN,
-    FC = new Int32Array(0);
+  let Yp = NaN,
+    Dp = new Int32Array(0);
 
-  function WC(CC, zC, ZC) {
-    let QC = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : zC => 0 !== CC[4 * zC + 3];
-    const wC = new Uint8Array(zC * zC);
-    for (let nC = 0; nC < zC * zC; nC++) wC[nC] = QC(nC) ? 1 : 0;
-    const bC = (CC, ZC) => CC >= 0 && ZC >= 0 && CC < zC && ZC < zC && 0 === wC[ZC * zC + CC],
-      fC = new Float32Array(zC * zC).fill(1 / 0),
-      oC = function(CC) {
-        if (CC !== qC) {
-          const zC = Math.ceil(CC + 1),
-            ZC = [];
-          for (let QC = -zC; QC <= zC; QC++)
-            for (let wC = -zC; wC <= zC; wC++) {
-              const zC = wC * wC + QC * QC;
-              zC > 0 && zC < (CC + 1) ** 2 && ZC.push(wC, QC, zC)
+  function Ap(pp, ip, cp) {
+    let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : ip => 0 !== pp[4 * ip + 3];
+    const op = new Uint8Array(ip * ip);
+    for (let Sp = 0; Sp < ip * ip; Sp++) op[Sp] = Op(Sp) ? 1 : 0;
+    const Ip = (pp, cp) => pp >= 0 && cp >= 0 && pp < ip && cp < ip && 0 === op[cp * ip + pp],
+      xp = new Float32Array(ip * ip).fill(1 / 0),
+      Lp = function(pp) {
+        if (pp !== Yp) {
+          const ip = Math.ceil(pp + 1),
+            cp = [];
+          for (let Op = -ip; Op <= ip; Op++)
+            for (let op = -ip; op <= ip; op++) {
+              const ip = op * op + Op * Op;
+              ip > 0 && ip < (pp + 1) ** 2 && cp.push(op, Op, ip)
             }
-          qC = CC, FC = Int32Array.from(ZC)
+          Yp = pp, Dp = Int32Array.from(cp)
         }
-        return FC
-      }(ZC);
-    for (let nC = 0; nC < zC; nC++)
-      for (let CC = 0; CC < zC; CC++) {
-        if (1 === wC[nC * zC + CC] && (bC(CC - 1, nC) || bC(CC + 1, nC) || bC(CC, nC - 1) || bC(CC, nC + 1)))
-          for (let ZC = 0; ZC < oC.length; ZC += 3) {
-            const QC = CC + oC[ZC],
-              wC = nC + oC[ZC + 1];
-            if (QC >= 0 && wC >= 0 && QC < zC && wC < zC) {
-              const CC = wC * zC + QC;
-              fC[CC] = Math.min(fC[CC], oC[ZC + 2])
+        return Dp
+      }(cp);
+    for (let Sp = 0; Sp < ip; Sp++)
+      for (let pp = 0; pp < ip; pp++) {
+        if (1 === op[Sp * ip + pp] && (Ip(pp - 1, Sp) || Ip(pp + 1, Sp) || Ip(pp, Sp - 1) || Ip(pp, Sp + 1)))
+          for (let cp = 0; cp < Lp.length; cp += 3) {
+            const Op = pp + Lp[cp],
+              op = Sp + Lp[cp + 1];
+            if (Op >= 0 && op >= 0 && Op < ip && op < ip) {
+              const pp = op * ip + Op;
+              xp[pp] = Math.min(xp[pp], Lp[cp + 2])
             }
           }
       }
-    for (let qC = 0; qC < zC * zC; qC++) 1 !== wC[qC] && fC[qC] !== 1 / 0 && (CC.set(nC, 4 * qC), CC[4 * qC + 3] = Math.round(255 * Math.min(1, ZC + 1 - Math.sqrt(fC[qC]))))
+    for (let Yp = 0; Yp < ip * ip; Yp++) 1 !== op[Yp] && xp[Yp] !== 1 / 0 && (pp.set(Sp, 4 * Yp), pp[4 * Yp + 3] = Math.round(255 * Math.min(1, cp + 1 - Math.sqrt(xp[Yp]))))
   }
-  const NC = {
+  const Pp = {
       boxes: [
         [0, 0, 0, 1, 1, 1]
       ],
       cropFaces: !1
     },
-    MC = {
+    Wp = {
       boxes: [
         [0, 0, 0, 1, .5, 1]
       ],
       cropFaces: !1
     },
-    gC = {
+    yp = {
       boxes: [
         [0, 0, 0, 1, .5, 1],
         [0, .5, 0, .5, 1, 1]
       ],
       cropFaces: !0
     };
-  const SC = 1e-6;
+  const Up = 1e-6;
 
-  function pC(CC, zC, ZC, QC) {
+  function wp(pp, ip, cp, Op) {
     let {
-      origin: wC,
-      across: bC,
-      down: nC,
-      texture: fC,
-      rect: [oC, qC, FC, WC],
-      shade: NC
-    } = QC;
-    const MC = bC.x * nC.y - bC.y * nC.x;
-    if (Math.abs(MC) < 1e-9) return;
-    const gC = [wC.x, wC.x + bC.x, wC.x + nC.x, wC.x + bC.x + nC.x],
-      pC = [wC.y, wC.y + bC.y, wC.y + nC.y, wC.y + bC.y + nC.y],
-      PC = Math.max(0, Math.floor(Math.min(...gC))),
-      GC = Math.min(ZC - 1, Math.ceil(Math.max(...gC))),
-      RC = Math.max(0, Math.floor(Math.min(...pC))),
-      AC = Math.min(ZC - 1, Math.ceil(Math.max(...pC)));
-    for (let xC = RC; xC <= AC; xC++)
-      for (let QC = PC; QC <= GC; QC++) {
-        const gC = QC + .5 - wC.x,
-          pC = xC + .5 - wC.y,
-          PC = (gC * nC.y - pC * nC.x) / MC,
-          GC = (bC.x * pC - bC.y * gC) / MC;
-        if (PC < -SC || PC > 1 + SC || GC < -SC || GC > 1 + SC) continue;
-        const RC = xC * ZC + QC;
-        zC[RC] = 1;
-        const AC = oC + Math.min(Math.max(PC, 0), 1) * (FC - oC),
-          JC = qC + Math.min(Math.max(GC, 0), 1) * (WC - qC),
-          IC = Math.min(fC.width - 1, Math.floor(AC * fC.width)),
-          iC = 4 * (Math.min(fC.height - 1, Math.floor(JC * fC.height)) * fC.width + IC),
-          vC = fC.pixels[iC + 3] / 255;
-        if (0 === vC) continue;
-        const eC = 4 * RC,
-          hC = CC[eC + 3] / 255 * (1 - vC),
-          KC = vC + hC;
-        for (let zC = 0; zC < 3; zC++) CC[eC + zC] = (fC.pixels[iC + zC] * NC * vC + CC[eC + zC] * hC) / KC;
-        CC[eC + 3] = 255 * KC
+      origin: op,
+      across: Ip,
+      down: Sp,
+      texture: xp,
+      rect: [Lp, Yp, Dp, Ap],
+      shade: Pp
+    } = Op;
+    const Wp = Ip.x * Sp.y - Ip.y * Sp.x;
+    if (Math.abs(Wp) < 1e-9) return;
+    const yp = [op.x, op.x + Ip.x, op.x + Sp.x, op.x + Ip.x + Sp.x],
+      wp = [op.y, op.y + Ip.y, op.y + Sp.y, op.y + Ip.y + Sp.y],
+      vp = Math.max(0, Math.floor(Math.min(...yp))),
+      tp = Math.min(cp - 1, Math.ceil(Math.max(...yp))),
+      Hp = Math.max(0, Math.floor(Math.min(...wp))),
+      dp = Math.min(cp - 1, Math.ceil(Math.max(...wp)));
+    for (let ep = Hp; ep <= dp; ep++)
+      for (let Op = vp; Op <= tp; Op++) {
+        const yp = Op + .5 - op.x,
+          wp = ep + .5 - op.y,
+          vp = (yp * Sp.y - wp * Sp.x) / Wp,
+          tp = (Ip.x * wp - Ip.y * yp) / Wp;
+        if (vp < -Up || vp > 1 + Up || tp < -Up || tp > 1 + Up) continue;
+        const Hp = ep * cp + Op;
+        ip[Hp] = 1;
+        const dp = Lp + Math.min(Math.max(vp, 0), 1) * (Dp - Lp),
+          jp = Yp + Math.min(Math.max(tp, 0), 1) * (Ap - Yp),
+          kp = Math.min(xp.width - 1, Math.floor(dp * xp.width)),
+          mp = 4 * (Math.min(xp.height - 1, Math.floor(jp * xp.height)) * xp.width + kp),
+          Rp = xp.pixels[mp + 3] / 255;
+        if (0 === Rp) continue;
+        const qp = 4 * Hp,
+          Mp = pp[qp + 3] / 255 * (1 - Rp),
+          Cp = Rp + Mp;
+        for (let ip = 0; ip < 3; ip++) pp[qp + ip] = (xp.pixels[mp + ip] * Pp * Rp + pp[qp + ip] * Mp) / Cp;
+        pp[qp + 3] = 255 * Cp
       }
   }
 
-  function PC(CC, zC, ZC) {
-    const QC = CC.get(zC);
-    if (void 0 === QC) throw new Error(`no ${ZC} was sent for ${zC.slice(0,100)}`);
-    return QC
+  function vp(pp, ip, cp) {
+    const Op = pp.get(ip);
+    if (void 0 === Op) throw new Error(`no ${cp} was sent for ${ip.slice(0,100)}`);
+    return Op
   }
-  const GC = {
-      pixelsOf(CC) {
-        const zC = new OffscreenCanvas(CC.width, CC.height),
-          ZC = zC.getContext("2d");
-        if (!ZC) throw new Error("no 2D context");
-        return ZC.drawImage(CC, 0, 0), CC.close(), {
-          width: zC.width,
-          height: zC.height,
-          pixels: ZC.getImageData(0, 0, zC.width, zC.height).data
+  const tp = {
+      pixelsOf(pp) {
+        const ip = new OffscreenCanvas(pp.width, pp.height),
+          cp = ip.getContext("2d");
+        if (!cp) throw new Error("no 2D context");
+        return cp.drawImage(pp, 0, 0), pp.close(), {
+          width: ip.width,
+          height: ip.height,
+          pixels: cp.getImageData(0, 0, ip.width, ip.height).data
         }
       },
-      async encode(CC, zC) {
-        const ZC = new OffscreenCanvas(zC, zC),
-          QC = ZC.getContext("2d");
-        if (!QC) throw new Error("no 2D context");
-        QC.putImageData(new ImageData(CC, zC, zC), 0, 0);
-        const wC = await ZC.convertToBlob();
-        return new Promise(((CC, zC) => {
-          const ZC = new FileReader;
-          ZC.onload = () => {
-            CC(ZC.result)
-          }, ZC.onerror = () => {
-            var CC;
-            zC(null !== (CC = ZC.error) && void 0 !== CC ? CC : new Error("the icon did not encode"))
-          }, ZC.readAsDataURL(wC)
+      async encode(pp, ip) {
+        const cp = new OffscreenCanvas(ip, ip),
+          Op = cp.getContext("2d");
+        if (!Op) throw new Error("no 2D context");
+        Op.putImageData(new ImageData(pp, ip, ip), 0, 0);
+        const op = await cp.convertToBlob();
+        return new Promise(((pp, ip) => {
+          const cp = new FileReader;
+          cp.onload = () => {
+            pp(cp.result)
+          }, cp.onerror = () => {
+            var pp;
+            ip(null !== (pp = cp.error) && void 0 !== pp ? pp : new Error("the icon did not encode"))
+          }, cp.readAsDataURL(op)
         }))
       }
     },
-    RC = globalThis.WorkerGlobalScope;
-  void 0 !== RC && globalThis instanceof RC && function(QC, wC) {
-    const nC = new Map,
-      qC = new Map,
-      FC = (CC, zC, ZC) => {
+    Hp = globalThis.WorkerGlobalScope;
+  void 0 !== Hp && globalThis instanceof Hp && function(Op, op) {
+    const Sp = new Map,
+      Yp = new Map,
+      Dp = (pp, ip, cp) => {
         (async () => {
           try {
-            QC.postMessage({
+            Op.postMessage({
               type: "drawn",
-              id: CC,
-              url: await wC.encode(ZC(), zC)
+              id: pp,
+              url: await op.encode(cp(), ip)
             })
-          } catch (bC) {
-            QC.postMessage({
+          } catch (Ip) {
+            Op.postMessage({
               type: "failed",
-              message: String(bC)
+              message: String(Ip)
             })
           }
         })()
       };
-    QC.onmessage = QC => {
+    Op.onmessage = Op => {
       let {
-        data: SC
-      } = QC;
-      if ("texture" === SC.type) nC.set(SC.url, wC.pixelsOf(SC.bitmap));
-      else if ("model" === SC.type) qC.set(SC.name, {
-        geometry: SC.geometry,
-        texture: wC.pixelsOf(SC.bitmap)
+        data: Up
+      } = Op;
+      if ("texture" === Up.type) Sp.set(Up.url, op.pixelsOf(Up.bitmap));
+      else if ("model" === Up.type) Yp.set(Up.name, {
+        geometry: Up.geometry,
+        texture: op.pixelsOf(Up.bitmap)
       });
-      else if ("draw" === SC.type) {
+      else if ("draw" === Up.type) {
         const {
-          id: QC,
-          top: wC,
-          left: oC,
-          right: qC,
-          itemType: GC,
-          size: RC,
-          outlineWidth: AC
-        } = SC;
-        FC(QC, RC, (() => function(QC, wC, nC, oC) {
-          const qC = bC(nC, oC),
-            FC = qC * CC,
-            NC = qC * zC,
-            MC = qC * ZC,
-            gC = Math.max(...wC.boxes.map((CC => CC[4]))),
-            SC = nC / 2,
-            PC = NC + (nC - NC - NC - gC * MC) / 2,
-            GC = (CC, zC, ZC) => ({
-              x: SC + (CC - ZC) * FC,
-              y: PC - NC + (CC + ZC) * NC + (gC - zC) * MC
+          id: Op,
+          top: op,
+          left: Lp,
+          right: Yp,
+          itemType: tp,
+          size: Hp,
+          outlineWidth: dp
+        } = Up;
+        Dp(Op, Hp, (() => function(Op, op, Sp, Lp) {
+          const Yp = Ip(Sp, Lp),
+            Dp = Yp * pp,
+            Pp = Yp * ip,
+            Wp = Yp * cp,
+            yp = Math.max(...op.boxes.map((pp => pp[4]))),
+            Up = Sp / 2,
+            vp = Pp + (Sp - Pp - Pp - yp * Wp) / 2,
+            tp = (pp, ip, cp) => ({
+              x: Up + (pp - cp) * Dp,
+              y: vp - Pp + (pp + cp) * Pp + (yp - ip) * Wp
             }),
-            RC = (CC, zC, ZC, QC, bC, nC) => ({
-              origin: CC,
+            Hp = (pp, ip, cp, Op, Ip, Sp) => ({
+              origin: pp,
               across: {
-                x: zC.x - CC.x,
-                y: zC.y - CC.y
+                x: ip.x - pp.x,
+                y: ip.y - pp.y
               },
               down: {
-                x: ZC.x - CC.x,
-                y: ZC.y - CC.y
+                x: cp.x - pp.x,
+                y: cp.y - pp.y
               },
-              texture: QC,
-              rect: wC.cropFaces ? bC : [0, 0, 1, 1],
-              shade: nC
+              texture: Op,
+              rect: op.cropFaces ? Ip : [0, 0, 1, 1],
+              shade: Sp
             }),
-            AC = new Uint8ClampedArray(nC * nC * 4),
-            xC = new Uint8Array(nC * nC),
-            JC = fC;
-          for (const [CC, zC, ZC, bC, fC, WC] of wC.boxes) {
-            const wC = RC(GC(bC, fC, WC), GC(bC, fC, ZC), GC(bC, zC, WC), QC.right, [1 - WC, 1 - fC, 1 - ZC, 1 - zC], JC.right),
-              oC = RC(GC(CC, fC, WC), GC(bC, fC, WC), GC(CC, zC, WC), QC.left, [CC, 1 - fC, bC, 1 - zC], JC.left),
-              qC = RC(GC(CC, fC, ZC), GC(bC, fC, ZC), GC(CC, fC, WC), QC.top, [CC, ZC, bC, WC], JC.top);
-            for (const CC of [wC, oC, qC]) pC(AC, xC, nC, CC)
+            dp = new Uint8ClampedArray(Sp * Sp * 4),
+            ep = new Uint8Array(Sp * Sp),
+            jp = xp;
+          for (const [pp, ip, cp, Ip, xp, Ap] of op.boxes) {
+            const op = Hp(tp(Ip, xp, Ap), tp(Ip, xp, cp), tp(Ip, ip, Ap), Op.right, [1 - Ap, 1 - xp, 1 - cp, 1 - ip], jp.right),
+              Lp = Hp(tp(pp, xp, Ap), tp(Ip, xp, Ap), tp(pp, ip, Ap), Op.left, [pp, 1 - xp, Ip, 1 - ip], jp.left),
+              Yp = Hp(tp(pp, xp, cp), tp(Ip, xp, cp), tp(pp, xp, Ap), Op.top, [pp, cp, Ip, Ap], jp.top);
+            for (const pp of [op, Lp, Yp]) wp(dp, ep, Sp, pp)
           }
-          return WC(AC, nC, oC, (CC => 1 === xC[CC])), AC
+          return Ap(dp, Sp, Lp, (pp => 1 === ep[pp])), dp
         }({
-          top: PC(nC, wC, "texture"),
-          left: PC(nC, oC, "texture"),
-          right: PC(nC, qC, "texture")
-        }, function(CC) {
-          return "SlabBlock" === CC ? MC : "StairsBlock" === CC ? gC : NC
-        }(GC), RC, AC)))
+          top: vp(Sp, op, "texture"),
+          left: vp(Sp, Lp, "texture"),
+          right: vp(Sp, Yp, "texture")
+        }, function(pp) {
+          return "SlabBlock" === pp ? Wp : "StairsBlock" === pp ? yp : Pp
+        }(tp), Hp, dp)))
       } else {
         const {
-          id: CC,
-          name: zC,
-          size: ZC,
-          outlineWidth: QC
-        } = SC;
-        FC(CC, ZC, (() => {
+          id: pp,
+          name: ip,
+          size: cp,
+          outlineWidth: Op
+        } = Up;
+        Dp(pp, cp, (() => {
           const {
-            geometry: CC,
-            texture: wC
-          } = PC(qC, zC, "model");
-          return oC(CC, wC, ZC, QC)
+            geometry: pp,
+            texture: op
+          } = vp(Yp, ip, "model");
+          return Lp(pp, op, cp, Op)
         }))
       }
-    }, QC.postMessage({
+    }, Op.postMessage({
       type: "started"
     })
-  }(globalThis, GC)
+  }(globalThis, tp)
 })();

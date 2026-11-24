@@ -1,257 +1,257 @@
 export const id = 19;
 export const ids = [19];
 export const modules = {
-  36483: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => MC,
-      c: () => gC,
-      d: () => NC,
-      f: () => WC
+  36791: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Wp,
+      h: () => yp,
+      i: () => Pp,
+      k: () => Ap
     });
-    var QC = ZC(34153),
-      wC = ZC(36488),
-      bC = ZC(36490),
-      nC = ZC(8735),
-      fC = ZC(1383),
-      oC = ZC(48),
-      qC = ZC(60),
-      FC = ZC(1056);
+    var Op = cp(34430),
+      op = cp(36799),
+      Ip = cp(36804),
+      Sp = cp(8852),
+      xp = cp(1476),
+      Lp = cp(62),
+      Yp = cp(82),
+      Dp = cp(1112);
 
-    function WC() {
-      var CC;
-      return (0, fC.f)(wC.d, (0, wC.q)()), (0, FC.jsx)(FC.Fragment, {
-        children: null === (CC = (0, wC.q)()) || void 0 === CC ? void 0 : CC.content
+    function Ap() {
+      var pp;
+      return (0, xp.i)(op.d, (0, op.s)()), (0, Dp.jsx)(Dp.Fragment, {
+        children: null === (pp = (0, op.s)()) || void 0 === pp ? void 0 : pp.content
       })
     }
 
-    function NC(CC) {
-      var zC;
+    function Pp(pp) {
+      var ip;
       let {
-        show: ZC
-      } = CC;
-      (0, fC.f)(wC.d, (0, wC.q)());
-      const qC = null === (zC = (0, wC.q)()) || void 0 === zC ? void 0 : zC.menu;
-      return (0, oC.useEffect)((() => {
-        var CC;
-        ZC || (null === qC || void 0 === qC || null === (CC = qC.onClose) || void 0 === CC || CC.call(qC), (0, bC.p)())
-      }), [ZC, qC]), (0, oC.useEffect)((() => ZC ? (0, nC.f)(bC.z, bC.g) : void 0), [ZC]), (0, FC.jsx)(QC.d, {
-        showing: ZC,
+        show: cp
+      } = pp;
+      (0, xp.i)(op.d, (0, op.s)());
+      const Yp = null === (ip = (0, op.s)()) || void 0 === ip ? void 0 : ip.menu;
+      return (0, Lp.useEffect)((() => {
+        var pp;
+        cp || (null === Yp || void 0 === Yp || null === (pp = Yp.onClose) || void 0 === pp || pp.call(Yp), (0, Ip.q)())
+      }), [cp, Yp]), (0, Lp.useEffect)((() => cp ? (0, Sp.e)(Ip.A, Ip.d) : void 0), [cp]), (0, Dp.jsx)(Op.b, {
+        showing: cp,
         globallyUniqueKey: "clientGameMenu",
-        children: null === qC || void 0 === qC ? void 0 : qC.content
+        children: null === Yp || void 0 === Yp ? void 0 : Yp.content
       })
     }
 
-    function MC(CC) {
+    function Wp(pp) {
       let {
-        placement: zC = "bottom"
-      } = CC;
-      return (0, FC.jsx)("div", {
-        id: `clientGameHud-${zC}`,
+        placement: ip = "bottom"
+      } = pp;
+      return (0, Dp.jsx)("div", {
+        id: `clientGameHud-${ip}`,
         style: {
           display: "contents"
         }
       })
     }
 
-    function gC(CC) {
+    function yp(pp) {
       let {
-        children: zC,
-        placement: ZC = "bottom"
-      } = CC;
-      const [QC, wC] = (0, oC.useState)(null);
-      return (0, oC.useEffect)((() => {
-        wC(document.getElementById(`clientGameHud-${ZC}`))
-      }), [ZC]), QC ? (0, qC.createPortal)(zC, QC) : null
+        children: ip,
+        placement: cp = "bottom"
+      } = pp;
+      const [Op, op] = (0, Lp.useState)(null);
+      return (0, Lp.useEffect)((() => {
+        op(document.getElementById(`clientGameHud-${cp}`))
+      }), [cp]), Op ? (0, Yp.createPortal)(ip, Op) : null
     }
   },
-  34153: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => bC
+  34430: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Ip
     });
-    var QC = ZC(4473),
-      wC = ZC(4479);
+    var Op = cp(4628),
+      op = cp(4635);
 
-    function bC(CC) {
+    function Ip(pp) {
       let {
-        children: zC,
-        showing: ZC,
-        globallyUniqueKey: bC,
-        alwaysMountChildren: nC = !1,
-        doGameplayStartStopOnShow: fC = !0,
-        keepsMovement: oC = !1
-      } = CC;
-      return (0, wC.b)(!0, ZC, bC, oC), (0, QC.d)(fC, ZC), ZC || nC ? zC : null
+        children: ip,
+        showing: cp,
+        globallyUniqueKey: Ip,
+        alwaysMountChildren: Sp = !1,
+        doGameplayStartStopOnShow: xp = !0,
+        keepsMovement: Lp = !1
+      } = pp;
+      return (0, op.e)(!0, cp, Ip, Lp), (0, Op.d)(xp, cp), cp || Sp ? ip : null
     }
   },
-  8735: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => bC,
-      f: () => wC
+  8852: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Ip,
+      e: () => op
     });
-    let QC = null;
-    const wC = function(CC) {
-        const zC = {
-          cycle: CC,
+    let Op = null;
+    const op = function(pp) {
+        const ip = {
+          cycle: pp,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return QC = zC, () => {
-          QC === zC && (QC = null)
+        return Op = ip, () => {
+          Op === ip && (Op = null)
         }
       },
-      bC = () => {
-        var CC;
-        return null !== (CC = QC) && void 0 !== CC && CC.canCycle() ? QC.cycle : null
+      Ip = () => {
+        var pp;
+        return null !== (pp = Op) && void 0 !== pp && pp.canCycle() ? Op.cycle : null
       }
   },
-  36490: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      B: () => GC,
-      c: () => bC,
-      g: () => SC,
-      j: () => pC,
-      m: () => fC,
-      o: () => NC,
-      p: () => PC,
-      r: () => WC,
-      v: () => RC,
-      z: () => gC
+  36804: (pp, ip, cp) => {
+    cp.d(ip, {
+      A: () => yp,
+      E: () => tp,
+      b: () => Ip,
+      d: () => Up,
+      f: () => wp,
+      j: () => xp,
+      n: () => Pp,
+      q: () => vp,
+      u: () => Ap,
+      w: () => Hp
     });
-    var QC = ZC(20),
-      wC = ZC(28);
-    const bC = "clientGameInventoryButtonsChanged",
-      nC = new Map;
+    var Op = cp(25),
+      op = cp(34);
+    const Ip = "clientGameInventoryButtonsChanged",
+      Sp = new Map;
 
-    function fC() {
-      return [...nC.values()].sort(((CC, zC) => {
-        var ZC, QC;
-        return (null !== (ZC = CC.order) && void 0 !== ZC ? ZC : 0) - (null !== (QC = zC.order) && void 0 !== QC ? QC : 0)
+    function xp() {
+      return [...Sp.values()].sort(((pp, ip) => {
+        var cp, Op;
+        return (null !== (cp = pp.order) && void 0 !== cp ? cp : 0) - (null !== (Op = ip.order) && void 0 !== Op ? Op : 0)
       }))
     }
-    let oC = null;
+    let Lp = null;
 
-    function qC(CC) {
-      oC = CC
+    function Yp(pp) {
+      Lp = pp
     }
-    let FC = !1;
+    let Dp = !1;
 
-    function WC(CC) {
-      FC = !0;
+    function Ap(pp) {
+      Dp = !0;
       try {
-        CC.onClick()
+        pp.onClick()
       } finally {
-        FC = !1
+        Dp = !1
       }
-      CC.panel && "clientGame" === QC.b.get("openInGameMenuName") && qC(CC.id)
+      pp.panel && "clientGame" === Op.c.get("openInGameMenuName") && Yp(pp.id)
     }
 
-    function NC() {
-      return FC
+    function Pp() {
+      return Dp
     }
 
-    function MC() {
-      return fC().filter((CC => CC.panel && !CC.disabled))
+    function Wp() {
+      return xp().filter((pp => pp.panel && !pp.disabled))
     }
 
-    function gC(CC) {
-      const zC = MC(),
-        ZC = zC.findIndex((CC => CC.id === oC));
-      return !(ZC < 0 || zC.length < 2) && (WC(zC[(ZC + CC + zC.length) % zC.length]), !0)
+    function yp(pp) {
+      const ip = Wp(),
+        cp = ip.findIndex((pp => pp.id === Lp));
+      return !(cp < 0 || ip.length < 2) && (Ap(ip[(cp + pp + ip.length) % ip.length]), !0)
     }
 
-    function SC() {
-      return null !== oC && MC().length > 1
+    function Up() {
+      return null !== Lp && Wp().length > 1
     }
 
-    function pC() {
-      qC(null)
+    function wp() {
+      Yp(null)
     }
 
-    function PC() {
-      "inventory" !== QC.b.get("openInGameMenuName") && qC(null)
+    function vp() {
+      "inventory" !== Op.c.get("openInGameMenuName") && Yp(null)
     }
 
-    function GC() {
-      const CC = oC;
-      return qC(null), CC
+    function tp() {
+      const pp = Lp;
+      return Yp(null), pp
     }
 
-    function RC(CC) {
-      return nC.set(CC.id, CC), wC.o.bp(bC, fC(), !0), () => {
-        nC.get(CC.id) === CC && (nC.delete(CC.id), wC.o.bp(bC, fC()))
+    function Hp(pp) {
+      return Sp.set(pp.id, pp), op.m.GA(Ip, xp(), !0), () => {
+        Sp.get(pp.id) === pp && (Sp.delete(pp.id), op.m.GA(Ip, xp()))
       }
     }
   },
-  36488: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      C: () => FC,
-      d: () => fC,
-      h: () => pC,
-      k: () => PC,
-      o: () => NC,
-      q: () => qC,
-      u: () => SC,
-      y: () => MC
+  36799: (pp, ip, cp) => {
+    cp.d(ip, {
+      A: () => Dp,
+      d: () => xp,
+      h: () => wp,
+      l: () => vp,
+      o: () => Pp,
+      s: () => Yp,
+      t: () => Up,
+      x: () => Wp
     });
-    var QC = ZC(20),
-      wC = ZC(28),
-      bC = ZC(1240),
-      nC = ZC(36490);
-    const fC = "clientGameUiChanged";
-    let oC = null;
+    var Op = cp(25),
+      op = cp(34),
+      Ip = cp(1308),
+      Sp = cp(36804);
+    const xp = "clientGameUiChanged";
+    let Lp = null;
 
-    function qC() {
-      return oC
+    function Yp() {
+      return Lp
     }
 
-    function FC(CC, zC) {
-      const ZC = {
-        content: CC,
-        menu: zC
+    function Dp(pp, ip) {
+      const cp = {
+        content: pp,
+        menu: ip
       };
-      return oC = ZC, wC.o.bp(fC, oC, !0), () => {
-        oC === ZC && (oC = null, gC = !1, pC(), wC.o.bp(fC, null))
+      return Lp = cp, op.m.GA(xp, Lp, !0), () => {
+        Lp === cp && (Lp = null, yp = !1, wp(), op.m.GA(xp, null))
       }
     }
-    let WC = null;
+    let Ap = null;
 
-    function NC() {
-      return WC
+    function Pp() {
+      return Ap
     }
 
-    function MC(CC) {
-      return WC = CC, () => {
-        WC === CC && (WC = null)
+    function Wp(pp) {
+      return Ap = pp, () => {
+        Ap === pp && (Ap = null)
       }
     }
-    let gC = !1;
+    let yp = !1;
 
-    function SC() {
-      const CC = QC.b.get("openInGameMenuName");
-      "clientGame" !== CC && (gC = "inventory" === CC), (0, nC.o)() || (0, nC.j)(), (0, bC.u)(bC.e), QC.b.set({
+    function Up() {
+      const pp = Op.c.get("openInGameMenuName");
+      "clientGame" !== pp && (yp = "inventory" === pp), (0, Sp.n)() || (0, Sp.f)(), (0, Ip.s)(Ip.c), Op.c.set({
         openInGameMenuName: "clientGame",
         openEverythingMenuName: null
       })
     }
 
-    function pC() {
-      GC(!1)
+    function wp() {
+      tp(!1)
     }
 
-    function PC() {
-      GC(gC)
+    function vp() {
+      tp(yp)
     }
 
-    function GC(CC) {
-      "clientGame" === QC.b.get("openInGameMenuName") && QC.b.set({
-        openInGameMenuName: CC ? "inventory" : null
-      }), CC || (0, nC.j)(), gC = !1
+    function tp(pp) {
+      "clientGame" === Op.c.get("openInGameMenuName") && Op.c.set({
+        openInGameMenuName: pp ? "inventory" : null
+      }), pp || (0, Sp.f)(), yp = !1
     }
   },
-  39269: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      default: () => VC
+  39640: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      default: () => ii
     });
-    const QC = {
+    const Op = {
       trader: {
         name: "Lucky Trader",
         shopTab: "Basic Blocks"
@@ -261,270 +261,270 @@ export const modules = {
         shopTab: "Team Upgrades"
       }
     };
-    var wC = ZC(48),
-      bC = ZC(37868),
-      nC = ZC(326);
-    const fC = ["Basic", "Rare", "Super"];
+    var op = cp(62),
+      Ip = cp(38261),
+      Sp = cp(337);
+    const xp = ["Basic", "Rare", "Super"];
 
-    function oC(CC, zC) {
-      return `${"Basic"===zC?"":`${zC} `}${"Simple"===CC?"":`${CC} `}Lucky Block`
+    function Lp(pp, ip) {
+      return `${"Basic"===ip?"":`${ip} `}${"Simple"===pp?"":`${pp} `}Lucky Block`
     }
-    const qC = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((CC => fC.map((zC => [oC(CC, zC), {
-      category: CC,
-      rarity: zC
+    const Yp = new Map(["Simple", "Building", "Weapon", "Armour", "Tools", "Food", "Potion"].flatMap((pp => xp.map((ip => [Lp(pp, ip), {
+      category: pp,
+      rarity: ip
     }])))));
-    qC.keys();
+    Yp.keys();
 
-    function FC(CC) {
-      return qC.get(CC)
+    function Dp(pp) {
+      return Yp.get(pp)
     }
-    const WC = "Obsidian",
-      NC = ["Cobweb"],
-      MC = [...["Red", "Blue", "Green", "Yellow"].map((CC => `${(0,nC.S)(CC)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", WC, ...NC];
+    const Ap = "Obsidian",
+      Pp = ["Cobweb"],
+      Wp = [...["Red", "Blue", "Green", "Yellow"].map((pp => `${(0,Sp.ab)(pp)} Wool`)), "Maple Wood Planks", "Cracked Stone Bricks", "Baked Clay", Ap, ...Pp];
 
-    function gC(CC) {
-      return MC.includes(CC)
+    function yp(pp) {
+      return Wp.includes(pp)
     }
-    var SC = ZC(600);
+    var Up = cp(640);
 
-    function pC(CC, zC) {
-      const ZC = FC(CC);
-      if (ZC) {
-        const CC = FC(zC);
-        if (!CC) return;
-        const QC = fC.length - 1 - fC.indexOf(CC.rarity);
-        return (CC.category === ZC.category ? 0 : 1) * fC.length + QC
+    function wp(pp, ip) {
+      const cp = Dp(pp);
+      if (cp) {
+        const pp = Dp(ip);
+        if (!pp) return;
+        const Op = xp.length - 1 - xp.indexOf(pp.rarity);
+        return (pp.category === cp.category ? 0 : 1) * xp.length + Op
       }
-      if (!gC(CC)) return;
-      if (zC === CC) return 0;
-      const QC = CC => gC(CC) && !NC.includes(CC) && CC !== WC;
-      return QC(CC) && QC(zC) ? 1 : void 0
+      if (!yp(pp)) return;
+      if (ip === pp) return 0;
+      const Op = pp => yp(pp) && !Pp.includes(pp) && pp !== Ap;
+      return Op(pp) && Op(ip) ? 1 : void 0
     }
-    const PC = [...Array.from({
-      length: SC.r - SC.q
-    }, ((CC, zC) => SC.q + zC)), ...Array.from({
-      length: SC.q
-    }, ((CC, zC) => zC))];
-    class GC {
-      constructor(CC) {
-        this.inventory = CC, this.pending = new Map
+    const vp = [...Array.from({
+      length: Up.p - Up.l
+    }, ((pp, ip) => Up.l + ip)), ...Array.from({
+      length: Up.l
+    }, ((pp, ip) => ip))];
+    class tp {
+      constructor(pp) {
+        this.inventory = pp, this.pending = new Map
       }
-      onPlace(CC) {
-        var zC;
-        const ZC = this.inventory.selectedSlot(),
-          QC = this.inventory.itemAt(ZC);
-        (null === QC || void 0 === QC ? void 0 : QC.name) === CC && (null !== (zC = QC.amount) && void 0 !== zC ? zC : 1) <= 1 && RC(CC) && this.pending.set(ZC, CC)
+      onPlace(pp) {
+        var ip;
+        const cp = this.inventory.selectedSlot(),
+          Op = this.inventory.itemAt(cp);
+        (null === Op || void 0 === Op ? void 0 : Op.name) === pp && (null !== (ip = Op.amount) && void 0 !== ip ? ip : 1) <= 1 && Hp(pp) && this.pending.set(cp, pp)
       }
-      onDrop(CC, zC) {
-        zC < SC.q && null === this.inventory.itemAt(zC) && RC(CC) && this.refill(zC, CC)
+      onDrop(pp, ip) {
+        ip < Up.l && null === this.inventory.itemAt(ip) && Hp(pp) && this.refill(ip, pp)
       }
-      ZN() {
-        const CC = [...this.pending];
+      LP() {
+        const pp = [...this.pending];
         this.pending.clear();
-        for (const [zC, ZC] of CC) null === this.inventory.itemAt(zC) && this.refill(zC, ZC)
+        for (const [ip, cp] of pp) null === this.inventory.itemAt(ip) && this.refill(ip, cp)
       }
-      refill(CC, zC) {
-        const ZC = function(CC, zC, ZC, QC) {
-          let wC, bC = 1 / 0;
-          for (const nC of PC) {
-            if (nC === zC) continue;
-            const fC = QC(nC);
-            if (!fC || nC < SC.q && zC !== ZC) continue;
-            const oC = pC(CC, fC.name);
-            void 0 !== oC && oC < bC && (wC = nC, bC = oC)
+      refill(pp, ip) {
+        const cp = function(pp, ip, cp, Op) {
+          let op, Ip = 1 / 0;
+          for (const Sp of vp) {
+            if (Sp === ip) continue;
+            const xp = Op(Sp);
+            if (!xp || Sp < Up.l && ip !== cp) continue;
+            const Lp = wp(pp, xp.name);
+            void 0 !== Lp && Lp < Ip && (op = Sp, Ip = Lp)
           }
-          return wC
-        }(zC, CC, this.inventory.selectedSlot(), this.inventory.itemAt);
-        void 0 !== ZC && this.inventory.swap(CC, ZC)
+          return op
+        }(ip, pp, this.inventory.selectedSlot(), this.inventory.itemAt);
+        void 0 !== cp && this.inventory.swap(pp, cp)
       }
     }
 
-    function RC(CC) {
-      return !!FC(CC) || gC(CC)
+    function Hp(pp) {
+      return !!Dp(pp) || yp(pp)
     }
-    var AC = ZC(36488),
-      xC = ZC(60),
-      JC = ZC(1002),
-      IC = ZC.n(JC);
-    const iC = "Lucky Clover",
-      vC = {
+    var dp = cp(36799),
+      ep = cp(82),
+      jp = cp(1049),
+      kp = cp.n(jp);
+    const mp = "Lucky Clover",
+      Rp = {
         Basic: [35, 45],
         Rare: [100, 130],
         Super: [250, 330]
       };
 
-    function eC(CC) {
-      return vC[CC][0]
+    function qp(pp) {
+      return Rp[pp][0]
     }
 
-    function hC(CC) {
-      return fC.filter((zC => CC >= eC(zC)))
+    function Mp(pp) {
+      return xp.filter((ip => pp >= qp(ip)))
     }
-    var KC = ZC(310),
-      YC = ZC(2369),
-      dC = ZC(20),
-      mC = ZC(2557),
-      HC = ZC(1822),
-      EC = ZC(36483),
-      lC = ZC(1013);
-    var XC = ZC(1056);
-    const cC = {
-      Basic: nC.H.whiteUiText,
-      Rare: nC.H.goldUiText,
-      Super: nC.H.cyanUiText
+    var Cp = cp(322),
+      Ep = cp(2492),
+      Xp = cp(25),
+      lp = cp(2657),
+      Qp = cp(1941),
+      Jp = cp(36791),
+      Bp = cp(1060);
+    var Np = cp(1112);
+    const Tp = {
+      Basic: Sp.N.whiteUiText,
+      Rare: Sp.N.goldUiText,
+      Super: Sp.N.cyanUiText
     };
-    let uC = 1;
+    let fp = 1;
 
-    function rC() {
-      const CC = (0, YC.h)("currencyAmounts"),
-        zC = null === CC || void 0 === CC ? void 0 : CC.Clovers;
-      return !zC || zC.hidden ? null : (0, XC.jsx)(EC.c, {
-        children: (0, XC.jsx)(sC, {
-          amount: zC.amount
+    function bp() {
+      const pp = (0, Ep.i)("currencyAmounts"),
+        ip = null === pp || void 0 === pp ? void 0 : pp.Clovers;
+      return !ip || ip.hidden ? null : (0, Np.jsx)(Jp.h, {
+        children: (0, Np.jsx)(hp, {
+          amount: ip.amount
         })
       })
     }
 
-    function sC(CC) {
-      var zC, ZC, QC;
+    function hp(pp) {
+      var ip, cp, Op;
       let {
-        amount: bC
-      } = CC;
+        amount: Ip
+      } = pp;
       const {
-        openEverythingMenuName: oC
-      } = (0, dC.k)(["openEverythingMenuName"]), qC = (0, mC.c)(), [FC, WC] = (0, wC.useState)(bC), [NC, MC] = (0, wC.useState)(null), [gC, SC] = (0, wC.useState)(0), [pC, PC] = (0, wC.useState)([]), GC = (0, wC.useRef)(bC), RC = (0, wC.useRef)(!1), AC = (0, wC.useRef)(null), JC = oC === KC.o.SHOP;
-      (0, wC.useEffect)((() => {
-        const CC = GC.current;
-        if (GC.current = bC, bC <= CC || JC) return void WC(bC);
-        const zC = qC || pC.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (ZC = bC - CC, QC = !RC.current, ZC <= 0 || !QC && ZC < 40 ? 0 : Math.min(4, Math.ceil(ZC / 30)));
-        var ZC, QC;
-        if (RC.current = !0, hC(bC).length > hC(CC).length && SC(uC++), zC > 0) {
-          const CC = [];
-          for (let ZC = 0; ZC < zC; ZC++) CC.push({
-            id: uC++,
+        openEverythingMenuName: Lp
+      } = (0, Xp.o)(["openEverythingMenuName"]), Yp = (0, lp.b)(), [Dp, Ap] = (0, op.useState)(Ip), [Pp, Wp] = (0, op.useState)(null), [yp, Up] = (0, op.useState)(0), [wp, vp] = (0, op.useState)([]), tp = (0, op.useRef)(Ip), Hp = (0, op.useRef)(!1), dp = (0, op.useRef)(null), jp = Lp === Cp.n.SHOP;
+      (0, op.useEffect)((() => {
+        const pp = tp.current;
+        if (tp.current = Ip, Ip <= pp || jp) return void Ap(Ip);
+        const ip = Yp || wp.length > 0 || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : (cp = Ip - pp, Op = !Hp.current, cp <= 0 || !Op && cp < 40 ? 0 : Math.min(4, Math.ceil(cp / 30)));
+        var cp, Op;
+        if (Hp.current = !0, Mp(Ip).length > Mp(pp).length && Up(fp++), ip > 0) {
+          const pp = [];
+          for (let cp = 0; cp < ip; cp++) pp.push({
+            id: fp++,
             x: window.innerWidth / 2 + 60 * (Math.random() - .5),
             y: .58 * window.innerHeight + 30 * (Math.random() - .5),
-            delayMs: 70 * ZC
+            delayMs: 70 * cp
           });
-          PC((zC => [...zC, ...CC]))
+          vp((ip => [...ip, ...pp]))
         }
-        const wC = zC > 0 ? 600 : 0;
-        MC({
-          id: uC++,
-          delayMs: wC
+        const op = ip > 0 ? 600 : 0;
+        Wp({
+          id: fp++,
+          delayMs: op
         });
-        const fC = performance.now() + wC;
-        let oC = 0;
-        const FC = zC => {
-          const ZC = nC.c.clamp((zC - fC) / 600, 0, 1);
-          WC(Math.round(CC + (bC - CC) * ZC)), ZC < 1 && (oC = requestAnimationFrame(FC))
+        const xp = performance.now() + op;
+        let Lp = 0;
+        const Dp = ip => {
+          const cp = Sp.d.clamp((ip - xp) / 600, 0, 1);
+          Ap(Math.round(pp + (Ip - pp) * cp)), cp < 1 && (Lp = requestAnimationFrame(Dp))
         };
-        return oC = requestAnimationFrame(FC), () => {
-          cancelAnimationFrame(oC)
+        return Lp = requestAnimationFrame(Dp), () => {
+          cancelAnimationFrame(Lp)
         }
-      }), [bC, JC]);
-      const vC = function(CC) {
-          var zC;
-          const ZC = null !== (zC = fC.find((zC => CC < eC(zC)))) && void 0 !== zC ? zC : "Super";
+      }), [Ip, jp]);
+      const Rp = function(pp) {
+          var ip;
+          const cp = null !== (ip = xp.find((ip => pp < qp(ip)))) && void 0 !== ip ? ip : "Super";
           return {
-            rarity: ZC,
-            progress: nC.c.clamp(CC / eC(ZC), 0, 1)
+            rarity: cp,
+            progress: Sp.d.clamp(pp / qp(cp), 0, 1)
           }
-        }(FC),
-        YC = hC(FC).at(-1);
-      return (0, XC.jsxs)(XC.Fragment, {
-        children: [(0, XC.jsx)("div", {
+        }(Dp),
+        Ep = Mp(Dp).at(-1);
+      return (0, Np.jsxs)(Np.Fragment, {
+        children: [(0, Np.jsx)("div", {
           className: "LuckyCloverWalletAnchor",
-          children: (0, XC.jsxs)("div", {
-            className: IC()("LuckyCloverWallet", {
-              Capped: YC && "Basic" !== YC
+          children: (0, Np.jsxs)("div", {
+            className: kp()("LuckyCloverWallet", {
+              Capped: Ep && "Basic" !== Ep
             }),
-            style: YC && {
-              "--luckyTierColour": cC[YC]
+            style: Ep && {
+              "--luckyTierColour": Tp[Ep]
             },
-            children: [(0, XC.jsx)("div", {
+            children: [(0, Np.jsx)("div", {
               className: "LuckyCloverWalletFill",
               style: {
-                transform: `scaleX(${vC.progress})`
+                transform: `scaleX(${Rp.progress})`
               }
-            }), gC > 0 && (0, XC.jsx)("div", {
+            }), yp > 0 && (0, Np.jsx)("div", {
               className: "LuckyCloverWalletReached",
               style: {
-                animationDelay: `${null!==(zC=null===NC||void 0===NC?void 0:NC.delayMs)&&void 0!==zC?zC:0}ms`
+                animationDelay: `${null!==(ip=null===Pp||void 0===Pp?void 0:Pp.delayMs)&&void 0!==ip?ip:0}ms`
               }
-            }, gC), (0, XC.jsx)("div", {
-              ref: AC,
-              className: IC()("LuckyCloverWalletIcon", NC && "Bounce"),
+            }, yp), (0, Np.jsx)("div", {
+              ref: dp,
+              className: kp()("LuckyCloverWalletIcon", Pp && "Bounce"),
               style: {
-                animationDelay: `${null!==(QC=null===NC||void 0===NC?void 0:NC.delayMs)&&void 0!==QC?QC:0}ms`
+                animationDelay: `${null!==(Op=null===Pp||void 0===Pp?void 0:Pp.delayMs)&&void 0!==Op?Op:0}ms`
               },
-              children: (0, XC.jsx)(HC.e, {
-                itemName: iC,
+              children: (0, Np.jsx)(Qp.d, {
+                itemName: mp,
                 amount: 0
               })
-            }, null !== (ZC = null === NC || void 0 === NC ? void 0 : NC.id) && void 0 !== ZC ? ZC : 0), (0, XC.jsx)("span", {
+            }, null !== (cp = null === Pp || void 0 === Pp ? void 0 : Pp.id) && void 0 !== cp ? cp : 0), (0, Np.jsx)("span", {
               className: "LuckyCloverWalletAmount SmallTextBold",
-              children: FC
-            }), YC && (0, XC.jsx)(lC.c, {
+              children: Dp
+            }), Ep && (0, Np.jsx)(Bp.d, {
               className: "LuckyCloverWalletShop",
               name: "cart-shopping"
             })]
           })
-        }), (0, xC.createPortal)(pC.map((CC => (0, XC.jsx)(TC, {
-          flyer: CC,
-          target: AC,
+        }), (0, ep.createPortal)(wp.map((pp => (0, Np.jsx)(ap, {
+          flyer: pp,
+          target: dp,
           onDone: () => {
-            PC((zC => zC.filter((zC => zC.id !== CC.id))))
+            vp((ip => ip.filter((ip => ip.id !== pp.id))))
           }
-        }, CC.id))), document.body)]
+        }, pp.id))), document.body)]
       })
     }
 
-    function TC(CC) {
+    function ap(pp) {
       let {
-        flyer: zC,
-        target: ZC,
-        onDone: QC
-      } = CC;
-      const bC = (0, wC.useRef)(null);
-      return (0, wC.useEffect)((() => {
-        var CC;
-        const wC = null === (CC = ZC.current) || void 0 === CC ? void 0 : CC.getBoundingClientRect();
-        if (!bC.current || !wC) return void QC();
+        flyer: ip,
+        target: cp,
+        onDone: Op
+      } = pp;
+      const Ip = (0, op.useRef)(null);
+      return (0, op.useEffect)((() => {
+        var pp;
+        const op = null === (pp = cp.current) || void 0 === pp ? void 0 : pp.getBoundingClientRect();
+        if (!Ip.current || !op) return void Op();
         const {
-          x: nC,
-          y: fC
-        } = zC, oC = nC + 140 * (Math.random() - .5), qC = fC - 30 - 40 * Math.random(), FC = bC.current.animate([{
-          transform: `translate(${nC}px, ${fC}px) scale(0.3)`,
+          x: Sp,
+          y: xp
+        } = ip, Lp = Sp + 140 * (Math.random() - .5), Yp = xp - 30 - 40 * Math.random(), Dp = Ip.current.animate([{
+          transform: `translate(${Sp}px, ${xp}px) scale(0.3)`,
           opacity: 0
         }, {
-          transform: `translate(${oC}px, ${qC}px) scale(1.3)`,
+          transform: `translate(${Lp}px, ${Yp}px) scale(1.3)`,
           opacity: 1,
           offset: .3
         }, {
-          transform: `translate(${wC.left}px, ${wC.top}px) scale(0.8)`,
+          transform: `translate(${op.left}px, ${op.top}px) scale(0.8)`,
           opacity: .9
         }], {
           duration: 750,
           easing: "ease-in",
-          delay: zC.delayMs,
+          delay: ip.delayMs,
           fill: "backwards"
         });
-        return FC.onfinish = QC, () => {
-          FC.cancel()
+        return Dp.onfinish = Op, () => {
+          Dp.cancel()
         }
-      }), []), (0, XC.jsx)("div", {
-        ref: bC,
+      }), []), (0, Np.jsx)("div", {
+        ref: Ip,
         className: "LuckyCloverFlying",
-        children: (0, XC.jsx)(HC.e, {
-          itemName: iC,
+        children: (0, Np.jsx)(Qp.d, {
+          itemName: mp,
           amount: 0
         })
       })
     }
-    var aC = ZC(28);
-    const tC = "luckyGearUpgradeView",
-      DC = {
+    var np = cp(34);
+    const Fp = "luckyGearUpgradeView",
+      gp = {
         Wood: "#c8964f",
         Stone: "#b4b4b4",
         Iron: "#f2f2f2",
@@ -532,13 +532,13 @@ export const modules = {
         Diamond: "#5cf2ea"
       };
 
-    function jC(CC) {
-      var zC;
-      return null !== (zC = DC[CC.split(" ")[0]]) && void 0 !== zC ? zC : "#e07bff"
+    function Gp(pp) {
+      var ip;
+      return null !== (ip = gp[pp.split(" ")[0]]) && void 0 !== ip ? ip : "#e07bff"
     }
-    class yC {
-      constructor(CC, zC) {
-        this.selectedSlot = CC, this.itemAt = zC, this.rings = [], this.unseen = new Map, this.view = {
+    class rp {
+      constructor(pp, ip) {
+        this.selectedSlot = pp, this.itemAt = ip, this.rings = [], this.unseen = new Map, this.view = {
           rings: [],
           unseenSlots: []
         }, this.nextId = 0
@@ -546,200 +546,200 @@ export const modules = {
       getView() {
         return this.view
       }
-      Ag(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        for (const [ZC, QC, wC] of CC) this.rings.push({
+      Ey(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        for (const [cp, Op, op] of pp) this.rings.push({
           id: this.nextId++,
-          slot: ZC,
-          colour: jC(wC),
-          until: zC + 1200
-        }), ZC !== this.selectedSlot() && this.unseen.set(ZC, {
-          from: QC,
-          to: wC
+          slot: cp,
+          colour: Gp(op),
+          until: ip + 1200
+        }), cp !== this.selectedSlot() && this.unseen.set(cp, {
+          from: Op,
+          to: op
         });
-        this.bp()
+        this.GA()
       }
-      ZN() {
-        let CC = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
+      LP() {
+        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : performance.now();
         if (!this.rings.length && !this.unseen.size) return;
-        const zC = this.rings.filter((zC => zC.until > CC));
-        let ZC = zC.length !== this.rings.length;
-        this.rings = zC;
-        for (const [QC, {
-            from: wC,
-            to: bC
+        const ip = this.rings.filter((ip => ip.until > pp));
+        let cp = ip.length !== this.rings.length;
+        this.rings = ip;
+        for (const [Op, {
+            from: op,
+            to: Ip
           }] of this.unseen) {
-          const CC = this.itemAt(QC);
-          (QC === this.selectedSlot() || CC !== bC && CC !== wC) && (this.unseen.delete(QC), ZC = !0)
+          const pp = this.itemAt(Op);
+          (Op === this.selectedSlot() || pp !== Ip && pp !== op) && (this.unseen.delete(Op), cp = !0)
         }
-        ZC && this.bp()
+        cp && this.GA()
       }
-      bp() {
+      GA() {
         this.view = {
           rings: [...this.rings],
           unseenSlots: [...this.unseen.keys()]
-        }, aC.o.bp(tC, this.view)
+        }, np.m.GA(Fp, this.view)
       }
     }
-    var LC = ZC(1383);
+    var Zp = cp(1476);
 
-    function UC(CC) {
-      return document.querySelector(`.HotBar [data-inven-idx="${CC}"]`)
+    function zp(pp) {
+      return document.querySelector(`.HotBar [data-inven-idx="${pp}"]`)
     }
 
-    function BC(CC) {
+    function sp(pp) {
       let {
-        ring: zC
-      } = CC;
-      const [ZC, QC] = (0, wC.useState)(null);
-      return (0, wC.useLayoutEffect)((() => {
-        var CC, ZC;
-        QC(null !== (CC = null === (ZC = UC(zC.slot)) || void 0 === ZC ? void 0 : ZC.getBoundingClientRect()) && void 0 !== CC ? CC : null)
-      }), [zC]), ZC ? (0, XC.jsx)("div", {
+        ring: ip
+      } = pp;
+      const [cp, Op] = (0, op.useState)(null);
+      return (0, op.useLayoutEffect)((() => {
+        var pp, cp;
+        Op(null !== (pp = null === (cp = zp(ip.slot)) || void 0 === cp ? void 0 : cp.getBoundingClientRect()) && void 0 !== pp ? pp : null)
+      }), [ip]), cp ? (0, Np.jsx)("div", {
         className: "LuckyGearRing",
         style: {
-          left: ZC.left,
-          top: ZC.top,
-          width: ZC.width,
-          height: ZC.height,
-          "--ringColour": zC.colour,
+          left: cp.left,
+          top: cp.top,
+          width: cp.width,
+          height: cp.height,
+          "--ringColour": ip.colour,
           "--ringMs": "1200ms"
         }
       }) : null
     }
 
-    function OC(CC) {
+    function Kp(pp) {
       let {
-        slot: zC
-      } = CC;
-      const [ZC, QC] = (0, wC.useState)(null);
-      return (0, wC.useLayoutEffect)((() => {
-        const CC = () => {
-          QC(UC(zC))
+        slot: ip
+      } = pp;
+      const [cp, Op] = (0, op.useState)(null);
+      return (0, op.useLayoutEffect)((() => {
+        const pp = () => {
+          Op(zp(ip))
         };
-        CC();
-        const ZC = new MutationObserver(CC),
-          wC = document.querySelector(".BottomMiddleElements");
-        return wC && ZC.observe(wC, {
+        pp();
+        const cp = new MutationObserver(pp),
+          op = document.querySelector(".BottomMiddleElements");
+        return op && cp.observe(op, {
           childList: !0,
           subtree: !0
         }), () => {
-          ZC.disconnect()
+          cp.disconnect()
         }
-      }), [zC]), ZC ? (0, xC.createPortal)((0, XC.jsx)("div", {
+      }), [ip]), cp ? (0, ep.createPortal)((0, Np.jsx)("div", {
         className: "LuckyGearUnseen"
-      }), ZC) : null
+      }), cp) : null
     }
 
-    function kC(CC) {
+    function Vp(pp) {
       let {
-        controller: zC
-      } = CC;
-      const ZC = (0, LC.f)(tC, zC.getView());
-      return (0, XC.jsxs)(XC.Fragment, {
-        children: [ZC.rings.map((CC => (0, XC.jsx)(BC, {
-          ring: CC
-        }, CC.id))), ZC.unseenSlots.map((CC => (0, XC.jsx)(OC, {
-          slot: CC
-        }, CC)))]
+        controller: ip
+      } = pp;
+      const cp = (0, Zp.i)(Fp, ip.getView());
+      return (0, Np.jsxs)(Np.Fragment, {
+        children: [cp.rings.map((pp => (0, Np.jsx)(sp, {
+          ring: pp
+        }, pp.id))), cp.unseenSlots.map((pp => (0, Np.jsx)(Kp, {
+          slot: pp
+        }, pp)))]
       })
     }
-    const VC = function(CC, zC, ZC, nC) {
-      let fC, {
-          localPlayerId: oC
-        } = nC,
-        qC = null;
-      const FC = new GC({
-          itemAt: CC => fC.getItemSlot(oC, CC),
-          selectedSlot: () => fC.getSelectedInventorySlotI(oC),
-          swap: (CC, zC) => {
-            fC.swapInventorySlots(CC, zC)
+    const ii = function(pp, ip, cp, Sp) {
+      let xp, {
+          localPlayerId: Lp
+        } = Sp,
+        Yp = null;
+      const Dp = new tp({
+          itemAt: pp => xp.getItemSlot(Lp, pp),
+          selectedSlot: () => xp.getSelectedInventorySlotI(Lp),
+          swap: (pp, ip) => {
+            xp.swapInventorySlots(pp, ip)
           }
         }),
-        WC = new yC((() => fC.getSelectedInventorySlotI(oC)), (CC => {
-          var zC;
-          return null === (zC = fC.getItemSlot(oC, CC)) || void 0 === zC ? void 0 : zC.name
+        Ap = new rp((() => xp.getSelectedInventorySlotI(Lp)), (pp => {
+          var ip;
+          return null === (ip = xp.getItemSlot(Lp, pp)) || void 0 === ip ? void 0 : ip.name
         }));
       return {
         plugins: {
-          placeAgainstBeds: (0, bC.c)()
+          placeAgainstBeds: (0, Ip.c)()
         },
-        onCreate: CC => {
-          fC = CC, qC = (0, AC.C)((0, wC.createElement)(wC.Fragment, null, (0, wC.createElement)(rC), (0, wC.createElement)(kC, {
-            controller: WC
+        onCreate: pp => {
+          xp = pp, Yp = (0, dp.A)((0, op.createElement)(op.Fragment, null, (0, op.createElement)(bp), (0, op.createElement)(Vp, {
+            controller: Ap
           })))
         },
         onClose: () => {
-          var CC;
-          null === (CC = qC) || void 0 === CC || CC()
+          var pp;
+          null === (pp = Yp) || void 0 === pp || pp()
         },
-        ZN: () => {
-          FC.ZN(), WC.ZN()
+        LP: () => {
+          Dp.LP(), Ap.LP()
         },
-        onReceivedMessageFromServer: (CC, zC) => {
-          "luckyGearUpgrade" === CC && WC.Ag(zC)
+        onReceivedMessageFromServer: (pp, ip) => {
+          "luckyGearUpgrade" === pp && Ap.Ey(ip)
         },
-        onPlayerChangeBlock: (CC, zC, ZC, QC, wC, bC) => {
-          "Air" !== bC && FC.onPlace(bC)
+        onPlayerChangeBlock: (pp, ip, cp, Op, op, Ip) => {
+          "Air" !== Ip && Dp.onPlace(Ip)
         },
-        onPlayerDropItem: (CC, zC, ZC, QC) => {
-          FC.onDrop(zC, QC)
+        onPlayerDropItem: (pp, ip, cp, Op) => {
+          Dp.onDrop(ip, Op)
         },
-        onPlayerAltAction: (CC, zC, ZC, wC, bC, nC) => {
-          if (!nC || "Mesh" !== fC.getEntityType(nC)) return;
-          const oC = fC.getEntityName(nC),
-            qC = Object.values(QC).find((CC => CC.name === oC));
-          qC && fC.openShop(CC, !1, qC.shopTab)
+        onPlayerAltAction: (pp, ip, cp, op, Ip, Sp) => {
+          if (!Sp || "Mesh" !== xp.getEntityType(Sp)) return;
+          const Lp = xp.getEntityName(Sp),
+            Yp = Object.values(Op).find((pp => pp.name === Lp));
+          Yp && xp.openShop(pp, !1, Yp.shopTab)
         }
       }
     }
   },
-  37868: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => fC
+  38261: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => xp
     });
-    var QC = ZC(326),
-      wC = ZC(36796),
-      bC = ZC(4402);
-    const nC = ["Leaf Bed", "_Leaf Bed Head", ...QC.sc.flatMap((CC => [`${CC} Bed`, `_${CC} Bed Head`, `${CC} Strongbed`, `_${CC} Strongbed Head`]))];
+    var Op = cp(337),
+      op = cp(37146),
+      Ip = cp(4561);
+    const Sp = ["Leaf Bed", "_Leaf Bed Head", ...Op.wc.flatMap((pp => [`${pp} Bed`, `_${pp} Bed Head`, `${pp} Strongbed`, `_${pp} Strongbed Head`]))];
 
-    function fC() {
-      let CC;
+    function xp() {
+      let pp;
       return {
-        onCreate(zC) {
-          CC = zC
+        onCreate(ip) {
+          pp = ip
         },
-        altVetoBlocks: nC,
-        onPlayerAttemptAltAction(zC, ZC, QC, nC, fC, oC) {
-          var qC;
-          if ((0, wC.d)(CC.getMetaInfo(fC).rootName) && !CC.isEntityInteractable(oC) && (0, bC.c)(null === (qC = CC.XzC(zC)) || void 0 === qC ? void 0 : qC.typeObj.type)) return "preventAction"
+        altVetoBlocks: Sp,
+        onPlayerAttemptAltAction(ip, cp, Op, Sp, xp, Lp) {
+          var Yp;
+          if ((0, op.b)(pp.getMetaInfo(xp).rootName) && !pp.isEntityInteractable(Lp) && (0, Ip.g)(null === (Yp = pp.Acp(ip)) || void 0 === Yp ? void 0 : Yp.typeObj.type)) return "preventAction"
         }
       }
     }
   },
-  36796: (CC, zC, ZC) => {
-    function QC(CC) {
-      return CC.includes("Leaf Bed")
+  37146: (pp, ip, cp) => {
+    function Op(pp) {
+      return pp.includes("Leaf Bed")
     }
 
-    function wC(CC) {
-      return / Bed(?: Head)?(?:\||$)/.test(CC) && !QC(CC)
+    function op(pp) {
+      return / Bed(?: Head)?(?:\||$)/.test(pp) && !Op(pp)
     }
 
-    function bC(CC) {
-      return CC.includes(" Strongbed")
+    function Ip(pp) {
+      return pp.includes(" Strongbed")
     }
 
-    function nC(CC) {
-      return QC(CC) || wC(CC) || bC(CC)
+    function Sp(pp) {
+      return Op(pp) || op(pp) || Ip(pp)
     }
-    ZC.d(zC, {
-      d: () => nC,
-      g: () => QC,
-      i: () => bC,
-      l: () => wC
+    cp.d(ip, {
+      b: () => Sp,
+      f: () => Op,
+      g: () => Ip,
+      h: () => op
     })
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

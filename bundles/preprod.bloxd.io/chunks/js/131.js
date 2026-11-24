@@ -1,330 +1,465 @@
 export const id = 131;
 export const ids = [131];
 export const modules = {
-  41571: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      startHarnessShaderPack: () => WC
+  41287: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      ShaderPackCategory: () => lp
     });
-    var QC = ZC(6560),
-      wC = ZC(5002),
-      bC = ZC(6646),
-      nC = ZC(6609),
-      fC = ZC(4998),
-      oC = ZC(39051),
-      qC = ZC(6630),
-      FC = ZC(6651);
-    async function WC(CC, zC) {
+    var Op = cp(62),
+      op = cp(1543),
+      Ip = cp(1480),
+      Sp = cp(1538),
+      xp = cp(1201),
+      Lp = cp(104),
+      Yp = cp(25),
+      Dp = cp(1650),
+      Ap = cp(6758),
+      Pp = cp(314),
+      Wp = cp(6798),
+      yp = cp(6792),
+      Up = cp(6804),
+      wp = cp(6698),
+      vp = cp(5113),
+      tp = cp(5156),
+      Hp = cp(6752),
+      dp = cp(3572);
+
+    function ep(pp, ip) {
+      const cp = (0, Wp.storedPackOutcome)(pp, ip);
+      return "none" !== cp.kind || "noCompiler" === cp.reason
+    }
+    var jp = cp(1049),
+      kp = cp.n(jp),
+      mp = cp(5159),
+      Rp = cp(1060),
+      qp = cp(6750),
+      Mp = cp(1112);
+    const Cp = {
+      ready: "shaderPack:statusReady",
+      readyAfterReload: "shaderPack:statusReadyAfterReload",
+      noWebGpu: "shaderPack:statusNoWebGpu",
+      offNoWebGpu: "shaderPack:statusOffNoWebGpu",
+      failed: "shaderPack:statusFailed",
+      failedRecheck: "shaderPack:statusFailedRecheck",
+      wrongApiVersion: "shaderPack:statusWrongApiVersion",
+      checking: "shaderPack:statusChecking",
+      unchecked: "shaderPack:statusUnchecked",
+      noCompiler: "shaderPack:statusNoCompiler"
+    };
+
+    function Ep(pp, ip) {
+      return "failedRecheck" === pp && ip.listing ? "shaderPack:statusFailedRecheckListed" : Cp[pp]
+    }
+
+    function Xp(pp) {
+      let {
+        stored: ip,
+        checking: cp,
+        webGpuUsable: Op,
+        changePending: op,
+        compiler: Ip,
+        t: Sp
+      } = pp;
+      const xp = function(pp, ip, cp, Op, op) {
+          const Ip = (0, Wp.storedPackOutcome)(pp, op);
+          return "none" === Ip.kind ? "noCompiler" === Ip.reason ? ip ? "checking" : "noCompiler" : "otherApiVersion" === Ip.reason ? "wrongApiVersion" : "failed" : (0, dp.e)() ? "harnessBuild" : "blocked" === Ip.kind ? (0, Wp.shaderPackNeedsCheck)(pp, op) ? ip ? "checking" : !1 === cp ? "noWebGpu" : "unchecked" : "failedRecheck" : !1 === cp ? "offNoWebGpu" : Op ? "readyAfterReload" : "ready"
+        }(ip, cp, Op, op, Ip),
+        Lp = "failed" === xp || "failedRecheck" === xp,
+        Yp = Lp || "wrongApiVersion" === xp || "noCompiler" === xp,
+        Dp = "ready" === xp || "readyAfterReload" === xp ? ip.validation.offInStrict : [];
+      return (0, Mp.jsxs)(Mp.Fragment, {
+        children: [(0, Mp.jsxs)("div", {
+          className: kp()("ShaderPackStatus", {
+            Ready: "ready" === xp,
+            Failed: Yp
+          }),
+          children: ["ready" === xp && (0, Mp.jsx)(Rp.d, {
+            name: "circle-check"
+          }), Yp && (0, Mp.jsx)(Rp.d, {
+            name: "triangle-exclamation"
+          }), "harnessBuild" === xp ? (0, dp.c)() : Sp(Ep(xp, ip), {
+            packVersion: String(ip.manifest.apiVersion),
+            version: String(mp.e)
+          })]
+        }), Lp && (0, Mp.jsx)(qp.b, {
+          diagnostics: ip.validation.errors,
+          more: ip.validation.moreErrors,
+          t: Sp
+        }), Dp.length > 0 && (0, Mp.jsxs)(Mp.Fragment, {
+          children: [(0, Mp.jsxs)("div", {
+            className: "ShaderPackStatus OffInStrict",
+            children: [(0, Mp.jsx)(Rp.d, {
+              name: "triangle-exclamation"
+            }), Sp("shaderPack:offInStrict")]
+          }), (0, Mp.jsx)(qp.b, {
+            diagnostics: Dp,
+            t: Sp
+          })]
+        })]
+      })
+    }
+
+    function lp(pp) {
+      let {
+        setApplySettingsCallback: ip
+      } = pp;
       const {
-        stored: ZC,
-        info: WC
-      } = await async function(CC, zC) {
-        const ZC = await async function(CC) {
-          const zC = await fetch(CC);
-          if (!zC.ok) throw new Error(`Couldn't fetch the shader pack at ${CC}: HTTP ${zC.status}`);
-          const ZC = await zC.json();
-          if (!(0, QC.g)(ZC)) throw new Error(`The shader pack at ${CC} isn't a shader pack listing source`);
-          return ZC
-        }(CC);
-        if (!(0, fC.i)(ZC.apiVersion)) throw new Error(`The pack is for shader pack API version ${ZC.apiVersion}; this build runs version ${fC.b}`);
-        const oC = {
-            manifest: {
-              apiVersion: ZC.apiVersion,
-              name: ZC.name,
-              author: ZC.author,
-              description: null,
-              keepCircleShadows: !0 === ZC.keepCircleShadows
-            },
-            files: ZC.files,
-            validation: null
-          },
-          WC = {
-            url: CC,
-            name: ZC.name,
-            features: [],
-            errors: [],
-            runsInMode: !1
-          },
-          NC = (0, wC.s)(ZC.files);
-        if ("string" === typeof NC) return WC.errors = [{
-          file: null,
-          line: 0,
-          message: NC
-        }], {
-          stored: oC,
-          info: WC
-        };
-        const MC = await (0, nC.loadPageShaderPackCompiler)();
-        if (!MC) throw new Error("The shader pack compiler couldn't load");
-        const gC = await (0, FC.c)(MC, NC);
-        if (!gC) throw new Error("No WebGPU device could validate the shader pack");
-        if (WC.errors = [...gC.errors], gC.ok) {
-          const CC = MC.K3(NC, (0, qC.shaderPackTextures)());
-          WC.features = (0, wC.r)(CC), WC.runsInMode = (0, bC.m)(CC.variants, zC)
-        }
-        return {
-          stored: {
-            ...oC,
-            validation: gC
-          },
-          info: WC
-        }
-      }(CC, zC), [NC] = WC.errors;
-      if (NC) {
-        const CC = null === NC.file ? "" : `${NC.file}:${NC.line}: `,
-          zC = WC.errors.length > 1 ? ` (${WC.errors.length-1} more)` : "";
-        return {
-          info: WC,
-          problem: `The shader pack doesn't compile: ${CC}${NC.message}${zC}`
-        }
-      }
-      return WC.runsInMode ? ((0, oC.setHarnessUrlShaderPack)(ZC, zC), {
-        info: WC,
-        problem: null
-      }) : {
-        info: WC,
-        problem: `The shader pack runs nothing in ${zC} mode`
-      }
-    }
-  },
-  6658: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      forgetShaderPackActiveHint: () => KC,
-      isOtherApiVersion: () => iC,
-      isShaderPackActive: () => AC,
-      isShaderPackChangePending: () => IC,
-      markShaderPackChangePending: () => JC,
-      pageShaderPackValidationVersion: () => vC,
-      reconcileStoredShaderPackHint: () => hC,
-      removeShaderPack: () => RC,
-      replaceShaderPack: () => pC,
-      saveShaderPack: () => SC,
-      shaderPackNeedsCheck: () => eC,
-      storedPackOutcome: () => xC,
-      storedShaderPackFiles: () => NC,
-      toStoredShaderPack: () => WC
-    });
-    var QC = ZC(5002),
-      wC = ZC(4998),
-      bC = ZC(38),
-      nC = ZC(3432),
-      fC = ZC(6660),
-      oC = ZC(6630);
-    const qC = "shaderPackChangePending";
-    let FC = null;
-
-    function WC(CC, zC, ZC) {
-      return {
-        manifest: CC.manifest,
-        files: (0, QC.w)(CC.files),
-        validation: zC,
-        ...ZC && {
-          listing: ZC
-        }
-      }
-    }
-
-    function NC(CC) {
-      return Object.keys(CC.files).map((zC => ({
-        path: zC,
-        source: CC.files[zC]
-      })))
-    }
-    let MC = Promise.resolve();
-
-    function gC(CC) {
-      const zC = MC.then(CC);
-      return MC = zC.catch((() => {})), zC
-    }
-
-    function SC(CC, zC) {
-      return gC((() => PC(CC, zC)))
-    }
-
-    function pC(CC, zC, ZC) {
-      return gC((async () => JSON.stringify(await (0, fC.e)()) === JSON.stringify(CC) && (null === zC ? (await GC(), !0) : PC(zC, ZC))))
-    }
-    async function PC(CC, zC) {
-      const ZC = await bC.g.setItem(fC.c, CC);
-      return ZC && YC(CC, zC), ZC
-    }
-    async function GC() {
-      await bC.g.removeItem(fC.c), bC.i.removeItem(nC.b)
-    }
-
-    function RC() {
-      return gC(GC)
-    }
-
-    function AC(CC, zC) {
-      return "active" === xC(CC, zC).kind
-    }
-
-    function xC(CC, zC) {
-      var ZC;
-      return null === CC ? {
-        kind: "none",
-        reason: "nothingStored"
-      } : iC(CC) ? {
-        kind: "none",
-        reason: "otherApiVersion"
-      } : !1 !== (null === (ZC = CC.validation) || void 0 === ZC ? void 0 : ZC.ok) || CC.validation.fromRecheck ? null === zC ? {
-        kind: "none",
-        reason: "noCompiler"
-      } : eC(CC, zC) ? {
-        kind: "blocked",
-        messageKey: "shaderPack:failedUnchecked"
-      } : CC.validation.ok ? {
-        kind: "active"
-      } : {
-        kind: "blocked",
-        messageKey: "shaderPack:failedValidation"
-      } : {
-        kind: "none",
-        reason: "failedWhenLoaded"
-      }
-    }
-
-    function JC() {
-      bC.k.setItem(qC, performance.timeOrigin)
-    }
-
-    function IC() {
-      return bC.k.getItem(qC) === performance.timeOrigin
-    }
-
-    function iC(CC) {
-      return !(0, wC.i)(CC.manifest.apiVersion)
-    }
-
-    function vC(CC) {
-      return FC ??= CC.Rm((0, oC.shaderPackTextures)()), FC
-    }
-
-    function eC(CC, zC) {
-      var ZC;
-      return (null === (ZC = CC.validation) || void 0 === ZC ? void 0 : ZC.headerVersion) !== vC(zC)
-    }
-
-    function hC(CC) {
-      return gC((async () => {
-        YC(await (0, fC.e)(!0), CC)
-      }))
-    }
-
-    function KC() {
-      return gC((async () => {
-        bC.i.removeItem(nC.b)
-      }))
-    }
-
-    function YC(CC, zC) {
-      AC(CC, zC) ? bC.i.setItem(nC.b, !0) : bC.i.removeItem(nC.b)
-    }
-  },
-  6651: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => oC,
-      c: () => fC
-    });
-    var QC = ZC(6658),
-      wC = ZC(6630),
-      bC = ZC(94);
-    const nC = 100;
-    async function fC(CC, zC) {
-      var ZC;
-      let QC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null !== (ZC = navigator.gpu) && void 0 !== ZC ? ZC : null;
-      const nC = CC.K3(zC, (0, wC.shaderPackTextures)());
-      if (nC.errors.length > 0) return qC(CC, nC.errors, nC.offInStrict);
-      const fC = await async function(CC) {
-        if (!CC) return null;
-        try {
-          const zC = await (0, bC.z)(CC);
-          return zC ? await zC.requestDevice() : null
-        } catch (zC) {
-          return console.error("Couldn't get a WebGPU device to validate the shader pack.", zC), null
-        }
-      }(QC);
-      if (!fC) return null;
-      let oC = !1;
-      fC.lost.then((() => {
-        oC = !0
+        t: cp
+      } = (0, xp.H)(), [op, Sp] = (0, Op.useState)(null), [Yp, Dp] = (0, Op.useState)(null), [dp, jp] = (0, Op.useState)(null), [kp] = (0, Op.useState)(Pp.f), [mp, Rp] = (0, Op.useState)(!0), [qp, Cp] = (0, Op.useState)(!1), {
+        loading: Ep,
+        error: lp,
+        setError: Jp,
+        onFiles: Bp
+      } = (0, Hp.f)((async pp => {
+        const ip = await (0, Ap.loadPageShaderPackCompiler)();
+        if (!ip) return void Jp(cp("shaderPack:compilerUnavailable"));
+        Dp(ip);
+        const Op = (0, Wp.toStoredShaderPack)(pp, await (0, yp.h)(ip, pp.files));
+        await (0, Wp.saveShaderPack)(Op, ip) ? (Sp(Op), Np(op, Op, ip)) : Jp(cp("shaderPack:saveFailed"))
       }));
-      try {
-        const zC = await Promise.all(nC.validationModules.map((zC => async function(CC, zC, ZC) {
-          zC.pushErrorScope("validation");
-          const QC = zC.createShaderModule({
-              code: ZC.code
-            }),
-            wC = zC.popErrorScope(),
-            {
-              messages: bC
-            } = await QC.getCompilationInfo(),
-            nC = bC.filter((CC => "error" === CC.type)).map((zC => CC.mapValidationMessage(ZC, zC))),
-            fC = await wC;
-          fC && 0 === nC.length && nC.push({
-            file: null,
-            line: 0,
-            message: fC.message,
-            variants: [ZC.key]
-          });
-          return nC
-        }(CC, fC, zC))));
-        return oC ? null : qC(CC, CC.rZC(zC.flat()), nC.offInStrict)
-      } catch (FC) {
-        return console.error("Couldn't validate the shader pack on WebGPU.", FC), null
-      } finally {
-        fC.destroy()
+
+      function Np(pp, cp, Op) {
+        (function(pp, ip, cp, Op) {
+          return cp || ep(pp, Op) || ep(ip, Op)
+        })(pp, cp, (0, Wp.isShaderPackChangePending)(), Op) && ((0, Wp.markShaderPackChangePending)(), ip((() => vp.l)))
       }
-    }
-    async function oC(CC, zC) {
-      var ZC;
-      if (!(0, QC.shaderPackNeedsCheck)(CC, zC) || (0, QC.isOtherApiVersion)(CC)) return CC;
-      const wC = await fC(zC, (0, QC.storedShaderPackFiles)(CC));
-      if (!wC) return CC;
-      const bC = !1 === (null === (ZC = CC.validation) || void 0 === ZC ? void 0 : ZC.ok) && !CC.validation.fromRecheck,
-        nC = {
-          ...CC,
-          validation: bC ? wC : {
-            ...wC,
-            fromRecheck: !0
+      return (0, Op.useEffect)((() => {
+        let pp = !1;
+        return async function() {
+          const ip = (0, Lp.hasUsableWebGpuAdapter)(),
+            cp = await (0, Up.f)();
+          if (pp) return;
+          Sp(cp), Cp(!0), Rp(!1);
+          const Op = null !== cp ? (0, Ap.loadPageShaderPackCompiler)() : null,
+            op = await ip;
+          if (pp) return;
+          jp(op);
+          const Ip = await Op;
+          if (!pp && (Dp(Ip), null !== cp && op && null !== Ip && (0, Wp.shaderPackNeedsCheck)(cp, Ip))) {
+            const ip = await (0, yp.e)(cp, Ip);
+            pp || Sp((pp => pp === cp ? ip : pp))
           }
-        };
-      return await (0, QC.replaceShaderPack)(CC, nC, zC) || console.warn("Didn't save the shader pack's validation result: the stored pack changed or couldn't be written"), nC
+        }().catch((ip => {
+          console.error("Failed to load the stored shader pack", ip), pp || Jp(cp("shaderPack:unexpectedError"))
+        })).finally((() => {
+          pp || (Rp(!1), Cp(!1))
+        })), () => {
+          pp = !0
+        }
+      }), []), (0, Mp.jsxs)("div", {
+        className: "ShaderPackCategory SettingsMenuRightInner",
+        children: [(0, Mp.jsx)("div", {
+          className: "ShaderPackIntro",
+          children: cp("shaderPack:intro")
+        }), (0, Mp.jsx)(Qp, {
+          to: wp.R,
+          className: "ShaderPackBrowseLink",
+          children: (0, Mp.jsx)(Ip.o, {
+            className: "ShaderPackBrowseButton",
+            children: cp("shaderPackListing:browse")
+          })
+        }), !1 === dp && (0, Mp.jsx)("div", {
+          className: "SettingsBoxWarning",
+          children: cp(kp ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
+        }), null !== lp && (0, Mp.jsxs)("div", {
+          className: "ShaderPackCategoryError",
+          children: [cp("general:error"), ": ", lp]
+        }), op && (0, Mp.jsxs)("div", {
+          className: "SettingBox ShaderPackSummary",
+          children: [(0, Mp.jsxs)("div", {
+            className: "ShaderPackSummaryHeader",
+            children: [(0, Mp.jsxs)("div", {
+              children: [(0, Mp.jsx)("div", {
+                className: "ShaderPackName",
+                children: op.manifest.name
+              }), op.manifest.author && (0, Mp.jsx)("div", {
+                className: "ShaderPackAuthor",
+                children: (0, tp.f)(cp, "shaderPack:byAuthor", {
+                  author: op.manifest.author
+                })
+              }), op.manifest.description && (0, Mp.jsx)("div", {
+                className: "ShaderPackDescription",
+                children: op.manifest.description
+              }), op.listing && (0, Mp.jsx)("div", {
+                className: "ShaderPackAuthor",
+                children: (0, Mp.jsx)(Qp, {
+                  to: (0, wp.V)(op.listing.packId),
+                  className: "ShaderPackListingLink",
+                  children: cp("shaderPackListing:openPackPage")
+                })
+              })]
+            }), (0, Mp.jsx)(Ip.N, {
+              disabled: mp || Ep,
+              onClick: async function() {
+                Rp(!0), Jp(null), await (0, Wp.removeShaderPack)(), Sp(null), Rp(!1), Np(op, null, Yp)
+              },
+              children: cp("shaderPack:removePack")
+            })]
+          }), (0, Mp.jsx)(Xp, {
+            stored: op,
+            checking: qp,
+            webGpuUsable: dp,
+            changePending: (0, Wp.isShaderPackChangePending)(),
+            compiler: Yp,
+            t: cp
+          })]
+        }), (0, Mp.jsx)(Hp.b, {
+          busy: mp || Ep || qp,
+          disabled: mp || Ep || qp || !0 !== dp,
+          onFiles: Bp
+        })]
+      })
     }
 
-    function qC(CC, zC, ZC) {
-      return {
-        headerVersion: (0, QC.pageShaderPackValidationVersion)(CC),
-        ok: 0 === zC.length,
-        errors: zC.slice(0, nC),
-        moreErrors: Math.max(0, zC.length - nC),
-        offInStrict: ZC
-      }
+    function Qp(pp) {
+      let {
+        to: ip,
+        className: cp,
+        children: Op
+      } = pp;
+      const {
+        gameState: Ip
+      } = (0, Yp.o)(["gameState"]), {
+        pathname: xp,
+        search: Lp
+      } = (0, op.r)(), Ap = "landingPage" !== Ip && "studio" !== Ip;
+      return (0, Mp.jsx)(Sp.LinkPreserveSearch, {
+        to: ip,
+        className: cp,
+        target: Ap ? "_blank" : void 0,
+        onClick: () => {
+          Ap || ((0, wp.E)(`${xp}${Lp}`), (0, Dp.e)())
+        },
+        children: Op
+      })
     }
   },
-  6560: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      A: () => nC,
-      B: () => QC,
-      E: () => NC,
-      G: () => FC,
-      J: () => AC,
-      L: () => WC,
-      P: () => qC,
-      b: () => gC,
-      e: () => pC,
-      f: () => SC,
-      g: () => MC,
-      i: () => RC,
-      m: () => JC,
-      o: () => oC,
-      s: () => wC,
-      w: () => xC,
-      x: () => bC,
-      y: () => fC
+  6698: (pp, ip, cp) => {
+    cp.d(ip, {
+      C: () => Mp,
+      E: () => Dp,
+      H: () => Ep,
+      L: () => Up,
+      O: () => fp,
+      P: () => Np,
+      R: () => Sp,
+      S: () => Tp,
+      V: () => Lp,
+      X: () => xp,
+      Z: () => Jp,
+      ab: () => Bp,
+      b: () => tp,
+      bb: () => Hp,
+      d: () => Rp,
+      e: () => wp,
+      eb: () => Cp,
+      g: () => Pp,
+      k: () => Ap,
+      l: () => Xp,
+      n: () => Wp,
+      r: () => lp,
+      s: () => bp,
+      w: () => yp,
+      z: () => vp
     });
-    const QC = ["forest", "desert", "water", "night", "cave"];
-    const wC = {
+    var Op = cp(6704),
+      op = cp(156),
+      Ip = cp(4653);
+    const Sp = "/shader-packs",
+      xp = `${Sp}/publish`;
+
+    function Lp(pp) {
+      return `${Sp}/${encodeURIComponent(pp)}`
+    }
+    let Yp = null;
+
+    function Dp(pp) {
+      Yp = pp
+    }
+
+    function Ap() {
+      return Yp
+    }
+
+    function Pp() {
+      Yp = null
+    }
+
+    function Wp(pp) {
+      return pp.playerHasRank("developer") || pp.playerHasRank("admin")
+    }
+    const yp = ["terrain", "water", "models", "sunShadows", "strict"],
+      Up = {
+        terrain: "shaderPackListing:filterTerrain",
+        water: "shaderPackListing:filterWater",
+        models: "shaderPackListing:filterModels",
+        sunShadows: "shaderPackListing:filterShadows",
+        strict: "shaderPackListing:filterAllGames"
+      };
+
+    function wp(pp, ip) {
+      return pp.withFeatures.includes(ip) ? "with" : pp.withoutFeatures.includes(ip) ? "without" : null
+    }
+
+    function vp(pp) {
+      return null === pp ? "with" : "with" === pp ? "without" : null
+    }
+
+    function tp(pp) {
+      return "with" === pp ? "only" : null === pp ? "include" : void 0
+    }
+
+    function Hp(pp, ip) {
+      const cp = wp(pp, ip),
+        Op = pp => pp.filter((pp => pp !== ip));
+      return {
+        withFeatures: null === cp ? [...pp.withFeatures, ip] : Op(pp.withFeatures),
+        withoutFeatures: "with" === cp ? [...pp.withoutFeatures, ip] : Op(pp.withoutFeatures)
+      }
+    }
+    const dp = "section",
+      ep = "sort",
+      jp = "filters",
+      kp = "q",
+      mp = "banned",
+      Rp = "popular",
+      qp = "strict";
+
+    function Mp(pp) {
+      var ip, cp, op;
+      const Sp = pp.get(dp),
+        xp = (null !== (ip = pp.get(jp)) && void 0 !== ip ? ip : qp).split(","),
+        Lp = pp.get(mp);
+      return {
+        section: "favourites" === Sp || "mine" === Sp ? Sp : "explore",
+        sort: null !== (cp = Op.A.find((ip => ip === pp.get(ep)))) && void 0 !== cp ? cp : Rp,
+        withFeatures: yp.filter((pp => xp.includes(pp) && !xp.includes(`-${pp}`))),
+        withoutFeatures: yp.filter((pp => xp.includes(`-${pp}`))),
+        searchQuery: (null === (op = pp.get(kp)) || void 0 === op ? void 0 : op.slice(0, Op.P)) || null,
+        pageNumber: (0, Ip.e)(pp.get(Ip.c)),
+        banned: "only" === Lp ? "with" : "include" === Lp ? null : "without"
+      }
+    }
+
+    function Cp(pp, ip) {
+      var cp;
+      const Op = Qp(ip);
+      (0, Ip.g)(pp, dp, "explore" === ip.section ? null : ip.section), (0, Ip.g)(pp, ep, ip.sort === Rp ? null : ip.sort), (0, Ip.g)(pp, jp, Op === qp ? null : Op), (0, Ip.g)(pp, kp, ip.searchQuery), (0, Ip.g)(pp, mp, null !== (cp = tp(ip.banned)) && void 0 !== cp ? cp : null), (0, Ip.k)(pp, ip.pageNumber)
+    }
+
+    function Ep(pp) {
+      const ip = new URLSearchParams;
+      return Cp(ip, {
+        section: "explore",
+        sort: Rp,
+        withFeatures: "strict" === pp ? [pp] : [pp, "strict"],
+        withoutFeatures: [],
+        searchQuery: null,
+        pageNumber: 1,
+        banned: "without"
+      }), `${Sp}?${ip.toString()}`
+    }
+
+    function Xp(pp) {
+      return Qp(pp) === qp
+    }
+
+    function lp(pp) {
+      return null !== pp.searchQuery || "with" === pp.banned || Qp(pp) !== qp
+    }
+
+    function Qp(pp) {
+      return yp.flatMap((ip => {
+        const cp = wp(pp, ip);
+        return "with" === cp ? [ip] : "without" === cp ? [`-${ip}`] : []
+      })).join(",")
+    }
+    const Jp = {
+        popular: "shaderPackListing:sortPopular",
+        updated: "shaderPackListing:sortUpdated",
+        newest: "shaderPackListing:sortNewest"
+      },
+      Bp = {
+        forest: "shaderPackListing:viewForest",
+        desert: "shaderPackListing:viewDesert",
+        water: "shaderPackListing:viewWater",
+        night: "shaderPackListing:viewNight",
+        cave: "shaderPackListing:viewCave"
+      };
+
+    function Np(pp) {
+      return Math.round(100 * Math.max(0, 1 - 1 / pp))
+    }
+
+    function Tp(pp, ip, cp, op) {
+      const Ip = [];
+      pp.isBanned && Ip.push({
+        tone: "warning",
+        text: op("shaderPackListing:ownerBanned"),
+        detail: null
+      });
+      const {
+        pending: Sp
+      } = pp;
+      if (null === pp.brokenError || Sp && !Sp.error || Ip.push({
+          tone: "warning",
+          text: op("shaderPackListing:ownerBroken"),
+          detail: pp.brokenError
+        }), null !== Sp && void 0 !== Sp && Sp.error) Ip.push({
+        tone: "warning",
+        text: op(ip ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, Op.n)(Sp.error) ? null : Sp.error
+      });
+      else if (Sp) {
+        const pp = null === Sp.renderNotBefore ? 0 : Sp.renderNotBefore - cp,
+          Op = String(Math.ceil(pp / 6e4)),
+          xp = op(ip ? pp > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : pp > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: Op
+          });
+        Ip.push({
+          tone: "info",
+          text: xp,
+          detail: null
+        })
+      }
+      return pp.listed || Ip.push({
+        tone: "info",
+        text: op("shaderPackListing:ownerUnlisted"),
+        detail: null
+      }), Ip
+    }
+
+    function fp(pp) {
+      return Math.max(1, Math.round(pp / 1024))
+    }
+
+    function bp(pp, ip, cp) {
+      return pp instanceof op.e && pp.errorMessageForUser ? pp.errorMessageForUser : ip(cp)
+    }
+  },
+  6704: (pp, ip, cp) => {
+    cp.d(ip, {
+      A: () => Ip,
+      D: () => xp,
+      G: () => Sp,
+      J: () => Op,
+      M: () => Pp,
+      P: () => Dp,
+      S: () => dp,
+      V: () => Ap,
+      W: () => Yp,
+      d: () => yp,
+      g: () => wp,
+      j: () => Up,
+      l: () => Wp,
+      n: () => Hp,
+      r: () => jp,
+      t: () => Lp,
+      u: () => op,
+      x: () => ep
+    });
+    const Op = ["forest", "desert", "water", "night", "cave"];
+    const op = {
         full: {
           width: 3840,
           height: 2160
@@ -338,49 +473,49 @@ export const modules = {
           height: 360
         }
       },
-      bC = ["popular", "updated", "newest"],
-      nC = 3,
-      fC = 32,
-      oC = 300;
+      Ip = ["popular", "updated", "newest"],
+      Sp = 3,
+      xp = 32,
+      Lp = 300;
 
-    function qC(CC, zC) {
-      return CC.slice(0, zC).replace(/[\uD800-\uDBFF]$/, "")
+    function Yp(pp, ip) {
+      return pp.slice(0, ip).replace(/[\uD800-\uDBFF]$/, "")
     }
-    const FC = 64,
-      WC = 512,
-      NC = 18e5;
+    const Dp = 64,
+      Ap = 512,
+      Pp = 18e5;
 
-    function MC(CC) {
-      const zC = CC,
-        ZC = null === zC || void 0 === zC ? void 0 : zC.files;
-      return "number" === typeof(null === zC || void 0 === zC ? void 0 : zC.apiVersion) && "string" === typeof zC.name && (null === zC.author || "string" === typeof zC.author) && (void 0 === zC.keepCircleShadows || "boolean" === typeof zC.keepCircleShadows) && "object" === typeof ZC && null !== ZC && Object.values(ZC).every((CC => "string" === typeof CC))
+    function Wp(pp) {
+      const ip = pp,
+        cp = null === ip || void 0 === ip ? void 0 : ip.files;
+      return "number" === typeof(null === ip || void 0 === ip ? void 0 : ip.apiVersion) && "string" === typeof ip.name && (null === ip.author || "string" === typeof ip.author) && (void 0 === ip.keepCircleShadows || "boolean" === typeof ip.keepCircleShadows) && "object" === typeof cp && null !== cp && Object.values(cp).every((pp => "string" === typeof pp))
     }
-    const gC = "Bloxdhub",
-      SC = "https://bloxdhub.com/shaders";
+    const yp = "Bloxdhub",
+      Up = "https://bloxdhub.com/shaders";
 
-    function pC(CC) {
-      return `https://bloxdhub.com/workshop/${encodeURIComponent(CC)}`
+    function wp(pp) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(pp)}`
     }
-    const PC = "Screenshot generation failed.",
-      GC = "Its screenshots couldn't be generated:";
+    const vp = "Screenshot generation failed.",
+      tp = "Its screenshots couldn't be generated:";
 
-    function RC(CC) {
-      var zC;
-      return CC === PC || null !== (zC = null === CC || void 0 === CC ? void 0 : CC.startsWith(GC)) && void 0 !== zC && zC
-    }
-
-    function AC(CC, zC) {
-      return `shaderPacks/${CC}/${zC}.json`
+    function Hp(pp) {
+      var ip;
+      return pp === vp || null !== (ip = null === pp || void 0 === pp ? void 0 : pp.startsWith(tp)) && void 0 !== ip && ip
     }
 
-    function xC(CC, zC, ZC, QC) {
-      return null === zC.renderId ? JC(CC, zC.baselineVersion, ZC, QC) : `${CC}/${function(CC,zC,ZC,QC){return`shaderPacks/${CC}/${zC}/${ZC}-${QC}.webp`}(zC.packId,zC.renderId,ZC,QC)}`
+    function dp(pp, ip) {
+      return `shaderPacks/${pp}/${ip}.json`
     }
 
-    function JC(CC, zC, ZC, QC) {
-      return `${CC}/${function(CC,zC,ZC){return`shaderPacks/baseline/${CC}/${zC}-${ZC}.webp`}(zC,ZC,QC)}`
+    function ep(pp, ip, cp, Op) {
+      return null === ip.renderId ? jp(pp, ip.baselineVersion, cp, Op) : `${pp}/${function(pp,ip,cp,Op){return`shaderPacks/${pp}/${ip}/${cp}-${Op}.webp`}(ip.packId,ip.renderId,cp,Op)}`
+    }
+
+    function jp(pp, ip, cp, Op) {
+      return `${pp}/${function(pp,ip,cp){return`shaderPacks/baseline/${pp}/${ip}-${cp}.webp`}(ip,cp,Op)}`
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

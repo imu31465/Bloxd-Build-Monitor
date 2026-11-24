@@ -1,30 +1,30 @@
-export const id = 54;
-export const ids = [54];
+export const id = 55;
+export const ids = [55];
 export const modules = {
-  50754: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      startPageTexturePackFeed: () => nC
+  51242: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      startPageTexturePackFeed: () => Sp
     });
-    var QC = ZC(1149),
-      wC = ZC(38),
-      bC = ZC(50746);
+    var Op = cp(1211),
+      op = cp(44),
+      Ip = cp(51229);
 
-    function nC(CC, zC) {
-      const ZC = new bC.b({
-        store: wC.g,
-        warn: CC,
-        oneShot: zC,
-        fetchLatest: async CC => {
-          const zC = await fetch(`${QC.clientSideServerUrls.texturePackUrl}/${CC}.json`, {
+    function Sp(pp, ip) {
+      const cp = new Ip.b({
+        store: op.g,
+        warn: pp,
+        oneShot: ip,
+        fetchLatest: async pp => {
+          const ip = await fetch(`${Op.clientSideServerUrls.texturePackUrl}/${pp}.json`, {
             cache: "reload"
           });
-          if (!zC.ok) throw new Error(`fetching texture pack ${CC} answered HTTP ${zC.status}`);
-          return await zC.json()
+          if (!ip.ok) throw new Error(`fetching texture pack ${pp} answered HTTP ${ip.status}`);
+          return await ip.json()
         }
       });
-      return (0, bC.f)(ZC), ZC
+      return (0, Ip.d)(cp), cp
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

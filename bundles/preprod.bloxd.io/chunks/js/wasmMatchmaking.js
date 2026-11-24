@@ -1,30 +1,30 @@
-/*! For license information please see w4ddu.wasmMatchmaking.92b6c578.chunk.js.LICENSE.txt */
-export const id = 62;
-export const ids = [62];
+/*! For license information please see sn3sfj.wasmMatchmaking.6f5d7650.chunk.js.LICENSE.txt */
+export const id = 63;
+export const ids = [63];
 export const modules = {
-  36417: (CC, zC) => {
-    function ZC(CC) {
-      if (CC && "object" === typeof CC) {
-        var zC = CC.which || CC.keyCode || CC.charCode;
-        zC && (CC = zC)
+  36730: (pp, ip) => {
+    function cp(pp) {
+      if (pp && "object" === typeof pp) {
+        var ip = pp.which || pp.keyCode || pp.charCode;
+        ip && (pp = ip)
       }
-      if ("number" === typeof CC) return nC[CC];
-      var ZC, bC = String(CC);
-      return (ZC = QC[bC.toLowerCase()]) ? ZC : (ZC = wC[bC.toLowerCase()]) || (1 === bC.length ? bC.charCodeAt(0) : void 0)
+      if ("number" === typeof pp) return Sp[pp];
+      var cp, Ip = String(pp);
+      return (cp = Op[Ip.toLowerCase()]) ? cp : (cp = op[Ip.toLowerCase()]) || (1 === Ip.length ? Ip.charCodeAt(0) : void 0)
     }
-    ZC.isEventKey = function(CC, zC) {
-      if (CC && "object" === typeof CC) {
-        var ZC = CC.which || CC.keyCode || CC.charCode;
-        if (null === ZC || void 0 === ZC) return !1;
-        if ("string" === typeof zC) {
-          var bC;
-          if (bC = QC[zC.toLowerCase()]) return bC === ZC;
-          if (bC = wC[zC.toLowerCase()]) return bC === ZC
-        } else if ("number" === typeof zC) return zC === ZC;
+    cp.isEventKey = function(pp, ip) {
+      if (pp && "object" === typeof pp) {
+        var cp = pp.which || pp.keyCode || pp.charCode;
+        if (null === cp || void 0 === cp) return !1;
+        if ("string" === typeof ip) {
+          var Ip;
+          if (Ip = Op[ip.toLowerCase()]) return Ip === cp;
+          if (Ip = op[ip.toLowerCase()]) return Ip === cp
+        } else if ("number" === typeof ip) return ip === cp;
         return !1
       }
     };
-    var QC = (zC = CC.exports = ZC).code = zC.codes = {
+    var Op = (ip = pp.exports = cp).code = ip.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      wC = zC.aliases = {
+      op = ip.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (bC = 97; bC < 123; bC++) QC[String.fromCharCode(bC)] = bC - 32;
-    for (var bC = 48; bC < 58; bC++) QC[bC - 48] = bC;
-    for (bC = 1; bC < 13; bC++) QC["f" + bC] = bC + 111;
-    for (bC = 0; bC < 10; bC++) QC["numpad " + bC] = bC + 96;
-    var nC = zC.names = zC.title = {};
-    for (bC in QC) nC[QC[bC]] = bC;
-    for (var fC in wC) QC[fC] = wC[fC]
+    for (Ip = 97; Ip < 123; Ip++) Op[String.fromCharCode(Ip)] = Ip - 32;
+    for (var Ip = 48; Ip < 58; Ip++) Op[Ip - 48] = Ip;
+    for (Ip = 1; Ip < 13; Ip++) Op["f" + Ip] = Ip + 111;
+    for (Ip = 0; Ip < 10; Ip++) Op["numpad " + Ip] = Ip + 96;
+    var Sp = ip.names = ip.title = {};
+    for (Ip in Op) Sp[Op[Ip]] = Ip;
+    for (var xp in op) Op[xp] = op[xp]
   },
-  36581: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => nC
+  36887: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Sp
     });
-    var QC = ZC(48);
-    const wC = QC.useLayoutEffect;
-    const bC = function(CC) {
-      var zC = (0, QC.useRef)(CC);
-      return wC((function() {
-        zC.current = CC
-      })), zC
+    var Op = cp(62);
+    const op = Op.useLayoutEffect;
+    const Ip = function(pp) {
+      var ip = (0, Op.useRef)(pp);
+      return op((function() {
+        ip.current = pp
+      })), ip
     };
-    var nC = function(CC) {
-      var zC = bC(CC);
-      (0, QC.useEffect)((function() {
-        var CC = function(CC) {
-          var ZC;
-          if (null != zC.current && (ZC = zC.current(CC)), CC.defaultPrevented && (CC.returnValue = ""), "string" === typeof ZC) return CC.returnValue = ZC, ZC
+    var Sp = function(pp) {
+      var ip = Ip(pp);
+      (0, Op.useEffect)((function() {
+        var pp = function(pp) {
+          var cp;
+          if (null != ip.current && (cp = ip.current(pp)), pp.defaultPrevented && (pp.returnValue = ""), "string" === typeof cp) return pp.returnValue = cp, cp
         };
-        return window.addEventListener("beforeunload", CC),
+        return window.addEventListener("beforeunload", pp),
           function() {
-            window.removeEventListener("beforeunload", CC)
+            window.removeEventListener("beforeunload", pp)
           }
       }), [])
     }
   },
-  36466: CC => {
-    var zC, ZC = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      QC = /OS X/.test(ZC),
-      wC = /Opera/.test(ZC),
-      bC = !/like Gecko/.test(ZC) && !wC,
-      nC = CC.exports = {
-        0: QC ? "<menu>" : "<UNK>",
+  36772: pp => {
+    var ip, cp = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      Op = /OS X/.test(cp),
+      op = /Opera/.test(cp),
+      Ip = !/like Gecko/.test(cp) && !op,
+      Sp = pp.exports = {
+        0: Op ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: QC ? "<meta>" : "<menu>",
+        93: Op ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: QC && bC ? "-" : "<volume-mute>",
+        173: Op && Ip ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: wC ? "`" : "<unicode>",
+        231: op ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,261 +234,322 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (zC = 58; zC < 65; ++zC) nC[zC] = String.fromCharCode(zC);
-    for (zC = 48; zC < 58; ++zC) nC[zC] = zC - 48 + "";
-    for (zC = 65; zC < 91; ++zC) nC[zC] = String.fromCharCode(zC);
-    for (zC = 96; zC < 106; ++zC) nC[zC] = "<num-" + (zC - 96) + ">";
-    for (zC = 112; zC < 136; ++zC) nC[zC] = "F" + (zC - 111)
+    for (ip = 58; ip < 65; ++ip) Sp[ip] = String.fromCharCode(ip);
+    for (ip = 48; ip < 58; ++ip) Sp[ip] = ip - 48 + "";
+    for (ip = 65; ip < 91; ++ip) Sp[ip] = String.fromCharCode(ip);
+    for (ip = 96; ip < 106; ++ip) Sp[ip] = "<num-" + (ip - 96) + ">";
+    for (ip = 112; ip < 136; ++ip) Sp[ip] = "F" + (ip - 111)
   },
-  8907: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => bC,
-      g: () => wC
+  9046: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Ip,
+      g: () => op
     });
-    let QC = !1;
+    let Op = !1;
 
-    function wC() {
-      QC = !0
+    function op() {
+      Op = !0
     }
 
-    function bC() {
-      return QC
+    function Ip() {
+      return Op
     }
   },
-  36322: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      InGameUi: () => xC.c,
-      LobbyLeaderboard: () => JC.d,
-      loadCharacterCustomisationUI: () => IC,
-      loadCharacterPreview: () => iC,
-      matchmakeAndPlay: () => KC,
-      setUpGame: () => vC
+  36658: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      InGameUi: () => ep.d,
+      LobbyLeaderboard: () => jp.c,
+      loadCharacterCustomisationUI: () => kp,
+      loadCharacterPreview: () => mp,
+      matchmakeAndPlay: () => Cp,
+      matchmakeForAhead: () => xp.e,
+      setUpGame: () => Rp
     });
-    var QC = ZC(1187),
-      wC = ZC(134),
-      bC = ZC(20),
-      nC = ZC(36329),
-      fC = ZC(36335),
-      oC = ZC(1865),
-      qC = ZC(36373);
+    var Op = cp(1255),
+      op = cp(156),
+      Ip = cp(25),
+      Sp = cp(36663),
+      xp = cp(36669),
+      Lp = cp(1982),
+      Yp = cp(36691);
 
-    function FC() {
-      return !1 !== oC.e.get("canCustomiseChar")
+    function Dp() {
+      return !1 !== Lp.c.get("canCustomiseChar")
     }
-    let WC = !1;
-    var NC = ZC(1275),
-      MC = ZC(1192),
-      gC = ZC(239),
-      SC = ZC(666),
-      pC = ZC(8907),
-      PC = ZC(8904);
+    let Ap = !1;
+    var Pp = cp(1349),
+      Wp = cp(1260),
+      yp = cp(249),
+      Up = cp(3668),
+      wp = cp(9046),
+      vp = cp(9041);
 
-    function GC() {
-      (0, pC.d)() || (0, PC.d)().catch((CC => {
-        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", CC)
+    function tp() {
+      (0, wp.c)() || (0, vp.e)().catch((pp => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", pp)
       }))
     }
-    var RC = ZC(3419),
-      AC = ZC(1669);
-    var xC = ZC(36378),
-      JC = ZC(36880);
+    var Hp = cp(3546),
+      dp = cp(1786);
+    var ep = cp(36695),
+      jp = cp(37220);
 
-    function IC() {
-      return ZC.e(216).then((() => ZC(41095)))
+    function kp() {
+      return cp.e(220).then((() => cp(41517)))
     }
 
-    function iC() {
-      return ZC.e(291).then((() => ZC(41104)))
+    function mp() {
+      return cp.e(296).then((() => cp(41524)))
     }
 
-    function vC() {
-      return (0, PC.j)()
+    function Rp() {
+      return (0, vp.j)()
     }
-    WC || (WC = !0, document.addEventListener("keydown", (CC => {
-        (0, qC.b)(CC, FC)
+    Ap || (Ap = !0, document.addEventListener("keydown", (pp => {
+        (0, Yp.b)(pp, Dp)
       }))),
-      function(CC) {
-        var zC;
-        return !0 !== (null === CC || void 0 === CC ? void 0 : CC.saveData) && !/2g$/.test(null !== (zC = null === CC || void 0 === CC ? void 0 : CC.effectiveType) && void 0 !== zC ? zC : "")
-      }(navigator.connection) && (0, SC.d)((() => {
-        (0, pC.d)() || Promise.all([ZC.e(77), ZC.e(89), ZC.e(211), ZC.e(210), ZC.e(134), ZC.e(139), ZC.e(58)]).then((() => ZC(40885))).then((async CC => {
-          (0, pC.d)() || (await CC.startLoadAheadOfJoin({
-            joinStarted: pC.d,
-            language: MC.h.get().getCurrentLanguageCode()
-          }), (0, gC.e)(GC))
-        }), (CC => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", CC)
+      function(pp) {
+        var ip;
+        return !0 !== (null === pp || void 0 === pp ? void 0 : pp.saveData) && !/2g$/.test(null !== (ip = null === pp || void 0 === pp ? void 0 : pp.effectiveType) && void 0 !== ip ? ip : "")
+      }(navigator.connection) && (0, Up.b)((() => {
+        (0, wp.c)() || Promise.all([cp.e(78), cp.e(90), cp.e(215), cp.e(214), cp.e(137), cp.e(140), cp.e(59)]).then((() => cp(41270))).then((async pp => {
+          (0, wp.c)() || (await pp.startLoadAheadOfJoin({
+            joinStarted: wp.c,
+            language: Wp.g.get().getCurrentLanguageCode()
+          }), (0, yp.b)(tp))
+        }), (pp => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", pp)
         }))
       }));
-    const eC = bC.b.get("router");
-    null === eC ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function CC(zC) {
-      if ((0, AC.b)(zC.state.location.pathname)) return void(0, PC.h)().catch((() => {}));
-      const ZC = zC.subscribe((QC => {
-        (0, AC.b)(QC.location.pathname) && (ZC(), (0, RC.e)().then((() => {
-          CC(zC)
+    const qp = Ip.c.get("router");
+    null === qp ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function pp(ip) {
+      if ((0, dp.d)(ip.state.location.pathname)) return void(0, vp.f)().catch((() => {}));
+      const cp = ip.subscribe((Op => {
+        (0, dp.d)(Op.location.pathname) && (cp(), (0, Hp.h)().then((() => {
+          pp(ip)
         })))
       }))
-    }(eC), (0, nC.c)();
-    const hC = (0, fC.d)((async function(CC, zC) {
+    }(qp), (0, Sp.c)();
+    const Mp = (0, xp.d)((async function(pp, ip) {
       let {
-        place: ZC,
-        userContext: bC,
-        direct: nC,
-        rematch: fC
-      } = CC;
-      const oC = nC ? 1 / 0 : performance.now();
-      let qC;
+        place: cp,
+        userContext: Ip,
+        direct: Sp,
+        matchedAt: xp,
+        rematch: Lp
+      } = pp;
+      const Yp = Sp ? 1 / 0 : xp;
+      let Dp;
       try {
-        qC = await (0, PC.h)()
-      } catch (FC) {
-        return console.error("The wasm client did not load:", FC), (0, NC.r)({
+        Dp = await (0, vp.f)()
+      } catch (Ap) {
+        return console.error("The wasm client did not load:", Ap), (0, Pp.p)({
           websocketUrl: null
-        }), QC.e.errorWithCode(String(FC), wC.l.CONNECT_TO_GAME_SERVER, {
-          error: FC,
-          severity: zC.aborted ? "low" : "medium",
-          wZ: zC.aborted
+        }), Op.d.errorWithCode(String(Ap), op.k.CONNECT_TO_GAME_SERVER, {
+          error: Ap,
+          severity: ip.aborted ? "low" : "medium",
+          OO: ip.aborted
         })
       }
-      return qC.playWasmGame({
-        userContext: bC,
-        place: ZC,
-        matchedAt: oC,
-        rematch: fC
-      }, zC)
+      return Dp.playWasmGame({
+        userContext: Ip,
+        place: cp,
+        matchedAt: Yp,
+        rematch: Lp
+      }, ip)
     }));
 
-    function KC() {
-      return (0, PC.h)().catch((() => {})), hC(...arguments)
+    function Cp() {
+      return (0, vp.f)().catch((() => {})), Mp(...arguments)
     }
   },
-  8904: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => MC,
-      h: () => NC,
-      j: () => gC
+  9041: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Wp,
+      f: () => Pp,
+      j: () => yp
     });
-    var QC = ZC(3137),
-      wC = ZC(2224),
-      bC = ZC(2050),
-      nC = ZC(4582),
-      fC = ZC(3464),
-      oC = ZC(8907);
-    let qC = null;
+    var Op = cp(3246),
+      op = cp(2343),
+      Ip = cp(2174),
+      Sp = cp(4739),
+      xp = cp(3607),
+      Lp = cp(9046);
+    let Yp = null;
 
-    function FC() {
-      return Promise.all([ZC.e(74), ZC.e(77), ZC.e(89), ZC.e(211), ZC.e(76), ZC.e(210), ZC.e(134), ZC.e(196), ZC.e(139), ZC.e(87), ZC.e(218), ZC.e(63)]).then((() => ZC(40510)))
+    function Dp() {
+      return Promise.all([cp.e(75), cp.e(78), cp.e(90), cp.e(215), cp.e(214), cp.e(160), cp.e(137), cp.e(198), cp.e(140), cp.e(88), cp.e(275), cp.e(64)]).then((() => cp(40873)))
     }
 
-    function WC() {
-      Promise.all([ZC.e(72), ZC.e(75), ZC.e(74), ZC.e(73), ZC.e(89), ZC.e(86), ZC.e(269), ZC.e(189), ZC.e(223), ZC.e(247), ZC.e(218), ZC.e(46)]).then((() => ZC(40832))).catch((() => {}))
+    function Ap() {
+      Promise.all([cp.e(73), cp.e(76), cp.e(75), cp.e(74), cp.e(90), cp.e(87), cp.e(273), cp.e(191), cp.e(228), cp.e(252), cp.e(275), cp.e(47)]).then((() => cp(41212))).catch((() => {}))
     }
 
-    function NC() {
-      return nC.e.cancelDownloadForJoin(), (0, fC.b)(), (0, wC.f)(), (0, oC.g)(), (0, bC.k)(), WC(), Promise.all([ZC.e(77), ZC.e(89), ZC.e(211), ZC.e(210), ZC.e(134), ZC.e(139), ZC.e(58)]).then((() => ZC(40885))).then((CC => {
+    function Pp() {
+      return Sp.b.cancelDownloadForJoin(), (0, xp.c)(), (0, op.e)(), (0, Lp.g)(), (0, Ip.j)(), Ap(), Promise.all([cp.e(78), cp.e(90), cp.e(215), cp.e(214), cp.e(137), cp.e(140), cp.e(59)]).then((() => cp(41270))).then((pp => {
         let {
-          startJoinLoad: zC
-        } = CC;
-        zC()
-      }), (() => {})), qC ??= FC().then((CC => (CC.startWasmPlay(), CC.followPageUiPack((CC => {
-        QC.c.showGamePack(CC)
-      })), CC)), (CC => {
-        throw qC = null, CC
-      })), qC
+          startJoinLoad: ip
+        } = pp;
+        ip()
+      }), (() => {})), Yp ??= Dp().then((pp => (pp.startWasmPlay(), pp.followPageUiPack((pp => {
+        Op.d.showGamePack(pp)
+      })), pp)), (pp => {
+        throw Yp = null, pp
+      })), Yp
     }
 
-    function MC() {
-      return WC(), ZC.e(271).then((() => ZC(40888))).catch((() => {})), FC().then((() => {}))
+    function Wp() {
+      return Ap(), cp.e(276).then((() => cp(41273))).catch((() => {})), Dp().then((() => {}))
     }
 
-    function gC() {
-      return FC().then((CC => {
-        CC.startWasmPreviews(), CC.prefetchWasmPreviews()
+    function yp() {
+      return Dp().then((pp => {
+        pp.startWasmPreviews(), pp.prefetchWasmPreviews()
       }))
     }
   },
-  36712: (CC, zC, ZC) => {
-    function QC(CC) {
-      return "fetch" === CC || "timeout" === CC || "integrity" === CC ? "download" : "browser"
-    }
-    ZC.d(zC, {
-      b: () => wC,
-      c: () => nC,
-      g: () => oC,
-      j: () => fC,
-      m: () => QC,
-      p: () => bC
+  36677: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Pp,
+      e: () => Dp,
+      g: () => Wp,
+      j: () => Ap
     });
-    const wC = "https://discord.gg/playbloxd";
+    var Op = cp(337),
+      op = cp(667),
+      Ip = cp(676),
+      Sp = cp(44);
+    const xp = {
+        idStorageKey: "playSessionId",
+        lastActivityStorageKey: "playSessionLastActivityMs",
+        expiryMs: 3e5
+      },
+      Lp = "playSessionGameNameWithVariation",
+      Yp = "wasMatchmakePlayer";
 
-    function bC(CC) {
-      return "download" === CC ? {
-        icon: "wifi",
-        title: "wasmScreens:downloadFailedTitle",
-        help: "wasmScreens:downloadFailedHelp",
-        helpValues: {},
-        discordLink: !1,
-        confirm: "general:tryAgain",
-        cancel: "general:back"
-      } : {
-        icon: "face-dizzy",
-        title: "wasmScreens:unsupportedTitle",
-        help: "wasmScreens:unsupportedHelp",
-        helpValues: {},
-        discordLink: !1,
-        confirm: "general:ok",
-        cancel: null
-      }
+    function Dp() {
+      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sp.l;
+      (0, Ip.h)(pp, xp)
     }
 
-    function nC(CC, zC) {
-      return {
-        icon: "face-dizzy",
-        title: "wasmScreens:crashTitle",
-        help: zC ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
-        helpValues: {
-          code: CC.code
-        },
-        discordLink: zC,
-        confirm: "general:reload",
-        cancel: "general:back"
-      }
+    function Ap() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sp.l).setItem(Yp, !0)
     }
 
-    function fC() {
-      return {
-        icon: "face-dizzy",
-        title: "wasmScreens:turnstilePageTitle",
-        help: "wasmScreens:turnstilePageHelp",
-        helpValues: {},
-        discordLink: !1,
-        confirm: "general:ok",
-        cancel: null
-      }
+    function Pp() {
+      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sp.l;
+      return (0, Ip.c)(pp, xp)
     }
 
-    function oC(CC, zC, ZC) {
-      return {
-        icon: "wifi",
-        title: "wasmScreens:disconnectedTitle",
-        help: ZC ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
-        helpValues: {
-          reason: CC.reason
-        },
-        discordLink: null === CC.name,
-        confirm: zC ? "general:reconnect" : CC.requiresRefresh ? "general:reload" : "general:ok",
-        cancel: null
+    function Wp(pp) {
+      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Sp.l;
+      const cp = (0, Ip.c)(ip, xp),
+        Dp = function(pp) {
+          const ip = pp.getItem(Lp);
+          return "string" !== typeof ip ? null : ip
+        }(ip),
+        Ap = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sp.l).getItem(Yp)
+        }(ip);
+      let Pp;
+      return Pp = null !== cp && null !== Dp && (0, Ip.f)(ip, xp) && function(pp, ip, cp) {
+          const op = (0, Op.Mb)(pp),
+            Ip = (0, Op.Mb)(ip),
+            Sp = (0, Op.Ib)(pp),
+            xp = (0, Op.Ib)(ip);
+          return !(op !== Ip || !cp) || op === Ip && Sp === xp
+        }(Dp, pp, Ap) ? cp : (0, op.e)(), (0, Ip.k)(ip, xp, Pp), ip.setItem(Lp, pp),
+        function() {
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sp.l).removeItem(Yp)
+        }(ip), Pp
+    }
+  },
+  36674: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => ep,
+      d: () => jp
+    });
+    var Op = cp(1014),
+      op = cp(209),
+      Ip = cp(335),
+      Sp = cp(643),
+      xp = cp(337),
+      Lp = cp(1021),
+      Yp = cp(657),
+      Dp = cp(681),
+      Ap = cp(4609),
+      Pp = cp(104),
+      Wp = cp(131),
+      yp = cp(1765),
+      Up = cp(116),
+      wp = cp(36677),
+      vp = cp(44),
+      tp = cp(670),
+      Hp = cp(645),
+      dp = cp(36679);
+
+    function ep() {
+      var pp, ip;
+      return [...null !== (pp = navigator.languages) && void 0 !== pp ? pp : [null !== (ip = navigator.language) && void 0 !== ip ? ip : "none"], "en-Gb"]
+    }
+
+    function jp(pp, ip, cp, jp, kp) {
+      const mp = (0, Op.j)(ip) ? (0, Op.o)(ip) : null,
+        Rp = pp.isLoggedIn() && void 0 !== (0, op.e)(Ip.k, Wp.siteUsed) ? (0, Hp.f)() : null,
+        qp = {
+          cookies: (0, yp.getAllCookiesForGameNameWithVariation)(ip),
+          isMobile: (0, Pp.isMobile)(),
+          isUsingCustomGameTexturePack: null !== mp && kp(mp),
+          generalCookies: {
+            joinDiscord: !!vp.h.getItem("DiscordPressed"),
+            newGo: Ap.c,
+            ...pp.getMetricsCookies(),
+            trafficCode: jp,
+            compliance: Pp.compliance
+          },
+          browserInfo: {
+            ua: window.navigator.userAgent,
+            name: (0, Pp.getBrowserName)(),
+            version: (0, Pp.getBrowserVersion)(),
+            platform: navigator.platform,
+            platformType: (0, Pp.getPlatformType)(),
+            deviceType: (0, Up.c)()
+          },
+          isLoggedIn: pp.isLoggedIn(),
+          lobbyName: cp,
+          languages: ep(),
+          version: Sp.c,
+          siteUsed: Wp.siteUsed,
+          subsiteUsed: Wp.subsiteUsed,
+          playSessionId: (0, wp.g)(ip),
+          visitSessionId: (0, tp.g)(),
+          clientReason: Yp.p.reason,
+          budgetBasis: (0, dp.j)(),
+          ...null !== Dp.n && {
+            diagClaim: Dp.n.claimId
+          },
+          ...null !== Rp && {
+            webGpuLoss: Rp
+          }
+        };
+      return null !== mp && (0, xp.vc)(mp) ? (qp.lobbyName = (0, Op.h)(mp, (0, Op.n)(ip), cp), {
+        roomName: `classic_${Lp.d}`,
+        joinOptions: qp
+      }) : {
+        roomName: ip,
+        joinOptions: qp
       }
     }
   },
-  9299: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => wC,
-      d: () => bC
+  9436: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => op,
+      h: () => Ip
     });
-    var QC = ZC(9239);
-    const wC = "Air",
-      bC = Object.freeze(new QC.e(wC, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var Op = cp(9385);
+    const op = "Air",
+      Ip = Object.freeze(new Op.e(op, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

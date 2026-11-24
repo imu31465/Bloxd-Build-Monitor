@@ -1,547 +1,511 @@
 export const id = 97;
-export const ids = [97];
+export const ids = [95, 96, 97];
 export const modules = {
-  4807: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      default: () => tC
+  36819: (pp, ip, cp) => {
+    function Op(pp, ip, cp, Op) {
+      return !(cp && !pp.aimable) && (!ip || pp.gun && "head" !== Op)
+    }
+
+    function op(pp) {
+      return Math.max(.1 * pp, 1)
+    }
+
+    function Ip(pp, ip) {
+      return !pp && ip
+    }
+    cp.d(ip, {
+      d: () => Ip,
+      e: () => op,
+      h: () => Op
+    })
+  },
+  36828: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => xp,
+      i: () => Sp
     });
-    var QC = ZC(48),
-      wC = ZC(1463),
-      bC = ZC(326),
-      nC = ZC(1178),
-      fC = ZC(1542),
-      oC = ZC(1211),
-      qC = ZC(1479),
-      FC = ZC(1439),
-      WC = ZC(2657);
-    const NC = {
-      retries: 2,
-      minTimeout: 2e3
-    };
-    var MC = ZC(1072),
-      gC = ZC(1540),
-      SC = ZC(1076),
-      pC = ZC(1811),
-      PC = ZC(1143),
-      GC = ZC(1169),
-      RC = ZC(3448),
-      AC = ZC(1295),
-      xC = ZC(1388),
-      JC = ZC(1453),
-      IC = ZC(2595),
-      iC = ZC(2612),
-      vC = ZC(4811),
-      eC = ZC(2086),
-      hC = ZC(1002),
-      KC = ZC.n(hC),
-      YC = ZC(1013),
-      dC = ZC(4819),
-      mC = ZC(20),
-      HC = ZC(1840),
-      EC = ZC(3578),
-      lC = ZC(1921),
-      XC = ZC(3537),
-      cC = ZC(77),
-      uC = ZC(4491),
-      rC = ZC(1056);
-    const sC = [vC];
-
-    function TC(CC) {
-      let {
-        icon: zC,
-        label: ZC,
-        value: QC
-      } = CC;
-      return (0, rC.jsxs)("div", {
-        className: "PlayerProfileStat",
-        children: [(0, rC.jsx)(YC.c, {
-          name: zC,
-          className: "PlayerProfileStatIcon"
-        }), (0, rC.jsxs)("div", {
-          className: "PlayerProfileStatText",
-          children: [(0, rC.jsx)("div", {
-            className: "PlayerProfileStatLabel SmallTextLight",
-            children: ZC
-          }), (0, rC.jsx)("div", {
-            className: "PlayerProfileStatValue",
-            children: QC
-          })]
-        })]
-      })
-    }
-
-    function aC(CC) {
-      let {
-        profile: zC
-      } = CC;
-      const {
-        t: ZC,
-        selectedLanguage: QC
-      } = (0, PC.y)();
-      let wC = ZC("homePage:profileUnknown");
-      if (zC.lastOnline) {
-        const CC = (0, PC.m)(QC.code, "homePage:profileTimeAgo");
-        wC = ZC("homePage:profileTimeAgo", {
-          time: (0, bC.U)(CC, zC.lastOnline, Date.now())
-        })
-      }
-      let nC = ZC("homePage:profileUnknown");
-      return zC.accountCreatedAt && (nC = new Date(zC.accountCreatedAt).toLocaleDateString(void 0, {
-        year: "numeric",
-        month: "short",
-        day: "numeric"
-      })), (0, rC.jsxs)("div", {
-        className: "PlayerProfileStats",
-        children: [(0, rC.jsx)(TC, {
-          icon: "hourglass",
-          label: ZC("homePage:profileTimePlayed"),
-          value: (0, EC.c)(zC.totalPlayMinutes)
-        }), (0, rC.jsx)(TC, {
-          icon: "wifi",
-          label: ZC("homePage:profileLastOnline"),
-          value: wC
-        }), (0, rC.jsx)(TC, {
-          icon: "calendar",
-          label: ZC("homePage:profileJoined"),
-          value: nC
-        })]
-      })
-    }
-
-    function tC() {
-      const {
-        t: CC
-      } = (0, PC.y)(), zC = (0, JC.useNavigatePreserveSearch)(), ZC = (0, MC.k)(), {
-        playerName: vC,
-        playerUrlName: hC
-      } = (0, wC.C)(), EC = (0, wC.v)(), TC = (0, nC.c)(EC.pathname), tC = TC && ("urlId" in TC ? `urlId:${TC.urlId}` : `name:${TC.lowerCaseName}`), DC = (0, QC.useRef)(tC);
-      DC.current = tC;
-      const {
-        userContext: jC,
-        isUserContextUpdating: yC
-      } = (0, SC.e)(), LC = (0, QC.useRef)(null), UC = (0, QC.useRef)(null), BC = (0, QC.useRef)(null), OC = (0, QC.useRef)(!1), kC = (0, QC.useRef)((0, bC.Qb)(sC)), [VC, Cz] = (0, QC.useState)((() => {
-        const CC = TC && iC.b.peek(jC, TC);
-        return CC ? {
-          status: "loaded",
-          profile: CC,
-          playerKey: tC
-        } : {
-          status: "loading"
+    let Op = null;
+    const op = {
+        crosshairAccuracy: [],
+        turnDamageIndicators: []
+      },
+      Ip = {
+        crosshairAccuracy: pp => {
+          const ip = op.crosshairAccuracy.at(-1);
+          ip ? ip.hook(pp) : Op = pp
+        },
+        turnDamageIndicators: pp => {
+          var ip;
+          null === (ip = op.turnDamageIndicators.at(-1)) || void 0 === ip || ip.hook(pp)
         }
-      })), [zz, Zz] = (0, QC.useState)(0);
-      (0, QC.useEffect)(IC.f, []), (0, QC.useEffect)((() => {
-        HC.gameBridge.send("leaveGame", {
-          reloadPath: null
-        }), mC.b.set({
-          gameState: "landingPage",
-          openEverythingMenuName: null,
-          openInGameMenuName: null
-        })
-      }), [EC.key]);
-      const Qz = () => {
-        const CC = (0, JC.getPreviousLocation)();
-        null === CC || CC.startsWith("/play") ? (0, JC.navigateToHomePage)() : zC(-1)
       };
-      (0, uC.e)(Qz), (0, QC.useEffect)((() => {
-        var CC;
-        if (yC) return;
-        if (!TC) return void Cz({
-          status: "notFound",
-          playerKey: tC
-        });
-        const zC = "urlId" in TC && (null === (CC = UC.current) || void 0 === CC ? void 0 : CC.urlId) === TC.urlId && BC.current === jC;
-        if (zC && OC.current) return;
-        const ZC = zC ? null : iC.b.peek(jC, TC);
-        let QC = !1;
-        const wC = CC => "loaded" === CC.status && (CC.playerKey === tC || "urlId" in TC && CC.profile.urlId === TC.urlId);
-        return ZC ? (BC.current = jC, OC.current = !1, Cz({
-          status: "loaded",
-          profile: ZC,
-          playerKey: tC
-        }), iC.b.invalidate(TC)) : Cz((CC => wC(CC) ? CC : {
-          status: "loading"
-        })), async function(CC, zC) {
-          if ("lowerCaseName" in zC && zC.lowerCaseName.length > oC.i) return {
-            status: "notFound"
-          };
-          try {
-            return {
-              status: "loaded",
-              profile: await FC.d.getPlayerProfile(CC, zC, NC)
-            }
-          } catch (ZC) {
-            return (0, WC.e)(ZC) ? {
-              status: "notFound"
-            } : (console.error("Failed to load user profile", ZC), {
-              status: "failed"
-            })
-          }
-        }(jC, TC).then((CC => {
-          QC || ("loaded" === CC.status && (BC.current = jC, OC.current = !0), Cz((zC => "failed" === CC.status && wC(zC) ? zC : {
-            ...CC,
-            playerKey: tC
-          })))
-        })), () => {
-          QC = !0
-        }
-      }), [yC, tC, jC, zz]);
-      const wz = "loading" === VC.status || VC.playerKey === tC || "loaded" === VC.status && !!TC && "urlId" in TC && VC.profile.urlId === TC.urlId ? VC : {
-          status: "loading"
+
+    function Sp(pp, ip) {
+      const cp = {
+          hook: ip
         },
-        bz = "loaded" === wz.status ? wz.profile : null,
-        nz = "loading" === wz.status ? null : function(CC) {
-          if ("loaded" === CC.status) {
-            const {
-              profile: zC
-            } = CC;
-            return (0, qC.S)({
-              urlId: zC.urlId,
-              name: zC.player.name,
-              ranks: zC.player.ranks,
-              socialLinks: zC.socialLinks
-            })
-          }
-          return "notFound" === CC.status ? (0, qC._)() : null
-        }(wz),
-        fz = null !== bz && void 0 !== bz && bz.urlId ? (0, nC.g)({
-          urlId: bz.urlId,
-          name: bz.player.name
-        }) : null;
-      (0, gC.f)(fz);
-      const oz = null !== bz && void 0 !== bz && bz.player.cosmetics.profileEffect ? eC.f[bz.player.cosmetics.profileEffect] : void 0,
-        qz = null !== bz && !yC && jC.getPlayerName().toLowerCase() === bz.player.name.toLowerCase(),
-        Fz = (0, lC.e)(null === bz || void 0 === bz ? void 0 : bz.player.name),
-        Wz = qz && jC.playerHasRank("youtuber");
-      UC.current = bz;
-      const Nz = (0, QC.useCallback)((() => {
-          TC && (iC.b.invalidate(TC), iC.b.get(jC, TC).then((CC => {
-            DC.current === tC && (OC.current = !0, Cz({
-              status: "loaded",
-              profile: CC,
-              playerKey: tC
-            }))
-          })).catch((CC => {
-            console.error("Failed to refresh user profile", CC)
-          })))
-        }), [tC, jC]),
-        Mz = (0, QC.useCallback)((() => {
-          var CC;
-          const zC = UC.current;
-          return !(!zC || null === (CC = LC.current) || void 0 === CC || !CC.isReady()) && (LC.current.setAllCosmetics(zC.player.cosmetics), !0)
-        }), []);
-      return (0, QC.useEffect)((() => {
-        if (!bz) return;
-        let CC, zC = !1;
-        const ZC = () => {
-          zC || Mz() || (CC = setTimeout(ZC, 100))
-        };
-        return ZC(), () => {
-          zC = !0, clearTimeout(CC)
-        }
-      }), [bz, Mz]), (0, rC.jsxs)("div", {
-        className: KC()("PlayerProfile", {
-          PlayerProfilePortrait: ZC
-        }),
-        children: [nz && (0, rC.jsx)(fC.d, {
-          meta: nz
-        }), (0, rC.jsxs)("div", {
-          className: "PlayerProfileBackgroundContainer",
-          children: [oz && (0, rC.jsx)(oz, {}), !oz && (0, rC.jsx)("div", {
-            className: "PlayerProfileBackground",
-            style: {
-              backgroundImage: `url(${kC.current})`
-            }
-          })]
-        }), (0, rC.jsxs)("div", {
-          className: "PlayerProfileHeader",
-          children: [(0, rC.jsx)(xC.c, {
-            onClick: Qz,
-            children: CC("general:back")
-          }), bz && !yC && !qz && cC.featureFlags.useSocialFeatures && (0, rC.jsx)("div", {
-            className: "PlayerProfileExclusionActions",
-            children: (0, rC.jsx)(XC.b, {
-              playerName: bz.player.name,
-              className: "SmallTextLight"
-            })
-          })]
-        }), "loading" === wz.status && (0, rC.jsx)("div", {
-          className: "PlayerProfileCentredMessage",
-          children: (0, rC.jsx)(AC.d, {})
-        }), ("notFound" === wz.status || "failed" === wz.status) && (0, rC.jsxs)("div", {
-          className: "PlayerProfileCentredMessage PlayerProfileError",
-          children: [(0, rC.jsx)(YC.c, {
-            name: "face-dizzy"
-          }), (0, rC.jsx)("div", {
-            className: "PlayerProfileErrorText",
-            children: "notFound" === wz.status ? CC("socialBar:playerNotFound", {
-              playerName: null !== hC && void 0 !== hC ? hC : vC
-            }) : CC("playerProfile:loadFailed")
-          }), "failed" === wz.status && (0, rC.jsx)(xC.g, {
-            onClick: () => {
-              Zz((CC => CC + 1))
-            },
-            children: CC("general:tryAgain")
-          })]
-        }), bz && (0, rC.jsxs)("div", {
-          className: "PlayerProfileContent",
-          children: [(0, rC.jsxs)("div", {
-            className: "PlayerProfileLeft",
-            children: [(0, rC.jsx)("div", {
-              className: "PlayerProfileName FullyFancyText",
-              children: (0, rC.jsx)(pC.e, {
-                text: (0, GC.E)(bz.player.ranks, bz.player.name, bz.player.nameColour),
-                friendBadgeFor: Fz ? bz.player.name : void 0
-              })
-            }), (0, rC.jsx)("div", {
-              className: "PlayerProfileModel",
-              children: (0, rC.jsx)(QC.Suspense, {
-                fallback: (0, rC.jsx)("div", {
-                  className: "PlayerProfileModelLoading",
-                  children: (0, rC.jsx)(AC.d, {})
-                }),
-                children: (0, rC.jsx)(IC.c, {
-                  ref: LC,
-                  onReady: () => {
-                    Mz()
-                  }
-                })
-              })
-            })]
-          }), (0, rC.jsxs)("div", {
-            className: "PlayerProfileRight",
-            children: [(0, rC.jsx)(aC, {
-              profile: bz
-            }), (bz.socialLinks.length > 0 || Wz) && (0, rC.jsx)(dC.b, {
-              socialLinks: bz.socialLinks,
-              editable: Wz,
-              userContext: jC,
-              onLinksUpdated: Nz
-            }), (0, rC.jsxs)("div", {
-              className: "PlayerProfileGames",
-              children: [(0, rC.jsx)("div", {
-                className: "PlayerProfileGamesTitle SmallTextBold",
-                children: CC("homePage:profileReleasedGames")
-              }), 0 === bz.releasedGames.length && (0, rC.jsx)("div", {
-                className: "PlayerProfileNoGames",
-                children: CC("homePage:profileNoReleasedGames")
-              }), bz.releasedGames.length > 0 && (0, rC.jsx)("div", {
-                className: "PlayerProfileGamesGrid",
-                children: bz.releasedGames.map((CC => (0, rC.jsx)(RC.d, {
-                  source: {
-                    type: "preview",
-                    preview: CC
-                  },
-                  gameWidth: "100%",
-                  useLongRatio: !0,
-                  hideFavourites: !0,
-                  entrySource: "other"
-                }, CC.schematicId)))
-              })]
-            })]
-          })]
-        })]
-      })
+        Sp = op[pp];
+      if (Sp.push(cp), "crosshairAccuracy" === pp && null !== Op) {
+        const pp = Op;
+        Op = null, Ip.crosshairAccuracy(pp)
+      }
+      return () => {
+        const pp = Sp.indexOf(cp); - 1 !== pp && Sp.splice(pp, 1)
+      }
+    }
+
+    function xp() {
+      return Ip
     }
   },
-  4819: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => pC
+  36654: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      countDecodesAs: () => Ap,
+      decodedAudio: () => Pp
     });
-    var QC = ZC(1002),
-      wC = ZC.n(QC),
-      bC = ZC(4579),
-      nC = ZC(1143),
-      fC = ZC(1013),
-      oC = ZC(1388),
-      qC = ZC(1439),
-      FC = ZC(1307),
-      WC = ZC(2454),
-      NC = ZC(1056);
-    const MC = {
-      youtube: {
-        icon: "youtube",
-        color: "#FF0033",
-        name: "YouTube"
+    var Op = cp(3363),
+      op = cp(4974);
+    const Ip = op.Howler,
+      Sp = new Map;
+    let xp = 0;
+    const Lp = {
+        song: 0,
+        sheet: 0
       },
-      tiktok: {
-        icon: "tiktok",
-        color: "#0F0F0F",
-        name: "TikTok"
-      },
-      instagram: {
-        icon: "instagram",
-        color: "#E1306C",
-        name: "Instagram"
-      },
-      twitter: {
-        icon: "x-twitter",
-        color: "#0F0F0F",
-        name: "X"
-      },
-      twitch: {
-        icon: "twitch",
-        color: "#9146FF",
-        name: "Twitch"
-      }
-    };
+      Yp = new WeakMap,
+      Dp = new WeakSet;
 
-    function gC(CC) {
-      let {
-        platform: zC
-      } = CC;
-      const ZC = "youtube" === zC;
-      return (0, NC.jsxs)("span", {
-        className: wC()("PlayerProfileSocialLinkIcon", {
-          PlayerProfileSocialLinkIconYoutube: ZC
-        }),
-        children: [ZC && (0, NC.jsx)(WC.d, {
-          variant: "white"
-        }), !ZC && (0, NC.jsx)(fC.c, {
-          name: MC[zC].icon,
-          kit: "brands"
-        })]
-      })
+    function Ap(pp, ip) {
+      return Yp.set(pp, ip), pp
     }
 
-    function SC(CC) {
-      let {
-        platform: zC,
-        link: ZC,
-        editable: QC,
-        userContext: wC,
-        onLinksUpdated: WC
-      } = CC;
-      const {
-        t: SC
-      } = (0, nC.y)(), pC = MC[zC];
-      if (!ZC && !QC) return null;
+    function Pp() {
+      return {
+        bytes: xp,
+        songsDecoded: Lp.song,
+        sheetsDecoded: Lp.sheet
+      }
+    }
 
-      function PC() {
-        var CC;
-        if (!wC || !WC) return;
-        FC.NotificationProvider.showInputPopup({
-          title: "homePage:profileSocialLinkEditTitle",
-          textOpts: {
-            title: {
-              platform: pC.name
-            }
-          },
-          prefixText: bC.s[zC],
-          placeholderText: "playBloxd",
-          initialValue: null !== (CC = null === ZC || void 0 === ZC ? void 0 : ZC.handle) && void 0 !== CC ? CC : "",
-          maxLength: 30,
-          submitText: "general:save",
-          secondaryButtonText: ZC ? "general:remove" : void 0
-        }).getResult().then((async CC => {
-          if ("notificationTornDown" !== CC && null !== CC) try {
-            "submit" === CC.type ? await qC.d.setSocialLink(wC, zC, CC.value) : await qC.d.clearSocialLink(wC, zC), WC()
-          } catch (ZC) {
-            console.error("Failed to update social link", ZC), FC.NotificationProvider.showAlertPopup({
-              title: ZC.errorMessageForUser,
-              confirmText: "general:ok"
-            })
+    function Wp(pp) {
+      if (Dp.has(pp)) return;
+      Dp.add(pp);
+      const ip = 1 === pp.decodeAudioData.length,
+        cp = pp.decodeAudioData.bind(pp);
+      pp.decodeAudioData = (pp, Op, op) => {
+        const Dp = pp => {
+          const ip = Ip._howls.filter((pp => "loaded" !== pp._state));
+          try {
+            null === Op || void 0 === Op || Op(pp)
+          } finally {
+            const cp = ip.find((pp => "loaded" === pp._state));
+            void 0 !== cp && "string" === typeof cp._src && function(pp, ip, cp) {
+              var Op;
+              xp += cp - (null !== (Op = Sp.get(ip)) && void 0 !== Op ? Op : 0), Sp.set(ip, cp);
+              const op = Yp.get(pp);
+              void 0 !== op && Lp[op]++
+            }(cp, cp._src, pp.length * pp.numberOfChannels * Float32Array.BYTES_PER_ELEMENT)
           }
-        }))
+          return pp
+        };
+        if (!ip) return cp(pp, Dp, op);
+        const Ap = cp(pp).then(Dp);
+        return Ap.catch((pp => {
+          null === op || void 0 === op || op(pp)
+        })), Ap
       }
-      if (ZC) {
-        const CC = `@${ZC.handle}`;
-        return (0, NC.jsxs)("a", {
-          className: "PlayerProfileSocialLink",
-          style: {
-            background: pC.color
-          },
-          href: ZC.profileUrl,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          children: [(0, NC.jsxs)("div", {
-            className: "PlayerProfileSocialLinkMain",
-            children: [(0, NC.jsx)(gC, {
-              platform: zC
-            }), (0, NC.jsx)("span", {
-              className: "PlayerProfileSocialLinkText",
-              children: (0, NC.jsx)("span", {
-                className: "PlayerProfileSocialLinkName SmallTextBold",
-                children: CC
-              })
-            })]
-          }), QC && (0, NC.jsx)("button", {
-            type: "button",
-            className: "PlayerProfileSocialLinkEditButton",
-            ...(0, oC.U)({
-              stopPropagation: !0
-            }),
-            onClick: CC => {
-              CC.stopPropagation(), CC.preventDefault(), PC()
-            },
-            children: (0, NC.jsx)(fC.c, {
-              name: "pen-to-square"
-            })
-          }), !QC && (0, NC.jsx)("span", {
-            className: "PlayerProfileSocialLinkArrow",
-            children: (0, NC.jsx)(fC.c, {
-              name: "arrow-up-right-from-square"
-            })
-          })]
-        })
-      }
-      return (0, NC.jsxs)("button", {
-        type: "button",
-        className: "PlayerProfileSocialLink PlayerProfileSocialLinkUnlinked",
-        style: {
-          background: pC.color
-        },
-        ...(0, oC.U)(),
-        onClick: () => {
-          PC()
-        },
-        children: [(0, NC.jsx)(gC, {
-          platform: zC
-        }), (0, NC.jsxs)("span", {
-          className: "PlayerProfileSocialLinkText",
-          children: [(0, NC.jsx)("span", {
-            className: "PlayerProfileSocialLinkName SmallTextBold",
-            children: pC.name
-          }), (0, NC.jsx)("span", {
-            className: "PlayerProfileSocialLinkCount SmallTextLight",
-            children: SC("homePage:profileSocialLinkAdd")
-          })]
-        }), (0, NC.jsx)("span", {
-          className: "PlayerProfileSocialLinkEditButton",
-          children: (0, NC.jsx)(fC.c, {
-            name: "pen-to-square"
-          })
-        })]
-      })
-    }
-
-    function pC(CC) {
-      let {
-        socialLinks: zC,
-        editable: ZC = !1,
-        userContext: QC,
-        onLinksUpdated: wC
-      } = CC;
-      if (!ZC && 0 === zC.length) return null;
-      const nC = new Map(zC.map((CC => [CC.platform, CC]))),
-        fC = ZC ? bC.q : zC.map((CC => CC.platform));
-      return (0, NC.jsx)("div", {
-        className: "PlayerProfileSocialLinks",
-        children: (0, NC.jsx)("div", {
-          className: "PlayerProfileSocialLinksList",
-          children: fC.map((CC => (0, NC.jsx)(SC, {
-            platform: CC,
-            link: nC.get(CC),
-            editable: ZC,
-            userContext: QC,
-            onLinksUpdated: wC
-          }, CC)))
-        })
-      })
+    }(0, Op.h)(Pp);
+    const yp = op.Howl.prototype,
+      Up = yp.init;
+    yp.init = function(pp) {
+      return op.Howler.volume(), Ip.ctx && Wp(Ip.ctx), Up.call(this, pp)
+    };
+    const wp = yp.unload;
+    yp.unload = function() {
+      const pp = this._src,
+        ip = wp.call(this);
+      if ("string" !== typeof pp) return ip;
+      const cp = Sp.get(pp);
+      return void 0 !== cp && function(pp) {
+        return !Ip._howls.some((ip => ip._src === pp || "string" === typeof ip._src && pp.indexOf(ip._src) >= 0))
+      }(pp) && (Sp.delete(pp), xp -= cp), ip
     }
   },
-  4811: CC => {
-    CC.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAACXBIWXMAAAPoAAAD6AG1e1JrAAAAQ0lEQVR4nGOws7P7D8Kmpqb/NTU1wTQymwGbAhANwwzIOmAYxQRkCXNzczBGtgrFBGQFKFZgsxtuAi67YY5HMQGbAgCIxWSBYHJzHAAAAABJRU5ErkJggg=="
+  36980: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Lp
+    });
+    var Op = cp(25),
+      op = cp(36948),
+      Ip = cp(4437),
+      Sp = cp(36986),
+      xp = cp(4974);
+    const Lp = function(pp) {
+      const ip = new Set;
+      return cp => {
+        var Op;
+        const Ip = null === (Op = [...op.b].find((pp => {
+          let [, ip] = pp;
+          return ip.includes(cp)
+        }))) || void 0 === Op ? void 0 : Op[0];
+        if (void 0 === Ip || ip.has(Ip)) return;
+        ip.add(Ip);
+        ! function(pp, ip) {
+          let {
+            afterJoin: cp,
+            joining: Op,
+            idle: op,
+            fetchFile: Ip
+          } = ip;
+          const Sp = ip => {
+            ip >= pp.length || cp((() => {
+              op((() => {
+                Op() ? Sp(ip) : Ip(pp[ip]).catch((() => {})).finally((() => {
+                  Sp(ip + 1)
+                }))
+              }))
+            }))
+          };
+          Sp(0)
+        }(op.b.get(Ip).filter((pp => pp !== cp)).flatMap((ip => {
+          const cp = (Op = (0, op.e)(ip).src, Ip = pp.canPlay, Op.find((pp => {
+            var ip;
+            const cp = null === (ip = /\.([^.]+)$/.exec(pp.split("?", 1)[0])) || void 0 === ip ? void 0 : ip[1];
+            return void 0 !== cp && Ip(cp.toLowerCase())
+          })));
+          var Op, Ip;
+          return void 0 === cp ? [] : [cp]
+        })), pp)
+      }
+    }({
+      afterJoin: pp => {
+        (0, Ip.b)(Op.c.get("gameState"), pp)
+      },
+      joining: () => (0, Ip.f)(Op.c.get("gameState")),
+      idle: cp(249).b,
+      fetchFile: Sp.c,
+      canPlay: pp => !!xp.Howler.codecs(pp)
+    })
+  },
+  36986: (pp, ip, cp) => {
+    async function Op(pp) {
+      const ip = await fetch(pp, {
+        priority: "low"
+      });
+      if (!ip.ok) throw new Error(`Fetching ${pp} failed: HTTP ${ip.status}`);
+      const cp = ip.body.getReader();
+      for (; !(await cp.read()).done;);
+    }
+    cp.d(ip, {
+      c: () => Op
+    })
+  },
+  36950: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => op
+    });
+    const Op = ["end", "stop", "playerror"];
+
+    function op(pp, ip) {
+      const cp = () => {
+        if (function(pp) {
+            return "loaded" === pp.state() && !pp.playing() && !pp._playLock
+          }(pp)) {
+          for (const ip of Op) pp.off(ip, cp);
+          pp.unload(), ip()
+        }
+      };
+      for (const op of Op) pp.on(op, cp);
+      cp()
+    }
+  },
+  4974: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      Howl: () => op.Howl,
+      Howler: () => op.Howler,
+      musicOutput: () => wp,
+      readyAudioContext: () => vp
+    });
+    var Op, op = cp(4977),
+      Ip = cp(3546),
+      Sp = cp(4743);
+    const xp = op.Howler;
+
+    function Lp() {
+      var pp, ip;
+      if (xp.ctx || !xp.usingWebAudio || "undefined" === typeof AudioContext || !(0, Sp.f)()) return;
+      const cp = navigator.audioSession;
+      let Op;
+      "auto" === (null === cp || void 0 === cp ? void 0 : cp.type) && (cp.type = "ambient");
+      try {
+        Op = new AudioContext({
+          sampleRate: 44100
+        })
+      } catch {
+        return
+      }
+      const op = Op.createGain();
+      op.gain.setValueAtTime(xp._muted ? 0 : null !== (pp = xp._volume) && void 0 !== pp ? pp : 1, Op.currentTime), op.connect(Op.destination), xp.ctx = Op, xp.masterGain = op, null === (ip = xp._setup) || void 0 === ip || ip.call(xp)
+    }
+    xp._mobileUnloaded = !0;
+    const Yp = xp.volume.bind(op.Howler);
+    xp.volume = function() {
+      return Lp(), Yp(...arguments)
+    };
+    const Dp = xp.mute.bind(op.Howler);
+    xp.mute = pp => (Lp(), Dp(pp));
+    const Ap = op.Howl.prototype,
+      Pp = Ap.init;
+
+    function Wp() {
+      for (; xp._html5AudioPool.length < xp.html5PoolSize;) {
+        const pp = new Audio;
+        pp._unlocked = !0, xp._releaseHtml5Audio(pp)
+      }
+      for (const ip of xp._howls)
+        if (!ip._webAudio)
+          for (const cp of ip._getSoundIds()) {
+            var pp;
+            const Op = null === (pp = ip._soundById(cp)) || void 0 === pp ? void 0 : pp._node;
+            Op && !Op._unlocked && (Op._unlocked = !0, Op.load())
+          }
+    }
+    Ap.init = function(pp) {
+      return Lp(), Pp.call(this, pp)
+    }, (0, Sp.f)() && (xp._unlockAudio = () => {
+      const pp = xp.ctx;
+      if (xp._audioUnlocked || !pp) return;
+      xp.autoUnlock = !1;
+      const ip = pp.createBuffer(1, 1, 22050);
+      xp._scratchBuffer = ip;
+      const cp = new AbortController;
+      let Op = "afterPaint";
+      const op = () => {
+          var Op;
+          if (xp._audioUnlocked) return;
+          null === (Op = xp._autoResume) || void 0 === Op || Op.call(xp);
+          const op = pp.createBufferSource();
+          op.buffer = ip, op.connect(pp.destination), op.start(0), pp.resume().catch((() => {})), op.onended = () => {
+            op.disconnect(0), xp._audioUnlocked = !0, cp.abort();
+            for (const pp of xp._howls) pp._emit("unlock")
+          }
+        },
+        Lp = () => {
+          Wp(), op()
+        },
+        Yp = ip => {
+          if (Wp(), "inTap" === Op) {
+            if ("running" === pp.state) return;
+            console.warn("A click's resume after its frame left Howler's context suspended, so this click resumes it"), op()
+          } else "afterPaint" === Op && (Op = "queued", (0, Ip.e)(ip.timeStamp, (() => {
+            Op = "inTap", op()
+          })))
+        };
+      for (const Ip of ["touchstart", "touchend"]) document.addEventListener(Ip, Lp, {
+        capture: !0,
+        signal: cp.signal
+      });
+      for (const Ip of Sp.c) document.addEventListener(Ip, Yp, {
+        capture: !0,
+        signal: cp.signal
+      })
+    });
+    let yp = 0;
+    const Up = null === (Op = xp._autoSuspend) || void 0 === Op ? void 0 : Op.bind(op.Howler);
+
+    function wp() {
+      vp();
+      const {
+        ctx: pp,
+        masterGain: ip
+      } = xp;
+      return pp && ip ? {
+        ctx: pp,
+        destination: ip,
+        holdAwake: pp => {
+          var ip, cp;
+          (yp += pp ? 1 : -1, pp) ? null === (ip = xp._autoResume) || void 0 === ip || ip.call(xp): null === (cp = xp._autoSuspend) || void 0 === cp || cp.call(xp)
+        },
+        wake: () => {
+          var ip;
+          "running" !== pp.state && (null === (ip = xp._autoResume) || void 0 === ip || ip.call(xp), pp.resume().catch((() => {})))
+        }
+      } : null
+    }
+
+    function vp() {
+      var pp;
+      (xp.volume(), xp.ctx && xp.autoUnlock) && (null === (pp = xp._unlockAudio) || void 0 === pp || pp.call(xp))
+    }
+    Up && (xp._autoSuspend = () => yp > 0 ? op.Howler : Up())
+  },
+  36974: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Op
+    });
+    const Op = new Set(["gunSemiAutomatic", "gunSubmachineGun", "gunShotgun", "gunRifle", "gunPistol", "gunMisc", "step", "dig", "randomItems", "randomExp", "randomCash", "randomFallsmall", "note", "rpg", "phoneAndMoney"])
+  },
+  36965: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Sp,
+      c: () => op,
+      f: () => Op
+    });
+
+    function Op(pp) {
+      return pp.replace(/[_\-\s]*\d+$/, "") || pp
+    }
+
+    function op(pp, ip, cp) {
+      return cp <= 0 ? 0 : pp * cp / Math.max(ip, cp)
+    }
+
+    function Ip(pp, ip) {
+      const cp = pp.getDurationMs();
+      return cp > 0 ? pp.loudness * Math.max(0, 1 - (ip - pp.startMs) / cp) : 0
+    }
+    class Sp {
+      constructor() {
+        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 24,
+          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 6;
+        this.maxVoices = pp, this.maxPerGroup = ip, this.voices = []
+      }
+      admit(pp) {
+        if (this.voices = this.voices.filter((pp => pp.isAlive())), null !== pp.group) {
+          const ip = this.voices.filter((ip => ip.group === pp.group));
+          if (ip.length >= this.maxPerGroup && !this.dropLeastWorth(ip, pp)) return !1
+        }
+        return !(this.voices.length >= this.maxVoices && !this.dropLeastWorth(this.voices, pp)) && (this.voices.push(pp), !0)
+      }
+      dropLeastWorth(pp, ip) {
+        let cp = null,
+          Op = 1 / 0;
+        for (const op of pp) {
+          if (!op.canStop()) continue;
+          const pp = Ip(op, ip.startMs);
+          pp < Op && (cp = op, Op = pp)
+        }
+        return !(!cp || ip.loudness < Op) && (this.voices.splice(this.voices.indexOf(cp), 1), cp.stop(), !0)
+      }
+    }
+  },
+  36783: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => op,
+      d: () => Sp,
+      h: () => xp
+    });
+    var Op = cp(34);
+    const op = "touchSprintChanged";
+    let Ip = !0;
+
+    function Sp() {
+      return Ip
+    }
+
+    function xp(pp) {
+      pp !== Ip && (Ip = pp, Op.m.GA(op, pp))
+    }
+  },
+  37001: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Ip,
+      c: () => Sp,
+      g: () => Op
+    });
+    class Op {
+      constructor(pp) {
+        this.multipliers = {}, this._onUpdate = void 0, this._onUpdate = pp
+      }
+      setMultiplierType(pp, ip) {
+        var cp;
+        this.multipliers[pp] = ip, null === (cp = this._onUpdate) || void 0 === cp || cp.call(this)
+      }
+      removeMultiplier(pp) {
+        var ip;
+        delete this.multipliers[pp], null === (ip = this._onUpdate) || void 0 === ip || ip.call(this)
+      }
+      getMultiplierType(pp) {
+        return this.multipliers[pp]
+      }
+      getTotalMultipliedVal() {
+        let pp = 1;
+        for (const ip in this.multipliers) pp *= this.multipliers[ip];
+        return pp
+      }
+    }
+    class op {
+      constructor() {
+        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        this.booleans = {}, this._onUpdate = void 0, this._onUpdate = pp
+      }
+      setBooleanType(pp, ip) {
+        const cp = this._getTotalBooleanVal();
+        this.booleans[pp] = !!ip;
+        const Op = this.getTotalBooleanVal();
+        var op;
+        Op !== cp && (null === (op = this._onUpdate) || void 0 === op || op.call(this, Op, this.booleans));
+        return Op
+      }
+      removeBoolean(pp) {
+        const ip = this._getTotalBooleanVal();
+        delete this.booleans[pp];
+        const cp = this._getTotalBooleanVal();
+        var Op;
+        null !== cp && cp !== ip && (null === (Op = this._onUpdate) || void 0 === Op || Op.call(this, cp, this.booleans));
+        return null !== cp && void 0 !== cp && cp
+      }
+      getBooleanType(pp) {
+        return this.booleans[pp]
+      }
+      getTotalBooleanVal() {
+        throw new Error("This is an abstract class, use BooleanAndCombinator")
+      }
+      forceUpdate() {
+        var pp;
+        null === (pp = this._onUpdate) || void 0 === pp || pp.call(this, this.getTotalBooleanVal(), this.booleans)
+      }
+      _getTotalBooleanVal() {
+        throw new Error("This is an abstract class, use BooleanAndCombinator")
+      }
+    }
+    class Ip extends op {
+      getTotalBooleanVal() {
+        const pp = this._getTotalBooleanVal();
+        if (null === pp) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return pp
+      }
+      _getTotalBooleanVal() {
+        let pp = !1,
+          ip = !0;
+        for (const cp in this.booleans) pp = !0, ip &&= this.booleans[cp];
+        return pp ? ip : null
+      }
+    }
+    class Sp extends op {
+      getTotalBooleanVal() {
+        const pp = this._getTotalBooleanVal();
+        if (null === pp) throw new Error("Should not be gotten before at least 1 type has been initialised");
+        return pp
+      }
+      _getTotalBooleanVal() {
+        let pp = !1,
+          ip = !1;
+        for (const cp in this.booleans) pp = !0, ip ||= this.booleans[cp];
+        return pp ? ip : null
+      }
+    }
+  },
+  36994: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Ip,
+      g: () => Op,
+      k: () => op
+    });
+    const Op = 15,
+      op = 3,
+      Ip = 30
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

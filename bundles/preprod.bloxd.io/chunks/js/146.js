@@ -1,254 +1,146 @@
 export const id = 146;
 export const ids = [146];
 export const modules = {
-  8104: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      BloxdDiscordActivitySdk: () => GC
+  8218: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      BloxdDiscordSDK: () => Up,
+      DiscordLoginCancelledError: () => yp,
+      discordPopupTimeoutMs: () => Wp
     });
-    var QC = ZC(8113),
-      wC = ZC(1171),
-      bC = ZC(1143),
-      nC = ZC(600),
-      fC = ZC(1192),
-      oC = ZC(1645),
-      qC = ZC(1275),
-      FC = ZC(728),
-      WC = ZC(20),
-      NC = ZC(1032),
-      MC = function(CC) {
-        return CC.APPLICATION_COMMANDS = "applications.commands", CC.IDENTIFY = "identify", CC.EMAIL = "email", CC.GUILDS = "guilds", CC.READ_DM_CHANNELS = "dm_channels.read", CC.WRITE_ACTIVITIES = "rpc.activities.write", CC
-      }(MC || {}),
-      gC = function(CC) {
-        return CC[CC.CLOSE_NORMAL = 1e3] = "CLOSE_NORMAL", CC[CC.CLOSE_UNSUPPORTED = 1003] = "CLOSE_UNSUPPORTED", CC[CC.CLOSE_ABNORMAL = 1006] = "CLOSE_ABNORMAL", CC[CC.INVALID_CLIENTID = 4e3] = "INVALID_CLIENTID", CC[CC.INVALID_ORIGIN = 4001] = "INVALID_ORIGIN", CC[CC.RATELIMITED = 4002] = "RATELIMITED", CC[CC.TOKEN_REVOKED = 4003] = "TOKEN_REVOKED", CC[CC.INVALID_VERSION = 4004] = "INVALID_VERSION", CC[CC.INVALID_ENCODING = 4005] = "INVALID_ENCODING", CC
-      }(gC || {}),
-      SC = function(CC) {
-        return CC[CC.PLAYING = 0] = "PLAYING", CC[CC.STREAMING = 1] = "STREAMING", CC[CC.LISTENING = 2] = "LISTENING", CC[CC.WATCHING = 3] = "WATCHING", CC[CC.CUSTOM = 4] = "CUSTOM", CC[CC.COMPETING = 5] = "COMPETING", CC
-      }(SC || {});
-    const pC = {
-        Minigames: "Playing",
-        Puzzle: "Solving",
-        Escape: "Escaping",
-        Parkour: "Parkouring",
-        "Cool Parkour": "Parkouring",
-        "Two Player Parkour": "Parkouring",
-        "Clutch Parkour": "Parkouring",
-        "Challenging Parkour": "Parkouring",
-        "Progressive Parkour": "Parkouring",
-        "Themed Parkour": "Parkouring",
-        Obby: "Parkouring",
-        Tower: "Climbing",
-        Roleplay: "Roleplaying",
-        Arena: "Battling",
-        Duels: "Duelling",
-        Shooting: "Shooting",
-        Survival: "Surviving",
-        Simulator: "Grinding",
-        Tycoon: "Building",
-        Clicker: "Clicking",
-        PvE: "Battling",
-        Building: "Building",
-        Horror: "Surviving",
-        "Lucky Block": "Battling",
-        Racing: "Racing",
-        Driving: "Driving",
-        "Cool Build": "Building",
-        Adventure: "Adventuring",
-        Other: "Being mischievous"
-      },
-      PC = {
-        goalRush: "Playing",
-        heroesvbrainrots: "Battling",
-        hideseek: "Playing",
-        bingo: "Playing"
-      };
-    class GC {
-      constructor(CC) {
-        this.discordSdk = CC, this.guildNameCache = {}, this.startTime = Date.now(), this.cachedAccessToken = null
+    var Op = cp(156),
+      op = cp(1236),
+      Ip = cp(1149),
+      Sp = cp(1162),
+      xp = cp.n(Sp),
+      Lp = cp(1211),
+      Yp = cp(44),
+      Dp = cp(640),
+      Ap = cp(1372),
+      Pp = cp(1087);
+    const Wp = 6e5;
+    class yp extends Error {
+      constructor() {
+        super(...arguments), this.name = Ip.discordLoginCancelledErrorName
       }
-      static async setup() {
-        console.log("Setting up Discord SDK with client id", NC.c.discordClientID);
-        const CC = new QC.d(NC.c.discordClientID);
-        let zC = !1;
-        setTimeout((() => {
-          zC || (console.warn("Discord SDK took too long to initialize"), (0, oC.reloadBloxd)())
-        }), 15e3), await CC.ready(), zC = !0;
-        try {
-          const {
-            enabled: zC
-          } = await CC.commands.encourageHardwareAcceleration();
-          zC || console.warn("Hardware acceleration not enabled in the Discord client")
-        } catch (wC) {
-          console.error("Failed to encourage hardware acceleration in the Discord client", wC)
-        }
-        const ZC = new GC(CC);
-        return ZC.isMobilePlatform() && (ZC.applyDiscordSafeAreaNotch(), window.addEventListener("resize", (() => {
-          ZC.applyDiscordSafeAreaNotch()
-        }))), ZC
-      }
-      async updateActivityDescription(CC) {
-        let zC, ZC;
-        switch (CC) {
-          case "homePage":
-            zC = "Chilling in the Main Menu";
-            break;
-          case "inGame": {
-            const CC = await this.getInGameDescriptions();
-            zC = CC.primary, ZC = CC.secondary;
-            break
-          }
-        }
-        await this.discordSdk.commands.setActivity({
-          activity: {
-            type: SC.PLAYING,
-            details: zC,
-            state: ZC,
-            assets: {
-              large_image: "icon",
-              large_text: zC
-            },
-            timestamps: {
-              start: this.startTime
-            }
-          }
-        }).catch((CC => {
-          console.error(`Failed to update Discord activity rich presence with description="${zC}":`, CC)
+    }
+    class Up {
+      constructor() {
+        this.popupWindowPromise = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindow = null, this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.bloxdDiscordRefreshTokenKey = "4PSIDTCPM", this.discordRedirectUrl = op.l[Pp.c.clientEnvironment];
+        const pp = new URL(this.discordRedirectUrl).origin;
+        window.addEventListener("message", (ip => {
+          var cp;
+          if (ip.origin !== pp || "oauth_authentication_discord" !== (null === (cp = ip.data) || void 0 === cp ? void 0 : cp.type)) return;
+          if ("string" !== typeof ip.data.code || !ip.data.code) return void this.failPopup(new yp("Discord authentication was cancelled on Discord"));
+          const Op = this.popupWindowPromiseResolve;
+          this.resetPopupState(), null === Op || void 0 === Op || Op(ip.data.code)
         }))
       }
-      async getInGameDescriptions() {
-        var CC;
-        const {
-          requestedGameNameWithVariation: zC
-        } = (0, qC.d)(), ZC = (0, FC.k)(zC), QC = null !== (CC = PC[zC]) && void 0 !== CC ? CC : pC[ZC.type], wC = await (0, bC.v)(fC.e.ENGLISH, ZC.title), oC = (0, qC.d)();
-        if ((0, qC.h)(oC)) return {
-          primary: `${QC} in a Discord World`
-        };
-        const WC = `${QC} in ${wC}`;
-        return (0, nC.H)(oC.lobbyName) ? {
-          primary: WC
-        } : {
-          primary: WC,
-          secondary: `Lobby ${oC.lobbyName}`
+      resetPopupState() {
+        null !== this.popupWindowCheckInterval && window.clearInterval(this.popupWindowCheckInterval), null !== this.popupWindowTimeout && window.clearTimeout(this.popupWindowTimeout), this.popupWindowCheckInterval = null, this.popupWindowTimeout = null, this.popupWindowPromiseResolve = null, this.popupWindowPromiseReject = null, this.popupWindowPromise = null, this.popupWindow = null
+      }
+      failPopup(pp) {
+        var ip;
+        const cp = this.popupWindowPromiseReject;
+        null === (ip = this.popupWindow) || void 0 === ip || ip.close(), this.resetPopupState(), null === cp || void 0 === cp || cp(pp)
+      }
+      openDiscordOAuthWindow() {
+        const pp = Pp.c.discordClientID;
+        return window.open(`https://discord.com/oauth2/authorize?response_type=code&client_id=${pp}&scope=identify%20guilds&redirect_uri=${this.discordRedirectUrl}&integration_type=0`, "oauth_authentication", `popup,width=480,height=720,top=${window.screen.height/2-360},left=${window.screen.width/2-240}`)
+      }
+      async showDiscordAuthPrompt() {
+        return new Promise(((pp, ip) => {
+          Ap.NotificationProvider.showPromptPopup({
+            title: "Discord Login Required",
+            confirmText: "Continue",
+            confirmTooltip: "Open Discord login window",
+            cancelText: "Cancel",
+            cancelTooltip: "Cancel Discord login"
+          }).getResult().then((cp => {
+            !0 === cp ? pp() : ip(new yp("Discord login was cancelled"))
+          })).catch(ip)
+        }))
+      }
+      signInWithPopup() {
+        if (null !== this.popupWindowPromise) return this.popupWindowPromise;
+        const pp = new Promise(((pp, ip) => {
+          this.popupWindowPromiseResolve = pp, this.popupWindowPromiseReject = ip
+        }));
+        return this.popupWindowPromise = pp, Yp.e.removeItem(this.bloxdDiscordRefreshTokenKey), this.popupWindowTimeout = window.setTimeout((() => {
+          this.failPopup(new Error("Discord authentication timed out"))
+        }), Wp), this.openPopup(pp).catch((ip => {
+          this.popupWindowPromise === pp && this.failPopup(ip instanceof Error ? ip : new Error(String(ip)))
+        })), pp
+      }
+      async openPopup(pp) {
+        let ip = this.openDiscordOAuthWindow();
+        if (!ip) {
+          if (await this.showDiscordAuthPrompt(), this.popupWindowPromise !== pp) return;
+          ip = this.openDiscordOAuthWindow()
         }
+        if (console.log("Discord OAuth window opened:", ip), !ip) throw new Error("Failed to open Discord authentication popup - popup may have been blocked");
+        this.popupWindow = ip;
+        const cp = window.setInterval((() => {
+          ip.closed && this.popupWindowPromise === pp && (window.clearInterval(cp), this.popupWindowCheckInterval = null, window.setTimeout((() => {
+            this.popupWindowPromise === pp && this.failPopup(new yp("Discord authentication was cancelled - popup window was closed"))
+          }), 1e3))
+        }), 200);
+        this.popupWindowCheckInterval = cp
       }
-      getCurrentChannelType() {
+      async exchangeAuthorizationCodeForAccessToken(pp, ip) {
         const {
-          channelId: CC,
-          guildId: zC
-        } = this.getCurrentChannelAndGuild();
-        return null !== zC ? wC.b.GUILD : null !== CC ? wC.b.DM : null
+          accessToken: cp,
+          refreshToken: Op
+        } = await xp()((async () => await (0, Ip.postJsonWithMetricsCookiesAndJsonResponse)(`${Lp.clientSideServerUrls.indexUrl}/index/discord/log-event`, {
+          authorizationCode: pp,
+          bloxdClientEnvironment: Pp.c.clientEnvironment,
+          instanceId: null
+        }, {
+          retries: 0
+        }, ip.getMetricsCookies())), {
+          retries: 3
+        });
+        return console.log("Discord access token received:", Op, this.bloxdDiscordRefreshTokenKey), Yp.e.setItem(this.bloxdDiscordRefreshTokenKey, Op), cp
       }
-      getRequiredScopeForCurrentChannel() {
-        const CC = this.getCurrentChannelType(),
-          zC = [MC.APPLICATION_COMMANDS, MC.IDENTIFY, MC.EMAIL, MC.GUILDS, MC.WRITE_ACTIVITIES];
-        switch (CC) {
-          case wC.b.DM:
-          case wC.b.GUILD:
-            return [...zC];
-          default:
-            throw new Error(`Unknown Discord channel type: ${CC}`)
-        }
+      hasCurrentUser() {
+        const pp = Yp.e.getItem(this.bloxdDiscordRefreshTokenKey);
+        return !(0, Dp.G)(pp)
       }
-      getCurrentChannelAndGuild() {
-        const {
-          channelId: CC,
-          guildId: zC
-        } = this.discordSdk;
-        return {
-          channelId: null !== CC && void 0 !== CC ? CC : null,
-          guildId: null !== zC && void 0 !== zC ? zC : null
-        }
-      }
-      getInstanceId() {
-        return this.discordSdk.instanceId
-      }
-      async askDiscordUserForAuthorization() {
-        const CC = this.getRequiredScopeForCurrentChannel(),
-          {
-            code: zC
-          } = await this.discordSdk.commands.authorize({
-            client_id: NC.c.discordClientID,
-            response_type: "code",
-            state: "",
-            prompt: "none",
-            scope: CC
-          });
-        return zC
-      }
-      getCachedAccessToken() {
-        return this.cachedAccessToken
-      }
-      setCachedAccessToken(CC) {
-        this.cachedAccessToken = CC
-      }
-      registerGuild(CC, zC) {
-        this.guildNameCache[CC] = zC
-      }
-      async authenticate(CC) {
-        return this.discordSdk.commands.authenticate({
-          access_token: CC
-        }).then((CC => null !== CC))
-      }
-      async getUserLocale() {
+      async getCurrentUser(pp) {
+        const ip = Yp.e.getItem(this.bloxdDiscordRefreshTokenKey);
+        if (!ip) return null;
+        let cp;
         try {
-          const {
-            locale: CC
-          } = await this.discordSdk.commands.userSettingsGetLocale();
-          return CC
-        } catch (CC) {
-          return console.error("Failed to get user locale from Discord:", CC.stack), null
+          const Op = await xp()((async () => {
+            try {
+              return await (0, Ip.postJsonWithMetricsCookiesAndJsonResponse)(`${Lp.clientSideServerUrls.indexUrl}/index/discord/collect-event`, {
+                refreshToken: ip
+              }, {
+                retries: 0
+              }, pp.getMetricsCookies())
+            } catch (cp) {
+              if (wp(cp)) throw new(xp().AbortError)(cp);
+              throw cp
+            }
+          }), {
+            retries: 3
+          });
+          cp = Op.accessToken, Yp.e.setItem(this.bloxdDiscordRefreshTokenKey, Op.refreshToken)
+        } catch (Op) {
+          return wp(Op) ? (Yp.e.removeItem(this.bloxdDiscordRefreshTokenKey), null) : (console.error("Failed to refresh Discord access token:", Op), null)
+        }
+        return {
+          accessToken: cp
         }
       }
-      async getChannelName(CC) {
-        return this.discordSdk.commands.getChannel({
-          channel_id: CC
-        }).then((CC => CC.name)).catch((CC => "Your Current Discord Chat"))
+      signOut() {
+        this.failPopup(new yp("Signed out of Discord during login")), Yp.e.removeItem(this.bloxdDiscordRefreshTokenKey)
       }
-      async getDiscordContextFromChannelId(CC) {
-        const zC = await this.getChannelName(CC);
-        return wC.f.from({
-          type: wC.b.DM,
-          channelId: CC,
-          channelName: zC
-        })
-      }
-      getDiscordContextFromGuildId(CC) {
-        const zC = this.guildNameCache[CC];
-        return (0, nC.H)(zC) ? null : wC.d.from({
-          type: wC.b.GUILD,
-          guildId: CC,
-          guildName: zC
-        })
-      }
-      async getCurrentDiscordContext() {
-        const {
-          channelId: CC,
-          guildId: zC
-        } = this.getCurrentChannelAndGuild();
-        return null !== zC ? this.getDiscordContextFromGuildId(zC) : null !== CC ? this.getDiscordContextFromChannelId(CC) : null
-      }
-      exit(CC) {
-        console.log("Exiting Discord Activity:", CC), this.discordSdk.close(gC.CLOSE_NORMAL, CC)
-      }
-      isMobilePlatform() {
-        return this.discordSdk.platform === QC.g.MOBILE
-      }
-      applyDiscordSafeAreaNotch() {
-        const CC = getComputedStyle(document.documentElement),
-          zC = (zC, ZC) => {
-            const QC = parseFloat(CC.getPropertyValue(`--discord-safe-area-inset-${zC}`));
-            return isNaN(QC) || 0 === ZC ? 0 : QC / ZC * 100
-          };
-        WC.b.set({
-          notchSize: {
-            top: zC("top", window.innerHeight),
-            right: Math.max(zC("right", window.innerWidth), 7),
-            bottom: 0,
-            left: zC("left", window.innerWidth)
-          }
-        })
-      }
+    }
+
+    function wp(pp) {
+      return pp instanceof Op.e && 435 === pp.httpCode
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

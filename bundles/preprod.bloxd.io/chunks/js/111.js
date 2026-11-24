@@ -1,1082 +1,475 @@
 export const id = 111;
-export const ids = [111];
+export const ids = [111, 402];
 export const modules = {
-  4942: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => gC,
-      e: () => RC,
-      f: () => SC,
-      h: () => GC
+  5085: (pp, ip, cp) => {
+    var Op = cp(5088);
+
+    function op() {}
+
+    function Ip() {}
+    Ip.resetWarningCache = op, pp.exports = function() {
+      function pp(pp, ip, cp, op, Ip, Sp) {
+        if (Sp !== Op) {
+          var xp = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw xp.name = "Invariant Violation", xp
+        }
+      }
+
+      function ip() {
+        return pp
+      }
+      pp.isRequired = pp;
+      var cp = {
+        array: pp,
+        bigint: pp,
+        bool: pp,
+        func: pp,
+        number: pp,
+        object: pp,
+        string: pp,
+        symbol: pp,
+        any: pp,
+        arrayOf: ip,
+        element: pp,
+        elementType: pp,
+        instanceOf: ip,
+        node: pp,
+        objectOf: ip,
+        oneOf: ip,
+        oneOfType: ip,
+        shape: ip,
+        exact: ip,
+        checkPropTypes: Ip,
+        resetWarningCache: op
+      };
+      return cp.PropTypes = cp, cp
+    }
+  },
+  5081: (pp, ip, cp) => {
+    pp.exports = cp(5085)()
+  },
+  5088: pp => {
+    pp.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  },
+  6737: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      default: () => Dp
     });
-    var QC = ZC(48),
-      wC = ZC(4947),
-      bC = ZC(4300),
-      nC = ZC(1321),
-      fC = ZC(4971),
-      oC = ZC(1002),
-      qC = ZC.n(oC),
-      FC = ZC(1307),
-      WC = ZC(1645),
-      NC = ZC(4979),
-      MC = ZC(1056);
+    var Op = cp(1538),
+      op = cp(1480),
+      Ip = cp(1201),
+      Sp = cp(6743),
+      xp = cp(6716),
+      Lp = cp(6698),
+      Yp = cp(1112);
 
-    function gC(CC) {
-      let {
-        label: zC,
-        onClick: ZC,
-        checked: QC,
-        circleInfoText: wC,
-        className: fC,
-        disabled: oC,
-        note: FC
-      } = CC;
-      return (0, MC.jsxs)("div", {
-        "aria-disabled": oC || void 0,
-        "data-pad-focusable": !0,
-        className: qC()("SettingBox CheckboxContainer", {
-          [fC]: fC,
-          SettingBoxDisabled: oC
-        }),
-        onClick: () => {
-          oC || ZC(!QC)
-        },
-        children: [(0, MC.jsxs)("div", {
-          className: "CheckboxInputAndText",
-          children: [(0, MC.jsx)("label", {
-            className: "CheckboxClickableLabel",
-            children: (0, MC.jsx)(bC.e, {
-              className: "SettingsCheckbox",
-              checked: QC,
-              disabled: oC,
-              onChange: () => {}
-            })
-          }), (0, MC.jsxs)("div", {
-            className: "CheckboxText",
-            children: [zC, wC && (0, MC.jsx)("span", {
-              onClick: CC => CC.stopPropagation(),
-              children: (0, MC.jsx)(nC.b, {
-                className: "SettingsTextInputCircleInfo",
-                hoverInfo: wC
-              })
-            })]
-          })]
-        }), FC && (0, MC.jsx)("div", {
-          className: "SettingNote",
-          children: FC
-        })]
-      })
-    }
-
-    function SC(CC) {
-      let {
-        name: zC,
-        onChange: ZC,
-        min: wC,
-        max: bC,
-        step: fC,
-        initValue: oC,
-        circleInfoText: FC,
-        format: WC,
-        className: NC,
-        padStep: gC,
-        disabled: SC = !1,
-        selectableMax: pC,
-        cappedNote: GC,
-        onChangeComplete: RC
-      } = CC;
-      const [AC, xC] = (0, QC.useState)(oC), JC = (0, QC.useRef)(oC);
-      (0, QC.useEffect)((() => {
-        JC.current = oC, xC(oC)
-      }), [oC]);
-      const IC = void 0 !== pC && pC < bC,
-        iC = IC ? {
-          "--slider-selectable": (pC - wC) / (bC - wC)
-        } : void 0;
-      return (0, MC.jsxs)("div", {
-        className: qC()("SettingBox SettingsSliderDiv", {
-          [NC]: NC,
-          SettingBoxDisabled: SC,
-          SliderCapped: IC
-        }),
-        style: iC,
-        children: [(0, MC.jsxs)("div", {
-          className: "SliderText",
-          children: [`${zC}: ${WC?WC(AC):AC}`, FC && (0, MC.jsx)(nC.b, {
-            className: "SettingsTextInputCircleInfo",
-            hoverInfo: FC
-          })]
-        }), (0, MC.jsx)("div", {
-          className: "SliderDiv",
-          children: (0, MC.jsx)(PC, {
-            value: AC,
-            min: wC,
-            max: bC,
-            step: fC,
-            onChange: CC => {
-              if (IC && CC >= pC && AC === pC) return;
-              const zC = IC ? Math.min(CC, pC) : CC;
-              JC.current = zC, xC(zC), ZC(zC)
+    function Dp() {
+      const {
+        t: pp
+      } = (0, Ip.H)(), ip = (0, Op.useNavigatePreserveSearch)();
+      return (0, xp.b)(), (0, Yp.jsxs)("div", {
+        className: "ShaderPackPublishPage AnimFadeIn",
+        children: [(0, Yp.jsx)("div", {
+          className: "ShaderPackPublishBack",
+          children: (0, Yp.jsx)(op.d, {
+            onClick: () => {
+              ip(Lp.R)
             },
-            onChangeComplete: RC && (() => {
-              RC(JC.current)
-            }),
-            format: WC,
-            padStep: gC,
-            disabled: SC
+            children: pp("shaderPackListing:backToPacks")
           })
-        }), IC && GC && (0, MC.jsx)("div", {
-          className: "SettingNote",
-          children: GC
-        })]
-      })
-    }
-    const pC = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
-
-    function PC(CC) {
-      var zC;
-      let {
-        value: ZC,
-        min: bC,
-        max: nC,
-        step: fC,
-        onChange: oC,
-        orientation: qC,
-        reverse: FC,
-        setIsChanging: WC,
-        tooltip: gC,
-        labels: SC,
-        handleLabel: PC,
-        format: GC,
-        onChangeStart: RC,
-        onChangeComplete: AC,
-        padStep: xC,
-        disabled: JC = !1
-      } = CC;
-      const IC = (0, QC.useRef)(null),
-        iC = (0, QC.useRef)(null);
-      (0, QC.useLayoutEffect)((() => {
-        var CC, zC, ZC;
-        const QC = null !== (CC = null === (zC = IC.current) || void 0 === zC ? void 0 : zC.querySelector(".rangeslider")) && void 0 !== CC ? CC : null;
-        null === QC || void 0 === QC || QC.setAttribute("data-pad-slider", ""), null === QC || void 0 === QC || QC.setAttribute("data-pad-focusable", ""), null === QC || void 0 === QC || null === (ZC = QC.querySelector(".rangeslider__handle")) || void 0 === ZC || ZC.setAttribute("data-pad-slider-handle", ""), iC.current = QC
-      }), []), (0, QC.useLayoutEffect)((() => {
-        var CC, zC;
-        JC ? null === (CC = iC.current) || void 0 === CC || CC.setAttribute("aria-disabled", "true") : null === (zC = iC.current) || void 0 === zC || zC.removeAttribute("aria-disabled")
-      }), [JC]);
-      const vC = (null !== (zC = String(fC).split(".")[1]) && void 0 !== zC ? zC : "").length,
-        eC = CC => {
-          const zC = Number((Math.round((CC - bC) / fC) * fC + bC).toFixed(vC));
-          return Math.min(nC, Math.max(bC, zC))
-        },
-        hC = (0, QC.useRef)(AC);
-      hC.current = AC, (0, QC.useEffect)((() => {
-        const CC = IC.current;
-        if (!CC) return;
-        const zC = CC => {
-          var zC;
-          pC.has(CC.key) && (null === (zC = hC.current) || void 0 === zC || zC.call(hC))
-        };
-        return CC.addEventListener("keyup", zC), () => {
-          CC.removeEventListener("keyup", zC)
-        }
-      }), []);
-      const KC = (0, QC.useRef)(!1);
-      return (0, NC.g)(iC, {
-        adjust: CC => {
-          if (JC) return;
-          const zC = null !== xC && void 0 !== xC ? xC : Math.max(fC, Math.round((nC - bC) / 20 / fC) * fC),
-            QC = eC(ZC + CC * zC * (FC ? -1 : 1));
-          QC !== ZC && (null === RC || void 0 === RC || RC(), oC(QC), null === AC || void 0 === AC || AC())
-        },
-        setFraction: CC => {
-          if (JC) return;
-          const zC = eC(bC + (FC ? 1 - CC : CC) * (nC - bC));
-          zC !== ZC && (KC.current || (KC.current = !0, null === RC || void 0 === RC || RC()), oC(zC))
-        },
-        endDrag: () => {
-          KC.current && (KC.current = !1, null === AC || void 0 === AC || AC())
-        }
-      }), (0, MC.jsx)("div", {
-        ref: IC,
-        style: {
-          display: "contents"
-        },
-        children: (0, MC.jsx)(wC.b, {
-          value: ZC,
-          min: bC,
-          max: nC,
-          step: fC,
-          onChange: oC,
-          orientation: qC,
-          reverse: FC,
-          tooltip: gC,
-          labels: SC,
-          handleLabel: PC,
-          format: GC,
-          onChangeStart: () => {
-            null === RC || void 0 === RC || RC(), null === WC || void 0 === WC || WC(!0)
-          },
-          onChangeComplete: () => {
-            null === WC || void 0 === WC || WC(!1), null === AC || void 0 === AC || AC()
+        }), (0, Yp.jsx)("h1", {
+          className: "ShaderPackPublishTitle",
+          children: pp("shaderPackListing:publishTitle")
+        }), (0, Yp.jsx)(Sp.ShaderPackPublishForm, {
+          existing: null,
+          onPublished: pp => {
+            ip((0, Lp.V)(pp.packId), {
+              replace: !0
+            })
           }
-        })
-      })
-    }
-    async function GC() {
-      const CC = FC.NotificationProvider.showPromptPopup({
-        title: "settingsMenu:reloadPagePopupTitle",
-        subtitle: "settingsMenu:reloadPagePopupSubtitle",
-        confirmText: "settingsMenu:reloadPagePopupConfirm",
-        confirmTooltip: "",
-        cancelText: "general:cancel",
-        cancelTooltip: ""
-      });
-      !0 === await CC.getResult() && (0, WC.reloadBloxd)()
-    }
-
-    function RC(CC) {
-      let {
-        label: zC,
-        options: ZC,
-        value: QC,
-        onChange: wC,
-        circleInfoText: bC
-      } = CC;
-      return (0, MC.jsxs)("div", {
-        className: "SettingBox SegmentedSettingRow",
-        children: [(0, MC.jsxs)("div", {
-          className: "SliderText",
-          children: [zC, bC && (0, MC.jsx)(nC.b, {
-            className: "SettingsTextInputCircleInfo",
-            hoverInfo: bC
-          })]
-        }), (0, MC.jsx)(fC.b, {
-          ariaLabel: zC,
-          options: ZC,
-          value: QC,
-          onChange: wC
         })]
       })
     }
   },
-  6663: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      default: () => UC
+  6716: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Pp,
+      d: () => Wp,
+      h: () => Ap,
+      i: () => yp
     });
-    var QC = ZC(48),
-      wC = ZC(1463),
-      bC = ZC(6560),
-      nC = ZC(1169),
-      fC = ZC(326),
-      oC = ZC(1295),
-      qC = ZC(1453),
-      FC = ZC(1388),
-      WC = ZC(1321),
-      NC = ZC(2575),
-      MC = ZC(2718),
-      gC = ZC(4491),
-      SC = ZC(1076),
-      pC = ZC(1439),
-      PC = ZC(77),
-      GC = ZC(1143);
-    const RC = ZC.p + "static/media/bloxdhubLogo.6a6c367af2ad6e6f1eb3.webp";
-    var AC = ZC(1002),
-      xC = ZC.n(AC),
-      JC = ZC(1013),
-      IC = ZC(1307),
-      iC = ZC(6556),
-      vC = ZC(1056);
-    const eC = (0, QC.lazy)((() => Promise.all([ZC.e(107), ZC.e(77), ZC.e(133), ZC.e(132), ZC.e(112), ZC.e(397)]).then((() => ZC(6594))).then((CC => ({
-      default: CC.ShaderPackPublishForm
-    })))));
+    var Op = cp(62),
+      op = cp(6704),
+      Ip = cp(1520),
+      Sp = cp(6698),
+      xp = cp(6724),
+      Lp = cp(1141);
+    const Yp = "shaderPackListingView",
+      Dp = "shaderPackListingFilterOpen";
 
-    function hC(CC) {
-      let {
-        details: zC,
-        owner: ZC,
-        onChanged: wC
-      } = CC;
+    function Ap() {
+      var pp;
+      const [ip, cp] = (0, xp.d)(Yp, op.J[0]);
+      return [null !== (pp = op.J.find((pp => pp === ip))) && void 0 !== pp ? pp : op.J[0], cp]
+    }
+
+    function Pp() {
+      (0, Op.useEffect)((() => () => {
+        window.location.pathname.startsWith(Sp.R) || (0, Sp.g)()
+      }), [])
+    }
+
+    function Wp() {
+      return (0, xp.d)(Dp, !1)
+    }
+
+    function yp() {
       const {
-        t: nC
-      } = (0, GC.y)(), fC = (0, qC.useNavigatePreserveSearch)(), {
-        userContext: WC
-      } = (0, SC.e)(), [NC, MC] = (0, QC.useState)(!1), [gC, PC] = (0, QC.useState)(null), [RC, AC] = (0, QC.useState)(!1), {
-        packId: hC,
-        name: KC,
-        description: YC,
-        live: dC
-      } = zC;
-      async function mC(CC) {
-        let zC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : wC;
-        MC(!0), PC(null);
-        try {
-          await CC(), zC()
-        } catch (ZC) {
-          console.error("Failed to change a shader pack", ZC), PC((0, iC.z)(ZC, nC, "shaderPackListing:ownerActionFailed"))
-        } finally {
-          MC(!1)
-        }
+        userContext: pp,
+        isUserContextUpdating: ip
+      } = (0, Lp.b)(), [cp, op] = (0, Op.useState)(null), Sp = (0, Op.useRef)(new Set);
+
+      function xp(pp, ip) {
+        op((cp => {
+          const Op = new Set(cp);
+          return ip ? Op.add(pp) : Op.delete(pp), Op
+        }))
       }
-      const HC = (0, iC.u)(WC);
-      return (0, vC.jsxs)("section", {
-        className: "ShaderPackOwnerPanel",
-        children: [(0, vC.jsx)("h2", {
-          className: "ShaderPackSectionTitle",
-          children: nC("general:manage")
-        }), (0, iC.X)(ZC, !(null === dC || void 0 === dC || !dC.renderId), Date.now(), nC).map((CC => (0, vC.jsxs)("div", {
-          className: xC()("ShaderPackOwnerNotice", {
-            Warning: "warning" === CC.tone
-          }),
-          children: [(0, vC.jsx)(JC.c, {
-            name: "warning" === CC.tone ? "triangle-exclamation" : "circle-info"
-          }), (0, vC.jsxs)("div", {
-            children: [CC.text, CC.detail && (0, vC.jsx)("pre", {
-              className: "ShaderPackOwnerNoticeDetail",
-              children: CC.detail
-            })]
-          })]
-        }, CC.text))), zC.ban && (0, vC.jsxs)("div", {
-          className: "ShaderPackOwnerNotice Warning",
-          children: [(0, vC.jsx)(JC.c, {
-            name: "ban"
-          }), (0, vC.jsxs)("div", {
-            children: ["Banned by ", zC.ban.byName, " on ", new Date(zC.ban.at).toLocaleString()]
-          })]
-        }), gC && (0, vC.jsx)("div", {
-          className: "ShaderPackOwnerError",
-          children: gC
-        }), (0, vC.jsxs)("div", {
-          className: "ShaderPackOwnerActions",
-          children: [(0, vC.jsxs)(FC.O, {
-            disabled: NC,
-            onClick: () => {
-              !async function() {
-                const CC = await IC.NotificationProvider.showInputPopup({
-                  title: "shaderPackListing:renameTitle",
-                  initialValue: KC,
-                  maxLength: bC.y,
-                  submitText: "general:save",
-                  validate: CC => CC.trim().length < bC.A ? nC("shaderPackListing:nameTooShort", {
-                    min: String(bC.A)
-                  }) : null
-                }).getResult();
-                "notificationTornDown" !== CC && "submit" === (null === CC || void 0 === CC ? void 0 : CC.type) && CC.value.trim() !== KC && await mC((() => pC.d.updateShaderPack(WC, {
-                  packId: hC,
-                  name: CC.value.trim()
-                })))
-              }()
-            },
-            children: [(0, vC.jsx)(JC.c, {
-              name: "pen"
-            }), " ", nC("shaderPackListing:rename")]
-          }), (0, vC.jsxs)(FC.O, {
-            disabled: NC,
-            onClick: () => {
-              !async function() {
-                const CC = await IC.NotificationProvider.showInputPopup({
-                  title: "shaderPackListing:editDescription",
-                  initialValue: YC,
-                  maxLength: bC.o,
-                  multiline: !0,
-                  allowEmptySubmit: !0,
-                  submitText: "general:save"
-                }).getResult();
-                "notificationTornDown" !== CC && "submit" === (null === CC || void 0 === CC ? void 0 : CC.type) && CC.value.trim() !== YC && await mC((() => pC.d.updateShaderPack(WC, {
-                  packId: hC,
-                  description: CC.value.trim()
-                })))
-              }()
-            },
-            children: [(0, vC.jsx)(JC.c, {
-              name: "file-lines"
-            }), " ", nC("shaderPackListing:editDescription")]
-          }), (0, vC.jsxs)(FC.O, {
-            disabled: NC || ZC.isBanned && !ZC.listed,
-            onClick: () => {
-              mC((() => pC.d.updateShaderPack(WC, {
-                packId: hC,
-                listed: !ZC.listed
-              })))
-            },
-            children: [(0, vC.jsx)(JC.c, {
-              name: ZC.listed ? "eye-slash" : "eye"
-            }), " ", nC(ZC.listed ? "shaderPackListing:unlist" : "shaderPackListing:relist")]
-          }), !ZC.isBanned && (0, vC.jsxs)(FC.g, {
-            disabled: NC,
-            onClick: () => {
-              AC(!RC)
-            },
-            children: [(0, vC.jsx)(JC.c, {
-              name: "upload"
-            }), " ", nC("shaderPackListing:uploadVersion")]
-          }), (0, vC.jsxs)(FC.K, {
-            disabled: NC || ZC.isBanned,
-            onClick: () => {
-              !async function() {
-                !0 === await IC.NotificationProvider.showPromptPopup({
-                  title: "shaderPackListing:deleteTitle",
-                  subtitle: "shaderPackListing:deleteSubtitle",
-                  confirmText: "general:delete",
-                  cancelText: "general:cancel",
-                  destructive: !0
-                }).getResult() && await mC((() => pC.d.deleteShaderPack(WC, hC)), (() => {
-                  fC(`${iC.W}?section=mine`, {
-                    replace: !0
-                  })
-                }))
-              }()
-            },
-            children: [(0, vC.jsx)(JC.c, {
-              name: "trash-can"
-            }), " ", nC("general:delete")]
-          }), HC && (0, vC.jsxs)(FC.K, {
-            disabled: NC,
-            onClick: () => {
-              mC((() => pC.d.setShaderPackBanned(WC, hC, !ZC.isBanned)))
-            },
-            children: [(0, vC.jsx)(JC.c, {
-              name: ZC.isBanned ? "circle-check" : "ban"
-            }), " ", ZC.isBanned ? "Unban" : "Ban"]
-          })]
-        }), RC && (0, vC.jsx)(QC.Suspense, {
-          fallback: (0, vC.jsx)(oC.d, {}),
-          children: (0, vC.jsx)(eC, {
-            existing: {
-              packId: hC,
-              name: KC,
-              description: YC
-            },
-            onPublished: () => {
-              AC(!1), wC()
-            }
-          })
-        })]
-      })
-    }
-    var KC = ZC(60),
-      YC = ZC(1806),
-      dC = ZC(1228),
-      mC = ZC(4979),
-      HC = ZC(1149),
-      EC = ZC(6570),
-      lC = ZC(6562),
-      XC = ZC(6580);
-
-    function cC(CC) {
-      let {
-        item: zC
-      } = CC;
-      const {
-        t: ZC
-      } = (0, GC.y)(), [wC] = (0, EC.f)(), [nC, fC] = (0, QC.useState)(wC), [oC, qC] = (0, QC.useState)(!1), [FC, WC] = (0, QC.useState)(!1), {
-        s3Url: NC
-      } = HC.clientSideServerUrls, {
-        width: MC,
-        height: gC
-      } = bC.s.large, SC = (0, bC.w)(NC, zC, nC, "large"), {
-        renderVersion: pC
-      } = zC;
-      return (0, vC.jsxs)("div", {
-        className: "ShaderPackPreviews",
-        children: [(0, vC.jsx)(XC.c, {
-          selected: nC,
-          onSelect: CC => {
-            fC(CC), qC(!1)
-          },
-          imageUrl: CC => (0, bC.w)(NC, zC, CC, "thumb")
-        }), (0, vC.jsxs)("div", {
-          className: "ShaderPackPreviewStage",
-          children: [!oC && (0, vC.jsxs)("button", {
-            type: "button",
-            className: "ShaderPackPreviewMain",
-            title: null === pC ? void 0 : ZC("shaderPackListing:fullSize"),
-            disabled: null === pC,
-            onClick: () => {
-              WC(!0)
-            },
-            children: [(0, vC.jsx)("img", {
-              src: SC,
-              width: MC,
-              height: gC,
-              alt: ZC(iC.gb[nC]),
-              draggable: !1
-            }), (0, vC.jsx)(lC.c, {
-              item: zC
-            })]
-          }), !oC && null !== pC && (0, vC.jsxs)(TC, {
-            side: "Right",
-            onClick: () => {
-              qC(!0)
-            },
-            children: [(0, vC.jsx)(JC.c, {
-              name: "arrows-left-right"
-            }), " ", ZC("shaderPackListing:compare")]
-          }), oC && null !== pC && (0, vC.jsx)(sC, {
-            item: zC,
-            packUrl: SC,
-            baselineUrl: (0, bC.m)(NC, pC, nC, "large")
-          }), oC && (0, vC.jsx)(TC, {
-            side: "Left",
-            onClick: () => {
-              qC(!1)
-            },
-            children: ZC("shaderPackListing:withPack")
-          }), oC && (0, vC.jsx)(TC, {
-            side: "Right",
-            onClick: () => {
-              qC(!1)
-            },
-            children: ZC("shaderPackListing:withoutPack")
-          })]
-        }), FC && (0, vC.jsx)(uC, {
-          fullUrl: (0, bC.w)(NC, zC, nC, "full"),
-          largeUrl: SC,
-          alt: ZC(iC.gb[nC]),
-          onClose: () => {
-            WC(!1)
-          }
-        })]
-      })
-    }
-
-    function uC(CC) {
-      let {
-        fullUrl: zC,
-        largeUrl: ZC,
-        alt: wC,
-        onClose: bC
-      } = CC;
-      const nC = (0, QC.useRef)(null);
-      return (0, dC.u)("popup", nC, bC), (0, QC.useEffect)((() => {
-        function CC(CC) {
-          "Escape" === CC.key && (CC.stopPropagation(), bC())
-        }
-        return window.addEventListener("keydown", CC, !0), () => {
-          window.removeEventListener("keydown", CC, !0)
-        }
-      }), [bC]), (0, KC.createPortal)((0, vC.jsxs)("div", {
-        ref: nC,
-        className: "ShaderPackFullSize",
-        onClick: bC,
-        children: [(0, vC.jsx)("img", {
-          className: "ShaderPackFullSizeImage",
-          src: zC,
-          alt: wC,
-          draggable: !1,
-          style: {
-            backgroundImage: `url(${ZC})`
-          }
-        }), (0, vC.jsx)(FC.k, {
-          className: "ShaderPackFullSizeClose",
-          onClick: bC
-        })]
-      }), document.body)
-    }
-    const rC = 5;
-
-    function sC(CC) {
-      let {
-        item: zC,
-        packUrl: ZC,
-        baselineUrl: wC
-      } = CC;
-      const {
-        t: nC
-      } = (0, GC.y)(), [fC, oC] = (0, QC.useState)(50), qC = (0, QC.useRef)(!1), FC = (0, QC.useRef)(null), {
-        width: WC,
-        height: NC
-      } = bC.s.large;
-
-      function MC(CC) {
-        oC((zC => (0, YC.c)(zC + CC, 0, 100)))
-      }
-
-      function gC(CC) {
-        const zC = CC.currentTarget.getBoundingClientRect();
-        oC((0, YC.c)((CC.clientX - zC.left) / zC.width * 100, 0, 100))
-      }
-      return (0, mC.g)(FC, {
-        adjust: CC => {
-          MC(CC * rC)
-        },
-        setFraction: CC => {
-          oC(100 * CC)
-        },
-        endDrag: () => {}
-      }), (0, vC.jsxs)("div", {
-        ref: FC,
-        className: "ShaderPackCompare",
-        "data-pad-slider": "",
-        "data-pad-focusable": "",
-        role: "slider",
-        tabIndex: 0,
-        "aria-label": nC("shaderPackListing:compare"),
-        "aria-valuemin": 0,
-        "aria-valuemax": 100,
-        "aria-valuenow": Math.round(fC),
-        style: {
-          "--split": `${fC}%`
-        },
-        onKeyDown: function(CC) {
-          const zC = "ArrowLeft" === CC.key ? -rC : "ArrowRight" === CC.key ? rC : 0;
-          0 !== zC && (CC.preventDefault(), MC(zC))
-        },
-        onPointerDown: CC => {
-          qC.current = !0, CC.currentTarget.setPointerCapture(CC.pointerId), gC(CC)
-        },
-        onPointerMove: CC => {
-          qC.current && gC(CC)
-        },
-        onPointerUp: () => {
-          qC.current = !1
-        },
-        onPointerCancel: () => {
-          qC.current = !1
-        },
-        children: [(0, vC.jsx)("img", {
-          className: "ShaderPackCompareBaseline",
-          src: wC,
-          width: WC,
-          height: NC,
-          alt: "",
-          draggable: !1,
-          style: {
-            backgroundImage: `url(${ZC})`
-          }
-        }), (0, vC.jsx)("div", {
-          className: "ShaderPackCompareLine"
-        }), (0, vC.jsx)("img", {
-          className: "ShaderPackComparePack",
-          src: ZC,
-          width: WC,
-          height: NC,
-          alt: "",
-          draggable: !1
-        }), (0, vC.jsx)(lC.c, {
-          item: zC,
-          className: "ShaderPackCompareNotice"
-        })]
-      })
-    }
-
-    function TC(CC) {
-      let {
-        side: zC,
-        onClick: ZC,
-        children: QC
-      } = CC;
-      return (0, vC.jsx)("button", {
-        type: "button",
-        className: `ShaderPackStageButton ${zC}`,
-        onClick: ZC,
-        children: (0, vC.jsx)("span", {
-          className: "ShaderPackStageButtonFace SmallTextBold",
-          children: QC
-        })
-      })
-    }
-    var aC = ZC(4942),
-      tC = ZC(296),
-      DC = ZC(6660);
-    const jC = {
-      compiler: "shaderPack:compilerUnavailable",
-      download: "shaderPackListing:useDownloadFailed",
-      apiVersion: "shaderPackListing:useOtherApiVersion",
-      invalid: "shaderPackListing:useInvalid",
-      errors: "shaderPackListing:useFailsHere",
-      save: "shaderPack:saveFailed"
-    };
-
-    function yC(CC) {
-      const {
-        userContext: zC
-      } = (0, SC.e)(), [wC, bC] = (0, QC.useState)(null), [nC, fC] = (0, QC.useState)(!1), [oC, qC] = (0, QC.useState)(!1), [FC, WC] = (0, QC.useState)(null), NC = null === CC || void 0 === CC ? void 0 : CC.packId, MC = null === CC || void 0 === CC ? void 0 : CC.sourceHash;
-      return (0, QC.useEffect)((() => {
-        if (fC(!1), WC(null), void 0 === NC) return;
-        let CC = !1;
-        return Promise.all([(0, PC.hasUsableWebGpuAdapter)(), (0, DC.e)()]).then((zC => {
-          let [ZC, QC] = zC;
-          var wC;
-          CC || (bC(ZC), fC((null === QC || void 0 === QC || null === (wC = QC.listing) || void 0 === wC ? void 0 : wC.packId) === NC && QC.listing.sourceHash === MC))
-        })).catch((zC => {
-          console.error("Failed to check whether this shader pack can be used", zC), CC || bC(!1)
+      return (0, Op.useEffect)((() => {
+        if (ip) return;
+        let cp = !1;
+        return Ip.b.getFavouriteShaderPacks(pp).then((pp => {
+          cp || op(new Set(pp))
+        })).catch((pp => {
+          console.error("Failed to get favourite shader packs", pp), cp || op(new Set)
         })), () => {
-          CC = !0
+          cp = !0
         }
-      }), [NC, MC]), {
-        webGpuUsable: wC,
-        inUse: nC,
-        busy: oC,
-        errorKey: FC,
-        use: () => {
-          null !== CC && async function(CC) {
-            qC(!0), WC(null);
-            try {
-              const {
-                installListedShaderPack: QC
-              } = await Promise.all([ZC.e(77), ZC.e(133), ZC.e(113)]).then((() => ZC(40318))), wC = await QC({
-                packId: CC.packId,
-                sourceHash: CC.sourceHash,
-                name: CC.name,
-                ownerName: CC.ownerName,
-                description: CC.description
-              });
-              if ("failed" === wC.kind) return void WC(jC[wC.reason]);
-              fC(!0), pC.d.recordShaderPackDownload(zC, CC.packId).catch((CC => {
-                console.error("Failed to count a shader pack's download", CC)
-              })), (0, aC.h)()
-            } catch (QC) {
-              console.error("Failed to use the shader pack", QC), WC("shaderPack:unexpectedError")
-            } finally {
-              qC(!1)
-            }
-          }(CC)
-        }
-      }
-    }
-
-    function LC(CC) {
-      let {
-        packUse: zC
-      } = CC;
-      const {
-        t: ZC
-      } = (0, GC.y)(), {
-        webGpuUsable: QC,
-        inUse: wC,
-        busy: bC,
-        errorKey: nC,
-        use: fC
-      } = zC;
-      return (0, vC.jsxs)("div", {
-        className: "ShaderPackUse",
-        children: [(0, vC.jsxs)(FC.o, {
-          disabled: !0 !== QC || wC,
-          loading: bC,
-          onClick: fC,
-          children: [(0, vC.jsx)(JC.c, {
-            name: wC ? "check" : "download"
-          }), " ", ZC(wC ? "shaderPackListing:inUse" : "shaderPackListing:use")]
-        }), !1 === QC && (0, vC.jsx)("div", {
-          className: "ShaderPackUseNote",
-          children: ZC((0, tC.k)() ? "shaderPack:needsWebGpuDisabledUntilRestart" : "shaderPack:needsWebGpu")
-        }), nC && (0, vC.jsx)("div", {
-          className: "ShaderPackUseNote Error",
-          children: ZC(nC)
-        })]
-      })
-    }
-
-    function UC() {
-      var CC;
-      const {
-        t: zC
-      } = (0, GC.y)(), ZC = (0, qC.useNavigatePreserveSearch)(), {
-        packId: bC
-      } = (0, wC.C)(), {
-        userContext: nC,
-        isUserContextUpdating: fC
-      } = (0, SC.e)(), [WC, NC] = (0, QC.useState)(null), [MC, PC] = (0, QC.useState)(null), [RC, AC] = (0, QC.useState)(0), xC = (0, QC.useRef)(0);
-
-      function JC() {
-        var CC;
-        null !== (CC = (0, qC.getPreviousLocation)()) && void 0 !== CC && CC.startsWith(iC.W) ? ZC(-1) : ZC(iC.W)
-      }(0, gC.e)(JC), (0, EC.b)(), (0, QC.useEffect)((() => {
-        if (fC || void 0 === bC) return;
-        const CC = ++xC.current;
-        PC(null), pC.d.getShaderPack(nC, bC).then((zC => {
-          xC.current === CC && NC(zC)
-        })).catch((zC => {
-          xC.current === CC && (console.error("Failed to get the shader pack", zC), NC(null), PC({
-            error: zC
+      }), [pp, ip]), {
+        isFavourite: pp => null === cp ? null : cp.has(pp),
+        toggle: function(ip) {
+          if (null === cp || Sp.current.has(ip)) return;
+          Sp.current.add(ip);
+          const Op = !cp.has(ip);
+          xp(ip, Op), (Op ? Ip.b.favouriteShaderPack(pp, ip) : Ip.b.unfavouriteShaderPack(pp, ip)).catch((pp => {
+            console.error("Failed to change a favourite shader pack", pp), xp(ip, !Op)
+          })).finally((() => {
+            Sp.current.delete(ip)
           }))
-        }))
-      }), [bC, nC, fC, RC]);
-      const IC = () => {
-          AC((CC => CC + 1))
-        },
-        eC = (null === WC || void 0 === WC ? void 0 : WC.packId) === bC ? WC : null,
-        KC = (0, EC.j)(),
-        YC = yC(null !== (CC = null === eC || void 0 === eC ? void 0 : eC.live) && void 0 !== CC ? CC : null),
-        dC = null !== eC && void 0 !== eC && eC.live ? (0, vC.jsx)(BC, {
-          item: eC.live,
-          favourites: KC,
-          packUse: YC
-        }) : null;
-      return (0, vC.jsxs)("article", {
-        className: "ShaderPackInformation AnimFadeIn",
-        children: [(0, vC.jsx)(FC.c, {
-          onClick: JC,
-          children: zC("shaderPackListing:backToPacks")
-        }), null === eC && null === MC && (0, vC.jsx)("div", {
-          className: "ShaderPackInformationMessage",
-          children: (0, vC.jsx)(oC.d, {})
-        }), null !== MC && (0, vC.jsxs)("div", {
-          className: "ShaderPackInformationMessage",
-          children: [(0, iC.z)(MC.error, zC, "shaderPackListing:loadPackFailed"), (0, vC.jsx)(FC.g, {
-            onClick: IC,
-            children: zC("general:tryAgain")
-          })]
-        }), null !== eC && null === MC && (0, vC.jsxs)("div", {
-          className: "ShaderPackInformationBody",
-          children: [(0, vC.jsxs)("header", {
-            className: "ShaderPackInformationHeader",
-            children: [(0, vC.jsx)("h1", {
-              className: "FullyFancyText",
-              children: eC.name
-            }), dC]
-          }), eC.live && (0, vC.jsx)(cC, {
-            item: eC.live
-          }), eC.live && (0, vC.jsx)(OC, {
-            item: eC.live,
-            ownerPreview: eC.ownerPreview,
-            bloxdhubSlug: eC.bloxdhubSlug,
-            actions: dC
-          }), eC.owner && (0, vC.jsx)(hC, {
-            details: eC,
-            owner: eC.owner,
-            onChanged: IC
-          })]
-        })]
-      })
-    }
-
-    function BC(CC) {
-      let {
-        item: zC,
-        favourites: ZC,
-        packUse: QC
-      } = CC;
-      const wC = ZC.isFavourite(zC.packId);
-      return (0, vC.jsxs)("div", {
-        className: "ShaderPackInformationActions",
-        children: [PC.featureFlags.settings.canUseShaderPacks && (0, vC.jsx)(LC, {
-          packUse: QC
-        }), (0, vC.jsx)(FC.x, {
-          className: "ShaderPackInformationLike",
-          onClick: () => {
-            ZC.toggle(zC.packId)
-          },
-          isLiked: !0 === wC,
-          isLoading: null === wC
-        })]
-      })
-    }
-
-    function OC(CC) {
-      let {
-        item: zC,
-        ownerPreview: ZC,
-        bloxdhubSlug: QC,
-        actions: wC
-      } = CC;
-      const {
-        t: fC
-      } = (0, GC.y)(), oC = (0, MC.q)(), FC = null === QC ? null : (0, bC.e)(QC);
-      return (0, vC.jsxs)("div", {
-        className: "ShaderPackFacts",
-        children: [zC.description && (0, vC.jsx)("p", {
-          className: "ShaderPackDescription",
-          children: zC.description
-        }), (0, vC.jsxs)("div", {
-          className: "ShaderPackFeatureList",
-          children: [(null !== ZC || null !== FC) && (0, vC.jsx)("div", {
-            className: "ShaderPackAuthor",
-            children: null !== ZC ? (0, vC.jsxs)(vC.Fragment, {
-              children: [(0, vC.jsx)(NC.f, {
-                playerSocialPreview: ZC,
-                showLocation: !1,
-                linkToProfile: !0
-              }), null !== FC && (0, vC.jsx)("a", {
-                className: "ShaderPackBloxdhubLogo",
-                href: FC,
-                target: "_blank",
-                rel: "noopener noreferrer",
-                children: (0, vC.jsx)("img", {
-                  src: RC,
-                  alt: bC.b
-                })
-              })]
-            }) : (0, vC.jsxs)("a", {
-              className: "ShaderPackBloxdhubName",
-              href: FC,
-              target: "_blank",
-              rel: "noopener noreferrer",
-              children: [bC.b, (0, vC.jsx)("img", {
-                src: RC,
-                alt: ""
-              })]
-            })
-          }), iC.B.filter((CC => zC.features.includes(CC))).map((CC => (0, vC.jsx)(qC.LinkPreserveSearch, {
-            className: "ShaderPackFeature",
-            to: (0, iC.M)(CC),
-            children: fC(iC.Q[CC])
-          }, CC)))]
-        }), wC, (0, vC.jsxs)("dl", {
-          className: "ShaderPackFactList",
-          children: [(0, vC.jsxs)("div", {
-            children: [(0, vC.jsx)("dt", {
-              children: fC("shaderPackListing:downloads")
-            }), (0, vC.jsx)("dd", {
-              children: (0, nC.Z)(zC.downloads)
-            })]
-          }), (0, vC.jsx)(kC, {
-            label: fC("shaderPackListing:updated"),
-            time: zC.listedUpdatedAt,
-            now: oC
-          }), (0, vC.jsx)(kC, {
-            label: fC("shaderPackListing:created"),
-            time: zC.publishedAt,
-            now: oC
-          }), null !== zC.gpuCost && (0, vC.jsxs)("div", {
-            children: [(0, vC.jsx)("dt", {
-              children: fC("shaderPackListing:lag")
-            }), (0, vC.jsx)("dd", {
-              children: fC("shaderPackListing:lagPercent", {
-                percent: String((0, iC.V)(zC.gpuCost))
-              })
-            })]
-          }), (0, vC.jsxs)("div", {
-            children: [(0, vC.jsx)("dt", {
-              children: fC("shaderPackListing:size")
-            }), (0, vC.jsx)("dd", {
-              children: fC("shaderPackListing:sizeValue", {
-                kilobytes: String((0, iC.S)(zC.sourceBytes))
-              })
-            })]
-          }), (0, vC.jsxs)("div", {
-            children: [(0, vC.jsx)("dt", {
-              children: fC("shaderPackListing:files")
-            }), (0, vC.jsx)("dd", {
-              children: zC.fileCount
-            })]
-          })]
-        })]
-      })
-    }
-
-    function kC(CC) {
-      let {
-        label: zC,
-        time: ZC,
-        now: QC
-      } = CC;
-      const {
-        t: wC,
-        selectedLanguage: bC
-      } = (0, GC.y)(), nC = new Date(ZC);
-      let oC = nC.toLocaleDateString();
-      if (QC - ZC <= 30 * fC.e) {
-        const CC = (0, GC.m)(bC.code, "shaderPackListing:timeAgo");
-        oC = wC("shaderPackListing:timeAgo", {
-          time: (0, fC.U)(CC, ZC, QC)
-        })
+        }
       }
-      return (0, vC.jsx)(WC.d, {
-        tooltipInner: nC.toLocaleString(),
-        children: (0, vC.jsxs)("div", {
-          children: [(0, vC.jsx)("dt", {
-            children: zC
-          }), (0, vC.jsx)("dd", {
-            children: oC
-          })]
-        })
-      })
     }
   },
-  4971: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => nC
+  6698: (pp, ip, cp) => {
+    cp.d(ip, {
+      C: () => Mp,
+      E: () => Dp,
+      H: () => Ep,
+      L: () => Up,
+      O: () => fp,
+      P: () => Np,
+      R: () => Sp,
+      S: () => Tp,
+      V: () => Lp,
+      X: () => xp,
+      Z: () => Jp,
+      ab: () => Bp,
+      b: () => tp,
+      bb: () => Hp,
+      d: () => Rp,
+      e: () => wp,
+      eb: () => Cp,
+      g: () => Pp,
+      k: () => Ap,
+      l: () => Xp,
+      n: () => Wp,
+      r: () => lp,
+      s: () => bp,
+      w: () => yp,
+      z: () => vp
     });
-    var QC = ZC(1002),
-      wC = ZC.n(QC),
-      bC = ZC(1056);
+    var Op = cp(6704),
+      op = cp(156),
+      Ip = cp(4653);
+    const Sp = "/shader-packs",
+      xp = `${Sp}/publish`;
 
-    function nC(CC) {
-      let {
-        options: zC,
-        value: ZC,
-        onChange: QC,
-        ariaLabel: nC,
-        className: fC,
-        reselectable: oC = !1,
-        keepsFocus: qC = !1,
-        padTabs: FC
-      } = CC;
-      const WC = void 0 !== FC;
-      return (0, bC.jsx)("div", {
-        className: wC()("SegmentedToggle", fC),
-        role: "group",
-        "aria-label": nC,
-        "data-pad-tabs": FC,
-        children: zC.map((CC => {
-          const zC = CC.value === ZC;
-          return (0, bC.jsx)("button", {
-            type: "button",
-            "aria-pressed": zC,
-            "data-pad-tab": WC || void 0,
-            "data-pad-selected": WC && zC ? "true" : void 0,
-            "data-pad-default-focus": WC && zC || void 0,
-            "aria-label": CC.ariaLabel,
-            title: CC.ariaLabel,
-            className: wC()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: zC
-            }),
-            onMouseDown: qC ? CC => {
-              CC.preventDefault()
-            } : void 0,
-            onClick: () => {
-              zC && !oC || QC(CC.value)
-            },
-            children: CC.label
-          }, CC.value)
-        }))
-      })
+    function Lp(pp) {
+      return `${Sp}/${encodeURIComponent(pp)}`
     }
-  },
-  4979: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => bC,
-      g: () => nC
-    });
-    var QC = ZC(48);
-    const wC = new WeakMap,
-      bC = CC => {
-        var zC;
-        const ZC = CC.closest("[data-pad-slider]");
-        return ZC && null !== (zC = wC.get(ZC)) && void 0 !== zC ? zC : null
+    let Yp = null;
+
+    function Dp(pp) {
+      Yp = pp
+    }
+
+    function Ap() {
+      return Yp
+    }
+
+    function Pp() {
+      Yp = null
+    }
+
+    function Wp(pp) {
+      return pp.playerHasRank("developer") || pp.playerHasRank("admin")
+    }
+    const yp = ["terrain", "water", "models", "sunShadows", "strict"],
+      Up = {
+        terrain: "shaderPackListing:filterTerrain",
+        water: "shaderPackListing:filterWater",
+        models: "shaderPackListing:filterModels",
+        sunShadows: "shaderPackListing:filterShadows",
+        strict: "shaderPackListing:filterAllGames"
+      };
+
+    function wp(pp, ip) {
+      return pp.withFeatures.includes(ip) ? "with" : pp.withoutFeatures.includes(ip) ? "without" : null
+    }
+
+    function vp(pp) {
+      return null === pp ? "with" : "with" === pp ? "without" : null
+    }
+
+    function tp(pp) {
+      return "with" === pp ? "only" : null === pp ? "include" : void 0
+    }
+
+    function Hp(pp, ip) {
+      const cp = wp(pp, ip),
+        Op = pp => pp.filter((pp => pp !== ip));
+      return {
+        withFeatures: null === cp ? [...pp.withFeatures, ip] : Op(pp.withFeatures),
+        withoutFeatures: "with" === cp ? [...pp.withoutFeatures, ip] : Op(pp.withoutFeatures)
+      }
+    }
+    const dp = "section",
+      ep = "sort",
+      jp = "filters",
+      kp = "q",
+      mp = "banned",
+      Rp = "popular",
+      qp = "strict";
+
+    function Mp(pp) {
+      var ip, cp, op;
+      const Sp = pp.get(dp),
+        xp = (null !== (ip = pp.get(jp)) && void 0 !== ip ? ip : qp).split(","),
+        Lp = pp.get(mp);
+      return {
+        section: "favourites" === Sp || "mine" === Sp ? Sp : "explore",
+        sort: null !== (cp = Op.A.find((ip => ip === pp.get(ep)))) && void 0 !== cp ? cp : Rp,
+        withFeatures: yp.filter((pp => xp.includes(pp) && !xp.includes(`-${pp}`))),
+        withoutFeatures: yp.filter((pp => xp.includes(`-${pp}`))),
+        searchQuery: (null === (op = pp.get(kp)) || void 0 === op ? void 0 : op.slice(0, Op.P)) || null,
+        pageNumber: (0, Ip.e)(pp.get(Ip.c)),
+        banned: "only" === Lp ? "with" : "include" === Lp ? null : "without"
+      }
+    }
+
+    function Cp(pp, ip) {
+      var cp;
+      const Op = Qp(ip);
+      (0, Ip.g)(pp, dp, "explore" === ip.section ? null : ip.section), (0, Ip.g)(pp, ep, ip.sort === Rp ? null : ip.sort), (0, Ip.g)(pp, jp, Op === qp ? null : Op), (0, Ip.g)(pp, kp, ip.searchQuery), (0, Ip.g)(pp, mp, null !== (cp = tp(ip.banned)) && void 0 !== cp ? cp : null), (0, Ip.k)(pp, ip.pageNumber)
+    }
+
+    function Ep(pp) {
+      const ip = new URLSearchParams;
+      return Cp(ip, {
+        section: "explore",
+        sort: Rp,
+        withFeatures: "strict" === pp ? [pp] : [pp, "strict"],
+        withoutFeatures: [],
+        searchQuery: null,
+        pageNumber: 1,
+        banned: "without"
+      }), `${Sp}?${ip.toString()}`
+    }
+
+    function Xp(pp) {
+      return Qp(pp) === qp
+    }
+
+    function lp(pp) {
+      return null !== pp.searchQuery || "with" === pp.banned || Qp(pp) !== qp
+    }
+
+    function Qp(pp) {
+      return yp.flatMap((ip => {
+        const cp = wp(pp, ip);
+        return "with" === cp ? [ip] : "without" === cp ? [`-${ip}`] : []
+      })).join(",")
+    }
+    const Jp = {
+        popular: "shaderPackListing:sortPopular",
+        updated: "shaderPackListing:sortUpdated",
+        newest: "shaderPackListing:sortNewest"
       },
-      nC = (CC, zC) => {
-        const ZC = (0, QC.useRef)(zC);
-        ZC.current = zC, (0, QC.useEffect)((() => {
-          if (CC.current) return ((CC, zC) => (wC.set(CC, zC), () => {
-            wC.get(CC) === zC && wC.delete(CC)
-          }))(CC.current, {
-            adjust: CC => {
-              ZC.current.adjust(CC)
-            },
-            setFraction: CC => {
-              ZC.current.setFraction(CC)
-            },
-            endDrag: () => {
-              ZC.current.endDrag()
-            }
-          })
-        }), [CC])
+      Bp = {
+        forest: "shaderPackListing:viewForest",
+        desert: "shaderPackListing:viewDesert",
+        water: "shaderPackListing:viewWater",
+        night: "shaderPackListing:viewNight",
+        cave: "shaderPackListing:viewCave"
+      };
+
+    function Np(pp) {
+      return Math.round(100 * Math.max(0, 1 - 1 / pp))
+    }
+
+    function Tp(pp, ip, cp, op) {
+      const Ip = [];
+      pp.isBanned && Ip.push({
+        tone: "warning",
+        text: op("shaderPackListing:ownerBanned"),
+        detail: null
+      });
+      const {
+        pending: Sp
+      } = pp;
+      if (null === pp.brokenError || Sp && !Sp.error || Ip.push({
+          tone: "warning",
+          text: op("shaderPackListing:ownerBroken"),
+          detail: pp.brokenError
+        }), null !== Sp && void 0 !== Sp && Sp.error) Ip.push({
+        tone: "warning",
+        text: op(ip ? "shaderPackListing:ownerUpdateFailed" : "shaderPackListing:ownerFirstFailed"),
+        detail: (0, Op.n)(Sp.error) ? null : Sp.error
+      });
+      else if (Sp) {
+        const pp = null === Sp.renderNotBefore ? 0 : Sp.renderNotBefore - cp,
+          Op = String(Math.ceil(pp / 6e4)),
+          xp = op(ip ? pp > 0 ? "shaderPackListing:ownerUpdateWaiting" : "shaderPackListing:ownerUpdateSoon" : pp > 0 ? "shaderPackListing:ownerFirstWaiting" : "shaderPackListing:ownerFirstSoon", {
+            minutes: Op
+          });
+        Ip.push({
+          tone: "info",
+          text: xp,
+          detail: null
+        })
       }
+      return pp.listed || Ip.push({
+        tone: "info",
+        text: op("shaderPackListing:ownerUnlisted"),
+        detail: null
+      }), Ip
+    }
+
+    function fp(pp) {
+      return Math.max(1, Math.round(pp / 1024))
+    }
+
+    function bp(pp, ip, cp) {
+      return pp instanceof op.e && pp.errorMessageForUser ? pp.errorMessageForUser : ip(cp)
+    }
   },
-  6660: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => wC,
-      e: () => bC
+  6724: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Ip
     });
-    var QC = ZC(38);
-    const wC = "shaderPack";
-    async function bC() {
-      var CC;
-      let zC = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-      return null !== (CC = await QC.g.getItem(wC, zC)) && void 0 !== CC ? CC : null
+    var Op = cp(62),
+      op = cp(44);
+
+    function Ip(pp, ip) {
+      var cp;
+      const [Ip, Sp] = (0, Op.useState)(null !== (cp = op.h.getItem(pp)) && void 0 !== cp ? cp : ip);
+      return [Ip, ip => {
+        op.h.setItem(pp, ip), Sp(ip)
+      }]
+    }
+  },
+  6804: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => op,
+      f: () => Ip
+    });
+    var Op = cp(44);
+    const op = "shaderPack";
+    async function Ip() {
+      var pp;
+      let ip = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+      return null !== (pp = await Op.g.getItem(op, ip)) && void 0 !== pp ? pp : null
+    }
+  },
+  6704: (pp, ip, cp) => {
+    cp.d(ip, {
+      A: () => Ip,
+      D: () => xp,
+      G: () => Sp,
+      J: () => Op,
+      M: () => Pp,
+      P: () => Dp,
+      S: () => dp,
+      V: () => Ap,
+      W: () => Yp,
+      d: () => yp,
+      g: () => wp,
+      j: () => Up,
+      l: () => Wp,
+      n: () => Hp,
+      r: () => jp,
+      t: () => Lp,
+      u: () => op,
+      x: () => ep
+    });
+    const Op = ["forest", "desert", "water", "night", "cave"];
+    const op = {
+        full: {
+          width: 3840,
+          height: 2160
+        },
+        large: {
+          width: 1920,
+          height: 1080
+        },
+        thumb: {
+          width: 640,
+          height: 360
+        }
+      },
+      Ip = ["popular", "updated", "newest"],
+      Sp = 3,
+      xp = 32,
+      Lp = 300;
+
+    function Yp(pp, ip) {
+      return pp.slice(0, ip).replace(/[\uD800-\uDBFF]$/, "")
+    }
+    const Dp = 64,
+      Ap = 512,
+      Pp = 18e5;
+
+    function Wp(pp) {
+      const ip = pp,
+        cp = null === ip || void 0 === ip ? void 0 : ip.files;
+      return "number" === typeof(null === ip || void 0 === ip ? void 0 : ip.apiVersion) && "string" === typeof ip.name && (null === ip.author || "string" === typeof ip.author) && (void 0 === ip.keepCircleShadows || "boolean" === typeof ip.keepCircleShadows) && "object" === typeof cp && null !== cp && Object.values(cp).every((pp => "string" === typeof pp))
+    }
+    const yp = "Bloxdhub",
+      Up = "https://bloxdhub.com/shaders";
+
+    function wp(pp) {
+      return `https://bloxdhub.com/workshop/${encodeURIComponent(pp)}`
+    }
+    const vp = "Screenshot generation failed.",
+      tp = "Its screenshots couldn't be generated:";
+
+    function Hp(pp) {
+      var ip;
+      return pp === vp || null !== (ip = null === pp || void 0 === pp ? void 0 : pp.startsWith(tp)) && void 0 !== ip && ip
+    }
+
+    function dp(pp, ip) {
+      return `shaderPacks/${pp}/${ip}.json`
+    }
+
+    function ep(pp, ip, cp, Op) {
+      return null === ip.renderId ? jp(pp, ip.baselineVersion, cp, Op) : `${pp}/${function(pp,ip,cp,Op){return`shaderPacks/${pp}/${ip}/${cp}-${Op}.webp`}(ip.packId,ip.renderId,cp,Op)}`
+    }
+
+    function jp(pp, ip, cp, Op) {
+      return `${pp}/${function(pp,ip,cp){return`shaderPacks/baseline/${pp}/${ip}-${cp}.webp`}(ip,cp,Op)}`
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

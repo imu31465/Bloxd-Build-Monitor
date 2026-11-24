@@ -1,26 +1,26 @@
 export const id = 15;
 export const ids = [15];
 export const modules = {
-  39246: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      default: () => wC
+  39608: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      default: () => op
     });
-    const QC = [
+    const Op = [
         [25, 8, 56],
         [25, 8, 54]
       ],
-      wC = function(CC, zC, ZC) {
-        let wC;
+      op = function(pp, ip, cp) {
+        let op;
         return {
-          onCreate: CC => {
-            wC = CC
+          onCreate: pp => {
+            op = pp
           },
-          onPlayerAltAction: (CC, zC, ZC, bC, nC, fC) => {
-            QC.some((CC => CC[0] === zC && CC[2] === bC)) && wC.openShop(CC, !1)
+          onPlayerAltAction: (pp, ip, cp, Ip, Sp, xp) => {
+            Op.some((pp => pp[0] === ip && pp[2] === Ip)) && op.openShop(pp, !1)
           }
         }
       }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

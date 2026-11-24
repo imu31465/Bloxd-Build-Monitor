@@ -1,245 +1,776 @@
 export const id = 320;
 export const ids = [320];
 export const modules = {
-  41848: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => nC
+  42134: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      ReadExrDataAsync: () => Wi,
+      _ExrTextureLoader: () => Pi
     });
-    var QC = ZC(39674);
-    const wC = "bakedVertexAnimation",
-      bC = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\n{\n#ifdef INSTANCES\n#define BVASNAME bakedVertexAnimationSettingsInstanced\n#else\n#define BVASNAME bakedVertexAnimationSettings\n#endif\nfloat VATStartFrame=BVASNAME.x;float VATEndFrame=BVASNAME.y;float VATOffsetFrame=BVASNAME.z;float VATSpeed=BVASNAME.w;float totalFrames=VATEndFrame-VATStartFrame+1.0;float time=bakedVertexAnimationTime*VATSpeed/totalFrames;float frameCorrection=time<1.0 ? 0.0 : 1.0;float numOfFrames=totalFrames-frameCorrection;float VATFrameNum=fract(time)*numOfFrames;VATFrameNum=mod(VATFrameNum+VATOffsetFrame,numOfFrames);VATFrameNum=floor(VATFrameNum);VATFrameNum+=VATStartFrame+frameCorrection;mat4 VATInfluence;VATInfluence=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[0],VATFrameNum)*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[1],VATFrameNum)*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[2],VATFrameNum)*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[3],VATFrameNum)*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[0],VATFrameNum)*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[1],VATFrameNum)*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[2],VATFrameNum)*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[3],VATFrameNum)*matricesWeightsExtra[3];\n#endif\nfinalWorld=finalWorld*VATInfluence;}\n#endif\n";
-    QC.b.IncludesShadersStore[wC] || (QC.b.IncludesShadersStore[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+    var Op = cp(38905),
+      op = cp(37356),
+      Ip = cp(40276);
+    const Sp = 4,
+      xp = 4,
+      Lp = 1,
+      Yp = 2,
+      Dp = 8,
+      Ap = 65536,
+      Pp = Ap >> 3,
+      Wp = 14,
+      yp = 65537,
+      Up = 1 << Wp,
+      wp = Up - 1,
+      vp = 59,
+      tp = 63,
+      Hp = 2 + tp - vp;
+    var dp, ep;
+
+    function jp(pp, ip) {
+      const cp = new Uint8Array(pp);
+      let Op = 0;
+      for (; 0 != cp[ip.value + Op];) Op += 1;
+      const op = (new TextDecoder).decode(cp.slice(ip.value, ip.value + Op));
+      return ip.value = ip.value + Op + 1, op
     }
-  },
-  41737: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => nC
-    });
-    var QC = ZC(39674);
-    const wC = "bakedVertexAnimationDeclaration",
-      bC = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\nuniform float bakedVertexAnimationTime;\n#if !defined(WEBGL2) && !defined(WEBGPU)\nuniform vec2 bakedVertexAnimationTextureSizeInverted;\n#endif\nuniform vec4 bakedVertexAnimationSettings;uniform sampler2D bakedVertexAnimationTexture;\n#ifdef INSTANCES\nattribute vec4 bakedVertexAnimationSettingsInstanced;\n#endif\n#define inline\nmat4 readMatrixFromRawSamplerVAT(sampler2D smp,float index,float frame)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4;int frameUV=int(frame);vec4 m0=texelFetch(smp,ivec2(offset+0,frameUV),0);vec4 m1=texelFetch(smp,ivec2(offset+1,frameUV),0);vec4 m2=texelFetch(smp,ivec2(offset+2,frameUV),0);vec4 m3=texelFetch(smp,ivec2(offset+3,frameUV),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float frameUV=(frame+0.5)*bakedVertexAnimationTextureSizeInverted.y;float dx=bakedVertexAnimationTextureSizeInverted.x;vec4 m0=texture2D(smp,vec2(dx*(offset+0.5),frameUV));vec4 m1=texture2D(smp,vec2(dx*(offset+1.5),frameUV));vec4 m2=texture2D(smp,vec2(dx*(offset+2.5),frameUV));vec4 m3=texture2D(smp,vec2(dx*(offset+3.5),frameUV));return mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n";
-    QC.b.IncludesShadersStore[wC] || (QC.b.IncludesShadersStore[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+
+    function kp(pp, ip) {
+      const cp = pp.getInt32(ip.value, !0);
+      return ip.value += Sp, cp
     }
-  },
-  41729: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => nC
-    });
-    var QC = ZC(39674);
-    const wC = "bonesDeclaration",
-      bC = "#if NUM_BONE_INFLUENCERS>0\nattribute vec4 matricesIndices;attribute vec4 matricesWeights;\n#if NUM_BONE_INFLUENCERS>4\nattribute vec4 matricesIndicesExtra;attribute vec4 matricesWeightsExtra;\n#endif\n#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#ifdef BONETEXTURE\nuniform highp sampler2D boneSampler;uniform vec2 boneTextureInfo;\n#else\nuniform mat4 mBones[BonesPerMesh];\n#endif\n#ifdef BONES_VELOCITY_ENABLED\nuniform mat4 mPreviousBones[BonesPerMesh];\n#endif\n#ifdef BONETEXTURE\n#define inline\nmat4 readMatrixFromRawSampler(sampler2D smp,float index)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4; \nint textureWidth=int(boneTextureInfo.x);int y=int(offset)/textureWidth;int x=int(offset) % textureWidth;vec4 m0=texelFetch(smp,ivec2(x+0,y),0);vec4 m1=texelFetch(smp,ivec2(x+1,y),0);vec4 m2=texelFetch(smp,ivec2(x+2,y),0);vec4 m3=texelFetch(smp,ivec2(x+3,y),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float y=floor(offset/boneTextureInfo.x);float x=offset-y*boneTextureInfo.x;float dy=1.0/boneTextureInfo.y;float dx=1.0/boneTextureInfo.x;vec4 m0=texture2D(smp,vec2(dx*(x+0.5),dy*(y+0.5)));vec4 m1=texture2D(smp,vec2(dx*(x+1.5),dy*(y+0.5)));vec4 m2=texture2D(smp,vec2(dx*(x+2.5),dy*(y+0.5)));vec4 m3=texture2D(smp,vec2(dx*(x+3.5),dy*(y+0.5))); \nreturn mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n#endif\n#endif\n";
-    QC.b.IncludesShadersStore[wC] || (QC.b.IncludesShadersStore[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+
+    function mp(pp, ip) {
+      const cp = pp.getUint32(ip.value, !0);
+      return ip.value += Sp, cp
     }
-  },
-  41846: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => nC
-    });
-    var QC = ZC(39674);
-    const wC = "bonesVertex",
-      bC = "#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#if NUM_BONE_INFLUENCERS>0\nmat4 influence;\n#ifdef BONETEXTURE\ninfluence=readMatrixFromRawSampler(boneSampler,matricesIndices[0])*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[1])*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[2])*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[3])*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[0])*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[1])*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[2])*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[3])*matricesWeightsExtra[3];\n#endif\n#else\ninfluence=mBones[int(matricesIndices[0])]*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=mBones[int(matricesIndices[1])]*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=mBones[int(matricesIndices[2])]*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=mBones[int(matricesIndices[3])]*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=mBones[int(matricesIndicesExtra[0])]*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=mBones[int(matricesIndicesExtra[1])]*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=mBones[int(matricesIndicesExtra[2])]*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=mBones[int(matricesIndicesExtra[3])]*matricesWeightsExtra[3];\n#endif\n#endif\nfinalWorld=finalWorld*influence;\n#endif\n#endif\n";
-    QC.b.IncludesShadersStore[wC] || (QC.b.IncludesShadersStore[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+
+    function Rp(pp, ip) {
+      const cp = pp.getUint8(ip.value);
+      return ip.value += Lp, cp
     }
-  },
-  41872: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => nC
-    });
-    var QC = ZC(39674);
-    const wC = "bumpVertex",
-      bC = "#if defined(BUMP) || defined(PARALLAX) || defined(CLEARCOAT_BUMP) || defined(ANISOTROPIC)\n#if defined(TANGENT) && defined(NORMAL)\nvec3 tbnNormal=normalize(normalUpdated);vec3 tbnTangent=normalize(tangentUpdated.xyz);vec3 tbnBitangent=cross(tbnNormal,tbnTangent)*tangentUpdated.w;vTBN=mat3(finalWorld)*mat3(tbnTangent,tbnBitangent,tbnNormal);\n#endif\n#endif\n";
-    QC.b.IncludesShadersStore[wC] || (QC.b.IncludesShadersStore[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+
+    function qp(pp, ip) {
+      const cp = pp.getUint16(ip.value, !0);
+      return ip.value += Yp, cp
     }
-  },
-  41875: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => nC
-    });
-    var QC = ZC(39674);
-    const wC = "clipPlaneVertex",
-      bC = "#ifdef CLIPPLANE\nfClipDistance=dot(worldPos,vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nfClipDistance2=dot(worldPos,vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nfClipDistance3=dot(worldPos,vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nfClipDistance4=dot(worldPos,vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nfClipDistance5=dot(worldPos,vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nfClipDistance6=dot(worldPos,vClipPlane6);\n#endif\n";
-    QC.b.IncludesShadersStore[wC] || (QC.b.IncludesShadersStore[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+
+    function Mp(pp, ip) {
+      const cp = pp[ip.value];
+      return ip.value += Lp, cp
     }
-  },
-  41778: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => nC
-    });
-    var QC = ZC(39674);
-    const wC = "clipPlaneVertexDeclaration",
-      bC = "#ifdef CLIPPLANE\nuniform vec4 vClipPlane;varying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nuniform vec4 vClipPlane2;varying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nuniform vec4 vClipPlane3;varying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nuniform vec4 vClipPlane4;varying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nuniform vec4 vClipPlane5;varying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nuniform vec4 vClipPlane6;varying float fClipDistance6;\n#endif\n";
-    QC.b.IncludesShadersStore[wC] || (QC.b.IncludesShadersStore[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+
+    function Cp(pp, ip) {
+      let cp;
+      return cp = "getBigInt64" in DataView.prototype ? Number(pp.getBigInt64(ip.value, !0)) : pp.getUint32(ip.value + 4, !0) + Number(pp.getUint32(ip.value, !0) << 32), ip.value += Dp, cp
     }
-  },
-  61198: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => nC
-    });
-    var QC = ZC(39674);
-    const wC = "harmonicsFunctions",
-      bC = "#ifdef USESPHERICALFROMREFLECTIONMAP\n#ifdef SPHERICAL_HARMONICS\nvec3 computeEnvironmentIrradiance(vec3 normal) {return vSphericalL00\n+ vSphericalL1_1*(normal.y)\n+ vSphericalL10*(normal.z)\n+ vSphericalL11*(normal.x)\n+ vSphericalL2_2*(normal.y*normal.x)\n+ vSphericalL2_1*(normal.y*normal.z)\n+ vSphericalL20*((3.0*normal.z*normal.z)-1.0)\n+ vSphericalL21*(normal.z*normal.x)\n+ vSphericalL22*(normal.x*normal.x-(normal.y*normal.y));}\n#else\nvec3 computeEnvironmentIrradiance(vec3 normal) {float Nx=normal.x;float Ny=normal.y;float Nz=normal.z;vec3 C1=vSphericalZZ.rgb;vec3 Cx=vSphericalX.rgb;vec3 Cy=vSphericalY.rgb;vec3 Cz=vSphericalZ.rgb;vec3 Cxx_zz=vSphericalXX_ZZ.rgb;vec3 Cyy_zz=vSphericalYY_ZZ.rgb;vec3 Cxy=vSphericalXY.rgb;vec3 Cyz=vSphericalYZ.rgb;vec3 Czx=vSphericalZX.rgb;vec3 a1=Cyy_zz*Ny+Cy;vec3 a2=Cyz*Nz+a1;vec3 b1=Czx*Nz+Cx;vec3 b2=Cxy*Ny+b1;vec3 b3=Cxx_zz*Nx+b2;vec3 t1=Cz *Nz+C1;vec3 t2=a2 *Ny+t1;vec3 t3=b3 *Nx+t2;return t3;}\n#endif\n#endif\n";
-    QC.b.IncludesShadersStore[wC] || (QC.b.IncludesShadersStore[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+
+    function Ep(pp, ip) {
+      const cp = pp.getFloat32(ip.value, !0);
+      return ip.value += xp, cp
     }
-  },
-  41740: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => nC
-    });
-    var QC = ZC(39674);
-    const wC = "instancesDeclaration",
-      bC = "#ifdef INSTANCES\nattribute vec4 world0;attribute vec4 world1;attribute vec4 world2;attribute vec4 world3;\n#ifdef INSTANCESCOLOR\nattribute vec4 instanceColor;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute vec4 previousWorld0;attribute vec4 previousWorld1;attribute vec4 previousWorld2;attribute vec4 previousWorld3;\n#ifdef THIN_INSTANCES\nuniform mat4 previousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform mat4 previousWorld;\n#endif\n#endif\n";
-    QC.b.IncludesShadersStore[wC] || (QC.b.IncludesShadersStore[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+
+    function Xp(pp, ip) {
+      return (0, Ip.c)(qp(pp, ip))
     }
-  },
-  41837: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => nC
-    });
-    var QC = ZC(39674);
-    const wC = "instancesVertex",
-      bC = "#ifdef INSTANCES\nmat4 finalWorld=mat4(world0,world1,world2,world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=mat4(previousWorld0,previousWorld1,\npreviousWorld2,previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\nfinalWorld=world*finalWorld;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\nmat4 finalWorld=world;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=previousWorld;\n#endif\n#endif\n";
-    QC.b.IncludesShadersStore[wC] || (QC.b.IncludesShadersStore[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+
+    function lp(pp, ip) {
+      return (0, Ip.h)((0, op.Clamp)(Ep(pp, ip), -Ip.f, Ip.f))
     }
-  },
-  41830: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => nC
-    });
-    var QC = ZC(39674);
-    const wC = "morphTargetsVertex",
-      bC = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\n#if {X}==0\nfor (int i=0; i<NUM_MORPH_INFLUENCERS; i++) {if (float(i)>=morphTargetCount) break;vertexID=float(gl_VertexID)*morphTargetTextureInfo.x;\n#ifdef MORPHTARGETS_POSITION\npositionUpdated+=(readVector3FromRawSampler(i,vertexID)-position)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASPOSITIONS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_NORMAL\nnormalUpdated+=(readVector3FromRawSampler(i,vertexID) -normal)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASNORMALS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_UV\nuvUpdated+=(readVector3FromRawSampler(i,vertexID).xy-uv)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASUVS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_TANGENT\ntangentUpdated.xyz+=(readVector3FromRawSampler(i,vertexID) -tangent.xyz)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASTANGENTS\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_UV2\nuv2Updated+=(readVector3FromRawSampler(i,vertexID).xy-uv2)*morphTargetInfluences[i];\n#endif\n#ifdef MORPHTARGETTEXTURE_HASUV2S\nvertexID+=1.0;\n#endif\n#ifdef MORPHTARGETS_COLOR\ncolorUpdated+=(readVector4FromRawSampler(i,vertexID)-color)*morphTargetInfluences[i];\n#endif\n}\n#endif\n#else\n#ifdef MORPHTARGETS_POSITION\npositionUpdated+=(position{X}-position)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_NORMAL\nnormalUpdated+=(normal{X}-normal)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_TANGENT\ntangentUpdated.xyz+=(tangent{X}-tangent.xyz)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_UV\nuvUpdated+=(uv_{X}-uv)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_UV2\nuv2Updated+=(uv2_{X}-uv2)*morphTargetInfluences[{X}];\n#endif\n#ifdef MORPHTARGETS_COLOR\ncolorUpdated+=(color{X}-color)*morphTargetInfluences[{X}];\n#endif\n#endif\n#endif\n";
-    QC.b.IncludesShadersStore[wC] || (QC.b.IncludesShadersStore[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+
+    function Qp(pp, ip, cp, Op) {
+      switch (cp) {
+        case "string":
+        case "stringvector":
+        case "iccProfile":
+          return function(pp, ip, cp) {
+            const Op = (new TextDecoder).decode(new Uint8Array(pp).slice(ip.value, ip.value + cp));
+            return ip.value = ip.value + cp, Op
+          }(pp.buffer, ip, Op);
+        case "chlist":
+          return function(pp, ip, cp) {
+            const Op = ip.value,
+              op = [];
+            for (; ip.value < Op + cp - 1;) {
+              const cp = jp(pp.buffer, ip),
+                Op = kp(pp, ip),
+                Ip = Rp(pp, ip);
+              ip.value += 3;
+              const Sp = kp(pp, ip),
+                xp = kp(pp, ip);
+              op.push({
+                name: cp,
+                pixelType: Op,
+                pLinear: Ip,
+                xSampling: Sp,
+                ySampling: xp
+              })
+            }
+            return ip.value += 1, op
+          }(pp, ip, Op);
+        case "chromaticities":
+          return function(pp, ip) {
+            return {
+              redX: Ep(pp, ip),
+              redY: Ep(pp, ip),
+              greenX: Ep(pp, ip),
+              greenY: Ep(pp, ip),
+              blueX: Ep(pp, ip),
+              blueY: Ep(pp, ip),
+              whiteX: Ep(pp, ip),
+              whiteY: Ep(pp, ip)
+            }
+          }(pp, ip);
+        case "compression":
+          return function(pp, ip) {
+            return Rp(pp, ip)
+          }(pp, ip);
+        case "box2i":
+          return function(pp, ip) {
+            return {
+              xMin: kp(pp, ip),
+              yMin: kp(pp, ip),
+              xMax: kp(pp, ip),
+              yMax: kp(pp, ip)
+            }
+          }(pp, ip);
+        case "lineOrder":
+          return function(pp, ip) {
+            const cp = Rp(pp, ip);
+            return ep[cp]
+          }(pp, ip);
+        case "float":
+          return Ep(pp, ip);
+        case "v2f":
+          return function(pp, ip) {
+            return [Ep(pp, ip), Ep(pp, ip)]
+          }(pp, ip);
+        case "v3f":
+          return function(pp, ip) {
+            return [Ep(pp, ip), Ep(pp, ip), Ep(pp, ip)]
+          }(pp, ip);
+        case "int":
+          return kp(pp, ip);
+        case "rational":
+          return function(pp, ip) {
+            return [kp(pp, ip), mp(pp, ip)]
+          }(pp, ip);
+        case "timecode":
+          return function(pp, ip) {
+            return [mp(pp, ip), mp(pp, ip)]
+          }(pp, ip);
+        case "preview":
+          return ip.value += Op, "skipped";
+        default:
+          return void(ip.value += Op)
+      }
     }
-  },
-  41811: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => nC
-    });
-    var QC = ZC(39674);
-    const wC = "morphTargetsVertexDeclaration",
-      bC = "#ifdef MORPHTARGETS\n#ifndef MORPHTARGETS_TEXTURE\n#ifdef MORPHTARGETS_POSITION\nattribute vec3 position{X};\n#endif\n#ifdef MORPHTARGETS_NORMAL\nattribute vec3 normal{X};\n#endif\n#ifdef MORPHTARGETS_TANGENT\nattribute vec3 tangent{X};\n#endif\n#ifdef MORPHTARGETS_UV\nattribute vec2 uv_{X};\n#endif\n#ifdef MORPHTARGETS_UV2\nattribute vec2 uv2_{X};\n#endif\n#ifdef MORPHTARGETS_COLOR\nattribute vec4 color{X};\n#endif\n#elif {X}==0\nuniform float morphTargetCount;\n#endif\n#endif\n";
-    QC.b.IncludesShadersStore[wC] || (QC.b.IncludesShadersStore[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+
+    function Jp(pp) {
+      for (let ip = 1; ip < pp.length; ip++) {
+        const cp = pp[ip - 1] + pp[ip] - 128;
+        pp[ip] = cp
+      }
     }
-  },
-  41824: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => nC
-    });
-    var QC = ZC(39674);
-    const wC = "morphTargetsVertexGlobal",
-      bC = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\nfloat vertexID;\n#endif\n#endif\n";
-    QC.b.IncludesShadersStore[wC] || (QC.b.IncludesShadersStore[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+
+    function Bp(pp, ip) {
+      let cp = 0,
+        Op = Math.floor((pp.length + 1) / 2),
+        op = 0;
+      const Ip = pp.length - 1;
+      for (; !(op > Ip) && (ip[op++] = pp[cp++], !(op > Ip));) ip[op++] = pp[Op++]
+    }! function(pp) {
+      pp[pp.NO_COMPRESSION = 0] = "NO_COMPRESSION", pp[pp.RLE_COMPRESSION = 1] = "RLE_COMPRESSION", pp[pp.ZIPS_COMPRESSION = 2] = "ZIPS_COMPRESSION", pp[pp.ZIP_COMPRESSION = 3] = "ZIP_COMPRESSION", pp[pp.PIZ_COMPRESSION = 4] = "PIZ_COMPRESSION", pp[pp.PXR24_COMPRESSION = 5] = "PXR24_COMPRESSION"
+    }(dp || (dp = {})),
+    function(pp) {
+      pp[pp.INCREASING_Y = 0] = "INCREASING_Y", pp[pp.DECREASING_Y = 1] = "DECREASING_Y"
+    }(ep || (ep = {}));
+    const Np = 20000630;
+
+    function Tp(pp, ip) {
+      if (pp.getUint32(0, !0) != Np) throw new Error("Incorrect OpenEXR format");
+      const cp = pp.getUint8(4),
+        op = pp.getUint8(5),
+        Ip = {
+          singleTile: !!(2 & op),
+          longName: !!(4 & op),
+          deepFormat: !!(8 & op),
+          multiPart: !!(16 & op)
+        };
+      ip.value = 8;
+      const Sp = {};
+      let xp = !0;
+      for (; xp;) {
+        const cp = jp(pp.buffer, ip);
+        if (cp) {
+          const op = jp(pp.buffer, ip),
+            Ip = Qp(pp, ip, op, mp(pp, ip));
+          void 0 === Ip ? Op.e.Warn(`Unknown header attribute type ${op}'.`) : Sp[cp] = Ip
+        } else xp = !1
+      }
+      if (0 != (-5 & op)) throw new Error("Unsupported file format");
+      return {
+        version: cp,
+        spec: Ip,
+        ...Sp
+      }
     }
-  },
-  41808: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => nC
-    });
-    var QC = ZC(39674);
-    const wC = "morphTargetsVertexGlobalDeclaration",
-      bC = "#ifdef MORPHTARGETS\nuniform float morphTargetInfluences[NUM_MORPH_INFLUENCERS];\n#ifdef MORPHTARGETS_TEXTURE \nuniform float morphTargetTextureIndices[NUM_MORPH_INFLUENCERS];uniform vec3 morphTargetTextureInfo;uniform highp sampler2DArray morphTargets;vec3 readVector3FromRawSampler(int targetIndex,float vertexIndex)\n{ \n#if defined(WEBGL2) || defined(WEBGPU)\nint textureWidth=int(morphTargetTextureInfo.y);int y=int(vertexIndex)/textureWidth;int x=int(vertexIndex) % textureWidth;return texelFetch(morphTargets,ivec3(x,y,int(morphTargetTextureIndices[targetIndex])),0).xyz;\n#else\nfloat y=floor(vertexIndex/morphTargetTextureInfo.y);float x=vertexIndex-y*morphTargetTextureInfo.y;vec3 textureUV=vec3((x+0.5)/morphTargetTextureInfo.y,(y+0.5)/morphTargetTextureInfo.z,morphTargetTextureIndices[targetIndex]);return texture(morphTargets,textureUV).xyz;\n#endif\n}\nvec4 readVector4FromRawSampler(int targetIndex,float vertexIndex)\n{ \n#if defined(WEBGL2) || defined(WEBGPU)\nint textureWidth=int(morphTargetTextureInfo.y);int y=int(vertexIndex)/textureWidth;int x=int(vertexIndex) % textureWidth;return texelFetch(morphTargets,ivec3(x,y,int(morphTargetTextureIndices[targetIndex])),0);\n#else\nfloat y=floor(vertexIndex/morphTargetTextureInfo.y);float x=vertexIndex-y*morphTargetTextureInfo.y;vec3 textureUV=vec3((x+0.5)/morphTargetTextureInfo.y,(y+0.5)/morphTargetTextureInfo.z,morphTargetTextureIndices[targetIndex]);return texture(morphTargets,textureUV);\n#endif\n}\n#endif\n#endif\n";
-    QC.b.IncludesShadersStore[wC] || (QC.b.IncludesShadersStore[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+    const fp = 32768,
+      bp = 65535;
+
+    function hp(pp, ip, cp, Op, op) {
+      for (; cp < pp;) ip = ip << 8 | Mp(Op, op), cp += 8;
+      return {
+        l: ip >> (cp -= pp) & (1 << pp) - 1,
+        c: ip,
+        lc: cp
+      }
     }
-  },
-  41703: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => nC
-    });
-    var QC = ZC(39674);
-    const wC = "sceneUboDeclaration",
-      bC = "layout(std140,column_major) uniform;uniform Scene {mat4 viewProjection;\n#ifdef MULTIVIEW\nmat4 viewProjectionR;\n#endif \nmat4 view;mat4 projection;vec4 vEyePosition;mat4 inverseProjection;};\n";
-    QC.b.IncludesShadersStore[wC] || (QC.b.IncludesShadersStore[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+
+    function ap(pp, ip, cp, Op) {
+      return {
+        c: pp = pp << 8 | Mp(cp, Op),
+        lc: ip += 8
+      }
     }
-  },
-  61503: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      geometryVertexShader: () => KC
-    });
-    var QC = ZC(39674),
-      wC = ZC(41729),
-      bC = ZC(41737),
-      nC = ZC(41808),
-      fC = ZC(41811),
-      oC = ZC(41740);
-    const qC = "geometryVertexDeclaration",
-      FC = "uniform mat4 viewProjection;uniform mat4 view;";
-    QC.b.IncludesShadersStore[qC] || (QC.b.IncludesShadersStore[qC] = FC);
-    const WC = {
-      name: qC,
-      shader: FC
-    };
-    var NC = ZC(41703);
-    const MC = "geometryUboDeclaration",
-      gC = "#include<sceneUboDeclaration>\n";
-    QC.b.IncludesShadersStore[MC] || (QC.b.IncludesShadersStore[MC] = gC);
-    const SC = {
-      name: MC,
-      shader: gC
-    };
-    var pC = ZC(41778),
-      PC = ZC(61198),
-      GC = ZC(41824),
-      RC = ZC(41830),
-      AC = ZC(41837),
-      xC = ZC(41846),
-      JC = ZC(41848),
-      IC = ZC(41875),
-      iC = ZC(41872);
-    const vC = "geometryVertexShader",
-      eC = "precision highp float;\n#include<bonesDeclaration>\n#include<bakedVertexAnimationDeclaration>\n#include<morphTargetsVertexGlobalDeclaration>\n#include<morphTargetsVertexDeclaration>[0..maxSimultaneousMorphTargets]\n#include<instancesDeclaration>\n#include<__decl__geometryVertex>\n#include<clipPlaneVertexDeclaration>\n#ifdef IRRADIANCE\n#ifdef REFLECTION\nuniform mat4 reflectionMatrix;uniform vec2 vReflectionInfos;uniform vec3 vReflectionColor;\n#ifdef USESPHERICALFROMREFLECTIONMAP\nvarying vec3 vEnvironmentIrradiance;\n#ifdef SPHERICAL_HARMONICS\nuniform vec3 vSphericalL00;uniform vec3 vSphericalL1_1;uniform vec3 vSphericalL10;uniform vec3 vSphericalL11;uniform vec3 vSphericalL2_2;uniform vec3 vSphericalL2_1;uniform vec3 vSphericalL20;uniform vec3 vSphericalL21;uniform vec3 vSphericalL22;\n#else\nuniform vec3 vSphericalX;uniform vec3 vSphericalY;uniform vec3 vSphericalZ;uniform vec3 vSphericalXX_ZZ;uniform vec3 vSphericalYY_ZZ;uniform vec3 vSphericalZZ;uniform vec3 vSphericalXY;uniform vec3 vSphericalYZ;uniform vec3 vSphericalZX;\n#endif\n#include<harmonicsFunctions>\n#endif\n#endif\n#endif\nattribute vec3 position;\n#ifdef HAS_NORMAL_ATTRIBUTE\nattribute vec3 normal;\n#endif\n#ifdef NEED_UV\nvarying vec2 vUV;\n#ifdef ALPHATEST\nuniform mat4 diffuseMatrix;\n#endif\n#ifdef BUMP\nuniform mat4 bumpMatrix;varying vec2 vBumpUV;\n#endif\n#ifdef REFLECTIVITY\nuniform mat4 reflectivityMatrix;uniform mat4 albedoMatrix;varying vec2 vReflectivityUV;varying vec2 vAlbedoUV;\n#endif\n#ifdef METALLIC_TEXTURE\nvarying vec2 vMetallicUV;uniform mat4 metallicMatrix;\n#endif\n#ifdef ROUGHNESS_TEXTURE\nvarying vec2 vRoughnessUV;uniform mat4 roughnessMatrix;\n#endif\n#ifdef SUBSURFACE_WEIGHT\nvarying vec2 vSubsurfaceWeightUV;uniform mat4 subsurfaceWeightMatrix;\n#endif\n#ifdef TRANSMISSION_WEIGHT\nvarying vec2 vTransmissionWeightUV;uniform mat4 transmissionWeightMatrix;\n#endif\n#ifdef UV1\nattribute vec2 uv;\n#endif\n#ifdef UV2\nattribute vec2 uv2;\n#endif\n#endif\n#ifdef BUMP\nvarying mat4 vWorldView;\n#endif\n#ifdef BUMP\nvarying vec3 vNormalW;\n#else\nvarying vec3 vNormalV;\n#endif\nvarying vec4 vViewPos;\n#if defined(POSITION) || defined(BUMP) || defined(IRRADIANCE)\nvarying vec3 vPositionW;\n#endif\n#if defined(VELOCITY) || defined(VELOCITY_LINEAR)\nuniform mat4 previousViewProjection;varying vec4 vCurrentPosition;varying vec4 vPreviousPosition;\n#endif\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void)\n{vec3 positionUpdated=position;\n#ifdef HAS_NORMAL_ATTRIBUTE\nvec3 normalUpdated=normal;\n#else\nvec3 normalUpdated=vec3(0.0,0.0,0.0);\n#endif\n#ifdef UV1\nvec2 uvUpdated=uv;\n#endif\n#ifdef UV2\nvec2 uv2Updated=uv2;\n#endif\n#include<morphTargetsVertexGlobal>\n#include<morphTargetsVertex>[0..maxSimultaneousMorphTargets]\n#include<instancesVertex>\n#if (defined(VELOCITY) || defined(VELOCITY_LINEAR)) && !defined(BONES_VELOCITY_ENABLED)\nvCurrentPosition=viewProjection*finalWorld*vec4(positionUpdated,1.0);vPreviousPosition=previousViewProjection*finalPreviousWorld*vec4(positionUpdated,1.0);\n#endif\n#include<bonesVertex>\n#include<bakedVertexAnimation>\nvec4 worldPos=vec4(finalWorld*vec4(positionUpdated,1.0));\n#ifdef BUMP\nvWorldView=view*finalWorld;mat3 normalWorld=mat3(finalWorld);vNormalW=normalize(normalWorld*normalUpdated);\n#else\n#ifdef NORMAL_WORLDSPACE\nvNormalV=normalize(vec3(finalWorld*vec4(normalUpdated,0.0)));\n#else\nvNormalV=normalize(vec3((view*finalWorld)*vec4(normalUpdated,0.0)));\n#endif\n#endif\nvViewPos=view*worldPos;\n#if (defined(VELOCITY) || defined(VELOCITY_LINEAR)) && defined(BONES_VELOCITY_ENABLED)\nvCurrentPosition=viewProjection*finalWorld*vec4(positionUpdated,1.0);\n#if NUM_BONE_INFLUENCERS>0\nmat4 previousInfluence;previousInfluence=mPreviousBones[int(matricesIndices[0])]*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\npreviousInfluence+=mPreviousBones[int(matricesIndices[1])]*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\npreviousInfluence+=mPreviousBones[int(matricesIndices[2])]*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\npreviousInfluence+=mPreviousBones[int(matricesIndices[3])]*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[0])]*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[1])]*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[2])]*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\npreviousInfluence+=mPreviousBones[int(matricesIndicesExtra[3])]*matricesWeightsExtra[3];\n#endif\nvPreviousPosition=previousViewProjection*finalPreviousWorld*previousInfluence*vec4(positionUpdated,1.0);\n#else\nvPreviousPosition=previousViewProjection*finalPreviousWorld*vec4(positionUpdated,1.0);\n#endif\n#endif\n#if defined(POSITION) || defined(BUMP) || defined(IRRADIANCE)\nvPositionW=worldPos.xyz/worldPos.w;\n#endif\ngl_Position=viewProjection*finalWorld*vec4(positionUpdated,1.0);\n#include<clipPlaneVertex>\n#ifdef NEED_UV\n#ifdef UV1\n#if defined(ALPHATEST) && defined(ALPHATEST_UV1)\nvUV=vec2(diffuseMatrix*vec4(uvUpdated,1.0,0.0));\n#else\nvUV=uvUpdated;\n#endif\n#ifdef BUMP_UV1\nvBumpUV=vec2(bumpMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#ifdef REFLECTIVITY_UV1\nvReflectivityUV=vec2(reflectivityMatrix*vec4(uvUpdated,1.0,0.0));\n#else\n#ifdef METALLIC_UV1\nvMetallicUV=vec2(metallicMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#ifdef ROUGHNESS_UV1\nvRoughnessUV=vec2(roughnessMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#endif\n#ifdef ALBEDO_UV1\nvAlbedoUV=vec2(albedoMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#ifdef SUBSURFACE_COLOR_UV1\nvSubsurfaceColorUV=vec2(subsurfaceColorMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#ifdef SUBSURFACE_WEIGHT_UV1\nvSubsurfaceWeightUV=vec2(subsurfaceWeightMatrix*vec4(uvUpdated,1.0,0.0));\n#endif\n#endif\n#ifdef UV2\n#if defined(ALPHATEST) && defined(ALPHATEST_UV2)\nvUV=vec2(diffuseMatrix*vec4(uv2Updated,1.0,0.0));\n#else\nvUV=uv2Updated;\n#endif\n#ifdef BUMP_UV2\nvBumpUV=vec2(bumpMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#ifdef REFLECTIVITY_UV2\nvReflectivityUV=vec2(reflectivityMatrix*vec4(uv2Updated,1.0,0.0));\n#else\n#ifdef METALLIC_UV2\nvMetallicUV=vec2(metallicMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#ifdef ROUGHNESS_UV2\nvRoughnessUV=vec2(roughnessMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#endif\n#ifdef ALBEDO_UV2\nvAlbedoUV=vec2(albedoMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#ifdef SUBSURFACE_COLOR_UV2\nvSubsurfaceColorUV=vec2(subsurfaceColorMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#ifdef SUBSURFACE_WEIGHT_UV2\nvSubsurfaceWeightUV=vec2(subsurfaceWeightMatrix*vec4(uv2Updated,1.0,0.0));\n#endif\n#endif\n#endif\n#include<bumpVertex>\n#ifdef IRRADIANCE\n#ifdef REFLECTION\n#ifdef USESPHERICALFROMREFLECTIONMAP\nvec3 reflectionVector=vec3(reflectionMatrix*vec4(normalUpdated,0.0)).xyz;\n#ifdef REFLECTIONMAP_OPPOSITEZ\nreflectionVector.z*=-1.0;\n#endif\nvEnvironmentIrradiance=computeEnvironmentIrradiance(reflectionVector)*vReflectionInfos.x;\n#endif\n#endif\n#endif\n}\n";
-    QC.b.ShadersStore[vC] || (QC.b.ShadersStore[vC] = eC);
-    const hC = [wC.d, bC.b, nC.d, fC.d, oC.d, WC, NC.b, SC, pC.d, PC.c, GC.d, RC.c, AC.c, xC.e, JC.b, IC.d, iC.b];
-    for (const YC of hC) QC.b.IncludesShadersStore[YC.name] || (QC.b.IncludesShadersStore[YC.name] = YC.shader);
-    const KC = {
-      name: vC,
-      shader: eC
+
+    function np(pp, ip, cp, Op, op, Ip, Sp, xp, Lp) {
+      if (pp == ip) {
+        if (Op < 8) {
+          const pp = ap(cp, Op, op, Ip);
+          cp = pp.c, Op = pp.lc
+        }
+        let pp = cp >> (Op -= 8);
+        if (pp = new Uint8Array([pp])[0], xp.value + pp > Lp) return null;
+        const ip = Sp[xp.value - 1];
+        for (; pp-- > 0;) Sp[xp.value++] = ip
+      } else {
+        if (!(xp.value < Lp)) return null;
+        Sp[xp.value++] = pp
+      }
+      return {
+        c: cp,
+        lc: Op
+      }
+    }
+    const Fp = new Array(59);
+
+    function gp(pp, ip, cp, Op, op, Ip) {
+      const Sp = ip;
+      let xp = 0,
+        Lp = 0;
+      for (; Op <= op; Op++) {
+        if (Sp.value - ip.value > cp) return;
+        let Yp = hp(6, xp, Lp, pp, Sp);
+        const Dp = Yp.l;
+        if (xp = Yp.c, Lp = Yp.lc, Ip[Op] = Dp, Dp == tp) {
+          if (Sp.value - ip.value > cp) throw new Error("Error in HufUnpackEncTable");
+          Yp = hp(8, xp, Lp, pp, Sp);
+          let Dp = Yp.l + Hp;
+          if (xp = Yp.c, Lp = Yp.lc, Op + Dp > op + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; Dp--;) Ip[Op++] = 0;
+          Op--
+        } else if (Dp >= vp) {
+          let pp = Dp - vp + 2;
+          if (Op + pp > op + 1) throw new Error("Error in HufUnpackEncTable");
+          for (; pp--;) Ip[Op++] = 0;
+          Op--
+        }
+      }! function(pp) {
+        for (let cp = 0; cp <= 58; ++cp) Fp[cp] = 0;
+        for (let cp = 0; cp < yp; ++cp) Fp[pp[cp]] += 1;
+        let ip = 0;
+        for (let cp = 58; cp > 0; --cp) {
+          const pp = ip + Fp[cp] >> 1;
+          Fp[cp] = ip, ip = pp
+        }
+        for (let cp = 0; cp < yp; ++cp) {
+          const ip = pp[cp];
+          ip > 0 && (pp[cp] = ip | Fp[ip]++ << 6)
+        }
+      }(Ip)
+    }
+
+    function Gp(pp) {
+      return 63 & pp
+    }
+
+    function rp(pp) {
+      return pp >> 6
+    }
+
+    function Zp(pp, ip, cp, Op, op, Ip) {
+      const Sp = cp.value,
+        xp = mp(ip, cp),
+        Lp = mp(ip, cp);
+      cp.value += 4;
+      const Yp = mp(ip, cp);
+      if (cp.value += 4, xp < 0 || xp >= yp || Lp < 0 || Lp >= yp) throw new Error("Wrong HUF_ENCSIZE");
+      const Dp = new Array(yp),
+        Ap = new Array(Up);
+      ! function(pp) {
+        for (let ip = 0; ip < Up; ip++) pp[ip] = {}, pp[ip].len = 0, pp[ip].lit = 0, pp[ip].p = null
+      }(Ap);
+      if (gp(pp, cp, Op - (cp.value - Sp), xp, Lp, Dp), Yp > 8 * (Op - (cp.value - Sp))) throw new Error("Wrong hufUncompress");
+      ! function(pp, ip, cp, Op) {
+        for (; ip <= cp; ip++) {
+          const cp = rp(pp[ip]),
+            op = Gp(pp[ip]);
+          if (cp >> op) throw new Error("Invalid table entry");
+          if (op > Wp) {
+            const pp = Op[cp >> op - Wp];
+            if (pp.len) throw new Error("Invalid table entry");
+            if (pp.lit++, pp.p) {
+              const ip = pp.p;
+              pp.p = new Array(pp.lit);
+              for (let cp = 0; cp < pp.lit - 1; ++cp) pp.p[cp] = ip[cp]
+            } else pp.p = new Array(1);
+            pp.p[pp.lit - 1] = ip
+          } else if (op) {
+            let pp = 0;
+            for (let Ip = 1 << Wp - op; Ip > 0; Ip--) {
+              const Ip = Op[(cp << Wp - op) + pp];
+              if (Ip.len || Ip.p) throw new Error("Invalid table entry");
+              Ip.len = op, Ip.lit = ip, pp++
+            }
+          }
+        }
+      }(Dp, xp, Lp, Ap),
+      function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp) {
+        let Yp = 0,
+          Dp = 0;
+        const Ap = Sp,
+          Pp = Math.trunc(Op.value + (op + 7) / 8);
+        for (; Op.value < Pp;) {
+          let op = ap(Yp, Dp, cp, Op);
+          for (Yp = op.c, Dp = op.lc; Dp >= Wp;) {
+            const Sp = ip[Yp >> Dp - Wp & wp];
+            if (Sp.len) {
+              Dp -= Sp.len;
+              const pp = np(Sp.lit, Ip, Yp, Dp, cp, Op, xp, Lp, Ap);
+              pp && (Yp = pp.c, Dp = pp.lc)
+            } else {
+              if (!Sp.p) throw new Error("hufDecode issues");
+              let ip;
+              for (ip = 0; ip < Sp.lit; ip++) {
+                const Wp = Gp(pp[Sp.p[ip]]);
+                for (; Dp < Wp && Op.value < Pp;) op = ap(Yp, Dp, cp, Op), Yp = op.c, Dp = op.lc;
+                if (Dp >= Wp && rp(pp[Sp.p[ip]]) == (Yp >> Dp - Wp & (1 << Wp) - 1)) {
+                  Dp -= Wp;
+                  const pp = np(Sp.p[ip], Ip, Yp, Dp, cp, Op, xp, Lp, Ap);
+                  pp && (Yp = pp.c, Dp = pp.lc);
+                  break
+                }
+              }
+              if (ip == Sp.lit) throw new Error("HufDecode issues")
+            }
+          }
+        }
+        const yp = 8 - op & 7;
+        for (Yp >>= yp, Dp -= yp; Dp > 0;) {
+          const pp = ip[Yp << Wp - Dp & wp];
+          if (!pp.len) throw new Error("HufDecode issues");
+          {
+            Dp -= pp.len;
+            const ip = np(pp.lit, Ip, Yp, Dp, cp, Op, xp, Lp, Ap);
+            ip && (Yp = ip.c, Dp = ip.lc)
+          }
+        }
+      }(Dp, Ap, pp, cp, Yp, Lp, Ip, op, {
+        value: 0
+      })
+    }
+
+    function zp(pp) {
+      return 65535 & pp
+    }
+
+    function sp(pp) {
+      const ip = zp(pp);
+      return ip > 32767 ? ip - 65536 : ip
+    }
+
+    function Kp(pp, ip) {
+      const cp = sp(pp),
+        Op = sp(ip),
+        op = cp + (1 & Op) + (Op >> 1);
+      return {
+        a: op,
+        b: op - Op
+      }
+    }
+
+    function Vp(pp, ip) {
+      const cp = zp(pp),
+        Op = zp(ip),
+        op = cp - (Op >> 1) & bp;
+      return {
+        a: Op + op - fp & bp,
+        b: op
+      }
+    }
+
+    function ii(pp, ip, cp, Op, op, Ip, Sp) {
+      const xp = Sp < 16384,
+        Lp = cp > op ? op : cp;
+      let Yp, Dp, Ap = 1;
+      for (; Ap <= Lp;) Ap <<= 1;
+      for (Ap >>= 1, Yp = Ap, Ap >>= 1; Ap >= 1;) {
+        Dp = 0;
+        const Sp = Dp + Ip * (op - Yp),
+          Lp = Ip * Ap,
+          Pp = Ip * Yp,
+          Wp = Op * Ap,
+          yp = Op * Yp;
+        let Up, wp, vp, tp;
+        for (; Dp <= Sp; Dp += Pp) {
+          let op = Dp;
+          const Ip = Dp + Op * (cp - Yp);
+          for (; op <= Ip; op += yp) {
+            const cp = op + Wp,
+              Op = op + Lp,
+              Ip = Op + Wp;
+            if (xp) {
+              let Sp = Kp(pp[op + ip], pp[Op + ip]);
+              Up = Sp.a, vp = Sp.b, Sp = Kp(pp[cp + ip], pp[Ip + ip]), wp = Sp.a, tp = Sp.b, Sp = Kp(Up, wp), pp[op + ip] = Sp.a, pp[cp + ip] = Sp.b, Sp = Kp(vp, tp), pp[Op + ip] = Sp.a, pp[Ip + ip] = Sp.b
+            } else {
+              let Sp = Vp(pp[op + ip], pp[Op + ip]);
+              Up = Sp.a, vp = Sp.b, Sp = Vp(pp[cp + ip], pp[Ip + ip]), wp = Sp.a, tp = Sp.b, Sp = Vp(Up, wp), pp[op + ip] = Sp.a, pp[cp + ip] = Sp.b, Sp = Vp(vp, tp), pp[Op + ip] = Sp.a, pp[Ip + ip] = Sp.b
+            }
+          }
+          if (cp & Ap) {
+            const cp = op + Lp;
+            let Op;
+            Op = xp ? Kp(pp[op + ip], pp[cp + ip]) : Vp(pp[op + ip], pp[cp + ip]), Up = Op.a, pp[cp + ip] = Op.b, pp[op + ip] = Up
+          }
+        }
+        if (op & Ap) {
+          let op = Dp;
+          const Ip = Dp + Op * (cp - Yp);
+          for (; op <= Ip; op += yp) {
+            const cp = op + Wp;
+            let Op;
+            Op = xp ? Kp(pp[op + ip], pp[cp + ip]) : Vp(pp[op + ip], pp[cp + ip]), Up = Op.a, pp[cp + ip] = Op.b, pp[op + ip] = Up
+          }
+        }
+        Yp = Ap, Ap >>= 1
+      }
+      return Dp
+    }
+
+    function ci(pp) {
+      return new DataView(pp.array.buffer, pp.offset.value, pp.size)
+    }
+
+    function Oi(pp) {
+      const ip = pp.viewer.buffer.slice(pp.offset.value, pp.offset.value + pp.size),
+        cp = new Uint8Array(function(pp) {
+          let ip = pp.byteLength;
+          const cp = [];
+          let Op = 0;
+          const op = new DataView(pp);
+          for (; ip > 0;) {
+            const pp = op.getInt8(Op++);
+            if (pp < 0) {
+              const Ip = -pp;
+              ip -= Ip + 1;
+              for (let pp = 0; pp < Ip; pp++) cp.push(op.getUint8(Op++))
+            } else {
+              const Ip = pp;
+              ip -= 2;
+              const Sp = op.getUint8(Op++);
+              for (let pp = 0; pp < Ip + 1; pp++) cp.push(Sp)
+            }
+          }
+          return cp
+        }(ip)),
+        Op = new Uint8Array(cp.length);
+      return Jp(cp), Bp(cp, Op), new DataView(Op.buffer)
+    }
+
+    function oi(pp) {
+      const ip = pp.array.slice(pp.offset.value, pp.offset.value + pp.size),
+        cp = fflate.unzlibSync(ip),
+        Op = new Uint8Array(cp.length);
+      return Jp(cp), Bp(cp, Op), new DataView(Op.buffer)
+    }
+
+    function Ii(pp) {
+      const ip = pp.array.slice(pp.offset.value, pp.offset.value + pp.size),
+        cp = fflate.unzlibSync(ip),
+        Op = pp.lines * pp.channels * pp.width,
+        op = 1 == pp.type ? new Uint16Array(Op) : new Uint32Array(Op);
+      let Ip = 0,
+        Sp = 0;
+      const xp = new Array(4);
+      for (let Lp = 0; Lp < pp.lines; Lp++)
+        for (let ip = 0; ip < pp.channels; ip++) {
+          let ip = 0;
+          switch (pp.type) {
+            case 1:
+              xp[0] = Ip, xp[1] = xp[0] + pp.width, Ip = xp[1] + pp.width;
+              for (let Op = 0; Op < pp.width; ++Op) {
+                ip += cp[xp[0]++] << 8 | cp[xp[1]++], op[Sp] = ip, Sp++
+              }
+              break;
+            case 2:
+              xp[0] = Ip, xp[1] = xp[0] + pp.width, xp[2] = xp[1] + pp.width, Ip = xp[2] + pp.width;
+              for (let Op = 0; Op < pp.width; ++Op) {
+                ip += cp[xp[0]++] << 24 | cp[xp[1]++] << 16 | cp[xp[2]++] << 8, op[Sp] = ip, Sp++
+              }
+          }
+        }
+      return new DataView(op.buffer)
+    }
+
+    function Si(pp) {
+      const ip = pp.viewer,
+        cp = {
+          value: pp.offset.value
+        },
+        Op = new Uint16Array(pp.width * pp.scanlineBlockSize * (pp.channels * pp.type)),
+        op = new Uint8Array(Pp);
+      let Ip = 0;
+      const Sp = new Array(pp.channels);
+      for (let Yp = 0; Yp < pp.channels; Yp++) Sp[Yp] = {}, Sp[Yp].start = Ip, Sp[Yp].end = Sp[Yp].start, Sp[Yp].nx = pp.width, Sp[Yp].ny = pp.lines, Sp[Yp].size = pp.type, Ip += Sp[Yp].nx * Sp[Yp].ny * Sp[Yp].size;
+      const xp = qp(ip, cp),
+        Lp = qp(ip, cp);
+      if (Lp >= Pp) throw new Error("Wrong PIZ_COMPRESSION BITMAP_SIZE");
+      if (xp <= Lp)
+        for (let Yp = 0; Yp < Lp - xp + 1; Yp++) op[Yp + xp] = Rp(ip, cp);
+      const Dp = new Uint16Array(Ap),
+        Wp = function(pp, ip) {
+          let cp = 0;
+          for (let op = 0; op < Ap; ++op)(0 == op || pp[op >> 3] & 1 << (7 & op)) && (ip[cp++] = op);
+          const Op = cp - 1;
+          for (; cp < Ap;) ip[cp++] = 0;
+          return Op
+        }(op, Dp),
+        yp = mp(ip, cp);
+      Zp(pp.array, ip, cp, yp, Op, Ip);
+      for (let Yp = 0; Yp < pp.channels; ++Yp) {
+        const pp = Sp[Yp];
+        for (let ip = 0; ip < Sp[Yp].size; ++ip) ii(Op, pp.start + ip, pp.nx, pp.size, pp.ny, pp.nx * pp.size, Wp)
+      }! function(pp, ip, cp) {
+        for (let Op = 0; Op < cp; ++Op) ip[Op] = pp[ip[Op]]
+      }(Dp, Op, Ip);
+      let Up = 0;
+      const wp = new Uint8Array(Op.buffer.byteLength);
+      for (let Ap = 0; Ap < pp.lines; Ap++)
+        for (let ip = 0; ip < pp.channels; ip++) {
+          const pp = Sp[ip],
+            cp = pp.nx * pp.size,
+            op = new Uint8Array(Op.buffer, pp.end * Yp, cp * Yp);
+          wp.set(op, Up), Up += cp * Yp, pp.end += cp
+        }
+      return new DataView(wp.buffer)
+    }
+    var xi, Li = cp(40304);
+    ! function(pp) {
+      pp[pp.Float = 0] = "Float", pp[pp.HalfFloat = 1] = "HalfFloat"
+    }(xi || (xi = {}));
+    class Yi {}
+    async function Di(pp, ip, cp, Op) {
+      const op = {
+        size: 0,
+        viewer: ip,
+        array: new Uint8Array(ip.buffer),
+        offset: cp,
+        width: pp.dataWindow.xMax - pp.dataWindow.xMin + 1,
+        height: pp.dataWindow.yMax - pp.dataWindow.yMin + 1,
+        channels: pp.channels.length,
+        channelLineOffsets: {},
+        scanOrder: () => 0,
+        bytesPerLine: 0,
+        outLineWidth: 0,
+        lines: 0,
+        scanlineBlockSize: 0,
+        inputSize: null,
+        type: 0,
+        uncompress: null,
+        getter: () => 0,
+        format: 5,
+        outputChannels: 0,
+        decodeChannels: {},
+        blockCount: null,
+        byteArray: null,
+        linearSpace: !1,
+        textureType: 0
+      };
+      switch (pp.compression) {
+        case dp.NO_COMPRESSION:
+          op.lines = 1, op.uncompress = ci;
+          break;
+        case dp.RLE_COMPRESSION:
+          op.lines = 1, op.uncompress = Oi;
+          break;
+        case dp.ZIPS_COMPRESSION:
+          op.lines = 1, op.uncompress = oi, await Li.i.LoadScriptAsync(Yi.FFLATEUrl);
+          break;
+        case dp.ZIP_COMPRESSION:
+          op.lines = 16, op.uncompress = oi, await Li.i.LoadScriptAsync(Yi.FFLATEUrl);
+          break;
+        case dp.PIZ_COMPRESSION:
+          op.lines = 32, op.uncompress = Si;
+          break;
+        case dp.PXR24_COMPRESSION:
+          op.lines = 16, op.uncompress = Ii, await Li.i.LoadScriptAsync(Yi.FFLATEUrl);
+          break;
+        default:
+          throw new Error(dp[pp.compression] + " is unsupported")
+      }
+      op.scanlineBlockSize = op.lines;
+      const Ip = {};
+      for (const xp of pp.channels) switch (xp.name) {
+        case "R":
+        case "G":
+        case "B":
+        case "A":
+        case "Y":
+          Ip[xp.name] = !0, op.type = xp.pixelType
+      }
+      let Sp = !1;
+      if (Ip.R && Ip.G && Ip.B && Ip.A) op.outputChannels = 4, op.decodeChannels = {
+        R: 0,
+        G: 1,
+        B: 2,
+        A: 3
+      };
+      else if (Ip.R && Ip.G && Ip.B) Sp = !0, op.outputChannels = 4, op.decodeChannels = {
+        R: 0,
+        G: 1,
+        B: 2,
+        A: 3
+      };
+      else if (Ip.R && Ip.G) op.outputChannels = 2, op.decodeChannels = {
+        R: 0,
+        G: 1
+      };
+      else if (Ip.R) op.outputChannels = 1, op.decodeChannels = {
+        R: 0
+      };
+      else {
+        if (!Ip.Y) throw new Error("EXRLoader.parse: file contains unsupported data channels.");
+        op.outputChannels = 1, op.decodeChannels = {
+          Y: 0
+        }
+      }
+      if (1 === op.type) switch (Op) {
+        case xi.Float:
+          op.getter = Xp, op.inputSize = Yp;
+          break;
+        case xi.HalfFloat:
+          op.getter = qp, op.inputSize = Yp
+      } else {
+        if (2 !== op.type) throw new Error("Unsupported pixelType " + op.type + " for " + pp.compression);
+        switch (Op) {
+          case xi.Float:
+            op.getter = Ep, op.inputSize = xp;
+            break;
+          case xi.HalfFloat:
+            op.getter = lp, op.inputSize = xp
+        }
+      }
+      op.blockCount = op.height / op.scanlineBlockSize;
+      for (let xp = 0; xp < op.blockCount; xp++) Cp(ip, cp);
+      const Lp = op.width * op.height * op.outputChannels;
+      switch (Op) {
+        case xi.Float:
+          op.byteArray = new Float32Array(Lp), op.textureType = 1, Sp && op.byteArray.fill(1, 0, Lp);
+          break;
+        case xi.HalfFloat:
+          op.byteArray = new Uint16Array(Lp), op.textureType = 2, Sp && op.byteArray.fill(15360, 0, Lp);
+          break;
+        default:
+          throw new Error("Unsupported type: " + Op)
+      }
+      let Dp = 0;
+      for (const xp of pp.channels) void 0 !== op.decodeChannels[xp.name] && (op.channelLineOffsets[xp.name] = Dp * op.width), Dp += 2 * xp.pixelType;
+      return op.bytesPerLine = op.width * Dp, op.outLineWidth = op.width * op.outputChannels, "INCREASING_Y" === pp.lineOrder ? op.scanOrder = pp => pp : op.scanOrder = pp => op.height - 1 - pp, 4 == op.outputChannels ? (op.format = 5, op.linearSpace = !0) : (op.format = 6, op.linearSpace = !1), op
+    }
+
+    function Ai(pp, ip, cp, Op) {
+      const op = {
+        value: 0
+      };
+      for (let Ip = 0; Ip < pp.height / pp.scanlineBlockSize; Ip++) {
+        const Sp = kp(cp, Op) - ip.dataWindow.yMin;
+        pp.size = mp(cp, Op), pp.lines = Sp + pp.scanlineBlockSize > pp.height ? pp.height - Sp : pp.scanlineBlockSize;
+        const xp = pp.size < pp.lines * pp.bytesPerLine && pp.uncompress ? pp.uncompress(pp) : ci(pp);
+        Op.value += pp.size;
+        for (let cp = 0; cp < pp.scanlineBlockSize; cp++) {
+          const Op = Ip * pp.scanlineBlockSize,
+            Sp = cp + pp.scanOrder(Op);
+          if (Sp >= pp.height) continue;
+          const Lp = cp * pp.bytesPerLine,
+            Yp = (pp.height - 1 - Sp) * pp.outLineWidth;
+          for (let cp = 0; cp < pp.channels; cp++) {
+            const Op = ip.channels[cp].name,
+              Ip = pp.channelLineOffsets[Op],
+              Sp = pp.decodeChannels[Op];
+            if (void 0 !== Sp) {
+              op.value = Lp + Ip;
+              for (let ip = 0; ip < pp.width; ip++) {
+                const cp = Yp + ip * pp.outputChannels + Sp;
+                pp.byteArray && (pp.byteArray[cp] = pp.getter(xp, op))
+              }
+            }
+          }
+        }
+      }
+    }
+    Yi.DefaultOutputType = xi.HalfFloat, Yi.FFLATEUrl = "https://unpkg.com/fflate@0.8.2";
+    class Pi {
+      constructor() {
+        this.supportCascades = !1
+      }
+      loadCubeData(pp, ip, cp, Op, op) {
+        throw ".exr not supported in Cube."
+      }
+      loadData(pp, ip, cp) {
+        const op = new DataView(pp.buffer),
+          Ip = {
+            value: 0
+          },
+          Sp = Tp(op, Ip);
+        Di(Sp, op, Ip, Yi.DefaultOutputType).then((pp => {
+          Ai(pp, Sp, op, Ip);
+          const Op = Sp.dataWindow.xMax - Sp.dataWindow.xMin + 1,
+            xp = Sp.dataWindow.yMax - Sp.dataWindow.yMin + 1;
+          cp(Op, xp, ip.generateMipMaps, !1, (() => {
+            const cp = ip.gy();
+            ip.format = Sp.format, ip.type = pp.textureType, ip.invertY = !1, ip._gammaSpace = !Sp.linearSpace, pp.byteArray && cp._uploadDataToTextureDirectly(ip, pp.byteArray, 0, 0, void 0, !0)
+          }))
+        })).catch((pp => {
+          Op.e.Error("Failed to load EXR texture: ", pp)
+        }))
+      }
+    }
+    async function Wi(pp) {
+      const ip = new DataView(pp),
+        cp = {
+          value: 0
+        },
+        op = Tp(ip, cp);
+      try {
+        const pp = await Di(op, ip, cp, xi.Float);
+        return Ai(pp, op, ip, cp), pp.byteArray ? {
+          width: op.dataWindow.xMax - op.dataWindow.xMin + 1,
+          height: op.dataWindow.yMax - op.dataWindow.yMin + 1,
+          data: new Float32Array(pp.byteArray)
+        } : (Op.e.Error("Failed to decode EXR data: No byte array available."), {
+          width: 0,
+          height: 0,
+          data: null
+        })
+      } catch (Ip) {
+        Op.e.Error("Failed to load EXR data: ", Ip)
+      }
+      return {
+        width: 0,
+        height: 0,
+        data: null
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

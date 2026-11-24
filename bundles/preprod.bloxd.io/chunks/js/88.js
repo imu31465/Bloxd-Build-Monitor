@@ -1,373 +1,417 @@
 export const id = 88;
 export const ids = [88];
 export const modules = {
-  40372: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      startWasmPadGameplay: () => uC
+  41079: (pp, ip, cp) => {
+    cp.d(ip, {
+      $: () => lp,
+      C: () => Jp,
+      G: () => Qp,
+      H: () => sp,
+      I: () => Np,
+      K: () => Ep,
+      O: () => Bp,
+      S: () => Cp,
+      T: () => gp,
+      X: () => Fp,
+      d: () => Gp,
+      f: () => fp,
+      h: () => qp,
+      j: () => rp,
+      n: () => Mp,
+      r: () => Rp,
+      u: () => Tp,
+      y: () => Xp
     });
-    ZC(40381);
-    var QC = ZC(40389),
-      wC = ZC(40405),
-      bC = ZC(1865),
-      nC = ZC(40412),
-      fC = ZC(4733),
-      oC = ZC(4711),
-      qC = ZC(40417),
-      FC = ZC(40423),
-      WC = ZC(4745),
-      NC = ZC(40500),
-      MC = ZC(2351),
-      gC = ZC(8850),
-      SC = ZC(40392),
-      pC = ZC(8831),
-      PC = ZC(38944);
-    const GC = CC => {
-        const zC = WC.c.indexOf(CC);
-        if (zC < 0) throw new Error(`No core action "${CC}"`);
-        return zC
-      },
-      RC = GC("primary-fire"),
-      AC = GC("alt-fire"),
-      xC = GC("mid-fire"),
-      JC = GC("jump"),
-      IC = GC("ReloadGun"),
-      iC = GC("SwapCameraZoom"),
-      vC = GC("TouchAction1"),
-      eC = {
-        SpecialAction1: GC("SpecialAction1"),
-        SpecialAction2: GC("SpecialAction2")
-      },
-      hC = (CC, zC) => {
-        (0, MC.r)(fC.Q.PadAction, CC, 0, 0, (0, MC.q)(zC, performance.now()))
-      },
-      KC = CC => {
-        hC(CC, nC.Rd.Down)
-      },
-      YC = CC => {
-        hC(CC, 0)
-      },
-      dC = CC => {
-        KC(CC), YC(CC)
-      },
-      mC = () => {
-        const CC = (0, FC.k)();
-        return null !== CC && void 0 !== CC && CC.isCoreRunning ? CC : null
-      },
-      HC = CC => nC.w.playerFlags(CC.api.apiView, 0),
-      EC = CC => null !== CC && nC.w.targetBlockId(CC.api.apiView, 0) !== nC.rd,
-      lC = () => {
-        const CC = (0, gC.b)(),
-          zC = new SC.c;
-        let ZC = !1;
-        const QC = (CC, zC) => {
-            (0, MC.r)(fC.Q.PadLook, nC._d.Rate, CC, zC, 0)
-          },
-          wC = () => {
-            ZC = !1, zC.reset(), QC(0, 0)
-          };
-        return {
-          update: (wC, bC, oC) => {
-            ZC || (CC.discardPending(), ZC = !0);
-            const qC = (0, SC.p)(zC, wC, bC, oC, performance.now());
-            QC(qC.yawRadPerSec, qC.pitchRadPerSec);
-            const FC = CC.drainLookDelta();
-            0 === FC.VY && 0 === FC.Zm || (0, MC.r)(fC.Q.PadLook, nC._d.Gyro, FC.VY, FC.Zm, 0)
-          },
-          release: wC,
-          uninstall: wC
-        }
-      },
-      XC = () => {
-        const CC = mC();
-        return null !== CC && 0 !== (HC(CC) & nC.ce.PadSneakToggled)
-      },
-      cC = () => {
-        const CC = (CC => {
-          const zC = CC => function() {
-            return (0, NC.d)(), CC(...arguments)
-          };
-          return {
-            primaryFireDown: zC((() => (KC(RC), 0))),
-            primaryFireUp: zC((() => {
-              YC(RC)
-            })),
-            altFireDown: zC((() => (KC(AC), 0))),
-            altFireUp: zC((() => {
-              YC(AC)
-            })),
-            jumpDown: zC((() => {
-              dC(JC)
-            })),
-            specialActionDown: zC((CC => {
-              KC(eC[CC])
-            })),
-            specialActionUp: zC((CC => {
-              YC(eC[CC])
-            })),
-            reloadGun: zC((() => {
-              dC(IC)
-            })),
-            dropItem: zC((CC => {
-              hC(nC.Vd.Drop, nC.Rd.Down | (CC ? nC.Rd.Stack : 0))
-            })),
-            swapCameraZoom: zC((() => {
-              dC(iC)
-            })),
-            pickBlock: zC((() => (dC(xC), EC(CC()))))
-          }
-        })(mC);
-        let zC = !1,
-          ZC = null;
-        const QC = () => {
-          var CC;
-          null === (CC = ZC) || void 0 === CC || CC(), ZC = null
-        };
-        return {
-          bodies: () => CC,
-          look: lC(),
-          move: (CC, ZC) => {
-            var wC;
-            QC();
-            const {
-              bits: bC,
-              flips: fC
-            } = (CC => {
-              if (null === CC) return {
-                bits: nC.Yd.Peek,
-                flips: 0
-              };
-              const zC = CC.sneakHeld ? nC.Yd.SneakHeld : 0;
-              return "hold" === CC.mode ? {
-                bits: zC | nC.Yd.SneakHoldMode,
-                flips: CC.sneakTogglePressed ? 1 : 0
-              } : {
-                bits: zC,
-                flips: CC.sneakPressed || CC.sneakTogglePressed ? 1 : 0
-              }
-            })(ZC);
-            null !== (wC = mC()) && void 0 !== wC && wC.padMove(CC.x, CC.y, CC.magnitude, CC.headingOffset, (CC => nC.Yd.Active | (CC.jumpHeld ? nC.Yd.JumpHeld : 0) | (CC.jumpPressed ? nC.Yd.JumpPressed : 0) | (CC.running ? nC.Yd.Running : 0) | (CC.sprintHeld ? nC.Yd.SprintHeld : 0))(CC) | bC, fC) && (zC = !0), (0, pC.e)(XC())
-          },
-          stopMoving: () => {
-            var CC;
-            zC && (zC = !(null !== (CC = mC()) && void 0 !== CC && CC.padMove(0, 0, 0, 0, 0, 0)), QC(), ZC = (0, oC.r)((() => {
-              QC(), (0, pC.e)(XC())
-            })))
-          },
-          uninstall: QC,
-          deviceChanged: CC => {
-            var ZC;
-            "touch" === CC ? ((0, pC.e)(!1), null !== (ZC = mC()) && void 0 !== ZC && ZC.padMove(0, 0, 0, 0, nC.Yd.EndToggle, 0) && (zC = !1)) : "gamepad" === CC && (0, pC.e)(XC())
-          },
-          hasPlayer: () => null !== mC(),
-          isPlayerDead: () => {
-            var CC;
-            return !1 === (null === (CC = mC()) || void 0 === CC ? void 0 : CC.localPlayerAlive())
-          },
-          isReplayMode: () => {
-            const CC = mC();
-            return null !== CC && 0 !== (HC(CC) & nC.ce.Replay)
-          },
-          isFreeCameraOn: () => {
-            const CC = mC();
-            return null !== CC && 0 !== (HC(CC) & nC.ce.FreeCam)
-          },
-          targetsBlock: () => EC(mC()),
-          selectedSlotEmpty: () => {
-            var CC;
-            return !(null !== (CC = mC()) && void 0 !== CC && CC.items.vq())
-          },
-          pickBlockAllowed: () => !!bC.e.get("creative") && !!bC.e.get("canPickBlocks"),
-          scrollHotbar: CC => {
-            hC(nC.Vd.Hotbar, nC.Rd.Down | (CC > 0 ? nC.Rd.Next : 0))
-          },
-          hasFullInventory: qC.q,
-          hasLobbyTab: () => (0, PC.d)({
-            lobbyLeaderboardInfo: bC.e.get("lobbyLeaderboardInfo"),
-            lobbyManage: bC.e.get("lobbyManage")
-          }),
-          contextActionInputs: () => {
-            var CC, zC, ZC, QC;
-            const wC = mC();
-            return {
-              holdingGun: !1 !== (null === wC || void 0 === wC ? void 0 : wC.localPlayerAlive()) && "Gun" === (null === wC || void 0 === wC || null === (CC = wC.items.vq()) || void 0 === CC || null === (zC = CC.typeObj) || void 0 === zC ? void 0 : zC.type),
-              customButtons: null !== (ZC = bC.e.get("customButtons")) && void 0 !== ZC ? ZC : null,
-              touchscreenActionButton: null !== (QC = bC.e.get("touchscreenActionButton")) && void 0 !== QC ? QC : null
-            }
-          },
-          pressTouchButton: CC => {
-            CC ? KC(vC) : YC(vC)
-          }
-        }
-      },
-      uC = () => {
-        const CC = (0, wC.b)(cC()),
-          zC = (0, QC.e)(),
-          ZC = null;
-        return () => {
-          CC(), zC(), null === ZC || void 0 === ZC || ZC()
-        }
+    var Op = cp(1419),
+      op = cp(34),
+      Ip = cp(1308),
+      Sp = cp(2457),
+      xp = cp(4927),
+      Lp = cp(4886);
+    let Yp, Dp = !1,
+      Ap = !1,
+      Pp = !1,
+      Wp = !1;
+    const yp = 1300,
+      Up = 3e3;
+    let wp = 0,
+      vp = !1,
+      tp = !1,
+      Hp = 0;
+    const dp = 2;
+    let ep = !1,
+      jp = !1;
+    const kp = new Set,
+      mp = new Set;
+
+    function Rp() {
+      return Dp
+    }
+
+    function qp() {
+      return tp
+    }
+
+    function Mp() {
+      return jp
+    }
+
+    function Cp() {
+      return (0, Ip.t)() && !jp
+    }
+
+    function Ep(pp) {
+      let ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+      if (pp !== jp) {
+        jp = pp;
+        for (const pp of [...mp]) pp(jp);
+        ip && Fp()
       }
+    }
+
+    function Xp(pp) {
+      return mp.add(pp), () => {
+        mp.delete(pp)
+      }
+    }
+
+    function lp() {
+      (0, xp.g)(Sp.C.Menu, (0, Ip.t)() ? 0 : Sp.C.Menu)
+    }
+
+    function Qp() {
+      tp = !1, Hp = 0, lp(), Fp()
+    }
+
+    function Jp(pp) {
+      return kp.add(pp), () => {
+        kp.delete(pp)
+      }
+    }
+
+    function Bp(pp) {
+      Ap = !1, pp !== Dp && (Dp = pp, Wp = !1, clearTimeout(Yp), Pp = !Dp && ep, Dp ? (vp = !1, tp = !1, Hp = 0) : Cp() && !ep && (tp = !0), ep = !1, Dp && !Cp() && zp(), Kp(), Pp && Fp())
+    }
+
+    function Np(pp) {
+      pp !== vp && (vp = pp, pp || Fp())
+    }
+
+    function Tp() {
+      Ap = !1, Wp || !0 !== ap() || (Wp = !0, clearTimeout(Yp), Yp = setTimeout(bp, yp))
+    }
+
+    function fp() {
+      return (!Ap || performance.now() - wp > Up) && (Ap = (0, Lp.H)().lockPointer(), wp = performance.now()), Ap
+    }
+
+    function bp() {
+      hp() && np() && fp()
+    }
+
+    function hp() {
+      return Cp() && !Dp && !vp && !(0, Op.h)()
+    }
+
+    function ap() {
+      var pp;
+      return "undefined" === typeof navigator || null === (pp = navigator.userActivation) || void 0 === pp ? void 0 : pp.isActive
+    }
+
+    function np() {
+      return Pp && (!navigator.userAgent.includes("Firefox/") || Boolean(document.fullscreenElement)) || !1 !== ap()
+    }
+
+    function Fp() {
+      Cp() ? hp() && !tp && np() && fp() : Dp && !ep && zp()
+    }
+
+    function gp() {
+      tp ? navigator.vendor.startsWith("Apple") ? Zp() : Hp = dp : Fp()
+    }
+
+    function Gp() {
+      Hp > 0 && 0 === --Hp && Zp()
+    }
+
+    function rp() {
+      Hp = 0
+    }
+
+    function Zp() {
+      hp() && !0 === ap() && fp()
+    }
+
+    function zp() {
+      ep = !0, (0, Lp.H)().unlockPointer()
+    }
+
+    function sp() {
+      Ap = !1, Pp = !1, Wp = !1, clearTimeout(Yp), vp = !1, tp = !1, Hp = 0, ep = !1;
+      const pp = Dp;
+      Dp = !1, pp && Kp()
+    }
+
+    function Kp() {
+      for (const pp of [...kp]) pp(Dp);
+      op.m.GA("pointerLockUpdate", Dp)
+    }
   },
-  4711: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      A: () => GC,
-      B: () => nC,
-      E: () => fC,
-      G: () => vC,
-      b: () => iC,
-      e: () => AC,
-      h: () => dC,
-      j: () => YC,
-      k: () => PC,
-      m: () => JC,
-      n: () => RC,
-      p: () => xC,
-      r: () => eC,
-      u: () => hC,
-      w: () => KC
+  40879: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Pp,
+      e: () => xp,
+      f: () => Ap,
+      i: () => Yp,
+      k: () => Sp,
+      o: () => Dp,
+      s: () => Lp
     });
-    var QC = ZC(4719);
-    const wC = {
+    let Op = null,
+      op = null,
+      Ip = null;
+
+    function Sp(pp) {
+      Op = pp
+    }
+
+    function xp() {
+      return Op
+    }
+
+    function Lp(pp) {
+      op = pp
+    }
+
+    function Yp() {
+      return op
+    }
+
+    function Dp(pp) {
+      Ip = pp
+    }
+
+    function Ap() {
+      return Ip
+    }
+
+    function Pp() {
+      var pp, ip;
+      return !0 === (null === (pp = op) || void 0 === pp || null === (ip = pp.currentViewer) || void 0 === ip ? void 0 : ip.inPlayback)
+    }
+  },
+  4886: (pp, ip, cp) => {
+    cp.d(ip, {
+      B: () => tp,
+      D: () => Sp,
+      H: () => xp,
+      K: () => Rp,
+      b: () => mp,
+      c: () => dp,
+      f: () => Xp,
+      h: () => Ep,
+      j: () => vp,
+      m: () => jp,
+      n: () => Hp,
+      p: () => ep,
+      s: () => qp,
+      u: () => Mp,
+      y: () => Cp
+    });
+    var Op = cp(4895);
+    const op = {
       lockPointer: () => !1,
       unlockPointer: () => {},
       leaveGame: () => {}
     };
-    let bC = wC;
+    let Ip = op;
 
-    function nC(CC) {
-      bC = null !== CC && void 0 !== CC ? CC : wC
+    function Sp(pp) {
+      Ip = null !== pp && void 0 !== pp ? pp : op
     }
 
-    function fC() {
-      return bC
+    function xp() {
+      return Ip
     }
-    const oC = new Set,
-      qC = new Set;
-    let FC = -1;
-    const WC = new Set,
-      NC = new Set;
-    let MC = 0,
-      gC = 0;
-    const SC = new Set,
-      pC = new Set;
+    const Lp = new Set,
+      Yp = new Set;
+    let Dp = -1;
+    const Ap = new Set,
+      Pp = new Set;
+    let Wp = 0,
+      yp = 0;
+    const Up = new Set,
+      wp = new Set;
 
-    function PC(CC) {
-      return oC.add(CC), () => {
-        oC.delete(CC)
+    function vp(pp) {
+      return Lp.add(pp), () => {
+        Lp.delete(pp)
       }
     }
 
-    function GC(CC, zC) {
-      for (const QC of oC) try {
-        QC(CC)
-      } catch (ZC) {
-        zC(ZC)
+    function tp(pp, ip) {
+      for (const Op of Lp) try {
+        Op(pp)
+      } catch (cp) {
+        ip(cp)
       }
     }
 
-    function RC(CC) {
-      return qC.add(CC), () => {
-        qC.delete(CC)
+    function Hp(pp) {
+      return Yp.add(pp), () => {
+        Yp.delete(pp)
       }
     }
 
-    function AC(CC, zC) {
-      const ZC = FC < 0 ? 0 : CC - FC;
-      FC = CC;
-      for (const wC of qC) try {
-        wC(ZC)
-      } catch (QC) {
-        zC(QC)
+    function dp(pp, ip) {
+      const cp = Dp < 0 ? 0 : pp - Dp;
+      Dp = pp;
+      for (const op of Yp) try {
+        op(cp)
+      } catch (Op) {
+        ip(Op)
       }
     }
 
-    function xC(CC) {
-      return WC.add(CC), () => {
-        WC.delete(CC)
+    function ep(pp) {
+      return Ap.add(pp), () => {
+        Ap.delete(pp)
       }
     }
 
-    function JC(CC) {
-      return NC.add(CC), () => {
-        NC.delete(CC)
+    function jp(pp) {
+      return Pp.add(pp), () => {
+        Pp.delete(pp)
       }
     }
-    let IC = 0;
+    let kp = 0;
 
-    function iC(CC) {
-      IC += CC
+    function mp(pp) {
+      kp += pp
     }
 
-    function vC() {
-      const CC = IC;
-      return IC = 0, CC
+    function Rp() {
+      const pp = kp;
+      return kp = 0, pp
     }
 
-    function eC(CC) {
-      return SC.add(CC), () => {
-        SC.delete(CC)
-      }
-    }
-
-    function hC(CC) {
-      return pC.add(CC), () => {
-        pC.delete(CC)
+    function qp(pp) {
+      return Up.add(pp), () => {
+        Up.delete(pp)
       }
     }
 
-    function KC() {
-      MC = 0, gC = 0, FC = -1
+    function Mp(pp) {
+      return wp.add(pp), () => {
+        wp.delete(pp)
+      }
     }
 
-    function YC(CC, zC) {
-      if ("paced" === CC) return gC += zC, null;
-      if ("drawn" !== CC && "skipped" !== CC) return null;
-      const ZC = zC + gC;
-      return gC = 0, ZC
+    function Cp() {
+      Wp = 0, yp = 0, Dp = -1
     }
 
-    function dC(CC, zC, ZC, wC) {
-      const bC = (0, QC.i)(zC),
-        nC = CC > 0 ? performance.now() : 0;
-      for (let QC = 0; QC < CC; QC++)
-        for (const CC of SC) try {
-          CC()
-        } catch (fC) {
-          wC(fC)
+    function Ep(pp, ip) {
+      if ("paced" === pp) return yp += ip, null;
+      if ("drawn" !== pp && "skipped" !== pp) return null;
+      const cp = ip + yp;
+      return yp = 0, cp
+    }
+
+    function Xp(pp, ip, cp, op) {
+      const Ip = (0, Op.j)(ip),
+        Sp = pp > 0 ? performance.now() : 0;
+      for (let Op = 0; Op < pp; Op++)
+        for (const pp of Up) try {
+          pp()
+        } catch (xp) {
+          op(xp)
         }
-      if (CC > 0 && iC(performance.now() - nC), null !== ZC) {
-        for (const CC of WC) try {
-          CC(ZC)
-        } catch (fC) {
-          wC(fC)
+      if (pp > 0 && mp(performance.now() - Sp), null !== cp) {
+        for (const pp of Ap) try {
+          pp(cp)
+        } catch (xp) {
+          op(xp)
         }
-        MC += ZC
+        Wp += cp
       }
-      if ("drawn" === zC) {
-        const CC = MC;
-        MC = 0;
-        for (const zC of NC) try {
-          zC(CC)
-        } catch (fC) {
-          wC(fC)
+      if ("drawn" === ip) {
+        const pp = Wp;
+        Wp = 0;
+        for (const ip of Pp) try {
+          ip(pp)
+        } catch (xp) {
+          op(xp)
         }
       }
-      for (const QC of pC) try {
-        QC(CC, bC)
-      } catch (fC) {
-        wC(fC)
+      for (const Op of wp) try {
+        Op(pp, Ip)
+      } catch (xp) {
+        op(xp)
       }
     }
   },
-  4745: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => wC,
-      d: () => bC,
-      f: () => nC,
-      g: () => QC,
-      h: () => fC
+  41091: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Op
     });
-    const QC = {
+    const Op = {
+      stop: () => Op,
+      fade: () => Op,
+      rate: () => Op,
+      getVolume: () => 0,
+      getRelativeVolume: () => 0,
+      setRelativeVolume: () => Op,
+      setPannerAttr: () => Op,
+      setPosition: () => Op
+    }
+  },
+  4919: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Lp,
+      e: () => Ip,
+      f: () => xp
+    });
+    var Op = cp(2457),
+      op = cp(4921);
+
+    function Ip(pp) {
+      let {
+        action: ip,
+        flags: cp
+      } = pp;
+      return "mid-fire" === ip && 0 !== (cp & Op.c.AltLeftClick)
+    }
+    const Sp = new Set;
+
+    function xp(pp) {
+      return Sp.add(pp), () => {
+        Sp.delete(pp)
+      }
+    }
+
+    function Lp(pp) {
+      const ip = op.c[255 & pp];
+      if (void 0 === ip) return;
+      const cp = pp >>> 8 & 255,
+        Ip = {
+          action: ip,
+          down: 0 !== (cp & Op.c.Down),
+          flags: cp,
+          press: pp >>> 16
+        };
+      for (const Op of Sp) Op(Ip)
+    }
+  },
+  4921: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => op,
+      e: () => Ip,
+      i: () => Sp,
+      j: () => Op,
+      n: () => xp
+    });
+    const Op = {
         Mouse1: 1,
         Mouse2: 2,
         Mouse3: 3,
@@ -564,8 +608,8 @@ export const modules = {
         TouchAttack: 194,
         TouchUse: 195
       },
-      wC = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
-      bC = {
+      op = ["forward", "backward", "left", "right", "sprint", "jump", "crouch", "primary-fire", "alt-fire", "SpecialAction1", "SpecialAction2", "ReloadGun", "DropItem", "mid-fire", "Zoom", "SwapCameraZoom", "OpenInventory", "OpenLobbyLeaderboard", "OpenShop", "OpenCharacterCustomization", "OpenSettings", "OpenInviteLink", "OpenTasksAndLeaderboard", "OpenCodeEditor", "OpenEmoteWheel", "HideUi", "ShowDebugOverlay", "HotBarSlot1", "HotBarSlot2", "HotBarSlot3", "HotBarSlot4", "HotBarSlot5", "HotBarSlot6", "HotBarSlot7", "HotBarSlot8", "HotBarSlot9", "HotBarSlot10", "toggleFreeCam", "freeCamForward", "freeCamBackward", "freeCamLeft", "freeCamRight", "freeCamUp", "freeCamDown", "recordGame", "recordClip", "replayViewerOpen", "replayPlayPause", "replaySkipBack", "replaySkipForward", "replayChangeCameraMode", "replayLoad", "replaySave", "replaySaveAs", "replayExit", "replaySpeedUp", "replaySpeedDown", "replayTimelineZoomIn", "replayTimelineZoomOut", "replayRecordKeyframe", "replayExportVideo", "AltHeld", "CtrlCrouch", "KeyYPressed", "KeyXPressed", "ToggleFullCoordinateOverlay", "TouchAction1", "TouchAction2", "TouchAction3", "TouchDig", "TouchHold", "TouchTap", "TouchInteract", "TouchBoost", "Custom0", "Custom1", "Custom2", "Custom3", "Custom4", "Custom5", "Custom6", "Custom7", "Custom8", "Custom9", "Custom10", "Custom11", "Custom12", "Custom13", "Custom14", "Custom15"],
+      Ip = {
         forward: [21, 46],
         backward: [31, 49],
         left: [30, 47],
@@ -628,160 +672,336 @@ export const modules = {
         replayRecordKeyframe: [24],
         replayExportVideo: [40]
       },
-      nC = {
+      Sp = {
         jump: [188],
         crouch: [189],
         SwapCameraZoom: [190],
         "primary-fire": [194],
         "alt-fire": [195]
       },
-      fC = [16]
+      xp = [16]
   },
-  40500: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => nC,
-      f: () => bC,
-      i: () => wC
+  41120: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Dp,
+      f: () => Yp,
+      g: () => Lp
     });
-    let QC = null;
+    var Op = cp(4911),
+      op = cp(2457),
+      Ip = cp(4927);
+    let Sp = !1,
+      xp = !1;
 
-    function wC(CC) {
-      QC = CC
+    function Lp(pp) {
+      Sp = !0;
+      try {
+        pp()
+      } finally {
+        Sp = !1
+      }
     }
 
-    function bC(CC) {
-      QC === CC && (QC = null)
+    function Yp(pp, ip) {
+      if (Sp) return !1;
+      switch (pp) {
+        case Op.z.MouseDown:
+        case Op.z.MouseUp:
+        case Op.z.TouchStart:
+        case Op.z.TouchEnd:
+        case Op.z.TouchCancel:
+        case Op.z.TouchButton:
+          return !0;
+        case Op.z.KeyDown:
+        case Op.z.KeyUp:
+          return 0 === (ip & op.g.Repeat) && !(0, Ip.e)(document.activeElement);
+        default:
+          return !1
+      }
     }
 
-    function nC() {
-      var CC;
-      null === (CC = QC) || void 0 === CC || CC()
+    function Dp(pp) {
+      xp || (xp = !0, queueMicrotask((() => {
+        xp = !1, pp()
+      })))
     }
   },
-  4752: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => fC,
-      d: () => nC,
-      e: () => qC
+  4927: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => xp,
+      e: () => Sp,
+      g: () => Yp
     });
-    var QC = ZC(2348),
-      wC = ZC(2351);
-    const bC = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
+    var Op = cp(2457),
+      op = cp(2463);
+    const Ip = new Set(["button", "checkbox", "color", "file", "image", "radio", "range", "reset", "submit"]);
 
-    function nC(CC) {
-      return CC instanceof HTMLElement && (!!(CC.isContentEditable || CC instanceof HTMLTextAreaElement || CC instanceof HTMLSelectElement) || CC instanceof HTMLInputElement && !bC.has(CC.type))
+    function Sp(pp) {
+      return pp instanceof HTMLElement && (!!(pp.isContentEditable || pp instanceof HTMLTextAreaElement || pp instanceof HTMLSelectElement) || pp instanceof HTMLInputElement && !Ip.has(pp.type))
     }
 
-    function fC(CC) {
-      let zC = null;
-      const ZC = ZC => {
-          const wC = nC(ZC);
-          wC !== zC && (zC = wC, CC(QC.j.UiCapture, QC.v.Keyboard, 0, 0, wC ? QC.v.Keyboard : 0))
+    function xp(pp) {
+      let ip = null;
+      const cp = cp => {
+          const op = Sp(cp);
+          op !== ip && (ip = op, pp(Op.i.UiCapture, Op.C.Keyboard, 0, 0, op ? Op.C.Keyboard : 0))
         },
-        wC = CC => {
-          ZC(CC.target)
+        op = pp => {
+          cp(pp.target)
         },
-        bC = CC => {
-          ZC(CC.relatedTarget)
+        Ip = pp => {
+          cp(pp.relatedTarget)
         },
-        fC = () => {
-          ZC(document.activeElement)
+        xp = () => {
+          cp(document.activeElement)
         },
-        oC = {
+        Lp = {
           capture: !0,
           passive: !0
         };
-      return document.addEventListener("focusin", wC, oC), document.addEventListener("focusout", bC, oC), document.addEventListener("keydown", fC, oC), ZC(document.activeElement), () => {
-        document.removeEventListener("focusin", wC, oC), document.removeEventListener("focusout", bC, oC), document.removeEventListener("keydown", fC, oC)
+      return document.addEventListener("focusin", op, Lp), document.addEventListener("focusout", Ip, Lp), document.addEventListener("keydown", xp, Lp), cp(document.activeElement), () => {
+        document.removeEventListener("focusin", op, Lp), document.removeEventListener("focusout", Ip, Lp), document.removeEventListener("keydown", xp, Lp)
       }
     }
-    const oC = new Map;
+    const Lp = new Map;
 
-    function qC(CC, zC) {
-      var ZC;
-      let QC = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
-      oC.set(QC, (null !== (ZC = oC.get(QC)) && void 0 !== ZC ? ZC : 0) & ~CC | zC & CC);
-      let bC = 0;
-      for (const wC of oC.values()) bC |= wC;
-      return (0, wC.v)(CC, bC & CC)
+    function Yp(pp, ip) {
+      var cp;
+      let Op = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "ui";
+      Lp.set(Op, (null !== (cp = Lp.get(Op)) && void 0 !== cp ? cp : 0) & ~pp | ip & pp);
+      let Ip = 0;
+      for (const op of Lp.values()) Ip |= op;
+      return (0, op.E)(pp, Ip & pp)
     }
   },
-  36796: (CC, zC, ZC) => {
-    function QC(CC) {
-      return CC.includes("Leaf Bed")
+  41153: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Dp,
+      f: () => Lp,
+      i: () => xp,
+      j: () => Yp
+    });
+    var Op = cp(1971);
+    let op = null,
+      Ip = 0;
+    const Sp = new Set;
+
+    function xp() {
+      return op
     }
 
-    function wC(CC) {
-      return / Bed(?: Head)?(?:\||$)/.test(CC) && !QC(CC)
+    function Lp() {
+      return Ip
     }
 
-    function bC(CC) {
-      return CC.includes(" Strongbed")
+    function Yp(pp) {
+      op = pp, Ip++, (0, Op.b)();
+      for (const ip of Sp) ip()
     }
 
-    function nC(CC) {
-      return QC(CC) || wC(CC) || bC(CC)
+    function Dp(pp) {
+      Sp.add(pp)
     }
-    ZC.d(zC, {
-      d: () => nC,
-      g: () => QC,
-      i: () => bC,
-      l: () => wC
+  },
+  41200: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Op
+    });
+    const Op = 2e3
+  },
+  41087: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => jp,
+      g: () => Pp,
+      j: () => Hp,
+      n: () => ep,
+      r: () => dp,
+      t: () => kp
+    });
+    var Op = cp(176),
+      op = cp(25),
+      Ip = cp(34),
+      Sp = cp(2993),
+      xp = cp(1317),
+      Lp = cp(34364),
+      Yp = cp(298),
+      Dp = cp(104),
+      Ap = cp(172);
+
+    function Pp() {
+      var pp;
+      const ip = (0, Sp.C)(),
+        cp = function(pp, ip) {
+          return {
+            sampleCount: pp.antiAliasing ? 4 : 1,
+            n: (0, Sp.x)(pp.pixelScale, ip),
+            pixelated: (0, Sp.u)(pp.pixelSmoothing)
+          }
+        }(op.c.get("clientEscMenuOptions"), ip);
+      return cp.sampleCount > 1 && (0, Lp.d)() && (cp.sampleCount = 1), cp.n = null !== (pp = (0, Lp.r)()) && void 0 !== pp ? pp : cp.n, Op.f.includes((0, Dp.getSoftwareRenderer)()) && (cp.sampleCount = 1, cp.n = Math.max(cp.n, (0, Sp.x)(Ap.u.pixelScale, ip))), cp
+    }
+    let Wp = null,
+      yp = null;
+    const Up = new Set;
+    let wp = null;
+
+    function vp() {
+      for (const pp of Up) pp()
+    }
+
+    function tp() {
+      if (null === Wp) {
+        const pp = document.createElement("div");
+        pp.style.cssText = "position:fixed;top:0;right:0;bottom:0;left:0;visibility:hidden;pointer-events:none", pp.setAttribute("aria-hidden", "true"), document.body.append(pp), yp = pp, Wp = new Sp.b(pp, vp)
+      }
+      return Wp
+    }
+
+    function Hp(pp) {
+      const ip = (0, Sp.l)(),
+        [cp, Op] = tp().size(ip);
+      return (0, Sp.d)(cp, Op, ip, pp.n)
+    }
+
+    function dp(pp) {
+      var ip, cp, Op, op;
+      const Ip = (0, Sp.l)(),
+        [Lp, Yp] = tp().size(Ip);
+      if (Lp <= 0 || Yp <= 0) return null;
+      const Dp = (0, Sp.d)(Lp, Yp, Ip, Pp().n);
+      return (0, Sp.c)(pp, Dp), pp.style.left = `${null!==(ip=null===(cp=wp)||void 0===cp?void 0:cp.rect.left)&&void 0!==ip?ip:0}px`, pp.style.top = `${null!==(Op=null===(op=wp)||void 0===op?void 0:op.rect.top)&&void 0!==Op?Op:0}px`, (0, xp.T)(pp.style, wp), Dp
+    }
+
+    function ep(pp) {
+      wp = pp, tp(), (0, xp.K)(yp.style, pp, ""), vp()
+    }
+
+    function jp(pp, ip) {
+      pp.style.imageRendering = (0, Sp.D)(ip.pixelated)
+    }
+
+    function kp(pp, ip) {
+      const cp = (0, Ip.n)("appManagerUpdated|clientEscMenuOptions", (() => {
+          jp(pp, Pp()), ip()
+        })),
+        Op = (0, Lp.C)(ip),
+        op = (0, Yp.o)(ip);
+      return tp(), Up.add(ip), () => {
+        cp(), Op(), op(), Up.delete(ip)
+      }
+    }
+  },
+  41208: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Sp,
+      g: () => Ip,
+      i: () => op
+    });
+    let Op = null;
+
+    function op(pp) {
+      Op = pp
+    }
+
+    function Ip(pp) {
+      Op === pp && (Op = null)
+    }
+
+    function Sp() {
+      var pp;
+      null === (pp = Op) || void 0 === pp || pp()
+    }
+  },
+  41147: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => op,
+      h: () => Yp,
+      j: () => Ip,
+      m: () => Ap,
+      p: () => Dp,
+      q: () => Pp
+    });
+    var Op = cp(2970);
+    class op extends Error {
+      constructor(pp, ip, cp) {
+        super(`${"fetch"===pp?"fetching":"decoding"} ${ip} failed`, cp), this.stage = pp, this.source = ip, this.name = "ShellImageError"
+      }
+    }
+    async function Ip(pp) {
+      let ip, cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Op.F,
+        Ip = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "none";
+      if ("string" === typeof pp) try {
+        ip = await cp(pp)
+      } catch (Sp) {
+        throw new op("fetch", pp, {
+          cause: Sp
+        })
+      } else ip = pp;
+      try {
+        const pp = new Blob([ip.slice()], {
+          type: "image/png"
+        });
+        return await createImageBitmap(pp, {
+          premultiplyAlpha: "none",
+          colorSpaceConversion: "none",
+          imageOrientation: Ip
+        })
+      } catch (Sp) {
+        throw new op("decode", "string" === typeof pp ? pp : `${ip.byteLength} bytes`, {
+          cause: Sp
+        })
+      }
+    }
+    let Sp = null;
+    const xp = new Map;
+    let Lp = 1;
+
+    function Yp(pp) {
+      if (Sp = pp, null !== pp) {
+        for (const [ip, cp] of xp) pp.kOp(ip, cp);
+        xp.clear()
+      }
+    }
+
+    function Dp(pp) {
+      const ip = Lp++;
+      return Sp ? Sp.kOp(ip, pp) : xp.set(ip, pp), ip
+    }
+    async function Ap(pp, ip, cp) {
+      const Op = await Ip(pp, ip, cp);
+      return {
+        id: Dp(Op),
+        width: Op.width,
+        height: Op.height
+      }
+    }
+
+    function Pp(pp) {
+      var ip;
+      const cp = xp.get(pp);
+      if (cp) return cp.close(), void xp.delete(pp);
+      null === (ip = Sp) || void 0 === ip || ip.mOp(pp)
+    }
+  },
+  41096: (pp, ip, cp) => {
+    function Op(pp, ip) {
+      if (!Object.prototype.hasOwnProperty.call(pp, ip)) throw new TypeError("attempted to use private field on non-instance");
+      return pp
+    }
+    cp.d(ip, {
+      e: () => Op
     })
   },
-  36794: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => qC
+  41104: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => op
     });
-    var QC = ZC(36796),
-      wC = ZC(9194);
-    const bC = [],
-      nC = [],
-      fC = [],
-      oC = [];
-    for (const FC of Object.keys(wC.n))(0, QC.g)(FC) ? bC.push(FC) : (0, QC.l)(FC) && nC.push(FC), (0, QC.i)(FC) && fC.push(FC), (FC.includes(" Bed Head") || FC.includes(" Strongbed Head")) && oC.push(FC);
-    const qC = {
-      leafBeds: bC,
-      woolBeds: nC,
-      strongBeds: fC,
-      beds: [...bC, ...nC, ...fC],
-      bedHeads: oC,
-      blockRemoveActionRoots: ["Chest", "Loot Chest", "Iron Chest", "Mailbox", "Bookshelf", "Empty Bookshelf"]
+    var Op = 0;
+
+    function op(pp) {
+      return "__private_" + Op++ + "_" + pp
     }
-  },
-  6484: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      c: () => nC,
-      e: () => wC,
-      g: () => oC,
-      k: () => bC,
-      o: () => qC,
-      r: () => QC,
-      t: () => fC
-    });
-    let QC = function(CC) {
-        return CC[CC.DEFAULT = 0] = "DEFAULT", CC[CC.BOAT = 1] = "BOAT", CC[CC.GLIDER = 2] = "GLIDER", CC[CC.BALLOON = 3] = "BALLOON", CC[CC.SLEEPING = 4] = "SLEEPING", CC[CC.RIDING_MOB = 5] = "RIDING_MOB", CC[CC.CAR = 6] = "CAR", CC[CC.HOVERCRAFT = 7] = "HOVERCRAFT", CC
-      }({}),
-      wC = function(CC) {
-        return CC[CC.WOOD = 0] = "WOOD", CC[CC.OBSIDIAN = 1] = "OBSIDIAN", CC[CC.SPEED = 2] = "SPEED", CC
-      }({}),
-      bC = function(CC) {
-        return CC[CC.WOOD = 0] = "WOOD", CC[CC.IRON = 1] = "IRON", CC[CC.GOLD = 2] = "GOLD", CC[CC.DIAMOND = 3] = "DIAMOND", CC
-      }({}),
-      nC = function(CC) {
-        return CC[CC.YELLOW = 0] = "YELLOW", CC[CC.WHITE = 1] = "WHITE", CC[CC.RED = 2] = "RED", CC[CC.PURPLE = 3] = "PURPLE", CC[CC.PINK = 4] = "PINK", CC[CC.ORANGE = 5] = "ORANGE", CC[CC.MAGENTA = 6] = "MAGENTA", CC[CC.LIME = 7] = "LIME", CC[CC.LIGHT_GRAY = 8] = "LIGHT_GRAY", CC[CC.LIGHT_BLUE = 9] = "LIGHT_BLUE", CC[CC.GREEN = 10] = "GREEN", CC[CC.GRAY = 11] = "GRAY", CC[CC.CYAN = 12] = "CYAN", CC[CC.BROWN = 13] = "BROWN", CC[CC.BLUE = 14] = "BLUE", CC[CC.BLACK = 15] = "BLACK", CC
-      }({}),
-      fC = function(CC) {
-        return CC[CC.ROTATION_1 = 0] = "ROTATION_1", CC[CC.ROTATION_2 = 1] = "ROTATION_2", CC[CC.ROTATION_3 = 2] = "ROTATION_3", CC[CC.ROTATION_4 = 3] = "ROTATION_4", CC
-      }({}),
-      oC = function(CC) {
-        return CC[CC.KART = 0] = "KART", CC[CC.OFF_ROADER = 1] = "OFF_ROADER", CC[CC.CAR = 2] = "CAR", CC[CC.GOLD_MINING_DRILL = 3] = "GOLD_MINING_DRILL", CC[CC.ARMORED_CAR = 4] = "ARMORED_CAR", CC[CC.IRON_MINING_DRILL = 5] = "IRON_MINING_DRILL", CC[CC.DIAMOND_MINING_DRILL = 6] = "DIAMOND_MINING_DRILL", CC[CC.MOONSTONE_MINING_DRILL = 7] = "MOONSTONE_MINING_DRILL", CC
-      }({});
-    QC.DEFAULT, QC.BOAT, wC.SPEED, QC.GLIDER, bC.DIAMOND, QC.BALLOON, nC.BLACK, QC.SLEEPING, fC.ROTATION_4, QC.RIDING_MOB, QC.CAR, oC.MOONSTONE_MINING_DRILL, QC.HOVERCRAFT;
-    let qC = function(CC) {
-      return CC[CC.NORMAL = 0] = "NORMAL", CC[CC.GLIDING = 1] = "GLIDING", CC[CC.FLOATING = 2] = "FLOATING", CC
-    }({})
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

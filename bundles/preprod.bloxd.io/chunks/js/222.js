@@ -1,169 +1,1196 @@
+/*! For license information please see sn3sfj.222.002048ae.chunk.js.LICENSE.txt */
 export const id = 222;
 export const ids = [222];
 export const modules = {
-  36641: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => bz,
-      g: () => oz,
-      j: () => Wz,
-      k: () => qz,
-      m: () => Fz
+  39775: (pp, ip, cp) => {
+    pp.exports = op;
+    var Op = cp(343);
+
+    function op(pp, ip) {
+      if (!(this instanceof op)) return new op(pp, ip);
+      var cp = Op.create();
+      Op.add(cp, pp, ip), this.base = Op.min(Op.create(), pp, cp), this.vec = Op.clone(ip), this.max = Op.max(Op.create(), pp, cp), this.mag = Op.length(this.vec)
+    }
+    var Ip = op.prototype;
+    Ip.width = function() {
+      return this.vec[0]
+    }, Ip.height = function() {
+      return this.vec[1]
+    }, Ip.depth = function() {
+      return this.vec[2]
+    }, Ip.x0 = function() {
+      return this.base[0]
+    }, Ip.y0 = function() {
+      return this.base[1]
+    }, Ip.z0 = function() {
+      return this.base[2]
+    }, Ip.x1 = function() {
+      return this.max[0]
+    }, Ip.y1 = function() {
+      return this.max[1]
+    }, Ip.z1 = function() {
+      return this.max[2]
+    }, Ip.translate = function(pp) {
+      return Op.add(this.max, this.max, pp), Op.add(this.base, this.base, pp), this
+    }, Ip.setPosition = function(pp) {
+      return Op.add(this.max, pp, this.vec), Op.copy(this.base, pp), this
+    }, Ip.expand = function(pp) {
+      var ip = Op.create(),
+        cp = Op.create();
+      return Op.max(ip, pp.max, this.max), Op.min(cp, pp.base, this.base), Op.subtract(ip, ip, cp), new op(cp, ip)
+    }, Ip.intersects = function(pp) {
+      return !(pp.base[0] > this.max[0]) && (!(pp.base[1] > this.max[1]) && (!(pp.base[2] > this.max[2]) && (!(pp.max[0] < this.base[0]) && (!(pp.max[1] < this.base[1]) && !(pp.max[2] < this.base[2])))))
+    }, Ip.touches = function(pp) {
+      var ip = this.union(pp);
+      return null !== ip && (0 == ip.width() || 0 == ip.height() || 0 == ip.depth())
+    }, Ip.union = function(pp) {
+      if (!this.intersects(pp)) return null;
+      var ip = Math.max(pp.base[0], this.base[0]),
+        cp = Math.max(pp.base[1], this.base[1]),
+        Op = Math.max(pp.base[2], this.base[2]);
+      return new op([ip, cp, Op], [Math.min(pp.max[0], this.max[0]) - ip, Math.min(pp.max[1], this.max[1]) - cp, Math.min(pp.max[2], this.max[2]) - Op])
+    }
+  },
+  39773: pp => {
+    pp.exports = function(pp, ip, cp, Op, op, Ip) {
+      var Sp = +ip[0],
+        xp = +ip[1],
+        Lp = +ip[2],
+        Yp = +cp[0],
+        Dp = +cp[1],
+        Ap = +cp[2],
+        Pp = Math.sqrt(Yp * Yp + Dp * Dp + Ap * Ap);
+      if (0 === Pp) throw new Error("Can't raycast along a zero vector");
+      return function(pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp) {
+        for (var Dp = 0, Ap = Math.floor, Pp = 0 | Ap(ip), Wp = 0 | Ap(cp), yp = 0 | Ap(Op), Up = op > 0 ? 1 : -1, wp = Ip > 0 ? 1 : -1, vp = Sp > 0 ? 1 : -1, tp = Math.abs(1 / op), Hp = Math.abs(1 / Ip), dp = Math.abs(1 / Sp), ep = tp < 1 / 0 ? tp * (Up > 0 ? Pp + 1 - ip : ip - Pp) : 1 / 0, jp = Hp < 1 / 0 ? Hp * (wp > 0 ? Wp + 1 - cp : cp - Wp) : 1 / 0, kp = dp < 1 / 0 ? dp * (vp > 0 ? yp + 1 - Op : Op - yp) : 1 / 0, mp = -1; Dp <= xp;) {
+          var Rp = pp(Pp, Wp, yp);
+          if (Rp) return Lp && (Lp[0] = ip + Dp * op, Lp[1] = cp + Dp * Ip, Lp[2] = Op + Dp * Sp), Yp && (Yp[0] = Yp[1] = Yp[2] = 0, 0 === mp && (Yp[0] = -Up), 1 === mp && (Yp[1] = -wp), 2 === mp && (Yp[2] = -vp)), Rp;
+          ep < jp ? ep < kp ? (Pp += Up, Dp = ep, ep += tp, mp = 0) : (yp += vp, Dp = kp, kp += dp, mp = 2) : jp < kp ? (Wp += wp, Dp = jp, jp += Hp, mp = 1) : (yp += vp, Dp = kp, kp += dp, mp = 2)
+        }
+        return Lp && (Lp[0] = ip + Dp * op, Lp[1] = cp + Dp * Ip, Lp[2] = Op + Dp * Sp), Yp && (Yp[0] = Yp[1] = Yp[2] = 0), 0
+      }(pp, Sp, xp, Lp, Yp /= Pp, Dp /= Pp, Ap /= Pp, Op = "undefined" === typeof Op ? 64 : +Op, op, Ip)
+    }
+  },
+  39283: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => xp,
+      f: () => Ip
     });
-    const QC = JSON.parse('{"src":["/sounds/generatedSprites/gunSemiAutomatic.aef27960ef.ogg","/sounds/generatedSprites/gunSemiAutomatic.e56594fab5.m4a","/sounds/generatedSprites/gunSemiAutomatic.d3e434f4d0.mp3","/sounds/generatedSprites/gunSemiAutomatic.97d6a47358.ac3"],"sprite":{"semiAuto_cock_01":[0,500],"semiAuto_cock_02":[600,548.5714285714286],"semiAuto_cock_03":[1250,500],"semiAuto_cock_04":[1850,522.4489795918367],"semiAuto_cock_05":[2473.333333333333,500],"semiAuto_first_shot_01":[3073.333333333333,500],"semiAuto_magazine_load_01":[3673.3333333333335,548.5714285714286],"semiAuto_magazine_load_02":[4323.333333333333,500],"semiAuto_magazine_load_03":[4923.333333333333,548.5714285714286],"semiAuto_magazine_load_04":[5573.333333333333,500],"semiAuto_magazine_load_05":[6173.333333333333,500],"semiAuto_magazine_unload_01":[6773.333333333333,500],"semiAuto_magazine_unload_02":[7373.333333333333,500],"semiAuto_magazine_unload_03":[7973.333333333334,500],"semiAuto_magazine_unload_04":[8573.333333333334,500],"semiAuto_shot_01":[9173.333333333334,500],"semiAuto_shot_02":[9773.333333333334,500],"semiAuto_shot_03":[10373.333333333334,500],"semiAuto_shot_04":[10973.333333333332,500],"semiAuto_shot_05":[11573.333333333334,500],"semiAuto_shot_06":[12173.333333333334,500],"semiAuto_shot_07":[12773.333333333334,500],"semiAuto_shot_08":[13373.333333333334,500],"semiAuto_tail_only_shot_01":[13973.333333333332,2455.5102040816328]}}'),
-      wC = JSON.parse('{"src":["/sounds/generatedSprites/gunSubmachineGun.9d869e4ca3.ogg","/sounds/generatedSprites/gunSubmachineGun.8736ce9068.m4a","/sounds/generatedSprites/gunSubmachineGun.0a429c7e98.mp3","/sounds/generatedSprites/gunSubmachineGun.1db2897c09.ac3"],"sprite":{"submachine_cock_01":[0,500],"submachine_cock_02":[600,500],"submachine_cock_03":[1200,500],"submachine_cock_04":[1800,500],"submachine_first_shot_01":[2400,500],"submachine_magazine_load_01":[3000,500],"submachine_magazine_load_02":[3600,500],"submachine_magazine_load_03":[4200,500],"submachine_magazine_load_04":[4800,500],"submachine_magazine_unload_01":[5400,500],"submachine_magazine_unload_02":[6000,500],"submachine_magazine_unload_03":[6600,500],"submachine_shot_01":[7200,500],"submachine_shot_02":[7800,500],"submachine_shot_03":[8400,500],"submachine_shot_04":[9000,500],"submachine_shot_05":[9600,500],"submachine_shot_06":[10200,500],"submachine_shot_07":[10800,500],"submachine_shot_08":[11400,500],"submachine_shot_09":[12000,500],"submachine_tail_only_shot_01":[12600,1858.8208616780046]}}'),
-      bC = JSON.parse('{"src":["/sounds/generatedSprites/gunPistol.7432a47272.ogg","/sounds/generatedSprites/gunPistol.adec2d9f75.m4a","/sounds/generatedSprites/gunPistol.a9f647182b.mp3","/sounds/generatedSprites/gunPistol.f363b9fa6d.ac3"],"sprite":{"pistol_cock_01":[0,510],"pistol_cock_02":[610,500],"pistol_cock_03":[1210,500],"pistol_cock_06":[1810,500],"pistol_magazine_load_01":[2410,500],"pistol_magazine_load_02":[3010,500],"pistol_magazine_load_03":[3610,500],"pistol_magazine_unload_01":[4210,500],"pistol_magazine_unload_02":[4810,500],"pistol_magazine_unload_03":[5410,500],"pistol_shot_01":[6010,1500],"pistol_shot_02":[7610,1569.591836734694],"pistol_shot_03":[9280,1735.8956916099773],"pistol_shot_04":[11116.666666666668,1526.7120181405896],"pistol_shot_05":[12746.666666666666,1442.2222222222224]}}'),
-      nC = JSON.parse('{"src":["/sounds/generatedSprites/gunRifle.ca54b877ed.ogg","/sounds/generatedSprites/gunRifle.94dfb28886.m4a","/sounds/generatedSprites/gunRifle.f2eb64407a.mp3","/sounds/generatedSprites/gunRifle.d268c1da8d.ac3"],"sprite":{"rifle_cock_01":[0,705.3061224489796],"rifle_cock_02":[806.6666666666666,1149.3877551020407],"rifle_magazine_load_01":[2056.6666666666665,500],"rifle_magazine_load_02":[2656.6666666666665,500],"rifle_magazine_load_03":[3256.666666666667,500],"rifle_magazine_unload_01":[3856.6666666666665,500],"rifle_magazine_unload_02":[4456.666666666667,500],"rifle_magazine_unload_04":[5056.666666666667,500],"rifle_shot_01":[5656.666666666666,2115.918367346939],"rifle_shot_02":[7873.333333333333,2429.3877551020405],"rifle_shot_03":[10403.333333333334,2298.7755102040815],"rifle_shot_04":[12803.333333333332,2481.6326530612246]}}'),
-      fC = JSON.parse('{"src":["/sounds/generatedSprites/gunMisc.35b4609d1c.ogg","/sounds/generatedSprites/gunMisc.acc63e7fe9.m4a","/sounds/generatedSprites/gunMisc.4403caaad2.mp3","/sounds/generatedSprites/gunMisc.97552f11dc.ac3"],"sprite":{"bullet_shell_bounce_general_07":[0,823.0612244897959],"bullet_shell_bounce_general_08":[923.3333333333334,907.0294784580499],"headshot_04":[1933.3333333333333,500],"headshot_06":[2533.333333333333,500],"headshot_08":[3133.3333333333335,500],"headshot_11":[3733.3333333333335,500]}}'),
-      oC = JSON.parse('{"src":["/sounds/generatedSprites/gunShotgun.4e0220339e.ogg","/sounds/generatedSprites/gunShotgun.137d0e6b6f.m4a","/sounds/generatedSprites/gunShotgun.8b1144b235.mp3","/sounds/generatedSprites/gunShotgun.0b25a6370a.ac3"],"sprite":{"shotgun_cock_01":[0,914.2857142857142],"shotgun_cock_02":[1016.6666666666666,500],"shotgun_cock_03":[1616.6666666666667,679.1836734693878],"shotgun_cock_04":[2396.6666666666665,548.5714285714286],"shotgun_cock_05":[3046.666666666667,548.5714285714286],"shotgun_load_bullet_01":[3696.666666666667,548.5714285714286],"shotgun_load_bullet_02":[4346.666666666667,522.4489795918367],"shotgun_load_bullet_03":[4970,500],"shotgun_load_bullet_04":[5570,500],"shotgun_load_bullet_05":[6170,500],"shotgun_load_bullet_06":[6770,679.1836734693878],"shotgun_load_bullet_07":[7550,548.5714285714286],"shotgun_load_bullet_08":[8200,500],"shotgun_shot_01":[8800,2612.2448979591836],"shotgun_shot_02":[11513.333333333334,2507.7551020408164],"shotgun_shot_03":[14123.333333333334,2638.3673469387754],"shotgun_shot_04":[16863.333333333332,2037.5510204081634]}}'),
-      qC = JSON.parse('{"src":["/sounds/generatedSprites/dig.affb4a6f05.ogg","/sounds/generatedSprites/dig.082c5b232c.m4a","/sounds/generatedSprites/dig.71feb10d5c.mp3","/sounds/generatedSprites/dig.4913c53dc2.ac3"],"sprite":{"cloth1":[0,1671.8367346938776],"cloth2":[1773.3333333333335,1671.8367346938776],"cloth3":[3546.666666666667,1671.8367346938776],"cloth4":[5320,1668.9342403628118],"glass1":[7090,1671.8367346938776],"glass2":[8863.333333333334,1671.8367346938776],"glass3":[10636.666666666666,1671.8367346938776],"grass1":[12410,500],"grass2":[13010,500],"grass3":[13610,835.9183673469388],"grass4":[14546.666666666666,835.9183673469388],"gravel1":[15483.333333333332,500],"gravel2":[16083.333333333332,500],"gravel3":[16683.333333333332,500],"gravel4":[17283.333333333336,500],"pickUp":[17883.333333333332,500],"sand1":[18483.333333333336,500],"sand2":[19083.333333333332,500],"sand3":[19683.333333333332,500],"sand4":[20283.333333333336,500],"snow1":[20883.333333333332,500],"snow2":[21483.333333333336,500],"snow3":[22083.333333333332,650.1587301587301],"snow4":[22836.666666666664,650.1587301587301],"stone1":[23590,500],"stone2":[24190,500],"stone3":[24790,500],"stone4":[25390,500],"wood1":[25990,928.7981859410431],"wood2":[27020,928.7981859410431],"wood3":[28050,928.7981859410431],"wood4":[29080,928.7981859410431]}}'),
-      FC = JSON.parse('{"src":["/sounds/generatedSprites/step.52076ddc3a.ogg","/sounds/generatedSprites/step.d6260ef2cc.m4a","/sounds/generatedSprites/step.6e5286b3a8.mp3","/sounds/generatedSprites/step.cfb5f3dd8f.ac3"],"sprite":{"hit1":[0,557.2789115646258],"hit2":[660,650.1587301587301],"hit3":[1413.3333333333333,650.1587301587301],"step_cloth1":[2166.6666666666665,1671.8367346938776],"step_cloth2":[3940,1671.8367346938776],"step_cloth3":[5713.333333333333,1671.8367346938776],"step_cloth4":[7486.666666666666,1671.8367346938776],"step_grass1":[9260,500],"step_grass2":[9860,500],"step_grass3":[10460,500],"step_grass4":[11060,500],"step_grass5":[11660,1483.1746031746031],"step_gravel1":[13243.333333333334,1486.077097505669],"step_gravel2":[14830,1483.1746031746031],"step_gravel3":[16413.333333333336,1486.077097505669],"step_gravel4":[18000,1486.077097505669],"step_sand2":[19586.666666666664,1486.077097505669],"step_sand3":[21173.333333333332,1486.077097505669],"step_sand4":[22760,1486.077097505669],"step_sand5":[24346.666666666668,1486.077097505669],"step_snow1":[25933.333333333332,500],"step_snow2":[26533.333333333336,500],"step_snow3":[27133.333333333332,500],"step_snow4":[27733.333333333336,500],"step_stone1":[28333.333333333332,1486.077097505669],"step_stone2":[29920,1486.077097505669],"step_stone3":[31506.666666666668,1486.077097505669],"step_stone4":[33093.333333333336,1486.077097505669],"step_stone5":[34680,1486.077097505669],"step_stone6":[36266.666666666664,1486.077097505669],"step_wood1":[37853.33333333333,743.0385487528345],"step_wood2":[38696.666666666664,743.0385487528345],"step_wood3":[39540,743.0385487528345],"step_wood4":[40383.333333333336,743.0385487528345],"step_wood5":[41226.666666666664,743.0385487528345],"step_wood6":[42070,743.0385487528345],"sweep6":[42913.333333333336,1114.5578231292516]}}'),
-      WC = JSON.parse('{"src":["/sounds/generatedSprites/randomBeep.7b90315654.ogg","/sounds/generatedSprites/randomBeep.0e88f6aa33.m4a","/sounds/generatedSprites/randomBeep.47ff5e799a.mp3","/sounds/generatedSprites/randomBeep.444034b8b7.ac3"],"sprite":{"beep":[100,2455.5102040816328]}}'),
-      NC = JSON.parse('{"src":["/sounds/generatedSprites/randomCannon.f9d64818ea.ogg","/sounds/generatedSprites/randomCannon.52f7576d74.m4a","/sounds/generatedSprites/randomCannon.bde162aee8.mp3","/sounds/generatedSprites/randomCannon.4877805969.ac3"],"sprite":{"cannonFire1":[100,4880.748299319728],"cannonFire2":[5083.333333333333,4880.748299319728],"cannonFire3":[10066.666666666666,4880.748299319728]}}'),
-      MC = JSON.parse('{"src":["/sounds/generatedSprites/randomCash.8ff82dcd92.ogg","/sounds/generatedSprites/randomCash.a86426509f.m4a","/sounds/generatedSprites/randomCash.48929d75f1.mp3","/sounds/generatedSprites/randomCash.f687b943c4.ac3"],"sprite":{"cashRegister":[100,3819.6825396825398]}}'),
-      gC = JSON.parse('{"src":["/sounds/generatedSprites/randomExp.fa5a4c9798.ogg","/sounds/generatedSprites/randomExp.a7e2faf290.m4a","/sounds/generatedSprites/randomExp.b4baff1a37.mp3","/sounds/generatedSprites/randomExp.4974715bbd.ac3"],"sprite":{"exp_collect":[100,1009.2063492063493],"exp_levelup":[1210,1469.863945578231]}}'),
-      SC = JSON.parse('{"src":["/sounds/generatedSprites/randomFallsmall.e0ec9ce0a7.ogg","/sounds/generatedSprites/randomFallsmall.a1f24b70c2.m4a","/sounds/generatedSprites/randomFallsmall.bcbd5fef60.mp3","/sounds/generatedSprites/randomFallsmall.a3b7d06594.ac3"],"sprite":{"fallsmall":[100,1764.716553287982]}}'),
-      pC = JSON.parse('{"src":["/sounds/generatedSprites/randomItems.380c31a312.ogg","/sounds/generatedSprites/randomItems.6ae69434b9.m4a","/sounds/generatedSprites/randomItems.85b5c2f034.mp3","/sounds/generatedSprites/randomItems.cdadb8aa52.ac3"],"sprite":{"bow":[100,500],"bucketEmpty1":[700,1114.5578231292516],"bucketEmpty2":[1916.6666666666667,1114.5578231292516],"bucketEmpty3":[3133.3333333333335,1114.5578231292516],"bucketFill1":[4350,1021.6780045351475],"bucketFill2":[5473.333333333334,1021.6780045351475],"bucketFill3":[6596.666666666667,1021.6780045351475],"burp":[7720,500],"chestClose":[8320,557.2789115646258],"chestOpen":[8980,743.0385487528345],"doorClose":[9823.333333333334,835.9183673469388],"doorClose2":[10760,835.9183673469388],"doorOpen-bloxd1":[11696.666666666668,743.0385487528345],"doorOpen-bloxd2":[12540,835.9183673469388],"drink":[13476.666666666666,500],"eat1":[14076.666666666666,500],"equip_leather1":[14676.666666666666,928.7981859410431],"hoeTill1":[15706.666666666668,1114.5578231292516],"hoeTill2":[16923.333333333332,557.2789115646258],"hoeTill3":[17583.333333333332,928.7981859410431],"hoeTill4":[18613.333333333332,928.7981859410431],"successfulBowHit":[19643.333333333336,500],"trapdoorOpen":[20243.333333333332,835.9183673469388]}}'),
-      PC = JSON.parse('{"src":["/sounds/generatedSprites/randomFire.06f418fc54.ogg","/sounds/generatedSprites/randomFire.7c5564dd14.m4a","/sounds/generatedSprites/randomFire.f61e3ab1f3.mp3","/sounds/generatedSprites/randomFire.5869bbefc8.ac3"],"sprite":{"fireBurn":[100,2827.3922902494332]}}'),
-      GC = JSON.parse('{"src":["/sounds/generatedSprites/randomFirecracker.ddc99cbc73.ogg","/sounds/generatedSprites/randomFirecracker.128308b436.m4a","/sounds/generatedSprites/randomFirecracker.d5635f7e7d.mp3","/sounds/generatedSprites/randomFirecracker.e5afa15901.ac3"],"sprite":{"firecracker1":[100,5302.857142857142],"firecracker2":[5503.333333333333,5250.6122448979595],"firecracker3":[10856.666666666668,5198.367346938776],"firecracker4":[16156.666666666666,5877.551020408164]}}'),
-      RC = JSON.parse('{"src":["/sounds/generatedSprites/randomLaugh.1f5c9d311c.ogg","/sounds/generatedSprites/randomLaugh.02db6f5792.m4a","/sounds/generatedSprites/randomLaugh.c02a9027ee.mp3","/sounds/generatedSprites/randomLaugh.b47461e2ec.ac3"],"sprite":{"laugh1":[100,898.3219954648525],"laugh2":[1100,1919.092970521542],"laugh3":[3120,1668.2766439909299]}}'),
-      AC = JSON.parse('{"src":["/sounds/generatedSprites/randomMagic.44dbb5b632.ogg","/sounds/generatedSprites/randomMagic.502e091616.m4a","/sounds/generatedSprites/randomMagic.c1cd617a82.mp3","/sounds/generatedSprites/randomMagic.3b7411f618.ac3"],"sprite":{"magicAccent1":[100,5250.6122448979595],"magicAccent2":[5453.333333333333,5041.632653061224],"magicAccent3":[10596.666666666666,4963.265306122449],"magicAccent4":[15660,4728.163265306122]}}'),
-      xC = JSON.parse('{"src":["/sounds/generatedSprites/randomSplash.9fc2343518.ogg","/sounds/generatedSprites/randomSplash.9dadcfc844.m4a","/sounds/generatedSprites/randomSplash.4a42cdcbe6.mp3","/sounds/generatedSprites/randomSplash.55bd9b28eb.ac3"],"sprite":{"splash1":[100,1114.5578231292516]}}'),
-      JC = JSON.parse('{"src":["/sounds/generatedSprites/mobBear.4c3d96a174.ogg","/sounds/generatedSprites/mobBear.dd0c9eb6bb.m4a","/sounds/generatedSprites/mobBear.e67756bcc4.mp3","/sounds/generatedSprites/mobBear.e1520ed37f.ac3"],"sprite":{"bearRoar1":[100,1011.1791383219954],"bearRoar2":[1213.3333333333335,793.6507936507936],"bearRoar3":[2110,764.2630385487529],"bearRoar4":[2976.6666666666665,781.9047619047619],"bearRoar5":[3860,646.6666666666666]}}'),
-      IC = JSON.parse('{"src":["/sounds/generatedSprites/mobCat.b73d092913.ogg","/sounds/generatedSprites/mobCat.5a42170631.m4a","/sounds/generatedSprites/mobCat.d86dae12ac.mp3","/sounds/generatedSprites/mobCat.02f20eae51.ac3"],"sprite":{"catHiss1":[100,1252.0861678004535],"catHiss2":[1453.3333333333333,1064.2403628117913],"catHiss3":[2620,1082.6530612244899],"catHiss4":[3803.333333333333,978.8662131519275],"catHurt1":[4883.333333333334,809.795918367347],"catHurt2":[5793.333333333333,779.4104308390023],"catHurt3":[6673.333333333333,626.9387755102041],"catMeow1":[7403.333333333333,1306.1224489795918],"catMeow2":[8810,1384.4897959183672],"catMeow3":[10296.666666666666,1280],"catMeow4":[11676.666666666666,1567.3469387755101],"catMeow5":[13346.666666666666,1802.4489795918369]}}'),
-      iC = JSON.parse('{"src":["/sounds/generatedSprites/mobCow.9586369f60.ogg","/sounds/generatedSprites/mobCow.e3c14b3926.m4a","/sounds/generatedSprites/mobCow.b6b57a7270.mp3","/sounds/generatedSprites/mobCow.fbb45d50c5.ac3"],"sprite":{"cowHurt1":[100,522.6530612244899],"cowMoo1":[723.3333333333334,1574.331065759637],"cowMoo2":[2400,1947.4149659863947],"cowMoo3":[4450,2099.342403628118]}}'),
-      vC = JSON.parse('{"src":["/sounds/generatedSprites/mobCrone.e0a7897675.ogg","/sounds/generatedSprites/mobCrone.94420ad1d3.m4a","/sounds/generatedSprites/mobCrone.abc38fe647.mp3","/sounds/generatedSprites/mobCrone.f4c461446a.ac3"],"sprite":{"croneAttack1":[100,500],"croneHurt1":[700,751.6780045351475],"croneIdle1":[1553.3333333333333,6756.8707482993195]}}'),
-      eC = JSON.parse('{"src":["/sounds/generatedSprites/mobDeer.84da9a6aa7.ogg","/sounds/generatedSprites/mobDeer.131a11da4b.m4a","/sounds/generatedSprites/mobDeer.453b17e89a.mp3","/sounds/generatedSprites/mobDeer.c03ab74dd5.ac3"],"sprite":{"deerGrunt1":[100,976.7346938775511],"deerHurt1":[1180,500]}}'),
-      hC = JSON.parse('{"src":["/sounds/generatedSprites/mobDog.3ee507163b.ogg","/sounds/generatedSprites/mobDog.eda29eb0d7.m4a","/sounds/generatedSprites/mobDog.f9095be251.mp3","/sounds/generatedSprites/mobDog.4d3810ad3e.ac3"],"sprite":{"dogBark1":[100,500],"dogBark2":[700,500],"dogBark3":[1300,500],"dogGrowl1":[1900,634.8979591836734],"dogGrowl2":[2636.6666666666665,543.3560090702948],"dogGrowl3":[3283.333333333333,1361.360544217687],"dogHurt1":[4746.666666666667,500],"dogHurt2":[5346.666666666667,500]}}'),
-      KC = JSON.parse('{"src":["/sounds/generatedSprites/mobFennec.3751df6e2d.ogg","/sounds/generatedSprites/mobFennec.705fd16691.m4a","/sounds/generatedSprites/mobFennec.85f4679beb.mp3","/sounds/generatedSprites/mobFennec.2073e3f92b.ac3"],"sprite":{"fennecYip1":[100,500],"fennecYip2":[700,500],"fennecYip3":[1300,500]}}'),
-      YC = JSON.parse('{"src":["/sounds/generatedSprites/mobGolem.a66f14f106.ogg","/sounds/generatedSprites/mobGolem.ee5d8cc552.m4a","/sounds/generatedSprites/mobGolem.5404357abd.mp3","/sounds/generatedSprites/mobGolem.a3a7a2390c.ac3"],"sprite":{"golemGrunt1":[100,6687.34693877551],"golemGrunt2":[6890,4911.0204081632655]}}'),
-      dC = JSON.parse('{"src":["/sounds/generatedSprites/mobGorilla.f0d8a54d8e.ogg","/sounds/generatedSprites/mobGorilla.449206cde8.m4a","/sounds/generatedSprites/mobGorilla.5f8caeb83c.mp3","/sounds/generatedSprites/mobGorilla.61c76198d2.ac3"],"sprite":{"gorillaIdle1":[100,898.140589569161],"gorillaIdle2":[1100,825.3061224489796],"gorillaIdle3":[2026.6666666666667,1357.233560090703],"gorillaIdle4":[3486.666666666667,1061.2698412698414],"gorillaRoar1":[4650,1002.6757369614512]}}'),
-      mC = JSON.parse('{"src":["/sounds/generatedSprites/mobHorse.67401e9b3e.ogg","/sounds/generatedSprites/mobHorse.f04d509143.m4a","/sounds/generatedSprites/mobHorse.0e1e0f5cb6.mp3","/sounds/generatedSprites/mobHorse.15d37b29ac.ac3"],"sprite":{"horseHurt1":[100,1044.8979591836735],"horseHurt2":[1246.6666666666665,1332.2448979591836],"horseIdle1":[2680,1410.6122448979593],"horseIdle2":[4193.333333333333,634.3310657596371],"horseIdle3":[4930,853.469387755102]}}'),
-      HC = JSON.parse('{"src":["/sounds/generatedSprites/mobKnight.c561ff13d3.ogg","/sounds/generatedSprites/mobKnight.84a4b8bd84.m4a","/sounds/generatedSprites/mobKnight.1af7235af5.mp3","/sounds/generatedSprites/mobKnight.b98de5a663.ac3"],"sprite":{"knightGrunt1":[100,2026.6666666666667],"knightGrunt2":[2226.6666666666665,2154.671201814059],"knightGrunt3":[4483.333333333333,1674.671201814059]}}'),
-      EC = JSON.parse('{"src":["/sounds/generatedSprites/mobPig.0db857ea30.ogg","/sounds/generatedSprites/mobPig.bbb66ff288.m4a","/sounds/generatedSprites/mobPig.725bf033a7.mp3","/sounds/generatedSprites/mobPig.60b70ab1da.ac3"],"sprite":{"pigHurt1":[100,705.6009070294784],"pigHurt2":[906.6666666666666,667.4603174603175],"pigHurt3":[1676.6666666666667,500],"pigOink1":[2276.666666666667,976.7573696145124],"pigOink2":[3356.6666666666665,1015.578231292517],"pigOink3":[4473.333333333334,500],"pigOink4":[5073.333333333333,500],"pigOink5":[5673.333333333333,519.4557823129252]}}'),
-      lC = JSON.parse('{"src":["/sounds/generatedSprites/mobReaver.4baae47e8b.ogg","/sounds/generatedSprites/mobReaver.7742c608af.m4a","/sounds/generatedSprites/mobReaver.401630090d.mp3","/sounds/generatedSprites/mobReaver.5adc0b4978.ac3"],"sprite":{"reaverAttack1":[100,4031.1111111111113],"reaverAttack2":[4233.333333333333,1552.0181405895692],"reaverAttack3":[5886.666666666667,1857.5510204081634],"reaverGrunt1":[7846.666666666667,5073.5600907029475],"reaverGrunt2":[13023.333333333334,2950.090702947846],"reaverGrunt3":[16076.666666666668,6640.907029478458]}}'),
-      XC = JSON.parse('{"src":["/sounds/generatedSprites/mobSheep.b4eadc8b06.ogg","/sounds/generatedSprites/mobSheep.616ff99abb.m4a","/sounds/generatedSprites/mobSheep.3919f569bc.mp3","/sounds/generatedSprites/mobSheep.fb412e7f4a.ac3"],"sprite":{"sheepBaa1":[100,1039.3877551020407],"sheepBaa2":[1240,1243.968253968254],"sheepBaa3":[2586.6666666666665,827.7551020408164],"sheepBaa4":[3516.6666666666665,1048.1179138321997],"sheepHurt1":[4666.666666666667,700.2721088435375]}}'),
-      cC = JSON.parse('{"src":["/sounds/generatedSprites/mobSkeleton.d5417ca887.ogg","/sounds/generatedSprites/mobSkeleton.3d1ccc92a9.m4a","/sounds/generatedSprites/mobSkeleton.74d2ef1a0f.mp3","/sounds/generatedSprites/mobSkeleton.845029b40c.ac3"],"sprite":{"skeletonRattle1":[100,1088.0045351473923],"skeletonRattle2":[1290,1499.9773242630386],"skeletonRattle3":[2890,750],"skeletonRattle4":[3740,650.6575963718822]}}'),
-      uC = JSON.parse('{"src":["/sounds/generatedSprites/mobStag.ebbaf714eb.ogg","/sounds/generatedSprites/mobStag.e96403c272.m4a","/sounds/generatedSprites/mobStag.341736664c.mp3","/sounds/generatedSprites/mobStag.25221ce4c8.ac3"],"sprite":{"stagGrunt1":[100,976.7346938775511],"stagHurt1":[1180,500]}}'),
-      rC = JSON.parse('{"src":["/sounds/generatedSprites/mobStalker.9d8e1c70b9.ogg","/sounds/generatedSprites/mobStalker.6c26b72bd3.m4a","/sounds/generatedSprites/mobStalker.a74c32a02a.mp3","/sounds/generatedSprites/mobStalker.a4b0299a76.ac3"],"sprite":{"stalkerAttack1":[100,963.6281179138322],"stalkerIdle1":[1166.6666666666667,2051.065759637188]}}'),
-      sC = JSON.parse('{"src":["/sounds/generatedSprites/mobWarper.be1c89ce4a.ogg","/sounds/generatedSprites/mobWarper.cdcbad67c6.m4a","/sounds/generatedSprites/mobWarper.e3baa96ab6.mp3","/sounds/generatedSprites/mobWarper.ef5578e201.ac3"],"sprite":{"warperGrunt1":[100,2883.605442176871],"warperGrunt2":[3086.6666666666665,6405.351473922902],"warperGrunt3":[9593.333333333334,4806.530612244898],"warperGrunt4":[14500,5781.768707482994],"warperGrunt5":[20383.333333333332,4284.081632653061],"warperPhase1":[24770,5867.256235827665],"warperPhase2":[30740,5866.916099773242]}}'),
-      TC = JSON.parse('{"src":["/sounds/generatedSprites/mobWraith.55365b10d2.ogg","/sounds/generatedSprites/mobWraith.316cca2df1.m4a","/sounds/generatedSprites/mobWraith.152101497f.mp3","/sounds/generatedSprites/mobWraith.c2a05a3e22.ac3"],"sprite":{"wraithGrunt1":[100,4111.995464852607],"wraithGrunt2":[4313.333333333333,5173.333333333333],"wraithHurt":[9586.666666666666,4277.324263038548]}}'),
-      aC = JSON.parse('{"src":["/sounds/generatedSprites/mobZombie.3ea7f2781d.ogg","/sounds/generatedSprites/mobZombie.1dcf1ecf93.m4a","/sounds/generatedSprites/mobZombie.672ca05e55.mp3","/sounds/generatedSprites/mobZombie.faad107ffe.ac3"],"sprite":{"ZombieGrunt1":[100,2089.795918367347],"ZombieGrunt2":[2290,2351.0204081632655],"ZombieGrunt3":[4743.333333333333,1750.204081632653],"ZombieHurt1":[6596.666666666667,1593.4693877551022],"ZombieHurt2":[8293.333333333332,1906.938775510204],"ZombieHurt3":[10303.333333333332,1018.7755102040817],"ZombieHurt4":[11423.333333333334,1358.3673469387757]}}'),
-      tC = JSON.parse('{"src":["/sounds/generatedSprites/note.55b41d5148.ogg","/sounds/generatedSprites/note.9d434eddc4.m4a","/sounds/generatedSprites/note.96cf50a66e.mp3","/sounds/generatedSprites/note.85cfed63f9.ac3"],"sprite":{"bass":[0,500],"bassattack":[600,500],"bd":[1200,500],"bigDrumSwish1":[1800,3892.2448979591836],"bigDrumSwish2":[5793.333333333333,3056.326530612245],"bigDrumSwish3":[8950,3578.7755102040815],"drumSwish1":[12630,4127.34693877551],"drumSwish2":[16860,4127.34693877551],"harp_pling":[21090,835.9183673469388],"hat":[22026.666666666668,500],"levelup":[22626.666666666664,4458.231292517006],"lowDrum1":[27186.666666666668,3683.265306122449],"lowDrum2":[30970,3840],"lowDrum3":[34910,4205.714285714285],"snare":[39216.66666666667,500],"sonarBeep":[39816.66666666667,4127.34693877551],"trumpetFlare":[44046.666666666664,1683.4467120181407],"trumpetNote1":[45833.333333333336,779.8412698412699],"trumpetNote2":[46713.33333333333,845.6916099773243],"trumpetNote3":[47660,1090.7256235827665]}}'),
-      DC = JSON.parse('{"src":["/sounds/generatedSprites/fishing.ff9694e93b.ogg","/sounds/generatedSprites/fishing.20b18e3c80.m4a","/sounds/generatedSprites/fishing.4388bd71de.mp3","/sounds/generatedSprites/fishing.09b8e92f3c.ac3"],"sprite":{"caughtFish":[0,1976.7573696145125],"reel":[2080,531.9501133786848]}}'),
-      jC = JSON.parse('{"src":["/sounds/generatedSprites/gameStart.dcb4ad7e5f.ogg","/sounds/generatedSprites/gameStart.04192cc8d1.m4a","/sounds/generatedSprites/gameStart.203520cd23.mp3","/sounds/generatedSprites/gameStart.95d1462a45.ac3"],"sprite":{"game_start_countdown_01":[0,1000.7709750566893],"game_start_countdown_02":[1103.3333333333333,994.9206349206348],"game_start_countdown_03":[2200,1000.7709750566893],"game_start_countdown_final":[3303.333333333333,1583.1065759637188]}}'),
-      yC = JSON.parse('{"src":["/sounds/generatedSprites/customGame_horror.89bd01b3f6.ogg","/sounds/generatedSprites/customGame_horror.58571ce79e.m4a","/sounds/generatedSprites/customGame_horror.809f261ceb.mp3","/sounds/generatedSprites/customGame_horror.0a4350133e.ac3"],"sprite":{"cryptWhoosh":[0,1700],"doorKnock":[1800,1173.3333333333333],"futureStrangePulse":[3073.333333333333,2874.6938775510203],"hauntedHorrorImpact":[6050,1072.857142857143],"horrorAccent1":[7223.333333333334,1919.5238095238096],"horrorFright":[9243.333333333334,1630.952380952381],"horrorMaleDrone":[10976.666666666666,7933.492063492064],"intensiveRainLoop":[19013.333333333332,13037.687074829933],"metalDoorKnock":[32153.333333333336,4219.410430839002],"ominousBellHit":[36473.333333333336,8756.621315192744],"pulseFromTheDark":[45330,7653.582766439909],"suspenseRiser":[53086.666666666664,6825.396825396825],"thunderRain":[60013.333333333336,12085.986394557824],"zapAccent1":[72200,500],"zapAccent2":[72800,500]}}'),
-      LC = JSON.parse('{"src":["/sounds/generatedSprites/crowd.842a12bd70.ogg","/sounds/generatedSprites/crowd.eb817b0986.m4a","/sounds/generatedSprites/crowd.718908450e.mp3","/sounds/generatedSprites/crowd.b61523a08f.ac3"],"sprite":{"crowdAmbience":[0,54935.51020408163],"crowdCheer":[55036.66666666667,6269.3877551020405],"refereeWhistle":[61406.666666666664,2089.795918367347]}}'),
-      UC = JSON.parse('{"src":["/sounds/generatedSprites/survivalFactory.83edaf137d.ogg","/sounds/generatedSprites/survivalFactory.39e38bf296.m4a","/sounds/generatedSprites/survivalFactory.e3538de2e7.mp3","/sounds/generatedSprites/survivalFactory.a8fc293f73.ac3"],"sprite":{"rocketEngineLoop":[0,13167.369614512472]}}'),
-      BC = JSON.parse('{"src":["/sounds/generatedSprites/rpg.a91934b789.ogg","/sounds/generatedSprites/rpg.48d078dd6a.m4a","/sounds/generatedSprites/rpg.0279bc17b2.mp3","/sounds/generatedSprites/rpg.833aede675.ac3"],"sprite":{"rpgBeltCloth1":[0,722.5396825396826],"rpgBeltCloth2":[823.3333333333334,753.3106575963718],"rpgBeltHandle1":[1676.6666666666667,500],"rpgBeltHandle2":[2276.666666666667,500],"rpgBookClose":[2876.6666666666665,500],"rpgBookFlip1":[3476.6666666666665,768.6621315192745],"rpgBookFlip2":[4346.666666666667,500],"rpgBookFlip3":[4946.666666666666,500],"rpgBookOpen":[5546.666666666667,500],"rpgBookPlace1":[6146.666666666666,500],"rpgBookPlace2":[6746.666666666667,500],"rpgBookPlace3":[7346.666666666667,500],"rpgChop":[7946.666666666666,500],"rpgCloth1":[8546.666666666666,661.0430839002267],"rpgCloth2":[9310,500],"rpgCloth3":[9910,500],"rpgCloth4":[10510,500],"rpgCreak1":[11110,661.0430839002267],"rpgCreak2":[11873.333333333334,830.1587301587302],"rpgCreak3":[12806.666666666666,500],"rpgDoorClose1":[13406.666666666666,675.0566893424036],"rpgDoorClose2":[14183.333333333334,612.4943310657596],"rpgDoorClose3":[14896.666666666666,713.9455782312925],"rpgDoorClose4":[15713.333333333332,603.3786848072561],"rpgDoorOpen1":[16420,918.9795918367347],"rpgDoorOpen2":[17440,1413.3333333333333],"rpgDrawKnife1":[18953.333333333332,500],"rpgDrawKnife2":[19553.333333333336,500],"rpgDrawKnife3":[20153.333333333332,500],"rpgDropLeather":[20753.333333333332,500],"rpgFootstep00":[21353.333333333332,500],"rpgFootstep01":[21953.333333333332,500],"rpgFootstep02":[22553.333333333336,500],"rpgFootstep03":[23153.333333333332,500],"rpgFootstep04":[23753.333333333332,500],"rpgFootstep05":[24353.333333333332,500],"rpgFootstep06":[24953.333333333332,500],"rpgFootstep07":[25553.333333333336,500],"rpgFootstep08":[26153.333333333332,500],"rpgFootstep09":[26753.333333333332,500],"rpgHandleCoins1":[27353.333333333332,845.5328798185941],"rpgHandleCoins2":[28300,500],"rpgHandleSmallLeather1":[28900,500],"rpgHandleSmallLeather2":[29500,500],"rpgKnifeSlice1":[30100,599.546485260771],"rpgKnifeSlice2":[30800,568.798185941043],"rpgMetalClick":[31470,500],"rpgMetalLatch":[32070,500],"rpgMetalPot1":[32670,1460.4761904761906],"rpgMetalPot2":[34233.333333333336,937.7777777777778],"rpgMetalPot3":[35273.333333333336,907.0068027210884]}}'),
-      OC = JSON.parse('{"src":["/sounds/generatedSprites/ambient.3b059790c7.ogg","/sounds/generatedSprites/ambient.6309e24e3b.m4a","/sounds/generatedSprites/ambient.9483cf5093.mp3","/sounds/generatedSprites/ambient.c053085ec4.ac3"],"sprite":{"lavaFlow":[0,34000]}}'),
-      kC = JSON.parse('{"src":["/sounds/generatedSprites/police.d9c6fc70bc.ogg","/sounds/generatedSprites/police.4fb44943a7.m4a","/sounds/generatedSprites/police.2a300c9c5e.mp3","/sounds/generatedSprites/police.4140927019.ac3"],"sprite":{"handcuffsLock":[0,626.9387755102041],"radioBeep":[730,650],"radioChatter":[1480,3372.9931972789113],"runningSteps":[4953.333333333333,3305.555555555555],"sirenChirp":[8360,924.1723356009071],"sirenWail":[9386.666666666666,5195.056689342404],"sirenYelp":[14683.333333333334,5239.3650793650795],"stunZap":[20023.333333333332,750],"whistle":[20873.333333333336,535.9183673469388]}}'),
-      VC = JSON.parse('{"src":["/sounds/generatedSprites/cars.0704d524d1.ogg","/sounds/generatedSprites/cars.ff965de8bb.m4a","/sounds/generatedSprites/cars.ce24c14295.mp3","/sounds/generatedSprites/cars.844fc9209b.ac3"],"sprite":{"carCrash":[0,539.7732426303855],"carDoorClose":[640,570.7029478458049],"carDoorOpen":[1313.3333333333333,720.5895691609977],"carDriveLoop":[2136.6666666666665,29642.721088435374],"carEngineStart":[31880,2800],"carHorn":[34780,500],"carIdleLoop":[35380,27663.94557823129],"carLockChirp":[63146.66666666667,600],"indicatorTick":[63846.666666666664,5266.303854875283],"reverseBeep":[69213.33333333334,5254.512471655329],"seatbeltClick":[74570,500],"tyreScreech":[75170,2000],"vanIdleLoop":[77270,17625.011337868484]}}'),
-      Cz = JSON.parse('{"src":["/sounds/generatedSprites/fire.e86d968fb5.ogg","/sounds/generatedSprites/fire.79adfd2c5a.m4a","/sounds/generatedSprites/fire.c1e463a3cd.mp3","/sounds/generatedSprites/fire.6d0bbbc2ca.ac3"],"sprite":{"extinguisherSpray":[0,2598.7301587301586],"fireAlarmBell":[2700,7848.730158730158],"fireCrackle":[10650,17343.94557823129],"fireTruckHorn":[28096.666666666668,3546.485260770975]}}'),
-      zz = JSON.parse('{"src":["/sounds/generatedSprites/phoneAndMoney.4739a7944b.ogg","/sounds/generatedSprites/phoneAndMoney.73a9e2118e.m4a","/sounds/generatedSprites/phoneAndMoney.a2500ea194.mp3","/sounds/generatedSprites/phoneAndMoney.841f719ee3.ac3"],"sprite":{"cameraShutter":[0,553.764172335601],"coinsDrop":[656.6666666666666,2106.190476190476],"jobComplete":[2863.3333333333335,2330.090702947846],"messageReceive":[5296.666666666667,600.204081632653],"phoneNotify":[6000,500],"phoneTap":[6600,500],"phoneVibrate":[7200,1062.7437641723357],"tillPurchase":[8363.333333333334,2754.4897959183672]}}'),
-      Zz = JSON.parse('{"src":["/sounds/generatedSprites/town.422dd11fe2.ogg","/sounds/generatedSprites/town.7ae83b6b59.m4a","/sounds/generatedSprites/town.b6767431c7.mp3","/sounds/generatedSprites/town.a55c8585bb.ac3"],"sprite":{"crowdMurmur":[0,15708.140589569162],"doorbell":[15810,3017.4603174603176],"gateCreak":[18930,3720.9977324263036],"keysJingle":[22753.333333333332,2400],"kidsPlaying":[25253.333333333332,16534.67120181406],"parkBirds":[41890,13663.106575963719],"shopDoorbell":[55653.333333333336,925.0566893424036]}}');
-    var Qz = ZC(1149);
-    const wz = {
-        gunSemiAutomatic: QC,
-        gunSubmachineGun: wC,
-        gunShotgun: oC,
-        gunRifle: nC,
-        gunPistol: bC,
-        gunMisc: fC,
-        dig: qC,
-        step: FC,
-        randomBeep: WC,
-        randomCannon: NC,
-        randomCash: MC,
-        randomExp: gC,
-        randomFallsmall: SC,
-        randomItems: pC,
-        randomFire: PC,
-        randomFirecracker: GC,
-        randomLaugh: RC,
-        randomMagic: AC,
-        randomSplash: xC,
-        mobBear: JC,
-        mobCat: IC,
-        mobCow: iC,
-        mobCrone: vC,
-        mobDeer: eC,
-        mobDog: hC,
-        mobFennec: KC,
-        mobGolem: YC,
-        mobGorilla: dC,
-        mobHorse: mC,
-        mobKnight: HC,
-        mobPig: EC,
-        mobReaver: lC,
-        mobSheep: XC,
-        mobSkeleton: cC,
-        mobStag: uC,
-        mobStalker: rC,
-        mobWarper: sC,
-        mobWraith: TC,
-        mobZombie: aC,
-        note: tC,
-        fishing: DC,
-        gameStart: jC,
-        customGame_horror: yC,
-        crowd: LC,
-        survivalFactory: UC,
-        rpg: BC,
-        ambient: OC,
-        police: kC,
-        cars: VC,
-        fire: Cz,
-        phoneAndMoney: zz,
-        town: Zz
+    var Op = cp(4176);
+    let op = null;
+
+    function Ip(pp) {
+      return null !== op && pp === op
+    }
+
+    function Sp() {
+      this.YG = !1, this.stopPropagation = !1, this.WG = !1, this.disabled = !1
+    }
+    class xp {
+      constructor(pp, ip) {
+        this.version = "0.7.0";
+        var cp = Object.assign({}, new Sp, ip || {});
+        this.element = pp || document, this.YG = !!cp.YG, this.stopPropagation = !!cp.stopPropagation, this.WG = !!cp.WG, this.disabled = !!cp.disabled, this.filterEvents = (pp, ip) => !0, this.ignoreEvent = pp => !1, this.down = new Op.EventEmitter, this.up = new Op.EventEmitter, this.state = {}, this.yG = {
+          dx: 0,
+          dy: 0,
+          Aip: 0,
+          Wip: 0,
+          yip: 0
+        }, this.pressCount = {}, this.releaseCount = {}, this._keyBindmap = {}, this._keyStates = {}, this._bindPressCount = {}, this._touches = {
+          lastX: 0,
+          lastY: 0,
+          currID: null
+        }, "loading" !== document.readyState ? Yp(this) : document.addEventListener("DOMContentLoaded", (pp => {
+          Yp(this)
+        }), {
+          once: !0
+        })
+      }
+      bind(pp) {
+        for (var ip = arguments.length, cp = new Array(ip > 1 ? ip - 1 : 0), Op = 1; Op < ip; Op++) cp[Op - 1] = arguments[Op];
+        cp.forEach((ip => {
+          var cp = this._keyBindmap[ip] || [];
+          cp.includes(pp) || (cp.push(pp), this._keyBindmap[ip] = cp)
+        })), this.state[pp] = !!this.state[pp], this.pressCount[pp] = this.pressCount[pp] || 0, this.releaseCount[pp] = this.releaseCount[pp] || 0
+      }
+      unbind(pp) {
+        for (var ip in this._keyBindmap) {
+          var cp = this._keyBindmap[ip],
+            Op = cp.indexOf(pp);
+          Op > -1 && cp.splice(Op, 1)
+        }
+      }
+      getBindings() {
+        var pp = {};
+        for (var ip in this._keyBindmap) {
+          this._keyBindmap[ip].forEach((cp => {
+            pp[cp] = pp[cp] || [], pp[cp].push(ip)
+          }))
+        }
+        return pp
+      }
+      LP() {
+        Lp(this.yG), Lp(this.pressCount), Lp(this.releaseCount)
+      }
+    }
+
+    function Lp(pp) {
+      for (var ip in pp) pp[ip] = 0
+    }
+
+    function Yp(pp) {
+      window.addEventListener("keydown", wp.bind(null, pp, !0), !1), window.addEventListener("keyup", wp.bind(null, pp, !1), !1);
+      var ip = {
+        passive: !0
+      };
+      pp.element.addEventListener("touchstart", Wp.bind(void 0, pp), {
+        passive: !1
+      }), pp.element.addEventListener("touchend", Up.bind(void 0, pp), ip), pp.element.addEventListener("mousedown", vp.bind(null, pp, !0), ip), window.document.addEventListener("mouseup", vp.bind(null, pp, !1), ip), pp.element.addEventListener("touchmove", tp.bind(null, pp), ip), pp.element.addEventListener("mousemove", tp.bind(null, pp), ip), window.PointerEvent, pp.element.addEventListener("wheel", Hp.bind(null, pp), ip), pp.element.addEventListener("contextmenu", dp.bind(null, pp), !1), window.addEventListener("blur", kp.bind(null, pp), !1)
+    }
+    var Dp = 0,
+      Ap = 0,
+      Pp = null;
+
+    function Wp(pp, ip) {
+      ip.preventDefault(), yp(ip)
+    }
+
+    function yp(pp) {
+      let ip = !1;
+      for (let cp = 0; cp < pp.touches.length; ++cp)
+        if (pp.touches[cp].identifier === Pp) {
+          ip = !0;
+          break
+        } if (!ip) {
+        const ip = pp.changedTouches[0];
+        Dp = ip.clientX, Ap = ip.clientY, Pp = ip.identifier
+      }
+    }
+
+    function Up(pp, ip) {
+      for (var cp = ip.changedTouches, Op = 0; Op < cp.length; ++Op) cp[Op].identifier === Pp && (Pp = null)
+    }
+
+    function wp(pp, ip, cp) {
+      if (!pp.ignoreEvent(cp)) try {
+        mp(pp, cp), ip && cp.isTrusted && !cp.repeat && pp._keyStates[cp.code] && Rp(pp, cp.code)
+      } finally {
+        qp(cp.code, ip, pp, cp)
+      }
+    }
+
+    function vp(pp, ip, cp) {
+      if (!pp.ignoreEvent(cp)) try {
+        mp(pp, cp)
+      } finally {
+        ! function(pp, ip, cp) {
+          if ("pointerId" in cp)
+            if (ip) {
+              if (null !== pp._touches.currID) return;
+              pp._touches.currID = cp.pointerId
+            } else {
+              if (pp._touches.currID !== cp.pointerId) return;
+              pp._touches.currID = null
+            } var Op = "button" in cp ? cp.button + 1 : 1;
+          qp("Mouse" + Op, ip, pp, cp)
+        }(pp, ip, cp)
+      }
+    }
+
+    function tp(pp, ip) {
+      var cp = ip.movementX || ip.mozMovementX || 0,
+        Op = ip.movementY || ip.mozMovementY || 0;
+      if (ip.touches && 0 === (cp | Op)) {
+        var op = function(pp) {
+          yp(pp);
+          for (let ip = 0; ip < pp.changedTouches.length; ++ip)
+            if (pp.changedTouches[ip].identifier == Pp) {
+              const cp = pp.changedTouches[ip],
+                Op = [cp.clientX - Dp, cp.clientY - Ap];
+              return Dp = cp.clientX, Ap = cp.clientY, Op
+            } return console.error(`Did not find touch id ${Pp}`), [0, 0]
+        }(ip);
+        cp = op[0], Op = op[1]
+      }
+      pp.yG.dx += cp, pp.yG.dy += Op
+    }
+
+    function Hp(pp, ip) {
+      mp(pp, ip);
+      var cp = 1;
+      switch (ip.deltaMode) {
+        case 0:
+          cp = 1;
+          break;
+        case 1:
+          cp = 12;
+          break;
+        case 2:
+          cp = pp.element.clientHeight || window.innerHeight
+      }
+      pp.yG.Aip += (ip.deltaX || 0) * cp, pp.yG.Wip += (ip.deltaY || 0) * cp, pp.yG.yip += (ip.deltaZ || 0) * cp
+    }
+
+    function dp(pp, ip) {
+      if (!pp.WG) return ip.preventDefault(), !1
+    }
+    var ep = {
+      AltLeft: "altKey",
+      AltRight: "altKey",
+      ControlLeft: "ctrlKey",
+      ControlRight: "ctrlKey",
+      ShiftLeft: "shiftKey",
+      ShiftRight: "shiftKey",
+      MetaLeft: "metaKey",
+      MetaRight: "metaKey"
+    };
+
+    function jp(pp, ip) {
+      return !!pp[ep[ip]] || ("AltRight" === ip || "ControlLeft" === ip) && "function" === typeof pp.getModifierState && !0 === pp.getModifierState("AltGraph")
+    }
+
+    function kp(pp, ip) {
+      for (var cp in pp._modifiersHeldThroughBlur = {}, ep) pp._keyStates[cp] && (pp._modifiersHeldThroughBlur[cp] = !0);
+      ip && ip.isTrusted && function() {
+        try {
+          return window.self !== window.top
+        } catch (pp) {
+          return !0
+        }
+      }() && (clearTimeout(pp._blurRelease), pp._blurRelease = setTimeout((function() {
+        if (!document.hasFocus())
+          for (var ip in pp._modifiersHeldThroughBlur = {}, pp._keyStates) pp._keyStates[ip] && !/^Mouse\d/.test(ip) && Rp(pp, ip)
+      }), 0))
+    }
+
+    function mp(pp, ip) {
+      var cp = pp._modifiersHeldThroughBlur;
+      if (cp && ip.isTrusted && document.hasFocus())
+        for (var Op in cp) delete cp[Op], pp._keyStates[Op] && Op !== ip.code && (jp(ip, Op) || Rp(pp, Op))
+    }
+
+    function Rp(pp, ip) {
+      const cp = {
+          code: ip,
+          preventDefault: () => {},
+          stopPropagation: () => {}
+        },
+        Op = op;
+      op = cp;
+      try {
+        qp(ip, !1, pp, cp)
+      } finally {
+        op = Op
+      }
+    }
+
+    function qp(pp, ip, cp, Op) {
+      var op = cp._keyBindmap[pp];
+      op && (Mp(cp._keyStates[pp], ip) && (cp._keyStates[pp] = ip, op.forEach((pp => {
+        (!cp.filterEvents || cp.filterEvents(Op, pp)) && function(pp, ip, cp, Op) {
+          var op = ip ? cp.pressCount : cp.releaseCount;
+          op[pp] = (op[pp] || 0) + 1;
+          var Ip = cp._bindPressCount[pp] || 0;
+          (Ip += ip ? 1 : -1) < 0 && (Ip = 0);
+          cp._bindPressCount[pp] = Ip;
+          var Sp = cp.state[pp];
+          if (Mp(Sp, Ip)) {
+            cp.state[pp] = Ip > 0;
+            var xp = ip ? cp.down : cp.up;
+            cp.disabled || xp.emit(pp, Op)
+          }
+        }(pp, ip, cp, Op)
+      }))), "button" in Op || (cp.YG && !Op.defaultPrevented && Op.preventDefault(), cp.stopPropagation && Op.stopPropagation()))
+    }
+
+    function Mp(pp, ip) {
+      return pp ? !ip : ip
+    }
+  },
+  36730: (pp, ip) => {
+    function cp(pp) {
+      if (pp && "object" === typeof pp) {
+        var ip = pp.which || pp.keyCode || pp.charCode;
+        ip && (pp = ip)
+      }
+      if ("number" === typeof pp) return Sp[pp];
+      var cp, Ip = String(pp);
+      return (cp = Op[Ip.toLowerCase()]) ? cp : (cp = op[Ip.toLowerCase()]) || (1 === Ip.length ? Ip.charCodeAt(0) : void 0)
+    }
+    cp.isEventKey = function(pp, ip) {
+      if (pp && "object" === typeof pp) {
+        var cp = pp.which || pp.keyCode || pp.charCode;
+        if (null === cp || void 0 === cp) return !1;
+        if ("string" === typeof ip) {
+          var Ip;
+          if (Ip = Op[ip.toLowerCase()]) return Ip === cp;
+          if (Ip = op[ip.toLowerCase()]) return Ip === cp
+        } else if ("number" === typeof ip) return ip === cp;
+        return !1
+      }
+    };
+    var Op = (ip = pp.exports = cp).code = ip.codes = {
+        backspace: 8,
+        tab: 9,
+        enter: 13,
+        shift: 16,
+        ctrl: 17,
+        alt: 18,
+        "pause/break": 19,
+        "caps lock": 20,
+        esc: 27,
+        space: 32,
+        "page up": 33,
+        "page down": 34,
+        end: 35,
+        home: 36,
+        left: 37,
+        up: 38,
+        right: 39,
+        down: 40,
+        insert: 45,
+        delete: 46,
+        command: 91,
+        "left command": 91,
+        "right command": 93,
+        "numpad *": 106,
+        "numpad +": 107,
+        "numpad -": 109,
+        "numpad .": 110,
+        "numpad /": 111,
+        "num lock": 144,
+        "scroll lock": 145,
+        "my computer": 182,
+        "my calculator": 183,
+        ";": 186,
+        "=": 187,
+        ",": 188,
+        "-": 189,
+        ".": 190,
+        "/": 191,
+        "`": 192,
+        "[": 219,
+        "\\": 220,
+        "]": 221,
+        "'": 222
       },
-      bz = new Map(["mob", "random"].map((CC => {
-        const zC = Object.keys(wz).filter((zC => zC.startsWith(CC) && /^[A-Z]/.test(zC.slice(CC.length))));
-        return [CC, zC]
-      }))),
-      nz = {};
-    for (const Mz in wz) {
-      const CC = wz[Mz];
-      for (const zC in CC.sprite) {
-        if (nz[zC]) throw new Error(`duplicate sound name ${zC} in ${nz[zC]} and ${Mz}`);
-        nz[zC] = Mz
+      op = ip.aliases = {
+        windows: 91,
+        "\u21e7": 16,
+        "\u2325": 18,
+        "\u2303": 17,
+        "\u2318": 91,
+        ctl: 17,
+        control: 17,
+        option: 18,
+        pause: 19,
+        break: 19,
+        caps: 20,
+        return: 13,
+        escape: 27,
+        spc: 32,
+        spacebar: 32,
+        pgup: 33,
+        pgdn: 34,
+        ins: 45,
+        del: 46,
+        cmd: 91
+      };
+    for (Ip = 97; Ip < 123; Ip++) Op[String.fromCharCode(Ip)] = Ip - 32;
+    for (var Ip = 48; Ip < 58; Ip++) Op[Ip - 48] = Ip;
+    for (Ip = 1; Ip < 13; Ip++) Op["f" + Ip] = Ip + 111;
+    for (Ip = 0; Ip < 10; Ip++) Op["numpad " + Ip] = Ip + 96;
+    var Sp = ip.names = ip.title = {};
+    for (Ip in Op) Sp[Op[Ip]] = Ip;
+    for (var xp in op) Op[xp] = op[xp]
+  },
+  39757: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Op
+    });
+    class Op {
+      constructor() {
+        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 10;
+        this.qB = !1, this.XB = !1, this.Bl = 30, this.YB = 0, this.lB = 100, this.rw = !1, this.fullscreen = !1, this.gH = function(pp) {}, this.JB = function(pp, ip, cp) {}, this.pN = function() {}, this.mH = function() {}, this.nB = function() {}, this.onFullscreenChanged = function() {}, this.onPointerLockError = function(pp) {}, this._data = new op(ip),
+          function(pp) {
+            if ("loading" === document.readyState) {
+              var ip = () => {
+                document.removeEventListener("readystatechange", ip), pp()
+              };
+              document.addEventListener("readystatechange", ip)
+            } else setTimeout(pp, 0)
+          }((() => {
+            ! function(pp) {
+              var ip = pp._data,
+                cp = ip.nowObject.now();
+              ip.lastTickStarted = cp, ip.lastFrameStarted = cp, ip.lastRenderStarted = cp, ip.frameCB = () => function(pp) {
+                var ip = pp._data;
+                requestAnimationFrame(ip.frameCB), xp(pp);
+                var cp = ip.nowObject.now(),
+                  Op = cp - ip.lastFrameStarted;
+                if (ip.lastFrameStarted = cp, pp.YB > 0) {
+                  ip.renderAccum += Op;
+                  var op = 1e3 / pp.YB;
+                  if (ip.renderAccum < op) return;
+                  ip.renderAccum -= op, ip.renderAccum > op && (ip.renderAccum = op)
+                }
+                var Ip = cp - ip.lastRenderStarted;
+                ip.lastRenderStarted = cp;
+                var Sp = 1e3 / pp.Bl,
+                  Lp = (cp - ip.lastTickStarted) / Sp;
+                Lp < 0 && (Lp = 0);
+                pp.JB(Ip, Lp, Sp), setTimeout(xp, 0, pp, !0)
+              }(pp), ip.intervalCB = () => xp(pp), requestAnimationFrame(ip.frameCB), ip.pollTime > 0 && (ip.intervalID = setInterval(ip.intervalCB, Math.max(ip.pollTime, 1e3 / pp.Bl / 2)))
+            }(this),
+            function(pp, ip) {
+              if (!ip) return;
+              var cp = !1,
+                Op = !1,
+                op = pp => {
+                  if (!!pp !== (cp = ip === document.pointerLockElement))
+                    if (pp) {
+                      var Op = ip.requestPointerLock();
+                      Op && Op.catch && Op.catch((pp => {}))
+                    } else document.exitPointerLock()
+                },
+                Ip = pp => {
+                  !!pp !== (Op = ip === document.fullscreenElement) && (pp ? ip.requestFullscreen ? ip.requestFullscreen() : ip.webkitRequestFullscreen && ip.webkitRequestFullscreen() : document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen())
+                };
+              document.addEventListener("pointerlockchange", (Op => {
+                cp = ip === document.pointerLockElement, pp.nB(cp)
+              })), document.addEventListener("fullscreenchange", (cp => {
+                Op = ip === document.fullscreenElement, pp.onFullscreenChanged(Op)
+              })), document.addEventListener("pointerlockerror", (Op => {
+                cp = ip === document.pointerLockElement, pp.onPointerLockError(Op)
+              })), Object.defineProperty(pp, "rw", {
+                get: () => cp,
+                set: op
+              }), Object.defineProperty(pp, "fullscreen", {
+                get: () => Op,
+                set: Ip
+              }), ip.addEventListener("click", (ip => {
+                pp.qB && op(!0), pp.XB && Ip(!0)
+              }));
+              var Sp = () => pp.mH();
+              if (window.ResizeObserver) {
+                new ResizeObserver(Sp).observe(ip)
+              } else window.addEventListener("resize", Sp)
+            }(this, pp), this.pN()
+          }))
       }
     }
-    for (const Mz in wz) {
-      const CC = wz[Mz];
-      for (let zC = 0; zC < CC.src.length; zC++) CC.src[zC] = Qz.clientSideServerUrls.staticUrl + CC.src[zC]
-    }
-    const fz = {};
 
-    function oz(CC) {
-      if (fz[CC]) return Nz(fz[CC]);
-      {
-        const zC = [];
-        for (const ZC in wz)
-          for (const QC in wz[ZC].sprite) QC.startsWith(CC) && zC.push(QC);
-        return fz[CC] = zC, Nz(zC)
+    function op() {
+      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      this.nowObject = performance || Date, this.pollTime = pp, this.renderAccum = 0, this.lastTickStarted = 0, this.lastFrameStarted = 0, this.lastRenderStarted = 0, this.avgTickTime = 2, this.frameCB = null, this.intervalCB = null, this.intervalID = -1
+    }
+    var Ip = 3,
+      Sp = 20;
+
+    function xp(pp) {
+      for (var ip = pp._data, cp = 1e3 / pp.Bl, Op = ip.nowObject.now() + Sp, op = 0; ip.nowObject.now() >= ip.lastTickStarted + cp && ip.nowObject.now() < Op && ++op <= Ip;) pp.gH(cp), ip.lastTickStarted += cp;
+      var xp = 5 * (cp + 5),
+        Lp = ip.nowObject.now();
+      if (Lp - ip.lastTickStarted > xp)
+        for (; Lp >= ip.lastTickStarted + cp;) ip.lastTickStarted += cp
+    }
+  },
+  36887: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Sp
+    });
+    var Op = cp(62);
+    const op = Op.useLayoutEffect;
+    const Ip = function(pp) {
+      var ip = (0, Op.useRef)(pp);
+      return op((function() {
+        ip.current = pp
+      })), ip
+    };
+    var Sp = function(pp) {
+      var ip = Ip(pp);
+      (0, Op.useEffect)((function() {
+        var pp = function(pp) {
+          var cp;
+          if (null != ip.current && (cp = ip.current(pp)), pp.defaultPrevented && (pp.returnValue = ""), "string" === typeof cp) return pp.returnValue = cp, cp
+        };
+        return window.addEventListener("beforeunload", pp),
+          function() {
+            window.removeEventListener("beforeunload", pp)
+          }
+      }), [])
+    }
+  },
+  36772: pp => {
+    var ip, cp = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      Op = /OS X/.test(cp),
+      op = /Opera/.test(cp),
+      Ip = !/like Gecko/.test(cp) && !op,
+      Sp = pp.exports = {
+        0: Op ? "<menu>" : "<UNK>",
+        1: "<mouse 1>",
+        2: "<mouse 2>",
+        3: "<break>",
+        4: "<mouse 3>",
+        5: "<mouse 4>",
+        6: "<mouse 5>",
+        8: "<backspace>",
+        9: "<tab>",
+        12: "<clear>",
+        13: "<enter>",
+        16: "<shift>",
+        17: "<control>",
+        18: "<alt>",
+        19: "<pause>",
+        20: "<caps-lock>",
+        21: "<ime-hangul>",
+        23: "<ime-junja>",
+        24: "<ime-final>",
+        25: "<ime-kanji>",
+        27: "<escape>",
+        28: "<ime-convert>",
+        29: "<ime-nonconvert>",
+        30: "<ime-accept>",
+        31: "<ime-mode-change>",
+        32: "<space>",
+        33: "<page-up>",
+        34: "<page-down>",
+        35: "<end>",
+        36: "<home>",
+        37: "<left>",
+        38: "<up>",
+        39: "<right>",
+        40: "<down>",
+        41: "<select>",
+        42: "<print>",
+        43: "<execute>",
+        44: "<snapshot>",
+        45: "<insert>",
+        46: "<delete>",
+        47: "<help>",
+        91: "<meta>",
+        92: "<meta>",
+        93: Op ? "<meta>" : "<menu>",
+        95: "<sleep>",
+        106: "<num-*>",
+        107: "<num-+>",
+        108: "<num-enter>",
+        109: "<num--\x3e",
+        110: "<num-.>",
+        111: "<num-/>",
+        144: "<num-lock>",
+        145: "<scroll-lock>",
+        160: "<shift-left>",
+        161: "<shift-right>",
+        162: "<control-left>",
+        163: "<control-right>",
+        164: "<alt-left>",
+        165: "<alt-right>",
+        166: "<browser-back>",
+        167: "<browser-forward>",
+        168: "<browser-refresh>",
+        169: "<browser-stop>",
+        170: "<browser-search>",
+        171: "<browser-favorites>",
+        172: "<browser-home>",
+        173: Op && Ip ? "-" : "<volume-mute>",
+        174: "<volume-down>",
+        175: "<volume-up>",
+        176: "<next-track>",
+        177: "<prev-track>",
+        178: "<stop>",
+        179: "<play-pause>",
+        180: "<launch-mail>",
+        181: "<launch-media-select>",
+        182: "<launch-app 1>",
+        183: "<launch-app 2>",
+        186: ";",
+        187: "=",
+        188: ",",
+        189: "-",
+        190: ".",
+        191: "/",
+        192: "`",
+        219: "[",
+        220: "\\",
+        221: "]",
+        222: "'",
+        223: "<meta>",
+        224: "<meta>",
+        226: "<alt-gr>",
+        229: "<ime-process>",
+        231: op ? "`" : "<unicode>",
+        246: "<attention>",
+        247: "<crsel>",
+        248: "<exsel>",
+        249: "<erase-eof>",
+        250: "<play>",
+        251: "<zoom>",
+        252: "<no-name>",
+        253: "<pa-1>",
+        254: "<clear>"
+      };
+    for (ip = 58; ip < 65; ++ip) Sp[ip] = String.fromCharCode(ip);
+    for (ip = 48; ip < 58; ++ip) Sp[ip] = ip - 48 + "";
+    for (ip = 65; ip < 91; ++ip) Sp[ip] = String.fromCharCode(ip);
+    for (ip = 96; ip < 106; ++ip) Sp[ip] = "<num-" + (ip - 96) + ">";
+    for (ip = 112; ip < 136; ++ip) Sp[ip] = "F" + (ip - 111)
+  },
+  39169: (pp, ip, cp) => {
+    function Op(pp, ip, cp, Op, op) {
+      var Ip = {};
+      return Object.keys(Op).forEach((function(pp) {
+        Ip[pp] = Op[pp]
+      })), Ip.enumerable = !!Ip.enumerable, Ip.configurable = !!Ip.configurable, ("value" in Ip || Ip.initializer) && (Ip.writable = !0), Ip = cp.slice().reverse().reduce((function(cp, Op) {
+        return Op(pp, ip, cp) || cp
+      }), Ip), op && void 0 !== Ip.initializer && (Ip.value = Ip.initializer ? Ip.initializer.call(op) : void 0, Ip.initializer = void 0), void 0 === Ip.initializer && (Object.defineProperty(pp, ip, Ip), Ip = null), Ip
+    }
+    cp.d(ip, {
+      b: () => Op
+    })
+  },
+  39164: (pp, ip, cp) => {
+    function Op(pp, ip, cp, Op) {
+      cp && Object.defineProperty(pp, ip, {
+        enumerable: cp.enumerable,
+        configurable: cp.configurable,
+        writable: cp.writable,
+        value: cp.initializer ? cp.initializer.call(Op) : void 0
+      })
+    }
+    cp.d(ip, {
+      c: () => Op
+    })
+  },
+  38900: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Ip
+    });
+    var Op = cp(38905);
+    const op = (pp, ip, cp) => pp ? pp.getClassName && "Mesh" === pp.getClassName() ? null : !pp.getClassName || "SubMesh" !== pp.getClassName() && "PhysicsBody" !== pp.getClassName() ? pp.clone ? pp.clone() : Array.isArray(pp) ? pp.slice() : cp && "object" === typeof pp ? {
+      ...pp
+    } : null : pp.clone(ip) : null;
+    class Ip {
+      static DeepCopy(pp, ip, cp, Ip) {
+        let Sp = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const xp = function(pp) {
+          const ip = [];
+          do {
+            const cp = Object.getOwnPropertyNames(pp);
+            for (const pp of cp) - 1 === ip.indexOf(pp) && ip.push(pp)
+          } while (pp = Object.getPrototypeOf(pp));
+          return ip
+        }(pp);
+        for (const Yp of xp) {
+          if ("_" === Yp[0] && (!Ip || -1 === Ip.indexOf(Yp))) continue;
+          if (Yp.endsWith("Observable")) continue;
+          if (cp && -1 !== cp.indexOf(Yp)) continue;
+          const xp = pp[Yp],
+            Dp = typeof xp;
+          if ("function" !== Dp) try {
+            if ("object" === Dp)
+              if (xp instanceof Uint8Array) ip[Yp] = Uint8Array.from(xp);
+              else if (xp instanceof Array) {
+              if (ip[Yp] = [], xp.length > 0)
+                if ("object" == typeof xp[0])
+                  for (let pp = 0; pp < xp.length; pp++) {
+                    const cp = op(xp[pp], ip, Sp); - 1 === ip[Yp].indexOf(cp) && ip[Yp].push(cp)
+                  } else ip[Yp] = xp.slice(0)
+            } else ip[Yp] = op(xp, ip, Sp);
+            else ip[Yp] = xp
+          } catch (Lp) {
+            Op.e.Warn(Lp.message)
+          }
+        }
       }
     }
-
-    function qz(CC) {
-      const zC = nz[CC];
-      if (void 0 === zC) throw new Error(`Invalid sound name ${CC} (not in any sprite sheet)`);
-      return zC
+  },
+  38942: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => op,
+      f: () => Ip,
+      h: () => Sp,
+      l: () => xp
+    });
+    var Op = cp(37487);
+    class op {
+      constructor(pp, ip, cp) {
+        this.gradient = pp, this.color1 = ip, this.color2 = cp
+      }
+      getColorToRef(pp) {
+        this.color2 ? Op.h.LerpToRef(this.color1, this.color2, Math.random(), pp) : pp.rM(this.color1)
+      }
     }
-
-    function Fz(CC, zC) {
-      if (!(CC in wz)) throw new Error("Invalid spriteTrack name");
-      return zC in wz[CC].sprite
+    class Ip {
+      constructor(pp, ip) {
+        this.gradient = pp, this.color = ip
+      }
     }
-
-    function Wz(CC) {
-      if (!(CC in wz)) throw new Error("Invalid spritesheet name");
-      return wz[CC]
+    class Sp {
+      constructor(pp, ip, cp) {
+        this.gradient = pp, this.factor1 = ip, this.factor2 = cp
+      }
+      getFactor() {
+        return void 0 === this.factor2 || this.factor2 === this.factor1 ? this.factor1 : this.factor1 + (this.factor2 - this.factor1) * Math.random()
+      }
     }
-
-    function Nz(CC) {
-      return CC[Math.floor(Math.random() * CC.length)]
+    class xp {
+      static GetCurrentGradient(pp, ip, cp) {
+        if (ip[0].gradient > pp) return void cp(ip[0], ip[0], 1);
+        for (let op = 0; op < ip.length - 1; op++) {
+          const Op = ip[op],
+            Ip = ip[op + 1];
+          if (pp >= Op.gradient && pp <= Ip.gradient) {
+            return void cp(Op, Ip, (pp - Op.gradient) / (Ip.gradient - Op.gradient))
+          }
+        }
+        const Op = ip.length - 1;
+        cp(ip[Op], ip[Op], 1)
+      }
+    }
+  },
+  38905: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Op
+    });
+    class Op {
+      static _CheckLimit(pp, ip) {
+        let cp = Op._LogLimitOutputs[pp];
+        return cp ? cp.current++ : (cp = {
+          limit: ip,
+          current: 1
+        }, Op._LogLimitOutputs[pp] = cp), cp.current <= cp.limit
+      }
+      static _GenerateLimitMessage(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const cp = Op._LogLimitOutputs[pp];
+        if (!cp || !Op.MessageLimitReached) return;
+        const op = this._Levels[ip];
+        cp.current === cp.limit && Op[op.name](Op.MessageLimitReached.replace(/%LIMIT%/g, "" + cp.limit).replace(/%TYPE%/g, op.name ?? ""))
+      }
+      static _AddLogEntry(pp) {
+        Op._LogCache = pp + Op._LogCache, Op.OnNewCacheEntry && Op.OnNewCacheEntry(pp)
+      }
+      static _FormatMessage(pp) {
+        const ip = pp => pp < 10 ? "0" + pp : "" + pp,
+          cp = new Date;
+        return "[" + ip(cp.getHours()) + ":" + ip(cp.getMinutes()) + ":" + ip(cp.getSeconds()) + "]: " + pp
+      }
+      static _LogDisabled(pp, ip) {}
+      static _LogEnabled() {
+        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          ip = arguments.length > 1 ? arguments[1] : void 0,
+          cp = arguments.length > 2 ? arguments[2] : void 0;
+        const op = Array.isArray(ip) ? ip[0] : ip;
+        if (void 0 !== cp && !Op._CheckLimit(op, cp)) return;
+        const Ip = Op._FormatMessage(op),
+          Sp = this._Levels[pp],
+          xp = Array.isArray(ip) ? ip.slice(1) : [];
+        Sp.logFunc && Sp.logFunc("BJS - " + Ip, ...xp);
+        const Lp = `<div style='color:${Sp.color}'>${Ip}</div><br>`;
+        Op._AddLogEntry(Lp), Op._GenerateLimitMessage(op, pp)
+      }
+      static get LogCache() {
+        return Op._LogCache
+      }
+      static ClearLogCache() {
+        Op._LogCache = "", Op._LogLimitOutputs = {}, Op.errorsCount = 0
+      }
+      static set LogLevels(pp) {
+        Op.Log = Op._LogDisabled, Op.Warn = Op._LogDisabled, Op.Error = Op._LogDisabled;
+        const ip = [Op.MessageLogLevel, Op.WarningLogLevel, Op.ErrorLogLevel];
+        for (const cp of ip)
+          if ((pp & cp) === cp) {
+            const pp = this._Levels[cp];
+            Op[pp.name] = Op._LogEnabled.bind(Op, cp)
+          }
+      }
+    }
+    Op.NoneLogLevel = 0, Op.MessageLogLevel = 1, Op.WarningLogLevel = 2, Op.ErrorLogLevel = 4, Op.AllLogLevel = 7, Op.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Op._LogCache = "", Op._LogLimitOutputs = {}, Op._Levels = [{}, {
+      color: "white",
+      logFunc: console.log,
+      name: "Log"
+    }, {
+      color: "orange",
+      logFunc: console.warn,
+      name: "Warn"
+    }, {}, {
+      color: "red",
+      logFunc: console.error,
+      name: "Error"
+    }], Op.errorsCount = 0, Op.Log = Op._LogEnabled.bind(Op, Op.MessageLogLevel), Op.Warn = Op._LogEnabled.bind(Op, Op.WarningLogLevel), Op.Error = Op._LogEnabled.bind(Op, Op.ErrorLogLevel)
+  },
+  38944: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Sp
+    });
+    var Op = cp(37320),
+      op = cp(37356),
+      Ip = cp(38900);
+    class Sp {
+      constructor() {
+        this.direction1 = new Op.o(0, 1, 0), this.direction2 = new Op.o(0, 1, 0), this.minEmitBox = new Op.o(-.5, -.5, -.5), this.maxEmitBox = new Op.o(.5, .5, .5)
+      }
+      startDirectionFunction(pp, ip, cp, Ip) {
+        const Sp = (0, op.RandomRange)(this.direction1.x, this.direction2.x),
+          xp = (0, op.RandomRange)(this.direction1.y, this.direction2.y),
+          Lp = (0, op.RandomRange)(this.direction1.z, this.direction2.z);
+        if (Ip) return ip.x = Sp, ip.y = xp, void(ip.z = Lp);
+        Op.o.TransformNormalFromFloatsToRef(Sp, xp, Lp, pp, ip)
+      }
+      startPositionFunction(pp, ip, cp, Ip) {
+        const Sp = (0, op.RandomRange)(this.minEmitBox.x, this.maxEmitBox.x),
+          xp = (0, op.RandomRange)(this.minEmitBox.y, this.maxEmitBox.y),
+          Lp = (0, op.RandomRange)(this.minEmitBox.z, this.maxEmitBox.z);
+        if (Ip) return ip.x = Sp, ip.y = xp, void(ip.z = Lp);
+        Op.o.TransformCoordinatesFromFloatsToRef(Sp, xp, Lp, pp, ip)
+      }
+      clone() {
+        const pp = new Sp;
+        return Ip.e.DeepCopy(this, pp), pp
+      }
+      applyToShader(pp) {
+        pp.setVector3("direction1", this.direction1), pp.setVector3("direction2", this.direction2), pp.setVector3("minEmitBox", this.minEmitBox), pp.setVector3("maxEmitBox", this.maxEmitBox)
+      }
+      buildUniformLayout(pp) {
+        pp.addUniform("direction1", 3), pp.addUniform("direction2", 3), pp.addUniform("minEmitBox", 3), pp.addUniform("maxEmitBox", 3)
+      }
+      getEffectDefines() {
+        return "#define BOXEMITTER"
+      }
+      getClassName() {
+        return "BoxParticleEmitter"
+      }
+      serialize() {
+        const pp = {};
+        return pp.type = this.getClassName(), pp.direction1 = this.direction1.BOp(), pp.direction2 = this.direction2.BOp(), pp.minEmitBox = this.minEmitBox.BOp(), pp.maxEmitBox = this.maxEmitBox.BOp(), pp
+      }
+      parse(pp) {
+        Op.o.FromArrayToRef(pp.direction1, 0, this.direction1), Op.o.FromArrayToRef(pp.direction2, 0, this.direction2), Op.o.FromArrayToRef(pp.minEmitBox, 0, this.minEmitBox), Op.o.FromArrayToRef(pp.maxEmitBox, 0, this.maxEmitBox)
+      }
+    }
+  },
+  38898: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => xp,
+      f: () => Sp
+    });
+    var Op = cp(37320),
+      op = cp(37356),
+      Ip = cp(38900);
+    class Sp {
+      constructor() {
+        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+        this.radius = pp, this.height = ip, this.radiusRange = cp, this.directionRandomizer = op, this._tempVector = Op.o.Zero()
+      }
+      startDirectionFunction(pp, ip, cp, Ip, Sp) {
+        cp.position.subtractToRef(pp.getTranslation(), this._tempVector), this._tempVector.normalize(), Op.o.TransformNormalToRef(this._tempVector, Sp, this._tempVector);
+        const xp = (0, op.RandomRange)(-this.directionRandomizer / 2, this.directionRandomizer / 2);
+        let Lp = Math.atan2(this._tempVector.x, this._tempVector.z);
+        Lp += (0, op.RandomRange)(-Math.PI / 2, Math.PI / 2) * this.directionRandomizer, this._tempVector.y = xp, this._tempVector.x = Math.sin(Lp), this._tempVector.z = Math.cos(Lp), this._tempVector.normalize(), Ip ? ip.rM(this._tempVector) : Op.o.TransformNormalFromFloatsToRef(this._tempVector.x, this._tempVector.y, this._tempVector.z, pp, ip)
+      }
+      startPositionFunction(pp, ip, cp, Ip) {
+        const Sp = (0, op.RandomRange)(-this.height / 2, this.height / 2),
+          xp = (0, op.RandomRange)(0, 2 * Math.PI),
+          Lp = (0, op.RandomRange)((1 - this.radiusRange) * (1 - this.radiusRange), 1),
+          Yp = Math.sqrt(Lp) * this.radius,
+          Dp = Yp * Math.cos(xp),
+          Ap = Yp * Math.sin(xp);
+        Ip ? ip.i5(Dp, Sp, Ap) : Op.o.TransformCoordinatesFromFloatsToRef(Dp, Sp, Ap, pp, ip)
+      }
+      clone() {
+        const pp = new Sp(this.radius, this.directionRandomizer);
+        return Ip.e.DeepCopy(this, pp), pp
+      }
+      applyToShader(pp) {
+        pp.setFloat("radius", this.radius), pp.setFloat("height", this.height), pp.setFloat("radiusRange", this.radiusRange), pp.setFloat("directionRandomizer", this.directionRandomizer)
+      }
+      buildUniformLayout(pp) {
+        pp.addUniform("radius", 1), pp.addUniform("height", 1), pp.addUniform("radiusRange", 1), pp.addUniform("directionRandomizer", 1)
+      }
+      getEffectDefines() {
+        return "#define CYLINDEREMITTER"
+      }
+      getClassName() {
+        return "CylinderParticleEmitter"
+      }
+      serialize() {
+        const pp = {};
+        return pp.type = this.getClassName(), pp.radius = this.radius, pp.height = this.height, pp.radiusRange = this.radiusRange, pp.directionRandomizer = this.directionRandomizer, pp
+      }
+      parse(pp) {
+        this.radius = pp.radius, this.height = pp.height, this.radiusRange = pp.radiusRange, this.directionRandomizer = pp.directionRandomizer
+      }
+    }
+    class xp extends Sp {
+      constructor() {
+        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+          op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : new Op.o(0, 1, 0),
+          Ip = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : new Op.o(0, 1, 0);
+        super(pp, ip, cp), this.direction1 = op, this.direction2 = Ip
+      }
+      startDirectionFunction(pp, ip, cp, Ip) {
+        const Sp = (0, op.RandomRange)(this.direction1.x, this.direction2.x),
+          xp = (0, op.RandomRange)(this.direction1.y, this.direction2.y),
+          Lp = (0, op.RandomRange)(this.direction1.z, this.direction2.z);
+        Ip ? ip.i5(Sp, xp, Lp) : Op.o.TransformNormalFromFloatsToRef(Sp, xp, Lp, pp, ip)
+      }
+      clone() {
+        const pp = new xp(this.radius, this.height, this.radiusRange, this.direction1, this.direction2);
+        return Ip.e.DeepCopy(this, pp), pp
+      }
+      applyToShader(pp) {
+        pp.setFloat("radius", this.radius), pp.setFloat("height", this.height), pp.setFloat("radiusRange", this.radiusRange), pp.setVector3("direction1", this.direction1), pp.setVector3("direction2", this.direction2)
+      }
+      buildUniformLayout(pp) {
+        pp.addUniform("radius", 1), pp.addUniform("height", 1), pp.addUniform("radiusRange", 1), pp.addUniform("direction1", 3), pp.addUniform("direction2", 3)
+      }
+      getEffectDefines() {
+        return "#define CYLINDEREMITTER\n#define DIRECTEDCYLINDEREMITTER"
+      }
+      getClassName() {
+        return "CylinderDirectedParticleEmitter"
+      }
+      serialize() {
+        const pp = super.serialize();
+        return pp.direction1 = this.direction1.BOp(), pp.direction2 = this.direction2.BOp(), pp
+      }
+      parse(pp) {
+        super.parse(pp), Op.o.FromArrayToRef(pp.direction1, 0, this.direction1), Op.o.FromArrayToRef(pp.direction2, 0, this.direction2)
+      }
+    }
+  },
+  39012: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Ap
+    });
+    const Op = .5 * (Math.sqrt(3) - 1),
+      op = (3 - Math.sqrt(3)) / 6,
+      Ip = 1 / 3,
+      Sp = 1 / 6,
+      xp = (Math.sqrt(5) - 1) / 4,
+      Lp = (5 - Math.sqrt(5)) / 20,
+      Yp = new Float32Array([1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1, 0, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 0, 1, 1, 0, -1, 1, 0, 1, -1, 0, -1, -1]),
+      Dp = new Float32Array([0, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 1, 0, 1, 1, 1, 0, 1, -1, 1, 0, -1, 1, 1, 0, -1, -1, -1, 0, 1, 1, -1, 0, 1, -1, -1, 0, -1, 1, -1, 0, -1, -1, 1, 1, 0, 1, 1, 1, 0, -1, 1, -1, 0, 1, 1, -1, 0, -1, -1, 1, 0, 1, -1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, -1, 1, 1, 1, 0, 1, 1, -1, 0, 1, -1, 1, 0, 1, -1, -1, 0, -1, 1, 1, 0, -1, 1, -1, 0, -1, -1, 1, 0, -1, -1, -1, 0]);
+    const Ap = class {
+      constructor() {
+        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Math.random;
+        const ip = "function" == typeof pp ? pp : function(pp) {
+          let ip = 0,
+            cp = 0,
+            Op = 0,
+            op = 1;
+          const Ip = function() {
+            let pp = 4022871197;
+            return function(ip) {
+              ip = ip.toString();
+              for (let cp = 0; cp < ip.length; cp++) {
+                pp += ip.charCodeAt(cp);
+                let Op = .02519603282416938 * pp;
+                pp = Op >>> 0, Op -= pp, Op *= pp, pp = Op >>> 0, Op -= pp, pp += 4294967296 * Op
+              }
+              return 2.3283064365386963e-10 * (pp >>> 0)
+            }
+          }();
+          ip = Ip(" "), cp = Ip(" "), Op = Ip(" "), ip -= Ip(pp), ip < 0 && (ip += 1);
+          cp -= Ip(pp), cp < 0 && (cp += 1);
+          Op -= Ip(pp), Op < 0 && (Op += 1);
+          return function() {
+            const pp = 2091639 * ip + 2.3283064365386963e-10 * op;
+            return ip = cp, cp = Op, Op = pp - (op = 0 | pp)
+          }
+        }(pp);
+        this.p = function(pp) {
+          const ip = new Uint8Array(256);
+          for (let cp = 0; cp < 256; cp++) ip[cp] = cp;
+          for (let cp = 0; cp < 255; cp++) {
+            const Op = cp + ~~(pp() * (256 - cp)),
+              op = ip[cp];
+            ip[cp] = ip[Op], ip[Op] = op
+          }
+          return ip
+        }(ip), this.perm = new Uint8Array(512), this.permMod12 = new Uint8Array(512);
+        for (let cp = 0; cp < 512; cp++) this.perm[cp] = this.p[255 & cp], this.permMod12[cp] = this.perm[cp] % 12
+      }
+      noise2D(pp, ip) {
+        const cp = this.permMod12,
+          Ip = this.perm;
+        let Sp = 0,
+          xp = 0,
+          Lp = 0;
+        const Dp = (pp + ip) * Op,
+          Ap = Math.floor(pp + Dp),
+          Pp = Math.floor(ip + Dp),
+          Wp = (Ap + Pp) * op,
+          yp = pp - (Ap - Wp),
+          Up = ip - (Pp - Wp);
+        let wp, vp;
+        yp > Up ? (wp = 1, vp = 0) : (wp = 0, vp = 1);
+        const tp = yp - wp + op,
+          Hp = Up - vp + op,
+          dp = yp - 1 + 2 * op,
+          ep = Up - 1 + 2 * op,
+          jp = 255 & Ap,
+          kp = 255 & Pp;
+        let mp = .5 - yp * yp - Up * Up;
+        if (mp >= 0) {
+          const pp = 3 * cp[jp + Ip[kp]];
+          mp *= mp, Sp = mp * mp * (Yp[pp] * yp + Yp[pp + 1] * Up)
+        }
+        let Rp = .5 - tp * tp - Hp * Hp;
+        if (Rp >= 0) {
+          const pp = 3 * cp[jp + wp + Ip[kp + vp]];
+          Rp *= Rp, xp = Rp * Rp * (Yp[pp] * tp + Yp[pp + 1] * Hp)
+        }
+        let qp = .5 - dp * dp - ep * ep;
+        if (qp >= 0) {
+          const pp = 3 * cp[jp + 1 + Ip[kp + 1]];
+          qp *= qp, Lp = qp * qp * (Yp[pp] * dp + Yp[pp + 1] * ep)
+        }
+        return 70 * (Sp + xp + Lp)
+      }
+      noise3D(pp, ip, cp) {
+        const Op = this.permMod12,
+          op = this.perm;
+        let xp, Lp, Dp, Ap;
+        const Pp = (pp + ip + cp) * Ip,
+          Wp = Math.floor(pp + Pp),
+          yp = Math.floor(ip + Pp),
+          Up = Math.floor(cp + Pp),
+          wp = (Wp + yp + Up) * Sp,
+          vp = pp - (Wp - wp),
+          tp = ip - (yp - wp),
+          Hp = cp - (Up - wp);
+        let dp, ep, jp, kp, mp, Rp;
+        vp >= tp ? tp >= Hp ? (dp = 1, ep = 0, jp = 0, kp = 1, mp = 1, Rp = 0) : vp >= Hp ? (dp = 1, ep = 0, jp = 0, kp = 1, mp = 0, Rp = 1) : (dp = 0, ep = 0, jp = 1, kp = 1, mp = 0, Rp = 1) : tp < Hp ? (dp = 0, ep = 0, jp = 1, kp = 0, mp = 1, Rp = 1) : vp < Hp ? (dp = 0, ep = 1, jp = 0, kp = 0, mp = 1, Rp = 1) : (dp = 0, ep = 1, jp = 0, kp = 1, mp = 1, Rp = 0);
+        const qp = vp - dp + Sp,
+          Mp = tp - ep + Sp,
+          Cp = Hp - jp + Sp,
+          Ep = vp - kp + 2 * Sp,
+          Xp = tp - mp + 2 * Sp,
+          lp = Hp - Rp + 2 * Sp,
+          Qp = vp - 1 + .5,
+          Jp = tp - 1 + .5,
+          Bp = Hp - 1 + .5,
+          Np = 255 & Wp,
+          Tp = 255 & yp,
+          fp = 255 & Up;
+        let bp = .6 - vp * vp - tp * tp - Hp * Hp;
+        if (bp < 0) xp = 0;
+        else {
+          const pp = 3 * Op[Np + op[Tp + op[fp]]];
+          bp *= bp, xp = bp * bp * (Yp[pp] * vp + Yp[pp + 1] * tp + Yp[pp + 2] * Hp)
+        }
+        let hp = .6 - qp * qp - Mp * Mp - Cp * Cp;
+        if (hp < 0) Lp = 0;
+        else {
+          const pp = 3 * Op[Np + dp + op[Tp + ep + op[fp + jp]]];
+          hp *= hp, Lp = hp * hp * (Yp[pp] * qp + Yp[pp + 1] * Mp + Yp[pp + 2] * Cp)
+        }
+        let ap = .6 - Ep * Ep - Xp * Xp - lp * lp;
+        if (ap < 0) Dp = 0;
+        else {
+          const pp = 3 * Op[Np + kp + op[Tp + mp + op[fp + Rp]]];
+          ap *= ap, Dp = ap * ap * (Yp[pp] * Ep + Yp[pp + 1] * Xp + Yp[pp + 2] * lp)
+        }
+        let np = .6 - Qp * Qp - Jp * Jp - Bp * Bp;
+        if (np < 0) Ap = 0;
+        else {
+          const pp = 3 * Op[Np + 1 + op[Tp + 1 + op[fp + 1]]];
+          np *= np, Ap = np * np * (Yp[pp] * Qp + Yp[pp + 1] * Jp + Yp[pp + 2] * Bp)
+        }
+        return 32 * (xp + Lp + Dp + Ap)
+      }
+      noise4D(pp, ip, cp, Op) {
+        const op = this.perm;
+        let Ip, Sp, Yp, Ap, Pp;
+        const Wp = (pp + ip + cp + Op) * xp,
+          yp = Math.floor(pp + Wp),
+          Up = Math.floor(ip + Wp),
+          wp = Math.floor(cp + Wp),
+          vp = Math.floor(Op + Wp),
+          tp = (yp + Up + wp + vp) * Lp,
+          Hp = pp - (yp - tp),
+          dp = ip - (Up - tp),
+          ep = cp - (wp - tp),
+          jp = Op - (vp - tp);
+        let kp = 0,
+          mp = 0,
+          Rp = 0,
+          qp = 0;
+        Hp > dp ? kp++ : mp++, Hp > ep ? kp++ : Rp++, Hp > jp ? kp++ : qp++, dp > ep ? mp++ : Rp++, dp > jp ? mp++ : qp++, ep > jp ? Rp++ : qp++;
+        const Mp = kp >= 3 ? 1 : 0,
+          Cp = mp >= 3 ? 1 : 0,
+          Ep = Rp >= 3 ? 1 : 0,
+          Xp = qp >= 3 ? 1 : 0,
+          lp = kp >= 2 ? 1 : 0,
+          Qp = mp >= 2 ? 1 : 0,
+          Jp = Rp >= 2 ? 1 : 0,
+          Bp = qp >= 2 ? 1 : 0,
+          Np = kp >= 1 ? 1 : 0,
+          Tp = mp >= 1 ? 1 : 0,
+          fp = Rp >= 1 ? 1 : 0,
+          bp = qp >= 1 ? 1 : 0,
+          hp = Hp - Mp + Lp,
+          ap = dp - Cp + Lp,
+          np = ep - Ep + Lp,
+          Fp = jp - Xp + Lp,
+          gp = Hp - lp + 2 * Lp,
+          Gp = dp - Qp + 2 * Lp,
+          rp = ep - Jp + 2 * Lp,
+          Zp = jp - Bp + 2 * Lp,
+          zp = Hp - Np + 3 * Lp,
+          sp = dp - Tp + 3 * Lp,
+          Kp = ep - fp + 3 * Lp,
+          Vp = jp - bp + 3 * Lp,
+          ii = Hp - 1 + 4 * Lp,
+          ci = dp - 1 + 4 * Lp,
+          Oi = ep - 1 + 4 * Lp,
+          oi = jp - 1 + 4 * Lp,
+          Ii = 255 & yp,
+          Si = 255 & Up,
+          xi = 255 & wp,
+          Li = 255 & vp;
+        let Yi = .6 - Hp * Hp - dp * dp - ep * ep - jp * jp;
+        if (Yi < 0) Ip = 0;
+        else {
+          const pp = op[Ii + op[Si + op[xi + op[Li]]]] % 32 * 4;
+          Yi *= Yi, Ip = Yi * Yi * (Dp[pp] * Hp + Dp[pp + 1] * dp + Dp[pp + 2] * ep + Dp[pp + 3] * jp)
+        }
+        let Di = .6 - hp * hp - ap * ap - np * np - Fp * Fp;
+        if (Di < 0) Sp = 0;
+        else {
+          const pp = op[Ii + Mp + op[Si + Cp + op[xi + Ep + op[Li + Xp]]]] % 32 * 4;
+          Di *= Di, Sp = Di * Di * (Dp[pp] * hp + Dp[pp + 1] * ap + Dp[pp + 2] * np + Dp[pp + 3] * Fp)
+        }
+        let Ai = .6 - gp * gp - Gp * Gp - rp * rp - Zp * Zp;
+        if (Ai < 0) Yp = 0;
+        else {
+          const pp = op[Ii + lp + op[Si + Qp + op[xi + Jp + op[Li + Bp]]]] % 32 * 4;
+          Ai *= Ai, Yp = Ai * Ai * (Dp[pp] * gp + Dp[pp + 1] * Gp + Dp[pp + 2] * rp + Dp[pp + 3] * Zp)
+        }
+        let Pi = .6 - zp * zp - sp * sp - Kp * Kp - Vp * Vp;
+        if (Pi < 0) Ap = 0;
+        else {
+          const pp = op[Ii + Np + op[Si + Tp + op[xi + fp + op[Li + bp]]]] % 32 * 4;
+          Pi *= Pi, Ap = Pi * Pi * (Dp[pp] * zp + Dp[pp + 1] * sp + Dp[pp + 2] * Kp + Dp[pp + 3] * Vp)
+        }
+        let Wi = .6 - ii * ii - ci * ci - Oi * Oi - oi * oi;
+        if (Wi < 0) Pp = 0;
+        else {
+          const pp = op[Ii + 1 + op[Si + 1 + op[xi + 1 + op[Li + 1]]]] % 32 * 4;
+          Wi *= Wi, Pp = Wi * Wi * (Dp[pp] * ii + Dp[pp + 1] * ci + Dp[pp + 2] * Oi + Dp[pp + 3] * oi)
+        }
+        return 27 * (Ip + Sp + Yp + Ap + Pp)
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

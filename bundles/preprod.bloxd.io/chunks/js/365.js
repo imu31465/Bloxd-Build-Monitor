@@ -1,19 +1,29 @@
 export const id = 365;
 export const ids = [365];
 export const modules = {
-  61069: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      lod3DPixelShader: () => nC
-    });
-    var QC = ZC(39674);
-    const wC = "lod3DPixelShader",
-      bC = "precision highp float;precision highp sampler3D;const float GammaEncodePowerApprox=1.0/2.2;varying vec2 vUV;uniform sampler3D textureSampler;uniform float lod;uniform float slice;uniform int gamma;void main(void)\n{ivec3 textureCoordinates=ivec3(vUV*vec2(textureSize(textureSampler,0).xy),int(slice));gl_FragColor=texelFetch(textureSampler,textureCoordinates,int(lod));if (gamma==0) {gl_FragColor.rgb=pow(gl_FragColor.rgb,vec3(GammaEncodePowerApprox));}}\n";
-    QC.b.ShadersStore[wC] || (QC.b.ShadersStore[wC] = bC);
-    const nC = {
-      name: wC,
-      shader: bC
+  61462: (pp, ip, cp) => {
+    function Op(pp, ip) {
+      for (const cp of pp._frameGraph._tasks)
+        if (cp?._config && cp._colorAttachment && (cp._config.rt === ip.scRT || cp._config.rst === ip.scRT)) return cp
     }
+
+    function op(pp, ip) {
+      const cp = pp._renderingContexts[pp._renderingContexts.length - 1];
+      if (!cp?._frameGraph) return;
+      const op = Op(ip, pp);
+      if (!op) return;
+      if (1 === pp.msaaSamples) return void(op._config.clr = !1);
+      const Ip = op.enabled;
+      op._config.clr = !0, op.enabled = !1, ip._beforeRender.unshift((() => {
+        const ip = Op(cp, pp),
+          Sp = ip?._config.rst === pp.scRT && ip._config.rt._colorView;
+        op.enabled = !!Sp && Ip, op._config.clr = !Sp, Sp && (op._colorAttachment.view = Sp)
+      }))
+    }
+    cp.r(ip), cp.d(ip, {
+      configureSwapchainOverlayScene: () => op
+    })
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

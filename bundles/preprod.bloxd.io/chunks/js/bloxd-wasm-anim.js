@@ -1,271 +1,271 @@
 export const id = 5;
 export const ids = [5];
 export const modules = {
-  42435: (CC, zC, ZC) => {
-    CC.exports = ZC.p + "static/media/bloxd_wasm_anim_bg.72dea6b87a87456a5828.wasm"
+  42941: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/bloxd_wasm_anim_bg.ab5b80b8d68f5e91c45a.wasm"
   },
-  42432: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      BloxdAnimWasmError: () => lC,
-      compileAnimationPackInWasm: () => rC
+  42935: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      BloxdAnimWasmError: () => Bp,
+      compileAnimationPackInWasm: () => bp
     });
-    var QC = {};
+    var Op = {};
 
-    function wC(CC, zC, ZC, QC, wC, bC) {
-      const nC = GC(CC, hC.XsNz),
-        fC = KC,
-        oC = GC(zC, hC.XsNz),
-        qC = KC,
-        FC = GC(ZC, hC.XsNz),
-        WC = KC,
-        NC = GC(QC, hC.XsNz),
-        gC = KC,
-        SC = GC(wC, hC.XsNz),
-        pC = KC;
-      var RC = PC(bC) ? 0 : function(CC, zC) {
-          const ZC = zC(1 * CC.length, 1) >>> 0;
-          return MC().set(CC, ZC / 1), KC = CC.length, ZC
-        }(bC, hC.XsNz),
-        xC = KC;
-      const JC = hC.JmIP(nC, fC, oC, qC, FC, WC, NC, gC, SC, pC, RC, xC);
-      if (JC[3]) throw AC(JC[2]);
-      var IC, iC, vC = (IC = JC[0], iC = JC[1], IC >>>= 0, MC().subarray(IC / 1, IC / 1 + iC)).slice();
-      return hC.LnDQ(JC[0], 1 * JC[1], 1), vC
+    function op(pp, ip, cp, Op, op, Ip) {
+      const Sp = tp(pp, Mp.fgSa),
+        xp = Cp,
+        Lp = tp(ip, Mp.fgSa),
+        Yp = Cp,
+        Dp = tp(cp, Mp.fgSa),
+        Ap = Cp,
+        Pp = tp(Op, Mp.fgSa),
+        yp = Cp,
+        Up = tp(op, Mp.fgSa),
+        wp = Cp;
+      var Hp = vp(Ip) ? 0 : function(pp, ip) {
+          const cp = ip(1 * pp.length, 1) >>> 0;
+          return Wp().set(pp, cp / 1), Cp = pp.length, cp
+        }(Ip, Mp.fgSa),
+        ep = Cp;
+      const jp = Mp.xO7R(Sp, xp, Lp, Yp, Dp, Ap, Pp, yp, Up, wp, Hp, ep);
+      if (jp[3]) throw dp(jp[2]);
+      var kp, mp, Rp = (kp = jp[0], mp = jp[1], kp >>>= 0, Wp().subarray(kp / 1, kp / 1 + mp)).slice();
+      return Mp.PZPw(jp[0], 1 * jp[1], 1), Rp
     }
 
-    function bC(CC, zC) {
-      const ZC = RC(CC, hC.XsNz, hC.l7s8),
-        QC = KC,
-        wC = hC.UdTS(ZC, QC, zC);
-      if (wC[1]) throw AC(wC[0])
+    function Ip(pp, ip) {
+      const cp = Hp(pp, Mp.fgSa, Mp.hVwD),
+        Op = Cp,
+        op = Mp.zeZa(cp, Op, ip);
+      if (op[1]) throw dp(op[0])
     }
 
-    function nC() {
-      hC.S3an()
+    function Sp() {
+      Mp.V64H()
     }
 
-    function fC() {
+    function xp() {
       return {
         __proto__: null,
-        OrUC: {
+        VfU7: {
           __proto__: null,
-          xH1Z: function(CC, zC) {
-            return oC(Error(WC(CC, zC)))
+          spUr: function(pp, ip) {
+            return Lp(Error(Ap(pp, ip)))
           },
-          I3eF: function(CC, zC) {
-            const ZC = gC(zC),
-              QC = "string" === typeof ZC ? ZC : void 0;
-            var wC = PC(QC) ? 0 : RC(QC, hC.XsNz, hC.l7s8),
-              bC = KC;
-            FC().setInt32(CC + 4, bC, !0), FC().setInt32(CC + 0, wC, !0)
+          bBjB: function(pp, ip) {
+            const cp = yp(ip),
+              Op = "string" === typeof cp ? cp : void 0;
+            var op = vp(Op) ? 0 : Hp(Op, Mp.fgSa, Mp.hVwD),
+              Ip = Cp;
+            Dp().setInt32(pp + 4, Ip, !0), Dp().setInt32(pp + 0, op, !0)
           },
-          B5M0: function(CC, zC) {
-            throw new Error(WC(CC, zC))
+          geTR: function(pp, ip) {
+            throw new Error(Ap(pp, ip))
           },
-          SICw: function(CC, zC) {
-            console.error(WC(CC, zC))
+          zT7c: function(pp, ip) {
+            console.error(Ap(pp, ip))
           },
-          Rv0u: function(CC) {
-            AC(CC)
+          bQdA: function(pp) {
+            dp(pp)
           }
         }
       }
     }
 
-    function oC(CC) {
-      pC === SC.length && SC.push(SC.length + 1);
-      const zC = pC;
-      return pC = SC[zC], SC[zC] = CC, zC
+    function Lp(pp) {
+      wp === Up.length && Up.push(Up.length + 1);
+      const ip = wp;
+      return wp = Up[ip], Up[ip] = pp, ip
     }
-    ZC.r(QC), ZC.d(QC, {
-      hnC: () => wC,
-      SW: () => bC,
-      default: () => mC,
-      initSync: () => dC,
-      pW: () => nC
+    cp.r(Op), cp.d(Op, {
+      Hxp: () => op,
+      dA: () => Ip,
+      default: () => lp,
+      initSync: () => Xp,
+      eA: () => Sp
     });
-    let qC = null;
+    let Yp = null;
 
-    function FC() {
-      return null !== qC && qC.buffer === hC.memory.buffer || (qC = new DataView(hC.memory.buffer)), qC
+    function Dp() {
+      return null !== Yp && Yp.buffer === Mp.memory.buffer || (Yp = new DataView(Mp.memory.buffer)), Yp
     }
 
-    function WC(CC, zC) {
-      return function(CC, zC) {
-        IC += zC, IC >= JC && (xC = new TextDecoder("utf-8", {
+    function Ap(pp, ip) {
+      return function(pp, ip) {
+        kp += ip, kp >= jp && (ep = new TextDecoder("utf-8", {
           ignoreBOM: !0,
           fatal: !0
-        }), xC.decode(), IC = zC);
-        return xC.decode(MC().subarray(CC, CC + zC))
-      }(CC >>> 0, zC)
+        }), ep.decode(), kp = ip);
+        return ep.decode(Wp().subarray(pp, pp + ip))
+      }(pp >>> 0, ip)
     }
-    let NC = null;
+    let Pp = null;
 
-    function MC() {
-      return null !== NC && 0 !== NC.byteLength || (NC = new Uint8Array(hC.memory.buffer)), NC
-    }
-
-    function gC(CC) {
-      return SC[CC]
-    }
-    let SC = new Array(1024).fill(void 0);
-    SC.push(void 0, null, !0, !1);
-    let pC = SC.length;
-
-    function PC(CC) {
-      return void 0 === CC || null === CC
+    function Wp() {
+      return null !== Pp && 0 !== Pp.byteLength || (Pp = new Uint8Array(Mp.memory.buffer)), Pp
     }
 
-    function GC(CC, zC) {
-      const ZC = zC(4 * CC.length, 4) >>> 0,
-        QC = FC();
-      for (let wC = 0; wC < CC.length; wC++) QC.setUint32(ZC + 4 * wC, oC(CC[wC]), !0);
-      return KC = CC.length, ZC
+    function yp(pp) {
+      return Up[pp]
+    }
+    let Up = new Array(1024).fill(void 0);
+    Up.push(void 0, null, !0, !1);
+    let wp = Up.length;
+
+    function vp(pp) {
+      return void 0 === pp || null === pp
     }
 
-    function RC(CC, zC, ZC) {
-      if (void 0 === ZC) {
-        const ZC = iC.encode(CC),
-          QC = zC(ZC.length, 1) >>> 0;
-        return MC().subarray(QC, QC + ZC.length).set(ZC), KC = ZC.length, QC
+    function tp(pp, ip) {
+      const cp = ip(4 * pp.length, 4) >>> 0,
+        Op = Dp();
+      for (let op = 0; op < pp.length; op++) Op.setUint32(cp + 4 * op, Lp(pp[op]), !0);
+      return Cp = pp.length, cp
+    }
+
+    function Hp(pp, ip, cp) {
+      if (void 0 === cp) {
+        const cp = mp.encode(pp),
+          Op = ip(cp.length, 1) >>> 0;
+        return Wp().subarray(Op, Op + cp.length).set(cp), Cp = cp.length, Op
       }
-      let QC = CC.length,
-        wC = zC(QC, 1) >>> 0;
-      const bC = MC();
-      let nC = 0;
-      for (; nC < QC; nC++) {
-        const zC = CC.charCodeAt(nC);
-        if (zC > 127) break;
-        bC[wC + nC] = zC
+      let Op = pp.length,
+        op = ip(Op, 1) >>> 0;
+      const Ip = Wp();
+      let Sp = 0;
+      for (; Sp < Op; Sp++) {
+        const ip = pp.charCodeAt(Sp);
+        if (ip > 127) break;
+        Ip[op + Sp] = ip
       }
-      if (nC !== QC) {
-        0 !== nC && (CC = CC.slice(nC)), wC = ZC(wC, QC, QC = nC + 3 * CC.length, 1) >>> 0;
-        const zC = MC().subarray(wC + nC, wC + QC);
-        nC += iC.encodeInto(CC, zC).written, wC = ZC(wC, QC, nC, 1) >>> 0
+      if (Sp !== Op) {
+        0 !== Sp && (pp = pp.slice(Sp)), op = cp(op, Op, Op = Sp + 3 * pp.length, 1) >>> 0;
+        const ip = Wp().subarray(op + Sp, op + Op);
+        Sp += mp.encodeInto(pp, ip).written, op = cp(op, Op, Sp, 1) >>> 0
       }
-      return KC = nC, wC
+      return Cp = Sp, op
     }
 
-    function AC(CC) {
-      const zC = gC(CC);
-      return function(CC) {
-        CC < 1028 || (SC[CC] = pC, pC = CC)
-      }(CC), zC
+    function dp(pp) {
+      const ip = yp(pp);
+      return function(pp) {
+        pp < 1028 || (Up[pp] = wp, wp = pp)
+      }(pp), ip
     }
-    let xC = new TextDecoder("utf-8", {
+    let ep = new TextDecoder("utf-8", {
       ignoreBOM: !0,
       fatal: !0
     });
-    xC.decode();
-    const JC = 2146435072;
-    let IC = 0;
-    const iC = new TextEncoder;
-    "encodeInto" in iC || (iC.encodeInto = function(CC, zC) {
-      const ZC = iC.encode(CC);
-      return zC.set(ZC), {
-        read: CC.length,
-        written: ZC.length
+    ep.decode();
+    const jp = 2146435072;
+    let kp = 0;
+    const mp = new TextEncoder;
+    "encodeInto" in mp || (mp.encodeInto = function(pp, ip) {
+      const cp = mp.encode(pp);
+      return ip.set(cp), {
+        read: pp.length,
+        written: cp.length
       }
     });
-    let vC, eC, hC, KC = 0;
+    let Rp, qp, Mp, Cp = 0;
 
-    function YC(CC, zC) {
-      return eC = CC, hC = CC.exports, vC = zC, qC = null, NC = null, hC.B1Kp(), hC
+    function Ep(pp, ip) {
+      return qp = pp, Mp = pp.exports, Rp = ip, Yp = null, Pp = null, Mp.jq1x(), Mp
     }
 
-    function dC(CC) {
-      if (void 0 !== hC) return hC;
-      void 0 !== CC && (Object.getPrototypeOf(CC) === Object.prototype ? ({
-        module: CC
-      } = CC) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
-      const zC = fC();
-      CC instanceof WebAssembly.Module || (CC = new WebAssembly.Module(CC));
-      return YC(new WebAssembly.Instance(CC, zC), CC)
+    function Xp(pp) {
+      if (void 0 !== Mp) return Mp;
+      void 0 !== pp && (Object.getPrototypeOf(pp) === Object.prototype ? ({
+        module: pp
+      } = pp) : console.warn("using deprecated parameters for `initSync()`; pass a single object instead"));
+      const ip = xp();
+      pp instanceof WebAssembly.Module || (pp = new WebAssembly.Module(pp));
+      return Ep(new WebAssembly.Instance(pp, ip), pp)
     }
-    async function mC(CC) {
-      if (void 0 !== hC) return hC;
-      void 0 !== CC && (Object.getPrototypeOf(CC) === Object.prototype ? ({
-        module_or_path: CC
-      } = CC) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
-      const zC = fC();
-      ("string" === typeof CC || "function" === typeof Request && CC instanceof Request || "function" === typeof URL && CC instanceof URL) && (CC = fetch(CC));
+    async function lp(pp) {
+      if (void 0 !== Mp) return Mp;
+      void 0 !== pp && (Object.getPrototypeOf(pp) === Object.prototype ? ({
+        module_or_path: pp
+      } = pp) : console.warn("using deprecated parameters for the initialization function; pass a single object instead"));
+      const ip = xp();
+      ("string" === typeof pp || "function" === typeof Request && pp instanceof Request || "function" === typeof URL && pp instanceof URL) && (pp = fetch(pp));
       const {
-        instance: ZC,
-        module: QC
-      } = await async function(CC, zC) {
-        if ("function" === typeof Response && CC instanceof Response) {
-          if (!CC.ok) throw new Error(`failed to fetch Wasm: ${CC.status} ${CC.statusText} fetching '${CC.url}'`);
+        instance: cp,
+        module: Op
+      } = await async function(pp, ip) {
+        if ("function" === typeof Response && pp instanceof Response) {
+          if (!pp.ok) throw new Error(`failed to fetch Wasm: ${pp.status} ${pp.statusText} fetching '${pp.url}'`);
           if ("function" === typeof WebAssembly.instantiateStreaming) try {
-            return await WebAssembly.instantiateStreaming(CC, zC)
-          } catch (ZC) {
-            if (! function(CC) {
-                switch (CC) {
+            return await WebAssembly.instantiateStreaming(pp, ip)
+          } catch (cp) {
+            if (! function(pp) {
+                switch (pp) {
                   case "basic":
                   case "cors":
                   case "default":
                     return !0
                 }
                 return !1
-              }(CC.type) || "application/wasm" === CC.headers.get("Content-Type")) throw ZC;
-            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", ZC)
+              }(pp.type) || "application/wasm" === pp.headers.get("Content-Type")) throw cp;
+            console.warn("`WebAssembly.instantiateStreaming` failed because your server does not serve Wasm with `application/wasm` MIME type. Falling back to `WebAssembly.instantiate` which is slower. Original error:\n", cp)
           }
-          const QC = await CC.arrayBuffer();
-          return await WebAssembly.instantiate(QC, zC)
+          const Op = await pp.arrayBuffer();
+          return await WebAssembly.instantiate(Op, ip)
         } {
-          const ZC = await WebAssembly.instantiate(CC, zC);
-          return ZC instanceof WebAssembly.Instance ? {
-            instance: ZC,
-            module: CC
-          } : ZC
+          const cp = await WebAssembly.instantiate(pp, ip);
+          return cp instanceof WebAssembly.Instance ? {
+            instance: cp,
+            module: pp
+          } : cp
         }
-      }(await CC, zC);
-      return YC(ZC, QC)
+      }(await pp, ip);
+      return Ep(cp, Op)
     }
-    var HC = ZC(2856),
-      EC = ZC(6616);
-    class lC extends Error {
+    var Qp = cp(2970),
+      Jp = cp(6762);
+    class Bp extends Error {
       stage;
-      constructor(CC, zC) {
-        super((0, HC.F)(CC, zC), {
-          cause: zC
-        }), this.name = "BloxdAnimWasmError", this.stage = CC
+      constructor(pp, ip) {
+        super((0, Qp.B)(pp, ip), {
+          cause: ip
+        }), this.name = "BloxdAnimWasmError", this.stage = pp
       }
     }
-    let XC = null,
-      cC = null;
+    let Np = null,
+      Tp = null;
 
-    function uC() {
-      if (cC) throw cC
+    function fp() {
+      if (Tp) throw Tp
     }
-    async function rC(CC, zC, wC) {
-      uC();
-      const bC = await (XC ??= (async () => {
-        let CC;
+    async function bp(pp, ip, op) {
+      fp();
+      const Ip = await (Np ??= (async () => {
+        let pp;
         try {
-          CC = await (0, HC.I)(new ZC.U(ZC(42435)), (0, EC.e)("bloxd_wasm_anim"))
-        } catch (zC) {
-          throw new lC((0, HC.P)(zC), zC)
+          pp = await (0, Qp.C)(new cp.U(cp(42941)), (0, Jp.e)("bloxd_wasm_anim"))
+        } catch (ip) {
+          throw new Bp((0, Qp.J)(ip), ip)
         }
         try {
-          await mC({
-            module_or_path: CC
+          await lp({
+            module_or_path: pp
           })
-        } catch (zC) {
-          throw new lC("instantiate", zC)
+        } catch (ip) {
+          throw new Bp("instantiate", ip)
         }
-        return QC
-      })(), XC.catch((() => {
-        XC = null
-      })), XC);
-      uC();
+        return Op
+      })(), Np.catch((() => {
+        Np = null
+      })), Np);
+      fp();
       try {
-        return bC.hnC(Object.entries(CC).flat(), [...zC.mobTypes], [...zC.vehicleTypes], [...zC.mobAiStates], [...zC.playerPoses], "builtIns" in wC ? wC.builtIns : void 0)
-      } catch (nC) {
-        const CC = new lC("call", nC);
-        throw nC instanceof WebAssembly.RuntimeError && (cC = CC), CC
+        return Ip.Hxp(Object.entries(pp).flat(), [...ip.mobTypes], [...ip.vehicleTypes], [...ip.mobAiStates], [...ip.playerPoses], "builtIns" in op ? op.builtIns : void 0)
+      } catch (Sp) {
+        const pp = new Bp("call", Sp);
+        throw Sp instanceof WebAssembly.RuntimeError && (Tp = pp), pp
       }
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

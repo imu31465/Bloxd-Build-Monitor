@@ -1,116 +1,116 @@
 export const id = 26;
 export const ids = [26];
 export const modules = {
-  39367: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      default: () => fC
+  39753: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      default: () => xp
     });
-    var QC = ZC(34173);
-    const wC = 1e3 / 3;
+    var Op = cp(34453);
+    const op = 1e3 / 3;
 
-    function bC(CC, zC, ZC) {
-      if ("parenthetical-seconds" === zC) return ` (${CC}s)`;
-      const QC = `${Math.floor(CC/60)}:${(CC%60).toString().padStart(2,"0")}`;
-      return ZC ? `${ZC}${QC}` : QC
+    function Ip(pp, ip, cp) {
+      if ("parenthetical-seconds" === ip) return ` (${pp}s)`;
+      const Op = `${Math.floor(pp/60)}:${(pp%60).toString().padStart(2,"0")}`;
+      return cp ? `${cp}${Op}` : Op
     }
 
-    function nC(CC, zC, ZC, wC, bC) {
-      var nC;
-      const fC = {
-        ...wC.baseNametag
+    function Sp(pp, ip, cp, op, Ip) {
+      var Sp;
+      const xp = {
+        ...op.baseNametag
       };
-      fC.content = [...null !== (nC = wC.baseNametag.content) && void 0 !== nC ? nC : [], {
+      xp.content = [...null !== (Sp = op.baseNametag.content) && void 0 !== Sp ? Sp : [], {
         str: " "
       }, {
         icon: "Gold Coin"
       }, {
-        str: `: ${(0,QC.d)(bC)}`
-      }], CC.setOtherEntitySetting(zC, ZC, "nameTagInfo", fC)
+        str: `: ${(0,Op.e)(Ip)}`
+      }], pp.setOtherEntitySetting(ip, cp, "nameTagInfo", xp)
     }
-    const fC = function(CC, zC, ZC, QC) {
-      let fC, {
-        localPlayerId: oC
-      } = QC;
-      const qC = new Map,
-        FC = new Map;
-      let WC = 0,
-        NC = 0;
+    const xp = function(pp, ip, cp, Op) {
+      let xp, {
+        localPlayerId: Lp
+      } = Op;
+      const Yp = new Map,
+        Dp = new Map;
+      let Ap = 0,
+        Pp = 0;
       return {
-        onCreate: CC => {
-          fC = CC
+        onCreate: pp => {
+          xp = pp
         },
-        ZN: CC => {
-          const zC = Date.now();
-          for (const [QC, wC] of qC) {
-            const CC = Math.floor((zC - wC.startTime) / 1e3),
-              nC = Math.max(0, wC.remainingSeconds - CC);
-            if (nC === wC.lastRenderedSecond) continue;
-            wC.lastRenderedSecond = nC;
-            const FC = {
-                str: bC(nC, wC.format, wC.prefix),
-                style: wC.style
+        LP: pp => {
+          const ip = Date.now();
+          for (const [Op, op] of Yp) {
+            const pp = Math.floor((ip - op.startTime) / 1e3),
+              Sp = Math.max(0, op.remainingSeconds - pp);
+            if (Sp === op.lastRenderedSecond) continue;
+            op.lastRenderedSecond = Sp;
+            const Dp = {
+                str: Ip(Sp, op.format, op.prefix),
+                style: op.style
               },
-              WC = {
-                ...wC.baseNametag
+              Ap = {
+                ...op.baseNametag
               };
-            var ZC;
-            if ("content" === wC.location) WC.content = [...null !== (ZC = wC.baseNametag.content) && void 0 !== ZC ? ZC : [], FC];
-            else WC.subtitle = [FC];
-            fC.setOtherEntitySetting(oC, QC, "nameTagInfo", WC), nC <= 0 && qC.delete(QC)
+            var cp;
+            if ("content" === op.location) Ap.content = [...null !== (cp = op.baseNametag.content) && void 0 !== cp ? cp : [], Dp];
+            else Ap.subtitle = [Dp];
+            xp.setOtherEntitySetting(Lp, Op, "nameTagInfo", Ap), Sp <= 0 && Yp.delete(Op)
           }
-          if (FC.size > 0 && zC - WC >= wC) {
-            WC = zC, NC = (NC + 1) % 3;
-            let CC = 0;
-            for (const [ZC, QC] of FC) {
-              if (CC++ % 3 !== NC) continue;
-              const wC = Math.floor((zC - QC.startTime) / 1e3);
-              if (wC === QC.lastRenderedSecond) continue;
-              QC.lastRenderedSecond = wC;
-              const bC = QC.accumulatedIncome + QC.incomePerSecond * BigInt(wC);
-              nC(fC, oC, ZC, QC, bC)
+          if (Dp.size > 0 && ip - Ap >= op) {
+            Ap = ip, Pp = (Pp + 1) % 3;
+            let pp = 0;
+            for (const [cp, Op] of Dp) {
+              if (pp++ % 3 !== Pp) continue;
+              const op = Math.floor((ip - Op.startTime) / 1e3);
+              if (op === Op.lastRenderedSecond) continue;
+              Op.lastRenderedSecond = op;
+              const Ip = Op.accumulatedIncome + Op.incomePerSecond * BigInt(op);
+              Sp(xp, Lp, cp, Op, Ip)
             }
           }
         },
-        onReceivedMessageFromServer: (CC, zC) => {
-          if ("startCountdown" === CC) qC.set(zC.eId, {
-            baseNametag: zC.baseNametag,
-            remainingSeconds: zC.remainingSeconds,
+        onReceivedMessageFromServer: (pp, ip) => {
+          if ("startCountdown" === pp) Yp.set(ip.eId, {
+            baseNametag: ip.baseNametag,
+            remainingSeconds: ip.remainingSeconds,
             startTime: Date.now(),
-            format: zC.format,
-            location: zC.location,
-            prefix: zC.prefix,
-            style: zC.style,
+            format: ip.format,
+            location: ip.location,
+            prefix: ip.prefix,
+            style: ip.style,
             lastRenderedSecond: -1
           });
-          else if ("stopCountdown" === CC) qC.delete(zC.eId);
-          else if ("startIncomeTicking" === CC) {
-            const CC = {
-              baseNametag: zC.baseNametag,
-              accumulatedIncome: BigInt(zC.accumulatedIncome),
-              incomePerSecond: BigInt(zC.incomePerSecond),
+          else if ("stopCountdown" === pp) Yp.delete(ip.eId);
+          else if ("startIncomeTicking" === pp) {
+            const pp = {
+              baseNametag: ip.baseNametag,
+              accumulatedIncome: BigInt(ip.accumulatedIncome),
+              incomePerSecond: BigInt(ip.incomePerSecond),
               startTime: Date.now(),
               lastRenderedSecond: -1
             };
-            FC.set(zC.eId, CC), nC(fC, oC, zC.eId, CC, CC.accumulatedIncome)
-          } else "stopIncomeTicking" === CC && FC.delete(zC.eId) && fC.setOtherEntitySetting(oC, zC.eId, "nameTagInfo", {
+            Dp.set(ip.eId, pp), Sp(xp, Lp, ip.eId, pp, pp.accumulatedIncome)
+          } else "stopIncomeTicking" === pp && Dp.delete(ip.eId) && xp.setOtherEntitySetting(Lp, ip.eId, "nameTagInfo", {
             content: []
           })
         },
-        onPlayerAltAction: (CC, zC, ZC, QC, wC, bC) => {
-          if (bC && "Mesh" === fC.getEntityType(bC)) {
-            const zC = fC.getEntityName(bC);
-            "Upgrades" === zC ? fC.openShop(CC, !1, "Upgrades") : "Items" === zC ? fC.openShop(CC, !1, "Items") : "Prestige" === zC ? fC.openShop(CC, !1, "Prestige") : "Collections" === zC ? fC.openShop(CC, !1, "Collections") : "Base Skins" === zC ? fC.openShop(CC, !1, "Base Skins") : "Gauntlet" === zC ? fC.openShop(CC, !1, "Gauntlet") : "Diamond Shop" === zC && fC.openShop(CC, !1, "Diamond Shop")
+        onPlayerAltAction: (pp, ip, cp, Op, op, Ip) => {
+          if (Ip && "Mesh" === xp.getEntityType(Ip)) {
+            const ip = xp.getEntityName(Ip);
+            "Upgrades" === ip ? xp.openShop(pp, !1, "Upgrades") : "Items" === ip ? xp.openShop(pp, !1, "Items") : "Prestige" === ip ? xp.openShop(pp, !1, "Prestige") : "Collections" === ip ? xp.openShop(pp, !1, "Collections") : "Base Skins" === ip ? xp.openShop(pp, !1, "Base Skins") : "Gauntlet" === ip ? xp.openShop(pp, !1, "Gauntlet") : "Diamond Shop" === ip && xp.openShop(pp, !1, "Diamond Shop")
           }
         }
       }
     }
   },
-  34173: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => wC,
-      e: () => nC
+  34453: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => op,
+      g: () => Sp
     });
-    const QC = [{
+    const Op = [{
       threshold: 10n ** 180n,
       suffix: "NoQig"
     }, {
@@ -292,67 +292,67 @@ export const modules = {
       suffix: "K"
     }];
 
-    function wC(CC) {
-      let zC, ZC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
-      if ("number" === typeof CC) {
-        if (!Number.isFinite(CC)) return "0";
-        if (Math.abs(CC) < 100) {
-          const zC = CC < 0 ? "-" : "",
-            ZC = Math.abs(CC);
-          return ZC >= 10 ? `${zC}${ZC.toFixed(1).replace(/\.0$/,"")}` : `${zC}${ZC.toFixed(2).replace(/\.?0+$/,"")}`
+    function op(pp) {
+      let ip, cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
+      if ("number" === typeof pp) {
+        if (!Number.isFinite(pp)) return "0";
+        if (Math.abs(pp) < 100) {
+          const ip = pp < 0 ? "-" : "",
+            cp = Math.abs(pp);
+          return cp >= 10 ? `${ip}${cp.toFixed(1).replace(/\.0$/,"")}` : `${ip}${cp.toFixed(2).replace(/\.?0+$/,"")}`
         }
-        zC = BigInt(Math.floor(CC))
-      } else zC = CC;
-      const wC = zC < 0n ? -zC : zC,
-        bC = zC < 0n ? "-" : "",
-        nC = wC.toString();
-      if (nC.length <= ZC) return `${bC}${nC}`;
-      const fC = 3 * Math.floor((nC.length - 1) / 3);
-      if (fC < 3) return `${bC}${nC}`;
-      if (fC > 3 * QC.length) {
-        const CC = nC[0],
-          zC = nC.slice(1, 3).replace(/0+$/, "");
-        return `${bC}${zC?`${CC}.${zC}`:CC}e${nC.length-1}`
+        ip = BigInt(Math.floor(pp))
+      } else ip = pp;
+      const op = ip < 0n ? -ip : ip,
+        Ip = ip < 0n ? "-" : "",
+        Sp = op.toString();
+      if (Sp.length <= cp) return `${Ip}${Sp}`;
+      const xp = 3 * Math.floor((Sp.length - 1) / 3);
+      if (xp < 3) return `${Ip}${Sp}`;
+      if (xp > 3 * Op.length) {
+        const pp = Sp[0],
+          ip = Sp.slice(1, 3).replace(/0+$/, "");
+        return `${Ip}${ip?`${pp}.${ip}`:pp}e${Sp.length-1}`
       }
       const {
-        threshold: oC,
-        suffix: qC
-      } = QC[QC.length - fC / 3], FC = wC / oC, WC = Number(1000n * (wC % oC) / oC), NC = Number(FC) + WC / 1e3;
-      let MC;
-      return MC = NC >= 100 ? Math.floor(NC).toString() : NC >= 10 ? NC.toFixed(1).replace(/\.0$/, "") : NC.toFixed(2).replace(/\.?0+$/, ""), `${bC}${MC}${qC}`
+        threshold: Lp,
+        suffix: Yp
+      } = Op[Op.length - xp / 3], Dp = op / Lp, Ap = Number(1000n * (op % Lp) / Lp), Pp = Number(Dp) + Ap / 1e3;
+      let Wp;
+      return Wp = Pp >= 100 ? Math.floor(Pp).toString() : Pp >= 10 ? Pp.toFixed(1).replace(/\.0$/, "") : Pp.toFixed(2).replace(/\.?0+$/, ""), `${Ip}${Wp}${Yp}`
     }
-    const bC = QC.map((CC => {
+    const Ip = Op.map((pp => {
       let {
-        threshold: zC,
-        suffix: ZC
-      } = CC;
+        threshold: ip,
+        suffix: cp
+      } = pp;
       return {
-        threshold: Number(zC),
-        suffix: ZC
+        threshold: Number(ip),
+        suffix: cp
       }
-    })).filter((CC => {
+    })).filter((pp => {
       let {
-        threshold: zC
-      } = CC;
-      return Number.isFinite(zC)
+        threshold: ip
+      } = pp;
+      return Number.isFinite(ip)
     }));
 
-    function nC(CC) {
-      const zC = Math.abs(CC),
-        ZC = CC < 0 ? "-" : "";
+    function Sp(pp) {
+      const ip = Math.abs(pp),
+        cp = pp < 0 ? "-" : "";
       for (const {
-          threshold: QC,
-          suffix: wC
+          threshold: Op,
+          suffix: op
         }
-        of bC)
-        if (zC >= QC) {
-          const CC = zC / QC;
-          if (CC >= 1e3) return `${ZC}${zC.toExponential(2).replace("e+","e")}`;
-          let bC;
-          return bC = CC >= 100 ? Math.floor(CC).toString() : CC >= 10 ? CC.toFixed(1).replace(/\.0$/, "") : CC.toFixed(2).replace(/\.?0+$/, ""), `${ZC}${bC}${wC}`
-        } return `${ZC}${zC}`
+        of Ip)
+        if (ip >= Op) {
+          const pp = ip / Op;
+          if (pp >= 1e3) return `${cp}${ip.toExponential(2).replace("e+","e")}`;
+          let Ip;
+          return Ip = pp >= 100 ? Math.floor(pp).toString() : pp >= 10 ? pp.toFixed(1).replace(/\.0$/, "") : pp.toFixed(2).replace(/\.?0+$/, ""), `${cp}${Ip}${op}`
+        } return `${cp}${ip}`
     }
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

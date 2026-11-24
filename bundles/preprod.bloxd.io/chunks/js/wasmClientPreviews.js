@@ -1,38 +1,38 @@
-export const id = 59;
-export const ids = [59];
+export const id = 60;
+export const ids = [60];
 export const modules = {
-  38454: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      b: () => wC,
-      c: () => bC
+  38856: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => op,
+      c: () => Ip
     });
-    const QC = new WeakMap;
+    const Op = new WeakMap;
 
-    function wC(CC, zC) {
-      return QC.set(CC, zC), CC
+    function op(pp, ip) {
+      return Op.set(pp, ip), pp
     }
 
-    function bC(CC) {
-      var zC;
-      return null !== (zC = QC.get(CC)) && void 0 !== zC ? zC : null
+    function Ip(pp) {
+      var ip;
+      return null !== (ip = Op.get(pp)) && void 0 !== ip ? ip : null
     }
   },
-  38487: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => fC
+  38883: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => xp
     });
-    var QC = ZC(1169);
+    var Op = cp(1234);
 
-    function wC(CC) {
-      const zC = /(\d*\.?\d+)px/.exec(CC);
-      return zC ? Number(zC[1]) : null
+    function op(pp) {
+      const ip = /(\d*\.?\d+)px/.exec(pp);
+      return ip ? Number(ip[1]) : null
     }
 
-    function bC(CC) {
-      return CC.split(/[\s,]+/).pop()
+    function Ip(pp) {
+      return pp.split(/[\s,]+/).pop()
     }
-    let nC = !1;
-    const fC = {
+    let Sp = !1;
+    const xp = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -43,603 +43,605 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(CC, zC, QC, fC, oC, qC) {
-        if (oC <= 0 || qC <= 0 || this.fontSize <= 0) return {
+      drawText: function(pp, ip, Op, xp, Lp, Yp) {
+        if (Lp <= 0 || Yp <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: FC,
-          fontVariant: WC,
-          fontWeight: NC,
-          fontSize: MC,
-          font: gC
-        } = this, SC = [FC, WC, NC, `${MC}px`, gC].filter(Boolean).join(" "), pC = [
-          [NC, `${MC}px`, bC(gC)].filter(Boolean).join(" "), `${MC}px sans-serif`
-        ], PC = CC.font, GC = function(CC, zC, ZC) {
-          for (const QC of zC) {
-            CC.font = QC;
-            const zC = wC(CC.font),
-              nC = bC(QC);
-            if (null !== zC && Math.abs(zC - ZC) <= .5 && CC.font.toLowerCase().includes(nC.toLowerCase())) return QC
+          fontStyle: Dp,
+          fontVariant: Ap,
+          fontWeight: Pp,
+          fontSize: Wp,
+          font: yp
+        } = this, Up = [Dp, Ap, Pp, `${Wp}px`, yp].filter(Boolean).join(" "), wp = [
+          [Pp, `${Wp}px`, Ip(yp)].filter(Boolean).join(" "), `${Wp}px sans-serif`
+        ], vp = pp.font, tp = function(pp, ip, cp) {
+          for (const Op of ip) {
+            pp.font = Op;
+            const ip = op(pp.font),
+              Sp = Ip(Op);
+            if (null !== ip && Math.abs(ip - cp) <= .5 && pp.font.toLowerCase().includes(Sp.toLowerCase())) return Op
           }
           return null
-        }(CC, [SC, ...pC], MC);
-        GC !== SC && function(CC, zC, QC) {
-          nC || (nC = !0, Promise.resolve().then((() => ZC(1029))).then((ZC => {
+        }(pp, [Up, ...wp], Wp);
+        tp !== Up && function(pp, ip, Op) {
+          Sp || (Sp = !0, Promise.resolve().then((() => cp(1080))).then((cp => {
             let {
-              IS: wC
-            } = ZC;
-            wC(new Error("A canvas didn't take canvasTxt's font"), {
-              font: CC,
-              lM: zC,
-              drawnWith: null !== QC && void 0 !== QC ? QC : "the kept font, scaled"
+              NU: op
+            } = cp;
+            op(new Error("A canvas didn't take canvasTxt's font"), {
+              font: pp,
+              aW: ip,
+              drawnWith: null !== Op && void 0 !== Op ? Op : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(SC, PC, GC);
-        const RC = wC(CC.font);
-        if (null === GC && null !== RC && RC > 0) {
-          const ZC = MC / RC;
-          CC.save();
+        }(Up, vp, tp);
+        const Hp = op(pp.font);
+        if (null === tp && null !== Hp && Hp > 0) {
+          const cp = Wp / Hp;
+          pp.save();
           try {
-            return CC.scale(ZC, ZC), {
-              height: this.drawLines(CC, zC, QC / ZC, fC / ZC, oC / ZC, qC / ZC, RC).height * ZC
+            return pp.scale(cp, cp), {
+              height: this.drawLines(pp, ip, Op / cp, xp / cp, Lp / cp, Yp / cp, Hp).height * cp
             }
           } finally {
-            CC.restore()
+            pp.restore()
           }
         }
-        return this.drawLines(CC, zC, QC, fC, oC, qC, MC)
+        return this.drawLines(pp, ip, Op, xp, Lp, Yp, Wp)
       },
-      drawLines: function(CC, zC, ZC, wC, bC, nC, fC) {
-        const oC = ZC + bC,
-          qC = wC + nC;
-        let FC, WC = wC + nC / 2 + fC / 2;
-        "right" === this.align ? (FC = oC, CC.textAlign = "right") : "left" === this.align ? (FC = ZC, CC.textAlign = "left") : (FC = ZC + bC / 2, CC.textAlign = "center");
-        for (const QC of zC) {
-          CC.measureText(QC).width >= bC && (zC = zC.replace(QC, ""))
+      drawLines: function(pp, ip, cp, op, Ip, Sp, xp) {
+        const Lp = cp + Ip,
+          Yp = op + Sp;
+        let Dp, Ap = op + Sp / 2 + xp / 2;
+        "right" === this.align ? (Dp = Lp, pp.textAlign = "right") : "left" === this.align ? (Dp = cp, pp.textAlign = "left") : (Dp = cp + Ip / 2, pp.textAlign = "center");
+        for (const Op of ip) {
+          pp.measureText(Op).width >= Ip && (ip = ip.replace(Op, ""))
         }
-        zC = (0, QC.bb)(zC);
-        const NC = [],
-          MC = zC.split("\n"),
-          gC = this.justify ? CC.measureText("\u200a").width : 0;
-        MC.forEach((zC => {
-          let ZC = CC.measureText(zC).width;
-          if (ZC <= bC) NC.push(zC);
+        ip = (0, Op.P)(ip);
+        const Pp = [],
+          Wp = ip.split("\n"),
+          yp = this.justify ? pp.measureText("\u200a").width : 0;
+        Wp.forEach((ip => {
+          let cp = pp.measureText(ip).width;
+          if (cp <= Ip) Pp.push(ip);
           else {
-            let QC = zC;
-            const wC = bC;
-            let nC, fC, oC;
-            for (ZC = CC.measureText(QC).width; ZC > wC;) {
-              for (nC = 0, fC = 0, oC = ""; fC < wC;) nC++, oC = QC.substr(0, nC), fC = CC.measureText(oC).width;
-              nC--, oC = oC.substr(0, nC);
-              const zC = nC;
-              if (" " !== QC.substr(nC, 1)) {
+            let Op = ip;
+            const op = Ip;
+            let Sp, xp, Lp;
+            for (cp = pp.measureText(Op).width; cp > op;) {
+              for (Sp = 0, xp = 0, Lp = ""; xp < op;) Sp++, Lp = Op.substr(0, Sp), xp = pp.measureText(Lp).width;
+              Sp--, Lp = Lp.substr(0, Sp);
+              const ip = Sp;
+              if (" " !== Op.substr(Sp, 1)) {
                 for (;
-                  " " !== QC.substr(nC, 1) && 0 !== nC;) nC--;
-                0 === nC && (nC = zC), oC = QC.substr(0, nC)
+                  " " !== Op.substr(Sp, 1) && 0 !== Sp;) Sp--;
+                0 === Sp && (Sp = ip), Lp = Op.substr(0, Sp)
               }
-              oC = this.justify ? this.justifyLine(CC, oC, gC, "\u200a", bC) : oC, QC = QC.substr(nC), ZC = CC.measureText(QC).width, NC.push(oC)
+              Lp = this.justify ? this.justifyLine(pp, Lp, yp, "\u200a", Ip) : Lp, Op = Op.substr(Sp), cp = pp.measureText(Op).width, Pp.push(Lp)
             }
-            ZC > 0 && NC.push(QC)
+            cp > 0 && Pp.push(Op)
           }
         }));
-        const SC = this.lineHeight ? this.lineHeight : this.getTextHeight(CC, zC),
-          pC = SC * (NC.length - 1),
-          PC = pC / 2;
-        let GC = wC;
-        "top" === this.vAlign ? WC = wC + fC : "bottom" === this.vAlign ? (WC = qC - pC, GC = qC) : (GC = wC + nC / 2, WC -= PC), NC.forEach((zC => {
-          zC = zC.trim(), CC.fillText(zC, FC, WC), WC += SC
-        })), this.debug && (CC.lineWidth = 3, CC.strokeStyle = "#00909e", CC.strokeRect(ZC, wC, bC, nC), CC.lineWidth = 2, CC.strokeStyle = "#f6d743", CC.beginPath(), CC.moveTo(FC, wC), CC.lineTo(FC, qC), CC.stroke(), CC.strokeStyle = "#ff6363", CC.beginPath(), CC.moveTo(ZC, GC), CC.lineTo(oC, GC), CC.stroke());
+        const Up = this.lineHeight ? this.lineHeight : this.getTextHeight(pp, ip),
+          wp = Up * (Pp.length - 1),
+          vp = wp / 2;
+        let tp = op;
+        "top" === this.vAlign ? Ap = op + xp : "bottom" === this.vAlign ? (Ap = Yp - wp, tp = Yp) : (tp = op + Sp / 2, Ap -= vp), Pp.forEach((ip => {
+          ip = ip.trim(), pp.fillText(ip, Dp, Ap), Ap += Up
+        })), this.debug && (pp.lineWidth = 3, pp.strokeStyle = "#00909e", pp.strokeRect(cp, op, Ip, Sp), pp.lineWidth = 2, pp.strokeStyle = "#f6d743", pp.beginPath(), pp.moveTo(Dp, op), pp.lineTo(Dp, Yp), pp.stroke(), pp.strokeStyle = "#ff6363", pp.beginPath(), pp.moveTo(cp, tp), pp.lineTo(Lp, tp), pp.stroke());
         return {
-          height: pC + SC
+          height: wp + Up
         }
       },
-      getTextHeight: function(CC, zC) {
-        const ZC = CC.textBaseline;
-        CC.textBaseline = "bottom";
+      getTextHeight: function(pp, ip) {
+        const cp = pp.textBaseline;
+        pp.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: QC
-        } = CC.measureText(zC);
-        return CC.textBaseline = ZC, QC
+          actualBoundingBoxAscent: Op
+        } = pp.measureText(ip);
+        return pp.textBaseline = cp, Op
       },
-      justifyLine: function(CC, zC, ZC, QC, wC) {
-        const bC = zC.trim(),
-          nC = CC.measureText(bC).width,
-          fC = bC.split(/\s+/).length - 1,
-          oC = Math.floor((wC - nC) / ZC);
-        if (fC <= 0 || oC <= 0) return bC;
-        const qC = Math.floor(oC / fC);
-        let FC = oC - fC * qC,
-          WC = [];
-        for (let NC = 0; NC < qC; NC++) WC.push(QC);
-        WC = WC.join("");
-        return bC.replace(/\s+/g, (CC => {
-          const zC = FC > 0 ? WC + QC : WC;
-          return FC--, CC + zC
+      justifyLine: function(pp, ip, cp, Op, op) {
+        const Ip = ip.trim(),
+          Sp = pp.measureText(Ip).width,
+          xp = Ip.split(/\s+/).length - 1,
+          Lp = Math.floor((op - Sp) / cp);
+        if (xp <= 0 || Lp <= 0) return Ip;
+        const Yp = Math.floor(Lp / xp);
+        let Dp = Lp - xp * Yp,
+          Ap = [];
+        for (let Pp = 0; Pp < Yp; Pp++) Ap.push(Op);
+        Ap = Ap.join("");
+        return Ip.replace(/\s+/g, (pp => {
+          const ip = Dp > 0 ? Ap + Op : Ap;
+          return Dp--, pp + ip
         }))
       }
     }
   },
-  38493: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      e: () => SC,
-      f: () => gC,
-      j: () => NC,
-      n: () => FC,
-      q: () => WC
+  38890: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Up,
+      f: () => yp,
+      i: () => Pp,
+      l: () => Dp,
+      n: () => Ap
     });
-    var QC = ZC(4179),
-      wC = ZC(326);
-    const bC = 1024,
-      nC = 1536,
-      fC = 2 * QC.j + 1,
-      oC = new Intl.NumberFormat("en", {
+    var Op = cp(4341),
+      op = cp(337);
+    const Ip = 1024,
+      Sp = 1536,
+      xp = 2 * Op.l + 1,
+      Lp = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      qC = 1.5;
+      Yp = 1.5;
 
-    function FC(CC, zC, ZC) {
-      if ("string" !== typeof CC) return zC;
+    function Dp(pp, ip, cp) {
+      if ("string" !== typeof pp) return ip;
       try {
-        const ZC = JSON.parse(CC);
-        return ZC && "object" === typeof ZC ? ZC : zC
-      } catch (QC) {
-        return void 0 !== ZC && console.error(`Couldn't parse ${ZC}`, QC), zC
+        const cp = JSON.parse(pp);
+        return cp && "object" === typeof cp ? cp : ip
+      } catch (Op) {
+        return void 0 !== cp && console.error(`Couldn't parse ${cp}`, Op), ip
       }
     }
 
-    function WC(CC) {
-      return FC(CC, null, "a leaderboard's rows")
+    function Ap(pp) {
+      return Dp(pp, null, "a leaderboard's rows")
     }
 
-    function NC(CC, zC) {
-      var ZC, QC;
-      return null !== zC && void 0 !== zC ? zC : {
-        status: null !== (ZC = CC.status) && void 0 !== ZC ? ZC : "loading",
-        entries: null !== (QC = CC.entries) && void 0 !== QC ? QC : []
+    function Pp(pp, ip) {
+      var cp, Op;
+      return null !== ip && void 0 !== ip ? ip : {
+        status: null !== (cp = pp.status) && void 0 !== cp ? cp : "loading",
+        entries: null !== (Op = pp.entries) && void 0 !== Op ? Op : []
       }
     }
 
-    function MC(CC, zC) {
-      return "number" === typeof CC && Number.isFinite(CC) && CC > 0 ? CC : zC
+    function Wp(pp, ip) {
+      return "number" === typeof pp && Number.isFinite(pp) && pp > 0 ? pp : ip
     }
 
-    function gC(CC, zC) {
-      const ZC = MC(CC.size, 1);
-      let QC = MC(CC.width, MC(2.5 * ZC, 2.5)),
-        wC = MC(CC.height, MC(3.75 * ZC, 3.75));
-      Number.isFinite(bC * wC / QC) && Number.isFinite(nC * QC / wC) || (QC = 2.5, wC = 3.75);
-      const fC = wC / QC,
-        oC = Math.max(1, Math.min(bC, zC / fC));
+    function yp(pp, ip) {
+      const cp = Wp(pp.size, 1);
+      let Op = Wp(pp.width, Wp(2.5 * cp, 2.5)),
+        op = Wp(pp.height, Wp(3.75 * cp, 3.75));
+      Number.isFinite(Ip * op / Op) && Number.isFinite(Sp * Op / op) || (Op = 2.5, op = 3.75);
+      const xp = op / Op,
+        Lp = Math.max(1, Math.min(Ip, ip / xp));
       return {
-        width: QC,
-        height: wC,
-        layoutWidth: Math.max(bC, nC / fC),
-        layoutHeight: Math.max(nC, bC * fC),
-        pixelWidth: Math.round(oC),
-        pixelHeight: Math.round(Math.max(1, Math.min(zC, oC * fC)))
+        width: Op,
+        height: op,
+        layoutWidth: Math.max(Ip, Sp / xp),
+        layoutHeight: Math.max(Sp, Ip * xp),
+        pixelWidth: Math.round(Lp),
+        pixelHeight: Math.round(Math.max(1, Math.min(ip, Lp * xp)))
       }
     }
 
-    function SC(CC, zC, ZC, nC, FC, WC) {
-      CC.setTransform(1, 0, 0, 1, 0, 0), CC.fillStyle = wC.H.defaultNameTagBackground, CC.fillRect(0, 0, zC, ZC), CC.scale(zC / nC.layoutWidth, ZC / nC.layoutHeight), CC.translate((nC.layoutWidth - bC) / 2, 0),
-        function(CC, zC, ZC, bC) {
-          var nC, FC, WC, NC;
+    function Up(pp, ip, cp, Sp, Dp, Ap) {
+      pp.setTransform(1, 0, 0, 1, 0, 0), pp.fillStyle = op.N.defaultNameTagBackground, pp.fillRect(0, 0, ip, cp), pp.scale(ip / Sp.layoutWidth, cp / Sp.layoutHeight), pp.translate((Sp.layoutWidth - Ip) / 2, 0),
+        function(pp, ip, cp, Ip) {
+          var Sp, Dp, Ap, Pp;
           const {
-            top: MC,
-            around: gC,
-            showPlayerText: SC,
-            localPlayerDbId: GC
-          } = ZC, {
-            whiteUiText: RC,
-            grayUiText: AC,
-            yellowUiText: xC
-          } = wC.H;
-          CC.textBaseline = "middle";
-          const JC = function(zC, ZC, QC, wC, bC, nC) {
-              let fC = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              CC.font = `bold ${wC}px 'Jetbrains Mono', monospace`, CC.fillStyle = bC, CC.textAlign = fC;
-              let oC = zC.replace(/[\r\n\t]/g, " ");
-              if (CC.measureText(oC).width > nC) {
-                for (; oC.length > 0 && CC.measureText(`${oC}\u2026`).width > nC;) oC = oC.slice(0, -1);
-                oC += "\u2026"
+            top: Wp,
+            around: yp,
+            showPlayerText: Up,
+            localPlayerDbId: tp
+          } = cp, {
+            whiteUiText: Hp,
+            grayUiText: dp,
+            yellowUiText: ep
+          } = op.N;
+          pp.textBaseline = "middle";
+          const jp = function(ip, cp, Op, op, Ip, Sp) {
+              let xp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              pp.font = `bold ${op}px 'Jetbrains Mono', monospace`, pp.fillStyle = Ip, pp.textAlign = xp;
+              let Lp = ip.replace(/[\r\n\t]/g, " ");
+              if (pp.measureText(Lp).width > Sp) {
+                for (; Lp.length > 0 && pp.measureText(`${Lp}\u2026`).width > Sp;) Lp = Lp.slice(0, -1);
+                Lp += "\u2026"
               }
-              CC.fillText(oC, ZC, QC)
+              pp.fillText(Lp, cp, Op)
             },
-            IC = zC => {
-              CC.fillStyle = RC, CC.globalAlpha = .15, CC.fillRect(24, zC, 976, 2), CC.globalAlpha = 1
+            kp = ip => {
+              pp.fillStyle = Hp, pp.globalAlpha = .15, pp.fillRect(24, ip, 976, 2), pp.globalAlpha = 1
             },
-            iC = null === GC ? null : (0, wC.ac)(GC),
-            vC = CC => null !== iC && CC.playerHash === iC,
-            eC = pC(MC.entries, QC.l),
-            hC = "ready" === MC.status && eC.length > 0,
-            KC = null === gC ? [] : pC(gC.entries, fC),
-            YC = eC.some(vC),
-            dC = null === gC ? null : function(CC) {
-              const zC = CC;
-              if (!zC || !Number.isFinite(zC.rank) || !Number.isFinite(zC.tied) || !Number.isFinite(zC.total)) return null;
-              return zC
-            }(gC.standing),
-            mC = KC.find(vC),
-            HC = eC.find(vC),
-            EC = null === dC || void 0 === mC ? null : {
-              value: mC.value,
-              rank: dC.rank
+            mp = null === tp ? null : (0, op.gc)(tp),
+            Rp = pp => null !== mp && pp.playerHash === mp,
+            qp = wp(Wp.entries, Op.n),
+            Mp = "ready" === Wp.status && qp.length > 0,
+            Cp = null === yp ? [] : wp(yp.entries, xp),
+            Ep = qp.some(Rp),
+            Xp = null === yp ? null : function(pp) {
+              const ip = pp;
+              if (!ip || !Number.isFinite(ip.rank) || !Number.isFinite(ip.tied) || !Number.isFinite(ip.total)) return null;
+              return ip
+            }(yp.standing),
+            lp = Cp.find(Rp),
+            Qp = qp.find(Rp),
+            Jp = null === Xp || void 0 === lp ? null : {
+              value: lp.value,
+              rank: Xp.rank
             },
-            lC = PC(eC, void 0 === HC || HC.value === (null === EC || void 0 === EC ? void 0 : EC.value) ? EC : null),
-            XC = PC(KC, EC),
-            cC = (CC, zC) => {
-              const ZC = CC.findIndex(vC);
-              return ZC >= 0 ? zC[ZC] : null
+            Bp = vp(qp, void 0 === Qp || Qp.value === (null === Jp || void 0 === Jp ? void 0 : Jp.value) ? Jp : null),
+            Np = vp(Cp, Jp),
+            Tp = (pp, ip) => {
+              const cp = pp.findIndex(Rp);
+              return cp >= 0 ? ip[cp] : null
             },
-            uC = null !== (nC = null !== (FC = null === dC || void 0 === dC ? void 0 : dC.rank) && void 0 !== FC ? FC : cC(KC, XC)) && void 0 !== nC ? nC : cC(eC, lC);
-          CC.font = "bold 34px 'Jetbrains Mono', monospace";
-          const rC = [...hC ? lC : [], ...YC ? [] : XC],
-            sC = Math.min(280, Math.max(0, ...rC.map((zC => CC.measureText(oC.format(zC)).width)))),
-            TC = sC <= 80,
-            aC = TC ? 80 : 32 + sC,
-            tC = TC ? 148 : aC + 28,
-            DC = 660 - tC;
-          JC(`TOP ${QC.l}  /  ALL TIME`, 24, 52, 28, AC, 976), JC(SC ? String(null !== (WC = zC.title) && void 0 !== WC ? WC : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, RC, 976), JC("RANK", 32, 174, 28, AC, tC - 40), JC("PLAYER", tC, 174, 28, AC, DC), JC(SC ? String(null !== (NC = zC.scoreLabel) && void 0 !== NC ? NC : "Score").slice(0, 24) : "Score", 992, 174, 28, AC, 304, "right"), IC(202);
-          const jC = (bC - 232) / (QC.l + qC + fC),
-            yC = 208 + QC.l * jC,
-            LC = yC + qC * jC,
-            UC = (zC, ZC, QC, wC) => {
-              const bC = vC(zC);
-              CC.fillStyle = bC ? xC : RC, CC.globalAlpha = bC ? .15 : wC ? .035 : 0, CC.fillRect(24, QC - jC / 2 + 1, 976, jC - 2), CC.globalAlpha = 1;
-              const nC = bC ? xC : RC;
-              JC(oC.format(ZC), aC, QC, 34, nC, TC ? 80 : sC, TC ? "center" : "right"), JC(SC ? String(zC.name).slice(0, 64) : "Player", tC, QC, 34, nC, DC);
-              const fC = oC.format(zC.value);
-              JC(CC.measureText(fC).width > 304 ? zC.value.toExponential(6) : fC, 992, QC, 34, nC, 304, "right")
+            fp = null !== (Sp = null !== (Dp = null === Xp || void 0 === Xp ? void 0 : Xp.rank) && void 0 !== Dp ? Dp : Tp(Cp, Np)) && void 0 !== Sp ? Sp : Tp(qp, Bp);
+          pp.font = "bold 34px 'Jetbrains Mono', monospace";
+          const bp = [...Mp ? Bp : [], ...Ep ? [] : Np],
+            hp = Math.min(280, Math.max(0, ...bp.map((ip => pp.measureText(Lp.format(ip)).width)))),
+            ap = hp <= 80,
+            np = ap ? 80 : 32 + hp,
+            Fp = ap ? 148 : np + 28,
+            gp = 660 - Fp;
+          jp(`TOP ${Op.n}  /  ALL TIME`, 24, 52, 28, dp, 976), jp(Up ? String(null !== (Ap = ip.title) && void 0 !== Ap ? Ap : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Hp, 976), jp("RANK", 32, 174, 28, dp, Fp - 40), jp("PLAYER", Fp, 174, 28, dp, gp), jp(Up ? String(null !== (Pp = ip.scoreLabel) && void 0 !== Pp ? Pp : "Score").slice(0, 24) : "Score", 992, 174, 28, dp, 304, "right"), kp(202);
+          const Gp = (Ip - 232) / (Op.n + Yp + xp),
+            rp = 208 + Op.n * Gp,
+            Zp = rp + Yp * Gp,
+            zp = (ip, cp, Op, op) => {
+              const Ip = Rp(ip);
+              pp.fillStyle = Ip ? ep : Hp, pp.globalAlpha = Ip ? .15 : op ? .035 : 0, pp.fillRect(24, Op - Gp / 2 + 1, 976, Gp - 2), pp.globalAlpha = 1;
+              const Sp = Ip ? ep : Hp;
+              jp(Lp.format(cp), np, Op, 34, Sp, ap ? 80 : hp, ap ? "center" : "right"), jp(Up ? String(ip.name).slice(0, 64) : "Player", Fp, Op, 34, Sp, gp);
+              const xp = Lp.format(ip.value);
+              jp(pp.measureText(xp).width > 304 ? ip.value.toExponential(6) : xp, 992, Op, 34, Sp, 304, "right")
             };
-          if (hC)
-            for (const [QC, wC] of eC.entries()) UC(wC, lC[QC], 208 + (QC + .5) * jC, QC % 2 === 0);
+          if (Mp)
+            for (const [Op, op] of qp.entries()) zp(op, Bp[Op], 208 + (Op + .5) * Gp, Op % 2 === 0);
           else {
-            const CC = "error" === MC.status,
-              zC = CC ? "Couldn't load leaderboard" : "ready" === MC.status ? "No scores yet" : "Loading leaderboard\u2026",
-              ZC = CC ? "Trying again shortly" : "ready" === MC.status ? "Be the first on the board!" : "Fetching the top players",
-              QC = (208 + yC) / 2;
-            JC(zC, 512, QC - 28, 40, CC ? wC.H.redUiText : RC, 960, "center"), JC(ZC, 512, QC + 27, 30, AC, 960, "center")
+            const pp = "error" === Wp.status,
+              ip = pp ? "Couldn't load leaderboard" : "ready" === Wp.status ? "No scores yet" : "Loading leaderboard\u2026",
+              cp = pp ? "Trying again shortly" : "ready" === Wp.status ? "Be the first on the board!" : "Fetching the top players",
+              Op = (208 + rp) / 2;
+            jp(ip, 512, Op - 28, 40, pp ? op.N.redUiText : Hp, 960, "center"), jp(cp, 512, Op + 27, 30, dp, 960, "center")
           }
-          const BC = yC + qC * jC / 2;
-          if (null === uC) IC(BC);
+          const sp = rp + Yp * Gp / 2;
+          if (null === fp) kp(sp);
           else {
-            const zC = null === dC ? 0 : dC.tied - 1,
-              ZC = `YOUR RANK #${oC.format(uC)}${null===dC?"":` of ${oC.format(dC.total)}`}`;
-            CC.font = "bold 36px 'Jetbrains Mono', monospace";
-            const QC = Math.max(20, Math.min(36, Math.floor(34560 / CC.measureText(ZC).width)));
-            JC(ZC, 512, BC - (zC > 0 ? 15 : 0), QC, xC, 960, "center"), zC > 0 && JC(`Tied with ${oC.format(zC)} other${1===zC?"":"s"}`, 512, BC + 24, 24, AC, 960, "center")
+            const ip = null === Xp ? 0 : Xp.tied - 1,
+              cp = `YOUR RANK #${Lp.format(fp)}${null===Xp?"":` of ${Lp.format(Xp.total)}`}`;
+            pp.font = "bold 36px 'Jetbrains Mono', monospace";
+            const Op = Math.max(20, Math.min(36, Math.floor(34560 / pp.measureText(cp).width)));
+            jp(cp, 512, sp - (ip > 0 ? 15 : 0), Op, ep, 960, "center"), ip > 0 && jp(`Tied with ${Lp.format(ip)} other${1===ip?"":"s"}`, 512, sp + 24, 24, dp, 960, "center")
           }
-          if (null === gC) return;
-          const OC = LC + fC * jC / 2;
-          if (YC) JC(`You're in the top ${QC.l}!`, 512, OC, 40, xC, 960, "center");
-          else if (0 === KC.length) JC("You're not on this board yet", 512, OC, 34, AC, 960, "center");
+          if (null === yp) return;
+          const Kp = Zp + xp * Gp / 2;
+          if (Ep) jp(`You're in the top ${Op.n}!`, 512, Kp, 40, ep, 960, "center");
+          else if (0 === Cp.length) jp("You're not on this board yet", 512, Kp, 34, dp, 960, "center");
           else
-            for (const [QC, wC] of KC.entries()) UC(wC, XC[QC], LC + (QC + .5) * jC, QC % 2 === 0)
-        }(CC, FC, WC, nC.layoutHeight)
+            for (const [Op, op] of Cp.entries()) zp(op, Np[Op], Zp + (Op + .5) * Gp, Op % 2 === 0)
+        }(pp, Dp, Ap, Sp.layoutHeight)
     }
 
-    function pC(CC, zC) {
-      return Array.isArray(CC) ? CC.slice(0, zC).filter((CC => CC && Number.isFinite(CC.rank) && Number.isFinite(CC.value))) : []
+    function wp(pp, ip) {
+      return Array.isArray(pp) ? pp.slice(0, ip).filter((pp => pp && Number.isFinite(pp.rank) && Number.isFinite(pp.value))) : []
     }
 
-    function PC(CC, zC) {
-      const ZC = [];
-      let QC = !1;
-      return CC.forEach(((wC, bC) => {
-        if (null !== zC && wC.value === zC.value) return void ZC.push(zC.rank);
-        const nC = bC > 0 && wC.value === CC[bC - 1].value;
-        nC || (QC = 0 === bC && 1 !== wC.rank), ZC.push(nC && !QC ? ZC[bC - 1] : wC.rank)
-      })), ZC
+    function vp(pp, ip) {
+      const cp = [];
+      let Op = !1;
+      return pp.forEach(((op, Ip) => {
+        if (null !== ip && op.value === ip.value) return void cp.push(ip.rank);
+        const Sp = Ip > 0 && op.value === pp[Ip - 1].value;
+        Sp || (Op = 0 === Ip && 1 !== op.rank), cp.push(Sp && !Op ? cp[Ip - 1] : op.rank)
+      })), cp
     }
   },
-  38692: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      d: () => wC,
-      h: () => bC
+  39076: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => op,
+      e: () => Ip
     });
-    const QC = 32;
+    const Op = 32;
 
-    function wC(CC) {
-      return Array.from(CC).length
+    function op(pp) {
+      return Array.from(pp).length
     }
 
-    function bC(CC) {
-      const zC = [""];
-      let ZC = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        wC = "";
-      const bC = () => {
-        zC.push(""), ZC = 0, wC = ""
+    function Ip(pp) {
+      const ip = [""];
+      let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        op = "";
+      const Ip = () => {
+        ip.push(""), cp = 0, op = ""
       };
-      for (const nC of CC.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(nC)) bC();
-        else if (/^\s+$/.test(nC)) wC += nC;
-      else if (nC.length > 0) {
-        const CC = Array.from(nC);
-        ZC > 0 && ZC + wC.length + CC.length > QC && bC(), zC[zC.length - 1] += wC, ZC += wC.length, wC = "";
-        for (const wC of CC) ZC >= QC && bC(), zC[zC.length - 1] += wC, ZC++
+      for (const Sp of pp.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(Sp)) Ip();
+        else if (/^\s+$/.test(Sp)) op += Sp;
+      else if (Sp.length > 0) {
+        const pp = Array.from(Sp);
+        cp > 0 && cp + op.length + pp.length > Op && Ip(), ip[ip.length - 1] += op, cp += op.length, op = "";
+        for (const op of pp) cp >= Op && Ip(), ip[ip.length - 1] += op, cp++
       }
-      return zC[zC.length - 1] += wC, zC
+      return ip[ip.length - 1] += op, ip
     }
   },
-  50695: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      WasmPreviewHost: () => ez,
-      pageBuiltInAnimationPack: () => NC,
-      pagePreviews: () => bz,
-      previewModule: () => BC
+  51184: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      WasmPreviewHost: () => Ci,
+      pageBuiltInAnimationPack: () => Pp,
+      pagePreviews: () => Li,
+      previewModule: () => Kp
     });
-    var QC = ZC(2856),
-      wC = ZC(603);
-    const bC = "[bloxd-wasm-client]";
+    var Op = cp(2970),
+      op = cp(643);
+    const Ip = "[bloxd-wasm-client]";
 
-    function nC(CC) {
-      const zC = {
+    function Sp(pp) {
+      const ip = {
         wasm: "unknown",
-        client: String(wC.e)
+        client: String(op.c)
       };
       try {
-        var ZC;
-        zC.wasm = null !== (ZC = null === CC || void 0 === CC ? void 0 : CC.YW()) && void 0 !== ZC ? ZC : zC.wasm
+        var cp;
+        ip.wasm = null !== (cp = null === pp || void 0 === pp ? void 0 : pp.JA()) && void 0 !== cp ? cp : ip.wasm
       } catch {}
-      return zC
+      return ip
     }
-    async function fC(CC) {
-      if (CC.length < 2 || 31 !== CC[0] || 139 !== CC[1]) return CC;
+    async function xp(pp) {
+      if (pp.length < 2 || 31 !== pp[0] || 139 !== pp[1]) return pp;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: zC
-        } = await Promise.resolve().then((() => ZC(2814)));
-        return zC(CC)
+          ungzip: ip
+        } = await Promise.resolve().then((() => cp(2918)));
+        return ip(pp)
       }
-      const zC = new Blob([CC]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(zC).arrayBuffer())
+      const ip = new Blob([pp]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(ip).arrayBuffer())
     }
 
-    function oC(CC, zC, QC, wC) {
-      Promise.resolve().then((() => ZC(40574))).then((ZC => {
+    function Lp(pp, ip, Op, op) {
+      Promise.resolve().then((() => cp(40945))).then((cp => {
         let {
-          reportDataLoadFailure: bC
-        } = ZC;
-        bC(CC, zC, QC, wC)
-      }), (zC => {
-        console.warn(`${bC} ${CC} didn't load, and the report couldn't be sent`, QC.error, zC)
+          reportDataLoadFailure: Ip
+        } = cp;
+        Ip(pp, ip, Op, op)
+      }), (ip => {
+        console.warn(`${Ip} ${pp} didn't load, and the report couldn't be sent`, Op.error, ip)
       }))
     }
-    const qC = [3e4, 12e4, 3e5];
-    class FC {
-      constructor(CC) {
-        this.deps = CC, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((CC => {
-          this.resolveSet = CC
+    const Yp = [3e4, 12e4, 3e5];
+    class Dp {
+      constructor(pp) {
+        this.deps = pp, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((pp => {
+          this.resolveSet = pp
         }))
       }
-      provide(CC) {
-        return this.loading ??= this.load(CC), this.loading
+      provide(pp) {
+        return this.loading ??= this.load(pp), this.loading
       }
       whenSet() {
         return this.set
       }
-      async load(CC) {
-        const zC = nC(CC),
-          ZC = await async function(CC, zC) {
-            let ZC;
+      async load(pp) {
+        const ip = Sp(pp),
+          cp = await async function(pp, ip) {
+            let cp;
             try {
-              ZC = await CC()
-            } catch (QC) {
+              cp = await pp()
+            } catch (Op) {
               return {
                 stage: "fetch",
-                error: QC
+                error: Op
               }
             }
             try {
-              return zC(ZC) ? null : {
+              return ip(cp) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (QC) {
+            } catch (Op) {
               return {
                 stage: "decode",
-                error: QC
+                error: Op
               }
             }
-          }((() => this.deps.fetch()), (zC => {
-            const ZC = CC.WbC(zC);
-            return ZC && this.resolveSet(zC), ZC
+          }((() => this.deps.fetch()), (ip => {
+            const cp = pp.iSp(ip);
+            return cp && this.resolveSet(ip), cp
           }));
-        if (null !== ZC) {
-          if ("fetch" === ZC.stage) {
+        if (null !== cp) {
+          if ("fetch" === cp.stage) {
             this.loading = null;
-            const zC = qC[this.retries++];
-            void 0 !== zC && this.deps.later((() => {
-              this.provide(CC)
-            }), zC)
+            const ip = Yp[this.retries++];
+            void 0 !== ip && this.deps.later((() => {
+              this.provide(pp)
+            }), ip)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(ZC, zC))
+          this.reported || (this.reported = !0, this.deps.onFailed(cp, ip))
         }
       }
     }
-    let WC = null;
+    let Ap = null;
 
-    function NC() {
-      return WC ??= new FC({
-        fetch: async () => fC(await (0, QC.M)(MC(), {
+    function Pp() {
+      return Ap ??= new Dp({
+        fetch: async () => xp(await (0, Op.F)(Wp(), {
           priority: "low"
         })),
-        onFailed: (CC, zC) => {
-          oC("builtInAnimations", MC(), CC, zC)
+        onFailed: (pp, ip) => {
+          Lp("builtInAnimations", Wp(), pp, ip)
         },
-        later: (CC, zC) => {
-          setTimeout(CC, zC)
+        later: (pp, ip) => {
+          setTimeout(pp, ip)
         }
-      }), WC
+      }), Ap
     }
 
-    function MC() {
-      return ZC(50703)
+    function Wp() {
+      return cp(51187)
     }
-    var gC = ZC(2848),
-      SC = ZC(1149),
-      pC = ZC(304),
-      PC = ZC(296),
-      GC = ZC(615),
-      RC = ZC(4727),
-      AC = ZC(40542),
-      xC = ZC(40764),
-      JC = (ZC(40598), ZC(40617)),
-      IC = ZC(40624),
-      iC = ZC(40633),
-      vC = ZC(40552),
-      eC = ZC(40787),
-      hC = ZC(40795),
-      KC = ZC(40540),
-      YC = ZC(40810),
-      dC = ZC(40675),
-      mC = ZC(40662),
-      HC = ZC(40723),
-      EC = ZC(40772),
-      lC = ZC(42390),
-      XC = ZC(36180),
-      cC = ZC(3633);
-    const uC = "[bloxd-previews]",
-      rC = 4e5,
-      sC = 0,
-      TC = 1,
-      aC = 2,
-      tC = 1,
-      DC = 2,
-      jC = 3,
-      yC = 0,
-      LC = 1,
-      UC = 2;
+    var yp = cp(2963),
+      Up = cp(1211),
+      wp = cp(316),
+      vp = cp(314),
+      tp = cp(657),
+      Hp = cp(4903),
+      dp = cp(40911),
+      ep = cp(40930),
+      jp = cp(41133),
+      kp = (cp(40976), cp(40988)),
+      mp = cp(40997),
+      Rp = cp(41001),
+      qp = cp(40923),
+      Mp = cp(41158),
+      Cp = cp(41165),
+      Ep = cp(40902),
+      Xp = cp(41185),
+      lp = cp(41038),
+      Qp = cp(41025),
+      Jp = cp(41087),
+      Bp = cp(41147),
+      Np = cp(42879),
+      Tp = cp(36484),
+      fp = cp(3801);
+    const bp = "[bloxd-previews]",
+      hp = 4e5,
+      ap = 0,
+      np = 1,
+      Fp = 2,
+      gp = 1,
+      Gp = 2,
+      rp = 3,
+      Zp = 0,
+      zp = 1,
+      sp = 2;
 
-    function BC(CC) {
-      const zC = CC,
-        ZC = (0, AC.O)(CC),
-        QC = (0, AC.o)(CC);
-      return null !== ZC && null !== QC && "function" === typeof zC.fbC && "function" === typeof zC.obC && "function" === typeof zC.FbC ? zC : null
-    }
-
-    function OC(CC, zC, ZC) {
-      let [QC, wC] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [CC, zC], bC = Math.min(Number.isFinite(ZC) && ZC > 0 ? ZC : 1, 2);
-      const nC = Math.max(0, QC, CC) * Math.max(0, wC, zC) * bC * bC;
-      return nC > rC && (bC *= Math.sqrt(rC / nC)), [Math.max(1, Math.floor(Math.max(0, CC) * bC)), Math.max(1, Math.floor(Math.max(0, zC) * bC))]
+    function Kp(pp) {
+      const ip = pp,
+        cp = (0, dp.Y)(pp),
+        Op = (0, dp.o)(pp);
+      return null !== cp && null !== Op && "function" === typeof ip.KIp && "function" === typeof ip.VIp && "function" === typeof ip.pSp ? ip : null
     }
 
-    function kC() {
-      return ZC(50712)
+    function Vp(pp, ip, cp) {
+      let [Op, op] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [pp, ip], Ip = Math.min(Number.isFinite(cp) && cp > 0 ? cp : 1, 2);
+      const Sp = Math.max(0, Op, pp) * Math.max(0, op, ip) * Ip * Ip;
+      return Sp > hp && (Ip *= Math.sqrt(hp / Sp)), [Math.max(1, Math.floor(Math.max(0, pp) * Ip)), Math.max(1, Math.floor(Math.max(0, ip) * Ip))]
     }
-    async function VC(CC, zC, QC) {
-      let wC = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      "lost" === CC && (0, KC.z)();
-      const bC = await (0, KC.P)();
-      if (null === bC || (0, AC.q)(bC) || (0, KC.b)()) return;
-      const fC = "webgpu" === bC.backend;
-      if (!fC && "lost" !== CC) return;
-      const oC = fC && (0, PC.o)(bC.adapter, null !== QC && void 0 !== QC ? QC : null, "lost" === CC, wC),
-        qC = fC ? (0, AC.W)(CC) : null;
-      if (null === qC) {
-        fC || (0, GC.v)(), (0, KC.o)();
+
+    function ii() {
+      return cp(51194)
+    }
+    async function ci(pp, ip, Op) {
+      var op;
+      let Ip = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      "lost" === pp && (0, Ep.u)();
+      const xp = await (0, Ep.L)();
+      if (null === xp || (0, dp.s)(xp) || (0, Ep.b)()) return;
+      const Lp = "webgpu" === xp.backend;
+      if (!Lp && "lost" !== pp) return;
+      const Yp = Lp && (0, vp.m)(xp.adapter, null !== Op && void 0 !== Op ? Op : null, "lost" === pp, Ip),
+        Dp = null !== (op = "lost" === pp ? (0, ep.o)((0, yp.X)() ? (0, dp.Y)((0, yp.H)()) : null) : void 0) && void 0 !== op ? op : ip,
+        Ap = Lp ? (0, dp.gb)(pp, void 0, (0, ep.d)(Dp)) : null;
+      if (null === Ap) {
+        Lp || (0, tp.q)(), (0, Ep.l)();
         try {
-          await async function(CC, zC, QC, wC, bC) {
+          await async function(pp, ip, Op, op, Ip) {
             let {
-              restoreLost: fC,
-              adapterRemembered: oC
-            } = bC;
-            const qC = (0, gC.P)(),
+              restoreLost: xp,
+              adapterRemembered: Lp
+            } = Ip;
+            const Yp = (0, yp.X)(),
               {
-                flushCrashReports: FC,
-                reportRenderReload: WC
-              } = await Promise.resolve().then((() => ZC(40574)));
-            WC(CC.backend, wC, nC(qC ? (0, gC.z)() : null), {
-              cause: zC,
-              restoreLost: fC,
-              adapterRemembered: oC,
-              ...Cz(CC, zC, QC)
-            }), await FC(dC.b)
-          }(bC, CC, zC, null !== QC && void 0 !== QC ? QC : "start_failed" === CC ? 0 : 1, {
-            restoreLost: wC,
-            adapterRemembered: oC
+                flushCrashReports: Dp,
+                reportRenderReload: Ap
+              } = await Promise.resolve().then((() => cp(40945)));
+            Ap(pp.backend, op, Sp(Yp ? (0, yp.H)() : null), {
+              from: "home",
+              cause: ip,
+              restoreLost: xp,
+              adapterRemembered: Lp,
+              ...Oi(pp, ip, Op)
+            }), await Dp(lp.b)
+          }(xp, pp, Dp, null !== Op && void 0 !== Op ? Op : "start_failed" === pp ? 0 : 1, {
+            restoreLost: Ip,
+            adapterRemembered: Yp
           })
-        } catch (WC) {
-          console.warn(`${uC} ${bC.backend} failed at home (${CC}), and its report couldn't be sent`, WC)
-        }(0, dC.j)()
+        } catch (Wp) {
+          console.warn(`${bp} ${xp.backend} failed at home (${pp}), and its report couldn't be sent`, Wp)
+        }(0, lp.i)()
       } else {
-        var FC;
-        const QC = Cz(bC, CC, zC),
-          wC = `WebGPU failed at home (${CC}${void 0===QC.error?"":`: ${QC.error instanceof Error?QC.error.message:(0,XC.m)(QC.error)}`}) and ${qC}`;
-        console.warn(`${uC} ${wC}: the previews stop`, null !== (FC = QC.error) && void 0 !== FC ? FC : ""), (0, KC.r)(wC);
+        var Pp;
+        const ip = Oi(xp, pp, Dp),
+          Op = `WebGPU failed at home (${pp}${void 0===ip.error?"":`: ${ip.error instanceof Error?ip.error.message:(0,Tp.h)(ip.error)}`}) and ${Ap}`;
+        console.warn(`${bp} ${Op}: the previews stop`, null !== (Pp = ip.error) && void 0 !== Pp ? Pp : ""), (0, Ep.m)(Op);
         try {
           const {
-            countRenderLost: zC
-          } = await Promise.resolve().then((() => ZC(40574)));
-          zC(CC, QC.error, QC.context)
-        } catch (NC) {
-          console.warn(`${uC} WebGPU failed at home (${CC}), and its count couldn't be sent`, NC)
+            countRenderLost: Op
+          } = await Promise.resolve().then((() => cp(40945)));
+          Op(pp, ip.error, ip.context)
+        } catch (Up) {
+          console.warn(`${bp} WebGPU failed at home (${pp}), and its count couldn't be sent`, Up)
         }
       }
     }
 
-    function Cz(CC, zC, ZC) {
-      var QC;
+    function Oi(pp, ip, cp) {
       let {
-        adapter: wC
-      } = CC;
-      const bC = (0, gC.P)();
+        adapter: Op
+      } = pp;
       return {
-        error: "lost" === zC && null !== (QC = (0, AC.Z)(bC ? (0, AC.O)((0, gC.z)()) : null)) && void 0 !== QC ? QC : ZC,
+        error: cp,
         context: {
-          adapter: wC,
-          boundAtMs: "start_failed" === zC ? null : (0, KC.L)(),
-          indirectHangs: (0, KC.B)(),
-          restoresSkipped: (0, KC.M)()
+          adapter: Op,
+          boundAtMs: "start_failed" === ip ? null : (0, Ep.J)(),
+          indirectHangs: (0, Ep.x)(),
+          restoresSkipped: (0, Ep.K)()
         }
       }
     }
-    async function zz() {
-      if (!(0, gC.P)()) {
-        const CC = await (0, KC.P)();
-        if (null === CC || (0, AC.q)(CC)) return null;
-        if (await (0, YC.b)(await CC.load()), !(0, gC.P)()) return null
+    async function oi() {
+      if (!(0, yp.X)()) {
+        const pp = await (0, Ep.L)();
+        if (null === pp || (0, dp.s)(pp)) return null;
+        if (await (0, Xp.e)(await pp.load()), !(0, yp.X)()) return null
       }
-      return BC((0, gC.z)())
+      return Kp((0, yp.H)())
     }
-    class Zz {
-      constructor(CC, zC, ZC, QC, wC, bC) {
-        this.page = CC, this.host = zC, this.id = ZC, this.canvas = QC, this.size = wC, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const nC = {
-            ...bC.images,
-            glbUrl: CC => {
-              var zC;
-              return null !== (zC = this.models.drawnUrl(CC)) && void 0 !== zC ? zC : bC.images.glbUrl(CC)
+    class Ii {
+      constructor(pp, ip, cp, Op, op, Ip) {
+        this.page = pp, this.host = ip, this.id = cp, this.canvas = Op, this.size = op, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const Sp = {
+            ...Ip.images,
+            glbUrl: pp => {
+              var ip;
+              return null !== (ip = this.models.drawnUrl(pp)) && void 0 !== ip ? ip : Ip.images.glbUrl(pp)
             }
           },
-          fC = zC => CC.modelFile(zC);
-        this.images = new xC.e(nC, (CC => {
-          console.warn(`${uC} image ${CC.key.kind}:${CC.key.index}:${CC.key.word} failed`, CC.error)
+          xp = ip => pp.modelFile(ip);
+        this.images = new jp.e(Sp, (pp => {
+          console.warn(`${bp} image ${pp.key.kind}:${pp.key.index}:${pp.key.word} failed`, pp.error)
         }), {
-          fetchFile: fC,
-          fetchImage: zC => CC.imageFile(zC)
-        }), CC.startModels(), this.models = new JC.h(bC.files, ((zC, ZC) => CC.buildModel(zC, ZC)), (CC => {
-          console.warn(`${uC} model file ${CC.file} (${CC.url}) failed`, CC.error)
+          fetchFile: xp,
+          fetchImage: ip => pp.imageFile(ip)
+        }), pp.startModels(), this.models = new kp.f(Ip.files, ((ip, cp) => pp.buildModel(ip, cp)), (pp => {
+          console.warn(`${bp} model file ${pp.file} (${pp.url}) failed`, pp.error)
         }), {
-          fetchFile: fC,
-          onWritten: (CC, zC) => {
-            this.images.glbWritten(CC, zC)
+          fetchFile: xp,
+          onWritten: (pp, ip) => {
+            this.images.glbWritten(pp, ip)
           },
-          onTaken: (CC, zC) => {
-            this.images.glbTaken(CC, zC)
+          onTaken: (pp, ip) => {
+            this.images.glbTaken(pp, ip)
           }
-        }), this.write = (CC, zC, ZC) => {
+        }), this.write = (pp, ip, cp) => {
           if (this.closed) return !0;
-          if (CC === JC.c) {
-            const CC = new DataView(ZC.buffer, ZC.byteOffset, iC.c),
-              QC = CC.getUint32(0, !0),
-              wC = CC.getUint32(iC.f, !0),
-              bC = this.page.hostCall(UC, (() => this.host.gnC(this.id, QC, zC, ZC.subarray(iC.c))));
-            return this.outcomes.push([wC, bC]), !0
+          if (pp === kp.b) {
+            const pp = new DataView(cp.buffer, cp.byteOffset, Rp.d),
+              Op = pp.getUint32(0, !0),
+              op = pp.getUint32(Rp.g, !0),
+              Ip = this.page.hostCall(sp, (() => this.host.Sxp(this.id, Op, ip, cp.subarray(Rp.d))));
+            return this.outcomes.push([op, Ip]), !0
           }
-          return CC === xC.c && (this.page.hostCall(void 0, (() => {
-            this.host.pnC(this.id, ZC)
+          return pp === jp.c && (this.page.hostCall(void 0, (() => {
+            this.host.Lxp(this.id, cp)
           })), !0)
         }
       }
@@ -649,74 +651,74 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(CC, zC, ZC) {
+      resize(pp, ip, cp) {
         if (this.closed) return;
-        const [QC, wC] = OC(CC, zC, this.page.dpr(), ZC);
-        QC === this.size[0] && wC === this.size[1] || (this.size = [QC, wC], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, QC, wC)
+        const [Op, op] = Vp(pp, ip, this.page.dpr(), cp);
+        Op === this.size[0] && op === this.size[1] || (this.size = [Op, op], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, Op, op)
         })))
       }
-      setMob(CC, zC, ZC, QC) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.xnC(this.id, CC, zC, ZC, QC))))
+      setMob(pp, ip, cp, Op) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Wxp(this.id, pp, ip, cp, Op))))
       }
-      setPet(CC, zC, ZC, QC) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.InC(this.id, CC, zC, ZC, QC))))
+      setPet(pp, ip, cp, Op) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Uxp(this.id, pp, ip, cp, Op))))
       }
-      setPlayer(CC, zC, ZC) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.GnC(this.id, CC, zC, ZC))))
+      setPlayer(pp, ip, cp) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Dxp(this.id, pp, ip, cp))))
       }
-      setFigure(CC, zC, ZC, QC) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.RnC(this.id, CC, zC, ZC, QC))))
+      setFigure(pp, ip, cp, Op) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Axp(this.id, pp, ip, cp, Op))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
       }
       get orbit() {
         if (this.closed) return null;
-        const CC = this.page.hostCall(null, (() => this.host.orbit(this.id)));
-        return null === CC || CC.length < 3 ? null : {
-          alpha: CC[0],
-          beta: CC[1],
-          radius: CC[2]
+        const pp = this.page.hostCall(null, (() => this.host.orbit(this.id)));
+        return null === pp || pp.length < 3 ? null : {
+          alpha: pp[0],
+          beta: pp[1],
+          radius: pp[2]
         }
       }
-      setOrbit(CC) {
+      setOrbit(pp) {
         let {
-          alpha: zC,
-          beta: ZC,
-          radius: QC
-        } = CC;
+          alpha: ip,
+          beta: cp,
+          radius: Op
+        } = pp;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.JnC(this.id, zC, ZC, QC)
+          this.host.yxp(this.id, ip, cp, Op)
         }))
       }
       untilSettled() {
-        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((CC => {
-          this.settled.push(CC)
+        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((pp => {
+          this.settled.push(pp)
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, eC.i)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, Mp.g)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [CC, zC] of this.outcomes) {
-          const ZC = zC === yC ? [] : [zC === LC ? CC : (CC | JC.e) >>> 0];
-          this.models.taken(CC, ZC)
+        for (const [pp, ip] of this.outcomes) {
+          const cp = ip === Zp ? [] : [ip === zp ? pp : (pp | kp.e) >>> 0];
+          this.models.taken(pp, cp)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
-      collect(CC) {
-        let zC = !1;
-        if (CC) {
-          const CC = this.host.enC(this.id);
-          for (const zC of CC) this.models.request(zC);
-          const ZC = this.host.vnC(this.id);
-          ZC.length > 0 && this.images.onEvent(ZC), zC = CC.length > 0 || ZC.length > 0
+      collect(pp) {
+        let ip = !1;
+        if (pp) {
+          const pp = this.host.txp(this.id);
+          for (const ip of pp) this.models.request(ip);
+          const cp = this.host.vxp(this.id);
+          cp.length > 0 && this.images.onEvent(cp), ip = pp.length > 0 || cp.length > 0
         }
-        const ZC = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          QC = zC || ZC > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = QC ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const cp = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          Op = ip || cp > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = Op ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -724,314 +726,314 @@ export const modules = {
       abandon() {
         this.resolveSettled()
       }
-      dispose(CC) {
+      dispose(pp) {
         this.page.hostCall(void 0, (() => {
-          const zC = this.host.close(this.id);
-          zC.length > 0 && this.images.onEvent(zC), this.page.isTrapped || CC.FbC(this.id)
+          const ip = this.host.close(this.id);
+          ip.length > 0 && this.images.onEvent(ip), this.page.isTrapped || pp.pSp(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
-        const CC = this.settled;
+        const pp = this.settled;
         this.settled = [];
-        for (const zC of CC) zC()
+        for (const ip of pp) ip()
       }
     }
-    class Qz {
-      constructor(CC) {
-        this.deps = CC, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
-          onUnavailable: CC => {
-            this.modelsFailed(CC)
+    class Si {
+      constructor(pp) {
+        this.deps = pp, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
+          onUnavailable: pp => {
+            this.modelsFailed(pp)
           },
-          onDecoderFailed: CC => {
-            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${uC} the Draco decoder didn't load: models waiting on it won't draw`, CC))
+          onDecoderFailed: pp => {
+            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${bp} the Draco decoder didn't load: models waiting on it won't draw`, pp))
           },
-          onWorkerLost: CC => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${uC} a model worker was lost: ${CC}`))
+          onWorkerLost: pp => {
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${bp} a model worker was lost: ${pp}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.zg = {
-          setShaderPack: (CC, zC, ZC, QC, wC) => (this.shaderPackArgs = [CC, zC, ZC, QC, wC], this.handOverShaderPack(), !0)
-        }, this.frame = CC => {
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.Dy = {
+          setShaderPack: (pp, ip, cp, Op, op) => (this.shaderPackArgs = [pp, ip, cp, Op, op], this.handOverShaderPack(), !0)
+        }, this.frame = pp => {
           this.frameId = null;
-          const zC = this.host;
-          if (null !== zC && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
-            this.drawFrame(zC, CC)
-          } catch (ZC) {
-            if (!this.stopIfTrapped(ZC) && (this.stop(), (0, AC.t)(ZC))) return void this.deps.onRenderFailed("frames_refused", ZC);
-            console.warn(`${uC} the previews stopped: their frame threw`, ZC)
+          const ip = this.host;
+          if (null !== ip && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
+            this.drawFrame(ip, pp)
+          } catch (cp) {
+            if (!this.stopIfTrapped(cp) && (this.stop(), (0, dp.w)(cp))) return void this.deps.onRenderFailed("frames_refused", cp);
+            console.warn(`${bp} the previews stopped: their frame threw`, cp)
           }
-        }, CC.pack.onChange((() => {
+        }, pp.pack.onChange((() => {
           this.packChanged()
-        })), CC.game.onGameChange((() => {
+        })), pp.game.onGameChange((() => {
           this.tellInGame()
         }))
       }
       packChanged() {
         if (!this.stopped)
-          for (const CC of this.previews.values()) CC.packChanged()
+          for (const pp of this.previews.values()) pp.packChanged()
       }
       dpr() {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var CC, zC;
-        return null !== (CC = null === (zC = this.host) || void 0 === zC ? void 0 : zC.attached()) && void 0 !== CC && CC
+        var pp, ip;
+        return null !== (pp = null === (ip = this.host) || void 0 === ip ? void 0 : ip.attached()) && void 0 !== pp && pp
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((CC, zC) => CC + zC), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((pp, ip) => pp + ip), 0) / this.costs.length
       }
-      async bindSession(CC, zC, ZC) {
-        const QC = this.binding,
-          wC = this.sessionEnds;
+      async bindSession(pp, ip, cp) {
+        const Op = this.binding,
+          op = this.sessionEnds;
         try {
-          const bC = this.hostOf(CC);
-          if (!bC.SnC()) {
-            const zC = (0, HC.h)().sampleCount,
-              nC = await ZC(zC);
-            if (this.sessionEnds !== wC) return this.keepRendererOfEndedSession(CC, bC, nC, zC, QC), zC;
-            if (!bC.VbC(nC)) throw new Error("the page has a renderer already");
-            (0, KC.v)(performance.now()), this.samples = zC, (0, EC.i)((0, AC.o)(CC))
+          const Ip = this.hostOf(pp);
+          if (!Ip.xxp()) {
+            const ip = (0, Jp.g)().sampleCount,
+              Sp = await cp(ip);
+            if (this.sessionEnds !== op) return this.keepRendererOfEndedSession(pp, Ip, Sp, ip, Op), ip;
+            if (!Ip.FSp(Sp)) throw new Error("the page has a renderer already");
+            (0, Ep.q)(performance.now()), this.samples = ip, (0, Bp.h)((0, dp.o)(pp))
           }
-          if (!bC.attach(zC)) throw new Error("the page's renderer is lent to another session");
+          if (!Ip.attach(ip)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === QC && this.endBinding()
+          this.binding === Op && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(CC, zC, ZC, QC, wC) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== wC) try {
-          ZC.free()
-        } catch (bC) {
-          console.warn(`${uC} an ended session's renderer didn't free`, bC)
-        } else zC.VbC(ZC) && ((0, KC.v)(performance.now()), this.samples = QC, (0, EC.i)(this.registryOf(CC)))
+      keepRendererOfEndedSession(pp, ip, cp, Op, op) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== op) try {
+          cp.free()
+        } catch (Ip) {
+          console.warn(`${bp} an ended session's renderer didn't free`, Ip)
+        } else ip.FSp(cp) && ((0, Ep.q)(performance.now()), this.samples = Op, (0, Bp.h)(this.registryOf(pp)))
       }
       async beginSession() {
-        var CC;
-        let zC = () => {};
-        const ZC = new Promise((CC => {
-          zC = CC
+        var pp;
+        let ip = () => {};
+        const cp = new Promise((pp => {
+          ip = pp
         }));
         this.binding = {
-          done: ZC,
-          release: zC
-        }, await (null === (CC = this.opening) || void 0 === CC ? void 0 : CC.catch((() => null)));
-        const QC = this.pageCanvas;
-        return this.pageCanvas = null, QC
+          done: cp,
+          release: ip
+        }, await (null === (pp = this.opening) || void 0 === pp ? void 0 : pp.catch((() => null)));
+        const Op = this.pageCanvas;
+        return this.pageCanvas = null, Op
       }
-      endSession(CC) {
-        var zC, ZC;
-        if (this.sessionEnds++, this.lastEndReturned = CC, this.endBinding(), CC) {
+      endSession(pp) {
+        var ip, cp;
+        if (this.sessionEnds++, this.lastEndReturned = pp, this.endBinding(), pp) {
           try {
-            var QC;
-            null === (QC = this.host) || void 0 === QC || QC.detach()
-          } catch (wC) {
-            return void console.warn(`${uC} the session's core kept the page's renderer`, wC)
-          }!0 === (null === (zC = this.host) || void 0 === zC ? void 0 : zC.attached()) && console.warn(`${uC} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (ZC = this.host) || void 0 === ZC ? void 0 : ZC.SnC()) && (0, EC.i)(this.registryOf(this.module))
+            var Op;
+            null === (Op = this.host) || void 0 === Op || Op.detach()
+          } catch (op) {
+            return void console.warn(`${bp} the session's core kept the page's renderer`, op)
+          }!0 === (null === (ip = this.host) || void 0 === ip ? void 0 : ip.attached()) && console.warn(`${bp} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (cp = this.host) || void 0 === cp ? void 0 : cp.xxp()) && (0, Bp.h)(this.registryOf(this.module))
         }
       }
       endBinding() {
-        var CC;
-        null === (CC = this.binding) || void 0 === CC || CC.release(), this.binding = null
+        var pp;
+        null === (pp = this.binding) || void 0 === pp || pp.release(), this.binding = null
       }
-      async openPreview(CC, zC, ZC, QC) {
-        const wC = await this.renderingHost(),
-          bC = this.module;
-        if (null === wC || null === bC) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(wC), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(pp, ip, cp, Op) {
+        const op = await this.renderingHost(),
+          Ip = this.module;
+        if (null === op || null === Ip) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(op), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(bC)
+          this.deps.provideBuiltInAnimationPack(Ip)
         }));
-        const nC = this.nextId++,
-          fC = this.deps.createCanvas(),
-          [oC, qC] = OC(zC, ZC, this.deps.dpr(), QC);
-        fC.width = oC, fC.height = qC;
-        if (!this.guarded((() => (bC.obC(nC, fC), wC.open(nC, oC, qC, CC))))) throw this.hostCall(void 0, (() => {
-          bC.FbC(nC)
+        const Sp = this.nextId++,
+          xp = this.deps.createCanvas(),
+          [Lp, Yp] = Vp(ip, cp, this.deps.dpr(), Op);
+        xp.width = Lp, xp.height = Yp;
+        if (!this.guarded((() => (Ip.VIp(Sp, xp), op.open(Sp, Lp, Yp, pp))))) throw this.hostCall(void 0, (() => {
+          Ip.pSp(Sp)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const FC = new Zz(this, wC, nC, fC, [oC, qC], this.deps);
-        return this.previews.set(nC, FC), this.startFrames(), FC
+        const Dp = new Ii(this, op, Sp, xp, [Lp, Yp], this.deps);
+        return this.previews.set(Sp, Dp), this.startFrames(), Dp
       }
       prefetch() {
-        if (this.prefetched || this.isStopped || (0, KC.b)() || null !== (0, KC.K)()) return;
+        if (this.prefetched || this.isStopped || (0, Ep.b)() || null !== (0, Ep.G)()) return;
         this.prefetched = !0;
-        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((CC => {
-          null === CC || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
+        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((pp => {
+          null === pp || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
         }), (() => {}))
       }
-      modelFile(CC) {
-        return this.prefetchedOr(CC, this.deps.fetchModel)
+      modelFile(pp) {
+        return this.prefetchedOr(pp, this.deps.fetchModel)
       }
-      imageFile(CC) {
-        return this.prefetchedOr(CC, QC.M)
+      imageFile(pp) {
+        return this.prefetchedOr(pp, Op.F)
       }
-      prefetchedOr(CC, zC) {
-        const ZC = this.prefetchedFiles.get(CC);
-        return void 0 === ZC ? zC(CC) : ZC.catch((() => zC(CC)))
+      prefetchedOr(pp, ip) {
+        const cp = this.prefetchedFiles.get(pp);
+        return void 0 === cp ? ip(pp) : cp.catch((() => ip(pp)))
       }
       async prefetchPlayerFiles() {
-        const CC = this.deps.playerFile().then((CC => this.deps.files.url(CC))),
-          zC = await Promise.all([CC, this.deps.images.lifeformAtlasUrl(eC.d)]).catch((() => null));
-        if (null === zC) return;
-        const [ZC, QC] = zC, wC = (CC, zC) => {
-          if (null === CC) return;
-          const ZC = zC(CC);
-          this.prefetchedFiles.set(CC, ZC), ZC.catch((() => {
-            this.prefetchedFiles.delete(CC)
+        const pp = this.deps.playerFile().then((pp => this.deps.files.url(pp))),
+          ip = await Promise.all([pp, this.deps.images.lifeformAtlasUrl(Mp.b)]).catch((() => null));
+        if (null === ip) return;
+        const [cp, Op] = ip, op = (pp, ip) => {
+          if (null === pp) return;
+          const cp = ip(pp);
+          this.prefetchedFiles.set(pp, cp), cp.catch((() => {
+            this.prefetchedFiles.delete(pp)
           }))
         };
-        wC(ZC, (CC => this.modelFile(CC))), wC(QC, (CC => this.imageFile(CC)))
+        op(cp, (pp => this.modelFile(pp))), op(Op, (pp => this.imageFile(pp)))
       }
       loadModule() {
-        return this.moduleLoad ??= this.deps.loadModule().then((CC => (null === CC && (this.moduleLoad = null), CC)), (CC => {
-          throw this.moduleLoad = null, CC
+        return this.moduleLoad ??= this.deps.loadModule().then((pp => (null === pp && (this.moduleLoad = null), pp)), (pp => {
+          throw this.moduleLoad = null, pp
         })), this.moduleLoad
       }
       fetchAnimationTable() {
-        return this.animationTable ??= this.deps.fetchAnimations().catch((CC => {
-          throw this.animationTable = null, CC
+        return this.animationTable ??= this.deps.fetchAnimations().catch((pp => {
+          throw this.animationTable = null, pp
         })), this.animationTable
       }
       get modelsUnavailable() {
         return this.unavailable
       }
       startModels() {
-        this.models ??= this.deps.startModels(this.modelsListener).catch((CC => (this.modelsFailed(CC), () => new Promise((() => {})))))
+        this.models ??= this.deps.startModels(this.modelsListener).catch((pp => (this.modelsFailed(pp), () => new Promise((() => {})))))
       }
-      buildModel(CC, zC) {
-        return this.startModels(), this.models.then((ZC => ZC(CC, zC))).then((CC => this.unavailable ? new Promise((() => {})) : CC))
+      buildModel(pp, ip) {
+        return this.startModels(), this.models.then((cp => cp(pp, ip))).then((pp => this.unavailable ? new Promise((() => {})) : pp))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
-      modelsFailed(CC) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${uC} the model workers didn't start: models won't draw in the previews`, CC))
+      modelsFailed(pp) {
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${bp} the model workers didn't start: models won't draw in the previews`, pp))
       }
-      called(CC) {
-        return 0 !== CC && this.logError(CC, 0), CC
+      called(pp) {
+        return 0 !== pp && this.logError(pp, 0), pp
       }
-      closePreview(CC) {
-        this.previews.delete(CC.id), null !== this.module && CC.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
+      closePreview(pp) {
+        this.previews.delete(pp.id), null !== this.module && pp.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
       }
-      hostOf(CC) {
-        if (null !== this.module && this.module !== CC) throw new Error("a second renderer module on one page");
-        return this.module = CC, null === this.host && (this.host = this.guarded((() => new CC.fbC)), this.tellInGame(), this.handOverShaderPack()), this.host
+      hostOf(pp) {
+        if (null !== this.module && this.module !== pp) throw new Error("a second renderer module on one page");
+        return this.module = pp, null === this.host && (this.host = this.guarded((() => new pp.KIp)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
-          host: CC
+          host: pp
         } = this;
-        null !== CC && this.outsideCall("the game's start or end", (() => {
-          CC.AnC(this.deps.game.inGame())
+        null !== pp && this.outsideCall("the game's start or end", (() => {
+          pp.Pxp(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
-          host: CC,
-          shaderPackArgs: zC
+          host: pp,
+          shaderPackArgs: ip
         } = this;
-        null !== CC && null !== zC && this.outsideCall("the shader pack's hand-over", (() => {
-          CC.ZQC(...zC) || console.warn(`${uC} the host refused the shader pack: previews draw without it at home`)
+        null !== pp && null !== ip && this.outsideCall("the shader pack's hand-over", (() => {
+          pp.fOp(...ip) || console.warn(`${bp} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(CC, zC) {
+      outsideCall(pp, ip) {
         try {
-          this.hostCall(void 0, zC)
-        } catch (ZC) {
-          this.stop(), console.warn(`${uC} the previews stopped: ${CC} threw`, ZC)
+          this.hostCall(void 0, ip)
+        } catch (cp) {
+          this.stop(), console.warn(`${bp} the previews stopped: ${pp} threw`, cp)
         }
       }
-      async loadAnimations(CC) {
-        const zC = nC(null),
-          ZC = this.module;
+      async loadAnimations(pp) {
+        const ip = Sp(null),
+          cp = this.module;
         try {
-          zC.wasm = null === ZC ? zC.wasm : this.hostCall(zC.wasm, (() => ZC.YW()))
+          ip.wasm = null === cp ? ip.wasm : this.hostCall(ip.wasm, (() => cp.JA()))
         } catch {}
-        let QC, wC;
+        let Op, op;
         try {
-          QC = await this.fetchAnimationTable()
-        } catch (bC) {
+          Op = await this.fetchAnimationTable()
+        } catch (Ip) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: bC
-          }, zC)
+            error: Ip
+          }, ip)
         }
         if (!this.settleIfTrapped()) {
           try {
-            wC = CC.PnC(QC)
-          } catch (bC) {
-            if (this.stopIfTrapped(bC)) return;
+            op = pp.Yxp(Op)
+          } catch (Ip) {
+            if (this.stopIfTrapped(Ip)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: bC
-            }, zC)
+              error: Ip
+            }, ip)
           }
-          wC || this.deps.onAnimationsFailed({
+          op || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, zC)
+          }, ip)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
-        const CC = this.host;
-        return null !== CC && this.guarded((() => CC.SnC())) ? CC : (this.opening ??= this.openAtHome().finally((() => {
+        const pp = this.host;
+        return null !== pp && this.guarded((() => pp.xxp())) ? pp : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
-        var CC;
-        const zC = null !== (CC = this.module) && void 0 !== CC ? CC : await this.loadModule();
-        if (null === zC) return null;
-        const ZC = this.hostOf(zC),
-          QC = () => this.guarded((() => ZC.SnC()));
-        if (QC()) return ZC;
-        if (null !== (0, KC.K)() || (0, KC.b)()) return null;
-        const wC = this.deps.createCanvas();
-        wC.width = 1, wC.height = 1;
-        const bC = await this.deps.openExtras();
+        var pp;
+        const ip = null !== (pp = this.module) && void 0 !== pp ? pp : await this.loadModule();
+        if (null === ip) return null;
+        const cp = this.hostOf(ip),
+          Op = () => this.guarded((() => cp.xxp()));
+        if (Op()) return cp;
+        if (null !== (0, Ep.G)() || (0, Ep.b)()) return null;
+        const op = this.deps.createCanvas();
+        op.width = 1, op.height = 1;
+        const Ip = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const nC = (0, HC.h)().sampleCount;
-        let fC;
+        const Sp = (0, Jp.g)().sampleCount;
+        let xp;
         try {
-          fC = await (0, AC.y)(zC, "previewRenderer", wC, nC, lC.c, bC)
-        } catch (oC) {
-          throw oC instanceof vC.e ? this.stopForTrap(oC) : (0, AC.w)(oC) && await this.deps.onRenderFailed("start_failed", oC), oC
+          xp = await (0, dp.A)(ip, "previewRenderer", op, Sp, Np.d, Ip)
+        } catch (Lp) {
+          throw Lp instanceof qp.b ? this.stopForTrap(Lp) : (0, dp.z)(Lp) && await this.deps.onRenderFailed("start_failed", Lp), Lp
         }
-        return this.guarded((() => ZC.VbC(fC))) ? ((0, KC.v)(performance.now()), this.samples = nC, this.pageCanvas = wC, (0, EC.i)(this.registryOf(zC)), ZC) : QC() ? ZC : null
+        return this.guarded((() => cp.FSp(xp))) ? ((0, Ep.q)(performance.now()), this.samples = Sp, this.pageCanvas = op, (0, Bp.h)(this.registryOf(ip)), cp) : Op() ? cp : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(CC, zC) {
-        for (const nC of this.previews.values()) nC.feed();
+      drawFrame(pp, ip) {
+        for (const Sp of this.previews.values()) Sp.feed();
         if (this.stopped) return;
-        const ZC = this.deps.now(),
-          QC = CC.frame(zC);
-        this.costs.push(this.deps.now() - ZC), this.costs.length > 120 && this.costs.shift();
-        const wC = 0 !== (256 & QC),
-          bC = 255 & QC;
-        for (const nC of this.previews.values()) {
+        const cp = this.deps.now(),
+          Op = pp.frame(ip);
+        this.costs.push(this.deps.now() - cp), this.costs.length > 120 && this.costs.shift();
+        const op = 0 !== (256 & Op),
+          Ip = 255 & Op;
+        for (const Sp of this.previews.values()) {
           if (this.stopped) return;
-          nC.collect(wC)
+          Sp.collect(op)
         }
         if (!this.stopped) {
-          if (0 !== (512 & QC) && this.deps.onDrew(), wC) {
-            const zC = CC.inC();
-            for (let CC = 0; CC + 1 < zC.length; CC += 2) zC[CC] === RC.N.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(zC[CC], zC[CC + 1])
+          if (0 !== (512 & Op) && this.deps.onDrew(), op) {
+            const ip = pp.wxp();
+            for (let pp = 0; pp + 1 < ip.length; pp += 2) ip[pp] === Hp.M.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(ip[pp], ip[pp + 1])
           }
-          if (bC !== tC) {
-            if (bC === DC) return this.stop(), void this.deps.onFatal(CC.WnC(), CC.NnC());
-            if (bC === jC) return this.stop(), void console.warn(`${uC} the previews stopped: the page's renderer went with its session`);
-            (0, pC.b)(zC), this.startFrames()
+          if (Ip !== gp) {
+            if (Ip === Gp) return this.stop(), void this.deps.onFatal(pp.Oxp(), pp.oxp());
+            if (Ip === rp) return this.stop(), void console.warn(`${bp} the previews stopped: the page's renderer went with its session`);
+            (0, wp.e)(ip), this.startFrames()
           } else {
-            const zC = CC.MnC();
+            const ip = pp.Ixp();
             this.stop();
-            const ZC = zC[2] === RC.Vc.PIPELINE_FAILED ? "pipeline_failed" : "lost";
-            this.deps.onRenderFailed(ZC, void 0, zC[1], zC[2] === RC.Vc.RESTORE_LOST)
+            const cp = ip[2] === Hp.Yc.PIPELINE_FAILED ? "pipeline_failed" : "lost";
+            this.deps.onRenderFailed(cp, void 0, ip[1], ip[2] === Hp.Yc.RESTORE_LOST)
           }
         }
       }
@@ -1039,115 +1041,115 @@ export const modules = {
         return this.stopped || this.isTrapped
       }
       get isTrapped() {
-        return null !== this.module && ((0, vC.j)(this.module) || "failed" === (0, gC.y)())
+        return null !== this.module && ((0, qp.g)(this.module) || "failed" === (0, yp.E)())
       }
-      hostCall(CC, zC) {
-        if (this.settleIfTrapped()) return CC;
+      hostCall(pp, ip) {
+        if (this.settleIfTrapped()) return pp;
         try {
-          return zC()
-        } catch (ZC) {
-          if (this.stopIfTrapped(ZC)) return CC;
-          throw ZC
+          return ip()
+        } catch (cp) {
+          if (this.stopIfTrapped(cp)) return pp;
+          throw cp
         }
       }
-      guarded(CC) {
+      guarded(pp) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
-          return CC()
-        } catch (zC) {
-          throw this.stopIfTrapped(zC), zC
+          return pp()
+        } catch (ip) {
+          throw this.stopIfTrapped(ip), ip
         }
       }
-      registryOf(CC) {
+      registryOf(pp) {
         return {
-          TZC: (zC, ZC) => {
+          kOp: (ip, cp) => {
             this.hostCall(void 0, (() => {
-              CC.TZC(zC, ZC)
+              pp.kOp(ip, cp)
             }))
           },
-          aZC: zC => {
+          mOp: ip => {
             this.hostCall(void 0, (() => {
-              CC.aZC(zC)
+              pp.mOp(ip)
             }))
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, EC.i)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, Bp.h)(null)), !0)
       }
-      stopIfTrapped(CC) {
-        return !(null === this.module || !(0, vC.k)(this.module, CC)) && (this.stopForTrap(CC), !0)
+      stopIfTrapped(pp) {
+        return !(null === this.module || !(0, qp.h)(this.module, pp)) && (this.stopForTrap(pp), !0)
       }
-      stopForTrap(CC) {
-        this.stop(), (0, EC.i)(null), (0, cC.g)("previews", CC)
+      stopForTrap(pp) {
+        this.stop(), (0, Bp.h)(null), (0, fp.e)("previews", pp)
       }
       stop() {
         this.stopped = !0;
-        for (const CC of this.previews.values()) CC.abandon()
+        for (const pp of this.previews.values()) pp.abandon()
       }
-      logError(CC, zC) {
-        const ZC = `${CC}:${zC}`;
-        this.loggedErrors.has(ZC) || (this.loggedErrors.add(ZC), console.warn(`${uC} error ${CC} (detail ${zC})`))
+      logError(pp, ip) {
+        const cp = `${pp}:${ip}`;
+        this.loggedErrors.has(cp) || (this.loggedErrors.add(cp), console.warn(`${bp} error ${pp} (detail ${ip})`))
       }
     }
-    let wz = null;
+    let xi = null;
 
-    function bz() {
-      return wz ??= new Qz(function() {
-        const CC = (0, IC.p)(SC.clientSideServerUrls.staticUrl, {
-          packUrl: CC => {
-            var zC, ZC;
-            return null !== (zC = null === (ZC = eC.g.current) || void 0 === ZC ? void 0 : ZC.modelUrl(CC)) && void 0 !== zC ? zC : null
+    function Li() {
+      return xi ??= new Si(function() {
+        const pp = (0, mp.r)(Up.clientSideServerUrls.staticUrl, {
+          packUrl: pp => {
+            var ip, cp;
+            return null !== (ip = null === (cp = Mp.e.current) || void 0 === cp ? void 0 : cp.modelUrl(pp)) && void 0 !== ip ? ip : null
           }
         });
         return {
-          loadModule: zz,
-          startModels: async CC => {
+          loadModule: oi,
+          startModels: async pp => {
             const {
-              pageModelPool: zC
-            } = await ZC.e(42).then((() => ZC(50772))), {
-              pool: QC
-            } = zC(CC);
-            return (CC, zC) => QC.build(CC, zC)
+              pageModelPool: ip
+            } = await cp.e(43).then((() => cp(51251))), {
+              pool: Op
+            } = ip(pp);
+            return (pp, ip) => Op.build(pp, ip)
           },
-          fetchAnimations: async () => fC(await (0, QC.M)(kC())),
-          playerFile: async () => (await (0, IC.m)()).PLAYER_FILE,
-          onAnimationsFailed: (CC, zC) => {
-            oC("previewAnimations", kC(), CC, zC)
+          fetchAnimations: async () => xp(await (0, Op.F)(ii())),
+          playerFile: async () => (await (0, mp.o)()).PLAYER_FILE,
+          onAnimationsFailed: (pp, ip) => {
+            Lp("previewAnimations", ii(), pp, ip)
           },
-          provideBuiltInAnimationPack: CC => {
-            NC().provide(CC)
+          provideBuiltInAnimationPack: pp => {
+            Pp().provide(pp)
           },
-          openExtras: KC.E,
-          files: CC,
-          images: (0, eC.m)((0, xC.l)(CC.url), (() => eC.g.current)),
-          pack: eC.g,
-          game: hC.e,
-          fetchModel: CC => (0, IC.j)(CC),
+          openExtras: Ep.A,
+          files: pp,
+          images: (0, Mp.i)((0, jp.k)(pp.url), (() => Mp.e.current)),
+          pack: Mp.e,
+          game: Cp.d,
+          fetchModel: pp => (0, mp.j)(pp),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
-          requestFrame: CC => requestAnimationFrame(CC),
-          cancelFrame: CC => {
-            cancelAnimationFrame(CC)
+          requestFrame: pp => requestAnimationFrame(pp),
+          cancelFrame: pp => {
+            cancelAnimationFrame(pp)
           },
-          onRenderFailed: VC,
-          onFatal: (CC, zC) => {
-            console.error(`${uC} the previews stopped: renderer error ${CC} (detail ${zC})`)
+          onRenderFailed: ci,
+          onFatal: (pp, ip) => {
+            console.error(`${bp} the previews stopped: renderer error ${pp} (detail ${ip})`)
           },
           onDeviceLost: () => {
-            (0, KC.G)() === mC.d.webgpu && PC.G.lost()
+            (0, Ep.C)() === Qp.b.webgpu && ((0, ep.h)((0, yp.X)() ? (0, dp.Y)((0, yp.H)()) : null), vp.D.lost())
           },
           onDrew: () => {
-            PC.G.drew()
+            vp.D.drew()
           }
         }
-      }()), wz
+      }()), xi
     }
-    var nz = ZC(590),
-      fz = ZC(38454),
-      oz = ZC(3276);
-    const qz = {
+    var Yi = cp(629),
+      Di = cp(38856),
+      Ai = cp(3400);
+    const Pi = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1165,320 +1167,320 @@ export const modules = {
       gunReady: 14,
       gunAimed: 15
     };
-    const Fz = "[bloxd-previews]",
-      Wz = new Uint32Array(5);
+    const Wi = "[bloxd-previews]",
+      yi = new Uint32Array(5);
 
-    function Nz(CC) {
-      return nz.i.indexOf(CC)
+    function Ui(pp) {
+      return Yi.i.indexOf(pp)
     }
-    const Mz = new WeakSet;
+    const wi = new WeakSet;
 
-    function gz(CC) {
-      const zC = (0, fz.c)(CC),
-        ZC = null === zC ? -1 : Sz(zC);
-      return -1 !== ZC ? ZC : (Mz.has(CC) || (Mz.add(CC), console.warn(`${Fz} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function Sz(CC) {
-      var zC;
-      return null !== (zC = qz[CC]) && void 0 !== zC ? zC : -1
+    function vi(pp) {
+      const ip = (0, Di.c)(pp),
+        cp = null === ip ? -1 : ti(ip);
+      return -1 !== cp ? cp : (wi.has(pp) || (wi.add(pp), console.warn(`${Wi} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function pz(CC, zC) {
+    function ti(pp) {
+      var ip;
+      return null !== (ip = Pi[pp]) && void 0 !== ip ? ip : -1
+    }
+
+    function Hi(pp, ip) {
       const {
-        canvas: ZC
-      } = zC;
-      ZC.style.width = "100%", ZC.style.height = "100%", ZC.style.display = "block", CC.appendChild(ZC)
+        canvas: cp
+      } = ip;
+      cp.style.width = "100%", cp.style.height = "100%", cp.style.display = "block", pp.appendChild(cp)
     }
 
-    function Pz(CC) {
-      const zC = CC.getBoundingClientRect();
-      return [zC.width, zC.height]
+    function di(pp) {
+      const ip = pp.getBoundingClientRect();
+      return [ip.width, ip.height]
     }
-    class Gz {
-      constructor(CC, zC) {
-        this.preview = CC, this.showView = zC
+    class ei {
+      constructor(pp, ip) {
+        this.preview = pp, this.showView = ip
       }
-      show(CC) {
-        this.showView(this.preview, CC)
+      show(pp) {
+        this.showView(this.preview, pp)
       }
-      resize(CC, zC) {
-        this.preview.resize(CC, zC)
+      resize(pp, ip) {
+        this.preview.resize(pp, ip)
       }
       close() {
         this.preview.close()
       }
     }
-    class Rz {
-      constructor(CC) {
-        this.preview = CC, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(CC) {
+    class ui {
+      constructor(pp) {
+        this.preview = pp, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(pp) {
           const {
-            canvas: zC
-          } = CC;
-          let ZC = null;
-          const QC = CC => {
-              var QC;
-              ZC = {
-                pointer: CC.pointerId,
-                x: CC.clientX,
-                y: CC.clientY
-              }, null === (QC = zC.setPointerCapture) || void 0 === QC || QC.call(zC, CC.pointerId)
+            canvas: ip
+          } = pp;
+          let cp = null;
+          const Op = pp => {
+              var Op;
+              cp = {
+                pointer: pp.pointerId,
+                x: pp.clientX,
+                y: pp.clientY
+              }, null === (Op = ip.setPointerCapture) || void 0 === Op || Op.call(ip, pp.pointerId)
             },
-            wC = zC => {
-              var QC;
-              const wC = CC.orbit;
-              if ((null === (QC = ZC) || void 0 === QC ? void 0 : QC.pointer) !== zC.pointerId || null === wC) return;
-              const bC = zC.clientX - ZC.x,
-                nC = zC.clientY - ZC.y;
-              ZC = {
-                ...ZC,
-                x: zC.clientX,
-                y: zC.clientY
-              }, CC.setOrbit({
-                alpha: wC.alpha - .01 * bC,
-                beta: Math.min(Math.PI - .01, Math.max(.01, wC.beta - .01 * nC)),
-                radius: wC.radius
+            op = ip => {
+              var Op;
+              const op = pp.orbit;
+              if ((null === (Op = cp) || void 0 === Op ? void 0 : Op.pointer) !== ip.pointerId || null === op) return;
+              const Ip = ip.clientX - cp.x,
+                Sp = ip.clientY - cp.y;
+              cp = {
+                ...cp,
+                x: ip.clientX,
+                y: ip.clientY
+              }, pp.setOrbit({
+                alpha: op.alpha - .01 * Ip,
+                beta: Math.min(Math.PI - .01, Math.max(.01, op.beta - .01 * Sp)),
+                radius: op.radius
               })
             },
-            bC = CC => {
-              var zC;
-              (null === (zC = ZC) || void 0 === zC ? void 0 : zC.pointer) === CC.pointerId && (ZC = null)
+            Ip = pp => {
+              var ip;
+              (null === (ip = cp) || void 0 === ip ? void 0 : ip.pointer) === pp.pointerId && (cp = null)
             },
-            nC = zC => {
-              const ZC = CC.orbit;
-              if (null === ZC) return;
-              zC.preventDefault();
-              const QC = zC.deltaY * (zC.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : zC.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
-                wC = Math.min(100, Math.max(5, ZC.radius + .08 * QC));
-              CC.setOrbit({
-                ...ZC,
-                radius: wC
+            Sp = ip => {
+              const cp = pp.orbit;
+              if (null === cp) return;
+              ip.preventDefault();
+              const Op = ip.deltaY * (ip.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : ip.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
+                op = Math.min(100, Math.max(5, cp.radius + .08 * Op));
+              pp.setOrbit({
+                ...cp,
+                radius: op
               })
             };
-          return zC.style.touchAction = "none", zC.addEventListener("pointerdown", QC), zC.addEventListener("pointermove", wC), zC.addEventListener("pointerup", bC), zC.addEventListener("pointercancel", bC), zC.addEventListener("wheel", nC, {
+          return ip.style.touchAction = "none", ip.addEventListener("pointerdown", Op), ip.addEventListener("pointermove", op), ip.addEventListener("pointerup", Ip), ip.addEventListener("pointercancel", Ip), ip.addEventListener("wheel", Sp, {
             passive: !1
           }), () => {
-            zC.removeEventListener("pointerdown", QC), zC.removeEventListener("pointermove", wC), zC.removeEventListener("pointerup", bC), zC.removeEventListener("pointercancel", bC), zC.removeEventListener("wheel", nC)
+            ip.removeEventListener("pointerdown", Op), ip.removeEventListener("pointermove", op), ip.removeEventListener("pointerup", Ip), ip.removeEventListener("pointercancel", Ip), ip.removeEventListener("wheel", Sp)
           }
-        }(CC), this.dev = {
-          canvas: () => CC.canvas,
+        }(pp), this.dev = {
+          canvas: () => pp.canvas,
           isolateHead: () => {
-            console.warn(`${Fz} isolateHead: noa's character preview only`)
+            console.warn(`${Wi} isolateHead: noa's character preview only`)
           }
-        }, this.apply(), this.ready = CC.untilSettled().then((() => {
-          if (CC.isStopped) throw new Error(`${Fz} the previews stopped before the character drew`);
+        }, this.apply(), this.ready = pp.untilSettled().then((() => {
+          if (pp.isStopped) throw new Error(`${Wi} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(CC, zC) {
-        this.cosmetics[CC] = zC, this.apply()
+      setCosmetic(pp, ip) {
+        this.cosmetics[pp] = ip, this.apply()
       }
-      playEmote(CC) {
-        null === CC || CC !== this.emote ? (this.emote = CC, this.apply()) : this.preview.replay()
+      playEmote(pp) {
+        null === pp || pp !== this.emote ? (this.emote = pp, this.apply()) : this.preview.replay()
       }
-      untilDrawn(CC) {
+      untilDrawn(pp) {
         return this.preview.untilSettled()
       }
-      setOrbit(CC) {
+      setOrbit(pp) {
         let {
-          yaw: zC,
-          pitch: ZC,
-          radius: QC
-        } = CC;
-        const wC = this.preview.orbit;
-        null !== wC && this.preview.setOrbit({
-          alpha: zC,
-          beta: ZC,
-          radius: null !== QC && void 0 !== QC ? QC : wC.radius
+          yaw: ip,
+          pitch: cp,
+          radius: Op
+        } = pp;
+        const op = this.preview.orbit;
+        null !== op && this.preview.setOrbit({
+          alpha: ip,
+          beta: cp,
+          radius: null !== Op && void 0 !== Op ? Op : op.radius
         })
       }
       resetCamera() {}
-      resize(CC, zC) {
-        this.preview.resize(CC, zC)
+      resize(pp, ip) {
+        this.preview.resize(pp, ip)
       }
       close() {
         this.detachControls(), this.preview.close()
       }
       apply() {
-        var CC;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), Wz, null === (CC = this.emote) ? -1 : Sz(CC))
+        var pp;
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), yi, null === (pp = this.emote) ? -1 : ti(pp))
       }
     }
 
-    function Az(CC, zC) {
+    function ji(pp, ip) {
       let {
-        mobType: ZC,
-        variation: QC,
-        animation: wC
-      } = zC;
-      CC.setMob(Nz(ZC), null !== QC && void 0 !== QC ? QC : "", 1, gz(wC))
+        mobType: cp,
+        variation: Op,
+        animation: op
+      } = ip;
+      pp.setMob(Ui(cp), null !== Op && void 0 !== Op ? Op : "", 1, vi(op))
     }
 
-    function xz(CC, zC) {
+    function ki(pp, ip) {
       let {
-        mobType: ZC,
-        variation: QC,
-        metaInfo: wC,
-        tamed: bC
-      } = zC;
-      CC.setPet(Nz(ZC), QC, wC, bC)
+        mobType: cp,
+        variation: Op,
+        metaInfo: op,
+        tamed: Ip
+      } = ip;
+      pp.setPet(Ui(cp), Op, op, Ip)
     }
-    const Jz = {
+    const mi = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class Iz {
-      constructor(CC, zC, ZC, QC) {
+    class Ri {
+      constructor(pp, ip, cp, Op) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, CC(ZC.width, QC[1], QC).then((CC => {
-          if (this.closed) return void CC.close();
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, pp(cp.width, Op[1], Op).then((pp => {
+          if (this.closed) return void pp.close();
           const {
-            style: ZC
-          } = CC.canvas;
-          ZC.position = "absolute", ZC.top = "0", ZC.visibility = "hidden", pz(zC, CC), this.preview = CC, this.apply()
-        })).catch((CC => {
-          console.error(`${Fz} couldn't open a lineup figure`, CC)
+            style: cp
+          } = pp.canvas;
+          cp.position = "absolute", cp.top = "0", cp.visibility = "hidden", Hi(ip, pp), this.preview = pp, this.apply()
+        })).catch((pp => {
+          console.error(`${Wi} couldn't open a lineup figure`, pp)
         }))
       }
-      update(CC, zC, ZC, QC, wC) {
-        this.figure = CC, this.shown = zC, this.order = ZC, this.span = QC, this.lineup = wC, this.apply()
+      update(pp, ip, cp, Op, op) {
+        this.figure = pp, this.shown = ip, this.order = cp, this.span = Op, this.lineup = op, this.apply()
       }
       close() {
-        var CC;
-        this.closed = !0, null === (CC = this.preview) || void 0 === CC || CC.close(), this.preview = null
+        var pp;
+        this.closed = !0, null === (pp = this.preview) || void 0 === pp || pp.close(), this.preview = null
       }
       apply() {
         const {
-          preview: CC,
-          figure: zC,
-          lineup: ZC
+          preview: pp,
+          figure: ip,
+          lineup: cp
         } = this;
-        if (null === CC || null === zC) return;
-        if (this.given !== zC) {
-          var QC;
-          this.given = zC, this.loaded = !1;
-          const ZC = null === zC.Hx ? 0 : null !== (QC = (0, oz.b)(zC.Hx)) && void 0 !== QC ? QC : 0;
-          CC.setFigure(function(CC) {
-            return JSON.stringify(Object.fromEntries(CC.cosmetics))
-          }(zC), ZC, gz(zC.animation), zC.size), CC.untilSettled().then((() => {
-            this.given === zC && (this.loaded = !0, this.apply())
+        if (null === pp || null === ip) return;
+        if (this.given !== ip) {
+          var Op;
+          this.given = ip, this.loaded = !1;
+          const cp = null === ip.qm ? 0 : null !== (Op = (0, Ai.c)(ip.qm)) && void 0 !== Op ? Op : 0;
+          pp.setFigure(function(pp) {
+            return JSON.stringify(Object.fromEntries(pp.cosmetics))
+          }(ip), cp, vi(ip.animation), ip.size), pp.untilSettled().then((() => {
+            this.given === ip && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: wC,
-          width: bC
+          left: op,
+          width: Ip
         } = this.span;
-        CC.resize(bC, ZC[1], ZC);
+        pp.resize(Ip, cp[1], cp);
         const {
-          style: nC
-        } = CC.canvas;
-        nC.left = `${wC}px`, nC.width = `${bC}px`, nC.zIndex = this.order, nC.visibility = this.shown && this.loaded ? "visible" : "hidden"
+          style: Sp
+        } = pp.canvas;
+        Sp.left = `${op}px`, Sp.width = `${Ip}px`, Sp.zIndex = this.order, Sp.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class iz {
-      constructor(CC, zC) {
-        this.open = zC, this.layer = void 0, this.figures = [], this.view = {
+    class qi {
+      constructor(pp, ip) {
+        this.open = ip, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = Pz(CC), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = di(pp), this.layer = document.createElement("div");
         const {
-          style: ZC
+          style: cp
         } = this.layer;
-        ZC.position = "relative", ZC.isolation = "isolate", ZC.overflow = "hidden", ZC.width = "100%", ZC.height = "100%", ZC.pointerEvents = "none", CC.appendChild(this.layer)
+        cp.position = "relative", cp.isolation = "isolate", cp.overflow = "hidden", cp.width = "100%", cp.height = "100%", cp.pointerEvents = "none", pp.appendChild(this.layer)
       }
-      show(CC) {
-        this.view = CC, this.place()
+      show(pp) {
+        this.view = pp, this.place()
       }
-      resize(CC, zC) {
-        this.size = [CC, zC], this.place()
+      resize(pp, ip) {
+        this.size = [pp, ip], this.place()
       }
       close() {
-        for (const CC of this.figures) CC.close();
+        for (const pp of this.figures) pp.close();
         this.figures = [], this.layer.remove()
       }
       place() {
         const {
-          figures: CC,
-          shown: zC
+          figures: pp,
+          shown: ip
         } = this.view;
-        for (const QC of this.figures.splice(CC.length)) QC.close();
+        for (const Op of this.figures.splice(pp.length)) Op.close();
         const {
-          size: ZC
+          size: cp
         } = this;
-        CC.forEach(((QC, wC) => {
-          var bC;
-          const nC = function(CC, zC, ZC, QC) {
-            let [wC, bC] = QC;
-            const nC = (CC + .5) * wC / zC,
-              fC = Math.min(Math.max(wC / zC, 2 * ZC * bC), 2 * Math.max(nC, wC - nC));
+        pp.forEach(((Op, op) => {
+          var Ip;
+          const Sp = function(pp, ip, cp, Op) {
+            let [op, Ip] = Op;
+            const Sp = (pp + .5) * op / ip,
+              xp = Math.min(Math.max(op / ip, 2 * cp * Ip), 2 * Math.max(Sp, op - Sp));
             return {
-              left: nC - fC / 2,
-              width: fC
+              left: Sp - xp / 2,
+              width: xp
             }
-          }(wC, CC.length, function(CC) {
+          }(op, pp.length, function(pp) {
             let {
-              animation: zC,
-              size: ZC
-            } = CC;
+              animation: ip,
+              size: cp
+            } = pp;
             const {
-              aimed: QC,
-              ready: wC
-            } = Jz;
-            return (gz(zC) === qz.gunAimed ? QC : wC) * ZC
-          }(QC), ZC);
-          this.figures[wC] ??= new Iz(this.open, this.layer, nC, ZC), this.figures[wC].update(QC, null !== (bC = zC[wC]) && void 0 !== bC && bC, function(CC, zC) {
-            return String(Math.round(1e3 * CC) + zC)
-          }(QC.size, wC), nC, ZC)
+              aimed: Op,
+              ready: op
+            } = mi;
+            return (vi(ip) === Pi.gunAimed ? Op : op) * cp
+          }(Op), cp);
+          this.figures[op] ??= new Ri(this.open, this.layer, Sp, cp), this.figures[op].update(Op, null !== (Ip = ip[op]) && void 0 !== Ip && Ip, function(pp, ip) {
+            return String(Math.round(1e3 * pp) + ip)
+          }(Op.size, op), Sp, cp)
         }))
       }
     }
-    const vz = {
-      player: TC,
-      store: aC
+    const Mi = {
+      player: np,
+      store: Fp
     };
-    class ez {
-      constructor(CC) {
-        this.page = CC
+    class Ci {
+      constructor(pp) {
+        this.page = pp
       }
-      async openMob(CC) {
-        return new Gz(await this.open(CC, sC), Az)
+      async openMob(pp) {
+        return new ei(await this.open(pp, ap), ji)
       }
-      async openPet(CC) {
-        return new Gz(await this.open(CC, sC), xz)
+      async openPet(pp) {
+        return new ei(await this.open(pp, ap), ki)
       }
-      openMobLineup(CC) {
-        return new iz(CC, ((CC, zC, ZC) => this.page.openPreview(sC, CC, zC, ZC)))
+      openMobLineup(pp) {
+        return new qi(pp, ((pp, ip, cp) => this.page.openPreview(ap, pp, ip, cp)))
       }
-      async openCharacter(CC, zC) {
-        return new Rz(await this.open(CC, vz[zC]))
+      async openCharacter(pp, ip) {
+        return new ui(await this.open(pp, Mi[ip]))
       }
-      async open(CC, zC) {
-        const [ZC, QC] = Pz(CC), wC = await this.page.openPreview(zC, ZC, QC);
-        return pz(CC, wC), wC
+      async open(pp, ip) {
+        const [cp, Op] = di(pp), op = await this.page.openPreview(ip, cp, Op);
+        return Hi(pp, op), op
       }
     }
   },
-  36630: (CC, zC, ZC) => {
-    ZC.d(zC, {
-      A: () => MC,
-      C: () => gC,
-      D: () => SC,
-      F: () => PC,
-      e: () => QC,
-      i: () => wC,
-      j: () => NC,
-      n: () => pC,
-      o: () => FC,
-      s: () => GC,
-      w: () => oC,
-      x: () => qC
+  36939: (pp, ip, cp) => {
+    cp.d(ip, {
+      A: () => yp,
+      E: () => Up,
+      H: () => vp,
+      e: () => Op,
+      h: () => op,
+      i: () => Pp,
+      j: () => wp,
+      l: () => Dp,
+      p: () => tp,
+      t: () => Lp,
+      v: () => Yp,
+      y: () => Wp
     });
-    const QC = [{
+    const Op = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -1495,64 +1497,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function wC(CC, zC) {
+    function op(pp, ip) {
       const {
-        numLines: ZC,
-        charsPerLine: wC
-      } = QC[zC];
-      return RC(CC, ZC, wC, !1)
+        numLines: cp,
+        charsPerLine: op
+      } = Op[ip];
+      return Hp(pp, cp, op, !1)
     }
-    const bC = 7 / 8,
-      nC = .25,
-      fC = 8;
+    const Ip = 7 / 8,
+      Sp = .25,
+      xp = 8;
 
-    function oC(CC, zC) {
+    function Lp(pp, ip) {
       return {
-        width: Math.min(CC, fC) - 2 * nC,
-        height: Math.min(zC, fC) - 2 * nC
+        width: Math.min(pp, xp) - 2 * Sp,
+        height: Math.min(ip, xp) - 2 * Sp
       }
     }
 
-    function qC(CC, zC, ZC) {
-      const wC = oC(CC, zC),
+    function Yp(pp, ip, cp) {
+      const op = Lp(pp, ip),
         {
-          numLines: nC,
-          charsPerLine: fC
-        } = QC[ZC];
+          numLines: Sp,
+          charsPerLine: xp
+        } = Op[cp];
       return {
-        numLines: Math.max(1, Math.floor(nC / bC * wC.height)),
-        charsPerLine: Math.max(1, Math.floor(fC * wC.width))
+        numLines: Math.max(1, Math.floor(Sp / Ip * op.height)),
+        charsPerLine: Math.max(1, Math.floor(xp * op.width))
       }
     }
 
-    function FC(CC, zC, ZC, QC) {
+    function Dp(pp, ip, cp, Op) {
       const {
-        numLines: wC,
-        charsPerLine: bC
-      } = qC(ZC, QC, zC);
-      return RC(CC, wC, bC, !1)
+        numLines: op,
+        charsPerLine: Ip
+      } = Yp(cp, Op, ip);
+      return Hp(pp, op, Ip, !1)
     }
-    const WC = 32e3;
+    const Ap = 32e3;
 
-    function NC(CC) {
-      return CC.slice(0, WC)
+    function Pp(pp) {
+      return pp.slice(0, Ap)
     }
-    const MC = 512e3,
-      gC = 64,
-      SC = MC;
+    const Wp = 512e3,
+      yp = 64,
+      Up = Wp;
 
-    function pC(CC, zC) {
-      const ZC = Math.max(0, SC - zC),
-        QC = Math.min(MC, ZC);
-      return CC.slice(0, QC)
+    function wp(pp, ip) {
+      const cp = Math.max(0, Up - ip),
+        Op = Math.min(Wp, cp);
+      return pp.slice(0, Op)
     }
-    const PC = {
+    const vp = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      hq: {
+      Ux: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -1564,31 +1566,31 @@ export const modules = {
       }
     };
 
-    function GC(CC, zC) {
+    function tp(pp, ip) {
       const {
-        numLines: ZC,
-        charsPerLine: QC
-      } = PC[zC];
-      return RC(CC, ZC, QC, !1)
+        numLines: cp,
+        charsPerLine: Op
+      } = vp[ip];
+      return Hp(pp, cp, Op, !1)
     }
 
-    function RC(CC, zC, ZC, QC, wC) {
-      (wC || QC) && (CC = CC.slice(0, null !== wC && void 0 !== wC ? wC : zC * ZC));
-      const bC = CC.split("\n");
-      if (bC.length > zC && bC.splice(zC, bC.length - zC), !QC)
-        for (let nC = 0; nC < bC.length; nC++) {
-          const CC = bC[nC];
-          CC.length > ZC && (bC[nC] = CC.substring(0, ZC), bC.length < zC && bC.splice(nC + 1, 0, CC.substring(ZC)))
+    function Hp(pp, ip, cp, Op, op) {
+      (op || Op) && (pp = pp.slice(0, null !== op && void 0 !== op ? op : ip * cp));
+      const Ip = pp.split("\n");
+      if (Ip.length > ip && Ip.splice(ip, Ip.length - ip), !Op)
+        for (let Sp = 0; Sp < Ip.length; Sp++) {
+          const pp = Ip[Sp];
+          pp.length > cp && (Ip[Sp] = pp.substring(0, cp), Ip.length < ip && Ip.splice(Sp + 1, 0, pp.substring(cp)))
         }
-      return bC.join("\n")
+      return Ip.join("\n")
     }
   },
-  50703: (CC, zC, ZC) => {
-    CC.exports = ZC.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
+  51187: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
   },
-  50712: (CC, zC, ZC) => {
-    CC.exports = ZC.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
+  51194: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);

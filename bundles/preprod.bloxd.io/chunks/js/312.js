@@ -1,176 +1,472 @@
 export const id = 312;
-export const ids = [312];
+export const ids = [311, 312];
 export const modules = {
-  41657: (CC, zC, ZC) => {
-    ZC.r(zC), ZC.d(zC, {
-      _HDRTextureLoader: () => FC
+  42041: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      _DDSTextureLoader: () => Ip
     });
-    var QC = ZC(36963);
-    class wC {
-      static ConvertPanoramaToCubemap(CC, zC, ZC, QC) {
-        let wC, bC = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-          nC = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5];
-        if (!CC) throw "ConvertPanoramaToCubemap: input cannot be null";
-        if (CC.length != zC * ZC * 3) {
-          if (CC.length != zC * ZC * 4) throw "ConvertPanoramaToCubemap: input size is wrong";
-          wC = 4
-        } else wC = 3;
-        return {
-          front: this.CreateCubemapTexture(QC, this.FACE_FRONT, CC, zC, ZC, bC, nC, wC),
-          back: this.CreateCubemapTexture(QC, this.FACE_BACK, CC, zC, ZC, bC, nC, wC),
-          left: this.CreateCubemapTexture(QC, this.FACE_LEFT, CC, zC, ZC, bC, nC, wC),
-          right: this.CreateCubemapTexture(QC, this.FACE_RIGHT, CC, zC, ZC, bC, nC, wC),
-          up: this.CreateCubemapTexture(QC, this.FACE_UP, CC, zC, ZC, bC, nC, wC),
-          down: this.CreateCubemapTexture(QC, this.FACE_DOWN, CC, zC, ZC, bC, nC, wC),
-          size: QC,
-          type: 1,
-          format: 4,
-          gammaSpace: !1
-        }
-      }
-      static CreateCubemapTexture(CC, zC, ZC, QC, wC, bC, nC, fC) {
-        const oC = new ArrayBuffer(CC * CC * 4 * 3),
-          qC = new Float32Array(oC),
-          FC = bC ? Math.max(1, Math.round(QC / 4 / CC)) : 1,
-          WC = 1 / FC,
-          NC = WC * WC,
-          MC = zC[1].subtract(zC[0]).scale(WC / CC),
-          gC = zC[3].subtract(zC[2]).scale(WC / CC),
-          SC = 1 / CC;
-        let pC = 0;
-        for (let PC = 0; PC < CC; PC++)
-          for (let bC = 0; bC < FC; bC++) {
-            let bC = zC[0],
-              oC = zC[2];
-            for (let zC = 0; zC < CC; zC++)
-              for (let WC = 0; WC < FC; WC++) {
-                const FC = oC.subtract(bC).scale(pC).add(bC);
-                FC.normalize();
-                const WC = this.CalcProjectionSpherical(FC, ZC, QC, wC, fC, nC);
-                qC[PC * CC * 3 + 3 * zC + 0] += WC.r * NC, qC[PC * CC * 3 + 3 * zC + 1] += WC.g * NC, qC[PC * CC * 3 + 3 * zC + 2] += WC.b * NC, bC = bC.add(MC), oC = oC.add(gC)
-              }
-            pC += SC * WC
-          }
-        return qC
-      }
-      static CalcProjectionSpherical(CC, zC, ZC, QC, wC, bC) {
-        let nC = Math.atan2(CC.z, CC.x);
-        const fC = Math.acos(CC.y);
-        for (; nC < -Math.PI;) nC += 2 * Math.PI;
-        for (; nC > Math.PI;) nC -= 2 * Math.PI;
-        let oC = nC / Math.PI;
-        const qC = fC / Math.PI;
-        oC = .5 * oC + .5;
-        let FC = Math.round(oC * ZC);
-        FC < 0 ? FC = 0 : FC >= ZC && (FC = ZC - 1);
-        let WC = Math.round(qC * QC);
-        WC < 0 ? WC = 0 : WC >= QC && (WC = QC - 1);
-        const NC = bC ? QC - WC - 1 : WC;
-        return {
-          r: zC[NC * ZC * wC + FC * wC + 0],
-          g: zC[NC * ZC * wC + FC * wC + 1],
-          b: zC[NC * ZC * wC + FC * wC + 2]
-        }
-      }
-    }
-
-    function bC(CC, zC, ZC, QC, wC, bC) {
-      wC > 0 ? (wC = function(CC, zC) {
-        return zC > 1023 ? CC * Math.pow(2, 1023) * Math.pow(2, zC - 1023) : zC < -1074 ? CC * Math.pow(2, -1074) * Math.pow(2, zC + 1074) : CC * Math.pow(2, zC)
-      }(1, wC - 136), CC[bC + 0] = zC * wC, CC[bC + 1] = ZC * wC, CC[bC + 2] = QC * wC) : (CC[bC + 0] = 0, CC[bC + 1] = 0, CC[bC + 2] = 0)
-    }
-
-    function nC(CC, zC) {
-      let ZC, QC = "";
-      for (let wC = zC; wC < CC.length - zC && (ZC = String.fromCharCode(CC[wC]), "\n" != ZC); wC++) QC += ZC;
-      return QC
-    }
-
-    function fC(CC) {
-      let zC = nC(CC, 0);
-      if ("#" != zC[0] || "?" != zC[1]) throw "Bad HDR Format.";
-      let ZC = !1,
-        QC = !1,
-        wC = 0;
-      do {
-        wC += zC.length + 1, zC = nC(CC, wC), "FORMAT=32-bit_rle_rgbe" == zC ? QC = !0 : 0 == zC.length && (ZC = !0)
-      } while (!ZC);
-      if (!QC) throw "HDR Bad header format, unsupported FORMAT";
-      wC += zC.length + 1, zC = nC(CC, wC);
-      const bC = /^-Y (.*) \+X (.*)$/g.exec(zC);
-      if (!bC || bC.length < 3) throw "HDR Bad header format, no size";
-      const fC = parseInt(bC[2]),
-        oC = parseInt(bC[1]);
-      if (fC < 8 || fC > 32767) throw "HDR Bad header format, unsupported size";
-      return wC += zC.length + 1, {
-        height: oC,
-        width: fC,
-        dataPosition: wC
-      }
-    }
-
-    function oC(CC, zC) {
-      return function(CC, zC) {
-        let ZC = zC.height;
-        const QC = zC.width;
-        let wC, nC, fC, oC, FC, WC, NC, MC, gC = zC.dataPosition;
-        const SC = new ArrayBuffer(4 * QC),
-          pC = new Uint8Array(SC),
-          PC = new ArrayBuffer(zC.width * zC.height * 4 * 3),
-          GC = new Float32Array(PC);
-        for (; ZC > 0;) {
-          if (wC = CC[gC++], nC = CC[gC++], fC = CC[gC++], oC = CC[gC++], 2 != wC || 2 != nC || 128 & fC || zC.width < 8 || zC.width > 32767) return qC(CC, zC);
-          if ((fC << 8 | oC) != QC) throw "HDR Bad header format, wrong scan line width";
-          for (WC = 0, MC = 0; MC < 4; MC++)
-            for (NC = (MC + 1) * QC; WC < NC;)
-              if (wC = CC[gC++], nC = CC[gC++], wC > 128) {
-                if (FC = wC - 128, 0 == FC || FC > NC - WC) throw "HDR Bad Format, bad scanline data (run)";
-                for (; FC-- > 0;) pC[WC++] = nC
-              } else {
-                if (FC = wC, 0 == FC || FC > NC - WC) throw "HDR Bad Format, bad scanline data (non-run)";
-                if (pC[WC++] = nC, --FC > 0)
-                  for (let zC = 0; zC < FC; zC++) pC[WC++] = CC[gC++]
-              } for (MC = 0; MC < QC; MC++) wC = pC[MC], nC = pC[MC + QC], fC = pC[MC + 2 * QC], oC = pC[MC + 3 * QC], bC(GC, wC, nC, fC, oC, (zC.height - ZC) * QC * 3 + 3 * MC);
-          ZC--
-        }
-        return GC
-      }(CC, zC)
-    }
-
-    function qC(CC, zC) {
-      let ZC = zC.height;
-      const QC = zC.width;
-      let wC, nC, fC, oC, qC, FC = zC.dataPosition;
-      const WC = new ArrayBuffer(zC.width * zC.height * 4 * 3),
-        NC = new Float32Array(WC);
-      for (; ZC > 0;) {
-        for (qC = 0; qC < zC.width; qC++) wC = CC[FC++], nC = CC[FC++], fC = CC[FC++], oC = CC[FC++], bC(NC, wC, nC, fC, oC, (zC.height - ZC) * QC * 3 + 3 * qC);
-        ZC--
-      }
-      return NC
-    }
-    wC.FACE_LEFT = [new QC.r(-1, -1, -1), new QC.r(1, -1, -1), new QC.r(-1, 1, -1), new QC.r(1, 1, -1)], wC.FACE_RIGHT = [new QC.r(1, -1, 1), new QC.r(-1, -1, 1), new QC.r(1, 1, 1), new QC.r(-1, 1, 1)], wC.FACE_FRONT = [new QC.r(1, -1, -1), new QC.r(1, -1, 1), new QC.r(1, 1, -1), new QC.r(1, 1, 1)], wC.FACE_BACK = [new QC.r(-1, -1, 1), new QC.r(-1, -1, -1), new QC.r(-1, 1, 1), new QC.r(-1, 1, -1)], wC.FACE_DOWN = [new QC.r(1, 1, -1), new QC.r(1, 1, 1), new QC.r(-1, 1, -1), new QC.r(-1, 1, 1)], wC.FACE_UP = [new QC.r(-1, -1, -1), new QC.r(-1, -1, 1), new QC.r(1, -1, -1), new QC.r(1, -1, 1)];
-    class FC {
+    var Op = cp(40190),
+      op = cp(42016);
+    class Ip {
       constructor() {
-        this.supportCascades = !1
+        this.supportCascades = !0
       }
-      loadCubeData() {
-        throw ".hdr not supported in Cube."
+      loadCubeData(pp, ip, cp, Ip) {
+        const Sp = ip.gy();
+        let xp, Lp = !1,
+          Yp = 1e3;
+        if (Array.isArray(pp))
+          for (let Op = 0; Op < pp.length; Op++) {
+            const cp = pp[Op];
+            xp = op.DDSTools.GetDDSInfo(cp), ip.width = xp.width, ip.height = xp.height, Lp = (xp.isRGB || xp.isLuminance || xp.mipmapCount > 1) && ip.generateMipMaps, Sp._unpackFlipY(xp.isCompressed), op.DDSTools.UploadDDSLevels(Sp, ip, cp, xp, Lp, 6, -1, Op), xp.isFourCC || 1 !== xp.mipmapCount ? Yp = xp.mipmapCount - 1 : Sp.generateMipMapsForCubemap(ip)
+          } else {
+            const Ip = pp;
+            xp = op.DDSTools.GetDDSInfo(Ip), ip.width = xp.width, ip.height = xp.height, cp && (xp.sphericalPolynomial = new Op.e), Lp = (xp.isRGB || xp.isLuminance || xp.mipmapCount > 1) && ip.generateMipMaps, Sp._unpackFlipY(xp.isCompressed), op.DDSTools.UploadDDSLevels(Sp, ip, Ip, xp, Lp, 6), xp.isFourCC || 1 !== xp.mipmapCount ? Yp = xp.mipmapCount - 1 : Sp.generateMipMapsForCubemap(ip, !1)
+          }
+        Sp._setCubeMapTextureParams(ip, Lp, Yp), ip.isReady = !0, ip.onLoadedObservable.notifyObservers(ip), ip.onLoadedObservable.clear(), Ip && Ip({
+          isDDS: !0,
+          width: ip.width,
+          info: xp,
+          data: pp,
+          texture: ip
+        })
       }
-      loadData(CC, zC, ZC) {
-        const QC = new Uint8Array(CC.buffer, CC.byteOffset, CC.byteLength),
-          wC = fC(QC),
-          bC = oC(QC, wC),
-          nC = wC.width * wC.height,
-          qC = new Float32Array(4 * nC);
-        for (let fC = 0; fC < nC; fC += 1) qC[4 * fC] = bC[3 * fC], qC[4 * fC + 1] = bC[3 * fC + 1], qC[4 * fC + 2] = bC[3 * fC + 2], qC[4 * fC + 3] = 1;
-        ZC(wC.width, wC.height, zC.generateMipMaps, !1, (() => {
-          const CC = zC.mg();
-          zC.type = 1, zC.format = 5, zC._gammaSpace = !1, CC._uploadDataToTextureDirectly(zC, qC)
+      loadData(pp, ip, cp) {
+        const Op = op.DDSTools.GetDDSInfo(pp),
+          Ip = (Op.isRGB || Op.isLuminance || Op.mipmapCount > 1) && ip.generateMipMaps && Math.max(Op.width, Op.height) >> Op.mipmapCount - 1 === 1;
+        cp(Op.width, Op.height, Ip, Op.isFourCC, (() => {
+          op.DDSTools.UploadDDSLevels(ip.gy(), ip, pp, Op, Ip, 1)
         }))
       }
     }
+  },
+  42025: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Yp
+    });
+    var Op = cp(37320),
+      op = cp(37356),
+      Ip = cp(40190),
+      Sp = cp(37324),
+      xp = cp(37487);
+    class Lp {
+      constructor(pp, ip, cp, Op) {
+        this.name = pp, this.worldAxisForNormal = ip, this.worldAxisForFileX = cp, this.worldAxisForFileY = Op
+      }
+    }
+    class Yp {
+      static _NearestPow2Floor(pp) {
+        return pp <= 1 ? 1 : 1 << Math.floor(Math.log2(pp))
+      }
+      static ConvertCubeMapTextureToSphericalPolynomial(pp) {
+        if (!pp.isCube) return null;
+        pp.Gl()?.gy().flushFramebuffer();
+        const ip = pp.getSize().width,
+          cp = pp._sphericalPolynomialTargetSize,
+          Op = cp > 0 ? this._NearestPow2Floor(cp) : 0,
+          op = !pp.noMipmap && !0 === pp._texture?.generateMipMaps,
+          Ip = Op > 0 && Op < ip && op,
+          Sp = Ip ? Math.max(0, Math.round(Math.log2(ip / Op))) : 0,
+          xp = Ip ? Math.max(1, Math.floor(ip / Math.pow(2, Sp))) : ip,
+          Lp = pp.readPixels(0, Sp, void 0, !1),
+          Yp = pp.readPixels(1, Sp, void 0, !1);
+        let Dp, Ap;
+        pp.isRenderTarget ? (Dp = pp.readPixels(3, Sp, void 0, !1), Ap = pp.readPixels(2, Sp, void 0, !1)) : (Dp = pp.readPixels(2, Sp, void 0, !1), Ap = pp.readPixels(3, Sp, void 0, !1));
+        const Pp = pp.readPixels(4, Sp, void 0, !1),
+          Wp = pp.readPixels(5, Sp, void 0, !1),
+          yp = pp.gammaSpace,
+          Up = Op > 0 && Op < ip && !Ip;
+        return new Promise((pp => {
+          Promise.all([Yp, Lp, Dp, Ap, Pp, Wp]).then((cp => {
+            let [op, Ip, Sp, Lp, Yp, Dp] = cp, Ap = xp;
+            if (Up) {
+              const pp = 4;
+              op = this._DownsampleFace(op, ip, Op, pp), Ip = this._DownsampleFace(Ip, ip, Op, pp), Sp = this._DownsampleFace(Sp, ip, Op, pp), Lp = this._DownsampleFace(Lp, ip, Op, pp), Yp = this._DownsampleFace(Yp, ip, Op, pp), Dp = this._DownsampleFace(Dp, ip, Op, pp), Ap = Op
+            }
+            const Pp = {
+              size: Ap,
+              right: Ip,
+              left: op,
+              up: Sp,
+              down: Lp,
+              front: Yp,
+              back: Dp,
+              format: 5,
+              type: op instanceof Float32Array ? 1 : 0,
+              gammaSpace: yp
+            };
+            pp(this.ConvertCubeMapToSphericalPolynomial(Pp))
+          }))
+        }))
+      }
+      static _AreaElement(pp, ip) {
+        return Math.atan2(pp * ip, Math.sqrt(pp * pp + ip * ip + 1))
+      }
+      static _DownsampleFace(pp, ip, cp, Op) {
+        const op = pp instanceof Float32Array ? pp : Float32Array.from(pp),
+          Ip = cp * cp * Op,
+          Sp = new Float32Array(Ip),
+          xp = ip / cp,
+          Lp = 1 / (xp * xp);
+        for (let Dp = 0; Dp < cp; Dp++) {
+          const pp = Math.floor(Dp * xp),
+            Ip = Math.floor((Dp + 1) * xp);
+          for (let Yp = 0; Yp < cp; Yp++) {
+            const Ap = Math.floor(Yp * xp),
+              Pp = Math.floor((Yp + 1) * xp),
+              Wp = (Dp * cp + Yp) * Op;
+            for (let cp = 0; cp < Op; cp++) {
+              let xp = 0;
+              for (let Sp = pp; Sp < Ip; Sp++)
+                for (let pp = Ap; pp < Pp; pp++) xp += op[(Sp * ip + pp) * Op + cp];
+              Sp[Wp + cp] = xp * Lp
+            }
+          }
+        }
+        if (pp instanceof Float32Array) return Sp;
+        const Yp = new(0, pp.constructor)(Ip);
+        for (let Dp = 0; Dp < Ip; Dp++) Yp[Dp] = Sp[Dp] + .5 | 0;
+        return Yp
+      }
+      static ConvertCubeMapToSphericalPolynomial(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+        const cp = ip > 0 ? this._NearestPow2Floor(ip) : 0;
+        if (cp > 0 && pp.size > cp) {
+          const ip = 5 === pp.format ? 4 : 3,
+            Op = ["right", "left", "up", "down", "front", "back"],
+            op = {};
+          for (const Ip of Op) op[Ip] = this._DownsampleFace(pp[Ip], pp.size, cp, ip);
+          pp = {
+            ...pp,
+            ...op,
+            size: cp
+          }
+        }
+        const Op = new Ip.c;
+        let Lp = 0;
+        const Yp = 2 / pp.size,
+          Dp = Yp,
+          Ap = .5 * Yp,
+          Pp = Ap - 1;
+        for (let Ip = 0; Ip < 6; Ip++) {
+          const ip = this._FileFaces[Ip],
+            cp = pp[ip.name];
+          let Wp = Pp;
+          const yp = 5 === pp.format ? 4 : 3;
+          for (let Ip = 0; Ip < pp.size; Ip++) {
+            let Up = Pp;
+            for (let Dp = 0; Dp < pp.size; Dp++) {
+              const Pp = ip.worldAxisForFileX.scale(Up).add(ip.worldAxisForFileY.scale(Wp)).add(ip.worldAxisForNormal);
+              Pp.normalize();
+              const wp = this._AreaElement(Up - Ap, Wp - Ap) - this._AreaElement(Up - Ap, Wp + Ap) - this._AreaElement(Up + Ap, Wp - Ap) + this._AreaElement(Up + Ap, Wp + Ap);
+              let vp = cp[Ip * pp.size * yp + Dp * yp + 0],
+                tp = cp[Ip * pp.size * yp + Dp * yp + 1],
+                Hp = cp[Ip * pp.size * yp + Dp * yp + 2];
+              isNaN(vp) && (vp = 0), isNaN(tp) && (tp = 0), isNaN(Hp) && (Hp = 0), 0 === pp.type && (vp /= 255, tp /= 255, Hp /= 255), pp.gammaSpace && (vp = Math.pow((0, op.Clamp)(vp), Sp.g), tp = Math.pow((0, op.Clamp)(tp), Sp.g), Hp = Math.pow((0, op.Clamp)(Hp), Sp.g));
+              const dp = this.MAX_HDRI_VALUE;
+              if (this.PRESERVE_CLAMPED_COLORS) {
+                const pp = Math.max(vp, tp, Hp);
+                if (pp > dp) {
+                  const ip = dp / pp;
+                  vp *= ip, tp *= ip, Hp *= ip
+                }
+              } else vp = (0, op.Clamp)(vp, 0, dp), tp = (0, op.Clamp)(tp, 0, dp), Hp = (0, op.Clamp)(Hp, 0, dp);
+              const ep = new xp.d(vp, tp, Hp);
+              Op.addLight(Pp, ep, wp), Lp += wp, Up += Yp
+            }
+            Wp += Dp
+          }
+        }
+        const Wp = 6 * (4 * Math.PI) / 6 / Lp;
+        return Op.scaleInPlace(Wp), Op.convertIncidentRadianceToIrradiance(), Op.convertIrradianceToLambertianRadiance(), Ip.e.FromHarmonics(Op)
+      }
+    }
+    Yp._FileFaces = [new Lp("right", new Op.o(1, 0, 0), new Op.o(0, 0, -1), new Op.o(0, -1, 0)), new Lp("left", new Op.o(-1, 0, 0), new Op.o(0, 0, 1), new Op.o(0, -1, 0)), new Lp("up", new Op.o(0, 1, 0), new Op.o(1, 0, 0), new Op.o(0, 0, 1)), new Lp("down", new Op.o(0, -1, 0), new Op.o(1, 0, 0), new Op.o(0, 0, -1)), new Lp("front", new Op.o(0, 0, 1), new Op.o(1, 0, 0), new Op.o(0, -1, 0)), new Lp("back", new Op.o(0, 0, -1), new Op.o(-1, 0, 0), new Op.o(0, -1, 0))], Yp.MAX_HDRI_VALUE = 4096, Yp.PRESERVE_CLAMPED_COLORS = !1
+  },
+  42016: (pp, ip, cp) => {
+    cp.d(ip, {
+      DDSTools: () => yp
+    });
+    var Op = cp(37356),
+      op = cp(38905),
+      Ip = cp(42025),
+      Sp = cp(40276);
+    const xp = 131072,
+      Lp = 131072;
+
+    function Yp(pp) {
+      return pp.charCodeAt(0) + (pp.charCodeAt(1) << 8) + (pp.charCodeAt(2) << 16) + (pp.charCodeAt(3) << 24)
+    }
+    const Dp = Yp("DXT1"),
+      Ap = Yp("DXT3"),
+      Pp = Yp("DXT5"),
+      Wp = Yp("DX10");
+    class yp {
+      static GetDDSInfo(pp) {
+        const ip = new Int32Array(pp.buffer, pp.byteOffset, 31),
+          cp = new Int32Array(pp.buffer, pp.byteOffset, 35);
+        let Op = 1;
+        ip[2] & xp && (Op = Math.max(1, ip[7]));
+        const op = ip[21],
+          Ip = op === Wp ? cp[32] : 0;
+        let Sp = 0;
+        switch (op) {
+          case 113:
+            Sp = 2;
+            break;
+          case 116:
+            Sp = 1;
+            break;
+          case Wp:
+            if (10 === Ip) {
+              Sp = 2;
+              break
+            }
+            if (2 === Ip) {
+              Sp = 1;
+              break
+            }
+        }
+        return {
+          width: ip[4],
+          height: ip[3],
+          mipmapCount: Op,
+          isFourCC: 4 === (4 & ip[20]),
+          isRGB: 64 === (64 & ip[20]),
+          isLuminance: (ip[20] & Lp) === Lp,
+          isCube: 512 === (512 & ip[28]),
+          isCompressed: op === Dp || op === Ap || op === Pp,
+          dxgiFormat: Ip,
+          textureType: Sp
+        }
+      }
+      static _GetHalfFloatAsFloatRGBAArrayBuffer(pp, ip, cp, Op, op, Ip) {
+        const xp = new Float32Array(Op),
+          Lp = new Uint16Array(op, cp);
+        let Yp = 0;
+        for (let Dp = 0; Dp < ip; Dp++)
+          for (let ip = 0; ip < pp; ip++) {
+            const cp = 4 * (ip + Dp * pp);
+            xp[Yp] = (0, Sp.c)(Lp[cp]), xp[Yp + 1] = (0, Sp.c)(Lp[cp + 1]), xp[Yp + 2] = (0, Sp.c)(Lp[cp + 2]), yp.StoreLODInAlphaChannel ? xp[Yp + 3] = Ip : xp[Yp + 3] = (0, Sp.c)(Lp[cp + 3]), Yp += 4
+          }
+        return xp
+      }
+      static _GetHalfFloatRGBAArrayBuffer(pp, ip, cp, Op, op, Ip) {
+        if (yp.StoreLODInAlphaChannel) {
+          const xp = new Uint16Array(Op),
+            Lp = new Uint16Array(op, cp);
+          let Yp = 0;
+          for (let cp = 0; cp < ip; cp++)
+            for (let ip = 0; ip < pp; ip++) {
+              const Op = 4 * (ip + cp * pp);
+              xp[Yp] = Lp[Op], xp[Yp + 1] = Lp[Op + 1], xp[Yp + 2] = Lp[Op + 2], xp[Yp + 3] = (0, Sp.h)(Ip), Yp += 4
+            }
+          return xp
+        }
+        return new Uint16Array(op, cp, Op)
+      }
+      static _GetFloatRGBAArrayBuffer(pp, ip, cp, Op, op, Ip) {
+        if (yp.StoreLODInAlphaChannel) {
+          const Sp = new Float32Array(Op),
+            xp = new Float32Array(op, cp);
+          let Lp = 0;
+          for (let cp = 0; cp < ip; cp++)
+            for (let ip = 0; ip < pp; ip++) {
+              const Op = 4 * (ip + cp * pp);
+              Sp[Lp] = xp[Op], Sp[Lp + 1] = xp[Op + 1], Sp[Lp + 2] = xp[Op + 2], Sp[Lp + 3] = Ip, Lp += 4
+            }
+          return Sp
+        }
+        return new Float32Array(op, cp, Op)
+      }
+      static _GetFloatAsHalfFloatRGBAArrayBuffer(pp, ip, cp, Op, op, Ip) {
+        const xp = new Uint16Array(Op),
+          Lp = new Float32Array(op, cp);
+        let Yp = 0;
+        for (let Dp = 0; Dp < ip; Dp++)
+          for (let ip = 0; ip < pp; ip++) xp[Yp] = (0, Sp.h)(Lp[Yp]), xp[Yp + 1] = (0, Sp.h)(Lp[Yp + 1]), xp[Yp + 2] = (0, Sp.h)(Lp[Yp + 2]), yp.StoreLODInAlphaChannel ? xp[Yp + 3] = (0, Sp.h)(Ip) : xp[Yp + 3] = (0, Sp.h)(Lp[Yp + 3]), Yp += 4;
+        return xp
+      }
+      static _GetFloatAsUIntRGBAArrayBuffer(pp, ip, cp, op, Ip, Sp) {
+        const xp = new Uint8Array(op),
+          Lp = new Float32Array(Ip, cp);
+        let Yp = 0;
+        for (let Dp = 0; Dp < ip; Dp++)
+          for (let ip = 0; ip < pp; ip++) {
+            const cp = 4 * (ip + Dp * pp);
+            xp[Yp] = 255 * (0, Op.Clamp)(Lp[cp]), xp[Yp + 1] = 255 * (0, Op.Clamp)(Lp[cp + 1]), xp[Yp + 2] = 255 * (0, Op.Clamp)(Lp[cp + 2]), yp.StoreLODInAlphaChannel ? xp[Yp + 3] = Sp : xp[Yp + 3] = 255 * (0, Op.Clamp)(Lp[cp + 3]), Yp += 4
+          }
+        return xp
+      }
+      static _GetHalfFloatAsUIntRGBAArrayBuffer(pp, ip, cp, op, Ip, xp) {
+        const Lp = new Uint8Array(op),
+          Yp = new Uint16Array(Ip, cp);
+        let Dp = 0;
+        for (let Ap = 0; Ap < ip; Ap++)
+          for (let ip = 0; ip < pp; ip++) {
+            const cp = 4 * (ip + Ap * pp);
+            Lp[Dp] = 255 * (0, Op.Clamp)((0, Sp.c)(Yp[cp])), Lp[Dp + 1] = 255 * (0, Op.Clamp)((0, Sp.c)(Yp[cp + 1])), Lp[Dp + 2] = 255 * (0, Op.Clamp)((0, Sp.c)(Yp[cp + 2])), yp.StoreLODInAlphaChannel ? Lp[Dp + 3] = xp : Lp[Dp + 3] = 255 * (0, Op.Clamp)((0, Sp.c)(Yp[cp + 3])), Dp += 4
+          }
+        return Lp
+      }
+      static _GetRGBAArrayBuffer(pp, ip, cp, Op, op, Ip, Sp, xp, Lp) {
+        const Yp = new Uint8Array(Op),
+          Dp = new Uint8Array(op, cp);
+        let Ap = 0;
+        for (let Pp = 0; Pp < ip; Pp++)
+          for (let ip = 0; ip < pp; ip++) {
+            const cp = 4 * (ip + Pp * pp);
+            Yp[Ap] = Dp[cp + Ip], Yp[Ap + 1] = Dp[cp + Sp], Yp[Ap + 2] = Dp[cp + xp], Yp[Ap + 3] = Dp[cp + Lp], Ap += 4
+          }
+        return Yp
+      }
+      static _ExtractLongWordOrder(pp) {
+        return 0 === pp || 255 === pp || -16777216 === pp ? 0 : 1 + yp._ExtractLongWordOrder(pp >> 8)
+      }
+      static _GetRGBArrayBuffer(pp, ip, cp, Op, op, Ip, Sp, xp) {
+        const Lp = new Uint8Array(Op),
+          Yp = new Uint8Array(op, cp);
+        let Dp = 0;
+        for (let Ap = 0; Ap < ip; Ap++)
+          for (let ip = 0; ip < pp; ip++) {
+            const cp = 3 * (ip + Ap * pp);
+            Lp[Dp] = Yp[cp + Ip], Lp[Dp + 1] = Yp[cp + Sp], Lp[Dp + 2] = Yp[cp + xp], Dp += 3
+          }
+        return Lp
+      }
+      static _GetLuminanceArrayBuffer(pp, ip, cp, Op, op) {
+        const Ip = new Uint8Array(Op),
+          Sp = new Uint8Array(op, cp);
+        let xp = 0;
+        for (let Lp = 0; Lp < ip; Lp++)
+          for (let ip = 0; ip < pp; ip++) {
+            const cp = ip + Lp * pp;
+            Ip[xp] = Sp[cp], xp++
+          }
+        return Ip
+      }
+      static UploadDDSLevels(pp, ip, cp, Op, Sp, Lp) {
+        let Yp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : -1,
+          Up = arguments.length > 7 ? arguments[7] : void 0,
+          wp = !(arguments.length > 8 && void 0 !== arguments[8]) || arguments[8],
+          vp = null;
+        Op.sphericalPolynomial && (vp = []);
+        const tp = !!pp.getCaps().s3tc;
+        ip.generateMipMaps = Sp;
+        const Hp = new Int32Array(cp.buffer, cp.byteOffset, 31);
+        let dp, ep, jp, kp, mp, Rp, qp, Mp = 0,
+          Cp = 0,
+          Ep = 1;
+        if (542327876 !== Hp[0]) return void op.e.Error("Invalid magic number in DDS header");
+        if (!Op.isFourCC && !Op.isRGB && !Op.isLuminance) return void op.e.Error("Unsupported format, must contain a FourCC, RGB or LUMINANCE code");
+        if (Op.isCompressed && !tp) return void op.e.Error("Compressed textures are not supported on this platform.");
+        let Xp = Hp[22];
+        kp = Hp[1] + 4;
+        let lp = !1;
+        if (Op.isFourCC) switch (dp = Hp[21], dp) {
+          case Dp:
+            Ep = 8, Cp = 33777;
+            break;
+          case Ap:
+            Ep = 16, Cp = 33778;
+            break;
+          case Pp:
+            Ep = 16, Cp = 33779;
+            break;
+          case 113:
+            lp = !0, Xp = 64;
+            break;
+          case 116:
+            lp = !0, Xp = 128;
+            break;
+          case Wp: {
+            kp += 20;
+            let pp = !1;
+            switch (Op.dxgiFormat) {
+              case 10:
+                lp = !0, Xp = 64, pp = !0;
+                break;
+              case 2:
+                lp = !0, Xp = 128, pp = !0;
+                break;
+              case 88:
+                Op.isRGB = !0, Op.isFourCC = !1, Xp = 32, pp = !0
+            }
+            if (pp) break
+          }
+          default:
+            return void op.e.Error(["Unsupported FourCC code:", (Qp = dp, String.fromCharCode(255 & Qp, Qp >> 8 & 255, Qp >> 16 & 255, Qp >> 24 & 255))])
+        }
+        var Qp;
+        const Jp = yp._ExtractLongWordOrder(Hp[23]),
+          Bp = yp._ExtractLongWordOrder(Hp[24]),
+          Np = yp._ExtractLongWordOrder(Hp[25]),
+          Tp = yp._ExtractLongWordOrder(Hp[26]);
+        lp && (Cp = pp._getRGBABufferInternalSizedFormat(Op.textureType)), Rp = 1, Hp[2] & xp && !1 !== Sp && (Rp = Math.max(1, Hp[7]));
+        const fp = Up || 0,
+          bp = pp.getCaps();
+        for (let op = fp; op < Lp; op++) {
+          for (ep = Hp[4], jp = Hp[3], qp = 0; qp < Rp; ++qp) {
+            if (-1 === Yp || Yp === qp) {
+              const Ip = -1 === Yp ? qp : 0;
+              if (!Op.isCompressed && Op.isFourCC) {
+                ip.format = 5, Mp = ep * jp * 4;
+                let Op = null;
+                if (pp._badOS || pp._badDesktopOS || !bp.textureHalfFloat && !bp.textureFloat) 128 === Xp ? (Op = yp._GetFloatAsUIntRGBAArrayBuffer(ep, jp, cp.byteOffset + kp, Mp, cp.buffer, Ip), vp && 0 == Ip && vp.push(yp._GetFloatRGBAArrayBuffer(ep, jp, cp.byteOffset + kp, Mp, cp.buffer, Ip))) : 64 === Xp && (Op = yp._GetHalfFloatAsUIntRGBAArrayBuffer(ep, jp, cp.byteOffset + kp, Mp, cp.buffer, Ip), vp && 0 == Ip && vp.push(yp._GetHalfFloatAsFloatRGBAArrayBuffer(ep, jp, cp.byteOffset + kp, Mp, cp.buffer, Ip))), ip.type = 0;
+                else {
+                  const pp = bp.textureFloat && (wp && bp.textureFloatLinearFiltering || !wp),
+                    op = bp.textureHalfFloat && (wp && bp.textureHalfFloatLinearFiltering || !wp),
+                    Sp = (128 === Xp || 64 === Xp && !op) && pp ? 1 : (64 === Xp || 128 === Xp && !pp) && op ? 2 : 0;
+                  let xp, Lp = null;
+                  if (128 === Xp) switch (Sp) {
+                    case 1:
+                      xp = yp._GetFloatRGBAArrayBuffer, Lp = null;
+                      break;
+                    case 2:
+                      xp = yp._GetFloatAsHalfFloatRGBAArrayBuffer, Lp = yp._GetFloatRGBAArrayBuffer;
+                      break;
+                    case 0:
+                      xp = yp._GetFloatAsUIntRGBAArrayBuffer, Lp = yp._GetFloatRGBAArrayBuffer
+                  } else switch (Sp) {
+                    case 1:
+                      xp = yp._GetHalfFloatAsFloatRGBAArrayBuffer, Lp = null;
+                      break;
+                    case 2:
+                      xp = yp._GetHalfFloatRGBAArrayBuffer, Lp = yp._GetHalfFloatAsFloatRGBAArrayBuffer;
+                      break;
+                    case 0:
+                      xp = yp._GetHalfFloatAsUIntRGBAArrayBuffer, Lp = yp._GetHalfFloatAsFloatRGBAArrayBuffer
+                  }
+                  ip.type = Sp, Op = xp(ep, jp, cp.byteOffset + kp, Mp, cp.buffer, Ip), vp && 0 == Ip && vp.push(Lp ? Lp(ep, jp, cp.byteOffset + kp, Mp, cp.buffer, Ip) : Op)
+                }
+                Op && pp._uploadDataToTextureDirectly(ip, Op, op, Ip)
+              } else if (Op.isRGB) ip.type = 0, 24 === Xp ? (ip.format = 4, Mp = ep * jp * 3, mp = yp._GetRGBArrayBuffer(ep, jp, cp.byteOffset + kp, Mp, cp.buffer, Jp, Bp, Np), pp._uploadDataToTextureDirectly(ip, mp, op, Ip)) : (ip.format = 5, Mp = ep * jp * 4, mp = yp._GetRGBAArrayBuffer(ep, jp, cp.byteOffset + kp, Mp, cp.buffer, Jp, Bp, Np, Tp), pp._uploadDataToTextureDirectly(ip, mp, op, Ip));
+              else if (Op.isLuminance) {
+                const Op = pp._getUnpackAlignement(),
+                  Sp = ep;
+                Mp = Math.floor((ep + Op - 1) / Op) * Op * (jp - 1) + Sp, mp = yp._GetLuminanceArrayBuffer(ep, jp, cp.byteOffset + kp, Mp, cp.buffer), ip.format = 1, ip.type = 0, pp._uploadDataToTextureDirectly(ip, mp, op, Ip)
+              } else Mp = Math.max(4, ep) / 4 * Math.max(4, jp) / 4 * Ep, mp = new Uint8Array(cp.buffer, cp.byteOffset + kp, Mp), ip.type = 0, pp._uploadCompressedDataToTextureDirectly(ip, Cp, ep, jp, mp, op, Ip)
+            }
+            kp += Xp ? ep * jp * (Xp / 8) : Mp, ep *= .5, jp *= .5, ep = Math.max(1, ep), jp = Math.max(1, jp)
+          }
+          if (void 0 !== Up) break
+        }
+        vp && vp.length > 0 ? Op.sphericalPolynomial = Ip.d.ConvertCubeMapToSphericalPolynomial({
+          size: Hp[4],
+          right: vp[0],
+          left: vp[1],
+          up: vp[2],
+          down: vp[3],
+          front: vp[4],
+          back: vp[5],
+          format: 5,
+          type: 1,
+          gammaSpace: !1
+        }) : Op.sphericalPolynomial = void 0
+      }
+    }
+    yp.StoreLODInAlphaChannel = !1
   }
 };
 Object.freeze(modules);
-for (const CC in modules) Object.freeze(modules[CC]);
+for (const pp in modules) Object.freeze(modules[pp]);
