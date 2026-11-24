@@ -1,38 +1,38 @@
-export const id = 59;
-export const ids = [59];
+export const id = 60;
+export const ids = [60];
 export const modules = {
-  38621: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => sD,
-      g: () => KD
+  38856: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => op,
+      c: () => Ip
     });
-    const pD = new WeakMap;
+    const Op = new WeakMap;
 
-    function sD(DD, zD) {
-      return pD.set(DD, zD), DD
+    function op(pp, ip) {
+      return Op.set(pp, ip), pp
     }
 
-    function KD(DD) {
-      var zD;
-      return null !== (zD = pD.get(DD)) && void 0 !== zD ? zD : null
+    function Ip(pp) {
+      var ip;
+      return null !== (ip = Op.get(pp)) && void 0 !== ip ? ip : null
     }
   },
-  38645: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => LD
+  38883: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => xp
     });
-    var pD = wD(1232);
+    var Op = cp(1234);
 
-    function sD(DD) {
-      const zD = /(\d*\.?\d+)px/.exec(DD);
-      return zD ? Number(zD[1]) : null
+    function op(pp) {
+      const ip = /(\d*\.?\d+)px/.exec(pp);
+      return ip ? Number(ip[1]) : null
     }
 
-    function KD(DD) {
-      return DD.split(/[\s,]+/).pop()
+    function Ip(pp) {
+      return pp.split(/[\s,]+/).pop()
     }
-    let rD = !1;
-    const LD = {
+    let Sp = !1;
+    const xp = {
       debug: !1,
       align: "center",
       vAlign: "middle",
@@ -43,604 +43,605 @@ export const modules = {
       font: "Arial",
       lineHeight: null,
       justify: !1,
-      drawText: function(DD, zD, pD, LD, cD, gD) {
-        if (cD <= 0 || gD <= 0 || this.fontSize <= 0) return {
+      drawText: function(pp, ip, Op, xp, Lp, Yp) {
+        if (Lp <= 0 || Yp <= 0 || this.fontSize <= 0) return {
           height: 0
         };
         const {
-          fontStyle: RD,
-          fontVariant: AD,
-          fontWeight: UD,
-          fontSize: fD,
-          font: ID
-        } = this, BD = [RD, AD, UD, `${fD}px`, ID].filter(Boolean).join(" "), GD = [
-          [UD, `${fD}px`, KD(ID)].filter(Boolean).join(" "), `${fD}px sans-serif`
-        ], hD = DD.font, nD = function(DD, zD, wD) {
-          for (const pD of zD) {
-            DD.font = pD;
-            const zD = sD(DD.font),
-              rD = KD(pD);
-            if (null !== zD && Math.abs(zD - wD) <= .5 && DD.font.toLowerCase().includes(rD.toLowerCase())) return pD
+          fontStyle: Dp,
+          fontVariant: Ap,
+          fontWeight: Pp,
+          fontSize: Wp,
+          font: yp
+        } = this, Up = [Dp, Ap, Pp, `${Wp}px`, yp].filter(Boolean).join(" "), wp = [
+          [Pp, `${Wp}px`, Ip(yp)].filter(Boolean).join(" "), `${Wp}px sans-serif`
+        ], vp = pp.font, tp = function(pp, ip, cp) {
+          for (const Op of ip) {
+            pp.font = Op;
+            const ip = op(pp.font),
+              Sp = Ip(Op);
+            if (null !== ip && Math.abs(ip - cp) <= .5 && pp.font.toLowerCase().includes(Sp.toLowerCase())) return Op
           }
           return null
-        }(DD, [BD, ...GD], fD);
-        nD !== BD && function(DD, zD, pD) {
-          rD || (rD = !0, Promise.resolve().then((() => wD(1075))).then((wD => {
+        }(pp, [Up, ...wp], Wp);
+        tp !== Up && function(pp, ip, Op) {
+          Sp || (Sp = !0, Promise.resolve().then((() => cp(1080))).then((cp => {
             let {
-              CB: sD
-            } = wD;
-            sD(new Error("A canvas didn't take canvasTxt's font"), {
-              font: DD,
-              Nf: zD,
-              drawnWith: null !== pD && void 0 !== pD ? pD : "the kept font, scaled"
+              NU: op
+            } = cp;
+            op(new Error("A canvas didn't take canvasTxt's font"), {
+              font: pp,
+              aW: ip,
+              drawnWith: null !== Op && void 0 !== Op ? Op : "the kept font, scaled"
             })
           })).catch((() => {})))
-        }(BD, hD, nD);
-        const MD = sD(DD.font);
-        if (null === nD && null !== MD && MD > 0) {
-          const wD = fD / MD;
-          DD.save();
+        }(Up, vp, tp);
+        const Hp = op(pp.font);
+        if (null === tp && null !== Hp && Hp > 0) {
+          const cp = Wp / Hp;
+          pp.save();
           try {
-            return DD.scale(wD, wD), {
-              height: this.drawLines(DD, zD, pD / wD, LD / wD, cD / wD, gD / wD, MD).height * wD
+            return pp.scale(cp, cp), {
+              height: this.drawLines(pp, ip, Op / cp, xp / cp, Lp / cp, Yp / cp, Hp).height * cp
             }
           } finally {
-            DD.restore()
+            pp.restore()
           }
         }
-        return this.drawLines(DD, zD, pD, LD, cD, gD, fD)
+        return this.drawLines(pp, ip, Op, xp, Lp, Yp, Wp)
       },
-      drawLines: function(DD, zD, wD, sD, KD, rD, LD) {
-        const cD = wD + KD,
-          gD = sD + rD;
-        let RD, AD = sD + rD / 2 + LD / 2;
-        "right" === this.align ? (RD = cD, DD.textAlign = "right") : "left" === this.align ? (RD = wD, DD.textAlign = "left") : (RD = wD + KD / 2, DD.textAlign = "center");
-        for (const pD of zD) {
-          DD.measureText(pD).width >= KD && (zD = zD.replace(pD, ""))
+      drawLines: function(pp, ip, cp, op, Ip, Sp, xp) {
+        const Lp = cp + Ip,
+          Yp = op + Sp;
+        let Dp, Ap = op + Sp / 2 + xp / 2;
+        "right" === this.align ? (Dp = Lp, pp.textAlign = "right") : "left" === this.align ? (Dp = cp, pp.textAlign = "left") : (Dp = cp + Ip / 2, pp.textAlign = "center");
+        for (const Op of ip) {
+          pp.measureText(Op).width >= Ip && (ip = ip.replace(Op, ""))
         }
-        zD = (0, pD.P)(zD);
-        const UD = [],
-          fD = zD.split("\n"),
-          ID = this.justify ? DD.measureText("\u200a").width : 0;
-        fD.forEach((zD => {
-          let wD = DD.measureText(zD).width;
-          if (wD <= KD) UD.push(zD);
+        ip = (0, Op.P)(ip);
+        const Pp = [],
+          Wp = ip.split("\n"),
+          yp = this.justify ? pp.measureText("\u200a").width : 0;
+        Wp.forEach((ip => {
+          let cp = pp.measureText(ip).width;
+          if (cp <= Ip) Pp.push(ip);
           else {
-            let pD = zD;
-            const sD = KD;
-            let rD, LD, cD;
-            for (wD = DD.measureText(pD).width; wD > sD;) {
-              for (rD = 0, LD = 0, cD = ""; LD < sD;) rD++, cD = pD.substr(0, rD), LD = DD.measureText(cD).width;
-              rD--, cD = cD.substr(0, rD);
-              const zD = rD;
-              if (" " !== pD.substr(rD, 1)) {
+            let Op = ip;
+            const op = Ip;
+            let Sp, xp, Lp;
+            for (cp = pp.measureText(Op).width; cp > op;) {
+              for (Sp = 0, xp = 0, Lp = ""; xp < op;) Sp++, Lp = Op.substr(0, Sp), xp = pp.measureText(Lp).width;
+              Sp--, Lp = Lp.substr(0, Sp);
+              const ip = Sp;
+              if (" " !== Op.substr(Sp, 1)) {
                 for (;
-                  " " !== pD.substr(rD, 1) && 0 !== rD;) rD--;
-                0 === rD && (rD = zD), cD = pD.substr(0, rD)
+                  " " !== Op.substr(Sp, 1) && 0 !== Sp;) Sp--;
+                0 === Sp && (Sp = ip), Lp = Op.substr(0, Sp)
               }
-              cD = this.justify ? this.justifyLine(DD, cD, ID, "\u200a", KD) : cD, pD = pD.substr(rD), wD = DD.measureText(pD).width, UD.push(cD)
+              Lp = this.justify ? this.justifyLine(pp, Lp, yp, "\u200a", Ip) : Lp, Op = Op.substr(Sp), cp = pp.measureText(Op).width, Pp.push(Lp)
             }
-            wD > 0 && UD.push(pD)
+            cp > 0 && Pp.push(Op)
           }
         }));
-        const BD = this.lineHeight ? this.lineHeight : this.getTextHeight(DD, zD),
-          GD = BD * (UD.length - 1),
-          hD = GD / 2;
-        let nD = sD;
-        "top" === this.vAlign ? AD = sD + LD : "bottom" === this.vAlign ? (AD = gD - GD, nD = gD) : (nD = sD + rD / 2, AD -= hD), UD.forEach((zD => {
-          zD = zD.trim(), DD.fillText(zD, RD, AD), AD += BD
-        })), this.debug && (DD.lineWidth = 3, DD.strokeStyle = "#00909e", DD.strokeRect(wD, sD, KD, rD), DD.lineWidth = 2, DD.strokeStyle = "#f6d743", DD.beginPath(), DD.moveTo(RD, sD), DD.lineTo(RD, gD), DD.stroke(), DD.strokeStyle = "#ff6363", DD.beginPath(), DD.moveTo(wD, nD), DD.lineTo(cD, nD), DD.stroke());
+        const Up = this.lineHeight ? this.lineHeight : this.getTextHeight(pp, ip),
+          wp = Up * (Pp.length - 1),
+          vp = wp / 2;
+        let tp = op;
+        "top" === this.vAlign ? Ap = op + xp : "bottom" === this.vAlign ? (Ap = Yp - wp, tp = Yp) : (tp = op + Sp / 2, Ap -= vp), Pp.forEach((ip => {
+          ip = ip.trim(), pp.fillText(ip, Dp, Ap), Ap += Up
+        })), this.debug && (pp.lineWidth = 3, pp.strokeStyle = "#00909e", pp.strokeRect(cp, op, Ip, Sp), pp.lineWidth = 2, pp.strokeStyle = "#f6d743", pp.beginPath(), pp.moveTo(Dp, op), pp.lineTo(Dp, Yp), pp.stroke(), pp.strokeStyle = "#ff6363", pp.beginPath(), pp.moveTo(cp, tp), pp.lineTo(Lp, tp), pp.stroke());
         return {
-          height: GD + BD
+          height: wp + Up
         }
       },
-      getTextHeight: function(DD, zD) {
-        const wD = DD.textBaseline;
-        DD.textBaseline = "bottom";
+      getTextHeight: function(pp, ip) {
+        const cp = pp.textBaseline;
+        pp.textBaseline = "bottom";
         const {
-          actualBoundingBoxAscent: pD
-        } = DD.measureText(zD);
-        return DD.textBaseline = wD, pD
+          actualBoundingBoxAscent: Op
+        } = pp.measureText(ip);
+        return pp.textBaseline = cp, Op
       },
-      justifyLine: function(DD, zD, wD, pD, sD) {
-        const KD = zD.trim(),
-          rD = DD.measureText(KD).width,
-          LD = KD.split(/\s+/).length - 1,
-          cD = Math.floor((sD - rD) / wD);
-        if (LD <= 0 || cD <= 0) return KD;
-        const gD = Math.floor(cD / LD);
-        let RD = cD - LD * gD,
-          AD = [];
-        for (let UD = 0; UD < gD; UD++) AD.push(pD);
-        AD = AD.join("");
-        return KD.replace(/\s+/g, (DD => {
-          const zD = RD > 0 ? AD + pD : AD;
-          return RD--, DD + zD
+      justifyLine: function(pp, ip, cp, Op, op) {
+        const Ip = ip.trim(),
+          Sp = pp.measureText(Ip).width,
+          xp = Ip.split(/\s+/).length - 1,
+          Lp = Math.floor((op - Sp) / cp);
+        if (xp <= 0 || Lp <= 0) return Ip;
+        const Yp = Math.floor(Lp / xp);
+        let Dp = Lp - xp * Yp,
+          Ap = [];
+        for (let Pp = 0; Pp < Yp; Pp++) Ap.push(Op);
+        Ap = Ap.join("");
+        return Ip.replace(/\s+/g, (pp => {
+          const ip = Dp > 0 ? Ap + Op : Ap;
+          return Dp--, pp + ip
         }))
       }
     }
   },
-  38648: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => BD,
-      e: () => ID,
-      f: () => UD,
-      g: () => RD,
-      k: () => AD
+  38890: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Up,
+      f: () => yp,
+      i: () => Pp,
+      l: () => Dp,
+      n: () => Ap
     });
-    var pD = wD(4257),
-      sD = wD(351);
-    const KD = 1024,
-      rD = 1536,
-      LD = 2 * pD.j + 1,
-      cD = new Intl.NumberFormat("en", {
+    var Op = cp(4341),
+      op = cp(337);
+    const Ip = 1024,
+      Sp = 1536,
+      xp = 2 * Op.l + 1,
+      Lp = new Intl.NumberFormat("en", {
         maximumSignificantDigits: 15
       }),
-      gD = 1.5;
+      Yp = 1.5;
 
-    function RD(DD, zD, wD) {
-      if ("string" !== typeof DD) return zD;
+    function Dp(pp, ip, cp) {
+      if ("string" !== typeof pp) return ip;
       try {
-        const wD = JSON.parse(DD);
-        return wD && "object" === typeof wD ? wD : zD
-      } catch (pD) {
-        return void 0 !== wD && console.error(`Couldn't parse ${wD}`, pD), zD
+        const cp = JSON.parse(pp);
+        return cp && "object" === typeof cp ? cp : ip
+      } catch (Op) {
+        return void 0 !== cp && console.error(`Couldn't parse ${cp}`, Op), ip
       }
     }
 
-    function AD(DD) {
-      return RD(DD, null, "a leaderboard's rows")
+    function Ap(pp) {
+      return Dp(pp, null, "a leaderboard's rows")
     }
 
-    function UD(DD, zD) {
-      var wD, pD;
-      return null !== zD && void 0 !== zD ? zD : {
-        status: null !== (wD = DD.status) && void 0 !== wD ? wD : "loading",
-        entries: null !== (pD = DD.entries) && void 0 !== pD ? pD : []
+    function Pp(pp, ip) {
+      var cp, Op;
+      return null !== ip && void 0 !== ip ? ip : {
+        status: null !== (cp = pp.status) && void 0 !== cp ? cp : "loading",
+        entries: null !== (Op = pp.entries) && void 0 !== Op ? Op : []
       }
     }
 
-    function fD(DD, zD) {
-      return "number" === typeof DD && Number.isFinite(DD) && DD > 0 ? DD : zD
+    function Wp(pp, ip) {
+      return "number" === typeof pp && Number.isFinite(pp) && pp > 0 ? pp : ip
     }
 
-    function ID(DD, zD) {
-      const wD = fD(DD.size, 1);
-      let pD = fD(DD.width, fD(2.5 * wD, 2.5)),
-        sD = fD(DD.height, fD(3.75 * wD, 3.75));
-      Number.isFinite(KD * sD / pD) && Number.isFinite(rD * pD / sD) || (pD = 2.5, sD = 3.75);
-      const LD = sD / pD,
-        cD = Math.max(1, Math.min(KD, zD / LD));
+    function yp(pp, ip) {
+      const cp = Wp(pp.size, 1);
+      let Op = Wp(pp.width, Wp(2.5 * cp, 2.5)),
+        op = Wp(pp.height, Wp(3.75 * cp, 3.75));
+      Number.isFinite(Ip * op / Op) && Number.isFinite(Sp * Op / op) || (Op = 2.5, op = 3.75);
+      const xp = op / Op,
+        Lp = Math.max(1, Math.min(Ip, ip / xp));
       return {
-        width: pD,
-        height: sD,
-        layoutWidth: Math.max(KD, rD / LD),
-        layoutHeight: Math.max(rD, KD * LD),
-        pixelWidth: Math.round(cD),
-        pixelHeight: Math.round(Math.max(1, Math.min(zD, cD * LD)))
+        width: Op,
+        height: op,
+        layoutWidth: Math.max(Ip, Sp / xp),
+        layoutHeight: Math.max(Sp, Ip * xp),
+        pixelWidth: Math.round(Lp),
+        pixelHeight: Math.round(Math.max(1, Math.min(ip, Lp * xp)))
       }
     }
 
-    function BD(DD, zD, wD, rD, RD, AD) {
-      DD.setTransform(1, 0, 0, 1, 0, 0), DD.fillStyle = sD.I.defaultNameTagBackground, DD.fillRect(0, 0, zD, wD), DD.scale(zD / rD.layoutWidth, wD / rD.layoutHeight), DD.translate((rD.layoutWidth - KD) / 2, 0),
-        function(DD, zD, wD, KD) {
-          var rD, RD, AD, UD;
+    function Up(pp, ip, cp, Sp, Dp, Ap) {
+      pp.setTransform(1, 0, 0, 1, 0, 0), pp.fillStyle = op.N.defaultNameTagBackground, pp.fillRect(0, 0, ip, cp), pp.scale(ip / Sp.layoutWidth, cp / Sp.layoutHeight), pp.translate((Sp.layoutWidth - Ip) / 2, 0),
+        function(pp, ip, cp, Ip) {
+          var Sp, Dp, Ap, Pp;
           const {
-            top: fD,
-            around: ID,
-            showPlayerText: BD,
-            localPlayerDbId: nD
-          } = wD, {
-            whiteUiText: MD,
-            grayUiText: OD,
-            yellowUiText: JD
-          } = sD.I;
-          DD.textBaseline = "middle";
-          const ED = function(zD, wD, pD, sD, KD, rD) {
-              let LD = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
-              DD.font = `bold ${sD}px 'Jetbrains Mono', monospace`, DD.fillStyle = KD, DD.textAlign = LD;
-              let cD = zD.replace(/[\r\n\t]/g, " ");
-              if (DD.measureText(cD).width > rD) {
-                for (; cD.length > 0 && DD.measureText(`${cD}\u2026`).width > rD;) cD = cD.slice(0, -1);
-                cD += "\u2026"
+            top: Wp,
+            around: yp,
+            showPlayerText: Up,
+            localPlayerDbId: tp
+          } = cp, {
+            whiteUiText: Hp,
+            grayUiText: dp,
+            yellowUiText: ep
+          } = op.N;
+          pp.textBaseline = "middle";
+          const jp = function(ip, cp, Op, op, Ip, Sp) {
+              let xp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : "left";
+              pp.font = `bold ${op}px 'Jetbrains Mono', monospace`, pp.fillStyle = Ip, pp.textAlign = xp;
+              let Lp = ip.replace(/[\r\n\t]/g, " ");
+              if (pp.measureText(Lp).width > Sp) {
+                for (; Lp.length > 0 && pp.measureText(`${Lp}\u2026`).width > Sp;) Lp = Lp.slice(0, -1);
+                Lp += "\u2026"
               }
-              DD.fillText(cD, wD, pD)
+              pp.fillText(Lp, cp, Op)
             },
-            QD = zD => {
-              DD.fillStyle = MD, DD.globalAlpha = .15, DD.fillRect(24, zD, 976, 2), DD.globalAlpha = 1
+            kp = ip => {
+              pp.fillStyle = Hp, pp.globalAlpha = .15, pp.fillRect(24, ip, 976, 2), pp.globalAlpha = 1
             },
-            XD = null === nD ? null : (0, sD.oc)(nD),
-            VD = DD => null !== XD && DD.playerHash === XD,
-            PD = GD(fD.entries, pD.m),
-            CD = "ready" === fD.status && PD.length > 0,
-            xD = null === ID ? [] : GD(ID.entries, LD),
-            TD = PD.some(VD),
-            bD = null === ID ? null : function(DD) {
-              const zD = DD;
-              if (!zD || !Number.isFinite(zD.rank) || !Number.isFinite(zD.tied) || !Number.isFinite(zD.total)) return null;
-              return zD
-            }(ID.standing),
-            jD = xD.find(VD),
-            dD = PD.find(VD),
-            SD = null === bD || void 0 === jD ? null : {
-              value: jD.value,
-              rank: bD.rank
+            mp = null === tp ? null : (0, op.gc)(tp),
+            Rp = pp => null !== mp && pp.playerHash === mp,
+            qp = wp(Wp.entries, Op.n),
+            Mp = "ready" === Wp.status && qp.length > 0,
+            Cp = null === yp ? [] : wp(yp.entries, xp),
+            Ep = qp.some(Rp),
+            Xp = null === yp ? null : function(pp) {
+              const ip = pp;
+              if (!ip || !Number.isFinite(ip.rank) || !Number.isFinite(ip.tied) || !Number.isFinite(ip.total)) return null;
+              return ip
+            }(yp.standing),
+            lp = Cp.find(Rp),
+            Qp = qp.find(Rp),
+            Jp = null === Xp || void 0 === lp ? null : {
+              value: lp.value,
+              rank: Xp.rank
             },
-            iD = hD(PD, void 0 === dD || dD.value === (null === SD || void 0 === SD ? void 0 : SD.value) ? SD : null),
-            lD = hD(xD, SD),
-            WD = (DD, zD) => {
-              const wD = DD.findIndex(VD);
-              return wD >= 0 ? zD[wD] : null
+            Bp = vp(qp, void 0 === Qp || Qp.value === (null === Jp || void 0 === Jp ? void 0 : Jp.value) ? Jp : null),
+            Np = vp(Cp, Jp),
+            Tp = (pp, ip) => {
+              const cp = pp.findIndex(Rp);
+              return cp >= 0 ? ip[cp] : null
             },
-            ND = null !== (rD = null !== (RD = null === bD || void 0 === bD ? void 0 : bD.rank) && void 0 !== RD ? RD : WD(xD, lD)) && void 0 !== rD ? rD : WD(PD, iD);
-          DD.font = "bold 34px 'Jetbrains Mono', monospace";
-          const ZD = [...CD ? iD : [], ...TD ? [] : lD],
-            yD = Math.min(280, Math.max(0, ...ZD.map((zD => DD.measureText(cD.format(zD)).width)))),
-            kD = yD <= 80,
-            mD = kD ? 80 : 32 + yD,
-            eD = kD ? 148 : mD + 28,
-            oD = 660 - eD;
-          ED(`TOP ${pD.m}  /  ALL TIME`, 24, 52, 28, OD, 976), ED(BD ? String(null !== (AD = zD.title) && void 0 !== AD ? AD : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, MD, 976), ED("RANK", 32, 174, 28, OD, eD - 40), ED("PLAYER", eD, 174, 28, OD, oD), ED(BD ? String(null !== (UD = zD.scoreLabel) && void 0 !== UD ? UD : "Score").slice(0, 24) : "Score", 992, 174, 28, OD, 304, "right"), QD(202);
-          const aD = (KD - 232) / (pD.m + gD + LD),
-            uD = 208 + pD.m * aD,
-            vD = uD + gD * aD,
-            tD = (zD, wD, pD, sD) => {
-              const KD = VD(zD);
-              DD.fillStyle = KD ? JD : MD, DD.globalAlpha = KD ? .15 : sD ? .035 : 0, DD.fillRect(24, pD - aD / 2 + 1, 976, aD - 2), DD.globalAlpha = 1;
-              const rD = KD ? JD : MD;
-              ED(cD.format(wD), mD, pD, 34, rD, kD ? 80 : yD, kD ? "center" : "right"), ED(BD ? String(zD.name).slice(0, 64) : "Player", eD, pD, 34, rD, oD);
-              const LD = cD.format(zD.value);
-              ED(DD.measureText(LD).width > 304 ? zD.value.toExponential(6) : LD, 992, pD, 34, rD, 304, "right")
+            fp = null !== (Sp = null !== (Dp = null === Xp || void 0 === Xp ? void 0 : Xp.rank) && void 0 !== Dp ? Dp : Tp(Cp, Np)) && void 0 !== Sp ? Sp : Tp(qp, Bp);
+          pp.font = "bold 34px 'Jetbrains Mono', monospace";
+          const bp = [...Mp ? Bp : [], ...Ep ? [] : Np],
+            hp = Math.min(280, Math.max(0, ...bp.map((ip => pp.measureText(Lp.format(ip)).width)))),
+            ap = hp <= 80,
+            np = ap ? 80 : 32 + hp,
+            Fp = ap ? 148 : np + 28,
+            gp = 660 - Fp;
+          jp(`TOP ${Op.n}  /  ALL TIME`, 24, 52, 28, dp, 976), jp(Up ? String(null !== (Ap = ip.title) && void 0 !== Ap ? Ap : "Leaderboard").slice(0, 64) : "Leaderboard", 24, 108, 52, Hp, 976), jp("RANK", 32, 174, 28, dp, Fp - 40), jp("PLAYER", Fp, 174, 28, dp, gp), jp(Up ? String(null !== (Pp = ip.scoreLabel) && void 0 !== Pp ? Pp : "Score").slice(0, 24) : "Score", 992, 174, 28, dp, 304, "right"), kp(202);
+          const Gp = (Ip - 232) / (Op.n + Yp + xp),
+            rp = 208 + Op.n * Gp,
+            Zp = rp + Yp * Gp,
+            zp = (ip, cp, Op, op) => {
+              const Ip = Rp(ip);
+              pp.fillStyle = Ip ? ep : Hp, pp.globalAlpha = Ip ? .15 : op ? .035 : 0, pp.fillRect(24, Op - Gp / 2 + 1, 976, Gp - 2), pp.globalAlpha = 1;
+              const Sp = Ip ? ep : Hp;
+              jp(Lp.format(cp), np, Op, 34, Sp, ap ? 80 : hp, ap ? "center" : "right"), jp(Up ? String(ip.name).slice(0, 64) : "Player", Fp, Op, 34, Sp, gp);
+              const xp = Lp.format(ip.value);
+              jp(pp.measureText(xp).width > 304 ? ip.value.toExponential(6) : xp, 992, Op, 34, Sp, 304, "right")
             };
-          if (CD)
-            for (const [pD, sD] of PD.entries()) tD(sD, iD[pD], 208 + (pD + .5) * aD, pD % 2 === 0);
+          if (Mp)
+            for (const [Op, op] of qp.entries()) zp(op, Bp[Op], 208 + (Op + .5) * Gp, Op % 2 === 0);
           else {
-            const DD = "error" === fD.status,
-              zD = DD ? "Couldn't load leaderboard" : "ready" === fD.status ? "No scores yet" : "Loading leaderboard\u2026",
-              wD = DD ? "Trying again shortly" : "ready" === fD.status ? "Be the first on the board!" : "Fetching the top players",
-              pD = (208 + uD) / 2;
-            ED(zD, 512, pD - 28, 40, DD ? sD.I.redUiText : MD, 960, "center"), ED(wD, 512, pD + 27, 30, OD, 960, "center")
+            const pp = "error" === Wp.status,
+              ip = pp ? "Couldn't load leaderboard" : "ready" === Wp.status ? "No scores yet" : "Loading leaderboard\u2026",
+              cp = pp ? "Trying again shortly" : "ready" === Wp.status ? "Be the first on the board!" : "Fetching the top players",
+              Op = (208 + rp) / 2;
+            jp(ip, 512, Op - 28, 40, pp ? op.N.redUiText : Hp, 960, "center"), jp(cp, 512, Op + 27, 30, dp, 960, "center")
           }
-          const FD = uD + gD * aD / 2;
-          if (null === ND) QD(FD);
+          const sp = rp + Yp * Gp / 2;
+          if (null === fp) kp(sp);
           else {
-            const zD = null === bD ? 0 : bD.tied - 1,
-              wD = `YOUR RANK #${cD.format(ND)}${null===bD?"":` of ${cD.format(bD.total)}`}`;
-            DD.font = "bold 36px 'Jetbrains Mono', monospace";
-            const pD = Math.max(20, Math.min(36, Math.floor(34560 / DD.measureText(wD).width)));
-            ED(wD, 512, FD - (zD > 0 ? 15 : 0), pD, JD, 960, "center"), zD > 0 && ED(`Tied with ${cD.format(zD)} other${1===zD?"":"s"}`, 512, FD + 24, 24, OD, 960, "center")
+            const ip = null === Xp ? 0 : Xp.tied - 1,
+              cp = `YOUR RANK #${Lp.format(fp)}${null===Xp?"":` of ${Lp.format(Xp.total)}`}`;
+            pp.font = "bold 36px 'Jetbrains Mono', monospace";
+            const Op = Math.max(20, Math.min(36, Math.floor(34560 / pp.measureText(cp).width)));
+            jp(cp, 512, sp - (ip > 0 ? 15 : 0), Op, ep, 960, "center"), ip > 0 && jp(`Tied with ${Lp.format(ip)} other${1===ip?"":"s"}`, 512, sp + 24, 24, dp, 960, "center")
           }
-          if (null === ID) return;
-          const YD = vD + LD * aD / 2;
-          if (TD) ED(`You're in the top ${pD.m}!`, 512, YD, 40, JD, 960, "center");
-          else if (0 === xD.length) ED("You're not on this board yet", 512, YD, 34, OD, 960, "center");
+          if (null === yp) return;
+          const Kp = Zp + xp * Gp / 2;
+          if (Ep) jp(`You're in the top ${Op.n}!`, 512, Kp, 40, ep, 960, "center");
+          else if (0 === Cp.length) jp("You're not on this board yet", 512, Kp, 34, dp, 960, "center");
           else
-            for (const [pD, sD] of xD.entries()) tD(sD, lD[pD], vD + (pD + .5) * aD, pD % 2 === 0)
-        }(DD, RD, AD, rD.layoutHeight)
+            for (const [Op, op] of Cp.entries()) zp(op, Np[Op], Zp + (Op + .5) * Gp, Op % 2 === 0)
+        }(pp, Dp, Ap, Sp.layoutHeight)
     }
 
-    function GD(DD, zD) {
-      return Array.isArray(DD) ? DD.slice(0, zD).filter((DD => DD && Number.isFinite(DD.rank) && Number.isFinite(DD.value))) : []
+    function wp(pp, ip) {
+      return Array.isArray(pp) ? pp.slice(0, ip).filter((pp => pp && Number.isFinite(pp.rank) && Number.isFinite(pp.value))) : []
     }
 
-    function hD(DD, zD) {
-      const wD = [];
-      let pD = !1;
-      return DD.forEach(((sD, KD) => {
-        if (null !== zD && sD.value === zD.value) return void wD.push(zD.rank);
-        const rD = KD > 0 && sD.value === DD[KD - 1].value;
-        rD || (pD = 0 === KD && 1 !== sD.rank), wD.push(rD && !pD ? wD[KD - 1] : sD.rank)
-      })), wD
+    function vp(pp, ip) {
+      const cp = [];
+      let Op = !1;
+      return pp.forEach(((op, Ip) => {
+        if (null !== ip && op.value === ip.value) return void cp.push(ip.rank);
+        const Sp = Ip > 0 && op.value === pp[Ip - 1].value;
+        Sp || (Op = 0 === Ip && 1 !== op.rank), cp.push(Sp && !Op ? cp[Ip - 1] : op.rank)
+      })), cp
     }
   },
-  38828: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => sD,
-      g: () => KD
+  39076: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => op,
+      e: () => Ip
     });
-    const pD = 32;
+    const Op = 32;
 
-    function sD(DD) {
-      return Array.from(DD).length
+    function op(pp) {
+      return Array.from(pp).length
     }
 
-    function KD(DD) {
-      const zD = [""];
-      let wD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-        sD = "";
-      const KD = () => {
-        zD.push(""), wD = 0, sD = ""
+    function Ip(pp) {
+      const ip = [""];
+      let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        op = "";
+      const Ip = () => {
+        ip.push(""), cp = 0, op = ""
       };
-      for (const rD of DD.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
-        if (/^\r?\n$/.test(rD)) KD();
-        else if (/^\s+$/.test(rD)) sD += rD;
-      else if (rD.length > 0) {
-        const DD = Array.from(rD);
-        wD > 0 && wD + sD.length + DD.length > pD && KD(), zD[zD.length - 1] += sD, wD += sD.length, sD = "";
-        for (const sD of DD) wD >= pD && KD(), zD[zD.length - 1] += sD, wD++
+      for (const Sp of pp.replace(/\\n/g, "\n").split(/(\r?\n|[^\S\r\n]+)/))
+        if (/^\r?\n$/.test(Sp)) Ip();
+        else if (/^\s+$/.test(Sp)) op += Sp;
+      else if (Sp.length > 0) {
+        const pp = Array.from(Sp);
+        cp > 0 && cp + op.length + pp.length > Op && Ip(), ip[ip.length - 1] += op, cp += op.length, op = "";
+        for (const op of pp) cp >= Op && Ip(), ip[ip.length - 1] += op, cp++
       }
-      return zD[zD.length - 1] += sD, zD
+      return ip[ip.length - 1] += op, ip
     }
   },
-  50757: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      WasmPreviewHost: () => Pz,
-      pageBuiltInAnimationPack: () => UD,
-      pagePreviews: () => Kz,
-      previewModule: () => FD
+  51184: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      WasmPreviewHost: () => Ci,
+      pageBuiltInAnimationPack: () => Pp,
+      pagePreviews: () => Li,
+      previewModule: () => Kp
     });
-    var pD = wD(2868),
-      sD = wD(625);
-    const KD = "[bloxd-wasm-client]";
+    var Op = cp(2970),
+      op = cp(643);
+    const Ip = "[bloxd-wasm-client]";
 
-    function rD(DD) {
-      const zD = {
+    function Sp(pp) {
+      const ip = {
         wasm: "unknown",
-        client: String(sD.e)
+        client: String(op.c)
       };
       try {
-        var wD;
-        zD.wasm = null !== (wD = null === DD || void 0 === DD ? void 0 : DD.CA()) && void 0 !== wD ? wD : zD.wasm
+        var cp;
+        ip.wasm = null !== (cp = null === pp || void 0 === pp ? void 0 : pp.JA()) && void 0 !== cp ? cp : ip.wasm
       } catch {}
-      return zD
+      return ip
     }
-    async function LD(DD) {
-      if (DD.length < 2 || 31 !== DD[0] || 139 !== DD[1]) return DD;
+    async function xp(pp) {
+      if (pp.length < 2 || 31 !== pp[0] || 139 !== pp[1]) return pp;
       if ("undefined" === typeof DecompressionStream) {
         const {
-          ungzip: zD
-        } = await Promise.resolve().then((() => wD(2822)));
-        return zD(DD)
+          ungzip: ip
+        } = await Promise.resolve().then((() => cp(2918)));
+        return ip(pp)
       }
-      const zD = new Blob([DD]).stream().pipeThrough(new DecompressionStream("gzip"));
-      return new Uint8Array(await new Response(zD).arrayBuffer())
+      const ip = new Blob([pp]).stream().pipeThrough(new DecompressionStream("gzip"));
+      return new Uint8Array(await new Response(ip).arrayBuffer())
     }
 
-    function cD(DD, zD, pD, sD) {
-      Promise.resolve().then((() => wD(40666))).then((wD => {
+    function Lp(pp, ip, Op, op) {
+      Promise.resolve().then((() => cp(40945))).then((cp => {
         let {
-          reportDataLoadFailure: KD
-        } = wD;
-        KD(DD, zD, pD, sD)
-      }), (zD => {
-        console.warn(`${KD} ${DD} didn't load, and the report couldn't be sent`, pD.error, zD)
+          reportDataLoadFailure: Ip
+        } = cp;
+        Ip(pp, ip, Op, op)
+      }), (ip => {
+        console.warn(`${Ip} ${pp} didn't load, and the report couldn't be sent`, Op.error, ip)
       }))
     }
-    const gD = [3e4, 12e4, 3e5];
-    class RD {
-      constructor(DD) {
-        this.deps = DD, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((DD => {
-          this.resolveSet = DD
+    const Yp = [3e4, 12e4, 3e5];
+    class Dp {
+      constructor(pp) {
+        this.deps = pp, this.loading = null, this.reported = !1, this.retries = 0, this.resolveSet = () => {}, this.set = new Promise((pp => {
+          this.resolveSet = pp
         }))
       }
-      provide(DD) {
-        return this.loading ??= this.load(DD), this.loading
+      provide(pp) {
+        return this.loading ??= this.load(pp), this.loading
       }
       whenSet() {
         return this.set
       }
-      async load(DD) {
-        const zD = rD(DD),
-          wD = await async function(DD, zD) {
-            let wD;
+      async load(pp) {
+        const ip = Sp(pp),
+          cp = await async function(pp, ip) {
+            let cp;
             try {
-              wD = await DD()
-            } catch (pD) {
+              cp = await pp()
+            } catch (Op) {
               return {
                 stage: "fetch",
-                error: pD
+                error: Op
               }
             }
             try {
-              return zD(wD) ? null : {
+              return ip(cp) ? null : {
                 stage: "decode",
                 error: null
               }
-            } catch (pD) {
+            } catch (Op) {
               return {
                 stage: "decode",
-                error: pD
+                error: Op
               }
             }
-          }((() => this.deps.fetch()), (zD => {
-            const wD = DD.iKD(zD);
-            return wD && this.resolveSet(zD), wD
+          }((() => this.deps.fetch()), (ip => {
+            const cp = pp.iSp(ip);
+            return cp && this.resolveSet(ip), cp
           }));
-        if (null !== wD) {
-          if ("fetch" === wD.stage) {
+        if (null !== cp) {
+          if ("fetch" === cp.stage) {
             this.loading = null;
-            const zD = gD[this.retries++];
-            void 0 !== zD && this.deps.later((() => {
-              this.provide(DD)
-            }), zD)
+            const ip = Yp[this.retries++];
+            void 0 !== ip && this.deps.later((() => {
+              this.provide(pp)
+            }), ip)
           }
-          this.reported || (this.reported = !0, this.deps.onFailed(wD, zD))
+          this.reported || (this.reported = !0, this.deps.onFailed(cp, ip))
         }
       }
     }
-    let AD = null;
+    let Ap = null;
 
-    function UD() {
-      return AD ??= new RD({
-        fetch: async () => LD(await (0, pD.C)(fD(), {
+    function Pp() {
+      return Ap ??= new Dp({
+        fetch: async () => xp(await (0, Op.F)(Wp(), {
           priority: "low"
         })),
-        onFailed: (DD, zD) => {
-          cD("builtInAnimations", fD(), DD, zD)
+        onFailed: (pp, ip) => {
+          Lp("builtInAnimations", Wp(), pp, ip)
         },
-        later: (DD, zD) => {
-          setTimeout(DD, zD)
+        later: (pp, ip) => {
+          setTimeout(pp, ip)
         }
-      }), AD
+      }), Ap
     }
 
-    function fD() {
-      return wD(50761)
+    function Wp() {
+      return cp(51187)
     }
-    var ID = wD(2861),
-      BD = wD(1211),
-      GD = wD(330),
-      hD = wD(323),
-      nD = wD(638),
-      MD = wD(4817),
-      OD = wD(40634),
-      JD = wD(40852),
-      ED = (wD(40689), wD(40707)),
-      QD = wD(40710),
-      XD = wD(40719),
-      VD = wD(40645),
-      PD = wD(40874),
-      CD = wD(40878),
-      xD = wD(40630),
-      TD = wD(40895),
-      bD = wD(40760),
-      jD = wD(40748),
-      dD = wD(40799),
-      SD = wD(40863),
-      iD = wD(42457),
-      lD = wD(36254),
-      WD = wD(3716);
-    const ND = "[bloxd-previews]",
-      ZD = 4e5,
-      yD = 0,
-      kD = 1,
-      mD = 2,
-      eD = 1,
-      oD = 2,
-      aD = 3,
-      uD = 0,
-      vD = 1,
-      tD = 2;
+    var yp = cp(2963),
+      Up = cp(1211),
+      wp = cp(316),
+      vp = cp(314),
+      tp = cp(657),
+      Hp = cp(4903),
+      dp = cp(40911),
+      ep = cp(40930),
+      jp = cp(41133),
+      kp = (cp(40976), cp(40988)),
+      mp = cp(40997),
+      Rp = cp(41001),
+      qp = cp(40923),
+      Mp = cp(41158),
+      Cp = cp(41165),
+      Ep = cp(40902),
+      Xp = cp(41185),
+      lp = cp(41038),
+      Qp = cp(41025),
+      Jp = cp(41087),
+      Bp = cp(41147),
+      Np = cp(42879),
+      Tp = cp(36484),
+      fp = cp(3801);
+    const bp = "[bloxd-previews]",
+      hp = 4e5,
+      ap = 0,
+      np = 1,
+      Fp = 2,
+      gp = 1,
+      Gp = 2,
+      rp = 3,
+      Zp = 0,
+      zp = 1,
+      sp = 2;
 
-    function FD(DD) {
-      const zD = DD,
-        wD = (0, OD.N)(DD),
-        pD = (0, OD.m)(DD);
-      return null !== wD && null !== pD && "function" === typeof zD.jKD && "function" === typeof zD.dKD && "function" === typeof zD.SKD ? zD : null
-    }
-
-    function YD(DD, zD, wD) {
-      let [pD, sD] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [DD, zD], KD = Math.min(Number.isFinite(wD) && wD > 0 ? wD : 1, 2);
-      const rD = Math.max(0, pD, DD) * Math.max(0, sD, zD) * KD * KD;
-      return rD > ZD && (KD *= Math.sqrt(ZD / rD)), [Math.max(1, Math.floor(Math.max(0, DD) * KD)), Math.max(1, Math.floor(Math.max(0, zD) * KD))]
+    function Kp(pp) {
+      const ip = pp,
+        cp = (0, dp.Y)(pp),
+        Op = (0, dp.o)(pp);
+      return null !== cp && null !== Op && "function" === typeof ip.KIp && "function" === typeof ip.VIp && "function" === typeof ip.pSp ? ip : null
     }
 
-    function HD() {
-      return wD(50766)
+    function Vp(pp, ip, cp) {
+      let [Op, op] = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : [pp, ip], Ip = Math.min(Number.isFinite(cp) && cp > 0 ? cp : 1, 2);
+      const Sp = Math.max(0, Op, pp) * Math.max(0, op, ip) * Ip * Ip;
+      return Sp > hp && (Ip *= Math.sqrt(hp / Sp)), [Math.max(1, Math.floor(Math.max(0, pp) * Ip)), Math.max(1, Math.floor(Math.max(0, ip) * Ip))]
     }
-    async function qD(DD, zD, pD) {
-      let sD = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-      "lost" === DD && (0, xD.w)();
-      const KD = await (0, xD.N)();
-      if (null === KD || (0, OD.n)(KD) || (0, xD.b)()) return;
-      const LD = "webgpu" === KD.backend;
-      if (!LD && "lost" !== DD) return;
-      const cD = LD && (0, hD.m)(KD.adapter, null !== pD && void 0 !== pD ? pD : null, "lost" === DD, sD),
-        gD = LD ? (0, OD.$)(DD) : null;
-      if (null === gD) {
-        LD || (0, nD.p)(), (0, xD.n)();
+
+    function ii() {
+      return cp(51194)
+    }
+    async function ci(pp, ip, Op) {
+      var op;
+      let Ip = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+      "lost" === pp && (0, Ep.u)();
+      const xp = await (0, Ep.L)();
+      if (null === xp || (0, dp.s)(xp) || (0, Ep.b)()) return;
+      const Lp = "webgpu" === xp.backend;
+      if (!Lp && "lost" !== pp) return;
+      const Yp = Lp && (0, vp.m)(xp.adapter, null !== Op && void 0 !== Op ? Op : null, "lost" === pp, Ip),
+        Dp = null !== (op = "lost" === pp ? (0, ep.o)((0, yp.X)() ? (0, dp.Y)((0, yp.H)()) : null) : void 0) && void 0 !== op ? op : ip,
+        Ap = Lp ? (0, dp.gb)(pp, void 0, (0, ep.d)(Dp)) : null;
+      if (null === Ap) {
+        Lp || (0, tp.q)(), (0, Ep.l)();
         try {
-          await async function(DD, zD, pD, sD, KD) {
+          await async function(pp, ip, Op, op, Ip) {
             let {
-              restoreLost: LD,
-              adapterRemembered: cD
-            } = KD;
-            const gD = (0, ID.P)(),
+              restoreLost: xp,
+              adapterRemembered: Lp
+            } = Ip;
+            const Yp = (0, yp.X)(),
               {
-                flushCrashReports: RD,
-                reportRenderReload: AD
-              } = await Promise.resolve().then((() => wD(40666)));
-            AD(DD.backend, sD, rD(gD ? (0, ID.z)() : null), {
+                flushCrashReports: Dp,
+                reportRenderReload: Ap
+              } = await Promise.resolve().then((() => cp(40945)));
+            Ap(pp.backend, op, Sp(Yp ? (0, yp.H)() : null), {
               from: "home",
-              cause: zD,
-              restoreLost: LD,
-              adapterRemembered: cD,
-              ...Dz(DD, zD, pD)
-            }), await RD(bD.d)
-          }(KD, DD, zD, null !== pD && void 0 !== pD ? pD : "start_failed" === DD ? 0 : 1, {
-            restoreLost: sD,
-            adapterRemembered: cD
+              cause: ip,
+              restoreLost: xp,
+              adapterRemembered: Lp,
+              ...Oi(pp, ip, Op)
+            }), await Dp(lp.b)
+          }(xp, pp, Dp, null !== Op && void 0 !== Op ? Op : "start_failed" === pp ? 0 : 1, {
+            restoreLost: Ip,
+            adapterRemembered: Yp
           })
-        } catch (AD) {
-          console.warn(`${ND} ${KD.backend} failed at home (${DD}), and its report couldn't be sent`, AD)
-        }(0, bD.j)()
+        } catch (Wp) {
+          console.warn(`${bp} ${xp.backend} failed at home (${pp}), and its report couldn't be sent`, Wp)
+        }(0, lp.i)()
       } else {
-        var RD;
-        const pD = Dz(KD, DD, zD),
-          sD = `WebGPU failed at home (${DD}${void 0===pD.error?"":`: ${pD.error instanceof Error?pD.error.message:(0,lD.m)(pD.error)}`}) and ${gD}`;
-        console.warn(`${ND} ${sD}: the previews stop`, null !== (RD = pD.error) && void 0 !== RD ? RD : ""), (0, xD.p)(sD);
+        var Pp;
+        const ip = Oi(xp, pp, Dp),
+          Op = `WebGPU failed at home (${pp}${void 0===ip.error?"":`: ${ip.error instanceof Error?ip.error.message:(0,Tp.h)(ip.error)}`}) and ${Ap}`;
+        console.warn(`${bp} ${Op}: the previews stop`, null !== (Pp = ip.error) && void 0 !== Pp ? Pp : ""), (0, Ep.m)(Op);
         try {
           const {
-            countRenderLost: zD
-          } = await Promise.resolve().then((() => wD(40666)));
-          zD(DD, pD.error, pD.context)
-        } catch (UD) {
-          console.warn(`${ND} WebGPU failed at home (${DD}), and its count couldn't be sent`, UD)
+            countRenderLost: Op
+          } = await Promise.resolve().then((() => cp(40945)));
+          Op(pp, ip.error, ip.context)
+        } catch (Up) {
+          console.warn(`${bp} WebGPU failed at home (${pp}), and its count couldn't be sent`, Up)
         }
       }
     }
 
-    function Dz(DD, zD, wD) {
-      var pD;
+    function Oi(pp, ip, cp) {
       let {
-        adapter: sD
-      } = DD;
-      const KD = (0, ID.P)();
+        adapter: Op
+      } = pp;
       return {
-        error: "lost" === zD && null !== (pD = (0, OD.ab)(KD ? (0, OD.N)((0, ID.z)()) : null)) && void 0 !== pD ? pD : wD,
+        error: cp,
         context: {
-          adapter: sD,
-          boundAtMs: "start_failed" === zD ? null : (0, xD.H)(),
-          indirectHangs: (0, xD.x)(),
-          restoresSkipped: (0, xD.L)()
+          adapter: Op,
+          boundAtMs: "start_failed" === ip ? null : (0, Ep.J)(),
+          indirectHangs: (0, Ep.x)(),
+          restoresSkipped: (0, Ep.K)()
         }
       }
     }
-    async function zz() {
-      if (!(0, ID.P)()) {
-        const DD = await (0, xD.N)();
-        if (null === DD || (0, OD.n)(DD)) return null;
-        if (await (0, TD.d)(await DD.load()), !(0, ID.P)()) return null
+    async function oi() {
+      if (!(0, yp.X)()) {
+        const pp = await (0, Ep.L)();
+        if (null === pp || (0, dp.s)(pp)) return null;
+        if (await (0, Xp.e)(await pp.load()), !(0, yp.X)()) return null
       }
-      return FD((0, ID.z)())
+      return Kp((0, yp.H)())
     }
-    class wz {
-      constructor(DD, zD, wD, pD, sD, KD) {
-        this.page = DD, this.host = zD, this.id = wD, this.canvas = pD, this.size = sD, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
-        const rD = {
-            ...KD.images,
-            glbUrl: DD => {
-              var zD;
-              return null !== (zD = this.models.drawnUrl(DD)) && void 0 !== zD ? zD : KD.images.glbUrl(DD)
+    class Ii {
+      constructor(pp, ip, cp, Op, op, Ip) {
+        this.page = pp, this.host = ip, this.id = cp, this.canvas = Op, this.size = op, this.models = void 0, this.images = void 0, this.write = void 0, this.outcomes = [], this.closed = !1, this.quiet = 0, this.settled = [];
+        const Sp = {
+            ...Ip.images,
+            glbUrl: pp => {
+              var ip;
+              return null !== (ip = this.models.drawnUrl(pp)) && void 0 !== ip ? ip : Ip.images.glbUrl(pp)
             }
           },
-          LD = zD => DD.modelFile(zD);
-        this.images = new JD.d(rD, (DD => {
-          console.warn(`${ND} image ${DD.key.kind}:${DD.key.index}:${DD.key.word} failed`, DD.error)
+          xp = ip => pp.modelFile(ip);
+        this.images = new jp.e(Sp, (pp => {
+          console.warn(`${bp} image ${pp.key.kind}:${pp.key.index}:${pp.key.word} failed`, pp.error)
         }), {
-          fetchFile: LD,
-          fetchImage: zD => DD.imageFile(zD)
-        }), DD.startModels(), this.models = new ED.g(KD.files, ((zD, wD) => DD.buildModel(zD, wD)), (DD => {
-          console.warn(`${ND} model file ${DD.file} (${DD.url}) failed`, DD.error)
+          fetchFile: xp,
+          fetchImage: ip => pp.imageFile(ip)
+        }), pp.startModels(), this.models = new kp.f(Ip.files, ((ip, cp) => pp.buildModel(ip, cp)), (pp => {
+          console.warn(`${bp} model file ${pp.file} (${pp.url}) failed`, pp.error)
         }), {
-          fetchFile: LD,
-          onWritten: (DD, zD) => {
-            this.images.glbWritten(DD, zD)
+          fetchFile: xp,
+          onWritten: (pp, ip) => {
+            this.images.glbWritten(pp, ip)
           },
-          onTaken: (DD, zD) => {
-            this.images.glbTaken(DD, zD)
+          onTaken: (pp, ip) => {
+            this.images.glbTaken(pp, ip)
           }
-        }), this.write = (DD, zD, wD) => {
+        }), this.write = (pp, ip, cp) => {
           if (this.closed) return !0;
-          if (DD === ED.b) {
-            const DD = new DataView(wD.buffer, wD.byteOffset, XD.e),
-              pD = DD.getUint32(0, !0),
-              sD = DD.getUint32(XD.h, !0),
-              KD = this.page.hostCall(tD, (() => this.host.krD(this.id, pD, zD, wD.subarray(XD.e))));
-            return this.outcomes.push([sD, KD]), !0
+          if (pp === kp.b) {
+            const pp = new DataView(cp.buffer, cp.byteOffset, Rp.d),
+              Op = pp.getUint32(0, !0),
+              op = pp.getUint32(Rp.g, !0),
+              Ip = this.page.hostCall(sp, (() => this.host.Sxp(this.id, Op, ip, cp.subarray(Rp.d))));
+            return this.outcomes.push([op, Ip]), !0
           }
-          return DD === JD.b && (this.page.hostCall(void 0, (() => {
-            this.host.erD(this.id, wD)
+          return pp === jp.c && (this.page.hostCall(void 0, (() => {
+            this.host.Lxp(this.id, cp)
           })), !0)
         }
       }
@@ -650,74 +651,74 @@ export const modules = {
       get isStopped() {
         return this.page.isStopped
       }
-      resize(DD, zD, wD) {
+      resize(pp, ip, cp) {
         if (this.closed) return;
-        const [pD, sD] = YD(DD, zD, this.page.dpr(), wD);
-        pD === this.size[0] && sD === this.size[1] || (this.size = [pD, sD], this.page.hostCall(void 0, (() => {
-          this.host.resize(this.id, pD, sD)
+        const [Op, op] = Vp(pp, ip, this.page.dpr(), cp);
+        Op === this.size[0] && op === this.size[1] || (this.size = [Op, op], this.page.hostCall(void 0, (() => {
+          this.host.resize(this.id, Op, op)
         })))
       }
-      setMob(DD, zD, wD, pD) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.trD(this.id, DD, zD, wD, pD))))
+      setMob(pp, ip, cp, Op) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Wxp(this.id, pp, ip, cp, Op))))
       }
-      setPet(DD, zD, wD, pD) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.YrD(this.id, DD, zD, wD, pD))))
+      setPet(pp, ip, cp, Op) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Uxp(this.id, pp, ip, cp, Op))))
       }
-      setPlayer(DD, zD, wD) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.arD(this.id, DD, zD, wD))))
+      setPlayer(pp, ip, cp) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Dxp(this.id, pp, ip, cp))))
       }
-      setFigure(DD, zD, wD, pD) {
-        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.urD(this.id, DD, zD, wD, pD))))
+      setFigure(pp, ip, cp, Op) {
+        return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.Axp(this.id, pp, ip, cp, Op))))
       }
       replay() {
         return this.closed ? 0 : this.page.hostCall(0, (() => this.page.called(this.host.replay(this.id))))
       }
       get orbit() {
         if (this.closed) return null;
-        const DD = this.page.hostCall(null, (() => this.host.orbit(this.id)));
-        return null === DD || DD.length < 3 ? null : {
-          alpha: DD[0],
-          beta: DD[1],
-          radius: DD[2]
+        const pp = this.page.hostCall(null, (() => this.host.orbit(this.id)));
+        return null === pp || pp.length < 3 ? null : {
+          alpha: pp[0],
+          beta: pp[1],
+          radius: pp[2]
         }
       }
-      setOrbit(DD) {
+      setOrbit(pp) {
         let {
-          alpha: zD,
-          beta: wD,
-          radius: pD
-        } = DD;
+          alpha: ip,
+          beta: cp,
+          radius: Op
+        } = pp;
         this.closed || this.page.hostCall(void 0, (() => {
-          this.host.FrD(this.id, zD, wD, pD)
+          this.host.yxp(this.id, ip, cp, Op)
         }))
       }
       untilSettled() {
-        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((DD => {
-          this.settled.push(DD)
+        return this.closed || this.page.isStopped ? Promise.resolve() : (this.quiet = 0, new Promise((pp => {
+          this.settled.push(pp)
         })))
       }
       packChanged() {
-        this.quiet = 0, this.models.refresh(), (0, PD.h)(this.images)
+        this.quiet = 0, this.models.refresh(), (0, Mp.g)(this.images)
       }
       feed() {
         this.models.drain(this.write);
-        for (const [DD, zD] of this.outcomes) {
-          const wD = zD === uD ? [] : [zD === vD ? DD : (DD | ED.c) >>> 0];
-          this.models.taken(DD, wD)
+        for (const [pp, ip] of this.outcomes) {
+          const cp = ip === Zp ? [] : [ip === zp ? pp : (pp | kp.e) >>> 0];
+          this.models.taken(pp, cp)
         }
         this.outcomes.length = 0, this.images.drain(this.write)
       }
-      collect(DD) {
-        let zD = !1;
-        if (DD) {
-          const DD = this.host.DLD(this.id);
-          for (const zD of DD) this.models.request(zD);
-          const wD = this.host.qrD(this.id);
-          wD.length > 0 && this.images.onEvent(wD), zD = DD.length > 0 || wD.length > 0
+      collect(pp) {
+        let ip = !1;
+        if (pp) {
+          const pp = this.host.txp(this.id);
+          for (const ip of pp) this.models.request(ip);
+          const cp = this.host.vxp(this.id);
+          cp.length > 0 && this.images.onEvent(cp), ip = pp.length > 0 || cp.length > 0
         }
-        const wD = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
-          pD = zD || wD > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
-        this.quiet = pD ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
+        const cp = this.page.modelsUnavailable ? 0 : this.models.asking + this.models.unanswered,
+          Op = ip || cp > 0 || this.images.waiting > 0 || this.images.inFlight > 0;
+        this.quiet = Op ? 0 : this.quiet + 1, this.quiet >= 3 && this.resolveSettled()
       }
       close() {
         this.closed || (this.closed = !0, this.page.closePreview(this), this.resolveSettled())
@@ -725,314 +726,314 @@ export const modules = {
       abandon() {
         this.resolveSettled()
       }
-      dispose(DD) {
+      dispose(pp) {
         this.page.hostCall(void 0, (() => {
-          const zD = this.host.close(this.id);
-          zD.length > 0 && this.images.onEvent(zD), this.page.isTrapped || DD.SKD(this.id)
+          const ip = this.host.close(this.id);
+          ip.length > 0 && this.images.onEvent(ip), this.page.isTrapped || pp.pSp(this.id)
         })), this.images.dispose(), this.canvas.remove()
       }
       resolveSettled() {
-        const DD = this.settled;
+        const pp = this.settled;
         this.settled = [];
-        for (const zD of DD) zD()
+        for (const ip of pp) ip()
       }
     }
-    class pz {
-      constructor(DD) {
-        this.deps = DD, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
-          onUnavailable: DD => {
-            this.modelsFailed(DD)
+    class Si {
+      constructor(pp) {
+        this.deps = pp, this.module = null, this.host = null, this.opening = null, this.pageCanvas = null, this.samples = 1, this.binding = null, this.sessionEnds = 0, this.lastEndReturned = !0, this.previews = new Map, this.nextId = 1, this.frameId = null, this.stopped = !1, this.loggedErrors = new Set, this.modelsListener = {
+          onUnavailable: pp => {
+            this.modelsFailed(pp)
           },
-          onDecoderFailed: DD => {
-            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${ND} the Draco decoder didn't load: models waiting on it won't draw`, DD))
+          onDecoderFailed: pp => {
+            this.loggedErrors.has("modelDecoder") || (this.loggedErrors.add("modelDecoder"), console.warn(`${bp} the Draco decoder didn't load: models waiting on it won't draw`, pp))
           },
-          onWorkerLost: DD => {
-            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${ND} a model worker was lost: ${DD}`))
+          onWorkerLost: pp => {
+            this.loggedErrors.has("modelWorker") || (this.loggedErrors.add("modelWorker"), console.warn(`${bp} a model worker was lost: ${pp}`))
           },
           onModuleRetry: () => {}
-        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.KI = {
-          setShaderPack: (DD, zD, wD, pD, sD) => (this.shaderPackArgs = [DD, zD, wD, pD, sD], this.handOverShaderPack(), !0)
-        }, this.frame = DD => {
+        }, this.modelsRestarted = !1, this.costs = [], this.models = null, this.unavailable = !1, this.animations = null, this.animationTable = null, this.moduleLoad = null, this.prefetched = !1, this.prefetchedFiles = new Map, this.shaderPackArgs = null, this.Dy = {
+          setShaderPack: (pp, ip, cp, Op, op) => (this.shaderPackArgs = [pp, ip, cp, Op, op], this.handOverShaderPack(), !0)
+        }, this.frame = pp => {
           this.frameId = null;
-          const zD = this.host;
-          if (null !== zD && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
-            this.drawFrame(zD, DD)
-          } catch (wD) {
-            if (!this.stopIfTrapped(wD) && (this.stop(), (0, OD.o)(wD))) return void this.deps.onRenderFailed("frames_refused", wD);
-            console.warn(`${ND} the previews stopped: their frame threw`, wD)
+          const ip = this.host;
+          if (null !== ip && 0 !== this.previews.size && !this.settleIfTrapped() && !this.stopped) try {
+            this.drawFrame(ip, pp)
+          } catch (cp) {
+            if (!this.stopIfTrapped(cp) && (this.stop(), (0, dp.w)(cp))) return void this.deps.onRenderFailed("frames_refused", cp);
+            console.warn(`${bp} the previews stopped: their frame threw`, cp)
           }
-        }, DD.pack.onChange((() => {
+        }, pp.pack.onChange((() => {
           this.packChanged()
-        })), DD.game.onGameChange((() => {
+        })), pp.game.onGameChange((() => {
           this.tellInGame()
         }))
       }
       packChanged() {
         if (!this.stopped)
-          for (const DD of this.previews.values()) DD.packChanged()
+          for (const pp of this.previews.values()) pp.packChanged()
       }
       dpr() {
         return this.deps.dpr()
       }
       get sessionBound() {
-        var DD, zD;
-        return null !== (DD = null === (zD = this.host) || void 0 === zD ? void 0 : zD.attached()) && void 0 !== DD && DD
+        var pp, ip;
+        return null !== (pp = null === (ip = this.host) || void 0 === ip ? void 0 : ip.attached()) && void 0 !== pp && pp
       }
       get open() {
         return this.previews.size
       }
       get frameCostMs() {
-        return 0 === this.costs.length ? 0 : this.costs.reduce(((DD, zD) => DD + zD), 0) / this.costs.length
+        return 0 === this.costs.length ? 0 : this.costs.reduce(((pp, ip) => pp + ip), 0) / this.costs.length
       }
-      async bindSession(DD, zD, wD) {
-        const pD = this.binding,
-          sD = this.sessionEnds;
+      async bindSession(pp, ip, cp) {
+        const Op = this.binding,
+          op = this.sessionEnds;
         try {
-          const KD = this.hostOf(DD);
-          if (!KD.mrD()) {
-            const zD = (0, dD.e)().sampleCount,
-              rD = await wD(zD);
-            if (this.sessionEnds !== sD) return this.keepRendererOfEndedSession(DD, KD, rD, zD, pD), zD;
-            if (!KD.VrD(rD)) throw new Error("the page has a renderer already");
-            (0, xD.t)(performance.now()), this.samples = zD, (0, SD.f)((0, OD.m)(DD))
+          const Ip = this.hostOf(pp);
+          if (!Ip.xxp()) {
+            const ip = (0, Jp.g)().sampleCount,
+              Sp = await cp(ip);
+            if (this.sessionEnds !== op) return this.keepRendererOfEndedSession(pp, Ip, Sp, ip, Op), ip;
+            if (!Ip.FSp(Sp)) throw new Error("the page has a renderer already");
+            (0, Ep.q)(performance.now()), this.samples = ip, (0, Bp.h)((0, dp.o)(pp))
           }
-          if (!KD.attach(zD)) throw new Error("the page's renderer is lent to another session");
+          if (!Ip.attach(ip)) throw new Error("the page's renderer is lent to another session");
           return this.samples
         } finally {
-          this.binding === pD && this.endBinding()
+          this.binding === Op && this.endBinding()
         }
       }
-      keepRendererOfEndedSession(DD, zD, wD, pD, sD) {
-        if (!this.lastEndReturned || null !== this.binding && this.binding !== sD) try {
-          wD.free()
-        } catch (KD) {
-          console.warn(`${ND} an ended session's renderer didn't free`, KD)
-        } else zD.VrD(wD) && ((0, xD.t)(performance.now()), this.samples = pD, (0, SD.f)(this.registryOf(DD)))
+      keepRendererOfEndedSession(pp, ip, cp, Op, op) {
+        if (!this.lastEndReturned || null !== this.binding && this.binding !== op) try {
+          cp.free()
+        } catch (Ip) {
+          console.warn(`${bp} an ended session's renderer didn't free`, Ip)
+        } else ip.FSp(cp) && ((0, Ep.q)(performance.now()), this.samples = Op, (0, Bp.h)(this.registryOf(pp)))
       }
       async beginSession() {
-        var DD;
-        let zD = () => {};
-        const wD = new Promise((DD => {
-          zD = DD
+        var pp;
+        let ip = () => {};
+        const cp = new Promise((pp => {
+          ip = pp
         }));
         this.binding = {
-          done: wD,
-          release: zD
-        }, await (null === (DD = this.opening) || void 0 === DD ? void 0 : DD.catch((() => null)));
-        const pD = this.pageCanvas;
-        return this.pageCanvas = null, pD
+          done: cp,
+          release: ip
+        }, await (null === (pp = this.opening) || void 0 === pp ? void 0 : pp.catch((() => null)));
+        const Op = this.pageCanvas;
+        return this.pageCanvas = null, Op
       }
-      endSession(DD) {
-        var zD, wD;
-        if (this.sessionEnds++, this.lastEndReturned = DD, this.endBinding(), DD) {
+      endSession(pp) {
+        var ip, cp;
+        if (this.sessionEnds++, this.lastEndReturned = pp, this.endBinding(), pp) {
           try {
-            var pD;
-            null === (pD = this.host) || void 0 === pD || pD.detach()
-          } catch (sD) {
-            return void console.warn(`${ND} the session's core kept the page's renderer`, sD)
-          }!0 === (null === (zD = this.host) || void 0 === zD ? void 0 : zD.attached()) && console.warn(`${ND} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (wD = this.host) || void 0 === wD ? void 0 : wD.mrD()) && (0, SD.f)(this.registryOf(this.module))
+            var Op;
+            null === (Op = this.host) || void 0 === Op || Op.detach()
+          } catch (op) {
+            return void console.warn(`${bp} the session's core kept the page's renderer`, op)
+          }!0 === (null === (ip = this.host) || void 0 === ip ? void 0 : ip.attached()) && console.warn(`${bp} the session's core kept the page's renderer: it ended inside its frame`), null !== this.module && !0 === (null === (cp = this.host) || void 0 === cp ? void 0 : cp.xxp()) && (0, Bp.h)(this.registryOf(this.module))
         }
       }
       endBinding() {
-        var DD;
-        null === (DD = this.binding) || void 0 === DD || DD.release(), this.binding = null
+        var pp;
+        null === (pp = this.binding) || void 0 === pp || pp.release(), this.binding = null
       }
-      async openPreview(DD, zD, wD, pD) {
-        const sD = await this.renderingHost(),
-          KD = this.module;
-        if (null === sD || null === KD) throw new Error("this page can't draw previews: it has no renderer build");
-        if (this.animations ??= this.loadAnimations(sD), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
+      async openPreview(pp, ip, cp, Op) {
+        const op = await this.renderingHost(),
+          Ip = this.module;
+        if (null === op || null === Ip) throw new Error("this page can't draw previews: it has no renderer build");
+        if (this.animations ??= this.loadAnimations(op), this.deps.pack.wanted(), this.isStopped) throw new Error("the previews stopped");
         this.guarded((() => {
-          this.deps.provideBuiltInAnimationPack(KD)
+          this.deps.provideBuiltInAnimationPack(Ip)
         }));
-        const rD = this.nextId++,
-          LD = this.deps.createCanvas(),
-          [cD, gD] = YD(zD, wD, this.deps.dpr(), pD);
-        LD.width = cD, LD.height = gD;
-        if (!this.guarded((() => (KD.dKD(rD, LD), sD.open(rD, cD, gD, DD))))) throw this.hostCall(void 0, (() => {
-          KD.SKD(rD)
+        const Sp = this.nextId++,
+          xp = this.deps.createCanvas(),
+          [Lp, Yp] = Vp(ip, cp, this.deps.dpr(), Op);
+        xp.width = Lp, xp.height = Yp;
+        if (!this.guarded((() => (Ip.VIp(Sp, xp), op.open(Sp, Lp, Yp, pp))))) throw this.hostCall(void 0, (() => {
+          Ip.pSp(Sp)
         })), new Error("the page's renderer is lent to a session that is running");
         this.restartModelsIfFailed();
-        const RD = new wz(this, sD, rD, LD, [cD, gD], this.deps);
-        return this.previews.set(rD, RD), this.startFrames(), RD
+        const Dp = new Ii(this, op, Sp, xp, [Lp, Yp], this.deps);
+        return this.previews.set(Sp, Dp), this.startFrames(), Dp
       }
       prefetch() {
-        if (this.prefetched || this.isStopped || (0, xD.b)() || null !== (0, xD.D)()) return;
+        if (this.prefetched || this.isStopped || (0, Ep.b)() || null !== (0, Ep.G)()) return;
         this.prefetched = !0;
-        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((DD => {
-          null === DD || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
+        (null === this.module ? this.loadModule() : Promise.resolve(this.module)).then((pp => {
+          null === pp || this.isStopped || (this.startModels(), this.fetchAnimationTable().catch((() => {})), this.prefetchPlayerFiles())
         }), (() => {}))
       }
-      modelFile(DD) {
-        return this.prefetchedOr(DD, this.deps.fetchModel)
+      modelFile(pp) {
+        return this.prefetchedOr(pp, this.deps.fetchModel)
       }
-      imageFile(DD) {
-        return this.prefetchedOr(DD, pD.C)
+      imageFile(pp) {
+        return this.prefetchedOr(pp, Op.F)
       }
-      prefetchedOr(DD, zD) {
-        const wD = this.prefetchedFiles.get(DD);
-        return void 0 === wD ? zD(DD) : wD.catch((() => zD(DD)))
+      prefetchedOr(pp, ip) {
+        const cp = this.prefetchedFiles.get(pp);
+        return void 0 === cp ? ip(pp) : cp.catch((() => ip(pp)))
       }
       async prefetchPlayerFiles() {
-        const DD = this.deps.playerFile().then((DD => this.deps.files.url(DD))),
-          zD = await Promise.all([DD, this.deps.images.lifeformAtlasUrl(PD.c)]).catch((() => null));
-        if (null === zD) return;
-        const [wD, pD] = zD, sD = (DD, zD) => {
-          if (null === DD) return;
-          const wD = zD(DD);
-          this.prefetchedFiles.set(DD, wD), wD.catch((() => {
-            this.prefetchedFiles.delete(DD)
+        const pp = this.deps.playerFile().then((pp => this.deps.files.url(pp))),
+          ip = await Promise.all([pp, this.deps.images.lifeformAtlasUrl(Mp.b)]).catch((() => null));
+        if (null === ip) return;
+        const [cp, Op] = ip, op = (pp, ip) => {
+          if (null === pp) return;
+          const cp = ip(pp);
+          this.prefetchedFiles.set(pp, cp), cp.catch((() => {
+            this.prefetchedFiles.delete(pp)
           }))
         };
-        sD(wD, (DD => this.modelFile(DD))), sD(pD, (DD => this.imageFile(DD)))
+        op(cp, (pp => this.modelFile(pp))), op(Op, (pp => this.imageFile(pp)))
       }
       loadModule() {
-        return this.moduleLoad ??= this.deps.loadModule().then((DD => (null === DD && (this.moduleLoad = null), DD)), (DD => {
-          throw this.moduleLoad = null, DD
+        return this.moduleLoad ??= this.deps.loadModule().then((pp => (null === pp && (this.moduleLoad = null), pp)), (pp => {
+          throw this.moduleLoad = null, pp
         })), this.moduleLoad
       }
       fetchAnimationTable() {
-        return this.animationTable ??= this.deps.fetchAnimations().catch((DD => {
-          throw this.animationTable = null, DD
+        return this.animationTable ??= this.deps.fetchAnimations().catch((pp => {
+          throw this.animationTable = null, pp
         })), this.animationTable
       }
       get modelsUnavailable() {
         return this.unavailable
       }
       startModels() {
-        this.models ??= this.deps.startModels(this.modelsListener).catch((DD => (this.modelsFailed(DD), () => new Promise((() => {})))))
+        this.models ??= this.deps.startModels(this.modelsListener).catch((pp => (this.modelsFailed(pp), () => new Promise((() => {})))))
       }
-      buildModel(DD, zD) {
-        return this.startModels(), this.models.then((wD => wD(DD, zD))).then((DD => this.unavailable ? new Promise((() => {})) : DD))
+      buildModel(pp, ip) {
+        return this.startModels(), this.models.then((cp => cp(pp, ip))).then((pp => this.unavailable ? new Promise((() => {})) : pp))
       }
       restartModelsIfFailed() {
         this.unavailable && !this.modelsRestarted && 0 === this.previews.size && (this.modelsRestarted = !0, this.models = null, this.unavailable = !1, this.startModels())
       }
-      modelsFailed(DD) {
-        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${ND} the model workers didn't start: models won't draw in the previews`, DD))
+      modelsFailed(pp) {
+        this.unavailable = !0, this.loggedErrors.has("models") || (this.loggedErrors.add("models"), console.warn(`${bp} the model workers didn't start: models won't draw in the previews`, pp))
       }
-      called(DD) {
-        return 0 !== DD && this.logError(DD, 0), DD
+      called(pp) {
+        return 0 !== pp && this.logError(pp, 0), pp
       }
-      closePreview(DD) {
-        this.previews.delete(DD.id), null !== this.module && DD.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
+      closePreview(pp) {
+        this.previews.delete(pp.id), null !== this.module && pp.dispose(this.module), 0 === this.previews.size && null !== this.frameId && (this.deps.cancelFrame(this.frameId), this.frameId = null)
       }
-      hostOf(DD) {
-        if (null !== this.module && this.module !== DD) throw new Error("a second renderer module on one page");
-        return this.module = DD, null === this.host && (this.host = this.guarded((() => new DD.jKD)), this.tellInGame(), this.handOverShaderPack()), this.host
+      hostOf(pp) {
+        if (null !== this.module && this.module !== pp) throw new Error("a second renderer module on one page");
+        return this.module = pp, null === this.host && (this.host = this.guarded((() => new pp.KIp)), this.tellInGame(), this.handOverShaderPack()), this.host
       }
       tellInGame() {
         const {
-          host: DD
+          host: pp
         } = this;
-        null !== DD && this.outsideCall("the game's start or end", (() => {
-          DD.vrD(this.deps.game.inGame())
+        null !== pp && this.outsideCall("the game's start or end", (() => {
+          pp.Pxp(this.deps.game.inGame())
         }))
       }
       handOverShaderPack() {
         const {
-          host: DD,
-          shaderPackArgs: zD
+          host: pp,
+          shaderPackArgs: ip
         } = this;
-        null !== DD && null !== zD && this.outsideCall("the shader pack's hand-over", (() => {
-          DD.CpD(...zD) || console.warn(`${ND} the host refused the shader pack: previews draw without it at home`)
+        null !== pp && null !== ip && this.outsideCall("the shader pack's hand-over", (() => {
+          pp.fOp(...ip) || console.warn(`${bp} the host refused the shader pack: previews draw without it at home`)
         }))
       }
-      outsideCall(DD, zD) {
+      outsideCall(pp, ip) {
         try {
-          this.hostCall(void 0, zD)
-        } catch (wD) {
-          this.stop(), console.warn(`${ND} the previews stopped: ${DD} threw`, wD)
+          this.hostCall(void 0, ip)
+        } catch (cp) {
+          this.stop(), console.warn(`${bp} the previews stopped: ${pp} threw`, cp)
         }
       }
-      async loadAnimations(DD) {
-        const zD = rD(null),
-          wD = this.module;
+      async loadAnimations(pp) {
+        const ip = Sp(null),
+          cp = this.module;
         try {
-          zD.wasm = null === wD ? zD.wasm : this.hostCall(zD.wasm, (() => wD.CA()))
+          ip.wasm = null === cp ? ip.wasm : this.hostCall(ip.wasm, (() => cp.JA()))
         } catch {}
-        let pD, sD;
+        let Op, op;
         try {
-          pD = await this.fetchAnimationTable()
-        } catch (KD) {
+          Op = await this.fetchAnimationTable()
+        } catch (Ip) {
           return void this.deps.onAnimationsFailed({
             stage: "fetch",
-            error: KD
-          }, zD)
+            error: Ip
+          }, ip)
         }
         if (!this.settleIfTrapped()) {
           try {
-            sD = DD.orD(pD)
-          } catch (KD) {
-            if (this.stopIfTrapped(KD)) return;
+            op = pp.Yxp(Op)
+          } catch (Ip) {
+            if (this.stopIfTrapped(Ip)) return;
             return void this.deps.onAnimationsFailed({
               stage: "decode",
-              error: KD
-            }, zD)
+              error: Ip
+            }, ip)
           }
-          sD || this.deps.onAnimationsFailed({
+          op || this.deps.onAnimationsFailed({
             stage: "decode",
             error: null
-          }, zD)
+          }, ip)
         }
       }
       async renderingHost() {
         if (null !== this.binding && await this.binding.done, this.settleIfTrapped()) return null;
-        const DD = this.host;
-        return null !== DD && this.guarded((() => DD.mrD())) ? DD : (this.opening ??= this.openAtHome().finally((() => {
+        const pp = this.host;
+        return null !== pp && this.guarded((() => pp.xxp())) ? pp : (this.opening ??= this.openAtHome().finally((() => {
           this.opening = null
         })), this.opening)
       }
       async openAtHome() {
-        var DD;
-        const zD = null !== (DD = this.module) && void 0 !== DD ? DD : await this.loadModule();
-        if (null === zD) return null;
-        const wD = this.hostOf(zD),
-          pD = () => this.guarded((() => wD.mrD()));
-        if (pD()) return wD;
-        if (null !== (0, xD.D)() || (0, xD.b)()) return null;
-        const sD = this.deps.createCanvas();
-        sD.width = 1, sD.height = 1;
-        const KD = await this.deps.openExtras();
+        var pp;
+        const ip = null !== (pp = this.module) && void 0 !== pp ? pp : await this.loadModule();
+        if (null === ip) return null;
+        const cp = this.hostOf(ip),
+          Op = () => this.guarded((() => cp.xxp()));
+        if (Op()) return cp;
+        if (null !== (0, Ep.G)() || (0, Ep.b)()) return null;
+        const op = this.deps.createCanvas();
+        op.width = 1, op.height = 1;
+        const Ip = await this.deps.openExtras();
         if (this.settleIfTrapped()) return null;
-        const rD = (0, dD.e)().sampleCount;
-        let LD;
+        const Sp = (0, Jp.g)().sampleCount;
+        let xp;
         try {
-          LD = await (0, OD.v)(zD, "previewRenderer", sD, rD, iD.d, KD)
-        } catch (cD) {
-          throw cD instanceof VD.d ? this.stopForTrap(cD) : (0, OD.s)(cD) && await this.deps.onRenderFailed("start_failed", cD), cD
+          xp = await (0, dp.A)(ip, "previewRenderer", op, Sp, Np.d, Ip)
+        } catch (Lp) {
+          throw Lp instanceof qp.b ? this.stopForTrap(Lp) : (0, dp.z)(Lp) && await this.deps.onRenderFailed("start_failed", Lp), Lp
         }
-        return this.guarded((() => wD.VrD(LD))) ? ((0, xD.t)(performance.now()), this.samples = rD, this.pageCanvas = sD, (0, SD.f)(this.registryOf(zD)), wD) : pD() ? wD : null
+        return this.guarded((() => cp.FSp(xp))) ? ((0, Ep.q)(performance.now()), this.samples = Sp, this.pageCanvas = op, (0, Bp.h)(this.registryOf(ip)), cp) : Op() ? cp : null
       }
       startFrames() {
         null !== this.frameId || this.isStopped || (this.frameId = this.deps.requestFrame(this.frame))
       }
-      drawFrame(DD, zD) {
-        for (const rD of this.previews.values()) rD.feed();
+      drawFrame(pp, ip) {
+        for (const Sp of this.previews.values()) Sp.feed();
         if (this.stopped) return;
-        const wD = this.deps.now(),
-          pD = DD.frame(zD);
-        this.costs.push(this.deps.now() - wD), this.costs.length > 120 && this.costs.shift();
-        const sD = 0 !== (256 & pD),
-          KD = 255 & pD;
-        for (const rD of this.previews.values()) {
+        const cp = this.deps.now(),
+          Op = pp.frame(ip);
+        this.costs.push(this.deps.now() - cp), this.costs.length > 120 && this.costs.shift();
+        const op = 0 !== (256 & Op),
+          Ip = 255 & Op;
+        for (const Sp of this.previews.values()) {
           if (this.stopped) return;
-          rD.collect(sD)
+          Sp.collect(op)
         }
         if (!this.stopped) {
-          if (0 !== (512 & pD) && this.deps.onDrew(), sD) {
-            const zD = DD.HrD();
-            for (let DD = 0; DD + 1 < zD.length; DD += 2) zD[DD] === MD.F.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(zD[DD], zD[DD + 1])
+          if (0 !== (512 & Op) && this.deps.onDrew(), op) {
+            const ip = pp.wxp();
+            for (let pp = 0; pp + 1 < ip.length; pp += 2) ip[pp] === Hp.M.RenderDeviceLost && this.deps.onDeviceLost(), this.logError(ip[pp], ip[pp + 1])
           }
-          if (KD !== eD) {
-            if (KD === oD) return this.stop(), void this.deps.onFatal(DD.NrD(), DD.ZrD());
-            if (KD === aD) return this.stop(), void console.warn(`${ND} the previews stopped: the page's renderer went with its session`);
-            (0, GD.d)(zD), this.startFrames()
+          if (Ip !== gp) {
+            if (Ip === Gp) return this.stop(), void this.deps.onFatal(pp.Oxp(), pp.oxp());
+            if (Ip === rp) return this.stop(), void console.warn(`${bp} the previews stopped: the page's renderer went with its session`);
+            (0, wp.e)(ip), this.startFrames()
           } else {
-            const zD = DD.yrD();
+            const ip = pp.Ixp();
             this.stop();
-            const wD = zD[2] === MD.Zc.PIPELINE_FAILED ? "pipeline_failed" : "lost";
-            this.deps.onRenderFailed(wD, void 0, zD[1], zD[2] === MD.Zc.RESTORE_LOST)
+            const cp = ip[2] === Hp.Yc.PIPELINE_FAILED ? "pipeline_failed" : "lost";
+            this.deps.onRenderFailed(cp, void 0, ip[1], ip[2] === Hp.Yc.RESTORE_LOST)
           }
         }
       }
@@ -1040,115 +1041,115 @@ export const modules = {
         return this.stopped || this.isTrapped
       }
       get isTrapped() {
-        return null !== this.module && ((0, VD.i)(this.module) || "failed" === (0, ID.y)())
+        return null !== this.module && ((0, qp.g)(this.module) || "failed" === (0, yp.E)())
       }
-      hostCall(DD, zD) {
-        if (this.settleIfTrapped()) return DD;
+      hostCall(pp, ip) {
+        if (this.settleIfTrapped()) return pp;
         try {
-          return zD()
-        } catch (wD) {
-          if (this.stopIfTrapped(wD)) return DD;
-          throw wD
+          return ip()
+        } catch (cp) {
+          if (this.stopIfTrapped(cp)) return pp;
+          throw cp
         }
       }
-      guarded(DD) {
+      guarded(pp) {
         if (this.settleIfTrapped()) throw new Error("the previews stopped: their module trapped");
         try {
-          return DD()
-        } catch (zD) {
-          throw this.stopIfTrapped(zD), zD
+          return pp()
+        } catch (ip) {
+          throw this.stopIfTrapped(ip), ip
         }
       }
-      registryOf(DD) {
+      registryOf(pp) {
         return {
-          UpD: (zD, wD) => {
+          kOp: (ip, cp) => {
             this.hostCall(void 0, (() => {
-              DD.UpD(zD, wD)
+              pp.kOp(ip, cp)
             }))
           },
-          fpD: zD => {
+          mOp: ip => {
             this.hostCall(void 0, (() => {
-              DD.fpD(zD)
+              pp.mOp(ip)
             }))
           }
         }
       }
       settleIfTrapped() {
-        return !!this.isTrapped && (this.stopped || (this.stop(), (0, SD.f)(null)), !0)
+        return !!this.isTrapped && (this.stopped || (this.stop(), (0, Bp.h)(null)), !0)
       }
-      stopIfTrapped(DD) {
-        return !(null === this.module || !(0, VD.k)(this.module, DD)) && (this.stopForTrap(DD), !0)
+      stopIfTrapped(pp) {
+        return !(null === this.module || !(0, qp.h)(this.module, pp)) && (this.stopForTrap(pp), !0)
       }
-      stopForTrap(DD) {
-        this.stop(), (0, SD.f)(null), (0, WD.d)("previews", DD)
+      stopForTrap(pp) {
+        this.stop(), (0, Bp.h)(null), (0, fp.e)("previews", pp)
       }
       stop() {
         this.stopped = !0;
-        for (const DD of this.previews.values()) DD.abandon()
+        for (const pp of this.previews.values()) pp.abandon()
       }
-      logError(DD, zD) {
-        const wD = `${DD}:${zD}`;
-        this.loggedErrors.has(wD) || (this.loggedErrors.add(wD), console.warn(`${ND} error ${DD} (detail ${zD})`))
+      logError(pp, ip) {
+        const cp = `${pp}:${ip}`;
+        this.loggedErrors.has(cp) || (this.loggedErrors.add(cp), console.warn(`${bp} error ${pp} (detail ${ip})`))
       }
     }
-    let sz = null;
+    let xi = null;
 
-    function Kz() {
-      return sz ??= new pz(function() {
-        const DD = (0, QD.q)(BD.clientSideServerUrls.staticUrl, {
-          packUrl: DD => {
-            var zD, wD;
-            return null !== (zD = null === (wD = PD.g.current) || void 0 === wD ? void 0 : wD.modelUrl(DD)) && void 0 !== zD ? zD : null
+    function Li() {
+      return xi ??= new Si(function() {
+        const pp = (0, mp.r)(Up.clientSideServerUrls.staticUrl, {
+          packUrl: pp => {
+            var ip, cp;
+            return null !== (ip = null === (cp = Mp.e.current) || void 0 === cp ? void 0 : cp.modelUrl(pp)) && void 0 !== ip ? ip : null
           }
         });
         return {
-          loadModule: zz,
-          startModels: async DD => {
+          loadModule: oi,
+          startModels: async pp => {
             const {
-              pageModelPool: zD
-            } = await wD.e(42).then((() => wD(50834))), {
-              pool: pD
-            } = zD(DD);
-            return (DD, zD) => pD.build(DD, zD)
+              pageModelPool: ip
+            } = await cp.e(43).then((() => cp(51251))), {
+              pool: Op
+            } = ip(pp);
+            return (pp, ip) => Op.build(pp, ip)
           },
-          fetchAnimations: async () => LD(await (0, pD.C)(HD())),
-          playerFile: async () => (await (0, QD.n)()).PLAYER_FILE,
-          onAnimationsFailed: (DD, zD) => {
-            cD("previewAnimations", HD(), DD, zD)
+          fetchAnimations: async () => xp(await (0, Op.F)(ii())),
+          playerFile: async () => (await (0, mp.o)()).PLAYER_FILE,
+          onAnimationsFailed: (pp, ip) => {
+            Lp("previewAnimations", ii(), pp, ip)
           },
-          provideBuiltInAnimationPack: DD => {
-            UD().provide(DD)
+          provideBuiltInAnimationPack: pp => {
+            Pp().provide(pp)
           },
-          openExtras: xD.y,
-          files: DD,
-          images: (0, PD.i)((0, JD.l)(DD.url), (() => PD.g.current)),
-          pack: PD.g,
-          game: CD.c,
-          fetchModel: DD => (0, QD.g)(DD),
+          openExtras: Ep.A,
+          files: pp,
+          images: (0, Mp.i)((0, jp.k)(pp.url), (() => Mp.e.current)),
+          pack: Mp.e,
+          game: Cp.d,
+          fetchModel: pp => (0, mp.j)(pp),
           createCanvas: () => document.createElement("canvas"),
           dpr: () => window.devicePixelRatio,
           now: () => performance.now(),
-          requestFrame: DD => requestAnimationFrame(DD),
-          cancelFrame: DD => {
-            cancelAnimationFrame(DD)
+          requestFrame: pp => requestAnimationFrame(pp),
+          cancelFrame: pp => {
+            cancelAnimationFrame(pp)
           },
-          onRenderFailed: qD,
-          onFatal: (DD, zD) => {
-            console.error(`${ND} the previews stopped: renderer error ${DD} (detail ${zD})`)
+          onRenderFailed: ci,
+          onFatal: (pp, ip) => {
+            console.error(`${bp} the previews stopped: renderer error ${pp} (detail ${ip})`)
           },
           onDeviceLost: () => {
-            (0, xD.A)() === jD.e.webgpu && hD.F.lost()
+            (0, Ep.C)() === Qp.b.webgpu && ((0, ep.h)((0, yp.X)() ? (0, dp.Y)((0, yp.H)()) : null), vp.D.lost())
           },
           onDrew: () => {
-            hD.F.drew()
+            vp.D.drew()
           }
         }
-      }()), sz
+      }()), xi
     }
-    var rz = wD(608),
-      Lz = wD(38621),
-      cz = wD(3288);
-    const gz = {
+    var Yi = cp(629),
+      Di = cp(38856),
+      Ai = cp(3400);
+    const Pi = {
       wave: 0,
       clap: 1,
       point: 2,
@@ -1166,320 +1167,320 @@ export const modules = {
       gunReady: 14,
       gunAimed: 15
     };
-    const Rz = "[bloxd-previews]",
-      Az = new Uint32Array(5);
+    const Wi = "[bloxd-previews]",
+      yi = new Uint32Array(5);
 
-    function Uz(DD) {
-      return rz.k.indexOf(DD)
+    function Ui(pp) {
+      return Yi.i.indexOf(pp)
     }
-    const fz = new WeakSet;
+    const wi = new WeakSet;
 
-    function Iz(DD) {
-      const zD = (0, Lz.g)(DD),
-        wD = null === zD ? -1 : Bz(zD);
-      return -1 !== wD ? wD : (fz.has(DD) || (fz.add(DD), console.warn(`${Rz} an animation the previews' table lacks: the mob idles instead`)), -1)
-    }
-
-    function Bz(DD) {
-      var zD;
-      return null !== (zD = gz[DD]) && void 0 !== zD ? zD : -1
+    function vi(pp) {
+      const ip = (0, Di.c)(pp),
+        cp = null === ip ? -1 : ti(ip);
+      return -1 !== cp ? cp : (wi.has(pp) || (wi.add(pp), console.warn(`${Wi} an animation the previews' table lacks: the mob idles instead`)), -1)
     }
 
-    function Gz(DD, zD) {
+    function ti(pp) {
+      var ip;
+      return null !== (ip = Pi[pp]) && void 0 !== ip ? ip : -1
+    }
+
+    function Hi(pp, ip) {
       const {
-        canvas: wD
-      } = zD;
-      wD.style.width = "100%", wD.style.height = "100%", wD.style.display = "block", DD.appendChild(wD)
+        canvas: cp
+      } = ip;
+      cp.style.width = "100%", cp.style.height = "100%", cp.style.display = "block", pp.appendChild(cp)
     }
 
-    function hz(DD) {
-      const zD = DD.getBoundingClientRect();
-      return [zD.width, zD.height]
+    function di(pp) {
+      const ip = pp.getBoundingClientRect();
+      return [ip.width, ip.height]
     }
-    class nz {
-      constructor(DD, zD) {
-        this.preview = DD, this.showView = zD
+    class ei {
+      constructor(pp, ip) {
+        this.preview = pp, this.showView = ip
       }
-      show(DD) {
-        this.showView(this.preview, DD)
+      show(pp) {
+        this.showView(this.preview, pp)
       }
-      resize(DD, zD) {
-        this.preview.resize(DD, zD)
+      resize(pp, ip) {
+        this.preview.resize(pp, ip)
       }
       close() {
         this.preview.close()
       }
     }
-    class Mz {
-      constructor(DD) {
-        this.preview = DD, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(DD) {
+    class ui {
+      constructor(pp) {
+        this.preview = pp, this.ready = void 0, this.dev = void 0, this.built = !1, this.cosmetics = {}, this.emote = null, this.detachControls = void 0, this.detachControls = function(pp) {
           const {
-            canvas: zD
-          } = DD;
-          let wD = null;
-          const pD = DD => {
-              var pD;
-              wD = {
-                pointer: DD.pointerId,
-                x: DD.clientX,
-                y: DD.clientY
-              }, null === (pD = zD.setPointerCapture) || void 0 === pD || pD.call(zD, DD.pointerId)
+            canvas: ip
+          } = pp;
+          let cp = null;
+          const Op = pp => {
+              var Op;
+              cp = {
+                pointer: pp.pointerId,
+                x: pp.clientX,
+                y: pp.clientY
+              }, null === (Op = ip.setPointerCapture) || void 0 === Op || Op.call(ip, pp.pointerId)
             },
-            sD = zD => {
-              var pD;
-              const sD = DD.orbit;
-              if ((null === (pD = wD) || void 0 === pD ? void 0 : pD.pointer) !== zD.pointerId || null === sD) return;
-              const KD = zD.clientX - wD.x,
-                rD = zD.clientY - wD.y;
-              wD = {
-                ...wD,
-                x: zD.clientX,
-                y: zD.clientY
-              }, DD.setOrbit({
-                alpha: sD.alpha - .01 * KD,
-                beta: Math.min(Math.PI - .01, Math.max(.01, sD.beta - .01 * rD)),
-                radius: sD.radius
+            op = ip => {
+              var Op;
+              const op = pp.orbit;
+              if ((null === (Op = cp) || void 0 === Op ? void 0 : Op.pointer) !== ip.pointerId || null === op) return;
+              const Ip = ip.clientX - cp.x,
+                Sp = ip.clientY - cp.y;
+              cp = {
+                ...cp,
+                x: ip.clientX,
+                y: ip.clientY
+              }, pp.setOrbit({
+                alpha: op.alpha - .01 * Ip,
+                beta: Math.min(Math.PI - .01, Math.max(.01, op.beta - .01 * Sp)),
+                radius: op.radius
               })
             },
-            KD = DD => {
-              var zD;
-              (null === (zD = wD) || void 0 === zD ? void 0 : zD.pointer) === DD.pointerId && (wD = null)
+            Ip = pp => {
+              var ip;
+              (null === (ip = cp) || void 0 === ip ? void 0 : ip.pointer) === pp.pointerId && (cp = null)
             },
-            rD = zD => {
-              const wD = DD.orbit;
-              if (null === wD) return;
-              zD.preventDefault();
-              const pD = zD.deltaY * (zD.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : zD.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
-                sD = Math.min(100, Math.max(5, wD.radius + .08 * pD));
-              DD.setOrbit({
-                ...wD,
-                radius: sD
+            Sp = ip => {
+              const cp = pp.orbit;
+              if (null === cp) return;
+              ip.preventDefault();
+              const Op = ip.deltaY * (ip.deltaMode === WheelEvent.DOM_DELTA_LINE ? 40 : ip.deltaMode === WheelEvent.DOM_DELTA_PAGE ? 800 : 1),
+                op = Math.min(100, Math.max(5, cp.radius + .08 * Op));
+              pp.setOrbit({
+                ...cp,
+                radius: op
               })
             };
-          return zD.style.touchAction = "none", zD.addEventListener("pointerdown", pD), zD.addEventListener("pointermove", sD), zD.addEventListener("pointerup", KD), zD.addEventListener("pointercancel", KD), zD.addEventListener("wheel", rD, {
+          return ip.style.touchAction = "none", ip.addEventListener("pointerdown", Op), ip.addEventListener("pointermove", op), ip.addEventListener("pointerup", Ip), ip.addEventListener("pointercancel", Ip), ip.addEventListener("wheel", Sp, {
             passive: !1
           }), () => {
-            zD.removeEventListener("pointerdown", pD), zD.removeEventListener("pointermove", sD), zD.removeEventListener("pointerup", KD), zD.removeEventListener("pointercancel", KD), zD.removeEventListener("wheel", rD)
+            ip.removeEventListener("pointerdown", Op), ip.removeEventListener("pointermove", op), ip.removeEventListener("pointerup", Ip), ip.removeEventListener("pointercancel", Ip), ip.removeEventListener("wheel", Sp)
           }
-        }(DD), this.dev = {
-          canvas: () => DD.canvas,
+        }(pp), this.dev = {
+          canvas: () => pp.canvas,
           isolateHead: () => {
-            console.warn(`${Rz} isolateHead: noa's character preview only`)
+            console.warn(`${Wi} isolateHead: noa's character preview only`)
           }
-        }, this.apply(), this.ready = DD.untilSettled().then((() => {
-          if (DD.isStopped) throw new Error(`${Rz} the previews stopped before the character drew`);
+        }, this.apply(), this.ready = pp.untilSettled().then((() => {
+          if (pp.isStopped) throw new Error(`${Wi} the previews stopped before the character drew`);
           this.built = !0
         }))
       }
       isReady() {
         return this.built && !this.preview.isClosed
       }
-      setCosmetic(DD, zD) {
-        this.cosmetics[DD] = zD, this.apply()
+      setCosmetic(pp, ip) {
+        this.cosmetics[pp] = ip, this.apply()
       }
-      playEmote(DD) {
-        null === DD || DD !== this.emote ? (this.emote = DD, this.apply()) : this.preview.replay()
+      playEmote(pp) {
+        null === pp || pp !== this.emote ? (this.emote = pp, this.apply()) : this.preview.replay()
       }
-      untilDrawn(DD) {
+      untilDrawn(pp) {
         return this.preview.untilSettled()
       }
-      setOrbit(DD) {
+      setOrbit(pp) {
         let {
-          yaw: zD,
-          pitch: wD,
-          radius: pD
-        } = DD;
-        const sD = this.preview.orbit;
-        null !== sD && this.preview.setOrbit({
-          alpha: zD,
-          beta: wD,
-          radius: null !== pD && void 0 !== pD ? pD : sD.radius
+          yaw: ip,
+          pitch: cp,
+          radius: Op
+        } = pp;
+        const op = this.preview.orbit;
+        null !== op && this.preview.setOrbit({
+          alpha: ip,
+          beta: cp,
+          radius: null !== Op && void 0 !== Op ? Op : op.radius
         })
       }
       resetCamera() {}
-      resize(DD, zD) {
-        this.preview.resize(DD, zD)
+      resize(pp, ip) {
+        this.preview.resize(pp, ip)
       }
       close() {
         this.detachControls(), this.preview.close()
       }
       apply() {
-        var DD;
-        this.preview.setPlayer(JSON.stringify(this.cosmetics), Az, null === (DD = this.emote) ? -1 : Bz(DD))
+        var pp;
+        this.preview.setPlayer(JSON.stringify(this.cosmetics), yi, null === (pp = this.emote) ? -1 : ti(pp))
       }
     }
 
-    function Oz(DD, zD) {
+    function ji(pp, ip) {
       let {
-        mobType: wD,
-        variation: pD,
-        animation: sD
-      } = zD;
-      DD.setMob(Uz(wD), null !== pD && void 0 !== pD ? pD : "", 1, Iz(sD))
+        mobType: cp,
+        variation: Op,
+        animation: op
+      } = ip;
+      pp.setMob(Ui(cp), null !== Op && void 0 !== Op ? Op : "", 1, vi(op))
     }
 
-    function Jz(DD, zD) {
+    function ki(pp, ip) {
       let {
-        mobType: wD,
-        variation: pD,
-        metaInfo: sD,
-        tamed: KD
-      } = zD;
-      DD.setPet(Uz(wD), pD, sD, KD)
+        mobType: cp,
+        variation: Op,
+        metaInfo: op,
+        tamed: Ip
+      } = ip;
+      pp.setPet(Ui(cp), Op, op, Ip)
     }
-    const Ez = {
+    const mi = {
       aimed: .533 / 1.15 * 1.1,
       ready: .16 / .85 * 1.1
     };
-    class Qz {
-      constructor(DD, zD, wD, pD) {
+    class Ri {
+      constructor(pp, ip, cp, Op) {
         this.preview = null, this.closed = !1, this.figure = null, this.shown = !1, this.order = "", this.span = {
           left: 0,
           width: 0
-        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, DD(wD.width, pD[1], pD).then((DD => {
-          if (this.closed) return void DD.close();
+        }, this.lineup = [0, 0], this.given = null, this.loaded = !1, pp(cp.width, Op[1], Op).then((pp => {
+          if (this.closed) return void pp.close();
           const {
-            style: wD
-          } = DD.canvas;
-          wD.position = "absolute", wD.top = "0", wD.visibility = "hidden", Gz(zD, DD), this.preview = DD, this.apply()
-        })).catch((DD => {
-          console.error(`${Rz} couldn't open a lineup figure`, DD)
+            style: cp
+          } = pp.canvas;
+          cp.position = "absolute", cp.top = "0", cp.visibility = "hidden", Hi(ip, pp), this.preview = pp, this.apply()
+        })).catch((pp => {
+          console.error(`${Wi} couldn't open a lineup figure`, pp)
         }))
       }
-      update(DD, zD, wD, pD, sD) {
-        this.figure = DD, this.shown = zD, this.order = wD, this.span = pD, this.lineup = sD, this.apply()
+      update(pp, ip, cp, Op, op) {
+        this.figure = pp, this.shown = ip, this.order = cp, this.span = Op, this.lineup = op, this.apply()
       }
       close() {
-        var DD;
-        this.closed = !0, null === (DD = this.preview) || void 0 === DD || DD.close(), this.preview = null
+        var pp;
+        this.closed = !0, null === (pp = this.preview) || void 0 === pp || pp.close(), this.preview = null
       }
       apply() {
         const {
-          preview: DD,
-          figure: zD,
-          lineup: wD
+          preview: pp,
+          figure: ip,
+          lineup: cp
         } = this;
-        if (null === DD || null === zD) return;
-        if (this.given !== zD) {
-          var pD;
-          this.given = zD, this.loaded = !1;
-          const wD = null === zD.lE ? 0 : null !== (pD = (0, cz.e)(zD.lE)) && void 0 !== pD ? pD : 0;
-          DD.setFigure(function(DD) {
-            return JSON.stringify(Object.fromEntries(DD.cosmetics))
-          }(zD), wD, Iz(zD.animation), zD.size), DD.untilSettled().then((() => {
-            this.given === zD && (this.loaded = !0, this.apply())
+        if (null === pp || null === ip) return;
+        if (this.given !== ip) {
+          var Op;
+          this.given = ip, this.loaded = !1;
+          const cp = null === ip.qm ? 0 : null !== (Op = (0, Ai.c)(ip.qm)) && void 0 !== Op ? Op : 0;
+          pp.setFigure(function(pp) {
+            return JSON.stringify(Object.fromEntries(pp.cosmetics))
+          }(ip), cp, vi(ip.animation), ip.size), pp.untilSettled().then((() => {
+            this.given === ip && (this.loaded = !0, this.apply())
           }))
         }
         const {
-          left: sD,
-          width: KD
+          left: op,
+          width: Ip
         } = this.span;
-        DD.resize(KD, wD[1], wD);
+        pp.resize(Ip, cp[1], cp);
         const {
-          style: rD
-        } = DD.canvas;
-        rD.left = `${sD}px`, rD.width = `${KD}px`, rD.zIndex = this.order, rD.visibility = this.shown && this.loaded ? "visible" : "hidden"
+          style: Sp
+        } = pp.canvas;
+        Sp.left = `${op}px`, Sp.width = `${Ip}px`, Sp.zIndex = this.order, Sp.visibility = this.shown && this.loaded ? "visible" : "hidden"
       }
     }
-    class Xz {
-      constructor(DD, zD) {
-        this.open = zD, this.layer = void 0, this.figures = [], this.view = {
+    class qi {
+      constructor(pp, ip) {
+        this.open = ip, this.layer = void 0, this.figures = [], this.view = {
           figures: [],
           shown: []
-        }, this.size = void 0, this.size = hz(DD), this.layer = document.createElement("div");
+        }, this.size = void 0, this.size = di(pp), this.layer = document.createElement("div");
         const {
-          style: wD
+          style: cp
         } = this.layer;
-        wD.position = "relative", wD.isolation = "isolate", wD.overflow = "hidden", wD.width = "100%", wD.height = "100%", wD.pointerEvents = "none", DD.appendChild(this.layer)
+        cp.position = "relative", cp.isolation = "isolate", cp.overflow = "hidden", cp.width = "100%", cp.height = "100%", cp.pointerEvents = "none", pp.appendChild(this.layer)
       }
-      show(DD) {
-        this.view = DD, this.place()
+      show(pp) {
+        this.view = pp, this.place()
       }
-      resize(DD, zD) {
-        this.size = [DD, zD], this.place()
+      resize(pp, ip) {
+        this.size = [pp, ip], this.place()
       }
       close() {
-        for (const DD of this.figures) DD.close();
+        for (const pp of this.figures) pp.close();
         this.figures = [], this.layer.remove()
       }
       place() {
         const {
-          figures: DD,
-          shown: zD
+          figures: pp,
+          shown: ip
         } = this.view;
-        for (const pD of this.figures.splice(DD.length)) pD.close();
+        for (const Op of this.figures.splice(pp.length)) Op.close();
         const {
-          size: wD
+          size: cp
         } = this;
-        DD.forEach(((pD, sD) => {
-          var KD;
-          const rD = function(DD, zD, wD, pD) {
-            let [sD, KD] = pD;
-            const rD = (DD + .5) * sD / zD,
-              LD = Math.min(Math.max(sD / zD, 2 * wD * KD), 2 * Math.max(rD, sD - rD));
+        pp.forEach(((Op, op) => {
+          var Ip;
+          const Sp = function(pp, ip, cp, Op) {
+            let [op, Ip] = Op;
+            const Sp = (pp + .5) * op / ip,
+              xp = Math.min(Math.max(op / ip, 2 * cp * Ip), 2 * Math.max(Sp, op - Sp));
             return {
-              left: rD - LD / 2,
-              width: LD
+              left: Sp - xp / 2,
+              width: xp
             }
-          }(sD, DD.length, function(DD) {
+          }(op, pp.length, function(pp) {
             let {
-              animation: zD,
-              size: wD
-            } = DD;
+              animation: ip,
+              size: cp
+            } = pp;
             const {
-              aimed: pD,
-              ready: sD
-            } = Ez;
-            return (Iz(zD) === gz.gunAimed ? pD : sD) * wD
-          }(pD), wD);
-          this.figures[sD] ??= new Qz(this.open, this.layer, rD, wD), this.figures[sD].update(pD, null !== (KD = zD[sD]) && void 0 !== KD && KD, function(DD, zD) {
-            return String(Math.round(1e3 * DD) + zD)
-          }(pD.size, sD), rD, wD)
+              aimed: Op,
+              ready: op
+            } = mi;
+            return (vi(ip) === Pi.gunAimed ? Op : op) * cp
+          }(Op), cp);
+          this.figures[op] ??= new Ri(this.open, this.layer, Sp, cp), this.figures[op].update(Op, null !== (Ip = ip[op]) && void 0 !== Ip && Ip, function(pp, ip) {
+            return String(Math.round(1e3 * pp) + ip)
+          }(Op.size, op), Sp, cp)
         }))
       }
     }
-    const Vz = {
-      player: kD,
-      store: mD
+    const Mi = {
+      player: np,
+      store: Fp
     };
-    class Pz {
-      constructor(DD) {
-        this.page = DD
+    class Ci {
+      constructor(pp) {
+        this.page = pp
       }
-      async openMob(DD) {
-        return new nz(await this.open(DD, yD), Oz)
+      async openMob(pp) {
+        return new ei(await this.open(pp, ap), ji)
       }
-      async openPet(DD) {
-        return new nz(await this.open(DD, yD), Jz)
+      async openPet(pp) {
+        return new ei(await this.open(pp, ap), ki)
       }
-      openMobLineup(DD) {
-        return new Xz(DD, ((DD, zD, wD) => this.page.openPreview(yD, DD, zD, wD)))
+      openMobLineup(pp) {
+        return new qi(pp, ((pp, ip, cp) => this.page.openPreview(ap, pp, ip, cp)))
       }
-      async openCharacter(DD, zD) {
-        return new Mz(await this.open(DD, Vz[zD]))
+      async openCharacter(pp, ip) {
+        return new ui(await this.open(pp, Mi[ip]))
       }
-      async open(DD, zD) {
-        const [wD, pD] = hz(DD), sD = await this.page.openPreview(zD, wD, pD);
-        return Gz(DD, sD), sD
+      async open(pp, ip) {
+        const [cp, Op] = di(pp), op = await this.page.openPreview(ip, cp, Op);
+        return Hi(pp, op), op
       }
     }
   },
-  36709: (DD, zD, wD) => {
-    wD.d(zD, {
-      A: () => ID,
-      E: () => BD,
-      F: () => hD,
-      d: () => pD,
-      h: () => sD,
-      i: () => UD,
-      k: () => GD,
-      o: () => RD,
-      p: () => nD,
-      s: () => cD,
-      t: () => gD,
-      x: () => fD
+  36939: (pp, ip, cp) => {
+    cp.d(ip, {
+      A: () => yp,
+      E: () => Up,
+      H: () => vp,
+      e: () => Op,
+      h: () => op,
+      i: () => Pp,
+      j: () => wp,
+      l: () => Dp,
+      p: () => tp,
+      t: () => Lp,
+      v: () => Yp,
+      y: () => Wp
     });
-    const pD = [{
+    const Op = [{
       numLines: 7,
       charsPerLine: 16,
       uiFontSize: 3.3,
@@ -1496,64 +1497,64 @@ export const modules = {
       ingameFontSize: 58
     }];
 
-    function sD(DD, zD) {
+    function op(pp, ip) {
       const {
-        numLines: wD,
-        charsPerLine: sD
-      } = pD[zD];
-      return MD(DD, wD, sD, !1)
+        numLines: cp,
+        charsPerLine: op
+      } = Op[ip];
+      return Hp(pp, cp, op, !1)
     }
-    const KD = 7 / 8,
-      rD = .25,
-      LD = 8;
+    const Ip = 7 / 8,
+      Sp = .25,
+      xp = 8;
 
-    function cD(DD, zD) {
+    function Lp(pp, ip) {
       return {
-        width: Math.min(DD, LD) - 2 * rD,
-        height: Math.min(zD, LD) - 2 * rD
+        width: Math.min(pp, xp) - 2 * Sp,
+        height: Math.min(ip, xp) - 2 * Sp
       }
     }
 
-    function gD(DD, zD, wD) {
-      const sD = cD(DD, zD),
+    function Yp(pp, ip, cp) {
+      const op = Lp(pp, ip),
         {
-          numLines: rD,
-          charsPerLine: LD
-        } = pD[wD];
+          numLines: Sp,
+          charsPerLine: xp
+        } = Op[cp];
       return {
-        numLines: Math.max(1, Math.floor(rD / KD * sD.height)),
-        charsPerLine: Math.max(1, Math.floor(LD * sD.width))
+        numLines: Math.max(1, Math.floor(Sp / Ip * op.height)),
+        charsPerLine: Math.max(1, Math.floor(xp * op.width))
       }
     }
 
-    function RD(DD, zD, wD, pD) {
+    function Dp(pp, ip, cp, Op) {
       const {
-        numLines: sD,
-        charsPerLine: KD
-      } = gD(wD, pD, zD);
-      return MD(DD, sD, KD, !1)
+        numLines: op,
+        charsPerLine: Ip
+      } = Yp(cp, Op, ip);
+      return Hp(pp, op, Ip, !1)
     }
-    const AD = 32e3;
+    const Ap = 32e3;
 
-    function UD(DD) {
-      return DD.slice(0, AD)
+    function Pp(pp) {
+      return pp.slice(0, Ap)
     }
-    const fD = 512e3,
-      ID = 64,
-      BD = fD;
+    const Wp = 512e3,
+      yp = 64,
+      Up = Wp;
 
-    function GD(DD, zD) {
-      const wD = Math.max(0, BD - zD),
-        pD = Math.min(fD, wD);
-      return DD.slice(0, pD)
+    function wp(pp, ip) {
+      const cp = Math.max(0, Up - ip),
+        Op = Math.min(Wp, cp);
+      return pp.slice(0, Op)
     }
-    const hD = {
+    const vp = {
       book: {
         numLines: 13,
         charsPerLine: 19,
         uiFontSize: 1.95
       },
-      Vg: {
+      Ux: {
         numLines: 1,
         charsPerLine: 19,
         uiFontSize: 1.95
@@ -1565,31 +1566,31 @@ export const modules = {
       }
     };
 
-    function nD(DD, zD) {
+    function tp(pp, ip) {
       const {
-        numLines: wD,
-        charsPerLine: pD
-      } = hD[zD];
-      return MD(DD, wD, pD, !1)
+        numLines: cp,
+        charsPerLine: Op
+      } = vp[ip];
+      return Hp(pp, cp, Op, !1)
     }
 
-    function MD(DD, zD, wD, pD, sD) {
-      (sD || pD) && (DD = DD.slice(0, null !== sD && void 0 !== sD ? sD : zD * wD));
-      const KD = DD.split("\n");
-      if (KD.length > zD && KD.splice(zD, KD.length - zD), !pD)
-        for (let rD = 0; rD < KD.length; rD++) {
-          const DD = KD[rD];
-          DD.length > wD && (KD[rD] = DD.substring(0, wD), KD.length < zD && KD.splice(rD + 1, 0, DD.substring(wD)))
+    function Hp(pp, ip, cp, Op, op) {
+      (op || Op) && (pp = pp.slice(0, null !== op && void 0 !== op ? op : ip * cp));
+      const Ip = pp.split("\n");
+      if (Ip.length > ip && Ip.splice(ip, Ip.length - ip), !Op)
+        for (let Sp = 0; Sp < Ip.length; Sp++) {
+          const pp = Ip[Sp];
+          pp.length > cp && (Ip[Sp] = pp.substring(0, cp), Ip.length < ip && Ip.splice(Sp + 1, 0, pp.substring(cp)))
         }
-      return KD.join("\n")
+      return Ip.join("\n")
     }
   },
-  50761: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
+  51187: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/builtInAnimations.anim.38e056f49512e10b7206.gz"
   },
-  50766: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
+  51194: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/previewAnimations.dat.24d2343c38c8f9b3fb85.gz"
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

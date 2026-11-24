@@ -1,700 +1,1728 @@
 export const id = 80;
 export const ids = [80];
 export const modules = {
-  4768: (DD, zD, wD) => {
-    wD.d(zD, {
-      A: () => fD,
-      D: () => UD,
-      d: () => pD,
-      f: () => rD,
-      j: () => GD,
-      l: () => BD,
-      o: () => LD,
-      r: () => sD,
-      v: () => KD,
-      w: () => ID
-    });
-    const pD = /\[([^\]]+)\]\((#[^)]+|[^)\s]+)\)/g;
-
-    function sD(DD) {
-      try {
-        return decodeURIComponent(DD.slice(1))
-      } catch {
-        return DD.slice(1)
+  4824: pp => {
+    function ip(pp) {
+      return pp instanceof Map ? pp.clear = pp.delete = pp.set = function() {
+        throw new Error("map is read-only")
+      } : pp instanceof Set && (pp.add = pp.clear = pp.delete = function() {
+        throw new Error("set is read-only")
+      }), Object.freeze(pp), Object.getOwnPropertyNames(pp).forEach((cp => {
+        const Op = pp[cp],
+          op = typeof Op;
+        "object" !== op && "function" !== op || Object.isFrozen(Op) || ip(Op)
+      })), pp
+    }
+    class cp {
+      constructor(pp) {
+        void 0 === pp.data && (pp.data = {}), this.data = pp.data, this.isMatchIgnored = !1
+      }
+      ignoreMatch() {
+        this.isMatchIgnored = !0
       }
     }
 
-    function KD(DD) {
-      return DD.replace(/`/g, "").trim().replace(/[^\w{}$-]+/g, "-").replace(/^-+|-+$/g, "")
-    }
-    const rD = new RegExp(`${/(`{1,2})(.+?)\1(?!`)|\*\*(.+?)\*\*|/.source}${pD.source}`, "g");
-
-    function LD(DD, zD) {
-      return 2 === DD.length ? zD.replace(/^ (.*) $/, "$1") : zD
+    function Op(pp) {
+      return pp.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#x27;")
     }
 
-    function cD(DD) {
-      return "" === DD.trim()
+    function op(pp) {
+      const ip = Object.create(null);
+      for (const Ip in pp) ip[Ip] = pp[Ip];
+      for (var cp = arguments.length, Op = new Array(cp > 1 ? cp - 1 : 0), op = 1; op < cp; op++) Op[op - 1] = arguments[op];
+      return Op.forEach((function(pp) {
+        for (const cp in pp) ip[cp] = pp[cp]
+      })), ip
     }
-
-    function gD(DD) {
-      const zD = [];
-      for (const wD of DD.trim().replace(/^\|/, "").replace(/\|$/, "").split("|")) zD.length > 0 && zD[zD.length - 1].endsWith("\\") ? zD[zD.length - 1] += `|${wD}` : zD.push(wD);
-      return zD.map((DD => DD.trim().replaceAll("\\|", "|")))
-    }
-    const RD = /^([ \t]*)([-*]|\d+\.)[ \t]+(.*)$/;
-
-    function AD(DD) {
-      const zD = [],
-        wD = [{
-          indent: -1,
-          items: zD
-        }];
-      let pD = null;
-      for (const sD of DD) {
-        const DD = sD.match(RD);
-        if (!DD) {
-          pD && (pD.text += ` ${sD.trim()}`);
-          continue
-        }
-        const zD = DD[1].replace(/\t/g, "  ").length;
-        for (; zD <= wD[wD.length - 1].indent;) wD.pop();
-        pD = {
-          text: DD[3].trim(),
-          children: []
-        }, wD[wD.length - 1].items.push(pD), wD.push({
-          indent: zD,
-          items: pD.children
-        })
+    const Ip = pp => !!pp.scope;
+    class Sp {
+      constructor(pp, ip) {
+        this.buffer = "", this.classPrefix = ip.classPrefix, pp.walk(this)
       }
-      return zD
-    }
-
-    function UD(DD) {
-      const zD = DD.replace(/\r\n/g, "\n").split("\n"),
-        wD = [];
-      let pD = 0;
-      for (; pD < zD.length;) {
-        const DD = zD[pD];
-        if (cD(DD)) {
-          pD++;
-          continue
-        }
-        const sD = DD.match(/^\s*```\s*(\w*)\s*$/);
-        if (sD) {
-          const DD = [];
-          for (pD++; pD < zD.length && !/^\s*```\s*$/.test(zD[pD]);) DD.push(zD[pD]), pD++;
-          pD++, wD.push({
-            kind: "code",
-            lang: sD[1] || "text",
-            code: DD.join("\n").replace(/\s+$/, "")
-          });
-          continue
-        }
-        const rD = DD.match(/^(#{1,6})\s+(.+?)\s*#*$/);
-        if (rD) {
-          const DD = rD[2].trim();
-          wD.push({
-            kind: "heading",
-            level: rD[1].length,
-            text: DD,
-            anchor: KD(DD)
-          }), pD++;
-          continue
-        }
-        if (/^\s*(-{3,}|\*{3,})\s*$/.test(DD)) {
-          wD.push({
-            kind: "rule"
-          }), pD++;
-          continue
-        }
-        if (DD.trim().startsWith("|") && pD + 1 < zD.length && /^\s*\|[\s:|-]+\|\s*$/.test(zD[pD + 1])) {
-          const sD = gD(DD),
-            KD = [];
-          for (pD += 2; pD < zD.length && zD[pD].trim().startsWith("|");) KD.push(gD(zD[pD])), pD++;
-          wD.push({
-            kind: "table",
-            header: sD,
-            rows: KD
-          });
-          continue
-        }
-        if (DD.startsWith(">")) {
-          const DD = [];
-          for (; pD < zD.length && zD[pD].startsWith(">");) DD.push(zD[pD].replace(/^>\s?/, "")), pD++;
-          wD.push({
-            kind: "quote",
-            blocks: UD(DD.join("\n"))
-          });
-          continue
-        }
-        if (RD.test(DD)) {
-          const sD = [],
-            KD = /^\s*\d+\./.test(DD);
-          for (; pD < zD.length && !cD(zD[pD]) && (RD.test(zD[pD]) || /^\s+\S/.test(zD[pD]));) sD.push(zD[pD]), pD++;
-          wD.push({
-            kind: "list",
-            ordered: KD,
-            items: AD(sD)
-          });
-          continue
-        }
-        const LD = [];
-        for (; pD < zD.length && !cD(zD[pD]) && !/^\s*```/.test(zD[pD]) && !/^#{1,6}\s/.test(zD[pD]) && !zD[pD].startsWith(">") && !RD.test(zD[pD]) && (!zD[pD].trim().startsWith("|") || 0 !== LD.length);) LD.push(zD[pD].trim()), pD++;
-        0 === LD.length && (LD.push(zD[pD].trim()), pD++), wD.push({
-          kind: "paragraph",
-          text: LD.join(" ")
-        })
+      addText(pp) {
+        this.buffer += Op(pp)
       }
-      return wD
-    }
-
-    function fD(DD) {
-      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
-      const wD = UD(DD);
-      let pD = "";
-      const sD = [],
-        KD = [],
-        rD = new Map;
-      for (const gD of wD) {
-        if ("heading" === gD.kind) {
-          var LD;
-          const DD = (null !== (LD = rD.get(gD.anchor)) && void 0 !== LD ? LD : 0) + 1;
-          rD.set(gD.anchor, DD), DD > 1 && (gD.anchor = `${gD.anchor}-${DD}`)
-        }
-        if ("heading" === gD.kind && 1 === gD.level && !pD) {
-          pD = gD.text;
-          continue
-        }
-        if ("heading" === gD.kind && gD.level <= zD) {
-          KD.push({
-            heading: gD,
-            blocks: []
-          });
-          continue
-        }
-        const DD = KD.at(-1);
-        DD ? DD.blocks.push(gD) : sD.push(gD)
-      }
-      const cD = DD => {
-        for (;
-          "rule" === (null === (zD = DD.at(-1)) || void 0 === zD ? void 0 : zD.kind);) {
-          var zD;
-          DD.pop()
-        }
-      };
-      cD(sD);
-      for (const gD of KD) cD(gD.blocks);
-      return {
-        title: pD,
-        intro: sD,
-        sections: KD
-      }
-    }
-
-    function ID(DD) {
-      return [{
-        heading: null,
-        blocks: DD.intro
-      }, ...DD.sections.map((DD => ({
-        heading: DD.heading,
-        blocks: DD.blocks
-      })))]
-    }
-
-    function BD(DD) {
-      return DD.flatMap((DD => "code" === DD.kind ? [DD] : "quote" === DD.kind ? BD(DD.blocks) : []))
-    }
-
-    function GD(DD) {
-      switch (DD.kind) {
-        case "heading":
-        case "paragraph":
-          return DD.text;
-        case "code":
-          return DD.code;
-        case "table":
-          return [DD.header, ...DD.rows].map((DD => DD.join(" "))).join(" ");
-        case "list": {
-          const zD = DD => DD.map((DD => `${DD.text} ${zD(DD.children)}`)).join(" ");
-          return zD(DD.items)
-        }
-        case "quote":
-          return DD.blocks.map(GD).join(" ");
-        case "rule":
-          return ""
-      }
-    }
-  },
-  6542: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => AD,
-      g: () => rD,
-      h: () => LD
-    });
-    wD(6534);
-    var pD = wD(58),
-      sD = wD(4768),
-      KD = wD(1096);
-    const rD = /\[([^\][\n]{1,200})\]\(([^)\s]{1,500})\)|\*\*([^*]+)\*\*|__([^_]+)__|\*([^*\s][^*]*)\*|`([^`]+)`/g;
-
-    function LD(DD, zD) {
-      return DD === zD ? DD : `${DD} (${zD})`
-    }
-
-    function cD(DD) {
-      const zD = [];
-      let wD = 0;
-      for (const pD of DD.matchAll(rD)) {
-        pD.index > wD && zD.push(DD.slice(wD, pD.index));
-        const [, sD, rD, cD, gD, RD, AD] = pD;
-        void 0 !== sD ? zD.push(LD(sD, rD)) : void 0 !== cD || void 0 !== gD ? zD.push((0, KD.jsx)("strong", {
-          children: null !== cD && void 0 !== cD ? cD : gD
-        }, pD.index)) : void 0 !== RD ? zD.push((0, KD.jsx)("em", {
-          children: RD
-        }, pD.index)) : zD.push((0, KD.jsx)("code", {
-          children: AD
-        }, pD.index)), wD = pD.index + pD[0].length
-      }
-      return wD < DD.length && zD.push(DD.slice(wD)), zD
-    }
-
-    function gD(DD, zD) {
-      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      const pD = DD.map(((DD, zD) => (0, KD.jsxs)("li", {
-        children: [cD(DD.text), DD.children.length > 0 && gD(DD.children, !1)]
-      }, zD)));
-      return zD ? (0, KD.jsx)("ol", {
-        start: wD,
-        children: pD
-      }) : (0, KD.jsx)("ul", {
-        children: pD
-      })
-    }
-
-    function RD(DD, zD) {
-      switch (DD.kind) {
-        case "heading":
-          return DD.level <= 2 ? (0, KD.jsx)("h3", {
-            children: cD(DD.text)
-          }, zD) : (0, KD.jsx)("h4", {
-            children: cD(DD.text)
-          }, zD);
-        case "paragraph":
-          return (0, KD.jsx)("p", {
-            children: cD(DD.text)
-          }, zD);
-        case "list":
-          return (0, KD.jsx)(pD.Fragment, {
-            children: gD(DD.items, DD.ordered)
-          }, zD);
-        case "quote":
-          return (0, KD.jsx)("blockquote", {
-            children: DD.blocks.map(((DD, zD) => RD(DD, zD)))
-          }, zD);
-        case "code":
-          return (0, KD.jsx)("pre", {
-            children: (0, KD.jsx)("code", {
-              children: DD.code
-            })
-          }, zD);
-        case "table":
-          return (0, KD.jsxs)("table", {
-            children: [(0, KD.jsx)("thead", {
-              children: (0, KD.jsx)("tr", {
-                children: DD.header.map(((DD, zD) => (0, KD.jsx)("th", {
-                  children: cD(DD)
-                }, zD)))
-              })
-            }), (0, KD.jsx)("tbody", {
-              children: DD.rows.map(((DD, zD) => (0, KD.jsx)("tr", {
-                children: DD.map(((DD, zD) => (0, KD.jsx)("td", {
-                  children: cD(DD)
-                }, zD)))
-              }, zD)))
-            })]
-          }, zD);
-        case "rule":
-          return (0, KD.jsx)("hr", {}, zD)
-      }
-    }
-
-    function AD(DD) {
-      let {
-        markdown: zD
-      } = DD, wD = 0;
-      return (0, KD.jsx)("div", {
-        className: "StudioAiAnswerText",
-        children: (0, sD.D)(zD).map(((DD, zD) => {
-          if ("list" !== DD.kind || !DD.ordered) return wD = 0, RD(DD, zD);
-          const sD = wD + 1;
-          return wD += DD.items.length, (0, KD.jsx)(pD.Fragment, {
-            children: gD(DD.items, !0, sD)
-          }, zD)
-        }))
-      })
-    }
-  },
-  6529: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => nD,
-      j: () => MD,
-      h: () => JD,
-      n: () => ID
-    });
-    var pD = wD(1217),
-      sD = wD(6499),
-      KD = wD(4884);
-    const rD = /\b(the prompt (says|asks|wants|tells)|the user (wants|asks|said)|my instructions(?! (?:below|above|here|in step))|the instructions (say|ask)|as instructed(?! (?:below|above|here|in step|by (?!the (?:prompt|user|system)\b))))\b/i;
-
-    function LD(DD) {
-      return (0, KD.f)(DD, rD, (zD => !/^my/i.test(zD[0]) || !/follow $/i.test(DD.slice(0, zD.index)))).length > 0
-    }
-    const cD = /\byou(?:r|'re|'ll)?\b/i,
-      gD = /^(?:[-*]\s+|\d+\.\s+)?(actually,|wait[,.!]|hmm\b|let me (think|re-?read|re-?check|reconsider)\b|let's (assume|think|re-?read|reconsider|go with)\b|i will\b|i'll (suggest|go with|pick)\b|i need to\b|i should\b|i don't have\b|since i (can|cannot|can't|don't)\b|okay,? so\b)/i,
-      RD = 2;
-
-    function AD(DD) {
-      return function(DD) {
-        const zD = [];
-        let wD = !1;
-        for (const pD of DD.split("\n")) {
-          if (/^\s*(```|~~~)/.test(pD)) {
-            wD = !wD;
-            continue
+      openNode(pp) {
+        if (!Ip(pp)) return;
+        const ip = ((pp, ip) => {
+          let {
+            prefix: cp
+          } = ip;
+          if (pp.startsWith("language:")) return pp.replace("language:", "language-");
+          if (pp.includes(".")) {
+            const ip = pp.split(".");
+            return [`${cp}${ip.shift()}`, ...ip.map(((pp, ip) => `${pp}${"_".repeat(ip+1)}`))].join(" ")
           }
-          if (wD || /^\s*>/.test(pD)) continue;
-          const DD = pD.replace(/`[^`]*`/g, "code").replace(/"[^"]*"|\u201c[^\u201d]*\u201d/g, '"quote"').trim();
-          zD.push(...(0, sD.m)(DD))
-        }
-        return zD
-      }(DD).filter((DD => LD(DD) || gD.test(DD) && !cD.test(DD)))
-    }
-    const UD = "https://oai.endpoints.kepler.ai.cloud.ovh.net/v1/chat/completions",
-      fD = [{
-        name: "Qwen3.6-27B",
-        temperature: .7,
-        reasoningEffort: "none"
-      }, {
-        name: "Qwen3.5-397B-A17B",
-        temperature: .7,
-        reasoningEffort: "none"
-      }, {
-        name: "Mistral-Small-3.2-24B-Instruct-2506",
-        temperature: .15
-      }];
-
-    function ID(DD) {
-      const zD = fD.findIndex((zD => zD.name === DD));
-      return -1 === zD ? fD.length : zD
-    }
-    const BD = 2500,
-      GD = 12e4;
-    class hD extends Error {
-      constructor(DD) {
-        super(`Studio AI chat ${DD}`), this.reason = DD
-      }
-    }
-
-    function nD(DD, zD) {
-      const wD = new AbortController,
-        pD = () => {
-          wD.abort()
-        },
-        sD = setTimeout(pD, DD);
-      return null !== zD && void 0 !== zD && zD.aborted && pD(), null === zD || void 0 === zD || zD.addEventListener("abort", pD, {
-        once: !0
-      }), {
-        signal: wD.signal,
-        clear: () => {
-          clearTimeout(sD), null === zD || void 0 === zD || zD.removeEventListener("abort", pD)
-        }
-      }
-    }
-
-    function MD(DD, zD, wD) {
-      return new Promise(((sD, KD) => {
-        const rD = new AbortController,
-          LD = () => {
-            rD.abort(), KD((0, pD.d)(wD))
-          };
-        if (null !== wD && void 0 !== wD && wD.aborted) return void LD();
-        null === wD || void 0 === wD || wD.addEventListener("abort", LD, {
-          once: !0
+          return `${cp}${pp}`
+        })(pp.scope, {
+          prefix: this.classPrefix
         });
-        const cD = fD.map((() => !1));
-        let gD = null;
-        const RD = fD.map((() => !1)),
-          AD = fD.map((() => !1));
-        fD.forEach(((pD, UD) => {
-          const ID = nD(GD, rD.signal);
-          ED(pD, [{
-            role: "user",
-            content: DD
-          }], ID.signal).then((DD => {
-            rD.signal.aborted || ("busy" === DD || "failed" === DD ? (RD[UD] = "busy" === DD, AD[UD] = !0) : null !== DD && (null === gD || UD < gD.rank) && (gD = {
-              rank: UD,
-              answer: {
-                text: DD.text,
-                model: pD.name
-              }
-            }, zD(gD.answer)))
-          }), (DD => {
-            rD.signal.aborted || (AD[UD] = !0, console.warn(`Studio AI: ${pD.name} couldn't be reached`, DD))
-          })).finally((() => {
-            ID.clear(), cD[UD] = !0, rD.signal.aborted || (() => {
-              var DD, zD;
-              const pD = null !== (DD = null === (zD = gD) || void 0 === zD ? void 0 : zD.rank) && void 0 !== DD ? DD : fD.length;
-              cD.slice(0, pD).includes(!1) || (null === wD || void 0 === wD || wD.removeEventListener("abort", LD), rD.abort(), null !== gD ? sD({
-                ...gD.answer,
-                isFinal: !AD.slice(0, gD.rank).includes(!0)
-              }) : KD(new hD(RD.includes(!0) ? "busy" : "failed")))
-            })()
-          })).catch((DD => {
-            console.error("Studio AI: showing an answer failed", DD)
-          }))
-        }))
-      }))
-    }
-
-    function OD(DD) {
-      var zD, wD;
-      return "length" === (null === DD || void 0 === DD || null === (zD = DD.choices) || void 0 === zD || null === (wD = zD[0]) || void 0 === wD ? void 0 : wD.finish_reason)
-    }
-    async function JD(DD, zD, wD) {
-      const pD = fD.find((zD => zD.name === DD));
-      if (void 0 === pD) return "failed";
-      const sD = nD(GD, wD);
-      try {
-        const DD = await ED(pD, zD, sD.signal);
-        return null !== DD && "object" === typeof DD ? DD.isCutOff ? (console.warn(`Studio AI: ${pD.name}'s answer was cut off at the token limit`), null) : {
-          text: DD.text
-        } : DD
-      } finally {
-        sD.clear()
+        this.span(ip)
+      }
+      closeNode(pp) {
+        Ip(pp) && (this.buffer += "</span>")
+      }
+      value() {
+        return this.buffer
+      }
+      span(pp) {
+        this.buffer += `<span class="${pp}">`
       }
     }
-    async function ED(DD, zD, wD) {
-      const pD = await fetch(UD, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-          model: DD.name,
-          messages: zD,
-          max_tokens: BD,
-          temperature: DD.temperature,
-          reasoning_effort: DD.reasoningEffort
-        }),
-        credentials: "omit",
-        referrerPolicy: "no-referrer",
-        signal: wD
-      });
-      if (429 === pD.status) return "busy";
-      if (!pD.ok) return console.warn(`Studio AI: ${DD.name} answered ${pD.status}`), "failed";
-      const sD = await pD.json().catch((() => null)),
-        KD = function(DD) {
-          var zD, wD, pD;
-          const sD = null === DD || void 0 === DD || null === (zD = DD.choices) || void 0 === zD || null === (wD = zD[0]) || void 0 === wD || null === (pD = wD.message) || void 0 === pD ? void 0 : pD.content;
-          if ("string" !== typeof sD) return null;
-          const KD = sD.replace(/<think>[\s\S]*?<\/think>/g, "").trim();
-          return "" === KD ? null : KD
-        }(sD);
-      return null !== KD && function(DD) {
-        const zD = AD(DD);
-        return zD.length >= RD || zD.some((DD => LD(DD)))
-      }(KD) ? (console.warn(`Studio AI: ${DD.name} thought out loud instead of answering`), "failed") : null === KD ? null : {
-        text: KD,
-        isCutOff: OD(sD)
+    const xp = function() {
+      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const ip = {
+        children: []
+      };
+      return Object.assign(ip, pp), ip
+    };
+    class Lp {
+      constructor() {
+        this.ZH = xp(), this.stack = [this.ZH]
+      }
+      get top() {
+        return this.stack[this.stack.length - 1]
+      }
+      get root() {
+        return this.ZH
+      }
+      add(pp) {
+        this.top.children.push(pp)
+      }
+      openNode(pp) {
+        const ip = xp({
+          scope: pp
+        });
+        this.add(ip), this.stack.push(ip)
+      }
+      closeNode() {
+        if (this.stack.length > 1) return this.stack.pop()
+      }
+      closeAllNodes() {
+        for (; this.closeNode(););
+      }
+      toJSON() {
+        return JSON.stringify(this.ZH, null, 4)
+      }
+      walk(pp) {
+        return this.constructor._walk(pp, this.ZH)
+      }
+      static _walk(pp, ip) {
+        return "string" === typeof ip ? pp.addText(ip) : ip.children && (pp.openNode(ip), ip.children.forEach((ip => this._walk(pp, ip))), pp.closeNode(ip)), pp
+      }
+      static _collapse(pp) {
+        "string" !== typeof pp && pp.children && (pp.children.every((pp => "string" === typeof pp)) ? pp.children = [pp.children.join("")] : pp.children.forEach((pp => {
+          Lp._collapse(pp)
+        })))
       }
     }
-  },
-  6499: (DD, zD, wD) => {
-    wD.d(zD, {
-      A: () => MD,
-      D: () => JD,
-      F: () => nD,
-      I: () => AD,
-      J: () => gD,
-      M: () => fD,
-      c: () => ID,
-      f: () => LD,
-      h: () => rD,
-      j: () => BD,
-      l: () => UD,
-      m: () => RD,
-      o: () => KD,
-      p: () => sD,
-      t: () => OD,
-      w: () => ED,
-      x: () => GD
-    });
-    var pD = wD(4884);
-    const sD = 2e3,
-      KD = 2e4;
-
-    function rD(DD) {
-      return DD.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
-    }
-
-    function LD(DD) {
-      return DD.replace(/\$/g, "\\$")
-    }
-    const cD = /[.!?](?=\s|\*|_|$)|\n|$/g;
-
-    function gD(DD, zD) {
-      cD.lastIndex = zD;
-      const wD = cD.exec(DD);
-      return wD.index + wD[0].length
-    }
-
-    function RD(DD) {
-      return (0, pD.C)(DD, /\s+/g, (0, pD.w)(".!?")).flatMap((DD => DD.split("\n")))
-    }
-
-    function AD(DD, zD) {
-      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : zD;
-      const pD = [...DD.matchAll(/[.!?](?!\d)(?=\s|$)/g)].map((DD => DD.index)),
-        sD = pD.filter((DD => DD < zD)),
-        KD = pD.find((DD => DD >= wD));
-      return [0 === sD.length ? 0 : sD.at(-1) + 1, void 0 === KD ? DD.length : KD + 1]
-    }
-
-    function UD(DD, zD) {
-      const wD = DD.charCodeAt(zD - 1);
-      return DD.slice(0, zD > 0 && zD < DD.length && wD >= 55296 && wD <= 56319 ? zD - 1 : zD)
-    }
-
-    function fD(DD, zD) {
-      return `${zD}${DD.replace(/\\/g,"\\\\").split(zD).join(`\\${zD}`)}${zD}`
-    }
-
-    function ID(DD) {
-      return DD.charAt(0).toUpperCase() + DD.slice(1)
-    }
-
-    function BD(DD) {
-      return Math.round(DD).toLocaleString("en-US")
-    }
-
-    function GD(DD) {
-      return DD.replace(/([a-z\d])([A-Z])/g, "$1 $2").toLowerCase().split(/[^a-z\d]+/).filter((DD => "" !== DD))
-    }
-    const hD = 3;
-
-    function nD(DD, zD) {
-      return GD(DD).filter((DD => DD.length >= hD && !/\d/.test(DD))).map((DD => `${DD} ${zD}`))
-    }
-
-    function MD(DD) {
-      return DD.split(/[\s:_]+/).filter((DD => "" !== DD)).map(rD).join("[`:_\\s]+")
-    }
-
-    function OD(DD) {
-      return GD(DD.split(".").pop())
-    }
-
-    function JD(DD) {
-      return DD.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim()
-    }
-
-    function ED(DD) {
-      let zD = null;
-      return () => {
-        const wD = zD ??= DD();
-        return wD.catch((() => {
-          zD === wD && (zD = null)
-        })), wD
+    class Yp extends Lp {
+      constructor(pp) {
+        super(), this.options = pp
+      }
+      addText(pp) {
+        "" !== pp && this.add(pp)
+      }
+      startScope(pp) {
+        this.openNode(pp)
+      }
+      endScope() {
+        this.closeNode()
+      }
+      __addSublanguage(pp, ip) {
+        const cp = pp.root;
+        ip && (cp.scope = `language:${ip}`), this.add(cp)
+      }
+      toHTML() {
+        return new Sp(this, this.options).value()
+      }
+      finalize() {
+        return this.closeAllNodes(), !0
       }
     }
-  },
-  4884: (DD, zD, wD) => {
-    function pD(DD) {
-      return {
-        notAfter: DD
-      }
-    }
-    wD.d(zD, {
-      C: () => AD,
-      c: () => cD,
-      f: () => gD,
-      j: () => LD,
-      l: () => pD,
-      o: () => sD,
-      s: () => KD,
-      w: () => rD,
-      z: () => RD
-    });
-    const sD = pD("\\w$."),
-      KD = pD("\\w.,");
 
-    function rD(DD) {
-      return zD => cD(zD, DD)
+    function Dp(pp) {
+      return pp ? "string" === typeof pp ? pp : pp.source : null
     }
 
-    function LD(DD) {
-      return zD => !DD.test(zD.input.slice(0, zD.index))
+    function Ap(pp) {
+      return yp("(?=", pp, ")")
     }
 
-    function cD(DD, zD) {
-      return DD.index > 0 && new RegExp(`[${zD}]`).test(DD.input[DD.index - 1])
+    function Pp(pp) {
+      return yp("(?:", pp, ")*")
     }
 
-    function gD(DD, zD, wD) {
-      return function(DD) {
-        return void 0 !== DD && "function" !== typeof DD
-      }(wD) ? function(DD, zD, wD) {
-        const pD = zD.flags.replace(/[gy]/g, ""),
-          sD = new RegExp(`[^${wD}](?:${zD.source})`, `${pD}g`),
-          KD = [],
-          rD = wD => {
-            const pD = wD.index + wD[0].length;
-            return ("" === wD[0] ? UD(DD, zD, pD) : pD) - 1
+    function Wp(pp) {
+      return yp("(?:", pp, ")?")
+    }
+
+    function yp() {
+      for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
+      return ip.map((pp => Dp(pp))).join("")
+    }
+
+    function Up() {
+      for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
+      const Op = function(pp) {
+        const ip = pp[pp.length - 1];
+        return "object" === typeof ip && ip.constructor === Object ? (pp.splice(pp.length - 1, 1), ip) : {}
+      }(ip);
+      return "(" + (Op.capture ? "" : "?:") + ip.map((pp => Dp(pp))).join("|") + ")"
+    }
+
+    function wp(pp) {
+      return new RegExp(pp.toString() + "|").exec("").length - 1
+    }
+    const vp = /\[(?:[^\\\]]|\\.)*\]|\(\??|\\([1-9][0-9]*)|\\./;
+
+    function tp(pp, ip) {
+      let {
+        joinWith: cp
+      } = ip, Op = 0;
+      return pp.map((pp => {
+        Op += 1;
+        const ip = Op;
+        let cp = Dp(pp),
+          op = "";
+        for (; cp.length > 0;) {
+          const pp = vp.exec(cp);
+          if (!pp) {
+            op += cp;
+            break
+          }
+          op += cp.substring(0, pp.index), cp = cp.substring(pp.index + pp[0].length), "\\" === pp[0][0] && pp[1] ? op += "\\" + String(Number(pp[1]) + ip) : (op += pp[0], "(" === pp[0] && Op++)
+        }
+        return op
+      })).map((pp => `(${pp})`)).join(cp)
+    }
+    const Hp = "[a-zA-Z]\\w*",
+      dp = "[a-zA-Z_]\\w*",
+      ep = "\\b\\d+(\\.\\d+)?",
+      jp = "(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)",
+      kp = "\\b(0b[01]+)",
+      mp = {
+        mW: "\\\\[\\s\\S]",
+        relevance: 0
+      },
+      Rp = {
+        scope: "string",
+        mW: "'",
+        end: "'",
+        illegal: "\\n",
+        contains: [mp]
+      },
+      qp = {
+        scope: "string",
+        mW: '"',
+        end: '"',
+        illegal: "\\n",
+        contains: [mp]
+      },
+      Mp = function(pp, ip) {
+        const cp = op({
+          scope: "comment",
+          mW: pp,
+          end: ip,
+          contains: []
+        }, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {});
+        cp.contains.push({
+          scope: "doctag",
+          mW: "[ ]*(?=(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):)",
+          end: /(TODO|FIXME|NOTE|BUG|OPTIMIZE|HACK|XXX):/,
+          excludeBegin: !0,
+          relevance: 0
+        });
+        const Op = Up("I", "a", "is", "so", "us", "to", "at", "if", "in", "it", "on", /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, /[A-Za-z]+[-][a-z]+/, /[A-Za-z][a-z]{2,}/);
+        return cp.contains.push({
+          mW: yp(/[ ]+/, "(", Op, /[.]?[:]?([.][ ]|[ ])/, "){3}")
+        }), cp
+      },
+      Cp = Mp("//", "$"),
+      Ep = Mp("/\\*", "\\*/"),
+      Xp = Mp("#", "$"),
+      lp = {
+        scope: "number",
+        mW: ep,
+        relevance: 0
+      },
+      Qp = {
+        scope: "number",
+        mW: jp,
+        relevance: 0
+      },
+      Jp = {
+        scope: "number",
+        mW: kp,
+        relevance: 0
+      },
+      Bp = {
+        scope: "regexp",
+        mW: /\/(?=[^/\n]*\/)/,
+        end: /\/[gimuy]*/,
+        contains: [mp, {
+          mW: /\[/,
+          end: /\]/,
+          relevance: 0,
+          contains: [mp]
+        }]
+      },
+      Np = {
+        scope: "title",
+        mW: Hp,
+        relevance: 0
+      },
+      Tp = {
+        scope: "title",
+        mW: dp,
+        relevance: 0
+      },
+      fp = {
+        mW: "\\.\\s*" + dp,
+        relevance: 0
+      };
+    var bp = Object.freeze({
+      __proto__: null,
+      APOS_STRING_MODE: Rp,
+      BACKSLASH_ESCAPE: mp,
+      BINARY_NUMBER_MODE: Jp,
+      BINARY_NUMBER_RE: kp,
+      COMMENT: Mp,
+      C_BLOCK_COMMENT_MODE: Ep,
+      C_LINE_COMMENT_MODE: Cp,
+      C_NUMBER_MODE: Qp,
+      C_NUMBER_RE: jp,
+      END_SAME_AS_BEGIN: function(pp) {
+        return Object.assign(pp, {
+          "on:begin": (pp, ip) => {
+            ip.data._beginMatch = pp[1]
           },
-          LD = new RegExp(`(?:${zD.source})`, `${pD}y`).exec(DD);
-        if (LD) {
-          if (KD.push(LD), !zD.global) return KD;
-          sD.lastIndex = rD(LD)
+          "on:end": (pp, ip) => {
+            ip.data._beginMatch !== pp[1] && ip.ignoreMatch()
+          }
+        })
+      },
+      HASH_COMMENT_MODE: Xp,
+      IDENT_RE: Hp,
+      MATCH_NOTHING_RE: /\b\B/,
+      METHOD_GUARD: fp,
+      NUMBER_MODE: lp,
+      NUMBER_RE: ep,
+      PHRASAL_WORDS_MODE: {
+        mW: /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
+      },
+      QUOTE_STRING_MODE: qp,
+      REGEXP_MODE: Bp,
+      RE_STARTERS_RE: "!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~",
+      SHEBANG: function() {
+        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        const ip = /^#![ ]*\//;
+        return pp.binary && (pp.mW = yp(ip, /.*\b/, pp.binary, /\b.*/)), op({
+          scope: "meta",
+          mW: ip,
+          end: /$/,
+          relevance: 0,
+          "on:begin": (pp, ip) => {
+            0 !== pp.index && ip.ignoreMatch()
+          }
+        }, pp)
+      },
+      TITLE_MODE: Np,
+      UNDERSCORE_IDENT_RE: dp,
+      UNDERSCORE_TITLE_MODE: Tp
+    });
+
+    function hp(pp, ip) {
+      "." === pp.input[pp.index - 1] && ip.ignoreMatch()
+    }
+
+    function ap(pp, ip) {
+      void 0 !== pp.className && (pp.scope = pp.className, delete pp.className)
+    }
+
+    function np(pp, ip) {
+      ip && pp.beginKeywords && (pp.mW = "\\b(" + pp.beginKeywords.split(" ").join("|") + ")(?!\\.)(?=\\b|\\s)", pp.__beforeBegin = hp, pp.keywords = pp.keywords || pp.beginKeywords, delete pp.beginKeywords, void 0 === pp.relevance && (pp.relevance = 0))
+    }
+
+    function Fp(pp, ip) {
+      Array.isArray(pp.illegal) && (pp.illegal = Up(...pp.illegal))
+    }
+
+    function gp(pp, ip) {
+      if (pp.match) {
+        if (pp.mW || pp.end) throw new Error("begin & end are not supported with match");
+        pp.mW = pp.match, delete pp.match
+      }
+    }
+
+    function Gp(pp, ip) {
+      void 0 === pp.relevance && (pp.relevance = 1)
+    }
+    const rp = (pp, ip) => {
+        if (!pp.beforeMatch) return;
+        if (pp.starts) throw new Error("beforeMatch cannot be used with starts");
+        const cp = Object.assign({}, pp);
+        Object.keys(pp).forEach((ip => {
+          delete pp[ip]
+        })), pp.keywords = cp.keywords, pp.mW = yp(cp.beforeMatch, Ap(cp.mW)), pp.starts = {
+          relevance: 0,
+          contains: [Object.assign(cp, {
+            endsParent: !0
+          })]
+        }, pp.relevance = 0, delete cp.beforeMatch
+      },
+      Zp = ["of", "and", "for", "in", "not", "or", "if", "then", "parent", "list", "value"];
+
+    function zp(pp, ip) {
+      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "keyword";
+      const Op = Object.create(null);
+      return "string" === typeof pp ? op(cp, pp.split(" ")) : Array.isArray(pp) ? op(cp, pp) : Object.keys(pp).forEach((function(cp) {
+        Object.assign(Op, zp(pp[cp], ip, cp))
+      })), Op;
+
+      function op(pp, cp) {
+        ip && (cp = cp.map((pp => pp.toLowerCase()))), cp.forEach((function(ip) {
+          const cp = ip.split("|");
+          Op[cp[0]] = [pp, sp(cp[0], cp[1])]
+        }))
+      }
+    }
+
+    function sp(pp, ip) {
+      return ip ? Number(ip) : function(pp) {
+        return Zp.includes(pp.toLowerCase())
+      }(pp) ? 0 : 1
+    }
+    const Kp = {},
+      Vp = pp => {
+        console.error(pp)
+      },
+      ii = function(pp) {
+        for (var ip = arguments.length, cp = new Array(ip > 1 ? ip - 1 : 0), Op = 1; Op < ip; Op++) cp[Op - 1] = arguments[Op];
+        console.log(`WARN: ${pp}`, ...cp)
+      },
+      ci = (pp, ip) => {
+        Kp[`${pp}/${ip}`] || (console.log(`Deprecated as of ${pp}. ${ip}`), Kp[`${pp}/${ip}`] = !0)
+      },
+      Oi = new Error;
+
+    function oi(pp, ip, cp) {
+      let {
+        key: Op
+      } = cp, op = 0;
+      const Ip = pp[Op],
+        Sp = {},
+        xp = {};
+      for (let Lp = 1; Lp <= ip.length; Lp++) xp[Lp + op] = Ip[Lp], Sp[Lp + op] = !0, op += wp(ip[Lp - 1]);
+      pp[Op] = xp, pp[Op]._emit = Sp, pp[Op]._multi = !0
+    }
+
+    function Ii(pp) {
+      ! function(pp) {
+        pp.scope && "object" === typeof pp.scope && null !== pp.scope && (pp.beginScope = pp.scope, delete pp.scope)
+      }(pp), "string" === typeof pp.beginScope && (pp.beginScope = {
+          _wrap: pp.beginScope
+        }), "string" === typeof pp.endScope && (pp.endScope = {
+          _wrap: pp.endScope
+        }),
+        function(pp) {
+          if (Array.isArray(pp.mW)) {
+            if (pp.skip || pp.excludeBegin || pp.returnBegin) throw Vp("skip, excludeBegin, returnBegin not compatible with beginScope: {}"), Oi;
+            if ("object" !== typeof pp.beginScope || null === pp.beginScope) throw Vp("beginScope must be object"), Oi;
+            oi(pp, pp.mW, {
+              key: "beginScope"
+            }), pp.mW = tp(pp.mW, {
+              joinWith: ""
+            })
+          }
+        }(pp),
+        function(pp) {
+          if (Array.isArray(pp.end)) {
+            if (pp.skip || pp.excludeEnd || pp.returnEnd) throw Vp("skip, excludeEnd, returnEnd not compatible with endScope: {}"), Oi;
+            if ("object" !== typeof pp.endScope || null === pp.endScope) throw Vp("endScope must be object"), Oi;
+            oi(pp, pp.end, {
+              key: "endScope"
+            }), pp.end = tp(pp.end, {
+              joinWith: ""
+            })
+          }
+        }(pp)
+    }
+
+    function Si(pp) {
+      function ip(ip, cp) {
+        return new RegExp(Dp(ip), "m" + (pp.case_insensitive ? "i" : "") + (pp.unicodeRegex ? "u" : "") + (cp ? "g" : ""))
+      }
+      class cp {
+        constructor() {
+          this.matchIndexes = {}, this.regexes = [], this.matchAt = 1, this.position = 0
         }
-        for (let cD = sD.exec(DD); cD; cD = sD.exec(DD)) {
-          const wD = UD(DD, zD, cD.index) - cD.index;
-          if (cD[0] = cD[0].slice(wD), cD.index += wD, KD.push(cD), !zD.global) break;
-          sD.lastIndex = rD(cD)
+        addRule(pp, ip) {
+          ip.position = this.position++, this.matchIndexes[this.matchAt] = ip, this.regexes.push([ip, pp]), this.matchAt += wp(pp) + 1
         }
-        return KD
-      }(DD, zD, wD.notAfter) : function(DD, zD, wD) {
-        const pD = new RegExp(zD.source, `${zD.flags.replace(/[gy]/g,"")}g`),
-          sD = [];
-        for (let KD = pD.exec(DD); KD; KD = pD.exec(DD))
-          if (!wD || wD(KD)) {
-            if (sD.push(KD), !zD.global) break;
-            "" === KD[0] && (pD.lastIndex = UD(DD, zD, pD.lastIndex))
-          } else pD.lastIndex = UD(DD, zD, KD.index);
-        return sD
-      }(DD, zD, wD)
+        compile() {
+          0 === this.regexes.length && (this.exec = () => null);
+          const pp = this.regexes.map((pp => pp[1]));
+          this.matcherRe = ip(tp(pp, {
+            joinWith: "|"
+          }), !0), this.lastIndex = 0
+        }
+        exec(pp) {
+          this.matcherRe.lastIndex = this.lastIndex;
+          const ip = this.matcherRe.exec(pp);
+          if (!ip) return null;
+          const cp = ip.findIndex(((pp, ip) => ip > 0 && void 0 !== pp)),
+            Op = this.matchIndexes[cp];
+          return ip.splice(0, cp), Object.assign(ip, Op)
+        }
+      }
+      class Op {
+        constructor() {
+          this.rules = [], this.multiRegexes = [], this.count = 0, this.lastIndex = 0, this.regexIndex = 0
+        }
+        getMatcher(pp) {
+          if (this.multiRegexes[pp]) return this.multiRegexes[pp];
+          const ip = new cp;
+          return this.rules.slice(pp).forEach((pp => {
+            let [cp, Op] = pp;
+            return ip.addRule(cp, Op)
+          })), ip.compile(), this.multiRegexes[pp] = ip, ip
+        }
+        resumingScanAtSamePosition() {
+          return 0 !== this.regexIndex
+        }
+        considerAll() {
+          this.regexIndex = 0
+        }
+        addRule(pp, ip) {
+          this.rules.push([pp, ip]), "mW" === ip.type && this.count++
+        }
+        exec(pp) {
+          const ip = this.getMatcher(this.regexIndex);
+          ip.lastIndex = this.lastIndex;
+          let cp = ip.exec(pp);
+          if (this.resumingScanAtSamePosition())
+            if (cp && cp.index === this.lastIndex);
+            else {
+              const ip = this.getMatcher(0);
+              ip.lastIndex = this.lastIndex + 1, cp = ip.exec(pp)
+            } return cp && (this.regexIndex += cp.position + 1, this.regexIndex === this.count && this.considerAll()), cp
+        }
+      }
+      if (pp.compilerExtensions || (pp.compilerExtensions = []), pp.contains && pp.contains.includes("self")) throw new Error("ERR: contains `self` is not supported at the top-level of a language.  See documentation.");
+      return pp.classNameAliases = op(pp.classNameAliases || {}),
+        function cp(Ip, Sp) {
+          const xp = Ip;
+          if (Ip.isCompiled) return xp;
+          [ap, gp, Ii, rp].forEach((pp => pp(Ip, Sp))), pp.compilerExtensions.forEach((pp => pp(Ip, Sp))), Ip.__beforeBegin = null, [np, Fp, Gp].forEach((pp => pp(Ip, Sp))), Ip.isCompiled = !0;
+          let Lp = null;
+          return "object" === typeof Ip.keywords && Ip.keywords.$pattern && (Ip.keywords = Object.assign({}, Ip.keywords), Lp = Ip.keywords.$pattern, delete Ip.keywords.$pattern), Lp = Lp || /\w+/, Ip.keywords && (Ip.keywords = zp(Ip.keywords, pp.case_insensitive)), xp.keywordPatternRe = ip(Lp, !0), Sp && (Ip.mW || (Ip.mW = /\B|\b/), xp.beginRe = ip(xp.mW), Ip.end || Ip.endsWithParent || (Ip.end = /\B|\b/), Ip.end && (xp.endRe = ip(xp.end)), xp.terminatorEnd = Dp(xp.end) || "", Ip.endsWithParent && Sp.terminatorEnd && (xp.terminatorEnd += (Ip.end ? "|" : "") + Sp.terminatorEnd)), Ip.illegal && (xp.illegalRe = ip(Ip.illegal)), Ip.contains || (Ip.contains = []), Ip.contains = [].concat(...Ip.contains.map((function(pp) {
+            return function(pp) {
+              pp.variants && !pp.cachedVariants && (pp.cachedVariants = pp.variants.map((function(ip) {
+                return op(pp, {
+                  variants: null
+                }, ip)
+              })));
+              if (pp.cachedVariants) return pp.cachedVariants;
+              if (xi(pp)) return op(pp, {
+                starts: pp.starts ? op(pp.starts) : null
+              });
+              if (Object.isFrozen(pp)) return op(pp);
+              return pp
+            }("self" === pp ? Ip : pp)
+          }))), Ip.contains.forEach((function(pp) {
+            cp(pp, xp)
+          })), Ip.starts && cp(Ip.starts, Sp), xp.matcher = function(pp) {
+            const ip = new Op;
+            return pp.contains.forEach((pp => ip.addRule(pp.mW, {
+              rule: pp,
+              type: "mW"
+            }))), pp.terminatorEnd && ip.addRule(pp.terminatorEnd, {
+              type: "end"
+            }), pp.illegal && ip.addRule(pp.illegal, {
+              type: "illegal"
+            }), ip
+          }(xp), xp
+        }(pp)
     }
 
-    function RD(DD, zD, wD, pD) {
-      let sD = "",
-        KD = 0;
-      for (const rD of gD(DD, zD, wD)) sD += DD.slice(KD, rD.index) + pD(rD), KD = rD.index + rD[0].length;
-      return sD + DD.slice(KD)
+    function xi(pp) {
+      return !!pp && (pp.endsWithParent || xi(pp.starts))
     }
-
-    function AD(DD, zD, wD) {
-      const pD = [];
-      let sD = 0;
-      for (const KD of gD(DD, zD, wD)) pD.push(DD.slice(sD, KD.index)), sD = KD.index + KD[0].length;
-      return [...pD, DD.slice(sD)]
+    class Li extends Error {
+      constructor(pp, ip) {
+        super(pp), this.name = "HTMLInjectionError", this.html = ip
+      }
     }
+    const Yi = Op,
+      Di = op,
+      Ai = Symbol("nomatch"),
+      Pi = function(pp) {
+        const Op = Object.create(null),
+          op = Object.create(null),
+          Ip = [];
+        let Sp = !0;
+        const xp = "Could not find the language '{}', did you forget to load/include a language module?",
+          Lp = {
+            disableAutodetect: !0,
+            name: "Plain text",
+            contains: []
+          };
+        let Dp = {
+          ignoreUnescapedHTML: !1,
+          throwUnescapedHTML: !1,
+          noHighlightRe: /^(no-?highlight)$/i,
+          languageDetectRe: /\blang(?:uage)?-([\w-]+)\b/i,
+          classPrefix: "hljs-",
+          cssSelector: "pre code",
+          languages: null,
+          __emitter: Yp
+        };
 
-    function UD(DD, zD, wD) {
-      var pD;
-      return wD + (zD.unicode && (null !== (pD = DD.codePointAt(wD)) && void 0 !== pD ? pD : 0) > 65535 ? 2 : 1)
+        function wp(pp) {
+          return Dp.noHighlightRe.test(pp)
+        }
+
+        function vp(pp, ip, cp) {
+          let Op = "",
+            op = "";
+          "object" === typeof ip ? (Op = pp, cp = ip.ignoreIllegals, op = ip.language) : (ci("10.7.0", "highlight(lang, code, ...args) has been deprecated."), ci("10.7.0", "Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277"), op = pp, Op = ip), void 0 === cp && (cp = !0);
+          const Ip = {
+            code: Op,
+            language: op
+          };
+          qp("before:highlight", Ip);
+          const Sp = Ip.result ? Ip.result : tp(Ip.language, Ip.code, cp);
+          return Sp.code = Ip.code, qp("after:highlight", Sp), Sp
+        }
+
+        function tp(pp, ip, op, Ip) {
+          const Lp = Object.create(null);
+
+          function Yp() {
+            if (!qp.keywords) return void Cp.addText(Ep);
+            let pp = 0;
+            qp.keywordPatternRe.lastIndex = 0;
+            let ip = qp.keywordPatternRe.exec(Ep),
+              cp = "";
+            for (; ip;) {
+              cp += Ep.substring(pp, ip.index);
+              const op = jp.case_insensitive ? ip[0].toLowerCase() : ip[0],
+                Ip = (Op = op, qp.keywords[Op]);
+              if (Ip) {
+                const [pp, Op] = Ip;
+                if (Cp.addText(cp), cp = "", Lp[op] = (Lp[op] || 0) + 1, Lp[op] <= 7 && (Xp += Op), pp.startsWith("_")) cp += ip[0];
+                else {
+                  const cp = jp.classNameAliases[pp] || pp;
+                  Pp(ip[0], cp)
+                }
+              } else cp += ip[0];
+              pp = qp.keywordPatternRe.lastIndex, ip = qp.keywordPatternRe.exec(Ep)
+            }
+            var Op;
+            cp += Ep.substring(pp), Cp.addText(cp)
+          }
+
+          function Ap() {
+            null != qp.subLanguage ? function() {
+              if ("" === Ep) return;
+              let pp = null;
+              if ("string" === typeof qp.subLanguage) {
+                if (!Op[qp.subLanguage]) return void Cp.addText(Ep);
+                pp = tp(qp.subLanguage, Ep, !0, Mp[qp.subLanguage]), Mp[qp.subLanguage] = pp._top
+              } else pp = Hp(Ep, qp.subLanguage.length ? qp.subLanguage : null);
+              qp.relevance > 0 && (Xp += pp.relevance), Cp.__addSublanguage(pp._emitter, pp.language)
+            }() : Yp(), Ep = ""
+          }
+
+          function Pp(pp, ip) {
+            "" !== pp && (Cp.startScope(ip), Cp.addText(pp), Cp.endScope())
+          }
+
+          function Wp(pp, ip) {
+            let cp = 1;
+            const Op = ip.length - 1;
+            for (; cp <= Op;) {
+              if (!pp._emit[cp]) {
+                cp++;
+                continue
+              }
+              const Op = jp.classNameAliases[pp[cp]] || pp[cp],
+                op = ip[cp];
+              Op ? Pp(op, Op) : (Ep = op, Yp(), Ep = ""), cp++
+            }
+          }
+
+          function yp(pp, ip) {
+            return pp.scope && "string" === typeof pp.scope && Cp.openNode(jp.classNameAliases[pp.scope] || pp.scope), pp.beginScope && (pp.beginScope._wrap ? (Pp(Ep, jp.classNameAliases[pp.beginScope._wrap] || pp.beginScope._wrap), Ep = "") : pp.beginScope._multi && (Wp(pp.beginScope, ip), Ep = "")), qp = Object.create(pp, {
+              parent: {
+                value: qp
+              }
+            }), qp
+          }
+
+          function Up(pp, ip, Op) {
+            let op = function(pp, ip) {
+              const cp = pp && pp.exec(ip);
+              return cp && 0 === cp.index
+            }(pp.endRe, Op);
+            if (op) {
+              if (pp["on:end"]) {
+                const Op = new cp(pp);
+                pp["on:end"](ip, Op), Op.isMatchIgnored && (op = !1)
+              }
+              if (op) {
+                for (; pp.endsParent && pp.parent;) pp = pp.parent;
+                return pp
+              }
+            }
+            if (pp.endsWithParent) return Up(pp.parent, ip, Op)
+          }
+
+          function wp(pp) {
+            return 0 === qp.matcher.regexIndex ? (Ep += pp[0], 1) : (Jp = !0, 0)
+          }
+
+          function vp(pp) {
+            const cp = pp[0],
+              Op = ip.substring(pp.index),
+              op = Up(qp, pp, Op);
+            if (!op) return Ai;
+            const Ip = qp;
+            qp.endScope && qp.endScope._wrap ? (Ap(), Pp(cp, qp.endScope._wrap)) : qp.endScope && qp.endScope._multi ? (Ap(), Wp(qp.endScope, pp)) : Ip.skip ? Ep += cp : (Ip.returnEnd || Ip.excludeEnd || (Ep += cp), Ap(), Ip.excludeEnd && (Ep = cp));
+            do {
+              qp.scope && Cp.closeNode(), qp.skip || qp.subLanguage || (Xp += qp.relevance), qp = qp.parent
+            } while (qp !== op.parent);
+            return op.starts && yp(op.starts, pp), Ip.returnEnd ? 0 : cp.length
+          }
+          let dp = {};
+
+          function ep(Op, Ip) {
+            const xp = Ip && Ip[0];
+            if (Ep += Op, null == xp) return Ap(), 0;
+            if ("mW" === dp.type && "end" === Ip.type && dp.index === Ip.index && "" === xp) {
+              if (Ep += ip.slice(Ip.index, Ip.index + 1), !Sp) {
+                const ip = new Error(`0 width match regex (${pp})`);
+                throw ip.languageName = pp, ip.badRule = dp.rule, ip
+              }
+              return 1
+            }
+            if (dp = Ip, "mW" === Ip.type) return function(pp) {
+              const ip = pp[0],
+                Op = pp.rule,
+                op = new cp(Op),
+                Ip = [Op.__beforeBegin, Op["on:begin"]];
+              for (const cp of Ip)
+                if (cp && (cp(pp, op), op.isMatchIgnored)) return wp(ip);
+              return Op.skip ? Ep += ip : (Op.excludeBegin && (Ep += ip), Ap(), Op.returnBegin || Op.excludeBegin || (Ep = ip)), yp(Op, pp), Op.returnBegin ? 0 : ip.length
+            }(Ip);
+            if ("illegal" === Ip.type && !op) {
+              const pp = new Error('Illegal lexeme "' + xp + '" for mode "' + (qp.scope || "<unnamed>") + '"');
+              throw pp.mode = qp, pp
+            }
+            if ("end" === Ip.type) {
+              const pp = vp(Ip);
+              if (pp !== Ai) return pp
+            }
+            if ("illegal" === Ip.type && "" === xp) return Ep += "\n", 1;
+            if (Qp > 1e5 && Qp > 3 * Ip.index) {
+              throw new Error("potential infinite loop, way more iterations than matches")
+            }
+            return Ep += xp, xp.length
+          }
+          const jp = kp(pp);
+          if (!jp) throw Vp(xp.replace("{}", pp)), new Error('Unknown language: "' + pp + '"');
+          const mp = Si(jp);
+          let Rp = "",
+            qp = Ip || mp;
+          const Mp = {},
+            Cp = new Dp.__emitter(Dp);
+          ! function() {
+            const pp = [];
+            for (let ip = qp; ip !== jp; ip = ip.parent) ip.scope && pp.unshift(ip.scope);
+            pp.forEach((pp => Cp.openNode(pp)))
+          }();
+          let Ep = "",
+            Xp = 0,
+            lp = 0,
+            Qp = 0,
+            Jp = !1;
+          try {
+            if (jp.__emitTokens) jp.__emitTokens(ip, Cp);
+            else {
+              for (qp.matcher.considerAll();;) {
+                Qp++, Jp ? Jp = !1 : qp.matcher.considerAll(), qp.matcher.lastIndex = lp;
+                const pp = qp.matcher.exec(ip);
+                if (!pp) break;
+                const cp = ep(ip.substring(lp, pp.index), pp);
+                lp = pp.index + cp
+              }
+              ep(ip.substring(lp))
+            }
+            return Cp.finalize(), Rp = Cp.toHTML(), {
+              language: pp,
+              value: Rp,
+              relevance: Xp,
+              illegal: !1,
+              _emitter: Cp,
+              _top: qp
+            }
+          } catch (Bp) {
+            if (Bp.message && Bp.message.includes("Illegal")) return {
+              language: pp,
+              value: Yi(ip),
+              illegal: !0,
+              relevance: 0,
+              _illegalBy: {
+                message: Bp.message,
+                index: lp,
+                context: ip.slice(lp - 100, lp + 100),
+                mode: Bp.mode,
+                resultSoFar: Rp
+              },
+              _emitter: Cp
+            };
+            if (Sp) return {
+              language: pp,
+              value: Yi(ip),
+              illegal: !1,
+              relevance: 0,
+              errorRaised: Bp,
+              _emitter: Cp,
+              _top: qp
+            };
+            throw Bp
+          }
+        }
+
+        function Hp(pp, ip) {
+          ip = ip || Dp.languages || Object.keys(Op);
+          const cp = function(pp) {
+              const ip = {
+                value: Yi(pp),
+                illegal: !1,
+                relevance: 0,
+                _top: Lp,
+                _emitter: new Dp.__emitter(Dp)
+              };
+              return ip._emitter.addText(pp), ip
+            }(pp),
+            op = ip.filter(kp).filter(Rp).map((ip => tp(ip, pp, !1)));
+          op.unshift(cp);
+          const Ip = op.sort(((pp, ip) => {
+              if (pp.relevance !== ip.relevance) return ip.relevance - pp.relevance;
+              if (pp.language && ip.language) {
+                if (kp(pp.language).supersetOf === ip.language) return 1;
+                if (kp(ip.language).supersetOf === pp.language) return -1
+              }
+              return 0
+            })),
+            [Sp, xp] = Ip,
+            Yp = Sp;
+          return Yp.secondBest = xp, Yp
+        }
+
+        function dp(pp) {
+          let ip = null;
+          const cp = function(pp) {
+            let ip = pp.className + " ";
+            ip += pp.parentNode ? pp.parentNode.className : "";
+            const cp = Dp.languageDetectRe.exec(ip);
+            if (cp) {
+              const ip = kp(cp[1]);
+              return ip || (ii(xp.replace("{}", cp[1])), ii("Falling back to no-highlight mode for this block.", pp)), ip ? cp[1] : "no-highlight"
+            }
+            return ip.split(/\s+/).find((pp => wp(pp) || kp(pp)))
+          }(pp);
+          if (wp(cp)) return;
+          if (qp("before:highlightElement", {
+              el: pp,
+              language: cp
+            }), pp.dataset.highlighted) return void console.log("Element previously highlighted. To highlight again, first unset `dataset.highlighted`.", pp);
+          if (pp.children.length > 0 && (Dp.ignoreUnescapedHTML || (console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk."), console.warn("https://github.com/highlightjs/highlight.js/wiki/security"), console.warn("The element with unescaped HTML:"), console.warn(pp)), Dp.throwUnescapedHTML)) {
+            throw new Li("One of your code blocks includes unescaped HTML.", pp.innerHTML)
+          }
+          ip = pp;
+          const Op = ip.textContent,
+            Ip = cp ? vp(Op, {
+              language: cp,
+              ignoreIllegals: !0
+            }) : Hp(Op);
+          pp.innerHTML = Ip.value, pp.dataset.highlighted = "yes",
+            function(pp, ip, cp) {
+              const Op = ip && op[ip] || cp;
+              pp.classList.add("hljs"), pp.classList.add(`language-${Op}`)
+            }(pp, cp, Ip.language), pp.result = {
+              language: Ip.language,
+              re: Ip.relevance,
+              relevance: Ip.relevance
+            }, Ip.secondBest && (pp.secondBest = {
+              language: Ip.secondBest.language,
+              relevance: Ip.secondBest.relevance
+            }), qp("after:highlightElement", {
+              el: pp,
+              result: Ip,
+              text: Op
+            })
+        }
+        let ep = !1;
+
+        function jp() {
+          if ("loading" === document.readyState) return ep || window.addEventListener("DOMContentLoaded", (function() {
+            jp()
+          }), !1), void(ep = !0);
+          document.querySelectorAll(Dp.cssSelector).forEach(dp)
+        }
+
+        function kp(pp) {
+          return pp = (pp || "").toLowerCase(), Op[pp] || Op[op[pp]]
+        }
+
+        function mp(pp, ip) {
+          let {
+            languageName: cp
+          } = ip;
+          "string" === typeof pp && (pp = [pp]), pp.forEach((pp => {
+            op[pp.toLowerCase()] = cp
+          }))
+        }
+
+        function Rp(pp) {
+          const ip = kp(pp);
+          return ip && !ip.disableAutodetect
+        }
+
+        function qp(pp, ip) {
+          const cp = pp;
+          Ip.forEach((function(pp) {
+            pp[cp] && pp[cp](ip)
+          }))
+        }
+        Object.assign(pp, {
+          highlight: vp,
+          highlightAuto: Hp,
+          highlightAll: jp,
+          highlightElement: dp,
+          highlightBlock: function(pp) {
+            return ci("10.7.0", "highlightBlock will be removed entirely in v12.0"), ci("10.7.0", "Please use highlightElement now."), dp(pp)
+          },
+          configure: function(pp) {
+            Dp = Di(Dp, pp)
+          },
+          initHighlighting: () => {
+            jp(), ci("10.6.0", "initHighlighting() deprecated.  Use highlightAll() now.")
+          },
+          initHighlightingOnLoad: function() {
+            jp(), ci("10.6.0", "initHighlightingOnLoad() deprecated.  Use highlightAll() now.")
+          },
+          registerLanguage: function(ip, cp) {
+            let op = null;
+            try {
+              op = cp(pp)
+            } catch (Ip) {
+              if (Vp("Language definition for '{}' could not be registered.".replace("{}", ip)), !Sp) throw Ip;
+              Vp(Ip), op = Lp
+            }
+            op.name || (op.name = ip), Op[ip] = op, op.rawDefinition = cp.bind(null, pp), op.aliases && mp(op.aliases, {
+              languageName: ip
+            })
+          },
+          unregisterLanguage: function(pp) {
+            delete Op[pp];
+            for (const ip of Object.keys(op)) op[ip] === pp && delete op[ip]
+          },
+          listLanguages: function() {
+            return Object.keys(Op)
+          },
+          getLanguage: kp,
+          registerAliases: mp,
+          autoDetection: Rp,
+          inherit: Di,
+          addPlugin: function(pp) {
+            ! function(pp) {
+              pp["before:highlightBlock"] && !pp["before:highlightElement"] && (pp["before:highlightElement"] = ip => {
+                pp["before:highlightBlock"](Object.assign({
+                  block: ip.el
+                }, ip))
+              }), pp["after:highlightBlock"] && !pp["after:highlightElement"] && (pp["after:highlightElement"] = ip => {
+                pp["after:highlightBlock"](Object.assign({
+                  block: ip.el
+                }, ip))
+              })
+            }(pp), Ip.push(pp)
+          },
+          removePlugin: function(pp) {
+            const ip = Ip.indexOf(pp); - 1 !== ip && Ip.splice(ip, 1)
+          }
+        }), pp.debugMode = function() {
+          Sp = !1
+        }, pp.safeMode = function() {
+          Sp = !0
+        }, pp.versionString = "11.11.1", pp.regex = {
+          concat: yp,
+          lookahead: Ap,
+          either: Up,
+          optional: Wp,
+          anyNumberOfTimes: Pp
+        };
+        for (const cp in bp) "object" === typeof bp[cp] && ip(bp[cp]);
+        return Object.assign(pp, bp), pp
+      },
+      Wi = Pi({});
+    Wi.newInstance = () => Pi({}), pp.exports = Wi, Wi.HighlightJS = Wi, Wi.default = Wi
+  },
+  4819: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Op
+    });
+    const Op = cp(4824)
+  },
+  4831: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Ap
+    });
+    const Op = "[A-Za-z$_][0-9A-Za-z$_]*",
+      op = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      Ip = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      Sp = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      xp = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      Lp = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      Yp = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      Dp = [].concat(Lp, Sp, xp);
+
+    function Ap(pp) {
+      const ip = pp.regex,
+        cp = Op,
+        Ap = "<>",
+        Pp = "</>",
+        Wp = {
+          mW: /<[A-Za-z0-9\\._:-]+/,
+          end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
+          isTrulyOpeningTag: (pp, ip) => {
+            const cp = pp[0].length + pp.index,
+              Op = pp.input[cp];
+            if ("<" === Op || "," === Op) return void ip.ignoreMatch();
+            let op;
+            ">" === Op && (((pp, ip) => {
+              let {
+                after: cp
+              } = ip;
+              const Op = "</" + pp[0].slice(1);
+              return -1 !== pp.input.indexOf(Op, cp)
+            })(pp, {
+              after: cp
+            }) || ip.ignoreMatch());
+            const Ip = pp.input.substring(cp);
+            ((op = Ip.match(/^\s*=/)) || (op = Ip.match(/^\s+extends\s+/)) && 0 === op.index) && ip.ignoreMatch()
+          }
+        },
+        yp = {
+          $pattern: Op,
+          keyword: op,
+          literal: Ip,
+          built_in: Dp,
+          "variable.language": Yp
+        },
+        Up = "[0-9](_?[0-9])*",
+        wp = `\\.(${Up})`,
+        vp = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        tp = {
+          className: "number",
+          variants: [{
+            mW: `(\\b(${vp})((${wp})|\\.)?|(${wp}))[eE][+-]?(${Up})\\b`
+          }, {
+            mW: `\\b(${vp})\\b((${wp})\\b|\\.)?|(${wp})\\b`
+          }, {
+            mW: "\\b(0|[1-9](_?[0-9])*)n\\b"
+          }, {
+            mW: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+          }, {
+            mW: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+          }, {
+            mW: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+          }, {
+            mW: "\\b0[0-7]+n?\\b"
+          }],
+          relevance: 0
+        },
+        Hp = {
+          className: "subst",
+          mW: "\\$\\{",
+          end: "\\}",
+          keywords: yp,
+          contains: []
+        },
+        dp = {
+          mW: ".?html`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [pp.BACKSLASH_ESCAPE, Hp],
+            subLanguage: "xml"
+          }
+        },
+        ep = {
+          mW: ".?css`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [pp.BACKSLASH_ESCAPE, Hp],
+            subLanguage: "css"
+          }
+        },
+        jp = {
+          mW: ".?gql`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [pp.BACKSLASH_ESCAPE, Hp],
+            subLanguage: "graphql"
+          }
+        },
+        kp = {
+          className: "string",
+          mW: "`",
+          end: "`",
+          contains: [pp.BACKSLASH_ESCAPE, Hp]
+        },
+        mp = {
+          className: "comment",
+          variants: [pp.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+            relevance: 0,
+            contains: [{
+              mW: "(?=@[A-Za-z]+)",
+              relevance: 0,
+              contains: [{
+                className: "doctag",
+                mW: "@[A-Za-z]+"
+              }, {
+                className: "type",
+                mW: "\\{",
+                end: "\\}",
+                excludeEnd: !0,
+                excludeBegin: !0,
+                relevance: 0
+              }, {
+                className: "variable",
+                mW: cp + "(?=\\s*(-)|$)",
+                endsParent: !0,
+                relevance: 0
+              }, {
+                mW: /(?=[^\n])\s/,
+                relevance: 0
+              }]
+            }]
+          }), pp.C_BLOCK_COMMENT_MODE, pp.C_LINE_COMMENT_MODE]
+        },
+        Rp = [pp.APOS_STRING_MODE, pp.QUOTE_STRING_MODE, dp, ep, jp, kp, {
+          match: /\$\d+/
+        }, tp];
+      Hp.contains = Rp.concat({
+        mW: /\{/,
+        end: /\}/,
+        keywords: yp,
+        contains: ["self"].concat(Rp)
+      });
+      const qp = [].concat(mp, Hp.contains),
+        Mp = qp.concat([{
+          mW: /(\s*)\(/,
+          end: /\)/,
+          keywords: yp,
+          contains: ["self"].concat(qp)
+        }]),
+        Cp = {
+          className: "params",
+          mW: /(\s*)\(/,
+          end: /\)/,
+          excludeBegin: !0,
+          excludeEnd: !0,
+          keywords: yp,
+          contains: Mp
+        },
+        Ep = {
+          variants: [{
+            match: [/class/, /\s+/, cp, /\s+/, /extends/, /\s+/, ip.concat(cp, "(", ip.concat(/\./, cp), ")*")],
+            scope: {
+              1: "keyword",
+              3: "title.class",
+              5: "keyword",
+              7: "title.class.inherited"
+            }
+          }, {
+            match: [/class/, /\s+/, cp],
+            scope: {
+              1: "keyword",
+              3: "title.class"
+            }
+          }]
+        },
+        Xp = {
+          relevance: 0,
+          match: ip.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          className: "title.class",
+          keywords: {
+            _: [...Sp, ...xp]
+          }
+        },
+        lp = {
+          variants: [{
+            match: [/function/, /\s+/, cp, /(?=\s*\()/]
+          }, {
+            match: [/function/, /\s*(?=\()/]
+          }],
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          label: "func.def",
+          contains: [Cp],
+          illegal: /%/
+        };
+      const Qp = {
+        match: ip.concat(/\b/, (Jp = [...Lp, "super", "import"].map((pp => `${pp}\\s*\\(`)), ip.concat("(?!", Jp.join("|"), ")")), cp, ip.lookahead(/\s*\(/)),
+        className: "title.function",
+        relevance: 0
+      };
+      var Jp;
+      const Bp = {
+          mW: ip.concat(/\./, ip.lookahead(ip.concat(cp, /(?![0-9A-Za-z$_(])/))),
+          end: cp,
+          excludeBegin: !0,
+          keywords: "prototype",
+          className: "property",
+          relevance: 0
+        },
+        Np = {
+          match: [/get|set/, /\s+/, cp, /(?=\()/],
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          contains: [{
+            mW: /\(\)/
+          }, Cp]
+        },
+        Tp = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + pp.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        fp = {
+          match: [/const|var|let/, /\s+/, cp, /\s*/, /=\s*/, /(async\s*)?/, ip.lookahead(Tp)],
+          keywords: "async",
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          contains: [Cp]
+        };
+      return {
+        name: "JavaScript",
+        aliases: ["js", "jsx", "mjs", "cjs"],
+        keywords: yp,
+        exports: {
+          PARAMS_CONTAINS: Mp,
+          CLASS_REFERENCE: Xp
+        },
+        illegal: /#(?![$_A-z])/,
+        contains: [pp.SHEBANG({
+          label: "shebang",
+          binary: "node",
+          relevance: 5
+        }), {
+          label: "use_strict",
+          className: "meta",
+          relevance: 10,
+          mW: /^\s*['"]use (strict|asm)['"]/
+        }, pp.APOS_STRING_MODE, pp.QUOTE_STRING_MODE, dp, ep, jp, kp, mp, {
+          match: /\$\d+/
+        }, tp, Xp, {
+          scope: "attr",
+          match: cp + ip.lookahead(":"),
+          relevance: 0
+        }, fp, {
+          mW: "(" + pp.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+          keywords: "return throw case",
+          relevance: 0,
+          contains: [mp, pp.REGEXP_MODE, {
+            className: "function",
+            mW: Tp,
+            returnBegin: !0,
+            end: "\\s*=>",
+            contains: [{
+              className: "params",
+              variants: [{
+                mW: pp.UNDERSCORE_IDENT_RE,
+                relevance: 0
+              }, {
+                className: null,
+                mW: /\(\s*\)/,
+                skip: !0
+              }, {
+                mW: /(\s*)\(/,
+                end: /\)/,
+                excludeBegin: !0,
+                excludeEnd: !0,
+                keywords: yp,
+                contains: Mp
+              }]
+            }]
+          }, {
+            mW: /,/,
+            relevance: 0
+          }, {
+            match: /\s+/,
+            relevance: 0
+          }, {
+            variants: [{
+              mW: Ap,
+              end: Pp
+            }, {
+              match: /<[A-Za-z0-9\\._:-]+\s*\/>/
+            }, {
+              mW: Wp.mW,
+              "on:begin": Wp.isTrulyOpeningTag,
+              end: Wp.end
+            }],
+            subLanguage: "xml",
+            contains: [{
+              mW: Wp.mW,
+              end: Wp.end,
+              skip: !0,
+              contains: ["self"]
+            }]
+          }]
+        }, lp, {
+          beginKeywords: "while if switch catch for"
+        }, {
+          mW: "\\b(?!function)" + pp.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          returnBegin: !0,
+          label: "func.def",
+          contains: [Cp, pp.inherit(pp.TITLE_MODE, {
+            mW: cp,
+            className: "title.function"
+          })]
+        }, {
+          match: /\.\.\./,
+          relevance: 0
+        }, Bp, {
+          match: "\\$" + cp,
+          relevance: 0
+        }, {
+          match: [/\bconstructor(?=\s*\()/],
+          className: {
+            1: "title.function"
+          },
+          contains: [Cp]
+        }, Qp, {
+          relevance: 0,
+          match: /\b[A-Z][A-Z_0-9]+\b/,
+          className: "variable.constant"
+        }, Ep, Np, {
+          match: /\$[(.]/
+        }]
+      }
     }
   },
-  6534: () => {}
+  4838: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Pp
+    });
+    const Op = "[A-Za-z$_][0-9A-Za-z$_]*",
+      op = ["as", "in", "of", "if", "for", "while", "finally", "var", "new", "function", "do", "return", "void", "else", "break", "catch", "instanceof", "with", "throw", "case", "default", "try", "switch", "continue", "typeof", "delete", "let", "yield", "const", "class", "debugger", "async", "await", "static", "import", "from", "export", "extends", "using"],
+      Ip = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+      Sp = ["Object", "Function", "Boolean", "Symbol", "Math", "Date", "Number", "BigInt", "String", "RegExp", "Array", "Float32Array", "Float64Array", "Int8Array", "Uint8Array", "Uint8ClampedArray", "Int16Array", "Int32Array", "Uint16Array", "Uint32Array", "BigInt64Array", "BigUint64Array", "Set", "Map", "WeakSet", "WeakMap", "ArrayBuffer", "SharedArrayBuffer", "Atomics", "DataView", "JSON", "Promise", "Generator", "GeneratorFunction", "AsyncFunction", "Reflect", "Proxy", "Intl", "WebAssembly"],
+      xp = ["Error", "EvalError", "InternalError", "RangeError", "ReferenceError", "SyntaxError", "TypeError", "URIError"],
+      Lp = ["setInterval", "setTimeout", "clearInterval", "clearTimeout", "require", "exports", "eval", "isFinite", "isNaN", "parseFloat", "parseInt", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "unescape"],
+      Yp = ["arguments", "this", "super", "console", "window", "document", "localStorage", "sessionStorage", "module", "global"],
+      Dp = [].concat(Lp, Sp, xp);
+
+    function Ap(pp) {
+      const ip = pp.regex,
+        cp = Op,
+        Ap = "<>",
+        Pp = "</>",
+        Wp = {
+          mW: /<[A-Za-z0-9\\._:-]+/,
+          end: /\/[A-Za-z0-9\\._:-]+>|\/>/,
+          isTrulyOpeningTag: (pp, ip) => {
+            const cp = pp[0].length + pp.index,
+              Op = pp.input[cp];
+            if ("<" === Op || "," === Op) return void ip.ignoreMatch();
+            let op;
+            ">" === Op && (((pp, ip) => {
+              let {
+                after: cp
+              } = ip;
+              const Op = "</" + pp[0].slice(1);
+              return -1 !== pp.input.indexOf(Op, cp)
+            })(pp, {
+              after: cp
+            }) || ip.ignoreMatch());
+            const Ip = pp.input.substring(cp);
+            ((op = Ip.match(/^\s*=/)) || (op = Ip.match(/^\s+extends\s+/)) && 0 === op.index) && ip.ignoreMatch()
+          }
+        },
+        yp = {
+          $pattern: Op,
+          keyword: op,
+          literal: Ip,
+          built_in: Dp,
+          "variable.language": Yp
+        },
+        Up = "[0-9](_?[0-9])*",
+        wp = `\\.(${Up})`,
+        vp = "0|[1-9](_?[0-9])*|0[0-7]*[89][0-9]*",
+        tp = {
+          className: "number",
+          variants: [{
+            mW: `(\\b(${vp})((${wp})|\\.)?|(${wp}))[eE][+-]?(${Up})\\b`
+          }, {
+            mW: `\\b(${vp})\\b((${wp})\\b|\\.)?|(${wp})\\b`
+          }, {
+            mW: "\\b(0|[1-9](_?[0-9])*)n\\b"
+          }, {
+            mW: "\\b0[xX][0-9a-fA-F](_?[0-9a-fA-F])*n?\\b"
+          }, {
+            mW: "\\b0[bB][0-1](_?[0-1])*n?\\b"
+          }, {
+            mW: "\\b0[oO][0-7](_?[0-7])*n?\\b"
+          }, {
+            mW: "\\b0[0-7]+n?\\b"
+          }],
+          relevance: 0
+        },
+        Hp = {
+          className: "subst",
+          mW: "\\$\\{",
+          end: "\\}",
+          keywords: yp,
+          contains: []
+        },
+        dp = {
+          mW: ".?html`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [pp.BACKSLASH_ESCAPE, Hp],
+            subLanguage: "xml"
+          }
+        },
+        ep = {
+          mW: ".?css`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [pp.BACKSLASH_ESCAPE, Hp],
+            subLanguage: "css"
+          }
+        },
+        jp = {
+          mW: ".?gql`",
+          end: "",
+          starts: {
+            end: "`",
+            returnEnd: !1,
+            contains: [pp.BACKSLASH_ESCAPE, Hp],
+            subLanguage: "graphql"
+          }
+        },
+        kp = {
+          className: "string",
+          mW: "`",
+          end: "`",
+          contains: [pp.BACKSLASH_ESCAPE, Hp]
+        },
+        mp = {
+          className: "comment",
+          variants: [pp.COMMENT(/\/\*\*(?!\/)/, "\\*/", {
+            relevance: 0,
+            contains: [{
+              mW: "(?=@[A-Za-z]+)",
+              relevance: 0,
+              contains: [{
+                className: "doctag",
+                mW: "@[A-Za-z]+"
+              }, {
+                className: "type",
+                mW: "\\{",
+                end: "\\}",
+                excludeEnd: !0,
+                excludeBegin: !0,
+                relevance: 0
+              }, {
+                className: "variable",
+                mW: cp + "(?=\\s*(-)|$)",
+                endsParent: !0,
+                relevance: 0
+              }, {
+                mW: /(?=[^\n])\s/,
+                relevance: 0
+              }]
+            }]
+          }), pp.C_BLOCK_COMMENT_MODE, pp.C_LINE_COMMENT_MODE]
+        },
+        Rp = [pp.APOS_STRING_MODE, pp.QUOTE_STRING_MODE, dp, ep, jp, kp, {
+          match: /\$\d+/
+        }, tp];
+      Hp.contains = Rp.concat({
+        mW: /\{/,
+        end: /\}/,
+        keywords: yp,
+        contains: ["self"].concat(Rp)
+      });
+      const qp = [].concat(mp, Hp.contains),
+        Mp = qp.concat([{
+          mW: /(\s*)\(/,
+          end: /\)/,
+          keywords: yp,
+          contains: ["self"].concat(qp)
+        }]),
+        Cp = {
+          className: "params",
+          mW: /(\s*)\(/,
+          end: /\)/,
+          excludeBegin: !0,
+          excludeEnd: !0,
+          keywords: yp,
+          contains: Mp
+        },
+        Ep = {
+          variants: [{
+            match: [/class/, /\s+/, cp, /\s+/, /extends/, /\s+/, ip.concat(cp, "(", ip.concat(/\./, cp), ")*")],
+            scope: {
+              1: "keyword",
+              3: "title.class",
+              5: "keyword",
+              7: "title.class.inherited"
+            }
+          }, {
+            match: [/class/, /\s+/, cp],
+            scope: {
+              1: "keyword",
+              3: "title.class"
+            }
+          }]
+        },
+        Xp = {
+          relevance: 0,
+          match: ip.either(/\bJSON/, /\b[A-Z][a-z]+([A-Z][a-z]*|\d)*/, /\b[A-Z]{2,}([A-Z][a-z]+|\d)+([A-Z][a-z]*)*/, /\b[A-Z]{2,}[a-z]+([A-Z][a-z]+|\d)*([A-Z][a-z]*)*/),
+          className: "title.class",
+          keywords: {
+            _: [...Sp, ...xp]
+          }
+        },
+        lp = {
+          variants: [{
+            match: [/function/, /\s+/, cp, /(?=\s*\()/]
+          }, {
+            match: [/function/, /\s*(?=\()/]
+          }],
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          label: "func.def",
+          contains: [Cp],
+          illegal: /%/
+        };
+      const Qp = {
+        match: ip.concat(/\b/, (Jp = [...Lp, "super", "import"].map((pp => `${pp}\\s*\\(`)), ip.concat("(?!", Jp.join("|"), ")")), cp, ip.lookahead(/\s*\(/)),
+        className: "title.function",
+        relevance: 0
+      };
+      var Jp;
+      const Bp = {
+          mW: ip.concat(/\./, ip.lookahead(ip.concat(cp, /(?![0-9A-Za-z$_(])/))),
+          end: cp,
+          excludeBegin: !0,
+          keywords: "prototype",
+          className: "property",
+          relevance: 0
+        },
+        Np = {
+          match: [/get|set/, /\s+/, cp, /(?=\()/],
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          contains: [{
+            mW: /\(\)/
+          }, Cp]
+        },
+        Tp = "(\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)|" + pp.UNDERSCORE_IDENT_RE + ")\\s*=>",
+        fp = {
+          match: [/const|var|let/, /\s+/, cp, /\s*/, /=\s*/, /(async\s*)?/, ip.lookahead(Tp)],
+          keywords: "async",
+          className: {
+            1: "keyword",
+            3: "title.function"
+          },
+          contains: [Cp]
+        };
+      return {
+        name: "JavaScript",
+        aliases: ["js", "jsx", "mjs", "cjs"],
+        keywords: yp,
+        exports: {
+          PARAMS_CONTAINS: Mp,
+          CLASS_REFERENCE: Xp
+        },
+        illegal: /#(?![$_A-z])/,
+        contains: [pp.SHEBANG({
+          label: "shebang",
+          binary: "node",
+          relevance: 5
+        }), {
+          label: "use_strict",
+          className: "meta",
+          relevance: 10,
+          mW: /^\s*['"]use (strict|asm)['"]/
+        }, pp.APOS_STRING_MODE, pp.QUOTE_STRING_MODE, dp, ep, jp, kp, mp, {
+          match: /\$\d+/
+        }, tp, Xp, {
+          scope: "attr",
+          match: cp + ip.lookahead(":"),
+          relevance: 0
+        }, fp, {
+          mW: "(" + pp.RE_STARTERS_RE + "|\\b(case|return|throw)\\b)\\s*",
+          keywords: "return throw case",
+          relevance: 0,
+          contains: [mp, pp.REGEXP_MODE, {
+            className: "function",
+            mW: Tp,
+            returnBegin: !0,
+            end: "\\s*=>",
+            contains: [{
+              className: "params",
+              variants: [{
+                mW: pp.UNDERSCORE_IDENT_RE,
+                relevance: 0
+              }, {
+                className: null,
+                mW: /\(\s*\)/,
+                skip: !0
+              }, {
+                mW: /(\s*)\(/,
+                end: /\)/,
+                excludeBegin: !0,
+                excludeEnd: !0,
+                keywords: yp,
+                contains: Mp
+              }]
+            }]
+          }, {
+            mW: /,/,
+            relevance: 0
+          }, {
+            match: /\s+/,
+            relevance: 0
+          }, {
+            variants: [{
+              mW: Ap,
+              end: Pp
+            }, {
+              match: /<[A-Za-z0-9\\._:-]+\s*\/>/
+            }, {
+              mW: Wp.mW,
+              "on:begin": Wp.isTrulyOpeningTag,
+              end: Wp.end
+            }],
+            subLanguage: "xml",
+            contains: [{
+              mW: Wp.mW,
+              end: Wp.end,
+              skip: !0,
+              contains: ["self"]
+            }]
+          }]
+        }, lp, {
+          beginKeywords: "while if switch catch for"
+        }, {
+          mW: "\\b(?!function)" + pp.UNDERSCORE_IDENT_RE + "\\([^()]*(\\([^()]*(\\([^()]*\\)[^()]*)*\\)[^()]*)*\\)\\s*\\{",
+          returnBegin: !0,
+          label: "func.def",
+          contains: [Cp, pp.inherit(pp.TITLE_MODE, {
+            mW: cp,
+            className: "title.function"
+          })]
+        }, {
+          match: /\.\.\./,
+          relevance: 0
+        }, Bp, {
+          match: "\\$" + cp,
+          relevance: 0
+        }, {
+          match: [/\bconstructor(?=\s*\()/],
+          className: {
+            1: "title.function"
+          },
+          contains: [Cp]
+        }, Qp, {
+          relevance: 0,
+          match: /\b[A-Z][A-Z_0-9]+\b/,
+          className: "variable.constant"
+        }, Ep, Np, {
+          match: /\$[(.]/
+        }]
+      }
+    }
+
+    function Pp(pp) {
+      const ip = pp.regex,
+        cp = Ap(pp),
+        Sp = Op,
+        xp = ["any", "void", "number", "boolean", "string", "object", "never", "symbol", "bigint", "unknown"],
+        Lp = {
+          mW: [/namespace/, /\s+/, pp.IDENT_RE],
+          beginScope: {
+            1: "keyword",
+            3: "title.class"
+          }
+        },
+        Pp = {
+          beginKeywords: "interface",
+          end: /\{/,
+          excludeEnd: !0,
+          keywords: {
+            keyword: "interface extends",
+            built_in: xp
+          },
+          contains: [cp.exports.CLASS_REFERENCE]
+        },
+        Wp = {
+          $pattern: Op,
+          keyword: op.concat(["type", "interface", "public", "private", "protected", "implements", "declare", "abstract", "readonly", "enum", "override", "satisfies"]),
+          literal: Ip,
+          built_in: Dp.concat(xp),
+          "variable.language": Yp
+        },
+        yp = {
+          className: "meta",
+          mW: "@" + Sp
+        },
+        Up = (pp, ip, cp) => {
+          const Op = pp.contains.findIndex((pp => pp.label === ip));
+          if (-1 === Op) throw new Error("can not find mode to replace");
+          pp.contains.splice(Op, 1, cp)
+        };
+      Object.assign(cp.keywords, Wp), cp.exports.PARAMS_CONTAINS.push(yp);
+      const wp = cp.contains.find((pp => "attr" === pp.scope)),
+        vp = Object.assign({}, wp, {
+          match: ip.concat(Sp, ip.lookahead(/\s*\?:/))
+        });
+      cp.exports.PARAMS_CONTAINS.push([cp.exports.CLASS_REFERENCE, wp, vp]), cp.contains = cp.contains.concat([yp, Lp, Pp, vp]), Up(cp, "shebang", pp.SHEBANG()), Up(cp, "use_strict", {
+        className: "meta",
+        relevance: 10,
+        mW: /^\s*['"]use strict['"]/
+      });
+      return cp.contains.find((pp => "func.def" === pp.label)).relevance = 0, Object.assign(cp, {
+        name: "TypeScript",
+        aliases: ["ts", "tsx", "mts", "cts"]
+      }), cp
+    }
+  }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

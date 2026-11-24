@@ -1,75 +1,75 @@
-export const id = 49;
-export const ids = [49];
+export const id = 50;
+export const ids = [50];
 export const modules = {
-  50786: (DD, zD, wD) => {
-    wD.d(zD, {
-      startRenderLite: () => VD
+  51208: (pp, ip, cp) => {
+    cp.d(ip, {
+      startRenderLite: () => Rp
     });
-    var pD = wD(2861),
-      sD = wD(638),
-      KD = wD(125),
-      rD = wD(4820),
-      LD = wD(40940),
-      cD = wD(4817),
-      gD = wD(40634),
-      RD = wD(40516),
-      AD = wD(40672),
-      UD = wD(2811),
-      fD = wD(4527),
-      ID = wD(34079);
-    const BD = new Map([
+    var Op = cp(2963),
+      op = cp(657),
+      Ip = cp(129),
+      Sp = cp(4911),
+      xp = cp(41248),
+      Lp = cp(4903),
+      Yp = cp(40911),
+      Dp = cp(40783),
+      Ap = cp(40954),
+      Pp = cp(2908),
+      Wp = cp(4596),
+      yp = cp(34287);
+    const Up = new Map([
       ["r", " retry"],
       ["f", " fallback"]
     ]);
-    class GD {
-      constructor(DD) {
-        this.label = void 0, this.noted = void 0, this.lines = 0, this.atMs = -1 / 0, this.label = DD
+    class wp {
+      constructor(pp) {
+        this.label = void 0, this.noted = void 0, this.lines = 0, this.atMs = -1 / 0, this.label = pp
       }
-      line(DD, zD) {
-        const wD = this.lines < 10 ? 6e4 : 6e5;
-        return void 0 === DD || DD === this.noted || zD - this.atMs < wD ? null : (this.noted = DD, this.lines++, this.atMs = zD, `${this.label}: ${DD}`)
+      line(pp, ip) {
+        const cp = this.lines < 10 ? 6e4 : 6e5;
+        return void 0 === pp || pp === this.noted || ip - this.atMs < cp ? null : (this.noted = pp, this.lines++, this.atMs = ip, `${this.label}: ${pp}`)
       }
     }
-    class hD {
+    class vp {
       constructor() {
-        this.failuresLogged = 0, this.heldLogged = !1, this.links = new GD("gl links"), this.programUse = new GD("gl programs")
+        this.failuresLogged = 0, this.heldLogged = !1, this.links = new wp("gl links"), this.programUse = new wp("gl programs")
       }
-      failures(DD) {
-        const zD = DD ? DD.split(" ") : [],
-          wD = zD.slice(this.failuresLogged).map((DD => {
-            var zD;
-            const [wD, pD] = DD.split(":"), sD = null !== (zD = BD.get(wD.slice(-1))) && void 0 !== zD ? zD : "";
-            return `gl link failed: program row ${parseInt(wD)}${sD}, read ${pD} ms after issue`
+      failures(pp) {
+        const ip = pp ? pp.split(" ") : [],
+          cp = ip.slice(this.failuresLogged).map((pp => {
+            var ip;
+            const [cp, Op] = pp.split(":"), op = null !== (ip = Up.get(cp.slice(-1))) && void 0 !== ip ? ip : "";
+            return `gl link failed: program row ${parseInt(cp)}${op}, read ${Op} ms after issue`
           }));
-        return this.failuresLogged = zD.length, wD
+        return this.failuresLogged = ip.length, cp
       }
-      heldAtBackstop(DD) {
-        return this.heldLogged || void 0 === DD ? null : (this.heldLogged = !0, `first view by the backstop, draws held for programs ${DD}`)
+      heldAtBackstop(pp) {
+        return this.heldLogged || void 0 === pp ? null : (this.heldLogged = !0, `first view by the backstop, draws held for programs ${pp}`)
       }
-      summaryLines(DD, zD, wD, pD) {
-        const sD = this.links.line(DD, wD);
-        return [sD && `${sD}; tab ${(0,ID.d)(pD)}`, this.programUse.line(zD, wD)].filter((DD => null !== DD))
+      summaryLines(pp, ip, cp, Op) {
+        const op = this.links.line(pp, cp);
+        return [op && `${op}; tab ${(0,yp.e)(Op)}`, this.programUse.line(ip, cp)].filter((pp => null !== pp))
       }
     }
-    var nD = wD(4729);
-    class MD {
+    var tp = cp(4794);
+    class Hp {
       constructor() {
         this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, this.lastDrawnMs = null
       }
-      frame(DD, zD, wD) {
-        if ("none" !== zD && (this.frames++, "paced" === zD && this.paced++, "drawn" === zD)) {
-          if (this.drawn++, this.renderUs += wD, this.renderUsMax = Math.max(this.renderUsMax, wD), null !== this.lastDrawnMs) {
-            const zD = DD - this.lastDrawnMs;
-            this.gapMaxMs = Math.max(this.gapMaxMs, zD), zD >= 50 && this.longGaps++
+      frame(pp, ip, cp) {
+        if ("none" !== ip && (this.frames++, "paced" === ip && this.paced++, "drawn" === ip)) {
+          if (this.drawn++, this.renderUs += cp, this.renderUsMax = Math.max(this.renderUsMax, cp), null !== this.lastDrawnMs) {
+            const ip = pp - this.lastDrawnMs;
+            this.gapMaxMs = Math.max(this.gapMaxMs, ip), ip >= 50 && this.longGaps++
           }
-          this.lastDrawnMs = DD
+          this.lastDrawnMs = pp
         }
       }
       restart() {
         this.take(), this.lastDrawnMs = null
       }
       take() {
-        const DD = {
+        const pp = {
           frames: this.frames,
           drawn: this.drawn,
           paced: this.paced,
@@ -78,253 +78,253 @@ export const modules = {
           renderUs: this.renderUs,
           renderUsMax: this.renderUsMax
         };
-        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, DD
+        return this.frames = 0, this.drawn = 0, this.paced = 0, this.gapMaxMs = 0, this.longGaps = 0, this.renderUs = 0, this.renderUsMax = 0, pp
       }
     }
 
-    function OD(DD) {
-      return (DD / 1048576).toFixed(1)
+    function dp(pp) {
+      return (pp / 1048576).toFixed(1)
     }
-    class JD {
+    class ep {
       constructor() {
         this.logged = 0, this.seen = new Set, this.unlogged = 0
       }
-      admit(DD) {
-        return this.logged >= 20 || this.seen.has(DD) ? (this.unlogged++, null) : (this.seen.add(DD), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${DD}` : DD)
+      admit(pp) {
+        return this.logged >= 20 || this.seen.has(pp) ? (this.unlogged++, null) : (this.seen.add(pp), this.logged++, 20 === this.logged ? `(the last event line: later ones are counted in the summaries) ${pp}` : pp)
       }
       takeUnlogged() {
-        const DD = this.unlogged;
-        return this.unlogged = 0, DD
+        const pp = this.unlogged;
+        return this.unlogged = 0, pp
       }
     }
 
-    function ED(DD) {
-      (0, UD.l)("renderlite", DD)
+    function jp(pp) {
+      (0, Pp.n)("renderlite", pp)
     }
-    class QD {
-      constructor(DD) {
-        this.frames = new MD, this.events = new JD, this.programLines = new hD, this.compileSummary = new GD("webgpu compiles"), this.hidden = new ID.b, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.gridLogged = !1, this.visibilityChanged = () => {
-          const DD = performance.now();
-          this.hidden.changed(DD), this.restartWindow(DD)
-        }, this.DU = () => {
-          var DD, zD;
-          const wD = this.session,
-            sD = (0, RD.i)(),
-            KD = performance.now();
-          if (this.logLinks(KD), this.logGrid(), null === wD || wD.isStopped || !0 !== (null === sD || void 0 === sD ? void 0 : sD.isCoreRunning)) return void this.restartWindow(KD);
+    class kp {
+      constructor(pp) {
+        this.frames = new Hp, this.events = new ep, this.programLines = new vp, this.compileSummary = new wp("webgpu compiles"), this.hidden = new yp.c, this.session = null, this.sampled = null, this.gpuTimed = 0, this.gpuUs = 0, this.gpuBytes = null, this.windowStart = performance.now(), this.windows = 0, this.rendererLogged = !1, this.gridLogged = !1, this.visibilityChanged = () => {
+          const pp = performance.now();
+          this.hidden.changed(pp), this.restartWindow(pp)
+        }, this.LP = () => {
+          var pp, ip;
+          const cp = this.session,
+            op = (0, Dp.k)(),
+            Ip = performance.now();
+          if (this.logLinks(Ip), this.logGrid(), null === cp || cp.isStopped || !0 !== (null === op || void 0 === op ? void 0 : op.isCoreRunning)) return void this.restartWindow(Ip);
           if (document.hidden) return;
-          if (KD - this.windowStart < 2500) return;
-          if (! function(DD) {
-              return DD < 12 || (DD - 12) % 3 === 2
+          if (Ip - this.windowStart < 2500) return;
+          if (! function(pp) {
+              return pp < 12 || (pp - 12) % 3 === 2
             }(this.windows++)) return;
           this.logRenderer();
-          const cD = wD.headerWord(rD.G.GpuTimed),
-            AD = wD.headerWord(rD.G.GpuFrameUs),
-            UD = this.sampled === wD ? {
-              timed: cD - this.gpuTimed >>> 0,
-              us: AD - this.gpuUs >>> 0
+          const Lp = cp.headerWord(Sp.x.GpuTimed),
+            Ap = cp.headerWord(Sp.x.GpuFrameUs),
+            Pp = this.sampled === cp ? {
+              timed: Lp - this.gpuTimed >>> 0,
+              us: Ap - this.gpuUs >>> 0
             } : null;
-          this.sampled = wD, this.gpuTimed = cD, this.gpuUs = AD;
-          const fD = null !== (DD = null === (zD = (0, gD.N)((0, pD.z)())) || void 0 === zD ? void 0 : zD.MpD()) && void 0 !== DD ? DD : 0;
-          ED(function(DD, zD) {
-            const wD = zD.windowMs / 1e3,
-              pD = [`${Math.round(wD)}s: ${DD.drawn} drawn (${(DD.drawn/wD).toFixed(1)}/s), ${DD.paced} paced, ${DD.frames-DD.drawn-DD.paced} skipped`, `gap max ${Math.round(DD.gapMaxMs)} ms, ${DD.longGaps} over 50 ms`, `render cpu ${DD.drawn?(DD.renderUs/DD.drawn/1e3).toFixed(2):"-"} ms mean, ${(DD.renderUsMax/1e3).toFixed(1)} max`];
-            null !== zD.gpu && pD.push(`gpu ${zD.gpu.timed?(zD.gpu.us/zD.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${zD.gpu.timed} timed`);
-            const sD = zD.census;
-            pD.push(null === sD ? "draws none yet" : `draws ${(0,LD.d)(sD)} (terrain ${sD.terrainOpaque}+${sD.terrainTransparent}, pack ${sD.terrainPack}, meshes ${sD.regular+sD.thin+sD.line+sD.text}, sky ${sD.earthSky+sD.skyMeshes}, particles ${sD.particles})`), null !== sD && sD.ringCopiesMax > 0 && pD.push(`frame rings ${sD.ringCopiesMax} copies max, ${sD.ringBusyWrites} busy writes so far`);
-            const KD = null === zD.gpuBytesBefore ? "" : ` (${zD.gpuBytes>=zD.gpuBytesBefore?"+":"-"}${OD(Math.abs(zD.gpuBytes-zD.gpuBytesBefore))})`;
-            return pD.push(`gpu mem ${OD(zD.gpuBytes)} MiB${KD}`), pD.push(`pending ${zD.pending}`, "terrain " + (zD.terrainDrawn ? "drawn" : "not drawn yet")), zD.eventsUnlogged > 0 && pD.push(`${zD.eventsUnlogged} events unlogged`), pD.join("; ")
+          this.sampled = cp, this.gpuTimed = Lp, this.gpuUs = Ap;
+          const Wp = null !== (pp = null === (ip = (0, Yp.Y)((0, Op.H)())) || void 0 === ip ? void 0 : ip.XOp()) && void 0 !== pp ? pp : 0;
+          jp(function(pp, ip) {
+            const cp = ip.windowMs / 1e3,
+              Op = [`${Math.round(cp)}s: ${pp.drawn} drawn (${(pp.drawn/cp).toFixed(1)}/s), ${pp.paced} paced, ${pp.frames-pp.drawn-pp.paced} skipped`, `gap max ${Math.round(pp.gapMaxMs)} ms, ${pp.longGaps} over 50 ms`, `render cpu ${pp.drawn?(pp.renderUs/pp.drawn/1e3).toFixed(2):"-"} ms mean, ${(pp.renderUsMax/1e3).toFixed(1)} max`];
+            null !== ip.gpu && Op.push(`gpu ${ip.gpu.timed?(ip.gpu.us/ip.gpu.timed/1e3).toFixed(2):"-"} ms mean of ${ip.gpu.timed} timed`);
+            const op = ip.census;
+            Op.push(null === op ? "draws none yet" : `draws ${(0,xp.b)(op)} (terrain ${op.terrainOpaque}+${op.terrainTransparent}, pack ${op.terrainPack}, meshes ${op.regular+op.thin+op.line+op.text}, sky ${op.earthSky+op.skyMeshes}, particles ${op.particles})`), null !== op && op.ringCopiesMax > 0 && Op.push(`frame rings ${op.ringCopiesMax} copies max, ${op.ringBusyWrites} busy writes so far`);
+            const Ip = null === ip.gpuBytesBefore ? "" : ` (${ip.gpuBytes>=ip.gpuBytesBefore?"+":"-"}${dp(Math.abs(ip.gpuBytes-ip.gpuBytesBefore))})`;
+            return Op.push(`gpu mem ${dp(ip.gpuBytes)} MiB${Ip}`), Op.push(`pending ${ip.pending}`, "terrain " + (ip.terrainDrawn ? "drawn" : "not drawn yet")), ip.eventsUnlogged > 0 && Op.push(`${ip.eventsUnlogged} events unlogged`), Op.join("; ")
           }(this.frames.take(), {
-            windowMs: KD - this.windowStart,
-            gpu: UD,
-            census: (0, LD.h)(sD.api),
-            gpuBytes: fD,
+            windowMs: Ip - this.windowStart,
+            gpu: Pp,
+            census: (0, xp.c)(op.api),
+            gpuBytes: Wp,
             gpuBytesBefore: this.gpuBytes,
-            pending: wD.headerWord(rD.G.RenderPending),
-            terrainDrawn: 0 !== (wD.headerWord(rD.G.LoadSteps) & rD.V.TerrainDrawn),
+            pending: cp.headerWord(Sp.x.RenderPending),
+            terrainDrawn: 0 !== (cp.headerWord(Sp.x.LoadSteps) & Sp.L.TerrainDrawn),
             eventsUnlogged: this.events.takeUnlogged()
-          })), this.gpuBytes = fD, this.windowStart = KD
-        }, ED(`${(0,nD.d)(DD)}; client ${sD.n.client} (${sD.n.reason})`), setInterval(this.DU, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
+          })), this.gpuBytes = Wp, this.windowStart = Ip
+        }, jp(`${(0,tp.e)(pp)}; client ${op.p.client} (${op.p.reason})`), setInterval(this.LP, 5e3), document.addEventListener("visibilitychange", this.visibilityChanged)
       }
-      frame(DD, zD, wD) {
-        this.session = DD, this.frames.frame(zD, wD, "drawn" === wD ? DD.headerWord(rD.G.RenderUs) : 0)
+      frame(pp, ip, cp) {
+        this.session = pp, this.frames.frame(ip, cp, "drawn" === cp ? pp.headerWord(Sp.x.RenderUs) : 0)
       }
-      coreErrors(DD) {
+      coreErrors(pp) {
         for (const {
-            code: pD,
-            detail: sD
+            code: Op,
+            detail: op
           }
-          of DD) {
-          var zD, wD;
-          if (pD >= rD.o.RenderDeviceLost && pD <= rD.o.RenderSerialLinks) this.event(`render error ${(0,cD.fe)(pD)}${null!==(zD=null===(wD=(0,AD.e)(pD,sD))||void 0===wD?void 0:wD.words)&&void 0!==zD?zD:""} (detail ${sD})`)
+          of pp) {
+          var ip, cp;
+          if (Op >= Sp.k.RenderDeviceLost && Op <= Sp.k.RenderSerialLinks) this.event(`render error ${(0,Lp._d)(Op)}${null!==(ip=null===(cp=(0,Ap.c)(Op,op))||void 0===cp?void 0:cp.words)&&void 0!==ip?ip:""} (detail ${op})`)
         }
       }
-      reload(DD, zD, wD, pD) {
-        this.event(`render reload: ${DD?"webgpu":"gl"} ${wD}, losses ${zD}${void 0===pD?"":`: ${pD}`}`)
+      reload(pp, ip, cp, Op) {
+        this.event(`render reload: ${pp?"webgpu":"gl"} ${cp}, losses ${ip}${void 0===Op?"":`: ${Op}`}`)
       }
-      crashed(DD) {
+      crashed(pp) {
         let {
-          site: zD,
-          error: wD,
-          header: pD
-        } = DD;
-        const sD = null !== pD && 0 !== pD.lastError ? `, last error ${(0,cD.fe)(pD.lastError)} (detail ${pD.lastErrorDetail})` : "",
-          KD = wD instanceof Error ? `${wD.name}: ${wD.message}` : null === wD || void 0 === wD ? "" : String(wD);
-        this.event(`core stopped at ${zD}${sD}${KD&&`: ${KD}`}`)
+          site: ip,
+          error: cp,
+          header: Op
+        } = pp;
+        const op = null !== Op && 0 !== Op.lastError ? `, last error ${(0,Lp._d)(Op.lastError)} (detail ${Op.lastErrorDetail})` : "",
+          Ip = cp instanceof Error ? `${cp.name}: ${cp.message}` : null === cp || void 0 === cp ? "" : String(cp);
+        this.event(`core stopped at ${ip}${op}${Ip&&`: ${Ip}`}`)
       }
-      event(DD) {
-        const zD = this.events.admit(DD);
-        null !== zD && ED(zD)
+      event(pp) {
+        const ip = this.events.admit(pp);
+        null !== ip && jp(ip)
       }
-      restartWindow(DD) {
-        this.frames.restart(), this.windowStart = DD;
-        const zD = this.session;
-        null === zD || zD.isStopped ? this.sampled = null : (this.sampled = zD, this.gpuTimed = zD.headerWord(rD.G.GpuTimed), this.gpuUs = zD.headerWord(rD.G.GpuFrameUs))
+      restartWindow(pp) {
+        this.frames.restart(), this.windowStart = pp;
+        const ip = this.session;
+        null === ip || ip.isStopped ? this.sampled = null : (this.sampled = ip, this.gpuTimed = ip.headerWord(Sp.x.GpuTimed), this.gpuUs = ip.headerWord(Sp.x.GpuFrameUs))
       }
-      logLinks(DD) {
-        const zD = window.bloxdRenderDebug;
-        for (const sD of this.programLines.failures(null === zD || void 0 === zD ? void 0 : zD.linkFailures)) this.event(sD);
-        const wD = this.programLines.heldAtBackstop(null === zD || void 0 === zD ? void 0 : zD.heldAtBackstop);
-        null !== wD && ED(wD);
-        for (const sD of this.programLines.summaryLines(null === zD || void 0 === zD ? void 0 : zD.links, null === zD || void 0 === zD ? void 0 : zD.programUse, DD, this.hidden.totals(DD))) ED(sD);
-        const pD = this.compileSummary.line(null === zD || void 0 === zD ? void 0 : zD.compiles, DD);
-        null !== pD && ED(pD)
+      logLinks(pp) {
+        const ip = window.bloxdRenderDebug;
+        for (const op of this.programLines.failures(null === ip || void 0 === ip ? void 0 : ip.linkFailures)) this.event(op);
+        const cp = this.programLines.heldAtBackstop(null === ip || void 0 === ip ? void 0 : ip.heldAtBackstop);
+        null !== cp && jp(cp);
+        for (const op of this.programLines.summaryLines(null === ip || void 0 === ip ? void 0 : ip.links, null === ip || void 0 === ip ? void 0 : ip.programUse, pp, this.hidden.totals(pp))) jp(op);
+        const Op = this.compileSummary.line(null === ip || void 0 === ip ? void 0 : ip.compiles, pp);
+        null !== Op && jp(Op)
       }
       logGrid() {
-        var DD;
-        const zD = null === (DD = window.bloxdRenderDebug) || void 0 === DD ? void 0 : DD.gridFaces;
-        this.gridLogged || void 0 === zD || (this.gridLogged = !0, ED(`gl1 grid ${zD}`))
+        var pp;
+        const ip = null === (pp = window.bloxdRenderDebug) || void 0 === pp ? void 0 : pp.gridFaces;
+        this.gridLogged || void 0 === ip || (this.gridLogged = !0, jp(`gl1 grid ${ip}`))
       }
       logRenderer() {
-        var DD, zD;
+        var pp, ip;
         if (this.rendererLogged) return;
         this.rendererLogged = !0;
-        const wD = window.bloxdRenderDebug,
-          pD = (0, KD.p)(),
-          sD = void 0 === (null === wD || void 0 === wD ? void 0 : wD.parallelCompile) ? "" : `; parallel compile ${wD.parallelCompile}`;
-        ED(`renderer gl ${pD?`${pD.vendor} / ${pD.renderer}`:"(not read)"}; terrain fetch ${null!==(DD=null===wD||void 0===wD?void 0:wD.fetch)&&void 0!==DD?DD:"(not noted)"}${sD}`), ED(`renderer caps ${null!==(zD=null===wD||void 0===wD?void 0:wD.caps)&&void 0!==zD?zD:"(not noted)"}`)
+        const cp = window.bloxdRenderDebug,
+          Op = (0, Ip.r)(),
+          op = void 0 === (null === cp || void 0 === cp ? void 0 : cp.parallelCompile) ? "" : `; parallel compile ${cp.parallelCompile}`;
+        jp(`renderer gl ${Op?`${Op.vendor} / ${Op.renderer}`:"(not read)"}; terrain fetch ${null!==(pp=null===cp||void 0===cp?void 0:cp.fetch)&&void 0!==pp?pp:"(not noted)"}${op}`), jp(`renderer caps ${null!==(ip=null===cp||void 0===cp?void 0:cp.caps)&&void 0!==ip?ip:"(not noted)"}`)
       }
     }
-    let XD = null;
+    let mp = null;
 
-    function VD(DD) {
-      return (0, fD.f)(), XD ??= new QD(DD), XD
+    function Rp(pp) {
+      return (0, Wp.f)(), mp ??= new kp(pp), mp
     }
   },
-  4729: (DD, zD, wD) => {
-    function pD(DD) {
-      if (null === DD) return "backend: none picked (no renderer build)";
-      const zD = DD.adapter ? `${DD.adapter.vendor}/${DD.adapter.architecture}` : "none";
-      return `backend ${DD.backend}: reason ${DD.reason}, source ${DD.source}, adapter ${zD}`
+  4794: (pp, ip, cp) => {
+    function Op(pp) {
+      if (null === pp) return "backend: none picked (no renderer build)";
+      const ip = pp.adapter ? `${pp.adapter.vendor}/${pp.adapter.architecture}` : "none";
+      return `backend ${pp.backend}: reason ${pp.reason}, source ${pp.source}, adapter ${ip}`
     }
-    wD.d(zD, {
-      d: () => pD
+    cp.d(ip, {
+      e: () => Op
     })
   },
-  34079: (DD, zD, wD) => {
-    function pD(DD) {
-      return `hidden ${DD.changes} changes, ${Math.round(DD.hiddenMs)} ms`
+  34287: (pp, ip, cp) => {
+    function Op(pp) {
+      return `hidden ${pp.changes} changes, ${Math.round(pp.hiddenMs)} ms`
     }
-    wD.d(zD, {
-      b: () => sD,
-      d: () => pD
+    cp.d(ip, {
+      c: () => op,
+      e: () => Op
     });
-    class sD {
+    class op {
       constructor() {
         this.changes = 0, this.hiddenMs = 0, this.hiddenSinceMs = document.hidden ? performance.now() : -1
       }
-      changed(DD) {
-        this.changes++, document.hidden ? this.hiddenSinceMs = DD : this.hiddenSinceMs >= 0 && (this.hiddenMs += DD - this.hiddenSinceMs, this.hiddenSinceMs = -1)
+      changed(pp) {
+        this.changes++, document.hidden ? this.hiddenSinceMs = pp : this.hiddenSinceMs >= 0 && (this.hiddenMs += pp - this.hiddenSinceMs, this.hiddenSinceMs = -1)
       }
-      totals(DD) {
+      totals(pp) {
         return {
           changes: this.changes,
-          hiddenMs: this.hiddenMs + (this.hiddenSinceMs >= 0 ? DD - this.hiddenSinceMs : 0)
+          hiddenMs: this.hiddenMs + (this.hiddenSinceMs >= 0 ? pp - this.hiddenSinceMs : 0)
         }
       }
     }
   },
-  40940: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => rD,
-      h: () => KD,
-      j: () => LD
+  41248: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Sp,
+      c: () => Ip,
+      d: () => xp
     });
-    var pD = wD(40506),
-      sD = wD(40516);
+    var Op = cp(40769),
+      op = cp(40783);
 
-    function KD(DD) {
-      if (DD.queries.drawCensus() < pD.yb.BYTES) return null;
-      const zD = DD.memoryData(DD.scratch(), pD.yb.BYTES, 4, "the draw census");
-      return null === zD ? null : {
-        terrainOpaque: pD.yb.terrainOpaque(zD, 0),
-        terrainTransparent: pD.yb.terrainTransparent(zD, 0),
-        terrainPack: pD.yb.terrainPack(zD, 0),
-        earthSky: pD.yb.earthSky(zD, 0),
-        skyMeshes: pD.yb.skyMeshes(zD, 0),
-        regular: pD.yb.regular(zD, 0),
-        thin: pD.yb.thin(zD, 0),
-        line: pD.yb.line(zD, 0),
-        text: pD.yb.text(zD, 0),
-        particles: pD.yb.particles(zD, 0),
-        terrainParts: pD.yb.terrainParts(zD, 0),
-        terrainCompiling: pD.yb.terrainCompiling(zD, 0),
-        ringCopiesMax: pD.yb.ringCopiesMax(zD, 0),
-        ringBusyWrites: pD.yb.ringBusyWrites(zD, 0)
+    function Ip(pp) {
+      if (pp.queries.drawCensus() < Op.ob.BYTES) return null;
+      const ip = pp.memoryData(pp.scratch(), Op.ob.BYTES, 4, "the draw census");
+      return null === ip ? null : {
+        terrainOpaque: Op.ob.terrainOpaque(ip, 0),
+        terrainTransparent: Op.ob.terrainTransparent(ip, 0),
+        terrainPack: Op.ob.terrainPack(ip, 0),
+        earthSky: Op.ob.earthSky(ip, 0),
+        skyMeshes: Op.ob.skyMeshes(ip, 0),
+        regular: Op.ob.regular(ip, 0),
+        thin: Op.ob.thin(ip, 0),
+        line: Op.ob.line(ip, 0),
+        text: Op.ob.text(ip, 0),
+        particles: Op.ob.particles(ip, 0),
+        terrainParts: Op.ob.terrainParts(ip, 0),
+        terrainCompiling: Op.ob.terrainCompiling(ip, 0),
+        ringCopiesMax: Op.ob.ringCopiesMax(ip, 0),
+        ringBusyWrites: Op.ob.ringBusyWrites(ip, 0)
       }
     }
 
-    function rD(DD) {
+    function Sp(pp) {
       const {
-        terrainOpaque: zD,
-        terrainTransparent: wD,
-        earthSky: pD,
-        skyMeshes: sD,
-        regular: KD,
-        thin: rD,
-        line: LD,
-        text: cD,
-        particles: gD
-      } = DD;
-      return zD + wD + pD + sD + KD + rD + LD + cD + gD
+        terrainOpaque: ip,
+        terrainTransparent: cp,
+        earthSky: Op,
+        skyMeshes: op,
+        regular: Ip,
+        thin: Sp,
+        line: xp,
+        text: Lp,
+        particles: Yp
+      } = pp;
+      return ip + cp + Op + op + Ip + Sp + xp + Lp + Yp
     }
 
-    function LD() {
-      const DD = (0, sD.i)();
-      return !0 === (null === DD || void 0 === DD ? void 0 : DD.isCoreRunning) ? function(DD) {
-        const zD = KD(DD);
-        if (null === zD) return [];
+    function xp() {
+      const pp = (0, op.k)();
+      return !0 === (null === pp || void 0 === pp ? void 0 : pp.isCoreRunning) ? function(pp) {
+        const ip = Ip(pp);
+        if (null === ip) return [];
         const {
-          terrainOpaque: wD,
-          terrainTransparent: pD,
-          terrainPack: sD,
-          earthSky: LD,
-          skyMeshes: cD,
-          regular: gD,
-          thin: RD,
-          line: AD,
-          text: UD,
-          particles: fD
-        } = zD;
+          terrainOpaque: cp,
+          terrainTransparent: Op,
+          terrainPack: op,
+          earthSky: xp,
+          skyMeshes: Lp,
+          regular: Yp,
+          thin: Dp,
+          line: Ap,
+          text: Pp,
+          particles: Wp
+        } = ip;
         return [{
           label: "Drawn",
-          value: `${rD(zD)}`
+          value: `${Sp(ip)}`
         }, {
           label: "Terrain",
-          value: `${wD} opaque / ${pD} transparent (${sD} shader pack)`
+          value: `${cp} opaque / ${Op} transparent (${op} shader pack)`
         }, {
           label: "Meshes / Thin bases",
-          value: `${gD} / ${RD}`
+          value: `${Yp} / ${Dp}`
         }, {
           label: "Text / Lines",
-          value: `${UD} / ${AD}`
+          value: `${Pp} / ${Ap}`
         }, {
           label: "Sky / Particles",
-          value: `${LD+cD} / ${fD}`
+          value: `${xp+Lp} / ${Wp}`
         }]
-      }(DD.api) : []
+      }(pp.api) : []
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

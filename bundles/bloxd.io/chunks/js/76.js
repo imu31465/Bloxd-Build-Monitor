@@ -1,382 +1,344 @@
 export const id = 76;
 export const ids = [76];
 export const modules = {
-  4718: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => RD
-    });
-    var pD = wD(20),
-      sD = wD(25),
-      KD = wD(1299),
-      rD = wD(2811);
-    const LD = 3e4,
-      cD = 1e3;
-
-    function gD() {
-      return "visible" === document.visibilityState && "inGame" === pD.e.get("gameState") && (0, KD.s)()
-    }
-
-    function RD(DD, zD) {
-      (0, rD.v)() || function(DD, zD, wD) {
-        let pD = 0;
-        const sD = setInterval((() => {
-          zD() && (pD += cD, pD >= DD && (clearInterval(sD), wD()))
-        }), cD)
-      }(LD, gD, (() => {
-        zD().then((() => {
-          DD(`saved for the player after ${LD/1e3} s of play`), (0, rD.D)(), sD.l.KG("chat", {
-            content: [{
-              str: "Saved a debug file to your downloads: please send it to us with a screenshot of the game.",
-              style: {
-                color: "#ffd84a"
-              }
-            }]
-          })
-        }))
-      }))
-    }
-  },
-  34070: (DD, zD, wD) => {
-    function pD(DD, zD) {
-      return 0 === DD.length ? 0 : DD[Math.min(DD.length - 1, Math.floor(zD * DD.length))]
-    }
-
-    function sD(DD) {
-      return DD.toFixed(1)
-    }
-    wD.d(zD, {
-      d: () => sD,
-      h: () => pD
-    })
-  },
-  37927: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => gD,
-      f: () => RD,
-      h: () => OD,
-      j: () => MD,
-      n: () => nD
-    });
-    var pD = wD(4718),
-      sD = wD(34070),
-      KD = wD(2811);
-    const rD = 20,
-      LD = ["totalMs", "slotMs", "workerMs", "applyMs", "ahead", "inFlight", "bA", "jobMs"];
-
-    function cD(DD) {
-      return [...DD].sort(((DD, zD) => DD - zD))
-    }
-    const gD = [];
-
-    function RD(DD, zD, wD) {
-      return `${DD},${zD},${wD}`
-    }
-    class AD {
-      constructor() {
-        this.pending = new Map, this.jobs = new Map, this.edits = [], this.nextEdit = 0, this.reported = 0, this.windowStart = performance.now(), this.frames = 0, this.lastFrameAt = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
-      }
-      edit(DD, zD) {
-        var wD;
-        const pD = null !== (wD = this.pending.get(DD)) && void 0 !== wD ? wD : [];
-        pD.push({
-          editAt: zD,
-          meshJobId: 0
-        }), this.pending.set(DD, pD)
-      }
-      frame(DD) {
-        this.lastFrameAt > 0 && (this.maxFrameMs = Math.max(this.maxFrameMs, DD - this.lastFrameAt)), this.lastFrameAt = DD, this.frames++, DD - this.windowStart >= 1e3 && this.summarise(DD)
-      }
-      sent(DD, zD, wD, pD, sD, KD, rD) {
-        this.jobs.set(zD, {
-          sentAt: rD,
-          receivedAt: 0,
-          ahead: wD,
-          inFlight: pD,
-          bA: sD,
-          jobMs: 0
-        }), this.jobsSent++, this.maxAhead = Math.max(this.maxAhead, wD), this.maxCapacity = Math.max(this.maxCapacity, sD);
-        for (const cD of null !== (LD = this.pending.get(DD)) && void 0 !== LD ? LD : []) {
-          var LD;
-          KD.includes(cD.meshJobId) || (cD.meshJobId = zD)
+  37277: (pp, ip, cp) => {
+    if (cp.d(ip, {
+        b: () => Lp,
+        f: () => op,
+        j: () => Sp,
+        n: () => Ip,
+        p: () => ep,
+        s: () => vp
+      }), 39 == cp.j) var Op = cp(37286);
+    const op = ["Wood", "Stone", "Iron", "Gold", "Diamond", "Moonstone", "Magmasteel", "Sanguine", "Astral"],
+      Ip = ["Blade", "Guard", "Handle"],
+      Sp = {
+        Wood: {
+          material: "Wood",
+          baseSword: "Wood Sword",
+          value: 1,
+          epithet: "Timber",
+          palette: ["#b88a52", "#7d5a32", "#3d2a14"],
+          trait: null,
+          bladeDamage: 0,
+          guardReduction: 0,
+          handleCooldown: 1,
+          handleKnockback: 0,
+          handleReach: 0
+        },
+        Stone: {
+          material: "Stone",
+          baseSword: "Stone Sword",
+          value: 1,
+          epithet: "Flint",
+          palette: ["#a3a3a3", "#6e6e6e", "#333333"],
+          trait: null,
+          bladeDamage: .03,
+          guardReduction: .02,
+          handleCooldown: .98,
+          handleKnockback: .05,
+          handleReach: 0
+        },
+        Iron: {
+          material: "Iron",
+          baseSword: "Iron Sword",
+          value: 2,
+          epithet: "Ironclad",
+          palette: ["#e6e6e6", "#a8a8a8", "#444444"],
+          trait: "defence",
+          bladeDamage: .06,
+          guardReduction: .05,
+          handleCooldown: .95,
+          handleKnockback: .1,
+          handleReach: 0
+        },
+        Gold: {
+          material: "Gold",
+          baseSword: "Gold Sword",
+          value: 2,
+          epithet: "Gilded",
+          palette: ["#ffe766", "#e0a91d", "#6b4a07"],
+          trait: "coins",
+          bladeDamage: .07,
+          guardReduction: .04,
+          handleCooldown: .94,
+          handleKnockback: .05,
+          handleReach: 0
+        },
+        Diamond: {
+          material: "Diamond",
+          baseSword: "Diamond Sword",
+          value: 4,
+          epithet: "Brilliant",
+          palette: ["#8ff5ec", "#2fbcb0", "#0d4f4a"],
+          trait: "crit",
+          bladeDamage: .12,
+          guardReduction: .07,
+          handleCooldown: .92,
+          handleKnockback: .1,
+          handleReach: 0
+        },
+        Moonstone: {
+          material: "Moonstone",
+          baseSword: "Moonstone Sword",
+          value: 4,
+          epithet: "Moonlit",
+          palette: ["#d9d2ff", "#8f7fe0", "#352a73"],
+          trait: "bossBane",
+          bladeDamage: .15,
+          guardReduction: .08,
+          handleCooldown: .9,
+          handleKnockback: .1,
+          handleReach: .25
+        },
+        Magmasteel: {
+          material: "Magmasteel",
+          baseSword: "Magmasteel Sword",
+          value: 8,
+          epithet: "Molten",
+          palette: ["#ffb347", "#e0461b", "#4f1208"],
+          trait: "firePool",
+          bladeDamage: .29,
+          guardReduction: .1,
+          handleCooldown: .88,
+          handleKnockback: .2,
+          handleReach: .35
+        },
+        Sanguine: {
+          material: "Sanguine",
+          baseSword: "Sanguine Sword",
+          value: 8,
+          epithet: "Crimson",
+          palette: ["#ff6b7a", "#b0172f", "#45040f"],
+          trait: "lifesteal",
+          bladeDamage: .29,
+          guardReduction: .1,
+          handleCooldown: .87,
+          handleKnockback: .15,
+          handleReach: .35
+        },
+        Astral: {
+          material: "Astral",
+          baseSword: "Astral Sword",
+          value: 10,
+          epithet: "Starforged",
+          palette: ["#9fd8ff", "#5a6bff", "#1c1550"],
+          trait: "starfall",
+          bladeDamage: .4,
+          guardReduction: .12,
+          handleCooldown: .83,
+          handleKnockback: .2,
+          handleReach: .5
         }
-      }
-      received(DD, zD, wD) {
-        const pD = this.jobs.get(DD);
-        void 0 !== pD && (this.roundTrips.push(wD - pD.sentAt), pD.receivedAt = wD, pD.jobMs = zD)
-      }
-      failed(DD) {
-        this.jobs.delete(DD)
-      }
-      reassign(DD, zD, wD) {
-        this.jobs.delete(zD);
-        for (const sD of null !== (pD = this.pending.get(DD)) && void 0 !== pD ? pD : []) {
-          var pD;
-          sD.meshJobId === zD && (sD.meshJobId = wD)
+      },
+      xp = 4,
+      Lp = "Coal",
+      Yp = {
+        Blade: 1,
+        Guard: .6,
+        Handle: .4
+      },
+      Dp = 1.15,
+      Ap = 1.35,
+      Pp = .06,
+      Wp = {
+        defence: {
+          name: "Bulwark",
+          amount: .06,
+          describe: pp => `${mp(.06*pp)} less damage taken`
+        },
+        coins: {
+          name: "Midas",
+          amount: 4,
+          describe: pp => `Mobs you slay drop ${Math.round(4*pp)}+ extra coins`
+        },
+        crit: {
+          name: "Keen Edge",
+          chance: .12,
+          amount: .6,
+          describe: pp => `${mp(.12*pp)} chance to strike for +60% damage`
+        },
+        bossBane: {
+          name: "Bossbane",
+          amount: .2,
+          describe: pp => `+${mp(.2*pp)} damage to bosses`
+        },
+        firePool: {
+          name: "Magma Pool",
+          chance: .15,
+          amount: .12,
+          cooldownMs: 3e3,
+          describe: pp => `${mp(.15*pp)} chance to leave a fire pool under the mob that burns for 3s`
+        },
+        lifesteal: {
+          name: "Bloodthirst",
+          amount: .06,
+          describe: pp => `Heal ${mp(.06*pp)} of the damage you deal`
+        },
+        starfall: {
+          name: "Starfall",
+          chance: .1,
+          amount: .6,
+          cooldownMs: 4e3,
+          describe: pp => `${mp(.1*pp)} chance to call a falling star that hits nearby mobs and slows them`
         }
-      }
-      applied(DD, zD, wD) {
-        const pD = this.jobs.get(zD);
-        this.jobs.delete(zD), void 0 !== pD && this.show(DD, pD, wD, (DD => DD.meshJobId === zD))
-      }
-      emptied(DD, zD) {
-        const wD = {
-          sentAt: zD,
-          receivedAt: zD,
-          ahead: 0,
-          inFlight: 0,
-          bA: 0,
-          jobMs: 0
-        };
-        this.show(DD, wD, zD, (() => !0))
-      }
-      show(DD, zD, wD, pD) {
-        const sD = this.pending.get(DD);
-        if (!sD) return;
-        const KD = sD.filter((sD => !pD(sD) || (this.record(DD, sD.editAt, zD, wD), !1)));
-        KD.length > 0 ? this.pending.set(DD, KD) : this.pending.delete(DD)
-      }
-      sI(DD) {
-        this.reported += DD, this === fD && this.reported >= rD && null !== ID && (ID(), ID = null)
-      }
-      record(DD, zD, wD, pD) {
-        const sD = {
-          totalMs: pD - zD,
-          slotMs: wD.sentAt - zD,
-          workerMs: wD.receivedAt - wD.sentAt,
-          applyMs: pD - wD.receivedAt,
-          ahead: wD.ahead,
-          inFlight: wD.inFlight,
-          bA: wD.bA,
-          jobMs: wD.jobMs
-        };
-        if (this.edits[this.nextEdit] = sD, this.nextEdit = (this.nextEdit + 1) % 500, this.windowEdits.push(sD.totalMs), this.sI(1), sD.totalMs < 100 || ++this.outliers > 5) return;
-        const rD = DD => Math.round(DD);
-        (0, KD.l)("remesh", `slow edit (${DD}) shown in ${rD(sD.totalMs)} ms: slot ${rD(sD.slotMs)}, worker ${rD(sD.workerMs)} (${sD.ahead} ahead, ${sD.inFlight}/${sD.bA} in flight; job ${rD(sD.jobMs)}), apply ${rD(sD.applyMs)}`)
-      }
-      summarise(DD) {
-        const zD = (DD - this.windowStart) / 1e3;
-        for (const [wD, pD] of this.pending) {
-          const zD = pD.filter((zD => DD - zD.editAt <= 1e4));
-          this.gaveUp += pD.length - zD.length, this.sI(pD.length - zD.length), zD.length > 0 ? this.pending.set(wD, zD) : this.pending.delete(wD)
+      },
+      yp = {
+        eclipseField: {
+          name: "Eclipse Field",
+          description: "Right-click: slow every mob within 6 blocks for 3s",
+          cooldownMs: 25e3
+        },
+        starfall: {
+          name: "Meteor Shower",
+          description: "Right-click: call five falling stars around you",
+          cooldownMs: 3e4
+        },
+        magmaWave: {
+          name: "Magma Wave",
+          description: "Right-click: lay a line of fire pools ahead of you",
+          cooldownMs: 2e4
+        },
+        bloodPact: {
+          name: "Blood Pact",
+          description: "Right-click: heal 30% of your health",
+          cooldownMs: 4e4
+        },
+        moonDash: {
+          name: "Moon Dash",
+          description: "Right-click: dash forward, striking mobs you pass",
+          cooldownMs: 12e3
+        },
+        warcry: {
+          name: "Warcry",
+          description: "Right-click: deal 30% more damage for 8s",
+          cooldownMs: 35e3
+        },
+        quake: {
+          name: "Quake",
+          description: "Right-click: slam the ground, hurling mobs within 5 blocks",
+          cooldownMs: 18e3
+        },
+        gildedEdge: {
+          name: "Gilded Edge",
+          description: "Right-click: your next 5 hits deal 50% more damage",
+          cooldownMs: 25e3
         }
-        for (const [wD, pD] of this.jobs) DD - pD.sentAt > (pD.receivedAt > 0 ? 1e4 : 6e4) && this.jobs.delete(wD);
-        if (this.jobsSent > 0 || this.roundTrips.length > 0 || this.windowEdits.length > 0 || this.gaveUp > 0) {
-          const DD = cD(this.roundTrips),
-            wD = cD(this.windowEdits),
-            pD = Math.max(0, this.outliers - 5);
-          (0, KD.l)("remesh", `${Math.round(this.frames/zD)} fps (longest ${Math.round(this.maxFrameMs)} ms) | ${this.jobsSent} jobs sent, up to ${this.maxAhead} ahead on a worker, capacity ${this.maxCapacity} | round trip p50 ${Math.round((0,sD.h)(DD,.5))} max ${Math.round((0,sD.h)(DD,1))} ms | ${wD.length} edits shown, p50 ${Math.round((0,sD.h)(wD,.5))} max ${Math.round((0,sD.h)(wD,1))} ms${pD>0?`, ${pD} more slow`:""}${this.gaveUp>0?`, ${this.gaveUp} never shown`:""}`)
+      },
+      Up = 39 == cp.j ? Op.b : null,
+      wp = "skyblock:forged:";
+
+    function vp(pp, ip) {
+      return `${pp} ${ip}`
+    }
+    op.flatMap((pp => Ip.map((ip => vp(pp, ip)))));
+
+    function tp(pp) {
+      let {
+        blade: ip,
+        guard: cp,
+        handle: Op
+      } = pp;
+      return `${wp}${ip.toLowerCase()}-${cp.toLowerCase()}-${Op.toLowerCase()}`
+    }
+
+    function Hp(pp) {
+      if (! function(pp) {
+          return "string" === typeof pp && pp.startsWith(wp)
+        }(pp)) return null;
+      const ip = pp.slice(wp.length).split("-").map((pp => op.find((ip => ip.toLowerCase() === pp))));
+      return 3 !== ip.length || ip.includes(void 0) ? null : {
+        blade: ip[0],
+        guard: ip[1],
+        handle: ip[2]
+      }
+    }
+    const dp = new Map;
+
+    function ep(pp) {
+      var ip;
+      let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Up;
+      const Op = "string" === typeof pp ? Hp(pp) : pp;
+      if (null === Op) return null;
+      const op = tp(Op),
+        Lp = cp === Up ? dp.get(op) : void 0;
+      if (void 0 !== Lp) return Lp;
+      const wp = function(pp, ip) {
+        var cp, Op, op, Lp, Up, wp, vp, Hp, dp;
+        const {
+          blade: ep,
+          guard: qp,
+          handle: Mp
+        } = pp, Cp = Sp, Ep = ep === qp && qp === Mp, Xp = kp((1 + Cp[ep].bladeDamage) * (Ep ? 1 + Pp : 1)), lp = null !== (cp = ip.damageMultiplier) && void 0 !== cp ? cp : Xp, Qp = null !== (Op = ip.cooldownMultiplier) && void 0 !== Op ? Op : Cp[Mp].handleCooldown, Jp = null !== (op = ip.knockbackMultiplier) && void 0 !== op ? op : kp(1 + Cp[Mp].handleKnockback), Bp = null !== (Lp = ip.reachBonus) && void 0 !== Lp ? Lp : Cp[Mp].handleReach, Np = null !== (Up = ip.damageReduction) && void 0 !== Up ? Up : Cp[qp].guardReduction, Tp = null !== (wp = ip.traits) && void 0 !== wp ? wp : function(pp) {
+          const ip = {},
+            cp = {};
+          for (const xp of Ip) {
+            var Op, op;
+            const Ip = Sp[jp(pp, xp)].trait;
+            null !== Ip && (ip[Ip] = (null !== (Op = ip[Ip]) && void 0 !== Op ? Op : 0) + Yp[xp], cp[Ip] = (null !== (op = cp[Ip]) && void 0 !== op ? op : 0) + 1)
+          }
+          for (const Ip of Object.keys(ip)) {
+            const pp = 3 === cp[Ip] ? Ap : 2 === cp[Ip] ? Dp : 1;
+            ip[Ip] = kp(ip[Ip] * pp)
+          }
+          return ip
+        }(pp), fp = null !== (vp = ip.ability) && void 0 !== vp ? vp : null, bp = void 0 !== ip.name, hp = null !== (Hp = ip.name) && void 0 !== Hp ? Hp : Ep ? `Pure ${ep} Sword` : `${Cp[qp].epithet} ${ep} Sword`, ap = null !== (dp = ip.lore) && void 0 !== dp ? dp : `Forged by the Forge Mother from a ${ep.toLowerCase()} blade, ${qp.toLowerCase()} guard and ${Mp.toLowerCase()} handle.`, np = function(pp) {
+          let {
+            blade: ip,
+            guard: cp,
+            handle: Op
+          } = pp;
+          const op = Sp;
+          return xp * (op[ip].value + op[cp].value + op[Op].value)
+        }(pp), Fp = Cp[ep].value + Cp[qp].value + Cp[Mp].value, gp = bp ? "Tier 5" : Fp <= 4 ? "Tier 1" : Fp <= 8 ? "Tier 2" : Fp <= 14 ? "Tier 3" : Fp <= 22 ? "Tier 4" : "Tier 5", Gp = [];
+        1 !== lp && Gp.push(`${Rp(lp-1)} damage`);
+        1 !== Qp && Gp.push(`${mp(1/Qp-1)} faster strikes`);
+        1 !== Jp && Gp.push(`${Rp(Jp-1)} knockback`);
+        Bp > 0 && Gp.push(`+${Bp} reach`);
+        Np > 0 && Gp.push(`${mp(Np)} less damage taken while held`);
+        const rp = [];
+        for (const Ip of Object.keys(Tp)) rp.push(`${Wp[Ip].name}: ${Wp[Ip].describe(Tp[Ip])}`);
+        null !== fp && rp.push(`${yp[fp].name}: ${yp[fp].description}`);
+        return Gp.push(...rp), {
+          id: tp(pp),
+          parts: pp,
+          baseSword: Cp[ep].baseSword,
+          displayName: hp,
+          lore: ap,
+          properties: Gp,
+          effects: rp,
+          named: bp,
+          damageMultiplier: lp,
+          cooldownMultiplier: Qp,
+          knockbackMultiplier: Jp,
+          reachBonus: Bp,
+          damageReduction: Np,
+          traits: Tp,
+          ability: fp,
+          coalCost: np,
+          enchantmentTier: gp,
+          powerMultiplier: kp(lp / Qp)
         }
-        this.windowStart = DD, this.frames = 0, this.maxFrameMs = 0, this.jobsSent = 0, this.maxAhead = 0, this.maxCapacity = 0, this.roundTrips = [], this.windowEdits = [], this.outliers = 0, this.gaveUp = 0
-      }
-      stats() {
-        const DD = LD.map((DD => {
-          const zD = cD(this.edits.map((zD => zD[DD])));
-          return `${DD}: p50 ${Math.round((0,sD.h)(zD,.5))} p90 ${Math.round((0,sD.h)(zD,.9))} max ${Math.round((0,sD.h)(zD,1))}`
-        }));
-        return [`${this.edits.length} edits`, ...DD].join("\n")
-      }
-      dump() {
-        const DD = this.edits.map((DD => LD.map((zD => Math.round(10 * DD[zD]) / 10)).join(",")));
-        return [this.stats(), LD.join(","), ...DD].join("\n")
-      }
-    }
-    class UD {
-      constructor(DD, zD) {
-        this.log = DD, this.AU = zD
-      }
-      edit(DD, zD, wD) {
-        const [pD, sD, KD] = this.AU.KU.OsD(DD, zD, wD), rD = this.AU.KU.EB.QB(pD, sD, KD);
-        rD && rD.OB && this.log.edit(RD(pD, sD, KD), performance.now())
-      }
-      sent(DD, zD, wD, pD, sD) {
-        this.log.sent(RD(DD.i, DD.j, DD.k), zD, wD, pD, sD, gD, performance.now())
-      }
-      received(DD) {
-        this.log.received(DD.meshJobId, DD.jobMs, performance.now())
-      }
-      failed(DD) {
-        this.log.failed(DD)
-      }
-      applied(DD, zD) {
-        this.log.applied(RD(DD.i, DD.j, DD.k), zD, performance.now())
-      }
-    }
-    let fD = null,
-      ID = null,
-      BD = !1,
-      GD = null;
-
-    function hD() {
-      return new Promise((DD => {
-        null !== fD && fD.reported >= rD ? DD() : ID = DD
-      }))
+      }(Op, null !== (ip = cp[op]) && void 0 !== ip ? ip : {});
+      return cp === Up && dp.set(op, wp), wp
     }
 
-    function nD() {
-      const DD = new AD;
-      return fD = DD, (0, KD.i)("remesh", (() => DD.dump())), (0, KD.c)("remeshStats", (() => {
-        console.log(DD.stats())
-      })), BD || (BD = !0, (0, pD.d)((DD => {
-        (0, KD.l)("remesh", DD)
-      }), hD)), DD
+    function jp(pp, ip) {
+      return "Blade" === ip ? pp.blade : "Guard" === ip ? pp.guard : pp.handle
     }
 
-    function MD(DD) {
-      const zD = nD();
-      GD = new UD(zD, DD), DD.qJ.meshProbe = GD, DD.on("beforeRender", (() => {
-        zD.frame(performance.now())
-      }))
+    function kp(pp) {
+      return Math.round(100 * pp) / 100
     }
 
-    function OD(DD, zD, wD) {
-      var pD;
-      null === (pD = GD) || void 0 === pD || pD.edit(DD, zD, wD)
-    }
-  },
-  37678: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => pD
-    });
-    const pD = {
-      noaReady: null,
-      chunkRequested: null,
-      beforeServerListeners: null,
-      wasmNetReady: null
-    }
-  },
-  37724: (DD, zD, wD) => {
-    function pD(DD) {
-      return "string" !== typeof DD || 2 !== DD.length && ":" !== DD[2] ? null : DD[0] + DD[1]
-    }
-    wD.d(zD, {
-      b: () => GD,
-      c: () => ED,
-      e: () => JD,
-      f: () => QD,
-      h: () => LD,
-      k: () => rD,
-      l: () => KD,
-      m: () => cD,
-      q: () => hD,
-      u: () => BD
-    });
-    const sD = ["op:ytInitialPlayerResponse.adPlacements", "op:ytInitialPlayerResponse.playerAds", "op:ytInitialPlayerResponse.adSlots", "op:playerResponse.adPlacements", "op:playerResponse.playerAds", "op:playerResponse.adSlots"];
-
-    function KD(DD) {
-      if (function(DD) {
-          for (let zD = 0; zD < sD.length; zD++)
-            if (DD === sD[zD]) return !0;
-          return !1
-        }(DD)) return !1;
-      const zD = pD(DD);
-      return "op" === zD || "ep" === zD || "wi" === zD || "pp" === zD || "fp:call" === DD || "fp:t" === DD
+    function mp(pp) {
+      return `${Math.round(100*pp)}%`
     }
 
-    function rD(DD) {
-      return "fp" === pD(DD) && !KD(DD)
+    function Rp(pp) {
+      return `${pp>=0?"+":""}${mp(pp)}`
     }
-
-    function LD(DD) {
-      if ("string" !== typeof DD) return !1;
-      return "o" === DD[0] && "p" === DD[1] && (2 === DD.length || ":" === DD[2]) || "fp:call" === DD || "2" === DD || "t" === DD || "a" === DD
-    }
-
-    function cD(DD, zD) {
-      return `~${function(DD){return DD.length<2?DD:":"===DD[1]?DD[0]:DD[0]+DD[1]}(zD)}~${DD}`
-    }
-    const gD = 200;
-
-    function RD(DD) {
-      let zD = DD.length - 1;
-      for (let wD = 0; wD < 2; wD++) {
-        const wD = zD;
-        for (; zD >= 0 && DD[zD] >= "0" && DD[zD] <= "9";) zD--;
-        if (zD < 0 || zD === wD || ":" !== DD[zD]) return -1;
-        zD--
-      }
-      return zD + 1
-    }
-
-    function AD(DD) {
-      return "unknown" === DD || RD(DD) >= 0
-    }
-
-    function UD(DD, zD) {
-      return DD[zD] >= "\ud800" && DD[zD] <= "\udbff" && zD + 1 < DD.length && DD[zD + 1] >= "\udc00" && DD[zD + 1] <= "\udfff" ? 2 : 1
-    }
-
-    function fD(DD, zD, wD) {
-      return 2 === wD ? 4 : DD[zD] <= "\x7f" ? 1 : DD[zD] <= "\u07ff" ? 2 : 3
-    }
-
-    function ID(DD, zD, wD) {
-      let pD = 0;
-      for (; pD < zD;) {
-        const zD = UD(DD, pD),
-          sD = fD(DD, pD, zD);
-        if (sD > wD) break;
-        wD -= sD, pD += zD
-      }
-      return pD
-    }
-
-    function BD(DD) {
-      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1 / 0;
-      if ("string" !== typeof DD || DD.length > gD || !AD(DD)) return "t";
-      let wD = 2;
-      for (let LD = 0; LD < DD.length;) {
-        const zD = UD(DD, LD);
-        wD += fD(DD, LD, zD), LD += zD
-      }
-      if (wD <= zD) return `t ${DD}`;
-      const pD = RD(DD),
-        sD = zD - 2 - (DD.length - pD);
-      if (sD < 0) return "t";
-      const KD = ID(DD, pD, sD);
-      let rD = "t ";
-      for (let LD = 0; LD < KD; LD++) rD += DD[LD];
-      for (let LD = pD; LD < DD.length; LD++) rD += DD[LD];
-      return rD
-    }
-    const GD = 62;
-
-    function hD(DD) {
-      let zD = "so:";
-      const wD = ID(DD, DD.length, GD - zD.length);
-      for (let pD = 0; pD < wD; pD++) zD += DD[pD];
-      return zD
-    }
-    const nD = "BABYLON ",
-      MD = "DECODE ",
-      OD = "BABYLON@ ";
-
-    function JD(DD) {
-      return hD(nD + DD)
-    }
-
-    function ED(DD, zD) {
-      return hD(OD + DD + " " + zD)
-    }
-
-    function QD(DD) {
-      return hD(MD + DD)
-    }
-  },
-  37960: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v+LFy8yvH//noGXl/ccuq8A/vQKd00yOdIAAAAASUVORK5CYII="
-  },
-  37947: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAALUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMnBzczN8/PjxHLLPAORwCnfkvOdNAAAAAElFTkSuQmCC"
-  },
-  37966: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
-  },
-  37943: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAANUlEQVQYGWM8CwQMeAATHjmw1JBQAHLp/wMHDvy/ePHi/4CAgP937tz5Ly6u+5/P3uw/KAgAgjwWhHm22JoAAAAASUVORK5CYII="
-  },
-  37955: DD => {
-    DD.exports = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAKUlEQVQYGWM8CwQMeAATHjmw1JBQwAh06v8DBw4wCAoKMvz58+ccuq8A8vQKd2AxC9MAAAAASUVORK5CYII="
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

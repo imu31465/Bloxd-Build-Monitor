@@ -1,62 +1,19 @@
 export const id = 358;
 export const ids = [358];
 export const modules = {
-  61108: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      applyLightFoOffset: () => rD,
-      getFloatingOriginOffset: () => sD,
-      lightFoVersion: () => KD,
-      wrapRenderableForFO: () => LD
+  61392: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      postprocessVertexShader: () => Sp
     });
-    var pD = wD(41634);
-
-    function sD(DD) {
-      const zD = DD.camera;
-      if (!zD) return {
-        x: 0,
-        y: 0,
-        z: 0
-      };
-      const wD = zD.worldMatrix;
-      return {
-        x: wD[12],
-        y: wD[13],
-        z: wD[14]
-      }
-    }
-
-    function KD(DD) {
-      return DD.camera ? DD.camera.worldMatrixVersion : 0
-    }
-
-    function rD(DD, zD) {
-      const wD = zD.camera?.worldMatrix;
-      if (!wD) return;
-      const sD = wD[12],
-        KD = wD[13],
-        rD = wD[14];
-      let LD = 0;
-      for (const cD of zD.lights) {
-        if (LD >= pD.d) break;
-        if (!cD._writeLightUbo) continue;
-        const zD = 4 + 16 * LD,
-          wD = DD[zD + 3];
-        if (0 === wD || 2 === wD) {
-          const wD = cD.worldMatrix;
-          DD[zD] = wD[12] - sD, DD[zD + 1] = wD[13] - KD, DD[zD + 2] = wD[14] - rD
-        }
-        LD++
-      }
-    }
-
-    function LD(DD, zD, wD) {
-      let pD = -1;
-      return () => {
-        const sD = zD.camera ? zD.camera.worldMatrixVersion : -1;
-        sD !== pD && (wD(), pD = sD), DD()
-      }
+    var Op = cp(40062);
+    const op = "postprocessVertexShader",
+      Ip = "attribute vec2 position;uniform vec2 scale;varying vec2 vUV;const vec2 madd=vec2(0.5,0.5);\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\nvUV=(position*madd+madd)*scale;gl_Position=vec4(position,0.0,1.0);\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    Op.b.ShadersStore[op] || (Op.b.ShadersStore[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

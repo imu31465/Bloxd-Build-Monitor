@@ -1,508 +1,649 @@
 export const id = 247;
 export const ids = [247];
 export const modules = {
-  40942: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => KD,
-      d: () => rD
+  38281: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Yp,
+      h: () => Op,
+      i: () => xp,
+      l: () => op,
+      o: () => Sp,
+      q: () => Ip
     });
-    var pD = wD(1941);
-    let sD = !1;
+    const Op = 1.001,
+      op = .501,
+      Ip = .025,
+      Sp = .75,
+      xp = .08,
+      Lp = 4;
 
-    function KD() {
-      sD = !0
-    }
-
-    function rD() {
-      sD && (sD = !1, (0, pD.b)())
+    function Yp() {
+      const pp = op,
+        ip = Ip,
+        cp = pp - ip / 2,
+        Op = (2 * pp - 2 * ip) / (2 * Lp - 1),
+        Sp = [];
+      for (const op of [-cp, cp])
+        for (const Ip of [-cp, cp])
+          for (let cp = 0; cp < Lp; cp++) {
+            const xp = -pp + ip + Op * (2 * cp + .5);
+            Sp.push([Op, ip, ip, xp, op, Ip]), Sp.push([ip, Op, ip, op, xp, Ip]), Sp.push([ip, ip, Op, op, Ip, xp])
+          }
+      for (const op of [-cp, cp])
+        for (const pp of [-cp, cp])
+          for (const Op of [-cp, cp]) Sp.push([ip, ip, ip, op, pp, Op]);
+      return Sp
     }
   },
-  40940: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => rD,
-      h: () => KD,
-      j: () => LD
+  38636: (pp, ip, cp) => {
+    cp.d(ip, {
+      B: () => Pp,
+      D: () => Up,
+      G: () => vp,
+      J: () => op,
+      b: () => Dp,
+      e: () => Lp,
+      h: () => Hp,
+      i: () => Yp,
+      k: () => xp,
+      m: () => Sp,
+      o: () => Ip,
+      p: () => kp,
+      s: () => Wp,
+      t: () => jp,
+      x: () => mp,
+      y: () => ep,
+      z: () => dp
     });
-    var pD = wD(40506),
-      sD = wD(40516);
+    var Op = cp(9427);
 
-    function KD(DD) {
-      if (DD.queries.drawCensus() < pD.yb.BYTES) return null;
-      const zD = DD.memoryData(DD.scratch(), pD.yb.BYTES, 4, "the draw census");
-      return null === zD ? null : {
-        terrainOpaque: pD.yb.terrainOpaque(zD, 0),
-        terrainTransparent: pD.yb.terrainTransparent(zD, 0),
-        terrainPack: pD.yb.terrainPack(zD, 0),
-        earthSky: pD.yb.earthSky(zD, 0),
-        skyMeshes: pD.yb.skyMeshes(zD, 0),
-        regular: pD.yb.regular(zD, 0),
-        thin: pD.yb.thin(zD, 0),
-        line: pD.yb.line(zD, 0),
-        text: pD.yb.text(zD, 0),
-        particles: pD.yb.particles(zD, 0),
-        terrainParts: pD.yb.terrainParts(zD, 0),
-        terrainCompiling: pD.yb.terrainCompiling(zD, 0),
-        ringCopiesMax: pD.yb.ringCopiesMax(zD, 0),
-        ringBusyWrites: pD.yb.ringBusyWrites(zD, 0)
+    function op(pp) {
+      return Math.floor(pp).toLocaleString("en-US")
+    }
+    const Ip = 2e3,
+      Sp = .005,
+      xp = .001,
+      Lp = 2,
+      Yp = "Fluid Tank",
+      Dp = "Coolant Mixer",
+      Ap = 144;
+
+    function Pp(pp) {
+      const ip = pp.split("|")[0];
+      return (0, Op.i)(ip) ? ip === Op.c ? "cryo" : "water" : null
+    }
+    const Wp = [
+        [1, 0, 0],
+        [-1, 0, 0],
+        [0, 1, 0],
+        [0, -1, 0],
+        [0, 0, 1],
+        [0, 0, -1]
+      ],
+      yp = 63;
+
+    function Up(pp) {
+      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+      const cp = ip ? function(pp, ip, cp) {
+        const Op = Wp.findIndex((Op => {
+          let [op, Ip, Sp] = Op;
+          return op === pp && Ip === ip && Sp === cp
+        }));
+        return Op < 0 ? 0 : 1 << Op
+      }(ip[0], ip[1], ip[2]) : 0;
+      return "maker" === pp ? {
+        kind: pp,
+        faces: cp
+      } : "user" === pp ? {
+        kind: pp,
+        faces: yp & ~cp
+      } : {
+        kind: pp,
+        faces: yp
       }
     }
 
-    function rD(DD) {
-      const {
-        terrainOpaque: zD,
-        terrainTransparent: wD,
-        earthSky: pD,
-        skyMeshes: sD,
-        regular: KD,
-        thin: rD,
-        line: LD,
-        text: cD,
-        particles: gD
-      } = DD;
-      return zD + wD + pD + sD + KD + rD + LD + cD + gD
+    function wp(pp) {
+      return "pipe" === pp || "tank" === pp || "maker" === pp
     }
 
-    function LD() {
-      const DD = (0, sD.i)();
-      return !0 === (null === DD || void 0 === DD ? void 0 : DD.isCoreRunning) ? function(DD) {
-        const zD = KD(DD);
-        if (null === zD) return [];
+    function vp(pp, ip, cp) {
+      return 0 !== (pp.faces & 1 << cp) && 0 !== (ip.faces & 1 << (1 ^ cp)) && (wp(pp.kind) || wp(ip.kind))
+    }
+    const tp = (pp, ip, cp, Op) => ({
+        input: pp,
+        inputAmount: Op,
+        output: ip,
+        outputAmount: cp
+      }),
+      Hp = {
+        Condenser: {
+          kind: "Condenser",
+          opMs: 2e3,
+          inputSlot: null,
+          fuelSlot: null,
+          outputSlots: [],
+          recipes: [],
+          powerPerOp: 60,
+          fluidMade: 12,
+          couplable: !0,
+          couplerSlot: 0
+        },
+        Centrifuge: {
+          kind: "Centrifuge",
+          opMs: 12e3,
+          inputSlot: 0,
+          fuelSlot: null,
+          outputSlots: [1, 2, 3],
+          recipes: [tp("Uranium Grit", "Uranium Pellet", 1, 12), tp("Spent Pellet", "Plutonium Pellet", 1, 4)],
+          powerPerOp: 600,
+          waterPerOp: 24
+        },
+        Synthesizer: {
+          kind: "Synthesizer",
+          opMs: 6e3,
+          inputSlot: 0,
+          fuelSlot: null,
+          outputSlots: [1, 2, 3],
+          recipes: [],
+          powerPerOp: 120,
+          waterPerOp: 12,
+          synth: !0
+        },
+        "Coolant Mixer": {
+          kind: "Coolant Mixer",
+          opMs: 12e3,
+          inputSlot: 0,
+          fuelSlot: null,
+          outputSlots: [],
+          recipes: [tp("Biomass", "", 0, 1)],
+          powerPerOp: 720,
+          waterPerOp: 144,
+          cryoMade: Ap,
+          couplable: !0,
+          couplerSlot: 1
+        }
+      };
+
+    function dp(pp, ip) {
+      return 1e3 * (null !== ip && void 0 !== ip ? ip : 0) / pp.opMs
+    }
+
+    function ep(pp) {
+      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const cp = dp(Hp["Coolant Mixer"], Ap) * ip;
+      return pp <= 0 ? 0 : Math.ceil(pp / cp - 1e-9)
+    }
+    const jp = "baf2Water",
+      kp = "baf2waterclose",
+      mp = "baf2wateropen"
+  },
+  38624: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Qp,
+      e: () => Jp
+    });
+    var Op = cp(9338),
+      op = cp(9375);
+    const Ip = [
+      [1, 0, 0],
+      [-1, 0, 0],
+      [0, 0, 1],
+      [0, 0, -1],
+      [0, 1, 0],
+      [0, -1, 0]
+    ];
+    var Sp = cp(9392),
+      xp = cp(38438),
+      Lp = cp(9385);
+    const Yp = {
+      1: [0, -1],
+      2: [-1, 0],
+      3: [0, 1],
+      4: [1, 0]
+    };
+
+    function Dp(pp) {
+      let [ip, cp] = pp;
+      return [-cp, ip]
+    }
+
+    function Ap(pp, ip) {
+      return pp[0] === ip[0] && pp[1] === ip[1]
+    }
+
+    function Pp(pp, ip) {
+      return pp[0] * ip[0] + pp[1] * ip[1] === 0
+    }
+    const Wp = [
+      [1, 0, 0],
+      [-1, 0, 0],
+      [0, 0, 1],
+      [0, 0, -1]
+    ];
+    var yp = cp(9422);
+
+    function Up(pp, ip, cp, Op, op) {
+      return ip < yp.v || ip >= yp.v + yp.w || Math.floor(pp / yp.B) === Math.floor(Op / yp.B) && Math.floor(cp / yp.B) === Math.floor(op / yp.B)
+    }
+    const wp = "Splitter",
+      vp = "Sorting Gate",
+      tp = new Set(yp.N),
+      Hp = new Set([...yp.N, "Belt Loader", "Fast Loader", vp]),
+      dp = new Set(yp.z),
+      ep = [
+        [1, 0, 0],
+        [-1, 0, 0],
+        [0, 0, 1],
+        [0, 0, -1],
+        [0, 1, 0],
+        [0, -1, 0]
+      ];
+
+    function jp(pp) {
+      var ip, cp;
+      return null !== (ip = null === (cp = Op.e[pp]) || void 0 === cp ? void 0 : cp.meta.rootName) && void 0 !== ip ? ip : ""
+    }
+
+    function kp(pp) {
+      return jp(pp) === yp.l && (0, yp.U)(Op.e[pp].name)
+    }
+    var mp = cp(9383),
+      Rp = cp(9404);
+    const qp = [
+      [1, 0, 0],
+      [-1, 0, 0],
+      [0, 0, 1],
+      [0, 0, -1]
+    ];
+
+    function Mp(pp) {
+      var ip, cp;
+      const op = null === (ip = Op.e[pp]) || void 0 === ip ? void 0 : ip.meta;
+      return (null === op || void 0 === op ? void 0 : op.rootName) !== Rp.p ? null : {
+        rot: null !== (cp = op.rot) && void 0 !== cp ? cp : 1,
+        half: (0, Rp.i)(op.rootName, op.metaStr)
+      }
+    }
+
+    function Cp(pp, ip, cp, Op) {
+      return Mp(pp(ip, cp, Op))
+    }
+
+    function Ep(pp, ip, cp, Op, op) {
+      let {
+        rot: Ip,
+        half: Sp
+      } = op;
+      const [xp, Lp] = (0, Rp.o)(Ip, Sp), Yp = Cp(pp, ip + xp, cp, Op + Lp);
+      return null !== Yp && Yp.rot === Ip && Yp.half === Rp.q[Sp]
+    }
+    var Xp = cp(38633);
+    const lp = [new class {
+      constructor() {
+        this.reshapeOffsets = Wp
+      }
+      handles(pp) {
+        var ip;
+        return "Stairs" === (null === (ip = Op.e[pp]) || void 0 === ip ? void 0 : ip.model)
+      }
+      affects(pp) {
+        return this.handles(pp)
+      }
+      shape(pp, ip, cp, op, Ip) {
+        const Sp = this.stairsOf(Ip),
+          xp = this.cornerAt(pp, ip, cp, op, Sp),
+          Yp = Sp.half === Lp.c.top ? "top" : "bot";
+        return (0, Op.f)(`${Op.e[Ip].meta.rootName}|meta|rot${Sp.rot}|${Yp}${null===xp?"":`|${xp}`}`)
+      }
+      stairsOf(pp) {
         const {
-          terrainOpaque: wD,
-          terrainTransparent: pD,
-          terrainPack: sD,
-          earthSky: LD,
-          skyMeshes: cD,
-          regular: gD,
-          thin: RD,
-          line: AD,
-          text: UD,
-          particles: fD
-        } = zD;
-        return [{
-          label: "Drawn",
-          value: `${rD(zD)}`
-        }, {
-          label: "Terrain",
-          value: `${wD} opaque / ${pD} transparent (${sD} shader pack)`
-        }, {
-          label: "Meshes / Thin bases",
-          value: `${gD} / ${RD}`
-        }, {
-          label: "Text / Lines",
-          value: `${UD} / ${AD}`
-        }, {
-          label: "Sky / Particles",
-          value: `${LD+cD} / ${fD}`
-        }]
-      }(DD.api) : []
+          rot: ip,
+          halfblockPlacement: cp
+        } = Op.e[pp].meta;
+        return {
+          rot: ip,
+          half: cp
+        }
+      }
+      stairsAt(pp, ip, cp, Op) {
+        const op = pp(ip, cp, Op);
+        return this.handles(op) ? this.stairsOf(op) : null
+      }
+      cornerAt(pp, ip, cp, Op, op) {
+        let {
+          rot: Ip,
+          half: Sp
+        } = op;
+        const xp = Yp[Ip],
+          Lp = op => {
+            let [xp, Lp] = op;
+            const Yp = this.stairsAt(pp, ip + xp, cp, Op + Lp);
+            return null !== Yp && Yp.rot === Ip && Yp.half === Sp
+          },
+          Wp = this.stairsAt(pp, ip + xp[0], cp, Op + xp[1]);
+        if (null !== Wp && Wp.half === Sp) {
+          const pp = Yp[Wp.rot];
+          if (Pp(xp, pp) && !Lp([-pp[0], -pp[1]])) return Ap(pp, Dp(xp)) ? "outerLeft" : "outerRight"
+        }
+        const yp = this.stairsAt(pp, ip - xp[0], cp, Op - xp[1]);
+        if (null !== yp && yp.half === Sp) {
+          const pp = Yp[yp.rot];
+          if (Pp(xp, pp) && !Lp(pp)) return Ap(pp, Dp(xp)) ? "innerLeft" : "innerRight"
+        }
+        return null
+      }
+    }, new class {
+      constructor() {
+        this.reshapeOffsets = Ip, this.rootIds = new Set(op.i.map((pp => (0, Op.f)(pp))))
+      }
+      handles(pp) {
+        var ip;
+        const cp = null === (ip = Op.e[pp]) || void 0 === ip ? void 0 : ip.meta;
+        return void 0 !== cp && this.rootIds.has(cp.rootId)
+      }
+      affects(pp) {
+        return this.handles(pp)
+      }
+      placedBy(pp) {
+        return Op.e[pp].meta.rootName === op.p ? null : op.p
+      }
+      shape(pp, ip, cp, Ip, Sp) {
+        const {
+          rootId: xp,
+          rootName: Lp,
+          rot: Yp
+        } = Op.e[Sp].meta;
+        let Dp = 0;
+        return op.x[Yp].forEach(((op, Sp) => {
+          var Lp;
+          let [Ap, Pp, Wp] = op;
+          const yp = null === (Lp = Op.e[pp(ip + Ap, cp + Pp, Ip + Wp)]) || void 0 === Lp ? void 0 : Lp.meta;
+          (null === yp || void 0 === yp ? void 0 : yp.rootId) === xp && yp.rot === Yp && (Dp |= 1 << Sp)
+        })), (0, Op.f)((0, op.f)(Lp, Yp, Dp))
+      }
+    }, ...Sp.b.map((pp => new xp.e(pp))), new class {
+      constructor() {
+        this.reshapeOffsets = ep
+      }
+      handles(pp) {
+        const ip = jp(pp);
+        return tp.has(ip) || ip === yp.l
+      }
+      affects(pp) {
+        const ip = jp(pp);
+        return Hp.has(ip) || dp.has(ip) || ip === wp || ip === yp.l || void 0 !== yp.e[ip]
+      }
+      shape(pp, ip, cp, op, Ip, Sp) {
+        const {
+          rootName: xp,
+          rot: Lp
+        } = Op.e[Ip].meta;
+        return xp === yp.l ? Sp ? Ip : function(pp, ip, cp, op, Ip) {
+          const [Sp, xp] = yp.h[Ip - 1];
+          for (let Lp = 1; Lp <= yp.J; Lp++) {
+            const [Yp, Dp] = [ip - Sp * Lp, op - xp * Lp], Ap = pp(Yp, cp, Dp);
+            if (jp(Ap) === yp.l && Op.e[Ap].meta.rot === Ip && Up(ip, cp, op, Yp, Dp)) return (0, Op.f)((0, yp.ab)(Ip, !kp(Ap)))
+          }
+          return (0, Op.f)((0, yp.ab)(Ip, !1))
+        }(pp, ip, cp, op, Lp) : (0, Op.f)((0, yp.P)(xp, Lp, function(pp, ip, cp, op, Ip) {
+          const [Sp, xp] = yp.h[Ip - 1], Lp = (Ip, Sp) => function(pp, ip, cp) {
+            var op;
+            const Ip = null === (op = Op.e[pp]) || void 0 === op ? void 0 : op.meta;
+            if (!Ip) return !1;
+            const Sp = Ip.rootName,
+              xp = Hp.has(Sp) || kp(pp);
+            if (!xp && !dp.has(Sp) && Sp !== wp) return !1;
+            const [Lp, Yp] = yp.h[Ip.rot - 1];
+            if (xp && Lp === -ip && Yp === -cp) return !0;
+            if (dp.has(Sp)) return Lp === ip && Yp === cp;
+            const Dp = Op.e[pp].name;
+            return (Sp === wp ? (0, yp.Y)(Dp, Lp, Yp) : Sp === vp ? [(0, yp.S)(Dp, Lp, Yp)] : []).some((pp => {
+              let [Op, op] = pp;
+              return Op === -ip && op === -cp
+            }))
+          }(pp(ip + Ip, cp, op + Sp), Ip, Sp), Yp = pp(ip - Sp, cp, op - xp), Dp = jp(Yp) === wp && Op.e[Yp].meta.rot === Ip, Ap = 1 === yp.e[jp(pp(ip, cp - 1, op))] || -1 === yp.e[jp(pp(ip, cp + 1, op))];
+          if (Ap || Dp || Lp(-Sp, -xp)) return null;
+          const Pp = Lp(-xp, Sp),
+            Wp = Lp(xp, -Sp);
+          if (Pp === Wp) return null;
+          return Pp ? "turnLeft" : "turnRight"
+        }(pp, ip, cp, op, Lp)))
+      }
+    }, new class {
+      constructor() {
+        this.reshapeOffsets = qp, this.rootId = (0, Op.f)(Rp.p)
+      }
+      handles(pp) {
+        var ip;
+        return (null === (ip = Op.e[pp]) || void 0 === ip ? void 0 : ip.meta.rootId) === this.rootId
+      }
+      affects(pp) {
+        return this.handles(pp)
+      }
+      shape(pp, ip, cp, op, Ip, Sp) {
+        const xp = Mp(Ip);
+        return (0, Op.f)((Lp = xp.rot, null !== (Yp = Sp ? this.reshapedHalf(pp, ip, cp, op, xp) : this.placedHalf(pp, ip, cp, op, xp.rot)) ? (0, Rp.e)(Rp.p, Lp, Yp) : 1 === Lp ? Rp.p : `${Rp.p}|meta|rot${Lp}`));
+        var Lp, Yp
+      }
+      placedHalf(pp, ip, cp, Op, op) {
+        const [Ip, Sp] = mp.e[op];
+        for (const [xp, Lp] of [
+            ["right", 1],
+            ["left", -1]
+          ]) {
+          const Yp = ip + Lp * Ip,
+            Dp = Op + Lp * Sp,
+            Ap = Cp(pp, Yp, cp, Dp);
+          if (null !== Ap && Ap.rot === op && (null === Ap.half || !Ep(pp, Yp, cp, Dp, Ap))) return xp
+        }
+        return null
+      }
+      reshapedHalf(pp, ip, cp, Op, op) {
+        if (null !== op.half && Ep(pp, ip, cp, Op, op)) return op.half;
+        for (const Ip of ["right", "left"]) {
+          const [Sp, xp] = (0, Rp.o)(op.rot, Ip), Lp = Cp(pp, ip + Sp, cp, Op + xp);
+          if (null !== Lp && Lp.rot === op.rot && Lp.half === Rp.q[Ip]) return Ip
+        }
+        return null
+      }
+    }, new Xp.c];
+
+    function Qp(pp, ip, cp, Op, op) {
+      let Ip = arguments.length > 5 && void 0 !== arguments[5] && arguments[5];
+      for (const Sp of lp)
+        if (Sp.handles(op)) return Sp.shape(pp, ip, cp, Op, op, Ip);
+      return op
+    }
+
+    function Jp(pp) {
+      for (const Op of lp) {
+        var ip, cp;
+        if (Op.handles(pp)) return null !== (ip = null === (cp = Op.placedBy) || void 0 === cp ? void 0 : cp.call(Op, pp)) && void 0 !== ip ? ip : null
+      }
+      return null
     }
   },
-  40919: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => ID,
-      f: () => UD,
-      g: () => fD
+  38633: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Rp,
+      e: () => dp,
+      h: () => Hp
     });
-    var pD = wD(1950),
-      sD = wD(1301),
-      KD = wD(40516),
-      rD = wD(40535),
-      LD = wD(40540),
-      cD = wD(40558);
-    const gD = new sD.b;
-    let RD = !1;
+    var Op = cp(9338),
+      op = cp(9359),
+      Ip = cp(9427),
+      Sp = cp(38636),
+      xp = cp(9422);
+    const Lp = (0, Sp.D)("pipe"),
+      Yp = (0, Sp.D)("tank"),
+      Dp = (0, Sp.D)("port"),
+      Ap = "Reactor Port";
 
-    function AD(DD) {
-      const zD = (0, KD.i)();
-      return null !== zD && +DD === zD.api.localId
+    function Pp(pp, ip, cp) {
+      const Op = new Set([Ip.d, Ip.c, Ap, ...ip, ...cp, ...pp ? [Sp.i] : []]);
+      return {
+        makers: new Set(ip),
+        roots: Op
+      }
+    }
+    const Wp = {
+        water: Pp(!0, ["Condenser"], ["Centrifuge", "Synthesizer", Sp.b]),
+        cryo: Pp(!1, [Sp.b], [])
+      },
+      yp = new Set([...Wp.water.roots, ...Wp.cryo.roots]),
+      Up = {
+        nx: [-1, 0, 0],
+        ny: [0, -1, 0],
+        nz: [0, 0, -1],
+        px: [1, 0, 0],
+        py: [0, 1, 0],
+        pz: [0, 0, 1]
+      },
+      wp = op.g.map((pp => Up[pp])),
+      vp = wp.map((pp => {
+        let [ip, cp, Op] = pp;
+        return Sp.s.findIndex((pp => {
+          let [op, Ip, Sp] = pp;
+          return op === ip && Ip === cp && Sp === Op
+        }))
+      }));
+
+    function tp(pp) {
+      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "water";
+      const cp = Op.e[pp],
+        op = null === cp || void 0 === cp ? void 0 : cp.meta.rootName,
+        Pp = Wp[ip];
+      if (!op || !Pp.roots.has(op)) return null;
+      if ((0, Ip.i)(op)) return (0, Sp.B)(cp.name) === ip ? Lp : null;
+      if (op === Sp.i) return Yp;
+      if (op === Ap) return cp.name.endsWith("|Water") ? Dp : null;
+      const [yp, Up] = xp.h[(cp.meta.rot || 1) - 1];
+      return (0, Sp.D)(Pp.makers.has(op) ? "maker" : "user", [-yp, 0, -Up])
     }
 
-    function UD() {
-      RD || (RD = !0, (0, cD.l)(rD.j, (DD => {
-        var zD, wD;
-        const pD = (0, LD.e)(rD.j, DD);
-        if (!(0, LD.b)(pD)) return;
-        const sD = pD;
-        AD(sD.np) && fD(sD.Mp, {
-          icon: sD.Ss,
-          level: sD.Ws,
-          displayName: null !== (zD = sD.Op) && void 0 !== zD ? zD : null,
-          durationMs: null !== (wD = sD.ls) && void 0 !== wD ? wD : null
-        })
-      })), (0, cD.l)(rD.S, (DD => {
-        const zD = (0, LD.e)(rD.S, DD);
-        if (!(0, LD.b)(zD)) return;
-        const wD = zD;
-        AD(wD.np) && pD.d.remove(wD.Mp)
-      })), (0, cD.f)((() => {
-        pD.d.clear()
-      })))
-    }
-
-    function fD(DD, zD) {
-      pD.d.update(DD, zD), gD.forEach((zD => {
-        zD(DD)
+    function Hp(pp, ip, cp, op) {
+      let Ip = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water";
+      const {
+        makers: xp
+      } = Wp[Ip];
+      return wp.some(((Yp, Dp) => {
+        var Ap, Pp;
+        let [Wp, yp, Up] = Yp;
+        const wp = pp(ip + Wp, cp + yp, op + Up),
+          Hp = tp(wp, Ip);
+        return null !== Hp && xp.has(null !== (Ap = null === (Pp = Op.e[wp]) || void 0 === Pp ? void 0 : Pp.meta.rootName) && void 0 !== Ap ? Ap : "") && !(0, Sp.G)(Lp, Hp, vp[Dp])
       }))
     }
-    const ID = {
-      localEffectUpdated: {
-        watch: DD => gD.add(DD)
-      }
+
+    function dp(pp) {
+      const ip = Op.e[pp];
+      return ip ? (0, Sp.B)(ip.name) : null
     }
-  },
-  40928: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => RD
-    });
-    var pD = wD(4820),
-      sD = wD(4817),
-      KD = wD(40544),
-      rD = wD(40558);
-    const LD = new Set(pD.M),
-      cD = pD.M.map((DD => (new TextEncoder).encode(DD))),
-      gD = new Map;
+    let ep = null;
 
-    function RD(DD, zD) {
-      var wD;
-      return null === (wD = gD.get(DD)) || void 0 === wD ? void 0 : wD[zD]
-    }(0, rD.l)(pD.ec.NewOtherEntitySettings, (DD => {
-      DD.payloadKind === sD.pc.Msgpack && cD.some((zD => function(DD, zD) {
-        const wD = zD[0];
-        for (let pD = DD.indexOf(wD); - 1 !== pD && pD + zD.length <= DD.length; pD = DD.indexOf(wD, pD + 1)) {
-          let wD = 1;
-          for (; wD < zD.length && DD[pD + wD] === zD[wD];) wD++;
-          if (wD === zD.length) return !0
-        }
-        return !1
-      }(DD.payload, zD))) && function(DD) {
-        if (null === DD || "object" !== typeof DD || null === DD.settings || "object" !== typeof DD.settings) return;
-        const zD = String(DD.eId),
-          wD = DD.settings;
-        let pD = gD.get(zD);
-        for (const sD in wD) {
-          if (!LD.has(sD)) continue;
-          const DD = wD[sD];
-          null === DD || void 0 === DD ? pD && delete pD[sD] : (pD ??= {}, pD[sD] = DD)
-        }
-        pD && gD.set(zD, pD)
-      }((0, KD.b)(DD.payload))
-    })), (0, rD.f)((() => {
-      gD.clear()
-    }))
-  },
-  40916: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => fD,
-      e: () => gD,
-      g: () => AD
-    });
-    var pD = wD(38967),
-      sD = wD(1932),
-      KD = wD(1301),
-      rD = wD(40535),
-      LD = wD(40540),
-      cD = wD(40558);
-    const gD = new pD.e;
-    let RD = {};
-
-    function AD(DD) {
-      return RD[DD]
-    }
-    const UD = new KD.b;
-
-    function fD(DD) {
-      return UD.add(DD)
-    }
-
-    function ID(DD) {
-      UD.callEach(DD, "a roster listener")
-    }(0, cD.l)(rD.cb, (DD => {
-      const zD = (0, LD.e)(rD.cb, DD);
-      if (void 0 === zD) return;
-      const wD = zD.Hw.some((DD => {
-          let {
-            qw: zD,
-            Dp: wD
-          } = DD;
-          return null !== wD && gD.has(zD) && gD.getName(zD) !== wD
-        })),
-        {
-          added: pD,
-          removed: KD,
-          settingChanges: cD
-        } = gD.apply(zD),
-        RD = new Set;
-      for (const sD of cD)
-        for (const DD in sD.settings) RD.add(DD);
-      const AD = wD || pD.length > 0 || KD.length > 0;
-      (AD || RD.has("hideNameSeed")) && function() {
-        const DD = new Map;
-        for (const zD of gD.ids()) {
-          const wD = gD.getName(zD),
-            pD = gD.getSetting(zD, "hideNameSeed");
-          void 0 !== wD && void 0 !== pD && null !== pD && DD.set(wD, pD)
-        }
-        sD.d.replaceAll(DD)
-      }(), ID({
-        kind: "roster",
-        members: AD,
-        settings: RD
-      })
-    })), (0, cD.l)(rD.O, (DD => {
-      const zD = (0, LD.e)(rD.O, DD);
-      if (void 0 !== zD) {
-        for (const {
-            Vp: DD,
-            Pp: wD,
-            Cp: pD
-          }
-          of zD) RD[DD] = {
-          ...RD[DD],
-          [wD]: pD
-        };
-        ID({
-          kind: "cosmetics",
-          updates: zD
-        })
-      }
-    })), (0, cD.f)((() => {
-      gD.clear(), RD = {}, sD.d.clear(), ID({
-        kind: "reset"
-      })
-    })), (0, cD.h)((() => {
-      gD.clear(), ID({
-        kind: "reset"
-      })
-    }))
-  },
-  40931: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => CD,
-      f: () => GD,
-      g: () => jD,
-      h: () => dD
-    });
-    var pD = wD(1270),
-      sD = wD(608),
-      KD = wD(103),
-      rD = wD(4820),
-      LD = wD(40506),
-      cD = wD(40529),
-      gD = wD(40516),
-      RD = wD(40928),
-      AD = wD(40916),
-      UD = wD(40540),
-      fD = wD(40558);
-
-    function ID(DD) {
-      let {
-        deadEId: zD,
-        killerEId: wD,
-        killerLifeformType: pD,
-        withItem: sD,
-        killstreak: KD
-      } = DD;
-      return {
-        killer: OD({
-          eId: wD,
-          lifeformType: pD
-        }),
-        victim: OD({
-          eId: zD
-        }),
-        withItem: sD,
-        killstreak: KD
-      }
-    }
-
-    function BD(DD) {
-      let {
-        killer: zD,
-        victim: wD,
-        withItem: pD
-      } = DD;
-      return {
-        killer: OD(zD),
-        victim: OD(wD),
-        withItem: pD,
-        killstreak: 0
-      }
-    }
-
-    function GD(DD) {
-      XD && PD((() => "killed" === DD.kind ? ID(DD.body) : BD(DD.body)))
-    }
-    const hD = "#2727f1",
-      nD = "#912c2c";
-
-    function MD(DD, zD) {
-      var wD;
-      return AD.e.has(DD) ? null === (wD = AD.e.getSettings(DD)) || void 0 === wD ? void 0 : wD[zD] : (0, RD.d)(DD, zD)
-    }
-
-    function OD(DD) {
-      var zD, wD, rD, LD, RD;
-      let {
-        eId: UD,
-        name: fD,
-        colour: ID,
-        lifeformType: BD
-      } = DD;
-      if (void 0 === UD || null === UD || "" === UD) {
-        const DD = fD || null;
-        return {
-          id: null,
-          shownName: DD,
-          lifeformType: null === DD && null !== BD && void 0 !== BD ? BD : null,
-          colour: ID || null,
-          local: !1,
-          realName: null
-        }
-      }
-      const GD = String(UD),
-        OD = null === (zD = (0, gD.i)()) || void 0 === zD ? void 0 : zD.api,
-        JD = void 0 !== OD && String(OD.localId) === GD,
-        ED = null !== (wD = AD.e.getName(GD)) && void 0 !== wD ? wD : null,
-        QD = null !== (rD = MD(GD, "hideNameSeed")) && void 0 !== rD ? rD : null;
-      let XD = null === ED ? null : (0, pD.e)(ED, !KD.featureFlags.canSeeRealPlayerNames, QD) || null,
-        VD = null;
-      if (null === XD && void 0 !== OD) {
-        const DD = OD.getEntityType(GD);
-        "Player" !== DD && (XD = (0, cD.h)(OD, +GD) || null), VD = sD.k.includes(DD) ? DD : null
-      }
-      return {
-        id: GD,
-        shownName: XD,
-        lifeformType: null === XD && null !== (LD = null !== (RD = VD) && void 0 !== RD ? RD : BD) && void 0 !== LD ? LD : null,
-        colour: ID || MD(GD, "killfeedColour") || (JD ? hD : nD),
-        local: JD,
-        realName: ED
-      }
-    }
-    const JD = 32;
-    let ED = [],
-      QD = null,
-      XD = !1,
-      VD = !1;
-
-    function PD(DD) {
-      null === QD ? (ED.length === JD && ED.shift(), ED.push(DD)) : QD(DD())
-    }
-
-    function CD() {
-      VD || (VD = !0, (0, fD.l)(rD.ec.PlayerKilled, (DD => {
-        const zD = (0, UD.i)(DD);
-        (0, UD.b)(zD) && PD((() => ID(zD)))
-      })), (0, fD.l)(rD.ec.CustomKillfeed, (DD => {
-        const zD = (0, UD.i)(DD);
-        (0, UD.b)(zD) && (0, UD.b)(zD.killer) && (0, UD.b)(zD.victim) && PD((() => BD(zD)))
-      })), (0, fD.f)((() => {
-        ED = []
-      })))
-    }
-    const xD = Object.freeze([0, 0, 0]),
-      TD = [0, 0, 0],
-      bD = [0, 0, 0],
-      jD = {
-        kill: {
-          watch(DD) {
-            if (XD = !0, 0 === ED.length) return QD = DD, () => {
-              XD = !1, QD = null
-            };
-            const zD = setTimeout((() => {
-              const zD = ED;
-              ED = [], QD = DD;
-              for (const pD of zD) try {
-                DD(pD())
-              } catch (wD) {
-                console.error("[bloxd-wasm-client] a kept kill couldn't be handed on", wD)
-              }
-            }), 0);
-            return () => {
-              clearTimeout(zD), XD = !1, QD = null
-            }
-          }
-        }
-      },
-      dD = {
-        localPos() {
-          const DD = (0, gD.i)();
-          if (null === DD) return xD;
-          const zD = DD.api.apiView;
-          for (let wD = 0; wD < 3; wD++) TD[wD] = LD.v.localPos(zD, 0, wD);
-          return TD
-        },
-        targetedBlockPos() {
-          const DD = (0, gD.i)();
-          if (null === DD || LD.v.targetBlockId(DD.api.apiView, 0) === LD.Xc) return null;
-          for (let zD = 0; zD < 3; zD++) bD[zD] = LD.v.targetBlock(DD.api.apiView, 0, zD);
-          return bD
-        }
-      }
-  },
-  38967: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => pD
-    });
-    class pD {
-      constructor() {
-        this.members = new Map
-      }
-      apply(DD) {
-        const zD = {
-          added: [],
-          removed: [],
-          settingChanges: []
-        };
-        for (const pD of DD.Hw) {
-          let DD = this.members.get(pD.qw);
-          if (DD || (DD = {
-              name: null,
-              settings: {}
-            }, this.members.set(pD.qw, DD), zD.added.push(pD.qw)), null !== pD.Dp && (DD.name = pD.Dp), null !== pD.zp || pD.wp.length > 0) {
-            const wD = null === pD.zp ? {} : JSON.parse(pD.zp);
-            Object.assign(DD.settings, wD);
-            for (const zD of pD.wp) delete DD.settings[zD], wD[zD] = void 0;
-            zD.settingChanges.push({
-              playerId: pD.qw,
-              settings: wD
+    function jp(pp) {
+      if (!ep) {
+        ep = new Map;
+        for (const pp of ["water", "cryo"])
+          for (let ip = 0; ip < 64; ip++)
+            for (const cp of [!1, !0]) ep.set((0, Ip.j)(pp, ip, cp), {
+              tW: pp,
+              mask: ip,
+              full: cp
             })
-          }
-        }
-        for (const pD of DD.sp) {
-          const DD = this.members.get(pD);
-          var wD;
-          if (DD) this.members.delete(pD), zD.removed.push({
-            playerId: pD,
-            name: null !== (wD = DD.name) && void 0 !== wD ? wD : void 0
-          })
-        }
-        return zD
       }
-      has(DD) {
-        return this.members.has(DD)
+      return ep.get(pp)
+    }
+    const kp = new Map(Array.from({
+      length: Ip.h + 1
+    }, ((pp, ip) => [(0, Ip.m)(ip), ip])));
+
+    function mp(pp, ip, cp, op, Ip, Sp) {
+      return wp.some(((xp, Lp) => {
+        var Yp, Dp, Ap;
+        let [Pp, Wp, yp] = xp;
+        if (0 === (Sp >> Lp & 1)) return !1;
+        const Up = null !== (Yp = null === (Dp = Op.e[pp(ip + Pp, cp + Wp, op + yp)]) || void 0 === Dp ? void 0 : Dp.name) && void 0 !== Yp ? Yp : "",
+          wp = jp(Up);
+        return wp ? wp.tW === Ip && wp.full : (null !== (Ap = function(pp) {
+          var ip;
+          return null !== (ip = kp.get(pp)) && void 0 !== ip ? ip : null
+        }(Up)) && void 0 !== Ap ? Ap : 0) > 0
+      }))
+    }
+    class Rp {
+      constructor() {
+        this.reshapeOffsets = wp
       }
-      ids() {
-        return [...this.members.keys()]
+      handles(pp) {
+        return null !== dp(pp)
       }
-      getName(DD) {
-        var zD, wD;
-        return null !== (zD = null === (wD = this.members.get(DD)) || void 0 === wD ? void 0 : wD.name) && void 0 !== zD ? zD : void 0
+      affects(pp) {
+        var ip, cp;
+        return yp.has(null !== (ip = null === (cp = Op.e[pp]) || void 0 === cp ? void 0 : cp.meta.rootName) && void 0 !== ip ? ip : "")
       }
-      getSettings(DD) {
-        var zD;
-        return null === (zD = this.members.get(DD)) || void 0 === zD ? void 0 : zD.settings
+      placedBy(pp) {
+        var ip;
+        return (null === (ip = Op.e[pp]) || void 0 === ip ? void 0 : ip.meta.rootName) === Ip.c ? Ip.d : null
       }
-      getSetting(DD, zD) {
-        var wD;
-        return null === (wD = this.members.get(DD)) || void 0 === wD ? void 0 : wD.settings[zD]
+      shape(pp, ip, cp, op, xp, Yp) {
+        var Dp, Ap, Pp;
+        const Wp = null !== (Dp = null === (Ap = Op.e[xp]) || void 0 === Ap ? void 0 : Ap.name) && void 0 !== Dp ? Dp : "",
+          yp = Yp || Wp !== Ip.d ? null !== (Pp = (0, Sp.B)(Wp)) && void 0 !== Pp ? Pp : "water" : function(pp, ip, cp, Op) {
+            return wp.some(((op, Ip) => {
+              let [xp, Yp, Dp] = op;
+              const Ap = tp(pp(ip + xp, cp + Yp, Op + Dp), "cryo");
+              return null !== Ap && "port" !== Ap.kind && (0, Sp.G)(Lp, Ap, vp[Ip])
+            })) ? "cryo" : "water"
+          }(pp, ip, cp, op),
+          Up = function(pp, ip, cp, Op) {
+            let op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "water",
+              Ip = 0;
+            return wp.forEach(((xp, Yp) => {
+              let [Dp, Ap, Pp] = xp;
+              const Wp = tp(pp(ip + Dp, cp + Ap, Op + Pp), op);
+              Wp && (0, Sp.G)(Lp, Wp, vp[Yp]) && (Ip |= 1 << Yp)
+            })), Ip
+          }(pp, ip, cp, op, yp),
+          Hp = Yp ? function(pp) {
+            var ip;
+            return !0 === (null === (ip = jp(pp)) || void 0 === ip ? void 0 : ip.full)
+          }(Wp) : mp(pp, ip, cp, op, yp, Up);
+        return (0, Op.f)((0, Ip.j)(yp, Up, Hp))
       }
-      clear() {
-        this.members.clear()
-      }
+    }
+  },
+  38399: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Op,
+      e: () => Ip
+    });
+    const Op = ["Chest", "Loot Chest", "Moonstone Chest"],
+      op = [{
+        name: "Workbench",
+        exactMatch: !0
+      }, {
+        name: "Furnace",
+        exactMatch: !0
+      }, {
+        name: "Artisan Bench",
+        exactMatch: !0
+      }, {
+        name: "Potion Table",
+        exactMatch: !0
+      }, {
+        name: "Salvaging Table",
+        exactMatch: !0
+      }, {
+        name: "Enchanting Table",
+        exactMatch: !1
+      }];
+
+    function Ip(pp) {
+      return op.find((ip => ip.exactMatch ? pp === ip.name : pp.includes(ip.name)))
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

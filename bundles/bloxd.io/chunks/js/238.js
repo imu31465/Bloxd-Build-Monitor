@@ -1,248 +1,133 @@
 export const id = 238;
 export const ids = [238];
 export const modules = {
-  37752: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => sD
+  37345: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => op
     });
-    var pD = wD(37754);
-    class sD {
-      static GetPlanes(DD) {
-        const zD = [];
-        for (let wD = 0; wD < 6; wD++) zD.push(new pD.e(0, 0, 0, 0));
-        return sD.GetPlanesToRef(DD, zD), zD
+    var Op = cp(37349);
+    class op {
+      static get LastCreatedEngine() {
+        return 0 === this.Instances.length ? null : this.Instances[this.Instances.length - 1]
       }
-      static GetNearPlaneToRef(DD, zD) {
-        const wD = DD.m;
-        zD.normal.x = wD[3] + wD[2], zD.normal.y = wD[7] + wD[6], zD.normal.z = wD[11] + wD[10], zD.d = wD[15] + wD[14], zD.normalize()
-      }
-      static GetFarPlaneToRef(DD, zD) {
-        const wD = DD.m;
-        zD.normal.x = wD[3] - wD[2], zD.normal.y = wD[7] - wD[6], zD.normal.z = wD[11] - wD[10], zD.d = wD[15] - wD[14], zD.normalize()
-      }
-      static GetLeftPlaneToRef(DD, zD) {
-        const wD = DD.m;
-        zD.normal.x = wD[3] + wD[0], zD.normal.y = wD[7] + wD[4], zD.normal.z = wD[11] + wD[8], zD.d = wD[15] + wD[12], zD.normalize()
-      }
-      static GetRightPlaneToRef(DD, zD) {
-        const wD = DD.m;
-        zD.normal.x = wD[3] - wD[0], zD.normal.y = wD[7] - wD[4], zD.normal.z = wD[11] - wD[8], zD.d = wD[15] - wD[12], zD.normalize()
-      }
-      static GetTopPlaneToRef(DD, zD) {
-        const wD = DD.m;
-        zD.normal.x = wD[3] - wD[1], zD.normal.y = wD[7] - wD[5], zD.normal.z = wD[11] - wD[9], zD.d = wD[15] - wD[13], zD.normalize()
-      }
-      static GetBottomPlaneToRef(DD, zD) {
-        const wD = DD.m;
-        zD.normal.x = wD[3] + wD[1], zD.normal.y = wD[7] + wD[5], zD.normal.z = wD[11] + wD[9], zD.d = wD[15] + wD[13], zD.normalize()
-      }
-      static GetPlanesToRef(DD, zD) {
-        sD.GetNearPlaneToRef(DD, zD[0]), sD.GetFarPlaneToRef(DD, zD[1]), sD.GetLeftPlaneToRef(DD, zD[2]), sD.GetRightPlaneToRef(DD, zD[3]), sD.GetTopPlaneToRef(DD, zD[4]), sD.GetBottomPlaneToRef(DD, zD[5])
-      }
-      static IsPointInFrustum(DD, zD) {
-        for (let wD = 0; wD < 6; wD++)
-          if (zD[wD].dotCoordinate(DD) < 0) return !1;
-        return !0
+      static get LastCreatedScene() {
+        return this._LastCreatedScene
       }
     }
+    op.Instances = [], op.OnEnginesDisposedObservable = new Op.d, op._LastCreatedScene = null, op.UseFallbackTexture = !0, op.FallbackTexture = ""
   },
-  37754: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => sD
+  38900: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Ip
     });
-    var pD = wD(37079);
-    class sD {
-      constructor(DD, zD, wD, sD) {
-        this.normal = new pD.s(DD, zD, wD), this.d = sD
-      }
-      QpD() {
-        return [this.normal.x, this.normal.y, this.normal.z, this.d]
-      }
-      clone() {
-        return new sD(this.normal.x, this.normal.y, this.normal.z, this.d)
-      }
-      getClassName() {
-        return "Plane"
-      }
-      getHashCode() {
-        let DD = this.normal.getHashCode();
-        return DD = 397 * DD ^ this.d, DD
-      }
-      normalize() {
-        const DD = Math.sqrt(this.normal.x * this.normal.x + this.normal.y * this.normal.y + this.normal.z * this.normal.z);
-        let zD = 0;
-        return 0 !== DD && (zD = 1 / DD), this.normal.x *= zD, this.normal.y *= zD, this.normal.z *= zD, this.d *= zD, this
-      }
-      transform(DD) {
-        const zD = sD._TmpMatrix;
-        DD.invertToRef(zD);
-        const wD = zD.m,
-          pD = this.normal.x,
-          KD = this.normal.y,
-          rD = this.normal.z,
-          LD = this.d,
-          cD = pD * wD[0] + KD * wD[1] + rD * wD[2] + LD * wD[3],
-          gD = pD * wD[4] + KD * wD[5] + rD * wD[6] + LD * wD[7],
-          RD = pD * wD[8] + KD * wD[9] + rD * wD[10] + LD * wD[11],
-          AD = pD * wD[12] + KD * wD[13] + rD * wD[14] + LD * wD[15];
-        return new sD(cD, gD, RD, AD)
-      }
-      dotCoordinate(DD) {
-        return this.normal.x * DD.x + this.normal.y * DD.y + this.normal.z * DD.z + this.d
-      }
-      copyFromPoints(DD, zD, wD) {
-        const pD = zD.x - DD.x,
-          sD = zD.y - DD.y,
-          KD = zD.z - DD.z,
-          rD = wD.x - DD.x,
-          LD = wD.y - DD.y,
-          cD = wD.z - DD.z,
-          gD = sD * cD - KD * LD,
-          RD = KD * rD - pD * cD,
-          AD = pD * LD - sD * rD,
-          UD = Math.sqrt(gD * gD + RD * RD + AD * AD);
-        let fD;
-        return fD = 0 !== UD ? 1 / UD : 0, this.normal.x = gD * fD, this.normal.y = RD * fD, this.normal.z = AD * fD, this.d = -(this.normal.x * DD.x + this.normal.y * DD.y + this.normal.z * DD.z), this
-      }
-      isFrontFacingTo(DD, zD) {
-        return pD.s.Dot(this.normal, DD) <= zD
-      }
-      signedDistanceTo(DD) {
-        return pD.s.Dot(DD, this.normal) + this.d
-      }
-      static FromArray(DD) {
-        return new sD(DD[0], DD[1], DD[2], DD[3])
-      }
-      static FromPoints(DD, zD, wD) {
-        const pD = new sD(0, 0, 0, 0);
-        return pD.copyFromPoints(DD, zD, wD), pD
-      }
-      static FromPositionAndNormal(DD, zD) {
-        const wD = new sD(0, 0, 0, 0);
-        return this.FromPositionAndNormalToRef(DD, zD, wD)
-      }
-      static FromPositionAndNormalToRef(DD, zD, wD) {
-        return wD.normal.pC(zD), wD.normal.normalize(), wD.d = -DD.dot(wD.normal), wD
-      }
-      static SignedDistanceToPlaneFromPositionAndNormal(DD, zD, wD) {
-        const sD = -(zD.x * DD.x + zD.y * DD.y + zD.z * DD.z);
-        return pD.s.Dot(wD, zD) + sD
-      }
-    }
-    sD._TmpMatrix = pD.e.Identity()
-  },
-  38658: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => KD
-    });
-    var pD = wD(38662);
-    const sD = (DD, zD, wD) => DD ? DD.getClassName && "Mesh" === DD.getClassName() ? null : !DD.getClassName || "SubMesh" !== DD.getClassName() && "PhysicsBody" !== DD.getClassName() ? DD.clone ? DD.clone() : Array.isArray(DD) ? DD.slice() : wD && "object" === typeof DD ? {
-      ...DD
-    } : null : DD.clone(zD) : null;
-    class KD {
-      static DeepCopy(DD, zD, wD, KD) {
-        let rD = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        const LD = function(DD) {
-          const zD = [];
+    var Op = cp(38905);
+    const op = (pp, ip, cp) => pp ? pp.getClassName && "Mesh" === pp.getClassName() ? null : !pp.getClassName || "SubMesh" !== pp.getClassName() && "PhysicsBody" !== pp.getClassName() ? pp.clone ? pp.clone() : Array.isArray(pp) ? pp.slice() : cp && "object" === typeof pp ? {
+      ...pp
+    } : null : pp.clone(ip) : null;
+    class Ip {
+      static DeepCopy(pp, ip, cp, Ip) {
+        let Sp = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        const xp = function(pp) {
+          const ip = [];
           do {
-            const wD = Object.getOwnPropertyNames(DD);
-            for (const DD of wD) - 1 === zD.indexOf(DD) && zD.push(DD)
-          } while (DD = Object.getPrototypeOf(DD));
-          return zD
-        }(DD);
-        for (const gD of LD) {
-          if ("_" === gD[0] && (!KD || -1 === KD.indexOf(gD))) continue;
-          if (gD.endsWith("Observable")) continue;
-          if (wD && -1 !== wD.indexOf(gD)) continue;
-          const LD = DD[gD],
-            RD = typeof LD;
-          if ("function" !== RD) try {
-            if ("object" === RD)
-              if (LD instanceof Uint8Array) zD[gD] = Uint8Array.from(LD);
-              else if (LD instanceof Array) {
-              if (zD[gD] = [], LD.length > 0)
-                if ("object" == typeof LD[0])
-                  for (let DD = 0; DD < LD.length; DD++) {
-                    const wD = sD(LD[DD], zD, rD); - 1 === zD[gD].indexOf(wD) && zD[gD].push(wD)
-                  } else zD[gD] = LD.slice(0)
-            } else zD[gD] = sD(LD, zD, rD);
-            else zD[gD] = LD
-          } catch (cD) {
-            pD.d.Warn(cD.message)
+            const cp = Object.getOwnPropertyNames(pp);
+            for (const pp of cp) - 1 === ip.indexOf(pp) && ip.push(pp)
+          } while (pp = Object.getPrototypeOf(pp));
+          return ip
+        }(pp);
+        for (const Yp of xp) {
+          if ("_" === Yp[0] && (!Ip || -1 === Ip.indexOf(Yp))) continue;
+          if (Yp.endsWith("Observable")) continue;
+          if (cp && -1 !== cp.indexOf(Yp)) continue;
+          const xp = pp[Yp],
+            Dp = typeof xp;
+          if ("function" !== Dp) try {
+            if ("object" === Dp)
+              if (xp instanceof Uint8Array) ip[Yp] = Uint8Array.from(xp);
+              else if (xp instanceof Array) {
+              if (ip[Yp] = [], xp.length > 0)
+                if ("object" == typeof xp[0])
+                  for (let pp = 0; pp < xp.length; pp++) {
+                    const cp = op(xp[pp], ip, Sp); - 1 === ip[Yp].indexOf(cp) && ip[Yp].push(cp)
+                  } else ip[Yp] = xp.slice(0)
+            } else ip[Yp] = op(xp, ip, Sp);
+            else ip[Yp] = xp
+          } catch (Lp) {
+            Op.e.Warn(Lp.message)
           }
         }
       }
     }
   },
-  37891: (DD, zD, wD) => {
-    function pD() {
-      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (DD => {
-        const zD = 16 * Math.random() | 0;
-        return ("x" === DD ? zD : 3 & zD | 8).toString(16)
+  38124: (pp, ip, cp) => {
+    function Op() {
+      return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, (pp => {
+        const ip = 16 * Math.random() | 0;
+        return ("x" === pp ? ip : 3 & ip | 8).toString(16)
       }))
     }
-    wD.d(zD, {
-      c: () => pD
+    cp.d(ip, {
+      e: () => Op
     })
   },
-  38662: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => pD
+  38905: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Op
     });
-    class pD {
-      static _CheckLimit(DD, zD) {
-        let wD = pD._LogLimitOutputs[DD];
-        return wD ? wD.current++ : (wD = {
-          limit: zD,
+    class Op {
+      static _CheckLimit(pp, ip) {
+        let cp = Op._LogLimitOutputs[pp];
+        return cp ? cp.current++ : (cp = {
+          limit: ip,
           current: 1
-        }, pD._LogLimitOutputs[DD] = wD), wD.current <= wD.limit
+        }, Op._LogLimitOutputs[pp] = cp), cp.current <= cp.limit
       }
-      static _GenerateLimitMessage(DD) {
-        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-        const wD = pD._LogLimitOutputs[DD];
-        if (!wD || !pD.MessageLimitReached) return;
-        const sD = this._Levels[zD];
-        wD.current === wD.limit && pD[sD.name](pD.MessageLimitReached.replace(/%LIMIT%/g, "" + wD.limit).replace(/%TYPE%/g, sD.name ?? ""))
+      static _GenerateLimitMessage(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+        const cp = Op._LogLimitOutputs[pp];
+        if (!cp || !Op.MessageLimitReached) return;
+        const op = this._Levels[ip];
+        cp.current === cp.limit && Op[op.name](Op.MessageLimitReached.replace(/%LIMIT%/g, "" + cp.limit).replace(/%TYPE%/g, op.name ?? ""))
       }
-      static _AddLogEntry(DD) {
-        pD._LogCache = DD + pD._LogCache, pD.OnNewCacheEntry && pD.OnNewCacheEntry(DD)
+      static _AddLogEntry(pp) {
+        Op._LogCache = pp + Op._LogCache, Op.OnNewCacheEntry && Op.OnNewCacheEntry(pp)
       }
-      static _FormatMessage(DD) {
-        const zD = DD => DD < 10 ? "0" + DD : "" + DD,
-          wD = new Date;
-        return "[" + zD(wD.getHours()) + ":" + zD(wD.getMinutes()) + ":" + zD(wD.getSeconds()) + "]: " + DD
+      static _FormatMessage(pp) {
+        const ip = pp => pp < 10 ? "0" + pp : "" + pp,
+          cp = new Date;
+        return "[" + ip(cp.getHours()) + ":" + ip(cp.getMinutes()) + ":" + ip(cp.getSeconds()) + "]: " + pp
       }
-      static _LogDisabled(DD, zD) {}
+      static _LogDisabled(pp, ip) {}
       static _LogEnabled() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-          zD = arguments.length > 1 ? arguments[1] : void 0,
-          wD = arguments.length > 2 ? arguments[2] : void 0;
-        const sD = Array.isArray(zD) ? zD[0] : zD;
-        if (void 0 !== wD && !pD._CheckLimit(sD, wD)) return;
-        const KD = pD._FormatMessage(sD),
-          rD = this._Levels[DD],
-          LD = Array.isArray(zD) ? zD.slice(1) : [];
-        rD.logFunc && rD.logFunc("BJS - " + KD, ...LD);
-        const cD = `<div style='color:${rD.color}'>${KD}</div><br>`;
-        pD._AddLogEntry(cD), pD._GenerateLimitMessage(sD, DD)
+        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
+          ip = arguments.length > 1 ? arguments[1] : void 0,
+          cp = arguments.length > 2 ? arguments[2] : void 0;
+        const op = Array.isArray(ip) ? ip[0] : ip;
+        if (void 0 !== cp && !Op._CheckLimit(op, cp)) return;
+        const Ip = Op._FormatMessage(op),
+          Sp = this._Levels[pp],
+          xp = Array.isArray(ip) ? ip.slice(1) : [];
+        Sp.logFunc && Sp.logFunc("BJS - " + Ip, ...xp);
+        const Lp = `<div style='color:${Sp.color}'>${Ip}</div><br>`;
+        Op._AddLogEntry(Lp), Op._GenerateLimitMessage(op, pp)
       }
       static get LogCache() {
-        return pD._LogCache
+        return Op._LogCache
       }
       static ClearLogCache() {
-        pD._LogCache = "", pD._LogLimitOutputs = {}, pD.errorsCount = 0
+        Op._LogCache = "", Op._LogLimitOutputs = {}, Op.errorsCount = 0
       }
-      static set LogLevels(DD) {
-        pD.Log = pD._LogDisabled, pD.Warn = pD._LogDisabled, pD.Error = pD._LogDisabled;
-        const zD = [pD.MessageLogLevel, pD.WarningLogLevel, pD.ErrorLogLevel];
-        for (const wD of zD)
-          if ((DD & wD) === wD) {
-            const DD = this._Levels[wD];
-            pD[DD.name] = pD._LogEnabled.bind(pD, wD)
+      static set LogLevels(pp) {
+        Op.Log = Op._LogDisabled, Op.Warn = Op._LogDisabled, Op.Error = Op._LogDisabled;
+        const ip = [Op.MessageLogLevel, Op.WarningLogLevel, Op.ErrorLogLevel];
+        for (const cp of ip)
+          if ((pp & cp) === cp) {
+            const pp = this._Levels[cp];
+            Op[pp.name] = Op._LogEnabled.bind(Op, cp)
           }
       }
     }
-    pD.NoneLogLevel = 0, pD.MessageLogLevel = 1, pD.WarningLogLevel = 2, pD.ErrorLogLevel = 4, pD.AllLogLevel = 7, pD.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", pD._LogCache = "", pD._LogLimitOutputs = {}, pD._Levels = [{}, {
+    Op.NoneLogLevel = 0, Op.MessageLogLevel = 1, Op.WarningLogLevel = 2, Op.ErrorLogLevel = 4, Op.AllLogLevel = 7, Op.MessageLimitReached = "Too many %TYPE%s (%LIMIT%), no more %TYPE%s will be reported for this message.", Op._LogCache = "", Op._LogLimitOutputs = {}, Op._Levels = [{}, {
       color: "white",
       logFunc: console.log,
       name: "Log"
@@ -254,8 +139,169 @@ export const modules = {
       color: "red",
       logFunc: console.error,
       name: "Error"
-    }], pD.errorsCount = 0, pD.Log = pD._LogEnabled.bind(pD, pD.MessageLogLevel), pD.Warn = pD._LogEnabled.bind(pD, pD.WarningLogLevel), pD.Error = pD._LogEnabled.bind(pD, pD.ErrorLogLevel)
+    }], Op.errorsCount = 0, Op.Log = Op._LogEnabled.bind(Op, Op.MessageLogLevel), Op.Warn = Op._LogEnabled.bind(Op, Op.WarningLogLevel), Op.Error = Op._LogEnabled.bind(Op, Op.ErrorLogLevel)
+  },
+  37349: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Sp
+    });
+    const Op = "undefined" !== typeof WeakRef;
+    class op {
+      constructor(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          cp = arguments.length > 2 ? arguments[2] : void 0,
+          Op = arguments.length > 3 ? arguments[3] : void 0;
+        this.initialize(pp, ip, cp, Op)
+      }
+      initialize(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          cp = arguments.length > 2 ? arguments[2] : void 0,
+          Op = arguments.length > 3 ? arguments[3] : void 0;
+        return this.mask = pp, this.skipNextObservers = ip, this.target = cp, this.currentTarget = Op, this
+      }
+    }
+    class Ip {
+      constructor(pp, ip) {
+        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+        this.callback = pp, this.mask = ip, this.scope = cp, this._willBeUnregistered = !1, this.unregisterOnNextCall = !1, this._remove = null
+      }
+      remove() {
+        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._remove && this._remove(pp)
+      }
+    }
+    class Sp {
+      static FromPromise(pp, ip) {
+        const cp = new Sp;
+        return pp.then((pp => {
+          cp.notifyObservers(pp)
+        })).catch((pp => {
+          if (!ip) throw pp;
+          ip.notifyObservers(pp)
+        })), cp
+      }
+      get observers() {
+        return this._observers
+      }
+      constructor(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this.notifyIfTriggered = ip, this._observers = new Array, this._numObserversMarkedAsDeleted = 0, this._hasNotified = !1, this._eventState = new op(0), pp && (this._onObserverAdded = pp)
+      }
+      add(pp) {
+        let ip = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+          cp = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (!pp) return null;
+        const op = new Ip(pp, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1, arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null);
+        op.unregisterOnNextCall = cp, ip ? this._observers.unshift(op) : this._observers.push(op), this._onObserverAdded && this._onObserverAdded(op), this._hasNotified && this.notifyIfTriggered && this.notifyObserver(op, this._lastNotifiedValue);
+        const Sp = Op ? new WeakRef(this) : {
+          deref: () => this
+        };
+        return op._remove = function() {
+          let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          const ip = Sp.deref();
+          ip && (pp ? ip.remove(op) : ip._remove(op))
+        }, op
+      }
+      addOnce(pp) {
+        return this.add(pp, void 0, void 0, void 0, !0)
+      }
+      remove(pp) {
+        if (!pp) return !1;
+        pp._remove = null;
+        return -1 !== this._observers.indexOf(pp) && (this._deferUnregister(pp), !0)
+      }
+      removeCallback(pp, ip) {
+        for (let cp = 0; cp < this._observers.length; cp++) {
+          const Op = this._observers[cp];
+          if (!Op._willBeUnregistered && (Op.callback === pp && (!ip || ip === Op.scope))) return this._deferUnregister(Op), !0
+        }
+        return !1
+      }
+      _deferUnregister(pp) {
+        pp._willBeUnregistered || (this._numObserversMarkedAsDeleted++, pp.unregisterOnNextCall = !1, pp._willBeUnregistered = !0, setTimeout((() => {
+          this._remove(pp)
+        }), 0))
+      }
+      _remove(pp) {
+        let ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+        if (!pp) return !1;
+        const cp = this._observers.indexOf(pp);
+        return -1 !== cp && (ip && this._numObserversMarkedAsDeleted--, this._observers.splice(cp, 1), !0)
+      }
+      makeObserverTopPriority(pp) {
+        this._remove(pp, !1), this._observers.unshift(pp)
+      }
+      makeObserverBottomPriority(pp) {
+        this._remove(pp, !1), this._observers.push(pp)
+      }
+      notifyObservers(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          cp = arguments.length > 2 ? arguments[2] : void 0,
+          Op = arguments.length > 3 ? arguments[3] : void 0,
+          op = arguments.length > 4 ? arguments[4] : void 0;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = pp), !this._observers.length) return !0;
+        const Ip = this._eventState;
+        Ip.mask = ip, Ip.target = cp, Ip.currentTarget = Op, Ip.skipNextObservers = !1, Ip.lastReturnValue = pp, Ip.userInfo = op;
+        for (const Sp of this._observers)
+          if (!Sp._willBeUnregistered && (Sp.mask & ip && (Sp.unregisterOnNextCall && this._deferUnregister(Sp), Sp.scope ? Ip.lastReturnValue = Sp.callback.apply(Sp.scope, [pp, Ip]) : Ip.lastReturnValue = Sp.callback(pp, Ip)), Ip.skipNextObservers)) return !1;
+        return !0
+      }
+      notifyObserver(pp, ip) {
+        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : -1;
+        if (this.notifyIfTriggered && (this._hasNotified = !0, this._lastNotifiedValue = ip), pp._willBeUnregistered) return;
+        const Op = this._eventState;
+        Op.mask = cp, Op.skipNextObservers = !1, pp.unregisterOnNextCall && this._deferUnregister(pp), pp.callback(ip, Op)
+      }
+      hasObservers() {
+        return this._observers.length - this._numObserversMarkedAsDeleted > 0
+      }
+      clear() {
+        for (; this._observers.length;) {
+          const pp = this._observers.pop();
+          pp && (pp._remove = null)
+        }
+        this._onObserverAdded = null, this._numObserversMarkedAsDeleted = 0, this.cleanLastNotifiedState()
+      }
+      cleanLastNotifiedState() {
+        this._hasNotified = !1, this._lastNotifiedValue = void 0
+      }
+      clone() {
+        const pp = new Sp;
+        return pp._observers = this._observers.slice(0), pp
+      }
+      hasSpecificMask() {
+        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : -1;
+        for (const ip of this._observers)
+          if (ip.mask & pp || ip.mask === pp) return !0;
+        return !1
+      }
+    }
+  },
+  61368: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      AsyncLoop: () => Op.c,
+      RegisterTools: () => Op.g,
+      Tools: () => Op.i,
+      className: () => Op.l
+    });
+    var Op = cp(40304);
+    (0, Op.g)()
+  },
+  37368: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Ip,
+      g: () => op
+    });
+    const Op = {};
+
+    function op(pp, ip) {
+      Op[pp] = ip
+    }
+
+    function Ip(pp) {
+      return Op[pp]
+    }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

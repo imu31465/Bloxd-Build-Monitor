@@ -1,72 +1,72 @@
-export const id = 55;
-export const ids = [55];
+export const id = 56;
+export const ids = [56];
 export const modules = {
-  34250: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      announceStoredTexturePack: () => sD.e,
-      takeOneShotTexturePack: () => pD.f
+  34476: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      announceStoredTexturePack: () => op.d,
+      takeOneShotTexturePack: () => Op.i
     });
-    var pD = wD(34257),
-      sD = wD(34265)
+    var Op = cp(34480),
+      op = cp(34482)
   },
-  34265: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => sD,
-      g: () => KD
+  34482: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => op,
+      f: () => Ip
     });
-    var pD = wD(3243);
+    var Op = cp(3352);
 
-    function sD() {
+    function op() {
       if ("undefined" === typeof BroadcastChannel) return null;
-      const DD = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+      const pp = `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
       try {
-        const zD = new BroadcastChannel(pD.m);
-        zD.postMessage({
-          stored: DD
-        }), zD.close()
+        const ip = new BroadcastChannel(Op.j);
+        ip.postMessage({
+          stored: pp
+        }), ip.close()
       } catch {
         return null
       }
-      return DD
+      return pp
     }
 
-    function KD(DD) {
-      const zD = "object" === typeof DD && null !== DD ? DD.stored : null;
-      return "string" === typeof zD ? zD : null
+    function Ip(pp) {
+      const ip = "object" === typeof pp && null !== pp ? pp.stored : null;
+      return "string" === typeof ip ? ip : null
     }
   },
-  34257: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => rD,
-      e: () => sD,
-      f: () => KD
+  34480: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Sp,
+      h: () => op,
+      i: () => Ip
     });
-    var pD = wD(3243);
-    async function sD(DD, zD, wD) {
-      let sD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
-      const KD = rD(await DD.getItem(pD.h, zD));
-      if (null === KD || sD()) return null;
-      const LD = await DD.getItem(pD.k, zD);
-      return sD() ? null : (await async function(DD) {
-        await Promise.all([DD.removeItem(pD.h), DD.removeItem(pD.k)])
-      }(DD).catch(wD), {
-        pack: KD,
-        source: "string" === typeof LD ? LD : null
+    var Op = cp(3352);
+    async function op(pp, ip, cp) {
+      let op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : () => !1;
+      const Ip = Sp(await pp.getItem(Op.d, ip));
+      if (null === Ip || op()) return null;
+      const xp = await pp.getItem(Op.h, ip);
+      return op() ? null : (await async function(pp) {
+        await Promise.all([pp.removeItem(Op.d), pp.removeItem(Op.h)])
+      }(pp).catch(cp), {
+        pack: Ip,
+        source: "string" === typeof xp ? xp : null
       })
     }
 
-    function KD(DD) {
-      return (0, pD.t)() ? Promise.resolve(null) : sD(DD, !1, (DD => {
-        console.error("Error removing temporary texture pack: ", DD)
-      }), pD.t)
+    function Ip(pp) {
+      return (0, Op.u)() ? Promise.resolve(null) : op(pp, !1, (pp => {
+        console.error("Error removing temporary texture pack: ", pp)
+      }), Op.u)
     }
 
-    function rD(DD) {
-      if ("object" !== typeof DD || null === DD) return null;
-      const zD = DD.metaData;
-      return "object" !== typeof zD || null === zD || "string" !== typeof zD.id ? null : DD
+    function Sp(pp) {
+      if ("object" !== typeof pp || null === pp) return null;
+      const ip = pp.metaData;
+      return "object" !== typeof ip || null === ip || "string" !== typeof ip.id ? null : pp
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

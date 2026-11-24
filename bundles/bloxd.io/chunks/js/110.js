@@ -1,716 +1,803 @@
 export const id = 110;
 export const ids = [110];
 export const modules = {
-  8898: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      default: () => Gz
-    });
-    var pD = wD(1523),
-      sD = wD(20),
-      KD = wD(4684),
-      rD = wD(58),
-      LD = wD(1442);
-    var cD = wD(1925),
-      gD = wD(1511),
-      RD = wD(1355),
-      AD = wD(1200),
-      UD = wD(157),
-      fD = wD(197),
-      ID = wD(1008),
-      BD = wD(1025),
-      GD = wD(1232),
-      hD = wD(2349),
-      nD = wD(1495),
-      MD = wD(1130),
-      OD = wD(8901),
-      JD = wD(1540);
+  5127: (pp, ip, cp) => {
+    function Op(pp) {
+      return Op = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(pp) {
+        return typeof pp
+      } : function(pp) {
+        return pp && "function" == typeof Symbol && pp.constructor === Symbol && pp !== Symbol.prototype ? "symbol" : typeof pp
+      }, Op(pp)
+    }
+    Object.defineProperty(ip, "__esModule", {
+      value: !0
+    }), ip.default = void 0;
+    var op = Ap(cp(1049)),
+      Ip = function(pp, ip) {
+        if (!ip && pp && pp.__esModule) return pp;
+        if (null === pp || "object" !== Op(pp) && "function" !== typeof pp) return {
+          default: pp
+        };
+        var cp = Dp(ip);
+        if (cp && cp.has(pp)) return cp.get(pp);
+        var op = {},
+          Ip = Object.defineProperty && Object.getOwnPropertyDescriptor;
+        for (var Sp in pp)
+          if ("default" !== Sp && Object.prototype.hasOwnProperty.call(pp, Sp)) {
+            var xp = Ip ? Object.getOwnPropertyDescriptor(pp, Sp) : null;
+            xp && (xp.get || xp.set) ? Object.defineProperty(op, Sp, xp) : op[Sp] = pp[Sp]
+          } op.default = pp, cp && cp.set(pp, op);
+        return op
+      }(cp(62)),
+      Sp = Ap(cp(5081)),
+      xp = Ap(cp(5129)),
+      Lp = cp(5137),
+      Yp = cp(1112);
 
-    function ED(DD, zD) {
-      const wD = !0 === zD.debugResult.gameRefused,
-        pD = wD || zD.code === UD.n.REQUEST_TO_MATCHMAKING ? (0, OD.i)(zD.message) : null;
-      if (null !== pD) return QD(DD, DD((0, OD.q)(pD)), DD(OD.m[pD])), !0;
-      if (wD) return async function(DD) {
-        const {
-          gameNameWithVariation: zD,
-          lobbyName: wD,
-          shownLobbyName: pD
-        } = cD.gameBridge.latest("connectedGame"), sD = "classic" === zD && (0, GD.E)(wD) ? pD : await (0, hD.c)(DD, zD, wD);
-        return "" !== sD ? DD("general:cantJoinGame", {
-          game: sD
-        }) : DD("general:cantJoinThisGame")
-      }(DD).then((wD => {
-        QD(DD, wD, zD.message)
-      })), !0;
-      const {
-        joinFailure: sD
-      } = zD.debugResult, KD = "refused" === (null === sD || void 0 === sD ? void 0 : sD.at) ? sD.code : null;
-      return KD === fD.e.schematicNotPublished.code ? (async function(DD, zD) {
-        const wD = (0, ID.o)(cD.gameBridge.latest("connectedGame").gameNameWithVariation),
-          pD = await async function(DD) {
-            try {
-              const zD = await nD.d.getGame(await MD.userContextManager.getCurrentUserContext(), DD, !0);
-              return zD.gamePublished ? null : zD.name
-            } catch (zD) {
-              return zD instanceof UD.c && 435 === zD.httpCode || console.error(`Failed to get unpublished game ${DD}`, zD), null
-            }
-          }(wD);
-        if (null === pD) return void QD(DD, DD("general:cantJoinThisGame"), zD);
-        const sD = await RD.NotificationProvider.showPromptPopup({
-          icon: "rocket-launch",
-          title: DD("studio:gameNotPublishedTitle", {
-            game: pD
-          }),
-          confirmText: DD("studio:publishInStudio"),
-          cancelText: DD("general:cancel")
-        }).getResult();
-        !0 === sD && (0, gD.navigatePreserveSearch)((0, JD.i)((0, BD.e)(wD), "manage"))
-      }(DD, zD.message), !0) : KD === fD.e.schematicBanned.code && (QD(DD, DD("general:cantJoinThisGame"), zD.message), !0)
+    function Dp(pp) {
+      if ("function" !== typeof WeakMap) return null;
+      var ip = new WeakMap,
+        cp = new WeakMap;
+      return (Dp = function(pp) {
+        return pp ? cp : ip
+      })(pp)
     }
 
-    function QD(DD, zD, wD) {
-      RD.NotificationProvider.showPromptPopup({
-        icon: "lock",
-        title: zD,
-        subtitle: wD,
-        confirmText: DD("general:ok"),
-        cancelText: ""
-      })
-    }
-    var XD = wD(4612),
-      VD = wD(25),
-      PD = wD(1251),
-      CD = wD(1737),
-      xD = wD(103),
-      TD = wD(1324),
-      bD = wD(1426),
-      jD = wD(4546),
-      dD = wD(4378),
-      SD = wD(4333),
-      iD = wD(3227),
-      lD = wD(1339),
-      WD = wD(760),
-      ND = wD(1234),
-      ZD = wD(3294),
-      yD = wD(3139),
-      kD = wD(1363),
-      mD = wD(1346),
-      eD = wD(5011),
-      oD = wD(8907),
-      aD = wD(2949),
-      uD = wD(1096);
-
-    function vD(DD) {
-      let {
-        onApply: zD,
-        onSkip: wD
-      } = DD;
-      const {
-        t: pD
-      } = (0, AD.E)();
-      return (0, rD.useEffect)((() => {
-        aD.g.skipPlayWait()
-      }), []), (0, uD.jsx)(kD.g, {
-        icon: "download",
-        title: "customTexturePack:downloadTitle",
-        subtitle: (0, uD.jsxs)("div", {
-          className: "CustomTexturePackDownloaderSubtitleText",
-          children: [pD("customTexturePack:downloadPrompt"), (0, uD.jsx)("div", {
-            className: "CustomTexturePackDownloaderWarningText",
-            children: pD("customTexturePack:authorWarning")
-          }), (0, uD.jsx)("div", {
-            className: "CustomTexturePackDownloaderSecondaryText",
-            children: pD("customTexturePack:existingPackSaved")
-          })]
-        }),
-        confirm: {
-          text: "general:apply",
-          onClick: zD
-        },
-        cancel: {
-          text: "customTexturePack:skip",
-          onClick: wD
-        }
-      })
-    }
-    async function tD() {
-      let DD = !1;
-      const zD = RD.NotificationProvider.showCustomPopup({
-        body: zD => (0, uD.jsx)(vD, {
-          onApply: () => {
-            DD = !0, zD()
-          },
-          onSkip: zD
-        }),
-        disableExitButton: !0,
-        disablePressBackgroundToClose: !0
-      });
-      return await zD.getResult(), DD
-    }
-    let FD = {
-      wanted: !1
-    };
-    let YD = null;
-
-    function HD(DD) {
-      DD.setGamePackConfirm(tD), YD = DD
-    }
-    var qD = wD(3482);
-
-    function Dz(DD) {
-      let {
-        schematicId: zD,
-        texturePackKey: wD,
-        onClose: pD
-      } = DD;
-      const [sD, KD] = (0, rD.useState)("prompt"), [LD, cD] = (0, rD.useState)(null), gD = (0, qD.c)();
-
-      function RD() {
-        pD()
+    function Ap(pp) {
+      return pp && pp.__esModule ? pp : {
+        default: pp
       }
-      return "prompt" === sD ? (0, uD.jsx)(vD, {
-        onApply: async function() {
-          KD("downloading");
-          try {
-            const DD = await async function(DD, zD) {
-              const wD = await (0, eD.c)(zD);
-              if (wD) return {
-                pack: wD,
-                key: zD
-              };
-              const pD = await MD.userContextManager.getCurrentUserContext(),
-                sD = (await nD.d.getGame(pD, DD, !0)).customTexturePackKey;
-              if (!sD) return null;
-              const KD = await (0, eD.c)(sD);
-              if (!KD) throw new Error("The texture pack could not be found");
-              return {
-                pack: KD,
-                key: sD
+    }
+
+    function Pp(pp, ip) {
+      var cp = "undefined" !== typeof Symbol && pp[Symbol.iterator] || pp["@@iterator"];
+      if (!cp) {
+        if (Array.isArray(pp) || (cp = function(pp, ip) {
+            if (!pp) return;
+            if ("string" === typeof pp) return Wp(pp, ip);
+            var cp = Object.prototype.toString.call(pp).slice(8, -1);
+            "Object" === cp && pp.constructor && (cp = pp.constructor.name);
+            if ("Map" === cp || "Set" === cp) return Array.from(pp);
+            if ("Arguments" === cp || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(cp)) return Wp(pp, ip)
+          }(pp)) || ip && pp && "number" === typeof pp.length) {
+          cp && (pp = cp);
+          var Op = 0,
+            op = function() {};
+          return {
+            s: op,
+            n: function() {
+              return Op >= pp.length ? {
+                done: !0
+              } : {
+                done: !1,
+                value: pp[Op++]
               }
-            }(zD, wD);
-            if (!gD.current) return;
-            if (!DD) return void pD();
-            if ((0, ZD.i)(DD.pack)) return void KD("refused");
-            yD.b.setFromJson(DD.pack, "customGame"), await yD.b.saveTemporaryTexturePack(DD.key), gD.current && (0, CD.reloadBloxd)()
-          } catch (DD) {
-            cD(DD instanceof Error ? DD.message : String(DD)), KD("error")
+            },
+            e: function(pp) {
+              throw pp
+            },
+            f: op
           }
+        }
+        throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
+      }
+      var Ip, Sp = !0,
+        xp = !1;
+      return {
+        s: function() {
+          cp = cp.call(pp)
         },
-        onSkip: RD
-      }) : "downloading" === sD ? (0, uD.jsx)(kD.g, {
-        icon: "download",
-        title: "customTexturePack:downloading",
-        subtitle: (0, uD.jsx)("div", {
-          className: "CustomTexturePackDownloaderLogoLoaderContainer",
-          children: (0, uD.jsx)(mD.e, {
-            showFace: !0
-          })
-        })
-      }) : "error" === sD ? (0, uD.jsx)(kD.g, {
-        icon: "face-worried",
-        title: "customTexturePack:errorTitle",
-        subtitle: LD,
-        confirm: {
-          text: "customTexturePack:refreshPage",
-          onClick: () => {
-            window.location.reload()
+        n: function() {
+          var pp = cp.next();
+          return Sp = pp.done, pp
+        },
+        e: function(pp) {
+          xp = !0, Ip = pp
+        },
+        f: function() {
+          try {
+            Sp || null == cp.return || cp.return()
+          } finally {
+            if (xp) throw Ip
           }
-        },
-        cancel: {
-          text: "customTexturePack:skip",
-          onClick: RD
         }
-      }) : "refused" === sD ? (0, uD.jsx)(kD.g, {
-        icon: "face-worried",
-        title: "customTexturePack:cantApplyTitle",
-        subtitle: "customTexturePack:gamePackHasExternalUrls",
-        confirm: {
-          text: "general:continue",
-          onClick: RD
-        }
-      }) : null
-    }
-    var zz = wD(8919),
-      wz = wD(4322),
-      pz = wD(1775),
-      sz = wD(2925),
-      Kz = wD(4328),
-      rz = wD(2116),
-      Lz = wD(4702),
-      cz = wD(1309),
-      gz = wD(1733),
-      Rz = wD(638),
-      Az = wD(726);
-
-    function Uz() {
-      const DD = sD.e.get("clientEscMenuOptions");
-      cD.gameBridge.send("setLookSensitivity", sD.e.get("isTouchScreen") ? (0, Az.q)(DD) : DD.mouseSensitivity)
-    }
-
-    function fz(DD) {
-      const zD = DD.asError();
-      if (zD.debugResult.sw || (0, gz.c)(zD.debugResult.error)) return;
-      console.log("Failed to join lobby:", zD.message);
-      const wD = "timedOut" === zD.debugResult.gameServerUnreachable;
-      (0, sz.reportClientError)("matchmake_failed", zD.message, wD ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : UD.n[zD.code]);
-      const {
-        error: pD
-      } = zD.debugResult;
-      if (pD instanceof iD.m && "default" !== pD.packSource) {
-        const DD = (0, Kz.d)("js", "game" === pD.packSource ? "game" : "page", (0, Kz.h)(pD));
-        (0, sz.reportClientError)("texture_pack", pD, DD)
       }
     }
 
-    function Iz(DD) {
-      if (null === DD || void 0 === DD || !DD.isError()) return !1;
-      const zD = DD.asError();
-      return zD.code === UD.n.REQUEST_TO_MATCHMAKING && !(0, gz.c)(zD.debugResult.error)
+    function Wp(pp, ip) {
+      (null == ip || ip > pp.length) && (ip = pp.length);
+      for (var cp = 0, Op = new Array(ip); cp < ip; cp++) Op[cp] = pp[cp];
+      return Op
     }
-    async function Bz(DD, zD, wD) {
-      const pD = (0, Lz.H)(zD);
-      async function rD(DD, zD, wD, pD) {
-        var rD;
-        if (pD.aborted) return null;
-        null === sD.e.get("gameEntrySource") && (0, sD.k)("directPlayUrl"), Rz.v && (0, oD.c)().catch((() => {})), sD.e.set({
-          gameState: "findingLobby"
-        }), VD.l.KG("loadingScreenState", "loadingPage:findingLobby");
-        const LD = await MD.userContextManager.getCurrentUserContext();
-        cD.gameBridge.send("setRequestedGame", {
-          gameNameWithVariation: zD,
-          discordContext: DD instanceof ND.f ? DD.getSerialisableParams() : null
-        }), (0, pz.e)(null !== (rD = aD.g.playInputAt()) && void 0 !== rD ? rD : performance.now());
-        const gD = await async function(DD, zD, wD, pD, sD) {
-          try {
-            await KD.reqLibsLoadedPromise
-          } catch (rD) {
-            return PD.e.errorWithCode(rD.toString(), UD.n.LOAD_REQUIRED_LIBS, {
-              error: rD,
-              severity: "medium"
+
+    function yp(pp, ip) {
+      for (var cp = 0; cp < ip.length; cp++) {
+        var Op = ip[cp];
+        Op.enumerable = Op.enumerable || !1, Op.configurable = !0, "value" in Op && (Op.writable = !0), Object.defineProperty(pp, Op.key, Op)
+      }
+    }
+
+    function Up(pp, ip) {
+      return Up = Object.setPrototypeOf || function(pp, ip) {
+        return pp.__proto__ = ip, pp
+      }, Up(pp, ip)
+    }
+
+    function wp(pp) {
+      var ip = function() {
+        if ("undefined" === typeof Reflect || !Reflect.construct) return !1;
+        if (Reflect.construct.sham) return !1;
+        if ("function" === typeof Proxy) return !0;
+        try {
+          return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], (function() {}))), !0
+        } catch (pp) {
+          return !1
+        }
+      }();
+      return function() {
+        var cp, op = tp(pp);
+        if (ip) {
+          var Ip = tp(this).constructor;
+          cp = Reflect.construct(op, arguments, Ip)
+        } else cp = op.apply(this, arguments);
+        return function(pp, ip) {
+          if (ip && ("object" === Op(ip) || "function" === typeof ip)) return ip;
+          if (void 0 !== ip) throw new TypeError("Derived constructors may only return object or undefined");
+          return vp(pp)
+        }(this, cp)
+      }
+    }
+
+    function vp(pp) {
+      if (void 0 === pp) throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
+      return pp
+    }
+
+    function tp(pp) {
+      return tp = Object.setPrototypeOf ? Object.getPrototypeOf : function(pp) {
+        return pp.__proto__ || Object.getPrototypeOf(pp)
+      }, tp(pp)
+    }
+
+    function Hp(pp, ip, cp) {
+      return ip in pp ? Object.defineProperty(pp, ip, {
+        value: cp,
+        enumerable: !0,
+        configurable: !0,
+        writable: !0
+      }) : pp[ip] = cp, pp
+    }
+    var dp = {
+        orientation: {
+          horizontal: {
+            dimension: "width",
+            direction: "left",
+            reverseDirection: "right",
+            coordinate: "x"
+          },
+          vertical: {
+            dimension: "height",
+            direction: "top",
+            reverseDirection: "bottom",
+            coordinate: "y"
+          }
+        }
+      },
+      ep = function(pp) {
+        ! function(pp, ip) {
+          if ("function" !== typeof ip && null !== ip) throw new TypeError("Super expression must either be null or a function");
+          Object.defineProperty(pp, "prototype", {
+            value: Object.create(ip && ip.prototype, {
+              constructor: {
+                value: pp,
+                writable: !0,
+                configurable: !0
+              }
+            }),
+            writable: !1
+          }), ip && Up(pp, ip)
+        }(Sp, pp);
+        var ip, cp, Op, Ip = wp(Sp);
+
+        function Sp(pp, ip) {
+          var cp;
+          return function(pp, ip) {
+            if (!(pp instanceof ip)) throw new TypeError("Cannot call a class as a function")
+          }(this, Sp), Hp(vp(cp = Ip.call(this, pp, ip)), "handleFormat", (function(pp) {
+            var ip = cp.props.format;
+            return ip ? ip(pp) : pp
+          })), Hp(vp(cp), "handleUpdate", (function() {
+            if (cp.slider) {
+              var pp = cp.props.orientation,
+                ip = (0, Lp.capitalize)(dp.orientation[pp].dimension),
+                Op = cp.slider["offset".concat(ip)],
+                op = cp.handle["offset".concat(ip)];
+              cp.setState({
+                limit: Op - op,
+                grab: op / 2
+              })
+            }
+          })), Hp(vp(cp), "handleStart", (function(pp) {
+            var ip = cp.props.onChangeStart;
+            document.addEventListener("mousemove", cp.handleDrag), document.addEventListener("mouseup", cp.handleEnd), cp.setState({
+              active: !0
+            }, (function() {
+              ip && ip(pp)
+            }))
+          })), Hp(vp(cp), "handleDrag", (function(pp) {
+            pp.stopPropagation();
+            var ip = cp.props.onChange,
+              Op = pp.target,
+              op = Op.className,
+              Ip = Op.classList,
+              Sp = Op.dataset;
+            if (ip && "rangeslider__labels" !== op) {
+              var xp = cp.position(pp);
+              Ip && Ip.contains("rangeslider__label-item") && Sp.value && (xp = parseFloat(Sp.value)), ip && ip(xp, pp)
+            }
+          })), Hp(vp(cp), "handleEnd", (function(pp) {
+            var ip = cp.props.onChangeComplete;
+            cp.setState({
+              active: !1
+            }, (function() {
+              ip && ip(pp)
+            })), document.removeEventListener("mousemove", cp.handleDrag), document.removeEventListener("mouseup", cp.handleEnd)
+          })), Hp(vp(cp), "handleKeyDown", (function(pp) {
+            pp.preventDefault();
+            var ip, Op = pp.keyCode,
+              op = cp.props,
+              Ip = op.value,
+              Sp = op.min,
+              xp = op.max,
+              Lp = op.step,
+              Yp = op.onChange;
+            switch (Op) {
+              case 38:
+              case 39:
+                ip = Ip + Lp > xp ? xp : Ip + Lp, Yp && Yp(ip, pp);
+                break;
+              case 37:
+              case 40:
+                ip = Ip - Lp < Sp ? Sp : Ip - Lp, Yp && Yp(ip, pp)
+            }
+          })), Hp(vp(cp), "getPositionFromValue", (function(pp) {
+            var ip = cp.state.limit,
+              Op = cp.props,
+              op = Op.min,
+              Ip = (pp - op) / (Op.max - op);
+            return Math.round(Ip * ip)
+          })), Hp(vp(cp), "getValueFromPosition", (function(pp) {
+            var ip = cp.state.limit,
+              Op = cp.props,
+              op = Op.orientation,
+              Ip = Op.min,
+              Sp = Op.max,
+              xp = Op.step,
+              Yp = (0, Lp.clamp)(pp, 0, ip) / (ip || 1),
+              Dp = xp * Math.round(Yp * (Sp - Ip) / xp),
+              Ap = "horizontal" === op ? Dp + Ip : Sp - Dp;
+            return (0, Lp.clamp)(Ap, Ip, Sp)
+          })), Hp(vp(cp), "position", (function(pp) {
+            var ip = cp.state.grab,
+              Op = cp.props,
+              op = Op.orientation,
+              Ip = Op.reverse,
+              Sp = cp.slider,
+              xp = dp.orientation[op].coordinate,
+              Yp = Ip ? dp.orientation[op].reverseDirection : dp.orientation[op].direction,
+              Dp = "client".concat((0, Lp.capitalize)(xp)),
+              Ap = pp.touches ? pp.touches[0][Dp] : pp[Dp],
+              Pp = Sp.getBoundingClientRect()[Yp],
+              Wp = Ip ? Pp - Ap - ip : Ap - Pp - ip;
+            return cp.getValueFromPosition(Wp)
+          })), Hp(vp(cp), "coordinates", (function(pp) {
+            var ip = cp.state,
+              Op = ip.limit,
+              op = ip.grab,
+              Ip = cp.props.orientation,
+              Sp = cp.getValueFromPosition(pp),
+              xp = cp.getPositionFromValue(Sp),
+              Lp = "horizontal" === Ip ? xp + op : xp;
+            return {
+              fill: "horizontal" === Ip ? Lp : Op - Lp,
+              handle: Lp,
+              label: Lp
+            }
+          })), Hp(vp(cp), "renderLabels", (function(pp) {
+            return (0, Yp.jsx)("ul", {
+              ref: function(pp) {
+                cp.labels = pp
+              },
+              className: (0, op.default)("rangeslider__labels"),
+              children: pp
+            })
+          })), cp.state = {
+            active: !1,
+            limit: 0,
+            grab: 0
+          }, cp
+        }
+        return ip = Sp, (cp = [{
+          key: "componentDidMount",
+          value: function() {
+            this.handleUpdate(), new xp.default(this.handleUpdate).observe(this.slider)
+          }
+        }, {
+          key: "render",
+          value: function() {
+            var pp = this,
+              ip = this.props,
+              cp = ip.value,
+              Op = ip.orientation,
+              Ip = ip.className,
+              Sp = ip.tooltip,
+              xp = ip.reverse,
+              Lp = ip.labels,
+              Dp = ip.min,
+              Ap = ip.max,
+              Wp = ip.handleLabel,
+              yp = this.state.active,
+              Up = dp.orientation[Op].dimension,
+              wp = xp ? dp.orientation[Op].reverseDirection : dp.orientation[Op].direction,
+              vp = this.getPositionFromValue(cp),
+              tp = this.coordinates(vp),
+              ep = Hp({}, Up, "".concat(tp.fill, "px")),
+              jp = Hp({}, wp, "".concat(tp.handle, "px")),
+              kp = Sp && yp,
+              mp = [],
+              Rp = Object.keys(Lp);
+            if (Rp.length > 0) {
+              var qp, Mp = Pp(Rp = Rp.sort((function(pp, ip) {
+                return xp ? pp - ip : ip - pp
+              })));
+              try {
+                for (Mp.s(); !(qp = Mp.n()).done;) {
+                  var Cp = qp.value,
+                    Ep = this.getPositionFromValue(Cp),
+                    Xp = this.coordinates(Ep),
+                    lp = Hp({}, wp, "".concat(Xp.label, "px"));
+                  mp.push((0, Yp.jsx)("li", {
+                    className: (0, op.default)("rangeslider__label-item"),
+                    "data-value": Cp,
+                    onMouseDown: this.handleDrag,
+                    onTouchStart: this.handleStart,
+                    onTouchEnd: this.handleEnd,
+                    style: lp,
+                    children: this.props.labels[Cp]
+                  }, Cp))
+                }
+              } catch (Qp) {
+                Mp.e(Qp)
+              } finally {
+                Mp.f()
+              }
+            }
+            return (0, Yp.jsxs)("div", {
+              ref: function(ip) {
+                pp.slider = ip
+              },
+              className: (0, op.default)("rangeslider", "rangeslider-".concat(Op), {
+                "rangeslider-reverse": xp
+              }, Ip),
+              onMouseDown: this.handleDrag,
+              onMouseUp: this.handleEnd,
+              onTouchStart: this.handleStart,
+              onTouchEnd: this.handleEnd,
+              "aria-valuemin": Dp,
+              "aria-valuemax": Ap,
+              "aria-valuenow": cp,
+              "aria-orientation": Op,
+              children: [(0, Yp.jsx)("div", {
+                className: "rangeslider__fill",
+                style: ep
+              }), (0, Yp.jsxs)("div", {
+                ref: function(ip) {
+                  pp.handle = ip
+                },
+                className: "rangeslider__handle",
+                onMouseDown: this.handleStart,
+                onTouchMove: this.handleDrag,
+                onTouchEnd: this.handleEnd,
+                onKeyDown: this.handleKeyDown,
+                style: jp,
+                tabIndex: 0,
+                children: [kp && (0, Yp.jsx)("div", {
+                  ref: function(ip) {
+                    pp.tooltip = ip
+                  },
+                  className: "rangeslider__handle-tooltip",
+                  children: (0, Yp.jsx)("span", {
+                    children: this.handleFormat(cp)
+                  })
+                }), (0, Yp.jsx)("div", {
+                  className: "rangeslider__handle-label",
+                  children: Wp
+                })]
+              }), Lp && this.renderLabels(mp)]
             })
           }
-          return VD.l.KG("matchmakeAndPlayStepCompleted", {
-            step: UD.n.LOAD_REQUIRED_LIBS,
-            totalSubSteps: 1
-          }), (0, KD.matchmakeAndPlayMaybeUnloaded)(DD, zD, wD, pD, sD)
-        }(DD, zD, wD, LD, pD), RD = gD.isError() ? gD.asError() : null;
-        if (pD.aborted) return RD && fz(gD), cD.gameBridge.send("leaveGame", {
-          reloadPath: null
-        }), null;
-        if (null !== RD && void 0 !== RD && RD.debugResult.sw) return console.log("Join cancelled:", RD.message), null;
-        if (RD) return gD;
-        const {
-          gameNameWithVariation: AD,
-          lobbyName: fD
-        } = gD.getValue();
-        return Uz(), (0, cz.D)().setGameViewShown(!0), LD.recordJoin(AD, fD), (0, TD.K)(), gD
+        }]) && yp(ip.prototype, cp), Op && yp(ip, Op), Object.defineProperty(ip, "prototype", {
+          writable: !1
+        }), Sp
+      }(Ip.Component);
+    Hp(ep, "propTypes", {
+      min: Sp.default.number,
+      max: Sp.default.number,
+      step: Sp.default.number,
+      value: Sp.default.number,
+      orientation: Sp.default.string,
+      tooltip: Sp.default.bool,
+      reverse: Sp.default.bool,
+      labels: Sp.default.object,
+      handleLabel: Sp.default.string,
+      format: Sp.default.func,
+      onChangeStart: Sp.default.func,
+      onChange: Sp.default.func,
+      onChangeComplete: Sp.default.func
+    }), Hp(ep, "defaultProps", {
+      min: 0,
+      max: 100,
+      step: 1,
+      value: 0,
+      orientation: "horizontal",
+      tooltip: !0,
+      reverse: !1,
+      labels: {},
+      handleLabel: ""
+    });
+    var jp = ep;
+    ip.default = jp
+  },
+  5122: (pp, ip, cp) => {
+    var Op;
+    ip.b = void 0;
+    var op = ((Op = cp(5127)) && Op.__esModule ? Op : {
+      default: Op
+    }).default;
+    ip.b = op
+  },
+  5137: (pp, ip) => {
+    Object.defineProperty(ip, "__esModule", {
+      value: !0
+    }), ip.capitalize = function(pp) {
+      return pp.charAt(0).toUpperCase() + pp.substr(1)
+    }, ip.clamp = function(pp, ip, cp) {
+      return Math.min(Math.max(pp, ip), cp)
+    }
+  },
+  5085: (pp, ip, cp) => {
+    var Op = cp(5088);
+
+    function op() {}
+
+    function Ip() {}
+    Ip.resetWarningCache = op, pp.exports = function() {
+      function pp(pp, ip, cp, op, Ip, Sp) {
+        if (Sp !== Op) {
+          var xp = new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");
+          throw xp.name = "Invariant Violation", xp
+        }
       }
-      return pD && (0, sD.k)("updateRejoin"), (0, rz.h)((async sD => {
-        try {
-          var KD;
-          let LD = DD,
-            cD = await rD(LD, zD, wD, sD);
-          for (let DD = 0; pD && DD < Lz.j && (Iz(cD) && await (0, Lz.K)((0, Lz.q)(DD), sD)); DD++) LD = (0, Lz.r)(LD, DD + 1, "string" === typeof LD && (0, GD.J)(LD)), cD = await rD(LD, zD, wD, sD);
-          return null !== (KD = cD) && void 0 !== KD && KD.isError() && fz(cD), cD
-        } catch (LD) {
-          if ((0, sz.reportClientError)("matchmake_failed", LD, "unexpected"), cD.gameBridge.send("leaveGame", {
-              reloadPath: sD.aborted ? null : "/"
-            }), sD.aborted) return null;
-          throw LD
-        }
-      }), (async DD => {
-        var wD;
-        if (pD) return;
-        const sD = (0, TD.E)();
-        null !== sD && (await sD, DD.aborted) || (null !== (wD = WD.e[zD]) && void 0 !== wD && wD.playAdBeforeMatchmaking ? (aD.g.skipPlayWait(), await new Promise((DD => {
-          (0, TD.gb)((() => {
-            DD(!0)
-          }), "video_start")
-        }))) : (0, TD.gb)((() => {}), "video_start"))
-      }))
-    }
 
-    function Gz() {
-      const {
-        t: DD
-      } = (0, AD.E)(), zD = (0, gD.useNavigatePreserveSearch)(), wD = (0, pD.s)(), fD = (0, pD.C)(), BD = (0, rD.useRef)({
-        t: DD,
-        navigate: zD
-      });
-      BD.current = {
-        t: DD,
-        navigate: zD
+      function ip() {
+        return pp
+      }
+      pp.isRequired = pp;
+      var cp = {
+        array: pp,
+        bigint: pp,
+        bool: pp,
+        func: pp,
+        number: pp,
+        object: pp,
+        string: pp,
+        symbol: pp,
+        any: pp,
+        arrayOf: ip,
+        element: pp,
+        elementType: pp,
+        instanceOf: ip,
+        node: pp,
+        objectOf: ip,
+        oneOf: ip,
+        oneOfType: ip,
+        shape: ip,
+        exact: ip,
+        checkPropTypes: Ip,
+        resetWarningCache: op
       };
-      const OD = (0, rD.useRef)("");
-      OD.current = wD.pathname + wD.search;
-      const {
-        gameState: JD,
-        clientEscMenuOptions: QD
-      } = (0, sD.n)(["gameState", "clientEscMenuOptions"]), VD = (0, rD.useRef)(null), PD = (0, rD.useRef)(!1);
-      var WD;
-      (0, rz.k)(), (0, rz.l)(), WD = Rz.v, (0, rD.useEffect)((() => {
-        if (!WD) return;
-        let DD = !0;
-        return (0, oD.c)().then((zD => {
-          DD && HD(zD)
-        })).catch((() => {})), () => {
-          var zD;
-          DD = !1, FD.wanted = !1, null === (zD = YD) || void 0 === zD || zD.setGamePackConfirm(null), YD = null
+      return cp.PropTypes = cp, cp
+    }
+  },
+  5081: (pp, ip, cp) => {
+    pp.exports = cp(5085)()
+  },
+  5088: pp => {
+    pp.exports = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"
+  },
+  5129: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      default: () => mp
+    });
+    var Op = function() {
+        if ("undefined" !== typeof Map) return Map;
+
+        function pp(pp, ip) {
+          var cp = -1;
+          return pp.some((function(pp, Op) {
+            return pp[0] === ip && (cp = Op, !0)
+          })), cp
         }
-      }), [WD]), (0, rD.useEffect)((() => {
-        var DD;
-        (0, KD.needGameClientNow)();
-        const {
-          t: zD,
-          navigate: pD
-        } = BD.current, rD = (0, zz.c)(fD, wD.search);
-        if (fD.lobbyName && !new URLSearchParams(wD.search).has("lobby")) return void pD((0, lD.c)(rD.gameNameWithVariation, rD.lobbyName), {
-          replace: !0
-        });
-        let LD = Promise.resolve({
-          shouldMatchmake: !0
-        });
-        if ("/play/discord-custom-lobby" === wD.pathname) {
-          const DD = sD.e.get("discordContext");
-          if (!DD) return void pD("/");
-          LD = XD.d.setupDiscordLobby(DD, "classic").then((() => ({
-            shouldMatchmake: !0,
-            discordContext: DD
-          }))).catch((zD => (console.error("Failed to setup discord lobby", zD), {
-            shouldMatchmake: !1,
-            discordContext: DD
-          })))
-        } else if (!rD.gameNameWithVariation || !(0, GD.F)(rD.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${rD.gameNameWithVariation}`), void pD(-1);
-        const AD = VD.current;
-        if (null !== AD && rD.gameNameWithVariation === AD.gameNameWithVariation && rD.lobbyName === AD.lobbyName) return;
-        if (cD.gameBridge.latest("connectedGame").replay) return void(0, rz.f)(null);
-        if ("releaseCountdown" === (null === (DD = (0, hD.g)(rD.gameNameWithVariation)) || void 0 === DD ? void 0 : DD.type)) return console.error(`Game hasn't been released yet: ${rD.gameNameWithVariation}`), void pD(-1);
-        const JD = PD.current;
-        PD.current = !1, (0, TD.G)(), sD.e.set({
-          gameState: "loadingScreen"
-        });
-        const QD = function() {
-            FD.wanted = !1;
-            const DD = {
-              wanted: !0
-            };
-            return FD = DD, () => DD.wanted
-          }(),
-          bD = rD.gameNameWithVariation;
-        if (bD && (Rz.v || (0, ID.l)(bD))) {
-          const DD = Rz.v ? Promise.all([(0, oD.c)(), MD.userContextManager.getCurrentUserContext()]).then((DD => {
-            let [zD, wD] = DD;
-            if (QD()) return HD(zD), zD.packForGame(bD, wD, QD)
-          })) : async function(DD) {
-            await yD.b.indexedDbValuesAreLoaded();
-            const zD = await MD.userContextManager.getCurrentUserContext(),
-              wD = (0, ID.o)(DD);
-            let pD;
-            try {
-              pD = await nD.d.getGame(zD, wD, !0)
-            } catch (rD) {
-              return void console.error("Failed to get game", rD)
+        return function() {
+          function ip() {
+            this.__entries__ = []
+          }
+          return Object.defineProperty(ip.prototype, "size", {
+            get: function() {
+              return this.__entries__.length
+            },
+            enumerable: !0,
+            configurable: !0
+          }), ip.prototype.get = function(ip) {
+            var cp = pp(this.__entries__, ip),
+              Op = this.__entries__[cp];
+            return Op && Op[1]
+          }, ip.prototype.set = function(ip, cp) {
+            var Op = pp(this.__entries__, ip);
+            ~Op ? this.__entries__[Op][1] = cp : this.__entries__.push([ip, cp])
+          }, ip.prototype.delete = function(ip) {
+            var cp = this.__entries__,
+              Op = pp(cp, ip);
+            ~Op && cp.splice(Op, 1)
+          }, ip.prototype.has = function(ip) {
+            return !!~pp(this.__entries__, ip)
+          }, ip.prototype.clear = function() {
+            this.__entries__.splice(0)
+          }, ip.prototype.forEach = function(pp, ip) {
+            void 0 === ip && (ip = null);
+            for (var cp = 0, Op = this.__entries__; cp < Op.length; cp++) {
+              var op = Op[cp];
+              pp.call(ip, op[1], op[0])
             }
-            const sD = pD.customTexturePackKey;
-            if (!sD) return void(yD.b.isUsingTemporaryTexturePack() && ((0, CD.reloadBloxd)(), await new Promise((() => {}))));
-            if (yD.b.isUsingTemporaryTexturePack() && yD.b.getTemporaryTexturePackSource() === sD) return;
-            const KD = RD.NotificationProvider.showCustomPopup({
-              body: DD => (0, uD.jsx)(Dz, {
-                schematicId: wD,
-                texturePackKey: sD,
-                onClose: DD
-              }),
-              disableExitButton: !0,
-              disablePressBackgroundToClose: !0
-            });
-            await KD.getResult()
-          }(bD), zD = LD;
-          LD = DD.catch((DD => {
-            console.error("Failed to check for custom texture pack", DD)
-          })).then((() => zD))
+          }, ip
+        }()
+      }(),
+      op = "undefined" !== typeof window && "undefined" !== typeof document && window.document === document,
+      Ip = "undefined" !== typeof cp.g && cp.g.Math === Math ? cp.g : "undefined" !== typeof self && self.Math === Math ? self : "undefined" !== typeof window && window.Math === Math ? window : Function("return this")(),
+      Sp = "function" === typeof requestAnimationFrame ? requestAnimationFrame.bind(Ip) : function(pp) {
+        return setTimeout((function() {
+          return pp(Date.now())
+        }), 1e3 / 60)
+      };
+    var xp = ["top", "right", "bottom", "left", "width", "height", "size", "weight"],
+      Lp = "undefined" !== typeof MutationObserver,
+      Yp = function() {
+        function pp() {
+          this.connected_ = !1, this.mutationEventsAdded_ = !1, this.mutationsObserver_ = null, this.observers_ = [], this.onTransitionEnd_ = this.onTransitionEnd_.bind(this), this.refresh = function(pp, ip) {
+            var cp = !1,
+              Op = !1,
+              op = 0;
+
+            function Ip() {
+              cp && (cp = !1, pp()), Op && Lp()
+            }
+
+            function xp() {
+              Sp(Ip)
+            }
+
+            function Lp() {
+              var pp = Date.now();
+              if (cp) {
+                if (pp - op < 2) return;
+                Op = !0
+              } else cp = !0, Op = !1, setTimeout(xp, ip);
+              op = pp
+            }
+            return Lp
+          }(this.refresh.bind(this), 20)
         }
-        const WD = null !== VD.current;
-        VD.current = null, (0, rz.f)(null);
-        const ND = () => {
-          JD ? (0, gD.navigateToHomePage)() : (PD.current = WD, pD(-1))
-        };
-        let ZD = !1;
-        const kD = wD.pathname + wD.search,
-          mD = () => !ZD && OD.current === kD;
-        return LD.then((DD => {
-          let {
-            shouldMatchmake: wD,
-            discordContext: KD
-          } = DD;
-          mD() && (wD ? Bz(null !== KD && void 0 !== KD ? KD : rD.lobbyName, KD ? "classic" : rD.gameNameWithVariation, rD.directJoinVmUrl).then((DD => {
-            if (null !== DD && mD())
-              if (DD.isError()) {
-                var wD;
-                const KD = DD.asError(),
-                  LD = null !== (wD = KD.debugResult.severity) && void 0 !== wD ? wD : "high";
-                if ((0, gz.c)(KD.debugResult.error)) return void gz.e.reload();
-                if (KD.code === UD.n.SHADER_PACK) return void(0, wz.e)(KD.message, pD);
-                const gD = sD.e.get("gameEntrySource"),
-                  AD = KD.code === UD.n.INITIALISE_WEBGL ? (0, dD.e)() : null,
-                  {
-                    error: fD
-                  } = KD.debugResult;
-                let ID;
-                if (ED(zD, KD)) ID = Promise.resolve(!1);
-                else if (null !== AD) ID = (0, dD.l)(AD);
-                else if (fD instanceof iD.m) ID = (0, SD.h)(fD);
-                else {
-                  let DD;
-                  switch (LD) {
-                    case "low":
-                      DD = "face-diagonal-mouth";
-                      break;
-                    case "medium":
-                      DD = "face-worried";
-                      break;
-                    case "high":
-                      DD = "face-dizzy"
-                  }
-                  ID = RD.NotificationProvider.showPromptPopup({
-                    icon: DD,
-                    title: UD.G[KD.code],
-                    subtitle: (0, uD.jsxs)(uD.Fragment, {
-                      children: [KD.debugResult.gameServerUnreachable ? zD((0, xD.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable") : KD.message, KD.debugResult.error instanceof Error && (0, uD.jsx)("div", {
-                        style: {
-                          fontSize: "0.9rem",
-                          paddingTop: "1rem"
-                        },
-                        children: (0, uD.jsx)(jD.c, {
-                          errorString: KD.debugResult.error.stack
-                        })
-                      })]
-                    }),
-                    confirmText: zD("general:tryAgain"),
-                    cancelText: zD("general:cancel")
-                  }).getResult().then((DD => !0 === DD))
-                }
-                ID.then((DD => {
-                  if (DD) {
-                    (0, sD.k)(gD);
-                    const DD = (0, lD.c)(rD.gameNameWithVariation, rD.lobbyName);
-                    "low" === LD ? pD(DD) : (0, CD.reloadBloxd)(DD)
-                  }
-                })), cD.gameBridge.send("leaveGame", {
-                  reloadPath: "/"
-                }), ND()
-              } else {
-                const {
-                  gameNameWithVariation: zD,
-                  lobbyName: wD
-                } = DD.getValue();
-                VD.current = {
-                  gameNameWithVariation: zD,
-                  lobbyName: wD
-                };
-                const sD = (0, lD.c)(zD, wD);
-                pD(sD, {
-                  replace: !0
-                })
-              }
-          })).catch((DD => {
-            if (!mD()) return;
-            RD.NotificationProvider.showPromptPopup({
-              icon: "face-dizzy",
-              title: "Unexpected Error",
-              subtitle: (0, uD.jsxs)(uD.Fragment, {
-                children: [zD("homePage:pleaseCopyError"), (0, uD.jsx)("div", {
-                  style: {
-                    fontSize: "0.9rem",
-                    paddingTop: "1rem"
-                  },
-                  children: (0, uD.jsx)(jD.c, {
-                    errorString: DD.stack
-                  })
-                })]
-              }),
-              confirmText: zD("general:tryAgain"),
-              cancelText: zD("general:cancel")
-            }).getResult().then((DD => {
-              !0 === DD && (0, CD.reloadBloxd)((0, lD.c)(rD.gameNameWithVariation, rD.lobbyName))
-            })), ND()
-          })) : pD(-1))
-        })), () => {
-          ZD = !0
+        return pp.prototype.addObserver = function(pp) {
+          ~this.observers_.indexOf(pp) || this.observers_.push(pp), this.connected_ || this.connect_()
+        }, pp.prototype.removeObserver = function(pp) {
+          var ip = this.observers_,
+            cp = ip.indexOf(pp);
+          ~cp && ip.splice(cp, 1), !ip.length && this.connected_ && this.disconnect_()
+        }, pp.prototype.refresh = function() {
+          this.updateObservers_() && this.refresh()
+        }, pp.prototype.updateObservers_ = function() {
+          var pp = this.observers_.filter((function(pp) {
+            return pp.gatherActive(), pp.hasActive()
+          }));
+          return pp.forEach((function(pp) {
+            return pp.broadcastActive()
+          })), pp.length > 0
+        }, pp.prototype.connect_ = function() {
+          op && !this.connected_ && (document.addEventListener("transitionend", this.onTransitionEnd_), window.addEventListener("resize", this.refresh), Lp ? (this.mutationsObserver_ = new MutationObserver(this.refresh), this.mutationsObserver_.observe(document, {
+            attributes: !0,
+            childList: !0,
+            characterData: !0,
+            subtree: !0
+          })) : (document.addEventListener("DOMSubtreeModified", this.refresh), this.mutationEventsAdded_ = !0), this.connected_ = !0)
+        }, pp.prototype.disconnect_ = function() {
+          op && this.connected_ && (document.removeEventListener("transitionend", this.onTransitionEnd_), window.removeEventListener("resize", this.refresh), this.mutationsObserver_ && this.mutationsObserver_.disconnect(), this.mutationEventsAdded_ && document.removeEventListener("DOMSubtreeModified", this.refresh), this.mutationsObserver_ = null, this.mutationEventsAdded_ = !1, this.connected_ = !1)
+        }, pp.prototype.onTransitionEnd_ = function(pp) {
+          var ip = pp.propertyName,
+            cp = void 0 === ip ? "" : ip;
+          xp.some((function(pp) {
+            return !!~cp.indexOf(pp)
+          })) && this.refresh()
+        }, pp.getInstance = function() {
+          return this.instance_ || (this.instance_ = new pp), this.instance_
+        }, pp.instance_ = null, pp
+      }(),
+      Dp = function(pp, ip) {
+        for (var cp = 0, Op = Object.keys(ip); cp < Op.length; cp++) {
+          var op = Op[cp];
+          Object.defineProperty(pp, op, {
+            value: ip[op],
+            enumerable: !1,
+            writable: !1,
+            configurable: !0
+          })
         }
-      }), [fD, wD.search, wD.pathname]), (0, rD.useEffect)((() => {
-        QD.disableFullscreen && (0, bD.f)() ? (0, bD.i)() : !QD.disableFullscreen && (0, bD.g)() && (0, bD.q)()
-      }), [JD, QD]), (0, rD.useEffect)((() => {
-        "inGame" === JD && Uz()
-      }), [JD, QD]), (0, rD.useEffect)((() => {
-        "inGame" !== JD && sD.e.set({
-          openInGameMenuName: null
+        return pp
+      },
+      Ap = function(pp) {
+        return pp && pp.ownerDocument && pp.ownerDocument.defaultView || Ip
+      },
+      Pp = tp(0, 0, 0, 0);
+
+    function Wp(pp) {
+      return parseFloat(pp) || 0
+    }
+
+    function yp(pp) {
+      for (var ip = [], cp = 1; cp < arguments.length; cp++) ip[cp - 1] = arguments[cp];
+      return ip.reduce((function(ip, cp) {
+        return ip + Wp(pp["border-" + cp + "-width"])
+      }), 0)
+    }
+
+    function Up(pp) {
+      var ip = pp.clientWidth,
+        cp = pp.clientHeight;
+      if (!ip && !cp) return Pp;
+      var Op = Ap(pp).getComputedStyle(pp),
+        op = function(pp) {
+          for (var ip = {}, cp = 0, Op = ["top", "right", "bottom", "left"]; cp < Op.length; cp++) {
+            var op = Op[cp],
+              Ip = pp["padding-" + op];
+            ip[op] = Wp(Ip)
+          }
+          return ip
+        }(Op),
+        Ip = op.left + op.right,
+        Sp = op.top + op.bottom,
+        xp = Wp(Op.width),
+        Lp = Wp(Op.height);
+      if ("border-box" === Op.boxSizing && (Math.round(xp + Ip) !== ip && (xp -= yp(Op, "left", "right") + Ip), Math.round(Lp + Sp) !== cp && (Lp -= yp(Op, "top", "bottom") + Sp)), ! function(pp) {
+          return pp === Ap(pp).document.documentElement
+        }(pp)) {
+        var Yp = Math.round(xp + Ip) - ip,
+          Dp = Math.round(Lp + Sp) - cp;
+        1 !== Math.abs(Yp) && (xp -= Yp), 1 !== Math.abs(Dp) && (Lp -= Dp)
+      }
+      return tp(op.left, op.top, xp, Lp)
+    }
+    var wp = "undefined" !== typeof SVGGraphicsElement ? function(pp) {
+      return pp instanceof Ap(pp).SVGGraphicsElement
+    } : function(pp) {
+      return pp instanceof Ap(pp).SVGElement && "function" === typeof pp.getBBox
+    };
+
+    function vp(pp) {
+      return op ? wp(pp) ? function(pp) {
+        var ip = pp.getBBox();
+        return tp(0, 0, ip.width, ip.height)
+      }(pp) : Up(pp) : Pp
+    }
+
+    function tp(pp, ip, cp, Op) {
+      return {
+        x: pp,
+        y: ip,
+        width: cp,
+        height: Op
+      }
+    }
+    var Hp = function() {
+        function pp(pp) {
+          this.broadcastWidth = 0, this.broadcastHeight = 0, this.contentRect_ = tp(0, 0, 0, 0), this.target = pp
+        }
+        return pp.prototype.isActive = function() {
+          var pp = vp(this.target);
+          return this.contentRect_ = pp, pp.width !== this.broadcastWidth || pp.height !== this.broadcastHeight
+        }, pp.prototype.broadcastRect = function() {
+          var pp = this.contentRect_;
+          return this.broadcastWidth = pp.width, this.broadcastHeight = pp.height, pp
+        }, pp
+      }(),
+      dp = function(pp, ip) {
+        var cp = function(pp) {
+          var ip = pp.x,
+            cp = pp.y,
+            Op = pp.width,
+            op = pp.height,
+            Ip = "undefined" !== typeof DOMRectReadOnly ? DOMRectReadOnly : Object,
+            Sp = Object.create(Ip.prototype);
+          return Dp(Sp, {
+            x: ip,
+            y: cp,
+            width: Op,
+            height: op,
+            top: cp,
+            right: ip + Op,
+            bottom: op + cp,
+            left: ip
+          }), Sp
+        }(ip);
+        Dp(this, {
+          target: pp,
+          contentRect: cp
         })
-      }), [JD]);
-      const ND = function(DD) {
-        const zD = (0, sD.i)(DD),
-          [wD, pD] = (0, rD.useState)(0),
-          [KD, cD] = (0, rD.useState)(!1);
-        (0, LD.g)("gameJoined", (() => {
-          (0, sD.i)(sD.e.get("gameState")) && (pD((DD => DD + 1)), cD(!0))
-        })), (0, rD.useEffect)((() => {
-          zD || cD(!1)
-        }), [zD]);
-        const gD = "inGame" === DD;
-        return {
-          mounted: gD || zD && KD,
-          shown: gD,
-          key: wD
+      },
+      ep = function() {
+        function pp(pp, ip, cp) {
+          if (this.activeObservations_ = [], this.observations_ = new Op, "function" !== typeof pp) throw new TypeError("The callback provided as parameter 1 is not a function.");
+          this.callback_ = pp, this.controller_ = ip, this.callbackCtx_ = cp
         }
-      }(JD);
-      return (0, uD.jsx)(uD.Fragment, {
-        children: ND.mounted && (0, uD.jsx)(KD.InGameUi, {
-          shown: ND.shown
-        }, ND.key)
-      })
-    }
-  },
-  5011: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => sD
-    });
-    var pD = wD(1211);
-    async function sD(DD) {
-      const zD = await fetch(`${pD.clientSideServerUrls.s3Url}/${DD}`, {
-        headers: {
-          Accept: "application/json"
-        }
-      });
-      if (404 === zD.status || 403 === zD.status) return null;
-      if (!zD.ok) throw new Error(`Failed to download the texture pack (${zD.status})`);
-      return await zD.json()
-    }
-  },
-  8919: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => rD
-    });
-    var pD = wD(1339),
-      sD = wD(1232),
-      KD = wD(619);
-
-    function rD(DD) {
-      return DD = function(DD, zD) {
-        var wD;
-        const pD = new URLSearchParams(zD),
-          sD = pD.get("lobby"),
-          KD = pD.get("vm"),
-          rD = null !== (wD = sD) && void 0 !== wD ? wD : DD.lobbyName,
-          LD = null !== KD && void 0 !== KD ? KD : DD.directJoinVmUrl;
-        if (rD === DD.lobbyName && LD === DD.directJoinVmUrl) return DD;
-        return {
-          ...DD,
-          lobbyName: rD,
-          directJoinVmUrl: LD
-        }
-      }(DD, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), DD = function(DD) {
-        if ((0, KD.B)(DD.directJoinVmUrl)) return DD;
-        const zD = (0, sD.V)(DD.directJoinVmUrl);
-        null === zD && (DD.directJoinVmUrl = void 0);
-        return DD
-      }(DD = function(DD) {
-        if ((0, KD.B)(DD.gameNameWithVariation)) return DD;
-        return DD.gameNameWithVariation = (0, pD.i)(DD.gameNameWithVariation), DD
-      }(DD))
-    }
-  },
-  8915: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => KD,
-      c: () => sD
-    });
-    let pD = !1;
-
-    function sD() {
-      pD = !0
-    }
-
-    function KD() {
-      return pD
-    }
-  },
-  8907: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => fD,
-      c: () => UD,
-      g: () => ID
-    });
-    var pD = wD(3139),
-      sD = wD(2264),
-      KD = wD(2119),
-      rD = wD(4673),
-      LD = wD(3494),
-      cD = wD(8915);
-    let gD = null;
-
-    function RD() {
-      return Promise.all([wD.e(74), wD.e(77), wD.e(89), wD.e(211), wD.e(76), wD.e(210), wD.e(134), wD.e(196), wD.e(139), wD.e(87), wD.e(218), wD.e(63)]).then((() => wD(40590)))
-    }
-
-    function AD() {
-      Promise.all([wD.e(72), wD.e(75), wD.e(74), wD.e(73), wD.e(89), wD.e(86), wD.e(269), wD.e(189), wD.e(223), wD.e(247), wD.e(218), wD.e(46)]).then((() => wD(40914))).catch((() => {}))
-    }
-
-    function UD() {
-      return rD.c.cancelDownloadForJoin(), (0, LD.b)(), (0, sD.c)(), (0, cD.c)(), (0, KD.l)(), AD(), Promise.all([wD.e(77), wD.e(89), wD.e(211), wD.e(210), wD.e(134), wD.e(139), wD.e(58)]).then((() => wD(40967))).then((DD => {
-        let {
-          startJoinLoad: zD
-        } = DD;
-        zD()
-      }), (() => {})), gD ??= RD().then((DD => (DD.startWasmPlay(), DD.followPageUiPack((DD => {
-        pD.b.showGamePack(DD)
-      })), DD)), (DD => {
-        throw gD = null, DD
-      })), gD
-    }
-
-    function fD() {
-      return AD(), wD.e(271).then((() => wD(40972))).catch((() => {})), RD().then((() => {}))
-    }
-
-    function ID() {
-      return RD().then((DD => {
-        DD.startWasmPreviews(), DD.prefetchWasmPreviews()
-      }))
-    }
-  },
-  8901: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => KD,
-      g: () => rD,
-      i: () => LD,
-      m: () => gD,
-      q: () => cD
-    });
-    var pD = wD(197),
-      sD = wD(4657);
-
-    function KD(DD) {
-      return rD(DD) === pD.e.gameOrPluginOnPlayerAuthRejected.code
-    }
-
-    function rD(DD) {
-      return "object" === typeof DD && null !== DD ? DD.code : void 0
-    }
-
-    function LD(DD) {
-      var zD;
-      return null !== (zD = Object.keys(sD.b).find((zD => sD.b[zD] === DD))) && void 0 !== zD ? zD : null
-    }
-
-    function cD(DD) {
-      return "notWhitelisted" === DD ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
-    }
-    const gD = {
-      private: "customLobby:cantJoinPrivate",
-      notWhitelisted: "customLobby:cantJoinNotWhitelisted",
-      banned: "customLobby:cantJoinBanned",
-      adminLocked: "customLobby:cantJoinAdminLocked"
-    }
+        return pp.prototype.observe = function(pp) {
+          if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
+          if ("undefined" !== typeof Element && Element instanceof Object) {
+            if (!(pp instanceof Ap(pp).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var ip = this.observations_;
+            ip.has(pp) || (ip.set(pp, new Hp(pp)), this.controller_.addObserver(this), this.controller_.refresh())
+          }
+        }, pp.prototype.unobserve = function(pp) {
+          if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
+          if ("undefined" !== typeof Element && Element instanceof Object) {
+            if (!(pp instanceof Ap(pp).Element)) throw new TypeError('parameter 1 is not of type "Element".');
+            var ip = this.observations_;
+            ip.has(pp) && (ip.delete(pp), ip.size || this.controller_.removeObserver(this))
+          }
+        }, pp.prototype.disconnect = function() {
+          this.clearActive(), this.observations_.clear(), this.controller_.removeObserver(this)
+        }, pp.prototype.gatherActive = function() {
+          var pp = this;
+          this.clearActive(), this.observations_.forEach((function(ip) {
+            ip.isActive() && pp.activeObservations_.push(ip)
+          }))
+        }, pp.prototype.broadcastActive = function() {
+          if (this.hasActive()) {
+            var pp = this.callbackCtx_,
+              ip = this.activeObservations_.map((function(pp) {
+                return new dp(pp.target, pp.broadcastRect())
+              }));
+            this.callback_.call(pp, ip, pp), this.clearActive()
+          }
+        }, pp.prototype.clearActive = function() {
+          this.activeObservations_.splice(0)
+        }, pp.prototype.hasActive = function() {
+          return this.activeObservations_.length > 0
+        }, pp
+      }(),
+      jp = "undefined" !== typeof WeakMap ? new WeakMap : new Op,
+      kp = function pp(ip) {
+        if (!(this instanceof pp)) throw new TypeError("Cannot call a class as a function.");
+        if (!arguments.length) throw new TypeError("1 argument required, but only 0 present.");
+        var cp = Yp.getInstance(),
+          Op = new ep(ip, cp, this);
+        jp.set(this, Op)
+      };
+    ["observe", "unobserve", "disconnect"].forEach((function(pp) {
+      kp.prototype[pp] = function() {
+        var ip;
+        return (ip = jp.get(this))[pp].apply(ip, arguments)
+      }
+    }));
+    const mp = "undefined" !== typeof Ip.ResizeObserver ? Ip.ResizeObserver : kp
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

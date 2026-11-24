@@ -1,239 +1,239 @@
-export const id = 45;
-export const ids = [45];
+export const id = 46;
+export const ids = [46];
 export const modules = {
-  50800: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      MAX_LAYER_WIDTH: () => gD,
-      PackTextures: () => nD,
-      deviceMaxLayerWidth: () => RD,
-      layerWidthFor: () => fD,
-      packFileUrl: () => ID,
-      packFilesOf: () => hD,
-      packTerrainSources: () => BD,
-      webgl1GridColumns: () => AD,
-      webgl1LayerWidth: () => UD
+  51218: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      MAX_LAYER_WIDTH: () => Yp,
+      PackTextures: () => tp,
+      deviceMaxLayerWidth: () => Dp,
+      layerWidthFor: () => Wp,
+      packFileUrl: () => yp,
+      packFilesOf: () => vp,
+      packTerrainSources: () => Up,
+      webgl1GridColumns: () => Ap,
+      webgl1LayerWidth: () => Pp
     });
-    var pD = wD(3098),
-      sD = wD(40636),
-      KD = wD(40743),
-      rD = wD(50802),
-      LD = wD(40732),
-      cD = wD(50808);
-    const gD = {
+    var Op = cp(3211),
+      op = cp(40920),
+      Ip = cp(41016),
+      Sp = cp(51220),
+      xp = cp(41008),
+      Lp = cp(51229);
+    const Yp = {
       webgpu: 128,
       webgl: 128,
       webgl1: 64
     };
 
-    function RD(DD) {
-      return (0, pD.d)() ? Math.min(gD[DD], 64) : gD[DD]
+    function Dp(pp) {
+      return (0, Op.b)() ? Math.min(Yp[pp], 64) : Yp[pp]
     }
 
-    function AD(DD) {
-      const zD = Math.ceil(Math.log2(Math.max(1, DD)));
-      return 2 ** Math.ceil(zD / 2)
+    function Ap(pp) {
+      const ip = Math.ceil(Math.log2(Math.max(1, pp)));
+      return 2 ** Math.ceil(ip / 2)
     }
 
-    function UD(DD, zD, wD) {
-      const pD = null !== wD && wD > 0 ? wD : sD.d.limits.MAX_TEXTURE_SIZE;
-      return fD(Math.max(1, Math.floor(pD / AD(zD))), DD)
+    function Pp(pp, ip, cp) {
+      const Op = null !== cp && cp > 0 ? cp : op.d.limits.MAX_TEXTURE_SIZE;
+      return Wp(Math.max(1, Math.floor(Op / Ap(ip))), pp)
     }
 
-    function fD(DD, zD) {
-      let wD = 1;
-      for (; 2 * wD <= Math.min(DD, zD);) wD *= 2;
-      return wD
+    function Wp(pp, ip) {
+      let cp = 1;
+      for (; 2 * cp <= Math.min(pp, ip);) cp *= 2;
+      return cp
     }
 
-    function ID(DD, zD) {
-      return "string" !== typeof DD || "" === DD ? null : "player" === zD || (0, rD.e)(DD) ? DD : null
+    function yp(pp, ip) {
+      return "string" !== typeof pp || "" === pp ? null : "player" === ip || (0, Sp.e)(pp) ? pp : null
     }
-    async function BD(DD, zD, pD) {
-      const sD = await wD.e(204).then((() => wD(34299))),
+    async function Up(pp, ip, Op) {
+      const op = await cp.e(207).then((() => cp(34510))),
         {
-          sheetLayout: rD,
-          sheetWidth: cD
-        } = DD;
-      if (cD > zD) throw new Error(`the pack's atlas is ${cD} px wide, not within ${zD} px`);
-      if (!(rD.length === sD.imagesPerAtlas.length && rD.every(((DD, zD) => DD === sD.imagesPerAtlas[zD])))) {
-        const DD = `the pack's atlas is sheets of ${rD.join(", ")} layers, the built atlas's ${sD.imagesPerAtlas.join(", ")}: run npm run buildAtlas`;
-        if (rD.length < sD.imagesPerAtlas.length) throw new Error(DD);
-        console.warn(DD)
+          sheetLayout: Sp,
+          sheetWidth: Lp
+        } = pp;
+      if (Lp > ip) throw new Error(`the pack's atlas is ${Lp} px wide, not within ${ip} px`);
+      if (!(Sp.length === op.imagesPerAtlas.length && Sp.every(((pp, ip) => pp === op.imagesPerAtlas[ip])))) {
+        const pp = `the pack's atlas is sheets of ${Sp.join(", ")} layers, the built atlas's ${op.imagesPerAtlas.join(", ")}: run npm run buildAtlas`;
+        if (Sp.length < op.imagesPerAtlas.length) throw new Error(pp);
+        console.warn(pp)
       }
       return {
         atlasSheets: [],
-        heldUntil: DD.heldUntil,
-        texture: zD => {
-          var wD, rD, LD;
-          return null !== (wD = null !== (rD = null !== (LD = ID(DD.terrain.texture(zD), pD)) && void 0 !== LD ? LD : sD.animatedBlockTextures[zD]) && void 0 !== rD ? rD : sD.rotatedBlockTextures[zD]) && void 0 !== wD ? wD : function(DD, zD, wD) {
-            var pD, sD;
-            const rD = null !== (pD = KD.b[DD]) && void 0 !== pD ? pD : null;
-            return null === rD ? null : null !== (sD = ID(zD.texture(DD), wD)) && void 0 !== sD ? sD : rD
-          }(zD, DD, pD)
+        heldUntil: pp.heldUntil,
+        texture: ip => {
+          var cp, Sp, xp;
+          return null !== (cp = null !== (Sp = null !== (xp = yp(pp.terrain.texture(ip), Op)) && void 0 !== xp ? xp : op.animatedBlockTextures[ip]) && void 0 !== Sp ? Sp : op.rotatedBlockTextures[ip]) && void 0 !== cp ? cp : function(pp, ip, cp) {
+            var Op, op;
+            const Sp = null !== (Op = Ip.c[pp]) && void 0 !== Op ? Op : null;
+            return null === Sp ? null : null !== (op = yp(ip.texture(pp), cp)) && void 0 !== op ? op : Sp
+          }(ip, pp, Op)
         },
-        decoded: zD => {
-          const wD = (0, LD.g)(zD);
-          return null === wD ? null : (async zD => {
-            const wD = DD.sheetPixels.at(zD);
-            if (wD) {
-              DD.sheetPixels[zD] = null;
-              const pD = cD > 0 ? wD.byteLength / (4 * cD) : 0;
+        decoded: ip => {
+          const cp = (0, xp.h)(ip);
+          return null === cp ? null : (async ip => {
+            const cp = pp.sheetPixels.at(ip);
+            if (cp) {
+              pp.sheetPixels[ip] = null;
+              const Op = Lp > 0 ? cp.byteLength / (4 * Lp) : 0;
               return {
-                width: cD,
-                height: pD,
-                pixels: new Uint8Array(wD.buffer, wD.byteOffset, wD.byteLength)
+                width: Lp,
+                height: Op,
+                pixels: new Uint8Array(cp.buffer, cp.byteOffset, cp.byteLength)
               }
             }
-            const sD = DD.terrain.atlasSheets.at(zD);
-            if (void 0 === sD) throw new Error(`the pack has no atlas sheet ${zD}`);
-            const KD = ID(sD, pD);
-            if (null === KD) throw new Error(`the pack's atlas sheet ${zD} isn't a pack file`);
-            return (0, LD.j)(KD)
-          })(wD)
+            const op = pp.terrain.atlasSheets.at(ip);
+            if (void 0 === op) throw new Error(`the pack has no atlas sheet ${ip}`);
+            const Ip = yp(op, Op);
+            if (null === Ip) throw new Error(`the pack's atlas sheet ${ip} isn't a pack file`);
+            return (0, xp.j)(Ip)
+          })(cp)
         }
       }
     }
-    const GD = new WeakMap;
+    const wp = new WeakMap;
 
-    function hD(DD, zD) {
-      if (null === DD) return null;
-      let wD = GD.get(DD);
-      void 0 === wD && (wD = {}, GD.set(DD, wD));
-      const pD = wD[zD];
-      if (void 0 !== pD) return pD;
+    function vp(pp, ip) {
+      if (null === pp) return null;
+      let cp = wp.get(pp);
+      void 0 === cp && (cp = {}, wp.set(pp, cp));
+      const Op = cp[ip];
+      if (void 0 !== Op) return Op;
       const {
-        armourAtlasUrl: sD,
-        texture: KD,
-        model: rD
-      } = DD, LD = {
-        armourAtlasUrl: () => ID(sD, zD),
-        textureUrl: DD => ID(KD(DD), zD),
-        modelUrl: DD => ID(rD(DD), zD)
+        armourAtlasUrl: op,
+        texture: Ip,
+        model: Sp
+      } = pp, xp = {
+        armourAtlasUrl: () => yp(op, ip),
+        textureUrl: pp => yp(Ip(pp), ip),
+        modelUrl: pp => yp(Sp(pp), ip)
       };
-      return wD[zD] = LD, LD
+      return cp[ip] = xp, xp
     }
-    class nD {
-      constructor(DD) {
-        this.host = DD, this.assets = null, this.owner = "player", this.latest = 0, this.swapping = 0, this.ended = !1, this.maxWidth = null
+    class tp {
+      constructor(pp) {
+        this.host = pp, this.assets = null, this.owner = "player", this.latest = 0, this.swapping = 0, this.ended = !1, this.maxWidth = null
       }
       maxLayerWidth() {
-        return this.maxWidth ??= (async (DD, zD, pD) => {
+        return this.maxWidth ??= (async (pp, ip, Op) => {
           const {
-            backend: sD
-          } = this.host, KD = RD(sD);
-          if ("webgl1" !== sD) return KD;
-          const [rD, LD] = await Promise.all([wD.e(204).then((() => wD(34299))), null !== (DD = null === (zD = (pD = this.host).maxTextureSize) || void 0 === zD ? void 0 : zD.call(pD)) && void 0 !== DD ? DD : null]);
-          return UD(KD, rD.imagesPerAtlas.length * Math.max(0, ...rD.imagesPerAtlas), LD)
-        })().catch((DD => {
-          throw this.maxWidth = null, DD
+            backend: op
+          } = this.host, Ip = Dp(op);
+          if ("webgl1" !== op) return Ip;
+          const [Sp, xp] = await Promise.all([cp.e(207).then((() => cp(34510))), null !== (pp = null === (ip = (Op = this.host).maxTextureSize) || void 0 === ip ? void 0 : ip.call(Op)) && void 0 !== pp ? pp : null]);
+          return Pp(Ip, Sp.imagesPerAtlas.length * Math.max(0, ...Sp.imagesPerAtlas), xp)
+        })().catch((pp => {
+          throw this.maxWidth = null, pp
         })), this.maxWidth
       }
       files() {
-        return hD(this.assets, this.owner)
+        return vp(this.assets, this.owner)
       }
       start() {
-        let DD = null;
-        const zD = this.host.feed.subscribe((zD => {
-          const wD = ++this.latest,
-            pD = null !== zD.gameSource ? "game" : null !== DD && null !== DD.gameSource ? "join" : "page";
-          DD = zD, this.host.settling(), this.assetsFor(zD).then((DD => this.apply(wD, DD, zD, pD).catch((DD => {
-            this.host.warn("the texture pack landed, but reloading what it overrides failed", DD)
-          }))), (DD => {
-            this.host.warn("the texture pack's atlas couldn't be generated: the textures in stay", DD), this.settled(wD, zD, null, {
-              error: DD,
-              source: pD
+        let pp = null;
+        const ip = this.host.feed.subscribe((ip => {
+          const cp = ++this.latest,
+            Op = null !== ip.gameSource ? "game" : null !== pp && null !== pp.gameSource ? "join" : "page";
+          pp = ip, this.host.settling(), this.assetsFor(ip).then((pp => this.apply(cp, pp, ip, Op).catch((pp => {
+            this.host.warn("the texture pack landed, but reloading what it overrides failed", pp)
+          }))), (pp => {
+            this.host.warn("the texture pack's atlas couldn't be generated: the textures in stay", pp), this.settled(cp, ip, null, {
+              error: pp,
+              source: Op
             })
           }))
         }));
         return () => {
-          zD(), this.latest++, this.ended = !0
+          ip(), this.latest++, this.ended = !0
         }
       }
-      async apply(DD, zD, wD, pD) {
+      async apply(pp, ip, cp, Op) {
         const {
-          host: sD
+          host: op
         } = this;
-        if (DD !== this.latest || sD.stopped()) return;
-        const KD = (0, rD.k)(wD);
-        if (this.texturesIn(zD, KD) && 0 === this.swapping) return void this.settled(DD, wD, hD(zD, KD));
-        let cD;
+        if (pp !== this.latest || op.stopped()) return;
+        const Ip = (0, Sp.h)(cp);
+        if (this.texturesIn(ip, Ip) && 0 === this.swapping) return void this.settled(pp, cp, vp(ip, Ip));
+        let Lp;
         this.swapping++;
-        let gD = null;
+        let Yp = null;
         try {
-          cD = await sD.terrain.swap((DD => {
-            var zD;
-            sD.warn(`texture pack texture ${null!==(zD=DD.name)&&void 0!==zD?zD:"(all)"} failed`, DD.error), null !== DD.name && null === (0, LD.g)(DD.name) || (gD = DD.error)
-          }), (async () => sD.sourcesOf ? sD.sourcesOf(zD) : null === zD ? (0, LD.h)() : BD(zD, await this.maxLayerWidth(), KD)), {
-            wholeAtlas: null !== zD,
-            wanted: () => DD === this.latest
+          Lp = await op.terrain.swap((pp => {
+            var ip;
+            op.warn(`texture pack texture ${null!==(ip=pp.name)&&void 0!==ip?ip:"(all)"} failed`, pp.error), null !== pp.name && null === (0, xp.h)(pp.name) || (Yp = pp.error)
+          }), (async () => op.sourcesOf ? op.sourcesOf(ip) : null === ip ? (0, xp.i)() : Up(ip, await this.maxLayerWidth(), Ip)), {
+            wholeAtlas: null !== ip,
+            wanted: () => pp === this.latest
           })
-        } catch (RD) {
-          return sD.warn("the texture pack's swap failed: the textures in stay", RD), void this.settled(DD, wD, null, {
-            error: RD,
-            source: pD
+        } catch (Dp) {
+          return op.warn("the texture pack's swap failed: the textures in stay", Dp), void this.settled(pp, cp, null, {
+            error: Dp,
+            source: Op
           })
         } finally {
           this.swapping--
         }
-        if (!0 !== cD || this.ended) this.settled(DD, wD, null, {
-          error: gD,
-          source: pD
+        if (!0 !== Lp || this.ended) this.settled(pp, cp, null, {
+          error: Yp,
+          source: Op
         });
         else {
-          sD.landed(), this.assets = zD, this.owner = KD;
+          op.landed(), this.assets = ip, this.owner = Ip;
           try {
-            sD.packSwapped()
+            op.packSwapped()
           } finally {
-            this.settled(DD, wD, this.files())
+            this.settled(pp, cp, this.files())
           }
         }
       }
-      async assetsFor(DD) {
-        var zD;
-        return (null !== (zD = this.host.assetsOf) && void 0 !== zD ? zD : cD.f)(DD, await this.maxLayerWidth())
+      async assetsFor(pp) {
+        var ip;
+        return (null !== (ip = this.host.assetsOf) && void 0 !== ip ? ip : Lp.h)(pp, await this.maxLayerWidth())
       }
-      texturesIn(DD, zD) {
-        return DD === this.assets && (null === DD || zD === this.owner)
+      texturesIn(pp, ip) {
+        return pp === this.assets && (null === pp || ip === this.owner)
       }
-      settled(DD, zD, wD) {
-        let pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        DD !== this.latest || this.ended || this.host.stopped() || this.host.settled(zD, wD, pD)
+      settled(pp, ip, cp) {
+        let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
+        pp !== this.latest || this.ended || this.host.stopped() || this.host.settled(ip, cp, Op)
       }
     }
   },
-  50811: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      followPagePackFiles: () => KD
+  51238: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      followPagePackFiles: () => Ip
     });
-    var pD = wD(50800),
-      sD = wD(50808);
+    var Op = cp(51218),
+      op = cp(51229);
 
-    function KD(DD, zD, wD, KD, rD) {
-      let LD, cD = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : DD => (0, sD.f)(DD, (0, pD.deviceMaxLayerWidth)(wD)),
-        gD = 0,
-        RD = null;
-      const AD = () => {
-          if (null === RD || null !== RD.gameSource && !zD.showsPage()) return;
-          const wD = null === RD.gameSource ? RD : DD.playerState();
-          if (wD.pack === LD) return;
-          LD = wD.pack;
-          const sD = ++gD;
-          cD(wD).then((DD => {
-            sD === gD && KD((0, pD.packFilesOf)(DD, "player"))
-          }), (DD => {
-            sD === gD && (LD = void 0), rD("the texture pack's files couldn't be had for the previews: the files in stay", DD)
+    function Ip(pp, ip, cp, Ip, Sp) {
+      let xp, Lp = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : pp => (0, op.h)(pp, (0, Op.deviceMaxLayerWidth)(cp)),
+        Yp = 0,
+        Dp = null;
+      const Ap = () => {
+          if (null === Dp || null !== Dp.gameSource && !ip.showsPage()) return;
+          const cp = null === Dp.gameSource ? Dp : pp.playerState();
+          if (cp.pack === xp) return;
+          xp = cp.pack;
+          const op = ++Yp;
+          Lp(cp).then((pp => {
+            op === Yp && Ip((0, Op.packFilesOf)(pp, "player"))
+          }), (pp => {
+            op === Yp && (xp = void 0), Sp("the texture pack's files couldn't be had for the previews: the files in stay", pp)
           }))
         },
-        UD = DD.subscribe((DD => {
-          RD = DD, AD()
+        Pp = pp.subscribe((pp => {
+          Dp = pp, Ap()
         })),
-        fD = DD.onPlayerPackChange(AD),
-        ID = zD.onPageShown(AD);
+        Wp = pp.onPlayerPackChange(Ap),
+        yp = ip.onPageShown(Ap);
       return () => {
-        UD(), fD(), ID(), gD++
+        Pp(), Wp(), yp(), Yp++
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

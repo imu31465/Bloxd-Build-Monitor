@@ -1,30 +1,30 @@
-/*! For license information please see tz47m9.wasmMatchmaking.3f1f5bed.chunk.js.LICENSE.txt */
-export const id = 62;
-export const ids = [62];
+/*! For license information please see sn3sfj.wasmMatchmaking.6f5d7650.chunk.js.LICENSE.txt */
+export const id = 63;
+export const ids = [63];
 export const modules = {
-  36533: (DD, zD) => {
-    function wD(DD) {
-      if (DD && "object" === typeof DD) {
-        var zD = DD.which || DD.keyCode || DD.charCode;
-        zD && (DD = zD)
+  36730: (pp, ip) => {
+    function cp(pp) {
+      if (pp && "object" === typeof pp) {
+        var ip = pp.which || pp.keyCode || pp.charCode;
+        ip && (pp = ip)
       }
-      if ("number" === typeof DD) return rD[DD];
-      var wD, KD = String(DD);
-      return (wD = pD[KD.toLowerCase()]) ? wD : (wD = sD[KD.toLowerCase()]) || (1 === KD.length ? KD.charCodeAt(0) : void 0)
+      if ("number" === typeof pp) return Sp[pp];
+      var cp, Ip = String(pp);
+      return (cp = Op[Ip.toLowerCase()]) ? cp : (cp = op[Ip.toLowerCase()]) || (1 === Ip.length ? Ip.charCodeAt(0) : void 0)
     }
-    wD.isEventKey = function(DD, zD) {
-      if (DD && "object" === typeof DD) {
-        var wD = DD.which || DD.keyCode || DD.charCode;
-        if (null === wD || void 0 === wD) return !1;
-        if ("string" === typeof zD) {
-          var KD;
-          if (KD = pD[zD.toLowerCase()]) return KD === wD;
-          if (KD = sD[zD.toLowerCase()]) return KD === wD
-        } else if ("number" === typeof zD) return zD === wD;
+    cp.isEventKey = function(pp, ip) {
+      if (pp && "object" === typeof pp) {
+        var cp = pp.which || pp.keyCode || pp.charCode;
+        if (null === cp || void 0 === cp) return !1;
+        if ("string" === typeof ip) {
+          var Ip;
+          if (Ip = Op[ip.toLowerCase()]) return Ip === cp;
+          if (Ip = op[ip.toLowerCase()]) return Ip === cp
+        } else if ("number" === typeof ip) return ip === cp;
         return !1
       }
     };
-    var pD = (zD = DD.exports = wD).code = zD.codes = {
+    var Op = (ip = pp.exports = cp).code = ip.codes = {
         backspace: 8,
         tab: 9,
         enter: 13,
@@ -69,7 +69,7 @@ export const modules = {
         "]": 221,
         "'": 222
       },
-      sD = zD.aliases = {
+      op = ip.aliases = {
         windows: 91,
         "\u21e7": 16,
         "\u2325": 18,
@@ -91,47 +91,47 @@ export const modules = {
         del: 46,
         cmd: 91
       };
-    for (KD = 97; KD < 123; KD++) pD[String.fromCharCode(KD)] = KD - 32;
-    for (var KD = 48; KD < 58; KD++) pD[KD - 48] = KD;
-    for (KD = 1; KD < 13; KD++) pD["f" + KD] = KD + 111;
-    for (KD = 0; KD < 10; KD++) pD["numpad " + KD] = KD + 96;
-    var rD = zD.names = zD.title = {};
-    for (KD in pD) rD[pD[KD]] = KD;
-    for (var LD in sD) pD[LD] = sD[LD]
+    for (Ip = 97; Ip < 123; Ip++) Op[String.fromCharCode(Ip)] = Ip - 32;
+    for (var Ip = 48; Ip < 58; Ip++) Op[Ip - 48] = Ip;
+    for (Ip = 1; Ip < 13; Ip++) Op["f" + Ip] = Ip + 111;
+    for (Ip = 0; Ip < 10; Ip++) Op["numpad " + Ip] = Ip + 96;
+    var Sp = ip.names = ip.title = {};
+    for (Ip in Op) Sp[Op[Ip]] = Ip;
+    for (var xp in op) Op[xp] = op[xp]
   },
-  36667: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => rD
+  36887: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Sp
     });
-    var pD = wD(58);
-    const sD = pD.useLayoutEffect;
-    const KD = function(DD) {
-      var zD = (0, pD.useRef)(DD);
-      return sD((function() {
-        zD.current = DD
-      })), zD
+    var Op = cp(62);
+    const op = Op.useLayoutEffect;
+    const Ip = function(pp) {
+      var ip = (0, Op.useRef)(pp);
+      return op((function() {
+        ip.current = pp
+      })), ip
     };
-    var rD = function(DD) {
-      var zD = KD(DD);
-      (0, pD.useEffect)((function() {
-        var DD = function(DD) {
-          var wD;
-          if (null != zD.current && (wD = zD.current(DD)), DD.defaultPrevented && (DD.returnValue = ""), "string" === typeof wD) return DD.returnValue = wD, wD
+    var Sp = function(pp) {
+      var ip = Ip(pp);
+      (0, Op.useEffect)((function() {
+        var pp = function(pp) {
+          var cp;
+          if (null != ip.current && (cp = ip.current(pp)), pp.defaultPrevented && (pp.returnValue = ""), "string" === typeof cp) return pp.returnValue = cp, cp
         };
-        return window.addEventListener("beforeunload", DD),
+        return window.addEventListener("beforeunload", pp),
           function() {
-            window.removeEventListener("beforeunload", DD)
+            window.removeEventListener("beforeunload", pp)
           }
       }), [])
     }
   },
-  36572: DD => {
-    var zD, wD = "undefined" !== typeof window ? window.navigator.userAgent : "",
-      pD = /OS X/.test(wD),
-      sD = /Opera/.test(wD),
-      KD = !/like Gecko/.test(wD) && !sD,
-      rD = DD.exports = {
-        0: pD ? "<menu>" : "<UNK>",
+  36772: pp => {
+    var ip, cp = "undefined" !== typeof window ? window.navigator.userAgent : "",
+      Op = /OS X/.test(cp),
+      op = /Opera/.test(cp),
+      Ip = !/like Gecko/.test(cp) && !op,
+      Sp = pp.exports = {
+        0: Op ? "<menu>" : "<UNK>",
         1: "<mouse 1>",
         2: "<mouse 2>",
         3: "<break>",
@@ -174,7 +174,7 @@ export const modules = {
         47: "<help>",
         91: "<meta>",
         92: "<meta>",
-        93: pD ? "<meta>" : "<menu>",
+        93: Op ? "<meta>" : "<menu>",
         95: "<sleep>",
         106: "<num-*>",
         107: "<num-+>",
@@ -197,7 +197,7 @@ export const modules = {
         170: "<browser-search>",
         171: "<browser-favorites>",
         172: "<browser-home>",
-        173: pD && KD ? "-" : "<volume-mute>",
+        173: Op && Ip ? "-" : "<volume-mute>",
         174: "<volume-down>",
         175: "<volume-up>",
         176: "<next-track>",
@@ -223,7 +223,7 @@ export const modules = {
         224: "<meta>",
         226: "<alt-gr>",
         229: "<ime-process>",
-        231: sD ? "`" : "<unicode>",
+        231: op ? "`" : "<unicode>",
         246: "<attention>",
         247: "<crsel>",
         248: "<exsel>",
@@ -234,261 +234,322 @@ export const modules = {
         253: "<pa-1>",
         254: "<clear>"
       };
-    for (zD = 58; zD < 65; ++zD) rD[zD] = String.fromCharCode(zD);
-    for (zD = 48; zD < 58; ++zD) rD[zD] = zD - 48 + "";
-    for (zD = 65; zD < 91; ++zD) rD[zD] = String.fromCharCode(zD);
-    for (zD = 96; zD < 106; ++zD) rD[zD] = "<num-" + (zD - 96) + ">";
-    for (zD = 112; zD < 136; ++zD) rD[zD] = "F" + (zD - 111)
+    for (ip = 58; ip < 65; ++ip) Sp[ip] = String.fromCharCode(ip);
+    for (ip = 48; ip < 58; ++ip) Sp[ip] = ip - 48 + "";
+    for (ip = 65; ip < 91; ++ip) Sp[ip] = String.fromCharCode(ip);
+    for (ip = 96; ip < 106; ++ip) Sp[ip] = "<num-" + (ip - 96) + ">";
+    for (ip = 112; ip < 136; ++ip) Sp[ip] = "F" + (ip - 111)
   },
-  8915: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => KD,
-      c: () => sD
+  9046: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Ip,
+      g: () => op
     });
-    let pD = !1;
+    let Op = !1;
 
-    function sD() {
-      pD = !0
+    function op() {
+      Op = !0
     }
 
-    function KD() {
-      return pD
+    function Ip() {
+      return Op
     }
   },
-  36439: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      InGameUi: () => JD.b,
-      LobbyLeaderboard: () => ED.d,
-      loadCharacterCustomisationUI: () => QD,
-      loadCharacterPreview: () => XD,
-      matchmakeAndPlay: () => xD,
-      setUpGame: () => VD
+  36658: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      InGameUi: () => ep.d,
+      LobbyLeaderboard: () => jp.c,
+      loadCharacterCustomisationUI: () => kp,
+      loadCharacterPreview: () => mp,
+      matchmakeAndPlay: () => Cp,
+      matchmakeForAhead: () => xp.e,
+      setUpGame: () => Rp
     });
-    var pD = wD(1251),
-      sD = wD(157),
-      KD = wD(20),
-      rD = wD(36447),
-      LD = wD(36455),
-      cD = wD(1956),
-      gD = wD(36491);
+    var Op = cp(1255),
+      op = cp(156),
+      Ip = cp(25),
+      Sp = cp(36663),
+      xp = cp(36669),
+      Lp = cp(1982),
+      Yp = cp(36691);
 
-    function RD() {
-      return !1 !== cD.e.get("canCustomiseChar")
+    function Dp() {
+      return !1 !== Lp.c.get("canCustomiseChar")
     }
-    let AD = !1;
-    var UD = wD(1332),
-      fD = wD(1260),
-      ID = wD(262),
-      BD = wD(694),
-      GD = wD(8915),
-      hD = wD(8907);
+    let Ap = !1;
+    var Pp = cp(1349),
+      Wp = cp(1260),
+      yp = cp(249),
+      Up = cp(3668),
+      wp = cp(9046),
+      vp = cp(9041);
 
-    function nD() {
-      (0, GD.b)() || (0, hD.b)().catch((DD => {
-        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", DD)
+    function tp() {
+      (0, wp.c)() || (0, vp.e)().catch((pp => {
+        console.warn("[bloxd-wasm-client] the play chunk did not load ahead of a join: the join loads it itself", pp)
       }))
     }
-    var MD = wD(3444),
-      OD = wD(1756);
-    var JD = wD(36502),
-      ED = wD(36983);
+    var Hp = cp(3546),
+      dp = cp(1786);
+    var ep = cp(36695),
+      jp = cp(37220);
 
-    function QD() {
-      return wD.e(216).then((() => wD(41187)))
+    function kp() {
+      return cp.e(220).then((() => cp(41517)))
     }
 
-    function XD() {
-      return wD.e(291).then((() => wD(41190)))
+    function mp() {
+      return cp.e(296).then((() => cp(41524)))
     }
 
-    function VD() {
-      return (0, hD.g)()
+    function Rp() {
+      return (0, vp.j)()
     }
-    AD || (AD = !0, document.addEventListener("keydown", (DD => {
-        (0, gD.c)(DD, RD)
+    Ap || (Ap = !0, document.addEventListener("keydown", (pp => {
+        (0, Yp.b)(pp, Dp)
       }))),
-      function(DD) {
-        var zD;
-        return !0 !== (null === DD || void 0 === DD ? void 0 : DD.saveData) && !/2g$/.test(null !== (zD = null === DD || void 0 === DD ? void 0 : DD.effectiveType) && void 0 !== zD ? zD : "")
-      }(navigator.connection) && (0, BD.c)((() => {
-        (0, GD.b)() || Promise.all([wD.e(77), wD.e(89), wD.e(211), wD.e(210), wD.e(134), wD.e(139), wD.e(58)]).then((() => wD(40967))).then((async DD => {
-          (0, GD.b)() || (await DD.startLoadAheadOfJoin({
-            joinStarted: GD.b,
-            language: fD.e.get().getCurrentLanguageCode()
-          }), (0, ID.b)(nD))
-        }), (DD => {
-          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", DD)
+      function(pp) {
+        var ip;
+        return !0 !== (null === pp || void 0 === pp ? void 0 : pp.saveData) && !/2g$/.test(null !== (ip = null === pp || void 0 === pp ? void 0 : pp.effectiveType) && void 0 !== ip ? ip : "")
+      }(navigator.connection) && (0, Up.b)((() => {
+        (0, wp.c)() || Promise.all([cp.e(78), cp.e(90), cp.e(215), cp.e(214), cp.e(137), cp.e(140), cp.e(59)]).then((() => cp(41270))).then((async pp => {
+          (0, wp.c)() || (await pp.startLoadAheadOfJoin({
+            joinStarted: wp.c,
+            language: Wp.g.get().getCurrentLanguageCode()
+          }), (0, yp.b)(tp))
+        }), (pp => {
+          console.warn("[bloxd-wasm-client] the loads ahead of a join did not start: the join loads the client itself", pp)
         }))
       }));
-    const PD = KD.e.get("router");
-    null === PD ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function DD(zD) {
-      if ((0, OD.c)(zD.state.location.pathname)) return void(0, hD.c)().catch((() => {}));
-      const wD = zD.subscribe((pD => {
-        (0, OD.c)(pD.location.pathname) && (wD(), (0, MD.e)().then((() => {
-          DD(zD)
+    const qp = Ip.c.get("router");
+    null === qp ? console.warn("[bloxd-wasm-client] no router as the matchmaking chunk loads: the join's loads start with the join") : function pp(ip) {
+      if ((0, dp.d)(ip.state.location.pathname)) return void(0, vp.f)().catch((() => {}));
+      const cp = ip.subscribe((Op => {
+        (0, dp.d)(Op.location.pathname) && (cp(), (0, Hp.h)().then((() => {
+          pp(ip)
         })))
       }))
-    }(PD), (0, rD.d)();
-    const CD = (0, LD.d)((async function(DD, zD) {
+    }(qp), (0, Sp.c)();
+    const Mp = (0, xp.d)((async function(pp, ip) {
       let {
-        place: wD,
-        userContext: KD,
-        direct: rD,
-        rematch: LD
-      } = DD;
-      const cD = rD ? 1 / 0 : performance.now();
-      let gD;
+        place: cp,
+        userContext: Ip,
+        direct: Sp,
+        matchedAt: xp,
+        rematch: Lp
+      } = pp;
+      const Yp = Sp ? 1 / 0 : xp;
+      let Dp;
       try {
-        gD = await (0, hD.c)()
-      } catch (RD) {
-        return console.error("The wasm client did not load:", RD), (0, UD.q)({
+        Dp = await (0, vp.f)()
+      } catch (Ap) {
+        return console.error("The wasm client did not load:", Ap), (0, Pp.p)({
           websocketUrl: null
-        }), pD.e.errorWithCode(String(RD), sD.n.CONNECT_TO_GAME_SERVER, {
-          error: RD,
-          severity: zD.aborted ? "low" : "medium",
-          sw: zD.aborted
+        }), Op.d.errorWithCode(String(Ap), op.k.CONNECT_TO_GAME_SERVER, {
+          error: Ap,
+          severity: ip.aborted ? "low" : "medium",
+          OO: ip.aborted
         })
       }
-      return gD.playWasmGame({
-        userContext: KD,
-        place: wD,
-        matchedAt: cD,
-        rematch: LD
-      }, zD)
+      return Dp.playWasmGame({
+        userContext: Ip,
+        place: cp,
+        matchedAt: Yp,
+        rematch: Lp
+      }, ip)
     }));
 
-    function xD() {
-      return (0, hD.c)().catch((() => {})), CD(...arguments)
+    function Cp() {
+      return (0, vp.f)().catch((() => {})), Mp(...arguments)
     }
   },
-  8907: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => fD,
-      c: () => UD,
-      g: () => ID
+  9041: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Wp,
+      f: () => Pp,
+      j: () => yp
     });
-    var pD = wD(3139),
-      sD = wD(2264),
-      KD = wD(2119),
-      rD = wD(4673),
-      LD = wD(3494),
-      cD = wD(8915);
-    let gD = null;
+    var Op = cp(3246),
+      op = cp(2343),
+      Ip = cp(2174),
+      Sp = cp(4739),
+      xp = cp(3607),
+      Lp = cp(9046);
+    let Yp = null;
 
-    function RD() {
-      return Promise.all([wD.e(74), wD.e(77), wD.e(89), wD.e(211), wD.e(76), wD.e(210), wD.e(134), wD.e(196), wD.e(139), wD.e(87), wD.e(218), wD.e(63)]).then((() => wD(40590)))
+    function Dp() {
+      return Promise.all([cp.e(75), cp.e(78), cp.e(90), cp.e(215), cp.e(214), cp.e(160), cp.e(137), cp.e(198), cp.e(140), cp.e(88), cp.e(275), cp.e(64)]).then((() => cp(40873)))
     }
 
-    function AD() {
-      Promise.all([wD.e(72), wD.e(75), wD.e(74), wD.e(73), wD.e(89), wD.e(86), wD.e(269), wD.e(189), wD.e(223), wD.e(247), wD.e(218), wD.e(46)]).then((() => wD(40914))).catch((() => {}))
+    function Ap() {
+      Promise.all([cp.e(73), cp.e(76), cp.e(75), cp.e(74), cp.e(90), cp.e(87), cp.e(273), cp.e(191), cp.e(228), cp.e(252), cp.e(275), cp.e(47)]).then((() => cp(41212))).catch((() => {}))
     }
 
-    function UD() {
-      return rD.c.cancelDownloadForJoin(), (0, LD.b)(), (0, sD.c)(), (0, cD.c)(), (0, KD.l)(), AD(), Promise.all([wD.e(77), wD.e(89), wD.e(211), wD.e(210), wD.e(134), wD.e(139), wD.e(58)]).then((() => wD(40967))).then((DD => {
+    function Pp() {
+      return Sp.b.cancelDownloadForJoin(), (0, xp.c)(), (0, op.e)(), (0, Lp.g)(), (0, Ip.j)(), Ap(), Promise.all([cp.e(78), cp.e(90), cp.e(215), cp.e(214), cp.e(137), cp.e(140), cp.e(59)]).then((() => cp(41270))).then((pp => {
         let {
-          startJoinLoad: zD
-        } = DD;
-        zD()
-      }), (() => {})), gD ??= RD().then((DD => (DD.startWasmPlay(), DD.followPageUiPack((DD => {
-        pD.b.showGamePack(DD)
-      })), DD)), (DD => {
-        throw gD = null, DD
-      })), gD
+          startJoinLoad: ip
+        } = pp;
+        ip()
+      }), (() => {})), Yp ??= Dp().then((pp => (pp.startWasmPlay(), pp.followPageUiPack((pp => {
+        Op.d.showGamePack(pp)
+      })), pp)), (pp => {
+        throw Yp = null, pp
+      })), Yp
     }
 
-    function fD() {
-      return AD(), wD.e(271).then((() => wD(40972))).catch((() => {})), RD().then((() => {}))
+    function Wp() {
+      return Ap(), cp.e(276).then((() => cp(41273))).catch((() => {})), Dp().then((() => {}))
     }
 
-    function ID() {
-      return RD().then((DD => {
-        DD.startWasmPreviews(), DD.prefetchWasmPreviews()
+    function yp() {
+      return Dp().then((pp => {
+        pp.startWasmPreviews(), pp.prefetchWasmPreviews()
       }))
     }
   },
-  36808: (DD, zD, wD) => {
-    function pD(DD) {
-      return "fetch" === DD || "timeout" === DD || "integrity" === DD ? "download" : "browser"
-    }
-    wD.d(zD, {
-      b: () => sD,
-      d: () => rD,
-      h: () => cD,
-      i: () => LD,
-      k: () => pD,
-      l: () => KD
+  36677: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Pp,
+      e: () => Dp,
+      g: () => Wp,
+      j: () => Ap
     });
-    const sD = "https://discord.gg/playbloxd";
+    var Op = cp(337),
+      op = cp(667),
+      Ip = cp(676),
+      Sp = cp(44);
+    const xp = {
+        idStorageKey: "playSessionId",
+        lastActivityStorageKey: "playSessionLastActivityMs",
+        expiryMs: 3e5
+      },
+      Lp = "playSessionGameNameWithVariation",
+      Yp = "wasMatchmakePlayer";
 
-    function KD(DD) {
-      return "download" === DD ? {
-        icon: "wifi",
-        title: "wasmScreens:downloadFailedTitle",
-        help: "wasmScreens:downloadFailedHelp",
-        helpValues: {},
-        discordLink: !1,
-        confirm: "general:tryAgain",
-        cancel: "general:back"
-      } : {
-        icon: "face-dizzy",
-        title: "wasmScreens:unsupportedTitle",
-        help: "wasmScreens:unsupportedHelp",
-        helpValues: {},
-        discordLink: !1,
-        confirm: "general:ok",
-        cancel: null
-      }
+    function Dp() {
+      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sp.l;
+      (0, Ip.h)(pp, xp)
     }
 
-    function rD(DD, zD) {
-      return {
-        icon: "face-dizzy",
-        title: "wasmScreens:crashTitle",
-        help: zD ? "wasmScreens:crashHelp" : "wasmScreens:crashHelpNoDiscord",
-        helpValues: {
-          code: DD.code
-        },
-        discordLink: zD,
-        confirm: "general:reload",
-        cancel: "general:back"
-      }
+    function Ap() {
+      (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sp.l).setItem(Yp, !0)
     }
 
-    function LD() {
-      return {
-        icon: "face-dizzy",
-        title: "wasmScreens:turnstilePageTitle",
-        help: "wasmScreens:turnstilePageHelp",
-        helpValues: {},
-        discordLink: !1,
-        confirm: "general:ok",
-        cancel: null
-      }
+    function Pp() {
+      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sp.l;
+      return (0, Ip.c)(pp, xp)
     }
 
-    function cD(DD, zD, wD) {
-      return {
-        icon: "wifi",
-        title: "wasmScreens:disconnectedTitle",
-        help: wD ? "wasmScreens:reconnectingHelp" : "wasmScreens:disconnectedHelp",
-        helpValues: {
-          reason: DD.reason
-        },
-        discordLink: null === DD.name,
-        confirm: zD ? "general:reconnect" : DD.requiresRefresh ? "general:reload" : "general:ok",
-        cancel: null
+    function Wp(pp) {
+      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Sp.l;
+      const cp = (0, Ip.c)(ip, xp),
+        Dp = function(pp) {
+          const ip = pp.getItem(Lp);
+          return "string" !== typeof ip ? null : ip
+        }(ip),
+        Ap = function() {
+          return !0 === (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sp.l).getItem(Yp)
+        }(ip);
+      let Pp;
+      return Pp = null !== cp && null !== Dp && (0, Ip.f)(ip, xp) && function(pp, ip, cp) {
+          const op = (0, Op.Mb)(pp),
+            Ip = (0, Op.Mb)(ip),
+            Sp = (0, Op.Ib)(pp),
+            xp = (0, Op.Ib)(ip);
+          return !(op !== Ip || !cp) || op === Ip && Sp === xp
+        }(Dp, pp, Ap) ? cp : (0, op.e)(), (0, Ip.k)(ip, xp, Pp), ip.setItem(Lp, pp),
+        function() {
+          (arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Sp.l).removeItem(Yp)
+        }(ip), Pp
+    }
+  },
+  36674: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => ep,
+      d: () => jp
+    });
+    var Op = cp(1014),
+      op = cp(209),
+      Ip = cp(335),
+      Sp = cp(643),
+      xp = cp(337),
+      Lp = cp(1021),
+      Yp = cp(657),
+      Dp = cp(681),
+      Ap = cp(4609),
+      Pp = cp(104),
+      Wp = cp(131),
+      yp = cp(1765),
+      Up = cp(116),
+      wp = cp(36677),
+      vp = cp(44),
+      tp = cp(670),
+      Hp = cp(645),
+      dp = cp(36679);
+
+    function ep() {
+      var pp, ip;
+      return [...null !== (pp = navigator.languages) && void 0 !== pp ? pp : [null !== (ip = navigator.language) && void 0 !== ip ? ip : "none"], "en-Gb"]
+    }
+
+    function jp(pp, ip, cp, jp, kp) {
+      const mp = (0, Op.j)(ip) ? (0, Op.o)(ip) : null,
+        Rp = pp.isLoggedIn() && void 0 !== (0, op.e)(Ip.k, Wp.siteUsed) ? (0, Hp.f)() : null,
+        qp = {
+          cookies: (0, yp.getAllCookiesForGameNameWithVariation)(ip),
+          isMobile: (0, Pp.isMobile)(),
+          isUsingCustomGameTexturePack: null !== mp && kp(mp),
+          generalCookies: {
+            joinDiscord: !!vp.h.getItem("DiscordPressed"),
+            newGo: Ap.c,
+            ...pp.getMetricsCookies(),
+            trafficCode: jp,
+            compliance: Pp.compliance
+          },
+          browserInfo: {
+            ua: window.navigator.userAgent,
+            name: (0, Pp.getBrowserName)(),
+            version: (0, Pp.getBrowserVersion)(),
+            platform: navigator.platform,
+            platformType: (0, Pp.getPlatformType)(),
+            deviceType: (0, Up.c)()
+          },
+          isLoggedIn: pp.isLoggedIn(),
+          lobbyName: cp,
+          languages: ep(),
+          version: Sp.c,
+          siteUsed: Wp.siteUsed,
+          subsiteUsed: Wp.subsiteUsed,
+          playSessionId: (0, wp.g)(ip),
+          visitSessionId: (0, tp.g)(),
+          clientReason: Yp.p.reason,
+          budgetBasis: (0, dp.j)(),
+          ...null !== Dp.n && {
+            diagClaim: Dp.n.claimId
+          },
+          ...null !== Rp && {
+            webGpuLoss: Rp
+          }
+        };
+      return null !== mp && (0, xp.vc)(mp) ? (qp.lobbyName = (0, Op.h)(mp, (0, Op.n)(ip), cp), {
+        roomName: `classic_${Lp.d}`,
+        joinOptions: qp
+      }) : {
+        roomName: ip,
+        joinOptions: qp
       }
     }
   },
-  9286: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => sD,
-      e: () => KD
+  9436: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => op,
+      h: () => Ip
     });
-    var pD = wD(9236);
-    const sD = "Air",
-      KD = Object.freeze(new pD.h(sD, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
+    var Op = cp(9385);
+    const op = "Air",
+      Ip = Object.freeze(new Op.e(op, 0, "", null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null))
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

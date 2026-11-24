@@ -1,181 +1,181 @@
 export const id = 2;
 export const ids = [2];
 export const modules = {
-  36381: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      drawBlockIcon: () => hD,
-      drawBlockIconUrl: () => nD,
-      getDrawnBlockIcon: () => GD
+  36611: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      drawBlockIcon: () => vp,
+      drawBlockIconUrl: () => tp,
+      getDrawnBlockIcon: () => wp
     });
-    var pD = wD(36386);
-    const sD = {
+    var Op = cp(36618);
+    const op = {
         boxes: [
           [0, 0, 0, 1, 1, 1]
         ],
         cropFaces: !1
       },
-      KD = {
+      Ip = {
         boxes: [
           [0, 0, 0, 1, .5, 1]
         ],
         cropFaces: !1
       },
-      rD = {
+      Sp = {
         boxes: [
           [0, 0, 0, 1, .5, 1],
           [0, .5, 0, .5, 1, 1]
         ],
         cropFaces: !0
       };
-    const LD = 1e-6;
+    const xp = 1e-6;
 
-    function cD(DD, zD, wD, pD) {
+    function Lp(pp, ip, cp, Op) {
       let {
-        origin: sD,
-        across: KD,
-        down: rD,
-        texture: cD,
-        rect: [gD, RD, AD, UD],
-        shade: fD
-      } = pD;
-      const ID = KD.x * rD.y - KD.y * rD.x;
-      if (Math.abs(ID) < 1e-9) return;
-      const BD = [sD.x, sD.x + KD.x, sD.x + rD.x, sD.x + KD.x + rD.x],
-        GD = [sD.y, sD.y + KD.y, sD.y + rD.y, sD.y + KD.y + rD.y],
-        hD = Math.max(0, Math.floor(Math.min(...BD))),
-        nD = Math.min(wD - 1, Math.ceil(Math.max(...BD))),
-        MD = Math.max(0, Math.floor(Math.min(...GD))),
-        OD = Math.min(wD - 1, Math.ceil(Math.max(...GD)));
-      for (let JD = MD; JD <= OD; JD++)
-        for (let pD = hD; pD <= nD; pD++) {
-          const BD = pD + .5 - sD.x,
-            GD = JD + .5 - sD.y,
-            hD = (BD * rD.y - GD * rD.x) / ID,
-            nD = (KD.x * GD - KD.y * BD) / ID;
-          if (hD < -LD || hD > 1 + LD || nD < -LD || nD > 1 + LD) continue;
-          const MD = JD * wD + pD;
-          zD[MD] = 1;
-          const OD = gD + Math.min(Math.max(hD, 0), 1) * (AD - gD),
-            ED = RD + Math.min(Math.max(nD, 0), 1) * (UD - RD),
-            QD = Math.min(cD.width - 1, Math.floor(OD * cD.width)),
-            XD = 4 * (Math.min(cD.height - 1, Math.floor(ED * cD.height)) * cD.width + QD),
-            VD = cD.pixels[XD + 3] / 255;
-          if (0 === VD) continue;
-          const PD = 4 * MD,
-            CD = DD[PD + 3] / 255 * (1 - VD),
-            xD = VD + CD;
-          for (let zD = 0; zD < 3; zD++) DD[PD + zD] = (cD.pixels[XD + zD] * fD * VD + DD[PD + zD] * CD) / xD;
-          DD[PD + 3] = 255 * xD
+        origin: op,
+        across: Ip,
+        down: Sp,
+        texture: Lp,
+        rect: [Yp, Dp, Ap, Pp],
+        shade: Wp
+      } = Op;
+      const yp = Ip.x * Sp.y - Ip.y * Sp.x;
+      if (Math.abs(yp) < 1e-9) return;
+      const Up = [op.x, op.x + Ip.x, op.x + Sp.x, op.x + Ip.x + Sp.x],
+        wp = [op.y, op.y + Ip.y, op.y + Sp.y, op.y + Ip.y + Sp.y],
+        vp = Math.max(0, Math.floor(Math.min(...Up))),
+        tp = Math.min(cp - 1, Math.ceil(Math.max(...Up))),
+        Hp = Math.max(0, Math.floor(Math.min(...wp))),
+        dp = Math.min(cp - 1, Math.ceil(Math.max(...wp)));
+      for (let ep = Hp; ep <= dp; ep++)
+        for (let Op = vp; Op <= tp; Op++) {
+          const Up = Op + .5 - op.x,
+            wp = ep + .5 - op.y,
+            vp = (Up * Sp.y - wp * Sp.x) / yp,
+            tp = (Ip.x * wp - Ip.y * Up) / yp;
+          if (vp < -xp || vp > 1 + xp || tp < -xp || tp > 1 + xp) continue;
+          const Hp = ep * cp + Op;
+          ip[Hp] = 1;
+          const dp = Yp + Math.min(Math.max(vp, 0), 1) * (Ap - Yp),
+            jp = Dp + Math.min(Math.max(tp, 0), 1) * (Pp - Dp),
+            kp = Math.min(Lp.width - 1, Math.floor(dp * Lp.width)),
+            mp = 4 * (Math.min(Lp.height - 1, Math.floor(jp * Lp.height)) * Lp.width + kp),
+            Rp = Lp.pixels[mp + 3] / 255;
+          if (0 === Rp) continue;
+          const qp = 4 * Hp,
+            Mp = pp[qp + 3] / 255 * (1 - Rp),
+            Cp = Rp + Mp;
+          for (let ip = 0; ip < 3; ip++) pp[qp + ip] = (Lp.pixels[mp + ip] * Wp * Rp + pp[qp + ip] * Mp) / Cp;
+          pp[qp + 3] = 255 * Cp
         }
     }
-    var gD = wD(36395);
-    const RD = new Map,
-      AD = new Map,
-      UD = new Map,
-      fD = new Map;
+    var Yp = cp(36622);
+    const Dp = new Map,
+      Ap = new Map,
+      Pp = new Map,
+      Wp = new Map;
 
-    function ID(DD, zD, wD) {
-      return `${zD}|${wD}|${DD}`
+    function yp(pp, ip, cp) {
+      return `${ip}|${cp}|${pp}`
     }
 
-    function BD(DD, zD, wD) {
-      let pD = DD.get(zD);
-      return void 0 === pD && (pD = wD().catch((wD => {
-        throw DD.delete(zD), wD
-      })), DD.set(zD, pD)), pD
+    function Up(pp, ip, cp) {
+      let Op = pp.get(ip);
+      return void 0 === Op && (Op = cp().catch((cp => {
+        throw pp.delete(ip), cp
+      })), pp.set(ip, Op)), Op
     }
 
-    function GD(DD, zD) {
-      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-      return AD.get(ID(DD, zD, wD))
+    function wp(pp, ip) {
+      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
+      return Ap.get(yp(pp, ip, cp))
     }
 
-    function hD(DD, zD, wD, pD) {
-      const sD = ID(DD, zD, wD);
-      return BD(RD, sD, (async () => {
-        const KD = await MD(pD(DD), zD, wD);
-        return AD.set(sD, KD), KD
+    function vp(pp, ip, cp, Op) {
+      const op = yp(pp, ip, cp);
+      return Up(Dp, op, (async () => {
+        const Ip = await Hp(Op(pp), ip, cp);
+        return Ap.set(op, Ip), Ip
       }))
     }
 
-    function nD(DD, zD, wD, pD) {
-      return BD(UD, ID(DD, zD, wD), (async () => {
-        var sD;
-        const KD = pD(DD);
-        return null !== (sD = await (0, gD.d)(KD, zD, wD)) && void 0 !== sD ? sD : (await MD(KD, zD, wD)).toDataURL()
+    function tp(pp, ip, cp, Op) {
+      return Up(Pp, yp(pp, ip, cp), (async () => {
+        var op;
+        const Ip = Op(pp);
+        return null !== (op = await (0, Yp.d)(Ip, ip, cp)) && void 0 !== op ? op : (await Hp(Ip, ip, cp)).toDataURL()
       }))
     }
-    async function MD(DD, zD, wD) {
+    async function Hp(pp, ip, cp) {
       let {
-        top: LD,
-        left: gD,
-        right: RD,
-        itemType: AD
-      } = DD;
-      const [UD, fD, ID] = await Promise.all([OD(LD), OD(gD), OD(RD)]), BD = function(DD, zD, wD, sD) {
-        const KD = (0, pD.i)(wD, sD),
-          rD = KD * pD.c.across,
-          LD = KD * pD.c.down,
-          gD = KD * pD.c.up,
-          RD = Math.max(...zD.boxes.map((DD => DD[4]))),
-          AD = wD / 2,
-          UD = LD + (wD - LD - LD - RD * gD) / 2,
-          fD = (DD, zD, wD) => ({
-            x: AD + (DD - wD) * rD,
-            y: UD - LD + (DD + wD) * LD + (RD - zD) * gD
+        top: xp,
+        left: Yp,
+        right: Dp,
+        itemType: Ap
+      } = pp;
+      const [Pp, Wp, yp] = await Promise.all([dp(xp), dp(Yp), dp(Dp)]), Up = function(pp, ip, cp, op) {
+        const Ip = (0, Op.g)(cp, op),
+          Sp = Ip * Op.c.across,
+          xp = Ip * Op.c.down,
+          Yp = Ip * Op.c.up,
+          Dp = Math.max(...ip.boxes.map((pp => pp[4]))),
+          Ap = cp / 2,
+          Pp = xp + (cp - xp - xp - Dp * Yp) / 2,
+          Wp = (pp, ip, cp) => ({
+            x: Ap + (pp - cp) * Sp,
+            y: Pp - xp + (pp + cp) * xp + (Dp - ip) * Yp
           }),
-          ID = (DD, wD, pD, sD, KD, rD) => ({
-            origin: DD,
+          yp = (pp, cp, Op, op, Ip, Sp) => ({
+            origin: pp,
             across: {
-              x: wD.x - DD.x,
-              y: wD.y - DD.y
+              x: cp.x - pp.x,
+              y: cp.y - pp.y
             },
             down: {
-              x: pD.x - DD.x,
-              y: pD.y - DD.y
+              x: Op.x - pp.x,
+              y: Op.y - pp.y
             },
-            texture: sD,
-            rect: zD.cropFaces ? KD : [0, 0, 1, 1],
-            shade: rD
+            texture: op,
+            rect: ip.cropFaces ? Ip : [0, 0, 1, 1],
+            shade: Sp
           }),
-          BD = new Uint8ClampedArray(wD * wD * 4),
-          GD = new Uint8Array(wD * wD),
-          hD = pD.g;
-        for (const [pD, nD, MD, OD, JD, ED] of zD.boxes) {
-          const zD = ID(fD(OD, JD, ED), fD(OD, JD, MD), fD(OD, nD, ED), DD.right, [1 - ED, 1 - JD, 1 - MD, 1 - nD], hD.right),
-            sD = ID(fD(pD, JD, ED), fD(OD, JD, ED), fD(pD, nD, ED), DD.left, [pD, 1 - JD, OD, 1 - nD], hD.left),
-            KD = ID(fD(pD, JD, MD), fD(OD, JD, MD), fD(pD, JD, ED), DD.top, [pD, MD, OD, ED], hD.top);
-          for (const DD of [zD, sD, KD]) cD(BD, GD, wD, DD)
+          Up = new Uint8ClampedArray(cp * cp * 4),
+          wp = new Uint8Array(cp * cp),
+          vp = Op.d;
+        for (const [Op, tp, Hp, dp, ep, jp] of ip.boxes) {
+          const ip = yp(Wp(dp, ep, jp), Wp(dp, ep, Hp), Wp(dp, tp, jp), pp.right, [1 - jp, 1 - ep, 1 - Hp, 1 - tp], vp.right),
+            op = yp(Wp(Op, ep, jp), Wp(dp, ep, jp), Wp(Op, tp, jp), pp.left, [Op, 1 - ep, dp, 1 - tp], vp.left),
+            Ip = yp(Wp(Op, ep, Hp), Wp(dp, ep, Hp), Wp(Op, ep, jp), pp.top, [Op, Hp, dp, jp], vp.top);
+          for (const pp of [ip, op, Ip]) Lp(Up, wp, cp, pp)
         }
-        return (0, pD.j)(BD, wD, sD, (DD => 1 === GD[DD])), BD
+        return (0, Op.k)(Up, cp, op, (pp => 1 === wp[pp])), Up
       }({
-        top: UD,
-        left: fD,
-        right: ID
-      }, function(DD) {
-        return "SlabBlock" === DD ? KD : "StairsBlock" === DD ? rD : sD
-      }(AD), zD, wD), GD = document.createElement("canvas");
-      GD.width = zD, GD.height = zD;
-      const hD = GD.getContext("2d");
-      if (!hD) throw new Error("Failed to get 2D context");
-      return hD.putImageData(new ImageData(BD, zD, zD), 0, 0), GD
+        top: Pp,
+        left: Wp,
+        right: yp
+      }, function(pp) {
+        return "SlabBlock" === pp ? Ip : "StairsBlock" === pp ? Sp : op
+      }(Ap), ip, cp), wp = document.createElement("canvas");
+      wp.width = ip, wp.height = ip;
+      const vp = wp.getContext("2d");
+      if (!vp) throw new Error("Failed to get 2D context");
+      return vp.putImageData(new ImageData(Up, ip, ip), 0, 0), wp
     }
 
-    function OD(DD) {
-      return BD(fD, DD, (async () => {
-        const zD = await (0, gD.i)(DD),
-          wD = document.createElement("canvas");
-        wD.width = zD.width, wD.height = zD.height;
-        const pD = wD.getContext("2d");
-        if (!pD) throw new Error("Failed to get 2D context");
-        return pD.drawImage(zD, 0, 0), {
-          width: zD.width,
-          height: zD.height,
-          pixels: pD.getImageData(0, 0, zD.width, zD.height).data
+    function dp(pp) {
+      return Up(Wp, pp, (async () => {
+        const ip = await (0, Yp.h)(pp),
+          cp = document.createElement("canvas");
+        cp.width = ip.width, cp.height = ip.height;
+        const Op = cp.getContext("2d");
+        if (!Op) throw new Error("Failed to get 2D context");
+        return Op.drawImage(ip, 0, 0), {
+          width: ip.width,
+          height: ip.height,
+          pixels: Op.getImageData(0, 0, ip.width, ip.height).data
         }
       }))
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

@@ -1,1037 +1,1512 @@
 export const id = 258;
 export const ids = [258];
 export const modules = {
-  40137: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => PD
+  40273: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Pp,
+      e: () => Ap,
+      f: () => Lp,
+      i: () => Wp,
+      m: () => Yp,
+      p: () => xp,
+      s: () => Dp
     });
-    var pD = wD(39921),
-      sD = wD(39927),
-      KD = wD(37079),
-      rD = wD(40146),
-      LD = wD(40179),
-      cD = wD(40108),
-      gD = wD(40027);
-    let RD = (() => {
-      var DD;
-      let zD, wD, rD, LD, RD, AD, UD, fD, ID, BD, GD, hD = [],
-        nD = [],
-        MD = [],
-        OD = [],
-        JD = [],
-        ED = [],
-        QD = [],
-        XD = [],
-        VD = [],
-        PD = [],
-        CD = [],
-        xD = [],
-        TD = [],
-        bD = [],
-        jD = [],
-        dD = [],
-        SD = [],
-        iD = [],
-        lD = [],
-        WD = [],
-        ND = [],
-        ZD = [];
-      return DD = class {
-        constructor() {
-          this.keysUp = (0, pD.m)(this, hD, [38]), this.keysUpward = ((0, pD.m)(this, nD), (0, pD.m)(this, MD, [33])), this.keysDown = ((0, pD.m)(this, OD), (0, pD.m)(this, JD, [40])), this.keysDownward = ((0, pD.m)(this, ED), (0, pD.m)(this, QD, [34])), this.keysLeft = ((0, pD.m)(this, XD), (0, pD.m)(this, VD, [37])), this.keysRight = ((0, pD.m)(this, PD), (0, pD.m)(this, CD, [39])), this.rotationSpeed = ((0, pD.m)(this, xD), (0, pD.m)(this, TD, .5)), this.keysRotateLeft = ((0, pD.m)(this, bD), (0, pD.m)(this, jD, [])), this.keysRotateRight = ((0, pD.m)(this, dD), (0, pD.m)(this, SD, [])), this.keysRotateUp = ((0, pD.m)(this, iD), (0, pD.m)(this, lD, [])), this.keysRotateDown = ((0, pD.m)(this, WD), (0, pD.m)(this, ND, [])), this._keys = ((0, pD.m)(this, ZD), new Array)
+    var Op = cp(38905),
+      op = cp(40276);
+
+    function Ip(pp, ip, cp, Op) {
+      switch (ip) {
+        case 5120: {
+          let ip = pp.getInt8(cp);
+          return Op && (ip = Math.max(ip / 127, -1)), ip
         }
-        attachControl(DD) {
-          DD = gD.h.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.Ul(), this._engine = this._scene.iI(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
-            this._keys.length = 0
-          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((zD => {
-            const wD = zD.event;
-            if (!wD.metaKey)
-              if (zD.type === cD.d.KEYDOWN) {
-                if (-1 !== this.keysUp.indexOf(wD.keyCode) || -1 !== this.keysDown.indexOf(wD.keyCode) || -1 !== this.keysLeft.indexOf(wD.keyCode) || -1 !== this.keysRight.indexOf(wD.keyCode) || -1 !== this.keysUpward.indexOf(wD.keyCode) || -1 !== this.keysDownward.indexOf(wD.keyCode) || -1 !== this.keysRotateLeft.indexOf(wD.keyCode) || -1 !== this.keysRotateRight.indexOf(wD.keyCode) || -1 !== this.keysRotateUp.indexOf(wD.keyCode) || -1 !== this.keysRotateDown.indexOf(wD.keyCode)) {
-                  -1 === this._keys.indexOf(wD.keyCode) && this._keys.push(wD.keyCode), DD || wD.preventDefault()
-                }
-              } else if (-1 !== this.keysUp.indexOf(wD.keyCode) || -1 !== this.keysDown.indexOf(wD.keyCode) || -1 !== this.keysLeft.indexOf(wD.keyCode) || -1 !== this.keysRight.indexOf(wD.keyCode) || -1 !== this.keysUpward.indexOf(wD.keyCode) || -1 !== this.keysDownward.indexOf(wD.keyCode) || -1 !== this.keysRotateLeft.indexOf(wD.keyCode) || -1 !== this.keysRotateRight.indexOf(wD.keyCode) || -1 !== this.keysRotateUp.indexOf(wD.keyCode) || -1 !== this.keysRotateDown.indexOf(wD.keyCode)) {
-              const zD = this._keys.indexOf(wD.keyCode);
-              zD >= 0 && this._keys.splice(zD, 1), DD || wD.preventDefault()
+        case 5121: {
+          let ip = pp.getUint8(cp);
+          return Op && (ip /= 255), ip
+        }
+        case 5122: {
+          let ip = pp.getInt16(cp, !0);
+          return Op && (ip = Math.max(ip / 32767, -1)), ip
+        }
+        case 5123: {
+          let ip = pp.getUint16(cp, !0);
+          return Op && (ip /= 65535), ip
+        }
+        case 5131:
+          return (0, op.c)(pp.getUint16(cp, !0));
+        case 5124:
+          return pp.getInt32(cp, !0);
+        case 5125:
+          return pp.getUint32(cp, !0);
+        case 5126:
+          return pp.getFloat32(cp, !0);
+        default:
+          throw new Error(`Invalid component type ${ip}`)
+      }
+    }
+
+    function Sp(pp, ip, cp, Op, Ip) {
+      switch (ip) {
+        case 5120:
+          Op && (Ip = Math.round(127 * Ip)), pp.setInt8(cp, Ip);
+          break;
+        case 5121:
+          Op && (Ip = Math.round(255 * Ip)), pp.setUint8(cp, Ip);
+          break;
+        case 5122:
+          Op && (Ip = Math.round(32767 * Ip)), pp.setInt16(cp, Ip, !0);
+          break;
+        case 5123:
+          Op && (Ip = Math.round(65535 * Ip)), pp.setUint16(cp, Ip, !0);
+          break;
+        case 5131:
+          pp.setUint16(cp, (0, op.h)(Ip), !0);
+          break;
+        case 5124:
+          pp.setInt32(cp, Ip, !0);
+          break;
+        case 5125:
+          pp.setUint32(cp, Ip, !0);
+          break;
+        case 5126:
+          pp.setFloat32(cp, Ip, !0);
+          break;
+        default:
+          throw new Error(`Invalid component type ${ip}`)
+      }
+    }
+
+    function xp(pp) {
+      switch (pp) {
+        case 5120:
+        case 5121:
+          return 1;
+        case 5122:
+        case 5123:
+        case 5131:
+          return 2;
+        case 5124:
+        case 5125:
+        case 5126:
+          return 4;
+        default:
+          throw new Error(`Invalid type '${pp}'`)
+      }
+    }
+
+    function Lp(pp, ip, cp, Op, op, Lp, Yp, Dp) {
+      const Ap = new Array(Op),
+        Pp = new Array(Op);
+      if (pp instanceof Array) {
+        let op = ip / 4;
+        const Ip = cp / 4;
+        for (let ip = 0; ip < Lp; ip += Op) {
+          for (let ip = 0; ip < Op; ip++) Ap[ip] = Pp[ip] = pp[op + ip];
+          Dp(Pp, ip);
+          for (let ip = 0; ip < Op; ip++) Ap[ip] !== Pp[ip] && (pp[op + ip] = Pp[ip]);
+          op += Ip
+        }
+      } else {
+        const Wp = ArrayBuffer.isView(pp) ? new DataView(pp.buffer, pp.byteOffset, pp.byteLength) : new DataView(pp),
+          yp = xp(op);
+        for (let pp = 0; pp < Lp; pp += Op) {
+          for (let pp = 0, cp = ip; pp < Op; pp++, cp += yp) Ap[pp] = Pp[pp] = Ip(Wp, op, cp, Yp);
+          Dp(Pp, pp);
+          for (let pp = 0, cp = ip; pp < Op; pp++, cp += yp) Ap[pp] !== Pp[pp] && Sp(Wp, op, cp, Yp, Pp[pp]);
+          ip += cp
+        }
+      }
+    }
+
+    function Yp(pp, ip, cp, op, Ip, Sp, Yp, Dp) {
+      const Ap = ip * xp(cp),
+        Pp = Yp * ip;
+      if (5126 !== cp || Ip !== Ap) {
+        const Op = new Float32Array(Pp);
+        return Lp(pp, op, Ip, ip, cp, Pp, Sp, ((pp, cp) => {
+          for (let op = 0; op < ip; op++) Op[cp + op] = pp[op]
+        })), Op
+      }
+      if (!(pp instanceof Array || pp instanceof Float32Array) || 0 !== op || pp.length !== Pp) {
+        if (pp instanceof Array) {
+          const ip = op / 4;
+          return pp.slice(ip, ip + Pp)
+        }
+        if (ArrayBuffer.isView(pp)) {
+          const ip = pp.byteOffset + op;
+          return 0 !== (3 & ip) && (Op.e.Warn("Float array must be aligned to 4-bytes border"), Dp = !0), Dp ? new Float32Array(pp.buffer.slice(ip, ip + Pp * Float32Array.BYTES_PER_ELEMENT)) : new Float32Array(pp.buffer, ip, Pp)
+        }
+        return new Float32Array(pp, op, Pp)
+      }
+      return Dp ? pp.slice() : pp
+    }
+
+    function Dp(pp, ip, cp, op, Ip, Sp, Yp) {
+      const Dp = xp(cp),
+        Ap = function(pp) {
+          switch (pp) {
+            case 5120:
+              return Int8Array;
+            case 5121:
+              return Uint8Array;
+            case 5122:
+              return Int16Array;
+            case 5123:
+            case 5131:
+              return Uint16Array;
+            case 5124:
+              return Int32Array;
+            case 5125:
+              return Uint32Array;
+            case 5126:
+              return Float32Array;
+            default:
+              throw new Error(`Invalid component type '${pp}'`)
+          }
+        }(cp),
+        Pp = Sp * ip;
+      if (Array.isArray(pp)) {
+        if (0 !== (3 & op) || 0 !== (3 & Ip)) throw new Error("byteOffset and byteStride must be a multiple of 4 for number[] data.");
+        const Op = op / 4,
+          xp = Ip / 4;
+        if (Op + (Sp - 1) * xp + ip > pp.length) throw new Error("Last accessed index is out of bounds.");
+        if (xp < ip) throw new Error("Data stride cannot be smaller than the component size.");
+        if (xp !== ip) {
+          const Op = new Ap(Pp);
+          return Lp(pp, op, Ip, ip, cp, Pp, !1, ((pp, cp) => {
+            for (let op = 0; op < ip; op++) Op[cp + op] = pp[op]
+          })), Op
+        }
+        return new Ap(pp.slice(Op, Op + Pp))
+      }
+      let Wp, yp = op;
+      ArrayBuffer.isView(pp) ? (Wp = pp.buffer, yp += pp.byteOffset) : Wp = pp;
+      if (yp + (Sp - 1) * Ip + ip * Dp > Wp.byteLength) throw new Error("Last accessed byte is out of bounds.");
+      const Up = ip * Dp;
+      if (Ip < Up) throw new Error("Byte stride cannot be smaller than the component's byte size.");
+      if (Ip !== Up) {
+        const pp = new Ap(Pp),
+          cp = new Uint8Array(Wp, yp),
+          Op = new Uint8Array(pp.buffer),
+          op = ip * Dp;
+        for (let ip = 0, xp = 0, Lp = 0; ip < Sp; ip++, xp += Ip, Lp += op) Op.set(cp.subarray(xp, xp + op), Lp);
+        return pp
+      }
+      return 1 !== Dp && 0 !== (yp & Dp - 1) && (Op.e.Warn("Array must be aligned to border of element size. Data will be copied."), Yp = !0), Yp ? new Ap(Wp.slice(yp, yp + Pp * Dp)) : new Ap(Wp, yp, Pp)
+    }
+
+    function Ap(pp, ip, cp, op, Ip, Sp, Yp, Dp) {
+      const Ap = ip * xp(cp),
+        Pp = Yp * ip;
+      if (Dp.length !== Pp) throw new Error("Output length is not valid");
+      if (5126 === cp && Ip === Ap)
+        if (pp instanceof Array) {
+          const ip = op / 4;
+          Dp.set(pp, ip)
+        } else if (ArrayBuffer.isView(pp)) {
+        const ip = pp.byteOffset + op;
+        if (0 !== (3 & ip)) return Op.e.Warn("Float array must be aligned to 4-bytes border"), void Dp.set(new Float32Array(pp.buffer.slice(ip, ip + Pp * Float32Array.BYTES_PER_ELEMENT)));
+        const cp = new Float32Array(pp.buffer, ip, Pp);
+        Dp.set(cp)
+      } else {
+        const ip = new Float32Array(pp, op, Pp);
+        Dp.set(ip)
+      } else Lp(pp, op, Ip, ip, cp, Pp, Sp, ((pp, cp) => {
+        for (let Op = 0; Op < ip; Op++) Dp[cp + Op] = pp[Op]
+      }))
+    }
+
+    function Pp(pp, ip) {
+      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0,
+        Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+      if (Array.isArray(pp)) {
+        for (let op = 0; op < ip; op++)
+          if (pp[cp + op] - Op > 65535) return !0;
+        return !1
+      }
+      return 4 === pp.BYTES_PER_ELEMENT
+    }
+
+    function Wp(pp) {
+      const ip = pp.buffer;
+      if (ip instanceof ArrayBuffer) return pp;
+      const cp = new ArrayBuffer(pp.byteLength);
+      return new Uint8Array(cp).set(new Uint8Array(ip, pp.byteOffset, pp.byteLength)), cp
+    }
+  },
+  40103: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => mp,
+      c: () => jp,
+      j: () => kp,
+      g: () => lp,
+      k: () => Qp
+    });
+    class Op {
+      constructor() {
+        this.children = []
+      }
+      isValid(pp) {
+        return !0
+      }
+      process(pp, ip, cp) {
+        let Op = "";
+        if (this.line) {
+          let cp = this.line;
+          const op = ip.processor;
+          if (op) {
+            op.lineProcessor && (cp = op.lineProcessor(cp, ip.isFragment, ip.processingContext));
+            const Op = ip.processor?.attributeKeywordName ?? "attribute",
+              Ip = ip.isFragment && ip.processor?.varyingFragmentKeywordName ? ip.processor?.varyingFragmentKeywordName : !ip.isFragment && ip.processor?.varyingVertexKeywordName ? ip.processor?.varyingVertexKeywordName : "varying";
+            if (!ip.isFragment && op.attributeProcessor && this.line.startsWith(Op)) cp = op.attributeProcessor(this.line, pp, ip.processingContext);
+            else if (op.varyingProcessor && (op.varyingCheck?.(this.line, ip.isFragment) || !op.varyingCheck && this.line.startsWith(Ip))) cp = op.varyingProcessor(this.line, ip.isFragment, pp, ip.processingContext);
+            else if (op.uniformProcessor && op.uniformRegexp && op.uniformRegexp.test(this.line)) ip.lookForClosingBracketForUniformBuffer || (cp = op.uniformProcessor(this.line, ip.isFragment, pp, ip.processingContext));
+            else if (op.uniformBufferProcessor && op.uniformBufferRegexp && op.uniformBufferRegexp.test(this.line)) ip.lookForClosingBracketForUniformBuffer || (cp = op.uniformBufferProcessor(this.line, ip.isFragment, ip.processingContext), ip.lookForClosingBracketForUniformBuffer = !0);
+            else if (op.textureProcessor && op.textureRegexp && op.textureRegexp.test(this.line)) cp = op.textureProcessor(this.line, ip.isFragment, pp, ip.processingContext);
+            else if ((op.uniformProcessor || op.uniformBufferProcessor) && this.line.startsWith("uniform") && !ip.lookForClosingBracketForUniformBuffer) {
+              /uniform\s+(?:(?:highp)?|(?:lowp)?)\s*(\S+)\s+(\S+)\s*;/.test(this.line) ? op.uniformProcessor && (cp = op.uniformProcessor(this.line, ip.isFragment, pp, ip.processingContext)) : op.uniformBufferProcessor && (cp = op.uniformBufferProcessor(this.line, ip.isFragment, ip.processingContext), ip.lookForClosingBracketForUniformBuffer = !0)
             }
-          })))
+            ip.lookForClosingBracketForUniformBuffer && -1 !== this.line.indexOf("}") && (ip.lookForClosingBracketForUniformBuffer = !1, op.endOfUniformBufferProcessor && (cp = op.endOfUniformBufferProcessor(this.line, ip.isFragment, ip.processingContext)))
+          }
+          Op += cp + "\n"
         }
-        detachControl() {
-          this._scene && (this._onKeyboardObserver && this._scene.onKeyboardObservable.remove(this._onKeyboardObserver), this._onCanvasBlurObserver && this._engine.onCanvasBlurObservable.remove(this._onCanvasBlurObserver), this._onKeyboardObserver = null, this._onCanvasBlurObserver = null), this._keys.length = 0
-        }
-        checkInputs() {
-          if (this._onKeyboardObserver) {
-            const DD = this.camera,
-              zD = DD.movement.input,
-              wD = zD.getEntry("keyboard", "translate"),
-              pD = zD.getEntry("keyboard", "rotate"),
-              sD = pD?.sensitivity ?? 1,
-              rD = DD._localDirection.Z2(0, 0, 0);
-            for (let KD = 0; KD < this._keys.length; KD++) {
-              const zD = this._keys[KD]; - 1 !== this.keysLeft.indexOf(zD) ? rD.x -= 1 : -1 !== this.keysUp.indexOf(zD) ? rD.z += 1 : -1 !== this.keysRight.indexOf(zD) ? rD.x += 1 : -1 !== this.keysDown.indexOf(zD) ? rD.z -= 1 : -1 !== this.keysUpward.indexOf(zD) ? rD.y += 1 : -1 !== this.keysDownward.indexOf(zD) ? rD.y -= 1 : -1 !== this.keysRotateLeft.indexOf(zD) ? pD && (DD.cameraRotation.y -= this._getLocalRotation() * sD) : -1 !== this.keysRotateRight.indexOf(zD) ? pD && (DD.cameraRotation.y += this._getLocalRotation() * sD) : -1 !== this.keysRotateUp.indexOf(zD) ? pD && (DD.cameraRotation.x -= this._getLocalRotation() * sD) : -1 !== this.keysRotateDown.indexOf(zD) && pD && (DD.cameraRotation.x += this._getLocalRotation() * sD)
-            }
-            if (wD && (0 !== rD.x || 0 !== rD.y || 0 !== rD.z)) {
-              const zD = DD._computeLocalCameraSpeed() * (wD.sensitivity ?? 1);
-              rD.normalize().scaleInPlace(zD), DD.Ul().useRightHandedSystem && (rD.z *= -1), DD.getViewMatrix().invertToRef(DD._cameraTransformMatrix), KD.s.TransformNormalToRef(rD, DD._cameraTransformMatrix, DD._transformedDirection), DD.cameraDirection.addInPlace(DD._transformedDirection)
+        for (const op of this.children) Op += op.process(pp, ip, cp);
+        return this.additionalDefineKey && (pp[this.additionalDefineKey] = this.additionalDefineValue || "true", cp[this.additionalDefineKey] = pp[this.additionalDefineKey]), Op
+      }
+    }
+    class op {
+      constructor() {
+        this._lines = []
+      }
+      get currentLine() {
+        return this._lines[this.lineIndex]
+      }
+      get canRead() {
+        return this.lineIndex < this._lines.length - 1
+      }
+      set lines(pp) {
+        this._lines.length = 0;
+        for (const ip of pp) {
+          if (!ip || "\r" === ip) continue;
+          if ("#" === ip[0]) {
+            this._lines.push(ip);
+            continue
+          }
+          const pp = ip.trim();
+          if (!pp) continue;
+          if (pp.startsWith("//")) {
+            this._lines.push(ip);
+            continue
+          }
+          const cp = pp.indexOf(";");
+          if (-1 === cp) this._lines.push(pp);
+          else if (cp === pp.length - 1) pp.length > 1 && this._lines.push(pp);
+          else {
+            const pp = ip.split(";");
+            for (let ip = 0; ip < pp.length; ip++) {
+              let cp = pp[ip];
+              cp && (cp = cp.trim(), cp && this._lines.push(cp + (ip !== pp.length - 1 ? ";" : "")))
             }
           }
         }
-        getClassName() {
-          return "FreeCameraKeyboardMoveInput"
+      }
+    }
+    class Ip extends Op {
+      process(pp, ip, cp) {
+        for (let Op = 0; Op < this.children.length; Op++) {
+          const op = this.children[Op];
+          if (op.isValid(pp)) return op.process(pp, ip, cp)
         }
-        _onLostFocus() {
-          this._keys.length = 0
-        }
-        getSimpleName() {
-          return "keyboard"
-        }
-        _getLocalRotation() {
-          const DD = this.camera._calculateHandednessMultiplier();
-          return this.rotationSpeed * this._engine.getDeltaTime() / 1e3 * DD
-        }
-      }, (() => {
-        const KD = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        zD = [(0, sD.C)()], wD = [(0, sD.C)()], rD = [(0, sD.C)()], LD = [(0, sD.C)()], RD = [(0, sD.C)()], AD = [(0, sD.C)()], UD = [(0, sD.C)()], fD = [(0, sD.C)()], ID = [(0, sD.C)()], BD = [(0, sD.C)()], GD = [(0, sD.C)()], (0, pD.i)(null, null, zD, {
-          kind: "field",
-          name: "keysUp",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysUp" in DD,
-            get: DD => DD.keysUp,
-            set: (DD, zD) => {
-              DD.keysUp = zD
-            }
+        return ""
+      }
+    }
+    class Sp extends Op {
+      isValid(pp) {
+        return this.testExpression.isTrue(pp)
+      }
+    }
+    class xp {
+      isTrue(pp) {
+        return !0
+      }
+      static postfixToInfix(pp) {
+        const ip = [];
+        for (const cp of pp)
+          if (void 0 === xp._OperatorPriority[cp]) ip.push(cp);
+          else {
+            const pp = ip[ip.length - 1],
+              Op = ip[ip.length - 2];
+            ip.length -= 2, ip.push(`(${Op}${cp}${pp})`)
+          } return ip[ip.length - 1]
+      }
+      static infixToPostfix(pp) {
+        const ip = xp._InfixToPostfixCache.get(pp);
+        if (ip) return ip.accessTime = Date.now(), ip.result;
+        if (!pp.includes("&&") && !pp.includes("||") && !pp.includes(")") && !pp.includes("(")) return [pp];
+        const cp = [];
+        let Op = -1;
+        const op = () => {
+            Dp = Dp.trim(), "" !== Dp && (cp.push(Dp), Dp = "")
           },
-          metadata: KD
-        }, hD, nD), (0, pD.i)(null, null, wD, {
-          kind: "field",
-          name: "keysUpward",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysUpward" in DD,
-            get: DD => DD.keysUpward,
-            set: (DD, zD) => {
-              DD.keysUpward = zD
-            }
+          Ip = pp => {
+            Op < xp._Stack.length - 1 && (xp._Stack[++Op] = pp)
           },
-          metadata: KD
-        }, MD, OD), (0, pD.i)(null, null, rD, {
-          kind: "field",
-          name: "keysDown",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysDown" in DD,
-            get: DD => DD.keysDown,
-            set: (DD, zD) => {
-              DD.keysDown = zD
-            }
-          },
-          metadata: KD
-        }, JD, ED), (0, pD.i)(null, null, LD, {
-          kind: "field",
-          name: "keysDownward",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysDownward" in DD,
-            get: DD => DD.keysDownward,
-            set: (DD, zD) => {
-              DD.keysDownward = zD
-            }
-          },
-          metadata: KD
-        }, QD, XD), (0, pD.i)(null, null, RD, {
-          kind: "field",
-          name: "keysLeft",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysLeft" in DD,
-            get: DD => DD.keysLeft,
-            set: (DD, zD) => {
-              DD.keysLeft = zD
-            }
-          },
-          metadata: KD
-        }, VD, PD), (0, pD.i)(null, null, AD, {
-          kind: "field",
-          name: "keysRight",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysRight" in DD,
-            get: DD => DD.keysRight,
-            set: (DD, zD) => {
-              DD.keysRight = zD
-            }
-          },
-          metadata: KD
-        }, CD, xD), (0, pD.i)(null, null, UD, {
-          kind: "field",
-          name: "rotationSpeed",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "rotationSpeed" in DD,
-            get: DD => DD.rotationSpeed,
-            set: (DD, zD) => {
-              DD.rotationSpeed = zD
-            }
-          },
-          metadata: KD
-        }, TD, bD), (0, pD.i)(null, null, fD, {
-          kind: "field",
-          name: "keysRotateLeft",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysRotateLeft" in DD,
-            get: DD => DD.keysRotateLeft,
-            set: (DD, zD) => {
-              DD.keysRotateLeft = zD
-            }
-          },
-          metadata: KD
-        }, jD, dD), (0, pD.i)(null, null, ID, {
-          kind: "field",
-          name: "keysRotateRight",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysRotateRight" in DD,
-            get: DD => DD.keysRotateRight,
-            set: (DD, zD) => {
-              DD.keysRotateRight = zD
-            }
-          },
-          metadata: KD
-        }, SD, iD), (0, pD.i)(null, null, BD, {
-          kind: "field",
-          name: "keysRotateUp",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysRotateUp" in DD,
-            get: DD => DD.keysRotateUp,
-            set: (DD, zD) => {
-              DD.keysRotateUp = zD
-            }
-          },
-          metadata: KD
-        }, lD, WD), (0, pD.i)(null, null, GD, {
-          kind: "field",
-          name: "keysRotateDown",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysRotateDown" in DD,
-            get: DD => DD.keysRotateDown,
-            set: (DD, zD) => {
-              DD.keysRotateDown = zD
-            }
-          },
-          metadata: KD
-        }, ND, ZD), KD && Object.defineProperty(DD, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: KD
-        })
-      })(), DD
-    })();
-    LD.d.FreeCameraKeyboardMoveInput = RD;
-    var AD = wD(37119),
-      UD = wD(40106);
-    let fD = (() => {
-      var DD;
-      let zD, wD, KD = [],
-        rD = [],
-        LD = [],
-        cD = [];
-      return DD = class {
-        _applyPointerRotation(DD, zD) {
-          this._pointerConditions.button = this._currentActiveButton;
-          const wD = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions);
-          if (!wD || "rotate" !== wD.interaction) return;
-          const pD = wD.uF ?? wD.sensitivity ?? 1 / this.angularSensibility,
-            sD = wD.vF ?? wD.sensitivity ?? 1 / this.angularSensibility;
-          this.camera.cameraRotation.y += DD * pD, this.camera.cameraRotation.x += zD * sD
+          Sp = () => xp._Stack[Op],
+          Lp = () => -1 === Op ? "!!INVALID EXPRESSION!!" : xp._Stack[Op--];
+        let Yp = 0,
+          Dp = "";
+        for (; Yp < pp.length;) {
+          const ip = pp.charAt(Yp),
+            Ap = Yp < pp.length - 1 ? pp.substring(Yp, 2 + Yp) : "";
+          if ("(" === ip) Dp = "", Ip(ip);
+          else if (")" === ip) {
+            for (op(); - 1 !== Op && "(" !== Sp();) cp.push(Lp());
+            Lp()
+          } else if (xp._OperatorPriority[Ap] > 1) {
+            for (op(); - 1 !== Op && xp._OperatorPriority[Sp()] >= xp._OperatorPriority[Ap];) cp.push(Lp());
+            Ip(Ap), Yp++
+          } else Dp += ip;
+          Yp++
         }
-        constructor() {
-          let DD = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-          this.touchEnabled = DD, this.buttons = (0, pD.m)(this, KD, [0, 1, 2]), this.angularSensibility = ((0, pD.m)(this, rD), (0, pD.m)(this, LD, 2e3)), this._pointerInput = (0, pD.m)(this, cD), this._previousPosition = null, this.onPointerMovedObservable = new AD.b, this._allowCameraRotation = !0, this._currentActiveButton = -1, this._activePointerId = -1, this._pointerConditions = {}
+        for (op(); - 1 !== Op;) "(" === Sp() ? Lp() : cp.push(Lp());
+        return xp._InfixToPostfixCache.size >= xp.InfixToPostfixCacheLimitSize && xp.ClearCache(), xp._InfixToPostfixCache.set(pp, {
+          result: cp,
+          accessTime: Date.now()
+        }), cp
+      }
+      static ClearCache() {
+        const pp = Array.from(xp._InfixToPostfixCache.entries()).sort(((pp, ip) => pp[1].accessTime - ip[1].accessTime));
+        for (let ip = 0; ip < xp.InfixToPostfixCacheCleanupSize; ip++) xp._InfixToPostfixCache.delete(pp[ip][0])
+      }
+    }
+    xp.InfixToPostfixCacheLimitSize = 5e4, xp.InfixToPostfixCacheCleanupSize = 25e3, xp._InfixToPostfixCache = new Map, xp._OperatorPriority = {
+      ")": 0,
+      "(": 1,
+      "||": 2,
+      "&&": 3
+    }, xp._Stack = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""];
+    class Lp extends xp {
+      constructor(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        super(), this.define = pp, this.not = ip
+      }
+      isTrue(pp) {
+        let ip = void 0 !== pp[this.define];
+        return this.not && (ip = !ip), ip
+      }
+    }
+    class Yp extends xp {
+      isTrue(pp) {
+        return this.leftOperand.isTrue(pp) || this.rightOperand.isTrue(pp)
+      }
+    }
+    class Dp extends xp {
+      isTrue(pp) {
+        return this.leftOperand.isTrue(pp) && this.rightOperand.isTrue(pp)
+      }
+    }
+    class Ap extends xp {
+      constructor(pp, ip, cp) {
+        super(), this.define = pp, this.operand = ip, this.testValue = cp
+      }
+      toString() {
+        return `${this.define} ${this.operand} ${this.testValue}`
+      }
+      isTrue(pp) {
+        let ip = !1;
+        const cp = parseInt(void 0 != pp[this.define] ? pp[this.define] : this.define),
+          Op = parseInt(void 0 != pp[this.testValue] ? pp[this.testValue] : this.testValue);
+        if (isNaN(cp) || isNaN(Op)) return !1;
+        switch (this.operand) {
+          case ">":
+            ip = cp > Op;
+            break;
+          case "<":
+            ip = cp < Op;
+            break;
+          case "<=":
+            ip = cp <= Op;
+            break;
+          case ">=":
+            ip = cp >= Op;
+            break;
+          case "==":
+            ip = cp === Op;
+            break;
+          case "!=":
+            ip = cp !== Op
         }
-        attachControl(DD) {
-          DD = gD.h.BackCompatCameraNoPreventDefault(arguments);
-          const zD = this.camera.iI(),
-            wD = zD.getInputElement();
-          this._pointerInput || (this._pointerInput = pD => {
-            const sD = pD.event,
-              KD = "touch" === sD.pointerType;
-            if (!this.touchEnabled && KD) return;
-            if (pD.type !== UD.c.POINTERMOVE && -1 === this.buttons.indexOf(sD.button)) return;
-            const rD = sD.target;
-            if (pD.type === UD.c.POINTERDOWN) {
-              if (KD && -1 !== this._activePointerId || !KD && -1 !== this._currentActiveButton) return;
-              this._activePointerId = sD.pointerId;
-              try {
-                rD?.setPointerCapture(sD.pointerId)
-              } catch (LD) {} - 1 === this._currentActiveButton && (this._currentActiveButton = sD.button), this._previousPosition = {
-                x: sD.clientX,
-                y: sD.clientY
-              }, DD || (sD.preventDefault(), wD && wD.focus()), zD.isPointerLock && this._onMouseMove && this._onMouseMove(pD.event)
-            } else if (pD.type === UD.c.POINTERUP) {
-              if (KD && this._activePointerId !== sD.pointerId || !KD && this._currentActiveButton !== sD.button) return;
-              try {
-                rD?.releasePointerCapture(sD.pointerId)
-              } catch (LD) {}
-              this._currentActiveButton = -1, this._previousPosition = null, DD || sD.preventDefault(), this._activePointerId = -1
-            } else if (pD.type === UD.c.POINTERMOVE && (this._activePointerId === sD.pointerId || !KD))
-              if (zD.isPointerLock && this._onMouseMove) this._onMouseMove(pD.event);
-              else if (this._previousPosition) {
-              const zD = this.camera._calculateHandednessMultiplier(),
-                wD = (sD.clientX - this._previousPosition.x) * zD,
-                pD = (sD.clientY - this._previousPosition.y) * zD;
-              this._allowCameraRotation && this._applyPointerRotation(wD, pD), this.onPointerMovedObservable.notifyObservers({
-                offsetX: wD,
-                offsetY: pD
-              }), this._previousPosition = {
-                x: sD.clientX,
-                y: sD.clientY
-              }, DD || sD.preventDefault()
-            }
-          }), this._onMouseMove = wD => {
-            if (!zD.isPointerLock) return;
-            const pD = this.camera._calculateHandednessMultiplier();
-            this._applyPointerRotation(wD.movementX * pD, wD.movementY * pD), this._previousPosition = null, DD || wD.preventDefault()
-          }, this._observer = this.camera.Ul()._inputManager._addCameraPointerObserver(this._pointerInput, UD.c.POINTERDOWN | UD.c.POINTERUP | UD.c.POINTERMOVE), wD && (this._contextMenuBind = DD => this.onContextMenu(DD), wD.addEventListener("contextmenu", this._contextMenuBind, !1))
+        return ip
+      }
+    }
+    var Pp = cp(40096),
+      Wp = cp(40088);
+    const yp = /defined\s*?\((.+?)\)/g,
+      Up = /defined\s*?\[(.+?)\]/g,
+      wp = /#include\s?<(.+)>(\((.*)\))*(\[(.*)\])*/g,
+      vp = /__decl__/,
+      tp = /light\{X\}.(\w*)/g,
+      Hp = /\{X\}/g,
+      dp = [],
+      ep = /(#ifdef)|(#else)|(#elif)|(#endif)|(#ifndef)|(#if)/;
+
+    function jp(pp) {
+      pp.processor && pp.processor.initializeShaders && pp.processor.initializeShaders(pp.processingContext)
+    }
+
+    function kp(pp, ip, cp, Op) {
+      ip.processor?.preProcessShaderCode && (pp = ip.processor.preProcessShaderCode(pp, ip.isFragment)), lp(pp, ip, (pp => {
+        ip.processCodeAfterIncludes && (pp = ip.processCodeAfterIncludes(ip.isFragment ? "fragment" : "vertex", pp, ip.defines));
+        const op = function(pp, ip, cp) {
+          let Op = function(pp, ip) {
+            if (ip.processor?.noPrecision) return pp;
+            const cp = ip.shouldUseHighPrecisionShader; - 1 === pp.indexOf("precision highp float") ? pp = cp ? "precision highp float;\n" + pp : "precision mediump float;\n" + pp : cp || (pp = pp.replace("precision highp float", "precision mediump float"));
+            return pp
+          }(pp, ip);
+          if (!ip.processor) return Op;
+          if (0 === ip.processor.shaderLanguage && -1 !== Op.indexOf("#version 3") && (Op = Op.replace("#version 300 es", ""), !ip.processor.parseGLES3)) return Op;
+          const op = ip.defines,
+            Ip = Xp(ip, cp);
+          ip.processor.preProcessor && (Op = ip.processor.preProcessor(Op, op, Ip, ip.isFragment, ip.processingContext));
+          const Sp = {};
+          Op = Ep(Op, Ip, ip, Sp), ip.processor.postProcessor && (Op = ip.processor.postProcessor(Op, op, ip.isFragment, ip.processingContext, cp ? {
+            drawBuffersExtensionDisabled: !cp.getCaps().drawBuffersExtension
+          } : {}, Ip, Sp));
+          cp?._features.needShaderCodeInlining && (Op = cp.inlineShaderCode(Op));
+          return Op
+        }(pp, ip, Op);
+        cp(op, pp)
+      }))
+    }
+
+    function mp(pp, ip, cp) {
+      return cp.processor && cp.processor.finalizeShaders ? cp.processor.finalizeShaders(pp, ip, cp.processingContext) : {
+        vertexCode: pp,
+        fragmentCode: ip
+      }
+    }
+
+    function Rp(pp) {
+      const ip = /defined\((.+)\)/.exec(pp);
+      if (ip && ip.length) return new Lp(ip[1].trim(), "!" === pp[0]);
+      const cp = ["==", "!=", ">=", "<=", "<", ">"];
+      let Op = "",
+        op = 0;
+      for (Op of cp)
+        if (op = pp.indexOf(Op), op > -1) break;
+      if (-1 === op) return new Lp(pp);
+      const Ip = pp.substring(0, op).trim(),
+        Sp = pp.substring(op + Op.length).trim();
+      return new Ap(Ip, Op, Sp)
+    }
+
+    function qp(pp, ip) {
+      const cp = new Sp,
+        Op = pp.substring(0, ip);
+      let op = pp.substring(ip);
+      return op = op.substring(0, (op.indexOf("//") + 1 || op.length + 1) - 1).trim(), cp.testExpression = "#ifdef" === Op ? new Lp(op) : "#ifndef" === Op ? new Lp(op, !0) : function(pp) {
+        pp = pp.replace(yp, "defined[$1]");
+        const ip = xp.infixToPostfix(pp),
+          cp = [];
+        for (const op of ip)
+          if ("||" !== op && "&&" !== op) cp.push(op);
+          else if (cp.length >= 2) {
+          let pp = cp[cp.length - 1],
+            ip = cp[cp.length - 2];
+          cp.length -= 2;
+          const Op = "&&" == op ? new Dp : new Yp;
+          "string" === typeof pp && (pp = pp.replace(Up, "defined($1)")), "string" === typeof ip && (ip = ip.replace(Up, "defined($1)")), Op.leftOperand = "string" === typeof ip ? Rp(ip) : ip, Op.rightOperand = "string" === typeof pp ? Rp(pp) : pp, cp.push(Op)
         }
-        onContextMenu(DD) {
-          DD.preventDefault()
+        let Op = cp[cp.length - 1];
+        return "string" === typeof Op && (Op = Op.replace(Up, "defined($1)")), "string" === typeof Op ? Rp(Op) : Op
+      }(op), cp
+    }
+
+    function Mp(pp, ip, cp, op) {
+      let Ip;
+      for (; Cp(pp, cp, op);) {
+        Ip = pp.currentLine;
+        const Sp = Ip.substring(0, 5).toLowerCase();
+        if ("#else" === Sp) {
+          const cp = new Op;
+          return ip.children.push(cp), void Cp(pp, cp, op)
         }
-        detachControl() {
-          if (this._observer) {
-            if (this.camera.Ul()._inputManager._removeCameraPointerObserver(this._observer), this._contextMenuBind) {
-              const DD = this.camera.iI().getInputElement();
-              DD && DD.removeEventListener("contextmenu", this._contextMenuBind)
-            }
-            this.onPointerMovedObservable && this.onPointerMovedObservable.clear(), this._observer = null, this._onMouseMove = null, this._previousPosition = null
-          }
-          this._activePointerId = -1, this._currentActiveButton = -1
+        if ("#elif" === Sp) {
+          const pp = qp(Ip, 5);
+          ip.children.push(pp), cp = pp
         }
-        getClassName() {
-          return "FreeCameraMouseInput"
-        }
-        getSimpleName() {
-          return "mouse"
-        }
-      }, (() => {
-        const gD = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        zD = [(0, sD.C)()], wD = [(0, sD.C)()], (0, pD.i)(null, null, zD, {
-          kind: "field",
-          name: "buttons",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "buttons" in DD,
-            get: DD => DD.buttons,
-            set: (DD, zD) => {
-              DD.buttons = zD
-            }
-          },
-          metadata: gD
-        }, KD, rD), (0, pD.i)(null, null, wD, {
-          kind: "field",
-          name: "angularSensibility",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "angularSensibility" in DD,
-            get: DD => DD.angularSensibility,
-            set: (DD, zD) => {
-              DD.angularSensibility = zD
-            }
-          },
-          metadata: gD
-        }, LD, cD), gD && Object.defineProperty(DD, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: gD
-        })
-      })(), DD
-    })();
-    LD.d.FreeCameraMouseInput = fD;
-    var ID = wD(40115);
-    let BD = (() => {
-      var DD;
-      let zD, wD, KD, rD = [],
-        LD = [],
-        cD = [],
-        RD = [],
-        fD = [],
-        BD = [];
-      return DD = class {
-        constructor() {
-          this.wheelPrecisionX = (0, pD.m)(this, rD, 3), this.wheelPrecisionY = ((0, pD.m)(this, LD), (0, pD.m)(this, cD, 3)), this.wheelPrecisionZ = ((0, pD.m)(this, RD), (0, pD.m)(this, fD, 3)), this.onChangedObservable = ((0, pD.m)(this, BD), new AD.b), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0, this._ffMultiplier = 12, this._normalize = 120
-        }
-        attachControl(DD) {
-          DD = gD.h.BackCompatCameraNoPreventDefault(arguments), this._wheel = zD => {
-            if (zD.type !== UD.c.POINTERWHEEL) return;
-            const wD = zD.event,
-              pD = wD.deltaMode === ID.e.DOM_DELTA_LINE ? this._ffMultiplier : 1;
-            this._wheelDeltaX += this.wheelPrecisionX * pD * wD.deltaX / this._normalize, this._wheelDeltaY -= this.wheelPrecisionY * pD * wD.deltaY / this._normalize, this._wheelDeltaZ += this.wheelPrecisionZ * pD * wD.deltaZ / this._normalize, wD.preventDefault && (DD || wD.preventDefault())
-          }, this._observer = this.camera.Ul()._inputManager._addCameraPointerObserver(this._wheel, UD.c.POINTERWHEEL)
-        }
-        detachControl() {
-          this._observer && (this.camera.Ul()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null), this.onChangedObservable && this.onChangedObservable.clear()
-        }
-        checkInputs() {
-          this.onChangedObservable.notifyObservers({
-            wheelDeltaX: this._wheelDeltaX,
-            wheelDeltaY: this._wheelDeltaY,
-            wheelDeltaZ: this._wheelDeltaZ
-          }), this._wheelDeltaX = 0, this._wheelDeltaY = 0, this._wheelDeltaZ = 0
-        }
-        getClassName() {
-          return "BaseCameraMouseWheelInput"
-        }
-        getSimpleName() {
-          return "mousewheel"
-        }
-      }, (() => {
-        const gD = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        zD = [(0, sD.C)()], wD = [(0, sD.C)()], KD = [(0, sD.C)()], (0, pD.i)(null, null, zD, {
-          kind: "field",
-          name: "wheelPrecisionX",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "wheelPrecisionX" in DD,
-            get: DD => DD.wheelPrecisionX,
-            set: (DD, zD) => {
-              DD.wheelPrecisionX = zD
-            }
-          },
-          metadata: gD
-        }, rD, LD), (0, pD.i)(null, null, wD, {
-          kind: "field",
-          name: "wheelPrecisionY",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "wheelPrecisionY" in DD,
-            get: DD => DD.wheelPrecisionY,
-            set: (DD, zD) => {
-              DD.wheelPrecisionY = zD
-            }
-          },
-          metadata: gD
-        }, cD, RD), (0, pD.i)(null, null, KD, {
-          kind: "field",
-          name: "wheelPrecisionZ",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "wheelPrecisionZ" in DD,
-            get: DD => DD.wheelPrecisionZ,
-            set: (DD, zD) => {
-              DD.wheelPrecisionZ = zD
-            }
-          },
-          metadata: gD
-        }, fD, BD), gD && Object.defineProperty(DD, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: gD
-        })
-      })(), DD
-    })();
-    var GD;
-    ! function(DD) {
-      DD[DD.MoveRelative = 0] = "MoveRelative", DD[DD.RotateRelative = 1] = "RotateRelative", DD[DD.MoveScene = 2] = "MoveScene"
-    }(GD || (GD = {}));
-    let hD = (() => {
-      var DD;
-      let zD, wD, rD, LD, cD, gD, RD, AD, UD, fD = BD,
-        ID = [];
-      return DD = class extends fD {
-        constructor() {
-          super(...arguments), this.camera = (0, pD.m)(this, ID), this._moveRelative = KD.s.Zero(), this._rotateRelative = KD.s.Zero(), this._moveScene = KD.s.Zero(), this._wheelXAction = GD.MoveRelative, this._wheelXActionCoordinate = 0, this._wheelYAction = GD.MoveRelative, this._wheelYActionCoordinate = 2, this._wheelZAction = null, this._wheelZActionCoordinate = null
-        }
-        getClassName() {
-          return "FreeCameraMouseWheelInput"
-        }
-        set wheelXMoveRelative(DD) {
-          null === DD && this._wheelXAction !== GD.MoveRelative || (this._wheelXAction = GD.MoveRelative, this._wheelXActionCoordinate = DD)
-        }
-        get wheelXMoveRelative() {
-          return this._wheelXAction !== GD.MoveRelative ? null : this._wheelXActionCoordinate
-        }
-        set wheelYMoveRelative(DD) {
-          null === DD && this._wheelYAction !== GD.MoveRelative || (this._wheelYAction = GD.MoveRelative, this._wheelYActionCoordinate = DD)
-        }
-        get wheelYMoveRelative() {
-          return this._wheelYAction !== GD.MoveRelative ? null : this._wheelYActionCoordinate
-        }
-        set wheelZMoveRelative(DD) {
-          null === DD && this._wheelZAction !== GD.MoveRelative || (this._wheelZAction = GD.MoveRelative, this._wheelZActionCoordinate = DD)
-        }
-        get wheelZMoveRelative() {
-          return this._wheelZAction !== GD.MoveRelative ? null : this._wheelZActionCoordinate
-        }
-        set wheelXRotateRelative(DD) {
-          null === DD && this._wheelXAction !== GD.RotateRelative || (this._wheelXAction = GD.RotateRelative, this._wheelXActionCoordinate = DD)
-        }
-        get wheelXRotateRelative() {
-          return this._wheelXAction !== GD.RotateRelative ? null : this._wheelXActionCoordinate
-        }
-        set wheelYRotateRelative(DD) {
-          null === DD && this._wheelYAction !== GD.RotateRelative || (this._wheelYAction = GD.RotateRelative, this._wheelYActionCoordinate = DD)
-        }
-        get wheelYRotateRelative() {
-          return this._wheelYAction !== GD.RotateRelative ? null : this._wheelYActionCoordinate
-        }
-        set wheelZRotateRelative(DD) {
-          null === DD && this._wheelZAction !== GD.RotateRelative || (this._wheelZAction = GD.RotateRelative, this._wheelZActionCoordinate = DD)
-        }
-        get wheelZRotateRelative() {
-          return this._wheelZAction !== GD.RotateRelative ? null : this._wheelZActionCoordinate
-        }
-        set wheelXMoveScene(DD) {
-          null === DD && this._wheelXAction !== GD.MoveScene || (this._wheelXAction = GD.MoveScene, this._wheelXActionCoordinate = DD)
-        }
-        get wheelXMoveScene() {
-          return this._wheelXAction !== GD.MoveScene ? null : this._wheelXActionCoordinate
-        }
-        set wheelYMoveScene(DD) {
-          null === DD && this._wheelYAction !== GD.MoveScene || (this._wheelYAction = GD.MoveScene, this._wheelYActionCoordinate = DD)
-        }
-        get wheelYMoveScene() {
-          return this._wheelYAction !== GD.MoveScene ? null : this._wheelYActionCoordinate
-        }
-        set wheelZMoveScene(DD) {
-          null === DD && this._wheelZAction !== GD.MoveScene || (this._wheelZAction = GD.MoveScene, this._wheelZActionCoordinate = DD)
-        }
-        get wheelZMoveScene() {
-          return this._wheelZAction !== GD.MoveScene ? null : this._wheelZActionCoordinate
-        }
-        checkInputs() {
-          if (0 === this._wheelDeltaX && 0 === this._wheelDeltaY && 0 == this._wheelDeltaZ) return;
-          this._moveRelative.I9(0), this._rotateRelative.I9(0), this._moveScene.I9(0), this._updateCamera(), this.camera.Ul().useRightHandedSystem && (this._moveRelative.z *= -1);
-          const DD = KD.e.Zero();
-          this.camera.getViewMatrix().invertToRef(DD);
-          const zD = KD.s.Zero();
-          KD.s.TransformNormalToRef(this._moveRelative, DD, zD), this.camera.cameraRotation.x += this._rotateRelative.x / 200, this.camera.cameraRotation.y += this._rotateRelative.y / 200, this.camera.cameraDirection.addInPlace(zD), this.camera.cameraDirection.addInPlace(this._moveScene), super.checkInputs()
-        }
-        _updateCamera() {
-          this._updateCameraProperty(this._wheelDeltaX, this._wheelXAction, this._wheelXActionCoordinate), this._updateCameraProperty(this._wheelDeltaY, this._wheelYAction, this._wheelYActionCoordinate), this._updateCameraProperty(this._wheelDeltaZ, this._wheelZAction, this._wheelZActionCoordinate)
-        }
-        _updateCameraProperty(DD, zD, wD) {
-          if (0 === DD) return;
-          if (null === zD || null === wD) return;
-          let pD = null;
-          switch (zD) {
-            case GD.MoveRelative:
-              pD = this._moveRelative;
-              break;
-            case GD.RotateRelative:
-              pD = this._rotateRelative;
-              break;
-            case GD.MoveScene:
-              pD = this._moveScene
-          }
-          switch (wD) {
-            case 0:
-              pD.set(DD, 0, 0);
-              break;
-            case 1:
-              pD.set(0, DD, 0);
-              break;
-            case 2:
-              pD.set(0, 0, DD)
-          }
-        }
-      }, (() => {
-        const KD = "function" === typeof Symbol && Symbol.metadata ? Object.create(fD[Symbol.metadata] ?? null) : void 0;
-        zD = [(0, sD.C)()], wD = [(0, sD.C)()], rD = [(0, sD.C)()], LD = [(0, sD.C)()], cD = [(0, sD.C)()], gD = [(0, sD.C)()], RD = [(0, sD.C)()], AD = [(0, sD.C)()], UD = [(0, sD.C)()], (0, pD.i)(DD, null, zD, {
-          kind: "setter",
-          name: "wheelXMoveRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "wheelXMoveRelative" in DD,
-            set: (DD, zD) => {
-              DD.wheelXMoveRelative = zD
-            }
-          },
-          metadata: KD
-        }, null, ID), (0, pD.i)(DD, null, wD, {
-          kind: "setter",
-          name: "wheelYMoveRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "wheelYMoveRelative" in DD,
-            set: (DD, zD) => {
-              DD.wheelYMoveRelative = zD
-            }
-          },
-          metadata: KD
-        }, null, ID), (0, pD.i)(DD, null, rD, {
-          kind: "setter",
-          name: "wheelZMoveRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "wheelZMoveRelative" in DD,
-            set: (DD, zD) => {
-              DD.wheelZMoveRelative = zD
-            }
-          },
-          metadata: KD
-        }, null, ID), (0, pD.i)(DD, null, LD, {
-          kind: "setter",
-          name: "wheelXRotateRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "wheelXRotateRelative" in DD,
-            set: (DD, zD) => {
-              DD.wheelXRotateRelative = zD
-            }
-          },
-          metadata: KD
-        }, null, ID), (0, pD.i)(DD, null, cD, {
-          kind: "setter",
-          name: "wheelYRotateRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "wheelYRotateRelative" in DD,
-            set: (DD, zD) => {
-              DD.wheelYRotateRelative = zD
-            }
-          },
-          metadata: KD
-        }, null, ID), (0, pD.i)(DD, null, gD, {
-          kind: "setter",
-          name: "wheelZRotateRelative",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "wheelZRotateRelative" in DD,
-            set: (DD, zD) => {
-              DD.wheelZRotateRelative = zD
-            }
-          },
-          metadata: KD
-        }, null, ID), (0, pD.i)(DD, null, RD, {
-          kind: "setter",
-          name: "wheelXMoveScene",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "wheelXMoveScene" in DD,
-            set: (DD, zD) => {
-              DD.wheelXMoveScene = zD
-            }
-          },
-          metadata: KD
-        }, null, ID), (0, pD.i)(DD, null, AD, {
-          kind: "setter",
-          name: "wheelYMoveScene",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "wheelYMoveScene" in DD,
-            set: (DD, zD) => {
-              DD.wheelYMoveScene = zD
-            }
-          },
-          metadata: KD
-        }, null, ID), (0, pD.i)(DD, null, UD, {
-          kind: "setter",
-          name: "wheelZMoveScene",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "wheelZMoveScene" in DD,
-            set: (DD, zD) => {
-              DD.wheelZMoveScene = zD
-            }
-          },
-          metadata: KD
-        }, null, ID), KD && Object.defineProperty(DD, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: KD
-        })
-      })(), DD
-    })();
-    LD.d.FreeCameraMouseWheelInput = hD;
-    let nD = (() => {
-      var DD;
-      let zD, wD, rD = [],
-        LD = [],
-        cD = [],
-        RD = [];
-      return DD = class {
-        constructor() {
-          let DD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-          this.allowMouse = DD, this.touchAngularSensibility = (0, pD.m)(this, rD, 2e5), this.touchMoveSensibility = ((0, pD.m)(this, LD), (0, pD.m)(this, cD, 250)), this.singleFingerRotate = ((0, pD.m)(this, RD), !1), this._offsetX = null, this._offsetY = null, this._pointerPressed = new Array, this._isSafari = gD.h.IsSafari()
-        }
-        attachControl(DD) {
-          DD = gD.h.BackCompatCameraNoPreventDefault(arguments);
-          let zD = null;
-          if (void 0 === this._pointerInput && (this._onLostFocus = () => {
-              this._offsetX = null, this._offsetY = null
-            }, this._pointerInput = wD => {
-              const pD = wD.event,
-                sD = "mouse" === pD.pointerType || this._isSafari && "undefined" === typeof pD.pointerType;
-              if (this.allowMouse || !sD)
-                if (wD.type === UD.c.POINTERDOWN) {
-                  if (DD || pD.preventDefault(), this._pointerPressed.push(pD.pointerId), 1 !== this._pointerPressed.length) return;
-                  zD = {
-                    x: pD.clientX,
-                    y: pD.clientY
-                  }
-                } else if (wD.type === UD.c.POINTERUP) {
-                DD || pD.preventDefault();
-                const wD = this._pointerPressed.indexOf(pD.pointerId);
-                if (-1 === wD) return;
-                if (this._pointerPressed.splice(wD, 1), 0 != wD) return;
-                zD = null, this._offsetX = null, this._offsetY = null
-              } else if (wD.type === UD.c.POINTERMOVE) {
-                if (DD || pD.preventDefault(), !zD) return;
-                if (0 != this._pointerPressed.indexOf(pD.pointerId)) return;
-                this._offsetX = pD.clientX - zD.x, this._offsetY = -(pD.clientY - zD.y)
+      }
+    }
+
+    function Cp(pp, ip, cp) {
+      for (; pp.canRead;) {
+        pp.lineIndex++;
+        const op = pp.currentLine;
+        if (op.indexOf("#") >= 0) {
+          const Op = ep.exec(op);
+          if (Op && Op.length) {
+            switch (Op[0]) {
+              case "#ifdef": {
+                const Op = new Ip;
+                ip.children.push(Op);
+                const Sp = qp(op, 6);
+                Op.children.push(Sp), Mp(pp, Op, Sp, cp);
+                break
               }
-            }), this._observer = this.camera.Ul()._inputManager._addCameraPointerObserver(this._pointerInput, UD.c.POINTERDOWN | UD.c.POINTERUP | UD.c.POINTERMOVE), this._onLostFocus) {
-            const DD = this.camera.iI().getInputElement();
-            DD && DD.addEventListener("blur", this._onLostFocus)
-          }
-        }
-        detachControl() {
-          if (this._pointerInput) {
-            if (this._observer && (this.camera.Ul()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null), this._onLostFocus) {
-              const DD = this.camera.iI().getInputElement();
-              DD && DD.removeEventListener("blur", this._onLostFocus), this._onLostFocus = null
+              case "#else":
+              case "#elif":
+                return !0;
+              case "#endif":
+                return !1;
+              case "#ifndef": {
+                const Op = new Ip;
+                ip.children.push(Op);
+                const Sp = qp(op, 7);
+                Op.children.push(Sp), Mp(pp, Op, Sp, cp);
+                break
+              }
+              case "#if": {
+                const Op = new Ip,
+                  Sp = qp(op, 3);
+                ip.children.push(Op), Op.children.push(Sp), Mp(pp, Op, Sp, cp);
+                break
+              }
             }
-            this._pointerPressed.length = 0, this._offsetX = null, this._offsetY = null
+            continue
           }
         }
-        checkInputs() {
-          if (null === this._offsetX || null === this._offsetY) return;
-          if (0 === this._offsetX && 0 === this._offsetY) return;
-          const DD = this.camera,
-            zD = DD.movement.input,
-            wD = zD.getEntry("touch", "rotate"),
-            pD = zD.getEntry("touch", "translate"),
-            sD = DD._calculateHandednessMultiplier(),
-            rD = this.singleFingerRotate && 1 === this._pointerPressed.length || !this.singleFingerRotate && this._pointerPressed.length > 1;
-          if (wD) {
-            const zD = wD.sensitivity ?? 1 / this.touchAngularSensibility;
-            DD.cameraRotation.y = this._offsetX * sD * zD, rD && (DD.cameraRotation.x = -this._offsetY * sD * zD)
-          }
-          if (!rD && pD) {
-            const zD = DD._computeLocalCameraSpeed(),
-              wD = pD.sensitivity ?? (0 !== this.touchMoveSensibility ? 1 / this.touchMoveSensibility : 0),
-              sD = KD.n.WI[0];
-            sD.Z2(0, 0, zD * this._offsetY * wD), KD.e.RotationYawPitchRollToRef(DD.rotation.y, DD.rotation.x, 0, DD._cameraRotationMatrix), KD.s.TransformCoordinatesToRef(sD, DD._cameraRotationMatrix, sD), DD.cameraDirection.addInPlace(sD)
-          }
+        const Sp = new Op;
+        if (Sp.line = op, ip.children.push(Sp), "#" === op[0] && "d" === op[1]) {
+          const pp = op.replace(";", "").split(" ");
+          Sp.additionalDefineKey = pp[1], 3 === pp.length && (Sp.additionalDefineValue = pp[2])
         }
-        getClassName() {
-          return "FreeCameraTouchInput"
-        }
-        getSimpleName() {
-          return "touch"
-        }
-      }, (() => {
-        const KD = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        zD = [(0, sD.C)()], wD = [(0, sD.C)()], (0, pD.i)(null, null, zD, {
-          kind: "field",
-          name: "touchAngularSensibility",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "touchAngularSensibility" in DD,
-            get: DD => DD.touchAngularSensibility,
-            set: (DD, zD) => {
-              DD.touchAngularSensibility = zD
+      }
+      return !1
+    }
+
+    function Ep(pp, ip, cp, Ip) {
+      const Sp = new Op,
+        xp = new op;
+      return xp.lineIndex = -1, xp.lines = pp.split("\n"), Cp(xp, Sp, Ip), Sp.process(ip, cp, Ip)
+    }
+
+    function Xp(pp, ip) {
+      const cp = pp.defines,
+        Op = {};
+      for (const op of cp) {
+        const pp = op.replace("#define", "").replace(";", "").trim().split(" ");
+        Op[pp[0]] = pp.length > 1 ? pp[1] : ""
+      }
+      return 0 === pp.processor?.shaderLanguage && (Op.GL_ES = "true"), Op.__VERSION__ = pp.version, Op[pp.platformName] = "true", (0, Wp.j)(Op, ip?.isNDCHalfZRange, ip?.lOp, ip?.useExactSrgbConversions), Op
+    }
+
+    function lp(pp, ip, cp) {
+      let Op;
+      for (dp.length = 0; null !== (Op = wp.exec(pp));) dp.push(Op);
+      let op = [pp],
+        Ip = !1;
+      for (const xp of dp) {
+        let pp = xp[1];
+        if (-1 !== pp.indexOf("__decl__") && (pp = pp.replace(vp, ""), ip.supportsUniformBuffers && (pp = pp.replace("Vertex", "Ubo").replace("Fragment", "Ubo")), pp += "Declaration"), !ip.includesShadersStore[pp]) {
+          const Op = ip.shadersRepository + "ShadersInclude/" + pp + ".fx";
+          return void Qp.loadFile(Op, (Op => {
+            ip.includesShadersStore[pp] = Op, lp(op.join(""), ip, cp)
+          }))
+        } {
+          let cp = ip.includesShadersStore[pp];
+          if (xp[2]) {
+            const pp = xp[3].split(",");
+            for (let ip = 0; ip < pp.length; ip += 2) {
+              const Op = new RegExp(pp[ip], "g"),
+                op = pp[ip + 1];
+              cp = cp.replace(Op, op)
             }
-          },
-          metadata: KD
-        }, rD, LD), (0, pD.i)(null, null, wD, {
-          kind: "field",
-          name: "touchMoveSensibility",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "touchMoveSensibility" in DD,
-            get: DD => DD.touchMoveSensibility,
-            set: (DD, zD) => {
-              DD.touchMoveSensibility = zD
-            }
-          },
-          metadata: KD
-        }, cD, RD), KD && Object.defineProperty(DD, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: KD
-        })
-      })(), DD
-    })();
-    LD.d.FreeCameraTouchInput = nD;
-    var MD, OD, JD, ED = wD(39808);
-    class QD extends LD.h {
-      constructor(DD) {
-        super(DD), this._mouseInput = null, this._mouseWheelInput = null
+          }
+          if (xp[4]) {
+            const pp = xp[5];
+            if (-1 !== pp.indexOf("..")) {
+              const Op = pp.split(".."),
+                op = parseInt(Op[0]);
+              let Ip = parseInt(Op[1]),
+                Sp = cp.slice(0);
+              cp = "", isNaN(Ip) && (Ip = ip.indexParameters[Op[1]]);
+              for (let pp = op; pp < Ip; pp++) ip.supportsUniformBuffers || (Sp = Sp.replace(tp, ((pp, ip) => ip + "{X}"))), cp += Sp.replace(Hp, pp.toString()) + "\n"
+            } else ip.supportsUniformBuffers || (cp = cp.replace(tp, ((pp, ip) => ip + "{X}"))), cp = cp.replace(Hp, pp)
+          }
+          const Op = [];
+          for (const pp of op) {
+            const ip = pp.split(xp[0]);
+            for (let pp = 0; pp < ip.length - 1; pp++) Op.push(ip[pp]), Op.push(cp);
+            Op.push(ip[ip.length - 1])
+          }
+          op = Op, Ip = Ip || cp.indexOf("#include<") >= 0 || cp.indexOf("#include <") >= 0
+        }
       }
-      addKeyboard() {
-        return this.add(new RD), this
+      dp.length = 0;
+      const Sp = op.join("");
+      Ip ? lp(Sp.toString(), ip, cp) : cp(Sp)
+    }
+    const Qp = {
+      loadFile: (pp, ip, cp, Op, op, Ip) => {
+        throw (0, Pp.o)("FileTools")
       }
-      addMouse() {
-        let DD = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        return this._mouseInput || (this._mouseInput = new fD(DD), this.add(this._mouseInput)), this
+    }
+  },
+  40088: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => op,
+      g: () => Ip,
+      j: () => xp,
+      n: () => Sp,
+      r: () => Lp
+    });
+    var Op = cp(40096);
+    const op = {};
+
+    function Ip(pp, ip) {
+      return (arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "") + (ip ? ip + "\n" : "") + pp
+    }
+
+    function Sp(pp, ip, cp, Ip, Sp, xp, Lp) {
+      const Yp = Lp || op.loadFile;
+      if (!Yp) throw (0, Op.o)("FileTools");
+      return Yp(pp, ip, cp, Ip, Sp, xp)
+    }
+
+    function xp(pp, ip, cp, Op) {
+      if (pp) return ip ? pp.IS_NDC_HALF_ZRANGE = "" : delete pp.IS_NDC_HALF_ZRANGE, cp ? pp.USE_REVERSE_DEPTHBUFFER = "" : delete pp.USE_REVERSE_DEPTHBUFFER, void(Op ? pp.USE_EXACT_SRGB_CONVERSIONS = "" : delete pp.USE_EXACT_SRGB_CONVERSIONS);
+      {
+        let pp = "";
+        return ip && (pp += "#define IS_NDC_HALF_ZRANGE"), cp && (pp && (pp += "\n"), pp += "#define USE_REVERSE_DEPTHBUFFER"), Op && (pp && (pp += "\n"), pp += "#define USE_EXACT_SRGB_CONVERSIONS"), pp
       }
-      removeMouse() {
-        return this._mouseInput && this.remove(this._mouseInput), this
+    }
+
+    function Lp(pp, ip) {
+      let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        Op = arguments.length > 3 ? arguments[3] : void 0;
+      switch (pp) {
+        case 3: {
+          const pp = new Int8Array(ip);
+          return Op && pp.set(new Int8Array(Op)), pp
+        }
+        case 0: {
+          const pp = new Uint8Array(ip);
+          return Op && pp.set(new Uint8Array(Op)), pp
+        }
+        case 4: {
+          const pp = "number" !== typeof ip ? new Int16Array(ip) : new Int16Array(cp ? ip / 2 : ip);
+          return Op && pp.set(new Int16Array(Op)), pp
+        }
+        case 5:
+        case 8:
+        case 9:
+        case 10:
+        case 2: {
+          const pp = "number" !== typeof ip ? new Uint16Array(ip) : new Uint16Array(cp ? ip / 2 : ip);
+          return Op && pp.set(new Uint16Array(Op)), pp
+        }
+        case 6: {
+          const pp = "number" !== typeof ip ? new Int32Array(ip) : new Int32Array(cp ? ip / 4 : ip);
+          return Op && pp.set(new Int32Array(Op)), pp
+        }
+        case 7:
+        case 11:
+        case 12:
+        case 13:
+        case 14:
+        case 15: {
+          const pp = "number" !== typeof ip ? new Uint32Array(ip) : new Uint32Array(cp ? ip / 4 : ip);
+          return Op && pp.set(new Uint32Array(Op)), pp
+        }
+        case 1: {
+          const pp = "number" !== typeof ip ? new Float32Array(ip) : new Float32Array(cp ? ip / 4 : ip);
+          return Op && pp.set(new Float32Array(Op)), pp
+        }
       }
-      addMouseWheel() {
-        return this._mouseWheelInput || (this._mouseWheelInput = new hD, this.add(this._mouseWheelInput)), this
-      }
-      removeMouseWheel() {
-        return this._mouseWheelInput && this.remove(this._mouseWheelInput), this
-      }
-      addTouch() {
-        return this.add(new nD), this
-      }
-      clear() {
-        super.clear(), this._mouseInput = null
-      }
-    }(MD = QD.prototype).addDeviceOrientation ?? (MD.addDeviceOrientation = (0, ED.h)("FreeCameraInputsManager", "addDeviceOrientation")), (OD = QD.prototype).addVirtualJoystick ?? (OD.addVirtualJoystick = (0, ED.h)("FreeCameraInputsManager", "addVirtualJoystick")), (JD = QD.prototype).addGamepad ?? (JD.addGamepad = (0, ED.h)("FreeCameraInputsManager", "addGamepad"));
-    var XD = wD(39826),
-      VD = wD(37134);
-    let PD = (() => {
-        var DD;
-        let zD, wD, LD, cD, RD = rD.g,
-          AD = [],
-          UD = [],
-          fD = [],
-          ID = [],
-          BD = [],
-          GD = [],
-          hD = [],
-          nD = [];
-        return DD = class extends RD {
-          get angularSensibility() {
-            const DD = this.inputs.attached.mouse;
-            return DD ? DD.angularSensibility : 0
-          }
-          set angularSensibility(DD) {
-            const zD = this.inputs.attached.mouse;
-            zD && (zD.angularSensibility = DD)
-          }
-          get keysUp() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysUp : []
-          }
-          set keysUp(DD) {
-            const zD = this.inputs.attached.keyboard;
-            zD && (zD.keysUp = DD)
-          }
-          get keysUpward() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysUpward : []
-          }
-          set keysUpward(DD) {
-            const zD = this.inputs.attached.keyboard;
-            zD && (zD.keysUpward = DD)
-          }
-          get keysDown() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysDown : []
-          }
-          set keysDown(DD) {
-            const zD = this.inputs.attached.keyboard;
-            zD && (zD.keysDown = DD)
-          }
-          get keysDownward() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysDownward : []
-          }
-          set keysDownward(DD) {
-            const zD = this.inputs.attached.keyboard;
-            zD && (zD.keysDownward = DD)
-          }
-          get keysLeft() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysLeft : []
-          }
-          set keysLeft(DD) {
-            const zD = this.inputs.attached.keyboard;
-            zD && (zD.keysLeft = DD)
-          }
-          get keysRight() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysRight : []
-          }
-          set keysRight(DD) {
-            const zD = this.inputs.attached.keyboard;
-            zD && (zD.keysRight = DD)
-          }
-          get keysRotateLeft() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysRotateLeft : []
-          }
-          set keysRotateLeft(DD) {
-            const zD = this.inputs.attached.keyboard;
-            zD && (zD.keysRotateLeft = DD)
-          }
-          get keysRotateRight() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysRotateRight : []
-          }
-          set keysRotateRight(DD) {
-            const zD = this.inputs.attached.keyboard;
-            zD && (zD.keysRotateRight = DD)
-          }
-          get keysRotateUp() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysRotateUp : []
-          }
-          set keysRotateUp(DD) {
-            const zD = this.inputs.attached.keyboard;
-            zD && (zD.keysRotateUp = DD)
-          }
-          get keysRotateDown() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysRotateDown : []
-          }
-          set keysRotateDown(DD) {
-            const zD = this.inputs.attached.keyboard;
-            zD && (zD.keysRotateDown = DD)
-          }
-          constructor(DD, zD, wD) {
-            var sD;
-            super(DD, zD, wD, !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3]), sD = this, this.ellipsoid = (0, pD.m)(this, AD, new KD.s(.5, 1, .5)), this.ellipsoidOffset = ((0, pD.m)(this, UD), (0, pD.m)(this, fD, new KD.s(0, 0, 0))), this.checkCollisions = ((0, pD.m)(this, ID), (0, pD.m)(this, BD, !1)), this.applyGravity = ((0, pD.m)(this, GD), (0, pD.m)(this, hD, !1)), this.inputs = (0, pD.m)(this, nD), this._needMoveForGravity = !1, this._oldPosition = KD.s.Zero(), this._diffPosition = KD.s.Zero(), this._newPosition = KD.s.Zero(), this._collisionMask = -1, this._onCollisionPositionChange = function(DD, zD) {
-              let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-              sD._newPosition.pC(zD), sD._newPosition.subtractToRef(sD._oldPosition, sD._diffPosition), sD._diffPosition.length() > XD.c.CollisionsEpsilon && (sD.position.addToRef(sD._diffPosition, sD._deferredPositionUpdate), sD._deferOnly ? sD._deferredUpdated = !0 : sD.position.pC(sD._deferredPositionUpdate), sD.GU && wD && sD.GU(wD))
-            }, this.inputs = new QD(this), this.inputs.addKeyboard().addMouse()
-          }
-          attachControl(DD, zD) {
-            zD = gD.h.BackCompatCameraNoPreventDefault(arguments), this.inputs.attachElement(zD)
-          }
-          detachControl() {
-            this.inputs.detachElement(), this.cameraDirection = new KD.s(0, 0, 0), this.cameraRotation = new KD.r(0, 0)
-          }
-          get collisionMask() {
-            return this._collisionMask
-          }
-          set collisionMask(DD) {
-            this._collisionMask = isNaN(DD) ? -1 : DD
-          }
-          _collideWithWorld(DD) {
-            let zD;
-            zD = this.parent ? KD.s.TransformCoordinates(this.position, this.parent.getWorldMatrix()) : this.position, zD.subtractFromFloatsToRef(0, this.ellipsoid.y, 0, this._oldPosition), this._oldPosition.addInPlace(this.ellipsoidOffset);
-            const wD = this.Ul().collisionCoordinator;
-            this._collider || (this._collider = wD.createCollider()), this._collider._radius = this.ellipsoid, this._collider.collisionMask = this._collisionMask;
-            let pD = DD;
-            this.applyGravity && (pD = DD.add(this.Ul().gravity)), wD.getNewPosition(this._oldPosition, pD, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
-          }
-          _checkInputs() {
-            this._localDirection || (this._localDirection = KD.s.Zero(), this._transformedDirection = KD.s.Zero()), this.inputs.checkInputs(), super._checkInputs()
-          }
-          set needMoveForGravity(DD) {
-            this._needMoveForGravity = DD
-          }
-          get needMoveForGravity() {
-            return this._needMoveForGravity
-          }
-          _decideIfNeedsToMove() {
-            return this._needMoveForGravity || Math.abs(this.cameraDirection.x) > 0 || Math.abs(this.cameraDirection.y) > 0 || Math.abs(this.cameraDirection.z) > 0
-          }
-          _updatePosition() {
-            this.checkCollisions && this.Ul().collisionsEnabled ? this._collideWithWorld(this.cameraDirection) : super._updatePosition()
-          }
-          dispose() {
-            this.inputs.clear(), super.dispose()
-          }
-          getClassName() {
-            return "FreeCamera"
-          }
-        }, (() => {
-          const KD = "function" === typeof Symbol && Symbol.metadata ? Object.create(RD[Symbol.metadata] ?? null) : void 0;
-          zD = [(0, sD.B)()], wD = [(0, sD.B)()], LD = [(0, sD.C)()], cD = [(0, sD.C)()], (0, pD.i)(null, null, zD, {
-            kind: "field",
-            name: "ellipsoid",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "ellipsoid" in DD,
-              get: DD => DD.ellipsoid,
-              set: (DD, zD) => {
-                DD.ellipsoid = zD
-              }
-            },
-            metadata: KD
-          }, AD, UD), (0, pD.i)(null, null, wD, {
-            kind: "field",
-            name: "ellipsoidOffset",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "ellipsoidOffset" in DD,
-              get: DD => DD.ellipsoidOffset,
-              set: (DD, zD) => {
-                DD.ellipsoidOffset = zD
-              }
-            },
-            metadata: KD
-          }, fD, ID), (0, pD.i)(null, null, LD, {
-            kind: "field",
-            name: "checkCollisions",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "checkCollisions" in DD,
-              get: DD => DD.checkCollisions,
-              set: (DD, zD) => {
-                DD.checkCollisions = zD
-              }
-            },
-            metadata: KD
-          }, BD, GD), (0, pD.i)(null, null, cD, {
-            kind: "field",
-            name: "applyGravity",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "applyGravity" in DD,
-              get: DD => DD.applyGravity,
-              set: (DD, zD) => {
-                DD.applyGravity = zD
-              }
-            },
-            metadata: KD
-          }, hD, nD), KD && Object.defineProperty(DD, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
+      const op = new Uint8Array(ip);
+      return Op && op.set(new Uint8Array(Op)), op
+    }
+  },
+  40096: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Yp,
+      h: () => Dp,
+      k: () => Lp,
+      o: () => op
+    });
+    const Op = {};
+
+    function op(pp) {
+      if (!(arguments.length > 1 && void 0 !== arguments[1] && arguments[1]) || !Op[pp]) return Op[pp] = !0, `${pp} needs to be imported before as it contains a side-effect required by your code.`
+    }
+    const Ip = {};
+    let Sp = !1,
+      xp = 0;
+
+    function Lp(pp, ip) {
+      let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const Op = function() {
+        if ((cp || Sp) && 0 === xp) {
+          const cp = `${pp}.${ip}`;
+          Ip[cp] || (Ip[cp] = !0, console.warn(`[Babylon.js] ${cp}() requires a side-effect import. See: https://doc.babylonjs.com/setup/treeshaking`))
+        }
+      };
+      return Op.__isSideEffectStub = !0, Op
+    }
+
+    function Yp(pp) {
+      return !!pp && !pp.__isSideEffectStub
+    }
+
+    function Dp(pp, ip) {
+      return {
+        get() {},
+        set(pp) {
+          Object.defineProperty(this, ip, {
+            value: pp,
             writable: !0,
-            value: KD
+            configurable: !0,
+            enumerable: !0
           })
-        })(), DD
-      })(),
-      CD = !1;
-    CD || (CD = !0, (0, VD.i)("BABYLON.FreeCamera", PD))
+        },
+        configurable: !0,
+        enumerable: !0
+      }
+    }
+  },
+  40071: (pp, ip, cp) => {
+    function Op() {
+      return "undefined" !== typeof window
+    }
+
+    function op() {
+      return "undefined" !== typeof navigator
+    }
+
+    function Ip() {
+      return "undefined" !== typeof document
+    }
+
+    function Sp(pp) {
+      let ip = "",
+        cp = pp.firstChild;
+      for (; cp;) 3 === cp.nodeType && (ip += cp.textContent), cp = cp.nextSibling;
+      return ip
+    }
+    cp.d(ip, {
+      d: () => Sp,
+      f: () => Ip,
+      h: () => op,
+      j: () => Op
+    })
+  },
+  40266: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Op,
+      h: () => op,
+      i: () => Ip
+    });
+    class Op extends Error {}
+    Op._setPrototypeOf = Object.setPrototypeOf || ((pp, ip) => (pp.__proto__ = ip, pp));
+    const op = {
+      MeshInvalidPositionsError: 0,
+      UnsupportedTextureError: 1e3,
+      GLTFLoaderUnexpectedMagicError: 2e3,
+      SceneLoaderError: 3e3,
+      LoadFileError: 4e3,
+      RequestFileError: 4001,
+      ReadFileError: 4002
+    };
+    class Ip extends Op {
+      constructor(pp, ip, cp) {
+        super(pp), this.errorCode = ip, this.innerError = cp, this.name = "RuntimeError", Op._setPrototypeOf(this, Ip.prototype)
+      }
+    }
+  },
+  40257: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Xp,
+      c: () => Hp,
+      g: () => qp,
+      k: () => Cp,
+      l: () => mp,
+      p: () => jp,
+      r: () => kp,
+      u: () => Np,
+      v: () => Rp,
+      y: () => dp
+    });
+    var Op = cp(40261),
+      op = cp(40071),
+      Ip = cp(37349);
+    class Sp {}
+    Sp.FilesToLoad = {};
+    var xp = cp(40266),
+      Lp = cp(40269),
+      Yp = cp(37345),
+      Dp = cp(40088),
+      Ap = cp(40103),
+      Pp = cp(38905),
+      Wp = cp(40107),
+      yp = cp(40273);
+    const Up = new RegExp(/^data:([^,]+\/[^,]+)?;base64,/i);
+    class wp extends xp.i {
+      constructor(pp, ip) {
+        super(pp, xp.h.LoadFileError), this.name = "LoadFileError", xp.d._setPrototypeOf(this, wp.prototype), ip instanceof Op.e ? this.request = ip : this.file = ip
+      }
+    }
+    class vp extends xp.i {
+      constructor(pp, ip) {
+        super(pp, xp.h.RequestFileError), this.request = ip, this.name = "RequestFileError", xp.d._setPrototypeOf(this, vp.prototype)
+      }
+    }
+    class tp extends xp.i {
+      constructor(pp, ip) {
+        super(pp, xp.h.ReadFileError), this.file = ip, this.name = "ReadFileError", xp.d._setPrototypeOf(this, tp.prototype)
+      }
+    }
+    const Hp = {
+        DefaultRetryStrategy: class {
+          static ExponentialBackoff() {
+            let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 3,
+              ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500;
+            return (cp, Op, op) => 0 !== Op.status || op >= pp || -1 !== cp.indexOf("file:") ? -1 : Math.pow(2, op) * ip
+          }
+        }.ExponentialBackoff(),
+        BaseUrl: "",
+        CorsBehavior: "anonymous",
+        PreprocessUrl: pp => pp,
+        ScriptBaseUrl: "",
+        ScriptPreprocessUrl: pp => pp,
+        CleanUrl: pp => pp = pp.replace(/#/gm, "%23")
+      },
+      dp = (pp, ip) => {
+        if ((!pp || 0 !== pp.indexOf("data:")) && Hp.CorsBehavior)
+          if ("string" === typeof Hp.CorsBehavior || Hp.CorsBehavior instanceof String) ip.crossOrigin = Hp.CorsBehavior;
+          else {
+            const cp = Hp.CorsBehavior(pp);
+            cp && (ip.crossOrigin = cp)
+          }
+      },
+      ep = {
+        getRequiredSize: null
+      },
+      jp = function(pp, ip, cp, op) {
+        let Ip, xp = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : "",
+          Dp = arguments.length > 5 ? arguments[5] : void 0,
+          Ap = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Yp.e.LastCreatedEngine;
+        if ("undefined" === typeof HTMLImageElement && !Ap?._features.forceBitmapOverHTMLImageElement) return cp("LoadImage is only supported in web or BabylonNative environments."), null;
+        if (Ap?._features.forceBitmapOverHTMLImageElement && "string" !== typeof pp && "undefined" !== typeof Blob) {
+          let Op;
+          if (pp instanceof Blob) Op = pp;
+          else {
+            const ip = pp instanceof ArrayBuffer ? pp : (0, yp.i)(pp);
+            Op = new Blob([ip], {
+              type: xp
+            })
+          }
+          return Ap.createImageBitmap(Op, {
+            premultiplyAlpha: "none",
+            colorSpaceConversion: "none",
+            ...Dp
+          }).then(ip).catch((ip => {
+            cp && cp("Error while trying to load image: " + pp, ip)
+          })), null
+        }
+        let Pp = !1;
+        if (pp instanceof ArrayBuffer || ArrayBuffer.isView(pp))
+          if ("undefined" !== typeof Blob && "undefined" !== typeof URL) {
+            let ip;
+            ip = pp instanceof ArrayBuffer ? pp : (0, yp.i)(pp), Ip = URL.createObjectURL(new Blob([ip], {
+              type: xp
+            })), Pp = !0
+          } else Ip = `data:${xp};base64,` + (0, Lp.i)(pp);
+        else pp instanceof Blob ? (Ip = URL.createObjectURL(pp), Pp = !0) : (Ip = Hp.CleanUrl(pp), Ip = Hp.PreprocessUrl(Ip));
+        const Wp = ip => {
+          if (cp) {
+            const Op = Ip || pp.toString();
+            cp(`Error while trying to load image: ${0===Op.indexOf("http")||Op.length<=128?Op:Op.slice(0,128)+"..."}`, ip)
+          }
+        };
+        if (Ap?._features.forceBitmapOverHTMLImageElement) return mp(Ip, (Op => {
+          Ap.createImageBitmap(new Blob([Op], {
+            type: xp
+          }), {
+            premultiplyAlpha: "none",
+            colorSpaceConversion: "none",
+            ...Dp
+          }).then((pp => {
+            ip(pp), Pp && URL.revokeObjectURL(Ip)
+          })).catch((ip => {
+            cp && cp("Error while trying to load image: " + pp, ip)
+          }))
+        }), void 0, op || void 0, !0, ((pp, ip) => {
+          Wp(ip)
+        })), null;
+        const Up = new Image;
+        if (ep.getRequiredSize) {
+          const ip = ep.getRequiredSize(pp);
+          ip.width && (Up.width = ip.width), ip.height && (Up.height = ip.height)
+        }
+        dp(Ip, Up);
+        const wp = [],
+          vp = () => {
+            for (const pp of wp) pp.target.removeEventListener(pp.name, pp.handler);
+            wp.length = 0
+          };
+        wp.push({
+          target: Up,
+          name: "load",
+          handler: () => {
+            vp(), ip(Up), Pp && Up.src && URL.revokeObjectURL(Up.src)
+          }
+        }), wp.push({
+          target: Up,
+          name: "error",
+          handler: pp => {
+            vp(), Wp(pp), Pp && Up.src && URL.revokeObjectURL(Up.src)
+          }
+        }), wp.push({
+          target: document,
+          name: "securitypolicyviolation",
+          handler: pp => {
+            if (pp.blockedURI !== Up.src || "Yy" === pp.disposition) return;
+            vp();
+            const ip = new Error(`CSP violation of policy ${pp.effectiveDirective} ${pp.blockedURI}. Current policy is ${pp.originalPolicy}`);
+            Yp.e.UseFallbackTexture = !1, Wp(ip), Pp && Up.src && URL.revokeObjectURL(Up.src), Up.src = ""
+          }
+        }), (() => {
+          for (const pp of wp) pp.target.addEventListener(pp.name, pp.handler)
+        })();
+        const tp = "blob:" === Ip.substring(0, 5),
+          jp = "data:" === Ip.substring(0, 5),
+          kp = () => {
+            tp || jp || !Op.e.IsCustomRequestAvailable ? Up.src = Ip : mp(Ip, ((pp, ip, cp) => {
+              const Op = new Blob([pp], {
+                  type: !xp && cp ? cp : xp
+                }),
+                op = URL.createObjectURL(Op);
+              Pp = !0, Up.src = op
+            }), void 0, op || void 0, !0, ((pp, ip) => {
+              Wp(ip)
+            }))
+          },
+          Rp = () => {
+            op && op.loadImage(Ip, Up)
+          };
+        if (!tp && !jp && op && op.enableTexturesOffline) op.open(Rp, kp);
+        else {
+          if (-1 !== Ip.indexOf("file:")) {
+            const pp = decodeURIComponent(Ip.substring(5).toLowerCase());
+            if (Sp.FilesToLoad[pp] && "undefined" !== typeof URL) {
+              try {
+                let ip;
+                try {
+                  ip = URL.createObjectURL(Sp.FilesToLoad[pp])
+                } catch (qp) {
+                  ip = URL.createObjectURL(Sp.FilesToLoad[pp])
+                }
+                Up.src = ip, Pp = !0
+              } catch (Mp) {
+                Up.src = ""
+              }
+              return Up
+            }
+          }
+          kp()
+        }
+        return Up
+      },
+      kp = (pp, ip, cp, Op, op) => {
+        const Sp = new FileReader,
+          xp = {
+            onCompleteObservable: new Ip.d,
+            abort: () => Sp.abort()
+          };
+        return Sp.onloadend = () => xp.onCompleteObservable.notifyObservers(xp), op && (Sp.onerror = () => {
+          op(new tp(`Unable to read ${pp.name}`, pp))
+        }), Sp.onload = pp => {
+          ip(pp.target.result)
+        }, cp && (Sp.onprogress = cp), Op ? Sp.readAsArrayBuffer(pp) : Sp.readAsText(pp), xp
+      },
+      mp = (pp, ip, cp, Op, op, Lp, Yp) => {
+        if (pp.name) return kp(pp, ip, cp, op, Lp ? pp => {
+          Lp(void 0, pp)
+        } : void 0);
+        const Dp = pp;
+        if (-1 !== Dp.indexOf("file:")) {
+          let pp = decodeURIComponent(Dp.substring(5).toLowerCase());
+          0 === pp.indexOf("./") && (pp = pp.substring(2));
+          const Op = Sp.FilesToLoad[pp];
+          if (Op) return kp(Op, ip, cp, op, Lp ? pp => Lp(void 0, new wp(pp.message, pp.file)) : void 0)
+        }
+        const {
+          match: Ap,
+          type: yp
+        } = Ep(Dp);
+        if (Ap) {
+          const pp = {
+            onCompleteObservable: new Ip.d,
+            abort: () => () => {}
+          };
+          try {
+            const pp = op ? Xp(Dp) : lp(Dp);
+            ip(pp, void 0, yp)
+          } catch (xp) {
+            Lp ? Lp(void 0, xp) : Pp.e.Error(xp.message || "Failed to parse the Data URL")
+          }
+          return Wp.b.SetImmediate((() => {
+            pp.onCompleteObservable.notifyObservers(pp)
+          })), pp
+        }
+        return Rp(Dp, ((pp, cp) => {
+          ip(pp, cp?.responseURL, cp?.getResponseHeader("content-type"))
+        }), cp, Op, op, Lp ? pp => {
+          Lp(pp.request, new wp(pp.message, pp.request))
+        } : void 0, Yp)
+      },
+      Rp = (pp, ip, cp, Sp, xp, Lp, Dp) => {
+        null !== Sp && (Sp ?? (Sp = Yp.e.LastCreatedScene?.offlineProvider)), pp = Hp.CleanUrl(pp), pp = Hp.PreprocessUrl(pp);
+        const Ap = Hp.BaseUrl + pp;
+        let Wp = !1;
+        const yp = {
+            onCompleteObservable: new Ip.d,
+            abort: () => Wp = !0
+          },
+          Up = () => {
+            let pp, Ip = new Op.e,
+              Sp = null;
+            const Yp = () => {
+              Ip && (cp && Ip.removeEventListener("progress", cp), pp && Ip.removeEventListener("readystatechange", pp), Ip.removeEventListener("loadend", Up))
+            };
+            let Up = () => {
+              Yp(), yp.onCompleteObservable.notifyObservers(yp), yp.onCompleteObservable.clear(), cp = void 0, pp = null, Up = null, Lp = void 0, Dp = void 0, ip = void 0
+            };
+            yp.abort = () => {
+              Wp = !0, Up && Up(), Ip && Ip.readyState !== (XMLHttpRequest.DONE || 4) && Ip.abort(), null !== Sp && (clearTimeout(Sp), Sp = null), Ip = null
+            };
+            const wp = pp => {
+                const ip = pp.message || "Unknown error";
+                Lp && Ip ? Lp(new vp(ip, Ip)) : Pp.e.Error(ip)
+              },
+              tp = Pp => {
+                if (Ip) {
+                  if (Ip.open("GET", Ap), Dp) try {
+                    Dp(Ip)
+                  } catch (yp) {
+                    return void wp(yp)
+                  }
+                  xp && (Ip.responseType = "arraybuffer"), cp && Ip.addEventListener("progress", cp), Up && Ip.addEventListener("loadend", Up), pp = () => {
+                    if (!Wp && Ip && Ip.readyState === (XMLHttpRequest.DONE || 4)) {
+                      if (pp && Ip.removeEventListener("readystatechange", pp), Ip.status >= 200 && Ip.status < 300 || 0 === Ip.status && (!(0, op.j)() || Mp())) {
+                        const pp = xp ? Ip.response : Ip.responseText;
+                        if (null !== pp) {
+                          try {
+                            ip && ip(pp, Ip)
+                          } catch (yp) {
+                            wp(yp)
+                          }
+                          return
+                        }
+                      }
+                      const cp = Hp.DefaultRetryStrategy;
+                      if (cp) {
+                        const pp = cp(Ap, Ip, Pp);
+                        if (-1 !== pp) return Yp(), Ip = new Op.e, void(Sp = setTimeout((() => tp(Pp + 1)), pp))
+                      }
+                      const Dp = new vp("Error status: " + Ip.status + " " + Ip.statusText + " - Unable to load " + Ap, Ip);
+                      Lp && Lp(Dp)
+                    }
+                  }, Ip.addEventListener("readystatechange", pp), Ip.send()
+                }
+              };
+            tp(0)
+          };
+        if (Sp && Sp.enableSceneOffline && !pp.startsWith("blob:")) {
+          const Op = pp => {
+              pp && pp.status > 400 ? Lp && Lp(pp) : Up()
+            },
+            op = () => {
+              Sp && Sp.loadFile(Hp.BaseUrl + pp, (pp => {
+                !Wp && ip && ip(pp), yp.onCompleteObservable.notifyObservers(yp)
+              }), cp ? pp => {
+                !Wp && cp && cp(pp)
+              } : void 0, Op, xp)
+            };
+          Sp.open(op, Op)
+        } else Up();
+        return yp
+      },
+      qp = pp => {
+        const {
+          match: ip,
+          type: cp
+        } = Ep(pp);
+        if (ip) return cp || void 0;
+        const Op = pp.lastIndexOf(".");
+        switch (pp.substring(Op + 1).toLowerCase()) {
+          case "glb":
+            return "model/gltf-binary";
+          case "bin":
+            return "application/octet-stream";
+          case "sE":
+            return "model/gltf+json";
+          case "jpg":
+          case "jpeg":
+            return "image/jpeg";
+          case "png":
+            return "image/png";
+          case "webp":
+            return "image/webp";
+          case "ktx":
+            return "image/ktx";
+          case "ktx2":
+            return "image/ktx2";
+          case "avif":
+            return "image/avif";
+          default:
+            return
+        }
+      },
+      Mp = () => "undefined" !== typeof location && "file:" === location.protocol,
+      Cp = pp => Up.test(pp),
+      Ep = pp => {
+        const ip = Up.exec(pp);
+        if (null === ip || 0 === ip.length) return {
+          match: !1,
+          type: ""
+        };
+        return {
+          match: !0,
+          type: ip[0].replace("data:", "").replace(";base64,", "")
+        }
+      };
+
+    function Xp(pp) {
+      return (0, Lp.c)(pp.split(",")[1])
+    }
+    const lp = pp => (0, Lp.e)(pp.split(",")[1]);
+    let Qp;
+    const Jp = (pp, ip, cp, Op, op, Ip, Sp, xp, Lp, Yp) => {
+      Qp = {
+        DecodeBase64UrlToBinary: pp,
+        DecodeBase64UrlToString: ip,
+        DefaultRetryStrategy: cp.DefaultRetryStrategy,
+        BaseUrl: cp.BaseUrl,
+        CorsBehavior: cp.CorsBehavior,
+        PreprocessUrl: cp.PreprocessUrl,
+        IsBase64DataUrl: Op,
+        IsFileURL: op,
+        LoadFile: Ip,
+        LoadImage: Sp,
+        ReadFile: xp,
+        RequestFile: Lp,
+        SetCorsBehavior: Yp
+      }, Object.defineProperty(Qp, "DefaultRetryStrategy", {
+        get: function() {
+          return cp.DefaultRetryStrategy
+        },
+        set: function(pp) {
+          cp.DefaultRetryStrategy = pp
+        }
+      }), Object.defineProperty(Qp, "BaseUrl", {
+        get: function() {
+          return cp.BaseUrl
+        },
+        set: function(pp) {
+          cp.BaseUrl = pp
+        }
+      }), Object.defineProperty(Qp, "PreprocessUrl", {
+        get: function() {
+          return cp.PreprocessUrl
+        },
+        set: function(pp) {
+          cp.PreprocessUrl = pp
+        }
+      }), Object.defineProperty(Qp, "CorsBehavior", {
+        get: function() {
+          return cp.CorsBehavior
+        },
+        set: function(pp) {
+          cp.CorsBehavior = pp
+        }
+      })
+    };
+    let Bp = !1;
+
+    function Np() {
+      Bp || (Bp = !0, Jp(Xp, lp, Hp, Cp, Mp, mp, jp, kp, Rp, dp), Dp.c.loadFile = mp, Dp.c.loadImage = jp, Ap.k.loadFile = mp)
+    }
+  },
+  40276: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => xp,
+      f: () => Ip,
+      h: () => Sp
+    });
+    let Op = null;
+
+    function op() {
+      if (Op) return Op;
+      const pp = new ArrayBuffer(4),
+        ip = new Float32Array(pp),
+        cp = new Uint32Array(pp),
+        op = new Uint32Array(512),
+        Ip = new Uint32Array(512);
+      for (let Op = 0; Op < 256; ++Op) {
+        const pp = Op - 127;
+        pp < -24 ? (op[Op] = 0, op[256 | Op] = 32768, Ip[Op] = 24, Ip[256 | Op] = 24) : pp < -14 ? (op[Op] = 1024 >> -pp - 14, op[256 | Op] = 1024 >> -pp - 14 | 32768, Ip[Op] = -pp - 1, Ip[256 | Op] = -pp - 1) : pp <= 15 ? (op[Op] = pp + 15 << 10, op[256 | Op] = pp + 15 << 10 | 32768, Ip[Op] = 13, Ip[256 | Op] = 13) : pp < 128 ? (op[Op] = 31744, op[256 | Op] = 64512, Ip[Op] = 24, Ip[256 | Op] = 24) : (op[Op] = 31744, op[256 | Op] = 64512, Ip[Op] = 13, Ip[256 | Op] = 13)
+      }
+      const Sp = new Uint32Array(2048),
+        xp = new Uint32Array(64),
+        Lp = new Uint32Array(64);
+      for (let Op = 1; Op < 1024; ++Op) {
+        let pp = Op << 13,
+          ip = 0;
+        for (; 0 === (8388608 & pp);) pp <<= 1, ip -= 8388608;
+        pp &= -8388609, ip += 947912704, Sp[Op] = pp | ip
+      }
+      for (let Op = 1024; Op < 2048; ++Op) Sp[Op] = 939524096 + (Op - 1024 << 13);
+      for (let Op = 1; Op < 31; ++Op) xp[Op] = Op << 23;
+      xp[31] = 1199570944, xp[32] = 2147483648;
+      for (let Op = 33; Op < 63; ++Op) xp[Op] = 2147483648 + (Op - 32 << 23);
+      xp[63] = 3347054592;
+      for (let Op = 1; Op < 64; ++Op) 32 !== Op && (Lp[Op] = 1024);
+      return Op = {
+        floatView: ip,
+        uint32View: cp,
+        baseTable: op,
+        shiftTable: Ip,
+        mantissaTable: Sp,
+        exponentTable: xp,
+        offsetTable: Lp
+      }, Op
+    }
+    const Ip = 65504;
+
+    function Sp(pp) {
+      const ip = op();
+      ip.floatView[0] = pp;
+      const cp = ip.uint32View[0],
+        Op = cp >> 23 & 511;
+      return ip.baseTable[Op] + ((8388607 & cp) >> ip.shiftTable[Op])
+    }
+
+    function xp(pp) {
+      const ip = op();
+      return ip.uint32View[0] = ip.mantissaTable[ip.offsetTable[pp >> 10] + (1023 & pp)] + ip.exponentTable[pp >> 10], ip.floatView[0]
+    }
+  },
+  40269: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Ip,
+      e: () => op,
+      i: () => Op
+    });
+    const Op = pp => {
+        const ip = ArrayBuffer.isView(pp) ? new Uint8Array(pp.buffer, pp.byteOffset, pp.byteLength) : new Uint8Array(pp);
+        return "function" === typeof ip.toBase64 ? ip.toBase64() : function(pp) {
+          const ip = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+          let cp, Op, op, Ip, Sp, xp, Lp, Yp = "",
+            Dp = 0;
+          for (; Dp < pp.length;) cp = pp[Dp++], Op = Dp < pp.length ? pp[Dp++] : Number.NaN, op = Dp < pp.length ? pp[Dp++] : Number.NaN, Ip = cp >> 2, Sp = (3 & cp) << 4 | Op >> 4, xp = (15 & Op) << 2 | op >> 6, Lp = 63 & op, isNaN(Op) ? xp = Lp = 64 : isNaN(op) && (Lp = 64), Yp += ip.charAt(Ip) + ip.charAt(Sp) + ip.charAt(xp) + ip.charAt(Lp);
+          return Yp
+        }(ip)
+      },
+      op = pp => atob(pp),
+      Ip = pp => "function" === typeof Uint8Array.fromBase64 ? Uint8Array.fromBase64(pp).buffer : function(pp) {
+        const ip = op(pp),
+          cp = ip.length,
+          Op = new Uint8Array(new ArrayBuffer(cp));
+        for (let op = 0; op < cp; op++) Op[op] = ip.charCodeAt(op);
+        return Op.buffer
+      }(pp)
+  },
+  40107: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => op,
+      c: () => Sp
+    });
+    let Op = [];
+    class op {
+      static SetImmediate(pp) {
+        0 === Op.length && setTimeout((() => {
+          const pp = Op;
+          Op = [];
+          for (const ip of pp) ip()
+        }), 1), Op.push(pp)
+      }
+    }
+
+    function Ip(pp, ip, cp) {
+      try {
+        if (pp()) return ip(), !0
+      } catch (Op) {
+        return cp?.(Op), !0
+      }
+      return !1
+    }
+    const Sp = function(pp, ip, cp) {
+      let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 16,
+        op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 3e4,
+        Sp = arguments.length > 6 ? arguments[6] : void 0;
+      if ((!(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5]) && Ip(pp, ip, cp)) return null;
+      const xp = setInterval((() => {
+        Ip(pp, ip, cp) ? clearInterval(xp) : (op -= Op, op < 0 && (clearInterval(xp), cp?.(new Error("Operation timed out after maximum retries. " + (Sp || "")), !0)))
+      }), Op);
+      return () => clearInterval(xp)
+    }
+  },
+  40261: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Op
+    });
+    class Op {
+      constructor() {
+        this._xhr = "undefined" !== typeof _native && _native.XMLHttpRequest ? new _native.XMLHttpRequest : new XMLHttpRequest, this._requestURL = ""
+      }
+      static get IsCustomRequestAvailable() {
+        return Object.keys(Op.CustomRequestHeaders).length > 0 || Op.CustomRequestModifiers.length > 0
+      }
+      static _CleanUrl(pp) {
+        return pp = (pp = pp.replace("file:http:", "http:")).replace("file:https:", "https:")
+      }
+      static _ShouldSkipRequestModifications(pp) {
+        return Op.SkipRequestModificationForBabylonCDN && (pp.includes("preview.babylonjs.com") || pp.includes("cdn.babylonjs.com"))
+      }
+      static _CollectCustomizations(pp) {
+        const ip = {
+          ...arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}
+        };
+        if (Op._ShouldSkipRequestModifications(pp)) return {
+          url: pp,
+          headers: ip
+        };
+        for (const op in Op.CustomRequestHeaders) {
+          const pp = Op.CustomRequestHeaders[op];
+          pp && (ip[op] = pp)
+        }
+        const cp = {
+          setRequestHeader: (pp, cp) => {
+            ip[pp] = cp
+          }
+        };
+        for (const op of Op.CustomRequestModifiers) {
+          if (Op._ShouldSkipRequestModifications(pp)) break;
+          const ip = op(cp, pp);
+          "string" === typeof ip && (pp = ip)
+        }
+        return {
+          url: pp,
+          headers: ip
+        }
+      }
+      static async FetchAsync(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const cp = ip.method ?? "GET";
+        if ("undefined" !== typeof fetch) {
+          const {
+            url: op,
+            headers: Ip
+          } = Op._CollectCustomizations(Op._CleanUrl(pp), ip.headers ?? {});
+          return await fetch(op, {
+            method: cp,
+            headers: Ip,
+            body: ip.body ?? void 0
+          })
+        }
+        return await new Promise(((op, Ip) => {
+          const Sp = new Op;
+          Sp.responseType = "arraybuffer", Sp.addEventListener("readystatechange", (() => {
+            if (4 === Sp.readyState)
+              if (Sp.status >= 200 && Sp.status < 300) {
+                const pp = "undefined" !== typeof Headers ? new Headers : void 0,
+                  ip = Sp.getResponseHeader("Content-Type");
+                ip && pp && pp.set("Content-Type", ip), "undefined" !== typeof Response ? op(new Response(Sp.response, {
+                  status: Sp.status,
+                  statusText: Sp.statusText,
+                  headers: pp
+                })) : op({
+                  ok: !0,
+                  status: Sp.status,
+                  statusText: Sp.statusText,
+                  headers: {
+                    get: pp => Sp.getResponseHeader(pp)
+                  },
+                  arrayBuffer: async () => await Promise.resolve(Sp.response)
+                })
+              } else Ip(new Error(`HTTP ${Sp.status} loading '${Sp.requestURL}': ${Sp.statusText}`))
+          })), Sp.open(cp, pp, ip.headers), Sp.send(ip.body ?? null)
+        }))
+      }
+      get requestURL() {
+        return this._requestURL
+      }
+      get onprogress() {
+        return this._xhr.onprogress
+      }
+      set onprogress(pp) {
+        this._xhr.onprogress = pp
+      }
+      get readyState() {
+        return this._xhr.readyState
+      }
+      get status() {
+        return this._xhr.status
+      }
+      get statusText() {
+        return this._xhr.statusText
+      }
+      get response() {
+        return this._xhr.response
+      }
+      get responseURL() {
+        return this._xhr.responseURL
+      }
+      get responseText() {
+        return this._xhr.responseText
+      }
+      get responseType() {
+        return this._xhr.responseType
+      }
+      set responseType(pp) {
+        this._xhr.responseType = pp
+      }
+      get timeout() {
+        return this._xhr.timeout
+      }
+      set timeout(pp) {
+        this._xhr.timeout = pp
+      }
+      addEventListener(pp, ip, cp) {
+        this._xhr.addEventListener(pp, ip, cp)
+      }
+      removeEventListener(pp, ip, cp) {
+        this._xhr.removeEventListener(pp, ip, cp)
+      }
+      abort() {
+        this._xhr.abort()
+      }
+      send(pp) {
+        this._xhr.send(pp)
+      }
+      open(pp, ip, cp) {
+        const {
+          url: op,
+          headers: Ip
+        } = Op._CollectCustomizations(ip, cp);
+        this._requestURL = Op._CleanUrl(op), this._xhr.open(pp, this._requestURL, !0);
+        for (const Op in Ip) this._xhr.setRequestHeader(Op, Ip[Op])
+      }
+      setRequestHeader(pp, ip) {
+        this._xhr.setRequestHeader(pp, ip)
+      }
+      getResponseHeader(pp) {
+        return this._xhr.getResponseHeader(pp)
+      }
+    }
+    Op.CustomRequestHeaders = {}, Op.CustomRequestModifiers = new Array, Op.SkipRequestModificationForBabylonCDN = !0
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

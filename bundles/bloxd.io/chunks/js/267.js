@@ -1,1043 +1,369 @@
-/*! For license information please see tz47m9.267.09b90d97.chunk.js.LICENSE.txt */
 export const id = 267;
 export const ids = [267];
 export const modules = {
-  40450: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      getAnalytics: () => uz,
-      getGoogleAnalyticsClientId: () => Yz,
-      initializeAnalytics: () => vz,
-      isSupported: () => tz,
-      logEvent: () => ww,
-      setAnalyticsCollectionEnabled: () => Dw,
-      setConsent: () => pw,
-      setCurrentScreen: () => Fz,
-      setDefaultEventParameters: () => zw,
-      setUserId: () => Hz,
-      setUserProperties: () => qz,
-      settings: () => oz
+  41851: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Op
     });
-    var pD = wD(40430),
-      sD = wD(40446),
-      KD = wD(40442),
-      rD = wD(40435);
-    let LD, cD;
-    const gD = new WeakMap,
-      RD = new WeakMap,
-      AD = new WeakMap,
-      UD = new WeakMap,
-      fD = new WeakMap;
-    let ID = {
-      get(DD, zD, wD) {
-        if (DD instanceof IDBTransaction) {
-          if ("done" === zD) return RD.get(DD);
-          if ("objectStoreNames" === zD) return DD.objectStoreNames || AD.get(DD);
-          if ("store" === zD) return wD.objectStoreNames[1] ? void 0 : wD.objectStore(wD.objectStoreNames[0])
+    class Op {}
+    Op.AUTOSAMPLERSUFFIX = "Sampler", Op.DISABLEUA = "#define DISABLE_UNIFORMITY_ANALYSIS", Op.ALPHA_DISABLE = 0, Op.ALPHA_ADD = 1, Op.ALPHA_COMBINE = 2, Op.ALPHA_SUBTRACT = 3, Op.ALPHA_MULTIPLY = 4, Op.ALPHA_MAXIMIZED = 5, Op.ALPHA_ONEONE = 6, Op.ALPHA_PREMULTIPLIED = 7, Op.ALPHA_PREMULTIPLIED_PORTERDUFF = 8, Op.ALPHA_INTERPOLATE = 9, Op.ALPHA_SCREENMODE = 10, Op.ALPHA_ONEONE_ONEONE = 11, Op.ALPHA_ALPHATOCOLOR = 12, Op.ALPHA_REVERSEONEMINUS = 13, Op.ALPHA_SRC_DSTONEMINUSSRCALPHA = 14, Op.ALPHA_ONEONE_ONEZERO = 15, Op.ALPHA_EXCLUSION = 16, Op.ALPHA_LAYER_ACCUMULATE = 17, Op.ALPHA_MIN = 18, Op.ALPHA_MAX = 19, Op.ALPHA_DUAL_SRC0_ADD_SRC1xDST = 20, Op.ALPHA_REPLACE_COLOR = 21, Op.ALPHA_EQUATION_ADD = 0, Op.ALPHA_EQUATION_SUBSTRACT = 1, Op.ALPHA_EQUATION_REVERSE_SUBTRACT = 2, Op.ALPHA_EQUATION_MAX = 3, Op.ALPHA_EQUATION_MIN = 4, Op.ALPHA_EQUATION_DARKEN = 5, Op.DELAYLOADSTATE_NONE = 0, Op.DELAYLOADSTATE_LOADED = 1, Op.DELAYLOADSTATE_LOADING = 2, Op.DELAYLOADSTATE_NOTLOADED = 4, Op.NEVER = 512, Op.ALWAYS = 519, Op.LESS = 513, Op.EQUAL = 514, Op.LEQUAL = 515, Op.GREATER = 516, Op.GEQUAL = 518, Op.NOTEQUAL = 517, Op.KEEP = 7680, Op.ZERO = 0, Op.REPLACE = 7681, Op.INCR = 7682, Op.DECR = 7683, Op.INVERT = 5386, Op.INCR_WRAP = 34055, Op.DECR_WRAP = 34056, Op.TEXTURE_CLAMP_ADDRESSMODE = 0, Op.TEXTURE_WRAP_ADDRESSMODE = 1, Op.TEXTURE_MIRROR_ADDRESSMODE = 2, Op.TEXTURE_REPETITION_NONE = 0, Op.TEXTURE_REPETITION_NOISE_BLEND = 1, Op.TEXTURE_REPETITION_HEX_TILING = 2, Op.TEXTURE_REPETITION_TILE_RANDOMIZATION = 3, Op.TEXTURE_REPETITION_VORONOI_BOMBING = 4, Op.TEXTURE_CREATIONFLAG_STORAGE = 1, Op.TEXTUREFORMAT_ALPHA = 0, Op.TEXTUREFORMAT_LUMINANCE = 1, Op.TEXTUREFORMAT_LUMINANCE_ALPHA = 2, Op.TEXTUREFORMAT_RGB = 4, Op.TEXTUREFORMAT_RGBA = 5, Op.TEXTUREFORMAT_RED = 6, Op.TEXTUREFORMAT_R = 6, Op.TEXTUREFORMAT_R16_UNORM = 33322, Op.TEXTUREFORMAT_RG16_UNORM = 33324, Op.TEXTUREFORMAT_RGB16_UNORM = 32852, Op.TEXTUREFORMAT_RGBA16_UNORM = 32859, Op.TEXTUREFORMAT_R16_SNORM = 36760, Op.TEXTUREFORMAT_RG16_SNORM = 36761, Op.TEXTUREFORMAT_RGB16_SNORM = 36762, Op.TEXTUREFORMAT_RGBA16_SNORM = 36763, Op.TEXTUREFORMAT_RG = 7, Op.TEXTUREFORMAT_RED_INTEGER = 8, Op.TEXTUREFORMAT_R_INTEGER = 8, Op.TEXTUREFORMAT_RG_INTEGER = 9, Op.TEXTUREFORMAT_RGB_INTEGER = 10, Op.TEXTUREFORMAT_RGBA_INTEGER = 11, Op.TEXTUREFORMAT_BGRA = 12, Op.TEXTUREFORMAT_DEPTH24_STENCIL8 = 13, Op.TEXTUREFORMAT_DEPTH32_FLOAT = 14, Op.TEXTUREFORMAT_DEPTH16 = 15, Op.TEXTUREFORMAT_DEPTH24 = 16, Op.TEXTUREFORMAT_DEPTH24UNORM_STENCIL8 = 17, Op.TEXTUREFORMAT_DEPTH32FLOAT_STENCIL8 = 18, Op.TEXTUREFORMAT_STENCIL8 = 19, Op.TEXTUREFORMAT_UNDEFINED = 4294967295, Op.TEXTUREFORMAT_COMPRESSED_RGBA_BPTC_UNORM = 36492, Op.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_BPTC_UNORM = 36493, Op.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_UNSIGNED_FLOAT = 36495, Op.TEXTUREFORMAT_COMPRESSED_RGB_BPTC_SIGNED_FLOAT = 36494, Op.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT5 = 33779, Op.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT5_EXT = 35919, Op.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT3 = 33778, Op.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT3_EXT = 35918, Op.TEXTUREFORMAT_COMPRESSED_RGBA_S3TC_DXT1 = 33777, Op.TEXTUREFORMAT_COMPRESSED_RGB_S3TC_DXT1 = 33776, Op.TEXTUREFORMAT_COMPRESSED_SRGB_ALPHA_S3TC_DXT1_EXT = 35917, Op.TEXTUREFORMAT_COMPRESSED_SRGB_S3TC_DXT1_EXT = 35916, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_4x4 = 37808, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x4 = 37809, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_5x5 = 37810, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x5 = 37811, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_6x6 = 37812, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x5 = 37813, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x6 = 37814, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_8x8 = 37815, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x5 = 37816, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x6 = 37817, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x8 = 37818, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_10x10 = 37819, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x10 = 37820, Op.TEXTUREFORMAT_COMPRESSED_RGBA_ASTC_12x12 = 37821, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_4x4_KHR = 37840, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x4_KHR = 37841, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_5x5_KHR = 37842, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x5_KHR = 37843, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_6x6_KHR = 37844, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x5_KHR = 37845, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x6_KHR = 37846, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_8x8_KHR = 37847, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x5_KHR = 37848, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x6_KHR = 37849, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x8_KHR = 37850, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_10x10_KHR = 37851, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x10_KHR = 37852, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ASTC_12x12_KHR = 37853, Op.TEXTUREFORMAT_COMPRESSED_RGB_ETC1_WEBGL = 36196, Op.TEXTUREFORMAT_COMPRESSED_RGB8_ETC2 = 37492, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ETC2 = 37493, Op.TEXTUREFORMAT_COMPRESSED_RGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37494, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_PUNCHTHROUGH_ALPHA1_ETC2 = 37495, Op.TEXTUREFORMAT_COMPRESSED_RGBA8_ETC2_EAC = 37496, Op.TEXTUREFORMAT_COMPRESSED_SRGB8_ALPHA8_ETC2_EAC = 37497, Op.TEXTURETYPE_UNSIGNED_BYTE = 0, Op.TEXTURETYPE_UNSIGNED_INT = 0, Op.TEXTURETYPE_FLOAT = 1, Op.TEXTURETYPE_HALF_FLOAT = 2, Op.TEXTURETYPE_BYTE = 3, Op.TEXTURETYPE_SHORT = 4, Op.TEXTURETYPE_UNSIGNED_SHORT = 5, Op.TEXTURETYPE_INT = 6, Op.TEXTURETYPE_UNSIGNED_INTEGER = 7, Op.TEXTURETYPE_UNSIGNED_SHORT_4_4_4_4 = 8, Op.TEXTURETYPE_UNSIGNED_SHORT_5_5_5_1 = 9, Op.TEXTURETYPE_UNSIGNED_SHORT_5_6_5 = 10, Op.TEXTURETYPE_UNSIGNED_INT_2_10_10_10_REV = 11, Op.TEXTURETYPE_UNSIGNED_INT_24_8 = 12, Op.TEXTURETYPE_UNSIGNED_INT_10F_11F_11F_REV = 13, Op.TEXTURETYPE_UNSIGNED_INT_5_9_9_9_REV = 14, Op.TEXTURETYPE_FLOAT_32_UNSIGNED_INT_24_8_REV = 15, Op.TEXTURETYPE_UNDEFINED = 16, Op.TEXTURE_2D = 3553, Op.TEXTURE_2D_ARRAY = 35866, Op.TEXTURE_CUBE_MAP = 34067, Op.TEXTURE_CUBE_MAP_ARRAY = 3735928559, Op.TEXTURE_3D = 32879, Op.TEXTURE_NEAREST_SAMPLINGMODE = 1, Op.TEXTURE_NEAREST_NEAREST = 1, Op.TEXTURE_BILINEAR_SAMPLINGMODE = 2, Op.TEXTURE_LINEAR_LINEAR = 2, Op.TEXTURE_TRILINEAR_SAMPLINGMODE = 3, Op.TEXTURE_LINEAR_LINEAR_MIPLINEAR = 3, Op.TEXTURE_NEAREST_NEAREST_MIPNEAREST = 4, Op.TEXTURE_NEAREST_LINEAR_MIPNEAREST = 5, Op.TEXTURE_NEAREST_LINEAR_MIPLINEAR = 6, Op.TEXTURE_NEAREST_LINEAR = 7, Op.TEXTURE_NEAREST_NEAREST_MIPLINEAR = 8, Op.TEXTURE_LINEAR_NEAREST_MIPNEAREST = 9, Op.TEXTURE_LINEAR_NEAREST_MIPLINEAR = 10, Op.TEXTURE_LINEAR_LINEAR_MIPNEAREST = 11, Op.TEXTURE_LINEAR_NEAREST = 12, Op.TEXTURE_EXPLICIT_MODE = 0, Op.TEXTURE_SPHERICAL_MODE = 1, Op.TEXTURE_PLANAR_MODE = 2, Op.TEXTURE_CUBIC_MODE = 3, Op.TEXTURE_PROJECTION_MODE = 4, Op.TEXTURE_SKYBOX_MODE = 5, Op.TEXTURE_INVCUBIC_MODE = 6, Op.TEXTURE_EQUIRECTANGULAR_MODE = 7, Op.TEXTURE_FIXED_EQUIRECTANGULAR_MODE = 8, Op.TEXTURE_FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, Op.TEXTURE_FILTERING_QUALITY_OFFLINE = 4096, Op.TEXTURE_FILTERING_QUALITY_HIGH = 64, Op.TEXTURE_FILTERING_QUALITY_MEDIUM = 16, Op.TEXTURE_FILTERING_QUALITY_LOW = 8, Op.SCALEMODE_FLOOR = 1, Op.SCALEMODE_NEAREST = 2, Op.SCALEMODE_CEILING = 3, Op.MATERIAL_TextureDirtyFlag = 1, Op.MATERIAL_LightDirtyFlag = 2, Op.MATERIAL_FresnelDirtyFlag = 4, Op.MATERIAL_AttributesDirtyFlag = 8, Op.MATERIAL_MiscDirtyFlag = 16, Op.MATERIAL_PrePassDirtyFlag = 32, Op.MATERIAL_ImageProcessingDirtyFlag = 64, Op.MATERIAL_AllDirtyFlag = 127, Op.MATERIAL_TriangleFillMode = 0, Op.MATERIAL_WireFrameFillMode = 1, Op.MATERIAL_PointFillMode = 2, Op.MATERIAL_PointListDrawMode = 3, Op.MATERIAL_LineListDrawMode = 4, Op.MATERIAL_LineLoopDrawMode = 5, Op.MATERIAL_LineStripDrawMode = 6, Op.MATERIAL_TriangleStripDrawMode = 7, Op.MATERIAL_TriangleFanDrawMode = 8, Op.MATERIAL_ClockWiseSideOrientation = 0, Op.MATERIAL_CounterClockWiseSideOrientation = 1, Op.MATERIAL_DIFFUSE_MODEL_E_OREN_NAYAR = 0, Op.MATERIAL_DIFFUSE_MODEL_BURLEY = 1, Op.MATERIAL_DIFFUSE_MODEL_LAMBERT = 2, Op.MATERIAL_DIFFUSE_MODEL_LEGACY = 3, Op.MATERIAL_DIELECTRIC_SPECULAR_MODEL_GLTF = 0, Op.MATERIAL_DIELECTRIC_SPECULAR_MODEL_OPENPBR = 1, Op.MATERIAL_CONDUCTOR_SPECULAR_MODEL_GLTF = 0, Op.MATERIAL_CONDUCTOR_SPECULAR_MODEL_OPENPBR = 1, Op.ACTION_NothingTrigger = 0, Op.ACTION_OnPickTrigger = 1, Op.ACTION_OnLeftPickTrigger = 2, Op.ACTION_OnRightPickTrigger = 3, Op.ACTION_OnCenterPickTrigger = 4, Op.ACTION_OnPickDownTrigger = 5, Op.ACTION_OnDoublePickTrigger = 6, Op.ACTION_OnPickUpTrigger = 7, Op.ACTION_OnPickOutTrigger = 16, Op.ACTION_OnLongPressTrigger = 8, Op.ACTION_OnPointerOverTrigger = 9, Op.ACTION_OnPointerOutTrigger = 10, Op.ACTION_OnEveryFrameTrigger = 11, Op.ACTION_OnIntersectionEnterTrigger = 12, Op.ACTION_OnIntersectionExitTrigger = 13, Op.ACTION_OnKeyDownTrigger = 14, Op.ACTION_OnKeyUpTrigger = 15, Op.PARTICLES_BILLBOARDMODE_Y = 2, Op.PARTICLES_BILLBOARDMODE_ALL = 7, Op.PARTICLES_BILLBOARDMODE_STRETCHED = 8, Op.PARTICLES_BILLBOARDMODE_STRETCHED_LOCAL = 9, Op.MESHES_CULLINGSTRATEGY_STANDARD = 0, Op.MESHES_CULLINGSTRATEGY_BOUNDINGSPHERE_ONLY = 1, Op.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION = 2, Op.MESHES_CULLINGSTRATEGY_OPTIMISTIC_INCLUSION_THEN_BSPHERE_ONLY = 3, Op.SCENELOADER_NO_LOGGING = 0, Op.SCENELOADER_MINIMAL_LOGGING = 1, Op.SCENELOADER_SUMMARY_LOGGING = 2, Op.SCENELOADER_DETAILED_LOGGING = 3, Op.PREPASS_IRRADIANCE_LEGACY_TEXTURE_TYPE = 0, Op.PREPASS_POSITION_TEXTURE_TYPE = 1, Op.PREPASS_VELOCITY_TEXTURE_TYPE = 2, Op.PREPASS_REFLECTIVITY_TEXTURE_TYPE = 3, Op.PREPASS_COLOR_TEXTURE_TYPE = 4, Op.PREPASS_DEPTH_TEXTURE_TYPE = 5, Op.PREPASS_NORMAL_TEXTURE_TYPE = 6, Op.PREPASS_ALBEDO_SQRT_TEXTURE_TYPE = 7, Op.PREPASS_WORLD_NORMAL_TEXTURE_TYPE = 8, Op.PREPASS_LOCAL_POSITION_TEXTURE_TYPE = 9, Op.PREPASS_SCREENSPACE_DEPTH_TEXTURE_TYPE = 10, Op.PREPASS_VELOCITY_LINEAR_TEXTURE_TYPE = 11, Op.PREPASS_ALBEDO_TEXTURE_TYPE = 12, Op.PREPASS_NORMALIZED_VIEW_DEPTH_TEXTURE_TYPE = 13, Op.PREPASS_IRRADIANCE_TEXTURE_TYPE = 14, Op.PREPASS_OBJECT_ID_TEXTURE_TYPE = 15, Op.PREPASS_MESH_BLEND_TAG_TEXTURE_TYPE = 16, Op.BUFFER_CREATIONFLAG_READ = 1, Op.BUFFER_CREATIONFLAG_WRITE = 2, Op.BUFFER_CREATIONFLAG_READWRITE = 3, Op.BUFFER_CREATIONFLAG_UNIFORM = 4, Op.BUFFER_CREATIONFLAG_VERTEX = 8, Op.BUFFER_CREATIONFLAG_INDEX = 16, Op.BUFFER_CREATIONFLAG_STORAGE = 32, Op.BUFFER_CREATIONFLAG_INDIRECT = 64, Op.RENDERPASS_MAIN = 0, Op.INPUT_ALT_KEY = 18, Op.INPUT_CTRL_KEY = 17, Op.INPUT_META_KEY1 = 91, Op.INPUT_META_KEY2 = 92, Op.INPUT_META_KEY3 = 93, Op.INPUT_SHIFT_KEY = 16, Op.SNAPSHOTRENDERING_STANDARD = 0, Op.SNAPSHOTRENDERING_FAST = 1, Op.PERSPECTIVE_CAMERA = 0, Op.ORTHOGRAPHIC_CAMERA = 1, Op.FOVMODE_VERTICAL_FIXED = 0, Op.FOVMODE_HORIZONTAL_FIXED = 1, Op.RIG_MODE_NONE = 0, Op.RIG_MODE_STEREOSCOPIC_ANAGLYPH = 10, Op.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL = 11, Op.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED = 12, Op.RIG_MODE_STEREOSCOPIC_OVERUNDER = 13, Op.RIG_MODE_STEREOSCOPIC_INTERLACED = 14, Op.RIG_MODE_VR = 20, Op.RIG_MODE_CUSTOM = 22, Op.MAX_SUPPORTED_UV_SETS = 6, Op.GL_ALPHA_EQUATION_ADD = 32774, Op.GL_ALPHA_EQUATION_MIN = 32775, Op.GL_ALPHA_EQUATION_MAX = 32776, Op.GL_ALPHA_EQUATION_SUBTRACT = 32778, Op.GL_ALPHA_EQUATION_REVERSE_SUBTRACT = 32779, Op.GL_ALPHA_FUNCTION_SRC = 768, Op.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_COLOR = 769, Op.GL_ALPHA_FUNCTION_SRC_ALPHA = 770, Op.GL_ALPHA_FUNCTION_ONE_MINUS_SRC_ALPHA = 771, Op.GL_ALPHA_FUNCTION_DST_ALPHA = 772, Op.GL_ALPHA_FUNCTION_ONE_MINUS_DST_ALPHA = 773, Op.GL_ALPHA_FUNCTION_DST_COLOR = 774, Op.GL_ALPHA_FUNCTION_ONE_MINUS_DST_COLOR = 775, Op.GL_ALPHA_FUNCTION_SRC_ALPHA_SATURATED = 776, Op.GL_ALPHA_FUNCTION_CONSTANT_COLOR = 32769, Op.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_COLOR = 32770, Op.GL_ALPHA_FUNCTION_CONSTANT_ALPHA = 32771, Op.GL_ALPHA_FUNCTION_ONE_MINUS_CONSTANT_ALPHA = 32772, Op.GL_ALPHA_FUNCTION_SRC1_COLOR = 35065, Op.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_COLOR = 35066, Op.GL_ALPHA_FUNCTION_SRC1_ALPHA = 34185, Op.GL_ALPHA_FUNCTION_ONE_MINUS_SRC1_ALPHA = 35067, Op.SnippetUrl = "https://snippet.babylonjs.com", Op.FOGMODE_NONE = 0, Op.FOGMODE_EXP = 1, Op.FOGMODE_EXP2 = 2, Op.FOGMODE_LINEAR = 3, Op.BYTE = 5120, Op.UNSIGNED_BYTE = 5121, Op.SHORT = 5122, Op.UNSIGNED_SHORT = 5123, Op.INT = 5124, Op.UNSIGNED_INT = 5125, Op.FLOAT = 5126, Op.HALF_FLOAT = 5131, Op.PositionKind = "position", Op.NormalKind = "normal", Op.TangentKind = "tangent", Op.UVKind = "uv", Op.UV2Kind = "uv2", Op.UV3Kind = "uv3", Op.UV4Kind = "uv4", Op.UV5Kind = "uv5", Op.UV6Kind = "uv6", Op.ColorKind = "color", Op.ColorInstanceKind = "instanceColor", Op.MatricesIndicesKind = "matricesIndices", Op.MatricesWeightsKind = "matricesWeights", Op.MatricesIndicesExtraKind = "matricesIndicesExtra", Op.MatricesWeightsExtraKind = "matricesWeightsExtra", Op.ANIMATIONTYPE_FLOAT = 0, Op.ANIMATIONTYPE_VECTOR3 = 1, Op.ANIMATIONTYPE_QUATERNION = 2, Op.ANIMATIONTYPE_MATRIX = 3, Op.ANIMATIONTYPE_COLOR3 = 4, Op.ANIMATIONTYPE_COLOR4 = 7, Op.ANIMATIONTYPE_VECTOR2 = 5, Op.ANIMATIONTYPE_SIZE = 6, Op.ShadowMinZ = 0, Op.ShadowMaxZ = 1e4, Op.OUTLINELAYER_SAMPLING_TRIDIRECTIONAL = 0, Op.OUTLINELAYER_SAMPLING_OCTADIRECTIONAL = 1
+  },
+  41823: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Lp
+    });
+    var Op = cp(40203),
+      op = cp(40210),
+      Ip = cp(37320),
+      Sp = cp(40451),
+      xp = cp(40423);
+    let Lp = (() => {
+      var pp;
+      let ip, cp, Lp, Yp, Dp = Sp.d,
+        Ap = [];
+      return pp = class extends Dp {
+        constructor() {
+          super(...arguments), this._position = (0, Op.l)(this, Ap), this._needProjectionMatrixCompute = !0, this._viewMatrix = Ip.b.Identity(), this._projectionMatrix = Ip.b.Identity()
         }
-        return hD(DD[zD])
-      },
-      set: (DD, zD, wD) => (DD[zD] = wD, !0),
-      has: (DD, zD) => DD instanceof IDBTransaction && ("done" === zD || "store" === zD) || zD in DD
-    };
-
-    function BD(DD) {
-      return DD !== IDBDatabase.prototype.transaction || "objectStoreNames" in IDBTransaction.prototype ? (cD || (cD = [IDBCursor.prototype.advance, IDBCursor.prototype.continue, IDBCursor.prototype.continuePrimaryKey])).includes(DD) ? function() {
-        for (var zD = arguments.length, wD = new Array(zD), pD = 0; pD < zD; pD++) wD[pD] = arguments[pD];
-        return DD.apply(nD(this), wD), hD(gD.get(this))
-      } : function() {
-        for (var zD = arguments.length, wD = new Array(zD), pD = 0; pD < zD; pD++) wD[pD] = arguments[pD];
-        return hD(DD.apply(nD(this), wD))
-      } : function(zD) {
-        for (var wD = arguments.length, pD = new Array(wD > 1 ? wD - 1 : 0), sD = 1; sD < wD; sD++) pD[sD - 1] = arguments[sD];
-        const KD = DD.call(nD(this), zD, ...pD);
-        return AD.set(KD, zD.sort ? zD.sort() : [zD]), hD(KD)
-      }
-    }
-
-    function GD(DD) {
-      return "function" === typeof DD ? BD(DD) : (DD instanceof IDBTransaction && function(DD) {
-        if (RD.has(DD)) return;
-        const zD = new Promise(((zD, wD) => {
-          const pD = () => {
-              DD.removeEventListener("complete", sD), DD.removeEventListener("error", KD), DD.removeEventListener("abort", KD)
-            },
-            sD = () => {
-              zD(), pD()
-            },
-            KD = () => {
-              wD(DD.error || new DOMException("AbortError", "AbortError")), pD()
-            };
-          DD.addEventListener("complete", sD), DD.addEventListener("error", KD), DD.addEventListener("abort", KD)
-        }));
-        RD.set(DD, zD)
-      }(DD), zD = DD, (LD || (LD = [IDBDatabase, IDBObjectStore, IDBIndex, IDBCursor, IDBTransaction])).some((DD => zD instanceof DD)) ? new Proxy(DD, ID) : DD);
-      var zD
-    }
-
-    function hD(DD) {
-      if (DD instanceof IDBRequest) return function(DD) {
-        const zD = new Promise(((zD, wD) => {
-          const pD = () => {
-              DD.removeEventListener("success", sD), DD.removeEventListener("error", KD)
-            },
-            sD = () => {
-              zD(hD(DD.result)), pD()
-            },
-            KD = () => {
-              wD(DD.error), pD()
-            };
-          DD.addEventListener("success", sD), DD.addEventListener("error", KD)
-        }));
-        return zD.then((zD => {
-          zD instanceof IDBCursor && gD.set(zD, DD)
-        })).catch((() => {})), fD.set(zD, DD), zD
-      }(DD);
-      if (UD.has(DD)) return UD.get(DD);
-      const zD = GD(DD);
-      return zD !== DD && (UD.set(DD, zD), fD.set(zD, DD)), zD
-    }
-    const nD = DD => fD.get(DD);
-    const MD = ["get", "getKey", "getAll", "getAllKeys", "count"],
-      OD = ["put", "add", "delete", "clear"],
-      JD = new Map;
-
-    function ED(DD, zD) {
-      if (!(DD instanceof IDBDatabase) || zD in DD || "string" !== typeof zD) return;
-      if (JD.get(zD)) return JD.get(zD);
-      const wD = zD.replace(/FromIndex$/, ""),
-        pD = zD !== wD,
-        sD = OD.includes(wD);
-      if (!(wD in (pD ? IDBIndex : IDBObjectStore).prototype) || !sD && !MD.includes(wD)) return;
-      const KD = async function(DD) {
-        const zD = this.transaction(DD, sD ? "readwrite" : "readonly");
-        let KD = zD.store;
-        for (var rD = arguments.length, LD = new Array(rD > 1 ? rD - 1 : 0), cD = 1; cD < rD; cD++) LD[cD - 1] = arguments[cD];
-        return pD && (KD = KD.index(LD.shift())), (await Promise.all([KD[wD](...LD), sD && zD.done]))[0]
-      };
-      return JD.set(zD, KD), KD
-    }
-    ID = (DD => ({
-      ...DD,
-      get: (zD, wD, pD) => ED(zD, wD) || DD.get(zD, wD, pD),
-      has: (zD, wD) => !!ED(zD, wD) || DD.has(zD, wD)
-    }))(ID);
-    const QD = "@firebase/installations",
-      XD = "0.6.4",
-      VD = 1e4,
-      PD = `w:${XD}`,
-      CD = "FIS_v2",
-      xD = 36e5,
-      TD = {
-        "missing-app-config-values": 'Missing App configuration value: "{$valueName}"',
-        "not-registered": "Firebase Installation is not registered.",
-        "installation-not-found": "Firebase Installation not found.",
-        "request-failed": '{$requestName} request failed with error "{$serverCode} {$serverStatus}: {$serverMessage}"',
-        "app-offline": "Could not process request. Application offline.",
-        "delete-pending-registration": "Can't delete installation while there is a pending registration request."
-      },
-      bD = new KD.c("installations", "Installations", TD);
-
-    function jD(DD) {
-      return DD instanceof KD.e && DD.code.includes("request-failed")
-    }
-
-    function dD(DD) {
-      let {
-        projectId: zD
-      } = DD;
-      return `https://firebaseinstallations.googleapis.com/v1/projects/${zD}/installations`
-    }
-
-    function SD(DD) {
-      return {
-        token: DD.token,
-        requestStatus: 2,
-        expiresIn: (zD = DD.expiresIn, Number(zD.replace("s", "000"))),
-        creationTime: Date.now()
-      };
-      var zD
-    }
-    async function iD(DD, zD) {
-      const wD = (await zD.json()).error;
-      return bD.create("request-failed", {
-        requestName: DD,
-        serverCode: wD.code,
-        serverMessage: wD.message,
-        serverStatus: wD.status
-      })
-    }
-
-    function lD(DD) {
-      let {
-        apiKey: zD
-      } = DD;
-      return new Headers({
-        "Content-Type": "application/json",
-        Accept: "application/json",
-        "x-goog-api-key": zD
-      })
-    }
-
-    function WD(DD, zD) {
-      let {
-        refreshToken: wD
-      } = zD;
-      const pD = lD(DD);
-      return pD.append("Authorization", function(DD) {
-        return `${CD} ${DD}`
-      }(wD)), pD
-    }
-    async function ND(DD) {
-      const zD = await DD();
-      return zD.status >= 500 && zD.status < 600 ? DD() : zD
-    }
-
-    function ZD(DD) {
-      return new Promise((zD => {
-        setTimeout(zD, DD)
-      }))
-    }
-    const yD = /^[cdef][\w-]{21}$/;
-
-    function kD() {
-      try {
-        const DD = new Uint8Array(17);
-        (self.crypto || self.msCrypto).getRandomValues(DD), DD[0] = 112 + DD[0] % 16;
-        const zD = function(DD) {
-          const zD = (wD = DD, btoa(String.fromCharCode(...wD)).replace(/\+/g, "-").replace(/\//g, "_"));
-          var wD;
-          return zD.substr(0, 22)
-        }(DD);
-        return yD.test(zD) ? zD : ""
-      } catch (DD) {
-        return ""
-      }
-    }
-
-    function mD(DD) {
-      return `${DD.appName}!${DD.appId}`
-    }
-    const eD = new Map;
-
-    function oD(DD, zD) {
-      const wD = mD(DD);
-      aD(wD, zD),
-        function(DD, zD) {
-          const wD = vD();
-          wD && wD.postMessage({
-            key: DD,
-            fid: zD
-          });
-          tD()
-        }(wD, zD)
-    }
-
-    function aD(DD, zD) {
-      const wD = eD.get(DD);
-      if (wD)
-        for (const pD of wD) pD(zD)
-    }
-    let uD = null;
-
-    function vD() {
-      return !uD && "BroadcastChannel" in self && (uD = new BroadcastChannel("[Firebase] FID Change"), uD.onmessage = DD => {
-        aD(DD.data.key, DD.data.fid)
-      }), uD
-    }
-
-    function tD() {
-      0 === eD.size && uD && (uD.close(), uD = null)
-    }
-    const FD = "firebase-installations-store";
-    let YD = null;
-
-    function HD() {
-      return YD || (YD = function(DD, zD) {
-        let {
-          blocked: wD,
-          upgrade: pD,
-          blocking: sD,
-          terminated: KD
-        } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-        const rD = indexedDB.open(DD, zD),
-          LD = hD(rD);
-        return pD && rD.addEventListener("upgradeneeded", (DD => {
-          pD(hD(rD.result), DD.oldVersion, DD.newVersion, hD(rD.transaction))
-        })), wD && rD.addEventListener("blocked", (() => wD())), LD.then((DD => {
-          KD && DD.addEventListener("close", (() => KD())), sD && DD.addEventListener("versionchange", (() => sD()))
-        })).catch((() => {})), LD
-      }("firebase-installations-database", 1, {
-        upgrade: (DD, zD) => {
-          if (0 === zD) DD.createObjectStore(FD)
+        _setPosition(pp) {
+          this._position = pp
         }
-      })), YD
-    }
-    async function qD(DD, zD) {
-      const wD = mD(DD),
-        pD = (await HD()).transaction(FD, "readwrite"),
-        sD = pD.objectStore(FD),
-        KD = await sD.get(wD);
-      return await sD.put(zD, wD), await pD.done, KD && KD.fid === zD.fid || oD(DD, zD.fid), zD
-    }
-    async function Dz(DD) {
-      const zD = mD(DD),
-        wD = (await HD()).transaction(FD, "readwrite");
-      await wD.objectStore(FD).delete(zD), await wD.done
-    }
-    async function zz(DD, zD) {
-      const wD = mD(DD),
-        pD = (await HD()).transaction(FD, "readwrite"),
-        sD = pD.objectStore(FD),
-        KD = await sD.get(wD),
-        rD = zD(KD);
-      return void 0 === rD ? await sD.delete(wD) : await sD.put(rD, wD), await pD.done, !rD || KD && KD.fid === rD.fid || oD(DD, rD.fid), rD
-    }
-    async function wz(DD) {
-      let zD;
-      const wD = await zz(DD.appConfig, (wD => {
-        const pD = function(DD) {
-            const zD = DD || {
-              fid: kD(),
-              registrationStatus: 0
-            };
-            return Kz(zD)
-          }(wD),
-          sD = function(DD, zD) {
-            if (0 === zD.registrationStatus) {
-              if (!navigator.onLine) {
-                return {
-                  installationEntry: zD,
-                  registrationPromise: Promise.reject(bD.create("app-offline"))
-                }
-              }
-              const wD = {
-                  fid: zD.fid,
-                  registrationStatus: 1,
-                  registrationTime: Date.now()
-                },
-                pD = async function(DD, zD) {
-                  try {
-                    const wD = await async function(DD, zD) {
-                      let {
-                        appConfig: wD,
-                        heartbeatServiceProvider: pD
-                      } = DD, {
-                        fid: sD
-                      } = zD;
-                      const KD = dD(wD),
-                        rD = lD(wD),
-                        LD = pD.getImmediate({
-                          optional: !0
-                        });
-                      if (LD) {
-                        const DD = await LD.getHeartbeatsHeader();
-                        DD && rD.append("x-firebase-client", DD)
-                      }
-                      const cD = {
-                          fid: sD,
-                          authVersion: CD,
-                          appId: wD.appId,
-                          sdkVersion: PD
-                        },
-                        gD = {
-                          method: "POST",
-                          headers: rD,
-                          body: JSON.stringify(cD)
-                        },
-                        RD = await ND((() => fetch(KD, gD)));
-                      if (RD.ok) {
-                        const DD = await RD.json();
-                        return {
-                          fid: DD.fid || sD,
-                          registrationStatus: 2,
-                          refreshToken: DD.refreshToken,
-                          authToken: SD(DD.authToken)
-                        }
-                      }
-                      throw await iD("Create Installation", RD)
-                    }(DD, zD);
-                    return qD(DD.appConfig, wD)
-                  } catch (wD) {
-                    throw jD(wD) && 409 === wD.customData.serverCode ? await Dz(DD.appConfig) : await qD(DD.appConfig, {
-                      fid: zD.fid,
-                      registrationStatus: 0
-                    }), wD
-                  }
-                }(DD, wD);
-              return {
-                installationEntry: wD,
-                registrationPromise: pD
-              }
-            }
-            return 1 === zD.registrationStatus ? {
-              installationEntry: zD,
-              registrationPromise: pz(DD)
-            } : {
-              installationEntry: zD
-            }
-          }(DD, pD);
-        return zD = sD.registrationPromise, sD.installationEntry
-      }));
-      return "" === wD.fid ? {
-        installationEntry: await zD
-      } : {
-        installationEntry: wD,
-        registrationPromise: zD
-      }
-    }
-    async function pz(DD) {
-      let zD = await sz(DD.appConfig);
-      for (; 1 === zD.registrationStatus;) await ZD(100), zD = await sz(DD.appConfig);
-      if (0 === zD.registrationStatus) {
-        const {
-          installationEntry: zD,
-          registrationPromise: wD
-        } = await wz(DD);
-        return wD || zD
-      }
-      return zD
-    }
-
-    function sz(DD) {
-      return zz(DD, (DD => {
-        if (!DD) throw bD.create("installation-not-found");
-        return Kz(DD)
-      }))
-    }
-
-    function Kz(DD) {
-      return 1 === (zD = DD).registrationStatus && zD.registrationTime + VD < Date.now() ? {
-        fid: DD.fid,
-        registrationStatus: 0
-      } : DD;
-      var zD
-    }
-    async function rz(DD, zD) {
-      let {
-        appConfig: wD,
-        heartbeatServiceProvider: pD
-      } = DD;
-      const sD = function(DD, zD) {
-          let {
-            fid: wD
-          } = zD;
-          return `${dD(DD)}/${wD}/authTokens:generate`
-        }(wD, zD),
-        KD = WD(wD, zD),
-        rD = pD.getImmediate({
-          optional: !0
-        });
-      if (rD) {
-        const DD = await rD.getHeartbeatsHeader();
-        DD && KD.append("x-firebase-client", DD)
-      }
-      const LD = {
-          installation: {
-            sdkVersion: PD,
-            appId: wD.appId
-          }
-        },
-        cD = {
-          method: "POST",
-          headers: KD,
-          body: JSON.stringify(LD)
-        },
-        gD = await ND((() => fetch(sD, cD)));
-      if (gD.ok) {
-        return SD(await gD.json())
-      }
-      throw await iD("Generate Auth Token", gD)
-    }
-    async function Lz(DD) {
-      let zD, wD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const pD = await zz(DD.appConfig, (pD => {
-        if (!gz(pD)) throw bD.create("not-registered");
-        const sD = pD.authToken;
-        if (!wD && function(DD) {
-            return 2 === DD.requestStatus && ! function(DD) {
-              const zD = Date.now();
-              return zD < DD.creationTime || DD.creationTime + DD.expiresIn < zD + xD
-            }(DD)
-          }(sD)) return pD;
-        if (1 === sD.requestStatus) return zD = async function(DD, zD) {
-          let wD = await cz(DD.appConfig);
-          for (; 1 === wD.authToken.requestStatus;) await ZD(100), wD = await cz(DD.appConfig);
-          const pD = wD.authToken;
-          return 0 === pD.requestStatus ? Lz(DD, zD) : pD
-        }(DD, wD), pD;
-        {
-          if (!navigator.onLine) throw bD.create("app-offline");
-          const wD = function(DD) {
-            const zD = {
-              requestStatus: 1,
-              requestTime: Date.now()
-            };
-            return Object.assign(Object.assign({}, DD), {
-              authToken: zD
-            })
-          }(pD);
-          return zD = async function(DD, zD) {
-            try {
-              const wD = await rz(DD, zD),
-                pD = Object.assign(Object.assign({}, zD), {
-                  authToken: wD
-                });
-              return await qD(DD.appConfig, pD), wD
-            } catch (wD) {
-              if (!jD(wD) || 401 !== wD.customData.serverCode && 404 !== wD.customData.serverCode) {
-                const wD = Object.assign(Object.assign({}, zD), {
-                  authToken: {
-                    requestStatus: 0
-                  }
-                });
-                await qD(DD.appConfig, wD)
-              } else await Dz(DD.appConfig);
-              throw wD
-            }
-          }(DD, wD), wD
+        get position() {
+          return this._position
         }
-      }));
-      return zD ? await zD : pD.authToken
-    }
-
-    function cz(DD) {
-      return zz(DD, (DD => {
-        if (!gz(DD)) throw bD.create("not-registered");
-        const zD = DD.authToken;
-        return 1 === (wD = zD).requestStatus && wD.requestTime + VD < Date.now() ? Object.assign(Object.assign({}, DD), {
-          authToken: {
-            requestStatus: 0
-          }
-        }) : DD;
-        var wD
-      }))
-    }
-
-    function gz(DD) {
-      return void 0 !== DD && 2 === DD.registrationStatus
-    }
-    async function Rz(DD) {
-      let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const wD = DD;
-      await async function(DD) {
-        const {
-          registrationPromise: zD
-        } = await wz(DD);
-        zD && await zD
-      }(wD);
-      return (await Lz(wD, zD)).token
-    }
-
-    function Az(DD) {
-      return bD.create("missing-app-config-values", {
-        valueName: DD
-      })
-    }
-    const Uz = "installations",
-      fz = DD => {
-        const zD = DD.getProvider("app").getImmediate(),
-          wD = function(DD) {
-            if (!DD || !DD.options) throw Az("App Configuration");
-            if (!DD.name) throw Az("App Name");
-            const zD = ["projectId", "apiKey", "appId"];
-            for (const wD of zD)
-              if (!DD.options[wD]) throw Az(wD);
-            return {
-              appName: DD.name,
-              projectId: DD.options.projectId,
-              apiKey: DD.options.apiKey,
-              appId: DD.options.appId
-            }
-          }(zD);
-        return {
-          app: zD,
-          appConfig: wD,
-          heartbeatServiceProvider: (0, pD.v)(zD, "heartbeat"),
-          _delete: () => Promise.resolve()
+        set position(pp) {
+          this._setPosition(pp)
         }
-      },
-      Iz = DD => {
-        const zD = DD.getProvider("app").getImmediate(),
-          wD = (0, pD.v)(zD, Uz).getImmediate();
-        return {
-          getId: () => async function(DD) {
-            const zD = DD,
-              {
-                installationEntry: wD,
-                registrationPromise: pD
-              } = await wz(zD);
-            return pD ? pD.catch(console.error) : Lz(zD).catch(console.error), wD.fid
-          }(wD),
-          getToken: DD => Rz(wD, DD)
+        _setDirection(pp) {
+          this._direction = pp
         }
-      };
-    (0, pD.z)(new rD.f(Uz, fz, "PUBLIC")), (0, pD.z)(new rD.f("installations-internal", Iz, "PRIVATE")), (0, pD.T)(QD, XD), (0, pD.T)(QD, XD, "esm2017");
-    const Bz = "analytics",
-      Gz = "https://www.googletagmanager.com/gtag/js",
-      hz = new sD.h("@firebase/analytics"),
-      nz = {
-        "already-exists": "A Firebase Analytics instance with the appId {$id}  already exists. Only one Firebase Analytics instance can be created for each appId.",
-        "already-initialized": "initializeAnalytics() cannot be called again with different options than those it was initially called with. It can be called again with the same options to return the existing instance, or getAnalytics() can be used to get a reference to the already-intialized instance.",
-        "already-initialized-settings": "Firebase Analytics has already been initialized.settings() must be called before initializing any Analytics instanceor it will have no effect.",
-        "interop-component-reg-failed": "Firebase Analytics Interop Component failed to instantiate: {$reason}",
-        "invalid-analytics-context": "Firebase Analytics is not supported in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
-        "indexeddb-unavailable": "IndexedDB unavailable or restricted in this environment. Wrap initialization of analytics in analytics.isSupported() to prevent initialization in unsupported environments. Details: {$errorInfo}",
-        "fetch-throttle": "The config fetch request timed out while in an exponential backoff state. Unix timestamp in milliseconds when fetch request throttling ends: {$throttleEndTimeMillis}.",
-        "config-fetch-failed": "Dynamic config fetch failed: [{$httpStatus}] {$responseMessage}",
-        "no-api-key": 'The "apiKey" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid API key.',
-        "no-app-id": 'The "appId" field is empty in the local Firebase config. Firebase Analytics requires this field tocontain a valid app ID.',
-        "no-client-id": 'The "client_id" field is empty.',
-        "invalid-gtag-resource": "Trusted Types detected an invalid gtag resource: {$gtagURL}."
-      },
-      Mz = new KD.c("analytics", "Analytics", nz);
-
-    function Oz(DD) {
-      if (!DD.startsWith(Gz)) {
-        const zD = Mz.create("invalid-gtag-resource", {
-          gtagURL: DD
-        });
-        return hz.warn(zD.message), ""
-      }
-      return DD
-    }
-
-    function Jz(DD) {
-      return Promise.all(DD.map((DD => DD.catch((DD => DD)))))
-    }
-
-    function Ez(DD, zD) {
-      const wD = function(DD, zD) {
-          let wD;
-          return window.trustedTypes && (wD = window.trustedTypes.createPolicy(DD, zD)), wD
-        }("firebase-js-sdk-policy", {
-          createScriptURL: Oz
-        }),
-        pD = document.createElement("script"),
-        sD = `${Gz}?l=${DD}&id=${zD}`;
-      pD.src = wD ? null === wD || void 0 === wD ? void 0 : wD.createScriptURL(sD) : sD, pD.async = !0, document.head.appendChild(pD)
-    }
-
-    function Qz(DD, zD, wD, pD) {
-      return async function(sD) {
-        try {
-          for (var KD = arguments.length, rD = new Array(KD > 1 ? KD - 1 : 0), LD = 1; LD < KD; LD++) rD[LD - 1] = arguments[LD];
-          if ("event" === sD) {
-            const [pD, sD] = rD;
-            await async function(DD, zD, wD, pD, sD) {
-              try {
-                let KD = [];
-                if (sD && sD.send_to) {
-                  let DD = sD.send_to;
-                  Array.isArray(DD) || (DD = [DD]);
-                  const pD = await Jz(wD);
-                  for (const wD of DD) {
-                    const DD = pD.find((DD => DD.measurementId === wD)),
-                      sD = DD && zD[DD.appId];
-                    if (!sD) {
-                      KD = [];
-                      break
-                    }
-                    KD.push(sD)
-                  }
-                }
-                0 === KD.length && (KD = Object.values(zD)), await Promise.all(KD), DD("event", pD, sD || {})
-              } catch (KD) {
-                hz.error(KD)
-              }
-            }(DD, zD, wD, pD, sD)
-          } else if ("config" === sD) {
-            const [sD, KD] = rD;
-            await async function(DD, zD, wD, pD, sD, KD) {
-              const rD = pD[sD];
-              try {
-                if (rD) await zD[rD];
-                else {
-                  const DD = (await Jz(wD)).find((DD => DD.measurementId === sD));
-                  DD && await zD[DD.appId]
-                }
-              } catch (LD) {
-                hz.error(LD)
-              }
-              DD("config", sD, KD)
-            }(DD, zD, wD, pD, sD, KD)
-          } else if ("consent" === sD) {
-            const [zD] = rD;
-            DD("consent", "update", zD)
-          } else if ("get" === sD) {
-            const [zD, wD, pD] = rD;
-            DD("get", zD, wD, pD)
-          } else if ("set" === sD) {
-            const [zD] = rD;
-            DD("set", zD)
-          } else DD(sD, ...rD)
-        } catch (cD) {
-          hz.error(cD)
+        get direction() {
+          return this._direction
         }
+        set direction(pp) {
+          this._setDirection(pp)
+        }
+        get shadowMinZ() {
+          return this._shadowMinZ
+        }
+        set shadowMinZ(pp) {
+          this._shadowMinZ = pp, this.forceProjectionMatrixCompute()
+        }
+        get shadowMaxZ() {
+          return this._shadowMaxZ
+        }
+        set shadowMaxZ(pp) {
+          this._shadowMaxZ = pp, this.forceProjectionMatrixCompute()
+        }
+        computeTransformedInformation() {
+          return !(!this.parent || !this.parent.getWorldMatrix) && (this.transformedPosition || (this.transformedPosition = Ip.o.Zero()), Ip.o.TransformCoordinatesToRef(this.position, this.parent.getWorldMatrix(), this.transformedPosition), this.direction && (this.transformedDirection || (this.transformedDirection = Ip.o.Zero()), Ip.o.TransformNormalToRef(this.direction, this.parent.getWorldMatrix(), this.transformedDirection)), !0)
+        }
+        getDepthScale() {
+          return 50
+        }
+        getShadowDirection(pp) {
+          return this.transformedDirection ? this.transformedDirection : this.direction
+        }
+        getAbsolutePosition() {
+          return this.transformedPosition ? this.transformedPosition : this.position
+        }
+        setDirectionToTarget(pp) {
+          return this.direction = Ip.o.Normalize(pp.subtract(this.position)), this.direction
+        }
+        getRotation() {
+          this.direction.normalize();
+          const pp = Ip.o.Cross(this.direction, xp.c.Y),
+            ip = Ip.o.Cross(pp, this.direction);
+          return Ip.o.RotationFromAxis(pp, ip, this.direction)
+        }
+        needCube() {
+          return !1
+        }
+        needProjectionMatrixCompute() {
+          return this._needProjectionMatrixCompute
+        }
+        forceProjectionMatrixCompute() {
+          this._needProjectionMatrixCompute = !0
+        }
+        _initCache() {
+          super._initCache(), this._cache.position = Ip.o.Zero()
+        }
+        _isSynchronized() {
+          return !!this._cache.position.equals(this.position)
+        }
+        computeWorldMatrix(pp) {
+          return !pp && this.isSynchronized() ? (this._currentRenderId = this.Gl().getRenderId(), this._worldMatrix) : (this._updateCache(), this._cache.position.rM(this.position), this._worldMatrix || (this._worldMatrix = Ip.b.Identity()), Ip.b.TranslationToRef(this.position.x, this.position.y, this.position.z, this._worldMatrix), this.parent && this.parent.getWorldMatrix && (this._worldMatrix.multiplyToRef(this.parent.getWorldMatrix(), this._worldMatrix), this._markSyncedWithParent()), this._worldMatrixDeterminantIsDirty = !0, this._worldMatrix)
+        }
+        getDepthMinZ(pp) {
+          return void 0 !== this.shadowMinZ ? this.shadowMinZ : pp?.minZ || 0
+        }
+        getDepthMaxZ(pp) {
+          return void 0 !== this.shadowMaxZ ? this.shadowMaxZ : pp?.maxZ || 1e4
+        }
+        setShadowProjectionMatrix(pp, ip, cp) {
+          return this.customProjectionMatrixBuilder ? this.customProjectionMatrixBuilder(ip, cp, pp) : this._setDefaultShadowProjectionMatrix(pp, ip, cp), this
+        }
+        _syncParentEnabledState() {
+          super._syncParentEnabledState(), this.parent && this.parent.getWorldMatrix || (this.transformedPosition = null, this.transformedDirection = null)
+        }
+        getViewMatrix(pp) {
+          const ip = Ip.i.Zy[0];
+          let cp = this.position;
+          this.computeTransformedInformation() && (cp = this.transformedPosition), Ip.o.NormalizeToRef(this.getShadowDirection(pp), ip), 1 === Math.abs(Ip.o.Dot(ip, Ip.o.Up())) && (ip.z = 1e-13);
+          const Op = Ip.i.Zy[1];
+          return cp.addToRef(ip, Op), Ip.b.LookAtLHToRef(cp, Op, Ip.o.Up(), this._viewMatrix), this._viewMatrix
+        }
+        getProjectionMatrix(pp, ip) {
+          return this.setShadowProjectionMatrix(this._projectionMatrix, pp ?? this._viewMatrix, ip ?? []), this._projectionMatrix
+        }
+      }, (() => {
+        const Ip = "function" === typeof Symbol && Symbol.metadata ? Object.create(Dp[Symbol.metadata] ?? null) : void 0;
+        ip = [(0, op.H)()], cp = [(0, op.H)()], Lp = [(0, op.K)()], Yp = [(0, op.K)()], (0, Op.j)(pp, null, ip, {
+          kind: "getter",
+          name: "position",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "position" in pp,
+            get: pp => pp.position
+          },
+          metadata: Ip
+        }, null, Ap), (0, Op.j)(pp, null, cp, {
+          kind: "getter",
+          name: "direction",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "direction" in pp,
+            get: pp => pp.direction
+          },
+          metadata: Ip
+        }, null, Ap), (0, Op.j)(pp, null, Lp, {
+          kind: "getter",
+          name: "shadowMinZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "shadowMinZ" in pp,
+            get: pp => pp.shadowMinZ
+          },
+          metadata: Ip
+        }, null, Ap), (0, Op.j)(pp, null, Yp, {
+          kind: "getter",
+          name: "shadowMaxZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "shadowMaxZ" in pp,
+            get: pp => pp.shadowMaxZ
+          },
+          metadata: Ip
+        }, null, Ap), Ip && Object.defineProperty(pp, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: Ip
+        })
+      })(), pp
+    })()
+  },
+  41843: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => op
+    });
+    var Op = cp(40654);
+    class op extends Op.d {
+      constructor(pp, ip, cp, op, Ip) {
+        let Sp = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+          xp = arguments.length > 6 && void 0 !== arguments[6] && arguments[6],
+          Lp = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 3,
+          Yp = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0,
+          Dp = arguments.length > 9 ? arguments[9] : void 0,
+          Ap = arguments.length > 10 ? arguments[10] : void 0,
+          Pp = arguments.length > 11 ? arguments[11] : void 0,
+          Wp = arguments.length > 12 ? arguments[12] : void 0;
+        super(null, Ip, !Sp, xp, void 0, void 0, void 0, void 0, void 0, void 0, void 0, void 0, Dp), this.format = op, this._engine && (this._engine._caps.textureFloatLinearFiltering || 1 !== Yp || (Lp = 1), this._engine._caps.textureHalfFloatLinearFiltering || 2 !== Yp || (Lp = 1), this._texture = this._engine.createRawTexture(pp, ip, cp, op, Sp, xp, Lp, null, Yp, Dp ?? 0, Ap ?? !1, Wp), this.wrapU = Op.d.CLAMP_ADDRESSMODE, this.wrapV = Op.d.CLAMP_ADDRESSMODE, this._waitingForData = !!Pp && !pp)
+      }
+      update(pp) {
+        this.updateMipLevel(pp, 0)
+      }
+      updateMipLevel(pp, ip) {
+        this._getEngine().updateRawTexture(this._texture, pp, this._texture.format, this._texture.invertY, null, this._texture.type, this._texture._useSRGBBuffer, ip), this._waitingForData = !1
+      }
+      clone() {
+        if (!this._texture) return super.clone();
+        const pp = new op(null, this.getSize().width, this.getSize().height, this.format, this.Gl(), this._texture.generateMipMaps, this._invertY, this.samplingMode, this._texture.type, this._texture._creationFlags, this._useSRGBBuffer);
+        return pp._texture = this._texture, this._texture.incrementReferences(), pp
+      }
+      isReady() {
+        return super.isReady() && !this._waitingForData
+      }
+      static CreateLuminanceTexture(pp, ip, cp, Op) {
+        return new op(pp, ip, cp, 1, Op, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      }
+      static CreateLuminanceAlphaTexture(pp, ip, cp, Op) {
+        return new op(pp, ip, cp, 2, Op, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      }
+      static CreateAlphaTexture(pp, ip, cp, Op) {
+        return new op(pp, ip, cp, 0, Op, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3)
+      }
+      static CreateRGBTexture(pp, ip, cp, Op) {
+        return new op(pp, ip, cp, 4, Op, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9])
+      }
+      static CreateRGBATexture(pp, ip, cp, Op) {
+        return new op(pp, ip, cp, 5, Op, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 0, arguments.length > 9 && void 0 !== arguments[9] && arguments[9], arguments.length > 10 && void 0 !== arguments[10] && arguments[10])
+      }
+      static CreateRGBAStorageTexture(pp, ip, cp, Op) {
+        return new op(pp, ip, cp, 5, Op, !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4], arguments.length > 5 && void 0 !== arguments[5] && arguments[5], arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 3, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 0, 1, arguments.length > 8 && void 0 !== arguments[8] && arguments[8])
+      }
+      static CreateRTexture(pp, ip, cp, Ip) {
+        let Sp = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          xp = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+          Lp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Op.d.TRILINEAR_SAMPLINGMODE;
+        return new op(pp, ip, cp, 6, Ip, Sp, xp, Lp, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1)
+      }
+      static CreateRStorageTexture(pp, ip, cp, Ip) {
+        let Sp = !(arguments.length > 4 && void 0 !== arguments[4]) || arguments[4],
+          xp = arguments.length > 5 && void 0 !== arguments[5] && arguments[5],
+          Lp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : Op.d.TRILINEAR_SAMPLINGMODE;
+        return new op(pp, ip, cp, 6, Ip, Sp, xp, Lp, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : 1, 1)
       }
     }
-    const Xz = new class {
-      constructor() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-          zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1e3;
-        this.throttleMetadata = DD, this.intervalMillis = zD
+  },
+  41884: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Op.b
+    });
+    var Op = cp(40614);
+    (0, Op.d)()
+  },
+  41826: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Op.e
+    });
+    var Op = cp(40631);
+    (0, Op.h)()
+  },
+  40631: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Pp,
+      h: () => Up
+    });
+    var Op, op, Ip = cp(37487),
+      Sp = cp(40342),
+      xp = cp(40577),
+      Lp = cp(40638),
+      Yp = cp(40476),
+      Dp = cp(40647),
+      Ap = cp(40096);
+    class Pp extends xp.d {
+      _isShaderMaterial(pp) {
+        return !!pp && "ShaderMaterial" === pp.getClassName()
       }
-      getThrottleMetadata(DD) {
-        return this.throttleMetadata[DD]
-      }
-      setThrottleMetadata(DD, zD) {
-        this.throttleMetadata[DD] = zD
-      }
-      deleteThrottleMetadata(DD) {
-        delete this.throttleMetadata[DD]
-      }
-    };
-
-    function Vz(DD) {
-      return new Headers({
-        Accept: "application/json",
-        "x-goog-api-key": DD
-      })
-    }
-    async function Pz(DD) {
-      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Xz,
-        wD = arguments.length > 2 ? arguments[2] : void 0;
-      const {
-        appId: pD,
-        apiKey: sD,
-        measurementId: KD
-      } = DD.options;
-      if (!pD) throw Mz.create("no-app-id");
-      if (!sD) {
-        if (KD) return {
-          measurementId: KD,
-          appId: pD
+      constructor(pp) {
+        let ip = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
+          Op = arguments.length > 5 ? arguments[5] : void 0,
+          op = arguments.length > 6 ? arguments[6] : void 0,
+          xp = arguments.length > 7 ? arguments[7] : void 0;
+        super(pp, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null, arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null, ip, arguments.length > 4 ? arguments[4] : void 0), this.useVertexColor = Op, this.useVertexAlpha = op, this.color = new Ip.d(1, 1, 1), this.alpha = 1, this._shaderLanguage = 0, this._ownsMaterial = !1, ip && (this.color = ip.color.clone(), this.alpha = ip.alpha, this.useVertexColor = ip.useVertexColor, this.useVertexAlpha = ip.useVertexAlpha), this.intersectionThreshold = .1;
+        const Lp = {
+          attributes: [Sp.j.PositionKind],
+          uniforms: ["world", "viewProjection"],
+          needAlphaBlending: !0,
+          defines: [],
+          useClipPlane: null,
+          shaderLanguage: 0
         };
-        throw Mz.create("no-api-key")
-      }
-      const rD = zD.getThrottleMetadata(pD) || {
-          backoffCount: 0,
-          throttleEndTimeMillis: Date.now()
-        },
-        LD = new xz;
-      return setTimeout((async () => {
-        LD.abort()
-      }), void 0 !== wD ? wD : 6e4), Cz({
-        appId: pD,
-        apiKey: sD,
-        measurementId: KD
-      }, rD, LD, zD)
-    }
-    async function Cz(DD, zD, wD) {
-      let {
-        throttleEndTimeMillis: pD,
-        backoffCount: sD
-      } = zD, rD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : Xz;
-      var LD;
-      const {
-        appId: cD,
-        measurementId: gD
-      } = DD;
-      try {
-        await
-        function(DD, zD) {
-          return new Promise(((wD, pD) => {
-            const sD = Math.max(zD - Date.now(), 0),
-              KD = setTimeout(wD, sD);
-            DD.addEventListener((() => {
-              clearTimeout(KD), pD(Mz.create("fetch-throttle", {
-                throttleEndTimeMillis: zD
-              }))
-            }))
-          }))
-        }(wD, pD)
-      } catch (RD) {
-        if (gD) return hz.warn(`Timed out fetching this Firebase app's measurement ID from the server. Falling back to the measurement ID ${gD} provided in the "measurementId" field in the local Firebase config. [${null===RD||void 0===RD?void 0:RD.message}]`), {
-          appId: cD,
-          measurementId: gD
-        };
-        throw RD
-      }
-      try {
-        const zD = await async function(DD) {
-          var zD;
-          const {
-            appId: wD,
-            apiKey: pD
-          } = DD, sD = {
-            method: "GET",
-            headers: Vz(pD)
-          }, KD = "https://firebase.googleapis.com/v1alpha/projects/-/apps/{app-id}/webConfig".replace("{app-id}", wD), rD = await fetch(KD, sD);
-          if (200 !== rD.status && 304 !== rD.status) {
-            let DD = "";
-            try {
-              const wD = await rD.json();
-              (null === (zD = wD.error) || void 0 === zD ? void 0 : zD.message) && (DD = wD.error.message)
-            } catch (LD) {}
-            throw Mz.create("config-fetch-failed", {
-              httpStatus: rD.status,
-              responseMessage: DD
-            })
-          }
-          return rD.json()
-        }(DD);
-        return rD.deleteThrottleMetadata(cD), zD
-      } catch (RD) {
-        const zD = RD;
-        if (! function(DD) {
-            if (!(DD instanceof KD.e) || !DD.customData) return !1;
-            const zD = Number(DD.customData.httpStatus);
-            return 429 === zD || 500 === zD || 503 === zD || 504 === zD
-          }(zD)) {
-          if (rD.deleteThrottleMetadata(cD), gD) return hz.warn(`Failed to fetch this Firebase app's measurement ID from the server. Falling back to the measurement ID ${gD} provided in the "measurementId" field in the local Firebase config. [${null===zD||void 0===zD?void 0:zD.message}]`), {
-            appId: cD,
-            measurementId: gD
+        if (this.useVertexAlpha ? Lp.defines.push("#define VERTEXALPHA") : Lp.needAlphaBlending = !1, this.useVertexColor ? (Lp.defines.push("#define VERTEXCOLOR"), Lp.attributes.push(Sp.j.ColorKind)) : (Lp.uniforms.push("color"), this._color4 = new Ip.h), xp) this.material = xp;
+        else {
+          this.Gl().gy().isWebGPU && !Pp.ForceGLSL && (this._shaderLanguage = 1), Lp.shaderLanguage = this._shaderLanguage, Lp.extraInitializationsAsync = async () => {
+            1 === this._shaderLanguage ? await Promise.all([cp.e(349).then((() => cp(42847))), cp.e(355).then((() => cp(42853)))]) : await Promise.all([cp.e(331).then((() => cp(42861))), cp.e(337).then((() => cp(42863)))])
           };
-          throw RD
+          const pp = new Dp.q("colorShader", this.Gl(), "color", Lp, !1);
+          pp.doNotSerialize = !0, this._ownsMaterial = !0, this._setInternalMaterial(pp)
         }
-        const pD = 503 === Number(null === (LD = null === zD || void 0 === zD ? void 0 : zD.customData) || void 0 === LD ? void 0 : LD.httpStatus) ? (0, KD.p)(sD, rD.intervalMillis, 30) : (0, KD.p)(sD, rD.intervalMillis),
-          AD = {
-            throttleEndTimeMillis: Date.now() + pD,
-            backoffCount: sD + 1
-          };
-        return rD.setThrottleMetadata(cD, AD), hz.debug(`Calling attemptFetch again in ${pD} millis`), Cz(DD, AD, wD, rD)
       }
-    }
-    class xz {
-      constructor() {
-        this.listeners = []
+      getClassName() {
+        return "LinesMesh"
       }
-      addEventListener(DD) {
-        this.listeners.push(DD)
+      get material() {
+        return this._internalAbstractMeshDataInfo._material
       }
-      abort() {
-        this.listeners.forEach((DD => DD()))
+      set material(pp) {
+        const ip = this.material;
+        if (ip === pp) return;
+        const cp = ip && this._ownsMaterial;
+        this._ownsMaterial = !1, this._setInternalMaterial(pp), cp && ip?.dispose()
       }
-    }
-    let Tz, bz;
-
-    function jz(DD) {
-      bz = DD
-    }
-
-    function dz(DD) {
-      Tz = DD
-    }
-    async function Sz(DD, zD, wD, pD, sD, rD, LD) {
-      var cD;
-      const gD = Pz(DD);
-      gD.then((zD => {
-        wD[zD.measurementId] = zD.appId, DD.options.measurementId && zD.measurementId !== DD.options.measurementId && hz.warn(`The measurement ID in the local Firebase config (${DD.options.measurementId}) does not match the measurement ID fetched from the server (${zD.measurementId}). To ensure analytics events are always sent to the correct Analytics property, update the measurement ID field in the local config or remove it from the local config.`)
-      })).catch((DD => hz.error(DD))), zD.push(gD);
-      const RD = async function() {
-        if (!(0, KD.Q)()) return hz.warn(Mz.create("indexeddb-unavailable", {
-          errorInfo: "IndexedDB is not available in this environment."
-        }).message), !1;
-        try {
-          await (0, KD.ab)()
-        } catch (DD) {
-          return hz.warn(Mz.create("indexeddb-unavailable", {
-            errorInfo: null === DD || void 0 === DD ? void 0 : DD.toString()
-          }).message), !1
-        }
-        return !0
-      }().then((DD => DD ? pD.getId() : void 0)), [AD, UD] = await Promise.all([gD, RD]);
-      (function(DD) {
-        const zD = window.document.getElementsByTagName("script");
-        for (const wD of Object.values(zD))
-          if (wD.src && wD.src.includes(Gz) && wD.src.includes(DD)) return wD;
-        return null
-      })(rD) || Ez(rD, AD.measurementId), bz && (sD("consent", "default", bz), jz(void 0)), sD("js", new Date);
-      const fD = null !== (cD = null === LD || void 0 === LD ? void 0 : LD.config) && void 0 !== cD ? cD : {};
-      return fD.origin = "firebase", fD.update = !0, null != UD && (fD.firebase_id = UD), sD("config", AD.measurementId, fD), Tz && (sD("set", Tz), dz(void 0)), AD.measurementId
-    }
-    class iz {
-      constructor(DD) {
-        this.app = DD
+      _setInternalMaterial(pp) {
+        this._setMaterial(pp), this.material && (this.material.fillMode = Yp.b.LineListDrawMode, this.material.disableLighting = !0)
       }
-      _delete() {
-        return delete lz[this.app.options.appId], Promise.resolve()
-      }
-    }
-    let lz = {},
-      Wz = [];
-    const Nz = {};
-    let Zz, yz, kz = "dataLayer",
-      mz = "gtag",
-      ez = !1;
-
-    function oz(DD) {
-      if (ez) throw Mz.create("already-initialized");
-      DD.dataLayerName && (kz = DD.dataLayerName), DD.gtagName && (mz = DD.gtagName)
-    }
-
-    function az(DD, zD, wD) {
-      ! function() {
-        const DD = [];
-        if ((0, KD.L)() && DD.push("This is a browser extension environment."), (0, KD.g)() || DD.push("Cookies are not available."), DD.length > 0) {
-          const zD = DD.map(((DD, zD) => `(${zD+1}) ${DD}`)).join(" "),
-            wD = Mz.create("invalid-analytics-context", {
-              errorInfo: zD
-            });
-          hz.warn(wD.message)
-        }
-      }();
-      const pD = DD.options.appId;
-      if (!pD) throw Mz.create("no-app-id");
-      if (!DD.options.apiKey) {
-        if (!DD.options.measurementId) throw Mz.create("no-api-key");
-        hz.warn(`The "apiKey" field is empty in the local Firebase config. This is needed to fetch the latest measurement ID for this Firebase app. Falling back to the measurement ID ${DD.options.measurementId} provided in the "measurementId" field in the local Firebase config.`)
-      }
-      if (null != lz[pD]) throw Mz.create("already-exists", {
-        id: pD
-      });
-      if (!ez) {
-        ! function(DD) {
-          let zD = [];
-          Array.isArray(window[DD]) ? zD = window[DD] : window[DD] = zD
-        }(kz);
-        const {
-          wrappedGtag: DD,
-          gtagCore: zD
-        } = function(DD, zD, wD, pD, sD) {
-          let KD = function() {
-            for (var DD = arguments.length, zD = new Array(DD), wD = 0; wD < DD; wD++) zD[wD] = arguments[wD];
-            window[pD].push(arguments)
-          };
-          return window[sD] && "function" === typeof window[sD] && (KD = window[sD]), window[sD] = Qz(KD, DD, zD, wD), {
-            gtagCore: KD,
-            wrappedGtag: window[sD]
-          }
-        }(lz, Wz, Nz, kz, mz);
-        yz = DD, Zz = zD, ez = !0
-      }
-      lz[pD] = Sz(DD, Wz, Nz, zD, Zz, kz, wD);
-      return new iz(DD)
-    }
-
-    function uz() {
-      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, pD.K)();
-      DD = (0, KD.H)(DD);
-      const zD = (0, pD.v)(DD, Bz);
-      return zD.isInitialized() ? zD.getImmediate() : vz(DD)
-    }
-
-    function vz(DD) {
-      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      const wD = (0, pD.v)(DD, Bz);
-      if (wD.isInitialized()) {
-        const DD = wD.getImmediate();
-        if ((0, KD.u)(zD, wD.getOptions())) return DD;
-        throw Mz.create("already-initialized")
-      }
-      return wD.initialize({
-        options: zD
-      })
-    }
-    async function tz() {
-      if ((0, KD.L)()) return !1;
-      if (!(0, KD.g)()) return !1;
-      if (!(0, KD.Q)()) return !1;
-      try {
-        return await (0, KD.ab)()
-      } catch (DD) {
+      get checkCollisions() {
         return !1
       }
-    }
-
-    function Fz(DD, zD, wD) {
-      DD = (0, KD.H)(DD), async function(DD, zD, wD, pD) {
-        if (pD && pD.global) return DD("set", {
-          screen_name: wD
-        }), Promise.resolve();
-        DD("config", await zD, {
-          update: !0,
-          screen_name: wD
-        })
-      }(yz, lz[DD.app.options.appId], zD, wD).catch((DD => hz.error(DD)))
-    }
-    async function Yz(DD) {
-      return DD = (0, KD.H)(DD), async function(DD, zD) {
-        const wD = await zD;
-        return new Promise(((zD, pD) => {
-          DD("get", wD, "client_id", (DD => {
-            DD || pD(Mz.create("no-client-id")), zD(DD)
-          }))
-        }))
-      }(yz, lz[DD.app.options.appId])
-    }
-
-    function Hz(DD, zD, wD) {
-      DD = (0, KD.H)(DD), async function(DD, zD, wD, pD) {
-        if (pD && pD.global) return DD("set", {
-          user_id: wD
-        }), Promise.resolve();
-        DD("config", await zD, {
-          update: !0,
-          user_id: wD
-        })
-      }(yz, lz[DD.app.options.appId], zD, wD).catch((DD => hz.error(DD)))
-    }
-
-    function qz(DD, zD, wD) {
-      DD = (0, KD.H)(DD), async function(DD, zD, wD, pD) {
-        if (pD && pD.global) {
-          const zD = {};
-          for (const DD of Object.keys(wD)) zD[`user_properties.${DD}`] = wD[DD];
-          return DD("set", zD), Promise.resolve()
+      set checkCollisions(pp) {}
+      _bind(pp, ip) {
+        if (!this._geometry) return this;
+        const cp = this.isUnIndexed ? null : this._geometry.getIndexBuffer();
+        if (!this._userInstancedBuffersStorage || this.hasThinInstances ? this._geometry._bind(ip, cp) : this._geometry._bind(ip, cp, this._userInstancedBuffersStorage.vertexBuffers, this._userInstancedBuffersStorage.vertexArrayObjects), !this.useVertexColor && this._isShaderMaterial(this.material)) {
+          const {
+            r: pp,
+            g: ip,
+            b: cp
+          } = this.color;
+          this._color4.set(pp, ip, cp, this.alpha), this.material.setColor4("color", this._color4)
         }
-        DD("config", await zD, {
-          update: !0,
-          user_properties: wD
-        })
-      }(yz, lz[DD.app.options.appId], zD, wD).catch((DD => hz.error(DD)))
-    }
-
-    function Dw(DD, zD) {
-      DD = (0, KD.H)(DD), async function(DD, zD) {
-        const wD = await DD;
-        window[`ga-disable-${wD}`] = !zD
-      }(lz[DD.app.options.appId], zD).catch((DD => hz.error(DD)))
-    }
-
-    function zw(DD) {
-      yz ? yz("set", DD) : dz(DD)
-    }
-
-    function ww(DD, zD, wD, pD) {
-      DD = (0, KD.H)(DD), async function(DD, zD, wD, pD, sD) {
-        if (sD && sD.global) DD("event", wD, pD);
-        else {
-          const sD = await zD;
-          DD("event", wD, Object.assign(Object.assign({}, pD), {
-            send_to: sD
-          }))
-        }
-      }(yz, lz[DD.app.options.appId], zD, wD, pD).catch((DD => hz.error(DD)))
-    }
-
-    function pw(DD) {
-      yz ? yz("consent", "update", DD) : jz(DD)
-    }
-    const sw = "@firebase/analytics",
-      Kw = "0.10.0";
-    (0, pD.z)(new rD.f(Bz, ((DD, zD) => {
-      let {
-        options: wD
-      } = zD;
-      return az(DD.getProvider("app").getImmediate(), DD.getProvider("installations-internal").getImmediate(), wD)
-    }), "PUBLIC")), (0, pD.z)(new rD.f("analytics-internal", (function(DD) {
-      try {
-        const zD = DD.getProvider(Bz).getImmediate();
-        return {
-          logEvent: (DD, wD, pD) => ww(zD, DD, wD, pD)
-        }
-      } catch (zD) {
-        throw Mz.create("interop-component-reg-failed", {
-          reason: zD
-        })
+        return this
       }
-    }), "PRIVATE")), (0, pD.T)(sw, Kw), (0, pD.T)(sw, Kw, "esm2017")
+      _draw(pp, ip, cp) {
+        if (!this._geometry || !this._geometry.getVertexBuffers() || !this._unIndexed && !this._geometry.getIndexBuffer()) return this;
+        const Op = this.Gl().gy();
+        return this._unIndexed ? Op.drawArraysType(Yp.b.LineListDrawMode, pp.verticesStart, pp.verticesCount, cp) : Op.drawElementsType(Yp.b.LineListDrawMode, pp.indexStart, pp.indexCount, cp), this
+      }
+      dispose(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        (arguments.length > 2 ? arguments[2] : void 0) || (this._ownsMaterial || ip) && this.material?.dispose(!1, !1, !0), super.dispose(pp)
+      }
+      clone(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          cp = arguments.length > 2 ? arguments[2] : void 0;
+        if (ip && void 0 === ip._addToSceneRootNodes) {
+          const cp = ip;
+          return cp.source = this, new Pp(pp, this.Gl(), cp.parent, cp.source, cp.doNotCloneChildren)
+        }
+        return new Pp(pp, this.Gl(), ip, this, cp)
+      }
+      createInstance(pp) {
+        const ip = new Wp(pp, this);
+        if (this.MJ) {
+          ip.MJ = {};
+          for (const pp in this.MJ) ip.MJ[pp] = this.MJ[pp]
+        }
+        return ip
+      }
+      serialize(pp) {
+        super.serialize(pp), pp.color = this.color.BOp(), pp.alpha = this.alpha
+      }
+      static Parse(pp, ip) {
+        const cp = new Pp(pp.name, ip);
+        return cp.color = Ip.d.FromArray(pp.color), cp.alpha = pp.alpha, cp
+      }
+    }
+    Pp.ForceGLSL = !1;
+    class Wp extends Lp.d {
+      constructor(pp, ip) {
+        super(pp, ip), this.intersectionThreshold = ip.intersectionThreshold
+      }
+      getClassName() {
+        return "InstancedLinesMesh"
+      }
+    }
+    let yp = !1;
+
+    function Up() {
+      yp || (yp = !0, xp.d._LinesMeshParser = (pp, ip) => Pp.Parse(pp, ip))
+    }(Op = Pp.prototype).enableEdgesRendering ?? (Op.enableEdgesRendering = (0, Ap.k)("LinesMesh", "enableEdgesRendering")), (op = Wp.prototype).enableEdgesRendering ?? (op.enableEdgesRendering = (0, Ap.k)("InstancedLinesMesh", "enableEdgesRendering"))
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

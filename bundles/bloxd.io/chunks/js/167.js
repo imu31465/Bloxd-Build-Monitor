@@ -1,40 +1,46 @@
 export const id = 167;
 export const ids = [167];
 export const modules = {
-  8964: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      pageBody: () => pD
+  9096: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      pageBody: () => Op
     });
-    const pD = {
-      whatIs: ["What if the mobs had guns, and so did you? Bloxd Survival with Guns takes the classic Bloxd Survival world and adds craftable guns and armed mobs. You still mine, craft and build in a shared multiplayer world. The difference is you can also craft guns and vehicles to defend your base, explore further and take on whatever comes at you."],
-      howToPlay: ["Start off by gathering wood. Your first gun, the M1911, only takes 10 Maple Wood Planks. Mine Messy Stone, iron, gold, diamonds and moonstone to craft stronger Bloxd guns, like the AK-47, the Striker-12, the AWP and even the Minigun.", "Be careful, because the mobs are armed too. Draugr Zombies, Skeletons, Huntresses and Knights all carry guns, and so do Frost mobs and the Cave, Frost and Magma Golems. Tame animals by feeding them and they'll get guns of their own to fight alongside you. Farm pets start off small, while wild and spirit pets carry stronger guns. You can also craft cars, karts, speedboats and hovercraft to get around quickly."],
-      features: ["17 Craftable Guns, from the M1911 to the Minigun", "Armed Mobs That Fight Back", "Tame Pets That Fight with Guns", "Craftable Vehicles: Cars, Karts, Speedboats and Hovercraft", "Salvage Guns Back into Materials", "Gunfights on Top of Mining, Crafting and Base Building", "Persistent Multiplayer World"],
-      tips: ["Make an M1911 from 10 Maple Wood Planks as soon as you spawn", "Mine iron and gold early on to unlock better guns", "Feed a Sheep an Apple to tame it and get your first armed pet", "Save up Diamonds and Gold Bars for a Deagle", "Got guns you don't use anymore? Salvage them to get your materials back", "Build away from spawn, because public lobbies reset the area near it", "Put down a Protector made from diamonds to keep your base safe"],
-      similarGames: ["classic_survival", "shooting", "classic_survivalDayNight", "classic"],
+    const Op = {
+      whatIs: ["All the fun of survival with none of the stress. Bloxd Peaceful Survival is a calm sandbox where you explore a shared block world with other players. You mine, gather, craft and build, and there are no hostile mobs, no PvP and no health bar. Basically it's Survival with the danger turned off."],
+      howToPlay: ["Spawn into the shared world and start collecting resources. Chop some trees, mine for ores, craft better tools and get building on your dream base. Only passive animals spawn, and they've got so little health you can beat them with your fist. Health is switched off for everyone, so nothing can hurt you. Not even other players.", "Build well away from spawn, because the blocks near it reset every few hours. Craft Protectors from diamonds so other players can't break your builds or open your chests. New to Bloxd? Peaceful's a great place to learn mining, crafting and building before you try Survival."],
+      features: ["No Hostile Mobs, No PvP and No Health Bar", "Shared Multiplayer World to Explore with Friends", "Mining, Crafting and Base Building", "Protect Your Land and Chests with Protectors", "Relaxing and Great for New Players and Builders"],
+      tips: ["Pick a spot to build 200+ blocks out, where blocks don't reset every few hours", "Craft a Protector from diamonds to keep your builds and chests safe", "Don't bother with a sword. Passive animals are weak enough to beat with your fist", "Just starting out? Practise mining, crafting and building here before you try Survival", "Fancy some danger and a health bar? Give Survival a go"],
+      similarGames: ["classic_survival", "classic_survivalDayNight", "classic_creative", "skyblock", "oneBlock"],
       faq: [{
-        question: "What is Bloxd Survival with Guns?",
-        answer: "It's Bloxd Survival, but with craftable guns and armed mobs. You mine, craft, build and team up or battle in a shared multiplayer world."
+        question: "What is Bloxd Peaceful?",
+        answer: "It's Bloxd's no-danger survival mode. You explore, build and gather in a shared block world, with no hostile mobs and no health bar."
       }, {
-        question: "How do you make a gun in Bloxd Survival with Guns?",
-        answer: "Craft an M1911 from 10 Maple Wood Planks. Stronger guns need materials like Iron Bars, Gold Bars, Diamonds and Moonstone."
+        question: "Can you die in Bloxd Peaceful?",
+        answer: "No. There's no health bar, so mobs and other players can't hurt you."
       }, {
-        question: "How many guns are there in Survival with Guns?",
-        answer: "17 craftable guns, ranging from the M1911 and MP40 up to the AWP and the Minigun."
+        question: "Is there PvP in Bloxd Peaceful?",
+        answer: "There isn't. Players can't attack each other in Peaceful."
       }, {
-        question: "Do mobs carry guns in Bloxd?",
-        answer: "They do. Each type of hostile mob carries its own guns. Draugr Skeletons have AK-47s and MP40s, for example, and Magma Golems carry a Minigun."
+        question: "Are there mobs in Bloxd Peaceful?",
+        answer: "Only passive animals. None of them can attack you, and you can beat them with your fist."
       }, {
-        question: "Can my pets use guns?",
-        answer: "Yes. Tamed pets get guns and fight by your side. They won't hurt you or your other pets."
+        question: "What's the difference between Peaceful and Survival in Bloxd?",
+        answer: "The world works the same way, with the same mining, crafting and building. Survival has hostile mobs, PvP and a health bar. Peaceful takes all of that away so you can explore and build without worrying."
       }, {
-        question: "Can I turn guns on in a private server?",
-        answer: "Yes. Private servers have a setting that turns on gun crafting and using. When it's on, mobs and pets get guns too."
+        question: "Is Bloxd Peaceful good for beginners?",
+        answer: "Definitely. It's a safe place to learn the basics. If you die early on in Survival, the game will even offer to move you over to Peaceful."
       }, {
-        question: "How is Survival with Guns different from regular Survival?",
-        answer: "The world, mining and building all work the same. On top of that you can craft 17 guns and vehicles, mobs carry guns, and tamed pets fight alongside you with guns of their own."
+        question: "Can I play Bloxd Peaceful with friends?",
+        answer: "Yes. Everyone's in the same shared world, so you can meet up and build together."
+      }, {
+        question: "How do I keep my builds safe in Peaceful?",
+        answer: "Blocks near spawn reset every few hours, so build outside that area (a message shows when you cross its edge). Then put down a Protector and other players won't be able to break your builds or open your chests."
+      }, {
+        question: "How do I save my progress in Bloxd Peaceful?",
+        answer: "Sign in to an account. If you don't, your progress can be lost when your browser's cookies get cleared."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

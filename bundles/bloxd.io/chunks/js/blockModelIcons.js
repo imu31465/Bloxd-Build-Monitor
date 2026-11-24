@@ -1,92 +1,92 @@
 export const id = 4;
 export const ids = [4];
 export const modules = {
-  36406: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      getBlockModelIconUrl: () => UD,
-      hasBlockModelIcon: () => gD
-    });
-    var pD = wD(36395),
-      sD = wD(36386);
-    const KD = wD(36414),
-      rD = new Map(KD.keys().filter((DD => DD.startsWith("./"))).map((DD => [DD.slice(2, -5), DD]))),
-      LD = new Map,
-      cD = new Map;
-
-    function gD(DD) {
-      return rD.has(DD)
-    }
-
-    function RD(DD) {
-      return KD(rD.get(DD))
-    }
-    async function AD(DD, zD, wD) {
-      const {
-        data: pD,
-        texture: KD
-      } = await
-      function(DD) {
-        let zD = LD.get(DD);
-        return zD || (zD = RD(DD).then((async DD => {
-          const zD = new Image;
-          zD.src = DD.texture, await zD.decode();
-          const wD = document.createElement("canvas");
-          wD.width = zD.width, wD.height = zD.height;
-          const pD = wD.getContext("2d");
-          return pD.drawImage(zD, 0, 0), {
-            data: DD,
-            texture: {
-              width: zD.width,
-              height: zD.height,
-              pixels: pD.getImageData(0, 0, zD.width, zD.height).data
-            }
-          }
-        })), zD.catch((() => {
-          LD.delete(DD)
-        })), LD.set(DD, zD)), zD
-      }(DD), rD = document.createElement("canvas");
-      return rD.width = zD, rD.height = zD, rD.getContext("2d").putImageData(new ImageData((0, sD.m)(pD, KD, zD, wD), zD, zD), 0, 0), rD.toDataURL()
-    }
-
-    function UD(DD, zD, wD) {
-      const sD = `${zD}|${wD}|${DD}`;
-      let KD = cD.get(sD);
-      return KD || (KD = (0, pD.h)(DD, (() => RD(DD)), zD, wD).then((pD => null !== pD && void 0 !== pD ? pD : AD(DD, zD, wD))), KD.catch((() => {
-        cD.delete(sD)
-      })), cD.set(sD, KD)), KD
-    }
-  },
-  36414: (DD, zD, wD) => {
-    var pD = {
-      "./Artisan Bench.json": [41093, 275],
-      "./Aspen Item Pedestal.json": [41099, 276],
-      "./Cedar Item Pedestal.json": [41103, 277],
-      "./Cherry Item Pedestal.json": [41108, 278],
-      "./Furnace.json": [41111, 279],
-      "./Jungle Item Pedestal.json": [41113, 280],
-      "./Mango Item Pedestal.json": [41119, 281],
-      "./Palm Item Pedestal.json": [41123, 282],
-      "./Pear Item Pedestal.json": [41128, 283],
-      "./Pine Item Pedestal.json": [41136, 284],
-      "./Plum Item Pedestal.json": [41144, 285],
-      "./Potion Table.json": [41150, 286],
-      "./Salvaging Table.json": [41153, 287],
-      "./Showcase.json": [41160, 288],
-      "./Spectral Item Pedestal.json": [41164, 289],
-      "./Workbench.json": [41171, 290]
+  36642: (pp, ip, cp) => {
+    var Op = {
+      "./Artisan Bench.json": [41402, 280],
+      "./Aspen Item Pedestal.json": [41410, 281],
+      "./Cedar Item Pedestal.json": [41418, 282],
+      "./Cherry Item Pedestal.json": [41427, 283],
+      "./Furnace.json": [41432, 284],
+      "./Jungle Item Pedestal.json": [41440, 285],
+      "./Mango Item Pedestal.json": [41446, 286],
+      "./Palm Item Pedestal.json": [41454, 287],
+      "./Pear Item Pedestal.json": [41461, 288],
+      "./Pine Item Pedestal.json": [41467, 289],
+      "./Plum Item Pedestal.json": [41469, 290],
+      "./Potion Table.json": [41478, 291],
+      "./Salvaging Table.json": [41481, 292],
+      "./Showcase.json": [41484, 293],
+      "./Spectral Item Pedestal.json": [41492, 294],
+      "./Workbench.json": [41498, 295]
     };
 
-    function sD(DD) {
-      if (!wD.o(pD, DD)) return Promise.resolve().then((() => {
-        var zD = new Error("Cannot find module '" + DD + "'");
-        throw zD.code = "MODULE_NOT_FOUND", zD
+    function op(pp) {
+      if (!cp.o(Op, pp)) return Promise.resolve().then((() => {
+        var ip = new Error("Cannot find module '" + pp + "'");
+        throw ip.code = "MODULE_NOT_FOUND", ip
       }));
-      var zD = pD[DD],
-        sD = zD[0];
-      return wD.e(zD[1]).then((() => wD(sD)))
+      var ip = Op[pp],
+        op = ip[0];
+      return cp.e(ip[1]).then((() => cp(op)))
     }
-    sD.keys = () => Object.keys(pD), sD.id = 36414, DD.exports = sD
+    op.keys = () => Object.keys(Op), op.id = 36642, pp.exports = op
+  },
+  36635: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      getBlockModelIconUrl: () => Pp,
+      hasBlockModelIcon: () => Yp
+    });
+    var Op = cp(36622),
+      op = cp(36618);
+    const Ip = cp(36642),
+      Sp = new Map(Ip.keys().filter((pp => pp.startsWith("./"))).map((pp => [pp.slice(2, -5), pp]))),
+      xp = new Map,
+      Lp = new Map;
+
+    function Yp(pp) {
+      return Sp.has(pp)
+    }
+
+    function Dp(pp) {
+      return Ip(Sp.get(pp))
+    }
+    async function Ap(pp, ip, cp) {
+      const {
+        data: Op,
+        texture: Ip
+      } = await
+      function(pp) {
+        let ip = xp.get(pp);
+        return ip || (ip = Dp(pp).then((async pp => {
+          const ip = new Image;
+          ip.src = pp.texture, await ip.decode();
+          const cp = document.createElement("canvas");
+          cp.width = ip.width, cp.height = ip.height;
+          const Op = cp.getContext("2d");
+          return Op.drawImage(ip, 0, 0), {
+            data: pp,
+            texture: {
+              width: ip.width,
+              height: ip.height,
+              pixels: Op.getImageData(0, 0, ip.width, ip.height).data
+            }
+          }
+        })), ip.catch((() => {
+          xp.delete(pp)
+        })), xp.set(pp, ip)), ip
+      }(pp), Sp = document.createElement("canvas");
+      return Sp.width = ip, Sp.height = ip, Sp.getContext("2d").putImageData(new ImageData((0, op.m)(Op, Ip, ip, cp), ip, ip), 0, 0), Sp.toDataURL()
+    }
+
+    function Pp(pp, ip, cp) {
+      const op = `${ip}|${cp}|${pp}`;
+      let Ip = Lp.get(op);
+      return Ip || (Ip = (0, Op.f)(pp, (() => Dp(pp)), ip, cp).then((Op => null !== Op && void 0 !== Op ? Op : Ap(pp, ip, cp))), Ip.catch((() => {
+        Lp.delete(op)
+      })), Lp.set(op, Ip)), Ip
+    }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

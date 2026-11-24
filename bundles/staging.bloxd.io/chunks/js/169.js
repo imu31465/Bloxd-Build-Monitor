@@ -1,37 +1,40 @@
 export const id = 169;
 export const ids = [169];
 export const modules = {
-  8973: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      pageBody: () => pD
+  9110: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      pageBody: () => Op
     });
-    const pD = {
-      whatIs: ["Your own little slice of the world to shape, share and show off. Bloxd Plots gives every player their own plot in a shared creative world. Each plot starts out completely blank, so you can build whatever you like with whoever you like. It's different from the open world of Bloxd Creative because your plot really is yours. Only you and the players you add can change it."],
-      howToPlay: ["Join Plots and claim a plot. Each one is a 91\xd791 block build area, with 5-block-wide roads between the plots. There's no height limit, so build as tall as you dare. You're in creative mode, which means no health to worry about and nothing stopping you from building.", "Want to build with friends? Add them to your plot and they can build with you, or use Go To Shared Plot to visit plots they've shared with you. You can own up to 5 plots and hop between them. Tp To Plot takes you to any plot in the world if you know its coordinates. Change at least 500 blocks and your plot is saved for good."],
-      features: ["Your Own 91\xd791 Plot to Build On", "Own Up to 5 Plots", "No Height Limit", "Add Friends to Build Together", "Teleport to Any Plot with Coordinates", "Plots Saved Forever Once You've Built Enough", "Spawn Mobs on Your Own Plot"],
-      tips: ["Get to 500 changed blocks quickly, because unsaved plots can be reset", "Add Player to Plot lets a friend build with you", "If you don't want someone editing anymore, use Remove Player from Plot", "Starting something new? Get New Plot gives you a fresh one without losing your old build", "Use Tp To Plot to check out other players' plots for ideas", "Keep your build inside the plot edges, since you can't place blocks on the roads", "Place spawner blocks if you want mobs on your plot"],
-      similarGames: ["classic_creative", "greenville", "classic", "parkourPlace"],
+    const Op = {
+      whatIs: ["What if the mobs had guns, and so did you? Bloxd Survival with Guns takes the classic Bloxd Survival world and adds craftable guns and armed mobs. You still mine, craft and build in a shared multiplayer world. The difference is you can also craft guns and vehicles to defend your base, explore further and take on whatever comes at you."],
+      howToPlay: ["Start off by gathering wood. Your first gun, the M1911, only takes 10 Maple Wood Planks. Mine Messy Stone, iron, gold, diamonds and moonstone to craft stronger Bloxd guns, like the AK-47, the Striker-12, the AWP and even the Minigun.", "Be careful, because the mobs are armed too. Draugr Zombies, Skeletons, Huntresses and Knights all carry guns, and so do Frost mobs and the Cave, Frost and Magma Golems. Tame animals by feeding them and they'll get guns of their own to fight alongside you. Farm pets start off small, while wild and spirit pets carry stronger guns. You can also craft cars, karts, speedboats and hovercraft to get around quickly."],
+      features: ["17 Craftable Guns, from the M1911 to the Minigun", "Armed Mobs That Fight Back", "Tame Pets That Fight with Guns", "Craftable Vehicles: Cars, Karts, Speedboats and Hovercraft", "Salvage Guns Back into Materials", "Gunfights on Top of Mining, Crafting and Base Building", "Persistent Multiplayer World"],
+      tips: ["Make an M1911 from 10 Maple Wood Planks as soon as you spawn", "Mine iron and gold early on to unlock better guns", "Feed a Sheep an Apple to tame it and get your first armed pet", "Save up Diamonds and Gold Bars for a Deagle", "Got guns you don't use anymore? Salvage them to get your materials back", "Build away from spawn, because public lobbies reset the area near it", "Put down a Protector made from diamonds to keep your base safe"],
+      similarGames: ["classic_survival", "shooting", "classic_survivalDayNight", "classic"],
       faq: [{
-        question: "What is Bloxd Plots?",
-        answer: "A building mode where you get your own 91\xd791 plot and can build anything you like in creative mode."
+        question: "What is Bloxd Survival with Guns?",
+        answer: "It's Bloxd Survival, but with craftable guns and armed mobs. You mine, craft, build and team up or battle in a shared multiplayer world."
       }, {
-        question: "How do I save my plot in Bloxd Plots?",
-        answer: "Change at least 500 blocks on it. From then on your plot is saved permanently. Plots that haven't been saved yet can be reset."
+        question: "How do you make a gun in Bloxd Survival with Guns?",
+        answer: "Craft an M1911 from 10 Maple Wood Planks. Stronger guns need materials like Iron Bars, Gold Bars, Diamonds and Moonstone."
       }, {
-        question: "How do I build with friends in Bloxd Plots?",
-        answer: "Use Add Player to Plot to give a friend access. They can find it with Go To Shared Plot, and you can remove them whenever you want."
+        question: "How many guns are there in Survival with Guns?",
+        answer: "17 craftable guns, ranging from the M1911 and MP40 up to the AWP and the Minigun."
       }, {
-        question: "Can other players break my build?",
-        answer: "No. Only you and the players you've added can change blocks on your plot. Changed your mind about someone? Use Remove Player from Plot."
+        question: "Do mobs carry guns in Bloxd?",
+        answer: "They do. Each type of hostile mob carries its own guns. Draugr Skeletons have AK-47s and MP40s, for example, and Magma Golems carry a Minigun."
       }, {
-        question: "How big is a plot in Bloxd Plots?",
-        answer: "Each plot is a 91\xd791 block build area with no height limit. Roads 5 blocks wide run between them."
+        question: "Can my pets use guns?",
+        answer: "Yes. Tamed pets get guns and fight by your side. They won't hurt you or your other pets."
       }, {
-        question: "How many plots can one player own?",
-        answer: "Up to 5 each."
+        question: "Can I turn guns on in a private server?",
+        answer: "Yes. Private servers have a setting that turns on gun crafting and using. When it's on, mobs and pets get guns too."
+      }, {
+        question: "How is Survival with Guns different from regular Survival?",
+        answer: "The world, mining and building all work the same. On top of that you can craft 17 guns and vehicles, mobs carry guns, and tamed pets fight alongside you with guns of their own."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

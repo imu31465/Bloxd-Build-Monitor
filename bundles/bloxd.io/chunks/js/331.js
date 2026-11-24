@@ -1,85 +1,175 @@
 export const id = 331;
 export const ids = [331];
 export const modules = {
-  42059: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => rD
+  42298: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Sp
     });
-    var pD = wD(39776);
-    const sD = "bumpFragment",
-      KD = "vec2 uvOffset=vec2(0.0,0.0);\n#if defined(BUMP) || defined(PARALLAX) || defined(DETAIL)\n#ifdef NORMALXYSCALE\nfloat normalScale=1.0;\n#elif defined(BUMP)\nfloat normalScale=vBumpInfos.y;\n#else\nfloat normalScale=1.0;\n#endif\n#if defined(TANGENT) && defined(NORMAL)\nmat3 TBN=vTBN;\n#elif defined(BUMP)\nvec2 TBNUV=gl_FrontFacing ? vBumpUV : -vBumpUV;mat3 TBN=cotangent_frame(normalW*normalScale,vPositionW,TBNUV,vTangentSpaceParams);\n#else\nvec2 TBNUV=gl_FrontFacing ? vDetailUV : -vDetailUV;mat3 TBN=cotangent_frame(normalW*normalScale,vPositionW,TBNUV,vec2(1.,1.));\n#endif\n#elif defined(ANISOTROPIC)\n#if defined(TANGENT) && defined(NORMAL)\nmat3 TBN=vTBN;\n#else\nvec2 TBNUV=gl_FrontFacing ? vMainUV1 : -vMainUV1;mat3 TBN=cotangent_frame(normalW,vPositionW,TBNUV,vec2(1.,1.));\n#endif\n#endif\n#ifdef PARALLAX\nmat3 invTBN=transposeMat3(TBN);\n#ifdef PARALLAXOCCLUSION\nuvOffset=parallaxOcclusion(invTBN*-viewDirectionW,invTBN*normalW,vBumpUV,vBumpInfos.z);\n#else\nuvOffset=parallaxOffset(invTBN*viewDirectionW,vBumpInfos.z);\n#endif\n#endif\n#ifdef DETAIL\nvec4 detailColor=texture2D(detailSampler,vDetailUV+uvOffset);vec2 detailNormalRG=detailColor.wy*2.0-1.0;float detailNormalB=sqrt(1.-saturate(dot(detailNormalRG,detailNormalRG)));vec3 detailNormal=vec3(detailNormalRG,detailNormalB);\n#endif\n#ifdef BUMP\n#ifdef OBJECTSPACE_NORMALMAP\n#define CUSTOM_FRAGMENT_BUMP_FRAGMENT\nnormalW=normalize(TEXRD(bumpSampler,vBumpUV).xyz *2.0-1.0);normalW=normalize(mat3(normalMatrix)*normalW);\n#elif !defined(DETAIL)\nnormalW=perturbNormal(TBN,TEXRD(bumpSampler,vBumpUV+uvOffset).xyz,vBumpInfos.y);\n#else\nvec3 bumpNormal=TEXRD(bumpSampler,vBumpUV+uvOffset).xyz*2.0-1.0;\n#if DETAIL_NORMALBLENDMETHOD==0 \ndetailNormal.xy*=vDetailInfos.z;vec3 blendedNormal=normalize(vec3(bumpNormal.xy+detailNormal.xy,bumpNormal.z*detailNormal.z));\n#elif DETAIL_NORMALBLENDMETHOD==1 \ndetailNormal.xy*=vDetailInfos.z;bumpNormal+=vec3(0.0,0.0,1.0);detailNormal*=vec3(-1.0,-1.0,1.0);vec3 blendedNormal=bumpNormal*dot(bumpNormal,detailNormal)/bumpNormal.z-detailNormal;\n#endif\nnormalW=perturbNormalBase(TBN,blendedNormal,vBumpInfos.y);\n#endif\n#elif defined(DETAIL)\ndetailNormal.xy*=vDetailInfos.z;normalW=perturbNormalBase(TBN,detailNormal,vDetailInfos.z);\n#endif\n";
-    pD.e.IncludesShadersStore[sD] || (pD.e.IncludesShadersStore[sD] = KD);
-    const rD = {
-      name: sD,
-      shader: KD
+    var Op = cp(40062);
+    const op = "bakedVertexAnimation",
+      Ip = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\n{\n#ifdef INSTANCES\n#define BVASNAME bakedVertexAnimationSettingsInstanced\n#else\n#define BVASNAME bakedVertexAnimationSettings\n#endif\nfloat VATStartFrame=BVASNAME.x;float VATEndFrame=BVASNAME.y;float VATOffsetFrame=BVASNAME.z;float VATSpeed=BVASNAME.w;float totalFrames=VATEndFrame-VATStartFrame+1.0;float time=bakedVertexAnimationTime*VATSpeed/totalFrames;float frameCorrection=time<1.0 ? 0.0 : 1.0;float numOfFrames=totalFrames-frameCorrection;float VATFrameNum=fract(time)*numOfFrames;VATFrameNum=mod(VATFrameNum+VATOffsetFrame,numOfFrames);VATFrameNum=floor(VATFrameNum);VATFrameNum+=VATStartFrame+frameCorrection;mat4 VATInfluence;VATInfluence=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[0],VATFrameNum)*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[1],VATFrameNum)*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[2],VATFrameNum)*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndices[3],VATFrameNum)*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[0],VATFrameNum)*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[1],VATFrameNum)*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[2],VATFrameNum)*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\nVATInfluence+=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,matricesIndicesExtra[3],VATFrameNum)*matricesWeightsExtra[3];\n#endif\nfinalWorld=finalWorld*VATInfluence;}\n#endif\n";
+    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
     }
   },
-  42038: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => rD
+  42182: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Sp
     });
-    var pD = wD(39776);
-    wD(42008);
-    const sD = "bumpFragmentFunctions",
-      KD = "#if defined(BUMP)\n#include<samplerFragmentDeclaration>(_DEFINENAME_,BUMP,_VARYINGNAME_,Bump,_SAMPLERNAME_,bump)\n#endif\n#if defined(DETAIL)\n#include<samplerFragmentDeclaration>(_DEFINENAME_,DETAIL,_VARYINGNAME_,Detail,_SAMPLERNAME_,detail)\n#endif\n#if defined(BUMP) && defined(PARALLAX)\nconst float minSamples=4.;const float maxSamples=15.;const int iMaxSamples=15;vec2 parallaxOcclusion(vec3 vViewDirCoT,vec3 vNormalCoT,vec2 texCoord,float parallaxScale) {float parallaxLimit=length(vViewDirCoT.xy)/vViewDirCoT.z;parallaxLimit*=parallaxScale;vec2 vOffsetDir=normalize(vViewDirCoT.xy);vec2 vMaxOffset=vOffsetDir*parallaxLimit;float numSamples=maxSamples+(dot(vViewDirCoT,vNormalCoT)*(minSamples-maxSamples));float stepSize=1.0/numSamples;float currRayHeight=1.0;vec2 vCurrOffset=vec2(0,0);vec2 vLastOffset=vec2(0,0);float lastSampledHeight=1.0;float currSampledHeight=1.0;bool keepWorking=true;for (int i=0; i<iMaxSamples; i++)\n{currSampledHeight=texture2D(bumpSampler,texCoord+vCurrOffset).w;if (!keepWorking)\n{}\nelse if (currSampledHeight>currRayHeight)\n{float delta1=currSampledHeight-currRayHeight;float delta2=(currRayHeight+stepSize)-lastSampledHeight;float ratio=delta1/(delta1+delta2);vCurrOffset=(ratio)* vLastOffset+(1.0-ratio)*vCurrOffset;keepWorking=false;}\nelse\n{currRayHeight-=stepSize;vLastOffset=vCurrOffset;\n#ifdef PARALLAX_RHS\nvCurrOffset-=stepSize*vMaxOffset;\n#else\nvCurrOffset+=stepSize*vMaxOffset;\n#endif\nlastSampledHeight=currSampledHeight;}}\nreturn vCurrOffset;}\nvec2 parallaxOffset(vec3 viewDir,float heightScale)\n{float height=texture2D(bumpSampler,vBumpUV).w;vec2 texCoordOffset=heightScale*viewDir.xy*height;\n#ifdef PARALLAX_RHS\nreturn texCoordOffset;\n#else\nreturn -texCoordOffset;\n#endif\n}\n#endif\n";
-    pD.e.IncludesShadersStore[sD] || (pD.e.IncludesShadersStore[sD] = KD);
-    const rD = {
-      name: sD,
-      shader: KD
+    var Op = cp(40062);
+    const op = "bakedVertexAnimationDeclaration",
+      Ip = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\nuniform float bakedVertexAnimationTime;\n#if !defined(WEBGL2) && !defined(WEBGPU)\nuniform vec2 bakedVertexAnimationTextureSizeInverted;\n#endif\nuniform vec4 bakedVertexAnimationSettings;uniform sampler2D bakedVertexAnimationTexture;\n#ifdef INSTANCES\nattribute vec4 bakedVertexAnimationSettingsInstanced;\n#endif\n#define inline\nmat4 readMatrixFromRawSamplerVAT(sampler2D smp,float index,float frame)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4;int frameUV=int(frame);vec4 m0=texelFetch(smp,ivec2(offset+0,frameUV),0);vec4 m1=texelFetch(smp,ivec2(offset+1,frameUV),0);vec4 m2=texelFetch(smp,ivec2(offset+2,frameUV),0);vec4 m3=texelFetch(smp,ivec2(offset+3,frameUV),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float frameUV=(frame+0.5)*bakedVertexAnimationTextureSizeInverted.y;float dx=bakedVertexAnimationTextureSizeInverted.x;vec4 m0=texture2D(smp,vec2(dx*(offset+0.5),frameUV));vec4 m1=texture2D(smp,vec2(dx*(offset+1.5),frameUV));vec4 m2=texture2D(smp,vec2(dx*(offset+2.5),frameUV));vec4 m3=texture2D(smp,vec2(dx*(offset+3.5),frameUV));return mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n";
+    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
     }
   },
-  42029: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => rD
+  42178: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Sp
     });
-    var pD = wD(39776);
-    const sD = "bumpFragmentMainFunctions",
-      KD = "#ifndef TEXRD_DEFINED\n#define TEXRD(s,uv) texture2D(s,uv)\n#define TEXRD_DEFINED\n#endif\n#if defined(BUMP) || defined(CLEARCOAT_BUMP) || defined(ANISOTROPIC) || defined(DETAIL)\n#if defined(TANGENT) && defined(NORMAL) \nvarying mat3 vTBN;\n#endif\n#ifdef OBJECTSPACE_NORMALMAP\nuniform mat4 normalMatrix;\n#if defined(WEBGL2) || defined(WEBGPU)\nmat4 toNormalMatrix(mat4 wMatrix)\n{mat4 ret=inverse(wMatrix);ret=transpose(ret);ret[0][3]=0.;ret[1][3]=0.;ret[2][3]=0.;ret[3]=vec4(0.,0.,0.,1.);return ret;}\n#else\nmat4 toNormalMatrix(mat4 m)\n{float\na00=m[0][0],a01=m[0][1],a02=m[0][2],a03=m[0][3],\na10=m[1][0],a11=m[1][1],a12=m[1][2],a13=m[1][3],\na20=m[2][0],a21=m[2][1],a22=m[2][2],a23=m[2][3],\na30=m[3][0],a31=m[3][1],a32=m[3][2],a33=m[3][3],\nb00=a00*a11-a01*a10,\nb01=a00*a12-a02*a10,\nb02=a00*a13-a03*a10,\nb03=a01*a12-a02*a11,\nb04=a01*a13-a03*a11,\nb05=a02*a13-a03*a12,\nb06=a20*a31-a21*a30,\nb07=a20*a32-a22*a30,\nb08=a20*a33-a23*a30,\nb09=a21*a32-a22*a31,\nb10=a21*a33-a23*a31,\nb11=a22*a33-a23*a32,\ndet=b00*b11-b01*b10+b02*b09+b03*b08-b04*b07+b05*b06;mat4 mi=mat4(\na11*b11-a12*b10+a13*b09,\na02*b10-a01*b11-a03*b09,\na31*b05-a32*b04+a33*b03,\na22*b04-a21*b05-a23*b03,\na12*b08-a10*b11-a13*b07,\na00*b11-a02*b08+a03*b07,\na32*b02-a30*b05-a33*b01,\na20*b05-a22*b02+a23*b01,\na10*b10-a11*b08+a13*b06,\na01*b08-a00*b10-a03*b06,\na30*b04-a31*b02+a33*b00,\na21*b02-a20*b04-a23*b00,\na11*b07-a10*b09-a12*b06,\na00*b09-a01*b07+a02*b06,\na31*b01-a30*b03-a32*b00,\na20*b03-a21*b01+a22*b00)/det;return mat4(mi[0][0],mi[1][0],mi[2][0],mi[3][0],\nmi[0][1],mi[1][1],mi[2][1],mi[3][1],\nmi[0][2],mi[1][2],mi[2][2],mi[3][2],\nmi[0][3],mi[1][3],mi[2][3],mi[3][3]);}\n#endif\n#endif\nvec3 perturbNormalBase(mat3 cotangentFrame,vec3 normal,float scale)\n{\n#ifdef NORMALXYSCALE\nnormal=normalize(normal*vec3(scale,scale,1.0));\n#endif\nreturn normalize(cotangentFrame*normal);}\nvec3 perturbNormal(mat3 cotangentFrame,vec3 textureSample,float scale)\n{return perturbNormalBase(cotangentFrame,textureSample*2.0-1.0,scale);}\nmat3 cotangent_frame(vec3 normal,vec3 p,vec2 uv,vec2 tangentSpaceParams)\n{vec3 dp1=dFdx(p);vec3 dp2=dFdy(p);vec2 duv1=dFdx(uv);vec2 duv2=dFdy(uv);vec3 dp2perp=cross(dp2,normal);vec3 dp1perp=cross(normal,dp1);vec3 tangent=dp2perp*duv1.x+dp1perp*duv2.x;vec3 bitangent=dp2perp*duv1.y+dp1perp*duv2.y;tangent*=tangentSpaceParams.x;bitangent*=tangentSpaceParams.y;float det=max(dot(tangent,tangent),dot(bitangent,bitangent));float invmax=det==0.0 ? 0.0 : inversesqrt(det);return mat3(tangent*invmax,bitangent*invmax,normal);}\n#endif\n";
-    pD.e.IncludesShadersStore[sD] || (pD.e.IncludesShadersStore[sD] = KD);
-    const rD = {
-      name: sD,
-      shader: KD
+    var Op = cp(40062);
+    const op = "bonesDeclaration",
+      Ip = "#if NUM_BONE_INFLUENCERS>0\nattribute vec4 matricesIndices;attribute vec4 matricesWeights;\n#if NUM_BONE_INFLUENCERS>4\nattribute vec4 matricesIndicesExtra;attribute vec4 matricesWeightsExtra;\n#endif\n#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#ifdef BONETEXTURE\nuniform highp sampler2D boneSampler;uniform vec2 boneTextureInfo;\n#else\nuniform mat4 mBones[BonesPerMesh];\n#endif\n#ifdef BONES_VELOCITY_ENABLED\nuniform mat4 mPreviousBones[BonesPerMesh];\n#endif\n#ifdef BONETEXTURE\n#define inline\nmat4 readMatrixFromRawSampler(sampler2D smp,float index)\n{\n#if defined(WEBGL2) || defined(WEBGPU)\nint offset=int(index)*4; \nint textureWidth=int(boneTextureInfo.x);int y=int(offset)/textureWidth;int x=int(offset) % textureWidth;vec4 m0=texelFetch(smp,ivec2(x+0,y),0);vec4 m1=texelFetch(smp,ivec2(x+1,y),0);vec4 m2=texelFetch(smp,ivec2(x+2,y),0);vec4 m3=texelFetch(smp,ivec2(x+3,y),0);return mat4(m0,m1,m2,m3);\n#else\nfloat offset=index*4.0;float y=floor(offset/boneTextureInfo.x);float x=offset-y*boneTextureInfo.x;float dy=1.0/boneTextureInfo.y;float dx=1.0/boneTextureInfo.x;vec4 m0=texture2D(smp,vec2(dx*(x+0.5),dy*(y+0.5)));vec4 m1=texture2D(smp,vec2(dx*(x+1.5),dy*(y+0.5)));vec4 m2=texture2D(smp,vec2(dx*(x+2.5),dy*(y+0.5)));vec4 m3=texture2D(smp,vec2(dx*(x+3.5),dy*(y+0.5))); \nreturn mat4(m0,m1,m2,m3);\n#endif\n}\n#endif\n#endif\n#endif\n";
+    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
     }
   },
-  41997: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => rD
+  42291: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Sp
     });
-    var pD = wD(39776);
-    const sD = "clusteredLightingFunctions",
-      KD = "struct ClusteredLight {vec4 vLightData;vec4 vLightDiffuse;vec4 vLightSpecular;vec4 vLightDirection;vec4 vLightFalloff;};\n#define inline\nClusteredLight getClusteredLight(sampler2D lightDataTexture,int index) {return ClusteredLight(\ntexelFetch(lightDataTexture,ivec2(0,index),0),\ntexelFetch(lightDataTexture,ivec2(1,index),0),\ntexelFetch(lightDataTexture,ivec2(2,index),0),\ntexelFetch(lightDataTexture,ivec2(3,index),0),\ntexelFetch(lightDataTexture,ivec2(4,index),0)\n);}\nint getClusteredSliceIndex(vec2 sliceData,float viewDepth) {return int(log(viewDepth)*sliceData.x+sliceData.y);}\n";
-    pD.e.IncludesShadersStore[sD] || (pD.e.IncludesShadersStore[sD] = KD);
-    const rD = {
-      name: sD,
-      shader: KD
+    var Op = cp(40062);
+    const op = "bonesVertex",
+      Ip = "#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#if NUM_BONE_INFLUENCERS>0\nmat4 influence;\n#ifdef BONETEXTURE\ninfluence=readMatrixFromRawSampler(boneSampler,matricesIndices[0])*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[1])*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[2])*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndices[3])*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[0])*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[1])*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[2])*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=readMatrixFromRawSampler(boneSampler,matricesIndicesExtra[3])*matricesWeightsExtra[3];\n#endif\n#else\ninfluence=mBones[int(matricesIndices[0])]*matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence+=mBones[int(matricesIndices[1])]*matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\ninfluence+=mBones[int(matricesIndices[2])]*matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\ninfluence+=mBones[int(matricesIndices[3])]*matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\ninfluence+=mBones[int(matricesIndicesExtra[0])]*matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\ninfluence+=mBones[int(matricesIndicesExtra[1])]*matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\ninfluence+=mBones[int(matricesIndicesExtra[2])]*matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\ninfluence+=mBones[int(matricesIndicesExtra[3])]*matricesWeightsExtra[3];\n#endif\n#endif\nfinalWorld=finalWorld*influence;\n#endif\n#endif\n";
+    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
     }
   },
-  42064: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => rD
+  42319: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Sp
     });
-    var pD = wD(39776);
-    const sD = "decalFragment",
-      KD = "#ifdef DECAL\n#ifdef GAMMADECAL\ndecalColor.rgb=toLinearSpace(decalColor.rgb);\n#endif\n#ifdef DECAL_SMOOTHALPHA\ndecalColor.a*=decalColor.a;\n#endif\nsurfaceAlbedo.rgb=mix(surfaceAlbedo.rgb,decalColor.rgb,decalColor.a);\n#endif\n";
-    pD.e.IncludesShadersStore[sD] || (pD.e.IncludesShadersStore[sD] = KD);
-    const rD = {
-      name: sD,
-      shader: KD
+    var Op = cp(40062);
+    const op = "clipPlaneVertex",
+      Ip = "#ifdef CLIPPLANE\nfClipDistance=dot(worldPos,vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nfClipDistance2=dot(worldPos,vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nfClipDistance3=dot(worldPos,vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nfClipDistance4=dot(worldPos,vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nfClipDistance5=dot(worldPos,vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nfClipDistance6=dot(worldPos,vClipPlane6);\n#endif\n";
+    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
     }
   },
-  42068: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => rD
+  42226: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Sp
     });
-    var pD = wD(39776);
-    const sD = "lightFragment",
-      KD = "#ifdef LIGHT{X}\n#if defined(SHADOWONLY) || defined(LIGHTMAP) && defined(LIGHTMAPEXCLUDED{X}) && defined(LIGHTMAPNOSPECULAR{X})\n#else\nvec4 diffuse{X}=light{X}.vLightDiffuse;\n#define CUSTOM_LIGHT{X}_COLOR \n#if defined(PBR) && defined(CLUSTLIGHT{X}) && defined(CLUSTLIGHT_BATCH) && CLUSTLIGHT_BATCH>0\n{int sliceIndex=min(getClusteredSliceIndex(light{X}.vSliceData,vViewDepth),CLUSTLIGHT_SLICES-1);info=computeClusteredLighting(\nlightDataTexture{X},\ntileMaskTexture{X},\nlight{X}.vLightData,\nivec2(light{X}.vSliceRanges[sliceIndex]),\nviewDirectionW,\nnormalW,\nvPositionW,\nsurfaceAlbedo,\nreflectivityOut\n#ifdef IRIDESCENCE\n,iridescenceIntensity\n#endif\n#ifdef SS_TRANSLUCENCY\n,subSurfaceOut\n#endif\n#ifdef SPECULARTERM\n,AARoughnessFactors.x\n#endif\n#ifdef ANISOTROPIC\n,anisotropicOut\n#endif\n#ifdef SHEEN\n,sheenOut\n#endif\n#ifdef CLEARCOAT\n,clearcoatOut\n#endif\n);}\n#elif defined(PBR)\n#ifdef SPOTLIGHT{X}\npreInfo=computePointAndSpotPreLightingInfo(light{X}.vLightData,viewDirectionW,normalW,vPositionW);\n#elif defined(POINTLIGHT{X})\npreInfo=computePointAndSpotPreLightingInfo(light{X}.vLightData,viewDirectionW,normalW,vPositionW);\n#elif defined(HEMILIGHT{X})\npreInfo=computeHemisphericPreLightingInfo(light{X}.vLightData,viewDirectionW,normalW);\n#elif defined(DIRLIGHT{X})\npreInfo=computeDirectionalPreLightingInfo(light{X}.vLightData,viewDirectionW,normalW);\n#elif defined(AREALIGHT{X}) && defined(AREALIGHTUSED) && defined(AREALIGHTSUPPORTED)\n#if defined(RECTAREALIGHTEMISSIONTEXTURE{X})\npreInfo=computeAreaPreLightingInfoWithTexture(areaLightsLTC1Sampler,areaLightsLTC2Sampler,rectAreaLightEmissionTexture{X},viewDirectionW,normalW,vPositionW,light{X}.vLightData,light{X}.vLightWidth.xyz,light{X}.vLightHeight.xyz,roughness);\n#else\npreInfo=computeAreaPreLightingInfo(areaLightsLTC1Sampler,areaLightsLTC2Sampler,viewDirectionW,normalW,vPositionW,light{X}.vLightData,light{X}.vLightWidth.xyz,light{X}.vLightHeight.xyz,roughness);\n#endif\n#endif\npreInfo.NdotV=NdotV;\n#ifdef SPOTLIGHT{X}\n#ifdef LIGHT_FALLOFF_GLTF{X}\npreInfo.attenuation=computeDistanceLightFalloff_GLTF(preInfo.lightDistanceSquared,light{X}.vLightFalloff.y);\n#ifdef IESLIGHTTEXTURE{X}\npreInfo.attenuation*=computeDirectionalLightFalloff_IES(light{X}.vLightDirection.xyz,preInfo.L,iesLightTexture{X});\n#else\npreInfo.attenuation*=computeDirectionalLightFalloff_GLTF(light{X}.vLightDirection.xyz,preInfo.L,light{X}.vLightFalloff.z,light{X}.vLightFalloff.w);\n#endif\n#elif defined(LIGHT_FALLOFF_PHYSICAL{X})\npreInfo.attenuation=computeDistanceLightFalloff_Physical(preInfo.lightDistanceSquared);\n#ifdef IESLIGHTTEXTURE{X}\npreInfo.attenuation*=computeDirectionalLightFalloff_IES(light{X}.vLightDirection.xyz,preInfo.L,iesLightTexture{X});\n#else\npreInfo.attenuation*=computeDirectionalLightFalloff_Physical(light{X}.vLightDirection.xyz,preInfo.L,light{X}.vLightDirection.w);\n#endif\n#elif defined(LIGHT_FALLOFF_STANDARD{X})\npreInfo.attenuation=computeDistanceLightFalloff_Standard(preInfo.lightOffset,light{X}.vLightFalloff.x);\n#ifdef IESLIGHTTEXTURE{X}\npreInfo.attenuation*=computeDirectionalLightFalloff_IES(light{X}.vLightDirection.xyz,preInfo.L,iesLightTexture{X});\n#else\npreInfo.attenuation*=computeDirectionalLightFalloff_Standard(light{X}.vLightDirection.xyz,preInfo.L,light{X}.vLightDirection.w,light{X}.vLightData.w);\n#endif\n#else\npreInfo.attenuation=computeDistanceLightFalloff(preInfo.lightOffset,preInfo.lightDistanceSquared,light{X}.vLightFalloff.x,light{X}.vLightFalloff.y);\n#ifdef IESLIGHTTEXTURE{X}\npreInfo.attenuation*=computeDirectionalLightFalloff_IES(light{X}.vLightDirection.xyz,preInfo.L,iesLightTexture{X});\n#else\npreInfo.attenuation*=computeDirectionalLightFalloff(light{X}.vLightDirection.xyz,preInfo.L,light{X}.vLightDirection.w,light{X}.vLightData.w,light{X}.vLightFalloff.z,light{X}.vLightFalloff.w);\n#endif\n#endif\n#elif defined(POINTLIGHT{X})\n#ifdef LIGHT_FALLOFF_GLTF{X}\npreInfo.attenuation=computeDistanceLightFalloff_GLTF(preInfo.lightDistanceSquared,light{X}.vLightFalloff.y);\n#elif defined(LIGHT_FALLOFF_PHYSICAL{X})\npreInfo.attenuation=computeDistanceLightFalloff_Physical(preInfo.lightDistanceSquared);\n#elif defined(LIGHT_FALLOFF_STANDARD{X})\npreInfo.attenuation=computeDistanceLightFalloff_Standard(preInfo.lightOffset,light{X}.vLightFalloff.x);\n#else\npreInfo.attenuation=computeDistanceLightFalloff(preInfo.lightOffset,preInfo.lightDistanceSquared,light{X}.vLightFalloff.x,light{X}.vLightFalloff.y);\n#endif\n#else\npreInfo.attenuation=1.0;\n#endif\n#if defined(HEMILIGHT{X})\npreInfo.roughness=roughness;\n#elif defined(AREALIGHT{X}) && defined(AREALIGHTUSED) && defined(AREALIGHTSUPPORTED)\npreInfo.roughness=roughness;\n#else\npreInfo.roughness=adjustRoughnessFromLightProperties(roughness,light{X}.vLightSpecular.a,preInfo.lightDistance);\n#endif\npreInfo.diffuseRoughness=diffuseRoughness;preInfo.surfaceAlbedo=surfaceAlbedo;\n#ifdef IRIDESCENCE\npreInfo.iridescenceIntensity=iridescenceIntensity;\n#endif\n#ifdef SS_TRANSLUCENCY\ninfo.diffuseTransmission=vec3(0.0);\n#endif\n#ifdef HEMILIGHT{X}\ninfo.diffuse=computeHemisphericDiffuseLighting(preInfo,diffuse{X}.rgb,light{X}.vLightGround);\n#elif defined(AREALIGHT{X}) && defined(AREALIGHTUSED) && defined(AREALIGHTSUPPORTED)\ninfo.diffuse=computeAreaDiffuseLighting(preInfo,diffuse{X}.rgb);\n#elif defined(SS_TRANSLUCENCY)\n#ifndef SS_TRANSLUCENCY_LEGACY\ninfo.diffuse=computeDiffuseLighting(preInfo,diffuse{X}.rgb)*(1.0-subSurfaceOut.translucencyIntensity);info.diffuseTransmission=computeDiffuseTransmittedLighting(preInfo,diffuse{X}.rgb,subSurfaceOut.transmittance); \n#else\ninfo.diffuse=computeDiffuseTransmittedLighting(preInfo,diffuse{X}.rgb,subSurfaceOut.transmittance);\n#endif\n#else\ninfo.diffuse=computeDiffuseLighting(preInfo,diffuse{X}.rgb);\n#endif\n#ifdef SPECULARTERM\n#if defined(AREALIGHT{X}) && defined(AREALIGHTUSED) && defined(AREALIGHTSUPPORTED)\ninfo.specular=computeAreaSpecularLighting(preInfo,light{X}.vLightSpecular.rgb,clearcoatOut.specularEnvironmentR0,reflectivityOut.colorReflectanceF90);\n#else\n#if (CONDUCTOR_SPECULAR_MODEL==CONDUCTOR_SPECULAR_MODEL_OPENPBR)\n{vec3 metalFresnel=reflectivityOut.specularWeight*getF82Specular(preInfo.VdotH,clearcoatOut.specularEnvironmentR0,reflectivityOut.colorReflectanceF90,reflectivityOut.roughness);vec3 dielectricFresnel=fresnelSchlickGGX(preInfo.VdotH,reflectivityOut.dielectricColorF0,reflectivityOut.colorReflectanceF90);coloredFresnel=mix(dielectricFresnel,metalFresnel,reflectivityOut.metallic);}\n#else\ncoloredFresnel=fresnelSchlickGGX(preInfo.VdotH,clearcoatOut.specularEnvironmentR0,reflectivityOut.colorReflectanceF90);\n#endif\n#ifndef LEGACY_SPECULAR_ENERGY_CONSERVATION\n{float NdotH=dot(normalW,preInfo.H);vec3 fresnel=fresnelSchlickGGX(NdotH,vec3(reflectanceF0),specularEnvironmentR90);info.diffuse*=(vec3(1.0)-fresnel);}\n#endif\n#ifdef ANISOTROPIC\ninfo.specular=computeAnisotropicSpecularLighting(preInfo,viewDirectionW,normalW,anisotropicOut.anisotropicTangent,anisotropicOut.anisotropicBitangent,anisotropicOut.anisotropy,clearcoatOut.specularEnvironmentR0,specularEnvironmentR90,AARoughnessFactors.x,diffuse{X}.rgb);\n#else\ninfo.specular=computeSpecularLighting(preInfo,normalW,clearcoatOut.specularEnvironmentR0,coloredFresnel,AARoughnessFactors.x,diffuse{X}.rgb);\n#endif\n#endif\n#endif\n#ifndef AREALIGHT{X}\n#ifdef SHEEN\n#ifdef SHEEN_LINKWITHALBEDO\npreInfo.roughness=sheenOut.sheenIntensity;\n#else\n#ifdef HEMILIGHT{X}\npreInfo.roughness=sheenOut.sheenRoughness;\n#else\npreInfo.roughness=adjustRoughnessFromLightProperties(sheenOut.sheenRoughness,light{X}.vLightSpecular.a,preInfo.lightDistance);\n#endif\n#endif\ninfo.sheen=computeSheenLighting(preInfo,normalW,sheenOut.sheenColor,specularEnvironmentR90,AARoughnessFactors.x,diffuse{X}.rgb);\n#endif\n#ifdef CLEARCOAT\n#ifdef HEMILIGHT{X}\npreInfo.roughness=clearcoatOut.clearCoatRoughness;\n#else\npreInfo.roughness=adjustRoughnessFromLightProperties(clearcoatOut.clearCoatRoughness,light{X}.vLightSpecular.a,preInfo.lightDistance);\n#endif\ninfo.clearCoat=computeClearCoatLighting(preInfo,clearcoatOut.clearCoatNormalW,clearcoatOut.clearCoatAARoughnessFactors.x,clearcoatOut.clearCoatIntensity,diffuse{X}.rgb);\n#ifdef CLEARCOAT_TINT\nabsorption=computeClearCoatLightingAbsorption(clearcoatOut.clearCoatNdotVRefract,preInfo.L,clearcoatOut.clearCoatNormalW,clearcoatOut.clearCoatColor,clearcoatOut.clearCoatThickness,clearcoatOut.clearCoatIntensity);info.diffuse*=absorption;\n#ifdef SS_TRANSLUCENCY\ninfo.diffuseTransmission*=absorption;\n#endif\n#ifdef SPECULARTERM\ninfo.specular*=absorption;\n#endif\n#endif\ninfo.diffuse*=info.clearCoat.w;\n#ifdef SS_TRANSLUCENCY\ninfo.diffuseTransmission*=info.clearCoat.w;\n#endif\n#ifdef SPECULARTERM\ninfo.specular*=info.clearCoat.w;\n#endif\n#ifdef SHEEN\ninfo.sheen*=info.clearCoat.w;\n#endif\n#endif\n#endif\n#else\n#ifdef SPOTLIGHT{X}\n#ifdef IESLIGHTTEXTURE{X}\ninfo=computeIESSpotLighting(viewDirectionW,normalW,light{X}.vLightData,light{X}.vLightDirection,diffuse{X}.rgb,light{X}.vLightSpecular.rgb,diffuse{X}.a,glossiness,iesLightTexture{X});\n#else\ninfo=computeSpotLighting(viewDirectionW,normalW,light{X}.vLightData,light{X}.vLightDirection,diffuse{X}.rgb,light{X}.vLightSpecular.rgb,diffuse{X}.a,glossiness);\n#endif\n#elif defined(HEMILIGHT{X})\ninfo=computeHemisphericLighting(viewDirectionW,normalW,light{X}.vLightData,diffuse{X}.rgb,light{X}.vLightSpecular.rgb,light{X}.vLightGround,glossiness);\n#elif defined(POINTLIGHT{X}) || defined(DIRLIGHT{X})\ninfo=computeLighting(viewDirectionW,normalW,light{X}.vLightData,diffuse{X}.rgb,light{X}.vLightSpecular.rgb,diffuse{X}.a,glossiness);\n#elif defined(AREALIGHT{X}) && defined(AREALIGHTUSED) && defined(AREALIGHTSUPPORTED)\n#if defined(RECTAREALIGHTEMISSIONTEXTURE{X})\ninfo=computeAreaLightingWithTexture(areaLightsLTC1Sampler,areaLightsLTC2Sampler,rectAreaLightEmissionTexture{X},viewDirectionW,normalW,vPositionW,light{X}.vLightData.xyz,light{X}.vLightWidth.rgb,light{X}.vLightHeight.rgb,diffuse{X}.rgb,light{X}.vLightSpecular.rgb,\n#ifdef AREALIGHTNOROUGHTNESS\n0.5\n#else\nvReflectionInfos.y\n#endif\n#else\ninfo=computeAreaLighting(areaLightsLTC1Sampler,areaLightsLTC2Sampler,viewDirectionW,normalW,vPositionW,light{X}.vLightData.xyz,light{X}.vLightWidth.rgb,light{X}.vLightHeight.rgb,diffuse{X}.rgb,light{X}.vLightSpecular.rgb,\n#ifdef AREALIGHTNOROUGHTNESS\n0.5\n#else\nvReflectionInfos.y\n#endif\n#endif\n);\n#elif defined(CLUSTLIGHT{X}) && CLUSTLIGHT_BATCH>0\n{int sliceIndex=min(getClusteredSliceIndex(light{X}.vSliceData,vViewDepth),CLUSTLIGHT_SLICES-1);info=computeClusteredLighting(lightDataTexture{X},tileMaskTexture{X},viewDirectionW,normalW,light{X}.vLightData,ivec2(light{X}.vSliceRanges[sliceIndex]),glossiness);}\n#endif\n#endif\n#ifdef PROJECTEDLIGHTTEXTURE{X}\ninfo.diffuse*=computeProjectionTextureDiffuseLighting(projectionLightTexture{X},textureProjectionMatrix{X},vPositionW);\n#endif\n#endif\n#ifdef SHADOW{X}\n#ifdef SHADOWCSM{X}\nfor (int i=0; i<SHADOWCSMNUM_CASCADES{X}; i++)\n{\n#ifdef SHADOWCSM_RIGHTHANDED{X}\ndiff{X}=viewFrustumZ{X}[i]+vPositionFromCamera{X}.z;\n#else\ndiff{X}=viewFrustumZ{X}[i]-vPositionFromCamera{X}.z;\n#endif\nif (diff{X}>=0.) {index{X}=i;break;}}\n#ifdef SHADOWCSMUSESHADOWMAXZ{X}\nif (index{X}>=0)\n#endif\n{\n#if defined(SHADOWPCF{X})\n#if defined(SHADOWLOWQUALITY{X})\nshadow=computeShadowWithCSMPCF1(float(index{X}),vPositionFromLight{X}[index{X}],vDepthMetric{X}[index{X}],shadowTexture{X},light{X}.shadowsInfo.x,light{X}.shadowsInfo.w);\n#elif defined(SHADOWMEDIUMQUALITY{X})\nshadow=computeShadowWithCSMPCF3(float(index{X}),vPositionFromLight{X}[index{X}],vDepthMetric{X}[index{X}],shadowTexture{X},light{X}.shadowsInfo.yz,light{X}.shadowsInfo.x,light{X}.shadowsInfo.w);\n#else\nshadow=computeShadowWithCSMPCF5(float(index{X}),vPositionFromLight{X}[index{X}],vDepthMetric{X}[index{X}],shadowTexture{X},light{X}.shadowsInfo.yz,light{X}.shadowsInfo.x,light{X}.shadowsInfo.w);\n#endif\n#elif defined(SHADOWPCSS{X})\n#if defined(SHADOWLOWQUALITY{X})\nshadow=computeShadowWithCSMPCSS16(float(index{X}),vPositionFromLight{X}[index{X}],vDepthMetric{X}[index{X}],depthTexture{X},shadowTexture{X},light{X}.shadowsInfo.y,light{X}.shadowsInfo.z,light{X}.shadowsInfo.x,light{X}.shadowsInfo.w,lightSizeUVCorrection{X}[index{X}],depthCorrection{X}[index{X}],penumbraDarkness{X});\n#elif defined(SHADOWMEDIUMQUALITY{X})\nshadow=computeShadowWithCSMPCSS32(float(index{X}),vPositionFromLight{X}[index{X}],vDepthMetric{X}[index{X}],depthTexture{X},shadowTexture{X},light{X}.shadowsInfo.y,light{X}.shadowsInfo.z,light{X}.shadowsInfo.x,light{X}.shadowsInfo.w,lightSizeUVCorrection{X}[index{X}],depthCorrection{X}[index{X}],penumbraDarkness{X});\n#else\nshadow=computeShadowWithCSMPCSS64(float(index{X}),vPositionFromLight{X}[index{X}],vDepthMetric{X}[index{X}],depthTexture{X},shadowTexture{X},light{X}.shadowsInfo.y,light{X}.shadowsInfo.z,light{X}.shadowsInfo.x,light{X}.shadowsInfo.w,lightSizeUVCorrection{X}[index{X}],depthCorrection{X}[index{X}],penumbraDarkness{X});\n#endif\n#else\nshadow=computeShadowCSM(float(index{X}),vPositionFromLight{X}[index{X}],vDepthMetric{X}[index{X}],shadowTexture{X},light{X}.shadowsInfo.x,light{X}.shadowsInfo.w);\n#endif\n#ifdef SHADOWCSMDEBUG{X}\nshadowDebug{X}=vec3(shadow)*vCascadeColorsMultiplier{X}[index{X}];\n#endif\n#ifndef SHADOWCSMNOBLEND{X}\nfloat frustumLength=frustumLengths{X}[index{X}];float diffRatio=clamp(diff{X}/frustumLength,0.,1.)*cascadeBlendFactor{X};if (index{X}<(SHADOWCSMNUM_CASCADES{X}-1) && diffRatio<1.)\n{index{X}+=1;float nextShadow=0.;\n#if defined(SHADOWPCF{X})\n#if defined(SHADOWLOWQUALITY{X})\nnextShadow=computeShadowWithCSMPCF1(float(index{X}),vPositionFromLight{X}[index{X}],vDepthMetric{X}[index{X}],shadowTexture{X},light{X}.shadowsInfo.x,light{X}.shadowsInfo.w);\n#elif defined(SHADOWMEDIUMQUALITY{X})\nnextShadow=computeShadowWithCSMPCF3(float(index{X}),vPositionFromLight{X}[index{X}],vDepthMetric{X}[index{X}],shadowTexture{X},light{X}.shadowsInfo.yz,light{X}.shadowsInfo.x,light{X}.shadowsInfo.w);\n#else\nnextShadow=computeShadowWithCSMPCF5(float(index{X}),vPositionFromLight{X}[index{X}],vDepthMetric{X}[index{X}],shadowTexture{X},light{X}.shadowsInfo.yz,light{X}.shadowsInfo.x,light{X}.shadowsInfo.w);\n#endif\n#elif defined(SHADOWPCSS{X})\n#if defined(SHADOWLOWQUALITY{X})\nnextShadow=computeShadowWithCSMPCSS16(float(index{X}),vPositionFromLight{X}[index{X}],vDepthMetric{X}[index{X}],depthTexture{X},shadowTexture{X},light{X}.shadowsInfo.y,light{X}.shadowsInfo.z,light{X}.shadowsInfo.x,light{X}.shadowsInfo.w,lightSizeUVCorrection{X}[index{X}],depthCorrection{X}[index{X}],penumbraDarkness{X});\n#elif defined(SHADOWMEDIUMQUALITY{X})\nnextShadow=computeShadowWithCSMPCSS32(float(index{X}),vPositionFromLight{X}[index{X}],vDepthMetric{X}[index{X}],depthTexture{X},shadowTexture{X},light{X}.shadowsInfo.y,light{X}.shadowsInfo.z,light{X}.shadowsInfo.x,light{X}.shadowsInfo.w,lightSizeUVCorrection{X}[index{X}],depthCorrection{X}[index{X}],penumbraDarkness{X});\n#else\nnextShadow=computeShadowWithCSMPCSS64(float(index{X}),vPositionFromLight{X}[index{X}],vDepthMetric{X}[index{X}],depthTexture{X},shadowTexture{X},light{X}.shadowsInfo.y,light{X}.shadowsInfo.z,light{X}.shadowsInfo.x,light{X}.shadowsInfo.w,lightSizeUVCorrection{X}[index{X}],depthCorrection{X}[index{X}],penumbraDarkness{X});\n#endif\n#else\nnextShadow=computeShadowCSM(float(index{X}),vPositionFromLight{X}[index{X}],vDepthMetric{X}[index{X}],shadowTexture{X},light{X}.shadowsInfo.x,light{X}.shadowsInfo.w);\n#endif\nshadow=mix(nextShadow,shadow,diffRatio);\n#ifdef SHADOWCSMDEBUG{X}\nshadowDebug{X}=mix(vec3(nextShadow)*vCascadeColorsMultiplier{X}[index{X}],shadowDebug{X},diffRatio);\n#endif\n}\n#endif\n}\n#elif defined(SHADOWCLOSEESM{X})\n#if defined(SHADOWCUBE{X})\nshadow=computeShadowWithCloseESMCube(vPositionW,light{X}.vLightData.xyz,shadowTexture{X},light{X}.shadowsInfo.x,light{X}.shadowsInfo.z,light{X}.depthValues);\n#else\nshadow=computeShadowWithCloseESM(vPositionFromLight{X},vDepthMetric{X},shadowTexture{X},light{X}.shadowsInfo.x,light{X}.shadowsInfo.z,light{X}.shadowsInfo.w);\n#endif\n#elif defined(SHADOWESM{X})\n#if defined(SHADOWCUBE{X})\nshadow=computeShadowWithESMCube(vPositionW,light{X}.vLightData.xyz,shadowTexture{X},light{X}.shadowsInfo.x,light{X}.shadowsInfo.z,light{X}.depthValues);\n#else\nshadow=computeShadowWithESM(vPositionFromLight{X},vDepthMetric{X},shadowTexture{X},light{X}.shadowsInfo.x,light{X}.shadowsInfo.z,light{X}.shadowsInfo.w);\n#endif\n#elif defined(SHADOWPOISSON{X})\n#if defined(SHADOWCUBE{X})\nshadow=computeShadowWithPoissonSamplingCube(vPositionW,light{X}.vLightData.xyz,shadowTexture{X},light{X}.shadowsInfo.y,light{X}.shadowsInfo.x,light{X}.depthValues);\n#else\nshadow=computeShadowWithPoissonSampling(vPositionFromLight{X},vDepthMetric{X},shadowTexture{X},light{X}.shadowsInfo.y,light{X}.shadowsInfo.x,light{X}.shadowsInfo.w);\n#endif\n#elif defined(SHADOWPCF{X})\n#if defined(SHADOWLOWQUALITY{X})\nshadow=computeShadowWithPCF1(vPositionFromLight{X},vDepthMetric{X},shadowTexture{X},light{X}.shadowsInfo.x,light{X}.shadowsInfo.w);\n#elif defined(SHADOWMEDIUMQUALITY{X})\nshadow=computeShadowWithPCF3(vPositionFromLight{X},vDepthMetric{X},shadowTexture{X},light{X}.shadowsInfo.yz,light{X}.shadowsInfo.x,light{X}.shadowsInfo.w);\n#else\nshadow=computeShadowWithPCF5(vPositionFromLight{X},vDepthMetric{X},shadowTexture{X},light{X}.shadowsInfo.yz,light{X}.shadowsInfo.x,light{X}.shadowsInfo.w);\n#endif\n#elif defined(SHADOWPCSS{X})\n#if defined(SHADOWLOWQUALITY{X})\nshadow=computeShadowWithPCSS16(vPositionFromLight{X},vDepthMetric{X},depthTexture{X},shadowTexture{X},light{X}.shadowsInfo.y,light{X}.shadowsInfo.z,light{X}.shadowsInfo.x,light{X}.shadowsInfo.w);\n#elif defined(SHADOWMEDIUMQUALITY{X})\nshadow=computeShadowWithPCSS32(vPositionFromLight{X},vDepthMetric{X},depthTexture{X},shadowTexture{X},light{X}.shadowsInfo.y,light{X}.shadowsInfo.z,light{X}.shadowsInfo.x,light{X}.shadowsInfo.w);\n#else\nshadow=computeShadowWithPCSS64(vPositionFromLight{X},vDepthMetric{X},depthTexture{X},shadowTexture{X},light{X}.shadowsInfo.y,light{X}.shadowsInfo.z,light{X}.shadowsInfo.x,light{X}.shadowsInfo.w);\n#endif\n#else\n#if defined(SHADOWCUBE{X})\nshadow=computeShadowCube(vPositionW,light{X}.vLightData.xyz,shadowTexture{X},light{X}.shadowsInfo.x,light{X}.depthValues);\n#else\nshadow=computeShadow(vPositionFromLight{X},vDepthMetric{X},shadowTexture{X},light{X}.shadowsInfo.x,light{X}.shadowsInfo.w);\n#endif\n#endif\n#ifdef SHADOWONLY\n#ifndef SHADOWINUSE\n#define SHADOWINUSE\n#endif\nglobalShadow+=shadow;shadowLightCount+=1.0;\n#endif\n#else\nshadow=1.;\n#endif\naggShadow+=shadow;numLights+=1.0;\n#ifndef SHADOWONLY\n#ifdef CUSTOMUSERLIGHTING\ndiffuseBase+=computeCustomDiffuseLighting(info,diffuseBase,shadow);\n#ifdef SPECULARTERM\nspecularBase+=computeCustomSpecularLighting(info,specularBase,shadow);\n#endif\n#elif defined(LIGHTMAP) && defined(LIGHTMAPEXCLUDED{X})\ndiffuseBase+=lightmapColor.rgb*shadow;\n#ifdef SPECULARTERM\n#ifndef LIGHTMAPNOSPECULAR{X}\nspecularBase+=info.specular*shadow*lightmapColor.rgb;\n#endif\n#endif\n#ifdef CLEARCOAT\n#ifndef LIGHTMAPNOSPECULAR{X}\nclearCoatBase+=info.clearCoat.rgb*shadow*lightmapColor.rgb;\n#endif\n#endif\n#ifdef SHEEN\n#ifndef LIGHTMAPNOSPECULAR{X}\nsheenBase+=info.sheen.rgb*shadow;\n#endif\n#endif\n#else\n#ifdef SHADOWCSMDEBUG{X}\ndiffuseBase+=info.diffuse*shadowDebug{X};\n#else\ndiffuseBase+=info.diffuse*shadow;\n#endif\n#ifdef SS_TRANSLUCENCY\ndiffuseTransmissionBase+=info.diffuseTransmission*shadow;\n#endif\n#ifdef SPECULARTERM\nspecularBase+=info.specular*shadow;\n#endif\n#ifdef CLEARCOAT\nclearCoatBase+=info.clearCoat.rgb*shadow;\n#endif\n#ifdef SHEEN\nsheenBase+=info.sheen.rgb*shadow;\n#endif\n#endif\n#endif\n#endif\n";
-    pD.e.IncludesShadersStore[sD] || (pD.e.IncludesShadersStore[sD] = KD);
-    const rD = {
-      name: sD,
-      shader: KD
+    var Op = cp(40062);
+    const op = "clipPlaneVertexDeclaration",
+      Ip = "#ifdef CLIPPLANE\nuniform vec4 vClipPlane;varying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nuniform vec4 vClipPlane2;varying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nuniform vec4 vClipPlane3;varying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nuniform vec4 vClipPlane4;varying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nuniform vec4 vClipPlane5;varying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nuniform vec4 vClipPlane6;varying float fClipDistance6;\n#endif\n";
+    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42327: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "fogVertex",
+      Ip = "#ifdef FOG\nvFogDistance=(view*worldPos).xyz;\n#endif\n";
+    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42232: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "fogVertexDeclaration",
+      Ip = "#ifdef FOG\nvarying vec3 vFogDistance;\n#endif\n";
+    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42190: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "instancesDeclaration",
+      Ip = "#ifdef INSTANCES\nattribute vec4 world0;attribute vec4 world1;attribute vec4 world2;attribute vec4 world3;\n#ifdef INSTANCESCOLOR\nattribute vec4 instanceColor;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute vec4 previousWorld0;attribute vec4 previousWorld1;attribute vec4 previousWorld2;attribute vec4 previousWorld3;\n#ifdef THIN_INSTANCES\nuniform mat4 previousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform mat4 previousWorld;\n#endif\n#endif\n";
+    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42286: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "instancesVertex",
+      Ip = "#ifdef INSTANCES\nmat4 finalWorld=mat4(world0,world1,world2,world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=mat4(previousWorld0,previousWorld1,\npreviousWorld2,previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\nfinalWorld=world*finalWorld;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\nmat4 finalWorld=world;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=previousWorld;\n#endif\n#endif\n";
+    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42341: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "vertexColorMixing",
+      Ip = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvColor=vec4(1.0);\n#ifdef VERTEXCOLOR\n#ifdef VERTEXALPHA\nvColor*=colorUpdated;\n#else\nvColor.rgb*=colorUpdated.rgb;\n#endif\n#endif\n#ifdef INSTANCESCOLOR\nvColor*=instanceColor;\n#endif\n#endif\n";
+    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42861: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      colorVertexShader: () => tp
+    });
+    var Op = cp(40062),
+      op = cp(42178),
+      Ip = cp(42182),
+      Sp = cp(42226),
+      xp = cp(42232),
+      Lp = cp(42190),
+      Yp = cp(42286),
+      Dp = cp(42291),
+      Ap = cp(42298),
+      Pp = cp(42319),
+      Wp = cp(42327),
+      yp = cp(42341);
+    const Up = "colorVertexShader",
+      wp = "attribute vec3 position;\n#ifdef VERTEXCOLOR\nattribute vec4 color;\n#endif\n#include<bonesDeclaration>\n#include<bakedVertexAnimationDeclaration>\n#include<clipPlaneVertexDeclaration>\n#include<fogVertexDeclaration>\n#ifdef FOG\nuniform mat4 view;\n#endif\n#include<instancesDeclaration>\nuniform mat4 viewProjection;\n#ifdef MULTIVIEW\nuniform mat4 viewProjectionR;\n#endif\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\nvarying vec4 vColor;\n#endif\n#define CUSTOM_VERTEX_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_VERTEX_MAIN_BEGIN\n#ifdef VERTEXCOLOR\nvec4 colorUpdated=color;\n#endif\n#include<instancesVertex>\n#include<bonesVertex>\n#include<bakedVertexAnimation>\nvec4 worldPos=finalWorld*vec4(position,1.0);\n#ifdef MULTIVIEW\nif (gl_ViewID_OVR==0u) {gl_Position=viewProjection*worldPos;} else {gl_Position=viewProjectionR*worldPos;}\n#else\ngl_Position=viewProjection*worldPos;\n#endif\n#include<clipPlaneVertex>\n#include<fogVertex>\n#include<vertexColorMixing>\n#define CUSTOM_VERTEX_MAIN_END\n}";
+    Op.b.ShadersStore[Up] || (Op.b.ShadersStore[Up] = wp);
+    const vp = [op.b, Ip.c, Sp.c, xp.e, Lp.e, Yp.b, Dp.d, Ap.e, Pp.c, Wp.c, yp.c];
+    for (const Hp of vp) Op.b.IncludesShadersStore[Hp.name] || (Op.b.IncludesShadersStore[Hp.name] = Hp.shader);
+    const tp = {
+      name: Up,
+      shader: wp
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

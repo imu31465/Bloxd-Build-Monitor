@@ -1,43 +1,37 @@
 export const id = 181;
 export const ids = [181];
 export const modules = {
-  9055: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      pageBody: () => pD
+  9172: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      pageBody: () => Op
     });
-    const pD = {
-      whatIs: ["Trust no one. In Bloxd Murder Mystery friends go quiet, roles stay secret and every round turns into a guessing game full of twists and close calls. It's a social deduction game for up to 12 players. Can you work out who the Murderer is before it's too late?"],
-      howToPlay: ["When a round starts, everyone gets a secret role. Most of you will be Innocents, and your job is simply to stay alive as long as you can. One player is the Detective and gets a gun to find and stop the Murderer. And one player is the Murderer. They get their weapon after a short countdown and have to take out everyone else.", "Innocents can collect 10 Moonstone from around the map to get a gun of their own. If the Detective gets taken out, their gun drops and someone else can pick it up. Guns have a 5-second cooldown, so make each shot count. Careful as the Detective, though. Shoot an innocent player and you're out too. Stop the Murderer or survive until the 4-minute timer runs out, and then you'll find out who it really was."],
-      features: ["Up to 12 Players per Round", "Three Secret Roles: Innocent, Detective and Murderer", "Collect Moonstone to Earn a Gun", "4 Maps That Change Every Round: Mansion, Laboratory, Dinosaur and Water Park", "Map Secrets like Trapdoors, Poisoned Water, Reactor Doors and Moonstone Rings", "Please the Dino to Reveal a Role or Win a Gun", "Earn Gold to Unlock Murderer Weapons and Funny Death Messages", "Daily and Weekly Quests", "Track Your Wins as Detective and Murderer"],
-      tips: ["As an Innocent, keep moving and pick up Moonstone whenever you can", "Watch how people act. The Murderer will be trying to blend in", "As the Detective, only shoot when you're sure", "If the Detective goes down, grab that dropped gun", "As the Murderer, catch players on their own when nobody's looking", "Every map has secrets, so explore them for an edge"],
-      similarGames: ["hideseek", "infection", "horrorHotel", "ninetyNineNights"],
+    const Op = {
+      whatIs: ["Set sail for messy sea fights where good timing and teamwork decide who rules the waves. In Bloxd Pirates your crew fires cannons, grabs loot and races to destroy the other team's spawn blocks. It doesn't cost a thing and it loads straight in your browser."],
+      howToPlay: ["You'll join a team, usually Red or Blue, though Classic (4 Teams) and Treasure Island have 4. Each team has spawn blocks to protect. Break the enemy's spawn blocks and they can't respawn any more, then use your Compass to hunt down the rest of their crew. Last team standing wins.", "To fire the cannons, click your team's coloured glass. After that you'll have to wait 15 seconds for them to reload. Before the match you pick a kit in the lobby. The Cannoneer fires two cannonballs at once, the Medic heals teammates and the Admiral can call in artillery strikes. Loot refills during the match, so keep grabbing new gear. Wins, final kills and broken spawn blocks all earn Gold, which you spend on new kits."],
+      features: ["Team Cannon Battles on the High Seas", "Destroy Spawn Blocks to Stop the Enemy Respawning", "26 Kits, from Swashbuckler and Pegleg to Ghost and Portalmaster", "Perks like Bridger, Leech and Inferno", "11 Maps, Including 4-Team Classic and Treasure Island", "Loot That Refills During the Match", "Track Your Games Played and Wins"],
+      tips: ["Fire your cannons early, then get moving while they reload", "Break the enemy's cannons and they can't fire back for a while", "Guard your spawn blocks. Once they're all gone, you can't respawn", "Switch your Compass between Nearest Player and Nearest Spawn", "Don't hide from the fight, or you'll be cursed as a coward and won't be able to heal", "Stick with your crew. A Captain or Medic makes the whole team stronger", "Pick your kit carefully, because you're stuck with it untill the match ends"],
+      similarGames: ["bedwars", "skywars", "shooting", "luckyBedwars"],
       faq: [{
-        question: "What is Bloxd Murder Mystery?",
-        answer: "A social deduction mode. One player is secretly the Murderer, one is the Detective, and everyone else tries to survive and work out who the Murderer is."
+        question: "What is Bloxd Pirates?",
+        answer: "A team battle mode where pirate crews clash in chaotic sea fights, with cannons, kits and loot."
       }, {
-        question: "What are the roles in Murder Mystery?",
-        answer: "Innocents try to stay alive. The Detective tries to find and stop the Murderer. The Murderer tries to take out every other player."
+        question: "How do you win in Bloxd Pirates?",
+        answer: "Destroy every one of the enemy team's spawn blocks so they can't respawn, then take down whoever's left. The last team standing wins."
       }, {
-        question: "Who wins a round of Murder Mystery?",
-        answer: "If the Murderer takes out all the Innocents, they win. Everyone else wins by stopping the Murderer or surviving until the 4-minute timer runs out."
+        question: "How do cannons work in Bloxd Pirates?",
+        answer: "Click your team's coloured glass to fire. Each cannon takes 15 seconds to reload, and you can break enemy cannons to knock them out for a while."
       }, {
-        question: "How do I get a gun?",
-        answer: "Collect 10 Moonstone, or pick up the Detective's gun if it's been dropped. On the Dinosaur map the dino might hand you one too."
+        question: "Which kits can I pick in Bloxd Pirates?",
+        answer: "There are 26, each with its own items or powers. The Scout can double jump, the Scoundrel can go invisible and the Portalmaster makes portals. You pick one in the lobby and unlock more with Gold or gems."
       }, {
-        question: "How long is a round?",
-        answer: "4 minutes."
+        question: "How do I get Gold in Bloxd Pirates?",
+        answer: "A win is worth 25 Gold. You also get 5 Gold for every spawn block you break and every final kill."
       }, {
-        question: "How many people do you need to play Murder Mystery?",
-        answer: "You need at least 2 to start, and a round can hold up to 12."
-      }, {
-        question: "Can I play Murder Mystery with friends?",
-        answer: "Yes. Jump into the same game and see which of you spots the Murderer first."
-      }, {
-        question: "How do I earn gold?",
-        answer: "Survive, collect Moonstone, stop the Murderer or win as the Murderer. Rewards only kick in when there are at least 5 players in the game."
+        question: "What maps are in Bloxd Pirates?",
+        answer: "There are 11: Classic, Classic (4 Teams), Scurvy Shore, Cutthroat Cliffs, Treasure Island, Double Trouble, Stowaway Seas, Woesome Waters, Cannon Storm, Scorched Sails and Dynasty Docks."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

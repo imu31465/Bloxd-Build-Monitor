@@ -1725,6 +1725,14 @@ html[data-app-covered] .WholeAppWrapper .LogoLoader:not(.LogoLoaderIsProgressBar
   margin: 1rem 1rem 0
 }
 
+@media(pointer:coarse) {
+  .PromptGenericPopup .PromptGenericPopupBody .PromptGenericPopupBodyButton {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 88px
+  }
+}
+
 .PromptGenericPopup .PromptGenericPopupBody .PromptGenericPopupBodyPrimaryButton .ButtonBody {
   padding-left: 3rem;
   padding-right: 3rem
@@ -4394,6 +4402,12 @@ a {
   top: -20px
 }
 
+.HandLeftAnim {
+  animation: LeftPoint 1s ease-in-out infinite alternate both;
+  right: 100%;
+  top: 50%
+}
+
 @keyframes TopRightPoint {
   0% {
     transform: translateX(30%) translateY(-30%) rotate(-45deg)
@@ -4411,6 +4425,33 @@ a {
 
   to {
     transform: translateX(30%) translateY(30%) rotate(-135deg)
+  }
+}
+
+@keyframes LeftPoint {
+  0% {
+    transform: translateX(-15%) translateY(-50%) rotate(180deg)
+  }
+
+  to {
+    transform: translateX(10%) translateY(-50%) rotate(180deg)
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .HandTopRightAnim {
+    animation: none;
+    transform: rotate(-45deg)
+  }
+
+  .HandTopLeftAnim {
+    animation: none;
+    transform: rotate(-135deg)
+  }
+
+  .HandLeftAnim {
+    animation: none;
+    transform: translateY(-50%) rotate(180deg)
   }
 }
 
@@ -13258,14 +13299,25 @@ html[data-app-covered] .WholeAppWrapper .ProgressiveImagePlaceholder.Progressive
 }
 
 .DebugOverlay .DebugOverlaySection .DebugOverlayEntry .DebugOverlayToggle {
-  background: hsla(0, 0%, 51%, .35);
-  border: .1rem solid hsla(0, 0%, 51%, .5);
-  color: #a4a4a4;
   cursor: pointer;
-  font: inherit;
   min-width: 2.5rem;
   padding: 0 .35rem;
   pointer-events: auto
+}
+
+@media(pointer:coarse) {
+  .DebugOverlay .DebugOverlaySection .DebugOverlayEntry .DebugOverlayToggle {
+    box-sizing: border-box;
+    min-height: 44px;
+    min-width: 44px
+  }
+}
+
+.DebugOverlay .DebugOverlaySection .DebugOverlayEntry .DebugOverlayToggle {
+  background: hsla(0, 0%, 51%, .35);
+  border: .1rem solid hsla(0, 0%, 51%, .5);
+  color: #a4a4a4;
+  font: inherit
 }
 
 .DebugOverlay .DebugOverlaySection .DebugOverlayEntry .DebugOverlayToggle.DebugOverlayToggleOn {

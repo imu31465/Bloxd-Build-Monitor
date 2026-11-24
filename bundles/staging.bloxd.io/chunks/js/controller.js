@@ -1,468 +1,731 @@
 export const id = 28;
 export const ids = [28];
 export const modules = {
-  8803: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => bD,
-      f: () => PD,
-      j: () => CD
+  8356: (pp, ip, cp) => {
+    var Op = {
+      "./nintendo/A.svg": 8358,
+      "./nintendo/B.svg": 8366,
+      "./nintendo/Down.svg": 8374,
+      "./nintendo/Home.svg": 8378,
+      "./nintendo/LB.svg": 8382,
+      "./nintendo/LS.svg": 8389,
+      "./nintendo/LT.svg": 8394,
+      "./nintendo/Left.svg": 8399,
+      "./nintendo/LeftStick.svg": 8402,
+      "./nintendo/Menu.svg": 8408,
+      "./nintendo/RB.svg": 8411,
+      "./nintendo/RS.svg": 8414,
+      "./nintendo/RT.svg": 8420,
+      "./nintendo/Right.svg": 8427,
+      "./nintendo/RightStick.svg": 8429,
+      "./nintendo/Up.svg": 8435,
+      "./nintendo/View.svg": 8439,
+      "./nintendo/X.svg": 8442,
+      "./nintendo/Y.svg": 8448,
+      "./playstation/A.svg": 8451,
+      "./playstation/B.svg": 8454,
+      "./playstation/Down.svg": 8462,
+      "./playstation/Home.svg": 8469,
+      "./playstation/LB.svg": 8478,
+      "./playstation/LS.svg": 8484,
+      "./playstation/LT.svg": 8492,
+      "./playstation/Left.svg": 8501,
+      "./playstation/LeftStick.svg": 8506,
+      "./playstation/Menu.svg": 8510,
+      "./playstation/RB.svg": 8514,
+      "./playstation/RS.svg": 8520,
+      "./playstation/RT.svg": 8525,
+      "./playstation/Right.svg": 8533,
+      "./playstation/RightStick.svg": 8542,
+      "./playstation/Up.svg": 8549,
+      "./playstation/View.svg": 8556,
+      "./playstation/X.svg": 8562,
+      "./playstation/Y.svg": 8571,
+      "./steamdeck/A.svg": 8577,
+      "./steamdeck/B.svg": 8584,
+      "./steamdeck/Down.svg": 8586,
+      "./steamdeck/Home.svg": 8595,
+      "./steamdeck/LB.svg": 8598,
+      "./steamdeck/LS.svg": 8603,
+      "./steamdeck/LT.svg": 8608,
+      "./steamdeck/Left.svg": 8616,
+      "./steamdeck/LeftStick.svg": 8619,
+      "./steamdeck/Menu.svg": 8628,
+      "./steamdeck/RB.svg": 8636,
+      "./steamdeck/RS.svg": 8643,
+      "./steamdeck/RT.svg": 8651,
+      "./steamdeck/Right.svg": 8657,
+      "./steamdeck/RightStick.svg": 8664,
+      "./steamdeck/Up.svg": 8666,
+      "./steamdeck/View.svg": 8668,
+      "./steamdeck/X.svg": 8671,
+      "./steamdeck/Y.svg": 8677,
+      "./xbox/A.svg": 8682,
+      "./xbox/B.svg": 8689,
+      "./xbox/Down.svg": 8696,
+      "./xbox/Home.svg": 8700,
+      "./xbox/LB.svg": 8708,
+      "./xbox/LS.svg": 8711,
+      "./xbox/LT.svg": 8720,
+      "./xbox/Left.svg": 8728,
+      "./xbox/LeftStick.svg": 8733,
+      "./xbox/Menu.svg": 8735,
+      "./xbox/RB.svg": 8737,
+      "./xbox/RS.svg": 8743,
+      "./xbox/RT.svg": 8749,
+      "./xbox/Right.svg": 8755,
+      "./xbox/RightStick.svg": 8761,
+      "./xbox/Up.svg": 8765,
+      "./xbox/View.svg": 8768,
+      "./xbox/X.svg": 8771,
+      "./xbox/Y.svg": 8777
+    };
+
+    function op(pp) {
+      var ip = Ip(pp);
+      return cp(ip)
+    }
+
+    function Ip(pp) {
+      if (!cp.o(Op, pp)) {
+        var ip = new Error("Cannot find module '" + pp + "'");
+        throw ip.code = "MODULE_NOT_FOUND", ip
+      }
+      return Op[pp]
+    }
+    op.keys = function() {
+      return Object.keys(Op)
+    }, op.resolve = Ip, pp.exports = op, op.id = 8356
+  },
+  8900: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Xp,
+      f: () => qp,
+      h: () => Mp
     });
-    var pD = wD(58),
-      sD = wD(4562),
-      KD = wD(1127),
-      rD = wD(1442),
-      LD = wD(25),
-      cD = wD(3430),
-      gD = wD(2204),
-      RD = wD(1245),
-      AD = wD(2560),
-      UD = wD(1925),
-      fD = wD(1973),
-      ID = wD(1200),
-      BD = wD(20),
-      GD = wD(1648),
-      hD = wD(1044),
-      nD = wD.n(hD),
-      MD = wD(8808),
-      OD = wD(8810),
-      JD = wD(8816),
-      ED = wD(8723),
-      QD = wD(8824),
-      XD = (wD(8826), wD(1096));
-    let VD = null;
+    var Op = cp(62),
+      op = cp(4635),
+      Ip = cp(1141),
+      Sp = cp(1476),
+      xp = cp(34),
+      Lp = cp(3532),
+      Yp = cp(2281),
+      Dp = cp(1251),
+      Ap = cp(2638),
+      Pp = cp(1956),
+      Wp = cp(2004),
+      yp = cp(1201),
+      Up = cp(25),
+      wp = cp(1650),
+      vp = cp(1049),
+      tp = cp.n(vp),
+      Hp = cp(8909),
+      dp = cp(8917),
+      ep = cp(8919),
+      jp = cp(8843),
+      kp = cp(8928),
+      mp = (cp(8937), cp(1112));
+    let Rp = null;
 
-    function PD() {
-      return null !== VD
+    function qp() {
+      return null !== Rp
     }
 
-    function CD() {
-      return "pad" === VD
+    function Mp() {
+      return "pad" === Rp
     }
 
-    function xD() {
-      return "inGame" === BD.e.get("gameState") && !(0, GD.q)()
+    function Cp() {
+      return "inGame" === Up.c.get("gameState") && !(0, wp.l)()
     }
 
-    function TD(DD) {
-      return (0, OD.t)(DD, RD.j, OD.f, OD.j, OD.m)
+    function Ep(pp) {
+      return (0, dp.t)(pp, Dp.n, dp.f, dp.h, dp.k)
     }
-    const bD = (0, pD.memo)((function() {
+    const Xp = (0, Op.memo)((function() {
       const {
-        t: DD
-      } = (0, ID.E)(), {
-        userContext: zD
-      } = (0, KD.c)(), [wD, BD] = (0, pD.useState)(null), [hD, PD] = (0, pD.useState)(null), CD = (0, pD.useRef)(null), bD = (0, pD.useCallback)((DD => {
-        CD.current = DD, PD(DD)
-      }), []), jD = (0, pD.useRef)(0), dD = (0, pD.useRef)(null), SD = (0, pD.useRef)({
+        t: pp
+      } = (0, yp.H)(), {
+        userContext: ip
+      } = (0, Ip.b)(), [cp, Up] = (0, Op.useState)(null), [vp, qp] = (0, Op.useState)(null), Mp = (0, Op.useRef)(null), Xp = (0, Op.useCallback)((pp => {
+        Mp.current = pp, qp(pp)
+      }), []), lp = (0, Op.useRef)(0), Qp = (0, Op.useRef)(null), Jp = (0, Op.useRef)({
         x: 0,
         y: 0
-      }), [iD, lD] = (0, pD.useState)(0), WD = (0, pD.useMemo)((() => function(DD) {
-        const zD = [];
-        for (let pD = 0; pD < RD.j; pD++) {
-          var wD;
-          zD.push(null !== (wD = DD[pD]) && void 0 !== wD ? wD : null)
+      }), [Bp, Np] = (0, Op.useState)(0), Tp = (0, Op.useMemo)((() => function(pp) {
+        const ip = [];
+        for (let Op = 0; Op < Dp.n; Op++) {
+          var cp;
+          ip.push(null !== (cp = pp[Op]) && void 0 !== cp ? cp : null)
         }
-        return zD
-      }((0, AD.g)(zD.getPlayerCosmetics().emote))), [zD, iD]);
-      (0, fD.c)("cosmeticsUpdated", (DD => {
-        DD.some((DD => DD.local && "emote" === DD.Pp)) && lD((DD => DD + 1))
+        return ip
+      }((0, Ap.i)(ip.getPlayerCosmetics().emote))), [ip, Bp]);
+      (0, Wp.b)("cosmeticsUpdated", (pp => {
+        pp.some((pp => pp.local && "emote" === pp.KI)) && Np((pp => pp + 1))
       }));
-      const ND = (0, pD.useRef)(!1),
-        ZD = (0, pD.useCallback)((function(DD) {
-          let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-          "pad" === DD && (0, JD.f)(), ND.current = zD, SD.current = {
+      const fp = (0, Op.useRef)(!1),
+        bp = (0, Op.useCallback)((function(pp) {
+          let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+          "pad" === pp && (0, ep.f)(), fp.current = ip, Jp.current = {
             x: 0,
             y: 0
-          }, bD(null), BD(DD)
-        }), [bD]),
-        yD = (0, pD.useCallback)((() => {
-          BD(null), bD(null), SD.current = {
+          }, Xp(null), Up(pp)
+        }), [Xp]),
+        hp = (0, Op.useCallback)((() => {
+          Up(null), Xp(null), Jp.current = {
             x: 0,
             y: 0
           }
-        }), [bD]),
-        kD = (0, pD.useCallback)((DD => {
-          if (Date.now() < jD.current) return;
-          const zD = (0, gD.m)(DD),
-            wD = !!zD.holdUntilMove,
-            pD = wD ? 600 : Math.ceil(1e3 * zD.animation.animation_length / gD.e) + 200;
-          jD.current = Date.now() + pD, dD.current = DD, UD.gameBridge.send("playEmote", DD), UD.gameBridge.send("applyTemporaryThirdPerson", wD ? {} : {
-            durationMs: pD
+        }), [Xp]),
+        ap = (0, Op.useCallback)((pp => {
+          if (Date.now() < lp.current) return;
+          const ip = (0, Yp.g)(pp),
+            cp = !!ip.holdUntilMove,
+            Op = cp ? 600 : Math.ceil(1e3 * ip.animation.animation_length / Yp.c) + 200;
+          lp.current = Date.now() + Op, Qp.current = pp, Pp.gameBridge.send("playEmote", pp), Pp.gameBridge.send("applyTemporaryThirdPerson", cp ? {} : {
+            durationMs: Op
           })
         }), []);
-      (0, rD.g)("requestToggleEmoteWheel", (() => {
-        null === wD ? xD() && ZD("click") : yD()
-      })), (0, rD.g)("requestEmoteWheelHoldOpen", (() => {
-        null === wD && xD() && ZD((0, MD.c)() ? "hold" : "click")
-      })), (0, rD.g)("requestEmoteWheelPadOpen", (DD => {
-        null !== wD || !xD() || (0, ED.e)() || (0, QD.p)() || ZD("pad", DD)
-      })), (0, rD.g)("requestEmoteRepeatLast", (() => {
-        if (null !== wD || !xD() || (0, ED.e)() || (0, QD.p)()) return;
-        const DD = dD.current;
-        null !== DD && WD.includes(DD) ? kD(DD) : ZD("pad", !0)
+      (0, Sp.f)("requestToggleEmoteWheel", (() => {
+        null === cp ? Cp() && bp("click") : hp()
+      })), (0, Sp.f)("requestEmoteWheelHoldOpen", (() => {
+        null === cp && Cp() && bp((0, Hp.b)() ? "hold" : "click")
+      })), (0, Sp.f)("requestEmoteWheelPadOpen", (pp => {
+        null !== cp || !Cp() || (0, jp.d)() || (0, kp.x)() || bp("pad", pp)
+      })), (0, Sp.f)("requestEmoteRepeatLast", (() => {
+        if (null !== cp || !Cp() || (0, jp.d)() || (0, kp.x)()) return;
+        const pp = Qp.current;
+        null !== pp && Tp.includes(pp) ? ap(pp) : bp("pad", !0)
       }));
-      const mD = () => {
-        const DD = CD.current,
-          zD = null !== DD ? WD[DD] : null;
-        null !== zD && "pad" === wD && Date.now() < jD.current || (yD(), null !== zD && kD(zD))
+      const np = () => {
+        const pp = Mp.current,
+          ip = null !== pp ? Tp[pp] : null;
+        null !== ip && "pad" === cp && Date.now() < lp.current || (hp(), null !== ip && ap(ip))
       };
-      (0, rD.g)("emoteWheelPadAim", (DD => {
-        if ("pad" !== wD) return;
-        const zD = (0, OD.C)(DD, RD.j, CD.current);
-        bD(null !== zD && null !== WD[zD] ? zD : null)
-      })), (0, rD.g)("requestEmoteWheelPadCommit", (DD => {
-        "pad" !== wD || DD && ND.current || mD()
-      })), (0, rD.g)("appManagerUpdated|activeInputDevice", (DD => {
-        null !== wD && "pad" === wD !== ("gamepad" === DD) && yD()
-      })), (0, pD.useLayoutEffect)((() => (VD = wD, (0, cD.v)("emoteWheel", "pad" === wD), LD.l.KG(cD.o), () => {
-        VD = null, (0, cD.v)("emoteWheel", !1), LD.l.KG(cD.o)
-      })), [wD]), (0, rD.g)("requestEmoteWheelHoldRelease", (() => {
-        "hold" === wD && mD()
-      })), (0, rD.g)("requestEmoteWheelClose", (() => {
-        null !== wD && yD()
-      })), (0, rD.g)("appManagerUpdated|gameState", (DD => {
-        "inGame" !== DD && yD()
+      (0, Sp.f)("emoteWheelPadAim", (pp => {
+        if ("pad" !== cp) return;
+        const ip = (0, dp.A)(pp, Dp.n, Mp.current);
+        Xp(null !== ip && null !== Tp[ip] ? ip : null)
+      })), (0, Sp.f)("requestEmoteWheelPadCommit", (pp => {
+        "pad" !== cp || pp && fp.current || np()
+      })), (0, Sp.f)("appManagerUpdated|activeInputDevice", (pp => {
+        null !== cp && "pad" === cp !== ("gamepad" === pp) && hp()
+      })), (0, Op.useLayoutEffect)((() => (Rp = cp, (0, Lp.y)("emoteWheel", "pad" === cp), xp.m.GA(Lp.r), () => {
+        Rp = null, (0, Lp.y)("emoteWheel", !1), xp.m.GA(Lp.r)
+      })), [cp]), (0, Sp.f)("requestEmoteWheelHoldRelease", (() => {
+        "hold" === cp && np()
+      })), (0, Sp.f)("requestEmoteWheelClose", (() => {
+        null !== cp && hp()
+      })), (0, Sp.f)("appManagerUpdated|gameState", (pp => {
+        "inGame" !== pp && hp()
       }));
-      const eD = () => {
-        (0, GD.q)() && yD()
+      const Fp = () => {
+        (0, wp.l)() && hp()
       };
-      if ((0, rD.g)("appManagerUpdated|openEverythingMenuName", eD), (0, rD.g)("appManagerUpdated|openInGameMenuName", eD), (0, rD.g)("pointerLockUpdate", (DD => {
-          DD || "hold" !== wD || yD()
-        })), (0, pD.useEffect)((() => {
-          if (null === wD) return;
-          const DD = DD => {
-            "Escape" === DD.key && (DD.stopImmediatePropagation(), DD.preventDefault(), yD())
+      if ((0, Sp.f)("appManagerUpdated|openEverythingMenuName", Fp), (0, Sp.f)("appManagerUpdated|openInGameMenuName", Fp), (0, Sp.f)("pointerLockUpdate", (pp => {
+          pp || "hold" !== cp || hp()
+        })), (0, Op.useEffect)((() => {
+          if (null === cp) return;
+          const pp = pp => {
+            "Escape" === pp.key && (pp.stopImmediatePropagation(), pp.preventDefault(), hp())
           };
-          return document.addEventListener("keydown", DD, !0), () => {
-            document.removeEventListener("keydown", DD, !0)
+          return document.addEventListener("keydown", pp, !0), () => {
+            document.removeEventListener("keydown", pp, !0)
           }
-        }), [wD, yD]), (0, sD.e)(!0, "click" === wD, "EmoteWheelOverlay"), (0, pD.useEffect)((() => {
-          if ("hold" === wD) return UD.gameBridge.send("holdEmoteWheel", !0), () => {
-            UD.gameBridge.send("holdEmoteWheel", !1)
+        }), [cp, hp]), (0, op.e)(!0, "click" === cp, "EmoteWheelOverlay"), (0, Op.useEffect)((() => {
+          if ("hold" === cp) return Pp.gameBridge.send("holdEmoteWheel", !0), () => {
+            Pp.gameBridge.send("holdEmoteWheel", !1)
           }
-        }), [wD]), (0, pD.useEffect)((() => {
-          if ("hold" !== wD) return;
-          const DD = parseFloat(window.getComputedStyle(document.documentElement).fontSize),
-            zD = OD.s * DD,
-            pD = OD.p * DD,
-            sD = DD => {
-              let wD = SD.current.x + DD.movementX,
-                sD = SD.current.y + DD.movementY;
-              const KD = Math.hypot(wD, sD);
-              if (KD > zD) {
-                const DD = zD / KD;
-                wD *= DD, sD *= DD
+        }), [cp]), (0, Op.useEffect)((() => {
+          if ("hold" !== cp) return;
+          const pp = parseFloat(window.getComputedStyle(document.documentElement).fontSize),
+            ip = dp.r * pp,
+            Op = dp.p * pp,
+            op = pp => {
+              let cp = Jp.current.x + pp.movementX,
+                op = Jp.current.y + pp.movementY;
+              const Ip = Math.hypot(cp, op);
+              if (Ip > ip) {
+                const pp = ip / Ip;
+                cp *= pp, op *= pp
               }
-              SD.current = {
-                x: wD,
-                y: sD
-              }, bD(function(DD, zD, wD, pD) {
-                if (Math.hypot(DD, zD) < wD) return null;
-                const sD = (0, OD.u)(DD, zD, RD.j);
-                return null === pD[sD] ? null : sD
-              }(wD, sD, pD, WD))
+              Jp.current = {
+                x: cp,
+                y: op
+              }, Xp(function(pp, ip, cp, Op) {
+                if (Math.hypot(pp, ip) < cp) return null;
+                const op = (0, dp.v)(pp, ip, Dp.n);
+                return null === Op[op] ? null : op
+              }(cp, op, Op, Tp))
             };
-          return document.addEventListener("mousemove", sD), () => {
-            document.removeEventListener("mousemove", sD)
+          return document.addEventListener("mousemove", op), () => {
+            document.removeEventListener("mousemove", op)
           }
-        }), [wD, WD, bD]), null === wD) return null;
-      const oD = "hold" === wD || "pad" === wD,
-        aD = null !== hD ? WD[hD] : null,
-        uD = null !== aD ? (0, gD.m)(aD).displayName : DD("emotes:pickEmote");
-      return (0, XD.jsx)("div", {
-        className: nD()("EmoteWheelOverlay", {
-          EmoteWheelOverlayPad: "pad" === wD
+        }), [cp, Tp, Xp]), null === cp) return null;
+      const gp = "hold" === cp || "pad" === cp,
+        Gp = null !== vp ? Tp[vp] : null,
+        rp = null !== Gp ? (0, Yp.g)(Gp).displayName : pp("emotes:pickEmote");
+      return (0, mp.jsx)("div", {
+        className: tp()("EmoteWheelOverlay", {
+          EmoteWheelOverlayPad: "pad" === cp
         }),
-        onMouseDown: DD => {
-          DD.target === DD.currentTarget && yD()
+        onMouseDown: pp => {
+          pp.target === pp.currentTarget && hp()
         },
-        children: (0, XD.jsxs)("div", {
+        children: (0, mp.jsxs)("div", {
           className: "EmoteWheel",
           style: {
-            width: 2 * OD.s + "rem",
-            height: 2 * OD.s + "rem"
+            width: 2 * dp.r + "rem",
+            height: 2 * dp.r + "rem"
           },
-          children: [(0, XD.jsxs)("svg", {
+          children: [(0, mp.jsxs)("svg", {
             className: "EmoteWheelSvg",
-            viewBox: `0 0 ${OD.n} ${OD.n}`,
-            children: [WD.map(((zD, wD) => {
-              const pD = null !== zD,
-                sD = oD && wD === hD;
-              return (0, XD.jsx)("path", {
-                d: TD(wD),
-                className: nD()("EmoteWheelWedge", {
-                  EmoteWheelWedgeHighlighted: sD,
-                  EmoteWheelWedgeDisabled: !pD
+            viewBox: `0 0 ${dp.m} ${dp.m}`,
+            children: [Tp.map(((ip, cp) => {
+              const Op = null !== ip,
+                op = gp && cp === vp;
+              return (0, mp.jsx)("path", {
+                d: Ep(cp),
+                className: tp()("EmoteWheelWedge", {
+                  EmoteWheelWedgeHighlighted: op,
+                  EmoteWheelWedgeDisabled: !Op
                 }),
-                onClick: DD => {
-                  DD.stopPropagation(), null !== zD && (DD => {
-                    yD(), kD(DD)
-                  })(zD)
+                onClick: pp => {
+                  pp.stopPropagation(), null !== ip && (pp => {
+                    hp(), ap(pp)
+                  })(ip)
                 },
-                "aria-label": null !== zD ? (0, gD.m)(zD).displayName : DD("emotes:emptySlot")
-              }, wD)
-            })), (0, XD.jsx)("circle", {
+                "aria-label": null !== ip ? (0, Yp.g)(ip).displayName : pp("emotes:emptySlot")
+              }, cp)
+            })), (0, mp.jsx)("circle", {
               className: "EmoteWheelOuterRing",
-              cx: OD.f,
-              cy: OD.f,
-              r: OD.m
-            }), (0, XD.jsx)("circle", {
+              cx: dp.f,
+              cy: dp.f,
+              r: dp.k
+            }), (0, mp.jsx)("circle", {
               className: "EmoteWheelInnerRing",
-              cx: OD.f,
-              cy: OD.f,
-              r: OD.j
-            }), oD && null !== hD && (0, XD.jsx)("path", {
+              cx: dp.f,
+              cy: dp.f,
+              r: dp.h
+            }), gp && null !== vp && (0, mp.jsx)("path", {
               className: "EmoteWheelWedgeOutline",
-              d: TD(hD)
+              d: Ep(vp)
             })]
-          }), WD.map(((DD, zD) => {
-            const wD = null !== DD,
-              pD = oD && zD === hD,
-              sD = (0, OD.v)(zD, RD.j),
-              KD = OD.c * Math.cos(sD),
-              rD = OD.c * Math.sin(sD);
-            return (0, XD.jsx)("div", {
-              className: nD()("EmoteWheelSlotIcon", {
-                EmoteWheelSlotIconHighlighted: pD,
-                EmoteWheelSlotIconDisabled: !wD
+          }), Tp.map(((pp, ip) => {
+            const cp = null !== pp,
+              Op = gp && ip === vp,
+              op = (0, dp.w)(ip, Dp.n),
+              Ip = dp.c * Math.cos(op),
+              Sp = dp.c * Math.sin(op);
+            return (0, mp.jsx)("div", {
+              className: tp()("EmoteWheelSlotIcon", {
+                EmoteWheelSlotIconHighlighted: Op,
+                EmoteWheelSlotIconDisabled: !cp
               }),
               style: {
-                left: `calc(50% + ${KD}rem)`,
-                top: `calc(50% + ${rD}rem)`,
-                backgroundImage: wD ? `url(/textures/charSkins/previews/emote_${DD}_preview.png)` : void 0
+                left: `calc(50% + ${Ip}rem)`,
+                top: `calc(50% + ${Sp}rem)`,
+                backgroundImage: cp ? `url(/textures/charSkins/previews/emote_${pp}_preview.png)` : void 0
               },
               "aria-hidden": !0
-            }, zD)
-          })), (0, XD.jsx)("div", {
+            }, ip)
+          })), (0, mp.jsx)("div", {
             className: "EmoteWheelHint SmallTextBold",
-            children: uD
+            children: rp
           })]
         })
       })
     }))
   },
-  5021: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => ID,
-      c: () => MD,
-      e: () => BD,
-      g: () => nD
+  9024: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => vp,
+      d: () => dp
     });
-    var pD = wD(58),
-      sD = wD(5026),
-      KD = wD(4395),
-      rD = wD(1366),
-      LD = wD(5049),
-      cD = wD(1044),
-      gD = wD.n(cD),
-      RD = wD(1355),
-      AD = wD(1737),
-      UD = wD(5057),
-      fD = wD(1096);
+    var Op = cp(62),
+      op = cp(34),
+      Ip = cp(2543),
+      Sp = cp(3520);
+    const xp = 6,
+      Lp = 4;
 
-    function ID(DD) {
+    function Yp(pp) {
       let {
-        label: zD,
-        onClick: wD,
-        checked: pD,
-        circleInfoText: sD,
-        className: LD,
-        disabled: cD,
-        note: RD
-      } = DD;
-      return (0, fD.jsxs)("div", {
-        "aria-disabled": cD || void 0,
+        slotsLeft: ip,
+        slotsRight: cp,
+        width: Op,
+        height: op,
+        zoneRight: Ip,
+        rowTop: Sp,
+        besideBottom: Yp,
+        obstacles: Dp
+      } = pp;
+      const Ap = Math.max(0, Math.floor(cp - ip - Op)),
+        Pp = null === Ip ? 0 : Math.min(Ap, Math.max(0, Math.ceil(Ip + xp - ip))),
+        Wp = ip + Pp - xp,
+        yp = ip + Pp + Op + xp,
+        Up = Dp.filter((pp => pp.left < yp && pp.right > Wp));
+      let wp = Yp;
+      for (let xp = 0; xp <= Up.length; xp++) {
+        const pp = Up.filter((pp => pp.top < wp + Lp && pp.bottom > wp - op - Lp));
+        if (0 === pp.length) break;
+        wp = Math.min(...pp.map((pp => pp.top))) - Lp
+      }
+      return {
+        shift: Pp,
+        rise: wp === Yp ? null : Math.ceil(Sp - wp)
+      }
+    }
+
+    function Dp(pp) {
+      return Array.from(pp.children).filter((pp => !pp.classList.contains("HotBarRow")))
+    }
+
+    function Ap(pp) {
+      return function(pp) {
+        const ip = [],
+          cp = (pp, Op) => {
+            const op = pp.getBoundingClientRect();
+            if (op.width > 0 && op.height > 0) ip.push(pp);
+            else if (Op < 2)
+              for (const ip of Array.from(pp.children)) cp(ip, Op + 1)
+          };
+        for (const Op of pp) cp(Op, 0);
+        return ip
+      }(Dp(pp).flatMap((pp => pp.classList.contains("AuraBarWrapper") ? [] : pp.classList.contains("BottomScreenStatBarList") ? Array.from(pp.children) : [pp])))
+    }
+
+    function Pp(pp) {
+      var ip;
+      const cp = pp.getBoundingClientRect();
+      if (0 === cp.width) return null;
+      const Op = null === (ip = pp.parentElement) || void 0 === ip ? void 0 : ip.getBoundingClientRect();
+      return Op && Op.width > 0 ? Math.min(cp.right, Op.left + Op.width * Wp) : cp.right
+    }
+    const Wp = .35,
+      yp = new WeakMap,
+      Up = ".BottomScreenMessage, [role='status']",
+      wp = new WeakMap;
+
+    function vp(pp) {
+      tp(pp) && tp(pp)
+    }
+
+    function tp(pp) {
+      var ip, cp, Op, op, Ip, Sp;
+      const xp = pp.documentElement.classList;
+      if (!xp.contains("TouchHotbar") || xp.contains("TouchHotbarKeysAbove") || xp.contains("HudMove-inventory") || xp.contains("HudLocked-inventory") || null === (ip = pp.defaultView) || void 0 === ip || null === (cp = ip.matchMedia) || void 0 === cp || !cp.call(ip, Hp).matches) return !1;
+      const Dp = pp.querySelector(".HotBarContainer.Touch .TouchInventoryKey.ShopKey"),
+        Wp = null === Dp || void 0 === Dp ? void 0 : Dp.parentElement,
+        vp = null === Dp || void 0 === Dp ? void 0 : Dp.closest(".BottomMiddleElements"),
+        tp = null === vp || void 0 === vp ? void 0 : vp.querySelector(".HotBarContainer.Touch .HotBarGameItemsContainer");
+      if (!Dp || !Wp || !vp || !tp || vp.classList.contains("TouchInventoryOpen")) return !1;
+      const dp = Dp.getBoundingClientRect();
+      if (0 === dp.width) return !1;
+      const ep = pp.querySelector(".JoystickZone"),
+        jp = tp.getBoundingClientRect(),
+        kp = Wp.getBoundingClientRect().top,
+        mp = null === (Op = vp.querySelector(":scope > .AuraBarWrapper")) || void 0 === Op ? void 0 : Op.getBoundingClientRect(),
+        Rp = Ap(vp),
+        qp = {
+          slotsLeft: jp.left,
+          slotsRight: jp.right,
+          width: dp.width,
+          height: dp.height,
+          zoneRight: ep ? Pp(ep) : null,
+          rowTop: kp,
+          besideBottom: (mp && mp.height > 0 ? mp.top : kp) - Lp,
+          obstacles: Rp.map((pp => pp.getBoundingClientRect()))
+        },
+        Mp = Yp({
+          ...qp,
+          obstacles: Rp.filter((pp => !pp.matches(Up))).map((pp => pp.getBoundingClientRect()))
+        }),
+        Cp = pp.defaultView,
+        Ep = `${null===Cp||void 0===Cp?void 0:Cp.innerWidth}x${null===Cp||void 0===Cp?void 0:Cp.innerHeight}:${Mp.shift}:${Math.round(dp.width)}:${Math.round(kp)}`,
+        Xp = wp.get(vp),
+        lp = (null === Xp || void 0 === Xp ? void 0 : Xp.at) === Ep ? (Qp = Xp.rise, Jp = Mp.rise, null === Qp ? Jp : null === Jp ? Qp : Math.max(Qp, Jp)) : Mp.rise;
+      var Qp, Jp;
+      const Bp = Yp({
+          ...qp,
+          besideBottom: null === lp ? qp.besideBottom : kp - lp
+        }),
+        Np = {
+          shift: Mp.shift,
+          rise: null !== (op = Bp.rise) && void 0 !== op ? op : lp
+        },
+        Tp = yp.get(vp);
+      return (null !== (Ip = null === Tp || void 0 === Tp ? void 0 : Tp.shift) && void 0 !== Ip ? Ip : 0) === Np.shift && wp.set(vp, {
+        at: Ep,
+        rise: lp
+      }), (null === Tp || void 0 === Tp ? void 0 : Tp.shift) !== Np.shift && vp.style.setProperty("--touch-shop-above-shift", `${Np.shift}px`), (null === Tp || void 0 === Tp ? void 0 : Tp.rise) !== Np.rise && (vp.classList.toggle("ShopAboveUp", null !== Np.rise), null === Np.rise ? vp.style.removeProperty("--touch-shop-above-rise") : vp.style.setProperty("--touch-shop-above-rise", `${Np.rise}px`)), yp.set(vp, Np), (null !== (Sp = null === Tp || void 0 === Tp ? void 0 : Tp.shift) && void 0 !== Sp ? Sp : 0) !== Np.shift
+    }
+    const Hp = "(orientation: landscape) and (max-height: 500px)";
+
+    function dp(pp, ip, cp) {
+      (0, Op.useLayoutEffect)((() => {
+        var ip;
+        const Op = null === (ip = pp.current) || void 0 === ip ? void 0 : ip.closest(".BottomMiddleElements");
+        if (!Op || cp) return;
+        const xp = new ResizeObserver((() => {
+            Wp(!1)
+          })),
+          Lp = () => {
+            xp.disconnect();
+            const pp = document.querySelector(".JoystickZone");
+            for (const ip of [pp, Op, Op.querySelector(".HotBarGameItemsContainer"), ...Ap(Op)]) ip && xp.observe(ip)
+          };
+        let Yp = null,
+          Pp = !1;
+        const Wp = pp => {
+            Pp ||= pp, Yp ??= requestAnimationFrame((() => {
+              Yp = null, Pp && (Pp = !1, Lp()), vp(document)
+            }))
+          },
+          yp = new MutationObserver((() => {
+            Wp(!0)
+          }));
+        yp.observe(Op, {
+          childList: !0
+        });
+        for (const pp of Dp(Op)) yp.observe(pp, {
+          childList: !0,
+          subtree: !0
+        });
+        vp(document), Lp();
+        const Up = () => {
+            Wp(!0)
+          },
+          wp = [(0, op.n)(Ip.e, Up), (0, op.n)(Sp.e, Up)];
+        return () => {
+          null !== Yp && cancelAnimationFrame(Yp), xp.disconnect(), yp.disconnect();
+          for (const pp of wp) pp()
+        }
+      }), [pp, ip, cp])
+    }
+  },
+  5113: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => yp,
+      f: () => Hp,
+      i: () => Up,
+      l: () => tp
+    });
+    var Op = cp(62),
+      op = cp(5122),
+      Ip = cp(4462),
+      Sp = cp(1387),
+      xp = cp(5146),
+      Lp = cp(1049),
+      Yp = cp.n(Lp),
+      Dp = cp(1372),
+      Ap = cp(1765),
+      Pp = cp(5149),
+      Wp = cp(1112);
+
+    function yp(pp) {
+      let {
+        label: ip,
+        onClick: cp,
+        checked: Op,
+        circleInfoText: op,
+        className: xp,
+        disabled: Lp,
+        note: Dp
+      } = pp;
+      return (0, Wp.jsxs)("div", {
+        "aria-disabled": Lp || void 0,
         "data-pad-focusable": !0,
-        className: gD()("SettingBox CheckboxContainer", {
-          [LD]: LD,
-          SettingBoxDisabled: cD
+        className: Yp()("SettingBox CheckboxContainer", {
+          [xp]: xp,
+          SettingBoxDisabled: Lp
         }),
         onClick: () => {
-          cD || wD(!pD)
+          Lp || cp(!Op)
         },
-        children: [(0, fD.jsxs)("div", {
+        children: [(0, Wp.jsxs)("div", {
           className: "CheckboxInputAndText",
-          children: [(0, fD.jsx)("label", {
+          children: [(0, Wp.jsx)("label", {
             className: "CheckboxClickableLabel",
-            children: (0, fD.jsx)(KD.d, {
+            children: (0, Wp.jsx)(Ip.b, {
               className: "SettingsCheckbox",
-              checked: pD,
-              disabled: cD,
+              checked: Op,
+              disabled: Lp,
               onChange: () => {}
             })
-          }), (0, fD.jsxs)("div", {
+          }), (0, Wp.jsxs)("div", {
             className: "CheckboxText",
-            children: [zD, sD && (0, fD.jsx)("span", {
-              onClick: DD => DD.stopPropagation(),
-              children: (0, fD.jsx)(rD.b, {
+            children: [ip, op && (0, Wp.jsx)("span", {
+              onClick: pp => pp.stopPropagation(),
+              children: (0, Wp.jsx)(Sp.d, {
                 className: "SettingsTextInputCircleInfo",
-                hoverInfo: sD
+                hoverInfo: op
               })
             })]
           })]
-        }), RD && (0, fD.jsx)("div", {
+        }), Dp && (0, Wp.jsx)("div", {
           className: "SettingNote",
-          children: RD
+          children: Dp
         })]
       })
     }
 
-    function BD(DD) {
+    function Up(pp) {
       let {
-        name: zD,
-        onChange: wD,
-        min: sD,
-        max: KD,
-        step: LD,
-        initValue: cD,
-        circleInfoText: RD,
-        format: AD,
-        className: UD,
-        padStep: ID,
-        disabled: BD = !1,
-        selectableMax: GD,
-        cappedNote: nD,
-        onChangeComplete: MD
-      } = DD;
-      const [OD, JD] = (0, pD.useState)(cD), ED = (0, pD.useRef)(cD);
-      (0, pD.useEffect)((() => {
-        ED.current = cD, JD(cD)
-      }), [cD]);
-      const QD = void 0 !== GD && GD < KD,
-        XD = QD ? {
-          "--slider-selectable": (GD - sD) / (KD - sD)
+        name: ip,
+        onChange: cp,
+        min: op,
+        max: Ip,
+        step: xp,
+        initValue: Lp,
+        circleInfoText: Dp,
+        format: Ap,
+        className: Pp,
+        padStep: yp,
+        disabled: Up = !1,
+        selectableMax: wp,
+        cappedNote: tp,
+        onChangeComplete: Hp
+      } = pp;
+      const [dp, ep] = (0, Op.useState)(Lp), jp = (0, Op.useRef)(Lp);
+      (0, Op.useEffect)((() => {
+        jp.current = Lp, ep(Lp)
+      }), [Lp]);
+      const kp = void 0 !== wp && wp < Ip,
+        mp = kp ? {
+          "--slider-selectable": (wp - op) / (Ip - op)
         } : void 0;
-      return (0, fD.jsxs)("div", {
-        className: gD()("SettingBox SettingsSliderDiv", {
-          [UD]: UD,
-          SettingBoxDisabled: BD,
-          SliderCapped: QD
+      return (0, Wp.jsxs)("div", {
+        className: Yp()("SettingBox SettingsSliderDiv", {
+          [Pp]: Pp,
+          SettingBoxDisabled: Up,
+          SliderCapped: kp
         }),
-        style: XD,
-        children: [(0, fD.jsxs)("div", {
+        style: mp,
+        children: [(0, Wp.jsxs)("div", {
           className: "SliderText",
-          children: [`${zD}: ${AD?AD(OD):OD}`, RD && (0, fD.jsx)(rD.b, {
+          children: [`${ip}: ${Ap?Ap(dp):dp}`, Dp && (0, Wp.jsx)(Sp.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: RD
+            hoverInfo: Dp
           })]
-        }), (0, fD.jsx)("div", {
+        }), (0, Wp.jsx)("div", {
           className: "SliderDiv",
-          children: (0, fD.jsx)(hD, {
-            value: OD,
-            min: sD,
-            max: KD,
-            step: LD,
-            onChange: DD => {
-              if (QD && DD >= GD && OD === GD) return;
-              const zD = QD ? Math.min(DD, GD) : DD;
-              ED.current = zD, JD(zD), wD(zD)
+          children: (0, Wp.jsx)(vp, {
+            value: dp,
+            min: op,
+            max: Ip,
+            step: xp,
+            onChange: pp => {
+              if (kp && pp >= wp && dp === wp) return;
+              const ip = kp ? Math.min(pp, wp) : pp;
+              jp.current = ip, ep(ip), cp(ip)
             },
-            onChangeComplete: MD && (() => {
-              MD(ED.current)
+            onChangeComplete: Hp && (() => {
+              Hp(jp.current)
             }),
-            format: AD,
-            padStep: ID,
-            disabled: BD
+            format: Ap,
+            padStep: yp,
+            disabled: Up
           })
-        }), QD && nD && (0, fD.jsx)("div", {
+        }), kp && tp && (0, Wp.jsx)("div", {
           className: "SettingNote",
-          children: nD
+          children: tp
         })]
       })
     }
-    const GD = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
+    const wp = new Set(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown"]);
 
-    function hD(DD) {
-      var zD;
+    function vp(pp) {
+      var ip;
       let {
-        value: wD,
-        min: KD,
-        max: rD,
-        step: LD,
-        onChange: cD,
-        orientation: gD,
-        reverse: RD,
-        setIsChanging: AD,
-        tooltip: ID,
-        labels: BD,
-        handleLabel: hD,
-        format: nD,
-        onChangeStart: MD,
-        onChangeComplete: OD,
-        padStep: JD,
-        disabled: ED = !1
-      } = DD;
-      const QD = (0, pD.useRef)(null),
-        XD = (0, pD.useRef)(null);
-      (0, pD.useLayoutEffect)((() => {
-        var DD, zD, wD;
-        const pD = null !== (DD = null === (zD = QD.current) || void 0 === zD ? void 0 : zD.querySelector(".rangeslider")) && void 0 !== DD ? DD : null;
-        null === pD || void 0 === pD || pD.setAttribute("data-pad-slider", ""), null === pD || void 0 === pD || pD.setAttribute("data-pad-focusable", ""), null === pD || void 0 === pD || null === (wD = pD.querySelector(".rangeslider__handle")) || void 0 === wD || wD.setAttribute("data-pad-slider-handle", ""), XD.current = pD
-      }), []), (0, pD.useLayoutEffect)((() => {
-        var DD, zD;
-        ED ? null === (DD = XD.current) || void 0 === DD || DD.setAttribute("aria-disabled", "true") : null === (zD = XD.current) || void 0 === zD || zD.removeAttribute("aria-disabled")
-      }), [ED]);
-      const VD = (null !== (zD = String(LD).split(".")[1]) && void 0 !== zD ? zD : "").length,
-        PD = DD => {
-          const zD = Number((Math.round((DD - KD) / LD) * LD + KD).toFixed(VD));
-          return Math.min(rD, Math.max(KD, zD))
+        value: cp,
+        min: Ip,
+        max: Sp,
+        step: xp,
+        onChange: Lp,
+        orientation: Yp,
+        reverse: Dp,
+        setIsChanging: Ap,
+        tooltip: yp,
+        labels: Up,
+        handleLabel: vp,
+        format: tp,
+        onChangeStart: Hp,
+        onChangeComplete: dp,
+        padStep: ep,
+        disabled: jp = !1
+      } = pp;
+      const kp = (0, Op.useRef)(null),
+        mp = (0, Op.useRef)(null);
+      (0, Op.useLayoutEffect)((() => {
+        var pp, ip, cp;
+        const Op = null !== (pp = null === (ip = kp.current) || void 0 === ip ? void 0 : ip.querySelector(".rangeslider")) && void 0 !== pp ? pp : null;
+        null === Op || void 0 === Op || Op.setAttribute("data-pad-slider", ""), null === Op || void 0 === Op || Op.setAttribute("data-pad-focusable", ""), null === Op || void 0 === Op || null === (cp = Op.querySelector(".rangeslider__handle")) || void 0 === cp || cp.setAttribute("data-pad-slider-handle", ""), mp.current = Op
+      }), []), (0, Op.useLayoutEffect)((() => {
+        var pp, ip;
+        jp ? null === (pp = mp.current) || void 0 === pp || pp.setAttribute("aria-disabled", "true") : null === (ip = mp.current) || void 0 === ip || ip.removeAttribute("aria-disabled")
+      }), [jp]);
+      const Rp = (null !== (ip = String(xp).split(".")[1]) && void 0 !== ip ? ip : "").length,
+        qp = pp => {
+          const ip = Number((Math.round((pp - Ip) / xp) * xp + Ip).toFixed(Rp));
+          return Math.min(Sp, Math.max(Ip, ip))
         },
-        CD = (0, pD.useRef)(OD);
-      CD.current = OD, (0, pD.useEffect)((() => {
-        const DD = QD.current;
-        if (!DD) return;
-        const zD = DD => {
-          var zD;
-          GD.has(DD.key) && (null === (zD = CD.current) || void 0 === zD || zD.call(CD))
+        Mp = (0, Op.useRef)(dp);
+      Mp.current = dp, (0, Op.useEffect)((() => {
+        const pp = kp.current;
+        if (!pp) return;
+        const ip = pp => {
+          var ip;
+          wp.has(pp.key) && (null === (ip = Mp.current) || void 0 === ip || ip.call(Mp))
         };
-        return DD.addEventListener("keyup", zD), () => {
-          DD.removeEventListener("keyup", zD)
+        return pp.addEventListener("keyup", ip), () => {
+          pp.removeEventListener("keyup", ip)
         }
       }), []);
-      const xD = (0, pD.useRef)(!1);
-      return (0, UD.c)(XD, {
-        adjust: DD => {
-          if (ED) return;
-          const zD = null !== JD && void 0 !== JD ? JD : Math.max(LD, Math.round((rD - KD) / 20 / LD) * LD),
-            pD = PD(wD + DD * zD * (RD ? -1 : 1));
-          pD !== wD && (null === MD || void 0 === MD || MD(), cD(pD), null === OD || void 0 === OD || OD())
+      const Cp = (0, Op.useRef)(!1);
+      return (0, Pp.h)(mp, {
+        adjust: pp => {
+          if (jp) return;
+          const ip = null !== ep && void 0 !== ep ? ep : Math.max(xp, Math.round((Sp - Ip) / 20 / xp) * xp),
+            Op = qp(cp + pp * ip * (Dp ? -1 : 1));
+          Op !== cp && (null === Hp || void 0 === Hp || Hp(), Lp(Op), null === dp || void 0 === dp || dp())
         },
-        setFraction: DD => {
-          if (ED) return;
-          const zD = PD(KD + (RD ? 1 - DD : DD) * (rD - KD));
-          zD !== wD && (xD.current || (xD.current = !0, null === MD || void 0 === MD || MD()), cD(zD))
+        setFraction: pp => {
+          if (jp) return;
+          const ip = qp(Ip + (Dp ? 1 - pp : pp) * (Sp - Ip));
+          ip !== cp && (Cp.current || (Cp.current = !0, null === Hp || void 0 === Hp || Hp()), Lp(ip))
         },
         endDrag: () => {
-          xD.current && (xD.current = !1, null === OD || void 0 === OD || OD())
+          Cp.current && (Cp.current = !1, null === dp || void 0 === dp || dp())
         }
-      }), (0, fD.jsx)("div", {
-        ref: QD,
+      }), (0, Wp.jsx)("div", {
+        ref: kp,
         style: {
           display: "contents"
         },
-        children: (0, fD.jsx)(sD.c, {
-          value: wD,
-          min: KD,
-          max: rD,
-          step: LD,
-          onChange: cD,
-          orientation: gD,
-          reverse: RD,
-          tooltip: ID,
-          labels: BD,
-          handleLabel: hD,
-          format: nD,
+        children: (0, Wp.jsx)(op.b, {
+          value: cp,
+          min: Ip,
+          max: Sp,
+          step: xp,
+          onChange: Lp,
+          orientation: Yp,
+          reverse: Dp,
+          tooltip: yp,
+          labels: Up,
+          handleLabel: vp,
+          format: tp,
           onChangeStart: () => {
-            null === MD || void 0 === MD || MD(), null === AD || void 0 === AD || AD(!0)
+            null === Hp || void 0 === Hp || Hp(), null === Ap || void 0 === Ap || Ap(!0)
           },
           onChangeComplete: () => {
-            null === AD || void 0 === AD || AD(!1), null === OD || void 0 === OD || OD()
+            null === Ap || void 0 === Ap || Ap(!1), null === dp || void 0 === dp || dp()
           }
         })
       })
     }
-    async function nD() {
-      const DD = RD.NotificationProvider.showPromptPopup({
+    async function tp() {
+      const pp = Dp.NotificationProvider.showPromptPopup({
         title: "settingsMenu:reloadPagePopupTitle",
         subtitle: "settingsMenu:reloadPagePopupSubtitle",
         confirmText: "settingsMenu:reloadPagePopupConfirm",
@@ -470,342 +733,414 @@ export const modules = {
         cancelText: "general:cancel",
         cancelTooltip: ""
       });
-      !0 === await DD.getResult() && (0, AD.reloadBloxd)()
+      !0 === await pp.getResult() && (0, Ap.reloadBloxd)()
     }
 
-    function MD(DD) {
+    function Hp(pp) {
       let {
-        label: zD,
-        options: wD,
-        value: pD,
-        onChange: sD,
-        circleInfoText: KD
-      } = DD;
-      return (0, fD.jsxs)("div", {
+        label: ip,
+        options: cp,
+        value: Op,
+        onChange: op,
+        circleInfoText: Ip
+      } = pp;
+      return (0, Wp.jsxs)("div", {
         className: "SettingBox SegmentedSettingRow",
-        children: [(0, fD.jsxs)("div", {
+        children: [(0, Wp.jsxs)("div", {
           className: "SliderText",
-          children: [zD, KD && (0, fD.jsx)(rD.b, {
+          children: [ip, Ip && (0, Wp.jsx)(Sp.d, {
             className: "SettingsTextInputCircleInfo",
-            hoverInfo: KD
+            hoverInfo: Ip
           })]
-        }), (0, fD.jsx)(LD.e, {
-          ariaLabel: zD,
-          options: wD,
-          value: pD,
-          onChange: sD
+        }), (0, Wp.jsx)(xp.b, {
+          ariaLabel: ip,
+          options: cp,
+          value: Op,
+          onChange: op
         })]
       })
     }
   },
-  5049: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => rD
+  5146: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Sp
     });
-    var pD = wD(1044),
-      sD = wD.n(pD),
-      KD = wD(1096);
+    var Op = cp(1049),
+      op = cp.n(Op),
+      Ip = cp(1112);
 
-    function rD(DD) {
+    function Sp(pp) {
       let {
-        options: zD,
-        value: wD,
-        onChange: pD,
-        ariaLabel: rD,
-        className: LD,
-        reselectable: cD = !1,
-        keepsFocus: gD = !1,
-        padTabs: RD
-      } = DD;
-      const AD = void 0 !== RD;
-      return (0, KD.jsx)("div", {
-        className: sD()("SegmentedToggle", LD),
+        options: ip,
+        value: cp,
+        onChange: Op,
+        ariaLabel: Sp,
+        className: xp,
+        reselectable: Lp = !1,
+        keepsFocus: Yp = !1,
+        padTabs: Dp
+      } = pp;
+      const Ap = void 0 !== Dp;
+      return (0, Ip.jsx)("div", {
+        className: op()("SegmentedToggle", xp),
         role: "group",
-        "aria-label": rD,
-        "data-pad-tabs": RD,
-        children: zD.map((DD => {
-          const zD = DD.value === wD;
-          return (0, KD.jsx)("button", {
+        "aria-label": Sp,
+        "data-pad-tabs": Dp,
+        children: ip.map((pp => {
+          const ip = pp.value === cp;
+          return (0, Ip.jsx)("button", {
             type: "button",
-            "aria-pressed": zD,
-            "data-pad-tab": AD || void 0,
-            "data-pad-selected": AD && zD ? "true" : void 0,
-            "data-pad-default-focus": AD && zD || void 0,
-            "aria-label": DD.ariaLabel,
-            title: DD.ariaLabel,
-            className: sD()("SegmentedToggleOption SmallTextLight", {
-              SegmentedToggleOptionSelected: zD
+            "aria-pressed": ip,
+            "data-pad-tab": Ap || void 0,
+            "data-pad-selected": Ap && ip ? "true" : void 0,
+            "data-pad-default-focus": Ap && ip || void 0,
+            "aria-label": pp.ariaLabel,
+            title: pp.ariaLabel,
+            className: op()("SegmentedToggleOption SmallTextLight", {
+              SegmentedToggleOptionSelected: ip
             }),
-            onMouseDown: gD ? DD => {
-              DD.preventDefault()
+            onMouseDown: Yp ? pp => {
+              pp.preventDefault()
             } : void 0,
             onClick: () => {
-              zD && !cD || pD(DD.value)
+              ip && !Lp || Op(pp.value)
             },
-            children: DD.label
-          }, DD.value)
+            children: pp.label
+          }, pp.value)
         }))
       })
     }
   },
-  8796: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => AD,
-      g: () => ID,
-      j: () => BD,
-      l: () => fD,
-      o: () => UD
+  8877: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Sp,
+      f: () => Ip
     });
-    var pD = wD(58),
-      sD = wD(8801),
-      KD = wD(25),
-      rD = wD(1925),
-      LD = wD(35),
-      cD = wD(1268),
-      gD = wD(1956);
-    const RD = 50;
-    const AD = new class {
-      constructor() {
-        this.state = {
-          messages: [],
-          reportedPlayers: [],
-          channel: null
-        }, this.listeners = new Set, this.stopListening = [], this.nextClientChatMsgId = 0, this.subscribe = DD => {
-          if (0 === this.listeners.size) {
-            var zD, wD;
-            this.state = {
-              ...this.state,
-              channel: null !== (zD = null === (wD = gD.e.get("chatChannels")) || void 0 === wD ? void 0 : wD[0]) && void 0 !== zD ? zD : null
-            };
-            const DD = KD.l.subscribe("reportPlayer", (DD => {
-              let {
-                playerEId: zD
-              } = DD;
-              this.setState({
-                ...this.state,
-                reportedPlayers: [...this.state.reportedPlayers, zD]
-              })
-            }));
-            this.stopListening = [rD.gameBridge.subscribe("chatReceived", (DD => {
-              let {
-                serverChatMsgId: zD,
-                content: wD,
-                author: pD
-              } = DD;
-              this.addMessage(zD, wD, pD)
-            })), () => {
-              KD.l.unsubscribe(DD)
-            }, gD.e.subscribe("chatChannels", (DD => {
-              var zD;
-              this.setState({
-                ...this.state,
-                channel: null !== (zD = null === DD || void 0 === DD ? void 0 : DD[0]) && void 0 !== zD ? zD : null
-              })
-            }))]
-          }
-          return this.listeners.add(DD), () => {
-            if (this.listeners.delete(DD), 0 === this.listeners.size) {
-              for (const DD of this.stopListening) DD();
-              this.stopListening = [], this.state = {
-                messages: [],
-                reportedPlayers: [],
-                channel: null
-              }
-            }
-          }
-        }, this.getState = () => this.state
+    var Op = cp(2028);
+    const op = /^(?:Key[A-Z]|Digit[0-9]|Arrow(?:Up|Down|Left|Right)|Space)$/,
+      Ip = pp => "string" === typeof pp.icon && "" !== pp.icon && "string" === typeof pp.keycode && op.test(pp.keycode),
+      Sp = pp => "Space" === pp ? "_" : Op.j[pp]
+  },
+  8909: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => op
+    });
+    var Op = cp(25);
+
+    function op() {
+      return !Op.c.get("isTouchScreen") && null !== document.pointerLockElement
+    }
+  },
+  9015: (pp, ip, cp) => {
+    cp.d(ip, {
+      B: () => Lp,
+      D: () => Pp,
+      H: () => Yp,
+      I: () => yp,
+      J: () => Ip,
+      d: () => op,
+      h: () => xp,
+      j: () => Op,
+      m: () => Up,
+      n: () => Wp,
+      o: () => Dp,
+      r: () => Sp,
+      u: () => wp,
+      y: () => Ap
+    });
+    const Op = pp => ({
+      left: pp.left,
+      top: pp.top,
+      right: pp.right,
+      bottom: pp.bottom
+    });
+
+    function op(pp) {
+      return {
+        x: (pp.left + pp.right) / 2,
+        y: (pp.top + pp.bottom) / 2
       }
-      addMessage(DD, zD) {
-        let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const pD = {
-          serverChatMsgId: DD,
-          content: zD,
-          clientChatMsgId: this.nextClientChatMsgId++,
-          author: wD
-        };
-        this.setState({
-          ...this.state,
-          messages: [pD, ...this.state.messages].slice(0, sD.f)
-        })
+    }
+
+    function Ip(pp) {
+      return 0 === pp.length ? null : pp.reduce(((pp, ip) => ({
+        left: Math.min(pp.left, ip.left),
+        top: Math.min(pp.top, ip.top),
+        right: Math.max(pp.right, ip.right),
+        bottom: Math.max(pp.bottom, ip.bottom)
+      })))
+    }
+
+    function Sp(pp, ip) {
+      const cp = Math.max(0, (ip - (pp.right - pp.left)) / 2),
+        Op = Math.max(0, (ip - (pp.bottom - pp.top)) / 2);
+      return {
+        left: pp.left - cp,
+        top: pp.top - Op,
+        right: pp.right + cp,
+        bottom: pp.bottom + Op
       }
-      selectNextChannel() {
-        const DD = gD.e.get("chatChannels");
-        if (DD) {
-          const zD = DD.findIndex((DD => {
-            var zD;
-            return DD.channelName === (null === (zD = this.state.channel) || void 0 === zD ? void 0 : zD.channelName)
-          }));
-          this.setState({
-            ...this.state,
-            channel: DD[(zD + 1) % DD.length]
-          })
+    }
+
+    function xp(pp, ip) {
+      return ip.x >= pp.left && ip.x <= pp.right && ip.y >= pp.top && ip.y <= pp.bottom
+    }
+
+    function Lp(pp, ip, cp) {
+      let Op = null,
+        Ip = 1 / 0;
+      for (const {
+          id: op,
+          box: Sp
+        }
+        of ip) {
+        const ip = (Sp.right - Sp.left) * (Sp.bottom - Sp.top);
+        xp(Sp, pp) && ip < Ip && (Ip = ip, Op = op)
+      }
+      if (null !== Op) return Op;
+      let Lp = 1 / 0;
+      for (const {
+          id: Yp,
+          box: Dp
+        }
+        of ip) {
+        if (!xp(Sp(Dp, cp), pp)) continue;
+        const ip = op(Dp),
+          Ip = Math.hypot(pp.x - ip.x, pp.y - ip.y);
+        Ip < Lp && (Lp = Ip, Op = Yp)
+      }
+      return Op
+    }
+
+    function Yp(pp, ip, cp) {
+      return {
+        left: cp.left,
+        top: cp.top,
+        right: pp - cp.right,
+        bottom: ip - cp.bottom
+      }
+    }
+
+    function Dp(pp, ip, cp, Op) {
+      const op = (pp, ip, cp) => Math.max(Math.min(ip, 0), Math.min(Math.max(cp, 0), pp));
+      return {
+        x: op(ip, Op.left - pp.left, Op.right - pp.right),
+        y: op(cp, Op.top - pp.top, Op.bottom - pp.bottom)
+      }
+    }
+
+    function Ap(pp, ip, cp, Op, op) {
+      const Ip = pp.dx * Op + ip,
+        Sp = pp.dy * op + cp,
+        xp = pp => Math.max(-1, Math.min(1, pp));
+      return {
+        dx: xp(Ip / Op),
+        dy: xp(Sp / op)
+      }
+    }
+
+    function Pp(pp, ip, cp, Op) {
+      return ip <= 0 || cp <= 0 ? 1 : Math.max(.05, Math.min(1, pp / ip, Op / cp))
+    }
+
+    function Wp(pp, ip, cp) {
+      return Math.min(pp.right, ip.right) - Math.max(pp.left, ip.left) > cp && Math.min(pp.bottom, ip.bottom) - Math.max(pp.top, ip.top) > cp
+    }
+
+    function yp(pp, ip) {
+      const cp = (pp, ip, cp, Op) => ip - pp > Op - cp ? cp - pp > ip - Op ? Op - ip : cp - pp : pp < cp ? cp - pp : ip > Op ? Op - ip : 0;
+      return {
+        x: cp(pp.left, pp.right, ip.left, ip.right),
+        y: cp(pp.top, pp.bottom, ip.top, ip.bottom)
+      }
+    }
+
+    function Up(pp, ip, cp) {
+      return Wp(pp, {
+        left: 0,
+        top: 0,
+        right: ip,
+        bottom: cp
+      }, 0)
+    }
+
+    function wp(pp, ip) {
+      let {
+        avoid: cp = null,
+        bounds: Op = null
+      } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {}, op = 0, Ip = 1 / 0;
+      return pp.forEach(((pp, Sp) => {
+        const xp = ip.filter((ip => Wp(pp, ip, 0))).length,
+          Lp = null !== Op && (pp.left < Op.left || pp.top < Op.top || pp.right > Op.right || pp.bottom > Op.bottom),
+          Yp = xp + (cp && Wp(pp, cp, 0) ? 1e3 : 0) + (Lp ? 1e6 : 0);
+        Yp < Ip && (op = Sp, Ip = Yp)
+      })), op
+    }
+  },
+  9019: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => xp,
+      c: () => Ip,
+      e: () => op,
+      f: () => Sp,
+      j: () => Ap,
+      n: () => Dp,
+      r: () => Yp,
+      s: () => Lp
+    });
+    var Op = cp(2525);
+    const op = ["J", "C", "A", "P", "U", "X", "G"],
+      Ip = {
+        J: "jump",
+        C: "crouch",
+        A: "attack",
+        P: "attack",
+        U: "use",
+        X: "extra",
+        G: "game"
+      };
+
+    function Sp(pp) {
+      return pp ? ["X"] : ["P", "X"]
+    }
+    const xp = Object.freeze({
+      faces: null,
+      names: Object.freeze({}),
+      shop: !0,
+      bag: !0,
+      sprint: !0,
+      items: null,
+      rowIcons: Op.A,
+      pinnedIcons: Object.freeze({
+        rightOfCamera: null,
+        leftEnd: null
+      })
+    });
+
+    function Lp(pp, ip, cp) {
+      const Op = pp.querySelector(".InGameUi .TouchComponentsButtons");
+      if (!Op) return xp;
+      const Ip = {},
+        Sp = {};
+      for (const xp of op) {
+        const pp = Op.querySelector(`.TouchSlot${xp} > .TouchKey`);
+        if (pp) {
+          var Lp, Yp;
+          Ip[xp] = pp.cloneNode(!0);
+          const ip = (null !== (Lp = null === (Yp = pp.querySelector(".TouchKeyLabel")) || void 0 === Yp ? void 0 : Yp.textContent) && void 0 !== Lp ? Lp : "").split(/\s+/).filter((pp => !/[\d\xd7]/.test(pp))).join(" ");
+          ip && (Sp[xp] = ip)
         }
       }
-      setState(DD) {
-        this.state = DD;
-        for (const zD of this.listeners) zD()
-      }
-    };
-
-    function UD() {
-      const [DD, zD] = (0, pD.useState)(AD.getState);
-      return (0, pD.useEffect)((() => {
-        const DD = AD.subscribe((() => {
-          zD(AD.getState())
-        }));
-        return zD(AD.getState()), DD
-      }), []), DD
-    }
-
-    function fD(DD) {
-      var zD, wD;
-      if (DD.startsWith("/report")) {
-        var pD;
-        const zD = null !== (pD = DD.replace("/report", "").trim().split(" ")[0]) && void 0 !== pD ? pD : "";
-        if ("" === zD) return void AD.addMessage(null, [{
-          str: "You must type a player's name when reporting them.\nExample:\n/report Bob"
-        }]);
-        const wD = rD.gameBridge.latest("players"),
-          sD = rD.gameBridge.latest("hiddenPlayerNames"),
-          LD = DD => {
-            var pD, KD;
-            const rD = null !== (pD = null === (KD = wD.byId[DD]) || void 0 === KD ? void 0 : KD.name) && void 0 !== pD ? pD : null;
-            return null !== rD && (rD === zD || (0, cD.e)(rD, sD) === zD)
-          };
-        if (null !== wD.localId && LD(wD.localId)) return void AD.addMessage(null, [{
-          str: "You cannot report yourself."
-        }]);
-        for (const DD of wD.ids)
-          if (LD(DD)) return KD.l.KG("OpenReportMenu", {
-            playerEId: DD,
-            playerName: wD.byId[DD].name,
-            lg: null,
-            serverChatMsgId: null
-          }), void console.log("Opening report menu...");
-        AD.addMessage(null, [{
-          str: "Player not found in lobby."
-        }])
-      }
-      rD.gameBridge.send("sendChatMessage", {
-          lg: DD,
-          channelName: null !== (zD = null === (wD = AD.getState().channel) || void 0 === wD ? void 0 : wD.channelName) && void 0 !== zD ? zD : null
-        }),
-        function(DD) {
-          var zD;
-          const wD = null !== (zD = LD.h.getItem("recentlySentChatMsgs")) && void 0 !== zD ? zD : [];
-          wD.push(DD), wD.length > RD && wD.shift();
-          LD.h.setItem("recentlySentChatMsgs", wD)
-        }(DD)
-    }
-
-    function ID() {
-      var DD;
-      return null !== (DD = LD.h.getItem("recentlySentChatMsgs")) && void 0 !== DD ? DD : []
-    }
-
-    function BD(DD) {
-      var zD;
-      let wD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-      const pD = null !== (zD = LD.h.getItem("recentlySentChatMsgs")) && void 0 !== zD ? zD : [],
-        sD = pD.length + 1,
-        KD = wD ? (DD % sD + sD) % sD : Math.min(pD.length, Math.max(0, DD));
+      const Dp = ip => {
+          const cp = pp.querySelector(`.InGameUi ${ip}`);
+          return null !== cp && !cp.classList.contains("Hidden")
+        },
+        Ap = [...pp.querySelectorAll(".InGameUi .HotBarContainer.Touch .HotBarGameItemsContainer .InvenItem")].map((pp => pp.cloneNode(!0)));
       return {
-        stepsBack: KD,
-        text: 0 === KD ? "" : pD[pD.length - KD]
+        faces: Object.keys(Ip).length > 0 ? Ip : null,
+        names: Sp,
+        shop: Dp(".TouchInventoryKey.ShopKey"),
+        bag: Dp(".TouchInventoryKey.BagKey"),
+        sprint: Dp(".TouchSprintHit"),
+        items: Ap.length > 0 ? Ap : null,
+        rowIcons: ip,
+        pinnedIcons: cp
       }
     }
-  },
-  8756: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => rD,
-      g: () => KD
-    });
-    var pD = wD(1987);
-    const sD = /^(?:Key[A-Z]|Digit[0-9]|Arrow(?:Up|Down|Left|Right)|Space)$/,
-      KD = DD => "string" === typeof DD.icon && "" !== DD.icon && "string" === typeof DD.keycode && sD.test(DD.keycode),
-      rD = DD => "Space" === DD ? "_" : pD.l[DD]
-  },
-  8808: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => sD
-    });
-    var pD = wD(20);
 
-    function sD() {
-      return !pD.e.get("isTouchScreen") && null !== document.pointerLockElement
+    function Yp(pp, ip) {
+      const cp = {};
+      for (const Op of [...Sp(ip), "G"]) {
+        const ip = pp.names[Op];
+        ip && (cp[Ip[Op]] = ip)
+      }
+      return cp
+    }
+
+    function Dp(pp, ip) {
+      const {
+        faces: cp
+      } = pp;
+      if (null === cp) return [];
+      const Op = new Set(Object.keys(cp).map((pp => Ip[pp])));
+      return Sp(ip).filter((pp => !Op.has(Ip[pp])))
+    }
+
+    function Ap(pp, ip) {
+      pp.replaceChildren(...[...ip.childNodes].map((pp => pp.cloneNode(!0))))
     }
   },
-  8810: (DD, zD, wD) => {
-    wD.d(zD, {
-      C: () => fD,
-      c: () => KD,
-      f: () => LD,
-      j: () => gD,
-      m: () => cD,
-      n: () => rD,
-      p: () => sD,
-      s: () => pD,
-      t: () => ID,
-      u: () => AD,
-      v: () => RD,
-      y: () => UD
+  8917: (pp, ip, cp) => {
+    cp.d(ip, {
+      A: () => Wp,
+      c: () => Ip,
+      f: () => xp,
+      h: () => Yp,
+      k: () => Lp,
+      m: () => Sp,
+      p: () => op,
+      r: () => Op,
+      t: () => yp,
+      v: () => Ap,
+      w: () => Dp,
+      z: () => Pp
     });
-    const pD = 14,
-      sD = 6,
-      KD = (pD + sD) / 2,
-      rD = 200,
-      LD = rD / 2,
-      cD = rD / 2 - 1,
-      gD = sD / pD * (rD / 2),
-      RD = (DD, zD) => -Math.PI / 2 + 2 * DD * Math.PI / zD,
-      AD = (DD, zD, wD) => {
-        const pD = 2 * Math.PI / wD;
-        return (Math.round((Math.atan2(zD, DD) + Math.PI / 2) / pD) % wD + wD) % wD
+    const Op = 14,
+      op = 6,
+      Ip = (Op + op) / 2,
+      Sp = 200,
+      xp = Sp / 2,
+      Lp = Sp / 2 - 1,
+      Yp = op / Op * (Sp / 2),
+      Dp = (pp, ip) => -Math.PI / 2 + 2 * pp * Math.PI / ip,
+      Ap = (pp, ip, cp) => {
+        const Op = 2 * Math.PI / cp;
+        return (Math.round((Math.atan2(ip, pp) + Math.PI / 2) / Op) % cp + cp) % cp
       },
-      UD = .5,
-      fD = (DD, zD, wD) => Math.hypot(DD.x, DD.y) < UD ? wD : AD(DD.x, DD.y, zD),
-      ID = (DD, zD, wD, pD, sD) => {
-        const KD = Math.PI / zD,
-          rD = RD(DD, zD),
-          LD = rD - KD,
-          cD = rD + KD,
-          gD = (DD, zD) => `${wD+DD*Math.cos(zD)} ${wD+DD*Math.sin(zD)}`;
-        return [`M ${gD(pD,LD)}`, `L ${gD(sD,LD)}`, `A ${sD} ${sD} 0 0 1 ${gD(sD,cD)}`, `L ${gD(pD,cD)}`, `A ${pD} ${pD} 0 0 0 ${gD(pD,LD)}`, "Z"].join(" ")
+      Pp = .5,
+      Wp = (pp, ip, cp) => Math.hypot(pp.x, pp.y) < Pp ? cp : Ap(pp.x, pp.y, ip),
+      yp = (pp, ip, cp, Op, op) => {
+        const Ip = Math.PI / ip,
+          Sp = Dp(pp, ip),
+          xp = Sp - Ip,
+          Lp = Sp + Ip,
+          Yp = (pp, ip) => `${cp+pp*Math.cos(ip)} ${cp+pp*Math.sin(ip)}`;
+        return [`M ${Yp(Op,xp)}`, `L ${Yp(op,xp)}`, `A ${op} ${op} 0 0 1 ${Yp(op,Lp)}`, `L ${Yp(Op,Lp)}`, `A ${Op} ${Op} 0 0 0 ${Yp(Op,xp)}`, "Z"].join(" ")
       }
   },
-  8837: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => rD
+  8961: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Sp
     });
-    var pD = wD(58),
-      sD = wD(8785),
-      KD = wD(2402);
+    var Op = cp(62),
+      op = cp(8895),
+      Ip = cp(2492);
 
-    function rD() {
-      const DD = (0, KD.h)("shopInfo"),
-        [, zD] = (0, pD.useReducer)((DD => DD + 1), 0);
-      return (0, KD.g)("shopInfo", zD), !(0, sD.e)(DD)
+    function Sp() {
+      const pp = (0, Ip.i)("shopInfo"),
+        [, ip] = (0, Op.useReducer)((pp => pp + 1), 0);
+      return (0, Ip.e)("shopInfo", ip), !(0, op.b)(pp)
     }
   },
-  8201: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => sD,
-      c: () => KD,
-      f: () => UD,
-      j: () => AD,
-      l: () => gD,
-      o: () => LD,
-      r: () => pD,
-      t: () => fD,
-      u: () => ID
+  8318: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => op,
+      h: () => Ip,
+      k: () => Pp,
+      m: () => Ap,
+      p: () => Yp,
+      r: () => xp,
+      s: () => Op,
+      w: () => Wp,
+      x: () => yp
     });
-    const pD = ["menuConfirm", "menuBack", "menuTabPrevious", "menuTabNext", "menuPageUp", "menuPageDown", "menuSecondary", "menuToggleCursor"],
-      sD = [{
+    const Op = ["menuConfirm", "menuBack", "menuTabPrevious", "menuTabNext", "menuPageUp", "menuPageDown", "menuSecondary", "menuToggleCursor"],
+      op = [{
         group: "gameplay",
         actions: ["jump", "sneak", "sneakToggle", "sprint", "attack", "use", "hotbarPrevious", "hotbarNext", "inventory", "actionButton", "perspective", "pickBlock", "drop", "emoteWheel", "chat", "pause", "leaderboard"]
       }, {
         group: "menu",
-        actions: pD
+        actions: Op
       }, {
         group: "inventory",
         actions: ["inventoryPrimary", "inventorySecondary", "inventoryQuickMove", "inventoryClose", "inventoryPanelPrevious", "inventoryPanelNext", "inventoryDrop", "inventoryHotbarSwap"]
@@ -813,7 +1148,7 @@ export const modules = {
         group: "keyboard",
         actions: ["keyboardType", "keyboardBackspace", "keyboardSpace", "keyboardCaretLeft", "keyboardCaretRight", "keyboardShift", "keyboardSymbols", "keyboardSubmit", "keyboardClose", "keyboardChannel"]
       }],
-      KD = {
+      Ip = {
         jump: "A",
         sneak: "B",
         sneakToggle: "RS",
@@ -858,29 +1193,29 @@ export const modules = {
         keyboardClose: "B",
         keyboardChannel: "View"
       },
-      rD = ["pickBlock", "perspective"],
-      LD = DD => rD.includes(DD) ? rD : [DD],
-      cD = Object.fromEntries(sD.flatMap((DD => {
+      Sp = ["pickBlock", "perspective"],
+      xp = pp => Sp.includes(pp) ? Sp : [pp],
+      Lp = Object.fromEntries(op.flatMap((pp => {
         let {
-          group: zD,
-          actions: wD
-        } = DD;
-        return wD.map((DD => [DD, zD]))
+          group: ip,
+          actions: cp
+        } = pp;
+        return cp.map((pp => [pp, ip]))
       }))),
-      gD = DD => cD[DD],
-      RD = {
+      Yp = pp => Lp[pp],
+      Dp = {
         pause: ["menu"],
         leaderboard: ["menu"],
         inventory: ["menu"],
         menuPageUp: ["inventory"],
         menuPageDown: ["inventory"]
       },
-      AD = DD => {
-        var zD;
-        return [gD(DD), ...null !== (zD = RD[DD]) && void 0 !== zD ? zD : []]
+      Ap = pp => {
+        var ip;
+        return [Yp(pp), ...null !== (ip = Dp[pp]) && void 0 !== ip ? ip : []]
       },
-      UD = new Set(["menu", "inventory", "keyboard"]),
-      fD = {
+      Pp = new Set(["menu", "inventory", "keyboard"]),
+      Wp = {
         jump: "jump",
         crouch: "sneak",
         sprint: "sprint",
@@ -898,92 +1233,92 @@ export const modules = {
         OpenShop: "leaderboard",
         OpenEmoteWheel: "emoteWheel"
       },
-      ID = new Set(["forward", "backward", "left", "right"])
+      yp = new Set(["forward", "backward", "left", "right"])
   },
-  8196: (DD, zD, wD) => {
-    wD.d(zD, {
-      A: () => MD,
-      D: () => PD,
-      G: () => RD,
-      K: () => VD,
-      O: () => TD,
-      e: () => nD,
-      f: () => JD,
-      g: () => UD,
-      j: () => fD,
-      m: () => jD,
-      q: () => xD,
-      r: () => CD,
-      t: () => OD,
-      w: () => bD,
-      z: () => XD
+  8310: (pp, ip, cp) => {
+    cp.d(ip, {
+      A: () => qp,
+      D: () => Dp,
+      H: () => Rp,
+      K: () => Ep,
+      c: () => tp,
+      e: () => ep,
+      g: () => Pp,
+      j: () => Wp,
+      n: () => lp,
+      o: () => Cp,
+      p: () => Mp,
+      q: () => dp,
+      t: () => Xp,
+      v: () => mp,
+      y: () => Hp
     });
-    var pD = wD(8201),
-      sD = wD(8208),
-      KD = wD(8184),
-      rD = wD(8223);
-    const LD = DD => "pickBlock" === DD ? "perspective" : DD,
-      cD = (DD, zD) => {
-        var wD;
-        const sD = LD(zD);
-        return null !== (wD = DD[sD]) && void 0 !== wD ? wD : pD.c[sD]
+    var Op = cp(8318),
+      op = cp(8320),
+      Ip = cp(8298),
+      Sp = cp(8334);
+    const xp = pp => "pickBlock" === pp ? "perspective" : pp,
+      Lp = (pp, ip) => {
+        var cp;
+        const op = xp(ip);
+        return null !== (cp = pp[op]) && void 0 !== cp ? cp : Op.h[op]
       },
-      gD = new Map([
+      Yp = new Map([
         ["menuConfirm", "menuBack"],
         ["inventoryPrimary", "inventoryClose"],
         ["keyboardType", "keyboardClose"]
-      ].flatMap((DD => {
-        let [zD, wD] = DD;
+      ].flatMap((pp => {
+        let [ip, cp] = pp;
         return [
-          [zD, wD],
-          [wD, zD]
+          [ip, cp],
+          [cp, ip]
         ]
       }))),
-      RD = (DD, zD) => null !== DD && void 0 !== DD ? DD : "nintendo" === zD,
-      AD = DD => RD((0, sD.g)().swapConfirmBack, (0, sD.j)()) && gD.get(DD) || DD,
-      UD = DD => cD((0, sD.g)().bindings, AD(DD)),
-      fD = DD => pD.c[AD(DD)],
-      ID = Object.keys(pD.c),
-      BD = DD => "gameplay" === (0, pD.l)(DD) ? ["gameplay"] : (0, pD.j)(DD),
-      GD = (DD, zD) => {
-        const wD = BD(zD);
-        return BD(DD).some((DD => wD.includes(DD)))
+      Dp = (pp, ip) => null !== pp && void 0 !== pp ? pp : "nintendo" === ip,
+      Ap = pp => Dp((0, op.h)().swapConfirmBack, (0, op.k)()) && Yp.get(pp) || pp,
+      Pp = pp => Lp((0, op.h)().bindings, Ap(pp)),
+      Wp = pp => Op.h[Ap(pp)],
+      yp = Object.keys(Op.h),
+      Up = pp => "gameplay" === (0, Op.p)(pp) ? ["gameplay"] : (0, Op.m)(pp),
+      wp = (pp, ip) => {
+        const cp = Up(ip);
+        return Up(pp).some((pp => cp.includes(pp)))
       },
-      hD = (DD, zD, wD) => {
-        const sD = cD(DD, zD),
-          rD = new Set((0, pD.o)(zD)),
-          gD = [...rD];
-        for (let pD = gD.pop(); pD; pD = gD.pop())
-          for (const zD of ID) {
-            const KD = cD(DD, zD);
-            rD.has(zD) || KD !== wD && KD !== sD || !GD(pD, zD) || (rD.add(zD), gD.push(zD))
+      vp = (pp, ip, cp) => {
+        const op = Lp(pp, ip),
+          Sp = new Set((0, Op.r)(ip)),
+          Yp = [...Sp];
+        for (let Op = Yp.pop(); Op; Op = Yp.pop())
+          for (const ip of yp) {
+            const Ip = Lp(pp, ip);
+            Sp.has(ip) || Ip !== cp && Ip !== op || !wp(Op, ip) || (Sp.add(ip), Yp.push(ip))
           }
-        const RD = {
-          ...DD
+        const Dp = {
+          ...pp
         };
-        for (const AD of rD) {
-          const zD = cD(DD, AD) === sD ? wD : sD,
-            rD = (0, pD.j)(AD).some((DD => pD.f.has(DD)));
-          if ((0, KD.B)(zD) && rD) return null;
-          RD[LD(AD)] = zD
+        for (const Ap of Sp) {
+          const ip = Lp(pp, Ap) === op ? cp : op,
+            Sp = (0, Op.m)(Ap).some((pp => Op.k.has(pp)));
+          if ((0, Ip.C)(ip) && Sp) return null;
+          Dp[xp(Ap)] = ip
         }
-        for (const KD of Object.keys(RD)) RD[KD] === pD.c[KD] && delete RD[KD];
-        return RD
+        for (const Ip of Object.keys(Dp)) Dp[Ip] === Op.h[Ip] && delete Dp[Ip];
+        return Dp
       },
-      nD = (DD, zD) => null !== hD((0, sD.g)().bindings, AD(DD), zD),
-      MD = (DD, zD) => {
-        if (UD(DD) === zD) return !0;
-        const wD = hD((0, sD.g)().bindings, AD(DD), zD);
-        return !!wD && ((0, sD.l)({
-          bindings: wD
+      tp = (pp, ip) => null !== vp((0, op.h)().bindings, Ap(pp), ip),
+      Hp = (pp, ip) => {
+        if (Pp(pp) === ip) return !0;
+        const cp = vp((0, op.h)().bindings, Ap(pp), ip);
+        return !!cp && ((0, op.o)({
+          bindings: cp
         }), !0)
       },
-      OD = (DD, zD) => {
-        const wD = (0, pD.o)(zD);
-        return ID.filter((zD => LD(zD) === zD && !wD.includes(zD) && cD(DD, AD(zD)) !== UD(zD)))
+      dp = (pp, ip) => {
+        const cp = (0, Op.r)(ip);
+        return yp.filter((ip => xp(ip) === ip && !cp.includes(ip) && Lp(pp, Ap(ip)) !== Pp(ip)))
       },
-      JD = ["southpaw", "triggersSwapped"],
-      ED = {
+      ep = ["southpaw", "triggersSwapped"],
+      jp = {
         southpaw: {
           sprint: "RS",
           sneakToggle: "LS"
@@ -993,580 +1328,580 @@ export const modules = {
           use: "RT"
         }
       },
-      QD = DD => Object.keys(ED[DD]),
-      XD = (DD, zD) => "southpaw" === DD ? zD.swapSticks : QD(DD).every((wD => cD(zD.bindings, wD) === ED[DD][wD])),
-      VD = (DD, zD) => {
-        const wD = (0, sD.g)();
-        let KD = wD.bindings;
-        for (const sD of QD(DD)) {
-          const wD = zD ? ED[DD][sD] : pD.c[sD];
-          if (KD = hD(KD, sD, wD), !KD) return !1
+      kp = pp => Object.keys(jp[pp]),
+      mp = (pp, ip) => "southpaw" === pp ? ip.swapSticks : kp(pp).every((cp => Lp(ip.bindings, cp) === jp[pp][cp])),
+      Rp = (pp, ip) => {
+        const cp = (0, op.h)();
+        let Ip = cp.bindings;
+        for (const op of kp(pp)) {
+          const cp = ip ? jp[pp][op] : Op.h[op];
+          if (Ip = vp(Ip, op, cp), !Ip) return !1
         }
-        return (0, sD.l)({
-          swapSticks: "southpaw" === DD ? zD : wD.swapSticks,
-          bindings: KD
+        return (0, op.o)({
+          swapSticks: "southpaw" === pp ? ip : cp.swapSticks,
+          bindings: Ip
         }), !0
       },
-      PD = () => {
-        (0, sD.l)({
+      qp = () => {
+        (0, op.o)({
           swapSticks: !1,
           bindings: {}
         })
       },
-      CD = () => (0, sD.g)().swapSticks ? "RightStick" : "LeftStick",
-      xD = () => (0, sD.g)().swapSticks ? "LeftStick" : "RightStick",
-      TD = DD => (0, sD.g)().swapSticks && (0, KD.B)(DD),
-      bD = DD => TD(DD) ? CD() : xD(),
-      jD = DD => {
-        if (pD.u.has(DD)) return CD();
-        const zD = pD.t[DD];
-        return zD && ("leaderboard" !== zD || (0, rD.e)(DD, (0, rD.b)())) ? UD(zD) : null
+      Mp = () => (0, op.h)().swapSticks ? "RightStick" : "LeftStick",
+      Cp = () => (0, op.h)().swapSticks ? "LeftStick" : "RightStick",
+      Ep = pp => (0, op.h)().swapSticks && (0, Ip.C)(pp),
+      Xp = pp => Ep(pp) ? Mp() : Cp(),
+      lp = pp => {
+        if (Op.x.has(pp)) return Mp();
+        const ip = Op.w[pp];
+        return ip && ("leaderboard" !== ip || (0, Sp.e)(pp, (0, Sp.d)())) ? Pp(ip) : null
       }
   },
-  8172: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      ControllerCategory: () => QL,
-      ControllerGlyph: () => Vs,
-      ControllerRoot: () => Qr,
-      PadLobbyShortcuts: () => yr,
-      PadSneakChip: () => br,
-      PadTooltip: () => dr,
-      attachPressToContinue: () => tr,
-      getBoundButton: () => RD.g,
-      getControllerSettings: () => UD.g,
-      getGlyphForNoaAction: () => RD.m,
-      getInventoryCursorState: () => VL,
-      getMenuShortcutButton: () => aw,
-      getPadGlyphIconName: () => Cr,
-      getPadGlyphIconUrl: () => xr,
-      getPadRepeatTiming: () => BD.d,
-      handOverPadFocus: () => CL,
-      hasActivePad: () => XL,
-      isPadSteppingSlots: () => PL
+  8288: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      ControllerCategory: () => kx,
+      ControllerGlyph: () => Ro,
+      ControllerRoot: () => kS,
+      PadLobbyShortcuts: () => hS,
+      PadSneakChip: () => XS,
+      PadTooltip: () => QS,
+      attachPressToContinue: () => zS,
+      getBoundButton: () => Dp.g,
+      getControllerSettings: () => Pp.h,
+      getGlyphForNoaAction: () => Dp.n,
+      getInventoryCursorState: () => Rx,
+      getMenuShortcutButton: () => rc,
+      getPadGlyphIconName: () => MS,
+      getPadGlyphIconUrl: () => CS,
+      getPadRepeatTiming: () => Up.g,
+      handOverPadFocus: () => Mx,
+      hasActivePad: () => mx,
+      isPadSteppingSlots: () => qx
     });
-    const pD = JSON.parse('{"controller":{"inventoryTake":"Take","inventoryTakeHalf":"Take half","inventoryPlace":"Place","inventoryPlaceOne":"Place one","inventoryQuickMove":"Quick move","inventoryToHotbar":"To hotbar","inventoryPutBack":"Put back","inventoryHotbarSwap":"Swap with hotbar","inventorySwapHere":"Swap here","inventoryCancel":"Cancel","inventoryClose":"Close","inventoryDrop":"Drop (hold: stack)","inventorySelect":"Select","inventoryCraft":"Craft (hold to repeat)","inventoryCraftAll":"Craft all","inventoryChooseRecipe":"Choose","inventoryBackToRecipes":"Back to recipes","inventoryType":"Type","inventoryPanels":"Switch panel","inventoryCategory":"Category","inventoryPage":"Page","disconnected":"Controller disconnected","gameplayReload":"Reload","gameplayActionWheelHint":"(hold for more)","gameplaySneaking":"Sneaking","gameplayLoadFailedTitle":"Controller unavailable","gameplayLoadFailedSubtitle":"Reload the page to play with your controller.","gameplayDropStack":"Keep holding to drop the stack","gameplayAttackLatched":"Attacking","gameplayPickBlock":"Pick block","padButtonView":"View","padButtonMenu":"Menu","padButtonHome":"Home","padButtonCreate":"Create","padButtonOptions":"Options","padButtonDpadUp":"D-pad \u2191","padButtonDpadDown":"D-pad \u2193","padButtonDpadLeft":"D-pad \u2190","padButtonDpadRight":"D-pad \u2192","padButtonLeftStick":"L Stick","padButtonRightStick":"R Stick","settingsLook":"Look","settingsLookSensitivityX":"Look sensitivity (horizontal)","settingsLookSensitivityY":"Look sensitivity (vertical)","settingsAimLookSensitivity":"Look sensitivity while aiming (use held)","settingsInvertLookX":"Invert horizontal look","settingsInvertLookY":"Invert vertical look","settingsLookCurve":"Look curve","settingsLookCurveHint":"Steep gives finer aim near the centre, Linear turns at an even rate, and Boost turns faster when you hold the stick all the way.","settingsCurveExponential":"Steep","settingsCurveLinear":"Linear","settingsCurveBoost":"Boost","settingsLookDeadzone":"Look deadzone","settingsGyro":"Gyro aiming","settingsGyroToggle":"Aim by moving the controller","settingsGyroToggleInfo":"Turn and tilt the controller to aim, on top of the right stick.","settingsGyroTogglePhone":"Aim by moving your phone or tablet","settingsGyroToggleInfoPhone":"Turn and tilt your phone or tablet to aim, on top of the right stick.","settingsGyroUnsupported":"Gyro aiming needs Chrome or Edge.","settingsGyroBlocked":"Gyro aiming isn\'t available on this site.","settingsGyroPhoneNeedsController":"Connect a controller to aim by moving your phone or tablet.","settingsGyroSteamHint":"If Steam already turns your gyro into mouse movement, leave this off.","settingsGyroConnect":"Connect motion controller","settingsGyroConnectHint":"Works with DualSense, DualShock 4 and Switch controllers.","settingsGyroConnectNeedsClick":"Click Connect with your mouse: the browser asks before sharing a controller.","settingsGyroOpenFailed":"Another app is using the controller. Close apps such as Steam or DS4Windows, then try again.","settingsGyroConnected":"Aiming with {{name}}.","settingsGyroAllowMotion":"Allow motion sensor","settingsGyroAllowNeedsTap":"Tap Allow motion sensor on your screen to turn it on.","settingsGyroPhoneOn":"Aiming with this device\'s motion sensor.","settingsGyroPhoneWaiting":"Waiting for this device\'s motion sensor\u2026","settingsGyroPhoneNoSensor":"No motion sensor found on this device.","settingsGyroPhoneDenied":"Motion access is blocked. Allow it in your browser settings.","settingsGyroSensitivity":"Gyro sensitivity","settingsGyroActivation":"Gyro turns on","settingsGyroAlways":"Always","settingsGyroWhileAiming":"While aiming","settingsGyroWhileButton":"While holding a button","settingsGyroAimingHint":"Hold {{button}} to aim with motion.","settingsGyroButton":"Gyro button","settingsGyroButtonHint":"While gyro aiming is on, this button only turns the gyro on in game, so pick one you rarely use.","settingsMovement":"Movement","settingsMoveDeadzone":"Move deadzone","settingsAutoSprint":"Sprint at full tilt","settingsAutoSprintInfo":"Push the movement stick all the way to sprint.","settingsSneak":"Sneak","settingsSneakHold":"Hold","settingsSneakToggle":"Toggle","settingsButtons":"Buttons","settingsPromptFamily":"Button prompts","settingsPromptAuto":"Match my controller","settingsPromptXbox":"Xbox","settingsPromptPlayStation":"PlayStation","settingsPromptNintendo":"Nintendo","settingsPromptSteamDeck":"Steam Deck","settingsPromptGeneric":"Generic","settingsHideButtonHints":"Hide button hints","settingsVibration":"Vibration","settingsCursorSpeed":"Virtual cursor speed","settingsCursorMagnetism":"Cursor snaps onto buttons","settingsMenuBackToCategories":"Back returns to the category list first","settingsAccessibility":"Accessibility","settingsSwapConfirmBack":"Swap confirm and back","settingsSwapToast":"Select and Back have swapped buttons.","settingsLayoutRefusedToast":"This layout doesn\'t fit your current buttons. Reset them to use it.","settingsSwapConfirmBackInfo":"Select with the right face button and go back with the bottom one, in menus, the inventory and the on-screen keyboard. On by default for Nintendo controllers.","settingsButtonRepeat":"Button repeat","settingsButtonRepeatHint":"How a held button repeats in menus, sliders, the on-screen keyboard and crafting. Off acts once per press, and holding drop in game drops just one item.","settingsButtonRepeatDefault":"Default","settingsButtonRepeatSlow":"Slow (0.8 s, then 4 a second)","settingsButtonRepeatOff":"Off (once per press)","settingsTapHoldTime":"Tap/hold time","settingsTapHoldTimeHint":"How long to hold the chat, emote or action button to open its wheel, or the view button to change view where a tap picks a block. Dropping a whole stack takes 0.8, 1 or 1.3 s.","settingsTapHoldShort":"Short (0.25 s)","settingsTapHoldMedium":"Medium (0.5 s)","settingsTapHoldLong":"Long (0.8 s)","settingsEmoteButton":"Emote button","settingsEmoteButtonTapHoldHint":"Tap to repeat your last emote, or hold to open the emote wheel.","settingsEmoteButtonWheelHint":"Any press opens the emote wheel, with no hold to time. Pick with the stick, then select.","settingsEmoteButtonTapHold":"Tap repeats, hold opens wheel","settingsEmoteButtonWheel":"Opens the wheel","settingsAttackMode":"Attack / mine","settingsAttackHoldHint":"Hold attack to keep attacking or mining.","settingsAttackToggleHint":"Press attack once to keep attacking or mining, and again to stop.","settingsAttackHold":"Hold","settingsAttackToggle":"Toggle","settingsLargePointer":"Large pointer and focus","settingsLargePointerInfo":"A bigger menu cursor, thicker selection brackets and bigger button hints.","settingsRemap":"Remap buttons","settingsRemapHint":"Select an action, then press a button. If that button is taken, the two swap.","settingsLayoutSouthpaw":"Southpaw (move with the right stick)","settingsLayoutTriggersSwapped":"Triggers swapped (attack with the left trigger)","settingsCapturePrompt":"Press a button","settingsCaptureCancelHint":"Press {{button}} to cancel","settingsCaptureCancelOrBindHint":"Tap {{button}} to cancel, or hold it to choose it","settingsReset":"Reset","settingsSwapNotice":"{{action}} moved to {{button}}","settingsResetAll":"Reset all buttons and sticks","settingsGroupGameplay":"Movement & gameplay","settingsGroupMenus":"Menus","settingsGroupInventory":"Inventory","settingsGroupKeyboard":"On-screen keyboard","settingsActionMove":"Move","settingsActionLook":"Look around","settingsActionJump":"Jump","settingsActionSneak":"Sneak","settingsActionSneakToggle":"Toggle sneak","settingsActionSprint":"Sprint","settingsActionAttack":"Attack / mine","settingsActionUse":"Use / place","settingsActionHotbarPrevious":"Previous hotbar slot","settingsActionHotbarNext":"Next hotbar slot","settingsActionInventory":"Inventory","settingsActionActionButton":"Game action","settingsActionPerspective":"Change view","settingsActionPickBlock":"Pick block (creative)","settingsActionDrop":"Drop item","settingsActionEmoteWheel":"Emotes","settingsActionChat":"Chat","settingsActionPause":"Pause menu","settingsActionLeaderboard":"Shop / leaderboard","settingsActionMenuConfirm":"Select","settingsActionMenuBack":"Back","settingsActionMenuTabPrevious":"Previous tab","settingsActionMenuTabNext":"Next tab","settingsActionMenuPageUp":"Page up","settingsActionMenuPageDown":"Page down","settingsActionMenuSecondary":"Secondary action","settingsActionMenuToggleCursor":"Switch to virtual cursor","settingsActionInventoryPrimary":"Pick up / place","settingsActionInventorySecondary":"Pick up half / place one","settingsActionInventoryQuickMove":"Quick move","settingsActionInventoryHotbarSwap":"Swap with hotbar slot","settingsActionInventoryClose":"Close","settingsActionInventoryPanelPrevious":"Previous panel","settingsActionInventoryPanelNext":"Next panel","settingsActionInventoryDrop":"Drop item","settingsActionKeyboardType":"Type key","settingsActionKeyboardBackspace":"Backspace","settingsActionKeyboardSpace":"Space","settingsActionKeyboardCaretLeft":"Move cursor left","settingsActionKeyboardCaretRight":"Move cursor right","settingsActionKeyboardShift":"Shift","settingsActionKeyboardSymbols":"Accents and symbols","settingsActionKeyboardSubmit":"Send","settingsActionKeyboardClose":"Close keyboard","settingsActionKeyboardChannel":"Chat channel","settingsAlternatives":"Try alternatives","settingsAlternativesHint":"Try each way of playing and keep the one that feels best.","settingsMenuNavigation":"Menu navigation","settingsMenuNavigationHint":"Steer a cursor with the stick and jump between buttons with the D-pad, or use just one.","settingsNavHybrid":"Cursor and D-pad","settingsMenuNavFocus":"Jump between buttons","settingsVirtualCursor":"Virtual cursor","settingsInventoryNavigation":"Inventory","settingsInventoryNavigationHint":"Steer a cursor with the stick and step slot by slot with the D-pad, or use just one.","settingsInventoryNavSlot":"Slot by slot","settingsQuickChat":"Hold chat button","settingsQuickChatHint":"Hold the chat button to pick a quick phrase. Tapping it still opens chat.","settingsQuickChatWheel":"Quick chat wheel","settingsQuickChatOff":"Off","settingsLeaderboardButton":"Shop / leaderboard button","settingsLeaderboardButtonHint":"Open the shop in one press in games that have one. The lobby leaderboard is still in the pause menu.","settingsLeaderboardButtonShop":"Shop, in games with one","settingsLeaderboardButtonLeaderboard":"Always the leaderboard","settingsTester":"Gamepad tester","settingsTesterNoPad":"Connect a gamepad and press any button to test it.","settingsTesterFamily":"Detected: {{family}}","settingsTesterHint":"Start a test to try every button and stick without moving through the menu.","settingsTesterStart":"Start test","settingsTesterStop":"Stop test","settingsTesterTesting":"Press anything to see it light up. To stop, hold {{button}} or press it three times.","settingsControlsNote":"Playing with a gamepad? Change its buttons and feel in Gamepad settings.","settingsOpenController":"Gamepad settings","keyboardSpace":"Space","keyboardSend":"Send","keyboardDone":"Done","keyboardTargetChat":"Chat","keyboardTargetSign":"Sign","keyboardTargetNameTag":"Name tag","keyboardTargetBook":"Book page","keyboardTargetBookTitle":"Book title","keyboardTargetText":"Text","keyboardPhraseGg":"gg","keyboardPhraseHi":"hi","keyboardPhraseThanks":"thanks","keyboardPhraseGl":"gl","keyboardPhraseBrb":"brb","keyboardPhraseYes":"yes","keyboardPhraseNo":"no","keyboardPhraseHelp":"help!","quickChatPick":"Pick a phrase","actionWheelPick":"Pick an action","wheelReleaseToPick":"Release to pick","wheelClose":"Close","wheelChoose":"Choose","menusSelect":"Select","menusBack":"Back","menusClose":"Close","menusQuickChat":"Quick chat (hold)","menusSkipTutorial":"Skip tutorial","menusTabs":"Tabs","menusRows":"Rows","menusCursorMode":"Cursor","menusFocusMode":"Focus","menusClick":"Click","menusRightClick":"Right-click","menusScroll":"Scroll","menusFriends":"Friends","menusSearch":"Search","menusSettings":"Settings","menusLeaveGameTitle":"Leave the game?","menusLeaveGameLeave":"Leave","menusLeaveGameStay":"Stay","menusNotifications":"Notifications","menusLobby":"Lobby","menusShop":"Shop","menusTasks":"Tasks & leaderboards","menusInvite":"Invite friends","menusAdjust":"Adjust","menusFavourite":"Favourite","screensPressToContinue":"Press {{button}} to continue","screensPressToEnterGame":"Press {{button}} to enter game","screensEnterGame":"Enter game","screensBackToGames":"Back to games","tutorialMine":"Mine","tutorialPlace":"Place / Use","tutorialInventory":"Inventory","tutorialPause":"Pause","menusUseMouse":"Use a mouse or touch here"}}');
-    var sD = wD(1200),
-      KD = wD(1394),
-      rD = wD(8178),
-      LD = wD(79),
-      cD = wD(20),
-      gD = wD(25),
-      RD = wD(8196),
-      AD = wD(8226),
-      UD = wD(8208),
-      fD = wD(8230),
-      ID = wD(8184),
-      BD = wD(8658),
-      GD = wD(8664),
-      hD = wD(1681);
-    const nD = (DD, zD, wD) => Math.max(zD, Math.min(wD, DD)),
-      MD = DD => Math.min(DD.width, DD.height) / 720,
-      OD = DD => Math.max(.15, DD);
-    class JD {
+    const Op = JSON.parse('{"controller":{"inventoryTake":"Take","inventoryTakeHalf":"Take half","inventoryPlace":"Place","inventoryPlaceOne":"Place one","inventoryQuickMove":"Quick move","inventoryToHotbar":"To hotbar","inventoryPutBack":"Put back","inventoryHotbarSwap":"Swap with hotbar","inventorySwapHere":"Swap here","inventoryCancel":"Cancel","inventoryClose":"Close","inventoryDrop":"Drop (hold: stack)","inventorySelect":"Select","inventoryCraft":"Craft (hold to repeat)","inventoryCraftAll":"Craft all","inventoryChooseRecipe":"Choose","inventoryBackToRecipes":"Back to recipes","inventoryType":"Type","inventoryPanels":"Switch panel","inventoryCategory":"Category","inventoryPage":"Page","disconnected":"Controller disconnected","gameplayReload":"Reload","gameplayActionWheelHint":"(hold for more)","gameplaySneaking":"Sneaking","gameplayLoadFailedTitle":"Controller unavailable","gameplayLoadFailedSubtitle":"Reload the page to play with your controller.","gameplayDropStack":"Keep holding to drop the stack","gameplayAttackLatched":"Attacking","gameplayPickBlock":"Pick block","padButtonView":"View","padButtonMenu":"Menu","padButtonHome":"Home","padButtonCreate":"Create","padButtonOptions":"Options","padButtonDpadUp":"D-pad \u2191","padButtonDpadDown":"D-pad \u2193","padButtonDpadLeft":"D-pad \u2190","padButtonDpadRight":"D-pad \u2192","padButtonLeftStick":"L Stick","padButtonRightStick":"R Stick","settingsLook":"Look","settingsLookSensitivityX":"Look sensitivity (horizontal)","settingsLookSensitivityY":"Look sensitivity (vertical)","settingsAimLookSensitivity":"Look sensitivity while aiming (use held)","settingsInvertLookX":"Invert horizontal look","settingsInvertLookY":"Invert vertical look","settingsLookCurve":"Look curve","settingsLookCurveHint":"Steep gives finer aim near the centre, Linear turns at an even rate, and Boost turns faster when you hold the stick all the way.","settingsCurveExponential":"Steep","settingsCurveLinear":"Linear","settingsCurveBoost":"Boost","settingsLookDeadzone":"Look deadzone","settingsGyro":"Gyro aiming","settingsGyroToggle":"Aim by moving the controller","settingsGyroToggleInfo":"Turn and tilt the controller to aim, on top of the right stick.","settingsGyroTogglePhone":"Aim by moving your phone or tablet","settingsGyroToggleInfoPhone":"Turn and tilt your phone or tablet to aim, on top of the right stick.","settingsGyroUnsupported":"Gyro aiming needs Chrome or Edge.","settingsGyroBlocked":"Gyro aiming isn\'t available on this site.","settingsGyroPhoneNeedsController":"Connect a controller to aim by moving your phone or tablet.","settingsGyroSteamHint":"If Steam already turns your gyro into mouse movement, leave this off.","settingsGyroConnect":"Connect motion controller","settingsGyroConnectHint":"Works with DualSense, DualShock 4 and Switch controllers.","settingsGyroConnectNeedsClick":"Click Connect with your mouse: the browser asks before sharing a controller.","settingsGyroOpenFailed":"Another app is using the controller. Close apps such as Steam or DS4Windows, then try again.","settingsGyroConnected":"Aiming with {{name}}.","settingsGyroAllowMotion":"Allow motion sensor","settingsGyroAllowNeedsTap":"Tap Allow motion sensor on your screen to turn it on.","settingsGyroPhoneOn":"Aiming with this device\'s motion sensor.","settingsGyroPhoneWaiting":"Waiting for this device\'s motion sensor\u2026","settingsGyroPhoneNoSensor":"No motion sensor found on this device.","settingsGyroPhoneDenied":"Motion access is blocked. Allow it in your browser settings.","settingsGyroSensitivity":"Gyro sensitivity","settingsGyroActivation":"Gyro turns on","settingsGyroAlways":"Always","settingsGyroWhileAiming":"While aiming","settingsGyroWhileButton":"While holding a button","settingsGyroAimingHint":"Hold {{button}} to aim with motion.","settingsGyroButton":"Gyro button","settingsGyroButtonHint":"While gyro aiming is on, this button only turns the gyro on in game, so pick one you rarely use.","settingsMovement":"Movement","settingsMoveDeadzone":"Move deadzone","settingsAutoSprint":"Sprint at full tilt","settingsAutoSprintInfo":"Push the movement stick all the way to sprint.","settingsSneak":"Sneak","settingsSneakHold":"Hold","settingsSneakToggle":"Toggle","settingsButtons":"Buttons","settingsPromptFamily":"Button prompts","settingsPromptAuto":"Match my controller","settingsPromptXbox":"Xbox","settingsPromptPlayStation":"PlayStation","settingsPromptNintendo":"Nintendo","settingsPromptSteamDeck":"Steam Deck","settingsPromptGeneric":"Generic","settingsHideButtonHints":"Hide button hints","settingsVibration":"Vibration","settingsCursorSpeed":"Virtual cursor speed","settingsCursorMagnetism":"Cursor snaps onto buttons","settingsMenuBackToCategories":"Back returns to the category list first","settingsAccessibility":"Accessibility","settingsSwapConfirmBack":"Swap confirm and back","settingsSwapToast":"Select and Back have swapped buttons.","settingsLayoutRefusedToast":"This layout doesn\'t fit your current buttons. Reset them to use it.","settingsSwapConfirmBackInfo":"Select with the right face button and go back with the bottom one, in menus, the inventory and the on-screen keyboard. On by default for Nintendo controllers.","settingsButtonRepeat":"Button repeat","settingsButtonRepeatHint":"How a held button repeats in menus, sliders, the on-screen keyboard and crafting. Off acts once per press, and holding drop in game drops just one item.","settingsButtonRepeatDefault":"Default","settingsButtonRepeatSlow":"Slow (0.8 s, then 4 a second)","settingsButtonRepeatOff":"Off (once per press)","settingsTapHoldTime":"Tap/hold time","settingsTapHoldTimeHint":"How long to hold the chat, emote or action button to open its wheel, or the view button to change view where a tap picks a block. Dropping a whole stack takes 0.8, 1 or 1.3 s.","settingsTapHoldShort":"Short (0.25 s)","settingsTapHoldMedium":"Medium (0.5 s)","settingsTapHoldLong":"Long (0.8 s)","settingsEmoteButton":"Emote button","settingsEmoteButtonTapHoldHint":"Tap to repeat your last emote, or hold to open the emote wheel.","settingsEmoteButtonWheelHint":"Any press opens the emote wheel, with no hold to time. Pick with the stick, then select.","settingsEmoteButtonTapHold":"Tap repeats, hold opens wheel","settingsEmoteButtonWheel":"Opens the wheel","settingsAttackMode":"Attack / mine","settingsAttackHoldHint":"Hold attack to keep attacking or mining.","settingsAttackToggleHint":"Press attack once to keep attacking or mining, and again to stop.","settingsAttackHold":"Hold","settingsAttackToggle":"Toggle","settingsLargePointer":"Large pointer and focus","settingsLargePointerInfo":"A bigger menu cursor, thicker selection brackets and bigger button hints.","settingsRemap":"Remap buttons","settingsRemapHint":"Select an action, then press a button. If that button is taken, the two swap.","settingsLayoutSouthpaw":"Southpaw (move with the right stick)","settingsLayoutTriggersSwapped":"Triggers swapped (attack with the left trigger)","settingsCapturePrompt":"Press a button","settingsCaptureCancelHint":"Press {{button}} to cancel","settingsCaptureCancelOrBindHint":"Tap {{button}} to cancel, or hold it to choose it","settingsReset":"Reset","settingsSwapNotice":"{{action}} moved to {{button}}","settingsResetAll":"Reset all buttons and sticks","settingsGroupGameplay":"Movement & gameplay","settingsGroupMenus":"Menus","settingsGroupInventory":"Inventory","settingsGroupKeyboard":"On-screen keyboard","settingsActionMove":"Move","settingsActionLook":"Look around","settingsActionJump":"Jump","settingsActionSneak":"Sneak","settingsActionSneakToggle":"Toggle sneak","settingsActionSprint":"Sprint","settingsActionAttack":"Attack / mine","settingsActionUse":"Use / place","settingsActionHotbarPrevious":"Previous hotbar slot","settingsActionHotbarNext":"Next hotbar slot","settingsActionInventory":"Inventory","settingsActionActionButton":"Game action","settingsActionPerspective":"Change view","settingsActionPickBlock":"Pick block (creative)","settingsActionDrop":"Drop item","settingsActionEmoteWheel":"Emotes","settingsActionChat":"Chat","settingsActionPause":"Pause menu","settingsActionLeaderboard":"Shop / leaderboard","settingsActionMenuConfirm":"Select","settingsActionMenuBack":"Back","settingsActionMenuTabPrevious":"Previous tab","settingsActionMenuTabNext":"Next tab","settingsActionMenuPageUp":"Page up","settingsActionMenuPageDown":"Page down","settingsActionMenuSecondary":"Secondary action","settingsActionMenuToggleCursor":"Switch to virtual cursor","settingsActionInventoryPrimary":"Pick up / place","settingsActionInventorySecondary":"Pick up half / place one","settingsActionInventoryQuickMove":"Quick move","settingsActionInventoryHotbarSwap":"Swap with hotbar slot","settingsActionInventoryClose":"Close","settingsActionInventoryPanelPrevious":"Previous panel","settingsActionInventoryPanelNext":"Next panel","settingsActionInventoryDrop":"Drop item","settingsActionKeyboardType":"Type key","settingsActionKeyboardBackspace":"Backspace","settingsActionKeyboardSpace":"Space","settingsActionKeyboardCaretLeft":"Move cursor left","settingsActionKeyboardCaretRight":"Move cursor right","settingsActionKeyboardShift":"Shift","settingsActionKeyboardSymbols":"Accents and symbols","settingsActionKeyboardSubmit":"Send","settingsActionKeyboardClose":"Close keyboard","settingsActionKeyboardChannel":"Chat channel","settingsAlternatives":"Try alternatives","settingsAlternativesHint":"Try each way of playing and keep the one that feels best.","settingsMenuNavigation":"Menu navigation","settingsMenuNavigationHint":"Steer a cursor with the stick and jump between buttons with the D-pad, or use just one.","settingsNavHybrid":"Cursor and D-pad","settingsMenuNavFocus":"Jump between buttons","settingsVirtualCursor":"Virtual cursor","settingsInventoryNavigation":"Inventory","settingsInventoryNavigationHint":"Steer a cursor with the stick and step slot by slot with the D-pad, or use just one.","settingsInventoryNavSlot":"Slot by slot","settingsQuickChat":"Hold chat button","settingsQuickChatHint":"Hold the chat button to pick a quick phrase. Tapping it still opens chat.","settingsQuickChatWheel":"Quick chat wheel","settingsQuickChatOff":"Off","settingsLeaderboardButton":"Shop / leaderboard button","settingsLeaderboardButtonHint":"Open the shop in one press in games that have one. The lobby leaderboard is still in the pause menu.","settingsLeaderboardButtonShop":"Shop, in games with one","settingsLeaderboardButtonLeaderboard":"Always the leaderboard","settingsTester":"Gamepad tester","settingsTesterNoPad":"Connect a gamepad and press any button to test it.","settingsTesterFamily":"Detected: {{family}}","settingsTesterHint":"Start a test to try every button and stick without moving through the menu.","settingsTesterStart":"Start test","settingsTesterStop":"Stop test","settingsTesterTesting":"Press anything to see it light up. To stop, hold {{button}} or press it three times.","settingsControlsNote":"Playing with a gamepad? Change its buttons and feel in Gamepad settings.","settingsOpenController":"Gamepad settings","keyboardSpace":"Space","keyboardSend":"Send","keyboardDone":"Done","keyboardTargetChat":"Chat","keyboardTargetSign":"Sign","keyboardTargetNameTag":"Name tag","keyboardTargetBook":"Book page","keyboardTargetBookTitle":"Book title","keyboardTargetText":"Text","keyboardPhraseGg":"gg","keyboardPhraseHi":"hi","keyboardPhraseThanks":"thanks","keyboardPhraseGl":"gl","keyboardPhraseBrb":"brb","keyboardPhraseYes":"yes","keyboardPhraseNo":"no","keyboardPhraseHelp":"help!","quickChatPick":"Pick a phrase","actionWheelPick":"Pick an action","wheelReleaseToPick":"Release to pick","wheelClose":"Close","wheelChoose":"Choose","menusSelect":"Select","menusBack":"Back","menusClose":"Close","menusQuickChat":"Quick chat (hold)","menusSkipTutorial":"Skip tutorial","menusTabs":"Tabs","menusRows":"Rows","menusCursorMode":"Cursor","menusFocusMode":"Focus","menusClick":"Click","menusRightClick":"Right-click","menusScroll":"Scroll","menusFriends":"Friends","menusSearch":"Search","menusSettings":"Settings","menusLeaveGameTitle":"Leave the game?","menusLeaveGameLeave":"Leave","menusLeaveGameStay":"Stay","menusNotifications":"Notifications","menusLobby":"Lobby","menusShop":"Shop","menusTasks":"Tasks & leaderboards","menusInvite":"Invite friends","menusAdjust":"Adjust","menusFavourite":"Favourite","screensPressToContinue":"Press {{button}} to continue","screensPressToEnterGame":"Press {{button}} to enter game","screensEnterGame":"Enter game","screensBackToGames":"Back to games","tutorialMine":"Mine","tutorialPlace":"Place / Use","tutorialInventory":"Inventory","tutorialPause":"Pause","menusUseMouse":"Use a mouse or touch here"}}');
+    var op = cp(1201),
+      Ip = cp(1432),
+      Sp = cp(8290),
+      xp = cp(82),
+      Lp = cp(25),
+      Yp = cp(34),
+      Dp = cp(8310),
+      Ap = cp(8336),
+      Pp = cp(8320),
+      Wp = cp(8338),
+      yp = cp(8298),
+      Up = cp(8793),
+      wp = cp(8801),
+      vp = cp(1677);
+    const tp = (pp, ip, cp) => Math.max(ip, Math.min(cp, pp)),
+      Hp = pp => Math.min(pp.width, pp.height) / 720,
+      dp = pp => Math.max(.15, pp);
+    class ep {
       constructor() {
         this.locked = !1
       }
       lock() {
         this.locked = !0
       }
-      update(DD, zD) {
-        const wD = Math.hypot(DD.x, DD.y) >= (DD => Math.max(.3, DD))(zD);
-        return this.locked ? (this.locked = wD, !1) : wD
+      update(pp, ip) {
+        const cp = Math.hypot(pp.x, pp.y) >= (pp => Math.max(.3, pp))(ip);
+        return this.locked ? (this.locked = cp, !1) : cp
       }
     }
-    const ED = (DD, zD) => {
-        const wD = nD(zD.dtMs, 0, 100),
-          pD = wD / 1e3,
-          sD = MD(zD.viewport) * (zD.cursorSpeedPercent / 100),
-          KD = (0, ID.i)(zD.stick, OD(zD.moveDeadzone)),
-          rD = Math.hypot(KD.x, KD.y),
-          LD = ((DD, zD, wD) => {
-            if (zD < .3) return 0;
-            const pD = wD / 350;
-            return zD >= .85 ? Math.min(1, DD + pD) : Math.max(0, DD - pD)
-          })(DD.speedRamp, rD, wD);
-        let cD = DD.x,
-          gD = DD.y;
-        if (rD > 0) {
-          const DD = .45 + .55 * LD,
-            wD = zD.context.overInteractive ? .45 : 1,
-            RD = 1400 * (DD => {
-              const zD = nD(DD, 0, 1);
-              return .3 * zD + .7 * zD * zD
-            })(rD) * sD * DD * wD;
-          cD += KD.x / rD * RD * pD, gD += KD.y / rD * RD * pD
+    const jp = (pp, ip) => {
+        const cp = tp(ip.dtMs, 0, 100),
+          Op = cp / 1e3,
+          op = Hp(ip.viewport) * (ip.cursorSpeedPercent / 100),
+          Ip = (0, yp.h)(ip.stick, dp(ip.moveDeadzone)),
+          Sp = Math.hypot(Ip.x, Ip.y),
+          xp = ((pp, ip, cp) => {
+            if (ip < .3) return 0;
+            const Op = cp / 350;
+            return ip >= .85 ? Math.min(1, pp + Op) : Math.max(0, pp - Op)
+          })(pp.speedRamp, Sp, cp);
+        let Lp = pp.x,
+          Yp = pp.y;
+        if (Sp > 0) {
+          const pp = .45 + .55 * xp,
+            cp = ip.context.overInteractive ? .45 : 1,
+            Dp = 1400 * (pp => {
+              const ip = tp(pp, 0, 1);
+              return .3 * ip + .7 * ip * ip
+            })(Sp) * op * pp * cp;
+          Lp += Ip.x / Sp * Dp * Op, Yp += Ip.y / Sp * Dp * Op
         }
-        const RD = Math.hypot(zD.dpad.x, zD.dpad.y);
-        if (RD > 0) {
-          const DD = 500 * sD;
-          cD += zD.dpad.x / RD * DD * pD, gD += zD.dpad.y / RD * DD * pD
+        const Dp = Math.hypot(ip.dpad.x, ip.dpad.y);
+        if (Dp > 0) {
+          const pp = 500 * op;
+          Lp += ip.dpad.x / Dp * pp * Op, Yp += ip.dpad.y / Dp * pp * Op
         }
-        const AD = zD.context.magnetTarget;
-        if (AD && rD < .3 && 0 === RD) {
-          const DD = ((DD, zD, wD, pD, sD) => {
-            const KD = zD.x - DD.x,
-              rD = zD.y - DD.y,
-              LD = Math.hypot(KD, rD);
-            if (0 === LD) return {
+        const Ap = ip.context.magnetTarget;
+        if (Ap && Sp < .3 && 0 === Dp) {
+          const pp = ((pp, ip, cp, Op, op) => {
+            const Ip = ip.x - pp.x,
+              Sp = ip.y - pp.y,
+              xp = Math.hypot(Ip, Sp);
+            if (0 === xp) return {
               x: 0,
               y: 0
             };
-            const cD = Math.min(LD, sD * (1 - pD / .3));
-            let gD = KD / LD * cD,
-              RD = rD / LD * cD;
-            if (pD > 0) {
-              const DD = wD.x / pD,
-                zD = wD.y / pD,
-                sD = gD * DD + RD * zD;
-              sD < 0 && (gD -= sD * DD, RD -= sD * zD)
+            const Lp = Math.min(xp, op * (1 - Op / .3));
+            let Yp = Ip / xp * Lp,
+              Dp = Sp / xp * Lp;
+            if (Op > 0) {
+              const pp = cp.x / Op,
+                ip = cp.y / Op,
+                op = Yp * pp + Dp * ip;
+              op < 0 && (Yp -= op * pp, Dp -= op * ip)
             }
             return {
-              x: gD,
-              y: RD
+              x: Yp,
+              y: Dp
             }
           })({
-            x: cD,
-            y: gD
-          }, AD, KD, rD, 120 * MD(zD.viewport) * pD);
-          cD += DD.x, gD += DD.y
+            x: Lp,
+            y: Yp
+          }, Ap, Ip, Sp, 120 * Hp(ip.viewport) * Op);
+          Lp += pp.x, Yp += pp.y
         }
         return {
-          x: nD(cD, 0, Math.max(0, zD.viewport.width - 1)),
-          y: nD(gD, 0, Math.max(0, zD.viewport.height - 1)),
-          speedRamp: LD
+          x: tp(Lp, 0, Math.max(0, ip.viewport.width - 1)),
+          y: tp(Yp, 0, Math.max(0, ip.viewport.height - 1)),
+          speedRamp: xp
         }
       },
-      QD = DD => {
-        const zD = (0, ID.i)(DD, .2);
-        return 0 !== zD.x || 0 !== zD.y
+      kp = pp => {
+        const ip = (0, yp.h)(pp, .2);
+        return 0 !== ip.x || 0 !== ip.y
       },
-      XD = (DD, zD) => {
-        const wD = (0, ID.i)(DD, .2),
-          pD = Math.hypot(wD.x, wD.y);
-        if (0 === pD) return {
+      mp = (pp, ip) => {
+        const cp = (0, yp.h)(pp, .2),
+          Op = Math.hypot(cp.x, cp.y);
+        if (0 === Op) return {
           x: 0,
           y: 0
         };
-        const sD = pD * pD * 1600,
-          KD = nD(zD, 0, 100) / 1e3;
+        const op = Op * Op * 1600,
+          Ip = tp(ip, 0, 100) / 1e3;
         return {
-          x: wD.x / pD * sD * KD,
-          y: wD.y / pD * sD * KD
+          x: cp.x / Op * op * Ip,
+          y: cp.y / Op * op * Ip
         }
       },
-      VD = (DD, zD) => "y" === zD ? DD.scrollHeight > DD.clientHeight + 1 : DD.scrollWidth > DD.clientWidth + 1,
-      PD = (DD, zD) => {
-        if (!VD(DD, zD)) return !1;
-        const wD = getComputedStyle(DD),
-          pD = "y" === zD ? wD.overflowY : wD.overflowX;
-        return "auto" === pD || "scroll" === pD
+      Rp = (pp, ip) => "y" === ip ? pp.scrollHeight > pp.clientHeight + 1 : pp.scrollWidth > pp.clientWidth + 1,
+      qp = (pp, ip) => {
+        if (!Rp(pp, ip)) return !1;
+        const cp = getComputedStyle(pp),
+          Op = "y" === ip ? cp.overflowY : cp.overflowX;
+        return "auto" === Op || "scroll" === Op
       },
-      CD = (DD, zD, wD) => {
-        for (let KD = DD instanceof HTMLElement ? DD : null !== (pD = null === DD || void 0 === DD ? void 0 : DD.parentElement) && void 0 !== pD ? pD : null; KD; KD = KD.parentElement) {
-          var pD;
-          if (PD(KD, zD)) return KD;
-          if (KD === wD) return null
+      Mp = (pp, ip, cp) => {
+        for (let Ip = pp instanceof HTMLElement ? pp : null !== (Op = null === pp || void 0 === pp ? void 0 : pp.parentElement) && void 0 !== Op ? Op : null; Ip; Ip = Ip.parentElement) {
+          var Op;
+          if (qp(Ip, ip)) return Ip;
+          if (Ip === cp) return null
         }
-        if (wD) return null;
-        const sD = document.scrollingElement;
-        return sD instanceof HTMLElement && VD(sD, zD) ? sD : null
+        if (cp) return null;
+        const op = document.scrollingElement;
+        return op instanceof HTMLElement && Rp(op, ip) ? op : null
       },
-      xD = new WeakMap,
-      TD = (DD, zD) => {
-        const wD = performance.now(),
-          pD = xD.get(DD);
-        if (pD && pD.axis === zD && wD - pD.atMs < 500 && (!pD.container || pD.container.isConnected)) return pD.container;
-        const sD = bD(DD, zD);
-        return xD.set(DD, {
-          axis: zD,
-          atMs: wD,
-          container: sD
-        }), sD
+      Cp = new WeakMap,
+      Ep = (pp, ip) => {
+        const cp = performance.now(),
+          Op = Cp.get(pp);
+        if (Op && Op.axis === ip && cp - Op.atMs < 500 && (!Op.container || Op.container.isConnected)) return Op.container;
+        const op = Xp(pp, ip);
+        return Cp.set(pp, {
+          axis: ip,
+          atMs: cp,
+          container: op
+        }), op
       },
-      bD = (DD, zD) => {
-        let wD = PD(DD, zD) ? DD : null,
-          pD = wD ? wD.clientWidth * wD.clientHeight : 0;
-        for (const sD of DD.querySelectorAll("*")) {
-          const DD = sD.clientWidth * sD.clientHeight;
-          DD > pD && PD(sD, zD) && (wD = sD, pD = DD)
+      Xp = (pp, ip) => {
+        let cp = qp(pp, ip) ? pp : null,
+          Op = cp ? cp.clientWidth * cp.clientHeight : 0;
+        for (const op of pp.querySelectorAll("*")) {
+          const pp = op.clientWidth * op.clientHeight;
+          pp > Op && qp(op, ip) && (cp = op, Op = pp)
         }
-        return wD
+        return cp
       },
-      jD = (DD, zD, wD) => "y" === zD ? wD < 0 ? DD.scrollTop > 0 : DD.scrollTop + DD.clientHeight < DD.scrollHeight - 1 : wD < 0 ? DD.scrollLeft > 0 : DD.scrollLeft + DD.clientWidth < DD.scrollWidth - 1,
-      dD = (DD, zD, wD) => {
-        "y" === zD ? DD.scrollBy({
-          top: wD,
+      lp = (pp, ip, cp) => "y" === ip ? cp < 0 ? pp.scrollTop > 0 : pp.scrollTop + pp.clientHeight < pp.scrollHeight - 1 : cp < 0 ? pp.scrollLeft > 0 : pp.scrollLeft + pp.clientWidth < pp.scrollWidth - 1,
+      Qp = (pp, ip, cp) => {
+        "y" === ip ? pp.scrollBy({
+          top: cp,
           behavior: "instant"
-        }) : DD.scrollBy({
-          left: wD,
+        }) : pp.scrollBy({
+          left: cp,
           behavior: "instant"
         })
       },
-      SD = DD => {
-        if (!DD || DD === document.scrollingElement) return new DOMRect(0, 0, window.innerWidth, window.innerHeight);
-        const zD = DD.getBoundingClientRect(),
-          wD = Math.max(0, zD.left),
-          pD = Math.max(0, zD.top);
-        return new DOMRect(wD, pD, Math.min(window.innerWidth, zD.right) - wD, Math.min(window.innerHeight, zD.bottom) - pD)
+      Jp = pp => {
+        if (!pp || pp === document.scrollingElement) return new DOMRect(0, 0, window.innerWidth, window.innerHeight);
+        const ip = pp.getBoundingClientRect(),
+          cp = Math.max(0, ip.left),
+          Op = Math.max(0, ip.top);
+        return new DOMRect(cp, Op, Math.min(window.innerWidth, ip.right) - cp, Math.min(window.innerHeight, ip.bottom) - Op)
       },
-      iD = (DD, zD) => DD.left < zD.right && zD.left < DD.right && DD.top < zD.bottom && zD.top < DD.bottom;
-    var lD = wD(58),
-      WD = wD(1044),
-      ND = wD.n(WD),
-      ZD = wD(1096);
-    let yD = 0,
-      kD = !1;
-    class mD {
+      Bp = (pp, ip) => pp.left < ip.right && ip.left < pp.right && pp.top < ip.bottom && ip.top < pp.bottom;
+    var Np = cp(62),
+      Tp = cp(1049),
+      fp = cp.n(Tp),
+      bp = cp(1112);
+    let hp = 0,
+      ap = !1;
+    class np {
       constructor() {
         this.element = null, this.shownKey = "", this.gap = null
       }
-      setElement(DD) {
-        this.element = DD, this.shownKey = "", this.gap = null
+      setElement(pp) {
+        this.element = pp, this.shownKey = "", this.gap = null
       }
-      show(DD) {
-        const zD = this.element;
-        if (!zD) return;
-        const wD = DD ? this.keepOnScreen(zD, DD) : null,
-          pD = wD ? `${wD.left},${wD.top},${wD.width},${wD.height}` : "";
-        if (pD === this.shownKey) return;
-        const sD = "" === this.shownKey;
-        this.shownKey = pD, zD.classList.toggle("Visible", null !== wD), wD && (zD.classList.toggle("Snap", sD), zD.style.width = `${wD.width}px`, zD.style.height = `${wD.height}px`, zD.style.transform = `translate(${wD.left}px, ${wD.top}px)`, sD && (zD.offsetWidth, zD.classList.remove("Snap")))
+      show(pp) {
+        const ip = this.element;
+        if (!ip) return;
+        const cp = pp ? this.keepOnScreen(ip, pp) : null,
+          Op = cp ? `${cp.left},${cp.top},${cp.width},${cp.height}` : "";
+        if (Op === this.shownKey) return;
+        const op = "" === this.shownKey;
+        this.shownKey = Op, ip.classList.toggle("Visible", null !== cp), cp && (ip.classList.toggle("Snap", op), ip.style.width = `${cp.width}px`, ip.style.height = `${cp.height}px`, ip.style.transform = `translate(${cp.left}px, ${cp.top}px)`, op && (ip.offsetWidth, ip.classList.remove("Snap")))
       }
       hide() {
         this.show(null)
       }
-      keepOnScreen(DD, zD) {
-        var wD;
-        const pD = `${window.innerWidth}x${window.innerHeight}@${(()=>{if("undefined"===typeof ResizeObserver)return getComputedStyle(document.documentElement).fontSize;if(!kD){kD=!0;const DD=document.createElement("div");DD.setAttribute("aria-hidden","true"),DD.style.cssText="position: fixed; top: 0; left: 0; width: 1rem; height: 0; visibility: hidden; pointer-events: none",document.body.appendChild(DD),new ResizeObserver((()=>{yD++})).observe(DD)}return String(yD)})()}`;
-        (null === (wD = this.gap) || void 0 === wD ? void 0 : wD.key) !== pD && (this.gap = {
-          px: parseFloat(getComputedStyle(DD).paddingLeft) || 0,
-          key: pD
+      keepOnScreen(pp, ip) {
+        var cp;
+        const Op = `${window.innerWidth}x${window.innerHeight}@${(()=>{if("undefined"===typeof ResizeObserver)return getComputedStyle(document.documentElement).fontSize;if(!ap){ap=!0;const pp=document.createElement("div");pp.setAttribute("aria-hidden","true"),pp.style.cssText="position: fixed; top: 0; left: 0; width: 1rem; height: 0; visibility: hidden; pointer-events: none",document.body.appendChild(pp),new ResizeObserver((()=>{hp++})).observe(pp)}return String(hp)})()}`;
+        (null === (cp = this.gap) || void 0 === cp ? void 0 : cp.key) !== Op && (this.gap = {
+          px: parseFloat(getComputedStyle(pp).paddingLeft) || 0,
+          key: Op
         });
-        const sD = this.gap.px + 2,
-          KD = Math.max(zD.left, sD),
-          rD = Math.max(zD.top, sD),
-          LD = Math.min(zD.left + zD.width, window.innerWidth - sD),
-          cD = Math.min(zD.top + zD.height, window.innerHeight - sD);
-        return LD <= KD || cD <= rD ? zD : {
-          left: KD,
-          top: rD,
-          width: LD - KD,
-          height: cD - rD
+        const op = this.gap.px + 2,
+          Ip = Math.max(ip.left, op),
+          Sp = Math.max(ip.top, op),
+          xp = Math.min(ip.left + ip.width, window.innerWidth - op),
+          Lp = Math.min(ip.top + ip.height, window.innerHeight - op);
+        return xp <= Ip || Lp <= Sp ? ip : {
+          left: Ip,
+          top: Sp,
+          width: xp - Ip,
+          height: Lp - Sp
         }
       }
     }
-    const eD = DD => {
+    const Fp = pp => {
       let {
-        placer: zD,
-        className: wD
-      } = DD;
-      const pD = (0, lD.useCallback)((DD => {
-        zD.setElement(DD)
-      }), [zD]);
-      return (0, ZD.jsx)("div", {
-        ref: pD,
-        className: ND()("PadReticle", wD),
+        placer: ip,
+        className: cp
+      } = pp;
+      const Op = (0, Np.useCallback)((pp => {
+        ip.setElement(pp)
+      }), [ip]);
+      return (0, bp.jsx)("div", {
+        ref: Op,
+        className: fp()("PadReticle", cp),
         "aria-hidden": !0
       })
     };
-    var oD = wD(8671);
-    const aD = {
+    var gp = cp(8803);
+    const Gp = {
       x: 0,
       y: 0,
       visible: !1,
       pressed: !1
     };
-    const uD = new class {
+    const rp = new class {
       constructor() {
-        this.state = aD, this.listeners = new Set
+        this.state = Gp, this.listeners = new Set
       }
       get() {
         return this.state
       }
-      set(DD) {
-        if (zD = this.state, wD = DD, (zD.visible || wD.visible) && (zD.visible !== wD.visible || zD.x !== wD.x || zD.y !== wD.y || zD.pressed !== wD.pressed)) {
-          var zD, wD;
-          this.state = DD;
-          for (const zD of this.listeners) zD(DD)
+      set(pp) {
+        if (ip = this.state, cp = pp, (ip.visible || cp.visible) && (ip.visible !== cp.visible || ip.x !== cp.x || ip.y !== cp.y || ip.pressed !== cp.pressed)) {
+          var ip, cp;
+          this.state = pp;
+          for (const ip of this.listeners) ip(pp)
         }
       }
       hide() {
-        this.set(aD)
+        this.set(Gp)
       }
-      subscribe(DD) {
-        return this.listeners.add(DD), () => {
-          this.listeners.delete(DD)
+      subscribe(pp) {
+        return this.listeners.add(pp), () => {
+          this.listeners.delete(pp)
         }
       }
     };
-    var vD = wD(8684);
-    const tD = (DD, zD) => {
+    var Zp = cp(8809);
+    const zp = (pp, ip) => {
         let {
-          kind: wD,
-          holding: pD,
-          hasPress: sD,
-          hasBack: KD,
-          slotHasItem: rD
-        } = zD;
-        switch (DD) {
+          kind: cp,
+          holding: Op,
+          hasPress: op,
+          hasBack: Ip,
+          slotHasItem: Sp
+        } = ip;
+        switch (pp) {
           case "primary":
-            return "slot" === wD ? "slotPrimary" : "recipe" === wD || "button" === wD ? sD ? "pressPrimary" : "click" : "textField" === wD ? "openKeyboard" : null;
+            return "slot" === cp ? "slotPrimary" : "recipe" === cp || "button" === cp ? op ? "pressPrimary" : "click" : "textField" === cp ? "openKeyboard" : null;
           case "secondary":
-            return "slot" === wD ? "slotSecondary" : "button" !== wD && "recipe" !== wD || !sD ? null : "pressSecondary";
+            return "slot" === cp ? "slotSecondary" : "button" !== cp && "recipe" !== cp || !op ? null : "pressSecondary";
           case "quickMove":
-            return "slot" === wD && rD ? "slotQuickMove" : null;
+            return "slot" === cp && Sp ? "slotQuickMove" : null;
           case "hotbarSwap":
-            return "slot" === wD && rD && !pD ? "hotbarPick" : null;
+            return "slot" === cp && Sp && !Op ? "hotbarPick" : null;
           case "openButton":
             return "close";
           case "back":
-            return pD ? "cancel" : KD ? "pressBack" : "close"
+            return Op ? "cancel" : Ip ? "pressBack" : "close"
         }
       },
-      FD = DD => {
-        const zD = [];
-        if (DD.hotbarPicking) return zD.push({
+      sp = pp => {
+        const ip = [];
+        if (pp.hotbarPicking) return ip.push({
           actions: ["inventoryPrimary", "inventoryHotbarSwap"],
           labelKey: "inventorySwapHere"
-        }), zD.push({
+        }), ip.push({
           actions: ["inventoryClose"],
           labelKey: "inventoryCancel"
-        }), zD;
-        if (DD.holding) "slot" === DD.kind ? (zD.push({
+        }), ip;
+        if (pp.holding) "slot" === pp.kind ? (ip.push({
           actions: ["inventoryPrimary"],
           labelKey: "inventoryPlace"
-        }), zD.push({
+        }), ip.push({
           actions: ["inventorySecondary"],
           labelKey: "inventoryPlaceOne"
-        })) : "textField" === DD.kind && zD.push({
+        })) : "textField" === pp.kind && ip.push({
           actions: ["inventoryPrimary"],
           labelKey: "inventoryType"
-        }), zD.push({
+        }), ip.push({
           actions: ["inventoryClose"],
           labelKey: "inventoryPutBack"
-        }), zD.push({
+        }), ip.push({
           actions: ["inventoryDrop"],
           labelKey: "inventoryDrop"
-        }), DD.openButtonCloses && zD.push({
+        }), pp.openButtonCloses && ip.push({
           actions: ["inventory"],
           labelKey: "inventoryClose"
         });
         else {
-          var wD;
-          "slot" === DD.kind && DD.slotHasItem ? (zD.push({
+          var cp;
+          "slot" === pp.kind && pp.slotHasItem ? (ip.push({
             actions: ["inventoryPrimary"],
             labelKey: "inventoryTake"
-          }), zD.push({
+          }), ip.push({
             actions: ["inventorySecondary"],
             labelKey: "inventoryTakeHalf"
-          }), zD.push({
+          }), ip.push({
             actions: ["inventoryQuickMove"],
-            labelKey: DD.quickMoveToHotbar ? "inventoryToHotbar" : "inventoryQuickMove"
-          }), zD.push({
+            labelKey: pp.quickMoveToHotbar ? "inventoryToHotbar" : "inventoryQuickMove"
+          }), ip.push({
             actions: ["inventoryHotbarSwap"],
             labelKey: "inventoryHotbarSwap"
-          }), zD.push({
+          }), ip.push({
             actions: ["inventoryDrop"],
             labelKey: "inventoryDrop"
-          })) : "button" !== DD.kind && "recipe" !== DD.kind || !DD.pressHints ? "button" === DD.kind || "recipe" === DD.kind ? zD.push({
+          })) : "button" !== pp.kind && "recipe" !== pp.kind || !pp.pressHints ? "button" === pp.kind || "recipe" === pp.kind ? ip.push({
             actions: ["inventoryPrimary"],
             labelKey: "inventorySelect"
-          }) : "textField" === DD.kind && zD.push({
+          }) : "textField" === pp.kind && ip.push({
             actions: ["inventoryPrimary"],
             labelKey: "inventoryType"
-          }) : (DD.pressHints.primary && zD.push({
+          }) : (pp.pressHints.primary && ip.push({
             actions: ["inventoryPrimary"],
-            labelKey: DD.pressHints.primary
-          }), DD.pressHints.secondary && zD.push({
+            labelKey: pp.pressHints.primary
+          }), pp.pressHints.secondary && ip.push({
             actions: ["inventorySecondary"],
-            labelKey: DD.pressHints.secondary
+            labelKey: pp.pressHints.secondary
           }));
-          const pD = null === (wD = DD.pressHints) || void 0 === wD ? void 0 : wD.back;
-          pD && zD.push({
+          const Op = null === (cp = pp.pressHints) || void 0 === cp ? void 0 : cp.back;
+          Op && ip.push({
             actions: ["inventoryClose"],
-            labelKey: pD
+            labelKey: Op
           });
-          const sD = [];
-          DD.openButtonCloses && sD.push("inventory"), pD || sD.push("inventoryClose"), sD.length > 0 && zD.push({
-            actions: sD,
+          const op = [];
+          pp.openButtonCloses && op.push("inventory"), Op || op.push("inventoryClose"), op.length > 0 && ip.push({
+            actions: op,
             labelKey: "inventoryClose"
           })
         }
-        return zD.push({
+        return ip.push({
           actions: ["inventoryPanelPrevious", "inventoryPanelNext"],
           labelKey: "inventoryPanels"
-        }), DD.hasCategories ? zD.push({
+        }), pp.hasCategories ? ip.push({
           actions: ["menuPageUp", "menuPageDown"],
           labelKey: "inventoryCategory"
-        }) : DD.hasList && zD.push({
+        }) : pp.hasList && ip.push({
           actions: ["menuPageUp", "menuPageDown"],
           labelKey: "inventoryPage"
-        }), zD
+        }), ip
       };
-    var YD = wD(8700),
-      HD = wD(8692);
-    class qD {
-      constructor(DD) {
-        this.probes = DD, this.byContainer = new Map, this.byParent = new Map
+    var Kp = cp(8821),
+      Vp = cp(8816);
+    class ii {
+      constructor(pp) {
+        this.probes = pp, this.byContainer = new Map, this.byParent = new Map
       }
-      find(DD, zD) {
-        const wD = CD(DD, "y", zD);
-        if (!wD) return null;
-        let pD = this.byContainer.get(wD);
-        return pD || (this.probes.push({
-          element: wD,
-          rect: pz(wD.getBoundingClientRect())
-        }), pD = {
-          container: wD,
-          box: SD(wD),
-          group: wz(wD)
-        }, this.byContainer.set(wD, pD)), pD
+      find(pp, ip) {
+        const cp = Mp(pp, "y", ip);
+        if (!cp) return null;
+        let Op = this.byContainer.get(cp);
+        return Op || (this.probes.push({
+          element: cp,
+          rect: Ii(cp.getBoundingClientRect())
+        }), Op = {
+          container: cp,
+          box: Jp(cp),
+          group: oi(cp)
+        }, this.byContainer.set(cp, Op)), Op
       }
-      findForParent(DD, zD) {
-        let wD = this.byParent.get(DD);
-        return void 0 === wD && (wD = this.find(DD, zD), this.byParent.set(DD, wD)), wD
+      findForParent(pp, ip) {
+        let cp = this.byParent.get(pp);
+        return void 0 === cp && (cp = this.find(pp, ip), this.byParent.set(pp, cp)), cp
       }
     }
-    const Dz = new WeakMap;
-    let zz = 0;
-    const wz = DD => {
-        let zD = Dz.get(DD);
-        return zD || (zD = "el:" + zz++, Dz.set(DD, zD)), zD
+    const ci = new WeakMap;
+    let Oi = 0;
+    const oi = pp => {
+        let ip = ci.get(pp);
+        return ip || (ip = "el:" + Oi++, ci.set(pp, ip)), ip
       },
-      pz = DD => ({
-        left: DD.left,
-        top: DD.top,
-        width: DD.width,
-        height: DD.height
+      Ii = pp => ({
+        left: pp.left,
+        top: pp.top,
+        width: pp.width,
+        height: pp.height
       }),
-      sz = DD => DD.width > 0 && DD.height > 0,
-      Kz = (DD, zD) => sz(DD) && DD.left + DD.width > 0 && DD.top + DD.height > 0 && DD.left < zD.width && DD.top < zD.height,
-      rz = (DD, zD, wD) => {
-        const pD = DD.top + DD.height / 2;
-        return Kz(DD, zD) && (!wD || pD >= wD.top && pD <= wD.bottom)
+      Si = pp => pp.width > 0 && pp.height > 0,
+      xi = (pp, ip) => Si(pp) && pp.left + pp.width > 0 && pp.top + pp.height > 0 && pp.left < ip.width && pp.top < ip.height,
+      Li = (pp, ip, cp) => {
+        const Op = pp.top + pp.height / 2;
+        return xi(pp, ip) && (!cp || Op >= cp.top && Op <= cp.bottom)
       },
-      Lz = DD => ({
-        x: DD.left + DD.width / 2,
-        y: DD.top + DD.height / 2
+      Yi = pp => ({
+        x: pp.left + pp.width / 2,
+        y: pp.top + pp.height / 2
       }),
-      cz = (DD, zD, wD) => DD < 0 ? wD >= 0 ? 0 : zD - 1 : ((DD + wD) % zD + zD) % zD,
-      gz = DD => "Left" === DD || "Right" === DD,
-      Rz = (DD, zD, wD) => {
-        const pD = gz(wD),
-          sD = pD ? DD.top : DD.left,
-          KD = pD ? DD.height : DD.width,
-          rD = pD ? zD.top : zD.left,
-          LD = pD ? zD.height : zD.width,
-          cD = Math.max(0, Math.max(rD - (sD + KD), sD - (rD + LD)));
-        return KD > 1.5 * LD ? {
-          gap: cD,
-          offset: Math.max(0, rD - sD) + .1 * Math.max(0, sD - rD)
+      Di = (pp, ip, cp) => pp < 0 ? cp >= 0 ? 0 : ip - 1 : ((pp + cp) % ip + ip) % ip,
+      Ai = pp => "Left" === pp || "Right" === pp,
+      Pi = (pp, ip, cp) => {
+        const Op = Ai(cp),
+          op = Op ? pp.top : pp.left,
+          Ip = Op ? pp.height : pp.width,
+          Sp = Op ? ip.top : ip.left,
+          xp = Op ? ip.height : ip.width,
+          Lp = Math.max(0, Math.max(Sp - (op + Ip), op - (Sp + xp)));
+        return Ip > 1.5 * xp ? {
+          gap: Lp,
+          offset: Math.max(0, Sp - op) + .1 * Math.max(0, op - Sp)
         } : {
-          gap: cD,
-          offset: Math.abs(rD + LD / 2 - (sD + KD / 2))
+          gap: Lp,
+          offset: Math.abs(Sp + xp / 2 - (op + Ip / 2))
         }
       },
-      Az = (DD, zD, wD) => {
-        const pD = ((DD, zD, wD) => {
-          const pD = Lz(DD),
-            sD = Lz(zD),
-            KD = gz(wD) ? Math.min(DD.width, zD.width) / 4 : Math.min(DD.height, zD.height) / 4;
-          switch (wD) {
+      Wi = (pp, ip, cp) => {
+        const Op = ((pp, ip, cp) => {
+          const Op = Yi(pp),
+            op = Yi(ip),
+            Ip = Ai(cp) ? Math.min(pp.width, ip.width) / 4 : Math.min(pp.height, ip.height) / 4;
+          switch (cp) {
             case "Right":
-              return sD.x - pD.x >= KD ? Math.max(0, zD.left - (DD.left + DD.width)) : null;
+              return op.x - Op.x >= Ip ? Math.max(0, ip.left - (pp.left + pp.width)) : null;
             case "Left":
-              return pD.x - sD.x >= KD ? Math.max(0, DD.left - (zD.left + zD.width)) : null;
+              return Op.x - op.x >= Ip ? Math.max(0, pp.left - (ip.left + ip.width)) : null;
             case "Down":
-              return sD.y - pD.y >= KD ? Math.max(0, zD.top - (DD.top + DD.height)) : null;
+              return op.y - Op.y >= Ip ? Math.max(0, ip.top - (pp.top + pp.height)) : null;
             case "Up":
-              return pD.y - sD.y >= KD ? Math.max(0, DD.top - (zD.top + zD.height)) : null
+              return Op.y - op.y >= Ip ? Math.max(0, pp.top - (ip.top + ip.height)) : null
           }
-        })(DD, zD, wD);
-        if (null === pD) return null;
-        const sD = Rz(DD, zD, wD);
-        return pD + 3 * sD.gap + .5 * sD.offset
+        })(pp, ip, cp);
+        if (null === Op) return null;
+        const op = Pi(pp, ip, cp);
+        return Op + 3 * op.gap + .5 * op.offset
       },
-      Uz = (DD, zD) => zD.visible || null !== zD.scrollGroup && zD.scrollGroup === DD.scrollGroup,
-      fz = (DD, zD, wD, pD) => {
-        let sD = null,
-          KD = 1 / 0;
-        for (const rD of zD) {
-          if (rD.key === DD.key || !Uz(DD, rD) || !pD(rD)) continue;
-          const zD = Az(DD.rect, rD.rect, wD);
-          null !== zD && zD < KD && (sD = rD, KD = zD)
+      yi = (pp, ip) => ip.visible || null !== ip.scrollGroup && ip.scrollGroup === pp.scrollGroup,
+      Ui = (pp, ip, cp, Op) => {
+        let op = null,
+          Ip = 1 / 0;
+        for (const Sp of ip) {
+          if (Sp.key === pp.key || !yi(pp, Sp) || !Op(Sp)) continue;
+          const ip = Wi(pp.rect, Sp.rect, cp);
+          null !== ip && ip < Ip && (op = Sp, Ip = ip)
         }
-        return sD
+        return op
       },
-      Iz = (DD, zD, wD) => {
-        const pD = fz(DD, zD, wD, (() => !0));
-        if (!pD || gz(wD) || null === DD.scrollGroup || pD.scrollGroup === DD.scrollGroup) return pD;
-        const sD = fz(DD, zD, wD, (zD => 0 === Rz(DD.rect, zD.rect, wD).gap));
-        return null !== sD && void 0 !== sD ? sD : pD
+      wi = (pp, ip, cp) => {
+        const Op = Ui(pp, ip, cp, (() => !0));
+        if (!Op || Ai(cp) || null === pp.scrollGroup || Op.scrollGroup === pp.scrollGroup) return Op;
+        const op = Ui(pp, ip, cp, (ip => 0 === Pi(pp.rect, ip.rect, cp).gap));
+        return null !== op && void 0 !== op ? op : Op
       },
-      Bz = (DD, zD, wD) => {
-        let pD = null,
-          sD = 1 / 0;
-        for (const KD of zD) {
-          if (!KD.visible || wD && !wD(KD)) continue;
-          const zD = Lz(KD.rect),
-            rD = Math.hypot(zD.x - DD.x, zD.y - DD.y);
-          rD < sD && (pD = KD, sD = rD)
+      vi = (pp, ip, cp) => {
+        let Op = null,
+          op = 1 / 0;
+        for (const Ip of ip) {
+          if (!Ip.visible || cp && !cp(Ip)) continue;
+          const ip = Yi(Ip.rect),
+            Sp = Math.hypot(ip.x - pp.x, ip.y - pp.y);
+          Sp < op && (Op = Ip, op = Sp)
         }
-        return pD
+        return Op
       },
-      Gz = DD => {
+      ti = pp => {
         const {
-          rect: zD,
-          clip: wD
-        } = DD;
-        if (!wD) return zD;
-        const pD = Math.max(zD.left, wD.left),
-          sD = Math.max(zD.top, wD.top);
+          rect: ip,
+          clip: cp
+        } = pp;
+        if (!cp) return ip;
+        const Op = Math.max(ip.left, cp.left),
+          op = Math.max(ip.top, cp.top);
         return {
-          left: pD,
-          top: sD,
-          width: Math.min(zD.left + zD.width, wD.left + wD.width) - pD,
-          height: Math.min(zD.top + zD.height, wD.top + wD.height) - sD
+          left: Op,
+          top: op,
+          width: Math.min(ip.left + ip.width, cp.left + cp.width) - Op,
+          height: Math.min(ip.top + ip.height, cp.top + cp.height) - op
         }
       },
-      hz = (DD, zD) => zD.x >= DD.left && zD.x < DD.left + DD.width && zD.y >= DD.top && zD.y < DD.top + DD.height,
-      nz = (DD, zD) => {
-        let wD = null,
-          pD = 1 / 0;
-        for (const sD of zD) {
-          const zD = Gz(sD);
-          (sD.visible || sD.clip) && hz(zD, DD) && (zD.width * zD.height < pD && (wD = sD, pD = zD.width * zD.height))
+      Hi = (pp, ip) => ip.x >= pp.left && ip.x < pp.left + pp.width && ip.y >= pp.top && ip.y < pp.top + pp.height,
+      di = (pp, ip) => {
+        let cp = null,
+          Op = 1 / 0;
+        for (const op of ip) {
+          const ip = ti(op);
+          (op.visible || op.clip) && Hi(ip, pp) && (ip.width * ip.height < Op && (cp = op, Op = ip.width * ip.height))
         }
-        return wD
+        return cp
       },
-      Mz = DD => {
-        let zD = null;
-        for (const wD of DD) {
-          if (!wD.visible) continue;
-          if (!zD) {
-            zD = wD;
+      ei = pp => {
+        let ip = null;
+        for (const cp of pp) {
+          if (!cp.visible) continue;
+          if (!ip) {
+            ip = cp;
             continue
           }
-          const DD = Math.min(zD.rect.height, wD.rect.height) / 2,
-            pD = wD.rect.top - zD.rect.top;
-          (pD < -DD || Math.abs(pD) <= DD && wD.rect.left < zD.rect.left) && (zD = wD)
+          const pp = Math.min(ip.rect.height, cp.rect.height) / 2,
+            Op = cp.rect.top - ip.rect.top;
+          (Op < -pp || Math.abs(Op) <= pp && cp.rect.left < ip.rect.left) && (ip = cp)
         }
-        return zD
+        return ip
       },
-      Oz = (DD, zD, wD, pD, sD) => {
-        const KD = sD % zD,
-          rD = Math.floor(sD / zD);
+      ui = (pp, ip, cp, Op, op) => {
+        const Ip = op % ip,
+          Sp = Math.floor(op / ip);
         return {
-          left: DD.left + KD * wD,
-          top: DD.top + rD * pD,
-          width: DD.width,
-          height: DD.height
+          left: pp.left + Ip * cp,
+          top: pp.top + Sp * Op,
+          width: pp.width,
+          height: pp.height
         }
       },
-      Jz = ".EntireInventoryWrapper .Inventory, .HotBarGameItemsContainer",
-      Ez = ".LazyLoadedItemWrapper",
-      Qz = ["[data-inven-idx]", "[data-recipe-key]", "[role=button]", "button", "input:not([type=hidden])", "textarea", ".CreativeCategoryTab", ".CreativeCategoryDropdownButton", ".CreativeCategoryDropdownOption", "[data-craft-ingredient]"].join(","),
-      Xz = [
+      ji = ".EntireInventoryWrapper .Inventory, .HotBarGameItemsContainer",
+      ki = ".LazyLoadedItemWrapper",
+      mi = ["[data-inven-idx]", "[data-recipe-key]", "[role=button]", "button", "input:not([type=hidden])", "textarea", ".CreativeCategoryTab", ".CreativeCategoryDropdownButton", ".CreativeCategoryDropdownOption", "[data-craft-ingredient]"].join(","),
+      Ri = [
         ["hotbar", ".HotBarGameItemsContainer"],
         ["gameButtons", ".ClientGameInventoryButtons"],
         ["categories", ".CreativeCategoryRail"],
@@ -1575,219 +1910,219 @@ export const modules = {
         ["main", ".InvenBodyRight"],
         ["left", ".InvenLeftSide"]
       ],
-      Vz = ["gameButtons", "categories", "left", "recipe", "armour", "main", "hotbar"],
-      Pz = DD => DD.hasAttribute("data-inven-idx") ? "slot" : DD.hasAttribute("data-recipe-key") ? "recipe" : DD.hasAttribute("data-craft-ingredient") || (0, HD.u)(DD) ? "info" : (0, oD.K)(DD) ? "textField" : "button",
-      Cz = (DD, zD) => "slot" === zD ? Number(DD.getAttribute("data-inven-idx")) : null,
-      xz = DD => DD.matches(Ez) ? DD.querySelector(Qz) : DD,
-      Tz = DD => {
-        var zD, wD;
+      qi = ["gameButtons", "categories", "left", "recipe", "armour", "main", "hotbar"],
+      Mi = pp => pp.hasAttribute("data-inven-idx") ? "slot" : pp.hasAttribute("data-recipe-key") ? "recipe" : pp.hasAttribute("data-craft-ingredient") || (0, Vp.z)(pp) ? "info" : (0, gp.B)(pp) ? "textField" : "button",
+      Ci = (pp, ip) => "slot" === ip ? Number(pp.getAttribute("data-inven-idx")) : null,
+      Ei = pp => pp.matches(ki) ? pp.querySelector(mi) : pp,
+      Xi = pp => {
+        var ip, cp;
         return {
-          element: DD,
-          recipe: null !== (zD = DD && (null === (wD = xz(DD)) || void 0 === wD ? void 0 : wD.getAttribute("data-recipe-key"))) && void 0 !== zD ? zD : null
+          element: pp,
+          recipe: null !== (ip = pp && (null === (cp = Ei(pp)) || void 0 === cp ? void 0 : cp.getAttribute("data-recipe-key"))) && void 0 !== ip ? ip : null
         }
       },
-      bz = DD => {
-        const zD = xz(DD);
-        if (!zD) return {
+      li = pp => {
+        const ip = Ei(pp);
+        if (!ip) return {
           kind: "pending",
           idx: null
         };
-        const wD = Pz(zD);
+        const cp = Mi(ip);
         return {
-          kind: wD,
-          idx: Cz(zD, wD)
+          kind: cp,
+          idx: Ci(ip, cp)
         }
       },
-      jz = DD => {
-        const zD = [];
-        for (const [wD, pD] of Xz) {
-          DD.matches(pD) && zD.push([wD, DD]);
-          for (const sD of DD.querySelectorAll(pD)) zD.push([wD, sD])
+      Qi = pp => {
+        const ip = [];
+        for (const [cp, Op] of Ri) {
+          pp.matches(Op) && ip.push([cp, pp]);
+          for (const op of pp.querySelectorAll(Op)) ip.push([cp, op])
         }
-        return zD
+        return ip
       },
-      dz = (DD, zD) => {
-        for (const [wD, pD] of DD)
-          if (pD.contains(zD)) return wD;
+      Ji = (pp, ip) => {
+        for (const [cp, Op] of pp)
+          if (Op.contains(ip)) return cp;
         return "other"
       },
-      Sz = (DD, zD, wD, pD, sD, KD, rD, LD) => {
-        var cD;
-        const gD = DD.children,
-          RD = pz(gD[0].getBoundingClientRect()),
-          AD = [{
-            element: gD[0],
-            rect: RD
+      Bi = (pp, ip, cp, Op, op, Ip, Sp, xp) => {
+        var Lp;
+        const Yp = pp.children,
+          Dp = Ii(Yp[0].getBoundingClientRect()),
+          Ap = [{
+            element: Yp[0],
+            rect: Dp
           }];
-        if (KD.push(AD[0]), 0 === RD.width || 0 === RD.height) return;
-        let UD = 1;
-        for (; UD < gD.length && Math.abs(gD[UD].getBoundingClientRect().top - RD.top) < 1;) UD++;
-        const fD = DD => {
-            const zD = {
-              element: gD[DD],
-              rect: pz(gD[DD].getBoundingClientRect())
+        if (Ip.push(Ap[0]), 0 === Dp.width || 0 === Dp.height) return;
+        let Pp = 1;
+        for (; Pp < Yp.length && Math.abs(Yp[Pp].getBoundingClientRect().top - Dp.top) < 1;) Pp++;
+        const Wp = pp => {
+            const ip = {
+              element: Yp[pp],
+              rect: Ii(Yp[pp].getBoundingClientRect())
             };
-            return KD.push(zD), AD.push(zD), zD.rect
+            return Ip.push(ip), Ap.push(ip), ip.rect
           },
-          ID = UD > 1 ? fD(1).left - RD.left : RD.width,
-          BD = gD.length > UD ? fD(UD).top - RD.top : RD.height,
-          GD = rD.find(DD, zD);
-        let hD = null;
-        if (GD) {
-          var nD;
+          yp = Pp > 1 ? Wp(1).left - Dp.left : Dp.width,
+          Up = Yp.length > Pp ? Wp(Pp).top - Dp.top : Dp.height,
+          wp = Sp.find(pp, ip);
+        let vp = null;
+        if (wp) {
+          var tp;
           const {
-            container: DD,
-            box: zD
-          } = GD;
-          hD = null !== (nD = LD.get(DD)) && void 0 !== nD ? nD : null, hD || (hD = {
-            top: DD.scrollTop,
-            left: DD.scrollLeft,
-            box: zD,
-            viewport: pD,
+            container: pp,
+            box: ip
+          } = wp;
+          vp = null !== (tp = xp.get(pp)) && void 0 !== tp ? tp : null, vp || (vp = {
+            top: pp.scrollTop,
+            left: pp.scrollLeft,
+            box: ip,
+            viewport: Op,
             targets: [],
             probes: [],
             holdsOthers: !1
-          }, LD.set(DD, hD)), hD.probes.push(...AD)
+          }, xp.set(pp, vp)), vp.probes.push(...Ap)
         }
-        const MD = sD.length;
-        for (let QD = 0; QD < gD.length; QD++) {
-          var OD, JD, ED;
-          const DD = gD[QD],
-            zD = Oz(RD, UD, ID, BD, QD),
-            KD = DD.firstElementChild ? DD.querySelector(Qz) : null,
-            rD = KD ? Pz(KD) : "pending";
-          sD.push({
-            key: wz(DD),
-            rect: zD,
-            panel: wD,
-            scrollGroup: null !== (OD = null === GD || void 0 === GD ? void 0 : GD.group) && void 0 !== OD ? OD : null,
-            visible: rz(zD, pD, null === GD || void 0 === GD ? void 0 : GD.box),
-            clip: null !== (JD = null === GD || void 0 === GD ? void 0 : GD.box) && void 0 !== JD ? JD : null,
-            element: DD,
-            kind: rD,
-            idx: KD ? Cz(KD, rD) : null,
-            scrollContainer: null !== (ED = null === GD || void 0 === GD ? void 0 : GD.container) && void 0 !== ED ? ED : null
+        const Hp = op.length;
+        for (let kp = 0; kp < Yp.length; kp++) {
+          var dp, ep, jp;
+          const pp = Yp[kp],
+            ip = ui(Dp, Pp, yp, Up, kp),
+            Ip = pp.firstElementChild ? pp.querySelector(mi) : null,
+            Sp = Ip ? Mi(Ip) : "pending";
+          op.push({
+            key: oi(pp),
+            rect: ip,
+            panel: cp,
+            scrollGroup: null !== (dp = null === wp || void 0 === wp ? void 0 : wp.group) && void 0 !== dp ? dp : null,
+            visible: Li(ip, Op, null === wp || void 0 === wp ? void 0 : wp.box),
+            clip: null !== (ep = null === wp || void 0 === wp ? void 0 : wp.box) && void 0 !== ep ? ep : null,
+            element: pp,
+            kind: Sp,
+            idx: Ip ? Ci(Ip, Sp) : null,
+            scrollContainer: null !== (jp = null === wp || void 0 === wp ? void 0 : wp.container) && void 0 !== jp ? jp : null
           })
         }
-        null === (cD = hD) || void 0 === cD || cD.targets.push(...sD.slice(MD))
+        null === (Lp = vp) || void 0 === Lp || Lp.targets.push(...op.slice(Hp))
       },
-      iz = DD => DD instanceof Element && null !== DD.closest(Ez),
-      lz = DD => null !== DD.scrollContainer && iz(DD.element);
-    class Wz {
+      Ni = pp => pp instanceof Element && null !== pp.closest(ki),
+      Ti = pp => null !== pp.scrollContainer && Ni(pp.element);
+    class fi {
       constructor() {
         this.latched = null, this.presses = 0
       }
-      press(DD, zD, wD, pD) {
+      press(pp, ip, cp, Op) {
         this.latched = {
-          source: DD,
-          focusKey: zD,
-          sinceMs: wD,
+          source: pp,
+          focusKey: ip,
+          sinceMs: cp,
           hold: {
             id: ++this.presses,
-            holdMs: pD
+            holdMs: Op
           }
         }
       }
-      update(DD, zD, wD) {
-        const pD = this.latched;
-        return pD ? DD && zD === pD.focusKey ? wD - pD.sinceMs < pD.hold.holdMs ? null : (this.latched = null, pD.source) : (this.latched = null, null) : null
+      update(pp, ip, cp) {
+        const Op = this.latched;
+        return Op ? pp && ip === Op.focusKey ? cp - Op.sinceMs < Op.hold.holdMs ? null : (this.latched = null, Op.source) : (this.latched = null, null) : null
       }
       getHold() {
-        var DD, zD;
-        return null !== (DD = null === (zD = this.latched) || void 0 === zD ? void 0 : zD.hold) && void 0 !== DD ? DD : null
+        var pp, ip;
+        return null !== (pp = null === (ip = this.latched) || void 0 === ip ? void 0 : ip.hold) && void 0 !== pp ? pp : null
       }
       reset() {
         this.latched = null
       }
     }
-    var Nz = wD(8705);
-    const Zz = {
+    var bi = cp(8826);
+    const ai = {
         kind: "none"
       },
-      yz = DD => ({
-        x: DD.clientX,
-        y: DD.clientY
+      ni = pp => ({
+        x: pp.clientX,
+        y: pp.clientY
       }),
-      kz = () => 2 * (parseFloat(getComputedStyle(document.documentElement).fontSize) || 16);
-    class mz {
+      Fi = () => 2 * (parseFloat(getComputedStyle(document.documentElement).fontSize) || 16);
+    class gi {
       constructor() {
-        this.hovered = Zz, this.signature = "", this.holding = !1, this.lastPoint = {
+        this.hovered = ai, this.signature = "", this.holding = !1, this.lastPoint = {
           clientX: 0,
           clientY: 0
         }
       }
-      sync(DD, zD, wD, pD, sD) {
-        const KD = null !== zD ? {
+      sync(pp, ip, cp, Op, op) {
+        const Ip = null !== ip ? {
             kind: "slot",
-            idx: zD
-          } : wD ? {
+            idx: ip
+          } : cp ? {
             kind: "element",
-            element: wD
-          } : Zz,
-          rD = `${sD}|${Math.round(pD.clientX)},${Math.round(pD.clientY)}`,
-          LD = (cD = this.hovered, gD = KD, "slot" === cD.kind && "slot" === gD.kind ? cD.idx === gD.idx : "element" === cD.kind && "element" === gD.kind ? cD.element === gD.element : cD.kind === gD.kind);
-        var cD, gD;
-        if (LD && rD === this.signature) return;
-        const RD = !LD || sD !== this.holding || "" === this.signature;
-        this.signature = rD, this.holding = sD, this.lastPoint = pD;
-        const AD = this.hovered;
-        if (this.hovered = KD, "slot" === KD.kind) return this.leaveElement(AD, null, pD), void(RD ? DD.hover(KD.idx, pD) : DD.moveTo(pD));
-        if (LD) return void("element" === KD.kind ? (0, oD.o)(KD.element, KD.element, yz(pD)) : DD.hover(null, pD));
-        DD.hover(null, pD);
-        const UD = "element" === KD.kind ? KD.element : null;
-        "element" === AD.kind ? (0, oD.o)(AD.element, UD, yz(pD)) : UD && (0, oD.o)(null, UD, yz(pD))
+            element: cp
+          } : ai,
+          Sp = `${op}|${Math.round(Op.clientX)},${Math.round(Op.clientY)}`,
+          xp = (Lp = this.hovered, Yp = Ip, "slot" === Lp.kind && "slot" === Yp.kind ? Lp.idx === Yp.idx : "element" === Lp.kind && "element" === Yp.kind ? Lp.element === Yp.element : Lp.kind === Yp.kind);
+        var Lp, Yp;
+        if (xp && Sp === this.signature) return;
+        const Dp = !xp || op !== this.holding || "" === this.signature;
+        this.signature = Sp, this.holding = op, this.lastPoint = Op;
+        const Ap = this.hovered;
+        if (this.hovered = Ip, "slot" === Ip.kind) return this.leaveElement(Ap, null, Op), void(Dp ? pp.hover(Ip.idx, Op) : pp.moveTo(Op));
+        if (xp) return void("element" === Ip.kind ? (0, gp.m)(Ip.element, Ip.element, ni(Op)) : pp.hover(null, Op));
+        pp.hover(null, Op);
+        const Pp = "element" === Ip.kind ? Ip.element : null;
+        "element" === Ap.kind ? (0, gp.m)(Ap.element, Pp, ni(Op)) : Pp && (0, gp.m)(null, Pp, ni(Op))
       }
       invalidate() {
         this.signature = ""
       }
-      clear(DD) {
-        const zD = this.hovered;
-        this.hovered = Zz, this.signature = "", "none" !== zD.kind && (this.leaveElement(zD, null, this.lastPoint), DD && "slot" === zD.kind && DD.hover(null, this.lastPoint))
+      clear(pp) {
+        const ip = this.hovered;
+        this.hovered = ai, this.signature = "", "none" !== ip.kind && (this.leaveElement(ip, null, this.lastPoint), pp && "slot" === ip.kind && pp.hover(null, this.lastPoint))
       }
-      leaveElement(DD, zD, wD) {
-        "element" === DD.kind && (0, oD.o)(DD.element, zD, yz(wD))
+      leaveElement(pp, ip, cp) {
+        "element" === pp.kind && (0, gp.m)(pp.element, ip, ni(cp))
       }
     }
-    class ez {
+    class Gi {
       constructor() {
         this.lastTiltedMs = -1 / 0
       }
-      update(DD, zD) {
-        QD(DD) && (this.lastTiltedMs = zD)
+      update(pp, ip) {
+        kp(pp) && (this.lastTiltedMs = ip)
       }
-      allowsClick(DD) {
-        return DD - this.lastTiltedMs > 150
+      allowsClick(pp) {
+        return pp - this.lastTiltedMs > 150
       }
     }
-    class oz {
+    class ri {
       constructor() {
         this.remainder = 0, this.container = null
       }
-      isScrolling(DD) {
-        return 0 !== (0, ID.i)(DD, .2).y
+      isScrolling(pp) {
+        return 0 !== (0, yp.h)(pp, .2).y
       }
-      step(DD, zD, wD) {
-        DD !== this.container && (this.container = DD, this.remainder = 0);
-        const pD = XD(zD, wD).y;
-        if (0 === pD) return this.remainder = 0, !1;
-        const sD = this.remainder + pD,
-          KD = Math.trunc(sD);
-        if (this.remainder = sD - KD, 0 === KD) return !1;
-        const rD = DD.scrollTop;
-        return DD.scrollTop = rD + KD, DD.scrollTop !== rD
+      step(pp, ip, cp) {
+        pp !== this.container && (this.container = pp, this.remainder = 0);
+        const Op = mp(ip, cp).y;
+        if (0 === Op) return this.remainder = 0, !1;
+        const op = this.remainder + Op,
+          Ip = Math.trunc(op);
+        if (this.remainder = op - Ip, 0 === Ip) return !1;
+        const Sp = pp.scrollTop;
+        return pp.scrollTop = Sp + Ip, pp.scrollTop !== Sp
       }
       current() {
-        var DD;
-        return null !== (DD = this.container) && void 0 !== DD && DD.isConnected ? this.container : null
+        var pp;
+        return null !== (pp = this.container) && void 0 !== pp && pp.isConnected ? this.container : null
       }
       reset() {
         this.remainder = 0, this.container = null
       }
     }
-    var az = wD(8707);
-    const uz = "[data-pad-inventory-default]",
-      vz = ".HotBarGameItemsContainer .InvenItem.Selected",
-      tz = {
+    var Zi = cp(8828);
+    const zi = "[data-pad-inventory-default]",
+      si = ".HotBarGameItemsContainer .InvenItem.Selected",
+      Ki = {
         Up: {
           x: 0,
           y: -1
@@ -1805,7 +2140,7 @@ export const modules = {
           y: 0
         }
       },
-      Fz = [
+      Vi = [
         ["primary", "inventoryPrimary"],
         ["secondary", "inventorySecondary"],
         ["quickMove", "inventoryQuickMove"],
@@ -1813,102 +2148,102 @@ export const modules = {
         ["back", "inventoryClose"],
         ["openButton", "inventory"]
       ],
-      Yz = ["inventoryPrimary", "inventorySecondary", "inventoryQuickMove", "inventoryHotbarSwap", "inventoryClose", "inventoryDrop"],
-      Hz = ["inventoryPanelPrevious", "inventoryPanelNext", "menuPageUp", "menuPageDown"],
-      qz = [...Yz, ...Hz],
-      Dw = () => {
-        return DD = (0, RD.g)("inventory"), !qz.map(RD.g).includes(DD) && !(0, ID.B)(DD);
-        var DD
+      pc = ["inventoryPrimary", "inventorySecondary", "inventoryQuickMove", "inventoryHotbarSwap", "inventoryClose", "inventoryDrop"],
+      ic = ["inventoryPanelPrevious", "inventoryPanelNext", "menuPageUp", "menuPageDown"],
+      cc = [...pc, ...ic],
+      Oc = () => {
+        return pp = (0, Dp.g)("inventory"), !cc.map(Dp.g).includes(pp) && !(0, yp.C)(pp);
+        var pp
       },
-      zw = new Set(["slotPrimary", "slotSecondary", "slotQuickMove", "pressPrimary", "pressSecondary", "openKeyboard"]),
-      ww = (DD, zD) => {
-        const wD = !(null === zD || void 0 === zD || !zD.isHolding());
-        return function(DD, zD) {
-          const wD = DD.find((DD => DD.visible && zD(DD)));
-          if (wD) return wD;
-          for (var pD = arguments.length, sD = new Array(pD > 2 ? pD - 2 : 0), KD = 2; KD < pD; KD++) sD[KD - 2] = arguments[KD];
-          for (const rD of sD) {
-            const zD = Mz(DD.filter(rD));
-            if (zD) return zD
+      oc = new Set(["slotPrimary", "slotSecondary", "slotQuickMove", "pressPrimary", "pressSecondary", "openKeyboard"]),
+      Ic = (pp, ip) => {
+        const cp = !(null === ip || void 0 === ip || !ip.isHolding());
+        return function(pp, ip) {
+          const cp = pp.find((pp => pp.visible && ip(pp)));
+          if (cp) return cp;
+          for (var Op = arguments.length, op = new Array(Op > 2 ? Op - 2 : 0), Ip = 2; Ip < Op; Ip++) op[Ip - 2] = arguments[Ip];
+          for (const Sp of op) {
+            const ip = ei(pp.filter(Sp));
+            if (ip) return ip
           }
-          return Mz(DD)
-        }(DD, (DD => {
+          return ei(pp)
+        }(pp, (pp => {
           const {
-            element: zD
-          } = DD;
-          return zD.matches(uz) || null !== zD.querySelector(uz) || zD.matches(vz)
-        }), (DD => "slot" === DD.kind ? wD || null !== DD.idx && !(null === zD || void 0 === zD || !zD.hasItemAt(DD.idx)) : "recipe" === DD.kind || "pending" === DD.kind), (DD => "slot" === DD.kind || "button" === DD.kind))
+            element: ip
+          } = pp;
+          return ip.matches(zi) || null !== ip.querySelector(zi) || ip.matches(si)
+        }), (pp => "slot" === pp.kind ? cp || null !== pp.idx && !(null === ip || void 0 === ip || !ip.hasItemAt(pp.idx)) : "recipe" === pp.kind || "pending" === pp.kind), (pp => "slot" === pp.kind || "button" === pp.kind))
       };
-    class pw {
+    class Sc {
       constructor() {
-        this.set = null, this.observer = new MutationObserver((DD => {
-          DD.some((DD => !iz(DD.target))) && (this.set = null)
+        this.set = null, this.observer = new MutationObserver((pp => {
+          pp.some((pp => !Ni(pp.target))) && (this.set = null)
         })), this.invalidate = () => {
           this.set = null
-        }, this.onScroll = DD => {
-          this.scrolled(DD.target)
+        }, this.onScroll = pp => {
+          this.scrolled(pp.target)
         }
       }
       get() {
         if (!this.set) {
           this.set = (() => {
-            const DD = [],
-              zD = [];
-            let wD = !1;
-            const pD = {
+            const pp = [],
+              ip = [];
+            let cp = !1;
+            const Op = {
                 width: window.innerWidth,
                 height: window.innerHeight
               },
-              sD = new Map,
-              KD = new qD(zD);
-            for (const AD of document.querySelectorAll(Jz)) {
-              const RD = jz(AD);
-              wD ||= null !== AD.querySelector(".CreativeCategoryTab");
-              for (const wD of AD.querySelectorAll(`${Ez}:first-child`)) {
-                const rD = wD.parentElement;
-                Sz(rD, AD, dz(RD, rD), pD, DD, zD, KD, sD)
+              op = new Map,
+              Ip = new ii(ip);
+            for (const Ap of document.querySelectorAll(ji)) {
+              const Dp = Qi(Ap);
+              cp ||= null !== Ap.querySelector(".CreativeCategoryTab");
+              for (const cp of Ap.querySelectorAll(`${ki}:first-child`)) {
+                const Sp = cp.parentElement;
+                Bi(Sp, Ap, Ji(Dp, Sp), Op, pp, ip, Ip, op)
               }
-              for (const wD of AD.querySelectorAll(Qz)) {
-                var rD, LD, cD, gD;
-                if (wD.closest(Ez) || wD.closest("[data-pad-ignore]")) continue;
-                const UD = null === (rD = wD.parentElement) || void 0 === rD ? void 0 : rD.closest(Qz);
-                if (UD && AD.contains(UD)) continue;
-                const fD = Pz(wD),
-                  ID = Cz(wD, fD);
-                if (-1 === ID) continue;
-                const BD = pz(wD.getBoundingClientRect());
-                zD.push({
-                  element: wD,
-                  rect: BD
+              for (const cp of Ap.querySelectorAll(mi)) {
+                var Sp, xp, Lp, Yp;
+                if (cp.closest(ki) || cp.closest("[data-pad-ignore]")) continue;
+                const Pp = null === (Sp = cp.parentElement) || void 0 === Sp ? void 0 : Sp.closest(mi);
+                if (Pp && Ap.contains(Pp)) continue;
+                const Wp = Mi(cp),
+                  yp = Ci(cp, Wp);
+                if (-1 === yp) continue;
+                const Up = Ii(cp.getBoundingClientRect());
+                ip.push({
+                  element: cp,
+                  rect: Up
                 });
-                const GD = KD.findForParent(wD.parentElement, AD),
-                  hD = GD && !sD.has(GD.container) ? GD : null;
-                (hD ? sz(BD) : Kz(BD, pD)) && DD.push({
-                  key: wz(wD),
-                  rect: BD,
-                  panel: dz(RD, wD),
-                  scrollGroup: null !== (LD = null === hD || void 0 === hD ? void 0 : hD.group) && void 0 !== LD ? LD : null,
-                  visible: rz(BD, pD, null === hD || void 0 === hD ? void 0 : hD.box),
-                  clip: null !== (cD = null === hD || void 0 === hD ? void 0 : hD.box) && void 0 !== cD ? cD : null,
-                  element: wD,
-                  kind: fD,
-                  idx: ID,
-                  scrollContainer: null !== (gD = null === hD || void 0 === hD ? void 0 : hD.container) && void 0 !== gD ? gD : null
+                const wp = Ip.findForParent(cp.parentElement, Ap),
+                  vp = wp && !op.has(wp.container) ? wp : null;
+                (vp ? Si(Up) : xi(Up, Op)) && pp.push({
+                  key: oi(cp),
+                  rect: Up,
+                  panel: Ji(Dp, cp),
+                  scrollGroup: null !== (xp = null === vp || void 0 === vp ? void 0 : vp.group) && void 0 !== xp ? xp : null,
+                  visible: Li(Up, Op, null === vp || void 0 === vp ? void 0 : vp.box),
+                  clip: null !== (Lp = null === vp || void 0 === vp ? void 0 : vp.box) && void 0 !== Lp ? Lp : null,
+                  element: cp,
+                  kind: Wp,
+                  idx: yp,
+                  scrollContainer: null !== (Yp = null === vp || void 0 === vp ? void 0 : vp.container) && void 0 !== Yp ? Yp : null
                 })
               }
             }
-            for (const [AD, UD] of sD) UD.holdsOthers = zD.some((DD => DD.element !== AD && AD.contains(DD.element) && !DD.element.closest(Ez)));
-            const RD = new Map;
-            for (const AD of DD) RD.set(AD.element, AD);
+            for (const [Ap, Pp] of op) Pp.holdsOthers = ip.some((pp => pp.element !== Ap && Ap.contains(pp.element) && !pp.element.closest(ki)));
+            const Dp = new Map;
+            for (const Ap of pp) Dp.set(Ap.element, Ap);
             return {
-              targets: DD,
-              byElement: RD,
-              hasCategories: wD,
-              probes: zD,
-              scrollers: sD
+              targets: pp,
+              byElement: Dp,
+              hasCategories: cp,
+              probes: ip,
+              scrollers: op
             }
           })(), this.observer.disconnect();
-          for (const DD of document.querySelectorAll(Jz)) this.observer.observe(DD, {
+          for (const pp of document.querySelectorAll(ji)) this.observer.observe(pp, {
             childList: !0,
             subtree: !0,
             attributes: !0,
@@ -1917,242 +2252,242 @@ export const modules = {
         }
         return this.set
       }
-      scrolled(DD) {
-        !this.set || DD instanceof Element && ((DD, zD) => {
-          const wD = DD.scrollers.get(zD);
-          if (!wD || wD.holdsOthers || zD.scrollLeft !== wD.left) return !1;
-          const pD = zD.scrollTop - wD.top;
-          if (0 === pD) return !0;
-          wD.top = zD.scrollTop;
-          for (const sD of wD.probes) sD.rect.top -= pD;
-          for (const sD of wD.targets) sD.rect.top -= pD, sD.visible = rz(sD.rect, wD.viewport, wD.box);
+      scrolled(pp) {
+        !this.set || pp instanceof Element && ((pp, ip) => {
+          const cp = pp.scrollers.get(ip);
+          if (!cp || cp.holdsOthers || ip.scrollLeft !== cp.left) return !1;
+          const Op = ip.scrollTop - cp.top;
+          if (0 === Op) return !0;
+          cp.top = ip.scrollTop;
+          for (const op of cp.probes) op.rect.top -= Op;
+          for (const op of cp.targets) op.rect.top -= Op, op.visible = Li(op.rect, cp.viewport, cp.box);
           return !0
-        })(this.set, DD) || (this.set = null)
+        })(this.set, pp) || (this.set = null)
       }
       revalidate() {
-        this.set && this.set.probes.some((DD => {
-          return zD = DD.rect, wD = DD.element.getBoundingClientRect(), !(zD.left === wD.left && zD.top === wD.top && zD.width === wD.width && zD.height === wD.height);
-          var zD, wD
+        this.set && this.set.probes.some((pp => {
+          return ip = pp.rect, cp = pp.element.getBoundingClientRect(), !(ip.left === cp.left && ip.top === cp.top && ip.width === cp.width && ip.height === cp.height);
+          var ip, cp
         })) && (this.set = null)
       }
       disconnect() {
         this.observer.disconnect(), this.set = null
       }
     }
-    const sw = new class {
+    const xc = new class {
         constructor() {
-          this.focused = null, this.focusTarget = null, this.lastRect = null, this.panelMemory = new Map, this.reopenSlotIdx = null, this.dpadTimers = new Map(ID.w.map((DD => [DD, (0, BD.b)(ID.z)]))), this.stickRepeat = new ID.e((0, BD.b)(ID.Y)), this.pageUpTimer = (0, BD.b)(ID.W), this.pageDownTimer = (0, BD.b)(ID.W), this.stickGate = new JD, this.pointer = null, this.activePress = null, this.dropLatch = new Wz, this.scroller = new oz, this.scrollStickClick = new ez, this.hover = new mz, this.lastRealPointer = null, this.placeAfterCategory = null, this.hotbarPick = null, this.ring = new mD, this.targets = new pw, this.hasCategories = !1, this.wasShowing = !1, this.state = Nz.b, this.isActive = () => (0, YD.e)(), this.isShowing = () => "inventory" === AD.e.getActiveConsumerName() && (0, fD.o)(), this.getState = () => this.state, this.isSteppingSlots = () => this.isShowing() && null === this.pointer, this.onDeactivate = () => {
-            this.endInteraction((0, YD.c)()), (0, YD.e)() || this.forgetSurface()
+          this.focused = null, this.focusTarget = null, this.lastRect = null, this.panelMemory = new Map, this.reopenSlotIdx = null, this.dpadTimers = new Map(yp.w.map((pp => [pp, (0, Up.e)(yp.y)]))), this.stickRepeat = new yp.b((0, Up.e)(yp.W)), this.pageUpTimer = (0, Up.e)(yp.R), this.pageDownTimer = (0, Up.e)(yp.R), this.stickGate = new ep, this.pointer = null, this.activePress = null, this.dropLatch = new fi, this.scroller = new ri, this.scrollStickClick = new Gi, this.hover = new gi, this.lastRealPointer = null, this.placeAfterCategory = null, this.hotbarPick = null, this.ring = new np, this.targets = new Sc, this.hasCategories = !1, this.wasShowing = !1, this.state = bi.d, this.isActive = () => (0, Kp.e)(), this.isShowing = () => "inventory" === Ap.d.getActiveConsumerName() && (0, Wp.n)(), this.getState = () => this.state, this.isSteppingSlots = () => this.isShowing() && null === this.pointer, this.onDeactivate = () => {
+            this.endInteraction((0, Kp.c)()), (0, Kp.e)() || this.forgetSurface()
           }, this.forgetSurface = () => {
-            var DD;
-            this.reopenSlotIdx = null !== (DD = this.focused ? bz(this.focused).idx : null) && void 0 !== DD ? DD : this.reopenSlotIdx, this.focused = null, this.focusTarget = null, this.lastRect = null, this.placeAfterCategory = null, (0, YD.o)(), this.panelMemory.clear(), this.targets.disconnect()
-          }, this.onFrame = DD => {
-            (0, LD.unstable_batchedUpdates)((() => {
-              this.frame(DD)
+            var pp;
+            this.reopenSlotIdx = null !== (pp = this.focused ? li(this.focused).idx : null) && void 0 !== pp ? pp : this.reopenSlotIdx, this.focused = null, this.focusTarget = null, this.lastRect = null, this.placeAfterCategory = null, (0, Kp.r)(), this.panelMemory.clear(), this.targets.disconnect()
+          }, this.onFrame = pp => {
+            (0, xp.unstable_batchedUpdates)((() => {
+              this.frame(pp)
             }))
-          }, this.shouldBlockRealPointer = DD => DD.isTrusted && !(0, hD.t)(DD) && this.isShowing(), this.noteRealPointer = DD => {
-            DD instanceof MouseEvent && DD.isTrusted && !(0, hD.t)(DD) && (this.lastRealPointer ??= {
+          }, this.shouldBlockRealPointer = pp => pp.isTrusted && !(0, vp.v)(pp) && this.isShowing(), this.noteRealPointer = pp => {
+            pp instanceof MouseEvent && pp.isTrusted && !(0, vp.v)(pp) && (this.lastRealPointer ??= {
               x: 0,
               y: 0
-            }, this.lastRealPointer.x = DD.clientX, this.lastRealPointer.y = DD.clientY)
-          }, this.wakePressActs = DD => {
-            var zD;
-            return DD === (0, RD.g)("inventoryClose") ? !(null !== (zD = (0, YD.c)()) && void 0 !== zD && zD.isHolding()) : !(DD !== (0, RD.g)("inventory") || !Dw()) || ((0, ID.B)(DD) ? this.isNavButton(DD) : Hz.some((zD => (0, RD.g)(zD) === DD)))
+            }, this.lastRealPointer.x = pp.clientX, this.lastRealPointer.y = pp.clientY)
+          }, this.wakePressActs = pp => {
+            var ip;
+            return pp === (0, Dp.g)("inventoryClose") ? !(null !== (ip = (0, Kp.c)()) && void 0 !== ip && ip.isHolding()) : !(pp !== (0, Dp.g)("inventory") || !Oc()) || ((0, yp.C)(pp) ? this.isNavButton(pp) : ic.some((ip => (0, Dp.g)(ip) === pp)))
           }
         }
-        frame(DD) {
-          var zD, wD, pD, sD, KD;
-          const rD = (0, YD.c)();
-          if (!(0, fD.o)()) return void(this.wasShowing && (this.endInteraction(rD), this.rehoverRealPointer()));
-          this.wasShowing = !0, this.applyFocusRequest(), DD.wokeDevice && this.focusWakePointer(!(null === rD || void 0 === rD || !rD.isHolding())), this.applyCategoryPlace(), this.ensureFocus(), "cursor" !== (0, UD.g)().inventoryNavigation || this.pointer || this.engagePointer();
-          const LD = performance.now();
-          this.handleNavigation(DD, LD), this.handlePanels(DD), this.handlePaging(DD, LD), this.handleScroll(DD), this.handleButtons(DD, LD, rD), this.applyFocusRequest(), this.pointer && this.hoverAtPointer();
-          const cD = this.ensureFocus(),
-            gD = this.focusContext(rD);
-          this.ring.show(cD);
-          const AD = "slot" === gD.kind ? gD.idx : null,
-            ID = null !== (zD = null === (wD = gD.actionElement) || void 0 === wD ? void 0 : wD.querySelector(".DoCraftItem")) && void 0 !== zD ? zD : gD.actionElement;
-          this.pointer ? (this.hover.sync(rD, AD, ID, ((DD, zD) => {
-            const wD = zD ? kz() : 0;
+        frame(pp) {
+          var ip, cp, Op, op, Ip;
+          const Sp = (0, Kp.c)();
+          if (!(0, Wp.n)()) return void(this.wasShowing && (this.endInteraction(Sp), this.rehoverRealPointer()));
+          this.wasShowing = !0, this.applyFocusRequest(), pp.wokeDevice && this.focusWakePointer(!(null === Sp || void 0 === Sp || !Sp.isHolding())), this.applyCategoryPlace(), this.ensureFocus(), "cursor" !== (0, Pp.h)().inventoryNavigation || this.pointer || this.engagePointer();
+          const xp = performance.now();
+          this.handleNavigation(pp, xp), this.handlePanels(pp), this.handlePaging(pp, xp), this.handleScroll(pp), this.handleButtons(pp, xp, Sp), this.applyFocusRequest(), this.pointer && this.hoverAtPointer();
+          const Lp = this.ensureFocus(),
+            Yp = this.focusContext(Sp);
+          this.ring.show(Lp);
+          const Ap = "slot" === Yp.kind ? Yp.idx : null,
+            yp = null !== (ip = null === (cp = Yp.actionElement) || void 0 === cp ? void 0 : cp.querySelector(".DoCraftItem")) && void 0 !== ip ? ip : Yp.actionElement;
+          this.pointer ? (this.hover.sync(Sp, Ap, yp, ((pp, ip) => {
+            const cp = ip ? Fi() : 0;
             return {
-              clientX: DD.x - wD,
-              clientY: DD.y - wD
+              clientX: pp.x - cp,
+              clientY: pp.y - cp
             }
-          })(this.pointer, gD.holding), gD.holding), uD.set({
+          })(this.pointer, Yp.holding), Yp.holding), rp.set({
             x: this.pointer.x,
             y: this.pointer.y,
             visible: !0,
-            pressed: DD.isHeld((0, RD.g)("inventoryPrimary"))
-          })) : cD && this.focused && this.hover.sync(rD, AD, ID, ((DD, zD) => {
-            if (!zD) return {
-              clientX: DD.left + DD.width - 10,
-              clientY: DD.top + DD.height / 2 - 10
+            pressed: pp.isHeld((0, Dp.g)("inventoryPrimary"))
+          })) : Lp && this.focused && this.hover.sync(Sp, Ap, yp, ((pp, ip) => {
+            if (!ip) return {
+              clientX: pp.left + pp.width - 10,
+              clientY: pp.top + pp.height / 2 - 10
             };
-            const wD = kz();
+            const cp = Fi();
             return {
-              clientX: DD.left + DD.width / 2 - wD,
-              clientY: DD.top + DD.height / 2 - wD
+              clientX: pp.left + pp.width / 2 - cp,
+              clientY: pp.top + pp.height / 2 - cp
             }
-          })(cD, gD.holding), gD.holding), this.publishState({
+          })(Lp, Yp.holding), Yp.holding), this.publishState({
             showing: !0,
-            kind: gD.kind,
-            holding: gD.holding,
-            slotHasItem: gD.slotHasItem,
-            pressHints: null !== (pD = null === (sD = gD.press) || void 0 === sD ? void 0 : sD.hints) && void 0 !== pD ? pD : null,
+            kind: Yp.kind,
+            holding: Yp.holding,
+            slotHasItem: Yp.slotHasItem,
+            pressHints: null !== (Op = null === (op = Yp.press) || void 0 === op ? void 0 : op.hints) && void 0 !== Op ? Op : null,
             hasCategories: this.hasCategories,
-            hasList: !!this.focusTarget && lz(this.focusTarget),
-            openButtonCloses: Dw(),
+            hasList: !!this.focusTarget && Ti(this.focusTarget),
+            openButtonCloses: Oc(),
             steppingSlots: null === this.pointer,
-            quickMoveToHotbar: "slot" === gD.kind && !(null === (KD = gD.actionElement) || void 0 === KD || !KD.closest(".CreativeItemSlots")),
+            quickMoveToHotbar: "slot" === Yp.kind && !(null === (Ip = Yp.actionElement) || void 0 === Ip || !Ip.closest(".CreativeItemSlots")),
             dropStackHold: this.dropLatch.getHold(),
             hotbarPicking: null !== this.hotbarPick
           })
         }
-        focusWakePointer(DD) {
-          var zD;
-          const wD = (0, fD.e)();
-          if (!wD) return;
+        focusWakePointer(pp) {
+          var ip;
+          const cp = (0, Wp.d)();
+          if (!cp) return;
           this.targets.revalidate();
-          const pD = this.getTargets().targets;
-          this.setFocus(null !== (zD = nz(wD, pD)) && void 0 !== zD ? zD : DD ? Bz(wD, pD, (DD => {
+          const Op = this.getTargets().targets;
+          this.setFocus(null !== (ip = di(cp, Op)) && void 0 !== ip ? ip : pp ? vi(cp, Op, (pp => {
             let {
-              rect: zD
-            } = DD;
-            const pD = Math.max(zD.left - wD.x, 0, wD.x - (zD.left + zD.width)),
-              sD = Math.max(zD.top - wD.y, 0, wD.y - (zD.top + zD.height));
-            return Math.hypot(pD, sD) <= Math.min(zD.width, zD.height) / 2
-          })) : null, !1), "cursor" === (0, UD.g)().inventoryNavigation && (this.pointer = {
-            x: wD.x,
-            y: wD.y,
+              rect: ip
+            } = pp;
+            const Op = Math.max(ip.left - cp.x, 0, cp.x - (ip.left + ip.width)),
+              op = Math.max(ip.top - cp.y, 0, cp.y - (ip.top + ip.height));
+            return Math.hypot(Op, op) <= Math.min(ip.width, ip.height) / 2
+          })) : null, !1), "cursor" === (0, Pp.h)().inventoryNavigation && (this.pointer = {
+            x: cp.x,
+            y: cp.y,
             speedRamp: 0
           })
         }
         rehoverRealPointer() {
-          const DD = this.lastRealPointer;
-          if (!DD || "keyboardMouse" !== cD.e.get("activeInputDevice")) return;
-          const zD = document.elementFromPoint(DD.x, DD.y);
-          zD && (0, oD.o)(null, zD, DD)
+          const pp = this.lastRealPointer;
+          if (!pp || "keyboardMouse" !== Lp.c.get("activeInputDevice")) return;
+          const ip = document.elementFromPoint(pp.x, pp.y);
+          ip && (0, gp.m)(null, ip, pp)
         }
-        endInteraction(DD) {
+        endInteraction(pp) {
           this.wasShowing = !1, this.hotbarPick = null, this.releasePress(), this.dropLatch.reset(), this.scroller.reset();
-          for (const zD of this.dpadTimers.values()) zD.reset();
-          this.stickRepeat.reset(), this.pageUpTimer.reset(), this.pageDownTimer.reset(), this.hover.clear(DD), this.ring.hide(), this.releasePointer(), this.publishState(Nz.b)
+          for (const ip of this.dpadTimers.values()) ip.reset();
+          this.stickRepeat.reset(), this.pageUpTimer.reset(), this.pageDownTimer.reset(), this.hover.clear(pp), this.ring.hide(), this.releasePointer(), this.publishState(bi.d)
         }
         getTargets() {
-          const DD = this.targets.get();
-          return this.hasCategories = DD.hasCategories, DD
+          const pp = this.targets.get();
+          return this.hasCategories = pp.hasCategories, pp
         }
         currentTarget() {
-          var DD;
-          return this.focused && null !== (DD = this.getTargets().byElement.get(this.focused)) && void 0 !== DD ? DD : null
+          var pp;
+          return this.focused && null !== (pp = this.getTargets().byElement.get(this.focused)) && void 0 !== pp ? pp : null
         }
         readFocusRect() {
-          const DD = this.focused;
-          if (null === DD || void 0 === DD || !DD.isConnected || !DD.closest(Jz)) return null;
-          const zD = DD.getBoundingClientRect();
-          return zD.width > 0 && zD.height > 0 ? {
-            left: zD.left,
-            top: zD.top,
-            width: zD.width,
-            height: zD.height
+          const pp = this.focused;
+          if (null === pp || void 0 === pp || !pp.isConnected || !pp.closest(ji)) return null;
+          const ip = pp.getBoundingClientRect();
+          return ip.width > 0 && ip.height > 0 ? {
+            left: ip.left,
+            top: ip.top,
+            width: ip.width,
+            height: ip.height
           } : null
         }
         ensureFocus() {
-          const DD = this.readFocusRect();
-          if (DD || this.pointer) return DD;
+          const pp = this.readFocusRect();
+          if (pp || this.pointer) return pp;
           const {
-            targets: zD,
-            byElement: wD
+            targets: ip,
+            byElement: cp
           } = this.getTargets();
-          let pD = null,
-            sD = !1;
-          if (this.lastRect) pD = Bz(Lz(this.lastRect), zD);
+          let Op = null,
+            op = !1;
+          if (this.lastRect) Op = vi(Yi(this.lastRect), ip);
           else {
-            var KD, rD;
-            const DD = ((DD, zD) => {
-                const wD = document.querySelector(".EntireInventoryWrapper [data-pad-inventory-start]");
-                return wD ? ww(DD.filter((DD => wD.contains(DD.element))), zD) : null
-              })(zD, (0, YD.c)()),
-              LD = zD.find((DD => null !== DD.idx && DD.idx === this.reopenSlotIdx)),
-              cD = document.querySelector(vz);
-            sD = null !== DD || void 0 !== LD, pD = null !== (KD = null !== (rD = null !== DD && void 0 !== DD ? DD : LD) && void 0 !== rD ? rD : cD && wD.get(cD)) && void 0 !== KD ? KD : Mz(zD)
+            var Ip, Sp;
+            const pp = ((pp, ip) => {
+                const cp = document.querySelector(".EntireInventoryWrapper [data-pad-inventory-start]");
+                return cp ? Ic(pp.filter((pp => cp.contains(pp.element))), ip) : null
+              })(ip, (0, Kp.c)()),
+              xp = ip.find((pp => null !== pp.idx && pp.idx === this.reopenSlotIdx)),
+              Lp = document.querySelector(si);
+            op = null !== pp || void 0 !== xp, Op = null !== (Ip = null !== (Sp = null !== pp && void 0 !== pp ? pp : xp) && void 0 !== Sp ? Sp : Lp && cp.get(Lp)) && void 0 !== Ip ? Ip : ei(ip)
           }
-          return this.setFocus(pD, sD), this.lastRect
+          return this.setFocus(Op, op), this.lastRect
         }
-        setFocus(DD) {
-          let zD = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
-          DD && (this.focused = DD.element, this.focusTarget = DD, this.panelMemory.set(DD.panel, DD.element), zD && DD.scrollContainer && ((DD, zD) => {
-            const wD = DD.getBoundingClientRect(),
-              pD = SD(zD),
-              sD = zD.scrollTop;
-            return wD.top < pD.top ? zD.scrollTop -= pD.top - wD.top : wD.bottom > pD.bottom && (zD.scrollTop += wD.bottom - pD.bottom), zD.scrollTop !== sD
-          })(DD.element, DD.scrollContainer) && this.targets.invalidate(), this.lastRect = this.readFocusRect(), this.followFocusJump())
+        setFocus(pp) {
+          let ip = !(arguments.length > 1 && void 0 !== arguments[1]) || arguments[1];
+          pp && (this.focused = pp.element, this.focusTarget = pp, this.panelMemory.set(pp.panel, pp.element), ip && pp.scrollContainer && ((pp, ip) => {
+            const cp = pp.getBoundingClientRect(),
+              Op = Jp(ip),
+              op = ip.scrollTop;
+            return cp.top < Op.top ? ip.scrollTop -= Op.top - cp.top : cp.bottom > Op.bottom && (ip.scrollTop += cp.bottom - Op.bottom), ip.scrollTop !== op
+          })(pp.element, pp.scrollContainer) && this.targets.invalidate(), this.lastRect = this.readFocusRect(), this.followFocusJump())
         }
         followFocusJump() {
           if (this.pointer)
-            if ("cursor" === (0, UD.g)().inventoryNavigation) {
+            if ("cursor" === (0, Pp.h)().inventoryNavigation) {
               if (this.lastRect) {
-                const DD = Lz(this.lastRect);
+                const pp = Yi(this.lastRect);
                 this.pointer = {
-                  x: DD.x,
-                  y: DD.y,
+                  x: pp.x,
+                  y: pp.y,
                   speedRamp: 0
                 }
               }
             } else this.releasePointer()
         }
         engagePointer() {
-          const DD = this.lastRect ? Lz(this.lastRect) : {
+          const pp = this.lastRect ? Yi(this.lastRect) : {
             x: window.innerWidth / 2,
             y: window.innerHeight / 2
           };
           this.pointer = {
-            x: DD.x,
-            y: DD.y,
+            x: pp.x,
+            y: pp.y,
             speedRamp: 0
           }
         }
         releasePointer() {
-          this.pointer = null, uD.hide()
+          this.pointer = null, rp.hide()
         }
         hoverAtPointer() {
-          var DD;
-          const zD = nz(this.pointer, this.getTargets().targets);
-          this.focusTarget = zD, (null === zD || void 0 === zD ? void 0 : zD.element) !== this.focused && (this.focused = null !== (DD = null === zD || void 0 === zD ? void 0 : zD.element) && void 0 !== DD ? DD : null, zD && (this.panelMemory.set(zD.panel, zD.element), this.lastRect = this.readFocusRect()))
+          var pp;
+          const ip = di(this.pointer, this.getTargets().targets);
+          this.focusTarget = ip, (null === ip || void 0 === ip ? void 0 : ip.element) !== this.focused && (this.focused = null !== (pp = null === ip || void 0 === ip ? void 0 : ip.element) && void 0 !== pp ? pp : null, ip && (this.panelMemory.set(ip.panel, ip.element), this.lastRect = this.readFocusRect()))
         }
-        moveCursor(DD, zD) {
-          const wD = this.focusTarget,
-            pD = wD && (0, UD.g)().cursorMagnetism ? Lz(Gz(wD)) : null;
-          this.pointer = ED(this.pointer, {
-            stick: DD.leftStick,
-            moveDeadzone: (0, UD.g)().moveDeadzone,
-            dpad: zD,
-            dtMs: DD.dtMs,
-            cursorSpeedPercent: (0, UD.g)().cursorSpeed,
+        moveCursor(pp, ip) {
+          const cp = this.focusTarget,
+            Op = cp && (0, Pp.h)().cursorMagnetism ? Yi(ti(cp)) : null;
+          this.pointer = jp(this.pointer, {
+            stick: pp.leftStick,
+            moveDeadzone: (0, Pp.h)().moveDeadzone,
+            dpad: ip,
+            dtMs: pp.dtMs,
+            cursorSpeedPercent: (0, Pp.h)().cursorSpeed,
             viewport: {
               width: window.innerWidth,
               height: window.innerHeight
             },
             context: {
               overInteractive: !1,
-              magnetTarget: pD
+              magnetTarget: Op
             }
           })
         }
-        move(DD) {
+        move(pp) {
           this.targets.revalidate();
-          const zD = this.currentTarget();
-          zD && this.setFocus(Iz(zD, this.getTargets().targets, DD))
+          const ip = this.currentTarget();
+          ip && this.setFocus(wi(ip, this.getTargets().targets, pp))
         }
-        step(DD) {
-          const zD = this.pointer;
-          if (zD && (this.releasePointer(), !this.focused)) return this.targets.revalidate(), void this.setFocus(((DD, zD, wD) => {
-            var pD;
-            const sD = {
+        step(pp) {
+          const ip = this.pointer;
+          if (ip && (this.releasePointer(), !this.focused)) return this.targets.revalidate(), void this.setFocus(((pp, ip, cp) => {
+            var Op;
+            const op = {
               key: "",
               rect: {
-                left: DD.x,
-                top: DD.y,
+                left: pp.x,
+                top: pp.y,
                 width: 0,
                 height: 0
               },
@@ -2161,982 +2496,982 @@ export const modules = {
               visible: !0,
               clip: null
             };
-            return null !== (pD = Iz(sD, zD, wD)) && void 0 !== pD ? pD : Bz(DD, zD)
-          })(zD, this.getTargets().targets, DD));
-          this.move(DD)
+            return null !== (Op = wi(op, ip, cp)) && void 0 !== Op ? Op : vi(pp, ip)
+          })(ip, this.getTargets().targets, pp));
+          this.move(pp)
         }
-        isNavButton(DD) {
-          return !Yz.some((zD => (0, RD.g)(zD) === DD)) && !(DD === (0, RD.g)("inventory") && Dw())
+        isNavButton(pp) {
+          return !pc.some((ip => (0, Dp.g)(ip) === pp)) && !(pp === (0, Dp.g)("inventory") && Oc())
         }
-        handleNavigation(DD, zD) {
-          const wD = (0, UD.g)().inventoryNavigation,
-            pD = {
+        handleNavigation(pp, ip) {
+          const cp = (0, Pp.h)().inventoryNavigation,
+            Op = {
               x: 0,
               y: 0
             };
-          let sD = null;
-          for (const cD of ID.w) {
-            const KD = this.isNavButton(cD) && DD.isHeld(cD);
-            KD && (pD.x += tz[cD].x, pD.y += tz[cD].y), this.dpadTimers.get(cD).update(KD, zD) && "cursor" !== wD && (sD ??= cD)
+          let op = null;
+          for (const Lp of yp.w) {
+            const Ip = this.isNavButton(Lp) && pp.isHeld(Lp);
+            Ip && (Op.x += Ki[Lp].x, Op.y += Ki[Lp].y), this.dpadTimers.get(Lp).update(Ip, ip) && "cursor" !== cp && (op ??= Lp)
           }
-          const KD = this.stickGate.update(DD.leftStick, (0, UD.g)().moveDeadzone);
-          if (sD && (this.step(sD), this.stickGate.lock()), "slot" !== wD) {
-            const zD = ((DD, zD, wD, pD) => "hybrid" !== DD ? "cursor" === DD : !pD && (zD || wD))(wD, null !== this.pointer, KD, null !== sD);
-            return zD && !this.pointer && this.engagePointer(), void(this.pointer && this.moveCursor(DD, "cursor" === wD ? pD : {
+          const Ip = this.stickGate.update(pp.leftStick, (0, Pp.h)().moveDeadzone);
+          if (op && (this.step(op), this.stickGate.lock()), "slot" !== cp) {
+            const ip = ((pp, ip, cp, Op) => "hybrid" !== pp ? "cursor" === pp : !Op && (ip || cp))(cp, null !== this.pointer, Ip, null !== op);
+            return ip && !this.pointer && this.engagePointer(), void(this.pointer && this.moveCursor(pp, "cursor" === cp ? Op : {
               x: 0,
               y: 0
             }))
           }
-          const rD = (0, ID.i)(DD.leftStick, (0, UD.g)().moveDeadzone),
-            LD = this.stickRepeat.update(KD ? (0, ID.ab)(rD) : null, zD);
-          LD && this.move(LD)
+          const Sp = (0, yp.h)(pp.leftStick, (0, Pp.h)().moveDeadzone),
+            xp = this.stickRepeat.update(Ip ? (0, yp._)(Sp) : null, ip);
+          xp && this.move(xp)
         }
         applyCategoryPlace() {
-          const DD = this.placeAfterCategory;
-          if (!DD) return;
+          const pp = this.placeAfterCategory;
+          if (!pp) return;
           this.placeAfterCategory = null, this.targets.invalidate();
-          const zD = Bz(Lz(DD.rect), this.getTargets().targets, (zD => zD.scrollGroup === DD.scrollGroup));
-          this.setFocus(zD, !1)
+          const ip = vi(Yi(pp.rect), this.getTargets().targets, (ip => ip.scrollGroup === pp.scrollGroup));
+          this.setFocus(ip, !1)
         }
         applyFocusRequest() {
-          const DD = (0, YD.o)();
-          DD && (this.targets.invalidate(), this.setFocus((0, YD.b)(this.getTargets().targets, DD)))
+          const pp = (0, Kp.r)();
+          pp && (this.targets.invalidate(), this.setFocus((0, Kp.b)(this.getTargets().targets, pp)))
         }
-        handlePanels(DD) {
-          var zD, wD, pD;
-          const sD = DD.wasPressed((0, RD.g)("inventoryPanelPrevious")),
-            KD = DD.wasPressed((0, RD.g)("inventoryPanelNext"));
-          if (!sD && !KD) return;
+        handlePanels(pp) {
+          var ip, cp, Op;
+          const op = pp.wasPressed((0, Dp.g)("inventoryPanelPrevious")),
+            Ip = pp.wasPressed((0, Dp.g)("inventoryPanelNext"));
+          if (!op && !Ip) return;
           const {
-            targets: rD
-          } = this.getTargets(), LD = (cD = ((DD, zD) => {
-            const wD = [];
-            for (const sD of DD) sD.visible && !wD.includes(sD.panel) && wD.push(sD.panel);
-            const pD = DD => {
-              const pD = zD.indexOf(DD);
-              return -1 === pD ? zD.length + wD.indexOf(DD) : pD
+            targets: Sp
+          } = this.getTargets(), xp = (Lp = ((pp, ip) => {
+            const cp = [];
+            for (const op of pp) op.visible && !cp.includes(op.panel) && cp.push(op.panel);
+            const Op = pp => {
+              const Op = ip.indexOf(pp);
+              return -1 === Op ? ip.length + cp.indexOf(pp) : Op
             };
-            return wD.sort(((DD, zD) => pD(DD) - pD(zD)))
-          })(rD, Vz), gD = null !== (zD = null === (wD = this.focusTarget) || void 0 === wD ? void 0 : wD.panel) && void 0 !== zD ? zD : null, AD = KD ? 1 : -1, 0 === cD.length ? null : cD[cz(null === gD ? -1 : cD.indexOf(gD), cD.length, AD)]);
-          var cD, gD, AD;
-          if (null === LD) return;
-          const UD = this.panelMemory.get(LD),
-            fD = rD.filter((DD => DD.panel === LD)),
-            ID = null !== (pD = fD.find((DD => DD.element === UD && DD.visible))) && void 0 !== pD ? pD : ww(fD, (0, YD.c)());
-          this.setFocus(ID)
+            return cp.sort(((pp, ip) => Op(pp) - Op(ip)))
+          })(Sp, qi), Yp = null !== (ip = null === (cp = this.focusTarget) || void 0 === cp ? void 0 : cp.panel) && void 0 !== ip ? ip : null, Ap = Ip ? 1 : -1, 0 === Lp.length ? null : Lp[Di(null === Yp ? -1 : Lp.indexOf(Yp), Lp.length, Ap)]);
+          var Lp, Yp, Ap;
+          if (null === xp) return;
+          const Pp = this.panelMemory.get(xp),
+            Wp = Sp.filter((pp => pp.panel === xp)),
+            yp = null !== (Op = Wp.find((pp => pp.element === Pp && pp.visible))) && void 0 !== Op ? Op : Ic(Wp, (0, Kp.c)());
+          this.setFocus(yp)
         }
-        handlePaging(DD, zD) {
-          const wD = (0, RD.g)("menuPageUp"),
-            pD = (0, RD.g)("menuPageDown"),
-            sD = this.pageUpTimer.update(DD.isHeld(wD), zD),
-            KD = this.pageDownTimer.update(DD.isHeld(pD), zD);
-          if (!sD && !KD) return;
-          const rD = KD ? 1 : -1;
-          if (!DD.wasPressed(KD ? pD : wD) && this.hasCategories) return;
-          if ((DD => {
-              const zD = Array.from(document.querySelectorAll(".EntireInventoryWrapper .CreativeCategoryTab"));
-              if (0 === zD.length) return !1;
-              const wD = zD.findIndex((DD => DD.classList.contains("Selected"))),
-                pD = zD[cz(wD, zD.length, DD)];
-              return (0, oD.m)(pD, (0, oD.w)(pD)), !0
-            })(rD)) {
-            var LD, cD;
+        handlePaging(pp, ip) {
+          const cp = (0, Dp.g)("menuPageUp"),
+            Op = (0, Dp.g)("menuPageDown"),
+            op = this.pageUpTimer.update(pp.isHeld(cp), ip),
+            Ip = this.pageDownTimer.update(pp.isHeld(Op), ip);
+          if (!op && !Ip) return;
+          const Sp = Ip ? 1 : -1;
+          if (!pp.wasPressed(Ip ? Op : cp) && this.hasCategories) return;
+          if ((pp => {
+              const ip = Array.from(document.querySelectorAll(".EntireInventoryWrapper .CreativeCategoryTab"));
+              if (0 === ip.length) return !1;
+              const cp = ip.findIndex((pp => pp.classList.contains("Selected"))),
+                Op = ip[Di(cp, ip.length, pp)];
+              return (0, gp.k)(Op, (0, gp.q)(Op)), !0
+            })(Sp)) {
+            var xp, Lp;
             this.targets.invalidate();
-            const DD = null !== (LD = null === (cD = this.focusTarget) || void 0 === cD ? void 0 : cD.scrollGroup) && void 0 !== LD ? LD : null,
-              zD = this.readFocusRect();
-            return void(this.placeAfterCategory = null !== DD && zD && !this.pointer ? {
-              rect: zD,
-              scrollGroup: DD
+            const pp = null !== (xp = null === (Lp = this.focusTarget) || void 0 === Lp ? void 0 : Lp.scrollGroup) && void 0 !== xp ? xp : null,
+              ip = this.readFocusRect();
+            return void(this.placeAfterCategory = null !== pp && ip && !this.pointer ? {
+              rect: ip,
+              scrollGroup: pp
             } : null)
           }
           const {
-            targets: gD
-          } = this.getTargets(), AD = this.currentTarget(), UD = AD && lz(AD) ? AD : gD.find((DD => lz(DD) && DD.visible));
-          if (!UD) return;
-          const fD = ((DD, zD, wD, pD) => {
-            if (null === DD.scrollGroup) return null;
-            const sD = Lz(DD.rect),
-              KD = sD.x,
-              rD = sD.y + ("Down" === wD ? pD : -pD);
-            let LD = null,
-              cD = 1 / 0;
-            for (const gD of zD) {
-              if (gD.scrollGroup !== DD.scrollGroup || gD.key === DD.key) continue;
-              const zD = Lz(gD.rect);
-              if ("Down" === wD ? zD.y <= sD.y : zD.y >= sD.y) continue;
-              const pD = Math.hypot(zD.x - KD, zD.y - rD);
-              pD < cD && (LD = gD, cD = pD)
+            targets: Yp
+          } = this.getTargets(), Ap = this.currentTarget(), Pp = Ap && Ti(Ap) ? Ap : Yp.find((pp => Ti(pp) && pp.visible));
+          if (!Pp) return;
+          const Wp = ((pp, ip, cp, Op) => {
+            if (null === pp.scrollGroup) return null;
+            const op = Yi(pp.rect),
+              Ip = op.x,
+              Sp = op.y + ("Down" === cp ? Op : -Op);
+            let xp = null,
+              Lp = 1 / 0;
+            for (const Yp of ip) {
+              if (Yp.scrollGroup !== pp.scrollGroup || Yp.key === pp.key) continue;
+              const ip = Yi(Yp.rect);
+              if ("Down" === cp ? ip.y <= op.y : ip.y >= op.y) continue;
+              const Op = Math.hypot(ip.x - Ip, ip.y - Sp);
+              Op < Lp && (xp = Yp, Lp = Op)
             }
-            return LD
-          })(UD, gD, rD > 0 ? "Down" : "Up", UD.scrollContainer.clientHeight);
-          this.setFocus(null !== fD && void 0 !== fD ? fD : UD)
+            return xp
+          })(Pp, Yp, Sp > 0 ? "Down" : "Up", Pp.scrollContainer.clientHeight);
+          this.setFocus(null !== Wp && void 0 !== Wp ? Wp : Pp)
         }
-        handleScroll(DD) {
-          var zD, wD, pD, sD, KD, rD;
-          if (!this.scroller.isScrolling(DD.rightStick)) return void this.scroller.reset();
+        handleScroll(pp) {
+          var ip, cp, Op, op, Ip, Sp;
+          if (!this.scroller.isScrolling(pp.rightStick)) return void this.scroller.reset();
           const {
-            targets: LD
-          } = this.getTargets(), cD = this.pointer, gD = !cD && this.focusTarget && lz(this.focusTarget) ? this.focusTarget.scrollContainer : null, RD = cD && (null === (zD = LD.find((DD => DD.clip && hz(DD.clip, cD)))) || void 0 === zD ? void 0 : zD.scrollContainer), AD = null !== (wD = null !== (pD = null !== (sD = this.scroller.current()) && void 0 !== sD ? sD : RD) && void 0 !== pD ? pD : gD) && void 0 !== wD ? wD : null === (KD = LD.find(lz)) || void 0 === KD ? void 0 : KD.scrollContainer;
-          if (!AD || !this.scroller.step(AD, DD.rightStick, DD.dtMs)) return;
-          this.targets.scrolled(AD);
-          const UD = cD || (null === (rD = this.focusTarget) || void 0 === rD ? void 0 : rD.scrollContainer) !== AD ? null : this.readFocusRect();
-          if (!UD) return;
-          const fD = SD(AD),
-            ID = Lz(UD);
-          if (ID.y < fD.top || ID.y > fD.bottom) {
-            const DD = this.focusTarget.scrollGroup,
-              zD = Bz(ID, this.getTargets().targets, (zD => zD.scrollGroup === DD));
-            this.setFocus(zD, !1)
+            targets: xp
+          } = this.getTargets(), Lp = this.pointer, Yp = !Lp && this.focusTarget && Ti(this.focusTarget) ? this.focusTarget.scrollContainer : null, Dp = Lp && (null === (ip = xp.find((pp => pp.clip && Hi(pp.clip, Lp)))) || void 0 === ip ? void 0 : ip.scrollContainer), Ap = null !== (cp = null !== (Op = null !== (op = this.scroller.current()) && void 0 !== op ? op : Dp) && void 0 !== Op ? Op : Yp) && void 0 !== cp ? cp : null === (Ip = xp.find(Ti)) || void 0 === Ip ? void 0 : Ip.scrollContainer;
+          if (!Ap || !this.scroller.step(Ap, pp.rightStick, pp.dtMs)) return;
+          this.targets.scrolled(Ap);
+          const Pp = Lp || (null === (Sp = this.focusTarget) || void 0 === Sp ? void 0 : Sp.scrollContainer) !== Ap ? null : this.readFocusRect();
+          if (!Pp) return;
+          const Wp = Jp(Ap),
+            yp = Yi(Pp);
+          if (yp.y < Wp.top || yp.y > Wp.bottom) {
+            const pp = this.focusTarget.scrollGroup,
+              ip = vi(yp, this.getTargets().targets, (ip => ip.scrollGroup === pp));
+            this.setFocus(ip, !1)
           }
         }
-        focusContext(DD) {
+        focusContext(pp) {
           const {
-            kind: zD,
-            idx: wD
-          } = this.focused ? bz(this.focused) : {
+            kind: ip,
+            idx: cp
+          } = this.focused ? li(this.focused) : {
             kind: null,
             idx: null
-          }, pD = this.focused ? xz(this.focused) : null, sD = pD ? (0, az.d)(pD) : null;
+          }, Op = this.focused ? Ei(this.focused) : null, op = Op ? (0, Zi.d)(Op) : null;
           return {
-            kind: zD,
-            idx: wD,
-            actionElement: pD,
-            press: sD,
-            hasPress: null !== sD,
-            hasBack: !(null === sD || void 0 === sD || !sD.back),
-            holding: DD.isHolding(),
-            slotHasItem: null !== wD && DD.hasItemAt(wD)
+            kind: ip,
+            idx: cp,
+            actionElement: Op,
+            press: op,
+            hasPress: null !== op,
+            hasBack: !(null === op || void 0 === op || !op.back),
+            holding: pp.isHolding(),
+            slotHasItem: null !== cp && pp.hasItemAt(cp)
           }
         }
-        handleButtons(DD, zD, wD) {
-          var pD, sD;
-          if (!this.activePress || DD.isHeld(this.activePress.button) && (pD = this.activePress.target, sD = this.focused, null !== pD.recipe ? Tz(sD).recipe === pD.recipe : sD === pD.element) || this.releasePress(), this.scrollStickClick.update(DD.rightStick, zD), !this.handleHotbarPick(DD, wD)) {
-            for (const [pD, sD] of Fz) {
-              const KD = (0, RD.g)(sD);
-              if (!DD.wasPressed(KD) || "openButton" === pD && !Dw()) continue;
-              if ("RS" === KD && !this.scrollStickClick.allowsClick(zD)) continue;
-              const rD = this.focusContext(wD),
-                LD = tD(pD, rD);
-              LD && this.runIntent(LD, rD, KD, wD)
+        handleButtons(pp, ip, cp) {
+          var Op, op;
+          if (!this.activePress || pp.isHeld(this.activePress.button) && (Op = this.activePress.target, op = this.focused, null !== Op.recipe ? Xi(op).recipe === Op.recipe : op === Op.element) || this.releasePress(), this.scrollStickClick.update(pp.rightStick, ip), !this.handleHotbarPick(pp, cp)) {
+            for (const [Op, op] of Vi) {
+              const Ip = (0, Dp.g)(op);
+              if (!pp.wasPressed(Ip) || "openButton" === Op && !Oc()) continue;
+              if ("RS" === Ip && !this.scrollStickClick.allowsClick(ip)) continue;
+              const Sp = this.focusContext(cp),
+                xp = zp(Op, Sp);
+              xp && this.runIntent(xp, Sp, Ip, cp)
             }
-            this.handleDrop(DD, zD, wD)
+            this.handleDrop(pp, ip, cp)
           }
         }
-        handleHotbarPick(DD, zD) {
-          const wD = this.hotbarPick;
-          if (!wD) return !1;
-          const pD = DD.wasPressed((0, RD.g)("inventoryPrimary")) || DD.wasPressed((0, RD.g)("inventoryHotbarSwap"));
-          if (!pD && !DD.wasPressed((0, RD.g)("inventoryClose")) && !zD.isHolding()) return !(DD.wasPressed((0, RD.g)("inventory")) && Dw());
-          const sD = this.focusTarget;
-          pD && "hotbar" === (null === sD || void 0 === sD ? void 0 : sD.panel) && null !== sD.idx && sD.idx !== wD.idx && (zD.swapWithHotbar(sD.idx, wD.idx), this.afterAction()), this.hotbarPick = null;
-          const KD = wD.element.isConnected ? this.getTargets().byElement.get(wD.element) : void 0;
-          return KD && this.setFocus(KD), !0
+        handleHotbarPick(pp, ip) {
+          const cp = this.hotbarPick;
+          if (!cp) return !1;
+          const Op = pp.wasPressed((0, Dp.g)("inventoryPrimary")) || pp.wasPressed((0, Dp.g)("inventoryHotbarSwap"));
+          if (!Op && !pp.wasPressed((0, Dp.g)("inventoryClose")) && !ip.isHolding()) return !(pp.wasPressed((0, Dp.g)("inventory")) && Oc());
+          const op = this.focusTarget;
+          Op && "hotbar" === (null === op || void 0 === op ? void 0 : op.panel) && null !== op.idx && op.idx !== cp.idx && (ip.swapWithHotbar(op.idx, cp.idx), this.afterAction()), this.hotbarPick = null;
+          const Ip = cp.element.isConnected ? this.getTargets().byElement.get(cp.element) : void 0;
+          return Ip && this.setFocus(Ip), !0
         }
-        startHotbarPick(DD) {
-          var zD;
+        startHotbarPick(pp) {
+          var ip;
           const {
-            targets: wD,
-            byElement: pD
-          } = this.getTargets(), sD = document.querySelector(vz), KD = null !== (zD = sD && pD.get(sD)) && void 0 !== zD ? zD : wD.find((DD => "hotbar" === DD.panel));
-          KD && this.focused && (this.hotbarPick = {
-            idx: DD,
+            targets: cp,
+            byElement: Op
+          } = this.getTargets(), op = document.querySelector(si), Ip = null !== (ip = op && Op.get(op)) && void 0 !== ip ? ip : cp.find((pp => "hotbar" === pp.panel));
+          Ip && this.focused && (this.hotbarPick = {
+            idx: pp,
             element: this.focused
-          }, this.setFocus(KD))
+          }, this.setFocus(Ip))
         }
         focusKey() {
-          return this.focused ? wz(this.focused) : null
+          return this.focused ? oi(this.focused) : null
         }
-        handleDrop(DD, zD, wD) {
-          const pD = (0, RD.g)("inventoryDrop");
-          if (DD.wasPressed(pD)) {
-            const DD = (sD = this.focusContext(wD)).holding ? {
-              kind: "Qg"
-            } : "slot" === sD.kind && sD.slotHasItem && null !== sD.idx ? {
+        handleDrop(pp, ip, cp) {
+          const Op = (0, Dp.g)("inventoryDrop");
+          if (pp.wasPressed(Op)) {
+            const pp = (op = this.focusContext(cp)).holding ? {
+              kind: "sx"
+            } : "slot" === op.kind && op.slotHasItem && null !== op.idx ? {
               kind: "slot",
-              idx: sD.idx
+              idx: op.idx
             } : null;
-            return void(DD && (this.dropFrom(DD, !1, wD), this.dropLatch.press(DD, this.focusKey(), zD, GD.d[(0, UD.g)().tapHoldTime].dropStackMs), this.afterAction()))
+            return void(pp && (this.dropFrom(pp, !1, cp), this.dropLatch.press(pp, this.focusKey(), ip, wp.e[(0, Pp.h)().tapHoldTime].dropStackMs), this.afterAction()))
           }
-          var sD;
-          const KD = this.dropLatch.update(DD.isHeld(pD), this.focusKey(), zD);
-          KD && ((DD, zD, wD) => "Qg" === DD.kind ? zD : !zD && wD(DD.idx))(KD, wD.isHolding(), wD.hasItemAt) && (this.dropFrom(KD, !0, wD), this.afterAction())
+          var op;
+          const Ip = this.dropLatch.update(pp.isHeld(Op), this.focusKey(), ip);
+          Ip && ((pp, ip, cp) => "sx" === pp.kind ? ip : !ip && cp(pp.idx))(Ip, cp.isHolding(), cp.hasItemAt) && (this.dropFrom(Ip, !0, cp), this.afterAction())
         }
-        dropFrom(DD, zD, wD) {
-          "Qg" === DD.kind ? wD.dropHeld(zD, this.slotPoint()) : wD.dropSlot(DD.idx, zD)
+        dropFrom(pp, ip, cp) {
+          "sx" === pp.kind ? cp.dropHeld(ip, this.slotPoint()) : cp.dropSlot(pp.idx, ip)
         }
         slotPoint() {
           return this.pointer ? {
             clientX: this.pointer.x,
             clientY: this.pointer.y
-          } : this.lastRect ? (DD => {
-            const zD = Lz(DD);
+          } : this.lastRect ? (pp => {
+            const ip = Yi(pp);
             return {
-              clientX: zD.x,
-              clientY: zD.y
+              clientX: ip.x,
+              clientY: ip.y
             }
           })(this.lastRect) : {
             clientX: 0,
             clientY: 0
           }
         }
-        runIntent(DD, zD, wD, pD) {
-          const sD = zD.idx,
-            KD = zD.actionElement;
-          switch (KD && zw.has(DD) && (0, hD.z)(KD), DD) {
+        runIntent(pp, ip, cp, Op) {
+          const op = ip.idx,
+            Ip = ip.actionElement;
+          switch (Ip && oc.has(pp) && (0, vp.z)(Ip), pp) {
             case "slotPrimary":
-              pD.primary(sD, this.slotPoint());
+              Op.primary(op, this.slotPoint());
               break;
             case "slotSecondary":
-              pD.secondary(sD, this.slotPoint());
+              Op.secondary(op, this.slotPoint());
               break;
             case "slotQuickMove":
-              pD.quickMove(sD, this.slotPoint());
+              Op.quickMove(op, this.slotPoint());
               break;
             case "hotbarPick":
-              this.startHotbarPick(sD);
+              this.startHotbarPick(op);
               break;
             case "pressPrimary":
             case "pressSecondary":
-              this.startPress(zD.press, "pressPrimary" === DD ? "primary" : "secondary", wD);
+              this.startPress(ip.press, "pressPrimary" === pp ? "primary" : "secondary", cp);
               break;
             case "click":
-              (0, oD.m)(KD, (0, oD.w)(KD));
+              (0, gp.k)(Ip, (0, gp.q)(Ip));
               break;
             case "openKeyboard":
-              (0, oD.K)(KD) && (0, oD.H)(KD);
+              (0, gp.B)(Ip) && (0, gp.z)(Ip);
               break;
             case "pressBack":
-              zD.press.back();
+              ip.press.back();
               break;
             case "cancel":
-              pD.cancel();
+              Op.cancel();
               break;
             case "close":
-              return this.releasePress(), void pD.close()
+              return this.releasePress(), void Op.close()
           }
           this.afterAction()
         }
-        startPress(DD, zD, wD) {
-          this.releasePress(), DD.press(zD) && (this.activePress = {
-            handlers: DD,
-            button: wD,
-            target: Tz(this.focused)
+        startPress(pp, ip, cp) {
+          this.releasePress(), pp.press(ip) && (this.activePress = {
+            handlers: pp,
+            button: cp,
+            target: Xi(this.focused)
           })
         }
         releasePress() {
-          var DD, zD, wD;
-          null === (DD = this.activePress) || void 0 === DD || null === (zD = (wD = DD.handlers).release) || void 0 === zD || zD.call(wD), this.activePress = null
+          var pp, ip, cp;
+          null === (pp = this.activePress) || void 0 === pp || null === (ip = (cp = pp.handlers).release) || void 0 === ip || ip.call(cp), this.activePress = null
         }
         afterAction() {
           this.targets.invalidate(), this.hover.invalidate()
         }
-        publishState(DD) {
-          ((DD, zD) => {
-            var wD, pD, sD, KD, rD, LD;
-            return DD.showing === zD.showing && DD.kind === zD.kind && DD.holding === zD.holding && DD.slotHasItem === zD.slotHasItem && (null === (wD = DD.pressHints) || void 0 === wD ? void 0 : wD.primary) === (null === (pD = zD.pressHints) || void 0 === pD ? void 0 : pD.primary) && (null === (sD = DD.pressHints) || void 0 === sD ? void 0 : sD.secondary) === (null === (KD = zD.pressHints) || void 0 === KD ? void 0 : KD.secondary) && (null === (rD = DD.pressHints) || void 0 === rD ? void 0 : rD.back) === (null === (LD = zD.pressHints) || void 0 === LD ? void 0 : LD.back) && DD.hasCategories === zD.hasCategories && DD.hasList === zD.hasList && DD.openButtonCloses === zD.openButtonCloses && DD.steppingSlots === zD.steppingSlots && DD.hotbarPicking === zD.hotbarPicking && DD.quickMoveToHotbar === zD.quickMoveToHotbar && DD.dropStackHold === zD.dropStackHold
-          })(DD, this.state) || (this.state = DD, gD.l.KG(Nz.f, DD))
+        publishState(pp) {
+          ((pp, ip) => {
+            var cp, Op, op, Ip, Sp, xp;
+            return pp.showing === ip.showing && pp.kind === ip.kind && pp.holding === ip.holding && pp.slotHasItem === ip.slotHasItem && (null === (cp = pp.pressHints) || void 0 === cp ? void 0 : cp.primary) === (null === (Op = ip.pressHints) || void 0 === Op ? void 0 : Op.primary) && (null === (op = pp.pressHints) || void 0 === op ? void 0 : op.secondary) === (null === (Ip = ip.pressHints) || void 0 === Ip ? void 0 : Ip.secondary) && (null === (Sp = pp.pressHints) || void 0 === Sp ? void 0 : Sp.back) === (null === (xp = ip.pressHints) || void 0 === xp ? void 0 : xp.back) && pp.hasCategories === ip.hasCategories && pp.hasList === ip.hasList && pp.openButtonCloses === ip.openButtonCloses && pp.steppingSlots === ip.steppingSlots && pp.hotbarPicking === ip.hotbarPicking && pp.quickMoveToHotbar === ip.quickMoveToHotbar && pp.dropStackHold === ip.dropStackHold
+          })(pp, this.state) || (this.state = pp, Yp.m.GA(bi.g, pp))
         }
       },
-      Kw = ["pointermove", "pointerover", "pointerout", "mouseover", "mouseout"];
-    var rw = wD(8713),
-      Lw = wD(338),
-      gw = wD(1648),
-      Rw = wD(8201);
-    const Aw = "[data-pad-secondary]",
-      Uw = DD => DD instanceof HTMLElement && (0, HD.r)(DD) && !(0, HD.u)(DD),
-      fw = DD => {
-        const zD = DD.querySelector(Aw);
-        if (zD && Uw(zD)) return zD;
-        for (const sD of null !== (wD = null === (pD = DD.parentElement) || void 0 === pD ? void 0 : pD.children) && void 0 !== wD ? wD : []) {
-          var wD, pD;
-          if (sD !== DD && sD.matches(Aw) && Uw(sD)) return sD
+      Lc = ["pointermove", "pointerover", "pointerout", "mouseover", "mouseout"];
+    var Yc = cp(8835),
+      Dc = cp(322),
+      Ac = cp(1650),
+      Pc = cp(8318);
+    const Wc = "[data-pad-secondary]",
+      yc = pp => pp instanceof HTMLElement && (0, Vp.t)(pp) && !(0, Vp.z)(pp),
+      Uc = pp => {
+        const ip = pp.querySelector(Wc);
+        if (ip && yc(ip)) return ip;
+        for (const op of null !== (cp = null === (Op = pp.parentElement) || void 0 === Op ? void 0 : Op.children) && void 0 !== cp ? cp : []) {
+          var cp, Op;
+          if (op !== pp && op.matches(Wc) && yc(op)) return op
         }
         return null
       },
-      Iw = (DD, zD, wD, pD) => Math.max(0, Math.max(DD, wD) - Math.min(zD, pD)),
-      Bw = (DD, zD, wD, pD) => Math.max(0, Math.min(zD, pD) - Math.max(DD, wD)),
-      Gw = (DD, zD, wD) => {
-        const pD = (DD.left + DD.right) / 2,
-          sD = (DD.top + DD.bottom) / 2,
-          KD = (zD.left + zD.right) / 2,
-          rD = (zD.top + zD.bottom) / 2;
-        if ("Left" === wD || "Right" === wD) {
-          const LD = "Right" === wD ? 1 : -1;
+      wc = (pp, ip, cp, Op) => Math.max(0, Math.max(pp, cp) - Math.min(ip, Op)),
+      vc = (pp, ip, cp, Op) => Math.max(0, Math.min(ip, Op) - Math.max(pp, cp)),
+      tc = (pp, ip, cp) => {
+        const Op = (pp.left + pp.right) / 2,
+          op = (pp.top + pp.bottom) / 2,
+          Ip = (ip.left + ip.right) / 2,
+          Sp = (ip.top + ip.bottom) / 2;
+        if ("Left" === cp || "Right" === cp) {
+          const xp = "Right" === cp ? 1 : -1;
           return {
-            forwardGap: "Right" === wD ? zD.left - DD.right : DD.left - zD.right,
-            centreForward: (KD - pD) * LD,
-            sidewaysGap: Iw(DD.top, DD.bottom, zD.top, zD.bottom),
-            sidewaysOverlap: Bw(DD.top, DD.bottom, zD.top, zD.bottom),
-            centreSideways: Math.abs(rD - sD),
-            startSideways: Math.abs(zD.top - DD.top),
-            fromSidewaysSize: DD.bottom - DD.top,
-            toSidewaysSize: zD.bottom - zD.top,
-            toLength: zD.right - zD.left
+            forwardGap: "Right" === cp ? ip.left - pp.right : pp.left - ip.right,
+            centreForward: (Ip - Op) * xp,
+            sidewaysGap: wc(pp.top, pp.bottom, ip.top, ip.bottom),
+            sidewaysOverlap: vc(pp.top, pp.bottom, ip.top, ip.bottom),
+            centreSideways: Math.abs(Sp - op),
+            startSideways: Math.abs(ip.top - pp.top),
+            fromSidewaysSize: pp.bottom - pp.top,
+            toSidewaysSize: ip.bottom - ip.top,
+            toLength: ip.right - ip.left
           }
         }
-        const LD = "Down" === wD ? 1 : -1;
+        const xp = "Down" === cp ? 1 : -1;
         return {
-          forwardGap: "Down" === wD ? zD.top - DD.bottom : DD.top - zD.bottom,
-          centreForward: (rD - sD) * LD,
-          sidewaysGap: Iw(DD.left, DD.right, zD.left, zD.right),
-          sidewaysOverlap: Bw(DD.left, DD.right, zD.left, zD.right),
-          centreSideways: Math.abs(KD - pD),
-          startSideways: Math.abs(zD.left - DD.left),
-          fromSidewaysSize: DD.right - DD.left,
-          toSidewaysSize: zD.right - zD.left,
-          toLength: zD.bottom - zD.top
+          forwardGap: "Down" === cp ? ip.top - pp.bottom : pp.top - ip.bottom,
+          centreForward: (Sp - op) * xp,
+          sidewaysGap: wc(pp.left, pp.right, ip.left, ip.right),
+          sidewaysOverlap: vc(pp.left, pp.right, ip.left, ip.right),
+          centreSideways: Math.abs(Ip - Op),
+          startSideways: Math.abs(ip.left - pp.left),
+          fromSidewaysSize: pp.right - pp.left,
+          toSidewaysSize: ip.right - ip.left,
+          toLength: ip.bottom - ip.top
         }
       },
-      hw = DD => DD.centreForward > .5 && DD.forwardGap >= -DD.toLength / 2,
-      nw = DD => {
-        const zD = DD.sidewaysOverlap > 0 ? 0 : 2 * DD.fromSidewaysSize,
-          wD = DD.fromSidewaysSize > 1.5 * DD.toSidewaysSize ? DD.startSideways : DD.centreSideways;
-        return Math.max(0, DD.forwardGap) + 3 * DD.sidewaysGap + zD + .1 * wD
+      Hc = pp => pp.centreForward > .5 && pp.forwardGap >= -pp.toLength / 2,
+      dc = pp => {
+        const ip = pp.sidewaysOverlap > 0 ? 0 : 2 * pp.fromSidewaysSize,
+          cp = pp.fromSidewaysSize > 1.5 * pp.toSidewaysSize ? pp.startSideways : pp.centreSideways;
+        return Math.max(0, pp.forwardGap) + 3 * pp.sidewaysGap + ip + .1 * cp
       },
-      Mw = (DD, zD) => Bw(DD.top, DD.bottom, zD.top, zD.bottom) > 0 || zD.bottom - zD.top > zD.right - zD.left,
-      Ow = (DD, zD, wD, pD, sD, KD) => {
-        const rD = sD ? Ew(DD, zD, wD, sD) : new Set,
-          LD = Xw(DD, zD, wD, rD);
-        return LD < 0 && rD.size > 0 && KD ? Jw(DD, zD, wD, KD) : pD && LD >= 0 ? Qw(DD, zD, wD, pD, LD, rD) : LD
+      ec = (pp, ip) => vc(pp.top, pp.bottom, ip.top, ip.bottom) > 0 || ip.bottom - ip.top > ip.right - ip.left,
+      uc = (pp, ip, cp, Op, op, Ip) => {
+        const Sp = op ? kc(pp, ip, cp, op) : new Set,
+          xp = Rc(pp, ip, cp, Sp);
+        return xp < 0 && Sp.size > 0 && Ip ? jc(pp, ip, cp, Ip) : Op && xp >= 0 ? mc(pp, ip, cp, Op, xp, Sp) : xp
       },
-      Jw = (DD, zD, wD, pD) => {
-        const sD = new Set,
-          KD = Xw(DD, zD, "Up", sD) >= 0,
-          rD = Xw(DD, zD, "Down", sD) >= 0,
-          LD = new Set;
-        return zD.forEach(((zD, wD) => {
-          const sD = zD.top + zD.bottom < DD.top + DD.bottom;
-          pD[wD] && !(sD ? KD : rD) || LD.add(wD)
-        })), Xw(DD, zD, wD, LD)
+      jc = (pp, ip, cp, Op) => {
+        const op = new Set,
+          Ip = Rc(pp, ip, "Up", op) >= 0,
+          Sp = Rc(pp, ip, "Down", op) >= 0,
+          xp = new Set;
+        return ip.forEach(((ip, cp) => {
+          const op = ip.top + ip.bottom < pp.top + pp.bottom;
+          Op[cp] && !(op ? Ip : Sp) || xp.add(cp)
+        })), Rc(pp, ip, cp, xp)
       },
-      Ew = (DD, zD, wD, pD) => {
-        const sD = new Set;
-        return "Left" !== wD && "Right" !== wD || zD.forEach(((zD, wD) => {
-          pD[wD] && Bw(DD.top, DD.bottom, zD.top, zD.bottom) <= 0 && sD.add(wD)
-        })), sD
+      kc = (pp, ip, cp, Op) => {
+        const op = new Set;
+        return "Left" !== cp && "Right" !== cp || ip.forEach(((ip, cp) => {
+          Op[cp] && vc(pp.top, pp.bottom, ip.top, ip.bottom) <= 0 && op.add(cp)
+        })), op
       },
-      Qw = (DD, zD, wD, pD, sD, KD) => {
-        const rD = Gw(DD, zD[sD], wD).forwardGap;
-        let LD = sD,
-          cD = pD[sD],
-          gD = 1 / 0;
-        return zD.forEach(((zD, RD) => {
-          const AD = pD[RD];
-          if (KD.has(RD) || AD < cD || AD === cD && LD === sD) return;
-          const UD = Gw(DD, zD, wD);
-          if (!hw(UD) || UD.forwardGap < 0 || UD.forwardGap >= rD) return;
-          const fD = nw(UD);
-          (AD > cD || fD < gD) && (LD = RD, cD = AD, gD = fD)
-        })), LD
+      mc = (pp, ip, cp, Op, op, Ip) => {
+        const Sp = tc(pp, ip[op], cp).forwardGap;
+        let xp = op,
+          Lp = Op[op],
+          Yp = 1 / 0;
+        return ip.forEach(((ip, Dp) => {
+          const Ap = Op[Dp];
+          if (Ip.has(Dp) || Ap < Lp || Ap === Lp && xp === op) return;
+          const Pp = tc(pp, ip, cp);
+          if (!Hc(Pp) || Pp.forwardGap < 0 || Pp.forwardGap >= Sp) return;
+          const Wp = dc(Pp);
+          (Ap > Lp || Wp < Yp) && (xp = Dp, Lp = Ap, Yp = Wp)
+        })), xp
       },
-      Xw = (DD, zD, wD, pD) => {
-        let sD = -1,
-          KD = 1 / 0;
-        if (zD.forEach(((zD, rD) => {
-            const LD = ((DD, zD, wD) => {
-              const pD = Gw(DD, zD, wD);
-              if (!hw(pD)) return null;
-              const sD = Math.max(0, pD.forwardGap);
-              return pD.sidewaysOverlap <= 0 && pD.sidewaysGap > 2 * (sD + 1) ? null : nw(pD)
-            })(DD, zD, wD);
-            null !== LD && LD < KD && !pD.has(rD) && (KD = LD, sD = rD)
-          })), sD < 0) return -1;
-        const rD = zD[sD],
-          LD = Gw(DD, rD, wD).forwardGap;
-        let cD = LD,
-          gD = sD;
-        return zD.forEach(((zD, KD) => {
-          if (KD === sD || pD.has(KD) || !((DD, zD, wD) => {
-              const pD = "Left" === wD || "Right" === wD,
-                sD = pD ? Bw(DD.top, DD.bottom, zD.top, zD.bottom) : Bw(DD.left, DD.right, zD.left, zD.right),
-                KD = pD ? Math.min(DD.bottom - DD.top, zD.bottom - zD.top) : Math.min(DD.right - DD.left, zD.right - zD.left);
-              return sD > 0 && sD >= KD / 2
-            })(zD, rD, wD)) return;
-          const RD = Gw(DD, zD, wD);
-          hw(RD) && RD.forwardGap + RD.toLength <= LD + 1 && RD.forwardGap < cD && (cD = RD.forwardGap, gD = KD)
-        })), gD
+      Rc = (pp, ip, cp, Op) => {
+        let op = -1,
+          Ip = 1 / 0;
+        if (ip.forEach(((ip, Sp) => {
+            const xp = ((pp, ip, cp) => {
+              const Op = tc(pp, ip, cp);
+              if (!Hc(Op)) return null;
+              const op = Math.max(0, Op.forwardGap);
+              return Op.sidewaysOverlap <= 0 && Op.sidewaysGap > 2 * (op + 1) ? null : dc(Op)
+            })(pp, ip, cp);
+            null !== xp && xp < Ip && !Op.has(Sp) && (Ip = xp, op = Sp)
+          })), op < 0) return -1;
+        const Sp = ip[op],
+          xp = tc(pp, Sp, cp).forwardGap;
+        let Lp = xp,
+          Yp = op;
+        return ip.forEach(((ip, Ip) => {
+          if (Ip === op || Op.has(Ip) || !((pp, ip, cp) => {
+              const Op = "Left" === cp || "Right" === cp,
+                op = Op ? vc(pp.top, pp.bottom, ip.top, ip.bottom) : vc(pp.left, pp.right, ip.left, ip.right),
+                Ip = Op ? Math.min(pp.bottom - pp.top, ip.bottom - ip.top) : Math.min(pp.right - pp.left, ip.right - ip.left);
+              return op > 0 && op >= Ip / 2
+            })(ip, Sp, cp)) return;
+          const Dp = tc(pp, ip, cp);
+          Hc(Dp) && Dp.forwardGap + Dp.toLength <= xp + 1 && Dp.forwardGap < Lp && (Lp = Dp.forwardGap, Yp = Ip)
+        })), Yp
       },
-      Vw = (DD, zD) => {
-        let wD = -1,
-          pD = 1 / 0;
-        return zD.forEach(((zD, sD) => {
-          const KD = Math.max(zD.left - DD.x, 0, DD.x - zD.right),
-            rD = Math.max(zD.top - DD.y, 0, DD.y - zD.bottom),
-            LD = Math.hypot(KD, rD);
-          LD < pD && (pD = LD, wD = sD)
-        })), wD
+      qc = (pp, ip) => {
+        let cp = -1,
+          Op = 1 / 0;
+        return ip.forEach(((ip, op) => {
+          const Ip = Math.max(ip.left - pp.x, 0, pp.x - ip.right),
+            Sp = Math.max(ip.top - pp.y, 0, pp.y - ip.bottom),
+            xp = Math.hypot(Ip, Sp);
+          xp < Op && (Op = xp, cp = op)
+        })), cp
       },
-      Pw = (DD, zD) => {
-        const wD = Math.min(DD.bottom - DD.top, zD.bottom - zD.top) / 2;
-        return Math.abs(DD.top - zD.top) > wD ? DD.top - zD.top : DD.left - zD.left
+      Mc = (pp, ip) => {
+        const cp = Math.min(pp.bottom - pp.top, ip.bottom - ip.top) / 2;
+        return Math.abs(pp.top - ip.top) > cp ? pp.top - ip.top : pp.left - ip.left
       },
-      Cw = DD => {
-        let zD = -1;
-        for (let wD = 0; wD < DD.length; wD++)(zD < 0 || Pw(DD[wD], DD[zD]) < 0) && (zD = wD);
-        return zD
+      Cc = pp => {
+        let ip = -1;
+        for (let cp = 0; cp < pp.length; cp++)(ip < 0 || Mc(pp[cp], pp[ip]) < 0) && (ip = cp);
+        return ip
       };
-    var xw = wD(1694),
-      Tw = wD(8717),
-      bw = wD(8723);
-    const jw = DD => {
-        if ("death" !== DD || "inGame" !== cD.e.get("gameState") || "off" === (0, UD.g)().quickChat || null === (0, xw.d)()) return !1;
-        const zD = (0, RD.g)("chat");
-        return zD !== (0, RD.g)("menuConfirm") && zD !== (0, RD.g)("menuBack")
+    var Ec = cp(1698),
+      Xc = cp(8839),
+      lc = cp(8843);
+    const Qc = pp => {
+        if ("death" !== pp || "inGame" !== Lp.c.get("gameState") || "off" === (0, Pp.h)().quickChat || null === (0, Ec.b)()) return !1;
+        const ip = (0, Dp.g)("chat");
+        return ip !== (0, Dp.g)("menuConfirm") && ip !== (0, Dp.g)("menuBack")
       },
-      dw = new Tw.d;
-    var Sw = wD(4305),
-      iw = wD(8726),
-      lw = wD(8732);
-    const Ww = DD => {
-        let zD = null;
-        for (const wD of DD.querySelectorAll("[data-pad-tabs]"))(0, HD.r)(wD) && (!zD || Number(wD.dataset.padTabs) < Number(zD.dataset.padTabs)) && (zD = wD);
-        return zD
+      Jc = new Xc.e;
+    var Bc = cp(4379),
+      Nc = cp(8852),
+      Tc = cp(8858);
+    const fc = pp => {
+        let ip = null;
+        for (const cp of pp.querySelectorAll("[data-pad-tabs]"))(0, Vp.t)(cp) && (!ip || Number(cp.dataset.padTabs) < Number(ip.dataset.padTabs)) && (ip = cp);
+        return ip
       },
-      Nw = (DD, zD, wD, pD) => {
-        DD.focusWhenFound((() => {
-          const sD = DD.pickInitial(zD);
-          if (sD && !wD.has(sD) && (null === pD || void 0 === pD || !pD.contains(sD))) return sD;
-          const KD = ((DD, zD) => {
-              const wD = zD => DD.getEnabledCandidates(zD).filter((DD => !DD.closest("[data-pad-tabs]")));
-              for (const pD of (0, HD.g)(zD)) {
-                const DD = wD(pD);
-                if (DD.length > 0) return DD
+      bc = (pp, ip, cp, Op) => {
+        pp.focusWhenFound((() => {
+          const op = pp.pickInitial(ip);
+          if (op && !cp.has(op) && (null === Op || void 0 === Op || !Op.contains(op))) return op;
+          const Ip = ((pp, ip) => {
+              const cp = ip => pp.getEnabledCandidates(ip).filter((pp => !pp.closest("[data-pad-tabs]")));
+              for (const Op of (0, Vp.i)(ip)) {
+                const pp = cp(Op);
+                if (pp.length > 0) return pp
               }
-              return wD(zD)
-            })(DD, zD).filter((DD => !wD.has(DD))),
-            rD = Cw(KD.map((DD => DD.getBoundingClientRect())));
-          return rD >= 0 ? KD[rD] : null
+              return cp(ip)
+            })(pp, ip).filter((pp => !cp.has(pp))),
+            Sp = Cc(Ip.map((pp => pp.getBoundingClientRect())));
+          return Sp >= 0 ? Ip[Sp] : null
         }), 3e3)
       },
-      Zw = (DD, zD, wD, pD) => {
-        var sD;
-        const KD = ((DD, zD) => {
-          if (0 === DD.length) return null;
-          const wD = DD.findIndex((DD => "true" === DD.dataset.padSelected));
-          return wD < 0 ? zD > 0 ? DD[0] : DD[DD.length - 1] : DD[(wD + zD + DD.length) % DD.length]
-        })([...wD.querySelectorAll("[data-pad-tab]")].filter((DD => (0, HD.r)(DD) && !(0, HD.u)(DD))), pD);
-        if (!KD) return;
-        const rD = null !== (sD = null === DD || void 0 === DD ? void 0 : DD.getFocused()) && void 0 !== sD ? sD : null,
-          LD = !(null === rD || void 0 === rD || !rD.isConnected) && wD.contains(rD),
-          cD = DD && !LD ? new Set(DD.getEnabledCandidates(zD)) : null;
-        (0, oD.c)(KD), DD && (cD ? Nw(DD, zD, cD, wD) : DD.setFocus(KD, {
+      hc = (pp, ip, cp, Op) => {
+        var op;
+        const Ip = ((pp, ip) => {
+          if (0 === pp.length) return null;
+          const cp = pp.findIndex((pp => "true" === pp.dataset.padSelected));
+          return cp < 0 ? ip > 0 ? pp[0] : pp[pp.length - 1] : pp[(cp + ip + pp.length) % pp.length]
+        })([...cp.querySelectorAll("[data-pad-tab]")].filter((pp => (0, Vp.t)(pp) && !(0, Vp.z)(pp))), Op);
+        if (!Ip) return;
+        const Sp = null !== (op = null === pp || void 0 === pp ? void 0 : pp.getFocused()) && void 0 !== op ? op : null,
+          xp = !(null === Sp || void 0 === Sp || !Sp.isConnected) && cp.contains(Sp),
+          Lp = pp && !xp ? new Set(pp.getEnabledCandidates(ip)) : null;
+        (0, gp.b)(Ip), pp && (Lp ? bc(pp, ip, Lp, cp) : pp.setFocus(Ip, {
           byUser: !0
         }))
       },
-      yw = DD => {
-        var zD;
-        const wD = SD(null !== (zD = CD(DD, "x")) && void 0 !== zD ? zD : DD),
-          pD = (0, HD.e)(DD).filter((DD => !(0, HD.u)(DD))),
-          sD = pD.filter((DD => iD(DD.getBoundingClientRect(), wD)));
-        return (sD.length > 0 ? sD : pD).sort(((DD, zD) => Pw(DD.getBoundingClientRect(), zD.getBoundingClientRect())))
+      ac = pp => {
+        var ip;
+        const cp = Jp(null !== (ip = Mp(pp, "x")) && void 0 !== ip ? ip : pp),
+          Op = (0, Vp.e)(pp).filter((pp => !(0, Vp.z)(pp))),
+          op = Op.filter((pp => Bp(pp.getBoundingClientRect(), cp)));
+        return (op.length > 0 ? op : Op).sort(((pp, ip) => Mc(pp.getBoundingClientRect(), ip.getBoundingClientRect())))
       },
-      kw = (DD, zD, wD) => {
-        const pD = [...zD.querySelectorAll("[data-pad-row]")].filter(HD.r),
-          sD = DD.getFocused(),
-          KD = sD ? pD.findIndex((DD => DD.contains(sD))) : -1;
-        let rD = 0,
-          LD = wD > 0 ? 0 : pD.length - 1;
-        if (KD >= 0 && sD) rD = Math.max(0, yw(pD[KD]).indexOf(sD)), LD = KD + wD;
-        else if (sD) {
-          const DD = sD.getBoundingClientRect(),
-            zD = pD.map((zD => {
-              const pD = zD.getBoundingClientRect();
-              return wD > 0 ? pD.top >= DD.top : pD.bottom <= DD.bottom
+      nc = (pp, ip, cp) => {
+        const Op = [...ip.querySelectorAll("[data-pad-row]")].filter(Vp.t),
+          op = pp.getFocused(),
+          Ip = op ? Op.findIndex((pp => pp.contains(op))) : -1;
+        let Sp = 0,
+          xp = cp > 0 ? 0 : Op.length - 1;
+        if (Ip >= 0 && op) Sp = Math.max(0, ac(Op[Ip]).indexOf(op)), xp = Ip + cp;
+        else if (op) {
+          const pp = op.getBoundingClientRect(),
+            ip = Op.map((ip => {
+              const Op = ip.getBoundingClientRect();
+              return cp > 0 ? Op.top >= pp.top : Op.bottom <= pp.bottom
             }));
-          LD = wD > 0 ? zD.indexOf(!0) : zD.lastIndexOf(!0)
+          xp = cp > 0 ? ip.indexOf(!0) : ip.lastIndexOf(!0)
         }
-        for (let cD = LD; cD >= 0 && cD < pD.length; cD += wD) {
-          const zD = yw(pD[cD]);
-          if (zD.length > 0) return void DD.setFocus(zD[Math.min(rD, zD.length - 1)], {
+        for (let Lp = xp; Lp >= 0 && Lp < Op.length; Lp += cp) {
+          const ip = ac(Op[Lp]);
+          if (ip.length > 0) return void pp.setFocus(ip[Math.min(Sp, ip.length - 1)], {
             byUser: !0
           })
         }
       },
-      mw = (DD, zD, wD) => {
-        var pD, sD;
-        const KD = null !== (pD = null === DD || void 0 === DD ? void 0 : DD.getFocused()) && void 0 !== pD ? pD : null,
-          rD = null !== KD && void 0 !== KD && KD.closest("[data-pad-row]") ? "x" : "y",
-          LD = null !== (sD = KD ? CD(KD, rD, zD) : null) && void 0 !== sD ? sD : TD(zD, rD);
-        if (!LD) return;
-        const cD = KD ? (0, oD.w)(KD) : null;
-        if (dD(LD, rD, wD * ("y" === rD ? LD.clientHeight : LD.clientWidth) * .85), !DD || !cD) return;
-        const gD = SD(LD),
-          RD = DD.getEnabledCandidates(zD).filter((DD => LD.contains(DD) && iD(DD.getBoundingClientRect(), gD))),
-          AD = Vw(cD, RD.map((DD => DD.getBoundingClientRect())));
-        AD >= 0 && DD.setFocus(RD[AD], {
+      Fc = (pp, ip, cp) => {
+        var Op, op;
+        const Ip = null !== (Op = null === pp || void 0 === pp ? void 0 : pp.getFocused()) && void 0 !== Op ? Op : null,
+          Sp = null !== Ip && void 0 !== Ip && Ip.closest("[data-pad-row]") ? "x" : "y",
+          xp = null !== (op = Ip ? Mp(Ip, Sp, ip) : null) && void 0 !== op ? op : Ep(ip, Sp);
+        if (!xp) return;
+        const Lp = Ip ? (0, gp.q)(Ip) : null;
+        if (Qp(xp, Sp, cp * ("y" === Sp ? xp.clientHeight : xp.clientWidth) * .85), !pp || !Lp) return;
+        const Yp = Jp(xp),
+          Dp = pp.getEnabledCandidates(ip).filter((pp => xp.contains(pp) && Bp(pp.getBoundingClientRect(), Yp))),
+          Ap = qc(Lp, Dp.map((pp => pp.getBoundingClientRect())));
+        Ap >= 0 && pp.setFocus(Dp[Ap], {
           scroll: !1,
           byUser: !0
         })
       };
-    let ew = null;
-    const ow = (DD, zD) => {
-        var wD, pD;
-        const sD = zD.querySelector("[data-pad-friends-column]"),
-          KD = DD.getFocused();
-        if (!sD || !KD || !sD.contains(KD)) return !1;
-        const rD = DD.getEnabledCandidates(zD).filter((DD => !sD.contains(DD))),
-          LD = Vw((0, oD.w)(KD), rD.map((DD => DD.getBoundingClientRect()))),
-          cD = null === (wD = ew) || void 0 === wD ? void 0 : wD.deref();
-        return DD.setFocus(null !== cD && void 0 !== cD && cD.isConnected ? cD : null !== (pD = rD[LD]) && void 0 !== pD ? pD : null, {
+    let gc = null;
+    const Gc = (pp, ip) => {
+        var cp, Op;
+        const op = ip.querySelector("[data-pad-friends-column]"),
+          Ip = pp.getFocused();
+        if (!op || !Ip || !op.contains(Ip)) return !1;
+        const Sp = pp.getEnabledCandidates(ip).filter((pp => !op.contains(pp))),
+          xp = qc((0, gp.q)(Ip), Sp.map((pp => pp.getBoundingClientRect()))),
+          Lp = null === (cp = gc) || void 0 === cp ? void 0 : cp.deref();
+        return pp.setFocus(null !== Lp && void 0 !== Lp && Lp.isConnected ? Lp : null !== (Op = Sp[xp]) && void 0 !== Op ? Op : null, {
           byUser: !0
         }), !0
       },
-      aw = DD => {
-        const zD = (0, RD.g)(DD);
-        return (0, ID.B)(zD) || Rw.r.some((DD => (0, RD.g)(DD) === zD)) ? null : zD
+      rc = pp => {
+        const ip = (0, Dp.g)(pp);
+        return (0, yp.C)(ip) || Pc.s.some((pp => (0, Dp.g)(pp) === ip)) ? null : ip
       },
-      uw = (DD, zD) => {
-        const wD = aw(zD);
-        return null !== wD && DD.wasPressed(wD)
+      Zc = (pp, ip) => {
+        const cp = rc(ip);
+        return null !== cp && pp.wasPressed(cp)
       },
-      vw = function(DD, zD, wD) {
-        let pD = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
-        const sD = (DD => {
-            var zD, wD;
-            return null !== (zD = null === (wD = Ww(DD)) || void 0 === wD ? void 0 : wD.querySelector("[data-pad-tab][data-pad-selected='true']")) && void 0 !== zD ? zD : null
-          })(zD),
-          KD = DD && sD ? new Set(DD.getEnabledCandidates(zD)) : null;
-        (0, rw.d)(), wD === Lw.l.SETTINGS && (0, gw.o)(cD.e.get("openEverythingMenuName")) ? cD.e.set({
-          openEverythingMenuName: wD
-        }) : (0, gw.w)((0, lw.e)("padMenuShortcut"), wD, pD), DD && KD && sD && Nw(DD, zD, KD, sD.closest("[data-pad-tabs]"))
+      zc = function(pp, ip, cp) {
+        let Op = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3];
+        const op = (pp => {
+            var ip, cp;
+            return null !== (ip = null === (cp = fc(pp)) || void 0 === cp ? void 0 : cp.querySelector("[data-pad-tab][data-pad-selected='true']")) && void 0 !== ip ? ip : null
+          })(ip),
+          Ip = pp && op ? new Set(pp.getEnabledCandidates(ip)) : null;
+        (0, Yc.b)(), cp === Dc.n.SETTINGS && (0, Ac.j)(Lp.c.get("openEverythingMenuName")) ? Lp.c.set({
+          openEverythingMenuName: cp
+        }) : (0, Ac.q)((0, Tc.b)("padMenuShortcut"), cp, Op), pp && Ip && op && bc(pp, ip, Ip, op.closest("[data-pad-tabs]"))
       },
-      tw = DD => null !== DD.closest(".Dropdown-root") || null !== DD.querySelector(".Dropdown-root.is-open"),
-      Fw = DD => null !== (0, iw.c)() && "popup" !== DD.layer.kind && !Ww(DD.root) && !tw(DD.root),
-      Yw = (0, BD.b)(ID.W),
-      Hw = (0, BD.b)(ID.W),
-      qw = (DD, zD, wD) => {
-        if (((DD, zD) => {
-            const wD = (0, RD.g)("chat");
-            return jw(zD) && DD.isHeld(wD) ? "hold" === dw.update(DD.wasPressed(wD), DD.isHeld(wD), performance.now(), GD.d[(0, UD.g)().tapHoldTime].wheelMs) && (AD.e.consumeButton(wD), gD.l.KG(bw.k), !0) : (dw.release(), !1)
-          })(zD, wD.layer.kind)) return !0;
-        const pD = wD.root;
-        for (const [rD, LD] of [
+      sc = pp => null !== pp.closest(".Dropdown-root") || null !== pp.querySelector(".Dropdown-root.is-open"),
+      Kc = pp => null !== (0, Nc.b)() && "popup" !== pp.layer.kind && !fc(pp.root) && !sc(pp.root),
+      Vc = (0, Up.e)(yp.R),
+      pO = (0, Up.e)(yp.R),
+      iO = (pp, ip, cp) => {
+        if (((pp, ip) => {
+            const cp = (0, Dp.g)("chat");
+            return Qc(ip) && pp.isHeld(cp) ? "hold" === Jc.update(pp.wasPressed(cp), pp.isHeld(cp), performance.now(), wp.e[(0, Pp.h)().tapHoldTime].wheelMs) && (Ap.d.consumeButton(cp), Yp.m.GA(lc.n), !0) : (Jc.release(), !1)
+          })(ip, cp.layer.kind)) return !0;
+        const Op = cp.root;
+        for (const [Sp, xp] of [
             ["menuTabPrevious", -1],
             ["menuTabNext", 1]
           ])
-          if (zD.wasPressed((0, RD.g)(rD))) {
-            const zD = tw(pD) ? null : Ww(pD);
-            if (zD) Zw(DD, pD, zD, LD);
-            else if (Fw(wD)) {
-              var sD;
-              const zD = DD ? new Set(DD.getEnabledCandidates(pD)) : null;
-              null !== (sD = (0, iw.c)()) && void 0 !== sD && sD(LD) && DD && zD && Nw(DD, pD, zD, null)
-            } else DD && kw(DD, pD, LD);
+          if (ip.wasPressed((0, Dp.g)(Sp))) {
+            const ip = sc(Op) ? null : fc(Op);
+            if (ip) hc(pp, Op, ip, xp);
+            else if (Kc(cp)) {
+              var op;
+              const ip = pp ? new Set(pp.getEnabledCandidates(Op)) : null;
+              null !== (op = (0, Nc.b)()) && void 0 !== op && op(xp) && pp && ip && bc(pp, Op, ip, null)
+            } else pp && nc(pp, Op, xp);
             return !0
-          } for (const [rD, LD, cD] of [
-            ["menuPageUp", -1, Yw],
-            ["menuPageDown", 1, Hw]
+          } for (const [Sp, xp, Lp] of [
+            ["menuPageUp", -1, Vc],
+            ["menuPageDown", 1, pO]
           ]) {
-          const wD = (0, RD.g)(rD);
-          if (zD.wasPressed(wD) && cD.reset(), cD.update(zD.isHeld(wD), performance.now())) return mw(DD, pD, LD), !0
+          const cp = (0, Dp.g)(Sp);
+          if (ip.wasPressed(cp) && Lp.reset(), Lp.update(ip.isHeld(cp), performance.now())) return Fc(pp, Op, xp), !0
         }
-        const KD = "popup" === wD.layer.kind;
-        return uw(zD, "pause") ? (KD || (0, gw.r)() && "menu" !== wD.layer.kind || vw(DD, pD, (0, gw.r)() ? Lw.l.SETTINGS : (0, Sw.d)()), !0) : !!uw(zD, "leaderboard") && ("home" === wD.layer.kind ? (DD => {
-          const zD = [...DD.querySelectorAll("[data-pad-notifications]")].find(HD.r);
-          zD && (0, oD.c)(zD)
-        })(pD) : KD || vw(DD, pD, Lw.l.LOBBY_LEADERBOARD, "inGame" === cD.e.get("gameState")), !0)
+        const Ip = "popup" === cp.layer.kind;
+        return Zc(ip, "pause") ? (Ip || (0, Ac.n)() && "menu" !== cp.layer.kind || zc(pp, Op, (0, Ac.n)() ? Dc.n.SETTINGS : (0, Bc.d)()), !0) : !!Zc(ip, "leaderboard") && ("home" === cp.layer.kind ? (pp => {
+          const ip = [...pp.querySelectorAll("[data-pad-notifications]")].find(Vp.t);
+          ip && (0, gp.b)(ip)
+        })(Op) : Ip || zc(pp, Op, Dc.n.LOBBY_LEADERBOARD, "inGame" === Lp.c.get("gameState")), !0)
       },
-      Dp = (DD, zD, wD) => {
-        if (qw(DD, zD, wD)) return !0;
-        const pD = "home" === wD.layer.kind;
-        if (zD.wasPressed((0, RD.g)("menuSecondary"))) {
-          const zD = DD.getFocused(),
-            sD = zD ? fw(zD) : null;
-          if (sD) return (0, oD.c)(sD), !0;
-          if (pD) {
-            const zD = wD.root.querySelector("[data-pad-search] input");
-            return zD && (0, HD.t)(zD, wD.root) ? (DD.setFocus(zD, {
+      cO = (pp, ip, cp) => {
+        if (iO(pp, ip, cp)) return !0;
+        const Op = "home" === cp.layer.kind;
+        if (ip.wasPressed((0, Dp.g)("menuSecondary"))) {
+          const ip = pp.getFocused(),
+            op = ip ? Uc(ip) : null;
+          if (op) return (0, gp.b)(op), !0;
+          if (Op) {
+            const ip = cp.root.querySelector("[data-pad-search] input");
+            return ip && (0, Vp.v)(ip, cp.root) ? (pp.setFocus(ip, {
               byUser: !0
-            }), (0, oD.c)(zD)) : cD.e.set({
+            }), (0, gp.b)(ip)) : Lp.c.set({
               searchOpen: !0
             }), !0
           }
         }
-        return !(!pD || !uw(zD, "inventory")) && (((DD, zD) => {
-          var wD, pD;
-          const sD = zD.querySelector("[data-pad-friends-column]");
-          if (!sD || !(0, HD.r)(sD)) return void(0, gw.w)((0, lw.e)("padMenuShortcut"), Lw.l.SOCIAL);
-          if (ow(DD, zD)) return;
-          const KD = null !== (wD = null === (pD = sD.querySelector("[data-pad-friends-start]")) || void 0 === pD ? void 0 : pD.getBoundingClientRect().top) && void 0 !== wD ? wD : -1 / 0,
-            rD = DD.getEnabledCandidates(sD),
-            LD = rD.filter((DD => DD.getBoundingClientRect().top >= KD)),
-            cD = LD.length > 0 ? LD : rD,
-            gD = Cw(cD.map((DD => DD.getBoundingClientRect())));
-          DD.setFocus(gD >= 0 ? cD[gD] : null, {
+        return !(!Op || !Zc(ip, "inventory")) && (((pp, ip) => {
+          var cp, Op;
+          const op = ip.querySelector("[data-pad-friends-column]");
+          if (!op || !(0, Vp.t)(op)) return void(0, Ac.q)((0, Tc.b)("padMenuShortcut"), Dc.n.SOCIAL);
+          if (Gc(pp, ip)) return;
+          const Ip = null !== (cp = null === (Op = op.querySelector("[data-pad-friends-start]")) || void 0 === Op ? void 0 : Op.getBoundingClientRect().top) && void 0 !== cp ? cp : -1 / 0,
+            Sp = pp.getEnabledCandidates(op),
+            xp = Sp.filter((pp => pp.getBoundingClientRect().top >= Ip)),
+            Lp = xp.length > 0 ? xp : Sp,
+            Yp = Cc(Lp.map((pp => pp.getBoundingClientRect())));
+          pp.setFocus(Yp >= 0 ? Lp[Yp] : null, {
             byUser: !0
           })
-        })(DD, wD.root), !0)
+        })(pp, cp.root), !0)
       },
-      zp = DD => {
-        var zD, wD, pD;
-        const sD = (0, oD.A)(DD);
-        if (null !== sD) return sD;
-        const KD = (null !== (zD = null !== (wD = null !== (pD = DD.getAttribute("aria-label")) && void 0 !== pD ? pD : DD.getAttribute("title")) && void 0 !== wD ? wD : DD.textContent) && void 0 !== zD ? zD : "").replace(/\s+/g, " ").trim();
-        return KD ? `${DD.tagName}:${KD.slice(0,100)}` : null
+      OO = pp => {
+        var ip, cp, Op;
+        const op = (0, gp.r)(pp);
+        if (null !== op) return op;
+        const Ip = (null !== (ip = null !== (cp = null !== (Op = pp.getAttribute("aria-label")) && void 0 !== Op ? Op : pp.getAttribute("title")) && void 0 !== cp ? cp : pp.textContent) && void 0 !== ip ? ip : "").replace(/\s+/g, " ").trim();
+        return Ip ? `${pp.tagName}:${Ip.slice(0,100)}` : null
       };
-    class wp {
+    class oO {
       constructor() {
         this.remembered = new Map, this.history = []
       }
-      enter(DD) {
-        const zD = this.history.indexOf(DD);
-        if (zD >= 0) {
-          for (const DD of this.history.splice(zD + 1)) this.remembered.delete(DD);
+      enter(pp) {
+        const ip = this.history.indexOf(pp);
+        if (ip >= 0) {
+          for (const pp of this.history.splice(ip + 1)) this.remembered.delete(pp);
           return !0
         }
-        return this.remembered.delete(DD), this.history.push(DD), this.history.length > 32 && this.forget(this.history[0]), !1
+        return this.remembered.delete(pp), this.history.push(pp), this.history.length > 32 && this.forget(this.history[0]), !1
       }
-      forget(DD) {
-        this.remembered.delete(DD);
-        const zD = this.history.indexOf(DD);
-        zD >= 0 && this.history.splice(zD, 1)
+      forget(pp) {
+        this.remembered.delete(pp);
+        const ip = this.history.indexOf(pp);
+        ip >= 0 && this.history.splice(ip, 1)
       }
-      remember(DD, zD, wD, pD) {
-        const sD = zp(zD),
-          KD = (0, oD.A)(zD),
-          rD = null !== KD && ((DD, zD) => {
-            let wD = 0;
-            for (const pD of DD.querySelectorAll("[data-pad-key], [href]"))
-              if ((pD.getAttribute("data-pad-key") === zD || pD.getAttribute("href") === zD) && (wD++, wD > 1)) return !0;
+      remember(pp, ip, cp, Op) {
+        const op = OO(ip),
+          Ip = (0, gp.r)(ip),
+          Sp = null !== Ip && ((pp, ip) => {
+            let cp = 0;
+            for (const Op of pp.querySelectorAll("[data-pad-key], [href]"))
+              if ((Op.getAttribute("data-pad-key") === ip || Op.getAttribute("href") === ip) && (cp++, cp > 1)) return !0;
             return !1
-          })(wD, KD) ? Math.max(0, this.twins(pD(), KD).indexOf(zD)) : 0;
-        this.remembered.set(DD, {
-          element: new WeakRef(zD),
-          identity: sD,
-          ordinal: rD
+          })(cp, Ip) ? Math.max(0, this.twins(Op(), Ip).indexOf(ip)) : 0;
+        this.remembered.set(pp, {
+          element: new WeakRef(ip),
+          identity: op,
+          ordinal: Sp
         })
       }
-      has(DD) {
-        return this.remembered.has(DD)
+      has(pp) {
+        return this.remembered.has(pp)
       }
-      recall(DD, zD) {
-        var wD, pD;
-        const sD = this.remembered.get(DD);
-        if (!sD) return null;
-        const KD = sD.element.deref();
-        if (KD && zD.includes(KD)) return KD;
-        if (null === sD.identity) return null;
-        const rD = this.twins(zD, sD.identity);
-        return null !== (wD = null !== (pD = rD[sD.ordinal]) && void 0 !== pD ? pD : rD[0]) && void 0 !== wD ? wD : null
+      recall(pp, ip) {
+        var cp, Op;
+        const op = this.remembered.get(pp);
+        if (!op) return null;
+        const Ip = op.element.deref();
+        if (Ip && ip.includes(Ip)) return Ip;
+        if (null === op.identity) return null;
+        const Sp = this.twins(ip, op.identity);
+        return null !== (cp = null !== (Op = Sp[op.ordinal]) && void 0 !== Op ? Op : Sp[0]) && void 0 !== cp ? cp : null
       }
-      twins(DD, zD) {
-        return DD.filter((DD => zp(DD) === zD))
+      twins(pp, ip) {
+        return pp.filter((pp => OO(pp) === ip))
       }
     }
-    var pp = wD(1282);
-    const sp = DD => {
-        const zD = [];
-        let wD = DD;
-        for (; wD && wD !== document.body;) {
-          const DD = getComputedStyle(wD).zIndex;
-          "auto" !== DD && zD.push(Number(DD) || 0), wD = wD.parentElement
+    var IO = cp(1295);
+    const SO = pp => {
+        const ip = [];
+        let cp = pp;
+        for (; cp && cp !== document.body;) {
+          const pp = getComputedStyle(cp).zIndex;
+          "auto" !== pp && ip.push(Number(pp) || 0), cp = cp.parentElement
         }
-        return zD.reverse()
+        return ip.reverse()
       },
-      Kp = (DD, zD) => {
-        const wD = ((DD, zD) => {
-          const wD = Math.max(DD.length, zD.length);
-          for (let KD = 0; KD < wD; KD++) {
-            var pD, sD;
-            const wD = (null !== (pD = DD[KD]) && void 0 !== pD ? pD : 0) - (null !== (sD = zD[KD]) && void 0 !== sD ? sD : 0);
-            if (0 !== wD) return wD
+      xO = (pp, ip) => {
+        const cp = ((pp, ip) => {
+          const cp = Math.max(pp.length, ip.length);
+          for (let Ip = 0; Ip < cp; Ip++) {
+            var Op, op;
+            const cp = (null !== (Op = pp[Ip]) && void 0 !== Op ? Op : 0) - (null !== (op = ip[Ip]) && void 0 !== op ? op : 0);
+            if (0 !== cp) return cp
           }
           return 0
-        })(sp(DD), sp(zD));
-        if (0 !== wD) return wD > 0;
-        if (DD.contains(zD)) return !1;
-        if (zD.contains(DD)) return !0;
-        const pD = DD.compareDocumentPosition(zD);
-        return !!(pD & Node.DOCUMENT_POSITION_PRECEDING) || !(pD & Node.DOCUMENT_POSITION_FOLLOWING) && null
+        })(SO(pp), SO(ip));
+        if (0 !== cp) return cp > 0;
+        if (pp.contains(ip)) return !1;
+        if (ip.contains(pp)) return !0;
+        const Op = pp.compareDocumentPosition(ip);
+        return !!(Op & Node.DOCUMENT_POSITION_PRECEDING) || !(Op & Node.DOCUMENT_POSITION_FOLLOWING) && null
       },
-      rp = (DD, zD) => {
-        var wD;
-        return null !== (wD = Kp(DD.root, zD.root)) && void 0 !== wD ? wD : DD.order > zD.order
+      LO = (pp, ip) => {
+        var cp;
+        return null !== (cp = xO(pp.root, ip.root)) && void 0 !== cp ? cp : pp.order > ip.order
       },
-      Lp = (DD, zD) => zD.some((zD => !zD.contains(DD) && !DD.contains(zD) && !0 === Kp(zD, DD)));
-    let cp = null,
-      gp = null,
-      Rp = -1;
-    const Ap = () => {
-        var DD;
-        const zD = null === (DD = document.timeline) || void 0 === DD ? void 0 : DD.currentTime,
-          wD = "number" === typeof zD ? zD : null;
-        if (null !== wD && wD === gp && Rp === (0, pp.c)()) return cp;
-        let pD = null;
-        const sD = [],
-          KD = [...document.querySelectorAll("[data-pad-covers]")].filter(HD.r);
-        for (const rD of (0, pp.g)()) {
-          const DD = rD.getRoot(),
-            zD = !!DD && (0, HD.r)(DD) && !Lp(DD, KD);
-          if (rD.shown && !zD && sD.push(rD), rD.shown = zD, !DD || !zD) continue;
-          const wD = {
-            layer: rD,
-            root: DD,
-            order: rD.order
+      YO = (pp, ip) => ip.some((ip => !ip.contains(pp) && !pp.contains(ip) && !0 === xO(ip, pp)));
+    let DO = null,
+      AO = null,
+      PO = -1;
+    const WO = () => {
+        var pp;
+        const ip = null === (pp = document.timeline) || void 0 === pp ? void 0 : pp.currentTime,
+          cp = "number" === typeof ip ? ip : null;
+        if (null !== cp && cp === AO && PO === (0, IO.c)()) return DO;
+        let Op = null;
+        const op = [],
+          Ip = [...document.querySelectorAll("[data-pad-covers]")].filter(Vp.t);
+        for (const Sp of (0, IO.g)()) {
+          const pp = Sp.getRoot(),
+            ip = !!pp && (0, Vp.t)(pp) && !YO(pp, Ip);
+          if (Sp.shown && !ip && op.push(Sp), Sp.shown = ip, !pp || !ip) continue;
+          const cp = {
+            layer: Sp,
+            root: pp,
+            order: Sp.order
           };
-          pD && !rp(wD, pD) || (pD = wD)
+          Op && !LO(cp, Op) || (Op = cp)
         }
-        cp = pD, gp = wD, Rp = (0, pp.c)();
-        for (const rD of sD)(0, pp.i)(rD);
-        return cp
+        DO = Op, AO = cp, PO = (0, IO.c)();
+        for (const Sp of op)(0, IO.k)(Sp);
+        return DO
       },
-      Up = () => {
-        const DD = Ap();
-        return !(null === DD || void 0 === DD || !DD.layer.close) && (DD.layer.close(), gp = null, !0)
+      yO = () => {
+        const pp = WO();
+        return !(null === pp || void 0 === pp || !pp.layer.close) && (pp.layer.close(), AO = null, !0)
       },
-      fp = () => {
-        var DD, zD;
-        return null !== (DD = null === (zD = Ap()) || void 0 === zD ? void 0 : zD.root) && void 0 !== DD ? DD : null
+      UO = () => {
+        var pp, ip;
+        return null !== (pp = null === (ip = WO()) || void 0 === ip ? void 0 : ip.root) && void 0 !== pp ? pp : null
       },
-      Ip = DD => DD ? {
-        ...DD,
-        root: fp()
+      wO = pp => pp ? {
+        ...pp,
+        root: UO()
       } : null;
-    let Bp = null,
-      Gp = null,
-      hp = (0, UD.g)().menuNavigation,
-      np = null;
-    const Mp = new JD;
-    let Op = null;
-    gD.l.subscribe(UD.d, (() => {
-      const DD = (0, UD.g)().menuNavigation;
-      DD !== hp && (hp = DD, Bp = null, Gp = null)
+    let vO = null,
+      tO = null,
+      HO = (0, Pp.h)().menuNavigation,
+      dO = null;
+    const eO = new ep;
+    let uO = null;
+    Yp.m.subscribe(Pp.g, (() => {
+      const pp = (0, Pp.h)().menuNavigation;
+      pp !== HO && (HO = pp, vO = null, tO = null)
     }));
-    const Jp = () => {
-        var DD;
-        return null !== (DD = Bp) && void 0 !== DD ? DD : (0, UD.g)().menuNavigation
+    const jO = () => {
+        var pp;
+        return null !== (pp = vO) && void 0 !== pp ? pp : (0, Pp.h)().menuNavigation
       },
-      Ep = DD => {
-        if (Pp()) {
-          if (np = Ip(DD), "hybrid" === Jp()) return Mp.lock(), void(Gp = Gp ? null : fp());
-          Bp = "focus" === Jp() ? "cursor" : "focus"
+      kO = pp => {
+        if (MO()) {
+          if (dO = wO(pp), "hybrid" === jO()) return eO.lock(), void(tO = tO ? null : UO());
+          vO = "focus" === jO() ? "cursor" : "focus"
         }
       },
-      Qp = () => {
-        const DD = np;
-        return np = null, DD
+      mO = () => {
+        const pp = dO;
+        return dO = null, pp
       };
-    let Xp = {
+    let RO = {
       root: null,
       firstSeenMs: -1 / 0,
       atMs: -1 / 0,
       has: !1
     };
-    const Vp = function(DD) {
-        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
-        const wD = Xp.root === DD,
-          pD = wD ? Xp.firstSeenMs : zD,
-          sD = Xp.has || zD - pD > 1e3;
-        return (!wD || !sD || zD - Xp.atMs > 250) && (Xp = {
-          root: DD,
-          firstSeenMs: pD,
-          atMs: zD,
-          has: (0, HD.j)(DD)
-        }), Xp.has
+    const qO = function(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : performance.now();
+        const cp = RO.root === pp,
+          Op = cp ? RO.firstSeenMs : ip,
+          op = RO.has || ip - Op > 1e3;
+        return (!cp || !op || ip - RO.atMs > 250) && (RO = {
+          root: pp,
+          firstSeenMs: Op,
+          atMs: ip,
+          has: (0, Vp.l)(pp)
+        }), RO.has
       },
-      Pp = () => {
-        const DD = fp();
-        return null !== DD && Vp(DD)
+      MO = () => {
+        const pp = UO();
+        return null !== pp && qO(pp)
       },
-      Cp = () => {
-        const DD = Ap();
-        return Gp && (null === DD || void 0 === DD ? void 0 : DD.root) !== Gp && (Gp = null), (DD => {
+      CO = () => {
+        const pp = WO();
+        return tO && (null === pp || void 0 === pp ? void 0 : pp.root) !== tO && (tO = null), (pp => {
           let {
-            mode: zD,
-            hasLayer: wD,
-            hasCandidates: pD,
-            hybridCursorEngaged: sD
-          } = DD;
-          return wD ? "cursor" !== zD && pD() ? "hybrid" === zD && sD ? "cursor" : "focus" : "cursor" : null
+            mode: ip,
+            hasLayer: cp,
+            hasCandidates: Op,
+            hybridCursorEngaged: op
+          } = pp;
+          return cp ? "cursor" !== ip && Op() ? "hybrid" === ip && op ? "cursor" : "focus" : "cursor" : null
         })({
-          mode: Jp(),
-          hasLayer: null !== DD,
-          hasCandidates: () => null !== DD && Vp(DD.root),
-          hybridCursorEngaged: null !== Gp
+          mode: jO(),
+          hasLayer: null !== pp,
+          hasCandidates: () => null !== pp && qO(pp.root),
+          hybridCursorEngaged: null !== tO
         })
       },
-      xp = () => "hybrid" === Jp() && Pp(),
-      Tp = "pad-focused";
-    var bp = wD(4568),
-      jp = wD(5057);
-    const dp = "[data-pad-destructive]",
-      Sp = `${dp}, [data-pad-back]`,
-      ip = DD => ({
-        rect: DD.getBoundingClientRect(),
-        destructive: DD.matches(dp),
-        closes: null !== DD.closest("[data-pad-close-button]"),
-        unavailable: DD.matches("[data-pad-unavailable]")
+      EO = () => "hybrid" === jO() && MO(),
+      XO = "pad-focused";
+    var lO = cp(4643),
+      QO = cp(5149);
+    const JO = "[data-pad-destructive]",
+      BO = `${JO}, [data-pad-back]`,
+      NO = pp => ({
+        rect: pp.getBoundingClientRect(),
+        destructive: pp.matches(JO),
+        closes: null !== pp.closest("[data-pad-close-button]"),
+        unavailable: pp.matches("[data-pad-unavailable]")
       }),
-      lp = DD => {
+      TO = pp => {
         let {
-          destructive: zD,
-          closes: wD,
-          unavailable: pD
-        } = DD;
-        return zD ? wD ? 2 : 3 : pD ? 1 : 0
+          destructive: ip,
+          closes: cp,
+          unavailable: Op
+        } = pp;
+        return ip ? cp ? 2 : 3 : Op ? 1 : 0
       },
-      Wp = DD => {
-        let zD = -1;
-        for (let wD = 0; wD < DD.length; wD++) {
-          if (zD < 0) {
-            zD = wD;
+      fO = pp => {
+        let ip = -1;
+        for (let cp = 0; cp < pp.length; cp++) {
+          if (ip < 0) {
+            ip = cp;
             continue
           }
-          const pD = DD[wD],
-            sD = DD[zD];
-          lp(pD) === lp(sD) ? Pw(pD.rect, sD.rect) < 0 && (zD = wD) : lp(pD) < lp(sD) && (zD = wD)
+          const Op = pp[cp],
+            op = pp[ip];
+          TO(Op) === TO(op) ? Mc(Op.rect, op.rect) < 0 && (ip = cp) : TO(Op) < TO(op) && (ip = cp)
         }
-        return zD
+        return ip
       },
-      Np = "[data-pad-tabs]",
-      Zp = "[data-pad-tab]",
-      yp = (DD, zD) => {
-        const wD = DD.querySelector(`${Zp}[data-pad-selected='true']`);
-        return wD && zD.includes(wD) ? wD : null
+      bO = "[data-pad-tabs]",
+      hO = "[data-pad-tab]",
+      aO = (pp, ip) => {
+        const cp = pp.querySelector(`${hO}[data-pad-selected='true']`);
+        return cp && ip.includes(cp) ? cp : null
       },
-      kp = (DD, zD) => {
-        let wD = zD;
-        for (let pD = zD.parentElement; pD && !pD.contains(DD); pD = pD.parentElement) wD = pD;
-        return wD
+      nO = (pp, ip) => {
+        let cp = ip;
+        for (let Op = ip.parentElement; Op && !Op.contains(pp); Op = Op.parentElement) cp = Op;
+        return cp
       };
-    class mp {
+    class FO {
       constructor() {
         this.contentReturn = null
       }
-      redirect(DD, zD, wD, pD) {
-        var sD, KD;
-        const rD = DD.closest(Np),
-          LD = zD.closest(Np);
-        var cD;
-        if (LD && LD !== rD) return rD || (this.contentReturn = new WeakRef(DD)), null !== (cD = yp(LD, wD)) && void 0 !== cD ? cD : zD;
-        if (!rD || LD) return zD;
-        const gD = kp(DD, zD),
-          RD = null === (sD = this.contentReturn) || void 0 === sD ? void 0 : sD.deref();
-        return RD && gD.contains(RD) && wD.includes(RD) ? RD : null !== (KD = this.pickRegionStart(gD, CD(zD, "y", pD), wD)) && void 0 !== KD ? KD : zD
+      redirect(pp, ip, cp, Op) {
+        var op, Ip;
+        const Sp = pp.closest(bO),
+          xp = ip.closest(bO);
+        var Lp;
+        if (xp && xp !== Sp) return Sp || (this.contentReturn = new WeakRef(pp)), null !== (Lp = aO(xp, cp)) && void 0 !== Lp ? Lp : ip;
+        if (!Sp || xp) return ip;
+        const Yp = nO(pp, ip),
+          Dp = null === (op = this.contentReturn) || void 0 === op ? void 0 : op.deref();
+        return Dp && Yp.contains(Dp) && cp.includes(Dp) ? Dp : null !== (Ip = this.pickRegionStart(Yp, Mp(ip, "y", Op), cp)) && void 0 !== Ip ? Ip : ip
       }
-      findTabContent(DD, zD, wD) {
-        const pD = DD.closest(Np);
-        if (!pD || !DD.matches(Zp) || pD.contains(zD)) return null;
-        const sD = zD.closest(Np);
-        if (sD && Number(sD.dataset.padTabs) <= Number(pD.dataset.padTabs)) return null;
-        const KD = kp(DD, zD);
-        return wD.some((DD => KD.contains(DD) && !DD.closest(Sp))) || !zD.closest(Sp) ? KD : null
+      findTabContent(pp, ip, cp) {
+        const Op = pp.closest(bO);
+        if (!Op || !pp.matches(hO) || Op.contains(ip)) return null;
+        const op = ip.closest(bO);
+        if (op && Number(op.dataset.padTabs) <= Number(Op.dataset.padTabs)) return null;
+        const Ip = nO(pp, ip);
+        return cp.some((pp => Ip.contains(pp) && !pp.closest(BO))) || !ip.closest(BO) ? Ip : null
       }
-      pickContentStart(DD, zD, wD) {
-        return this.contentReturn = null, this.pickRegionStart(DD, CD(DD, "y", wD), zD)
+      pickContentStart(pp, ip, cp) {
+        return this.contentReturn = null, this.pickRegionStart(pp, Mp(pp, "y", cp), ip)
       }
-      pickReplacedContentStart(DD, zD, wD, pD) {
-        if (!zD.contains(DD)) return null;
-        const sD = kp(zD, DD),
-          KD = wD.filter((DD => zD.contains(DD) && !sD.contains(DD) && !DD.closest(Sp)));
-        return 0 === KD.length ? null : (this.contentReturn = null, this.pickRegionStart(zD, CD(KD[0], "y", pD), KD))
+      pickReplacedContentStart(pp, ip, cp, Op) {
+        if (!ip.contains(pp)) return null;
+        const op = nO(ip, pp),
+          Ip = cp.filter((pp => ip.contains(pp) && !op.contains(pp) && !pp.closest(BO)));
+        return 0 === Ip.length ? null : (this.contentReturn = null, this.pickRegionStart(ip, Mp(Ip[0], "y", Op), Ip))
       }
-      backToStrip(DD, zD, wD) {
-        if (DD.closest(Np)) return null;
-        const pD = Ww(wD);
-        for (const sD of wD.querySelectorAll(Np)) {
-          if (Number(sD.dataset.padTabs) <= 1 || sD === pD) continue;
-          const KD = yp(sD, zD),
-            rD = KD ? kp(DD, sD).parentElement : null;
-          if (KD && rD && rD !== wD && wD.contains(rD)) return this.contentReturn = new WeakRef(DD), KD
+      backToStrip(pp, ip, cp) {
+        if (pp.closest(bO)) return null;
+        const Op = fc(cp);
+        for (const op of cp.querySelectorAll(bO)) {
+          if (Number(op.dataset.padTabs) <= 1 || op === Op) continue;
+          const Ip = aO(op, ip),
+            Sp = Ip ? nO(pp, op).parentElement : null;
+          if (Ip && Sp && Sp !== cp && cp.contains(Sp)) return this.contentReturn = new WeakRef(pp), Ip
         }
         return null
       }
-      pickRegionStart(DD, zD, wD) {
-        const pD = SD(zD),
-          sD = DD => {
-            const zD = wD.filter((zD => DD.contains(zD) && !zD.closest(Np) && iD(zD.getBoundingClientRect(), pD))),
-              sD = Wp(zD.map(ip));
-            return sD >= 0 ? zD[sD] : null
+      pickRegionStart(pp, ip, cp) {
+        const Op = Jp(ip),
+          op = pp => {
+            const ip = cp.filter((ip => pp.contains(ip) && !ip.closest(bO) && Bp(ip.getBoundingClientRect(), Op))),
+              op = fO(ip.map(NO));
+            return op >= 0 ? ip[op] : null
           };
-        for (const KD of (0, HD.g)(DD)) {
-          const DD = sD(KD);
-          if (DD) return DD
+        for (const Ip of (0, Vp.i)(pp)) {
+          const pp = op(Ip);
+          if (pp) return pp
         }
-        for (const KD of DD.querySelectorAll(Np)) {
-          const DD = yp(KD, wD);
-          if (DD) return DD
+        for (const Ip of pp.querySelectorAll(bO)) {
+          const pp = aO(Ip, cp);
+          if (pp) return pp
         }
-        return sD(DD)
+        return op(pp)
       }
     }
-    const ep = "[data-pad-default-focus], .Dropdown-option.is-selected",
-      op = ".Dropdown-root.is-open > .Dropdown-menu",
-      ap = "[data-pad-no-step-in]",
-      vp = "[data-pad-tabs]",
-      tp = "[data-pad-press-area]",
-      Fp = DD => {
-        let zD = DD;
-        for (let wD = 0; zD && wD <= 4; wD++, zD = zD.parentElement) {
-          const wD = zD.querySelector(".CircleInfo");
-          if (wD) return zD === DD || zD.querySelectorAll(HD.c).length <= 1 ? wD : null;
-          if (zD !== DD && zD.querySelectorAll(HD.c).length > 1) return null
+    const gO = "[data-pad-default-focus], .Dropdown-option.is-selected",
+      GO = ".Dropdown-root.is-open > .Dropdown-menu",
+      rO = "[data-pad-no-step-in]",
+      ZO = "[data-pad-tabs]",
+      zO = "[data-pad-press-area]",
+      sO = pp => {
+        let ip = pp;
+        for (let cp = 0; ip && cp <= 4; cp++, ip = ip.parentElement) {
+          const cp = ip.querySelector(".CircleInfo");
+          if (cp) return ip === pp || ip.querySelectorAll(Vp.b).length <= 1 ? cp : null;
+          if (ip !== pp && ip.querySelectorAll(Vp.b).length > 1) return null
         }
         return null
       },
-      Yp = (DD, zD, wD) => {
-        (0, oD.o)(DD, zD, wD);
-        const pD = null !== DD && void 0 !== DD && DD.isConnected ? Fp(DD) : null,
-          sD = Fp(zD);
-        pD !== sD && (0, oD.o)(pD, sD, sD ? (0, oD.w)(sD) : wD, {
-          leaveBelow: DD,
-          enterBelow: zD
+      KO = (pp, ip, cp) => {
+        (0, gp.m)(pp, ip, cp);
+        const Op = null !== pp && void 0 !== pp && pp.isConnected ? sO(pp) : null,
+          op = sO(ip);
+        Op !== op && (0, gp.m)(Op, op, op ? (0, gp.q)(op) : cp, {
+          leaveBelow: pp,
+          enterBelow: ip
         })
       },
-      Hp = DD => DD.getBoundingClientRect(),
-      qp = (DD, zD, wD) => {
-        const pD = new Set(wD);
-        for (let sD = DD; sD; sD = sD === zD ? null : sD.parentElement)
-          if (pD.has(sD)) return sD;
+      VO = pp => pp.getBoundingClientRect(),
+      po = (pp, ip, cp) => {
+        const Op = new Set(cp);
+        for (let op = pp; op; op = op === ip ? null : op.parentElement)
+          if (Op.has(op)) return op;
         return null
       },
-      Ds = (DD, zD) => !DD.root || DD.root === zD || zD.matches(op) && DD.root.contains(zD);
-    const zs = new class {
+      io = (pp, ip) => !pp.root || pp.root === ip || ip.matches(GO) && pp.root.contains(ip);
+    const co = new class {
       constructor() {
-        this.focused = null, this.layerKey = null, this.layerRoot = null, this.memory = new wp, this.tabStripNav = new mp, this.movedInLayer = !1, this.scrolledInLayer = !1, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1, this.confirmPressedOn = null, this.confirmRepeatKey = null, this.confirmRepeated = !1, this.confirmRepeat = (0, BD.b)(ID.q), this.dpadRepeats = new Map(ID.w.map((DD => [DD, (0, BD.b)(ID.z)]))), this.stickRepeat = new ID.e((0, BD.b)(ID.Y)), this.lastRefocusCheckMs = -1 / 0, this.enteredLayerAtMs = 0, this.lastFocusedCentre = null, this.lastActivatedKey = null, this.lastActivated = null, this.lastActivatedAtMs = -1 / 0, this.pendingFocus = null, this.tabOpenWait = null, this.retryMove = null, this.scrollRemainder = {
+        this.focused = null, this.layerKey = null, this.layerRoot = null, this.memory = new oO, this.tabStripNav = new FO, this.movedInLayer = !1, this.scrolledInLayer = !1, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1, this.confirmPressedOn = null, this.confirmRepeatKey = null, this.confirmRepeated = !1, this.confirmRepeat = (0, Up.e)(yp.p), this.dpadRepeats = new Map(yp.w.map((pp => [pp, (0, Up.e)(yp.y)]))), this.stickRepeat = new yp.b((0, Up.e)(yp.W)), this.lastRefocusCheckMs = -1 / 0, this.enteredLayerAtMs = 0, this.lastFocusedCentre = null, this.lastActivatedKey = null, this.lastActivated = null, this.lastActivatedAtMs = -1 / 0, this.pendingFocus = null, this.tabOpenWait = null, this.retryMove = null, this.scrollRemainder = {
           x: 0,
           y: 0
         }, this.wasActive = !1, this.layerKind = null, this.pressGuardUntilMs = -1 / 0, this.pressGuardExtends = !1, this.listeners = new Set, this.dropdownLayers = new WeakMap, this.dropdownLayerCounter = 0
       }
       install() {
-        const DD = AD.e.register({
+        const pp = Ap.d.register({
             name: "focus",
-            isActive: () => (0, fD.o)() && "focus" === Cp(),
-            onFrame: DD => {
-              this.onFrame(DD)
+            isActive: () => (0, Wp.n)() && "focus" === CO(),
+            onFrame: pp => {
+              this.onFrame(pp)
             },
             onDeactivate: () => {
               this.deactivate()
             },
-            wakePressActs: DD => (0, AD.h)(DD) || DD === (0, RD.g)("menuConfirm") && (0, oD.G)((0, fD.e)())
+            wakePressActs: pp => (0, Ap.f)(pp) || pp === (0, Dp.g)("menuConfirm") && (0, gp.v)((0, Wp.d)())
           }),
-          zD = (0, pp.m)((DD => {
-            const zD = (0, pp.r)(DD);
-            null === DD.memoryKey && this.memory.forget(zD), zD === this.layerKey && (this.layerKey = null)
+          ip = (0, IO.o)((pp => {
+            const ip = (0, IO.t)(pp);
+            null === pp.memoryKey && this.memory.forget(ip), ip === this.layerKey && (this.layerKey = null)
           }));
-        let wD = -1 / 0;
-        const pD = rD.g.onFrame((DD => {
-            (0, fD.o)() || DD.timestampMs - wD < 100 || (wD = DD.timestampMs, Ap())
+        let cp = -1 / 0;
+        const Op = Sp.e.onFrame((pp => {
+            (0, Wp.n)() || pp.timestampMs - cp < 100 || (cp = pp.timestampMs, WO())
           })),
-          sD = DD => {
-            DD.isTrusted && DD.target instanceof Element && rD.g.getActivePad() && this.noteChosenStop(DD.target)
+          op = pp => {
+            pp.isTrusted && pp.target instanceof Element && Sp.e.getActivePad() && this.noteChosenStop(pp.target)
           };
-        return document.addEventListener("click", sD, !0), () => {
-          DD(), zD(), pD(), document.removeEventListener("click", sD, !0), this.deactivate()
+        return document.addEventListener("click", op, !0), () => {
+          pp(), ip(), Op(), document.removeEventListener("click", op, !0), this.deactivate()
         }
       }
-      noteChosenStop(DD) {
-        var zD, wD;
-        const pD = Ap();
-        if (!pD || !pD.root.contains(DD)) return;
-        const sD = null !== (zD = null === (wD = DD.closest(".Dropdown-root")) || void 0 === wD ? void 0 : wD.querySelector(".Dropdown-control")) && void 0 !== zD ? zD : DD,
-          KD = qp(sD, pD.root, this.getEnabledCandidates(pD.root));
-        if (!KD) return;
-        const rD = (0, pp.r)(pD.layer);
-        rD === this.layerKey && pD.root === this.layerRoot || this.beginLayer(pD, rD), this.wasActive ? this.setFocus(KD, {
+      noteChosenStop(pp) {
+        var ip, cp;
+        const Op = WO();
+        if (!Op || !Op.root.contains(pp)) return;
+        const op = null !== (ip = null === (cp = pp.closest(".Dropdown-root")) || void 0 === cp ? void 0 : cp.querySelector(".Dropdown-control")) && void 0 !== ip ? ip : pp,
+          Ip = po(op, Op.root, this.getEnabledCandidates(Op.root));
+        if (!Ip) return;
+        const Sp = (0, IO.t)(Op.layer);
+        Sp === this.layerKey && Op.root === this.layerRoot || this.beginLayer(Op, Sp), this.wasActive ? this.setFocus(Ip, {
           scroll: !1,
           byUser: !0
-        }) : (this.pendingFocus = null, this.movedInLayer = !0, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1, this.focused = KD, this.lastFocusedCentre = (0, oD.w)(KD), this.rememberFocus(KD), this.notify())
+        }) : (this.pendingFocus = null, this.movedInLayer = !0, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1, this.focused = Ip, this.lastFocusedCentre = (0, gp.q)(Ip), this.rememberFocus(Ip), this.notify())
       }
       getFocused() {
         return this.focused
@@ -3144,513 +3479,513 @@ export const modules = {
       isActive() {
         return this.wasActive
       }
-      onChange(DD) {
-        return this.listeners.add(DD), () => {
-          this.listeners.delete(DD)
+      onChange(pp) {
+        return this.listeners.add(pp), () => {
+          this.listeners.delete(pp)
         }
       }
       notify() {
-        for (const DD of this.listeners) DD()
+        for (const pp of this.listeners) pp()
       }
       deactivate() {
-        var DD;
+        var pp;
         if (this.wasActive) {
           this.wasActive = !1, this.layerKind = null, this.confirmPressedOn = null, this.retryMove = null, this.pendingFocus = null;
-          for (const DD of this.dpadRepeats.values()) DD.reset();
-          this.stickRepeat.reset(), null !== (DD = this.focused) && void 0 !== DD && DD.isConnected && Yp(this.focused, null, (0, oD.w)(this.focused)), this.notify()
+          for (const pp of this.dpadRepeats.values()) pp.reset();
+          this.stickRepeat.reset(), null !== (pp = this.focused) && void 0 !== pp && pp.isConnected && KO(this.focused, null, (0, gp.q)(this.focused)), this.notify()
         }
       }
-      setFocus(DD) {
-        var zD;
+      setFocus(pp) {
+        var ip;
         let {
-          scroll: wD = !0,
-          byUser: pD = !1
+          scroll: cp = !0,
+          byUser: Op = !1
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        if (pD && (this.pendingFocus = null, this.movedInLayer = !0, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1), DD === this.focused) return;
-        const sD = null !== (zD = this.focused) && void 0 !== zD && zD.isConnected ? this.focused : null;
-        if (this.focused = DD, DD) {
-          wD && (DD.classList.add(Tp), DD.scrollIntoView({
+        if (Op && (this.pendingFocus = null, this.movedInLayer = !0, this.restoredFromMemory = !1, this.restoreOnFocusLoss = !1), pp === this.focused) return;
+        const op = null !== (ip = this.focused) && void 0 !== ip && ip.isConnected ? this.focused : null;
+        if (this.focused = pp, pp) {
+          cp && (pp.classList.add(XO), pp.scrollIntoView({
             block: "nearest",
             inline: "nearest",
             behavior: "instant"
-          })), pD && ((DD, zD) => {
-            const wD = zD.closest("[data-pad-friends-column]");
-            wD && DD && !wD.contains(DD) && (ew = new WeakRef(DD))
-          })(sD, DD);
-          const zD = (0, oD.w)(DD);
-          this.lastFocusedCentre = zD, this.movedInLayer && this.rememberFocus(DD), Yp(sD, DD, zD), "false" === DD.getAttribute("aria-pressed") && DD.closest("[data-pad-select-on-focus]") && (0, oD.c)(DD)
-        } else sD && Yp(sD, null, (0, oD.w)(sD));
+          })), Op && ((pp, ip) => {
+            const cp = ip.closest("[data-pad-friends-column]");
+            cp && pp && !cp.contains(pp) && (gc = new WeakRef(pp))
+          })(op, pp);
+          const ip = (0, gp.q)(pp);
+          this.lastFocusedCentre = ip, this.movedInLayer && this.rememberFocus(pp), KO(op, pp, ip), "false" === pp.getAttribute("aria-pressed") && pp.closest("[data-pad-select-on-focus]") && (0, gp.b)(pp)
+        } else op && KO(op, null, (0, gp.q)(op));
         this.notify()
       }
-      rememberFocus(DD) {
-        const zD = this.layerRoot;
-        this.layerKey && zD && this.memory.remember(this.layerKey, DD, zD, (() => this.getEnabledCandidates(zD)))
+      rememberFocus(pp) {
+        const ip = this.layerRoot;
+        this.layerKey && ip && this.memory.remember(this.layerKey, pp, ip, (() => this.getEnabledCandidates(ip)))
       }
-      noteCursorActivation(DD) {
-        const zD = Ap();
-        if (!zD || !zD.root.contains(DD)) return;
-        const wD = this.getEnabledCandidates(zD.root),
-          pD = new Set(wD);
-        let sD = DD;
-        for (; sD && !pD.has(sD);) sD = sD === zD.root ? null : sD.parentElement;
-        if (!(sD instanceof HTMLElement)) return;
-        const KD = (0, pp.r)(zD.layer);
-        this.memory.enter(KD), this.memory.remember(KD, sD, zD.root, (() => wD))
+      noteCursorActivation(pp) {
+        const ip = WO();
+        if (!ip || !ip.root.contains(pp)) return;
+        const cp = this.getEnabledCandidates(ip.root),
+          Op = new Set(cp);
+        let op = pp;
+        for (; op && !Op.has(op);) op = op === ip.root ? null : op.parentElement;
+        if (!(op instanceof HTMLElement)) return;
+        const Ip = (0, IO.t)(ip.layer);
+        this.memory.enter(Ip), this.memory.remember(Ip, op, ip.root, (() => cp))
       }
-      notePageEnteredByCursor(DD) {
-        return this.memory.enter(DD)
+      notePageEnteredByCursor(pp) {
+        return this.memory.enter(pp)
       }
-      recallStop(DD, zD) {
-        return this.findRemembered(DD, zD)
+      recallStop(pp, ip) {
+        return this.findRemembered(pp, ip)
       }
-      focusWhenFound(DD) {
-        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,
-          wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+      focusWhenFound(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,
+          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
         this.pendingFocus = {
-          find: DD,
-          untilMs: performance.now() + zD,
-          holdWhile: wD
+          find: pp,
+          untilMs: performance.now() + ip,
+          holdWhile: cp
         }
       }
-      getEnabledCandidates(DD) {
-        return (0, HD.e)(DD).filter((DD => !(0, HD.u)(DD)))
+      getEnabledCandidates(pp) {
+        return (0, Vp.e)(pp).filter((pp => !(0, Vp.z)(pp)))
       }
-      onFrame(DD) {
-        var zD;
-        const wD = Ap();
-        if (!wD) return;
-        const pD = null !== (zD = this.findOpenDropdown(wD)) && void 0 !== zD ? zD : wD,
-          sD = performance.now(),
-          KD = (0, pp.r)(pD.layer);
-        if (KD !== this.layerKey || pD.root !== this.layerRoot) {
-          const zD = this.focused;
-          if (null !== this.layerKey && pD.root === this.layerRoot && zD && (0, HD.t)(zD, pD.root)) this.continueLayer(KD, zD), this.wasActive || this.resume(pD.root, sD);
+      onFrame(pp) {
+        var ip;
+        const cp = WO();
+        if (!cp) return;
+        const Op = null !== (ip = this.findOpenDropdown(cp)) && void 0 !== ip ? ip : cp,
+          op = performance.now(),
+          Ip = (0, IO.t)(Op.layer);
+        if (Ip !== this.layerKey || Op.root !== this.layerRoot) {
+          const ip = this.focused;
+          if (null !== this.layerKey && Op.root === this.layerRoot && ip && (0, Vp.v)(ip, Op.root)) this.continueLayer(Ip, ip), this.wasActive || this.resume(Op.root, op);
           else {
-            const zD = !this.wasActive && !DD.wokeDevice,
-              rD = "death" === this.layerKind || zD,
-              LD = this.enterLayer(pD, KD);
-            "popup" !== pD.layer.kind || pD !== wD || LD ? "menu" === pD.layer.kind && rD && "inGame" === cD.e.get("gameState") && !(0, rw.f)(3e3) && (this.pressGuardExtends = !0, this.pressGuardUntilMs = sD + bp.e) : (this.pressGuardExtends = zD, this.pressGuardUntilMs = sD + (zD ? bp.e : rD ? 500 : 250))
+            const ip = !this.wasActive && !pp.wokeDevice,
+              Sp = "death" === this.layerKind || ip,
+              xp = this.enterLayer(Op, Ip);
+            "popup" !== Op.layer.kind || Op !== cp || xp ? "menu" === Op.layer.kind && Sp && "inGame" === Lp.c.get("gameState") && !(0, Yc.e)(3e3) && (this.pressGuardExtends = !0, this.pressGuardUntilMs = op + lO.c) : (this.pressGuardExtends = ip, this.pressGuardUntilMs = op + (ip ? lO.c : Sp ? 500 : 250))
           }
-        } else this.wasActive || this.resume(pD.root, sD);
-        if (this.layerKind = pD.layer.kind, this.wasActive || (this.wasActive = !0, this.notify()), DD.wokeDevice && this.focusPointedStop(pD.root), this.validateFocus(pD, sD), sD < this.pressGuardUntilMs && this.pressGuardExtends && (DD.wasPressed((0, RD.g)("menuConfirm")) || DD.wasPressed((0, RD.g)("menuBack"))) && (this.pressGuardUntilMs = sD + bp.e), sD >= this.pressGuardUntilMs && this.handleButtons(DD, pD)) return;
-        const rD = "hybrid" === Jp();
-        if (rD && (DD => {
-            const zD = fp();
-            return zD !== Op && (Op = zD, Mp.lock()), Mp.update(DD, (0, UD.g)().moveDeadzone)
-          })(DD.leftStick)) return LD = this.getHandoff(), np = Ip(LD), Gp = fp(), void AD.e.handOffHeldInput();
-        var LD;
-        this.handleDirections(DD, pD, sD, !rD), this.handleScroll(DD, pD)
+        } else this.wasActive || this.resume(Op.root, op);
+        if (this.layerKind = Op.layer.kind, this.wasActive || (this.wasActive = !0, this.notify()), pp.wokeDevice && this.focusPointedStop(Op.root), this.validateFocus(Op, op), op < this.pressGuardUntilMs && this.pressGuardExtends && (pp.wasPressed((0, Dp.g)("menuConfirm")) || pp.wasPressed((0, Dp.g)("menuBack"))) && (this.pressGuardUntilMs = op + lO.c), op >= this.pressGuardUntilMs && this.handleButtons(pp, Op)) return;
+        const Sp = "hybrid" === jO();
+        if (Sp && (pp => {
+            const ip = UO();
+            return ip !== uO && (uO = ip, eO.lock()), eO.update(pp, (0, Pp.h)().moveDeadzone)
+          })(pp.leftStick)) return xp = this.getHandoff(), dO = wO(xp), tO = UO(), void Ap.d.handOffHeldInput();
+        var xp;
+        this.handleDirections(pp, Op, op, !Sp), this.handleScroll(pp, Op)
       }
-      findOpenDropdown(DD) {
-        const zD = DD.root.querySelector(op);
-        if (!zD || !(0, HD.r)(zD)) return null;
-        let wD = this.dropdownLayers.get(zD);
-        return wD || (this.dropdownLayerCounter++, wD = {
+      findOpenDropdown(pp) {
+        const ip = pp.root.querySelector(GO);
+        if (!ip || !(0, Vp.t)(ip)) return null;
+        let cp = this.dropdownLayers.get(ip);
+        return cp || (this.dropdownLayerCounter++, cp = {
           id: `dropdown-${this.dropdownLayerCounter}`,
-          kind: DD.layer.kind,
-          getRoot: () => zD,
+          kind: pp.layer.kind,
+          getRoot: () => ip,
           close: () => {
-            (0, oD.j)(zD)
+            (0, gp.g)(ip)
           },
           memoryKey: null
-        }, this.dropdownLayers.set(zD, wD)), {
-          layer: wD,
-          root: zD,
-          order: DD.order
+        }, this.dropdownLayers.set(ip, cp)), {
+          layer: cp,
+          root: ip,
+          order: pp.order
         }
       }
-      focusPointedStop(DD) {
-        const zD = (0, fD.e)(),
-          wD = zD ? document.elementFromPoint(zD.x, zD.y) : null;
-        if (!wD || !DD.contains(wD)) return;
-        const pD = qp(wD, DD, this.getEnabledCandidates(DD));
-        pD && this.setFocus(pD, {
+      focusPointedStop(pp) {
+        const ip = (0, Wp.d)(),
+          cp = ip ? document.elementFromPoint(ip.x, ip.y) : null;
+        if (!cp || !pp.contains(cp)) return;
+        const Op = po(cp, pp, this.getEnabledCandidates(pp));
+        Op && this.setFocus(Op, {
           scroll: !1,
           byUser: !0
         })
       }
-      enterLayer(DD, zD) {
-        const wD = this.beginLayer(DD, zD),
-          pD = Qp();
-        return pD && Ds(pD, DD.root) ? (this.takeOver(DD.root, pD, this.enteredLayerAtMs), wD) : (this.restoreLayerFocus(DD.root, wD), wD)
+      enterLayer(pp, ip) {
+        const cp = this.beginLayer(pp, ip),
+          Op = mO();
+        return Op && io(Op, pp.root) ? (this.takeOver(pp.root, Op, this.enteredLayerAtMs), cp) : (this.restoreLayerFocus(pp.root, cp), cp)
       }
-      beginLayer(DD, zD) {
-        return this.layerKey = zD, this.layerRoot = DD.root, this.lastActivatedKey = null, this.movedInLayer = !1, this.scrolledInLayer = !1, this.restoreOnFocusLoss = !1, this.retryMove = null, this.pendingFocus = null, this.confirmPressedOn = null, this.lastRefocusCheckMs = -1 / 0, this.pressGuardUntilMs = -1 / 0, this.pressGuardExtends = !1, this.enteredLayerAtMs = performance.now(), this.lastFocusedCentre = null, this.memory.enter(zD)
+      beginLayer(pp, ip) {
+        return this.layerKey = ip, this.layerRoot = pp.root, this.lastActivatedKey = null, this.movedInLayer = !1, this.scrolledInLayer = !1, this.restoreOnFocusLoss = !1, this.retryMove = null, this.pendingFocus = null, this.confirmPressedOn = null, this.lastRefocusCheckMs = -1 / 0, this.pressGuardUntilMs = -1 / 0, this.pressGuardExtends = !1, this.enteredLayerAtMs = performance.now(), this.lastFocusedCentre = null, this.memory.enter(ip)
       }
-      restoreLayerFocus(DD, zD) {
-        const wD = zD && this.layerKey ? this.findRemembered(DD, this.layerKey) : null;
-        this.restoredFromMemory = null !== wD, this.setFocus(null !== wD && void 0 !== wD ? wD : this.pickInitial(DD, {
+      restoreLayerFocus(pp, ip) {
+        const cp = ip && this.layerKey ? this.findRemembered(pp, this.layerKey) : null;
+        this.restoredFromMemory = null !== cp, this.setFocus(null !== cp && void 0 !== cp ? cp : this.pickInitial(pp, {
           waitForContent: !0
         }))
       }
-      continueLayer(DD, zD) {
-        this.layerKey = DD;
-        const wD = this.memory.enter(DD);
-        this.restoreOnFocusLoss = wD, this.movedInLayer && !wD && this.rememberFocus(zD)
+      continueLayer(pp, ip) {
+        this.layerKey = pp;
+        const cp = this.memory.enter(pp);
+        this.restoreOnFocusLoss = cp, this.movedInLayer && !cp && this.rememberFocus(ip)
       }
-      resume(DD, zD) {
-        var wD;
-        const pD = Qp();
-        pD && Ds(pD, DD) ? this.takeOver(DD, pD, zD) : null !== (wD = this.focused) && void 0 !== wD && wD.isConnected && Yp(null, this.focused, (0, oD.w)(this.focused))
+      resume(pp, ip) {
+        var cp;
+        const Op = mO();
+        Op && io(Op, pp) ? this.takeOver(pp, Op, ip) : null !== (cp = this.focused) && void 0 !== cp && cp.isConnected && KO(null, this.focused, (0, gp.q)(this.focused))
       }
-      pickPreferred(DD) {
-        var zD;
-        return null !== (zD = this.layerKey ? this.findRemembered(DD, this.layerKey) : null) && void 0 !== zD ? zD : this.pickInitial(DD, {
+      pickPreferred(pp) {
+        var ip;
+        return null !== (ip = this.layerKey ? this.findRemembered(pp, this.layerKey) : null) && void 0 !== ip ? ip : this.pickInitial(pp, {
           waitForContent: !0
         })
       }
-      findRemembered(DD, zD) {
-        return this.memory.has(zD) ? this.memory.recall(zD, this.getEnabledCandidates(DD)) : null
+      findRemembered(pp, ip) {
+        return this.memory.has(ip) ? this.memory.recall(ip, this.getEnabledCandidates(pp)) : null
       }
       getHandoff() {
-        var DD, zD, wD;
-        const pD = null !== (DD = this.focused) && void 0 !== DD && DD.isConnected ? this.focused : null,
-          sD = null !== (zD = this.layerRoot) && void 0 !== zD && zD.isConnected ? this.layerRoot : null;
+        var pp, ip, cp;
+        const Op = null !== (pp = this.focused) && void 0 !== pp && pp.isConnected ? this.focused : null,
+          op = null !== (ip = this.layerRoot) && void 0 !== ip && ip.isConnected ? this.layerRoot : null;
         return {
-          point: pD ? (0, oD.w)(pD) : null !== (wD = this.lastFocusedCentre) && void 0 !== wD ? wD : this.getLayerStartPoint(sD),
-          element: pD,
+          point: Op ? (0, gp.q)(Op) : null !== (cp = this.lastFocusedCentre) && void 0 !== cp ? cp : this.getLayerStartPoint(op),
+          element: Op,
           direction: null
         }
       }
-      getLayerStartPoint(DD) {
-        if (!DD) return {
+      getLayerStartPoint(pp) {
+        if (!pp) return {
           x: window.innerWidth / 2,
           y: window.innerHeight / 2
         };
-        const zD = this.pickInitial(DD, {
+        const ip = this.pickInitial(pp, {
           includeDisabled: !0
         });
-        return (0, oD.w)(null !== zD && void 0 !== zD ? zD : DD)
+        return (0, gp.q)(null !== ip && void 0 !== ip ? ip : pp)
       }
-      takeOver(DD, zD, wD) {
+      takeOver(pp, ip, cp) {
         const {
-          element: pD,
-          direction: sD,
-          point: KD
-        } = zD, rD = pD instanceof HTMLElement && (0, HD.t)(pD, DD) ? pD : null;
-        if (!sD) {
-          const zD = this.focused;
-          return rD ? this.setFocus(rD, {
+          element: Op,
+          direction: op,
+          point: Ip
+        } = ip, Sp = Op instanceof HTMLElement && (0, Vp.v)(Op, pp) ? Op : null;
+        if (!op) {
+          const ip = this.focused;
+          return Sp ? this.setFocus(Sp, {
             scroll: !1,
             byUser: !0
-          }) : this.focusNearest(DD, KD), void(this.focused && this.focused === zD && this.focused.isConnected && Yp(null, this.focused, (0, oD.w)(this.focused)))
+          }) : this.focusNearest(pp, Ip), void(this.focused && this.focused === ip && this.focused.isConnected && KO(null, this.focused, (0, gp.q)(this.focused)))
         }
-        if (this.dpadRepeats.get(sD).update(!0, wD), rD) return this.setFocus(rD, {
+        if (this.dpadRepeats.get(op).update(!0, cp), Sp) return this.setFocus(Sp, {
           scroll: !1,
           byUser: !0
-        }), void this.move(DD, sD, wD, !0);
-        const LD = this.getEnabledCandidates(DD),
-          cD = LD.map(Hp),
-          gD = Ow(new DOMRect(KD.x, KD.y, 0, 0), cD, sD),
-          RD = gD >= 0 ? gD : Vw(KD, cD);
-        this.setFocus(RD >= 0 ? LD[RD] : this.pickInitial(DD), {
+        }), void this.move(pp, op, cp, !0);
+        const xp = this.getEnabledCandidates(pp),
+          Lp = xp.map(VO),
+          Yp = uc(new DOMRect(Ip.x, Ip.y, 0, 0), Lp, op),
+          Dp = Yp >= 0 ? Yp : qc(Ip, Lp);
+        this.setFocus(Dp >= 0 ? xp[Dp] : this.pickInitial(pp), {
           byUser: !0
         })
       }
-      focusNearest(DD, zD) {
-        const wD = this.getEnabledCandidates(DD),
-          pD = Vw(zD, wD.map(Hp));
-        this.setFocus(pD >= 0 ? wD[pD] : this.pickInitial(DD), {
+      focusNearest(pp, ip) {
+        const cp = this.getEnabledCandidates(pp),
+          Op = qc(ip, cp.map(VO));
+        this.setFocus(Op >= 0 ? cp[Op] : this.pickInitial(pp), {
           byUser: !0
         })
       }
-      pickDefault(DD) {
+      pickDefault(pp) {
         let {
-          includeDisabled: zD = !1,
-          exclude: wD = null
+          includeDisabled: ip = !1,
+          exclude: cp = null
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const pD = [...DD.querySelectorAll(ep)].filter((pD => (null === wD || void 0 === wD || !wD.has(pD)) && (zD ? (0, HD.w)(pD, DD) : (0, HD.t)(pD, DD)))),
-          sD = Wp(pD.map(ip));
-        return sD >= 0 ? pD[sD] : null
+        const Op = [...pp.querySelectorAll(gO)].filter((Op => (null === cp || void 0 === cp || !cp.has(Op)) && (ip ? (0, Vp.C)(Op, pp) : (0, Vp.v)(Op, pp)))),
+          op = fO(Op.map(NO));
+        return op >= 0 ? Op[op] : null
       }
-      pickNewAreaStart(DD, zD) {
-        const wD = [...DD.querySelectorAll(tp)].filter(HD.r);
-        for (const pD of [...(0, HD.g)(DD), ...wD]) {
-          if (zD.has(pD)) continue;
-          const DD = this.getEnabledCandidates(pD),
-            wD = Wp(DD.map(ip));
-          if (wD >= 0) return DD[wD]
+      pickNewAreaStart(pp, ip) {
+        const cp = [...pp.querySelectorAll(zO)].filter(Vp.t);
+        for (const Op of [...(0, Vp.i)(pp), ...cp]) {
+          if (ip.has(Op)) continue;
+          const pp = this.getEnabledCandidates(Op),
+            cp = fO(pp.map(NO));
+          if (cp >= 0) return pp[cp]
         }
         return null
       }
-      pickInitial(DD) {
+      pickInitial(pp) {
         let {
-          includeDisabled: zD = !1,
-          waitForContent: wD = !1,
-          enteredAtMs: pD = this.enteredLayerAtMs
+          includeDisabled: ip = !1,
+          waitForContent: cp = !1,
+          enteredAtMs: Op = this.enteredLayerAtMs
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const sD = this.pickDefault(DD, {
-          includeDisabled: zD
+        const op = this.pickDefault(pp, {
+          includeDisabled: ip
         });
-        if (sD) return sD;
-        const KD = DD => zD ? (0, HD.e)(DD) : this.getEnabledCandidates(DD);
-        let rD = [];
-        for (const UD of (0, HD.g)(DD))
-          if (rD = KD(UD), rD.length > 0) break;
-        if (0 === rD.length) {
-          if (wD && performance.now() - pD < 1e4 && (0, HD.n)(DD)) return null;
-          rD = KD(DD)
+        if (op) return op;
+        const Ip = pp => ip ? (0, Vp.e)(pp) : this.getEnabledCandidates(pp);
+        let Sp = [];
+        for (const Pp of (0, Vp.i)(pp))
+          if (Sp = Ip(Pp), Sp.length > 0) break;
+        if (0 === Sp.length) {
+          if (cp && performance.now() - Op < 1e4 && (0, Vp.p)(pp)) return null;
+          Sp = Ip(pp)
         }
-        const LD = rD.map(Hp),
-          cD = SD(null),
-          gD = rD.filter(((DD, zD) => iD(LD[zD], cD))),
-          RD = gD.length > 0 ? gD : rD,
-          AD = Wp(RD.map(ip));
-        return AD >= 0 ? RD[AD] : null
+        const xp = Sp.map(VO),
+          Lp = Jp(null),
+          Yp = Sp.filter(((pp, ip) => Bp(xp[ip], Lp))),
+          Dp = Yp.length > 0 ? Yp : Sp,
+          Ap = fO(Dp.map(NO));
+        return Ap >= 0 ? Dp[Ap] : null
       }
-      validateFocus(DD, zD) {
+      validateFocus(pp, ip) {
         if (this.pendingFocus) {
-          var wD, pD;
-          const sD = this.pendingFocus.find();
-          if (sD && (0, HD.t)(sD, DD.root)) return this.pendingFocus = null, void this.setFocus(sD, {
+          var cp, Op;
+          const op = this.pendingFocus.find();
+          if (op && (0, Vp.v)(op, pp.root)) return this.pendingFocus = null, void this.setFocus(op, {
             byUser: !0
           });
-          zD > this.pendingFocus.untilMs && (null === (wD = (pD = this.pendingFocus).holdWhile) || void 0 === wD || !wD.call(pD)) && (this.pendingFocus = null)
+          ip > this.pendingFocus.untilMs && (null === (cp = (Op = this.pendingFocus).holdWhile) || void 0 === cp || !cp.call(Op)) && (this.pendingFocus = null)
         }
-        const sD = this.focused,
-          KD = !!sD && (0, HD.t)(sD, DD.root);
-        if (!(!KD && sD && sD === this.lastActivated && zD - this.lastActivatedAtMs < 5e3 && DD.root.contains(sD) && (0, HD.r)(sD) && (0, HD.u)(sD))) {
-          if (!KD && this.restoreOnFocusLoss && this.layerKey) return this.restoreOnFocusLoss = !1, this.movedInLayer = !1, this.scrolledInLayer = !1, this.enteredLayerAtMs = zD, void this.restoreLayerFocus(DD.root, !0);
-          if ((!KD || !this.movedInLayer && !this.scrolledInLayer) && !(zD - this.lastRefocusCheckMs < (KD ? 200 : 50)))
-            if (this.lastRefocusCheckMs = zD, KD) {
-              const wD = zD - this.enteredLayerAtMs < 15e3 ? this.pickPreferred(DD.root) : null,
-                pD = null !== wD && void 0 !== wD ? wD : this.restoredFromMemory ? null : this.pickDefault(DD.root);
-              pD && pD !== sD && this.setFocus(pD)
+        const op = this.focused,
+          Ip = !!op && (0, Vp.v)(op, pp.root);
+        if (!(!Ip && op && op === this.lastActivated && ip - this.lastActivatedAtMs < 5e3 && pp.root.contains(op) && (0, Vp.t)(op) && (0, Vp.z)(op))) {
+          if (!Ip && this.restoreOnFocusLoss && this.layerKey) return this.restoreOnFocusLoss = !1, this.movedInLayer = !1, this.scrolledInLayer = !1, this.enteredLayerAtMs = ip, void this.restoreLayerFocus(pp.root, !0);
+          if ((!Ip || !this.movedInLayer && !this.scrolledInLayer) && !(ip - this.lastRefocusCheckMs < (Ip ? 200 : 50)))
+            if (this.lastRefocusCheckMs = ip, Ip) {
+              const cp = ip - this.enteredLayerAtMs < 15e3 ? this.pickPreferred(pp.root) : null,
+                Op = null !== cp && void 0 !== cp ? cp : this.restoredFromMemory ? null : this.pickDefault(pp.root);
+              Op && Op !== op && this.setFocus(Op)
             } else {
               if (this.lastFocusedCentre && this.movedInLayer) {
-                const zD = this.pendingFocus;
-                return this.focusNearest(DD.root, this.lastFocusedCentre), void(this.pendingFocus = zD)
+                const ip = this.pendingFocus;
+                return this.focusNearest(pp.root, this.lastFocusedCentre), void(this.pendingFocus = ip)
               }
-              this.setFocus(this.pickPreferred(DD.root))
+              this.setFocus(this.pickPreferred(pp.root))
             }
         }
       }
-      handleButtons(DD, zD) {
-        if (DD.wasPressed((0, RD.g)("menuToggleCursor"))) return Ep(this.getHandoff()), !0;
-        if (DD.wasPressed((0, RD.g)("menuBack"))) {
-          const DD = (0, oD.j)(zD.root);
-          return DD ? this.setFocus(DD, {
+      handleButtons(pp, ip) {
+        if (pp.wasPressed((0, Dp.g)("menuToggleCursor"))) return kO(this.getHandoff()), !0;
+        if (pp.wasPressed((0, Dp.g)("menuBack"))) {
+          const pp = (0, gp.g)(ip.root);
+          return pp ? this.setFocus(pp, {
             byUser: !0
-          }) : ow(this, zD.root) || ((0, oD.d)(zD.root) ? this.returnToOpener(zD.root) : this.backToStrip(zD.root) || Up()), !0
+          }) : Gc(this, ip.root) || ((0, gp.c)(ip.root) ? this.returnToOpener(ip.root) : this.backToStrip(ip.root) || yO()), !0
         }
-        const wD = (0, RD.g)("menuConfirm");
-        var pD, sD;
-        DD.wasPressed(wD) && (this.confirmPressedOn = this.focused, this.confirmRepeatKey = null !== (pD = null === (sD = this.focused) || void 0 === sD ? void 0 : sD.getAttribute("data-pad-repeat")) && void 0 !== pD ? pD : null, this.confirmRepeated = DD.wokeDevice, this.confirmRepeat.reset(), this.confirmRepeat.update(!0, performance.now()));
-        if (DD.wasReleased(wD)) {
-          const DD = this.confirmPressedOn;
-          if (this.confirmPressedOn = null, DD && !this.confirmRepeated && DD === this.focused && DD.isConnected && !(0, HD.u)(DD)) {
-            const wD = DD.matches("[data-pad-tab]") ? DD.closest(vp) : null;
-            wD ? this.enterTab(DD, wD, zD.root, performance.now()) : this.activate(DD)
+        const cp = (0, Dp.g)("menuConfirm");
+        var Op, op;
+        pp.wasPressed(cp) && (this.confirmPressedOn = this.focused, this.confirmRepeatKey = null !== (Op = null === (op = this.focused) || void 0 === op ? void 0 : op.getAttribute("data-pad-repeat")) && void 0 !== Op ? Op : null, this.confirmRepeated = pp.wokeDevice, this.confirmRepeat.reset(), this.confirmRepeat.update(!0, performance.now()));
+        if (pp.wasReleased(cp)) {
+          const pp = this.confirmPressedOn;
+          if (this.confirmPressedOn = null, pp && !this.confirmRepeated && pp === this.focused && pp.isConnected && !(0, Vp.z)(pp)) {
+            const cp = pp.matches("[data-pad-tab]") ? pp.closest(ZO) : null;
+            cp ? this.enterTab(pp, cp, ip.root, performance.now()) : this.activate(pp)
           }
           return !0
         }
-        return this.repeatConfirm(DD, wD), Dp(this, DD, zD)
+        return this.repeatConfirm(pp, cp), cO(this, pp, ip)
       }
-      repeatConfirm(DD, zD) {
-        const wD = this.confirmPressedOn;
-        wD && null !== this.confirmRepeatKey && DD.isHeld(zD) && (wD === this.focused && wD.isConnected && !(0, HD.u)(wD) && wD.getAttribute("data-pad-repeat") === this.confirmRepeatKey ? wD.hasAttribute("data-pad-repeat-wait") || this.confirmRepeat.update(!0, performance.now()) && (this.confirmRepeated = !0, this.activate(wD)) : this.confirmRepeatKey = null)
+      repeatConfirm(pp, ip) {
+        const cp = this.confirmPressedOn;
+        cp && null !== this.confirmRepeatKey && pp.isHeld(ip) && (cp === this.focused && cp.isConnected && !(0, Vp.z)(cp) && cp.getAttribute("data-pad-repeat") === this.confirmRepeatKey ? cp.hasAttribute("data-pad-repeat-wait") || this.confirmRepeat.update(!0, performance.now()) && (this.confirmRepeated = !0, this.activate(cp)) : this.confirmRepeatKey = null)
       }
-      backToStrip(DD) {
-        const zD = this.focused;
-        if (!(0, UD.g)().menuBackToCategories) return !1;
-        const wD = null !== zD && void 0 !== zD && zD.isConnected ? this.tabStripNav.backToStrip(zD, this.getEnabledCandidates(DD), DD) : null;
-        return wD && this.setFocus(wD, {
+      backToStrip(pp) {
+        const ip = this.focused;
+        if (!(0, Pp.h)().menuBackToCategories) return !1;
+        const cp = null !== ip && void 0 !== ip && ip.isConnected ? this.tabStripNav.backToStrip(ip, this.getEnabledCandidates(pp), pp) : null;
+        return cp && this.setFocus(cp, {
           byUser: !0
-        }), null !== wD
+        }), null !== cp
       }
-      returnToOpener(DD) {
-        const zD = this.lastActivatedKey;
-        zD && (this.lastActivatedKey = null, this.focusWhenFound((() => {
-          var wD;
-          return null !== (wD = this.getEnabledCandidates(DD).find((DD => (0, oD.A)(DD) === zD))) && void 0 !== wD ? wD : null
+      returnToOpener(pp) {
+        const ip = this.lastActivatedKey;
+        ip && (this.lastActivatedKey = null, this.focusWhenFound((() => {
+          var cp;
+          return null !== (cp = this.getEnabledCandidates(pp).find((pp => (0, gp.r)(pp) === ip))) && void 0 !== cp ? cp : null
         })))
       }
-      activate(DD) {
-        var zD;
-        if ((0, jp.b)(DD) || (0, oD.D)(DD)) return;
-        this.lastActivatedKey = null !== (zD = (0, oD.A)(DD)) && void 0 !== zD ? zD : this.lastActivatedKey, this.lastActivated = DD, this.lastActivatedAtMs = performance.now(), this.rememberFocus(DD);
-        const wD = this.layerRoot;
-        if (wD) {
-          const zD = new Set(wD.querySelectorAll(ep)),
-            pD = new Set(wD.querySelectorAll(`[data-pad-initial-area], ${tp}`)),
-            sD = this.lastActivatedAtMs;
+      activate(pp) {
+        var ip;
+        if ((0, QO.e)(pp) || (0, gp.t)(pp)) return;
+        this.lastActivatedKey = null !== (ip = (0, gp.r)(pp)) && void 0 !== ip ? ip : this.lastActivatedKey, this.lastActivated = pp, this.lastActivatedAtMs = performance.now(), this.rememberFocus(pp);
+        const cp = this.layerRoot;
+        if (cp) {
+          const ip = new Set(cp.querySelectorAll(gO)),
+            Op = new Set(cp.querySelectorAll(`[data-pad-initial-area], ${zO}`)),
+            op = this.lastActivatedAtMs;
           this.focusWhenFound((() => {
-            var sD;
-            return (0, HD.t)(DD, wD) ? null : null !== (sD = this.pickDefault(wD, {
-              exclude: zD
-            })) && void 0 !== sD ? sD : this.pickNewAreaStart(wD, pD)
-          }), 5e3, (() => DD.isConnected && (0, HD.u)(DD) && performance.now() - sD < 6e4))
-        }(0, oD.c)(DD), (0, oD.f)(DD)
+            var op;
+            return (0, Vp.v)(pp, cp) ? null : null !== (op = this.pickDefault(cp, {
+              exclude: ip
+            })) && void 0 !== op ? op : this.pickNewAreaStart(cp, Op)
+          }), 5e3, (() => pp.isConnected && (0, Vp.z)(pp) && performance.now() - op < 6e4))
+        }(0, gp.b)(pp), (0, gp.e)(pp)
       }
-      handleDirections(DD, zD, wD, pD) {
-        const sD = jw(zD.layer.kind) ? (0, RD.g)("chat") : null;
-        for (const LD of ID.w) {
-          this.dpadRepeats.get(LD).update(DD.isHeld(LD), wD) && (LD !== sD || DD.wasPressed(LD)) && this.move(zD.root, LD, wD, !0)
+      handleDirections(pp, ip, cp, Op) {
+        const op = Qc(ip.layer.kind) ? (0, Dp.g)("chat") : null;
+        for (const xp of yp.w) {
+          this.dpadRepeats.get(xp).update(pp.isHeld(xp), cp) && (xp !== op || pp.wasPressed(xp)) && this.move(ip.root, xp, cp, !0)
         }
-        const KD = pD ? (0, ID.i)(DD.leftStick, (0, UD.g)().moveDeadzone) : {
+        const Ip = Op ? (0, yp.h)(pp.leftStick, (0, Pp.h)().moveDeadzone) : {
             x: 0,
             y: 0
           },
-          rD = this.stickRepeat.update((0, ID.ab)(KD), wD);
-        if (rD && this.move(zD.root, rD, wD, !0), this.retryMove && wD >= this.retryMove.atMs) {
+          Sp = this.stickRepeat.update((0, yp._)(Ip), cp);
+        if (Sp && this.move(ip.root, Sp, cp, !0), this.retryMove && cp >= this.retryMove.atMs) {
           const {
-            direction: DD
+            direction: pp
           } = this.retryMove;
-          this.retryMove = null, this.move(zD.root, DD, wD, !1)
+          this.retryMove = null, this.move(ip.root, pp, cp, !1)
         }
       }
-      move(DD, zD, wD, pD) {
-        var sD;
-        let KD = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
-        if (this.pendingFocus && this.pendingFocus === (null === (sD = this.tabOpenWait) || void 0 === sD ? void 0 : sD.wait) && zD === this.tabOpenWait.direction) return;
+      move(pp, ip, cp, Op) {
+        var op;
+        let Ip = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+        if (this.pendingFocus && this.pendingFocus === (null === (op = this.tabOpenWait) || void 0 === op ? void 0 : op.wait) && ip === this.tabOpenWait.direction) return;
         this.pendingFocus = null;
-        const rD = this.focused;
-        if (!rD || !rD.isConnected) {
-          const zD = this.pickInitial(DD);
-          return void(zD && this.setFocus(zD, {
+        const Sp = this.focused;
+        if (!Sp || !Sp.isConnected) {
+          const ip = this.pickInitial(pp);
+          return void(ip && this.setFocus(ip, {
             byUser: !0
           }))
         }
-        const LD = "Left" === zD || "Right" === zD,
-          cD = LD ? (0, jp.b)(rD) : null;
-        if (cD) return void cD.adjust("Left" === zD ? -1 : 1);
-        const gD = DD => null !== DD.closest("[data-pad-friends-column]"),
-          RD = gD(rD),
-          AD = Hp(rD),
-          UD = LD || rD.closest(vp) ? null : (DD => {
-            const zD = new Map;
-            return wD => {
-              const pD = wD.closest(vp);
-              if (!pD) return !1;
-              let sD = zD.get(pD);
-              if (void 0 === sD) {
-                const wD = Hp(pD);
-                sD = Mw(DD, wD) && (wD.right <= DD.left || wD.left >= DD.right), zD.set(pD, sD)
+        const xp = "Left" === ip || "Right" === ip,
+          Lp = xp ? (0, QO.e)(Sp) : null;
+        if (Lp) return void Lp.adjust("Left" === ip ? -1 : 1);
+        const Yp = pp => null !== pp.closest("[data-pad-friends-column]"),
+          Dp = Yp(Sp),
+          Ap = VO(Sp),
+          Pp = xp || Sp.closest(ZO) ? null : (pp => {
+            const ip = new Map;
+            return cp => {
+              const Op = cp.closest(ZO);
+              if (!Op) return !1;
+              let op = ip.get(Op);
+              if (void 0 === op) {
+                const cp = VO(Op);
+                op = ec(pp, cp) && (cp.right <= pp.left || cp.left >= pp.right), ip.set(Op, op)
               }
-              return sD
+              return op
             }
-          })(AD),
-          fD = null !== rD.closest(ap),
-          ID = this.getEnabledCandidates(DD).filter((DD => DD !== rD && (LD || gD(DD) === RD) && !(null !== UD && void 0 !== UD && UD(DD)) && (fD || !DD.closest(ap)))),
-          BD = ID.map(Hp),
-          GD = CD(rD, "y", DD),
-          hD = SD(GD);
-        if (!KD && !iD(AD, hD)) {
-          const DD = ID.filter(((DD, zD) => iD(BD[zD], hD)));
-          if (DD.length > 0) {
-            const zD = {
-              x: hD.left + hD.width / 2,
-              y: hD.top + hD.height / 2
+          })(Ap),
+          Wp = null !== Sp.closest(rO),
+          yp = this.getEnabledCandidates(pp).filter((pp => pp !== Sp && (xp || Yp(pp) === Dp) && !(null !== Pp && void 0 !== Pp && Pp(pp)) && (Wp || !pp.closest(rO)))),
+          Up = yp.map(VO),
+          wp = Mp(Sp, "y", pp),
+          vp = Jp(wp);
+        if (!Ip && !Bp(Ap, vp)) {
+          const pp = yp.filter(((pp, ip) => Bp(Up[ip], vp)));
+          if (pp.length > 0) {
+            const ip = {
+              x: vp.left + vp.width / 2,
+              y: vp.top + vp.height / 2
             };
-            return void this.setFocus(DD[Vw(zD, DD.map(Hp))], {
+            return void this.setFocus(pp[qc(ip, pp.map(VO))], {
               byUser: !0
             })
           }
         }
-        const nD = LD ? ((DD, zD, wD) => {
-            const pD = Hp(DD),
-              sD = DD.closest(vp),
-              KD = sD ? Hp(sD) : null;
-            return zD.map(((zD, rD) => {
-              const LD = wD[rD];
-              if (LD.bottom > pD.top && LD.top < pD.bottom) return !0;
-              const cD = zD.closest(vp);
-              if (sD && KD) return cD !== sD && (null !== cD || LD.bottom <= KD.top || LD.top >= KD.bottom);
-              if (cD) return !Mw(pD, Hp(cD));
-              let gD = DD;
-              for (let wD = DD.parentElement; wD && !wD.contains(zD); wD = wD.parentElement) gD = wD;
-              const RD = Hp(gD);
-              return LD.right > RD.left && LD.left < RD.right
+        const tp = xp ? ((pp, ip, cp) => {
+            const Op = VO(pp),
+              op = pp.closest(ZO),
+              Ip = op ? VO(op) : null;
+            return ip.map(((ip, Sp) => {
+              const xp = cp[Sp];
+              if (xp.bottom > Op.top && xp.top < Op.bottom) return !0;
+              const Lp = ip.closest(ZO);
+              if (op && Ip) return Lp !== op && (null !== Lp || xp.bottom <= Ip.top || xp.top >= Ip.bottom);
+              if (Lp) return !ec(Op, VO(Lp));
+              let Yp = pp;
+              for (let cp = pp.parentElement; cp && !cp.contains(ip); cp = cp.parentElement) Yp = cp;
+              const Dp = VO(Yp);
+              return xp.right > Dp.left && xp.left < Dp.right
             }))
-          })(rD, ID, BD) : void 0,
-          MD = LD && !rD.closest(vp) ? (DD => DD.map((DD => !DD.closest(Sp))))(ID) : void 0,
-          OD = ((DD, zD) => {
-            const wD = [];
-            for (let sD = DD; sD; sD = sD.parentElement) wD.push(sD);
-            const pD = new Map;
-            return wD.forEach(((DD, zD) => {
-              pD.set(DD, wD.length - 1 - zD)
-            })), zD.map((DD => {
-              for (let zD = DD; zD; zD = zD.parentElement) {
-                const DD = pD.get(zD);
-                if (void 0 !== DD) return DD
+          })(Sp, yp, Up) : void 0,
+          Hp = xp && !Sp.closest(ZO) ? (pp => pp.map((pp => !pp.closest(BO))))(yp) : void 0,
+          dp = ((pp, ip) => {
+            const cp = [];
+            for (let op = pp; op; op = op.parentElement) cp.push(op);
+            const Op = new Map;
+            return cp.forEach(((pp, ip) => {
+              Op.set(pp, cp.length - 1 - ip)
+            })), ip.map((pp => {
+              for (let ip = pp; ip; ip = ip.parentElement) {
+                const pp = Op.get(ip);
+                if (void 0 !== pp) return pp
               }
               return -1
             }))
-          })(rD, ID),
-          JD = LD ? "x" : "y",
-          ED = CD(rD, JD, DD);
-        let QD = Ow(AD, BD, zD, OD, nD, MD);
-        if (QD >= 0 && ED && !ED.contains(ID[QD])) {
-          const DD = ID.flatMap(((DD, zD) => ED.contains(DD) ? [zD] : [])),
-            wD = zD => zD && DD.map((DD => zD[DD])),
-            pD = Ow(AD, DD.map((DD => BD[DD])), zD, DD.map((DD => OD[DD])), wD(nD), wD(MD));
-          QD = pD >= 0 ? DD[pD] : QD
+          })(Sp, yp),
+          ep = xp ? "x" : "y",
+          jp = Mp(Sp, ep, pp);
+        let kp = uc(Ap, Up, ip, dp, tp, Hp);
+        if (kp >= 0 && jp && !jp.contains(yp[kp])) {
+          const pp = yp.flatMap(((pp, ip) => jp.contains(pp) ? [ip] : [])),
+            cp = ip => ip && pp.map((pp => ip[pp])),
+            Op = uc(Ap, pp.map((pp => Up[pp])), ip, pp.map((pp => dp[pp])), cp(tp), cp(Hp));
+          kp = Op >= 0 ? pp[Op] : kp
         }
-        if (QD >= 0) return void this.moveTo(rD, ID[QD], ID, DD, zD, KD);
-        if (!pD) return;
-        const XD = "Right" === zD || "Down" === zD ? 1 : -1;
-        if (ED && jD(ED, JD, XD)) {
-          const DD = "y" === JD ? ED.clientHeight : ED.clientWidth;
-          dD(ED, JD, XD * DD * .5), this.retryMove = {
-            direction: zD,
-            atMs: wD + 80
+        if (kp >= 0) return void this.moveTo(Sp, yp[kp], yp, pp, ip, Ip);
+        if (!Op) return;
+        const mp = "Right" === ip || "Down" === ip ? 1 : -1;
+        if (jp && lp(jp, ep, mp)) {
+          const pp = "y" === ep ? jp.clientHeight : jp.clientWidth;
+          Qp(jp, ep, mp * pp * .5), this.retryMove = {
+            direction: ip,
+            atMs: cp + 80
           }
         }
       }
-      moveTo(DD, zD, wD, pD, sD, KD) {
-        const rD = this.tabStripNav.findTabContent(DD, zD, wD);
-        rD && "true" !== DD.dataset.padSelected ? this.openTab(DD, rD, pD, sD) : KD && !rD || this.setFocus(this.tabStripNav.redirect(DD, zD, wD, pD), {
+      moveTo(pp, ip, cp, Op, op, Ip) {
+        const Sp = this.tabStripNav.findTabContent(pp, ip, cp);
+        Sp && "true" !== pp.dataset.padSelected ? this.openTab(pp, Sp, Op, op) : Ip && !Sp || this.setFocus(this.tabStripNav.redirect(pp, ip, cp, Op), {
           byUser: !0
         })
       }
-      openTab(DD, zD, wD, pD) {
-        const sD = zD.parentElement;
-        (0, oD.c)(DD), this.focusWhenFound((() => "true" !== DD.dataset.padSelected ? null : zD.isConnected ? this.tabStripNav.pickContentStart(zD, this.getEnabledCandidates(wD), wD) : sD ? this.tabStripNav.pickReplacedContentStart(DD, sD, this.getEnabledCandidates(wD), wD) : null), 3e3), this.tabOpenWait = {
+      openTab(pp, ip, cp, Op) {
+        const op = ip.parentElement;
+        (0, gp.b)(pp), this.focusWhenFound((() => "true" !== pp.dataset.padSelected ? null : ip.isConnected ? this.tabStripNav.pickContentStart(ip, this.getEnabledCandidates(cp), cp) : op ? this.tabStripNav.pickReplacedContentStart(pp, op, this.getEnabledCandidates(cp), cp) : null), 3e3), this.tabOpenWait = {
           wait: this.pendingFocus,
-          direction: pD
+          direction: Op
         }
       }
-      enterTab(DD, zD, wD, pD) {
-        this.move(wD, (DD => {
-          const zD = [...DD.querySelectorAll(Zp)].filter((zD => zD.closest(Np) === DD));
-          if (zD.length >= 2) {
-            const DD = zD[0].getBoundingClientRect(),
-              wD = zD[1].getBoundingClientRect();
-            return Math.abs(wD.top - DD.top) > Math.abs(wD.left - DD.left) ? "Right" : "Down"
+      enterTab(pp, ip, cp, Op) {
+        this.move(cp, (pp => {
+          const ip = [...pp.querySelectorAll(hO)].filter((ip => ip.closest(bO) === pp));
+          if (ip.length >= 2) {
+            const pp = ip[0].getBoundingClientRect(),
+              cp = ip[1].getBoundingClientRect();
+            return Math.abs(cp.top - pp.top) > Math.abs(cp.left - pp.left) ? "Right" : "Down"
           }
-          const wD = DD.getBoundingClientRect();
-          return wD.height > wD.width ? "Right" : "Down"
-        })(zD), pD, !1, !0), this.focused !== DD || this.pendingFocus || this.activate(DD)
+          const cp = pp.getBoundingClientRect();
+          return cp.height > cp.width ? "Right" : "Down"
+        })(ip), Op, !1, !0), this.focused !== pp || this.pendingFocus || this.activate(pp)
       }
-      handleScroll(DD, zD) {
-        const wD = (0, ID.i)(DD.rightStick, .2);
-        if (0 === wD.x && 0 === wD.y) return void(this.scrollRemainder = {
+      handleScroll(pp, ip) {
+        const cp = (0, yp.h)(pp.rightStick, .2);
+        if (0 === cp.x && 0 === cp.y) return void(this.scrollRemainder = {
           x: 0,
           y: 0
         });
-        const pD = DD.dtMs / 1e3;
-        for (const KD of ["x", "y"]) {
-          var sD;
-          const DD = wD[KD];
-          if (0 === DD) continue;
-          const rD = null !== (sD = CD(this.focused, KD, zD.root)) && void 0 !== sD ? sD : TD(zD.root, KD);
-          if (!rD) continue;
-          const LD = Math.sign(DD) * DD * DD * 1500 * pD + this.scrollRemainder[KD],
-            cD = Math.trunc(LD);
-          this.scrollRemainder[KD] = LD - cD, 0 !== cD && (dD(rD, KD, cD), this.scrolledInLayer = !0)
+        const Op = pp.dtMs / 1e3;
+        for (const Ip of ["x", "y"]) {
+          var op;
+          const pp = cp[Ip];
+          if (0 === pp) continue;
+          const Sp = null !== (op = Mp(this.focused, Ip, ip.root)) && void 0 !== op ? op : Ep(ip.root, Ip);
+          if (!Sp) continue;
+          const xp = Math.sign(pp) * pp * pp * 1500 * Op + this.scrollRemainder[Ip],
+            Lp = Math.trunc(xp);
+          this.scrollRemainder[Ip] = xp - Lp, 0 !== Lp && (Qp(Sp, Ip, Lp), this.scrolledInLayer = !0)
         }
       }
     };
-    var ws = wD(8237);
-    var ps = wD(8740);
-    const ss = {
+    var Oo = cp(8346);
+    var oo = cp(8861);
+    const Io = {
         duration: 80,
         strongMagnitude: .2,
         weakMagnitude: .2,
         needsPadInUse: !1
       },
-      Ks = {
+      So = {
         damage: {
           duration: 120,
           strongMagnitude: .45,
@@ -3673,82 +4008,82 @@ export const modules = {
           needsPadInUse: !0
         },
         connect: {
-          ...ss,
+          ...Io,
           minIntervalMs: 1e3
         },
         preview: {
-          ...ss,
+          ...Io,
           minIntervalMs: 0
         }
       };
-    const rs = new class {
-        constructor(DD) {
-          this.deps = DD, this.lastPlayedMs = {}, this.loggedFailure = !1, this.logFailure = DD => {
-            this.loggedFailure || (this.loggedFailure = !0, console.warn("Controller vibration failed; further failures are not logged.", DD))
+    const xo = new class {
+        constructor(pp) {
+          this.deps = pp, this.lastPlayedMs = {}, this.loggedFailure = !1, this.logFailure = pp => {
+            this.loggedFailure || (this.loggedFailure = !0, console.warn("Controller vibration failed; further failures are not logged.", pp))
           }
         }
-        play(DD, zD) {
-          const wD = Ks[DD];
-          if (!this.deps.isVibrationOn() || wD.needsPadInUse && !this.deps.isPadInUse()) return !1;
-          const pD = this.lastPlayedMs[DD];
-          if (void 0 !== pD && zD - pD < wD.minIntervalMs) return !1;
-          const sD = this.deps.getActuator();
-          if (!sD) return !1;
-          this.lastPlayedMs[DD] = zD;
+        play(pp, ip) {
+          const cp = So[pp];
+          if (!this.deps.isVibrationOn() || cp.needsPadInUse && !this.deps.isPadInUse()) return !1;
+          const Op = this.lastPlayedMs[pp];
+          if (void 0 !== Op && ip - Op < cp.minIntervalMs) return !1;
+          const op = this.deps.getActuator();
+          if (!op) return !1;
+          this.lastPlayedMs[pp] = ip;
           const {
-            duration: KD,
-            strongMagnitude: rD,
-            weakMagnitude: LD
-          } = wD;
+            duration: Ip,
+            strongMagnitude: Sp,
+            weakMagnitude: xp
+          } = cp;
           try {
-            sD.playEffect("dual-rumble", {
-              duration: KD,
-              strongMagnitude: rD,
-              weakMagnitude: LD
+            op.playEffect("dual-rumble", {
+              duration: Ip,
+              strongMagnitude: Sp,
+              weakMagnitude: xp
             }).catch(this.logFailure)
-          } catch (cD) {
-            this.logFailure(cD)
+          } catch (Lp) {
+            this.logFailure(Lp)
           }
           return !0
         }
       }({
-        getActuator: () => (DD => {
-          const zD = null === DD || void 0 === DD ? void 0 : DD.vibrationActuator;
-          return "function" === typeof(null === zD || void 0 === zD ? void 0 : zD.playEffect) ? zD : null
-        })(rD.g.getActiveGamepad()),
-        isVibrationOn: () => (0, UD.g)().vibration,
-        isPadInUse: fD.o
+        getActuator: () => (pp => {
+          const ip = null === pp || void 0 === pp ? void 0 : pp.vibrationActuator;
+          return "function" === typeof(null === ip || void 0 === ip ? void 0 : ip.playEffect) ? ip : null
+        })(Sp.e.getActiveGamepad()),
+        isVibrationOn: () => (0, Pp.h)().vibration,
+        isPadInUse: Wp.n
       }),
-      Ls = DD => {
-        rs.play(DD, performance.now())
+      Lo = pp => {
+        xo.play(pp, performance.now())
       };
-    var cs = wD(8243),
-      gs = wD(2901),
-      Rs = wD(116),
-      As = wD(35),
-      Us = wD(655);
-    class fs {
-      constructor(DD) {
-        this.deps = DD
+    var Yo = cp(8348),
+      Do = cp(3003),
+      Ao = cp(116),
+      Po = cp(44),
+      Wo = cp(670);
+    class yo {
+      constructor(pp) {
+        this.deps = pp
       }
       check() {
-        let DD = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
-        const zD = this.deps.isPadActive() ? this.deps.getPadFamily() : null;
-        if (!zD) return "skipped";
-        const wD = DD ? this.deps.getVisitId() : this.deps.peekVisitId();
-        return null === wD || this.deps.readReportedVisitId() === wD ? "skipped" : this.deps.canReport() ? (this.deps.writeReportedVisitId(wD), this.deps.sI(zD, this.deps.getInputType()), "reported") : "notReady"
+        let pp = !(arguments.length > 0 && void 0 !== arguments[0]) || arguments[0];
+        const ip = this.deps.isPadActive() ? this.deps.getPadFamily() : null;
+        if (!ip) return "skipped";
+        const cp = pp ? this.deps.getVisitId() : this.deps.peekVisitId();
+        return null === cp || this.deps.readReportedVisitId() === cp ? "skipped" : this.deps.canReport() ? (this.deps.writeReportedVisitId(cp), this.deps.Yy(ip, this.deps.getInputType()), "reported") : "notReady"
       }
     }
-    const Is = "controllerUsageReportedVisit";
-    var Bs = wD(1355),
-      Gs = wD(1737),
-      hs = wD(638),
-      ns = wD(1442),
-      Ms = wD(1260);
-    const Os = DD => ({
-        translationKey: `controller:${DD}`
+    const Uo = "controllerUsageReportedVisit";
+    var wo = cp(1372),
+      vo = cp(1765),
+      to = cp(657),
+      Ho = cp(1476),
+      eo = cp(1260);
+    const uo = pp => ({
+        translationKey: `controller:${pp}`
       }),
-      Es = {
+      jo = {
         A: "A",
         B: "B",
         X: "X",
@@ -3757,19 +4092,19 @@ export const modules = {
         RB: "RB",
         LT: "LT",
         RT: "RT",
-        View: Os("padButtonView"),
-        Menu: Os("padButtonMenu"),
+        View: uo("padButtonView"),
+        Menu: uo("padButtonMenu"),
         LS: "L3",
         RS: "R3",
-        Up: Os("padButtonDpadUp"),
-        Down: Os("padButtonDpadDown"),
-        Left: Os("padButtonDpadLeft"),
-        Right: Os("padButtonDpadRight"),
-        Home: Os("padButtonHome"),
-        LeftStick: Os("padButtonLeftStick"),
-        RightStick: Os("padButtonRightStick")
+        Up: uo("padButtonDpadUp"),
+        Down: uo("padButtonDpadDown"),
+        Left: uo("padButtonDpadLeft"),
+        Right: uo("padButtonDpadRight"),
+        Home: uo("padButtonHome"),
+        LeftStick: uo("padButtonLeftStick"),
+        RightStick: uo("padButtonRightStick")
       },
-      Qs = {
+      ko = {
         xbox: {
           LS: "LS",
           RS: "RS"
@@ -3790,8 +4125,8 @@ export const modules = {
           RB: "R1",
           LT: "L2",
           RT: "R2",
-          View: Os("padButtonCreate"),
-          Menu: Os("padButtonOptions")
+          View: uo("padButtonCreate"),
+          Menu: uo("padButtonOptions")
         },
         nintendo: {
           A: "B",
@@ -3806,252 +4141,252 @@ export const modules = {
           Menu: "+"
         }
       },
-      Xs = (DD, zD) => {
-        var wD;
-        const pD = null !== (wD = Qs[DD][zD]) && void 0 !== wD ? wD : Es[zD];
-        return "string" === typeof pD ? pD : (0, sD.z)(Ms.e.get().getCurrentLanguageCode(), pD.translationKey)
+      mo = (pp, ip) => {
+        var cp;
+        const Op = null !== (cp = ko[pp][ip]) && void 0 !== cp ? cp : jo[ip];
+        return "string" === typeof Op ? Op : (0, op.B)(eo.g.get().getCurrentLanguageCode(), Op.translationKey)
       },
-      Vs = DD => {
+      Ro = pp => {
         let {
-          glyph: zD,
-          family: wD,
-          className: pD
-        } = DD;
-        const sD = (0, fD.G)(),
-          KD = null !== wD && void 0 !== wD ? wD : sD,
-          rD = (0, cs.f)(KD, zD);
-        return (0, ZD.jsx)("span", {
-          className: ND()("ControllerGlyph", pD),
+          glyph: ip,
+          family: cp,
+          className: Op
+        } = pp;
+        const op = (0, Wp.I)(),
+          Ip = null !== cp && void 0 !== cp ? cp : op,
+          Sp = (0, Yo.g)(Ip, ip);
+        return (0, bp.jsx)("span", {
+          className: fp()("ControllerGlyph", Op),
           role: "img",
-          "aria-label": Xs(KD, zD),
+          "aria-label": mo(Ip, ip),
           style: {
-            "--pad-glyph-mask": `url(${rD})`,
-            "--pad-glyph-aspect": (0, cs.e)(KD, zD)
+            "--pad-glyph-mask": `url(${Sp})`,
+            "--pad-glyph-aspect": (0, Yo.c)(Ip, ip)
           }
         })
       };
-    var Ps = wD(1895);
-    const Cs = DD => {
+    var qo = cp(1929);
+    const Mo = pp => {
       let {
-        action: zD
-      } = DD;
+        action: ip
+      } = pp;
       const {
-        t: wD
-      } = (0, sD.E)();
-      switch (zD.kind) {
+        t: cp
+      } = (0, op.H)();
+      switch (ip.kind) {
         case "reload":
-          return (0, ZD.jsx)("span", {
-            children: wD("controller:gameplayReload")
+          return (0, bp.jsx)("span", {
+            children: cp("controller:gameplayReload")
           });
         case "specialAction":
           return null;
         case "customButton":
-          return (0, ZD.jsx)(Ps.e, {
-            text: zD.description ? [{
-              icon: zD.icon
-            }, ` ${zD.description}`] : [{
-              icon: zD.icon
+          return (0, bp.jsx)(qo.e, {
+            text: ip.description ? [{
+              icon: ip.icon
+            }, ` ${ip.description}`] : [{
+              icon: ip.icon
             }]
           });
         case "touchButton":
-          return (0, ZD.jsx)(Ps.e, {
-            text: zD.label
+          return (0, bp.jsx)(qo.e, {
+            text: ip.label
           })
       }
     };
-    var xs = wD(8745);
-    const Ts = DD => {
+    var Co = cp(8869);
+    const Eo = pp => {
       let {
-        hold: zD
-      } = DD;
-      return (0, ZD.jsx)("div", {
+        hold: ip
+      } = pp;
+      return (0, bp.jsx)("div", {
         className: "DropStackFillTrack",
         style: {
-          "--pad-drop-stack-hold": `${zD.holdMs}ms`
+          "--pad-drop-stack-hold": `${ip.holdMs}ms`
         },
-        children: (0, ZD.jsx)("div", {
+        children: (0, bp.jsx)("div", {
           className: "DropStackFillBar"
         })
-      }, zD.id)
+      }, ip.id)
     };
-    var bs = wD(8768),
-      ds = wD(8776),
-      Ss = wD(8779),
-      is = wD(8765);
-    const ls = () => {
+    var Xo = cp(8885),
+      Qo = cp(8887),
+      Jo = cp(8890),
+      Bo = cp(8883);
+    const No = () => {
         const {
-          gameState: DD
-        } = (0, cD.n)(["gameState"]), zD = (0, fD.D)(), [pD, sD] = (0, lD.useState)(!1), [KD, rD] = (0, lD.useState)(!1);
-        return (0, lD.useEffect)((() => {
-          "inGame" === DD && sD(!0)
-        }), [DD]), (0, lD.useEffect)((() => {
-          if (!pD) return;
-          let DD = null,
-            zD = !1;
-          return (hs.v ? Promise.all([wD.e(72), wD.e(89), wD.e(269), wD.e(189), wD.e(224), wD.e(223), wD.e(88)]).then((() => wD(40461))).then((DD => DD.startWasmPadGameplay)) : Promise.all([wD.e(72), wD.e(232), wD.e(231), wD.e(96), wD.e(75), wD.e(74), wD.e(73), wD.e(185), wD.e(228), wD.e(77), wD.e(89), wD.e(186), wD.e(222), wD.e(95), wD.e(225), wD.e(240), wD.e(120), wD.e(211), wD.e(86), wD.e(241), wD.e(76), wD.e(119), wD.e(242), wD.e(224), wD.e(158)]).then((() => wD(40585))).then((DD => DD.startPadGameplay))).then((wD => {
-            zD || (DD = wD())
-          })).catch((DD => {
-            console.error("Pad gameplay failed to load", DD), zD || rD(!0)
+          gameState: pp
+        } = (0, Lp.o)(["gameState"]), ip = (0, Wp.H)(), [Op, op] = (0, Np.useState)(!1), [Ip, Sp] = (0, Np.useState)(!1);
+        return (0, Np.useEffect)((() => {
+          "inGame" === pp && op(!0)
+        }), [pp]), (0, Np.useEffect)((() => {
+          if (!Op) return;
+          let pp = null,
+            ip = !1;
+          return (to.z ? Promise.all([cp.e(73), cp.e(90), cp.e(273), cp.e(191), cp.e(229), cp.e(228), cp.e(89)]).then((() => cp(40730))).then((pp => pp.startWasmPadGameplay)) : Promise.all([cp.e(73), cp.e(237), cp.e(236), cp.e(98), cp.e(76), cp.e(75), cp.e(74), cp.e(187), cp.e(233), cp.e(78), cp.e(90), cp.e(188), cp.e(227), cp.e(97), cp.e(239), cp.e(230), cp.e(246), cp.e(121), cp.e(215), cp.e(87), cp.e(247), cp.e(77), cp.e(160), cp.e(248), cp.e(229), cp.e(200)]).then((() => cp(40871))).then((pp => pp.startPadGameplay))).then((cp => {
+            ip || (pp = cp())
+          })).catch((pp => {
+            console.error("Pad gameplay failed to load", pp), ip || Sp(!0)
           })), () => {
-            var wD;
-            zD = !0, null === (wD = DD) || void 0 === wD || wD()
+            var cp;
+            ip = !0, null === (cp = pp) || void 0 === cp || cp()
           }
-        }), [pD]), (0, lD.useEffect)((() => {
-          KD && zD && (rD(!1), Bs.NotificationProvider.showPromptPopup({
+        }), [Op]), (0, Np.useEffect)((() => {
+          Ip && ip && (Sp(!1), wo.NotificationProvider.showPromptPopup({
             title: "controller:gameplayLoadFailedTitle",
             subtitle: "controller:gameplayLoadFailedSubtitle",
             confirmText: "settingsMenu:reloadPagePopupConfirm",
             confirmTooltip: "",
             cancelText: "general:cancel",
             cancelTooltip: ""
-          }).getResult().then((DD => {
-            !0 === DD && (0, Gs.reloadBloxd)()
+          }).getResult().then((pp => {
+            !0 === pp && (0, vo.reloadBloxd)()
           })))
-        }), [KD, zD]), (0, ZD.jsxs)(ZD.Fragment, {
-          children: [(0, ZD.jsx)(Ws, {}), (0, ZD.jsx)(Ns, {}), (0, ZD.jsx)(Zs, {})]
+        }), [Ip, ip]), (0, bp.jsxs)(bp.Fragment, {
+          children: [(0, bp.jsx)(To, {}), (0, bp.jsx)(fo, {}), (0, bp.jsx)(bo, {})]
         })
       },
-      Ws = () => {
+      To = () => {
         const {
-          t: DD
-        } = (0, sD.E)(), zD = (0, fD.D)(), {
-          gameState: wD,
-          isUiHidden: pD
-        } = (0, cD.n)(["gameState", "isUiHidden"]), {
-          hideButtonHints: KD
-        } = (0, UD.n)(), rD = (0, xs.j)(), LD = (0, xs.k)(), [gD, AD] = (0, lD.useState)(Ss.d);
-        return (0, ns.g)(is.m, AD), !zD || KD || pD || "inGame" !== wD || !rD && !gD ? null : (0, ZD.jsxs)("div", {
+          t: pp
+        } = (0, op.H)(), ip = (0, Wp.H)(), {
+          gameState: cp,
+          isUiHidden: Op
+        } = (0, Lp.o)(["gameState", "isUiHidden"]), {
+          hideButtonHints: Ip
+        } = (0, Pp.s)(), Sp = (0, Co.h)(), xp = (0, Co.i)(), [Yp, Ap] = (0, Np.useState)(Jo.e);
+        return (0, Ho.f)(Bo.m, Ap), !ip || Ip || Op || "inGame" !== cp || !Sp && !Yp ? null : (0, bp.jsxs)("div", {
           className: "PadActionHint SmallTextBold",
-          children: [rD && (0, ZD.jsxs)("span", {
+          children: [Sp && (0, bp.jsxs)("span", {
             className: "PadActionHintEntry",
-            children: [(0, ZD.jsx)(Vs, {
-              glyph: (0, RD.g)("actionButton")
-            }), (0, ZD.jsx)(Cs, {
-              action: rD
-            }), LD && (0, ZD.jsx)("span", {
+            children: [(0, bp.jsx)(Ro, {
+              glyph: (0, Dp.g)("actionButton")
+            }), (0, bp.jsx)(Mo, {
+              action: Sp
+            }), xp && (0, bp.jsx)("span", {
               className: "PadActionHintMore",
-              children: DD("controller:gameplayActionWheelHint")
+              children: pp("controller:gameplayActionWheelHint")
             })]
-          }), gD && (0, ZD.jsxs)("span", {
+          }), Yp && (0, bp.jsxs)("span", {
             className: "PadActionHintEntry",
-            children: [(0, ZD.jsx)(Vs, {
-              glyph: (0, RD.g)("pickBlock")
-            }), (0, ZD.jsx)("span", {
-              children: DD("controller:gameplayPickBlock")
+            children: [(0, bp.jsx)(Ro, {
+              glyph: (0, Dp.g)("pickBlock")
+            }), (0, bp.jsx)("span", {
+              children: pp("controller:gameplayPickBlock")
             })]
           })]
         })
       },
-      Ns = () => {
+      fo = () => {
         const {
-          t: DD
-        } = (0, sD.E)(), zD = (0, fD.D)(), {
-          gameState: wD,
-          isUiHidden: pD
-        } = (0, cD.n)(["gameState", "isUiHidden"]), [KD, rD] = (0, lD.useState)(bs.d);
-        return (0, ns.g)(is.j, rD), zD && !pD && "inGame" === wD && KD ? (0, ZD.jsxs)("div", {
+          t: pp
+        } = (0, op.H)(), ip = (0, Wp.H)(), {
+          gameState: cp,
+          isUiHidden: Op
+        } = (0, Lp.o)(["gameState", "isUiHidden"]), [Ip, Sp] = (0, Np.useState)(Xo.e);
+        return (0, Ho.f)(Bo.k, Sp), ip && !Op && "inGame" === cp && Ip ? (0, bp.jsxs)("div", {
           className: "PadDropStackFill SmallTextBold",
-          children: [(0, ZD.jsx)("span", {
-            children: DD("controller:gameplayDropStack")
-          }), (0, ZD.jsx)(Ts, {
-            hold: KD
+          children: [(0, bp.jsx)("span", {
+            children: pp("controller:gameplayDropStack")
+          }), (0, bp.jsx)(Eo, {
+            hold: Ip
           })]
         }) : null
       },
-      Zs = () => {
+      bo = () => {
         const {
-          t: DD
-        } = (0, sD.E)(), zD = (0, fD.D)(), {
-          gameState: wD,
-          isUiHidden: pD
-        } = (0, cD.n)(["gameState", "isUiHidden"]), {
-          hideButtonHints: KD
-        } = (0, UD.n)(), [rD, LD] = (0, lD.useState)(ds.e);
-        return (0, ns.g)(is.i, LD), zD && !pD && "inGame" === wD && rD ? (0, ZD.jsxs)("div", {
+          t: pp
+        } = (0, op.H)(), ip = (0, Wp.H)(), {
+          gameState: cp,
+          isUiHidden: Op
+        } = (0, Lp.o)(["gameState", "isUiHidden"]), {
+          hideButtonHints: Ip
+        } = (0, Pp.s)(), [Sp, xp] = (0, Np.useState)(Qo.b);
+        return (0, Ho.f)(Bo.i, xp), ip && !Op && "inGame" === cp && Sp ? (0, bp.jsxs)("div", {
           className: "PadAttackLatchedHint SmallTextBold",
-          children: [!KD && (0, ZD.jsx)(Vs, {
-            glyph: (0, RD.g)("attack")
-          }), (0, ZD.jsx)("span", {
-            children: DD("controller:gameplayAttackLatched")
+          children: [!Ip && (0, bp.jsx)(Ro, {
+            glyph: (0, Dp.g)("attack")
+          }), (0, bp.jsx)("span", {
+            children: pp("controller:gameplayAttackLatched")
           })]
         }) : null
       };
-    var ys = wD(8785),
-      ks = wD(1956),
-      ms = wD(2402),
-      es = wD(8223);
-    const os = DD => DD && !(0, ys.e)(ks.e.get("shopInfo")),
-      as = () => {
-        const DD = "inGame" === (0, cD.n)(["gameState"]).gameState;
-        return (0, ms.g)("shopInfo", (() => {
-          (0, es.h)(os(DD))
-        })), (0, lD.useEffect)((() => {
-          (0, es.h)(os(DD))
-        }), [DD]), null
+    var ho = cp(8895),
+      ao = cp(1982),
+      no = cp(2492),
+      Fo = cp(8334);
+    const go = pp => pp && !(0, ho.b)(ao.c.get("shopInfo")),
+      Go = () => {
+        const pp = "inGame" === (0, Lp.o)(["gameState"]).gameState;
+        return (0, no.e)("shopInfo", (() => {
+          (0, Fo.i)(go(pp))
+        })), (0, Np.useEffect)((() => {
+          (0, Fo.i)(go(pp))
+        }), [pp]), null
       },
-      us = () => {
+      ro = () => {
         const {
-          t: DD
-        } = (0, sD.E)(), {
-          hideButtonHints: zD
-        } = (0, UD.n)();
-        (0, fD.G)();
-        const wD = (0, Nz.i)();
-        return (0, lD.useEffect)((() => (() => {
-          const DD = AD.e.register({
+          t: pp
+        } = (0, op.H)(), {
+          hideButtonHints: ip
+        } = (0, Pp.s)();
+        (0, Wp.I)();
+        const cp = (0, bi.l)();
+        return (0, Np.useEffect)((() => (() => {
+          const pp = Ap.d.register({
               name: "inventory",
-              isActive: sw.isActive,
-              onFrame: sw.onFrame,
-              onDeactivate: sw.onDeactivate,
-              wakePressActs: sw.wakePressActs
+              isActive: xc.isActive,
+              onFrame: xc.onFrame,
+              onDeactivate: xc.onDeactivate,
+              wakePressActs: xc.wakePressActs
             }),
-            zD = DD => {
-              sw.noteRealPointer(DD), sw.shouldBlockRealPointer(DD) && DD.stopPropagation()
+            ip = pp => {
+              xc.noteRealPointer(pp), xc.shouldBlockRealPointer(pp) && pp.stopPropagation()
             };
-          for (const rD of Kw) window.addEventListener(rD, zD, !0);
-          const wD = (0, YD.h)((() => {
-              "inventory" !== AD.e.getActiveConsumerName() && sw.forgetSurface()
+          for (const Sp of Lc) window.addEventListener(Sp, ip, !0);
+          const cp = (0, Kp.i)((() => {
+              "inventory" !== Ap.d.getActiveConsumerName() && xc.forgetSurface()
             })),
-            pD = DD => {
-              const zD = DD.target;
-              (0, fD.o)() && (0, vD.i)(zD) && zD.closest(Jz) && (0, YD.e)() && (0, YD.n)(zD)
+            Op = pp => {
+              const ip = pp.target;
+              (0, Wp.n)() && (0, Zp.g)(ip) && ip.closest(ji) && (0, Kp.e)() && (0, Kp.p)(ip)
             };
-          document.addEventListener("focusout", pD, !0);
+          document.addEventListener("focusout", Op, !0);
           const {
-            invalidate: sD,
-            onScroll: KD
-          } = sw.targets;
-          return document.addEventListener("scroll", KD, !0), window.addEventListener("resize", sD), () => {
-            DD(), wD();
-            for (const DD of Kw) window.removeEventListener(DD, zD, !0);
-            document.removeEventListener("scroll", KD, !0), document.removeEventListener("focusout", pD, !0), window.removeEventListener("resize", sD), sw.targets.disconnect()
+            invalidate: op,
+            onScroll: Ip
+          } = xc.targets;
+          return document.addEventListener("scroll", Ip, !0), window.addEventListener("resize", op), () => {
+            pp(), cp();
+            for (const pp of Lc) window.removeEventListener(pp, ip, !0);
+            document.removeEventListener("scroll", Ip, !0), document.removeEventListener("focusout", Op, !0), window.removeEventListener("resize", op), xc.targets.disconnect()
           }
-        })()), []), (0, ZD.jsxs)(ZD.Fragment, {
-          children: [(0, ZD.jsx)(eD, {
-            placer: sw.ring,
+        })()), []), (0, bp.jsxs)(bp.Fragment, {
+          children: [(0, bp.jsx)(Fp, {
+            placer: xc.ring,
             className: "InventorySlotCursorRing"
-          }), wD.showing && !zD && (0, ZD.jsx)("div", {
+          }), cp.showing && !ip && (0, bp.jsx)("div", {
             className: "InventorySlotCursorHints SmallTextBold",
-            children: FD(wD).map((zD => {
+            children: sp(cp).map((ip => {
               let {
-                actions: pD,
-                labelKey: sD
-              } = zD;
-              return (0, ZD.jsxs)("div", {
+                actions: Op,
+                labelKey: op
+              } = ip;
+              return (0, bp.jsxs)("div", {
                 className: "InventorySlotCursorHint",
-                children: [pD.map((DD => (0, ZD.jsx)(Vs, {
-                  glyph: (0, RD.g)(DD)
-                }, DD))), (0, ZD.jsx)("span", {
-                  children: DD(`controller:${sD}`)
-                }), "inventoryDrop" === sD && wD.dropStackHold && (0, ZD.jsx)(Ts, {
-                  hold: wD.dropStackHold
+                children: [Op.map((pp => (0, bp.jsx)(Ro, {
+                  glyph: (0, Dp.g)(pp)
+                }, pp))), (0, bp.jsx)("span", {
+                  children: pp(`controller:${op}`)
+                }), "inventoryDrop" === op && cp.dropStackHold && (0, bp.jsx)(Eo, {
+                  hold: cp.dropStackHold
                 })]
-              }, sD)
+              }, op)
             }))
           })]
         })
       },
-      vs = [{
+      Zo = [{
         command: "close",
         action: "keyboardClose",
         repeats: !1
@@ -4088,35 +4423,35 @@ export const modules = {
         action: "keyboardChannel",
         repeats: !1
       }],
-      ts = DD => Array.from(DD).map((DD => ({
+      zo = pp => Array.from(pp).map((pp => ({
         type: "char",
-        char: DD,
+        char: pp,
         width: 1
       }))),
-      Fs = function(DD) {
+      so = function(pp) {
         return {
           type: "command",
-          command: DD,
+          command: pp,
           width: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1
         }
       },
-      Ys = [Fs("page", 2), Fs("otherPage"), Fs("caretLeft"), Fs("space", 3), Fs("caretRight"), Fs("close", 1.5), Fs("submit", 1.5)],
-      Hs = [Fs("page", 2), Fs("otherPage"), Fs("caretLeft"), Fs("space", 2), Fs("caretRight"), Fs("newline"), Fs("close", 1.5), Fs("submit", 1.5)],
-      qs = [
-        [...ts("1234567890"), Fs("backspace")], ts("qwertyuiop/"), ts("asdfghjkl'?"), [Fs("shift", 2), ...ts("zxcvbnm,.")]
+      Ko = [so("page", 2), so("otherPage"), so("caretLeft"), so("space", 3), so("caretRight"), so("close", 1.5), so("submit", 1.5)],
+      Vo = [so("page", 2), so("otherPage"), so("caretLeft"), so("space", 2), so("caretRight"), so("newline"), so("close", 1.5), so("submit", 1.5)],
+      pI = [
+        [...zo("1234567890"), so("backspace")], zo("qwertyuiop/"), zo("asdfghjkl'?"), [so("shift", 2), ...zo("zxcvbnm,.")]
       ],
-      DK = [
-        [...ts("1234567890"), Fs("backspace")], ts("!@#$%^&*()/"), ts('-_=+[]{};:"'), ts("~`|\\<>'\u20ac\xa3,.")
+      iI = [
+        [...zo("1234567890"), so("backspace")], zo("!@#$%^&*()/"), zo('-_=+[]{};:"'), zo("~`|\\<>'\u20ac\xa3,.")
       ],
-      zK = {
-        letters: qs,
+      cI = {
+        letters: pI,
         accents: [
-          [...ts("1234567890"), Fs("backspace")], ts("\xe1\xe9\xed\xf3\xfa\xe0\xe8\xec\xf2\xf9\xf1"), ts("\xe2\xea\xee\xf4\xfb\xe4\xeb\xef\xf6\xfc\xe7"), [Fs("shift", 2), ...ts("\xe3\xf5\xdf\u0153\u011f\u015f\u0131\xbf\xa1")]
+          [...zo("1234567890"), so("backspace")], zo("\xe1\xe9\xed\xf3\xfa\xe0\xe8\xec\xf2\xf9\xf1"), zo("\xe2\xea\xee\xf4\xfb\xe4\xeb\xef\xf6\xfc\xe7"), [so("shift", 2), ...zo("\xe3\xf5\xdf\u0153\u011f\u015f\u0131\xbf\xa1")]
         ],
-        symbols: DK
+        symbols: iI
       },
-      wK = new Set(["de", "es", "fr", "it", "nl", "pt", "pt-BR", "tr", "vi"]),
-      pK = (DD, zD) => "letters" === DD ? zD ? {
+      OI = new Set(["de", "es", "fr", "it", "nl", "pt", "pt-BR", "tr", "vi"]),
+      oI = (pp, ip) => "letters" === pp ? ip ? {
         page: "accents",
         otherPage: "symbols"
       } : {
@@ -4124,65 +4459,65 @@ export const modules = {
         otherPage: "accents"
       } : {
         page: "letters",
-        otherPage: "accents" === DD ? "symbols" : "accents"
+        otherPage: "accents" === pp ? "symbols" : "accents"
       },
-      sK = function(DD, zD) {
-        const wD = ((DD, zD) => [...zK[DD], zD ? Hs : Ys])(DD, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]);
-        if (0 === zD) return wD;
-        const pD = Math.min(2, KK(wD[0]) / zD);
+      II = function(pp, ip) {
+        const cp = ((pp, ip) => [...cI[pp], ip ? Vo : Ko])(pp, arguments.length > 2 && void 0 !== arguments[2] && arguments[2]);
+        if (0 === ip) return cp;
+        const Op = Math.min(2, SI(cp[0]) / ip);
         return [Array.from({
-          length: zD
-        }, ((DD, zD) => ({
+          length: ip
+        }, ((pp, ip) => ({
           type: "phrase",
-          phraseIndex: zD,
-          width: pD
-        }))), ...wD]
+          phraseIndex: ip,
+          width: Op
+        }))), ...cp]
       },
-      KK = DD => DD.reduce(((DD, zD) => DD + zD.width), 0),
-      rK = DD => Math.max(...DD.map(KK)),
-      LK = (DD, zD) => {
-        const wD = DD[zD.row];
-        let pD = (rK(DD) - KK(wD)) / 2;
-        for (let sD = 0; sD < zD.col; sD++) pD += wD[sD].width;
-        return pD + wD[zD.col].width / 2
+      SI = pp => pp.reduce(((pp, ip) => pp + ip.width), 0),
+      xI = pp => Math.max(...pp.map(SI)),
+      LI = (pp, ip) => {
+        const cp = pp[ip.row];
+        let Op = (xI(pp) - SI(cp)) / 2;
+        for (let op = 0; op < ip.col; op++) Op += cp[op].width;
+        return Op + cp[ip.col].width / 2
       },
-      cK = (DD, zD, wD) => {
-        let pD = 0,
-          sD = 1 / 0;
-        for (let KD = 0; KD < DD[zD].length; KD++) {
-          const rD = Math.abs(LK(DD, {
-            row: zD,
-            col: KD
-          }) - wD);
-          rD < sD - 1e-9 && (pD = KD, sD = rD)
+      YI = (pp, ip, cp) => {
+        let Op = 0,
+          op = 1 / 0;
+        for (let Ip = 0; Ip < pp[ip].length; Ip++) {
+          const Sp = Math.abs(LI(pp, {
+            row: ip,
+            col: Ip
+          }) - cp);
+          Sp < op - 1e-9 && (Op = Ip, op = Sp)
         }
-        return pD
+        return Op
       },
-      gK = (DD, zD) => {
-        const wD = Math.max(0, Math.min(DD.length - 1, zD.row));
+      DI = (pp, ip) => {
+        const cp = Math.max(0, Math.min(pp.length - 1, ip.row));
         return {
-          row: wD,
-          col: Math.max(0, Math.min(DD[wD].length - 1, zD.col))
+          row: cp,
+          col: Math.max(0, Math.min(pp[cp].length - 1, ip.col))
         }
       },
-      RK = (DD, zD, wD) => "once" === DD && zD - wD <= 400 ? "caps" : "off" === DD ? "once" : "off",
-      AK = (DD, zD) => "once" === DD && (DD => DD.toLowerCase() !== DD.toUpperCase())(zD) ? "off" : DD,
-      UK = (DD, zD, wD) => {
-        if ("symbols" === zD || "off" === wD) return DD;
-        const pD = DD.toUpperCase();
-        return 1 === pD.length ? pD : DD
+      AI = (pp, ip, cp) => "once" === pp && ip - cp <= 400 ? "caps" : "off" === pp ? "once" : "off",
+      PI = (pp, ip) => "once" === pp && (pp => pp.toLowerCase() !== pp.toUpperCase())(ip) ? "off" : pp,
+      WI = (pp, ip, cp) => {
+        if ("symbols" === ip || "off" === cp) return pp;
+        const Op = pp.toUpperCase();
+        return 1 === Op.length ? Op : pp
       };
-    var fK = wD(8655);
-    const IK = ["controller:keyboardPhraseGg", "controller:keyboardPhraseHi", "controller:keyboardPhraseThanks", "controller:keyboardPhraseGl", "controller:keyboardPhraseBrb", "controller:keyboardPhraseYes", "controller:keyboardPhraseNo", "controller:keyboardPhraseHelp"];
-    const BK = new class {
+    var yI = cp(8785);
+    const UI = ["controller:keyboardPhraseGg", "controller:keyboardPhraseHi", "controller:keyboardPhraseThanks", "controller:keyboardPhraseGl", "controller:keyboardPhraseBrb", "controller:keyboardPhraseYes", "controller:keyboardPhraseNo", "controller:keyboardPhraseHelp"];
+    const wI = new class {
         constructor() {
           this.lastSendMs = -1 / 0
         }
-        claim(DD) {
-          return !(DD - this.lastSendMs < 2e3) && (this.lastSendMs = DD, !0)
+        claim(pp) {
+          return !(pp - this.lastSendMs < 2e3) && (this.lastSendMs = pp, !0)
         }
       },
-      GK = {
+      vI = {
         visible: !1,
         target: null,
         kind: null,
@@ -4197,77 +4532,77 @@ export const modules = {
         placement: "bottom",
         maxHeightPx: 0
       },
-      hK = ["Vg", "nameTag"],
-      nK = DD => {
-        const zD = DD.target instanceof HTMLTextAreaElement && !hK.includes(DD.kind);
-        return sK(DD.page, "chat" === DD.kind ? IK.length : 0, zD)
+      tI = ["Ux", "nameTag"],
+      HI = pp => {
+        const ip = pp.target instanceof HTMLTextAreaElement && !tI.includes(pp.kind);
+        return II(pp.page, "chat" === pp.kind ? UI.length : 0, ip)
       },
-      MK = DD => {
-        const zD = DD.getBoundingClientRect(),
-          wD = window.innerHeight,
-          pD = zD.top + zD.height / 2 < wD / 2 ? "bottom" : "top",
-          sD = "bottom" === pD ? wD - zD.bottom - 6 : zD.top - 6;
+      dI = pp => {
+        const ip = pp.getBoundingClientRect(),
+          cp = window.innerHeight,
+          Op = ip.top + ip.height / 2 < cp / 2 ? "bottom" : "top",
+          op = "bottom" === Op ? cp - ip.bottom - 6 : ip.top - 6;
         return {
-          placement: pD,
-          maxHeightPx: Math.min(.46 * wD, Math.max(.3 * wD, sD))
+          placement: Op,
+          maxHeightPx: Math.min(.46 * cp, Math.max(.3 * cp, op))
         }
       },
-      OK = DD => {
-        (0, xw.k)(DD) ? (0, xw.d)().close(): (zs.noteChosenStop(DD), DD.blur())
+      eI = pp => {
+        (0, Ec.f)(pp) ? (0, Ec.b)().close(): (co.noteChosenStop(pp), pp.blur())
       };
-    class JK {
-      constructor(DD) {
-        this.host = DD, this.lastShiftPressMs = -1 / 0, this.phraseTexts = [], this.phrasesFill = !1
+    class uI {
+      constructor(pp) {
+        this.host = pp, this.lastShiftPressMs = -1 / 0, this.phraseTexts = [], this.phrasesFill = !1
       }
-      setPhraseRow(DD, zD) {
-        this.phraseTexts = DD, this.phrasesFill = zD
+      setPhraseRow(pp, ip) {
+        this.phraseTexts = pp, this.phrasesFill = ip
       }
-      pressKey(DD) {
-        const zD = this.host.getState(),
-          wD = nK(zD),
-          pD = wD[DD.row][DD.col];
+      pressKey(pp) {
+        const ip = this.host.getState(),
+          cp = HI(ip),
+          Op = cp[pp.row][pp.col];
         this.host.setState({
-          ...zD,
-          focus: DD,
-          preferredX: LK(wD, DD)
-        }), "char" === pD.type ? this.typeChar(pD.char) : "command" === pD.type ? this.runCommand(pD.command) : this.sendPhrase(pD.phraseIndex)
+          ...ip,
+          focus: pp,
+          preferredX: LI(cp, pp)
+        }), "char" === Op.type ? this.typeChar(Op.char) : "command" === Op.type ? this.runCommand(Op.command) : this.sendPhrase(Op.phraseIndex)
       }
-      runCommand(DD) {
-        const zD = this.host.getState();
-        switch (DD) {
+      runCommand(pp) {
+        const ip = this.host.getState();
+        switch (pp) {
           case "backspace":
-            (0, vD.c)(zD.target);
+            (0, Zp.b)(ip.target);
             break;
           case "space":
-            (0, vD.e)(zD.target, " ");
+            (0, Zp.c)(ip.target, " ");
             break;
           case "newline":
-            (0, vD.e)(zD.target, "\n");
+            (0, Zp.c)(ip.target, "\n");
             break;
           case "caretLeft":
-            (0, vD.j)(zD.target, -1);
+            (0, Zp.j)(ip.target, -1);
             break;
           case "caretRight":
-            (0, vD.j)(zD.target, 1);
+            (0, Zp.j)(ip.target, 1);
             break;
           case "shift": {
-            const DD = performance.now();
+            const pp = performance.now();
             this.host.setState({
-              ...zD,
-              shift: RK(zD.shift, DD, this.lastShiftPressMs)
-            }), this.lastShiftPressMs = DD;
+              ...ip,
+              shift: AI(ip.shift, pp, this.lastShiftPressMs)
+            }), this.lastShiftPressMs = pp;
             break
           }
           case "page":
           case "otherPage": {
-            const wD = pK(zD.page, zD.accentsFirst)[DD];
+            const cp = oI(ip.page, ip.accentsFirst)[pp];
             this.host.setState({
-              ...zD,
-              page: wD,
-              focus: gK(nK({
-                ...zD,
-                page: wD
-              }), zD.focus)
+              ...ip,
+              page: cp,
+              focus: DI(HI({
+                ...ip,
+                page: cp
+              }), ip.focus)
             });
             break
           }
@@ -4278,362 +4613,362 @@ export const modules = {
             this.close();
             break;
           case "channel":
-            (0, xw.k)(zD.target) && (0, xw.d)().selectNextChannel()
+            (0, Ec.f)(ip.target) && (0, Ec.b)().selectNextChannel()
         }
       }
       submit() {
-        var DD, zD;
+        var pp, ip;
         const {
-          target: wD
+          target: cp
         } = this.host.getState();
-        this.host.hide(), (0, xw.k)(wD) ? (0, xw.d)().submit() : (zs.noteChosenStop(wD), null === (DD = (zD = (0, xw.h)(wD)).submit) || void 0 === DD || DD.call(zD), document.activeElement === wD && wD.blur())
+        this.host.hide(), (0, Ec.f)(cp) ? (0, Ec.b)().submit() : (co.noteChosenStop(cp), null === (pp = (ip = (0, Ec.e)(cp)).submit) || void 0 === pp || pp.call(ip), document.activeElement === cp && cp.blur())
       }
       close() {
         const {
-          target: DD
+          target: pp
         } = this.host.getState();
-        this.host.hide(), OK(DD)
+        this.host.hide(), eI(pp)
       }
-      typeChar(DD) {
+      typeChar(pp) {
         const {
-          target: zD,
-          page: wD,
-          shift: pD
+          target: ip,
+          page: cp,
+          shift: Op
         } = this.host.getState();
-        (0, vD.e)(zD, UK(DD, wD, pD)), this.host.setState({
+        (0, Zp.c)(ip, WI(pp, cp, Op)), this.host.setState({
           ...this.host.getState(),
-          shift: AK(pD, DD)
+          shift: PI(Op, pp)
         })
       }
-      sendPhrase(DD) {
+      sendPhrase(pp) {
         if (this.phrasesFill) {
           const {
-            target: zD
-          } = this.host.getState(), wD = this.phraseTexts[DD];
-          wD && (zD.setSelectionRange(0, zD.value.length), (0, vD.e)(zD, wD))
-        } else BK.claim(performance.now()) && (this.host.hide(), (0, xw.d)().sendLine(this.phraseTexts[DD]))
+            target: ip
+          } = this.host.getState(), cp = this.phraseTexts[pp];
+          cp && (ip.setSelectionRange(0, ip.value.length), (0, Zp.c)(ip, cp))
+        } else wI.claim(performance.now()) && (this.host.hide(), (0, Ec.b)().sendLine(this.phraseTexts[pp]))
       }
     }
-    var EK = wD(8679);
-    const QK = {
+    var jI = cp(8807);
+    const kI = {
         initialDelayMs: 380,
         intervalMs: 85
       },
-      XK = {
+      mI = {
         initialDelayMs: 400,
         intervalMs: 55
       };
-    class VK {
-      constructor(DD, zD) {
-        this.host = DD, this.editor = zD, this.lastDirection = null, this.navRepeat = new ID.e((0, BD.b)(QK)), this.commandRepeats = new Map(vs.filter((DD => {
+    class RI {
+      constructor(pp, ip) {
+        this.host = pp, this.editor = ip, this.lastDirection = null, this.navRepeat = new yp.b((0, Up.e)(kI)), this.commandRepeats = new Map(Zo.filter((pp => {
           let {
-            repeats: zD
-          } = DD;
-          return zD
-        })).map((DD => {
+            repeats: ip
+          } = pp;
+          return ip
+        })).map((pp => {
           let {
-            command: zD
-          } = DD;
-          return [zD, (0, BD.b)(XK)]
+            command: ip
+          } = pp;
+          return [ip, (0, Up.e)(mI)]
         })))
       }
       reset() {
         this.navRepeat.reset();
-        for (const DD of this.commandRepeats.values()) DD.reset()
+        for (const pp of this.commandRepeats.values()) pp.reset()
       }
-      onVisibleFrame(DD) {
-        const zD = performance.now();
+      onVisibleFrame(pp) {
+        const ip = performance.now();
         for (const {
-            command: sD,
-            action: KD
+            command: op,
+            action: Ip
           }
-          of vs) {
-          const wD = (0, RD.g)(KD),
-            pD = this.commandRepeats.get(sD);
-          if ((pD ? pD.update(DD.isHeld(wD), zD) : DD.wasPressed(wD)) && (this.editor.runCommand(sD), !this.host.getState().visible)) return
+          of Zo) {
+          const cp = (0, Dp.g)(Ip),
+            Op = this.commandRepeats.get(op);
+          if ((Op ? Op.update(pp.isHeld(cp), ip) : pp.wasPressed(cp)) && (this.editor.runCommand(op), !this.host.getState().visible)) return
         }
-        if (DD.wasPressed((0, RD.g)("keyboardType")) && (this.editor.pressKey(this.host.getState().focus), !this.host.getState().visible)) return;
-        const wD = this.readNavDirection(DD);
-        this.lastDirection = wD;
-        const pD = this.navRepeat.update(wD, zD);
-        pD && this.navigate(pD)
+        if (pp.wasPressed((0, Dp.g)("keyboardType")) && (this.editor.pressKey(this.host.getState().focus), !this.host.getState().visible)) return;
+        const cp = this.readNavDirection(pp);
+        this.lastDirection = cp;
+        const Op = this.navRepeat.update(cp, ip);
+        Op && this.navigate(Op)
       }
-      onHiddenFrame(DD, zD) {
-        var wD;
-        if (DD.wasPressed((0, RD.g)("keyboardClose"))) return void OK(zD);
-        const pD = (0, RD.g)("keyboardType");
-        if (DD.wasPressed(pD)) return AD.e.consumeButton(pD), void this.host.open(zD);
-        const sD = this.readNavDirection(DD),
-          KD = null !== sD && sD !== this.lastDirection;
-        if (this.lastDirection = sD, !KD || (0, xw.k)(zD)) return;
-        const rD = (null === (wD = Ap()) || void 0 === wD ? void 0 : wD.root.contains(zD)) || null !== zD.closest(".EntireInventoryWrapper");
-        OK(zD), rD && AD.e.handOffHeldInput()
+      onHiddenFrame(pp, ip) {
+        var cp;
+        if (pp.wasPressed((0, Dp.g)("keyboardClose"))) return void eI(ip);
+        const Op = (0, Dp.g)("keyboardType");
+        if (pp.wasPressed(Op)) return Ap.d.consumeButton(Op), void this.host.open(ip);
+        const op = this.readNavDirection(pp),
+          Ip = null !== op && op !== this.lastDirection;
+        if (this.lastDirection = op, !Ip || (0, Ec.f)(ip)) return;
+        const Sp = (null === (cp = WO()) || void 0 === cp ? void 0 : cp.root.contains(ip)) || null !== ip.closest(".EntireInventoryWrapper");
+        eI(ip), Sp && Ap.d.handOffHeldInput()
       }
-      navigate(DD) {
-        const zD = this.host.getState();
-        if ("Up" === DD && 0 === zD.focus.row && "chat" === zD.kind) return (0, xw.d)().stepHistory(), void this.host.setState({
-          ...zD
+      navigate(pp) {
+        const ip = this.host.getState();
+        if ("Up" === pp && 0 === ip.focus.row && "chat" === ip.kind) return (0, Ec.b)().stepHistory(), void this.host.setState({
+          ...ip
         });
-        const wD = ((DD, zD, wD, pD) => {
-          if ("Left" === wD || "Right" === wD) {
-            const pD = DD[zD.row].length,
-              sD = (zD.col + ("Right" === wD ? 1 : -1) + pD) % pD,
-              KD = {
-                row: zD.row,
-                col: sD
+        const cp = ((pp, ip, cp, Op) => {
+          if ("Left" === cp || "Right" === cp) {
+            const Op = pp[ip.row].length,
+              op = (ip.col + ("Right" === cp ? 1 : -1) + Op) % Op,
+              Ip = {
+                row: ip.row,
+                col: op
               };
             return {
-              pos: KD,
-              preferredX: LK(DD, KD)
+              pos: Ip,
+              preferredX: LI(pp, Ip)
             }
           }
-          const sD = (zD.row + ("Down" === wD ? 1 : -1) + DD.length) % DD.length;
+          const op = (ip.row + ("Down" === cp ? 1 : -1) + pp.length) % pp.length;
           return {
             pos: {
-              row: sD,
-              col: cK(DD, sD, pD)
+              row: op,
+              col: YI(pp, op, Op)
             },
-            preferredX: pD
+            preferredX: Op
           }
-        })(nK(zD), zD.focus, DD, zD.preferredX);
+        })(HI(ip), ip.focus, pp, ip.preferredX);
         this.host.setState({
-          ...zD,
-          focus: wD.pos,
-          preferredX: wD.preferredX
+          ...ip,
+          focus: cp.pos,
+          preferredX: cp.preferredX
         })
       }
-      readNavDirection(DD) {
-        for (const zD of ID.w)
-          if (DD.isHeld(zD)) return zD;
-        return (0, ID.ab)((0, ID.i)(DD.leftStick, (0, UD.g)().moveDeadzone))
+      readNavDirection(pp) {
+        for (const ip of yp.w)
+          if (pp.isHeld(ip)) return ip;
+        return (0, yp._)((0, yp.h)(pp.leftStick, (0, Pp.h)().moveDeadzone))
       }
     }
-    const PK = ["Up", "Down", "Left", "Right"],
-      CK = new Set(["CapsLock", "Control", "Fn", "FnLock", "Hyper", "NumLock", "ScrollLock", "Shift", "Super"]);
-    const xK = new class {
+    const qI = ["Up", "Down", "Left", "Right"],
+      MI = new Set(["CapsLock", "Control", "Fn", "FnLock", "Hyper", "NumLock", "ScrollLock", "Shift", "Super"]);
+    const CI = new class {
       constructor() {
-        this.state = GK, this.listeners = new Set, this.ownedField = null, this.pendingChatInput = null, this.pendingChatTimeout = 0, this.savedInputMode = null, this.editor = new JK(this), this.padInput = new VK(this, this.editor)
+        this.state = vI, this.listeners = new Set, this.ownedField = null, this.pendingChatInput = null, this.pendingChatTimeout = 0, this.savedInputMode = null, this.editor = new uI(this), this.padInput = new RI(this, this.editor)
       }
       getState() {
         return this.state
       }
-      setState(DD) {
-        const zD = DD.visible !== this.state.visible;
-        this.state = DD;
-        for (const wD of this.listeners) wD();
-        zD && gD.l.KG(EK.e, DD.visible)
+      setState(pp) {
+        const ip = pp.visible !== this.state.visible;
+        this.state = pp;
+        for (const cp of this.listeners) cp();
+        ip && Yp.m.GA(jI.b, pp.visible)
       }
-      subscribe(DD) {
-        return this.listeners.add(DD), () => {
-          this.listeners.delete(DD)
+      subscribe(pp) {
+        return this.listeners.add(pp), () => {
+          this.listeners.delete(pp)
         }
       }
       install() {
-        const DD = AD.e.register({
+        const pp = Ap.d.register({
             name: "keyboard",
-            isActive: () => this.state.visible || (0, vD.i)(document.activeElement),
-            onFrame: DD => {
-              this.onFrame(DD)
+            isActive: () => this.state.visible || (0, Zp.g)(document.activeElement),
+            onFrame: pp => {
+              this.onFrame(pp)
             },
             onDeactivate: () => {
               this.padInput.reset()
             },
-            wakePressActs: DD => PK.includes(DD) || !this.state.visible && DD === (0, RD.g)("keyboardType")
+            wakePressActs: pp => qI.includes(pp) || !this.state.visible && pp === (0, Dp.g)("keyboardType")
           }),
-          zD = DD => {
-            const zD = DD.target;
-            (0, vD.i)(zD) && (zD === this.pendingChatInput || (0, fD.o)() ? this.open(zD) : this.state.visible && zD !== this.state.target && (this.ownedField = null, this.hide()))
+          ip = pp => {
+            const ip = pp.target;
+            (0, Zp.g)(ip) && (ip === this.pendingChatInput || (0, Wp.n)() ? this.open(ip) : this.state.visible && ip !== this.state.target && (this.ownedField = null, this.hide()))
           },
-          wD = () => {
+          cp = () => {
             setTimeout((() => {
               this.releaseLostField()
             }), 0)
           },
-          pD = DD => {
-            DD.isTrusted && this.state.visible && (DD => !DD.repeat && !CK.has(DD.key) && !(0, fK.c)(DD.key) && !/^(Audio|Media|Browser|Launch|Gamepad)/.test(DD.key))(DD) && this.hide()
+          Op = pp => {
+            pp.isTrusted && this.state.visible && (pp => !pp.repeat && !MI.has(pp.key) && !(0, yI.d)(pp.key) && !/^(Audio|Media|Browser|Launch|Gamepad)/.test(pp.key))(pp) && this.hide()
           },
-          sD = () => {
+          op = () => {
             this.state.visible && this.setState({
               ...this.state,
-              ...MK(this.state.target)
+              ...dI(this.state.target)
             })
           };
-        document.addEventListener("focusin", zD, !0), document.addEventListener("focusout", wD, !0), window.addEventListener("keydown", pD, !0), window.addEventListener("resize", sD);
-        const KD = gD.l.subscribe(is.d, (() => {
+        document.addEventListener("focusin", ip, !0), document.addEventListener("focusout", cp, !0), window.addEventListener("keydown", Op, !0), window.addEventListener("resize", op);
+        const Ip = Yp.m.subscribe(Bo.d, (() => {
             this.openChat()
           })),
-          rD = gD.l.subscribe(EK.i, (DD => {
-            this.openForField(DD)
+          Sp = Yp.m.subscribe(jI.e, (pp => {
+            this.openForField(pp)
           }));
         return () => {
-          DD(), document.removeEventListener("focusin", zD, !0), document.removeEventListener("focusout", wD, !0), window.removeEventListener("keydown", pD, !0), window.removeEventListener("resize", sD), gD.l.unsubscribe(KD), gD.l.unsubscribe(rD), this.clearPendingChat(), this.hide(), this.ownedField = null
+          pp(), document.removeEventListener("focusin", ip, !0), document.removeEventListener("focusout", cp, !0), window.removeEventListener("keydown", Op, !0), window.removeEventListener("resize", op), Yp.m.unsubscribe(Ip), Yp.m.unsubscribe(Sp), this.clearPendingChat(), this.hide(), this.ownedField = null
         }
       }
       openChat() {
-        const DD = (0, xw.d)();
-        DD ? document.activeElement !== DD.input ? (this.clearPendingChat(), this.pendingChatInput = DD.input, this.pendingChatTimeout = window.setTimeout((() => {
+        const pp = (0, Ec.b)();
+        pp ? document.activeElement !== pp.input ? (this.clearPendingChat(), this.pendingChatInput = pp.input, this.pendingChatTimeout = window.setTimeout((() => {
           this.pendingChatInput = null
-        }), 250), DD.open()) : this.open(DD.input) : console.warn("controllerOpenChat with no chat mounted")
+        }), 250), pp.open()) : this.open(pp.input) : console.warn("controllerOpenChat with no chat mounted")
       }
-      openForField(DD) {
-        (0, vD.i)(DD) ? (document.activeElement !== DD && DD.focus(), document.activeElement === DD && this.open(DD)) : console.warn("controllerOpenKeyboard needs an editable input or textarea", DD)
+      openForField(pp) {
+        (0, Zp.g)(pp) ? (document.activeElement !== pp && pp.focus(), document.activeElement === pp && this.open(pp)) : console.warn("controllerOpenKeyboard needs an editable input or textarea", pp)
       }
-      open(DD) {
-        var zD;
-        if (this.clearPendingChat(), this.ownedField = DD, this.state.visible && this.state.target === DD) return;
-        this.restoreInputMode(), (0, vD.m)(DD), this.savedInputMode = DD.getAttribute("inputmode"), DD.setAttribute("inputmode", "none");
-        const wD = {
-          ...GK,
+      open(pp) {
+        var ip;
+        if (this.clearPendingChat(), this.ownedField = pp, this.state.visible && this.state.target === pp) return;
+        this.restoreInputMode(), (0, Zp.k)(pp), this.savedInputMode = pp.getAttribute("inputmode"), pp.setAttribute("inputmode", "none");
+        const cp = {
+          ...vI,
           visible: !0,
-          target: DD,
-          kind: (0, xw.k)(DD) ? "chat" : null !== (zD = (0, xw.h)(DD).kind) && void 0 !== zD ? zD : null,
-          accentsFirst: (pD = Ms.e.get().getCurrentLanguageCode(), wK.has(pD)),
-          ...MK(DD)
+          target: pp,
+          kind: (0, Ec.f)(pp) ? "chat" : null !== (ip = (0, Ec.e)(pp).kind) && void 0 !== ip ? ip : null,
+          accentsFirst: (Op = eo.g.get().getCurrentLanguageCode(), OI.has(Op)),
+          ...dI(pp)
         };
-        var pD;
-        const sD = nK(wD),
-          KD = ((DD, zD) => {
-            for (let wD = 0; wD < DD.length; wD++) {
-              const pD = DD[wD].findIndex((DD => "char" === DD.type && DD.char === zD));
-              if (-1 !== pD) return {
-                row: wD,
-                col: pD
+        var Op;
+        const op = HI(cp),
+          Ip = ((pp, ip) => {
+            for (let cp = 0; cp < pp.length; cp++) {
+              const Op = pp[cp].findIndex((pp => "char" === pp.type && pp.char === ip));
+              if (-1 !== Op) return {
+                row: cp,
+                col: Op
               }
             }
             return null
-          })(sD, "q");
+          })(op, "q");
         this.padInput.reset(), this.setState({
-          ...wD,
-          focus: KD,
-          preferredX: LK(sD, KD)
+          ...cp,
+          focus: Ip,
+          preferredX: LI(op, Ip)
         })
       }
       hide() {
-        this.state.visible && (this.restoreInputMode(), this.padInput.reset(), this.setState(GK))
+        this.state.visible && (this.restoreInputMode(), this.padInput.reset(), this.setState(vI))
       }
-      onFrame(DD) {
+      onFrame(pp) {
         if (this.releaseLostField()) return;
-        const zD = document.activeElement;
-        this.state.visible ? this.padInput.onVisibleFrame(DD) : (0, vD.i)(zD) && this.padInput.onHiddenFrame(DD, zD)
+        const ip = document.activeElement;
+        this.state.visible ? this.padInput.onVisibleFrame(pp) : (0, Zp.g)(ip) && this.padInput.onHiddenFrame(pp, ip)
       }
       releaseLostField() {
-        const DD = this.ownedField;
-        return !(null === DD || DD.isConnected && document.activeElement === DD) && (this.ownedField = null, this.hide(), !0)
+        const pp = this.ownedField;
+        return !(null === pp || pp.isConnected && document.activeElement === pp) && (this.ownedField = null, this.hide(), !0)
       }
       clearPendingChat() {
         window.clearTimeout(this.pendingChatTimeout), this.pendingChatInput = null
       }
       restoreInputMode() {
         const {
-          target: DD
+          target: pp
         } = this.state;
-        DD && (null === this.savedInputMode ? DD.removeAttribute("inputmode") : DD.setAttribute("inputmode", this.savedInputMode), this.savedInputMode = null)
+        pp && (null === this.savedInputMode ? pp.removeAttribute("inputmode") : pp.setAttribute("inputmode", this.savedInputMode), this.savedInputMode = null)
       }
     };
-    var TK = wD(8796);
-    const bK = new Map(vs.map((DD => {
+    var EI = cp(3722);
+    const XI = new Map(Zo.map((pp => {
         let {
-          command: zD,
-          action: wD
-        } = DD;
-        return [zD, wD]
+          command: ip,
+          action: cp
+        } = pp;
+        return [ip, cp]
       }))),
-      jK = {
+      lI = {
         letters: "ABC",
         accents: "\xe0\xe9",
         symbols: "&123"
       },
-      dK = {
+      QI = {
         chat: "controller:keyboardTargetChat",
         sign: "controller:keyboardTargetSign",
         nameTag: "controller:keyboardTargetNameTag",
         book: "controller:keyboardTargetBook",
-        Vg: "controller:keyboardTargetBookTitle"
+        Ux: "controller:keyboardTargetBookTitle"
       },
-      SK = DD => {
-        const zD = (() => {
-          const [, DD] = (0, lD.useReducer)((DD => DD + 1), 0);
-          return DD
+      JI = pp => {
+        const ip = (() => {
+          const [, pp] = (0, Np.useReducer)((pp => pp + 1), 0);
+          return pp
         })();
-        (0, lD.useEffect)((() => {
-          if (!DD) return;
-          const wD = ["input", "select", "selectionchange", "keyup", "pointerup"];
-          for (const sD of wD) DD.addEventListener(sD, zD);
-          document.addEventListener("selectionchange", zD);
-          const pD = new MutationObserver(zD);
-          return pD.observe(DD, {
+        (0, Np.useEffect)((() => {
+          if (!pp) return;
+          const cp = ["input", "select", "selectionchange", "keyup", "pointerup"];
+          for (const op of cp) pp.addEventListener(op, ip);
+          document.addEventListener("selectionchange", ip);
+          const Op = new MutationObserver(ip);
+          return Op.observe(pp, {
             attributeFilter: ["placeholder"]
           }), () => {
-            pD.disconnect();
-            for (const pD of wD) DD.removeEventListener(pD, zD);
-            document.removeEventListener("selectionchange", zD)
+            Op.disconnect();
+            for (const Op of cp) pp.removeEventListener(Op, ip);
+            document.removeEventListener("selectionchange", ip)
           }
-        }), [DD, zD])
+        }), [pp, ip])
       },
-      iK = DD => {
-        DD.preventDefault()
+      BI = pp => {
+        pp.preventDefault()
       },
-      lK = DD => {
-        "mouse" !== DD.pointerType && DD.preventDefault()
+      NI = pp => {
+        "mouse" !== pp.pointerType && pp.preventDefault()
       },
-      WK = () => {
-        var DD;
+      TI = () => {
+        var pp;
         const {
-          t: zD
-        } = (0, sD.E)(), wD = (() => {
-          const [DD, zD] = (0, lD.useState)(xK.getState());
-          return (0, lD.useEffect)((() => xK.subscribe((() => {
-            zD(xK.getState())
-          }))), []), DD
-        })(), pD = (0, fD.D)(), KD = (0, lD.useRef)(null);
-        (0, UD.n)(), (0, fD.G)(), (0, lD.useEffect)((() => {
-          const DD = xK.install(),
-            zD = null;
+          t: ip
+        } = (0, op.H)(), cp = (() => {
+          const [pp, ip] = (0, Np.useState)(CI.getState());
+          return (0, Np.useEffect)((() => CI.subscribe((() => {
+            ip(CI.getState())
+          }))), []), pp
+        })(), Op = (0, Wp.H)(), Ip = (0, Np.useRef)(null);
+        (0, Pp.s)(), (0, Wp.I)(), (0, Np.useEffect)((() => {
+          const pp = CI.install(),
+            ip = null;
           return () => {
-            DD(), null === zD || void 0 === zD || zD()
+            pp(), null === ip || void 0 === ip || ip()
           }
         }), []);
-        const rD = (0, lD.useMemo)((() => IK.map((DD => zD(DD)))), [zD]),
-          LD = wD.visible && "chat" === wD.kind ? wD.target : null;
-        SK(LD);
-        const cD = null !== (DD = null === LD || void 0 === LD ? void 0 : LD.value) && void 0 !== DD ? DD : "",
-          gD = ((DD, zD, wD) => {
-            if (!DD.startsWith("/")) return [];
-            const pD = [];
-            for (let sD = zD.length - 1; sD >= 0 && pD.length < wD; sD--) {
-              const wD = zD[sD].trim();
-              wD.startsWith(DD) && wD !== DD && !pD.includes(wD) && pD.push(wD)
+        const Sp = (0, Np.useMemo)((() => UI.map((pp => ip(pp)))), [ip]),
+          xp = cp.visible && "chat" === cp.kind ? cp.target : null;
+        JI(xp);
+        const Lp = null !== (pp = null === xp || void 0 === xp ? void 0 : xp.value) && void 0 !== pp ? pp : "",
+          Yp = ((pp, ip, cp) => {
+            if (!pp.startsWith("/")) return [];
+            const Op = [];
+            for (let op = ip.length - 1; op >= 0 && Op.length < cp; op--) {
+              const cp = ip[op].trim();
+              cp.startsWith(pp) && cp !== pp && !Op.includes(cp) && Op.push(cp)
             }
-            return pD
-          })(cD, cD.startsWith("/") ? (0, TK.g)() : [], IK.length),
-          AD = cD.startsWith("/"),
-          ID = AD ? IK.map(((DD, zD) => {
-            var wD;
-            return null !== (wD = gD[zD]) && void 0 !== wD ? wD : ""
-          })) : rD;
-        if ((0, lD.useEffect)((() => {
-            xK.editor.setPhraseRow(ID, AD)
-          })), (0, lD.useEffect)((() => {
-            const DD = KD.current;
-            if (DD) return DD.addEventListener("touchstart", iK, {
+            return Op
+          })(Lp, Lp.startsWith("/") ? (0, EI.f)() : [], UI.length),
+          Ap = Lp.startsWith("/"),
+          yp = Ap ? UI.map(((pp, ip) => {
+            var cp;
+            return null !== (cp = Yp[ip]) && void 0 !== cp ? cp : ""
+          })) : Sp;
+        if ((0, Np.useEffect)((() => {
+            CI.editor.setPhraseRow(yp, Ap)
+          })), (0, Np.useEffect)((() => {
+            const pp = Ip.current;
+            if (pp) return pp.addEventListener("touchstart", BI, {
               passive: !1
             }), () => {
-              DD.removeEventListener("touchstart", iK)
+              pp.removeEventListener("touchstart", BI)
             }
-          }), [wD.visible]), !wD.visible) return null;
-        const BD = nK(wD),
-          GD = rK(BD),
-          hD = DD => "char" === DD.type ? UK(DD.char, wD.page, wD.shift) : "phrase" === DD.type ? ID[DD.phraseIndex] : (DD => {
-            switch (DD) {
+          }), [cp.visible]), !cp.visible) return null;
+        const Up = HI(cp),
+          wp = xI(Up),
+          vp = pp => "char" === pp.type ? WI(pp.char, cp.page, cp.shift) : "phrase" === pp.type ? yp[pp.phraseIndex] : (pp => {
+            switch (pp) {
               case "backspace":
                 return "\u232b";
               case "shift":
-                return "caps" === wD.shift ? "\u21ea" : "\u21e7";
+                return "caps" === cp.shift ? "\u21ea" : "\u21e7";
               case "page":
               case "otherPage":
-                return jK[pK(wD.page, wD.accentsFirst)[DD]];
+                return lI[oI(cp.page, cp.accentsFirst)[pp]];
               case "space":
-                return zD("controller:keyboardSpace");
+                return ip("controller:keyboardSpace");
               case "caretLeft":
                 return "\u2190";
               case "caretRight":
@@ -4641,385 +4976,385 @@ export const modules = {
               case "newline":
                 return "\u21b5";
               case "submit":
-                return zD("chat" === wD.kind ? "controller:keyboardSend" : "controller:keyboardDone");
+                return ip("chat" === cp.kind ? "controller:keyboardSend" : "controller:keyboardDone");
               case "close":
                 return "\u2715";
               case "channel":
                 return "\u21c4"
             }
-          })(DD.command),
-          nD = DD => {
-            xK.editor.pressKey(DD)
+          })(pp.command),
+          tp = pp => {
+            CI.editor.pressKey(pp)
           };
-        return (0, ZD.jsxs)("div", {
-          ref: KD,
-          className: ND()(xw.s, "top" === wD.placement ? "PadKeyboardTop" : "PadKeyboardBottom", {
-            PadKeyboardMultiline: wD.target instanceof HTMLTextAreaElement
+        return (0, bp.jsxs)("div", {
+          ref: Ip,
+          className: fp()(Ec.k, "top" === cp.placement ? "PadKeyboardTop" : "PadKeyboardBottom", {
+            PadKeyboardMultiline: cp.target instanceof HTMLTextAreaElement
           }),
           style: {
-            "--pad-keyboard-rows": BD.length,
-            "--pad-keyboard-height": `${wD.maxHeightPx}px`
+            "--pad-keyboard-rows": Up.length,
+            "--pad-keyboard-height": `${cp.maxHeightPx}px`
           },
-          onPointerDown: lK,
-          onMouseDown: iK,
-          children: [(0, ZD.jsx)(NK, {
-            target: wD.target,
-            label: wD.kind ? zD(dK[wD.kind]) : wD.target.placeholder || zD("controller:keyboardTargetText")
-          }), (0, ZD.jsx)("div", {
+          onPointerDown: NI,
+          onMouseDown: BI,
+          children: [(0, bp.jsx)(fI, {
+            target: cp.target,
+            label: cp.kind ? ip(QI[cp.kind]) : cp.target.placeholder || ip("controller:keyboardTargetText")
+          }), (0, bp.jsx)("div", {
             className: "PadKeyboardRows",
-            children: BD.map(((DD, zD) => (0, ZD.jsx)("div", {
-              className: ND()("PadKeyboardRow", {
-                PadKeyboardPhraseRow: "phrase" === DD[0].type
+            children: Up.map(((pp, ip) => (0, bp.jsx)("div", {
+              className: fp()("PadKeyboardRow", {
+                PadKeyboardPhraseRow: "phrase" === pp[0].type
               }),
-              children: DD.map(((DD, sD) => {
-                const KD = pD && wD.focus.row === zD && wD.focus.col === sD,
-                  rD = "command" === DD.type ? bK.get(DD.command) : void 0;
-                return (0, ZD.jsx)("div", {
+              children: pp.map(((pp, op) => {
+                const Ip = Op && cp.focus.row === ip && cp.focus.col === op,
+                  Sp = "command" === pp.type ? XI.get(pp.command) : void 0;
+                return (0, bp.jsx)("div", {
                   className: "PadKeyboardKeySlot",
                   style: {
-                    width: DD.width / GD * 100 + "%"
+                    width: pp.width / wp * 100 + "%"
                   },
-                  children: (0, ZD.jsxs)("div", {
-                    className: ND()("PadKeyboardKey", {
-                      PadKeyboardKeyFocused: KD,
-                      PadKeyboardKeyCommand: "command" === DD.type,
-                      PadKeyboardKeyPhrase: "phrase" === DD.type,
-                      PadKeyboardKeyActive: "command" === DD.type && "shift" === DD.command && "off" !== wD.shift,
-                      PadKeyboardKeySubmit: "command" === DD.type && "submit" === DD.command
+                  children: (0, bp.jsxs)("div", {
+                    className: fp()("PadKeyboardKey", {
+                      PadKeyboardKeyFocused: Ip,
+                      PadKeyboardKeyCommand: "command" === pp.type,
+                      PadKeyboardKeyPhrase: "phrase" === pp.type,
+                      PadKeyboardKeyActive: "command" === pp.type && "shift" === pp.command && "off" !== cp.shift,
+                      PadKeyboardKeySubmit: "command" === pp.type && "submit" === pp.command
                     }),
                     role: "button",
                     onClick: () => {
-                      nD({
-                        row: zD,
-                        col: sD
+                      tp({
+                        row: ip,
+                        col: op
                       })
                     },
-                    onTouchEnd: DD => {
-                      var wD, pD;
-                      DD.preventDefault(), wD = DD.changedTouches[0], pD = DD.currentTarget.getBoundingClientRect(), wD && wD.clientX >= pD.left && wD.clientX <= pD.right && wD.clientY >= pD.top && wD.clientY <= pD.bottom && nD({
-                        row: zD,
-                        col: sD
+                    onTouchEnd: pp => {
+                      var cp, Op;
+                      pp.preventDefault(), cp = pp.changedTouches[0], Op = pp.currentTarget.getBoundingClientRect(), cp && cp.clientX >= Op.left && cp.clientX <= Op.right && cp.clientY >= Op.top && cp.clientY <= Op.bottom && tp({
+                        row: ip,
+                        col: op
                       })
                     },
-                    children: [(0, ZD.jsx)("span", {
+                    children: [(0, bp.jsx)("span", {
                       className: "PadKeyboardKeyLabel",
-                      children: hD(DD)
-                    }), pD && rD && (0, ZD.jsx)(Vs, {
+                      children: vp(pp)
+                    }), Op && Sp && (0, bp.jsx)(Ro, {
                       className: "PadKeyboardKeyGlyph",
-                      glyph: (0, RD.g)(rD)
+                      glyph: (0, Dp.g)(Sp)
                     })]
                   })
-                }, sD)
+                }, op)
               }))
-            }, zD)))
+            }, ip)))
           })]
         })
       },
-      NK = DD => {
+      fI = pp => {
         let {
-          target: zD,
-          label: wD
-        } = DD;
-        SK(zD);
-        const pD = (0, lD.useRef)(null),
-          sD = (0, lD.useRef)(null),
-          KD = zD instanceof HTMLTextAreaElement;
-        (0, lD.useLayoutEffect)((() => {
-          const DD = pD.current,
-            zD = sD.current;
-          KD ? DD.scrollTop = zD.offsetTop - DD.clientHeight / 2 : DD.scrollLeft = zD.offsetLeft - DD.clientWidth / 2
+          target: ip,
+          label: cp
+        } = pp;
+        JI(ip);
+        const Op = (0, Np.useRef)(null),
+          op = (0, Np.useRef)(null),
+          Ip = ip instanceof HTMLTextAreaElement;
+        (0, Np.useLayoutEffect)((() => {
+          const pp = Op.current,
+            ip = op.current;
+          Ip ? pp.scrollTop = ip.offsetTop - pp.clientHeight / 2 : pp.scrollLeft = ip.offsetLeft - pp.clientWidth / 2
         }));
         const {
-          value: rD,
-          start: LD,
-          end: cD
-        } = (0, vD.q)(zD), gD = "password" === zD.type ? "\u2022".repeat(rD.length) : rD;
-        return (0, ZD.jsxs)("div", {
+          value: Sp,
+          start: xp,
+          end: Lp
+        } = (0, Zp.o)(ip), Yp = "password" === ip.type ? "\u2022".repeat(Sp.length) : Sp;
+        return (0, bp.jsxs)("div", {
           className: "PadKeyboardPreview",
-          children: [(0, ZD.jsx)("div", {
+          children: [(0, bp.jsx)("div", {
             className: "PadKeyboardPreviewLabel SmallTextBold",
-            children: wD
-          }), (0, ZD.jsxs)("div", {
-            ref: pD,
-            className: ND()("PadKeyboardPreviewText", {
-              PadKeyboardPreviewMultiline: KD
+            children: cp
+          }), (0, bp.jsxs)("div", {
+            ref: Op,
+            className: fp()("PadKeyboardPreviewText", {
+              PadKeyboardPreviewMultiline: Ip
             }),
-            children: [(0, ZD.jsx)("span", {
-              children: gD.slice(0, LD)
-            }), (0, ZD.jsx)("span", {
-              ref: sD,
+            children: [(0, bp.jsx)("span", {
+              children: Yp.slice(0, xp)
+            }), (0, bp.jsx)("span", {
+              ref: op,
               className: "PadKeyboardCaret"
-            }), LD !== cD && (0, ZD.jsx)("span", {
+            }), xp !== Lp && (0, bp.jsx)("span", {
               className: "PadKeyboardPreviewSelection",
-              children: gD.slice(LD, cD)
-            }), (0, ZD.jsx)("span", {
-              children: gD.slice(cD)
-            }), 0 === gD.length && zD.placeholder && zD.placeholder !== wD && (0, ZD.jsx)("span", {
+              children: Yp.slice(xp, Lp)
+            }), (0, bp.jsx)("span", {
+              children: Yp.slice(Lp)
+            }), 0 === Yp.length && ip.placeholder && ip.placeholder !== cp && (0, bp.jsx)("span", {
               className: "PadKeyboardPreviewPlaceholder",
-              children: zD.placeholder
+              children: ip.placeholder
             })]
           })]
         })
       };
-    var ZK = wD(1383),
-      yK = wD(3430);
-    const kK = function() {
-        for (var DD = arguments.length, zD = new Array(DD), wD = 0; wD < DD; wD++) zD[wD] = arguments[wD];
-        return zD.map(RD.g)
+    var bI = cp(1419),
+      hI = cp(3532);
+    const aI = function() {
+        for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
+        return ip.map(Dp.g)
       },
-      mK = (DD, zD) => {
-        const wD = aw(DD);
-        return wD ? [{
-          glyphs: [wD],
-          labelKey: zD
+      nI = (pp, ip) => {
+        const cp = rc(pp);
+        return cp ? [{
+          glyphs: [cp],
+          labelKey: ip
         }] : []
       },
-      eK = [".BottomMiddleElements", ".BottomLeftElements > *", ".BottomRightElements > *", ".MiddleTextBottom .MiddleText"],
-      oK = "--pad-hint-bar-clearance",
-      aK = "[data-pad-hint-bar-avoid]",
-      uK = DD => {
-        const zD = [];
-        for (const wD of DD)(0, HD.r)(wD) && zD.push(wD.getBoundingClientRect());
-        return zD
+      FI = [".BottomMiddleElements", ".BottomLeftElements > *", ".BottomRightElements > *", ".MiddleTextBottom .MiddleText"],
+      gI = "--pad-hint-bar-clearance",
+      GI = "[data-pad-hint-bar-avoid]",
+      rI = pp => {
+        const ip = [];
+        for (const cp of pp)(0, Vp.t)(cp) && ip.push(cp.getBoundingClientRect());
+        return ip
       },
-      vK = DD => {
-        if (!DD) return null;
-        const zD = Ap(),
-          wD = zD ? uK(((DD, zD) => {
-            const wD = DD.closest(aK);
-            return wD ? [wD] : ("popup" === zD ? document : DD).querySelectorAll(aK)
-          })(zD.root, zD.layer.kind)) : [],
-          pD = !zD || zD.root.hasAttribute("data-pad-shows-hud");
-        if (((0, yK.l)(null === zD || void 0 === zD ? void 0 : zD.layer.kind, (0, yK.n)()) || pD) && wD.push(...uK(document.querySelectorAll(eK.join(",")))), 0 === wD.length) return null;
+      ZI = pp => {
+        if (!pp) return null;
+        const ip = WO(),
+          cp = ip ? rI(((pp, ip) => {
+            const cp = pp.closest(GI);
+            return cp ? [cp] : ("popup" === ip ? document : pp).querySelectorAll(GI)
+          })(ip.root, ip.layer.kind)) : [],
+          Op = !ip || ip.root.hasAttribute("data-pad-shows-hud");
+        if (((0, hI.k)(null === ip || void 0 === ip ? void 0 : ip.layer.kind, (0, hI.o)()) || Op) && cp.push(...rI(document.querySelectorAll(FI.join(",")))), 0 === cp.length) return null;
         const {
-          width: sD,
-          height: KD
-        } = DD.getBoundingClientRect(), rD = window.innerHeight - 8, LD = (0, yK.r)(rD, {
-          width: sD,
-          height: KD
-        }, window.innerWidth / 2, wD, 8);
-        return LD === rD ? null : Math.round(window.innerHeight - LD)
+          width: op,
+          height: Ip
+        } = pp.getBoundingClientRect(), Sp = window.innerHeight - 8, xp = (0, hI.s)(Sp, {
+          width: op,
+          height: Ip
+        }, window.innerWidth / 2, cp, 8);
+        return xp === Sp ? null : Math.round(window.innerHeight - xp)
       },
-      tK = DD => {
-        const zD = document.documentElement.style,
-          wD = DD ? `${Math.round(window.innerHeight-DD.getBoundingClientRect().top)}px` : "";
-        zD.getPropertyValue(oK) !== wD && (wD ? zD.setProperty(oK, wD) : zD.removeProperty(oK))
+      zI = pp => {
+        const ip = document.documentElement.style,
+          cp = pp ? `${Math.round(window.innerHeight-pp.getBoundingClientRect().top)}px` : "";
+        ip.getPropertyValue(gI) !== cp && (cp ? ip.setProperty(gI, cp) : ip.removeProperty(gI))
       },
-      FK = () => {
+      sI = () => {
         const {
-          t: DD
-        } = (0, sD.E)(), {
-          hideButtonHints: zD
-        } = (0, UD.n)(), wD = (0, fD.D)(), [pD, KD] = (0, lD.useState)(!1), [rD, gD] = (0, lD.useState)([]), [BD, GD] = (0, lD.useState)(null), hD = (0, lD.useRef)(null), nD = (0, lD.useRef)(null);
-        (0, ns.g)(EK.e, (DD => {
-          KD(DD)
-        })), (0, ns.g)(yK.o, (() => {
-          var DD;
-          null === (DD = nD.current) || void 0 === DD || DD.call(nD)
+          t: pp
+        } = (0, op.H)(), {
+          hideButtonHints: ip
+        } = (0, Pp.s)(), cp = (0, Wp.H)(), [Op, Ip] = (0, Np.useState)(!1), [Sp, Yp] = (0, Np.useState)([]), [Up, wp] = (0, Np.useState)(null), vp = (0, Np.useRef)(null), tp = (0, Np.useRef)(null);
+        (0, Ho.f)(jI.b, (pp => {
+          Ip(pp)
+        })), (0, Ho.f)(hI.r, (() => {
+          var pp;
+          null === (pp = tp.current) || void 0 === pp || pp.call(tp)
         }));
-        const MD = wD && !zD && !pD;
-        return (0, lD.useEffect)((() => {
-          if (!MD) return;
-          let DD = null;
-          const zD = () => {
-            const zD = (() => {
-                var DD;
-                const zD = AD.e.getActiveConsumerName(),
-                  wD = (0, yK.h)();
-                if (wD) {
-                  const DD = (0, RD.g)(wD),
-                    zD = "emoteWheel" === wD && "wheel" === (0, UD.g)().emoteButton || !(0, ID.D)(AD.e.getLastFrame().values, DD) ? {
-                      glyphs: kK("menuConfirm"),
+        const Hp = cp && !ip && !Op;
+        return (0, Np.useEffect)((() => {
+          if (!Hp) return;
+          let pp = null;
+          const ip = () => {
+            const ip = (() => {
+                var pp;
+                const ip = Ap.d.getActiveConsumerName(),
+                  cp = (0, hI.i)();
+                if (cp) {
+                  const pp = (0, Dp.g)(cp),
+                    ip = "emoteWheel" === cp && "wheel" === (0, Pp.h)().emoteButton || !(0, yp.D)(Ap.d.getLastFrame().values, pp) ? {
+                      glyphs: aI("menuConfirm"),
                       labelKey: "controller:menusSelect"
                     } : {
-                      glyphs: [DD],
+                      glyphs: [pp],
                       labelKey: "controller:wheelReleaseToPick"
                     };
                   return [{
-                    glyphs: [(0, RD.w)(DD)],
+                    glyphs: [(0, Dp.t)(pp)],
                     labelKey: "controller:wheelChoose"
-                  }, zD, {
-                    glyphs: kK("menuBack"),
+                  }, ip, {
+                    glyphs: aI("menuBack"),
                     labelKey: "controller:wheelClose"
                   }]
                 }
-                const pD = Ap();
-                if (!pD || "focus" !== zD && "cursor" !== zD) return (0, yK.e)(RD.g);
-                const sD = [],
-                  KD = {
-                    glyphs: kK("menuBack"),
+                const Op = WO();
+                if (!Op || "focus" !== ip && "cursor" !== ip) return (0, hI.e)(Dp.g);
+                const op = [],
+                  Ip = {
+                    glyphs: aI("menuBack"),
                     labelKey: "controller:menusBack"
                   },
-                  rD = (0, oD.v)(pD.root),
-                  LD = rD ? !(0, HD.u)(rD) : Boolean(pD.layer.close),
-                  gD = !rD && pD.layer.closeLabelKey ? pD.layer.closeLabelKey : KD.labelKey,
-                  fD = LD ? [{
-                    ...KD,
-                    labelKey: gD
+                  Sp = (0, gp.p)(Op.root),
+                  xp = Sp ? !(0, Vp.z)(Sp) : Boolean(Op.layer.close),
+                  Yp = !Sp && Op.layer.closeLabelKey ? Op.layer.closeLabelKey : Ip.labelKey,
+                  Wp = xp ? [{
+                    ...Ip,
+                    labelKey: Yp
                   }] : [],
-                  BD = jw(pD.layer.kind) ? [{
-                    glyphs: kK("chat"),
+                  Up = Qc(Op.layer.kind) ? [{
+                    glyphs: aI("chat"),
                     labelKey: "controller:menusQuickChat"
                   }] : [];
-                if ("cursor" === zD) return sD.push({
-                  glyphs: kK("menuConfirm"),
+                if ("cursor" === ip) return op.push({
+                  glyphs: aI("menuConfirm"),
                   labelKey: "controller:menusClick"
-                }), sD.push({
-                  glyphs: kK("menuSecondary"),
+                }), op.push({
+                  glyphs: aI("menuSecondary"),
                   labelKey: "controller:menusRightClick"
-                }), sD.push(...fD), sD.push(...BD), sD.push({
+                }), op.push(...Wp), op.push(...Up), op.push({
                   glyphs: ["RightStick"],
                   labelKey: "controller:menusScroll"
-                }), Pp() && sD.push({
-                  glyphs: kK("menuToggleCursor"),
+                }), MO() && op.push({
+                  glyphs: aI("menuToggleCursor"),
                   labelKey: "controller:menusFocusMode"
-                }), sD;
-                const GD = zs.getFocused();
-                GD && (0, jp.b)(GD) ? sD.push({
+                }), op;
+                const wp = co.getFocused();
+                wp && (0, QO.e)(wp) ? op.push({
                   glyphs: ["Left", "Right"],
                   labelKey: "controller:menusAdjust"
-                }) : GD && (0, oD.D)(GD) ? sD.push({
+                }) : wp && (0, gp.t)(wp) ? op.push({
                   glyphs: [],
                   labelKey: "controller:menusUseMouse"
-                }) : sD.push({
-                  glyphs: kK("menuConfirm"),
+                }) : op.push({
+                  glyphs: aI("menuConfirm"),
                   labelKey: "controller:menusSelect"
                 });
-                const hD = GD ? null === (DD = fw(GD)) || void 0 === DD ? void 0 : DD.dataset.padSecondary : void 0;
-                hD && sD.push({
-                  glyphs: kK("menuSecondary"),
-                  labelKey: hD
-                }), sD.push(...null !== GD && void 0 !== GD && GD.closest("[data-pad-friends-column]") ? [KD] : fD), sD.push(...BD);
-                const nD = "home" === pD.layer.kind;
-                tw(pD.root) || !Ww(pD.root) && !Fw(pD) ? nD && sD.push({
-                  glyphs: kK("menuTabPrevious", "menuTabNext"),
+                const vp = wp ? null === (pp = Uc(wp)) || void 0 === pp ? void 0 : pp.dataset.padSecondary : void 0;
+                vp && op.push({
+                  glyphs: aI("menuSecondary"),
+                  labelKey: vp
+                }), op.push(...null !== wp && void 0 !== wp && wp.closest("[data-pad-friends-column]") ? [Ip] : Wp), op.push(...Up);
+                const tp = "home" === Op.layer.kind;
+                sc(Op.root) || !fc(Op.root) && !Kc(Op) ? tp && op.push({
+                  glyphs: aI("menuTabPrevious", "menuTabNext"),
                   labelKey: "controller:menusRows"
-                }) : sD.push({
-                  glyphs: kK("menuTabPrevious", "menuTabNext"),
+                }) : op.push({
+                  glyphs: aI("menuTabPrevious", "menuTabNext"),
                   labelKey: "controller:menusTabs"
-                }), nD && (sD.push(...mK("inventory", "controller:menusFriends")), hD || sD.push({
-                  glyphs: kK("menuSecondary"),
+                }), tp && (op.push(...nI("inventory", "controller:menusFriends")), vp || op.push({
+                  glyphs: aI("menuSecondary"),
                   labelKey: "controller:menusSearch"
-                }), sD.push(...mK("pause", "controller:menusSettings")), sD.push(...mK("leaderboard", "controller:menusNotifications")));
-                const MD = cD.e.get("openEverythingMenuName");
-                return "inGame" === cD.e.get("gameState") && "popup" !== pD.layer.kind && null !== MD && ((0, gw.o)(MD) ? sD.push(...mK("leaderboard", "controller:menusClose")) : MD !== Lw.l.LOBBY_LEADERBOARD && sD.push(...mK("leaderboard", "controller:menusLobby"))), sD.push({
-                  glyphs: kK("menuToggleCursor"),
+                }), op.push(...nI("pause", "controller:menusSettings")), op.push(...nI("leaderboard", "controller:menusNotifications")));
+                const Hp = Lp.c.get("openEverythingMenuName");
+                return "inGame" === Lp.c.get("gameState") && "popup" !== Op.layer.kind && null !== Hp && ((0, Ac.j)(Hp) ? op.push(...nI("leaderboard", "controller:menusClose")) : Hp !== Dc.n.LOBBY_LEADERBOARD && op.push(...nI("leaderboard", "controller:menusLobby"))), op.push({
+                  glyphs: aI("menuToggleCursor"),
                   labelKey: "controller:menusCursorMode"
-                }), sD
+                }), op
               })(),
-              wD = vK(hD.current),
-              pD = ((DD, zD) => `${DD.map((DD=>`${DD.glyphs.join("+")}:${DD.labelKey}`)).join("|")}@${zD}`)(zD, wD);
-            pD !== DD && (DD = pD, (0, LD.unstable_batchedUpdates)((() => {
-              gD(zD), GD(wD)
-            }))), tK(hD.current)
+              cp = ZI(vp.current),
+              Op = ((pp, ip) => `${pp.map((pp=>`${pp.glyphs.join("+")}:${pp.labelKey}`)).join("|")}@${ip}`)(ip, cp);
+            Op !== pp && (pp = Op, (0, xp.unstable_batchedUpdates)((() => {
+              Yp(ip), wp(cp)
+            }))), zI(vp.current)
           };
-          zD(), nD.current = zD;
-          const wD = requestAnimationFrame(zD),
-            pD = setInterval(zD, 150);
+          ip(), tp.current = ip;
+          const cp = requestAnimationFrame(ip),
+            Op = setInterval(ip, 150);
           return () => {
-            nD.current = null, cancelAnimationFrame(wD), clearInterval(pD), tK(null)
+            tp.current = null, cancelAnimationFrame(cp), clearInterval(Op), zI(null)
           }
-        }), [MD]), (0, lD.useLayoutEffect)((() => {
-          if (!MD) return;
-          if (0 === rD.length) return void tK(null);
-          const DD = vK(hD.current);
-          DD === BD ? tK(hD.current) : GD(DD)
-        }), [MD, rD, BD]), MD && 0 !== rD.length ? (0, ZD.jsx)("div", {
-          ref: hD,
+        }), [Hp]), (0, Np.useLayoutEffect)((() => {
+          if (!Hp) return;
+          if (0 === Sp.length) return void zI(null);
+          const pp = ZI(vp.current);
+          pp === Up ? zI(vp.current) : wp(pp)
+        }), [Hp, Sp, Up]), Hp && 0 !== Sp.length ? (0, bp.jsx)("div", {
+          ref: vp,
           className: "PadButtonHintBar SmallTextBold",
-          style: null === BD ? void 0 : {
-            bottom: BD
+          style: null === Up ? void 0 : {
+            bottom: Up
           },
           "aria-hidden": !0,
-          children: rD.map((zD => (0, ZD.jsxs)("div", {
+          children: Sp.map((ip => (0, bp.jsxs)("div", {
             className: "PadButtonHint",
-            children: [zD.glyphs.map((DD => (0, ZD.jsx)(Vs, {
-              glyph: DD,
+            children: [ip.glyphs.map((pp => (0, bp.jsx)(Ro, {
+              glyph: pp,
               className: "PadButtonHintGlyph"
-            }, DD))), (0, ZD.jsx)("span", {
-              children: DD(zD.labelKey)
+            }, pp))), (0, bp.jsx)("span", {
+              children: pp(ip.labelKey)
             })]
-          }, zD.labelKey)))
+          }, ip.labelKey)))
         }) : null
       };
-    var YK = wD(1745);
-    const HK = [HD.c, "label", "[data-pad-slider]"].join(","),
-      qK = "data-pad-cursor-probe",
-      Dr = DD => {
-        var zD;
-        const wD = (DD => {
-          const zD = [];
-          for (let pD = DD; pD && pD !== document.body && pD !== document.documentElement && (zD.push(pD), !(zD.length > 8)); pD = pD.parentElement);
-          const wD = document.documentElement.classList.contains(fD.y) ? zD[zD.length - 1] : void 0;
-          null === wD || void 0 === wD || wD.setAttribute(qK, "");
+    var KI = cp(1770);
+    const VI = [Vp.b, "label", "[data-pad-slider]"].join(","),
+      pS = "data-pad-cursor-probe",
+      iS = pp => {
+        var ip;
+        const cp = (pp => {
+          const ip = [];
+          for (let Op = pp; Op && Op !== document.body && Op !== document.documentElement && (ip.push(Op), !(ip.length > 8)); Op = Op.parentElement);
+          const cp = document.documentElement.classList.contains(Wp.y) ? ip[ip.length - 1] : void 0;
+          null === cp || void 0 === cp || cp.setAttribute(pS, "");
           try {
-            return zD.map((DD => ({
-              element: DD,
-              cursor: getComputedStyle(DD).cursor
+            return ip.map((pp => ({
+              element: pp,
+              cursor: getComputedStyle(pp).cursor
             })))
           } finally {
-            null === wD || void 0 === wD || wD.removeAttribute(qK)
+            null === cp || void 0 === cp || cp.removeAttribute(pS)
           }
-        })(DD);
-        if ("pointer" !== (null === (zD = wD[0]) || void 0 === zD ? void 0 : zD.cursor)) return null;
-        let pD = 0;
-        for (; pD + 1 < wD.length && "pointer" === wD[pD + 1].cursor;) pD++;
-        return wD[pD].element
+        })(pp);
+        if ("pointer" !== (null === (ip = cp[0]) || void 0 === ip ? void 0 : ip.cursor)) return null;
+        let Op = 0;
+        for (; Op + 1 < cp.length && "pointer" === cp[Op + 1].cursor;) Op++;
+        return cp[Op].element
       },
-      zr = (DD, zD, wD, pD) => {
-        const sD = pD.root.contains(DD) ? pD.root : null;
-        for (let KD = DD; KD && KD !== document.body && KD !== document.documentElement; KD = KD.parentElement) {
-          if (KD instanceof HTMLElement && PD(KD, zD) && jD(KD, zD, wD)) return KD;
-          if (KD === sD) break
+      cS = (pp, ip, cp, Op) => {
+        const op = Op.root.contains(pp) ? Op.root : null;
+        for (let Ip = pp; Ip && Ip !== document.body && Ip !== document.documentElement; Ip = Ip.parentElement) {
+          if (Ip instanceof HTMLElement && qp(Ip, ip) && lp(Ip, ip, cp)) return Ip;
+          if (Ip === op) break
         }
-        return "home" === pD.layer.kind || "gamePage" === pD.layer.kind ? ((DD, zD) => {
-          const wD = document.scrollingElement;
-          return wD instanceof HTMLElement && ![document.documentElement, document.body].some((zD => {
-            const wD = getComputedStyle(zD),
-              pD = "y" === DD ? wD.overflowY : wD.overflowX;
-            return "hidden" === pD || "clip" === pD
-          })) && jD(wD, DD, zD) ? wD : null
-        })(zD, wD) : null
+        return "home" === Op.layer.kind || "gamePage" === Op.layer.kind ? ((pp, ip) => {
+          const cp = document.scrollingElement;
+          return cp instanceof HTMLElement && ![document.documentElement, document.body].some((ip => {
+            const cp = getComputedStyle(ip),
+              Op = "y" === pp ? cp.overflowY : cp.overflowX;
+            return "hidden" === Op || "clip" === Op
+          })) && lp(cp, pp, ip) ? cp : null
+        })(ip, cp) : null
       };
-    const wr = new class {
+    const OS = new class {
         constructor() {
           this.state = {
             x: 0,
             y: 0,
             speedRamp: 0
-          }, this.hasPosition = !1, this.active = !1, this.hidden = !1, this.hit = null, this.interactive = null, this.magnet = null, this.lastHitTestMs = -1 / 0, this.press = null, this.draggedSlider = null, this.repeatStop = null, this.repeatKey = null, this.repeated = !1, this.confirmRepeat = (0, BD.b)(ID.q), this.secondaryArmed = !1, this.scrollRemainder = {
+          }, this.hasPosition = !1, this.active = !1, this.hidden = !1, this.hit = null, this.interactive = null, this.magnet = null, this.lastHitTestMs = -1 / 0, this.press = null, this.draggedSlider = null, this.repeatStop = null, this.repeatKey = null, this.repeated = !1, this.confirmRepeat = (0, Up.e)(yp.p), this.secondaryArmed = !1, this.scrollRemainder = {
             x: 0,
             y: 0
           }, this.layerRoot = null, this.layerOrder = 0, this.layerPoints = new WeakMap, this.page = null, this.pendingPageStart = null
         }
         install() {
-          const DD = AD.e.register({
+          const pp = Ap.d.register({
               name: "cursor",
-              isActive: () => "cursor" === Cp(),
-              onFrame: DD => {
-                this.onFrame(DD)
+              isActive: () => "cursor" === CO(),
+              onFrame: pp => {
+                this.onFrame(pp)
               },
               onDeactivate: () => {
                 this.deactivate()
               },
-              wakePressActs: DD => (0, AD.h)(DD) || DD === (0, RD.g)("menuConfirm") && (0, oD.G)((0, fD.e)())
+              wakePressActs: pp => (0, Ap.f)(pp) || pp === (0, Dp.g)("menuConfirm") && (0, gp.v)((0, Wp.d)())
             }),
-            zD = (0, pp.m)((DD => {
-              const zD = DD.getRoot();
-              zD && this.layerPoints.delete(zD), zD === this.layerRoot && (this.layerRoot = null)
+            ip = (0, IO.o)((pp => {
+              const ip = pp.getRoot();
+              ip && this.layerPoints.delete(ip), ip === this.layerRoot && (this.layerRoot = null)
             })),
-            wD = gD.l.subscribe("appManagerUpdated|activeInputDevice", (DD => {
-              "gamepad" !== DD && this.active && !this.hidden && this.hide()
+            cp = Yp.m.subscribe("appManagerUpdated|activeInputDevice", (pp => {
+              "gamepad" !== pp && this.active && !this.hidden && this.hide()
             }));
           return () => {
-            DD(), zD(), gD.l.unsubscribe(wD), this.deactivate()
+            pp(), ip(), Yp.m.unsubscribe(cp), this.deactivate()
           }
         }
         getHighlighted() {
           return this.isVisible() ? this.interactive : null
         }
         isVisible() {
-          return this.active && !this.hidden && (0, fD.o)()
+          return this.active && !this.hidden && (0, Wp.n)()
         }
         getPoint() {
           return {
@@ -5028,20 +5363,20 @@ export const modules = {
           }
         }
         hide() {
-          this.hidden = !0, this.cancelPress(), this.secondaryArmed = !1, this.clearHover(), this.KG()
+          this.hidden = !0, this.cancelPress(), this.secondaryArmed = !1, this.clearHover(), this.GA()
         }
-        activate(DD) {
+        activate(pp) {
           this.active = !0, this.hidden = !1;
-          const zD = Qp();
-          !zD || zD.root && zD.root !== DD.root ? this.jumpTo(this.hasPosition ? this.getPoint() : {
+          const ip = mO();
+          !ip || ip.root && ip.root !== pp.root ? this.jumpTo(this.hasPosition ? this.getPoint() : {
             x: window.innerWidth / 2,
             y: window.innerHeight / 2
-          }) : (this.setLayer(DD), this.jumpTo(zD.point))
+          }) : (this.setLayer(pp), this.jumpTo(ip.point))
         }
-        jumpTo(DD) {
+        jumpTo(pp) {
           this.state = {
-            x: DD.x,
-            y: DD.y,
+            x: pp.x,
+            y: pp.y,
             speedRamp: 0
           }, this.hasPosition = !0, this.lastHitTestMs = -1 / 0
         }
@@ -5049,306 +5384,306 @@ export const modules = {
           this.active && (this.active = !1, this.page = null, this.pendingPageStart = null, this.cancelPress(), this.clearHover(), this.draggedSlider = null, this.secondaryArmed = !1, this.scrollRemainder = {
             x: 0,
             y: 0
-          }, this.KG())
+          }, this.GA())
         }
-        onFrame(DD) {
-          const zD = Ap();
-          if (!zD) return;
-          if (this.active || this.activate(zD), this.followPage(zD)) return;
-          this.followLayer(zD);
-          const wD = DD.wokeDevice ? (0, fD.e)() : null;
-          if (wD && this.jumpTo(wD), !(0, fD.o)()) return void this.hide();
-          const pD = (0, RD.g)("menuToggleCursor");
-          if (DD.wasPressed(pD)) return AD.e.consumeButton(pD), void Ep(this.getHandoff(null));
-          if (this.handBackToFocus(DD)) return;
-          const sD = (0, RD.g)("menuConfirm"),
-            KD = (0, RD.g)("menuSecondary");
-          if (DD.wasPressed((0, RD.g)("menuBack"))) return (0, oD.j)(zD.root) || (0, oD.d)(zD.root) || Up(), void this.KG();
-          if (qw(null, DD, zD)) return DD.wasReleased(sD) && this.press && (this.updateHit(!1), this.updateConfirm(DD, sD)), void this.KG();
+        onFrame(pp) {
+          const ip = WO();
+          if (!ip) return;
+          if (this.active || this.activate(ip), this.followPage(ip)) return;
+          this.followLayer(ip);
+          const cp = pp.wokeDevice ? (0, Wp.d)() : null;
+          if (cp && this.jumpTo(cp), !(0, Wp.n)()) return void this.hide();
+          const Op = (0, Dp.g)("menuToggleCursor");
+          if (pp.wasPressed(Op)) return Ap.d.consumeButton(Op), void kO(this.getHandoff(null));
+          if (this.handBackToFocus(pp)) return;
+          const op = (0, Dp.g)("menuConfirm"),
+            Ip = (0, Dp.g)("menuSecondary");
+          if (pp.wasPressed((0, Dp.g)("menuBack"))) return (0, gp.g)(ip.root) || (0, gp.c)(ip.root) || yO(), void this.GA();
+          if (iO(null, pp, ip)) return pp.wasReleased(op) && this.press && (this.updateHit(!1), this.updateConfirm(pp, op)), void this.GA();
           if (document.pointerLockElement) return void this.hide();
-          const rD = xp() ? {
+          const Sp = EO() ? {
               x: 0,
               y: 0
-            } : (DD => {
-              const zD = (DD, zD) => (DD ? 1 : 0) - (zD ? 1 : 0);
+            } : (pp => {
+              const ip = (pp, ip) => (pp ? 1 : 0) - (ip ? 1 : 0);
               return {
-                x: zD(DD.isHeld("Right"), DD.isHeld("Left")),
-                y: zD(DD.isHeld("Down"), DD.isHeld("Up"))
+                x: ip(pp.isHeld("Right"), pp.isHeld("Left")),
+                y: ip(pp.isHeld("Down"), pp.isHeld("Up"))
               }
-            })(DD),
-            LD = (0, UD.g)().moveDeadzone,
-            cD = ((DD, zD) => {
-              const wD = (0, ID.i)(DD, OD(zD));
-              return Math.hypot(wD.x, wD.y)
-            })(DD.leftStick, LD) > 0 || 0 !== rD.x || 0 !== rD.y;
+            })(pp),
+            xp = (0, Pp.h)().moveDeadzone,
+            Lp = ((pp, ip) => {
+              const cp = (0, yp.h)(pp, dp(ip));
+              return Math.hypot(cp.x, cp.y)
+            })(pp.leftStick, xp) > 0 || 0 !== Sp.x || 0 !== Sp.y;
           if (this.hidden) {
-            const zD = DD.wasPressed(sD),
-              wD = DD.wasPressed(KD);
-            if (!cD && !QD(DD.rightStick) && !zD && !wD && !DD.wokeDevice) return void this.KG();
-            if (this.hidden = !1, this.updateHit(!1), zD || wD) return zD && (this.press = {
+            const ip = pp.wasPressed(op),
+              cp = pp.wasPressed(Ip);
+            if (!Lp && !kp(pp.rightStick) && !ip && !cp && !pp.wokeDevice) return void this.GA();
+            if (this.hidden = !1, this.updateHit(!1), ip || cp) return ip && (this.press = {
               kind: "ignored"
-            }, DD.wokeDevice && this.beginRepeat()), this.secondaryArmed = !1, void this.KG()
+            }, pp.wokeDevice && this.beginRepeat()), this.secondaryArmed = !1, void this.GA()
           }
-          this.movePendingPageStart(cD);
-          const gD = this.getPoint();
-          this.state = ED(this.state, {
-            stick: DD.leftStick,
-            moveDeadzone: LD,
-            dpad: rD,
-            dtMs: DD.dtMs,
-            cursorSpeedPercent: (0, UD.g)().cursorSpeed,
+          this.movePendingPageStart(Lp);
+          const Yp = this.getPoint();
+          this.state = jp(this.state, {
+            stick: pp.leftStick,
+            moveDeadzone: xp,
+            dpad: Sp,
+            dtMs: pp.dtMs,
+            cursorSpeedPercent: (0, Pp.h)().cursorSpeed,
             viewport: {
               width: window.innerWidth,
               height: window.innerHeight
             },
             context: this.getAssistContext()
           });
-          const BD = this.state.x !== gD.x || this.state.y !== gD.y,
-            GD = [sD, KD].some((zD => DD.wasPressed(zD) || DD.wasReleased(zD)));
-          (BD || GD || performance.now() - this.lastHitTestMs >= 100) && this.updateHit(BD), this.updateConfirm(DD, sD), this.updateSecondary(DD, KD), this.updateScroll(DD, zD), this.KG()
+          const Up = this.state.x !== Yp.x || this.state.y !== Yp.y,
+            wp = [op, Ip].some((ip => pp.wasPressed(ip) || pp.wasReleased(ip)));
+          (Up || wp || performance.now() - this.lastHitTestMs >= 100) && this.updateHit(Up), this.updateConfirm(pp, op), this.updateSecondary(pp, Ip), this.updateScroll(pp, ip), this.GA()
         }
-        followPage(DD) {
-          const zD = "home" === DD.layer.kind || "gamePage" === DD.layer.kind,
-            wD = this.page;
-          if (this.page = zD ? {
-              key: (0, pp.r)(DD.layer),
-              root: DD.root
-            } : null, !this.page || !wD || wD.root !== DD.root || wD.key === this.page.key) return !1;
-          if (this.cancelPress(), this.secondaryArmed = !1, this.setLayer(DD), "hybrid" === Jp()) return np = null, Gp = null, Mp.lock(), !0;
+        followPage(pp) {
+          const ip = "home" === pp.layer.kind || "gamePage" === pp.layer.kind,
+            cp = this.page;
+          if (this.page = ip ? {
+              key: (0, IO.t)(pp.layer),
+              root: pp.root
+            } : null, !this.page || !cp || cp.root !== pp.root || cp.key === this.page.key) return !1;
+          if (this.cancelPress(), this.secondaryArmed = !1, this.setLayer(pp), "hybrid" === jO()) return dO = null, tO = null, eO.lock(), !0;
           const {
-            key: pD
+            key: Op
           } = this.page;
           return this.pendingPageStart = {
-            root: DD.root,
-            key: pD,
-            returning: zs.notePageEnteredByCursor(pD),
+            root: pp.root,
+            key: Op,
+            returning: co.notePageEnteredByCursor(Op),
             enteredAtMs: performance.now()
           }, !1
         }
-        movePendingPageStart(DD) {
-          const zD = this.pendingPageStart;
-          if (!zD) return;
-          if (DD || zD.root !== this.layerRoot) return void(this.pendingPageStart = null);
-          const wD = zD.returning ? zs.recallStop(zD.root, zD.key) : null;
-          if (!wD && zD.returning && performance.now() - zD.enteredAtMs < 1e3) return;
-          const pD = null !== wD && void 0 !== wD ? wD : zs.pickInitial(zD.root, {
+        movePendingPageStart(pp) {
+          const ip = this.pendingPageStart;
+          if (!ip) return;
+          if (pp || ip.root !== this.layerRoot) return void(this.pendingPageStart = null);
+          const cp = ip.returning ? co.recallStop(ip.root, ip.key) : null;
+          if (!cp && ip.returning && performance.now() - ip.enteredAtMs < 1e3) return;
+          const Op = null !== cp && void 0 !== cp ? cp : co.pickInitial(ip.root, {
             includeDisabled: !0,
             waitForContent: !0,
-            enteredAtMs: zD.enteredAtMs
+            enteredAtMs: ip.enteredAtMs
           });
-          pD && (this.pendingPageStart = null, this.jumpTo((0, oD.w)(pD)))
+          Op && (this.pendingPageStart = null, this.jumpTo((0, gp.q)(Op)))
         }
-        setLayer(DD) {
-          this.layerRoot = DD.root, this.layerOrder = DD.order
+        setLayer(pp) {
+          this.layerRoot = pp.root, this.layerOrder = pp.order
         }
-        followLayer(DD) {
-          var zD;
-          if (DD.root === this.layerRoot) return;
-          null !== (zD = this.layerRoot) && void 0 !== zD && zD.isConnected && this.layerPoints.set(this.layerRoot, this.getPoint()), this.cancelPress(), this.draggedSlider = null, this.secondaryArmed = !1;
-          const wD = this.layerPoints.get(DD.root),
-            pD = wD && DD.order <= this.layerOrder ? wD : zs.getLayerStartPoint(DD.root);
-          this.setLayer(DD), this.jumpTo(pD)
+        followLayer(pp) {
+          var ip;
+          if (pp.root === this.layerRoot) return;
+          null !== (ip = this.layerRoot) && void 0 !== ip && ip.isConnected && this.layerPoints.set(this.layerRoot, this.getPoint()), this.cancelPress(), this.draggedSlider = null, this.secondaryArmed = !1;
+          const cp = this.layerPoints.get(pp.root),
+            Op = cp && pp.order <= this.layerOrder ? cp : co.getLayerStartPoint(pp.root);
+          this.setLayer(pp), this.jumpTo(Op)
         }
-        getHandoff(DD) {
-          var zD;
+        getHandoff(pp) {
+          var ip;
           return {
             point: this.getPoint(),
-            element: null !== (zD = this.interactive) && void 0 !== zD ? zD : this.findDraggedSliderNearby(),
-            direction: DD
+            element: null !== (ip = this.interactive) && void 0 !== ip ? ip : this.findDraggedSliderNearby(),
+            direction: pp
           }
         }
         findDraggedSliderNearby() {
-          const DD = this.draggedSlider;
-          if (null === DD || void 0 === DD || !DD.isConnected) return null;
-          const zD = DD.getBoundingClientRect(),
+          const pp = this.draggedSlider;
+          if (null === pp || void 0 === pp || !pp.isConnected) return null;
+          const ip = pp.getBoundingClientRect(),
             {
-              y: wD
+              y: cp
             } = this.getPoint();
-          return wD >= zD.top - 40 && wD <= zD.bottom + 40 ? DD : null
+          return cp >= ip.top - 40 && cp <= ip.bottom + 40 ? pp : null
         }
-        handBackToFocus(DD) {
-          if (!xp()) return !1;
-          const zD = ID.w.find((zD => DD.wasPressed(zD)));
-          return !!zD && (wD = this.getHandoff(zD), np = Ip(wD), Gp = null, Mp.lock(), AD.e.handOffHeldInput(), !0);
-          var wD
+        handBackToFocus(pp) {
+          if (!EO()) return !1;
+          const ip = yp.w.find((ip => pp.wasPressed(ip)));
+          return !!ip && (cp = this.getHandoff(ip), dO = wO(cp), tO = null, eO.lock(), Ap.d.handOffHeldInput(), !0);
+          var cp
         }
         getAssistContext() {
-          const DD = this.interactive;
-          if (null === DD || void 0 === DD || !DD.isConnected) return {
+          const pp = this.interactive;
+          if (null === pp || void 0 === pp || !pp.isConnected) return {
             overInteractive: !1,
             magnetTarget: null
           };
-          const zD = DD.getBoundingClientRect();
-          if (zD.width > .4 * window.innerWidth || zD.height > .4 * window.innerHeight) return {
+          const ip = pp.getBoundingClientRect();
+          if (ip.width > .4 * window.innerWidth || ip.height > .4 * window.innerHeight) return {
             overInteractive: !1,
             magnetTarget: null
           };
-          const wD = (0, UD.g)().cursorMagnetism && !(0, YK.c)(DD) && !DD.closest("[data-pad-slider]"),
-            pD = this.magnet && this.magnet !== DD && this.magnet.isConnected ? this.magnet.getBoundingClientRect() : zD;
+          const cp = (0, Pp.h)().cursorMagnetism && !(0, KI.b)(pp) && !pp.closest("[data-pad-slider]"),
+            Op = this.magnet && this.magnet !== pp && this.magnet.isConnected ? this.magnet.getBoundingClientRect() : ip;
           return {
             overInteractive: !0,
-            magnetTarget: wD ? {
-              x: pD.left + pD.width / 2,
-              y: pD.top + pD.height / 2
+            magnetTarget: cp ? {
+              x: Op.left + Op.width / 2,
+              y: Op.top + Op.height / 2
             } : null
           }
         }
-        updateHit(DD) {
+        updateHit(pp) {
           this.lastHitTestMs = performance.now();
-          const zD = this.getPoint(),
-            wD = document.elementFromPoint(zD.x, zD.y),
-            pD = wD && !(0, hD.s)(wD) && (DD => {
-              var zD;
-              const wD = Ap();
-              return !(wD && !wD.root.contains(DD) && !DD.closest(".tooltip-container")) || !(null !== (zD = document.getElementById("root")) && void 0 !== zD && zD.contains(DD))
-            })(wD) ? wD : null;
-          if (pD !== this.hit) return (0, oD.o)(this.hit, pD, zD), this.hit = pD, void this.setInteractive(pD ? (DD => {
-            const zD = DD.closest(HK);
-            if (zD) {
-              var wD, pD;
-              const DD = null !== (wD = null === (pD = zD.parentElement) || void 0 === pD ? void 0 : pD.closest("[data-pad-focusable]")) && void 0 !== wD ? wD : zD;
-              return (0, HD.u)(DD) ? {
+          const ip = this.getPoint(),
+            cp = document.elementFromPoint(ip.x, ip.y),
+            Op = cp && !(0, vp.u)(cp) && (pp => {
+              var ip;
+              const cp = WO();
+              return !(cp && !cp.root.contains(pp) && !pp.closest(".tooltip-container")) || !(null !== (ip = document.getElementById("root")) && void 0 !== ip && ip.contains(pp))
+            })(cp) ? cp : null;
+          if (Op !== this.hit) return (0, gp.m)(this.hit, Op, ip), this.hit = Op, void this.setInteractive(Op ? (pp => {
+            const ip = pp.closest(VI);
+            if (ip) {
+              var cp, Op;
+              const pp = null !== (cp = null === (Op = ip.parentElement) || void 0 === Op ? void 0 : Op.closest("[data-pad-focusable]")) && void 0 !== cp ? cp : ip;
+              return (0, Vp.z)(pp) ? {
                 element: null,
                 magnet: null
               } : {
-                element: DD,
-                magnet: zD
+                element: pp,
+                magnet: ip
               }
             }
-            const sD = Dr(DD);
+            const op = iS(pp);
             return {
-              element: sD,
-              magnet: sD
+              element: op,
+              magnet: op
             }
-          })(pD) : {
+          })(Op) : {
             element: null,
             magnet: null
           });
-          DD && pD && (0, oD.o)(pD, pD, zD)
+          pp && Op && (0, gp.m)(Op, Op, ip)
         }
-        setInteractive(DD) {
+        setInteractive(pp) {
           let {
-            element: zD,
-            magnet: wD
-          } = DD;
-          this.interactive = zD, this.magnet = wD
+            element: ip,
+            magnet: cp
+          } = pp;
+          this.interactive = ip, this.magnet = cp
         }
         clearHover() {
-          this.hit && (0, oD.o)(this.hit, null, this.getPoint()), this.hit = null, this.setInteractive({
+          this.hit && (0, gp.m)(this.hit, null, this.getPoint()), this.hit = null, this.setInteractive({
             element: null,
             magnet: null
           })
         }
         beginPress() {
-          const DD = this.hit;
-          if (!DD || (0, oD.D)(DD)) return {
+          const pp = this.hit;
+          if (!pp || (0, gp.t)(pp)) return {
             kind: "ignored"
           };
-          const zD = (0, jp.b)(DD),
-            wD = DD.closest("[data-pad-slider]");
-          return zD && wD ? {
+          const ip = (0, QO.e)(pp),
+            cp = pp.closest("[data-pad-slider]");
+          return ip && cp ? {
             kind: "slider",
-            slider: wD,
-            adjuster: zD
-          } : ((0, oD.s)(DD, this.getPoint()), {
+            slider: cp,
+            adjuster: ip
+          } : ((0, gp.n)(pp, this.getPoint()), {
             kind: "pointer",
-            target: DD
+            target: pp
           })
         }
-        applySliderFraction(DD) {
-          var zD;
-          const wD = DD.slider.getBoundingClientRect(),
-            pD = wD.height > wD.width,
-            sD = null === (zD = DD.slider.querySelector("[data-pad-slider-handle]")) || void 0 === zD ? void 0 : zD.getBoundingClientRect(),
-            KD = sD ? pD ? sD.height : sD.width : 0,
-            rD = (pD ? wD.height : wD.width) - KD;
-          if (rD <= 0) return;
-          const LD = pD ? wD.bottom - KD / 2 - this.state.y : this.state.x - wD.left - KD / 2;
-          DD.adjuster.setFraction(Math.max(0, Math.min(1, LD / rD)))
+        applySliderFraction(pp) {
+          var ip;
+          const cp = pp.slider.getBoundingClientRect(),
+            Op = cp.height > cp.width,
+            op = null === (ip = pp.slider.querySelector("[data-pad-slider-handle]")) || void 0 === ip ? void 0 : ip.getBoundingClientRect(),
+            Ip = op ? Op ? op.height : op.width : 0,
+            Sp = (Op ? cp.height : cp.width) - Ip;
+          if (Sp <= 0) return;
+          const xp = Op ? cp.bottom - Ip / 2 - this.state.y : this.state.x - cp.left - Ip / 2;
+          pp.adjuster.setFraction(Math.max(0, Math.min(1, xp / Sp)))
         }
-        updateConfirm(DD, zD) {
-          DD.wasPressed(zD) && (this.press = DD.wokeDevice ? {
+        updateConfirm(pp, ip) {
+          pp.wasPressed(ip) && (this.press = pp.wokeDevice ? {
             kind: "ignored"
           } : this.beginPress(), this.draggedSlider = "slider" === this.press.kind ? this.press.slider : null, this.beginRepeat());
-          const wD = this.press;
-          if (!wD) return;
-          if (DD.isHeld(zD)) return "slider" === wD.kind && this.applySliderFraction(wD), void this.updateRepeat();
+          const cp = this.press;
+          if (!cp) return;
+          if (pp.isHeld(ip)) return "slider" === cp.kind && this.applySliderFraction(cp), void this.updateRepeat();
           this.press = null;
-          const pD = this.repeated;
-          if (this.endRepeat(), !DD.wasReleased(zD)) return void this.endPressWithoutClick(wD);
-          const sD = this.getPoint(),
-            KD = this.hit;
-          if ("slider" === wD.kind && wD.adjuster.endDrag(), "pointer" === wD.kind) {
-            const DD = null !== KD && void 0 !== KD ? KD : wD.target.isConnected ? wD.target : null;
-            DD && (0, oD.t)(DD, sD);
-            const zD = KD && wD.target.isConnected && !pD ? ((DD, zD) => {
-              for (let wD = DD; wD; wD = wD.parentElement)
-                if (wD.contains(zD)) return wD;
+          const Op = this.repeated;
+          if (this.endRepeat(), !pp.wasReleased(ip)) return void this.endPressWithoutClick(cp);
+          const op = this.getPoint(),
+            Ip = this.hit;
+          if ("slider" === cp.kind && cp.adjuster.endDrag(), "pointer" === cp.kind) {
+            const pp = null !== Ip && void 0 !== Ip ? Ip : cp.target.isConnected ? cp.target : null;
+            pp && (0, gp.o)(pp, op);
+            const ip = Ip && cp.target.isConnected && !Op ? ((pp, ip) => {
+              for (let cp = pp; cp; cp = cp.parentElement)
+                if (cp.contains(ip)) return cp;
               return null
-            })(wD.target, KD) : null;
-            zD && (zs.noteCursorActivation(zD), (0, hD.f)(zD, new MouseEvent("click", (0, oD.N)(sD, 0, 0))), (0, oD.f)(zD), (0, oD.K)(zD) && (0, oD.H)(zD))
+            })(cp.target, Ip) : null;
+            ip && (co.noteCursorActivation(ip), (0, vp.g)(ip, new MouseEvent("click", (0, gp.F)(op, 0, 0))), (0, gp.e)(ip), (0, gp.B)(ip) && (0, gp.z)(ip))
           }
         }
         beginRepeat() {
-          var DD, zD, wD;
-          const pD = null !== (DD = null === (zD = this.hit) || void 0 === zD ? void 0 : zD.closest("[data-pad-repeat]")) && void 0 !== DD ? DD : null;
-          this.repeatStop = pD, this.repeatKey = null !== (wD = null === pD || void 0 === pD ? void 0 : pD.getAttribute("data-pad-repeat")) && void 0 !== wD ? wD : null, this.repeated = !1, this.confirmRepeat.reset(), this.confirmRepeat.update(!0, performance.now())
+          var pp, ip, cp;
+          const Op = null !== (pp = null === (ip = this.hit) || void 0 === ip ? void 0 : ip.closest("[data-pad-repeat]")) && void 0 !== pp ? pp : null;
+          this.repeatStop = Op, this.repeatKey = null !== (cp = null === Op || void 0 === Op ? void 0 : Op.getAttribute("data-pad-repeat")) && void 0 !== cp ? cp : null, this.repeated = !1, this.confirmRepeat.reset(), this.confirmRepeat.update(!0, performance.now())
         }
         updateRepeat() {
-          const DD = this.repeatStop;
-          if (!DD) return;
-          const zD = this.hit;
-          DD.isConnected && !(0, HD.u)(DD) && DD.getAttribute("data-pad-repeat") === this.repeatKey && zD && DD.contains(zD) ? DD.hasAttribute("data-pad-repeat-wait") || this.confirmRepeat.update(!0, performance.now()) && (this.repeated = !0, zs.noteCursorActivation(DD), (0, hD.f)(DD, new MouseEvent("click", (0, oD.N)(this.getPoint(), 0, 0)))) : this.repeatStop = null
+          const pp = this.repeatStop;
+          if (!pp) return;
+          const ip = this.hit;
+          pp.isConnected && !(0, Vp.z)(pp) && pp.getAttribute("data-pad-repeat") === this.repeatKey && ip && pp.contains(ip) ? pp.hasAttribute("data-pad-repeat-wait") || this.confirmRepeat.update(!0, performance.now()) && (this.repeated = !0, co.noteCursorActivation(pp), (0, vp.g)(pp, new MouseEvent("click", (0, gp.F)(this.getPoint(), 0, 0)))) : this.repeatStop = null
         }
         endRepeat() {
           this.repeatStop = null, this.repeated = !1
         }
-        endPressWithoutClick(DD) {
-          "slider" === DD.kind && DD.adjuster.endDrag(), "pointer" === DD.kind && DD.target.isConnected && (0, oD.t)(DD.target, this.getPoint())
+        endPressWithoutClick(pp) {
+          "slider" === pp.kind && pp.adjuster.endDrag(), "pointer" === pp.kind && pp.target.isConnected && (0, gp.o)(pp.target, this.getPoint())
         }
         cancelPress() {
           this.endRepeat(), this.press && (this.endPressWithoutClick(this.press), this.press = null)
         }
-        updateSecondary(DD, zD) {
-          DD.wasPressed(zD) && (this.secondaryArmed = null !== this.hit), this.secondaryArmed && !DD.isHeld(zD) && (this.secondaryArmed = !1, DD.wasReleased(zD) && this.hit && (0, oD.m)(this.hit, this.getPoint(), 2))
+        updateSecondary(pp, ip) {
+          pp.wasPressed(ip) && (this.secondaryArmed = null !== this.hit), this.secondaryArmed && !pp.isHeld(ip) && (this.secondaryArmed = !1, pp.wasReleased(ip) && this.hit && (0, gp.k)(this.hit, this.getPoint(), 2))
         }
-        updateScroll(DD, zD) {
-          const wD = XD(DD.rightStick, DD.dtMs);
-          if (0 === wD.x && 0 === wD.y) return void(this.scrollRemainder = {
+        updateScroll(pp, ip) {
+          const cp = mp(pp.rightStick, pp.dtMs);
+          if (0 === cp.x && 0 === cp.y) return void(this.scrollRemainder = {
             x: 0,
             y: 0
           });
           this.scrollRemainder = {
-            x: this.scrollRemainder.x + wD.x,
-            y: this.scrollRemainder.y + wD.y
+            x: this.scrollRemainder.x + cp.x,
+            y: this.scrollRemainder.y + cp.y
           };
-          const pD = Math.trunc(this.scrollRemainder.x),
-            sD = Math.trunc(this.scrollRemainder.y);
+          const Op = Math.trunc(this.scrollRemainder.x),
+            op = Math.trunc(this.scrollRemainder.y);
           this.scrollRemainder = {
-            x: this.scrollRemainder.x - pD,
-            y: this.scrollRemainder.y - sD
+            x: this.scrollRemainder.x - Op,
+            y: this.scrollRemainder.y - op
           };
-          const KD = this.hit;
-          if (!KD) return;
-          let rD = !1;
-          if (0 !== sD) {
-            const DD = zr(KD, "y", sD > 0 ? 1 : -1, zD);
-            DD && (DD.scrollBy({
-              top: sD,
+          const Ip = this.hit;
+          if (!Ip) return;
+          let Sp = !1;
+          if (0 !== op) {
+            const pp = cS(Ip, "y", op > 0 ? 1 : -1, ip);
+            pp && (pp.scrollBy({
+              top: op,
               behavior: "instant"
-            }), rD = !0)
+            }), Sp = !0)
           }
-          if (0 !== pD) {
-            const DD = zr(KD, "x", pD > 0 ? 1 : -1, zD);
-            DD && (DD.scrollBy({
-              left: pD,
+          if (0 !== Op) {
+            const pp = cS(Ip, "x", Op > 0 ? 1 : -1, ip);
+            pp && (pp.scrollBy({
+              left: Op,
               behavior: "instant"
-            }), rD = !0)
+            }), Sp = !0)
           }
-          rD && (this.lastHitTestMs = -1 / 0)
+          Sp && (this.lastHitTestMs = -1 / 0)
         }
-        KG() {
-          uD.set({
+        GA() {
+          rp.set({
             x: this.state.x,
             y: this.state.y,
             visible: this.isVisible(),
@@ -5356,502 +5691,502 @@ export const modules = {
           })
         }
       },
-      pr = () => {
-        const DD = (0, lD.useMemo)((() => new mD), []),
-          zD = (0, fD.D)();
-        return (0, lD.useEffect)((() => {
-          if (!zD) return;
-          let wD = 0,
-            pD = {
+      oS = () => {
+        const pp = (0, Np.useMemo)((() => new np), []),
+          ip = (0, Wp.H)();
+        return (0, Np.useEffect)((() => {
+          if (!ip) return;
+          let cp = 0,
+            Op = {
               of: null,
               atMs: 0,
               list: []
             };
-          const sD = document.getElementsByClassName(Tp),
-            KD = DD => {
-              for (const zD of [...sD]) zD !== DD && zD.classList.remove(Tp)
+          const op = document.getElementsByClassName(XO),
+            Ip = pp => {
+              for (const ip of [...op]) ip !== pp && ip.classList.remove(XO)
             },
-            rD = () => {
-              var zD;
-              wD = requestAnimationFrame(rD);
-              const sD = (() => {
-                const DD = zs.getFocused();
-                if (zs.isActive() && null !== DD && void 0 !== DD && DD.isConnected) return DD;
-                const zD = wr.getHighlighted();
-                return null !== zD && void 0 !== zD && zD.isConnected ? zD : null
+            Sp = () => {
+              var ip;
+              cp = requestAnimationFrame(Sp);
+              const op = (() => {
+                const pp = co.getFocused();
+                if (co.isActive() && null !== pp && void 0 !== pp && pp.isConnected) return pp;
+                const ip = OS.getHighlighted();
+                return null !== ip && void 0 !== ip && ip.isConnected ? ip : null
               })();
-              KD(sD), sD && !sD.classList.contains(Tp) && sD.classList.add(Tp);
-              const LD = null !== (zD = null === sD || void 0 === sD ? void 0 : sD.closest("[data-pad-reticle-box]")) && void 0 !== zD ? zD : sD;
-              DD.show(LD ? ((DD, zD) => {
-                let wD = DD.left,
-                  pD = DD.top,
-                  sD = DD.right,
-                  KD = DD.bottom;
-                for (const rD of zD) {
-                  if (!rD) continue;
-                  const DD = SD(rD);
-                  wD = Math.max(wD, DD.left), pD = Math.max(pD, DD.top), sD = Math.min(sD, DD.right), KD = Math.min(KD, DD.bottom)
+              Ip(op), op && !op.classList.contains(XO) && op.classList.add(XO);
+              const xp = null !== (ip = null === op || void 0 === op ? void 0 : op.closest("[data-pad-reticle-box]")) && void 0 !== ip ? ip : op;
+              pp.show(xp ? ((pp, ip) => {
+                let cp = pp.left,
+                  Op = pp.top,
+                  op = pp.right,
+                  Ip = pp.bottom;
+                for (const Sp of ip) {
+                  if (!Sp) continue;
+                  const pp = Jp(Sp);
+                  cp = Math.max(cp, pp.left), Op = Math.max(Op, pp.top), op = Math.min(op, pp.right), Ip = Math.min(Ip, pp.bottom)
                 }
-                return sD <= wD || KD <= pD ? null : {
-                  left: wD,
-                  top: pD,
-                  width: sD - wD,
-                  height: KD - pD
+                return op <= cp || Ip <= Op ? null : {
+                  left: cp,
+                  top: Op,
+                  width: op - cp,
+                  height: Ip - Op
                 }
-              })(LD.getBoundingClientRect(), (DD => {
-                const zD = performance.now();
-                return (pD.of !== DD || zD - pD.atMs > 500) && (pD = {
-                  of: DD,
-                  atMs: zD,
-                  list: [CD(DD, "y"), CD(DD, "x")]
-                }), pD.list
-              })(LD)) : null)
+              })(xp.getBoundingClientRect(), (pp => {
+                const ip = performance.now();
+                return (Op.of !== pp || ip - Op.atMs > 500) && (Op = {
+                  of: pp,
+                  atMs: ip,
+                  list: [Mp(pp, "y"), Mp(pp, "x")]
+                }), Op.list
+              })(xp)) : null)
             };
-          return wD = requestAnimationFrame(rD), () => {
-            cancelAnimationFrame(wD), KD(null), DD.hide()
+          return cp = requestAnimationFrame(Sp), () => {
+            cancelAnimationFrame(cp), Ip(null), pp.hide()
           }
-        }), [zD, DD]), (0, ZD.jsx)(eD, {
-          placer: DD,
+        }), [ip, pp]), (0, bp.jsx)(Fp, {
+          placer: pp,
           className: "PadFocusRing"
         })
       },
-      sr = (DD, zD) => {
-        DD.style.transform = `translate3d(${zD.x}px, ${zD.y}px, 0)`, DD.classList.toggle("Visible", zD.visible), DD.classList.toggle("Pressed", zD.pressed)
+      IS = (pp, ip) => {
+        pp.style.transform = `translate3d(${ip.x}px, ${ip.y}px, 0)`, pp.classList.toggle("Visible", ip.visible), pp.classList.toggle("Pressed", ip.pressed)
       },
-      Kr = () => {
-        const DD = (0, lD.useRef)(null);
-        return (0, lD.useEffect)((() => {
-          const zD = uD.subscribe((zD => {
-            DD.current && sr(DD.current, zD)
+      SS = () => {
+        const pp = (0, Np.useRef)(null);
+        return (0, Np.useEffect)((() => {
+          const ip = rp.subscribe((ip => {
+            pp.current && IS(pp.current, ip)
           }));
-          return DD.current && sr(DD.current, uD.get()), zD
-        }), []), (0, ZD.jsx)("div", {
-          ref: DD,
+          return pp.current && IS(pp.current, rp.get()), ip
+        }), []), (0, bp.jsx)("div", {
+          ref: pp,
           className: "PadCursorView",
           "aria-hidden": "true",
-          children: (0, ZD.jsx)("div", {
+          children: (0, bp.jsx)("div", {
             className: "PadCursorGlyph",
             children: "+"
           })
         })
       },
-      rr = "#ncmp__modal.ncmp__active",
-      Lr = [{
+      xS = "#ncmp__modal.ncmp__active",
+      LS = [{
         id: "nitro-consent-banner",
-        find: () => document.querySelector(rr) ? null : document.querySelector("#ncmp__tool > .ncmp__banner.ncmp__active"),
+        find: () => document.querySelector(xS) ? null : document.querySelector("#ncmp__tool > .ncmp__banner.ncmp__active"),
         startSelectors: ["[data-ncmp-cmd='reject']", "[data-ncmp-cmd='showModal']"]
       }, {
         id: "nitro-consent-modal",
-        find: () => document.querySelector(rr),
+        find: () => document.querySelector(xS),
         startSelectors: ["[data-ncmp-cmd='reject']"]
       }, {
         id: "google-consent",
         find: () => document.querySelector(".fc-consent-root"),
         startSelectors: [".fc-cta-do-not-consent", ".fc-cta-manage-options"]
       }],
-      cr = "PadOverThirdParty",
-      gr = new Set(Lr.map((DD => DD.id))),
-      Rr = () => {
-        const DD = Lr.map((DD => {
+      YS = "PadOverThirdParty",
+      DS = new Set(LS.map((pp => pp.id))),
+      AS = () => {
+        const pp = LS.map((pp => {
             let {
-              id: zD,
-              find: wD,
-              startSelectors: pD
-            } = DD;
-            return (0, pp.p)({
-              id: zD,
+              id: ip,
+              find: cp,
+              startSelectors: Op
+            } = pp;
+            return (0, IO.q)({
+              id: ip,
               kind: "popup",
               getRoot: () => {
-                const DD = wD(),
-                  zD = DD ? ((DD, zD) => {
-                    var wD;
-                    for (const pD of zD) {
-                      const zD = DD.querySelector(pD);
-                      if (zD) return zD
+                const pp = cp(),
+                  ip = pp ? ((pp, ip) => {
+                    var cp;
+                    for (const Op of ip) {
+                      const ip = pp.querySelector(Op);
+                      if (ip) return ip
                     }
-                    return null !== (wD = [...DD.querySelectorAll("button")].find((DD => !DD.matches(".fc-cta-consent, [data-ncmp-cmd='save']")))) && void 0 !== wD ? wD : null
-                  })(DD, pD) : null;
-                if (DD && zD && !zD.hasAttribute("data-pad-default-focus")) {
-                  for (const zD of DD.querySelectorAll("[data-pad-default-focus]")) zD.removeAttribute("data-pad-default-focus");
-                  for (const zD of DD.querySelectorAll("[data-pad-hint-bar-avoid]")) zD.removeAttribute("data-pad-hint-bar-avoid");
-                  zD.setAttribute("data-pad-default-focus", ""), ((DD, zD) => {
-                    let wD = DD;
-                    for (let pD = DD.parentElement; pD && zD.contains(pD) && !(pD.getBoundingClientRect().height >= window.innerHeight / 2); pD = pD.parentElement) wD = pD;
-                    return wD
-                  })(zD, DD).setAttribute("data-pad-hint-bar-avoid", "")
+                    return null !== (cp = [...pp.querySelectorAll("button")].find((pp => !pp.matches(".fc-cta-consent, [data-ncmp-cmd='save']")))) && void 0 !== cp ? cp : null
+                  })(pp, Op) : null;
+                if (pp && ip && !ip.hasAttribute("data-pad-default-focus")) {
+                  for (const ip of pp.querySelectorAll("[data-pad-default-focus]")) ip.removeAttribute("data-pad-default-focus");
+                  for (const ip of pp.querySelectorAll("[data-pad-hint-bar-avoid]")) ip.removeAttribute("data-pad-hint-bar-avoid");
+                  ip.setAttribute("data-pad-default-focus", ""), ((pp, ip) => {
+                    let cp = pp;
+                    for (let Op = pp.parentElement; Op && ip.contains(Op) && !(Op.getBoundingClientRect().height >= window.innerHeight / 2); Op = Op.parentElement) cp = Op;
+                    return cp
+                  })(ip, pp).setAttribute("data-pad-hint-bar-avoid", "")
                 }
-                return DD
+                return pp
               },
               close: null,
               memoryKey: null
             })
           })),
-          zD = document.documentElement,
-          wD = rD.g.onFrame((() => {
-            const DD = (0, fD.o)() ? Ap() : null,
-              wD = !!DD && (pD = DD.layer, gr.has(pD.id));
-            var pD;
-            zD.classList.contains(cr) !== wD && zD.classList.toggle(cr, wD)
+          ip = document.documentElement,
+          cp = Sp.e.onFrame((() => {
+            const pp = (0, Wp.n)() ? WO() : null,
+              cp = !!pp && (Op = pp.layer, DS.has(Op.id));
+            var Op;
+            ip.classList.contains(YS) !== cp && ip.classList.toggle(YS, cp)
           }));
         return () => {
-          for (const zD of DD) zD();
-          wD(), zD.classList.remove(cr)
+          for (const ip of pp) ip();
+          cp(), ip.classList.remove(YS)
         }
       },
-      Ar = "PadLargePointer",
-      Ur = () => {
-        (0, lD.useEffect)((() => {
-          const DD = (0, hD.m)(document.body),
-            zD = zs.install(),
-            wD = wr.install(),
-            pD = Rr();
+      PS = "PadLargePointer",
+      WS = () => {
+        (0, Np.useEffect)((() => {
+          const pp = (0, vp.n)(document.body),
+            ip = co.install(),
+            cp = OS.install(),
+            Op = AS();
           return () => {
-            DD(), zD(), wD(), pD()
+            pp(), ip(), cp(), Op()
           }
         }), []);
         const {
-          largePointer: DD
-        } = (0, UD.n)(), zD = (0, ZK.o)() && DD;
-        return (0, lD.useEffect)((() => {
-          if (zD) return document.documentElement.classList.add(Ar), () => {
-            document.documentElement.classList.remove(Ar)
+          largePointer: pp
+        } = (0, Pp.s)(), ip = (0, bI.r)() && pp;
+        return (0, Np.useEffect)((() => {
+          if (ip) return document.documentElement.classList.add(PS), () => {
+            document.documentElement.classList.remove(PS)
           }
-        }), [zD]), (0, LD.createPortal)((0, ZD.jsxs)(ZD.Fragment, {
-          children: [(0, ZD.jsx)(FK, {}), (0, ZD.jsx)(pr, {}), (0, ZD.jsx)(Kr, {})]
+        }), [ip]), (0, xp.createPortal)((0, bp.jsxs)(bp.Fragment, {
+          children: [(0, bp.jsx)(sI, {}), (0, bp.jsx)(oS, {}), (0, bp.jsx)(SS, {})]
         }), document.body)
       };
-    var fr = wD(8803),
-      Ir = wD(8824),
-      Br = wD(8810);
-    wD(8826);
-    const Gr = (DD, zD) => {
-        const [wD, pD] = (0, lD.useState)(!1), [sD, KD] = (0, lD.useState)(null), rD = (0, lD.useRef)(null), LD = (0, lD.useCallback)((DD => {
-          rD.current = DD, KD(DD)
-        }), []), cD = (0, lD.useCallback)((() => {
-          pD(!1), LD(null)
-        }), [LD]), RD = (0, lD.useCallback)((() => {
-          pD(!0)
-        }), []), AD = (0, lD.useCallback)(((DD, zD) => {
-          LD((0, Br.C)(DD, zD, rD.current))
-        }), [LD]);
-        (0, lD.useLayoutEffect)((() => (zD(wD), (0, yK.v)(DD, wD), gD.l.KG(yK.o), () => {
-          zD(!1), (0, yK.v)(DD, !1), gD.l.KG(yK.o)
-        })), [wD, DD, zD]), (0, ns.g)("appManagerUpdated|activeInputDevice", (DD => {
-          "gamepad" !== DD && cD()
-        })), (0, ns.g)("appManagerUpdated|gameState", (DD => {
-          "inGame" !== DD && cD()
+    var yS = cp(8900),
+      US = cp(8928),
+      wS = cp(8917);
+    cp(8937);
+    const vS = (pp, ip) => {
+        const [cp, Op] = (0, Np.useState)(!1), [op, Ip] = (0, Np.useState)(null), Sp = (0, Np.useRef)(null), xp = (0, Np.useCallback)((pp => {
+          Sp.current = pp, Ip(pp)
+        }), []), Lp = (0, Np.useCallback)((() => {
+          Op(!1), xp(null)
+        }), [xp]), Dp = (0, Np.useCallback)((() => {
+          Op(!0)
+        }), []), Ap = (0, Np.useCallback)(((pp, ip) => {
+          xp((0, wS.A)(pp, ip, Sp.current))
+        }), [xp]);
+        (0, Np.useLayoutEffect)((() => (ip(cp), (0, hI.y)(pp, cp), Yp.m.GA(hI.r), () => {
+          ip(!1), (0, hI.y)(pp, !1), Yp.m.GA(hI.r)
+        })), [cp, pp, ip]), (0, Ho.f)("appManagerUpdated|activeInputDevice", (pp => {
+          "gamepad" !== pp && Lp()
+        })), (0, Ho.f)("appManagerUpdated|gameState", (pp => {
+          "inGame" !== pp && Lp()
         }));
-        const UD = () => {
-          (0, gw.q)() && cD()
+        const Pp = () => {
+          (0, Ac.l)() && Lp()
         };
-        return (0, ns.g)("appManagerUpdated|openEverythingMenuName", UD), (0, ns.g)("appManagerUpdated|openInGameMenuName", UD), {
-          open: wD,
-          picked: sD,
-          pickedRef: rD,
-          show: RD,
-          aim: AD,
-          close: cD
+        return (0, Ho.f)("appManagerUpdated|openEverythingMenuName", Pp), (0, Ho.f)("appManagerUpdated|openInGameMenuName", Pp), {
+          open: cp,
+          picked: op,
+          pickedRef: Sp,
+          show: Dp,
+          aim: Ap,
+          close: Lp
         }
       },
-      hr = DD => {
+      tS = pp => {
         let {
-          className: zD,
-          slotCount: wD,
-          picked: pD,
-          slotLabel: sD,
-          renderSlot: KD,
-          centre: rD
-        } = DD;
-        const LD = Array.from({
-          length: wD
-        }, ((DD, zD) => zD));
-        return (0, ZD.jsx)("div", {
-          className: ND()("EmoteWheelOverlay PadRadialWheel", zD),
-          children: (0, ZD.jsxs)("div", {
+          className: ip,
+          slotCount: cp,
+          picked: Op,
+          slotLabel: op,
+          renderSlot: Ip,
+          centre: Sp
+        } = pp;
+        const xp = Array.from({
+          length: cp
+        }, ((pp, ip) => ip));
+        return (0, bp.jsx)("div", {
+          className: fp()("EmoteWheelOverlay PadRadialWheel", ip),
+          children: (0, bp.jsxs)("div", {
             className: "EmoteWheel",
             style: {
-              width: 2 * Br.s + "rem",
-              height: 2 * Br.s + "rem"
+              width: 2 * wS.r + "rem",
+              height: 2 * wS.r + "rem"
             },
-            children: [(0, ZD.jsxs)("svg", {
+            children: [(0, bp.jsxs)("svg", {
               className: "EmoteWheelSvg",
-              viewBox: `0 0 ${Br.n} ${Br.n}`,
-              children: [LD.map((DD => (0, ZD.jsx)("path", {
-                d: (0, Br.t)(DD, wD, Br.f, Br.j, Br.m),
-                className: ND()("EmoteWheelWedge", {
-                  EmoteWheelWedgeHighlighted: DD === pD
+              viewBox: `0 0 ${wS.m} ${wS.m}`,
+              children: [xp.map((pp => (0, bp.jsx)("path", {
+                d: (0, wS.t)(pp, cp, wS.f, wS.h, wS.k),
+                className: fp()("EmoteWheelWedge", {
+                  EmoteWheelWedgeHighlighted: pp === Op
                 }),
-                "aria-label": sD(DD)
-              }, DD))), (0, ZD.jsx)("circle", {
+                "aria-label": op(pp)
+              }, pp))), (0, bp.jsx)("circle", {
                 className: "EmoteWheelOuterRing",
-                cx: Br.f,
-                cy: Br.f,
-                r: Br.m
-              }), (0, ZD.jsx)("circle", {
+                cx: wS.f,
+                cy: wS.f,
+                r: wS.k
+              }), (0, bp.jsx)("circle", {
                 className: "EmoteWheelInnerRing",
-                cx: Br.f,
-                cy: Br.f,
-                r: Br.j
-              }), null !== pD && (0, ZD.jsx)("path", {
+                cx: wS.f,
+                cy: wS.f,
+                r: wS.h
+              }), null !== Op && (0, bp.jsx)("path", {
                 className: "EmoteWheelWedgeOutline",
-                d: (0, Br.t)(pD, wD, Br.f, Br.j, Br.m)
+                d: (0, wS.t)(Op, cp, wS.f, wS.h, wS.k)
               })]
-            }), LD.map((DD => {
-              const zD = (0, Br.v)(DD, wD);
-              return (0, ZD.jsx)("div", {
-                className: ND()("PadRadialWheelSlot SmallTextBold", {
-                  PadRadialWheelSlotPicked: DD === pD
+            }), xp.map((pp => {
+              const ip = (0, wS.w)(pp, cp);
+              return (0, bp.jsx)("div", {
+                className: fp()("PadRadialWheelSlot SmallTextBold", {
+                  PadRadialWheelSlotPicked: pp === Op
                 }),
                 style: {
-                  left: `calc(50% + ${Br.c*Math.cos(zD)}rem)`,
-                  top: `calc(50% + ${Br.c*Math.sin(zD)}rem)`
+                  left: `calc(50% + ${wS.c*Math.cos(ip)}rem)`,
+                  top: `calc(50% + ${wS.c*Math.sin(ip)}rem)`
                 },
                 "aria-hidden": !0,
-                children: KD(DD)
-              }, DD)
-            })), (0, ZD.jsx)("div", {
+                children: Ip(pp)
+              }, pp)
+            })), (0, bp.jsx)("div", {
               className: "EmoteWheelHint SmallTextBold",
-              children: rD
+              children: Sp
             })]
           })
         })
       },
-      nr = IK.length,
-      Mr = () => {
+      HS = UI.length,
+      dS = () => {
         const {
-          t: DD
-        } = (0, sD.E)(), zD = Gr("chat", bw.l), wD = (0, lD.useMemo)((() => IK.map((zD => DD(zD)))), [DD]);
-        return (0, ns.g)(bw.k, (() => {
-          zD.open || (0, fr.f)() || (0, Ir.p)() || "inGame" !== cD.e.get("gameState") || (0, gw.q)() || !(0, xw.d)() || zD.show()
-        })), (0, ns.g)(bw.g, (DD => {
-          zD.open && zD.aim(DD, nr)
-        })), (0, ns.g)(bw.i, (() => {
-          var DD;
-          if (!zD.open) return;
-          const pD = zD.pickedRef.current;
-          null !== pD ? BK.claim(performance.now()) && (zD.close(), null === (DD = (0, xw.d)()) || void 0 === DD || DD.sendLine(wD[pD])) : zD.close()
-        })), (0, ns.g)(bw.h, zD.close), zD.open ? (0, ZD.jsx)(hr, {
+          t: pp
+        } = (0, op.H)(), ip = vS("chat", lc.r), cp = (0, Np.useMemo)((() => UI.map((ip => pp(ip)))), [pp]);
+        return (0, Ho.f)(lc.n, (() => {
+          ip.open || (0, yS.f)() || (0, US.x)() || "inGame" !== Lp.c.get("gameState") || (0, Ac.l)() || !(0, Ec.b)() || ip.show()
+        })), (0, Ho.f)(lc.h, (pp => {
+          ip.open && ip.aim(pp, HS)
+        })), (0, Ho.f)(lc.m, (() => {
+          var pp;
+          if (!ip.open) return;
+          const Op = ip.pickedRef.current;
+          null !== Op ? wI.claim(performance.now()) && (ip.close(), null === (pp = (0, Ec.b)()) || void 0 === pp || pp.sendLine(cp[Op])) : ip.close()
+        })), (0, Ho.f)(lc.l, ip.close), ip.open ? (0, bp.jsx)(tS, {
           className: "QuickChatWheel",
-          slotCount: nr,
-          picked: zD.picked,
-          slotLabel: DD => wD[DD],
-          renderSlot: DD => wD[DD],
-          centre: null !== zD.picked ? wD[zD.picked] : DD("controller:quickChatPick")
+          slotCount: HS,
+          picked: ip.picked,
+          slotLabel: pp => cp[pp],
+          renderSlot: pp => cp[pp],
+          centre: null !== ip.picked ? cp[ip.picked] : pp("controller:quickChatPick")
         }) : null
       },
-      Or = () => {
+      eS = () => {
         const {
-          t: DD
-        } = (0, sD.E)(), zD = Gr("actionButton", Ir.q), [wD, pD] = (0, lD.useState)([]);
-        if ((0, ns.g)(Ir.k, (DD => {
-            zD.open || (0, fr.f)() || (0, bw.e)() || "inGame" !== cD.e.get("gameState") || (0, gw.q)() || (pD(DD), zD.show())
-          })), (0, ns.g)(Ir.b, (DD => {
-            zD.open && zD.aim(DD, wD.length)
-          })), (0, ns.g)(Ir.i, (() => {
-            if (!zD.open) return;
-            const DD = zD.pickedRef.current;
-            zD.close(), null !== DD && gD.l.KG(Ir.o, wD[DD])
-          })), (0, ns.g)(Ir.f, zD.close), !zD.open) return null;
-        const KD = null !== zD.picked ? wD[zD.picked] : null;
-        return (0, ZD.jsx)(hr, {
+          t: pp
+        } = (0, op.H)(), ip = vS("actionButton", US.z), [cp, Op] = (0, Np.useState)([]);
+        if ((0, Ho.f)(US.p, (pp => {
+            ip.open || (0, yS.f)() || (0, lc.d)() || "inGame" !== Lp.c.get("gameState") || (0, Ac.l)() || (Op(pp), ip.show())
+          })), (0, Ho.f)(US.e, (pp => {
+            ip.open && ip.aim(pp, cp.length)
+          })), (0, Ho.f)(US.l, (() => {
+            if (!ip.open) return;
+            const pp = ip.pickedRef.current;
+            ip.close(), null !== pp && Yp.m.GA(US.t, cp[pp])
+          })), (0, Ho.f)(US.i, ip.close), !ip.open) return null;
+        const Ip = null !== ip.picked ? cp[ip.picked] : null;
+        return (0, bp.jsx)(tS, {
           className: "ActionWheel",
-          slotCount: wD.length,
-          picked: zD.picked,
-          slotLabel: zD => {
-            const pD = wD[zD];
-            return "reload" === pD.kind ? DD("controller:gameplayReload") : "customButton" === pD.kind ? pD.description || pD.icon : "touchButton" === pD.kind && "string" === typeof pD.label ? pD.label : ""
+          slotCount: cp.length,
+          picked: ip.picked,
+          slotLabel: ip => {
+            const Op = cp[ip];
+            return "reload" === Op.kind ? pp("controller:gameplayReload") : "customButton" === Op.kind ? Op.description || Op.icon : "touchButton" === Op.kind && "string" === typeof Op.label ? Op.label : ""
           },
-          renderSlot: DD => (0, ZD.jsx)(Cs, {
-            action: wD[DD]
+          renderSlot: pp => (0, bp.jsx)(Mo, {
+            action: cp[pp]
           }),
-          centre: KD ? (0, ZD.jsx)(Cs, {
-            action: KD
-          }) : DD("controller:actionWheelPick")
+          centre: Ip ? (0, bp.jsx)(Mo, {
+            action: Ip
+          }) : pp("controller:actionWheelPick")
         })
       };
-    var Jr = wD(103);
-    const Er = () => ((0, lD.useEffect)((() => {
-        var DD, zD;
-        const wD = (0, hD.m)(document.getElementById("root")),
-          pD = (0, fD.h)(),
-          sD = (() => {
-            const DD = [gD.l.subscribe(ps.g, (() => {
-                Ls("blockBreak")
-              })), gD.l.subscribe("damagedByOtherPlayer", (() => {
-                Ls("damage")
-              })), gD.l.subscribe("yourAttackHit", (DD => {
+    var uS = cp(104);
+    const jS = () => ((0, Np.useEffect)((() => {
+        var pp, ip;
+        const cp = (0, vp.n)(document.getElementById("root")),
+          Op = (0, Wp.h)(),
+          op = (() => {
+            const pp = [Yp.m.subscribe(oo.f, (() => {
+                Lo("blockBreak")
+              })), Yp.m.subscribe("damagedByOtherPlayer", (() => {
+                Lo("damage")
+              })), Yp.m.subscribe("yourAttackHit", (pp => {
                 let {
-                  hitSelf: zD
-                } = DD;
-                zD || Ls("hit")
+                  hitSelf: ip
+                } = pp;
+                ip || Lo("hit")
               }))],
-              zD = rD.g.onActivePadChanged((DD => {
-                DD && Ls("connect")
+              ip = Sp.e.onActivePadChanged((pp => {
+                pp && Lo("connect")
               }));
             return () => {
-              for (const zD of DD) gD.l.unsubscribe(zD);
-              zD()
+              for (const ip of pp) Yp.m.unsubscribe(ip);
+              ip()
             }
           })(),
-          KD = (() => {
-            const DD = new fs({
-              getVisitId: Us.d,
-              peekVisitId: Us.peekVisitSessionId,
+          Ip = (() => {
+            const pp = new yo({
+              getVisitId: Wo.g,
+              peekVisitId: Wo.peekVisitSessionId,
               readReportedVisitId: () => {
-                const DD = As.k.getItem(Is);
-                return "string" === typeof DD ? DD : null
+                const pp = Po.l.getItem(Uo);
+                return "string" === typeof pp ? pp : null
               },
-              writeReportedVisitId: DD => {
-                As.k.setItem(Is, DD)
+              writeReportedVisitId: pp => {
+                Po.l.setItem(Uo, pp)
               },
-              isPadActive: fD.o,
+              isPadActive: Wp.n,
               getPadFamily: () => {
-                var DD, zD;
-                return null !== (DD = null === (zD = rD.g.getActivePad()) || void 0 === zD ? void 0 : zD.family) && void 0 !== DD ? DD : null
+                var pp, ip;
+                return null !== (pp = null === (ip = Sp.e.getActivePad()) || void 0 === ip ? void 0 : ip.family) && void 0 !== pp ? pp : null
               },
-              canReport: gs.h,
-              getInputType: Rs.e,
-              sI: gs.m
+              canReport: Do.isBloxdGa4Ready,
+              getInputType: Ao.c,
+              Yy: Do.logControllerUsedToGtag
             });
-            let zD = 0,
-              wD = null;
-            const pD = sD => {
-                null === wD && ("notReady" !== DD.check(sD) || null !== wD || zD >= 20 || (zD++, wD = setTimeout((() => {
-                  wD = null, pD(!1)
+            let ip = 0,
+              cp = null;
+            const Op = op => {
+                null === cp && ("notReady" !== pp.check(op) || null !== cp || ip >= 20 || (ip++, cp = setTimeout((() => {
+                  cp = null, Op(!1)
                 }), 3e3)))
               },
-              sD = gD.l.subscribe("appManagerUpdated|activeInputDevice", (() => {
-                pD(!0)
+              op = Yp.m.subscribe("appManagerUpdated|activeInputDevice", (() => {
+                Op(!0)
               })),
-              KD = (0, Us.f)((() => {
-                zD = 0, pD(!0)
+              Ip = (0, Wo.m)((() => {
+                ip = 0, Op(!0)
               }));
             return () => {
-              gD.l.unsubscribe(sD), KD(), null !== wD && clearTimeout(wD)
+              Yp.m.unsubscribe(op), Ip(), null !== cp && clearTimeout(cp)
             }
           })(),
-          LD = rD.g.onFrame(((DD, zD) => {
-            const wD = (0, fD.u)(DD);
-            AD.e.dispatch(DD, zD, wD)
+          xp = Sp.e.onFrame(((pp, ip, cp) => {
+            const Op = (0, Wp.u)(pp, cp);
+            Ap.d.dispatch(pp, ip, Op)
           }));
-        let RD = null !== (DD = null === (zD = rD.g.getActivePad()) || void 0 === zD ? void 0 : zD.family) && void 0 !== DD ? DD : null;
-        const ID = rD.g.onActivePadChanged((DD => {
-            var zD, wD;
-            (AD.e.reset(), (0, fD.z)(), gD.l.KG(rD.d, DD), (null !== (zD = null === DD || void 0 === DD ? void 0 : DD.family) && void 0 !== zD ? zD : null) !== RD) && (RD = null !== (wD = null === DD || void 0 === DD ? void 0 : DD.family) && void 0 !== wD ? wD : null, gD.l.KG(UD.c, (0, UD.g)()));
-            !DD && (0, fD.o)() && (0, fD.A)(cD.e.get("isTouchScreen") ? "touch" : "keyboardMouse")
+        let Dp = null !== (pp = null === (ip = Sp.e.getActivePad()) || void 0 === ip ? void 0 : ip.family) && void 0 !== pp ? pp : null;
+        const yp = Sp.e.onActivePadChanged((pp => {
+            var ip, cp;
+            (Ap.d.reset(), (0, Wp.A)(), Yp.m.GA(Sp.c, pp), (null !== (ip = null === pp || void 0 === pp ? void 0 : pp.family) && void 0 !== ip ? ip : null) !== Dp) && (Dp = null !== (cp = null === pp || void 0 === pp ? void 0 : pp.family) && void 0 !== cp ? cp : null, Yp.m.GA(Pp.c, (0, Pp.h)()));
+            !pp && (0, Wp.n)() && (0, Wp.E)(Lp.c.get("isTouchScreen") ? "touch" : "keyboardMouse")
           })),
-          BD = () => {
-            "visible" !== document.visibilityState && AD.e.clear()
+          Up = () => {
+            "visible" !== document.visibilityState && Ap.d.clear()
           },
-          GD = () => {
-            AD.e.clear()
+          wp = () => {
+            Ap.d.clear()
           };
-        document.addEventListener("visibilitychange", BD), window.addEventListener("blur", GD), rD.g.start(), (0, cs.n)();
-        const nD = null;
+        document.addEventListener("visibilitychange", Up), window.addEventListener("blur", wp), Sp.e.start(), (0, Yo.k)();
+        const tp = null;
         return () => {
-          wD(), pD(), sD(), KD(), LD(), ID(), document.removeEventListener("visibilitychange", BD), window.removeEventListener("blur", GD), rD.g.stop(), null === nD || void 0 === nD || nD()
+          cp(), Op(), op(), Ip(), xp(), yp(), document.removeEventListener("visibilitychange", Up), window.removeEventListener("blur", wp), Sp.e.stop(), null === tp || void 0 === tp || tp()
         }
-      }), []), (0, ZD.jsxs)("div", {
+      }), []), (0, bp.jsxs)("div", {
         className: "ControllerRoot",
-        children: [(0, ZD.jsx)(ls, {}), (0, ZD.jsx)(as, {}), (0, ZD.jsx)(us, {}), (0, ZD.jsx)(WK, {}), (0, ZD.jsx)(Ur, {}), (0, ZD.jsx)(Mr, {}), (0, ZD.jsx)(Or, {})]
+        children: [(0, bp.jsx)(No, {}), (0, bp.jsx)(Go, {}), (0, bp.jsx)(ro, {}), (0, bp.jsx)(TI, {}), (0, bp.jsx)(WS, {}), (0, bp.jsx)(dS, {}), (0, bp.jsx)(eS, {})]
       })),
-      Qr = () => Jr.featureFlags.useControllerSupport ? (0, ZD.jsx)(Er, {}) : null;
-    var Xr = wD(8213),
-      Vr = wD(8830);
-    const Pr = new Set(cs.j),
-      Cr = DD => `${Vr.n}${(0,UD.j)()}/${DD}`,
-      xr = DD => {
-        if (!(0, Vr.l)(DD)) return null;
-        const [zD, wD] = DD.slice(Vr.n.length).split("/");
-        return (0, Xr.g)(zD) && Pr.has(wD) ? (0, cs.f)(zD, wD) : null
+      kS = () => uS.featureFlags.useControllerSupport ? (0, bp.jsx)(jS, {}) : null;
+    var mS = cp(8327),
+      RS = cp(8944);
+    const qS = new Set(Yo.h),
+      MS = pp => `${RS.o}${(0,Pp.k)()}/${pp}`,
+      CS = pp => {
+        if (!(0, RS.l)(pp)) return null;
+        const [ip, cp] = pp.slice(RS.o.length).split("/");
+        return (0, mS.f)(ip) && qS.has(cp) ? (0, Yo.g)(ip, cp) : null
       };
-    var Tr = wD(8833);
-    const br = () => {
+    var ES = cp(8952);
+    const XS = () => {
         const {
-          t: DD
-        } = (0, sD.E)(), zD = (0, fD.D)(), {
-          gameState: wD,
-          isUiHidden: pD
-        } = (0, cD.n)(["gameState", "isUiHidden"]), {
-          hideButtonHints: KD,
-          sneakMode: rD
-        } = (0, UD.n)(), [LD, gD] = (0, lD.useState)(Tr.b);
-        return (0, ns.g)(is.q, gD), zD && !pD && "inGame" === wD && LD ? (0, ZD.jsxs)("div", {
+          t: pp
+        } = (0, op.H)(), ip = (0, Wp.H)(), {
+          gameState: cp,
+          isUiHidden: Op
+        } = (0, Lp.o)(["gameState", "isUiHidden"]), {
+          hideButtonHints: Ip,
+          sneakMode: Sp
+        } = (0, Pp.s)(), [xp, Yp] = (0, Np.useState)(ES.b);
+        return (0, Ho.f)(Bo.p, Yp), ip && !Op && "inGame" === cp && xp ? (0, bp.jsxs)("div", {
           className: "PadSneakChip SmallTextBold",
-          children: [!KD && (0, ZD.jsx)(Vs, {
-            glyph: (0, RD.g)("toggle" === rD ? "sneak" : "sneakToggle")
-          }), (0, ZD.jsx)("span", {
-            children: DD("controller:gameplaySneaking")
+          children: [!Ip && (0, bp.jsx)(Ro, {
+            glyph: (0, Dp.g)("toggle" === Sp ? "sneak" : "sneakToggle")
+          }), (0, bp.jsx)("span", {
+            children: pp("controller:gameplaySneaking")
           })]
         }) : null
       },
-      jr = 12,
-      dr = DD => {
+      lS = 12,
+      QS = pp => {
         let {
-          trigger: zD,
-          className: wD,
-          children: pD
-        } = DD;
-        const sD = (0, lD.useRef)(null);
-        return (0, lD.useEffect)((() => {
-          let DD = 0;
-          const wD = CD(zD, "y"),
-            pD = () => {
-              DD = requestAnimationFrame(pD);
-              const KD = sD.current;
-              if (!KD || null === zD || void 0 === zD || !zD.isConnected) return;
+          trigger: ip,
+          className: cp,
+          children: Op
+        } = pp;
+        const op = (0, Np.useRef)(null);
+        return (0, Np.useEffect)((() => {
+          let pp = 0;
+          const cp = Mp(ip, "y"),
+            Op = () => {
+              pp = requestAnimationFrame(Op);
+              const Ip = op.current;
+              if (!Ip || null === ip || void 0 === ip || !ip.isConnected) return;
               const {
-                left: rD,
-                top: LD
-              } = function(DD, zD, wD) {
-                let pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-                  sD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
-                const KD = DD.left + DD.width / 2,
-                  rD = Math.max(jr, wD.width - jr - zD.width),
-                  LD = Math.min(Math.max(KD - zD.width / 2, jr), rD),
-                  cD = wD.height - pD;
-                let gD = 0,
-                  RD = cD;
-                if (sD) {
-                  const DD = Math.max(0, sD.top),
-                    pD = Math.min(cD, sD.bottom);
-                  pD - DD >= Math.max(wD.height / 2, zD.height + 24) && (gD = DD, RD = pD)
+                left: Sp,
+                top: xp
+              } = function(pp, ip, cp) {
+                let Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+                  op = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null;
+                const Ip = pp.left + pp.width / 2,
+                  Sp = Math.max(lS, cp.width - lS - ip.width),
+                  xp = Math.min(Math.max(Ip - ip.width / 2, lS), Sp),
+                  Lp = cp.height - Op;
+                let Yp = 0,
+                  Dp = Lp;
+                if (op) {
+                  const pp = Math.max(0, op.top),
+                    Op = Math.min(Lp, op.bottom);
+                  Op - pp >= Math.max(cp.height / 2, ip.height + 24) && (Yp = pp, Dp = Op)
                 }
-                const AD = DD.top + DD.height / 2 < (gD + RD) / 2 ? RD - jr - zD.height : gD + jr;
+                const Ap = pp.top + pp.height / 2 < (Yp + Dp) / 2 ? Dp - lS - ip.height : Yp + lS;
                 return {
-                  left: LD,
-                  top: Math.max(jr, AD)
+                  left: xp,
+                  top: Math.max(lS, Ap)
                 }
-              }(zD.getBoundingClientRect(), {
-                width: KD.offsetWidth,
-                height: KD.offsetHeight
+              }(ip.getBoundingClientRect(), {
+                width: Ip.offsetWidth,
+                height: Ip.offsetHeight
               }, {
                 width: window.innerWidth,
                 height: window.innerHeight
-              }, parseFloat(document.documentElement.style.getPropertyValue(oK)) || 0, null !== wD && void 0 !== wD && wD.isConnected ? wD.getBoundingClientRect() : null);
-              KD.style.transform = `translate3d(${Math.round(rD)}px, ${Math.round(LD)}px, 0)`, KD.style.visibility = "visible"
+              }, parseFloat(document.documentElement.style.getPropertyValue(gI)) || 0, null !== cp && void 0 !== cp && cp.isConnected ? cp.getBoundingClientRect() : null);
+              Ip.style.transform = `translate3d(${Math.round(Sp)}px, ${Math.round(xp)}px, 0)`, Ip.style.visibility = "visible"
             };
-          return pD(), () => {
-            cancelAnimationFrame(DD)
+          return Op(), () => {
+            cancelAnimationFrame(pp)
           }
-        }), [zD]), (0, ZD.jsx)("div", {
-          ref: sD,
-          className: wD,
+        }), [ip]), (0, bp.jsx)("div", {
+          ref: op,
+          className: cp,
           style: {
             position: "fixed",
             left: 0,
             top: 0,
             visibility: "hidden"
           },
-          children: pD
+          children: Op
         })
       };
-    var Sr = wD(1057),
-      ir = wD(8837),
-      lr = wD(1447),
-      Wr = wD(8841),
-      Nr = wD(8849);
-    const Zr = {
+    var JS = cp(1060),
+      BS = cp(8961),
+      NS = cp(1480),
+      TS = cp(8967),
+      fS = cp(8972);
+    const bS = {
         shop: {
           icon: "cart-shopping",
           labelKey: "controller:menusShop"
@@ -5869,539 +6204,539 @@ export const modules = {
           labelKey: "settingsMenu:exitGame"
         }
       },
-      yr = () => {
+      hS = () => {
         const {
-          t: DD
-        } = (0, sD.E)(), zD = (0, fD.D)(), wD = (0, ir.c)(), pD = (0, ms.h)("_tasks"), KD = (0, ms.h)("_availableLeaderboards");
-        if (!zD) return null;
-        const rD = (DD => {
+          t: pp
+        } = (0, op.H)(), ip = (0, Wp.H)(), cp = (0, BS.d)(), Op = (0, no.i)("_tasks"), Ip = (0, no.i)("_availableLeaderboards");
+        if (!ip) return null;
+        const Sp = (pp => {
           let {
-            hasShop: zD,
-            hasTasksOrLeaderboards: wD,
-            canInvite: pD
-          } = DD;
-          const sD = [];
-          return zD && sD.push("shop"), wD && sD.push("tasks"), pD && sD.push("invite"), sD.push("leave"), sD
+            hasShop: ip,
+            hasTasksOrLeaderboards: cp,
+            canInvite: Op
+          } = pp;
+          const op = [];
+          return ip && op.push("shop"), cp && op.push("tasks"), Op && op.push("invite"), op.push("leave"), op
         })({
-          hasShop: wD,
-          hasTasksOrLeaderboards: !(!pD && !KD),
-          canInvite: !!Jr.featureFlags.canUseInviteLinks
+          hasShop: cp,
+          hasTasksOrLeaderboards: !(!Op && !Ip),
+          canInvite: !!uS.featureFlags.canUseInviteLinks
         });
-        return (0, ZD.jsx)("div", {
+        return (0, bp.jsx)("div", {
           className: "PadLobbyShortcuts",
-          children: rD.map((zD => {
+          children: Sp.map((ip => {
             const {
-              icon: wD,
-              labelKey: pD
-            } = Zr[zD], sD = "leave" === zD ? lr.R : lr.f;
-            return (0, ZD.jsx)(sD, {
+              icon: cp,
+              labelKey: Op
+            } = bS[ip], op = "leave" === ip ? NS.K : NS.f;
+            return (0, bp.jsx)(op, {
               className: "PadLobbyShortcut",
               onClick: () => {
-                (DD => {
-                  switch (DD) {
+                (pp => {
+                  switch (pp) {
                     case "shop":
-                      return gD.l.KG(Nr.j), void cD.e.set({
-                        openEverythingMenuName: Lw.l.SHOP
+                      return Yp.m.GA(fS.i), void Lp.c.set({
+                        openEverythingMenuName: Dc.n.SHOP
                       });
                     case "tasks":
-                      return void gD.l.KG("toggleMenu", "retentionFeatures");
+                      return void Yp.m.GA("toggleMenu", "retentionFeatures");
                     case "invite":
-                      return void gD.l.KG("toggleMenu", "inviteLink");
+                      return void Yp.m.GA("toggleMenu", "inviteLink");
                     case "leave":
-                      (0, Wr.b)()
+                      (0, TS.b)()
                   }
-                })(zD)
+                })(ip)
               },
-              children: (0, ZD.jsxs)("div", {
+              children: (0, bp.jsxs)("div", {
                 className: "PadLobbyShortcutInner",
-                children: [(0, ZD.jsx)(Sr.e, {
-                  name: wD
-                }), (0, ZD.jsx)("span", {
-                  children: DD(pD)
+                children: [(0, bp.jsx)(JS.d, {
+                  name: cp
+                }), (0, bp.jsx)("span", {
+                  children: pp(Op)
                 })]
               })
-            }, zD)
+            }, ip)
           }))
         })
       };
-    var kr = wD(1981);
-    const mr = ID.s,
-      er = ["forward", "backward", "left", "right", "sprint"],
-      or = DD => DD.ctrlKey || DD.altKey || "Alt" === DD.key || "ArrowUp" === DD.key || "ArrowDown" === DD.key || "Tab" === DD.code || "/" === DD.key || "Slash" === DD.code;
-    class ar {
+    var aS = cp(2012);
+    const nS = yp.u,
+      FS = ["forward", "backward", "left", "right", "sprint"],
+      gS = pp => pp.ctrlKey || pp.altKey || "Alt" === pp.key || "ArrowUp" === pp.key || "ArrowDown" === pp.key || "Tab" === pp.code || "/" === pp.key || "Slash" === pp.code;
+    class GS {
       constructor() {
-        this.armed = !1, this.swallowedKeys = new Set, this.previousHeld = new Array(ID.R).fill(!1), this.leftStickWasPressed = !1, this.rightStickWasPressed = !1, this.consumeNextFrame = !1, this.consumeAfterContinue = !1
+        this.armed = !1, this.swallowedKeys = new Set, this.previousHeld = new Array(yp.N).fill(!1), this.leftStickWasPressed = !1, this.rightStickWasPressed = !1, this.consumeNextFrame = !1, this.consumeAfterContinue = !1
       }
-      setArmed(DD) {
-        this.armed = DD
+      setArmed(pp) {
+        this.armed = pp
       }
       blocksGameplay() {
         return this.armed || this.consumeNextFrame
       }
-      onKeyDown(DD) {
-        let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          wD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        return !this.armed || zD ? !DD.repeat && this.swallowedKeys.delete(DD.code) ? {
+      onKeyDown(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        return !this.armed || ip ? !pp.repeat && this.swallowedKeys.delete(pp.code) ? {
           swallow: !1,
           continues: !1
         } : {
-          swallow: this.swallowedKeys.has(DD.code),
+          swallow: this.swallowedKeys.has(pp.code),
           continues: !1
-        } : "Escape" === DD.key || DD.repeat && !this.swallowedKeys.has(DD.code) ? {
+        } : "Escape" === pp.key || pp.repeat && !this.swallowedKeys.has(pp.code) ? {
           swallow: !1,
           continues: !1
-        } : wD ? {
+        } : cp ? {
           swallow: !1,
           continues: !0
-        } : (this.swallowedKeys.add(DD.code), {
+        } : (this.swallowedKeys.add(pp.code), {
           swallow: !0,
-          continues: (0, fD.l)(DD)
+          continues: (0, Wp.j)(pp)
         })
       }
-      onKeyUp(DD) {
-        return this.swallowedKeys.delete(DD.code)
+      onKeyUp(pp) {
+        return this.swallowedKeys.delete(pp.code)
       }
       forgetKeys() {
         this.swallowedKeys.clear()
       }
-      onPadFrame(DD) {
-        let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
-          pD = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-        const sD = (0, ID.p)(DD.values, this.previousHeld),
-          KD = null === wD ? -1 : (0, ID.m)(wD),
-          rD = KD >= 0 && sD[KD] && !this.previousHeld[KD],
-          LD = sD.some(((DD, zD) => DD && !this.previousHeld[zD] && zD !== KD)),
-          cD = Math.hypot(DD.leftStick.x, DD.leftStick.y) >= mr,
-          gD = Math.hypot(DD.rightStick.x, DD.rightStick.y) >= mr,
-          RD = cD && !this.leftStickWasPressed || gD && !this.rightStickWasPressed;
-        this.previousHeld = sD, this.leftStickWasPressed = cD, this.rightStickWasPressed = gD;
-        let AD = !1;
-        this.consumeNextFrame && (this.consumeNextFrame = !1, AD = !0);
-        const UD = !zD && rD && !pD,
-          fD = !UD && this.armed && !zD && (LD || RD);
-        return (UD || fD) && (this.consumeNextFrame = !0, this.consumeAfterContinue = fD, AD = !0), {
-          continues: fD,
-          back: UD,
-          consumeHeld: AD
+      onPadFrame(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+          Op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        const op = (0, yp.m)(pp.values, this.previousHeld),
+          Ip = null === cp ? -1 : (0, yp.i)(cp),
+          Sp = Ip >= 0 && op[Ip] && !this.previousHeld[Ip],
+          xp = op.some(((pp, ip) => pp && !this.previousHeld[ip] && ip !== Ip)),
+          Lp = Math.hypot(pp.leftStick.x, pp.leftStick.y) >= nS,
+          Yp = Math.hypot(pp.rightStick.x, pp.rightStick.y) >= nS,
+          Dp = Lp && !this.leftStickWasPressed || Yp && !this.rightStickWasPressed;
+        this.previousHeld = op, this.leftStickWasPressed = Lp, this.rightStickWasPressed = Yp;
+        let Ap = !1;
+        this.consumeNextFrame && (this.consumeNextFrame = !1, Ap = !0);
+        const Pp = !ip && Sp && !Op,
+          Wp = !Pp && this.armed && !ip && (xp || Dp);
+        return (Pp || Wp) && (this.consumeNextFrame = !0, this.consumeAfterContinue = Wp, Ap = !0), {
+          continues: Wp,
+          back: Pp,
+          consumeHeld: Ap
         }
       }
       consumeLeavesMoveStick() {
         return this.consumeAfterContinue
       }
     }
-    const ur = new Set([...kr.j, ...kr.z]),
-      vr = DD => ((DD, zD, wD) => {
-        const pD = Object.keys(zD).filter((pD => !wD.has(pD) && zD[pD].includes(DD)));
-        return pD.length > 0 && pD.every((DD => er.includes(DD)))
-      })(DD, kr.u, ur),
-      tr = (DD, zD, wD) => {
-        const pD = new ar,
-          sD = DD => {
-            if (!DD.isTrusted) return;
+    const rS = new Set([...aS.i, ...aS.B]),
+      ZS = pp => ((pp, ip, cp) => {
+        const Op = Object.keys(ip).filter((Op => !cp.has(Op) && ip[Op].includes(pp)));
+        return Op.length > 0 && Op.every((pp => FS.includes(pp)))
+      })(pp, aS.t, rS),
+      zS = (pp, ip, cp) => {
+        const Op = new GS,
+          op = pp => {
+            if (!pp.isTrusted) return;
             const {
-              swallow: wD,
-              continues: sD
-            } = pD.onKeyDown(DD, !(0, fD.J)(DD) || (0, ws.h)() || (0, gw.q)(), vr(DD.code));
-            wD && (DD.stopImmediatePropagation(), or(DD) && DD.preventDefault()), sD && ((0, fD.A)("keyboardMouse"), zD())
+              swallow: cp,
+              continues: op
+            } = Op.onKeyDown(pp, !(0, Wp.J)(pp) || (0, Oo.f)() || (0, Ac.l)(), ZS(pp.code));
+            cp && (pp.stopImmediatePropagation(), gS(pp) && pp.preventDefault()), op && ((0, Wp.E)("keyboardMouse"), ip())
           },
-          KD = DD => {
-            DD.isTrusted && pD.onKeyUp(DD) && (DD.stopImmediatePropagation(), or(DD) && DD.preventDefault())
+          Ip = pp => {
+            pp.isTrusted && Op.onKeyUp(pp) && (pp.stopImmediatePropagation(), gS(pp) && pp.preventDefault())
           },
-          LD = () => {
-            pD.forgetKeys()
+          xp = () => {
+            Op.forgetKeys()
           };
-        window.addEventListener("keydown", sD, !0), window.addEventListener("keyup", KD, !0), window.addEventListener("blur", LD);
-        const cD = rD.g.onFrame((DD => {
-            const sD = AD.e.getActiveConsumerName(),
-              KD = wD(),
-              rD = KD ? (0, RD.g)("menuBack") : null,
-              LD = null !== sD && "gameplay" !== sD,
+        window.addEventListener("keydown", op, !0), window.addEventListener("keyup", Ip, !0), window.addEventListener("blur", xp);
+        const Lp = Sp.e.onFrame((pp => {
+            const op = Ap.d.getActiveConsumerName(),
+              Ip = cp(),
+              Sp = Ip ? (0, Dp.g)("menuBack") : null,
+              xp = null !== op && "gameplay" !== op,
               {
-                continues: cD,
-                back: gD,
-                consumeHeld: ID
-              } = pD.onPadFrame(DD, LD, rD, (0, fD.s)(DD));
-            if (ID) {
-              const DD = (0, UD.g)().swapSticks ? "right" : "left";
-              AD.e.consumeAllHeld(pD.consumeLeavesMoveStick() ? DD : null)
+                continues: Lp,
+                back: Yp,
+                consumeHeld: yp
+              } = Op.onPadFrame(pp, xp, Sp, (0, Wp.r)(pp));
+            if (yp) {
+              const pp = (0, Pp.h)().swapSticks ? "right" : "left";
+              Ap.d.consumeAllHeld(Op.consumeLeavesMoveStick() ? pp : null)
             }
-            gD ? null === KD || void 0 === KD || KD() : cD && zD()
+            Yp ? null === Ip || void 0 === Ip || Ip() : Lp && ip()
           })),
-          gD = (0, ws.j)(`pressToContinue:${DD}`, (() => pD.blocksGameplay()));
+          Yp = (0, Oo.i)(`pressToContinue:${pp}`, (() => Op.blocksGameplay()));
         return {
-          setArmed: DD => {
-            pD.setArmed(DD)
+          setArmed: pp => {
+            Op.setArmed(pp)
           },
           dispose: () => {
-            window.removeEventListener("keydown", sD, !0), window.removeEventListener("keyup", KD, !0), window.removeEventListener("blur", LD), cD(), gD()
+            window.removeEventListener("keydown", op, !0), window.removeEventListener("keyup", Ip, !0), window.removeEventListener("blur", xp), Lp(), Yp()
           }
         }
       };
-    var Fr = wD(5021),
-      Yr = wD(3432),
-      Hr = wD(3115),
-      qr = wD(8218);
-    const DL = DD => {
+    var sS = cp(5113),
+      KS = cp(3537),
+      VS = cp(3224),
+      px = cp(8331);
+    const ix = pp => {
         let {
-          text: zD
-        } = DD;
-        return (0, ZD.jsx)("div", {
+          text: ip
+        } = pp;
+        return (0, bp.jsx)("div", {
           className: "ControllerSettingsHeading",
-          children: zD
+          children: ip
         })
       },
-      zL = DD => {
+      cx = pp => {
         let {
-          label: zD,
-          hint: wD,
-          options: pD,
-          value: KD,
-          onChange: rD
-        } = DD;
+          label: ip,
+          hint: cp,
+          options: Op,
+          value: Ip,
+          onChange: Sp
+        } = pp;
         const {
-          t: LD
-        } = (0, sD.E)();
-        return (0, ZD.jsx)("div", {
+          t: xp
+        } = (0, op.H)();
+        return (0, bp.jsx)("div", {
           className: "SettingBox ControllerChoiceSetting",
-          children: (0, ZD.jsxs)("div", {
+          children: (0, bp.jsxs)("div", {
             className: "ControllerChoiceRow",
-            children: [(0, ZD.jsxs)("div", {
+            children: [(0, bp.jsxs)("div", {
               className: "ControllerChoiceText",
-              children: [(0, ZD.jsx)("div", {
+              children: [(0, bp.jsx)("div", {
                 className: "SliderText",
-                children: zD
-              }), wD && (0, ZD.jsx)("div", {
+                children: ip
+              }), cp && (0, bp.jsx)("div", {
                 className: "ControllerSettingsHint",
-                children: wD
+                children: cp
               })]
-            }), (0, ZD.jsx)(Hr.c, {
-              options: pD.map((DD => ({
-                label: "label" in DD ? DD.label : LD(DD.labelKey),
-                value: DD.value
+            }), (0, bp.jsx)(VS.d, {
+              options: Op.map((pp => ({
+                label: "label" in pp ? pp.label : xp(pp.labelKey),
+                value: pp.value
               }))),
-              value: KD,
-              onChange: DD => {
-                rD(DD.value)
+              value: Ip,
+              onChange: pp => {
+                Sp(pp.value)
               }
             })]
           })
         })
       },
-      wL = DD => {
+      Ox = pp => {
         let {
-          settingKey: zD,
-          label: wD,
-          range: pD,
-          format: sD
-        } = DD;
-        const KD = (0, UD.n)();
-        return (0, ZD.jsx)(Fr.e, {
-          name: wD,
-          min: pD.min,
-          max: pD.max,
-          step: pD.step,
-          padStep: pD.step,
-          initValue: KD[zD],
-          format: sD,
-          onChange: DD => {
-            (0, UD.l)({
-              [zD]: (0, qr.A)(DD, pD)
+          settingKey: ip,
+          label: cp,
+          range: Op,
+          format: op
+        } = pp;
+        const Ip = (0, Pp.s)();
+        return (0, bp.jsx)(sS.i, {
+          name: cp,
+          min: Op.min,
+          max: Op.max,
+          step: Op.step,
+          padStep: Op.step,
+          initValue: Ip[ip],
+          format: op,
+          onChange: pp => {
+            (0, Pp.o)({
+              [ip]: (0, px.w)(pp, Op)
             })
           }
         })
       };
-    var pL = wD(8855),
-      sL = wD(8859);
-    const KL = DD => DD instanceof DOMException && ("SecurityError" === DD.name || "NotAllowedError" === DD.name),
-      rL = DD => {
-        const [zD] = [...DD.controllers].sort(((DD, zD) => sL.k[DD] - sL.k[zD]));
-        return sL.j[zD]
+    var ox = cp(8979),
+      Ix = cp(8988);
+    const Sx = pp => pp instanceof DOMException && ("SecurityError" === pp.name || "NotAllowedError" === pp.name),
+      xx = pp => {
+        const [ip] = [...pp.controllers].sort(((pp, ip) => Ix.o[pp] - Ix.o[ip]));
+        return Ix.k[ip]
       },
-      LL = DD => {
-        (0, pL.c)().allowPhoneMotion().catch((zD => {
-          DD && KL(zD) ? DD() : console.warn("Could not enable the motion sensor", zD)
+      Lx = pp => {
+        (0, ox.e)().allowPhoneMotion().catch((ip => {
+          pp && Sx(ip) ? pp() : console.warn("Could not enable the motion sensor", ip)
         }))
       },
-      cL = {
+      Yx = {
         waiting: "controller:settingsGyroPhoneWaiting",
         noSensor: "controller:settingsGyroPhoneNoSensor",
         on: "controller:settingsGyroPhoneOn",
         denied: "controller:settingsGyroPhoneDenied"
       },
-      gL = DD => {
+      Dx = pp => {
         let {
-          status: zD
-        } = DD;
+          status: ip
+        } = pp;
         const {
-          t: wD
-        } = (0, sD.E)(), [pD, KD] = (0, lD.useState)(null), rD = `${zD.controllers.join(",")}|${zD.phoneMotion}`;
-        (0, lD.useEffect)((() => {
-          KD(null)
-        }), [rD]);
-        const LD = () => {
-          (0, pL.c)().connectController().then((DD => {
-            KD(DD > 0 ? "openFailed" : null)
-          })).catch((DD => {
-            KL(DD) ? KD("needsClick") : console.warn("Could not connect motion controller", DD)
+          t: cp
+        } = (0, op.H)(), [Op, Ip] = (0, Np.useState)(null), Sp = `${ip.controllers.join(",")}|${ip.phoneMotion}`;
+        (0, Np.useEffect)((() => {
+          Ip(null)
+        }), [Sp]);
+        const xp = () => {
+          (0, ox.e)().connectController().then((pp => {
+            Ip(pp > 0 ? "openFailed" : null)
+          })).catch((pp => {
+            Sx(pp) ? Ip("needsClick") : console.warn("Could not connect motion controller", pp)
           }))
         };
-        if (zD.hidSupported) {
-          let DD = wD("controller:settingsGyroConnectHint");
-          return "needsClick" === pD ? DD = wD("controller:settingsGyroConnectNeedsClick") : "openFailed" === pD ? DD = wD("controller:settingsGyroOpenFailed") : zD.controllers.length > 0 && (DD = wD("controller:settingsGyroConnected", {
-            name: rL(zD)
-          })), (0, ZD.jsx)("div", {
+        if (ip.hidSupported) {
+          let pp = cp("controller:settingsGyroConnectHint");
+          return "needsClick" === Op ? pp = cp("controller:settingsGyroConnectNeedsClick") : "openFailed" === Op ? pp = cp("controller:settingsGyroOpenFailed") : ip.controllers.length > 0 && (pp = cp("controller:settingsGyroConnected", {
+            name: xx(ip)
+          })), (0, bp.jsx)("div", {
             className: "SettingBox ControllerChoiceSetting",
-            children: (0, ZD.jsxs)("div", {
+            children: (0, bp.jsxs)("div", {
               className: "ControllerChoiceRow",
-              children: [(0, ZD.jsx)("div", {
+              children: [(0, bp.jsx)("div", {
                 className: "ControllerSettingsHint",
-                children: DD
-              }), (0, ZD.jsx)(lr.f, {
-                onClick: LD,
-                children: wD("controller:settingsGyroConnect")
+                children: pp
+              }), (0, bp.jsx)(NS.f, {
+                onClick: xp,
+                children: cp("controller:settingsGyroConnect")
               })]
             })
           })
         }
-        if ("needsPermission" === zD.phoneMotion) return (0, ZD.jsx)("div", {
+        if ("needsPermission" === ip.phoneMotion) return (0, bp.jsx)("div", {
           className: "SettingBox ControllerChoiceSetting",
-          children: (0, ZD.jsxs)("div", {
+          children: (0, bp.jsxs)("div", {
             className: "ControllerChoiceRow",
-            children: ["needsTap" === pD && (0, ZD.jsx)("div", {
+            children: ["needsTap" === Op && (0, bp.jsx)("div", {
               className: "ControllerSettingsHint",
-              children: wD("controller:settingsGyroAllowNeedsTap")
-            }), (0, ZD.jsx)(lr.f, {
+              children: cp("controller:settingsGyroAllowNeedsTap")
+            }), (0, bp.jsx)(NS.f, {
               onClick: () => {
-                LL((() => {
-                  KD("needsTap")
+                Lx((() => {
+                  Ip("needsTap")
                 }))
               },
-              children: wD("controller:settingsGyroAllowMotion")
+              children: cp("controller:settingsGyroAllowMotion")
             })]
           })
         });
-        const cD = cL[zD.phoneMotion];
-        return cD ? (0, ZD.jsx)("div", {
+        const Lp = Yx[ip.phoneMotion];
+        return Lp ? (0, bp.jsx)("div", {
           className: "ControllerSettingsHint",
-          children: wD(cD)
+          children: cp(Lp)
         }) : null
       },
-      RL = () => {
+      Ax = () => {
         const {
-          t: DD
-        } = (0, sD.E)(), zD = (0, UD.n)(), wD = (0, pL.g)(), pD = (0, fD.G)(), KD = !wD.hidSupported && wD.phoneSupported && !wD.padConnected, rD = (wD.hidSupported || wD.phoneSupported) && !KD, LD = (0, RD.g)("pause");
-        return (0, ZD.jsxs)(ZD.Fragment, {
-          children: [(0, ZD.jsx)(DL, {
-            text: DD("controller:settingsGyro")
-          }), KD && (0, ZD.jsx)("div", {
+          t: pp
+        } = (0, op.H)(), ip = (0, Pp.s)(), cp = (0, ox.i)(), Op = (0, Wp.I)(), Ip = !cp.hidSupported && cp.phoneSupported && !cp.padConnected, Sp = (cp.hidSupported || cp.phoneSupported) && !Ip, xp = (0, Dp.g)("pause");
+        return (0, bp.jsxs)(bp.Fragment, {
+          children: [(0, bp.jsx)(ix, {
+            text: pp("controller:settingsGyro")
+          }), Ip && (0, bp.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: DD("controller:settingsGyroPhoneNeedsController")
-          }), !rD && !KD && (0, ZD.jsx)("div", {
+            children: pp("controller:settingsGyroPhoneNeedsController")
+          }), !Sp && !Ip && (0, bp.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: DD(wD.hidBlocked || wD.phoneBlocked ? "controller:settingsGyroBlocked" : "controller:settingsGyroUnsupported")
-          }), rD && (0, ZD.jsx)(Fr.b, {
-            label: DD(wD.hidSupported ? "controller:settingsGyroToggle" : "controller:settingsGyroTogglePhone"),
-            checked: zD.gyroAiming,
-            onClick: DD => {
-              var zD, wD;
-              (0, UD.l)({
-                gyroAiming: DD
+            children: pp(cp.hidBlocked || cp.phoneBlocked ? "controller:settingsGyroBlocked" : "controller:settingsGyroUnsupported")
+          }), Sp && (0, bp.jsx)(sS.b, {
+            label: pp(cp.hidSupported ? "controller:settingsGyroToggle" : "controller:settingsGyroTogglePhone"),
+            checked: ip.gyroAiming,
+            onClick: pp => {
+              var ip, cp;
+              (0, Pp.o)({
+                gyroAiming: pp
               });
-              const pD = null === (zD = null === (wD = navigator.userActivation) || void 0 === wD ? void 0 : wD.isActive) || void 0 === zD || zD;
-              if (!DD || !pD) return;
-              const sD = (0, pL.c)(),
-                KD = sD.getStatus();
-              KD.hidSupported ? sD.connectControllerIfNoneGranted().catch((DD => {
-                console.warn("Motion controller picker unavailable", DD)
-              })) : "needsPermission" === KD.phoneMotion && LL()
+              const Op = null === (ip = null === (cp = navigator.userActivation) || void 0 === cp ? void 0 : cp.isActive) || void 0 === ip || ip;
+              if (!pp || !Op) return;
+              const op = (0, ox.e)(),
+                Ip = op.getStatus();
+              Ip.hidSupported ? op.connectControllerIfNoneGranted().catch((pp => {
+                console.warn("Motion controller picker unavailable", pp)
+              })) : "needsPermission" === Ip.phoneMotion && Lx()
             },
-            circleInfoText: DD(wD.hidSupported ? "controller:settingsGyroToggleInfo" : "controller:settingsGyroToggleInfoPhone")
-          }), rD && wD.hidSupported && (0, ZD.jsx)("div", {
+            circleInfoText: pp(cp.hidSupported ? "controller:settingsGyroToggleInfo" : "controller:settingsGyroToggleInfoPhone")
+          }), Sp && cp.hidSupported && (0, bp.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: DD("controller:settingsGyroSteamHint")
-          }), rD && zD.gyroAiming && (0, ZD.jsxs)(ZD.Fragment, {
-            children: [(0, ZD.jsx)(gL, {
-              status: wD
-            }), (0, ZD.jsx)(wL, {
+            children: pp("controller:settingsGyroSteamHint")
+          }), Sp && ip.gyroAiming && (0, bp.jsxs)(bp.Fragment, {
+            children: [(0, bp.jsx)(Dx, {
+              status: cp
+            }), (0, bp.jsx)(Ox, {
               settingKey: "gyroSensitivity",
-              label: DD("controller:settingsGyroSensitivity"),
-              range: qr.Y,
-              format: qr.P
-            }), (0, ZD.jsx)(zL, {
-              label: DD("controller:settingsGyroActivation"),
-              hint: "aiming" === zD.gyroActivation && (0, ZD.jsx)(Yr.b, {
-                text: DD("controller:settingsGyroAimingHint", {
-                  button: Yr.c
+              label: pp("controller:settingsGyroSensitivity"),
+              range: px.P,
+              format: px.J
+            }), (0, bp.jsx)(cx, {
+              label: pp("controller:settingsGyroActivation"),
+              hint: "aiming" === ip.gyroActivation && (0, bp.jsx)(KS.d, {
+                text: pp("controller:settingsGyroAimingHint", {
+                  button: KS.g
                 }),
-                glyph: (0, RD.g)("use")
+                glyph: (0, Dp.g)("use")
               }),
-              options: qr.V,
-              value: zD.gyroActivation,
-              onChange: DD => {
-                (0, UD.l)({
-                  gyroActivation: DD
+              options: px.N,
+              value: ip.gyroActivation,
+              onChange: pp => {
+                (0, Pp.o)({
+                  gyroActivation: pp
                 })
               }
-            }), "button" === zD.gyroActivation && (0, ZD.jsx)(zL, {
-              label: DD("controller:settingsGyroButton"),
-              hint: DD("controller:settingsGyroButtonHint"),
-              options: qr.t.filter((DD => DD !== LD || DD === zD.gyroButton)).map((DD => ({
-                label: Xs(pD, DD),
-                value: DD
+            }), "button" === ip.gyroActivation && (0, bp.jsx)(cx, {
+              label: pp("controller:settingsGyroButton"),
+              hint: pp("controller:settingsGyroButtonHint"),
+              options: px.r.filter((pp => pp !== xp || pp === ip.gyroButton)).map((pp => ({
+                label: mo(Op, pp),
+                value: pp
               }))),
-              value: zD.gyroButton,
-              onChange: DD => {
-                (0, UD.l)({
-                  gyroButton: DD
+              value: ip.gyroButton,
+              onChange: pp => {
+                (0, Pp.o)({
+                  gyroButton: pp
                 })
               }
             })]
           })]
         })
       };
-    var AL = wD(1847);
-    const UL = () => {
+    var Px = cp(1880);
+    const Wx = () => {
       const {
-        t: DD
-      } = (0, sD.E)(), zD = (0, UD.n)(), wD = (0, fD.G)();
-      return (0, ZD.jsxs)(ZD.Fragment, {
-        children: [(0, ZD.jsx)(DL, {
-          text: DD("controller:settingsAccessibility")
-        }), (0, ZD.jsx)(Fr.b, {
-          label: DD("controller:settingsSwapConfirmBack"),
-          checked: (0, RD.G)(zD.swapConfirmBack, wD),
-          onClick: DD => {
-            (0, UD.l)({
-              swapConfirmBack: DD === (0, RD.G)(null, wD) ? null : DD
-            }), AL.d.showMessage({
+        t: pp
+      } = (0, op.H)(), ip = (0, Pp.s)(), cp = (0, Wp.I)();
+      return (0, bp.jsxs)(bp.Fragment, {
+        children: [(0, bp.jsx)(ix, {
+          text: pp("controller:settingsAccessibility")
+        }), (0, bp.jsx)(sS.b, {
+          label: pp("controller:settingsSwapConfirmBack"),
+          checked: (0, Dp.D)(ip.swapConfirmBack, cp),
+          onClick: pp => {
+            (0, Pp.o)({
+              swapConfirmBack: pp === (0, Dp.D)(null, cp) ? null : pp
+            }), Px.i.showMessage({
               translationKey: "controller:settingsSwapToast"
             })
           },
-          circleInfoText: DD("controller:settingsSwapConfirmBackInfo")
-        }), (0, ZD.jsx)(zL, {
-          label: DD("controller:settingsButtonRepeat"),
-          hint: DD("controller:settingsButtonRepeatHint"),
-          options: qr.q,
-          value: zD.buttonRepeat,
-          onChange: DD => {
-            (0, UD.l)({
-              buttonRepeat: DD
+          circleInfoText: pp("controller:settingsSwapConfirmBackInfo")
+        }), (0, bp.jsx)(cx, {
+          label: pp("controller:settingsButtonRepeat"),
+          hint: pp("controller:settingsButtonRepeatHint"),
+          options: px.p,
+          value: ip.buttonRepeat,
+          onChange: pp => {
+            (0, Pp.o)({
+              buttonRepeat: pp
             })
           }
-        }), (0, ZD.jsx)(zL, {
-          label: DD("controller:settingsTapHoldTime"),
-          hint: DD("controller:settingsTapHoldTimeHint"),
-          options: qr.ub,
-          value: zD.tapHoldTime,
-          onChange: DD => {
-            (0, UD.l)({
-              tapHoldTime: DD
+        }), (0, bp.jsx)(cx, {
+          label: pp("controller:settingsTapHoldTime"),
+          hint: pp("controller:settingsTapHoldTimeHint"),
+          options: px.qb,
+          value: ip.tapHoldTime,
+          onChange: pp => {
+            (0, Pp.o)({
+              tapHoldTime: pp
             })
           }
-        }), (0, ZD.jsx)(zL, {
-          label: DD("controller:settingsEmoteButton"),
-          hint: DD("wheel" === zD.emoteButton ? "controller:settingsEmoteButtonWheelHint" : "controller:settingsEmoteButtonTapHoldHint"),
-          options: qr.I,
-          value: zD.emoteButton,
-          onChange: DD => {
-            (0, UD.l)({
-              emoteButton: DD
+        }), (0, bp.jsx)(cx, {
+          label: pp("controller:settingsEmoteButton"),
+          hint: pp("wheel" === ip.emoteButton ? "controller:settingsEmoteButtonWheelHint" : "controller:settingsEmoteButtonTapHoldHint"),
+          options: px.E,
+          value: ip.emoteButton,
+          onChange: pp => {
+            (0, Pp.o)({
+              emoteButton: pp
             })
           }
-        }), (0, ZD.jsx)(zL, {
-          label: DD("controller:settingsAttackMode"),
-          hint: DD("toggle" === zD.attackMode ? "controller:settingsAttackToggleHint" : "controller:settingsAttackHoldHint"),
-          options: qr.p,
-          value: zD.attackMode,
-          onChange: DD => {
-            (0, UD.l)({
-              attackMode: DD
+        }), (0, bp.jsx)(cx, {
+          label: pp("controller:settingsAttackMode"),
+          hint: pp("toggle" === ip.attackMode ? "controller:settingsAttackToggleHint" : "controller:settingsAttackHoldHint"),
+          options: px.m,
+          value: ip.attackMode,
+          onChange: pp => {
+            (0, Pp.o)({
+              attackMode: pp
             })
           }
-        }), (0, ZD.jsx)(Fr.b, {
-          label: DD("controller:settingsLargePointer"),
-          checked: zD.largePointer,
-          onClick: DD => {
-            (0, UD.l)({
-              largePointer: DD
+        }), (0, bp.jsx)(sS.b, {
+          label: pp("controller:settingsLargePointer"),
+          checked: ip.largePointer,
+          onClick: pp => {
+            (0, Pp.o)({
+              largePointer: pp
             })
           },
-          circleInfoText: DD("controller:settingsLargePointerInfo")
+          circleInfoText: pp("controller:settingsLargePointerInfo")
         })]
       })
     };
-    var fL = wD(8865);
-    const IL = new class {
-        constructor(DD) {
-          this.router = DD, this.current = null
+    var yx = cp(8990);
+    const Ux = new class {
+        constructor(pp) {
+          this.router = pp, this.current = null
         }
-        claim(DD, zD) {
-          const wD = this.current;
-          wD && (this.current = null, wD.release(), wD.onTakenOver());
-          const pD = this.router.register({
-              ...DD,
+        claim(pp, ip) {
+          const cp = this.current;
+          cp && (this.current = null, cp.release(), cp.onTakenOver());
+          const Op = this.router.register({
+              ...pp,
               name: "capture"
             }),
-            sD = {
-              release: pD,
-              onTakenOver: zD
+            op = {
+              release: Op,
+              onTakenOver: ip
             };
-          return this.current = sD, () => {
-            this.current === sD && (this.current = null), pD()
+          return this.current = op, () => {
+            this.current === op && (this.current = null), Op()
           }
         }
-      }(AD.e),
-      BL = DD => {
-        (0, lD.useEffect)((() => {
-          if (!DD) return;
-          const zD = DD();
-          let wD = !1;
-          const pD = () => {
-              wD || (wD = !0, zD.onEnd())
+      }(Ap.d),
+      wx = pp => {
+        (0, Np.useEffect)((() => {
+          if (!pp) return;
+          const ip = pp();
+          let cp = !1;
+          const Op = () => {
+              cp || (cp = !0, ip.onEnd())
             },
-            sD = IL.claim({
-              isActive: () => !wD,
-              onFrame: DD => {
-                zD.onFrame(DD, pD)
+            op = Ux.claim({
+              isActive: () => !cp,
+              onFrame: pp => {
+                ip.onFrame(pp, Op)
               }
-            }, pD),
-            KD = void 0 === zD.timeoutMs ? void 0 : window.setTimeout(pD, zD.timeoutMs),
-            rD = DD => {
-              "Escape" === DD.key && (DD.preventDefault(), DD.stopPropagation(), pD())
+            }, Op),
+            Ip = void 0 === ip.timeoutMs ? void 0 : window.setTimeout(Op, ip.timeoutMs),
+            Sp = pp => {
+              "Escape" === pp.key && (pp.preventDefault(), pp.stopPropagation(), Op())
             };
-          return window.addEventListener("keydown", rD, !0), () => {
-            wD = !0, sD(), window.clearTimeout(KD), window.removeEventListener("keydown", rD, !0)
+          return window.addEventListener("keydown", Sp, !0), () => {
+            cp = !0, op(), window.clearTimeout(Ip), window.removeEventListener("keydown", Sp, !0)
           }
-        }), [DD])
+        }), [pp])
       },
-      GL = DD => {
+      vx = pp => {
         let {
-          row: zD,
-          capturing: wD,
-          onCapture: pD,
-          holdFillRef: KD,
-          onRebind: rD,
-          swapped: LD
-        } = DD;
+          row: ip,
+          capturing: cp,
+          onCapture: Op,
+          holdFillRef: Ip,
+          onRebind: Sp,
+          swapped: xp
+        } = pp;
         const {
-          t: cD
-        } = (0, sD.E)();
-        if ("fixed" === zD.kind) return (0, ZD.jsx)("div", {
+          t: Lp
+        } = (0, op.H)();
+        if ("fixed" === ip.kind) return (0, bp.jsx)("div", {
           className: "ControlRow PadControlRow PadControlRowFixed",
-          children: (0, ZD.jsxs)("div", {
+          children: (0, bp.jsxs)("div", {
             className: "ControlRowInner",
-            children: [(0, ZD.jsx)("div", {
+            children: [(0, bp.jsx)("div", {
               className: "ControlName",
-              children: cD(zD.labelKey)
-            }), (0, ZD.jsx)("div", {
+              children: Lp(ip.labelKey)
+            }), (0, bp.jsx)("div", {
               className: "ControlBindingsContainer",
-              children: (0, ZD.jsx)("div", {
+              children: (0, bp.jsx)("div", {
                 className: "ControlBindingsList",
-                children: (0, ZD.jsx)("div", {
+                children: (0, bp.jsx)("div", {
                   className: "ControlBinding PadBinding",
-                  children: (0, ZD.jsx)(Vs, {
-                    glyph: "move" === zD.stick ? (0, RD.r)() : (0, RD.q)()
+                  children: (0, bp.jsx)(Ro, {
+                    glyph: "move" === ip.stick ? (0, Dp.p)() : (0, Dp.o)()
                   })
                 })
               })
@@ -6409,602 +6744,602 @@ export const modules = {
           })
         });
         const {
-          action: gD
-        } = zD, AD = (0, RD.g)(gD), UD = (0, RD.j)(gD), fD = AD !== UD && (0, RD.e)(gD, UD);
-        return (0, ZD.jsxs)("div", {
-          className: ND()("ControlRow PadControlRow", {
-            Capturing: wD
+          action: Yp
+        } = ip, Ap = (0, Dp.g)(Yp), Pp = (0, Dp.j)(Yp), Wp = Ap !== Pp && (0, Dp.c)(Yp, Pp);
+        return (0, bp.jsxs)("div", {
+          className: fp()("ControlRow PadControlRow", {
+            Capturing: cp
           }),
-          children: [(0, ZD.jsxs)("div", {
+          children: [(0, bp.jsxs)("div", {
             className: "ControlRowInner",
-            children: [(0, ZD.jsx)("div", {
+            children: [(0, bp.jsx)("div", {
               className: "ControlName",
-              children: cD(qr.j[gD])
-            }), (0, ZD.jsxs)("div", {
+              children: Lp(px.j[Yp])
+            }), (0, bp.jsxs)("div", {
               className: "ControlBindingsContainer",
-              children: [!wD && (0, ZD.jsxs)("div", {
+              children: [!cp && (0, bp.jsxs)("div", {
                 className: "ControlBindingsList",
-                children: [(0, ZD.jsx)("div", {
+                children: [(0, bp.jsx)("div", {
                   className: "ControlBinding PadBinding",
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    pD(gD)
+                    Op(Yp)
                   },
-                  children: (0, ZD.jsx)(Vs, {
-                    glyph: AD
+                  children: (0, bp.jsx)(Ro, {
+                    glyph: Ap
                   })
-                }), fD && (0, ZD.jsx)("div", {
+                }), Wp && (0, bp.jsx)("div", {
                   className: "ControlBinding PadBindingReset",
-                  title: cD("controller:settingsReset"),
+                  title: Lp("controller:settingsReset"),
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    rD(gD, UD)
+                    Sp(Yp, Pp)
                   },
-                  children: (0, ZD.jsx)(Sr.e, {
+                  children: (0, bp.jsx)(JS.d, {
                     name: "arrows-rotate"
                   })
                 })]
-              }), wD && (0, ZD.jsxs)("div", {
+              }), cp && (0, bp.jsxs)("div", {
                 className: "ControlBindingAddInput",
-                children: [(0, ZD.jsxs)("div", {
+                children: [(0, bp.jsxs)("div", {
                   className: "PadCaptureBox",
-                  children: [(0, ZD.jsx)("span", {
-                    children: cD("controller:settingsCapturePrompt")
-                  }), (0, ZD.jsx)("div", {
-                    ref: KD,
+                  children: [(0, bp.jsx)("span", {
+                    children: Lp("controller:settingsCapturePrompt")
+                  }), (0, bp.jsx)("div", {
+                    ref: Ip,
                     className: "PadCaptureHoldFill"
                   })]
-                }), (0, ZD.jsx)("div", {
+                }), (0, bp.jsx)("div", {
                   className: "ControlBindingAddCancel",
                   "data-pad-focusable": !0,
                   onClick: () => {
-                    pD(null)
+                    Op(null)
                   },
                   children: "\xd7"
                 })]
-              }), wD && (0, ZD.jsx)("div", {
+              }), cp && (0, bp.jsx)("div", {
                 className: "PadCaptureHint",
-                children: (0, ZD.jsx)(Yr.b, {
-                  text: cD((0, RD.e)(gD, (0, RD.g)("menuBack")) ? "controller:settingsCaptureCancelOrBindHint" : "controller:settingsCaptureCancelHint", {
-                    button: Yr.c
+                children: (0, bp.jsx)(KS.d, {
+                  text: Lp((0, Dp.c)(Yp, (0, Dp.g)("menuBack")) ? "controller:settingsCaptureCancelOrBindHint" : "controller:settingsCaptureCancelHint", {
+                    button: KS.g
                   }),
-                  glyph: (0, RD.g)("menuBack")
+                  glyph: (0, Dp.g)("menuBack")
                 })
               })]
             })]
-          }), LD.map((DD => (0, ZD.jsx)("div", {
+          }), xp.map((pp => (0, bp.jsx)("div", {
             className: "ControlRowWarning PadSwapNotice",
-            children: (0, ZD.jsx)(Yr.b, {
-              text: cD("controller:settingsSwapNotice", {
-                action: cD(qr.j[DD]),
-                button: Yr.c
+            children: (0, bp.jsx)(KS.d, {
+              text: Lp("controller:settingsSwapNotice", {
+                action: Lp(px.j[pp]),
+                button: KS.g
               }),
-              glyph: (0, RD.g)(DD)
+              glyph: (0, Dp.g)(pp)
             })
-          }, DD))), wD && (0, ZD.jsx)("div", {
+          }, pp))), cp && (0, bp.jsx)("div", {
             className: "PadCaptureTimer",
             style: {
-              animationDuration: `${qr.x}ms`
+              animationDuration: `${px.v}ms`
             }
           })]
         })
       },
-      hL = [],
-      nL = DD => {
+      tx = [],
+      Hx = pp => {
         let {
-          layoutSetting: zD
-        } = DD;
+          layoutSetting: ip
+        } = pp;
         const {
-          t: wD
-        } = (0, sD.E)(), pD = (0, UD.n)();
-        (0, fD.G)();
-        const KD = (0, lD.useRef)(null),
-          [rD, LD] = (0, lD.useState)(null),
-          cD = (0, lD.useCallback)(((DD, zD) => {
-            const wD = (0, UD.g)().bindings;
-            (0, RD.A)(DD, zD);
-            const pD = (0, RD.t)(wD, DD);
-            LD(pD.length > 0 ? {
-              action: DD,
-              swapped: pD
+          t: cp
+        } = (0, op.H)(), Op = (0, Pp.s)();
+        (0, Wp.I)();
+        const Ip = (0, Np.useRef)(null),
+          [Sp, xp] = (0, Np.useState)(null),
+          Lp = (0, Np.useCallback)(((pp, ip) => {
+            const cp = (0, Pp.h)().bindings;
+            (0, Dp.y)(pp, ip);
+            const Op = (0, Dp.q)(cp, pp);
+            xp(Op.length > 0 ? {
+              action: pp,
+              swapped: Op
             } : null)
           }), []),
-          [gD, BD] = ((DD, zD) => {
-            const [wD, pD] = (0, lD.useState)(null), sD = (0, lD.useMemo)((() => wD ? () => {
-              const sD = (0, RD.g)("menuBack"),
-                KD = new qr.e(sD, (0, RD.g)("menuConfirm"), (DD => (0, RD.e)(wD, DD)));
+          [Yp, Up] = ((pp, ip) => {
+            const [cp, Op] = (0, Np.useState)(null), op = (0, Np.useMemo)((() => cp ? () => {
+              const op = (0, Dp.g)("menuBack"),
+                Ip = new px.c(op, (0, Dp.g)("menuConfirm"), (pp => (0, Dp.c)(cp, pp)));
               return {
-                onFrame: (pD, rD) => {
-                  var LD;
-                  const cD = pD.frame.timestampMs,
-                    gD = KD.update({
-                      ...pD,
-                      isDown: DD => (0, ID.D)(pD.frame.values, DD)
-                    }, cD);
-                  null === (LD = DD.current) || void 0 === LD || LD.style.setProperty("width", 100 * KD.getBindHoldProgress(cD) + "%"), gD && ("bind" === gD.kind ? (AD.e.consumeButton(gD.button), zD(wD, gD.button)) : AD.e.consumeButton(sD), rD())
+                onFrame: (Op, Sp) => {
+                  var xp;
+                  const Lp = Op.frame.timestampMs,
+                    Yp = Ip.update({
+                      ...Op,
+                      isDown: pp => (0, yp.D)(Op.frame.values, pp)
+                    }, Lp);
+                  null === (xp = pp.current) || void 0 === xp || xp.style.setProperty("width", 100 * Ip.getBindHoldProgress(Lp) + "%"), Yp && ("bind" === Yp.kind ? (Ap.d.consumeButton(Yp.button), ip(cp, Yp.button)) : Ap.d.consumeButton(op), Sp())
                 },
                 onEnd: () => {
-                  pD(null)
+                  Op(null)
                 },
-                timeoutMs: qr.x
+                timeoutMs: px.v
               }
-            } : null), [wD, DD, zD]);
-            return BL(sD), [wD, pD]
-          })(KD, cD),
-          GD = DD => {
-            DD && LD(null), BD(DD)
+            } : null), [cp, pp, ip]);
+            return wx(op), [cp, Op]
+          })(Ip, Lp),
+          wp = pp => {
+            pp && xp(null), Up(pp)
           };
-        (0, lD.useEffect)((() => {
-          if (!rD) return;
-          const DD = window.setTimeout((() => {
-            LD(null)
-          }), qr.rb);
+        (0, Np.useEffect)((() => {
+          if (!Sp) return;
+          const pp = window.setTimeout((() => {
+            xp(null)
+          }), px.ob);
           return () => {
-            window.clearTimeout(DD)
+            window.clearTimeout(pp)
           }
-        }), [rD]);
-        const hD = !pD.swapSticks && 0 === Object.keys(pD.bindings).length;
-        return (0, ZD.jsxs)("div", {
+        }), [Sp]);
+        const vp = !Op.swapSticks && 0 === Object.keys(Op.bindings).length;
+        return (0, bp.jsxs)("div", {
           className: "ControlsContainer PadControlsContainer",
-          children: [(0, ZD.jsx)("div", {
+          children: [(0, bp.jsx)("div", {
             className: "SliderText",
-            children: wD("controller:settingsRemap")
-          }), (0, ZD.jsx)("div", {
+            children: cp("controller:settingsRemap")
+          }), (0, bp.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: wD("controller:settingsRemapHint")
-          }), (0, ZD.jsx)(lr.R, {
+            children: cp("controller:settingsRemapHint")
+          }), (0, bp.jsx)(NS.K, {
             className: "ResetBindingsButton PadResetAllButton",
-            disabled: hD,
+            disabled: vp,
             onClick: () => {
-              GD(null), LD(null), (0, RD.D)()
+              wp(null), xp(null), (0, Dp.A)()
             },
-            children: wD("controller:settingsResetAll")
-          }), zD, qr.nb.map(((DD, zD) => (0, ZD.jsx)(fL.d, {
-            title: wD(DD.titleKey),
-            defaultOpen: 0 === zD,
-            children: DD.rows.map((DD => (0, ZD.jsx)(GL, {
-              row: DD,
-              capturing: "action" === DD.kind && DD.action === gD,
-              onCapture: GD,
-              holdFillRef: KD,
-              onRebind: cD,
-              swapped: "action" === DD.kind && (null === rD || void 0 === rD ? void 0 : rD.action) === DD.action ? rD.swapped : hL
-            }, "action" === DD.kind ? DD.action : DD.labelKey)))
-          }, DD.titleKey)))]
+            children: cp("controller:settingsResetAll")
+          }), ip, px.db.map(((pp, ip) => (0, bp.jsx)(yx.c, {
+            title: cp(pp.titleKey),
+            defaultOpen: 0 === ip,
+            children: pp.rows.map((pp => (0, bp.jsx)(vx, {
+              row: pp,
+              capturing: "action" === pp.kind && pp.action === Yp,
+              onCapture: wp,
+              holdFillRef: Ip,
+              onRebind: Lp,
+              swapped: "action" === pp.kind && (null === Sp || void 0 === Sp ? void 0 : Sp.action) === pp.action ? Sp.swapped : tx
+            }, "action" === pp.kind ? pp.action : pp.labelKey)))
+          }, pp.titleKey)))]
         })
       },
-      ML = DD => {
+      dx = pp => {
         let {
-          deadzone: zD,
-          dotRef: wD,
-          labelKey: pD
-        } = DD;
+          deadzone: ip,
+          dotRef: cp,
+          labelKey: Op
+        } = pp;
         const {
-          t: KD
-        } = (0, sD.E)();
-        return (0, ZD.jsxs)("div", {
+          t: Ip
+        } = (0, op.H)();
+        return (0, bp.jsxs)("div", {
           className: "ControllerTesterStick",
-          children: [(0, ZD.jsxs)("div", {
+          children: [(0, bp.jsxs)("div", {
             className: "ControllerTesterStickCircle",
-            children: [(0, ZD.jsx)("div", {
+            children: [(0, bp.jsx)("div", {
               className: "ControllerTesterDeadzone",
               style: {
-                width: 100 * zD + "%",
-                height: 100 * zD + "%"
+                width: 100 * ip + "%",
+                height: 100 * ip + "%"
               }
-            }), (0, ZD.jsx)("div", {
-              ref: wD,
+            }), (0, bp.jsx)("div", {
+              ref: cp,
               className: "ControllerTesterDot"
             })]
-          }), (0, ZD.jsx)("div", {
+          }), (0, bp.jsx)("div", {
             className: "ControllerTesterStickLabel",
-            children: KD(pD)
+            children: Ip(Op)
           })]
         })
       },
-      OL = (DD, zD, wD, pD) => {
-        var sD;
-        DD && (DD.style.left = 50 + 50 * Math.max(-1, Math.min(1, zD.x)) + "%", DD.style.top = 50 + 50 * Math.max(-1, Math.min(1, zD.y)) + "%", null === (sD = DD.parentElement) || void 0 === sD || sD.classList.toggle("Active", pD || Math.hypot(zD.x, zD.y) > wD))
+      ex = (pp, ip, cp, Op) => {
+        var op;
+        pp && (pp.style.left = 50 + 50 * Math.max(-1, Math.min(1, ip.x)) + "%", pp.style.top = 50 + 50 * Math.max(-1, Math.min(1, ip.y)) + "%", null === (op = pp.parentElement) || void 0 === op || op.classList.toggle("Active", Op || Math.hypot(ip.x, ip.y) > cp))
       },
-      JL = DD => {
-        const zD = {
-            deadzone: DD.moveDeadzone,
+      ux = pp => {
+        const ip = {
+            deadzone: pp.moveDeadzone,
             labelKey: "controller:settingsActionMove"
           },
-          wD = {
-            deadzone: DD.lookDeadzone,
+          cp = {
+            deadzone: pp.lookDeadzone,
             labelKey: "controller:settingsActionLook"
           };
-        return DD.swapSticks ? {
-          left: wD,
-          right: zD
+        return pp.swapSticks ? {
+          left: cp,
+          right: ip
         } : {
-          left: zD,
-          right: wD
+          left: ip,
+          right: cp
         }
       },
-      EL = () => {
+      jx = () => {
         const {
-          t: DD
-        } = (0, sD.E)(), zD = (() => {
-          const [DD, zD] = (0, lD.useState)((() => rD.g.getActivePad()));
-          return (0, ns.g)(rD.d, (() => {
-            zD(rD.g.getActivePad())
-          })), DD
-        })(), wD = JL((0, UD.n)()), pD = (0, lD.useRef)(null), KD = (0, lD.useRef)(null), LD = (0, lD.useRef)([]), cD = (0, lD.useRef)(null), gD = (0, lD.useRef)(null), [fD, BD] = (DD => {
-          const [zD, wD] = (0, lD.useState)(!1), pD = (0, lD.useMemo)((() => zD ? () => {
-            const zD = (0, RD.g)("menuBack"),
-              pD = new qr.g;
+          t: pp
+        } = (0, op.H)(), ip = (() => {
+          const [pp, ip] = (0, Np.useState)((() => Sp.e.getActivePad()));
+          return (0, Ho.f)(Sp.c, (() => {
+            ip(Sp.e.getActivePad())
+          })), pp
+        })(), cp = ux((0, Pp.s)()), Op = (0, Np.useRef)(null), Ip = (0, Np.useRef)(null), xp = (0, Np.useRef)([]), Lp = (0, Np.useRef)(null), Yp = (0, Np.useRef)(null), [Wp, Up] = (pp => {
+          const [ip, cp] = (0, Np.useState)(!1), Op = (0, Np.useMemo)((() => ip ? () => {
+            const ip = (0, Dp.g)("menuBack"),
+              Op = new px.g;
             return {
-              onFrame: (wD, sD) => {
-                var KD;
-                const rD = pD.update({
-                  pressed: wD.wasPressed(zD),
-                  Qg: wD.isHeld(zD)
-                }, wD.frame.timestampMs);
-                null === (KD = DD.current) || void 0 === KD || KD.style.setProperty("width", 100 * rD + "%"), rD >= 1 && (AD.e.consumeButton(zD), sD())
+              onFrame: (cp, op) => {
+                var Ip;
+                const Sp = Op.update({
+                  pressed: cp.wasPressed(ip),
+                  sx: cp.isHeld(ip)
+                }, cp.frame.timestampMs);
+                null === (Ip = pp.current) || void 0 === Ip || Ip.style.setProperty("width", 100 * Sp + "%"), Sp >= 1 && (Ap.d.consumeButton(ip), op())
               },
               onEnd: () => {
-                wD(!1)
+                cp(!1)
               }
             }
-          } : null), [zD, DD]);
-          return BL(pD), [zD, wD]
-        })(KD);
-        (0, lD.useEffect)((() => {
-          const DD = DD => {
-            for (const wD of ID.U) {
-              const zD = (0, ID.m)(wD),
-                pD = LD.current[zD];
-              if (!pD) continue;
-              const sD = DD.values[zD];
-              pD.classList.toggle("Pressed", sD >= ID.s), (0, ID.F)(zD) && pD.style.setProperty("--trigger-fill", `${Math.round(100*sD)}%`)
+          } : null), [ip, pp]);
+          return wx(Op), [ip, cp]
+        })(Ip);
+        (0, Np.useEffect)((() => {
+          const pp = pp => {
+            for (const cp of yp.Q) {
+              const ip = (0, yp.i)(cp),
+                Op = xp.current[ip];
+              if (!Op) continue;
+              const op = pp.values[ip];
+              Op.classList.toggle("Pressed", op >= yp.u), (0, yp.E)(ip) && Op.style.setProperty("--trigger-fill", `${Math.round(100*op)}%`)
             }
-            const zD = JL((0, UD.g)());
-            OL(cD.current, DD.leftStick, zD.left.deadzone, DD.values[(0, ID.m)("LS")] >= ID.s), OL(gD.current, DD.rightStick, zD.right.deadzone, DD.values[(0, ID.m)("RS")] >= ID.s)
+            const ip = ux((0, Pp.h)());
+            ex(Lp.current, pp.leftStick, ip.left.deadzone, pp.values[(0, yp.i)("LS")] >= yp.u), ex(Yp.current, pp.rightStick, ip.right.deadzone, pp.values[(0, yp.i)("RS")] >= yp.u)
           };
-          return zD || DD((0, ID.r)()), rD.g.onFrame(DD)
-        }), [zD]), (0, lD.useEffect)((() => {
-          zD || BD(!1)
-        }), [zD, BD]), (0, lD.useEffect)((() => {
-          var DD;
-          fD && (null === (DD = pD.current) || void 0 === DD || DD.scrollIntoView({
+          return ip || pp((0, yp.s)()), Sp.e.onFrame(pp)
+        }), [ip]), (0, Np.useEffect)((() => {
+          ip || Up(!1)
+        }), [ip, Up]), (0, Np.useEffect)((() => {
+          var pp;
+          Wp && (null === (pp = Op.current) || void 0 === pp || pp.scrollIntoView({
             block: "nearest"
           }))
-        }), [fD]);
-        const GD = qr.ib.find((DD => DD.value === (null === zD || void 0 === zD ? void 0 : zD.family)));
-        return (0, ZD.jsxs)("div", {
-          ref: pD,
-          className: ND()("SettingBox ControllerTester", {
-            Testing: fD
+        }), [Wp]);
+        const wp = px._.find((pp => pp.value === (null === ip || void 0 === ip ? void 0 : ip.family)));
+        return (0, bp.jsxs)("div", {
+          ref: Op,
+          className: fp()("SettingBox ControllerTester", {
+            Testing: Wp
           }),
-          children: [(0, ZD.jsxs)("div", {
+          children: [(0, bp.jsxs)("div", {
             className: "ControllerTesterHeader",
-            children: [(0, ZD.jsxs)("div", {
+            children: [(0, bp.jsxs)("div", {
               className: "ControllerTesterInfo",
-              children: [zD && (0, ZD.jsx)("div", {
-                children: DD("controller:settingsTesterFamily", {
-                  family: GD ? DD(GD.labelKey) : zD.family
+              children: [ip && (0, bp.jsx)("div", {
+                children: pp("controller:settingsTesterFamily", {
+                  family: wp ? pp(wp.labelKey) : ip.family
                 })
-              }), zD && (0, ZD.jsx)("div", {
+              }), ip && (0, bp.jsx)("div", {
                 className: "ControllerTesterPadId",
-                children: zD.id
-              }), !zD && (0, ZD.jsx)("div", {
-                children: DD("controller:settingsTesterNoPad")
+                children: ip.id
+              }), !ip && (0, bp.jsx)("div", {
+                children: pp("controller:settingsTesterNoPad")
               })]
-            }), (zD || fD) && (0, ZD.jsx)(lr.f, {
+            }), (ip || Wp) && (0, bp.jsx)(NS.f, {
               className: "ControllerTesterToggle",
               onClick: () => {
-                BD(!fD)
+                Up(!Wp)
               },
-              children: DD(fD ? "controller:settingsTesterStop" : "controller:settingsTesterStart")
+              children: pp(Wp ? "controller:settingsTesterStop" : "controller:settingsTesterStart")
             })]
-          }), zD && !fD && (0, ZD.jsx)("div", {
+          }), ip && !Wp && (0, bp.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: DD("controller:settingsTesterHint")
-          }), fD && (0, ZD.jsxs)("div", {
+            children: pp("controller:settingsTesterHint")
+          }), Wp && (0, bp.jsxs)("div", {
             className: "ControllerTesterBanner",
-            children: [(0, ZD.jsx)(Yr.b, {
-              text: DD("controller:settingsTesterTesting", {
-                button: Yr.c
+            children: [(0, bp.jsx)(KS.d, {
+              text: pp("controller:settingsTesterTesting", {
+                button: KS.g
               }),
-              glyph: (0, RD.g)("menuBack")
-            }), (0, ZD.jsx)("div", {
-              ref: KD,
+              glyph: (0, Dp.g)("menuBack")
+            }), (0, bp.jsx)("div", {
+              ref: Ip,
               className: "ControllerTesterExitFill"
             })]
-          }), (0, ZD.jsxs)("div", {
+          }), (0, bp.jsxs)("div", {
             className: "ControllerTesterBody",
-            children: [(0, ZD.jsx)(ML, {
-              deadzone: wD.left.deadzone,
-              dotRef: cD,
-              labelKey: wD.left.labelKey
-            }), (0, ZD.jsx)("div", {
+            children: [(0, bp.jsx)(dx, {
+              deadzone: cp.left.deadzone,
+              dotRef: Lp,
+              labelKey: cp.left.labelKey
+            }), (0, bp.jsx)("div", {
               className: "ControllerTesterButtons",
-              children: ID.U.map((DD => {
-                const wD = (0, ID.m)(DD);
-                return (0, ZD.jsx)("div", {
-                  ref: DD => {
-                    LD.current[wD] = DD
+              children: yp.Q.map((pp => {
+                const cp = (0, yp.i)(pp);
+                return (0, bp.jsx)("div", {
+                  ref: pp => {
+                    xp.current[cp] = pp
                   },
-                  className: (0, ID.F)(wD) ? "ControllerTesterButton ControllerTesterTrigger" : "ControllerTesterButton",
-                  children: (0, ZD.jsx)(Vs, {
-                    glyph: DD,
-                    family: null === zD || void 0 === zD ? void 0 : zD.family
+                  className: (0, yp.E)(cp) ? "ControllerTesterButton ControllerTesterTrigger" : "ControllerTesterButton",
+                  children: (0, bp.jsx)(Ro, {
+                    glyph: pp,
+                    family: null === ip || void 0 === ip ? void 0 : ip.family
                   })
-                }, DD)
+                }, pp)
               }))
-            }), (0, ZD.jsx)(ML, {
-              deadzone: wD.right.deadzone,
-              dotRef: gD,
-              labelKey: wD.right.labelKey
+            }), (0, bp.jsx)(dx, {
+              deadzone: cp.right.deadzone,
+              dotRef: Yp,
+              labelKey: cp.right.labelKey
             })]
           })]
         })
       },
-      QL = (0, lD.memo)((function() {
+      kx = (0, Np.memo)((function() {
         const {
-          t: DD
-        } = (0, sD.E)(), zD = (0, UD.n)(), [wD, pD] = (0, lD.useState)(!1);
-        return (0, lD.useEffect)((() => {
-          if (!wD) return;
-          const DD = window.setTimeout((() => {
-            pD(!1)
-          }), qr.rb);
+          t: pp
+        } = (0, op.H)(), ip = (0, Pp.s)(), [cp, Op] = (0, Np.useState)(!1);
+        return (0, Np.useEffect)((() => {
+          if (!cp) return;
+          const pp = window.setTimeout((() => {
+            Op(!1)
+          }), px.ob);
           return () => {
-            window.clearTimeout(DD)
+            window.clearTimeout(pp)
           }
-        }), [wD]), (0, ZD.jsxs)("div", {
+        }), [cp]), (0, bp.jsxs)("div", {
           className: "SettingsMenuRightInner ControllerCategory",
-          children: [(0, ZD.jsx)(DL, {
-            text: DD("controller:settingsLook")
-          }), (0, ZD.jsx)(wL, {
+          children: [(0, bp.jsx)(ix, {
+            text: pp("controller:settingsLook")
+          }), (0, bp.jsx)(Ox, {
             settingKey: "lookSensitivityX",
-            label: DD("controller:settingsLookSensitivityX"),
-            range: qr.ob,
-            format: qr.S
-          }), (0, ZD.jsx)(wL, {
+            label: pp("controller:settingsLookSensitivityX"),
+            range: px.hb,
+            format: px.M
+          }), (0, bp.jsx)(Ox, {
             settingKey: "lookSensitivityY",
-            label: DD("controller:settingsLookSensitivityY"),
-            range: qr.ob,
-            format: qr.S
-          }), (0, ZD.jsx)(wL, {
+            label: pp("controller:settingsLookSensitivityY"),
+            range: px.hb,
+            format: px.M
+          }), (0, bp.jsx)(Ox, {
             settingKey: "aimLookSensitivity",
-            label: DD("controller:settingsAimLookSensitivity"),
-            range: qr.m,
-            format: qr.S
-          }), (0, ZD.jsx)(zL, {
-            label: DD("controller:settingsLookCurve"),
-            hint: DD("controller:settingsLookCurveHint"),
-            options: qr.eb,
-            value: zD.lookCurve,
-            onChange: DD => {
-              (0, UD.l)({
-                lookCurve: DD
+            label: pp("controller:settingsAimLookSensitivity"),
+            range: px.k,
+            format: px.M
+          }), (0, bp.jsx)(cx, {
+            label: pp("controller:settingsLookCurve"),
+            hint: pp("controller:settingsLookCurveHint"),
+            options: px.Y,
+            value: ip.lookCurve,
+            onChange: pp => {
+              (0, Pp.o)({
+                lookCurve: pp
               })
             }
-          }), (0, ZD.jsx)(Fr.b, {
-            label: DD("controller:settingsInvertLookX"),
-            checked: zD.invertLookX,
-            onClick: DD => {
-              (0, UD.l)({
-                invertLookX: DD
+          }), (0, bp.jsx)(sS.b, {
+            label: pp("controller:settingsInvertLookX"),
+            checked: ip.invertLookX,
+            onClick: pp => {
+              (0, Pp.o)({
+                invertLookX: pp
               })
             }
-          }), (0, ZD.jsx)(Fr.b, {
-            label: DD("controller:settingsInvertLookY"),
-            checked: zD.invertLookY,
-            onClick: DD => {
-              (0, UD.l)({
-                invertLookY: DD
+          }), (0, bp.jsx)(sS.b, {
+            label: pp("controller:settingsInvertLookY"),
+            checked: ip.invertLookY,
+            onClick: pp => {
+              (0, Pp.o)({
+                invertLookY: pp
               })
             }
-          }), (0, ZD.jsx)(wL, {
+          }), (0, bp.jsx)(Ox, {
             settingKey: "lookDeadzone",
-            label: DD("controller:settingsLookDeadzone"),
-            range: qr.E,
-            format: qr.L
-          }), (0, ZD.jsx)(RL, {}), (0, ZD.jsx)(DL, {
-            text: DD("controller:settingsMovement")
-          }), (0, ZD.jsx)(wL, {
+            label: pp("controller:settingsLookDeadzone"),
+            range: px.A,
+            format: px.I
+          }), (0, bp.jsx)(Ax, {}), (0, bp.jsx)(ix, {
+            text: pp("controller:settingsMovement")
+          }), (0, bp.jsx)(Ox, {
             settingKey: "moveDeadzone",
-            label: DD("controller:settingsMoveDeadzone"),
-            range: qr.E,
-            format: qr.L
-          }), (0, ZD.jsx)(Fr.b, {
-            label: DD("controller:settingsAutoSprint"),
-            checked: zD.autoSprint,
-            onClick: DD => {
-              (0, UD.l)({
-                autoSprint: DD
+            label: pp("controller:settingsMoveDeadzone"),
+            range: px.A,
+            format: px.I
+          }), (0, bp.jsx)(sS.b, {
+            label: pp("controller:settingsAutoSprint"),
+            checked: ip.autoSprint,
+            onClick: pp => {
+              (0, Pp.o)({
+                autoSprint: pp
               })
             },
-            circleInfoText: DD("controller:settingsAutoSprintInfo")
-          }), (0, ZD.jsx)(zL, {
-            label: DD("controller:settingsSneak"),
-            options: qr.pb,
-            value: zD.sneakMode,
-            onChange: DD => {
-              (0, UD.l)({
-                sneakMode: DD
+            circleInfoText: pp("controller:settingsAutoSprintInfo")
+          }), (0, bp.jsx)(cx, {
+            label: pp("controller:settingsSneak"),
+            options: px.kb,
+            value: ip.sneakMode,
+            onChange: pp => {
+              (0, Pp.o)({
+                sneakMode: pp
               })
             }
-          }), (0, ZD.jsx)(DL, {
-            text: DD("controller:settingsButtons")
-          }), (0, ZD.jsx)(zL, {
-            label: DD("controller:settingsPromptFamily"),
-            options: qr.ib,
-            value: zD.promptFamily,
-            onChange: DD => {
-              (0, UD.l)({
-                promptFamily: DD
+          }), (0, bp.jsx)(ix, {
+            text: pp("controller:settingsButtons")
+          }), (0, bp.jsx)(cx, {
+            label: pp("controller:settingsPromptFamily"),
+            options: px._,
+            value: ip.promptFamily,
+            onChange: pp => {
+              (0, Pp.o)({
+                promptFamily: pp
               })
             }
-          }), (0, ZD.jsx)(Fr.b, {
-            label: DD("controller:settingsHideButtonHints"),
-            checked: zD.hideButtonHints,
-            onClick: DD => {
-              (0, UD.l)({
-                hideButtonHints: DD
+          }), (0, bp.jsx)(sS.b, {
+            label: pp("controller:settingsHideButtonHints"),
+            checked: ip.hideButtonHints,
+            onClick: pp => {
+              (0, Pp.o)({
+                hideButtonHints: pp
               })
             }
-          }), (0, ZD.jsx)(Fr.b, {
-            label: DD("controller:settingsVibration"),
-            checked: zD.vibration,
-            onClick: DD => {
-              (0, UD.l)({
-                vibration: DD
-              }), DD && Ls("preview")
+          }), (0, bp.jsx)(sS.b, {
+            label: pp("controller:settingsVibration"),
+            checked: ip.vibration,
+            onClick: pp => {
+              (0, Pp.o)({
+                vibration: pp
+              }), pp && Lo("preview")
             }
-          }), (0, ZD.jsx)(wL, {
+          }), (0, bp.jsx)(Ox, {
             settingKey: "cursorSpeed",
-            label: DD("controller:settingsCursorSpeed"),
-            range: qr.D,
-            format: qr.S
-          }), (0, ZD.jsx)(Fr.b, {
-            label: DD("controller:settingsCursorMagnetism"),
-            checked: zD.cursorMagnetism,
-            onClick: DD => {
-              (0, UD.l)({
-                cursorMagnetism: DD
+            label: pp("controller:settingsCursorSpeed"),
+            range: px.z,
+            format: px.M
+          }), (0, bp.jsx)(sS.b, {
+            label: pp("controller:settingsCursorMagnetism"),
+            checked: ip.cursorMagnetism,
+            onClick: pp => {
+              (0, Pp.o)({
+                cursorMagnetism: pp
               })
             }
-          }), (0, ZD.jsx)(Fr.b, {
-            label: DD("controller:settingsMenuBackToCategories"),
-            checked: zD.menuBackToCategories,
-            onClick: DD => {
-              (0, UD.l)({
-                menuBackToCategories: DD
+          }), (0, bp.jsx)(sS.b, {
+            label: pp("controller:settingsMenuBackToCategories"),
+            checked: ip.menuBackToCategories,
+            onClick: pp => {
+              (0, Pp.o)({
+                menuBackToCategories: pp
               })
             }
-          }), (0, ZD.jsx)(nL, {
-            layoutSetting: (0, ZD.jsxs)(ZD.Fragment, {
-              children: [RD.f.map((wD => (0, ZD.jsx)(Fr.b, {
-                label: DD(qr.cb[wD]),
-                checked: (0, RD.z)(wD, zD),
-                onClick: DD => {
-                  pD(!(0, RD.K)(wD, DD))
+          }), (0, bp.jsx)(Hx, {
+            layoutSetting: (0, bp.jsxs)(bp.Fragment, {
+              children: [Dp.e.map((cp => (0, bp.jsx)(sS.b, {
+                label: pp(px.V[cp]),
+                checked: (0, Dp.v)(cp, ip),
+                onClick: pp => {
+                  Op(!(0, Dp.H)(cp, pp))
                 }
-              }, wD))), wD && (0, ZD.jsx)("div", {
+              }, cp))), cp && (0, bp.jsx)("div", {
                 className: "PadLayoutRefusedNotice",
                 role: "status",
-                children: DD("controller:settingsLayoutRefusedToast")
+                children: pp("controller:settingsLayoutRefusedToast")
               })]
             })
-          }), (0, ZD.jsx)(UL, {}), (0, ZD.jsx)(DL, {
-            text: DD("controller:settingsAlternatives")
-          }), (0, ZD.jsx)("div", {
+          }), (0, bp.jsx)(Wx, {}), (0, bp.jsx)(ix, {
+            text: pp("controller:settingsAlternatives")
+          }), (0, bp.jsx)("div", {
             className: "ControllerSettingsHint",
-            children: DD("controller:settingsAlternativesHint")
-          }), (0, ZD.jsx)(zL, {
-            label: DD("controller:settingsMenuNavigation"),
-            hint: DD("controller:settingsMenuNavigationHint"),
-            options: qr.hb,
-            value: zD.menuNavigation,
-            onChange: DD => {
-              (0, UD.l)({
-                menuNavigation: DD
+            children: pp("controller:settingsAlternativesHint")
+          }), (0, bp.jsx)(cx, {
+            label: pp("controller:settingsMenuNavigation"),
+            hint: pp("controller:settingsMenuNavigationHint"),
+            options: px.Z,
+            value: ip.menuNavigation,
+            onChange: pp => {
+              (0, Pp.o)({
+                menuNavigation: pp
               })
             }
-          }), (0, ZD.jsx)(zL, {
-            label: DD("controller:settingsInventoryNavigation"),
-            hint: DD("controller:settingsInventoryNavigationHint"),
-            options: qr.ab,
-            value: zD.inventoryNavigation,
-            onChange: DD => {
-              (0, UD.l)({
-                inventoryNavigation: DD
+          }), (0, bp.jsx)(cx, {
+            label: pp("controller:settingsInventoryNavigation"),
+            hint: pp("controller:settingsInventoryNavigationHint"),
+            options: px.R,
+            value: ip.inventoryNavigation,
+            onChange: pp => {
+              (0, Pp.o)({
+                inventoryNavigation: pp
               })
             }
-          }), (0, ZD.jsx)(zL, {
-            label: DD("controller:settingsQuickChat"),
-            hint: DD("controller:settingsQuickChatHint"),
-            options: qr.lb,
-            value: zD.quickChat,
-            onChange: DD => {
-              (0, UD.l)({
-                quickChat: DD
+          }), (0, bp.jsx)(cx, {
+            label: pp("controller:settingsQuickChat"),
+            hint: pp("controller:settingsQuickChatHint"),
+            options: px.$,
+            value: ip.quickChat,
+            onChange: pp => {
+              (0, Pp.o)({
+                quickChat: pp
               })
             }
-          }), (0, ZD.jsx)(zL, {
-            label: DD("controller:settingsLeaderboardButton"),
-            hint: DD("controller:settingsLeaderboardButtonHint"),
-            options: qr.db,
-            value: zD.leaderboardButton,
-            onChange: DD => {
-              (0, UD.l)({
-                leaderboardButton: DD
+          }), (0, bp.jsx)(cx, {
+            label: pp("controller:settingsLeaderboardButton"),
+            hint: pp("controller:settingsLeaderboardButtonHint"),
+            options: px.W,
+            value: ip.leaderboardButton,
+            onChange: pp => {
+              (0, Pp.o)({
+                leaderboardButton: pp
               })
             }
-          }), (0, ZD.jsx)(DL, {
-            text: DD("controller:settingsTester")
-          }), (0, ZD.jsx)(EL, {})]
+          }), (0, bp.jsx)(ix, {
+            text: pp("controller:settingsTester")
+          }), (0, bp.jsx)(jx, {})]
         })
       }));
-    (0, sD.c)(pD);
-    for (const xL of (0, KD.l)()) xL.connected ? rD.g.handleConnectionEvent(xL) : rD.g.handleDisconnectionEvent(xL);
-    const XL = () => null !== rD.g.getActivePad(),
-      VL = () => sw.getState(),
-      PL = () => sw.isSteppingSlots(),
-      CL = (DD, zD) => {
-        const wD = zs.getFocused();
-        zs.isActive() && wD && DD.contains(wD) && zs.setFocus(zD, {
+    (0, op.d)(Op);
+    for (const Cx of (0, Ip.q)()) Cx.connected ? Sp.e.handleConnectionEvent(Cx) : Sp.e.handleDisconnectionEvent(Cx);
+    const mx = () => null !== Sp.e.getActivePad(),
+      Rx = () => xc.getState(),
+      qx = () => xc.isSteppingSlots(),
+      Mx = (pp, ip) => {
+        const cp = co.getFocused();
+        co.isActive() && cp && pp.contains(cp) && co.setFocus(ip, {
           scroll: !1
         })
       }
   },
-  8189: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => cD,
-      e: () => gD
+  8307: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Lp,
+      g: () => Yp
     });
-    var pD = wD(1410),
-      sD = wD(1406);
-    const KD = {
+    var Op = cp(1454),
+      op = cp(1447);
+    const Ip = {
         "054c": "playstation",
         "057e": "nintendo"
       },
-      rD = "28de",
-      LD = new Set(["1205"]),
-      cD = (DD, zD) => {
-        const wD = (0, pD.c)(DD);
-        if ((null === wD || void 0 === wD ? void 0 : wD.vendor) === rD) return LD.has(wD.product) ? "steamdeck" : "xbox";
-        if (wD && KD[wD.vendor]) return KD[wD.vendor];
-        if ((0, sD.b)(DD)) return "nintendo";
-        const cD = `${DD} ${null!==zD&&void 0!==zD?zD:""}`.toLowerCase();
-        return /dualsense|dualshock|playstation|sony/.test(cD) ? "playstation" : /nintendo|switch|joy-con|pro controller/.test(cD) ? "nintendo" : /steam deck/.test(cD) ? "steamdeck" : "xbox"
+      Sp = "28de",
+      xp = new Set(["1205"]),
+      Lp = (pp, ip) => {
+        const cp = (0, Op.d)(pp);
+        if ((null === cp || void 0 === cp ? void 0 : cp.vendor) === Sp) return xp.has(cp.product) ? "steamdeck" : "xbox";
+        if (cp && Ip[cp.vendor]) return Ip[cp.vendor];
+        if ((0, op.b)(pp)) return "nintendo";
+        const Lp = `${pp} ${null!==ip&&void 0!==ip?ip:""}`.toLowerCase();
+        return /dualsense|dualshock|playstation|sony/.test(Lp) ? "playstation" : /nintendo|switch|joy-con|pro controller/.test(Lp) ? "nintendo" : /steam deck/.test(Lp) ? "steamdeck" : "xbox"
       },
-      gD = DD => {
-        var zD;
-        return (null === (zD = (0, pD.c)(DD)) || void 0 === zD ? void 0 : zD.vendor) === rD
+      Yp = pp => {
+        var ip;
+        return (null === (ip = (0, Op.d)(pp)) || void 0 === ip ? void 0 : ip.vendor) === Sp
       }
   },
-  8226: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => gD,
-      h: () => LD
+  8336: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Yp,
+      f: () => xp
     });
-    var pD = wD(8184);
-    const sD = ["capture", "keyboard", "wheel", "inventory", "cursor", "focus", "gameplay"],
-      KD = new Set(["capture", "gameplay"]),
-      rD = ["Up", "Down", "Left", "Right"],
-      LD = DD => rD.includes(DD),
-      cD = .25;
-    const gD = new class {
+    var Op = cp(8298);
+    const op = ["capture", "keyboard", "wheel", "inventory", "cursor", "focus", "gameplay"],
+      Ip = new Set(["capture", "gameplay"]),
+      Sp = ["Up", "Down", "Left", "Right"],
+      xp = pp => Sp.includes(pp),
+      Lp = .25;
+    const Yp = new class {
       constructor() {
-        this.consumers = new Map, this.activeName = null, this.Qg = new Array(pD.R).fill(!1), this.previousHeld = new Array(pD.R).fill(!1), this.consumedButtons = new Array(pD.R).fill(!1), this.suppressedReleases = new Array(pD.R).fill(!1), this.wakeOwned = new Array(pD.R).fill(!1), this.leftStickConsumed = !1, this.rightStickConsumed = !1, this.handOffPending = !1, this.idleResume = null, this.peek = null, this.lastFrame = (0, pD.r)()
+        this.consumers = new Map, this.activeName = null, this.sx = new Array(Op.N).fill(!1), this.previousHeld = new Array(Op.N).fill(!1), this.consumedButtons = new Array(Op.N).fill(!1), this.suppressedReleases = new Array(Op.N).fill(!1), this.wakeOwned = new Array(Op.N).fill(!1), this.leftStickConsumed = !1, this.rightStickConsumed = !1, this.handOffPending = !1, this.idleResume = null, this.peek = null, this.lastFrame = (0, Op.s)()
       }
-      register(DD) {
-        return this.consumers.has(DD.name) && console.warn(`Controller consumer "${DD.name}" registered twice; the newer one replaces it.`), this.consumers.set(DD.name, DD), () => {
-          var zD;
-          this.consumers.get(DD.name) === DD && (this.activeName === DD.name ? (this.deactivateCurrent(), this.activeName = null, this.consumeAllHeld()) : (null === (zD = this.peek) || void 0 === zD ? void 0 : zD.over) === DD.name && (this.peek = null), this.consumers.delete(DD.name))
+      register(pp) {
+        return this.consumers.has(pp.name) && console.warn(`Controller consumer "${pp.name}" registered twice; the newer one replaces it.`), this.consumers.set(pp.name, pp), () => {
+          var ip;
+          this.consumers.get(pp.name) === pp && (this.activeName === pp.name ? (this.deactivateCurrent(), this.activeName = null, this.consumeAllHeld()) : (null === (ip = this.peek) || void 0 === ip ? void 0 : ip.over) === pp.name && (this.peek = null), this.consumers.delete(pp.name))
         }
       }
       getActiveConsumerName() {
         return this.activeName
       }
-      isButtonHeld(DD) {
-        return this.Qg[(0, pD.m)(DD)]
+      isButtonHeld(pp) {
+        return this.sx[(0, Op.i)(pp)]
       }
       getLastFrame() {
         return this.lastFrame
@@ -7013,135 +7348,135 @@ export const modules = {
         this.deactivateCurrent(), this.activeName = null, this.consumeAllHeld()
       }
       reset() {
-        this.deactivateCurrent(), this.activeName = null, this.Qg = new Array(pD.R).fill(!1), this.previousHeld = new Array(pD.R).fill(!1), this.consumedButtons.fill(!1), this.suppressedReleases.fill(!1), this.wakeOwned.fill(!1), this.leftStickConsumed = !1, this.rightStickConsumed = !1, this.handOffPending = !1, this.idleResume = null, this.lastFrame = (0, pD.r)()
+        this.deactivateCurrent(), this.activeName = null, this.sx = new Array(Op.N).fill(!1), this.previousHeld = new Array(Op.N).fill(!1), this.consumedButtons.fill(!1), this.suppressedReleases.fill(!1), this.wakeOwned.fill(!1), this.leftStickConsumed = !1, this.rightStickConsumed = !1, this.handOffPending = !1, this.idleResume = null, this.lastFrame = (0, Op.s)()
       }
-      dispatch(DD, zD) {
-        let wD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        this.lastFrame = DD, this.previousHeld = this.Qg, this.Qg = (0, pD.p)(DD.values, this.previousHeld);
-        for (let KD = 0; KD < pD.R; KD++) this.suppressedReleases[KD] = !this.Qg[KD] && this.consumedButtons[KD], this.Qg[KD] || (this.consumedButtons[KD] = !1), this.wakeOwned[KD] && (this.Qg[KD] ? (this.consumedButtons[KD] = !0, this.wakeOwned[KD] = !1) : DD.values[KD] < pD.O && (this.wakeOwned[KD] = !1));
-        Math.hypot(DD.leftStick.x, DD.leftStick.y) < cD && (this.leftStickConsumed = !1), Math.hypot(DD.rightStick.x, DD.rightStick.y) < cD && (this.rightStickConsumed = !1);
-        const sD = this.pickActive();
-        if ((null === sD || void 0 === sD ? void 0 : sD.name) !== this.activeName) {
-          var rD, LD, gD, RD, AD, UD;
-          const DD = this.activeName,
-            zD = {
+      dispatch(pp, ip) {
+        let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        this.lastFrame = pp, this.previousHeld = this.sx, this.sx = (0, Op.m)(pp.values, this.previousHeld);
+        for (let Ip = 0; Ip < Op.N; Ip++) this.suppressedReleases[Ip] = !this.sx[Ip] && this.consumedButtons[Ip], this.sx[Ip] || (this.consumedButtons[Ip] = !1), this.wakeOwned[Ip] && (this.sx[Ip] ? (this.consumedButtons[Ip] = !0, this.wakeOwned[Ip] = !1) : pp.values[Ip] < Op.K && (this.wakeOwned[Ip] = !1));
+        Math.hypot(pp.leftStick.x, pp.leftStick.y) < Lp && (this.leftStickConsumed = !1), Math.hypot(pp.rightStick.x, pp.rightStick.y) < Lp && (this.rightStickConsumed = !1);
+        const op = this.pickActive();
+        if ((null === op || void 0 === op ? void 0 : op.name) !== this.activeName) {
+          var Sp, xp, Yp, Dp, Ap, Pp;
+          const pp = this.activeName,
+            ip = {
               left: !this.leftStickConsumed,
               right: !this.rightStickConsumed
             },
-            wD = null !== (rD = null === sD || void 0 === sD || null === (LD = sD.peek) || void 0 === LD ? void 0 : LD.call(sD)) && void 0 !== rD ? rD : null,
-            KD = null === DD && !!wD && !(null === (gD = this.consumers.get(wD.over)) || void 0 === gD || !gD.onPeekFrame),
-            cD = wD && (wD.over === DD || KD) ? wD : null,
-            fD = null !== this.peek && this.peek.over === (null === sD || void 0 === sD ? void 0 : sD.name) ? this.peek : null;
-          this.deactivateCurrent(null !== cD, null !== fD), this.activeName = null !== (RD = null === sD || void 0 === sD ? void 0 : sD.name) && void 0 !== RD ? RD : null, null === DD || this.handOffPending || this.consumeAllHeld();
-          const ID = null === (AD = null !== cD && void 0 !== cD ? cD : fD) || void 0 === AD ? void 0 : AD.stick;
-          "left" === ID && zD.left ? this.leftStickConsumed = !1 : "right" === ID && zD.right && (this.rightStickConsumed = !1), this.peek = cD, sD || null === DD ? sD && (null === (UD = this.idleResume) || void 0 === UD ? void 0 : UD.name) === sD.name && (this.idleResume.left && (this.leftStickConsumed = !1), this.idleResume.right && (this.rightStickConsumed = !1)) : this.idleResume = {
-            name: DD,
-            left: zD.left && this.leftStickConsumed,
-            right: zD.right && this.rightStickConsumed
-          }, sD && (this.idleResume = null);
-          for (let sD = 0; sD < pD.R; sD++) this.previousHeld[sD] && !this.Qg[sD] && (this.suppressedReleases[sD] = !0)
+            cp = null !== (Sp = null === op || void 0 === op || null === (xp = op.peek) || void 0 === xp ? void 0 : xp.call(op)) && void 0 !== Sp ? Sp : null,
+            Ip = null === pp && !!cp && !(null === (Yp = this.consumers.get(cp.over)) || void 0 === Yp || !Yp.onPeekFrame),
+            Lp = cp && (cp.over === pp || Ip) ? cp : null,
+            Wp = null !== this.peek && this.peek.over === (null === op || void 0 === op ? void 0 : op.name) ? this.peek : null;
+          this.deactivateCurrent(null !== Lp, null !== Wp), this.activeName = null !== (Dp = null === op || void 0 === op ? void 0 : op.name) && void 0 !== Dp ? Dp : null, null === pp || this.handOffPending || this.consumeAllHeld();
+          const yp = null === (Ap = null !== Lp && void 0 !== Lp ? Lp : Wp) || void 0 === Ap ? void 0 : Ap.stick;
+          "left" === yp && ip.left ? this.leftStickConsumed = !1 : "right" === yp && ip.right && (this.rightStickConsumed = !1), this.peek = Lp, op || null === pp ? op && (null === (Pp = this.idleResume) || void 0 === Pp ? void 0 : Pp.name) === op.name && (this.idleResume.left && (this.leftStickConsumed = !1), this.idleResume.right && (this.rightStickConsumed = !1)) : this.idleResume = {
+            name: pp,
+            left: ip.left && this.leftStickConsumed,
+            right: ip.right && this.rightStickConsumed
+          }, op && (this.idleResume = null);
+          for (let op = 0; op < Op.N; op++) this.previousHeld[op] && !this.sx[op] && (this.suppressedReleases[op] = !0)
         }
-        var fD, ID;
-        (this.handOffPending = !1, sD) && (wD && !KD.has(sD.name) && this.consumeWakePress(sD), sD.onFrame(this.buildInput(DD, zD, wD)), this.peek && (null === (fD = this.consumers.get(this.peek.over)) || void 0 === fD || null === (ID = fD.onPeekFrame) || void 0 === ID || ID.call(fD, this.buildInput(DD, zD, !1, this.peek.stick))))
+        var Wp, yp;
+        (this.handOffPending = !1, op) && (cp && !Ip.has(op.name) && this.consumeWakePress(op), op.onFrame(this.buildInput(pp, ip, cp)), this.peek && (null === (Wp = this.consumers.get(this.peek.over)) || void 0 === Wp || null === (yp = Wp.onPeekFrame) || void 0 === yp || yp.call(Wp, this.buildInput(pp, ip, !1, this.peek.stick))))
       }
-      consumeWakePress(DD) {
-        for (let sD = 0; sD < pD.R; sD++) {
-          var zD, wD;
-          const KD = pD.U[sD];
-          (null !== (zD = null === (wD = DD.wakePressActs) || void 0 === wD ? void 0 : wD.call(DD, KD)) && void 0 !== zD ? zD : rD.includes(KD)) || (this.Qg[sD] ? this.consumedButtons[sD] = !0 : this.lastFrame.values[sD] >= pD.M && (this.wakeOwned[sD] = !0))
+      consumeWakePress(pp) {
+        for (let op = 0; op < Op.N; op++) {
+          var ip, cp;
+          const Ip = Op.Q[op];
+          (null !== (ip = null === (cp = pp.wakePressActs) || void 0 === cp ? void 0 : cp.call(pp, Ip)) && void 0 !== ip ? ip : Sp.includes(Ip)) || (this.sx[op] ? this.consumedButtons[op] = !0 : this.lastFrame.values[op] >= Op.I && (this.wakeOwned[op] = !0))
         }
       }
       pickActive() {
-        for (const DD of sD) {
-          const zD = this.consumers.get(DD);
-          if (zD && zD.isActive()) return zD
+        for (const pp of op) {
+          const ip = this.consumers.get(pp);
+          if (ip && ip.isActive()) return ip
         }
         return null
       }
       deactivateCurrent() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-          zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        var wD, pD, sD, KD;
-        this.activeName && (null === (wD = this.consumers.get(this.activeName)) || void 0 === wD || null === (pD = wD.onDeactivate) || void 0 === pD || pD.call(wD, DD));
-        this.peek && !zD && (null === (sD = this.consumers.get(this.peek.over)) || void 0 === sD || null === (KD = sD.onDeactivate) || void 0 === KD || KD.call(sD, !1));
+        let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+          ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        var cp, Op, op, Ip;
+        this.activeName && (null === (cp = this.consumers.get(this.activeName)) || void 0 === cp || null === (Op = cp.onDeactivate) || void 0 === Op || Op.call(cp, pp));
+        this.peek && !ip && (null === (op = this.consumers.get(this.peek.over)) || void 0 === op || null === (Ip = op.onDeactivate) || void 0 === Ip || Ip.call(op, !1));
         this.peek = null
       }
       consumeAllHeld() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
+        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
         this.idleResume = null;
-        for (let sD = 0; sD < pD.R; sD++) this.Qg[sD] && (this.consumedButtons[sD] = !0);
+        for (let op = 0; op < Op.N; op++) this.sx[op] && (this.consumedButtons[op] = !0);
         const {
-          leftStick: zD,
-          rightStick: wD
+          leftStick: ip,
+          rightStick: cp
         } = this.lastFrame;
-        this.leftStickConsumed = "left" !== DD && (this.leftStickConsumed || Math.hypot(zD.x, zD.y) >= cD), this.rightStickConsumed = "right" !== DD && (this.rightStickConsumed || Math.hypot(wD.x, wD.y) >= cD)
+        this.leftStickConsumed = "left" !== pp && (this.leftStickConsumed || Math.hypot(ip.x, ip.y) >= Lp), this.rightStickConsumed = "right" !== pp && (this.rightStickConsumed || Math.hypot(cp.x, cp.y) >= Lp)
       }
       handOffHeldInput() {
         this.handOffPending = !0
       }
-      consumeButton(DD) {
-        const zD = (0, pD.m)(DD);
-        this.Qg[zD] && (this.consumedButtons[zD] = !0)
+      consumeButton(pp) {
+        const ip = (0, Op.i)(pp);
+        this.sx[ip] && (this.consumedButtons[ip] = !0)
       }
-      buildInput(DD, zD, wD, sD) {
-        const KD = this.Qg,
-          rD = this.previousHeld,
-          LD = sD ? new Array(pD.R).fill(!0) : [...this.consumedButtons],
-          cD = sD ? LD : [...this.suppressedReleases],
-          gD = !this.leftStickConsumed && (!sD || "left" === sD),
-          RD = !this.rightStickConsumed && (!sD || "right" === sD);
+      buildInput(pp, ip, cp, op) {
+        const Ip = this.sx,
+          Sp = this.previousHeld,
+          xp = op ? new Array(Op.N).fill(!0) : [...this.consumedButtons],
+          Lp = op ? xp : [...this.suppressedReleases],
+          Yp = !this.leftStickConsumed && (!op || "left" === op),
+          Dp = !this.rightStickConsumed && (!op || "right" === op);
         return {
-          frame: DD,
-          dtMs: zD,
-          isHeld: DD => {
-            const zD = (0, pD.m)(DD);
-            return KD[zD] && !LD[zD]
+          frame: pp,
+          dtMs: ip,
+          isHeld: pp => {
+            const ip = (0, Op.i)(pp);
+            return Ip[ip] && !xp[ip]
           },
-          wasPressed: DD => {
-            const zD = (0, pD.m)(DD);
-            return KD[zD] && !rD[zD] && !LD[zD]
+          wasPressed: pp => {
+            const ip = (0, Op.i)(pp);
+            return Ip[ip] && !Sp[ip] && !xp[ip]
           },
-          wasReleased: DD => {
-            const zD = (0, pD.m)(DD);
-            return !KD[zD] && rD[zD] && !cD[zD]
+          wasReleased: pp => {
+            const ip = (0, Op.i)(pp);
+            return !Ip[ip] && Sp[ip] && !Lp[ip]
           },
-          value: zD => {
-            const wD = (0, pD.m)(zD);
-            return LD[wD] ? 0 : DD.values[wD]
+          value: ip => {
+            const cp = (0, Op.i)(ip);
+            return xp[cp] ? 0 : pp.values[cp]
           },
-          leftStick: gD ? DD.leftStick : {
+          leftStick: Yp ? pp.leftStick : {
             x: 0,
             y: 0
           },
-          rightStick: RD ? DD.rightStick : {
+          rightStick: Dp ? pp.rightStick : {
             x: 0,
             y: 0
           },
-          wokeDevice: wD
+          wokeDevice: cp
         }
       }
     }
   },
-  8208: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => AD.f,
-      d: () => AD.j,
-      g: () => CD,
-      j: () => xD,
-      l: () => TD,
-      n: () => bD
+  8320: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Ap.e,
+      g: () => Ap.i,
+      h: () => Mp,
+      k: () => Cp,
+      o: () => Ep,
+      s: () => Xp
     });
-    var pD = wD(58),
-      sD = wD(25),
-      KD = wD(1442),
-      rD = wD(35),
-      LD = wD(8213),
-      cD = wD(8184),
-      gD = wD(8201),
-      RD = wD(8178),
-      AD = wD(2e3),
-      UD = wD(8218);
-    const fD = {
+    var Op = cp(62),
+      op = cp(34),
+      Ip = cp(1476),
+      Sp = cp(44),
+      xp = cp(8327),
+      Lp = cp(8298),
+      Yp = cp(8318),
+      Dp = cp(8290),
+      Ap = cp(2048),
+      Pp = cp(8331);
+    const Wp = {
         lookSensitivityX: 100,
         lookSensitivityY: 100,
         aimLookSensitivity: 100,
@@ -7175,47 +7510,47 @@ export const modules = {
         emoteButton: "tapHold",
         bindings: {}
       },
-      ID = "controllerSettings",
-      BD = ["bindings", "promptFamily", "hideButtonHints", "swapSticks", "swapConfirmBack", "leaderboardButton"],
-      GD = ["auto", ...LD.c],
-      hD = (DD, zD) => "string" === typeof zD && DD.includes(zD),
-      nD = DD => zD => "number" === typeof zD && Number.isFinite(zD) ? (0, UD.A)(zD, DD) : void 0,
-      MD = DD => "boolean" === typeof DD ? DD : void 0,
-      OD = DD => zD => hD(DD, zD) ? zD : void 0,
-      JD = {
-        lookSensitivityX: nD(UD.ob),
-        lookSensitivityY: nD(UD.ob),
-        aimLookSensitivity: nD(UD.m),
-        invertLookX: MD,
-        invertLookY: MD,
-        lookCurve: OD(cD.I),
-        lookDeadzone: nD(UD.E),
-        moveDeadzone: nD(UD.E),
-        swapSticks: MD,
-        autoSprint: MD,
-        sneakMode: OD(["toggle", "hold"]),
-        tapHoldTime: OD(["short", "medium", "long"]),
-        attackMode: OD(["hold", "toggle"]),
-        promptFamily: OD(GD),
-        hideButtonHints: MD,
-        vibration: MD,
-        cursorSpeed: nD(UD.D),
-        cursorMagnetism: MD,
-        buttonRepeat: OD(cD.o),
-        largePointer: MD,
-        menuBackToCategories: MD,
-        swapConfirmBack: MD,
-        menuNavigation: OD(["hybrid", "focus", "cursor"]),
-        inventoryNavigation: OD(["hybrid", "slot", "cursor"]),
-        quickChat: OD(["wheel", "off"]),
-        leaderboardButton: OD(["shop", "leaderboard"]),
-        gyroAiming: MD,
-        gyroSensitivity: nD(UD.Y),
-        gyroActivation: OD(["always", "aiming", "button"]),
-        gyroButton: OD(cD.U),
-        emoteButton: OD(["tapHold", "wheel"])
+      yp = "controllerSettings",
+      Up = ["bindings", "promptFamily", "hideButtonHints", "swapSticks", "swapConfirmBack", "leaderboardButton"],
+      wp = ["auto", ...xp.e],
+      vp = (pp, ip) => "string" === typeof ip && pp.includes(ip),
+      tp = pp => ip => "number" === typeof ip && Number.isFinite(ip) ? (0, Pp.w)(ip, pp) : void 0,
+      Hp = pp => "boolean" === typeof pp ? pp : void 0,
+      dp = pp => ip => vp(pp, ip) ? ip : void 0,
+      ep = {
+        lookSensitivityX: tp(Pp.hb),
+        lookSensitivityY: tp(Pp.hb),
+        aimLookSensitivity: tp(Pp.k),
+        invertLookX: Hp,
+        invertLookY: Hp,
+        lookCurve: dp(Lp.F),
+        lookDeadzone: tp(Pp.A),
+        moveDeadzone: tp(Pp.A),
+        swapSticks: Hp,
+        autoSprint: Hp,
+        sneakMode: dp(["toggle", "hold"]),
+        tapHoldTime: dp(["short", "medium", "long"]),
+        attackMode: dp(["hold", "toggle"]),
+        promptFamily: dp(wp),
+        hideButtonHints: Hp,
+        vibration: Hp,
+        cursorSpeed: tp(Pp.z),
+        cursorMagnetism: Hp,
+        buttonRepeat: dp(Lp.l),
+        largePointer: Hp,
+        menuBackToCategories: Hp,
+        swapConfirmBack: Hp,
+        menuNavigation: dp(["hybrid", "focus", "cursor"]),
+        inventoryNavigation: dp(["hybrid", "slot", "cursor"]),
+        quickChat: dp(["wheel", "off"]),
+        leaderboardButton: dp(["shop", "leaderboard"]),
+        gyroAiming: Hp,
+        gyroSensitivity: tp(Pp.P),
+        gyroActivation: dp(["always", "aiming", "button"]),
+        gyroButton: dp(Lp.Q),
+        emoteButton: dp(["tapHold", "wheel"])
       },
-      ED = [{
+      jp = [{
         param: "padMenuNav",
         key: "menuNavigation"
       }, {
@@ -7234,195 +7569,195 @@ export const modules = {
         param: "padLeaderboardButton",
         key: "leaderboardButton"
       }],
-      QD = DD => {
-        const zD = {};
-        if ("object" !== typeof DD || null === DD) return zD;
-        for (const [wD, pD] of Object.entries(DD)) Object.prototype.hasOwnProperty.call(gD.c, wD) && hD(cD.U, pD) && (zD[wD] = pD);
-        return zD
+      kp = pp => {
+        const ip = {};
+        if ("object" !== typeof pp || null === pp) return ip;
+        for (const [cp, Op] of Object.entries(pp)) Object.prototype.hasOwnProperty.call(Yp.h, cp) && vp(Lp.Q, Op) && (ip[cp] = Op);
+        return ip
       },
-      XD = DD => {
-        const zD = {};
-        for (const wD of Object.keys(fD))("bindings" === wD ? Object.keys(DD.bindings).length > 0 : DD[wD] !== fD[wD]) && (zD[wD] = DD[wD]);
-        0 !== Object.keys(zD).length ? rD.h.setItem(ID, zD) : rD.h.removeItem(ID)
+      mp = pp => {
+        const ip = {};
+        for (const cp of Object.keys(Wp))("bindings" === cp ? Object.keys(pp.bindings).length > 0 : pp[cp] !== Wp[cp]) && (ip[cp] = pp[cp]);
+        0 !== Object.keys(ip).length ? Sp.h.setItem(yp, ip) : Sp.h.removeItem(yp)
       };
-    let VD = (() => {
-        const DD = rD.h.getItem(ID),
-          zD = (DD => {
-            const zD = "object" === typeof DD && null !== DD ? DD : {},
-              wD = {
-                ...fD,
-                bindings: QD(zD.bindings)
+    let Rp = (() => {
+        const pp = Sp.h.getItem(yp),
+          ip = (pp => {
+            const ip = "object" === typeof pp && null !== pp ? pp : {},
+              cp = {
+                ...Wp,
+                bindings: kp(ip.bindings)
               };
-            for (const sD of Object.keys(JD)) {
-              const DD = JD[sD](zD[sD]);
-              void 0 !== DD && (wD[sD] = DD)
+            for (const op of Object.keys(ep)) {
+              const pp = ep[op](ip[op]);
+              void 0 !== pp && (cp[op] = pp)
             }
-            const pD = Object.keys(zD).filter((DD => !!Object.prototype.hasOwnProperty.call(fD, DD) && ("bindings" === DD ? "object" !== typeof zD.bindings || null === zD.bindings || Object.keys(zD.bindings).length !== Object.keys(wD.bindings).length : wD[DD] !== zD[DD])));
-            return pD.length > 0 && console.warn(`Stored controller settings had invalid values, replaced with defaults: ${pD.join(", ")}`), wD
-          })(DD);
-        return null !== DD && void 0 !== DD && XD(zD), zD
+            const Op = Object.keys(ip).filter((pp => !!Object.prototype.hasOwnProperty.call(Wp, pp) && ("bindings" === pp ? "object" !== typeof ip.bindings || null === ip.bindings || Object.keys(ip.bindings).length !== Object.keys(cp.bindings).length : cp[pp] !== ip[pp])));
+            return Op.length > 0 && console.warn(`Stored controller settings had invalid values, replaced with defaults: ${Op.join(", ")}`), cp
+          })(pp);
+        return null !== pp && void 0 !== pp && mp(ip), ip
       })(),
-      PD = {
-        ...VD,
+      qp = {
+        ...Rp,
         ...(() => {
           if ("undefined" === typeof window) return {};
-          const DD = {},
-            zD = new URLSearchParams(window.location.search);
+          const pp = {},
+            ip = new URLSearchParams(window.location.search);
           for (const {
-              param: wD,
-              key: pD
+              param: cp,
+              key: Op
             }
-            of ED) {
-            const sD = JD[pD](zD.get(wD));
-            void 0 !== sD && (DD[pD] = sD)
+            of jp) {
+            const op = ep[Op](ip.get(cp));
+            void 0 !== op && (pp[Op] = op)
           }
-          return DD
+          return pp
         })()
       };
-    const CD = () => PD,
-      xD = () => {
-        var DD, zD;
-        const wD = CD().promptFamily;
-        return "auto" !== wD ? wD : null !== (DD = null === (zD = RD.g.getActivePad()) || void 0 === zD ? void 0 : zD.family) && void 0 !== DD ? DD : "xbox"
+    const Mp = () => qp,
+      Cp = () => {
+        var pp, ip;
+        const cp = Mp().promptFamily;
+        return "auto" !== cp ? cp : null !== (pp = null === (ip = Dp.e.getActivePad()) || void 0 === ip ? void 0 : ip.family) && void 0 !== pp ? pp : "xbox"
       },
-      TD = DD => {
-        const zD = PD;
-        VD = {
-          ...VD,
-          ...DD
-        }, XD(VD), PD = {
-          ...PD,
-          ...DD
-        }, (DD => {
-          sD.l.KG(AD.j, PD), BD.some((zD => DD[zD] !== PD[zD])) && sD.l.KG(AD.f, PD)
-        })(zD)
+      Ep = pp => {
+        const ip = qp;
+        Rp = {
+          ...Rp,
+          ...pp
+        }, mp(Rp), qp = {
+          ...qp,
+          ...pp
+        }, (pp => {
+          op.m.GA(Ap.i, qp), Up.some((ip => pp[ip] !== qp[ip])) && op.m.GA(Ap.e, qp)
+        })(ip)
       },
-      bD = () => {
-        const [DD, zD] = (0, pD.useState)(PD);
-        return (0, KD.g)(AD.j, zD), DD
+      Xp = () => {
+        const [pp, ip] = (0, Op.useState)(qp);
+        return (0, Ip.f)(Ap.i, ip), pp
       }
   },
-  8655: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => sD
+  8785: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => op
     });
-    const pD = new Set(["Alt", "AltGraph", "Meta", "OS", "AudioVolumeUp", "AudioVolumeDown", "AudioVolumeMute", "MediaPlayPause", "MediaPlay", "MediaPause", "MediaStop", "MediaTrackNext", "MediaTrackPrevious", "BrowserBack", "BrowserForward", "BrowserHome", "GoBack", "LaunchApplication1", "LaunchApplication2", "LaunchMail", "PrintScreen", "Unidentified"]),
-      sD = DD => pD.has(DD)
+    const Op = new Set(["Alt", "AltGraph", "Meta", "OS", "AudioVolumeUp", "AudioVolumeDown", "AudioVolumeMute", "MediaPlayPause", "MediaPlay", "MediaPause", "MediaStop", "MediaTrackNext", "MediaTrackPrevious", "BrowserBack", "BrowserForward", "BrowserHome", "GoBack", "LaunchApplication1", "LaunchApplication2", "LaunchMail", "PrintScreen", "Unidentified"]),
+      op = pp => Op.has(pp)
   },
-  8178: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => BD.c,
-      g: () => MD
+  8290: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Up.b,
+      e: () => Hp
     });
-    var pD = wD(8184),
-      sD = wD(8189);
-    const KD = .1,
-      rD = .3;
-    class LD {
+    var Op = cp(8298),
+      op = cp(8307);
+    const Ip = .1,
+      Sp = .3;
+    class xp {
       constructor() {
         this.deadzone = 0, this.anchor = null, this.steadyMs = 0, this.lastMs = null, this.returning = !0, this.anchorLearned = !1
       }
-      observe(DD, zD) {
-        const wD = null === this.lastMs ? 0 : Math.min(Math.max(0, zD - this.lastMs), 100);
-        this.lastMs = zD;
-        const pD = Math.hypot(DD.x, DD.y);
-        if (pD >= rD) return this.anchor = null, void(this.returning = !0);
-        pD >= KD || (this.returning = !1);
-        const sD = this.anchor;
-        if (!sD || Math.hypot(DD.x - sD.x, DD.y - sD.y) > .03) return this.anchorLearned && (this.returning = !1), this.anchor = {
-          x: DD.x,
-          y: DD.y
+      observe(pp, ip) {
+        const cp = null === this.lastMs ? 0 : Math.min(Math.max(0, ip - this.lastMs), 100);
+        this.lastMs = ip;
+        const Op = Math.hypot(pp.x, pp.y);
+        if (Op >= Sp) return this.anchor = null, void(this.returning = !0);
+        Op >= Ip || (this.returning = !1);
+        const op = this.anchor;
+        if (!op || Math.hypot(pp.x - op.x, pp.y - op.y) > .03) return this.anchorLearned && (this.returning = !1), this.anchor = {
+          x: pp.x,
+          y: pp.y
         }, this.steadyMs = 0, void(this.anchorLearned = !1);
-        if (this.steadyMs += wD, this.steadyMs < 1e3) return;
-        const LD = Math.max(pD, Math.hypot(sD.x, sD.y));
-        LD < KD ? this.deadzone = 0 : this.returning && (this.deadzone = LD + .05, this.anchorLearned = !0)
+        if (this.steadyMs += cp, this.steadyMs < 1e3) return;
+        const xp = Math.max(Op, Math.hypot(op.x, op.y));
+        xp < Ip ? this.deadzone = 0 : this.returning && (this.deadzone = xp + .05, this.anchorLearned = !0)
       }
       getDeadzone() {
         return this.deadzone
       }
-      apply(DD) {
-        return Math.hypot(DD.x, DD.y) < this.deadzone ? {
+      apply(pp) {
+        return Math.hypot(pp.x, pp.y) < this.deadzone ? {
           x: 0,
           y: 0
-        } : DD
+        } : pp
       }
     }
-    const cD = (DD, zD) => {
-        var wD, pD;
-        return null !== (wD = DD && (null === (pD = Object.getOwnPropertyDescriptor(DD, zD)) || void 0 === pD ? void 0 : pD.get)) && void 0 !== wD ? wD : null
+    const Lp = (pp, ip) => {
+        var cp, Op;
+        return null !== (cp = pp && (null === (Op = Object.getOwnPropertyDescriptor(pp, ip)) || void 0 === Op ? void 0 : Op.get)) && void 0 !== cp ? cp : null
       },
-      gD = DD => {
-        const zD = DD.vendorName;
-        return "string" === typeof zD ? zD : void 0
+      Yp = pp => {
+        const ip = pp.vendorName;
+        return "string" === typeof ip ? ip : void 0
       },
-      RD = ((DD, zD) => {
-        const wD = cD(DD, "index"),
-          pD = cD(DD, "id"),
-          sD = cD(DD, "connected"),
-          KD = cD(DD, "mapping"),
-          rD = cD(DD, "buttons"),
-          LD = cD(DD, "axes"),
-          RD = cD(zD, "pressed"),
-          AD = cD(zD, "value");
-        return wD && pD && sD && KD && rD && LD && RD && AD ? DD => {
-          const zD = rD.call(DD),
-            cD = LD.call(DD),
-            UD = {
-              index: Number(wD.call(DD)),
-              id: String(pD.call(DD)),
-              connected: !0 === sD.call(DD),
-              mapping: String(KD.call(DD)),
+      Dp = ((pp, ip) => {
+        const cp = Lp(pp, "index"),
+          Op = Lp(pp, "id"),
+          op = Lp(pp, "connected"),
+          Ip = Lp(pp, "mapping"),
+          Sp = Lp(pp, "buttons"),
+          xp = Lp(pp, "axes"),
+          Dp = Lp(ip, "pressed"),
+          Ap = Lp(ip, "value");
+        return cp && Op && op && Ip && Sp && xp && Dp && Ap ? pp => {
+          const ip = Sp.call(pp),
+            Lp = xp.call(pp),
+            Pp = {
+              index: Number(cp.call(pp)),
+              id: String(Op.call(pp)),
+              connected: !0 === op.call(pp),
+              mapping: String(Ip.call(pp)),
               buttons: [],
               axes: [],
-              vendorName: gD(DD)
+              vendorName: Yp(pp)
             };
-          for (let wD = 0; wD < zD.length; wD++) UD.buttons.push({
-            pressed: !0 === RD.call(zD[wD]),
-            value: Number(AD.call(zD[wD]))
+          for (let cp = 0; cp < ip.length; cp++) Pp.buttons.push({
+            pressed: !0 === Dp.call(ip[cp]),
+            value: Number(Ap.call(ip[cp]))
           });
-          for (let wD = 0; wD < cD.length; wD++) UD.axes.push(Number(cD[wD]));
-          return UD
+          for (let cp = 0; cp < Lp.length; cp++) Pp.axes.push(Number(Lp[cp]));
+          return Pp
         } : null
       })("undefined" === typeof Gamepad ? null : Gamepad.prototype, "undefined" === typeof GamepadButton ? null : GamepadButton.prototype),
-      AD = "undefined" === typeof Navigator ? null : Navigator.prototype.getGamepads;
-    var UD = wD(1403),
-      fD = wD(1406);
-    const ID = DD => ({
-      pressed: DD,
-      value: DD ? 1 : 0
+      Ap = "undefined" === typeof Navigator ? null : Navigator.prototype.getGamepads;
+    var Pp = cp(1441),
+      Wp = cp(1447);
+    const yp = pp => ({
+      pressed: pp,
+      value: pp ? 1 : 0
     });
-    var BD = wD(2e3);
-    const GD = rD,
-      hD = DD => {
-        const zD = new Array(pD.R).fill(0);
-        for (let wD = 0; wD < pD.R && wD < DD.buttons.length; wD++) {
-          const sD = DD.buttons[wD];
-          zD[wD] = sD.pressed && !(0, pD.F)(wD) ? Math.max(sD.value, pD.s) : sD.value
+    var Up = cp(2048);
+    const wp = Sp,
+      vp = pp => {
+        const ip = new Array(Op.N).fill(0);
+        for (let cp = 0; cp < Op.N && cp < pp.buttons.length; cp++) {
+          const op = pp.buttons[cp];
+          ip[cp] = op.pressed && !(0, Op.E)(cp) ? Math.max(op.value, Op.u) : op.value
         }
-        return zD
+        return ip
       },
-      nD = (DD, zD) => {
-        var wD, pD;
+      tp = (pp, ip) => {
+        var cp, Op;
         return {
-          x: null !== (wD = DD.axes[zD]) && void 0 !== wD ? wD : 0,
-          y: null !== (pD = DD.axes[zD + 1]) && void 0 !== pD ? pD : 0
+          x: null !== (cp = pp.axes[ip]) && void 0 !== cp ? cp : 0,
+          y: null !== (Op = pp.axes[ip + 1]) && void 0 !== Op ? Op : 0
         }
       };
-    const MD = new class {
-      constructor(DD, zD) {
-        let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : RD;
-        this.readGamepads = DD, this.requireTrustedPads = zD, this.nativeReader = wD, this.running = !1, this.listening = !1, this.rafId = 0, this.lastTimestampMs = 0, this.activeInfo = null, this.slots = [], this.trustedIndices = new Set, this.warnedNonStandardIds = new Set, this.loggedReadError = !1, this.frameListeners = new Set, this.connectionListeners = new Set, this.anyPadConnected = !1, this.connectedListeners = new Set, this.handleConnectionEvent = DD => {
-          DD.isTrusted && this.trustedIndices.add(DD.gamepad.index), this.wake()
-        }, this.handleDisconnectionEvent = DD => {
-          this.trustedIndices.delete(DD.gamepad.index)
-        }, this.DU = DD => {
+    const Hp = new class {
+      constructor(pp, ip) {
+        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Dp;
+        this.readGamepads = pp, this.requireTrustedPads = ip, this.nativeReader = cp, this.running = !1, this.listening = !1, this.rafId = 0, this.lastTimestampMs = 0, this.activeInfo = null, this.slots = [], this.trustedIndices = new Set, this.warnedNonStandardIds = new Set, this.loggedReadError = !1, this.frameListeners = new Set, this.connectionListeners = new Set, this.anyPadConnected = !1, this.connectedListeners = new Set, this.handleConnectionEvent = pp => {
+          pp.isTrusted && this.trustedIndices.add(pp.gamepad.index), this.wake()
+        }, this.handleDisconnectionEvent = pp => {
+          this.trustedIndices.delete(pp.gamepad.index)
+        }, this.LP = pp => {
           if (this.rafId = 0, !this.running) return;
-          const zD = 0 === this.lastTimestampMs ? 16 : Math.min(100, DD - this.lastTimestampMs);
-          this.lastTimestampMs = DD;
+          const ip = 0 === this.lastTimestampMs ? 16 : Math.min(100, pp - this.lastTimestampMs);
+          this.lastTimestampMs = pp;
           try {
-            this.poll(DD, zD)
+            this.poll(pp, ip)
           } finally {
-            this.anyPadConnected && (this.rafId = requestAnimationFrame(this.DU))
+            this.anyPadConnected && (this.rafId = requestAnimationFrame(this.LP))
           }
         }
       }
@@ -7435,14 +7770,14 @@ export const modules = {
       listenForConnections() {
         this.listening || "undefined" === typeof window || (this.listening = !0, window.addEventListener("gamepadconnected", this.handleConnectionEvent), window.addEventListener("gamepaddisconnected", this.handleDisconnectionEvent))
       }
-      onFrame(DD) {
-        return this.frameListeners.add(DD), () => {
-          this.frameListeners.delete(DD)
+      onFrame(pp) {
+        return this.frameListeners.add(pp), () => {
+          this.frameListeners.delete(pp)
         }
       }
-      onActivePadChanged(DD) {
-        return this.connectionListeners.add(DD), () => {
-          this.connectionListeners.delete(DD)
+      onActivePadChanged(pp) {
+        return this.connectionListeners.add(pp), () => {
+          this.connectionListeners.delete(pp)
         }
       }
       getActivePad() {
@@ -7451,212 +7786,212 @@ export const modules = {
       hasConnectedPad() {
         return this.anyPadConnected
       }
-      onConnectedPadsChanged(DD) {
-        return this.connectedListeners.add(DD), () => {
-          this.connectedListeners.delete(DD)
+      onConnectedPadsChanged(pp) {
+        return this.connectedListeners.add(pp), () => {
+          this.connectedListeners.delete(pp)
         }
       }
       getActiveGamepad() {
         if (!this.activeInfo) return null;
-        const DD = this.readPads()[this.activeInfo.index],
-          zD = DD ? this.readPad(DD) : null;
-        return zD && zD.id === this.activeInfo.id ? DD : null
+        const pp = this.readPads()[this.activeInfo.index],
+          ip = pp ? this.readPad(pp) : null;
+        return ip && ip.id === this.activeInfo.id ? pp : null
       }
-      poll(DD, zD) {
-        var wD, sD;
-        const KD = this.readPads();
-        let rD = null,
-          cD = !1;
-        const gD = [],
-          RD = Math.max(KD.length, this.slots.length);
-        for (let MD = 0; MD < RD; MD++) {
-          var AD;
-          const zD = MD < KD.length ? KD[MD] : null,
-            wD = zD ? this.readPad(zD) : null;
-          if (!wD || !wD.connected || !this.isUsable(wD)) {
-            this.slots[MD] = null;
+      poll(pp, ip) {
+        var cp, op;
+        const Ip = this.readPads();
+        let Sp = null,
+          Lp = !1;
+        const Yp = [],
+          Dp = Math.max(Ip.length, this.slots.length);
+        for (let Hp = 0; Hp < Dp; Hp++) {
+          var Ap;
+          const ip = Hp < Ip.length ? Ip[Hp] : null,
+            cp = ip ? this.readPad(ip) : null;
+          if (!cp || !cp.connected || !this.isUsable(cp)) {
+            this.slots[Hp] = null;
             continue
           }
-          let sD = this.slots[MD];
-          sD && sD.id === wD.id || (sD = {
-            id: wD.id,
-            Qg: [],
+          let op = this.slots[Hp];
+          op && op.id === cp.id || (op = {
+            id: cp.id,
+            sx: [],
             leftSettled: !1,
             rightSettled: !1,
-            leftRest: new LD,
-            rightRest: new LD
-          }, this.slots[MD] = sD);
-          const RD = nD(wD, 0),
-            UD = nD(wD, 2);
-          !sD.leftSettled && Math.hypot(RD.x, RD.y) < GD && (sD.leftSettled = !0), !sD.rightSettled && Math.hypot(UD.x, UD.y) < GD && (sD.rightSettled = !0), sD.leftRest.observe(RD, DD), sD.rightRest.observe(UD, DD);
-          const fD = hD(wD),
-            ID = (0, pD.p)(fD, sD.Qg),
-            BD = sD.Qg,
-            OD = ID.map(((DD, zD) => DD && !BD[zD]));
-          sD.Qg = ID;
-          const JD = {
-            pad: wD,
-            slot: sD,
-            values: fD
+            leftRest: new xp,
+            rightRest: new xp
+          }, this.slots[Hp] = op);
+          const Dp = tp(cp, 0),
+            Pp = tp(cp, 2);
+          !op.leftSettled && Math.hypot(Dp.x, Dp.y) < wp && (op.leftSettled = !0), !op.rightSettled && Math.hypot(Pp.x, Pp.y) < wp && (op.rightSettled = !0), op.leftRest.observe(Dp, pp), op.rightRest.observe(Pp, pp);
+          const Wp = vp(cp),
+            yp = (0, Op.m)(Wp, op.sx),
+            Up = op.sx,
+            dp = yp.map(((pp, ip) => pp && !Up[ip]));
+          op.sx = yp;
+          const ep = {
+            pad: cp,
+            slot: op,
+            values: Wp
           };
-          MD === (null === (AD = this.activeInfo) || void 0 === AD ? void 0 : AD.index) && wD.id === this.activeInfo.id ? (rD = JD, cD = OD.includes(!0)) : OD.includes(!0) && gD.push({
-            polled: JD,
-            rose: OD
+          Hp === (null === (Ap = this.activeInfo) || void 0 === Ap ? void 0 : Ap.index) && cp.id === this.activeInfo.id ? (Sp = ep, Lp = dp.includes(!0)) : dp.includes(!0) && Yp.push({
+            polled: ep,
+            rose: dp
           })
         }
-        const UD = this.slots.some((DD => null !== DD));
-        if (UD !== this.anyPadConnected) {
-          this.anyPadConnected = UD;
-          for (const DD of this.connectedListeners) DD()
+        const Pp = this.slots.some((pp => null !== pp));
+        if (Pp !== this.anyPadConnected) {
+          this.anyPadConnected = Pp;
+          for (const pp of this.connectedListeners) pp()
         }
-        const fD = null !== (wD = null === (sD = rD) || void 0 === sD ? void 0 : sD.slot.Qg) && void 0 !== wD ? wD : [],
-          ID = cD ? void 0 : gD.find((DD => {
+        const Wp = null !== (cp = null === (op = Sp) || void 0 === op ? void 0 : op.slot.sx) && void 0 !== cp ? cp : [],
+          yp = Lp ? void 0 : Yp.find((pp => {
             let {
-              rose: zD
-            } = DD;
-            return zD.some(((DD, zD) => DD && !fD[zD]))
+              rose: ip
+            } = pp;
+            return ip.some(((pp, ip) => pp && !Wp[ip]))
           }));
-        if (ID ? (rD = ID.polled, this.setActive(ID.polled.pad)) : this.activeInfo && !rD && this.setActive(null), !rD || !this.activeInfo) return;
-        const BD = ((DD, zD) => {
+        if (yp ? (Sp = yp.polled, this.setActive(yp.polled.pad)) : this.activeInfo && !Sp && this.setActive(null), !Sp || !this.activeInfo) return;
+        const Up = ((pp, ip) => {
           let {
-            pad: wD,
-            slot: sD,
-            values: KD
-          } = DD;
-          const rD = (0, pD.r)(zD);
-          return rD.values = KD, sD.leftSettled && (rD.leftStick = sD.leftRest.apply(nD(wD, 0))), sD.rightSettled && (rD.rightStick = sD.rightRest.apply(nD(wD, 2))), rD
-        })(rD, DD);
-        for (const pD of this.frameListeners) pD(BD, zD, this.activeInfo)
+            pad: cp,
+            slot: op,
+            values: Ip
+          } = pp;
+          const Sp = (0, Op.s)(ip);
+          return Sp.values = Ip, op.leftSettled && (Sp.leftStick = op.leftRest.apply(tp(cp, 0))), op.rightSettled && (Sp.rightStick = op.rightRest.apply(tp(cp, 2))), Sp
+        })(Sp, pp);
+        for (const Op of this.frameListeners) Op(Up, ip, this.activeInfo)
       }
-      readPad(DD) {
-        const zD = this.readSnapshot(DD);
-        return zD && (0, fD.f)(zD) ? (DD => {
-          const zD = zD => {
-              var wD;
-              return null !== (wD = DD.buttons[zD]) && void 0 !== wD ? wD : ID(!1)
+      readPad(pp) {
+        const ip = this.readSnapshot(pp);
+        return ip && (0, Wp.e)(ip) ? (pp => {
+          const ip = ip => {
+              var cp;
+              return null !== (cp = pp.buttons[ip]) && void 0 !== cp ? cp : yp(!1)
             },
-            wD = zD => {
-              var wD;
-              return null !== (wD = DD.axes[zD]) && void 0 !== wD ? wD : 0
+            cp = ip => {
+              var cp;
+              return null !== (cp = pp.axes[ip]) && void 0 !== cp ? cp : 0
             },
-            pD = DD.axes.length > 9,
-            sD = pD ? (DD => {
-              const zD = 0 !== DD;
+            Op = pp.axes.length > 9,
+            op = Op ? (pp => {
+              const ip = 0 !== pp;
               return {
-                up: zD && (DD >= -1 && DD < -.7 || DD >= .95 && DD <= 1),
-                right: zD && DD >= -.75 && DD < -.1,
-                down: zD && DD >= -.2 && DD < .45,
-                left: zD && DD >= .4 && DD <= 1
+                up: ip && (pp >= -1 && pp < -.7 || pp >= .95 && pp <= 1),
+                right: ip && pp >= -.75 && pp < -.1,
+                down: ip && pp >= -.2 && pp < .45,
+                left: ip && pp >= .4 && pp <= 1
               }
-            })(wD(9)) : {
-              up: wD(5) < -.5,
-              down: wD(5) > .5,
-              left: wD(4) < -.5,
-              right: wD(4) > .5
+            })(cp(9)) : {
+              up: cp(5) < -.5,
+              down: cp(5) > .5,
+              left: cp(4) < -.5,
+              right: cp(4) > .5
             };
           return {
-            ...DD,
+            ...pp,
             mapping: "standard",
-            buttons: [zD(1), zD(2), zD(0), zD(3), zD(4), zD(5), zD(6), zD(7), zD(8), zD(9), zD(10), zD(11), ID(sD.up), ID(sD.down), ID(sD.left), ID(sD.right), zD(12)],
-            axes: [wD(0), wD(1), wD(2), wD(pD ? 5 : 3)]
+            buttons: [ip(1), ip(2), ip(0), ip(3), ip(4), ip(5), ip(6), ip(7), ip(8), ip(9), ip(10), ip(11), yp(op.up), yp(op.down), yp(op.left), yp(op.right), ip(12)],
+            axes: [cp(0), cp(1), cp(2), cp(Op ? 5 : 3)]
           }
-        })(zD) : zD
+        })(ip) : ip
       }
-      readSnapshot(DD) {
+      readSnapshot(pp) {
         if (this.nativeReader) try {
-          return this.nativeReader(DD)
+          return this.nativeReader(pp)
         } catch {
           if (this.requireTrustedPads) return null
         }
-        return this.requireTrustedPads ? null : (DD => {
-          const zD = DD;
+        return this.requireTrustedPads ? null : (pp => {
+          const ip = pp;
           return {
-            index: zD.index,
-            id: zD.id,
-            connected: zD.connected,
-            mapping: zD.mapping,
-            buttons: Array.from(zD.buttons, (DD => ({
-              pressed: DD.pressed,
-              value: DD.value
+            index: ip.index,
+            id: ip.id,
+            connected: ip.connected,
+            mapping: ip.mapping,
+            buttons: Array.from(ip.buttons, (pp => ({
+              pressed: pp.pressed,
+              value: pp.value
             }))),
-            axes: Array.from(zD.axes),
-            vendorName: gD(DD)
+            axes: Array.from(ip.axes),
+            vendorName: Yp(pp)
           }
-        })(DD)
+        })(pp)
       }
-      isUsable(DD) {
-        return !(0, UD.f)(DD.id) && ("standard" !== DD.mapping ? (this.warnedNonStandardIds.has(DD.id) || (this.warnedNonStandardIds.add(DD.id), console.warn(`Controller "${DD.id}" has no standard button mapping, so it is ignored.`)), !1) : !this.requireTrustedPads || this.trustedIndices.has(DD.index))
+      isUsable(pp) {
+        return !(0, Pp.f)(pp.id) && ("standard" !== pp.mapping ? (this.warnedNonStandardIds.has(pp.id) || (this.warnedNonStandardIds.add(pp.id), console.warn(`Controller "${pp.id}" has no standard button mapping, so it is ignored.`)), !1) : !this.requireTrustedPads || this.trustedIndices.has(pp.index))
       }
-      setActive(DD) {
-        this.activeInfo = DD ? {
-          index: DD.index,
-          id: DD.id,
-          family: (0, sD.c)(DD.id, DD.vendorName)
+      setActive(pp) {
+        this.activeInfo = pp ? {
+          index: pp.index,
+          id: pp.id,
+          family: (0, op.c)(pp.id, pp.vendorName)
         } : null;
-        for (const zD of this.connectionListeners) zD(this.activeInfo)
+        for (const ip of this.connectionListeners) ip(this.activeInfo)
       }
       readPads() {
         try {
           return this.readGamepads()
-        } catch (DD) {
-          return this.loggedReadError || (this.loggedReadError = !0, console.warn("Reading gamepads failed; controller input is unavailable.", DD)), []
+        } catch (pp) {
+          return this.loggedReadError || (this.loggedReadError = !0, console.warn("Reading gamepads failed; controller input is unavailable.", pp)), []
         }
       }
       wake() {
-        this.running && 0 === this.rafId && (this.lastTimestampMs = 0, this.rafId = requestAnimationFrame(this.DU))
+        this.running && 0 === this.rafId && (this.lastTimestampMs = 0, this.rafId = requestAnimationFrame(this.LP))
       }
-    }((() => AD ? AD.call(navigator) : []), !0);
-    MD.listenForConnections()
+    }((() => Ap ? Ap.call(navigator) : []), !0);
+    Hp.listenForConnections()
   },
-  8748: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => KD,
-      h: () => rD,
-      j: () => LD,
-      n: () => sD
+  8872: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Ip,
+      g: () => Sp,
+      j: () => xp,
+      l: () => op
     });
-    var pD = wD(8756);
-    const sD = DD => {
-        const zD = [];
-        DD.holdingGun && zD.push({
+    var Op = cp(8877);
+    const op = pp => {
+        const ip = [];
+        pp.holdingGun && ip.push({
           kind: "reload"
-        }), DD.touchscreenActionButton && zD.push({
+        }), pp.touchscreenActionButton && ip.push({
           kind: "touchButton",
-          label: DD.touchscreenActionButton
+          label: pp.touchscreenActionButton
         });
-        for (const KD of null !== (wD = null === (sD = DD.customButtons) || void 0 === sD ? void 0 : sD.filter(pD.g)) && void 0 !== wD ? wD : []) {
-          var wD, sD;
-          zD.push({
+        for (const Ip of null !== (cp = null === (op = pp.customButtons) || void 0 === op ? void 0 : op.filter(Op.f)) && void 0 !== cp ? cp : []) {
+          var cp, op;
+          ip.push({
             kind: "customButton",
-            id: KD.id,
-            icon: KD.icon,
-            description: KD.description
+            id: Ip.id,
+            icon: Ip.icon,
+            description: Ip.description
           })
         }
-        return zD
+        return ip
       },
-      KD = DD => DD.length >= 2,
-      rD = DD => "specialAction" !== DD.kind,
-      LD = (DD, zD) => {
-        if (null === DD || null === zD) return DD === zD;
-        if (DD.kind !== zD.kind) return !1;
-        switch (DD.kind) {
+      Ip = pp => pp.length >= 2,
+      Sp = pp => "specialAction" !== pp.kind,
+      xp = (pp, ip) => {
+        if (null === pp || null === ip) return pp === ip;
+        if (pp.kind !== ip.kind) return !1;
+        switch (pp.kind) {
           case "reload":
             return !0;
           case "specialAction":
-            return DD.action === zD.action;
+            return pp.action === ip.action;
           case "customButton":
-            return DD.id === zD.id && DD.icon === zD.icon;
+            return pp.id === ip.id && pp.icon === ip.icon;
           case "touchButton":
-            return DD.label === zD.label
+            return pp.label === ip.label
         }
       }
   },
-  8664: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => pD
+  8801: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Op
     });
-    const pD = {
+    const Op = {
       short: {
         wheelMs: 250,
         dropStackMs: 800
@@ -7671,157 +8006,157 @@ export const modules = {
       }
     }
   },
-  8745: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => RD,
-      i: () => fD,
-      j: () => AD,
-      k: () => ID
+  8869: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Dp,
+      f: () => Wp,
+      h: () => Ap,
+      i: () => yp
     });
-    var pD = wD(58),
-      sD = wD(25),
-      KD = wD(1442),
-      rD = wD(8748),
-      LD = wD(8765);
-    let cD = null;
-    const gD = () => cD,
-      RD = DD => {
-        (0, rD.j)(cD, DD) || (cD = DD, sD.l.KG(LD.e, cD))
+    var Op = cp(62),
+      op = cp(34),
+      Ip = cp(1476),
+      Sp = cp(8872),
+      xp = cp(8883);
+    let Lp = null;
+    const Yp = () => Lp,
+      Dp = pp => {
+        (0, Sp.j)(Lp, pp) || (Lp = pp, op.m.GA(xp.e, Lp))
       },
-      AD = () => {
-        const [DD, zD] = (0, pD.useState)(gD);
-        return (0, KD.g)(LD.e, zD), DD
+      Ap = () => {
+        const [pp, ip] = (0, Op.useState)(Yp);
+        return (0, Ip.f)(xp.e, ip), pp
       };
-    let UD = !1;
-    const fD = DD => {
-        DD !== UD && (UD = DD, sD.l.KG(LD.h, DD))
+    let Pp = !1;
+    const Wp = pp => {
+        pp !== Pp && (Pp = pp, op.m.GA(xp.f, pp))
       },
-      ID = () => {
-        const [DD, zD] = (0, pD.useState)(UD);
-        return (0, KD.g)(LD.h, zD), DD
+      yp = () => {
+        const [pp, ip] = (0, Op.useState)(Pp);
+        return (0, Ip.f)(xp.f, ip), pp
       }
   },
-  8776: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => rD,
-      i: () => LD
+  8887: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Sp,
+      f: () => xp
     });
-    var pD = wD(25),
-      sD = wD(8765);
-    let KD = !1;
-    const rD = () => KD,
-      LD = DD => {
-        DD !== KD && (KD = DD, pD.l.KG(sD.i, KD))
+    var Op = cp(34),
+      op = cp(8883);
+    let Ip = !1;
+    const Sp = () => Ip,
+      xp = pp => {
+        pp !== Ip && (Ip = pp, Op.m.GA(op.i, Ip))
       }
   },
-  8768: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => LD,
-      h: () => cD
+  8885: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => xp,
+      h: () => Lp
     });
-    var pD = wD(25),
-      sD = wD(8765);
-    let KD = null,
-      rD = 0;
-    const LD = () => KD,
-      cD = DD => {
-        null === DD && null === KD || (KD = null === DD ? null : {
-          id: ++rD,
-          holdMs: DD
-        }, pD.l.KG(sD.j, KD))
+    var Op = cp(34),
+      op = cp(8883);
+    let Ip = null,
+      Sp = 0;
+    const xp = () => Ip,
+      Lp = pp => {
+        null === pp && null === Ip || (Ip = null === pp ? null : {
+          id: ++Sp,
+          holdMs: pp
+        }, Op.m.GA(op.k, Ip))
       }
   },
-  8765: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => KD,
-      e: () => pD,
-      h: () => sD,
-      i: () => LD,
-      j: () => cD,
-      m: () => gD,
-      q: () => rD
+  8883: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Ip,
+      e: () => Op,
+      f: () => op,
+      i: () => xp,
+      k: () => Lp,
+      m: () => Yp,
+      p: () => Sp
     });
-    const pD = "controllerActionHintChanged",
-      sD = "controllerActionWheelHintChanged",
-      KD = "controllerOpenChat",
-      rD = "controllerSneakToggledChanged",
-      LD = "controllerAttackLatchedChanged",
-      cD = "controllerDropStackHoldChanged",
-      gD = "controllerPickBlockHintChanged"
+    const Op = "controllerActionHintChanged",
+      op = "controllerActionWheelHintChanged",
+      Ip = "controllerOpenChat",
+      Sp = "controllerSneakToggledChanged",
+      xp = "controllerAttackLatchedChanged",
+      Lp = "controllerDropStackHoldChanged",
+      Yp = "controllerPickBlockHintChanged"
   },
-  8779: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => rD,
-      e: () => LD
+  8890: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Sp,
+      f: () => xp
     });
-    var pD = wD(25),
-      sD = wD(8765);
-    let KD = !1;
-    const rD = () => KD,
-      LD = DD => {
-        DD !== KD && (KD = DD, pD.l.KG(sD.m, KD))
+    var Op = cp(34),
+      op = cp(8883);
+    let Ip = !1;
+    const Sp = () => Ip,
+      xp = pp => {
+        pp !== Ip && (Ip = pp, Op.m.GA(op.m, Ip))
       }
   },
-  8833: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => rD,
-      e: () => LD
+  8952: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Sp,
+      e: () => xp
     });
-    var pD = wD(25),
-      sD = wD(8765);
-    let KD = !1;
-    const rD = () => KD,
-      LD = DD => {
-        DD !== KD && (KD = DD, pD.l.KG(sD.q, KD))
+    var Op = cp(34),
+      op = cp(8883);
+    let Ip = !1;
+    const Sp = () => Ip,
+      xp = pp => {
+        pp !== Ip && (Ip = pp, Op.m.GA(op.p, Ip))
       }
   },
-  8717: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => pD
+  8839: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Op
     });
-    class pD {
+    class Op {
       constructor() {
         this.downAtMs = null
       }
-      update(DD, zD, wD, pD) {
-        if (DD) return this.downAtMs = wD, null;
+      update(pp, ip, cp, Op) {
+        if (pp) return this.downAtMs = cp, null;
         if (null === this.downAtMs) return null;
-        const sD = wD - this.downAtMs >= pD;
-        return zD ? sD ? (this.downAtMs = null, "hold") : null : (this.downAtMs = null, sD ? "hold" : "tap")
+        const op = cp - this.downAtMs >= Op;
+        return ip ? op ? (this.downAtMs = null, "hold") : null : (this.downAtMs = null, op ? "hold" : "tap")
       }
       release() {
         this.downAtMs = null
       }
     }
   },
-  8243: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => AD,
-      f: () => UD,
-      j: () => LD,
-      n: () => MD,
-      p: () => nD
+  8348: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Ap,
+      g: () => Pp,
+      h: () => xp,
+      k: () => Hp,
+      o: () => tp
     });
-    var pD = wD(35),
-      sD = wD(8213),
-      KD = wD(8184);
-    const rD = (() => {
+    var Op = cp(44),
+      op = cp(8327),
+      Ip = cp(8298);
+    const Sp = (() => {
         try {
-          return wD(8248)
+          return cp(8356)
         } catch {
           return null
         }
       })(),
-      LD = [...KD.U, "LeftStick", "RightStick"],
-      cD = new Map,
-      gD = {
+      xp = [...Ip.Q, "LeftStick", "RightStick"],
+      Lp = new Map,
+      Yp = {
         xbox: "xbox",
         playstation: "playstation",
         nintendo: "nintendo",
         steamdeck: "steamdeck",
         generic: "xbox"
       },
-      RD = (new Set(Object.values(gD)), {
+      Dp = (new Set(Object.values(Yp)), {
         xbox: {
           LB: 1.5,
           RB: 1.5
@@ -7832,115 +8167,115 @@ export const modules = {
           View: 2
         }
       }),
-      AD = (DD, zD) => {
-        var wD, pD;
-        return null !== (wD = null === (pD = RD[gD[DD]]) || void 0 === pD ? void 0 : pD[zD]) && void 0 !== wD ? wD : 1
+      Ap = (pp, ip) => {
+        var cp, Op;
+        return null !== (cp = null === (Op = Dp[Yp[pp]]) || void 0 === Op ? void 0 : Op[ip]) && void 0 !== cp ? cp : 1
       },
-      UD = (DD, zD) => {
-        const wD = `./${gD[DD]}/${zD}.svg`;
-        let pD = cD.get(wD);
-        return void 0 === pD && (pD = rD ? rD(wD) : "", cD.set(wD, pD)), pD
+      Pp = (pp, ip) => {
+        const cp = `./${Yp[pp]}/${ip}.svg`;
+        let Op = Lp.get(cp);
+        return void 0 === Op && (Op = Sp ? Sp(cp) : "", Lp.set(cp, Op)), Op
       },
-      fD = new Set,
-      ID = [],
-      BD = DD => {
-        if (!fD.has(DD)) {
-          fD.add(DD);
-          for (const zD of LD) {
-            const wD = UD(DD, zD);
-            if (wD) {
-              const DD = new Image;
-              DD.crossOrigin = "anonymous", DD.src = wD, ID.push(DD)
+      Wp = new Set,
+      yp = [],
+      Up = pp => {
+        if (!Wp.has(pp)) {
+          Wp.add(pp);
+          for (const ip of xp) {
+            const cp = Pp(pp, ip);
+            if (cp) {
+              const pp = new Image;
+              pp.crossOrigin = "anonymous", pp.src = cp, yp.push(pp)
             }
           }
         }
       },
-      GD = "controllerGlyphFamily";
-    let hD = null;
-    const nD = DD => {
-        DD !== hD && (hD = DD, pD.h.setItem(GD, DD), BD(DD))
+      wp = "controllerGlyphFamily";
+    let vp = null;
+    const tp = pp => {
+        pp !== vp && (vp = pp, Op.h.setItem(wp, pp), Up(pp))
       },
-      MD = () => {
-        const DD = pD.h.getItem(GD);
-        (0, sD.g)(DD) && DD !== hD && (hD = DD, BD(DD))
+      Hp = () => {
+        const pp = Op.h.getItem(wp);
+        (0, op.f)(pp) && pp !== vp && (vp = pp, Up(pp))
       }
   },
-  8855: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => ND,
-      g: () => ZD
+  8979: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => fp,
+      i: () => bp
     });
-    var pD = wD(58),
-      sD = wD(25),
-      KD = wD(1442),
-      rD = wD(8196),
-      LD = wD(8178),
-      cD = wD(8226),
-      gD = wD(8208);
-    const RD = {
+    var Op = cp(62),
+      op = cp(34),
+      Ip = cp(1476),
+      Sp = cp(8310),
+      xp = cp(8290),
+      Lp = cp(8336),
+      Yp = cp(8320);
+    const Dp = {
         x: 0,
         y: 0,
         z: 0
       },
-      AD = Math.PI / 180,
-      UD = DD => Math.hypot(DD.x, DD.y, DD.z),
-      fD = (DD, zD) => ({
-        x: DD.x * zD,
-        y: DD.y * zD,
-        z: DD.z * zD
+      Ap = Math.PI / 180,
+      Pp = pp => Math.hypot(pp.x, pp.y, pp.z),
+      Wp = (pp, ip) => ({
+        x: pp.x * ip,
+        y: pp.y * ip,
+        z: pp.z * ip
       }),
-      ID = (DD, zD) => ({
-        x: DD.x + zD.x,
-        y: DD.y + zD.y,
-        z: DD.z + zD.z
+      yp = (pp, ip) => ({
+        x: pp.x + ip.x,
+        y: pp.y + ip.y,
+        z: pp.z + ip.z
       }),
-      BD = (DD, zD) => ({
-        x: DD.x - zD.x,
-        y: DD.y - zD.y,
-        z: DD.z - zD.z
+      Up = (pp, ip) => ({
+        x: pp.x - ip.x,
+        y: pp.y - ip.y,
+        z: pp.z - ip.z
       }),
-      GD = DD => {
-        const zD = UD(DD);
-        return 0 === zD ? RD : fD(DD, 1 / zD)
+      wp = pp => {
+        const ip = Pp(pp);
+        return 0 === ip ? Dp : Wp(pp, 1 / ip)
       },
-      hD = DD => ({
+      vp = pp => ({
         min: {
-          ...DD
+          ...pp
         },
         max: {
-          ...DD
+          ...pp
         }
       }),
-      nD = (DD, zD) => ({
+      tp = (pp, ip) => ({
         min: {
-          x: Math.min(DD.min.x, zD.x),
-          y: Math.min(DD.min.y, zD.y),
-          z: Math.min(DD.min.z, zD.z)
+          x: Math.min(pp.min.x, ip.x),
+          y: Math.min(pp.min.y, ip.y),
+          z: Math.min(pp.min.z, ip.z)
         },
         max: {
-          x: Math.max(DD.max.x, zD.x),
-          y: Math.max(DD.max.y, zD.y),
-          z: Math.max(DD.max.z, zD.z)
+          x: Math.max(pp.max.x, ip.x),
+          y: Math.max(pp.max.y, ip.y),
+          z: Math.max(pp.max.z, ip.z)
         }
       }),
-      MD = (DD, zD) => DD.max.x - DD.min.x <= zD && DD.max.y - DD.min.y <= zD && DD.max.z - DD.min.z <= zD;
-    class OD {
+      Hp = (pp, ip) => pp.max.x - pp.min.x <= ip && pp.max.y - pp.min.y <= ip && pp.max.z - pp.min.z <= ip;
+    class dp {
       constructor() {
-        this.bias = RD, this.calibrated = !1, this.gyroRange = null, this.accelRange = null, this.sum = RD, this.windowSec = 0
+        this.bias = Dp, this.calibrated = !1, this.gyroRange = null, this.accelRange = null, this.sum = Dp, this.windowSec = 0
       }
-      update(DD) {
-        const zD = this.gyroRange ? nD(this.gyroRange, DD.gyro) : hD(DD.gyro),
-          wD = DD.accel ? this.accelRange ? nD(this.accelRange, DD.accel) : hD(DD.accel) : null;
-        if (!MD(zD, 1) || wD && !MD(wD, .01)) return void this.restartWindow(DD);
-        if (this.gyroRange = zD, this.accelRange = wD, this.sum = ID(this.sum, fD(DD.gyro, DD.dtSec)), this.windowSec += DD.dtSec, this.windowSec < 1) return;
-        const pD = fD(this.sum, 1 / this.windowSec);
-        if (UD(pD) > 5) return;
-        const sD = BD(pD, this.bias);
-        let KD = 0;
-        !this.calibrated || this.windowSec >= 3 ? KD = 1 : UD(sD) <= 1 && (KD = Math.min(1, DD.dtSec / 1)), this.bias = ID(this.bias, fD(sD, KD)), this.calibrated = this.calibrated || KD > 0
+      update(pp) {
+        const ip = this.gyroRange ? tp(this.gyroRange, pp.gyro) : vp(pp.gyro),
+          cp = pp.accel ? this.accelRange ? tp(this.accelRange, pp.accel) : vp(pp.accel) : null;
+        if (!Hp(ip, 1) || cp && !Hp(cp, .01)) return void this.restartWindow(pp);
+        if (this.gyroRange = ip, this.accelRange = cp, this.sum = yp(this.sum, Wp(pp.gyro, pp.dtSec)), this.windowSec += pp.dtSec, this.windowSec < 1) return;
+        const Op = Wp(this.sum, 1 / this.windowSec);
+        if (Pp(Op) > 5) return;
+        const op = Up(Op, this.bias);
+        let Ip = 0;
+        !this.calibrated || this.windowSec >= 3 ? Ip = 1 : Pp(op) <= 1 && (Ip = Math.min(1, pp.dtSec / 1)), this.bias = yp(this.bias, Wp(op, Ip)), this.calibrated = this.calibrated || Ip > 0
       }
-      correct(DD) {
-        return BD(DD, this.bias)
+      correct(pp) {
+        return Up(pp, this.bias)
       }
       getBias() {
         return this.bias
@@ -7949,98 +8284,98 @@ export const modules = {
         return this.calibrated
       }
       reset() {
-        this.bias = RD, this.calibrated = !1, this.gyroRange = null, this.accelRange = null, this.sum = RD, this.windowSec = 0
+        this.bias = Dp, this.calibrated = !1, this.gyroRange = null, this.accelRange = null, this.sum = Dp, this.windowSec = 0
       }
-      restartWindow(DD) {
-        this.gyroRange = hD(DD.gyro), this.accelRange = DD.accel ? hD(DD.accel) : null, this.sum = RD, this.windowSec = 0
+      restartWindow(pp) {
+        this.gyroRange = vp(pp.gyro), this.accelRange = pp.accel ? vp(pp.accel) : null, this.sum = Dp, this.windowSec = 0
       }
     }
-    class JD {
+    class ep {
       constructor() {
         this.down = null
       }
-      update(DD, zD, wD) {
-        const pD = GD(fD(zD, -1));
-        if (!this.down) return this.down = pD, pD;
-        const sD = fD(DD, AD * wD),
-          KD = this.down,
-          rD = {
-            x: KD.x - (sD.y * KD.z - sD.z * KD.y),
-            y: KD.y - (sD.z * KD.x - sD.x * KD.z),
-            z: KD.z - (sD.x * KD.y - sD.y * KD.x)
+      update(pp, ip, cp) {
+        const Op = wp(Wp(ip, -1));
+        if (!this.down) return this.down = Op, Op;
+        const op = Wp(pp, Ap * cp),
+          Ip = this.down,
+          Sp = {
+            x: Ip.x - (op.y * Ip.z - op.z * Ip.y),
+            y: Ip.y - (op.z * Ip.x - op.x * Ip.z),
+            z: Ip.z - (op.x * Ip.y - op.y * Ip.x)
           },
-          LD = 0 === UD(pD) ? 0 : Math.min(1, wD / .25);
-        var cD, gD;
-        return this.down = GD((gD = LD, ID(cD = rD, fD(BD(pD, cD), gD)))), this.down
+          xp = 0 === Pp(Op) ? 0 : Math.min(1, cp / .25);
+        var Lp, Yp;
+        return this.down = wp((Yp = xp, yp(Lp = Sp, Wp(Up(Op, Lp), Yp)))), this.down
       }
       reset() {
         this.down = null
       }
     }
-    class ED {
+    class jp {
       constructor() {
         this.entries = [], this.windowSec = 0
       }
-      apply(DD, zD, wD) {
-        const pD = Math.hypot(DD, zD),
-          sD = Math.max(0, Math.min(1, (pD - 2) / 2)),
-          KD = {
-            yaw: DD * (1 - sD),
-            pitch: zD * (1 - sD),
-            dtSec: wD
+      apply(pp, ip, cp) {
+        const Op = Math.hypot(pp, ip),
+          op = Math.max(0, Math.min(1, (Op - 2) / 2)),
+          Ip = {
+            yaw: pp * (1 - op),
+            pitch: ip * (1 - op),
+            dtSec: cp
           };
-        for (this.entries.push(KD), this.windowSec += wD; this.entries.length > 1 && this.windowSec - this.entries[0].dtSec >= .125;) this.windowSec -= this.entries[0].dtSec, this.entries.shift();
-        let rD = 0,
-          LD = 0;
-        for (const gD of this.entries) rD += gD.yaw * gD.dtSec, LD += gD.pitch * gD.dtSec;
-        const cD = this.windowSec > 0 ? {
-          yaw: rD / this.windowSec,
-          pitch: LD / this.windowSec
+        for (this.entries.push(Ip), this.windowSec += cp; this.entries.length > 1 && this.windowSec - this.entries[0].dtSec >= .125;) this.windowSec -= this.entries[0].dtSec, this.entries.shift();
+        let Sp = 0,
+          xp = 0;
+        for (const Yp of this.entries) Sp += Yp.yaw * Yp.dtSec, xp += Yp.pitch * Yp.dtSec;
+        const Lp = this.windowSec > 0 ? {
+          yaw: Sp / this.windowSec,
+          pitch: xp / this.windowSec
         } : {
-          yaw: KD.yaw,
-          pitch: KD.pitch
+          yaw: Ip.yaw,
+          pitch: Ip.pitch
         };
         return {
-          yaw: DD * sD + cD.yaw,
-          pitch: zD * sD + cD.pitch
+          yaw: pp * op + Lp.yaw,
+          pitch: ip * op + Lp.pitch
         }
       }
       reset() {
         this.entries = [], this.windowSec = 0
       }
     }
-    class QD {
+    class kp {
       constructor() {
-        this.calibrator = new OD, this.gravity = new JD, this.smoother = new ED
+        this.calibrator = new dp, this.gravity = new ep, this.smoother = new jp
       }
-      process(DD, zD, wD) {
-        const pD = Math.max(0, Math.min(.05, zD));
+      process(pp, ip, cp) {
+        const Op = Math.max(0, Math.min(.05, ip));
         this.calibrator.update({
-          ...DD,
-          dtSec: pD
+          ...pp,
+          dtSec: Op
         });
-        const sD = this.calibrator.correct(DD.gyro);
-        let KD = sD.y;
-        "player" === wD && DD.accel && (KD = ((DD, zD) => {
-          const wD = DD.y * zD.y + DD.z * zD.z;
-          return -Math.sign(wD) * Math.min(1.41 * Math.abs(wD), Math.hypot(DD.y, DD.z))
-        })(sD, this.gravity.update(sD, DD.accel, pD)));
-        const rD = this.smoother.apply(KD, sD.x, pD),
-          LD = ((DD, zD) => {
-            const wD = Math.hypot(DD, zD);
-            if (wD >= 1) return {
-              yaw: DD,
-              pitch: zD
+        const op = this.calibrator.correct(pp.gyro);
+        let Ip = op.y;
+        "player" === cp && pp.accel && (Ip = ((pp, ip) => {
+          const cp = pp.y * ip.y + pp.z * ip.z;
+          return -Math.sign(cp) * Math.min(1.41 * Math.abs(cp), Math.hypot(pp.y, pp.z))
+        })(op, this.gravity.update(op, pp.accel, Op)));
+        const Sp = this.smoother.apply(Ip, op.x, Op),
+          xp = ((pp, ip) => {
+            const cp = Math.hypot(pp, ip);
+            if (cp >= 1) return {
+              yaw: pp,
+              pitch: ip
             };
-            const pD = wD / 1;
+            const Op = cp / 1;
             return {
-              yaw: DD * pD,
-              pitch: zD * pD
+              yaw: pp * Op,
+              pitch: ip * Op
             }
-          })(rD.yaw, rD.pitch);
+          })(Sp.yaw, Sp.pitch);
         return {
-          yawDeg: LD.yaw * pD,
-          pitchDeg: LD.pitch * pD
+          yawDeg: xp.yaw * Op,
+          pitchDeg: xp.pitch * Op
         }
       }
       getCalibration() {
@@ -8053,165 +8388,165 @@ export const modules = {
         this.calibrator.reset(), this.gravity.reset(), this.smoother.reset()
       }
     }
-    const XD = (DD, zD) => {
-      var wD, pD, sD;
-      const KD = zD * AD,
-        rD = null !== (wD = DD.beta) && void 0 !== wD ? wD : 0,
-        LD = null !== (pD = DD.gamma) && void 0 !== pD ? pD : 0;
+    const mp = (pp, ip) => {
+      var cp, Op, op;
+      const Ip = ip * Ap,
+        Sp = null !== (cp = pp.beta) && void 0 !== cp ? cp : 0,
+        xp = null !== (Op = pp.gamma) && void 0 !== Op ? Op : 0;
       return {
-        x: rD * Math.cos(KD) - LD * Math.sin(KD),
-        y: rD * Math.sin(KD) + LD * Math.cos(KD),
-        z: null !== (sD = DD.alpha) && void 0 !== sD ? sD : 0
+        x: Sp * Math.cos(Ip) - xp * Math.sin(Ip),
+        y: Sp * Math.sin(Ip) + xp * Math.cos(Ip),
+        z: null !== (op = pp.alpha) && void 0 !== op ? op : 0
       }
     };
-    var VD = wD(8859);
-    class PD {
-      constructor(DD, zD, wD) {
-        this.hid = DD, this.sink = zD, this.onControllersChanged = wD, this.controllers = new Map, this.running = !1, this.openedCount = 0, this.opening = new Set, this.disconnectedWhileOpening = new Set, this.switchPacketCounter = 0, this.onConnect = DD => {
-          this.openController(DD.device).catch((DD => {
-            console.warn("Could not open motion controller", DD)
+    var Rp = cp(8988);
+    class qp {
+      constructor(pp, ip, cp) {
+        this.hid = pp, this.sink = ip, this.onControllersChanged = cp, this.controllers = new Map, this.running = !1, this.openedCount = 0, this.opening = new Set, this.disconnectedWhileOpening = new Set, this.switchPacketCounter = 0, this.onConnect = pp => {
+          this.openController(pp.device).catch((pp => {
+            console.warn("Could not open motion controller", pp)
           }))
-        }, this.onDisconnect = DD => {
-          this.opening.has(DD.device) && this.disconnectedWhileOpening.add(DD.device);
-          const zD = this.controllers.get(DD.device);
-          zD && (this.forget(zD), this.onControllersChanged())
+        }, this.onDisconnect = pp => {
+          this.opening.has(pp.device) && this.disconnectedWhileOpening.add(pp.device);
+          const ip = this.controllers.get(pp.device);
+          ip && (this.forget(ip), this.onControllersChanged())
         }
       }
       async start() {
         if (this.running) return;
         this.running = !0, this.hid.addEventListener("connect", this.onConnect), this.hid.addEventListener("disconnect", this.onDisconnect);
-        const DD = await this.hid.getDevices();
-        for (const zD of DD) await this.openController(zD).catch((DD => {
-          console.warn("Could not open motion controller", DD)
+        const pp = await this.hid.getDevices();
+        for (const ip of pp) await this.openController(ip).catch((pp => {
+          console.warn("Could not open motion controller", pp)
         }))
       }
       stop() {
         this.running = !1, this.hid.removeEventListener("connect", this.onConnect), this.hid.removeEventListener("disconnect", this.onDisconnect);
-        for (const DD of [...this.controllers.values()]) this.forget(DD);
+        for (const pp of [...this.controllers.values()]) this.forget(pp);
         this.onControllersChanged()
       }
       async request() {
-        const DD = await this.hid.requestDevice({
-          filters: VD.i
+        const pp = await this.hid.requestDevice({
+          filters: Rp.i
         });
-        let zD = 0;
-        for (const wD of DD) await this.openController(wD).catch((DD => {
-          console.warn("Could not open motion controller", DD), zD++
+        let ip = 0;
+        for (const cp of pp) await this.openController(cp).catch((pp => {
+          console.warn("Could not open motion controller", pp), ip++
         }));
-        return zD
+        return ip
       }
       async hasGrantedController() {
-        return (await this.hid.getDevices()).some((DD => null !== (0, VD.e)(DD.vendorId, DD.productId)))
+        return (await this.hid.getDevices()).some((pp => null !== (0, Rp.e)(pp.vendorId, pp.productId)))
       }
       getConnectedKinds() {
-        return [...this.controllers.values()].map((DD => DD.kind))
+        return [...this.controllers.values()].map((pp => pp.kind))
       }
-      forget(DD) {
-        DD.device.removeEventListener("inputreport", DD.onReport), this.controllers.get(DD.device) === DD && this.controllers.delete(DD.device)
+      forget(pp) {
+        pp.device.removeEventListener("inputreport", pp.onReport), this.controllers.get(pp.device) === pp && this.controllers.delete(pp.device)
       }
-      async openController(DD) {
-        const zD = (0, VD.e)(DD.vendorId, DD.productId);
-        if (!zD || !this.running || this.controllers.has(DD) || this.opening.has(DD)) return;
-        this.opening.add(DD);
-        let wD = !1;
+      async openController(pp) {
+        const ip = (0, Rp.e)(pp.vendorId, pp.productId);
+        if (!ip || !this.running || this.controllers.has(pp) || this.opening.has(pp)) return;
+        this.opening.add(pp);
+        let cp = !1;
         try {
-          DD.opened || await DD.open()
+          pp.opened || await pp.open()
         } finally {
-          this.opening.delete(DD), wD = this.disconnectedWhileOpening.delete(DD)
+          this.opening.delete(pp), cp = this.disconnectedWhileOpening.delete(pp)
         }
-        if (wD) return void DD.close().catch((DD => {
-          console.debug("Could not close an unplugged motion controller", DD)
+        if (cp) return void pp.close().catch((pp => {
+          console.debug("Could not close an unplugged motion controller", pp)
         }));
         if (!this.running) return;
-        const pD = {
-          device: DD,
-          kind: zD,
+        const Op = {
+          device: pp,
+          kind: ip,
           lastClock: null,
           lastEventMs: null,
           lastReadingMs: -1 / 0,
           openedOrder: this.openedCount++,
-          onReport: DD => {
-            this.onReport(pD, DD)
+          onReport: pp => {
+            this.onReport(Op, pp)
           }
         };
-        this.controllers.set(DD, pD), DD.addEventListener("inputreport", pD.onReport), this.onControllersChanged();
+        this.controllers.set(pp, Op), pp.addEventListener("inputreport", Op.onReport), this.onControllersChanged();
         try {
-          await this.enableMotion(pD)
-        } catch (sD) {
-          console.warn(`Could not turn on motion for ${zD}`, sD), this.controllers.get(DD) === pD && (this.forget(pD), this.onControllersChanged())
+          await this.enableMotion(Op)
+        } catch (op) {
+          console.warn(`Could not turn on motion for ${ip}`, op), this.controllers.get(pp) === Op && (this.forget(Op), this.onControllersChanged())
         }
       }
-      async enableMotion(DD) {
+      async enableMotion(pp) {
         let {
-          device: zD,
-          kind: wD
-        } = DD;
-        if ((0, VD.f)(wD))
-          for (const pD of VD.s[wD]) await zD.receiveFeatureReport(pD).catch((DD => {
-            console.debug(`Motion controller feature report ${pD} unavailable`, DD)
+          device: ip,
+          kind: cp
+        } = pp;
+        if ((0, Rp.g)(cp))
+          for (const Op of Rp.u[cp]) await ip.receiveFeatureReport(Op).catch((pp => {
+            console.debug(`Motion controller feature report ${Op} unavailable`, pp)
           }));
         else
-          for (let pD = 0; pD < 2; pD++)
+          for (let Op = 0; Op < 2; Op++)
             for (const {
-                subcommand: DD,
-                args: wD
+                subcommand: pp,
+                args: cp
               }
-              of VD.v) await zD.sendReport(VD.z, (0, VD.b)(this.switchPacketCounter++, DD, wD)), await new Promise((DD => {
-              setTimeout(DD, 60)
+              of Rp.w) await ip.sendReport(Rp.x, (0, Rp.d)(this.switchPacketCounter++, pp, cp)), await new Promise((pp => {
+              setTimeout(pp, 60)
             }))
       }
-      onReport(DD, zD) {
-        const wD = (0, VD.o)(DD.kind, zD.reportId, zD.data, DD.device.productId);
-        if (!wD) return;
-        const pD = null === DD.lastEventMs ? 0 : (zD.timeStamp - DD.lastEventMs) / 1e3;
-        DD.lastEventMs = zD.timeStamp;
-        let sD = wD.dtSec;
-        if (null !== sD && pD > 0 && (sD = Math.max(.001, Math.min(.017, pD / wD.readings.length))), null === sD && null !== wD.sensorClock && (0, VD.f)(DD.kind)) {
-          const zD = (0, VD.q)(DD.kind, DD.lastClock, wD.sensorClock);
-          DD.lastClock = wD.sensorClock, sD = 0 === zD ? null : zD
+      onReport(pp, ip) {
+        const cp = (0, Rp.p)(pp.kind, ip.reportId, ip.data, pp.device.productId);
+        if (!cp) return;
+        const Op = null === pp.lastEventMs ? 0 : (ip.timeStamp - pp.lastEventMs) / 1e3;
+        pp.lastEventMs = ip.timeStamp;
+        let op = cp.dtSec;
+        if (null !== op && Op > 0 && (op = Math.max(.001, Math.min(.017, Op / cp.readings.length))), null === op && null !== cp.sensorClock && (0, Rp.g)(pp.kind)) {
+          const ip = (0, Rp.s)(pp.kind, pp.lastClock, cp.sensorClock);
+          pp.lastClock = cp.sensorClock, op = 0 === ip ? null : ip
         }
-        if (DD.lastReadingMs = zD.timeStamp, this.isPreferred(DD, zD.timeStamp))
-          for (const rD of wD.readings) {
-            var KD;
-            this.sink(rD, null !== (KD = sD) && void 0 !== KD ? KD : pD, `hid${DD.openedOrder}`)
+        if (pp.lastReadingMs = ip.timeStamp, this.isPreferred(pp, ip.timeStamp))
+          for (const Sp of cp.readings) {
+            var Ip;
+            this.sink(Sp, null !== (Ip = op) && void 0 !== Ip ? Ip : Op, `hid${pp.openedOrder}`)
           }
       }
-      isPreferred(DD, zD) {
-        const wD = DD => 1e6 * VD.k[DD.kind] + DD.openedOrder;
-        for (const pD of this.controllers.values())
-          if (pD !== DD && zD - pD.lastReadingMs < 500 && wD(pD) < wD(DD)) return !1;
+      isPreferred(pp, ip) {
+        const cp = pp => 1e6 * Rp.o[pp.kind] + pp.openedOrder;
+        for (const Op of this.controllers.values())
+          if (Op !== pp && ip - Op.lastReadingMs < 500 && cp(Op) < cp(pp)) return !1;
         return !0
       }
     }
-    var CD = wD(103);
-    const xD = () => DeviceMotionEvent,
-      TD = () => "undefined" !== typeof window && "undefined" !== typeof DeviceMotionEvent && window.isSecureContext && (0, CD.isMobile)(),
-      bD = () => {
-        var DD;
-        const zD = null === (DD = window.screen.orientation) || void 0 === DD ? void 0 : DD.angle;
-        return "number" === typeof zD ? zD : "number" === typeof window.orientation ? window.orientation : 0
+    var Mp = cp(104);
+    const Cp = () => DeviceMotionEvent,
+      Ep = () => "undefined" !== typeof window && "undefined" !== typeof DeviceMotionEvent && window.isSecureContext && (0, Mp.isMobile)(),
+      Xp = () => {
+        var pp;
+        const ip = null === (pp = window.screen.orientation) || void 0 === pp ? void 0 : pp.angle;
+        return "number" === typeof ip ? ip : "number" === typeof window.orientation ? window.orientation : 0
       };
-    class jD {
-      constructor(DD, zD) {
-        this.sink = DD, this.onStateChanged = zD, this.state = "off", this.lastEventMs = null, this.noSensorTimer = null, this.wanted = !1, this.permissionRequest = null, this.granted = !1, this.onGesture = () => {
-          this.requestPermission().catch((DD => {
-            console.warn("Could not enable the motion sensor", DD)
+    class lp {
+      constructor(pp, ip) {
+        this.sink = pp, this.onStateChanged = ip, this.state = "off", this.lastEventMs = null, this.noSensorTimer = null, this.wanted = !1, this.permissionRequest = null, this.granted = !1, this.onGesture = () => {
+          this.requestPermission().catch((pp => {
+            console.warn("Could not enable the motion sensor", pp)
           }))
-        }, this.onMotion = DD => {
-          const zD = DD.rotationRate;
-          if (!zD || null === zD.alpha && null === zD.beta && null === zD.gamma) return;
-          const wD = null === this.lastEventMs ? 0 : (DD.timeStamp - this.lastEventMs) / 1e3;
-          this.lastEventMs = DD.timeStamp, this.clearNoSensorTimer(), this.setState("on"), this.sink({
-            gyro: XD(zD, bD()),
+        }, this.onMotion = pp => {
+          const ip = pp.rotationRate;
+          if (!ip || null === ip.alpha && null === ip.beta && null === ip.gamma) return;
+          const cp = null === this.lastEventMs ? 0 : (pp.timeStamp - this.lastEventMs) / 1e3;
+          this.lastEventMs = pp.timeStamp, this.clearNoSensorTimer(), this.setState("on"), this.sink({
+            gyro: mp(ip, Xp()),
             accel: null
-          }, wD, "phone")
+          }, cp, "phone")
         }
       }
       getState() {
         return this.state
       }
       start() {
-        if (this.wanted = !0, "off" === this.state) return "function" !== typeof xD().requestPermission || this.granted ? void this.listen() : (this.setState("needsPermission"), void this.armGestureRequest())
+        if (this.wanted = !0, "off" === this.state) return "function" !== typeof Cp().requestPermission || this.granted ? void this.listen() : (this.setState("needsPermission"), void this.armGestureRequest())
       }
       requestPermission() {
         return this.permissionRequest || (this.permissionRequest = this.askPermission().finally((() => {
@@ -8219,17 +8554,17 @@ export const modules = {
         }))), this.permissionRequest
       }
       async askPermission() {
-        const DD = xD().requestPermission;
+        const pp = Cp().requestPermission;
         if (!this.wanted) return;
-        if ("function" !== typeof DD) return void this.listen();
-        let zD;
+        if ("function" !== typeof pp) return void this.listen();
+        let ip;
         this.disarmGestureRequest();
         try {
-          zD = await DD.call(DeviceMotionEvent)
-        } catch (wD) {
-          throw this.wanted && "needsPermission" === this.state && this.armGestureRequest(), wD
+          ip = await pp.call(DeviceMotionEvent)
+        } catch (cp) {
+          throw this.wanted && "needsPermission" === this.state && this.armGestureRequest(), cp
         }
-        this.wanted && ("granted" === zD ? (this.granted = !0, this.listen()) : this.setState("denied"))
+        this.wanted && ("granted" === ip ? (this.granted = !0, this.listen()) : this.setState("denied"))
       }
       stop() {
         this.wanted = !1, this.disarmGestureRequest(), window.removeEventListener("devicemotion", this.onMotion), this.clearNoSensorTimer(), this.lastEventMs = null, this.setState("off")
@@ -8248,64 +8583,64 @@ export const modules = {
       clearNoSensorTimer() {
         null !== this.noSensorTimer && (clearTimeout(this.noSensorTimer), this.noSensorTimer = null)
       }
-      setState(DD) {
-        this.state !== DD && (this.state = DD, this.onStateChanged())
+      setState(pp) {
+        this.state !== pp && (this.state = pp, this.onStateChanged())
       }
     }
-    const dD = "controllerGyroStatusChanged",
-      SD = {
-        aT: 0,
-        qT: 0
+    const Qp = "controllerGyroStatusChanged",
+      Jp = {
+        QE: 0,
+        TE: 0
       },
-      iD = DD => {
-        var zD, wD;
-        return "undefined" === typeof document || (null === (zD = null === (wD = document.featurePolicy) || void 0 === wD ? void 0 : wD.allowsFeature(DD)) || void 0 === zD || zD)
+      Bp = pp => {
+        var ip, cp;
+        return "undefined" === typeof document || (null === (ip = null === (cp = document.featurePolicy) || void 0 === cp ? void 0 : cp.allowsFeature(pp)) || void 0 === ip || ip)
       };
-    class lD {
+    class Np {
       constructor() {
-        this.processor = new QD, this.hid = void 0, this.hidBlocked = void 0, this.phone = void 0, this.phoneBlocked = void 0, this.source = null, this.pendingYawDeg = 0, this.pendingPitchDeg = 0, this.lastDrainMs = -1 / 0, this.lastHidReadingMs = -1 / 0, this.running = !1, this.phoneRunning = !1, this.syncWithSettings = DD => {
-          const zD = DD.gyroAiming && LD.g.hasConnectedPad();
-          var wD, pD;
-          zD !== this.phoneRunning && (this.phoneRunning = zD, zD ? null === (wD = this.phone) || void 0 === wD || wD.start() : null === (pD = this.phone) || void 0 === pD || pD.stop());
-          if (DD.gyroAiming !== this.running) {
-            var sD, KD;
-            if (this.running = DD.gyroAiming, this.running) null === (sD = this.hid) || void 0 === sD || sD.start().catch((DD => {
-              console.warn("Could not open motion controllers", DD)
+        this.processor = new kp, this.hid = void 0, this.hidBlocked = void 0, this.phone = void 0, this.phoneBlocked = void 0, this.source = null, this.pendingYawDeg = 0, this.pendingPitchDeg = 0, this.lastDrainMs = -1 / 0, this.lastHidReadingMs = -1 / 0, this.running = !1, this.phoneRunning = !1, this.syncWithSettings = pp => {
+          const ip = pp.gyroAiming && xp.e.hasConnectedPad();
+          var cp, Op;
+          ip !== this.phoneRunning && (this.phoneRunning = ip, ip ? null === (cp = this.phone) || void 0 === cp || cp.start() : null === (Op = this.phone) || void 0 === Op || Op.stop());
+          if (pp.gyroAiming !== this.running) {
+            var op, Ip;
+            if (this.running = pp.gyroAiming, this.running) null === (op = this.hid) || void 0 === op || op.start().catch((pp => {
+              console.warn("Could not open motion controllers", pp)
             }));
-            else null === (KD = this.hid) || void 0 === KD || KD.stop(), this.processor.reset(), this.source = null, this.discardPending();
+            else null === (Ip = this.hid) || void 0 === Ip || Ip.stop(), this.processor.reset(), this.source = null, this.discardPending();
             this.publishStatus()
           }
         }, this.publishStatus = () => {
-          sD.l.KG(dD, this.getStatus())
+          op.m.GA(Qp, this.getStatus())
         };
-        const DD = (() => {
-            var DD;
-            return "undefined" !== typeof navigator && window.isSecureContext && null !== (DD = navigator.hid) && void 0 !== DD ? DD : null
+        const pp = (() => {
+            var pp;
+            return "undefined" !== typeof navigator && window.isSecureContext && null !== (pp = navigator.hid) && void 0 !== pp ? pp : null
           })(),
-          zD = iD("hid");
-        this.hidBlocked = null !== DD && !zD, this.hid = DD && zD ? new PD(DD, ((DD, zD, wD) => {
-          this.lastHidReadingMs = performance.now(), this.feed(DD, zD, "player", wD)
+          ip = Bp("hid");
+        this.hidBlocked = null !== pp && !ip, this.hid = pp && ip ? new qp(pp, ((pp, ip, cp) => {
+          this.lastHidReadingMs = performance.now(), this.feed(pp, ip, "player", cp)
         }), this.publishStatus) : null;
-        const wD = iD("accelerometer") && iD("gyroscope");
-        this.phoneBlocked = TD() && !wD, this.phone = TD() && wD ? new jD(((DD, zD, wD) => {
-          performance.now() - this.lastHidReadingMs >= 500 && this.feed(DD, zD, "local", wD)
-        }), this.publishStatus) : null, sD.l.subscribe(gD.d, this.syncWithSettings), LD.g.onConnectedPadsChanged((() => {
-          this.syncWithSettings((0, gD.g)()), this.publishStatus()
-        })), this.syncWithSettings((0, gD.g)())
+        const cp = Bp("accelerometer") && Bp("gyroscope");
+        this.phoneBlocked = Ep() && !cp, this.phone = Ep() && cp ? new lp(((pp, ip, cp) => {
+          performance.now() - this.lastHidReadingMs >= 500 && this.feed(pp, ip, "local", cp)
+        }), this.publishStatus) : null, op.m.subscribe(Yp.g, this.syncWithSettings), xp.e.onConnectedPadsChanged((() => {
+          this.syncWithSettings((0, Yp.h)()), this.publishStatus()
+        })), this.syncWithSettings((0, Yp.h)())
       }
       isSupported() {
         return null !== this.hid || null !== this.phone
       }
       getStatus() {
-        var DD, zD, wD, pD;
+        var pp, ip, cp, Op;
         return {
           hidSupported: null !== this.hid,
           hidBlocked: this.hidBlocked,
           phoneSupported: null !== this.phone,
           phoneBlocked: this.phoneBlocked,
-          controllers: null !== (DD = null === (zD = this.hid) || void 0 === zD ? void 0 : zD.getConnectedKinds()) && void 0 !== DD ? DD : [],
-          phoneMotion: null !== (wD = null === (pD = this.phone) || void 0 === pD ? void 0 : pD.getState()) && void 0 !== wD ? wD : "off",
-          padConnected: LD.g.hasConnectedPad()
+          controllers: null !== (pp = null === (ip = this.hid) || void 0 === ip ? void 0 : ip.getConnectedKinds()) && void 0 !== pp ? pp : [],
+          phoneMotion: null !== (cp = null === (Op = this.phone) || void 0 === Op ? void 0 : Op.getState()) && void 0 !== cp ? cp : "off",
+          padConnected: xp.e.hasConnectedPad()
         }
       }
       async connectController() {
@@ -8315,402 +8650,456 @@ export const modules = {
         this.hid && !await this.hid.hasGrantedController() && await this.hid.request()
       }
       async allowPhoneMotion() {
-        var DD;
-        await (null === (DD = this.phone) || void 0 === DD ? void 0 : DD.requestPermission())
+        var pp;
+        await (null === (pp = this.phone) || void 0 === pp ? void 0 : pp.requestPermission())
       }
       drainLookDelta() {
-        const DD = performance.now();
-        DD - this.lastDrainMs > 500 && this.discardPending(), this.lastDrainMs = DD;
-        const zD = {
+        const pp = performance.now();
+        pp - this.lastDrainMs > 500 && this.discardPending(), this.lastDrainMs = pp;
+        const ip = {
           yawDeg: this.pendingYawDeg,
           pitchDeg: this.pendingPitchDeg
         };
         this.pendingYawDeg = 0, this.pendingPitchDeg = 0;
-        const wD = (0, gD.g)();
-        return wD.gyroAiming && (DD => {
+        const cp = (0, Yp.h)();
+        return cp.gyroAiming && (pp => {
           let {
-            activation: zD,
-            isHeld: wD,
-            useButton: pD,
-            gyroButton: sD
-          } = DD;
-          return "always" === zD || wD("aiming" === zD ? pD : sD)
+            activation: ip,
+            isHeld: cp,
+            useButton: Op,
+            gyroButton: op
+          } = pp;
+          return "always" === ip || cp("aiming" === ip ? Op : op)
         })({
-          activation: wD.gyroActivation,
-          isHeld: DD => cD.e.isButtonHeld(DD),
-          useButton: (0, rD.g)("use"),
-          gyroButton: wD.gyroButton
-        }) ? ((DD, zD) => ({
-          aT: -DD.yawDeg * zD * AD,
-          qT: -DD.pitchDeg * zD * AD
-        }))(zD, wD.gyroSensitivity) : SD
+          activation: cp.gyroActivation,
+          isHeld: pp => Lp.d.isButtonHeld(pp),
+          useButton: (0, Sp.g)("use"),
+          gyroButton: cp.gyroButton
+        }) ? ((pp, ip) => ({
+          QE: -pp.yawDeg * ip * Ap,
+          TE: -pp.pitchDeg * ip * Ap
+        }))(ip, cp.gyroSensitivity) : Jp
       }
       discardPending() {
         this.pendingYawDeg = 0, this.pendingPitchDeg = 0
       }
-      injectMotion(DD, zD) {
-        this.feed(DD, zD, "local", "injected")
+      injectMotion(pp, ip) {
+        this.feed(pp, ip, "local", "injected")
       }
       getCalibration() {
         return this.processor.getCalibration()
       }
-      feed(DD, zD, wD, pD) {
-        this.source !== pD && (this.processor.reset(), this.source = pD);
-        const sD = this.processor.process(DD, zD, wD);
-        this.pendingYawDeg += sD.yawDeg, this.pendingPitchDeg += sD.pitchDeg
+      feed(pp, ip, cp, Op) {
+        this.source !== Op && (this.processor.reset(), this.source = Op);
+        const op = this.processor.process(pp, ip, cp);
+        this.pendingYawDeg += op.yawDeg, this.pendingPitchDeg += op.pitchDeg
       }
     }
-    let WD = null;
-    const ND = () => (WD || (WD = new lD), WD),
-      ZD = () => {
-        const [DD, zD] = (0, pD.useState)((() => ND().getStatus()));
-        return (0, KD.g)(dD, zD), (0, pD.useEffect)((() => {
-          zD(ND().getStatus())
-        }), []), DD
+    let Tp = null;
+    const fp = () => (Tp || (Tp = new Np), Tp),
+      bp = () => {
+        const [pp, ip] = (0, Op.useState)((() => fp().getStatus()));
+        return (0, Ip.f)(Qp, ip), (0, Op.useEffect)((() => {
+          ip(fp().getStatus())
+        }), []), pp
       }
   },
-  8859: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => JD,
-      e: () => cD,
-      f: () => pD,
-      i: () => LD,
-      j: () => gD,
-      k: () => RD,
-      o: () => nD,
-      q: () => GD,
-      s: () => QD,
-      v: () => ED,
-      z: () => MD
+  8988: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => ep,
+      e: () => Lp,
+      g: () => Op,
+      i: () => xp,
+      k: () => Yp,
+      o: () => Dp,
+      p: () => tp,
+      s: () => wp,
+      u: () => kp,
+      w: () => jp,
+      x: () => Hp
     });
-    const pD = DD => "dualShock4" === DD || "dualSense" === DD,
-      sD = 1356,
-      KD = 1406,
-      rD = [{
-        vendorId: sD,
+    const Op = pp => "dualShock4" === pp || "dualSense" === pp,
+      op = 1356,
+      Ip = 1406,
+      Sp = [{
+        vendorId: op,
         productId: 1476,
         kind: "dualShock4"
       }, {
-        vendorId: sD,
+        vendorId: op,
         productId: 2508,
         kind: "dualShock4"
       }, {
-        vendorId: sD,
+        vendorId: op,
         productId: 2976,
         kind: "dualShock4"
       }, {
-        vendorId: sD,
+        vendorId: op,
         productId: 3302,
         kind: "dualSense"
       }, {
-        vendorId: sD,
+        vendorId: op,
         productId: 3570,
         kind: "dualSense"
       }, {
-        vendorId: KD,
+        vendorId: Ip,
         productId: 8201,
         kind: "switchPro"
       }, {
-        vendorId: KD,
+        vendorId: Ip,
         productId: 8198,
         kind: "joyConLeft"
       }, {
-        vendorId: KD,
+        vendorId: Ip,
         productId: 8199,
         kind: "joyConRight"
       }],
-      LD = rD.map((DD => {
+      xp = Sp.map((pp => {
         let {
-          vendorId: zD,
-          productId: wD
-        } = DD;
+          vendorId: ip,
+          productId: cp
+        } = pp;
         return {
-          vendorId: zD,
-          productId: wD
+          vendorId: ip,
+          productId: cp
         }
       })),
-      cD = (DD, zD) => {
-        var wD, pD;
-        return null !== (wD = null === (pD = rD.find((wD => wD.vendorId === DD && wD.productId === zD))) || void 0 === pD ? void 0 : pD.kind) && void 0 !== wD ? wD : null
+      Lp = (pp, ip) => {
+        var cp, Op;
+        return null !== (cp = null === (Op = Sp.find((cp => cp.vendorId === pp && cp.productId === ip))) || void 0 === Op ? void 0 : Op.kind) && void 0 !== cp ? cp : null
       },
-      gD = {
+      Yp = {
         dualShock4: "DualShock 4",
         dualSense: "DualSense",
         switchPro: "Switch Pro Controller",
         joyConLeft: "Joy-Con (L)",
         joyConRight: "Joy-Con (R)"
       },
-      RD = {
+      Dp = {
         dualSense: 0,
         dualShock4: 0,
         switchPro: 0,
         joyConRight: 1,
         joyConLeft: 2
       },
-      AD = 2e3 / 32767,
-      UD = 1 / 8192,
-      fD = 936 / 13371,
-      ID = (DD, zD, wD) => ({
-        x: DD.getInt16(zD, !0) * wD,
-        y: DD.getInt16(zD + 2, !0) * wD,
-        z: DD.getInt16(zD + 4, !0) * wD
+      Ap = 2e3 / 32767,
+      Pp = 1 / 8192,
+      Wp = 936 / 13371,
+      yp = (pp, ip, cp) => ({
+        x: pp.getInt16(ip, !0) * cp,
+        y: pp.getInt16(ip + 2, !0) * cp,
+        z: pp.getInt16(ip + 4, !0) * cp
       }),
-      BD = DD => 0 === DD.x && 0 === DD.y && 0 === DD.z,
-      GD = (DD, zD, wD) => null === zD ? null : "dualShock4" === DD ? 16 * (wD - zD & 65535) / 3 / 1e6 : (wD - zD >>> 0) / 3 / 1e6,
-      hD = (DD, zD) => "joyConRight" === zD ? {
-        x: DD.y,
-        y: -DD.z,
-        z: -DD.x
+      Up = pp => 0 === pp.x && 0 === pp.y && 0 === pp.z,
+      wp = (pp, ip, cp) => null === ip ? null : "dualShock4" === pp ? 16 * (cp - ip & 65535) / 3 / 1e6 : (cp - ip >>> 0) / 3 / 1e6,
+      vp = (pp, ip) => "joyConRight" === ip ? {
+        x: pp.y,
+        y: -pp.z,
+        z: -pp.x
       } : {
-        x: -DD.y,
-        y: DD.z,
-        z: -DD.x
+        x: -pp.y,
+        y: pp.z,
+        z: -pp.x
       },
-      nD = (DD, zD, wD, sD) => pD(DD) ? ((DD, zD, wD, pD) => {
-        const sD = ((DD, zD, wD) => "dualShock4" === DD ? 1 === zD && wD >= 63 ? 0 : 17 === zD && wD >= 65 ? 2 : null : 1 === zD && wD >= 62 ? 0 : 49 === zD && wD >= 63 ? 1 : null)(DD, zD, wD.byteLength);
-        if (null === sD) return null;
-        if (2976 === pD && 1 === zD && 0 !== (4 & wD.getUint8(30))) return null;
-        const KD = sD + ("dualShock4" === DD ? 12 : 15),
-          rD = ID(wD, KD, AD),
-          LD = ID(wD, KD + 6, UD);
-        return BD(rD) && BD(LD) ? null : {
+      tp = (pp, ip, cp, op) => Op(pp) ? ((pp, ip, cp, Op) => {
+        const op = ((pp, ip, cp) => "dualShock4" === pp ? 1 === ip && cp >= 63 ? 0 : 17 === ip && cp >= 65 ? 2 : null : 1 === ip && cp >= 62 ? 0 : 49 === ip && cp >= 63 ? 1 : null)(pp, ip, cp.byteLength);
+        if (null === op) return null;
+        if (2976 === Op && 1 === ip && 0 !== (4 & cp.getUint8(30))) return null;
+        const Ip = op + ("dualShock4" === pp ? 12 : 15),
+          Sp = yp(cp, Ip, Ap),
+          xp = yp(cp, Ip + 6, Pp);
+        return Up(Sp) && Up(xp) ? null : {
           readings: [{
-            gyro: rD,
-            accel: LD
+            gyro: Sp,
+            accel: xp
           }],
           dtSec: null,
-          sensorClock: "dualShock4" === DD ? wD.getUint16(sD + 9, !0) : wD.getUint32(sD + 27, !0)
+          sensorClock: "dualShock4" === pp ? cp.getUint16(op + 9, !0) : cp.getUint32(op + 27, !0)
         }
-      })(DD, zD, wD, sD) : ((DD, zD, wD) => {
-        if (48 !== zD && 49 !== zD || wD.byteLength < 48) return null;
-        const pD = [];
-        for (let sD = 0; sD < 3; sD++) {
-          const zD = ID(wD, 12 + 12 * sD, 244e-6),
-            KD = ID(wD, 18 + 12 * sD, fD);
-          if (BD(KD) && BD(zD)) return null;
-          pD.push({
-            gyro: hD(KD, DD),
-            accel: hD(zD, DD)
+      })(pp, ip, cp, op) : ((pp, ip, cp) => {
+        if (48 !== ip && 49 !== ip || cp.byteLength < 48) return null;
+        const Op = [];
+        for (let op = 0; op < 3; op++) {
+          const ip = yp(cp, 12 + 12 * op, 244e-6),
+            Ip = yp(cp, 18 + 12 * op, Wp);
+          if (Up(Ip) && Up(ip)) return null;
+          Op.push({
+            gyro: vp(Ip, pp),
+            accel: vp(ip, pp)
           })
         }
         return {
-          readings: pD,
+          readings: Op,
           dtSec: .005,
           sensorClock: null
         }
-      })(DD, zD, wD),
-      MD = 1,
-      OD = [0, 1, 64, 64, 0, 1, 64, 64],
-      JD = (DD, zD, wD) => new Uint8Array([15 & DD, ...OD, zD, ...wD]),
-      ED = [{
+      })(pp, ip, cp),
+      Hp = 1,
+      dp = [0, 1, 64, 64, 0, 1, 64, 64],
+      ep = (pp, ip, cp) => new Uint8Array([15 & pp, ...dp, ip, ...cp]),
+      jp = [{
         subcommand: 64,
         args: [1]
       }, {
         subcommand: 3,
         args: [48]
       }],
-      QD = {
+      kp = {
         dualShock4: [2, 5],
         dualSense: [5]
       }
   },
-  8230: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => xD,
-      h: () => lD,
-      l: () => hD,
-      o: () => fD.f,
-      s: () => jD,
-      u: () => bD,
-      y: () => nD,
-      z: () => dD,
-      A: () => fD.n,
-      D: () => fD.o,
-      G: () => WD,
-      J: () => fD.s,
-      K: () => XD
+  8338: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Np,
+      h: () => Fp,
+      j: () => jp,
+      n: () => Wp.h,
+      r: () => bp,
+      u: () => fp,
+      y: () => kp,
+      A: () => hp,
+      E: () => Wp.n,
+      H: () => Wp.r,
+      I: () => gp,
+      J: () => Wp.u,
+      N: () => lp
     });
-    var pD = wD(58),
-      sD = wD(20),
-      KD = wD(25),
-      rD = wD(1442),
-      LD = wD(1299),
-      cD = wD(8208),
-      gD = wD(8237),
-      RD = wD(8189),
-      AD = wD(8178),
-      UD = wD(8243),
-      fD = wD(1383),
-      ID = wD(8184),
-      BD = wD(8655),
-      GD = wD(4407);
-    const hD = DD => !DD.repeat && !(0, BD.c)(DD.key),
-      nD = "PadHidesCursor";
-    let MD = !1;
-    const OD = DD => {
-        DD !== MD && (MD = DD, document.documentElement.classList.toggle(nD, DD))
+    var Op = cp(62),
+      op = cp(25),
+      Ip = cp(34),
+      Sp = cp(1476),
+      xp = cp(1308),
+      Lp = cp(8320),
+      Yp = cp(8346),
+      Dp = cp(8307),
+      Ap = cp(8290),
+      Pp = cp(8348),
+      Wp = cp(1419),
+      yp = cp(8298),
+      Up = cp(8785),
+      wp = cp(4469),
+      vp = cp(116);
+    class tp {
+      constructor(pp) {
+        this.deps = pp, this.pads = new Map
+      }
+      observe(pp, ip, cp) {
+        if (!this.deps.touchOnly) return;
+        const Op = this.pads.get(ip.id);
+        "proven" !== Op && cp ? (this.pads.set(ip.id, "proven"), void 0 !== Op && this.deps.onReleased(ip, pp, pp.timestampMs - Op)) : void 0 === Op && (this.pads.set(ip.id, pp.timestampMs), this.deps.onHeld(ip, pp)), this.deps.setMayHide("proven" === this.pads.get(ip.id))
+      }
+    }
+    const Hp = pp => pp.values.flatMap(((pp, ip) => pp >= yp.I ? [String(ip)] : [])).join(",") || "none",
+      dp = (pp, ip, Op, op, Ip) => {
+        const Sp = (0, Wp.e)(),
+          xp = document.visibilityState,
+          Lp = document.hasFocus();
+        Promise.all([Promise.resolve().then((() => cp(3003))), Promise.resolve().then((() => cp(1080))), Promise.resolve().then((() => cp(131)))]).then((cp => {
+          let [{
+            logControllerHudHoldToGtag: Yp
+          }, {
+            logClientLineFromEveryPage: Dp
+          }, {
+            siteUsed: Ap
+          }] = cp;
+          Yp(pp, ip.family, null === Ip ? void 0 : Math.round(Ip / 1e3)), Dp(`touch HUD pad ${pp}`, ep(ip, Op, op, Ip, Sp, xp, Lp, Ap))
+        }), (() => {}))
       },
-      JD = new class {
+      ep = (pp, ip, cp, Op, op, Ip, Sp, xp) => {
+        var Lp;
+        const Yp = {
+          pad_id: pp.id.slice(0, 120),
+          pad_family: pp.family,
+          pad_mapping: null !== (Lp = null === cp || void 0 === cp ? void 0 : cp.mapping) && void 0 !== Lp ? Lp : "unread",
+          pad_axes: cp ? String(cp.axes.length) : "unread",
+          pad_buttons: cp ? String(cp.buttons.length) : "unread",
+          pressed: Hp(ip),
+          ms_since_touch: null === op ? "none" : String(Math.round(ip.timestampMs - op)),
+          visibility: Ip,
+          focused: String(Sp),
+          site: xp
+        };
+        return null !== Op && (Yp.held_ms = String(Math.round(Op))), Yp
+      };
+    const jp = pp => !pp.repeat && !(0, Up.d)(pp.key),
+      kp = "PadHidesCursor";
+    let mp = !1;
+    const Rp = pp => {
+        pp !== mp && (mp = pp, document.documentElement.classList.toggle(kp, pp))
+      },
+      qp = new class {
         constructor() {
           this.buttonsDown = [], this.stickAnchors = [null, null], this.lastActivityMs = -1 / 0, this.onlyMovedOn = !1
         }
-        observe(DD) {
-          let zD = !1,
-            wD = !1;
-          DD.values.forEach(((DD, pD) => {
-            const sD = DD >= (this.buttonsDown[pD] ? ID.O : ID.M);
-            sD && !this.buttonsDown[pD] && (zD = !0, wD = !0), this.buttonsDown[pD] = sD
+        observe(pp) {
+          let ip = !1,
+            cp = !1;
+          pp.values.forEach(((pp, Op) => {
+            const op = pp >= (this.buttonsDown[Op] ? yp.K : yp.I);
+            op && !this.buttonsDown[Op] && (ip = !0, cp = !0), this.buttonsDown[Op] = op
           }));
-          return [DD.leftStick, DD.rightStick].forEach(((DD, pD) => {
-            const sD = this.stickAnchors[pD];
-            Math.hypot(DD.x, DD.y) < (sD ? ID.O : .3) ? this.stickAnchors[pD] = null : (!sD || Math.hypot(DD.x - sD.x, DD.y - sD.y) >= .3) && (this.stickAnchors[pD] = {
-              x: DD.x,
-              y: DD.y
-            }, zD = !0, wD ||= !sD)
-          })), zD && (this.lastActivityMs = DD.timestampMs), this.onlyMovedOn = zD && !wD, zD
+          return [pp.leftStick, pp.rightStick].forEach(((pp, Op) => {
+            const op = this.stickAnchors[Op];
+            Math.hypot(pp.x, pp.y) < (op ? yp.K : .3) ? this.stickAnchors[Op] = null : (!op || Math.hypot(pp.x - op.x, pp.y - op.y) >= .3) && (this.stickAnchors[Op] = {
+              x: pp.x,
+              y: pp.y
+            }, ip = !0, cp ||= !op)
+          })), ip && (this.lastActivityMs = pp.timestampMs), this.onlyMovedOn = ip && !cp, ip
         }
         wasOnlyMoveOn() {
           return this.onlyMovedOn
         }
-        isHolding(DD) {
-          return !(DD - this.lastActivityMs >= 1e3) && (this.buttonsDown.some((DD => DD)) || this.stickAnchors.some((DD => null !== DD)))
+        isHolding(pp) {
+          return !(pp - this.lastActivityMs >= 1e3) && (this.buttonsDown.some((pp => pp)) || this.stickAnchors.some((pp => null !== pp)))
         }
         isStickOffRest() {
-          return this.stickAnchors.some((DD => null !== DD))
+          return this.stickAnchors.some((pp => null !== pp))
         }
         reset() {
           this.buttonsDown = [], this.stickAnchors = [null, null], this.lastActivityMs = -1 / 0, this.onlyMovedOn = !1
         }
-      };
-    let ED = null,
-      QD = !1;
-    const XD = () => QD;
-    let VD = null,
-      PD = !1,
-      CD = null;
-    const xD = () => CD;
-    let TD = !1;
-    const bD = DD => {
-        if (!JD.observe(DD)) return !1;
-        if (TD && JD.wasOnlyMoveOn() && !(0, fD.f)()) return !1;
-        TD = !1, QD = !1;
-        const zD = !(0, fD.f)();
-        return zD && (ED = DD, CD = !MD && PD && VD ? {
-          ...VD
-        } : null), PD = !1, (0, fD.n)("gamepad"), OD(!0), (0, UD.p)((0, cD.j)()), zD
       },
-      jD = DD => !(0, fD.f)() || DD === ED,
-      dD = () => {
-        JD.reset()
+      Mp = (Cp = () => Ap.e.getActiveGamepad(), new tp({
+        touchOnly: "touchOnly" === (0, vp.c)(),
+        setMayHide: Wp.q,
+        onHeld: (pp, ip) => {
+          dp("sx", pp, ip, Cp(), null)
+        },
+        onReleased: (pp, ip, cp) => {
+          dp("released", pp, ip, Cp(), cp)
+        }
+      }));
+    var Cp;
+    let Ep = null,
+      Xp = !1;
+    const lp = () => Xp;
+    let Qp = null,
+      Jp = !1,
+      Bp = null;
+    const Np = () => Bp;
+    let Tp = !1;
+    const fp = (pp, ip) => {
+        if (!qp.observe(pp)) return !1;
+        if (Mp.observe(pp, ip, qp.isStickOffRest()), Tp && qp.wasOnlyMoveOn() && !(0, Wp.h)()) return !1;
+        Tp = !1, Xp = !1;
+        const cp = !(0, Wp.h)();
+        return cp && (Ep = pp, Bp = !mp && Jp && Qp ? {
+          ...Qp
+        } : null), Jp = !1, (0, Wp.n)("gamepad"), Rp(!0), (0, Pp.o)((0, Lp.k)()), cp
       },
-      SD = () => {
-        const DD = sD.e.get("activeInputDevice"),
-          zD = "gamepad" === DD ? AD.g.getActivePad() : null;
+      bp = pp => !(0, Wp.h)() || pp === Ep,
+      hp = () => {
+        qp.reset()
+      },
+      ap = () => {
+        const pp = op.c.get("activeInputDevice"),
+          ip = "gamepad" === pp ? Ap.e.getActivePad() : null;
         return {
-          device: DD,
-          inGame: (0, LD.s)(),
-          padMovesMouse: null !== zD && (0, RD.e)(zD.id)
+          device: pp,
+          inGame: (0, xp.t)(),
+          padMovesMouse: null !== ip && (0, Dp.g)(ip.id)
         }
       },
-      iD = DD => {
-        document.pointerLockElement ? VD = null : (VD ??= {
+      np = pp => {
+        document.pointerLockElement ? Qp = null : (Qp ??= {
           x: 0,
           y: 0
-        }, VD.x = DD.clientX, VD.y = DD.clientY)
+        }, Qp.x = pp.clientX, Qp.y = pp.clientY)
       },
-      lD = () => {
-        const DD = new GD.b,
-          zD = zD => {
-            DD.reset(), TD = !1, (0, fD.n)(zD)
+      Fp = () => {
+        const pp = new wp.d,
+          ip = ip => {
+            pp.reset(), Tp = !1, (0, Wp.n)(ip)
           },
-          wD = DD => {
-            if (DD.isTrusted) {
-              if (DD instanceof KeyboardEvent) {
-                if ((0, fD.k)(DD), !hD(DD)) return;
-                QD = !0
+          cp = pp => {
+            if (pp.isTrusted) {
+              if (pp instanceof KeyboardEvent) {
+                if ((0, Wp.l)(pp), !jp(pp)) return;
+                Xp = !0
               }
-              if (DD instanceof PointerEvent && "touch" === DD.pointerType) return VD = null, void zD("touch");
-              DD instanceof PointerEvent && (iD(DD), PD = !0), ("pointerdown" !== DD.type || (DD => {
+              if (pp instanceof PointerEvent && "touch" === pp.pointerType) return Qp = null, void ip("touch");
+              pp instanceof PointerEvent && (np(pp), Jp = !0), ("pointerdown" !== pp.type || (pp => {
                 let {
-                  device: zD,
-                  inGame: wD,
-                  padMovesMouse: pD
-                } = DD;
-                return !("gamepad" === zD && pD && wD)
-              })(SD())) && zD("keyboardMouse")
+                  device: ip,
+                  inGame: cp,
+                  padMovesMouse: Op
+                } = pp;
+                return !("gamepad" === ip && Op && cp)
+              })(ap())) && ip("keyboardMouse")
             }
           },
-          pD = DD => {
-            DD.isTrusted && (VD = null, zD("touch"))
+          Op = pp => {
+            pp.isTrusted && (Qp = null, ip("touch"))
           },
-          rD = DD => {
-            DD.isTrusted && "touch" !== DD.pointerType && !DD.relatedTarget && (VD = null)
+          Sp = pp => {
+            pp.isTrusted && "touch" !== pp.pointerType && !pp.relatedTarget && (Qp = null)
           },
-          LD = wD => {
-            if (!wD.isTrusted || "touch" === wD.pointerType) return;
-            iD(wD);
-            const pD = wD.movementX || 0,
-              KD = wD.movementY || 0;
-            if (0 === pD && 0 === KD) return;
-            if (PD = !0, OD(!1), "keyboardMouse" === sD.e.get("activeInputDevice")) return;
-            const rD = JD.isHolding(wD.timeStamp),
-              LD = SD(),
-              cD = (DD => {
+          xp = cp => {
+            if (!cp.isTrusted || "touch" === cp.pointerType) return;
+            np(cp);
+            const Op = cp.movementX || 0,
+              Ip = cp.movementY || 0;
+            if (0 === Op && 0 === Ip) return;
+            if (Jp = !0, Rp(!1), "keyboardMouse" === op.c.get("activeInputDevice")) return;
+            const Sp = qp.isHolding(cp.timeStamp),
+              xp = ap(),
+              Lp = (pp => {
                 let {
-                  device: zD,
-                  inGame: wD,
-                  padMovesMouse: pD,
-                  padHolding: sD
-                } = DD;
-                return ("gamepad" !== zD || !pD) && "keyboardMouse" !== zD && (wD || !sD)
+                  device: ip,
+                  inGame: cp,
+                  padMovesMouse: Op,
+                  padHolding: op
+                } = pp;
+                return ("gamepad" !== ip || !Op) && "keyboardMouse" !== ip && (cp || !op)
               })({
-                ...LD,
-                inGame: LD.inGame && (0, gD.f)(),
-                padHolding: rD
+                ...xp,
+                inGame: xp.inGame && (0, Yp.e)(),
+                padHolding: Sp
               });
-            cD && DD.add(pD, KD, wD.timeStamp) && (zD("keyboardMouse"), TD = JD.isStickOffRest())
+            Lp && pp.add(Op, Ip, cp.timeStamp) && (ip("keyboardMouse"), Tp = qp.isStickOffRest())
           },
-          cD = DD => {
-            OD("gamepad" === DD)
+          Lp = pp => {
+            Rp("gamepad" === pp)
           },
-          RD = {
+          Dp = {
             capture: !0,
             passive: !0
           };
-        window.addEventListener("keydown", wD, RD), window.addEventListener("pointerdown", wD, RD), window.addEventListener("wheel", wD, RD), window.addEventListener("touchstart", pD, RD), window.addEventListener("pointermove", LD, RD), window.addEventListener("pointerout", rD, RD);
-        const AD = KD.l.subscribe("appManagerUpdated|activeInputDevice", cD);
-        return cD(sD.e.get("activeInputDevice")), () => {
-          window.removeEventListener("keydown", wD, RD), window.removeEventListener("pointerdown", wD, RD), window.removeEventListener("wheel", wD, RD), window.removeEventListener("touchstart", pD, RD), window.removeEventListener("pointermove", LD, RD), window.removeEventListener("pointerout", rD, RD), VD = null, KD.l.unsubscribe(AD), OD(!1)
+        window.addEventListener("keydown", cp, Dp), window.addEventListener("pointerdown", cp, Dp), window.addEventListener("wheel", cp, Dp), window.addEventListener("touchstart", Op, Dp), window.addEventListener("pointermove", xp, Dp), window.addEventListener("pointerout", Sp, Dp);
+        const Ap = Ip.m.subscribe("appManagerUpdated|activeInputDevice", Lp);
+        return Lp(op.c.get("activeInputDevice")), () => {
+          window.removeEventListener("keydown", cp, Dp), window.removeEventListener("pointerdown", cp, Dp), window.removeEventListener("wheel", cp, Dp), window.removeEventListener("touchstart", Op, Dp), window.removeEventListener("pointermove", xp, Dp), window.removeEventListener("pointerout", Sp, Dp), Qp = null, Ip.m.unsubscribe(Ap), Rp(!1)
         }
       },
-      WD = () => {
-        const [DD, zD] = (0, pD.useState)(cD.j);
-        return (0, rD.g)(cD.c, (() => {
-          zD((0, cD.j)())
-        })), (0, rD.g)(AD.d, (() => {
-          zD((0, cD.j)())
-        })), DD
+      gp = () => {
+        const [pp, ip] = (0, Op.useState)(Lp.k);
+        return (0, Sp.f)(Lp.c, (() => {
+          ip((0, Lp.k)())
+        })), (0, Sp.f)(Ap.c, (() => {
+          ip((0, Lp.k)())
+        })), pp
       }
   },
-  8213: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => pD,
-      g: () => sD
+  8327: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Op,
+      f: () => op
     });
-    const pD = ["xbox", "playstation", "nintendo", "steamdeck", "generic"],
-      sD = DD => pD.includes(DD)
+    const Op = ["xbox", "playstation", "nintendo", "steamdeck", "generic"],
+      op = pp => Op.includes(pp)
   },
-  8705: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => rD,
-      f: () => KD,
-      h: () => cD,
-      i: () => LD
+  8826: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Sp,
+      g: () => Ip,
+      i: () => Lp,
+      l: () => xp
     });
-    var pD = wD(1442),
-      sD = wD(1394);
-    const KD = "controllerInventoryCursorChanged",
-      rD = {
+    var Op = cp(1476),
+      op = cp(1432);
+    const Ip = "controllerInventoryCursorChanged",
+      Sp = {
         showing: !1,
         kind: null,
         holding: !1,
@@ -8724,170 +9113,178 @@ export const modules = {
         dropStackHold: null,
         hotbarPicking: !1
       },
-      LD = () => {
-        var DD, zD;
-        return (0, pD.k)(KD, null !== (DD = null === (zD = (0, sD.g)()) || void 0 === zD ? void 0 : zD.getInventoryCursorState()) && void 0 !== DD ? DD : rD)
+      xp = () => {
+        var pp, ip;
+        return (0, Op.i)(Ip, null !== (pp = null === (ip = (0, op.f)()) || void 0 === ip ? void 0 : ip.getInventoryCursorState()) && void 0 !== pp ? pp : Sp)
       },
-      cD = () => {
-        var DD, zD;
-        return null !== (DD = null === (zD = (0, sD.g)()) || void 0 === zD ? void 0 : zD.isPadSteppingSlots()) && void 0 !== DD && DD
+      Lp = () => {
+        var pp, ip;
+        return null !== (pp = null === (ip = (0, op.f)()) || void 0 === ip ? void 0 : ip.isPadSteppingSlots()) && void 0 !== pp && pp
       }
   },
-  8700: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => UD,
-      c: () => LD,
-      e: () => cD,
-      h: () => rD,
-      j: () => KD,
-      n: () => RD,
-      o: () => AD
+  8821: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Pp,
+      c: () => xp,
+      e: () => Lp,
+      i: () => Sp,
+      m: () => Ip,
+      p: () => Dp,
+      r: () => Ap
     });
-    let pD = null;
-    const sD = new Set,
-      KD = DD => (pD = DD, () => {
-        if (pD === DD) {
-          pD = null;
-          for (const DD of sD) DD()
+    let Op = null;
+    const op = new Set,
+      Ip = pp => (Op = pp, () => {
+        if (Op === pp) {
+          Op = null;
+          for (const pp of op) pp()
         }
       }),
-      rD = DD => (sD.add(DD), () => {
-        sD.delete(DD)
+      Sp = pp => (op.add(pp), () => {
+        op.delete(pp)
       }),
-      LD = () => pD,
-      cD = () => null !== pD;
-    let gD = null;
-    const RD = DD => {
-        gD = DD
+      xp = () => Op,
+      Lp = () => null !== Op;
+    let Yp = null;
+    const Dp = pp => {
+        Yp = pp
       },
-      AD = () => {
-        const DD = gD;
-        return gD = null, DD
+      Ap = () => {
+        const pp = Yp;
+        return Yp = null, pp
       },
-      UD = (DD, zD) => {
-        var wD, pD;
-        return null !== (wD = null !== (pD = DD.find((DD => DD.element === zD))) && void 0 !== pD ? pD : DD.find((DD => DD.element.contains(zD)))) && void 0 !== wD ? wD : null
+      Pp = (pp, ip) => {
+        var cp, Op;
+        return null !== (cp = null !== (Op = pp.find((pp => pp.element === ip))) && void 0 !== Op ? Op : pp.find((pp => pp.element.contains(ip)))) && void 0 !== cp ? cp : null
       }
   },
-  8707: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => KD,
-      e: () => rD
+  8828: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Ip,
+      e: () => Sp
     });
-    var pD = wD(58);
-    const sD = new WeakMap,
-      KD = DD => {
-        var zD, wD;
-        return null !== (zD = null === (wD = sD.get(DD)) || void 0 === wD ? void 0 : wD.current) && void 0 !== zD ? zD : null
+    var Op = cp(62);
+    const op = new WeakMap,
+      Ip = pp => {
+        var ip, cp;
+        return null !== (ip = null === (cp = op.get(pp)) || void 0 === cp ? void 0 : cp.current) && void 0 !== ip ? ip : null
       },
-      rD = (DD, zD) => {
-        const wD = (0, pD.useRef)(zD);
-        wD.current = zD;
-        const KD = (0, pD.useRef)(null);
-        (0, pD.useEffect)((() => {
-          const zD = DD.current,
-            pD = KD.current;
-          zD !== pD && (pD && sD.get(pD) === wD && sD.delete(pD), KD.current = zD, zD && sD.set(zD, wD))
-        })), (0, pD.useEffect)((() => () => {
-          const DD = KD.current;
-          DD && sD.get(DD) === wD && sD.delete(DD), KD.current = null
+      Sp = (pp, ip) => {
+        const cp = (0, Op.useRef)(ip);
+        cp.current = ip;
+        const Ip = (0, Op.useRef)(null);
+        (0, Op.useEffect)((() => {
+          const ip = pp.current,
+            Op = Ip.current;
+          ip !== Op && (Op && op.get(Op) === cp && op.delete(Op), Ip.current = ip, ip && op.set(ip, cp))
+        })), (0, Op.useEffect)((() => () => {
+          const pp = Ip.current;
+          pp && op.get(pp) === cp && op.delete(pp), Ip.current = null
         }), [])
       }
   },
-  8830: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => LD,
-      f: () => gD,
-      h: () => AD,
-      l: () => RD,
-      n: () => cD,
-      q: () => fD
+  8944: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => xp,
+      h: () => Yp,
+      j: () => Ap,
+      l: () => Dp,
+      o: () => Lp,
+      q: () => Wp
     });
-    var pD = wD(25),
-      sD = wD(2e3),
-      KD = wD(1394),
-      rD = wD(1383);
-    const LD = DD => {
-        var zD, wD;
-        return (0, rD.f)() && null !== (zD = null === (wD = (0, KD.g)()) || void 0 === wD ? void 0 : wD.getGlyphForNoaAction(DD)) && void 0 !== zD ? zD : null
+    var Op = cp(34),
+      op = cp(2048),
+      Ip = cp(1432),
+      Sp = cp(1419);
+    const xp = pp => {
+        var ip, cp;
+        return (0, Sp.h)() && null !== (ip = null === (cp = (0, Ip.f)()) || void 0 === cp ? void 0 : cp.getGlyphForNoaAction(pp)) && void 0 !== ip ? ip : null
       },
-      cD = "controllerGlyph:",
-      gD = DD => {
-        var zD, wD;
-        return null !== (zD = null === (wD = (0, KD.g)()) || void 0 === wD ? void 0 : wD.getPadGlyphIconName(DD)) && void 0 !== zD ? zD : `${cD}xbox/${DD}`
+      Lp = "controllerGlyph:",
+      Yp = pp => {
+        var ip, cp;
+        return null !== (ip = null === (cp = (0, Ip.f)()) || void 0 === cp ? void 0 : cp.getPadGlyphIconName(pp)) && void 0 !== ip ? ip : `${Lp}xbox/${pp}`
       },
-      RD = DD => DD.startsWith(cD),
-      AD = DD => {
-        var zD, wD;
-        return RD(DD) && null !== (zD = null === (wD = (0, KD.g)()) || void 0 === wD ? void 0 : wD.getPadGlyphIconUrl(DD)) && void 0 !== zD ? zD : null
+      Dp = pp => pp.startsWith(Lp),
+      Ap = pp => {
+        var ip, cp;
+        return Dp(pp) && null !== (ip = null === (cp = (0, Ip.f)()) || void 0 === cp ? void 0 : cp.getPadGlyphIconUrl(pp)) && void 0 !== ip ? ip : null
       },
-      UD = ["customBindingsChanged", "appManagerUpdated|isTouchScreen", rD.c, sD.f, sD.c],
-      fD = DD => {
-        const zD = UD.map((zD => pD.l.subscribe(zD, DD)));
+      Pp = ["customBindingsChanged", "appManagerUpdated|isTouchScreen", Sp.d, op.e, op.b],
+      Wp = pp => {
+        const ip = Pp.map((ip => Op.m.subscribe(ip, pp)));
         return () => {
-          for (const DD of zD) pD.l.unsubscribe(DD)
+          for (const pp of ip) Op.m.unsubscribe(pp)
         }
       }
   },
-  8237: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => gD,
-      f: () => RD,
-      h: () => cD,
-      j: () => LD
+  8807: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => op,
+      e: () => Op
     });
-    var pD = wD(20),
-      sD = wD(1648),
-      KD = wD(1745);
-    const rD = new Map,
-      LD = (DD, zD) => (rD.has(DD) && console.warn(`Gameplay blocker "${DD}" registered twice; the newer one replaces it.`), rD.set(DD, zD), () => {
-        rD.get(DD) === zD && rD.delete(DD)
+    const Op = "controllerOpenKeyboard",
+      op = "controllerKeyboardVisible"
+  },
+  8346: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Yp,
+      e: () => Dp,
+      f: () => Lp,
+      i: () => xp
+    });
+    var Op = cp(25),
+      op = cp(1650),
+      Ip = cp(1770);
+    const Sp = new Map,
+      xp = (pp, ip) => (Sp.has(pp) && console.warn(`Gameplay blocker "${pp}" registered twice; the newer one replaces it.`), Sp.set(pp, ip), () => {
+        Sp.get(pp) === ip && Sp.delete(pp)
       }),
-      cD = () => (0, KD.c)(document.activeElement),
-      gD = function() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        for (const [zD, wD] of rD)
-          if (!DD.includes(zD) && wD()) return zD;
+      Lp = () => (0, Ip.b)(document.activeElement),
+      Yp = function() {
+        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        for (const [ip, cp] of Sp)
+          if (!pp.includes(ip) && cp()) return ip;
         return null
       },
-      RD = function() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return "inGame" === pD.e.get("gameState") && (!(0, sD.q)() && (!cD() && null === gD(DD)))
+      Dp = function() {
+        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+        return "inGame" === Op.c.get("gameState") && (!(0, op.l)() && (!Lp() && null === Yp(pp)))
       }
   },
-  8184: (DD, zD, wD) => {
-    wD.d(zD, {
-      B: () => OD,
-      D: () => hD,
-      F: () => GD,
-      I: () => gD,
-      M: () => UD,
-      O: () => fD,
-      R: () => sD,
-      U: () => pD,
-      W: () => ED,
-      X: () => CD,
-      Y: () => bD,
-      ab: () => JD,
-      e: () => jD,
-      f: () => xD,
-      g: () => RD,
-      i: () => cD,
-      m: () => LD,
-      o: () => XD,
-      p: () => nD,
-      q: () => QD,
-      r: () => KD,
-      s: () => AD,
-      w: () => MD,
-      z: () => TD
+  8298: (pp, ip, cp) => {
+    cp.d(ip, {
+      C: () => dp,
+      D: () => vp,
+      E: () => wp,
+      F: () => Yp,
+      I: () => Pp,
+      K: () => Wp,
+      N: () => op,
+      Q: () => Op,
+      R: () => jp,
+      S: () => Mp,
+      W: () => Xp,
+      _: () => ep,
+      b: () => lp,
+      c: () => Cp,
+      d: () => Dp,
+      h: () => Lp,
+      i: () => xp,
+      l: () => mp,
+      m: () => tp,
+      p: () => kp,
+      s: () => Ip,
+      u: () => Ap,
+      w: () => Hp,
+      y: () => Ep
     });
-    const pD = ["A", "B", "X", "Y", "LB", "RB", "LT", "RT", "View", "Menu", "LS", "RS", "Up", "Down", "Left", "Right", "Home"],
-      sD = pD.length,
-      KD = function() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
+    const Op = ["A", "B", "X", "Y", "LB", "RB", "LT", "RT", "View", "Menu", "LS", "RS", "Up", "Down", "Left", "Right", "Home"],
+      op = Op.length,
+      Ip = function() {
+        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0;
         return {
-          values: new Array(sD).fill(0),
+          values: new Array(op).fill(0),
           leftStick: {
             x: 0,
             y: 0
@@ -8896,209 +9293,209 @@ export const modules = {
             x: 0,
             y: 0
           },
-          timestampMs: DD
+          timestampMs: pp
         }
       },
-      rD = Object.fromEntries(pD.map(((DD, zD) => [DD, zD]))),
-      LD = DD => rD[DD],
-      cD = function(DD, zD) {
-        let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .95;
-        const pD = Math.hypot(DD.x, DD.y);
-        if (pD <= zD) return {
+      Sp = Object.fromEntries(Op.map(((pp, ip) => [pp, ip]))),
+      xp = pp => Sp[pp],
+      Lp = function(pp, ip) {
+        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : .95;
+        const Op = Math.hypot(pp.x, pp.y);
+        if (Op <= ip) return {
           x: 0,
           y: 0
         };
-        const sD = Math.min(1, (pD - zD) / Math.max(1e-4, wD - zD));
+        const op = Math.min(1, (Op - ip) / Math.max(1e-4, cp - ip));
         return {
-          x: DD.x / pD * sD,
-          y: DD.y / pD * sD
+          x: pp.x / Op * op,
+          y: pp.y / Op * op
         }
       },
-      gD = ["exponential", "linear", "boost"],
-      RD = (DD, zD) => {
-        const wD = Math.hypot(DD.x, DD.y);
-        if (0 === wD) return {
+      Yp = ["exponential", "linear", "boost"],
+      Dp = (pp, ip) => {
+        const cp = Math.hypot(pp.x, pp.y);
+        if (0 === cp) return {
           x: 0,
           y: 0
         };
-        const pD = ((DD, zD) => {
-          const wD = Math.max(0, Math.min(1, DD));
-          return "linear" === zD ? wD : wD * wD
-        })(wD, zD);
+        const Op = ((pp, ip) => {
+          const cp = Math.max(0, Math.min(1, pp));
+          return "linear" === ip ? cp : cp * cp
+        })(cp, ip);
         return {
-          x: DD.x / wD * pD,
-          y: DD.y / wD * pD
+          x: pp.x / cp * Op,
+          y: pp.y / cp * Op
         }
       },
-      AD = .5,
-      UD = .3,
-      fD = .2,
-      ID = LD("LT"),
-      BD = LD("RT"),
-      GD = DD => DD === ID || DD === BD,
-      hD = (DD, zD) => {
-        const wD = LD(zD);
-        return GD(wD) ? DD[wD] > .35 : DD[wD] >= AD
+      Ap = .5,
+      Pp = .3,
+      Wp = .2,
+      yp = xp("LT"),
+      Up = xp("RT"),
+      wp = pp => pp === yp || pp === Up,
+      vp = (pp, ip) => {
+        const cp = xp(ip);
+        return wp(cp) ? pp[cp] > .35 : pp[cp] >= Ap
       },
-      nD = (DD, zD) => DD.map(((DD, wD) => GD(wD) ? zD[wD] ? DD > .35 : DD >= .55 : DD >= AD)),
-      MD = ["Up", "Down", "Left", "Right"],
-      OD = DD => MD.includes(DD),
-      JD = function(DD) {
-        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : .5;
-        return Math.hypot(DD.x, DD.y) < zD ? null : Math.abs(DD.x) > Math.abs(DD.y) ? DD.x > 0 ? "Right" : "Left" : DD.y > 0 ? "Down" : "Up"
+      tp = (pp, ip) => pp.map(((pp, cp) => wp(cp) ? ip[cp] ? pp > .35 : pp >= .55 : pp >= Ap)),
+      Hp = ["Up", "Down", "Left", "Right"],
+      dp = pp => Hp.includes(pp),
+      ep = function(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : .5;
+        return Math.hypot(pp.x, pp.y) < ip ? null : Math.abs(pp.x) > Math.abs(pp.y) ? pp.x > 0 ? "Right" : "Left" : pp.y > 0 ? "Down" : "Up"
       },
-      ED = {
+      jp = {
         initialDelayMs: 350,
         intervalMs: 120
       },
-      QD = {
+      kp = {
         initialDelayMs: 350,
         intervalMs: 150
       },
-      XD = ["default", "slow", "off"],
-      VD = 800,
-      PD = 250,
-      CD = (DD, zD) => "off" === zD ? null : "slow" === zD ? {
-        initialDelayMs: Math.max(DD.initialDelayMs, VD),
-        intervalMs: Math.max(DD.intervalMs, PD)
-      } : DD;
-    class xD {
-      constructor(DD) {
-        this.readTiming = DD, this.Qg = !1, this.timing = null, this.nextFireMs = 0
+      mp = ["default", "slow", "off"],
+      Rp = 800,
+      qp = 250,
+      Mp = (pp, ip) => "off" === ip ? null : "slow" === ip ? {
+        initialDelayMs: Math.max(pp.initialDelayMs, Rp),
+        intervalMs: Math.max(pp.intervalMs, qp)
+      } : pp;
+    class Cp {
+      constructor(pp) {
+        this.readTiming = pp, this.sx = !1, this.timing = null, this.nextFireMs = 0
       }
-      update(DD, zD) {
-        return DD ? this.Qg ? !!(this.timing && zD >= this.nextFireMs) && (this.nextFireMs = zD + this.timing.intervalMs, !0) : (this.Qg = !0, this.timing = this.readTiming(), this.nextFireMs = zD + (null !== (wD = null === (pD = this.timing) || void 0 === pD ? void 0 : pD.initialDelayMs) && void 0 !== wD ? wD : 0), !0) : (this.Qg = !1, !1);
-        var wD, pD
+      update(pp, ip) {
+        return pp ? this.sx ? !!(this.timing && ip >= this.nextFireMs) && (this.nextFireMs = ip + this.timing.intervalMs, !0) : (this.sx = !0, this.timing = this.readTiming(), this.nextFireMs = ip + (null !== (cp = null === (Op = this.timing) || void 0 === Op ? void 0 : Op.initialDelayMs) && void 0 !== cp ? cp : 0), !0) : (this.sx = !1, !1);
+        var cp, Op
       }
       reset() {
-        this.Qg = !1
+        this.sx = !1
       }
     }
-    const TD = {
+    const Ep = {
         initialDelayMs: 350,
         intervalMs: 80
       },
-      bD = {
+      Xp = {
         initialDelayMs: 400,
         intervalMs: 90
       };
-    class jD {
-      constructor(DD) {
-        this.timer = DD, this.direction = null
+    class lp {
+      constructor(pp) {
+        this.timer = pp, this.direction = null
       }
-      update(DD, zD) {
-        return DD !== this.direction && (this.timer.reset(), this.direction = DD), this.timer.update(null !== DD, zD) ? DD : null
+      update(pp, ip) {
+        return pp !== this.direction && (this.timer.reset(), this.direction = pp), this.timer.update(null !== pp, ip) ? pp : null
       }
       reset() {
         this.timer.reset(), this.direction = null
       }
     }
   },
-  8713: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => sD,
-      f: () => KD
+  8835: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => op,
+      e: () => Ip
     });
-    let pD = -1 / 0;
-    const sD = () => {
-        pD = performance.now()
+    let Op = -1 / 0;
+    const op = () => {
+        Op = performance.now()
       },
-      KD = DD => performance.now() - pD < DD
+      Ip = pp => performance.now() - Op < pp
   },
-  8658: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => rD,
-      d: () => KD
+  8793: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Sp,
+      g: () => Ip
     });
-    var pD = wD(8208),
-      sD = wD(8184);
-    const KD = DD => (0, sD.X)(DD, (0, pD.g)().buttonRepeat),
-      rD = DD => new sD.f((() => KD(DD)))
+    var Op = cp(8320),
+      op = cp(8298);
+    const Ip = pp => (0, op.S)(pp, (0, Op.h)().buttonRepeat),
+      Sp = pp => new op.c((() => Ip(pp)))
   },
-  8223: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => cD,
-      e: () => KD,
-      h: () => LD
+  8334: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Lp,
+      e: () => Ip,
+      i: () => xp
     });
-    var pD = wD(25),
-      sD = wD(8208);
-    const KD = (DD, zD) => "OpenShop" === DD ? "shop" === zD : "OpenLobbyLeaderboard" !== DD || "leaderboard" === zD;
-    let rD = !1;
-    const LD = DD => {
-        DD !== rD && (rD = DD, pD.l.KG(sD.c, (0, sD.g)()))
+    var Op = cp(34),
+      op = cp(8320);
+    const Ip = (pp, ip) => "OpenShop" === pp ? "shop" === ip : "OpenLobbyLeaderboard" !== pp || "leaderboard" === ip;
+    let Sp = !1;
+    const xp = pp => {
+        pp !== Sp && (Sp = pp, Op.m.GA(op.c, (0, op.h)()))
       },
-      cD = () => ((DD, zD) => "shop" === DD && zD ? "shop" : "leaderboard")((0, sD.g)().leaderboardButton, rD)
+      Lp = () => ((pp, ip) => "shop" === pp && ip ? "shop" : "leaderboard")((0, op.h)().leaderboardButton, Sp)
   },
-  8218: (DD, zD, wD) => {
-    wD.d(zD, {
-      A: () => RD,
-      D: () => cD,
-      E: () => LD,
-      I: () => JD,
-      L: () => UD,
-      P: () => fD,
-      S: () => AD,
-      V: () => OD,
-      Y: () => gD,
-      ab: () => hD,
-      cb: () => PD,
-      db: () => MD,
-      e: () => SD,
-      eb: () => BD,
-      g: () => lD,
-      hb: () => GD,
-      ib: () => ID,
-      j: () => CD,
-      lb: () => nD,
-      m: () => rD,
-      nb: () => bD,
-      ob: () => KD,
-      p: () => VD,
-      pb: () => ED,
-      q: () => QD,
-      rb: () => iD,
-      t: () => jD,
-      ub: () => XD,
-      x: () => dD
+  8331: (pp, ip, cp) => {
+    cp.d(ip, {
+      $: () => tp,
+      A: () => xp,
+      E: () => ep,
+      I: () => Pp,
+      J: () => Wp,
+      M: () => Ap,
+      N: () => dp,
+      P: () => Yp,
+      R: () => vp,
+      V: () => qp,
+      W: () => Hp,
+      Y: () => Up,
+      Z: () => wp,
+      _: () => yp,
+      c: () => Jp,
+      db: () => Xp,
+      g: () => Np,
+      hb: () => Ip,
+      j: () => Mp,
+      k: () => Sp,
+      kb: () => jp,
+      m: () => Rp,
+      ob: () => Bp,
+      p: () => kp,
+      qb: () => mp,
+      r: () => lp,
+      v: () => Qp,
+      w: () => Dp,
+      z: () => Lp
     });
-    var pD = wD(8201),
-      sD = wD(8184);
-    const KD = {
+    var Op = cp(8318),
+      op = cp(8298);
+    const Ip = {
         min: 25,
         max: 500,
         step: 5
       },
-      rD = {
+      Sp = {
         min: 25,
         max: 100,
         step: 5
       },
-      LD = {
+      xp = {
         min: 0,
         max: .4,
         step: .01
       },
-      cD = {
+      Lp = {
         min: 25,
         max: 300,
         step: 5
       },
-      gD = {
+      Yp = {
         min: .5,
         max: 6,
         step: .1
       },
-      RD = (DD, zD) => {
-        if (!Number.isFinite(DD)) return zD.min;
-        const wD = zD.min + Math.round((DD - zD.min) / zD.step) * zD.step,
-          pD = Math.min(zD.max, Math.max(zD.min, wD));
-        return Math.round(1e3 * pD) / 1e3
+      Dp = (pp, ip) => {
+        if (!Number.isFinite(pp)) return ip.min;
+        const cp = ip.min + Math.round((pp - ip.min) / ip.step) * ip.step,
+          Op = Math.min(ip.max, Math.max(ip.min, cp));
+        return Math.round(1e3 * Op) / 1e3
       },
-      AD = DD => `${Math.round(DD)}%`,
-      UD = DD => AD(100 * DD),
-      fD = DD => `${DD.toFixed(1)}\xd7`,
-      ID = [{
+      Ap = pp => `${Math.round(pp)}%`,
+      Pp = pp => Ap(100 * pp),
+      Wp = pp => `${pp.toFixed(1)}\xd7`,
+      yp = [{
         value: "auto",
         labelKey: "controller:settingsPromptAuto"
       }, {
@@ -9117,7 +9514,7 @@ export const modules = {
         value: "generic",
         labelKey: "controller:settingsPromptGeneric"
       }],
-      BD = [{
+      Up = [{
         value: "exponential",
         labelKey: "controller:settingsCurveExponential"
       }, {
@@ -9127,7 +9524,7 @@ export const modules = {
         value: "boost",
         labelKey: "controller:settingsCurveBoost"
       }],
-      GD = [{
+      wp = [{
         value: "hybrid",
         labelKey: "controller:settingsNavHybrid"
       }, {
@@ -9137,7 +9534,7 @@ export const modules = {
         value: "cursor",
         labelKey: "controller:settingsVirtualCursor"
       }],
-      hD = [{
+      vp = [{
         value: "hybrid",
         labelKey: "controller:settingsNavHybrid"
       }, {
@@ -9147,21 +9544,21 @@ export const modules = {
         value: "cursor",
         labelKey: "controller:settingsVirtualCursor"
       }],
-      nD = [{
+      tp = [{
         value: "wheel",
         labelKey: "controller:settingsQuickChatWheel"
       }, {
         value: "off",
         labelKey: "controller:settingsQuickChatOff"
       }],
-      MD = [{
+      Hp = [{
         value: "shop",
         labelKey: "controller:settingsLeaderboardButtonShop"
       }, {
         value: "leaderboard",
         labelKey: "controller:settingsLeaderboardButtonLeaderboard"
       }],
-      OD = [{
+      dp = [{
         value: "always",
         labelKey: "controller:settingsGyroAlways"
       }, {
@@ -9171,21 +9568,21 @@ export const modules = {
         value: "button",
         labelKey: "controller:settingsGyroWhileButton"
       }],
-      JD = [{
+      ep = [{
         value: "tapHold",
         labelKey: "controller:settingsEmoteButtonTapHold"
       }, {
         value: "wheel",
         labelKey: "controller:settingsEmoteButtonWheel"
       }],
-      ED = [{
+      jp = [{
         value: "toggle",
         labelKey: "controller:settingsSneakToggle"
       }, {
         value: "hold",
         labelKey: "controller:settingsSneakHold"
       }],
-      QD = [{
+      kp = [{
         value: "default",
         labelKey: "controller:settingsButtonRepeatDefault"
       }, {
@@ -9195,7 +9592,7 @@ export const modules = {
         value: "off",
         labelKey: "controller:settingsButtonRepeatOff"
       }],
-      XD = [{
+      mp = [{
         value: "short",
         labelKey: "controller:settingsTapHoldShort"
       }, {
@@ -9205,18 +9602,18 @@ export const modules = {
         value: "long",
         labelKey: "controller:settingsTapHoldLong"
       }],
-      VD = [{
+      Rp = [{
         value: "hold",
         labelKey: "controller:settingsAttackHold"
       }, {
         value: "toggle",
         labelKey: "controller:settingsAttackToggle"
       }],
-      PD = {
+      qp = {
         southpaw: "controller:settingsLayoutSouthpaw",
         triggersSwapped: "controller:settingsLayoutTriggersSwapped"
       },
-      CD = {
+      Mp = {
         jump: "controller:settingsActionJump",
         sneak: "controller:settingsActionSneak",
         sneakToggle: "controller:settingsActionSneakToggle",
@@ -9261,13 +9658,13 @@ export const modules = {
         keyboardClose: "controller:settingsActionKeyboardClose",
         keyboardChannel: "controller:settingsActionKeyboardChannel"
       },
-      xD = {
+      Cp = {
         gameplay: "controller:settingsGroupGameplay",
         menu: "controller:settingsGroupMenus",
         inventory: "controller:settingsGroupInventory",
         keyboard: "controller:settingsGroupKeyboard"
       },
-      TD = [{
+      Ep = [{
         kind: "fixed",
         stick: "move",
         labelKey: "controller:settingsActionMove"
@@ -9276,591 +9673,577 @@ export const modules = {
         stick: "look",
         labelKey: "controller:settingsActionLook"
       }],
-      bD = pD.b.map((DD => {
+      Xp = Op.e.map((pp => {
         let {
-          group: zD,
-          actions: wD
-        } = DD;
-        const pD = wD.map((DD => ({
+          group: ip,
+          actions: cp
+        } = pp;
+        const Op = cp.map((pp => ({
           kind: "action",
-          action: DD
+          action: pp
         })));
         return {
-          titleKey: xD[zD],
-          rows: "gameplay" === zD ? [...TD, ...pD] : pD
+          titleKey: Cp[ip],
+          rows: "gameplay" === ip ? [...Ep, ...Op] : Op
         }
       })),
-      jD = sD.U.filter((DD => "Home" !== DD)),
-      dD = 1e4;
-    class SD {
-      constructor(DD) {
-        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-          wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
-        this.cancelButton = DD, this.openButton = zD, this.accepts = wD, this.startMs = null, this.ignoredUntilMs = new Map, this.cancelDownAtMs = null
+      lp = op.Q.filter((pp => "Home" !== pp)),
+      Qp = 1e4;
+    class Jp {
+      constructor(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+          cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : () => !0;
+        this.cancelButton = pp, this.openButton = ip, this.accepts = cp, this.startMs = null, this.ignoredUntilMs = new Map, this.cancelDownAtMs = null
       }
-      update(DD, zD) {
-        var wD;
-        this.updateIgnored(DD, zD);
-        const pD = zD - (null !== (wD = this.startMs) && void 0 !== wD ? wD : zD) >= 250;
-        for (const sD of jD)
-          if (sD !== this.cancelButton && pD && !this.ignoredUntilMs.has(sD) && DD.wasPressed(sD) && this.accepts(sD)) return {
+      update(pp, ip) {
+        var cp;
+        this.updateIgnored(pp, ip);
+        const Op = ip - (null !== (cp = this.startMs) && void 0 !== cp ? cp : ip) >= 250;
+        for (const op of lp)
+          if (op !== this.cancelButton && Op && !this.ignoredUntilMs.has(op) && pp.wasPressed(op) && this.accepts(op)) return {
             kind: "bind",
-            button: sD
+            button: op
           };
         if (this.ignoredUntilMs.has(this.cancelButton)) return null;
-        if (DD.wasPressed(this.cancelButton)) {
+        if (pp.wasPressed(this.cancelButton)) {
           if (!this.accepts(this.cancelButton)) return {
             kind: "cancel"
           };
-          this.cancelDownAtMs = zD
+          this.cancelDownAtMs = ip
         }
-        return null === this.cancelDownAtMs ? null : DD.isHeld(this.cancelButton) && zD - this.cancelDownAtMs >= 700 ? (this.cancelDownAtMs = null, {
+        return null === this.cancelDownAtMs ? null : pp.isHeld(this.cancelButton) && ip - this.cancelDownAtMs >= 700 ? (this.cancelDownAtMs = null, {
           kind: "bind",
           button: this.cancelButton
-        }) : DD.wasReleased(this.cancelButton) ? (this.cancelDownAtMs = null, {
+        }) : pp.wasReleased(this.cancelButton) ? (this.cancelDownAtMs = null, {
           kind: "cancel"
         }) : null
       }
-      getBindHoldProgress(DD) {
-        return null === this.cancelDownAtMs ? 0 : Math.min(1, (DD - this.cancelDownAtMs) / 700)
+      getBindHoldProgress(pp) {
+        return null === this.cancelDownAtMs ? 0 : Math.min(1, (pp - this.cancelDownAtMs) / 700)
       }
-      updateIgnored(DD, zD) {
+      updateIgnored(pp, ip) {
         if (null === this.startMs) {
-          this.startMs = zD;
-          for (const zD of jD) DD.isDown(zD) && this.ignoredUntilMs.set(zD, 1 / 0);
-          this.openButton && !this.ignoredUntilMs.has(this.openButton) && this.ignoredUntilMs.set(this.openButton, zD + 250)
+          this.startMs = ip;
+          for (const ip of lp) pp.isDown(ip) && this.ignoredUntilMs.set(ip, 1 / 0);
+          this.openButton && !this.ignoredUntilMs.has(this.openButton) && this.ignoredUntilMs.set(this.openButton, ip + 250)
         }
-        for (const [wD, pD] of this.ignoredUntilMs) {
-          const sD = DD.isDown(wD);
-          pD === 1 / 0 ? sD || wD !== this.openButton ? sD || this.ignoredUntilMs.delete(wD) : this.ignoredUntilMs.set(wD, zD + 250) : zD >= pD ? this.ignoredUntilMs.delete(wD) : sD && this.ignoredUntilMs.set(wD, 1 / 0)
+        for (const [cp, Op] of this.ignoredUntilMs) {
+          const op = pp.isDown(cp);
+          Op === 1 / 0 ? op || cp !== this.openButton ? op || this.ignoredUntilMs.delete(cp) : this.ignoredUntilMs.set(cp, ip + 250) : ip >= Op ? this.ignoredUntilMs.delete(cp) : op && this.ignoredUntilMs.set(cp, 1 / 0)
         }
       }
     }
-    const iD = 6e3;
-    class lD {
+    const Bp = 6e3;
+    class Np {
       constructor() {
         this.downAtMs = null, this.pressesAtMs = []
       }
-      update(DD, zD) {
+      update(pp, ip) {
         let {
-          pressed: wD,
-          Qg: pD
-        } = DD;
-        if (wD) {
-          const DD = this.pressesAtMs.at(-1);
-          if (this.pressesAtMs = void 0 !== DD && zD - DD < 1500 ? [...this.pressesAtMs, zD] : [zD], this.pressesAtMs.length >= 3) return 1
+          pressed: cp,
+          sx: Op
+        } = pp;
+        if (cp) {
+          const pp = this.pressesAtMs.at(-1);
+          if (this.pressesAtMs = void 0 !== pp && ip - pp < 1500 ? [...this.pressesAtMs, ip] : [ip], this.pressesAtMs.length >= 3) return 1
         }
-        return pD ? (this.downAtMs ??= zD, Math.min(1, (zD - this.downAtMs) / 1500)) : (this.downAtMs = null, 0)
+        return Op ? (this.downAtMs ??= ip, Math.min(1, (ip - this.downAtMs) / 1500)) : (this.downAtMs = null, 0)
       }
     }
   },
-  8726: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => KD,
-      g: () => sD
+  8852: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Ip,
+      e: () => op
     });
-    let pD = null;
-    const sD = function(DD) {
-        const zD = {
-          cycle: DD,
+    let Op = null;
+    const op = function(pp) {
+        const ip = {
+          cycle: pp,
           canCycle: arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : () => !0
         };
-        return pD = zD, () => {
-          pD === zD && (pD = null)
+        return Op = ip, () => {
+          Op === ip && (Op = null)
         }
       },
-      KD = () => {
-        var DD;
-        return null !== (DD = pD) && void 0 !== DD && DD.canCycle() ? pD.cycle : null
+      Ip = () => {
+        var pp;
+        return null !== (pp = Op) && void 0 !== pp && pp.canCycle() ? Op.cycle : null
       }
   },
-  5057: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => KD,
-      c: () => rD
+  5149: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Ip,
+      h: () => Sp
     });
-    var pD = wD(58);
-    const sD = new WeakMap,
-      KD = DD => {
-        var zD;
-        const wD = DD.closest("[data-pad-slider]");
-        return wD && null !== (zD = sD.get(wD)) && void 0 !== zD ? zD : null
+    var Op = cp(62);
+    const op = new WeakMap,
+      Ip = pp => {
+        var ip;
+        const cp = pp.closest("[data-pad-slider]");
+        return cp && null !== (ip = op.get(cp)) && void 0 !== ip ? ip : null
       },
-      rD = (DD, zD) => {
-        const wD = (0, pD.useRef)(zD);
-        wD.current = zD, (0, pD.useEffect)((() => {
-          if (DD.current) return ((DD, zD) => (sD.set(DD, zD), () => {
-            sD.get(DD) === zD && sD.delete(DD)
-          }))(DD.current, {
-            adjust: DD => {
-              wD.current.adjust(DD)
+      Sp = (pp, ip) => {
+        const cp = (0, Op.useRef)(ip);
+        cp.current = ip, (0, Op.useEffect)((() => {
+          if (pp.current) return ((pp, ip) => (op.set(pp, ip), () => {
+            op.get(pp) === ip && op.delete(pp)
+          }))(pp.current, {
+            adjust: pp => {
+              cp.current.adjust(pp)
             },
-            setFraction: DD => {
-              wD.current.setFraction(DD)
+            setFraction: pp => {
+              cp.current.setFraction(pp)
             },
             endDrag: () => {
-              wD.current.endDrag()
+              cp.current.endDrag()
             }
           })
-        }), [DD])
+        }), [pp])
       }
   },
-  8824: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => sD,
-      f: () => rD,
-      i: () => KD,
-      k: () => pD,
-      o: () => LD,
-      p: () => gD,
-      q: () => RD
+  8928: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => op,
+      i: () => Sp,
+      l: () => Ip,
+      p: () => Op,
+      t: () => xp,
+      x: () => Yp,
+      z: () => Dp
     });
-    const pD = "controllerActionWheelOpen",
-      sD = "controllerActionWheelAim",
-      KD = "controllerActionWheelCommit",
-      rD = "controllerActionWheelClose",
-      LD = "controllerActionWheelPick";
-    let cD = !1;
-    const gD = () => cD,
-      RD = DD => {
-        cD = DD
+    const Op = "controllerActionWheelOpen",
+      op = "controllerActionWheelAim",
+      Ip = "controllerActionWheelCommit",
+      Sp = "controllerActionWheelClose",
+      xp = "controllerActionWheelPick";
+    let Lp = !1;
+    const Yp = () => Lp,
+      Dp = pp => {
+        Lp = pp
       }
   },
-  8816: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => KD,
-      f: () => sD
+  8919: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Ip,
+      f: () => op
     });
-    let pD = 0;
-    const sD = () => {
-        pD++
+    let Op = 0;
+    const op = () => {
+        Op++
       },
-      KD = () => pD
+      Ip = () => Op
   },
-  8723: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => cD,
-      g: () => sD,
-      h: () => rD,
-      i: () => KD,
-      k: () => pD,
-      l: () => gD
+  8843: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Lp,
+      h: () => op,
+      l: () => Sp,
+      m: () => Ip,
+      n: () => Op,
+      r: () => Yp
     });
-    const pD = "controllerQuickChatWheelOpen",
-      sD = "controllerQuickChatWheelAim",
-      KD = "controllerQuickChatWheelCommit",
-      rD = "controllerQuickChatWheelClose";
-    let LD = !1;
-    const cD = () => LD,
-      gD = DD => {
-        LD = DD
+    const Op = "controllerQuickChatWheelOpen",
+      op = "controllerQuickChatWheelAim",
+      Ip = "controllerQuickChatWheelCommit",
+      Sp = "controllerQuickChatWheelClose";
+    let xp = !1;
+    const Lp = () => xp,
+      Yp = pp => {
+        xp = pp
       }
   },
-  8740: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => KD,
-      g: () => sD
+  8861: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Ip,
+      f: () => op
     });
-    var pD = wD(25);
-    const sD = "localBlockBroken";
+    var Op = cp(34);
+    const op = "localBlockBroken";
 
-    function KD() {
+    function Ip() {
       return {
-        onPlayerChangeBlock(DD, zD, wD, KD, rD, LD) {
-          "Air" === LD && pD.l.KG(sD)
+        onPlayerChangeBlock(pp, ip, cp, Ip, Sp, xp) {
+          "Air" === xp && Op.m.GA(op)
         }
       }
     }
   },
-  8732: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => sD
+  9002: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => xp,
+      f: () => Lp
     });
-    var pD = wD(1265);
+    var Op = cp(25),
+      op = cp(1349),
+      Ip = cp(104);
+    const Sp = {
+      blockMined: {
+        pattern: [18],
+        priority: 1,
+        minGapMs: 120
+      },
+      hitLanded: {
+        pattern: [20],
+        priority: 2,
+        minGapMs: 80
+      },
+      damageTaken: {
+        pattern: [45],
+        priority: 3,
+        minGapMs: 250
+      },
+      fishBite: {
+        pattern: null,
+        priority: 3,
+        minGapMs: 0
+      },
+      death: {
+        pattern: [60, 70, 120],
+        priority: 4,
+        minGapMs: 0
+      },
+      lockReady: {
+        pattern: [8],
+        priority: 2,
+        minGapMs: 0
+      },
+      lockLocked: {
+        pattern: [15, 50, 15],
+        priority: 2,
+        minGapMs: 0
+      },
+      autorunLedgeStop: {
+        pattern: [40],
+        priority: 3,
+        minGapMs: 0
+      }
+    };
 
-    function sD(DD, zD) {
-      var wD, sD;
+    function xp() {
+      return (0, Ip.isMobile)() && "function" === typeof navigator.vibrate
+    }
+    const Lp = new class {
+      constructor(pp) {
+        this.deps = pp, this.lastAt = new Map, this.lastAnyAt = -1 / 0, this.playingUntil = -1 / 0, this.playingPriority = 0
+      }
+      play(pp, ip) {
+        var cp;
+        if (!this.deps.enabled()) return;
+        const Op = Sp[pp],
+          op = null !== ip && void 0 !== ip ? ip : Op.pattern;
+        if (null === op) return void console.warn("No vibration pattern for", pp);
+        const Ip = this.deps.now();
+        Ip - this.lastAnyAt < 40 && Op.priority < this.playingPriority || Ip - (null !== (cp = this.lastAt.get(pp)) && void 0 !== cp ? cp : -1 / 0) < Op.minGapMs || Ip < this.playingUntil && Op.priority < this.playingPriority || (this.lastAt.set(pp, Ip), this.lastAnyAt = Ip, this.playingUntil = Ip + op.reduce(((pp, ip) => pp + ip), 0), this.playingPriority = Op.priority, this.deps.vibrate(op))
+      }
+    }({
+      vibrate: pp => {
+        navigator.vibrate([...pp])
+      },
+      now: () => performance.now(),
+      enabled: () => xp() && Op.c.get("isTouchScreen") && Op.c.get("clientEscMenuOptions").vibration && !(0, op.e)()
+    })
+  },
+  8858: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => op
+    });
+    var Op = cp(1268);
+
+    function op(pp, ip) {
+      var cp, op;
       try {
-        const wD = (0, pD.d)();
-        if ("function" === typeof wD) {
-          const pD = new wD(DD, zD);
-          if (pD.type === DD) return pD
+        const cp = (0, Op.b)();
+        if ("function" === typeof cp) {
+          const Op = new cp(pp, ip);
+          if (Op.type === pp) return Op
         }
       } catch {}
-      const KD = document.createEvent("Event");
-      return KD.initEvent(DD, null !== (wD = null === zD || void 0 === zD ? void 0 : zD.bubbles) && void 0 !== wD && wD, null !== (sD = null === zD || void 0 === zD ? void 0 : zD.cancelable) && void 0 !== sD && sD), KD
+      const Ip = document.createEvent("Event");
+      return Ip.initEvent(pp, null !== (cp = null === ip || void 0 === ip ? void 0 : ip.bubbles) && void 0 !== cp && cp, null !== (op = null === ip || void 0 === ip ? void 0 : ip.cancelable) && void 0 !== op && op), Ip
     }
   },
-  8785: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => rD
+  8895: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Sp
     });
-    var pD = wD(8792),
-      sD = wD(619),
-      KD = wD(128);
+    var Op = cp(8897),
+      op = cp(640),
+      Ip = cp(131);
 
-    function rD(DD) {
-      var zD, wD;
-      if ((0, sD.B)(DD)) return !0;
-      const rD = null !== (zD = null === (wD = KD.n[KD.v]) || void 0 === wD ? void 0 : wD.adConfig.showRewardedAds) && void 0 !== zD && zD;
-      for (const sD in DD) {
-        const zD = DD[sD];
-        if (null !== zD && void 0 !== zD && zD.items)
-          for (const DD in zD.items)
-            if ((0, pD.o)(zD.items[DD], rD)) return !1
+    function Sp(pp) {
+      var ip, cp;
+      if ((0, op.G)(pp)) return !0;
+      const Sp = null !== (ip = null === (cp = Ip.siteUsedData[Ip.siteUsed]) || void 0 === cp ? void 0 : cp.adConfig.showRewardedAds) && void 0 !== ip && ip;
+      for (const op in pp) {
+        const ip = pp[op];
+        if (null !== ip && void 0 !== ip && ip.items)
+          for (const pp in ip.items)
+            if ((0, Op.h)(ip.items[pp], Sp)) return !1
       }
       return !0
     }
   },
-  8801: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => sD,
-      f: () => pD
-    });
-    const pD = 100;
-
-    function sD(DD) {
-      let {
-        translationKeys: zD = !1
-      } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      return DD.map((DD => {
-        var wD;
-        return null !== (wD = function(DD, zD) {
-          if ("string" === typeof DD) return DD;
-          const wD = "str" in DD ? DD.str : DD;
-          if ("string" === typeof wD) return wD;
-          if ("entityName" in wD) return wD.entityName;
-          if (zD && "translationKey" in wD) return `{${wD.translationKey}${void 0===wD.params?"":` ${JSON.stringify(wD.params)}`}}`;
-          return null
-        }(DD, zD)) && void 0 !== wD ? wD : " "
-      })).join("")
-    }
-  },
-  8826: () => {},
-  8248: (DD, zD, wD) => {
-    var pD = {
-      "./nintendo/A.svg": 8251,
-      "./nintendo/B.svg": 8256,
-      "./nintendo/Down.svg": 8260,
-      "./nintendo/Home.svg": 8263,
-      "./nintendo/LB.svg": 8267,
-      "./nintendo/LS.svg": 8273,
-      "./nintendo/LT.svg": 8277,
-      "./nintendo/Left.svg": 8280,
-      "./nintendo/LeftStick.svg": 8284,
-      "./nintendo/Menu.svg": 8290,
-      "./nintendo/RB.svg": 8294,
-      "./nintendo/RS.svg": 8298,
-      "./nintendo/RT.svg": 8307,
-      "./nintendo/Right.svg": 8315,
-      "./nintendo/RightStick.svg": 8321,
-      "./nintendo/Up.svg": 8327,
-      "./nintendo/View.svg": 8333,
-      "./nintendo/X.svg": 8337,
-      "./nintendo/Y.svg": 8346,
-      "./playstation/A.svg": 8348,
-      "./playstation/B.svg": 8351,
-      "./playstation/Down.svg": 8360,
-      "./playstation/Home.svg": 8368,
-      "./playstation/LB.svg": 8373,
-      "./playstation/LS.svg": 8376,
-      "./playstation/LT.svg": 8379,
-      "./playstation/Left.svg": 8386,
-      "./playstation/LeftStick.svg": 8389,
-      "./playstation/Menu.svg": 8395,
-      "./playstation/RB.svg": 8397,
-      "./playstation/RS.svg": 8404,
-      "./playstation/RT.svg": 8406,
-      "./playstation/Right.svg": 8413,
-      "./playstation/RightStick.svg": 8420,
-      "./playstation/Up.svg": 8428,
-      "./playstation/View.svg": 8433,
-      "./playstation/X.svg": 8435,
-      "./playstation/Y.svg": 8439,
-      "./steamdeck/A.svg": 8446,
-      "./steamdeck/B.svg": 8454,
-      "./steamdeck/Down.svg": 8457,
-      "./steamdeck/Home.svg": 8459,
-      "./steamdeck/LB.svg": 8468,
-      "./steamdeck/LS.svg": 8475,
-      "./steamdeck/LT.svg": 8482,
-      "./steamdeck/Left.svg": 8491,
-      "./steamdeck/LeftStick.svg": 8496,
-      "./steamdeck/Menu.svg": 8501,
-      "./steamdeck/RB.svg": 8504,
-      "./steamdeck/RS.svg": 8512,
-      "./steamdeck/RT.svg": 8514,
-      "./steamdeck/Right.svg": 8517,
-      "./steamdeck/RightStick.svg": 8526,
-      "./steamdeck/Up.svg": 8531,
-      "./steamdeck/View.svg": 8534,
-      "./steamdeck/X.svg": 8541,
-      "./steamdeck/Y.svg": 8550,
-      "./xbox/A.svg": 8558,
-      "./xbox/B.svg": 8562,
-      "./xbox/Down.svg": 8571,
-      "./xbox/Home.svg": 8575,
-      "./xbox/LB.svg": 8577,
-      "./xbox/LS.svg": 8584,
-      "./xbox/LT.svg": 8586,
-      "./xbox/Left.svg": 8588,
-      "./xbox/LeftStick.svg": 8596,
-      "./xbox/Menu.svg": 8604,
-      "./xbox/RB.svg": 8611,
-      "./xbox/RS.svg": 8617,
-      "./xbox/RT.svg": 8622,
-      "./xbox/Right.svg": 8625,
-      "./xbox/RightStick.svg": 8630,
-      "./xbox/Up.svg": 8635,
-      "./xbox/View.svg": 8642,
-      "./xbox/X.svg": 8644,
-      "./xbox/Y.svg": 8646
-    };
-
-    function sD(DD) {
-      var zD = KD(DD);
-      return wD(zD)
+  8897: (pp, ip, cp) => {
+    function Op(pp, ip) {
+      return !pp.hidden && (ip || !pp.isRewardedAd)
     }
 
-    function KD(DD) {
-      if (!wD.o(pD, DD)) {
-        var zD = new Error("Cannot find module '" + DD + "'");
-        throw zD.code = "MODULE_NOT_FOUND", zD
+    function op(pp) {
+      return "object" === typeof pp ? pp.option : pp
+    }
+
+    function Ip(pp, ip) {
+      var cp;
+      if ("dropdown" === (null === (cp = pp.userInput) || void 0 === cp ? void 0 : cp.type) && "object" === typeof pp.userInput.dropdownOptions[0]) {
+        for (const cp of pp.userInput.dropdownOptions)
+          if (op(cp) === ip) return "object" === typeof cp ? cp.cost : pp.cost;
+        console.error("Didn't find matching option for dropdown item. Item:", pp, "input:", ip)
       }
-      return pD[DD]
+      return pp.cost
     }
-    sD.keys = function() {
-      return Object.keys(pD)
-    }, sD.resolve = KD, DD.exports = sD, sD.id = 8248
+
+    function Sp(pp, ip, cp) {
+      var Op;
+      const op = null !== (Op = cp.excludedPlayers) && void 0 !== Op ? Op : [ip];
+      return pp.filter((pp => !op.includes(pp)))
+    }
+    cp.d(ip, {
+      b: () => Ip,
+      c: () => op,
+      g: () => Sp,
+      h: () => Op
+    })
   },
-  8251: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/A.926fb88933484dfbde14.svg"
+  8937: () => {},
+  8358: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/A.926fb88933484dfbde14.svg"
   },
-  8256: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/B.9f5ec099f78f84e44427.svg"
+  8366: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/B.9f5ec099f78f84e44427.svg"
   },
-  8260: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Down.b1852f687e6dd088dc83.svg"
+  8374: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Down.b1852f687e6dd088dc83.svg"
   },
-  8263: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Home.4f2ce08049843c0d68cc.svg"
+  8378: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Home.4f2ce08049843c0d68cc.svg"
   },
-  8267: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/LB.3a20b15927b55d5d8b60.svg"
+  8382: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/LB.3a20b15927b55d5d8b60.svg"
   },
-  8273: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
+  8389: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
   },
-  8277: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/LT.9fdc5e69011b9d41f50a.svg"
+  8394: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/LT.9fdc5e69011b9d41f50a.svg"
   },
-  8280: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Left.c380211d278e5ad37395.svg"
+  8399: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Left.c380211d278e5ad37395.svg"
   },
-  8284: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
+  8402: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
   },
-  8290: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Menu.c903a662eb685211e52e.svg"
+  8408: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Menu.c903a662eb685211e52e.svg"
   },
-  8294: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/RB.bba470ddb76ceec5d168.svg"
+  8411: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/RB.bba470ddb76ceec5d168.svg"
   },
-  8298: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/RS.faed29b08b9895ac7291.svg"
+  8414: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/RS.faed29b08b9895ac7291.svg"
   },
-  8307: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/RT.e5a9fbcc3c79550111ca.svg"
+  8420: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/RT.e5a9fbcc3c79550111ca.svg"
   },
-  8315: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Right.01eea634de7e4fea174f.svg"
+  8427: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Right.01eea634de7e4fea174f.svg"
   },
-  8321: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
+  8429: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
   },
-  8327: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Up.0c878a914746e22612b1.svg"
+  8435: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Up.0c878a914746e22612b1.svg"
   },
-  8333: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/View.0c9378b5d720a636d50d.svg"
+  8439: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/View.0c9378b5d720a636d50d.svg"
   },
-  8337: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/X.c9377519af94e6dce1d7.svg"
+  8442: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/X.c9377519af94e6dce1d7.svg"
   },
-  8346: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Y.62d8c17731dd2e172426.svg"
+  8448: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Y.62d8c17731dd2e172426.svg"
   },
-  8348: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/A.958a6de9474f8d0c9caf.svg"
+  8451: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/A.958a6de9474f8d0c9caf.svg"
   },
-  8351: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/B.d05958bfa88a1162b47a.svg"
+  8454: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/B.d05958bfa88a1162b47a.svg"
   },
-  8360: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Down.db68fb3980768eb54671.svg"
+  8462: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Down.db68fb3980768eb54671.svg"
   },
-  8368: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Home.4f2ce08049843c0d68cc.svg"
+  8469: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Home.4f2ce08049843c0d68cc.svg"
   },
-  8373: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/LB.37a3c5128c958ec2a0c2.svg"
+  8478: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/LB.37a3c5128c958ec2a0c2.svg"
   },
-  8376: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/LS.15b0cc5bf3f2fe7bbd8b.svg"
+  8484: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/LS.15b0cc5bf3f2fe7bbd8b.svg"
   },
-  8379: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/LT.5412ae5222c69f8c833f.svg"
+  8492: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/LT.5412ae5222c69f8c833f.svg"
   },
-  8386: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Left.4457b2895ce94a5df32e.svg"
+  8501: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Left.4457b2895ce94a5df32e.svg"
   },
-  8389: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
+  8506: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
   },
-  8395: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Menu.1e8427f8133c9d456c53.svg"
+  8510: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Menu.1e8427f8133c9d456c53.svg"
   },
-  8397: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/RB.c96c4aa2590209e930c7.svg"
+  8514: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/RB.c96c4aa2590209e930c7.svg"
   },
-  8404: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/RS.8d70d147cf1ab136e845.svg"
+  8520: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/RS.8d70d147cf1ab136e845.svg"
   },
-  8406: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/RT.1e4691bb5a7c049693df.svg"
+  8525: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/RT.1e4691bb5a7c049693df.svg"
   },
-  8413: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Right.a1e101413040c540b879.svg"
+  8533: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Right.a1e101413040c540b879.svg"
   },
-  8420: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
+  8542: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
   },
-  8428: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Up.7544a65ad4f611a55775.svg"
+  8549: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Up.7544a65ad4f611a55775.svg"
   },
-  8433: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/View.003cae39de89cae0b9d8.svg"
+  8556: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/View.003cae39de89cae0b9d8.svg"
   },
-  8435: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/X.d88b6e62dd8fb4bda32a.svg"
+  8562: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/X.d88b6e62dd8fb4bda32a.svg"
   },
-  8439: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Y.428d3e70775877892f82.svg"
+  8571: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Y.428d3e70775877892f82.svg"
   },
-  8446: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/A.9f5ec099f78f84e44427.svg"
+  8577: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/A.9f5ec099f78f84e44427.svg"
   },
-  8454: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/B.926fb88933484dfbde14.svg"
+  8584: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/B.926fb88933484dfbde14.svg"
   },
-  8457: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Down.b1852f687e6dd088dc83.svg"
+  8586: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Down.b1852f687e6dd088dc83.svg"
   },
-  8459: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Home.ea8b009cfa9562aa644e.svg"
+  8595: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Home.ea8b009cfa9562aa644e.svg"
   },
-  8468: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/LB.f283d355d22fc107d6d6.svg"
+  8598: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/LB.f283d355d22fc107d6d6.svg"
   },
-  8475: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
+  8603: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
   },
-  8482: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/LT.13e66c122e7ee04bb876.svg"
+  8608: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/LT.13e66c122e7ee04bb876.svg"
   },
-  8491: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Left.c380211d278e5ad37395.svg"
+  8616: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Left.c380211d278e5ad37395.svg"
   },
-  8496: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
+  8619: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
   },
-  8501: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Menu.90fc4e918900eb5062a0.svg"
+  8628: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Menu.90fc4e918900eb5062a0.svg"
   },
-  8504: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/RB.918a7f16dc054d96b6f3.svg"
+  8636: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/RB.918a7f16dc054d96b6f3.svg"
   },
-  8512: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/RS.faed29b08b9895ac7291.svg"
+  8643: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/RS.faed29b08b9895ac7291.svg"
   },
-  8514: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/RT.a0523211130959598bed.svg"
+  8651: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/RT.a0523211130959598bed.svg"
   },
-  8517: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Right.01eea634de7e4fea174f.svg"
+  8657: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Right.01eea634de7e4fea174f.svg"
   },
-  8526: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
+  8664: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
   },
-  8531: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Up.0c878a914746e22612b1.svg"
+  8666: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Up.0c878a914746e22612b1.svg"
   },
-  8534: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/View.0bc952e292c28c3baac2.svg"
+  8668: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/View.0bc952e292c28c3baac2.svg"
   },
-  8541: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/X.62d8c17731dd2e172426.svg"
+  8671: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/X.62d8c17731dd2e172426.svg"
   },
-  8550: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Y.c9377519af94e6dce1d7.svg"
+  8677: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Y.c9377519af94e6dce1d7.svg"
   },
-  8558: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/A.9f5ec099f78f84e44427.svg"
+  8682: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/A.9f5ec099f78f84e44427.svg"
   },
-  8562: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/B.926fb88933484dfbde14.svg"
+  8689: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/B.926fb88933484dfbde14.svg"
   },
-  8571: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Down.b1852f687e6dd088dc83.svg"
+  8696: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Down.b1852f687e6dd088dc83.svg"
   },
-  8575: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Home.8898f76b20962fe52ab7.svg"
+  8700: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Home.8898f76b20962fe52ab7.svg"
   },
-  8577: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/LB.689ba3703ae248f2e4cc.svg"
+  8708: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/LB.689ba3703ae248f2e4cc.svg"
   },
-  8584: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
+  8711: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/LS.30b6b373c0d6b7ee1753.svg"
   },
-  8586: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/LT.9c2d10d335ab5c590525.svg"
+  8720: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/LT.9c2d10d335ab5c590525.svg"
   },
-  8588: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Left.c380211d278e5ad37395.svg"
+  8728: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Left.c380211d278e5ad37395.svg"
   },
-  8596: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
+  8733: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/LeftStick.572ef7fe851cd5c7c48d.svg"
   },
-  8604: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Menu.9e485791ea97009871ca.svg"
+  8735: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Menu.9e485791ea97009871ca.svg"
   },
-  8611: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/RB.7ee5ce48dd551f993f80.svg"
+  8737: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/RB.7ee5ce48dd551f993f80.svg"
   },
-  8617: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/RS.faed29b08b9895ac7291.svg"
+  8743: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/RS.faed29b08b9895ac7291.svg"
   },
-  8622: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/RT.903ecadc55a9e9e00f07.svg"
+  8749: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/RT.903ecadc55a9e9e00f07.svg"
   },
-  8625: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Right.01eea634de7e4fea174f.svg"
+  8755: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Right.01eea634de7e4fea174f.svg"
   },
-  8630: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
+  8761: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/RightStick.8c455f35f82d8f40b0dc.svg"
   },
-  8635: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Up.0c878a914746e22612b1.svg"
+  8765: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Up.0c878a914746e22612b1.svg"
   },
-  8642: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/View.3c5eeb34f0413bde4a65.svg"
+  8768: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/View.3c5eeb34f0413bde4a65.svg"
   },
-  8644: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/X.62d8c17731dd2e172426.svg"
+  8771: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/X.62d8c17731dd2e172426.svg"
   },
-  8646: (DD, zD, wD) => {
-    DD.exports = wD.p + "static/media/Y.c9377519af94e6dce1d7.svg"
+  8777: (pp, ip, cp) => {
+    pp.exports = cp.p + "static/media/Y.c9377519af94e6dce1d7.svg"
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

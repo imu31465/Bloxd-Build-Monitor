@@ -1,40 +1,37 @@
 export const id = 178;
 export const ids = [178];
 export const modules = {
-  9042: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      pageBody: () => pD
+  9162: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      pageBody: () => Op
     });
-    const pD = {
-      whatIs: ["Capture the points, hold the line, win the fight. Bloxd Frontline is a 12v12 FPS where Red and Blue go head to head in fast domination rounds. It's free to play online and there's nothing to install. Gear up at the Armorer, pick one of 17 kits, jump in a vehicle and push the line with your team. You can hop in on your own, but it's better with a full squad."],
-      howToPlay: ["You'll join Red or Blue and spawn at your base. Head to the Armorer to choose a kit, then get out there and capture the lettered points on the map. Every point you hold earns your team tickets. First team to 100 tickets takes the round. There's a timer as well, so don't let up. If you go down, you're back in the fight after 5 seconds.", "Kills, captures and wins all earn gold. You can spend it on a mystery kit draw, or at the Quartermaster next to your Armorer for Frag Grenades, healing potions and buffs that last the whole round. Vehicles spawn at each base and around the map. They're great for pushing forward fast, but enemy guns and explosives can wreck them. Your base has a shield over it that pushes enemies out, so there's always somewhere safe to regroup."],
-      features: ["Domination Rounds: Capture Points and Race to 100 Tickets", "17 Unique Kits, Including Combat Medic, Ninja, Juggernaut, Wrecker and Marksman", "Vehicles to Drive into Battle", "Quartermaster Buffs: Fleet Footed, Rapid Deploy, Fast Hands and Sure Grip", "Shielded Team Bases and Auto-Balanced Teams", "Ranks from Bronze to Moonstone, Plus Tracked Stats", "Party Up and Play with a Full Squad"],
-      tips: ["Capture points together and hold them so your tickets keep climbing", "Try a few kits at the Armorer until you find one that fits how you play", "Play Combat Medic to keep your team in the fight", "Buy buffs early. They stop selling in the last minute of a round", "Captures trigger Rally windows that cut your team's respawn time", "Use the Ninja's smoke grenades to cover a push onto a point", "Grab a vehicle when you need to reach a point on the other side of the map"],
-      similarGames: ["shooting", "pirates", "bedwars", "skywars"],
+    const Op = {
+      whatIs: ["A string of unique islands, a mysterious land and 114 fish just waiting to be caught. Bloxd Fishing is a relaxing fishing simulator where you explore, catch fish and slowly uncover the secrets of the islands. Take it at your own pace. It's free, there's nothing to install, and you can be fishing in seconds."],
+      howToPlay: ["Cast your line and wait for a bite. When something bites, a catch minigame kicks in. Some fish need a well-timed click, while others use a progress bar or a gravity bar. Win the minigame and the fish is yours. Every fish has its own weight and rarity, going from Common all the way up to Mythic. Sell your catches for coins and spend them on better rods, boats and potions.", "There are 5 islands to explore: Sunhaven, Gloomtide, Eldermire, Embertide and Frostfell. Each one has its own fishing spots, like the Moonpool, Draugr Bay, The Abyss and Embertide Volcano. Unlock new islands with your coins and use the shop to hop between them. Every fish you catch goes in your Bestiary, and you can show off your favourite on your nametag. Keep an eye out for luck events too. They boost your chances of a rare catch for a while."],
+      features: ["5 Islands and Lots of Fishing Spots to Explore", "114 Fish Species to Catch", "7 Rarities, from Common to Mythic", "3 Different Catch Minigames", "16 Fishing Rods, from the Rusty Rod to the Mythic Rod", "Boats, plus Luck Potions in Four Strengths", "A Bestiary to Complete", "Show Off Your Best Fish on Your Nametag", "Random Luck Events"],
+      tips: ["Sell your early catches and save up for a better rod", "Check the rod shops on each island for new rods", "Some spots don't allow every rod, so check before you cast", "Drink a Luck Potion before you fish if you're after rare catches", "Wait untill a luck event to give yourself the best shot at a Mythic", "Your Bestiary shows you which fish you're still missing", "Get a boat if you want to head out on the water"],
+      similarGames: ["greenville", "skyblock", "oneBlock", "classic"],
       faq: [{
-        question: "What is Bloxd Frontline?",
-        answer: "A 12v12 team shooter on Bloxd.io. You capture points, pick kits and drive vehicles to win domination rounds."
+        question: "What is Bloxd Fishing?",
+        answer: "A relaxing fishing game. You explore 5 islands, win catch minigames to reel in fish and fill your Bestiary with rare species."
       }, {
-        question: "How does a team win in Bloxd Frontline?",
-        answer: "By holding points to earn tickets. The first team to reach 100 tickets wins the round."
+        question: "How many fish are in Bloxd Fishing?",
+        answer: "114 fish species, spread across 5 islands, in 7 rarities from Common to Mythic."
       }, {
-        question: "What do kits do in Bloxd Frontline?",
-        answer: "They decide your weapons and abilities. Combat Medic brings strong healing, the Ninja has smoke grenades and the Juggernaut carries a belt-fed GPMG."
+        question: "How do I catch Mythic fish in Bloxd Fishing?",
+        answer: "Use a better rod, drink a Luck Potion and fish during luck events. Then cross your fingers!"
       }, {
-        question: "How do I unlock new kits?",
-        answer: "Spend gold on a mystery kit draw. Draw one you already own and you'll get gems instead, which you can use to buy a specific locked kit."
+        question: "Where can I get better rods?",
+        answer: "Sell your fish for coins, then buy new rods from the rod shops on the islands."
       }, {
-        question: "Does Bloxd Frontline have vehicles?",
-        answer: "Yep. They spawn at each base and around the map. Guns and explosives can destroy them, so drive carefully."
+        question: "How do I travel between islands?",
+        answer: "You start on Sunhaven. Spend coins to unlock Gloomtide, Eldermire, Embertide and Frostfell, and once an island's unlocked, use the shop to travel there."
       }, {
-        question: "How is Frontline different from Cube Warfare?",
-        answer: "Frontline is 12v12 objective play with points, kits and vehicles. Cube Warfare is quicker Free-For-All, Team Deathmatch and Gun Game fights where killstreaks matter most."
-      }, {
-        question: "Can I squad up with friends in Bloxd Frontline?",
-        answer: "Yes. Party up with your friends and you'll play together as a squad."
+        question: "What are the catch minigames?",
+        answer: "There are three: a timed click, a progress bar and a gravity bar. Each fish uses one of them."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

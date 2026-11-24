@@ -1,161 +1,336 @@
 export const id = 202;
 export const ids = [202];
 export const modules = {
-  34269: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      packDisplayName: () => ID,
-      packModelMessage: () => BD,
-      packModelSummary: () => hD,
-      refusedPackModels: () => GD
+  41773: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Ip
     });
-    var pD = wD(34278),
-      sD = wD(34287);
-    const KD = "DRACO",
-      rD = 0,
-      LD = 1,
-      cD = 0,
-      gD = 1,
-      RD = 32768;
+    var Op = cp(62),
+      op = cp(2835);
 
-    function AD(DD) {
-      const zD = new DataView(DD.buffer, DD.byteOffset, DD.byteLength);
-      let wD = 0;
-      const pD = () => {
-          if (wD >= DD.byteLength) throw new RangeError("past the stream");
-          return DD[wD++]
-        },
-        sD = () => {
-          if (wD + 4 > DD.byteLength) throw new RangeError("past the stream");
-          const pD = zD.getUint32(wD, !0);
-          return wD += 4, pD
-        },
-        AD = () => {
-          let DD = 0;
-          for (let zD = 0; zD < 35; zD += 7) {
-            const wD = pD();
-            if (DD += (127 & wD) * 2 ** zD, 0 === (128 & wD)) return DD
-          }
-          throw new RangeError("varint too long")
-        };
-      try {
-        for (let DD = 0; DD < KD.length; DD++)
-          if (pD() !== KD.charCodeAt(DD)) return null;
-        const zD = pD(),
-          UD = pD(),
-          fD = pD(),
-          ID = pD(),
-          BD = pD() | pD() << 8;
-        if (2 !== zD) return null;
-        0 !== (BD & RD) && function(DD, zD, wD) {
-          const pD = () => {
-              zD(wD())
-            },
-            sD = () => {
-              let wD = 1,
-                sD = !0;
-              for (; wD > 0;) {
-                wD--, sD || pD(), sD = !1;
-                const KD = DD();
-                for (let wD = 0; wD < KD; wD++) pD(), zD(DD());
-                wD += DD()
+    function Ip(pp, ip, cp) {
+      const Ip = (0, Op.useRef)(null),
+        {
+          width: Sp,
+          height: xp
+        } = (0, op.d)(pp);
+      (0, Op.useEffect)((() => {
+        const cp = ip(pp.current);
+        return Ip.current = cp, () => {
+          cp.close(), Ip.current = null
+        }
+      }), [pp, ip]), (0, Op.useEffect)((() => {
+        Sp <= 0 || xp <= 0 || Ip.current.resize(Sp, xp)
+      }), [Sp, xp]), (0, Op.useEffect)((() => {
+        Ip.current.show(cp)
+      }), [cp])
+    }
+  },
+  41776: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Pp,
+      e: () => Ap,
+      f: () => Lp
+    });
+    var Op = cp(37395),
+      op = cp(38856);
+
+    function Ip(pp, ip) {
+      let [cp, Op, op] = pp;
+      return [0, .5, 1].map((pp => ({
+        timeFraction: pp,
+        rotation: {
+          Wo: "catmull-rom-spline",
+          point: [cp, Op, op + (.5 === pp ? ip : 0)]
+        }
+      })))
+    }
+
+    function Sp(pp, ip, cp) {
+      return {
+        Lo: 3200,
+        loop: !0,
+        Do: {
+          Root: {
+            timeline: [0, .5, 1].map((pp => ({
+              timeFraction: pp,
+              position: {
+                Wo: "catmull-rom-spline",
+                point: [0, .5 === pp ? .18 : 0, 0]
               }
-            },
-            KD = DD();
-          for (let rD = 0; rD < KD; rD++) DD(), sD();
-          sD()
-        }(AD, (zD => {
-          if (wD + zD > DD.byteLength) throw new RangeError("past the stream");
-          wD += zD
-        }), pD);
-        const GD = UD < 2 ? sD : AD;
-        if (fD === rD) return {
-          faces: 0,
-          vertices: sD()
-        };
-        if (fD !== LD) return null;
-        if (ID === cD) {
-          return {
-            faces: GD(),
-            vertices: GD()
+            })))
+          },
+          HeadMesh: {
+            timeline: [0, .25, .75, 1].map((pp => ({
+              timeFraction: pp,
+              rotation: {
+                Wo: "catmull-rom-spline",
+                point: [0, .25 === pp ? .12 : .75 === pp ? -.12 : 0, 0]
+              }
+            })))
+          },
+          ArmLeftMesh: {
+            timeline: Ip(pp, cp)
+          },
+          ArmRightMesh: {
+            timeline: Ip(ip, -cp)
           }
         }
-        if (ID !== gD) return null;
-        pD(), UD < 2 && AD();
-        const hD = AD();
-        return {
-          faces: AD(),
-          vertices: hD
-        }
-      } catch {
-        return null
       }
     }
+    const xp = Sp([0, 0, 0], [0, 0, 0], .07),
+      Lp = (0, op.b)((0, Op.d)(xp), "mobIdle"),
+      Yp = Sp([-.2 * Math.PI, -.15 * Math.PI, 0], [-.1 * Math.PI, .18 * Math.PI, 0], .02),
+      Dp = Sp([-.4 * Math.PI, -.15 * Math.PI, 0], [-.3 * Math.PI, .18 * Math.PI, 0], .02),
+      Ap = (0, op.b)((0, Op.d)(Yp), "gunReady"),
+      Pp = (0, op.b)((0, Op.d)(Dp), "gunAimed")
+  },
+  38856: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => op,
+      c: () => Ip
+    });
+    const Op = new WeakMap;
 
-    function UD(DD, zD, wD) {
-      var pD, sD;
-      if (null === (pD = null === (sD = DD.extensionsUsed) || void 0 === sD ? void 0 : sD.includes("KHR_draco_mesh_compression")) || void 0 === pD || !pD) return null;
-      for (const ID of null !== (KD = DD.meshes) && void 0 !== KD ? KD : []) {
-        var KD;
-        for (const pD of ID.primitives) {
-          var rD, LD, cD, gD, RD, UD;
-          const sD = null === (rD = pD.extensions) || void 0 === rD ? void 0 : rD.KHR_draco_mesh_compression;
-          if ("object" !== typeof sD || null === sD) continue;
-          const KD = null === (LD = DD.bufferViews) || void 0 === LD ? void 0 : LD[sD.bufferView];
-          if (null === zD || void 0 === KD) return fD;
-          const ID = null !== (cD = KD.byteOffset) && void 0 !== cD ? cD : 0,
-            BD = AD(zD.subarray(ID, ID + KD.byteLength));
-          if (null === BD && !wD) continue;
-          const GD = null !== (gD = DD.accessors) && void 0 !== gD ? gD : [],
-            hD = null === (RD = GD[pD.attributes.POSITION]) || void 0 === RD ? void 0 : RD.count,
-            nD = void 0 === pD.indices ? 0 : null === (UD = GD[pD.indices]) || void 0 === UD ? void 0 : UD.count;
-          if (null === BD || void 0 === hD || void 0 === nD || 3 * BD.faces !== nD || BD.vertices > hD) return fD
-        }
+    function op(pp, ip) {
+      return Op.set(pp, ip), pp
+    }
+
+    function Ip(pp) {
+      var ip;
+      return null !== (ip = Op.get(pp)) && void 0 !== ip ? ip : null
+    }
+  },
+  34466: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Sp,
+      e: () => op,
+      i: () => Dp
+    });
+    var Op = cp(1579);
+
+    function op(pp) {
+      var ip;
+      return {
+        ...Sp.store,
+        yaw: Sp.store.yaw + (null !== (ip = Op.b[pp].previewYaw) && void 0 !== ip ? ip : 0)
       }
-      return null
     }
-    const fD = "has a Draco stream whose counts don't match its accessors";
+    const Ip = {
+        yaw: .61 * Math.PI,
+        pitch: Math.PI / 2.05,
+        radius: 30,
+        target: [0, 0, 0]
+      },
+      Sp = {
+        player: Ip,
+        store: {
+          ...Ip,
+          radius: 33,
+          target: [0, 3.9, 0]
+        }
+      };
 
-    function ID(DD) {
-      var zD;
-      return null !== (zD = DD.name) && void 0 !== zD ? zD : DD.fromFolderName || DD.id
+    function xp(pp, ip) {
+      pp instanceof Promise ? pp.then(ip).catch((pp => {
+        console.error("Couldn't open the preview", pp)
+      })) : ip(pp)
     }
-
-    function BD(DD, zD, wD) {
-      return `Texture pack "${DD}": model "${zD}" was not loaded because it ${wD}. The default model is used instead.`
+    class Lp {
+      constructor(pp) {
+        this.opened = null, this.view = null, this.size = null, this.closed = !1, xp(pp, (pp => {
+          this.closed ? pp.close() : (this.opened = pp, null !== this.size && pp.resize(this.size.width, this.size.height), null !== this.view && pp.show(this.view))
+        }))
+      }
+      show(pp) {
+        var ip;
+        this.view = pp, null === (ip = this.opened) || void 0 === ip || ip.show(pp)
+      }
+      resize(pp, ip) {
+        var cp;
+        this.size = {
+          width: pp,
+          height: ip
+        }, null === (cp = this.opened) || void 0 === cp || cp.resize(pp, ip)
+      }
+      close() {
+        var pp;
+        this.closed = !0, null === (pp = this.opened) || void 0 === pp || pp.close(), this.opened = null
+      }
     }
+    class Yp {
+      constructor(pp) {
+        this.ready = void 0, this.opened = null, this.size = null, this.closed = !1, this.ready = Promise.resolve(pp).then((pp => pp.ready)), xp(pp, (pp => {
+          this.closed ? pp.close() : (this.opened = pp, null !== this.size && pp.resize(this.size.width, this.size.height))
+        }))
+      }
+      get dev() {
+        return this.opened.dev
+      }
+      isReady() {
+        var pp, ip;
+        return null !== (pp = null === (ip = this.opened) || void 0 === ip ? void 0 : ip.isReady()) && void 0 !== pp && pp
+      }
+      setCosmetic(pp, ip) {
+        var cp;
+        null === (cp = this.opened) || void 0 === cp || cp.setCosmetic(pp, ip)
+      }
+      playEmote(pp) {
+        var ip;
+        null === (ip = this.opened) || void 0 === ip || ip.playEmote(pp)
+      }
+      setOrbit(pp) {
+        var ip;
+        null === (ip = this.opened) || void 0 === ip || ip.setOrbit(pp)
+      }
+      resetCamera() {
+        var pp;
+        null === (pp = this.opened) || void 0 === pp || pp.resetCamera()
+      }
+      async untilDrawn(pp) {
+        var ip;
+        await this.ready, await (null === (ip = this.opened) || void 0 === ip ? void 0 : ip.untilDrawn(pp))
+      }
+      resize(pp, ip) {
+        var cp;
+        this.size = {
+          width: pp,
+          height: ip
+        }, null === (cp = this.opened) || void 0 === cp || cp.resize(pp, ip)
+      }
+      close() {
+        var pp;
+        this.closed = !0, null === (pp = this.opened) || void 0 === pp || pp.close(), this.opened = null
+      }
+    }
+    const Dp = new class {
+      constructor() {
+        this.host = null, this.makeDefault = null
+      }
+      setHost(pp) {
+        this.host = pp
+      }
+      setDefaultHost(pp) {
+        this.makeDefault = pp
+      }
+      current() {
+        if (null === this.host) {
+          if (null === this.makeDefault) throw new Error("no preview host");
+          this.host = this.makeDefault()
+        }
+        return this.host
+      }
+      openMob(pp) {
+        return new Lp(this.current().openMob(pp))
+      }
+      openPet(pp) {
+        return new Lp(this.current().openPet(pp))
+      }
+      openMobLineup(pp) {
+        return new Lp(this.current().openMobLineup(pp))
+      }
+      openCharacter(pp, ip) {
+        return new Yp(this.current().openCharacter(pp, ip))
+      }
+    }
+  },
+  34462: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Op.b,
+      h: () => Op.e,
+      j: () => Op.i
+    });
+    var Op = cp(34466);
+    class op {
+      constructor(pp) {
+        this.load = pp, this.loaded = null, this.loading = null
+      }
+      run(pp) {
+        return null !== this.loaded ? pp(this.loaded) : (this.loading ??= this.load().then((pp => (this.loaded = pp, pp)), (pp => {
+          throw this.loading = null, pp
+        })), this.loading.then(pp))
+      }
+    }
+    class Ip {
+      constructor() {
+        this.mobScene = new op((() => Promise.all([cp.e(73), cp.e(237), cp.e(236), cp.e(258), cp.e(98), cp.e(259), cp.e(76), cp.e(75), cp.e(256), cp.e(74), cp.e(266), cp.e(260), cp.e(265), cp.e(263), cp.e(255), cp.e(279), cp.e(233), cp.e(249), cp.e(261), cp.e(264), cp.e(78), cp.e(188), cp.e(227), cp.e(97), cp.e(239), cp.e(230), cp.e(246), cp.e(121), cp.e(247), cp.e(77), cp.e(251)]).then((() => cp(41295))))), this.characterScene = new op((() => Promise.all([cp.e(73), cp.e(237), cp.e(236), cp.e(258), cp.e(98), cp.e(259), cp.e(76), cp.e(75), cp.e(256), cp.e(74), cp.e(266), cp.e(260), cp.e(265), cp.e(263), cp.e(255), cp.e(279), cp.e(233), cp.e(249), cp.e(261), cp.e(264), cp.e(78), cp.e(188), cp.e(227), cp.e(97), cp.e(239), cp.e(230), cp.e(246), cp.e(121), cp.e(247), cp.e(77), cp.e(250)]).then((() => cp(41400)))))
+      }
+      openMob(pp) {
+        return this.mobScene.run((ip => ip.openMobPreview(pp)))
+      }
+      openPet(pp) {
+        return this.mobScene.run((ip => ip.openPetPreview(pp)))
+      }
+      openMobLineup(pp) {
+        return this.mobScene.run((ip => ip.openMobLineupPreview(pp)))
+      }
+      openCharacter(pp, ip) {
+        return this.characterScene.run((cp => cp.openCharacterPreview(pp, ip)))
+      }
+    }
+    Op.i.setDefaultHost((() => new Ip))
+  },
+  42012: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      FrontlineMvpLineup: () => Ap
+    });
+    var Op = cp(62),
+      op = cp(1049),
+      Ip = cp.n(op),
+      Sp = cp(34462),
+      xp = cp(41776),
+      Lp = cp(41773),
+      Yp = cp(1112);
 
-    function GD(DD, zD, wD) {
+    function Dp(pp) {
+      return Sp.j.openMobLineup(pp)
+    }
+    const Ap = (0, Op.memo)((function(pp) {
       let {
-        strictDraco: KD = !1
-      } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-      const rD = {};
-      for (const [LD, cD] of Object.entries(zD)) {
-        let zD;
-        if (cD.startsWith("data:")) try {
-          const DD = new Uint8Array((0, sD.s)(cD));
-          if (zD = (0, pD.d)(DD), null === zD) {
-            const {
-              json: wD,
-              bin: pD
-            } = (0, sD.D)(DD);
-            zD = UD(wD, pD, KD)
+        players: ip,
+        className: cp
+      } = pp;
+      const op = (0, Op.useRef)(null),
+        Sp = (0, Op.useMemo)((() => ip.map((pp => {
+          let {
+            cosmetics: ip,
+            size: cp,
+            heldGun: Op
+          } = pp;
+          return {
+            cosmetics: ip,
+            size: cp,
+            qm: Op.name,
+            animation: Op.aimed ? xp.b : xp.e
           }
-        } catch {
-          zD = "is not a binary glTF 2.0 file"
-        } else zD = "loads data from outside the file";
-        zD && (rD[LD] = zD, wD && console.warn(BD(DD, LD, zD)))
-      }
-      return rD
-    }
-
-    function hD(DD, zD) {
-      const wD = Object.keys(zD);
-      if (0 === wD.length) return null;
-      if (1 === wD.length) return BD(DD, wD[0], zD[wD[0]]);
-      const pD = wD.map((DD => `"${DD}" ${zD[DD]}`)).join("; ");
-      return `Texture pack "${DD}": ${wD.length} models were not loaded (${pD}). The default models are used instead.`
-    }
+        }))), [ip]),
+        Ap = function(pp) {
+          const [ip, cp] = (0, Op.useState)([]);
+          return (0, Op.useEffect)((() => {
+            cp(pp.map((() => !1)));
+            const ip = pp.map(((pp, ip) => {
+              let {
+                showAfterMs: Op
+              } = pp;
+              return window.setTimeout((() => {
+                cp((pp => pp.map(((pp, cp) => pp || cp === ip))))
+              }), Op)
+            }));
+            return () => {
+              for (const pp of ip) window.clearTimeout(pp)
+            }
+          }), [pp]), ip
+        }(ip),
+        Pp = (0, Op.useMemo)((() => ({
+          figures: Sp,
+          shown: Ap
+        })), [Sp, Ap]);
+      return (0, Lp.b)(op, Dp, Pp), (0, Yp.jsx)("div", {
+        className: Ip()("MobPreview", cp),
+        ref: op
+      })
+    }))
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

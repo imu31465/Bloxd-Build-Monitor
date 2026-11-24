@@ -1,2240 +1,1294 @@
 export const id = 260;
 export const ids = [260];
 export const modules = {
-  41006: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => yD
+  40605: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Op
     });
-    var pD = wD(39921),
-      sD = wD(39927),
-      KD = wD(37119),
-      rD = wD(37079),
-      LD = wD(37125),
-      cD = wD(40155),
-      gD = wD(40335),
-      RD = wD(40106),
-      AD = wD(39832),
-      UD = wD(37088);
-    class fD {
-      constructor() {
-        this._zoomStopsAnimation = !1, this._idleRotationSpeed = .05, this._idleRotationWaitTime = 2e3, this._idleRotationSpinupTime = 2e3, this.targetAlpha = null, this._attachedCamera = null, this._isPointerDown = !1, this._lastFrameTime = null, this._lastInteractionTime = -1 / 0, this._cameraRotationSpeed = 0, this._lastFrameRadius = 0
+    let Op = !1
+  },
+  40195: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => yp
+    });
+    var Op = cp(40203),
+      op = cp(40210),
+      Ip = cp(37349),
+      Sp = cp(37320),
+      xp = cp(37345),
+      Lp = cp(38124),
+      Yp = cp(40225);
+    class Dp {
+      get wrapU() {
+        return this._wrapU
       }
-      get name() {
-        return "AutoRotation"
+      set wrapU(pp) {
+        this._wrapU = pp
       }
-      set zoomStopsAnimation(DD) {
-        this._zoomStopsAnimation = DD
+      get wrapV() {
+        return this._wrapV
       }
-      get zoomStopsAnimation() {
-        return this._zoomStopsAnimation
+      set wrapV(pp) {
+        this._wrapV = pp
       }
-      set idleRotationSpeed(DD) {
-        this._idleRotationSpeed = DD
+      get coordinatesMode() {
+        return 0
       }
-      get idleRotationSpeed() {
-        return this._idleRotationSpeed
+      get isCube() {
+        return !!this._texture && this._texture.isCube
       }
-      set idleRotationWaitTime(DD) {
-        this._idleRotationWaitTime = DD
+      set isCube(pp) {
+        this._texture && (this._texture.isCube = pp)
       }
-      get idleRotationWaitTime() {
-        return this._idleRotationWaitTime
+      get is3D() {
+        return !!this._texture && this._texture.is3D
       }
-      set idleRotationSpinupTime(DD) {
-        this._idleRotationSpinupTime = DD
+      set is3D(pp) {
+        this._texture && (this._texture.is3D = pp)
       }
-      get idleRotationSpinupTime() {
-        return this._idleRotationSpinupTime
+      get is2DArray() {
+        return !!this._texture && this._texture.is2DArray
       }
-      get rotationInProgress() {
-        return Math.abs(this._cameraRotationSpeed) > 0
+      set is2DArray(pp) {
+        this._texture && (this._texture.is2DArray = pp)
       }
-      get attachedNode() {
-        return this._attachedCamera
+      getClassName() {
+        return "ThinTexture"
       }
-      init() {}
-      attach(DD) {
-        this._attachedCamera = DD;
-        const zD = this._attachedCamera.Ul();
-        this._onPrePointerObservableObserver = zD.onPrePointerObservable.add((DD => {
-          DD.type !== RD.c.POINTERDOWN ? DD.type === RD.c.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
-        })), this._onAfterCheckInputsObserver = DD.onAfterCheckInputsObservable.add((() => {
-          if (this._reachTargetAlpha()) return;
-          const DD = AD.c.Now;
-          let zD = 0;
-          null != this._lastFrameTime && (zD = DD - this._lastFrameTime), this._lastFrameTime = DD, this._applyUserInteraction();
-          const wD = DD - this._lastInteractionTime - this._idleRotationWaitTime,
-            pD = Math.max(Math.min(wD / this._idleRotationSpinupTime, 1), 0);
-          this._cameraRotationSpeed = this._idleRotationSpeed * pD, this._attachedCamera && (this._attachedCamera.alpha -= this._cameraRotationSpeed * (zD / 1e3))
-        }))
+      static _IsRenderTargetWrapper(pp) {
+        return void 0 !== pp?.shareDepth
       }
-      detach() {
-        if (!this._attachedCamera) return;
-        const DD = this._attachedCamera.Ul();
-        this._onPrePointerObservableObserver && DD.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._attachedCamera = null, this._lastFrameTime = null
+      constructor(pp) {
+        this._wrapU = 1, this._wrapV = 1, this.wrapR = 1, this.anisotropicFilteringLevel = 4, this.delayLoadState = 0, this._texture = null, this._engine = null, this._cachedSize = Yp.c.Zero(), this._cachedBaseSize = Yp.c.Zero(), this._initialSamplingMode = 2, this._texture = Dp._IsRenderTargetWrapper(pp) ? pp.texture : pp, this._texture && (this._engine = this._texture.gy(), this.wrapU = this._texture._cachedWrapU ?? this.wrapU, this.wrapV = this._texture._cachedWrapV ?? this.wrapV, this.wrapR = this._texture._cachedWrapR ?? this.wrapR)
       }
-      resetLastInteractionTime(DD) {
-        this._lastInteractionTime = DD ?? AD.c.Now
+      isReady() {
+        return 4 === this.delayLoadState ? (this.delayLoad(), !1) : !!this._texture && this._texture.isReady
       }
-      _reachTargetAlpha() {
-        return !(!this._attachedCamera || null === this.targetAlpha) && Math.abs(this._attachedCamera.alpha - this.targetAlpha) < UD.b
+      delayLoad() {}
+      getInternalTexture() {
+        return this._texture
       }
-      _userIsZooming() {
-        return !!this._attachedCamera && 0 !== this._attachedCamera.inertialRadiusOffset
+      getSize() {
+        if (this._texture) {
+          if (this._texture.width) return this._cachedSize.width = this._texture.width, this._cachedSize.height = this._texture.height, this._cachedSize;
+          if (this._texture._size) return this._cachedSize.width = this._texture._size, this._cachedSize.height = this._texture._size, this._cachedSize
+        }
+        return this._cachedSize
       }
-      _shouldAnimationStopForInteraction() {
-        if (!this._attachedCamera) return !1;
-        let DD = !1;
-        return this._lastFrameRadius === this._attachedCamera.radius && 0 !== this._attachedCamera.inertialRadiusOffset && (DD = !0), this._lastFrameRadius = this._attachedCamera.radius, this._zoomStopsAnimation ? DD : this._userIsZooming()
+      getBaseSize() {
+        return this.isReady() && this._texture ? this._texture._size ? (this._cachedBaseSize.width = this._texture._size, this._cachedBaseSize.height = this._texture._size, this._cachedBaseSize) : (this._cachedBaseSize.width = this._texture.baseWidth, this._cachedBaseSize.height = this._texture.baseHeight, this._cachedBaseSize) : (this._cachedBaseSize.width = 0, this._cachedBaseSize.height = 0, this._cachedBaseSize)
       }
-      _applyUserInteraction() {
-        this._userIsMoving() && !this._shouldAnimationStopForInteraction() && (this._lastInteractionTime = AD.c.Now)
+      get samplingMode() {
+        return this._texture ? this._texture.samplingMode : this._initialSamplingMode
       }
-      _userIsMoving() {
-        return !!this._attachedCamera && (0 !== this._attachedCamera.inertialAlphaOffset || 0 !== this._attachedCamera.inertialBetaOffset || 0 !== this._attachedCamera.inertialRadiusOffset || 0 !== this._attachedCamera.inertialPanningX || 0 !== this._attachedCamera.inertialPanningY || this._isPointerDown)
+      updateSamplingMode(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        this._texture && this._engine && this._engine.updateTextureSamplingMode(pp, this._texture, this._texture.generateMipMaps && ip)
+      }
+      releaseInternalTexture() {
+        this._texture && (this._texture.dispose(), this._texture = null)
+      }
+      dispose() {
+        this._texture && (this.releaseInternalTexture(), this._engine = null)
       }
     }
-    wD(41008);
-    class ID {
-      constructor() {
-        this._easingMode = ID.EASINGMODE_EASEIN
-      }
-      setEasingMode(DD) {
-        const zD = Math.min(Math.max(DD, 0), 2);
-        this._easingMode = zD
-      }
-      getEasingMode() {
-        return this._easingMode
-      }
-      easeInCore(DD) {
-        throw new Error("You must implement this method")
-      }
-      ease(DD) {
-        switch (this._easingMode) {
-          case ID.EASINGMODE_EASEIN:
-            return this.easeInCore(DD);
-          case ID.EASINGMODE_EASEOUT:
-            return 1 - this.easeInCore(1 - DD)
+    var Ap, Pp = cp(40233),
+      Wp = cp(40096);
+    let yp = (() => {
+      var pp;
+      let ip, cp, Yp, Ap, Wp, yp, Up, wp, vp, tp, Hp, dp, ep, jp, kp, mp, Rp, qp, Mp, Cp, Ep, Xp, lp, Qp, Jp, Bp = Dp,
+        Np = [],
+        Tp = [],
+        fp = [],
+        bp = [],
+        hp = [],
+        ap = [],
+        np = [],
+        Fp = [],
+        gp = [],
+        Gp = [],
+        rp = [],
+        Zp = [],
+        zp = [],
+        sp = [],
+        Kp = [],
+        Vp = [],
+        ii = [],
+        ci = [],
+        Oi = [],
+        oi = [],
+        Ii = [],
+        Si = [],
+        xi = [],
+        Li = [],
+        Yi = [],
+        Di = [],
+        Ai = [],
+        Pi = [],
+        Wi = [],
+        yi = [],
+        Ui = [];
+      return pp = class extends Bp {
+        set hasAlpha(pp) {
+          this._hasAlpha = pp
         }
-        return DD >= .5 ? .5 * (1 - this.easeInCore(2 * (1 - DD))) + .5 : .5 * this.easeInCore(2 * DD)
-      }
-    }
-    ID.EASINGMODE_EASEIN = 0, ID.EASINGMODE_EASEOUT = 1, ID.EASINGMODE_EASEINOUT = 2;
-    var BD = wD(41016);
-    class GD {
-      constructor() {
-        this.transitionDuration = 450, this.lowerRadiusTransitionRange = 2, this.upperRadiusTransitionRange = -2, this._autoTransitionRange = !1, this._attachedCamera = null, this._radiusIsAnimating = !1, this._radiusBounceTransition = null, this._animatables = new Array
-      }
-      get name() {
-        return "Bouncing"
-      }
-      get autoTransitionRange() {
-        return this._autoTransitionRange
-      }
-      set autoTransitionRange(DD) {
-        if (this._autoTransitionRange === DD) return;
-        this._autoTransitionRange = DD;
-        const zD = this._attachedCamera;
-        zD && (DD ? this._onMeshTargetChangedObserver = zD.onMeshTargetChangedObservable.add((DD => {
-          if (DD && (DD.computeWorldMatrix(!0), DD.FW)) {
-            const zD = DD.FW().diagonalLength;
-            this.lowerRadiusTransitionRange = .05 * zD, this.upperRadiusTransitionRange = .05 * zD
-          }
-        })) : this._onMeshTargetChangedObserver && zD.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver))
-      }
-      get attachedNode() {
-        return this._attachedCamera
-      }
-      init() {}
-      attach(DD) {
-        this._attachedCamera = DD, this._onAfterCheckInputsObserver = DD.onAfterCheckInputsObservable.add((() => {
-          this._attachedCamera && (this._isRadiusAtLimit(this._attachedCamera.lowerRadiusLimit) && this._applyBoundRadiusAnimation(this.lowerRadiusTransitionRange), this._isRadiusAtLimit(this._attachedCamera.upperRadiusLimit) && this._applyBoundRadiusAnimation(this.upperRadiusTransitionRange))
-        }))
-      }
-      detach() {
-        this._attachedCamera && (this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null)
-      }
-      _isRadiusAtLimit(DD) {
-        return !!this._attachedCamera && (this._attachedCamera.radius === DD && !this._radiusIsAnimating)
-      }
-      _applyBoundRadiusAnimation(DD) {
-        if (!this._attachedCamera) return;
-        this._radiusBounceTransition || (GD.EasingFunction.setEasingMode(GD.EasingMode), this._radiusBounceTransition = BD.d.CreateAnimation("radius", BD.d.ANIMATIONTYPE_FLOAT, 60, GD.EasingFunction)), this._cachedWheelPrecision = this._attachedCamera.wheelPrecision, this._attachedCamera.wheelPrecision = 1 / 0, this._attachedCamera.inertialRadiusOffset = 0, this.stopAllAnimations(), this._radiusIsAnimating = !0;
-        const zD = BD.d.TransitionTo("radius", this._attachedCamera.radius + DD, this._attachedCamera, this._attachedCamera.Ul(), 60, this._radiusBounceTransition, this.transitionDuration, (() => this._clearAnimationLocks()));
-        zD && this._animatables.push(zD)
-      }
-      _clearAnimationLocks() {
-        this._radiusIsAnimating = !1, this._attachedCamera && (this._attachedCamera.wheelPrecision = this._cachedWheelPrecision)
-      }
-      stopAllAnimations() {
-        for (this._attachedCamera && (this._attachedCamera.animations = []); this._animatables.length;) this._animatables[0].onAnimationEnd = null, this._animatables[0].stop(), this._animatables.shift()
-      }
-    }
-    GD.EasingFunction = new class extends ID {
-      constructor() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
-        super(), this.amplitude = DD
-      }
-      easeInCore(DD) {
-        const zD = Math.max(0, this.amplitude);
-        return Math.pow(DD, 3) - DD * zD * Math.sin(3.141592653589793 * DD)
-      }
-    }(.3), GD.EasingMode = ID.EASINGMODE_EASEOUT;
-    class hD {
-      constructor() {
-        this.onTargetFramingAnimationEndObservable = new KD.b, this._mode = hD.FitFrustumSidesMode, this._radiusScale = 1, this._positionScale = .5, this._defaultElevation = .3, this._elevationReturnTime = 1500, this._elevationReturnWaitTime = 1e3, this._zoomStopsAnimation = !1, this._framingTime = 1500, this.autoCorrectCameraLimitsAndSensibility = !0, this._attachedCamera = null, this._isPointerDown = !1, this._lastInteractionTime = -1 / 0, this._animatables = new Array, this._betaIsAnimating = !1
-      }
-      get name() {
-        return "Framing"
-      }
-      set mode(DD) {
-        this._mode = DD
-      }
-      get mode() {
-        return this._mode
-      }
-      set radiusScale(DD) {
-        this._radiusScale = DD
-      }
-      get radiusScale() {
-        return this._radiusScale
-      }
-      set positionScale(DD) {
-        this._positionScale = DD
-      }
-      get positionScale() {
-        return this._positionScale
-      }
-      set defaultElevation(DD) {
-        this._defaultElevation = DD
-      }
-      get defaultElevation() {
-        return this._defaultElevation
-      }
-      set elevationReturnTime(DD) {
-        this._elevationReturnTime = DD
-      }
-      get elevationReturnTime() {
-        return this._elevationReturnTime
-      }
-      set elevationReturnWaitTime(DD) {
-        this._elevationReturnWaitTime = DD
-      }
-      get elevationReturnWaitTime() {
-        return this._elevationReturnWaitTime
-      }
-      set zoomStopsAnimation(DD) {
-        this._zoomStopsAnimation = DD
-      }
-      get zoomStopsAnimation() {
-        return this._zoomStopsAnimation
-      }
-      set framingTime(DD) {
-        this._framingTime = DD
-      }
-      get framingTime() {
-        return this._framingTime
-      }
-      get attachedNode() {
-        return this._attachedCamera
-      }
-      init() {}
-      attach(DD) {
-        this._attachedCamera = DD;
-        const zD = this._attachedCamera.Ul();
-        hD.EasingFunction.setEasingMode(hD.EasingMode), this._onPrePointerObservableObserver = zD.onPrePointerObservable.add((DD => {
-          DD.type !== RD.c.POINTERDOWN ? DD.type === RD.c.POINTERUP && (this._isPointerDown = !1) : this._isPointerDown = !0
-        })), this._onMeshTargetChangedObserver = DD.onMeshTargetChangedObservable.add((DD => {
-          DD && DD.FW && this.zoomOnMesh(DD, void 0, (() => {
-            this.onTargetFramingAnimationEndObservable.notifyObservers()
-          }))
-        })), this._onAfterCheckInputsObserver = DD.onAfterCheckInputsObservable.add((() => {
-          this._applyUserInteraction(), this._maintainCameraAboveGround()
-        }))
-      }
-      detach() {
-        if (!this._attachedCamera) return;
-        const DD = this._attachedCamera.Ul();
-        this._onPrePointerObservableObserver && DD.onPrePointerObservable.remove(this._onPrePointerObservableObserver), this._onAfterCheckInputsObserver && this._attachedCamera.onAfterCheckInputsObservable.remove(this._onAfterCheckInputsObserver), this._onMeshTargetChangedObserver && this._attachedCamera.onMeshTargetChangedObservable.remove(this._onMeshTargetChangedObserver), this._attachedCamera = null
-      }
-      zoomOnMesh(DD) {
-        let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        DD.computeWorldMatrix(!0);
-        const pD = DD.FW().boundingBox;
-        this.zoomOnBoundingInfo(pD.minimumWorld, pD.maximumWorld, zD, wD)
-      }
-      zoomOnMeshHierarchy(DD) {
-        let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        DD.computeWorldMatrix(!0);
-        const pD = DD.getHierarchyBoundingVectors(!0);
-        this.zoomOnBoundingInfo(pD.min, pD.max, zD, wD)
-      }
-      zoomOnMeshesHierarchy(DD) {
-        let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-          wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-        const pD = new rD.s(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE),
-          sD = new rD.s(-Number.MAX_VALUE, -Number.MAX_VALUE, -Number.MAX_VALUE);
-        for (let KD = 0; KD < DD.length; KD++) {
-          const zD = DD[KD].getHierarchyBoundingVectors(!0);
-          rD.s.CheckExtends(zD.min, pD, sD), rD.s.CheckExtends(zD.max, pD, sD)
+        get hasAlpha() {
+          return this._hasAlpha
         }
-        this.zoomOnBoundingInfo(pD, sD, zD, wD)
-      }
-      zoomOnBoundingInfo(DD, zD) {
-        let wD, pD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-          sD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        if (!this._attachedCamera) return !1;
-        const KD = DD.y,
-          LD = KD + (zD.y - KD) * this._positionScale,
-          cD = zD.subtract(DD).scale(.5);
-        if (!isFinite(LD)) return !1;
-        if (pD) wD = new rD.s(0, LD, 0);
-        else {
-          const zD = DD.add(cD);
-          wD = new rD.s(zD.x, LD, zD.z)
+        set getAlphaFromRGB(pp) {
+          this._getAlphaFromRGB !== pp && (this._getAlphaFromRGB = pp, this._scene && this._scene.markAllMaterialsAsDirty(1, (pp => pp.hasTexture(this))))
         }
-        this._vectorTransition || (this._vectorTransition = BD.d.CreateAnimation("target", BD.d.ANIMATIONTYPE_VECTOR3, 60, hD.EasingFunction)), this._betaIsAnimating = !0;
-        let gD = BD.d.TransitionTo("target", wD, this._attachedCamera, this._attachedCamera.Ul(), 60, this._vectorTransition, this._framingTime);
-        gD && this._animatables.push(gD);
-        let RD = 0;
-        if (this._mode === hD.FitFrustumSidesMode) {
-          const wD = this._calculateLowerRadiusFromModelBoundingSphere(DD, zD);
-          this.autoCorrectCameraLimitsAndSensibility && (this._attachedCamera.lowerRadiusLimit = cD.length() + this._attachedCamera.minZ), RD = wD
-        } else this._mode === hD.IgnoreBoundsSizeMode && (RD = this._calculateLowerRadiusFromModelBoundingSphere(DD, zD), this.autoCorrectCameraLimitsAndSensibility && null === this._attachedCamera.lowerRadiusLimit && (this._attachedCamera.lowerRadiusLimit = this._attachedCamera.minZ));
-        if (this.autoCorrectCameraLimitsAndSensibility) {
-          const wD = zD.subtract(DD).length();
-          this._attachedCamera.panningSensibility = 5e3 / wD, this._attachedCamera.wheelPrecision = 100 / RD
+        get getAlphaFromRGB() {
+          return this._getAlphaFromRGB
         }
-        return this._radiusTransition || (this._radiusTransition = BD.d.CreateAnimation("radius", BD.d.ANIMATIONTYPE_FLOAT, 60, hD.EasingFunction)), gD = BD.d.TransitionTo("radius", RD, this._attachedCamera, this._attachedCamera.Ul(), 60, this._radiusTransition, this._framingTime, (() => {
-          this.stopAllAnimations(), sD && sD(), this._attachedCamera && this._attachedCamera.useInputToRestoreState && this._attachedCamera.storeState()
-        })), gD && this._animatables.push(gD), !0
-      }
-      _calculateLowerRadiusFromModelBoundingSphere(DD, zD) {
-        const wD = this._attachedCamera;
-        if (!wD) return 0;
-        let pD = wD._calculateLowerRadiusFromModelBoundingSphere(DD, zD, this._radiusScale);
-        return wD.lowerRadiusLimit && this._mode === hD.IgnoreBoundsSizeMode && (pD = pD < wD.lowerRadiusLimit ? wD.lowerRadiusLimit : pD), wD.upperRadiusLimit && (pD = pD > wD.upperRadiusLimit ? wD.upperRadiusLimit : pD), pD
-      }
-      _maintainCameraAboveGround() {
-        if (this._elevationReturnTime < 0) return;
-        const DD = AD.c.Now - this._lastInteractionTime,
-          zD = .5 * Math.PI - this._defaultElevation,
-          wD = .5 * Math.PI;
-        if (this._attachedCamera && !this._betaIsAnimating && this._attachedCamera.beta > wD && DD >= this._elevationReturnWaitTime) {
-          this._betaIsAnimating = !0, this.stopAllAnimations(), this._betaTransition || (this._betaTransition = BD.d.CreateAnimation("beta", BD.d.ANIMATIONTYPE_FLOAT, 60, hD.EasingFunction));
-          const DD = BD.d.TransitionTo("beta", zD, this._attachedCamera, this._attachedCamera.Ul(), 60, this._betaTransition, this._elevationReturnTime, (() => {
-            this._clearAnimationLocks(), this.stopAllAnimations()
-          }));
-          DD && this._animatables.push(DD)
+        set coordinatesIndex(pp) {
+          this._coordinatesIndex !== pp && (this._coordinatesIndex = pp, this._scene && this._scene.markAllMaterialsAsDirty(1, (pp => pp.hasTexture(this))))
         }
-      }
-      _clearAnimationLocks() {
-        this._betaIsAnimating = !1
-      }
-      _applyUserInteraction() {
-        this.isUserIsMoving && (this._lastInteractionTime = AD.c.Now, this.stopAllAnimations(), this._clearAnimationLocks())
-      }
-      stopAllAnimations() {
-        for (this._attachedCamera && (this._attachedCamera.animations = []); this._animatables.length;) this._animatables[0] && (this._animatables[0].onAnimationEnd = null, this._animatables[0].stop()), this._animatables.shift()
-      }
-      get isUserIsMoving() {
-        return !!this._attachedCamera && (0 !== this._attachedCamera.inertialAlphaOffset || 0 !== this._attachedCamera.inertialBetaOffset || 0 !== this._attachedCamera.inertialRadiusOffset || 0 !== this._attachedCamera.inertialPanningX || 0 !== this._attachedCamera.inertialPanningY || this._isPointerDown)
-      }
-    }
-    hD.EasingFunction = new class extends ID {
-      constructor() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-        super(), this.exponent = DD
-      }
-      easeInCore(DD) {
-        return this.exponent <= 0 ? DD : (Math.exp(this.exponent * DD) - 1) / (Math.exp(this.exponent) - 1)
-      }
-    }, hD.EasingMode = ID.EASINGMODE_EASEINOUT, hD.IgnoreBoundsSizeMode = 0, hD.FitFrustumSidesMode = 1;
-    var nD = wD(40148),
-      MD = wD(40146),
-      OD = wD(40179),
-      JD = wD(40027);
-    let ED = (() => {
-        var DD;
-        let zD, wD = [],
-          KD = [];
-        return DD = class {
-          constructor() {
-            this._currentMousePointerIdDown = -1, this.buttons = (0, pD.m)(this, wD, [0, 1, 2]), this._pointerInput = (0, pD.m)(this, KD)
-          }
-          attachControl(DD) {
-            DD = JD.h.BackCompatCameraNoPreventDefault(arguments);
-            const zD = this.camera.iI(),
-              wD = zD.getInputElement();
-            let pD = 0,
-              sD = null;
-            this._pointA = null, this._pointB = null, this._altKey = !1, this._ctrlKey = !1, this._metaKey = !1, this._shiftKey = !1, this._buttonsPressed = 0, this._pointerInput = KD => {
-              const rD = KD.event,
-                LD = "touch" === rD.pointerType;
-              if (KD.type !== RD.c.POINTERMOVE && -1 === this.buttons.indexOf(rD.button)) return;
-              const cD = rD.target;
-              if (this._altKey = rD.altKey, this._ctrlKey = rD.ctrlKey, this._metaKey = rD.metaKey, this._shiftKey = rD.shiftKey, this._buttonsPressed = rD.buttons, zD.isPointerLock) {
-                const DD = rD.movementX,
-                  zD = rD.movementY;
-                this.onTouch(null, DD, zD), this._pointA = null, this._pointB = null
-              } else {
-                if (KD.type !== RD.c.POINTERDOWN && KD.type !== RD.c.POINTERDOUBLETAP && LD && this._pointA?.pointerId !== rD.pointerId && this._pointB?.pointerId !== rD.pointerId) return;
-                if (KD.type !== RD.c.POINTERDOWN || -1 !== this._currentMousePointerIdDown && !LD)
-                  if (KD.type === RD.c.POINTERDOUBLETAP) this.onDoubleTap(rD.pointerType, rD);
-                  else if (KD.type !== RD.c.POINTERUP || this._currentMousePointerIdDown !== rD.pointerId && !LD) {
-                  if (KD.type === RD.c.POINTERMOVE)
-                    if (DD || rD.preventDefault(), this._pointA && null === this._pointB) {
-                      const DD = rD.clientX - this._pointA.x,
-                        zD = rD.clientY - this._pointA.y;
-                      this._pointA.x = rD.clientX, this._pointA.y = rD.clientY, this.onTouch(this._pointA, DD, zD)
-                    } else if (this._pointA && this._pointB) {
-                    const DD = this._pointA.pointerId === rD.pointerId ? this._pointA : this._pointB;
-                    DD.x = rD.clientX, DD.y = rD.clientY;
-                    const zD = this._pointA.x - this._pointB.x,
-                      wD = this._pointA.y - this._pointB.y,
-                      LD = zD * zD + wD * wD,
-                      cD = {
-                        x: (this._pointA.x + this._pointB.x) / 2,
-                        y: (this._pointA.y + this._pointB.y) / 2,
-                        pointerId: rD.pointerId,
-                        type: KD.type
-                      };
-                    this.onMultiTouch(this._pointA, this._pointB, pD, LD, sD, cD), sD = cD, pD = LD
-                  }
-                } else {
-                  try {
-                    cD?.releasePointerCapture(rD.pointerId)
-                  } catch (gD) {}
-                  LD || (this._pointB = null), zD._badOS ? this._pointA = this._pointB = null : this._pointB && this._pointA && this._pointA.pointerId == rD.pointerId ? (this._pointA = this._pointB, this._pointB = null) : this._pointA && this._pointB && this._pointB.pointerId == rD.pointerId ? this._pointB = null : this._pointA = this._pointB = null, (0 !== pD || sD) && (this.onMultiTouch(this._pointA, this._pointB, pD, 0, sD, null), pD = 0, sD = null), this._currentMousePointerIdDown = -1, this.onButtonUp(rD), DD || rD.preventDefault()
-                } else {
-                  try {
-                    cD?.setPointerCapture(rD.pointerId)
-                  } catch (gD) {}
-                  if (null === this._pointA) this._pointA = {
-                    x: rD.clientX,
-                    y: rD.clientY,
-                    pointerId: rD.pointerId,
-                    type: rD.pointerType,
-                    button: rD.button
-                  };
-                  else {
-                    if (null !== this._pointB) return;
-                    this._pointB = {
-                      x: rD.clientX,
-                      y: rD.clientY,
-                      pointerId: rD.pointerId,
-                      type: rD.pointerType,
-                      button: rD.button
-                    }
-                  } - 1 !== this._currentMousePointerIdDown || LD || (this._currentMousePointerIdDown = rD.pointerId), this.onButtonDown(rD), DD || (rD.preventDefault(), wD && wD.focus())
-                }
-              }
-            }, this._observer = this.camera.Ul()._inputManager._addCameraPointerObserver(this._pointerInput, RD.c.POINTERDOWN | RD.c.POINTERUP | RD.c.POINTERMOVE | RD.c.POINTERDOUBLETAP), this._onLostFocus = () => {
-              this._pointA = this._pointB = null, pD = 0, sD = null, this.onLostFocus()
-            }, this._contextMenuBind = DD => this.onContextMenu(DD), wD && wD.addEventListener("contextmenu", this._contextMenuBind, !1);
-            const KD = this.camera.Ul().iI().getHostWindow();
-            KD && JD.h.RegisterTopRootEvents(KD, [{
-              name: "blur",
-              handler: this._onLostFocus
-            }])
-          }
-          detachControl() {
-            if (this._onLostFocus) {
-              const DD = this.camera.Ul().iI().getHostWindow();
-              DD && JD.h.UnregisterTopRootEvents(DD, [{
-                name: "blur",
-                handler: this._onLostFocus
-              }])
-            }
-            if (this._observer) {
-              if (this.camera.Ul()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._contextMenuBind) {
-                const DD = this.camera.Ul().iI().getInputElement();
-                DD && DD.removeEventListener("contextmenu", this._contextMenuBind)
-              }
-              this._onLostFocus = null
-            }
-            this._altKey = !1, this._ctrlKey = !1, this._metaKey = !1, this._shiftKey = !1, this._buttonsPressed = 0, this._currentMousePointerIdDown = -1
-          }
-          getClassName() {
-            return "BaseCameraPointersInput"
-          }
-          getSimpleName() {
-            return "pointers"
-          }
-          onDoubleTap(DD, zD) {}
-          onTouch(DD, zD, wD) {}
-          onMultiTouch(DD, zD, wD, pD, sD, KD) {}
-          onContextMenu(DD) {
-            DD.preventDefault()
-          }
-          onButtonDown(DD) {}
-          onButtonUp(DD) {}
-          onLostFocus() {}
-        }, (() => {
-          const rD = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-          zD = [(0, sD.C)()], (0, pD.i)(null, null, zD, {
-            kind: "field",
-            name: "buttons",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "buttons" in DD,
-              get: DD => DD.buttons,
-              set: (DD, zD) => {
-                DD.buttons = zD
-              }
-            },
-            metadata: rD
-          }, wD, KD), rD && Object.defineProperty(DD, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: rD
-          })
-        })(), DD
-      })(),
-      QD = (() => {
-        var DD;
-        let zD, wD, KD, rD = ED,
-          LD = [],
-          cD = [],
-          gD = [],
-          RD = [],
-          AD = [],
-          UD = [];
-        return DD = class extends rD {
-          constructor() {
-            super(...arguments), this.pinchZoom = (0, pD.m)(this, LD, !0), this.multiTouchPanning = ((0, pD.m)(this, cD), (0, pD.m)(this, gD, !0)), this.multiTouchPanAndZoom = ((0, pD.m)(this, RD), (0, pD.m)(this, AD, !0)), this._isPinching = ((0, pD.m)(this, UD), !1), this._twoFingerActivityCount = 0, this._shouldStartPinchZoom = !1
-          }
-          _computePinchZoom(DD, zD) {}
-          _computeMultiTouchPanning(DD, zD) {}
-          onMultiTouch(DD, zD, wD, pD, sD, KD) {
-            0 === wD && null === sD || 0 === pD && null === KD || (this.multiTouchPanAndZoom ? (this._computePinchZoom(wD, pD), this._computeMultiTouchPanning(sD, KD)) : this.multiTouchPanning && this.pinchZoom ? (this._twoFingerActivityCount++, this._isPinching || this._shouldStartPinchZoom ? (this._computePinchZoom(wD, pD), this._isPinching = !0) : this._computeMultiTouchPanning(sD, KD)) : this.multiTouchPanning ? this._computeMultiTouchPanning(sD, KD) : this.pinchZoom && this._computePinchZoom(wD, pD))
-          }
-          onButtonUp(DD) {
-            this._twoFingerActivityCount = 0, this._isPinching = !1
-          }
-          onLostFocus() {
-            this._twoFingerActivityCount = 0, this._isPinching = !1
-          }
-        }, (() => {
-          const fD = "function" === typeof Symbol && Symbol.metadata ? Object.create(rD[Symbol.metadata] ?? null) : void 0;
-          zD = [(0, sD.C)()], wD = [(0, sD.C)()], KD = [(0, sD.C)()], (0, pD.i)(null, null, zD, {
-            kind: "field",
-            name: "pinchZoom",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "pinchZoom" in DD,
-              get: DD => DD.pinchZoom,
-              set: (DD, zD) => {
-                DD.pinchZoom = zD
-              }
-            },
-            metadata: fD
-          }, LD, cD), (0, pD.i)(null, null, wD, {
-            kind: "field",
-            name: "multiTouchPanning",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "multiTouchPanning" in DD,
-              get: DD => DD.multiTouchPanning,
-              set: (DD, zD) => {
-                DD.multiTouchPanning = zD
-              }
-            },
-            metadata: fD
-          }, gD, RD), (0, pD.i)(null, null, KD, {
-            kind: "field",
-            name: "multiTouchPanAndZoom",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "multiTouchPanAndZoom" in DD,
-              get: DD => DD.multiTouchPanAndZoom,
-              set: (DD, zD) => {
-                DD.multiTouchPanAndZoom = zD
-              }
-            },
-            metadata: fD
-          }, AD, UD), fD && Object.defineProperty(DD, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: fD
-          })
-        })(), DD
-      })(),
-      XD = (() => {
-        var DD;
-        let zD, wD, KD, rD, LD, cD, gD, RD = QD,
-          AD = [],
-          UD = [],
-          fD = [],
-          ID = [],
-          BD = [],
-          GD = [],
-          hD = [],
-          nD = [],
-          MD = [],
-          OD = [],
-          JD = [],
-          ED = [],
-          XD = [],
-          VD = [];
-        return DD = class extends RD {
-          constructor() {
-            super(...arguments), this.buttons = (0, pD.m)(this, AD, [0, 1, 2]), this.angularSensibilityX = ((0, pD.m)(this, UD), (0, pD.m)(this, fD, 1e3)), this.angularSensibilityY = ((0, pD.m)(this, ID), (0, pD.m)(this, BD, 1e3)), this.pinchPrecision = ((0, pD.m)(this, GD), (0, pD.m)(this, hD, 12)), this.pinchDeltaPercentage = ((0, pD.m)(this, nD), (0, pD.m)(this, MD, 0)), this.useNaturalPinchZoom = ((0, pD.m)(this, OD), (0, pD.m)(this, JD, !1)), this.panningSensibility = ((0, pD.m)(this, ED), (0, pD.m)(this, XD, 1e3)), this.pinchInwards = ((0, pD.m)(this, VD), !0), this._activeEntry = null, this._pointerLockConditions = {
-              button: 0,
-              modifiers: {}
-            }, this._pointerModifiers = {
-              ctrl: !1,
-              alt: !1,
-              shift: !1
-            }, this._pointerConditions = {
-              modifiers: this._pointerModifiers
-            }
-          }
-          getClassName() {
-            return "ArcRotateCameraPointersInput"
-          }
-          _computeMultiTouchPanning(DD, zD) {
-            if (DD && zD) {
-              const wD = zD.x - DD.x,
-                pD = zD.y - DD.y,
-                sD = this.camera.movement.input.getEntry("pointer", "pan"),
-                KD = sD?.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
-              0 !== KD && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -wD * KD, this.camera.movement.panAccumulatedPixels.y += pD * KD)
-            }
-          }
-          _computePinchZoom(zD, wD) {
-            const pD = this.camera.radius || DD.MinimumRadiusForPinch;
-            if (this.useNaturalPinchZoom) this.camera.radius = pD * Math.sqrt(zD) / Math.sqrt(wD);
-            else if (this.pinchDeltaPercentage) {
-              const DD = .001 * (wD - zD) * pD * this.pinchDeltaPercentage;
-              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += DD
-            } else {
-              const DD = (wD - zD) / (this.pinchPrecision * (this.pinchInwards ? 1 : -1) * (this.angularSensibilityX + this.angularSensibilityY) / 2);
-              this.camera.movement.activeInput = !0, this.camera.movement.zoomAccumulatedPixels += DD
-            }
-          }
-          onTouch(DD, zD, wD) {
-            const pD = this._activeEntry ?? (this.camera.iI().isPointerLock ? this.camera.movement.input.resolveInteraction("pointer", this._pointerLockConditions) : null);
-            if (pD)
-              if ("pan" === pD.interaction) {
-                const DD = pD.sensitivity ?? (0 !== this.panningSensibility ? 1 / this.panningSensibility : 0);
-                0 !== DD && (this.camera.movement.activeInput = !0, this.camera.movement.panAccumulatedPixels.x += -zD * DD, this.camera.movement.panAccumulatedPixels.y += wD * DD)
-              } else if ("rotate" === pD.interaction) {
-              const DD = pD.uF ?? pD.sensitivity ?? 1 / this.angularSensibilityX,
-                sD = pD.vF ?? pD.sensitivity ?? 1 / this.angularSensibilityY;
-              this.camera.movement.activeInput = !0, this.camera.movement.rotationAccumulatedPixels.x += -zD * DD, this.camera.movement.rotationAccumulatedPixels.y += -wD * sD
-            }
-          }
-          onDoubleTap() {
-            this.camera.useInputToRestoreState && this.camera.restoreState()
-          }
-          onMultiTouch(DD, zD, wD, pD, sD, KD) {
-            this._shouldStartPinchZoom = this._twoFingerActivityCount < 20 && Math.abs(Math.sqrt(pD) - Math.sqrt(wD)) > this.camera.pinchToPanMaxDistance, super.onMultiTouch(DD, zD, wD, pD, sD, KD)
-          }
-          onButtonDown(DD) {
-            this._pointerConditions.button = DD.button, this._pointerModifiers.ctrl = DD.ctrlKey, this._pointerModifiers.alt = DD.altKey, this._pointerModifiers.shift = DD.shiftKey, this._activeEntry = this.camera.movement.input.resolveInteraction("pointer", this._pointerConditions), super.onButtonDown(DD)
-          }
-          onButtonUp(DD) {
-            this._activeEntry = null, super.onButtonUp(DD)
-          }
-          onLostFocus() {
-            this._activeEntry = null, super.onLostFocus()
-          }
-        }, (() => {
-          const QD = "function" === typeof Symbol && Symbol.metadata ? Object.create(RD[Symbol.metadata] ?? null) : void 0;
-          zD = [(0, sD.C)()], wD = [(0, sD.C)()], KD = [(0, sD.C)()], rD = [(0, sD.C)()], LD = [(0, sD.C)()], cD = [(0, sD.C)()], gD = [(0, sD.C)()], (0, pD.i)(null, null, zD, {
-            kind: "field",
-            name: "buttons",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "buttons" in DD,
-              get: DD => DD.buttons,
-              set: (DD, zD) => {
-                DD.buttons = zD
-              }
-            },
-            metadata: QD
-          }, AD, UD), (0, pD.i)(null, null, wD, {
-            kind: "field",
-            name: "angularSensibilityX",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "angularSensibilityX" in DD,
-              get: DD => DD.angularSensibilityX,
-              set: (DD, zD) => {
-                DD.angularSensibilityX = zD
-              }
-            },
-            metadata: QD
-          }, fD, ID), (0, pD.i)(null, null, KD, {
-            kind: "field",
-            name: "angularSensibilityY",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "angularSensibilityY" in DD,
-              get: DD => DD.angularSensibilityY,
-              set: (DD, zD) => {
-                DD.angularSensibilityY = zD
-              }
-            },
-            metadata: QD
-          }, BD, GD), (0, pD.i)(null, null, rD, {
-            kind: "field",
-            name: "pinchPrecision",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "pinchPrecision" in DD,
-              get: DD => DD.pinchPrecision,
-              set: (DD, zD) => {
-                DD.pinchPrecision = zD
-              }
-            },
-            metadata: QD
-          }, hD, nD), (0, pD.i)(null, null, LD, {
-            kind: "field",
-            name: "pinchDeltaPercentage",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "pinchDeltaPercentage" in DD,
-              get: DD => DD.pinchDeltaPercentage,
-              set: (DD, zD) => {
-                DD.pinchDeltaPercentage = zD
-              }
-            },
-            metadata: QD
-          }, MD, OD), (0, pD.i)(null, null, cD, {
-            kind: "field",
-            name: "useNaturalPinchZoom",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "useNaturalPinchZoom" in DD,
-              get: DD => DD.useNaturalPinchZoom,
-              set: (DD, zD) => {
-                DD.useNaturalPinchZoom = zD
-              }
-            },
-            metadata: QD
-          }, JD, ED), (0, pD.i)(null, null, gD, {
-            kind: "field",
-            name: "panningSensibility",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "panningSensibility" in DD,
-              get: DD => DD.panningSensibility,
-              set: (DD, zD) => {
-                DD.panningSensibility = zD
-              }
-            },
-            metadata: QD
-          }, XD, VD), QD && Object.defineProperty(DD, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: QD
-          })
-        })(), DD.MinimumRadiusForPinch = .001, DD
-      })();
-    OD.d.ArcRotateCameraPointersInput = XD;
-    var VD = wD(40108);
-    let PD = (() => {
-      var DD;
-      let zD, wD, KD, LD, cD, gD, RD, AD, UD, fD, ID, BD = [],
-        GD = [],
-        hD = [],
-        nD = [],
-        MD = [],
-        OD = [],
-        ED = [],
-        QD = [],
-        XD = [],
-        PD = [],
-        CD = [],
-        xD = [],
-        TD = [],
-        bD = [],
-        jD = [],
-        dD = [],
-        SD = [],
-        iD = [],
-        lD = [],
-        WD = [],
-        ND = [];
-      return DD = class {
-        constructor() {
-          this.camera = (0, pD.m)(this, BD), this.keysUp = (0, pD.m)(this, GD, [38]), this.keysDown = ((0, pD.m)(this, hD), (0, pD.m)(this, nD, [40])), this.keysLeft = ((0, pD.m)(this, MD), (0, pD.m)(this, OD, [37])), this.keysRight = ((0, pD.m)(this, ED), (0, pD.m)(this, QD, [39])), this.keysReset = ((0, pD.m)(this, XD), (0, pD.m)(this, PD, [220])), this.keysZoomIn = ((0, pD.m)(this, CD), (0, pD.m)(this, xD, [187, 107])), this.keysZoomOut = ((0, pD.m)(this, TD), (0, pD.m)(this, bD, [189, 109])), this.panningSensibility = ((0, pD.m)(this, jD), (0, pD.m)(this, dD, 50)), this.zoomingSensibility = ((0, pD.m)(this, SD), (0, pD.m)(this, iD, 25)), this.angularSpeed = ((0, pD.m)(this, lD), (0, pD.m)(this, WD, .01)), this._useAltToZoom = ((0, pD.m)(this, ND), !0), this._keys = new Array, this._keyboardModifiers = {
-            ctrl: !1,
-            alt: !1
-          }, this._keyboardConditions = {
-            modifiers: this._keyboardModifiers
-          }, this._rotateDirection = new rD.r, this._panDirection = new rD.r
+        get coordinatesIndex() {
+          return this._coordinatesIndex
         }
-        get useAltToZoom() {
-          return this._useAltToZoom
+        set coordinatesMode(pp) {
+          this._coordinatesMode !== pp && (this._coordinatesMode = pp, this._scene && this._scene.markAllMaterialsAsDirty(1, (pp => pp.hasTexture(this))))
         }
-        set useAltToZoom(DD) {
-          this._useAltToZoom = DD, this._applyUseAltToZoomToInputMap()
+        get coordinatesMode() {
+          return this._coordinatesMode
         }
-        _applyUseAltToZoomToInputMap() {
-          if (!this.camera?.movement) return;
-          const DD = this.camera.movement.input,
-            zD = DD.getEntry("keyboard", "zoom", {
-              modifiers: {
-                alt: !0
-              }
-            });
-          !this._useAltToZoom && zD ? DD.inputMap.splice(DD.inputMap.indexOf(zD), 1) : this._useAltToZoom && !zD && DD.addEntry({
-            source: "keyboard",
-            modifiers: {
-              alt: !0
-            },
-            interaction: "zoom"
-          })
+        get wrapU() {
+          return this._wrapU
         }
-        attachControl(DD) {
-          DD = JD.h.BackCompatCameraNoPreventDefault(arguments), this._onCanvasBlurObserver || (this._scene = this.camera.Ul(), this._engine = this._scene.iI(), this._applyUseAltToZoomToInputMap(), this._onCanvasBlurObserver = this._engine.onCanvasBlurObservable.add((() => {
-            this._keys.length = 0
-          })), this._onKeyboardObserver = this._scene.onKeyboardObservable.add((zD => {
-            const wD = zD.event;
-            if (!wD.metaKey)
-              if (zD.type === VD.d.KEYDOWN) {
-                if (this._ctrlPressed = wD.ctrlKey, this._altPressed = wD.altKey, -1 !== this.keysUp.indexOf(wD.keyCode) || -1 !== this.keysDown.indexOf(wD.keyCode) || -1 !== this.keysLeft.indexOf(wD.keyCode) || -1 !== this.keysRight.indexOf(wD.keyCode) || -1 !== this.keysReset.indexOf(wD.keyCode) || -1 !== this.keysZoomIn.indexOf(wD.keyCode) || -1 !== this.keysZoomOut.indexOf(wD.keyCode)) {
-                  -1 === this._keys.indexOf(wD.keyCode) && this._keys.push(wD.keyCode), wD.preventDefault && (DD || wD.preventDefault())
-                }
-              } else if (-1 !== this.keysUp.indexOf(wD.keyCode) || -1 !== this.keysDown.indexOf(wD.keyCode) || -1 !== this.keysLeft.indexOf(wD.keyCode) || -1 !== this.keysRight.indexOf(wD.keyCode) || -1 !== this.keysReset.indexOf(wD.keyCode) || -1 !== this.keysZoomIn.indexOf(wD.keyCode) || -1 !== this.keysZoomOut.indexOf(wD.keyCode)) {
-              const zD = this._keys.indexOf(wD.keyCode);
-              zD >= 0 && this._keys.splice(zD, 1), wD.preventDefault && (DD || wD.preventDefault())
-            }
-          })))
+        set wrapU(pp) {
+          this._wrapU = pp
         }
-        detachControl() {
-          this._scene && (this._onKeyboardObserver && this._scene.onKeyboardObservable.remove(this._onKeyboardObserver), this._onCanvasBlurObserver && this._engine.onCanvasBlurObservable.remove(this._onCanvasBlurObserver), this._onKeyboardObserver = null, this._onCanvasBlurObserver = null), this._keys.length = 0
+        get wrapV() {
+          return this._wrapV
         }
-        checkInputs() {
-          if (this._onKeyboardObserver) {
-            const DD = this.camera,
-              zD = DD.movement.input;
-            this._keyboardModifiers.ctrl = this._ctrlPressed, this._keyboardModifiers.alt = this._altPressed;
-            const wD = this._rotateDirection.set(0, 0),
-              pD = this._panDirection.set(0, 0);
-            let sD = 0,
-              KD = 0;
-            for (let rD = 0; rD < this._keys.length; rD++) {
-              const LD = this._keys[rD];
-              if (this._keyboardConditions.key = LD, -1 === this.keysReset.indexOf(LD)) {
-                const DD = zD.resolveInteraction("keyboard", this._keyboardConditions);
-                if (DD)
-                  if ("pan" === DD.interaction) KD = Math.max(KD, DD.sensitivity ?? 1 / this.panningSensibility), -1 !== this.keysLeft.indexOf(LD) ? pD.x -= 1 : -1 !== this.keysRight.indexOf(LD) ? pD.x += 1 : -1 !== this.keysUp.indexOf(LD) ? pD.y += 1 : -1 !== this.keysDown.indexOf(LD) && (pD.y -= 1);
-                  else if ("zoom" === DD.interaction) {
-                  const wD = DD.sensitivity ?? 1 / this.zoomingSensibility; - 1 !== this.keysUp.indexOf(LD) || -1 !== this.keysZoomIn.indexOf(LD) ? zD.handlers.zoom(wD) : -1 === this.keysDown.indexOf(LD) && -1 === this.keysZoomOut.indexOf(LD) || zD.handlers.zoom(-wD)
-                } else "rotate" === DD.interaction && (sD = Math.max(sD, DD.sensitivity ?? this.angularSpeed), -1 !== this.keysLeft.indexOf(LD) ? wD.x -= 1 : -1 !== this.keysRight.indexOf(LD) ? wD.x += 1 : -1 !== this.keysUp.indexOf(LD) ? wD.y -= 1 : -1 !== this.keysDown.indexOf(LD) && (wD.y += 1))
-              } - 1 !== this.keysReset.indexOf(LD) && DD.useInputToRestoreState && DD.restoreState()
-            }
-            0 === wD.x && 0 === wD.y || (wD.normalize().scaleInPlace(sD), zD.handlers.rotate(wD.x, wD.y)), 0 === pD.x && 0 === pD.y || (pD.normalize().scaleInPlace(KD), zD.handlers.pan(pD.x, pD.y))
+        set wrapV(pp) {
+          this._wrapV = pp
+        }
+        get isCube() {
+          return this._texture ? this._texture.isCube : this._isCube
+        }
+        set isCube(pp) {
+          this._texture ? this._texture.isCube = pp : this._isCube = pp
+        }
+        get is3D() {
+          return !!this._texture && this._texture.is3D
+        }
+        set is3D(pp) {
+          this._texture && (this._texture.is3D = pp)
+        }
+        get is2DArray() {
+          return !!this._texture && this._texture.is2DArray
+        }
+        set is2DArray(pp) {
+          this._texture && (this._texture.is2DArray = pp)
+        }
+        get gammaSpace() {
+          return this._texture ? (null === this._texture._gammaSpace && (this._texture._gammaSpace = this._gammaSpace), this._texture._gammaSpace && !this._texture._useSRGBBuffer) : this._gammaSpace
+        }
+        set gammaSpace(pp) {
+          if (this._texture) {
+            if (this._texture._gammaSpace === pp) return;
+            this._texture._gammaSpace = pp
+          } else {
+            if (this._gammaSpace === pp) return;
+            this._gammaSpace = pp
           }
+          this.Gl()?.markAllMaterialsAsDirty(1, (pp => pp.hasTexture(this)))
+        }
+        get isRGBD() {
+          return null != this._texture && this._texture._isRGBD
+        }
+        set isRGBD(pp) {
+          pp !== this.isRGBD && (this._texture && (this._texture._isRGBD = pp), this.Gl()?.markAllMaterialsAsDirty(1, (pp => pp.hasTexture(this))))
+        }
+        get noMipmap() {
+          return !1
+        }
+        get lodGenerationOffset() {
+          return this._texture ? this._texture._lodGenerationOffset : 0
+        }
+        set lodGenerationOffset(pp) {
+          this._texture && (this._texture._lodGenerationOffset = pp)
+        }
+        get lodGenerationScale() {
+          return this._texture ? this._texture._lodGenerationScale : 0
+        }
+        set lodGenerationScale(pp) {
+          this._texture && (this._texture._lodGenerationScale = pp)
+        }
+        get linearSpecularLOD() {
+          return !!this._texture && this._texture._linearSpecularLOD
+        }
+        set linearSpecularLOD(pp) {
+          this._texture && (this._texture._linearSpecularLOD = pp)
+        }
+        get irradianceTexture() {
+          return this._texture ? this._texture._irradianceTexture : null
+        }
+        set irradianceTexture(pp) {
+          this._texture && (this._texture._irradianceTexture = pp)
+        }
+        get uid() {
+          return this._uid || (this._uid = (0, Lp.e)()), this._uid
+        }
+        toString() {
+          return this.name
         }
         getClassName() {
-          return "ArcRotateCameraKeyboardMoveInput"
+          return "BaseTexture"
         }
-        getSimpleName() {
-          return "keyboard"
+        set onDispose(pp) {
+          this._onDisposeObserver && this.Kl.remove(this._onDisposeObserver), this._onDisposeObserver = this.Kl.add(pp)
         }
-      }, (() => {
-        const rD = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        zD = [(0, sD.C)()], wD = [(0, sD.C)()], KD = [(0, sD.C)()], LD = [(0, sD.C)()], cD = [(0, sD.C)()], gD = [(0, sD.C)()], RD = [(0, sD.C)()], AD = [(0, sD.C)()], UD = [(0, sD.C)()], fD = [(0, sD.C)()], ID = [(0, sD.C)()], (0, pD.i)(DD, null, ID, {
-          kind: "getter",
-          name: "useAltToZoom",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "useAltToZoom" in DD,
-            get: DD => DD.useAltToZoom
-          },
-          metadata: rD
-        }, null, BD), (0, pD.i)(null, null, zD, {
-          kind: "field",
-          name: "keysUp",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysUp" in DD,
-            get: DD => DD.keysUp,
-            set: (DD, zD) => {
-              DD.keysUp = zD
-            }
-          },
-          metadata: rD
-        }, GD, hD), (0, pD.i)(null, null, wD, {
-          kind: "field",
-          name: "keysDown",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysDown" in DD,
-            get: DD => DD.keysDown,
-            set: (DD, zD) => {
-              DD.keysDown = zD
-            }
-          },
-          metadata: rD
-        }, nD, MD), (0, pD.i)(null, null, KD, {
-          kind: "field",
-          name: "keysLeft",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysLeft" in DD,
-            get: DD => DD.keysLeft,
-            set: (DD, zD) => {
-              DD.keysLeft = zD
-            }
-          },
-          metadata: rD
-        }, OD, ED), (0, pD.i)(null, null, LD, {
-          kind: "field",
-          name: "keysRight",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysRight" in DD,
-            get: DD => DD.keysRight,
-            set: (DD, zD) => {
-              DD.keysRight = zD
-            }
-          },
-          metadata: rD
-        }, QD, XD), (0, pD.i)(null, null, cD, {
-          kind: "field",
-          name: "keysReset",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysReset" in DD,
-            get: DD => DD.keysReset,
-            set: (DD, zD) => {
-              DD.keysReset = zD
-            }
-          },
-          metadata: rD
-        }, PD, CD), (0, pD.i)(null, null, gD, {
-          kind: "field",
-          name: "keysZoomIn",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysZoomIn" in DD,
-            get: DD => DD.keysZoomIn,
-            set: (DD, zD) => {
-              DD.keysZoomIn = zD
-            }
-          },
-          metadata: rD
-        }, xD, TD), (0, pD.i)(null, null, RD, {
-          kind: "field",
-          name: "keysZoomOut",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "keysZoomOut" in DD,
-            get: DD => DD.keysZoomOut,
-            set: (DD, zD) => {
-              DD.keysZoomOut = zD
-            }
-          },
-          metadata: rD
-        }, bD, jD), (0, pD.i)(null, null, AD, {
-          kind: "field",
-          name: "panningSensibility",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "panningSensibility" in DD,
-            get: DD => DD.panningSensibility,
-            set: (DD, zD) => {
-              DD.panningSensibility = zD
-            }
-          },
-          metadata: rD
-        }, dD, SD), (0, pD.i)(null, null, UD, {
-          kind: "field",
-          name: "zoomingSensibility",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "zoomingSensibility" in DD,
-            get: DD => DD.zoomingSensibility,
-            set: (DD, zD) => {
-              DD.zoomingSensibility = zD
-            }
-          },
-          metadata: rD
-        }, iD, lD), (0, pD.i)(null, null, fD, {
-          kind: "field",
-          name: "angularSpeed",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "angularSpeed" in DD,
-            get: DD => DD.angularSpeed,
-            set: (DD, zD) => {
-              DD.angularSpeed = zD
-            }
-          },
-          metadata: rD
-        }, WD, ND), rD && Object.defineProperty(DD, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: rD
-        })
-      })(), DD
-    })();
-    OD.d.ArcRotateCameraKeyboardMoveInput = PD;
-    var CD = wD(37754),
-      xD = wD(40115);
-    let TD = (() => {
-      var DD;
-      let zD, wD, KD, cD = [],
-        gD = [],
-        AD = [],
-        fD = [],
-        ID = [],
-        BD = [];
-      return DD = class {
-        constructor() {
-          this.wheelPrecision = (0, pD.m)(this, cD, 3), this.zoomToMouseLocation = ((0, pD.m)(this, gD), (0, pD.m)(this, AD, !1)), this.wheelDeltaPercentage = ((0, pD.m)(this, fD), (0, pD.m)(this, ID, 0)), this.customComputeDeltaFromMouseWheel = ((0, pD.m)(this, BD), null), this._viewOffset = new rD.s(0, 0, 0), this._globalOffset = new rD.s(0, 0, 0), this._inertialPanning = rD.s.Zero(), this._zoomToMouseRadiusOffset = 0
+        get isBlocking() {
+          return !0
         }
-        _computeDeltaFromMouseWheelLegacyEvent(DD, zD) {
-          let wD;
-          const pD = .01 * DD * this.wheelDeltaPercentage * zD;
-          return wD = DD > 0 ? pD / (1 + this.wheelDeltaPercentage) : pD * (1 + this.wheelDeltaPercentage), wD
+        get loadingError() {
+          return this._loadingError
         }
-        attachControl(DD) {
-          DD = JD.h.BackCompatCameraNoPreventDefault(arguments), this._wheel = zD => {
-            if (zD.type !== RD.c.POINTERWHEEL) return;
-            const wD = zD.event;
-            let pD;
-            const sD = wD.deltaMode === xD.e.DOM_DELTA_LINE ? 40 : 1,
-              KD = -wD.deltaY * sD;
-            if (this.customComputeDeltaFromMouseWheel) pD = this.customComputeDeltaFromMouseWheel(KD, this, wD);
-            else if (this.wheelDeltaPercentage) {
-              if (pD = this._computeDeltaFromMouseWheelLegacyEvent(KD, this.camera.radius), pD > 0) {
-                const DD = this.zoomToMouseLocation ? this._zoomToMouseRadiusOffset : this.camera.inertialRadiusOffset;
-                let zD = this.camera.radius,
-                  wD = DD + pD;
-                for (let pD = 0; pD < 20 && !(zD <= wD) && !(Math.abs(wD * this.camera.inertia) < .001); pD++) zD -= wD, wD *= this.camera.inertia;
-                zD = (0, LD.Clamp)(zD, 0, Number.MAX_VALUE), pD = this._computeDeltaFromMouseWheelLegacyEvent(KD, zD)
-              }
-            } else {
-              const DD = this.camera.movement.input.getEntry("wheel", "zoom");
-              pD = KD * (DD?.sensitivity ?? 1 / (40 * this.wheelPrecision))
-            }
-            pD && (this.zoomToMouseLocation ? (this._hitPlane || this._updateHitPlane(), this._zoomToMouse(pD)) : this.camera.movement.zoomAccumulatedPixels += pD), wD.preventDefault && (DD || wD.preventDefault())
-          }, this._observer = this.camera.Ul()._inputManager._addCameraPointerObserver(this._wheel, RD.c.POINTERWHEEL), this.zoomToMouseLocation && this._inertialPanning.I9(0)
+        get errorObject() {
+          return this._errorObject
         }
-        detachControl() {
-          this._observer && (this.camera.Ul()._inputManager._removeCameraPointerObserver(this._observer), this._observer = null, this._wheel = null)
+        constructor(ip) {
+          let cp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+          super(null), this.uniqueId = ((0, Op.l)(this, Np), (0, Op.l)(this, Tp, void 0)), this.name = ((0, Op.l)(this, fp), (0, Op.l)(this, bp, void 0)), this.displayName = ((0, Op.l)(this, hp), (0, Op.l)(this, ap, void 0)), this.metadata = ((0, Op.l)(this, np), (0, Op.l)(this, Fp, null)), this._internalMetadata = (0, Op.l)(this, gp), this.reservedDataStore = null, this._hasAlpha = (0, Op.l)(this, Gp, !1), this._getAlphaFromRGB = ((0, Op.l)(this, rp), (0, Op.l)(this, Zp, !1)), this.level = ((0, Op.l)(this, zp), (0, Op.l)(this, sp, 1)), this._coordinatesIndex = ((0, Op.l)(this, Kp), (0, Op.l)(this, Vp, 0)), this.optimizeUVAllocation = ((0, Op.l)(this, ii), (0, Op.l)(this, ci, !0)), this._coordinatesMode = ((0, Op.l)(this, Oi), (0, Op.l)(this, oi, 0)), this.wrapR = ((0, Op.l)(this, Ii), (0, Op.l)(this, Si, 1)), this.anisotropicFilteringLevel = ((0, Op.l)(this, xi), (0, Op.l)(this, Li, pp.DEFAULT_ANISOTROPIC_FILTERING_LEVEL)), this._isCube = ((0, Op.l)(this, Yi), !1), this._gammaSpace = !0, this.invertZ = (0, Op.l)(this, Di, !1), this.lodLevelInAlpha = ((0, Op.l)(this, Ai), (0, Op.l)(this, Pi, !1)), this._dominantDirection = ((0, Op.l)(this, Wi), null), this.isRenderTarget = (0, Op.l)(this, yi, !1), this._prefiltered = ((0, Op.l)(this, Ui), !1), this._forceSerialize = !1, this.animations = [], this.Kl = new Ip.d, this._onDisposeObserver = null, this._scene = null, this._uid = null, this._parentContainer = null, this._loadingError = !1, ip ? pp._IsScene(ip) ? this._scene = ip : this._engine = ip : this._scene = xp.e.LastCreatedScene, this._scene && (this.uniqueId = this._scene.getUniqueId(), this._scene.addTexture(this), this._engine = this._scene.gy()), this._texture = cp, this._uid = null
         }
-        checkInputs() {
-          if (!this.zoomToMouseLocation) return;
-          const DD = this.camera;
-          if (Math.abs(this._zoomToMouseRadiusOffset) + this._inertialPanning.lengthSquared() + Math.abs(DD.inertialAlphaOffset) + Math.abs(DD.inertialBetaOffset) + Math.abs(DD.inertialRadiusOffset)) {
-            this._updateHitPlane(), DD.target.addInPlace(this._inertialPanning), DD.radius -= this._zoomToMouseRadiusOffset;
-            const zD = DD.movement.getFrameIndependentDecay(DD.inertia);
-            this._inertialPanning.scaleInPlace(zD), this._zoomToMouseRadiusOffset *= zD, this._zeroIfClose(this._inertialPanning), Math.abs(this._zoomToMouseRadiusOffset) < UD.b && (this._zoomToMouseRadiusOffset = 0)
-          }
+        Gl() {
+          return this._scene
         }
-        getClassName() {
-          return "ArcRotateCameraMouseWheelInput"
+        _getEngine() {
+          return this._engine
         }
-        getSimpleName() {
-          return "mousewheel"
+        getTextureMatrix() {
+          return Sp.b.IdentityReadOnly
         }
-        _updateHitPlane() {
-          const DD = this.camera,
-            zD = DD.target.subtract(DD.position);
-          this._hitPlane = CD.e.FromPositionAndNormal(DD.target, zD)
+        getReflectionTextureMatrix() {
+          return Sp.b.IdentityReadOnly
         }
-        _getPosition() {
-          const DD = this.camera,
-            zD = DD.Ul(),
-            wD = zD.createPickingRay(zD.pointerX, zD.pointerY, rD.e.Identity(), DD, !1);
-          0 === DD.targetScreenOffset.x && 0 === DD.targetScreenOffset.y || (this._viewOffset.set(DD.targetScreenOffset.x, DD.targetScreenOffset.y, 0), DD.getViewMatrix().invertToRef(DD._cameraTransformMatrix), this._globalOffset = rD.s.TransformNormal(this._viewOffset, DD._cameraTransformMatrix), wD.origin.addInPlace(this._globalOffset));
-          let pD = 0;
-          return this._hitPlane && (pD = wD.intersectsPlane(this._hitPlane) ?? 0), wD.origin.addInPlace(wD.direction.scaleInPlace(pD))
+        getRefractionTextureMatrix() {
+          return this.getReflectionTextureMatrix()
         }
-        _zoomToMouse(DD) {
-          const zD = this.camera,
-            wD = 1 - zD.inertia,
-            pD = zD.movement.getFrameIndependentInputScale(zD.inertia);
-          if (zD.lowerRadiusLimit) {
-            const sD = zD.lowerRadiusLimit ?? 0;
-            zD.radius - (this._zoomToMouseRadiusOffset + DD * pD) / wD < sD && (DD = ((zD.radius - sD) * wD - this._zoomToMouseRadiusOffset) / pD)
-          }
-          if (zD.upperRadiusLimit) {
-            const sD = zD.upperRadiusLimit ?? 0;
-            zD.radius - (this._zoomToMouseRadiusOffset + DD * pD) / wD > sD && (DD = ((zD.radius - sD) * wD - this._zoomToMouseRadiusOffset) / pD)
-          }
-          const sD = DD / wD / zD.radius,
-            KD = this._getPosition(),
-            LD = rD.n.WI[6];
-          KD.subtractToRef(zD.target, LD), LD.scaleInPlace(sD), LD.scaleInPlace(wD), LD.scaleInPlace(pD), this._inertialPanning.addInPlace(LD), this._zoomToMouseRadiusOffset += DD * pD
+        isReadyOrNotBlocking() {
+          return !this.isBlocking || this.isReady() || this.loadingError
         }
-        _zeroIfClose(DD) {
-          Math.abs(DD.x) < UD.b && (DD.x = 0), Math.abs(DD.y) < UD.b && (DD.y = 0), Math.abs(DD.z) < UD.b && (DD.z = 0)
+        scale(pp) {}
+        get canRescale() {
+          return !1
         }
-      }, (() => {
-        const rD = "function" === typeof Symbol && Symbol.metadata ? Object.create(null) : void 0;
-        zD = [(0, sD.C)()], wD = [(0, sD.C)()], KD = [(0, sD.C)()], (0, pD.i)(null, null, zD, {
-          kind: "field",
-          name: "wheelPrecision",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "wheelPrecision" in DD,
-            get: DD => DD.wheelPrecision,
-            set: (DD, zD) => {
-              DD.wheelPrecision = zD
-            }
-          },
-          metadata: rD
-        }, cD, gD), (0, pD.i)(null, null, wD, {
-          kind: "field",
-          name: "zoomToMouseLocation",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "zoomToMouseLocation" in DD,
-            get: DD => DD.zoomToMouseLocation,
-            set: (DD, zD) => {
-              DD.zoomToMouseLocation = zD
-            }
-          },
-          metadata: rD
-        }, AD, fD), (0, pD.i)(null, null, KD, {
-          kind: "field",
-          name: "wheelDeltaPercentage",
-          static: !1,
-          private: !1,
-          access: {
-            has: DD => "wheelDeltaPercentage" in DD,
-            get: DD => DD.wheelDeltaPercentage,
-            set: (DD, zD) => {
-              DD.wheelDeltaPercentage = zD
-            }
-          },
-          metadata: rD
-        }, ID, BD), rD && Object.defineProperty(DD, Symbol.metadata, {
-          enumerable: !0,
-          configurable: !0,
-          writable: !0,
-          value: rD
-        })
-      })(), DD
-    })();
-    OD.d.ArcRotateCameraMouseWheelInput = TD;
-    var bD, jD, dD = wD(39808);
-    class SD extends OD.h {
-      constructor(DD) {
-        super(DD)
-      }
-      addMouseWheel() {
-        return this.add(new TD), this
-      }
-      addPointers() {
-        return this.add(new XD), this
-      }
-      addKeyboard() {
-        return this.add(new PD), this
-      }
-    }(bD = SD.prototype).addVRDeviceOrientation ?? (bD.addVRDeviceOrientation = (0, dD.h)("ArcRotateCameraInputsManager", "addVRDeviceOrientation")), (jD = SD.prototype).addGamepad ?? (jD.addGamepad = (0, dD.h)("ArcRotateCameraInputsManager", "addGamepad"));
-    var iD = wD(37134),
-      lD = wD(40162),
-      WD = wD(40171);
-    class ND extends lD.b {
-      constructor(DD, zD, wD) {
-        super(DD, zD, wD), this.input = new WD.d({
-          pan: (DD, zD) => {
-            this.panAccumulatedPixels.x += DD, this.panAccumulatedPixels.y += zD
-          },
-          rotate: (DD, zD) => {
-            this.rotationAccumulatedPixels.x += DD, this.rotationAccumulatedPixels.y += zD
-          },
-          zoom: DD => {
-            this.zoomAccumulatedPixels += DD
-          }
-        }, (() => this._createDefaultInputMap()))
-      }
-      _createDefaultInputMap() {
-        return [{
-          source: "pointer",
-          button: 0,
-          modifiers: {
-            ctrl: !0
-          },
-          interaction: "pan"
-        }, {
-          source: "pointer",
-          button: 0,
-          interaction: "rotate"
-        }, {
-          source: "pointer",
-          button: 2,
-          interaction: "pan"
-        }, {
-          source: "wheel",
-          interaction: "zoom"
-        }, {
-          source: "keyboard",
-          key: [187, 107, 189, 109],
-          interaction: "zoom"
-        }, {
-          source: "keyboard",
-          modifiers: {
-            ctrl: !0
-          },
-          interaction: "pan"
-        }, {
-          source: "keyboard",
-          modifiers: {
-            alt: !0
-          },
-          interaction: "zoom"
-        }, {
-          source: "keyboard",
-          interaction: "rotate"
-        }]
-      }
-    }
-
-    function ZD(DD, zD) {
-      return isNaN(DD) ? zD : DD
-    }
-    let yD = (() => {
-        var DD;
-        let zD, wD, cD, RD, AD, ID, BD, OD, ED, QD, XD, VD, PD, CD, xD, TD, bD, jD, dD, iD, lD, WD, yD, kD, mD, eD, oD, aD, uD = MD.g,
-          vD = [],
-          tD = [],
-          FD = [],
-          YD = [],
-          HD = [],
-          qD = [],
-          Dz = [],
-          zz = [],
-          wz = [],
-          pz = [],
-          sz = [],
-          Kz = [],
-          rz = [],
-          Lz = [],
-          cz = [],
-          gz = [],
-          Rz = [],
-          Az = [],
-          Uz = [],
-          fz = [],
-          Iz = [],
-          Bz = [],
-          Gz = [],
-          hz = [],
-          nz = [],
-          Mz = [],
-          Oz = [],
-          Jz = [],
-          Ez = [],
-          Qz = [],
-          Xz = [],
-          Vz = [],
-          Pz = [],
-          Cz = [],
-          xz = [],
-          Tz = [],
-          bz = [],
-          jz = [],
-          dz = [],
-          Sz = [],
-          iz = [],
-          lz = [],
-          Wz = [],
-          Nz = [],
-          Zz = [],
-          yz = [],
-          kz = [];
-        return DD = class extends uD {
-          get target() {
-            return this.bq
-          }
-          set target(DD) {
-            this.setTarget(DD)
-          }
-          get targetHost() {
-            return this._targetHost
-          }
-          set targetHost(DD) {
-            DD && this.setTarget(DD)
-          }
-          getTarget() {
-            return this.target
-          }
-          get position() {
-            return this._position
-          }
-          set position(DD) {
-            this.setPosition(DD)
-          }
-          set upVector(DD) {
-            this._upToYMatrix || (this._yToUpMatrix = new rD.e, this._upToYMatrix = new rD.e, this._upVector = rD.s.Zero()), DD.normalize(), this._upVector.pC(DD), this.setMatUp()
-          }
-          get upVector() {
-            return this._upVector
-          }
-          setMatUp() {
-            rD.e.RotationAlignToRef(rD.s.UpReadOnly, this._upVector, this._yToUpMatrix), rD.e.RotationAlignToRef(this._upVector, rD.s.UpReadOnly, this._upToYMatrix)
-          }
-          get inertialAlphaOffset() {
-            if (0 !== this._inertialAlphaOffset) return this._inertialAlphaOffset;
-            if (0 !== this.movement.rotationAccumulatedPixels.x) return this.movement.rotationAccumulatedPixels.x;
-            const DD = this.movement.rotationDeltaCurrentFrame.x;
-            return Math.abs(DD) < this._rotationEpsilon ? 0 : DD
-          }
-          set inertialAlphaOffset(DD) {
-            this._inertialAlphaOffset = DD, 0 === DD && this.movement.resetRotationVelocity()
-          }
-          get inertialBetaOffset() {
-            if (0 !== this._inertialBetaOffset) return this._inertialBetaOffset;
-            if (0 !== this.movement.rotationAccumulatedPixels.y) return this.movement.rotationAccumulatedPixels.y;
-            const DD = this.movement.rotationDeltaCurrentFrame.y;
-            return Math.abs(DD) < this._rotationEpsilon ? 0 : DD
-          }
-          set inertialBetaOffset(DD) {
-            this._inertialBetaOffset = DD, 0 === DD && this.movement.resetRotationVelocity()
-          }
-          get inertialRadiusOffset() {
-            if (0 !== this._inertialRadiusOffset) return this._inertialRadiusOffset;
-            if (0 !== this.movement.zoomAccumulatedPixels) return this.movement.zoomAccumulatedPixels;
-            const DD = this.movement.zoomDeltaCurrentFrame;
-            return Math.abs(DD) < this._rotationEpsilon ? 0 : DD
-          }
-          set inertialRadiusOffset(DD) {
-            this._inertialRadiusOffset = DD, 0 === DD && this.movement.resetZoomVelocity()
-          }
-          get panningInertia() {
-            return this._panningInertia
-          }
-          set panningInertia(DD) {
-            this._panningInertia = DD, this.movement && (this.movement.panInertia = DD)
-          }
-          get inertia() {
-            return this._inertia
-          }
-          set inertia(DD) {
-            this._inertia = DD, this.movement && (this.movement.rotationInertia = DD, this.movement.zoomInertia = DD)
-          }
-          get angularSensibilityX() {
-            const DD = this.inputs.attached.pointers;
-            return DD ? DD.angularSensibilityX : 0
-          }
-          set angularSensibilityX(DD) {
-            const zD = this.inputs.attached.pointers;
-            zD && (zD.angularSensibilityX = DD)
-          }
-          get angularSensibilityY() {
-            const DD = this.inputs.attached.pointers;
-            return DD ? DD.angularSensibilityY : 0
-          }
-          set angularSensibilityY(DD) {
-            const zD = this.inputs.attached.pointers;
-            zD && (zD.angularSensibilityY = DD)
-          }
-          get pinchPrecision() {
-            const DD = this.inputs.attached.pointers;
-            return DD ? DD.pinchPrecision : 0
-          }
-          set pinchPrecision(DD) {
-            const zD = this.inputs.attached.pointers;
-            zD && (zD.pinchPrecision = DD)
-          }
-          get pinchDeltaPercentage() {
-            const DD = this.inputs.attached.pointers;
-            return DD ? DD.pinchDeltaPercentage : 0
-          }
-          set pinchDeltaPercentage(DD) {
-            const zD = this.inputs.attached.pointers;
-            zD && (zD.pinchDeltaPercentage = DD)
-          }
-          get useNaturalPinchZoom() {
-            const DD = this.inputs.attached.pointers;
-            return !!DD && DD.useNaturalPinchZoom
-          }
-          set useNaturalPinchZoom(DD) {
-            const zD = this.inputs.attached.pointers;
-            zD && (zD.useNaturalPinchZoom = DD)
-          }
-          get panningSensibility() {
-            const DD = this.inputs.attached.pointers;
-            return DD ? DD.panningSensibility : 0
-          }
-          set panningSensibility(DD) {
-            const zD = this.inputs.attached.pointers;
-            zD && (zD.panningSensibility = DD)
-          }
-          get keysUp() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysUp : []
-          }
-          set keysUp(DD) {
-            const zD = this.inputs.attached.keyboard;
-            zD && (zD.keysUp = DD)
-          }
-          get keysDown() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysDown : []
-          }
-          set keysDown(DD) {
-            const zD = this.inputs.attached.keyboard;
-            zD && (zD.keysDown = DD)
-          }
-          get keysLeft() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysLeft : []
-          }
-          set keysLeft(DD) {
-            const zD = this.inputs.attached.keyboard;
-            zD && (zD.keysLeft = DD)
-          }
-          get keysRight() {
-            const DD = this.inputs.attached.keyboard;
-            return DD ? DD.keysRight : []
-          }
-          set keysRight(DD) {
-            const zD = this.inputs.attached.keyboard;
-            zD && (zD.keysRight = DD)
-          }
-          get wheelPrecision() {
-            const DD = this.inputs.attached.mousewheel;
-            return DD ? DD.wheelPrecision : 0
-          }
-          set wheelPrecision(DD) {
-            const zD = this.inputs.attached.mousewheel;
-            zD && (zD.wheelPrecision = DD)
-          }
-          get zoomToMouseLocation() {
-            const DD = this.inputs.attached.mousewheel;
-            return !!DD && DD.zoomToMouseLocation
-          }
-          set zoomToMouseLocation(DD) {
-            const zD = this.inputs.attached.mousewheel;
-            zD && (zD.zoomToMouseLocation = DD)
-          }
-          get wheelDeltaPercentage() {
-            const DD = this.inputs.attached.mousewheel;
-            return DD ? DD.wheelDeltaPercentage : 0
-          }
-          set wheelDeltaPercentage(DD) {
-            const zD = this.inputs.attached.mousewheel;
-            zD && (zD.wheelDeltaPercentage = DD)
-          }
-          get _useCtrlForPanning() {
-            return this._useCtrlForPanningInternal
-          }
-          set _useCtrlForPanning(DD) {
-            this._useCtrlForPanningInternal = DD;
-            const zD = this.movement.input,
-              wD = zD.getEntry("keyboard", "pan", {
-                modifiers: {
-                  ctrl: !0
-                }
-              });
-            !DD && wD ? zD.inputMap.splice(zD.inputMap.indexOf(wD), 1) : DD && !wD && zD.addEntry({
-              source: "keyboard",
-              modifiers: {
-                ctrl: !0
-              },
-              interaction: "pan"
-            });
-            const pD = zD.getEntry("pointer", "pan", {
-              modifiers: {
-                ctrl: !0
-              }
-            });
-            !DD && pD ? zD.inputMap.splice(zD.inputMap.indexOf(pD), 1) : DD && !pD && zD.addEntry({
-              source: "pointer",
-              button: 0,
-              modifiers: {
-                ctrl: !0
-              },
-              interaction: "pan"
-            })
-          }
-          get _panningMouseButton() {
-            return this._panningMouseButtonInternal
-          }
-          set _panningMouseButton(DD) {
-            this._panningMouseButtonInternal = DD;
-            const zD = this.movement.input.getEntry("pointer", "pan", {
-              modifiers: {}
-            });
-            zD && (zD.button = DD)
-          }
-          get isInterpolating() {
-            return this._isInterpolating
-          }
-          get bouncingBehavior() {
-            return this._bouncingBehavior
-          }
-          get useBouncingBehavior() {
-            return null != this._bouncingBehavior
-          }
-          set useBouncingBehavior(DD) {
-            DD !== this.useBouncingBehavior && (DD ? (this._bouncingBehavior = new GD, this.addBehavior(this._bouncingBehavior)) : this._bouncingBehavior && (this.removeBehavior(this._bouncingBehavior), this._bouncingBehavior = null))
-          }
-          get framingBehavior() {
-            return this._framingBehavior
-          }
-          get useFramingBehavior() {
-            return null != this._framingBehavior
-          }
-          set useFramingBehavior(DD) {
-            DD !== this.useFramingBehavior && (DD ? (this._framingBehavior = new hD, this.addBehavior(this._framingBehavior)) : this._framingBehavior && (this.removeBehavior(this._framingBehavior), this._framingBehavior = null))
-          }
-          get autoRotationBehavior() {
-            return this._autoRotationBehavior
-          }
-          get useAutoRotationBehavior() {
-            return null != this._autoRotationBehavior
-          }
-          set useAutoRotationBehavior(DD) {
-            DD !== this.useAutoRotationBehavior && (DD ? (this._autoRotationBehavior = new fD, this.addBehavior(this._autoRotationBehavior)) : this._autoRotationBehavior && (this.removeBehavior(this._autoRotationBehavior), this._autoRotationBehavior = null))
-          }
-          constructor(DD, zD, wD, sD, LD, cD) {
-            var gD;
-            let RD = !(arguments.length > 6 && void 0 !== arguments[6]) || arguments[6];
-            super(DD, rD.s.Zero(), cD, RD), gD = this, this.alpha = ((0, pD.m)(this, vD), (0, pD.m)(this, tD, void 0)), this.beta = ((0, pD.m)(this, FD), (0, pD.m)(this, YD, void 0)), this.radius = ((0, pD.m)(this, HD), (0, pD.m)(this, qD, void 0)), this.overrideCloneAlphaBetaRadius = ((0, pD.m)(this, Dz), (0, pD.m)(this, zz, void 0)), this.bq = ((0, pD.m)(this, wz), (0, pD.m)(this, pz, void 0)), this._targetHost = ((0, pD.m)(this, sz), (0, pD.m)(this, Kz, void 0)), this._upToYMatrix = (0, pD.m)(this, rz), this._inertialAlphaOffset = 0, this._inertialBetaOffset = 0, this._inertialRadiusOffset = 0, this.lowerAlphaLimit = (0, pD.m)(this, Lz, null), this.upperAlphaLimit = ((0, pD.m)(this, cz), (0, pD.m)(this, gz, null)), this.lowerBetaLimit = ((0, pD.m)(this, Rz), (0, pD.m)(this, Az, .01)), this.upperBetaLimit = ((0, pD.m)(this, Uz), (0, pD.m)(this, fz, Math.PI - .01)), this.lowerRadiusLimit = ((0, pD.m)(this, Iz), (0, pD.m)(this, Bz, null)), this.upperRadiusLimit = ((0, pD.m)(this, Gz), (0, pD.m)(this, hz, null)), this.lowerTargetYLimit = ((0, pD.m)(this, nz), (0, pD.m)(this, Mz, -1 / 0)), this.inertialPanningX = ((0, pD.m)(this, Oz), (0, pD.m)(this, Jz, 0)), this.inertialPanningY = ((0, pD.m)(this, Ez), (0, pD.m)(this, Qz, 0)), this.pinchToPanMaxDistance = ((0, pD.m)(this, Xz), (0, pD.m)(this, Vz, 20)), this.panningDistanceLimit = ((0, pD.m)(this, Pz), (0, pD.m)(this, Cz, null)), this.panningOriginTarget = ((0, pD.m)(this, xz), (0, pD.m)(this, Tz, rD.s.Zero())), this._panningInertia = ((0, pD.m)(this, bz), .9), this._inertia = .9, this.zoomOnFactor = (0, pD.m)(this, jz, 1), this.targetScreenOffset = ((0, pD.m)(this, dz), (0, pD.m)(this, Sz, rD.r.Zero())), this.allowUpsideDown = ((0, pD.m)(this, iz), (0, pD.m)(this, lz, !0)), this.useInputToRestoreState = ((0, pD.m)(this, Wz), (0, pD.m)(this, Nz, !0)), this.restoreStateInterpolationFactor = ((0, pD.m)(this, Zz), (0, pD.m)(this, yz, 0)), this._currentInterpolationFactor = ((0, pD.m)(this, kz), 0), this._viewMatrix = new rD.e, this._useCtrlForPanningInternal = !0, this._panningMouseButtonInternal = 2, this.panningAxis = new rD.s(1, 1, 0), this._transformedDirection = new rD.s, this.mapPanning = !1, this._isInterpolating = !1, this.onMeshTargetChangedObservable = new KD.b, this.checkCollisions = !1, this.collisionRadius = new rD.s(.5, .5, .5), this._previousPosition = rD.s.Zero(), this._collisionVelocity = rD.s.Zero(), this._newPosition = rD.s.Zero(), this._computationVector = rD.s.Zero(), this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget = new rD.s(NaN, NaN, NaN), this._goalTargetScreenOffset = new rD.r(NaN, NaN), this._onCollisionPositionChange = function(DD, zD) {
-              let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-              wD ? (gD.setPosition(zD), gD.GU && gD.GU(wD)) : gD._previousPosition.pC(gD._position);
-              const pD = Math.cos(gD.alpha),
-                sD = Math.sin(gD.alpha),
-                KD = Math.cos(gD.beta);
-              let rD = Math.sin(gD.beta);
-              0 === rD && (rD = 1e-4);
-              const LD = gD._getTargetPosition();
-              gD._computationVector.Z2(gD.radius * pD * rD, gD.radius * KD, gD.radius * sD * rD), LD.addToRef(gD._computationVector, gD._newPosition), gD._position.pC(gD._newPosition);
-              let cD = gD.upVector;
-              gD.allowUpsideDown && gD.beta < 0 && (cD = cD.clone(), cD = cD.ep()), gD._computeViewMatrix(gD._position, LD, cD), gD._viewMatrix.addAtIndex(12, gD.targetScreenOffset.x), gD._viewMatrix.addAtIndex(13, gD.targetScreenOffset.y), gD._collisionTriggered = !1
-            }, this.bq = rD.s.Zero(), LD && this.setTarget(LD), this.alpha = zD, this.beta = wD, this.radius = sD, this.getViewMatrix(), this.inputs = new SD(this), this.inputs.addKeyboard().addMouseWheel().addPointers(), this.movement = new ND(this.Ul(), this._position), this.movement.rotationInertia = this._inertia, this.movement.zoomInertia = this._inertia, this.movement.panInertia = this._panningInertia
-          }
-          _initCache() {
-            super._initCache(), this._cache.bq = new rD.s(Number.MAX_VALUE, Number.MAX_VALUE, Number.MAX_VALUE), this._cache.alpha = void 0, this._cache.beta = void 0, this._cache.radius = void 0, this._cache.targetScreenOffset = rD.r.Zero()
-          }
-          _updateCache(DD) {
-            DD || super._updateCache(), this._cache.bq.pC(this._getTargetPosition()), this._cache.alpha = this.alpha, this._cache.beta = this.beta, this._cache.radius = this.radius, this._cache.targetScreenOffset.pC(this.targetScreenOffset)
-          }
-          _getTargetPosition() {
-            if (this._targetHost && this._targetHost.getAbsolutePosition) {
-              const DD = this._targetHost.getAbsolutePosition();
-              this._targetBoundingCenter ? DD.addToRef(this._targetBoundingCenter, this.bq) : this.bq.pC(DD)
-            }
-            const DD = this._getLockedTargetPosition();
-            return DD || this.bq
-          }
-          storeState() {
-            return this._storedAlpha = this.alpha, this._storedBeta = this.beta, this._storedRadius = this.radius, this._storedTarget = this._getTargetPosition().clone(), this._storedTargetScreenOffset = this.targetScreenOffset.clone(), super.storeState()
-          }
-          _restoreStateValues() {
-            return this.hasStateStored() && this.restoreStateInterpolationFactor > UD.b && this.restoreStateInterpolationFactor < 1 ? (this.interpolateTo(this._storedAlpha, this._storedBeta, this._storedRadius, this._storedTarget, this._storedTargetScreenOffset, this.restoreStateInterpolationFactor), !0) : !!super._restoreStateValues() && (this.setTarget(this._storedTarget.clone()), this.alpha = this._storedAlpha, this.beta = this._storedBeta, this.radius = this._storedRadius, this.targetScreenOffset = this._storedTargetScreenOffset.clone(), this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, !0)
-          }
-          stopInterpolation() {
-            this._goalAlpha = NaN, this._goalBeta = NaN, this._goalRadius = NaN, this._goalTarget.set(NaN, NaN, NaN), this._goalTargetScreenOffset.set(NaN, NaN)
-          }
-          interpolateTo() {
-            let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.alpha,
-              zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : this.beta,
-              wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this.radius,
-              pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.target,
-              sD = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : this.targetScreenOffset,
-              KD = arguments.length > 5 ? arguments[5] : void 0;
-            this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0, null != KD ? this._currentInterpolationFactor = KD : 0 !== this.restoreStateInterpolationFactor ? this._currentInterpolationFactor = this.restoreStateInterpolationFactor : this._currentInterpolationFactor = .1, this._goalAlpha = ZD(DD, this._goalAlpha), this._goalBeta = ZD(zD, this._goalBeta), this._goalRadius = ZD(wD, this._goalRadius), this._goalTarget.set(ZD(pD.x, this._goalTarget.x), ZD(pD.y, this._goalTarget.y), ZD(pD.z, this._goalTarget.z)), this._goalTargetScreenOffset.set(ZD(sD.x, this._goalTargetScreenOffset.x), ZD(sD.y, this._goalTargetScreenOffset.y)), this._goalAlpha = (0, LD.Clamp)(this._goalAlpha, this.lowerAlphaLimit ?? -1 / 0, this.upperAlphaLimit ?? 1 / 0), this._goalBeta = (0, LD.Clamp)(this._goalBeta, this.lowerBetaLimit ?? -1 / 0, this.upperBetaLimit ?? 1 / 0), this._goalRadius = (0, LD.Clamp)(this._goalRadius, this.lowerRadiusLimit ?? -1 / 0, this.upperRadiusLimit ?? 1 / 0), this._goalTarget.y = (0, LD.Clamp)(this._goalTarget.y, this.lowerTargetYLimit ?? -1 / 0, 1 / 0), this._isInterpolating = !0
-          }
-          _isSynchronizedViewMatrix() {
-            return !!super._isSynchronizedViewMatrix() && (this._cache.bq.equals(this._getTargetPosition()) && this._cache.alpha === this.alpha && this._cache.beta === this.beta && this._cache.radius === this.radius && this._cache.targetScreenOffset.equals(this.targetScreenOffset))
-          }
-          attachControl(DD, zD) {
-            let wD = !(arguments.length > 2 && void 0 !== arguments[2]) || arguments[2],
-              pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
-            const sD = arguments;
-            zD = JD.h.BackCompatCameraNoPreventDefault(sD), this._useCtrlForPanning = wD, this._panningMouseButton = pD, "boolean" === typeof sD[0] && (sD.length > 1 && (this._useCtrlForPanning = sD[1]), sD.length > 2 && (this._panningMouseButton = sD[2])), this.inputs.attachElement(zD), this._reset = () => {
-              this.inertialAlphaOffset = 0, this.inertialBetaOffset = 0, this.inertialRadiusOffset = 0, this.inertialPanningX = 0, this.inertialPanningY = 0
-            }
-          }
-          detachControl() {
-            this.inputs.detachElement(), this._reset && this._reset()
-          }
-          _applyRotationAndZoomDelta(DD, zD, wD) {
-            const pD = this.invertRotation ? -1 : 1;
-            let sD = DD * this._calculateHandednessMultiplier();
-            this.beta < 0 && (sD *= -1), this.alpha += sD * pD, this.beta += zD * pD, this.radius -= wD
-          }
-          _applyPanDelta(DD, zD) {
-            const wD = rD.n.WI[0].Z2(DD, zD, zD);
-            if (this._viewMatrix.invertToRef(this._cameraTransformMatrix), wD.multiplyInPlace(this.panningAxis), rD.s.TransformNormalToRef(wD, this._cameraTransformMatrix, this._transformedDirection), this.mapPanning) {
-              const DD = this.upVector,
-                zD = rD.s.CrossToRef(this._transformedDirection, DD, this._transformedDirection);
-              rD.s.CrossToRef(DD, zD, this._transformedDirection)
-            } else this.panningAxis.y || (this._transformedDirection.y = 0);
-            if (!this._targetHost)
-              if (null !== this.panningDistanceLimit) {
-                this._transformedDirection.addInPlace(this.bq);
-                rD.s.DistanceSquared(this._transformedDirection, this.panningOriginTarget) <= this.panningDistanceLimit * this.panningDistanceLimit && this.bq.pC(this._transformedDirection)
-              } else {
-                if (this.parent) {
-                  const DD = rD.n.Matrix[0];
-                  this.parent.getWorldMatrix().getRotationMatrixToRef(DD), DD.transposeToRef(DD), rD.s.TransformCoordinatesToRef(this._transformedDirection, DD, this._transformedDirection)
-                }
-                this.bq.addInPlace(this._transformedDirection)
-              }
-          }
-          _checkInputs() {
-            if (this._collisionTriggered) return;
-            this.inputs.checkInputs();
-            let DD = !1;
-            this.movement.computeCurrentFrameDeltas();
-            const zD = this.movement.rotationDeltaCurrentFrame,
-              wD = this.movement.zoomDeltaCurrentFrame,
-              pD = this.movement.panDeltaCurrentFrame;
-            if (0 === zD.x && 0 === zD.y && 0 === wD && 0 === pD.x && 0 === pD.y || (DD = !0, 0 === zD.x && 0 === zD.y && 0 === wD || this._applyRotationAndZoomDelta(zD.x, zD.y, wD), 0 === pD.x && 0 === pD.y || this._applyPanDelta(pD.x, pD.y)), 0 === this._inertialAlphaOffset && 0 === this._inertialBetaOffset && 0 === this._inertialRadiusOffset || (this._applyRotationAndZoomDelta(this._inertialAlphaOffset, this._inertialBetaOffset, this._inertialRadiusOffset), this._inertialAlphaOffset *= this.inertia, this._inertialBetaOffset *= this.inertia, this._inertialRadiusOffset *= this.inertia, Math.abs(this._inertialAlphaOffset) < this._rotationEpsilon && (this._inertialAlphaOffset = 0), Math.abs(this._inertialBetaOffset) < this._rotationEpsilon && (this._inertialBetaOffset = 0), Math.abs(this._inertialRadiusOffset) < this._rotationEpsilon && (this._inertialRadiusOffset = 0), DD = !0), 0 !== this.inertialPanningX || 0 !== this.inertialPanningY) {
-              this._applyPanDelta(this.inertialPanningX, this.inertialPanningY), this.inertialPanningX *= this.panningInertia, this.inertialPanningY *= this.panningInertia;
-              const zD = this._panningEpsilon;
-              Math.abs(this.inertialPanningX) < zD && (this.inertialPanningX = 0), Math.abs(this.inertialPanningY) < zD && (this.inertialPanningY = 0), DD = !0
-            }
-            if (DD) this.stopInterpolation();
-            else if (this._isInterpolating) {
-              let DD = !1;
-              const zD = this._scene.iI().getDeltaTime() / 1e3,
-                wD = 1 - Math.pow(2, -zD / this._currentInterpolationFactor),
-                pD = ZD(this._goalRadius, this.radius);
-              if (!isNaN(this._goalTarget.x) || !isNaN(this._goalTarget.y) || !isNaN(this._goalTarget.z)) {
-                const zD = rD.n.WI[0].set(ZD(this._goalTarget.x, this.bq.x), ZD(this._goalTarget.y, this.bq.y), ZD(this._goalTarget.z, this.bq.z));
-                rD.s.LerpToRef(this.target, zD, wD, this.bq), 10 * rD.s.Distance(this.target, zD) / pD < UD.b ? (this._goalTarget.set(NaN, NaN, NaN), this.target.pC(zD), this.setTarget(this.target, !1, !0, !0)) : DD = !0
-              }
-              if (!isNaN(this._goalAlpha) || !isNaN(this._goalBeta)) {
-                const zD = rD.i.RotationAlphaBetaGammaToRef(ZD(this._goalAlpha, this.alpha), ZD(this._goalBeta, this.beta), 0, rD.n.Quaternion[0]),
-                  pD = rD.i.RotationAlphaBetaGammaToRef(this.alpha, this.beta, 0, rD.n.Quaternion[1]),
-                  sD = rD.i.SlerpToRef(pD, zD, wD, rD.n.Quaternion[2]);
-                sD.normalize();
-                const KD = sD.toAlphaBetaGammaToRef(rD.n.WI[0]);
-                if (this.alpha = KD.x, this.beta = KD.y, sD.isApprox(zD, UD.b / 5)) {
-                  this._goalAlpha = NaN, this._goalBeta = NaN;
-                  const DD = zD.toAlphaBetaGammaToRef(rD.n.WI[0]);
-                  this.alpha = DD.x, this.beta = DD.y
-                } else DD = !0
-              }
-              if (isNaN(this._goalRadius) || (this.radius += (pD - this.radius) * wD, Math.abs(pD / this.radius - 1) < UD.b ? (this._goalRadius = NaN, this.radius = pD) : DD = !0), !isNaN(this._goalTargetScreenOffset.x) || !isNaN(this._goalTargetScreenOffset.y)) {
-                const zD = rD.n.Vector2[0].set(ZD(this._goalTargetScreenOffset.x, this.targetScreenOffset.x), ZD(this._goalTargetScreenOffset.y, this.targetScreenOffset.y));
-                rD.r.LerpToRef(this.targetScreenOffset, zD, wD, this.targetScreenOffset), rD.r.Distance(this.targetScreenOffset, zD) < UD.b ? (this._goalTargetScreenOffset.set(NaN, NaN), this.targetScreenOffset.pC(zD)) : DD = !0
-              }
-              this._isInterpolating = DD
-            }
-            this._checkLimits(), super._checkInputs()
-          }
-          _checkLimits() {
-            null === this.lowerBetaLimit || void 0 === this.lowerBetaLimit ? this.allowUpsideDown && this.beta > Math.PI && (this.beta = this.beta - 2 * Math.PI) : this.beta < this.lowerBetaLimit && (this.beta = this.lowerBetaLimit), null === this.upperBetaLimit || void 0 === this.upperBetaLimit ? this.allowUpsideDown && this.beta < -Math.PI && (this.beta = this.beta + 2 * Math.PI) : this.beta > this.upperBetaLimit && (this.beta = this.upperBetaLimit), null !== this.lowerAlphaLimit && this.alpha < this.lowerAlphaLimit && (this.alpha = this.lowerAlphaLimit), null !== this.upperAlphaLimit && this.alpha > this.upperAlphaLimit && (this.alpha = this.upperAlphaLimit), null !== this.lowerRadiusLimit && this.radius < this.lowerRadiusLimit && (this.radius = this.lowerRadiusLimit, this.inertialRadiusOffset = 0), null !== this.upperRadiusLimit && this.radius > this.upperRadiusLimit && (this.radius = this.upperRadiusLimit, this.inertialRadiusOffset = 0), this.target.y = Math.max(this.target.y, this.lowerTargetYLimit)
-          }
-          rebuildAnglesAndRadius() {
-            this._position.subtractToRef(this._getTargetPosition(), this._computationVector), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || rD.s.TransformCoordinatesToRef(this._computationVector, this._upToYMatrix, this._computationVector), this.radius = this._computationVector.length(), 0 === this.radius && (this.radius = 1e-4);
-            const DD = this.alpha;
-            var zD, wD;
-            this.alpha = function(DD) {
-              let zD = Math.PI / 2;
-              return 0 === DD.x && 0 === DD.z || (zD = Math.acos(DD.x / Math.sqrt(Math.pow(DD.x, 2) + Math.pow(DD.z, 2)))), DD.z < 0 && (zD = 2 * Math.PI - zD), zD
-            }(this._computationVector), this.beta = (zD = this._computationVector.y, wD = this.radius, Math.acos(zD / wD));
-            const pD = Math.round((DD - this.alpha) / (2 * Math.PI));
-            this.alpha += 2 * pD * Math.PI, this._checkLimits()
-          }
-          setPosition(DD) {
-            this._position.equals(DD) || (this._position.pC(DD), this.rebuildAnglesAndRadius())
-          }
-          setTarget(DD) {
-            let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-              wD = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-              pD = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-            if (pD = this.overrideCloneAlphaBetaRadius ?? pD, DD.computeWorldMatrix) zD && DD.FW ? this._targetBoundingCenter = DD.FW().boundingBox.centerWorld.clone() : this._targetBoundingCenter = null, DD.computeWorldMatrix(), this._targetHost = DD, this.bq = this._getTargetPosition(), this.onMeshTargetChangedObservable.notifyObservers(this._targetHost);
-            else {
-              const zD = DD,
-                pD = this._getTargetPosition();
-              if (pD && !wD && pD.equals(zD)) return;
-              this._targetHost = null, this.bq = zD, this._targetBoundingCenter = null, this.onMeshTargetChangedObservable.notifyObservers(null)
-            }
-            pD || this.rebuildAnglesAndRadius()
-          }
-          _getViewMatrix() {
-            const DD = Math.cos(this.alpha),
-              zD = Math.sin(this.alpha),
-              wD = Math.cos(this.beta);
-            let pD = Math.sin(this.beta);
-            0 === pD && (pD = 1e-4), 0 === this.radius && (this.radius = 1e-4);
-            const sD = this._getTargetPosition();
-            if (this._computationVector.Z2(this.radius * DD * pD, this.radius * wD, this.radius * zD * pD), 0 === this._upVector.x && 1 === this._upVector.y && 0 === this._upVector.z || rD.s.TransformCoordinatesToRef(this._computationVector, this._yToUpMatrix, this._computationVector), sD.addToRef(this._computationVector, this._newPosition), this.Ul().collisionsEnabled && this.checkCollisions) {
-              const DD = this.Ul().collisionCoordinator;
-              this._collider || (this._collider = DD.createCollider()), this._collider._radius = this.collisionRadius, this._newPosition.subtractToRef(this._position, this._collisionVelocity), this._collisionTriggered = !0, DD.getNewPosition(this._position, this._collisionVelocity, this._collider, 3, null, this._onCollisionPositionChange, this.uniqueId)
-            } else {
-              this._position.pC(this._newPosition);
-              let DD = this.upVector;
-              this.allowUpsideDown && pD < 0 && (DD = DD.ep()), this._computeViewMatrix(this._position, sD, DD), this._viewMatrix.addAtIndex(12, this.targetScreenOffset.x), this._viewMatrix.addAtIndex(13, this.targetScreenOffset.y)
-            }
-            return this._currentTarget.pC(sD), this._viewMatrix
-          }
-          zoomOn(DD) {
-            let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            DD = DD || this.Ul().meshes;
-            const wD = gD.e.MinMax(DD);
-            let pD = this._calculateLowerRadiusFromModelBoundingSphere(wD.min, wD.max);
-            if (pD = Math.max(Math.min(pD, this.upperRadiusLimit || Number.MAX_VALUE), this.lowerRadiusLimit || 0), this.radius = pD * this.zoomOnFactor, this.mode === nD.c.ORTHOGRAPHIC_CAMERA) {
-              const DD = this.Ul().iI().getAspectRatio(this),
-                zD = pD * this.zoomOnFactor / 2;
-              this.orthoLeft = -zD * DD, this.orthoRight = zD * DD, this.orthoBottom = -zD, this.orthoTop = zD
-            }
-            this.focusOn({
-              min: wD.min,
-              max: wD.max,
-              distance: pD
-            }, zD)
-          }
-          focusOn(DD) {
-            let zD, wD, pD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            if (void 0 === DD.min) {
-              const pD = DD || this.Ul().meshes;
-              zD = gD.e.MinMax(pD), wD = rD.s.Distance(zD.min, zD.max)
-            } else {
-              zD = DD, wD = DD.distance
-            }
-            this.bq = gD.e.Center(zD), pD || (this.maxZ = 2 * wD)
-          }
-          createRigCamera(zD, wD) {
-            let pD = 0;
-            switch (this.cameraRigMode) {
-              case nD.c.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
-              case nD.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
-              case nD.c.RIG_MODE_STEREOSCOPIC_OVERUNDER:
-              case nD.c.RIG_MODE_STEREOSCOPIC_INTERLACED:
-              case nD.c.RIG_MODE_VR:
-                pD = this._cameraRigParams.stereoHalfAngle * (0 === wD ? 1 : -1);
-                break;
-              case nD.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
-                pD = this._cameraRigParams.stereoHalfAngle * (0 === wD ? -1 : 1)
-            }
-            const sD = new DD(zD, this.alpha + pD, this.beta, this.radius, this.bq, this.Ul());
-            return sD._cameraRigParams = {}, sD.isRigCamera = !0, sD.rigParent = this, sD.upVector = this.upVector, sD.mode = this.mode, sD.orthoLeft = this.orthoLeft, sD.orthoRight = this.orthoRight, sD.orthoBottom = this.orthoBottom, sD.orthoTop = this.orthoTop, sD
-          }
-          _updateRigCameras() {
-            const DD = this._rigCameras[0],
-              zD = this._rigCameras[1];
-            switch (DD.beta = zD.beta = this.beta, this.cameraRigMode) {
-              case nD.c.RIG_MODE_STEREOSCOPIC_ANAGLYPH:
-              case nD.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_PARALLEL:
-              case nD.c.RIG_MODE_STEREOSCOPIC_OVERUNDER:
-              case nD.c.RIG_MODE_STEREOSCOPIC_INTERLACED:
-              case nD.c.RIG_MODE_VR:
-                DD.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle, zD.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle;
-                break;
-              case nD.c.RIG_MODE_STEREOSCOPIC_SIDEBYSIDE_CROSSEYED:
-                DD.alpha = this.alpha + this._cameraRigParams.stereoHalfAngle, zD.alpha = this.alpha - this._cameraRigParams.stereoHalfAngle
-            }
-            super._updateRigCameras()
-          }
-          _calculateLowerRadiusFromModelBoundingSphere(DD, zD) {
-            let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
-            const pD = rD.s.Distance(DD, zD),
-              sD = this.Ul().iI().getAspectRatio(this),
-              KD = Math.tan(this.fov / 2),
-              LD = KD * sD,
-              cD = .5 * pD * wD,
-              gD = cD * Math.sqrt(1 + 1 / (LD * LD)),
-              RD = cD * Math.sqrt(1 + 1 / (KD * KD));
-            return Math.max(gD, RD)
-          }
-          dispose() {
-            this.inputs.clear(), super.dispose()
-          }
-          getClassName() {
-            return "ArcRotateCamera"
-          }
-        }, (() => {
-          const KD = "function" === typeof Symbol && Symbol.metadata ? Object.create(uD[Symbol.metadata] ?? null) : void 0;
-          zD = [(0, sD.C)()], wD = [(0, sD.C)()], cD = [(0, sD.C)()], RD = [(0, sD.C)()], AD = [(0, sD.B)("target")], ID = [(0, sD.q)("targetHost")], BD = [(0, sD.C)()], OD = [(0, sD.C)()], ED = [(0, sD.C)()], QD = [(0, sD.C)()], XD = [(0, sD.C)()], VD = [(0, sD.C)()], PD = [(0, sD.C)()], CD = [(0, sD.C)()], xD = [(0, sD.C)()], TD = [(0, sD.C)()], bD = [(0, sD.C)()], jD = [(0, sD.C)()], dD = [(0, sD.C)()], iD = [(0, sD.C)()], lD = [(0, sD.B)()], WD = [(0, sD.C)()], yD = [(0, sD.C)()], kD = [(0, sD.C)()], mD = [(0, sD.A)()], eD = [(0, sD.C)()], oD = [(0, sD.C)()], aD = [(0, sD.C)()], (0, pD.i)(DD, null, BD, {
-            kind: "getter",
-            name: "inertialAlphaOffset",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "inertialAlphaOffset" in DD,
-              get: DD => DD.inertialAlphaOffset
-            },
-            metadata: KD
-          }, null, vD), (0, pD.i)(DD, null, OD, {
-            kind: "getter",
-            name: "inertialBetaOffset",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "inertialBetaOffset" in DD,
-              get: DD => DD.inertialBetaOffset
-            },
-            metadata: KD
-          }, null, vD), (0, pD.i)(DD, null, ED, {
-            kind: "getter",
-            name: "inertialRadiusOffset",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "inertialRadiusOffset" in DD,
-              get: DD => DD.inertialRadiusOffset
-            },
-            metadata: KD
-          }, null, vD), (0, pD.i)(DD, null, WD, {
-            kind: "getter",
-            name: "panningInertia",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "panningInertia" in DD,
-              get: DD => DD.panningInertia
-            },
-            metadata: KD
-          }, null, vD), (0, pD.i)(DD, null, yD, {
-            kind: "getter",
-            name: "zoomToMouseLocation",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "zoomToMouseLocation" in DD,
-              get: DD => DD.zoomToMouseLocation
-            },
-            metadata: KD
-          }, null, vD), (0, pD.i)(null, null, zD, {
-            kind: "field",
-            name: "alpha",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "alpha" in DD,
-              get: DD => DD.alpha,
-              set: (DD, zD) => {
-                DD.alpha = zD
-              }
-            },
-            metadata: KD
-          }, tD, FD), (0, pD.i)(null, null, wD, {
-            kind: "field",
-            name: "beta",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "beta" in DD,
-              get: DD => DD.beta,
-              set: (DD, zD) => {
-                DD.beta = zD
-              }
-            },
-            metadata: KD
-          }, YD, HD), (0, pD.i)(null, null, cD, {
-            kind: "field",
-            name: "radius",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "radius" in DD,
-              get: DD => DD.radius,
-              set: (DD, zD) => {
-                DD.radius = zD
-              }
-            },
-            metadata: KD
-          }, qD, Dz), (0, pD.i)(null, null, RD, {
-            kind: "field",
-            name: "overrideCloneAlphaBetaRadius",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "overrideCloneAlphaBetaRadius" in DD,
-              get: DD => DD.overrideCloneAlphaBetaRadius,
-              set: (DD, zD) => {
-                DD.overrideCloneAlphaBetaRadius = zD
-              }
-            },
-            metadata: KD
-          }, zz, wz), (0, pD.i)(null, null, AD, {
-            kind: "field",
-            name: "bq",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "bq" in DD,
-              get: DD => DD.bq,
-              set: (DD, zD) => {
-                DD.bq = zD
-              }
-            },
-            metadata: KD
-          }, pz, sz), (0, pD.i)(null, null, ID, {
-            kind: "field",
-            name: "_targetHost",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "_targetHost" in DD,
-              get: DD => DD._targetHost,
-              set: (DD, zD) => {
-                DD._targetHost = zD
-              }
-            },
-            metadata: KD
-          }, Kz, rz), (0, pD.i)(null, null, QD, {
-            kind: "field",
-            name: "lowerAlphaLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "lowerAlphaLimit" in DD,
-              get: DD => DD.lowerAlphaLimit,
-              set: (DD, zD) => {
-                DD.lowerAlphaLimit = zD
-              }
-            },
-            metadata: KD
-          }, Lz, cz), (0, pD.i)(null, null, XD, {
-            kind: "field",
-            name: "upperAlphaLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "upperAlphaLimit" in DD,
-              get: DD => DD.upperAlphaLimit,
-              set: (DD, zD) => {
-                DD.upperAlphaLimit = zD
-              }
-            },
-            metadata: KD
-          }, gz, Rz), (0, pD.i)(null, null, VD, {
-            kind: "field",
-            name: "lowerBetaLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "lowerBetaLimit" in DD,
-              get: DD => DD.lowerBetaLimit,
-              set: (DD, zD) => {
-                DD.lowerBetaLimit = zD
-              }
-            },
-            metadata: KD
-          }, Az, Uz), (0, pD.i)(null, null, PD, {
-            kind: "field",
-            name: "upperBetaLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "upperBetaLimit" in DD,
-              get: DD => DD.upperBetaLimit,
-              set: (DD, zD) => {
-                DD.upperBetaLimit = zD
-              }
-            },
-            metadata: KD
-          }, fz, Iz), (0, pD.i)(null, null, CD, {
-            kind: "field",
-            name: "lowerRadiusLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "lowerRadiusLimit" in DD,
-              get: DD => DD.lowerRadiusLimit,
-              set: (DD, zD) => {
-                DD.lowerRadiusLimit = zD
-              }
-            },
-            metadata: KD
-          }, Bz, Gz), (0, pD.i)(null, null, xD, {
-            kind: "field",
-            name: "upperRadiusLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "upperRadiusLimit" in DD,
-              get: DD => DD.upperRadiusLimit,
-              set: (DD, zD) => {
-                DD.upperRadiusLimit = zD
-              }
-            },
-            metadata: KD
-          }, hz, nz), (0, pD.i)(null, null, TD, {
-            kind: "field",
-            name: "lowerTargetYLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "lowerTargetYLimit" in DD,
-              get: DD => DD.lowerTargetYLimit,
-              set: (DD, zD) => {
-                DD.lowerTargetYLimit = zD
-              }
-            },
-            metadata: KD
-          }, Mz, Oz), (0, pD.i)(null, null, bD, {
-            kind: "field",
-            name: "inertialPanningX",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "inertialPanningX" in DD,
-              get: DD => DD.inertialPanningX,
-              set: (DD, zD) => {
-                DD.inertialPanningX = zD
-              }
-            },
-            metadata: KD
-          }, Jz, Ez), (0, pD.i)(null, null, jD, {
-            kind: "field",
-            name: "inertialPanningY",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "inertialPanningY" in DD,
-              get: DD => DD.inertialPanningY,
-              set: (DD, zD) => {
-                DD.inertialPanningY = zD
-              }
-            },
-            metadata: KD
-          }, Qz, Xz), (0, pD.i)(null, null, dD, {
-            kind: "field",
-            name: "pinchToPanMaxDistance",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "pinchToPanMaxDistance" in DD,
-              get: DD => DD.pinchToPanMaxDistance,
-              set: (DD, zD) => {
-                DD.pinchToPanMaxDistance = zD
-              }
-            },
-            metadata: KD
-          }, Vz, Pz), (0, pD.i)(null, null, iD, {
-            kind: "field",
-            name: "panningDistanceLimit",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "panningDistanceLimit" in DD,
-              get: DD => DD.panningDistanceLimit,
-              set: (DD, zD) => {
-                DD.panningDistanceLimit = zD
-              }
-            },
-            metadata: KD
-          }, Cz, xz), (0, pD.i)(null, null, lD, {
-            kind: "field",
-            name: "panningOriginTarget",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "panningOriginTarget" in DD,
-              get: DD => DD.panningOriginTarget,
-              set: (DD, zD) => {
-                DD.panningOriginTarget = zD
-              }
-            },
-            metadata: KD
-          }, Tz, bz), (0, pD.i)(null, null, kD, {
-            kind: "field",
-            name: "zoomOnFactor",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "zoomOnFactor" in DD,
-              get: DD => DD.zoomOnFactor,
-              set: (DD, zD) => {
-                DD.zoomOnFactor = zD
-              }
-            },
-            metadata: KD
-          }, jz, dz), (0, pD.i)(null, null, mD, {
-            kind: "field",
-            name: "targetScreenOffset",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "targetScreenOffset" in DD,
-              get: DD => DD.targetScreenOffset,
-              set: (DD, zD) => {
-                DD.targetScreenOffset = zD
-              }
-            },
-            metadata: KD
-          }, Sz, iz), (0, pD.i)(null, null, eD, {
-            kind: "field",
-            name: "allowUpsideDown",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "allowUpsideDown" in DD,
-              get: DD => DD.allowUpsideDown,
-              set: (DD, zD) => {
-                DD.allowUpsideDown = zD
-              }
-            },
-            metadata: KD
-          }, lz, Wz), (0, pD.i)(null, null, oD, {
-            kind: "field",
-            name: "useInputToRestoreState",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "useInputToRestoreState" in DD,
-              get: DD => DD.useInputToRestoreState,
-              set: (DD, zD) => {
-                DD.useInputToRestoreState = zD
-              }
-            },
-            metadata: KD
-          }, Nz, Zz), (0, pD.i)(null, null, aD, {
-            kind: "field",
-            name: "restoreStateInterpolationFactor",
-            static: !1,
-            private: !1,
-            access: {
-              has: DD => "restoreStateInterpolationFactor" in DD,
-              get: DD => DD.restoreStateInterpolationFactor,
-              set: (DD, zD) => {
-                DD.restoreStateInterpolationFactor = zD
-              }
-            },
-            metadata: KD
-          }, yz, kz), KD && Object.defineProperty(DD, Symbol.metadata, {
-            enumerable: !0,
-            configurable: !0,
-            writable: !0,
-            value: KD
-          })
-        })(), DD
-      })(),
-      kD = !1;
-    kD || (kD = !0, cD.b.AddNodeConstructor("ArcRotateCamera", ((DD, zD) => () => new yD(DD, 0, 0, 1, rD.s.Zero(), zD))), (0, iD.i)("BABYLON.ArcRotateCamera", yD))
-  },
-  40183: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => pD.d
-    });
-    var pD = wD(40186);
-    (0, pD.g)()
-  },
-  40186: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => RD,
-      g: () => UD
-    });
-    var pD = wD(39921),
-      sD = wD(39927),
-      KD = wD(37079),
-      rD = wD(37273),
-      LD = wD(40189),
-      cD = wD(40155),
-      gD = wD(37134);
-    let RD = (() => {
-        var DD;
-        let zD, wD, cD = LD.c,
-          gD = [],
-          RD = [],
-          AD = [],
-          UD = [];
-        return DD = class extends cD {
-          constructor(DD, zD, wD, sD) {
-            super(DD, wD, sD), this.groundColor = (0, pD.m)(this, gD, new rD.d(0, 0, 0)), this.direction = ((0, pD.m)(this, RD), (0, pD.m)(this, AD, void 0)), (0, pD.m)(this, UD), this.direction = zD || KD.s.Up()
-          }
-          _buildUniformLayout() {
-            this._uniformBuffer.addUniform("vLightData", 4), this._uniformBuffer.addUniform("vLightDiffuse", 4), this._uniformBuffer.addUniform("vLightSpecular", 4), this._uniformBuffer.addUniform("vLightGround", 3), this._uniformBuffer.addUniform("shadowsInfo", 3), this._uniformBuffer.addUniform("depthValues", 2), this._uniformBuffer.create()
-          }
-          getClassName() {
-            return "HemisphericLight"
-          }
-          setDirectionToTarget(DD) {
-            return this.direction = KD.s.Normalize(DD.subtract(KD.s.Zero())), this.direction
-          }
-          getShadowGenerator() {
+        _getFromCache(pp, ip, cp, Op, op, Ip) {
+          const Sp = this._getEngine();
+          if (!Sp) return null;
+          const xp = Sp._getUseSRGBBuffer(!!op, ip),
+            Lp = Sp.getLoadedTexturesCache();
+          for (let Yp = 0; Yp < Lp.length; Yp++) {
+            const Sp = Lp[Yp];
+            if ((void 0 === op || xp === Sp._useSRGBBuffer) && (void 0 === Op || Op === Sp.invertY) && Sp.url === pp && Sp.generateMipMaps === !ip && (!cp || cp === Sp.samplingMode) && (void 0 === Ip || Ip === Sp.isCube)) return Sp.incrementReferences(), Sp
+          }
+          return null
+        }
+        _rebuild() {}
+        clone() {
+          return null
+        }
+        get textureType() {
+          return this._texture && void 0 !== this._texture.type ? this._texture.type : 0
+        }
+        get textureFormat() {
+          return this._texture && void 0 !== this._texture.format ? this._texture.format : 5
+        }
+        _markAllSubMeshesAsTexturesDirty() {
+          const pp = this.Gl();
+          pp && pp.markAllMaterialsAsDirty(1)
+        }
+        readPixels() {
+          let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            Op = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            op = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
+            Ip = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : 0,
+            Sp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 0,
+            xp = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : Number.MAX_VALUE,
+            Lp = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : Number.MAX_VALUE;
+          if (!this._texture) return null;
+          const Yp = this._getEngine();
+          if (!Yp) return null;
+          const Dp = this.getSize();
+          let Ap = Dp.width,
+            Pp = Dp.height;
+          0 !== ip && (Ap /= Math.pow(2, ip), Pp /= Math.pow(2, ip), Ap = Math.round(Ap), Pp = Math.round(Pp)), xp = Math.min(Ap, xp), Lp = Math.min(Pp, Lp);
+          try {
+            return this._texture.isCube || this._texture.is2DArray ? Yp._readTexturePixels(this._texture, xp, Lp, pp, ip, cp, Op, op, Ip, Sp) : Yp._readTexturePixels(this._texture, xp, Lp, -1, ip, cp, Op, op, Ip, Sp)
+          } catch (Wp) {
             return null
           }
-          transferToEffect(DD, zD) {
-            const wD = KD.s.Normalize(this.direction);
-            return this._uniformBuffer.updateFloat4("vLightData", wD.x, wD.y, wD.z, 0, zD), this._uniformBuffer.updateColor3("vLightGround", this.groundColor.scale(this.intensity), zD), this
+        }
+        _readPixelsSync() {
+          let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 0,
+            ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+            cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
+            Op = !(arguments.length > 3 && void 0 !== arguments[3]) || arguments[3],
+            op = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
+          if (!this._texture) return null;
+          const Ip = this.getSize();
+          let Sp = Ip.width,
+            xp = Ip.height;
+          const Lp = this._getEngine();
+          if (!Lp) return null;
+          0 != ip && (Sp /= Math.pow(2, ip), xp /= Math.pow(2, ip), Sp = Math.round(Sp), xp = Math.round(xp));
+          try {
+            return this._texture.isCube ? Lp._readTexturePixelsSync(this._texture, Sp, xp, pp, ip, cp, Op, op) : Lp._readTexturePixelsSync(this._texture, Sp, xp, -1, ip, cp, Op, op)
+          } catch (Yp) {
+            return null
           }
-          transferToNodeMaterialEffect(DD, zD) {
-            const wD = KD.s.Normalize(this.direction);
-            return DD.setFloat3(zD, wD.x, wD.y, wD.z), this
+        }
+        get _lodTextureHigh() {
+          return this._texture ? this._texture._lodTextureHigh : null
+        }
+        get _lodTextureMid() {
+          return this._texture ? this._texture._lodTextureMid : null
+        }
+        get _lodTextureLow() {
+          return this._texture ? this._texture._lodTextureLow : null
+        }
+        dispose() {
+          if (this._scene) {
+            this._scene.stopAnimation && this._scene.stopAnimation(this), this._scene.removePendingData(this);
+            const pp = this._scene.textures.indexOf(this);
+            if (pp >= 0 && this._scene.textures.splice(pp, 1), this._scene.onTextureRemovedObservable.notifyObservers(this), this._scene = null, this._parentContainer) {
+              const pp = this._parentContainer.textures.indexOf(this);
+              pp > -1 && this._parentContainer.textures.splice(pp, 1), this._parentContainer = null
+            }
           }
-          computeWorldMatrix() {
-            return this._worldMatrix || (this._worldMatrix = KD.e.Identity()), this._worldMatrix
+          this.Kl.notifyObservers(this), this.Kl.clear(), this.metadata = null, super.dispose()
+        }
+        serialize() {
+          let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+          if (!this.name && !pp) return null;
+          const ip = Pp.c.Serialize(this);
+          return Pp.c.AppendSerializedAnimations(this, ip), ip
+        }
+        static WhenAllReady(pp, ip) {
+          let cp = pp.length;
+          if (0 !== cp)
+            for (let Op = 0; Op < pp.length; Op++) {
+              const op = pp[Op];
+              if (op.isReady()) 0 === --cp && ip();
+              else {
+                const pp = op.onLoadObservable;
+                pp ? pp.addOnce((() => {
+                  0 === --cp && ip()
+                })) : 0 === --cp && ip()
+              }
+            } else ip()
+        }
+        static _IsScene(pp) {
+          return "Scene" === pp.getClassName()
+        }
+      }, (() => {
+        const Ip = "function" === typeof Symbol && Symbol.metadata ? Object.create(Bp[Symbol.metadata] ?? null) : void 0;
+        ip = [(0, op.K)()], cp = [(0, op.K)()], Yp = [(0, op.K)()], Ap = [(0, op.K)()], Wp = [(0, op.K)("hasAlpha")], yp = [(0, op.K)("getAlphaFromRGB")], Up = [(0, op.K)()], wp = [(0, op.K)("coordinatesIndex")], vp = [(0, op.K)()], tp = [(0, op.K)("coordinatesMode")], Hp = [(0, op.K)()], dp = [(0, op.K)()], ep = [(0, op.K)()], jp = [(0, op.K)()], kp = [(0, op.K)()], mp = [(0, op.K)()], Rp = [(0, op.K)()], qp = [(0, op.K)()], Mp = [(0, op.K)()], Cp = [(0, op.K)()], Ep = [(0, op.K)()], Xp = [(0, op.K)()], lp = [(0, op.K)()], Qp = [(0, op.C)()], Jp = [(0, op.K)()], (0, Op.j)(pp, null, Hp, {
+          kind: "getter",
+          name: "wrapU",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "wrapU" in pp,
+            get: pp => pp.wrapU
+          },
+          metadata: Ip
+        }, null, Np), (0, Op.j)(pp, null, dp, {
+          kind: "getter",
+          name: "wrapV",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "wrapV" in pp,
+            get: pp => pp.wrapV
+          },
+          metadata: Ip
+        }, null, Np), (0, Op.j)(pp, null, kp, {
+          kind: "getter",
+          name: "isCube",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "isCube" in pp,
+            get: pp => pp.isCube
+          },
+          metadata: Ip
+        }, null, Np), (0, Op.j)(pp, null, mp, {
+          kind: "getter",
+          name: "is3D",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "is3D" in pp,
+            get: pp => pp.is3D
+          },
+          metadata: Ip
+        }, null, Np), (0, Op.j)(pp, null, Rp, {
+          kind: "getter",
+          name: "is2DArray",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "is2DArray" in pp,
+            get: pp => pp.is2DArray
+          },
+          metadata: Ip
+        }, null, Np), (0, Op.j)(pp, null, qp, {
+          kind: "getter",
+          name: "gammaSpace",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "gammaSpace" in pp,
+            get: pp => pp.gammaSpace
+          },
+          metadata: Ip
+        }, null, Np), (0, Op.j)(pp, null, Ep, {
+          kind: "getter",
+          name: "lodGenerationOffset",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "lodGenerationOffset" in pp,
+            get: pp => pp.lodGenerationOffset
+          },
+          metadata: Ip
+        }, null, Np), (0, Op.j)(pp, null, Xp, {
+          kind: "getter",
+          name: "lodGenerationScale",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "lodGenerationScale" in pp,
+            get: pp => pp.lodGenerationScale
+          },
+          metadata: Ip
+        }, null, Np), (0, Op.j)(pp, null, lp, {
+          kind: "getter",
+          name: "linearSpecularLOD",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "linearSpecularLOD" in pp,
+            get: pp => pp.linearSpecularLOD
+          },
+          metadata: Ip
+        }, null, Np), (0, Op.j)(pp, null, Qp, {
+          kind: "getter",
+          name: "irradianceTexture",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "irradianceTexture" in pp,
+            get: pp => pp.irradianceTexture
+          },
+          metadata: Ip
+        }, null, Np), (0, Op.j)(null, null, ip, {
+          kind: "field",
+          name: "uniqueId",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "uniqueId" in pp,
+            get: pp => pp.uniqueId,
+            set: (pp, ip) => {
+              pp.uniqueId = ip
+            }
+          },
+          metadata: Ip
+        }, Tp, fp), (0, Op.j)(null, null, cp, {
+          kind: "field",
+          name: "name",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "name" in pp,
+            get: pp => pp.name,
+            set: (pp, ip) => {
+              pp.name = ip
+            }
+          },
+          metadata: Ip
+        }, bp, hp), (0, Op.j)(null, null, Yp, {
+          kind: "field",
+          name: "displayName",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "displayName" in pp,
+            get: pp => pp.displayName,
+            set: (pp, ip) => {
+              pp.displayName = ip
+            }
+          },
+          metadata: Ip
+        }, ap, np), (0, Op.j)(null, null, Ap, {
+          kind: "field",
+          name: "metadata",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "metadata" in pp,
+            get: pp => pp.metadata,
+            set: (pp, ip) => {
+              pp.metadata = ip
+            }
+          },
+          metadata: Ip
+        }, Fp, gp), (0, Op.j)(null, null, Wp, {
+          kind: "field",
+          name: "_hasAlpha",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "_hasAlpha" in pp,
+            get: pp => pp._hasAlpha,
+            set: (pp, ip) => {
+              pp._hasAlpha = ip
+            }
+          },
+          metadata: Ip
+        }, Gp, rp), (0, Op.j)(null, null, yp, {
+          kind: "field",
+          name: "_getAlphaFromRGB",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "_getAlphaFromRGB" in pp,
+            get: pp => pp._getAlphaFromRGB,
+            set: (pp, ip) => {
+              pp._getAlphaFromRGB = ip
+            }
+          },
+          metadata: Ip
+        }, Zp, zp), (0, Op.j)(null, null, Up, {
+          kind: "field",
+          name: "level",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "level" in pp,
+            get: pp => pp.level,
+            set: (pp, ip) => {
+              pp.level = ip
+            }
+          },
+          metadata: Ip
+        }, sp, Kp), (0, Op.j)(null, null, wp, {
+          kind: "field",
+          name: "_coordinatesIndex",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "_coordinatesIndex" in pp,
+            get: pp => pp._coordinatesIndex,
+            set: (pp, ip) => {
+              pp._coordinatesIndex = ip
+            }
+          },
+          metadata: Ip
+        }, Vp, ii), (0, Op.j)(null, null, vp, {
+          kind: "field",
+          name: "optimizeUVAllocation",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "optimizeUVAllocation" in pp,
+            get: pp => pp.optimizeUVAllocation,
+            set: (pp, ip) => {
+              pp.optimizeUVAllocation = ip
+            }
+          },
+          metadata: Ip
+        }, ci, Oi), (0, Op.j)(null, null, tp, {
+          kind: "field",
+          name: "_coordinatesMode",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "_coordinatesMode" in pp,
+            get: pp => pp._coordinatesMode,
+            set: (pp, ip) => {
+              pp._coordinatesMode = ip
+            }
+          },
+          metadata: Ip
+        }, oi, Ii), (0, Op.j)(null, null, ep, {
+          kind: "field",
+          name: "wrapR",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "wrapR" in pp,
+            get: pp => pp.wrapR,
+            set: (pp, ip) => {
+              pp.wrapR = ip
+            }
+          },
+          metadata: Ip
+        }, Si, xi), (0, Op.j)(null, null, jp, {
+          kind: "field",
+          name: "anisotropicFilteringLevel",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "anisotropicFilteringLevel" in pp,
+            get: pp => pp.anisotropicFilteringLevel,
+            set: (pp, ip) => {
+              pp.anisotropicFilteringLevel = ip
+            }
+          },
+          metadata: Ip
+        }, Li, Yi), (0, Op.j)(null, null, Mp, {
+          kind: "field",
+          name: "invertZ",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "invertZ" in pp,
+            get: pp => pp.invertZ,
+            set: (pp, ip) => {
+              pp.invertZ = ip
+            }
+          },
+          metadata: Ip
+        }, Di, Ai), (0, Op.j)(null, null, Cp, {
+          kind: "field",
+          name: "lodLevelInAlpha",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "lodLevelInAlpha" in pp,
+            get: pp => pp.lodLevelInAlpha,
+            set: (pp, ip) => {
+              pp.lodLevelInAlpha = ip
+            }
+          },
+          metadata: Ip
+        }, Pi, Wi), (0, Op.j)(null, null, Jp, {
+          kind: "field",
+          name: "isRenderTarget",
+          static: !1,
+          private: !1,
+          access: {
+            has: pp => "isRenderTarget" in pp,
+            get: pp => pp.isRenderTarget,
+            set: (pp, ip) => {
+              pp.isRenderTarget = ip
+            }
+          },
+          metadata: Ip
+        }, yi, Ui), Ip && Object.defineProperty(pp, Symbol.metadata, {
+          enumerable: !0,
+          configurable: !0,
+          writable: !0,
+          value: Ip
+        })
+      })(), pp.DEFAULT_ANISOTROPIC_FILTERING_LEVEL = 4, pp
+    })();
+    (Ap = yp.prototype).forceSphericalPolynomialsRecompute ?? (Ap.forceSphericalPolynomialsRecompute = (0, Wp.k)("BaseTexture", "forceSphericalPolynomialsRecompute")), Object.getOwnPropertyDescriptor(yp.prototype, "sphericalPolynomial") || Object.defineProperty(yp.prototype, "sphericalPolynomial", (0, Wp.h)("BaseTexture", "sphericalPolynomial"))
+  },
+  40654: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => ep,
+      d: () => Hp
+    });
+    var Op = cp(40203),
+      op = cp(40210),
+      Ip = cp(37349),
+      Sp = cp(37320),
+      xp = cp(40195),
+      Lp = cp(37368),
+      Yp = cp(40096),
+      Dp = cp(40107),
+      Ap = cp(40306),
+      Pp = cp(37989),
+      Wp = cp(40269);
+
+    function yp(pp, ip) {
+      let cp = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+      const Op = ip.width,
+        op = ip.height;
+      if (pp instanceof Float32Array) {
+        let ip = pp.byteLength / pp.BYTES_PER_ELEMENT;
+        const cp = new Uint8Array(ip);
+        for (; --ip >= 0;) {
+          let Op = pp[ip];
+          Op < 0 ? Op = 0 : Op > 1 && (Op = 1), cp[ip] = 255 * Op
+        }
+        pp = cp
+      }
+      const Ip = document.createElement("canvas");
+      Ip.width = Op, Ip.height = op;
+      const Sp = Ip.getContext("2d");
+      if (!Sp) return null;
+      const xp = Sp.createImageData(Op, op);
+      if (xp.data.set(pp), Sp.putImageData(xp, 0, 0), cp) {
+        const pp = document.createElement("canvas");
+        pp.width = Op, pp.height = op;
+        const ip = pp.getContext("2d");
+        return ip ? (ip.translate(0, op), ip.scale(1, -1), ip.drawImage(Ip, 0, 0), pp.toDataURL("image/png")) : null
+      }
+      return Ip.toDataURL("image/png")
+    }
+
+    function Up(pp) {
+      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const Op = pp.getInternalTexture();
+      if (!Op) return null;
+      const op = pp._readPixelsSync(ip, cp);
+      return op ? yp(op, pp.getSize(), Op.invertY) : null
+    }
+    async function wp(pp) {
+      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
+        cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 0;
+      const Op = pp.getInternalTexture();
+      if (!Op) return null;
+      const op = await pp.readPixels(ip, cp);
+      return op ? yp(op, pp.getSize(), Op.invertY) : null
+    }
+    var vp = cp(40605),
+      tp = cp(40233);
+    let Hp = (() => {
+        var pp;
+        let ip, cp, yp, Hp, dp, ep, jp, kp, mp, Rp, qp, Mp, Cp, Ep = xp.d,
+          Xp = [],
+          lp = [],
+          Qp = [],
+          Jp = [],
+          Bp = [],
+          Np = [],
+          Tp = [],
+          fp = [],
+          bp = [],
+          hp = [],
+          ap = [],
+          np = [],
+          Fp = [],
+          gp = [],
+          Gp = [],
+          rp = [],
+          Zp = [],
+          zp = [],
+          sp = [],
+          Kp = [],
+          Vp = [],
+          ii = [],
+          ci = [],
+          Oi = [],
+          oi = [];
+        return pp = class extends Ep {
+          static _CreateVideoTexture(ip, cp, Op) {
+            arguments.length > 5 && void 0 !== arguments[5] || pp.TRILINEAR_SAMPLINGMODE;
+            throw (0, Yp.o)("VideoTexture")
           }
-          getTypeID() {
-            return LD.c.LIGHTTYPEID_HEMISPHERICLIGHT
+          get noMipmap() {
+            return this._noMipmap
           }
-          prepareLightSpecificDefines(DD, zD) {
-            DD["HEMILIGHT" + zD] = !0
+          get mimeType() {
+            return this._mimeType
+          }
+          set isBlocking(pp) {
+            this._isBlocking = pp
+          }
+          get isBlocking() {
+            return this._isBlocking
+          }
+          get invertY() {
+            return this._invertY
+          }
+          constructor(ip, cp, op, Sp) {
+            let xp, Lp = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : pp.TRILINEAR_SAMPLINGMODE,
+              Yp = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : null,
+              Ap = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null,
+              Pp = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              Wp = arguments.length > 8 && void 0 !== arguments[8] && arguments[8],
+              yp = arguments.length > 9 ? arguments[9] : void 0,
+              Up = arguments.length > 10 ? arguments[10] : void 0,
+              wp = arguments.length > 11 ? arguments[11] : void 0,
+              tp = arguments.length > 12 ? arguments[12] : void 0,
+              Hp = arguments.length > 13 ? arguments[13] : void 0;
+            super(cp), this.url = ((0, Op.l)(this, Xp), (0, Op.l)(this, lp, null)), this.uOffset = ((0, Op.l)(this, Qp), (0, Op.l)(this, Jp, 0)), this.vOffset = ((0, Op.l)(this, Bp), (0, Op.l)(this, Np, 0)), this.uScale = ((0, Op.l)(this, Tp), (0, Op.l)(this, fp, 1)), this.vScale = ((0, Op.l)(this, bp), (0, Op.l)(this, hp, 1)), this.uAng = ((0, Op.l)(this, ap), (0, Op.l)(this, np, 0)), this.vAng = ((0, Op.l)(this, Fp), (0, Op.l)(this, gp, 0)), this.wAng = ((0, Op.l)(this, Gp), (0, Op.l)(this, rp, 0)), this.uRotationCenter = ((0, Op.l)(this, Zp), (0, Op.l)(this, zp, .5)), this.vRotationCenter = ((0, Op.l)(this, sp), (0, Op.l)(this, Kp, .5)), this.wRotationCenter = ((0, Op.l)(this, Vp), (0, Op.l)(this, ii, .5)), this.homogeneousRotationInUVTransform = ((0, Op.l)(this, ci), (0, Op.l)(this, Oi, !1)), this.inspectableCustomProperties = ((0, Op.l)(this, oi), null), this._noMipmap = !1, this._invertY = !1, this._rowGenerationMatrix = null, this._cachedTextureMatrix = null, this._projectionModeMatrix = null, this._t0 = null, this._t1 = null, this._t2 = null, this._cachedUOffset = -1, this._cachedVOffset = -1, this._cachedUScale = 0, this._cachedVScale = 0, this._cachedUAng = -1, this._cachedVAng = -1, this._cachedWAng = -1, this._cachedReflectionProjectionMatrixId = -1, this._cachedURotationCenter = -1, this._cachedVRotationCenter = -1, this._cachedWRotationCenter = -1, this._cachedHomogeneousRotationInUVTransform = !1, this._cachedIdentity3x2 = !0, this._cachedReflectionTextureMatrix = null, this._cachedReflectionUOffset = -1, this._cachedReflectionVOffset = -1, this._cachedReflectionUScale = 0, this._cachedReflectionVScale = 0, this._cachedReflectionCoordinatesMode = -1, this._buffer = null, this._deleteBuffer = !1, this._format = null, this._delayedOnLoad = null, this._delayedOnError = null, this.onLoadObservable = new Ip.d, this._isBlocking = !0, this.name = ip || "", this.url = ip;
+            let dp = !1,
+              ep = null,
+              jp = !0;
+            "object" === typeof op && null !== op ? (xp = op.noMipmap ?? !1, Sp = op.invertY ?? !vp.c, Lp = op.samplingMode ?? pp.TRILINEAR_SAMPLINGMODE, Yp = op.onLoad ?? null, Ap = op.onError ?? null, Pp = op.buffer ?? null, Wp = op.deleteBuffer ?? !1, yp = op.format, Up = op.mimeType, wp = op.loaderOptions, tp = op.creationFlags, dp = op.useSRGBBuffer ?? !1, ep = op.internalTexture ?? null, jp = op.gammaSpace ?? jp, Hp = op.forcedExtension ?? Hp) : xp = !!op, this._gammaSpace = jp, this._noMipmap = xp, this._invertY = void 0 === Sp ? !vp.c : Sp, this._initialSamplingMode = Lp, this._buffer = Pp, this._deleteBuffer = Wp, this._mimeType = Up, this._loaderOptions = wp, this._creationFlags = tp, this._useSRGBBuffer = dp, this._forcedExtension = Hp, void 0 !== yp && (this._format = yp);
+            const kp = this.Gl(),
+              mp = this._getEngine();
+            if (!mp) return;
+            mp.onBeforeTextureInitObservable.notifyObservers(this);
+            const Rp = () => {
+                this._texture && (this._texture._invertVScale && (this.vScale *= -1, this.vOffset += 1), null !== this._texture._cachedWrapU && (this.wrapU = this._texture._cachedWrapU, this._texture._cachedWrapU = null), null !== this._texture._cachedWrapV && (this.wrapV = this._texture._cachedWrapV, this._texture._cachedWrapV = null), null !== this._texture._cachedWrapR && (this.wrapR = this._texture._cachedWrapR, this._texture._cachedWrapR = null)), this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), Yp && Yp(), !this.isBlocking && kp && kp.resetCachedMaterial()
+              },
+              qp = (ip, cp) => {
+                this._loadingError = !0, this._errorObject = {
+                  message: ip,
+                  exception: cp
+                }, Ap && Ap(ip, cp), pp.OnTextureLoadErrorObservable.notifyObservers(this)
+              };
+            if (!this.url && !ep) return this._delayedOnLoad = Rp, void(this._delayedOnError = qp);
+            if (this._texture = ep ?? this._getFromCache(this.url, xp, Lp, this._invertY, dp, this.isCube), this._texture)
+              if (this._texture.isReady) Dp.b.SetImmediate((() => Rp()));
+              else {
+                const pp = this._texture.onLoadedObservable.add(Rp);
+                this._texture.onErrorObservable.add((ip => {
+                  qp(ip.message, ip.exception), this._texture?.onLoadedObservable.remove(pp)
+                }))
+              }
+            else if (kp && kp.useDelayedTextureLoading) this.delayLoadState = 4, this._delayedOnLoad = Rp, this._delayedOnError = qp;
+            else {
+              try {
+                this._texture = mp.createTexture(this.url, xp, this._invertY, kp, Lp, Rp, qp, this._buffer, void 0, this._format, this._forcedExtension, Up, wp, tp, dp)
+              } catch (Mp) {
+                throw qp("error loading", Mp), Mp
+              }
+              Wp && (this._buffer = null)
+            }
+          }
+          updateURL(pp) {
+            let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+              cp = arguments.length > 2 ? arguments[2] : void 0,
+              Op = arguments.length > 3 ? arguments[3] : void 0;
+            this.url && (this.releaseInternalTexture(), this.Gl().markAllMaterialsAsDirty(1, (pp => pp.hasTexture(this)))), this.name && !this.name.startsWith("data:") || (this.name = pp), this.url = pp, this._buffer = ip, this._forcedExtension = Op, this.delayLoadState = 4;
+            const op = this._delayedOnLoad;
+            this._delayedOnLoad = () => {
+              op ? op() : this.onLoadObservable.hasObservers() && this.onLoadObservable.notifyObservers(this), cp && cp()
+            }, this.delayLoad()
+          }
+          delayLoad() {
+            if (4 !== this.delayLoadState) return;
+            const pp = this.Gl();
+            if (!pp) return;
+            let ip = this.url;
+            !ip && (this.name.indexOf("://") > 0 || this.name.startsWith("data:")) && (ip = this.name), this.delayLoadState = 1, this._texture = this._getFromCache(ip, this._noMipmap, this.samplingMode, this._invertY, this._useSRGBBuffer, this.isCube), this._texture ? this._delayedOnLoad && (this._texture.isReady ? Dp.b.SetImmediate(this._delayedOnLoad) : this._texture.onLoadedObservable.add(this._delayedOnLoad)) : (this._texture = pp.gy().createTexture(ip, this._noMipmap, this._invertY, pp, this.samplingMode, this._delayedOnLoad, this._delayedOnError, this._buffer, null, this._format, this._forcedExtension, this._mimeType, this._loaderOptions, this._creationFlags, this._useSRGBBuffer), this._deleteBuffer && (this._buffer = null)), this._delayedOnLoad = null, this._delayedOnError = null
+          }
+          _prepareRowForTextureGeneration(pp, ip, cp, Op) {
+            pp *= this._cachedUScale, ip *= this._cachedVScale, pp -= this.uRotationCenter * this._cachedUScale, ip -= this.vRotationCenter * this._cachedVScale, cp -= this.wRotationCenter, Sp.o.TransformCoordinatesFromFloatsToRef(pp, ip, cp, this._rowGenerationMatrix, Op), Op.x += this.uRotationCenter * this._cachedUScale + this._cachedUOffset, Op.y += this.vRotationCenter * this._cachedVScale + this._cachedVOffset, Op.z += this.wRotationCenter
+          }
+          getTextureMatrix() {
+            let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1;
+            if (this.uOffset === this._cachedUOffset && this.vOffset === this._cachedVOffset && this.uScale * pp === this._cachedUScale && this.vScale === this._cachedVScale && this.uAng === this._cachedUAng && this.vAng === this._cachedVAng && this.wAng === this._cachedWAng && this.uRotationCenter === this._cachedURotationCenter && this.vRotationCenter === this._cachedVRotationCenter && this.wRotationCenter === this._cachedWRotationCenter && this.homogeneousRotationInUVTransform === this._cachedHomogeneousRotationInUVTransform) return this._cachedTextureMatrix;
+            this._cachedUOffset = this.uOffset, this._cachedVOffset = this.vOffset, this._cachedUScale = this.uScale * pp, this._cachedVScale = this.vScale, this._cachedUAng = this.uAng, this._cachedVAng = this.vAng, this._cachedWAng = this.wAng, this._cachedURotationCenter = this.uRotationCenter, this._cachedVRotationCenter = this.vRotationCenter, this._cachedWRotationCenter = this.wRotationCenter, this._cachedHomogeneousRotationInUVTransform = this.homogeneousRotationInUVTransform, this._cachedTextureMatrix && this._rowGenerationMatrix || (this._cachedTextureMatrix = Sp.b.Zero(), this._rowGenerationMatrix = new Sp.b, this._t0 = Sp.o.Zero(), this._t1 = Sp.o.Zero(), this._t2 = Sp.o.Zero()), Sp.b.RotationYawPitchRollToRef(this.vAng, this.uAng, this.wAng, this._rowGenerationMatrix), this.homogeneousRotationInUVTransform ? (Sp.b.TranslationToRef(-this._cachedURotationCenter, -this._cachedVRotationCenter, -this._cachedWRotationCenter, Sp.i.Matrix[0]), Sp.b.TranslationToRef(this._cachedURotationCenter, this._cachedVRotationCenter, this._cachedWRotationCenter, Sp.i.Matrix[1]), Sp.b.ScalingToRef(this._cachedUScale, this._cachedVScale, 0, Sp.i.Matrix[2]), Sp.b.TranslationToRef(this._cachedUOffset, this._cachedVOffset, 0, Sp.i.Matrix[3]), Sp.i.Matrix[0].multiplyToRef(this._rowGenerationMatrix, this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(Sp.i.Matrix[1], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(Sp.i.Matrix[2], this._cachedTextureMatrix), this._cachedTextureMatrix.multiplyToRef(Sp.i.Matrix[3], this._cachedTextureMatrix), this._cachedTextureMatrix.setRowFromFloats(2, this._cachedTextureMatrix.m[12], this._cachedTextureMatrix.m[13], this._cachedTextureMatrix.m[14], 1)) : (this._prepareRowForTextureGeneration(0, 0, 0, this._t0), this._prepareRowForTextureGeneration(1, 0, 0, this._t1), this._prepareRowForTextureGeneration(0, 1, 0, this._t2), this._t1.Iop(this._t0), this._t2.Iop(this._t0), Sp.b.FromValuesToRef(this._t1.x, this._t1.y, this._t1.z, 0, this._t2.x, this._t2.y, this._t2.z, 0, this._t0.x, this._t0.y, this._t0.z, 0, 0, 0, 0, 1, this._cachedTextureMatrix));
+            const ip = this.Gl();
+            if (!ip) return this._cachedTextureMatrix;
+            const cp = this._cachedIdentity3x2;
+            return this._cachedIdentity3x2 = this._cachedTextureMatrix.isIdentityAs3x2(), this.optimizeUVAllocation && cp !== this._cachedIdentity3x2 && ip.markAllMaterialsAsDirty(1, (pp => pp.hasTexture(this))), this._cachedTextureMatrix
+          }
+          getReflectionTextureMatrix() {
+            const ip = this.Gl();
+            if (!ip) return this._cachedReflectionTextureMatrix;
+            if (this.uOffset === this._cachedReflectionUOffset && this.vOffset === this._cachedReflectionVOffset && this.uScale === this._cachedReflectionUScale && this.vScale === this._cachedReflectionVScale && this.coordinatesMode === this._cachedReflectionCoordinatesMode) {
+              if (this.coordinatesMode !== pp.PROJECTION_MODE) return this._cachedReflectionTextureMatrix;
+              if (this._cachedReflectionProjectionMatrixId === ip.getProjectionMatrix().updateFlag) return this._cachedReflectionTextureMatrix
+            }
+            this._cachedReflectionTextureMatrix || (this._cachedReflectionTextureMatrix = Sp.b.Zero()), this._projectionModeMatrix || (this._projectionModeMatrix = Sp.b.Zero());
+            const cp = this._cachedReflectionCoordinatesMode !== this.coordinatesMode;
+            switch (this._cachedReflectionUOffset = this.uOffset, this._cachedReflectionVOffset = this.vOffset, this._cachedReflectionUScale = this.uScale, this._cachedReflectionVScale = this.vScale, this._cachedReflectionCoordinatesMode = this.coordinatesMode, this.coordinatesMode) {
+              case pp.PLANAR_MODE:
+                Sp.b.IdentityToRef(this._cachedReflectionTextureMatrix), this._cachedReflectionTextureMatrix[0] = this.uScale, this._cachedReflectionTextureMatrix[5] = this.vScale, this._cachedReflectionTextureMatrix[12] = this.uOffset, this._cachedReflectionTextureMatrix[13] = this.vOffset;
+                break;
+              case pp.PROJECTION_MODE: {
+                Sp.b.FromValuesToRef(.5, 0, 0, 0, 0, -.5, 0, 0, 0, 0, 0, 0, .5, .5, 1, 1, this._projectionModeMatrix);
+                const pp = ip.getProjectionMatrix();
+                this._cachedReflectionProjectionMatrixId = pp.updateFlag, pp.multiplyToRef(this._projectionModeMatrix, this._cachedReflectionTextureMatrix);
+                break
+              }
+              default:
+                Sp.b.IdentityToRef(this._cachedReflectionTextureMatrix)
+            }
+            return cp && ip.markAllMaterialsAsDirty(1, (pp => pp.hasTexture(this))), this._cachedReflectionTextureMatrix
+          }
+          clone() {
+            const ip = {
+              noMipmap: this._noMipmap,
+              invertY: this._invertY,
+              samplingMode: this.samplingMode,
+              onLoad: void 0,
+              onError: void 0,
+              buffer: this._texture ? this._texture._buffer : void 0,
+              deleteBuffer: this._deleteBuffer,
+              format: this.textureFormat,
+              mimeType: this.mimeType,
+              loaderOptions: this._loaderOptions,
+              creationFlags: this._creationFlags,
+              useSRGBBuffer: this._useSRGBBuffer
+            };
+            return tp.c.Clone((() => new pp(this._texture ? this._texture.url : null, this.Gl(), ip)), this)
+          }
+          serialize() {
+            const ip = this.name;
+            pp.SerializeBuffers || this.name.startsWith("data:") && (this.name = ""), this.name.startsWith("data:") && this.url === this.name && (this.url = "");
+            const cp = super.serialize(pp._SerializeInternalTextureUniqueId);
+            if (!cp) return null;
+            if (pp.SerializeBuffers || pp.ForceSerializeBuffers)
+              if ("string" === typeof this._buffer && this._buffer.startsWith("data:")) cp.base64String = this._buffer, cp.name = cp.name.replace("data:", "");
+              else if (this.url && this.url.startsWith("data:") && this._buffer instanceof Uint8Array) {
+              const pp = this.mimeType || "image/png";
+              cp.base64String = `data:${pp};base64,${(0,Wp.i)(this._buffer)}`
+            } else(pp.ForceSerializeBuffers || this.url && this.url.startsWith("blob:") || this._forceSerialize) && (cp.base64String = !this._engine || this._engine._features.supportSyncTextureRead ? Up(this) : wp(this));
+            return cp.invertY = this._invertY, cp.samplingMode = this.samplingMode, cp._creationFlags = this._creationFlags, cp._useSRGBBuffer = this._useSRGBBuffer, pp._SerializeInternalTextureUniqueId && (cp.internalTextureUniqueId = this._texture?.uniqueId), cp.internalTextureLabel = this._texture?.label, cp.noMipmap = this._noMipmap, this.name = ip, cp
+          }
+          getClassName() {
+            return "Texture"
+          }
+          dispose() {
+            super.dispose(), this.onLoadObservable.clear(), this._delayedOnLoad = null, this._delayedOnError = null, this._buffer = null
+          }
+          static Parse(ip, cp, Op) {
+            if (ip.customType) {
+              const pp = Ap.d.Instantiate(ip.customType).Parse(ip, cp, Op);
+              return ip.samplingMode && pp.updateSamplingMode && pp._samplingMode && pp._samplingMode !== ip.samplingMode && pp.updateSamplingMode(ip.samplingMode), pp
+            }
+            if (ip.isCube && !ip.isRenderTarget) return pp._CubeTextureParser(ip, cp, Op);
+            const op = void 0 !== ip.internalTextureUniqueId;
+            if (!ip.name && !ip.isRenderTarget && !op) return null;
+            let Ip;
+            if (op) {
+              const pp = cp.gy().getLoadedTexturesCache();
+              for (const cp of pp)
+                if (cp.uniqueId === ip.internalTextureUniqueId) {
+                  Ip = cp;
+                  break
+                }
+            }
+            const Sp = pp => {
+              if (pp && pp._texture && (pp._texture._cachedWrapU = null, pp._texture._cachedWrapV = null, pp._texture._cachedWrapR = null), ip.samplingMode) {
+                const cp = ip.samplingMode;
+                pp && pp.samplingMode !== cp && pp.updateSamplingMode(cp)
+              }
+              if (pp && ip.animations)
+                for (let cp = 0; cp < ip.animations.length; cp++) {
+                  const Op = ip.animations[cp],
+                    op = (0, Lp.d)("BABYLON.Animation");
+                  op && pp.animations.push(op.Parse(Op))
+                }
+              pp && pp._texture && (op && !Ip && pp._texture._setUniqueId(ip.internalTextureUniqueId), pp._texture.label = ip.internalTextureLabel)
+            };
+            return tp.c.Parse((() => {
+              let op = !0;
+              if (ip.noMipmap && (op = !1), ip.mirrorPlane) {
+                const Op = pp._CreateMirror(ip.name, ip.renderTargetSize, cp, op);
+                return Op._waitingRenderList = ip.renderList, Op.mirrorPlane = Pp.e.FromArray(ip.mirrorPlane), Sp(Op), Op
+              }
+              if (ip.isRenderTarget && !ip.base64String) {
+                let Op = null;
+                if (ip.isCube) {
+                  if (cp.reflectionProbes)
+                    for (let pp = 0; pp < cp.reflectionProbes.length; pp++) {
+                      const Op = cp.reflectionProbes[pp];
+                      if (Op.name === ip.name) return Op.cubeTexture
+                    }
+                } else Op = pp._CreateRenderTargetTexture(ip.name, ip.renderTargetSize, cp, op, ip._creationFlags ?? 0), Op._waitingRenderList = ip.renderList;
+                return Sp(Op), Op
+              }
+              if (ip.isVideo) {
+                const Ip = pp._CreateVideoTexture(Op + (ip.url || ip.name), Op + (ip.src || ip.url), cp, op, ip.invertY, ip.samplingMode, ip.settings || {});
+                return Sp(Ip), Ip
+              } {
+                let xp;
+                if ("string" === typeof ip.base64String && ip.base64String && !Ip) {
+                  const Op = {
+                      buffer: ip.base64String,
+                      noMipmap: !op,
+                      invertY: ip.invertY,
+                      samplingMode: ip.samplingMode,
+                      useSRGBBuffer: ip._useSRGBBuffer ?? !1,
+                      creationFlags: ip._creationFlags ?? 0,
+                      onLoad: () => {
+                        Sp(xp)
+                      }
+                    },
+                    Ip = ip.base64String,
+                    Lp = Ip.startsWith("data:") ? Ip.substring(5) : Ip;
+                  xp = pp.CreateFromBase64String("", Lp, cp, Op), xp.name = ip.name
+                } else {
+                  let Lp;
+                  Lp = ip.name && (ip.name.indexOf("://") > 0 || ip.name.startsWith("data:")) ? ip.name : Op + ip.name, ip.url && (ip.url.startsWith("data:") || pp.UseSerializedUrlIfAny) && (Lp = ip.url);
+                  const Yp = {
+                    noMipmap: !op,
+                    invertY: ip.invertY,
+                    samplingMode: ip.samplingMode,
+                    useSRGBBuffer: ip._useSRGBBuffer ?? !1,
+                    creationFlags: ip._creationFlags ?? 0,
+                    onLoad: () => {
+                      Sp(xp)
+                    },
+                    internalTexture: Ip
+                  };
+                  xp = new pp(Lp, cp, Yp)
+                }
+                return xp
+              }
+            }), ip, cp)
+          }
+          static CreateFromBase64String(ip, cp, Op, op, Ip) {
+            let Sp = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : pp.TRILINEAR_SAMPLINGMODE;
+            return new pp("data:" + cp, Op, op, Ip, Sp, arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : null, arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null, ip, !1, arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : 5, void 0, void 0, arguments.length > 9 ? arguments[9] : void 0, arguments.length > 10 ? arguments[10] : void 0)
+          }
+          static LoadFromDataString(ip, cp, Op) {
+            let op = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+              Ip = arguments.length > 4 ? arguments[4] : void 0,
+              Sp = !(arguments.length > 5 && void 0 !== arguments[5]) || arguments[5],
+              xp = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : pp.TRILINEAR_SAMPLINGMODE,
+              Lp = arguments.length > 7 && void 0 !== arguments[7] ? arguments[7] : null,
+              Yp = arguments.length > 8 && void 0 !== arguments[8] ? arguments[8] : null,
+              Dp = arguments.length > 9 && void 0 !== arguments[9] ? arguments[9] : 5,
+              Ap = arguments.length > 10 ? arguments[10] : void 0,
+              Pp = arguments.length > 11 ? arguments[11] : void 0;
+            return "data:" !== ip.substring(0, 5) && (ip = "data:" + ip), new pp(ip, Op, Ip, Sp, xp, Lp, Yp, cp, op, Dp, void 0, void 0, Ap, Pp)
           }
         }, (() => {
-          const KD = "function" === typeof Symbol && Symbol.metadata ? Object.create(cD[Symbol.metadata] ?? null) : void 0;
-          zD = [(0, sD.k)()], wD = [(0, sD.B)()], (0, pD.i)(null, null, zD, {
-            kind: "field",
-            name: "groundColor",
+          const Ip = "function" === typeof Symbol && Symbol.metadata ? Object.create(Ep[Symbol.metadata] ?? null) : void 0;
+          ip = [(0, op.K)()], cp = [(0, op.K)()], yp = [(0, op.K)()], Hp = [(0, op.K)()], dp = [(0, op.K)()], ep = [(0, op.K)()], jp = [(0, op.K)()], kp = [(0, op.K)()], mp = [(0, op.K)()], Rp = [(0, op.K)()], qp = [(0, op.K)()], Mp = [(0, op.K)()], Cp = [(0, op.K)()], (0, Op.j)(pp, null, Cp, {
+            kind: "getter",
+            name: "isBlocking",
             static: !1,
             private: !1,
             access: {
-              has: DD => "groundColor" in DD,
-              get: DD => DD.groundColor,
-              set: (DD, zD) => {
-                DD.groundColor = zD
-              }
+              has: pp => "isBlocking" in pp,
+              get: pp => pp.isBlocking
             },
-            metadata: KD
-          }, gD, RD), (0, pD.i)(null, null, wD, {
+            metadata: Ip
+          }, null, Xp), (0, Op.j)(null, null, ip, {
             kind: "field",
-            name: "direction",
+            name: "url",
             static: !1,
             private: !1,
             access: {
-              has: DD => "direction" in DD,
-              get: DD => DD.direction,
-              set: (DD, zD) => {
-                DD.direction = zD
+              has: pp => "url" in pp,
+              get: pp => pp.url,
+              set: (pp, ip) => {
+                pp.url = ip
               }
             },
-            metadata: KD
-          }, AD, UD), KD && Object.defineProperty(DD, Symbol.metadata, {
+            metadata: Ip
+          }, lp, Qp), (0, Op.j)(null, null, cp, {
+            kind: "field",
+            name: "uOffset",
+            static: !1,
+            private: !1,
+            access: {
+              has: pp => "uOffset" in pp,
+              get: pp => pp.uOffset,
+              set: (pp, ip) => {
+                pp.uOffset = ip
+              }
+            },
+            metadata: Ip
+          }, Jp, Bp), (0, Op.j)(null, null, yp, {
+            kind: "field",
+            name: "vOffset",
+            static: !1,
+            private: !1,
+            access: {
+              has: pp => "vOffset" in pp,
+              get: pp => pp.vOffset,
+              set: (pp, ip) => {
+                pp.vOffset = ip
+              }
+            },
+            metadata: Ip
+          }, Np, Tp), (0, Op.j)(null, null, Hp, {
+            kind: "field",
+            name: "uScale",
+            static: !1,
+            private: !1,
+            access: {
+              has: pp => "uScale" in pp,
+              get: pp => pp.uScale,
+              set: (pp, ip) => {
+                pp.uScale = ip
+              }
+            },
+            metadata: Ip
+          }, fp, bp), (0, Op.j)(null, null, dp, {
+            kind: "field",
+            name: "vScale",
+            static: !1,
+            private: !1,
+            access: {
+              has: pp => "vScale" in pp,
+              get: pp => pp.vScale,
+              set: (pp, ip) => {
+                pp.vScale = ip
+              }
+            },
+            metadata: Ip
+          }, hp, ap), (0, Op.j)(null, null, ep, {
+            kind: "field",
+            name: "uAng",
+            static: !1,
+            private: !1,
+            access: {
+              has: pp => "uAng" in pp,
+              get: pp => pp.uAng,
+              set: (pp, ip) => {
+                pp.uAng = ip
+              }
+            },
+            metadata: Ip
+          }, np, Fp), (0, Op.j)(null, null, jp, {
+            kind: "field",
+            name: "vAng",
+            static: !1,
+            private: !1,
+            access: {
+              has: pp => "vAng" in pp,
+              get: pp => pp.vAng,
+              set: (pp, ip) => {
+                pp.vAng = ip
+              }
+            },
+            metadata: Ip
+          }, gp, Gp), (0, Op.j)(null, null, kp, {
+            kind: "field",
+            name: "wAng",
+            static: !1,
+            private: !1,
+            access: {
+              has: pp => "wAng" in pp,
+              get: pp => pp.wAng,
+              set: (pp, ip) => {
+                pp.wAng = ip
+              }
+            },
+            metadata: Ip
+          }, rp, Zp), (0, Op.j)(null, null, mp, {
+            kind: "field",
+            name: "uRotationCenter",
+            static: !1,
+            private: !1,
+            access: {
+              has: pp => "uRotationCenter" in pp,
+              get: pp => pp.uRotationCenter,
+              set: (pp, ip) => {
+                pp.uRotationCenter = ip
+              }
+            },
+            metadata: Ip
+          }, zp, sp), (0, Op.j)(null, null, Rp, {
+            kind: "field",
+            name: "vRotationCenter",
+            static: !1,
+            private: !1,
+            access: {
+              has: pp => "vRotationCenter" in pp,
+              get: pp => pp.vRotationCenter,
+              set: (pp, ip) => {
+                pp.vRotationCenter = ip
+              }
+            },
+            metadata: Ip
+          }, Kp, Vp), (0, Op.j)(null, null, qp, {
+            kind: "field",
+            name: "wRotationCenter",
+            static: !1,
+            private: !1,
+            access: {
+              has: pp => "wRotationCenter" in pp,
+              get: pp => pp.wRotationCenter,
+              set: (pp, ip) => {
+                pp.wRotationCenter = ip
+              }
+            },
+            metadata: Ip
+          }, ii, ci), (0, Op.j)(null, null, Mp, {
+            kind: "field",
+            name: "homogeneousRotationInUVTransform",
+            static: !1,
+            private: !1,
+            access: {
+              has: pp => "homogeneousRotationInUVTransform" in pp,
+              get: pp => pp.homogeneousRotationInUVTransform,
+              set: (pp, ip) => {
+                pp.homogeneousRotationInUVTransform = ip
+              }
+            },
+            metadata: Ip
+          }, Oi, oi), Ip && Object.defineProperty(pp, Symbol.metadata, {
             enumerable: !0,
             configurable: !0,
             writable: !0,
-            value: KD
+            value: Ip
           })
-        })(), DD
+        })(), pp.SerializeBuffers = !0, pp.ForceSerializeBuffers = !1, pp.OnTextureLoadErrorObservable = new Ip.d, pp._SerializeInternalTextureUniqueId = !1, pp._CubeTextureParser = (pp, ip, cp) => {
+          throw (0, Yp.o)("CubeTexture")
+        }, pp._CreateMirror = (pp, ip, cp, Op) => {
+          throw (0, Yp.o)("MirrorTexture")
+        }, pp._CreateRenderTargetTexture = (pp, ip, cp, Op, op) => {
+          throw (0, Yp.o)("RenderTargetTexture")
+        }, pp.NEAREST_SAMPLINGMODE = 1, pp.NEAREST_NEAREST_MIPLINEAR = 8, pp.BILINEAR_SAMPLINGMODE = 2, pp.LINEAR_LINEAR_MIPNEAREST = 11, pp.TRILINEAR_SAMPLINGMODE = 3, pp.LINEAR_LINEAR_MIPLINEAR = 3, pp.NEAREST_NEAREST_MIPNEAREST = 4, pp.NEAREST_LINEAR_MIPNEAREST = 5, pp.NEAREST_LINEAR_MIPLINEAR = 6, pp.NEAREST_LINEAR = 7, pp.NEAREST_NEAREST = 1, pp.LINEAR_NEAREST_MIPNEAREST = 9, pp.LINEAR_NEAREST_MIPLINEAR = 10, pp.LINEAR_LINEAR = 2, pp.LINEAR_NEAREST = 12, pp.EXPLICIT_MODE = 0, pp.SPHERICAL_MODE = 1, pp.PLANAR_MODE = 2, pp.CUBIC_MODE = 3, pp.PROJECTION_MODE = 4, pp.SKYBOX_MODE = 5, pp.INVCUBIC_MODE = 6, pp.EQUIRECTANGULAR_MODE = 7, pp.FIXED_EQUIRECTANGULAR_MODE = 8, pp.FIXED_EQUIRECTANGULAR_MIRRORED_MODE = 9, pp.CLAMP_ADDRESSMODE = 0, pp.WRAP_ADDRESSMODE = 1, pp.MIRROR_ADDRESSMODE = 2, pp.UseSerializedUrlIfAny = !1, pp
       })(),
-      AD = !1;
+      dp = !1;
 
-    function UD() {
-      AD || (AD = !0, cD.b.AddNodeConstructor("Light_Type_3", ((DD, zD) => () => new RD(DD, KD.s.Zero(), zD))), (0, gD.i)("BABYLON.HemisphericLight", RD))
+    function ep() {
+      dp || (dp = !0, (0, Lp.g)("BABYLON.Texture", Hp), tp.c._TextureParser = Hp.Parse)
+    }
+  },
+  40225: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Op
+    });
+    class Op {
+      constructor(pp, ip) {
+        this.width = pp, this.height = ip
+      }
+      toString() {
+        return `{W: ${this.width}, H: ${this.height}}`
+      }
+      getClassName() {
+        return "Size"
+      }
+      getHashCode() {
+        let pp = 0 | this.width;
+        return pp = 397 * pp ^ this.height, pp
+      }
+      rM(pp) {
+        this.width = pp.width, this.height = pp.height
+      }
+      i5(pp, ip) {
+        return this.width = pp, this.height = ip, this
+      }
+      set(pp, ip) {
+        return this.i5(pp, ip)
+      }
+      multiplyByFloats(pp, ip) {
+        return new Op(this.width * pp, this.height * ip)
+      }
+      clone() {
+        return new Op(this.width, this.height)
+      }
+      equals(pp) {
+        return !!pp && (this.width === pp.width && this.height === pp.height)
+      }
+      get surface() {
+        return this.width * this.height
+      }
+      static Zero() {
+        return new Op(0, 0)
+      }
+      add(pp) {
+        return new Op(this.width + pp.width, this.height + pp.height)
+      }
+      subtract(pp) {
+        return new Op(this.width - pp.width, this.height - pp.height)
+      }
+      scale(pp) {
+        return new Op(this.width * pp, this.height * pp)
+      }
+      static Lerp(pp, ip, cp) {
+        const op = pp.width + (ip.width - pp.width) * cp,
+          Ip = pp.height + (ip.height - pp.height) * cp;
+        return new Op(op, Ip)
+      }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

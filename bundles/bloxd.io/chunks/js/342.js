@@ -1,35 +1,231 @@
 export const id = 342;
 export const ids = [342];
 export const modules = {
-  42114: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => rD
+  42639: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Sp
     });
-    var pD = wD(39776);
-    const sD = "helperFunctions",
-      KD = "const PI: f32=3.1415926535897932384626433832795;const TWO_PI: f32=6.283185307179586;const HALF_PI: f32=1.5707963267948966;const RECIPROCAL_PI: f32=0.3183098861837907;const RECIPROCAL_PI2: f32=0.15915494309189535;const RECIPROCAL_PI4: f32=0.07957747154594767;const HALF_MIN: f32=5.96046448e-08; \nconst LinearEncodePowerApprox: f32=2.2;const GammaEncodePowerApprox: f32=1.0/LinearEncodePowerApprox;const LuminanceEncodeApprox: vec3f=vec3f(0.2126,0.7152,0.0722);const Epsilon:f32=0.0000001;fn square(x: f32)->f32 {return x*x;}\nfn saturate(x: f32)->f32 {return clamp(x,0.0,1.0);}\nfn saturateVec3(x: vec3f)->vec3f {return clamp(x,vec3f(),vec3f(1.0));}\nfn saturateEps(x: f32)->f32 {return clamp(x,Epsilon,1.0);}\nfn maxEps(x: f32)->f32 {return max(x,Epsilon);}\nfn maxEpsVec3(x: vec3f)->vec3f {return max(x,vec3f(Epsilon));}\nfn absEps(x: f32)->f32 {return abs(x)+Epsilon;}\nfn transposeMat3(inMatrix: mat3x3f)->mat3x3f {let i0: vec3f=inMatrix[0];let i1: vec3f=inMatrix[1];let i2: vec3f=inMatrix[2];let outMatrix:mat3x3f=mat3x3f(\nvec3(i0.x,i1.x,i2.x),\nvec3(i0.y,i1.y,i2.y),\nvec3(i0.z,i1.z,i2.z)\n);return outMatrix;}\nfn inverseMat3(inMatrix: mat3x3f)->mat3x3f {let a00: f32=inMatrix[0][0];let a01: f32=inMatrix[0][1];let a02: f32=inMatrix[0][2];let a10: f32=inMatrix[1][0];let a11: f32=inMatrix[1][1];let a12: f32=inMatrix[1][2];let a20: f32=inMatrix[2][0];let a21: f32=inMatrix[2][1];let a22: f32=inMatrix[2][2];let b01: f32=a22*a11-a12*a21;let b11: f32=-a22*a10+a12*a20;let b21: f32=a21*a10-a11*a20;let det: f32=a00*b01+a01*b11+a02*b21;return mat3x3f(b01/det,(-a22*a01+a02*a21)/det,(a12*a01-a02*a11)/det,\nb11/det,(a22*a00-a02*a20)/det,(-a12*a00+a02*a10)/det,\nb21/det,(-a21*a00+a01*a20)/det,(a11*a00-a01*a10)/det);}\n#if USE_EXACT_SRGB_CONVERSIONS\nfn toLinearSpaceExact(color: vec3f)->vec3f\n{let nearZeroSection: vec3f=0.0773993808*color;let remainingSection: vec3f=pow(0.947867299*(color+vec3f(0.055)),vec3f(2.4));return select(remainingSection,nearZeroSection,color<=vec3f(0.04045));}\nfn toGammaSpaceExact(color: vec3f)->vec3f\n{let nearZeroSection: vec3f=12.92*color;let remainingSection: vec3f=1.055*pow(color,vec3f(0.41666))-vec3f(0.055);return select(remainingSection,nearZeroSection,color<=vec3f(0.0031308));}\n#endif\nfn toLinearSpace(color: f32)->f32\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nvar nearZeroSection=0.0773993808*color;var remainingSection=pow(0.947867299*(color+0.055),2.4);return select(remainingSection,nearZeroSection,color<=0.04045);\n#else\nreturn pow(color,LinearEncodePowerApprox);\n#endif\n}\nfn toLinearSpaceVec3(color: vec3f)->vec3f\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toLinearSpaceExact(color);\n#else\nreturn pow(color,vec3f(LinearEncodePowerApprox));\n#endif\n}\nfn toLinearSpaceVec4(color: vec4<f32>)->vec4<f32>\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4f(toLinearSpaceExact(color.rgb),color.a);\n#else\nreturn vec4f(pow(color.rgb,vec3f(LinearEncodePowerApprox)),color.a);\n#endif\n}\nfn toGammaSpace(color: vec4<f32>)->vec4<f32>\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn vec4<f32>(toGammaSpaceExact(color.rgb),color.a);\n#else\nreturn vec4<f32>(pow(color.rgb,vec3f(GammaEncodePowerApprox)),color.a);\n#endif\n}\nfn toGammaSpaceVec3(color: vec3f)->vec3f\n{\n#if USE_EXACT_SRGB_CONVERSIONS\nreturn toGammaSpaceExact(color);\n#else\nreturn pow(color,vec3f(GammaEncodePowerApprox));\n#endif\n}\nfn squareVec3(value: vec3f)->vec3f\n{return value*value;}\nfn pow5(value: f32)->f32 {let sq: f32=value*value;return sq*sq*value;}\nfn double_refract(I: vec3f,N: vec3f,eta: f32)->vec3f {let Tfront: vec3f=refract(I,N,1.0/eta);let Nback: vec3f=normalize(reflect(N,Tfront));return refract(Tfront,-Nback,eta);}\nfn getLuminanceUnclamped(color: vec3f)->f32\n{return dot(color,LuminanceEncodeApprox);}\nfn getLuminance(color: vec3f)->f32\n{return saturate(getLuminanceUnclamped(color));}\nfn getRand(seed: vec2<f32>)->f32 {return fract(sin(dot(seed.xy ,vec2<f32>(12.9898,78.233)))*43758.5453);}\nfn dither(seed: vec2<f32>,varianceAmount: f32)->f32 {let rand: f32=getRand(seed);let normVariance: f32=varianceAmount/255.0;let dither: f32=mix(-normVariance,normVariance,rand);return dither;}\nconst rgbdMaxRange: f32=255.0;fn toRGBD(color: vec3f)->vec4<f32> {let maxRGB: f32=max(max(color.r,max(color.g,color.b)),Epsilon);var D: f32 =max(rgbdMaxRange/maxRGB,1.);D =clamp(floor(D)/255.0,0.,1.);var rgb: vec3f =color.rgb*D;rgb=toGammaSpaceVec3(rgb);return vec4<f32>(saturateVec3(rgb),D);}\nfn fromRGBD(rgbd: vec4<f32>)->vec3f {let rgb=toLinearSpaceVec3(rgbd.rgb);return rgb/rgbd.a;}\nfn parallaxCorrectNormal(vertexPos: vec3f,origVec: vec3f,cubeSize: vec3f,cubePos: vec3f)->vec3f {let invOrigVec: vec3f=vec3f(1.)/origVec;let halfSize: vec3f=cubeSize*0.5;let intersecAtMaxPlane: vec3f=(cubePos+halfSize-vertexPos)*invOrigVec;let intersecAtMinPlane: vec3f=(cubePos-halfSize-vertexPos)*invOrigVec;let largestIntersec: vec3f=max(intersecAtMaxPlane,intersecAtMinPlane);let distance: f32=min(min(largestIntersec.x,largestIntersec.y),largestIntersec.z);let intersectPositionWS: vec3f=vertexPos+origVec*distance;return intersectPositionWS-cubePos;}\nfn equirectangularToCubemapDirection(uv : vec2f)->vec3f {var longitude : f32=uv.x*TWO_PI-PI;var latitude : f32=HALF_PI-uv.y*PI;var direction : vec3f;direction.x=cos(latitude)*sin(longitude);direction.y=sin(latitude);direction.z=cos(latitude)*cos(longitude);return direction;}\nfn sqrtClamped(value: f32)->f32 {return sqrt(max(value,0.));}\nfn avg(value: vec3f)->f32 {return dot(value,vec3f(0.333333333));}\nfn singleScatterToMultiScatterAlbedo(rho_ss: vec3f)->vec3f {let s: vec3f=sqrt(max(vec3f(1.0)-rho_ss,vec3f(0.0)));return (vec3f(1.0)-s)*(vec3f(1.0)-vec3f(0.139)*s)/(vec3f(1.0)+vec3f(1.17)*s);}\nfn multiScatterToSingleScatterAlbedo(rho_ms: vec3f)->vec3f {let s: vec3f=4.09712f+4.20863f*rho_ms-sqrt(9.59217f+41.6808f*rho_ms+17.7126f*rho_ms*rho_ms);return 1.0f-s*s;}\nfn multiScatterToSingleScatterAlbedoWithAniso(rho_ms: vec3f,aniso: f32)->vec3f {let s: vec3f=4.09712+4.20863f*rho_ms-sqrt(9.59217f+41.6808f*rho_ms+17.7126f*rho_ms*rho_ms);return (vec3f(1.0f)-s*s)/maxEpsVec3(vec3f(1.0f)-vec3f(aniso)*s*s);}\nfn min3(v: vec3f)->f32 {return min(v.x,min(v.y,v.z));}\nfn max3(v: vec3f)->f32 {return max(v.x,max(v.y,v.z));}\nfn uint2float(i: u32)->f32 {return bitcast<f32>(0x3F800000u | (i>>9u))-1.0;}\nfn plasticSequence(rstate: u32)->vec2f {return vec2f(uint2float(rstate*3242174889u),\nuint2float(rstate*2447445414u));}\n";
-    pD.e.IncludesShadersStoreWGSL[sD] || (pD.e.IncludesShadersStoreWGSL[sD] = KD);
-    const rD = {
-      name: sD,
-      shader: KD
+    var Op = cp(40062);
+    const op = "bakedVertexAnimation",
+      Ip = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\n{\n#ifdef INSTANCES\nlet VATStartFrame: f32=vertexInputs.bakedVertexAnimationSettingsInstanced.x;let VATEndFrame: f32=vertexInputs.bakedVertexAnimationSettingsInstanced.y;let VATOffsetFrame: f32=vertexInputs.bakedVertexAnimationSettingsInstanced.z;let VATSpeed: f32=vertexInputs.bakedVertexAnimationSettingsInstanced.w;\n#else\nlet VATStartFrame: f32=uniforms.bakedVertexAnimationSettings.x;let VATEndFrame: f32=uniforms.bakedVertexAnimationSettings.y;let VATOffsetFrame: f32=uniforms.bakedVertexAnimationSettings.z;let VATSpeed: f32=uniforms.bakedVertexAnimationSettings.w;\n#endif\nlet totalFrames: f32=VATEndFrame-VATStartFrame+1.0;let time: f32=uniforms.bakedVertexAnimationTime*VATSpeed/totalFrames;let frameCorrection: f32=select(1.0,0.0,time<1.0);let numOfFrames: f32=totalFrames-frameCorrection;var VATFrameNum: f32=fract(time)*numOfFrames;VATFrameNum=(VATFrameNum+VATOffsetFrame) % numOfFrames;VATFrameNum=floor(VATFrameNum);VATFrameNum=VATFrameNum+VATStartFrame+frameCorrection;var VATInfluence : mat4x4<f32>;VATInfluence=readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndices[0],VATFrameNum)*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndices[1],VATFrameNum)*vertexInputs.matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndices[2],VATFrameNum)*vertexInputs.matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndices[3],VATFrameNum)*vertexInputs.matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndicesExtra[0],VATFrameNum)*vertexInputs.matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndicesExtra[1],VATFrameNum)*vertexInputs.matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndicesExtra[2],VATFrameNum)*vertexInputs.matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\nVATInfluence=VATInfluence+readMatrixFromRawSamplerVAT(bakedVertexAnimationTexture,vertexInputs.matricesIndicesExtra[3],VATFrameNum)*vertexInputs.matricesWeightsExtra[3];\n#endif\nfinalWorld=finalWorld*VATInfluence;}\n#endif\n";
+    Op.b.IncludesShadersStoreWGSL[op] || (Op.b.IncludesShadersStoreWGSL[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
     }
   },
-  61148: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      rgbdDecodePixelShaderWGSL: () => cD
+  42527: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Sp
     });
-    var pD = wD(39776),
-      sD = wD(42114);
-    const KD = "rgbdDecodePixelShader",
-      rD = "varying vUV: vec2f;var textureSamplerSampler: sampler;var textureSampler: texture_2d<f32>;\n#include<helperFunctions>\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {fragmentOutputs.color=vec4f(fromRGBD(textureSample(textureSampler,textureSamplerSampler,input.vUV)),1.0);}";
-    pD.e.ShadersStoreWGSL[KD] || (pD.e.ShadersStoreWGSL[KD] = rD);
-    const LD = [sD.b];
-    for (const gD of LD) pD.e.IncludesShadersStoreWGSL[gD.name] || (pD.e.IncludesShadersStoreWGSL[gD.name] = gD.shader);
-    const cD = {
-      name: KD,
-      shader: rD
+    var Op = cp(40062);
+    const op = "bakedVertexAnimationDeclaration",
+      Ip = "#ifdef BAKED_VERTEX_ANIMATION_TEXTURE\nuniform bakedVertexAnimationTime: f32;uniform bakedVertexAnimationSettings: vec4<f32>;var bakedVertexAnimationTexture : texture_2d<f32>;\n#ifdef INSTANCES\nattribute bakedVertexAnimationSettingsInstanced : vec4<f32>;\n#endif\nfn readMatrixFromRawSamplerVAT(smp : texture_2d<f32>,index : f32,frame : f32)->mat4x4<f32>\n{let offset=i32(index)*4;let frameUV=i32(frame);let m0=textureLoad(smp,vec2<i32>(offset+0,frameUV),0);let m1=textureLoad(smp,vec2<i32>(offset+1,frameUV),0);let m2=textureLoad(smp,vec2<i32>(offset+2,frameUV),0);let m3=textureLoad(smp,vec2<i32>(offset+3,frameUV),0);return mat4x4<f32>(m0,m1,m2,m3);}\n#endif\n";
+    Op.b.IncludesShadersStoreWGSL[op] || (Op.b.IncludesShadersStoreWGSL[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42525: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "bonesDeclaration",
+      Ip = "#if NUM_BONE_INFLUENCERS>0\n#ifndef USE_VERTEX_PULLING\nattribute matricesIndices : vec4f;attribute matricesWeights : vec4f;\n#if NUM_BONE_INFLUENCERS>4\nattribute matricesIndicesExtra : vec4f;attribute matricesWeightsExtra : vec4f;\n#endif\n#endif\n#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#ifdef BONETEXTURE\nvar boneSampler : texture_2d<f32>;uniform boneTextureInfo : vec2f;\n#else\nuniform mBones : array<mat4x4f,BonesPerMesh>;\n#endif\n#ifdef BONES_VELOCITY_ENABLED\nuniform mPreviousBones : array<mat4x4f,BonesPerMesh>;\n#endif\n#ifdef BONETEXTURE\nfn readMatrixFromRawSampler(smp : texture_2d<f32>,index : f32)->mat4x4f\n{let offset=i32(index)*4; \nlet textureWidth=i32(uniforms.boneTextureInfo.x);let y=offset/textureWidth;let x=offset % textureWidth;let m0=textureLoad(smp,vec2<i32>(x+0,y),0);let m1=textureLoad(smp,vec2<i32>(x+1,y),0);let m2=textureLoad(smp,vec2<i32>(x+2,y),0);let m3=textureLoad(smp,vec2<i32>(x+3,y),0);return mat4x4f(m0,m1,m2,m3);}\n#endif\n#endif\n#endif\n";
+    Op.b.IncludesShadersStoreWGSL[op] || (Op.b.IncludesShadersStoreWGSL[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42632: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "bonesVertex",
+      Ip = "#ifndef BAKED_VERTEX_ANIMATION_TEXTURE\n#if NUM_BONE_INFLUENCERS>0\nvar influence : mat4x4<f32>;\n#ifdef BONETEXTURE\ninfluence=readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[0])*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[1])*vertexInputs.matricesWeights[1];\n#endif \n#if NUM_BONE_INFLUENCERS>2\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[2])*vertexInputs.matricesWeights[2];\n#endif \n#if NUM_BONE_INFLUENCERS>3\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndices[3])*vertexInputs.matricesWeights[3];\n#endif \n#if NUM_BONE_INFLUENCERS>4\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[0])*vertexInputs.matricesWeightsExtra[0];\n#endif \n#if NUM_BONE_INFLUENCERS>5\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[1])*vertexInputs.matricesWeightsExtra[1];\n#endif \n#if NUM_BONE_INFLUENCERS>6\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[2])*vertexInputs.matricesWeightsExtra[2];\n#endif \n#if NUM_BONE_INFLUENCERS>7\ninfluence=influence+readMatrixFromRawSampler(boneSampler,vertexInputs.matricesIndicesExtra[3])*vertexInputs.matricesWeightsExtra[3];\n#endif \n#else \ninfluence=uniforms.mBones[i32(vertexInputs.matricesIndices[0])]*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[1])]*vertexInputs.matricesWeights[1];\n#endif \n#if NUM_BONE_INFLUENCERS>2\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[2])]*vertexInputs.matricesWeights[2];\n#endif \n#if NUM_BONE_INFLUENCERS>3\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndices[3])]*vertexInputs.matricesWeights[3];\n#endif \n#if NUM_BONE_INFLUENCERS>4\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[0])]*vertexInputs.matricesWeightsExtra[0];\n#endif \n#if NUM_BONE_INFLUENCERS>5\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[1])]*vertexInputs.matricesWeightsExtra[1];\n#endif \n#if NUM_BONE_INFLUENCERS>6\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[2])]*vertexInputs.matricesWeightsExtra[2];\n#endif \n#if NUM_BONE_INFLUENCERS>7\ninfluence=influence+uniforms.mBones[i32(vertexInputs.matricesIndicesExtra[3])]*vertexInputs.matricesWeightsExtra[3];\n#endif \n#endif\nfinalWorld=finalWorld*influence;\n#endif\n#endif\n";
+    Op.b.IncludesShadersStoreWGSL[op] || (Op.b.IncludesShadersStoreWGSL[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42669: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "bumpVertex",
+      Ip = "#if defined(BUMP) || defined(PARALLAX) || defined(CLEARCOAT_BUMP) || defined(ANISOTROPIC)\n#if defined(TANGENT) && defined(NORMAL)\nvar tbnNormal: vec3f=normalize(normalUpdated);var tbnTangent: vec3f=normalize(tangentUpdated.xyz);var tbnBitangent: vec3f=cross(tbnNormal,tbnTangent)*tangentUpdated.w;var matTemp= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz)* mat3x3f(tbnTangent,tbnBitangent,tbnNormal);vertexOutputs.vTBN0=matTemp[0];vertexOutputs.vTBN1=matTemp[1];vertexOutputs.vTBN2=matTemp[2];\n#endif\n#endif\n";
+    Op.b.IncludesShadersStoreWGSL[op] || (Op.b.IncludesShadersStoreWGSL[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42677: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "clipPlaneVertex",
+      Ip = "#ifdef CLIPPLANE\nvertexOutputs.fClipDistance=dot(worldPos,uniforms.vClipPlane);\n#endif\n#ifdef CLIPPLANE2\nvertexOutputs.fClipDistance2=dot(worldPos,uniforms.vClipPlane2);\n#endif\n#ifdef CLIPPLANE3\nvertexOutputs.fClipDistance3=dot(worldPos,uniforms.vClipPlane3);\n#endif\n#ifdef CLIPPLANE4\nvertexOutputs.fClipDistance4=dot(worldPos,uniforms.vClipPlane4);\n#endif\n#ifdef CLIPPLANE5\nvertexOutputs.fClipDistance5=dot(worldPos,uniforms.vClipPlane5);\n#endif\n#ifdef CLIPPLANE6\nvertexOutputs.fClipDistance6=dot(worldPos,uniforms.vClipPlane6);\n#endif\n";
+    Op.b.IncludesShadersStoreWGSL[op] || (Op.b.IncludesShadersStoreWGSL[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42565: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "clipPlaneVertexDeclaration",
+      Ip = "#ifdef CLIPPLANE\nuniform vClipPlane: vec4<f32>;varying fClipDistance: f32;\n#endif\n#ifdef CLIPPLANE2\nuniform vClipPlane2: vec4<f32>;varying fClipDistance2: f32;\n#endif\n#ifdef CLIPPLANE3\nuniform vClipPlane3: vec4<f32>;varying fClipDistance3: f32;\n#endif\n#ifdef CLIPPLANE4\nuniform vClipPlane4: vec4<f32>;varying fClipDistance4: f32;\n#endif\n#ifdef CLIPPLANE5\nuniform vClipPlane5: vec4<f32>;varying fClipDistance5: f32;\n#endif\n#ifdef CLIPPLANE6\nuniform vClipPlane6: vec4<f32>;varying fClipDistance6: f32;\n#endif\n";
+    Op.b.IncludesShadersStoreWGSL[op] || (Op.b.IncludesShadersStoreWGSL[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  61754: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "harmonicsFunctions",
+      Ip = "#ifdef USESPHERICALFROMREFLECTIONMAP\n#ifdef SPHERICAL_HARMONICS\nfn computeEnvironmentIrradiance(normal: vec3f)->vec3f {return uniforms.vSphericalL00\n+ uniforms.vSphericalL1_1*(normal.y)\n+ uniforms.vSphericalL10*(normal.z)\n+ uniforms.vSphericalL11*(normal.x)\n+ uniforms.vSphericalL2_2*(normal.y*normal.x)\n+ uniforms.vSphericalL2_1*(normal.y*normal.z)\n+ uniforms.vSphericalL20*((3.0*normal.z*normal.z)-1.0)\n+ uniforms.vSphericalL21*(normal.z*normal.x)\n+ uniforms.vSphericalL22*(normal.x*normal.x-(normal.y*normal.y));}\n#else\nfn computeEnvironmentIrradiance(normal: vec3f)->vec3f {var Nx: f32=normal.x;var Ny: f32=normal.y;var Nz: f32=normal.z;var C1: vec3f=uniforms.vSphericalZZ.rgb;var Cx: vec3f=uniforms.vSphericalX.rgb;var Cy: vec3f=uniforms.vSphericalY.rgb;var Cz: vec3f=uniforms.vSphericalZ.rgb;var Cxx_zz: vec3f=uniforms.vSphericalXX_ZZ.rgb;var Cyy_zz: vec3f=uniforms.vSphericalYY_ZZ.rgb;var Cxy: vec3f=uniforms.vSphericalXY.rgb;var Cyz: vec3f=uniforms.vSphericalYZ.rgb;var Czx: vec3f=uniforms.vSphericalZX.rgb;var a1: vec3f=Cyy_zz*Ny+Cy;var a2: vec3f=Cyz*Nz+a1;var b1: vec3f=Czx*Nz+Cx;var b2: vec3f=Cxy*Ny+b1;var b3: vec3f=Cxx_zz*Nx+b2;var t1: vec3f=Cz *Nz+C1;var t2: vec3f=a2 *Ny+t1;var t3: vec3f=b3 *Nx+t2;return t3;}\n#endif\n#endif\n";
+    Op.b.IncludesShadersStoreWGSL[op] || (Op.b.IncludesShadersStoreWGSL[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42531: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "instancesDeclaration",
+      Ip = "#ifdef INSTANCES\nattribute world0 : vec4<f32>;attribute world1 : vec4<f32>;attribute world2 : vec4<f32>;attribute world3 : vec4<f32>;\n#ifdef INSTANCESCOLOR\nattribute instanceColor : vec4<f32>;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform world : mat4x4<f32>;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute previousWorld0 : vec4<f32>;attribute previousWorld1 : vec4<f32>;attribute previousWorld2 : vec4<f32>;attribute previousWorld3 : vec4<f32>;\n#ifdef THIN_INSTANCES\nuniform previousWorld : mat4x4<f32>;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform world : mat4x4<f32>;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform previousWorld : mat4x4<f32>;\n#endif\n#endif\n";
+    Op.b.IncludesShadersStoreWGSL[op] || (Op.b.IncludesShadersStoreWGSL[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42624: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "instancesVertex",
+      Ip = "#ifdef INSTANCES\nvar finalWorld=mat4x4<f32>(vertexInputs.world0,vertexInputs.world1,vertexInputs.world2,vertexInputs.world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nvar finalPreviousWorld=mat4x4<f32>(\nvertexInputs.previousWorld0,vertexInputs.previousWorld1,\nvertexInputs.previousWorld2,vertexInputs.previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\n#if !defined(WORLD_UBO)\nfinalWorld=uniforms.world*finalWorld;\n#else\nfinalWorld=mesh.world*finalWorld;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=uniforms.previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nvar finalWorld=uniforms.world;\n#else\nvar finalWorld=mesh.world;\n#endif\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nvar finalPreviousWorld=uniforms.previousWorld;\n#endif\n#endif\n";
+    Op.b.IncludesShadersStoreWGSL[op] || (Op.b.IncludesShadersStoreWGSL[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42617: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "morphTargetsVertex",
+      Ip = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\n#if {X}==0\nfor (var i=0; i<NUM_MORPH_INFLUENCERS; i=i+1) {if (f32(i)>=uniforms.morphTargetCount) {break;}\n#ifdef USE_VERTEX_PULLING\nvertexID=f32(vpVertexIndex)*uniforms.morphTargetTextureInfo.x;\n#else\nvertexID=f32(vertexInputs.vertexIndex)*uniforms.morphTargetTextureInfo.x;\n#endif\n#ifdef MORPHTARGETS_POSITION\n#ifdef USE_VERTEX_PULLING\npositionUpdated=positionUpdated+(readVector3FromRawSampler(i,vertexID)-vp_basePosition)*uniforms.morphTargetInfluences[i];\n#else\npositionUpdated=positionUpdated+(readVector3FromRawSampler(i,vertexID)-vertexInputs.position)*uniforms.morphTargetInfluences[i];\n#endif\n#endif\n#ifdef MORPHTARGETTEXTURE_HASPOSITIONS\nvertexID=vertexID+1.0;\n#endif\n#ifdef MORPHTARGETS_NORMAL\n#ifdef USE_VERTEX_PULLING\nnormalUpdated=normalUpdated+(readVector3FromRawSampler(i,vertexID) -vp_baseNormal)*uniforms.morphTargetInfluences[i];\n#else\nnormalUpdated=normalUpdated+(readVector3FromRawSampler(i,vertexID) -vertexInputs.normal)*uniforms.morphTargetInfluences[i];\n#endif\n#endif\n#ifdef MORPHTARGETTEXTURE_HASNORMALS\nvertexID=vertexID+1.0;\n#endif\n#ifdef MORPHTARGETS_UV\n#ifdef USE_VERTEX_PULLING\nuvUpdated=uvUpdated+(readVector3FromRawSampler(i,vertexID).xy-vp_baseUV)*uniforms.morphTargetInfluences[i];\n#else\nuvUpdated=uvUpdated+(readVector3FromRawSampler(i,vertexID).xy-vertexInputs.uv)*uniforms.morphTargetInfluences[i];\n#endif\n#endif\n#ifdef MORPHTARGETTEXTURE_HASUVS\nvertexID=vertexID+1.0;\n#endif\n#ifdef MORPHTARGETS_TANGENT\n#ifdef USE_VERTEX_PULLING\ntangentUpdated=vec4f(tangentUpdated.xyz+(readVector3FromRawSampler(i,vertexID) -vp_baseTangent.xyz)*uniforms.morphTargetInfluences[i],tangentUpdated.a);\n#else\ntangentUpdated=vec4f(tangentUpdated.xyz+(readVector3FromRawSampler(i,vertexID) -vertexInputs.tangent.xyz)*uniforms.morphTargetInfluences[i],tangentUpdated.a);\n#endif\n#endif\n#ifdef MORPHTARGETTEXTURE_HASTANGENTS\nvertexID=vertexID+1.0;\n#endif\n#ifdef MORPHTARGETS_UV2\n#ifdef USE_VERTEX_PULLING\nuv2Updated=uv2Updated+(readVector3FromRawSampler(i,vertexID).xy-vp_baseUV2)*uniforms.morphTargetInfluences[i];\n#else\nuv2Updated=uv2Updated+(readVector3FromRawSampler(i,vertexID).xy-vertexInputs.uv2)*uniforms.morphTargetInfluences[i];\n#endif\n#endif\n#ifdef MORPHTARGETS_COLOR\n#ifdef USE_VERTEX_PULLING\ncolorUpdated=colorUpdated+(readVector4FromRawSampler(i,vertexID)-vp_baseColor)*uniforms.morphTargetInfluences[i];\n#else\ncolorUpdated=colorUpdated+(readVector4FromRawSampler(i,vertexID)-vertexInputs.color)*uniforms.morphTargetInfluences[i];\n#endif\n#endif\n}\n#endif\n#else\n#ifdef MORPHTARGETS_POSITION\n#ifdef USE_VERTEX_PULLING\npositionUpdated=positionUpdated+(vertexInputs.position{X}-vp_basePosition)*uniforms.morphTargetInfluences[{X}];\n#else\npositionUpdated=positionUpdated+(vertexInputs.position{X}-vertexInputs.position)*uniforms.morphTargetInfluences[{X}];\n#endif\n#endif\n#ifdef MORPHTARGETS_NORMAL\n#ifdef USE_VERTEX_PULLING\nnormalUpdated=normalUpdated+(vertexInputs.normal{X}-vp_baseNormal)*uniforms.morphTargetInfluences[{X}];\n#else\nnormalUpdated=normalUpdated+(vertexInputs.normal{X}-vertexInputs.normal)*uniforms.morphTargetInfluences[{X}];\n#endif\n#endif\n#ifdef MORPHTARGETS_TANGENT\n#ifdef USE_VERTEX_PULLING\ntangentUpdated=vec4f(tangentUpdated.xyz+(vertexInputs.tangent{X}-vp_baseTangent.xyz)*uniforms.morphTargetInfluences[{X}],tangentUpdated.a);\n#else\ntangentUpdated=vec4f(tangentUpdated.xyz+(vertexInputs.tangent{X}-vertexInputs.tangent.xyz)*uniforms.morphTargetInfluences[{X}],tangentUpdated.a);\n#endif\n#endif\n#ifdef MORPHTARGETS_UV\n#ifdef USE_VERTEX_PULLING\nuvUpdated=uvUpdated+(vertexInputs.uv_{X}-vp_baseUV)*uniforms.morphTargetInfluences[{X}];\n#else\nuvUpdated=uvUpdated+(vertexInputs.uv_{X}-vertexInputs.uv)*uniforms.morphTargetInfluences[{X}];\n#endif\n#endif\n#ifdef MORPHTARGETS_UV2\n#ifdef USE_VERTEX_PULLING\nuv2Updated=uv2Updated+(vertexInputs.uv2_{X}-vp_baseUV2)*uniforms.morphTargetInfluences[{X}];\n#else\nuv2Updated=uv2Updated+(vertexInputs.uv2_{X}-vertexInputs.uv2)*uniforms.morphTargetInfluences[{X}];\n#endif\n#endif\n#ifdef MORPHTARGETS_COLOR\n#ifdef USE_VERTEX_PULLING\ncolorUpdated=colorUpdated+(vertexInputs.color{X}-vp_baseColor)*uniforms.morphTargetInfluences[{X}];\n#else\ncolorUpdated=colorUpdated+(vertexInputs.color{X}-vertexInputs.color)*uniforms.morphTargetInfluences[{X}];\n#endif\n#endif\n#endif\n#endif\n";
+    Op.b.IncludesShadersStoreWGSL[op] || (Op.b.IncludesShadersStoreWGSL[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42589: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "morphTargetsVertexDeclaration",
+      Ip = "#ifdef MORPHTARGETS\n#ifndef MORPHTARGETS_TEXTURE\n#ifdef MORPHTARGETS_POSITION\nattribute position{X} : vec3<f32>;\n#endif\n#ifdef MORPHTARGETS_NORMAL\nattribute normal{X} : vec3<f32>;\n#endif\n#ifdef MORPHTARGETS_TANGENT\nattribute tangent{X} : vec3<f32>;\n#endif\n#ifdef MORPHTARGETS_UV\nattribute uv_{X} : vec2<f32>;\n#endif\n#ifdef MORPHTARGETS_UV2\nattribute uv2_{X} : vec2<f32>;\n#endif\n#ifdef MORPHTARGETS_COLOR\nattribute color{X} : vec4<f32>;\n#endif\n#elif {X}==0\nuniform morphTargetCount: f32;\n#endif\n#endif\n";
+    Op.b.IncludesShadersStoreWGSL[op] || (Op.b.IncludesShadersStoreWGSL[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42612: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "morphTargetsVertexGlobal",
+      Ip = "#ifdef MORPHTARGETS\n#ifdef MORPHTARGETS_TEXTURE\nvar vertexID : f32;\n#endif\n#endif\n";
+    Op.b.IncludesShadersStoreWGSL[op] || (Op.b.IncludesShadersStoreWGSL[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42584: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "morphTargetsVertexGlobalDeclaration",
+      Ip = "#ifdef MORPHTARGETS\nuniform morphTargetInfluences : array<f32,NUM_MORPH_INFLUENCERS>;\n#ifdef MORPHTARGETS_TEXTURE \nuniform morphTargetTextureIndices : array<f32,NUM_MORPH_INFLUENCERS>;uniform morphTargetTextureInfo : vec3<f32>;var morphTargets : texture_2d_array<f32>;fn readVector3FromRawSampler(targetIndex : i32,vertexIndex : f32)->vec3<f32>\n{ \nlet textureWidth: i32=i32(uniforms.morphTargetTextureInfo.y);let y: i32=i32(vertexIndex)/textureWidth;let x: i32=i32(vertexIndex) % textureWidth;return textureLoad(morphTargets,vec2i(x,y),i32(uniforms.morphTargetTextureIndices[targetIndex]),0).xyz;}\nfn readVector4FromRawSampler(targetIndex : i32,vertexIndex : f32)->vec4<f32>\n{ \nlet textureWidth: i32=i32(uniforms.morphTargetTextureInfo.y); \nlet y: i32=i32(vertexIndex)/textureWidth;let x: i32=i32(vertexIndex) % textureWidth;return textureLoad(morphTargets,vec2i(x,y),i32(uniforms.morphTargetTextureIndices[targetIndex]),0);}\n#endif\n#endif\n";
+    Op.b.IncludesShadersStoreWGSL[op] || (Op.b.IncludesShadersStoreWGSL[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  42496: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Sp
+    });
+    var Op = cp(40062);
+    const op = "sceneUboDeclaration",
+      Ip = "struct Scene {viewProjection : mat4x4<f32>,\n#ifdef MULTIVIEW\nviewProjectionR : mat4x4<f32>,\n#endif \nview : mat4x4<f32>,\nprojection : mat4x4<f32>,\nvEyePosition : vec4<f32>,\ninverseProjection : mat4x4<f32>,};\n#define SCENE_UBO\nvar<uniform> scene : Scene;\n";
+    Op.b.IncludesShadersStoreWGSL[op] || (Op.b.IncludesShadersStoreWGSL[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
+    }
+  },
+  61907: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      geometryVertexShaderWGSL: () => jp
+    });
+    var Op = cp(40062),
+      op = cp(42525),
+      Ip = cp(42527),
+      Sp = cp(42584),
+      xp = cp(42589),
+      Lp = cp(42531),
+      Yp = cp(42496),
+      Dp = cp(42565),
+      Ap = cp(61754),
+      Pp = cp(42612),
+      Wp = cp(42617),
+      yp = cp(42624),
+      Up = cp(42632),
+      wp = cp(42639),
+      vp = cp(42677),
+      tp = cp(42669);
+    const Hp = "geometryVertexShader",
+      dp = "#include<bonesDeclaration>\n#include<bakedVertexAnimationDeclaration>\n#include<morphTargetsVertexGlobalDeclaration>\n#include<morphTargetsVertexDeclaration>[0..maxSimultaneousMorphTargets]\n#include<instancesDeclaration>\n#include<sceneUboDeclaration>\n#include<clipPlaneVertexDeclaration>\n#ifdef IRRADIANCE\n#ifdef REFLECTION\nuniform reflectionMatrix: mat4x4f;uniform vReflectionInfos: vec2f;uniform vReflectionColor: vec3f;\n#ifdef USESPHERICALFROMREFLECTIONMAP\nvarying vEnvironmentIrradiance: vec3f;\n#ifdef SPHERICAL_HARMONICS\nuniform vSphericalL00: vec3f;uniform vSphericalL1_1: vec3f;uniform vSphericalL10: vec3f;uniform vSphericalL11: vec3f;uniform vSphericalL2_2: vec3f;uniform vSphericalL2_1: vec3f;uniform vSphericalL20: vec3f;uniform vSphericalL21: vec3f;uniform vSphericalL22: vec3f;\n#else\nuniform vSphericalX: vec3f;uniform vSphericalY: vec3f;uniform vSphericalZ: vec3f;uniform vSphericalXX_ZZ: vec3f;uniform vSphericalYY_ZZ: vec3f;uniform vSphericalZZ: vec3f;uniform vSphericalXY: vec3f;uniform vSphericalYZ: vec3f;uniform vSphericalZX: vec3f;\n#endif\n#include<harmonicsFunctions>\n#endif\n#endif\n#endif\nattribute position : vec3<f32>;\n#ifdef HAS_NORMAL_ATTRIBUTE\nattribute normal: vec3f;\n#endif\n#ifdef NEED_UV\nvarying vUV: vec2f;\n#ifdef ALPHATEST\nuniform diffuseMatrix: mat4x4f;\n#endif\n#ifdef BUMP\nuniform bumpMatrix: mat4x4f;varying vBumpUV: vec2f;\n#endif\n#ifdef REFLECTIVITY\nuniform reflectivityMatrix: mat4x4f;uniform albedoMatrix: mat4x4f;varying vReflectivityUV: vec2f;varying vAlbedoUV: vec2f;\n#endif\n#ifdef METALLIC_TEXTURE\nvarying vMetallicUV: vec2f;uniform metallicMatrix: mat4x4f;\n#endif\n#ifdef ROUGHNESS_TEXTURE\nvarying vRoughnessUV: vec2f;uniform roughnessMatrix: mat4x4f;\n#endif\n#ifdef SUBSURFACE_WEIGHT\nvarying vSubsurfaceWeightUV: vec2f;uniform subsurfaceWeightMatrix: mat4x4f;\n#endif\n#ifdef TRANSMISSION_WEIGHT\nvarying vTransmissionWeightUV: vec2f;uniform transmissionWeightMatrix: mat4x4f;\n#endif\n#ifdef UV1\nattribute uv: vec2f;\n#endif\n#ifdef UV2\nattribute uv2: vec2f;\n#endif\n#endif\n#ifdef BUMP\nvarying vWorldView0: vec4f;varying vWorldView1: vec4f;varying vWorldView2: vec4f;varying vWorldView3: vec4f;\n#endif\n#ifdef BUMP\nvarying vNormalW: vec3f;\n#else\nvarying vNormalV: vec3f;\n#endif\nvarying vViewPos: vec4f;\n#if defined(POSITION) || defined(BUMP) || defined(IRRADIANCE)\nvarying vPositionW: vec3f;\n#endif\n#if defined(VELOCITY) || defined(VELOCITY_LINEAR)\nuniform previousViewProjection: mat4x4f;varying vCurrentPosition: vec4f;varying vPreviousPosition: vec4f;\n#endif\n#define CUSTOM_VERTEX_DEFINITIONS\n@vertex\nfn main(input : VertexInputs)->FragmentInputs {var positionUpdated: vec3f=vertexInputs.position;\n#ifdef HAS_NORMAL_ATTRIBUTE\nvar normalUpdated: vec3f=vertexInputs.normal;\n#else\nvar normalUpdated: vec3f=vec3f(0.0,0.0,0.0);\n#endif\n#ifdef UV1\nvar uvUpdated: vec2f=vertexInputs.uv;\n#endif\n#ifdef UV2\nvar uv2Updated: vec2f=vertexInputs.uv2;\n#endif\n#include<morphTargetsVertexGlobal>\n#include<morphTargetsVertex>[0..maxSimultaneousMorphTargets]\n#include<instancesVertex>\n#if (defined(VELOCITY) || defined(VELOCITY_LINEAR)) && !defined(BONES_VELOCITY_ENABLED)\nvCurrentPosition=scene.viewProjection*finalWorld*vec4f(positionUpdated,1.0);vPreviousPosition=uniforms.previousViewProjection*finalPreviousWorld* vec4f(positionUpdated,1.0);\n#endif\n#include<bonesVertex>\n#include<bakedVertexAnimation>\nvar worldPos: vec4f= vec4f(finalWorld* vec4f(positionUpdated,1.0));\n#ifdef BUMP\nlet vWorldView=scene.view*finalWorld;vertexOutputs.vWorldView0=vWorldView[0];vertexOutputs.vWorldView1=vWorldView[1];vertexOutputs.vWorldView2=vWorldView[2];vertexOutputs.vWorldView3=vWorldView[3];let normalWorld: mat3x3f= mat3x3f(finalWorld[0].xyz,finalWorld[1].xyz,finalWorld[2].xyz);vertexOutputs.vNormalW=normalize(normalWorld*normalUpdated);\n#else\n#ifdef NORMAL_WORLDSPACE\nvertexOutputs.vNormalV=normalize((finalWorld* vec4f(normalUpdated,0.0)).xyz);\n#else\nvertexOutputs.vNormalV=normalize(((scene.view*finalWorld)* vec4f(normalUpdated,0.0)).xyz);\n#endif\n#endif\nvertexOutputs.vViewPos=scene.view*worldPos;\n#if (defined(VELOCITY) || defined(VELOCITY_LINEAR)) && defined(BONES_VELOCITY_ENABLED)\nvertexOutputs.vCurrentPosition=scene.viewProjection*finalWorld* vec4f(positionUpdated,1.0);\n#if NUM_BONE_INFLUENCERS>0\nvar previousInfluence: mat4x4f;previousInfluence=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndices[0])]*vertexInputs.matricesWeights[0];\n#if NUM_BONE_INFLUENCERS>1\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndices[1])]*vertexInputs.matricesWeights[1];\n#endif\n#if NUM_BONE_INFLUENCERS>2\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndices[2])]*vertexInputs.matricesWeights[2];\n#endif\n#if NUM_BONE_INFLUENCERS>3\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndices[3])]*vertexInputs.matricesWeights[3];\n#endif\n#if NUM_BONE_INFLUENCERS>4\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndicesExtra[0])]*vertexInputs.matricesWeightsExtra[0];\n#endif\n#if NUM_BONE_INFLUENCERS>5\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndicesExtra[1])]*vertexInputs.matricesWeightsExtra[1];\n#endif\n#if NUM_BONE_INFLUENCERS>6\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndicesExtra[2])]*vertexInputs.matricesWeightsExtra[2];\n#endif\n#if NUM_BONE_INFLUENCERS>7\npreviousInfluence+=uniforms.mPreviousBones[ i32(vertexInputs.matricesIndicesExtra[3])]*vertexInputs.matricesWeightsExtra[3];\n#endif\nvertexOutputs.vPreviousPosition=uniforms.previousViewProjection*finalPreviousWorld*previousInfluence* vec4f(positionUpdated,1.0);\n#else\nvertexOutputs.vPreviousPosition=uniforms.previousViewProjection*finalPreviousWorld* vec4f(positionUpdated,1.0);\n#endif\n#endif\n#if defined(POSITION) || defined(BUMP) || defined(IRRADIANCE)\nvertexOutputs.vPositionW=worldPos.xyz/worldPos.w;\n#endif\nvertexOutputs.position=scene.viewProjection*finalWorld* vec4f(positionUpdated,1.0);\n#include<clipPlaneVertex>\n#ifdef NEED_UV\n#ifdef UV1\n#if defined(ALPHATEST) && defined(ALPHATEST_UV1)\nvertexOutputs.vUV=(uniforms.diffuseMatrix* vec4f(uvUpdated,1.0,0.0)).xy;\n#else\nvertexOutputs.vUV=uvUpdated;\n#endif\n#ifdef BUMP_UV1\nvertexOutputs.vBumpUV=(uniforms.bumpMatrix* vec4f(uvUpdated,1.0,0.0)).xy;\n#endif\n#ifdef REFLECTIVITY_UV1\nvertexOutputs.vReflectivityUV=(uniforms.reflectivityMatrix* vec4f(uvUpdated,1.0,0.0)).xy;\n#else\n#ifdef METALLIC_UV1\nvertexOutputs.vMetallicUV=(uniforms.metallicMatrix* vec4f(uvUpdated,1.0,0.0)).xy;\n#endif\n#ifdef ROUGHNESS_UV1\nvertexOutputs.vRoughnessUV=(uniforms.roughnessMatrix* vec4f(uvUpdated,1.0,0.0)).xy;\n#endif\n#endif\n#ifdef ALBEDO_UV1\nvertexOutputs.vAlbedoUV=(uniforms.albedoMatrix* vec4f(uvUpdated,1.0,0.0)).xy;\n#endif\n#ifdef SUBSURFACE_WEIGHT_UV1\nvertexOutputs.vSubsurfaceWeightUV=(uniforms.subsurfaceWeightMatrix* vec4f(uvUpdated,1.0,0.0)).xy;\n#endif\n#ifdef TRANSMISSION_WEIGHT_UV1\nvertexOutputs.vTransmissionWeightUV=(uniforms.transmissionWeightMatrix* vec4f(uvUpdated,1.0,0.0)).xy;\n#endif\n#endif\n#ifdef UV2\n#if defined(ALPHATEST) && defined(ALPHATEST_UV2)\nvertexOutputs.vUV=(uniforms.diffuseMatrix* vec4f(uv2Updated,1.0,0.0)).xy;\n#else\nvertexOutputs.vUV=uv2Updated;\n#endif\n#ifdef BUMP_UV2\nvertexOutputs.vBumpUV=(uniforms.bumpMatrix* vec4f(uv2Updated,1.0,0.0)).xy;\n#endif\n#ifdef REFLECTIVITY_UV2\nvertexOutputs.vReflectivityUV=(uniforms.reflectivityMatrix* vec4f(uv2Updated,1.0,0.0)).xy;\n#else\n#ifdef METALLIC_UV2\nvertexOutputs.vMetallicUV=(uniforms.metallicMatrix* vec4f(uv2Updated,1.0,0.0)).xy;\n#endif\n#ifdef ROUGHNESS_UV2\nvertexOutputs.vRoughnessUV=(uniforms.roughnessMatrix* vec4f(uv2Updated,1.0,0.0)).xy;\n#endif\n#endif\n#ifdef ALBEDO_UV2\nvertexOutputs.vAlbedoUV=(uniforms.albedoMatrix* vec4f(uv2Updated,1.0,0.0)).xy;\n#endif\n#ifdef SUBSURFACE_WEIGHT_UV2\nvertexOutputs.vSubsurfaceWeightUV=(uniforms.subsurfaceWeightMatrix* vec4f(uv2Updated,1.0,0.0)).xy;\n#endif\n#ifdef TRANSMISSION_WEIGHT_UV2\nvertexOutputs.vTransmissionWeightUV=(uniforms.transmissionWeightMatrix* vec4f(uv2Updated,1.0,0.0)).xy;\n#endif\n#endif\n#endif\n#include<bumpVertex>\n#ifdef IRRADIANCE\n#ifdef REFLECTION\n#ifdef USESPHERICALFROMREFLECTIONMAP\nvar reflectionVector: vec3f=(uniforms.reflectionMatrix*vec4f(normalUpdated,0.0)).xyz;\n#ifdef REFLECTIONMAP_OPPOSITEZ\nreflectionVector.z*=-1.0f;\n#endif\nvertexOutputs.vEnvironmentIrradiance=computeEnvironmentIrradiance(reflectionVector)*uniforms.vReflectionInfos.x;\n#endif\n#endif\n#endif\n}\n";
+    Op.b.ShadersStoreWGSL[Hp] || (Op.b.ShadersStoreWGSL[Hp] = dp);
+    const ep = [op.c, Ip.e, Sp.d, xp.e, Lp.d, Yp.e, Dp.c, Ap.b, Pp.d, Wp.c, yp.b, Up.b, wp.c, vp.e, tp.e];
+    for (const kp of ep) Op.b.IncludesShadersStoreWGSL[kp.name] || (Op.b.IncludesShadersStoreWGSL[kp.name] = kp.shader);
+    const jp = {
+      name: Hp,
+      shader: dp
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

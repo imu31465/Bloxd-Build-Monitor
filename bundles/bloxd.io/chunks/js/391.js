@@ -1,19 +1,19 @@
 export const id = 391;
 export const ids = [391];
 export const modules = {
-  61626: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      greasedLinePixelShaderWGSL: () => rD
+  61931: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      textureMergerPixelShaderWGSL: () => Sp
     });
-    var pD = wD(39776);
-    const sD = "greasedLinePixelShader",
-      KD = "var grlColors: texture_2d<f32>;var grlColorsSampler: sampler;uniform grlUseColors: f32;uniform grlUseDash: f32;uniform grlDashArray: f32;uniform grlDashOffset: f32;uniform grlDashRatio: f32;uniform grlVisibility: f32;uniform grlColorsWidth: f32;uniform grl_colorModeAndColorDistributionType: vec2f;uniform grlColor: vec3f;varying grlCounters: f32;varying grlColorPointer: f32;\n#define CUSTOM_FRAGMENT_DEFINITIONS\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\nlet grlColorMode: f32=uniforms.grl_colorModeAndColorDistributionType.x;let grlColorDistributionType: f32=uniforms.grl_colorModeAndColorDistributionType.y;var outColor=vec4(uniforms.grlColor,1.);outColor.a=step(fragmentInputs.grlCounters,uniforms.grlVisibility);if (outColor.a==0.0) {discard;}\nif (uniforms.grlUseDash==1.0) {let dashPosition=(fragmentInputs.grlCounters+uniforms.grlDashOffset) % uniforms.grlDashArray;outColor.a*=ceil(dashPosition-(uniforms.grlDashArray*uniforms.grlDashRatio));if (outColor.a==0.0) {discard;}}\nif (uniforms.grlUseColors==1.) {\n#ifdef GREASED_LINE_COLOR_DISTRIBUTION_TYPE_LINE\nlet grlColor: vec4f=textureSample(grlColors,grlColorsSampler,vec2f(fragmentInputs.grlCounters,0.));\n#else\nlet lookup: vec2f=vec2(fract(fragmentInputs.grlColorPointer/uniforms.grlColorsWidth),1.0-floor(fragmentInputs.grlColorPointer/uniforms.grlColorsWidth));let grlColor: vec4f=textureSample(grlColors,grlColorsSampler,lookup);\n#endif\nif (grlColorMode==COLOR_MODE_SET) {outColor=grlColor;} else if (grlColorMode==COLOR_MODE_ADD) {outColor+=grlColor;} else if (grlColorMode==COLOR_MODE_MULTIPLY) {outColor*=grlColor;}}\n#if !defined(PREPASS) && !defined(ORDER_INDEPENDENT_TRANSPARENCY)\nfragmentOutputs.color=outColor;\n#endif\n#if ORDER_INDEPENDENT_TRANSPARENCY\nif (fragDepth==nearestDepth) {fragmentOutputs.frontColor=vec4f(fragmentOutputs.frontColor.rgb+outColor.rgb*outColor.a*alphaMultiplier,1.0-alphaMultiplier*(1.0-outColor.a));} else {fragmentOutputs.backColor+=outColor;}\n#endif\n#define CUSTOM_FRAGMENT_MAIN_END\n}\n";
-    pD.e.ShadersStoreWGSL[sD] || (pD.e.ShadersStoreWGSL[sD] = KD);
-    const rD = {
-      name: sD,
-      shader: KD
+    var Op = cp(40062);
+    const op = "textureMergerPixelShader",
+      Ip = "#ifdef USE_TEXTURE0\nvar inputTexture0Sampler: sampler;var inputTexture0: texture_2d<f32>;\n#endif\n#ifdef USE_TEXTURE1\nvar inputTexture1Sampler: sampler;var inputTexture1: texture_2d<f32>;\n#endif\n#ifdef USE_TEXTURE2\nvar inputTexture2Sampler: sampler;var inputTexture2: texture_2d<f32>;\n#endif\n#ifdef USE_TEXTURE3\nvar inputTexture3Sampler: sampler;var inputTexture3: texture_2d<f32>;\n#endif\n#ifdef RED_FROM_TEXTURE\nuniform redTextureIndex: i32;uniform redSourceChannel: i32;\n#else\nuniform redConstantValue: f32;\n#endif\n#ifdef GREEN_FROM_TEXTURE\nuniform greenTextureIndex: i32;uniform greenSourceChannel: i32;\n#else\nuniform greenConstantValue: f32;\n#endif\n#ifdef BLUE_FROM_TEXTURE\nuniform blueTextureIndex: i32;uniform blueSourceChannel: i32;\n#else\nuniform blueConstantValue: f32;\n#endif\n#ifdef ALPHA_FROM_TEXTURE\nuniform alphaTextureIndex: i32;uniform alphaSourceChannel: i32;\n#else\nuniform alphaConstantValue: f32;\n#endif\nvarying vUV: vec2f;\n#if defined(RED_FROM_TEXTURE) || defined(GREEN_FROM_TEXTURE) || defined(BLUE_FROM_TEXTURE) || defined(ALPHA_FROM_TEXTURE)\nfn sampleTexture(textureIndex: i32,uv: vec2f)->vec4f {switch (textureIndex) {\n#ifdef USE_TEXTURE0\ncase 0: {return textureSample(inputTexture0,inputTexture0Sampler,uv);}\n#endif\n#ifdef USE_TEXTURE1\ncase 1: {return textureSample(inputTexture1,inputTexture1Sampler,uv);}\n#endif\n#ifdef USE_TEXTURE2\ncase 2: {return textureSample(inputTexture2,inputTexture2Sampler,uv);}\n#endif\n#ifdef USE_TEXTURE3\ncase 3: {return textureSample(inputTexture3,inputTexture3Sampler,uv);}\n#endif\ndefault: {return vec4f(0.0,0.0,0.0,1.0); }}}\nfn extractChannel(color: vec4f,channelIndex: i32)->f32 {switch (channelIndex) {case 0: {return color.r; }\ncase 1: {return color.g; }\ncase 2: {return color.b; }\ndefault: {return color.a; }}}\n#endif\n@fragment\nfn main(input: FragmentInputs)->FragmentOutputs {let uv: vec2f=input.vUV;\n#ifdef RED_FROM_TEXTURE\nlet redSample: vec4f=sampleTexture(uniforms.redTextureIndex,uv);let r: f32=extractChannel(redSample,uniforms.redSourceChannel);\n#else\nlet r: f32=uniforms.redConstantValue;\n#endif\n#ifdef GREEN_FROM_TEXTURE\nlet greenSample: vec4f=sampleTexture(uniforms.greenTextureIndex,uv);let g: f32=extractChannel(greenSample,uniforms.greenSourceChannel);\n#else\nlet g: f32=uniforms.greenConstantValue;\n#endif\n#ifdef BLUE_FROM_TEXTURE\nlet blueSample: vec4f=sampleTexture(uniforms.blueTextureIndex,uv);let b: f32=extractChannel(blueSample,uniforms.blueSourceChannel);\n#else\nlet b: f32=uniforms.blueConstantValue;\n#endif\n#ifdef ALPHA_FROM_TEXTURE\nlet alphaSample: vec4f=sampleTexture(uniforms.alphaTextureIndex,uv);let a: f32=extractChannel(alphaSample,uniforms.alphaSourceChannel);\n#else\nlet a: f32=uniforms.alphaConstantValue;\n#endif\nfragmentOutputs.color=vec4f(r,g,b,a);}";
+    Op.b.ShadersStoreWGSL[op] || (Op.b.ShadersStoreWGSL[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

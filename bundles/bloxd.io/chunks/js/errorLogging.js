@@ -1,139 +1,139 @@
 export const id = 31;
 export const ids = [31];
 export const modules = {
-  6728: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      BaseExtension: () => Dw,
-      BaseInstrumentation: () => zw,
-      BaseTransport: () => zK,
-      CSPInstrumentation: () => Cs,
-      ConsoleInstrumentation: () => dw,
-      ConsoleTransport: () => rK,
-      EVENT_CLICK: () => Mz,
-      EVENT_NAVIGATION: () => Oz,
-      EVENT_ROUTE_CHANGE: () => Pz,
-      EVENT_SESSION_EXTEND: () => Xz,
-      EVENT_SESSION_RESUME: () => Qz,
-      EVENT_SESSION_START: () => Ez,
-      EVENT_VIEW_CHANGED: () => Jz,
-      ErrorsInstrumentation: () => iw,
-      FetchTransport: () => XK,
-      InternalLoggerLevel: () => oz,
-      LogLevel: () => Ow,
-      MAX_SESSION_PERSISTENCE_TIME: () => cD,
-      NavigationInstrumentation: () => os,
-      Observable: () => Mw,
-      PerformanceInstrumentation: () => tp,
-      PersistentSessionsManager: () => Wz,
-      SESSION_EXPIRATION_TIME: () => KD,
-      SESSION_INACTIVITY_TIME: () => rD,
-      STORAGE_KEY: () => sD,
-      SessionInstrumentation: () => pw,
-      TransportItemType: () => wK,
-      UserActionInstrumentation: () => Ps,
-      UserActionState: () => Gs,
-      VERSION: () => ww,
-      ViewInstrumentation: () => Ww,
-      VolatileSessionsManager: () => Nz,
-      WebVitalsInstrumentation: () => Sp,
-      allLogLevels: () => Ew,
-      browserMeta: () => Ys,
-      buildStackFrame: () => sw,
-      captureMetas: () => yK,
-      createInternalLogger: () => TK,
-      createPromiseBuffer: () => GK,
-      createSession: () => qs,
-      deepEqual: () => nz,
-      defaultEventDomain: () => pD,
-      defaultExceptionType: () => Pw,
-      defaultGlobalObjectKey: () => bK,
-      defaultInternalLoggerLevel: () => uz,
-      defaultLogLevel: () => Jw,
-      faro: () => BD,
-      genShortID: () => hz,
-      getCurrentTimestamp: () => Iz,
-      getDataFromSafariExtensions: () => fw,
-      getIgnoreUrls: () => vD,
-      getInternalFaroFromGlobalObject: () => UD,
-      getStackFramesFromError: () => Bw,
-      getTransportBody: () => KK,
-      getUrlFromResource: () => FD,
-      getWebInstrumentations: () => as,
-      globalObject: () => RD,
-      initializeFaro: () => zr,
-      internalGlobalObjectKey: () => AD,
-      isArray: () => TD,
-      isBoolean: () => VD,
-      isDomError: () => ZD,
-      isDomException: () => yD,
-      isElement: () => mD,
-      isElementDefined: () => kD,
-      AI: () => uD,
-      isError: () => WD,
-      isErrorDefined: () => lD,
-      isErrorEvent: () => ND,
-      isEvent: () => iD,
-      isEventDefined: () => SD,
-      isFunction: () => xD,
-      isInstanceOf: () => MD,
-      isInt: () => XD,
-      isInternalFaroOnGlobalObject: () => ID,
-      isMap: () => oD,
-      isMapDefined: () => eD,
-      isNull: () => JD,
-      isNumber: () => QD,
-      isObject: () => CD,
-      isPrimitive: () => dD,
-      isRegExp: () => bD,
-      isString: () => ED,
-      isSymbol: () => PD,
-      isSyntheticEvent: () => aD,
-      isThenable: () => jD,
-      isToString: () => nD,
-      isTypeof: () => hD,
-      isUndefined: () => OD,
-      makeCoreConfig: () => SK,
-      noop: () => ez,
-      osMeta: () => Hs,
-      parseStacktrace: () => Gw,
-      sdkMeta: () => DK,
-      setInternalFaroOnGlobalObject: () => fD,
-      transportItemTypeToBodyKey: () => pK,
-      unknownString: () => lw,
-      userActionDataAttribute: () => Fp,
-      userActionTimeoutDataAttribute: () => Yp
+  6837: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      BaseExtension: () => Oc,
+      BaseInstrumentation: () => oc,
+      BaseTransport: () => cI,
+      CSPInstrumentation: () => Mo,
+      ConsoleInstrumentation: () => Jc,
+      ConsoleTransport: () => xI,
+      EVENT_CLICK: () => ei,
+      EVENT_NAVIGATION: () => ui,
+      EVENT_ROUTE_CHANGE: () => Mi,
+      EVENT_SESSION_EXTEND: () => Ri,
+      EVENT_SESSION_RESUME: () => mi,
+      EVENT_SESSION_START: () => ki,
+      EVENT_VIEW_CHANGED: () => ji,
+      ErrorsInstrumentation: () => Nc,
+      FetchTransport: () => mI,
+      InternalLoggerLevel: () => ri,
+      LogLevel: () => uc,
+      MAX_SESSION_PERSISTENCE_TIME: () => Lp,
+      NavigationInstrumentation: () => go,
+      Observable: () => ec,
+      PerformanceInstrumentation: () => zO,
+      PersistentSessionsManager: () => fi,
+      SESSION_EXPIRATION_TIME: () => Ip,
+      SESSION_INACTIVITY_TIME: () => Sp,
+      STORAGE_KEY: () => op,
+      SessionInstrumentation: () => Sc,
+      TransportItemType: () => OI,
+      UserActionInstrumentation: () => qo,
+      UserActionState: () => vo,
+      VERSION: () => Ic,
+      ViewInstrumentation: () => fc,
+      VolatileSessionsManager: () => bi,
+      WebVitalsInstrumentation: () => BO,
+      allLogLevels: () => kc,
+      browserMeta: () => Ko,
+      buildStackFrame: () => xc,
+      captureMetas: () => hI,
+      createInternalLogger: () => EI,
+      createPromiseBuffer: () => vI,
+      createSession: () => pI,
+      deepEqual: () => di,
+      defaultEventDomain: () => Op,
+      defaultExceptionType: () => Mc,
+      defaultGlobalObjectKey: () => XI,
+      defaultInternalLoggerLevel: () => zi,
+      defaultLogLevel: () => jc,
+      faro: () => Up,
+      genShortID: () => Hi,
+      getCurrentTimestamp: () => wi,
+      getDataFromSafariExtensions: () => Uc,
+      getIgnoreUrls: () => Zp,
+      getInternalFaroFromGlobalObject: () => Pp,
+      getStackFramesFromError: () => vc,
+      getTransportBody: () => SI,
+      getUrlFromResource: () => sp,
+      getWebInstrumentations: () => Go,
+      globalObject: () => Dp,
+      initializeFaro: () => cS,
+      internalGlobalObjectKey: () => Ap,
+      isArray: () => Ep,
+      isBoolean: () => Rp,
+      isDomError: () => bp,
+      isDomException: () => hp,
+      isElement: () => np,
+      isElementDefined: () => ap,
+      wy: () => rp,
+      isError: () => Tp,
+      isErrorDefined: () => Np,
+      isErrorEvent: () => fp,
+      isEvent: () => Bp,
+      isEventDefined: () => Jp,
+      isFunction: () => Cp,
+      isInstanceOf: () => Hp,
+      isInt: () => mp,
+      isInternalFaroOnGlobalObject: () => yp,
+      isMap: () => gp,
+      isMapDefined: () => Fp,
+      isNull: () => ep,
+      isNumber: () => kp,
+      isObject: () => Mp,
+      isPrimitive: () => Qp,
+      isRegExp: () => Xp,
+      isString: () => jp,
+      isSymbol: () => qp,
+      isSyntheticEvent: () => Gp,
+      isThenable: () => lp,
+      isToString: () => tp,
+      isTypeof: () => vp,
+      isUndefined: () => dp,
+      makeCoreConfig: () => JI,
+      noop: () => Gi,
+      osMeta: () => Vo,
+      parseStacktrace: () => tc,
+      sdkMeta: () => iI,
+      setInternalFaroOnGlobalObject: () => Wp,
+      transportItemTypeToBodyKey: () => oI,
+      unknownString: () => Tc,
+      userActionDataAttribute: () => sO,
+      userActionTimeoutDataAttribute: () => KO
     });
-    const pD = "browser",
-      sD = "com.grafana.faro.session",
-      KD = 144e5,
-      rD = 9e5,
-      LD = 1e3,
-      cD = rD,
-      gD = {
+    const Op = "browser",
+      op = "com.grafana.faro.session",
+      Ip = 144e5,
+      Sp = 9e5,
+      xp = 1e3,
+      Lp = Sp,
+      Yp = {
         enabled: !0,
         persistent: !1,
-        maxSessionPersistenceTime: cD
+        maxSessionPersistenceTime: Lp
       };
-    const RD = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof wD.g ? wD.g : "undefined" !== typeof self ? self : void 0;
-    const AD = "_faroInternal";
+    const Dp = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof cp.g ? cp.g : "undefined" !== typeof self ? self : void 0;
+    const Ap = "_faroInternal";
 
-    function UD() {
-      return RD[AD]
+    function Pp() {
+      return Dp[Ap]
     }
 
-    function fD(DD) {
-      DD.config.isolate ? DD.internalLogger.debug("Skipping registering internal Faro instance on global object") : (DD.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(RD, AD, {
+    function Wp(pp) {
+      pp.config.isolate ? pp.internalLogger.debug("Skipping registering internal Faro instance on global object") : (pp.internalLogger.debug("Registering internal Faro instance on global object"), Object.defineProperty(Dp, Ap, {
         configurable: !1,
         enumerable: !1,
         writable: !1,
-        value: DD
+        value: pp
       }))
     }
 
-    function ID() {
-      return AD in RD
+    function yp() {
+      return Ap in Dp
     }
-    let BD = {
+    let Up = {
       api: {
         pushLog: () => {},
         pushError: () => {},
@@ -160,592 +160,592 @@ export const modules = {
       }
     };
 
-    function GD(DD, zD, wD, pD, sD, KD, rD) {
-      return zD.debug("Initializing Faro"), BD = {
-          api: KD,
-          config: wD,
-          instrumentations: rD,
-          internalLogger: zD,
-          metas: pD,
-          pause: sD.pause,
-          transports: sD,
-          unpatchedConsole: DD,
-          unpause: sD.unpause
-        }, fD(BD),
-        function(DD) {
-          if (DD.config.preventGlobalExposure) DD.internalLogger.debug("Skipping registering public Faro instance in the global scope");
+    function wp(pp, ip, cp, Op, op, Ip, Sp) {
+      return ip.debug("Initializing Faro"), Up = {
+          api: Ip,
+          config: cp,
+          instrumentations: Sp,
+          internalLogger: ip,
+          metas: Op,
+          pause: op.pause,
+          transports: op,
+          unpatchedConsole: pp,
+          unpause: op.unpause
+        }, Wp(Up),
+        function(pp) {
+          if (pp.config.preventGlobalExposure) pp.internalLogger.debug("Skipping registering public Faro instance in the global scope");
           else {
-            if (DD.internalLogger.debug(`Registering public faro reference in the global scope using "${DD.config.globalObjectKey}" key`), DD.config.globalObjectKey in RD) return void DD.internalLogger.warn(`Skipping global registration due to key "${DD.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
-            Object.defineProperty(RD, DD.config.globalObjectKey, {
+            if (pp.internalLogger.debug(`Registering public faro reference in the global scope using "${pp.config.globalObjectKey}" key`), pp.config.globalObjectKey in Dp) return void pp.internalLogger.warn(`Skipping global registration due to key "${pp.config.globalObjectKey}" being used already. Please set "globalObjectKey" to something else or set "preventGlobalExposure" to "true"`);
+            Object.defineProperty(Dp, pp.config.globalObjectKey, {
               configurable: !1,
               writable: !1,
-              value: DD
+              value: pp
             })
           }
-        }(BD), BD
+        }(Up), Up
     }
 
-    function hD(DD, zD) {
-      return typeof DD === zD
+    function vp(pp, ip) {
+      return typeof pp === ip
     }
 
-    function nD(DD, zD) {
-      return Object.prototype.toString.call(DD) === `[object ${zD}]`
+    function tp(pp, ip) {
+      return Object.prototype.toString.call(pp) === `[object ${ip}]`
     }
 
-    function MD(DD, zD) {
+    function Hp(pp, ip) {
       try {
-        return DD instanceof zD
-      } catch (wD) {
+        return pp instanceof ip
+      } catch (cp) {
         return !1
       }
     }
-    const OD = DD => hD(DD, "undefined"),
-      JD = DD => hD(DD, "null"),
-      ED = DD => hD(DD, "string"),
-      QD = DD => hD(DD, "number") && !isNaN(DD) || hD(DD, "bigint"),
-      XD = DD => QD(DD) && Number.isInteger(DD),
-      VD = DD => hD(DD, "boolean"),
-      PD = DD => hD(DD, "symbol"),
-      CD = DD => !JD(DD) && hD(DD, "object"),
-      xD = DD => hD(DD, "function"),
-      TD = DD => nD(DD, "Array"),
-      bD = DD => nD(DD, "RegExp"),
-      jD = DD => xD(null === DD || void 0 === DD ? void 0 : DD.then),
-      dD = DD => !CD(DD) && !xD(DD),
-      SD = "undefined" !== typeof Event,
-      iD = DD => SD && MD(DD, Event),
-      lD = "undefined" !== typeof Error,
-      WD = DD => lD && MD(DD, Error),
-      ND = DD => nD(DD, "ErrorEvent"),
-      ZD = DD => nD(DD, "DOMError"),
-      yD = DD => nD(DD, "DOMException"),
-      kD = "undefined" !== typeof Element,
-      mD = DD => kD && MD(DD, Element),
-      eD = "undefined" !== typeof Map,
-      oD = DD => eD && MD(DD, Map),
-      aD = DD => CD(DD) && "nativeEvent" in DD && "preventDefault" in DD && "stopPropagation" in DD;
+    const dp = pp => vp(pp, "undefined"),
+      ep = pp => vp(pp, "null"),
+      jp = pp => vp(pp, "string"),
+      kp = pp => vp(pp, "number") && !isNaN(pp) || vp(pp, "bigint"),
+      mp = pp => kp(pp) && Number.isInteger(pp),
+      Rp = pp => vp(pp, "boolean"),
+      qp = pp => vp(pp, "symbol"),
+      Mp = pp => !ep(pp) && vp(pp, "object"),
+      Cp = pp => vp(pp, "function"),
+      Ep = pp => tp(pp, "Array"),
+      Xp = pp => tp(pp, "RegExp"),
+      lp = pp => Cp(null === pp || void 0 === pp ? void 0 : pp.then),
+      Qp = pp => !Mp(pp) && !Cp(pp),
+      Jp = "undefined" !== typeof Event,
+      Bp = pp => Jp && Hp(pp, Event),
+      Np = "undefined" !== typeof Error,
+      Tp = pp => Np && Hp(pp, Error),
+      fp = pp => tp(pp, "ErrorEvent"),
+      bp = pp => tp(pp, "DOMError"),
+      hp = pp => tp(pp, "DOMException"),
+      ap = "undefined" !== typeof Element,
+      np = pp => ap && Hp(pp, Element),
+      Fp = "undefined" !== typeof Map,
+      gp = pp => Fp && Hp(pp, Map),
+      Gp = pp => Mp(pp) && "nativeEvent" in pp && "preventDefault" in pp && "stopPropagation" in pp;
 
-    function uD(DD) {
-      return null == DD || (TD(DD) || ED(DD) ? 0 === DD.length : !!CD(DD) && 0 === Object.keys(DD).length)
+    function rp(pp) {
+      return null == pp || (Ep(pp) || jp(pp) ? 0 === pp.length : !!Mp(pp) && 0 === Object.keys(pp).length)
     }
 
-    function vD() {
-      return BD.transports.transports.flatMap((DD => DD.getIgnoreUrls()))
+    function Zp() {
+      return Up.transports.transports.flatMap((pp => pp.getIgnoreUrls()))
     }
 
-    function tD() {
-      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
-      return vD().some((zD => DD && null != DD.match(zD)))
+    function zp() {
+      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
+      return Zp().some((ip => pp && null != pp.match(ip)))
     }
 
-    function FD(DD) {
-      return ED(DD) ? DD : DD instanceof URL ? DD.href : !uD(DD) && xD(null === DD || void 0 === DD ? void 0 : DD.toString) ? DD.toString() : void 0
+    function sp(pp) {
+      return jp(pp) ? pp : pp instanceof URL ? pp.href : !rp(pp) && Cp(null === pp || void 0 === pp ? void 0 : pp.toString) ? pp.toString() : void 0
     }
-    const YD = "sessionStorage",
-      HD = "localStorage";
+    const Kp = "sessionStorage",
+      Vp = "localStorage";
 
-    function qD(DD) {
+    function ii(pp) {
       try {
-        let zD;
-        zD = window[DD];
-        const wD = "__faro_storage_test__";
-        return zD.setItem(wD, wD), zD.removeItem(wD), !0
-      } catch (wD) {
-        var zD;
-        return null === (zD = BD.internalLogger) || void 0 === zD || zD.info(`Web storage of type ${DD} is not available. Reason: ${wD}`), !1
+        let ip;
+        ip = window[pp];
+        const cp = "__faro_storage_test__";
+        return ip.setItem(cp, cp), ip.removeItem(cp), !0
+      } catch (cp) {
+        var ip;
+        return null === (ip = Up.internalLogger) || void 0 === ip || ip.info(`Web storage of type ${pp} is not available. Reason: ${cp}`), !1
       }
     }
 
-    function Dz(DD, zD) {
-      return Kz(zD) ? window[zD].getItem(DD) : null
+    function ci(pp, ip) {
+      return xi(ip) ? window[ip].getItem(pp) : null
     }
 
-    function zz(DD, zD, wD) {
-      if (Kz(wD)) try {
-        window[wD].setItem(DD, zD)
-      } catch (pD) {}
+    function Oi(pp, ip, cp) {
+      if (xi(cp)) try {
+        window[cp].setItem(pp, ip)
+      } catch (Op) {}
     }
 
-    function wz(DD, zD) {
-      Kz(zD) && window[zD].removeItem(DD)
+    function oi(pp, ip) {
+      xi(ip) && window[ip].removeItem(pp)
     }
-    const pz = qD(HD),
-      sz = qD(YD);
+    const Ii = ii(Vp),
+      Si = ii(Kp);
 
-    function Kz(DD) {
-      return DD === HD ? pz : DD === YD && sz
-    }
-
-    function rz(DD) {
-      return rz = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(DD) {
-        return typeof DD
-      } : function(DD) {
-        return DD && "function" == typeof Symbol && DD.constructor === Symbol && DD !== Symbol.prototype ? "symbol" : typeof DD
-      }, rz(DD)
+    function xi(pp) {
+      return pp === Vp ? Ii : pp === Kp && Si
     }
 
-    function Lz(DD) {
-      var zD = function(DD, zD) {
-        if ("object" != rz(DD) || !DD) return DD;
-        var wD = DD[Symbol.toPrimitive];
-        if (void 0 !== wD) {
-          var pD = wD.call(DD, zD || "default");
-          if ("object" != rz(pD)) return pD;
+    function Li(pp) {
+      return Li = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(pp) {
+        return typeof pp
+      } : function(pp) {
+        return pp && "function" == typeof Symbol && pp.constructor === Symbol && pp !== Symbol.prototype ? "symbol" : typeof pp
+      }, Li(pp)
+    }
+
+    function Yi(pp) {
+      var ip = function(pp, ip) {
+        if ("object" != Li(pp) || !pp) return pp;
+        var cp = pp[Symbol.toPrimitive];
+        if (void 0 !== cp) {
+          var Op = cp.call(pp, ip || "default");
+          if ("object" != Li(Op)) return Op;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === zD ? String : Number)(DD)
-      }(DD, "string");
-      return "symbol" == rz(zD) ? zD : zD + ""
+        return ("string" === ip ? String : Number)(pp)
+      }(pp, "string");
+      return "symbol" == Li(ip) ? ip : ip + ""
     }
 
-    function cz(DD, zD, wD) {
-      return (zD = Lz(zD)) in DD ? Object.defineProperty(DD, zD, {
-        value: wD,
+    function Di(pp, ip, cp) {
+      return (ip = Yi(ip)) in pp ? Object.defineProperty(pp, ip, {
+        value: cp,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : DD[zD] = wD, DD
+      }) : pp[ip] = cp, pp
     }
 
-    function gz(DD, zD) {
-      var wD = Object.keys(DD);
+    function Ai(pp, ip) {
+      var cp = Object.keys(pp);
       if (Object.getOwnPropertySymbols) {
-        var pD = Object.getOwnPropertySymbols(DD);
-        zD && (pD = pD.filter((function(zD) {
-          return Object.getOwnPropertyDescriptor(DD, zD).enumerable
-        }))), wD.push.apply(wD, pD)
+        var Op = Object.getOwnPropertySymbols(pp);
+        ip && (Op = Op.filter((function(ip) {
+          return Object.getOwnPropertyDescriptor(pp, ip).enumerable
+        }))), cp.push.apply(cp, Op)
       }
-      return wD
+      return cp
     }
 
-    function Rz(DD) {
-      for (var zD = 1; zD < arguments.length; zD++) {
-        var wD = null != arguments[zD] ? arguments[zD] : {};
-        zD % 2 ? gz(Object(wD), !0).forEach((function(zD) {
-          cz(DD, zD, wD[zD])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(DD, Object.getOwnPropertyDescriptors(wD)) : gz(Object(wD)).forEach((function(zD) {
-          Object.defineProperty(DD, zD, Object.getOwnPropertyDescriptor(wD, zD))
+    function Pi(pp) {
+      for (var ip = 1; ip < arguments.length; ip++) {
+        var cp = null != arguments[ip] ? arguments[ip] : {};
+        ip % 2 ? Ai(Object(cp), !0).forEach((function(ip) {
+          Di(pp, ip, cp[ip])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(pp, Object.getOwnPropertyDescriptors(cp)) : Ai(Object(cp)).forEach((function(ip) {
+          Object.defineProperty(pp, ip, Object.getOwnPropertyDescriptor(cp, ip))
         }))
       }
-      return DD
+      return pp
     }
 
-    function Az() {
-      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : BD;
-      var zD, wD, pD;
-      const sD = DD.config.sessionTracking,
-        KD = null !== (zD = null !== (wD = null === sD || void 0 === sD || null === (pD = sD.sampler) || void 0 === pD ? void 0 : pD.call(sD, {
-          metas: DD.metas.value
-        })) && void 0 !== wD ? wD : null === sD || void 0 === sD ? void 0 : sD.samplingRate) && void 0 !== zD ? zD : 1,
-        rD = "number" === typeof KD ? function(DD) {
-          return Math.min(1, Math.max(0, DD))
-        }(KD) : 0;
-      if (!(rD > 0)) return !1;
-      if (1 === rD) return !0;
+    function Wi() {
+      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Up;
+      var ip, cp, Op;
+      const op = pp.config.sessionTracking,
+        Ip = null !== (ip = null !== (cp = null === op || void 0 === op || null === (Op = op.sampler) || void 0 === Op ? void 0 : Op.call(op, {
+          metas: pp.metas.value
+        })) && void 0 !== cp ? cp : null === op || void 0 === op ? void 0 : op.samplingRate) && void 0 !== ip ? ip : 1,
+        Sp = "number" === typeof Ip ? function(pp) {
+          return Math.min(1, Math.max(0, pp))
+        }(Ip) : 0;
+      if (!(Sp > 0)) return !1;
+      if (1 === Sp) return !0;
       try {
-        const DD = "undefined" !== typeof window ? window.crypto : void 0;
-        if ("function" === typeof(null === DD || void 0 === DD ? void 0 : DD.getRandomValues)) {
-          const zD = new Uint32Array(1);
-          return DD.getRandomValues(zD), zD[0] / Math.pow(2, 32) < rD
+        const pp = "undefined" !== typeof window ? window.crypto : void 0;
+        if ("function" === typeof(null === pp || void 0 === pp ? void 0 : pp.getRandomValues)) {
+          const ip = new Uint32Array(1);
+          return pp.getRandomValues(ip), ip[0] / Math.pow(2, 32) < Sp
         }
-      } catch (LD) {}
-      return Math.random() < rD
+      } catch (xp) {}
+      return Math.random() < Sp
     }
 
-    function Uz() {
+    function yi() {
       return Date.now()
     }
 
-    function fz() {
+    function Ui() {
       return "undefined" !== typeof performance && "function" === typeof performance.now ? performance.now() : Date.now()
     }
 
-    function Iz() {
+    function wi() {
       return (new Date).toISOString()
     }
 
-    function Bz(DD) {
-      return new Date(DD).toISOString()
+    function vi(pp) {
+      return new Date(pp).toISOString()
     }
-    const Gz = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
+    const ti = "abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ0123456789";
 
-    function hz() {
-      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
-      const zD = new Uint32Array(DD),
-        wD = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
-      if (null === wD || void 0 === wD ? void 0 : wD.getRandomValues) wD.getRandomValues(zD);
+    function Hi() {
+      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
+      const ip = new Uint32Array(pp),
+        cp = "undefined" !== typeof globalThis ? globalThis.crypto : void 0;
+      if (null === cp || void 0 === cp ? void 0 : cp.getRandomValues) cp.getRandomValues(ip);
       else
-        for (let sD = 0; sD < DD; sD++) zD[sD] = Math.floor(4294967296 * Math.random());
-      let pD = "";
-      for (let sD = 0; sD < DD; sD++) pD += Gz[zD[sD] % 59];
-      return pD
+        for (let op = 0; op < pp; op++) ip[op] = Math.floor(4294967296 * Math.random());
+      let Op = "";
+      for (let op = 0; op < pp; op++) Op += ti[ip[op] % 59];
+      return Op
     }
 
-    function nz(DD, zD) {
-      if (DD === zD) return !0;
-      if (hD(DD, "number") && isNaN(DD)) return hD(zD, "number") && isNaN(zD);
-      const wD = TD(DD),
-        pD = TD(zD);
-      if (wD !== pD) return !1;
-      if (wD && pD) {
-        const wD = DD.length;
-        if (wD !== zD.length) return !1;
-        for (let pD = wD; 0 !== pD--;)
-          if (!nz(DD[pD], zD[pD])) return !1;
+    function di(pp, ip) {
+      if (pp === ip) return !0;
+      if (vp(pp, "number") && isNaN(pp)) return vp(ip, "number") && isNaN(ip);
+      const cp = Ep(pp),
+        Op = Ep(ip);
+      if (cp !== Op) return !1;
+      if (cp && Op) {
+        const cp = pp.length;
+        if (cp !== ip.length) return !1;
+        for (let Op = cp; 0 !== Op--;)
+          if (!di(pp[Op], ip[Op])) return !1;
         return !0
       }
-      const sD = CD(DD),
-        KD = CD(zD);
-      if (sD !== KD) return !1;
-      if (DD && zD && sD && KD) {
-        const wD = Object.keys(DD),
-          pD = Object.keys(zD);
-        if (wD.length !== pD.length) return !1;
-        for (let DD of wD)
-          if (!pD.includes(DD)) return !1;
-        for (let sD of wD)
-          if (!nz(DD[sD], zD[sD])) return !1;
+      const op = Mp(pp),
+        Ip = Mp(ip);
+      if (op !== Ip) return !1;
+      if (pp && ip && op && Ip) {
+        const cp = Object.keys(pp),
+          Op = Object.keys(ip);
+        if (cp.length !== Op.length) return !1;
+        for (let pp of cp)
+          if (!Op.includes(pp)) return !1;
+        for (let op of cp)
+          if (!di(pp[op], ip[op])) return !1;
         return !0
       }
       return !1
     }
-    const Mz = "click",
-      Oz = "navigation",
-      Jz = "view_changed",
-      Ez = "session_start",
-      Qz = "session_resume",
-      Xz = "session_extend",
-      Vz = "service_name_override",
-      Pz = "route_change";
+    const ei = "click",
+      ui = "navigation",
+      ji = "view_changed",
+      ki = "session_start",
+      mi = "session_resume",
+      Ri = "session_extend",
+      qi = "service_name_override",
+      Mi = "route_change";
 
-    function Cz() {
+    function Ci() {
       let {
-        sessionId: DD,
-        started: zD,
-        lastActivity: wD,
-        isSampled: pD = !0
-      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, sD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BD;
-      var KD;
-      const rD = Uz(),
-        LD = null === (KD = sD.config) || void 0 === KD || null === (KD = KD.sessionTracking) || void 0 === KD ? void 0 : KD.generateSessionId;
-      return null == DD && (DD = "function" === typeof LD ? LD() : hz()), {
-        sessionId: DD,
-        lastActivity: null !== wD && void 0 !== wD ? wD : rD,
-        started: null !== zD && void 0 !== zD ? zD : rD,
-        isSampled: pD
+        sessionId: pp,
+        started: ip,
+        lastActivity: cp,
+        isSampled: Op = !0
+      } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {}, op = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Up;
+      var Ip;
+      const Sp = yi(),
+        xp = null === (Ip = op.config) || void 0 === Ip || null === (Ip = Ip.sessionTracking) || void 0 === Ip ? void 0 : Ip.generateSessionId;
+      return null == pp && (pp = "function" === typeof xp ? xp() : Hi()), {
+        sessionId: pp,
+        lastActivity: null !== cp && void 0 !== cp ? cp : Sp,
+        started: null !== ip && void 0 !== ip ? ip : Sp,
+        isSampled: Op
       }
     }
 
-    function xz(DD) {
-      if (null == DD) return !1;
-      const zD = Uz();
-      return zD - DD.started < 144e5 && zD - DD.lastActivity < rD
+    function Ei(pp) {
+      if (null == pp) return !1;
+      const ip = yi();
+      return ip - pp.started < 144e5 && ip - pp.lastActivity < Sp
     }
 
-    function Tz(DD) {
+    function Xi(pp) {
       let {
-        fetchUserSession: zD,
-        storeUserSession: wD,
-        adoptSession: pD,
-        updateInterval: sD = 0
-      } = DD, LD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BD, cD = 0;
+        fetchUserSession: ip,
+        storeUserSession: cp,
+        adoptSession: Op,
+        updateInterval: op = 0
+      } = pp, xp = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Up, Lp = 0;
       return function() {
         let {
-          forceSessionExtend: DD = !1,
-          refreshActivity: gD = !0
+          forceSessionExtend: pp = !1,
+          refreshActivity: Yp = !0
         } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        var RD, AD;
-        if (!zD || !wD) return;
-        const UD = Uz();
-        if (!DD && UD < cD && cD - UD <= sD) return;
-        const fD = LD.config.sessionTracking,
-          ID = null === fD || void 0 === fD ? void 0 : fD.persistent;
-        if (ID && !pz || !ID && !sz) return;
-        const BD = zD();
-        if (cD = Math.min(UD + sD, (null !== (RD = null === BD || void 0 === BD ? void 0 : BD.started) && void 0 !== RD ? RD : UD) + KD, (null !== (AD = null === BD || void 0 === BD ? void 0 : BD.lastActivity) && void 0 !== AD ? AD : UD) + rD), !1 === DD && xz(BD)) {
-          var GD;
-          gD && wD(Rz(Rz({}, BD), {}, {
-            lastActivity: UD
+        var Dp, Ap;
+        if (!ip || !cp) return;
+        const Pp = yi();
+        if (!pp && Pp < Lp && Lp - Pp <= op) return;
+        const Wp = xp.config.sessionTracking,
+          yp = null === Wp || void 0 === Wp ? void 0 : Wp.persistent;
+        if (yp && !Ii || !yp && !Si) return;
+        const Up = ip();
+        if (Lp = Math.min(Pp + op, (null !== (Dp = null === Up || void 0 === Up ? void 0 : Up.started) && void 0 !== Dp ? Dp : Pp) + Ip, (null !== (Ap = null === Up || void 0 === Up ? void 0 : Up.lastActivity) && void 0 !== Ap ? Ap : Pp) + Sp), !1 === pp && Ei(Up)) {
+          var wp;
+          Yp && cp(Pi(Pi({}, Up), {}, {
+            lastActivity: Pp
           }));
-          const DD = null === (GD = LD.metas.value.session) || void 0 === GD ? void 0 : GD.id;
-          null != pD && null != BD.sessionMeta && BD.sessionId !== DD && pD(BD.sessionMeta)
+          const pp = null === (wp = xp.metas.value.session) || void 0 === wp ? void 0 : wp.id;
+          null != Op && null != Up.sessionMeta && Up.sessionId !== pp && Op(Up.sessionMeta)
         } else {
-          var hD, nD, MD;
-          let DD = jz(Cz({
-            isSampled: Az(LD)
-          }, LD), BD, LD);
-          cD = UD + sD, wD(DD), null === (hD = LD.api) || void 0 === hD || hD.setSession(DD.sessionMeta), null === fD || void 0 === fD || null === (nD = fD.onSessionChange) || void 0 === nD || nD.call(fD, null !== (MD = null === BD || void 0 === BD ? void 0 : BD.sessionMeta) && void 0 !== MD ? MD : null, DD.sessionMeta)
+          var vp, tp, Hp;
+          let pp = Qi(Ci({
+            isSampled: Wi(xp)
+          }, xp), Up, xp);
+          Lp = Pp + op, cp(pp), null === (vp = xp.api) || void 0 === vp || vp.setSession(pp.sessionMeta), null === Wp || void 0 === Wp || null === (tp = Wp.onSessionChange) || void 0 === tp || tp.call(Wp, null !== (Hp = null === Up || void 0 === Up ? void 0 : Up.sessionMeta) && void 0 !== Hp ? Hp : null, pp.sessionMeta)
         }
       }
     }
 
-    function bz(DD) {
-      let zD, {
-          fetchUserSession: wD,
-          storeUserSession: pD,
-          updateInterval: sD = 0
-        } = DD,
-        KD = 0;
-      return DD => {
-        const rD = Uz();
-        if (DD === zD && rD < KD && KD - rD <= sD) return;
-        zD = DD, KD = rD + sD;
-        const LD = wD();
-        (null === LD || void 0 === LD ? void 0 : LD.sessionId) === DD && xz(LD) && pD(Rz(Rz({}, LD), {}, {
-          lastActivity: rD
+    function li(pp) {
+      let ip, {
+          fetchUserSession: cp,
+          storeUserSession: Op,
+          updateInterval: op = 0
+        } = pp,
+        Ip = 0;
+      return pp => {
+        const Sp = yi();
+        if (pp === ip && Sp < Ip && Ip - Sp <= op) return;
+        ip = pp, Ip = Sp + op;
+        const xp = cp();
+        (null === xp || void 0 === xp ? void 0 : xp.sessionId) === pp && Ei(xp) && Op(Pi(Pi({}, xp), {}, {
+          lastActivity: Sp
         }))
       }
     }
 
-    function jz(DD, zD) {
-      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : BD;
-      var pD, sD, KD, rD, LD, cD;
-      const gD = Rz(Rz({}, DD), {}, {
+    function Qi(pp, ip) {
+      let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Up;
+      var Op, op, Ip, Sp, xp, Lp;
+      const Yp = Pi(Pi({}, pp), {}, {
           sessionMeta: {
-            id: DD.sessionId,
-            attributes: Sz(Rz(Rz(Rz({}, null === (pD = wD.config.sessionTracking) || void 0 === pD || null === (pD = pD.session) || void 0 === pD ? void 0 : pD.attributes), null !== (sD = null === (KD = wD.metas.value.session) || void 0 === KD ? void 0 : KD.attributes) && void 0 !== sD ? sD : {}), {}, {
-              isSampled: DD.isSampled.toString()
+            id: pp.sessionId,
+            attributes: Bi(Pi(Pi(Pi({}, null === (Op = cp.config.sessionTracking) || void 0 === Op || null === (Op = Op.session) || void 0 === Op ? void 0 : Op.attributes), null !== (op = null === (Ip = cp.metas.value.session) || void 0 === Ip ? void 0 : Ip.attributes) && void 0 !== op ? op : {}), {}, {
+              isSampled: pp.isSampled.toString()
             }))
           }
         }),
-        RD = null !== (rD = null === (LD = wD.metas.value.session) || void 0 === LD ? void 0 : LD.overrides) && void 0 !== rD ? rD : null === zD || void 0 === zD || null === (cD = zD.sessionMeta) || void 0 === cD ? void 0 : cD.overrides;
-      uD(RD) || (gD.sessionMeta.overrides = RD);
-      const AD = null === zD || void 0 === zD ? void 0 : zD.sessionId;
-      return null != AD && (gD.sessionMeta.attributes.previousSession = AD), gD
+        Dp = null !== (Sp = null === (xp = cp.metas.value.session) || void 0 === xp ? void 0 : xp.overrides) && void 0 !== Sp ? Sp : null === ip || void 0 === ip || null === (Lp = ip.sessionMeta) || void 0 === Lp ? void 0 : Lp.overrides;
+      rp(Dp) || (Yp.sessionMeta.overrides = Dp);
+      const Ap = null === ip || void 0 === ip ? void 0 : ip.sessionId;
+      return null != Ap && (Yp.sessionMeta.attributes.previousSession = Ap), Yp
     }
 
-    function dz(DD) {
+    function Ji(pp) {
       let {
-        fetchUserSession: zD,
-        storeUserSession: wD
-      } = DD, pD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : BD, sD = !1;
-      return function(DD) {
-        if (sD) return;
-        const KD = DD.session,
-          rD = zD();
-        let LD = null === KD || void 0 === KD ? void 0 : KD.id;
-        const cD = null === KD || void 0 === KD ? void 0 : KD.attributes,
-          gD = null === KD || void 0 === KD ? void 0 : KD.overrides,
-          RD = null === rD || void 0 === rD ? void 0 : rD.sessionMeta,
-          AD = null === RD || void 0 === RD ? void 0 : RD.overrides,
-          UD = !!gD && !nz(gD, AD),
-          fD = !!cD && !nz(cD, null === RD || void 0 === RD ? void 0 : RD.attributes);
-        if (KD && LD !== (null === rD || void 0 === rD ? void 0 : rD.sessionId) || fD || UD) {
-          var ID, BD;
-          const DD = null != rD && LD === rD.sessionId,
-            zD = jz(DD ? rD : Cz({
-              sessionId: LD,
-              isSampled: Az(pD)
-            }, pD), rD, pD),
-            KD = null === rD || void 0 === rD || null === (ID = rD.sessionMeta) || void 0 === ID || null === (ID = ID.attributes) || void 0 === ID ? void 0 : ID.previousSession;
-          DD && null != KD && KD !== zD.sessionId && (zD.sessionMeta.attributes.previousSession = KD), (null === (BD = zD.sessionMeta.attributes) || void 0 === BD ? void 0 : BD.previousSession) === zD.sessionId && delete zD.sessionMeta.attributes.previousSession, wD(zD),
-            function(DD, zD) {
-              let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-              var sD, KD, rD;
-              if (!zD) return;
-              const LD = wD.serviceName,
-                cD = null !== (sD = null !== (KD = pD.serviceName) && void 0 !== KD ? KD : null === (rD = DD.metas.value.app) || void 0 === rD ? void 0 : rD.name) && void 0 !== sD ? sD : "";
-              LD && LD !== cD && DD.api.pushEvent(Vz, {
-                serviceName: LD,
-                previousServiceName: cD
+        fetchUserSession: ip,
+        storeUserSession: cp
+      } = pp, Op = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Up, op = !1;
+      return function(pp) {
+        if (op) return;
+        const Ip = pp.session,
+          Sp = ip();
+        let xp = null === Ip || void 0 === Ip ? void 0 : Ip.id;
+        const Lp = null === Ip || void 0 === Ip ? void 0 : Ip.attributes,
+          Yp = null === Ip || void 0 === Ip ? void 0 : Ip.overrides,
+          Dp = null === Sp || void 0 === Sp ? void 0 : Sp.sessionMeta,
+          Ap = null === Dp || void 0 === Dp ? void 0 : Dp.overrides,
+          Pp = !!Yp && !di(Yp, Ap),
+          Wp = !!Lp && !di(Lp, null === Dp || void 0 === Dp ? void 0 : Dp.attributes);
+        if (Ip && xp !== (null === Sp || void 0 === Sp ? void 0 : Sp.sessionId) || Wp || Pp) {
+          var yp, Up;
+          const pp = null != Sp && xp === Sp.sessionId,
+            ip = Qi(pp ? Sp : Ci({
+              sessionId: xp,
+              isSampled: Wi(Op)
+            }, Op), Sp, Op),
+            Ip = null === Sp || void 0 === Sp || null === (yp = Sp.sessionMeta) || void 0 === yp || null === (yp = yp.attributes) || void 0 === yp ? void 0 : yp.previousSession;
+          pp && null != Ip && Ip !== ip.sessionId && (ip.sessionMeta.attributes.previousSession = Ip), (null === (Up = ip.sessionMeta.attributes) || void 0 === Up ? void 0 : Up.previousSession) === ip.sessionId && delete ip.sessionMeta.attributes.previousSession, cp(ip),
+            function(pp, ip) {
+              let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+              var op, Ip, Sp;
+              if (!ip) return;
+              const xp = cp.serviceName,
+                Lp = null !== (op = null !== (Ip = Op.serviceName) && void 0 !== Ip ? Ip : null === (Sp = pp.metas.value.app) || void 0 === Sp ? void 0 : Sp.name) && void 0 !== op ? op : "";
+              xp && xp !== Lp && pp.api.pushEvent(qi, {
+                serviceName: xp,
+                previousServiceName: Lp
               })
-            }(pD, UD, gD, AD), sD = !0;
+            }(Op, Pp, Yp, Ap), op = !0;
           try {
-            pD.api.setSession(zD.sessionMeta)
+            Op.api.setSession(ip.sessionMeta)
           } finally {
-            sD = !1
+            op = !1
           }
         }
       }
     }
 
-    function Sz(DD) {
-      const zD = {};
-      for (const wD of Object.keys(DD)) {
-        const pD = DD[wD];
-        void 0 !== pD && (zD[wD] = pD)
+    function Bi(pp) {
+      const ip = {};
+      for (const cp of Object.keys(pp)) {
+        const Op = pp[cp];
+        void 0 !== Op && (ip[cp] = Op)
       }
-      return zD
+      return ip
     }
 
-    function iz() {
-      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      return JSON.stringify(null !== DD && void 0 !== DD ? DD : {}, function() {
-        const DD = new WeakSet;
-        return function(zD, wD) {
-          if (CD(wD) && null !== wD) {
-            if (DD.has(wD)) return null;
-            DD.add(wD)
+    function Ni() {
+      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      return JSON.stringify(null !== pp && void 0 !== pp ? pp : {}, function() {
+        const pp = new WeakSet;
+        return function(ip, cp) {
+          if (Mp(cp) && null !== cp) {
+            if (pp.has(cp)) return null;
+            pp.add(cp)
           }
-          return wD
+          return cp
         }
       }())
     }
 
-    function lz() {
-      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const zD = {};
-      for (const [wD, pD] of Object.entries(DD)) zD[wD] = CD(pD) && null !== pD ? iz(pD) : String(pD);
-      return zD
+    function Ti() {
+      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const ip = {};
+      for (const [cp, Op] of Object.entries(pp)) ip[cp] = Mp(Op) && null !== Op ? Ni(Op) : String(Op);
+      return ip
     }
-    var Wz = class DD {
+    var fi = class pp {
       constructor() {
-        var zD = this;
-        let wD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : BD;
-        this.context = wD, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = DD => {
+        var ip = this;
+        let cp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Up;
+        this.context = cp, this.adopting = !1, this.isAdopting = () => this.adopting, this.adoptSession = pp => {
           this.adopting = !0;
           try {
-            var zD;
-            null === (zD = this.context.api) || void 0 === zD || zD.setSession(DD)
+            var ip;
+            null === (ip = this.context.api) || void 0 === ip || ip.setSession(pp)
           } finally {
             this.adopting = !1
           }
         }, this.updateSession = function() {
           let {
-            refreshActivity: DD = !0
+            refreshActivity: pp = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return zD.updateUserSession({
-            refreshActivity: DD
+          return ip.updateUserSession({
+            refreshActivity: pp
           })
-        }, this.recordActivity = bz({
-          fetchUserSession: DD.fetchUserSession,
-          storeUserSession: DD.storeUserSession,
-          updateInterval: LD
-        }), this.updateUserSession = Tz({
-          fetchUserSession: DD.fetchUserSession,
-          storeUserSession: DD.storeUserSession,
+        }, this.recordActivity = li({
+          fetchUserSession: pp.fetchUserSession,
+          storeUserSession: pp.storeUserSession,
+          updateInterval: xp
+        }), this.updateUserSession = Xi({
+          fetchUserSession: pp.fetchUserSession,
+          storeUserSession: pp.storeUserSession,
           adoptSession: this.adoptSession,
-          updateInterval: LD
-        }, wD), this.init()
+          updateInterval: xp
+        }, cp), this.init()
       }
       static removeUserSession() {
-        wz(sD, DD.storageTypeLocal)
+        oi(op, pp.storageTypeLocal)
       }
-      static storeUserSession(zD) {
-        zz(sD, iz(zD), DD.storageTypeLocal)
+      static storeUserSession(ip) {
+        Oi(op, Ni(ip), pp.storageTypeLocal)
       }
       static fetchUserSession() {
-        const zD = Dz(sD, DD.storageTypeLocal);
-        return zD ? JSON.parse(zD) : null
+        const ip = ci(op, pp.storageTypeLocal);
+        return ip ? JSON.parse(ip) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var DD;
+            var pp;
             this.updateSession({
               refreshActivity: !1
             });
-            const zD = null === (DD = this.context.api) || void 0 === DD || null === (DD = DD.getSession()) || void 0 === DD ? void 0 : DD.id;
-            zD && this.recordActivity(zD)
+            const ip = null === (pp = this.context.api) || void 0 === pp || null === (pp = pp.getSession()) || void 0 === pp ? void 0 : pp.id;
+            ip && this.recordActivity(ip)
           }
-        })), this.context.metas.addListener(dz({
-          fetchUserSession: DD.fetchUserSession,
-          storeUserSession: DD.storeUserSession
+        })), this.context.metas.addListener(Ji({
+          fetchUserSession: pp.fetchUserSession,
+          storeUserSession: pp.storeUserSession
         }, this.context))
       }
     };
-    Wz.storageTypeLocal = HD;
-    var Nz = class DD {
+    fi.storageTypeLocal = Vp;
+    var bi = class pp {
       constructor() {
-        var zD = this;
-        let wD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : BD;
-        this.context = wD, this.isAdopting = () => !1, this.updateSession = function() {
+        var ip = this;
+        let cp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Up;
+        this.context = cp, this.isAdopting = () => !1, this.updateSession = function() {
           let {
-            refreshActivity: DD = !0
+            refreshActivity: pp = !0
           } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-          return zD.updateUserSession({
-            refreshActivity: DD
+          return ip.updateUserSession({
+            refreshActivity: pp
           })
-        }, this.recordActivity = bz({
-          fetchUserSession: DD.fetchUserSession,
-          storeUserSession: DD.storeUserSession,
-          updateInterval: LD
-        }), this.updateUserSession = Tz({
-          fetchUserSession: DD.fetchUserSession,
-          storeUserSession: DD.storeUserSession,
-          updateInterval: LD
-        }, wD), this.init()
+        }, this.recordActivity = li({
+          fetchUserSession: pp.fetchUserSession,
+          storeUserSession: pp.storeUserSession,
+          updateInterval: xp
+        }), this.updateUserSession = Xi({
+          fetchUserSession: pp.fetchUserSession,
+          storeUserSession: pp.storeUserSession,
+          updateInterval: xp
+        }, cp), this.init()
       }
       static removeUserSession() {
-        wz(sD, DD.storageTypeSession)
+        oi(op, pp.storageTypeSession)
       }
-      static storeUserSession(zD) {
-        zz(sD, iz(zD), DD.storageTypeSession)
+      static storeUserSession(ip) {
+        Oi(op, Ni(ip), pp.storageTypeSession)
       }
       static fetchUserSession() {
-        const zD = Dz(sD, DD.storageTypeSession);
-        return zD ? JSON.parse(zD) : null
+        const ip = ci(op, pp.storageTypeSession);
+        return ip ? JSON.parse(ip) : null
       }
       init() {
         document.addEventListener("visibilitychange", (() => {
           if ("visible" === document.visibilityState) {
-            var DD;
+            var pp;
             this.updateSession({
               refreshActivity: !1
             });
-            const zD = null === (DD = this.context.api) || void 0 === DD || null === (DD = DD.getSession()) || void 0 === DD ? void 0 : DD.id;
-            zD && this.recordActivity(zD)
+            const ip = null === (pp = this.context.api) || void 0 === pp || null === (pp = pp.getSession()) || void 0 === pp ? void 0 : pp.id;
+            ip && this.recordActivity(ip)
           }
-        })), this.context.metas.addListener(dz({
-          fetchUserSession: DD.fetchUserSession,
-          storeUserSession: DD.storeUserSession
+        })), this.context.metas.addListener(Ji({
+          fetchUserSession: pp.fetchUserSession,
+          storeUserSession: pp.storeUserSession
         }, this.context))
       }
     };
-    Nz.storageTypeSession = YD;
-    const Zz = new WeakMap;
+    bi.storageTypeSession = Kp;
+    const ai = new WeakMap;
 
-    function yz(DD) {
-      let zD = Zz.get(DD);
-      if (!zD) {
-        let wD = [],
-          pD = [];
-        zD = {
-          addSessionUpdateListener: DD => {
-            wD.push(DD)
+    function ni(pp) {
+      let ip = ai.get(pp);
+      if (!ip) {
+        let cp = [],
+          Op = [];
+        ip = {
+          addSessionUpdateListener: pp => {
+            cp.push(pp)
           },
-          removeSessionUpdateListener: DD => {
-            wD = wD.filter((zD => zD !== DD))
+          removeSessionUpdateListener: pp => {
+            cp = cp.filter((ip => ip !== pp))
           },
-          notifySessionUpdate: DD => {
-            wD.forEach((zD => zD(DD)))
+          notifySessionUpdate: pp => {
+            cp.forEach((ip => ip(pp)))
           },
-          shouldCapture: () => pD.every((DD => DD())),
-          addCaptureFilter: DD => {
-            pD.push(DD)
+          shouldCapture: () => Op.every((pp => pp())),
+          addCaptureFilter: pp => {
+            Op.push(pp)
           },
-          removeCaptureFilter: DD => {
-            pD = pD.filter((zD => zD !== DD))
+          removeCaptureFilter: pp => {
+            Op = Op.filter((ip => ip !== pp))
           }
-        }, Zz.set(DD, zD)
+        }, ai.set(pp, ip)
       }
-      return zD
+      return ip
     }
-    var kz = class {
-      constructor(DD, zD, wD) {
-        this.metas = DD, this.transports = zD, this.onActivate = wD, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = DD => {
-          var zD, wD, pD;
-          const sD = this.pending;
-          var KD, rD;
-          if ("overrides" === DD.type) return void(this.pending = {
-            reset: null !== (KD = null === sD || void 0 === sD ? void 0 : sD.reset) && void 0 !== KD && KD,
-            inheritOverrides: null === (rD = null === sD || void 0 === sD ? void 0 : sD.inheritOverrides) || void 0 === rD || rD,
-            session: Rz(Rz({}, null === sD || void 0 === sD ? void 0 : sD.session), {}, {
-              overrides: Rz(Rz({}, null === sD || void 0 === sD ? void 0 : sD.session.overrides), DD.overrides)
+    var Fi = class {
+      constructor(pp, ip, cp) {
+        this.metas = pp, this.transports = ip, this.onActivate = cp, this.waiting = !1, this.shouldCapture = () => !document.prerendering, this.discard = () => null, this.recordUpdate = pp => {
+          var ip, cp, Op;
+          const op = this.pending;
+          var Ip, Sp;
+          if ("overrides" === pp.type) return void(this.pending = {
+            reset: null !== (Ip = null === op || void 0 === op ? void 0 : op.reset) && void 0 !== Ip && Ip,
+            inheritOverrides: null === (Sp = null === op || void 0 === op ? void 0 : op.inheritOverrides) || void 0 === Sp || Sp,
+            session: Pi(Pi({}, null === op || void 0 === op ? void 0 : op.session), {}, {
+              overrides: Pi(Pi({}, null === op || void 0 === op ? void 0 : op.session.overrides), pp.overrides)
             })
           });
-          const LD = DD.session,
-            cD = uD(LD) || null != LD && "id" in LD && !LD.id,
-            gD = null !== (zD = null === LD || void 0 === LD ? void 0 : LD.overrides) && void 0 !== zD ? zD : null === sD || void 0 === sD ? void 0 : sD.session.overrides;
+          const xp = pp.session,
+            Lp = rp(xp) || null != xp && "id" in xp && !xp.id,
+            Yp = null !== (ip = null === xp || void 0 === xp ? void 0 : xp.overrides) && void 0 !== ip ? ip : null === op || void 0 === op ? void 0 : op.session.overrides;
           this.pending = {
-            reset: cD || !(null === LD || void 0 === LD ? void 0 : LD.id) && null !== (wD = null === sD || void 0 === sD ? void 0 : sD.reset) && void 0 !== wD && wD,
-            inheritOverrides: !(!DD.overrides && void 0 !== (null === LD || void 0 === LD ? void 0 : LD.overrides)) && (null === (pD = null === sD || void 0 === sD ? void 0 : sD.inheritOverrides) || void 0 === pD || pD),
+            reset: Lp || !(null === xp || void 0 === xp ? void 0 : xp.id) && null !== (cp = null === op || void 0 === op ? void 0 : op.reset) && void 0 !== cp && cp,
+            inheritOverrides: !(!pp.overrides && void 0 !== (null === xp || void 0 === xp ? void 0 : xp.overrides)) && (null === (Op = null === op || void 0 === op ? void 0 : op.inheritOverrides) || void 0 === Op || Op),
             session: {
-              id: null === LD || void 0 === LD ? void 0 : LD.id,
-              attributes: (null === LD || void 0 === LD ? void 0 : LD.attributes) && Rz({}, LD.attributes),
-              overrides: DD.overrides ? Rz(Rz({}, null === sD || void 0 === sD ? void 0 : sD.session.overrides), DD.overrides) : gD && Rz({}, gD)
+              id: null === xp || void 0 === xp ? void 0 : xp.id,
+              attributes: (null === xp || void 0 === xp ? void 0 : xp.attributes) && Pi({}, xp.attributes),
+              overrides: pp.overrides ? Pi(Pi({}, null === op || void 0 === op ? void 0 : op.session.overrides), pp.overrides) : Yp && Pi({}, Yp)
             }
           }
         }, this.activate = () => {
@@ -753,553 +753,553 @@ export const modules = {
         }
       }
       initialize() {
-        var DD, zD;
-        this.waiting = !0, yz(this.metas).addSessionUpdateListener(this.recordUpdate), yz(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (DD = (zD = this.metas).addCaptureListener) || void 0 === DD || DD.call(zD, this.activate), this.activate()
+        var pp, ip;
+        this.waiting = !0, ni(this.metas).addSessionUpdateListener(this.recordUpdate), ni(this.metas).addCaptureFilter(this.shouldCapture), this.transports.addBeforeSendHooks(this.discard), document.addEventListener("prerenderingchange", this.activate), null === (pp = (ip = this.metas).addCaptureListener) || void 0 === pp || pp.call(ip, this.activate), this.activate()
       }
       destroy() {
-        var DD, zD;
-        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), yz(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (DD = (zD = this.metas).removeCaptureListener) || void 0 === DD || DD.call(zD, this.activate), yz(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
+        var pp, ip;
+        this.waiting = !1, document.removeEventListener("prerenderingchange", this.activate), ni(this.metas).removeSessionUpdateListener(this.recordUpdate), null === (pp = (ip = this.metas).removeCaptureListener) || void 0 === pp || pp.call(ip, this.activate), ni(this.metas).removeCaptureFilter(this.shouldCapture), this.transports.removeBeforeSendHooks(this.discard)
       }
     };
 
-    function mz(DD) {
-      return (null === DD || void 0 === DD ? void 0 : DD.persistent) ? Wz : Nz
+    function gi(pp) {
+      return (null === pp || void 0 === pp ? void 0 : pp.persistent) ? fi : bi
     }
 
-    function ez() {}
-    let oz = function(DD) {
-      return DD[DD.OFF = 0] = "OFF", DD[DD.ERROR = 1] = "ERROR", DD[DD.WARN = 2] = "WARN", DD[DD.INFO = 3] = "INFO", DD[DD.VERBOSE = 4] = "VERBOSE", DD
+    function Gi() {}
+    let ri = function(pp) {
+      return pp[pp.OFF = 0] = "OFF", pp[pp.ERROR = 1] = "ERROR", pp[pp.WARN = 2] = "WARN", pp[pp.INFO = 3] = "INFO", pp[pp.VERBOSE = 4] = "VERBOSE", pp
     }({});
-    const az = {
-        debug: ez,
-        error: ez,
-        info: ez,
+    const Zi = {
+        debug: Gi,
+        error: Gi,
+        info: Gi,
         prefix: "Faro",
-        warn: ez
+        warn: Gi
       },
-      uz = 1;
+      zi = 1;
 
-    function vz(DD) {
-      return vz = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(DD) {
-        return typeof DD
-      } : function(DD) {
-        return DD && "function" == typeof Symbol && DD.constructor === Symbol && DD !== Symbol.prototype ? "symbol" : typeof DD
-      }, vz(DD)
+    function si(pp) {
+      return si = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function(pp) {
+        return typeof pp
+      } : function(pp) {
+        return pp && "function" == typeof Symbol && pp.constructor === Symbol && pp !== Symbol.prototype ? "symbol" : typeof pp
+      }, si(pp)
     }
 
-    function tz(DD) {
-      var zD = function(DD, zD) {
-        if ("object" != vz(DD) || !DD) return DD;
-        var wD = DD[Symbol.toPrimitive];
-        if (void 0 !== wD) {
-          var pD = wD.call(DD, zD || "default");
-          if ("object" != vz(pD)) return pD;
+    function Ki(pp) {
+      var ip = function(pp, ip) {
+        if ("object" != si(pp) || !pp) return pp;
+        var cp = pp[Symbol.toPrimitive];
+        if (void 0 !== cp) {
+          var Op = cp.call(pp, ip || "default");
+          if ("object" != si(Op)) return Op;
           throw new TypeError("@@toPrimitive must return a primitive value.")
         }
-        return ("string" === zD ? String : Number)(DD)
-      }(DD, "string");
-      return "symbol" == vz(zD) ? zD : zD + ""
+        return ("string" === ip ? String : Number)(pp)
+      }(pp, "string");
+      return "symbol" == si(ip) ? ip : ip + ""
     }
 
-    function Fz(DD, zD, wD) {
-      return (zD = tz(zD)) in DD ? Object.defineProperty(DD, zD, {
-        value: wD,
+    function Vi(pp, ip, cp) {
+      return (ip = Ki(ip)) in pp ? Object.defineProperty(pp, ip, {
+        value: cp,
         enumerable: !0,
         configurable: !0,
         writable: !0
-      }) : DD[zD] = wD, DD
+      }) : pp[ip] = cp, pp
     }
 
-    function Yz(DD, zD) {
-      var wD = Object.keys(DD);
+    function pc(pp, ip) {
+      var cp = Object.keys(pp);
       if (Object.getOwnPropertySymbols) {
-        var pD = Object.getOwnPropertySymbols(DD);
-        zD && (pD = pD.filter((function(zD) {
-          return Object.getOwnPropertyDescriptor(DD, zD).enumerable
-        }))), wD.push.apply(wD, pD)
+        var Op = Object.getOwnPropertySymbols(pp);
+        ip && (Op = Op.filter((function(ip) {
+          return Object.getOwnPropertyDescriptor(pp, ip).enumerable
+        }))), cp.push.apply(cp, Op)
       }
-      return wD
+      return cp
     }
 
-    function Hz(DD) {
-      for (var zD = 1; zD < arguments.length; zD++) {
-        var wD = null != arguments[zD] ? arguments[zD] : {};
-        zD % 2 ? Yz(Object(wD), !0).forEach((function(zD) {
-          Fz(DD, zD, wD[zD])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(DD, Object.getOwnPropertyDescriptors(wD)) : Yz(Object(wD)).forEach((function(zD) {
-          Object.defineProperty(DD, zD, Object.getOwnPropertyDescriptor(wD, zD))
+    function ic(pp) {
+      for (var ip = 1; ip < arguments.length; ip++) {
+        var cp = null != arguments[ip] ? arguments[ip] : {};
+        ip % 2 ? pc(Object(cp), !0).forEach((function(ip) {
+          Vi(pp, ip, cp[ip])
+        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(pp, Object.getOwnPropertyDescriptors(cp)) : pc(Object(cp)).forEach((function(ip) {
+          Object.defineProperty(pp, ip, Object.getOwnPropertyDescriptor(cp, ip))
         }))
       }
-      return DD
+      return pp
     }
-    const qz = Hz({}, console);
-    var Dw = class {
+    const cc = ic({}, console);
+    var Oc = class {
         constructor() {
-          this.unpatchedConsole = qz, this.internalLogger = az, this.config = {}, this.metas = {}
+          this.unpatchedConsole = cc, this.internalLogger = Zi, this.config = {}, this.metas = {}
         }
         logDebug() {
-          for (var DD = arguments.length, zD = new Array(DD), wD = 0; wD < DD; wD++) zD[wD] = arguments[wD];
-          this.internalLogger.debug(`${this.name}\n`, ...zD)
+          for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
+          this.internalLogger.debug(`${this.name}\n`, ...ip)
         }
         logInfo() {
-          for (var DD = arguments.length, zD = new Array(DD), wD = 0; wD < DD; wD++) zD[wD] = arguments[wD];
-          this.internalLogger.info(`${this.name}\n`, ...zD)
+          for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
+          this.internalLogger.info(`${this.name}\n`, ...ip)
         }
         logWarn() {
-          for (var DD = arguments.length, zD = new Array(DD), wD = 0; wD < DD; wD++) zD[wD] = arguments[wD];
-          this.internalLogger.warn(`${this.name}\n`, ...zD)
+          for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
+          this.internalLogger.warn(`${this.name}\n`, ...ip)
         }
         logError() {
-          for (var DD = arguments.length, zD = new Array(DD), wD = 0; wD < DD; wD++) zD[wD] = arguments[wD];
-          this.internalLogger.error(`${this.name}\n`, ...zD)
+          for (var pp = arguments.length, ip = new Array(pp), cp = 0; cp < pp; cp++) ip[cp] = arguments[cp];
+          this.internalLogger.error(`${this.name}\n`, ...ip)
         }
       },
-      zw = class extends Dw {
+      oc = class extends Oc {
         constructor() {
           super(...arguments), this.api = {}, this.transports = {}
         }
       };
-    const ww = "2.12.1";
-    var pw = class extends zw {
+    const Ic = "2.12.1";
+    var Sc = class extends oc {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = ww, this.isAdoptingSession = () => !1
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-session", this.version = Ic, this.isAdoptingSession = () => !1
       }
-      sendSessionStartEvent(DD) {
-        var zD;
-        const wD = DD.session;
-        if (wD && wD.id !== (null === (zD = this.notifiedSession) || void 0 === zD ? void 0 : zD.id)) {
-          var pD;
-          if (this.isAdoptingSession()) return void(this.notifiedSession = wD);
-          if (this.notifiedSession && this.notifiedSession.id === (null === (pD = wD.attributes) || void 0 === pD ? void 0 : pD.previousSession)) return this.api.pushEvent(Xz, {}, void 0, {
+      sendSessionStartEvent(pp) {
+        var ip;
+        const cp = pp.session;
+        if (cp && cp.id !== (null === (ip = this.notifiedSession) || void 0 === ip ? void 0 : ip.id)) {
+          var Op;
+          if (this.isAdoptingSession()) return void(this.notifiedSession = cp);
+          if (this.notifiedSession && this.notifiedSession.id === (null === (Op = cp.attributes) || void 0 === Op ? void 0 : Op.previousSession)) return this.api.pushEvent(Ri, {}, void 0, {
             skipDedupe: !0
-          }), void(this.notifiedSession = wD);
-          this.notifiedSession = wD, this.api.pushEvent(Ez, {}, void 0, {
+          }), void(this.notifiedSession = cp);
+          this.notifiedSession = cp, this.api.pushEvent(ki, {}, void 0, {
             skipDedupe: !0
           })
         }
       }
-      createInitialSession(DD, zD, wD) {
-        const pD = null === wD || void 0 === wD ? void 0 : wD.session;
-        let sD, KD, rD = DD.fetchUserSession();
-        if (zD.persistent && zD.maxSessionPersistenceTime && rD) {
-          const DD = Uz();
-          rD.lastActivity < DD - zD.maxSessionPersistenceTime && (Wz.removeUserSession(), rD = null)
+      createInitialSession(pp, ip, cp) {
+        const Op = null === cp || void 0 === cp ? void 0 : cp.session;
+        let op, Ip, Sp = pp.fetchUserSession();
+        if (ip.persistent && ip.maxSessionPersistenceTime && Sp) {
+          const pp = yi();
+          Sp.lastActivity < pp - ip.maxSessionPersistenceTime && (fi.removeUserSession(), Sp = null)
         }
-        const LD = xz(rD);
-        if ((null === wD || void 0 === wD ? void 0 : wD.reset) || !LD || (null === pD || void 0 === pD ? void 0 : pD.id) && pD.id !== (null === rD || void 0 === rD ? void 0 : rD.sessionId)) {
-          var cD, gD, RD, AD, UD, fD;
-          KD = Cz({
-            sessionId: (null === wD || void 0 === wD ? void 0 : wD.reset) ? void 0 : null !== (cD = null === pD || void 0 === pD ? void 0 : pD.id) && void 0 !== cD ? cD : null === (gD = zD.session) || void 0 === gD ? void 0 : gD.id,
-            isSampled: Az(this)
+        const xp = Ei(Sp);
+        if ((null === cp || void 0 === cp ? void 0 : cp.reset) || !xp || (null === Op || void 0 === Op ? void 0 : Op.id) && Op.id !== (null === Sp || void 0 === Sp ? void 0 : Sp.sessionId)) {
+          var Lp, Yp, Dp, Ap, Pp, Wp;
+          Ip = Ci({
+            sessionId: (null === cp || void 0 === cp ? void 0 : cp.reset) ? void 0 : null !== (Lp = null === Op || void 0 === Op ? void 0 : Op.id) && void 0 !== Lp ? Lp : null === (Yp = ip.session) || void 0 === Yp ? void 0 : Yp.id,
+            isSampled: Wi(this)
           }, this);
-          const DD = KD.sessionId,
-            ID = wD && LD ? null === rD || void 0 === rD || null === (RD = rD.sessionMeta) || void 0 === RD ? void 0 : RD.overrides : void 0,
-            BD = ID ? Rz(Rz({}, null === (AD = zD.session) || void 0 === AD ? void 0 : AD.overrides), ID) : null === (UD = zD.session) || void 0 === UD ? void 0 : UD.overrides;
-          KD.sessionMeta = Rz({
-            id: DD,
-            attributes: Rz({
-              isSampled: KD.isSampled.toString()
-            }, null === (fD = zD.session) || void 0 === fD ? void 0 : fD.attributes)
-          }, BD ? {
-            overrides: BD
-          } : {}), sD = Ez
+          const pp = Ip.sessionId,
+            yp = cp && xp ? null === Sp || void 0 === Sp || null === (Dp = Sp.sessionMeta) || void 0 === Dp ? void 0 : Dp.overrides : void 0,
+            Up = yp ? Pi(Pi({}, null === (Ap = ip.session) || void 0 === Ap ? void 0 : Ap.overrides), yp) : null === (Pp = ip.session) || void 0 === Pp ? void 0 : Pp.overrides;
+          Ip.sessionMeta = Pi({
+            id: pp,
+            attributes: Pi({
+              isSampled: Ip.isSampled.toString()
+            }, null === (Wp = ip.session) || void 0 === Wp ? void 0 : Wp.attributes)
+          }, Up ? {
+            overrides: Up
+          } : {}), op = ki
         } else {
-          var ID, BD;
-          const DD = null === rD || void 0 === rD ? void 0 : rD.sessionId;
-          KD = Cz({
-            sessionId: DD,
-            isSampled: rD.isSampled || !1,
-            started: null === rD || void 0 === rD ? void 0 : rD.started
+          var yp, Up;
+          const pp = null === Sp || void 0 === Sp ? void 0 : Sp.sessionId;
+          Ip = Ci({
+            sessionId: pp,
+            isSampled: Sp.isSampled || !1,
+            started: null === Sp || void 0 === Sp ? void 0 : Sp.started
           }, this);
-          const wD = null === rD || void 0 === rD ? void 0 : rD.sessionMeta,
-            pD = Rz(Rz({}, null === (ID = zD.session) || void 0 === ID ? void 0 : ID.overrides), null === wD || void 0 === wD ? void 0 : wD.overrides);
-          KD.sessionMeta = Rz(Rz({}, zD.session), {}, {
-            id: DD,
-            attributes: Rz(Rz(Rz({}, null === (BD = zD.session) || void 0 === BD ? void 0 : BD.attributes), null === wD || void 0 === wD ? void 0 : wD.attributes), {}, {
-              isSampled: KD.isSampled.toString()
+          const cp = null === Sp || void 0 === Sp ? void 0 : Sp.sessionMeta,
+            Op = Pi(Pi({}, null === (yp = ip.session) || void 0 === yp ? void 0 : yp.overrides), null === cp || void 0 === cp ? void 0 : cp.overrides);
+          Ip.sessionMeta = Pi(Pi({}, ip.session), {}, {
+            id: pp,
+            attributes: Pi(Pi(Pi({}, null === (Up = ip.session) || void 0 === Up ? void 0 : Up.attributes), null === cp || void 0 === cp ? void 0 : cp.attributes), {}, {
+              isSampled: Ip.isSampled.toString()
             }),
-            overrides: pD
-          }), sD = Qz
+            overrides: Op
+          }), op = mi
         }
-        var GD;
-        if (pD && (KD.sessionMeta = Rz(Rz({}, KD.sessionMeta), {}, {
-            attributes: Rz(Rz(Rz({}, null === (GD = KD.sessionMeta) || void 0 === GD ? void 0 : GD.attributes), pD.attributes), {}, {
-              isSampled: KD.isSampled.toString()
+        var wp;
+        if (Op && (Ip.sessionMeta = Pi(Pi({}, Ip.sessionMeta), {}, {
+            attributes: Pi(Pi(Pi({}, null === (wp = Ip.sessionMeta) || void 0 === wp ? void 0 : wp.attributes), Op.attributes), {}, {
+              isSampled: Ip.isSampled.toString()
             })
-          }), pD.overrides)) {
-          const DD = (null === wD || void 0 === wD ? void 0 : wD.inheritOverrides) ? Rz(Rz({}, KD.sessionMeta.overrides), pD.overrides) : pD.overrides;
-          Object.keys(DD).length > 0 ? KD.sessionMeta.overrides = DD : delete KD.sessionMeta.overrides
+          }), Op.overrides)) {
+          const pp = (null === cp || void 0 === cp ? void 0 : cp.inheritOverrides) ? Pi(Pi({}, Ip.sessionMeta.overrides), Op.overrides) : Op.overrides;
+          Object.keys(pp).length > 0 ? Ip.sessionMeta.overrides = pp : delete Ip.sessionMeta.overrides
         }
         return {
-          initialSession: KD,
-          lifecycleType: sD
+          initialSession: Ip,
+          lifecycleType: op
         }
       }
-      registerBeforeSendHook(DD) {
-        var zD;
-        this.beforeSendHook = zD => {
-          var wD, pD;
-          const sD = null === (wD = zD.meta.session) || void 0 === wD ? void 0 : wD.id;
-          sD && !this.transports.isPaused() && DD(sD);
-          const KD = null === (pD = zD.meta.session) || void 0 === pD ? void 0 : pD.attributes;
-          if (KD && "true" === (null === KD || void 0 === KD ? void 0 : KD.isSampled)) {
-            var rD;
-            let DD = JSON.parse(JSON.stringify(zD));
-            const wD = null === (rD = DD.meta.session) || void 0 === rD ? void 0 : rD.attributes;
-            var LD;
-            if (null === wD || void 0 === wD || delete wD.isSampled, 0 === Object.keys(null !== wD && void 0 !== wD ? wD : {}).length) null === (LD = DD.meta.session) || void 0 === LD || delete LD.attributes;
-            return DD
+      registerBeforeSendHook(pp) {
+        var ip;
+        this.beforeSendHook = ip => {
+          var cp, Op;
+          const op = null === (cp = ip.meta.session) || void 0 === cp ? void 0 : cp.id;
+          op && !this.transports.isPaused() && pp(op);
+          const Ip = null === (Op = ip.meta.session) || void 0 === Op ? void 0 : Op.attributes;
+          if (Ip && "true" === (null === Ip || void 0 === Ip ? void 0 : Ip.isSampled)) {
+            var Sp;
+            let pp = JSON.parse(JSON.stringify(ip));
+            const cp = null === (Sp = pp.meta.session) || void 0 === Sp ? void 0 : Sp.attributes;
+            var xp;
+            if (null === cp || void 0 === cp || delete cp.isSampled, 0 === Object.keys(null !== cp && void 0 !== cp ? cp : {}).length) null === (xp = pp.meta.session) || void 0 === xp || delete xp.attributes;
+            return pp
           }
           return null
-        }, null === (zD = this.transports) || void 0 === zD || zD.addBeforeSendHooks(this.beforeSendHook)
+        }, null === (ip = this.transports) || void 0 === ip || ip.addBeforeSendHooks(this.beforeSendHook)
       }
       initialize() {
-        var DD;
+        var pp;
         this.logDebug("init session instrumentation");
-        const zD = document.prerendering;
-        var wD;
-        if ((null === (DD = this.config.sessionTracking) || void 0 === DD ? void 0 : DD.enabled) && (zD || this.prerenderSession)) return null !== (wD = this.prerenderSession) && void 0 !== wD || (this.prerenderSession = new kz(this.metas, this.transports, (DD => {
-          this.prerenderSession = void 0, this.initializeSession(DD)
+        const ip = document.prerendering;
+        var cp;
+        if ((null === (pp = this.config.sessionTracking) || void 0 === pp ? void 0 : pp.enabled) && (ip || this.prerenderSession)) return null !== (cp = this.prerenderSession) && void 0 !== cp || (this.prerenderSession = new Fi(this.metas, this.transports, (pp => {
+          this.prerenderSession = void 0, this.initializeSession(pp)
         }))), void this.prerenderSession.initialize();
         this.initializeSession()
       }
-      initializeSession(DD) {
-        const zD = this.config.sessionTracking;
-        if (null === zD || void 0 === zD ? void 0 : zD.enabled) {
-          var wD, pD;
-          const sD = mz(zD),
-            KD = new sD(this);
-          this.isAdoptingSession = KD.isAdopting, this.registerBeforeSendHook(KD.recordActivity);
+      initializeSession(pp) {
+        const ip = this.config.sessionTracking;
+        if (null === ip || void 0 === ip ? void 0 : ip.enabled) {
+          var cp, Op;
+          const op = gi(ip),
+            Ip = new op(this);
+          this.isAdoptingSession = Ip.isAdopting, this.registerBeforeSendHook(Ip.recordActivity);
           const {
-            initialSession: rD,
-            lifecycleType: LD
-          } = this.createInitialSession(sD, zD, DD);
-          sD.storeUserSession(rD);
-          const cD = rD.sessionMeta;
-          this.notifiedSession = cD, this.api.setSession(cD), this.captureListener = () => {
-            this.transports.isPaused() || KD.updateSession({
+            initialSession: Sp,
+            lifecycleType: xp
+          } = this.createInitialSession(op, ip, pp);
+          op.storeUserSession(Sp);
+          const Lp = Sp.sessionMeta;
+          this.notifiedSession = Lp, this.api.setSession(Lp), this.captureListener = () => {
+            this.transports.isPaused() || Ip.updateSession({
               refreshActivity: !1
             })
-          }, null === (wD = (pD = this.metas).addCaptureListener) || void 0 === wD || wD.call(pD, this.captureListener), LD === Ez && this.api.pushEvent(Ez, {}, void 0, {
+          }, null === (cp = (Op = this.metas).addCaptureListener) || void 0 === cp || cp.call(Op, this.captureListener), xp === ki && this.api.pushEvent(ki, {}, void 0, {
             skipDedupe: !0
-          }), LD === Qz && this.api.pushEvent(Qz, {}, void 0, {
+          }), xp === mi && this.api.pushEvent(mi, {}, void 0, {
             skipDedupe: !0
           })
         }
         this.sessionStartListener = this.sendSessionStartEvent.bind(this), this.metas.addListener(this.sessionStartListener)
       }
       destroy() {
-        var DD, zD, wD;
-        (null === (DD = this.prerenderSession) || void 0 === DD || DD.destroy(), this.captureListener) && (null === (zD = (wD = this.metas).removeCaptureListener) || void 0 === zD || zD.call(wD, this.captureListener), this.captureListener = void 0);
+        var pp, ip, cp;
+        (null === (pp = this.prerenderSession) || void 0 === pp || pp.destroy(), this.captureListener) && (null === (ip = (cp = this.metas).removeCaptureListener) || void 0 === ip || ip.call(cp, this.captureListener), this.captureListener = void 0);
         this.beforeSendHook && (this.transports.removeBeforeSendHooks(this.beforeSendHook), this.beforeSendHook = void 0), this.sessionStartListener && (this.metas.removeListener(this.sessionStartListener), this.sessionStartListener = void 0)
       }
     };
 
-    function sw(DD, zD, wD, pD) {
-      const sD = {
-        filename: DD || document.location.href,
-        function: zD || "?"
+    function xc(pp, ip, cp, Op) {
+      const op = {
+        filename: pp || document.location.href,
+        function: ip || "?"
       };
-      return void 0 !== wD && (sD.lineno = wD), void 0 !== pD && (sD.colno = pD), sD
+      return void 0 !== cp && (op.lineno = cp), void 0 !== Op && (op.colno = Op), op
     }
-    const Kw = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
-      rw = /\((\S*)(?::(\d+))(?::(\d+))\)/,
-      Lw = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
-      gw = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
-      Rw = "safari-extension",
-      Aw = "safari-web-extension",
-      Uw = /Minified React error #\d+;/i;
+    const Lc = /^\s*at (?:(?![a-z]+:\/\/)([^(]+?) ?\((?:address at )?)?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/)?.*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i,
+      Yc = /\((\S*)(?::(\d+))(?::(\d+))\)/,
+      Dc = /^(?=[\s\S]*?(?:\/|bundle|\.js|\[native code]))\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|safari-extension|safari-web-extension|capacitor)?:\/.*?|\[native code]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i,
+      Ac = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i,
+      Pc = "safari-extension",
+      Wc = "safari-web-extension",
+      yc = /Minified React error #\d+;/i;
 
-    function fw(DD, zD) {
-      const wD = null === DD || void 0 === DD ? void 0 : DD.includes(Rw),
-        pD = !wD && (null === DD || void 0 === DD ? void 0 : DD.includes("safari-web-extension"));
-      return wD || pD ? [(null === DD || void 0 === DD ? void 0 : DD.includes("@")) ? DD.split("@")[0] : DD, wD ? `${Rw}:${zD}` : `${Aw}:${zD}`] : [DD, zD]
+    function Uc(pp, ip) {
+      const cp = null === pp || void 0 === pp ? void 0 : pp.includes(Pc),
+        Op = !cp && (null === pp || void 0 === pp ? void 0 : pp.includes("safari-web-extension"));
+      return cp || Op ? [(null === pp || void 0 === pp ? void 0 : pp.includes("@")) ? pp.split("@")[0] : pp, cp ? `${Pc}:${ip}` : `${Wc}:${ip}`] : [pp, ip]
     }
-    const Iw = 1024;
+    const wc = 1024;
 
-    function Bw(DD) {
-      let zD = [];
-      DD.stacktrace ? zD = DD.stacktrace.split("\n").filter(((DD, zD) => zD % 2 === 0)) : DD.stack && (zD = DD.stack.split("\n"));
-      const wD = zD.reduce(((zD, wD, pD) => {
-        if (wD.length > Iw) return zD;
-        let sD, KD, rD, LD, cD;
-        if (sD = Kw.exec(wD)) {
-          if (KD = sD[1], rD = sD[2], LD = sD[3], cD = sD[4], null === rD || void 0 === rD ? void 0 : rD.startsWith("eval")) {
-            const DD = rw.exec(rD);
-            DD && (rD = DD[1], LD = DD[2], cD = DD[3])
+    function vc(pp) {
+      let ip = [];
+      pp.stacktrace ? ip = pp.stacktrace.split("\n").filter(((pp, ip) => ip % 2 === 0)) : pp.stack && (ip = pp.stack.split("\n"));
+      const cp = ip.reduce(((ip, cp, Op) => {
+        if (cp.length > wc) return ip;
+        let op, Ip, Sp, xp, Lp;
+        if (op = Lc.exec(cp)) {
+          if (Ip = op[1], Sp = op[2], xp = op[3], Lp = op[4], null === Sp || void 0 === Sp ? void 0 : Sp.startsWith("eval")) {
+            const pp = Yc.exec(Sp);
+            pp && (Sp = pp[1], xp = pp[2], Lp = pp[3])
           }
-          rD = (null === rD || void 0 === rD ? void 0 : rD.startsWith("address at ")) ? rD.substring(11) : rD, [KD, rD] = fw(KD, rD)
-        } else if (sD = Lw.exec(wD)) {
-          if (KD = sD[1], rD = sD[3], LD = sD[4], cD = sD[5], rD && rD.includes(" > eval")) {
-            const DD = gw.exec(rD);
-            DD && (KD = KD || "eval", rD = DD[1], LD = DD[2])
-          } else 0 === pD && !cD && QD(DD.columnNumber) && (cD = String(DD.columnNumber + 1));
-          [KD, rD] = fw(KD, rD)
+          Sp = (null === Sp || void 0 === Sp ? void 0 : Sp.startsWith("address at ")) ? Sp.substring(11) : Sp, [Ip, Sp] = Uc(Ip, Sp)
+        } else if (op = Dc.exec(cp)) {
+          if (Ip = op[1], Sp = op[3], xp = op[4], Lp = op[5], Sp && Sp.includes(" > eval")) {
+            const pp = Ac.exec(Sp);
+            pp && (Ip = Ip || "eval", Sp = pp[1], xp = pp[2])
+          } else 0 === Op && !Lp && kp(pp.columnNumber) && (Lp = String(pp.columnNumber + 1));
+          [Ip, Sp] = Uc(Ip, Sp)
         }
-        return (rD || KD) && zD.push(sw(rD, KD, LD ? Number(LD) : void 0, cD ? Number(cD) : void 0)), zD
+        return (Sp || Ip) && ip.push(xc(Sp, Ip, xp ? Number(xp) : void 0, Lp ? Number(Lp) : void 0)), ip
       }), []);
-      return Uw.test(DD.message) ? wD.slice(1) : wD
+      return yc.test(pp.message) ? cp.slice(1) : cp
     }
 
-    function Gw(DD) {
+    function tc(pp) {
       return {
-        frames: Bw(DD)
+        frames: vc(pp)
       }
     }
-    const hw = "http-request-start",
-      nw = "http-request-end";
-    var Mw = class DD {
+    const Hc = "http-request-start",
+      dc = "http-request-end";
+    var ec = class pp {
       constructor() {
         this.subscribers = []
       }
-      subscribe(DD) {
-        return this.subscribers.push(DD), {
-          unsubscribe: () => this.unsubscribe(DD)
+      subscribe(pp) {
+        return this.subscribers.push(pp), {
+          unsubscribe: () => this.unsubscribe(pp)
         }
       }
-      unsubscribe(DD) {
-        this.subscribers = this.subscribers.filter((zD => zD !== DD))
+      unsubscribe(pp) {
+        this.subscribers = this.subscribers.filter((ip => ip !== pp))
       }
-      notify(DD) {
-        this.subscribers.forEach((zD => zD(DD)))
+      notify(pp) {
+        this.subscribers.forEach((ip => ip(pp)))
       }
       first() {
-        const zD = new DD,
-          wD = DD => {
-            zD.notify(DD), pD.unsubscribe()
+        const ip = new pp,
+          cp = pp => {
+            ip.notify(pp), Op.unsubscribe()
           },
-          pD = this.subscribe(wD),
-          sD = zD.unsubscribe.bind(zD);
-        return this.withUnsubscribeOverride(zD, sD, wD)
+          Op = this.subscribe(cp),
+          op = ip.unsubscribe.bind(ip);
+        return this.withUnsubscribeOverride(ip, op, cp)
       }
-      takeWhile(zD) {
-        const wD = new DD,
-          pD = DD => {
-            zD(DD) ? wD.notify(DD) : wD.unsubscribe(pD)
+      takeWhile(ip) {
+        const cp = new pp,
+          Op = pp => {
+            ip(pp) ? cp.notify(pp) : cp.unsubscribe(Op)
           };
-        this.subscribe(pD);
-        const sD = wD.unsubscribe.bind(wD);
-        return this.withUnsubscribeOverride(wD, sD, pD)
+        this.subscribe(Op);
+        const op = cp.unsubscribe.bind(cp);
+        return this.withUnsubscribeOverride(cp, op, Op)
       }
-      filter(zD) {
-        const wD = new DD,
-          pD = DD => {
-            zD(DD) && wD.notify(DD)
+      filter(ip) {
+        const cp = new pp,
+          Op = pp => {
+            ip(pp) && cp.notify(pp)
           };
-        this.subscribe(pD);
-        const sD = wD.unsubscribe.bind(wD);
-        return this.withUnsubscribeOverride(wD, sD, pD)
+        this.subscribe(Op);
+        const op = cp.unsubscribe.bind(cp);
+        return this.withUnsubscribeOverride(cp, op, Op)
       }
       merge() {
-        const zD = new DD,
-          wD = [];
-        for (var pD = arguments.length, sD = new Array(pD), KD = 0; KD < pD; KD++) sD[KD] = arguments[KD];
-        sD.forEach((DD => {
-          const pD = DD.subscribe((DD => {
-            zD.notify(DD)
+        const ip = new pp,
+          cp = [];
+        for (var Op = arguments.length, op = new Array(Op), Ip = 0; Ip < Op; Ip++) op[Ip] = arguments[Ip];
+        op.forEach((pp => {
+          const Op = pp.subscribe((pp => {
+            ip.notify(pp)
           }));
-          wD.push(pD)
+          cp.push(Op)
         }));
-        const rD = zD.unsubscribeAll.bind(zD);
-        return zD.unsubscribe = () => {
-          wD.forEach((DD => DD.unsubscribe())), rD()
-        }, zD
+        const Sp = ip.unsubscribeAll.bind(ip);
+        return ip.unsubscribe = () => {
+          cp.forEach((pp => pp.unsubscribe())), Sp()
+        }, ip
       }
-      withUnsubscribeOverride(DD, zD, wD) {
-        return DD.unsubscribe = DD => {
-          zD(DD), this.unsubscribe(wD)
-        }, DD
+      withUnsubscribeOverride(pp, ip, cp) {
+        return pp.unsubscribe = pp => {
+          ip(pp), this.unsubscribe(cp)
+        }, pp
       }
       unsubscribeAll() {
         this.subscribers = []
       }
     };
-    let Ow = function(DD) {
-      return DD.TRACE = "trace", DD.DEBUG = "debug", DD.INFO = "info", DD.LOG = "log", DD.WARN = "warn", DD.ERROR = "error", DD
+    let uc = function(pp) {
+      return pp.TRACE = "trace", pp.DEBUG = "debug", pp.INFO = "info", pp.LOG = "log", pp.WARN = "warn", pp.ERROR = "error", pp
     }({});
-    const Jw = "log",
-      Ew = ["trace", "debug", "info", "log", "warn", "error"];
-    let Qw, Xw = !1;
-    const Vw = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
-      Pw = "Error",
-      Cw = DD => DD.map((DD => CD(DD) ? iz(DD) : String(DD))).join(" ");
+    const jc = "log",
+      kc = ["trace", "debug", "info", "log", "warn", "error"];
+    let mc, Rc = !1;
+    const qc = /^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i,
+      Mc = "Error",
+      Cc = pp => pp.map((pp => Mp(pp) ? Ni(pp) : String(pp))).join(" ");
 
-    function xw(DD) {
-      let zD, wD, pD, sD, KD = [];
-      if (ND(DD) && DD.error) zD = DD.error.message, wD = DD.error.name, KD = Bw(DD.error);
-      else if ((pD = ZD(DD)) || yD(DD)) {
+    function Ec(pp) {
+      let ip, cp, Op, op, Ip = [];
+      if (fp(pp) && pp.error) ip = pp.error.message, cp = pp.error.name, Ip = vc(pp.error);
+      else if ((Op = bp(pp)) || hp(pp)) {
         const {
-          name: sD,
-          message: KD
-        } = DD;
-        wD = null !== sD && void 0 !== sD ? sD : pD ? "DOMError" : "DOMException", zD = KD ? `${wD}: ${KD}` : wD
-      } else WD(DD) ? (wD = DD.name, zD = DD.message, KD = Bw(DD)) : (CD(DD) || (sD = iD(DD))) && (wD = sD ? DD.constructor.name : void 0, zD = `Non-Error exception captured with keys: ${Object.keys(DD)}`);
-      return [zD, wD, KD]
+          name: op,
+          message: Ip
+        } = pp;
+        cp = null !== op && void 0 !== op ? op : Op ? "DOMError" : "DOMException", ip = Ip ? `${cp}: ${Ip}` : cp
+      } else Tp(pp) ? (cp = pp.name, ip = pp.message, Ip = vc(pp)) : (Mp(pp) || (op = Bp(pp))) && (cp = op ? pp.constructor.name : void 0, ip = `Non-Error exception captured with keys: ${Object.keys(pp)}`);
+      return [ip, cp, Ip]
     }
 
-    function Tw(DD) {
-      const [zD, wD, pD, sD, KD] = DD;
-      let rD, LD, cD = [];
-      const gD = ED(zD),
-        RD = sw(wD, "?", pD, sD);
-      return KD || !gD ? ([rD, LD, cD] = xw(null !== KD && void 0 !== KD ? KD : zD), 0 === cD.length && (cD = [RD])) : gD && ([rD, LD] = function(DD) {
-        var zD, wD;
-        const pD = DD.match(Vw),
-          sD = null !== (zD = null === pD || void 0 === pD ? void 0 : pD[1]) && void 0 !== zD ? zD : Pw;
-        return [null !== (wD = null === pD || void 0 === pD ? void 0 : pD[2]) && void 0 !== wD ? wD : DD, sD]
-      }(zD), cD = [RD]), {
-        value: rD,
-        type: LD,
-        stackFrames: cD
+    function Xc(pp) {
+      const [ip, cp, Op, op, Ip] = pp;
+      let Sp, xp, Lp = [];
+      const Yp = jp(ip),
+        Dp = xc(cp, "?", Op, op);
+      return Ip || !Yp ? ([Sp, xp, Lp] = Ec(null !== Ip && void 0 !== Ip ? Ip : ip), 0 === Lp.length && (Lp = [Dp])) : Yp && ([Sp, xp] = function(pp) {
+        var ip, cp;
+        const Op = pp.match(qc),
+          op = null !== (ip = null === Op || void 0 === Op ? void 0 : Op[1]) && void 0 !== ip ? ip : Mc;
+        return [null !== (cp = null === Op || void 0 === Op ? void 0 : Op[2]) && void 0 !== cp ? cp : pp, op]
+      }(ip), Lp = [Dp]), {
+        value: Sp,
+        type: xp,
+        stackFrames: Lp
       }
     }
 
-    function bw(DD, zD) {
-      return WD(DD[0]) ? Tw(DD) : {
-        value: zD(DD)
+    function lc(pp, ip) {
+      return Tp(pp[0]) ? Xc(pp) : {
+        value: ip(pp)
       }
     }
-    const jw = DD => DD.map((DD => {
+    const Qc = pp => pp.map((pp => {
       try {
-        return String(DD)
-      } catch (zD) {
+        return String(pp)
+      } catch (ip) {
         return ""
       }
     })).join(" ");
-    var dw = class DD extends zw {
+    var Jc = class pp extends oc {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = ww, this.errorSerializer = jw
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-console", this.version = Ic, this.errorSerializer = Qc
       }
       initialize() {
-        var zD, wD;
-        const pD = this.config.consoleInstrumentation,
-          sD = (null === pD || void 0 === pD ? void 0 : pD.serializeErrors) || !!(null === pD || void 0 === pD ? void 0 : pD.errorSerializer);
-        this.errorSerializer = sD ? null !== (zD = null === pD || void 0 === pD ? void 0 : pD.errorSerializer) && void 0 !== zD ? zD : Cw : jw;
-        const KD = null !== (wD = null === pD || void 0 === pD ? void 0 : pD.disabledLevels) && void 0 !== wD ? wD : DD.defaultDisabledLevels,
-          rD = function(DD) {
-            if (Qw || (Qw = new Mw), !Xw) {
-              const zD = null !== DD && void 0 !== DD ? DD : qz;
-              Ew.forEach((DD => {
-                console[DD] = function() {
-                  for (var wD, pD = arguments.length, sD = new Array(pD), KD = 0; KD < pD; KD++) sD[KD] = arguments[KD];
-                  Qw.notify({
+        var ip, cp;
+        const Op = this.config.consoleInstrumentation,
+          op = (null === Op || void 0 === Op ? void 0 : Op.serializeErrors) || !!(null === Op || void 0 === Op ? void 0 : Op.errorSerializer);
+        this.errorSerializer = op ? null !== (ip = null === Op || void 0 === Op ? void 0 : Op.errorSerializer) && void 0 !== ip ? ip : Cc : Qc;
+        const Ip = null !== (cp = null === Op || void 0 === Op ? void 0 : Op.disabledLevels) && void 0 !== cp ? cp : pp.defaultDisabledLevels,
+          Sp = function(pp) {
+            if (mc || (mc = new ec), !Rc) {
+              const ip = null !== pp && void 0 !== pp ? pp : cc;
+              kc.forEach((pp => {
+                console[pp] = function() {
+                  for (var cp, Op = arguments.length, op = new Array(Op), Ip = 0; Ip < Op; Ip++) op[Ip] = arguments[Ip];
+                  mc.notify({
                     type: "console",
-                    level: DD,
-                    args: sD
-                  }), null === (wD = zD[DD]) || void 0 === wD || wD.apply(console, sD)
+                    level: pp,
+                    args: op
+                  }), null === (cp = ip[pp]) || void 0 === cp || cp.apply(console, op)
                 }
-              })), Xw = !0
+              })), Rc = !0
             }
-            return Qw
+            return mc
           }(this.unpatchedConsole);
-        this.subscription = rD.subscribe((zD => {
+        this.subscription = Sp.subscribe((ip => {
           let {
-            level: wD,
-            args: sD
-          } = zD;
-          if (!KD.includes(wD)) try {
-            if (wD !== Ow.ERROR || (null === pD || void 0 === pD ? void 0 : pD.consoleErrorAsLog))
-              if (wD === Ow.ERROR && (null === pD || void 0 === pD ? void 0 : pD.consoleErrorAsLog)) {
+            level: cp,
+            args: op
+          } = ip;
+          if (!Ip.includes(cp)) try {
+            if (cp !== uc.ERROR || (null === Op || void 0 === Op ? void 0 : Op.consoleErrorAsLog))
+              if (cp === uc.ERROR && (null === Op || void 0 === Op ? void 0 : Op.consoleErrorAsLog)) {
                 const {
-                  value: zD,
-                  type: pD,
-                  stackFrames: KD
-                } = bw(sD, this.errorSerializer);
-                this.api.pushLog(zD ? [DD.consoleErrorPrefix + zD] : sD, {
-                  level: wD,
+                  value: ip,
+                  type: Op,
+                  stackFrames: Ip
+                } = lc(op, this.errorSerializer);
+                this.api.pushLog(ip ? [pp.consoleErrorPrefix + ip] : op, {
+                  level: cp,
                   context: {
-                    value: null !== zD && void 0 !== zD ? zD : "",
-                    type: null !== pD && void 0 !== pD ? pD : "",
-                    stackFrames: (null === KD || void 0 === KD ? void 0 : KD.length) ? Cw(KD) : ""
+                    value: null !== ip && void 0 !== ip ? ip : "",
+                    type: null !== Op && void 0 !== Op ? Op : "",
+                    stackFrames: (null === Ip || void 0 === Ip ? void 0 : Ip.length) ? Cc(Ip) : ""
                   }
                 })
-              } else this.api.pushLog(sD, {
-                level: wD
+              } else this.api.pushLog(op, {
+                level: cp
               });
             else {
               const {
-                value: zD,
-                type: wD,
-                stackFrames: pD
-              } = bw(sD, this.errorSerializer);
-              if (zD && !wD && !pD) return void this.api.pushError(new Error(DD.consoleErrorPrefix + zD));
-              this.api.pushError(new Error(DD.consoleErrorPrefix + zD), {
-                type: wD,
-                stackFrames: pD
+                value: ip,
+                type: cp,
+                stackFrames: Op
+              } = lc(op, this.errorSerializer);
+              if (ip && !cp && !Op) return void this.api.pushError(new Error(pp.consoleErrorPrefix + ip));
+              this.api.pushError(new Error(pp.consoleErrorPrefix + ip), {
+                type: cp,
+                stackFrames: Op
               })
             }
-          } catch (rD) {
-            this.logError(rD)
+          } catch (Sp) {
+            this.logError(Sp)
           }
         }))
       }
       destroy() {
-        var DD;
-        null === (DD = this.subscription) || void 0 === DD || DD.unsubscribe(), this.subscription = void 0
+        var pp;
+        null === (pp = this.subscription) || void 0 === pp || pp.unsubscribe(), this.subscription = void 0
       }
     };
-    dw.defaultDisabledLevels = [Ow.DEBUG, Ow.TRACE, Ow.LOG], dw.consoleErrorPrefix = "console.error: ";
-    const Sw = [];
-    var iw = class extends zw {
+    Jc.defaultDisabledLevels = [uc.DEBUG, uc.TRACE, uc.LOG], Jc.consoleErrorPrefix = "console.error: ";
+    const Bc = [];
+    var Nc = class extends oc {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = ww
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-errors", this.version = Ic
       }
       initialize() {
         this.logDebug("Initializing"),
-          function(DD) {
-            const zD = window.onerror;
+          function(pp) {
+            const ip = window.onerror;
             window.onerror = function() {
-              for (var wD = arguments.length, pD = new Array(wD), sD = 0; sD < wD; sD++) pD[sD] = arguments[sD];
+              for (var cp = arguments.length, Op = new Array(cp), op = 0; op < cp; op++) Op[op] = arguments[op];
               try {
                 const {
-                  value: zD,
-                  type: wD,
-                  stackFrames: sD
-                } = Tw(pD), KD = pD[4];
-                if (zD) {
-                  const pD = {
-                    type: wD,
-                    stackFrames: sD
+                  value: ip,
+                  type: cp,
+                  stackFrames: op
+                } = Xc(Op), Ip = Op[4];
+                if (ip) {
+                  const Op = {
+                    type: cp,
+                    stackFrames: op
                   };
-                  null != KD && (pD.originalError = KD), DD.pushError(new Error(zD), pD)
+                  null != Ip && (Op.originalError = Ip), pp.pushError(new Error(ip), Op)
                 }
               } finally {
-                null === zD || void 0 === zD || zD.apply(window, pD)
+                null === ip || void 0 === ip || ip.apply(window, Op)
               }
             }
           }(this.api),
-          function(DD) {
-            const zD = zD => {
-              var wD;
-              let pD, sD, KD = zD;
-              if (KD.reason) KD = zD.reason;
-              else if (null === (wD = zD.detail) || void 0 === wD ? void 0 : wD.reason) {
-                var rD;
-                KD = null === (rD = zD.detail) || void 0 === rD ? void 0 : rD.reason
+          function(pp) {
+            const ip = ip => {
+              var cp;
+              let Op, op, Ip = ip;
+              if (Ip.reason) Ip = ip.reason;
+              else if (null === (cp = ip.detail) || void 0 === cp ? void 0 : cp.reason) {
+                var Sp;
+                Ip = null === (Sp = ip.detail) || void 0 === Sp ? void 0 : Sp.reason
               }
-              let LD = [];
-              dD(KD) ? (pD = `Non-Error promise rejection captured with value: ${String(KD)}`, sD = "UnhandledRejection") : [pD, sD, LD] = xw(KD), pD && DD.pushError(new Error(pD), {
-                type: sD,
-                stackFrames: LD
+              let xp = [];
+              Qp(Ip) ? (Op = `Non-Error promise rejection captured with value: ${String(Ip)}`, op = "UnhandledRejection") : [Op, op, xp] = Ec(Ip), Op && pp.pushError(new Error(Op), {
+                type: op,
+                stackFrames: xp
               })
             };
-            window.addEventListener("unhandledrejection", zD), Sw.push(zD)
+            window.addEventListener("unhandledrejection", ip), Bc.push(ip)
           }(this.api)
       }
     };
-    const lw = "unknown";
-    var Ww = class extends zw {
+    const Tc = "unknown";
+    var fc = class extends oc {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = ww, this.waitingForActivation = !1, this.sendViewChangedEvent = DD => {
-          var zD;
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-view", this.version = Ic, this.waitingForActivation = !1, this.sendViewChangedEvent = pp => {
+          var ip;
           if (this.waitingForActivation || document.prerendering) return;
-          const wD = DD.view;
-          if (wD && wD.name !== (null === (zD = this.notifiedView) || void 0 === zD ? void 0 : zD.name)) {
-            var pD, sD, KD;
-            const DD = null !== (pD = null === (sD = this.notifiedView) || void 0 === sD ? void 0 : sD.name) && void 0 !== pD ? pD : lw;
-            this.notifiedView = wD, this.api.pushEvent(Jz, {
-              fromView: DD,
-              toView: null !== (KD = wD.name) && void 0 !== KD ? KD : lw
+          const cp = pp.view;
+          if (cp && cp.name !== (null === (ip = this.notifiedView) || void 0 === ip ? void 0 : ip.name)) {
+            var Op, op, Ip;
+            const pp = null !== (Op = null === (op = this.notifiedView) || void 0 === op ? void 0 : op.name) && void 0 !== Op ? Op : Tc;
+            this.notifiedView = cp, this.api.pushEvent(ji, {
+              fromView: pp,
+              toView: null !== (Ip = cp.name) && void 0 !== Ip ? Ip : Tc
             }, void 0, {
               skipDedupe: !0
             })
@@ -1319,1292 +1319,1292 @@ export const modules = {
         this.waitingForActivation = !1, this.metas.removeListener(this.sendViewChangedEvent), document.removeEventListener("prerenderingchange", this.prerenderListener)
       }
     };
-    class Nw {
+    class bc {
       t;
       o = 0;
       i = [];
-      l(DD) {
-        if (DD.hadRecentInput) return;
-        const zD = this.i[0],
-          wD = this.i.at(-1);
-        this.o && zD && wD && DD.startTime - wD.startTime < 1e3 && DD.startTime - zD.startTime < 5e3 ? (this.o += DD.value, this.i.push(DD)) : (this.o = DD.value, this.i = [DD]), this.t?.(DD)
+      l(pp) {
+        if (pp.hadRecentInput) return;
+        const ip = this.i[0],
+          cp = this.i.at(-1);
+        this.o && ip && cp && pp.startTime - cp.startTime < 1e3 && pp.startTime - ip.startTime < 5e3 ? (this.o += pp.value, this.i.push(pp)) : (this.o = pp.value, this.i = [pp]), this.t?.(pp)
       }
     }
-    const Zw = () => {
-        const DD = performance.getEntriesByType("navigation")[0];
-        if (DD && DD.responseStart > 0 && DD.responseStart < performance.now()) return DD
+    const hc = () => {
+        const pp = performance.getEntriesByType("navigation")[0];
+        if (pp && pp.responseStart > 0 && pp.responseStart < performance.now()) return pp
       },
-      yw = DD => {
+      ac = pp => {
         if ("loading" === document.readyState) return "loading";
-        const zD = Zw();
-        if (zD) {
-          if (DD < zD.domInteractive) return "loading";
-          if (0 === zD.domContentLoadedEventStart || DD < zD.domContentLoadedEventStart) return "dom-interactive";
-          if (0 === zD.domComplete || DD < zD.domComplete) return "dom-content-loaded"
+        const ip = hc();
+        if (ip) {
+          if (pp < ip.domInteractive) return "loading";
+          if (0 === ip.domContentLoadedEventStart || pp < ip.domContentLoadedEventStart) return "dom-interactive";
+          if (0 === ip.domComplete || pp < ip.domComplete) return "dom-content-loaded"
         }
         return "complete"
       },
-      kw = DD => {
-        const zD = DD.nodeName;
-        return 1 === DD.nodeType ? zD.toLowerCase() : zD.toUpperCase().replace(/^#/, "")
+      nc = pp => {
+        const ip = pp.nodeName;
+        return 1 === pp.nodeType ? ip.toLowerCase() : ip.toUpperCase().replace(/^#/, "")
       },
-      mw = DD => {
-        let zD = "";
+      Fc = pp => {
+        let ip = "";
         try {
-          for (; 9 !== DD?.nodeType;) {
-            const wD = DD,
-              pD = wD.id ? "#" + wD.id : [kw(wD), ...Array.from(wD.classList ?? []).sort()].join(".");
-            if (zD.length + pD.length > 99) return zD || pD;
-            if (zD = zD ? pD + ">" + zD : pD, wD.id) break;
-            DD = wD.parentNode
+          for (; 9 !== pp?.nodeType;) {
+            const cp = pp,
+              Op = cp.id ? "#" + cp.id : [nc(cp), ...Array.from(cp.classList ?? []).sort()].join(".");
+            if (ip.length + Op.length > 99) return ip || Op;
+            if (ip = ip ? Op + ">" + ip : Op, cp.id) break;
+            pp = cp.parentNode
           }
         } catch {}
-        return zD
+        return ip
       },
-      ew = new WeakMap;
+      gc = new WeakMap;
 
-    function ow(DD, zD) {
-      let wD = ew.get(zD);
-      return wD || (wD = new WeakMap, ew.set(zD, wD)), wD.get(DD) || wD.set(DD, new zD), wD.get(DD)
+    function Gc(pp, ip) {
+      let cp = gc.get(ip);
+      return cp || (cp = new WeakMap, gc.set(ip, cp)), cp.get(pp) || cp.set(pp, new ip), cp.get(pp)
     }
-    let aw = -1;
-    const uw = () => aw,
-      vw = DD => {
-        addEventListener("pageshow", (zD => {
-          zD.persisted && (aw = zD.timeStamp, DD(zD))
+    let rc = -1;
+    const Zc = () => rc,
+      zc = pp => {
+        addEventListener("pageshow", (ip => {
+          ip.persisted && (rc = ip.timeStamp, pp(ip))
         }), !0)
       },
-      tw = (DD, zD, wD, pD) => {
-        let sD, KD;
-        return rD => {
-          zD.value >= 0 && (rD || pD) && (KD = zD.value - (sD ?? 0), (KD || void 0 === sD) && (sD = zD.value, zD.delta = KD, zD.rating = ((DD, zD) => DD > zD[1] ? "poor" : DD > zD[0] ? "needs-improvement" : "good")(zD.value, wD), DD(zD)))
+      sc = (pp, ip, cp, Op) => {
+        let op, Ip;
+        return Sp => {
+          ip.value >= 0 && (Sp || Op) && (Ip = ip.value - (op ?? 0), (Ip || void 0 === op) && (op = ip.value, ip.delta = Ip, ip.rating = ((pp, ip) => pp > ip[1] ? "poor" : pp > ip[0] ? "needs-improvement" : "good")(ip.value, cp), pp(ip)))
         }
       },
-      Fw = DD => {
-        requestAnimationFrame((() => requestAnimationFrame((() => DD()))))
+      Kc = pp => {
+        requestAnimationFrame((() => requestAnimationFrame((() => pp()))))
       },
-      Yw = () => Zw()?.activationStart ?? 0;
-    let Hw = -1;
-    const qw = new Set,
-      Dp = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
-      zp = DD => {
+      Vc = () => hc()?.activationStart ?? 0;
+    let pO = -1;
+    const iO = new Set,
+      cO = () => "hidden" !== document.visibilityState || document.prerendering ? 1 / 0 : 0,
+      OO = pp => {
         if ("hidden" === document.visibilityState) {
-          if ("visibilitychange" === DD.type)
-            for (const DD of qw) DD();
-          isFinite(Hw) || (Hw = "visibilitychange" === DD.type ? DD.timeStamp : 0, removeEventListener("prerenderingchange", zp, !0))
+          if ("visibilitychange" === pp.type)
+            for (const pp of iO) pp();
+          isFinite(pO) || (pO = "visibilitychange" === pp.type ? pp.timeStamp : 0, removeEventListener("prerenderingchange", OO, !0))
         }
       },
-      wp = function() {
-        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (Hw = 1 / 0), Hw < 0) {
-          const DD = Yw(),
-            zD = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((zD => "hidden" === zD.name && zD.startTime >= DD))?.startTime;
-          Hw = zD ?? Dp(), addEventListener("visibilitychange", zp, !0), addEventListener("prerenderingchange", zp, !0), vw((() => {
+      oO = function() {
+        if (arguments.length > 0 && void 0 !== arguments[0] && arguments[0] && (pO = 1 / 0), pO < 0) {
+          const pp = Vc(),
+            ip = document.prerendering ? void 0 : globalThis.performance.getEntriesByType("visibility-state").find((ip => "hidden" === ip.name && ip.startTime >= pp))?.startTime;
+          pO = ip ?? cO(), addEventListener("visibilitychange", OO, !0), addEventListener("prerenderingchange", OO, !0), zc((() => {
             setTimeout((() => {
-              Hw = Dp()
+              pO = cO()
             }))
           }))
         }
         return {
           get firstHiddenTime() {
-            return Hw
+            return pO
           },
-          onHidden(DD) {
-            qw.add(DD)
+          onHidden(pp) {
+            iO.add(pp)
           }
         }
       },
-      pp = function(DD) {
-        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
-          wD = arguments.length > 2 ? arguments[2] : void 0,
-          pD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
-          sD = arguments.length > 4 ? arguments[4] : void 0,
-          KD = arguments.length > 5 ? arguments[5] : void 0,
-          rD = arguments.length > 6 ? arguments[6] : void 0;
-        const LD = Zw(),
-          cD = LD?.navigationId || 0;
-        let gD = "navigate";
-        return wD ? gD = wD : uw() >= 0 ? gD = "back-forward-cache" : LD && (document.prerendering || Yw() > 0 ? gD = "prerender" : document.wasDiscarded ? gD = "restore" : LD.type && (gD = LD.type.replace(/_/g, "-"))), {
-          name: DD,
-          value: zD,
+      IO = function(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : -1,
+          cp = arguments.length > 2 ? arguments[2] : void 0,
+          Op = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0,
+          op = arguments.length > 4 ? arguments[4] : void 0,
+          Ip = arguments.length > 5 ? arguments[5] : void 0,
+          Sp = arguments.length > 6 ? arguments[6] : void 0;
+        const xp = hc(),
+          Lp = xp?.navigationId || 0;
+        let Yp = "navigate";
+        return cp ? Yp = cp : Zc() >= 0 ? Yp = "back-forward-cache" : xp && (document.prerendering || Vc() > 0 ? Yp = "prerender" : document.wasDiscarded ? Yp = "restore" : xp.type && (Yp = xp.type.replace(/_/g, "-"))), {
+          name: pp,
+          value: ip,
           rating: "good",
           delta: 0,
           entries: [],
           id: `v6-${Date.now()}-${Math.floor(8999999999999*Math.random())+1e12}`,
-          navigationType: gD,
-          navigationId: pD || cD,
-          navigationInteractionId: sD,
-          navigationURL: KD || LD?.name,
-          navigationStartTime: rD || 0
+          navigationType: Yp,
+          navigationId: Op || Lp,
+          navigationInteractionId: op,
+          navigationURL: Ip || xp?.name,
+          navigationStartTime: Sp || 0
         }
       },
-      sp = function(DD, zD) {
-        let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+      SO = function(pp, ip) {
+        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
         try {
-          const pD = DD.filter((DD => PerformanceObserver.supportedEntryTypes.includes(DD)));
-          if (pD.length > 0) {
-            const DD = new PerformanceObserver((DD => {
+          const Op = pp.filter((pp => PerformanceObserver.supportedEntryTypes.includes(pp)));
+          if (Op.length > 0) {
+            const pp = new PerformanceObserver((pp => {
               queueMicrotask((() => {
-                const wD = DD.getEntries();
-                pD.length > 1 && wD.sort(((DD, zD) => DD.startTime + DD.duration - (zD.startTime + zD.duration))), zD(wD)
+                const cp = pp.getEntries();
+                Op.length > 1 && cp.sort(((pp, ip) => pp.startTime + pp.duration - (ip.startTime + ip.duration))), ip(cp)
               }))
             }));
-            for (const zD of pD) DD.observe({
-              type: zD,
+            for (const ip of Op) pp.observe({
+              type: ip,
               buffered: !0,
-              ...wD
+              ...cp
             });
-            return DD
+            return pp
           }
         } catch {}
       },
-      Kp = DD => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && DD && DD.reportSoftNavs,
-      rp = (DD, zD) => {
-        if (DD.set(zD.navigationId, zD), DD.size > 2) {
-          const zD = DD.keys().next().value;
-          void 0 !== zD && DD.delete(zD)
+      xO = pp => globalThis.PerformanceObserver?.supportedEntryTypes?.includes("soft-navigation") && "function" == typeof globalThis.PerformanceSoftNavigation?.prototype?.getLargestInteractionContentfulPaint && pp && pp.reportSoftNavs,
+      LO = (pp, ip) => {
+        if (pp.set(ip.navigationId, ip), pp.size > 2) {
+          const ip = pp.keys().next().value;
+          void 0 !== ip && pp.delete(ip)
         }
       },
-      Lp = DD => {
-        let zD = !1;
+      YO = pp => {
+        let ip = !1;
         return () => {
-          zD || (DD(), zD = !0)
+          ip || (pp(), ip = !0)
         }
       };
-    class cp {
+    class DO {
       u
     }
-    const gp = DD => {
-        document.prerendering ? addEventListener("prerenderingchange", DD, !0) : DD()
+    const AO = pp => {
+        document.prerendering ? addEventListener("prerenderingchange", pp, !0) : pp()
       },
-      Rp = [1800, 3e3],
-      Ap = function(DD) {
-        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const wD = Kp(zD);
-        gp((() => {
-          const pD = ow(zD, cp),
-            sD = wp();
-          let KD, rD = pp("FCP");
-          const LD = sp(["paint"], (DD => {
-            for (const zD of DD) "first-contentful-paint" === zD.name && (LD.disconnect(), zD.startTime < sD.firstHiddenTime && (rD.value = Math.max(zD.startTime - Yw(), 0), rD.entries.push(zD), rD.navigationId = zD.navigationId || rD.navigationId, KD(!0)))
+      PO = [1800, 3e3],
+      WO = function(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const cp = xO(ip);
+        AO((() => {
+          const Op = Gc(ip, DO),
+            op = oO();
+          let Ip, Sp = IO("FCP");
+          const xp = SO(["paint"], (pp => {
+            for (const ip of pp) "first-contentful-paint" === ip.name && (xp.disconnect(), ip.startTime < op.firstHiddenTime && (Sp.value = Math.max(ip.startTime - Vc(), 0), Sp.entries.push(ip), Sp.navigationId = ip.navigationId || Sp.navigationId, Ip(!0)))
           }));
-          LD && (KD = tw(DD, rD, Rp, zD.reportAllChanges), vw((wD => {
-            rD = pp("FCP", -1, "back-forward-cache", rD.navigationId, rD.navigationInteractionId, rD.navigationURL, uw()), KD = tw(DD, rD, Rp, zD.reportAllChanges), Fw((() => {
-              rD.value = performance.now() - wD.timeStamp, KD(!0)
+          xp && (Ip = sc(pp, Sp, PO, ip.reportAllChanges), zc((cp => {
+            Sp = IO("FCP", -1, "back-forward-cache", Sp.navigationId, Sp.navigationInteractionId, Sp.navigationURL, Zc()), Ip = sc(pp, Sp, PO, ip.reportAllChanges), Kc((() => {
+              Sp.value = performance.now() - cp.timeStamp, Ip(!0)
             }))
-          }))), wD && sp(["soft-navigation"], (wD => {
-            wD.forEach((wD => {
-              pD.u && wD.navigationId && rp(pD.u, wD);
-              const sD = Math.max((wD.presentationTime || wD.paintTime || 0) - wD.startTime, 0);
-              rD = pp("FCP", sD, "soft-navigation", wD.navigationId, wD.interactionId, wD.name, wD.startTime), KD = tw(DD, rD, Rp, zD.reportAllChanges), KD(!0)
+          }))), cp && SO(["soft-navigation"], (cp => {
+            cp.forEach((cp => {
+              Op.u && cp.navigationId && LO(Op.u, cp);
+              const op = Math.max((cp.presentationTime || cp.paintTime || 0) - cp.startTime, 0);
+              Sp = IO("FCP", op, "soft-navigation", cp.navigationId, cp.interactionId, cp.name, cp.startTime), Ip = sc(pp, Sp, PO, ip.reportAllChanges), Ip(!0)
             }))
-          }), zD)
+          }), ip)
         }))
       },
-      Up = [.1, .25],
-      fp = DD => DD.find((DD => 1 === DD.node?.nodeType)) || DD[0];
-    let Ip = 0,
-      Bp = 1 / 0,
-      Gp = 0;
-    const hp = DD => {
-      for (const zD of DD) zD.interactionId && (Bp = Math.min(Bp, zD.interactionId), Gp = Math.max(Gp, zD.interactionId), Ip = Gp ? (Gp - Bp) / 7 + 1 : 0)
+      yO = [.1, .25],
+      UO = pp => pp.find((pp => 1 === pp.node?.nodeType)) || pp[0];
+    let wO = 0,
+      vO = 1 / 0,
+      tO = 0;
+    const HO = pp => {
+      for (const ip of pp) ip.interactionId && (vO = Math.min(vO, ip.interactionId), tO = Math.max(tO, ip.interactionId), wO = tO ? (tO - vO) / 7 + 1 : 0)
     };
-    let np;
-    const Mp = () => np ? Ip : performance.interactionCount ?? 0;
-    class Op {
+    let dO;
+    const eO = () => dO ? wO : performance.interactionCount ?? 0;
+    class uO {
       h = 0;
       v = [];
       p = new Map;
       m;
       M;
       T() {
-        return Mp() - this.h
+        return eO() - this.h
       }
       D() {
-        this.h = Mp(), this.v.length = 0, this.p.clear()
+        this.h = eO(), this.v.length = 0, this.p.clear()
       }
-      S(DD) {
-        const zD = this.T(),
-          wD = Math.min(this.v.length - 1, Math.floor(zD / 50));
-        return !zD || -1 !== wD || "soft-navigation" !== DD && "back-forward-cache" !== DD ? this.v[wD] : {
+      S(pp) {
+        const ip = this.T(),
+          cp = Math.min(this.v.length - 1, Math.floor(ip / 50));
+        return !ip || -1 !== cp || "soft-navigation" !== pp && "back-forward-cache" !== pp ? this.v[cp] : {
           k: 8,
           id: -1,
           entries: []
         }
       }
-      l(DD) {
-        if (this.m?.(DD), !DD.interactionId) return;
-        const zD = this.v.at(-1);
-        let wD = this.p.get(DD.interactionId);
-        if (wD || this.v.length < 10 || DD.duration > zD.k) {
-          if (wD ? DD.duration > wD.k ? (wD.entries = [DD], wD.k = DD.duration) : DD.duration === wD.k && DD.startTime === wD.entries[0].startTime && wD.entries.push(DD) : (wD = {
-              id: DD.interactionId,
-              entries: [DD],
-              k: DD.duration
-            }, this.p.set(wD.id, wD), this.v.push(wD)), this.v.sort(((DD, zD) => zD.k - DD.k)), this.v.length > 10) {
-            const DD = this.v.splice(10);
-            for (const zD of DD) this.p.delete(zD.id)
+      l(pp) {
+        if (this.m?.(pp), !pp.interactionId) return;
+        const ip = this.v.at(-1);
+        let cp = this.p.get(pp.interactionId);
+        if (cp || this.v.length < 10 || pp.duration > ip.k) {
+          if (cp ? pp.duration > cp.k ? (cp.entries = [pp], cp.k = pp.duration) : pp.duration === cp.k && pp.startTime === cp.entries[0].startTime && cp.entries.push(pp) : (cp = {
+              id: pp.interactionId,
+              entries: [pp],
+              k: pp.duration
+            }, this.p.set(cp.id, cp), this.v.push(cp)), this.v.sort(((pp, ip) => ip.k - pp.k)), this.v.length > 10) {
+            const pp = this.v.splice(10);
+            for (const ip of pp) this.p.delete(ip.id)
           }
-          this.M?.(wD)
+          this.M?.(cp)
         }
       }
     }
-    const Jp = DD => {
-        const zD = "requestIdleCallback" in globalThis ? 1e3 : 0,
-          wD = globalThis.requestIdleCallback || setTimeout,
-          pD = globalThis.cancelIdleCallback || clearTimeout;
-        if ("hidden" === document.visibilityState) DD();
+    const jO = pp => {
+        const ip = "requestIdleCallback" in globalThis ? 1e3 : 0,
+          cp = globalThis.requestIdleCallback || setTimeout,
+          Op = globalThis.cancelIdleCallback || clearTimeout;
+        if ("hidden" === document.visibilityState) pp();
         else {
-          const sD = Lp(DD);
-          let KD = -1;
-          const rD = () => {
-            pD(KD), sD()
+          const op = YO(pp);
+          let Ip = -1;
+          const Sp = () => {
+            Op(Ip), op()
           };
-          addEventListener("visibilitychange", rD, {
+          addEventListener("visibilitychange", Sp, {
             once: !0,
             capture: !0
-          }), KD = wD((() => {
-            removeEventListener("visibilitychange", rD, {
+          }), Ip = cp((() => {
+            removeEventListener("visibilitychange", Sp, {
               capture: !0
-            }), sD()
+            }), op()
           }), {
-            timeout: zD
+            timeout: ip
           })
         }
       },
-      Ep = [200, 500],
-      Qp = function(DD) {
-        let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        const wD = ow(zD = Object.assign({}, zD), Op);
-        let pD = [],
-          sD = [],
-          KD = 0;
-        const rD = new WeakMap,
-          LD = new WeakMap;
-        let cD = !1;
-        const gD = () => {
-            cD || (cD = !0, Jp(RD))
+      kO = [200, 500],
+      mO = function(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        const cp = Gc(ip = Object.assign({}, ip), uO);
+        let Op = [],
+          op = [],
+          Ip = 0;
+        const Sp = new WeakMap,
+          xp = new WeakMap;
+        let Lp = !1;
+        const Yp = () => {
+            Lp || (Lp = !0, jO(Dp))
           },
-          RD = () => {
-            const DD = new Set(wD.v.map((DD => rD.get(DD.entries[0])))),
-              zD = sD.length - 10;
-            sD = sD.filter(((wD, pD) => pD >= zD || DD.has(wD)));
-            const LD = new Set;
-            for (const wD of sD) {
-              const DD = AD(wD.startTime, wD.processingEnd);
-              for (const zD of DD) LD.add(zD)
+          Dp = () => {
+            const pp = new Set(cp.v.map((pp => Sp.get(pp.entries[0])))),
+              ip = op.length - 10;
+            op = op.filter(((cp, Op) => Op >= ip || pp.has(cp)));
+            const xp = new Set;
+            for (const cp of op) {
+              const pp = Ap(cp.startTime, cp.processingEnd);
+              for (const ip of pp) xp.add(ip)
             }
-            const gD = pD.length - 10;
-            pD = pD.filter(((DD, zD) => LD.has(DD) || zD >= gD && DD.startTime > KD)), cD = !1
+            const Yp = Op.length - 10;
+            Op = Op.filter(((pp, ip) => xp.has(pp) || ip >= Yp && pp.startTime > Ip)), Lp = !1
           };
-        wD.m = DD => {
-          const wD = DD.startTime + DD.duration;
-          let pD;
-          KD = Math.max(KD, DD.processingEnd);
-          for (let KD = sD.length - 1; KD >= 0; KD--) {
-            const rD = sD[KD];
-            if (Math.abs(wD - rD.renderTime) <= 8) {
-              pD = rD, pD.startTime = Math.min(DD.startTime, pD.startTime), pD.processingStart = Math.min(DD.processingStart, pD.processingStart), pD.processingEnd = Math.max(DD.processingEnd, pD.processingEnd), zD.includeProcessedEventEntries && pD.entries.push(DD);
+        cp.m = pp => {
+          const cp = pp.startTime + pp.duration;
+          let Op;
+          Ip = Math.max(Ip, pp.processingEnd);
+          for (let Ip = op.length - 1; Ip >= 0; Ip--) {
+            const Sp = op[Ip];
+            if (Math.abs(cp - Sp.renderTime) <= 8) {
+              Op = Sp, Op.startTime = Math.min(pp.startTime, Op.startTime), Op.processingStart = Math.min(pp.processingStart, Op.processingStart), Op.processingEnd = Math.max(pp.processingEnd, Op.processingEnd), ip.includeProcessedEventEntries && Op.entries.push(pp);
               break
             }
           }
-          pD || (pD = {
-            startTime: DD.startTime,
-            processingStart: DD.processingStart,
-            processingEnd: DD.processingEnd,
-            renderTime: wD,
-            entries: zD.includeProcessedEventEntries ? [DD] : []
-          }, sD.push(pD)), DD.interactionId && rD.set(DD, pD), gD()
-        }, wD.M = DD => {
-          if (!LD.get(DD)) {
-            const wD = DD.entries.find((DD => DD.target))?.target;
-            if (wD) {
-              const pD = zD.generateTarget?.(wD) ?? mw(wD);
-              LD.set(DD, pD)
+          Op || (Op = {
+            startTime: pp.startTime,
+            processingStart: pp.processingStart,
+            processingEnd: pp.processingEnd,
+            renderTime: cp,
+            entries: ip.includeProcessedEventEntries ? [pp] : []
+          }, op.push(Op)), pp.interactionId && Sp.set(pp, Op), Yp()
+        }, cp.M = pp => {
+          if (!xp.get(pp)) {
+            const cp = pp.entries.find((pp => pp.target))?.target;
+            if (cp) {
+              const Op = ip.generateTarget?.(cp) ?? Fc(cp);
+              xp.set(pp, Op)
             } else {
-              const zD = DD.entries.find((DD => DD.targetSelector))?.targetSelector;
-              zD && LD.set(DD, zD)
+              const ip = pp.entries.find((pp => pp.targetSelector))?.targetSelector;
+              ip && xp.set(pp, ip)
             }
           }
         };
-        const AD = (DD, zD) => {
-          const wD = [];
-          for (const sD of pD)
-            if (!(sD.startTime + sD.duration < DD)) {
-              if (sD.startTime > zD) break;
-              wD.push(sD)
-            } return wD
+        const Ap = (pp, ip) => {
+          const cp = [];
+          for (const op of Op)
+            if (!(op.startTime + op.duration < pp)) {
+              if (op.startTime > ip) break;
+              cp.push(op)
+            } return cp
         };
-        sp(["long-animation-frame"], (DD => {
-            pD = pD.concat(DD), gD()
-          }), zD),
-          function(DD) {
-            let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        SO(["long-animation-frame"], (pp => {
+            Op = Op.concat(pp), Yp()
+          }), ip),
+          function(pp) {
+            let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (!globalThis.PerformanceEventTiming || !("interactionId" in PerformanceEventTiming.prototype)) return;
-            const wD = wp();
-            gp((() => {
-              "interactionCount" in performance || np || (np = sp(["event"], hp, {
+            const cp = oO();
+            AO((() => {
+              "interactionCount" in performance || dO || (dO = SO(["event"], HO, {
                 durationThreshold: 0
               }));
-              let pD, sD = pp("INP");
-              const KD = ow(zD, Op),
-                rD = (wD, rD, LD, cD, gD) => {
-                  KD.D(), sD = pp("INP", -1, wD, rD, LD, cD, gD), pD = tw(DD, sD, Ep, zD.reportAllChanges)
+              let Op, op = IO("INP");
+              const Ip = Gc(ip, uO),
+                Sp = (cp, Sp, xp, Lp, Yp) => {
+                  Ip.D(), op = IO("INP", -1, cp, Sp, xp, Lp, Yp), Op = sc(pp, op, kO, ip.reportAllChanges)
                 },
-                LD = () => {
-                  const DD = KD.S(sD.navigationType);
-                  DD && DD.k !== sD.value && (sD.value = DD.k, sD.entries = DD.entries, pD())
+                xp = () => {
+                  const pp = Ip.S(op.navigationType);
+                  pp && pp.k !== op.value && (op.value = pp.k, op.entries = pp.entries, Op())
                 },
-                cD = DD => {
-                  LD(), pD(!0), rD("soft-navigation", DD.navigationId, DD.interactionId, DD.name, DD.startTime)
+                Lp = pp => {
+                  xp(), Op(!0), Sp("soft-navigation", pp.navigationId, pp.interactionId, pp.name, pp.startTime)
                 },
-                gD = function(DD) {
-                  let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-                  Jp((() => {
-                    for (const zD of DD) "soft-navigation" !== zD.entryType ? KD.l(zD) : cD(zD);
-                    LD(), zD && pD(!0)
+                Yp = function(pp) {
+                  let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                  jO((() => {
+                    for (const ip of pp) "soft-navigation" !== ip.entryType ? Ip.l(ip) : Lp(ip);
+                    xp(), ip && Op(!0)
                   }))
                 },
-                RD = ["event", "first-input"];
-              Kp(zD) && RD.push("soft-navigation");
-              const AD = sp(RD, gD, {
-                ...zD,
-                durationThreshold: zD.durationThreshold ?? 40
+                Dp = ["event", "first-input"];
+              xO(ip) && Dp.push("soft-navigation");
+              const Ap = SO(Dp, Yp, {
+                ...ip,
+                durationThreshold: ip.durationThreshold ?? 40
               });
-              pD = tw(DD, sD, Ep, zD.reportAllChanges), AD && (wD.onHidden((() => {
-                gD(AD.takeRecords(), !0)
-              })), vw((() => {
-                rD("back-forward-cache", sD.navigationId, sD.navigationInteractionId, sD.navigationURL, uw())
+              Op = sc(pp, op, kO, ip.reportAllChanges), Ap && (cp.onHidden((() => {
+                Yp(Ap.takeRecords(), !0)
+              })), zc((() => {
+                Sp("back-forward-cache", op.navigationId, op.navigationInteractionId, op.navigationURL, Zc())
               })))
             }))
-          }((zD => {
-            DD((DD => {
-              if (0 === DD.entries.length) {
-                const zD = DD.navigationStartTime || 0,
-                  wD = {
+          }((ip => {
+            pp((pp => {
+              if (0 === pp.entries.length) {
+                const ip = pp.navigationStartTime || 0,
+                  cp = {
                     processedEventEntries: [],
                     longAnimationFrameEntries: [],
                     inputDelay: 0,
                     processingDuration: 0,
-                    presentationDelay: DD.value,
-                    loadState: yw(zD)
+                    presentationDelay: pp.value,
+                    loadState: ac(ip)
                   };
-                return Object.assign(DD, {
-                  attribution: wD
+                return Object.assign(pp, {
+                  attribution: cp
                 })
               }
-              const zD = DD.entries[0],
-                pD = rD.get(zD),
-                sD = Math.max(pD.processingStart, zD.startTime),
-                KD = Math.max(zD.startTime + zD.duration, sD),
-                cD = Math.min(pD.processingEnd, KD),
-                gD = pD.entries.sort(((DD, zD) => DD.processingStart - zD.processingStart)),
-                RD = AD(zD.startTime, cD),
-                UD = wD.p.get(zD.interactionId),
-                fD = {
-                  interactionTarget: LD.get(UD),
-                  interactionType: zD.name.startsWith("key") ? "keyboard" : "pointer",
-                  interactionTime: zD.startTime,
-                  nextPaintTime: KD,
-                  processedEventEntries: gD,
-                  longAnimationFrameEntries: RD,
-                  inputDelay: sD - zD.startTime,
-                  processingDuration: cD - sD,
-                  presentationDelay: KD - cD,
-                  loadState: yw(zD.startTime),
+              const ip = pp.entries[0],
+                Op = Sp.get(ip),
+                op = Math.max(Op.processingStart, ip.startTime),
+                Ip = Math.max(ip.startTime + ip.duration, op),
+                Lp = Math.min(Op.processingEnd, Ip),
+                Yp = Op.entries.sort(((pp, ip) => pp.processingStart - ip.processingStart)),
+                Dp = Ap(ip.startTime, Lp),
+                Pp = cp.p.get(ip.interactionId),
+                Wp = {
+                  interactionTarget: xp.get(Pp),
+                  interactionType: ip.name.startsWith("key") ? "keyboard" : "pointer",
+                  interactionTime: ip.startTime,
+                  nextPaintTime: Ip,
+                  processedEventEntries: Yp,
+                  longAnimationFrameEntries: Dp,
+                  inputDelay: op - ip.startTime,
+                  processingDuration: Lp - op,
+                  presentationDelay: Ip - Lp,
+                  loadState: ac(ip.startTime),
                   longestScript: void 0,
                   totalScriptDuration: void 0,
                   totalStyleAndLayoutDuration: void 0,
                   totalPaintDuration: void 0,
                   totalUnattributedDuration: void 0
                 };
-              return (DD => {
-                const zD = DD.interactionTime,
-                  wD = DD.nextPaintTime;
-                if (!DD.longAnimationFrameEntries?.length || !zD || !wD) return;
-                const pD = DD.inputDelay,
-                  sD = DD.processingDuration;
-                let KD, rD, LD = 0,
-                  cD = 0,
-                  gD = 0,
-                  RD = 0;
-                for (const fD of DD.longAnimationFrameEntries) {
-                  cD = cD + fD.startTime + fD.duration - fD.styleAndLayoutStart;
-                  for (const DD of fD.scripts) {
-                    const wD = DD.startTime + DD.duration;
-                    if (wD < zD) continue;
-                    const gD = wD - Math.max(zD, DD.startTime),
-                      AD = DD.duration ? gD / DD.duration * DD.forcedStyleAndLayoutDuration : 0;
-                    LD += gD - AD, cD += AD, gD > RD && (rD = DD.startTime < zD + pD ? "input-delay" : DD.startTime >= zD + pD + sD ? "presentation-delay" : "processing-duration", KD = DD, RD = gD)
+              return (pp => {
+                const ip = pp.interactionTime,
+                  cp = pp.nextPaintTime;
+                if (!pp.longAnimationFrameEntries?.length || !ip || !cp) return;
+                const Op = pp.inputDelay,
+                  op = pp.processingDuration;
+                let Ip, Sp, xp = 0,
+                  Lp = 0,
+                  Yp = 0,
+                  Dp = 0;
+                for (const Wp of pp.longAnimationFrameEntries) {
+                  Lp = Lp + Wp.startTime + Wp.duration - Wp.styleAndLayoutStart;
+                  for (const pp of Wp.scripts) {
+                    const cp = pp.startTime + pp.duration;
+                    if (cp < ip) continue;
+                    const Yp = cp - Math.max(ip, pp.startTime),
+                      Ap = pp.duration ? Yp / pp.duration * pp.forcedStyleAndLayoutDuration : 0;
+                    xp += Yp - Ap, Lp += Ap, Yp > Dp && (Sp = pp.startTime < ip + Op ? "input-delay" : pp.startTime >= ip + Op + op ? "presentation-delay" : "processing-duration", Ip = pp, Dp = Yp)
                   }
                 }
-                const AD = DD.longAnimationFrameEntries.at(-1),
-                  UD = AD ? AD.startTime + AD.duration : 0;
-                UD >= zD + pD + sD && (gD = wD - UD), KD && rD && (DD.longestScript = {
-                  entry: KD,
-                  subpart: rD,
-                  intersectingDuration: RD
-                }), DD.totalScriptDuration = LD, DD.totalStyleAndLayoutDuration = cD, DD.totalPaintDuration = gD, DD.totalUnattributedDuration = wD - zD - LD - cD - gD
-              })(fD), Object.assign(DD, {
-                attribution: fD
+                const Ap = pp.longAnimationFrameEntries.at(-1),
+                  Pp = Ap ? Ap.startTime + Ap.duration : 0;
+                Pp >= ip + Op + op && (Yp = cp - Pp), Ip && Sp && (pp.longestScript = {
+                  entry: Ip,
+                  subpart: Sp,
+                  intersectingDuration: Dp
+                }), pp.totalScriptDuration = xp, pp.totalStyleAndLayoutDuration = Lp, pp.totalPaintDuration = Yp, pp.totalUnattributedDuration = cp - ip - xp - Lp - Yp
+              })(Wp), Object.assign(pp, {
+                attribution: Wp
               })
-            })(zD))
-          }), zD)
+            })(ip))
+          }), ip)
       };
-    class Xp {
+    class RO {
       m;
       u;
-      l(DD) {
-        this.m?.(DD)
+      l(pp) {
+        this.m?.(pp)
       }
     }
-    const Vp = [2500, 4e3];
-    let Pp = 50;
-    const Cp = [];
-    sp(["resource"], (DD => {
-      for (const zD of DD) Cp.push(zD), Cp.length > Pp && Cp.shift()
+    const qO = [2500, 4e3];
+    let MO = 50;
+    const CO = [];
+    SO(["resource"], (pp => {
+      for (const ip of pp) CO.push(ip), CO.length > MO && CO.shift()
     }));
-    const xp = [800, 1800],
-      Tp = DD => {
-        document.prerendering ? gp((() => Tp(DD))) : "complete" !== document.readyState ? addEventListener("load", (() => Tp(DD)), !0) : setTimeout(DD)
+    const EO = [800, 1800],
+      XO = pp => {
+        document.prerendering ? AO((() => XO(pp))) : "complete" !== document.readyState ? addEventListener("load", (() => XO(pp)), !0) : setTimeout(pp)
       },
-      bp = "load_state",
-      jp = "time_to_first_byte";
-    var dp = class {
-        constructor(DD, zD) {
-          this.corePushMeasurement = DD, this.webVitalConfig = zD
+      lO = "load_state",
+      QO = "time_to_first_byte";
+    var JO = class {
+        constructor(pp, ip) {
+          this.corePushMeasurement = pp, this.webVitalConfig = ip
         }
         initialize() {
           this.measureCLS(), this.measureFCP(), this.measureINP(), this.measureLCP(), this.measureTTFB()
         }
         measureCLS() {
-          var DD;
-          ! function(DD) {
-            let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const wD = ow(zD = Object.assign({}, zD), Nw),
-              pD = new WeakMap;
-            wD.t = DD => {
-                if (DD?.sources?.length) {
-                  const wD = fp(DD.sources),
-                    sD = wD?.node;
-                  if (sD) {
-                    const DD = zD.generateTarget?.(sD) ?? mw(sD);
-                    pD.set(wD, DD)
+          var pp;
+          ! function(pp) {
+            let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const cp = Gc(ip = Object.assign({}, ip), bc),
+              Op = new WeakMap;
+            cp.t = pp => {
+                if (pp?.sources?.length) {
+                  const cp = UO(pp.sources),
+                    op = cp?.node;
+                  if (op) {
+                    const pp = ip.generateTarget?.(op) ?? Fc(op);
+                    Op.set(cp, pp)
                   }
                 }
               },
-              function(DD) {
-                let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                const wD = wp();
-                Ap(Lp((() => {
-                  let pD, sD = pp("CLS", 0);
-                  const KD = ow(zD, Nw),
-                    rD = (wD, rD, LD, cD, gD) => {
-                      sD = pp("CLS", 0, wD, rD, LD, cD, gD), KD.o = 0, pD = tw(DD, sD, Up, zD.reportAllChanges)
+              function(pp) {
+                let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+                const cp = oO();
+                WO(YO((() => {
+                  let Op, op = IO("CLS", 0);
+                  const Ip = Gc(ip, bc),
+                    Sp = (cp, Sp, xp, Lp, Yp) => {
+                      op = IO("CLS", 0, cp, Sp, xp, Lp, Yp), Ip.o = 0, Op = sc(pp, op, yO, ip.reportAllChanges)
                     },
-                    LD = function() {
-                      let DD = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                      KD.o > sD.value && (sD.value = KD.o, sD.entries = KD.i), pD(DD)
+                    xp = function() {
+                      let pp = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                      Ip.o > op.value && (op.value = Ip.o, op.entries = Ip.i), Op(pp)
                     },
-                    cD = DD => {
-                      LD(!0), rD("soft-navigation", DD.navigationId, DD.interactionId, DD.name, DD.startTime)
+                    Lp = pp => {
+                      xp(!0), Sp("soft-navigation", pp.navigationId, pp.interactionId, pp.name, pp.startTime)
                     },
-                    gD = DD => {
-                      for (const zD of DD) "soft-navigation" !== zD.entryType ? KD.l(zD) : cD(zD);
-                      LD()
+                    Yp = pp => {
+                      for (const ip of pp) "soft-navigation" !== ip.entryType ? Ip.l(ip) : Lp(ip);
+                      xp()
                     },
-                    RD = ["layout-shift"];
-                  Kp(zD) && RD.push("soft-navigation");
-                  const AD = sp(RD, gD);
-                  AD && (pD = tw(DD, sD, Up, zD.reportAllChanges), wD.onHidden((() => {
-                    gD(AD.takeRecords()), pD(!0)
-                  })), vw((() => {
-                    rD("back-forward-cache", sD.navigationId, sD.navigationInteractionId, sD.navigationURL, uw()), Fw(pD)
-                  })), setTimeout(pD))
+                    Dp = ["layout-shift"];
+                  xO(ip) && Dp.push("soft-navigation");
+                  const Ap = SO(Dp, Yp);
+                  Ap && (Op = sc(pp, op, yO, ip.reportAllChanges), cp.onHidden((() => {
+                    Yp(Ap.takeRecords()), Op(!0)
+                  })), zc((() => {
+                    Sp("back-forward-cache", op.navigationId, op.navigationInteractionId, op.navigationURL, Zc()), Kc(Op)
+                  })), setTimeout(Op))
                 })))
-              }((zD => {
-                DD((DD => {
-                  let zD = {};
-                  if (DD.entries.length) {
-                    const wD = DD.entries.reduce(((DD, zD) => DD.value > zD.value ? DD : zD));
-                    if (wD?.sources?.length) {
-                      const DD = fp(wD.sources);
-                      DD && (zD = {
-                        largestShiftTarget: pD.get(DD),
-                        largestShiftTime: wD.startTime,
-                        largestShiftValue: wD.value,
-                        largestShiftSource: DD,
-                        largestShiftEntry: wD,
-                        loadState: yw(wD.startTime)
+              }((ip => {
+                pp((pp => {
+                  let ip = {};
+                  if (pp.entries.length) {
+                    const cp = pp.entries.reduce(((pp, ip) => pp.value > ip.value ? pp : ip));
+                    if (cp?.sources?.length) {
+                      const pp = UO(cp.sources);
+                      pp && (ip = {
+                        largestShiftTarget: Op.get(pp),
+                        largestShiftTime: cp.startTime,
+                        largestShiftValue: cp.value,
+                        largestShiftSource: pp,
+                        largestShiftEntry: cp,
+                        loadState: ac(cp.startTime)
                       })
                     }
                   }
-                  return Object.assign(DD, {
-                    attribution: zD
+                  return Object.assign(pp, {
+                    attribution: ip
                   })
-                })(zD))
-              }), zD)
-          }((DD => {
+                })(ip))
+              }), ip)
+          }((pp => {
             const {
-              loadState: zD,
-              largestShiftValue: wD,
-              largestShiftTime: pD,
-              largestShiftTarget: sD
-            } = DD.attribution, KD = this.buildInitialValues(DD);
-            this.addIfPresent(KD, "largest_shift_value", wD), this.addIfPresent(KD, "largest_shift_time", pD);
-            const rD = this.buildInitialContext(DD);
-            this.addIfPresent(rD, bp, zD), this.addIfPresent(rD, "largest_shift_target", sD), this.pushMeasurement(KD, rD)
+              loadState: ip,
+              largestShiftValue: cp,
+              largestShiftTime: Op,
+              largestShiftTarget: op
+            } = pp.attribution, Ip = this.buildInitialValues(pp);
+            this.addIfPresent(Ip, "largest_shift_value", cp), this.addIfPresent(Ip, "largest_shift_time", Op);
+            const Sp = this.buildInitialContext(pp);
+            this.addIfPresent(Sp, lO, ip), this.addIfPresent(Sp, "largest_shift_target", op), this.pushMeasurement(Ip, Sp)
           }), {
-            reportAllChanges: null === (DD = this.webVitalConfig) || void 0 === DD ? void 0 : DD.reportAllChanges
+            reportAllChanges: null === (pp = this.webVitalConfig) || void 0 === pp ? void 0 : pp.reportAllChanges
           })
         }
         measureFCP() {
-          var DD;
-          ! function(DD) {
-            let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            const wD = ow(zD = Object.assign({}, zD), cp);
-            Kp(zD) && (wD.u = new Map), Ap((zD => {
-              DD((DD => {
-                let zD = {
+          var pp;
+          ! function(pp) {
+            let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            const cp = Gc(ip = Object.assign({}, ip), DO);
+            xO(ip) && (cp.u = new Map), WO((ip => {
+              pp((pp => {
+                let ip = {
                   timeToFirstByte: 0,
-                  firstByteToFCP: DD.value,
-                  loadState: yw(uw())
+                  firstByteToFCP: pp.value,
+                  loadState: ac(Zc())
                 };
-                if ("soft-navigation" !== DD.navigationType) {
-                  if (DD.entries.length) {
-                    const wD = Zw(),
-                      pD = DD.entries.at(-1);
-                    if (wD) {
-                      const sD = wD.responseStart,
-                        KD = wD.activationStart || 0,
-                        rD = Math.max(0, sD - KD);
-                      zD = {
-                        timeToFirstByte: rD,
-                        firstByteToFCP: DD.value - rD,
-                        loadState: yw(DD.entries[0].startTime),
-                        navigationEntry: wD,
-                        fcpEntry: pD
+                if ("soft-navigation" !== pp.navigationType) {
+                  if (pp.entries.length) {
+                    const cp = hc(),
+                      Op = pp.entries.at(-1);
+                    if (cp) {
+                      const op = cp.responseStart,
+                        Ip = cp.activationStart || 0,
+                        Sp = Math.max(0, op - Ip);
+                      ip = {
+                        timeToFirstByte: Sp,
+                        firstByteToFCP: pp.value - Sp,
+                        loadState: ac(pp.entries[0].startTime),
+                        navigationEntry: cp,
+                        fcpEntry: Op
                       }
                     }
                   }
                 } else {
-                  const pD = wD.u?.get(DD.navigationId);
-                  pD && (zD = {
+                  const Op = cp.u?.get(pp.navigationId);
+                  Op && (ip = {
                     timeToFirstByte: 0,
-                    firstByteToFCP: DD.value,
+                    firstByteToFCP: pp.value,
                     loadState: "complete",
-                    navigationEntry: pD
+                    navigationEntry: Op
                   })
                 }
-                return Object.assign(DD, {
-                  attribution: zD
+                return Object.assign(pp, {
+                  attribution: ip
                 })
-              })(zD))
-            }), zD)
-          }((DD => {
+              })(ip))
+            }), ip)
+          }((pp => {
             const {
-              firstByteToFCP: zD,
-              timeToFirstByte: wD,
-              loadState: pD
-            } = DD.attribution, sD = this.buildInitialValues(DD);
-            this.addIfPresent(sD, "first_byte_to_fcp", zD), this.addIfPresent(sD, jp, wD);
-            const KD = this.buildInitialContext(DD);
-            this.addIfPresent(KD, bp, pD), this.pushMeasurement(sD, KD)
+              firstByteToFCP: ip,
+              timeToFirstByte: cp,
+              loadState: Op
+            } = pp.attribution, op = this.buildInitialValues(pp);
+            this.addIfPresent(op, "first_byte_to_fcp", ip), this.addIfPresent(op, QO, cp);
+            const Ip = this.buildInitialContext(pp);
+            this.addIfPresent(Ip, lO, Op), this.pushMeasurement(op, Ip)
           }), {
-            reportAllChanges: null === (DD = this.webVitalConfig) || void 0 === DD ? void 0 : DD.reportAllChanges
+            reportAllChanges: null === (pp = this.webVitalConfig) || void 0 === pp ? void 0 : pp.reportAllChanges
           })
         }
         measureINP() {
-          var DD;
-          Qp((DD => {
-            var zD;
+          var pp;
+          mO((pp => {
+            var ip;
             const {
-              interactionTime: wD,
-              presentationDelay: pD,
-              inputDelay: sD,
-              processingDuration: KD,
-              nextPaintTime: rD,
-              loadState: LD,
-              interactionTarget: cD,
-              interactionType: gD,
-              totalScriptDuration: RD,
-              totalStyleAndLayoutDuration: AD,
-              totalPaintDuration: UD,
-              totalUnattributedDuration: fD,
-              longestScript: ID
-            } = DD.attribution, BD = this.buildInitialValues(DD);
-            this.addIfPresent(BD, "interaction_time", wD), this.addIfPresent(BD, "presentation_delay", pD), this.addIfPresent(BD, "input_delay", sD), this.addIfPresent(BD, "processing_duration", KD), this.addIfPresent(BD, "next_paint_time", rD), this.addNumberIfDefined(BD, "total_script_duration", RD), this.addNumberIfDefined(BD, "total_style_and_layout_duration", AD), this.addNumberIfDefined(BD, "total_paint_duration", UD), this.addNumberIfDefined(BD, "total_unattributed_duration", fD), this.addNumberIfDefined(BD, "longest_script_intersecting_duration", null === ID || void 0 === ID ? void 0 : ID.intersectingDuration);
-            const GD = this.buildInitialContext(DD);
-            this.addIfPresent(GD, bp, LD), this.addIfPresent(GD, "interaction_target", cD), this.addIfPresent(GD, "interaction_type", gD), this.addIfPresent(GD, "longest_script_subpart", null === ID || void 0 === ID ? void 0 : ID.subpart), this.addIfPresent(GD, "longest_script_invoker_type", null === ID || void 0 === ID ? void 0 : ID.entry.invokerType), (null === (zD = this.webVitalConfig) || void 0 === zD ? void 0 : zD.trackAttributionSources) && (this.addIfPresent(GD, "longest_script_invoker", null === ID || void 0 === ID ? void 0 : ID.entry.invoker), this.addIfPresent(GD, "longest_script_source_url", null === ID || void 0 === ID ? void 0 : ID.entry.sourceURL), this.addIfPresent(GD, "longest_script_source_function_name", null === ID || void 0 === ID ? void 0 : ID.entry.sourceFunctionName), this.addIfPresent(GD, "longest_script_source_char_position", void 0 !== (null === ID || void 0 === ID ? void 0 : ID.entry.sourceCharPosition) ? String(ID.entry.sourceCharPosition) : void 0)), this.pushMeasurement(BD, GD)
+              interactionTime: cp,
+              presentationDelay: Op,
+              inputDelay: op,
+              processingDuration: Ip,
+              nextPaintTime: Sp,
+              loadState: xp,
+              interactionTarget: Lp,
+              interactionType: Yp,
+              totalScriptDuration: Dp,
+              totalStyleAndLayoutDuration: Ap,
+              totalPaintDuration: Pp,
+              totalUnattributedDuration: Wp,
+              longestScript: yp
+            } = pp.attribution, Up = this.buildInitialValues(pp);
+            this.addIfPresent(Up, "interaction_time", cp), this.addIfPresent(Up, "presentation_delay", Op), this.addIfPresent(Up, "input_delay", op), this.addIfPresent(Up, "processing_duration", Ip), this.addIfPresent(Up, "next_paint_time", Sp), this.addNumberIfDefined(Up, "total_script_duration", Dp), this.addNumberIfDefined(Up, "total_style_and_layout_duration", Ap), this.addNumberIfDefined(Up, "total_paint_duration", Pp), this.addNumberIfDefined(Up, "total_unattributed_duration", Wp), this.addNumberIfDefined(Up, "longest_script_intersecting_duration", null === yp || void 0 === yp ? void 0 : yp.intersectingDuration);
+            const wp = this.buildInitialContext(pp);
+            this.addIfPresent(wp, lO, xp), this.addIfPresent(wp, "interaction_target", Lp), this.addIfPresent(wp, "interaction_type", Yp), this.addIfPresent(wp, "longest_script_subpart", null === yp || void 0 === yp ? void 0 : yp.subpart), this.addIfPresent(wp, "longest_script_invoker_type", null === yp || void 0 === yp ? void 0 : yp.entry.invokerType), (null === (ip = this.webVitalConfig) || void 0 === ip ? void 0 : ip.trackAttributionSources) && (this.addIfPresent(wp, "longest_script_invoker", null === yp || void 0 === yp ? void 0 : yp.entry.invoker), this.addIfPresent(wp, "longest_script_source_url", null === yp || void 0 === yp ? void 0 : yp.entry.sourceURL), this.addIfPresent(wp, "longest_script_source_function_name", null === yp || void 0 === yp ? void 0 : yp.entry.sourceFunctionName), this.addIfPresent(wp, "longest_script_source_char_position", void 0 !== (null === yp || void 0 === yp ? void 0 : yp.entry.sourceCharPosition) ? String(yp.entry.sourceCharPosition) : void 0)), this.pushMeasurement(Up, wp)
           }), {
-            reportAllChanges: null === (DD = this.webVitalConfig) || void 0 === DD ? void 0 : DD.reportAllChanges
+            reportAllChanges: null === (pp = this.webVitalConfig) || void 0 === pp ? void 0 : pp.reportAllChanges
           })
         }
         measureLCP() {
-          var DD;
-          ! function(DD) {
-            let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-            null != (zD = Object.assign({}, zD)).resourceBufferSize && (Pp = zD.resourceBufferSize);
-            const wD = ow(zD, Xp),
-              pD = new WeakMap;
-            Kp(zD) && (wD.u = new Map), wD.m = DD => {
-                const wD = DD.element;
-                if (wD) {
-                  const sD = zD.generateTarget?.(wD) ?? mw(wD);
-                  pD.set(DD, sD)
-                } else DD.id && pD.set(DD, `#${DD.id}`)
+          var pp;
+          ! function(pp) {
+            let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+            null != (ip = Object.assign({}, ip)).resourceBufferSize && (MO = ip.resourceBufferSize);
+            const cp = Gc(ip, RO),
+              Op = new WeakMap;
+            xO(ip) && (cp.u = new Map), cp.m = pp => {
+                const cp = pp.element;
+                if (cp) {
+                  const op = ip.generateTarget?.(cp) ?? Fc(cp);
+                  Op.set(pp, op)
+                } else pp.id && Op.set(pp, `#${pp.id}`)
               },
-              function(DD) {
-                let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                  wD = !1;
-                const pD = Kp(zD);
-                gp((() => {
-                  let sD, KD = wp(),
-                    rD = pp("LCP");
-                  const LD = ow(zD, Xp),
-                    cD = (pD, LD, cD, gD, RD) => {
-                      rD = pp("LCP", -1, pD, LD, cD, gD, RD), sD = tw(DD, rD, Vp, zD.reportAllChanges), wD = !1, "soft-navigation" === pD && (KD = wp(!0))
+              function(pp) {
+                let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                  cp = !1;
+                const Op = xO(ip);
+                AO((() => {
+                  let op, Ip = oO(),
+                    Sp = IO("LCP");
+                  const xp = Gc(ip, RO),
+                    Lp = (Op, xp, Lp, Yp, Dp) => {
+                      Sp = IO("LCP", -1, Op, xp, Lp, Yp, Dp), op = sc(pp, Sp, qO, ip.reportAllChanges), cp = !1, "soft-navigation" === Op && (Ip = oO(!0))
                     },
-                    gD = DD => {
-                      LD.u && DD.navigationId && rp(LD.u, DD), wD || sD(!0), cD("soft-navigation", DD.navigationId, DD.interactionId, DD.name, DD.startTime);
-                      const zD = DD.getLargestInteractionContentfulPaint?.();
-                      zD && RD([zD])
+                    Yp = pp => {
+                      xp.u && pp.navigationId && LO(xp.u, pp), cp || op(!0), Lp("soft-navigation", pp.navigationId, pp.interactionId, pp.name, pp.startTime);
+                      const ip = pp.getLargestInteractionContentfulPaint?.();
+                      ip && Dp([ip])
                     },
-                    RD = DD => {
-                      zD.reportAllChanges || pD || (DD = DD.slice(-1));
-                      for (const zD of DD) {
-                        if (!zD) continue;
-                        if ("soft-navigation" === zD.entryType) {
-                          gD(zD);
+                    Dp = pp => {
+                      ip.reportAllChanges || Op || (pp = pp.slice(-1));
+                      for (const ip of pp) {
+                        if (!ip) continue;
+                        if ("soft-navigation" === ip.entryType) {
+                          Yp(ip);
                           continue
                         }
-                        let DD = 0,
-                          wD = [],
-                          pD = zD.startTime;
-                        if ("largest-contentful-paint" === zD.entryType) DD = Math.max(zD.startTime - Yw(), 0), LD.l(zD), wD = [zD];
-                        else if ("interaction-contentful-paint" === zD.entryType) {
-                          const sD = zD;
-                          if (!rD.navigationId) continue;
-                          if ("interactionId" in sD && sD.interactionId != rD.navigationInteractionId) continue;
-                          pD = sD.largestContentfulPaint?.renderTime || 0, DD = Math.max(pD - zD.startTime, 0), sD.largestContentfulPaint && (LD.l(sD.largestContentfulPaint), wD = [sD.largestContentfulPaint])
+                        let pp = 0,
+                          cp = [],
+                          Op = ip.startTime;
+                        if ("largest-contentful-paint" === ip.entryType) pp = Math.max(ip.startTime - Vc(), 0), xp.l(ip), cp = [ip];
+                        else if ("interaction-contentful-paint" === ip.entryType) {
+                          const op = ip;
+                          if (!Sp.navigationId) continue;
+                          if ("interactionId" in op && op.interactionId != Sp.navigationInteractionId) continue;
+                          Op = op.largestContentfulPaint?.renderTime || 0, pp = Math.max(Op - ip.startTime, 0), op.largestContentfulPaint && (xp.l(op.largestContentfulPaint), cp = [op.largestContentfulPaint])
                         }
-                        pD < KD.firstHiddenTime && (rD.value = DD, rD.entries = wD, sD())
+                        Op < Ip.firstHiddenTime && (Sp.value = pp, Sp.entries = cp, op())
                       }
                     },
-                    AD = ["largest-contentful-paint"];
-                  pD && AD.push("interaction-contentful-paint", "soft-navigation");
-                  const UD = sp(AD, RD);
-                  if (UD) {
-                    sD = tw(DD, rD, Vp, zD.reportAllChanges);
-                    const KD = ["keydown", "click", "visibilitychange"],
-                      LD = DD => {
-                        if (DD.isTrusted && !wD) {
-                          const DD = rD.id;
-                          Jp((() => {
-                            if (!wD) {
-                              if (!pD) {
-                                UD.disconnect();
-                                for (const DD of KD) removeEventListener(DD, LD, {
+                    Ap = ["largest-contentful-paint"];
+                  Op && Ap.push("interaction-contentful-paint", "soft-navigation");
+                  const Pp = SO(Ap, Dp);
+                  if (Pp) {
+                    op = sc(pp, Sp, qO, ip.reportAllChanges);
+                    const Ip = ["keydown", "click", "visibilitychange"],
+                      xp = pp => {
+                        if (pp.isTrusted && !cp) {
+                          const pp = Sp.id;
+                          jO((() => {
+                            if (!cp) {
+                              if (!Op) {
+                                Pp.disconnect();
+                                for (const pp of Ip) removeEventListener(pp, xp, {
                                   capture: !0
                                 })
                               }
-                              DD === rD.id && (wD = !0, sD(!0))
+                              pp === Sp.id && (cp = !0, op(!0))
                             }
                           }))
                         }
                       };
-                    for (const DD of KD) addEventListener(DD, LD, {
+                    for (const pp of Ip) addEventListener(pp, xp, {
                       capture: !0
                     });
-                    vw((pD => {
-                      cD("back-forward-cache", rD.navigationId, rD.navigationInteractionId, rD.navigationURL, uw()), sD = tw(DD, rD, Vp, zD.reportAllChanges), Fw((() => {
-                        rD.value = performance.now() - pD.timeStamp, wD = !0, sD(!0)
+                    zc((Op => {
+                      Lp("back-forward-cache", Sp.navigationId, Sp.navigationInteractionId, Sp.navigationURL, Zc()), op = sc(pp, Sp, qO, ip.reportAllChanges), Kc((() => {
+                        Sp.value = performance.now() - Op.timeStamp, cp = !0, op(!0)
                       }))
                     }))
                   }
                 }))
-              }((zD => {
-                DD((DD => {
-                  let zD = {
+              }((ip => {
+                pp((pp => {
+                  let ip = {
                     timeToFirstByte: 0,
                     resourceLoadDelay: 0,
                     resourceLoadDuration: 0,
-                    elementRenderDelay: DD.value
+                    elementRenderDelay: pp.value
                   };
-                  if (DD.entries.length) {
-                    const sD = DD.entries.at(-1),
-                      KD = DD => DD.name === sD.url && (DD.requestStart || DD.startTime) <= sD.startTime,
-                      rD = sD.url && (Cp.findLast(KD) || performance.getEntriesByType("resource").findLast(KD));
-                    let LD;
-                    zD.target = pD.get(sD), zD.lcpEntry = sD, sD.url && (zD.url = sD.url), rD && (zD.lcpResourceEntry = rD);
-                    let cD = 0,
-                      gD = 0;
-                    if ("soft-navigation" !== DD.navigationType ? (LD = Zw(), cD = LD?.activationStart ?? 0, gD = LD?.responseStart ?? 0) : (cD = DD.navigationStartTime || 0, LD = wD.u?.get(DD.navigationId)), LD) {
-                      const wD = Math.max(0, gD - cD),
-                        pD = Math.max(wD, rD ? (rD.requestStart || rD.startTime) - cD : 0),
-                        sD = Math.min(DD.value, Math.max(pD, rD ? rD.responseEnd - cD : 0));
-                      zD = {
-                        ...zD,
-                        timeToFirstByte: wD,
-                        resourceLoadDelay: pD - wD,
-                        resourceLoadDuration: sD - pD,
-                        elementRenderDelay: DD.value - sD,
-                        navigationEntry: LD
+                  if (pp.entries.length) {
+                    const op = pp.entries.at(-1),
+                      Ip = pp => pp.name === op.url && (pp.requestStart || pp.startTime) <= op.startTime,
+                      Sp = op.url && (CO.findLast(Ip) || performance.getEntriesByType("resource").findLast(Ip));
+                    let xp;
+                    ip.target = Op.get(op), ip.lcpEntry = op, op.url && (ip.url = op.url), Sp && (ip.lcpResourceEntry = Sp);
+                    let Lp = 0,
+                      Yp = 0;
+                    if ("soft-navigation" !== pp.navigationType ? (xp = hc(), Lp = xp?.activationStart ?? 0, Yp = xp?.responseStart ?? 0) : (Lp = pp.navigationStartTime || 0, xp = cp.u?.get(pp.navigationId)), xp) {
+                      const cp = Math.max(0, Yp - Lp),
+                        Op = Math.max(cp, Sp ? (Sp.requestStart || Sp.startTime) - Lp : 0),
+                        op = Math.min(pp.value, Math.max(Op, Sp ? Sp.responseEnd - Lp : 0));
+                      ip = {
+                        ...ip,
+                        timeToFirstByte: cp,
+                        resourceLoadDelay: Op - cp,
+                        resourceLoadDuration: op - Op,
+                        elementRenderDelay: pp.value - op,
+                        navigationEntry: xp
                       }
                     }
                   }
-                  return Object.assign(DD, {
-                    attribution: zD
+                  return Object.assign(pp, {
+                    attribution: ip
                   })
-                })(zD))
-              }), zD)
-          }((DD => {
-            var zD;
+                })(ip))
+              }), ip)
+          }((pp => {
+            var ip;
             const {
-              elementRenderDelay: wD,
-              resourceLoadDelay: pD,
-              resourceLoadDuration: sD,
-              timeToFirstByte: KD,
-              target: rD,
-              url: LD,
-              lcpResourceEntry: cD
-            } = DD.attribution, gD = this.buildInitialValues(DD);
-            this.addIfPresent(gD, "element_render_delay", wD), this.addIfPresent(gD, "resource_load_delay", pD), this.addIfPresent(gD, "resource_load_duration", sD), this.addIfPresent(gD, jp, KD);
-            const RD = this.buildInitialContext(DD);
-            this.addIfPresent(RD, "element", rD), (null === (zD = this.webVitalConfig) || void 0 === zD ? void 0 : zD.trackAttributionSources) && (this.addIfPresent(RD, "resource_url", LD), this.addIfPresent(RD, "resource_delivery_type", null === cD || void 0 === cD ? void 0 : cD.deliveryType), this.addIfPresent(RD, "resource_initiator_type", null === cD || void 0 === cD ? void 0 : cD.initiatorType)), this.pushMeasurement(gD, RD)
+              elementRenderDelay: cp,
+              resourceLoadDelay: Op,
+              resourceLoadDuration: op,
+              timeToFirstByte: Ip,
+              target: Sp,
+              url: xp,
+              lcpResourceEntry: Lp
+            } = pp.attribution, Yp = this.buildInitialValues(pp);
+            this.addIfPresent(Yp, "element_render_delay", cp), this.addIfPresent(Yp, "resource_load_delay", Op), this.addIfPresent(Yp, "resource_load_duration", op), this.addIfPresent(Yp, QO, Ip);
+            const Dp = this.buildInitialContext(pp);
+            this.addIfPresent(Dp, "element", Sp), (null === (ip = this.webVitalConfig) || void 0 === ip ? void 0 : ip.trackAttributionSources) && (this.addIfPresent(Dp, "resource_url", xp), this.addIfPresent(Dp, "resource_delivery_type", null === Lp || void 0 === Lp ? void 0 : Lp.deliveryType), this.addIfPresent(Dp, "resource_initiator_type", null === Lp || void 0 === Lp ? void 0 : Lp.initiatorType)), this.pushMeasurement(Yp, Dp)
           }), {
-            reportAllChanges: null === (DD = this.webVitalConfig) || void 0 === DD ? void 0 : DD.reportAllChanges
+            reportAllChanges: null === (pp = this.webVitalConfig) || void 0 === pp ? void 0 : pp.reportAllChanges
           })
         }
         measureTTFB() {
-          var DD;
-          ! function(DD) {
-            ! function(DD) {
-              let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-              const wD = Kp(zD);
-              let pD = pp("TTFB"),
-                sD = tw(DD, pD, xp, zD.reportAllChanges);
-              Tp((() => {
-                const KD = Zw();
-                if (KD) {
-                  const rD = KD.responseStart;
-                  pD.value = Math.max(rD - Yw(), 0), pD.entries = [KD], sD(!0), vw((() => {
-                    pD = pp("TTFB", 0, "back-forward-cache", pD.navigationId, pD.navigationInteractionId, pD.navigationURL, uw()), sD = tw(DD, pD, xp, zD.reportAllChanges), sD(!0)
-                  })), wD && sp(["soft-navigation"], (wD => {
-                    wD.forEach((wD => {
-                      wD.navigationId && (pD = pp("TTFB", 0, "soft-navigation", wD.navigationId, wD.interactionId, wD.name, wD.startTime), pD.entries = [wD], sD = tw(DD, pD, xp, zD.reportAllChanges), sD(!0))
+          var pp;
+          ! function(pp) {
+            ! function(pp) {
+              let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+              const cp = xO(ip);
+              let Op = IO("TTFB"),
+                op = sc(pp, Op, EO, ip.reportAllChanges);
+              XO((() => {
+                const Ip = hc();
+                if (Ip) {
+                  const Sp = Ip.responseStart;
+                  Op.value = Math.max(Sp - Vc(), 0), Op.entries = [Ip], op(!0), zc((() => {
+                    Op = IO("TTFB", 0, "back-forward-cache", Op.navigationId, Op.navigationInteractionId, Op.navigationURL, Zc()), op = sc(pp, Op, EO, ip.reportAllChanges), op(!0)
+                  })), cp && SO(["soft-navigation"], (cp => {
+                    cp.forEach((cp => {
+                      cp.navigationId && (Op = IO("TTFB", 0, "soft-navigation", cp.navigationId, cp.interactionId, cp.name, cp.startTime), Op.entries = [cp], op = sc(pp, Op, EO, ip.reportAllChanges), op(!0))
                     }))
-                  }), zD)
+                  }), ip)
                 }
               }))
-            }((zD => {
-              DD((DD => {
-                const zD = DD.entries[0];
-                let wD = {
+            }((ip => {
+              pp((pp => {
+                const ip = pp.entries[0];
+                let cp = {
                   waitingDuration: 0,
                   cacheDuration: 0,
                   dnsDuration: 0,
                   connectionDuration: 0,
                   requestDuration: 0,
-                  navigationEntry: zD
+                  navigationEntry: ip
                 };
-                if (DD.entries.length && zD instanceof PerformanceNavigationTiming) {
-                  const pD = zD.activationStart || 0,
-                    sD = Math.max((zD.workerStart || zD.fetchStart || 0) - pD, 0),
-                    KD = Math.max(zD.domainLookupStart - pD, 0),
-                    rD = Math.max(zD.connectStart - pD, 0),
-                    LD = Math.max(zD.connectEnd - pD, 0);
-                  wD = {
-                    waitingDuration: sD,
-                    cacheDuration: KD - sD,
-                    dnsDuration: rD - KD,
-                    connectionDuration: LD - rD,
-                    requestDuration: DD.value - LD,
-                    navigationEntry: zD
+                if (pp.entries.length && ip instanceof PerformanceNavigationTiming) {
+                  const Op = ip.activationStart || 0,
+                    op = Math.max((ip.workerStart || ip.fetchStart || 0) - Op, 0),
+                    Ip = Math.max(ip.domainLookupStart - Op, 0),
+                    Sp = Math.max(ip.connectStart - Op, 0),
+                    xp = Math.max(ip.connectEnd - Op, 0);
+                  cp = {
+                    waitingDuration: op,
+                    cacheDuration: Ip - op,
+                    dnsDuration: Sp - Ip,
+                    connectionDuration: xp - Sp,
+                    requestDuration: pp.value - xp,
+                    navigationEntry: ip
                   }
                 }
-                return Object.assign(DD, {
-                  attribution: wD
+                return Object.assign(pp, {
+                  attribution: cp
                 })
-              })(zD))
+              })(ip))
             }), arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {})
-          }((DD => {
+          }((pp => {
             const {
-              dnsDuration: zD,
-              connectionDuration: wD,
-              requestDuration: pD,
-              waitingDuration: sD,
-              cacheDuration: KD
-            } = DD.attribution, rD = this.buildInitialValues(DD);
-            this.addIfPresent(rD, "dns_duration", zD), this.addIfPresent(rD, "connection_duration", wD), this.addIfPresent(rD, "request_duration", pD), this.addIfPresent(rD, "waiting_duration", sD), this.addIfPresent(rD, "cache_duration", KD);
-            const LD = this.buildInitialContext(DD);
-            this.pushMeasurement(rD, LD)
+              dnsDuration: ip,
+              connectionDuration: cp,
+              requestDuration: Op,
+              waitingDuration: op,
+              cacheDuration: Ip
+            } = pp.attribution, Sp = this.buildInitialValues(pp);
+            this.addIfPresent(Sp, "dns_duration", ip), this.addIfPresent(Sp, "connection_duration", cp), this.addIfPresent(Sp, "request_duration", Op), this.addIfPresent(Sp, "waiting_duration", op), this.addIfPresent(Sp, "cache_duration", Ip);
+            const xp = this.buildInitialContext(pp);
+            this.pushMeasurement(Sp, xp)
           }), {
-            reportAllChanges: null === (DD = this.webVitalConfig) || void 0 === DD ? void 0 : DD.reportAllChanges
+            reportAllChanges: null === (pp = this.webVitalConfig) || void 0 === pp ? void 0 : pp.reportAllChanges
           })
         }
-        buildInitialValues(DD) {
+        buildInitialValues(pp) {
           return {
-            [DD.name.toLowerCase()]: DD.value,
-            delta: DD.delta
+            [pp.name.toLowerCase()]: pp.value,
+            delta: pp.delta
           }
         }
-        buildInitialContext(DD) {
-          var zD;
-          const wD = null !== (zD = Dz("com.grafana.faro.lastNavigationId", YD)) && void 0 !== zD ? zD : lw;
+        buildInitialContext(pp) {
+          var ip;
+          const cp = null !== (ip = ci("com.grafana.faro.lastNavigationId", Kp)) && void 0 !== ip ? ip : Tc;
           return {
-            id: DD.id,
-            rating: DD.rating,
-            navigation_type: DD.navigationType,
-            navigation_entry_id: wD
+            id: pp.id,
+            rating: pp.rating,
+            navigation_type: pp.navigationType,
+            navigation_entry_id: cp
           }
         }
-        pushMeasurement(DD, zD) {
+        pushMeasurement(pp, ip) {
           this.corePushMeasurement({
             type: "web-vitals",
-            values: DD
+            values: pp
           }, {
-            context: zD
+            context: ip
           })
         }
-        addIfPresent(DD, zD, wD) {
-          wD && (DD[zD] = wD)
+        addIfPresent(pp, ip, cp) {
+          cp && (pp[ip] = cp)
         }
-        addNumberIfDefined(DD, zD, wD) {
-          void 0 !== wD && (DD[zD] = wD)
+        addNumberIfDefined(pp, ip, cp) {
+          void 0 !== cp && (pp[ip] = cp)
         }
       },
-      Sp = class extends zw {
+      BO = class extends oc {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = ww
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-web-vitals", this.version = Ic
         }
         initialize() {
-          this.logDebug("Initializing"), new dp(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
+          this.logDebug("Initializing"), new JO(this.api.pushMeasurement, this.config.webVitalsInstrumentation).initialize()
         }
       };
-    const ip = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
+    const NO = /^00-[a-f0-9]{32}-[a-f0-9]{16}-[0-9]{1,2}$/;
 
-    function lp() {
-      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-      for (const zD of DD)
-        if ("traceparent" === zD.name) {
-          if (!ip.test(zD.description)) continue;
-          const [, DD, wD] = zD.description.split("-");
-          if (null != DD && null != wD) return {
-            traceId: DD,
-            spanId: wD
+    function TO() {
+      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
+      for (const ip of pp)
+        if ("traceparent" === ip.name) {
+          if (!NO.test(ip.description)) continue;
+          const [, pp, cp] = ip.description.split("-");
+          if (null != pp && null != cp) return {
+            traceId: pp,
+            spanId: cp
           };
           break
         }
     }
 
-    function Wp(DD) {
-      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
+    function fO(pp) {
+      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
         wallNow: Date.now(),
         monoNow: performance.now()
       };
       const {
-        wallNow: wD,
-        monoNow: pD
-      } = zD;
-      return Math.min(wD, wD - (pD - DD))
+        wallNow: cp,
+        monoNow: Op
+      } = ip;
+      return Math.min(cp, cp - (Op - pp))
     }
 
-    function Np(DD) {
-      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-      for (const [wD, pD] of Object.entries(zD)) {
-        const zD = DD[wD];
-        return null != zD && (TD(pD) ? pD.includes(zD) : zD === pD)
+    function bO(pp) {
+      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      for (const [cp, Op] of Object.entries(ip)) {
+        const ip = pp[cp];
+        return null != ip && (Ep(Op) ? Op.includes(ip) : ip === Op)
       }
       return !0
     }
 
-    function Zp(DD) {
+    function hO(pp) {
       const {
-        connectEnd: zD,
-        connectStart: wD,
-        decodedBodySize: pD,
-        domainLookupEnd: sD,
-        domainLookupStart: KD,
-        duration: rD,
-        encodedBodySize: LD,
-        fetchStart: cD,
-        initiatorType: gD,
-        name: RD,
-        nextHopProtocol: AD,
-        redirectEnd: UD,
-        redirectStart: fD,
-        renderBlockingStatus: ID,
-        requestStart: BD,
-        responseEnd: GD,
-        responseStart: hD,
-        responseStatus: nD,
-        secureConnectionStart: MD,
-        transferSize: OD,
-        workerStart: JD
-      } = DD;
+        connectEnd: ip,
+        connectStart: cp,
+        decodedBodySize: Op,
+        domainLookupEnd: op,
+        domainLookupStart: Ip,
+        duration: Sp,
+        encodedBodySize: xp,
+        fetchStart: Lp,
+        initiatorType: Yp,
+        name: Dp,
+        nextHopProtocol: Ap,
+        redirectEnd: Pp,
+        redirectStart: Wp,
+        renderBlockingStatus: yp,
+        requestStart: Up,
+        responseEnd: wp,
+        responseStart: vp,
+        responseStatus: tp,
+        secureConnectionStart: Hp,
+        transferSize: dp,
+        workerStart: ep
+      } = pp;
       return {
-        name: RD,
-        httpHost: kp(RD),
-        duration: mp(rD),
-        tcpHandshakeTime: mp(zD - wD),
-        dnsLookupTime: mp(sD - KD),
-        tlsNegotiationTime: mp(zD - MD),
-        responseStatus: mp(nD),
-        redirectTime: mp(UD - fD),
-        requestTime: mp(hD - BD),
-        responseTime: mp(GD - hD),
-        fetchTime: mp(GD - cD),
-        serviceWorkerTime: mp(JD > 0 ? cD - JD : 0),
-        decodedBodySize: mp(pD),
-        encodedBodySize: mp(LD),
+        name: Dp,
+        httpHost: nO(Dp),
+        duration: FO(Sp),
+        tcpHandshakeTime: FO(ip - cp),
+        dnsLookupTime: FO(op - Ip),
+        tlsNegotiationTime: FO(ip - Hp),
+        responseStatus: FO(tp),
+        redirectTime: FO(Pp - Wp),
+        requestTime: FO(vp - Up),
+        responseTime: FO(wp - vp),
+        fetchTime: FO(wp - Lp),
+        serviceWorkerTime: FO(ep > 0 ? Lp - ep : 0),
+        decodedBodySize: FO(Op),
+        encodedBodySize: FO(xp),
         cacheHitStatus: function() {
-          let DD = "fullLoad";
-          0 === OD ? pD > 0 && (DD = "cache") : null != nD ? 304 === nD && (DD = "conditionalFetch") : LD > 0 && OD < LD && (DD = "conditionalFetch");
-          return DD
+          let pp = "fullLoad";
+          0 === dp ? Op > 0 && (pp = "cache") : null != tp ? 304 === tp && (pp = "conditionalFetch") : xp > 0 && dp < xp && (pp = "conditionalFetch");
+          return pp
         }(),
-        renderBlockingStatus: mp(ID),
-        protocol: AD,
-        initiatorType: gD,
+        renderBlockingStatus: FO(yp),
+        protocol: Ap,
+        initiatorType: Yp,
         visibilityState: document.visibilityState,
-        ttfb: mp(hD - BD),
-        transferSize: mp(OD)
+        ttfb: FO(vp - Up),
+        transferSize: FO(dp)
       }
     }
 
-    function yp(DD) {
+    function aO(pp) {
       const {
-        activationStart: zD,
-        domComplete: wD,
-        domContentLoadedEventEnd: pD,
-        domContentLoadedEventStart: sD,
-        domInteractive: KD,
-        fetchStart: rD,
-        loadEventEnd: LD,
-        loadEventStart: cD,
-        responseStart: gD,
-        type: RD
-      } = DD, AD = function() {
-        var DD;
-        return null != (null === (DD = performance.timing) || void 0 === DD ? void 0 : DD.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
+        activationStart: ip,
+        domComplete: cp,
+        domContentLoadedEventEnd: Op,
+        domContentLoadedEventStart: op,
+        domInteractive: Ip,
+        fetchStart: Sp,
+        loadEventEnd: xp,
+        loadEventStart: Lp,
+        responseStart: Yp,
+        type: Dp
+      } = pp, Ap = function() {
+        var pp;
+        return null != (null === (pp = performance.timing) || void 0 === pp ? void 0 : pp.domLoading) ? performance.timing.domLoading - performance.timeOrigin : null
       }();
-      return Rz(Rz({}, Zp(DD)), {}, {
-        pageLoadTime: mp(wD - rD),
-        documentParsingTime: mp(AD ? KD - AD : null),
-        domProcessingTime: mp(wD - KD),
-        domContentLoadHandlerTime: mp(pD - sD),
-        onLoadTime: mp(LD - cD),
-        ttfb: mp(Math.max(gD - (null !== zD && void 0 !== zD ? zD : 0), 0)),
-        type: RD
+      return Pi(Pi({}, hO(pp)), {}, {
+        pageLoadTime: FO(cp - Sp),
+        documentParsingTime: FO(Ap ? Ip - Ap : null),
+        domProcessingTime: FO(cp - Ip),
+        domContentLoadHandlerTime: FO(Op - op),
+        onLoadTime: FO(xp - Lp),
+        ttfb: FO(Math.max(Yp - (null !== ip && void 0 !== ip ? ip : 0), 0)),
+        type: Dp
       })
     }
 
-    function kp(DD) {
+    function nO(pp) {
       try {
-        return new URL(DD).host || lw
-      } catch (zD) {
-        return lw
+        return new URL(pp).host || Tc
+      } catch (ip) {
+        return Tc
       }
     }
 
-    function mp(DD) {
-      return null == DD ? lw : "number" === typeof DD ? Math.round(DD > 0 ? DD : 0).toString() : DD.toString()
+    function FO(pp) {
+      return null == pp ? Tc : "number" === typeof pp ? Math.round(pp > 0 ? pp : 0).toString() : pp.toString()
     }
-    const ep = {
+    const gO = {
       initiatorType: ["xmlhttprequest", "fetch"]
     };
 
-    function op(DD, zD, wD, pD, sD, KD, rD) {
+    function GO(pp, ip, cp, Op, op, Ip, Sp) {
       try {
-        var LD = DD[KD](rD),
-          cD = LD.value
-      } catch (DD) {
-        return void wD(DD)
+        var xp = pp[Ip](Sp),
+          Lp = xp.value
+      } catch (pp) {
+        return void cp(pp)
       }
-      LD.done ? zD(cD) : Promise.resolve(cD).then(pD, sD)
+      xp.done ? ip(Lp) : Promise.resolve(Lp).then(Op, op)
     }
 
-    function ap(DD) {
+    function rO(pp) {
       return function() {
-        var zD = this,
-          wD = arguments;
-        return new Promise((function(pD, sD) {
-          var KD = DD.apply(zD, wD);
+        var ip = this,
+          cp = arguments;
+        return new Promise((function(Op, op) {
+          var Ip = pp.apply(ip, cp);
 
-          function rD(DD) {
-            op(KD, pD, sD, rD, LD, "next", DD)
+          function Sp(pp) {
+            GO(Ip, Op, op, Sp, xp, "next", pp)
           }
 
-          function LD(DD) {
-            op(KD, pD, sD, rD, LD, "throw", DD)
+          function xp(pp) {
+            GO(Ip, Op, op, Sp, xp, "throw", pp)
           }
-          rD(void 0)
+          Sp(void 0)
         }))
       }
     }
-    const vp = new Mw;
-    var tp = class extends zw {
+    const ZO = new ec;
+    var zO = class extends oc {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = ww
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-performance", this.version = Ic
       }
       initialize() {
-        var DD = this;
+        var pp = this;
         if (!("PerformanceObserver" in window)) return void this.logDebug("performance observer not supported. Disable performance instrumentation.");
-        let zD = !1;
-        const wD = () => {
-          ! function(DD) {
-            if ("complete" === document.readyState) DD();
+        let ip = !1;
+        const cp = () => {
+          ! function(pp) {
+            if ("complete" === document.readyState) pp();
             else {
-              const zD = () => {
-                "complete" === document.readyState && (DD(), document.removeEventListener("readystatechange", zD))
+              const ip = () => {
+                "complete" === document.readyState && (pp(), document.removeEventListener("readystatechange", ip))
               };
-              document.addEventListener("readystatechange", zD)
+              document.addEventListener("readystatechange", ip)
             }
-          }(ap((function*() {
-            if (zD) return;
-            const wD = DD.api.pushEvent,
+          }(rO((function*() {
+            if (ip) return;
+            const cp = pp.api.pushEvent,
               {
-                faroNavigationId: pD
-              } = yield function(DD) {
-                let zD;
-                const wD = new Promise((DD => {
-                  zD = DD
+                faroNavigationId: Op
+              } = yield function(pp) {
+                let ip;
+                const cp = new Promise((pp => {
+                  ip = pp
                 }));
-                return new PerformanceObserver((wD => {
-                  var pD;
-                  const [sD] = wD.getEntries();
-                  if (null == sD || tD(sD.name)) return;
-                  const KD = sD.toJSON();
-                  let rD = lp(null === KD || void 0 === KD ? void 0 : KD.serverTiming);
-                  const LD = null !== (pD = Dz("com.grafana.faro.lastNavigationId", YD)) && void 0 !== pD ? pD : lw,
-                    cD = Rz(Rz({}, yp(KD)), {}, {
-                      faroNavigationId: hz(),
-                      faroPreviousNavigationId: LD
+                return new PerformanceObserver((cp => {
+                  var Op;
+                  const [op] = cp.getEntries();
+                  if (null == op || zp(op.name)) return;
+                  const Ip = op.toJSON();
+                  let Sp = TO(null === Ip || void 0 === Ip ? void 0 : Ip.serverTiming);
+                  const xp = null !== (Op = ci("com.grafana.faro.lastNavigationId", Kp)) && void 0 !== Op ? Op : Tc,
+                    Lp = Pi(Pi({}, aO(Ip)), {}, {
+                      faroNavigationId: Hi(),
+                      faroPreviousNavigationId: xp
                     });
-                  zz("com.grafana.faro.lastNavigationId", cD.faroNavigationId, YD), DD("faro.performance.navigation", cD, void 0, {
-                    spanContext: rD,
-                    timestampOverwriteMs: Wp(KD.startTime)
-                  }), zD(cD)
+                  Oi("com.grafana.faro.lastNavigationId", Lp.faroNavigationId, Kp), pp("faro.performance.navigation", Lp, void 0, {
+                    spanContext: Sp,
+                    timestampOverwriteMs: fO(Ip.startTime)
+                  }), ip(Lp)
                 })).observe({
                   type: "navigation",
                   buffered: !0
-                }), wD
-              }(wD);
-            zD || null == pD || function(DD, zD, wD, pD) {
-              const sD = pD.trackResources;
-              new PerformanceObserver((pD => {
-                const KD = pD.getEntries(),
-                  rD = {
+                }), cp
+              }(cp);
+            ip || null == Op || function(pp, ip, cp, Op) {
+              const op = Op.trackResources;
+              new PerformanceObserver((Op => {
+                const Ip = Op.getEntries(),
+                  Sp = {
                     wallNow: Date.now(),
                     monoNow: performance.now()
                   };
-                for (const LD of KD) {
-                  if (tD(LD.name)) continue;
-                  null === wD || void 0 === wD || wD.notify({
+                for (const xp of Ip) {
+                  if (zp(xp.name)) continue;
+                  null === cp || void 0 === cp || cp.notify({
                     type: "resource"
                   });
-                  const pD = LD.toJSON();
-                  let KD = lp(null === pD || void 0 === pD ? void 0 : pD.serverTiming);
-                  (null == sD && Np(pD, ep) || sD) && zD("faro.performance.resource", Rz(Rz({}, Zp(pD)), {}, {
-                    faroNavigationId: DD,
-                    faroResourceId: hz()
+                  const Op = xp.toJSON();
+                  let Ip = TO(null === Op || void 0 === Op ? void 0 : Op.serverTiming);
+                  (null == op && bO(Op, gO) || op) && ip("faro.performance.resource", Pi(Pi({}, hO(Op)), {}, {
+                    faroNavigationId: pp,
+                    faroResourceId: Hi()
                   }), void 0, {
-                    spanContext: KD,
-                    timestampOverwriteMs: Wp(pD.startTime, rD)
+                    spanContext: Ip,
+                    timestampOverwriteMs: fO(Op.startTime, Sp)
                   })
                 }
               })).observe({
                 type: "resource",
                 buffered: !0
               })
-            }(pD, wD, vp, DD.config)
+            }(Op, cp, ZO, pp.config)
           })))
         };
         this.cancelInitialization = () => {
-          zD = !0, document.removeEventListener("prerenderingchange", wD)
-        }, document.prerendering ? document.addEventListener("prerenderingchange", wD, {
+          ip = !0, document.removeEventListener("prerenderingchange", cp)
+        }, document.prerendering ? document.addEventListener("prerenderingchange", cp, {
           once: !0
-        }) : wD()
+        }) : cp()
       }
       destroy() {
-        var DD;
-        null === (DD = this.cancelInitialization) || void 0 === DD || DD.call(this), this.cancelInitialization = void 0
+        var pp;
+        null === (pp = this.cancelInitialization) || void 0 === pp || pp.call(this), this.cancelInitialization = void 0
       }
     };
-    const Fp = "data-faro-user-action-name",
-      Yp = Fp.replace(/-name$/, "-timeout"),
-      Hp = 1e3;
+    const sO = "data-faro-user-action-name",
+      KO = sO.replace(/-name$/, "-timeout"),
+      VO = 1e3;
 
-    function qp(DD) {
-      return `data-${(DD.startsWith("data-")?DD.slice(5):DD).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
+    function po(pp) {
+      return `data-${(pp.startsWith("data-")?pp.slice(5):pp).replace(/([a-z0-9])([A-Z])/g,"$1-$2").toLowerCase()}`
     }
 
-    function Ds(DD) {
-      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
-        wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : ez;
-      if (void 0 === DD) return zD;
-      let pD = NaN;
+    function io(pp) {
+      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 100,
+        cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Gi;
+      if (void 0 === pp) return ip;
+      let Op = NaN;
       try {
-        pD = "string" === typeof DD && "" === DD.trim() ? NaN : Number(DD)
-      } catch (sD) {}
-      return !Number.isFinite(pD) || pD <= 0 ? (wD(`initialActivityTimeout must be a finite number greater than zero; using ${zD} ms`), zD) : pD > 1e3 ? (wD(`initialActivityTimeout cannot exceed ${Hp} ms; clamping to the maximum`), Hp) : pD
+        Op = "string" === typeof pp && "" === pp.trim() ? NaN : Number(pp)
+      } catch (op) {}
+      return !Number.isFinite(Op) || Op <= 0 ? (cp(`initialActivityTimeout must be a finite number greater than zero; using ${ip} ms`), ip) : Op > 1e3 ? (cp(`initialActivityTimeout cannot exceed ${VO} ms; clamping to the maximum`), VO) : Op
     }
 
-    function zs(DD, zD, wD) {
-      return void 0 !== DD && window.clearTimeout(DD), window.setTimeout((() => {
-        zD()
-      }), wD)
+    function co(pp, ip, cp) {
+      return void 0 !== pp && window.clearTimeout(pp), window.setTimeout((() => {
+        ip()
+      }), cp)
     }
 
-    function ws(DD) {
-      return DD.type === nw
+    function Oo(pp) {
+      return pp.type === dc
     }
-    let ps, ss;
+    let oo, Io;
 
-    function Ks() {
-      return ps || (ps = new Mw), ss || (ss = new MutationObserver(((DD, zD) => {
-        ps.notify({
+    function So() {
+      return oo || (oo = new ec), Io || (Io = new MutationObserver(((pp, ip) => {
+        oo.notify({
           type: "dom-mutation"
         })
-      })), ss.observe(document, {
+      })), Io.observe(document, {
         attributes: !0,
         childList: !0,
         subtree: !0,
         characterData: !0
-      })), ps
+      })), oo
     }
-    const rs = "fetch",
-      Ls = "xhr";
-    let cs, gs, Rs, As, Us = !1;
+    const xo = "fetch",
+      Lo = "xhr";
+    let Yo, Do, Ao, Po, Wo = !1;
 
-    function fs() {
-      if (cs) return cs;
+    function yo() {
+      if (Yo) return Yo;
 
-      function DD(DD) {
-        cs.notify({
-          type: hw,
-          request: DD
+      function pp(pp) {
+        Yo.notify({
+          type: Hc,
+          request: pp
         })
       }
 
-      function zD(DD) {
-        cs.notify({
-          type: nw,
-          request: DD
+      function ip(pp) {
+        Yo.notify({
+          type: dc,
+          request: pp
         })
       }
-      return cs = new Mw, Us || (! function(DD) {
+      return Yo = new ec, Wo || (! function(pp) {
         let {
-          onRequestEnd: zD,
-          onRequestStart: wD
-        } = DD;
-        Rs || (Rs = window.fetch);
+          onRequestEnd: ip,
+          onRequestStart: cp
+        } = pp;
+        Ao || (Ao = window.fetch);
         window.fetch = function() {
-          var DD, pD;
-          const sD = null !== (DD = FD(arguments[0])) && void 0 !== DD ? DD : "",
-            KD = tD(sD),
-            rD = (null !== (pD = arguments[1]) && void 0 !== pD ? pD : {}).method,
-            LD = hz();
-          return KD || wD({
-            url: sD,
-            method: rD,
-            requestId: LD,
-            apiType: rs
-          }), Rs.apply(this, arguments).then((DD => (KD || zD({
-            url: sD,
-            method: rD,
-            requestId: LD,
-            apiType: rs
-          }), DD))).catch((DD => {
-            throw KD || zD({
-              url: sD,
-              method: rD,
-              requestId: LD,
-              apiType: rs
-            }), DD
+          var pp, Op;
+          const op = null !== (pp = sp(arguments[0])) && void 0 !== pp ? pp : "",
+            Ip = zp(op),
+            Sp = (null !== (Op = arguments[1]) && void 0 !== Op ? Op : {}).method,
+            xp = Hi();
+          return Ip || cp({
+            url: op,
+            method: Sp,
+            requestId: xp,
+            apiType: xo
+          }), Ao.apply(this, arguments).then((pp => (Ip || ip({
+            url: op,
+            method: Sp,
+            requestId: xp,
+            apiType: xo
+          }), pp))).catch((pp => {
+            throw Ip || ip({
+              url: op,
+              method: Sp,
+              requestId: xp,
+              apiType: xo
+            }), pp
           }))
         }
       }({
-        onRequestStart: DD,
-        onRequestEnd: zD
-      }), function(DD) {
+        onRequestStart: pp,
+        onRequestEnd: ip
+      }), function(pp) {
         let {
-          onRequestStart: zD,
-          onRequestEnd: wD
-        } = DD;
-        gs || (gs = XMLHttpRequest.prototype.open);
+          onRequestStart: ip,
+          onRequestEnd: cp
+        } = pp;
+        Do || (Do = XMLHttpRequest.prototype.open);
         XMLHttpRequest.prototype.open = function() {
-          const DD = arguments[1],
-            pD = tD(DD),
-            sD = arguments[0],
-            KD = hz();
+          const pp = arguments[1],
+            Op = zp(pp),
+            op = arguments[0],
+            Ip = Hi();
           this.addEventListener("loadstart", (function() {
-            pD || zD({
-              url: DD,
-              method: sD,
-              requestId: KD,
-              apiType: Ls
+            Op || ip({
+              url: pp,
+              method: op,
+              requestId: Ip,
+              apiType: Lo
             })
           })), this.addEventListener("load", (function() {
-            pD || wD({
-              url: DD,
-              method: sD,
-              requestId: KD,
-              apiType: Ls
+            Op || cp({
+              url: pp,
+              method: op,
+              requestId: Ip,
+              apiType: Lo
             })
           })), this.addEventListener("error", (function() {
-            pD || wD({
-              url: DD,
-              method: sD,
-              requestId: KD,
-              apiType: Ls
+            Op || cp({
+              url: pp,
+              method: op,
+              requestId: Ip,
+              apiType: Lo
             })
           })), this.addEventListener("abort", (function() {
-            pD || wD({
-              url: DD,
-              method: sD,
-              requestId: KD,
-              apiType: Ls
+            Op || cp({
+              url: pp,
+              method: op,
+              requestId: Ip,
+              apiType: Lo
             })
-          })), gs.apply(this, arguments)
+          })), Do.apply(this, arguments)
         }
       }({
-        onRequestStart: DD,
-        onRequestEnd: zD
-      }), Us = !0), cs
+        onRequestStart: pp,
+        onRequestEnd: ip
+      }), Wo = !0), Yo
     }
-    let Is, Bs = !1;
-    let Gs = function(DD) {
-      return DD[DD.Started = 0] = "Started", DD[DD.Halted = 1] = "Halted", DD[DD.Cancelled = 2] = "Cancelled", DD[DD.Ended = 3] = "Ended", DD
+    let Uo, wo = !1;
+    let vo = function(pp) {
+      return pp[pp.Started = 0] = "Started", pp[pp.Halted = 1] = "Halted", pp[pp.Cancelled = 2] = "Cancelled", pp[pp.Ended = 3] = "Ended", pp
     }({});
-    var hs = class {
-      constructor(DD, zD) {
-        let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
-        this.userAction = DD, this.logDebug = zD, this.initialActivityTimeout = wD, this.http = fs(), this.dom = Ks(), this.perf = (As || (As = new Mw), Bs || (Is = vp.subscribe((DD => {
-          "resource" === DD.type && As.notify({
+    var to = class {
+      constructor(pp, ip) {
+        let cp = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 100;
+        this.userAction = pp, this.logDebug = ip, this.initialActivityTimeout = cp, this.http = yo(), this.dom = So(), this.perf = (Po || (Po = new ec), wo || (Uo = ZO.subscribe((pp => {
+          "resource" === pp.type && Po.notify({
             type: "resource-entry"
           })
-        })), Bs = !0), As), this.isValid = !1, this.runningRequests = new Map
+        })), wo = !0), Po), this.isValid = !1, this.runningRequests = new Map
       }
       attach() {
-        this.allMonitorsSub = (new Mw).merge(this.http, this.dom, this.perf).takeWhile((() => [Gs.Started, Gs.Halted].includes(this.userAction.getState()))).filter((DD => !!(this.userAction.getState() !== Gs.Halted || ws(DD) && this.runningRequests.has(DD.request.requestId)))).subscribe((DD => {
-          (function(DD) {
-            return DD.type === hw
-          })(DD) && this.runningRequests.set(DD.request.requestId, DD.request), ws(DD) && this.runningRequests.delete(DD.request.requestId), ws(DD) ? this.userAction.getState() === Gs.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
-        })), this.stateSub = this.userAction.filter((DD => [Gs.Ended, Gs.Cancelled].includes(DD))).first().subscribe((() => this.cleanup())), this.startupTid = zs(this.startupTid, (() => {
+        this.allMonitorsSub = (new ec).merge(this.http, this.dom, this.perf).takeWhile((() => [vo.Started, vo.Halted].includes(this.userAction.getState()))).filter((pp => !!(this.userAction.getState() !== vo.Halted || Oo(pp) && this.runningRequests.has(pp.request.requestId)))).subscribe((pp => {
+          (function(pp) {
+            return pp.type === Hc
+          })(pp) && this.runningRequests.set(pp.request.requestId, pp.request), Oo(pp) && this.runningRequests.delete(pp.request.requestId), Oo(pp) ? this.userAction.getState() === vo.Halted && 0 === this.runningRequests.size && this.endAction() : (this.isValid || (this.isValid = !0, this.clearTimer(this.startupTid)), this.scheduleFollowUp())
+        })), this.stateSub = this.userAction.filter((pp => [vo.Ended, vo.Cancelled].includes(pp))).first().subscribe((() => this.cleanup())), this.startupTid = co(this.startupTid, (() => {
           this.logDebug("User action not sent; no DOM, resource, or HTTP activity:", this.userAction.name), this.cancelAction()
         }), this.initialActivityTimeout)
       }
       scheduleFollowUp() {
         this.clearTimer(this.followUpTid), this.followUpTid = window.setTimeout((() => {
-          this.userAction.getState() === Gs.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
+          this.userAction.getState() === vo.Started && this.runningRequests.size > 0 ? this.haltAction() : this.isValid ? this.endAction() : this.cancelAction()
         }), 100)
       }
       haltAction() {
-        this.userAction.getState() === Gs.Started && (this.userAction.halt(), this.startHaltTimeout())
+        this.userAction.getState() === vo.Started && (this.userAction.halt(), this.startHaltTimeout())
       }
       startHaltTimeout() {
-        this.clearTimer(this.haltTid), this.haltTid = zs(this.haltTid, (() => {
-          this.userAction.getState() === Gs.Halted && this.endAction()
+        this.clearTimer(this.haltTid), this.haltTid = co(this.haltTid, (() => {
+          this.userAction.getState() === vo.Halted && this.endAction()
         }), 1e4)
       }
       endAction() {
@@ -2614,183 +2614,183 @@ export const modules = {
         this.userAction.cancel(), this.cleanup()
       }
       cleanup() {
-        var DD, zD;
-        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (DD = this.allMonitorsSub) || void 0 === DD || DD.unsubscribe(), null === (zD = this.stateSub) || void 0 === zD || zD.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
+        var pp, ip;
+        this.clearTimer(this.startupTid), this.clearTimer(this.followUpTid), this.clearTimer(this.haltTid), null === (pp = this.allMonitorsSub) || void 0 === pp || pp.unsubscribe(), null === (ip = this.stateSub) || void 0 === ip || ip.unsubscribe(), this.allMonitorsSub = void 0, this.stateSub = void 0, this.runningRequests.clear()
       }
-      clearTimer(DD) {
-        void 0 !== DD && window.clearTimeout(DD)
+      clearTimer(pp) {
+        void 0 !== pp && window.clearTimeout(pp)
       }
     };
 
-    function ns(DD) {
-      let zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ez;
-      var wD;
+    function Ho(pp) {
+      let ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Gi;
+      var cp;
       const {
-        api: pD,
-        config: sD,
-        internalLogger: KD
-      } = DD, rD = Ds(null === (wD = sD.userActionsInstrumentation) || void 0 === wD ? void 0 : wD.initialActivityTimeout, 100, zD);
+        api: Op,
+        config: op,
+        internalLogger: Ip
+      } = pp, Sp = io(null === (cp = op.userActionsInstrumentation) || void 0 === cp ? void 0 : cp.initialActivityTimeout, 100, ip);
       return {
-        processUserEvent: function(DD) {
-          var zD, wD;
-          const KD = null !== (zD = null === (wD = sD.userActionsInstrumentation) || void 0 === wD ? void 0 : wD.dataAttributeName) && void 0 !== zD ? zD : Fp,
-            rD = DD.target;
-          if (!(rD instanceof Element)) return;
-          const LD = function(DD, zD) {
-              let wD = DD;
-              for (; wD;) {
-                if (wD.hasAttribute(zD)) return wD;
-                wD = wD.parentElement
+        processUserEvent: function(pp) {
+          var ip, cp;
+          const Ip = null !== (ip = null === (cp = op.userActionsInstrumentation) || void 0 === cp ? void 0 : cp.dataAttributeName) && void 0 !== ip ? ip : sO,
+            Sp = pp.target;
+          if (!(Sp instanceof Element)) return;
+          const xp = function(pp, ip) {
+              let cp = pp;
+              for (; cp;) {
+                if (cp.hasAttribute(ip)) return cp;
+                cp = cp.parentElement
               }
               return null
-            }(rD, qp(KD)),
-            cD = function(DD, zD) {
-              if (!DD) return;
-              const wD = function(DD) {
-                  return qp(DD).slice(5).replace(/-(.)/g, ((DD, zD) => zD.toUpperCase()))
-                }(zD),
-                pD = DD.dataset;
-              for (const sD in pD)
-                if (sD === wD) return pD[sD]
-            }(LD, KD);
-          if (!LD || !cD) return;
-          const gD = function(DD, zD) {
-            const wD = DD.getAttribute(function(DD) {
-              const zD = qp(DD);
-              return zD.endsWith("-name") ? `${zD.slice(0,-5)}-timeout` : `${zD}-timeout`
-            }(zD));
-            return null === wD ? void 0 : Number(wD)
-          }(LD, KD);
-          pD.startUserAction(cD, {}, {
-            triggerName: DD.type,
-            initialActivityTimeout: gD
+            }(Sp, po(Ip)),
+            Lp = function(pp, ip) {
+              if (!pp) return;
+              const cp = function(pp) {
+                  return po(pp).slice(5).replace(/-(.)/g, ((pp, ip) => ip.toUpperCase()))
+                }(ip),
+                Op = pp.dataset;
+              for (const op in Op)
+                if (op === cp) return Op[op]
+            }(xp, Ip);
+          if (!xp || !Lp) return;
+          const Yp = function(pp, ip) {
+            const cp = pp.getAttribute(function(pp) {
+              const ip = po(pp);
+              return ip.endsWith("-name") ? `${ip.slice(0,-5)}-timeout` : `${ip}-timeout`
+            }(ip));
+            return null === cp ? void 0 : Number(cp)
+          }(xp, Ip);
+          Op.startUserAction(Lp, {}, {
+            triggerName: pp.type,
+            initialActivityTimeout: Yp
           })
         },
-        processUserActionStarted: function(DD, wD) {
-          const pD = DD,
-            sD = Ds(wD, rD, zD);
-          new hs(pD, KD.debug, sD).attach()
+        processUserActionStarted: function(pp, cp) {
+          const Op = pp,
+            op = io(cp, Sp, ip);
+          new to(Op, Ip.debug, op).attach()
         }
       }
     }
-    const Ms = "user_action_start",
-      Os = {
+    const eo = "user_action_start",
+      uo = {
         Normal: "normal",
         Critical: "critical"
       };
-    var Es = class {
+    var jo = class {
         constructor() {
           this.buffer = []
         }
-        addItem(DD) {
-          this.buffer.push(DD)
+        addItem(pp) {
+          this.buffer.push(pp)
         }
-        flushBuffer(DD) {
-          if (xD(DD))
-            for (const zD of this.buffer) DD(zD);
+        flushBuffer(pp) {
+          if (Cp(pp))
+            for (const ip of this.buffer) pp(ip);
           this.buffer.length = 0
         }
         size() {
           return this.buffer.length
         }
       },
-      Qs = class extends Mw {
-        constructor(DD) {
+      ko = class extends ec {
+        constructor(pp) {
           let {
-            name: zD,
-            parentId: wD,
-            trigger: pD,
-            transports: sD,
-            attributes: KD,
-            trackUserActionsExcludeItem: rD,
-            importance: LD = Os.Normal,
-            pushEvent: cD
-          } = DD;
-          super(), this.name = zD, this.attributes = KD, this.id = hz(), this.trigger = pD, this.parentId = null !== wD && void 0 !== wD ? wD : this.id, this.trackUserActionsExcludeItem = rD, this.importance = LD, this._pushEvent = cD, this._itemBuffer = new Es, this._transports = sD, this._state = 0, this._start()
+            name: ip,
+            parentId: cp,
+            trigger: Op,
+            transports: op,
+            attributes: Ip,
+            trackUserActionsExcludeItem: Sp,
+            importance: xp = uo.Normal,
+            pushEvent: Lp
+          } = pp;
+          super(), this.name = ip, this.attributes = Ip, this.id = Hi(), this.trigger = Op, this.parentId = null !== cp && void 0 !== cp ? cp : this.id, this.trackUserActionsExcludeItem = Sp, this.importance = xp, this._pushEvent = Lp, this._itemBuffer = new jo, this._transports = op, this._state = 0, this._start()
         }
-        addItem(DD) {
-          return 0 === this._state && (this._itemBuffer.addItem(DD), !0)
+        addItem(pp) {
+          return 0 === this._state && (this._itemBuffer.addItem(pp), !0)
         }
         _start() {
-          this._state = 0, 0 === this._state && (this.startTime = Uz(), this._startTimeMono = fz())
+          this._state = 0, 0 === this._state && (this.startTime = yi(), this._startTimeMono = Ui())
         }
         halt() {
           0 === this._state && (this._state = 1, this.notify(this._state))
         }
         cancel() {
-          0 === this._state && this._itemBuffer.flushBuffer((DD => {
-            this._transports.execute(DD)
+          0 === this._state && this._itemBuffer.flushBuffer((pp => {
+            this._transports.execute(pp)
           })), this._state = 2, this.notify(this._state)
         }
         end() {
           if (2 === this._state) return;
-          const DD = Uz(),
-            zD = fz() - this._startTimeMono;
-          this._state = 3, this._itemBuffer.flushBuffer((DD => {
-            if (function(DD, zD) {
-                return (null === zD || void 0 === zD ? void 0 : zD(DD)) || "measurement" === DD.type && "web-vitals" === DD.payload.type
-              }(DD, this.trackUserActionsExcludeItem)) return void this._transports.execute(DD);
-            const zD = Hz(Hz({}, DD), {}, {
-              payload: Hz(Hz({}, DD.payload), {}, {
+          const pp = yi(),
+            ip = Ui() - this._startTimeMono;
+          this._state = 3, this._itemBuffer.flushBuffer((pp => {
+            if (function(pp, ip) {
+                return (null === ip || void 0 === ip ? void 0 : ip(pp)) || "measurement" === pp.type && "web-vitals" === pp.payload.type
+              }(pp, this.trackUserActionsExcludeItem)) return void this._transports.execute(pp);
+            const ip = ic(ic({}, pp), {}, {
+              payload: ic(ic({}, pp.payload), {}, {
                 action: {
                   parentId: this.id,
                   name: this.name
                 }
               })
             });
-            this._transports.execute(zD)
-          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", Hz({
+            this._transports.execute(ip)
+          })), this._state = 3, this.notify(this._state), this._pushEvent("faro.user.action", ic({
             userActionName: this.name,
             userActionStartTime: this.startTime.toString(),
-            userActionEndTime: DD.toString(),
-            userActionDuration: zD.toString(),
+            userActionEndTime: pp.toString(),
+            userActionDuration: ip.toString(),
             userActionTrigger: this.trigger,
             userActionImportance: this.importance
-          }, lz(this.attributes)), void 0, {
+          }, Ti(this.attributes)), void 0, {
             timestampOverwriteMs: this.startTime,
-            customPayloadTransformer: DD => (DD.action = {
+            customPayloadTransformer: pp => (pp.action = {
               id: this.id,
               name: this.name
-            }, DD)
+            }, pp)
           })
         }
         getState() {
           return this._state
         }
       };
-    const Xs = new Mw;
+    const mo = new ec;
 
-    function Vs(DD, zD) {
-      return !!DD && (0 === (null === DD || void 0 === DD ? void 0 : DD.getState()) && (DD.addItem(zD), !0))
+    function Ro(pp, ip) {
+      return !!pp && (0 === (null === pp || void 0 === pp ? void 0 : pp.getState()) && (pp.addItem(ip), !0))
     }
-    var Ps = class extends zw {
+    var qo = class extends oc {
         constructor() {
-          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = ww
+          super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-user-action", this.version = Ic
         }
         initialize() {
           const {
-            processUserEvent: DD,
-            processUserActionStarted: zD
-          } = ns(BD, (DD => this.logWarn(DD)));
-          this._processUserEvent = DD, this._processKeydown = zD => {
-            [" ", "Enter"].includes(zD.key) && DD(zD)
-          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = Xs.subscribe((DD => {
+            processUserEvent: pp,
+            processUserActionStarted: ip
+          } = Ho(Up, (pp => this.logWarn(pp)));
+          this._processUserEvent = pp, this._processKeydown = ip => {
+            [" ", "Enter"].includes(ip.key) && pp(ip)
+          }, window.addEventListener("pointerdown", this._processUserEvent), window.addEventListener("keydown", this._processKeydown), this._userActionSub = mo.subscribe((pp => {
             let {
-              type: wD,
-              userAction: pD,
-              initialActivityTimeout: sD
-            } = DD;
-            "user_action_start" === wD && zD(pD, sD)
+              type: cp,
+              userAction: Op,
+              initialActivityTimeout: op
+            } = pp;
+            "user_action_start" === cp && ip(Op, op)
           }))
         }
         destroy() {
-          var DD;
-          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (DD = this._userActionSub) || void 0 === DD || DD.unsubscribe()
+          var pp;
+          this._processUserEvent && window.removeEventListener("pointerdown", this._processUserEvent), this._processKeydown && window.removeEventListener("keydown", this._processKeydown), null === (pp = this._userActionSub) || void 0 === pp || pp.unsubscribe()
         }
       },
-      Cs = class extends zw {
+      Mo = class extends oc {
         constructor() {
-          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = ww, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
+          super(), this.name = "@grafana/faro-web-sdk:instrumentation-csp", this.version = Ic, this.boundSecuritypolicyviolationHandler = this.securitypolicyviolationHandler.bind(this)
         }
         initialize() {
           document.addEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
@@ -2798,239 +2798,239 @@ export const modules = {
         destroy() {
           document.removeEventListener("securitypolicyviolation", this.boundSecuritypolicyviolationHandler)
         }
-        securitypolicyviolationHandler(DD) {
-          const zD = {
-            blockedURI: DD.blockedURI,
-            columnNumber: DD.columnNumber,
-            disposition: DD.disposition,
-            documentURI: DD.documentURI,
-            effectiveDirective: DD.effectiveDirective,
-            lineNumber: DD.lineNumber,
-            originalPolicy: DD.originalPolicy,
-            referrer: DD.referrer,
-            sample: DD.sample,
-            sourceFile: DD.sourceFile,
-            statusCode: DD.statusCode,
-            violatedDirective: DD.violatedDirective
+        securitypolicyviolationHandler(pp) {
+          const ip = {
+            blockedURI: pp.blockedURI,
+            columnNumber: pp.columnNumber,
+            disposition: pp.disposition,
+            documentURI: pp.documentURI,
+            effectiveDirective: pp.effectiveDirective,
+            lineNumber: pp.lineNumber,
+            originalPolicy: pp.originalPolicy,
+            referrer: pp.referrer,
+            sample: pp.sample,
+            sourceFile: pp.sourceFile,
+            statusCode: pp.statusCode,
+            violatedDirective: pp.violatedDirective
           };
-          this.api.pushEvent("securitypolicyviolation", lz(zD))
+          this.api.pushEvent("securitypolicyviolation", Ti(ip))
         }
       };
-    var xs = class extends Mw {
-      constructor(DD, zD) {
-        var wD, pD, sD, KD;
-        super(), this._tracking = !1, this.eventsObservable = DD, this._options = {
-          inactivityMs: null !== (wD = null === zD || void 0 === zD ? void 0 : zD.inactivityMs) && void 0 !== wD ? wD : 100,
-          drainTimeoutMs: null !== (pD = null === zD || void 0 === zD ? void 0 : zD.drainTimeoutMs) && void 0 !== pD ? pD : 1e4,
-          isOperationStart: null !== (sD = null === zD || void 0 === zD ? void 0 : zD.isOperationStart) && void 0 !== sD ? sD : () => {},
-          isOperationEnd: null !== (KD = null === zD || void 0 === zD ? void 0 : zD.isOperationEnd) && void 0 !== KD ? KD : () => {}
+    var Co = class extends ec {
+      constructor(pp, ip) {
+        var cp, Op, op, Ip;
+        super(), this._tracking = !1, this.eventsObservable = pp, this._options = {
+          inactivityMs: null !== (cp = null === ip || void 0 === ip ? void 0 : ip.inactivityMs) && void 0 !== cp ? cp : 100,
+          drainTimeoutMs: null !== (Op = null === ip || void 0 === ip ? void 0 : ip.drainTimeoutMs) && void 0 !== Op ? Op : 1e4,
+          isOperationStart: null !== (op = null === ip || void 0 === ip ? void 0 : ip.isOperationStart) && void 0 !== op ? op : () => {},
+          isOperationEnd: null !== (Ip = null === ip || void 0 === ip ? void 0 : ip.isOperationEnd) && void 0 !== Ip ? Ip : () => {}
         }, this._initialize()
       }
       _initialize() {
-        this.eventsObservable.filter((() => this._tracking)).subscribe((DD => {
-          var zD;
-          this._lastEventTime = fz(), null === (zD = this._currentEvents) || void 0 === zD || zD.push(DD);
-          const wD = this._options.isOperationStart(DD);
-          var pD;
-          wD && (null === (pD = this._activeOperations) || void 0 === pD || pD.set(wD, !0));
-          const sD = this._options.isOperationEnd(DD);
-          var KD;
-          sD && (null === (KD = this._activeOperations) || void 0 === KD || KD.delete(sD));
+        this.eventsObservable.filter((() => this._tracking)).subscribe((pp => {
+          var ip;
+          this._lastEventTime = Ui(), null === (ip = this._currentEvents) || void 0 === ip || ip.push(pp);
+          const cp = this._options.isOperationStart(pp);
+          var Op;
+          cp && (null === (Op = this._activeOperations) || void 0 === Op || Op.set(cp, !0));
+          const op = this._options.isOperationEnd(pp);
+          var Ip;
+          op && (null === (Ip = this._activeOperations) || void 0 === Ip || Ip.delete(op));
           this._scheduleInactivityCheck()
         }))
       }
       startTracking() {
-        this._tracking || (this._tracking = !0, this._startTime = fz(), this._lastEventTime = this._startTime, this.notify({
+        this._tracking || (this._tracking = !0, this._startTime = Ui(), this._lastEventTime = this._startTime, this.notify({
           message: "tracking-started"
         }), this._currentEvents = [], this._activeOperations = new Map, this._scheduleInactivityCheck())
       }
       stopTracking() {
-        let DD;
-        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), DD = this.hasActiveOperations() ? fz() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
+        let pp;
+        this._tracking = !1, this._clearTimer(this._inactivityTid), this._clearTimer(this._drainTid), pp = this.hasActiveOperations() ? Ui() - this._startTime : this._lastEventTime ? this._lastEventTime - this._startTime : 0, this.notify({
           message: "tracking-ended",
           events: this._currentEvents,
-          duration: DD
+          duration: pp
         })
       }
       _scheduleInactivityCheck() {
-        this._inactivityTid = Ts(this._inactivityTid, (() => {
+        this._inactivityTid = Eo(this._inactivityTid, (() => {
           this.hasActiveOperations() ? this._startDrainTimeout() : this.stopTracking()
         }), this._options.inactivityMs)
       }
       _startDrainTimeout() {
-        this._drainTid = Ts(this._drainTid, (() => {
+        this._drainTid = Eo(this._drainTid, (() => {
           this.stopTracking()
         }), this._options.drainTimeoutMs)
       }
       hasActiveOperations() {
         return !!this._activeOperations && this._activeOperations.size > 0
       }
-      _clearTimer(DD) {
-        DD && clearTimeout(DD)
+      _clearTimer(pp) {
+        pp && clearTimeout(pp)
       }
     };
 
-    function Ts(DD, zD, wD) {
-      return DD && clearTimeout(DD), DD = setTimeout((() => {
-        zD()
-      }), wD)
+    function Eo(pp, ip, cp) {
+      return pp && clearTimeout(pp), pp = setTimeout((() => {
+        ip()
+      }), cp)
     }
-    let bs;
-    const ds = new Set,
-      Ss = new Map;
-    let is, ls, Ws, Ns, Zs, ys, ks, ms, es = !1;
-    var os = class extends zw {
+    let Xo;
+    const Qo = new Set,
+      Jo = new Map;
+    let Bo, No, To, fo, bo, ho, ao, no, Fo = !1;
+    var go = class extends oc {
       constructor() {
-        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = ww
+        super(...arguments), this.name = "@grafana/faro-web-sdk:instrumentation-navigation", this.version = Ic
       }
       initialize() {
-        const DD = fs(),
-          zD = Ks(),
-          wD = function() {
-            function DD(DD, zD) {
-              const wD = null !== zD && void 0 !== zD ? zD : location.href;
-              wD !== ls && (is.notify({
+        const pp = yo(),
+          ip = So(),
+          cp = function() {
+            function pp(pp, ip) {
+              const cp = null !== ip && void 0 !== ip ? ip : location.href;
+              cp !== No && (Bo.notify({
                 type: "url-change",
-                from: ls,
-                to: wD,
-                trigger: DD
-              }), ls = wD)
+                from: No,
+                to: cp,
+                trigger: pp
+              }), No = cp)
             }
-            if (is || (is = new Mw, ls = location.href), !es)
+            if (Bo || (Bo = new ec, No = location.href), !Fo)
               if ("navigation" in window && "NavigateEvent" in window) {
-                ks = zD => {
+                ao = ip => {
                   try {
-                    const wD = null === zD || void 0 === zD ? void 0 : zD.destination;
-                    (null === wD || void 0 === wD ? void 0 : wD.sameDocument) && "string" === typeof wD.url && DD("navigate", wD.url)
-                  } catch (wD) {}
-                }, window.navigation.addEventListener("navigate", ks);
-                const zD = window.NavigateEvent;
-                zD && zD.prototype && "function" === typeof zD.prototype.intercept && (ms || (ms = zD.prototype.intercept), zD.prototype.intercept = function(zD) {
+                    const cp = null === ip || void 0 === ip ? void 0 : ip.destination;
+                    (null === cp || void 0 === cp ? void 0 : cp.sameDocument) && "string" === typeof cp.url && pp("navigate", cp.url)
+                  } catch (cp) {}
+                }, window.navigation.addEventListener("navigate", ao);
+                const ip = window.NavigateEvent;
+                ip && ip.prototype && "function" === typeof ip.prototype.intercept && (no || (no = ip.prototype.intercept), ip.prototype.intercept = function(ip) {
                   try {
-                    const zD = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
-                      wD = null === this || void 0 === this ? void 0 : this.destination;
-                    zD && wD && !1 === wD.sameDocument && "string" === typeof wD.url && DD("navigate-intercept", wD.url)
-                  } catch (wD) {}
-                  return ms.call(this, zD)
-                }), es = !0
-              } else Ws || (Ws = window.history.pushState), window.history.pushState = function() {
-                for (var zD = arguments.length, wD = new Array(zD), pD = 0; pD < zD; pD++) wD[pD] = arguments[pD];
-                const sD = Ws.apply(window.history, wD);
-                return DD("pushState"), sD
-              }, Ns || (Ns = window.history.replaceState), window.history.replaceState = function() {
-                for (var zD = arguments.length, wD = new Array(zD), pD = 0; pD < zD; pD++) wD[pD] = arguments[pD];
-                const sD = Ns.apply(window.history, wD);
-                return DD("replaceState"), sD
-              }, Zs = () => DD("popstate"), ys = () => DD("hashchange"), window.addEventListener("popstate", Zs), window.addEventListener("hashchange", ys), es = !0;
-            return is
+                    const ip = !!(null === this || void 0 === this ? void 0 : this.canIntercept),
+                      cp = null === this || void 0 === this ? void 0 : this.destination;
+                    ip && cp && !1 === cp.sameDocument && "string" === typeof cp.url && pp("navigate-intercept", cp.url)
+                  } catch (cp) {}
+                  return no.call(this, ip)
+                }), Fo = !0
+              } else To || (To = window.history.pushState), window.history.pushState = function() {
+                for (var ip = arguments.length, cp = new Array(ip), Op = 0; Op < ip; Op++) cp[Op] = arguments[Op];
+                const op = To.apply(window.history, cp);
+                return pp("pushState"), op
+              }, fo || (fo = window.history.replaceState), window.history.replaceState = function() {
+                for (var ip = arguments.length, cp = new Array(ip), Op = 0; Op < ip; Op++) cp[Op] = arguments[Op];
+                const op = fo.apply(window.history, cp);
+                return pp("replaceState"), op
+              }, bo = () => pp("popstate"), ho = () => pp("hashchange"), window.addEventListener("popstate", bo), window.addEventListener("hashchange", ho), Fo = !0;
+            return Bo
           }(),
-          pD = (sD = ["pointerdown", "keydown"], bs || (bs = new Mw), sD.forEach((DD => {
-            if (!ds.has(DD)) {
-              const zD = () => {
-                bs.notify({
+          Op = (op = ["pointerdown", "keydown"], Xo || (Xo = new ec), op.forEach((pp => {
+            if (!Qo.has(pp)) {
+              const ip = () => {
+                Xo.notify({
                   type: "interaction",
-                  name: DD
+                  name: pp
                 })
               };
-              window.addEventListener(DD, zD), ds.add(DD), Ss.set(DD, zD)
+              window.addEventListener(pp, ip), Qo.add(pp), Jo.set(pp, ip)
             }
-          })), bs);
-        var sD;
-        const KD = new xs((new Mw).merge(DD, zD, wD), {
+          })), Xo);
+        var op;
+        const Ip = new Co((new ec).merge(pp, ip, cp), {
           inactivityMs: 100,
           drainTimeoutMs: 1e4,
-          isOperationStart: DD => function(DD) {
-            return DD.type === hw
-          }(DD) ? DD.request.requestId : void 0,
-          isOperationEnd: DD => function(DD) {
-            return DD.type === nw
-          }(DD) ? DD.request.requestId : void 0
+          isOperationStart: pp => function(pp) {
+            return pp.type === Hc
+          }(pp) ? pp.request.requestId : void 0,
+          isOperationEnd: pp => function(pp) {
+            return pp.type === dc
+          }(pp) ? pp.request.requestId : void 0
         });
-        KD.filter((DD => "tracking-ended" === DD.message)).subscribe((DD => {
-          var zD, wD;
-          if ((null === (zD = DD.events) || void 0 === zD ? void 0 : zD.some((DD => "url-change" === DD.type))) && (null === (wD = DD.events) || void 0 === wD ? void 0 : wD.some((DD => "dom-mutation" === DD.type)))) {
-            var pD;
-            const zD = null === (pD = DD.events) || void 0 === pD ? void 0 : pD.find((DD => "url-change" === DD.type));
-            BD.api.pushEvent("faro.navigation", {
-              fromUrl: null === zD || void 0 === zD ? void 0 : zD.from,
-              toUrl: null === zD || void 0 === zD ? void 0 : zD.to,
+        Ip.filter((pp => "tracking-ended" === pp.message)).subscribe((pp => {
+          var ip, cp;
+          if ((null === (ip = pp.events) || void 0 === ip ? void 0 : ip.some((pp => "url-change" === pp.type))) && (null === (cp = pp.events) || void 0 === cp ? void 0 : cp.some((pp => "dom-mutation" === pp.type)))) {
+            var Op;
+            const ip = null === (Op = pp.events) || void 0 === Op ? void 0 : Op.find((pp => "url-change" === pp.type));
+            Up.api.pushEvent("faro.navigation", {
+              fromUrl: null === ip || void 0 === ip ? void 0 : ip.from,
+              toUrl: null === ip || void 0 === ip ? void 0 : ip.to,
               sameDocument: String(!0),
-              duration: DD.duration
+              duration: pp.duration
             })
           }
-        })), pD.subscribe((() => {
-          KD.startTracking()
+        })), Op.subscribe((() => {
+          Ip.startTracking()
         }))
       }
     };
 
-    function as() {
-      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-      const zD = [new Ps, new iw, new Sp, new pw, new Ww, new os];
-      return !1 !== DD.enablePerformanceInstrumentation && zD.unshift(new tp), !1 !== DD.enableContentSecurityPolicyInstrumentation && zD.push(new Cs), !1 !== DD.captureConsole && zD.push(new dw), zD
+    function Go() {
+      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+      const ip = [new qo, new Nc, new BO, new Sc, new fc, new go];
+      return !1 !== pp.enablePerformanceInstrumentation && ip.unshift(new zO), !1 !== pp.enableContentSecurityPolicyInstrumentation && ip.push(new Mo), !1 !== pp.captureConsole && ip.push(new Jc), ip
     }
-    var us = wD(6731);
-    let vs, ts;
+    var ro = cp(6841);
+    let Zo, zo;
 
-    function Fs() {
-      const DD = "undefined" !== typeof navigator ? navigator.userAgent : "";
-      return vs === DD && ts || (ts = new us.UAParser(DD).getResult(), vs = DD), ts
+    function so() {
+      const pp = "undefined" !== typeof navigator ? navigator.userAgent : "";
+      return Zo === pp && zo || (zo = new ro.UAParser(pp).getResult(), Zo = pp), zo
     }
-    const Ys = () => {
+    const Ko = () => {
         const {
-          browser: DD,
-          os: zD,
-          ua: wD
-        } = Fs(), {
-          name: pD,
-          version: sD
-        } = DD, {
-          name: KD,
-          version: rD
-        } = zD, LD = navigator.language, cD = wD.includes("Mobi"), gD = function() {
-          if (!pD || !sD) return;
+          browser: pp,
+          os: ip,
+          ua: cp
+        } = so(), {
+          name: Op,
+          version: op
+        } = pp, {
+          name: Ip,
+          version: Sp
+        } = ip, xp = navigator.language, Lp = cp.includes("Mobi"), Yp = function() {
+          if (!Op || !op) return;
           if ("userAgentData" in navigator && navigator.userAgentData) return navigator.userAgentData.brands
         }();
         return {
           browser: {
-            name: null !== pD && void 0 !== pD ? pD : lw,
-            version: null !== sD && void 0 !== sD ? sD : lw,
-            os: `${null!==KD&&void 0!==KD?KD:lw} ${null!==rD&&void 0!==rD?rD:lw}`,
-            userAgent: null !== wD && void 0 !== wD ? wD : lw,
-            language: null !== LD && void 0 !== LD ? LD : lw,
-            mobile: cD,
-            brands: null !== gD && void 0 !== gD ? gD : lw,
+            name: null !== Op && void 0 !== Op ? Op : Tc,
+            version: null !== op && void 0 !== op ? op : Tc,
+            os: `${null!==Ip&&void 0!==Ip?Ip:Tc} ${null!==Sp&&void 0!==Sp?Sp:Tc}`,
+            userAgent: null !== cp && void 0 !== cp ? cp : Tc,
+            language: null !== xp && void 0 !== xp ? xp : Tc,
+            mobile: Lp,
+            brands: null !== Yp && void 0 !== Yp ? Yp : Tc,
             viewportWidth: `${window.innerWidth}`,
             viewportHeight: `${window.innerHeight}`
           }
         }
       },
-      Hs = () => {
+      Vo = () => {
         const {
-          name: DD,
-          version: zD
-        } = Fs().os;
-        if (!DD && !zD) return {};
-        const wD = {};
-        return DD && (wD.name = DD), zD && (wD.version = zD), {
-          os: wD
+          name: pp,
+          version: ip
+        } = so().os;
+        if (!pp && !ip) return {};
+        const cp = {};
+        return pp && (cp.name = pp), ip && (cp.version = ip), {
+          os: cp
         }
       };
 
-    function qs(DD) {
-      var zD, wD, pD;
+    function pI(pp) {
+      var ip, cp, Op;
       return {
-        id: null !== (zD = null === (wD = BD.config) || void 0 === wD || null === (wD = wD.sessionTracking) || void 0 === wD || null === (pD = wD.generateSessionId) || void 0 === pD ? void 0 : pD.call(wD)) && void 0 !== zD ? zD : hz(),
-        attributes: DD
+        id: null !== (ip = null === (cp = Up.config) || void 0 === cp || null === (cp = cp.sessionTracking) || void 0 === cp || null === (Op = cp.generateSessionId) || void 0 === Op ? void 0 : Op.call(cp)) && void 0 !== ip ? ip : Hi(),
+        attributes: pp
       }
     }
-    const DK = () => ({
+    const iI = () => ({
       sdk: {
         name: "faro-web",
-        version: ww
+        version: Ic
       }
     });
-    var zK = class extends Dw {
+    var cI = class extends Oc {
       isBatched() {
         return !1
       }
@@ -3038,10 +3038,10 @@ export const modules = {
         return []
       }
     };
-    let wK = function(DD) {
-      return DD.EXCEPTION = "exception", DD.LOG = "log", DD.MEASUREMENT = "measurement", DD.TRACE = "trace", DD.EVENT = "event", DD
+    let OI = function(pp) {
+      return pp.EXCEPTION = "exception", pp.LOG = "log", pp.MEASUREMENT = "measurement", pp.TRACE = "trace", pp.EVENT = "event", pp
     }({});
-    const pK = {
+    const oI = {
       exception: "exceptions",
       log: "logs",
       measurement: "measurements",
@@ -3049,356 +3049,356 @@ export const modules = {
       event: "events"
     };
 
-    function sK(DD, zD) {
-      var wD, pD;
-      if (void 0 === zD) return DD;
-      if (void 0 === DD) return {
-        resourceSpans: zD
+    function II(pp, ip) {
+      var cp, Op;
+      if (void 0 === ip) return pp;
+      if (void 0 === pp) return {
+        resourceSpans: ip
       };
-      const sD = null === (wD = DD.resourceSpans) || void 0 === wD ? void 0 : wD[0];
-      if (void 0 === sD) return DD;
-      const KD = (null === sD || void 0 === sD ? void 0 : sD.scopeSpans) || [],
-        rD = (null === zD || void 0 === zD || null === (pD = zD[0]) || void 0 === pD ? void 0 : pD.scopeSpans) || [];
-      return Hz(Hz({}, DD), {}, {
-        resourceSpans: [Hz(Hz({}, sD), {}, {
-          scopeSpans: [...KD, ...rD]
+      const op = null === (cp = pp.resourceSpans) || void 0 === cp ? void 0 : cp[0];
+      if (void 0 === op) return pp;
+      const Ip = (null === op || void 0 === op ? void 0 : op.scopeSpans) || [],
+        Sp = (null === ip || void 0 === ip || null === (Op = ip[0]) || void 0 === Op ? void 0 : Op.scopeSpans) || [];
+      return ic(ic({}, pp), {}, {
+        resourceSpans: [ic(ic({}, op), {}, {
+          scopeSpans: [...Ip, ...Sp]
         })]
       })
     }
 
-    function KK(DD) {
-      let zD = {
+    function SI(pp) {
+      let ip = {
         meta: {}
       };
-      return void 0 !== DD[0] && (zD.meta = DD[0].meta), DD.forEach((DD => {
-        switch (DD.type) {
+      return void 0 !== pp[0] && (ip.meta = pp[0].meta), pp.forEach((pp => {
+        switch (pp.type) {
           case "log":
           case "event":
           case "exception":
           case "measurement": {
-            const wD = pK[DD.type],
-              pD = zD[wD];
-            zD = Hz(Hz({}, zD), {}, {
-              [wD]: void 0 === pD ? [DD.payload] : [...pD, DD.payload]
+            const cp = oI[pp.type],
+              Op = ip[cp];
+            ip = ic(ic({}, ip), {}, {
+              [cp]: void 0 === Op ? [pp.payload] : [...Op, pp.payload]
             });
             break
           }
           case "trace":
-            zD = Hz(Hz({}, zD), {}, {
-              traces: sK(zD.traces, DD.payload.resourceSpans)
+            ip = ic(ic({}, ip), {}, {
+              traces: II(ip.traces, pp.payload.resourceSpans)
             })
         }
-      })), zD
+      })), ip
     }
-    var rK = class extends zK {
+    var xI = class extends cI {
       constructor() {
-        let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-        super(), this.options = DD, this.name = "@grafana/faro-web-sdk:transport-console", this.version = ww
+        let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        super(), this.options = pp, this.name = "@grafana/faro-web-sdk:transport-console", this.version = Ic
       }
-      send(DD) {
-        var zD;
-        return this.unpatchedConsole[null !== (zD = this.options.level) && void 0 !== zD ? zD : Ow.DEBUG]("New event", KK([DD]))
+      send(pp) {
+        var ip;
+        return this.unpatchedConsole[null !== (ip = this.options.level) && void 0 !== ip ? ip : uc.DEBUG]("New event", SI([pp]))
       }
     };
-    const LK = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      cK = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
-      gK = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
-      RK = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
-      AK = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      UK = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    const LI = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), ([0-9]{2}) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) ([0-9]{4}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      YI = /^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday), ([0-9]{2})-(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)-([0-9]{2}) ([0-9]{2}):([0-9]{2}):([0-9]{2}) GMT$/,
+      DI = /^(Mon|Tue|Wed|Thu|Fri|Sat|Sun) (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (?:(?:([0-9]{2}))|(?: ([0-9]))) ([0-9]{2}):([0-9]{2}):([0-9]{2}) ([0-9]{4})$/,
+      AI = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      PI = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      WI = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-    function fK(DD) {
+    function yI(pp) {
       let {
-        weekday: zD,
-        day: wD,
-        month: pD,
-        year: sD,
-        hour: KD,
-        minute: rD,
-        second: LD
-      } = DD;
-      if (sD < 1900 || wD < 1 || KD > 23 || rD > 59 || LD > 60) return;
-      const cD = 60 === LD,
-        gD = new Date(0);
-      return gD.setUTCFullYear(sD, pD, wD), gD.setUTCHours(KD, rD, cD ? 59 : LD, 0), gD.getUTCDay() === zD && gD.getUTCDate() === wD && gD.getUTCMonth() === pD && gD.getUTCFullYear() === sD && gD.getUTCHours() === KD && gD.getUTCMinutes() === rD && gD.getUTCSeconds() === (cD ? 59 : LD) ? gD.getTime() + (cD ? 1e3 : 0) : void 0
+        weekday: ip,
+        day: cp,
+        month: Op,
+        year: op,
+        hour: Ip,
+        minute: Sp,
+        second: xp
+      } = pp;
+      if (op < 1900 || cp < 1 || Ip > 23 || Sp > 59 || xp > 60) return;
+      const Lp = 60 === xp,
+        Yp = new Date(0);
+      return Yp.setUTCFullYear(op, Op, cp), Yp.setUTCHours(Ip, Sp, Lp ? 59 : xp, 0), Yp.getUTCDay() === ip && Yp.getUTCDate() === cp && Yp.getUTCMonth() === Op && Yp.getUTCFullYear() === op && Yp.getUTCHours() === Ip && Yp.getUTCMinutes() === Sp && Yp.getUTCSeconds() === (Lp ? 59 : xp) ? Yp.getTime() + (Lp ? 1e3 : 0) : void 0
     }
-    var IK = class {
-      constructor(DD) {
-        this.options = DD, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
+    var UI = class {
+      constructor(pp) {
+        this.options = pp, this.admitted = 0, this.inProgress = 0, this.sequence = 0, this.nextSendAt = 0, this.attemptQueue = [], this.waiting = [], this.unloading = !1
       }
       reserve() {
-        var DD = this;
+        var pp = this;
         if (this.admitted >= this.options.bufferSize) return;
         this.admitted++;
-        const zD = this.sequence++;
-        let wD = !1;
+        const ip = this.sequence++;
+        let cp = !1;
         return {
           deliver: function() {
-            var wD = ap((function*(wD) {
-              const pD = DD.options.getNow();
-              let sD, KD = 0;
+            var cp = rO((function*(cp) {
+              const Op = pp.options.getNow();
+              let op, Ip = 0;
               for (;;) {
-                var rD, LD, cD;
-                const gD = DD.options.retry.maxAttempts - KD,
-                  RD = yield DD.runAttempt((() => wD(gD, DD.unloading)), KD > 0);
-                if (KD += RD.attemptsMade, "success" === RD.kind) return {
+                var Sp, xp, Lp;
+                const Yp = pp.options.retry.maxAttempts - Ip,
+                  Dp = yield pp.runAttempt((() => cp(Yp, pp.unloading)), Ip > 0);
+                if (Ip += Dp.attemptsMade, "success" === Dp.kind) return {
                   kind: "success",
-                  attempts: KD,
-                  elapsedTimeMs: DD.options.getNow() - pD
+                  attempts: Ip,
+                  elapsedTimeMs: pp.options.getNow() - Op
                 };
-                if (sD = RD.failure, "terminal" === RD.kind || DD.unloading) return {
+                if (op = Dp.failure, "terminal" === Dp.kind || pp.unloading) return {
                   kind: "terminal",
-                  attempts: KD,
-                  elapsedTimeMs: DD.options.getNow() - pD,
-                  failure: sD
+                  attempts: Ip,
+                  elapsedTimeMs: pp.options.getNow() - Op,
+                  failure: op
                 };
-                if (KD >= DD.options.retry.maxAttempts) return {
+                if (Ip >= pp.options.retry.maxAttempts) return {
                   kind: "terminal",
-                  attempts: KD,
-                  elapsedTimeMs: DD.options.getNow() - pD,
-                  failure: sD,
+                  attempts: Ip,
+                  elapsedTimeMs: pp.options.getNow() - Op,
+                  failure: op,
                   reason: "retries-exhausted"
                 };
-                if (null != RD.retryAfterMs && RD.retryAfterMs > DD.options.retry.maxBackoffMs) return {
+                if (null != Dp.retryAfterMs && Dp.retryAfterMs > pp.options.retry.maxBackoffMs) return {
                   kind: "terminal",
-                  attempts: KD,
-                  elapsedTimeMs: DD.options.getNow() - pD,
-                  failure: sD,
+                  attempts: Ip,
+                  elapsedTimeMs: pp.options.getNow() - Op,
+                  failure: op,
                   reason: "retry-after-too-long"
                 };
-                const AD = Math.min(null !== (rD = RD.retryAfterMs) && void 0 !== rD ? rD : DD.options.retry.initialBackoffMs * Math.pow(DD.options.retry.backoffMultiplier, KD - 1), DD.options.retry.maxBackoffMs);
-                if (null === (LD = (cD = DD.options).onRetry) || void 0 === LD || LD.call(cD, AD, KD + 1), yield DD.waitForTurn(zD, AD)) {
-                  const zD = DD.options.retry.maxAttempts - KD,
-                    sD = yield DD.runAttempt((() => wD(zD, !0)));
-                  return KD += sD.attemptsMade, {
-                    kind: "success" === sD.kind ? "success" : "terminal",
-                    attempts: KD,
-                    elapsedTimeMs: DD.options.getNow() - pD,
-                    failure: "success" === sD.kind ? void 0 : sD.failure
+                const Ap = Math.min(null !== (Sp = Dp.retryAfterMs) && void 0 !== Sp ? Sp : pp.options.retry.initialBackoffMs * Math.pow(pp.options.retry.backoffMultiplier, Ip - 1), pp.options.retry.maxBackoffMs);
+                if (null === (xp = (Lp = pp.options).onRetry) || void 0 === xp || xp.call(Lp, Ap, Ip + 1), yield pp.waitForTurn(ip, Ap)) {
+                  const ip = pp.options.retry.maxAttempts - Ip,
+                    op = yield pp.runAttempt((() => cp(ip, !0)));
+                  return Ip += op.attemptsMade, {
+                    kind: "success" === op.kind ? "success" : "terminal",
+                    attempts: Ip,
+                    elapsedTimeMs: pp.options.getNow() - Op,
+                    failure: "success" === op.kind ? void 0 : op.failure
                   }
                 }
               }
             }));
-            return function(DD) {
-              return wD.apply(this, arguments)
+            return function(pp) {
+              return cp.apply(this, arguments)
             }
           }(),
           release: () => {
-            wD || (wD = !0, this.admitted--)
+            cp || (cp = !0, this.admitted--)
           }
         }
       }
       flush() {
         this.unloading = !0, this.nextSendAt = 0;
-        const DD = this.waiting.splice(0);
+        const pp = this.waiting.splice(0);
         null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0);
-        for (const zD of DD) zD.resolve(!0);
+        for (const ip of pp) ip.resolve(!0);
         this.runNextAttempt()
       }
       resume() {
         this.unloading = !1
       }
-      runAttempt(DD) {
-        let zD = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return new Promise(((wD, pD) => {
+      runAttempt(pp) {
+        let ip = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        return new Promise(((cp, Op) => {
           this.attemptQueue.push({
             run: () => {
               this.inProgress++;
-              const zD = () => {
+              const ip = () => {
                 this.inProgress--, this.runNextAttempt()
               };
-              DD().then((DD => {
-                zD(), wD(DD)
-              }), (DD => {
-                zD(), pD(DD)
+              pp().then((pp => {
+                ip(), cp(pp)
+              }), (pp => {
+                ip(), Op(pp)
               }))
             },
-            isRedelivery: zD
+            isRedelivery: ip
           }), this.runNextAttempt()
         }))
       }
       runNextAttempt() {
         for (null != this.redeliveryTimer && (clearTimeout(this.redeliveryTimer), this.redeliveryTimer = void 0); this.inProgress < this.options.concurrency && this.attemptQueue.length > 0;) {
-          const DD = this.options.getNow(),
-            zD = this.attemptQueue.findIndex((zD => {
+          const pp = this.options.getNow(),
+            ip = this.attemptQueue.findIndex((ip => {
               let {
-                isRedelivery: wD
-              } = zD;
-              return this.unloading || !wD || DD >= this.nextSendAt
+                isRedelivery: cp
+              } = ip;
+              return this.unloading || !cp || pp >= this.nextSendAt
             }));
-          if (zD < 0) return void(this.redeliveryTimer = setTimeout((() => {
+          if (ip < 0) return void(this.redeliveryTimer = setTimeout((() => {
             this.redeliveryTimer = void 0, this.runNextAttempt()
-          }), Math.max(0, this.nextSendAt - DD)));
-          const [wD] = this.attemptQueue.splice(zD, 1);
-          wD.isRedelivery && !this.unloading && (this.nextSendAt = DD + 1), wD.run()
+          }), Math.max(0, this.nextSendAt - pp)));
+          const [cp] = this.attemptQueue.splice(ip, 1);
+          cp.isRedelivery && !this.unloading && (this.nextSendAt = pp + 1), cp.run()
         }
       }
-      waitForTurn(DD, zD) {
-        const wD = Math.min(zD * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
-        return new Promise((zD => {
+      waitForTurn(pp, ip) {
+        const cp = Math.min(ip * (1 + .2 * this.options.getRandom()), this.options.retry.maxBackoffMs);
+        return new Promise((ip => {
           this.waiting.push({
-            sequence: DD,
-            readyAt: this.options.getNow() + wD,
-            resolve: zD
-          }), this.waiting.sort(((DD, zD) => DD.readyAt === zD.readyAt ? DD.sequence - zD.sequence : DD.readyAt - zD.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
+            sequence: pp,
+            readyAt: this.options.getNow() + cp,
+            resolve: ip
+          }), this.waiting.sort(((pp, ip) => pp.readyAt === ip.readyAt ? pp.sequence - ip.sequence : pp.readyAt - ip.readyAt)), null != this.waitingTimer && (clearTimeout(this.waitingTimer), this.waitingTimer = void 0), this.scheduleNext()
         }))
       }
       scheduleNext() {
         if (null != this.waitingTimer || 0 === this.waiting.length) return;
-        const DD = this.waiting[0],
-          zD = DD.readyAt;
+        const pp = this.waiting[0],
+          ip = pp.readyAt;
         this.waitingTimer = setTimeout((() => {
           this.waitingTimer = void 0;
-          const zD = this.waiting.indexOf(DD);
-          zD >= 0 && this.waiting.splice(zD, 1), DD.resolve(!1), this.scheduleNext()
-        }), Math.max(0, zD - this.options.getNow()))
+          const ip = this.waiting.indexOf(pp);
+          ip >= 0 && this.waiting.splice(ip, 1), pp.resolve(!1), this.scheduleNext()
+        }), Math.max(0, ip - this.options.getNow()))
       }
     };
 
-    function BK(DD, zD) {
-      if (null == DD) return {};
-      var wD, pD, sD = function(DD, zD) {
-        if (null == DD) return {};
-        var wD = {};
-        for (var pD in DD)
-          if ({}.hasOwnProperty.call(DD, pD)) {
-            if (zD.includes(pD)) continue;
-            wD[pD] = DD[pD]
-          } return wD
-      }(DD, zD);
+    function wI(pp, ip) {
+      if (null == pp) return {};
+      var cp, Op, op = function(pp, ip) {
+        if (null == pp) return {};
+        var cp = {};
+        for (var Op in pp)
+          if ({}.hasOwnProperty.call(pp, Op)) {
+            if (ip.includes(Op)) continue;
+            cp[Op] = pp[Op]
+          } return cp
+      }(pp, ip);
       if (Object.getOwnPropertySymbols) {
-        var KD = Object.getOwnPropertySymbols(DD);
-        for (pD = 0; pD < KD.length; pD++) wD = KD[pD], zD.includes(wD) || {}.propertyIsEnumerable.call(DD, wD) && (sD[wD] = DD[wD])
+        var Ip = Object.getOwnPropertySymbols(pp);
+        for (Op = 0; Op < Ip.length; Op++) cp = Ip[Op], ip.includes(cp) || {}.propertyIsEnumerable.call(pp, cp) && (op[cp] = pp[cp])
       }
-      return sD
+      return op
     }
 
-    function GK(DD) {
+    function vI(pp) {
       const {
-        size: zD,
-        concurrency: wD
-      } = DD, pD = [];
-      let sD = 0;
-      const KD = () => {
-        if (sD < wD && pD.length) {
+        size: ip,
+        concurrency: cp
+      } = pp, Op = [];
+      let op = 0;
+      const Ip = () => {
+        if (op < cp && Op.length) {
           const {
-            producer: DD,
-            resolve: zD,
-            reject: wD
-          } = pD.shift();
-          sD++, DD().then((DD => {
-            sD--, KD(), zD(DD)
-          }), (DD => {
-            sD--, KD(), wD(DD)
+            producer: pp,
+            resolve: ip,
+            reject: cp
+          } = Op.shift();
+          op++, pp().then((pp => {
+            op--, Ip(), ip(pp)
+          }), (pp => {
+            op--, Ip(), cp(pp)
           }))
         }
       };
       return {
-        add: DD => {
-          if (pD.length + sD >= zD) throw new Error("Task buffer full");
-          return new Promise(((zD, wD) => {
-            pD.push({
-              producer: DD,
-              resolve: zD,
-              reject: wD
-            }), KD()
+        add: pp => {
+          if (Op.length + op >= ip) throw new Error("Task buffer full");
+          return new Promise(((ip, cp) => {
+            Op.push({
+              producer: pp,
+              resolve: ip,
+              reject: cp
+            }), Ip()
           }))
         }
       }
     }
-    const hK = ["headers"],
-      nK = ["keepalive", "signal"],
-      MK = new Set([408, 425, 429, 500, 502, 503, 504]),
-      OK = new Set([429, 503]);
-    let JK = 0,
-      EK = 0;
-    var QK = class extends Error {};
-    var XK = class extends zK {
-      constructor(DD) {
-        var zD, wD, pD, sD, KD, rD, LD, cD, gD, RD, AD, UD, fD, ID, BD, GD, hD;
-        super(), this.options = DD, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = ww, this.pendingCustomSends = 0, this.getNow = null !== (zD = DD.getNow) && void 0 !== zD ? zD : Date.now, this.requestTimeoutMs = null !== (wD = DD.requestTimeoutMs) && void 0 !== wD ? wD : 1e4, this.compressionEnabled = null !== (pD = DD.requestCompression) && void 0 !== pD && pD && "undefined" !== typeof CompressionStream, DD.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new IK({
-          bufferSize: null !== (sD = DD.bufferSize) && void 0 !== sD ? sD : 30,
-          concurrency: null !== (KD = DD.concurrency) && void 0 !== KD ? KD : 5,
+    const tI = ["headers"],
+      HI = ["keepalive", "signal"],
+      dI = new Set([408, 425, 429, 500, 502, 503, 504]),
+      eI = new Set([429, 503]);
+    let uI = 0,
+      jI = 0;
+    var kI = class extends Error {};
+    var mI = class extends cI {
+      constructor(pp) {
+        var ip, cp, Op, op, Ip, Sp, xp, Lp, Yp, Dp, Ap, Pp, Wp, yp, Up, wp, vp;
+        super(), this.options = pp, this.name = "@grafana/faro-web-sdk:transport-fetch", this.version = Ic, this.pendingCustomSends = 0, this.getNow = null !== (ip = pp.getNow) && void 0 !== ip ? ip : Date.now, this.requestTimeoutMs = null !== (cp = pp.requestTimeoutMs) && void 0 !== cp ? cp : 1e4, this.compressionEnabled = null !== (Op = pp.requestCompression) && void 0 !== Op && Op && "undefined" !== typeof CompressionStream, pp.requestCompression && !this.compressionEnabled && this.logWarn("requestCompression is enabled but CompressionStream is not available. Falling back to uncompressed."), this.requestTimeoutMs > 0 && "undefined" === typeof AbortController && this.logWarn("AbortController is unavailable. Requests will be sent without the configured timeout."), this.deliveryQueue = new UI({
+          bufferSize: null !== (op = pp.bufferSize) && void 0 !== op ? op : 30,
+          concurrency: null !== (Ip = pp.concurrency) && void 0 !== Ip ? Ip : 5,
           retry: {
-            maxAttempts: null !== (rD = null === (LD = DD.retry) || void 0 === LD ? void 0 : LD.maxAttempts) && void 0 !== rD ? rD : 3,
-            initialBackoffMs: null !== (cD = null !== (gD = null === (RD = DD.retry) || void 0 === RD ? void 0 : RD.initialBackoffMs) && void 0 !== gD ? gD : DD.defaultRateLimitBackoffMs) && void 0 !== cD ? cD : 1e3,
-            maxBackoffMs: null !== (AD = null === (UD = DD.retry) || void 0 === UD ? void 0 : UD.maxBackoffMs) && void 0 !== AD ? AD : 3e4,
-            backoffMultiplier: null !== (fD = null === (ID = DD.retry) || void 0 === ID ? void 0 : ID.backoffMultiplier) && void 0 !== fD ? fD : 2
+            maxAttempts: null !== (Sp = null === (xp = pp.retry) || void 0 === xp ? void 0 : xp.maxAttempts) && void 0 !== Sp ? Sp : 3,
+            initialBackoffMs: null !== (Lp = null !== (Yp = null === (Dp = pp.retry) || void 0 === Dp ? void 0 : Dp.initialBackoffMs) && void 0 !== Yp ? Yp : pp.defaultRateLimitBackoffMs) && void 0 !== Lp ? Lp : 1e3,
+            maxBackoffMs: null !== (Ap = null === (Pp = pp.retry) || void 0 === Pp ? void 0 : Pp.maxBackoffMs) && void 0 !== Ap ? Ap : 3e4,
+            backoffMultiplier: null !== (Wp = null === (yp = pp.retry) || void 0 === yp ? void 0 : yp.backoffMultiplier) && void 0 !== Wp ? Wp : 2
           },
           getNow: this.getNow,
-          getRandom: null !== (BD = DD.getRandom) && void 0 !== BD ? BD : Math.random,
-          onRetry: (DD, zD) => {
-            this.logDebug(`Retrying failed request after ${DD}ms. Attempt ${zD}.`)
+          getRandom: null !== (Up = pp.getRandom) && void 0 !== Up ? Up : Math.random,
+          onRetry: (pp, ip) => {
+            this.logDebug(`Retrying failed request after ${pp}ms. Attempt ${ip}.`)
           }
-        }), this.customPromiseBuffer = GK({
-          size: null !== (GD = DD.bufferSize) && void 0 !== GD ? GD : 30,
-          concurrency: null !== (hD = DD.concurrency) && void 0 !== hD ? hD : 5
+        }), this.customPromiseBuffer = vI({
+          size: null !== (wp = pp.bufferSize) && void 0 !== wp ? wp : 30,
+          concurrency: null !== (vp = pp.concurrency) && void 0 !== vp ? vp : 5
         }), this.defaultPromiseBuffer = {
-          add: DD => {
-            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(DD);
-            const zD = this.deliveryQueue.reserve();
-            if (!zD) throw new Error("Task buffer full");
-            return this.runBufferedTask(zD, DD)
+          add: pp => {
+            if (this.promiseBuffer !== this.defaultPromiseBuffer || this.promiseBuffer.add !== this.defaultBufferAdd || this.pendingCustomSends > 0) return this.customPromiseBuffer.add(pp);
+            const ip = this.deliveryQueue.reserve();
+            if (!ip) throw new Error("Task buffer full");
+            return this.runBufferedTask(ip, pp)
           }
-        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (DD => {
-          DD.persisted && this.deliveryQueue.resume()
+        }, this.defaultBufferAdd = this.defaultPromiseBuffer.add, this.promiseBuffer = this.defaultPromiseBuffer, "undefined" !== typeof window && (window.addEventListener("pagehide", (() => this.deliveryQueue.flush())), window.addEventListener("pageshow", (pp => {
+          pp.persisted && this.deliveryQueue.resume()
         })))
       }
-      send(DD) {
-        var zD = this;
-        return ap((function*() {
-          const wD = zD.promiseBuffer;
-          if (wD !== zD.defaultPromiseBuffer || wD.add !== zD.defaultBufferAdd) {
-            zD.pendingCustomSends++;
+      send(pp) {
+        var ip = this;
+        return rO((function*() {
+          const cp = ip.promiseBuffer;
+          if (cp !== ip.defaultPromiseBuffer || cp.add !== ip.defaultBufferAdd) {
+            ip.pendingCustomSends++;
             try {
-              yield wD.add((() => zD.deliver(DD)))
-            } catch (pD) {
-              zD.logError("Permanent delivery failure", {
-                error: pD,
+              yield cp.add((() => ip.deliver(pp)))
+            } catch (Op) {
+              ip.logError("Permanent delivery failure", {
+                error: Op,
                 attempts: 0,
                 elapsedTimeMs: 0
               })
             } finally {
-              zD.pendingCustomSends--
+              ip.pendingCustomSends--
             }
-          } else yield zD.deliver(DD)
+          } else yield ip.deliver(pp)
         }))()
       }
-      runBufferedTask(DD, zD) {
-        return ap((function*() {
-          let wD;
+      runBufferedTask(pp, ip) {
+        return rO((function*() {
+          let cp;
           try {
-            return yield DD.deliver(ap((function*() {
-              return wD = yield zD(), {
+            return yield pp.deliver(rO((function*() {
+              return cp = yield ip(), {
                 kind: "success",
                 attemptsMade: 1
               }
-            }))), wD
+            }))), cp
           } finally {
-            DD.release()
+            pp.release()
           }
         }))()
       }
-      deliver(DD) {
-        var zD = this;
-        return ap((function*() {
-          const wD = zD.deliveryQueue.reserve();
-          if (wD) try {
-            const pD = yield zD.prepareRequest(DD), sD = yield wD.deliver(((DD, wD) => zD.performAttempt(pD, DD, wD)));
-            "terminal" === sD.kind && zD.logError("retries-exhausted" === sD.reason ? "Delivery retries exhausted" : "Permanent delivery failure", Rz(Rz({}, sD.failure), {}, {
-              reason: sD.reason,
-              attempts: sD.attempts,
-              elapsedTimeMs: sD.elapsedTimeMs
+      deliver(pp) {
+        var ip = this;
+        return rO((function*() {
+          const cp = ip.deliveryQueue.reserve();
+          if (cp) try {
+            const Op = yield ip.prepareRequest(pp), op = yield cp.deliver(((pp, cp) => ip.performAttempt(Op, pp, cp)));
+            "terminal" === op.kind && ip.logError("retries-exhausted" === op.reason ? "Delivery retries exhausted" : "Permanent delivery failure", Pi(Pi({}, op.failure), {}, {
+              reason: op.reason,
+              attempts: op.attempts,
+              elapsedTimeMs: op.elapsedTimeMs
             }))
-          } catch (pD) {
-            zD.logError("Permanent delivery failure", {
-              error: pD,
+          } catch (Op) {
+            ip.logError("Permanent delivery failure", {
+              error: Op,
               attempts: 0,
               elapsedTimeMs: 0
             })
           } finally {
-            wD.release()
-          } else zD.logError("Permanent delivery failure", {
+            cp.release()
+          } else ip.logError("Permanent delivery failure", {
             error: "Reliable delivery queue is full",
             attempts: 0,
             elapsedTimeMs: 0
@@ -3406,477 +3406,477 @@ export const modules = {
         }))()
       }
       getIgnoreUrls() {
-        var DD;
-        return [this.options.url].concat(null !== (DD = this.config.ignoreUrls) && void 0 !== DD ? DD : [])
+        var pp;
+        return [this.options.url].concat(null !== (pp = this.config.ignoreUrls) && void 0 !== pp ? pp : [])
       }
       isBatched() {
         return !0
       }
-      prepareRequest(DD) {
-        var zD = this;
-        return ap((function*() {
-          var wD, pD;
-          const sD = KK(DD),
-            KD = null === (wD = sD.meta.session) || void 0 === wD ? void 0 : wD.id,
-            rD = JSON.stringify(sD),
-            LD = null !== (pD = zD.options.requestOptions) && void 0 !== pD ? pD : {},
+      prepareRequest(pp) {
+        var ip = this;
+        return rO((function*() {
+          var cp, Op;
+          const op = SI(pp),
+            Ip = null === (cp = op.meta.session) || void 0 === cp ? void 0 : cp.id,
+            Sp = JSON.stringify(op),
+            xp = null !== (Op = ip.options.requestOptions) && void 0 !== Op ? Op : {},
             {
-              headers: cD = {}
-            } = LD,
-            gD = BK(LD, hK),
+              headers: Lp = {}
+            } = xp,
+            Yp = wI(xp, tI),
             {
-              keepalive: RD,
-              signal: AD
-            } = gD,
-            UD = BK(gD, nK),
-            fD = {};
-          for (const [DD, zD] of Object.entries(cD)) fD[DD] = "function" === typeof zD ? yield zD(): zD;
-          let ID = rD,
-            BD = function(DD) {
-              return "undefined" === typeof TextEncoder ? DD.length : (new TextEncoder).encode(DD).byteLength
-            }(rD);
-          const GD = {};
-          return zD.compressionEnabled && (ID = yield zD.compress(rD), BD = ID.size, GD["Content-Encoding"] = "gzip"), {
-            bodySize: BD,
-            sessionId: KD,
-            requestInit: Rz({
+              keepalive: Dp,
+              signal: Ap
+            } = Yp,
+            Pp = wI(Yp, HI),
+            Wp = {};
+          for (const [pp, ip] of Object.entries(Lp)) Wp[pp] = "function" === typeof ip ? yield ip(): ip;
+          let yp = Sp,
+            Up = function(pp) {
+              return "undefined" === typeof TextEncoder ? pp.length : (new TextEncoder).encode(pp).byteLength
+            }(Sp);
+          const wp = {};
+          return ip.compressionEnabled && (yp = yield ip.compress(Sp), Up = yp.size, wp["Content-Encoding"] = "gzip"), {
+            bodySize: Up,
+            sessionId: Ip,
+            requestInit: Pi({
               method: "POST",
-              headers: Rz(Rz(Rz(Rz(Rz({
+              headers: Pi(Pi(Pi(Pi(Pi({
                 "Content-Type": "application/json"
-              }, GD), fD), zD.options.apiKey ? {
-                "x-api-key": zD.options.apiKey
-              } : {}), KD ? {
-                "x-faro-session-id": KD
+              }, wp), Wp), ip.options.apiKey ? {
+                "x-api-key": ip.options.apiKey
+              } : {}), Ip ? {
+                "x-faro-session-id": Ip
               } : {}), {}, {
-                "Idempotency-Key": hz(20)
+                "Idempotency-Key": Hi(20)
               }),
-              body: ID
-            }, UD)
+              body: yp
+            }, Pp)
           }
         }))()
       }
-      performAttempt(DD, zD, wD) {
-        var pD = this;
-        return ap((function*() {
-          var sD;
-          const KD = null === (sD = pD.options.requestOptions) || void 0 === sD ? void 0 : sD.signal;
-          if (null === KD || void 0 === KD ? void 0 : KD.aborted) return {
+      performAttempt(pp, ip, cp) {
+        var Op = this;
+        return rO((function*() {
+          var op;
+          const Ip = null === (op = Op.options.requestOptions) || void 0 === op ? void 0 : op.signal;
+          if (null === Ip || void 0 === Ip ? void 0 : Ip.aborted) return {
             kind: "terminal",
             failure: {
-              error: KD.reason
+              error: Ip.reason
             },
             attemptsMade: 0
           };
-          let rD = 0;
+          let Sp = 0;
           try {
-            var LD;
-            const sD = yield pD.fetchWithKeepaliveFallback(DD.requestInit, DD.bodySize, !!wD || (null === (LD = pD.options.requestOptions) || void 0 === LD ? void 0 : LD.keepalive), zD, (() => rD++));
-            if (pD.handleResponse(sD, DD.sessionId), sD.status >= 200 && sD.status < 300) return {
+            var xp;
+            const op = yield Op.fetchWithKeepaliveFallback(pp.requestInit, pp.bodySize, !!cp || (null === (xp = Op.options.requestOptions) || void 0 === xp ? void 0 : xp.keepalive), ip, (() => Sp++));
+            if (Op.handleResponse(op, pp.sessionId), op.status >= 200 && op.status < 300) return {
               kind: "success",
-              attemptsMade: rD
+              attemptsMade: Sp
             };
-            const KD = {
-              status: sD.status
+            const Ip = {
+              status: op.status
             };
-            return !MK.has(sD.status) || wD ? {
+            return !dI.has(op.status) || cp ? {
               kind: "terminal",
-              failure: KD,
-              attemptsMade: rD
+              failure: Ip,
+              attemptsMade: Sp
             } : {
               kind: "retry",
-              failure: KD,
-              attemptsMade: rD,
-              retryAfterMs: OK.has(sD.status) ? pD.getRetryAfterDelayMs(sD) : void 0
+              failure: Ip,
+              attemptsMade: Sp,
+              retryAfterMs: eI.has(op.status) ? Op.getRetryAfterDelayMs(op) : void 0
             }
-          } catch (cD) {
-            const DD = {
-              error: cD
+          } catch (Lp) {
+            const pp = {
+              error: Lp
             };
-            return (null === KD || void 0 === KD ? void 0 : KD.aborted) || !pD.isFetchNetworkError(cD) || wD ? {
+            return (null === Ip || void 0 === Ip ? void 0 : Ip.aborted) || !Op.isFetchNetworkError(Lp) || cp ? {
               kind: "terminal",
-              failure: DD,
-              attemptsMade: rD
+              failure: pp,
+              attemptsMade: Sp
             } : {
               kind: "retry",
-              failure: DD,
-              attemptsMade: rD
+              failure: pp,
+              attemptsMade: Sp
             }
           }
         }))()
       }
-      fetchWithKeepaliveFallback(DD, zD, wD, pD, sD) {
-        var KD = this;
-        return ap((function*() {
-          const rD = KD.getNow(),
-            LD = KD.reserveKeepalive(zD, wD);
+      fetchWithKeepaliveFallback(pp, ip, cp, Op, op) {
+        var Ip = this;
+        return rO((function*() {
+          const Sp = Ip.getNow(),
+            xp = Ip.reserveKeepalive(ip, cp);
           try {
-            return yield KD.fetchWithTimeout(Rz(Rz({}, DD), {}, {
-              keepalive: LD.keepalive
-            }), KD.requestTimeoutMs, sD)
-          } catch (gD) {
-            var cD;
-            if (LD.keepalive && pD > 1 && KD.isFetchNetworkError(gD) && !(gD instanceof QK) && !(null === (cD = KD.options.requestOptions) || void 0 === cD || null === (cD = cD.signal) || void 0 === cD ? void 0 : cD.aborted)) {
-              KD.logDebug("Retrying failed keepalive request with keepalive disabled.");
-              const zD = KD.requestTimeoutMs - (KD.getNow() - rD);
-              return KD.fetchWithTimeout(Rz(Rz({}, DD), {}, {
+            return yield Ip.fetchWithTimeout(Pi(Pi({}, pp), {}, {
+              keepalive: xp.keepalive
+            }), Ip.requestTimeoutMs, op)
+          } catch (Yp) {
+            var Lp;
+            if (xp.keepalive && Op > 1 && Ip.isFetchNetworkError(Yp) && !(Yp instanceof kI) && !(null === (Lp = Ip.options.requestOptions) || void 0 === Lp || null === (Lp = Lp.signal) || void 0 === Lp ? void 0 : Lp.aborted)) {
+              Ip.logDebug("Retrying failed keepalive request with keepalive disabled.");
+              const ip = Ip.requestTimeoutMs - (Ip.getNow() - Sp);
+              return Ip.fetchWithTimeout(Pi(Pi({}, pp), {}, {
                 keepalive: !1
-              }), zD, sD)
+              }), ip, op)
             }
-            throw gD
+            throw Yp
           } finally {
-            LD.release()
+            xp.release()
           }
         }))()
       }
-      fetchWithTimeout(DD, zD, wD) {
-        var pD = this;
-        return ap((function*() {
-          var sD;
-          const KD = null === (sD = pD.options.requestOptions) || void 0 === sD ? void 0 : sD.signal;
-          if (pD.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return wD(), fetch(pD.options.url, Rz(Rz({}, DD), {}, {
-            signal: KD
+      fetchWithTimeout(pp, ip, cp) {
+        var Op = this;
+        return rO((function*() {
+          var op;
+          const Ip = null === (op = Op.options.requestOptions) || void 0 === op ? void 0 : op.signal;
+          if (Op.requestTimeoutMs <= 0 || "undefined" === typeof AbortController) return cp(), fetch(Op.options.url, Pi(Pi({}, pp), {}, {
+            signal: Ip
           }));
-          if (zD <= 0) throw new QK("Request timed out");
-          const rD = new AbortController,
-            LD = () => rD.abort(null === KD || void 0 === KD ? void 0 : KD.reason);
-          null === KD || void 0 === KD || KD.addEventListener("abort", LD, {
+          if (ip <= 0) throw new kI("Request timed out");
+          const Sp = new AbortController,
+            xp = () => Sp.abort(null === Ip || void 0 === Ip ? void 0 : Ip.reason);
+          null === Ip || void 0 === Ip || Ip.addEventListener("abort", xp, {
             once: !0
           });
-          let cD = !1;
-          const gD = setTimeout((() => {
-            cD = !0, rD.abort()
-          }), zD);
+          let Lp = !1;
+          const Yp = setTimeout((() => {
+            Lp = !0, Sp.abort()
+          }), ip);
           try {
-            return wD(), yield fetch(pD.options.url, Rz(Rz({}, DD), {}, {
-              signal: rD.signal
+            return cp(), yield fetch(Op.options.url, Pi(Pi({}, pp), {}, {
+              signal: Sp.signal
             }))
-          } catch (RD) {
-            if (cD && !(null === KD || void 0 === KD ? void 0 : KD.aborted)) throw new QK("Request timed out");
-            throw RD
+          } catch (Dp) {
+            if (Lp && !(null === Ip || void 0 === Ip ? void 0 : Ip.aborted)) throw new kI("Request timed out");
+            throw Dp
           } finally {
-            clearTimeout(gD), null === KD || void 0 === KD || KD.removeEventListener("abort", LD)
+            clearTimeout(Yp), null === Ip || void 0 === Ip || Ip.removeEventListener("abort", xp)
           }
         }))()
       }
-      getRetryAfterDelayMs(DD) {
-        const zD = DD.headers.get("Retry-After");
-        if (!zD) return;
-        if (/^\d+$/.test(zD)) {
-          const DD = 1e3 * Number(zD);
-          return Number.isFinite(DD) ? DD : Number.POSITIVE_INFINITY
+      getRetryAfterDelayMs(pp) {
+        const ip = pp.headers.get("Retry-After");
+        if (!ip) return;
+        if (/^\d+$/.test(ip)) {
+          const pp = 1e3 * Number(ip);
+          return Number.isFinite(pp) ? pp : Number.POSITIVE_INFINITY
         }
-        const wD = this.getNow(),
-          pD = function(DD, zD) {
-            const wD = LK.exec(DD);
-            if (wD) {
-              const [, DD, zD, pD, sD, KD, rD, LD] = wD;
-              return fK({
-                weekday: RK.indexOf(DD),
-                day: Number(zD),
-                month: UK.indexOf(pD),
-                year: Number(sD),
-                hour: Number(KD),
-                minute: Number(rD),
-                second: Number(LD)
+        const cp = this.getNow(),
+          Op = function(pp, ip) {
+            const cp = LI.exec(pp);
+            if (cp) {
+              const [, pp, ip, Op, op, Ip, Sp, xp] = cp;
+              return yI({
+                weekday: AI.indexOf(pp),
+                day: Number(ip),
+                month: WI.indexOf(Op),
+                year: Number(op),
+                hour: Number(Ip),
+                minute: Number(Sp),
+                second: Number(xp)
               })
             }
-            const pD = cK.exec(DD);
-            if (pD) {
-              const [, DD, wD, rD, LD, cD, gD, RD] = pD, AD = new Date(zD);
-              if (Number.isNaN(AD.getTime())) return;
-              const UD = AD.getUTCFullYear();
-              let fD = 100 * Math.floor(UD / 100) + Number(LD);
-              fD < UD && (fD += 100);
-              const ID = UK.indexOf(rD),
-                BD = {
-                  month: ID,
-                  day: Number(wD),
-                  hour: Number(cD),
-                  minute: Number(gD),
-                  second: Number(RD),
+            const Op = YI.exec(pp);
+            if (Op) {
+              const [, pp, cp, Sp, xp, Lp, Yp, Dp] = Op, Ap = new Date(ip);
+              if (Number.isNaN(Ap.getTime())) return;
+              const Pp = Ap.getUTCFullYear();
+              let Wp = 100 * Math.floor(Pp / 100) + Number(xp);
+              Wp < Pp && (Wp += 100);
+              const yp = WI.indexOf(Sp),
+                Up = {
+                  month: yp,
+                  day: Number(cp),
+                  hour: Number(Lp),
+                  minute: Number(Yp),
+                  second: Number(Dp),
                   millisecond: 0
                 },
-                GD = {
-                  month: AD.getUTCMonth(),
-                  day: AD.getUTCDate(),
-                  hour: AD.getUTCHours(),
-                  minute: AD.getUTCMinutes(),
-                  second: AD.getUTCSeconds(),
-                  millisecond: AD.getUTCMilliseconds()
+                wp = {
+                  month: Ap.getUTCMonth(),
+                  day: Ap.getUTCDate(),
+                  hour: Ap.getUTCHours(),
+                  minute: Ap.getUTCMinutes(),
+                  second: Ap.getUTCSeconds(),
+                  millisecond: Ap.getUTCMilliseconds()
                 };
-              return (fD > UD + 50 || fD === UD + 50 && (KD = GD, ((sD = BD).month - KD.month || sD.day - KD.day || sD.hour - KD.hour || sD.minute - KD.minute || sD.second - KD.second || sD.millisecond - KD.millisecond) > 0)) && (fD -= 100), fK({
-                weekday: AK.indexOf(DD),
-                day: Number(wD),
-                month: ID,
-                year: fD,
-                hour: Number(cD),
-                minute: Number(gD),
-                second: Number(RD)
+              return (Wp > Pp + 50 || Wp === Pp + 50 && (Ip = wp, ((op = Up).month - Ip.month || op.day - Ip.day || op.hour - Ip.hour || op.minute - Ip.minute || op.second - Ip.second || op.millisecond - Ip.millisecond) > 0)) && (Wp -= 100), yI({
+                weekday: PI.indexOf(pp),
+                day: Number(cp),
+                month: yp,
+                year: Wp,
+                hour: Number(Lp),
+                minute: Number(Yp),
+                second: Number(Dp)
               })
             }
-            var sD, KD;
-            const rD = gK.exec(DD);
-            if (!rD) return;
-            const [, LD, cD, gD, RD, AD, UD, fD, ID] = rD;
-            return fK({
-              weekday: RK.indexOf(LD),
-              day: Number(null !== gD && void 0 !== gD ? gD : RD),
-              month: UK.indexOf(cD),
-              year: Number(ID),
-              hour: Number(AD),
-              minute: Number(UD),
-              second: Number(fD)
+            var op, Ip;
+            const Sp = DI.exec(pp);
+            if (!Sp) return;
+            const [, xp, Lp, Yp, Dp, Ap, Pp, Wp, yp] = Sp;
+            return yI({
+              weekday: AI.indexOf(xp),
+              day: Number(null !== Yp && void 0 !== Yp ? Yp : Dp),
+              month: WI.indexOf(Lp),
+              year: Number(yp),
+              hour: Number(Ap),
+              minute: Number(Pp),
+              second: Number(Wp)
             })
-          }(zD, wD);
-        return null == pD ? void 0 : Math.max(0, pD - wD)
+          }(ip, cp);
+        return null == Op ? void 0 : Math.max(0, Op - cp)
       }
-      reserveKeepalive(DD, zD) {
-        if (!1 === zD || DD > 6e4 || JK + DD > 6e4 || EK >= 9) return {
+      reserveKeepalive(pp, ip) {
+        if (!1 === ip || pp > 6e4 || uI + pp > 6e4 || jI >= 9) return {
           keepalive: !1,
-          release: ez
+          release: Gi
         };
-        JK += DD, EK++;
-        let wD = !1;
+        uI += pp, jI++;
+        let cp = !1;
         return {
           keepalive: !0,
           release: () => {
-            wD || (wD = !0, JK -= DD, EK--)
+            cp || (cp = !0, uI -= pp, jI--)
           }
         }
       }
-      handleResponse(DD, zD) {
-        202 === DD.status && "invalid" === DD.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), zD), DD.text().catch(ez)
+      handleResponse(pp, ip) {
+        202 === pp.status && "invalid" === pp.headers.get("X-Faro-Session-Status") && this.extendFaroSession(this.config, this.logDebug.bind(this), ip), pp.text().catch(Gi)
       }
-      isFetchNetworkError(DD) {
-        return DD instanceof TypeError || DD instanceof QK || DD instanceof DOMException && "AbortError" === DD.name
+      isFetchNetworkError(pp) {
+        return pp instanceof TypeError || pp instanceof kI || pp instanceof DOMException && "AbortError" === pp.name
       }
-      compress(DD) {
-        return ap((function*() {
-          const zD = [],
-            wD = new ReadableStream({
-              start(zD) {
-                zD.enqueue((new TextEncoder).encode(DD)), zD.close()
+      compress(pp) {
+        return rO((function*() {
+          const ip = [],
+            cp = new ReadableStream({
+              start(ip) {
+                ip.enqueue((new TextEncoder).encode(pp)), ip.close()
               }
             }).pipeThrough(new CompressionStream("gzip")).getReader();
           for (;;) {
             const {
-              done: DD,
-              value: pD
-            } = yield wD.read();
-            if (DD) return new Blob(zD);
-            zD.push(pD)
+              done: pp,
+              value: Op
+            } = yield cp.read();
+            if (pp) return new Blob(ip);
+            ip.push(Op)
           }
         }))()
       }
-      extendFaroSession(DD, zD, wD) {
-        var pD, sD;
-        const KD = DD.sessionTracking;
-        if (!(null === KD || void 0 === KD ? void 0 : KD.enabled)) return void zD("Session expired.");
+      extendFaroSession(pp, ip, cp) {
+        var Op, op;
+        const Ip = pp.sessionTracking;
+        if (!(null === Ip || void 0 === Ip ? void 0 : Ip.enabled)) return void ip("Session expired.");
         const {
-          fetchUserSession: rD,
-          storeUserSession: LD
-        } = mz(KD), cD = null === (pD = this.metas.value.session) || void 0 === pD ? void 0 : pD.id, gD = null === (sD = rD()) || void 0 === sD ? void 0 : sD.sessionId;
-        wD && wD === cD && wD === gD ? (Tz({
-          fetchUserSession: rD,
-          storeUserSession: LD
+          fetchUserSession: Sp,
+          storeUserSession: xp
+        } = gi(Ip), Lp = null === (Op = this.metas.value.session) || void 0 === Op ? void 0 : Op.id, Yp = null === (op = Sp()) || void 0 === op ? void 0 : op.sessionId;
+        cp && cp === Lp && cp === Yp ? (Xi({
+          fetchUserSession: Sp,
+          storeUserSession: xp
         })({
           forceSessionExtend: !0
-        }), zD("Session expired; created new session.")) : zD("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
+        }), ip("Session expired; created new session.")) : ip("Ignoring stale or cross-tab session-invalid response; request session no longer current.")
       }
     };
-    const VK = () => {
-      const DD = window.k6;
+    const RI = () => {
+      const pp = window.k6;
       return {
-        k6: Rz({
+        k6: Pi({
           isK6Browser: !0
-        }, (null === DD || void 0 === DD ? void 0 : DD.testRunId) && {
-          testRunId: null === DD || void 0 === DD ? void 0 : DD.testRunId
+        }, (null === pp || void 0 === pp ? void 0 : pp.testRunId) && {
+          testRunId: null === pp || void 0 === pp ? void 0 : pp.testRunId
         })
       }
     };
-    let PK, CK;
+    let qI, MI;
 
-    function xK() {
+    function CI() {
       let {
-        generatePageId: DD,
-        initialPageMeta: zD
+        generatePageId: pp,
+        initialPageMeta: ip
       } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
       return () => {
-        const wD = location.href;
-        return xD(DD) && PK !== wD && (PK = wD, CK = DD(location)), {
-          page: Rz(Rz({
-            url: wD
-          }, CK ? {
-            id: CK
-          } : {}), zD)
+        const cp = location.href;
+        return Cp(pp) && qI !== cp && (qI = cp, MI = pp(location)), {
+          page: Pi(Pi({
+            url: cp
+          }, MI ? {
+            id: MI
+          } : {}), ip)
         }
       }
     }
 
-    function TK() {
-      let DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : qz,
-        zD = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
-      const wD = az;
-      return zD > 0 && (wD.error = zD >= 1 ? function() {
-        for (var zD = arguments.length, pD = new Array(zD), sD = 0; sD < zD; sD++) pD[sD] = arguments[sD];
-        DD.error(`${wD.prefix}\n`, ...pD)
-      } : ez, wD.warn = zD >= 2 ? function() {
-        for (var zD = arguments.length, pD = new Array(zD), sD = 0; sD < zD; sD++) pD[sD] = arguments[sD];
-        DD.warn(`${wD.prefix}\n`, ...pD)
-      } : ez, wD.info = zD >= 3 ? function() {
-        for (var zD = arguments.length, pD = new Array(zD), sD = 0; sD < zD; sD++) pD[sD] = arguments[sD];
-        DD.info(`${wD.prefix}\n`, ...pD)
-      } : ez, wD.debug = zD >= 4 ? function() {
-        for (var zD = arguments.length, pD = new Array(zD), sD = 0; sD < zD; sD++) pD[sD] = arguments[sD];
-        DD.debug(`${wD.prefix}\n`, ...pD)
-      } : ez), wD
+    function EI() {
+      let pp = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : cc,
+        ip = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
+      const cp = Zi;
+      return ip > 0 && (cp.error = ip >= 1 ? function() {
+        for (var ip = arguments.length, Op = new Array(ip), op = 0; op < ip; op++) Op[op] = arguments[op];
+        pp.error(`${cp.prefix}\n`, ...Op)
+      } : Gi, cp.warn = ip >= 2 ? function() {
+        for (var ip = arguments.length, Op = new Array(ip), op = 0; op < ip; op++) Op[op] = arguments[op];
+        pp.warn(`${cp.prefix}\n`, ...Op)
+      } : Gi, cp.info = ip >= 3 ? function() {
+        for (var ip = arguments.length, Op = new Array(ip), op = 0; op < ip; op++) Op[op] = arguments[op];
+        pp.info(`${cp.prefix}\n`, ...Op)
+      } : Gi, cp.debug = ip >= 4 ? function() {
+        for (var ip = arguments.length, Op = new Array(ip), op = 0; op < ip; op++) Op[op] = arguments[op];
+        pp.debug(`${cp.prefix}\n`, ...Op)
+      } : Gi), cp
     }
-    const bK = "faro",
-      jK = {
+    const XI = "faro",
+      lI = {
         enabled: !0,
         sendTimeout: 250,
         itemLimit: 50
       },
-      dK = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
+      QI = ["dedupe", "eventDomain", "globalObjectKey", "instrumentations", "internalLoggerLevel", "isolate", "logArgsSerializer", "metas", "paused", "preventGlobalExposure", "unpatchedConsole", "url", "experimental"];
 
-    function SK(DD) {
-      var zD, wD, sD, KD, rD, LD;
-      const cD = [],
-        RD = TK(DD.unpatchedConsole, DD.internalLoggerLevel);
-      DD.transports ? ((DD.url || DD.apiKey) && RD.error('if "transports" is defined, "url" and "apiKey" should not be defined'), cD.push(...DD.transports)) : DD.url ? cD.push(new XK({
-        url: DD.url,
-        apiKey: DD.apiKey,
-        requestCompression: DD.requestCompression
-      })) : RD.error('either "url" or "transports" must be defined');
+    function JI(pp) {
+      var ip, cp, op, Ip, Sp, xp;
+      const Lp = [],
+        Dp = EI(pp.unpatchedConsole, pp.internalLoggerLevel);
+      pp.transports ? ((pp.url || pp.apiKey) && Dp.error('if "transports" is defined, "url" and "apiKey" should not be defined'), Lp.push(...pp.transports)) : pp.url ? Lp.push(new mI({
+        url: pp.url,
+        apiKey: pp.apiKey,
+        requestCompression: pp.requestCompression
+      })) : Dp.error('either "url" or "transports" must be defined');
       const {
-        dedupe: AD = !0,
-        eventDomain: UD = pD,
-        globalObjectKey: fD = bK,
-        instrumentations: ID = as(),
-        internalLoggerLevel: BD = uz,
-        isolate: GD = !1,
-        logArgsSerializer: hD = jw,
-        metas: nD = lK(DD),
-        paused: MD = !1,
-        preventGlobalExposure: OD = !1,
-        unpatchedConsole: JD = qz,
-        url: ED,
-        experimental: QD
-      } = DD, XD = BK(DD, dK), VD = null !== (zD = null === QD || void 0 === QD ? void 0 : QD.trackNavigation) && void 0 !== zD && zD, PD = {
-        dataAttributeName: qp(null !== (wD = null === (sD = DD.userActionsInstrumentation) || void 0 === sD ? void 0 : sD.dataAttributeName) && void 0 !== wD ? wD : Fp),
-        excludeItem: null === (KD = DD.userActionsInstrumentation) || void 0 === KD ? void 0 : KD.excludeItem,
-        initialActivityTimeout: Ds(null === (rD = DD.userActionsInstrumentation) || void 0 === rD ? void 0 : rD.initialActivityTimeout, 100, (DD => RD.warn(DD)))
+        dedupe: Ap = !0,
+        eventDomain: Pp = Op,
+        globalObjectKey: Wp = XI,
+        instrumentations: yp = Go(),
+        internalLoggerLevel: Up = zi,
+        isolate: wp = !1,
+        logArgsSerializer: vp = Qc,
+        metas: tp = NI(pp),
+        paused: Hp = !1,
+        preventGlobalExposure: dp = !1,
+        unpatchedConsole: ep = cc,
+        url: jp,
+        experimental: kp
+      } = pp, mp = wI(pp, QI), Rp = null !== (ip = null === kp || void 0 === kp ? void 0 : kp.trackNavigation) && void 0 !== ip && ip, qp = {
+        dataAttributeName: po(null !== (cp = null === (op = pp.userActionsInstrumentation) || void 0 === op ? void 0 : op.dataAttributeName) && void 0 !== cp ? cp : sO),
+        excludeItem: null === (Ip = pp.userActionsInstrumentation) || void 0 === Ip ? void 0 : Ip.excludeItem,
+        initialActivityTimeout: io(null === (Sp = pp.userActionsInstrumentation) || void 0 === Sp ? void 0 : Sp.initialActivityTimeout, 100, (pp => Dp.warn(pp)))
       };
-      return Rz(Rz({}, XD), {}, {
-        batching: Rz(Rz({}, jK), DD.batching),
-        dedupe: AD,
-        globalObjectKey: fD,
-        instrumentations: iK(ID, DD),
-        internalLoggerLevel: BD,
-        isolate: GD,
-        logArgsSerializer: hD,
-        metas: nD,
-        parseStacktrace: Gw,
-        paused: MD,
-        preventGlobalExposure: OD,
-        transports: cD,
-        unpatchedConsole: JD,
-        eventDomain: UD,
-        ignoreUrls: [...null !== (LD = DD.ignoreUrls) && void 0 !== LD ? LD : [], ...ED ? [ED] : [], /\/collect(?:\/[\w]*)?$/],
-        sessionTracking: Rz(Rz(Rz({}, gD), DD.sessionTracking), WK({
-          trackGeolocation: DD.trackGeolocation,
-          sessionTracking: DD.sessionTracking
+      return Pi(Pi({}, mp), {}, {
+        batching: Pi(Pi({}, lI), pp.batching),
+        dedupe: Ap,
+        globalObjectKey: Wp,
+        instrumentations: BI(yp, pp),
+        internalLoggerLevel: Up,
+        isolate: wp,
+        logArgsSerializer: vp,
+        metas: tp,
+        parseStacktrace: tc,
+        paused: Hp,
+        preventGlobalExposure: dp,
+        transports: Lp,
+        unpatchedConsole: ep,
+        eventDomain: Pp,
+        ignoreUrls: [...null !== (xp = pp.ignoreUrls) && void 0 !== xp ? xp : [], ...jp ? [jp] : [], /\/collect(?:\/[\w]*)?$/],
+        sessionTracking: Pi(Pi(Pi({}, Yp), pp.sessionTracking), TI({
+          trackGeolocation: pp.trackGeolocation,
+          sessionTracking: pp.sessionTracking
         })),
-        userActionsInstrumentation: PD,
+        userActionsInstrumentation: qp,
         experimental: {
-          trackNavigation: VD
+          trackNavigation: Rp
         }
       })
     }
 
-    function iK(DD, zD) {
+    function BI(pp, ip) {
       let {
-        experimental: wD
-      } = zD;
-      var pD;
-      const sD = null !== (pD = null === wD || void 0 === wD ? void 0 : wD.trackNavigation) && void 0 !== pD && pD;
-      return DD.filter((DD => !("@grafana/faro-web-sdk:instrumentation-navigation" === DD.name && !sD)))
+        experimental: cp
+      } = ip;
+      var Op;
+      const op = null !== (Op = null === cp || void 0 === cp ? void 0 : cp.trackNavigation) && void 0 !== Op && Op;
+      return pp.filter((pp => !("@grafana/faro-web-sdk:instrumentation-navigation" === pp.name && !op)))
     }
 
-    function lK(DD) {
-      var zD, wD, pD;
+    function NI(pp) {
+      var ip, cp, Op;
       const {
-        page: sD,
-        generatePageId: KD
-      } = null !== (zD = null === DD || void 0 === DD ? void 0 : DD.pageTracking) && void 0 !== zD ? zD : {}, rD = [Ys, Hs, xK({
-        generatePageId: KD,
-        initialPageMeta: sD
-      }), ...null !== (wD = DD.metas) && void 0 !== wD ? wD : [], DK];
-      return CD(null === (pD = window) || void 0 === pD ? void 0 : pD.k6) ? [...rD, VK] : rD
+        page: op,
+        generatePageId: Ip
+      } = null !== (ip = null === pp || void 0 === pp ? void 0 : pp.pageTracking) && void 0 !== ip ? ip : {}, Sp = [Ko, Vo, CI({
+        generatePageId: Ip,
+        initialPageMeta: op
+      }), ...null !== (cp = pp.metas) && void 0 !== cp ? cp : [], iI];
+      return Mp(null === (Op = window) || void 0 === Op ? void 0 : Op.k6) ? [...Sp, RI] : Sp
     }
 
-    function WK(DD) {
+    function TI(pp) {
       let {
-        trackGeolocation: zD,
-        sessionTracking: wD
-      } = DD;
-      var pD;
-      const sD = {};
-      return VD(zD) && (sD.geoLocationTrackingEnabled = zD), uD(sD) ? {} : {
-        session: Rz(Rz({}, null !== (pD = null === wD || void 0 === wD ? void 0 : wD.session) && void 0 !== pD ? pD : {}), {}, {
-          overrides: sD
+        trackGeolocation: ip,
+        sessionTracking: cp
+      } = pp;
+      var Op;
+      const op = {};
+      return Rp(ip) && (op.geoLocationTrackingEnabled = ip), rp(op) ? {} : {
+        session: Pi(Pi({}, null !== (Op = null === cp || void 0 === cp ? void 0 : cp.session) && void 0 !== Op ? Op : {}), {}, {
+          overrides: op
         })
       }
     }
-    const NK = new WeakSet;
+    const fI = new WeakSet;
 
-    function ZK(DD) {
-      return NK.add(DD), DD
+    function bI(pp) {
+      return fI.add(pp), pp
     }
 
-    function yK(DD, zD) {
-      if (DD.capture) return ZK(DD.capture(zD));
-      const wD = ZK(DD.value);
-      return null === zD || void 0 === zD || zD(), wD
+    function hI(pp, ip) {
+      if (pp.capture) return bI(pp.capture(ip));
+      const cp = bI(pp.value);
+      return null === ip || void 0 === ip || ip(), cp
     }
 
-    function kK(DD) {
-      const zD = `__faroBundleId_${DD}`,
-        wD = null === RD || void 0 === RD ? void 0 : RD[zD];
-      if ("string" === typeof wD && "" !== wD) return wD;
-      const pD = "undefined" !== typeof window ? window[zD] : void 0;
-      return "string" === typeof pD && "" !== pD ? pD : void 0
+    function aI(pp) {
+      const ip = `__faroBundleId_${pp}`,
+        cp = null === Dp || void 0 === Dp ? void 0 : Dp[ip];
+      if ("string" === typeof cp && "" !== cp) return cp;
+      const Op = "undefined" !== typeof window ? window[ip] : void 0;
+      return "string" === typeof Op && "" !== Op ? Op : void 0
     }
 
-    function mK(DD) {
-      var zD, wD;
-      const pD = DD.config.app.name,
-        sD = pD ? function(DD) {
-          return null === RD || void 0 === RD ? void 0 : RD[`__faroGitHash_${DD}`]
-        }(pD) : void 0,
-        KD = {
+    function nI(pp) {
+      var ip, cp;
+      const Op = pp.config.app.name,
+        op = Op ? function(pp) {
+          return null === Dp || void 0 === Dp ? void 0 : Dp[`__faroGitHash_${pp}`]
+        }(Op) : void 0,
+        Ip = {
           sdk: {
-            version: ww,
+            version: Ic,
             name: "faro"
           },
-          app: Hz({
-            bundleId: pD && kK(pD)
-          }, void 0 !== sD ? {
-            gitHash: sD
+          app: ic({
+            bundleId: Op && aI(Op)
+          }, void 0 !== op ? {
+            gitHash: op
           } : {})
         },
-        rD = null === (zD = DD.config.sessionTracking) || void 0 === zD ? void 0 : zD.session;
-      rD && DD.api.setSession(rD), DD.config.app && (KD.app = Hz(Hz({}, DD.config.app), KD.app)), DD.config.user && (KD.user = DD.config.user), DD.config.view && (KD.view = DD.config.view), DD.metas.add(KD, ...null !== (wD = DD.config.metas) && void 0 !== wD ? wD : [])
+        Sp = null === (ip = pp.config.sessionTracking) || void 0 === ip ? void 0 : ip.session;
+      Sp && pp.api.setSession(Sp), pp.config.app && (Ip.app = ic(ic({}, pp.config.app), Ip.app)), pp.config.user && (Ip.user = pp.config.user), pp.config.view && (Ip.view = pp.config.view), pp.metas.add(Ip, ...null !== (cp = pp.config.metas) && void 0 !== cp ? cp : [])
     }
-    var eK = class {
-      constructor(DD, zD) {
-        var wD, pD;
-        this.signalBuffer = [], this.itemLimit = null !== (wD = null === zD || void 0 === zD ? void 0 : zD.itemLimit) && void 0 !== wD ? wD : 50, this.sendTimeout = null !== (pD = null === zD || void 0 === zD ? void 0 : zD.sendTimeout) && void 0 !== pD ? pD : 250, this.paused = (null === zD || void 0 === zD ? void 0 : zD.paused) || !1, this.sendFn = DD, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
+    var FI = class {
+      constructor(pp, ip) {
+        var cp, Op;
+        this.signalBuffer = [], this.itemLimit = null !== (cp = null === ip || void 0 === ip ? void 0 : ip.itemLimit) && void 0 !== cp ? cp : 50, this.sendTimeout = null !== (Op = null === ip || void 0 === ip ? void 0 : ip.sendTimeout) && void 0 !== Op ? Op : 250, this.paused = (null === ip || void 0 === ip ? void 0 : ip.paused) || !1, this.sendFn = pp, this.paused || this.start(), "undefined" !== typeof document && document.addEventListener("visibilitychange", (() => {
           "hidden" === document.visibilityState && this.flush()
         }))
       }
-      addItem(DD) {
-        this.paused || (this.signalBuffer.push(DD), this.signalBuffer.length >= this.itemLimit && this.flush())
+      addItem(pp) {
+        this.paused || (this.signalBuffer.push(pp), this.signalBuffer.length >= this.itemLimit && this.flush())
       }
       start() {
         this.paused = !1, this.sendTimeout > 0 && (this.flushInterval = setInterval((() => this.flush()), this.sendTimeout))
@@ -3884,22 +3884,22 @@ export const modules = {
       pause() {
         this.paused = !0, clearInterval(this.flushInterval)
       }
-      groupItems(DD) {
-        const zD = new Map;
-        return DD.forEach((DD => {
-          const wD = JSON.stringify(DD.meta);
-          let pD = zD.get(wD);
-          pD = void 0 === pD ? [DD] : [...pD, DD], zD.set(wD, pD)
-        })), Array.from(zD.values())
+      groupItems(pp) {
+        const ip = new Map;
+        return pp.forEach((pp => {
+          const cp = JSON.stringify(pp.meta);
+          let Op = ip.get(cp);
+          Op = void 0 === Op ? [pp] : [...Op, pp], ip.set(cp, Op)
+        })), Array.from(ip.values())
       }
       flush() {
         if (this.paused || 0 === this.signalBuffer.length) return;
-        const DD = this.signalBuffer;
+        const pp = this.signalBuffer;
         this.signalBuffer = [];
         try {
-          this.groupItems(DD).forEach(this.sendFn)
-        } catch (zD) {
-          throw this.signalBuffer = [...DD, ...this.signalBuffer], this.trimBufferToLimit(), zD
+          this.groupItems(pp).forEach(this.sendFn)
+        } catch (ip) {
+          throw this.signalBuffer = [...pp, ...this.signalBuffer], this.trimBufferToLimit(), ip
         }
       }
       trimBufferToLimit() {
@@ -3907,710 +3907,710 @@ export const modules = {
       }
     };
 
-    function oK(DD, zD, wD, pD) {
-      var sD;
-      zD.debug("Initializing transports");
-      const KD = [];
-      let rD = [];
-      const LD = DD => {
-        let zD = DD;
-        for (const pD of rD) {
-          const DD = zD.map(pD).filter(Boolean);
-          if (0 === DD.length) return [];
-          zD = aK(DD, wD)
+    function gI(pp, ip, cp, Op) {
+      var op;
+      ip.debug("Initializing transports");
+      const Ip = [];
+      let Sp = [];
+      const xp = pp => {
+        let ip = pp;
+        for (const Op of Sp) {
+          const pp = ip.map(Op).filter(Boolean);
+          if (0 === pp.length) return [];
+          ip = GI(pp, cp)
         }
-        return zD
+        return ip
       };
-      let cD;
-      (null === (sD = wD.batching) || void 0 === sD ? void 0 : sD.enabled) && (cD = new eK((DD => {
-        const wD = LD(DD);
-        if (0 !== wD.length)
-          for (const pD of KD) zD.debug(`Transporting item using ${pD.name}\n`, wD), pD.isBatched() && pD.send(wD)
+      let Lp;
+      (null === (op = cp.batching) || void 0 === op ? void 0 : op.enabled) && (Lp = new FI((pp => {
+        const cp = xp(pp);
+        if (0 !== cp.length)
+          for (const Op of Ip) ip.debug(`Transporting item using ${Op.name}\n`, cp), Op.isBatched() && Op.send(cp)
       }), {
-        sendTimeout: wD.batching.sendTimeout,
-        itemLimit: wD.batching.itemLimit,
-        paused: wD.paused
+        sendTimeout: cp.batching.sendTimeout,
+        itemLimit: cp.batching.itemLimit,
+        paused: cp.paused
       }));
       return {
         add: function() {
-          zD.debug("Adding transports");
-          for (var sD = arguments.length, rD = new Array(sD), LD = 0; LD < sD; LD++) rD[LD] = arguments[LD];
-          rD.forEach((sD => {
-            zD.debug(`Adding "${sD.name}" transport`), KD.some((DD => DD === sD)) ? zD.warn(`Transport ${sD.name} is already added`) : (sD.unpatchedConsole = DD, sD.internalLogger = zD, sD.config = wD, sD.metas = pD, KD.push(sD))
+          ip.debug("Adding transports");
+          for (var op = arguments.length, Sp = new Array(op), xp = 0; xp < op; xp++) Sp[xp] = arguments[xp];
+          Sp.forEach((op => {
+            ip.debug(`Adding "${op.name}" transport`), Ip.some((pp => pp === op)) ? ip.warn(`Transport ${op.name} is already added`) : (op.unpatchedConsole = pp, op.internalLogger = ip, op.config = cp, op.metas = Op, Ip.push(op))
           }))
         },
         addBeforeSendHooks: function() {
-          zD.debug("Adding beforeSendHooks\n", rD);
-          for (var DD = arguments.length, wD = new Array(DD), pD = 0; pD < DD; pD++) wD[pD] = arguments[pD];
-          wD.forEach((DD => {
-            DD && rD.push(DD)
+          ip.debug("Adding beforeSendHooks\n", Sp);
+          for (var pp = arguments.length, cp = new Array(pp), Op = 0; Op < pp; Op++) cp[Op] = arguments[Op];
+          cp.forEach((pp => {
+            pp && Sp.push(pp)
           }))
         },
-        getBeforeSendHooks: () => [...rD],
-        execute: DD => {
-          var sD;
-          if (!wD.paused && yz(pD).shouldCapture()) {
-            if (AD = DD.meta, !NK.has(AD)) {
-              var rD, gD, RD;
-              const zD = null === (rD = pD.value.session) || void 0 === rD ? void 0 : rD.id,
-                sD = yK(pD);
-              if (wD.paused) return;
-              const KD = Hz({}, DD.meta);
-              (null === (gD = KD.session) || void 0 === gD ? void 0 : gD.id) === zD && (null === (RD = sD.session) || void 0 === RD ? void 0 : RD.id) !== zD && (void 0 === sD.session ? delete KD.session : KD.session = sD.session), DD = Hz(Hz({}, DD), {}, {
-                meta: ZK(KD)
+        getBeforeSendHooks: () => [...Sp],
+        execute: pp => {
+          var op;
+          if (!cp.paused && ni(Op).shouldCapture()) {
+            if (Ap = pp.meta, !fI.has(Ap)) {
+              var Sp, Yp, Dp;
+              const ip = null === (Sp = Op.value.session) || void 0 === Sp ? void 0 : Sp.id,
+                op = hI(Op);
+              if (cp.paused) return;
+              const Ip = ic({}, pp.meta);
+              (null === (Yp = Ip.session) || void 0 === Yp ? void 0 : Yp.id) === ip && (null === (Dp = op.session) || void 0 === Dp ? void 0 : Dp.id) !== ip && (void 0 === op.session ? delete Ip.session : Ip.session = op.session), pp = ic(ic({}, pp), {}, {
+                meta: bI(Ip)
               })
             }
-            var AD;
-            (null === (sD = wD.batching) || void 0 === sD ? void 0 : sD.enabled) && (null === cD || void 0 === cD || cD.addItem(DD)), (DD => {
-              var pD;
-              if ((null === (pD = wD.batching) || void 0 === pD ? void 0 : pD.enabled) && KD.every((DD => DD.isBatched()))) return;
-              const [sD] = LD([DD]);
-              if (void 0 !== sD)
-                for (const LD of KD) {
-                  var rD;
-                  zD.debug(`Transporting item using ${LD.name}\n`, sD), LD.isBatched() ? (null === (rD = wD.batching) || void 0 === rD ? void 0 : rD.enabled) || LD.send([sD]) : LD.send(sD)
+            var Ap;
+            (null === (op = cp.batching) || void 0 === op ? void 0 : op.enabled) && (null === Lp || void 0 === Lp || Lp.addItem(pp)), (pp => {
+              var Op;
+              if ((null === (Op = cp.batching) || void 0 === Op ? void 0 : Op.enabled) && Ip.every((pp => pp.isBatched()))) return;
+              const [op] = xp([pp]);
+              if (void 0 !== op)
+                for (const xp of Ip) {
+                  var Sp;
+                  ip.debug(`Transporting item using ${xp.name}\n`, op), xp.isBatched() ? (null === (Sp = cp.batching) || void 0 === Sp ? void 0 : Sp.enabled) || xp.send([op]) : xp.send(op)
                 }
-            })(DD)
+            })(pp)
           }
         },
-        isPaused: () => wD.paused,
+        isPaused: () => cp.paused,
         pause: () => {
-          zD.debug("Pausing transports"), null === cD || void 0 === cD || cD.pause(), wD.paused = !0
+          ip.debug("Pausing transports"), null === Lp || void 0 === Lp || Lp.pause(), cp.paused = !0
         },
         remove: function() {
-          zD.debug("Removing transports");
-          for (var DD = arguments.length, wD = new Array(DD), pD = 0; pD < DD; pD++) wD[pD] = arguments[pD];
-          wD.forEach((DD => {
-            zD.debug(`Removing "${DD.name}" transport`);
-            const wD = KD.indexOf(DD); - 1 !== wD ? KD.splice(wD, 1) : zD.warn(`Transport "${DD.name}" is not added`)
+          ip.debug("Removing transports");
+          for (var pp = arguments.length, cp = new Array(pp), Op = 0; Op < pp; Op++) cp[Op] = arguments[Op];
+          cp.forEach((pp => {
+            ip.debug(`Removing "${pp.name}" transport`);
+            const cp = Ip.indexOf(pp); - 1 !== cp ? Ip.splice(cp, 1) : ip.warn(`Transport "${pp.name}" is not added`)
           }))
         },
         removeBeforeSendHooks: function() {
-          for (var DD = arguments.length, wD = new Array(DD), pD = 0; pD < DD; pD++) wD[pD] = arguments[pD];
-          zD.debug("Removing beforeSendHooks"), rD = rD.filter((DD => !wD.includes(DD)))
+          for (var pp = arguments.length, cp = new Array(pp), Op = 0; Op < pp; Op++) cp[Op] = arguments[Op];
+          ip.debug("Removing beforeSendHooks"), Sp = Sp.filter((pp => !cp.includes(pp)))
         },
         get transports() {
-          return [...KD]
+          return [...Ip]
         },
         unpause: () => {
-          zD.debug("Unpausing transports"), null === cD || void 0 === cD || cD.start(), wD.paused = !1
+          ip.debug("Unpausing transports"), null === Lp || void 0 === Lp || Lp.start(), cp.paused = !1
         }
       }
     }
 
-    function aK(DD, zD) {
-      if (zD.preserveOriginalError)
-        for (const wD of DD) "exception" === wD.type && delete wD.payload.originalError;
-      return DD
+    function GI(pp, ip) {
+      if (ip.preserveOriginalError)
+        for (const cp of pp) "exception" === cp.type && delete cp.payload.originalError;
+      return pp
     }
-    let uK = qz;
+    let rI = cc;
 
-    function vK(DD) {
-      var zD;
-      return uK = null !== (zD = DD.unpatchedConsole) && void 0 !== zD ? zD : uK, uK
+    function ZI(pp) {
+      var ip;
+      return rI = null !== (ip = pp.unpatchedConsole) && void 0 !== ip ? ip : rI, rI
     }
-    let tK, FK = az;
+    let zI, sI = Zi;
 
-    function YK(DD, zD) {
-      return FK = TK(DD, zD.internalLoggerLevel), FK
+    function KI(pp, ip) {
+      return sI = EI(pp, ip.internalLoggerLevel), sI
     }
 
-    function HK(DD) {
+    function VI(pp) {
       let {
-        internalLogger: zD,
-        config: wD,
-        metas: pD,
-        transports: sD,
-        tracesApi: KD,
-        userActionsApi: rD
-      } = DD;
-      var LD;
-      zD.debug("Initializing exceptions API");
-      let cD = null;
-      tK = null !== (LD = wD.parseStacktrace) && void 0 !== LD ? LD : tK;
-      const gD = DD => {
-          zD.debug("Changing stacktrace parser"), tK = null !== DD && void 0 !== DD ? DD : tK
+        internalLogger: ip,
+        config: cp,
+        metas: Op,
+        transports: op,
+        tracesApi: Ip,
+        userActionsApi: Sp
+      } = pp;
+      var xp;
+      ip.debug("Initializing exceptions API");
+      let Lp = null;
+      zI = null !== (xp = cp.parseStacktrace) && void 0 !== xp ? xp : zI;
+      const Yp = pp => {
+          ip.debug("Changing stacktrace parser"), zI = null !== pp && void 0 !== pp ? pp : zI
         },
         {
-          ignoreErrors: RD = [],
-          preserveOriginalError: AD
-        } = wD;
-      return gD(wD.parseStacktrace), {
-        changeStacktraceParser: gD,
-        getStacktraceParser: () => tK,
-        pushError: function(DD) {
+          ignoreErrors: Dp = [],
+          preserveOriginalError: Ap
+        } = cp;
+      return Yp(cp.parseStacktrace), {
+        changeStacktraceParser: Yp,
+        getStacktraceParser: () => zI,
+        pushError: function(pp) {
           let {
-            skipDedupe: LD,
-            stackFrames: gD,
-            type: UD,
-            context: fD,
-            spanContext: ID,
-            timestampOverwriteMs: BD,
-            originalError: GD,
-            fingerprint: hD,
-            fatal: nD
+            skipDedupe: xp,
+            stackFrames: Yp,
+            type: Pp,
+            context: Wp,
+            spanContext: yp,
+            timestampOverwriteMs: Up,
+            originalError: wp,
+            fingerprint: vp,
+            fatal: tp
           } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-          if (! function(DD, zD) {
+          if (! function(pp, ip) {
               const {
-                message: wD,
-                name: pD,
-                stack: sD
-              } = zD;
-              return KD = DD, rD = wD + " " + pD + " " + sD, KD.some((DD => ED(DD) ? rD.includes(DD) : !!rD.match(DD)));
-              var KD, rD
-            }(RD, null !== GD && void 0 !== GD ? GD : DD)) try {
-            var MD, OD;
-            if (!yz(pD).shouldCapture()) return;
-            const RD = lz(Hz(Hz({}, function(DD) {
-                let zD = DD.cause;
-                WD(zD) ? zD = DD.cause.toString() : null !== zD && (CD(DD.cause) || TD(DD.cause)) ? zD = iz(DD.cause) : null != zD && (zD = DD.cause.toString());
-                return null == zD ? {} : {
-                  cause: zD
+                message: cp,
+                name: Op,
+                stack: op
+              } = ip;
+              return Ip = pp, Sp = cp + " " + Op + " " + op, Ip.some((pp => jp(pp) ? Sp.includes(pp) : !!Sp.match(pp)));
+              var Ip, Sp
+            }(Dp, null !== wp && void 0 !== wp ? wp : pp)) try {
+            var Hp, dp;
+            if (!ni(Op).shouldCapture()) return;
+            const Dp = Ti(ic(ic({}, function(pp) {
+                let ip = pp.cause;
+                Tp(ip) ? ip = pp.cause.toString() : null !== ip && (Mp(pp.cause) || Ep(pp.cause)) ? ip = Ni(pp.cause) : null != ip && (ip = pp.cause.toString());
+                return null == ip ? {} : {
+                  cause: ip
                 }
-              }(null !== GD && void 0 !== GD ? GD : DD)), null !== fD && void 0 !== fD ? fD : {})),
-              ED = Hz(Hz(Hz(Hz({
-                type: UD || DD.name || "Error",
-                value: DD.message,
-                timestamp: BD ? Bz(BD) : Iz(),
-                trace: ID ? {
-                  trace_id: ID.traceId,
-                  span_id: ID.spanId
-                } : KD.getTraceContext()
-              }, uD(RD) ? {} : {
-                context: RD
-              }), AD ? {
-                originalError: GD
-              } : {}), hD ? {
-                fingerprint: hD
-              } : {}), void 0 !== nD ? {
-                fatal: nD
+              }(null !== wp && void 0 !== wp ? wp : pp)), null !== Wp && void 0 !== Wp ? Wp : {})),
+              jp = ic(ic(ic(ic({
+                type: Pp || pp.name || "Error",
+                value: pp.message,
+                timestamp: Up ? vi(Up) : wi(),
+                trace: yp ? {
+                  trace_id: yp.traceId,
+                  span_id: yp.spanId
+                } : Ip.getTraceContext()
+              }, rp(Dp) ? {} : {
+                context: Dp
+              }), Ap ? {
+                originalError: wp
+              } : {}), vp ? {
+                fingerprint: vp
+              } : {}), void 0 !== tp ? {
+                fatal: tp
               } : {});
-            gD = null !== (MD = gD) && void 0 !== MD ? MD : DD.stack ? null === tK || void 0 === tK ? void 0 : tK(DD).frames : void 0, (null === gD || void 0 === gD ? void 0 : gD.length) && (ED.stacktrace = {
-              frames: gD
+            Yp = null !== (Hp = Yp) && void 0 !== Hp ? Hp : pp.stack ? null === zI || void 0 === zI ? void 0 : zI(pp).frames : void 0, (null === Yp || void 0 === Yp ? void 0 : Yp.length) && (jp.stacktrace = {
+              frames: Yp
             });
-            const QD = {
-              type: ED.type,
-              value: ED.value,
-              stacktrace: ED.stacktrace,
-              context: ED.context,
-              fingerprint: ED.fingerprint,
-              fatal: null !== (OD = ED.fatal) && void 0 !== OD && OD
+            const kp = {
+              type: jp.type,
+              value: jp.value,
+              stacktrace: jp.stacktrace,
+              context: jp.context,
+              fingerprint: jp.fingerprint,
+              fatal: null !== (dp = jp.fatal) && void 0 !== dp && dp
             };
-            if (!LD && wD.dedupe && !JD(cD) && nz(QD, cD)) return void zD.debug("Skipping error push because it is the same as the last one\n", ED);
-            const XD = cD,
-              VD = yK(pD);
-            if (cD !== XD && !LD && wD.dedupe && nz(QD, cD)) return;
-            cD = QD;
-            const PD = {
-              meta: VD,
-              payload: ED,
+            if (!xp && cp.dedupe && !ep(Lp) && di(kp, Lp)) return void ip.debug("Skipping error push because it is the same as the last one\n", jp);
+            const mp = Lp,
+              Rp = hI(Op);
+            if (Lp !== mp && !xp && cp.dedupe && di(kp, Lp)) return;
+            Lp = kp;
+            const qp = {
+              meta: Rp,
+              payload: jp,
               type: "exception"
             };
-            zD.debug("Pushing exception\n", PD), Vs(rD.getActiveUserAction(), PD) || sD.execute(PD)
-          } catch (QD) {
-            zD.error("Error pushing event", QD)
+            ip.debug("Pushing exception\n", qp), Ro(Sp.getActiveUserAction(), qp) || op.execute(qp)
+          } catch (kp) {
+            ip.error("Error pushing event", kp)
           }
         }
       }
     }
 
-    function qK(DD, zD, wD, pD, sD) {
-      zD.debug("Initializing API");
-      let KD = null;
-      const rD = function(DD) {
+    function pS(pp, ip, cp, Op, op) {
+      ip.debug("Initializing API");
+      let Ip = null;
+      const Sp = function(pp) {
           let {
-            transports: zD,
-            internalLogger: wD,
-            config: pD,
-            pushEvent: sD
-          } = DD;
-          var KD;
-          const rD = null === (KD = pD.userActionsInstrumentation) || void 0 === KD ? void 0 : KD.excludeItem;
-          let LD;
-          const cD = () => LD;
+            transports: ip,
+            internalLogger: cp,
+            config: Op,
+            pushEvent: op
+          } = pp;
+          var Ip;
+          const Sp = null === (Ip = Op.userActionsInstrumentation) || void 0 === Ip ? void 0 : Ip.excludeItem;
+          let xp;
+          const Lp = () => xp;
           return {
-            startUserAction: (DD, pD, KD) => {
-              if (void 0 === cD()) {
-                const wD = new Qs({
-                  name: DD,
-                  transports: zD,
-                  attributes: pD,
-                  trigger: (null === KD || void 0 === KD ? void 0 : KD.triggerName) || "faroApiCall",
-                  importance: (null === KD || void 0 === KD ? void 0 : KD.importance) || Os.Normal,
-                  trackUserActionsExcludeItem: rD,
-                  pushEvent: sD
+            startUserAction: (pp, Op, Ip) => {
+              if (void 0 === Lp()) {
+                const cp = new ko({
+                  name: pp,
+                  transports: ip,
+                  attributes: Op,
+                  trigger: (null === Ip || void 0 === Ip ? void 0 : Ip.triggerName) || "faroApiCall",
+                  importance: (null === Ip || void 0 === Ip ? void 0 : Ip.importance) || uo.Normal,
+                  trackUserActionsExcludeItem: Sp,
+                  pushEvent: op
                 });
-                return wD.filter((DD => [3, 2].includes(DD))).first().subscribe((() => {
-                  LD = void 0
-                })), Xs.notify({
-                  type: Ms,
-                  userAction: wD,
-                  initialActivityTimeout: null === KD || void 0 === KD ? void 0 : KD.initialActivityTimeout
-                }), LD = wD, LD
+                return cp.filter((pp => [3, 2].includes(pp))).first().subscribe((() => {
+                  xp = void 0
+                })), mo.notify({
+                  type: eo,
+                  userAction: cp,
+                  initialActivityTimeout: null === Ip || void 0 === Ip ? void 0 : Ip.initialActivityTimeout
+                }), xp = cp, xp
               }
-              wD.error("Attempted to create a new user action while one is already running. This is not possible.")
+              cp.error("Attempted to create a new user action while one is already running. This is not possible.")
             },
-            getActiveUserAction: cD
+            getActiveUserAction: Lp
           }
         }({
-          transports: sD,
-          config: wD,
-          internalLogger: zD,
-          pushEvent: (DD, wD, pD, sD) => {
-            KD ? KD(DD, wD, pD, sD) : zD.warn("pushEventImpl is not initialized. Event dropped:", {
-              name: DD,
-              attributes: wD,
-              domain: pD,
-              options: sD
+          transports: op,
+          config: cp,
+          internalLogger: ip,
+          pushEvent: (pp, cp, Op, op) => {
+            Ip ? Ip(pp, cp, Op, op) : ip.warn("pushEventImpl is not initialized. Event dropped:", {
+              name: pp,
+              attributes: cp,
+              domain: Op,
+              options: op
             })
           }
         }),
-        LD = function(DD, zD, wD, pD, sD) {
-          let KD;
-          return zD.debug("Initializing traces API"), {
-            getOTEL: () => KD,
+        xp = function(pp, ip, cp, Op, op) {
+          let Ip;
+          return ip.debug("Initializing traces API"), {
+            getOTEL: () => Ip,
             getTraceContext: () => {
-              const DD = null === KD || void 0 === KD ? void 0 : KD.trace.getSpanContext(KD.context.active());
-              return DD ? {
-                trace_id: DD.traceId,
-                span_id: DD.spanId
+              const pp = null === Ip || void 0 === Ip ? void 0 : Ip.trace.getSpanContext(Ip.context.active());
+              return pp ? {
+                trace_id: pp.traceId,
+                span_id: pp.spanId
               } : void 0
             },
-            initOTEL: (DD, wD) => {
-              zD.debug("Initializing OpenTelemetry"), KD = {
-                trace: DD,
-                context: wD
+            initOTEL: (pp, cp) => {
+              ip.debug("Initializing OpenTelemetry"), Ip = {
+                trace: pp,
+                context: cp
               }
             },
-            isOTELInitialized: () => !!KD,
-            pushTraces: DD => {
+            isOTELInitialized: () => !!Ip,
+            pushTraces: pp => {
               try {
-                if (!yz(pD).shouldCapture()) return;
-                const wD = {
+                if (!ni(Op).shouldCapture()) return;
+                const cp = {
                   type: "trace",
-                  payload: DD,
-                  meta: yK(pD)
+                  payload: pp,
+                  meta: hI(Op)
                 };
-                zD.debug("Pushing trace\n", wD), sD.execute(wD)
-              } catch (wD) {
-                zD.error("Error pushing trace\n", wD)
+                ip.debug("Pushing trace\n", cp), op.execute(cp)
+              } catch (cp) {
+                ip.error("Error pushing trace\n", cp)
               }
             }
           }
-        }(0, zD, 0, pD, sD),
-        cD = {
-          unpatchedConsole: DD,
-          internalLogger: zD,
-          userActionsApi: rD,
-          config: wD,
-          metas: pD,
-          transports: sD,
-          tracesApi: LD
+        }(0, ip, 0, Op, op),
+        Lp = {
+          unpatchedConsole: pp,
+          internalLogger: ip,
+          userActionsApi: Sp,
+          config: cp,
+          metas: Op,
+          transports: op,
+          tracesApi: xp
         },
-        gD = function(DD) {
+        Yp = function(pp) {
           let {
-            internalLogger: zD,
-            config: wD,
-            metas: pD,
-            transports: sD,
-            tracesApi: KD,
-            userActionsApi: rD
-          } = DD, LD = null;
+            internalLogger: ip,
+            config: cp,
+            metas: Op,
+            transports: op,
+            tracesApi: Ip,
+            userActionsApi: Sp
+          } = pp, xp = null;
           return {
-            pushEvent: function(DD, cD, gD) {
+            pushEvent: function(pp, Lp, Yp) {
               let {
-                skipDedupe: RD,
-                spanContext: AD,
-                timestampOverwriteMs: UD,
-                customPayloadTransformer: fD = DD => DD
+                skipDedupe: Dp,
+                spanContext: Ap,
+                timestampOverwriteMs: Pp,
+                customPayloadTransformer: Wp = pp => pp
               } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
               try {
-                if (!yz(pD).shouldCapture()) return;
-                const ID = lz(cD),
-                  BD = fD({
-                    name: DD,
-                    domain: null !== gD && void 0 !== gD ? gD : wD.eventDomain,
-                    attributes: uD(ID) ? void 0 : ID,
-                    timestamp: UD ? Bz(UD) : Iz(),
-                    trace: AD ? {
-                      trace_id: AD.traceId,
-                      span_id: AD.spanId
-                    } : KD.getTraceContext()
+                if (!ni(Op).shouldCapture()) return;
+                const yp = Ti(Lp),
+                  Up = Wp({
+                    name: pp,
+                    domain: null !== Yp && void 0 !== Yp ? Yp : cp.eventDomain,
+                    attributes: rp(yp) ? void 0 : yp,
+                    timestamp: Pp ? vi(Pp) : wi(),
+                    trace: Ap ? {
+                      trace_id: Ap.traceId,
+                      span_id: Ap.spanId
+                    } : Ip.getTraceContext()
                   }),
-                  GD = {
-                    name: BD.name,
-                    attributes: BD.attributes,
-                    domain: BD.domain
+                  wp = {
+                    name: Up.name,
+                    attributes: Up.attributes,
+                    domain: Up.domain
                   };
-                if (!RD && wD.dedupe && !JD(LD) && nz(GD, LD)) return void zD.debug("Skipping event push because it is the same as the last one\n", BD);
-                const hD = LD,
-                  nD = yK(pD);
-                if (LD !== hD && !RD && wD.dedupe && nz(GD, LD)) return;
-                LD = GD;
-                const MD = {
-                  meta: nD,
-                  payload: BD,
+                if (!Dp && cp.dedupe && !ep(xp) && di(wp, xp)) return void ip.debug("Skipping event push because it is the same as the last one\n", Up);
+                const vp = xp,
+                  tp = hI(Op);
+                if (xp !== vp && !Dp && cp.dedupe && di(wp, xp)) return;
+                xp = wp;
+                const Hp = {
+                  meta: tp,
+                  payload: Up,
                   type: "event"
                 };
-                zD.debug("Pushing event\n", MD), Vs(rD.getActiveUserAction(), MD) || sD.execute(MD)
-              } catch (ID) {
-                zD.error("Error pushing event", ID)
+                ip.debug("Pushing event\n", Hp), Ro(Sp.getActiveUserAction(), Hp) || op.execute(Hp)
+              } catch (yp) {
+                ip.error("Error pushing event", yp)
               }
             }
           }
-        }(cD);
-      return KD = gD.pushEvent, Hz(Hz(Hz(Hz(Hz(Hz(Hz({}, LD), HK(cD)), function(DD) {
-        let zD, wD, pD, sD, {
-          internalLogger: KD,
-          metas: rD
-        } = DD;
-        KD.debug("Initializing meta API");
-        const LD = DD => {
-            wD && rD.remove(wD), wD = {
-              user: DD
-            }, rD.add(wD)
+        }(Lp);
+      return Ip = Yp.pushEvent, ic(ic(ic(ic(ic(ic(ic({}, xp), VI(Lp)), function(pp) {
+        let ip, cp, Op, op, {
+          internalLogger: Ip,
+          metas: Sp
+        } = pp;
+        Ip.debug("Initializing meta API");
+        const xp = pp => {
+            cp && Sp.remove(cp), cp = {
+              user: pp
+            }, Sp.add(cp)
           },
-          cD = (DD, wD) => {
-            var pD;
-            const sD = null === wD || void 0 === wD ? void 0 : wD.overrides,
-              KD = sD ? {
-                overrides: Hz(Hz({}, null === zD || void 0 === zD || null === (pD = zD.session) || void 0 === pD ? void 0 : pD.overrides), sD)
+          Lp = (pp, cp) => {
+            var Op;
+            const op = null === cp || void 0 === cp ? void 0 : cp.overrides,
+              Ip = op ? {
+                overrides: ic(ic({}, null === ip || void 0 === ip || null === (Op = ip.session) || void 0 === Op ? void 0 : Op.overrides), op)
               } : {};
-            zD && rD.remove(zD), zD = {
-              session: Hz(Hz({}, uD(DD) ? void 0 : DD), KD)
-            }, rD.add(zD)
+            ip && Sp.remove(ip), ip = {
+              session: ic(ic({}, rp(pp) ? void 0 : pp), Ip)
+            }, Sp.add(ip)
           },
-          gD = (DD, zD) => {
-            yz(rD).notifySessionUpdate({
+          Yp = (pp, ip) => {
+            ni(Sp).notifySessionUpdate({
               type: "replace",
-              session: DD,
-              overrides: null === zD || void 0 === zD ? void 0 : zD.overrides
-            }), cD(DD, zD)
+              session: pp,
+              overrides: null === ip || void 0 === ip ? void 0 : ip.overrides
+            }), Lp(pp, ip)
           },
-          RD = () => rD.value.session,
-          AD = () => rD.value.page;
+          Dp = () => Sp.value.session,
+          Ap = () => Sp.value.page;
         return {
-          setUser: LD,
-          resetUser: LD,
-          setSession: gD,
-          resetSession: gD,
-          getSession: RD,
-          setView: (DD, zD) => {
-            var wD;
-            if ((null === zD || void 0 === zD ? void 0 : zD.overrides) && (yz(rD).notifySessionUpdate({
+          setUser: xp,
+          resetUser: xp,
+          setSession: Yp,
+          resetSession: Yp,
+          getSession: Dp,
+          setView: (pp, ip) => {
+            var cp;
+            if ((null === ip || void 0 === ip ? void 0 : ip.overrides) && (ni(Sp).notifySessionUpdate({
                 type: "overrides",
-                overrides: zD.overrides
-              }), cD(RD(), {
-                overrides: zD.overrides
-              })), (null === pD || void 0 === pD || null === (wD = pD.view) || void 0 === wD ? void 0 : wD.name) === (null === DD || void 0 === DD ? void 0 : DD.name)) return;
-            const sD = pD;
-            pD = {
-              view: DD
-            }, rD.add(pD), sD && rD.remove(sD)
+                overrides: ip.overrides
+              }), Lp(Dp(), {
+                overrides: ip.overrides
+              })), (null === Op || void 0 === Op || null === (cp = Op.view) || void 0 === cp ? void 0 : cp.name) === (null === pp || void 0 === pp ? void 0 : pp.name)) return;
+            const op = Op;
+            Op = {
+              view: pp
+            }, Sp.add(Op), op && Sp.remove(op)
           },
-          getView: () => rD.value.view,
-          setPage: DD => {
-            var zD;
-            const wD = ED(DD) ? Hz(Hz({}, null !== (zD = null === sD || void 0 === sD ? void 0 : sD.page) && void 0 !== zD ? zD : AD()), {}, {
-              id: DD
-            }) : DD;
-            sD && rD.remove(sD), sD = {
-              page: wD
-            }, rD.add(sD)
+          getView: () => Sp.value.view,
+          setPage: pp => {
+            var ip;
+            const cp = jp(pp) ? ic(ic({}, null !== (ip = null === op || void 0 === op ? void 0 : op.page) && void 0 !== ip ? ip : Ap()), {}, {
+              id: pp
+            }) : pp;
+            op && Sp.remove(op), op = {
+              page: cp
+            }, Sp.add(op)
           },
-          getPage: AD
+          getPage: Ap
         }
-      }(cD)), function(DD) {
+      }(Lp)), function(pp) {
         let {
-          internalLogger: zD,
-          config: wD,
-          metas: pD,
-          transports: sD,
-          tracesApi: KD,
-          userActionsApi: rD
-        } = DD;
-        var LD;
-        zD.debug("Initializing logs API");
-        let cD = null;
-        const gD = null !== (LD = wD.logArgsSerializer) && void 0 !== LD ? LD : jw;
+          internalLogger: ip,
+          config: cp,
+          metas: Op,
+          transports: op,
+          tracesApi: Ip,
+          userActionsApi: Sp
+        } = pp;
+        var xp;
+        ip.debug("Initializing logs API");
+        let Lp = null;
+        const Yp = null !== (xp = cp.logArgsSerializer) && void 0 !== xp ? xp : Qc;
         return {
-          pushLog: function(DD) {
+          pushLog: function(pp) {
             let {
-              context: LD,
-              level: RD,
-              skipDedupe: AD,
-              spanContext: UD,
-              timestampOverwriteMs: fD
+              context: xp,
+              level: Dp,
+              skipDedupe: Ap,
+              spanContext: Pp,
+              timestampOverwriteMs: Wp
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!yz(pD).shouldCapture()) return;
-              const ID = lz(LD),
-                BD = {
-                  message: gD(DD),
-                  level: null !== RD && void 0 !== RD ? RD : "log",
-                  context: uD(ID) ? void 0 : ID,
-                  timestamp: fD ? Bz(fD) : Iz(),
-                  trace: UD ? {
-                    trace_id: UD.traceId,
-                    span_id: UD.spanId
-                  } : KD.getTraceContext()
+              if (!ni(Op).shouldCapture()) return;
+              const yp = Ti(xp),
+                Up = {
+                  message: Yp(pp),
+                  level: null !== Dp && void 0 !== Dp ? Dp : "log",
+                  context: rp(yp) ? void 0 : yp,
+                  timestamp: Wp ? vi(Wp) : wi(),
+                  trace: Pp ? {
+                    trace_id: Pp.traceId,
+                    span_id: Pp.spanId
+                  } : Ip.getTraceContext()
                 },
-                GD = {
-                  message: BD.message,
-                  level: BD.level,
-                  context: BD.context
+                wp = {
+                  message: Up.message,
+                  level: Up.level,
+                  context: Up.context
                 };
-              if (!AD && wD.dedupe && !JD(cD) && nz(GD, cD)) return void zD.debug("Skipping log push because it is the same as the last one\n", BD);
-              const hD = cD,
-                nD = yK(pD);
-              if (cD !== hD && !AD && wD.dedupe && nz(GD, cD)) return;
-              cD = GD;
-              const MD = {
+              if (!Ap && cp.dedupe && !ep(Lp) && di(wp, Lp)) return void ip.debug("Skipping log push because it is the same as the last one\n", Up);
+              const vp = Lp,
+                tp = hI(Op);
+              if (Lp !== vp && !Ap && cp.dedupe && di(wp, Lp)) return;
+              Lp = wp;
+              const Hp = {
                 type: "log",
-                payload: BD,
-                meta: nD
+                payload: Up,
+                meta: tp
               };
-              zD.debug("Pushing log\n", MD), Vs(rD.getActiveUserAction(), MD) || sD.execute(MD)
-            } catch (ID) {
-              zD.error("Error pushing log\n", ID)
+              ip.debug("Pushing log\n", Hp), Ro(Sp.getActiveUserAction(), Hp) || op.execute(Hp)
+            } catch (yp) {
+              ip.error("Error pushing log\n", yp)
             }
           }
         }
-      }(cD)), function(DD) {
+      }(Lp)), function(pp) {
         let {
-          internalLogger: zD,
-          config: wD,
-          metas: pD,
-          transports: sD,
-          tracesApi: KD,
-          userActionsApi: rD
-        } = DD;
-        zD.debug("Initializing measurements API");
-        let LD = null;
+          internalLogger: ip,
+          config: cp,
+          metas: Op,
+          transports: op,
+          tracesApi: Ip,
+          userActionsApi: Sp
+        } = pp;
+        ip.debug("Initializing measurements API");
+        let xp = null;
         return {
-          pushMeasurement: function(DD) {
+          pushMeasurement: function(pp) {
             let {
-              skipDedupe: cD,
-              context: gD,
-              spanContext: RD,
-              timestampOverwriteMs: AD
+              skipDedupe: Lp,
+              context: Yp,
+              spanContext: Dp,
+              timestampOverwriteMs: Ap
             } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             try {
-              if (!yz(pD).shouldCapture()) return;
-              const UD = lz(gD),
-                fD = Hz(Hz({}, DD), {}, {
-                  trace: RD ? {
-                    trace_id: RD.traceId,
-                    span_id: RD.spanId
-                  } : KD.getTraceContext(),
-                  timestamp: AD ? Bz(AD) : Iz(),
-                  context: uD(UD) ? void 0 : UD
+              if (!ni(Op).shouldCapture()) return;
+              const Pp = Ti(Yp),
+                Wp = ic(ic({}, pp), {}, {
+                  trace: Dp ? {
+                    trace_id: Dp.traceId,
+                    span_id: Dp.spanId
+                  } : Ip.getTraceContext(),
+                  timestamp: Ap ? vi(Ap) : wi(),
+                  context: rp(Pp) ? void 0 : Pp
                 }),
-                ID = {
-                  type: fD.type,
-                  values: fD.values,
-                  context: fD.context
+                yp = {
+                  type: Wp.type,
+                  values: Wp.values,
+                  context: Wp.context
                 };
-              if (!cD && wD.dedupe && !JD(LD) && nz(ID, LD)) return void zD.debug("Skipping measurement push because it is the same as the last one\n", fD);
-              const BD = LD,
-                GD = yK(pD);
-              if (LD !== BD && !cD && wD.dedupe && nz(ID, LD)) return;
-              LD = ID;
-              const hD = {
+              if (!Lp && cp.dedupe && !ep(xp) && di(yp, xp)) return void ip.debug("Skipping measurement push because it is the same as the last one\n", Wp);
+              const Up = xp,
+                wp = hI(Op);
+              if (xp !== Up && !Lp && cp.dedupe && di(yp, xp)) return;
+              xp = yp;
+              const vp = {
                 type: "measurement",
-                payload: fD,
-                meta: GD
+                payload: Wp,
+                meta: wp
               };
-              zD.debug("Pushing measurement\n", hD), Vs(rD.getActiveUserAction(), hD) || sD.execute(hD)
-            } catch (UD) {
-              zD.error("Error pushing measurement\n", UD)
+              ip.debug("Pushing measurement\n", vp), Ro(Sp.getActiveUserAction(), vp) || op.execute(vp)
+            } catch (Pp) {
+              ip.error("Error pushing measurement\n", Pp)
             }
           }
         }
-      }(cD)), gD), rD)
+      }(Lp)), Yp), Sp)
     }
 
-    function Dr(DD) {
-      const zD = vK(DD),
-        wD = YK(zD, DD);
-      if (ID() && !DD.isolate) return void wD.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
-      wD.debug("Initializing");
-      const pD = function(DD, zD) {
-          let wD, pD = [],
-            sD = [],
-            KD = [],
-            rD = 0,
-            LD = 0;
-          const cD = () => pD.reduce(((DD, zD) => Object.assign(DD, xD(zD) ? zD() : zD)), {}),
-            gD = () => {
-              if (sD.length) {
-                const DD = cD();
-                sD.forEach((zD => zD(DD)))
+    function iS(pp) {
+      const ip = ZI(pp),
+        cp = KI(ip, pp);
+      if (yp() && !pp.isolate) return void cp.error('Faro is already registered. Either add instrumentations, transports etc. to the global faro instance or use the "isolate" property');
+      cp.debug("Initializing");
+      const Op = function(pp, ip) {
+          let cp, Op = [],
+            op = [],
+            Ip = [],
+            Sp = 0,
+            xp = 0;
+          const Lp = () => Op.reduce(((pp, ip) => Object.assign(pp, Cp(ip) ? ip() : ip)), {}),
+            Yp = () => {
+              if (op.length) {
+                const pp = Lp();
+                op.forEach((ip => ip(pp)))
               }
             };
           return {
             add: function() {
-              for (var DD = arguments.length, wD = new Array(DD), sD = 0; sD < DD; sD++) wD[sD] = arguments[sD];
-              zD.debug("Adding metas\n", wD), pD.push(...wD), gD()
+              for (var pp = arguments.length, cp = new Array(pp), op = 0; op < pp; op++) cp[op] = arguments[op];
+              ip.debug("Adding metas\n", cp), Op.push(...cp), Yp()
             },
             remove: function() {
-              for (var DD = arguments.length, wD = new Array(DD), sD = 0; sD < DD; sD++) wD[sD] = arguments[sD];
-              zD.debug("Removing metas\n", wD), pD = pD.filter((DD => !wD.includes(DD))), gD()
+              for (var pp = arguments.length, cp = new Array(pp), op = 0; op < pp; op++) cp[op] = arguments[op];
+              ip.debug("Removing metas\n", cp), Op = Op.filter((pp => !cp.includes(pp))), Yp()
             },
-            addListener: DD => {
-              zD.debug("Adding metas listener\n", DD), sD.push(DD)
+            addListener: pp => {
+              ip.debug("Adding metas listener\n", pp), op.push(pp)
             },
-            removeListener: DD => {
-              zD.debug("Removing metas listener\n", DD), sD = sD.filter((zD => zD !== DD))
+            removeListener: pp => {
+              ip.debug("Removing metas listener\n", pp), op = op.filter((ip => ip !== pp))
             },
-            capture: DD => {
-              var zD;
-              const pD = void 0 !== wD,
-                sD = null !== (zD = wD) && void 0 !== zD ? zD : KD;
-              pD || (wD = sD, rD = 0, LD = sD.length);
+            capture: pp => {
+              var ip;
+              const Op = void 0 !== cp,
+                op = null !== (ip = cp) && void 0 !== ip ? ip : Ip;
+              Op || (cp = op, Sp = 0, xp = op.length);
               try {
-                for (; rD < LD;) {
-                  const DD = sD[rD++];
-                  null === DD || void 0 === DD || DD()
+                for (; Sp < xp;) {
+                  const pp = op[Sp++];
+                  null === pp || void 0 === pp || pp()
                 }
-                const zD = ZK(cD());
-                return null === DD || void 0 === DD || DD(), zD
+                const ip = bI(Lp());
+                return null === pp || void 0 === pp || pp(), ip
               } finally {
-                pD || (wD = void 0)
+                Op || (cp = void 0)
               }
             },
-            addCaptureListener: DD => {
-              KD.push(DD)
+            addCaptureListener: pp => {
+              Ip.push(pp)
             },
-            removeCaptureListener: DD => {
-              KD = KD.filter((zD => zD !== DD))
+            removeCaptureListener: pp => {
+              Ip = Ip.filter((ip => ip !== pp))
             },
             get value() {
-              return cD()
+              return Lp()
             }
           }
-        }(0, wD),
-        sD = oK(zD, wD, DD, pD),
-        KD = qK(zD, wD, DD, pD, sD),
-        rD = function(DD, zD, wD, pD, sD, KD) {
-          zD.debug("Initializing instrumentations");
-          const rD = [];
+        }(0, cp),
+        op = gI(ip, cp, pp, Op),
+        Ip = pS(ip, cp, pp, Op, op),
+        Sp = function(pp, ip, cp, Op, op, Ip) {
+          ip.debug("Initializing instrumentations");
+          const Sp = [];
           return {
             add: function() {
-              zD.debug("Adding instrumentations");
-              for (var LD = arguments.length, cD = new Array(LD), gD = 0; gD < LD; gD++) cD[gD] = arguments[gD];
-              cD.forEach((LD => {
-                zD.debug(`Adding "${LD.name}" instrumentation`), rD.some((DD => DD.name === LD.name)) ? zD.warn(`Instrumentation ${LD.name} is already added`) : (LD.unpatchedConsole = DD, LD.internalLogger = zD, LD.config = wD, LD.metas = pD, LD.transports = sD, LD.api = KD, rD.push(LD), LD.initialize())
+              ip.debug("Adding instrumentations");
+              for (var xp = arguments.length, Lp = new Array(xp), Yp = 0; Yp < xp; Yp++) Lp[Yp] = arguments[Yp];
+              Lp.forEach((xp => {
+                ip.debug(`Adding "${xp.name}" instrumentation`), Sp.some((pp => pp.name === xp.name)) ? ip.warn(`Instrumentation ${xp.name} is already added`) : (xp.unpatchedConsole = pp, xp.internalLogger = ip, xp.config = cp, xp.metas = Op, xp.transports = op, xp.api = Ip, Sp.push(xp), xp.initialize())
               }))
             },
             get instrumentations() {
-              return [...rD]
+              return [...Sp]
             },
             remove: function() {
-              zD.debug("Removing instrumentations");
-              for (var DD = arguments.length, wD = new Array(DD), pD = 0; pD < DD; pD++) wD[pD] = arguments[pD];
-              wD.forEach((DD => {
-                var wD, pD;
-                zD.debug(`Removing "${DD.name}" instrumentation`);
-                const sD = rD.reduce(((zD, wD, pD) => null === zD && wD.name === DD.name ? pD : null), null);
-                null !== sD ? (null === (wD = (pD = rD[sD]).destroy) || void 0 === wD || wD.call(pD), rD.splice(sD, 1)) : zD.warn(`Instrumentation "${DD.name}" is not added`)
+              ip.debug("Removing instrumentations");
+              for (var pp = arguments.length, cp = new Array(pp), Op = 0; Op < pp; Op++) cp[Op] = arguments[Op];
+              cp.forEach((pp => {
+                var cp, Op;
+                ip.debug(`Removing "${pp.name}" instrumentation`);
+                const op = Sp.reduce(((ip, cp, Op) => null === ip && cp.name === pp.name ? Op : null), null);
+                null !== op ? (null === (cp = (Op = Sp[op]).destroy) || void 0 === cp || cp.call(Op), Sp.splice(op, 1)) : ip.warn(`Instrumentation "${pp.name}" is not added`)
               }))
             }
           }
-        }(zD, wD, DD, pD, sD, KD),
-        LD = GD(zD, wD, DD, pD, sD, KD, rD);
-      return mK(LD),
-        function(DD) {
-          DD.transports.add(...DD.config.transports), DD.transports.addBeforeSendHooks(DD.config.beforeSend)
-        }(LD),
-        function(DD) {
-          DD.instrumentations.add(...DD.config.instrumentations)
-        }(LD), LD
+        }(ip, cp, pp, Op, op, Ip),
+        xp = wp(ip, cp, pp, Op, op, Ip, Sp);
+      return nI(xp),
+        function(pp) {
+          pp.transports.add(...pp.config.transports), pp.transports.addBeforeSendHooks(pp.config.beforeSend)
+        }(xp),
+        function(pp) {
+          pp.instrumentations.add(...pp.config.instrumentations)
+        }(xp), xp
     }
 
-    function zr(DD) {
-      const zD = SK(DD);
-      if (zD) return Dr(zD)
+    function cS(pp) {
+      const ip = JI(pp);
+      if (ip) return iS(ip)
     }
   },
-  6731: function(DD, zD, wD) {
-    var pD;
-    ! function(sD, KD) {
-      var rD = "function",
-        LD = "undefined",
-        cD = "object",
-        gD = "string",
-        RD = "major",
-        AD = "model",
-        UD = "name",
-        fD = "type",
-        ID = "vendor",
-        BD = "version",
-        GD = "architecture",
-        hD = "console",
-        nD = "mobile",
-        MD = "tablet",
-        OD = "smarttv",
-        JD = "wearable",
-        ED = "embedded",
-        QD = "Amazon",
-        XD = "Apple",
-        VD = "ASUS",
-        PD = "BlackBerry",
-        CD = "Browser",
-        xD = "Chrome",
-        TD = "Firefox",
-        bD = "Google",
-        jD = "Honor",
-        dD = "Huawei",
-        SD = "LG",
-        iD = "Microsoft",
-        lD = "Motorola",
-        WD = "Nvidia",
-        ND = "OnePlus",
-        ZD = "Opera",
-        yD = "OPPO",
-        kD = "Samsung",
-        mD = "Sharp",
-        eD = "Sony",
-        oD = "Xiaomi",
-        aD = "Zebra",
-        uD = "Facebook",
-        vD = "Chromium OS",
-        tD = "Mac OS",
-        FD = " Browser",
-        YD = function(DD) {
-          for (var zD = {}, wD = 0; wD < DD.length; wD++) zD[DD[wD].toUpperCase()] = DD[wD];
-          return zD
+  6841: function(pp, ip, cp) {
+    var Op;
+    ! function(op, Ip) {
+      var Sp = "function",
+        xp = "undefined",
+        Lp = "object",
+        Yp = "string",
+        Dp = "major",
+        Ap = "model",
+        Pp = "name",
+        Wp = "type",
+        yp = "vendor",
+        Up = "version",
+        wp = "architecture",
+        vp = "console",
+        tp = "mobile",
+        Hp = "tablet",
+        dp = "smarttv",
+        ep = "wearable",
+        jp = "embedded",
+        kp = "Amazon",
+        mp = "Apple",
+        Rp = "ASUS",
+        qp = "BlackBerry",
+        Mp = "Browser",
+        Cp = "Chrome",
+        Ep = "Firefox",
+        Xp = "Google",
+        lp = "Honor",
+        Qp = "Huawei",
+        Jp = "LG",
+        Bp = "Microsoft",
+        Np = "Motorola",
+        Tp = "Nvidia",
+        fp = "OnePlus",
+        bp = "Opera",
+        hp = "OPPO",
+        ap = "Samsung",
+        np = "Sharp",
+        Fp = "Sony",
+        gp = "Xiaomi",
+        Gp = "Zebra",
+        rp = "Facebook",
+        Zp = "Chromium OS",
+        zp = "Mac OS",
+        sp = " Browser",
+        Kp = function(pp) {
+          for (var ip = {}, cp = 0; cp < pp.length; cp++) ip[pp[cp].toUpperCase()] = pp[cp];
+          return ip
         },
-        HD = function(DD, zD) {
-          return typeof DD === gD && -1 !== qD(zD).indexOf(qD(DD))
+        Vp = function(pp, ip) {
+          return typeof pp === Yp && -1 !== ii(ip).indexOf(ii(pp))
         },
-        qD = function(DD) {
-          return DD.toLowerCase()
+        ii = function(pp) {
+          return pp.toLowerCase()
         },
-        Dz = function(DD, zD) {
-          if (typeof DD === gD) return DD = DD.replace(/^\s\s*/, ""), typeof zD === LD ? DD : DD.substring(0, 500)
+        ci = function(pp, ip) {
+          if (typeof pp === Yp) return pp = pp.replace(/^\s\s*/, ""), typeof ip === xp ? pp : pp.substring(0, 500)
         },
-        zz = function(DD, zD) {
-          for (var wD, pD, sD, LD, gD, RD, AD = 0; AD < zD.length && !gD;) {
-            var UD = zD[AD],
-              fD = zD[AD + 1];
-            for (wD = pD = 0; wD < UD.length && !gD && UD[wD];)
-              if (gD = UD[wD++].exec(DD))
-                for (sD = 0; sD < fD.length; sD++) RD = gD[++pD], typeof(LD = fD[sD]) === cD && LD.length > 0 ? 2 === LD.length ? typeof LD[1] == rD ? this[LD[0]] = LD[1].call(this, RD) : this[LD[0]] = LD[1] : 3 === LD.length ? typeof LD[1] !== rD || LD[1].exec && LD[1].test ? this[LD[0]] = RD ? RD.replace(LD[1], LD[2]) : KD : this[LD[0]] = RD ? LD[1].call(this, RD, LD[2]) : KD : 4 === LD.length && (this[LD[0]] = RD ? LD[3].call(this, RD.replace(LD[1], LD[2])) : KD) : this[LD] = RD || KD;
-            AD += 2
+        Oi = function(pp, ip) {
+          for (var cp, Op, op, xp, Yp, Dp, Ap = 0; Ap < ip.length && !Yp;) {
+            var Pp = ip[Ap],
+              Wp = ip[Ap + 1];
+            for (cp = Op = 0; cp < Pp.length && !Yp && Pp[cp];)
+              if (Yp = Pp[cp++].exec(pp))
+                for (op = 0; op < Wp.length; op++) Dp = Yp[++Op], typeof(xp = Wp[op]) === Lp && xp.length > 0 ? 2 === xp.length ? typeof xp[1] == Sp ? this[xp[0]] = xp[1].call(this, Dp) : this[xp[0]] = xp[1] : 3 === xp.length ? typeof xp[1] !== Sp || xp[1].exec && xp[1].test ? this[xp[0]] = Dp ? Dp.replace(xp[1], xp[2]) : Ip : this[xp[0]] = Dp ? xp[1].call(this, Dp, xp[2]) : Ip : 4 === xp.length && (this[xp[0]] = Dp ? xp[3].call(this, Dp.replace(xp[1], xp[2])) : Ip) : this[xp] = Dp || Ip;
+            Ap += 2
           }
         },
-        wz = function(DD, zD) {
-          for (var wD in zD)
-            if (typeof zD[wD] === cD && zD[wD].length > 0) {
-              for (var pD = 0; pD < zD[wD].length; pD++)
-                if (HD(zD[wD][pD], DD)) return "?" === wD ? KD : wD
-            } else if (HD(zD[wD], DD)) return "?" === wD ? KD : wD;
-          return zD.hasOwnProperty("*") ? zD["*"] : DD
+        oi = function(pp, ip) {
+          for (var cp in ip)
+            if (typeof ip[cp] === Lp && ip[cp].length > 0) {
+              for (var Op = 0; Op < ip[cp].length; Op++)
+                if (Vp(ip[cp][Op], pp)) return "?" === cp ? Ip : cp
+            } else if (Vp(ip[cp], pp)) return "?" === cp ? Ip : cp;
+          return ip.hasOwnProperty("*") ? ip["*"] : pp
         },
-        pz = {
+        Ii = {
           ME: "4.90",
           "NT 3.11": "NT3.51",
           "NT 4.0": "NT4.0",
@@ -4623,110 +4623,110 @@ export const modules = {
           10: ["NT 6.4", "NT 10.0"],
           RT: "ARM"
         },
-        sz = {
+        Si = {
           browser: [
             [/\b(?:crmo|crios)\/([\w\.]+)/i],
-            [BD, [UD, "Chrome"]],
+            [Up, [Pp, "Chrome"]],
             [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-            [BD, [UD, "Edge"]],
+            [Up, [Pp, "Edge"]],
             [/(opera mini)\/([-\w\.]+)/i, /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i, /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i],
-            [UD, BD],
+            [Pp, Up],
             [/opios[\/ ]+([\w\.]+)/i],
-            [BD, [UD, ZD + " Mini"]],
+            [Up, [Pp, bp + " Mini"]],
             [/\bop(?:rg)?x\/([\w\.]+)/i],
-            [BD, [UD, ZD + " GX"]],
+            [Up, [Pp, bp + " GX"]],
             [/\bopr\/([\w\.]+)/i],
-            [BD, [UD, ZD]],
+            [Up, [Pp, bp]],
             [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-            [BD, [UD, "Baidu"]],
+            [Up, [Pp, "Baidu"]],
             [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
-            [BD, [UD, "Maxthon"]],
+            [Up, [Pp, "Maxthon"]],
             [/(kindle)\/([\w\.]+)/i, /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i, /(avant|iemobile|slim(?:browser|boat|jet))[\/ ]?([\d\.]*)/i, /(?:ms|\()(ie) ([\w\.]+)/i, /(flock|rockmelt|midori|epiphany|silk|skyfire|ovibrowser|bolt|iron|vivaldi|iridium|phantomjs|bowser|qupzilla|falkon|rekonq|puffin|brave|whale(?!.+naver)|qqbrowserlite|duckduckgo|klar|helio|(?=comodo_)?dragon)\/([-\w\.]+)/i, /(heytap|ovi|115)browser\/([\d\.]+)/i, /(weibo)__([\d\.]+)/i],
-            [UD, BD],
+            [Pp, Up],
             [/quark(?:pc)?\/([-\w\.]+)/i],
-            [BD, [UD, "Quark"]],
+            [Up, [Pp, "Quark"]],
             [/\bddg\/([\w\.]+)/i],
-            [BD, [UD, "DuckDuckGo"]],
+            [Up, [Pp, "DuckDuckGo"]],
             [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-            [BD, [UD, "UC" + CD]],
+            [Up, [Pp, "UC" + Mp]],
             [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
-            [BD, [UD, "WeChat"]],
+            [Up, [Pp, "WeChat"]],
             [/konqueror\/([\w\.]+)/i],
-            [BD, [UD, "Konqueror"]],
+            [Up, [Pp, "Konqueror"]],
             [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-            [BD, [UD, "IE"]],
+            [Up, [Pp, "IE"]],
             [/ya(?:search)?browser\/([\w\.]+)/i],
-            [BD, [UD, "Yandex"]],
+            [Up, [Pp, "Yandex"]],
             [/slbrowser\/([\w\.]+)/i],
-            [BD, [UD, "Smart Lenovo " + CD]],
+            [Up, [Pp, "Smart Lenovo " + Mp]],
             [/(avast|avg)\/([\w\.]+)/i],
             [
-              [UD, /(.+)/, "$1 Secure " + CD], BD
+              [Pp, /(.+)/, "$1 Secure " + Mp], Up
             ],
             [/\bfocus\/([\w\.]+)/i],
-            [BD, [UD, TD + " Focus"]],
+            [Up, [Pp, Ep + " Focus"]],
             [/\bopt\/([\w\.]+)/i],
-            [BD, [UD, ZD + " Touch"]],
+            [Up, [Pp, bp + " Touch"]],
             [/coc_coc\w+\/([\w\.]+)/i],
-            [BD, [UD, "Coc Coc"]],
+            [Up, [Pp, "Coc Coc"]],
             [/dolfin\/([\w\.]+)/i],
-            [BD, [UD, "Dolphin"]],
+            [Up, [Pp, "Dolphin"]],
             [/coast\/([\w\.]+)/i],
-            [BD, [UD, ZD + " Coast"]],
+            [Up, [Pp, bp + " Coast"]],
             [/miuibrowser\/([\w\.]+)/i],
-            [BD, [UD, "MIUI" + FD]],
+            [Up, [Pp, "MIUI" + sp]],
             [/fxios\/([\w\.-]+)/i],
-            [BD, [UD, TD]],
+            [Up, [Pp, Ep]],
             [/\bqihoobrowser\/?([\w\.]*)/i],
-            [BD, [UD, "360"]],
+            [Up, [Pp, "360"]],
             [/\b(qq)\/([\w\.]+)/i],
             [
-              [UD, /(.+)/, "$1Browser"], BD
+              [Pp, /(.+)/, "$1Browser"], Up
             ],
             [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
             [
-              [UD, /(.+)/, "$1" + FD], BD
+              [Pp, /(.+)/, "$1" + sp], Up
             ],
             [/samsungbrowser\/([\w\.]+)/i],
-            [BD, [UD, kD + " Internet"]],
+            [Up, [Pp, ap + " Internet"]],
             [/metasr[\/ ]?([\d\.]+)/i],
-            [BD, [UD, "Sogou Explorer"]],
+            [Up, [Pp, "Sogou Explorer"]],
             [/(sogou)mo\w+\/([\d\.]+)/i],
             [
-              [UD, "Sogou Mobile"], BD
+              [Pp, "Sogou Mobile"], Up
             ],
             [/(electron)\/([\w\.]+) safari/i, /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i, /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i],
-            [UD, BD],
+            [Pp, Up],
             [/(lbbrowser|rekonq)/i, /\[(linkedin)app\]/i],
-            [UD],
+            [Pp],
             [/ome\/([\w\.]+) \w* ?(iron) saf/i, /ome\/([\w\.]+).+qihu (360)[es]e/i],
-            [BD, UD],
+            [Up, Pp],
             [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
             [
-              [UD, uD], BD
+              [Pp, rp], Up
             ],
             [/(Klarna)\/([\w\.]+)/i, /(kakao(?:talk|story))[\/ ]([\w\.]+)/i, /(naver)\(.*?(\d+\.[\w\.]+).*\)/i, /(daum)apps[\/ ]([\w\.]+)/i, /safari (line)\/([\w\.]+)/i, /\b(line)\/([\w\.]+)\/iab/i, /(alipay)client\/([\w\.]+)/i, /(twitter)(?:and| f.+e\/([\w\.]+))/i, /(chromium|instagram|snapchat)[\/ ]([-\w\.]+)/i],
-            [UD, BD],
+            [Pp, Up],
             [/\bgsa\/([\w\.]+) .*safari\//i],
-            [BD, [UD, "GSA"]],
+            [Up, [Pp, "GSA"]],
             [/musical_ly(?:.+app_?version\/|_)([\w\.]+)/i],
-            [BD, [UD, "TikTok"]],
+            [Up, [Pp, "TikTok"]],
             [/headlesschrome(?:\/([\w\.]+)| )/i],
-            [BD, [UD, xD + " Headless"]],
+            [Up, [Pp, Cp + " Headless"]],
             [/ wv\).+(chrome)\/([\w\.]+)/i],
             [
-              [UD, xD + " WebView"], BD
+              [Pp, Cp + " WebView"], Up
             ],
             [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-            [BD, [UD, "Android " + CD]],
+            [Up, [Pp, "Android " + Mp]],
             [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-            [UD, BD],
+            [Pp, Up],
             [/version\/([\w\.\,]+) .*mobile\/\w+ (safari)/i],
-            [BD, [UD, "Mobile Safari"]],
+            [Up, [Pp, "Mobile Safari"]],
             [/version\/([\w(\.|\,)]+) .*(mobile ?safari|safari)/i],
-            [BD, UD],
+            [Up, Pp],
             [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-            [UD, [BD, wz, {
+            [Pp, [Up, oi, {
               "1.0": "/8",
               1.2: "/1",
               1.3: "/3",
@@ -4737,642 +4737,642 @@ export const modules = {
               "?": "/"
             }]],
             [/(webkit|khtml)\/([\w\.]+)/i],
-            [UD, BD],
+            [Pp, Up],
             [/(navigator|netscape\d?)\/([-\w\.]+)/i],
             [
-              [UD, "Netscape"], BD
+              [Pp, "Netscape"], Up
             ],
             [/(wolvic|librewolf)\/([\w\.]+)/i],
-            [UD, BD],
+            [Pp, Up],
             [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-            [BD, [UD, TD + " Reality"]],
+            [Up, [Pp, Ep + " Reality"]],
             [/ekiohf.+(flow)\/([\w\.]+)/i, /(swiftfox)/i, /(icedragon|iceweasel|camino|chimera|fennec|maemo browser|minimo|conkeror)[\/ ]?([\w\.\+]+)/i, /(seamonkey|k-meleon|icecat|iceape|firebird|phoenix|palemoon|basilisk|waterfox)\/([-\w\.]+)$/i, /(firefox)\/([\w\.]+)/i, /(mozilla)\/([\w\.]+) .+rv\:.+gecko\/\d+/i, /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i, /\b(links) \(([\w\.]+)/i],
-            [UD, [BD, /_/g, "."]],
+            [Pp, [Up, /_/g, "."]],
             [/(cobalt)\/([\w\.]+)/i],
-            [UD, [BD, /master.|lts./, ""]]
+            [Pp, [Up, /master.|lts./, ""]]
           ],
           cpu: [
             [/\b((amd|x|x86[-_]?|wow|win)64)\b/i],
             [
-              [GD, "amd64"]
+              [wp, "amd64"]
             ],
             [/(ia32(?=;))/i, /\b((i[346]|x)86)(pc)?\b/i],
             [
-              [GD, "ia32"]
+              [wp, "ia32"]
             ],
             [/\b(aarch64|arm(v?[89]e?l?|_?64))\b/i],
             [
-              [GD, "arm64"]
+              [wp, "arm64"]
             ],
             [/\b(arm(v[67])?ht?n?[fl]p?)\b/i],
             [
-              [GD, "armhf"]
+              [wp, "armhf"]
             ],
             [/( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i],
             [
-              [GD, "arm"]
+              [wp, "arm"]
             ],
             [/((ppc|powerpc)(64)?)( mac|;|\))/i],
             [
-              [GD, /ower/, "", qD]
+              [wp, /ower/, "", ii]
             ],
             [/ sun4\w[;\)]/i],
             [
-              [GD, "sparc"]
+              [wp, "sparc"]
             ],
             [/\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i],
             [
-              [GD, qD]
+              [wp, ii]
             ]
           ],
           device: [
             [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-            [AD, [ID, kD],
-              [fD, MD]
+            [Ap, [yp, ap],
+              [Wp, Hp]
             ],
             [/\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i, /samsung[- ]((?!sm-[lr])[-\w]+)/i, /sec-(sgh\w+)/i],
-            [AD, [ID, kD],
-              [fD, nD]
+            [Ap, [yp, ap],
+              [Wp, tp]
             ],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)(?:\/|;)/i],
-            [AD, [ID, XD],
-              [fD, nD]
+            [Ap, [yp, mp],
+              [Wp, tp]
             ],
             [/\((ipad);[-\w\),; ]+apple/i, /applecoremedia\/[\w\.]+ \((ipad)/i, /\b(ipad)\d\d?,\d\d?[;\]].+ios/i],
-            [AD, [ID, XD],
-              [fD, MD]
+            [Ap, [yp, mp],
+              [Wp, Hp]
             ],
             [/(macintosh);/i],
-            [AD, [ID, XD]],
+            [Ap, [yp, mp]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-            [AD, [ID, mD],
-              [fD, nD]
+            [Ap, [yp, np],
+              [Wp, tp]
             ],
             [/\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i],
-            [AD, [ID, jD],
-              [fD, MD]
+            [Ap, [yp, lp],
+              [Wp, Hp]
             ],
             [/honor([-\w ]+)[;\)]/i],
-            [AD, [ID, jD],
-              [fD, nD]
+            [Ap, [yp, lp],
+              [Wp, tp]
             ],
             [/\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i],
-            [AD, [ID, dD],
-              [fD, MD]
+            [Ap, [yp, Qp],
+              [Wp, Hp]
             ],
             [/(?:huawei)([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][012359c][adn]?)\b(?!.+d\/s)/i],
-            [AD, [ID, dD],
-              [fD, nD]
+            [Ap, [yp, Qp],
+              [Wp, tp]
             ],
             [/oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i, /\b((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i],
             [
-              [AD, /_/g, " "],
-              [ID, oD],
-              [fD, MD]
+              [Ap, /_/g, " "],
+              [yp, gp],
+              [Wp, Hp]
             ],
             [/\b(poco[\w ]+|m2\d{3}j\d\d[a-z]{2})(?: bui|\))/i, /\b; (\w+) build\/hm\1/i, /\b(hm[-_ ]?note?[_ ]?(?:\d\w)?) bui/i, /\b(redmi[\-_ ]?(?:note|k)?[\w_ ]+)(?: bui|\))/i, /oid[^\)]+; (m?[12][0-389][01]\w{3,6}[c-y])( bui|; wv|\))/i, /\b(mi[-_ ]?(?:a\d|one|one[_ ]plus|note lte|max|cc)?[_ ]?(?:\d?\w?)[_ ]?(?:plus|se|lite|pro)?)(?: bui|\))/i, / ([\w ]+) miui\/v?\d/i],
             [
-              [AD, /_/g, " "],
-              [ID, oD],
-              [fD, nD]
+              [Ap, /_/g, " "],
+              [yp, gp],
+              [Wp, tp]
             ],
             [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-            [AD, [ID, yD],
-              [fD, nD]
+            [Ap, [yp, hp],
+              [Wp, tp]
             ],
             [/\b(opd2(\d{3}a?))(?: bui|\))/i],
-            [AD, [ID, wz, {
+            [Ap, [yp, oi, {
                 OnePlus: ["304", "403", "203"],
-                "*": yD
+                "*": hp
               }],
-              [fD, MD]
+              [Wp, Hp]
             ],
             [/vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-            [AD, [ID, "Vivo"],
-              [fD, nD]
+            [Ap, [yp, "Vivo"],
+              [Wp, tp]
             ],
             [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-            [AD, [ID, "Realme"],
-              [fD, nD]
+            [Ap, [yp, "Realme"],
+              [Wp, tp]
             ],
             [/\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i, /\bmot(?:orola)?[- ](\w*)/i, /((?:moto(?! 360)[\w\(\) ]+|xt\d{3,4}|nexus 6)(?= bui|\)))/i],
-            [AD, [ID, lD],
-              [fD, nD]
+            [Ap, [yp, Np],
+              [Wp, tp]
             ],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [AD, [ID, lD],
-              [fD, MD]
+            [Ap, [yp, Np],
+              [Wp, Hp]
             ],
             [/((?=lg)?[vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [AD, [ID, SD],
-              [fD, MD]
+            [Ap, [yp, Jp],
+              [Wp, Hp]
             ],
             [/(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i, /\blg[-e;\/ ]+((?!browser|netcast|android tv|watch)\w+)/i, /\blg-?([\d\w]+) bui/i],
-            [AD, [ID, SD],
-              [fD, nD]
+            [Ap, [yp, Jp],
+              [Wp, tp]
             ],
             [/(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i, /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i],
-            [AD, [ID, "Lenovo"],
-              [fD, MD]
+            [Ap, [yp, "Lenovo"],
+              [Wp, Hp]
             ],
             [/(nokia) (t[12][01])/i],
-            [ID, AD, [fD, MD]],
+            [yp, Ap, [Wp, Hp]],
             [/(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i, /nokia[-_ ]?(([-\w\. ]*))/i],
             [
-              [AD, /_/g, " "],
-              [fD, nD],
-              [ID, "Nokia"]
+              [Ap, /_/g, " "],
+              [Wp, tp],
+              [yp, "Nokia"]
             ],
             [/(pixel (c|tablet))\b/i],
-            [AD, [ID, bD],
-              [fD, MD]
+            [Ap, [yp, Xp],
+              [Wp, Hp]
             ],
             [/droid.+; (pixel[\daxl ]{0,6})(?: bui|\))/i],
-            [AD, [ID, bD],
-              [fD, nD]
+            [Ap, [yp, Xp],
+              [Wp, tp]
             ],
             [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-a\w[4-7][12])(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-            [AD, [ID, eD],
-              [fD, nD]
+            [Ap, [yp, Fp],
+              [Wp, tp]
             ],
             [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
             [
-              [AD, "Xperia Tablet"],
-              [ID, eD],
-              [fD, MD]
+              [Ap, "Xperia Tablet"],
+              [yp, Fp],
+              [Wp, Hp]
             ],
             [/ (kb2005|in20[12]5|be20[12][59])\b/i, /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i],
-            [AD, [ID, ND],
-              [fD, nD]
+            [Ap, [yp, fp],
+              [Wp, tp]
             ],
             [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-            [AD, [ID, QD],
-              [fD, MD]
+            [Ap, [yp, kp],
+              [Wp, Hp]
             ],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
-              [AD, /(.+)/g, "Fire Phone $1"],
-              [ID, QD],
-              [fD, nD]
+              [Ap, /(.+)/g, "Fire Phone $1"],
+              [yp, kp],
+              [Wp, tp]
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
-            [AD, ID, [fD, MD]],
+            [Ap, yp, [Wp, Hp]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /\(bb10; (\w+)/i],
-            [AD, [ID, PD],
-              [fD, nD]
+            [Ap, [yp, qp],
+              [Wp, tp]
             ],
             [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-            [AD, [ID, VD],
-              [fD, MD]
+            [Ap, [yp, Rp],
+              [Wp, Hp]
             ],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [AD, [ID, VD],
-              [fD, nD]
+            [Ap, [yp, Rp],
+              [Wp, tp]
             ],
             [/(nexus 9)/i],
-            [AD, [ID, "HTC"],
-              [fD, MD]
+            [Ap, [yp, "HTC"],
+              [Wp, Hp]
             ],
             [/(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i, /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i, /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i],
-            [ID, [AD, /_/g, " "],
-              [fD, nD]
+            [yp, [Ap, /_/g, " "],
+              [Wp, tp]
             ],
             [/droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])\w*(\)| bui)/i],
-            [AD, [ID, "TCL"],
-              [fD, MD]
+            [Ap, [yp, "TCL"],
+              [Wp, Hp]
             ],
             [/(itel) ((\w+))/i],
             [
-              [ID, qD], AD, [fD, wz, {
+              [yp, ii], Ap, [Wp, oi, {
                 tablet: ["p10001l", "w7001"],
                 "*": "mobile"
               }]
             ],
             [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-            [AD, [ID, "Acer"],
-              [fD, MD]
+            [Ap, [yp, "Acer"],
+              [Wp, Hp]
             ],
             [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-            [AD, [ID, "Meizu"],
-              [fD, nD]
+            [Ap, [yp, "Meizu"],
+              [Wp, tp]
             ],
             [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-            [AD, [ID, "Ulefone"],
-              [fD, nD]
+            [Ap, [yp, "Ulefone"],
+              [Wp, tp]
             ],
             [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-            [AD, [ID, "Energizer"],
-              [fD, nD]
+            [Ap, [yp, "Energizer"],
+              [Wp, tp]
             ],
             [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-            [AD, [ID, "Cat"],
-              [fD, nD]
+            [Ap, [yp, "Cat"],
+              [Wp, tp]
             ],
             [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-            [AD, [ID, "Smartfren"],
-              [fD, nD]
+            [Ap, [yp, "Smartfren"],
+              [Wp, tp]
             ],
             [/droid.+; (a(?:015|06[35]|142p?))/i],
-            [AD, [ID, "Nothing"],
-              [fD, nD]
+            [Ap, [yp, "Nothing"],
+              [Wp, tp]
             ],
             [/; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i, /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i],
-            [AD, [ID, "Archos"],
-              [fD, MD]
+            [Ap, [yp, "Archos"],
+              [Wp, Hp]
             ],
             [/archos ([\w ]+)( b|\))/i, /; (ac[3-6]\d\w{2,8})( b|\))/i],
-            [AD, [ID, "Archos"],
-              [fD, nD]
+            [Ap, [yp, "Archos"],
+              [Wp, tp]
             ],
             [/(imo) (tab \w+)/i, /(infinix) (x1101b?)/i],
-            [ID, AD, [fD, MD]],
+            [yp, Ap, [Wp, Hp]],
             [/(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|infinix|tecno|micromax|advan)[-_ ]?([-\w]*)/i, /; (hmd|imo) ([\w ]+?)(?: bui|\))/i, /(hp) ([\w ]+\w)/i, /(microsoft); (lumia[\w ]+)/i, /(lenovo)[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i, /(oppo) ?([\w ]+) bui/i],
-            [ID, AD, [fD, nD]],
+            [yp, Ap, [Wp, tp]],
             [/(kobo)\s(ereader|touch)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i, /(nook)[\w ]+build\/(\w+)/i, /(dell) (strea[kpr\d ]*[\dko])/i, /(le[- ]+pan)[- ]+(\w{1,9}) bui/i, /(trinity)[- ]*(t\d{3}) bui/i, /(gigaset)[- ]+(q\w{1,9}) bui/i, /(vodafone) ([\w ]+)(?:\)| bui)/i],
-            [ID, AD, [fD, MD]],
+            [yp, Ap, [Wp, Hp]],
             [/(surface duo)/i],
-            [AD, [ID, iD],
-              [fD, MD]
+            [Ap, [yp, Bp],
+              [Wp, Hp]
             ],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-            [AD, [ID, "Fairphone"],
-              [fD, nD]
+            [Ap, [yp, "Fairphone"],
+              [Wp, tp]
             ],
             [/(u304aa)/i],
-            [AD, [ID, "AT&T"],
-              [fD, nD]
+            [Ap, [yp, "AT&T"],
+              [Wp, tp]
             ],
             [/\bsie-(\w*)/i],
-            [AD, [ID, "Siemens"],
-              [fD, nD]
+            [Ap, [yp, "Siemens"],
+              [Wp, tp]
             ],
             [/\b(rct\w+) b/i],
-            [AD, [ID, "RCA"],
-              [fD, MD]
+            [Ap, [yp, "RCA"],
+              [Wp, Hp]
             ],
             [/\b(venue[\d ]{2,7}) b/i],
-            [AD, [ID, "Dell"],
-              [fD, MD]
+            [Ap, [yp, "Dell"],
+              [Wp, Hp]
             ],
             [/\b(q(?:mv|ta)\w+) b/i],
-            [AD, [ID, "Verizon"],
-              [fD, MD]
+            [Ap, [yp, "Verizon"],
+              [Wp, Hp]
             ],
             [/\b(?:barnes[& ]+noble |bn[rt])([\w\+ ]*) b/i],
-            [AD, [ID, "Barnes & Noble"],
-              [fD, MD]
+            [Ap, [yp, "Barnes & Noble"],
+              [Wp, Hp]
             ],
             [/\b(tm\d{3}\w+) b/i],
-            [AD, [ID, "NuVision"],
-              [fD, MD]
+            [Ap, [yp, "NuVision"],
+              [Wp, Hp]
             ],
             [/\b(k88) b/i],
-            [AD, [ID, "ZTE"],
-              [fD, MD]
+            [Ap, [yp, "ZTE"],
+              [Wp, Hp]
             ],
             [/\b(nx\d{3}j) b/i],
-            [AD, [ID, "ZTE"],
-              [fD, nD]
+            [Ap, [yp, "ZTE"],
+              [Wp, tp]
             ],
             [/\b(gen\d{3}) b.+49h/i],
-            [AD, [ID, "Swiss"],
-              [fD, nD]
+            [Ap, [yp, "Swiss"],
+              [Wp, tp]
             ],
             [/\b(zur\d{3}) b/i],
-            [AD, [ID, "Swiss"],
-              [fD, MD]
+            [Ap, [yp, "Swiss"],
+              [Wp, Hp]
             ],
             [/\b((zeki)?tb.*\b) b/i],
-            [AD, [ID, "Zeki"],
-              [fD, MD]
+            [Ap, [yp, "Zeki"],
+              [Wp, Hp]
             ],
             [/\b([yr]\d{2}) b/i, /\b(dragon[- ]+touch |dt)(\w{5}) b/i],
             [
-              [ID, "Dragon Touch"], AD, [fD, MD]
+              [yp, "Dragon Touch"], Ap, [Wp, Hp]
             ],
             [/\b(ns-?\w{0,9}) b/i],
-            [AD, [ID, "Insignia"],
-              [fD, MD]
+            [Ap, [yp, "Insignia"],
+              [Wp, Hp]
             ],
             [/\b((nxa|next)-?\w{0,9}) b/i],
-            [AD, [ID, "NextBook"],
-              [fD, MD]
+            [Ap, [yp, "NextBook"],
+              [Wp, Hp]
             ],
             [/\b(xtreme\_)?(v(1[045]|2[015]|[3469]0|7[05])) b/i],
             [
-              [ID, "Voice"], AD, [fD, nD]
+              [yp, "Voice"], Ap, [Wp, tp]
             ],
             [/\b(lvtel\-)?(v1[12]) b/i],
             [
-              [ID, "LvTel"], AD, [fD, nD]
+              [yp, "LvTel"], Ap, [Wp, tp]
             ],
             [/\b(ph-1) /i],
-            [AD, [ID, "Essential"],
-              [fD, nD]
+            [Ap, [yp, "Essential"],
+              [Wp, tp]
             ],
             [/\b(v(100md|700na|7011|917g).*\b) b/i],
-            [AD, [ID, "Envizen"],
-              [fD, MD]
+            [Ap, [yp, "Envizen"],
+              [Wp, Hp]
             ],
             [/\b(trio[-\w\. ]+) b/i],
-            [AD, [ID, "MachSpeed"],
-              [fD, MD]
+            [Ap, [yp, "MachSpeed"],
+              [Wp, Hp]
             ],
             [/\btu_(1491) b/i],
-            [AD, [ID, "Rotor"],
-              [fD, MD]
+            [Ap, [yp, "Rotor"],
+              [Wp, Hp]
             ],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [AD, [ID, WD],
-              [fD, MD]
+            [Ap, [yp, Tp],
+              [Wp, Hp]
             ],
             [/(sprint) (\w+)/i],
-            [ID, AD, [fD, nD]],
+            [yp, Ap, [Wp, tp]],
             [/(kin\.[onetw]{3})/i],
             [
-              [AD, /\./g, " "],
-              [ID, iD],
-              [fD, nD]
+              [Ap, /\./g, " "],
+              [yp, Bp],
+              [Wp, tp]
             ],
             [/droid.+; (cc6666?|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [AD, [ID, aD],
-              [fD, MD]
+            [Ap, [yp, Gp],
+              [Wp, Hp]
             ],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [AD, [ID, aD],
-              [fD, nD]
+            [Ap, [yp, Gp],
+              [Wp, tp]
             ],
             [/smart-tv.+(samsung)/i],
-            [ID, [fD, OD]],
+            [yp, [Wp, dp]],
             [/hbbtv.+maple;(\d+)/i],
             [
-              [AD, /^/, "SmartTV"],
-              [ID, kD],
-              [fD, OD]
+              [Ap, /^/, "SmartTV"],
+              [yp, ap],
+              [Wp, dp]
             ],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
-              [ID, SD],
-              [fD, OD]
+              [yp, Jp],
+              [Wp, dp]
             ],
             [/(apple) ?tv/i],
-            [ID, [AD, XD + " TV"],
-              [fD, OD]
+            [yp, [Ap, mp + " TV"],
+              [Wp, dp]
             ],
             [/crkey/i],
             [
-              [AD, xD + "cast"],
-              [ID, bD],
-              [fD, OD]
+              [Ap, Cp + "cast"],
+              [yp, Xp],
+              [Wp, dp]
             ],
             [/droid.+aft(\w+)( bui|\))/i],
-            [AD, [ID, QD],
-              [fD, OD]
+            [Ap, [yp, kp],
+              [Wp, dp]
             ],
             [/(shield \w+ tv)/i],
-            [AD, [ID, WD],
-              [fD, OD]
+            [Ap, [yp, Tp],
+              [Wp, dp]
             ],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-            [AD, [ID, mD],
-              [fD, OD]
+            [Ap, [yp, np],
+              [Wp, dp]
             ],
             [/(bravia[\w ]+)( bui|\))/i],
-            [AD, [ID, eD],
-              [fD, OD]
+            [Ap, [yp, Fp],
+              [Wp, dp]
             ],
             [/(mi(tv|box)-?\w+) bui/i],
-            [AD, [ID, oD],
-              [fD, OD]
+            [Ap, [yp, gp],
+              [Wp, dp]
             ],
             [/Hbbtv.*(technisat) (.*);/i],
-            [ID, AD, [fD, OD]],
+            [yp, Ap, [Wp, dp]],
             [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
             [
-              [ID, Dz],
-              [AD, Dz],
-              [fD, OD]
+              [yp, ci],
+              [Ap, ci],
+              [Wp, dp]
             ],
             [/droid.+; ([\w- ]+) (?:android tv|smart[- ]?tv)/i],
-            [AD, [fD, OD]],
+            [Ap, [Wp, dp]],
             [/\b(android tv|smart[- ]?tv|opera tv|tv; rv:)\b/i],
             [
-              [fD, OD]
+              [Wp, dp]
             ],
             [/(ouya)/i, /(nintendo) ([wids3utch]+)/i],
-            [ID, AD, [fD, hD]],
+            [yp, Ap, [Wp, vp]],
             [/droid.+; (shield)( bui|\))/i],
-            [AD, [ID, WD],
-              [fD, hD]
+            [Ap, [yp, Tp],
+              [Wp, vp]
             ],
             [/(playstation \w+)/i],
-            [AD, [ID, eD],
-              [fD, hD]
+            [Ap, [yp, Fp],
+              [Wp, vp]
             ],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [AD, [ID, iD],
-              [fD, hD]
+            [Ap, [yp, Bp],
+              [Wp, vp]
             ],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
-            [AD, [ID, kD],
-              [fD, JD]
+            [Ap, [yp, ap],
+              [Wp, ep]
             ],
             [/((pebble))app/i, /(asus|google|lg|oppo) ((pixel |zen)?watch[\w ]*)( bui|\))/i],
-            [ID, AD, [fD, JD]],
+            [yp, Ap, [Wp, ep]],
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
-            [AD, [ID, yD],
-              [fD, JD]
+            [Ap, [yp, hp],
+              [Wp, ep]
             ],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [AD, [ID, XD],
-              [fD, JD]
+            [Ap, [yp, mp],
+              [Wp, ep]
             ],
             [/(opwwe\d{3})/i],
-            [AD, [ID, ND],
-              [fD, JD]
+            [Ap, [yp, fp],
+              [Wp, ep]
             ],
             [/(moto 360)/i],
-            [AD, [ID, lD],
-              [fD, JD]
+            [Ap, [yp, Np],
+              [Wp, ep]
             ],
             [/(smartwatch 3)/i],
-            [AD, [ID, eD],
-              [fD, JD]
+            [Ap, [yp, Fp],
+              [Wp, ep]
             ],
             [/(g watch r)/i],
-            [AD, [ID, SD],
-              [fD, JD]
+            [Ap, [yp, Jp],
+              [Wp, ep]
             ],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [AD, [ID, aD],
-              [fD, JD]
+            [Ap, [yp, Gp],
+              [Wp, ep]
             ],
             [/droid.+; (glass) \d/i],
-            [AD, [ID, bD],
-              [fD, JD]
+            [Ap, [yp, Xp],
+              [Wp, ep]
             ],
             [/(pico) (4|neo3(?: link|pro)?)/i],
-            [ID, AD, [fD, JD]],
+            [yp, Ap, [Wp, ep]],
             [/; (quest( \d| pro)?)/i],
-            [AD, [ID, uD],
-              [fD, JD]
+            [Ap, [yp, rp],
+              [Wp, ep]
             ],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-            [ID, [fD, ED]],
+            [yp, [Wp, jp]],
             [/(aeobc)\b/i],
-            [AD, [ID, QD],
-              [fD, ED]
+            [Ap, [yp, kp],
+              [Wp, jp]
             ],
             [/(homepod).+mac os/i],
-            [AD, [ID, XD],
-              [fD, ED]
+            [Ap, [yp, mp],
+              [Wp, jp]
             ],
             [/windows iot/i],
             [
-              [fD, ED]
+              [Wp, jp]
             ],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew).+? mobile safari/i],
-            [AD, [fD, nD]],
+            [Ap, [Wp, tp]],
             [/droid .+?; ([^;]+?)(?: bui|\) applew).+?(?! mobile) safari/i],
-            [AD, [fD, MD]],
+            [Ap, [Wp, Hp]],
             [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
             [
-              [fD, MD]
+              [Wp, Hp]
             ],
             [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
             [
-              [fD, nD]
+              [Wp, tp]
             ],
             [/droid .+?; ([\w\. -]+)( bui|\))/i],
-            [AD, [ID, "Generic"]]
+            [Ap, [yp, "Generic"]]
           ],
           engine: [
             [/windows.+ edge\/([\w\.]+)/i],
-            [BD, [UD, "EdgeHTML"]],
+            [Up, [Pp, "EdgeHTML"]],
             [/(arkweb)\/([\w\.]+)/i],
-            [UD, BD],
+            [Pp, Up],
             [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-            [BD, [UD, "Blink"]],
+            [Up, [Pp, "Blink"]],
             [/(presto)\/([\w\.]+)/i, /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i, /ekioh(flow)\/([\w\.]+)/i, /(khtml|tasman|links)[\/ ]\(?([\w\.]+)/i, /(icab)[\/ ]([23]\.[\d\.]+)/i, /\b(libweb)/i],
-            [UD, BD],
+            [Pp, Up],
             [/ladybird\//i],
             [
-              [UD, "LibWeb"]
+              [Pp, "LibWeb"]
             ],
             [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-            [BD, UD]
+            [Up, Pp]
           ],
           os: [
             [/microsoft (windows) (vista|xp)/i],
-            [UD, BD],
+            [Pp, Up],
             [/(windows (?:phone(?: os)?|mobile|iot))[\/ ]?([\d\.\w ]*)/i],
-            [UD, [BD, wz, pz]],
+            [Pp, [Up, oi, Ii]],
             [/windows nt 6\.2; (arm)/i, /windows[\/ ]([ntce\d\. ]+\w)(?!.+xbox)/i, /(?:win(?=3|9|n)|win 9x )([nt\d\.]+)/i],
             [
-              [BD, wz, pz],
-              [UD, "Windows"]
+              [Up, oi, Ii],
+              [Pp, "Windows"]
             ],
             [/[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i, /(?:ios;fbsv\/|iphone.+ios[\/ ])([\d\.]+)/i, /cfnetwork\/.+darwin/i],
             [
-              [BD, /_/g, "."],
-              [UD, "iOS"]
+              [Up, /_/g, "."],
+              [Pp, "iOS"]
             ],
             [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+haiku)/i],
             [
-              [UD, tD],
-              [BD, /_/g, "."]
+              [Pp, zp],
+              [Up, /_/g, "."]
             ],
             [/droid ([\w\.]+)\b.+(android[- ]x86|harmonyos)/i],
-            [BD, UD],
+            [Up, Pp],
             [/(ubuntu) ([\w\.]+) like android/i],
             [
-              [UD, /(.+)/, "$1 Touch"], BD
+              [Pp, /(.+)/, "$1 Touch"], Up
             ],
             [/(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen|webos)\w*[-\/; ]?([\d\.]*)/i],
-            [UD, BD],
+            [Pp, Up],
             [/\(bb(10);/i],
-            [BD, [UD, PD]],
+            [Up, [Pp, qp]],
             [/(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i],
-            [BD, [UD, "Symbian"]],
+            [Up, [Pp, "Symbian"]],
             [/mozilla\/[\d\.]+ \((?:mobile|tablet|tv|mobile; [\w ]+); rv:.+ gecko\/([\w\.]+)/i],
-            [BD, [UD, TD + " OS"]],
+            [Up, [Pp, Ep + " OS"]],
             [/web0s;.+rt(tv)/i, /\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i],
-            [BD, [UD, "webOS"]],
+            [Up, [Pp, "webOS"]],
             [/watch(?: ?os[,\/]|\d,\d\/)([\d\.]+)/i],
-            [BD, [UD, "watchOS"]],
+            [Up, [Pp, "watchOS"]],
             [/crkey\/([\d\.]+)/i],
-            [BD, [UD, xD + "cast"]],
+            [Up, [Pp, Cp + "cast"]],
             [/(cros) [\w]+(?:\)| ([\w\.]+)\b)/i],
             [
-              [UD, vD], BD
+              [Pp, Zp], Up
             ],
             [/panasonic;(viera)/i, /(netrange)mmh/i, /(nettv)\/(\d+\.[\w\.]+)/i, /(nintendo|playstation) ([wids345portablevuch]+)/i, /(xbox); +xbox ([^\);]+)/i, /\b(joli|palm)\b ?(?:os)?\/?([\w\.]*)/i, /(mint)[\/\(\) ]?(\w*)/i, /(mageia|vectorlinux)[; ]/i, /([kxln]?ubuntu|debian|suse|opensuse|gentoo|arch(?= linux)|slackware|fedora|mandriva|centos|pclinuxos|red ?hat|zenwalk|linpus|raspbian|plan 9|minix|risc os|contiki|deepin|manjaro|elementary os|sabayon|linspire)(?: gnu\/linux)?(?: enterprise)?(?:[- ]linux)?(?:-gnu)?[-\/ ]?(?!chrom|package)([-\w\.]*)/i, /(hurd|linux)(?: arm\w*| x86\w*| ?)([\w\.]*)/i, /(gnu) ?([\w\.]*)/i, /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i, /(haiku) (\w+)/i],
-            [UD, BD],
+            [Pp, Up],
             [/(sunos) ?([\w\.\d]*)/i],
             [
-              [UD, "Solaris"], BD
+              [Pp, "Solaris"], Up
             ],
             [/((?:open)?solaris)[-\/ ]?([\w\.]*)/i, /(aix) ((\d)(?=\.|\)| )[\w\.])*/i, /\b(beos|os\/2|amigaos|morphos|openvms|fuchsia|hp-ux|serenityos)/i, /(unix) ?([\w\.]*)/i],
-            [UD, BD]
+            [Pp, Up]
           ]
         },
-        Kz = function(DD, zD) {
-          if (typeof DD === cD && (zD = DD, DD = KD), !(this instanceof Kz)) return new Kz(DD, zD).getResult();
-          var wD = typeof sD !== LD && sD.navigator ? sD.navigator : KD,
-            pD = DD || (wD && wD.userAgent ? wD.userAgent : ""),
-            hD = wD && wD.userAgentData ? wD.userAgentData : KD,
-            OD = zD ? function(DD, zD) {
-              var wD = {};
-              for (var pD in DD) zD[pD] && zD[pD].length % 2 === 0 ? wD[pD] = zD[pD].concat(DD[pD]) : wD[pD] = DD[pD];
-              return wD
-            }(sz, zD) : sz,
-            JD = wD && wD.userAgent == pD;
+        xi = function(pp, ip) {
+          if (typeof pp === Lp && (ip = pp, pp = Ip), !(this instanceof xi)) return new xi(pp, ip).getResult();
+          var cp = typeof op !== xp && op.navigator ? op.navigator : Ip,
+            Op = pp || (cp && cp.userAgent ? cp.userAgent : ""),
+            vp = cp && cp.userAgentData ? cp.userAgentData : Ip,
+            dp = ip ? function(pp, ip) {
+              var cp = {};
+              for (var Op in pp) ip[Op] && ip[Op].length % 2 === 0 ? cp[Op] = ip[Op].concat(pp[Op]) : cp[Op] = pp[Op];
+              return cp
+            }(Si, ip) : Si,
+            ep = cp && cp.userAgent == Op;
           return this.getBrowser = function() {
-            var DD, zD = {};
-            return zD[UD] = KD, zD[BD] = KD, zz.call(zD, pD, OD.browser), zD[RD] = typeof(DD = zD[BD]) === gD ? DD.replace(/[^\d\.]/g, "").split(".")[0] : KD, JD && wD && wD.brave && typeof wD.brave.isBrave == rD && (zD[UD] = "Brave"), zD
+            var pp, ip = {};
+            return ip[Pp] = Ip, ip[Up] = Ip, Oi.call(ip, Op, dp.browser), ip[Dp] = typeof(pp = ip[Up]) === Yp ? pp.replace(/[^\d\.]/g, "").split(".")[0] : Ip, ep && cp && cp.brave && typeof cp.brave.isBrave == Sp && (ip[Pp] = "Brave"), ip
           }, this.getCPU = function() {
-            var DD = {};
-            return DD[GD] = KD, zz.call(DD, pD, OD.cpu), DD
+            var pp = {};
+            return pp[wp] = Ip, Oi.call(pp, Op, dp.cpu), pp
           }, this.getDevice = function() {
-            var DD = {};
-            return DD[ID] = KD, DD[AD] = KD, DD[fD] = KD, zz.call(DD, pD, OD.device), JD && !DD[fD] && hD && hD.mobile && (DD[fD] = nD), JD && "Macintosh" == DD[AD] && wD && typeof wD.standalone !== LD && wD.maxTouchPoints && wD.maxTouchPoints > 2 && (DD[AD] = "iPad", DD[fD] = MD), DD
-          }, this.iI = function() {
-            var DD = {};
-            return DD[UD] = KD, DD[BD] = KD, zz.call(DD, pD, OD.engine), DD
+            var pp = {};
+            return pp[yp] = Ip, pp[Ap] = Ip, pp[Wp] = Ip, Oi.call(pp, Op, dp.device), ep && !pp[Wp] && vp && vp.mobile && (pp[Wp] = tp), ep && "Macintosh" == pp[Ap] && cp && typeof cp.standalone !== xp && cp.maxTouchPoints && cp.maxTouchPoints > 2 && (pp[Ap] = "iPad", pp[Wp] = Hp), pp
+          }, this.gy = function() {
+            var pp = {};
+            return pp[Pp] = Ip, pp[Up] = Ip, Oi.call(pp, Op, dp.engine), pp
           }, this.getOS = function() {
-            var DD = {};
-            return DD[UD] = KD, DD[BD] = KD, zz.call(DD, pD, OD.os), JD && !DD[UD] && hD && hD.platform && "Unknown" != hD.platform && (DD[UD] = hD.platform.replace(/chrome os/i, vD).replace(/macos/i, tD)), DD
+            var pp = {};
+            return pp[Pp] = Ip, pp[Up] = Ip, Oi.call(pp, Op, dp.os), ep && !pp[Pp] && vp && vp.platform && "Unknown" != vp.platform && (pp[Pp] = vp.platform.replace(/chrome os/i, Zp).replace(/macos/i, zp)), pp
           }, this.getResult = function() {
             return {
               ua: this.getUA(),
               browser: this.getBrowser(),
-              engine: this.iI(),
+              engine: this.gy(),
               os: this.getOS(),
               device: this.getDevice(),
               cpu: this.getCPU()
             }
           }, this.getUA = function() {
-            return pD
-          }, this.setUA = function(DD) {
-            return pD = typeof DD === gD && DD.length > 500 ? Dz(DD, 500) : DD, this
-          }, this.setUA(pD), this
+            return Op
+          }, this.setUA = function(pp) {
+            return Op = typeof pp === Yp && pp.length > 500 ? ci(pp, 500) : pp, this
+          }, this.setUA(Op), this
         };
-      Kz.VERSION = "1.0.41", Kz.BROWSER = YD([UD, BD, RD]), Kz.CPU = YD([GD]), Kz.DEVICE = YD([AD, ID, fD, hD, nD, OD, MD, JD, ED]), Kz.ENGINE = Kz.OS = YD([UD, BD]), typeof zD !== LD ? (DD.exports && (zD = DD.exports = Kz), zD.UAParser = Kz) : wD.amdO ? (pD = function() {
-        return Kz
-      }.call(zD, wD, zD, DD)) === KD || (DD.exports = pD) : typeof sD !== LD && (sD.UAParser = Kz);
-      var rz = typeof sD !== LD && (sD.jQuery || sD.Zepto);
-      if (rz && !rz.ua) {
-        var Lz = new Kz;
-        rz.ua = Lz.getResult(), rz.ua.get = function() {
-          return Lz.getUA()
-        }, rz.ua.set = function(DD) {
-          Lz.setUA(DD);
-          var zD = Lz.getResult();
-          for (var wD in zD) rz.ua[wD] = zD[wD]
+      xi.VERSION = "1.0.41", xi.BROWSER = Kp([Pp, Up, Dp]), xi.CPU = Kp([wp]), xi.DEVICE = Kp([Ap, yp, Wp, vp, tp, dp, Hp, ep, jp]), xi.ENGINE = xi.OS = Kp([Pp, Up]), typeof ip !== xp ? (pp.exports && (ip = pp.exports = xi), ip.UAParser = xi) : cp.amdO ? (Op = function() {
+        return xi
+      }.call(ip, cp, ip, pp)) === Ip || (pp.exports = Op) : typeof op !== xp && (op.UAParser = xi);
+      var Li = typeof op !== xp && (op.jQuery || op.Zepto);
+      if (Li && !Li.ua) {
+        var Yi = new xi;
+        Li.ua = Yi.getResult(), Li.ua.get = function() {
+          return Yi.getUA()
+        }, Li.ua.set = function(pp) {
+          Yi.setUA(pp);
+          var ip = Yi.getResult();
+          for (var cp in ip) Li.ua[cp] = ip[cp]
         }
       }
     }("object" === typeof window ? window : this)
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

@@ -326,6 +326,7 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 }
 
 .HotBarContainer.Touch .TouchInventoryKeys .TouchInventoryKey {
+  --own-gap-reach: calc(var(--key-gap-reach)/var(--key-scale, 1));
   font-size: calc(clamp(40px, 5.5rem, 52px)*.5);
   height: clamp(40px, 5.5rem, 52px);
   width: clamp(40px, 5.5rem, 52px)
@@ -374,8 +375,8 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 }
 
 .HotBarContainer.Touch .TouchInventoryKeys .TouchInventoryKey.ShopKey>.UiItemIcon {
-  margin-right: calc(var(--key-gap-reach)*-1 - 2px);
-  padding-right: var(--key-gap-reach)
+  margin-right: calc(var(--own-gap-reach)*-1 - 2px);
+  padding-right: var(--own-gap-reach)
 }
 
 .HotBarContainer.Touch .TouchInventoryKeys .TouchInventoryKey.ShopKey[data-pressing] {
@@ -425,8 +426,8 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 }
 
 .HotBarContainer.Touch .TouchInventoryKeys .TouchInventoryKey.BagKey>.UiItemIcon {
-  margin-left: calc(var(--key-gap-reach)*-1 - 2px);
-  padding-left: var(--key-gap-reach)
+  margin-left: calc(var(--own-gap-reach)*-1 - 2px);
+  padding-left: var(--own-gap-reach)
 }
 
 .HotBarContainer.Touch .TouchInventoryKeys .TouchInventoryKey.Hidden {
@@ -484,13 +485,27 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 }
 
 .HudHide-arrows .HotBarContainer.Touch .HotBarArrow,
-.HudHide-inventory .HotBarContainer.Touch .TouchInventoryKeys {
+.HudHide-bag .HotBarContainer.Touch .TouchInventoryKey.BagKey,
+.HudHide-inventory .HotBarContainer.Touch .TouchInventoryKeys,
+.HudHide-shop .HotBarContainer.Touch .TouchInventoryKey.ShopKey {
   visibility: hidden
 }
 
+.HotBarContainer.Touch .TouchInventoryKeys {
+  --shop-key-scale: calc(var(--hud-inventory-scale, 1)*var(--hud-shop-scale, 1) + var(--hud-inventory-scale, var(--hud-shop-scale))*0)
+}
+
 .HotBarContainer.Touch .TouchInventoryKey {
-  --key-tap-growth: calc(max(0px, 36px / var(--hud-inventory-scale) - 100%)*-1);
-  scale: var(--hud-inventory-scale)
+  --key-tap-growth: calc(max(0px, 36px / var(--key-scale) - 100%)*-1);
+  scale: var(--key-scale)
+}
+
+.HotBarContainer.Touch .TouchInventoryKey.ShopKey {
+  --key-scale: var(--shop-key-scale)
+}
+
+.HotBarContainer.Touch .TouchInventoryKey.BagKey {
+  --key-scale: calc(var(--hud-inventory-scale, 1)*var(--hud-bag-scale, 1) + var(--hud-inventory-scale, var(--hud-bag-scale))*0)
 }
 
 .HotBarContainer.Touch .TouchInventoryKey>.UiItemIcon:after {
@@ -516,7 +531,7 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 }
 
 .HotBarContainer.Touch.KeysAbove .TouchInventoryKey.ShopKey:not(.Hidden)+.BagKey {
-  translate: calc((var(--hud-inventory-scale) - 1)*clamp(40px, 5.5rem, 52px)) 0
+  translate: calc((var(--shop-key-scale) - 1)*clamp(40px, 5.5rem, 52px)) 0
 }
 
 .HudLocked-inventory .HotBarContainer.Touch:not(.KeysAbove) .TouchInventoryKeys {
@@ -534,6 +549,22 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   translate: calc(var(--hud-inventory-dx, 0)*100vw) calc(var(--hud-inventory-dy, 0)*var(--hud-viewport-height))
 }
 
+.HudMove-shop .HotBarContainer.Touch .TouchInventoryKey.ShopKey {
+  translate: calc(var(--hud-shop-dx, 0)*100vw) calc(var(--hud-shop-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-bag .HotBarContainer.Touch .TouchInventoryKey.BagKey {
+  translate: calc(var(--hud-bag-dx, 0)*100vw) calc(var(--hud-bag-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-bag .HotBarContainer.Touch.KeysAbove .TouchInventoryKey.ShopKey:not(.Hidden)+.BagKey {
+  translate: calc((var(--shop-key-scale, 1) - 1)*clamp(40px, 5.5rem, 52px) + var(--hud-bag-dx, 0)*100vw) calc(var(--hud-bag-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudMove-bag .HotBarContainer.Touch.KeysAbove .TouchInventoryKey.ShopKey.Hidden+.BagKey {
+  translate: calc(var(--shop-key-scale, 1)*clamp(40px, 5.5rem, 52px) + 6px + var(--hud-bag-dx, 0)*100vw) calc(var(--hud-bag-dy, 0)*var(--hud-viewport-height))
+}
+
 .HotBarContainer.Touch .HotBarArrow,
 .HotBarContainer.Touch .TouchInventoryKey {
   opacity: var(--hud-key-opacity, 1)
@@ -543,6 +574,55 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 .HotBarContainer.Touch .TouchInventoryKey[data-pressing] {
   opacity: 1;
   transition: none
+}
+
+@media(orientation:landscape)and (max-height:500px) {
+  html.TouchHotbar:not(.TouchHotbarKeysAbove):not(.HudMove-inventory):not(.HudLocked-inventory).TouchHotbarHasShop .BottomMiddleElements:not(.TouchInventoryOpen) {
+    --hotbar-keys-reach: calc(var(--touch-shop-above-shift, 0px) + clamp(40px, 5.5rem, 52px)*max(1, var(--hud-inventory-scale, 1) * var(--hud-shop-scale, 1)) + 8px);
+    padding-top: calc(clamp(40px, 5.5rem, 52px) + 4px)
+  }
+
+  html.TouchHotbar:not(.TouchHotbarKeysAbove):not(.HudMove-inventory):not(.HudLocked-inventory).TouchHotbarHasShop .BottomMiddleElements:not(.TouchInventoryOpen)>.BottomScreenMessage {
+    margin-bottom: clamp(40px, 5.5rem, 52px)
+  }
+
+  html.TouchHotbar:not(.TouchHotbarKeysAbove):not(.HudMove-inventory):not(.HudLocked-inventory).TouchHotbarHasShop .BottomMiddleElements:not(.TouchInventoryOpen) {
+    padding-top: calc(clamp(40px, 5.5rem, 52px)*max(1, var(--hud-inventory-scale, 1) * var(--hud-shop-scale, 1)) + 4px)
+  }
+
+  html.TouchHotbar:not(.TouchHotbarKeysAbove):not(.HudMove-inventory):not(.HudLocked-inventory).TouchHotbarHasShop .BottomMiddleElements:not(.TouchInventoryOpen).ShopAboveUp {
+    padding-top: calc(clamp(40px, 5.5rem, 52px)*max(1, var(--hud-inventory-scale, 1) * var(--hud-shop-scale, 1)) + 4px + .5rem)
+  }
+
+  html.TouchHotbar:not(.TouchHotbarKeysAbove):not(.HudMove-inventory):not(.HudLocked-inventory).TouchHotbarHasShop .BottomMiddleElements:not(.TouchInventoryOpen) .HotBarContainer.Touch .HotBarArrow.Previous {
+    --arrow-outer-reach: 14px
+  }
+
+  html.TouchHotbar:not(.TouchHotbarKeysAbove):not(.HudMove-inventory):not(.HudLocked-inventory) .HotBarContainer.Touch .TouchInventoryKeys:not(.InventoryOpen) {
+    top: 0
+  }
+
+  html.TouchHotbar:not(.TouchHotbarKeysAbove):not(.HudMove-inventory):not(.HudLocked-inventory) .HotBarContainer.Touch .TouchInventoryKeys:not(.InventoryOpen) .TouchInventoryKey.ShopKey {
+    --touch-shop-above: 1;
+    --key-gap-reach: 0px;
+    bottom: calc(100% + 4px + 1.9rem);
+    left: calc(clamp(40px, 5.5rem, 52px) + 3.3rem + 12px + var(--touch-shop-above-shift, 0px));
+    position: absolute;
+    transform-origin: 0 100%
+  }
+
+  html.TouchHotbar:not(.TouchHotbarKeysAbove):not(.HudMove-inventory):not(.HudLocked-inventory) .HotBarContainer.Touch .TouchInventoryKeys:not(.InventoryOpen) .TouchInventoryKey.ShopKey>.UiItemIcon:after {
+    inset: var(--key-tap-growth) var(--key-tap-growth) 0 0
+  }
+
+  html.TouchHotbar:not(.TouchHotbarKeysAbove):not(.HudMove-inventory):not(.HudLocked-inventory) .HotBarContainer.Touch .TouchInventoryKeys:not(.InventoryOpen).NoAuraBar .TouchInventoryKey.ShopKey {
+    bottom: calc(100% + 4px)
+  }
+
+  html.TouchHotbar:not(.TouchHotbarKeysAbove):not(.HudMove-inventory):not(.HudLocked-inventory) .BottomMiddleElements.ShopAboveUp .HotBarContainer.Touch .TouchInventoryKeys:not(.InventoryOpen) .TouchInventoryKey.ShopKey,
+  html.TouchHotbar:not(.TouchHotbarKeysAbove):not(.HudMove-inventory):not(.HudLocked-inventory) .BottomMiddleElements.ShopAboveUp .HotBarContainer.Touch .TouchInventoryKeys:not(.InventoryOpen).NoAuraBar .TouchInventoryKey.ShopKey {
+    bottom: calc(100% + var(--touch-shop-above-rise, 0px))
+  }
 }
 
 @keyframes newItemSparkle {
@@ -3990,6 +4070,32 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   }
 }
 
+.BottomScreenMessage {
+  font-size: 2rem;
+  font-weight: 600;
+  position: relative
+}
+
+.BottomScreenMessage.Error {
+  color: #ff9d87
+}
+
+.BottomScreenMessage.Success {
+  color: #87ff9d
+}
+
+.BottomScreenMessage.Warning {
+  color: #ffff87
+}
+
+.BottomScreenMessage {
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 0 #000;
+  visibility: visible;
+  z-index: 1
+}
+
 .CreativeItemSlotsWrapper {
   display: flex
 }
@@ -4262,42 +4368,6 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   width: auto
 }
 
-.BottomScreenMessage {
-  font-size: 2rem;
-  font-weight: 600;
-  position: relative
-}
-
-.BottomScreenMessage.Error {
-  color: #ff9d87
-}
-
-.BottomScreenMessage.Success {
-  color: #87ff9d
-}
-
-.BottomScreenMessage.Warning {
-  color: #ffff87
-}
-
-.BottomScreenMessage {
-  margin-bottom: 10px;
-  text-align: center;
-  text-shadow: 1px 1px 0 #000;
-  visibility: visible;
-  z-index: 1
-}
-
-.Inventory .InvenBody .InvenLeftSide .DoubleChestSlots .GridItemSlots {
-  grid-template-columns: repeat(12, 1fr)
-}
-
-@media(orientation:portrait)and (max-width:600px) {
-  .Inventory .InvenBody .InvenLeftSide .DoubleChestSlots .GridItemSlots {
-    --inven-item-dim: min(var(--inven-portrait-item-dim), (100vw - 5rem)/12 - 0.6rem)
-  }
-}
-
 .ControlsTutorialDiv {
   background-color: rgba(48, 58, 89, .5);
   border-radius: 0;
@@ -4352,44 +4422,14 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   }
 }
 
-.CantCtrlCrouchIfNotFullscreenComp {
-  background-color: #22283b;
-  border: 1px solid #0f0f0f;
-  border-radius: 0;
-  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  display: flex;
-  flex-direction: column;
-  padding: 1rem
+.Inventory .InvenBody .InvenLeftSide .DoubleChestSlots .GridItemSlots {
+  grid-template-columns: repeat(12, 1fr)
 }
 
-.CantCtrlCrouchIfNotFullscreenComp .CantCtrlCrouchHeader {
-  font-size: 2rem;
-  margin: auto;
-  padding-bottom: 1rem
-}
-
-.CantCtrlCrouchIfNotFullscreenComp .CantCtrlCrouchInstructions {
-  font-size: 1.75rem;
-  margin: auto;
-  padding-bottom: 1rem
-}
-
-.CantCtrlCrouchIfNotFullscreenComp .CantCtrlCrouchSubtext {
-  font-size: 1.25rem;
-  margin: auto;
-  padding-bottom: 1.25rem
-}
-
-.CantCtrlCrouchIfNotFullscreenComp .CantCtrlCrouchButtonsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center
-}
-
-.CantCtrlCrouchIfNotFullscreenComp .CantCtrlCrouchButton {
-  font-size: 2rem;
-  margin: 1.25rem
+@media(orientation:portrait)and (max-width:600px) {
+  .Inventory .InvenBody .InvenLeftSide .DoubleChestSlots .GridItemSlots {
+    --inven-item-dim: min(var(--inven-portrait-item-dim), (100vw - 5rem)/12 - 0.6rem)
+  }
 }
 
 @keyframes HelperSlideKeyFrame {
@@ -4528,91 +4568,44 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   width: calc(100% - 20px)
 }
 
-.CustomLobbyBlockEditor {
+.CantCtrlCrouchIfNotFullscreenComp {
   background-color: #22283b;
-  border-radius: 0;
-  height: 50rem;
-  overflow-y: scroll;
-  padding: 1rem;
-  width: 65rem
-}
-
-.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem
-}
-
-.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockGameTitle {
-  font-size: 2rem;
-  margin: 0 0 .5rem
-}
-
-.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer {
-  border: 2px solid #303a59;
-  border-radius: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: .5rem
-}
-
-.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustomLobbyBlockCategoryTitle {
-  color: #cfcfcf;
-  font-size: 1.2rem;
-  margin: 0 0 .5rem
-}
-
-.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustonLobbyBlockContainer {
-  background-color: #303a59;
-  border-radius: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start
-}
-
-.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustonLobbyBlockContainer .CustomLobbyBlockButton {
-  aspect-ratio: 1/1;
-  background-color: #394980;
   border: 1px solid #0f0f0f;
   border-radius: 0;
   box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
-  box-sizing: border-box;
-  cursor: pointer;
-  margin: .5rem;
-  transition: background-color .1s;
-  width: calc(12.5% - 1rem)
+  display: flex;
+  flex-direction: column;
+  padding: 1rem
 }
 
-@media(hover:hover) {
-  .CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustonLobbyBlockContainer .CustomLobbyBlockButton:hover {
-    background-color: #495da3
-  }
+.CantCtrlCrouchIfNotFullscreenComp .CantCtrlCrouchHeader {
+  font-size: 2rem;
+  margin: auto;
+  padding-bottom: 1rem
 }
 
-.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustonLobbyBlockContainer .CustomLobbyBlockButton.pad-focused {
-  background-color: #495da3
+.CantCtrlCrouchIfNotFullscreenComp .CantCtrlCrouchInstructions {
+  font-size: 1.75rem;
+  margin: auto;
+  padding-bottom: 1rem
 }
 
-@media(hover:none) {
-  .CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustonLobbyBlockContainer .CustomLobbyBlockButton:active {
-    background-color: #495da3
-  }
+.CantCtrlCrouchIfNotFullscreenComp .CantCtrlCrouchSubtext {
+  font-size: 1.25rem;
+  margin: auto;
+  padding-bottom: 1.25rem
 }
 
-.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustomLobbyBlockNameTooltip {
-  font-size: 1.2rem;
-  text-align: center
+.CantCtrlCrouchIfNotFullscreenComp .CantCtrlCrouchButtonsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center
 }
 
-.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustomLobbyBlockNameTooltip .CustomLobbyBlockDescription {
-  color: #cfcfcf;
-  font-size: 1rem;
-  white-space: pre-line
-}
-
-.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustomLobbyBlockTooltip {
-  padding-left: .5rem
+.CantCtrlCrouchIfNotFullscreenComp .CantCtrlCrouchButton {
+  font-size: 2rem;
+  margin: 1.25rem
 }
 
 .JoystickZone {
@@ -4727,6 +4720,184 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 .JoystickZone .Joystick.Resting .JoystickBase,
 .JoystickZone .Joystick.Resting .JoystickKnob {
   opacity: calc(var(--hud-key-opacity, 1)*.5)
+}
+
+.CustomLobbyBlockEditor {
+  background-color: #22283b;
+  border-radius: 0;
+  height: 50rem;
+  overflow-y: scroll;
+  padding: 1rem;
+  width: 65rem
+}
+
+.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem
+}
+
+.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockGameTitle {
+  font-size: 2rem;
+  margin: 0 0 .5rem
+}
+
+.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer {
+  border: 2px solid #303a59;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: .5rem
+}
+
+.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustomLobbyBlockCategoryTitle {
+  color: #cfcfcf;
+  font-size: 1.2rem;
+  margin: 0 0 .5rem
+}
+
+.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustonLobbyBlockContainer {
+  background-color: #303a59;
+  border-radius: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start
+}
+
+.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustonLobbyBlockContainer .CustomLobbyBlockButton {
+  aspect-ratio: 1/1;
+  background-color: #394980;
+  border: 1px solid #0f0f0f;
+  border-radius: 0;
+  box-shadow: .2rem .25rem 0 rgba(0, 0, 0, .32);
+  box-sizing: border-box;
+  cursor: pointer;
+  margin: .5rem;
+  transition: background-color .1s;
+  width: calc(12.5% - 1rem)
+}
+
+@media(hover:hover) {
+  .CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustonLobbyBlockContainer .CustomLobbyBlockButton:hover {
+    background-color: #495da3
+  }
+}
+
+.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustonLobbyBlockContainer .CustomLobbyBlockButton.pad-focused {
+  background-color: #495da3
+}
+
+@media(hover:none) {
+  .CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustonLobbyBlockContainer .CustomLobbyBlockButton:active {
+    background-color: #495da3
+  }
+}
+
+.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustomLobbyBlockNameTooltip {
+  font-size: 1.2rem;
+  text-align: center
+}
+
+.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustomLobbyBlockNameTooltip .CustomLobbyBlockDescription {
+  color: #cfcfcf;
+  font-size: 1rem;
+  white-space: pre-line
+}
+
+.CustomLobbyBlockEditor .CustomLobbyBlockGameContainer .CustomLobbyBlockGame .CustomLobbyBlockCategoryContainer .CustomLobbyBlockCategory .CustomLobbyBlockTooltip {
+  padding-left: .5rem
+}
+
+.TouchComponentsButtons .TouchKeyHit.JumpKey .TouchKey {
+  position: relative
+}
+
+.TouchComponentsButtons .TouchKeyHit.JumpKey .JumpLockRing {
+  display: none;
+  pointer-events: none;
+  position: absolute
+}
+
+.TouchComponentsButtons .TouchKeyHit.JumpKey .JumpLockRing circle,
+.TouchComponentsButtons .TouchKeyHit.JumpKey .JumpLockRing rect {
+  fill: none;
+  stroke: #ffb914;
+  stroke-width: 4;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1
+}
+
+.TouchComponentsButtons .TouchKeyHit.JumpKey .JumpLockRing {
+  height: calc(100% + 12px);
+  left: -6px;
+  top: -6px;
+  width: calc(100% + 12px)
+}
+
+.TouchComponentsButtons .TouchKeyHit.JumpKey .JumpLockTarget {
+  align-items: center;
+  background: rgba(26, 31, 46, .6);
+  border: 2px solid #ffb914;
+  color: #ffb914;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 700;
+  gap: .4rem;
+  height: 44px;
+  left: 0;
+  padding: 0 .8rem;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  white-space: nowrap
+}
+
+.TouchComponentsButtons .TouchKeyHit.JumpKey .JumpLockBadge {
+  align-items: center;
+  background: #ffb914;
+  color: #1a1f2e;
+  display: none;
+  font-size: .45em;
+  height: 1.9em;
+  justify-content: center;
+  position: absolute;
+  right: -.9em;
+  top: -.9em;
+  width: 1.9em
+}
+
+.TouchKeysRound .TouchComponentsButtons .TouchKeyHit.JumpKey .JumpLockBadge {
+  right: calc(14.6% - .95em);
+  top: calc(14.6% - .95em)
+}
+
+.TouchComponentsButtons .TouchKeyHit.JumpKey.JumpLockArmed .JumpLockRing,
+.TouchComponentsButtons .TouchKeyHit.JumpKey.JumpLockCharging .JumpLockRing,
+.TouchComponentsButtons .TouchKeyHit.JumpKey.JumpLockReady .JumpLockRing {
+  display: block
+}
+
+.TouchComponentsButtons .TouchKeyHit.JumpKey.JumpLockArmed .JumpLockTarget,
+.TouchComponentsButtons .TouchKeyHit.JumpKey.JumpLockReady .JumpLockTarget {
+  visibility: visible
+}
+
+.TouchComponentsButtons .TouchKeyHit.JumpKey.JumpLockReady .JumpLockTarget {
+  background: #b6830e;
+  border-color: #fcd373;
+  color: #fff
+}
+
+.TouchComponentsButtons .TouchKeyHit.JumpKey.JumpLockLocked .TouchKey {
+  background-color: rgba(255, 185, 20, .15);
+  border-color: #ffb914;
+  color: #ffb914;
+  opacity: 1
+}
+
+.TouchComponentsButtons .TouchKeyHit.JumpKey.JumpLockLocked .TouchKey .JumpLockBadge {
+  display: flex
 }
 
 .PetUIOuter.GameBackgroundScreen {
@@ -5084,95 +5255,136 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
   padding-left: .5rem
 }
 
-.TouchComponentsButtons .TouchKeyHit.JumpKey .TouchKey {
-  position: relative
+@media(orientation:portrait)and (max-width:600px) {
+  html.TouchHotbar {
+    --sprint-bars-reach: calc(var(--touch-cluster-row-reach) + max(12px, var(--hud-inset-bottom)) - max(12px, var(--hud-safe-bottom, 0px)))
+  }
 }
 
-.TouchComponentsButtons .TouchKeyHit.JumpKey .JumpLockRing {
-  display: none;
-  pointer-events: none;
-  position: absolute
+.TouchSprintHit {
+  --sprint-key: calc(clamp(1rem, 1.45vw, 1.5rem)*4*var(--hud-sprint-scale, 1));
+  --sprint-gap: 16px;
+  --sprint-dir-x: 0;
+  --sprint-dir-y: 1;
+  --sprint-stick-radius: max(30px, 50px * var(--hud-joystick-scale, 1));
+  --sprint-home-base: 100px;
+  --sprint-home-x: clamp(var(--sprint-stick-radius), var(--notchLeft) + var(--hud-inset-left) - var(--hud-auto-inset-left) + 90px + var(--hud-joystick-dx, 0) * 100vw, 100vw - var(--sprint-stick-radius));
+  --sprint-home-bottom: clamp(var(--sprint-stick-radius), var(--sprint-home-base) + var(--hud-inset-bottom) - var(--hud-auto-inset-bottom) - var(--hud-joystick-dy, 0) * var(--hud-viewport-height), var(--hud-viewport-height) - var(--sprint-stick-radius));
+  --sprint-reach: calc(var(--sprint-stick-radius) + var(--sprint-gap) + var(--sprint-key)/2);
+  --sprint-left: clamp(0px, var(--sprint-home-x) + var(--sprint-dir-x) * var(--sprint-reach) - var(--sprint-key)/2, 100vw - var(--sprint-key));
+  --sprint-bottom: clamp(0px, var(--sprint-home-bottom) + var(--sprint-dir-y) * var(--sprint-reach) - var(--sprint-key)/2, var(--hud-viewport-height) - var(--sprint-key));
+  --sprint-top: calc(var(--sprint-bottom) + var(--sprint-key))
 }
 
-.TouchComponentsButtons .TouchKeyHit.JumpKey .JumpLockRing circle,
-.TouchComponentsButtons .TouchKeyHit.JumpKey .JumpLockRing rect {
-  fill: none;
-  stroke: #ffb914;
-  stroke-width: 4;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1
+@media(orientation:portrait) {
+  .TouchSprintHit {
+    --sprint-home-base: 135px
+  }
 }
 
-.TouchComponentsButtons .TouchKeyHit.JumpKey .JumpLockRing {
-  height: calc(100% + 12px);
-  left: -6px;
-  top: -6px;
-  width: calc(100% + 12px)
+@media(orientation:landscape)and (max-height:500px) {
+  .TouchSprintHit {
+    --sprint-key: calc(40px*var(--hud-sprint-scale, 1));
+    --sprint-dir-x: 0.7071;
+    --sprint-dir-y: 0.7071
+  }
 }
 
-.TouchComponentsButtons .TouchKeyHit.JumpKey .JumpLockTarget {
+@media(orientation:portrait)and (max-width:600px) {
+  .TouchSprintHit {
+    --sprint-key: calc(min(10px, 2.9vw)*4*var(--hud-sprint-scale, 1));
+    --sprint-reach: calc(calc(max(12px, var(--hud-inset-bottom)) + min(4.75rem, (calc(100vw - var(--hud-inset-left) - var(--hud-inset-right) - 1.5rem) - 1.8rem) / 10) + 160px + clamp(40px, 5.5rem, 52px)) + var(--sprint-gap) + var(--sprint-key) / 2 - (var(--sprint-home-base) + var(--hud-inset-bottom) - var(--hud-auto-inset-bottom)))
+  }
+}
+
+.TouchSprintHit.AtHome {
+  --sprint-reach: 0px
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  .TouchSprintHit.AtHome {
+    --sprint-bottom: clamp(0px, max(var(--sprint-home-bottom) - var(--sprint-key)/2, var(--sprint-bars-reach, 0px) + 4px), var(--hud-viewport-height) - var(--sprint-key))
+  }
+}
+
+.TouchSprintHit {
+  bottom: var(--sprint-bottom);
+  height: var(--sprint-key);
+  left: var(--sprint-left);
+  pointer-events: auto;
+  position: absolute;
+  touch-action: none;
+  width: var(--sprint-key)
+}
+
+@media(pointer:coarse) {
+  .TouchSprintHit:before {
+    content: "";
+    inset: min(0px, (100% - 44px)/2) min(0px, (100% - 44px)/2);
+    position: absolute
+  }
+}
+
+.HudMove-sprint .TouchSprintHit {
+  translate: calc(var(--hud-sprint-dx, 0)*100vw) calc(var(--hud-sprint-dy, 0)*var(--hud-viewport-height))
+}
+
+.HudHide-sprint .TouchSprintHit {
+  display: none
+}
+
+.TouchSprintHit .TouchSprintKey {
   align-items: center;
-  background: rgba(26, 31, 46, .6);
-  border: 2px solid #ffb914;
-  color: #ffb914;
+  background-color: rgba(60, 75, 104, .72);
+  border: 2px solid #0f0f0f;
+  box-shadow: inset 0 1.5px 0 #586e99, 0 3px 0 #1a1f2e;
+  box-sizing: border-box;
+  color: #fff;
   display: flex;
-  font-size: 1.1rem;
-  font-weight: 700;
-  gap: .4rem;
-  height: 44px;
-  left: 0;
-  padding: 0 .8rem;
-  position: absolute;
-  top: 0;
-  visibility: hidden;
-  white-space: nowrap
-}
-
-.TouchComponentsButtons .TouchKeyHit.JumpKey .JumpLockBadge {
-  align-items: center;
-  background: #ffb914;
-  color: #1a1f2e;
-  display: none;
-  font-size: .45em;
-  height: 1.9em;
+  flex-direction: column;
   justify-content: center;
-  position: absolute;
-  right: -.9em;
-  top: -.9em;
-  width: 1.9em
+  text-shadow: -1px -1px 0 #000, -1px 0 0 #000, -1px 1px 0 #000, 0 -1px 0 #000, 0 0 0 #000, 0 1px 0 #000, 1px -1px 0 #000, 1px 0 0 #000, 1px 1px 0 #000
 }
 
-.TouchKeysRound .TouchComponentsButtons .TouchKeyHit.JumpKey .JumpLockBadge {
-  right: calc(14.6% - .95em);
-  top: calc(14.6% - .95em)
+.TouchSprintHit .TouchSprintKey .svg-inline--fa,
+.TouchSprintHit .TouchSprintKey.svg-inline--fa {
+  paint-order: stroke fill
 }
 
-.TouchComponentsButtons .TouchKeyHit.JumpKey.JumpLockArmed .JumpLockRing,
-.TouchComponentsButtons .TouchKeyHit.JumpKey.JumpLockCharging .JumpLockRing,
-.TouchComponentsButtons .TouchKeyHit.JumpKey.JumpLockReady .JumpLockRing {
-  display: block
+.TouchSprintHit .TouchSprintKey .svg-inline--fa path:only-of-type,
+.TouchSprintHit .TouchSprintKey.svg-inline--fa path:only-of-type {
+  stroke: #000;
+  vector-effect: non-scaling-stroke;
+  stroke-width: 2px;
+  stroke-linejoin: round
 }
 
-.TouchComponentsButtons .TouchKeyHit.JumpKey.JumpLockArmed .JumpLockTarget,
-.TouchComponentsButtons .TouchKeyHit.JumpKey.JumpLockReady .JumpLockTarget {
-  visibility: visible
+.TouchSprintHit .TouchSprintKey {
+  font-size: calc(var(--sprint-key)*.5);
+  height: 100%;
+  opacity: var(--hud-key-opacity, 1);
+  width: 100%
 }
 
-.TouchComponentsButtons .TouchKeyHit.JumpKey.JumpLockReady .JumpLockTarget {
-  background: #b6830e;
-  border-color: #fcd373;
-  color: #fff
-}
-
-.TouchComponentsButtons .TouchKeyHit.JumpKey.JumpLockLocked .TouchKey {
-  background-color: rgba(255, 185, 20, .15);
+.TouchSprintHit .TouchSprintKey.Lit {
   border-color: #ffb914;
-  color: #ffb914;
-  opacity: 1
+  color: #ffb914
 }
 
-.TouchComponentsButtons .TouchKeyHit.JumpKey.JumpLockLocked .TouchKey .JumpLockBadge {
-  display: flex
+.TouchSprintHit[data-pressing] {
+  transition: none
+}
+
+.TouchSprintHit[data-pressing] .TouchSprintKey {
+  background-color: rgba(75, 94, 130, .85);
+  box-shadow: inset 0 1.5px 0 #586e99, 0 1px 0 #1a1f2e;
+  opacity: 1;
+  transform: translateY(2px)
+}
+
+.TouchKeysRound .TouchSprintHit,
+.TouchKeysRound .TouchSprintHit .TouchSprintKey {
+  border-radius: 50%
 }
 
 .GameBackgroundScreen.CodeEditorBg {
@@ -8112,6 +8324,62 @@ html:not(.TouchHotbarHasShop) .HotBarContainer.Touch .HotBarArrow.Previous {
 @media(orientation:portrait) {
   .BottomLeftElements.Touch>.EffectInfosWrapper {
     bottom: calc(max(185px, var(--touch-hotbar-keys-above-reach, 0px)) + 8px)
+  }
+}
+
+html:not(.HudHide-sprint, .HudMove-sprint) .InGameUi:has(.TouchMovementWrapper:not(.Hidden) .TouchSprintHit) .BottomLeftElements.Touch>.EffectInfosWrapper {
+  --sprint-key: calc(clamp(1rem, 1.45vw, 1.5rem)*4*var(--hud-sprint-scale, 1));
+  --sprint-gap: 16px;
+  --sprint-dir-x: 0;
+  --sprint-dir-y: 1;
+  --sprint-stick-radius: max(30px, 50px * var(--hud-joystick-scale, 1));
+  --sprint-home-base: 100px;
+  --sprint-home-x: clamp(var(--sprint-stick-radius), var(--notchLeft) + var(--hud-inset-left) - var(--hud-auto-inset-left) + 90px + var(--hud-joystick-dx, 0) * 100vw, 100vw - var(--sprint-stick-radius));
+  --sprint-home-bottom: clamp(var(--sprint-stick-radius), var(--sprint-home-base) + var(--hud-inset-bottom) - var(--hud-auto-inset-bottom) - var(--hud-joystick-dy, 0) * var(--hud-viewport-height), var(--hud-viewport-height) - var(--sprint-stick-radius));
+  --sprint-reach: calc(var(--sprint-stick-radius) + var(--sprint-gap) + var(--sprint-key)/2);
+  --sprint-left: clamp(0px, var(--sprint-home-x) + var(--sprint-dir-x) * var(--sprint-reach) - var(--sprint-key)/2, 100vw - var(--sprint-key));
+  --sprint-bottom: clamp(0px, var(--sprint-home-bottom) + var(--sprint-dir-y) * var(--sprint-reach) - var(--sprint-key)/2, var(--hud-viewport-height) - var(--sprint-key));
+  --sprint-top: calc(var(--sprint-bottom) + var(--sprint-key))
+}
+
+@media(orientation:portrait) {
+  html:not(.HudHide-sprint, .HudMove-sprint) .InGameUi:has(.TouchMovementWrapper:not(.Hidden) .TouchSprintHit) .BottomLeftElements.Touch>.EffectInfosWrapper {
+    --sprint-home-base: 135px
+  }
+}
+
+@media(orientation:landscape)and (max-height:500px) {
+  html:not(.HudHide-sprint, .HudMove-sprint) .InGameUi:has(.TouchMovementWrapper:not(.Hidden) .TouchSprintHit) .BottomLeftElements.Touch>.EffectInfosWrapper {
+    --sprint-key: calc(40px*var(--hud-sprint-scale, 1));
+    --sprint-dir-x: 0.7071;
+    --sprint-dir-y: 0.7071
+  }
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  html:not(.HudHide-sprint, .HudMove-sprint) .InGameUi:has(.TouchMovementWrapper:not(.Hidden) .TouchSprintHit) .BottomLeftElements.Touch>.EffectInfosWrapper {
+    --sprint-key: calc(min(10px, 2.9vw)*4*var(--hud-sprint-scale, 1));
+    --sprint-reach: calc(calc(max(12px, var(--hud-inset-bottom)) + min(4.75rem, (calc(100vw - var(--hud-inset-left) - var(--hud-inset-right) - 1.5rem) - 1.8rem) / 10) + 160px + clamp(40px, 5.5rem, 52px)) + var(--sprint-gap) + var(--sprint-key) / 2 - (var(--sprint-home-base) + var(--hud-inset-bottom) - var(--hud-auto-inset-bottom)))
+  }
+}
+
+html:not(.HudHide-sprint, .HudMove-sprint) .InGameUi:has(.TouchMovementWrapper:not(.Hidden) .TouchSprintHit) .BottomLeftElements.Touch>.EffectInfosWrapper {
+  bottom: max(158px, var(--sprint-top) + 8px)
+}
+
+@media(orientation:portrait) {
+  html:not(.HudHide-sprint, .HudMove-sprint) .InGameUi:has(.TouchMovementWrapper:not(.Hidden) .TouchSprintHit) .BottomLeftElements.Touch>.EffectInfosWrapper {
+    bottom: max(max(185px, var(--touch-hotbar-keys-above-reach, 0px)) + 8px, var(--sprint-top) + 8px)
+  }
+}
+
+html:not(.HudHide-sprint, .HudMove-sprint) .InGameUi:has(.TouchMovementWrapper:not(.Hidden) .TouchSprintHit.AtHome) .BottomLeftElements.Touch>.EffectInfosWrapper {
+  --sprint-reach: 0px
+}
+
+@media(orientation:portrait)and (max-width:600px) {
+  html:not(.HudHide-sprint, .HudMove-sprint) .InGameUi:has(.TouchMovementWrapper:not(.Hidden) .TouchSprintHit.AtHome) .BottomLeftElements.Touch>.EffectInfosWrapper {
+    --sprint-bottom: clamp(0px, max(var(--sprint-home-bottom) - var(--sprint-key)/2, var(--sprint-bars-reach, 0px) + 4px), var(--hud-viewport-height) - var(--sprint-key))
   }
 }
 

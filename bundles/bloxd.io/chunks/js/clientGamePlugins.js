@@ -1,303 +1,303 @@
 export const id = 27;
 export const ids = [27];
 export const modules = {
-  4859: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => SD,
-      g: () => dD
+  4964: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Jp,
+      h: () => Qp
     });
-    var pD = wD(4866),
-      sD = wD(338);
-    const KD = 120,
-      rD = 260,
-      LD = 1.15,
-      cD = 1.2,
-      gD = 2,
-      RD = 1.08,
-      AD = .8,
-      UD = .95,
-      fD = 8,
-      ID = "[\"')\\]\u300d\u300f\uff09]*",
-      BD = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${ID}$`),
-      GD = new RegExp(`[?\uff1f]${ID}$`),
-      hD = new RegExp(`[!\uff01]${ID}$`),
-      nD = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
-      MD = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
-      OD = new RegExp(`[${MD}]`),
-      JD = new RegExp(`[${MD}]|[^${MD}]+`, "g"),
-      ED = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
+    var Op = cp(4970),
+      op = cp(322);
+    const Ip = 120,
+      Sp = 260,
+      xp = 1.15,
+      Lp = 1.2,
+      Yp = 2,
+      Dp = 1.08,
+      Ap = .8,
+      Pp = .95,
+      Wp = 8,
+      yp = "[\"')\\]\u300d\u300f\uff09]*",
+      Up = new RegExp(`[.!?\u2026\u3002\uff01\uff1f]${yp}$`),
+      wp = new RegExp(`[?\uff1f]${yp}$`),
+      vp = new RegExp(`[!\uff01]${yp}$`),
+      tp = /[,;:\u3001\uff0c\uff1b\uff1a]$/,
+      Hp = "\\u3040-\\u30ff\\u3400-\\u4dbf\\u4e00-\\u9fff\\uac00-\\ud7af\\uf900-\\ufaff",
+      dp = new RegExp(`[${Hp}]`),
+      ep = new RegExp(`[${Hp}]|[^${Hp}]+`, "g"),
+      jp = /[aeiouy\u0430\u0435\u0438\u043e\u0443\u044b\u044d\u044e\u044f\u03b1\u03b5\u03b7\u03b9\u03bf\u03c5\u03c9]+/g;
 
-    function QD(DD) {
-      let zD = 2166136261;
-      for (let wD = 0; wD < DD.length; wD++) zD ^= DD.charCodeAt(wD), zD = Math.imul(zD, 16777619);
-      return (zD >>> 0) / 4294967295 * 2 - 1
+    function kp(pp) {
+      let ip = 2166136261;
+      for (let cp = 0; cp < pp.length; cp++) ip ^= pp.charCodeAt(cp), ip = Math.imul(ip, 16777619);
+      return (ip >>> 0) / 4294967295 * 2 - 1
     }
 
-    function XD(DD) {
-      var zD;
-      if (OD.test(DD)) return 1;
-      const wD = DD.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
-        pD = wD.replace(/[^0-9]/g, "");
-      if (pD.length > 0 && !/\p{L}/u.test(wD)) return Math.min(pD.length, 4);
-      const sD = null !== (zD = wD.match(ED)) && void 0 !== zD ? zD : [];
-      if (0 === sD.length) {
-        var KD, rD;
-        const DD = null !== (KD = null === (rD = wD.match(/\p{L}/gu)) || void 0 === rD ? void 0 : rD.length) && void 0 !== KD ? KD : 0;
-        return 0 === DD ? 0 : Math.min(Math.max(1, Math.round(DD / 2.5)), fD)
+    function mp(pp) {
+      var ip;
+      if (dp.test(pp)) return 1;
+      const cp = pp.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase(),
+        Op = cp.replace(/[^0-9]/g, "");
+      if (Op.length > 0 && !/\p{L}/u.test(cp)) return Math.min(Op.length, 4);
+      const op = null !== (ip = cp.match(jp)) && void 0 !== ip ? ip : [];
+      if (0 === op.length) {
+        var Ip, Sp;
+        const pp = null !== (Ip = null === (Sp = cp.match(/\p{L}/gu)) || void 0 === Sp ? void 0 : Sp.length) && void 0 !== Ip ? Ip : 0;
+        return 0 === pp ? 0 : Math.min(Math.max(1, Math.round(pp / 2.5)), Wp)
       }
-      const LD = wD.replace(/[^\p{L}]/gu, ""),
-        cD = sD.length > 1 && "e" === sD.at(-1) && LD.endsWith("e") && !LD.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(DD.replace(/[^\p{L}]/gu, ""));
-      return Math.min(sD.length - (cD ? 1 : 0), fD)
+      const xp = cp.replace(/[^\p{L}]/gu, ""),
+        Lp = op.length > 1 && "e" === op.at(-1) && xp.endsWith("e") && !xp.endsWith("le") && !/[\u00e9\u00e8\u00ea]$/i.test(pp.replace(/[^\p{L}]/gu, ""));
+      return Math.min(op.length - (Lp ? 1 : 0), Wp)
     }
 
-    function VD(DD) {
-      return DD.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
+    function Rp(pp) {
+      return pp.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "")
     }
 
-    function PD(DD) {
-      const zD = DD.replace(/[^\p{L}]/gu, "");
-      return zD.length >= 2 && zD === zD.toUpperCase() && zD !== zD.toLowerCase()
+    function qp(pp) {
+      const ip = pp.replace(/[^\p{L}]/gu, "");
+      return ip.length >= 2 && ip === ip.toUpperCase() && ip !== ip.toLowerCase()
     }
 
-    function CD(DD, zD) {
-      var wD;
-      const fD = zD && (0, pD.i)(zD),
-        ID = null !== (wD = null === fD || void 0 === fD ? void 0 : fD.syllableMs) && void 0 !== wD ? wD : pD.c,
-        MD = function(DD) {
-          const zD = [];
-          for (const pD of (0, sD.Vb)(DD))
-            if ("string" === typeof pD)
-              for (const DD of pD.split(/(\s+)/)) {
-                if ("" === DD) continue;
-                if (/^\s+$/.test(DD)) {
-                  zD.push({
+    function Mp(pp, ip) {
+      var cp;
+      const Wp = ip && (0, Op.m)(ip),
+        yp = null !== (cp = null === Wp || void 0 === Wp ? void 0 : Wp.syllableMs) && void 0 !== cp ? cp : Op.d,
+        Hp = function(pp) {
+          const ip = [];
+          for (const Op of (0, op.nc)(pp))
+            if ("string" === typeof Op)
+              for (const pp of Op.split(/(\s+)/)) {
+                if ("" === pp) continue;
+                if (/^\s+$/.test(pp)) {
+                  ip.push({
                     kind: "space",
-                    text: DD
+                    text: pp
                   });
                   continue
                 }
-                if (!OD.test(DD)) {
-                  zD.push({
+                if (!dp.test(pp)) {
+                  ip.push({
                     kind: "word",
-                    text: DD,
+                    text: pp,
                     delayMs: 0
                   });
                   continue
                 }
-                let pD = !0;
-                for (const sD of null !== (wD = DD.match(JD)) && void 0 !== wD ? wD : []) {
-                  var wD;
-                  const DD = zD.at(-1);
-                  pD || "word" !== (null === DD || void 0 === DD ? void 0 : DD.kind) || OD.test(sD) || /[\p{L}\p{N}]/u.test(sD) ? (pD || zD.push({
+                let Op = !0;
+                for (const op of null !== (cp = pp.match(ep)) && void 0 !== cp ? cp : []) {
+                  var cp;
+                  const pp = ip.at(-1);
+                  Op || "word" !== (null === pp || void 0 === pp ? void 0 : pp.kind) || dp.test(op) || /[\p{L}\p{N}]/u.test(op) ? (Op || ip.push({
                     kind: "space",
                     text: "\u200b"
-                  }), zD.push({
+                  }), ip.push({
                     kind: "word",
-                    text: sD,
+                    text: op,
                     delayMs: 0
-                  }), pD = !1) : DD.text += sD
+                  }), Op = !1) : pp.text += op
                 }
-              } else zD.push({
+              } else ip.push({
                 kind: "icon",
-                text: pD.icon,
+                text: Op.icon,
                 delayMs: 0
               });
-          return zD
-        }(DD),
-        ED = [];
-      let CD = [];
-      for (const pD of MD) "space" !== pD.kind && (CD.push(pD), BD.test(pD.text) && (ED.push(CD), CD = []));
-      ED.push(CD);
-      const xD = [];
-      let TD = 0;
-      for (const pD of ED) {
-        var bD, jD;
-        const DD = null !== (bD = null === (jD = pD.at(-1)) || void 0 === jD ? void 0 : jD.text) && void 0 !== bD ? bD : "",
-          zD = GD.test(DD),
-          wD = hD.test(DD),
-          sD = pD.map((DD => "word" === DD.kind ? XD(DD.text) : 1)),
-          MD = sD.findLastIndex((DD => DD > 0));
-        for (const [GD, hD] of pD.entries()) {
-          const DD = "word" === hD.kind,
-            pD = sD[GD];
-          hD.delayMs = TD;
-          for (let sD = 0; fD && sD < pD; sD++) {
+          return ip
+        }(pp),
+        jp = [];
+      let Mp = [];
+      for (const Op of Hp) "space" !== Op.kind && (Mp.push(Op), Up.test(Op.text) && (jp.push(Mp), Mp = []));
+      jp.push(Mp);
+      const Cp = [];
+      let Ep = 0;
+      for (const Op of jp) {
+        var Xp, lp;
+        const pp = null !== (Xp = null === (lp = Op.at(-1)) || void 0 === lp ? void 0 : lp.text) && void 0 !== Xp ? Xp : "",
+          ip = wp.test(pp),
+          cp = vp.test(pp),
+          op = Op.map((pp => "word" === pp.kind ? mp(pp.text) : 1)),
+          Hp = op.findLastIndex((pp => pp > 0));
+        for (const [wp, vp] of Op.entries()) {
+          const pp = "word" === vp.kind,
+            Op = op[wp];
+          vp.delayMs = Ep;
+          for (let op = 0; Wp && op < Op; op++) {
             const {
-              intonation: KD
-            } = fD;
-            let rD = MD > 0 ? -KD.declineSemitones * (GD / MD) : 0;
-            rD += QD(`${VD(hD.text)}|${sD}`) * KD.variationSemitones;
-            const BD = Math.min(1, KD.variationSemitones);
-            let nD = fD.glideSemitones,
-              OD = 1;
-            wD && (rD += KD.exclaimLiftSemitones, OD *= LD), zD && GD === MD && (rD += KD.questionRiseSemitones * (pD > 1 ? .5 + .5 * sD / (pD - 1) : 1), sD === pD - 1 && (nD = Math.abs(nD) + KD.questionRiseSemitones / 2)), DD && PD(hD.text) && (rD += gD * BD, OD *= cD), pD > 1 && 0 === sD && (rD += AD * BD, OD *= RD), xD.push({
-              atMs: TD + sD * ID,
-              semitones: rD,
-              glideSemitones: nD,
-              durationMs: sD < pD - 1 ? Math.min(fD.durationMs, ID * UD) : fD.durationMs,
-              level: OD
+              intonation: Ip
+            } = Wp;
+            let Sp = Hp > 0 ? -Ip.declineSemitones * (wp / Hp) : 0;
+            Sp += kp(`${Rp(vp.text)}|${op}`) * Ip.variationSemitones;
+            const Up = Math.min(1, Ip.variationSemitones);
+            let tp = Wp.glideSemitones,
+              dp = 1;
+            cp && (Sp += Ip.exclaimLiftSemitones, dp *= xp), ip && wp === Hp && (Sp += Ip.questionRiseSemitones * (Op > 1 ? .5 + .5 * op / (Op - 1) : 1), op === Op - 1 && (tp = Math.abs(tp) + Ip.questionRiseSemitones / 2)), pp && qp(vp.text) && (Sp += Yp * Up, dp *= Lp), Op > 1 && 0 === op && (Sp += Ap * Up, dp *= Dp), Cp.push({
+              atMs: Ep + op * yp,
+              semitones: Sp,
+              glideSemitones: tp,
+              durationMs: op < Op - 1 ? Math.min(Wp.durationMs, yp * Pp) : Wp.durationMs,
+              level: dp
             })
           }
-          TD += pD * ID + (BD.test(hD.text) ? rD : nD.test(hD.text) ? KD : 0)
+          Ep += Op * yp + (Up.test(vp.text) ? Sp : tp.test(vp.text) ? Ip : 0)
         }
       }
       return {
-        pieces: MD.map((DD => "space" === DD.kind ? DD : "icon" === DD.kind ? {
+        pieces: Hp.map((pp => "space" === pp.kind ? pp : "icon" === pp.kind ? {
           kind: "icon",
-          icon: DD.text,
-          delayMs: DD.delayMs
+          icon: pp.text,
+          delayMs: pp.delayMs
         } : {
           kind: "word",
-          text: DD.text,
-          delayMs: DD.delayMs
+          text: pp.text,
+          delayMs: pp.delayMs
         })),
-        blips: xD
+        blips: Cp
       }
     }
-    var xD = wD(1200),
-      TD = wD(1260),
-      bD = wD(1932);
+    var Cp = cp(1201),
+      Ep = cp(1260),
+      Xp = cp(1963);
 
-    function jD(DD) {
-      if ("string" === typeof DD) return DD;
-      const zD = TD.e.get().getCurrentLanguageCode();
-      return (0, xD.s)(zD, DD.translationKey, (0, xD.r)(DD.params, bD.d.shown))
+    function lp(pp) {
+      if ("string" === typeof pp) return pp;
+      const ip = Ep.g.get().getCurrentLanguageCode();
+      return (0, Cp.w)(ip, pp.translationKey, (0, Cp.t)(pp.params, Xp.d.shown))
     }
 
-    function dD(DD) {
-      const zD = void 0 === DD.voice ? null : (0, pD.l)(DD.voice),
-        wD = zD && (0, pD.i)(zD);
+    function Qp(pp) {
+      const ip = void 0 === pp.voice ? null : (0, Op.o)(pp.voice),
+        cp = ip && (0, Op.m)(ip);
       return {
-        plan: CD(jD(DD.line), wD),
-        synth: wD
+        plan: Mp(lp(pp.line), cp),
+        synth: cp
       }
     }
 
-    function SD(DD) {
-      const zD = [];
-      let wD = [];
-      for (const [sD, KD] of DD.entries()) {
-        var pD;
-        "space" === KD.kind && (" " !== KD.text || "icon" !== (null === (pD = DD[sD + 1]) || void 0 === pD ? void 0 : pD.kind)) ? (wD.length > 0 && zD.push(wD), zD.push([KD]), wD = []) : wD.push(KD)
+    function Jp(pp) {
+      const ip = [];
+      let cp = [];
+      for (const [op, Ip] of pp.entries()) {
+        var Op;
+        "space" === Ip.kind && (" " !== Ip.text || "icon" !== (null === (Op = pp[op + 1]) || void 0 === Op ? void 0 : Op.kind)) ? (cp.length > 0 && ip.push(cp), ip.push([Ip]), cp = []) : cp.push(Ip)
       }
-      return wD.length > 0 && zD.push(wD), zD
+      return cp.length > 0 && ip.push(cp), ip
     }
   },
-  4872: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => RD,
-      g: () => AD
+  4972: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Dp,
+      f: () => Ap
     });
-    var pD = wD(4875),
-      sD = wD(20);
-    const KD = .25,
-      rD = .85,
-      LD = .02,
-      cD = .01;
+    var Op = cp(4974),
+      op = cp(25);
+    const Ip = .25,
+      Sp = .85,
+      xp = .02,
+      Lp = .01;
 
-    function gD(DD, zD, wD, pD, sD, KD, LD) {
+    function Yp(pp, ip, cp, Op, op, Ip, xp) {
       const {
-        waveform: cD,
-        pitchHz: gD,
-        attackMs: RD,
-        releaseMs: AD,
-        lowpassHz: UD
-      } = wD, fD = sD + pD.durationMs / 1e3, ID = gD * 2 ** (pD.semitones / 12), BD = DD.createOscillator();
-      BD.type = cD, BD.frequency.setValueAtTime(ID, sD), BD.frequency.exponentialRampToValueAtTime(ID * 2 ** (pD.glideSemitones / 12), fD);
-      const GD = sD + Math.min(RD, pD.durationMs) / 1e3,
-        hD = DD.createGain();
-      hD.gain.setValueAtTime(0, sD), hD.gain.linearRampToValueAtTime(KD, GD), hD.gain.linearRampToValueAtTime(KD * rD, Math.max(GD, fD - AD / 1e3)), hD.gain.linearRampToValueAtTime(0, fD);
-      const nD = [BD];
-      if (null !== UD) {
-        const zD = DD.createBiquadFilter();
-        zD.type = "lowpass", zD.frequency.value = UD, nD.push(zD)
+        waveform: Lp,
+        pitchHz: Yp,
+        attackMs: Dp,
+        releaseMs: Ap,
+        lowpassHz: Pp
+      } = cp, Wp = op + Op.durationMs / 1e3, yp = Yp * 2 ** (Op.semitones / 12), Up = pp.createOscillator();
+      Up.type = Lp, Up.frequency.setValueAtTime(yp, op), Up.frequency.exponentialRampToValueAtTime(yp * 2 ** (Op.glideSemitones / 12), Wp);
+      const wp = op + Math.min(Dp, Op.durationMs) / 1e3,
+        vp = pp.createGain();
+      vp.gain.setValueAtTime(0, op), vp.gain.linearRampToValueAtTime(Ip, wp), vp.gain.linearRampToValueAtTime(Ip * Sp, Math.max(wp, Wp - Ap / 1e3)), vp.gain.linearRampToValueAtTime(0, Wp);
+      const tp = [Up];
+      if (null !== Pp) {
+        const ip = pp.createBiquadFilter();
+        ip.type = "lowpass", ip.frequency.value = Pp, tp.push(ip)
       }
-      nD.push(hD, zD);
-      for (let rD = 1; rD < nD.length; rD++) nD[rD - 1].connect(nD[rD]);
-      return BD.onended = () => {
-        for (const DD of nD.slice(0, -1)) DD.disconnect();
-        LD()
-      }, BD.start(sD), BD.stop(fD), BD
+      tp.push(vp, ip);
+      for (let Sp = 1; Sp < tp.length; Sp++) tp[Sp - 1].connect(tp[Sp]);
+      return Up.onended = () => {
+        for (const pp of tp.slice(0, -1)) pp.disconnect();
+        xp()
+      }, Up.start(op), Up.stop(Wp), Up
     }
 
-    function RD(DD, zD, wD, pD, sD, rD) {
-      if (0 === pD.length) return rD(), () => {};
-      const RD = KD * wD.volume * sD,
-        AD = DD.createGain();
-      AD.connect(zD);
-      const UD = DD.currentTime + LD,
-        fD = new Set;
-      for (const KD of pD) {
-        const zD = gD(DD, AD, wD, KD, UD + KD.atMs / 1e3, RD * KD.level, (() => {
-          fD.delete(zD), 0 === fD.size && (AD.disconnect(), rD())
+    function Dp(pp, ip, cp, Op, op, Sp) {
+      if (0 === Op.length) return Sp(), () => {};
+      const Dp = Ip * cp.volume * op,
+        Ap = pp.createGain();
+      Ap.connect(ip);
+      const Pp = pp.currentTime + xp,
+        Wp = new Set;
+      for (const Ip of Op) {
+        const ip = Yp(pp, Ap, cp, Ip, Pp + Ip.atMs / 1e3, Dp * Ip.level, (() => {
+          Wp.delete(ip), 0 === Wp.size && (Ap.disconnect(), Sp())
         }));
-        fD.add(zD)
+        Wp.add(ip)
       }
       return () => {
-        const zD = DD.currentTime;
-        AD.gain.setTargetAtTime(0, zD, cD);
-        for (const DD of fD) try {
-          DD.stop(zD + 5 * cD)
+        const ip = pp.currentTime;
+        Ap.gain.setTargetAtTime(0, ip, Lp);
+        for (const pp of Wp) try {
+          pp.stop(ip + 5 * Lp)
         } catch {}
       }
     }
 
-    function AD(DD, zD) {
-      var wD;
-      const KD = pD.Howler.ctx,
-        rD = pD.Howler.masterGain;
-      if (!KD || !rD || !sD.e.get("soundOnFromAd")) return () => {};
-      const LD = pD.Howler;
-      return null === (wD = LD._autoResume) || void 0 === wD || wD.call(LD), RD(KD, rD, DD, zD, sD.e.get("soundVolume"), (() => {
-        var DD;
-        null === (DD = LD._autoSuspend) || void 0 === DD || DD.call(LD)
+    function Ap(pp, ip) {
+      var cp;
+      const Ip = Op.Howler.ctx,
+        Sp = Op.Howler.masterGain;
+      if (!Ip || !Sp || !op.c.get("soundOnFromAd")) return () => {};
+      const xp = Op.Howler;
+      return null === (cp = xp._autoResume) || void 0 === cp || cp.call(xp), Dp(Ip, Sp, pp, ip, op.c.get("soundVolume"), (() => {
+        var pp;
+        null === (pp = xp._autoSuspend) || void 0 === pp || pp.call(xp)
       }))
     }
   },
-  39111: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      closeClientGame: () => iD,
-      createDefaultClientPlugins: () => SD
+  39324: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      closeClientGame: () => Bp,
+      createDefaultClientPlugins: () => Jp
     });
-    var pD = wD(351);
+    var Op = cp(337);
 
-    function sD() {
-      let DD;
+    function op() {
+      let pp;
       return {
-        onCreate(zD) {
-          DD = zD
+        onCreate(ip) {
+          pp = ip
         },
         altVetoBlocks: ["Iron Chest"],
-        onPlayerAttemptAltAction(zD, wD, sD, KD, rD, LD) {
-          var cD, gD;
-          if ("Iron Chest" !== DD.getMetaInfo(rD).rootName) return;
-          if (!DD.hasEffect(zD, "Thief")) return;
-          const RD = DD.getBlockData(wD, sD, KD);
-          return DD.getPlayerDbId(zD) !== (null === RD || void 0 === RD || null === (cD = RD.persisted) || void 0 === cD || null === (gD = cD.shared) || void 0 === gD ? void 0 : gD.ownerDbId) ? (DD.sendMessage(zD, [{
+        onPlayerAttemptAltAction(ip, cp, op, Ip, Sp, xp) {
+          var Lp, Yp;
+          if ("Iron Chest" !== pp.getMetaInfo(Sp).rootName) return;
+          if (!pp.hasEffect(ip, "Thief")) return;
+          const Dp = pp.getBlockData(cp, op, Ip);
+          return pp.getPlayerDbId(ip) !== (null === Dp || void 0 === Dp || null === (Lp = Dp.persisted) || void 0 === Lp || null === (Yp = Lp.shared) || void 0 === Yp ? void 0 : Yp.ownerDbId) ? (pp.sendMessage(ip, [{
             str: {
               translationKey: "ironChest:thievesCannotOpen"
             },
             style: {
-              color: pD.I.redUiText
+              color: Op.N.redUiText
             }
           }]), "preventAction") : void 0
         }
       }
     }
-    var KD = wD(4257),
-      rD = wD(1245);
-    const LD = 8.4,
-      cD = 1e-4,
-      gD = .15,
-      RD = .04,
-      AD = [.12, .04, .12],
-      UD = 26,
-      fD = {
+    var Ip = cp(4341),
+      Sp = cp(1251);
+    const xp = 8.4,
+      Lp = 1e-4,
+      Yp = .15,
+      Dp = .04,
+      Ap = [.12, .04, .12],
+      Pp = 26,
+      Wp = {
         texture: "fishingFishSilhouette",
         mipmaps: !1,
-        bA: 1,
-        minLifeTime: cD,
-        maxLifeTime: cD,
+        TA: 1,
+        minLifeTime: Lp,
+        maxLifeTime: Lp,
         minSize: .55,
         maxSize: .55,
         minEmitPower: 0,
@@ -310,19 +310,19 @@ export const modules = {
           timeFraction: 1,
           minColor: [0, 0, 0, 1]
         }],
-        blendMode: KD.f.Standard
+        blendMode: Ip.g.Standard
       },
-      ID = {
+      yp = {
         texture: "bubble",
         mipmaps: !1,
-        bA: 96,
+        TA: 96,
         minLifeTime: .3,
         maxLifeTime: .65,
         minSize: .08,
         maxSize: .19,
         minEmitPower: .2,
         maxEmitPower: .55,
-        emitRate: UD,
+        emitRate: Pp,
         gravity: [0, .3, 0],
         dir1: [-.3, .3, -.3],
         dir2: [.3, .7, .3],
@@ -336,159 +336,159 @@ export const modules = {
           timeFraction: 1,
           minColor: [178.5, 229.5, 255, 0]
         }],
-        blendMode: KD.f.Standard
+        blendMode: Ip.g.Standard
       },
-      BD = [0, 0, 0],
-      GD = [0, 0, 0];
+      Up = [0, 0, 0],
+      wp = [0, 0, 0];
 
-    function hD(DD) {
-      const zD = new Map;
-      let wD = null;
+    function vp(pp) {
+      const ip = new Map;
+      let cp = null;
 
-      function pD(DD) {
-        var zD, wD;
-        null === (zD = DD.bubbles) || void 0 === zD || zD.stop(), null === (wD = DD.fish) || void 0 === wD || wD.stop()
+      function Op(pp) {
+        var ip, cp;
+        null === (ip = pp.bubbles) || void 0 === ip || ip.stop(), null === (cp = pp.fish) || void 0 === cp || cp.stop()
       }
 
-      function sD(wD) {
-        if (!wD.readDrawnPosition(DD, GD)) {
-          for (const DD of zD.values()) {
-            var pD;
-            null === (pD = DD.bubbles) || void 0 === pD || pD.setEmitRate(0)
+      function op(cp) {
+        if (!cp.readDrawnPosition(pp, wp)) {
+          for (const pp of ip.values()) {
+            var Op;
+            null === (Op = pp.bubbles) || void 0 === Op || Op.setEmitRate(0)
           }
           return
         }
-        const sD = performance.now();
-        for (const [DD, rD] of zD) {
-          var KD;
-          if (null === (KD = rD.bubbles) || void 0 === KD || KD.setEmitRate(0), !wD.readDrawnPosition(DD, BD)) continue;
-          if (!((BD[0] - GD[0]) ** 2 + (BD[1] - GD[1]) ** 2 + (BD[2] - GD[2]) ** 2 < 900)) continue;
-          const zD = Math.max(0, rD.biteAt - sD),
-            pD = rD.approachDurationMs > 0 ? Math.min(1, 1 - zD / rD.approachDurationMs) : 1,
-            cD = (rD.approachDurationMs - zD) / 1e3,
-            hD = rD.phase + .25 * Math.sin(1.7 * cD + rD.phase),
-            nD = Math.min(rD.approachDurationMs / 3e3 * 2.8, LD) * (1 - pD) * (1 + .15 * Math.sin(2.1 * cD + rD.phase)),
-            MD = Math.min(1, 4 * (1 - pD)),
-            OD = (.45 * Math.sin(4.1 * cD + rD.phase) + .18 * Math.sin(9.7 * cD + 2 * rD.phase)) * MD,
-            JD = BD[0] + Math.cos(hD) * nD - Math.sin(hD) * OD,
-            ED = Math.ceil(rD.surfaceY),
-            QD = BD[2] + Math.sin(hD) * nD + Math.cos(hD) * OD,
+        const op = performance.now();
+        for (const [pp, Sp] of ip) {
+          var Ip;
+          if (null === (Ip = Sp.bubbles) || void 0 === Ip || Ip.setEmitRate(0), !cp.readDrawnPosition(pp, Up)) continue;
+          if (!((Up[0] - wp[0]) ** 2 + (Up[1] - wp[1]) ** 2 + (Up[2] - wp[2]) ** 2 < 900)) continue;
+          const ip = Math.max(0, Sp.biteAt - op),
+            Op = Sp.approachDurationMs > 0 ? Math.min(1, 1 - ip / Sp.approachDurationMs) : 1,
+            Lp = (Sp.approachDurationMs - ip) / 1e3,
+            vp = Sp.phase + .25 * Math.sin(1.7 * Lp + Sp.phase),
+            tp = Math.min(Sp.approachDurationMs / 3e3 * 2.8, xp) * (1 - Op) * (1 + .15 * Math.sin(2.1 * Lp + Sp.phase)),
+            Hp = Math.min(1, 4 * (1 - Op)),
+            dp = (.45 * Math.sin(4.1 * Lp + Sp.phase) + .18 * Math.sin(9.7 * Lp + 2 * Sp.phase)) * Hp,
+            ep = Up[0] + Math.cos(vp) * tp - Math.sin(vp) * dp,
+            jp = Math.ceil(Sp.surfaceY),
+            kp = Up[2] + Math.sin(vp) * tp + Math.cos(vp) * dp,
             {
-              fishAt: XD,
-              bubblesAt: VD
-            } = rD;
-          XD[0] = VD[0] = JD, XD[1] = ED + gD, VD[1] = ED + RD, XD[2] = VD[2] = QD, rD.fish ??= wD.createParticles(fD, {
-            pos: XD
-          }), rD.fish.moveTo(XD), rD.fish.emit(1), rD.bubbles ??= wD.createParticles(ID, {
-            pos: VD,
-            half: AD
-          }), rD.bubbles.moveTo(VD), rD.bubbles.setEmitRate(UD + 32 * (.5 + .5 * Math.sin(9 * cD + rD.phase)) ** 4 + 13 * pD)
+              fishAt: mp,
+              bubblesAt: Rp
+            } = Sp;
+          mp[0] = Rp[0] = ep, mp[1] = jp + Yp, Rp[1] = jp + Dp, mp[2] = Rp[2] = kp, Sp.fish ??= cp.createParticles(Wp, {
+            pos: mp
+          }), Sp.fish.moveTo(mp), Sp.fish.emit(1), Sp.bubbles ??= cp.createParticles(yp, {
+            pos: Rp,
+            half: Ap
+          }), Sp.bubbles.moveTo(Rp), Sp.bubbles.setEmitRate(Pp + 32 * (.5 + .5 * Math.sin(9 * Lp + Sp.phase)) ** 4 + 13 * Op)
         }
       }
       return {
-        onCreate(DD) {
-          wD = DD
+        onCreate(pp) {
+          cp = pp
         },
         onAfterRender() {
-          wD && sD(wD)
+          cp && op(cp)
         },
         onClose() {
-          for (const DD of zD.values()) pD(DD);
-          zD.clear(), wD = null
+          for (const pp of ip.values()) Op(pp);
+          ip.clear(), cp = null
         },
-        onReceivedMessageFromServer(DD, wD) {
-          if (DD !== rD.x) return;
+        onReceivedMessageFromServer(pp, cp) {
+          if (pp !== Sp.z) return;
           const {
-            hookId: sD,
-            waiting: KD
-          } = wD;
-          if (KD) zD.has(sD) || zD.set(sD, {
+            hookId: op,
+            waiting: Ip
+          } = cp;
+          if (Ip) ip.has(op) || ip.set(op, {
             bubbles: null,
             fish: null,
             fishAt: [0, 0, 0],
             bubblesAt: [0, 0, 0],
-            biteAt: performance.now() + KD.remainingMs,
-            approachDurationMs: KD.durationMs,
-            surfaceY: KD.surfaceY,
+            biteAt: performance.now() + Ip.remainingMs,
+            approachDurationMs: Ip.durationMs,
+            surfaceY: Ip.surfaceY,
             phase: Math.random() * Math.PI * 2
           });
           else {
-            const DD = zD.get(sD);
-            DD && pD(DD), zD.delete(sD)
+            const pp = ip.get(op);
+            pp && Op(pp), ip.delete(op)
           }
         }
       }
     }
-    var nD = wD(4872),
-      MD = wD(4859);
+    var tp = cp(4972),
+      Hp = cp(4964);
 
-    function OD(DD) {
-      let zD, wD = null,
-        pD = null;
-      const sD = () => {
-        var DD;
-        null === (DD = pD) || void 0 === DD || DD(), pD = null
+    function dp(pp) {
+      let ip, cp = null,
+        Op = null;
+      const op = () => {
+        var pp;
+        null === (pp = Op) || void 0 === pp || pp(), Op = null
       };
       return {
-        onCreate(pD) {
-          zD = pD, wD = zD.getClientOption(DD, "dialogue")
+        onCreate(Op) {
+          ip = Op, cp = ip.getClientOption(pp, "dialogue")
         },
         onAfterRender() {
-          if (!zD) return;
-          const KD = zD.getClientOption(DD, "dialogue");
-          if (KD === wD) return;
-          if (wD = KD, sD(), !KD || !1 === KD.animateIn) return;
+          if (!ip) return;
+          const Ip = ip.getClientOption(pp, "dialogue");
+          if (Ip === cp) return;
+          if (cp = Ip, op(), !Ip || !1 === Ip.animateIn) return;
           const {
-            plan: rD,
-            synth: LD
-          } = (0, MD.g)(KD);
-          LD && (pD = (0, nD.g)(LD, rD.blips))
+            plan: Sp,
+            synth: xp
+          } = (0, Hp.h)(Ip);
+          xp && (Op = (0, tp.f)(xp, Sp.blips))
         },
-        onClose: sD
+        onClose: op
       }
     }
-    var JD = wD(39113);
-    const ED = [
+    var ep = cp(39330);
+    const jp = [
         [-.3125, -.25],
         [.3125, -.25],
         [.3125, .25],
         [-.3125, .25]
       ],
-      QD = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
-      XD = [0, 1, 2, 0, 2, 3];
+      kp = [0, 1 / 3, 1, 1 / 3, 1, 0, 0, 0],
+      mp = [0, 1, 2, 0, 2, 3];
 
-    function VD(DD, zD, wD) {
-      var pD;
-      let [sD, KD, rD] = zD;
-      if (DD.hasPackModel("Furnace")) return null;
-      const LD = ((null !== (pD = DD.getMetaInfo(wD).rot) && void 0 !== pD ? pD : 1) - 1) * Math.PI / 2,
-        cD = Math.PI + LD,
-        gD = Math.cos(cD),
-        RD = Math.sin(cD),
-        AD = [];
-      for (const [ID, BD] of ED) AD.push(ID * gD, BD, -ID * RD);
-      const UD = {
-          positions: AD,
-          indices: XD,
-          uvs: QD
+    function Rp(pp, ip, cp) {
+      var Op;
+      let [op, Ip, Sp] = ip;
+      if (pp.hasPackModel("Furnace")) return null;
+      const xp = ((null !== (Op = pp.getMetaInfo(cp).rot) && void 0 !== Op ? Op : 1) - 1) * Math.PI / 2,
+        Lp = Math.PI + xp,
+        Yp = Math.cos(Lp),
+        Dp = Math.sin(Lp),
+        Ap = [];
+      for (const [yp, Up] of jp) Ap.push(yp * Yp, Up, -yp * Dp);
+      const Pp = {
+          positions: Ap,
+          indices: mp,
+          uvs: kp
         },
-        fD = [sD + .5 + .51 * Math.sin(LD), KD + .375, rD + .5 + .51 * Math.cos(LD)];
-      return DD.createGameMesh(UD, {
+        Wp = [op + .5 + .51 * Math.sin(xp), Ip + .375, Sp + .5 + .51 * Math.cos(xp)];
+      return pp.createGameMesh(Pp, {
         kind: "furnaceFire"
-      }, fD)
+      }, Wp)
     }
 
-    function PD(DD) {
-      return Math.floor(DD / 200) % 3
+    function qp(pp) {
+      return Math.floor(pp / 200) % 3
     }
 
-    function CD(DD, zD, wD) {
-      DD.setGameMesh(zD, {
-        uvOffset: [0, wD / 3]
+    function Mp(pp, ip, cp) {
+      pp.setGameMesh(ip, {
+        uvOffset: [0, cp / 3]
       })
     }
-    const xD = [.12, .025, .12],
-      TD = [{
+    const Cp = [.12, .025, .12],
+      Ep = [{
         style: {
           colours: [
             [176, 176, 182],
@@ -501,7 +501,7 @@ export const modules = {
           lift: .12,
           spread: .12,
           count: 6,
-          blendMode: KD.f.Standard,
+          blendMode: Ip.g.Standard,
           soft: !0
         },
         perSecond: 7
@@ -518,196 +518,196 @@ export const modules = {
           lift: -.6,
           spread: .35,
           count: 10,
-          blendMode: KD.f.Add,
+          blendMode: Ip.g.Add,
           soft: !1
         },
         perSecond: 6
       }];
-    class bD {
+    class Xp {
       constructor() {
         this.puffers = null, this.smokes = [], this.renderFrame = 0, this.shownFireFrame = -1, this.centre = [0, 0, 0]
       }
-      start(DD, zD) {
-        const wD = DD.getBlockId(zD[0], zD[1], zD[2]);
-        if ("Furnace" !== DD.getMetaInfo(wD).rootName) return;
-        const pD = performance.now();
-        let sD = this.smokes.find((DD => DD.pos[0] === zD[0] && DD.pos[1] === zD[1] && DD.pos[2] === zD[2] && DD.fR === wD));
-        if (sD || (sD = {
-            pos: [zD[0], zD[1], zD[2]],
-            fR: wD,
-            endMs: pD,
+      start(pp, ip) {
+        const cp = pp.getBlockId(ip[0], ip[1], ip[2]);
+        if ("Furnace" !== pp.getMetaInfo(cp).rootName) return;
+        const Op = performance.now();
+        let op = this.smokes.find((pp => pp.pos[0] === ip[0] && pp.pos[1] === ip[1] && pp.pos[2] === ip[2] && pp.tx === cp));
+        if (op || (op = {
+            pos: [ip[0], ip[1], ip[2]],
+            tx: cp,
+            endMs: Op,
             lastBurstMs: -1 / 0,
-            pending: new Array(TD.length).fill(0),
-            fire: VD(DD, zD, wD)
-          }, this.smokes.push(sD), null !== sD.fire && (CD(DD, sD.fire, PD(pD)), this.shownFireFrame = -1)), sD.endMs = pD + 6e3, this.smokes.length > 4) {
-          const zD = this.smokes.reduce(((DD, zD) => zD.endMs < DD.endMs ? zD : DD));
-          jD(DD, zD), this.smokes.splice(this.smokes.indexOf(zD), 1)
+            pending: new Array(Ep.length).fill(0),
+            fire: Rp(pp, ip, cp)
+          }, this.smokes.push(op), null !== op.fire && (Mp(pp, op.fire, qp(Op)), this.shownFireFrame = -1)), op.endMs = Op + 6e3, this.smokes.length > 4) {
+          const ip = this.smokes.reduce(((pp, ip) => ip.endMs < pp.endMs ? ip : pp));
+          lp(pp, ip), this.smokes.splice(this.smokes.indexOf(ip), 1)
         }
-        pD - sD.lastBurstMs >= 300 && (sD.lastBurstMs = pD, TD.forEach(((DD, zD) => {
-          sD.pending[zD] += DD.style.count
+        Op - op.lastBurstMs >= 300 && (op.lastBurstMs = Op, Ep.forEach(((pp, ip) => {
+          op.pending[ip] += pp.style.count
         })))
       }
-      onAfterRender(DD, zD) {
+      onAfterRender(pp, ip) {
         if (0 === this.smokes.length) return;
         this.renderFrame++;
-        const wD = performance.now();
-        this.smokes = this.smokes.filter((zD => {
-          const [pD, sD, KD] = zD.pos, rD = wD < zD.endMs && DD.getBlockId(pD, sD, KD) === zD.fR;
-          return rD || jD(DD, zD), rD
+        const cp = performance.now();
+        this.smokes = this.smokes.filter((ip => {
+          const [Op, op, Ip] = ip.pos, Sp = cp < ip.endMs && pp.getBlockId(Op, op, Ip) === ip.tx;
+          return Sp || lp(pp, ip), Sp
         }));
-        const pD = PD(wD);
-        if (pD !== this.shownFireFrame) {
-          this.shownFireFrame = pD;
-          for (const zD of this.smokes) null !== zD.fire && CD(DD, zD.fire, pD)
+        const Op = qp(cp);
+        if (Op !== this.shownFireFrame) {
+          this.shownFireFrame = Op;
+          for (const ip of this.smokes) null !== ip.fire && Mp(pp, ip.fire, Op)
         }
-        if (!DD.particlesEnabled()) {
-          for (const DD of this.smokes) DD.pending.fill(0);
+        if (!pp.particlesEnabled()) {
+          for (const pp of this.smokes) pp.pending.fill(0);
           return
         }
-        const sD = Math.min(zD, 250) / 1e3;
-        for (const KD of this.smokes) {
-          const [zD, pD, rD] = KD.pos;
-          if (0 !== DD.getBlockId(zD, pD + 1, rD)) {
-            KD.pending.fill(0);
+        const op = Math.min(ip, 250) / 1e3;
+        for (const Ip of this.smokes) {
+          const [ip, Op, Sp] = Ip.pos;
+          if (0 !== pp.getBlockId(ip, Op + 1, Sp)) {
+            Ip.pending.fill(0);
             continue
           }
-          const LD = (KD.endMs - wD) / 6e3,
-            cD = this.centre;
-          cD[0] = zD + .5, cD[1] = pD + 1.275, cD[2] = rD + .5, TD.forEach(((zD, wD) => {
-            KD.pending[wD] += zD.perSecond * LD * sD;
-            const pD = Math.floor(KD.pending[wD]);
-            pD > 0 && this.emit(DD, wD, cD, pD) && (KD.pending[wD] -= pD)
+          const xp = (Ip.endMs - cp) / 6e3,
+            Lp = this.centre;
+          Lp[0] = ip + .5, Lp[1] = Op + 1.275, Lp[2] = Sp + .5, Ep.forEach(((ip, cp) => {
+            Ip.pending[cp] += ip.perSecond * xp * op;
+            const Op = Math.floor(Ip.pending[cp]);
+            Op > 0 && this.emit(pp, cp, Lp, Op) && (Ip.pending[cp] -= Op)
           }))
         }
       }
-      dispose(DD) {
-        for (const wD of this.smokes) jD(DD, wD);
+      dispose(pp) {
+        for (const cp of this.smokes) lp(pp, cp);
         this.smokes = [];
-        for (const wD of null !== (zD = this.puffers) && void 0 !== zD ? zD : []) {
-          var zD;
-          wD.dispose()
+        for (const cp of null !== (ip = this.puffers) && void 0 !== ip ? ip : []) {
+          var ip;
+          cp.dispose()
         }
         this.puffers = null
       }
-      emit(DD, zD, wD, pD) {
-        return this.puffers ??= TD.map((DD => {
+      emit(pp, ip, cp, Op) {
+        return this.puffers ??= Ep.map((pp => {
           let {
-            style: zD,
-            perSecond: wD
-          } = DD;
-          const pD = (zD.count / .3 + wD) * zD.life[1];
-          return new JD.f(zD, Math.ceil(4 * pD), xD)
-        })), this.puffers[zD].emit(DD, wD, this.renderFrame, pD)
+            style: ip,
+            perSecond: cp
+          } = pp;
+          const Op = (ip.count / .3 + cp) * ip.life[1];
+          return new ep.i(ip, Math.ceil(4 * Op), Cp)
+        })), this.puffers[ip].emit(pp, cp, this.renderFrame, Op)
       }
     }
 
-    function jD(DD, zD) {
-      null !== zD.fire && (DD.disposeGameMesh(zD.fire), zD.fire = null)
+    function lp(pp, ip) {
+      null !== ip.fire && (pp.disposeGameMesh(ip.fire), ip.fire = null)
     }
 
-    function dD() {
-      let DD;
-      const zD = new bD;
+    function Qp() {
+      let pp;
+      const ip = new Xp;
       return {
-        onCreate(zD) {
-          DD = zD
+        onCreate(ip) {
+          pp = ip
         },
-        onReceivedMessageFromServer(wD, pD) {
-          wD === rD.B && zD.start(DD, pD)
+        onReceivedMessageFromServer(cp, Op) {
+          cp === Sp.C && ip.start(pp, Op)
         },
-        onAfterRender(wD) {
-          zD.onAfterRender(DD, wD)
+        onAfterRender(cp) {
+          ip.onAfterRender(pp, cp)
         },
         onClose() {
-          zD.dispose(DD)
+          ip.dispose(pp)
         }
       }
     }
 
-    function SD(DD, zD, wD, pD) {
+    function Jp(pp, ip, cp, Op) {
       return {
-        dialogue: OD(pD.localPlayerId),
-        fishing: hD(pD.localPlayerId),
-        furnaceSmoke: dD(),
-        ironChest: sD()
+        dialogue: dp(Op.localPlayerId),
+        fishing: vp(Op.localPlayerId),
+        furnaceSmoke: Qp(),
+        ironChest: op()
       }
     }
 
-    function iD(DD, zD) {
-      for (const sD of [DD, ...null !== zD && void 0 !== zD ? zD : []]) try {
-        var wD;
-        null === sD || void 0 === sD || null === (wD = sD.onClose) || void 0 === wD || wD.call(sD)
-      } catch (pD) {
-        console.error("Error in client onClose callback", pD)
+    function Bp(pp, ip) {
+      for (const op of [pp, ...null !== ip && void 0 !== ip ? ip : []]) try {
+        var cp;
+        null === op || void 0 === op || null === (cp = op.onClose) || void 0 === cp || cp.call(op)
+      } catch (Op) {
+        console.error("Error in client onClose callback", Op)
       }
     }
   },
-  39113: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => pD,
-      f: () => KD
+  39330: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Op,
+      i: () => Ip
     });
-    const pD = 1 / .6,
-      sD = {
+    const Op = 1 / .6,
+      op = {
         kind: "smokePuff"
       };
-    class KD {
-      constructor(DD, zD, wD) {
-        this.style = DD, this.bA = zD, this.half = wD, this.particles = null, this.lastFrame = -1
+    class Ip {
+      constructor(pp, ip, cp) {
+        this.style = pp, this.TA = ip, this.half = cp, this.particles = null, this.lastFrame = -1
       }
-      emit(DD, zD, wD) {
-        let KD = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
-        return wD !== this.lastFrame && (this.lastFrame = wD, this.particles || (this.particles = DD.createParticles(function(DD, zD) {
+      emit(pp, ip, cp) {
+        let Ip = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : this.style.count;
+        return cp !== this.lastFrame && (this.lastFrame = cp, this.particles || (this.particles = pp.createParticles(function(pp, ip) {
           const [
-            [wD, KD, rD],
-            [LD, cD, gD]
-          ] = DD.colours;
+            [cp, Ip, Sp],
+            [xp, Lp, Yp]
+          ] = pp.colours;
           return {
-            texture: DD.soft ? sD : "square_particle",
-            bA: zD,
-            minLifeTime: DD.life[0] / pD,
-            maxLifeTime: DD.life[1] / pD,
-            minEmitPower: DD.power[0] * pD,
-            maxEmitPower: DD.power[1] * pD,
-            minSize: DD.size[0],
-            maxSize: DD.size[1],
+            texture: pp.soft ? op : "square_particle",
+            TA: ip,
+            minLifeTime: pp.life[0] / Op,
+            maxLifeTime: pp.life[1] / Op,
+            minEmitPower: pp.power[0] * Op,
+            maxEmitPower: pp.power[1] * Op,
+            minSize: pp.size[0],
+            maxSize: pp.size[1],
             emitRate: 0,
-            gravity: [0, DD.lift * pD * pD, 0],
-            dir1: [-DD.spread, 1, -DD.spread],
-            dir2: [DD.spread, 1, DD.spread],
+            gravity: [0, pp.lift * Op * Op, 0],
+            dir1: [-pp.spread, 1, -pp.spread],
+            dir2: [pp.spread, 1, pp.spread],
             colorGradients: [{
               timeFraction: 0,
-              minColor: [wD, KD, rD, DD.alpha],
-              maxColor: [LD, cD, gD, DD.alpha]
+              minColor: [cp, Ip, Sp, pp.alpha],
+              maxColor: [xp, Lp, Yp, pp.alpha]
             }, {
               timeFraction: 1,
-              minColor: [wD, KD, rD, 0],
-              maxColor: [LD, cD, gD, 0]
+              minColor: [cp, Ip, Sp, 0],
+              maxColor: [xp, Lp, Yp, 0]
             }],
-            blendMode: DD.blendMode
+            blendMode: pp.blendMode
           }
-        }(this.style, this.bA), {
-          pos: zD,
+        }(this.style, this.TA), {
+          pos: ip,
           half: this.half
-        })), this.particles.moveTo(zD, this.half), this.particles.emit(KD), !0)
+        })), this.particles.moveTo(ip, this.half), this.particles.emit(Ip), !0)
       }
       dispose() {
-        var DD;
-        null === (DD = this.particles) || void 0 === DD || DD.stop(), this.particles = null
+        var pp;
+        null === (pp = this.particles) || void 0 === pp || pp.stop(), this.particles = null
       }
     }
   },
-  4866: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => sD,
-      g: () => pD,
-      h: () => KD,
-      i: () => cD,
-      l: () => rD
+  4970: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => op,
+      f: () => Op,
+      i: () => Ip,
+      m: () => Lp,
+      o: () => Sp
     });
-    const pD = ["sine", "triangle", "square", "sawtooth"],
-      sD = 55,
-      KD = {
+    const Op = ["sine", "triangle", "square", "sawtooth"],
+      op = 55,
+      Ip = {
         soft: {
           waveform: "sine",
           pitchHz: 300,
@@ -846,39 +846,39 @@ export const modules = {
         }
       };
 
-    function rD(DD) {
-      return "string" !== typeof DD ? DD : Object.hasOwn(KD, DD) ? KD[DD] : null
+    function Sp(pp) {
+      return "string" !== typeof pp ? pp : Object.hasOwn(Ip, pp) ? Ip[pp] : null
     }
 
-    function LD(DD, zD, wD) {
-      return Math.min(wD, Math.max(zD, DD))
+    function xp(pp, ip, cp) {
+      return Math.min(cp, Math.max(ip, pp))
     }
 
-    function cD(DD) {
-      const zD = LD(DD.durationMs, 10, 500),
-        wD = LD(DD.attackMs, 0, zD),
+    function Lp(pp) {
+      const ip = xp(pp.durationMs, 10, 500),
+        cp = xp(pp.attackMs, 0, ip),
         {
-          intonation: sD
-        } = DD;
+          intonation: op
+        } = pp;
       return {
-        waveform: pD.includes(DD.waveform) ? DD.waveform : "sine",
-        pitchHz: LD(DD.pitchHz, 20, 4e3),
-        glideSemitones: LD(DD.glideSemitones, -24, 24),
-        durationMs: zD,
-        attackMs: wD,
-        releaseMs: LD(DD.releaseMs, 0, zD - wD),
-        lowpassHz: null === DD.lowpassHz ? null : LD(DD.lowpassHz, 20, 2e4),
-        volume: LD(DD.volume, 0, 2),
+        waveform: Op.includes(pp.waveform) ? pp.waveform : "sine",
+        pitchHz: xp(pp.pitchHz, 20, 4e3),
+        glideSemitones: xp(pp.glideSemitones, -24, 24),
+        durationMs: ip,
+        attackMs: cp,
+        releaseMs: xp(pp.releaseMs, 0, ip - cp),
+        lowpassHz: null === pp.lowpassHz ? null : xp(pp.lowpassHz, 20, 2e4),
+        volume: xp(pp.volume, 0, 2),
         intonation: {
-          variationSemitones: LD(sD.variationSemitones, 0, 6),
-          declineSemitones: LD(sD.declineSemitones, 0, 12),
-          questionRiseSemitones: LD(sD.questionRiseSemitones, 0, 12),
-          exclaimLiftSemitones: LD(sD.exclaimLiftSemitones, 0, 12)
+          variationSemitones: xp(op.variationSemitones, 0, 6),
+          declineSemitones: xp(op.declineSemitones, 0, 12),
+          questionRiseSemitones: xp(op.questionRiseSemitones, 0, 12),
+          exclaimLiftSemitones: xp(op.exclaimLiftSemitones, 0, 12)
         },
-        syllableMs: LD(DD.syllableMs, 25, 200)
+        syllableMs: xp(pp.syllableMs, 25, 200)
       }
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

@@ -1,530 +1,786 @@
 export const id = 112;
 export const ids = [112];
 export const modules = {
-  5091: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => RD,
-      h: () => gD
+  9030: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      default: () => ei
     });
-    var pD = wD(58),
-      sD = wD(1447),
-      KD = wD(1200),
-      rD = wD(103),
-      LD = wD(3128),
-      cD = wD(1096);
+    var Op = cp(1543),
+      op = cp(25),
+      Ip = cp(4747),
+      Sp = cp(62),
+      xp = cp(1476);
+    var Lp = cp(1956),
+      Yp = cp(1538),
+      Dp = cp(1372),
+      Ap = cp(1201),
+      Pp = cp(156),
+      Wp = cp(195),
+      yp = cp(1014),
+      Up = cp(1024),
+      wp = cp(1234),
+      vp = cp(2420),
+      tp = cp(1520),
+      Hp = cp(1149),
+      dp = cp(9034),
+      ep = cp(1563);
 
-    function gD() {
-      return !(0, rD.isMobile)()
-    }
-
-    function RD(DD) {
-      let {
-        disabled: zD,
-        openFolderPicker: wD,
-        onFiles: rD
-      } = DD;
+    function jp(pp, ip) {
+      const cp = !0 === ip.debugResult.gameRefused,
+        Op = cp || ip.code === Pp.k.REQUEST_TO_MATCHMAKING ? (0, dp.h)(ip.message) : null;
+      if (null !== Op) return kp(pp, pp((0, dp.o)(Op)), pp(dp.l[Op])), !0;
+      if (cp) return async function(pp) {
+        const {
+          gameNameWithVariation: ip,
+          lobbyName: cp,
+          shownLobbyName: Op
+        } = Lp.gameBridge.latest("connectedGame"), op = "classic" === ip && (0, wp.G)(cp) ? Op : await (0, vp.b)(pp, ip, cp);
+        return "" !== op ? pp("general:cantJoinGame", {
+          game: op
+        }) : pp("general:cantJoinThisGame")
+      }(pp).then((cp => {
+        kp(pp, cp, ip.message)
+      })), !0;
       const {
-        t: RD
-      } = (0, KD.E)(), AD = (0, pD.useRef)(null);
-      return (0, cD.jsxs)("div", {
-        className: "PackPickButtons",
-        "data-pad-mouse-only": !0,
-        children: [(0, cD.jsx)("input", {
-          ref: AD,
-          type: "file",
-          accept: ".zip,application/zip",
-          hidden: !0,
-          onChange: function(DD) {
-            const zD = Array.from(DD.target.files);
-            DD.target.value = "", rD(zD)
-          }
-        }), gD() && (0, cD.jsx)(sD.f, {
-          disabled: zD,
-          onClick: wD,
-          children: RD("general:chooseFolder")
-        }), (0, cD.jsx)(sD.f, {
-          disabled: zD,
-          onClick: () => {
-            (0, LD.e)(AD.current)
-          },
-          children: RD("general:chooseZip")
-        })]
-      })
-    }
-  },
-  5070: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => LD,
-      g: () => rD,
-      i: () => KD
-    });
-    var pD = wD(5076);
-    const sD = [DD => DD.strict ? "strict" : "nonStrict", DD => DD.program];
-
-    function KD(DD, zD) {
-      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-      const pD = {};
-      for (const sD in wD) pD[sD] = `\0${sD}\0`;
-      return DD(zD, pD).replace(/\0(\w+)\0/g, ((DD, zD) => wD[zD]))
-    }
-
-    function rD(DD) {
-      return null === DD.file ? null : DD.line > 0 ? `${DD.file}:${DD.line}` : DD.file
-    }
-
-    function LD(DD) {
-      const zD = new Map(DD.map((DD => [cD(DD).join("."), DD])));
-      if (0 === zD.size) return [];
-      const wD = RD([...zD.values()]);
-      return 0 === wD[0].length ? [] : wD
-    }
-
-    function cD(DD) {
-      return sD.map((zD => zD(DD)))
-    }
-    const gD = sD.map((DD => new Set(pD.d.map(DD)).size));
-
-    function RD(DD) {
-      const zD = sD.map((zD => new Set(DD.map(zD)))),
-        wD = zD.reduce(((DD, zD) => DD * zD.size), 1),
-        pD = zD.every(((DD, zD) => 1 === DD.size || DD.size === gD[zD]));
-      if (wD === DD.length && pD) return [sD.filter(((DD, wD) => 1 === zD[wD].size)).map((zD => zD(DD[0])))];
-      let KD = null;
-      for (let rD = 0; rD < sD.length; rD++) {
-        if (1 === zD[rD].size) continue;
-        const wD = AD(DD, sD[rD]).flatMap(RD);
-        (null === KD || wD.length < KD.length) && (KD = wD)
-      }
-      return KD
-    }
-
-    function AD(DD, zD) {
-      const wD = new Map;
-      for (const sD of DD) {
-        var pD;
-        const DD = zD(sD);
-        wD.set(DD, [...null !== (pD = wD.get(DD)) && void 0 !== pD ? pD : [], sD])
-      }
-      return [...wD.values()]
-    }
-  },
-  6624: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      ShaderPackPublishForm: () => MD
-    });
-    var pD = wD(58),
-      sD = wD(6594),
-      KD = wD(206),
-      rD = wD(5084),
-      LD = wD(1057),
-      cD = wD(1447),
-      gD = wD(1687),
-      RD = wD(1127),
-      AD = wD(6630),
-      UD = wD(6637),
-      fD = wD(1495),
-      ID = wD(1200),
-      BD = wD(6645),
-      GD = wD(6682),
-      hD = wD(6590),
-      nD = wD(1096);
-
-    function MD(DD) {
-      var zD, wD, AD;
-      let {
-        existing: MD,
-        onPublished: JD
-      } = DD;
-      const {
-        t: QD
-      } = (0, ID.E)(), {
-        userContext: XD,
-        isUserContextUpdating: VD
-      } = (0, RD.c)(), [PD, CD] = (0, pD.useState)(null), [xD, TD] = (0, pD.useState)(0), [bD, jD] = (0, pD.useState)(null !== (zD = null === MD || void 0 === MD ? void 0 : MD.name) && void 0 !== zD ? zD : ""), dD = (0, pD.useRef)(bD), SD = (0, pD.useRef)(""), iD = DD => {
-        dD.current = DD, jD(DD)
-      }, [lD, WD] = (0, pD.useState)(null !== (wD = null === MD || void 0 === MD ? void 0 : MD.description) && void 0 !== wD ? wD : ""), ND = (0, pD.useRef)(lD), ZD = (0, pD.useRef)(""), yD = DD => {
-        ND.current = DD, WD(DD)
-      }, [kD, mD] = (0, pD.useState)(!1), {
-        loading: eD,
-        error: oD,
-        setError: aD,
-        onFiles: uD
-      } = (0, UD.f)((async DD => {
-        const zD = await (0, BD.loadPageShaderPackCompiler)();
-        if (!zD) return void aD(QD("shaderPack:compilerUnavailable"));
-        const wD = await (0, GD.h)(zD, DD.files);
-        if (CD({
-            pack: DD,
-            validation: wD,
-            sourceBytes: (0, rD.A)(DD.files)
-          }), !MD) {
-          var pD;
-          if ("" !== dD.current.trim() && dD.current !== SD.current || (SD.current = (0, sD.R)(DD.manifest.name.trim(), sD.C), iD(SD.current)), "" === ND.current.trim() || ND.current === ZD.current) ZD.current = (0, sD.R)((null !== (pD = DD.manifest.description) && void 0 !== pD ? pD : "").trim(), sD.p), yD(ZD.current);
-          TD((DD => DD + 1))
-        }
-      })), vD = !VD && !XD.isLoggedIn() && !KD.e.offlineMode, tD = bD.trim(), FD = tD.length < sD.G, YD = null !== PD && !1 !== (null === (AD = PD.validation) || void 0 === AD ? void 0 : AD.ok) && !eD && !FD && !vD && !VD;
-      return (0, nD.jsxs)("div", {
-        className: "ShaderPackPublishForm",
-        children: [(0, nD.jsx)("p", {
-          className: "ShaderPackPublishIntro",
-          children: MD ? QD("shaderPackListing:uploadIntro", {
-            minutes: String(sD.I / 6e4)
-          }) : QD("shaderPackListing:publishIntro")
-        }), (0, nD.jsx)(ED, {}), vD && (0, nD.jsx)("div", {
-          className: "ShaderPackPublishNote Warning",
-          children: QD("shaderPackListing:publishNeedsLogin")
-        }), (0, nD.jsx)(UD.e, {
-          busy: eD,
-          disabled: eD || kD,
-          onFiles: DD => {
-            CD(null), uD(DD)
-          }
-        }), PD && (0, nD.jsxs)("div", {
-          className: "ShaderPackPublishSummary",
-          children: [(0, nD.jsx)("div", {
-            className: "ShaderPackPublishPackName",
-            children: PD.pack.manifest.name
-          }), (0, nD.jsxs)("div", {
-            className: "ShaderPackPublishPackSize",
-            children: [QD("shaderPackListing:sizeValue", {
-              kilobytes: String((0, hD.L)(PD.sourceBytes))
-            }), " \xb7", " ", QD("shaderPackListing:filesValue", {
-              files: String(PD.pack.files.length)
-            })]
-          }), (0, nD.jsx)(OD, {
-            picked: PD
-          })]
-        }), !MD && (0, nD.jsxs)(nD.Fragment, {
-          children: [(0, nD.jsxs)("label", {
-            className: "ShaderPackPublishField",
-            children: [(0, nD.jsx)("span", {
-              children: QD("general:name")
-            }), (0, nD.jsx)(gD.e, {
-              className: "ShaderPackPublishInput",
-              defaultValue: bD,
-              maxLength: sD.C,
-              onValueChange: iD
-            }, xD), PD && FD && (0, nD.jsx)("span", {
-              className: "ShaderPackPublishHint",
-              children: QD("shaderPackListing:nameTooShort", {
-                min: String(sD.G)
-              })
-            })]
-          }), (0, nD.jsxs)("label", {
-            className: "ShaderPackPublishField",
-            children: [(0, nD.jsx)("span", {
-              children: QD("general:description")
-            }), (0, nD.jsx)(gD.e, {
-              className: "ShaderPackPublishInput ShaderPackPublishDescription",
-              defaultValue: lD,
-              maxLength: sD.p,
-              onValueChange: yD,
-              useTextarea: !0
-            }, xD)]
-          })]
-        }), oD && (0, nD.jsx)("div", {
-          className: "ShaderPackPublishNote Error",
-          children: oD
-        }), (0, nD.jsxs)(cD.o, {
-          className: "ShaderPackPublishButton",
-          disabled: !YD,
-          loading: kD,
-          onClick: () => {
-            !async function() {
-              var DD;
-              if (!PD) return;
-              const {
-                name: zD,
-                description: wD
-              } = null !== MD && void 0 !== MD ? MD : {
-                name: tD,
-                description: lD.trim()
-              }, pD = {
-                packId: null !== (DD = null === MD || void 0 === MD ? void 0 : MD.packId) && void 0 !== DD ? DD : null,
-                name: zD,
-                description: wD,
-                apiVersion: PD.pack.manifest.apiVersion,
-                files: (0, rD.z)(PD.pack.files),
-                keepCircleShadows: !0 === PD.pack.manifest.keepCircleShadows
-              };
-              if ((new TextEncoder).encode(JSON.stringify(pD)).byteLength > 1024 * sD.N) aD(QD("shaderPackListing:publishTooBig", {
-                kilobytes: String(sD.N)
-              }));
-              else {
-                mD(!0), aD(null);
-                try {
-                  JD(await fD.d.publishShaderPack(XD, pD))
-                } catch (KD) {
-                  console.error("Failed to publish the shader pack", KD), aD((0, hD.u)(KD, QD, "shaderPackListing:publishFailed"))
-                } finally {
-                  mD(!1)
-                }
-              }
-            }()
-          },
-          children: [(0, nD.jsx)(LD.e, {
-            name: "upload"
-          }), " ", QD(MD ? "shaderPackListing:uploadButton" : "shaderPackListing:publishButton")]
-        })]
-      })
-    }
-
-    function OD(DD) {
-      let {
-        picked: zD
-      } = DD;
-      const {
-        t: wD
-      } = (0, ID.E)(), {
-        validation: pD
-      } = zD;
-      return null === pD ? (0, nD.jsx)("div", {
-        className: "ShaderPackPublishNote",
-        children: wD("shaderPackListing:publishUnchecked")
-      }) : pD.ok ? (0, nD.jsxs)(nD.Fragment, {
-        children: [(0, nD.jsxs)("div", {
-          className: "ShaderPackPublishNote Ready",
-          children: [(0, nD.jsx)(LD.e, {
-            name: "circle-check"
-          }), " ", wD("shaderPackListing:publishReady")]
-        }), pD.offInStrict.length > 0 && (0, nD.jsxs)(nD.Fragment, {
-          children: [(0, nD.jsxs)("div", {
-            className: "ShaderPackPublishNote Warning",
-            children: [(0, nD.jsx)(LD.e, {
-              name: "triangle-exclamation"
-            }), " ", wD("shaderPack:offInStrict")]
-          }), (0, nD.jsx)(AD.b, {
-            diagnostics: pD.offInStrict,
-            t: wD
-          })]
-        })]
-      }) : (0, nD.jsxs)(nD.Fragment, {
-        children: [(0, nD.jsxs)("div", {
-          className: "ShaderPackPublishNote Error",
-          children: [(0, nD.jsx)(LD.e, {
-            name: "triangle-exclamation"
-          }), " ", wD("shaderPackListing:publishHasErrors")]
-        }), (0, nD.jsx)(AD.b, {
-          diagnostics: pD.errors,
-          more: pD.moreErrors,
-          t: wD
-        })]
-      })
-    }
-    const JD = "\0";
-
-    function ED() {
-      const {
-        t: DD
-      } = (0, ID.E)(), [zD, wD] = DD("shaderPackListing:bloxdhubHelp", {
-        site: JD
-      }).split(JD);
-      return (0, nD.jsxs)("p", {
-        className: "ShaderPackPublishIntro",
-        children: [zD, (0, nD.jsx)("a", {
-          className: "ShaderPackPublishLink",
-          href: sD.g,
-          target: "_blank",
-          rel: "noopener noreferrer",
-          children: sD.d
-        }), wD]
-      })
-    }
-  },
-  5076: (DD, zD, wD) => {
-    wD.d(zD, {
-      b: () => pD.i,
-      d: () => sD,
-      h: () => pD.q
-    });
-    var pD = wD(5084);
-    const sD = [!1, !0].flatMap((DD => ["terrain", "liquid", "model"].map((zD => ({
-      strict: DD,
-      program: zD
-    })))))
-  },
-  5084: (DD, zD, wD) => {
-    wD.d(zD, {
-      A: () => UD,
-      d: () => LD,
-      e: () => rD,
-      i: () => pD,
-      m: () => BD,
-      n: () => AD,
-      q: () => sD,
-      r: () => KD,
-      v: () => gD,
-      z: () => RD
-    });
-    const pD = 5;
-
-    function sD(DD) {
-      return DD === pD
-    }
-
-    function KD(DD) {
-      return [...DD.features]
-    }
-    const rD = 262144,
-      LD = 256,
-      cD = 256;
-
-    function gD(DD) {
-      if ("object" !== typeof DD || null === DD || Array.isArray(DD)) return "The pack has no files.";
-      const zD = [];
-      for (const [wD, pD] of Object.entries(DD)) {
-        if ("string" !== typeof pD) return `${wD} isn't text.`;
-        zD.push({
-          path: wD,
-          source: pD
-        })
-      }
-      return zD.sort(((DD, zD) => AD(DD.path, zD.path))),
-        function(DD) {
-          if (0 === DD.length) return "The pack has no .wgsl files.";
-          if (DD.length > LD) return `The pack has more than ${LD} .wgsl files.`;
-          const zD = new Set;
-          for (const {
-              path: wD
+        joinFailure: op
+      } = ip.debugResult, Ip = "refused" === (null === op || void 0 === op ? void 0 : op.at) ? op.code : null;
+      return Ip === Wp.e.schematicNotPublished.code ? (async function(pp, ip) {
+        const cp = (0, yp.o)(Lp.gameBridge.latest("connectedGame").gameNameWithVariation),
+          Op = await async function(pp) {
+            try {
+              const ip = await tp.b.getGame(await Hp.userContextManager.getCurrentUserContext(), pp, !0);
+              return ip.gamePublished ? null : ip.name
+            } catch (ip) {
+              return ip instanceof Pp.e && 435 === ip.httpCode || console.error(`Failed to get unpublished game ${pp}`, ip), null
             }
-            of DD) {
-            const DD = fD(wD);
-            if (null !== DD) return DD;
-            if (zD.has(wD)) return `The pack has two files at ${wD}.`;
-            zD.add(wD)
-          }
-          return UD(DD) > rD ? `The pack's .wgsl files are over ${rD/1024} KB in total.` : null
-        }(zD) ?? zD
+          }(cp);
+        if (null === Op) return void kp(pp, pp("general:cantJoinThisGame"), ip);
+        const op = await Dp.NotificationProvider.showPromptPopup({
+          icon: "rocket-launch",
+          title: pp("studio:gameNotPublishedTitle", {
+            game: Op
+          }),
+          confirmText: pp("studio:publishInStudio"),
+          cancelText: pp("general:cancel")
+        }).getResult();
+        !0 === op && (0, Yp.navigatePreserveSearch)((0, ep.n)((0, Up.e)(cp), "manage"))
+      }(pp, ip.message), !0) : Ip === Wp.e.schematicBanned.code && (kp(pp, pp("general:cantJoinThisGame"), ip.message), !0)
     }
 
-    function RD(DD) {
-      const zD = {};
-      for (const wD of DD) zD[wD.path] = wD.source;
-      return zD
+    function kp(pp, ip, cp) {
+      Dp.NotificationProvider.showPromptPopup({
+        icon: "lock",
+        title: ip,
+        subtitle: cp,
+        confirmText: pp("general:ok"),
+        cancelText: ""
+      })
     }
+    var mp = cp(4677),
+      Rp = cp(34),
+      qp = cp(1255),
+      Mp = cp(1765),
+      Cp = cp(104),
+      Ep = cp(1334),
+      Xp = cp(1466),
+      lp = cp(4615),
+      Qp = cp(4456),
+      Jp = cp(4407),
+      Bp = cp(3335),
+      Np = cp(1356),
+      Tp = cp(768),
+      fp = cp(1236),
+      bp = cp(3412),
+      hp = cp(3246),
+      ap = cp(1380),
+      np = cp(1361),
+      Fp = cp(5103),
+      gp = cp(9041),
+      Gp = cp(3050),
+      rp = cp(1112);
 
-    function AD(DD, zD) {
-      return DD < zD ? -1 : DD > zD ? 1 : 0
-    }
-
-    function UD(DD) {
-      const zD = new TextEncoder;
-      let wD = 0;
-      for (const {
-          source: pD
+    function Zp(pp) {
+      let {
+        onApply: ip,
+        onSkip: cp
+      } = pp;
+      const {
+        t: Op
+      } = (0, Ap.H)();
+      return (0, Sp.useEffect)((() => {
+        Gp.e.skipPlayWait()
+      }), []), (0, rp.jsx)(ap.j, {
+        icon: "download",
+        title: "customTexturePack:downloadTitle",
+        subtitle: (0, rp.jsxs)("div", {
+          className: "CustomTexturePackDownloaderSubtitleText",
+          children: [Op("customTexturePack:downloadPrompt"), (0, rp.jsx)("div", {
+            className: "CustomTexturePackDownloaderWarningText",
+            children: Op("customTexturePack:authorWarning")
+          }), (0, rp.jsx)("div", {
+            className: "CustomTexturePackDownloaderSecondaryText",
+            children: Op("customTexturePack:existingPackSaved")
+          })]
+        }),
+        confirm: {
+          text: "general:apply",
+          onClick: ip
+        },
+        cancel: {
+          text: "customTexturePack:skip",
+          onClick: cp
         }
-        of DD) wD += zD.encode(pD).byteLength;
-      return wD
+      })
     }
-
-    function fD(DD) {
-      if (!DD.toLowerCase().endsWith(".wgsl")) return `${DD} isn't a .wgsl file.`;
-      if (DD.length > cD) return `A file path is over ${cD} characters.`;
-      if (DD.includes("\\") || /[\u0000-\u001f]/.test(DD)) return `${DD} isn't a valid file path.`;
-      return DD.split("/").some((DD => "" === DD || "." === DD || ".." === DD)) ? `${DD} isn't a valid file path.` : null
+    async function zp() {
+      let pp = !1;
+      const ip = Dp.NotificationProvider.showCustomPopup({
+        body: ip => (0, rp.jsx)(Zp, {
+          onApply: () => {
+            pp = !0, ip()
+          },
+          onSkip: ip
+        }),
+        disableExitButton: !0,
+        disablePressBackgroundToClose: !0
+      });
+      return await ip.getResult(), pp
     }
-    const ID = /^(.*)\[rot\[([1-4])$/;
+    let sp = {
+      wanted: !1
+    };
+    let Kp = null;
 
-    function BD(DD, zD) {
-      let wD = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new Map;
-      const pD = new Map;
-      zD.forEach(((DD, zD) => {
-        let {
-          numAnimStates: wD,
-          animStartIdx: sD
-        } = DD;
-        for (let KD = 1; KD < wD; KD++) pD.set(sD + KD - 1, zD)
-      }));
-      const sD = Object.entries(DD),
-        KD = new Map;
-      for (const [BD, GD] of sD) {
-        const DD = ID.exec(BD);
-        "1" === DD?.[2] && KD.set(DD[1], GD + 1)
+    function Vp(pp) {
+      pp.setGamePackConfirm(zp), Kp = pp
+    }
+    var ii = cp(3587);
+
+    function ci(pp) {
+      let {
+        schematicId: ip,
+        texturePackKey: cp,
+        onClose: Op
+      } = pp;
+      const [op, Ip] = (0, Sp.useState)("prompt"), [xp, Lp] = (0, Sp.useState)(null), Yp = (0, ii.b)();
+
+      function Dp() {
+        Op()
       }
-      const rD = DD => {
-          const zD = ID.exec(DD);
-          return zD && KD.has(zD[1]) ? {
-            root: zD[1],
-            rotation: Number(zD[2]) - 1
-          } : null
+      return "prompt" === op ? (0, rp.jsx)(Zp, {
+        onApply: async function() {
+          Ip("downloading");
+          try {
+            const pp = await async function(pp, ip) {
+              const cp = await (0, Fp.d)(ip);
+              if (cp) return {
+                pack: cp,
+                key: ip
+              };
+              const Op = await Hp.userContextManager.getCurrentUserContext(),
+                op = (await tp.b.getGame(Op, pp, !0)).customTexturePackKey;
+              if (!op) return null;
+              const Ip = await (0, Fp.d)(op);
+              if (!Ip) throw new Error("The texture pack could not be found");
+              return {
+                pack: Ip,
+                key: op
+              }
+            }(ip, cp);
+            if (!Yp.current) return;
+            if (!pp) return void Op();
+            if ((0, bp.m)(pp.pack)) return void Ip("refused");
+            hp.d.setFromJson(pp.pack, "customGame"), await hp.d.saveTemporaryTexturePack(pp.key), Yp.current && (0, Mp.reloadBloxd)()
+          } catch (pp) {
+            Lp(pp instanceof Error ? pp.message : String(pp)), Ip("error")
+          }
         },
-        LD = new Set(sD.map((DD => {
-          let [zD] = DD;
-          return rD(zD)?.root ?? zD
-        }))),
-        cD = (DD, wD) => {
-          const pD = DD.replace(/_?0$/, "");
-          return (zD[wD]?.numAnimStates ?? 0) > 1 && !LD.has(pD) ? pD : DD
-        },
-        gD = new Map;
-      for (const [ID, BD] of sD) gD.set(BD, cD(rD(ID)?.root ?? ID, BD));
-      const RD = sD.reduce(((DD, zD) => {
-          let [, wD] = zD;
-          return Math.max(DD, wD + 1)
-        }), 0),
-        AD = Array.from({
-          length: RD
-        }, ((DD, zD) => ({
-          id: zD + 1,
-          rotation: 0
-        }))),
-        UD = new Map,
-        fD = new Map;
-      for (const [ID, BD] of sD) {
-        const DD = rD(ID),
-          zD = pD.get(BD);
-        if (void 0 !== zD) {
-          const wD = gD.get(zD);
-          fD.set(ID, {
-            name: ID,
-            texture: wD,
-            kind: "frame"
-          }), DD && !fD.has(DD.root) && fD.set(DD.root, {
-            name: DD.root,
-            texture: wD,
-            kind: "frame"
-          });
-          continue
-        }
-        const wD = gD.get(BD),
-          sD = DD?.root ?? ID;
-        if (wD !== sD && fD.set(sD, {
-            name: sD,
-            texture: wD,
-            kind: "frame"
-          }), DD) {
-          const zD = KD.get(DD.root);
-          AD[BD] = {
-            id: zD,
-            rotation: DD.rotation
-          }, UD.set(wD, zD), fD.set(ID, {
-            name: ID,
-            texture: wD,
-            kind: "rotation"
+        onSkip: Dp
+      }) : "downloading" === op ? (0, rp.jsx)(ap.j, {
+        icon: "download",
+        title: "customTexturePack:downloading",
+        subtitle: (0, rp.jsx)("div", {
+          className: "CustomTexturePackDownloaderLogoLoaderContainer",
+          children: (0, rp.jsx)(np.c, {
+            showFace: !0
           })
-        } else UD.set(wD, BD + 1)
-      }
-      for (const ID of UD.keys()) fD.delete(ID);
-      for (const [ID, BD] of wD) {
-        const DD = UD.get(BD);
-        void 0 === DD || UD.has(ID) || (UD.set(ID, DD), fD.delete(ID))
-      }
-      return {
-        named: [...UD].sort(((DD, zD) => {
-          let [wD] = DD, [pD] = zD;
-          return wD < pD ? -1 : wD > pD ? 1 : 0
-        })).map((DD => {
-          let [zD, wD] = DD;
-          return {
-            name: zD,
-            id: wD
+        })
+      }) : "error" === op ? (0, rp.jsx)(ap.j, {
+        icon: "face-worried",
+        title: "customTexturePack:errorTitle",
+        subtitle: xp,
+        confirm: {
+          text: "customTexturePack:refreshPage",
+          onClick: () => {
+            window.location.reload()
           }
-        })),
-        aliases: [...fD.values()],
-        layers: AD
+        },
+        cancel: {
+          text: "customTexturePack:skip",
+          onClick: Dp
+        }
+      }) : "refused" === op ? (0, rp.jsx)(ap.j, {
+        icon: "face-worried",
+        title: "customTexturePack:cantApplyTitle",
+        subtitle: "customTexturePack:gamePackHasExternalUrls",
+        confirm: {
+          text: "general:continue",
+          onClick: Dp
+        }
+      }) : null
+    }
+    var Oi = cp(9049),
+      oi = cp(4389),
+      Ii = cp(1803),
+      Si = cp(3025),
+      xi = cp(4398),
+      Li = cp(2169),
+      Yi = cp(9056);
+    var Di = cp(4770),
+      Ai = cp(1317),
+      Pi = cp(1758),
+      Wi = cp(657),
+      yi = cp(732),
+      Ui = cp(1819);
+
+    function wi() {
+      const pp = op.c.get("clientEscMenuOptions");
+      Lp.gameBridge.send("setLookSensitivity", op.c.get("isTouchScreen") ? (0, yi.n)(pp) : pp.mouseSensitivity)
+    }
+    const vi = 45e3;
+
+    function ti(pp) {
+      const ip = pp.asError();
+      if (ip.debugResult.OO || (0, Pi.e)(ip.debugResult.error)) return;
+      console.log("Failed to join lobby:", ip.message);
+      const cp = "timedOut" === ip.debugResult.gameServerUnreachable;
+      (0, Si.reportClientError)("matchmake_failed", ip.message, cp ? "CONNECT_TO_GAME_SERVER_TIMEOUT" : Pp.k[ip.code]);
+      const {
+        error: Op
+      } = ip.debugResult;
+      if (Op instanceof Bp.l && "default" !== Op.packSource) {
+        const pp = (0, xi.f)("js", "game" === Op.packSource ? "game" : "page", (0, xi.g)(Op));
+        (0, Si.reportClientError)("texture_pack", Op, pp)
       }
+    }
+
+    function Hi(pp) {
+      if (null === pp || void 0 === pp || !pp.isError()) return !1;
+      const ip = pp.asError();
+      return ip.code === Pp.k.REQUEST_TO_MATCHMAKING && !(0, Pi.e)(ip.debugResult.error)
+    }
+    async function di(pp, ip, cp) {
+      const Op = (0, Di.M)(ip);
+      async function Sp(pp, ip, cp, Op) {
+        var Sp;
+        if (Op.aborted) return null;
+        null === op.c.get("gameEntrySource") && (0, op.k)("directPlayUrl"), Wi.z && (0, gp.f)().catch((() => {})), op.c.set({
+          gameState: "findingLobby"
+        }), Rp.m.GA("loadingScreenState", "loadingPage:findingLobby");
+        const xp = await Hp.userContextManager.getCurrentUserContext();
+        Lp.gameBridge.send("setRequestedGame", {
+          gameNameWithVariation: ip,
+          discordContext: pp instanceof fp.e ? pp.getSerialisableParams() : null
+        }), (0, Ii.i)(null !== (Sp = Gp.e.playInputAt()) && void 0 !== Sp ? Sp : performance.now());
+        const Yp = await async function(pp, ip, cp, Op, op) {
+          try {
+            await (0, Ui.k)(Ip.reqLibsLoadedPromise, vi, "Required libraries timed out")
+          } catch (Sp) {
+            const pp = Sp instanceof Ui.h ? `Required libraries still loading after ${vi/1e3} s: ${(0,Ip.requiredLibsPending)().join(", ")}` : Sp.toString();
+            return qp.d.errorWithCode(pp, Pp.k.LOAD_REQUIRED_LIBS, {
+              error: Sp,
+              severity: "medium"
+            })
+          }
+          return Rp.m.GA("matchmakeAndPlayStepCompleted", {
+            step: Pp.k.LOAD_REQUIRED_LIBS,
+            totalSubSteps: 1
+          }), (0, Ip.matchmakeAndPlayMaybeUnloaded)(pp, ip, cp, Op, op)
+        }(pp, ip, cp, xp, Op), Dp = Yp.isError() ? Yp.asError() : null;
+        if (Op.aborted) return Dp && ti(Yp), Lp.gameBridge.send("leaveGame", {
+          reloadPath: null
+        }), null;
+        if (null !== Dp && void 0 !== Dp && Dp.debugResult.OO) return console.log("Join cancelled:", Dp.message), null;
+        if (Dp) return Yp;
+        const {
+          gameNameWithVariation: Ap,
+          lobbyName: Wp
+        } = Yp.getValue();
+        return wi(), (0, Ai.I)().setGameViewShown(!0), xp.recordJoin(Ap, Wp), (0, Ep.E)(), Yp
+      }
+      return Op && (0, op.k)("updateRejoin"), (0, Li.l)((async op => {
+        try {
+          var Ip;
+          let xp = pp,
+            Lp = await Sp(xp, ip, cp, op);
+          for (let pp = 0; Op && pp < Di.l && (Hi(Lp) && await (0, Di.N)((0, Di.x)(pp), op)); pp++) xp = (0, Di.z)(xp, pp + 1, "string" === typeof xp && (0, wp.I)(xp)), Lp = await Sp(xp, ip, cp, op);
+          return null !== (Ip = Lp) && void 0 !== Ip && Ip.isError() && ti(Lp), Lp
+        } catch (xp) {
+          if ((0, Si.reportClientError)("matchmake_failed", xp, "unexpected"), Lp.gameBridge.send("leaveGame", {
+              reloadPath: op.aborted ? null : "/"
+            }), op.aborted) return null;
+          throw xp
+        }
+      }), (async pp => {
+        var cp;
+        if (Op) return;
+        const op = (0, Ep.z)();
+        null !== op && (await op, pp.aborted) || (null !== (cp = Tp.c[ip]) && void 0 !== cp && cp.playAdBeforeMatchmaking ? (Gp.e.skipPlayWait(), await new Promise((pp => {
+          (0, Ep.Z)((() => {
+            pp(!0)
+          }), "video_start")
+        }))) : (0, Ep.Z)((() => {}), "video_start"))
+      }))
+    }
+
+    function ei() {
+      const {
+        t: pp
+      } = (0, Ap.H)(), ip = (0, Yp.useNavigatePreserveSearch)(), cp = (0, Op.r)(), Wp = (0, Op.A)(), Up = (0, Sp.useRef)({
+        t: pp,
+        navigate: ip
+      });
+      Up.current = {
+        t: pp,
+        navigate: ip
+      };
+      const dp = (0, Sp.useRef)("");
+      dp.current = cp.pathname + cp.search;
+      const {
+        gameState: ep,
+        clientEscMenuOptions: kp
+      } = (0, op.o)(["gameState", "clientEscMenuOptions"]), Rp = (0, Sp.useRef)(null), fp = (0, Sp.useRef)(!1);
+      var bp;
+      (0, Li.p)(), (0, Li.r)(), bp = Wi.z, (0, Sp.useEffect)((() => {
+        if (!bp) return;
+        let pp = !0;
+        return (0, gp.f)().then((ip => {
+          pp && Vp(ip)
+        })).catch((() => {})), () => {
+          var ip;
+          pp = !1, sp.wanted = !1, null === (ip = Kp) || void 0 === ip || ip.setGamePackConfirm(null), Kp = null
+        }
+      }), [bp]), (0, Sp.useEffect)((() => {
+        var pp, ip, Op;
+        (0, Ip.needGameClientNow)();
+        const {
+          t: Sp,
+          navigate: xp
+        } = Up.current, Ap = (0, Oi.c)(Wp, cp.search);
+        if (Wp.lobbyName && !new URLSearchParams(cp.search).has("lobby")) return void xp((0, Np.c)(Ap.gameNameWithVariation, Ap.lobbyName), {
+          replace: !0
+        });
+        let ep = Promise.resolve({
+          shouldMatchmake: !0
+        });
+        if ("/play/discord-custom-lobby" === cp.pathname) {
+          const pp = op.c.get("discordContext");
+          if (!pp) return void xp("/");
+          ep = mp.b.setupDiscordLobby(pp, "classic").then((() => ({
+            shouldMatchmake: !0,
+            discordContext: pp
+          }))).catch((ip => (console.error("Failed to setup discord lobby", ip), {
+            shouldMatchmake: !1,
+            discordContext: pp
+          })))
+        } else if (!Ap.gameNameWithVariation || !(0, wp.H)(Ap.gameNameWithVariation)) return console.error(`Valid game name with variation is required. Received ${Ap.gameNameWithVariation}`), void xp(-1);
+        const kp = Rp.current;
+        if (null !== kp && Ap.gameNameWithVariation === kp.gameNameWithVariation && Ap.lobbyName === kp.lobbyName) return;
+        if (Lp.gameBridge.latest("connectedGame").replay) return void(0, Li.i)(null);
+        if ("releaseCountdown" === (null === (pp = (0, vp.c)(Ap.gameNameWithVariation)) || void 0 === pp ? void 0 : pp.type)) return console.error(`Game hasn't been released yet: ${Ap.gameNameWithVariation}`), void xp(-1);
+        const Xp = fp.current;
+        fp.current = !1, (0, Ep.B)(), op.c.set({
+          gameState: "loadingScreen"
+        });
+        const bp = function() {
+            sp.wanted = !1;
+            const pp = {
+              wanted: !0
+            };
+            return sp = pp, () => pp.wanted
+          }(),
+          ap = Ap.gameNameWithVariation;
+        if (ap && (Wi.z || (0, yp.j)(ap))) {
+          const pp = Wi.z ? Promise.all([(0, gp.f)(), Hp.userContextManager.getCurrentUserContext()]).then((pp => {
+            let [ip, cp] = pp;
+            if (bp()) return Vp(ip), ip.packForGame(ap, cp, bp)
+          })) : async function(pp) {
+            await hp.d.indexedDbValuesAreLoaded();
+            const ip = await Hp.userContextManager.getCurrentUserContext(),
+              cp = (0, yp.o)(pp);
+            let Op;
+            try {
+              Op = await tp.b.getGame(ip, cp, !0)
+            } catch (Sp) {
+              return void console.error("Failed to get game", Sp)
+            }
+            const op = Op.customTexturePackKey;
+            if (!op) return void(hp.d.isUsingTemporaryTexturePack() && ((0, Mp.reloadBloxd)(), await new Promise((() => {}))));
+            if (hp.d.isUsingTemporaryTexturePack() && hp.d.getTemporaryTexturePackSource() === op) return;
+            const Ip = Dp.NotificationProvider.showCustomPopup({
+              body: pp => (0, rp.jsx)(ci, {
+                schematicId: cp,
+                texturePackKey: op,
+                onClose: pp
+              }),
+              disableExitButton: !0,
+              disablePressBackgroundToClose: !0
+            });
+            await Ip.getResult()
+          }(ap), ip = ep;
+          ep = pp.catch((pp => {
+            console.error("Failed to check for custom texture pack", pp)
+          })).then((() => ip))
+        }
+        const np = {
+          wasm: Wi.z,
+          game: Ap.gameNameWithVariation,
+          custom: void 0 !== ap && (0, yp.j)(ap),
+          lobbyName: null !== (ip = Ap.lobbyName) && void 0 !== ip ? ip : null,
+          direct: null !== Ap.directJoinVmUrl && void 0 !== Ap.directJoinVmUrl,
+          discord: "/play/discord-custom-lobby" === cp.pathname,
+          adBeforeMatchmaking: void 0 !== ap && !0 === (null === (Op = Tp.c[ap]) || void 0 === Op ? void 0 : Op.playAdBeforeMatchmaking),
+          afterAnother: null !== Rp.current || (0, Li.d)()
+        };
+        (0, Yi.f)(null);
+        const Fp = !(Gp = np).wasm || void 0 === Gp.game || Gp.custom || Gp.direct || Gp.discord || Gp.adBeforeMatchmaking || Gp.afterAnother ? null : () => {
+          ! function(pp, ip) {
+            (0, Yi.f)({
+              key: (0, Yi.c)(pp, ip),
+              settled: Promise.all([Ip.matchmakingLibrariesPromise, Hp.userContextManager.getCurrentUserContext()]).then((cp => {
+                let [Op, op] = cp;
+                if (void 0 === Op.matchmakeForAhead) throw new Error("the matchmaking chunk has no matchmaking ahead");
+                return Op.matchmakeForAhead(pp, ip, op)
+              })).catch((pp => ({
+                result: qp.d.errorWithCode(String(pp), Pp.k.REQUEST_TO_MATCHMAKING, {
+                  error: pp,
+                  severity: "medium"
+                }),
+                at: performance.now()
+              })))
+            })
+          }(np.lobbyName, np.game)
+        };
+        var Gp;
+        const Zp = null !== Rp.current;
+        Rp.current = null, (0, Li.i)(null);
+        const zp = () => {
+          Xp ? (0, Yp.navigateToHomePage)() : (fp.current = Zp, xp(-1))
+        };
+        let Kp = !1;
+        const ii = cp.pathname + cp.search,
+          Ii = () => !Kp && dp.current === ii;
+        return (0, Yi.b)(ep, Fp, (pp => {
+          let {
+            shouldMatchmake: ip,
+            discordContext: cp
+          } = pp;
+          Ii() && (ip ? di(null !== cp && void 0 !== cp ? cp : Ap.lobbyName, cp ? "classic" : Ap.gameNameWithVariation, Ap.directJoinVmUrl).then((pp => {
+            if (null !== pp && Ii())
+              if (pp.isError()) {
+                var ip;
+                const cp = pp.asError(),
+                  Op = null !== (ip = cp.debugResult.severity) && void 0 !== ip ? ip : "high";
+                if ((0, Pi.e)(cp.debugResult.error)) return void Pi.f.reload();
+                if (cp.code === Pp.k.SHADER_PACK) return void(0, oi.d)(cp.message, xp);
+                const Ip = op.c.get("gameEntrySource"),
+                  Yp = cp.code === Pp.k.INITIALISE_WEBGL ? (0, Qp.d)() : null,
+                  {
+                    error: Wp
+                  } = cp.debugResult;
+                let yp;
+                if (jp(Sp, cp)) yp = Promise.resolve(!1);
+                else if (null !== Yp) yp = (0, Qp.i)(Yp);
+                else if (Wp instanceof Bp.l) yp = (0, Jp.h)(Wp);
+                else {
+                  let pp;
+                  switch (Op) {
+                    case "low":
+                      pp = "face-diagonal-mouth";
+                      break;
+                    case "medium":
+                      pp = "face-worried";
+                      break;
+                    case "high":
+                      pp = "face-dizzy"
+                  }
+                  const ip = Wp instanceof Ui.h;
+                  let op = cp.message;
+                  ip ? op = Sp("general:gameFilesStalled") : cp.debugResult.gameServerUnreachable && (op = Sp((0, Cp.isMobile)() ? "general:gameServerUnreachableMobile" : "general:gameServerUnreachable"));
+                  yp = Dp.NotificationProvider.showPromptPopup({
+                    icon: pp,
+                    title: Pp.C[cp.code],
+                    subtitle: (0, rp.jsxs)(rp.Fragment, {
+                      children: [op, Wp instanceof Error && !ip && (0, rp.jsx)("div", {
+                        style: {
+                          fontSize: "0.9rem",
+                          paddingTop: "1rem"
+                        },
+                        children: (0, rp.jsx)(lp.c, {
+                          errorString: Wp.stack
+                        })
+                      })]
+                    }),
+                    confirmText: Sp("general:tryAgain"),
+                    cancelText: Sp("general:cancel")
+                  }).getResult().then((pp => !0 === pp))
+                }
+                yp.then((pp => {
+                  if (pp) {
+                    (0, op.k)(Ip);
+                    const pp = (0, Np.c)(Ap.gameNameWithVariation, Ap.lobbyName);
+                    "low" === Op ? xp(pp) : (0, Mp.reloadBloxd)(pp)
+                  }
+                })), Lp.gameBridge.send("leaveGame", {
+                  reloadPath: "/"
+                }), zp()
+              } else {
+                const {
+                  gameNameWithVariation: ip,
+                  lobbyName: cp
+                } = pp.getValue();
+                Rp.current = {
+                  gameNameWithVariation: ip,
+                  lobbyName: cp
+                };
+                const Op = (0, Np.c)(ip, cp);
+                xp(Op, {
+                  replace: !0
+                })
+              }
+          })).catch((pp => {
+            if (!Ii()) return;
+            Dp.NotificationProvider.showPromptPopup({
+              icon: "face-dizzy",
+              title: "Unexpected Error",
+              subtitle: (0, rp.jsxs)(rp.Fragment, {
+                children: [Sp("homePage:pleaseCopyError"), (0, rp.jsx)("div", {
+                  style: {
+                    fontSize: "0.9rem",
+                    paddingTop: "1rem"
+                  },
+                  children: (0, rp.jsx)(lp.c, {
+                    errorString: pp.stack
+                  })
+                })]
+              }),
+              confirmText: Sp("general:tryAgain"),
+              cancelText: Sp("general:cancel")
+            }).getResult().then((pp => {
+              !0 === pp && (0, Mp.reloadBloxd)((0, Np.c)(Ap.gameNameWithVariation, Ap.lobbyName))
+            })), zp()
+          })) : xp(-1))
+        }), Ii), () => {
+          Kp = !0
+        }
+      }), [Wp, cp.search, cp.pathname]), (0, Sp.useEffect)((() => {
+        kp.disableFullscreen && (0, Xp.f)() ? (0, Xp.l)() : !kp.disableFullscreen && (0, Xp.j)() && (0, Xp.s)({
+          automatic: !0
+        })
+      }), [ep, kp]), (0, Sp.useEffect)((() => {
+        "inGame" === ep && wi()
+      }), [ep, kp]), (0, Sp.useEffect)((() => {
+        "inGame" !== ep && op.c.set({
+          openInGameMenuName: null
+        })
+      }), [ep]);
+      const ap = function(pp) {
+        const ip = (0, op.j)(pp),
+          [cp, Op] = (0, Sp.useState)(0),
+          [Ip, Lp] = (0, Sp.useState)(!1);
+        (0, xp.f)("gameJoined", (() => {
+          (0, op.j)(op.c.get("gameState")) && (Op((pp => pp + 1)), Lp(!0))
+        })), (0, Sp.useEffect)((() => {
+          ip || Lp(!1)
+        }), [ip]);
+        const Yp = "inGame" === pp;
+        return {
+          mounted: Yp || ip && Ip,
+          shown: Yp,
+          key: cp
+        }
+      }(ep);
+      return (0, rp.jsx)(rp.Fragment, {
+        children: ap.mounted && (0, rp.jsx)(Ip.InGameUi, {
+          shown: ap.shown
+        }, ap.key)
+      })
+    }
+  },
+  5103: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => op
+    });
+    var Op = cp(1211);
+    async function op(pp) {
+      const ip = await fetch(`${Op.clientSideServerUrls.s3Url}/${pp}`, {
+        headers: {
+          Accept: "application/json"
+        }
+      });
+      if (404 === ip.status || 403 === ip.status) return null;
+      if (!ip.ok) throw new Error(`Failed to download the texture pack (${ip.status})`);
+      return await ip.json()
+    }
+  },
+  9049: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Sp
+    });
+    var Op = cp(1356),
+      op = cp(1234),
+      Ip = cp(640);
+
+    function Sp(pp) {
+      return pp = function(pp, ip) {
+        var cp;
+        const Op = new URLSearchParams(ip),
+          op = Op.get("lobby"),
+          Ip = Op.get("vm"),
+          Sp = null !== (cp = op) && void 0 !== cp ? cp : pp.lobbyName,
+          xp = null !== Ip && void 0 !== Ip ? Ip : pp.directJoinVmUrl;
+        if (Sp === pp.lobbyName && xp === pp.directJoinVmUrl) return pp;
+        return {
+          ...pp,
+          lobbyName: Sp,
+          directJoinVmUrl: xp
+        }
+      }(pp, arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ""), pp = function(pp) {
+        if ((0, Ip.G)(pp.directJoinVmUrl)) return pp;
+        const ip = (0, op.Z)(pp.directJoinVmUrl);
+        null === ip && (pp.directJoinVmUrl = void 0);
+        return pp
+      }(pp = function(pp) {
+        if ((0, Ip.G)(pp.gameNameWithVariation)) return pp;
+        return pp.gameNameWithVariation = (0, Op.m)(pp.gameNameWithVariation), pp
+      }(pp))
+    }
+  },
+  9046: (pp, ip, cp) => {
+    cp.d(ip, {
+      c: () => Ip,
+      g: () => op
+    });
+    let Op = !1;
+
+    function op() {
+      Op = !0
+    }
+
+    function Ip() {
+      return Op
+    }
+  },
+  9056: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => xp,
+      c: () => op,
+      f: () => Ip,
+      i: () => Sp
+    });
+    let Op = null;
+
+    function op(pp, ip) {
+      return `${ip}\n${null!==pp&&void 0!==pp?pp:""}`
+    }
+
+    function Ip(pp) {
+      Op = pp
+    }
+
+    function Sp(pp) {
+      const ip = Op;
+      return Op = null, null !== ip && ip.key === pp ? ip.settled : null
+    }
+
+    function xp(pp, ip, cp, Op) {
+      let op = !1;
+      null !== ip && setTimeout((() => {
+        Op() && !op && ip()
+      }), 0), pp.then((pp => {
+        op = !0, cp(pp)
+      }))
+    }
+  },
+  9041: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Wp,
+      f: () => Pp,
+      j: () => yp
+    });
+    var Op = cp(3246),
+      op = cp(2343),
+      Ip = cp(2174),
+      Sp = cp(4739),
+      xp = cp(3607),
+      Lp = cp(9046);
+    let Yp = null;
+
+    function Dp() {
+      return Promise.all([cp.e(75), cp.e(78), cp.e(90), cp.e(215), cp.e(214), cp.e(160), cp.e(137), cp.e(198), cp.e(140), cp.e(88), cp.e(275), cp.e(64)]).then((() => cp(40873)))
+    }
+
+    function Ap() {
+      Promise.all([cp.e(73), cp.e(76), cp.e(75), cp.e(74), cp.e(90), cp.e(87), cp.e(273), cp.e(191), cp.e(228), cp.e(252), cp.e(275), cp.e(47)]).then((() => cp(41212))).catch((() => {}))
+    }
+
+    function Pp() {
+      return Sp.b.cancelDownloadForJoin(), (0, xp.c)(), (0, op.e)(), (0, Lp.g)(), (0, Ip.j)(), Ap(), Promise.all([cp.e(78), cp.e(90), cp.e(215), cp.e(214), cp.e(137), cp.e(140), cp.e(59)]).then((() => cp(41270))).then((pp => {
+        let {
+          startJoinLoad: ip
+        } = pp;
+        ip()
+      }), (() => {})), Yp ??= Dp().then((pp => (pp.startWasmPlay(), pp.followPageUiPack((pp => {
+        Op.d.showGamePack(pp)
+      })), pp)), (pp => {
+        throw Yp = null, pp
+      })), Yp
+    }
+
+    function Wp() {
+      return Ap(), cp.e(276).then((() => cp(41273))).catch((() => {})), Dp().then((() => {}))
+    }
+
+    function yp() {
+      return Dp().then((pp => {
+        pp.startWasmPreviews(), pp.prefetchWasmPreviews()
+      }))
+    }
+  },
+  9034: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Ip,
+      f: () => Sp,
+      h: () => xp,
+      l: () => Yp,
+      o: () => Lp
+    });
+    var Op = cp(195),
+      op = cp(4719);
+
+    function Ip(pp) {
+      return Sp(pp) === Op.e.gameOrPluginOnPlayerAuthRejected.code
+    }
+
+    function Sp(pp) {
+      return "object" === typeof pp && null !== pp ? pp.code : void 0
+    }
+
+    function xp(pp) {
+      var ip;
+      return null !== (ip = Object.keys(op.c).find((ip => op.c[ip] === pp))) && void 0 !== ip ? ip : null
+    }
+
+    function Lp(pp) {
+      return "notWhitelisted" === pp ? "customLobby:cantJoinNotWhitelistedTitle" : "customLobby:cantJoinWorld"
+    }
+    const Yp = {
+      private: "customLobby:cantJoinPrivate",
+      notWhitelisted: "customLobby:cantJoinNotWhitelisted",
+      banned: "customLobby:cantJoinBanned",
+      adminLocked: "customLobby:cantJoinAdminLocked"
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

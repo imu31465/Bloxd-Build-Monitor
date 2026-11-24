@@ -1,37 +1,43 @@
 export const id = 183;
 export const ids = [183];
 export const modules = {
-  9066: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      pageBody: () => pD
+  9187: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      pageBody: () => Op
     });
-    const pD = {
-      whatIs: ["Something's broken loose in an abandoned research lab, and your squad has been sent in to deal with it. Bloxd Containment Breach is a co-op PvE survival horror shooter. You fight through the infested halls, contain the anomaly before the breach spreads, and then try to get out alive. Grab some friends and see if you can make it."],
-      howToPlay: ["Get your squad together in the lobby and visit the Loadout NPC. That's where you choose a primary gun, a secondary, throwables, healing items, armour and a perk. Then step onto a queue pad: Normal takes up to 6 players and Hard takes up to 4. You need at least 2 to start. Every run builds a fresh chain of lab rooms full of infected scientists and failed experiments. Sealed doors open as you push on, and an objective arrow shows you the way.", "Clear each room, open the loot chests and track down the anomaly. Each anomaly is a different boss.", "Go down and you turn into a ghost. Mobs ignore ghosts and ghosts can't shoot, but you can still help out with ghost actions like Open Path. A teammate can revive you with a splash healing potion, and you'll get your inventory back. If the whole squad ends up as ghosts, the run's over. Contain the anomaly and you earn a boss part, which you can spend along with the gold from your kills on better gear."],
-      features: ["Normal (Up to 6 Players) and Hard (Up to 4 Players) Difficulties", "A New Chain of Lab Rooms Every Run", "9 Anomaly Bosses to Find and Contain", "Encounters That Adapt as You Play", "Loadouts with Guns, Throwables, Healing, Armour and Perks", "Upgrade Your Gear with Gold and Boss Parts", "Ghost Mode and Team Revives", "Locators to Choose Which Anomaly You Face", "A Codex to Track Every Anomaly You've Met and Contained"],
-      tips: ["Stick with your squad. Being alone in the dark is how you go down", "Carry splash healing potions so you can revive teammates", "Open every loot chest you come across", "Turned into a ghost? Use Open Path to help your team", "Contain anomalies to earn boss parts for higher-tier gear", "Arm a Locator before deploying if you need parts from a particular anomaly", "Try Normal before you take on Hard"],
-      similarGames: ["ninetyNineNights", "horrorHotel", "infection", "backrooms"],
+    const Op = {
+      whatIs: ["Trust no one. In Bloxd Murder Mystery friends go quiet, roles stay secret and every round turns into a guessing game full of twists and close calls. It's a social deduction game for up to 12 players. Can you work out who the Murderer is before it's too late?"],
+      howToPlay: ["When a round starts, everyone gets a secret role. Most of you will be Innocents, and your job is simply to stay alive as long as you can. One player is the Detective and gets a gun to find and stop the Murderer. And one player is the Murderer. They get their weapon after a short countdown and have to take out everyone else.", "Innocents can collect 10 Moonstone from around the map to get a gun of their own. If the Detective gets taken out, their gun drops and someone else can pick it up. Guns have a 5-second cooldown, so make each shot count. Careful as the Detective, though. Shoot an innocent player and you're out too. Stop the Murderer or survive until the 4-minute timer runs out, and then you'll find out who it really was."],
+      features: ["Up to 12 Players per Round", "Three Secret Roles: Innocent, Detective and Murderer", "Collect Moonstone to Earn a Gun", "4 Maps That Change Every Round: Mansion, Laboratory, Dinosaur and Water Park", "Map Secrets like Trapdoors, Poisoned Water, Reactor Doors and Moonstone Rings", "Please the Dino to Reveal a Role or Win a Gun", "Earn Gold to Unlock Murderer Weapons and Funny Death Messages", "Daily and Weekly Quests", "Track Your Wins as Detective and Murderer"],
+      tips: ["As an Innocent, keep moving and pick up Moonstone whenever you can", "Watch how people act. The Murderer will be trying to blend in", "As the Detective, only shoot when you're sure", "If the Detective goes down, grab that dropped gun", "As the Murderer, catch players on their own when nobody's looking", "Every map has secrets, so explore them for an edge"],
+      similarGames: ["hideseek", "infection", "horrorHotel", "ninetyNineNights"],
       faq: [{
-        question: "What is Bloxd Containment Breach?",
-        answer: "A co-op PvE horror shooter. Your squad fights through an abandoned research lab to find and contain a dangerous anomaly."
+        question: "What is Bloxd Murder Mystery?",
+        answer: "A social deduction mode. One player is secretly the Murderer, one is the Detective, and everyone else tries to survive and work out who the Murderer is."
       }, {
-        question: "How many players can play Containment Breach?",
-        answer: "Up to 6 on Normal, or up to 4 on Hard."
+        question: "What are the roles in Murder Mystery?",
+        answer: "Innocents try to stay alive. The Detective tries to find and stop the Murderer. The Murderer tries to take out every other player."
       }, {
-        question: "Can I play Containment Breach solo?",
-        answer: "Not on your own, sorry. A run needs at least 2 players, so bring a friend or team up with someone in the lobby."
+        question: "Who wins a round of Murder Mystery?",
+        answer: "If the Murderer takes out all the Innocents, they win. Everyone else wins by stopping the Murderer or surviving until the 4-minute timer runs out."
       }, {
-        question: "What happens when you go down in Containment Breach?",
-        answer: "You become a ghost until a teammate revives you with a splash healing potion. If everyone ends up as a ghost, the run is lost."
+        question: "How do I get a gun?",
+        answer: "Collect 10 Moonstone, or pick up the Detective's gun if it's been dropped. On the Dinosaur map the dino might hand you one too."
       }, {
-        question: "How do I upgrade guns in Containment Breach?",
-        answer: "Go to the Loadout NPC and spend gold and boss parts there. Gold comes from kills, and your squad gets a boss part every time it contains an anomaly."
+        question: "How long is a round?",
+        answer: "4 minutes."
       }, {
-        question: "Can I choose which anomaly I fight?",
-        answer: "Yes. Buy a Locator from the Locator NPC and arm it before you deploy. It shatters after one use."
+        question: "How many people do you need to play Murder Mystery?",
+        answer: "You need at least 2 to start, and a round can hold up to 12."
+      }, {
+        question: "Can I play Murder Mystery with friends?",
+        answer: "Yes. Jump into the same game and see which of you spots the Murderer first."
+      }, {
+        question: "How do I earn gold?",
+        answer: "Survive, collect Moonstone, stop the Murderer or win as the Murderer. Rewards only kick in when there are at least 5 players in the game."
       }]
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

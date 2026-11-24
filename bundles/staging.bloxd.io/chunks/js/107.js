@@ -1,1119 +1,1724 @@
 export const id = 107;
 export const ids = [107];
 export const modules = {
-  5005: (DD, zD) => {
-    zD.e = function(DD, zD) {
-      if (DD && zD) {
-        var wD = Array.isArray(zD) ? zD : zD.split(","),
-          pD = DD.name || "",
-          sD = (DD.type || "").toLowerCase(),
-          KD = sD.replace(/\/.*$/, "");
-        return wD.some((function(DD) {
-          var zD = DD.trim().toLowerCase();
-          return "." === zD.charAt(0) ? pD.toLowerCase().endsWith(zD) : zD.endsWith("/*") ? KD === zD.replace(/\/.*$/, "") : sD === zD
-        }))
-      }
-      return !0
-    }
-  },
-  4974: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => fz
+  5052: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Ap,
+      i: () => Dp,
+      l: () => Pp
     });
-    var pD = wD(58),
-      sD = wD(4981),
-      KD = wD.n(sD);
+    cp(5054);
+    var Op = cp(1201),
+      op = cp(1049),
+      Ip = cp.n(op),
+      Sp = cp(1387),
+      xp = (cp(62), cp(4462)),
+      Lp = cp(1060),
+      Yp = cp(1112);
 
-    function rD(DD, zD, wD, pD) {
-      return new(wD || (wD = Promise))((function(sD, KD) {
-        function rD(DD) {
-          try {
-            cD(pD.next(DD))
-          } catch (zD) {
-            KD(zD)
-          }
-        }
-
-        function LD(DD) {
-          try {
-            cD(pD.throw(DD))
-          } catch (zD) {
-            KD(zD)
-          }
-        }
-
-        function cD(DD) {
-          var zD;
-          DD.done ? sD(DD.value) : (zD = DD.value, zD instanceof wD ? zD : new wD((function(DD) {
-            DD(zD)
-          }))).then(rD, LD)
-        }
-        cD((pD = pD.apply(DD, zD || [])).next())
-      }))
-    }
-
-    function LD(DD, zD) {
-      var wD, pD, sD, KD, rD = {
-        label: 0,
-        sent: function() {
-          if (1 & sD[0]) throw sD[1];
-          return sD[1]
-        },
-        trys: [],
-        ops: []
-      };
-      return KD = {
-        next: LD(0),
-        throw: LD(1),
-        return: LD(2)
-      }, "function" === typeof Symbol && (KD[Symbol.iterator] = function() {
-        return this
-      }), KD;
-
-      function LD(LD) {
-        return function(cD) {
-          return function(LD) {
-            if (wD) throw new TypeError("Generator is already executing.");
-            for (; KD && (KD = 0, LD[0] && (rD = 0)), rD;) try {
-              if (wD = 1, pD && (sD = 2 & LD[0] ? pD.return : LD[0] ? pD.throw || ((sD = pD.return) && sD.call(pD), 0) : pD.next) && !(sD = sD.call(pD, LD[1])).done) return sD;
-              switch (pD = 0, sD && (LD = [2 & LD[0], sD.value]), LD[0]) {
-                case 0:
-                case 1:
-                  sD = LD;
-                  break;
-                case 4:
-                  return rD.label++, {
-                    value: LD[1],
-                    done: !1
-                  };
-                case 5:
-                  rD.label++, pD = LD[1], LD = [0];
-                  continue;
-                case 7:
-                  LD = rD.ops.pop(), rD.trys.pop();
-                  continue;
-                default:
-                  if (!(sD = (sD = rD.trys).length > 0 && sD[sD.length - 1]) && (6 === LD[0] || 2 === LD[0])) {
-                    rD = 0;
-                    continue
-                  }
-                  if (3 === LD[0] && (!sD || LD[1] > sD[0] && LD[1] < sD[3])) {
-                    rD.label = LD[1];
-                    break
-                  }
-                  if (6 === LD[0] && rD.label < sD[1]) {
-                    rD.label = sD[1], sD = LD;
-                    break
-                  }
-                  if (sD && rD.label < sD[2]) {
-                    rD.label = sD[2], rD.ops.push(LD);
-                    break
-                  }
-                  sD[2] && rD.ops.pop(), rD.trys.pop();
-                  continue
-              }
-              LD = zD.call(DD, rD)
-            } catch (cD) {
-              LD = [6, cD], pD = 0
-            } finally {
-              wD = sD = 0
-            }
-            if (5 & LD[0]) throw LD[1];
-            return {
-              value: LD[0] ? LD[1] : void 0,
-              done: !0
-            }
-          }([LD, cD])
-        }
-      }
-    }
-    Object.create;
-
-    function cD(DD, zD) {
-      var wD = "function" === typeof Symbol && DD[Symbol.iterator];
-      if (!wD) return DD;
-      var pD, sD, KD = wD.call(DD),
-        rD = [];
-      try {
-        for (;
-          (void 0 === zD || zD-- > 0) && !(pD = KD.next()).done;) rD.push(pD.value)
-      } catch (LD) {
-        sD = {
-          error: LD
-        }
-      } finally {
-        try {
-          pD && !pD.done && (wD = KD.return) && wD.call(KD)
-        } finally {
-          if (sD) throw sD.error
-        }
-      }
-      return rD
-    }
-
-    function gD(DD, zD, wD) {
-      if (wD || 2 === arguments.length)
-        for (var pD, sD = 0, KD = zD.length; sD < KD; sD++) !pD && sD in zD || (pD || (pD = Array.prototype.slice.call(zD, 0, sD)), pD[sD] = zD[sD]);
-      return DD.concat(pD || Array.prototype.slice.call(zD))
-    }
-    Object.create;
-    "function" === typeof SuppressedError && SuppressedError;
-    var RD = new Map([
-      ["aac", "audio/aac"],
-      ["abw", "application/x-abiword"],
-      ["arc", "application/x-freearc"],
-      ["avif", "image/avif"],
-      ["avi", "video/x-msvideo"],
-      ["azw", "application/vnd.amazon.ebook"],
-      ["bin", "application/octet-stream"],
-      ["bmp", "image/bmp"],
-      ["bz", "application/x-bzip"],
-      ["bz2", "application/x-bzip2"],
-      ["cda", "application/x-cdf"],
-      ["csh", "application/x-csh"],
-      ["css", "text/css"],
-      ["csv", "text/csv"],
-      ["doc", "application/msword"],
-      ["docx", "application/vnd.openxmlformats-officedocument.wordprocessingml.document"],
-      ["eot", "application/vnd.ms-fontobject"],
-      ["epub", "application/epub+zip"],
-      ["gz", "application/gzip"],
-      ["gif", "image/gif"],
-      ["heic", "image/heic"],
-      ["heif", "image/heif"],
-      ["htm", "text/html"],
-      ["html", "text/html"],
-      ["ico", "image/vnd.microsoft.icon"],
-      ["ics", "text/calendar"],
-      ["jar", "application/java-archive"],
-      ["jpeg", "image/jpeg"],
-      ["jpg", "image/jpeg"],
-      ["js", "text/javascript"],
-      ["json", "application/json"],
-      ["jsonld", "application/ld+json"],
-      ["mid", "audio/midi"],
-      ["midi", "audio/midi"],
-      ["mjs", "text/javascript"],
-      ["mp3", "audio/mpeg"],
-      ["mp4", "video/mp4"],
-      ["mpeg", "video/mpeg"],
-      ["mpkg", "application/vnd.apple.installer+xml"],
-      ["odp", "application/vnd.oasis.opendocument.presentation"],
-      ["ods", "application/vnd.oasis.opendocument.spreadsheet"],
-      ["odt", "application/vnd.oasis.opendocument.text"],
-      ["oga", "audio/ogg"],
-      ["ogv", "video/ogg"],
-      ["ogx", "application/ogg"],
-      ["opus", "audio/opus"],
-      ["otf", "font/otf"],
-      ["png", "image/png"],
-      ["pdf", "application/pdf"],
-      ["php", "application/x-httpd-php"],
-      ["ppt", "application/vnd.ms-powerpoint"],
-      ["pptx", "application/vnd.openxmlformats-officedocument.presentationml.presentation"],
-      ["rar", "application/vnd.rar"],
-      ["rtf", "application/rtf"],
-      ["sh", "application/x-sh"],
-      ["svg", "image/svg+xml"],
-      ["swf", "application/x-shockwave-flash"],
-      ["tar", "application/x-tar"],
-      ["tif", "image/tiff"],
-      ["tiff", "image/tiff"],
-      ["ts", "video/mp2t"],
-      ["ttf", "font/ttf"],
-      ["txt", "text/plain"],
-      ["vsd", "application/vnd.visio"],
-      ["wav", "audio/wav"],
-      ["weba", "audio/webm"],
-      ["webm", "video/webm"],
-      ["webp", "image/webp"],
-      ["woff", "font/woff"],
-      ["woff2", "font/woff2"],
-      ["xhtml", "application/xhtml+xml"],
-      ["xls", "application/vnd.ms-excel"],
-      ["xlsx", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"],
-      ["xml", "application/xml"],
-      ["xul", "application/vnd.mozilla.xul+xml"],
-      ["zip", "application/zip"],
-      ["7z", "application/x-7z-compressed"],
-      ["mkv", "video/x-matroska"],
-      ["mov", "video/quicktime"],
-      ["lg", "application/vnd.ms-outlook"]
-    ]);
-
-    function AD(DD, zD) {
-      var wD = function(DD) {
-        var zD = DD.name;
-        if (zD && -1 !== zD.lastIndexOf(".") && !DD.type) {
-          var wD = zD.split(".").pop().toLowerCase(),
-            pD = RD.get(wD);
-          pD && Object.defineProperty(DD, "type", {
-            value: pD,
-            writable: !1,
-            configurable: !1,
-            enumerable: !0
-          })
-        }
-        return DD
-      }(DD);
-      if ("string" !== typeof wD.path) {
-        var pD = DD.webkitRelativePath;
-        Object.defineProperty(wD, "path", {
-          value: "string" === typeof zD ? zD : "string" === typeof pD && pD.length > 0 ? pD : DD.name,
-          writable: !1,
-          configurable: !1,
-          enumerable: !0
-        })
-      }
-      return wD
-    }
-    var UD = [".DS_Store", "Thumbs.db"];
-
-    function fD(DD) {
-      return "object" === typeof DD && null !== DD
-    }
-
-    function ID(DD) {
-      return nD(DD.target.files).map((function(DD) {
-        return AD(DD)
-      }))
-    }
-
-    function BD(DD) {
-      return rD(this, void 0, void 0, (function() {
-        return LD(this, (function(zD) {
-          switch (zD.label) {
-            case 0:
-              return [4, Promise.all(DD.map((function(DD) {
-                return DD.getFile()
-              })))];
-            case 1:
-              return [2, zD.sent().map((function(DD) {
-                return AD(DD)
-              }))]
-          }
-        }))
-      }))
-    }
-
-    function GD(DD, zD) {
-      return rD(this, void 0, void 0, (function() {
-        var wD;
-        return LD(this, (function(pD) {
-          switch (pD.label) {
-            case 0:
-              return DD.items ? (wD = nD(DD.items).filter((function(DD) {
-                return "file" === DD.kind
-              })), "drop" !== zD ? [2, wD] : [4, Promise.all(wD.map(MD))]) : [3, 2];
-            case 1:
-              return [2, hD(OD(pD.sent()))];
-            case 2:
-              return [2, hD(nD(DD.files).map((function(DD) {
-                return AD(DD)
-              })))]
-          }
-        }))
-      }))
-    }
-
-    function hD(DD) {
-      return DD.filter((function(DD) {
-        return -1 === UD.indexOf(DD.name)
-      }))
-    }
-
-    function nD(DD) {
-      if (null === DD) return [];
-      for (var zD = [], wD = 0; wD < DD.length; wD++) {
-        var pD = DD[wD];
-        zD.push(pD)
-      }
-      return zD
-    }
-
-    function MD(DD) {
-      if ("function" !== typeof DD.webkitGetAsEntry) return JD(DD);
-      var zD = DD.webkitGetAsEntry();
-      return zD && zD.isDirectory ? QD(zD) : JD(DD)
-    }
-
-    function OD(DD) {
-      return DD.reduce((function(DD, zD) {
-        return gD(gD([], cD(DD), !1), cD(Array.isArray(zD) ? OD(zD) : [zD]), !1)
-      }), [])
-    }
-
-    function JD(DD) {
-      var zD = DD.getAsFile();
-      if (!zD) return Promise.reject("".concat(DD, " is not a File"));
-      var wD = AD(zD);
-      return Promise.resolve(wD)
-    }
-
-    function ED(DD) {
-      return rD(this, void 0, void 0, (function() {
-        return LD(this, (function(zD) {
-          return [2, DD.isDirectory ? QD(DD) : XD(DD)]
-        }))
-      }))
-    }
-
-    function QD(DD) {
-      var zD = DD.createReader();
-      return new Promise((function(DD, wD) {
-        var pD = [];
-        ! function sD() {
-          var KD = this;
-          zD.readEntries((function(zD) {
-            return rD(KD, void 0, void 0, (function() {
-              var KD, rD, cD;
-              return LD(this, (function(LD) {
-                switch (LD.label) {
-                  case 0:
-                    if (zD.length) return [3, 5];
-                    LD.label = 1;
-                  case 1:
-                    return LD.trys.push([1, 3, , 4]), [4, Promise.all(pD)];
-                  case 2:
-                    return KD = LD.sent(), DD(KD), [3, 4];
-                  case 3:
-                    return rD = LD.sent(), wD(rD), [3, 4];
-                  case 4:
-                    return [3, 6];
-                  case 5:
-                    cD = Promise.all(zD.map(ED)), pD.push(cD), sD(), LD.label = 6;
-                  case 6:
-                    return [2]
-                }
-              }))
-            }))
-          }), (function(DD) {
-            wD(DD)
-          }))
-        }()
-      }))
-    }
-
-    function XD(DD) {
-      return rD(this, void 0, void 0, (function() {
-        return LD(this, (function(zD) {
-          return [2, new Promise((function(zD, wD) {
-            DD.file((function(wD) {
-              var pD = AD(wD, DD.fullPath);
-              zD(pD)
-            }), (function(DD) {
-              wD(DD)
-            }))
-          }))]
-        }))
-      }))
-    }
-    var VD = wD(5005);
-
-    function PD(DD) {
-      return function(DD) {
-        if (Array.isArray(DD)) return dD(DD)
-      }(DD) || function(DD) {
-        if ("undefined" !== typeof Symbol && null != DD[Symbol.iterator] || null != DD["@@iterator"]) return Array.from(DD)
-      }(DD) || jD(DD) || function() {
-        throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
-      }()
-    }
-
-    function CD(DD, zD) {
-      var wD = Object.keys(DD);
-      if (Object.getOwnPropertySymbols) {
-        var pD = Object.getOwnPropertySymbols(DD);
-        zD && (pD = pD.filter((function(zD) {
-          return Object.getOwnPropertyDescriptor(DD, zD).enumerable
-        }))), wD.push.apply(wD, pD)
-      }
-      return wD
-    }
-
-    function xD(DD) {
-      for (var zD = 1; zD < arguments.length; zD++) {
-        var wD = null != arguments[zD] ? arguments[zD] : {};
-        zD % 2 ? CD(Object(wD), !0).forEach((function(zD) {
-          TD(DD, zD, wD[zD])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(DD, Object.getOwnPropertyDescriptors(wD)) : CD(Object(wD)).forEach((function(zD) {
-          Object.defineProperty(DD, zD, Object.getOwnPropertyDescriptor(wD, zD))
-        }))
-      }
-      return DD
-    }
-
-    function TD(DD, zD, wD) {
-      return zD in DD ? Object.defineProperty(DD, zD, {
-        value: wD,
-        enumerable: !0,
-        configurable: !0,
-        writable: !0
-      }) : DD[zD] = wD, DD
-    }
-
-    function bD(DD, zD) {
-      return function(DD) {
-        if (Array.isArray(DD)) return DD
-      }(DD) || function(DD, zD) {
-        var wD = null == DD ? null : "undefined" !== typeof Symbol && DD[Symbol.iterator] || DD["@@iterator"];
-        if (null == wD) return;
-        var pD, sD, KD = [],
-          rD = !0,
-          LD = !1;
-        try {
-          for (wD = wD.call(DD); !(rD = (pD = wD.next()).done) && (KD.push(pD.value), !zD || KD.length !== zD); rD = !0);
-        } catch (cD) {
-          LD = !0, sD = cD
-        } finally {
-          try {
-            rD || null == wD.return || wD.return()
-          } finally {
-            if (LD) throw sD
-          }
-        }
-        return KD
-      }(DD, zD) || jD(DD, zD) || function() {
-        throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
-      }()
-    }
-
-    function jD(DD, zD) {
-      if (DD) {
-        if ("string" === typeof DD) return dD(DD, zD);
-        var wD = Object.prototype.toString.call(DD).slice(8, -1);
-        return "Object" === wD && DD.constructor && (wD = DD.constructor.name), "Map" === wD || "Set" === wD ? Array.from(DD) : "Arguments" === wD || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(wD) ? dD(DD, zD) : void 0
-      }
-    }
-
-    function dD(DD, zD) {
-      (null == zD || zD > DD.length) && (zD = DD.length);
-      for (var wD = 0, pD = new Array(zD); wD < zD; wD++) pD[wD] = DD[wD];
-      return pD
-    }
-    var SD = "file-invalid-type",
-      iD = "file-too-large",
-      lD = "file-too-small",
-      WD = "too-many-files",
-      ND = function(DD) {
-        DD = Array.isArray(DD) && 1 === DD.length ? DD[0] : DD;
-        var zD = Array.isArray(DD) ? "one of ".concat(DD.join(", ")) : DD;
-        return {
-          code: SD,
-          message: "File type must be ".concat(zD)
-        }
-      },
-      ZD = function(DD) {
-        return {
-          code: iD,
-          message: "File is larger than ".concat(DD, " ").concat(1 === DD ? "byte" : "bytes")
-        }
-      },
-      yD = function(DD) {
-        return {
-          code: lD,
-          message: "File is smaller than ".concat(DD, " ").concat(1 === DD ? "byte" : "bytes")
-        }
-      },
-      kD = {
-        code: WD,
-        message: "Too many files"
-      };
-
-    function mD(DD, zD) {
-      var wD = "application/x-moz-file" === DD.type || (0, VD.e)(DD, zD);
-      return [wD, wD ? null : ND(zD)]
-    }
-
-    function eD(DD, zD, wD) {
-      if (oD(DD.size))
-        if (oD(zD) && oD(wD)) {
-          if (DD.size > wD) return [!1, ZD(wD)];
-          if (DD.size < zD) return [!1, yD(zD)]
-        } else {
-          if (oD(zD) && DD.size < zD) return [!1, yD(zD)];
-          if (oD(wD) && DD.size > wD) return [!1, ZD(wD)]
-        } return [!0, null]
-    }
-
-    function oD(DD) {
-      return void 0 !== DD && null !== DD
-    }
-
-    function aD(DD) {
-      return "function" === typeof DD.isPropagationStopped ? DD.isPropagationStopped() : "undefined" !== typeof DD.cancelBubble && DD.cancelBubble
-    }
-
-    function uD(DD) {
-      return DD.dataTransfer ? Array.prototype.some.call(DD.dataTransfer.types, (function(DD) {
-        return "Files" === DD || "application/x-moz-file" === DD
-      })) : !!DD.target && !!DD.target.files
-    }
-
-    function vD(DD) {
-      DD.preventDefault()
-    }
-
-    function tD() {
-      for (var DD = arguments.length, zD = new Array(DD), wD = 0; wD < DD; wD++) zD[wD] = arguments[wD];
-      return function(DD) {
-        for (var wD = arguments.length, pD = new Array(wD > 1 ? wD - 1 : 0), sD = 1; sD < wD; sD++) pD[sD - 1] = arguments[sD];
-        return zD.some((function(zD) {
-          return !aD(DD) && zD && zD.apply(void 0, [DD].concat(pD)), aD(DD)
-        }))
-      }
-    }
-
-    function FD(DD) {
-      return "audio/*" === DD || "video/*" === DD || "image/*" === DD || "text/*" === DD || /\w+\/[-+.\w]+/g.test(DD)
-    }
-
-    function YD(DD) {
-      return /^.*\.[\w]+$/.test(DD)
-    }
-    var HD = ["children"],
-      qD = ["open"],
-      Dz = ["refKey", "role", "onKeyDown", "onFocus", "onBlur", "onClick", "onDragEnter", "onDragOver", "onDragLeave", "onDrop"],
-      zz = ["refKey", "onChange", "onClick"];
-
-    function wz(DD) {
-      return function(DD) {
-        if (Array.isArray(DD)) return Kz(DD)
-      }(DD) || function(DD) {
-        if ("undefined" !== typeof Symbol && null != DD[Symbol.iterator] || null != DD["@@iterator"]) return Array.from(DD)
-      }(DD) || sz(DD) || function() {
-        throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
-      }()
-    }
-
-    function pz(DD, zD) {
-      return function(DD) {
-        if (Array.isArray(DD)) return DD
-      }(DD) || function(DD, zD) {
-        var wD = null == DD ? null : "undefined" !== typeof Symbol && DD[Symbol.iterator] || DD["@@iterator"];
-        if (null == wD) return;
-        var pD, sD, KD = [],
-          rD = !0,
-          LD = !1;
-        try {
-          for (wD = wD.call(DD); !(rD = (pD = wD.next()).done) && (KD.push(pD.value), !zD || KD.length !== zD); rD = !0);
-        } catch (cD) {
-          LD = !0, sD = cD
-        } finally {
-          try {
-            rD || null == wD.return || wD.return()
-          } finally {
-            if (LD) throw sD
-          }
-        }
-        return KD
-      }(DD, zD) || sz(DD, zD) || function() {
-        throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
-      }()
-    }
-
-    function sz(DD, zD) {
-      if (DD) {
-        if ("string" === typeof DD) return Kz(DD, zD);
-        var wD = Object.prototype.toString.call(DD).slice(8, -1);
-        return "Object" === wD && DD.constructor && (wD = DD.constructor.name), "Map" === wD || "Set" === wD ? Array.from(DD) : "Arguments" === wD || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(wD) ? Kz(DD, zD) : void 0
-      }
-    }
-
-    function Kz(DD, zD) {
-      (null == zD || zD > DD.length) && (zD = DD.length);
-      for (var wD = 0, pD = new Array(zD); wD < zD; wD++) pD[wD] = DD[wD];
-      return pD
-    }
-
-    function rz(DD, zD) {
-      var wD = Object.keys(DD);
-      if (Object.getOwnPropertySymbols) {
-        var pD = Object.getOwnPropertySymbols(DD);
-        zD && (pD = pD.filter((function(zD) {
-          return Object.getOwnPropertyDescriptor(DD, zD).enumerable
-        }))), wD.push.apply(wD, pD)
-      }
-      return wD
-    }
-
-    function Lz(DD) {
-      for (var zD = 1; zD < arguments.length; zD++) {
-        var wD = null != arguments[zD] ? arguments[zD] : {};
-        zD % 2 ? rz(Object(wD), !0).forEach((function(zD) {
-          cz(DD, zD, wD[zD])
-        })) : Object.getOwnPropertyDescriptors ? Object.defineProperties(DD, Object.getOwnPropertyDescriptors(wD)) : rz(Object(wD)).forEach((function(zD) {
-          Object.defineProperty(DD, zD, Object.getOwnPropertyDescriptor(wD, zD))
-        }))
-      }
-      return DD
-    }
-
-    function cz(DD, zD, wD) {
-      return zD in DD ? Object.defineProperty(DD, zD, {
-        value: wD,
-        enumerable: !0,
-        configurable: !0,
-        writable: !0
-      }) : DD[zD] = wD, DD
-    }
-
-    function gz(DD, zD) {
-      if (null == DD) return {};
-      var wD, pD, sD = function(DD, zD) {
-        if (null == DD) return {};
-        var wD, pD, sD = {},
-          KD = Object.keys(DD);
-        for (pD = 0; pD < KD.length; pD++) wD = KD[pD], zD.indexOf(wD) >= 0 || (sD[wD] = DD[wD]);
-        return sD
-      }(DD, zD);
-      if (Object.getOwnPropertySymbols) {
-        var KD = Object.getOwnPropertySymbols(DD);
-        for (pD = 0; pD < KD.length; pD++) wD = KD[pD], zD.indexOf(wD) >= 0 || Object.prototype.propertyIsEnumerable.call(DD, wD) && (sD[wD] = DD[wD])
-      }
-      return sD
-    }
-    var Rz = (0, pD.forwardRef)((function(DD, zD) {
-      var wD = DD.children,
-        sD = fz(gz(DD, HD)),
-        KD = sD.open,
-        rD = gz(sD, qD);
-      return (0, pD.useImperativeHandle)(zD, (function() {
-        return {
-          open: KD
-        }
-      }), [KD]), pD.createElement(pD.Fragment, null, wD(Lz(Lz({}, rD), {}, {
-        open: KD
-      })))
-    }));
-    Rz.displayName = "Dropzone";
-    var Az = {
-      disabled: !1,
-      getFilesFromEvent: function(DD) {
-        return rD(this, void 0, void 0, (function() {
-          return LD(this, (function(zD) {
-            return fD(DD) && fD(DD.dataTransfer) ? [2, GD(DD.dataTransfer, DD.type)] : function(DD) {
-              return fD(DD) && fD(DD.target)
-            }(DD) ? [2, ID(DD)] : Array.isArray(DD) && DD.every((function(DD) {
-              return "getFile" in DD && "function" === typeof DD.getFile
-            })) ? [2, BD(DD)] : [2, []]
-          }))
-        }))
-      },
-      maxSize: 1 / 0,
-      minSize: 0,
-      multiple: !0,
-      maxFiles: 0,
-      preventDropOnDocument: !0,
-      noClick: !1,
-      noKeyboard: !1,
-      noDrag: !1,
-      noDragEventsBubbling: !1,
-      validator: null,
-      useFsAccessApi: !0,
-      autoFocus: !1
-    };
-    Rz.defaultProps = Az, Rz.propTypes = {
-      children: KD().func,
-      accept: KD().objectOf(KD().arrayOf(KD().string)),
-      multiple: KD().bool,
-      preventDropOnDocument: KD().bool,
-      noClick: KD().bool,
-      noKeyboard: KD().bool,
-      noDrag: KD().bool,
-      noDragEventsBubbling: KD().bool,
-      minSize: KD().number,
-      maxSize: KD().number,
-      maxFiles: KD().number,
-      disabled: KD().bool,
-      getFilesFromEvent: KD().func,
-      onFileDialogCancel: KD().func,
-      onFileDialogOpen: KD().func,
-      useFsAccessApi: KD().bool,
-      autoFocus: KD().bool,
-      onDragEnter: KD().func,
-      onDragLeave: KD().func,
-      onDragOver: KD().func,
-      onDrop: KD().func,
-      onDropAccepted: KD().func,
-      onDropRejected: KD().func,
-      onError: KD().func,
-      validator: KD().func
-    };
-    var Uz = {
-      eT: !1,
-      isFileDialogActive: !1,
-      isDragActive: !1,
-      isDragAccept: !1,
-      isDragReject: !1,
-      acceptedFiles: [],
-      fileRejections: []
-    };
-
-    function fz() {
-      var DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        zD = Lz(Lz({}, Az), DD),
-        wD = zD.accept,
-        sD = zD.disabled,
-        KD = zD.getFilesFromEvent,
-        rD = zD.maxSize,
-        LD = zD.minSize,
-        cD = zD.multiple,
-        gD = zD.maxFiles,
-        RD = zD.onDragEnter,
-        AD = zD.onDragLeave,
-        UD = zD.onDragOver,
-        fD = zD.onDrop,
-        ID = zD.onDropAccepted,
-        BD = zD.onDropRejected,
-        GD = zD.onFileDialogCancel,
-        hD = zD.onFileDialogOpen,
-        nD = zD.useFsAccessApi,
-        MD = zD.autoFocus,
-        OD = zD.preventDropOnDocument,
-        JD = zD.noClick,
-        ED = zD.noKeyboard,
-        QD = zD.noDrag,
-        XD = zD.noDragEventsBubbling,
-        VD = zD.onError,
-        CD = zD.validator,
-        jD = (0, pD.useMemo)((function() {
-          return function(DD) {
-            if (oD(DD)) return Object.entries(DD).reduce((function(DD, zD) {
-              var wD = bD(zD, 2),
-                pD = wD[0],
-                sD = wD[1];
-              return [].concat(PD(DD), [pD], PD(sD))
-            }), []).filter((function(DD) {
-              return FD(DD) || YD(DD)
-            })).join(",")
-          }(wD)
-        }), [wD]),
-        dD = (0, pD.useMemo)((function() {
-          return function(DD) {
-            return oD(DD) ? [{
-              description: "Files",
-              accept: Object.entries(DD).filter((function(DD) {
-                var zD = bD(DD, 2),
-                  wD = zD[0],
-                  pD = zD[1],
-                  sD = !0;
-                return FD(wD) || (console.warn('Skipped "'.concat(wD, '" because it is not a valid MIME type. Check https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types for a list of valid MIME types.')), sD = !1), Array.isArray(pD) && pD.every(YD) || (console.warn('Skipped "'.concat(wD, '" because an invalid file extension was provided.')), sD = !1), sD
-              })).reduce((function(DD, zD) {
-                var wD = bD(zD, 2),
-                  pD = wD[0],
-                  sD = wD[1];
-                return xD(xD({}, DD), {}, TD({}, pD, sD))
-              }), {})
-            }] : DD
-          }(wD)
-        }), [wD]),
-        SD = (0, pD.useMemo)((function() {
-          return "function" === typeof hD ? hD : Bz
-        }), [hD]),
-        iD = (0, pD.useMemo)((function() {
-          return "function" === typeof GD ? GD : Bz
-        }), [GD]),
-        lD = (0, pD.useRef)(null),
-        WD = (0, pD.useRef)(null),
-        ND = pz((0, pD.useReducer)(Iz, Uz), 2),
-        ZD = ND[0],
-        yD = ND[1],
-        HD = ZD.eT,
-        qD = ZD.isFileDialogActive,
-        sz = (0, pD.useRef)("undefined" !== typeof window && window.isSecureContext && nD && "showOpenFilePicker" in window),
-        Kz = function() {
-          !sz.current && qD && setTimeout((function() {
-            WD.current && (WD.current.files.length || (yD({
-              type: "closeDialog"
-            }), iD()))
-          }), 300)
-        };
-      (0, pD.useEffect)((function() {
-        return window.addEventListener("focus", Kz, !1),
-          function() {
-            window.removeEventListener("focus", Kz, !1)
-          }
-      }), [WD, qD, iD, sz]);
-      var rz = (0, pD.useRef)([]),
-        Rz = function(DD) {
-          lD.current && lD.current.contains(DD.target) || (DD.preventDefault(), rz.current = [])
-        };
-      (0, pD.useEffect)((function() {
-        return OD && (document.addEventListener("dragover", vD, !1), document.addEventListener("drop", Rz, !1)),
-          function() {
-            OD && (document.removeEventListener("dragover", vD), document.removeEventListener("drop", Rz))
-          }
-      }), [lD, OD]), (0, pD.useEffect)((function() {
-        return !sD && MD && lD.current && lD.current.focus(),
-          function() {}
-      }), [lD, MD, sD]);
-      var fz = (0, pD.useCallback)((function(DD) {
-          VD ? VD(DD) : console.error(DD)
-        }), [VD]),
-        Gz = (0, pD.useCallback)((function(DD) {
-          DD.preventDefault(), DD.persist(), Tz(DD), rz.current = [].concat(wz(rz.current), [DD.target]), uD(DD) && Promise.resolve(KD(DD)).then((function(zD) {
-            if (!aD(DD) || XD) {
-              var wD = zD.length,
-                pD = wD > 0 && function(DD) {
-                  var zD = DD.files,
-                    wD = DD.accept,
-                    pD = DD.minSize,
-                    sD = DD.maxSize,
-                    KD = DD.multiple,
-                    rD = DD.maxFiles,
-                    LD = DD.validator;
-                  return !(!KD && zD.length > 1 || KD && rD >= 1 && zD.length > rD) && zD.every((function(DD) {
-                    var zD = bD(mD(DD, wD), 1)[0],
-                      KD = bD(eD(DD, pD, sD), 1)[0],
-                      rD = LD ? LD(DD) : null;
-                    return zD && KD && !rD
-                  }))
-                }({
-                  files: zD,
-                  accept: jD,
-                  minSize: LD,
-                  maxSize: rD,
-                  multiple: cD,
-                  maxFiles: gD,
-                  validator: CD
-                });
-              yD({
-                isDragAccept: pD,
-                isDragReject: wD > 0 && !pD,
-                isDragActive: !0,
-                type: "setDraggedFiles"
-              }), RD && RD(DD)
-            }
-          })).catch((function(DD) {
-            return fz(DD)
-          }))
-        }), [KD, RD, fz, XD, jD, LD, rD, cD, gD, CD]),
-        hz = (0, pD.useCallback)((function(DD) {
-          DD.preventDefault(), DD.persist(), Tz(DD);
-          var zD = uD(DD);
-          if (zD && DD.dataTransfer) try {
-            DD.dataTransfer.dropEffect = "copy"
-          } catch (wD) {}
-          return zD && UD && UD(DD), !1
-        }), [UD, XD]),
-        nz = (0, pD.useCallback)((function(DD) {
-          DD.preventDefault(), DD.persist(), Tz(DD);
-          var zD = rz.current.filter((function(DD) {
-              return lD.current && lD.current.contains(DD)
-            })),
-            wD = zD.indexOf(DD.target); - 1 !== wD && zD.splice(wD, 1), rz.current = zD, zD.length > 0 || (yD({
-            type: "setDraggedFiles",
-            isDragActive: !1,
-            isDragAccept: !1,
-            isDragReject: !1
-          }), uD(DD) && AD && AD(DD))
-        }), [lD, AD, XD]),
-        Mz = (0, pD.useCallback)((function(DD, zD) {
-          var wD = [],
-            pD = [];
-          DD.forEach((function(DD) {
-            var zD = pz(mD(DD, jD), 2),
-              sD = zD[0],
-              KD = zD[1],
-              cD = pz(eD(DD, LD, rD), 2),
-              gD = cD[0],
-              RD = cD[1],
-              AD = CD ? CD(DD) : null;
-            if (sD && gD && !AD) wD.push(DD);
-            else {
-              var UD = [KD, RD];
-              AD && (UD = UD.concat(AD)), pD.push({
-                file: DD,
-                errors: UD.filter((function(DD) {
-                  return DD
-                }))
-              })
-            }
-          })), (!cD && wD.length > 1 || cD && gD >= 1 && wD.length > gD) && (wD.forEach((function(DD) {
-            pD.push({
-              file: DD,
-              errors: [kD]
-            })
-          })), wD.splice(0)), yD({
-            acceptedFiles: wD,
-            fileRejections: pD,
-            type: "setFiles"
-          }), fD && fD(wD, pD, zD), pD.length > 0 && BD && BD(pD, zD), wD.length > 0 && ID && ID(wD, zD)
-        }), [yD, cD, jD, LD, rD, gD, fD, ID, BD, CD]),
-        Oz = (0, pD.useCallback)((function(DD) {
-          DD.preventDefault(), DD.persist(), Tz(DD), rz.current = [], uD(DD) && Promise.resolve(KD(DD)).then((function(zD) {
-            aD(DD) && !XD || Mz(zD, DD)
-          })).catch((function(DD) {
-            return fz(DD)
-          })), yD({
-            type: "reset"
-          })
-        }), [KD, Mz, fz, XD]),
-        Jz = (0, pD.useCallback)((function() {
-          if (sz.current) {
-            yD({
-              type: "openDialog"
-            }), SD();
-            var DD = {
-              multiple: cD,
-              types: dD
-            };
-            window.showOpenFilePicker(DD).then((function(DD) {
-              return KD(DD)
-            })).then((function(DD) {
-              Mz(DD, null), yD({
-                type: "closeDialog"
-              })
-            })).catch((function(DD) {
-              var zD;
-              (zD = DD) instanceof DOMException && ("AbortError" === zD.name || zD.code === zD.ABORT_ERR) ? (iD(DD), yD({
-                type: "closeDialog"
-              })) : ! function(DD) {
-                return DD instanceof DOMException && ("SecurityError" === DD.name || DD.code === DD.SECURITY_ERR)
-              }(DD) ? fz(DD) : (sz.current = !1, WD.current ? (WD.current.value = null, WD.current.click()) : fz(new Error("Cannot open the file picker because the https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API is not supported and no <input> was provided.")))
-            }))
-          } else WD.current && (yD({
-            type: "openDialog"
-          }), SD(), WD.current.value = null, WD.current.click())
-        }), [yD, SD, iD, nD, Mz, fz, dD, cD]),
-        Ez = (0, pD.useCallback)((function(DD) {
-          lD.current && lD.current.isEqualNode(DD.target) && (" " !== DD.key && "Enter" !== DD.key && 32 !== DD.keyCode && 13 !== DD.keyCode || (DD.preventDefault(), Jz()))
-        }), [lD, Jz]),
-        Qz = (0, pD.useCallback)((function() {
-          yD({
-            type: "focus"
-          })
-        }), []),
-        Xz = (0, pD.useCallback)((function() {
-          yD({
-            type: "blur"
-          })
-        }), []),
-        Vz = (0, pD.useCallback)((function() {
-          JD || (! function() {
-            var DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window.navigator.userAgent;
-            return function(DD) {
-              return -1 !== DD.indexOf("MSIE") || -1 !== DD.indexOf("Trident/")
-            }(DD) || function(DD) {
-              return -1 !== DD.indexOf("Edge/")
-            }(DD)
-          }() ? Jz() : setTimeout(Jz, 0))
-        }), [JD, Jz]),
-        Pz = function(DD) {
-          return sD ? null : DD
-        },
-        Cz = function(DD) {
-          return ED ? null : Pz(DD)
-        },
-        xz = function(DD) {
-          return QD ? null : Pz(DD)
-        },
-        Tz = function(DD) {
-          XD && DD.stopPropagation()
-        },
-        bz = (0, pD.useMemo)((function() {
-          return function() {
-            var DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-              zD = DD.refKey,
-              wD = void 0 === zD ? "ref" : zD,
-              pD = DD.role,
-              KD = DD.onKeyDown,
-              rD = DD.onFocus,
-              LD = DD.onBlur,
-              cD = DD.onClick,
-              gD = DD.onDragEnter,
-              RD = DD.onDragOver,
-              AD = DD.onDragLeave,
-              UD = DD.onDrop,
-              fD = gz(DD, Dz);
-            return Lz(Lz(cz({
-              onKeyDown: Cz(tD(KD, Ez)),
-              onFocus: Cz(tD(rD, Qz)),
-              onBlur: Cz(tD(LD, Xz)),
-              onClick: Pz(tD(cD, Vz)),
-              onDragEnter: xz(tD(gD, Gz)),
-              onDragOver: xz(tD(RD, hz)),
-              onDragLeave: xz(tD(AD, nz)),
-              onDrop: xz(tD(UD, Oz)),
-              role: "string" === typeof pD && "" !== pD ? pD : "presentation"
-            }, wD, lD), sD || ED ? {} : {
-              tabIndex: 0
-            }), fD)
-          }
-        }), [lD, Ez, Qz, Xz, Vz, Gz, hz, nz, Oz, ED, QD, sD]),
-        jz = (0, pD.useCallback)((function(DD) {
-          DD.stopPropagation()
-        }), []),
-        dz = (0, pD.useMemo)((function() {
-          return function() {
-            var DD = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-              zD = DD.refKey,
-              wD = void 0 === zD ? "ref" : zD,
-              pD = DD.onChange,
-              sD = DD.onClick,
-              KD = gz(DD, zz);
-            return Lz(Lz({}, cz({
-              accept: jD,
-              multiple: cD,
-              type: "file",
-              style: {
-                display: "none"
-              },
-              onChange: Pz(tD(pD, Oz)),
-              onClick: Pz(tD(sD, jz)),
-              tabIndex: -1
-            }, wD, WD)), KD)
-          }
-        }), [WD, wD, cD, Oz, sD]);
-      return Lz(Lz({}, ZD), {}, {
-        eT: HD && !sD,
-        getRootProps: bz,
-        getInputProps: dz,
-        rootRef: lD,
-        inputRef: WD,
-        open: Pz(Jz)
+    function Dp(pp) {
+      let {
+        children: ip,
+        label: cp,
+        className: op,
+        circleInfoText: xp,
+        disabled: Dp,
+        onLabelClick: Ap
+      } = pp;
+      const {
+        t: Pp
+      } = (0, Op.H)(), Wp = (0, Yp.jsxs)("div", {
+        className: Ip()("Label", {
+          ClickableLabel: void 0 !== Ap
+        }),
+        onClick: Ap,
+        children: [Pp(cp), xp && (0, Yp.jsx)(Lp.d, {
+          name: "circle-info"
+        })]
+      });
+      return (0, Yp.jsxs)("div", {
+        className: Ip()("LabeledInput", {
+          [op]: op,
+          DisabledLabelInput: Dp
+        }),
+        children: [xp && (0, Yp.jsx)(Sp.f, {
+          tooltipInner: (0, Yp.jsx)("div", {
+            className: "LabeledInputTooltip",
+            children: Pp(xp)
+          }),
+          children: Wp
+        }), !xp && Wp, ip]
       })
     }
 
-    function Iz(DD, zD) {
-      switch (zD.type) {
-        case "focus":
-          return Lz(Lz({}, DD), {}, {
-            eT: !0
-          });
-        case "blur":
-          return Lz(Lz({}, DD), {}, {
-            eT: !1
-          });
-        case "openDialog":
-          return Lz(Lz({}, Uz), {}, {
-            isFileDialogActive: !0
-          });
-        case "closeDialog":
-          return Lz(Lz({}, DD), {}, {
-            isFileDialogActive: !1
-          });
-        case "setDraggedFiles":
-          return Lz(Lz({}, DD), {}, {
-            isDragActive: zD.isDragActive,
-            isDragAccept: zD.isDragAccept,
-            isDragReject: zD.isDragReject
-          });
-        case "setFiles":
-          return Lz(Lz({}, DD), {}, {
-            acceptedFiles: zD.acceptedFiles,
-            fileRejections: zD.fileRejections
-          });
-        case "reset":
-          return Lz({}, Uz);
-        default:
-          return DD
+    function Ap(pp) {
+      let {
+        checked: ip,
+        setChecked: cp
+      } = pp;
+      return (0, Yp.jsx)("div", {
+        className: "OtherInput ClickableOtherInput",
+        "data-pad-focusable": !0,
+        onClick: pp => {
+          cp(!ip)
+        },
+        children: (0, Yp.jsx)(xp.b, {
+          checked: ip,
+          onChange: pp => {
+            cp(pp.target.checked)
+          },
+          disabled: !1
+        })
+      })
+    }
+
+    function Pp(pp) {
+      let {
+        checked: ip,
+        setChecked: cp,
+        disabled: Op
+      } = pp;
+      return (0, Yp.jsx)("div", {
+        className: Ip()("SwitchContainer", {
+          SwitchContainerDisabled: Op
+        }),
+        onClick: () => {
+          Op || cp(!ip)
+        },
+        children: (0, Yp.jsx)(xp.b, {
+          className: "SwitchCheckbox",
+          checked: ip,
+          onChange: pp => {
+            cp(pp.target.checked)
+          },
+          disabled: !!Op
+        })
+      })
+    }
+  },
+  5061: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Yp
+    });
+    var Op = cp(1049),
+      op = cp.n(Op),
+      Ip = cp(4719),
+      Sp = cp(1201),
+      xp = cp(1112);
+    const Lp = [...Ip.h, "tpRequests", "spawnProtection", "spawnReset", "smpMarketplace"];
+
+    function Yp(pp) {
+      const {
+        disabled: ip,
+        hideWrapper: cp
+      } = pp, {
+        t: Op
+      } = (0, Sp.H)(), Yp = pp.advancedMode ? Lp.map((ip => [ip, pp.callbacks[ip]])) : Ip.h.map((ip => [ip, pp.callbacks[ip]])), Ap = (0, xp.jsx)("div", {
+        className: op()("PluginsGrid", {
+          SectionBody: !cp
+        }),
+        children: Yp.map((pp => {
+          let [cp, Op] = pp;
+          return (0, xp.jsx)(Dp, {
+            plugin: cp,
+            callbacks: Op,
+            disabled: ip
+          }, cp)
+        }))
+      });
+      return cp ? Ap : (0, xp.jsxs)("div", {
+        className: "BloxdForm",
+        children: [(0, xp.jsx)("div", {
+          className: "SectionTitle",
+          children: Op("worldBuilder:pluginsSection")
+        }), Ap]
+      })
+    }
+
+    function Dp(pp) {
+      let {
+        plugin: ip,
+        callbacks: {
+          isEnabled: cp,
+          eC: Op
+        },
+        disabled: Ip
+      } = pp;
+      const {
+        t: Lp
+      } = (0, Sp.H)(), Yp = cp();
+      return (0, xp.jsxs)("div", {
+        className: op()("PluginCard", {
+          PluginCardEnabled: Yp,
+          PluginCardDisabledForm: Ip
+        }),
+        "data-pad-focusable": !0,
+        "aria-disabled": Ip || void 0,
+        onClick: () => {
+          Ip || Op(!Yp)
+        },
+        children: [(0, xp.jsx)("div", {
+          className: "PluginCardIcon",
+          children: (0, xp.jsx)("img", {
+            src: `/textures/games/classic/customGames/${ip}.png`,
+            alt: ip
+          })
+        }), (0, xp.jsxs)("div", {
+          className: "PluginCardBody",
+          children: [(0, xp.jsx)("div", {
+            className: "PluginCardTitle",
+            children: Lp(Ap[ip])
+          }), (0, xp.jsx)("div", {
+            className: "PluginCardDescription",
+            children: Lp(Pp[ip])
+          })]
+        }), (0, xp.jsx)("span", {
+          className: "PluginCardToggleLabel",
+          children: Lp(Yp ? "general:on" : "general:off")
+        })]
+      })
+    }
+    const Ap = {
+        fallDamage: "classic:enableFallDamage",
+        tpRequests: "classic:enableTpRequests",
+        spawnProtection: "classic:enableSpawnProtection",
+        spawnReset: "classic:enableSpawnReset",
+        smpMarketplace: "classic:enableSmpMarketplace",
+        survivalGuns: "classic:enableSurvivalGuns",
+        dayNight: "classic:enableDayNight"
+      },
+      Pp = {
+        fallDamage: "classic:enableFallDamageDescription",
+        tpRequests: "classic:enableTpRequestsDescription",
+        spawnProtection: "classic:enableSpawnProtectionDescription",
+        spawnReset: "classic:enableSpawnResetDescription",
+        smpMarketplace: "classic:enableSmpMarketplaceDescription",
+        survivalGuns: "classic:enableSurvivalGunsDescription",
+        dayNight: "classic:enableDayNightDescription"
+      }
+  },
+  5048: (pp, ip, cp) => {
+    cp.d(ip, {
+      j: () => Si,
+      d: () => Ii,
+      f: () => oi,
+      k: () => xi
+    });
+    var Op = cp(62),
+      op = cp(1372),
+      Ip = cp(1480),
+      Sp = cp(1692),
+      xp = cp(1201),
+      Lp = cp(1361),
+      Yp = cp(1387),
+      Dp = cp(1060),
+      Ap = cp(1234),
+      Pp = cp(1049),
+      Wp = cp.n(Pp),
+      yp = cp(322),
+      Up = cp(4719),
+      wp = cp(1251),
+      vp = cp(5052),
+      tp = cp(3224),
+      Hp = cp(5061),
+      dp = cp(1112);
+
+    function ep(pp) {
+      let {
+        icon: ip,
+        title: cp,
+        disabled: Op,
+        children: op
+      } = pp;
+      return (0, dp.jsxs)("div", {
+        className: Wp()("ManageCard", {
+          ManageCardDisabled: Op
+        }),
+        children: [(0, dp.jsxs)("div", {
+          className: "ManageCardHead",
+          children: [(0, dp.jsx)("div", {
+            className: "ManageCardIcon",
+            children: (0, dp.jsx)(Dp.d, {
+              name: ip
+            })
+          }), (0, dp.jsx)("div", {
+            children: (0, dp.jsx)("h2", {
+              className: "ManageCardTitle",
+              children: cp
+            })
+          })]
+        }), (0, dp.jsxs)("div", {
+          className: "ManageCardBody",
+          children: [op, Op && (0, dp.jsx)("div", {
+            className: "ManageCardDisabledOverlay"
+          })]
+        })]
+      })
+    }
+
+    function jp(pp) {
+      let {
+        label: ip,
+        caption: cp,
+        children: Op
+      } = pp;
+      return (0, dp.jsxs)("div", {
+        className: "ManageStackedField",
+        children: [(0, dp.jsx)("div", {
+          className: "ManageStackedFieldLabel",
+          children: ip
+        }), Op, cp && (0, dp.jsx)("div", {
+          className: "ManageStackedFieldCaption",
+          children: cp
+        })]
+      })
+    }
+
+    function kp(pp) {
+      let {
+        label: ip,
+        caption: cp,
+        disabled: Op,
+        children: op
+      } = pp;
+      return (0, dp.jsxs)("div", {
+        className: Wp()("ManageField", {
+          ManageFieldDisabled: Op
+        }),
+        children: [(0, dp.jsxs)("div", {
+          className: "ManageFieldText",
+          children: [(0, dp.jsx)("div", {
+            className: "ManageFieldLabel",
+            children: ip
+          }), (0, dp.jsx)("div", {
+            className: "ManageFieldCaption",
+            children: cp
+          })]
+        }), (0, dp.jsx)("div", {
+          className: "ManageFieldControl",
+          children: op
+        })]
+      })
+    }
+
+    function mp(pp) {
+      var ip, cp;
+      let {
+        schematicData: Op,
+        updateSchematicData: op,
+        publishFormEnabled: Ip,
+        formEnabled: Sp
+      } = pp;
+      const {
+        t: Lp
+      } = (0, xp.H)(), Yp = !Ip, Dp = {
+        tpRequests: {
+          isEnabled: () => !Op.disableTpRequests,
+          eC: pp => op("disableTpRequests", !pp)
+        },
+        spawnProtection: {
+          isEnabled: () => !Op.disableSpawnProtection,
+          eC: pp => op("disableSpawnProtection", !pp)
+        },
+        spawnReset: {
+          isEnabled: () => !!Op.enableSpawnReset,
+          eC: pp => op("enableSpawnReset", pp)
+        },
+        smpMarketplace: {
+          isEnabled: () => !!Op.enableSmpMarketplace,
+          eC: pp => op("enableSmpMarketplace", pp)
+        },
+        survivalGuns: {
+          isEnabled: () => !!Op.enableSurvivalGuns,
+          eC: pp => op("enableSurvivalGuns", pp)
+        },
+        fallDamage: {
+          isEnabled: () => !Op.disableFallDamage,
+          eC: pp => op("disableFallDamage", !pp)
+        },
+        dayNight: {
+          isEnabled: () => !!Op.enableDayNight,
+          eC: pp => op("enableDayNight", pp)
+        }
+      };
+      return (0, dp.jsxs)(dp.Fragment, {
+        children: [!1 === Op.schematicContainsSpawnBlock && (0, dp.jsx)("div", {
+          className: "ManageWarningBanner",
+          children: Lp("worldBuilder:mustContainSpawnBlock")
+        }), (0, dp.jsxs)("div", {
+          className: "ManageSettingsGrid",
+          children: [(0, dp.jsxs)(ep, {
+            icon: "globe",
+            title: Lp("worldBuilder:worldRulesSection"),
+            disabled: !Sp,
+            children: [(0, dp.jsx)(kp, {
+              label: Lp("classic:defaultGamemode"),
+              caption: Lp("classic:defaultGamemodeDescription"),
+              disabled: Yp,
+              children: (0, dp.jsx)(tp.d, {
+                controlClassName: "ManageDropdown",
+                options: Up.E.map((pp => ({
+                  value: pp,
+                  label: yp.o[pp]
+                }))),
+                value: Op.defaultGamemode,
+                onChange: pp => op("defaultGamemode", pp.value)
+              })
+            }), (0, dp.jsx)(kp, {
+              label: Lp("classic:voidDeathHeight"),
+              caption: Lp("classic:voidDeathHeightDescription"),
+              disabled: Yp,
+              children: (0, dp.jsxs)("div", {
+                className: "ManageNumberField",
+                children: [(0, dp.jsx)("input", {
+                  type: "number",
+                  max: wp.F,
+                  value: null !== (ip = Op.voidDeathHeight) && void 0 !== ip ? ip : "",
+                  onChange: pp => {
+                    const ip = parseInt(pp.target.value);
+                    op("voidDeathHeight", ip)
+                  }
+                }), (0, dp.jsx)("span", {
+                  className: "ManageFieldUnit",
+                  children: Lp("worldBuilder:blocksUnit")
+                })]
+              })
+            }), (0, dp.jsx)(kp, {
+              label: Lp("classic:worldBorder"),
+              caption: Lp("classic:worldBorderDescription"),
+              disabled: Yp,
+              children: (0, dp.jsxs)("div", {
+                className: "ManageNumberField",
+                children: [(0, dp.jsx)("input", {
+                  type: "number",
+                  min: wp.L,
+                  max: wp.G,
+                  placeholder: Lp("worldBuilder:noWorldBorderLimit"),
+                  value: null !== (cp = Op.worldBorder) && void 0 !== cp ? cp : "",
+                  onChange: pp => {
+                    const ip = parseInt(pp.target.value);
+                    op("worldBorder", isNaN(ip) ? null : ip)
+                  }
+                }), (0, dp.jsx)("span", {
+                  className: "ManageFieldUnit",
+                  children: Lp("worldBuilder:blocksUnit")
+                })]
+              })
+            }), (0, dp.jsx)(kp, {
+              label: Lp("classic:disableMobs"),
+              caption: Lp("classic:disableMobsDescription"),
+              disabled: Yp,
+              children: (0, dp.jsx)(vp.l, {
+                checked: Op.disableMobs,
+                setChecked: pp => op("disableMobs", pp),
+                disabled: Yp
+              })
+            })]
+          }), (0, dp.jsxs)(ep, {
+            icon: "user-group",
+            title: Lp("worldBuilder:playerAndLobbySection"),
+            disabled: !Sp,
+            children: [(0, dp.jsx)(kp, {
+              label: Lp("classic:disableKeepInventory"),
+              caption: Lp("classic:disableKeepInventoryDescription"),
+              disabled: Yp,
+              children: (0, dp.jsx)(vp.l, {
+                checked: Op.disableKeepInventory,
+                setChecked: pp => op("disableKeepInventory", pp),
+                disabled: Yp
+              })
+            }), (0, dp.jsx)(kp, {
+              label: Lp("classic:persistInventory"),
+              caption: Lp("classic:persistInventoryDescription"),
+              disabled: Yp,
+              children: (0, dp.jsx)(tp.d, {
+                controlClassName: "ManageDropdown",
+                options: Up.k.map((pp => ({
+                  value: pp,
+                  label: yp.d[pp]
+                }))),
+                value: Op.persistInventory,
+                onChange: pp => op("persistInventory", pp.value)
+              })
+            }), (0, dp.jsx)(kp, {
+              label: Lp("classic:persistWorld"),
+              caption: Lp("classic:persistWorldDescription"),
+              disabled: Yp,
+              children: (0, dp.jsx)(vp.l, {
+                checked: Op.persistWorld,
+                setChecked: pp => op("persistWorld", pp),
+                disabled: Yp
+              })
+            }), (0, dp.jsx)(kp, {
+              label: Lp("classic:disableLobbySpawn"),
+              caption: Lp("classic:disableLobbySpawnDescription"),
+              disabled: Yp,
+              children: (0, dp.jsx)(vp.l, {
+                checked: Op.disableLobbySpawn,
+                setChecked: pp => op("disableLobbySpawn", pp),
+                disabled: Yp
+              })
+            }), (0, dp.jsx)(kp, {
+              label: Lp("classic:hideLobbyCode"),
+              caption: Lp("classic:hideLobbyCodeDescription"),
+              disabled: Yp,
+              children: (0, dp.jsx)(vp.l, {
+                checked: Op.hideLobbyCode,
+                setChecked: pp => op("hideLobbyCode", pp),
+                disabled: Yp
+              })
+            })]
+          })]
+        }), (0, dp.jsx)(ep, {
+          icon: "layer-group",
+          title: Lp("worldBuilder:pluginsSection"),
+          disabled: !Sp,
+          children: (0, dp.jsx)(Hp.e, {
+            callbacks: Dp,
+            disabled: Yp,
+            advancedMode: !0,
+            hideWrapper: !0
+          })
+        })]
+      })
+    }
+    var Rp = cp(5067),
+      qp = cp(4462),
+      Mp = cp(1520),
+      Cp = cp(3587),
+      Ep = cp(1141),
+      Xp = cp(5025),
+      lp = cp(5076),
+      Qp = cp(1482);
+    const Jp = 50,
+      Bp = .3;
+    async function Np(pp) {
+      const ip = await
+      function(pp) {
+        return new Promise(((ip, cp) => {
+          const Op = new FileReader;
+          Op.onload = () => ip(Op.result), Op.onerror = cp, Op.readAsDataURL(pp)
+        }))
+      }(pp), cp = await
+      function(pp) {
+        return new Promise(((ip, cp) => {
+          const Op = new Image;
+          Op.onload = () => ip(Op), Op.onerror = () => cp(new Error("Failed to load image")), Op.src = pp
+        }))
+      }(ip);
+      if (cp.naturalHeight > cp.naturalWidth) throw new Tp;
+      const Op = 1024 * Jp,
+        {
+          dataUrl: op,
+          finalQuality: Ip
+        } = function(pp, ip) {
+          const cp = document.createElement("canvas");
+          cp.width = pp.naturalWidth, cp.height = pp.naturalHeight, cp.getContext("2d").drawImage(pp, 0, 0);
+          let Op = .92,
+            op = cp.toDataURL("image/jpeg", Op);
+          for (; .75 * op.length > ip && Op > .05;) Op -= .05, op = cp.toDataURL("image/jpeg", Op);
+          return {
+            dataUrl: op,
+            finalQuality: Op
+          }
+        }(cp, Op);
+      if (Math.ceil(.75 * op.length) > Op) throw new fp;
+      return {
+        base64Jpg: op,
+        heavilyCompressed: Ip < Bp
+      }
+    }
+    class Tp extends Error {}
+    class fp extends Error {}
+    var bp = function(pp) {
+      return pp[pp.NOT_LOGGED_IN = 0] = "NOT_LOGGED_IN", pp[pp.THUMBNAIL_LIMIT_REACHED = 1] = "THUMBNAIL_LIMIT_REACHED", pp
+    }(bp || {});
+
+    function hp(pp) {
+      var ip;
+      let {
+        schematicId: cp,
+        hasReadUploadPolicy: op,
+        onPolicyValidationError: Lp,
+        onThumbnailReady: Yp
+      } = pp;
+      const {
+        t: Pp
+      } = (0, xp.H)(), [yp, Up] = (0, Op.useState)(null), [wp, vp] = (0, Op.useState)(""), [tp, Hp] = (0, Op.useState)(""), [ep, jp] = (0, Op.useState)(!0), [kp, mp] = (0, Op.useState)(!1), Rp = (0, Op.useRef)(!1), [qp, Mp] = (0, Op.useState)(null), [Cp, Ep] = (0, Op.useState)(!1), [Xp, Qp] = (0, Op.useState)(!1), Jp = (0, Op.useRef)(0), {
+        getRootProps: Bp,
+        getInputProps: bp,
+        isDragActive: hp
+      } = (0, lp.c)({
+        accept: {
+          "image/*": [".png", ".jpg", ".jpeg", ".webp", ".gif", ".bmp"]
+        },
+        multiple: !1,
+        onDrop: async pp => {
+          if (0 === pp.length) return;
+          const ip = pp[0],
+            cp = ++Jp.current;
+          Mp(null), Ep(!1), Up(null), vp(ip.name);
+          try {
+            const pp = await Np(ip);
+            if (cp !== Jp.current) return;
+            Up(pp), Ep(pp.heavilyCompressed)
+          } catch (Op) {
+            if (cp !== Jp.current) return;
+            Mp(Pp(Op instanceof Tp ? "thumbnail:portraitImagesNotAllowed" : Op instanceof fp ? "thumbnail:couldNotCompressImage" : "thumbnail:failedToUploadImage"))
+          }
+        },
+        useFsAccessApi: !1
+      }), ap = wp.length <= 30 ? wp : `${wp.slice(0,27)}...`, np = null !== (ip = null === yp || void 0 === yp ? void 0 : yp.base64Jpg) && void 0 !== ip ? ip : null, Fp = tp.trim(), gp = Fp.length >= Ap.m && Fp.length <= Ap.k, Gp = Xp && !yp && !qp, rp = Xp && !gp;
+      return (0, dp.jsxs)("div", {
+        className: "ThumbnailUploadContainer",
+        children: [(0, dp.jsxs)("div", {
+          ...Bp({
+            className: Wp()("ThumbnailUploadDropzone", {
+              ActiveDrag: hp,
+              ValidationError: Gp
+            })
+          }),
+          children: [(0, dp.jsx)("input", {
+            ...bp()
+          }), !hp && np ? (0, dp.jsxs)(dp.Fragment, {
+            children: [(0, dp.jsxs)("div", {
+              className: "ThumbnailAspectPreviews",
+              children: [(0, dp.jsxs)("div", {
+                className: "ThumbnailAspectPreview",
+                children: [(0, dp.jsx)("div", {
+                  className: "ThumbnailAspectLabel",
+                  children: "1:1"
+                }), (0, dp.jsx)("div", {
+                  className: "ThumbnailAspectFrame Square",
+                  children: (0, dp.jsx)("img", {
+                    src: np,
+                    alt: "1:1 preview"
+                  })
+                })]
+              }), (0, dp.jsxs)("div", {
+                className: "ThumbnailAspectPreview",
+                children: [(0, dp.jsx)("div", {
+                  className: "ThumbnailAspectLabel",
+                  children: "16:9"
+                }), (0, dp.jsx)("div", {
+                  className: "ThumbnailAspectFrame Wide",
+                  children: (0, dp.jsx)("img", {
+                    src: np,
+                    alt: "16:9 preview"
+                  })
+                })]
+              })]
+            }), (0, dp.jsxs)("div", {
+              children: [(0, dp.jsx)("div", {
+                className: "ThumbnailUploadInstructions Active",
+                children: ap
+              }), (0, dp.jsx)("div", {
+                className: "ThumbnailUploadInstructions Preview",
+                children: Pp("thumbnail:preview")
+              })]
+            })]
+          }) : (0, dp.jsxs)(dp.Fragment, {
+            children: [(0, dp.jsx)("div", {
+              className: "ThumbnailUploadIcon",
+              children: (0, dp.jsx)(Dp.d, {
+                name: "image"
+              })
+            }), (0, dp.jsx)("div", {
+              className: "ThumbnailUploadInstructions",
+              children: Pp("thumbnail:dragImageHere")
+            })]
+          })]
+        }), Gp && (0, dp.jsx)("div", {
+          className: "ThumbnailUploadError",
+          children: Pp("thumbnail:imageRequired")
+        }), (0, dp.jsx)(Sp.c, {
+          className: Wp()("ThumbnailUploadNameInput", {
+            ValidationError: rp
+          }),
+          placeholderText: Pp("thumbnail:thumbnailName"),
+          defaultValue: tp,
+          onValueChange: pp => {
+            Hp(pp)
+          },
+          maxLength: Ap.k
+        }), rp && (0, dp.jsx)("div", {
+          className: "ThumbnailUploadError",
+          children: Pp("thumbnail:nameRequired", {
+            min: Ap.m,
+            max: Ap.k
+          })
+        }), (0, dp.jsxs)("label", {
+          className: "ThumbnailUploadCheckbox",
+          children: [(0, dp.jsx)("input", {
+            type: "checkbox",
+            checked: ep,
+            onChange: pp => {
+              jp(pp.target.checked)
+            }
+          }), Pp("thumbnail:setAsThumbnailOnceApproved")]
+        }), Cp && (0, dp.jsx)("div", {
+          className: "ThumbnailUploadWarning",
+          children: Pp("thumbnail:heavyCompressionWarning")
+        }), qp && (0, dp.jsx)("div", {
+          className: "ThumbnailUploadError",
+          children: qp
+        }), (0, dp.jsx)(Ip.o, {
+          disabled: kp,
+          className: "ThumbnailUploadButton",
+          onClick: async () => {
+            if (Qp(!0), !Rp.current && yp && gp && op) {
+              Rp.current = !0, mp(!0), Mp(null);
+              try {
+                await Yp(yp.base64Jpg, Fp, ep ? cp : null)
+              } catch (pp) {
+                Mp(pp.errorMessageForUser ? Pp(pp.errorMessageForUser, pp.errorMessageTranslationParams) : Pp("thumbnail:failedToUploadImage"))
+              } finally {
+                Rp.current = !1, mp(!1)
+              }
+            } else op || Lp()
+          },
+          children: Pp(kp ? "thumbnail:processing" : "thumbnail:uploadThumbnail")
+        })]
+      })
+    }
+    const ap = 2e3;
+
+    function np(pp) {
+      let {
+        schematicId: ip,
+        ownedThumbnailCount: cp,
+        onClose: op,
+        onThumbnailReady: Ip
+      } = pp;
+      const {
+        t: Sp
+      } = (0, xp.H)(), {
+        userContext: Lp
+      } = (0, Ep.b)(), [Yp, Pp] = (0, Op.useState)(!1), [yp, Up] = (0, Op.useState)(!1), [wp, vp] = (0, Op.useState)(!1), tp = (0, Op.useRef)();
+      (0, Op.useEffect)((() => () => {
+        clearTimeout(tp.current)
+      }), []);
+      const Hp = function(pp, ip) {
+        const cp = [];
+        return pp.isLoggedIn() || cp.push(bp.NOT_LOGGED_IN), ip >= Ap.T && cp.push(bp.THUMBNAIL_LIMIT_REACHED), cp
+      }(Lp, cp);
+      if (Hp.length > 0) {
+        const pp = {
+          [bp.NOT_LOGGED_IN]: {
+            key: "thumbnail:mustBeLoggedInToUpload"
+          },
+          [bp.THUMBNAIL_LIMIT_REACHED]: {
+            key: "thumbnail:thumbnailLimitReachedPleaseDelete",
+            params: {
+              max: Ap.T
+            }
+          }
+        };
+        return (0, dp.jsxs)("div", {
+          className: "ThumbnailUploaderInner",
+          children: [(0, dp.jsx)("h1", {
+            className: "SchematicPopupTitle",
+            children: Sp("thumbnail:cannotUploadThumbnail")
+          }), Hp.map(((ip, cp) => {
+            const Op = pp[ip];
+            return (0, dp.jsxs)("div", {
+              className: "CannotUploadThumbnailItem",
+              children: [(0, dp.jsx)(Dp.d, {
+                name: "triangle-exclamation"
+              }), (0, dp.jsx)("span", {
+                children: Sp(Op.key, Op.params)
+              })]
+            }, cp)
+          }))]
+        })
+      }
+      return (0, dp.jsxs)("div", {
+        className: Wp()("ThumbnailUploaderInner", {
+          ThumbnailUploaderSuccess: Yp
+        }),
+        children: [Yp && (0, dp.jsxs)("div", {
+          className: "ThumbnailUploadSuccessOverlay",
+          children: [(0, dp.jsxs)("div", {
+            className: "ThumbnailUploadSuccessIcon FullyFancyText AnimFadeInScaleUp",
+            children: [(0, dp.jsx)(Dp.d, {
+              name: "check"
+            }), (0, dp.jsx)(Qp.b, {})]
+          }), (0, dp.jsx)("div", {
+            className: "ThumbnailUploadSuccessText AnimFadeInScaleUp",
+            children: Sp("thumbnail:thumbnailUploaded")
+          })]
+        }), (0, dp.jsx)("h1", {
+          className: "SchematicPopupTitle",
+          children: Sp("thumbnail:uploadThumbnail")
+        }), (0, dp.jsxs)("div", {
+          className: "ThumbnailUploaderBody",
+          children: [(0, dp.jsxs)("div", {
+            className: "ThumbnailUploaderLeft",
+            children: [(0, dp.jsx)("h3", {
+              className: "SchematicPopupSubtitle",
+              children: Sp("thumbnail:chooseImage", {
+                maxSizeKb: Jp
+              })
+            }), (0, dp.jsx)(hp, {
+              schematicId: ip,
+              hasReadUploadPolicy: yp,
+              onPolicyValidationError: () => {
+                vp(!0)
+              },
+              onThumbnailReady: async (pp, ip, cp) => {
+                await Ip(pp, ip, cp), Pp(!0), tp.current = setTimeout(op, ap)
+              }
+            })]
+          }), (0, dp.jsxs)("div", {
+            className: "ThumbnailUploadPolicy",
+            children: [(0, dp.jsx)("h3", {
+              className: "ThumbnailUploadPolicyTitle",
+              children: Sp("thumbnail:uploadPolicy")
+            }), (0, dp.jsxs)("ul", {
+              className: "ThumbnailUploadPolicyList",
+              children: [(0, dp.jsxs)("li", {
+                className: "ThumbnailUploadPolicyItem Allowed",
+                children: [(0, dp.jsx)(Dp.d, {
+                  name: "check"
+                }), (0, dp.jsx)("span", {
+                  children: Sp("thumbnail:policyFollowGuidelines")
+                })]
+              }), (0, dp.jsxs)("li", {
+                className: "ThumbnailUploadPolicyItem Allowed",
+                children: [(0, dp.jsx)(Dp.d, {
+                  name: "check"
+                }), (0, dp.jsx)("span", {
+                  children: Sp("thumbnail:policyInGameAssets")
+                })]
+              }), (0, dp.jsxs)("li", {
+                className: "ThumbnailUploadPolicyItem Allowed",
+                children: [(0, dp.jsx)(Dp.d, {
+                  name: "check"
+                }), (0, dp.jsx)("span", {
+                  children: Sp("thumbnail:policyLimitText")
+                })]
+              }), (0, dp.jsxs)("li", {
+                className: "ThumbnailUploadPolicyItem NotAllowed",
+                children: [(0, dp.jsx)(Dp.d, {
+                  name: "x"
+                }), (0, dp.jsx)("span", {
+                  children: Sp("thumbnail:policyCopyrightContent")
+                })]
+              }), (0, dp.jsxs)("li", {
+                className: "ThumbnailUploadPolicyItem NotAllowed",
+                children: [(0, dp.jsx)(Dp.d, {
+                  name: "x"
+                }), (0, dp.jsx)("span", {
+                  children: Sp("thumbnail:policyOutOfGameAssets")
+                })]
+              }), (0, dp.jsxs)("li", {
+                className: "ThumbnailUploadPolicyItem NotAllowed",
+                children: [(0, dp.jsx)(Dp.d, {
+                  name: "x"
+                }), (0, dp.jsx)("span", {
+                  children: Sp("thumbnail:policyBloxdTags")
+                })]
+              }), (0, dp.jsxs)("li", {
+                className: "ThumbnailUploadPolicyItem NotAllowed",
+                children: [(0, dp.jsx)(Dp.d, {
+                  name: "x"
+                }), (0, dp.jsx)("span", {
+                  children: Sp("thumbnail:policyMustReflectGame")
+                })]
+              })]
+            }), (0, dp.jsxs)("label", {
+              className: Wp()("ThumbnailUploadCheckbox Policy", {
+                ValidationError: wp && !yp
+              }),
+              children: [(0, dp.jsx)("input", {
+                type: "checkbox",
+                checked: yp,
+                onChange: pp => {
+                  Up(pp.target.checked)
+                }
+              }), Sp("thumbnail:agreeToUploadPolicy")]
+            }), wp && !yp && (0, dp.jsx)("div", {
+              className: "ThumbnailPolicyError",
+              children: Sp("thumbnail:policyRequired")
+            })]
+          })]
+        })]
+      })
+    }
+    var Fp = cp(1211);
+    const gp = {
+      "custom-game-bad-thumbnail": {
+        reason: "thumbnail:rejectionInappropriate",
+        tips: ["thumbnail:rejectionInappropriateTip1", "thumbnail:rejectionInappropriateTip2", "thumbnail:rejectionInappropriateTip3"]
+      },
+      "thumbnail-copyright-content": {
+        reason: "thumbnail:rejectionCopyright",
+        tips: ["thumbnail:rejectionCopyrightTip1", "thumbnail:rejectionCopyrightTip2", "thumbnail:rejectionCopyrightTip3"]
+      },
+      "thumbnail-random-irrelevant-content": {
+        reason: "thumbnail:rejectionIrrelevant",
+        tips: ["thumbnail:rejectionIrrelevantTip1", "thumbnail:rejectionIrrelevantTip2", "thumbnail:rejectionIrrelevantTip3"]
+      },
+      "thumbnail-sexual-content": {
+        reason: "thumbnail:rejectionSexual",
+        tips: ["thumbnail:rejectionSexualTip1", "thumbnail:rejectionSexualTip2", "thumbnail:rejectionSexualTip3"]
+      },
+      "thumbnail-substances-content": {
+        reason: "thumbnail:rejectionSubstances",
+        tips: ["thumbnail:rejectionSubstancesTip1", "thumbnail:rejectionSubstancesTip2"]
+      },
+      "thumbnail-unauthorized-bloxd-branding": {
+        reason: "thumbnail:rejectionUnauthorisedBranding",
+        tips: ["thumbnail:rejectionUnauthorisedBrandingTip1", "thumbnail:rejectionUnauthorisedBrandingTip2", "thumbnail:rejectionUnauthorisedBrandingTip3", "thumbnail:rejectionUnauthorisedBrandingTip4"]
+      },
+      "thumbnail-violent-gore-content": {
+        reason: "thumbnail:rejectionViolence",
+        tips: ["thumbnail:rejectionViolenceTip1", "thumbnail:rejectionViolenceTip2", "thumbnail:rejectionViolenceTip3", "thumbnail:rejectionViolenceTip4"]
+      }
+    };
+
+    function Gp(pp) {
+      var ip, cp;
+      let {
+        schematicData: Sp,
+        updateSchematicData: Yp,
+        publishFormEnabled: Ap,
+        onClose: Pp
+      } = pp;
+      const {
+        t: yp
+      } = (0, xp.H)(), {
+        userContext: Up,
+        isUserContextUpdating: wp
+      } = (0, Ep.b)(), vp = (0, Cp.b)(), [tp, Hp] = (0, Op.useState)([]), [ep, jp] = (0, Op.useState)([]), [kp, mp] = (0, Op.useState)(!0), [Rp, qp] = (0, Op.useState)(null !== (ip = Sp.customThumbnailId) && void 0 !== ip ? ip : null), [lp, Qp] = (0, Op.useState)(null), Jp = (0, Op.useRef)(null !== (cp = Sp.customThumbnailId) && void 0 !== cp ? cp : null), Bp = (0, Op.useRef)(0), Np = (0, Op.useRef)(null), Tp = (0, Op.useRef)(null), fp = (0, Op.useRef)(null), bp = (0, Op.useRef)(!1);
+
+      function hp(pp, ip) {
+        fp.current && (clearTimeout(fp.current), fp.current = null), Qp(pp), null !== pp && ip && (fp.current = setTimeout((() => {
+          Qp(null), fp.current = null
+        }), 5e3))
+      }(0, Op.useEffect)((() => () => {
+        clearTimeout(Tp.current), clearTimeout(fp.current)
+      }), []);
+      const ap = (0, Op.useCallback)((() => {
+        mp(!0), Mp.b.getOwnedThumbnails(Up).then((pp => {
+          const ip = [],
+            cp = [];
+          for (const Op of pp.thumbnails) Op.rejectionPolicyId ? ip.push(Op) : cp.push(Op);
+          ip.sort(((pp, ip) => pp.lastUpdatedAt - ip.lastUpdatedAt)), cp.sort(((pp, ip) => {
+            const cp = pp.approved ? 1 : 0,
+              Op = (ip.approved ? 1 : 0) - cp;
+            return 0 !== Op ? Op : ip.lastUpdatedAt - pp.lastUpdatedAt
+          })), jp(ip), Hp(cp)
+        })).catch((pp => {
+          console.error("Failed to fetch thumbnails:", pp)
+        })).finally((() => {
+          mp(!1)
+        }))
+      }), [Up]);
+      async function gp(pp, ip, cp) {
+        return Mp.b.uploadSchematicThumbnail(Up, pp, ip, cp).then((() => {
+          hp({
+            text: yp("thumbnail:uploadedAwaitingModeration"),
+            type: "success"
+          }, !0), ap()
+        }))
+      }
+
+      function Gp() {
+        Bp.current = Date.now(), Tp.current = null;
+        const pp = Np.current;
+        Np.current = null, hp({
+          text: yp("thumbnail:settingThumbnail"),
+          type: "info"
+        }, !1), Mp.b.setSchematicThumbnail(Up, Sp.schematicId, pp).then((() => {
+          vp.current && (hp({
+            text: yp("thumbnail:thumbnailUpdated"),
+            type: "success"
+          }, !0), Jp.current = pp, Yp("customThumbnailId", pp), Yp("customThumbnailBlurhash", void 0), Yp("customThumbnailVariants", void 0))
+        })).catch((pp => {
+          vp.current && (hp({
+            text: pp.errorMessageForUser ? yp(pp.errorMessageForUser, pp.errorMessageTranslationParams) : yp("thumbnail:failedToSetThumbnail"),
+            type: "error"
+          }, !0), qp(Jp.current))
+        }))
+      }
+
+      function zp(pp) {
+        qp(pp), Np.current = pp;
+        const ip = Date.now() - Bp.current;
+        ip >= 1e3 ? Gp() : (hp({
+          text: yp("thumbnail:settingThumbnail"),
+          type: "info"
+        }, !1), Tp.current || (Tp.current = setTimeout((() => {
+          Gp()
+        }), 1e3 - ip)))
+      }
+      return (0, Op.useEffect)((() => {
+        !1 === wp && ap()
+      }), [wp, ap]), ep.length > 0 ? (0, dp.jsx)(rp, {
+        rejectedThumbnails: ep,
+        userContext: Up,
+        isMountedRef: vp,
+        onAcknowledged: ap
+      }) : (0, dp.jsxs)("div", {
+        className: "BloxdForm ThumbnailSection",
+        children: [(0, dp.jsxs)("div", {
+          className: "SectionTitle",
+          children: [yp("thumbnail:gameThumbnail"), lp && (0, dp.jsx)("span", {
+            className: Wp()("ThumbnailActionMsg", `ThumbnailActionMsg--${lp.type}`),
+            children: lp.text
+          })]
+        }), (0, dp.jsx)("div", {
+          className: "SectionBody",
+          children: (0, dp.jsxs)("div", {
+            className: "ThumbnailGrid",
+            children: [(0, dp.jsxs)("div", {
+              className: Wp()("ThumbnailGridItem ThumbnailGridItemDefault", {
+                ThumbnailGridItemSelected: null === Rp
+              }),
+              onClick: () => zp(null),
+              children: [(0, dp.jsx)(Xp.b, {
+                game: {
+                  schematicId: Sp.schematicId,
+                  imageBlurhash: Sp.imageBlurhash
+                }
+              }), (0, dp.jsx)("div", {
+                className: "ThumbnailGridItemLabel ThumbnailDefaultLabel",
+                children: yp("general:default")
+              })]
+            }), kp && (0, dp.jsx)(Lp.c, {}), tp.map(((pp, ip) => (0, dp.jsxs)("div", {
+              className: Wp()("ThumbnailGridItem", {
+                ThumbnailGridItemSelected: Rp === pp.id,
+                ThumbnailGridItemPending: !pp.approved
+              }),
+              onClick: () => {
+                pp.approved && zp(pp.id)
+              },
+              children: [pp.approved && (0, dp.jsx)("img", {
+                src: `${Fp.clientSideServerUrls.s3Url}/customThumbnails/${pp.id}.jpg`,
+                alt: "Thumbnail"
+              }), pp.approved && (0, dp.jsx)("div", {
+                className: "ThumbnailGridItemLabel",
+                children: pp.name
+              }), pp.id && (0, dp.jsx)(Ip.K, {
+                className: "ThumbnailDeleteButton",
+                onClick: ip => async function(pp, ip, cp) {
+                  pp.stopPropagation();
+                  const Op = await op.NotificationProvider.showCustomPopup({
+                      body: pp => (0, dp.jsx)(Zp, {
+                        thumbnailId: ip,
+                        thumbnailName: cp,
+                        onClose: ip => {
+                          ip && (bp.current = !0), pp()
+                        }
+                      }),
+                      middleScreenPopupClassName: "ThumbnailDeleteConfirmPopup",
+                      onClose: Pp
+                    }).getResult(),
+                    Ip = bp.current;
+                  bp.current = !1, Ip && !0 === Op && (vp.current && hp({
+                    text: yp("thumbnail:deletingThumbnail"),
+                    type: "info"
+                  }, !1), Mp.b.deleteSchematicThumbnail(Up, ip).then((() => {
+                    vp.current && (hp({
+                      text: yp("thumbnail:thumbnailDeleted"),
+                      type: "success"
+                    }, !0), Jp.current === ip && zp(null), ap())
+                  })).catch((pp => {
+                    vp.current && hp({
+                      text: pp.errorMessageForUser ? yp(pp.errorMessageForUser, pp.errorMessageTranslationParams) : yp("thumbnail:failedToDeleteThumbnail"),
+                      type: "error"
+                    }, !0)
+                  })))
+                }(ip, pp.id, pp.name),
+                children: (0, dp.jsx)(Dp.d, {
+                  name: "trash-can"
+                })
+              }), !pp.approved && (0, dp.jsx)("div", {
+                className: "ThumbnailUnapprovedIcon",
+                children: (0, dp.jsx)(Dp.d, {
+                  name: "hourglass-clock"
+                })
+              }), !pp.approved && (0, dp.jsxs)("div", {
+                className: "ThumbnailGridItemLabel ThumbnailPendingLabel",
+                children: [pp.name, (0, dp.jsx)("br", {}), yp("thumbnail:pendingApproval")]
+              })]
+            }, ip))), (0, dp.jsxs)("div", {
+              className: Wp()("ThumbnailGridItem ThumbnailUploadTile", {
+                ThumbnailUploadTileDisabled: !Ap
+              }),
+              onClick: () => {
+                Ap && function(pp) {
+                  let {
+                    schematicId: ip,
+                    ownedThumbnailCount: cp,
+                    onThumbnailReady: Op,
+                    onClose: Ip
+                  } = pp;
+                  op.NotificationProvider.showCustomPopup({
+                    body: pp => (0, dp.jsx)(np, {
+                      schematicId: ip,
+                      ownedThumbnailCount: cp,
+                      onClose: pp,
+                      onThumbnailReady: Op
+                    }),
+                    middleScreenPopupClassName: "SchematicThumbnailPopup",
+                    onClose: Ip,
+                    unlockPointerKey: "schematicThumbnailUploaderPopup"
+                  })
+                }({
+                  schematicId: Sp.schematicId,
+                  ownedThumbnailCount: tp.length,
+                  onThumbnailReady: gp,
+                  onClose: Pp
+                })
+              },
+              children: [(0, dp.jsx)(Dp.d, {
+                name: "plus"
+              }), (0, dp.jsx)("div", {
+                className: "ThumbnailGridItemLabel",
+                children: yp("thumbnail:uploadThumbnail")
+              })]
+            })]
+          })
+        })]
+      })
+    }
+
+    function rp(pp) {
+      let {
+        rejectedThumbnails: ip,
+        userContext: cp,
+        isMountedRef: op,
+        onAcknowledged: Sp
+      } = pp;
+      const {
+        t: Yp
+      } = (0, xp.H)(), [Ap, Pp] = (0, Op.useState)(!1), [Wp, yp] = (0, Op.useState)(!1), Up = function(pp) {
+        const ip = new Map;
+        for (const cp of pp) {
+          const pp = cp.rejectionPolicyId,
+            Op = ip.get(pp);
+          Op ? Op.push(cp) : ip.set(pp, [cp])
+        }
+        return ip
+      }(ip);
+      return (0, dp.jsxs)("div", {
+        className: "ThumbnailRejectionNotice",
+        children: [(0, dp.jsxs)("div", {
+          className: "ThumbnailRejectionNoticeTitle",
+          children: [(0, dp.jsx)(Dp.d, {
+            name: "triangle-exclamation"
+          }), " ", Yp("thumbnail:thumbnailsRejected"), " ", (0, dp.jsx)(Dp.d, {
+            name: "triangle-exclamation"
+          })]
+        }), (0, dp.jsx)("div", {
+          className: "ThumbnailRejectionNoticeSubtitle",
+          children: Yp("thumbnail:thumbnailsRejectedDescription")
+        }), (0, dp.jsx)("div", {
+          className: "ThumbnailRejectionNoticeList",
+          children: [...Up.entries()].map((pp => {
+            let [ip, cp] = pp;
+            const Op = gp[ip];
+            return (0, dp.jsxs)("div", {
+              className: "ThumbnailRejectionNoticeGroup",
+              children: [(0, dp.jsx)("div", {
+                className: "ThumbnailRejectionNoticeItems",
+                children: cp.map((pp => (0, dp.jsxs)("div", {
+                  className: "ThumbnailRejectionNoticeItem",
+                  children: [(0, dp.jsx)("div", {
+                    className: "ThumbnailRejectionNoticeItemIcon",
+                    children: (0, dp.jsx)(Dp.d, {
+                      name: "image-slash"
+                    })
+                  }), (0, dp.jsx)("div", {
+                    className: "ThumbnailRejectionNoticeItemDetails",
+                    children: (0, dp.jsx)("div", {
+                      className: "ThumbnailRejectionNoticeItemName",
+                      children: pp.name
+                    })
+                  })]
+                }, pp.id)))
+              }), (0, dp.jsxs)("div", {
+                className: "ThumbnailRejectionNoticeGroupReason",
+                children: [Yp("thumbnail:rejectionReason"), " ", Op ? Yp(Op.reason) : ip]
+              }), Op && (0, dp.jsx)("ul", {
+                className: "ThumbnailRejectionNoticeGroupTips",
+                children: Op.tips.map((pp => (0, dp.jsx)("li", {
+                  children: Yp(pp)
+                }, pp)))
+              })]
+            }, ip)
+          }))
+        }), (0, dp.jsxs)("label", {
+          className: "ThumbnailRejectionNoticeCheckbox",
+          children: [(0, dp.jsx)(qp.b, {
+            checked: Ap,
+            onChange: pp => Pp(pp.target.checked),
+            disabled: Wp
+          }), (0, dp.jsx)("span", {
+            children: Yp("thumbnail:haveReadRejectionReasons")
+          })]
+        }), (0, dp.jsx)(Ip.o, {
+          onClick: async function() {
+            yp(!0);
+            const pp = await Promise.allSettled(ip.map((pp => Mp.b.deleteSchematicThumbnail(cp, pp.id))));
+            if (!op.current) return;
+            const Op = pp.filter((pp => "rejected" === pp.status));
+            Op.length > 0 && console.error("Some rejected thumbnails failed to delete:", Op), Sp()
+          },
+          disabled: !Ap || Wp,
+          className: "ThumbnailRejectionNoticeAcceptButton",
+          children: Wp ? (0, dp.jsx)(Lp.c, {}) : Yp("general:accept")
+        })]
+      })
+    }
+
+    function Zp(pp) {
+      let {
+        thumbnailId: ip,
+        thumbnailName: cp,
+        onClose: Op
+      } = pp;
+      const {
+        t: op
+      } = (0, xp.H)();
+      return (0, dp.jsxs)("div", {
+        className: "ThumbnailDeleteConfirm",
+        children: [(0, dp.jsx)("div", {
+          className: "ThumbnailDeleteConfirmTitle",
+          children: op("thumbnail:deleteThumbnail")
+        }), (0, dp.jsxs)("div", {
+          className: "ThumbnailDeleteConfirmImageContainer",
+          children: [(0, dp.jsx)("img", {
+            className: "ThumbnailDeleteConfirmImage",
+            src: `${Fp.clientSideServerUrls.s3Url}/customThumbnails/${ip}.jpg`,
+            alt: "Thumbnail to delete"
+          }), (0, dp.jsx)("div", {
+            className: "ThumbnailGridItemLabel",
+            children: cp
+          })]
+        }), (0, dp.jsx)("div", {
+          className: "ThumbnailDeleteConfirmSubtitle",
+          children: op("thumbnail:deleteThumbnailConfirmation")
+        }), (0, dp.jsxs)("div", {
+          className: "ThumbnailDeleteConfirmButtons",
+          children: [(0, dp.jsxs)(Ip.K, {
+            className: "ThumbnailDeleteConfirmButton",
+            onClick: () => Op(!0),
+            children: [(0, dp.jsx)(Dp.d, {
+              name: "trash-can"
+            }), " ", op("general:delete")]
+          }), (0, dp.jsx)(Ip.j, {
+            className: "ThumbnailDeleteConfirmButton",
+            onClick: () => Op(!1),
+            children: op("general:cancel")
+          })]
+        })]
+      })
+    }
+    var zp = cp(2187),
+      sp = cp(5103),
+      Kp = cp(5107),
+      Vp = cp(5152);
+
+    function ii(pp) {
+      let {
+        schematicData: ip,
+        setTexturePack: cp,
+        initializeTexturePack: op,
+        publishFormEnabled: Ip
+      } = pp;
+      const {
+        t: Sp
+      } = (0, xp.H)(), [Lp, Yp] = (0, Op.useState)(null), [Dp, Ap] = (0, Op.useState)(null), [Pp, yp] = (0, Op.useState)(!1), Up = (0, Cp.b)(), wp = Ip && !Pp, vp = ip.customTexturePackKey;
+
+      function tp(pp) {
+        var ip;
+        Yp(pp.metaData.id), Ap(null !== (ip = pp.metaData.fromFolderName) && void 0 !== ip ? ip : null), (pp.metaData.id !== zp.q.CUSTOM || pp.metaData.fromFolderName) && cp(pp)
+      }
+      return (0, Op.useEffect)((() => {
+        vp && (yp(!0), (0, sp.d)(vp).then((pp => {
+          var ip;
+          Up.current && (pp ? (Yp(pp.metaData.id), Ap(null !== (ip = pp.metaData.fromFolderName) && void 0 !== ip ? ip : null), op(pp)) : console.error(`No texture pack at ${vp}`))
+        })).catch((pp => {
+          console.error("Error fetching texture pack: ", pp)
+        })).finally((() => {
+          yp(!1)
+        })))
+      }), [vp, op, Up]), (0, dp.jsxs)("div", {
+        className: "BloxdForm TexturePackSection",
+        children: [(0, dp.jsx)("div", {
+          className: "SectionTitle",
+          children: Sp("customTexturePack:customTexturePack")
+        }), (0, dp.jsxs)("div", {
+          className: "TexturePackList",
+          children: [(0, dp.jsx)("div", {
+            className: Wp()("TexturePack", {
+              Selected: null === Lp && !Pp,
+              Disabled: !wp
+            }),
+            onClick: () => {
+              wp && (Yp(null), cp(null), Ap(null))
+            },
+            children: (0, dp.jsx)("div", {
+              className: "TexturePackName",
+              children: "No Override"
+            })
+          }), Object.values(zp.q).map((pp => (0, dp.jsx)(Kp.f, {
+            id: pp,
+            isSelected: pp === Lp,
+            setSelected: tp,
+            disabled: !wp
+          }, pp)))]
+        }), Lp === zp.q.CUSTOM && (0, dp.jsx)(Vp.b, {
+          folderName: Dp,
+          onTexturePackUpdated: tp,
+          disabled: !wp,
+          maxFileSizeMb: 25,
+          packOwner: "customGame"
+        })]
+      })
+    }
+    var ci = cp(5188);
+
+    function Oi(pp) {
+      var ip;
+      let {
+        gameCategory: cp,
+        setGameCategory: Op,
+        disabled: op
+      } = pp;
+      const Sp = null !== (ip = (0, yp.ob)(cp)) && void 0 !== ip ? ip : "other";
+      return (0, dp.jsxs)("div", {
+        className: "GameCategoryPicker",
+        children: [(0, dp.jsx)(vp.i, {
+          label: "worldBuilder:gameCategoryGroup",
+          className: "GameCategoryGroup",
+          disabled: op,
+          children: (0, dp.jsx)(tp.d, {
+            options: yp.db.map((pp => ({
+              value: pp,
+              label: yp.cb[pp]
+            }))),
+            value: Sp,
+            onChange: pp => {
+              pp.value !== Sp && Op(yp.X[pp.value][0])
+            }
+          })
+        }), (0, dp.jsx)(vp.i, {
+          label: "worldBuilder:gameCategory",
+          className: "GameCategory",
+          disabled: op,
+          children: (0, dp.jsx)("div", {
+            className: "GameCategoryOptions",
+            children: yp.X[Sp].map((pp => (0, dp.jsx)(Ip.S, {
+              active: pp === cp,
+              onClick: () => {
+                Op(pp)
+              },
+              children: (0, yp.nb)(pp)
+            }, pp)))
+          })
+        })]
+      })
+    }
+
+    function oi(pp) {
+      let {
+        editor: ip,
+        onClose: cp
+      } = pp;
+      const {
+        t: Op
+      } = (0, xp.H)(), {
+        schematicData: op,
+        updateSchematicData: Ip,
+        publishFormEnabled: Lp,
+        formEnabled: Yp
+      } = ip;
+      return (0, dp.jsxs)(dp.Fragment, {
+        children: [(0, dp.jsxs)(ep, {
+          icon: "pen-to-square",
+          title: Op("worldBuilder:basicsSection"),
+          disabled: !Yp,
+          children: [(0, dp.jsx)(jp, {
+            label: Op("general:name"),
+            caption: Op("worldBuilder:schematicNameTagsHint"),
+            children: (0, dp.jsx)(Sp.c, {
+              className: "SchematicPageName",
+              defaultValue: op.name,
+              onValueChange: pp => Ip("name", pp),
+              placeholderText: Op("worldBuilder:schematicNamePlaceholder"),
+              maxLength: Ap.qb
+            })
+          }), (0, dp.jsx)(jp, {
+            label: Op("general:description"),
+            children: (0, dp.jsx)(Sp.c, {
+              className: "SchematicPageDescription",
+              useTextarea: !0,
+              defaultValue: op.description,
+              onValueChange: pp => Ip("description", pp),
+              placeholderText: Op("worldBuilder:schematicDescriptionPlaceholder"),
+              maxLength: Ap.ob
+            })
+          }), (0, dp.jsx)(Oi, {
+            gameCategory: op.gameCategory,
+            setGameCategory: pp => Ip("gameCategory", pp),
+            disabled: !Lp
+          }), !0 === op.gamePublished && (0, dp.jsx)(Gp, {
+            schematicData: op,
+            updateSchematicData: Ip,
+            publishFormEnabled: Lp,
+            onClose: function() {
+              null === cp || void 0 === cp || cp()
+            }
+          })]
+        }), (0, dp.jsx)(mp, {
+          schematicData: op,
+          updateSchematicData: Ip,
+          publishFormEnabled: Lp,
+          formEnabled: Yp
+        }), !0 === op.gamePublished && (0, dp.jsx)(ep, {
+          icon: "palette",
+          title: Op("worldBuilder:texturePackSection"),
+          disabled: !Yp,
+          children: (0, dp.jsx)(ii, {
+            schematicData: op,
+            setTexturePack: ip.setTexturePack,
+            initializeTexturePack: ip.initializeTexturePack,
+            publishFormEnabled: Lp
+          })
+        })]
+      })
+    }
+
+    function Ii(pp) {
+      let {
+        editor: ip
+      } = pp;
+      const {
+        t: cp
+      } = (0, xp.H)(), {
+        schematicData: Op,
+        formEnabled: op,
+        hasUnsavedChanges: Sp
+      } = ip, Ap = op && Sp;
+      return (0, dp.jsxs)("footer", {
+        className: "SchematicPageFooter",
+        children: [op && Sp && (0, dp.jsxs)("div", {
+          className: "SchematicPageFooterStatus",
+          children: [(0, dp.jsx)("span", {
+            className: "SchematicPageFooterStatusDot"
+          }), cp("worldBuilder:unsavedChanges")]
+        }), (0, dp.jsx)(Yp.f, {
+          tooltipInner: (0, dp.jsx)("div", {
+            className: "SaveButtonTooltip",
+            children: cp(op && !Sp ? "worldBuilder:saveChangesNoneDescription" : "worldBuilder:saveChangesDescription")
+          }),
+          children: (0, dp.jsxs)(Ip.f, {
+            className: "SaveChangesButton",
+            onClick: () => ip.saveSchematic(Op.gamePublished),
+            disabled: !Ap,
+            children: [(0, dp.jsxs)("span", {
+              className: op ? "" : "SaveChangesButtonBodyHidden",
+              children: [(0, dp.jsx)(Dp.d, {
+                name: "wrench"
+              }), " ", cp("worldBuilder:saveChanges")]
+            }), !op && (0, dp.jsx)(Lp.c, {})]
+          })
+        })]
+      })
+    }
+
+    function Si(pp) {
+      let {
+        schematic: ip,
+        onSchematicUpdate: cp,
+        onClose: op,
+        inSourceWorld: Sp
+      } = pp;
+      const {
+        t: Lp
+      } = (0, xp.H)();
+
+      function Yp() {
+        null === op || void 0 === op || op()
+      }
+      const Dp = (0, ci.b)(ip, {
+        onNavigateAway: Yp,
+        inSourceWorld: Sp
+      });
+      return (0, Op.useEffect)((() => {
+        null === cp || void 0 === cp || cp(Dp.schematicData)
+      }), [Dp.schematicData, cp]), (0, dp.jsxs)("div", {
+        className: "SchematicPage SchematicPagePopupVariant",
+        children: [(0, dp.jsxs)("div", {
+          className: "SchematicPageBody",
+          children: [(0, dp.jsx)(Ip.d, {
+            onClick: Yp,
+            children: Lp("worldBuilder:back")
+          }), (0, dp.jsx)(ep, {
+            icon: "rocket-launch",
+            title: Lp("worldBuilder:actionsSection"),
+            disabled: !Dp.formEnabled,
+            children: (0, dp.jsx)(Rp.e, {
+              editor: Dp
+            })
+          }), (0, dp.jsx)(oi, {
+            editor: Dp,
+            onClose: Yp
+          })]
+        }), (0, dp.jsx)(Ii, {
+          editor: Dp
+        })]
+      })
+    }
+
+    function xi(pp) {
+      let {
+        schematic: ip,
+        onSchematicUpdate: cp,
+        onClose: Op,
+        inSourceWorld: Ip
+      } = pp;
+      op.NotificationProvider.showCustomPopup({
+        body: pp => (0, dp.jsx)(Si, {
+          schematic: ip,
+          onSchematicUpdate: cp,
+          onClose: pp,
+          inSourceWorld: Ip
+        }),
+        middleScreenPopupClassName: "SchematicPopup",
+        onClose: Op,
+        unlockPointerKey: "schematicPagePopup"
+      })
+    }
+  },
+  5067: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Ap
+    });
+    var Op = cp(1049),
+      op = cp.n(Op),
+      Ip = cp(1201),
+      Sp = cp(1060),
+      xp = cp(1480),
+      Lp = cp(1387),
+      Yp = cp(1361),
+      Dp = cp(1112);
+
+    function Ap(pp) {
+      let {
+        editor: ip,
+        className: cp
+      } = pp;
+      const {
+        t: Op
+      } = (0, Ip.H)(), {
+        schematicData: Ap,
+        formEnabled: Pp,
+        publishFormEnabled: Wp
+      } = ip, yp = !Pp || !Wp;
+      return (0, Dp.jsxs)("div", {
+        className: op()("PublishButtonContainer", cp),
+        children: [ip.canEditSourceWorld && (0, Dp.jsxs)(xp.f, {
+          onClick: ip.editSourceWorld,
+          disabled: yp,
+          children: [(0, Dp.jsx)(Sp.d, {
+            name: "edit"
+          }), " ", Op("worldBuilder:editSourceWorld")]
+        }), !Ap.gamePublished && (0, Dp.jsx)(Lp.f, {
+          tooltipInner: (0, Dp.jsx)("div", {
+            className: "PublishButtonTooltip",
+            children: Op("worldBuilder:publishAsGameDescription")
+          }),
+          children: (0, Dp.jsxs)(xp.o, {
+            onClick: () => ip.saveSchematic(!0),
+            disabled: yp,
+            children: [(0, Dp.jsx)(Sp.d, {
+              name: "rocket-launch"
+            }), " ", Op("worldBuilder:publishAsGame"), " ", (0, Dp.jsx)(Sp.d, {
+              name: "info-circle"
+            })]
+          })
+        }), !0 === Ap.gamePublished && (0, Dp.jsxs)(Dp.Fragment, {
+          children: [(0, Dp.jsx)(Lp.f, {
+            tooltipInner: (0, Dp.jsx)("div", {
+              className: "PublishButtonTooltip",
+              children: Op("worldBuilder:unpublishAsGameDescription")
+            }),
+            children: (0, Dp.jsxs)(xp.K, {
+              onClick: ip.unpublishSchematic,
+              disabled: yp,
+              children: [(0, Dp.jsx)(Sp.d, {
+                name: "rocket-launch"
+              }), " ", Op("worldBuilder:unpublishAsGame"), " ", (0, Dp.jsx)(Sp.d, {
+                name: "info-circle"
+              })]
+            })
+          }), (0, Dp.jsxs)(xp.f, {
+            onClick: ip.playGame,
+            disabled: yp,
+            children: [(0, Dp.jsx)(Sp.d, {
+              name: "joystick"
+            }), " ", Op("general:playGame")]
+          })]
+        }), !Pp && (0, Dp.jsx)(Yp.c, {
+          loaderType: "Secondary"
+        })]
+      })
+    }
+  },
+  5103: (pp, ip, cp) => {
+    cp.d(ip, {
+      d: () => op
+    });
+    var Op = cp(1211);
+    async function op(pp) {
+      const ip = await fetch(`${Op.clientSideServerUrls.s3Url}/${pp}`, {
+        headers: {
+          Accept: "application/json"
+        }
+      });
+      if (404 === ip.status || 403 === ip.status) return null;
+      if (!ip.ok) throw new Error(`Failed to download the texture pack (${ip.status})`);
+      return await ip.json()
+    }
+  },
+  5188: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => wp
+    });
+    var Op = cp(62),
+      op = cp(1356),
+      Ip = cp(1014),
+      Sp = cp(156),
+      xp = cp(1569),
+      Lp = cp(25),
+      Yp = cp(1956),
+      Dp = cp(1520),
+      Ap = cp(4677),
+      Pp = cp(1372),
+      Wp = cp(1141),
+      yp = cp(1538);
+
+    function Up(pp, ip) {
+      return {
+        schematicId: pp.schematicId,
+        name: pp.name,
+        description: pp.description,
+        gamePublished: ip,
+        gameCategory: pp.gameCategory,
+        defaultGamemode: pp.defaultGamemode,
+        voidDeathHeight: pp.voidDeathHeight,
+        disableKeepInventory: pp.disableKeepInventory,
+        disableTpRequests: pp.disableTpRequests,
+        disableLobbySpawn: pp.disableLobbySpawn,
+        disableMobs: pp.disableMobs,
+        disableSpawnProtection: pp.disableSpawnProtection,
+        disableFallDamage: pp.disableFallDamage,
+        worldBorder: pp.worldBorder,
+        hideLobbyCode: pp.hideLobbyCode,
+        enableSmpMarketplace: pp.enableSmpMarketplace,
+        enableSurvivalGuns: pp.enableSurvivalGuns,
+        enableSpawnReset: pp.enableSpawnReset,
+        enableDayNight: pp.enableDayNight,
+        persistWorld: pp.persistWorld,
+        persistInventory: pp.persistInventory
       }
     }
 
-    function Bz() {}
-  }
+    function wp(pp) {
+      let {
+        onNavigateAway: ip,
+        inSourceWorld: cp = !1
+      } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+      const {
+        userContext: wp
+      } = (0, Wp.b)(), vp = (0, yp.useNavigatePreserveSearch)(), [tp, Hp] = (0, Op.useState)({
+        ...pp
+      }), [dp, ep] = (0, Op.useState)("Enter"), [jp, kp] = (0, Op.useState)(void 0), mp = (0, Op.useRef)(Up(pp, pp.gamePublished)), Rp = (0, Op.useRef)(void 0), qp = "Enter" === dp, Mp = wp.playerHasRank("developer") || wp.playerHasRank("admin") || "Enter" === dp && !1 !== tp.schematicContainsSpawnBlock, Cp = void 0 !== jp && jp !== Rp.current || JSON.stringify(Up(tp, tp.gamePublished)) !== JSON.stringify(mp.current);
+
+      function Ep(pp, ip) {
+        Hp((cp => ({
+          ...cp,
+          [pp]: ip
+        })))
+      }
+      const Xp = (0, Op.useCallback)((pp => {
+        Rp.current = pp, kp(pp)
+      }), []);
+
+      function lp(pp) {
+        ep("Loading");
+        const ip = Up(tp, pp),
+          cp = jp !== Rp.current ? jp : void 0;
+        Dp.b.updateSchematic(wp, ip, cp).then((cp => {
+          let {
+            customTexturePackKey: Op
+          } = cp;
+          ep("Success"), Ep("customTexturePackKey", Op), mp.current = ip, Rp.current = void 0, kp(void 0), setTimeout((() => {
+            Ep("gamePublished", pp), ep("Enter")
+          }), 1e3)
+        })).catch((pp => {
+          var ip;
+          (console.error("Failed to save schematic:", pp), ep("Error"), pp instanceof Sp.e && pp.errorMessageForUser) && Pp.NotificationProvider.showAlertPopup({
+            title: "worldBuilder:changesNotSaved",
+            subtitle: pp.errorMessageForUser,
+            textOpts: {
+              subtitle: null !== (ip = pp.errorMessageTranslationParams) && void 0 !== ip ? ip : void 0
+            },
+            confirmText: "general:ok"
+          });
+          setTimeout((() => {
+            ep("Enter")
+          }), 1e3)
+        }))
+      }
+      return {
+        schematicData: tp,
+        updateSchematicData: Ep,
+        setTexturePack: kp,
+        initializeTexturePack: Xp,
+        updateState: dp,
+        formEnabled: qp,
+        publishFormEnabled: Mp,
+        hasUnsavedChanges: Cp,
+        canEditSourceWorld: !cp,
+        saveSchematic: lp,
+        unpublishSchematic: function() {
+          Pp.NotificationProvider.showPromptPopup({
+            icon: "rocket-launch",
+            title: "worldBuilder:unpublishAsGameConfirmTitle",
+            subtitle: "worldBuilder:unpublishAsGameConfirmSubtitle",
+            confirmText: "worldBuilder:unpublishAsGame",
+            cancelText: "general:cancel",
+            unlockPointerKey: "unpublishGamePrompt"
+          }).getResult().then((pp => {
+            !0 === pp && lp(!1)
+          }))
+        },
+        editSourceWorld: function() {
+          ep("Loading"), Ap.b.getSourceWorld(tp.schematicId).then((pp => {
+            Yp.gameBridge.send("leaveGame", {
+              reloadPath: "/"
+            }), (0, Lp.k)("other"), vp((0, op.c)("classic", pp)), null === ip || void 0 === ip || ip()
+          })).catch((pp => {
+            console.error("Failed to get source world:", pp), ep("Error"), setTimeout((() => {
+              ep("Enter")
+            }), 1e3)
+          }))
+        },
+        playGame: function() {
+          Yp.gameBridge.send("leaveGame", {
+            reloadPath: "/"
+          }), vp((0, xp.u)((0, Ip.t)(tp.schematicId), tp)), null === ip || void 0 === ip || ip()
+        }
+      }
+    }
+  },
+  5054: () => {}
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

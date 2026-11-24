@@ -1,212 +1,254 @@
 export const id = 148;
 export const ids = [148];
 export const modules = {
-  8126: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      BloxdMsnAccountSdk: () => AD,
-      MsnSdkAdaptor: () => BD,
-      msnMockIdentityStorageKey: () => cD
+  8224: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      BloxdDiscordActivitySdk: () => tp
     });
-    var pD = wD(1326),
-      sD = wD(1186),
-      KD = wD(3470),
-      rD = wD(619);
-    wD(35);
-    const LD = "https://assets.msn.com/staticsb/statics/latest/msstart-games-sdk/msstart-v1.0.0-rc.23.min.js",
-      cD = "msnMockIdentity";
-    let gD = null;
-
-    function RD() {
-      return gD ??= async function() {
-        await (0, sD.b)(LD, {}, !1);
-        for (let DD = 0; DD < 50 && !window.$msstart; DD++) await (0, rD.H)(100)
-      }(), gD
-    }
-    class AD {
-      constructor() {}
-      static async setup() {
-        try {
-          await Promise.race([RD(), (0, rD.H)(1e4).then((() => {
-            throw new Error("Not loaded after 10000ms")
-          }))])
-        } catch (DD) {
-          return console.error("MSN Play SDK failed to load, so MSN Play accounts are unavailable:", DD), null
-        }
-        return window.$msstart ? new AD : (console.error("MSN Play SDK script loaded but window.$msstart is missing, so MSN Play accounts are unavailable"), null)
-      }
-      async getSignedInUser() {
-        try {
-          return await Promise.race([window.$msstart.getSignedInUserAsync(), (0, rD.H)(1e4).then((() => {
-            throw new Error("No answer after 10000ms")
-          }))])
-        } catch (DD) {
-          return "USER_NOT_CONSENTED" !== (null === DD || void 0 === DD ? void 0 : DD.code) && console.error("Failed to get the signed-in MSN Play player:", DD), null
-        }
-      }
-      async signIn() {
-        return null !== null ? null : await window.$msstart.signInAsync()
-      }
-    }
-    const UD = 20,
-      fD = {
-        top: [{
-          width: 970,
-          height: 250
-        }, {
-          width: 728,
-          height: 90
-        }, {
-          width: 320,
-          height: 50
-        }],
-        right: [{
-          width: 300,
-          height: 600
-        }, {
-          width: 160,
-          height: 600
-        }, {
-          width: 300,
-          height: 250
-        }, {
-          width: 320,
-          height: 50
-        }],
-        left: [{
-          width: 300,
-          height: 600
-        }, {
-          width: 160,
-          height: 600
-        }, {
-          width: 300,
-          height: 250
-        }, {
-          width: 320,
-          height: 50
-        }]
+    var Op = cp(8232),
+      op = cp(1236),
+      Ip = cp(1201),
+      Sp = cp(640),
+      xp = cp(1260),
+      Lp = cp(1765),
+      Yp = cp(1349),
+      Dp = cp(768),
+      Ap = cp(25),
+      Pp = cp(1087),
+      Wp = function(pp) {
+        return pp.APPLICATION_COMMANDS = "applications.commands", pp.IDENTIFY = "identify", pp.EMAIL = "email", pp.GUILDS = "guilds", pp.READ_DM_CHANNELS = "dm_channels.read", pp.WRITE_ACTIVITIES = "rpc.activities.write", pp
+      }(Wp || {}),
+      yp = function(pp) {
+        return pp[pp.CLOSE_NORMAL = 1e3] = "CLOSE_NORMAL", pp[pp.CLOSE_UNSUPPORTED = 1003] = "CLOSE_UNSUPPORTED", pp[pp.CLOSE_ABNORMAL = 1006] = "CLOSE_ABNORMAL", pp[pp.INVALID_CLIENTID = 4e3] = "INVALID_CLIENTID", pp[pp.INVALID_ORIGIN = 4001] = "INVALID_ORIGIN", pp[pp.RATELIMITED = 4002] = "RATELIMITED", pp[pp.TOKEN_REVOKED = 4003] = "TOKEN_REVOKED", pp[pp.INVALID_VERSION = 4004] = "INVALID_VERSION", pp[pp.INVALID_ENCODING = 4005] = "INVALID_ENCODING", pp
+      }(yp || {}),
+      Up = function(pp) {
+        return pp[pp.PLAYING = 0] = "PLAYING", pp[pp.STREAMING = 1] = "STREAMING", pp[pp.LISTENING = 2] = "LISTENING", pp[pp.WATCHING = 3] = "WATCHING", pp[pp.CUSTOM = 4] = "CUSTOM", pp[pp.COMPETING = 5] = "COMPETING", pp
+      }(Up || {});
+    const wp = {
+        Minigames: "Playing",
+        Puzzle: "Solving",
+        Escape: "Escaping",
+        Parkour: "Parkouring",
+        "Cool Parkour": "Parkouring",
+        "Two Player Parkour": "Parkouring",
+        "Clutch Parkour": "Parkouring",
+        "Challenging Parkour": "Parkouring",
+        "Progressive Parkour": "Parkouring",
+        "Themed Parkour": "Parkouring",
+        Obby: "Parkouring",
+        Tower: "Climbing",
+        Roleplay: "Roleplaying",
+        Arena: "Battling",
+        Duels: "Duelling",
+        Shooting: "Shooting",
+        Survival: "Surviving",
+        Simulator: "Grinding",
+        Tycoon: "Building",
+        Clicker: "Clicking",
+        PvE: "Battling",
+        Building: "Building",
+        Horror: "Surviving",
+        "Lucky Block": "Battling",
+        Racing: "Racing",
+        Driving: "Driving",
+        "Cool Build": "Building",
+        Adventure: "Adventuring",
+        Other: "Being mischievous"
       },
-      ID = {
-        leaderboard: {
-          1: ["right", "left"],
-          5: ["top", "left"]
-        },
-        square: {
-          1: []
-        },
-        skyscraper: {
-          2: []
-        }
+      vp = {
+        goalRush: "Playing",
+        heroesvbrainrots: "Battling",
+        hideseek: "Playing",
+        bingo: "Playing"
       };
-    class BD extends pD.b {
-      constructor() {
-        super(), this.name = "msn", this.currentlyShowingBannerPlacement = null, this.isCurrentlyClearingAllBanners = !1
+    class tp {
+      constructor(pp) {
+        this.discordSdk = pp, this.guildNameCache = {}, this.startTime = Date.now(), this.cachedAccessToken = null
       }
       static async setup() {
-        return await RD(), new BD
-      }
-      playVideoAd(DD, zD) {
-        this.playVideoOrRewarded("video", DD, DD)
-      }
-      playRewarded(DD, zD) {
-        this.playVideoOrRewarded("rewarded", DD, zD)
-      }
-      canShowBloxdAd(DD) {
-        for (const zD in ID)
-          if (DD.adId in ID[zD]) return !1;
-        return !0
-      }
-      async renderBanner(DD) {
-        if (null !== this.currentlyShowingBannerPlacement) return void console.log(`AD ${(0,KD.b)(DD)}: msn placement is already showing so not requesting`);
-        const zD = ID[DD.adType][DD.adId];
-        if ((0, rD.B)(zD)) return void console.warn(`AD ${(0,KD.b)(DD)}: no msn placement is configured for this bloxd placement so not showing any ad`);
-        const wD = [];
-        for (const pD of zD)
-          for (const DD of fD[pD])
-            if (DD.width <= window.innerWidth - 40 && DD.height <= window.innerHeight - 40) {
-              const zD = {
-                placement: pD,
-                width: DD.width,
-                height: DD.height
-              };
-              if (!wD.some((DD => hD(zD, DD)))) {
-                wD.push(zD);
-                break
-              }
-            } if (wD.length > 0) {
-          console.log(`AD ${(0,KD.b)(DD)}: Attempting to show msn units: `, wD);
-          const zD = wD.map((DD => `${DD.placement}:${DD.width}x${DD.height}`));
-          this.currentlyShowingBannerPlacement = {
-            placementId: (0, KD.b)(DD),
-            renderPromise: window.$msstart.showDisplayAdsAsync(zD).then((() => {
-              console.log(`AD ${(0,KD.b)(DD)}: Successfully request msn banner ad`)
-            })).catch((zD => {
-              console.log(`AD ${(0,KD.b)(DD)}: Error while requesting msn banner ad`, zD)
-            }))
-          }
-        } else console.warn(`AD ${(0,KD.b)(DD)}: couldn't find an msn unit that fit screen size`)
-      }
-      async clearBanner(DD) {
-        null !== this.currentlyShowingBannerPlacement && (0, KD.b)(DD) === this.currentlyShowingBannerPlacement.placementId && (console.log(`AD ${(0,KD.b)(DD)}: Attempting to clear msn banner ads for banner`, DD), await this.clearAllBannerAds())
-      }
-      async clearAllBannerAds() {
+        console.log("Setting up Discord SDK with client id", Pp.c.discordClientID);
+        const pp = new Op.c(Pp.c.discordClientID);
+        let ip = !1;
+        setTimeout((() => {
+          ip || (console.warn("Discord SDK took too long to initialize"), (0, Lp.reloadBloxd)())
+        }), 15e3), await pp.ready(), ip = !0;
         try {
-          if (this.isCurrentlyClearingAllBanners) return;
-          this.isCurrentlyClearingAllBanners = !0, null !== this.currentlyShowingBannerPlacement && await this.currentlyShowingBannerPlacement.renderPromise, await window.$msstart.hideDisplayAdsAsync(), console.log("AD: Successfully cleared all msn banner ads")
-        } catch (DD) {
-          console.log("AD: Error while clearing all msn banner ads", DD)
-        } finally {
-          this.currentlyShowingBannerPlacement = null, this.isCurrentlyClearingAllBanners = !1
+          const {
+            enabled: ip
+          } = await pp.commands.encourageHardwareAcceleration();
+          ip || console.warn("Hardware acceleration not enabled in the Discord client")
+        } catch (op) {
+          console.error("Failed to encourage hardware acceleration in the Discord client", op)
+        }
+        const cp = new tp(pp);
+        return cp.isMobilePlatform() && (cp.applyDiscordSafeAreaNotch(), window.addEventListener("resize", (() => {
+          cp.applyDiscordSafeAreaNotch()
+        }))), cp
+      }
+      async updateActivityDescription(pp) {
+        let ip, cp;
+        switch (pp) {
+          case "homePage":
+            ip = "Chilling in the Main Menu";
+            break;
+          case "inGame": {
+            const pp = await this.getInGameDescriptions();
+            ip = pp.primary, cp = pp.secondary;
+            break
+          }
+        }
+        await this.discordSdk.commands.setActivity({
+          activity: {
+            type: Up.PLAYING,
+            details: ip,
+            state: cp,
+            assets: {
+              large_image: "icon",
+              large_text: ip
+            },
+            timestamps: {
+              start: this.startTime
+            }
+          }
+        }).catch((pp => {
+          console.error(`Failed to update Discord activity rich presence with description="${ip}":`, pp)
+        }))
+      }
+      async getInGameDescriptions() {
+        var pp;
+        const {
+          requestedGameNameWithVariation: ip
+        } = (0, Yp.d)(), cp = (0, Dp.i)(ip), Op = null !== (pp = vp[ip]) && void 0 !== pp ? pp : wp[cp.type], op = await (0, Ip.D)(xp.c.ENGLISH, cp.title), Lp = (0, Yp.d)();
+        if ((0, Yp.i)(Lp)) return {
+          primary: `${Op} in a Discord World`
+        };
+        const Ap = `${Op} in ${op}`;
+        return (0, Sp.G)(Lp.lobbyName) ? {
+          primary: Ap
+        } : {
+          primary: Ap,
+          secondary: `Lobby ${Lp.lobbyName}`
         }
       }
-      playVideoOrRewarded(DD, zD, wD) {
-        const pD = zD => {
-          console.error(`AD: Error while playing MSN ${DD} ad: `, zD), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), wD()
-        };
-        if (window.$msstart) {
-          console.log(`AD: Attempting to play MSN ${DD} ad`), document.getElementById("GenericVideoWrapper").style.display = "flex";
-          const wD = async () => {
-            try {
-              const wD = await window.$msstart.loadAdsAsync("rewarded" === DD),
-                pD = await window.$msstart.showAdsAsync(wD.instanceId);
-              this.clearAllBannerAds(), await pD.showAdsCompletedAsync, console.log(`AD: Successfully finished MSN ${DD} ad`), document.getElementById("GenericVideoWrapper").style.display = "none", window.adCompleteSoResume(), zD()
-            } catch (wD) {
-              pD(wD)
-            }
+      getCurrentChannelType() {
+        const {
+          channelId: pp,
+          guildId: ip
+        } = this.getCurrentChannelAndGuild();
+        return null !== ip ? op.c.GUILD : null !== pp ? op.c.DM : null
+      }
+      getRequiredScopeForCurrentChannel() {
+        const pp = this.getCurrentChannelType(),
+          ip = [Wp.APPLICATION_COMMANDS, Wp.IDENTIFY, Wp.EMAIL, Wp.GUILDS, Wp.WRITE_ACTIVITIES];
+        switch (pp) {
+          case op.c.DM:
+          case op.c.GUILD:
+            return [...ip];
+          default:
+            throw new Error(`Unknown Discord channel type: ${pp}`)
+        }
+      }
+      getCurrentChannelAndGuild() {
+        const {
+          channelId: pp,
+          guildId: ip
+        } = this.discordSdk;
+        return {
+          channelId: null !== pp && void 0 !== pp ? pp : null,
+          guildId: null !== ip && void 0 !== ip ? ip : null
+        }
+      }
+      getInstanceId() {
+        return this.discordSdk.instanceId
+      }
+      async askDiscordUserForAuthorization() {
+        const pp = this.getRequiredScopeForCurrentChannel(),
+          {
+            code: ip
+          } = await this.discordSdk.commands.authorize({
+            client_id: Pp.c.discordClientID,
+            response_type: "code",
+            state: "",
+            prompt: "none",
+            scope: pp
+          });
+        return ip
+      }
+      getCachedAccessToken() {
+        return this.cachedAccessToken
+      }
+      setCachedAccessToken(pp) {
+        this.cachedAccessToken = pp
+      }
+      registerGuild(pp, ip) {
+        this.guildNameCache[pp] = ip
+      }
+      async authenticate(pp) {
+        return this.discordSdk.commands.authenticate({
+          access_token: pp
+        }).then((pp => null !== pp))
+      }
+      async getUserLocale() {
+        try {
+          const {
+            locale: pp
+          } = await this.discordSdk.commands.userSettingsGetLocale();
+          return pp
+        } catch (pp) {
+          return console.error("Failed to get user locale from Discord:", pp.stack), null
+        }
+      }
+      async getChannelName(pp) {
+        return this.discordSdk.commands.getChannel({
+          channel_id: pp
+        }).then((pp => pp.name)).catch((pp => "Your Current Discord Chat"))
+      }
+      async getDiscordContextFromChannelId(pp) {
+        const ip = await this.getChannelName(pp);
+        return op.g.from({
+          type: op.c.DM,
+          channelId: pp,
+          channelName: ip
+        })
+      }
+      getDiscordContextFromGuildId(pp) {
+        const ip = this.guildNameCache[pp];
+        return (0, Sp.G)(ip) ? null : op.e.from({
+          type: op.c.GUILD,
+          guildId: pp,
+          guildName: ip
+        })
+      }
+      async getCurrentDiscordContext() {
+        const {
+          channelId: pp,
+          guildId: ip
+        } = this.getCurrentChannelAndGuild();
+        return null !== ip ? this.getDiscordContextFromGuildId(ip) : null !== pp ? this.getDiscordContextFromChannelId(pp) : null
+      }
+      exit(pp) {
+        console.log("Exiting Discord Activity:", pp), this.discordSdk.close(yp.CLOSE_NORMAL, pp)
+      }
+      isMobilePlatform() {
+        return this.discordSdk.platform === Op.g.MOBILE
+      }
+      applyDiscordSafeAreaNotch() {
+        const pp = getComputedStyle(document.documentElement),
+          ip = (ip, cp) => {
+            const Op = parseFloat(pp.getPropertyValue(`--discord-safe-area-inset-${ip}`));
+            return isNaN(Op) || 0 === cp ? 0 : Op / cp * 100
           };
-          window.adStartSoPause(null, {
-            preventMovement: !0
-          }), wD()
-        } else pD(`AD: Can't play MSN ${DD} ad because sdk is not loaded`)
+        Ap.c.set({
+          notchSize: {
+            top: ip("top", window.innerHeight),
+            right: Math.max(ip("right", window.innerWidth), 7),
+            bottom: 0,
+            left: ip("left", window.innerWidth)
+          }
+        })
       }
-    }
-
-    function GD(DD) {
-      let zD, wD;
-      switch (DD.placement) {
-        case "top":
-          zD = (window.innerWidth - DD.width) / 2, wD = UD;
-          break;
-        case "right":
-          zD = window.innerWidth - DD.width - UD, wD = window.innerHeight / 2 - DD.height / 2 - 10;
-          break;
-        case "left":
-          zD = UD, wD = window.innerHeight / 2 - DD.height / 2 - 10
-      }
-      return {
-        x1: zD,
-        y1: wD,
-        x2: zD + DD.width,
-        y2: wD + DD.height
-      }
-    }
-
-    function hD(DD, zD) {
-      const wD = GD(DD),
-        pD = GD(zD);
-      return !(wD.x2 <= pD.x1 || pD.x2 <= wD.x1 || wD.y2 <= pD.y1 || pD.y2 <= wD.y1)
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

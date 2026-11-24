@@ -1,17 +1,15 @@
 export const id = 357;
 export const ids = [357];
 export const modules = {
-  61106: (DD, zD, wD) => {
-    wD.d(zD, {
-      allocateF64Mat4: () => sD
-    });
-    var pD = wD(41620);
-
-    function sD() {
-      return new pD.f(16)
-    }
-    sD["@@MAT4_STORAGE_F64@@"] = !0
+  61383: (pp, ip, cp) => {
+    var Op;
+    cp.r(ip), cp.d(ip, {
+        ShaderLanguage: () => Op
+      }),
+      function(pp) {
+        pp[pp.GLSL = 0] = "GLSL", pp[pp.WGSL = 1] = "WGSL"
+      }(Op || (Op = {}))
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);

@@ -1,77 +1,49 @@
 export const id = 332;
 export const ids = [332];
 export const modules = {
-  42052: (DD, zD, wD) => {
-    wD.d(zD, {
-      c: () => rD
+  42190: (pp, ip, cp) => {
+    cp.d(ip, {
+      e: () => Sp
     });
-    var pD = wD(39776);
-    const sD = "clipPlaneFragment",
-      KD = "#if defined(CLIPPLANE) || defined(CLIPPLANE2) || defined(CLIPPLANE3) || defined(CLIPPLANE4) || defined(CLIPPLANE5) || defined(CLIPPLANE6)\nif (false) {}\n#endif\n#ifdef CLIPPLANE\nelse if (fClipDistance>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE2\nelse if (fClipDistance2>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE3\nelse if (fClipDistance3>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE4\nelse if (fClipDistance4>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE5\nelse if (fClipDistance5>0.0)\n{discard;}\n#endif\n#ifdef CLIPPLANE6\nelse if (fClipDistance6>0.0)\n{discard;}\n#endif\n";
-    pD.e.IncludesShadersStore[sD] || (pD.e.IncludesShadersStore[sD] = KD);
-    const rD = {
-      name: sD,
-      shader: KD
+    var Op = cp(40062);
+    const op = "instancesDeclaration",
+      Ip = "#ifdef INSTANCES\nattribute vec4 world0;attribute vec4 world1;attribute vec4 world2;attribute vec4 world3;\n#ifdef INSTANCESCOLOR\nattribute vec4 instanceColor;\n#endif\n#if defined(THIN_INSTANCES) && !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nattribute vec4 previousWorld0;attribute vec4 previousWorld1;attribute vec4 previousWorld2;attribute vec4 previousWorld3;\n#ifdef THIN_INSTANCES\nuniform mat4 previousWorld;\n#endif\n#endif\n#else\n#if !defined(WORLD_UBO)\nuniform mat4 world;\n#endif\n#if defined(VELOCITY) || defined(PREPASS_VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nuniform mat4 previousWorld;\n#endif\n#endif\n";
+    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
     }
   },
-  42041: (DD, zD, wD) => {
-    wD.d(zD, {
-      d: () => rD
+  42286: (pp, ip, cp) => {
+    cp.d(ip, {
+      b: () => Sp
     });
-    var pD = wD(39776);
-    const sD = "clipPlaneFragmentDeclaration",
-      KD = "#ifdef CLIPPLANE\nvarying float fClipDistance;\n#endif\n#ifdef CLIPPLANE2\nvarying float fClipDistance2;\n#endif\n#ifdef CLIPPLANE3\nvarying float fClipDistance3;\n#endif\n#ifdef CLIPPLANE4\nvarying float fClipDistance4;\n#endif\n#ifdef CLIPPLANE5\nvarying float fClipDistance5;\n#endif\n#ifdef CLIPPLANE6\nvarying float fClipDistance6;\n#endif\n";
-    pD.e.IncludesShadersStore[sD] || (pD.e.IncludesShadersStore[sD] = KD);
-    const rD = {
-      name: sD,
-      shader: KD
+    var Op = cp(40062);
+    const op = "instancesVertex",
+      Ip = "#ifdef INSTANCES\nmat4 finalWorld=mat4(world0,world1,world2,world3);\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=mat4(previousWorld0,previousWorld1,\npreviousWorld2,previousWorld3);\n#endif\n#ifdef THIN_INSTANCES\nfinalWorld=world*finalWorld;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nfinalPreviousWorld=previousWorld*finalPreviousWorld;\n#endif\n#endif\n#else\nmat4 finalWorld=world;\n#if defined(PREPASS_VELOCITY) || defined(VELOCITY) || defined(PREPASS_VELOCITY_LINEAR) || defined(VELOCITY_LINEAR)\nmat4 finalPreviousWorld=previousWorld;\n#endif\n#endif\n";
+    Op.b.IncludesShadersStore[op] || (Op.b.IncludesShadersStore[op] = Ip);
+    const Sp = {
+      name: op,
+      shader: Ip
     }
   },
-  42079: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => rD
+  61972: (pp, ip, cp) => {
+    cp.r(ip), cp.d(ip, {
+      greasedLineVertexShader: () => Yp
     });
-    var pD = wD(39776);
-    const sD = "fogFragment",
-      KD = "#ifdef FOG\nfloat fog=CalcFogFactor();\n#ifdef PBR\nfog=toLinearSpace(fog);\n#endif\ncolor.rgb=mix(vFogColor,color.rgb,fog);\n#endif\n";
-    pD.e.IncludesShadersStore[sD] || (pD.e.IncludesShadersStore[sD] = KD);
-    const rD = {
-      name: sD,
-      shader: KD
-    }
-  },
-  42046: (DD, zD, wD) => {
-    wD.d(zD, {
-      e: () => rD
-    });
-    var pD = wD(39776);
-    const sD = "fogFragmentDeclaration",
-      KD = "#ifdef FOG\n#define FOGMODE_NONE 0.\n#define FOGMODE_EXP 1.\n#define FOGMODE_EXP2 2.\n#define FOGMODE_LINEAR 3.\n#define E 2.71828\nuniform vec4 vFogInfos;uniform vec3 vFogColor;varying vec3 vFogDistance;float CalcFogFactor()\n{float fogCoeff=1.0;float fogStart=vFogInfos.y;float fogEnd=vFogInfos.z;float fogDensity=vFogInfos.w;float fogDistance=length(vFogDistance);if (FOGMODE_LINEAR==vFogInfos.x)\n{fogCoeff=(fogEnd-fogDistance)/(fogEnd-fogStart);}\nelse if (FOGMODE_EXP==vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDensity);}\nelse if (FOGMODE_EXP2==vFogInfos.x)\n{fogCoeff=1.0/pow(E,fogDistance*fogDistance*fogDensity*fogDensity);}\nreturn clamp(fogCoeff,0.0,1.0);}\n#endif\n";
-    pD.e.IncludesShadersStore[sD] || (pD.e.IncludesShadersStore[sD] = KD);
-    const rD = {
-      name: sD,
-      shader: KD
-    }
-  },
-  42443: (DD, zD, wD) => {
-    wD.r(zD), wD.d(zD, {
-      colorPixelShader: () => AD
-    });
-    var pD = wD(39776),
-      sD = wD(42041),
-      KD = wD(42046),
-      rD = wD(42052),
-      LD = wD(42079);
-    const cD = "colorPixelShader",
-      gD = "#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\n#define VERTEXCOLOR\nvarying vec4 vColor;\n#else\nuniform vec4 color;\n#endif\n#include<clipPlaneFragmentDeclaration>\n#include<fogFragmentDeclaration>\n#define CUSTOM_FRAGMENT_DEFINITIONS\nvoid main(void) {\n#define CUSTOM_FRAGMENT_MAIN_BEGIN\n#include<clipPlaneFragment>\n#if defined(VERTEXCOLOR) || defined(INSTANCESCOLOR) && defined(INSTANCES)\ngl_FragColor=vColor;\n#else\ngl_FragColor=color;\n#endif\n#include<fogFragment>(color,gl_FragColor)\n#define CUSTOM_FRAGMENT_MAIN_END\n}";
-    pD.e.ShadersStore[cD] || (pD.e.ShadersStore[cD] = gD);
-    const RD = [sD.d, KD.e, rD.c, LD.e];
-    for (const UD of RD) pD.e.IncludesShadersStore[UD.name] || (pD.e.IncludesShadersStore[UD.name] = UD.shader);
-    const AD = {
-      name: cD,
-      shader: gD
+    var Op = cp(40062),
+      op = cp(42190),
+      Ip = cp(42286);
+    const Sp = "greasedLineVertexShader",
+      xp = "precision highp float;\n#include<instancesDeclaration>\nattribute float grl_widths;\n#ifdef GREASED_LINE_USE_OFFSETS\nattribute vec3 grl_offsets;\n#endif\nattribute float grl_colorPointers;attribute vec3 position;uniform mat4 viewProjection;uniform mat4 projection;varying float grlCounters;varying float grlColorPointer;\n#ifdef GREASED_LINE_CAMERA_FACING\nattribute vec4 grl_nextAndCounters;attribute vec4 grl_previousAndSide;uniform vec2 grlResolution;uniform float grlAspect;uniform float grlWidth;uniform float grlSizeAttenuation;vec2 grlFix( vec4 i,float aspect ) {vec2 res=i.xy/i.w;res.x*=aspect;return res;}\n#else\nattribute vec3 grl_slopes;attribute float grl_counters;\n#endif\nvoid main() {\n#include<instancesVertex>\ngrlColorPointer=grl_colorPointers;mat4 grlMatrix=viewProjection*finalWorld ;\n#ifdef GREASED_LINE_CAMERA_FACING\nfloat grlBaseWidth=grlWidth;vec3 grlPrevious=grl_previousAndSide.xyz;float grlSide=grl_previousAndSide.w;vec3 grlNext=grl_nextAndCounters.xyz;grlCounters=grl_nextAndCounters.w;float grlWidth=grlBaseWidth*grl_widths;\n#ifdef GREASED_LINE_USE_OFFSETS\nvec3 grlPositionOffset=grl_offsets;\n#else\nvec3 grlPositionOffset=vec3(0.);\n#endif\nvec3 positionUpdated=position+grlPositionOffset;vec3 worldDir=normalize(grlNext-grlPrevious);vec3 nearPosition=positionUpdated+(worldDir*0.01);vec4 grlFinalPosition=grlMatrix*vec4( positionUpdated ,1.0);vec4 screenNearPos=grlMatrix*vec4(nearPosition,1.0);vec2 grlLinePosition=grlFix(grlFinalPosition,grlAspect);vec2 grlLineNearPosition=grlFix(screenNearPos,grlAspect);vec2 grlDir=normalize(grlLineNearPosition-grlLinePosition);vec4 grlNormal=vec4( -grlDir.y,grlDir.x,0.,1. );\n#ifdef GREASED_LINE_RIGHT_HANDED_COORDINATE_SYSTEM\ngrlNormal.xy*=-.5*grlWidth;\n#else\ngrlNormal.xy*=.5*grlWidth;\n#endif\ngrlNormal*=projection;if (grlSizeAttenuation==1.) {grlNormal.xy*=grlFinalPosition.w;grlNormal.xy/=( vec4( grlResolution,0.,1. )*projection ).xy;}\ngrlFinalPosition.xy+=grlNormal.xy*grlSide;gl_Position=grlFinalPosition;\n#else\ngrlCounters=grl_counters;\n#ifdef GREASED_LINE_USE_OFFSETS\nvec3 grlPositionOffset=grl_offsets;\n#else\nvec3 grlPositionOffset=vec3(0.);\n#endif\nvec4 grlFinalPosition=grlMatrix*vec4( (position+grlPositionOffset)+grl_slopes*grl_widths ,1.0 ) ;gl_Position=grlFinalPosition;\n#endif\n}\n";
+    Op.b.ShadersStore[Sp] || (Op.b.ShadersStore[Sp] = xp);
+    const Lp = [op.e, Ip.b];
+    for (const Dp of Lp) Op.b.IncludesShadersStore[Dp.name] || (Op.b.IncludesShadersStore[Dp.name] = Dp.shader);
+    const Yp = {
+      name: Sp,
+      shader: xp
     }
   }
 };
 Object.freeze(modules);
-for (const DD in modules) Object.freeze(modules[DD]);
+for (const pp in modules) Object.freeze(modules[pp]);
